@@ -38,7 +38,7 @@ In practice, these principles mean that we need to be aware of what we are worki
 
 Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
 
-![Computational Geometry](<../../.gitbook/assets/Geometry for - GeometryDimensionality.jpg>)
+![Computational Geometry](../../.gitbook/assets/GeometryDimensionality.jpg)
 
 > 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
 > 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
