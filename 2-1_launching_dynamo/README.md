@@ -2,7 +2,9 @@
 
 ### Dynamo as Extension vs Dynamo Sandbox
 
-Dynamo is an active open-source development project. For list of software that supports Dynamo, please refer [here](http://dynamobim.org/download/).
+Dynamo is an active open-source development project. For a list of software that supports Dynamo, please refer [here](http://dynamobim.org/download/).
+
+![Dynamo Revit](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) ![Civil 3D](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) ![Alias Design](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) ![FormIt](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) ![Advance Steel](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) ![Robot Structural Analysis](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
 
 ### Launch Dynamo as Extension
 

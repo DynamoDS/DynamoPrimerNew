@@ -2,8 +2,8 @@
 
 * [About](README.md)
 * [Introduction](1\_introduction/README.md)
-  * [What is Dynamo, How Does It Work](1\_introduction/1-2\_what\_is\_dynamo.md)
-  * [Primer User Guide, Dynamo Community and Platform](1\_introduction/primer-user-guide-dynamo-community-and-platform.md)
+  * [What is Dynamo & How Does It Work?](1\_introduction/1-2\_what\_is\_dynamo.md)
+  * [Primer User Guide, Dynamo Community & Platform](1\_introduction/primer-user-guide-dynamo-community-and-platform.md)
   * [What can Dynamo Achieve?](1\_introduction/1-3\_dynamo\_in\_action.md)
 * [Setup for Dynamo](2-1\_launching\_dynamo/README.md)
   * [Page 1](2-1\_launching\_dynamo/page-1.md)
