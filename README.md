@@ -2,8 +2,6 @@
 
 ## For Dynamo v2.13
 
-Read the Prime for [Dynamo v2.0 here](https://primer.dynamobim.org/index.html)
-
 ![Dynamo Logo](.gitbook/assets/dynamo\_logo\_dark-trim.jpg)
 
 > Dynamo is an open source visual programming platform for designers.

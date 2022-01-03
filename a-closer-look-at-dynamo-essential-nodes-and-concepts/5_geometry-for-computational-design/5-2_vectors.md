@@ -17,9 +17,8 @@ Breaking down Vectors further into their parts using the same AB notation:
 ![Vector](../../.gitbook/assets/Vector.jpg)
 
 > 1. The **Start Point** of the Vector is called the **Base**.
-
-1. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
-2. Vector AB is not the same as Vector BA - that would point in the opposite direction.
+> 2. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
+> 3. Vector AB is not the same as Vector BA - that would point in the opposite direction.
 
 If you're ever in need of comic relief regarding Vectors (and their abstract definition), watch the classic comedy Airplane and listen for the oft-quoted tongue-in cheek line:
 
@@ -64,7 +63,6 @@ There are other, however, alternative Coordinate Systems such as Cylindrical or 
 ![Planes in Dynamo](../../.gitbook/assets/Dynamo-CoordinateSystem.jpg)
 
 > 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-
-1. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
+> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
 
 > Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Coordinate System.dyn]\(datasets/5-2/Geometry for Computational Design - Coordinate System.dyn). A full list of example files can be found in the Appendix.

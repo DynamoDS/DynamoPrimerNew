@@ -26,10 +26,9 @@ Let's take a moment to look at the relationship between the Abstract and Hierarc
 ![Computational Geometry](../../.gitbook/assets/GeometryDimensionality.jpg)
 
 > 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
-
-1. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
-2. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
-3. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
+> 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
+> 3. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
+> 4. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
 
 Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
 
@@ -46,8 +45,7 @@ Additionally, making models in Dynamo and connecting the preview of what we see 
 ![Geometry in Dynamo](../../.gitbook/assets/GeometryInDynamo.jpg)
 
 > 1. Note the assumed coordinate system rendered by the grid and colored axes
-
-1. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
+> 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
 
 > Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Geometry Overview.dyn]\(datasets/5-1/Geometry for Computational Design - Geometry Overview.dyn). A full list of example files can be found in the Appendix.
 
