@@ -23,9 +23,7 @@ Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
 
 ### Coordinate System in Dynamo
 
-
-
-​![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FY5ZuHF3yuXFWp1C46ZSo%2Fuploads%2Fgit-blob-5162abf5a1fdfe86558ebe4aa67eaf297a9055be%2FDynamo-CoordinateSystem.jpg?alt=media)Planes in Dynamo
+![Coordinate System in Dynamo](<../../.gitbook/assets/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
 > 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
@@ -76,11 +74,4 @@ There are other, however, alternative Coordinate Systems such as Cylindrical or 
 
 ![Coordinate System](../../.gitbook/assets/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical
-
-![Planes in Dynamo](../../.gitbook/assets/Dynamo-CoordinateSystem.jpg)
-
-> 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
-
-> Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Coordinate System.dyn]\(datasets/5-2/Geometry for Computational Design - Coordinate System.dyn). A full list of example files can be found in the Appendix.
+> Add alternative coordinate systems - cylindrical, spherical&#x20;
