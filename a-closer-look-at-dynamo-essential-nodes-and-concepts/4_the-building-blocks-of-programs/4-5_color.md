@@ -18,7 +18,7 @@ The colors in the table below correspond to the **HSB color space**. Dividing th
 
 The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
 
-![](<../../.gitbook/assets/range (1).jpg>)
+![](broken-reference)
 
 > 1. \*\*Define three colors: \*\* Using a code block node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
 

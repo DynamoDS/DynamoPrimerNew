@@ -6,16 +6,16 @@ table{box-shadow: 2px 2px 2px #BBBBBB;max-width:75%;display:block;margin-left: a
 
 There are a few basic shorthand methods in the code block which, simply put, make data management _a lot_ easier. We'll break down the basics below and discuss how this shorthand can be used both for creating and querying data.
 
-| **Data Type**          | **Standard Dynamo**                     | **Code Block Equilvalent**                |
-| ---------------------- | --------------------------------------- | ----------------------------------------- |
-| Numbers                | ![](../../.gitbook/assets/number.jpg)   | ![](../../.gitbook/assets/numberCB.jpg)   |
-| Strings                | ![](../../.gitbook/assets/string.jpg)   | ![](../../.gitbook/assets/stringCB.jpg)   |
-| Sequences              | ![](../../.gitbook/assets/sequence.jpg) | ![](../../.gitbook/assets/sequenceCB.jpg) |
-| Ranges                 | ![](../../.gitbook/assets/range.jpg)    | ![](../../.gitbook/assets/rangeCB.jpg)    |
-| Get Item at Index      | ![](../../.gitbook/assets/getItem.jpg)  | ![](../../.gitbook/assets/getItemCB.jpg)  |
-| Create List            | ![](../../.gitbook/assets/list.jpg)     | ![](../../.gitbook/assets/listCB.jpg)     |
-| Concatenate Strings    | ![](../../.gitbook/assets/concat.jpg)   | ![](../../.gitbook/assets/concatCB.jpg)   |
-| Conditional Statements | ![](../../.gitbook/assets/if.jpg)       | ![](../../.gitbook/assets/ifCB.jpg)       |
+| **Data Type**          | **Standard Dynamo**                    | **Code Block Equilvalent**                |
+| ---------------------- | -------------------------------------- | ----------------------------------------- |
+| Numbers                | ![](../../.gitbook/assets/number.jpg)  | ![](../../.gitbook/assets/numberCB.jpg)   |
+| Strings                | ![](../../.gitbook/assets/string.jpg)  | ![](../../.gitbook/assets/stringCB.jpg)   |
+| Sequences              | ![](broken-reference)                  | ![](../../.gitbook/assets/sequenceCB.jpg) |
+| Ranges                 | ![](broken-reference)                  | ![](../../.gitbook/assets/rangeCB.jpg)    |
+| Get Item at Index      | ![](../../.gitbook/assets/getItem.jpg) | ![](../../.gitbook/assets/getItemCB.jpg)  |
+| Create List            | ![](../../.gitbook/assets/list.jpg)    | ![](../../.gitbook/assets/listCB.jpg)     |
+| Concatenate Strings    | ![](../../.gitbook/assets/concat.jpg)  | ![](../../.gitbook/assets/concatCB.jpg)   |
+| Conditional Statements | ![](../../.gitbook/assets/if.jpg)      | ![](../../.gitbook/assets/ifCB.jpg)       |
 
 \###Additional Syntax
 
@@ -134,7 +134,6 @@ In this exercise, we will flex our new shorthand skills to create a funky-cool e
 2. The second code block replaces the *Number Range* node.
 3. The third code block replaces the *Formula* node (as well as *List.Transpose*, *List.Count* and *Number Range*).
 4. The fourth code block queries a list of lists, replacing the *List.GetItemAtIndex* node.
-
 
 
 

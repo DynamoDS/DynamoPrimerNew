@@ -56,7 +56,7 @@ The image below is the base graph we will be using to demonstrate basic list ope
 
 > 1. A _Watch3D_ node shows the results of the _Line.ByStartPointEndPoint_. We are drawing lines between two circles to represent basic list operations and will use this base Dynamo graph to walk through the list actions below.
 
-\###List.Count ![Count](../../.gitbook/assets/count.jpg)
+\###List.Count ![Count](broken-reference)
 
 > The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
 

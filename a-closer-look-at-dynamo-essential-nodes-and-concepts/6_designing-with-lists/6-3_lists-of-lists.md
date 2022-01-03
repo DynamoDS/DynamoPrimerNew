@@ -90,7 +90,7 @@ _Note: This exercise was created with a previous version of Dynamo. Much of the 
 
 As a quick introduction, let's review the List.Count node from a previous section.
 
-![Exercise](../../.gitbook/assets/count.jpg)
+![Exercise](broken-reference)
 
 > The _List.Count_ node counts all of the items in a list. We'll use this to demonstrate how _List.Map_ works.
 
