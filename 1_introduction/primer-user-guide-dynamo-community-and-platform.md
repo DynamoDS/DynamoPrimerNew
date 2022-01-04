@@ -1,16 +1,22 @@
-# Primer User Guide, Dynamo Community and Platform
+# Primer User Guide, Dynamo Community & Platform
 
 ### Primer User Guide
 
 This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and essential concepts can be found in the following sections, we recommend new users to cover these essential topics.
 
-* chapter
-* chapter
-* chapter
+* [1-2\_what\_is\_dynamo.md](1-2\_what\_is\_dynamo.md "mention")
+* [2\_setup\_for\_dynamo](../2\_setup\_for\_dynamo/ "mention")
+* [2-2\_the\_dynamo\_ui](../2-2\_the\_dynamo\_ui/ "mention")
+* [3-1\_dynamo\_nodes](../3-1\_dynamo\_nodes/ "mention")
 
-For users who would like to develop a more in-depth understanding on each element such as Nodes, we have a whole chapter that covers the concept behind each Node.
+For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its dedicated chapter.
 
-* [a-closer-look-at-dynamo-essential-nodes-and-concepts](../a-closer-look-at-dynamo-essential-nodes-and-concepts/ "mention")
+#### Under Essential Nodes and Concepts
+
+* [5\_geometry-for-computational-design](../essential-nodes-and-concepts/5\_geometry-for-computational-design/ "mention")
+* [4\_the-building-blocks-of-programs](../essential-nodes-and-concepts/4\_the-building-blocks-of-programs/ "mention")
+* [6\_designing-with-lists](../essential-nodes-and-concepts/6\_designing-with-lists/ "mention")
+* [9\_dictionaries-in-dynamo](../essential-nodes-and-concepts/9\_dictionaries-in-dynamo/ "mention")
 
 If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
 
