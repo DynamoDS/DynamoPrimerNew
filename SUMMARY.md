@@ -11,7 +11,7 @@
   * [Workspace](2-2\_the\_dynamo\_ui/workspace.md)
   * [Library](2-2\_the\_dynamo\_ui/3-3\_dynamo\_libraries.md)
 * [Nodes and Wires](3-1\_dynamo\_nodes/README.md)
-  * [Page 2](3-1\_dynamo\_nodes/page-2.md)
+  
 * [Essential Nodes & Concepts](essential-nodes-and-concepts/README.md)
   * [Index of Nodes](essential-nodes-and-concepts/a-2\_index-of-nodes.md)
   * [Geometry for Computational Design](essential-nodes-and-concepts/5\_geometry-for-computational-design/README.md)
