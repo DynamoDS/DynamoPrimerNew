@@ -5,8 +5,8 @@
   * [What is Dynamo & How Does It Work?](1\_introduction/1-2\_what\_is\_dynamo.md)
   * [Primer User Guide, Dynamo Community & Platform](1\_introduction/primer-user-guide-dynamo-community-and-platform.md)
   * [What can Dynamo Achieve?](1\_introduction/1-3\_dynamo\_in\_action.md)
-* [Setup for Dynamo](2-1\_launching\_dynamo/README.md)
-  * [Page 1](2-1\_launching\_dynamo/page-1.md)
+* [Setup for Dynamo](2\_setup\_for\_dynamo/README.md)
+  <!-- * [Page 1](2\_setup\_for\_dynamo/page-1.md) -->
 * [User Interface](2-2\_the\_dynamo\_ui/README.md)
   * [Workspace](2-2\_the\_dynamo\_ui/workspace.md)
   * [Library](2-2\_the\_dynamo\_ui/3-3\_dynamo\_libraries.md)
