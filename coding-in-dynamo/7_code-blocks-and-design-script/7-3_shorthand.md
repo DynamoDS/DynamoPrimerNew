@@ -136,5 +136,4 @@ In this exercise, we will flex our new shorthand skills to create a funky-cool e
 4. The fourth code block queries a list of lists, replacing the *List.GetItemAtIndex* node.
 
 
-
 ````
