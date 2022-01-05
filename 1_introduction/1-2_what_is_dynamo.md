@@ -1,4 +1,4 @@
-# What is Dynamo, How Does It Work
+# What is Dynamo & How Does It Work?
 
 {% hint style="warning" %}
 2min video
@@ -14,7 +14,7 @@ Dynamo enables us to work within a Visual Programming process wherein we connect
 
 ### Connecting Nodes and Wires
 
-Use Wire to connect Nodes and define the relations between them.
+Use Wire to connect Nodes and define the relations between them. (...)
 
 ![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
 
