@@ -4,14 +4,11 @@
 * [Introduction](1\_introduction/README.md)
   * [What is Dynamo & How Does It Work?](1\_introduction/1-2\_what\_is\_dynamo.md)
   * [Primer User Guide, Dynamo Community & Platform](1\_introduction/primer-user-guide-dynamo-community-and-platform.md)
-  * [What can Dynamo Achieve?](1\_introduction/1-3\_dynamo\_in\_action.md)
 * [Setup for Dynamo](2\_setup\_for\_dynamo/README.md)
-  <!-- * [Page 1](2\_setup\_for\_dynamo/page-1.md) -->
 * [User Interface](2-2\_the\_dynamo\_ui/README.md)
   * [Workspace](2-2\_the\_dynamo\_ui/workspace.md)
   * [Library](2-2\_the\_dynamo\_ui/3-3\_dynamo\_libraries.md)
 * [Nodes and Wires](3-1\_dynamo\_nodes/README.md)
-  
 * [Essential Nodes & Concepts](essential-nodes-and-concepts/README.md)
   * [Index of Nodes](essential-nodes-and-concepts/a-2\_index-of-nodes.md)
   * [Geometry for Computational Design](essential-nodes-and-concepts/5\_geometry-for-computational-design/README.md)
