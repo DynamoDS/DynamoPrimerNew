@@ -1,5 +1,9 @@
 # Points
 
+Point in Dynamo
+
+## The Fundamental Concept
+
 If Geometry is the language of a model, then Points are the alphabet. Points are the foundation upon which all other geometry is created - we need at least two Points to create a Curve, we need at least three Points to make a Polygon or a Mesh Face, and so on. Defining the position, order, and relationship among Points (try a Sine Function) allows us to define higher order geometry like things we recognize as Circles or Curves.
 
 ![Point to Curve](../../.gitbook/assets/PointsAsBuildingBlocks-1.jpg)
