@@ -82,8 +82,6 @@ The data will always flow through this Wire from output to input; however, we ma
 
 ![](<../.gitbook/assets/nodes and wires - creating a wire.gif>)
 
-> ~~Tip: Before completing the connection with your second click, allow the Wire snap to a Port and hover your mouse there to see the Port tooltip.~~
-
 ### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
 
 Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
