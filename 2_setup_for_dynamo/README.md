@@ -10,16 +10,18 @@ Dynamo is an active open-source development project. For a list of software that
 
 Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civil3D** and etc.
 
-To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > Manage Tab.
+To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](../.gitbook/assets/dynamoCore-halfSize.png) to launch it.
 
-_<mark style="color:red;">(GIF for launching Dynamo from Revit)</mark>_
+![](<../.gitbook/assets/launch dynamo from revit.jpg>)
 
-For more guidance on using Dynamo with a specific software, we recommend referring to these sections.
+![](<../.gitbook/assets/setup for dynamo - launch dynamo.gif>)
+
+For more guidance on using Dynamo with specific software, we recommend referring to these sections.
 
 * [8\_dynamo-for-revit](../8\_dynamo-for-revit/ "mention")
 * [dynamo-for-formit.md](../dynamo-for-formit.md "mention")
 
-If you plan to use Dynamo as a standalone application. Continue reading for guidance on downloading the Sandbox.
+If you would like to use Dynamo as a standalone application. Continue reading for guidance on downloading the Sandbox.
 
 ### Get Dynamo Sandbox
 

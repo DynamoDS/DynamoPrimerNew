@@ -1,8 +1,8 @@
 # User Interface
 
-### UI Overview
+### User Interface Overview
 
-The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in following sections.
+The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in the following sections.
 
 ![](<../.gitbook/assets/user interface - ui (2).jpg>)
 
@@ -14,53 +14,35 @@ The User Interface (UI) for Dynamo is organized into five main regions. We will 
 
 ### Menus
 
-![](<../.gitbook/assets/user interface - menu.jpg>)
-
-_<mark style="color:red;">(Update screenshot when new Dynamo version available in Revit)</mark>_
+![](<../.gitbook/assets/user interface - menu (1).jpg>)
 
 Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
 
-#### Settings
+#### Dynamo Menus
 
-From geometric to user settings, these options can be found in the **Settings** menu. Here you can opt in or out for sharing your user data to improve Dynamo as well as define the application's decimal point precision and geometry render quality.
+General info and settings can be found on the **Dynamo** drop down menu.&#x20;
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/user interface - dynamo menu.jpg>)
 
-_<mark style="color:red;">(Update screenshot when new Dynamo version available in Revit)</mark>_
-
-> 1. Enabling Reporting - Options for sharing user data to improve Dynamo.
-> 2. Show Run Preview - Preview the execution state of your graph. Nodes scheduled for execution will be highlighted in your graph.
-> 3. Number Format Options - Change the document settings for decimals.
-> 4. Render Precision - Raise or lower the document render quality.
-> 5. Geometry Scaling - Select range of geometry you are working on.
-> 6. Isolate Selected Geometry - Isolated background geometry based on your node selection.
-> 7. Show/Hide Geometry Edges - Toggle 3D geometry edges.
-> 8. Show/Hide Preview Bubbles - Toggle data preview bubbles below nodes.
-> 9. Manage Node and Package Paths - Manage file paths to make nodes and packages show up in the Library.
-> 10. Enabling Experimental Features - Use beta features new in Dynamo.
+> 1. About - Find out the Dynamo version installed on your machine.
+> 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
+> 3. Preferences -  Includes settings such as define the application's decimal point precision and geometry render quality.
+> 4. Exit Dynamo
 
 #### Help
 
 If you're stuck, check out the **Help** Menu. You may access one of the Dynamo reference websites through your internet browser.
 
-Check the version of Dynamo installed and whether it is up to date through the **About** option.
-
-_<mark style="color:red;">(Check latest Revit Dynamo version, About probably moved to First item on menu)</mark>_
-
-Here are the list of options available through the Help menu.
+![](<../.gitbook/assets/user interface - help menu.jpg>)
 
 > 1. Getting Started - A brief introduction to using Dynamo.
-> 2. Samples - Reference example files.
-> 3. Open Dynamo Dictionary - Resource with documentation on all nodes.
-> 4. Report A Bug - Open an Issue on GitHub.
-> 5. Go To Project Website - View the Dynamo Project on GitHub.
-> 6. Go To Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
+> 2. Interactive Guides -&#x20;
+> 3. Samples - Reference example files.
+> 4. Dynamo Dictionary - Resource with documentation on all nodes.
+> 5. Dynamo Website - View the Dynamo Project on GitHub.
+> 6. Dynamo Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
 > 7. Display Start Page - Return to the Dynamo start page when within a document.
-> 8. About - Dynamo Version data
-
-![](../.gitbook/assets/image.png)
-
-_<mark style="color:red;">(Update screenshot when new Dynamo version available in Revit)</mark>_
+> 8. Report A Bug - Open an Issue on GitHub.
 
 ### Toolbar
 
@@ -77,7 +59,7 @@ Dynamo's Toolbar contains a series of buttons for quick access to working with f
 
 The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [3-3\_dynamo\_libraries.md](3-3\_dynamo\_libraries.md "mention") section will cover a more detailed guidance on using it.
 
-![](<../.gitbook/assets/user interface - library.gif>)
+![](<../.gitbook/assets/user interface - library (1).gif>)
 
 ### Workspace
 
