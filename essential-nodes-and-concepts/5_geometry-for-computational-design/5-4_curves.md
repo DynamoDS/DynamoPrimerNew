@@ -1,8 +1,8 @@
 # Curves
 
-### Curve in Dynamo
+## Curves in Dynamo
 
-#### What is Curve?
+### What is Curve?
 
 Curves are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvey or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
 
@@ -15,6 +15,12 @@ Curves are the first Geometric Data Type we've covered that have a more familiar
 > 5. Ellipse
 > 6. NURBS Curve
 > 7. Polycurve
+
+### Line
+
+Use `Line.ByStartPointEndPoint` ![](<../../.gitbook/assets/Line by start point end point.jpg>) to create a Line in Dynamo.&#x20;
+
+![](<../../.gitbook/assets/curves - line by start point end point.jpg>)
 
 ### NURBS Curve&#x20;
 

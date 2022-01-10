@@ -1,6 +1,8 @@
 # Vector, Plane & Coordinate System
 
-### Vector in Dynamo
+## Vector, Plane & Coordinates System in Dynamo
+
+### Vector
 
 Vectors are a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
 
@@ -10,7 +12,7 @@ Vectors are a key component to our models in Dynamo. Note that, because they are
 
 > Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Vectors.dyn]\(datasets/5-2/Geometry for Computational Design - Vectors.dyn). A full list of example files can be found in the Appendix.
 
-### Plane in Dynamo
+### Plane
 
 Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
 
@@ -21,7 +23,7 @@ Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
 
 > Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Planes.dyn]\(datasets/5-2/Geometry for Computational Design - Plane.dyn). A full list of example files can be found in the Appendix.
 
-### Coordinate System in Dynamo
+### Coordinate System
 
 ![Coordinate System in Dynamo](<../../.gitbook/assets/Geometry for Computational Design - Coordinate.jpg>)
 
@@ -30,7 +32,7 @@ Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
 
 > Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Coordinate System.dyn]\(datasets/5-2/Geometry for Computational Design - Coordinate System.dyn). A full list of example files can be found in the Appendix.
 
-## The Fundamental Concept&#x20;
+## The Fundamental Concept
 
 Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
 
@@ -64,7 +66,7 @@ Planes are two-dimensional abstract "Helpers." More specifically, Planes are con
 
 You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -&#x20;
+And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
 
 ### Coordinate System
 
@@ -74,4 +76,4 @@ There are other, however, alternative Coordinate Systems such as Cylindrical or 
 
 ![Coordinate System](../../.gitbook/assets/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical&#x20;
+> Add alternative coordinate systems - cylindrical, spherical

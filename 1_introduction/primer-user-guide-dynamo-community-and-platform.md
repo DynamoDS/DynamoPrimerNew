@@ -9,7 +9,7 @@ This guide is designed to cater to readers from different backgrounds and skill 
 * [2-2\_the\_dynamo\_ui](../2-2\_the\_dynamo\_ui/ "mention")
 * [3-1\_dynamo\_nodes](../3-1\_dynamo\_nodes/ "mention")
 
-For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its dedicated chapter.
+For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
 
 #### Under Essential Nodes and Concepts
 

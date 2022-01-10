@@ -1,10 +1,12 @@
 # Points
 
-### Point in Dynamo
+## Points in Dynamo
 
-#### What's a Point?&#x20;
+### What is a Point?&#x20;
 
 A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.&#x20;
+
+### 2D & 3D Point
 
 The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates \[X,Y,Z] (3D Point in Dynamo).
 
