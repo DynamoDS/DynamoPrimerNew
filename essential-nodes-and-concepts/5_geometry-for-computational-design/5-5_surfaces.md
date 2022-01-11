@@ -1,8 +1,28 @@
 # Surfaces
 
-As we move from using Curves to using Surfaces in a model, we can now begin to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+## Surfaces in Dynamo
 
-## What's a Surface?
+### What is Surface
+
+Moving from using Curves to using Surfaces in a model, we can now begin to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+
+### Surface at Parameter
+
+Import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
+
+![](<../../.gitbook/assets/surfaces - surface in dynamo.jpg>)
+
+> 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
+> 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
+> 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
+
+> Download the example files that accompanies this image (Right click and "Save Link As..."). A full list of example files can be found in the Appendix.
+>
+> \[Geometry for Computational Design - Surfaces.dyn]\(datasets/5-5/Geometry for Computational Design - Surfaces.dyn)
+>
+> [Surface.sat](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/05\_Geometry-for-Computational-Design/datasets/5-5/Surface.sat)
+
+## The Fundamental Conceptt
 
 A Surface is a mathematical shape defined by a function and two parameters, Instead of `t` for Curves, we use `U` and `V` to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.
 
@@ -32,7 +52,7 @@ Although the shape of the Surface by not look "rectangular" and it locally may h
 
 **Normal Vector**: A Vector defining the direction of "up" relative to the Perpendicular Plane.
 
-## NURBS Surfaces
+### NURBS Surfaces
 
 **NURBS Surfaces** are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree.
 
@@ -48,7 +68,7 @@ In the case of NURBS surfaces, there are two directions implied by the geometry,
 2. Degree (U,V) = (1,2)
 3. Degree (U,V) = (1,1)
 
-## Polysurfaces
+### Polysurfaces
 
 **Polysurfaces** are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology.
 
@@ -58,16 +78,3 @@ In the case of NURBS surfaces, there are two directions implied by the geometry,
 
 Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.
 
-Let's import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
-
-![Surfaces in Dynamo](../../.gitbook/assets/Dynamo\_Surfaces.jpg)
-
-> 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
-
-1. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
-2. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
-
-> Download the example files that accompanies this image (Right click and "Save Link As..."). A full list of example files can be found in the Appendix.
-
-1. \[Geometry for Computational Design - Surfaces.dyn]\(datasets/5-5/Geometry for Computational Design - Surfaces.dyn)
-2. [Surface.sat](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/05\_Geometry-for-Computational-Design/datasets/5-5/Surface.sat)

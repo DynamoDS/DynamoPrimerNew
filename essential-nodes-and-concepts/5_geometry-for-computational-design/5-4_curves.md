@@ -26,7 +26,7 @@ Use `Line.ByStartPointEndPoint` ![](<../../.gitbook/assets/Line by start point e
 
 A sine curve in Dynamo using two different methods to create NURBS Curves to compare the results.
 
-![NURBS in Dynamo](../../.gitbook/assets/Dynamo\_Curves.jpg)
+![](<../../.gitbook/assets/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ uses the List of Points as Control Points
 > 2. _NurbsCurve.ByPoints_ draws a Curve through the List of Points
