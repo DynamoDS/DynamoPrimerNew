@@ -10,7 +10,7 @@ If we want to construct more complex models that cannot be created from a single
 
 Let's use a few Boolean operations to create a spiky ball.
 
-![](../../.gitbook/assets/spikyBallExample.jpg)
+![](<../../.gitbook/assets/solids  - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
@@ -25,21 +25,17 @@ Let's use a few Boolean operations to create a spiky ball.
 
 Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
 
-![Freezing](../../.gitbook/assets/freeze-01.jpg)
+![](<../../.gitbook/assets/solids - freeze node.jpg>)
 
-> Use the right-click contextual menu to Freeze the Solid Union operation
+![](<../../.gitbook/assets/solids - freeze node.gif>)
 
-![Freezing](../../.gitbook/assets/freeze-02.jpg)
-
-> The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
-
-![Freezing](../../.gitbook/assets/freeze-03.jpg)
-
-> To unfreeze the nodes, right-click and uncheck Freeze.
-
-![Freezing](../../.gitbook/assets/freeze-04.jpg)
-
-> All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 1.Use the right-click contextual menu to Freeze the Solid Union operation
+>
+> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
+>
+> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
+>
+> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
 
 ## The Fundamental Concept
 
