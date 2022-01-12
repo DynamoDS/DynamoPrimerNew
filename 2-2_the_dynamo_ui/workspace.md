@@ -4,7 +4,7 @@
 
 The Dynamo Workspace consists of four main elements.
 
-![](<../.gitbook/assets/workspace - ui.jpg>)
+![](<../.gitbook/assets/workspace - ui (2).jpg>)
 
 > 1. All Active Tabs.
 > 2. Preview Mode
