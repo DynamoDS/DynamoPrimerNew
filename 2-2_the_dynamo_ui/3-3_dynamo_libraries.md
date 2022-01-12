@@ -2,7 +2,7 @@
 
 The Library contains all of the loaded Nodes, including the ten default categories Nodes that come with the installation as well as any additionally loaded Custom Nodes or Packages. The Nodes in the Library are organized hierarchically within libraries, categories, and, where appropriate, subcategories.
 
-![](<../.gitbook/assets/library  - library.jpg>)
+![](<../.gitbook/assets/library  - library UI.jpg>)
 
 * Basic Nodes: Comes with default installation.
 * Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
