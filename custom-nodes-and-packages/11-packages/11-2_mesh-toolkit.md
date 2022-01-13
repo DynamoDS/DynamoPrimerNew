@@ -23,32 +23,28 @@ Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._ In this example, 
 ![Import Mesh](../../.gitbook/assets/contour01.jpg)
 
 > 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-
-1. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
 
 ![Intersect](../../.gitbook/assets/contour02.jpg)
 
 > 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
-
-1. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes.
+> 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes.
 
 ![Intersect](../../.gitbook/assets/contour03.jpg)
 
 > 1. Code Block: Create a range of numbers between zero and one.
-
-1. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
-2. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
-3. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
+> 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
+> 3. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
+> 4. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
 
 You should now see a series of planes oriented along the arc. Next, we will use these planes to intersect the mesh.
 
 ![Intersect](../../.gitbook/assets/contour04.jpg)
 
 > 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours.
-
-1. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
-2. **Curve.EndPoint:** Extract the end points of each curve.
-3. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
+> 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
+> 3. **Curve.EndPoint:** Extract the end points of each curve.
+> 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
 
 ![Intersect](../../.gitbook/assets/contour05.jpg)
 

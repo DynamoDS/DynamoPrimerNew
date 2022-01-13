@@ -91,7 +91,5 @@ We can also add to the robustness of the Custom Node by adding in **Custom Comme
 
 ![Custom Comment](../../.gitbook/assets/UVmapping\_Custom2.jpg)
 
->
-
-1. Hover over the Custom Node Inputs to see the Comments.
-2. With the default value set on our _inputSurface_, we can also run the definition without a surface input.
+> 1. Hover over the Custom Node Inputs to see the Comments.
+> 2. With the default value set on our _inputSurface_, we can also run the definition without a surface input.

@@ -2,7 +2,7 @@
 
 ### Dynamo as Extension vs Dynamo Sandbox
 
-Dynamo is an active open-source development project. For a list of software that supports Dynamo, please refer [here](http://dynamobim.org/download/).
+Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
 
 ![](<../.gitbook/assets/setup for dynamo - dynamo revit.jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo alias design.jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo formit.jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo advance steel (1).jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.jpg>)
 
@@ -13,8 +13,6 @@ Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civi
 To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](../.gitbook/assets/dynamoCore-halfSize.png) to launch it.
 
 ![](<../.gitbook/assets/launch dynamo from revit.jpg>)
-
-![](<../.gitbook/assets/setup for dynamo - launch dynamo.gif>)
 
 For more guidance on using Dynamo with specific software, we recommend referring to these sections.
 
