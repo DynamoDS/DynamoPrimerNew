@@ -19,7 +19,6 @@
     * [Surfaces](essential-nodes-and-concepts/5\_geometry-for-computational-design/5-5\_surfaces.md)
     * [Solids](essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md)
     * [Meshes](essential-nodes-and-concepts/5\_geometry-for-computational-design/5-7\_meshes.md)
-    * [Importing Geometry](essential-nodes-and-concepts/5\_geometry-for-computational-design/5-8\_importing.md)
   * [The Building Blocks of Programs](essential-nodes-and-concepts/4\_the-building-blocks-of-programs/README.md)
     * [Data](essential-nodes-and-concepts/4\_the-building-blocks-of-programs/4-1\_data.md)
     * [Math](essential-nodes-and-concepts/4\_the-building-blocks-of-programs/4-2\_math.md)

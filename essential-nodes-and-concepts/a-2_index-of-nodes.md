@@ -6,10 +6,9 @@
 
 ### Bulitin Functions
 
-|                                     | Node name                                                                                            |                                                                 |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| ![](../.gitbook/assets/Flatten.jpg) | <p><strong>Flatten</strong><br>Returns the flattened 1D list of the multidimensional input list.</p> | ![](<../.gitbook/assets/index of nodes - list flatten (1).jpg>) |
-| ![](../.gitbook/assets/Map.jpg)     | <p><strong>Map</strong><br>Maps a value into an input range</p>                                      | ![](<../.gitbook/assets/index of nodes - math map.jpg>)         |
+|                                 | Node name                                                       |                                                         |
+| ------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------- |
+| ![](../.gitbook/assets/Map.jpg) | <p><strong>Map</strong><br>Maps a value into an input range</p> | ![](<../.gitbook/assets/index of nodes - math map.jpg>) |
 
 ### Core
 

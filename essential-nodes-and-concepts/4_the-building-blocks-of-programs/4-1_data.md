@@ -1,21 +1,34 @@
 # Data
 
-\##Data Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+Data&#x20;
 
-\###What is Data? Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`). We need data to add to the input Ports of Dynamo's Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
 
-![Data and Actions](../../.gitbook/assets/00-DataAndActions.png)
+## What is Data?&#x20;
+
+Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).&#x20;
+
+In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+
+![Data and Actions](<../../.gitbook/assets/data - what is data.jpg>)
 
 > 1. Simple Data
+> 2. Data and Action (A Node) successfully executes
+> 3. Action (A Node) without Data Inputs returns a generic function
 
-1. Data and Action (A Node) successfully executes
-2. Action (A Node) without Data Inputs returns a generic function
+### Null - Absence of Data
 
-\###Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null. Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.&#x20;
 
-\| Icon | Name/Syntax | Inputs | Outputs | | -- | -- | -- | -- | -- | -- | | ![](../../.gitbook/assets/DSCore-Object-IsNull-Large.jpg) | Object.IsNull | obj | bool |
+Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
 
-\###Data Structures When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language. In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| ----------------------------------------------------- | ------------- | ------ | ------- |
+| ![](<../../.gitbook/assets/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+
+### Data Structures&#x20;
+
+When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language. In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
 
 A list represents a collection of items placed into one structure of data:
 
@@ -25,11 +38,10 @@ A list represents a collection of items placed into one structure of data:
 ![List Breakdown](../../.gitbook/assets/01-ListBreakdown.png)
 
 > 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-
-1. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-2. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-3. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-4. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
+> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
+> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
+> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
 
 The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
 
@@ -37,7 +49,9 @@ The key concept to understand about data hierarchy in Dynamo: **with respect to 
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Data.dyn]\(datasets/4-1/Building Blocks of Programs - Data.dyn). A full list of example files can be found in the Appendix.
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section. ![](../../.gitbook/assets/1.png)
+In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+
+&#x20;![](../../.gitbook/assets/1.png)
 
 > 1. **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
 
