@@ -1,7 +1,5 @@
 # Data
 
-Data&#x20;
-
 Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
 
 ## What is Data?&#x20;
@@ -28,14 +26,16 @@ Testing for nulls and removing nulls from data structure is a crucial part to cr
 
 ### Data Structures&#x20;
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language. In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.&#x20;
+
+In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
 
 A list represents a collection of items placed into one structure of data:
 
 * I have five fingers (_items_) on my hand (_list_).
 * There are ten houses (_items_) on my street (_list_).
 
-![List Breakdown](../../.gitbook/assets/01-ListBreakdown.png)
+![List Breakdown](<../../.gitbook/assets/data - data structures.jpg>)
 
 > 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
 > 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
@@ -45,52 +45,63 @@ A list represents a collection of items placed into one structure of data:
 
 The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
 
-#### Using Data to Make a Chain of Cylinders
-
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Data.dyn]\(datasets/4-1/Building Blocks of Programs - Data.dyn). A full list of example files can be found in the Appendix.
+## Exercise: Using Data to Make a Chain of Cylinders
 
 In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
 
-&#x20;![](../../.gitbook/assets/1.png)
+Download the example file Building Blocks of Programs - Data.dyn.&#x20;
 
-> 1. **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+A full list of example files can be found in the Appendix.
 
-![](../../.gitbook/assets/2.png)
+1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
 
-> 1. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+![](<../../.gitbook/assets/data - exercise step 1.jpg>)
 
-1. **Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the _Plane.ByOriginNormal_ node. This gives us a rectangular plane in the Dynamo preview.
+2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.&#x20;
 
-![](../../.gitbook/assets/3.png)
+**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the _Plane.ByOriginNormal_ node. This gives us a rectangular plane in the Dynamo preview.
 
-> 1. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+![](<../../.gitbook/assets/data - exercise step 2.jpg>)
 
-![](../../.gitbook/assets/4.png)
+3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
 
-> 1. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+![](<../../.gitbook/assets/data - exercise step 3.jpg>)
 
-![](../../.gitbook/assets/5.png)
+4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
 
-> 1. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+![](<../../.gitbook/assets/data - exercise step 4.jpg>)
 
-![](../../.gitbook/assets/6.png)
+5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
 
-> 1. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+![](<../../.gitbook/assets/data - exercise step 5.jpg>)
 
-1. \*\*Domain Edit - \*\*after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
-2. **Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
 
-![](../../.gitbook/assets/7.png)
+\*\*Domain Edit - \*\*after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
 
-> 1. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
 
-We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+![](<../../.gitbook/assets/data - exercise step 6.gif>)
 
-![](../../.gitbook/assets/8.png)
+7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
 
-> 1. **Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter. You can reference the image above for names.
+![](<../../.gitbook/assets/data - exercise step 7a.gif>)
 
-At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+![](<../../.gitbook/assets/data - exercise step 7b.gif>)
+
+****
+
+8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+
+![](<../../.gitbook/assets/data - exercise step 8a.gif>)
+
+**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+
+![](<../../.gitbook/assets/data - exercise step 8b step.jpg>)
+
+
+
+9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
 
 ![](../../.gitbook/assets/9.png)
 
