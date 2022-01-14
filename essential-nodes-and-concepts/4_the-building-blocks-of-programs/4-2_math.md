@@ -13,7 +13,7 @@ Operators are a set of components that use algebraic functions with two numeric 
 | ![](<../../.gitbook/assets/Multiplication (1).jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
 | ![](<../../.gitbook/assets/Division (1).jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
-## Formulas: The Golden Spiral Formula
+## Exerise: The Golden Spiral Formula
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Math.dyn]&#x20;
 >

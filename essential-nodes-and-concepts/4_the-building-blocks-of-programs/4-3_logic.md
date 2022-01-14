@@ -1,42 +1,66 @@
 # Logic
 
-\##Logic **Logic**, or more specifically, **Conditional Logic**, allows us to specify an action or set of actions based on a test. After evaluating the test, we will have a Boolean value representing `True` or `False` that we can use to control the Program Flow.
+**Logic**, or more specifically, **Conditional Logic**, allows us to specify an action or set of actions based on a test. After evaluating the test, we will have a Boolean value representing `True` or `False` that we can use to control the Program Flow.
 
-\###Booleans Numeric variables can store a whole range of different numbers. Boolean variables can only store two values referred to as True or False, Yes or No, 1 or 0. We rarely use booleans to perform calculations because of their limited range.
+### Booleans&#x20;
 
-\###Conditional Statements The "If" statement is a key concept in programming: "If _this_ is true, then _that_ happens, otherwise _something else_ happens. The resulting action of the statement is driven by a boolean value. There are multiple ways to define an "If" statement in Dynamo:
+Numeric variables can store a whole range of different numbers. Boolean variables can only store two values referred to as True or False, Yes or No, 1 or 0. We rarely use booleans to perform calculations because of their limited range.
 
-\| Icon | Name | Syntax| Inputs | Outputs | | -- | -- | -- | -- | -- | -- |-- | | ![](../../.gitbook/assets/DSCoreNodesUI-Logic-If-Large.jpg) | If | If | test, true, false | result| | ![](../../.gitbook/assets/DSCoreNodesUI-Formula-Large.jpg) | Formula | IF(x,y,z) | x, y, z | result | | ![](../../.gitbook/assets/Dynamo-Nodes-CodeBlockNodeModel-Large.jpg) | Code Block | (x?y:z)| x, y, z | result| Let's go over a brief example on each of these three nodes in action using the conditional "If" statement:
+### Conditional Statements&#x20;
 
-![](../../.gitbook/assets/IFs.jpg)
+The "If" statement is a key concept in programming: "If _this_ is true, then _that_ happens, otherwise _something else_ happens. The resulting action of the statement is driven by a boolean value. There are multiple ways to define an "If" statement in Dynamo:
+
+| Icon                                            | Name & Syntax           | Inputs            | Outputs |
+| ----------------------------------------------- | ----------------------- | ----------------- | ------- |
+| ![](<../../.gitbook/assets/If (1).jpg>)         | If (**If**)             | test, true, false | result  |
+| ![](../../.gitbook/assets/Formula.jpg)          | Formula (**IF(x,y,z)**) | x, y, z           | result  |
+| ![](<../../.gitbook/assets/Code Block (1).jpg>) | Code Block (**x:y:z**)  | x? y, z           | result  |
+
+Let's go over a brief example on each of these three nodes in action using the conditional "If" statement:
+
+![](<../../.gitbook/assets/logic - conditional statements 01 false.jpg>)
 
 > In this image, the _boolean_ is set to _true_, which means that the result is a string reading: _"this is the result if true"._ The three Nodes creating the _If_ statement are working identically here.
 
-![](../../.gitbook/assets/IFs2.jpg)
+![](<../../.gitbook/assets/logic - conditional statements 02 true.jpg>)
 
 > Again, the Nodes are working identically. If the _boolean_ is changed to _false_, our result is the number _Pi_, as defined in the original _If_ statement.
 
-\###Filtering a List
+## Exercise: Logic and Geometry
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Logic.dyn]\(datasets/4-3/Building Blocks of Programs - Logic.dyn). A full list of example files can be found in the Appendix.
+### Part I: Filtering a List
+
+> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Logic.dyn]
+>
+> A full list of example files can be found in the Appendix.
 
 Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
 
-![](<../../.gitbook/assets/01 (6).jpg>)
+![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
 
-> 1. **Number Range -** add a number range to the canvas.
+a. **Number Range -** add a number range to the canvas.
 
-1. **Numbers -** add three number nodes to the canvas. The value for each number node should be: _0.0_ for _start_, _10.0_ for _end_, and _1.0_ for _step_.
-2. \*\*Output - \*\* our output is a list of 11 numbers ranging from 0-10.
-3. **Modulo (%)-** _Number Range_ into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
-4. **Equality Test (==) -** add an equality test to the canvas. Plug _modulo_ output into the _x_ input and _0.0_ into the _y_ input.
-5. **Watch -** The output of the equality test is a list of values alternating between true and false. These are the values used to separate the items in the list. _0_ (or _true_) represents even numbers and (_1_, or _false_) represents odd numbers.
-6. **List.FilterByBoolMask -** this Node will filter the values into two different lists based on the input boolean. Plug the original _number range_ into the _list_ input and the _equality test_ output into the _mask_ input. The _in_ output represents true values while the _out_ output represents false values.
-7. \*\*Watch - \*\* as a result, we now have a list of even numbers and a list of odd numbers. We've used logical operators to separate lists into patterns!
+b. **Numbers -** add three number nodes to the canvas. The value for each number node should be: _0.0_ for _start_, _10.0_ for _end_, and _1.0_ for _step_.
 
-\###From Logic to Geometry Building off of the logic established in the first exercise, let's apply this setup into a modeling operation.
+c. **Output** - our output is a list of 11 numbers ranging from 0-10.
 
-![](<../../.gitbook/assets/02 (1).png>) We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
+d. **Modulo (%)-** _Number Range_ into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
+
+e. **Equality Test (==) -** add an equality test to the canvas. Plug _modulo_ output into the _x_ input and _0.0_ into the _y_ input.
+
+f. **Watch -** The output of the equality test is a list of values alternating between true and false. These are the values used to separate the items in the list. _0_ (or _true_) represents even numbers and (_1_, or _false_) represents odd numbers.
+
+g. **List.FilterByBoolMask -** this Node will filter the values into two different lists based on the input boolean. Plug the original _number range_ into the _list_ input and the _equality test_ output into the _mask_ input. The _in_ output represents true values while the _out_ output represents false values.
+
+h. **Watch** - as a result, we now have a list of even numbers and a list of odd numbers. We've used logical operators to separate lists into patterns!
+
+### Part II: From Logic to Geometry&#x20;
+
+Building off of the logic established in the first exercise, let's apply this setup into a modeling operation.
+
+![](<../../.gitbook/assets/02 (1).png>)&#x20;
+
+\We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
 
 > 3\. The input values have changed.
 
