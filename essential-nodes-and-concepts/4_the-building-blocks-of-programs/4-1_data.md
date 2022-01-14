@@ -53,6 +53,8 @@ Download the example file Building Blocks of Programs - Data.dyn.&#x20;
 
 A full list of example files can be found in the Appendix.
 
+### Part I: Set up Graph for one cylinder with some changeable parameters.
+
 1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
 
 ![](<../../.gitbook/assets/data - exercise step 1.jpg>)
@@ -89,8 +91,6 @@ A full list of example files can be found in the Appendix.
 
 ![](<../../.gitbook/assets/data - exercise step 7b.gif>)
 
-****
-
 8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
 
 ![](<../../.gitbook/assets/data - exercise step 8a.gif>)
@@ -99,27 +99,32 @@ A full list of example files can be found in the Appendix.
 
 ![](<../../.gitbook/assets/data - exercise step 8b step.jpg>)
 
-
+### Part II: Populate an array of cylinders from Part I
 
 9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
 
-![](../../.gitbook/assets/9.png)
+**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
 
-> 1. **Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+![](<../../.gitbook/assets/data - exercise step 9.jpg>)
 
-![](<../../.gitbook/assets/10 (1).png>)
+10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
 
-> This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
 
-1. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
-2. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
-3. \*\*Integer Slider - \*\* For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
-4. \*\*Output - \*\* This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
 
-![](<../../.gitbook/assets/11 (1).png>)
+c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
 
-> 1. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original _Point.ByCoordinates_. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
 
-![](../../.gitbook/assets/12.png)
+![](<../../.gitbook/assets/data - exercise step 10.jpg>)
 
-> The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original _Point.ByCoordinates_. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+
+![](<../../.gitbook/assets/data - exercise step 11.gif>)
+
+12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+
+![](<../../.gitbook/assets/data - exercise step 12.gif>)
+
+>

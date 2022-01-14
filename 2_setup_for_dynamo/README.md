@@ -64,3 +64,7 @@ You will see the DynamoSandbox startup screen as follow.
 ![](<../.gitbook/assets/03-06 Dynamo startup screen.jpg>)
 
 Congratulations, you have now finished the setup for using DynamoSandbox!
+
+{% hint style="info" %}
+\[Add info about accessing **Geometry** by installing additional Autodesk software]
+{% endhint %}
