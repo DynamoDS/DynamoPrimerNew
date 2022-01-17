@@ -47,7 +47,7 @@ The current Node works well, but it can be a little awkward to get everything wo
 
 ### Color Preview
 
-The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **color range** Node.
+The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **range** Node.
 
 ![](../../.gitbook/assets/cuboids.jpg)
 
@@ -57,13 +57,17 @@ The **Display.BySurfaceColors** node gives us the ability to map data across a s
 
 ![](<../../.gitbook/assets/12 (1).jpg>)
 
-##
+
 
 ## Exercise
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Color.dyn]\(datasets/4-5/Building Blocks of Programs - Color.dyn). A full list of example files can be found in the Appendix.
+### Basic Helix with Colors
 
-This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block** (3.2.3). This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
+> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Color.dyn]
+>
+> A full list of example files can be found in the Appendix.
+
+This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
 
 ![](<../../.gitbook/assets/11 (1).jpg>)
 
@@ -132,7 +136,7 @@ The size of the spheres demonstrates the parametric array defined by a reference
 
 > If we change the value of the _number slider_ from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
 
-## Color on Surfaces Exercise
+### Color on Surfaces Exercise
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - ColorOnSurface.zip]\(datasets/4-5/BuildingBlocks of Programs - ColorOnSurface.zip). A full list of example files can be found in the Appendix.
 
