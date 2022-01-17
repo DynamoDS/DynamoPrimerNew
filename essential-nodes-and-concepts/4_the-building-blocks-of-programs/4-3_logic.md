@@ -70,9 +70,9 @@ b. We've unplugged the in list input into _List.FilterByBoolMask_. We'll put the
 
 ![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
 
-a. The **first slider** should have a min of 1, a max of 4, and a step of 0.01.
+a. The **first slider** represents the frequency of the wave, it should have a min of 1, a max of 4, and a step of 0.01.
 
-b. The **second slider** should have a min of 0, a max of 1, and a step of 0.01.
+b. The **second slider** represents the amplitude of the wave, should have a min of 0, a max of 1, and a step of 0.01.
 
 c. **PolyCurve.ByPoints -** if the above Node diagram is copied, the result is a sine curve in the Dynamo Preview viewport.
 
@@ -92,7 +92,7 @@ a. Math.RemapRange - Using the number sequence created in step 02, let's create 
 
 This step creates points along the curve. We remapped the numbers to 0 to 1 because the input of _param_ is looking for values in this range. A value of _0_ represents the start point, a value of _1_ represents the end points. All numbers in between evaluate within the _\[0,1]_ range.
 
-6\. Connect the output from Curve.PointAtParameter to the List.FilterByBoolMask to separate list of odd and even indices.
+6\. Connect the output from **Curve.PointAtParameter** to the **List.FilterByBoolMask** to separate the list of odd and even indices.
 
 ![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
 
@@ -100,11 +100,14 @@ a. **List.FilterByBoolMask** - Plug _Curve.PointAtParameter_ from the previous s
 
 b. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
 
-6\. **Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
+7\. Next, we are going to use the output result from List.FilterByBoolMask in step 05 to generate geometries with sizes according to its indices.
 
-![](../../.gitbook/assets/08.png)
+**Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
 
-![](../../.gitbook/assets/matrix.png)
+![](<../../.gitbook/assets/logic - exercise part II-07.jpg>)
 
-> 1. **Number Slider -** stepping back to the beginning of the definition, we can flex the number slider and watch the zipper update. The top row of images represents a range values for the top number slider. This is the frequency of the wave.
-> 2. **Number Slider -** the bottom row of images represents a range of values for the bottom slider. This is the amplitude of the wave.
+a. List of cuboids at even indices.
+
+b. List of cuboids at odd indices.
+
+&#x20;Voila! You have just programmed a process of defining the geometry dimensions according to the logic operation demonstrated in this exercise.
