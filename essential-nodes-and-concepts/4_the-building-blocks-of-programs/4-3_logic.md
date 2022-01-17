@@ -10,11 +10,11 @@ Numeric variables can store a whole range of different numbers. Boolean variable
 
 The "If" statement is a key concept in programming: "If _this_ is true, then _that_ happens, otherwise _something else_ happens. The resulting action of the statement is driven by a boolean value. There are multiple ways to define an "If" statement in Dynamo:
 
-| Icon                                            | Name & Syntax           | Inputs            | Outputs |
-| ----------------------------------------------- | ----------------------- | ----------------- | ------- |
-| ![](<../../.gitbook/assets/If (1).jpg>)         | If (**If**)             | test, true, false | result  |
-| ![](../../.gitbook/assets/Formula.jpg)          | Formula (**IF(x,y,z)**) | x, y, z           | result  |
-| ![](<../../.gitbook/assets/Code Block (1).jpg>) | Code Block (**x:y:z**)  | x? y, z           | result  |
+| Icon                                            | Name & Syntax             | Inputs            | Outputs |
+| ----------------------------------------------- | ------------------------- | ----------------- | ------- |
+| ![](<../../.gitbook/assets/If (1).jpg>)         | If (**If**)               | test, true, false | result  |
+| ![](../../.gitbook/assets/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | result  |
+| ![](<../../.gitbook/assets/Code Block (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
 
 Let's go over a brief example on each of these three nodes in action using the conditional "If" statement:
 
@@ -110,4 +110,4 @@ a. List of cuboids at even indices.
 
 b. List of cuboids at odd indices.
 
-&#x20;Voila! You have just programmed a process of defining the geometry dimensions according to the logic operation demonstrated in this exercise.
+Voila! You have just programmed a process of defining the geometry dimensions according to the logic operation demonstrated in this exercise.
