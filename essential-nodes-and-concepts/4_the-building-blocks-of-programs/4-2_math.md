@@ -6,7 +6,7 @@ If the simplest form of data is numbers, the easiest way to relate those numbers
 
 Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
 
-| Icon                                                | Name & Syntax     | Inputs                     | Outputs      |
+| Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](<../../.gitbook/assets/addition (1).jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
 | ![](<../../.gitbook/assets/Subtraction (1).jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |

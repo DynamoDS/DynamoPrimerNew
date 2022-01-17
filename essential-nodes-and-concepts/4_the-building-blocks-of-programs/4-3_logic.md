@@ -10,7 +10,7 @@ Numeric variables can store a whole range of different numbers. Boolean variable
 
 The "If" statement is a key concept in programming: "If _this_ is true, then _that_ happens, otherwise _something else_ happens. The resulting action of the statement is driven by a boolean value. There are multiple ways to define an "If" statement in Dynamo:
 
-| Icon                                            | Name & Syntax             | Inputs            | Outputs |
+| Icon                                            | Name (Syntax)             | Inputs            | Outputs |
 | ----------------------------------------------- | ------------------------- | ----------------- | ------- |
 | ![](<../../.gitbook/assets/If (1).jpg>)         | If (**If**)               | test, true, false | result  |
 | ![](../../.gitbook/assets/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | result  |

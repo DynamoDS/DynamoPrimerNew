@@ -8,9 +8,9 @@ Formally, a **String** is a sequence of characters representing a literal consta
 
 Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
 
-![](<../../.gitbook/assets/strings - creating strings.jpg>)
+The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
 
-> The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
+![](<../../.gitbook/assets/strings - creating strings.jpg>)
 
 ## Exercise&#x20;
 

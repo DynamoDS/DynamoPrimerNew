@@ -1,38 +1,65 @@
 # Color
 
-\##Color Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
+Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
 
-\###Creating Colors Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
+### Creating Colors&#x20;
 
-\| Icon | Name | Syntax| Inputs | Outputs | | -- | -- | -- | -- | -- | -- |-- | | ![](../../.gitbook/assets/DSCore-Color-ByARGB-Large.jpg) | ARGB Color | Color.ByARGB | A,R,G,B | color |
+Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
 
-\###Querying Color Values The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
+| Icon                                          | Name (Syntax)                 | Inputs  | Outputs |
+| --------------------------------------------- | ----------------------------- | ------- | ------- |
+| ![](<../../.gitbook/assets/Color byARGB.jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
 
-\| Icon | Name | Syntax| Inputs | Outputs | | -- | -- | -- | -- | -- | -- | -- | | ![](../../.gitbook/assets/DSCore-Color-Alpha-Large.jpg) | Alpha | Color.Alpha | color | A | | ![](../../.gitbook/assets/DSCore-Color-Red-Large.jpg) | Red | Color.Red | color | R | | ![](../../.gitbook/assets/DSCore-Color-Green-Large.jpg) | Green | Color.Green | color | G | | ![](../../.gitbook/assets/DSCore-Color-Blue-Large.jpg) | Blue | Color.Blue | color | B | | ![](../../.gitbook/assets/DSCore-Color-Components-Large.jpg) | Components | Color.Components | color | A,R,G,B |
+### Querying Color Values&#x20;
+
+The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
+
+| Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
+| ------------------------------------------------ | --------------------------------- | ------ | ---------- |
+| ![](<../../.gitbook/assets/Color Alpha (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| ![](<../../.gitbook/assets/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
+| ![](<../../.gitbook/assets/Color Green (1).jpg>) | Green (**Color.Green**)           | color  | G          |
+| ![](<../../.gitbook/assets/Color Blue.jpg>)      |  Blue (**Color.Blue**)            | color  | B          |
+| ![](<../../.gitbook/assets/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
 
 The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
 
-\| Icon | Query Name | Syntax| Inputs | Outputs | | -- | -- | -- | -- | -- | -- | -- | | ![](../../.gitbook/assets/DSCore-Color-Hue-Large.jpg) | Hue | Color.Hue | color | Hue | | ![](../../.gitbook/assets/DSCore-Color-Saturation-Large.jpg) | Saturation | Color.Saturation | color | Saturation | | ![](../../.gitbook/assets/DSCore-Color-Brightness-Large.jpg) | Brightness | Color.Brightness | color | Brightness |
+| Icon                                              | Name (Syntax)                     | Inputs | Outputs    |
+| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
+| ![](<../../.gitbook/assets/Color Hue.jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
+| ![](<../../.gitbook/assets/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
+| ![](<../../.gitbook/assets/Color Brightness.jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
 
-\###Color Range The color range is similar to the **Remap Range** Node from section 4.2: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+
+
+### Color Range
+
+The color range is similar to the **Remap Range** Node from section 4.2: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
 
 The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
 
 ![](broken-reference)
 
 > 1. \*\*Define three colors: \*\* Using a code block node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
+> 2. **Create list:** Merge the three colors into one list.
+> 3. \*\*Define Indices: \*\* Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
+> 4. \*\*Code Block: \*\* Input values (between 0 and 1) to translate to colors.
 
-1. **Create list:** Merge the three colors into one list.
-2. \*\*Define Indices: \*\* Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-3. \*\*Code Block: \*\* Input values (between 0 and 1) to translate to colors.
-
-#### Color Preview
+### Color Preview
 
 The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **color range** Node.
 
 ![](../../.gitbook/assets/cuboids.jpg)
 
-\###Color Exercise
+### Color On Surfaces
+
+The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
+
+![](<../../.gitbook/assets/12 (1).jpg>)
+
+##
+
+## Exercise
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Color.dyn]\(datasets/4-5/Building Blocks of Programs - Color.dyn). A full list of example files can be found in the Appendix.
 
@@ -41,34 +68,30 @@ This exercise focuses on controlling color parametrically in parallel with geome
 ![](<../../.gitbook/assets/11 (1).jpg>)
 
 > 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
-
-1. \*\*Point.ByCoordinates:\*\*Plug the three outputs from the code block into the coordinates for the Node.
+> 2. \*\*Point.ByCoordinates:\*\*Plug the three outputs from the code block into the coordinates for the Node.
 
 We now see an array of points creating a helix. The next step is to create a curve through the points so that we can visualize the helix.
 
 ![](<../../.gitbook/assets/10 (1).jpg>)
 
 > 1. **PolyCurve.ByPoints:** Connect the _Point.ByCoordinates_ output into the _points_ input for the Node. We get a helical curve.
-
-1. **Curve.PointAtParameter:** Connect the _PolyCurve.ByPoints_ output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
-2. **Number Slider:** After adding to the canvas, change the _min_ value to _0.0_, the _max_ value to _1.0_, and the _step_ value to _.01_. Plug the slider output into the _param_ input for _Curve.PointAtParameter_. We now see a point along the length of the helix, represented by a percentage of the slider (0 at the start point, 1 at the end point).
+> 2. **Curve.PointAtParameter:** Connect the _PolyCurve.ByPoints_ output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
+> 3. **Number Slider:** After adding to the canvas, change the _min_ value to _0.0_, the _max_ value to _1.0_, and the _step_ value to _.01_. Plug the slider output into the _param_ input for _Curve.PointAtParameter_. We now see a point along the length of the helix, represented by a percentage of the slider (0 at the start point, 1 at the end point).
 
 With the reference point created, we now compare the distance from the reference point to the original points defining the helix. This distance value will drive geometry as well as color.
 
 ![](<../../.gitbook/assets/09 (1).jpg>)
 
 > 1. **Geometry.DistanceTo:** Connect _Curve.PointAtParameter_ output into the _input_. Connect _Point.ByCoordinates_ into the \*geometry input.
-
-1. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
+> 2. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
 
 Our next step is to drive parameters with the list of distances from the helical points to the reference point. We use these distance values to define the radii of a series of spheres along the curve. In order to keep the spheres a suitable size, we need to _remap_ the values for distance.
 
 ![](<../../.gitbook/assets/08 (1).jpg>)
 
 > 1. **Math.RemapRange:** Connect _Geometry.DistanceTo_ output into the numbers input.
-
-1. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
-2. **Watch:** connect the _Math.RemapRange_ output into one Node and the _Geometry.DistanceTo_ output into another. Compare the results.
+> 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
+> 3. **Watch:** connect the _Math.RemapRange_ output into one Node and the _Geometry.DistanceTo_ output into another. Compare the results.
 
 This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
 
@@ -85,15 +108,13 @@ The size of the spheres demonstrates the parametric array defined by a reference
 ![](<../../.gitbook/assets/05 (4).jpg>)
 
 > 1. **Color Range:** Add top the canvas. When hovering over the _value_ input, we notice that the numbers requested are between 0 and 1. We need to remap the numbers from the _Geometry.DistanceTo_ output so that they are compatible with this domain.
-
-1. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this Node (_Right Click > Preview_)
+> 2. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this Node (_Right Click > Preview_)
 
 ![](<../../.gitbook/assets/04 (6).jpg>)
 
 > 1. **Math.RemapRange:** This process should look familiar. Connect the _Geometry.DistanceTo_ output into the numbers input.
-
-1. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
-2. **Color Range:** Connect the _Math.RemapRange_ output into the _value_ input.
+> 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
+> 3. **Color Range:** Connect the _Math.RemapRange_ output into the _value_ input.
 
 ![](<../../.gitbook/assets/03 (5).jpg>)
 
@@ -111,13 +132,7 @@ The size of the spheres demonstrates the parametric array defined by a reference
 
 > If we change the value of the _number slider_ from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
 
-#### Color On Surfaces
-
-The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
-
-![](<../../.gitbook/assets/12 (1).jpg>)
-
-\###Color on Surfaces Exercise
+## Color on Surfaces Exercise
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - ColorOnSurface.zip]\(datasets/4-5/BuildingBlocks of Programs - ColorOnSurface.zip). A full list of example files can be found in the Appendix.
 
