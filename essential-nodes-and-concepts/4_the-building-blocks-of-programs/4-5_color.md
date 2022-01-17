@@ -34,16 +34,16 @@ The colors in the table below correspond to the **HSB color space**. Dividing th
 
 ### Color Range
 
-The color range is similar to the **Remap Range** Node from section 4.2: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](4-3\_logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
 
 The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
 
-![](broken-reference)
+![](<../../.gitbook/assets/color - color range.jpg>)
 
-> 1. \*\*Define three colors: \*\* Using a code block node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
+> 1. Define three colors: Using a code block node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
 > 2. **Create list:** Merge the three colors into one list.
-> 3. \*\*Define Indices: \*\* Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. \*\*Code Block: \*\* Input values (between 0 and 1) to translate to colors.
+> 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
+> 4. Code Block: Input values (between 0 and 1) to translate to colors.
 
 ### Color Preview
 
