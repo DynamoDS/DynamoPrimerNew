@@ -23,13 +23,15 @@ Operators are a set of components that use algebraic functions with two numeric 
 
 Combine operators and variables to form a more complex relationship through **Formulas**. Use sliders to make a Formula that can be controlled with input parameters.
 
-**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.&#x20;
+1.Create Number sequence that represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
 
-This sequence represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
+**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.&#x20;
 
 ![](<../../.gitbook/assets/math - part I-01.jpg>)
 
-The step above has created a list of numbers to define the parametric domain. The golden spiral is defined as the equation:&#x20;
+2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.&#x20;
+
+The golden spiral is defined as the equation:&#x20;
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -39,7 +41,7 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-The group of Nodes below represent this equation in visual programming form.
+The golden spiral visual programming form.
 
 ![](<../../.gitbook/assets/math - part I-02.jpg>)
 

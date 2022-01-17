@@ -34,7 +34,7 @@ Let's go over a brief example on each of these three nodes in action using the c
 >
 > A full list of example files can be found in the Appendix.
 
-Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
+1.Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
 
 ![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
 
@@ -58,48 +58,53 @@ h. **Watch** - as a result, we now have a list of even numbers and a list of odd
 
 Building off of the logic established in the first exercise, let's apply this setup into a modeling operation.
 
-![](<../../.gitbook/assets/02 (1).png>)&#x20;
+2\. We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
 
-\We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
+![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
 
-> 3\. The input values have changed.
+a. Use a sequence Node with these input values.
 
-1. We've unplugged the in list input into _List.FilterByBoolMask_. We'll put these Nodes aside for now, but they'll come in handy later in the exercise.
+b. We've unplugged the in list input into _List.FilterByBoolMask_. We'll put these Nodes aside for now, but they'll come in handy later in the exercise.
 
-![](<../../.gitbook/assets/03 (1).png>)
+3\. Let's begin by creating a separate group of Graph as shown in the image above. This group of Nodes represents a parametric equation to define a line curve. A few notes:
 
-> Let's begin by connecting the Nodes together as shown in the image above. This group of Nodes represents a parametric equation to define a line curve. A few notes:
+![](<../../.gitbook/assets/logic - exercise part II-02.jpg>)
 
-1. The **first slider** should have a min of 1, a max of 4, and a step of 0.01.
-2. The **second slider** should have a min of 0, a max of 1, and a step of 0.01.
-3. **PolyCurve.ByPoints -** if the above Node diagram is copied, the result is a sine curve in the Dynamo Preview viewport.
+a. The **first slider** should have a min of 1, a max of 4, and a step of 0.01.
+
+b. The **second slider** should have a min of 0, a max of 1, and a step of 0.01.
+
+c. **PolyCurve.ByPoints -** if the above Node diagram is copied, the result is a sine curve in the Dynamo Preview viewport.
 
 The method here for the inputs: use number nodes for more static properties and number sliders on the more flexible ones. We want to keep the original number range that we're defining in the beginning of this step. However, the sine curve that we create here should have some flexibility. We can move these sliders to watch the curve update its frequency and amplitude.
 
-![](../../.gitbook/assets/04.png)
+![](<../../.gitbook/assets/logic - exercise part II-03.gif>)
 
-> We're going to jump around a bit in the definition, so let's look at the end result so that we can reference what we're getting at. The first two steps are made separately, we now want to connect the two. We'll use the base sine curve to drive the location of the zipper components, and we'll use the true/false logic to alternate between little boxes and larger boxes.
+4\. We're going to jump around a bit in the definition, so let's look at the end result so that we can reference what we're getting at. The first two steps are made separately, we now want to connect the two. We'll use the base sine curve to drive the location of the zipper components, and we'll use the true/false logic to alternate between little boxes and larger boxes.
 
-![](<../../.gitbook/assets/05 (1).png>)
+![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
 
-> 1. \*\*Math.RemapRange - \*\* Using the number sequence created in step 01, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
+a. Math.RemapRange - Using the number sequence created in step 02, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
 
-![](../../.gitbook/assets/06.png)
+5\. Create a **Curve.PointAtParameter** Node, then connect the **Math.RemapRange** output from step 04 as its _param_ input.
 
-> 1. \*\*Curve.PointAtParameter - \*\* Plug _Polycurve.ByPoints_ (from step 2) into _curve_ and _Math.RemapRange_ into _param_. This step creates points along the curve. We remapped the numbers to 0 to 1 because the input of _param_ is looking for values in this range. A value of _0_ represents the start point, a value of _1_ represents the end points. All numbers in between evaluate within the _\[0,1]_ range.
+![](<../../.gitbook/assets/logic - exercise part II-05.jpg>)
 
-![](../../.gitbook/assets/07.png)
+This step creates points along the curve. We remapped the numbers to 0 to 1 because the input of _param_ is looking for values in this range. A value of _0_ represents the start point, a value of _1_ represents the end points. All numbers in between evaluate within the _\[0,1]_ range.
 
-> 1. \*\*List.FilterByBoolMask - \*\* Plug _Curve.PointAtParameter_ from the previous step into the _list_ input.
+6\. Connect the output from Curve.PointAtParameter to the List.FilterByBoolMask to separate list of odd and even indices.
 
-1. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
+![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
+
+a. **List.FilterByBoolMask** - Plug _Curve.PointAtParameter_ from the previous step into the _list_ input.
+
+b. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
+
+6\. **Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
 
 ![](../../.gitbook/assets/08.png)
-
-> 1. **Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
 
 ![](../../.gitbook/assets/matrix.png)
 
 > 1. **Number Slider -** stepping back to the beginning of the definition, we can flex the number slider and watch the zipper update. The top row of images represents a range values for the top number slider. This is the frequency of the wave.
-
-1. **Number Slider -** the bottom row of images represents a range of values for the bottom slider. This is the amplitude of the wave.
+> 2. **Number Slider -** the bottom row of images represents a range of values for the bottom slider. This is the amplitude of the wave.
