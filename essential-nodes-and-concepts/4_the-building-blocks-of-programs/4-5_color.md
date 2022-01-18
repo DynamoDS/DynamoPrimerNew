@@ -47,9 +47,9 @@ The current Node works well, but it can be a little awkward to get everything wo
 
 ### Color Preview
 
-The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **range** Node.
+The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **Range** Node.
 
-![](../../.gitbook/assets/cuboids.jpg)
+![](<../../.gitbook/assets/color - color preview.jpg>)
 
 ### Color On Surfaces
 
@@ -69,14 +69,14 @@ The **Display.BySurfaceColors** node gives us the ability to map data across a s
 
 This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
 
-![](<../../.gitbook/assets/11 (1).jpg>)
+![](broken-reference)
 
 > 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
-> 2. \*\*Point.ByCoordinates:\*\*Plug the three outputs from the code block into the coordinates for the Node.
+> 2. **Point.ByCoordinates**: Plug the three outputs from the code block into the coordinates for the Node.
 
 We now see an array of points creating a helix. The next step is to create a curve through the points so that we can visualize the helix.
 
-![](<../../.gitbook/assets/10 (1).jpg>)
+![](<../../.gitbook/assets/color - basic helix with colors 02.jpg>)
 
 > 1. **PolyCurve.ByPoints:** Connect the _Point.ByCoordinates_ output into the _points_ input for the Node. We get a helical curve.
 > 2. **Curve.PointAtParameter:** Connect the _PolyCurve.ByPoints_ output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
@@ -84,14 +84,14 @@ We now see an array of points creating a helix. The next step is to create a cur
 
 With the reference point created, we now compare the distance from the reference point to the original points defining the helix. This distance value will drive geometry as well as color.
 
-![](<../../.gitbook/assets/09 (1).jpg>)
+![](<../../.gitbook/assets/color - basic helix with colors 03.jpg>)
 
-> 1. **Geometry.DistanceTo:** Connect _Curve.PointAtParameter_ output into the _input_. Connect _Point.ByCoordinates_ into the \*geometry input.
+> 1. **Geometry.DistanceTo:** Connect _Curve.PointAtParameter_ output into the _input_. Connect _Point.ByCoordinates_ into the geometry input.
 > 2. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
 
 Our next step is to drive parameters with the list of distances from the helical points to the reference point. We use these distance values to define the radii of a series of spheres along the curve. In order to keep the spheres a suitable size, we need to _remap_ the values for distance.
 
-![](<../../.gitbook/assets/08 (1).jpg>)
+![](<../../.gitbook/assets/color - basic helix with colors 04.jpg>)
 
 > 1. **Math.RemapRange:** Connect _Geometry.DistanceTo_ output into the numbers input.
 > 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
@@ -99,46 +99,47 @@ Our next step is to drive parameters with the list of distances from the helical
 
 This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
 
-![](../../.gitbook/assets/07.jpg)
+![](<../../.gitbook/assets/color - basic helix with colors 05.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius:** connect the _Math.RemapRange_ output into the _radius_ input and the original _Point.ByCoordinates_ output into the _centerPoint_ input.
 
-![](<../../.gitbook/assets/06 (5).jpg>)
+Change the value of the number slider and watch the size of the spheres update. We now have a parametric jig
 
-> 1. **Number Slider:** change the value of the number slider and watch the size of the spheres update. We now have a parametric jig.
+![](<../../.gitbook/assets/color - basic helix with colors 06.gif>)
 
 The size of the spheres demonstrates the parametric array defined by a reference point along the curve. Let's use the same concept for the sphere radius to drive their color.
 
-![](<../../.gitbook/assets/05 (4).jpg>)
+![](<../../.gitbook/assets/color - basic helix with colors 07.jpg>)
 
 > 1. **Color Range:** Add top the canvas. When hovering over the _value_ input, we notice that the numbers requested are between 0 and 1. We need to remap the numbers from the _Geometry.DistanceTo_ output so that they are compatible with this domain.
 > 2. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this Node (_Right Click > Preview_)
 
-![](<../../.gitbook/assets/04 (6).jpg>)
+![](<../../.gitbook/assets/color - basic helix with colors 08.jpg>)
 
 > 1. **Math.RemapRange:** This process should look familiar. Connect the _Geometry.DistanceTo_ output into the numbers input.
 > 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
 > 3. **Color Range:** Connect the _Math.RemapRange_ output into the _value_ input.
 
-![](<../../.gitbook/assets/03 (5).jpg>)
+![](<../../.gitbook/assets/color - basic helix with colors 09.jpg>)
 
 > 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
+> 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two _Color.ByARGB_ inputs in agreement with the image above (or create your favorite two colors).
+> 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
+> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for _Color Range_.
 
-1. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two _Color.ByARGB_ inputs in agreement with the image above (or create your favorite two colors).
-2. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-3. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for _Color Range_.
-
-![](<../../.gitbook/assets/02 (8).jpg>)
+![](<../../.gitbook/assets/color - basic helix with colors 10.jpg>)
 
 > 1. **Display.ByGeometryColor:** Connect _Sphere.ByCenterPointRadius_ into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
 
-![](<../../.gitbook/assets/01 (2).jpg>)
+If we change the value of the _number slider_ from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
 
-> If we change the value of the _number slider_ from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
+![](<../../.gitbook/assets/color - basic helix with colors 11.gif>)
 
 ### Color on Surfaces Exercise
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - ColorOnSurface.zip]\(datasets/4-5/BuildingBlocks of Programs - ColorOnSurface.zip). A full list of example files can be found in the Appendix.
+> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - ColorOnSurface.zip]
+>
+> A full list of example files can be found in the Appendix.
 
 ![](<../../.gitbook/assets/13 (1).jpg>)
 
