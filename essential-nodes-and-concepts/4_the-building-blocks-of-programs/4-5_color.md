@@ -69,7 +69,7 @@ The **Display.BySurfaceColors** node gives us the ability to map data across a s
 
 This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
 
-![](broken-reference)
+![](<../../.gitbook/assets/color - basic helix with colors 01.jpg>)
 
 > 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
 > 2. **Point.ByCoordinates**: Plug the three outputs from the code block into the coordinates for the Node.
@@ -141,22 +141,21 @@ If we change the value of the _number slider_ from earlier in the definition, th
 >
 > A full list of example files can be found in the Appendix.
 
-![](<../../.gitbook/assets/13 (1).jpg>)
+First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
 
-> First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
+![](<../../.gitbook/assets/color - color on surface 01.jpg>)
 
-1. This **Group** of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
-2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
+> 1. This **Group** of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
+> 2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
 
-![](../../.gitbook/assets/14.jpg)
+![](<../../.gitbook/assets/color - color on surface 02.jpg>)
 
 > 1. **File Path**: select an image file to sample for pixel data downstream
+> 2. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
+> 3. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
+> 4. **Slider**: provide sample values for **Image.Pixels**
+> 5. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
 
-1. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
-2. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
-3. **Slider**: provide sample values for **Image.Pixels**
-4. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
+Close-up preview of the output surface with resolution of 400x300 samples
 
-![](../../.gitbook/assets/15.jpg)
-
-> Close-up preview of the output surface with resolution of 400x300 samples
+![](<../../.gitbook/assets/color - color on surface 03.jpg>)
