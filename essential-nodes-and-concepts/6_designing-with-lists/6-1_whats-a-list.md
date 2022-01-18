@@ -85,22 +85,22 @@ As you can see there are different ways in which we can draw lines between these
 
 To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
 
-![Input Examples](../../.gitbook/assets/lacing.jpg)
+We'll change the lacing on _Point.ByCoordinates_, but won't change anything else about the graph above.
 
-> 1. We'll change the lacing on _Point.ByCoordinates_, but won't change anything else about the graph above.
+### Shortest List
 
-![Input Examples](../../.gitbook/assets/shortestList.jpg)
+Choosing _shortest list_ as the lacing option (also the default option), we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
 
-> By changing the lacing to _shortest list_, we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
+![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 01.jpg>)
 
 ### **Longest List**
 
-![Input Examples](../../.gitbook/assets/longestList.jpg)
+By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
 
-> By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
+![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 02.jpg>)
 
 ### **Cross Product**
 
 By changing the lacing to _Cross Product_, we get every combination between each list, giving us a 5x10 grid of points. This is an equivalent data structure to the cross product as shown in the concept diagram above, except our data is now a list of lists. By connecting a polycurve, we can see that each list is defined by its X-Value, giving us a row of vertical lines.
 
-![Input Examples](../../.gitbook/assets/crossProduct.jpg)
+![Input Examples](<../../.gitbook/assets/what's a list - lacing exercise 03.jpg>)
