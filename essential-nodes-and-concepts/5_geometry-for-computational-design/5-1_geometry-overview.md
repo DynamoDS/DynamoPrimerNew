@@ -2,6 +2,8 @@
 
 ## Geometry in Dynamo Sandbox
 
+**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
+
 Understanding the Geometry types and [how they are related](5-1\_geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
 
 ![Geometry in Dynamo](../../.gitbook/assets/GeometryOrganization2.jpg)
@@ -14,8 +16,6 @@ Additionally, making models in Dynamo and connecting the preview of what we see 
 > 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
 
 > Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Geometry Overview.dyn]\(datasets/5-1/Geometry for Computational Design - Geometry Overview.dyn). A full list of example files can be found in the Appendix.
-
-**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
 
 ## The Concept of Geometry
 

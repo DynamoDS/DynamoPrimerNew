@@ -2,11 +2,13 @@
 
 ### Lists of Lists
 
-Let's add one more tier to the hierarchy. If we take the deck of cards from the original example and create a box which contains multiple decks, the box now represents a list of decks, and each deck represents a list of cards. This is a list of lists. For the analogy in this section, the red box below contains a list of coin rolls, and each roll contains a list of pennies.
+Let's add one more tier to the hierarchy. If we take the deck of cards from the original example and create a box which contains multiple decks, the box now represents a list of decks, and each deck represents a list of cards. This is a list of lists. For the analogy in this section, the image below contains a list of coin rolls, and each roll contains a list of pennies.
 
 ![Coins](../../.gitbook/assets/coins-521245\_640.jpg)
 
 > Photo by [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
+
+### Query
 
 What **queries** can we make from the list of lists? This accesses existing properties.
 
@@ -14,6 +16,8 @@ What **queries** can we make from the list of lists? This accesses existing prop
 * Coin type values? $0.01 and $0.25.
 * Material of quarters? 75% copper and 25% nickel.
 * Material of pennies? 97.5% zinc and 2.5% copper.
+
+### Action
 
 What **actions** can we perform on the list of lists? This changes the list of lists based on a given operation.
 
@@ -26,63 +30,55 @@ Again, Dynamo has an analagous node for each one of the operations above. Since 
 
 When dealing with lists of lists, the data is layered and complex, but this provides an opportunity to do some awesome parametric operations. Let's break down the fundamentals and discuss a few more operations in the lessons below.
 
+
+
+## Exercise
+
 ### Top-Down Hierarchy
 
 The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like List.GetItemAtIndex, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
 
-**Exercise - Top-Down Hierarchy**
+Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Top-Down-Hierarchy.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Top-Down-Hierarchy.dyn). A full list of example files can be found in the Appendix.
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Top-Down-Hierarchy.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Top-Down-Hierarchy.dyn). A full list of example files can be found in the Appendix.
+![top-down](<../../.gitbook/assets/lists of lists - top down hierachy.jpg>)
 
-![top-down](../../.gitbook/assets/top-down.jpg)
-
-> 1. With _code block_, we've defined two ranges:\`\`\` 0..2; 0..3; \`\`\`
+> 1. With _code block_, we've defined two ranges: `0..2; 0..3;`&#x20;
 > 2. These ranges are connected to a _Point.ByCoordinates_ node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
 > 3. Notice that the _Watch_ node gives 3 lists with 4 items in each list.
 > 4. When using _List.GetItemAtIndex_, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
 
-#### Flatten and List.Flatten
+### List.Flatten
 
 Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.
 
-**Exercise - Flatten**
-
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Flatten.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Flatten.dyn). A full list of example files can be found in the Appendix.
 
-![Exercise](../../.gitbook/assets/Flatten-31.jpg)
+![Exercise](<../../.gitbook/assets/lists of lists - flatten 01.jpg>)
 
-> 1. Insert one line of code to define a range in _code block_:\`\`\` -250..-150..#4; \`\`\`
+> 1. Insert one line of code to define a range in _code block_: `-250..-150..#4;`&#x20;
 > 2. Plugging the _code block_ into the _x_ and _y_ input of a _Point.ByCoordinates_ node, we set the lacing to _"Cross Product"_ to get a grid of points.
 > 3. The _Watch_ node shows that we have a list of lists.
-> 4. A _PolyCurve.ByPoints_ node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four polycurve representing each row in the grid.
+> 4. A _PolyCurve.ByPoints_ node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four Polycurve representing each row in the grid.
 
-![Exercise](../../.gitbook/assets/Flatten-30.jpg)
+![Exercise](<../../.gitbook/assets/lists of lists - flatten 02.jpg>)
 
 > 1. By inserting a _flatten_ before the polycurve node, we've created one single list for all of the points. The polycurve node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.
 
-There are also options for flattening isolated tiers of data. Using the List.Flatten node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in List.Map. We'll discuss [List.Map](6-3\_lists-of-lists.md#listmap-and-listcombine) more below.
+There are also options for flattening isolated tiers of data. Using the List.Flatten node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in List.Map. We'll discuss more about List.Map below.
 
-#### Chop
+### Chop
 
-When parametric modeling, there are also times where you'll want to add more data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
-
-**Exercise - List.Chop**
+When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Chop.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Chop.dyn). A full list of example files can be found in the Appendix.
 
-![Chop](../../.gitbook/assets/chop-01.jpg)
-
-> A \_List.Chop \_with a _subLength_ of 2 creates 4 lists with 2 items each.
-
 The chop command divides lists based on a given list length. In some ways, chop is the opposite of flatten: rather than removing data structure, it adds new tiers to it. This is a helpful tool for geometric operations like the example below.
 
-![Exercise](../../.gitbook/assets/Chop-00.jpg)
+![Exercise](<../../.gitbook/assets/lists of lists - chop.jpg>)
 
-#### List.Map and List.Combine
+### List.Map&#x20;
 
 A List.Map/Combine applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
-
-**Exercise - List.Map**
 
 _Note: This exercise was created with a previous version of Dynamo. Much of the List.Map functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 
@@ -90,25 +86,18 @@ _Note: This exercise was created with a previous version of Dynamo. Much of the 
 
 As a quick introduction, let's review the List.Count node from a previous section.
 
-![Exercise](broken-reference)
+The _List.Count_ node counts all of the items in a list. We'll use this to demonstrate how _List.Map_ works.
 
-> The _List.Count_ node counts all of the items in a list. We'll use this to demonstrate how _List.Map_ works.
+![](<../../.gitbook/assets/lists of lists - map 01.jpg>)
 
-![Exercise](<../../.gitbook/assets/05 (8).jpg>)
-
-> 1.  Insert two lines of code into the _code block_:
->
->     ```
->     -50..50..#Nx;
->     -50..50..#Ny;
->     ```
+> 1.  Insert two lines of code into the _code block_: `-50..50..#Nx; -50..50..#Ny;`
 >
 >     After typing in this code, the code block will create two inputs for Nx and Ny.
 > 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the _code block_.
 > 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a _Point.ByCoordinates_ node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
 > 4. A _Watch_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
 
-![Exercise](<../../.gitbook/assets/04 (9).jpg>)
+![Exercise](<../../.gitbook/assets/lists of lists - map 02.jpg>)
 
 > 1. Attach a _List.Count_ node to the output of the watch node from the previous step.
 > 2. Connect a _Watch_ node to the List.Count output.
@@ -124,7 +113,7 @@ Notice that the List.Count node gives a value of 5. This is equal to the "Nx" va
 > 2. Notice that the _List.Count_ node has no input. It is being used as a function, so the _List.Count_ node will be applied to every individual list one step down in the hierarchy. The blank input of _List.Count_ corresponds to the list input of _List.Map_.
 > 3. The results of _List.Count_ now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.
 
-**Exercise - List.Combine**
+### **List.Combine**
 
 _Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 
@@ -168,11 +157,9 @@ In this exercise, we'll use a similar logic to List.Map, but with multiple eleme
 > 6. Following suit, the parameter values are plugged into the _list2_ input of _List.Combine_.
 > 7. The _Watch_ node and the Dynamo preview shows us that we have 4 lines, each divided based on the _code block_ ranges.
 
-#### List@Level
+### List@Level
 
 Preferred to List.Map, the List@Level feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
-
-**List@Level Exercise**
 
 In this exercise, we will use the List@Level feature to isolate a specific level of data.
 
@@ -209,13 +196,11 @@ Although this particular example can also be created with List.Map, List@Level g
 > 2. To access a point grid with List.Map, we will need a List.GetItemAtIndex node alongside the List.Map. For every list level that we are stepping down, we will need to use an additional List.Map node. Depending on the complexity of your lists, this could require you to add a significant amount of List.Map Nodes to your graph to access the right level of information.
 > 3. In this example, a List.GetItemAtIndex node with a List.Map node reurns the same set of points with the same list structure as the List.GetItemAtIndex with '@L3' selected.
 
-#### Transpose
+### Transpose
 
 Transpose is a fundamental function when dealing with lists of lists. Just as in spreadsheet programs, a transpose flips the columns and rows of a data structure. We'll demonstrate this with a basic matrix below, and in the following section, we'll demonstrate how a transpose can be use to create geometric relationships.
 
 ![Transpose](../../.gitbook/assets/transpose1.jpg)
-
-**Exercise - List.Transpose**
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Transpose.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Transpose.dyn). A full list of example files can be found in the Appendix.
 
@@ -238,7 +223,7 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 > 2. Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.
 > 3. Notice the geometric result: using _PolyCurve.ByPoints_, we get 3 polycurves in the perpendicular direction to the original curves.
 
-#### Code Block Creation
+## Code Block for List Creation
 
 Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the List.Create node. Code block is discussed in more detail in Chapter 7. Reference the image below to note how a list with multiple expressions can be defined with code block.
 
@@ -250,7 +235,7 @@ Code block shorthand uses "\[]" as a quick and easy way to select specific items
 
 ![CB](../../.gitbook/assets/cbQuery.png)
 
-#### Exercise - Querying and Inserting Data
+## Exercise - Querying and Inserting Data
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [ReplaceItems.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/ReplaceItems.dyn). A full list of example files can be found in the Appendix.
 
