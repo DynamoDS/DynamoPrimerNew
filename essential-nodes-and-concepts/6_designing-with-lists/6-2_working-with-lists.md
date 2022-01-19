@@ -63,7 +63,7 @@ The image below is the base graph which we are drawing lines between two circles
 
 ### List.GetItemAtIndex&#x20;
 
-> _List.GetItemAtIndex_ is a fundamental way to query an item in the list. In the image above, we are using an index of _"2"_ to query the point labeled\* "C"\*.
+_List.GetItemAtIndex_ is a fundamental way to query an item in the list.&#x20;
 
 Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-GetItemAtIndex.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-2/List-GetItemAtIndex.dyn). A full list of example files can be found in the Appendix.
 
@@ -78,37 +78,35 @@ Change slider value between 0 and 9 to select different item using List.GetItemA
 
 ### List.Reverse
 
-&#x20;![reverse](../../.gitbook/assets/reverse.jpg)
-
-> _List.Reverse_ reverses the order of all of the items in a list.
+&#x20;_List.Reverse_ reverses the order of all of the items in a list.
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-Reverse.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-2/List-Reverse.dyn). A full list of example files can be found in the Appendix.
 
-![Exercise](../../.gitbook/assets/34.jpg)
+![Exercise](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
-> 1. To properly visualize the reversed list of lines, create more lines by changing the code block to `0..1..#100;`
-> 2. Insert a List.Reverse node in between Curve.PointAtParameter and Line.ByStartPointEndPoint for one of the list of points.
-> 3. The Watch3D nodes show two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
+> 1. To properly visualize the reversed list of lines, create more lines by changing the code block to `0..1..#50;`
+> 2. Duplicate the Line.ByStartPointEndPoint Node, insert a List.Reverse node in between Curve.PointAtParameter and the second Line.ByStartPointEndPoint&#x20;
+> 3. Use Watch3D nodes to preview two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
 
 
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
 
-![shift](https://primer.dynamobim.org/06\_Designing-with-Lists/images/6-2/shift.jpg)
-
-> _List.ShiftIndices_ is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
+_List.ShiftIndices_ is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-ShiftIndices.dyn](https://primer.dynamobim.org/06\_Designing-with-Lists/datasets/6-2/List-ShiftIndices.dyn). A full list of example files can be found in the Appendix.
 
-![Exercise](https://primer.dynamobim.org/06\_Designing-with-Lists/images/6-2/Exercise/31.jpg)
+![Exercise](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
 > 1. In the same process as the reverse list, insert a List.ShiftIndices into the Curve.PointAtParameter and Line.ByStartPointEndPoint.
 > 2. Using a code block, designated a value of "1" to shift the list one index.
 > 3. Notice that the change is subtle, but all of the lines in the lower Watch3D node have shifted one index when connecting to the other set of points.
 
-![Exercise](https://primer.dynamobim.org/06\_Designing-with-Lists/images/6-2/Exercise/32.jpg)
+By changing to **Code Block** to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
 
-> 1. By changing to _code block_ to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
+![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
+
+
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
