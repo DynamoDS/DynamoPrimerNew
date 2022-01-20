@@ -107,7 +107,7 @@ Notice that the List.Count node gives a value of 5. This is equal to the "Nx" va
 * First, the Point.ByCoordinates node uses the "x" input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.
 * Since Dynamo treats lists as objects in and of themselves, a List.Count node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.
 
-![Exercise](<../../.gitbook/assets/03 (9).jpg>)
+![Exercise](<../../.gitbook/assets/lists of lists - map 03.jpg>)
 
 > 1. By using a _List.Map_ node, we take a step down in the hierarchy and perform a _"function"_ at this level.
 > 2. Notice that the _List.Count_ node has no input. It is being used as a function, so the _List.Count_ node will be applied to every individual list one step down in the hierarchy. The blank input of _List.Count_ corresponds to the list input of _List.Map_.
@@ -115,29 +115,26 @@ Notice that the List.Count node gives a value of 5. This is equal to the "Nx" va
 
 ### **List.Combine**
 
+{% hint style="warning" %}
+List.Combine seems redundant for this exercise, adding a note here for a different exercise once all images are updated!
+{% endhint %}
+
 _Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Combine.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Combine.dyn). A full list of example files can be found in the Appendix.
 
 In this exercise, we'll use a similar logic to List.Map, but with multiple elements. In this case, we want to divide a list of curves by a unique number of points.
 
-![Exercise](../../.gitbook/assets/Combine-33.jpg)
+![Exercise](<../../.gitbook/assets/lists of lists - combined 01.jpg>)
 
 > 1. Using the _code block_, define a range using the syntax: \`\`\`..20..#4; `and a value of`20; \`\`\` below that line.
 > 2. Connect the _code block_ to two _Point.ByCoordinates_ nodes.
 > 3. Create a _Line.ByStartPointEndPoint_ from the _Point.ByCoordinates_ nodes.
 > 4. The _Watch_ node shows four lines.
 
-![Exercise](../../.gitbook/assets/Combine-32.jpg)
+![Exercise](<../../.gitbook/assets/lists of lists - combined 02.jpg>)
 
-> 1.  Below the graph for line creation, we want to use \_code block \_to create four distinct ranges to divide the lines uniquely. We do this with the following lines of code:
->
->     ```
->     0..1..#3;
->     0..1..#4;
->     0..1..#5;
->     0..1..#6;
->     ```
+> 1. Below the graph for line creation, we want to use \_code block \_to create four distinct ranges to divide the lines uniquely. We do this with the following lines of code:`0..1..#3;` `0..1..#4;` `0..1..#5;` `0..1..#6;`
 > 2. With a _List.Create_ node, we merge the four lines from the _code block_ into one list.
 > 3. The _Watch_ node reveals a list of lists.
 
@@ -165,14 +162,15 @@ In this exercise, we will use the List@Level feature to isolate a specific level
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List@Level](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Listatlevel.dyn). A full list of example files can be found in the Appendix.
 
-![List@Level](../../.gitbook/assets/ListAtLevel-01.jpg)
+![List@Level](<../../.gitbook/assets/lists of lists - list at level 01.jpg>)
 
-> 1. We will start with a simple 3D grid of points.
-> 2. Since the grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.
-> 3. These tiers exist at different **Levels**. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.
-> 4. The List Levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
+We will start with a simple 3D grid of points.
 
-![List@Level](../../.gitbook/assets/ListAtLevel-02.jpg)
+> 1. The grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.
+> 2. These tiers exist at different **Levels**. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.
+> 3. The List Levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
+
+![List@Level](<../../.gitbook/assets/lists of lists - list at level 02.jpg>)
 
 > 1. To use the List@Level function, click '>'. Inside this menu, you will see two checkboxes.
 > 2. **Use Levels** - This enables the List@Level functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.
@@ -180,21 +178,20 @@ In this exercise, we will use the List@Level feature to isolate a specific level
 
 With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each List Level and index combination will return a different set of points from our original 3D set.
 
-![List@Level](../../.gitbook/assets/ListAtLevel-03.jpg)
+![](<../../.gitbook/assets/lists of lists - list at level 03.jpg>)
 
-> 1. “@L2” in DesignScript allows us to select only the List at Level 2.
-> 2. The List at Level 2 with the index 0 includes only the first set of Y points, returning only the XZ grid.
-> 3. If we change the Level filter to “L1”, we will be able to see everything in the first List Level. The List at Level 1 with the index 0 includes all of our 3D points in a flat list.
-> 4. If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.
-> 5. If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.
+> 1. “@L2” in DesignScript allows us to select only the List at Level 2. The List at Level 2 with the index 0 includes only the first set of Y points, returning only the XZ grid.
+> 2. If we change the Level filter to “L1”, we will be able to see everything in the first List Level. The List at Level 1 with the index 0 includes all of our 3D points in a flat list.
+> 3. If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.
+> 4. If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.
 
 Although this particular example can also be created with List.Map, List@Level greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a List.Map and List@Level methods:
 
-![List@Level-vs-ListMap](../../.gitbook/assets/listAtLevel\_comparison.jpg)
+![](<../../.gitbook/assets/lists of lists - list at level 04.jpg>)
 
 > 1. Although both methods will give us access to the same points, the List@Level method allows us to easily toggle between layers of data within a single node.
 > 2. To access a point grid with List.Map, we will need a List.GetItemAtIndex node alongside the List.Map. For every list level that we are stepping down, we will need to use an additional List.Map node. Depending on the complexity of your lists, this could require you to add a significant amount of List.Map Nodes to your graph to access the right level of information.
-> 3. In this example, a List.GetItemAtIndex node with a List.Map node reurns the same set of points with the same list structure as the List.GetItemAtIndex with '@L3' selected.
+> 3. In this example, a List.GetItemAtIndex node with a List.Map node returns the same set of points with the same list structure as the List.GetItemAtIndex with '@L3' selected.
 
 ### Transpose
 
@@ -204,20 +201,14 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Transpose.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Transpose.dyn). A full list of example files can be found in the Appendix.
 
-![Exercise](<../../.gitbook/assets/02 (4).jpg>)
+![](<../../.gitbook/assets/lists of lists - transpose 01.jpg>)
 
 > Let's delete the _List.Count_ nodes from the previous exercise and move on to some geometry to see how the data structured.
 >
 > 1. Connect a _PolyCurve.ByPoints_ to the output of the watch node from _Point.ByCoordinates_.
 > 2. The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.
 
-![Exercise](<../../.gitbook/assets/01 (10).jpg>)
-
-> 1. If we want to isolate one row of curves, we use the _List.GetItemAtIndex_ node.
-> 2. Using a _code block_ value of 2, query the 3rd element in the main list.
-> 3. The _PolyCurve.ByPoints_ gives us one curve, since only one list is connected to the node.
-
-![Exercise](<../../.gitbook/assets/00 (6).jpg>)
+![](<../../.gitbook/assets/lists of lists - transpose 02.jpg>)
 
 > 1. A _List.Transpose_ node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.
 > 2. Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.
@@ -225,15 +216,15 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 
 ## Code Block for List Creation
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the List.Create node. Code block is discussed in more detail in Chapter 7. Reference the image below to note how a list with multiple expressions can be defined with code block.
+Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the List.Create node. Code block is discussed in more detail in [7\_code-blocks-and-design-script](../../coding-in-dynamo/7\_code-blocks-and-design-script/ "mention"). Reference the image below to note how a list with multiple expressions can be defined with code block.
 
-![CB](../../.gitbook/assets/cbCreation.png)
+![](<../../.gitbook/assets/lists of lists - codeblock for list creation 01.jpg>)
 
 #### Code Block Query
 
 Code block shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. Code blocks are discussed in more detail in Chapter 7. Reference the image below to note how a list with multiple data types can be queried with code block.
 
-![CB](../../.gitbook/assets/cbQuery.png)
+![](<../../.gitbook/assets/lists of lists - codeblock for list creation 02.jpg>)
 
 ## Exercise - Querying and Inserting Data
 
@@ -241,53 +232,49 @@ Code block shorthand uses "\[]" as a quick and easy way to select specific items
 
 This exercise uses some of the logic established in the previous one to edit a surface. Our goal here is intuitive, but the data structure navigation will be more involved. We want to articulate a surface by moving a control point.
 
-![Exercise](<../../.gitbook/assets/06 (4).jpg>)
+Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.
 
-> 1. Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.
-> 2.  Using _code block_, insert these two lines of code and connect to the _u_ and _v_ inputs of _Surface.PointAtParameter_, respectively:
->
->     ```
->     -50..50..#3;
->     -50..50..#5;
->     ```
-> 3. Be sure to set the Lacing of _Surface.PointAtParameter_ to _"Cross Product"_.
-> 4. The _Watch_ node show that we have a list of 3 lists, each with 5 items.
+![](<../../.gitbook/assets/list of lists - exercise cb insert & query 01.jpg>)
 
-![Exercise](<../../.gitbook/assets/05 (5).jpg>)
+> 1. Using _code block_, insert these two lines of code and connect to the _u_ and _v_ inputs of _Surface.PointAtParameter_, respectively: `-50..50..#3;` `-50..50..#5;`
+> 2. Be sure to set the Lacing of _Surface.PointAtParameter_ to _"Cross Product"_.
+> 3. The _Watch_ node show that we have a list of 3 lists, each with 5 items.
 
-> In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
->
+In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
+
+![](<../../.gitbook/assets/list of lists - exercise cb insert & query 02.jpg>)
+
 > 1. To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.
 > 2. Using _code block_, we'll write a basic line of code for querying a list of lists:\
 >    `points[1][2];`
 > 3. Using _Geometry.Translate_, we'll move the selected point up in the _Z_ direction by _20_ units.
 
-![Exercise](<../../.gitbook/assets/04 (8).jpg>)
+![](<../../.gitbook/assets/list of lists - exercise cb insert & query 03.jpg>)
 
 > 1. Let's also select the middle row of points with a _List.GetItemAtIndex_ node. Note: Similar to a previous step, we can also query the list with _code block_, using a line of `points[1];`
 
-![Exercise](<../../.gitbook/assets/03 (6).jpg>)
+So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
 
-> So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
->
+![](<../../.gitbook/assets/list of lists - exercise cb insert & query 04.jpg>)
+
 > 1. First, we want to replace the item of the list we isolated in a previous step.
 > 2. Using _List.ReplaceItemAtIndex_, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (_Geometry.Translate_).
 > 3. The output shows that we've input the moved point into the middle item of the list.
 
-![Exercise](<../../.gitbook/assets/02 (10).jpg>)
+Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
 
-> Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
->
+![](<../../.gitbook/assets/list of lists - exercise cb insert & query 05.jpg>)
+
 > 1. Following the same logic, use _List.ReplaceItemAtIndex_ to replace the middle list with the our modified list.
 > 2. Notice that the _code blocks_ defining the index for these two nodes are 1 and 2, which matches the original query from the _code block_ (_points\[1]\[2]_).
 > 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
 
-![Exercise](<../../.gitbook/assets/01 (3).jpg>)
+There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
 
-> There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
->
+![](<../../.gitbook/assets/list of lists - exercise cb insert & query 06.jpg>)
+
 > 1. Create a _NurbsCurve.ByPoints_ node and connect the new data structure to create three nurbs curves.
 
-![Exercise](<../../.gitbook/assets/00 (2).jpg>)
+![](<../../.gitbook/assets/list of lists - exercise cb insert & query 07.jpg>)
 
 > 1. Connect a _Surface.ByLoft_ to the output from _NurbsCurve.ByPoints_. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!
