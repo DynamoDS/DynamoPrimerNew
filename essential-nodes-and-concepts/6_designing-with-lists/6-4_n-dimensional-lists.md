@@ -10,55 +10,53 @@ The analogy we'll work with here are Russian Nesting Dolls. Each list can be reg
 
 n-Dimensional lists are difficult to explain visually, but we've set up a few exercises in this chapter which focus on working with lists which venture beyond two dimensions.
 
-\##Mapping and Combinations Mapping is arguably the most complex part of data management in Dynamo, and is especially relevant when working with complex hierarchies of lists. With the series of exercises below, we'll demonstrate when to use mapping and combinations as data becomes multi-dimensional.
+### Mapping and Combinations&#x20;
+
+Mapping is arguably the most complex part of data management in Dynamo, and is especially relevant when working with complex hierarchies of lists. With the series of exercises below, we'll demonstrate when to use mapping and combinations as data becomes multi-dimensional.
 
 Preliminary introductions to List.Map and List.Combine can be found in the previous section. In the last exercise below, we'll use these nodes on a complex data structure.
 
-\###Exercise - 2D Lists - Basic
+## Exercise - 2D Lists - Basic
 
 > Download the example files that accompanies this exercise (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. 1.[n-Dimensional-Lists.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-4/n-Dimensional-Lists.dyn) 2.[n-Dimensional-Lists.sat](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-4/n-Dimensional-Lists.sat)
 
 This exercise is the first in a series of three which focuses on articulating imported geometry. Each part in this series of exercises will increase in the complexity of data structure.
 
-![Exercise](<../../.gitbook/assets/04 (2).jpg>)
+![Exercise](<../../.gitbook/assets/n-dimensional lists - 2d lists basic 01.jpg>)
 
 > 1. Let's begin with the .sat file in the exercise file folder. We can grab this file using the _File Path_ node.
+> 2. With _Geometry.ImportFromSAT_, the geometry is imported into our Dynamo preview as two surfaces.
 
-1. With _Geometry.ImportFromSAT_, the geometry is imported into our Dynamo preview as two surfaces.
+For this exercise, we want to keep it simple and work with one of the surfaces.
 
-![Exercise](<../../.gitbook/assets/03 (2).jpg>)
+![](<../../.gitbook/assets/n-dimensional lists - 2d lists basic 02.jpg>)
 
-> For this exercise, we want to keep it simple and work with one of the surfaces.
+> 1. Let's select the index of \*1 \*to grab the upper surface. We do this with _List.GetItemAtIndex_ node.
+> 2. Switch off the Geometry preview from upstream data.
 
-1. Let's select the index of \*1 \*to grab the upper surface. We do this with _List.GetItemAtIndex_ node.
+The next step is to divide the surface into a grid of points.
 
 ![Exercise](<../../.gitbook/assets/02 (5).jpg>)
 
-> The next step is to divide the surface into a grid of points.
-
-1. Using _code block_, insert these two lines of code:
-
-```
-0..1..#10;
-0..1..#5;
-```
-
-1. With the _Surface.PointAtParameter_, connect the two code block values to \*u \*and _v_. Change the _lacing_ of this node to _"Cross Product"_.
-2. The output reveals the data structure, which is also visible in the Dynamo preview.
+> 1\. Using _code block_, insert these two lines of code: 0..1..#10; 0..1..#5;
+>
+> 2\. With the _Surface.PointAtParameter_, connect the two code block values to \*u \*and _v_. Change the _lacing_ of this node to _"Cross Product"_.
+>
+> 3\. The output reveals the data structure, which is also visible in the Dynamo preview.
 
 ![Exercise](<../../.gitbook/assets/01 (1).jpg>)
 
-> 1. To get a look at how the data structure is organized, let's connect a _NurbsCurve.ByPoints_ to the output of _Surface.PointAtParameter_.
-
-1. Notice we have ten curves running vertically along the surface.
+> 1. To get a look at how the data structure is organized, let's connect a _NurbsCurve.ByPoints_ to the output of _Surface.PointAtParameter_.&#x20;
+> 2. Notice we have ten curves running vertically along the surface.
 
 ![Exercise](../../.gitbook/assets/00.jpg)
 
 > 1. A basic _List.Transpose_ will flip the columns and rows of a list of lists.
+> 2. Connecting the output of _List.Transpose_ to _NurbsCurve.ByPoints_, we now get five curves running horizontally across the surface.
 
-1. Connecting the output of _List.Transpose_ to _NurbsCurve.ByPoints_, we now get five curves running horizontally across the surface.
+## Exercise - 2D Lists - Advanced&#x20;
 
-\###Exercise - 2D Lists - Advanced Let's increase the complexity. Suppose we wanted to perform an operation on the curves created from the previous exercise. Perhaps we want to relate these curves to another surface and loft between them. This requires more attention to data structure, but the underlying logic is the same.
+Let's increase the complexity. Suppose we wanted to perform an operation on the curves created from the previous exercise. Perhaps we want to relate these curves to another surface and loft between them. This requires more attention to data structure, but the underlying logic is the same.
 
 ![Exercise](<../../.gitbook/assets/07 (7).jpg>)
 
@@ -109,7 +107,9 @@ This exercise is the first in a series of three which focuses on articulating im
 
 > 1. Stepping back a few steps, if we want to switch the orientation of the curves in the ribbed structure, we want to use a List.Transpose before connect to _NurbsCurve.ByPoints_. This will flip the columns and rows, giving us 5 horizontal ribs.
 
-\###Exercise - 3D Lists Now, we're going to go even one step further. In this exercise, we'll work with both imported surfaces, creating a complex data hierarchy. Still, our aim is to complete the same operation with the same underlying logic.
+## Exercise - 3D Lists&#x20;
+
+Now, we're going to go even one step further. In this exercise, we'll work with both imported surfaces, creating a complex data hierarchy. Still, our aim is to complete the same operation with the same underlying logic.
 
 ![Exercise](../../.gitbook/assets/12.jpg)
 
@@ -181,20 +181,15 @@ This exercise is the first in a series of three which focuses on articulating im
 
 > Not the most comfortable rocking chair ever, but it's got a lot of data going on.
 
+Last step, let's reverse the direction of the striated members. As we used transpose in the previous exercise, we'll do something similar here.
+
 ![Exercise](../../.gitbook/assets/32.jpg)
 
-> Last step, let's reverse the direction of the striated members. As we used transpose in the previous exercise, we'll do something similar here.
-
-1. Since we have one more tier to the hierarchy, so we need to use _List.Map_ with a _List.Tranpose_ function to change the direction of our nurbs curves.
+> 1. Since we have one more tier to the hierarchy, so we need to use _List.Map_ with a _List.Tranpose_ function to change the direction of our nurbs curves.
 
 ![Exercise](../../.gitbook/assets/31.jpg)
 
-> 1. We may want to increase the number of treads, so we can change the code block to
-
-```
-0..1..#20;
-0..1..#10;
-```
+> 1. We may want to increase the number of treads, so we can change the code block to 0..1..#20; 0..1..#10;
 
 ![Exercise](../../.gitbook/assets/30.jpg)
 
