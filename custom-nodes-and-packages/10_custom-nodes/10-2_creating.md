@@ -41,7 +41,9 @@ Now that we have a base surface and a set of UV coordinates, we can import a tar
 
 The final step is to use the 3D points to construct rectangular surface patches.
 
-![Exercise](../../.gitbook/assets/UVmapping04.jpg)
+![](<../../.gitbook/assets/custom node for uv mapping pt I - 05.jpg>)
+
+
 
 > 1. **PolyCurve.ByPoints:** Connect the points on the surface to construct a polycurve through the points.
 > 2. **Boolean:** Add a Boolean to the workspace and connect it to the _‘connectLastToFirst’_ input and toggle to True to close the polycurves. You should now see rectangles mapped to the surface.
