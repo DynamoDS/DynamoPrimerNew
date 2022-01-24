@@ -2,28 +2,28 @@
 
 Dynamo offers several different methods for creating custom nodes. You can build custom nodes from scratch, from an existing graph, or explicitly in C#. In this section we will cover building a custom node in the Dynamo UI from an existing graph. This method is ideal for cleaning up the workspace, as well as packaging a sequence of nodes to reuse elsewhere.
 
-### Custom Nodes for UV Mapping&#x20;
+## Exercise: Custom Nodes for UV Mapping
+
+### Part I: Start with a Graph
 
 In the image below, we map a point from one surface to another using UV coordinates. We'll use this concept to create a panelized surface which references curves in the XY plane. We'll create quad panels for our panelization here, but using the same logic, we can create a wide variety of panels with UV mapping. This is a great opportunity for custom node development because we will be able to repeat a similar process more easily in this graph or in other Dynamo workflows.
 
-![](../../.gitbook/assets/uvMap2-01-01.jpg)
-
-## Exercise: Creating a Custom Node from an Existing Graph
+![](<../../.gitbook/assets/custom node for uv mapping pt I - 01.jpg>)
 
 > Download and unzip the example files for this exercise (Right click and choose "Save Link As..."). A full list of example files can be found in the Appendix. [UV-CustomNode.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/10\_Custom-Nodes/datasets/10-2/UV-CustomNode.zip)
 
 Let’s start by creating a graph that we want to nest into a custom node. In this example, we will create a graph that maps polygons from a base surface to a target surface, using UV coordinates. This UV mapping process is something we use frequently, making it a good candidate for a custom node. For more information on surfaces and UV space, see section 5.5. The complete graph is _UVmapping\_Custom-Node.dyn_ from the .zip file downloaded above.
 
-![Exercise](../../.gitbook/assets/UVmapping01.jpg)
+![](<../../.gitbook/assets/custom node for uv mapping pt I - 02.jpg>)
 
-> 1. **Code Block:** Create a range of 10 numbers between 45 and negative 45 using a code block.
+> 1. **Code Block:** Use this line to create a range of 10 numbers between -45 and 45 `45..45..#10;`
 > 2. **Point.ByCoordinates:** Connect the output of the Code Block to the ‘x’ and ‘y’ inputs and set the lacing to cross-reference. You should now have a grid of points.
 > 3. **Plane.ByOriginNormal:** Connect the _‘Point’_ output to the _‘origin’_ input to create a plane at each of the points. The default normal vector of (0,0,1) will be used.
 > 4. **Rectangle.ByWidthLength:** Connect the planes from the previous step into the _‘plane’_ input, and use a Code Block with a value of _10_ to specify the width and length.
 
 You should now see a grid of rectangles. Let’s map these rectangles to a target surface using UV coordinates.
 
-![Exercise](../../.gitbook/assets/UVmapping02.jpg)
+![](<../../.gitbook/assets/custom node for uv mapping pt I - 03.jpg>)
 
 > 1. **Polygon.Points:** Connect the Rectangle output from the previous step to the _‘polygon’_ input to extract the corner points of each rectangle. These are the points that we will map to the target surface.
 > 2. **Rectangle.ByWidthLength:** Use a Code Block with a value of _100_ to specify the width and length of a rectangle. This will be the boundary of our base surface.
@@ -32,7 +32,7 @@ You should now see a grid of rectangles. Let’s map these rectangles to a targe
 
 Now that we have a base surface and a set of UV coordinates, we can import a target surface and map the points between surfaces.
 
-![Exercise](../../.gitbook/assets/UVmapping03.jpg)
+![](<../../.gitbook/assets/custom node for uv mapping pt I - 04.jpg>)
 
 > 1. **File Path:** Select the file path of the surface you want to import. The file type should be .SAT. Click the _"Browse..."_ button and navigate to the _UVmapping\_srf.sat_ file from the .zip file downloaded above.
 > 2. **Geometry.ImportFromSAT:** Connect the file path to import the surface. You should see the imported surface in the geometry preview.
@@ -46,6 +46,8 @@ The final step is to use the 3D points to construct rectangular surface patches.
 > 1. **PolyCurve.ByPoints:** Connect the points on the surface to construct a polycurve through the points.
 > 2. **Boolean:** Add a Boolean to the workspace and connect it to the _‘connectLastToFirst’_ input and toggle to True to close the polycurves. You should now see rectangles mapped to the surface.
 > 3. **Surface.ByPatch:** Connect the polycurves to the _‘closedCurve’_ input to construct surface patches.
+
+### Part II: From Graph to Custom Node
 
 Now let’s select the nodes that we want to nest into a Custom Node, thinking about what we want to be the inputs and outputs of our node. We want our Custom Node to be as flexible as possible, so it should be able to map any polygons, not just rectangles.
 
