@@ -1,18 +1,29 @@
-# Use-Cases
+# Revit Use-Cases
 
 Have you ever wanted to look up something in Revit by a piece of data that it has?
 
-#### Chances are if you have you've done something like this:
+Chances are if you have you've done something like the following example.
+
+In the image below we are collecting all of the rooms in the Revit model, getting the index of the room we want (by room number), and finally grabbing the room at the index.
 
 ![IMAGE](../../.gitbook/assets/9-4\_roomLookupByIndex.png)
 
-> In the image above we are collecting all of the rooms in the Revit model, getting the index of the room we want (by room number), and finally grabbing the room at the index.
+> 1. Collect all rooms in the model.
+> 2. Room number to find.
+> 3. Get the room number and find what index it is at.
+> 4. Obtain the room at the index.
 
-### Now let's recreate this idea using dictionaries.
+## Exercise : Room Dictionary
+
+### Part I: Creating Room Dictionary
+
+Now let's recreate this idea using dictionaries.
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [RoomDictionary.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/09\_Dictionaries/datasets/9-4\_roomDictionary.dyn). A full list of example files can be found in the Appendix.
 
-![IMAGE](../../.gitbook/assets/9-4\_roomDictionary-01.png) First we need to collect all of the rooms in our Revit model.
+![IMAGE](../../.gitbook/assets/9-4\_roomDictionary-01.png)&#x20;
+
+First we need to collect all of the rooms in our Revit model.
 
 > * We choose the Revit category we want to work with, (In this case, we are working with rooms).
 
@@ -34,9 +45,9 @@ Have you ever wanted to look up something in Revit by a piece of data that it ha
 
 * `Dictionary.ValueAtKey` will obtain the object from the dictionary now.
 
-***
+### Part II: Values Look Up
 
-### Using this same dictionary logic, we can create dictionaries with grouped objects as well. If we wanted to look up all rooms at a given level we can modify the above graph as follows.
+Using this same dictionary logic, we can create dictionaries with grouped objects as well. If we wanted to look up all rooms at a given level we can modify the above graph as follows.
 
 ![IMAGE](../../.gitbook/assets/9-4\_roomDictionary-05.png)
 

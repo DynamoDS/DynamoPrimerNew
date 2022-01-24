@@ -117,7 +117,11 @@ Notice that the List.Count node gives a value of 5. This is equal to the "Nx" va
 
 {% hint style="warning" %}
 List.Combine seems redundant for this exercise, adding a note here for a different exercise once all images are updated!
+
+\*consider adding link for another example exercise in n-Dimensional Lists for using List.Combine
 {% endhint %}
+
+
 
 _Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 

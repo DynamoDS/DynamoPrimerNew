@@ -159,7 +159,7 @@ Begin with the imported file from previous exercise.
 ![](<../../.gitbook/assets/n-Dimensional-Lists - 3d list 11.jpg>)
 
 > 1. It'll be nice to add a surface backing two this structure, so add another Surface.ByLoft Node and use the first output of NurbsCurve.ByPoints from an earlier step as input.
-> 2. As the preview is getting cluttered, right click and uncheck 'preview' on these Nodes to switch off its preview in order to see the result better.
+> 2. As the preview is getting cluttered, siwtch off preview for these Nodes by right clicking on each of them and uncheck 'preview' to see the result better.
 
 ![](<../../.gitbook/assets/n-Dimensional-Lists - 3d list 12.jpg>)
 
