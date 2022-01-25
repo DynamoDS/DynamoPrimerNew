@@ -53,30 +53,32 @@ The final step is to use the 3D points to construct rectangular surface patches.
 
 Now let’s select the nodes that we want to nest into a Custom Node, thinking about what we want to be the inputs and outputs of our node. We want our Custom Node to be as flexible as possible, so it should be able to map any polygons, not just rectangles.
 
-![Exercise](../../.gitbook/assets/UVmapping05.jpg)
+Select the following Nodes (beginning with Polygon.Points), right click on the workspace and select ‘Create Custom Node’.
 
-> Select the above nodes (beginning with _Polygon.Points_), right click on the workspace and select _‘node from selection’_.
+![](<../../.gitbook/assets/custom node for uv mapping pt II - 01.jpg>)
 
-![Exercise](../../.gitbook/assets/UVmapping06.jpg)
+In the Custom Node Properties dialog, assign a name, description, and category to the Custom Node.
 
-> In the Custom Node Properties dialog, assign a name, description, and category to the Custom Node.
+![](<../../.gitbook/assets/custom node for uv mapping pt II - 02.jpg>)
 
-![Exercise](../../.gitbook/assets/UVmapping07.jpg)
+> 1. Name: MapPolygonsToSurface
+> 2. Description: Map polygon(s) from a base to target surface
+> 3. Add-ons Category: Geometry.Curve
 
-> The Custom Node has considerably cleaned up the workspace. Notice that the inputs and outputs have been named based on the original nodes. Let’s edit the Custom Node to make the names more descriptive.
+The Custom Node has considerably cleaned up the workspace. Notice that the inputs and outputs have been named based on the original nodes. Let’s edit the Custom Node to make the names more descriptive.
 
-![Exercise](../../.gitbook/assets/UVmapping08.jpg)
+![](<../../.gitbook/assets/custom node for uv mapping pt II - 03.jpg>)
 
-> Double click the Custom Node to edit it. This will open a workspace with a yellow background representing the inside of the node.
+Double click the Custom Node to edit it. This will open a workspace with a yellow background representing the inside of the node.
 
-1. **Inputs:** Change the input names to _baseSurface_ and _targetSurface_.
-2. **Outputs:** Add an additional output for the mapped polygons.
+![](<../../.gitbook/assets/custom node for uv mapping pt II - 04.jpg>)
 
-> Save the custom node and return to the home workspace.
+> 1. **Inputs:** Change the input names to _baseSurface_ and _targetSurface_.
+> 2. **Outputs:** Add an additional output for the mapped polygons.
 
-![Exercise](../../.gitbook/assets/UVmapping09.jpg)
+Save the custom node and return to the home workspace. Notice the **MapPolygonsToSurface** node reflects the changes we just made.
 
-> The **MapPolygonsToSurface** node reflects the changes we just made.
+![](<../../.gitbook/assets/custom node for uv mapping pt II - 05.jpg>)
 
 We can also add to the robustness of the Custom Node by adding in **Custom Comments**. Comments can help to hint at the input and output types or explain the functionality of the node. Comments will appear when the user hovers over an input or output of a Custom Node.
 
@@ -84,16 +86,18 @@ We can also add to the robustness of the Custom Node by adding in **Custom Comme
 
 Double click the Custom Node to edit it. This will re-open the yellow background workspace.
 
-![Custom Comment](../../.gitbook/assets/UVmapping\_Custom1.jpg)
+![](<../../.gitbook/assets/custom node for uv mapping pt II - 06.jpg>)
 
 > 1. Begin editing the Input Code Block. To start a Comment, type "//" followed by the comment text. Type anything that may help to clarify the Node - Here we will describe the _targetSurface_.
 > 2. Let's also set the default value for the _inputSurface_ by setting the input type equal to a value. Here, we will set the default value to the original Surface.ByPatch set.
 
-![Custom Comment](../../.gitbook/assets/UVmapping\_Custom1\_.jpg)
+Comments can also be applied to the Outputs.
 
-> Comments can also be applied to the Outputs. Begin editing the text in the Output Code Block. To start a Comment, type "//" followed by the comment text. Here we will clarify the _Polygons_ and the _surfacePatches_ Outputs by adding a more in-depth description.
+![](<../../.gitbook/assets/custom node for uv mapping pt II - 07.jpg>)
 
-![Custom Comment](../../.gitbook/assets/UVmapping\_Custom2.jpg)
+> Edit the text in the Output Code Block. Type "//" followed by the comment text. Here we will clarify the _Polygons_ and the _surfacePatches_ Outputs by adding a more in-depth description.
+
+![](<../../.gitbook/assets/custom node for uv mapping pt II - 08.jpg>)
 
 > 1. Hover over the Custom Node Inputs to see the Comments.
 > 2. With the default value set on our _inputSurface_, we can also run the definition without a surface input.
