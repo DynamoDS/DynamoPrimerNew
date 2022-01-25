@@ -1,20 +1,26 @@
 # Publishing to Your Library
 
-img{display:block;margin-left: auto; margin-right: auto }
+We've just created a custom node and applied it to a specific process in our Dynamo graph. And we like this node so much, we want to keep it in our Dynamo library to reference in other graphs. To do this, we'll publish the node locally. This is a similar process to publishing a package, which we'll walk through in more detail in the next chapter.
 
-\##Adding to Your Library We've just created a custom node and applied it to a specific process in our Dynamo graph. And we like this node so much, we want to keep it in our Dynamo library to reference in other graphs. To do this, we'll publish the node locally. This is a similar process to publishing a package, which we'll walk through in more detail in the next chapter.
+## Exercise: Publishing a Custom Node Locally&#x20;
 
-\###Publishing a Custom Node Locally Let's move forward with the custom node that we created in the previous section. By publishing a node locally, the node will be accessible in your Dynamo library when you open a new session. Without publishing a node, a Dynamo graph which references a custom node must also have that custom node in its folder (or the custom node must be imported into Dynamo using _File>Import Library_).
+Let's move forward with the custom node that we created in the previous section. By publishing a node locally, the node will be accessible in your Dynamo library when you open a new session. Without publishing a node, a Dynamo graph which references a custom node must also have that custom node in its folder (or the custom node must be imported into Dynamo using _File>Import Library_).
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [PointsToSurface.dyf](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/10\_Custom-Nodes/datasets/10-3/PointsToSurface.dyf)
 
-!\[]\(images/10-3/AddingToLibrary- 05.jpg)
+Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
 
-> After opening the PointsToSurface custom node, we see the graph above in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
+![](<../../.gitbook/assets/publish custom node locally 01.jpg>)
+
+To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
+
+{% hint style="warning" %}
+Note: Publish this Custom Node is only available when Dynamo is used with a host program.
+{% endhint %}
 
 !\[]\(images/10-3/AddingToLibrary- 04.jpg)
 
-> 1. To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
+> 1.
 
 !\[]\(images/10-3/AddingToLibrary- 03.jpg)
 

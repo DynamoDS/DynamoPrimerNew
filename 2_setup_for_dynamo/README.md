@@ -4,7 +4,7 @@
 
 Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
 
-![](<../.gitbook/assets/setup for dynamo - dynamo revit.jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo alias design.jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo formit.jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo advance steel (1).jpg>)![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.jpg>)
+![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>)![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>)![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>)![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>)![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>)![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
 
 ### Launch Dynamo as Extension
 
