@@ -1,8 +1,6 @@
 # Index of Nodes
 
-## INDEX OF NODES
-
-**This index provides additional information on all the nodes used in this primer, as well as other components you might find useful. This is just an introduction to some of the 500 nodes available in Dynamo.**
+This index provides additional information on all the nodes used in this primer, as well as other components you might find useful. This is just an introduction to some of the 500 nodes available in Dynamo.
 
 ### Bulitin Functions
 
