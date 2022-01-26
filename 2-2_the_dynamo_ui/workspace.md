@@ -19,7 +19,7 @@ When you open a new file, a new Home Workspace will be opened by default.
 
 You may create a Custom Node and open it in a Custom Node Workspace.
 
-![](<../.gitbook/assets/workspace - custom node tab.jpg>)
+![](<../.gitbook/assets/workspace - custom node tab (1).jpg>)
 
 {% hint style="info" %}
 Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.
