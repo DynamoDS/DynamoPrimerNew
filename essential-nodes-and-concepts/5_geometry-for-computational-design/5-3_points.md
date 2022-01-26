@@ -30,7 +30,7 @@ Parameters for both Curves and Surfaces are continuous and extend beyond the edg
 >
 > Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Points.dyn]\(datasets/5-3/Geometry for Computational Design - Points.dyn). A full list of example files can be found in the Appendix.
 
-## Deeper Dive into...
+## Deep Dive into...
 
 If Geometry is the language of a model, then Points are the alphabet. Points are the foundation upon which all other geometry is created - we need at least two Points to create a Curve, we need at least three Points to make a Polygon or a Mesh Face, and so on. Defining the position, order, and relationship among Points (try a Sine Function) allows us to define higher order geometry like things we recognize as Circles or Curves.
 

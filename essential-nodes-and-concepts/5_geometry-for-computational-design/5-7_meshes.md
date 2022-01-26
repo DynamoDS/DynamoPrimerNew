@@ -29,7 +29,7 @@ Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11
 
 ![Mesh Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deeper Dive into...
+## Deep Dive into...
 
 ### Mesh
 

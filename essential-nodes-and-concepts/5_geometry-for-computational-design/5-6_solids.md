@@ -39,7 +39,7 @@ Boolean operations are complex and can be slow to calculate. Use Freeze function
 >
 > 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
 
-## Deeper Dive into...
+## Deep Dive into...
 
 ### Solids
 

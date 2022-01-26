@@ -35,7 +35,7 @@
 >
 > A full list of example files can be found in the Appendix.
 
-## Deeper Dive into...
+## Deep Dive into...
 
 ### Curves
 

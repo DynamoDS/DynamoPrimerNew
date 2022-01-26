@@ -20,7 +20,7 @@ Import and evaluate a Surface at a Parameter in Dynamo to see what kind of infor
 >
 > A full list of example files can be found in the Appendix.
 
-## Deeper Dive into...&#x20;
+## Deep Dive into...&#x20;
 
 ### Surface
 
