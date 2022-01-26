@@ -94,9 +94,13 @@ Frequently we will want to adjust the Program Flow in our Visual Program by edit
 
 ![](<../.gitbook/assets/nodes and wires - edit wires remove.gif>)
 
-{% hint style="info" %}
-Note- There is additional functionality for moving multiple wires at once now. This is covered here [http://dynamobim.org/dynamo-1-3-release/](http://dynamobim.org/dynamo-1-3-release/)
-{% endhint %}
+* Reconnect multiple wires using Shift+left-click
+
+![](<../.gitbook/assets/nodes and wires - edit multi ports.gif>)
+
+* Duplicate a wire using Ctrl+left-click
+
+![](<../.gitbook/assets/nodes and wires - duplicate wire.gif>)
 
 #### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
 

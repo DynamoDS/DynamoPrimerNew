@@ -59,7 +59,7 @@ Dynamo's Toolbar contains a series of buttons for quick access to working with f
 
 The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [3-3\_dynamo\_libraries.md](3-3\_dynamo\_libraries.md "mention") section will cover a more detailed guidance on using it.
 
-![](<../.gitbook/assets/user interface - library (4).jpg>)
+![](<../.gitbook/assets/user interface - library (1).gif>)
 
 ### Workspace
 
