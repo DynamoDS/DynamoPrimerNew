@@ -4,11 +4,11 @@
 
 ### What is Solid?
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of Solids (and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
 
 ### Boolean Operation to Create Spiky Ball Solid
 
-Let's use a few Boolean operations to create a spiky ball.
+You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
 
 ![](<../../.gitbook/assets/solids  - spiky ball.jpg>)
 
@@ -19,7 +19,9 @@ Let's use a few Boolean operations to create a spiky ball.
 > 5. **Topology.Edges**: Query the edges of the new Solid
 > 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
 
-> Download the example files that accompany this image (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. \[Geometry for Computational Design - Solids.dyn]\(datasets/5-6/Geometry for Computational Design - Solids.dyn)
+> Download the example files(Right click and "Save Link As..."). \[Geometry for Computational Design - Solids.dyn]
+>
+> A full list of example files can be found in the Appendix.&#x20;
 
 ### Freezing
 
@@ -37,7 +39,9 @@ Boolean operations are complex and can be slow to calculate. Use Freeze function
 >
 > 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
 
-## The Fundamental Concept
+## Deeper Dive into...
+
+### Solids
 
 Solids consist of one or more Surfaces that contain volume by way of a closed boundary that defines "in" or "out." Regardless of how many of these Surfaces there are, they must form a "watertight" volume to be considered a Solid. Solids can be created by joining Surfaces or Polysurfaces together or by using operations such as loft, sweep, and revolve. Sphere, Cube, Cone and Cylinder primitives are also Solids. A Cube with at least one face removed counts as a Polysurface, which has some similar properties, but it is not a Solid.
 

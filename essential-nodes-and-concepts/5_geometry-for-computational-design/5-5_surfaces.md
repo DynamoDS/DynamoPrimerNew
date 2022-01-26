@@ -4,7 +4,7 @@
 
 ### What is Surface
 
-Moving from using Curves to using Surfaces in a model, we can now begin to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+We use [Surface ](5-5\_surfaces.md#surface)in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
 
 ### Surface at Parameter
 
@@ -16,25 +16,24 @@ Import and evaluate a Surface at a Parameter in Dynamo to see what kind of infor
 > 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
 > 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
 
-> Download the example files that accompanies this image (Right click and "Save Link As..."). A full list of example files can be found in the Appendix.
+> Download the example files (Right click and "Save Link As..."). \[Geometry for Computational Design - Surfaces.dyn] & [Surface.sat](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/05\_Geometry-for-Computational-Design/datasets/5-5/Surface.sat)
 >
-> \[Geometry for Computational Design - Surfaces.dyn]\(datasets/5-5/Geometry for Computational Design - Surfaces.dyn)
->
-> [Surface.sat](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/05\_Geometry-for-Computational-Design/datasets/5-5/Surface.sat)
+> A full list of example files can be found in the Appendix.
 
-## The Fundamental Conceptt
+## Deeper Dive into...&#x20;
+
+### Surface
 
 A Surface is a mathematical shape defined by a function and two parameters, Instead of `t` for Curves, we use `U` and `V` to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.
 
 ![Surface](../../.gitbook/assets/Surface.jpg)
 
 > 1. Surface
-
-1. U Isocurve
-2. V Isocurve
-3. UV Coordinate
-4. Perpendicular Plane
-5. Normal Vector
+> 2. U Isocurve
+> 3. V Isocurve
+> 4. UV Coordinate
+> 5. Perpendicular Plane
+> 6. Normal Vector
 
 **Surface Domain**: A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).
 
@@ -63,16 +62,15 @@ In the case of NURBS surfaces, there are two directions implied by the geometry,
 ![NURBS Surface](../../.gitbook/assets/NURBSsurface-Degree.jpg)
 
 > 1. Degree (U,V) = (3,3)
-
-1. Degree (U,V) = (3,1)
-2. Degree (U,V) = (1,2)
-3. Degree (U,V) = (1,1)
+> 2. Degree (U,V) = (3,1)
+> 3. Degree (U,V) = (1,2)
+> 4. Degree (U,V) = (1,1)
 
 ### Polysurfaces
 
 **Polysurfaces** are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology.
 
-> While "Topology" generally describes a concept around how parts are connected and/or related Topology in Dynamo is also a type of Geometry. Specifically it is a parent category for Surfaces, Polysurfaces, and Solids.
+While "Topology" generally describes a concept around how parts are connected and/or related Topology in Dynamo is also a type of Geometry. Specifically it is a parent category for Surfaces, Polysurfaces, and Solids.
 
 ![PolySurface](../../.gitbook/assets/PolySurface.jpg)
 

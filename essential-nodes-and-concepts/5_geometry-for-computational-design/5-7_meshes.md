@@ -4,7 +4,7 @@
 
 ### What is Mesh?
 
-In the field of computational modeling, Meshes are one of the most pervasive forms of representing 3D geometry. Mesh geometry can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+In the field of computational modeling, [Meshes ](5-7\_meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
 
 ### Mesh Elements
 
@@ -29,7 +29,9 @@ Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11
 
 ![Mesh Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
 
-## The Fundamental Concept
+## Deeper Dive into...
+
+### Mesh
 
 A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
 

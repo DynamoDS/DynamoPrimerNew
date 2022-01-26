@@ -38,7 +38,7 @@
 >
 > A full list of example files can be found in the Appendix.
 
-## Deeper Dive into the Concept
+## Deeper Dive into...
 
 Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
 
