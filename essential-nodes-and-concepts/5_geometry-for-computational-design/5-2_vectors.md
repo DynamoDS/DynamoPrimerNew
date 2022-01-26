@@ -4,17 +4,19 @@
 
 ### Vector
 
-Vectors are a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
 
 ![Vectors in Dynamo](<../../.gitbook/assets/Geometry for Computational Design  - vectors.jpg>)
 
 > 1. We can use a line as a stand in for a Vector preview.
 
-> Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Vectors.dyn]\(datasets/5-2/Geometry for Computational Design - Vectors.dyn). A full list of example files can be found in the Appendix.
+> Download the example file (Right click and "Save Link As..."): \[Geometry for Computational Design - Vectors.dyn].
+>
+> A full list of example files can be found in the Appendix.
 
 ### Plane
 
-Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
 
 ![Planes in Dynamo](<../../.gitbook/assets/Geometry for Computational Design  - plane.jpg>)
 
@@ -25,14 +27,18 @@ Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
 
 ### Coordinate System
 
+[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+
 ![Coordinate System in Dynamo](<../../.gitbook/assets/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
 > 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
 
-> Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Coordinate System.dyn]\(datasets/5-2/Geometry for Computational Design - Coordinate System.dyn). A full list of example files can be found in the Appendix.
+> Download the example file (Right click and "Save Link As..."): \[Geometry for Computational Design - Coordinate System.dyn]
+>
+> A full list of example files can be found in the Appendix.
 
-## The Fundamental Concept
+## Deeper Dive into the Concept
 
 Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
 
