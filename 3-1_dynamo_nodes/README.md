@@ -118,3 +118,9 @@ In case you prefer to hide the Wires in your graph, you can find this option fro
 With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
 
 ![](<../.gitbook/assets/nodes and wires - hide wires setting (1).gif>)
+
+#### Hide Individual Wire Only
+
+You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+
+![](<../.gitbook/assets/nodes and wires - hide selected wire.gif>)
