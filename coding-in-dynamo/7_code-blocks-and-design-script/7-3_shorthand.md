@@ -135,5 +135,4 @@ In this exercise, we will flex our new shorthand skills to create a funky-cool e
 3. The third code block replaces the *Formula* node (as well as *List.Transpose*, *List.Count* and *Number Range*).
 4. The fourth code block queries a list of lists, replacing the *List.GetItemAtIndex* node.
 
-
 ````

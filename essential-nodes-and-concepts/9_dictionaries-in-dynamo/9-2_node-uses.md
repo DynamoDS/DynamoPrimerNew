@@ -26,4 +26,4 @@ Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _cre
 
 8\. `Dictionary.Values` will return what values are currently stored in the dictionary.
 
-_**Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.**_
+Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.
