@@ -35,18 +35,18 @@ Tip: Hover over a Port to see a tooltip containing the data type expected.
 
 ### Node States
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status.
+Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
 
-Furthermore, hovering or right-clicking over the Name or Ports presents additional information and options.
+Hovering or right-clicking over the Name or Ports presents additional information and options.
 
 ![](<../.gitbook/assets/nodes and wires - node states.jpg>)
 
 > 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red indicates that the Node is in an Error State
+> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
 > 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Dark Grey indicates that the geometry preview is turned off
+> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<../.gitbook/assets/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
 > 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow Nodes are in an Warning state, meaning they may have incorrect data types
+> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
 
 #### Handling Error or Warning Nodes
 

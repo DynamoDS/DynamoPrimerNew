@@ -1,7 +1,5 @@
 # Python and Revit
 
-img{display:block;margin-left: auto; margin-right: auto }
-
 ### Python and Revit
 
 Now that we've demonstrated how to use Python scripts in Dynamo, let's take a look at connecting Revit libraries into the scripting environment. Remember, we imported our Dynamo core nodes with the first three lines in the block of code below. To import the Revit nodes, Revit elements, and the Revit document manager, we only have to add a few more lines:
