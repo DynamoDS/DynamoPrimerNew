@@ -38,7 +38,7 @@ b. Right-click in Workspace
 
 * Switch from 3D Preview to Graph Preview
 
-![](<../.gitbook/assets/workspace - right click switch to graph view (1).jpg>)
+![](<../.gitbook/assets/2.3-06 right click switch to graph preview.jpg>)
 
 * Switch from Graph Preview to 3D Preview
 
