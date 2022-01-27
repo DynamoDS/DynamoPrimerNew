@@ -29,8 +29,6 @@ Boolean operations are complex and can be slow to calculate. Use Freeze function
 
 ![](<../../.gitbook/assets/solids - freeze node.jpg>)
 
-![](<../../.gitbook/assets/solids - freeze node.gif>)
-
 > 1.Use the right-click contextual menu to Freeze the Solid Union operation
 >
 > 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
