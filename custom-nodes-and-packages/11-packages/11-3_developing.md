@@ -74,19 +74,27 @@ Next to MapToSurface, click verticle dots menu > Show Root Directory
 
 Next, open the _"extra"_ folder, which houses all of the files in the package which are not custom nodes. This is where examples files (if they exist) are stored for Dynamo packages. The screenshots below discuss the concepts demonstrated in each example file.
 
-**01-PanelingWithPolygons:** This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../10\_custom-nodes/10-2\_creating.md).
+#### **01-PanelingWithPolygons**
+
+This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../10\_custom-nodes/10-2\_creating.md).
 
 ![](<../../.gitbook/assets/develop package -sample file 01.jpg>)
 
-**02-PanelingWithPolygons-II:** Using a similar workflow, this exercise file shows a setup for mapping circles (or polygons representing circles) from one surface to another. This uses the _"PolygonsToSurface"_ node.
+#### **02-PanelingWithPolygons-II**
+
+Using a similar workflow, this exercise file shows a setup for mapping circles (or polygons representing circles) from one surface to another. This uses the _"PolygonsToSurface"_ node.
 
 ![](<../../.gitbook/assets/develop package -sample file 02.jpg>)
 
-**03-NurbsCrvsAndSurface:** This example file adds some complexity by working with the "NurbsCrvToSurface" node. The target surface is offset a given distance and the nurbs curve is mapped to the original target surface and the offset surface. From there, the two mapped curves are lofted to create a surface, which is then thickened. This resulting solid has an undulation that is representative of the target surface normals.
+#### **03-NurbsCrvsAndSurface**
+
+This example file adds some complexity by working with the "NurbsCrvToSurface" node. The target surface is offset a given distance and the nurbs curve is mapped to the original target surface and the offset surface. From there, the two mapped curves are lofted to create a surface, which is then thickened. This resulting solid has an undulation that is representative of the target surface normals.
 
 ![](<../../.gitbook/assets/develop package -sample file 03.jpg>)
 
-**04-PleatedPolysurface-OffsetPoints:** This example file demonstrates how to map a pleated polysurface from a source surface to a target surface. The source and target surface are a rectangular surface spanning the grid and a revolved surface, respectively.
+#### **04-PleatedPolysurface-OffsetPoints**
+
+This example file demonstrates how to map a pleated polysurface from a source surface to a target surface. The source and target surface are a rectangular surface spanning the grid and a revolved surface, respectively.
 
 ![](<../../.gitbook/assets/develop package -sample file 04a.jpg>)
 
@@ -94,7 +102,9 @@ The source polysurface mapped from the source surface to the target surface.
 
 ![](<../../.gitbook/assets/develop package -sample file 04b.jpg>)
 
-**05-SVG-Import:** Since the custom nodes are able to map different types of curves, this last file references an SVG file exported from Illustrator and maps the imported curves to a target surface.
+#### **05-SVG-Import**
+
+Since the custom nodes are able to map different types of curves, this last file references an SVG file exported from Illustrator and maps the imported curves to a target surface.
 
 ![](<../../.gitbook/assets/develop package -sample file 05a.jpg>)
 

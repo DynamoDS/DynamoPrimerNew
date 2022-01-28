@@ -2,7 +2,7 @@
 
 The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
 
-![Import Mesh](../../.gitbook/assets/mtIntro.jpg)
+![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)
 
 The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
 
@@ -18,7 +18,7 @@ In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the
 
 ![](<../../.gitbook/assets/meshToolkit case study - install package.jpg>)
 
-## Exercise
+## Exercise: Intersect Mesh
 
 > Download and unzip the example files for this exercise (Right click and "Save Link As...").&#x20;
 >

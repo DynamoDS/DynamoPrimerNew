@@ -44,7 +44,7 @@ OUT = solids
 
 ### The Python Node
 
-Like code blocks, Python nodes are a scripting interface within a visual programming environment. The Python node can be found under Script>Editor>Python Script in the library.&#x20;
+Like code blocks, Python nodes are a scripting interface within a visual programming environment. The Python node can be found under Script>Editor>Python Script in the library.
 
 ![](<../../.gitbook/assets/python node - the python node 01.jpg>)
 
@@ -60,7 +60,7 @@ The Autodesk.DesignScript.Geometry library allows you to use dot notation simila
 
 ## Exercise: Python Script for Creating Patterns from Solid Module
 
-### Part I:&#x20;
+### Part I:
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [Python\_Custom-Node.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/10\_Custom-Nodes/datasets/10-4/Python-CustomNode.dyn)
 
@@ -254,7 +254,7 @@ This will open a new workspace in which to edit the custom node.
 ![](<../../.gitbook/assets/python node - exercise pt II-03.jpg>)
 
 > 1. **Inputs:** Change the input names to be more descriptive and add data types and default values.
-> 2. **Output:** Change the output name&#x20;
+> 2. **Output:** Change the output name
 
 Save the node as a .dyf file and you should see the custom node reflects the changes we just made.
 

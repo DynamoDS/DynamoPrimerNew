@@ -71,7 +71,7 @@ Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` locati
 
 ### Python Script Behavior After
 
-A_f_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
+A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
 
 ![](<../../.gitbook/assets/python templates - before setup template.jpg>)
 
