@@ -83,7 +83,7 @@ By clicking on _"Quads from Rectangular Grid"_ in the Dynamo Package Manager, yo
 
 You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
 
-### Where are Files Stored Locally?&#x20;
+### Where are Packages Files Stored Locally?&#x20;
 
 If you do download files from the Dynamo package manager, or if you would like to see where all of your package files are kept, click on Dynamo > Package Manager > Node and Package Paths, you can find your current root folder directory from here.
 
