@@ -2,7 +2,7 @@
 
 If the simplest form of data is numbers, the easiest way to relate those numbers is through Mathematics. From simple operators like divide to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
 
-### Arithmetic Operators&#x20;
+### Arithmetic Operators
 
 Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
 
@@ -15,7 +15,7 @@ Operators are a set of components that use algebraic functions with two numeric 
 
 ## Exercise: The Golden Spiral Formula
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Math.dyn]&#x20;
+> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Math.dyn]
 >
 > A full list of example files can be found in the Appendix.
 
@@ -25,13 +25,13 @@ Combine operators and variables to form a more complex relationship through **Fo
 
 1.Create Number sequence that represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
 
-**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.&#x20;
+**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.
 
 ![](<../../.gitbook/assets/math - part I-01.jpg>)
 
-2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.&#x20;
+2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.
 
-The golden spiral is defined as the equation:&#x20;
+The golden spiral is defined as the equation:
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -59,9 +59,9 @@ e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiat
 
 f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
 
-### Part II: From Formula to Geometry&#x20;
+### Part II: From Formula to Geometry
 
-Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [7\_code-blocks-and-design-script](../../coding-in-dynamo/7\_code-blocks-and-design-script/ "mention") to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.&#x20;
+Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [7\_code-blocks-and-design-script](../../coding-in-dynamo/7\_code-blocks-and-design-script/ "mention") to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
 
 **Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
 
@@ -79,17 +79,17 @@ We've now completed the Fibonacci Spiral! Let's take this further into two separ
 
 ![](<../../.gitbook/assets/math - part III-01.jpg>)
 
-**Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.&#x20;
+**Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.
 
 Bonus points if you make it 3D!
 
 ![](<../../.gitbook/assets/math - part III-02.gif>)
 
-****
+***
 
-### Part IV: From Nautilus to Phyllotaxis&#x20;
+### Part IV: From Nautilus to Phyllotaxis
 
-Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds.](http://ms.unimelb.edu.au/\~segerman/papers/sunflower\_spiral\_fibonacci\_metric.pdf)
+Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
 
 As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
 
@@ -111,7 +111,7 @@ d. **Number:** And to define the range of numbers, add three number nodes to the
 
 Our output is beginning to resemble a whirlpool. Let's adjust some of the **Number Range** parameters and see how the results change.
 
-Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.&#x20;
+Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.
 
 ![](<../../.gitbook/assets/math - part IV-04.jpg>)
 
