@@ -1,7 +1,5 @@
 # Zero-Touch Importing
 
-table{box-shadow: 2px 2px 2px #BBBBBB;max-width:75%;display:block;margin-left: auto; margin-right: auto } thead {display: none} img{display:block;margin-left: auto; margin-right: auto }
-
 ### What is Zero-Touch?
 
 Zero-Touch Importing refers to a simple point-and-click method for importing C# libraries. Dynamo will read the public methods of a _.dll_ file and convert them to Dynamo nodes. You can use Zero-Touch to develop your own custom nodes and packages, and to import external libraries into the Dynamo environment.
@@ -12,84 +10,93 @@ With Zero-Touch, you can actually import a library which was not necessarily dev
 
 This section demonstrates how to use Zero-Touch to import a third party library. For information on developing your own Zero-Touch Library, reference the [Dynamo wiki page](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development).
 
-\###Zero-Touch Packages Zero-touch packages are a good complement to user-defined custom nodes. A few packages which use C# libraries are listed in the table below. For more detailed information on packages, visit the [Packages section ](../../a\_appendix/a-3\_packages.md)in the Appendix.
+### Zero-Touch Packages&#x20;
 
-| **Logo/Image**                         | **Name**                                                                    |
-| -------------------------------------- | --------------------------------------------------------------------------- |
-| ![](../../.gitbook/assets/toolkit.jpg) | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](../../.gitbook/assets/unfold.jpg)  | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../../.gitbook/assets/rhynamo.jpg) | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../../.gitbook/assets/optimo.jpg)  | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+Zero-touch packages are a good complement to user-defined custom nodes. A few packages which use C# libraries are listed in the table below. For more detailed information on packages, visit the [Packages section ](../../a\_appendix/a-3\_packages.md)in the Appendix.
 
-#### Case Study - Importing AForge
+| **Logo/Image**                                                                       | **Name**                                                                    |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| ![](<../../.gitbook/assets/meshToolkit case study 01.jpg>)                           | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](<../../.gitbook/assets/package introduction - installing package folder 07.jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](../../.gitbook/assets/rhynamo.jpg)                                               | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../../.gitbook/assets/optimo.jpg)                                                | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+
+## Case Study - Importing AForge
 
 In this case study, we'll show how to import the [AForge](http://www.aforgenet.com) external _.dll_ library. AForge is a robust library which offers a range of functionality from image processing to artificial intelligence. We'll reference the imaging class in AForge to do a few image processing exercises below.
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [Zero-Touch-Examples.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/Zero-Touch-Examples.zip).
+> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").&#x20;
+>
+> A full list of example files can be found in the Appendix. [Zero-Touch-Examples.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/Zero-Touch-Examples.zip).
 
-> 1. Let's beging by downloading AForge. On the [AForge download page](http://www.aforgenet.com/framework/downloads.html), select _\[Download Installer]_ and install after download has completed.
+Let's begin by downloading AForge. On the [AForge download page](http://www.aforgenet.com/framework/downloads.html), select _\[Download Installer]_ and install after download has completed.
 
-![Exercise](../../.gitbook/assets/import.jpg)
+In Dynamo, create a new file and select _File > Import Library..._
 
-> 1. In Dynamo, create a new file and select _File > Import Library..._
+![](<../../.gitbook/assets/case study aforge 01.jpg>)
 
-![Exercise](../../.gitbook/assets/folder.jpg)
+Next, locate the dll file.
+
+![](<../../.gitbook/assets/case study aforge 02.jpg>)
 
 > 1. In the pop-up window, navigate to the release folder in your AForge install. This will likely be in a folder similar to this one: _C:\Program Files (x86)\AForge.NET\Framework\Release_.
+> 2. **AForge.Imaging.dll:** We only want to use this one file from the AForge library for this case study. Select this _.dll_ and hit _"Open"._
 
-1. **AForge.Imaging.dll:** We only want to use this one file from the AForge library for this case study. Select this _.dll_ and hit _"Open"._
+Back in Dynamo, you should see an **AForge** group of nodes added to your Library. We now have access to the AForge imaging library from our visual program!
 
-![Exercise](<../../.gitbook/assets/library (1).jpg>)
+![](<../../.gitbook/assets/case study aforge 03.jpg>)
 
-> 1. Back in Dynamo, you should see an \*"AForge" \*group of nodes added to your Library Toolbar. We now have access to the AForge imaging library from our visual program!
+### Exercise 1 - Edge Detection
 
-#### Exercise 1 - Edge Detection
+> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").&#x20;
+>
+> A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
 
-Now that the library's imported, we'll start off simple with this first exercise. We'll do some basic image processing on a sample image to show how AForge image filters. We'll use the _"Watch Image"_ node to show our results and apply filters in Dynamo similar to those in Photoshop.
+Now that the library is imported, we'll start off simple with this first exercise (_01-EdgeDetection.dyn_). We'll do some basic image processing on a sample image to show how AForge image filters. We'll use the _"Watch Image"_ node to show our results and apply filters in Dynamo similar to those in Photoshop
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
+To import an image, add a **File Path** node to the canvas and select "soapbubbles.jpg" from the exercise folder (photo cred: [flickr](https://www.flickr.com/photos/wwworks/667298782)).
 
-Now that the library's imported, we'll start off simple with this first exercise (_01-EdgeDetection.dyn_). We'll do some basic image processing on a sample image to show how AForge image filters. We'll use the _"Watch Image"_ node to show our results and apply filters in Dynamo similar to those in Photoshop
+![](<../../.gitbook/assets/case study aforge exercise 1 - 01.jpg>)
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 23.jpg)
+The File Path node simply provides a String of the path to the image we've selected. Next, we need to convert it into a usable image file in Dynamo.
 
-> First, we want to import an image to work with. Add a _File Path_ node to the canvas and select "soapbubbles.jpg" from the downloaded exercise folder (photo cred: [flickr](https://www.flickr.com/photos/wwworks/667298782)).
+![](<../../.gitbook/assets/case study aforge exercise 1 - 02.jpg>)
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 21.jpg)
 
-> 1. The File Path node simply provides a String of the path to the image we've selected. We need to convert this File Path to an image in the Dynamo environment.
 
-1. Connect the File Path node to the File.FromPath node.
-2. To convert this File into an Image, we'll use the Image.ReadFromFile node.
-3. Last, let's see the result! Drop a Watch Image node onto the canvas and connect to Image.ReadFromFile. We haven't used AForge yet, but we've successfully imported an image into Dynamo.
+> 1. Use **File From Path** to convert the file path item into an image in the Dynamo environment.
+> 2. Connect the **File Path** node to the **File.FromPath** node.
+> 3. To convert this File into an Image, we'll use the **Image.ReadFromFile** node.
+> 4. Last, let's see the result! Drop a **Watch Image** node onto the canvas and connect to **Image.ReadFromFile**. We haven't used AForge yet, but we've successfully imported an image into Dynamo.
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 18.jpg)
+Under AForge.Imaging.AForge.Imaging.Filters (in the navigation menu), you'll notice that there is a wide array of filters available. We're going to use one of these filters now to desaturate an image based on threshold values.
 
-> Under AForge.Imaging.AForge.Filters (in the navigation menu), you'll notice that there is a wide array of filters available. We're going to use one of these filters now to desaturate an image based on threshold values.
+![](<../../.gitbook/assets/case study aforge exercise 1 - 03.jpg>)
 
-1. Drop three sliders onto the canvas, change their ranges to be from 0 to 1 and their step values to be 0.01.
-2. Add the Grayscale.Grayscale node to the canvas. This is an AForge filter which applies a grayscale filter to an image. Connect the three sliders from step 1 into cr, cg, and cb. Change the top and bottom sliders to have a value of 1 and the middle slider to have a value of 0.
-3. In order to apply the Grayscale filter, we need an action to perform on our image. For this, we use IFilter.Apply. Connect the image into the image input and Grayscale.Grayscale into the iFilter input.
-4. Plugging into a Watch Image node, we get a desaturated image.
+> 1. Drop three sliders onto the canvas, change their ranges to be from 0 to 1 and their step values to be 0.01.
+> 2. Add the **Grayscale.Grayscale** node to the canvas. This is an AForge filter which applies a grayscale filter to an image. Connect the three sliders from step 1 into cr, cg, and cb. Change the top and bottom sliders to have a value of 1 and the middle slider to have a value of 0.
+> 3. In order to apply the Grayscale filter, we need an action to perform on our image. For this, we use **BaseFilter.Apply**. Connect the image into the image input and **Grayscale.Grayscale** into the baseFilter input.
+> 4. Plugging into a **Watch Image** node, we get a desaturated image.
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 19.jpg)
+We can have control over how to desaturate this image based on threshold values for red, green, and blue. These are defined by the inputs to the **Grayscale.Grayscale** node. Notice that the image looks pretty dim - this is because the green value is set to 0 from our slider.
 
-> We can have control over how to desaturate this image based on threshold values for red, green, and blue. These are defined by the inputs to the Grayscale.Grayscale node. Notice that the image looks pretty dim - this is because the green value is set to 0 from our slider.
+![](<../../.gitbook/assets/case study aforge exercise 1 - 04.jpg>)
 
-1. Change the top and bottom sliders to have a value of 0 and the middle slider to have a value of 1. This way we get a more legible desaturated image.
+> 1. Change the top and bottom sliders to have a value of 0 and the middle slider to have a value of 1. This way we get a more legible desaturated image.
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 17.jpg)
+Let's use the desaturated image, and apply another filter on top of it. The desaturated image has some contrast, so we we're going to test some edge detection.
 
-> Let's use the desaturated image, and apply another filter on top of it. The desaturated image has some contrast, so we we're going to test some edge detection.
+![](<../../.gitbook/assets/case study aforge exercise 1 - 05.jpg>)
 
-1. Add a SobelEdgeDetector.SobelEdgeDetector node to the canvas. Connect this as the IFilter to a new IFilter node, and connect the desaturated image to the image input of the IFilter node.
-2. The Sobel Edge Detector has highlighted the edges in a new image.
+> 1. Add a **SobelEdgeDetector.SobelEdgeDetector** node to the canvas.&#x20;
+> 2. Connect this to a **BaseUsingCopyPartialFilter.Apply** and connect the desaturated image to the image input of this node.
+> 3. The Sobel Edge Detector has highlighted the edges in a new image.
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 16.jpg)
+Zooming in, the edge detector has called out the outlines of the bubbles with pixels. The AForge library has tools to take results like this and create Dynamo geometry. We'll explore that in the next exercise.
 
-> Zooming in, the edge detector has called out the outlines of the bubbles with pixels. The AForge library has tools to take results like this and create Dynamo geometry. We'll explore that in the next exercise.
+![](<../../.gitbook/assets/case study aforge exercise 1 - 06.jpg>)
 
-#### Exercise 2 - Rectangle Creation
+### Exercise 2 - Rectangle Creation
 
 > Download and unzip the example files that accompany this package case study (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
 

@@ -28,7 +28,7 @@ Use Code Block to quickly define a rectangular grid, output the result to a Poly
 
 ![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
 
-### Installing Package Folders&#x20;
+### Installing Package Folder - DynamoUnfold&#x20;
 
 The example above focuses on a package with one custom node, but you use the same process for downloading packages with several custom nodes and supporting data files. Let's demonstrate that now with a more comprehensive package: Dynamo Unfold.
 

@@ -53,7 +53,6 @@
   * [Creating](8\_dynamo-for-revit/8-4\_creating.md)
   * [Customizing](8\_dynamo-for-revit/8-5\_customizing.md)
   * [Documenting](8\_dynamo-for-revit/8-6\_documenting.md)
-* [Dynamo for FormIt](dynamo-for-formit.md)
 * [Coding in Dynamo](coding-in-dynamo/README.md)
   * [Python Nodes](custom-nodes-and-packages/10\_custom-nodes/10-4\_python.md)
   * [Python and Revit](custom-nodes-and-packages/10\_custom-nodes/10-5\_python-revit.md)

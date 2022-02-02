@@ -14,8 +14,6 @@ Begin by going to Dynamo > Preferences > Package Manager > next to MapToSurface 
 
 ![](<../../.gitbook/assets/publish a package - delete package.jpg>)
 
-![](../../.gitbook/assets/uninstall.jpg)
-
 Then restart Dynamo. When reopening, when you check the _"Manage Packages"_ window, the _MapToSurface_ should no longer be there. Now we're ready to start from the beginning!
 
 ### Publishing a Package Locally

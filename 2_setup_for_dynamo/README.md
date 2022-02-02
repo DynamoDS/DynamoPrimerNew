@@ -4,7 +4,7 @@
 
 Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
 
-![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>)![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>)![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>)![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>)![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>)![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
+![](<../.gitbook/assets/setup for dynamo - dynamo revit.png>) ![](<../.gitbook/assets/setup for dynamo - dynamo civil 3D.png>) ![](<../.gitbook/assets/setup for dynamo - dynamo alias design.png>) ![](<../.gitbook/assets/setup for dynamo - dynamo formit.png>) ![](<../.gitbook/assets/setup for dynamo - dynamo advance steel.png>) ![](<../.gitbook/assets/setup for dynamo - dynamo robot structural analysis.png>)
 
 ### Launch Dynamo as Extension
 
@@ -17,7 +17,7 @@ To start using, launch it from your toolbar panel. Depends on which software you
 For more guidance on using Dynamo with specific software, we recommend referring to these sections.
 
 * [8\_dynamo-for-revit](../8\_dynamo-for-revit/ "mention")
-* [dynamo-for-formit.md](../dynamo-for-formit.md "mention")
+* [Broken link](broken-reference "mention")
 
 If you would like to use Dynamo as a standalone application. Continue reading for guidance on downloading the Sandbox.
 
