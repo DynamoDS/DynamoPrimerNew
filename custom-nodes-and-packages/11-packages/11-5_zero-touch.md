@@ -101,27 +101,31 @@ Zooming in, the edge detector has called out the outlines of the bubbles with pi
 
 ### Exercise 2 - Rectangle Creation
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
+> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").&#x20;
+>
+> A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
 
 Now that we're introduced to some basic image processing, let's use an image to drive Dynamo geometry! On an elementary level, in this exercise we're aiming to do a _"Live Trace"_ of an image using AForge and Dynamo. We're going to keep it simple and extract rectangles from a reference image, but there are tools available in AForge for more complex operations. We'll be working with _02-RectangleCreation.dyn_ from the downloaded exercise files.
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 15.jpg)
+![](<../../.gitbook/assets/case study aforge exercise 2 - 01.jpg>)
 
 > 1. With the File Path node, navigate to grid.jpg in the exercise folder.
-
-1. Connect the remaining series of nodes above to reveal a course parametric grid.
+> 2. Connect the remaining series of nodes above to reveal a course parametric grid.
 
 In this next step, we want to reference the white squares in the image and convert them to actual Dynamo geometry. AForge has a lot of powerful Computer Vision tools, and here we're going to use a particularly important one for the library called [BlobCounter](http://www.aforgenet.com/framework/docs/html/d7d5c028-7a23-e27d-ffd0-5df57cbd31a6.htm).
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 14.jpg)
+![](<../../.gitbook/assets/case study aforge exercise 2 - 02.jpg>)
 
-> 1. After adding a BlobCounter to the canvas, we need a way to process the image (similar to the IFilter tool in the previous exercise). Unfortunately the "Process Image" node is not immediately visible in the Dynamo library. This is because the function may not be visible in the AForge source code. In order to fix this, we'll need to find a work-around.
+> 1. Add a BlobCounter to the canvas, then we need a way to process the image (similar to the ~~IFilter~~ tool in the previous exercise).&#x20;
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 13.jpg)
+Unfortunately the "Process Image" node is not immediately visible in the Dynamo library. This is because the function may not be visible in the AForge source code. In order to fix this, we'll need to find a work-around.
 
-> 1. Add a Python node to the canvas.
+![](<../../.gitbook/assets/case study aforge exercise 2 - 03.jpg>)
+
+> 1. Add a Python node to the canvas and add the following code to the Python node. This code imports the AForge library and then processes the imported image.
 
 ```
+import sys
 import clr
 clr.AddReference('AForge.Imaging')
 from AForge.Imaging import *
@@ -131,23 +135,21 @@ bc.ProcessImage(IN[0])
 OUT=bc
 ```
 
-> Add the code above to the Python node. This code imports the AForge library and then processes the imported image.
+Connecting the image output to the Python node input, we get an AForge.Imaging.BlobCounter result from the Python node.
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 11.jpg)
-
-> Connecting the image output to the Python node input, we get an AForge.Imaging.BlobCounter result from the Python node.
+![](<../../.gitbook/assets/case study aforge exercise 2 - 04.jpg>)
 
 The next steps will do some tricks that demonstrate familiarity with the [AForge Imaging API](http://www.aforgenet.com/framework/docs/html/d087503e-77da-dc47-0e33-788275035a90.htm). It's not necessary to learn all of this for Dynamo work. This is more of a demonstration of working with external libraries within the flexibility of the Dynamo environment.
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 10.jpg)
+![](<../../.gitbook/assets/case study aforge exercise 2 - 05.jpg>)
 
 > 1. Connect the output of the Python script to BlobCounterBase.GetObjectRectangles. This reads objects in an image, based on a threshold value, and extracts quantified rectangles from the pixel space.
 
-!\[Exercise]\(images/11-5/Exercise/AForge- 09.jpg)
+![](<../../.gitbook/assets/case study aforge exercise 2 - 06.jpg>)
 
 > 1. Adding another Python node to the canvas, connect to the GetObjectRectangles, and input the code below. This will create an organized list of Dynamo objects.
 
-````
+```
 OUT = []
 for rec in IN[0]:
 	subOUT=[]
@@ -156,34 +158,53 @@ for rec in IN[0]:
 	subOUT.append(rec.Width)
 	subOUT.append(rec.Height)
 	OUT.append(subOUT)
-	```
-
-![Exercise](images/11-5/Exercise/AForge- 06.jpg)
-> 1. Transpose the output of the Python node from the previous step.  This creates 4 lists, each representing X,Y, Width, and Height for each rectangle.
->2. Using Code Block, we organize the data into a structure that accommodates the Rectangle.ByCornerPoints node (code below).
-````
-
-recData; x0=List.GetItemAtIndex(recData,0); y0=List.GetItemAtIndex(recData,1); width=List.GetItemAtIndex(recData,2); height=List.GetItemAtIndex(recData,3); x1=x0+width; y1=y0+height; p0=Autodesk.Point.ByCoordinates(x0,y0); p1=Autodesk.Point.ByCoordinates(x0,y1); p2=Autodesk.Point.ByCoordinates(x1,y1); p3=Autodesk.Point.ByCoordinates(x1,y0);
-
-```
-![Exercise](images/11-5/Exercise/AForge- 05.jpg)
-> Zooming out, we have an array of rectangles representing the white squares in the image.  Through programming, we've done something (roughly) similar to a live trace in Illustrator!
-
-![Exercise](images/11-5/Exercise/AForge- 04.jpg)
-> We still need some cleanup, however.  Zooming in, we can see that we have a bunch of small, unwanted rectangles.
-
-![Exercise](images/11-5/Exercise/AForge- 03.jpg)
-> 1. We get rid of the unwanted rectangles by inserting a Python node in between the GetObjectRectangles node and another Python node.  The node's code is below, and removes all rectangles which are below a given size.
 ```
 
-rectangles=IN\[0] OUT=\[] for rec in rectangles: if rec.Width>8 and rec.Height>8: OUT.append(rec)
+![](<../../.gitbook/assets/case study aforge exercise 2 - 07.jpg>)
+
+> 1. Transpose the output of the Python node from the previous step. This creates 4 lists, each representing X,Y, Width, and Height for each rectangle.
+> 2. Using Code Block, we organize the data into a structure that accommodates the Rectangle.ByCornerPoints node (code below).
 
 ```
-![Exercise](images/11-5/Exercise/AForge- 01.jpg)
-> With the superfluous rectangles gone, just for kicks, let's create a surface from these rectangles and extrude them by a distance based on their areas.
-
-![Exercise](images/11-5/Exercise/AForge- 00.jpg)
-> 1. Last, change the both_sides input to false and we get an extrusion in one direction.  Dip this baby in resin and you've got yourself one super nerdy table.
-
-These are basic examples, but the concepts outlined here are transferable to exciting real-world applications.  Computer vision can be used for a whole host of processes. To name a few: barcode readers, perspective matching, [projection mapping](https://www.youtube.com/watch?v=XSR0Xady02o), and [augmented reality](http://aforgenet.com/aforge/articles/gratf_ar/). For more advanced topics with AForge related to this exercise, have a read through [this article](http://aforgenet.com/articles/shape_checker/).
+recData;
+x0=List.GetItemAtIndex(recData,0);
+y0=List.GetItemAtIndex(recData,1);
+width=List.GetItemAtIndex(recData,2);
+height=List.GetItemAtIndex(recData,3);
+x1=x0+width;y1=y0+height;
+p0=Autodesk.Point.ByCoordinates(x0,y0);
+p1=Autodesk.Point.ByCoordinates(x0,y1);
+p2=Autodesk.Point.ByCoordinates(x1,y1);
+p3=Autodesk.Point.ByCoordinates(x1,y0);
 ```
+
+We have an array of rectangles representing the white squares in the image. Through programming, we've done something (roughly) similar to a live trace in Illustrator!
+
+We still need some cleanup, however. Zooming in, we can see that we have a bunch of small, unwanted rectangles.
+
+![](<../../.gitbook/assets/case study aforge exercise 2 - 08.jpg>)
+
+Next, we are going to write codes to get rid of unwanted rectangles.
+
+![](<../../.gitbook/assets/case study aforge exercise 2 - 09.jpg>)
+
+> 1. Insert a Python node in between the GetObjectRectangles node and another Python node. The node's code is below, and removes all rectangles which are below a given size.
+
+```
+rectangles=IN[0]
+OUT=[]
+for rec in rectangles:
+ if rec.Width>8 and rec.Height>8:
+  OUT.append(rec)
+```
+
+With the superfluous rectangles gone, just for kicks, let's create a surface from these rectangles and extrude them by a distance based on their areas.
+
+![](<../../.gitbook/assets/case study aforge exercise 2 - 10.jpg>)
+
+Last, change the both\_sides input to false and we get an extrusion in one direction. Dip this baby in resin and you've got yourself one super nerdy table.
+
+![](<../../.gitbook/assets/case study aforge exercise 2 - 11.jpg>)
+
+These are basic examples, but the concepts outlined here are transferable to exciting real-world applications. Computer vision can be used for a whole host of processes. To name a few: barcode readers, perspective matching, [projection mapping](https://www.youtube.com/watch?v=XSR0Xady02o), and [augmented reality](http://aforgenet.com/aforge/articles/gratf\_ar/). For more advanced topics with AForge related to this exercise, have a read through [this article](http://aforgenet.com/articles/shape\_checker/).
+
