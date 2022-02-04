@@ -59,6 +59,8 @@ In this example Revit file, we have three element types of a simple building. We
 
 What conclusions can we draw from the elements currently in the Revit project view? And how far down the hierarchy do we need to go to select the appropriate elements? This will of course become a more complex task when working on a large project. There are a lot of options available: we can select elements by categories, levels, families, instances, etc.
 
+### Selecting Mass and Surfaces
+
 ![](<../.gitbook/assets/selecting - exercise 02.jpg>)
 
 > 1. Since we're working with a basic setup, let's select the building mass by choosing _"Mass"_ in the Categories dropdown node. This can be found in the Revit>Selection tab.
@@ -105,6 +107,8 @@ The faces are now imported into Dynamo as surfaces.
 
 ![](<../.gitbook/assets/selecting - exercise 09.jpg>)
 
+### Selecting Beams
+
 Now, let's take a look at the beams over the atrium.
 
 ![](<../.gitbook/assets/selecting - exercise 10.jpg>)
@@ -134,7 +138,9 @@ A question that may come up often in Revit/Dynamo workflows: how do I select one
 
 What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
 
-In any case, if we were to import 500 beams, do we need all of the surfaces to perform the intended parametric operation? Or can we extract basic information from the beams and perform generative tasks with fundamental geometry? This is a question that we'll keep in mind as we walk through this chapter. For example, let's take a look at the truss system:
+In any case, if we were to import 500 beams, do we need all of the surfaces to perform the intended parametric operation? Or can we extract basic information from the beams and perform generative tasks with fundamental geometry? This is a question that we'll keep in mind as we walk through this chapter. For example, let's take a look at the truss system next.
+
+### Selecting Trusses
 
 Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the Element.Geometry from the previous step.
 
