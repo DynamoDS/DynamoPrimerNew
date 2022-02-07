@@ -12,7 +12,7 @@ In the exercise below, we'll use a basic deviation from plane node to create a R
 
 ## Exercise
 
-### Setting Panels Aperture Ratio Based on Deviation From Plane Node
+### Part I: Setting Panels Aperture Ratio Based on Deviation From Plane Node
 
 > Download the example files that accompanies this exercise (Right click and "Save Link As...").&#x20;
 >
@@ -54,7 +54,7 @@ Zooming in, it becomes more clear that the closed panels are weighted towards th
 
 ![Exercise](../.gitbook/assets/13a.jpg)
 
-### Color and Documentation&#x20;
+### Part II: Color and Documentation&#x20;
 
 Setting the Aperture Ratio doesn't clearly demonstrate the deviation of panels on the roof, and we're also changing the geometry of the actual element. Suppose we just want to study the deviation from the standpoint of fabrication feasibility. It would be helpful to color the panels based on deviation range for our documentation. We can do that with the series of steps below, and in a very similar process to the steps above.
 
@@ -86,7 +86,7 @@ Back in Revit, we can now make better sense of areas of maximum deviation in the
 
 ![Exercise](<../.gitbook/assets/07 (6).jpg>)
 
-### Scheduling
+### Part III: Scheduling
 
 Selecting one ETFE panel in Revit, we see that there are four instance parameters, XYZ1, XYZ2, XYZ3, and XYZ4. These are all blank after they're created. These are text-based parameters and need values. We'll use Dynamo to write the adaptive point locations to each parameter. This helps interoperability if the geometry needs to be sent to an engineer of facade consultant.
 

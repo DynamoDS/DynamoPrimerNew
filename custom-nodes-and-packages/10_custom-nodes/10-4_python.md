@@ -58,9 +58,9 @@ The Autodesk.DesignScript.Geometry library allows you to use dot notation simila
 
 > Methods include constructors such as _ByCoordinates_, actions like _Add_, and queries like _X_, _Y_ and _Z_ coordinates.
 
-## Exercise: Python Script for Creating Patterns from Solid Module
+## Exercise: Custom Node with Python Script for Creating Patterns from Solid Module
 
-### Part I:
+### Part I: Setting Up Python Script
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [Python\_Custom-Node.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/10\_Custom-Nodes/datasets/10-4/Python-CustomNode.dyn)
 
