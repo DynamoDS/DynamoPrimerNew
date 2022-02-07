@@ -40,11 +40,15 @@ Now, let's copy these nodes 4 times as these circles will define our surface.
 
 ![](<../../.gitbook/assets/vase4 (1).png>)
 
+> 1. Circles are created by a center point and a radius
+
 ### Moving Circles Through the Vase Height
 
 We are missing a key parameter to our vase, its height. In order to control the height, we create another number slider. We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
 
 ![](<../../.gitbook/assets/vase5 (1).png>)
+
+> 2\. Circles are translated (moved) by a variable in the z axis.
 
 ### Creating the Surface
 
@@ -54,8 +58,10 @@ Let's also turn off the preview in other nodes to only display the Surface.ByLof
 
 ![](<../../.gitbook/assets/vase6 (1).png>)
 
+> 3\. A surface is created by lofting the translated circles.&#x20;
+
 ## Results
 
-We can now use the number sliders we defined in our script to create different vase designs.&#x20;
+We can now use the **Number Sliders** we defined in our script to create different vase designs.&#x20;
 
 ![](../../.gitbook/assets/vase7.png)

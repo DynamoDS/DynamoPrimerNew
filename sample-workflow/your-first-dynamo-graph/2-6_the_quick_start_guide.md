@@ -2,7 +2,7 @@
 
 ## Working with Attractor Points
 
-Attractor points are great for experimenting with geometric patterns. They can be used to create gradual changes to an object relative to their position to the attractor.
+Attractor points are great for experimenting with geometric patterns. They can be used to create gradual changes to objects based on their distance.
 
 ![](../../.gitbook/assets/attractor1.gif)
 
