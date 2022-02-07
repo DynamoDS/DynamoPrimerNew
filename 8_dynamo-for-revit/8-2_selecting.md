@@ -119,20 +119,18 @@ Now, let's take a look at the beams over the atrium.
 
 A question that may come up often in Revit/Dynamo workflows: how do I select one element and get all similar elements? Since the selected Revit element contains all of its hierarchical information, we can query its family type and select all elements of that type.
 
-![Exercise](<../.gitbook/assets/04 (10).jpg>)
+![](<../.gitbook/assets/selecting - exercise 11.jpg>)
 
-> 1. Plug the beam element into a _FamilyInstance.Symbol_\* node.
+> 1. Plug the beam element into a _Element.ElementType_ node.
 > 2. The _Watch_ node reveals that the output is now a family symbol rather than a Revit element.
-> 3. _FamilyInstance.Symbol_ is a simple query, so we can do this in the code block just as easily with `x.Symbol;` and get the same results.
+> 3. _Element.ElementType_ is a simple query, so we can do this in the code block just as easily with `x.ElementType;` and get the same results.
 
-\*_Note - a family symbol is Revit API terminology for family type. Since this may cause some confusion, it will be updated in upcoming releases._
-
-![Exercise](<../.gitbook/assets/03 (4).jpg>)
+![](<../.gitbook/assets/selecting - exercise 12.jpg>)
 
 > 1. To select the remaining beams, we use the _"All Elements of Family Type"_ node.
-> 2. The watch node shows that we've selected five revit elements.
+> 2. The watch node shows that we've selected five Revit elements.
 
-![Exercise](../.gitbook/assets/02.jpg)
+![](<../.gitbook/assets/selecting - exercise 13.jpg>)
 
 > 1. We can convert all of these five elements to Dynamo geometry too.
 
