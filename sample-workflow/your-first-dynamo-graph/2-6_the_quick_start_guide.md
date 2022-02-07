@@ -1,16 +1,22 @@
-# Circle array and pattern
+# Attractor Points
 
-\##GETTING STARTED
+## Working with Attractor Points
 
-Now that we have familiarized ourselves with the interface layout and navigating the Workspace, our next step is to understand the typical workflow for developing a graph in Dynamo. Let's get started by creating a dynamically sized circle and then create an array of circles with varying radii.
+Attractor points are great for experimenting with geometric patterns. They can be used to create gradual changes to an object relative to their position to the attractor.
 
-\###Defining Objectives and Relationships Before we add anything to the Dynamo Workspace, it is key that we have a solid understanding of what we are trying to achieve and what the significant relationships will be. Remember that anytime we are connecting two Nodes, we are creating an explicit link between them - we may change the flow of data later, but once connected we've committed to that relationship. In this exercise we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
+![](../../.gitbook/assets/attractor1.gif)
+
+## Defining Objectives and Relationships&#x20;
+
+Before we add anything to the Dynamo Workspace, it is key that we have a solid understanding of what we are trying to achieve and what the significant relationships will be. Remember that anytime we are connecting two Nodes, we are creating an explicit link between them - we may change the flow of data later, but once connected we've committed to that relationship. In this exercise, we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
 
 ![Hand Sketch of Circle](../../.gitbook/assets/00-Hand-Sketch-of-Circle.png)
 
 > A point that defines a distance-based relationship is commonly referred to as an "Attractor." Here the distance to our Attractor Point will be used to specify how big our circle should be.
 
-\###Adding Nodes to the Workspace Now that we have our Objectives and Relationships sketched we can begin creating our graph. We need the Nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a Node that does so. Using the Search field or browsing through the Library, we will find that there is more than one way to create a circle.
+#### ###Adding Nodes to the Workspace&#x20;
+
+Now that we have our Objectives and Relationships sketched we can begin creating our graph. We need the Nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a Node that does so. Using the Search field or browsing through the Library, we will find that there is more than one way to create a circle.
 
 ![Browse and Search](../../.gitbook/assets/01-BrowseAndSearch.png)
 
@@ -56,7 +62,9 @@ We also will need **Point.ByCoordinates**, **Number Input**, and **Number Slider
 2. 3D Preview - If any of our Nodes create geometry, we will see it in the 3D Preview.
 3. The output geometry on the creation node.
 
-\###Adding Detail If our program is working, we should see a circle in the 3D Preview that is passing through our Attractor Point. This is great, but we may want to add more detail or more controls. Let's adjust the input to the circle Node so that we can calibrate the influence on the radius. Add another **Number Slider** to the Workspace, then double click on a blank area of the Workspace to add a **Code Block** Node. Edit the field in the Code Block, specifying `X/Y`.
+\###Adding Detail&#x20;
+
+If our program is working, we should see a circle in the 3D Preview that is passing through our Attractor Point. This is great, but we may want to add more detail or more controls. Let's adjust the input to the circle Node so that we can calibrate the influence on the radius. Add another **Number Slider** to the Workspace, then double click on a blank area of the Workspace to add a **Code Block** Node. Edit the field in the Code Block, specifying `X/Y`.
 
 ![Code Block included](../../.gitbook/assets/06-CodeBlock.png)
 
@@ -65,7 +73,9 @@ We also will need **Point.ByCoordinates**, **Number Input**, and **Number Slider
 1. **DistanceTo** and **Number Slider** to **Code Block**
 2. **Code Block** to **Circle.ByCenterPointRadius**
 
-\###Adding complexity Starting simple and building complexity is an effective way to incrementally develop our program. Once it is working for one circle, let's apply the power of the program to more than one circle. Instead of one center point, if we use a grid of points and accommodate the change in the resulting data structure, our program will now create many circles - each with a unique radius value defined by the calibrated distance to the Attractor Point.
+\###Adding complexity&#x20;
+
+Starting simple and building complexity is an effective way to incrementally develop our program. Once it is working for one circle, let's apply the power of the program to more than one circle. Instead of one center point, if we use a grid of points and accommodate the change in the resulting data structure, our program will now create many circles - each with a unique radius value defined by the calibrated distance to the Attractor Point.
 
 ![Updated graph](../../.gitbook/assets/07-AddingComplexity.png)
 
@@ -74,7 +84,9 @@ We also will need **Point.ByCoordinates**, **Number Input**, and **Number Slider
 1. Add a **Flatten** Node after Point.ByCoordinates. To flatten a list completely, leave the `amt` input at the default of `-1`
 2. The 3D Preview will update with a grid of circles
 
-\###Adjusting with Direct Manipulation Sometimes numerical manipulation isn't the right approach. Now you can manually push and pull Point geometry when navigating in the background 3D preview. We can also control other geometry that was constructed by a point. For example, **Sphere.ByCenterPointRadius** is capable of Direct Manipulation as well. We can control the location of a point from a series of X, Y, and Z values with **Point.ByCoordinates**. With the Direct Manipulation approach, however, you are able to update the values of the sliders by manually moving the point in the **3D Preview Navigation** mode. This offers a more intuitive approach to controlling a set of discrete values that identify a point's location.
+\###Adjusting with Direct Manipulation&#x20;
+
+Sometimes numerical manipulation isn't the right approach. Now you can manually push and pull Point geometry when navigating in the background 3D preview. We can also control other geometry that was constructed by a point. For example, **Sphere.ByCenterPointRadius** is capable of Direct Manipulation as well. We can control the location of a point from a series of X, Y, and Z values with **Point.ByCoordinates**. With the Direct Manipulation approach, however, you are able to update the values of the sliders by manually moving the point in the **3D Preview Navigation** mode. This offers a more intuitive approach to controlling a set of discrete values that identify a point's location.
 
 ![Selected Point](../../.gitbook/assets/08-SelectedPoint.png)
 

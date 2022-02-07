@@ -12,7 +12,7 @@ This workflow will teach you how to:
 * Create and modify geometry elements using nodes
 * &#x20;Visualize design results in real-time.
 
-![](../../.gitbook/assets/vase1.gif)
+![](<../../.gitbook/assets/vase1 (3).gif>)
 
 ## Designing Our Vase
 
@@ -22,23 +22,29 @@ Let's say we are going to design a clay vase that takes into account manufacturi
 
 We would use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
 
+![](../../.gitbook/assets/vase2.png)
+
 
 
 ## Basic steps
 
 ### Creating Circles of Different Radii
 
-In order to create a circle we will use the **Circle.ByCentrePointRadius** node. This node has a default center point and radius.&#x20;
+In order to create a circle, we will use the **Circle.ByCentrePointRadius** node. This node has a default center point and radius.&#x20;
+
+![](<../../.gitbook/assets/vase3 (1).png>)
 
 We will create a slider to manipulate the radius and leave the center point to its default value. Let's also change the slider's maximum to 15 to make it easier to control.&#x20;
 
 Now, let's copy these nodes 4 times as these circles will define our surface.
 
+![](<../../.gitbook/assets/vase4 (1).png>)
+
 ### Moving Circles Through the Vase Height
 
-We are missing a key parameter to our vase, its height. In order to control the height, we create another number slider.
+We are missing a key parameter to our vase, its height. In order to control the height, we create another number slider. We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
 
-We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
+![](<../../.gitbook/assets/vase5 (1).png>)
 
 ### Creating the Surface
 
@@ -46,6 +52,10 @@ In order to create a surface using the **Surface.ByLoft** node we need to combin
 
 Let's also turn off the preview in other nodes to only display the Surface.ByLoft display.
 
-![](../../.gitbook/assets/vase.jpg)
+![](<../../.gitbook/assets/vase6 (1).png>)
 
-ASxasxasx
+## Results
+
+We can now use the number sliders we defined in our script to create different vase designs.&#x20;
+
+![](../../.gitbook/assets/vase7.png)
