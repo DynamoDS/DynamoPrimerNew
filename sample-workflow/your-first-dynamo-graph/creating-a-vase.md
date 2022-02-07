@@ -14,7 +14,7 @@ This workflow will teach you how to:
 
 ![](<../../.gitbook/assets/vase1 (3).gif>)
 
-## Designing Our Vase
+## Defining Our Vase
 
 Before jumping into dynamo let's conceptually design our vase.&#x20;
 
@@ -26,17 +26,43 @@ We would use a similar methodology to define our vase. We will create 4 circles 
 
 
 
-## Basic steps
+## Getting Started
+
+We need the **nodes** that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a node that does so. Using the **Search field** or browsing through the Library, we will find that there is more than one way to create a circle.
+
+![](../../.gitbook/assets/vase8.png)
+
+> Search > "Circle..."
+
+![](../../.gitbook/assets/vase9.png)
+
+> Browse to Geometry > Circle > **ByCenterPointRadius**
+
+Let's add the **Circle.ByCenterPointRadius** Node to the Workspace by clicking on it in the Library - this should add the Node to the center of the Workspace.
+
+Let's take a look at this node to get more information about it. On the left side, you have the node's inputs (centerPoint and radius) and on the right side, you have the node's output (Circle). Notice that the outputs have a light blue line? this means that the input has a default value. To get more information about the input hover over its name.&#x20;
+
+![](../../.gitbook/assets/vase10.png)
+
+
+
+We will leave the default value of centerPoint but add a **number slider** to control the radius. As we did with the Circle.ByCenterPointRadius node, use the library to search for Number Slider and add it to your graph.
+
+This node is a bit different than our previous node as it contains a slider. The slider can be configured using the dropdown button at the left of the node. Let's limit the slider to a maximum value of 15.
+
+![](../../.gitbook/assets/vase11.png)
+
+Let's place it on the left of our Circle.ByCenterPointRadius node and connect both nodes by selecting the Number Slider output and connecting it to the Radius input.
+
+![](../../.gitbook/assets/vase12.png)
+
+## Next steps
+
+Let's continue adding our logic to define our base.
 
 ### Creating Circles of Different Radii
 
-In order to create a circle, we will use the **Circle.ByCentrePointRadius** node. This node has a default center point and radius.&#x20;
-
-![](<../../.gitbook/assets/vase3 (1).png>)
-
-We will create a slider to manipulate the radius and leave the center point to its default value. Let's also change the slider's maximum to 15 to make it easier to control.&#x20;
-
-Now, let's copy these nodes 4 times as these circles will define our surface.
+Let's copy these nodes 4 times as these circles will define our surface.
 
 ![](<../../.gitbook/assets/vase4 (1).png>)
 

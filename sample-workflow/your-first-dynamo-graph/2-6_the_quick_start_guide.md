@@ -1,20 +1,18 @@
 # Attractor Points
 
-## Working with Attractor Points
-
 Attractor points are great for experimenting with geometric patterns. They can be used to create gradual changes to objects based on their distance.
 
 ![](../../.gitbook/assets/attractor1.gif)
 
-## Defining Objectives and Relationships&#x20;
+## Defining our Objectives&#x20;
 
-Before we add anything to the Dynamo Workspace, it is key that we have a solid understanding of what we are trying to achieve and what the significant relationships will be. Remember that anytime we are connecting two Nodes, we are creating an explicit link between them - we may change the flow of data later, but once connected we've committed to that relationship. In this exercise, we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
+In this exercise, we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
 
 ![Hand Sketch of Circle](../../.gitbook/assets/00-Hand-Sketch-of-Circle.png)
 
 > A point that defines a distance-based relationship is commonly referred to as an "Attractor." Here the distance to our Attractor Point will be used to specify how big our circle should be.
 
-#### ###Adding Nodes to the Workspace&#x20;
+#### Adding Nodes to the Workspace&#x20;
 
 Now that we have our Objectives and Relationships sketched we can begin creating our graph. We need the Nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a Node that does so. Using the Search field or browsing through the Library, we will find that there is more than one way to create a circle.
 
@@ -22,7 +20,7 @@ Now that we have our Objectives and Relationships sketched we can begin creating
 
 > 1. Browse to Geometry > Circle > **ByCenterPointRadius**
 
-1. Search > "ByCenterPointRadius..."
+1. Search > "Circle..."
 
 Let's add the **Circle.ByCenterPointRadius** Node to the Workspace by clicking on it in the Library - this should add the Node to the center of the Workspace.
 
