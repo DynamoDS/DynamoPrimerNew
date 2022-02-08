@@ -1,71 +1,74 @@
 # DesignScript Syntax
 
-You may have noticed a common theme in the names of nodes in Dynamo: each node uses a _"."_ syntax without spaces. This is because the text at the top of each node respresents the actual syntax for scripting, and the _"."_ (or _dot notation_) separates an element from the possible methods we can call. This creates an easy translation from visual scripting to text-based scripting.
+You may have noticed a common theme in the names of nodes in Dynamo: each node uses a _"."_ syntax without spaces. This is because the text at the top of each node represents the actual syntax for scripting, and the _"."_ (or _dot notation_) separates an element from the possible methods we can call. This creates an easy translation from visual scripting to text-based scripting.
 
 ![NodeNames](../../.gitbook/assets/apple.jpg)
 
 As a general analogy for the dot notation, how can we deal with a parametric apple in Dynamo? Below are a few methods we'll run on the apple before deciding to eat it. (Note: these are not actual Dynamo methods):
 
-\| Humanly Readible | Dot Notation | Output | | -- | -- | | What color is the apple? | Apple.color | red | Is the apple ripe? | Apple.isRipe | true | | How much does the apple weigh? | Apple.weight | 6 oz. | | Where did the apple come from? | Apple.parent | tree | | What does the apple create? | Apple.children | seeds | | Is this apple locally grown? | Apple.distanceFromOrchard | 60 mi. |
+| Human Readible                 | Dot Notation              | Output |
+| ------------------------------ | ------------------------- | ------ |
+| What color is the apple?       | Apple.color               | red    |
+| Is the apple ripe?             | Apple.isRipe              | true   |
+| How much does the apple weigh? | Apple.weight              | 6 oz.  |
+| Where did the apple come from? | Apple.parent              | tree   |
+| What does the apple create?    | Apple.children            | seeds  |
+| Is this apple locally grown?   | Apple.distanceFromOrchard | 60 mi. |
 
-I don't know about you, but judging by the outputs in the table above, this looks like one tasty apple. I think I'll \*Apple.eat() \*it.
+I don't know about you, but judging by the outputs in the table above, this looks like one tasty apple. I think I'll _Apple.eat()_ it.
 
-\###Dot Notation in Code Block With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block:
+### Dot Notation in Code Block&#x20;
 
-![NodeNames](../../.gitbook/assets/cbn02.jpg)
+With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block.
 
-> The _code block_ syntax \`\`\`Point.ByCoordinates(0,10);
+The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
 
-````
-gives the same result as a *Point.ByCoordinates* node in Dynamo, except we're able to create a point using one node.  This is more efficient than the connecting a separate node into *"X"* and *"Y"*.
-1. By using *Point.ByCoordinates* in the code block, we are specifying the inputs in the same order as the out-of-the-box node *(X,Y)*.
+![](<../../.gitbook/assets/codeblock dot notation.jpg>)
+
+> 1. By using _Point.ByCoordinates_ in the code block, we are specifying the inputs in the same order as the out-of-the-box node _(X,Y)_.
+
+### Calling Nodes&#x20;
+
+You can call any regular node in the library through a Code Block as long as the node isn’t a special _“UI” node_: those with a special user interface feature. For instance, you can call _Circle.ByCenterPointRadius_, but it wouldn’t make much sense to call a _Watch 3D_ node.
+
+Regular nodes (most of your library), generally come in three types. You’ll find that the library is organized with these categories in mind. Methods, or nodes, of these three types are treated differently when invoked within a Code Block.
+
+![](<../../.gitbook/assets/action create query category.jpg>)
+
+> 1. **Create** - Create (or construct) something
+> 2. **Action** - Perform an action on something
+> 3. **Query** - Get a property of something that already exists
+
+#### Create&#x20;
+
+The "Create" category will construct geometry from scratch. We input values in the code block from left-to-right. These inputs are in the same order as the inputs on the node from top-to-bottom.
+
+Comparing the _Line.ByStartPointEndPoint_ node and the corresponding syntax in the code block, we get the same results.
+
+![](../../.gitbook/assets/create.jpg)
+
+#### Action
+
+An action is something you do to an object of that type. Dynamo uses _dot notation_, common to many coding languages, to apply an action to a thing. Once you have the thing, type a dot then the name of the action. The action-type method’s input is placed in parentheses just like create-type methods, only you don’t have to specify the first input you see on the corresponding node. Instead, we specify the element upon which we are performing the action:
 
 
-###Calling Nodes
-You can call any regular node in the library through a Code Block as long as the node isn’t a special *“UI” node*: those with a special user interface feature. For instance, you can call *Circle.ByCenterPointRadius*, but it wouldn’t make much sense to call a *Watch 3D* node.
 
-Regular nodes (most of your library), generally come in three types:
+> 1. The \*Point.Add \*node is an action-type node, so the syntax works a little differently.
+> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a _Code Block_, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the \*Point.Add \*node minus the first one. The first input for the \*Point.Add \*node is the point itself.
 
-*  **Create** -	Create (or construct) something
-* **Action** -	Perform an action on something
-* **Query** -	Get a property of something that already exists
-
-You’ll find that the library is organized with these categories in mind. Methods, or nodes, of these three types are treated differently when invoked within a Code Block.
-
-![NodeNames](images/7-2/cbn12.jpg)
-
-####Create
-The "Create" category will construct geometry from scratch.  We input values in the code block from left-to-right.  These inputs are in the same order as the inputs on the node from top-to-bottom:
-![NodeNames](images/7-2/demo1.jpg)
-> Comparing the *Line.ByStartPointEndPoint* node and the corresponding syntax in the code block, we get the same results.
-
-####Action
-
-An action is something you do to an object of that type. Dynamo uses *dot notation*, common to many coding languages, to apply an action to a thing. Once you have the thing, type a dot then the name of the action. The action-type method’s input is placed in parentheses just like create-type methods, only you don’t have to specify the first input you see on the corresponding node.  Instead, we specify the element upon which we are performing the action:
-
-![NodeNames](images/7-2/cbn04.jpg)
-
-
-> 1. The *Point.Add *node is an action-type node, so the syntax works a little differently.
-2. The inputs are (1) the *point*, and (2) the *vector* to add to it. In a *Code Block*, we've named the point (the thing) *“pt”*. To add a vector named *“vec” *to *“pt”*, we would write *pt.Add(vec)*, or: thing, dot, action. The Add action only has one input, or all the inputs from the *Point.Add *node minus the first one. The first input for the *Point.Add *node is the point itself.
-
-####Query
+#### Query
 
 Query-type methods get a property of an object. Since the object itself is the input, you don’t have to specify any inputs. No parentheses required.
 
-![NodeNames](images/7-2/cbn05.jpg)
-
 ### How About Lacing?
-Lacing with nodes is somewhat different from lacing with code block.  With nodes, the user right clicks on the node and selects the lacing option to perform.  With code block, the user has much more control as to how the data is structured.  The code block shorthand method uses *replication guides* to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.
-![Lacing](images/7-2/lacing.jpg)
 
-> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter).  In short, ```0..1;
-``` is equivalent to ```{0,1}
-``` and ```-3..-7
-```is equivalent to ```
-{-3,-4,-5,-6,-7}```. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a **Cross Product**).
-2. Using the syntax ```Point.ByCoordinates(x_vals<1>,y_vals<2>);
-``` we get **two** lists with **five** items in each list.
+Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.&#x20;
+
+> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7` is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a **Cross Product**).
+
+1. Using the syntax \`\`\`Point.ByCoordinates(x\_vals<1>,y\_vals<2>);
+
+````
 3. Using the syntax ```Point.ByCoordinates(x_vals<2>,y_vals<1>);
 ``` we get **five** lists with **two** items in each list.
 
