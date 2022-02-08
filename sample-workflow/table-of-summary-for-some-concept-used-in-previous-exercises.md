@@ -6,8 +6,8 @@ description: >-
 
 # Concept Index
 
-| Exercise list | Key concepts introduced in exercise | Link to further reading in later chapters |
-| ------------- | ----------------------------------- | ----------------------------------------- |
-|               |                                     |                                           |
-|               |                                     |                                           |
-|               |                                     |                                           |
+| Exercise list   | Key concepts introduced in exercise | Link to further reading in later chapters |
+| --------------- | ----------------------------------- | ----------------------------------------- |
+| Parametric Vase |                                     |                                           |
+|                 |                                     |                                           |
+|                 |                                     |                                           |

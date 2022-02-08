@@ -4,8 +4,6 @@
 
 > Right click files and use "Save Link As..."
 
-td {background-color: #F9F9F9;} td:nth-child(1){width:250px;} td:nth-child(2){width:550px;} table{box-shadow: 2px 2px 2px #BBBBBB}
-
 ### Introduction
 
 | Section                    | Download File                                                                                      |
