@@ -23,7 +23,7 @@ With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how
 
 The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
 
-![](<../../.gitbook/assets/DesignScript - dot notation.jpg>)
+![](<../../.gitbook/assets/codeblock dot notation.jpg>)
 
 > 1. By using _Point.ByCoordinates_ in the code block, we are specifying the inputs in the same order as the out-of-the-box node _(X,Y)_.
 
@@ -45,7 +45,7 @@ The "Create" category will construct geometry from scratch. We input values in t
 
 Comparing the _Line.ByStartPointEndPoint_ node and the corresponding syntax in the code block, we get the same results.
 
-![](<../../.gitbook/assets/DesignScript - create.jpg>)
+![](../../.gitbook/assets/create.jpg)
 
 #### Action
 
