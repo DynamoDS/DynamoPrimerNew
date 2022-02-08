@@ -90,65 +90,51 @@ To show the power of code block, we are going to translate an existing attractor
 
 Begin by recreating the definition in the image above (or by opening the sample file).
 
-
+![](<../../.gitbook/assets/DesignScript - exercise - 01.jpg>)
 
 > 1. Notice that the lacing on _Point.ByCoordinates_ has been set to _Cross Product_.
 > 2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
 > 3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
 
-!\[Exercise]\(images/7-2/Exercise/07.jpg)
+![](<../../.gitbook/assets/DesignScript - exercise - 02.jpg>)
 
-\>1. Starting from the beginning, let's define the reference point first: \`\`\`Point.ByCoordinates(x,y,0);
+> 1. Starting from the beginning, let's define the reference point first: `Point.ByCoordinates(x,y,0);`  We use the same Point.ByCoordinates syntax as is specified on the top of the reference point node.
+> 2. The variables _x_ and _y_ are inserted into the code block so that we may update these dynamically with sliders.
+> 3. Add some _sliders_ to the Code Block inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
 
-\`\`\`.  We use the same \*Point.ByCoordinates\* syntax as is specified on the top of the reference point node.
+![](<../../.gitbook/assets/DesignScript - exercise - 03.jpg>)
 
-2\. The variables \*x\* and \*y\* are inserted into the code block so that we may update these dynamically with sliders.
+> 1. In the second line of the _Code Block_, we define a shorthand to replace the number sequence node: `coordsXY = (-50..50..#11);`We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the _Number Sequence_ node in the visual script.
 
-3\.  Add some \*sliders\* to the \*code block\* inputs which range from \*-50\* to \*50\*. This way, we can span across the default Dynamo grid.
+![](<../../.gitbook/assets/DesignScript - exercise - 04.jpg>)
 
+> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the _Point.ByCoordinates_ syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` The angled brackets denote the cross product reference.
+> 2. Notice in the _Watch3D_ node that we have a grid of points across the Dynamo grid.
 
+![](<../../.gitbook/assets/DesignScript - exercise - 05.jpg>)
 
-Exercise
+> 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. And since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
+> 2. Reading from the actual node on the canvas, we see that there are three inputs.  The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
+> 3. The direction is simple enough, we use a `Vector.ZAxis()` to move vertically.
+> 4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: `refPt.DistanceTo(gridPts)`
+> 5. The final line of code gives us the translated points: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
 
-> 1. In the second line of the _code block_, we define a shorthand to replace the number sequence node: \`\`\`coordsXY = (-50..50..#11);
+![](<../../.gitbook/assets/DesignScript - exercise - 06.jpg>)
 
-. We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the _Number Sequence_ node in the visual script.
+> 1. We now have a grid of points with the appropriate data structure to create a Nurbs Surface. We construct the surface using `srf = NurbsSurface.ByControlPoints(transPts);`
 
-![Exercise](<../../.gitbook/assets/05 (1).jpg>)
+![](<../../.gitbook/assets/DesignScript - exercise - 07.jpg>)
 
-> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the _Point.ByCoordinates_ syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: \`\`\`gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);
+> 1. And finally, to add some depth to the surface, we construct a solid using `solid = srf.Thicken(5);` In this case we thickened the surface by 5 units in the code, but we could always declare this as a variable (calling it thickness for example) and then control that value with a slider.
 
-````
-2. Notice in the *Watch3D* node that we have a grid of points across the Dynamo grid.
+#### Simplify the Graph with "Node to Code"&#x20;
 
-![Exercise](images/7-2/Exercise/04.jpg)
->1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point.  First, let's call this new set of points *transPts*. And since a translation is an action on an existing element, rather than using ```Geometry.Translate...
-```, we use ```gridPts.Translate
-```.
-2. Reading from the actual node on the canvas, we see that there are three inputs.  The geometry to translate is already declared because we are performing the action on that element (with *gridPts.Translate*). The remaining two inputs will be inserted into the parentheses of the function: *direction* and *distance*.
-3. The direction is simple enough, we use a ```Vector.ZAxis()
-``` to move vertically.
-4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: ```refPt.DistanceTo(gridPts)
-````
+The "Node to Code" feature automates the entire exercise that we just completed with the click of a button. Not only is this powerful for creating custom definitions and reusable code blocks, but it is also a really helpful tool to learn how to script in Dynamo:
 
-1. The final line of code gives us the translated points: \`\`\`transPts = gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));
+![](<../../.gitbook/assets/DesignScript - exercise - 08.jpg>)
 
-````
-![Exercise](images/7-2/Exercise/03.jpg)
->1. We now have a grid of points with the appropriate data structure to create a Nurbs Surface.  We construct the surface using ```srf = NurbsSurface.ByControlPoints(transPts);
-````
+> 1. Start with the existing visual script from step 1 of the exercise. Select all of the nodes, right click on the canvas, and select _"Node to Code"_. Simple as that.
 
-![Exercise](<../../.gitbook/assets/02 (6).jpg>)
+Dynamo has automated a text based version of the visual graph, lacing and all. Test this out on your visual scripts and release the power of the code block!
 
-> 1. And finally, to add some depth to the surface, we construct a solid using \`\`\`solid = srf.Thicken(5);
-
-```
-###Simplify the Graph with "Node to Code"
-The "Node to Code" feature automates the entire exercise that we just completed with the click of a button.  Not only is this powerful for creating custom definitions and reusable code blocks, but it is also a really helpful tool to learn how to script in Dynamo:
-
-![Exercise](images/7-2/Exercise/09.jpg)
-> 1. Start with the existing visual script from step 1 of the exercise. Select all of the nodes, right click on the canvas, and select *"Node to Code"*.  Simple as that.
-
-![Exercise](images/7-2/Exercise/08.jpg)
-> Dynamo has automated a text based version of the visual graph, lacing and all. Test this out on your visual scripts and release the power of the code block!
-```
+![](<../../.gitbook/assets/DesignScript - exercise - 09.jpg>)
