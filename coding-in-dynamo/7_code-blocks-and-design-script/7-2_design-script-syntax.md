@@ -23,11 +23,11 @@ With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how
 
 The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
 
-![](<../../.gitbook/assets/codeblock dot notation.jpg>)
+![](<../../.gitbook/assets/DesignScript - dot notation.jpg>)
 
 > 1. By using _Point.ByCoordinates_ in the code block, we are specifying the inputs in the same order as the out-of-the-box node _(X,Y)_.
 
-### Calling Nodes&#x20;
+### Calling Nodes - Create, Actions, Query
 
 You can call any regular node in the library through a Code Block as long as the node isn’t a special _“UI” node_: those with a special user interface feature. For instance, you can call _Circle.ByCenterPointRadius_, but it wouldn’t make much sense to call a _Watch 3D_ node.
 
@@ -45,60 +45,72 @@ The "Create" category will construct geometry from scratch. We input values in t
 
 Comparing the _Line.ByStartPointEndPoint_ node and the corresponding syntax in the code block, we get the same results.
 
-![](../../.gitbook/assets/create.jpg)
+![](<../../.gitbook/assets/DesignScript - create.jpg>)
 
 #### Action
 
 An action is something you do to an object of that type. Dynamo uses _dot notation_, common to many coding languages, to apply an action to a thing. Once you have the thing, type a dot then the name of the action. The action-type method’s input is placed in parentheses just like create-type methods, only you don’t have to specify the first input you see on the corresponding node. Instead, we specify the element upon which we are performing the action:
 
+![](<../../.gitbook/assets/DesignScript - action.jpg>)
 
-
-> 1. The \*Point.Add \*node is an action-type node, so the syntax works a little differently.
+> 1. The _Point.Add_ node is an action-type node, so the syntax works a little differently.
 > 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a _Code Block_, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the \*Point.Add \*node minus the first one. The first input for the \*Point.Add \*node is the point itself.
 
 #### Query
 
 Query-type methods get a property of an object. Since the object itself is the input, you don’t have to specify any inputs. No parentheses required.
 
+![](../../.gitbook/assets/query.jpg)
+
 ### How About Lacing?
 
 Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.&#x20;
 
-> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7` is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a **Cross Product**).
+![](<../../.gitbook/assets/DesignScript - lacing.jpg>)
 
-1. Using the syntax \`\`\`Point.ByCoordinates(x\_vals<1>,y\_vals<2>);
-
-````
-3. Using the syntax ```Point.ByCoordinates(x_vals<2>,y_vals<1>);
-``` we get **five** lists with **two** items in each list.
-
+> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7`is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a **Cross Product**).
+> 2. Using the syntax `Point.ByCoordinates(x_vals<1>,y_vals<2>);` we get **two** lists with **five** items in each list.
+> 3. Using the syntax `Point.ByCoordinates(x_vals<2>,y_vals<1>);` we get **five** lists with **two** items in each list.
 
 With this notation, we can also specify which list will be dominant: 2 lists of 5 things or 5 lists of 2 things. In the example, changing the order of the replication guides makes the result a list of rows of points or a list of columns of points in a grid.
 
-###Node to Code
+### Node to Code
+
 While the code block methods above may take some getting used to, there is a feature in Dynamo called "Node to Code" which will make the process easier.  To use this feature,  select an array of nodes in your Dynamo graph, right-click on the canvas and select "Node to Code". Dynamo condenses these nodes into a code block, with all of the inputs and outputs!  Not only is this a great tool for learning code block, but it also allows you to work with a more efficient and parametric Dynamo graph.  We'll conclude the exercise below by using "Node to Code", so don't miss it.
 
-![Lacing](images/7-2/nodeToCode.jpg)
+![](<../../.gitbook/assets/DesignScript - node to code.jpg>)
 
-### Exercise
->Download the example file that accompanies this exercise (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [Dynamo-Syntax_Attractor-Surface.dyn](datasets/7-2/Dynamo-Syntax_Attractor-Surface.dyn)
+## Exercise
 
-To show the power of code block, we are going to translate an existing attractor field definition into code block form.  Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
-![Exercise](images/7-2/Exercise/01.jpg)
-> Begin by recreating the definition in the image above (or by opening the sample file).
-1. Notice that the lacing on *Point.ByCoordinates* has been set to *Cross Product*.
-2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
-3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
+> Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
+>
+> A full list of example files can be found in the Appendix. \[Dynamo-Syntax\_Attractor-Surface.dyn]
 
-![Exercise](images/7-2/Exercise/07.jpg)
->1. Starting from the beginning, let's define the reference point first: ```Point.ByCoordinates(x,y,0);
-```.  We use the same *Point.ByCoordinates* syntax as is specified on the top of the reference point node.
-2. The variables *x* and *y* are inserted into the code block so that we may update these dynamically with sliders.
-3.  Add some *sliders* to the *code block* inputs which range from *-50* to *50*. This way, we can span across the default Dynamo grid.
+To show the power of code block, we are going to translate an existing attractor field definition into code block form. Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
 
-![Exercise](images/7-2/Exercise/06.jpg)
->1. In the second line of the *code block*, we define a shorthand to replace the number sequence node: ```coordsXY = (-50..50..#11);
-````
+Begin by recreating the definition in the image above (or by opening the sample file).
+
+
+
+> 1. Notice that the lacing on _Point.ByCoordinates_ has been set to _Cross Product_.
+> 2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
+> 3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
+
+!\[Exercise]\(images/7-2/Exercise/07.jpg)
+
+\>1. Starting from the beginning, let's define the reference point first: \`\`\`Point.ByCoordinates(x,y,0);
+
+\`\`\`.  We use the same \*Point.ByCoordinates\* syntax as is specified on the top of the reference point node.
+
+2\. The variables \*x\* and \*y\* are inserted into the code block so that we may update these dynamically with sliders.
+
+3\.  Add some \*sliders\* to the \*code block\* inputs which range from \*-50\* to \*50\*. This way, we can span across the default Dynamo grid.
+
+
+
+Exercise
+
+> 1. In the second line of the _code block_, we define a shorthand to replace the number sequence node: \`\`\`coordsXY = (-50..50..#11);
 
 . We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the _Number Sequence_ node in the visual script.
 
