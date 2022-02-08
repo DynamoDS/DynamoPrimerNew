@@ -8,9 +8,10 @@ td {background-color: #F9F9F9;} td:nth-child(1){width:250px;} td:nth-child(2){wi
 
 ### Introduction
 
-| Section                    | Download File                                                                                                                     |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| What is Visual Programming | \[Visual Programming - Circle Through Point.dyn]\(../01\_Introduction/datasets/1-1/Visual Programming - Circle Through Point.dyn) |
+| Section                    | Download File                                                                                      |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| What is Visual Programming | [Visual Programming.dyn](https://github.com/DynamoDS/DynamoPrimer/tree/master/en/01\_Introduction) |
+|                            |                                                                                                    |
 
 ### Anatomy of a Dynamo Definition
 

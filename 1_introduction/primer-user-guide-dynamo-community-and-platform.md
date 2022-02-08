@@ -22,7 +22,7 @@ If you would like to see the demonstration of Dynamo workflows, we have included
 
 * [creating-a-vase.md](../sample-workflow/your-first-dynamo-graph/creating-a-vase.md "mention") (GIF)
 * [2-6\_the\_quick\_start\_guide.md](../sample-workflow/your-first-dynamo-graph/2-6\_the\_quick\_start\_guide.md "mention") (GIF)
-* [attractor.md](../sample-workflow/your-first-dynamo-graph/attractor.md "mention")(GIF)
+* [Broken link](broken-reference "mention")(GIF)
 
 ### The Community
 

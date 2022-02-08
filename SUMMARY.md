@@ -82,7 +82,6 @@
   * [Getting Started Workflows](sample-workflow/your-first-dynamo-graph/README.md)
     * [Parametric Vase](sample-workflow/your-first-dynamo-graph/creating-a-vase.md)
     * [Attractor Points](sample-workflow/your-first-dynamo-graph/2-6\_the\_quick\_start\_guide.md)
-    * [Attractor](sample-workflow/your-first-dynamo-graph/attractor.md)
   * [Concept Index](sample-workflow/table-of-summary-for-some-concept-used-in-previous-exercises.md)
 * [Appendix](a\_appendix/README.md)
   * [Visual Programming and Dynamo](a\_appendix/visual-programming-and-dynamo.md)
