@@ -48,6 +48,8 @@ If your answer contained graphics, then **Visual Programming** is definitely for
 
 **Visual Program:**
 
+![](<../.gitbook/assets/visualProgramming (2).png>)
+
 **Textual Program:**
 
 ```
@@ -60,8 +62,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 ```
 
 The results of our algorithm:
-
-![Circle Through Point](https://primer.dynamobim.org/01\_Introduction/images/1-1/04-CircleThroughPoint.png)
 
 ![](<../.gitbook/assets/visualProgramming (1).png>)
 
