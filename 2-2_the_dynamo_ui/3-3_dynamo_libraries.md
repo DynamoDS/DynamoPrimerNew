@@ -29,9 +29,9 @@ Geometry are great menus to begin exploring as they contain the largest quantity
 
 These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
 
-* ![](<../.gitbook/assets/user interface - create.jpg>) Create
-* ![](<../.gitbook/assets/user interface - action.jpg>) Action
-* ![](<../.gitbook/assets/user interface - query.jpg>) Query
+* ![](<../.gitbook/assets/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
+* ![](<../.gitbook/assets/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
+* ![](<../.gitbook/assets/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
 
 Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
 

@@ -4,7 +4,7 @@ In the previous sections, we dove into the details of how our _MapToSurface_ pac
 
 ![](<../../.gitbook/assets/publish a package - custom nodes 01.jpg>)
 
-There are many ways to publish a package. Below is the process that we advise:\*\* publish locally, develop locally, and then publish online\*\*. We'll start with a folder containing all of the files in the package.
+There are many ways to publish a package. Below is the process that we advise: **publish locally, develop locally and then publish online**. We'll start with a folder containing all of the files in the package.
 
 ### Uninstalling a Package
 

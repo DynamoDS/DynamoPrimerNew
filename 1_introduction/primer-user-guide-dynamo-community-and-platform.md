@@ -24,6 +24,10 @@ If you would like to see the demonstration of Dynamo workflows, we have included
 * [2-6\_the\_quick\_start\_guide.md](../sample-workflow/your-first-dynamo-graph/2-6\_the\_quick\_start\_guide.md "mention") (GIF)
 * [Broken link](broken-reference "mention")(GIF)
 
+{% hint style="info" %}
+There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each chapter.
+{% endhint %}
+
 ### The Community
 
 Dynamo wouldn't be what it is without a strong group of avid users and active contributors. Engage the community by following the [Blog](http://dynamobim.org/blog/), adding your work to the Gallery, or discussing Dynamo in the [Forum](https://forum.dynamobim.com).
