@@ -15,7 +15,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 * You can change the **color of the group to differentiate** what Groups are doing (inputs vs functions)
 * You can use groups to start **organizing your graph to streamline Custom Node creation**
 
-![groups](../.gitbook/assets/groups.png)
+![](../.gitbook/assets/graphstrategy2.png)
 
 > The colors in this program identify the purpose of each group. This strategy can be used to create hierarchy in any graphic standards or templates you develop.
 >
@@ -30,7 +30,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 * At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
 * Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
 
-![codeblock](../.gitbook/assets/codeblock.png)
+![codeblock](../.gitbook/assets/graphstrategy3.png)
 
 > Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
 >
@@ -53,7 +53,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
   * More difficult to understand for other users
   * No easy way to return to the visual programming version
 
-![nodetocode](../.gitbook/assets/nodetocode.png)
+![](../.gitbook/assets/graphstrategy3\_1.png)
 
 > 1. Existing program
 > 2. Code Block created from Node to Code
@@ -65,7 +65,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 * Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
 * List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
 
-![listatlevel](../.gitbook/assets/listatlevel.png)
+![](<../.gitbook/assets/graphstrategy4 (1).png>)
 
 > We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
 >
