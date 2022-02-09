@@ -4,16 +4,16 @@
 
 There are a few basic shorthand methods in the code block which, simply put, make data management _a lot_ easier. We'll break down the basics below and discuss how this shorthand can be used both for creating and querying data.
 
-| **Data Type**          | **Standard Dynamo**                    | **Code Block Equilvalent**                |
-| ---------------------- | -------------------------------------- | ----------------------------------------- |
-| Numbers                | ![](../../.gitbook/assets/number.jpg)  | ![](../../.gitbook/assets/numberCB.jpg)   |
-| Strings                | ![](../../.gitbook/assets/string.jpg)  | ![](../../.gitbook/assets/stringCB.jpg)   |
-| Sequences              | ![](broken-reference)                  | ![](../../.gitbook/assets/sequenceCB.jpg) |
-| Ranges                 | ![](broken-reference)                  | ![](../../.gitbook/assets/rangeCB.jpg)    |
-| Get Item at Index      | ![](../../.gitbook/assets/getItem.jpg) | ![](../../.gitbook/assets/getItemCB.jpg)  |
-| Create List            | ![](../../.gitbook/assets/list.jpg)    | ![](../../.gitbook/assets/listCB.jpg)     |
-| Concatenate Strings    | ![](../../.gitbook/assets/concat.jpg)  | ![](../../.gitbook/assets/concatCB.jpg)   |
-| Conditional Statements | ![](../../.gitbook/assets/if.jpg)      | ![](../../.gitbook/assets/ifCB.jpg)       |
+| **Data Type**          | **Standard Dynamo**                                      | **Code Block Equilvalent**                                    |
+| ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
+| Numbers                | ![](<../../.gitbook/assets/01 node - numbers.jpg>)       | ![](<../../.gitbook/assets/01 codeblock - numbers.jpg>)       |
+| Strings                | ![](<../../.gitbook/assets/02 node - string.jpg>)        | ![](<../../.gitbook/assets/02 codeblock- string.jpg>)         |
+| Sequences              | ![](<../../.gitbook/assets/03 node- sequence.jpg>)       | ![](<../../.gitbook/assets/03 codeblock- sequence.jpg>)       |
+| Ranges                 | ![](<../../.gitbook/assets/04 node- range.jpg>)          | ![](<../../.gitbook/assets/04 codeblock - range.jpg>)         |
+| Get Item at Index      | ![](<../../.gitbook/assets/05 node - list get item.jpg>) | ![](<../../.gitbook/assets/05 codeblock - list get item.jpg>) |
+| Create List            | ![](<../../.gitbook/assets/06 node - list create.jpg>)   | ![](<../../.gitbook/assets/06 codeblock - list create.jpg>)   |
+| Concatenate Strings    | ![](<../../.gitbook/assets/07 node - string concat.jpg>) | ![](<../../.gitbook/assets/07 codeblock - string concat.jpg>) |
+| Conditional Statements | ![](<../../.gitbook/assets/08 node - conditional.jpg>)   | ![](<../../.gitbook/assets/08 codeblock - conditional.jpg>)   |
 
 ### Additional Syntax
 

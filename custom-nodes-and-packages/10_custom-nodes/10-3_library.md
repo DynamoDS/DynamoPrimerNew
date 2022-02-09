@@ -18,7 +18,7 @@ Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 
 
 Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
 
-![](<../../.gitbook/assets/publish custom node locally 01.jpg>)
+![](<../../.gitbook/assets/publish custom node exercise - 01.jpg>)
 
 To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
 
