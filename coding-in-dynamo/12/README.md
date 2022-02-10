@@ -8,5 +8,3 @@ In this section, you will find a series of lessons on the creation of geometry w
 
 x = "Let's create some geometry!";
 ```
-
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Geometry-with-DesignScript/images/12/CodeBlock.png)

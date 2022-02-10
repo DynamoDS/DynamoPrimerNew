@@ -115,7 +115,7 @@ Remember, the _sphereByZ_ function we've created is a generic function, so we ca
 
 One final step: let's drive the radius ratio with a user defined parameter. To do this, we need to create a new input for the function and also replace the _20_ divider with a parameter.
 
-
+![](<../../.gitbook/assets/functions - exercise - 12.jpg>)
 
 > 1.  Update the _sphereByZ_ definition to:&#x20;
 >
