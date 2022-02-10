@@ -80,7 +80,7 @@ While the code block methods above may take some getting used to, there is a fea
 
 ![](<../../.gitbook/assets/DesignScript - node to code.jpg>)
 
-## Exercise
+## Exercise: Surface Attractor
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
 >

@@ -71,7 +71,7 @@ And managing with nested lists is a similar process. Be aware of the list order 
 >
 > 3\. Query an item with double bracket notation.
 
-## Exercise
+## Exercise: Sine Surface
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
 >
