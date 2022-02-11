@@ -17,7 +17,7 @@ Text-scripting can establish relationships of a higher complexity than visual pr
 **Choose a language:**
 
 |                  |             |               |                    |                    |               |
-|                  | ----------- | ------------- | ------------------ | ------------------ | ------------- |
+| --- | --- | ------------- | ------------------ | ------------------ | ------------- |
 |                  | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
 | **DesignScript** | Yes         | Yes           | Yes                | No                 | Yes           |
 | Python           | Yes         | Yes           | Partially          | Yes                | No            |
