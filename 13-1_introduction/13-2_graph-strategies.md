@@ -6,7 +6,7 @@ Prior to this chapter, the Primer has covered how to implement the powerful visu
 
 ## Reduce Complexity
 
-As you develop your Dynamo graph and test ideas, it can quickly grow in size and complexity. While it is important that you create a functioning program, it is equally important to do it as simply as possible. Not only will your graph run faster and more predictably, you along with other users will understand its logic later on. The following are several ways that will help you clarify the logic of your graph.
+As you develop your Dynamo graph and test ideas, it can quickly grow in size and complexity. While it is important that you create a functioning program, it is equally important to make it as simple as possible. Not only will your graph run faster and more predictably, you along with other users will understand its logic later on. The following are several ways that will help you clarify the logic of your graph.
 
 ### **Modularize with Groups**
 
@@ -37,7 +37,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 > 1. Design Script written in Code Block
 > 2. Equivalent program in nodes
 >
-> For how to use Code Block, refer to [What's a Code Block](http://primer.dynamobim.org/en/07\_Code-Block/7-1\_what-is-a-code-block.html).
+> For how to use Code Block, refer to [What's a Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
 
 ### **Condense with Node to Code**
 
@@ -58,7 +58,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 > 1. Existing program
 > 2. Code Block created from Node to Code
 >
-> For how to use Node to Code, refer to [Design Script Syntax](http://primer.dynamobim.org/en/07\_Code-Block/7-2\_Design-Script-syntax.html).
+> For how to use Node to Code, refer to [Design Script Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
 
 ### **Access data flexibly with List@Level**
 
@@ -89,7 +89,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 > 1. Unorganized graph
 > 2. Aligned graph
 >
-> For how to use Node Alignment, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> For how to use Node Alignment, refer to [Managing Your Program](3-4\_best\_practices.md).
 
 ### **Descriptive labeling by renaming**
 

@@ -4,7 +4,7 @@ Text-based scripting within the visual-scripting environment enables powerful an
 
 ![](../.gitbook/assets/cad-chart-textual.jpg)
 
-## Know When to Script
+### Know When to Script
 
 Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
 
@@ -16,11 +16,16 @@ Text-scripting can establish relationships of a higher complexity than visual pr
 
 **Choose a language:**
 
-\| | Looping | Recursion | Condense Nodes | Ext. Libraries | Shorthand | | -- | -- | | **DesignScript** | Yes | Yes | Yes | No | Yes | | **Python** | Yes | Yes | Partially | Yes | No | | **ZeroTouch (C#)** | No | No | No | Yes | No |
+|                  |             |               |                    |                    |               |
+| ---------------- | ----------- | ------------- | ------------------ | ------------------ | ------------- |
+|                  | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
+| **DesignScript** | Yes         | Yes           | Yes                | No                 | Yes           |
+| Python           | Yes         | Yes           | Partially          | Yes                | No            |
+| ZeroTouch (C#)   | No          | No            | No                 | Yes                | No            |
 
-> Refer to [Scripting Reference](http://primer.dynamobim.org/en/12\_Best-Practice/12-3\_Scripting-Reference.html) for a list of what each Dynamo library gives you access to.
+> Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
 
-## Think Parametrically
+### Think Parametrically
 
 When scripting in Dynamo, an inevitably parametric environment, it is wise to structure your code relative to the framework of nodes and wires it will be living in. Consider the node containing your text-script as though it is any other node in the program with a few specific inputs, a function, and an expected output. This immediately gives your code inside the node a small set of variables from which to work, the key to a clean parametric system. Here are some guidelines for better integrating code into a visual program.
 
@@ -60,7 +65,7 @@ When scripting in Dynamo, an inevitably parametric environment, it is wise to st
 
 > Tip: Place as much emphasis on the process as you do on the solution.
 
-**Don't repeat yourself (the DRY principle):**
+### **Don't repeat yourself (the DRY principle):**
 
 * When you have multiple ways to express the same thing in your script, at some point the duplicate representations will fall out of sync which can lead to maintenance nightmares, poor factoring, and internal contradictions.
 * The DRY principle is stated as "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system":
@@ -87,7 +92,7 @@ for i in range(count):
 
 > Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
 
-## Structure Modularly
+### Structure Modularly
 
 As your code gets longer and more complex the “big idea”, or overarching algorithm becomes increasingly illegible. It also becomes more difficult to keep track of what (and where) specific things happen, find bugs when things go wrong, integrate other code, and assign development tasks. To avoid these headaches it’s wise to write code in modules, an organizational strategy that breaks up code based on the task it executes. Here are some tips for making your scripts more manageable by way of modularization.
 
@@ -165,7 +170,7 @@ As your code gets longer and more complex the “big idea”, or overarching alg
     greeting = MyClass.f
     ```
 
-## Flex Continuously
+### Flex Continuously
 
 While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
 
@@ -194,7 +199,7 @@ While developing text-scripts in Dynamo, it is wise to constantly make sure that
 
 > Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
 
-## Debug Efficiently
+### Debug Efficiently
 
 Debugging is the process of eliminating "bugs" from your script. Bugs can be errors, inefficiencies, inaccuracies, or any unintended results. Addressing a bug can be as simple as correcting a misspelled variable name to more pervasive, structural problems with your script. Ideally, flexing your script as you build it will help to catch these potential issues early, though this is no guarantee of it being bug-free. The following is a review of several best practices from above to help you address bugs systematically.
 
@@ -237,9 +242,13 @@ for i in range(xCount):
 > 2. The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.
 > 3. The code "module" we've inserted to address the xDist and yDist value issue.
 
-## Exercise - Steepest Path
+## Exercise: Steepest Path
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [SteepestPath.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/13\_Best-Practice/datasets/13-1/SteepestPath.dyn)
+> Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
+>
+> A full list of example files can be found in the Appendix.&#x20;
+>
+> [SteepestPath.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/13\_Best-Practice/datasets/13-1/SteepestPath.dyn)
 
 With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
 
