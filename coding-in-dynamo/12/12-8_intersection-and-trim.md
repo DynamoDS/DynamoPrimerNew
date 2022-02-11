@@ -4,7 +4,7 @@ Many of the examples so far have focused on the construction of higher dimension
 
 The _Intersect_ method is defined on all pieces of geometry in Dynamo, meaning that in theory any piece of geometry can be intersected with any other piece of geometry. Naturally some intersections are meaningless, such as intersections involving Points, as the resulting object will always be the input Point itself. The other possible combinations of intersections between objects are outlined in the following chart. The following chart outlines the result of various intersection operations:
 
-**Intersect**
+### **Intersect**
 
 | _With:_     | Surface | Curve | Plane        | Solid   |
 | ----------- | ------- | ----- | ------------ | ------- |
@@ -36,7 +36,7 @@ crvs_moved = crvs.Translate(0, 0, 10);
 
 The _Trim_ method is very similar to the Intersect method, in that it is defined for almost every piece of geometry. However, there are far more limitations on _Trim_ than on _Intersect_.
 
-**Trim**
+### **Trim**
 
 |             | _Using:_ Point | Curve | Plane | Surface | Solid |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |

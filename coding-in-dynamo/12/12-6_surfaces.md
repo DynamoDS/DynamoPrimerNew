@@ -2,6 +2,8 @@
 
 The two-dimensional analog to a NurbsCurve is the NurbsSurface, and like the freeform NurbsCurve, NurbsSurfaces can be constructed with two basic methods: inputting a set of base points and having Dynamo interpolate between them, and explicitly specifying the control points of the surface. Also like freeform curves, interpolated surfaces are useful when a designer knows precisely the shape a surface needs to take, or if a design requires the surface to pass through constraint points. On the other hand, Surfaces created by control points can be more useful for exploratory designs across various smoothing levels.
 
+### Interpolated Surface
+
 To create an interpolated surface, simply generate a two-dimensional collection of points approximating the shape of a surface. The collection must be rectangular, that is, not jagged. The method _NurbsSurface.ByPoints_ constructs a surface from these points.
 
 ![](../../.gitbook/assets/Surfaces\_01.png)
@@ -12,6 +14,8 @@ To create an interpolated surface, simply generate a two-dimensional collection 
 
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
+
+### Control Points Surface
 
 Freeform NurbsSurfaces can also be created by specifying underlying control points of a surface. Like NurbsCurves, the control points can be thought of as representing a quadrilateral mesh with straight segments, which, depending on the degree of the surface, is smoothed into the final surface form. To create a NurbsSurface by control points, include two additional parameters to _NurbsSurface.ByPoints_, indicating the degrees of the underlying curves in both directions of the surface.
 
@@ -37,6 +41,8 @@ We can increase the degree of the NurbsSurface to change the resulting surface g
 surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 ```
 
+### Loft Surface
+
 Just as Surfaces can be created by interpolating between a set of input points, they can be created by interpolating between a set of base curves. This is called lofting. A lofted curve is created using the _Surface.ByLoft_ constructor, with a collection of input curves as the only parameter.
 
 ![](../../.gitbook/assets/Surfaces\_04.png)
@@ -51,6 +57,8 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
+
+### Revolve Surface
 
 Surfaces of revolution are an additional type of surface created by sweeping a base curve around a central axis. If interpolated surfaces are the two-dimensional analog to interpolated curves, then surfaces of revolution are the two-dimensional analog to circles and arcs.
 

@@ -2,6 +2,8 @@
 
 Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
 
+### Translation
+
 The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
 
 ![](../../.gitbook/assets/Transformations\_01.png)
@@ -15,6 +17,8 @@ p = Point.ByCoordinates(1, 2, 3);
 // p2’s new position is x = 11, y = -18, z = 53
 p2 = p.Translate(10, -20, 50);
 ```
+
+### Rotation
 
 While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
 
@@ -33,6 +37,8 @@ old_cs = CoordinateSystem.Identity();
 
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
+
+### Scale
 
 In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
 
