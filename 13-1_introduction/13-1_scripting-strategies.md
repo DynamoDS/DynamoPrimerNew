@@ -4,7 +4,7 @@ Text-based scripting within the visual-scripting environment enables powerful an
 
 ![](../.gitbook/assets/cad-chart-textual.jpg)
 
-### Know When to Script
+### Know When to Script &#x20;
 
 Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
 
@@ -16,14 +16,16 @@ Text-scripting can establish relationships of a higher complexity than visual pr
 
 **Choose a language:**
 
-|                  |             |               |                    |                    |               |
-|        --        |      --     |      --       |         --         |         --         |      --       |
-|                  | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
-| **DesignScript** | Yes         | Yes           | Yes                | No                 | Yes           |
-| Python           | Yes         | Yes           | Partially          | Yes                | No            |
-| ZeroTouch (C#)   | No          | No            | No                 | Yes                | No            |
+|                    |             |               |                    |                    |               |
+| ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
+|                    | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
+| **DesignScript**   | Yes         | Yes           | Yes                | No                 | Yes           |
+| **Python**         | Yes         | Yes           | Partially          | Yes                | No            |
+| **ZeroTouch (C#)** | No          | No            | No                 | Yes                | No            |
 
-> Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
+{% hint style="info" %}
+Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
+{% endhint %}
 
 ### Think Parametrically
 
@@ -37,7 +39,7 @@ When scripting in Dynamo, an inevitably parametric environment, it is wise to st
   * The intended output
   * Constants
 
-![variables](../.gitbook/assets/variables.jpg)
+![](<../.gitbook/assets/think parametrically 01.jpg>)
 
 > Several variables have been established prior to writing code.
 >
@@ -55,15 +57,17 @@ When scripting in Dynamo, an inevitably parametric environment, it is wise to st
 * Minimize number of inputs by only exposing key parameters:
   * If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.
 
-![parameters](../.gitbook/assets/parameters.JPG)
+![](<../.gitbook/assets/think parametrically 02.jpg>)
 
 > The code "modules" from the example in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
-
+>
 > 1. Inputs.
 > 2. Variables internal to the script.
 > 3. A loop that uses these inputs and variables to perform its function.
 
-> Tip: Place as much emphasis on the process as you do on the solution.
+{% hint style="info" %}
+Tip: Place as much emphasis on the process as you do on the solution.
+{% endhint %}
 
 ### **Don't repeat yourself (the DRY principle):**
 
@@ -90,7 +94,9 @@ for i in range(count):
     points.append(point)
 ```
 
-> Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
+{% hint style="info" %}
+Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
+{% endhint %}
 
 ### Structure Modularly
 
@@ -102,10 +108,10 @@ As your code gets longer and more complex the “big idea”, or overarching alg
 * This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).
 * Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.
 
-![modules](../.gitbook/assets/modules.JPG)
+![](<../.gitbook/assets/think parametrically 02.jpg>)
 
 > These loops call a class named "agent" that we will develop in the exercise.
-
+>
 > 1. A code module that defines the start point of each agent.
 > 2. A code module that updates the agent.
 > 3. A code module that draws a trail for the agent's path.
@@ -115,9 +121,9 @@ As your code gets longer and more complex the “big idea”, or overarching alg
 * If you find that your code does the same (or very similar) thing in more than once place, find ways to cluster it into a function that can be called.
 * "Manager" functions control program flow and primarily contain calls to "Worker" functions that handle low-level details, like moving data between structures.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/managerfunctions.jpg)
+This example creates spheres with radii and color based on the Z value of the center points.
 
-> This example creates spheres with radii and color based on the Z value of the center points.
+![](<../.gitbook/assets/spot code resuse.jpg>)
 
 > 1. Two "worker" parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.
 > 2. A "manager" parent function that combines the two worker functions. Calling this will call both functions inside it.
@@ -182,9 +188,7 @@ While developing text-scripts in Dynamo, it is wise to constantly make sure that
   * Quickly test to make sure it is returning data that “makes sense”.
 * Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:
 
-![modules](../.gitbook/assets/flex.jpg)
-
-> Flexing the example code from [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+![](<../.gitbook/assets/flex continuously.jpg>)
 
 > 1. Check that all edges of the solid are being returned as curves to create a bounding box around.
 > 2. Check that our Count inputs are successfully being converted to Ranges.
@@ -197,7 +201,9 @@ While developing text-scripts in Dynamo, it is wise to constantly make sure that
 * Sometimes bugs and errors that reveal some underlying problem with your script will only surface during these edge cases.
   * Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.
 
-> Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+{% hint style="info" %}
+Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+{% endhint %}
 
 ### Debug Efficiently
 
@@ -234,40 +240,40 @@ for i in range(xCount):
 * When a program must be modified, code that has been developed in modules will be much easier to change:
   * You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.
 
-![](../.gitbook/assets/debug.jpg)
+![](<../.gitbook/assets/leverage code's modularity.jpg>)
 
 > Debugging the example file from [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
-
+>
 > 1. The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.
 > 2. The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.
 > 3. The code "module" we've inserted to address the xDist and yDist value issue.
 
 ## Exercise: Steepest Path
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file that accompanies this exercise (Right click and "Save Link As...").
 >
-> A full list of example files can be found in the Appendix.&#x20;
+> A full list of example files can be found in the Appendix.
 >
 > [SteepestPath.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/13\_Best-Practice/datasets/13-1/SteepestPath.dyn)
 
 With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/gd01.JPG)
+Our script applied to an attractor-deformed surface.
 
-> Our script applied to an attractor-deformed surface.
+![](<../.gitbook/assets/scripting strategies - exercise - 01.jpg>)
 
 The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/gd02.jpg)
+All the libraries we intend on using need to be imported here.
 
-> All the libraries we intend on using need to be imported here.
+![](<../.gitbook/assets/scripting strategies - exercise - 02.jpg>)
 
 Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/walkthrough-inputs.jpg)
+We need to define inputs that correspond to variables in the Python script and determine a desired output:
 
-> We need to define inputs that correspond to variables in the Python script and determine a desired output:
->
+![](<../.gitbook/assets/scripting strategies - exercise - 03.jpg>)
+
 > 1. The surface we want to walk down.
 > 2. The number of agents we want to walk.
 > 3. The maximum number of steps the agents are allowed to take.
@@ -277,10 +283,10 @@ Next we need to define the script's inputs and output, which will display as inp
 
 Now let's employ the practice of modularity and create the body of our script. Simulating the shortest path down a surface for multiple start points is a significant task that will require several functions. Rather than call the different functions throughout the script, we can modularize our code by collecting them into a single class, our agent. The different functions of this class or "module" can be called with different variables or even reused in another script.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/gd04.jpg)
+We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
 
-> We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
->
+![](<../.gitbook/assets/scripting strategies - exercise - 04.jpg>)
+
 > 1. Name.
 > 2. Global attributes that all the agents share.
 > 3. Instance attributes that are unique to each agent.
@@ -289,33 +295,123 @@ Now let's employ the practice of modularity and create the body of our script. S
 
 Let's initialize the agents by defining their start location. This is a good opportunity to flex our script and make sure the agent class is working.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/gd05.jpg)
+We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
 
-> We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
->
+![](<../.gitbook/assets/scripting strategies - exercise - 05.jpg>)
+
 > 1. A new empty trail list.
 > 2. Where they will start their journey on the surface.
 > 3. We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.
 
-Update each agent at each step.
+Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/gd06.jpg)
+![](<../.gitbook/assets/scripting strategies - exercise - 06.jpg>)
 
-> We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
+Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
 
-Now that our agents have been fully updated, let's return geometry that represents them.
-
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/gd07.jpg)
-
-> After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
+![](<../.gitbook/assets/scripting strategies - exercise - 07.jpg>)
 
 Our script for finding the steepest paths.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/gd07-02.jpg)
+![](<../.gitbook/assets/scripting strategies - exercise - 08.jpg>)
 
 > 1. A preset that simulates rainfall on the underlying surface.
 > 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.
 
-![](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/12\_Best-Practice/images/13-1/gd08.jpg)
+The full Python text-script.
 
-> The full Python text-script.
+```
+### STEEPEST PATH ALGORITHM
+
+# IMPORT LIBRARIES
+import sys
+sys.path.append('C:\Program Files (x86)\IronPython 2.7\Lib')
+import random
+import math
+import clr
+clr.AddReference('ProtoGeometry')
+from Autodesk.DesignScript.Geometry import *
+
+# DEFINE PARAMETER INPUTS
+surfIn = IN[0]
+numAgents = IN[1]
+maxSteps = IN[2]
+decendBoo = IN[3]
+
+
+# DEFINE AGENT CLASS
+class Agent(object):
+    def get_step_size():
+        area = surfIn.Area
+        stepSize = math.sqrt(area)/100
+        return stepSize
+    
+    zVec = Vector.ZAxis()
+    stepSize = get_step_size()
+    dupTol = 0.001
+    
+    
+    def __init__(self,u,v):
+        self.endBoo = False
+        self.U = u
+        self.V = v
+        self.Z = None
+        self.trailPts = []
+        self.update_trail()
+
+    def update(self):
+        if not self.endBoo:
+            positionPt01 = self.trailPts[-1]
+            normalVec = surfIn.NormalAtParameter(self.U,self.V)
+            gradientVec = Vector.Cross(self.zVec, normalVec)
+            if decendBoo:
+            	gradientVec = gradientVec.Rotate(normalVec,-90)
+            	
+            gradientVec = gradientVec.Normalized()
+            gradientVec = gradientVec.Scale(self.stepSize)
+            positionPt02 = positionPt01.Add(gradientVec)
+            newPt = surfIn.ClosestPointTo(positionPt02)
+            newUV = surfIn.UVParameterAtPoint(newPt)
+            newU, newV = newUV.U, newUV.V
+            newZ = newPt.Z
+           
+            if decendBoo and (self.Z <= newZ):
+            	self.endBoo = True
+            else:
+	            if ((abs(self.U-newU) <= self.dupTol) and (abs(self.V-newV) <= self.dupTol)):
+	                self.endBoo = True
+	            else:
+	                self.U, self.V = newU, newV
+	                self.update_trail()
+	                 
+    def update_trail(self):
+        trailPt = surfIn.PointAtParameter(self.U,self.V)
+        self.trailPts.append(trailPt)
+        self.Z = trailPt.Z
+        
+  
+# INITIALIZE AGENTS
+agents = []
+for i in range(numAgents):
+	u = float(random.randrange(1000))/1000
+	v = float(random.randrange(1000))/1000
+	agent = Agent(u,v)
+	agents.append(agent)
+	
+
+# UPDATE AGENTS
+for i in range(maxSteps):
+	for eachAgent in agents:
+		eachAgent.update()
+		
+# DRAW TRAILS
+trails = []
+for eachAgent in agents:
+	trailPts = eachAgent.trailPts
+	if (len(trailPts) > 1):
+		trail = PolyCurve.ByPoints(trailPts)
+		trails.append(trail)
+
+# OUTPUT TRAILS
+OUT = trails
+```
