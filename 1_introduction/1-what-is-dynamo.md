@@ -10,7 +10,7 @@ Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.]
 
 ### The Process
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications - from processing data to generating geometry - all in real time and without writing a lick of `code`.
+Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
 
 ![](<../.gitbook/assets/nodes and wires - flow of data (1).jpg>)
 
@@ -22,6 +22,6 @@ Nodes and Wires are the key components in Dynamo to support a [visual programmin
 
 ## What can Dynamo Achieve?
 
-From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect to a wide variety of exciting applications.
+From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
 
 [Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)

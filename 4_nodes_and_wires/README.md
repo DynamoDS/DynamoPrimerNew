@@ -11,10 +11,10 @@ Most Nodes in Dynamo are composed of five parts. While there are exceptions, suc
 ![](<../.gitbook/assets/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main - The main body of the Node - Right-clicking here presents options at the level of the whole Node
+> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
 > 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
 > 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the Lacing option specified for matching list inputs (more on that later)
+> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
 
 ### Nodes Input/Output Ports
 

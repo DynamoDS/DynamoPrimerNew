@@ -14,9 +14,9 @@ To start using, launch it from your toolbar panel. Depends on which software you
 
 ![](<../.gitbook/assets/launch dynamo from revit.jpg>)
 
-For more guidance on using Dynamo with  a specific software, we recommend referring to the following sections:
+For more guidance on using Dynamo with a specific software, we recommend referring to the following sections:
 
-* [8\_dynamo-for-revit](../8\_dynamo-for-revit/ "mention")
+* [7\_dynamo\_for\_revit](../7\_dynamo\_for\_revit/ "mention")
 
 If you would like to use Dynamo as a standalone application. Continue reading for guidance on downloading the Sandbox.
 
