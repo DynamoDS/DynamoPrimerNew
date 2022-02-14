@@ -2,7 +2,7 @@
 
 Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
 
-### Creating Colors&#x20;
+### Creating Colors
 
 Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
 
@@ -10,7 +10,7 @@ Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Re
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
 | ![](<../../.gitbook/assets/Color byARGB.jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
 
-### Querying Color Values&#x20;
+### Querying Color Values
 
 The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
 
@@ -19,7 +19,7 @@ The colors in the table below query the properties used to define the color: Alp
 | ![](<../../.gitbook/assets/Color Alpha (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
 | ![](<../../.gitbook/assets/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
 | ![](<../../.gitbook/assets/Color Green (1).jpg>) | Green (**Color.Green**)           | color  | G          |
-| ![](<../../.gitbook/assets/Color Blue.jpg>)      |  Blue (**Color.Blue**)            | color  | B          |
+| ![](<../../.gitbook/assets/Color Blue.jpg>)      | Blue (**Color.Blue**)             | color  | B          |
 | ![](<../../.gitbook/assets/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
 
 The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
@@ -30,20 +30,18 @@ The colors in the table below correspond to the **HSB color space**. Dividing th
 | ![](<../../.gitbook/assets/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
 | ![](<../../.gitbook/assets/Color Brightness.jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
 
-
-
 ### Color Range
 
-The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](4-3\_logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
 
 The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
 
 ![](<../../.gitbook/assets/color - color range.jpg>)
 
-> 1. Define three colors: Using a code block node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
+> 1. Define three colors: Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
 > 2. **Create list:** Merge the three colors into one list.
 > 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. Code Block: Input values (between 0 and 1) to translate to colors.
+> 4. **Code Block**: Input values (between 0 and 1) to translate to colors.
 
 ### Color Preview
 
@@ -56,8 +54,6 @@ The **Display.ByGeometry** Node gives us the ability to color geometry in the Dy
 The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
 
 ![](<../../.gitbook/assets/12 (1).jpg>)
-
-
 
 ## Exercise
 
@@ -116,20 +112,20 @@ The size of the spheres demonstrates the parametric array defined by a reference
 
 ![](<../../.gitbook/assets/color - basic helix with colors 08.jpg>)
 
-> 1. **Math.RemapRange:** This process should look familiar. Connect the _Geometry.DistanceTo_ output into the numbers input.
+> 1. **Math.RemapRange:** This process should look familiar. Connect the **Geometry.DistanceTo** output into the numbers input.
 > 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
-> 3. **Color Range:** Connect the _Math.RemapRange_ output into the _value_ input.
+> 3. **Color Range:** Connect the **Math.RemapRange** output into the _value_ input.
 
 ![](<../../.gitbook/assets/color - basic helix with colors 09.jpg>)
 
 > 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
 > 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two _Color.ByARGB_ inputs in agreement with the image above (or create your favorite two colors).
 > 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for _Color Range_.
+> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for _C_**olor Range**.
 
 ![](<../../.gitbook/assets/color - basic helix with colors 10.jpg>)
 
-> 1. **Display.ByGeometryColor:** Connect _Sphere.ByCenterPointRadius_ into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
+> 1. **Display.ByGeometryColor:** Connect **Sphere.ByCenterPointRadius** into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
 
 If we change the value of the _number slider_ from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
 
@@ -145,7 +141,7 @@ First, we need to create (or reference) a surface to use as an input for the **D
 
 ![](<../../.gitbook/assets/color - color on surface 01.jpg>)
 
-> 1. This **Group** of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
+> 1. This Group **** of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
 > 2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
 
 ![](<../../.gitbook/assets/color - color on surface 02.jpg>)

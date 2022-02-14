@@ -4,7 +4,7 @@
 
 Formally, a **String** is a sequence of characters representing a literal constant or some type of variable. Informally, a string is programming lingo for text. We've worked with numbers, both integers and decimal numbers, to drive parameters and we can do the same with text.
 
-### Creating Strings&#x20;
+### Creating Strings
 
 Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
 
@@ -12,7 +12,7 @@ The sample Nodes above are strings. A number can be represented as a string, as 
 
 ![](<../../.gitbook/assets/strings - creating strings.jpg>)
 
-## Exercise&#x20;
+## Exercise
 
 ### Querying Strings
 
@@ -44,9 +44,7 @@ With some basic additional operations, we now have a triangle drawn at the origi
 
 ![](<../../.gitbook/assets/strings - querying strings 04.jpg>)
 
-
-
-### Manipulating Strings&#x20;
+### Manipulating Strings
 
 Since a string is a generic text object, they host a wide range of applications. Let's take a look at some of the major actions in the Core>String Category in Dynamo:
 
@@ -69,7 +67,7 @@ The following image represents the joining of two strings:
 
 > 1. The separator input allows one to create a string which divides the joined strings.
 
-### Working with Strings&#x20;
+### Working with Strings
 
 In this exercise, we're going to use methods of querying and manipulating strings to deconstruct the final stanza of Robert Frost's [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Not the most practical application, but it will help us to grasp conceptual string actions as we apply them to legible lines of rhythm and rhyme.
 
@@ -77,7 +75,7 @@ Let's begin with a basic string split of the stanza. We first notice that the wr
 
 ![](<../../.gitbook/assets/strings - working with strings 01.jpg>)
 
-> 1. The base string is pasted into a String Node.
+> 1. The base string is pasted into a **String** Node.
 > 2. Another **String** Node is used to denote the separator. In this case, we're using a comma.
 > 3. A **String.Split** Node is added to the canvas and connected to the two strings.
 > 4. The output shows that we've now separated the lines into individual elements.
@@ -90,9 +88,9 @@ Now, let's get to the good part of the poem: the last two lines. The original st
 > 2. In the _searchFor_ input, we define a substring that we're looking for within the stanza. Let's use a **String** Node with the text "And miles".
 > 3. The output gives us a list of falses and trues. We'll use this boolean logic to filter the elements in the next step.
 
-![Split ](<../../.gitbook/assets/strings - working with strings 03.jpg>)
+![Split](<../../.gitbook/assets/strings - working with strings 03.jpg>)
 
-> 1. List.FilterByBoolMask is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
+> 1. **List.FilterByBoolMask** is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
 > 2. Our output from the "in" is as expected, giving us the final two lines of the stanza.
 
 Now, we want to drive home the repetition of the stanza by merging the two lines together. When viewing the output of the previous step, we notice that there are two items in the list:

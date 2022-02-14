@@ -126,5 +126,3 @@ In this first example, we assemble a shelled cylinder which walks through the ge
 12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
 
 ![](<../../.gitbook/assets/data - exercise step 12.gif>)
-
->

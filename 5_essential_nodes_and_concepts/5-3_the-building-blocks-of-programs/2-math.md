@@ -83,8 +83,6 @@ Bonus points if you make it 3D!
 
 ![](<../../.gitbook/assets/math - part III-02.gif>)
 
-***
-
 ### Part IV: From Nautilus to Phyllotaxis
 
 Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
@@ -97,15 +95,15 @@ Next, follow these mini steps to generate a series of spiral at various rotation
 
 ![](<../../.gitbook/assets/math - part IV-02.jpg>)
 
-a. **Geometry.Rotate:** There are several Geometry.Rotate options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
-
-![](<../../.gitbook/assets/math - part IV-03 cross product.jpg>)
-
-b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
-
-c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a Number Range component. Connect this into the _degrees_ input.
-
-d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
+> a. **Geometry.Rotate:** There are several Geometry.Rotate options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
+>
+> ![](<../../.gitbook/assets/math - part IV-03 cross product.jpg>)
+>
+> b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
+>
+> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a Number Range component. Connect this into the _degrees_ input.
+>
+> d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
 
 Our output is beginning to resemble a whirlpool. Let's adjust some of the **Number Range** parameters and see how the results change.
 
@@ -116,5 +114,3 @@ Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice
 Change the step size of the **Number Range** node from _36.0_ to _3.6_. This now gives us a much denser grid, and the directionality of the spiral is unclear. Ladies and gentlemen, we've created a sunflower.
 
 ![](<../../.gitbook/assets/math - part IV-05.jpg>)
-
-> 1.
