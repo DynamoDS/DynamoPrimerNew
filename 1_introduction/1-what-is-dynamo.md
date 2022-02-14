@@ -16,7 +16,7 @@ Dynamo enables us to work within a Visual Programming process wherein we connect
 
 ### Connecting Nodes and Wires
 
-Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Simply using mouse-click to connect the Nodes and develop your design workflow, optimize your result by the way of rules.
+Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
 
 ![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
 
