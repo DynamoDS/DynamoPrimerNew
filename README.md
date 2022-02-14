@@ -52,9 +52,15 @@ The Dynamo Primer is an open source project, initiated by Matt Jezyk and the Dyn
 
 [![](.gitbook/assets/MODELAB\_Logo.png)](http://modelab.is)
 
+****
+
 **John Pierson of Parallax Team** was commissioned to update the primer to reflect the Dynamo 2.0. revisions.
 
 [![](.gitbook/assets/PRLX\_Logo.jpg)](http://www.parallaxteam.com)
+
+****
+
+**Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.![](.gitbook/assets/matterlab-logo.png)
 
 ### Acknowledgments
 

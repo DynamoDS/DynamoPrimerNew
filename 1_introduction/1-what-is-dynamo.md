@@ -1,6 +1,6 @@
 # What is Dynamo & How Does It Work?
 
-&#x20;(video)
+(video)
 
 Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
 
@@ -16,7 +16,7 @@ Dynamo enables us to work within a Visual Programming process wherein we connect
 
 ### Connecting Nodes and Wires
 
-Use Wire to connect Nodes and define the relations between them. (...)
+Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Simply using mouse-click to connect the Nodes and develop your design workflow, optimize your result by the way of rules.
 
 ![](<../.gitbook/assets/what is dynamo - connecting nodes with wires.gif>)
 
