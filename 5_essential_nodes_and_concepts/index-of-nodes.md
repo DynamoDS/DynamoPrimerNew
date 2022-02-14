@@ -2,15 +2,11 @@
 
 This index provides additional information on all the nodes used in this primer, as well as other components you might find useful. This is just an introduction to some of the 500 nodes available in Dynamo.
 
-### Bulitin Functions
+## Display
 
-|                                 | Node name                                                       |                                                         |
-| ------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------- |
-| ![](../.gitbook/assets/Map.jpg) | <p><strong>Map</strong><br>Maps a value into an input range</p> | ![](<../.gitbook/assets/index of nodes - math map.jpg>) |
+### Color
 
-### Display
-
-|                                                | Node name                                                                                                             |                                                                     |
+|                                                |                                                                                                                       |                                                                     |
 | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 |                                                | CREATE                                                                                                                |                                                                     |
 | ![](<../.gitbook/assets/Color byARGB.jpg>)     | <p><strong>Color.ByARGB</strong><br>Construct a color by alpha, red, green, and blue components.</p>                  | ![](<../.gitbook/assets/index of nodes - color byargb.jpg>)         |
@@ -31,7 +27,15 @@ This index provides additional information on all the nodes used in this primer,
 |                                                                | CREATE                                                                                    |                                                                                 |
 | ![](<../.gitbook/assets/Geometry Color By Geometry Color.jpg>) | <p><strong>GeometryColor.ByGeometryColor</strong><br>Displays geometry using a color.</p> | ![](<../.gitbook/assets/index of nodes - geometry color by geometry color.jpg>) |
 
-### Input
+### Watch
+
+|                                             |                                                                               |                                                                 |
+| ------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------- |
+|                                             | ACTIONS                                                                       |                                                                 |
+| ![](<../.gitbook/assets/View watch.jpg>)    | <p><strong>View.Watch</strong><br>Visualize the output of node.</p>           | ![](<../.gitbook/assets/index of nodes - view watch.jpg>)       |
+| ![](<../.gitbook/assets/View watch 3d.jpg>) | <p><strong>View.Watch 3D</strong><br>Shows a dynamic preview of geometry.</p> | ![](<../.gitbook/assets/index of nodes - view watch.3Djpg.jpg>) |
+
+## Input
 
 |                                              |                                                                                                          |                                                               |
 | -------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -44,8 +48,9 @@ This index provides additional information on all the nodes used in this primer,
 | ![](../.gitbook/assets/Number.jpg)           | <p><strong>Number</strong><br>Creates a number.</p>                                                      | ![](<../.gitbook/assets/index of nodes - number (1).jpg>)     |
 | ![](<../.gitbook/assets/Number slider.jpg>)  | <p><strong>Number Slider</strong><br>A slider that produces numeric values.</p>                          | ![](<../.gitbook/assets/index of nodes - number slider.jpg>)  |
 | ![](../.gitbook/assets/String.jpg)           | <p><strong>String</strong><br>Creates a string.</p>                                                      | ![](<../.gitbook/assets/index of nodes - string.jpg>)         |
+| ![](<../.gitbook/assets/Object is Null.jpg>) | <p><strong>Object.IsNull</strong><br>Determines if the given object is null.</p>                         | ![](<../.gitbook/assets/index of nodes - object is null.jpg>) |
 
-### List
+## List
 
 |                                                          |                                                                                                                                                                                                                                               |                                                                         |
 | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -67,14 +72,14 @@ This index provides additional information on all the nodes used in this primer,
 | ![](<../.gitbook/assets/List Take Every Nth Item.jpg>)   | <p><strong>List.TakeEveryNthItem</strong><br>Fetches items from the given list at indices that are multiples of the given value, after the given offset.</p>                                                                                  | ![](<../.gitbook/assets/index of nodes - list take every nth item.jpg>) |
 | ![](<../.gitbook/assets/List Transpose.jpg>)             | <p><strong>List.Transpose</strong><br>Swaps rows and columns in a list of lists. If there are some rows that are shorter than others, null values are inserted as place holders in the resultant array such that it is always rectangular</p> | ![](<../.gitbook/assets/index of nodes - list transpose.jpg>)           |
 
-### Math.Logic
+## Logic
 
 |                                      |                                                                                                                                                                                                              |                                                   |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
 |                                      | ACTIONS                                                                                                                                                                                                      |                                                   |
 | ![](<../.gitbook/assets/If (1).jpg>) | <p><strong>If</strong><br>Conditional statement. Checks the boolean value of the test input. If the test input is true, the result outputs the true input, otherwise the result outputs the false input.</p> | ![](<../.gitbook/assets/index of nodes - if.jpg>) |
 
-### Math.Function
+## Math
 
 |                                                       |                                                                                                                              |                                                                        |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -86,17 +91,9 @@ This index provides additional information on all the nodes used in this primer,
 | ![](<../.gitbook/assets/Math remap range.jpg>)        | <p><strong>Math.RemapRange</strong><br>Adjusts the range of a list of numbers while preserving the distribution ratio.</p>   | ![](<../.gitbook/assets/index of nodes - math remap range.jpg>)        |
 | ![](<../.gitbook/assets/Math sin.jpg>)                | <p><strong>Math.Sin</strong><br>Finds the sine of an angle.</p>                                                              | ![](<../.gitbook/assets/index of nodes - math sin.jpg>)                |
 | ![](../.gitbook/assets/Formula.jpg)                   | <p><strong>Formula</strong><br>Evaluates mathematical formulas. Uses NCalc for evaluation. See http://ncalc.codeplex.com</p> | ![](<../.gitbook/assets/index of nodes - formula.jpg>)                 |
+| ![](../.gitbook/assets/Map.jpg)                       | <p><strong>Map</strong><br>Maps a value into an input range</p>                                                              | ![](<../.gitbook/assets/index of nodes - math map.jpg>)                |
 
-\####Core.Object
-
-|                                              |                                                                                  |                                                               |
-| -------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-|                                              | ACTIONS                                                                          |                                                               |
-| ![](<../.gitbook/assets/Object is Null.jpg>) | <p><strong>Object.IsNull</strong><br>Determines if the given object is null.</p> | ![](<../.gitbook/assets/index of nodes - object is null.jpg>) |
-
-
-
-\####Core.String
+## String
 
 |                                                |                                                                                                                                                      |                                                                 |
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
@@ -107,17 +104,11 @@ This index provides additional information on all the nodes used in this primer,
 | ![](<../.gitbook/assets/String split.jpg>)     | <p><strong>String.Split</strong><br>Divides a single string into a list of strings, with divisions determined by the given separater strings.</p>    | ![](<../.gitbook/assets/index of nodes - string split.jpg>)     |
 | ![](<../.gitbook/assets/String to number.jpg>) | <p><strong>String.ToNumber</strong><br>Converts a string to an integer or a double.</p>                                                              | ![](<../.gitbook/assets/index of nodes - string to number.jpg>) |
 
-\####Core.View
 
-|                                             |                                                                               |                                                                 |
-| ------------------------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------- |
-|                                             | ACTIONS                                                                       |                                                                 |
-| ![](<../.gitbook/assets/View watch.jpg>)    | <p><strong>View.Watch</strong><br>Visualize the output of node.</p>           | ![](<../.gitbook/assets/index of nodes - view watch.jpg>)       |
-| ![](<../.gitbook/assets/View watch 3d.jpg>) | <p><strong>View.Watch 3D</strong><br>Shows a dynamic preview of geometry.</p> | ![](<../.gitbook/assets/index of nodes - view watch.3Djpg.jpg>) |
 
-### Geometry
+## Geometry
 
-\####Geometry.Circle
+### Circle
 
 |                                                             |                                                                                                                                                          |                                                                                     |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -125,15 +116,13 @@ This index provides additional information on all the nodes used in this primer,
 | ![](<../.gitbook/assets/Circle by center point radius.jpg>) | <p><strong>Circle.ByCenterPointRadius</strong><br>Creates a Circle with input center Point and radius in the world XY plane, with world Z as normal.</p> | ![](<../.gitbook/assets/index of nodes - circle by center point radius normal.jpg>) |
 | ![](<../.gitbook/assets/Circle by plane radius.jpg>)        | <p><strong>Circle.ByPlaneRadius</strong><br>Create a Circle centered at the input Plane origin (root), lying in the input Plane, with given radius.</p>  | ![](<../.gitbook/assets/index of nodes - circle by plane radius.jpg>)               |
 
-\####Geometry.CoordinateSystem
-
 |                                                                            |                                                                                                                                                                                                    |                                                                                              |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 |                                                                            | CREATE                                                                                                                                                                                             |                                                                                              |
 | ![](<../.gitbook/assets/Coordinate system by origin.jpg>)                  | <p><strong>CoordinateSystem.ByOrigin</strong><br>Create a CoordinateSystem with origin at input Point, with X and Y Axes set as WCS X and Y axes</p>                                               | ![](<../.gitbook/assets/index of nodes - coordinates system by origin.jpg>)                  |
 | ![](<../.gitbook/assets/Coordinate system by cylindrical coordinates.jpg>) | <p><strong>CoordinateSystem.ByCyclindricalCoordinates</strong><br>Creates a CoordinateSystem at the specified cylindrical coordinate parameters with respet to the specified coordinate system</p> | ![](<../.gitbook/assets/index of nodes - coordinates system by cylindrical coordinates.jpg>) |
 
-\####Geometry.Cuboid
+### Cuboid
 
 |                                                                       |                                                                                                                                            |                                                                                    |
 | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
@@ -151,7 +140,7 @@ This index provides additional information on all the nodes used in this primer,
 \*\*In other words, if you create a Cuboid width (X-axis) length 10, and transform it to a CoordinateSystem with 2 times scaling in X, the width will still be 10. ASM does not allow you to extract the Vertices of a body in any predictable order, so it is impossible to determine the dimensions after a transform.
 {% endhint %}
 
-Geometry.Curve
+### Curve
 
 |                                                        |                                                                                                                                                  |                                                                         |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
@@ -159,7 +148,7 @@ Geometry.Curve
 | ![](<../.gitbook/assets/Curve extrude.jpg>)            | <p><strong>Curve.Extrude</strong> (distance)<br>Extrudes a Curve in the normal Vector direction.</p>                                             | ![](<../.gitbook/assets/index of nodes - curve extrude.jpg>)            |
 | ![](<../.gitbook/assets/Curve point at parameter.jpg>) | <p><strong>Curve.PointAtParameter</strong><br>Get a Point on the Curve at a specified parameter between StartParameter() and EndParameter().</p> | ![](<../.gitbook/assets/index of nodes - curve point at parameter.jpg>) |
 
-\####Geometry.Geometry
+### Geometry Modifiers
 
 |                                                        |                                                                                                                                    |                                                                         |
 | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -170,7 +159,7 @@ Geometry.Curve
 | ![](<../.gitbook/assets/Geometry rotate.jpg>)          | <p><strong>Geometry.Rotate</strong> (basePlane)<br>Rotates an object around the Plane origin and normal by a specified degree.</p> | ![](<../.gitbook/assets/index of nodes - geometry rotate.jpg>)          |
 | ![](<../.gitbook/assets/Geometry translate.jpg>)       | <p><strong>Geometry.Translate</strong><br>Translates any geometry type by the given distance in the given direction.</p>           | ![](<../.gitbook/assets/index of nodes - geometry translate.jpg>)       |
 
-\####Geometry.Line
+### Line
 
 |                                                                    |                                                                                                                                                          |                                                                                     |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -182,7 +171,7 @@ Geometry.Curve
 |                                                                    | QUERY                                                                                                                                                    |                                                                                     |
 | ![](<../.gitbook/assets/Line direction.jpg>)                       | <p><strong>Line.Direction</strong><br>The direction of the Curve.</p>                                                                                    | ![](<../.gitbook/assets/index of nodes - line direction.jpg>)                       |
 
-\####Geometry.NurbsCurve
+### NurbsCurve
 
 |                                                             |                                                                                                               |                                                                              |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -190,7 +179,7 @@ Geometry.Curve
 | ![](<../.gitbook/assets/Nurbs curve by control points.jpg>) | <p><strong>NurbsCurve.ByControlPoints</strong><br>Create a BSplineCurve by using explicit control points.</p> | ![](<../.gitbook/assets/index of nodes - nurbs curve by control points.jpg>) |
 | ![](<../.gitbook/assets/Nurbs curve by points.jpg>)         | <p><strong>NurbsCurve.ByPoints</strong><br>Create a BSplineCurve by interpolating between points</p>          | ![](<../.gitbook/assets/index of nodes - nurbs curve by points.jpg>)         |
 
-\####Geometry.NurbsSurface
+### NurbsSurface
 
 |                                                               |                                                                                                                                                                                            |                                                                                |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
@@ -198,7 +187,7 @@ Geometry.Curve
 | ![](<../.gitbook/assets/Nurbs surface by control points.jpg>) | <p><strong>NurbsSurface.ByControlPoints</strong><br>Create a NurbsSurface by using explicit control Points with specified U and V degrees.</p>                                             | ![](<../.gitbook/assets/index of nodes - nurbs surface by control points.jpg>) |
 | ![](<../.gitbook/assets/Nurbs surface by points.jpg>)         | <p><strong>NurbsSurface.ByPoints</strong><br>Creates a NurbsSurface with specified interpolated points and U and V degrees. The resultant surface will pass through all of the points.</p> | ![](<../.gitbook/assets/index of nodes - nurbs surface by points.jpg>)         |
 
-\####Geometry.Plane
+### Plane
 
 |                                                      |                                                                                                                  |                                                                       |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
@@ -206,7 +195,7 @@ Geometry.Curve
 | ![](<../.gitbook/assets/Plane by origin normal.jpg>) | <p><strong>Plane.ByOriginNormal</strong><br>Create a Plane centered at root Point, with input normal Vector.</p> | ![](<../.gitbook/assets/index of nodes - plane by origin normal.jpg>) |
 | ![](<../.gitbook/assets/Plane XY.jpg>)               | <p><strong>Plane.XY</strong><br>Creates a plane in the world XY</p>                                              | ![](<../.gitbook/assets/index of nodes - plane xy.jpg>)               |
 
-\####Geometry.Point
+### Point
 
 |                                                              |                                                                                                                                           |                                                                               |
 | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -222,28 +211,28 @@ Geometry.Curve
 | ![](<../.gitbook/assets/Point y.jpg>)                        | <p><strong>Point.Y</strong><br>Get the Y component of a point</p>                                                                         | ![](<../.gitbook/assets/index of nodes - point y.jpg>)                        |
 | ![](<../.gitbook/assets/Point z.jpg>)                        | <p><strong>Point.Z</strong><br>Get the Z component of a point</p>                                                                         | ![](<../.gitbook/assets/index of nodes - point z.jpg>)                        |
 
-\####Geometry.Polycurve
+### Polycurve
 
 |                                                   |                                                                                                                                                                                       |                                                                    |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 |                                                   | CREATE                                                                                                                                                                                |                                                                    |
 | ![](<../.gitbook/assets/Polycurve by points.jpg>) | <p><strong>Polycurve.ByPoints</strong><br>Make PolyCurve from sequence of lines connecting points. For closed curve last point should be in the same location as the start point.</p> | ![](<../.gitbook/assets/index of nodes - polycurve by points.jpg>) |
 
-\####Geometry.Rectangle
+Rectangle
 
 |                                                         |                                                                                                                                                                               |                                                                          |
 | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 |                                                         | CREATE                                                                                                                                                                        |                                                                          |
 | ![](<../.gitbook/assets/Rectangle by width length.jpg>) | <p><strong>Rectangle.ByWidthLength</strong> (Plane)<br>Create a Rectangle centered at input Plane root, with input width (Plane X axis length) and (Plane Y axis length).</p> | ![](<../.gitbook/assets/index of nodes - rectangle by width length.jpg>) |
 
-\####Geometry.Sphere
+### Sphere
 
 |                                                             |                                                                                                                             |                                                                              |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 |                                                             | CREATE                                                                                                                      |                                                                              |
 | ![](<../.gitbook/assets/Sphere by center point radius.jpg>) | <p><strong>Sphere.ByCenterPointRadius</strong><br>Create a Solid Sphere centered at the input Point, with given radius.</p> | ![](<../.gitbook/assets/index of nodes - sphere by center point radius.jpg>) |
 
-\####Geometry.Surface
+### Surface
 
 |                                                          |                                                                                                                                                      |                                                                           |
 | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -255,14 +244,14 @@ Geometry.Curve
 | ![](<../.gitbook/assets/Surface point at parameter.jpg>) | <p><strong>Surface.PointAtParameter</strong><br>Return the Point at a specified U and V parameters.</p>                                              | ![](<../.gitbook/assets/index of nodes - surface point at parameter.jpg>) |
 | ![](<../.gitbook/assets/Surface thicken (1).jpg>)        | <p><strong>Surface.Thicken</strong><br>Thicken Surface into a Solid, extruding in the direction of Surface normals on both sides of the Surface.</p> | ![](<../.gitbook/assets/index of nodes - surface thicken.jpg>)            |
 
-\####Geometry.UV
+### UV
 
 |                                                 |                                                                           |                                                                  |
 | ----------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 |                                                 | CREATE                                                                    |                                                                  |
 | ![](<../.gitbook/assets/UV by coordinates.jpg>) | <p><strong>UV.ByCoordinates</strong><br>Create a UV from two doubles.</p> | ![](<../.gitbook/assets/index of nodes - UV by coordinates.jpg>) |
 
-\####Geometry.Vector
+### Vector
 
 |                                                     |                                                                                          |                                                                      |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -274,7 +263,15 @@ Geometry.Curve
 |                                                     | ACTIONS                                                                                  |                                                                      |
 | ![](<../.gitbook/assets/Vector normalized.jpg>)     | <p><strong>Vector.Normalized</strong><br>Get the normalized version of a vector</p>      | ![](<../.gitbook/assets/index of nodes - vector normalized.jpg>)     |
 
-### Operators
+## CoordinateSystem
+
+|                                                                            |                                                                                                                                                                                                    |                                                                                              |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+|                                                                            | CREATE                                                                                                                                                                                             |                                                                                              |
+| ![](<../.gitbook/assets/Coordinate system by origin.jpg>)                  | <p><strong>CoordinateSystem.ByOrigin</strong><br>Create a CoordinateSystem with origin at input Point, with X and Y Axes set as WCS X and Y axes</p>                                               | ![](<../.gitbook/assets/index of nodes - coordinates system by origin.jpg>)                  |
+| ![](<../.gitbook/assets/Coordinate system by cylindrical coordinates.jpg>) | <p><strong>CoordinateSystem.ByCyclindricalCoordinates</strong><br>Creates a CoordinateSystem at the specified cylindrical coordinate parameters with respet to the specified coordinate system</p> | ![](<../.gitbook/assets/index of nodes - coordinates system by cylindrical coordinates.jpg>) |
+
+## Operators
 
 |                                                  |                                                                                                                         |                                                               |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
