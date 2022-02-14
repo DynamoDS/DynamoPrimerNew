@@ -30,7 +30,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 * At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
 * Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
 
-![codeblock](../.gitbook/assets/graphstrategy3.png)
+![](<../.gitbook/assets/graphstrategy3 (1).png>)
 
 > Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
 >
@@ -84,7 +84,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 * If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
 * To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
 
-![alignment](../.gitbook/assets/alignment.png)
+![](<../.gitbook/assets/graphstrategy5 (2).png>)
 
 > 1. Unorganized graph
 > 2. Aligned graph
@@ -96,7 +96,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 * Renaming inputs can help others easily understand your graph, **especially if what they plug into will be off the screen**
 * **Be wary of renaming nodes other than inputs.** An alternative to this is creating a custom node from a node cluster and renaming that; it will be understood that it contains something else
 
-![inputs](../.gitbook/assets/inputs.png)
+![](../.gitbook/assets/graphstrategy6.png)
 
 > 1. Inputs for surface manipulation
 > 2. Inputs for architectural parameters
@@ -109,7 +109,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 * You should add a Note if something in the **graph requires a plain language explanation** that the nodes can not express
 * You should add a Note if a collection of **nodes or a Group is too large or complex and can’t be easily understood right away**
 
-![notes](../.gitbook/assets/notes.png)
+![](../.gitbook/assets/graphstrategy7.png)
 
 > 1. A Note describing the portion of the program that returns raw translation distances
 > 2. A Note describing the code that maps those values to a Sine wave
@@ -124,7 +124,7 @@ While building your visual-script, it is important to verify that what is being 
 
 * Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
 
-![watch](../.gitbook/assets/watch.png)
+![](../.gitbook/assets/graphstrategy8.png)
 
 > The Watch nodes are being used to compare:
 >
@@ -155,7 +155,7 @@ It is highly likely that someone else will be opening your program at some point
 * You should use a a Custom Node **when a portion of the graph will be reused often** in other programs
 * You should use a Custom Node if you want to **share a functionality with the Dynamo Community**
 
-![customnode](../.gitbook/assets/customnode.png)
+![](../.gitbook/assets/graphstrategy9.png)
 
 > Collecting the point translation program into a Custom Node makes a robust, unique program portable and far easier to understand. Well named input ports will help other users understand how to use the node. Remember to add descriptions and required data types for each input.
 >
@@ -170,7 +170,7 @@ It is highly likely that someone else will be opening your program at some point
 * When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
 * When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
 
-![](../.gitbook/assets/templating.jpg)
+![](../.gitbook/assets/graphstrategy10.png)
 
 > 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
 > 2. The back-end of the program.
