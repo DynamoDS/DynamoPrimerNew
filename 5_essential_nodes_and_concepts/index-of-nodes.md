@@ -8,9 +8,7 @@ This index provides additional information on all the nodes used in this primer,
 | ------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------- |
 | ![](../.gitbook/assets/Map.jpg) | <p><strong>Map</strong><br>Maps a value into an input range</p> | ![](<../.gitbook/assets/index of nodes - math map.jpg>) |
 
-### Core
-
-#### Core.Color
+### Display
 
 |                                                | Node name                                                                                                             |                                                                     |
 | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -33,7 +31,7 @@ This index provides additional information on all the nodes used in this primer,
 |                                                                | CREATE                                                                                    |                                                                                 |
 | ![](<../.gitbook/assets/Geometry Color By Geometry Color.jpg>) | <p><strong>GeometryColor.ByGeometryColor</strong><br>Displays geometry using a color.</p> | ![](<../.gitbook/assets/index of nodes - geometry color by geometry color.jpg>) |
 
-\####Core.Input
+### Input
 
 |                                              |                                                                                                          |                                                               |
 | -------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -47,7 +45,7 @@ This index provides additional information on all the nodes used in this primer,
 | ![](<../.gitbook/assets/Number slider.jpg>)  | <p><strong>Number Slider</strong><br>A slider that produces numeric values.</p>                          | ![](<../.gitbook/assets/index of nodes - number slider.jpg>)  |
 | ![](../.gitbook/assets/String.jpg)           | <p><strong>String</strong><br>Creates a string.</p>                                                      | ![](<../.gitbook/assets/index of nodes - string.jpg>)         |
 
-\####Core.List
+### List
 
 |                                                          |                                                                                                                                                                                                                                               |                                                                         |
 | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -69,24 +67,25 @@ This index provides additional information on all the nodes used in this primer,
 | ![](<../.gitbook/assets/List Take Every Nth Item.jpg>)   | <p><strong>List.TakeEveryNthItem</strong><br>Fetches items from the given list at indices that are multiples of the given value, after the given offset.</p>                                                                                  | ![](<../.gitbook/assets/index of nodes - list take every nth item.jpg>) |
 | ![](<../.gitbook/assets/List Transpose.jpg>)             | <p><strong>List.Transpose</strong><br>Swaps rows and columns in a list of lists. If there are some rows that are shorter than others, null values are inserted as place holders in the resultant array such that it is always rectangular</p> | ![](<../.gitbook/assets/index of nodes - list transpose.jpg>)           |
 
-\####Core.Logic
+### Math.Logic
 
 |                                      |                                                                                                                                                                                                              |                                                   |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
 |                                      | ACTIONS                                                                                                                                                                                                      |                                                   |
 | ![](<../.gitbook/assets/If (1).jpg>) | <p><strong>If</strong><br>Conditional statement. Checks the boolean value of the test input. If the test input is true, the result outputs the true input, otherwise the result outputs the false input.</p> | ![](<../.gitbook/assets/index of nodes - if.jpg>) |
 
-\####Core.Math
+### Math.Function
 
-|                                                       |                                                                                                                            |                                                                        |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-|                                                       | ACTIONS                                                                                                                    |                                                                        |
-| ![](<../.gitbook/assets/Math cos.jpg>)                | <p><strong>Math.Cos</strong><br>Fines the cosine of an angle.</p>                                                          | ![](<../.gitbook/assets/index of nodes - math cos.jpg>)                |
-| ![](<../.gitbook/assets/Math degrees to radians.jpg>) | <p><strong>Math.DegreesToRadians</strong><br>Converts an angle in degrees to an angle in radians.</p>                      | ![](<../.gitbook/assets/index of nodes - math degrees to radians.jpg>) |
-| ![](<../.gitbook/assets/Math pow.jpg>)                | <p><strong>Math.Pow</strong><br>Raises a number to the specified power.</p>                                                | ![](<../.gitbook/assets/index of nodes - math pow.jpg>)                |
-| ![](<../.gitbook/assets/Math radians to degrees.jpg>) | <p><strong>Math.RadiansToDegrees</strong><br>Converts an angle in radians to an angle in degrees.</p>                      | ![](<../.gitbook/assets/index of nodes - math radians to degrees.jpg>) |
-| ![](<../.gitbook/assets/Math remap range.jpg>)        | <p><strong>Math.RemapRange</strong><br>Adjusts the range of a list of numbers while preserving the distribution ratio.</p> | ![](<../.gitbook/assets/index of nodes - math remap range.jpg>)        |
-| ![](<../.gitbook/assets/Math sin.jpg>)                | <p><strong>Math.Sin</strong><br>Finds the sine of an angle.</p>                                                            | ![](<../.gitbook/assets/index of nodes - math sin.jpg>)                |
+|                                                       |                                                                                                                              |                                                                        |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+|                                                       | ACTIONS                                                                                                                      |                                                                        |
+| ![](<../.gitbook/assets/Math cos.jpg>)                | <p><strong>Math.Cos</strong><br>Fines the cosine of an angle.</p>                                                            | ![](<../.gitbook/assets/index of nodes - math cos.jpg>)                |
+| ![](<../.gitbook/assets/Math degrees to radians.jpg>) | <p><strong>Math.DegreesToRadians</strong><br>Converts an angle in degrees to an angle in radians.</p>                        | ![](<../.gitbook/assets/index of nodes - math degrees to radians.jpg>) |
+| ![](<../.gitbook/assets/Math pow.jpg>)                | <p><strong>Math.Pow</strong><br>Raises a number to the specified power.</p>                                                  | ![](<../.gitbook/assets/index of nodes - math pow.jpg>)                |
+| ![](<../.gitbook/assets/Math radians to degrees.jpg>) | <p><strong>Math.RadiansToDegrees</strong><br>Converts an angle in radians to an angle in degrees.</p>                        | ![](<../.gitbook/assets/index of nodes - math radians to degrees.jpg>) |
+| ![](<../.gitbook/assets/Math remap range.jpg>)        | <p><strong>Math.RemapRange</strong><br>Adjusts the range of a list of numbers while preserving the distribution ratio.</p>   | ![](<../.gitbook/assets/index of nodes - math remap range.jpg>)        |
+| ![](<../.gitbook/assets/Math sin.jpg>)                | <p><strong>Math.Sin</strong><br>Finds the sine of an angle.</p>                                                              | ![](<../.gitbook/assets/index of nodes - math sin.jpg>)                |
+| ![](../.gitbook/assets/Formula.jpg)                   | <p><strong>Formula</strong><br>Evaluates mathematical formulas. Uses NCalc for evaluation. See http://ncalc.codeplex.com</p> | ![](<../.gitbook/assets/index of nodes - formula.jpg>)                 |
 
 \####Core.Object
 
@@ -95,12 +94,7 @@ This index provides additional information on all the nodes used in this primer,
 |                                              | ACTIONS                                                                          |                                                               |
 | ![](<../.gitbook/assets/Object is Null.jpg>) | <p><strong>Object.IsNull</strong><br>Determines if the given object is null.</p> | ![](<../.gitbook/assets/index of nodes - object is null.jpg>) |
 
-\####Core.Scripting
 
-|                                     |                                                                                                                              |                                                        |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-|                                     | ACTIONS                                                                                                                      |                                                        |
-| ![](../.gitbook/assets/Formula.jpg) | <p><strong>Formula</strong><br>Evaluates mathematical formulas. Uses NCalc for evaluation. See http://ncalc.codeplex.com</p> | ![](<../.gitbook/assets/index of nodes - formula.jpg>) |
 
 \####Core.String
 

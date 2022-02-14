@@ -4,28 +4,27 @@
 
 This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and essential concepts can be found in the following sections, we recommend new users to cover these essential topics.
 
-* [1-2\_what\_is\_dynamo.md](1-2\_what\_is\_dynamo.md "mention")
+* [1-what-is-dynamo.md](1-what-is-dynamo.md "mention")
 * [2\_setup\_for\_dynamo](../2\_setup\_for\_dynamo/ "mention")
-* [2-2\_the\_dynamo\_ui](../2-2\_the\_dynamo\_ui/ "mention")
-* [3-1\_dynamo\_nodes](../3-1\_dynamo\_nodes/ "mention")
+* [3\_user\_interface](../3\_user\_interface/ "mention")
+* [4\_nodes\_and\_wires](../4\_nodes\_and\_wires/ "mention")
 
 For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
 
-#### Under Essential Nodes and Concepts
-
-* [5\_geometry-for-computational-design](../essential-nodes-and-concepts/5\_geometry-for-computational-design/ "mention")
-* [4\_the-building-blocks-of-programs](../essential-nodes-and-concepts/4\_the-building-blocks-of-programs/ "mention")
-* [6\_designing-with-lists](../essential-nodes-and-concepts/6\_designing-with-lists/ "mention")
-* [9\_dictionaries-in-dynamo](../essential-nodes-and-concepts/9\_dictionaries-in-dynamo/ "mention")
+* [5\_essential\_nodes\_and\_concepts](../5\_essential\_nodes\_and\_concepts/ "mention")
 
 If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
 
-* [creating-a-vase.md](../sample-workflow/your-first-dynamo-graph/creating-a-vase.md "mention") (GIF)
-* [2-6\_the\_quick\_start\_guide.md](../sample-workflow/your-first-dynamo-graph/2-6\_the\_quick\_start\_guide.md "mention") (GIF)
-* [Broken link](broken-reference "mention")(GIF)
+* [1-parametric-vase.md](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md "mention")
+
+![](<../.gitbook/assets/vase1 (3).gif>)
+
+* [2-attractor-points.md](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md "mention")
+
+![](<../.gitbook/assets/attractor1 (1).gif>)
 
 {% hint style="info" %}
-There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each chapter.
+There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each page.
 {% endhint %}
 
 ### The Community

@@ -2,9 +2,9 @@
 
 Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
 
-## What is Data?&#x20;
+## What is Data?
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).&#x20;
+Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
 
 In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
 
@@ -16,7 +16,7 @@ In Dynamo, we add/feed data to the input Ports of Nodes - we can have data witho
 
 ### Null - Absence of Data
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.&#x20;
+Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
 
 Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
 
@@ -24,9 +24,9 @@ Testing for nulls and removing nulls from data structure is a crucial part to cr
 | ----------------------------------------------------- | ------------- | ------ | ------- |
 | ![](<../../.gitbook/assets/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
 
-### Data Structures&#x20;
+### Data Structures
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.&#x20;
+When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
 
 In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
 
@@ -47,11 +47,11 @@ The key concept to understand about data hierarchy in Dynamo: **with respect to 
 
 ## Exercise: Using Data to Make a Chain of Cylinders
 
+> Download the example file Building Blocks of Programs - Data.dyn.
+>
+> A full list of example files can be found in the Appendix.
+
 In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
-
-Download the example file Building Blocks of Programs - Data.dyn.&#x20;
-
-A full list of example files can be found in the Appendix.
 
 ### Part I: Set up Graph for one cylinder with some changeable parameters.
 
@@ -59,7 +59,7 @@ A full list of example files can be found in the Appendix.
 
 ![](<../../.gitbook/assets/data - exercise step 1.jpg>)
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.&#x20;
+2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
 
 **Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the _Plane.ByOriginNormal_ node. This gives us a rectangular plane in the Dynamo preview.
 
@@ -79,7 +79,7 @@ A full list of example files can be found in the Appendix.
 
 6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
 
-\*\*Domain Edit - \*\*after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
 
 **Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
 
@@ -109,15 +109,15 @@ A full list of example files can be found in the Appendix.
 
 10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
 
-a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
-
-b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
-
-c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
-
-d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
-
 ![](<../../.gitbook/assets/data - exercise step 10.jpg>)
+
+> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+>
+> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+>
+> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+>
+> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
 
 11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original _Point.ByCoordinates_. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
 

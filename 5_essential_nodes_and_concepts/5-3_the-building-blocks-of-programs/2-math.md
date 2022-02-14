@@ -41,27 +41,25 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-The golden spiral visual programming form.
+The image below represents the golden spiral in in visual programming form. When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
 
 ![](<../../.gitbook/assets/math - part I-02.jpg>)
 
-> When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
-
-a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
-
-b. **Multiplication (\*)** : The multiplication Node is represented by an asterisk. We'll use this repeatedly to connect multiplying variables
-
-c. **Math.RadiansToDegrees**: The '_t_' values need to be translated to degrees for their evaluation in the trigonometric functions. Remember, Dynamo defaults to degrees for evaluating these functions.
-
-d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
-
-e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
-
-f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
+> a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
+>
+> b. **Multiplication (\*)** : The multiplication Node is represented by an asterisk. We'll use this repeatedly to connect multiplying variables
+>
+> c. **Math.RadiansToDegrees**: The '_t_' values need to be translated to degrees for their evaluation in the trigonometric functions. Remember, Dynamo defaults to degrees for evaluating these functions.
+>
+> d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
+>
+> e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
+>
+> f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
 
 ### Part II: From Formula to Geometry
 
-Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [7\_code-blocks-and-design-script](../../coding-in-dynamo/7\_code-blocks-and-design-script/ "mention") to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
+Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
 
 **Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
 

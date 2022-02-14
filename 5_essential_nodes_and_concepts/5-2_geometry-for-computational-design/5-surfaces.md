@@ -4,7 +4,7 @@
 
 ### What is Surface
 
-We use [Surface ](5-5\_surfaces.md#surface)in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+We use [Surface](5-surfaces.md#surface) in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
 
 ### Surface at Parameter
 
@@ -20,7 +20,7 @@ Import and evaluate a Surface at a Parameter in Dynamo to see what kind of infor
 >
 > A full list of example files can be found in the Appendix.
 
-## Deep Dive into...&#x20;
+## Deep Dive into...
 
 ### Surface
 
@@ -75,4 +75,3 @@ While "Topology" generally describes a concept around how parts are connected an
 ![PolySurface](../../.gitbook/assets/PolySurface.jpg)
 
 Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.
-

@@ -4,11 +4,11 @@
 
 ### What is Mesh?
 
-In the field of computational modeling, [Meshes ](5-7\_meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
 
 ### Mesh Elements
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.&#x20;
+Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
 
 To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
 
@@ -19,13 +19,11 @@ To create a Mesh we need a list of vertices and a system of grouping those verti
 
 ### Mesh Toolkit
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.&#x20;
+Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
 
 The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
 
 Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
-
-
 
 ![Mesh Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
 
@@ -41,7 +39,7 @@ A Mesh is a collection of quadrilaterals and triangles that represents a surface
 > 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
 > 3. Mesh faces
 
-### Vertices + Vertex Normals&#x20;
+### Vertices + Vertex Normals
 
 The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
 
@@ -50,7 +48,7 @@ The vertices of a Mesh are simply a list of points. The index of the vertices is
 > 1. Vertices
 > 2. Vertex Normals
 
-### Faces&#x20;
+### Faces
 
 A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
 

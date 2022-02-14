@@ -2,9 +2,9 @@
 
 ## Points in Dynamo
 
-### What is a Point?&#x20;
+### What is a Point?
 
-A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.&#x20;
+A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
 
 ### 2D & 3D Point
 
@@ -25,10 +25,12 @@ Parameters for both Curves and Surfaces are continuous and extend beyond the edg
 > 1. Point in assumed World XYZ Coordinates
 > 2. Point relative to a given Coordinate System (Cylindrical)
 > 3. Point as UV Coordinate on a Surface
+
+> Download the example file (Right click and "Save Link As..."): \[Geometry for Computational Design - Points.dyn]
 >
->
->
-> Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Points.dyn]\(datasets/5-3/Geometry for Computational Design - Points.dyn). A full list of example files can be found in the Appendix.
+> A full list of example files can be found in the Appendix.
+
+
 
 ## Deep Dive into...
 
