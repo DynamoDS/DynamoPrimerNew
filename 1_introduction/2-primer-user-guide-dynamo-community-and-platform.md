@@ -1,8 +1,10 @@
 # Primer User Guide, Dynamo Community & Platform
 
+This Primer includes chapters developed with Mode Lab. These chapters focus on the essentials you will need to get up and running developing your own visual programs with Dynamo and key insights on how to take Dynamo further.&#x20;
+
 ### Primer User Guide
 
-This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and essential concepts can be found in the following sections, we recommend new users to cover these essential topics.
+This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and key concepts can be found in the following sections, we recommend new users to cover the following topics:
 
 * [1-what-is-dynamo.md](1-what-is-dynamo.md "mention")
 * [2\_setup\_for\_dynamo](../2\_setup\_for\_dynamo/ "mention")

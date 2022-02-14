@@ -19,30 +19,13 @@ The power of Dynamo can be found in a wide variety of design-related activities.
 
 In the midst of this activity and exciting opportunity for working with Dynamo, we need a document of the same caliber, the Dynamo Primer.
 
-This Primer includes chapters developed with Mode Lab. These chapters focus on the essentials you will need to get up and running developing your own visual programs with Dynamo and key insights on how to take Dynamo further. Here's what you can expect to learn from the primer:
-
-* **Context** - What exactly is "Visual Programming" and what are the concepts I need to understand to dive in to Dynamo?
-* **Getting Started** - How do I get Dynamo and create my first program?
-* **What's in a Program** - What are the functional parts of Dynamo and how do I use them?
-* **Building Blocks** - What is "Data" and what are some fundamental types I can start using in my programs?
-* **Geometry for Design** - How do I work with geometric elements in Dynamo?
-* **Lists, Lists, Lists** - How to do I manage and coordinate my data structures?
-* **Code in Nodes** - How can I start extending Dynamo with my own code?
-* **Computational BIM** - How can I use Dynamo with a Revit model?
-* **Custom Nodes** - How can I create my own nodes?
-* **Packages** - How can I share my tools with the community?
-
-This is an exciting time to be learning about, working with, and developing for Dynamo. Let's get started!
-
-***
+Refer to the [primer user guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) to find out what you can expect to learn from this primer.
 
 ### Open Source
 
 The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: https://github.com/DynamoDS/DynamoPrimer/issues
 
 If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: https://github.com/DynamoDS/DynamoPrimer.
-
-***
 
 ### The Dynamo Primer Project
 
@@ -52,13 +35,13 @@ The Dynamo Primer is an open source project, initiated by Matt Jezyk and the Dyn
 
 [![](.gitbook/assets/MODELAB\_Logo.png)](http://modelab.is)
 
-****
+***
 
 **John Pierson of Parallax Team** was commissioned to update the primer to reflect the Dynamo 2.0. revisions.
 
 [![](.gitbook/assets/PRLX\_Logo.jpg)](http://www.parallaxteam.com)
 
-****
+***
 
 **Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.![](.gitbook/assets/matterlab-logo.png)
 
