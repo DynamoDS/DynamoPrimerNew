@@ -10,11 +10,11 @@ Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 
 
 ## Exercise: Publishing a Custom Node Locally
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.&#x20;
->
-> [PointsToSurface.dyf](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/10\_Custom-Nodes/datasets/10-3/PointsToSurface.dyf)
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/PointsToSurface.dyf" %}
 
 Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
 
@@ -32,7 +32,7 @@ Choose a folder to house all of the custom nodes that you plan on publishing loc
 
 ![](<../../.gitbook/assets/publish custom node exercise - 04.jpg>)
 
-To check on the custom node folder location, go to _Dynamo > Preferences  > Package Manager > Node and Package Paths_
+To check on the custom node folder location, go to _Dynamo > Preferences > Package Manager > Node and Package Paths_
 
 ![](<../../.gitbook/assets/publish custom node exercise - 05.jpg>)
 
@@ -41,7 +41,7 @@ In this window we see a list of paths.
 ![](<../../.gitbook/assets/publish custom node exercise - 06.jpg>)
 
 > 1. _Documents\DynamoCustomNodes..._ refers to the location of custom nodes we've published locally.
-> 2. _AppData\Roaming\Dynamo..._ refers to the default location of Dynamo Packages installed online. &#x20;
+> 2. _AppData\Roaming\Dynamo..._ refers to the default location of Dynamo Packages installed online.
 > 3. You may want to move your local folder path down in the list order above (by selecting the folder path and clicking on the down arrow to the left of the path names). The top folder is the default path for package installs. So by keeping the default Dynamo package install path as the default folder, online packages will be separated from your locally published nodes.
 
 We switched the order of the path names in order to have Dynamo's default path as the package install location.

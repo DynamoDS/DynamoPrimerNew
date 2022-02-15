@@ -10,7 +10,11 @@ In the image below, we map a point from one surface to another using UV coordina
 
 ![](<../../.gitbook/assets/custom node for uv mapping pt I - 01.jpg>)
 
-> Download and unzip the example files for this exercise (Right click and choose "Save Link As..."). A full list of example files can be found in the Appendix. [UV-CustomNode.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/10\_Custom-Nodes/datasets/10-2/UV-CustomNode.zip)
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/UV-CustomNode.zip" %}
 
 Let’s start by creating a graph that we want to nest into a custom node. In this example, we will create a graph that maps polygons from a base surface to a target surface, using UV coordinates. This UV mapping process is something we use frequently, making it a good candidate for a custom node. For more information on surfaces and UV space, see section 5.5. The complete graph is _UVmapping\_Custom-Node.dyn_ from the .zip file downloaded above.
 
@@ -42,8 +46,6 @@ Now that we have a base surface and a set of UV coordinates, we can import a tar
 The final step is to use the 3D points to construct rectangular surface patches.
 
 ![](<../../.gitbook/assets/custom node for uv mapping pt I - 05.jpg>)
-
-
 
 > 1. **PolyCurve.ByPoints:** Connect the points on the surface to construct a polycurve through the points.
 > 2. **Boolean:** Add a Boolean to the workspace and connect it to the _‘connectLastToFirst’_ input and toggle to True to close the polycurves. You should now see rectangles mapped to the surface.
@@ -81,8 +83,6 @@ Save the custom node and return to the home workspace. Notice the **MapPolygonsT
 ![](<../../.gitbook/assets/custom node for uv mapping pt II - 05.jpg>)
 
 We can also add to the robustness of the Custom Node by adding in **Custom Comments**. Comments can help to hint at the input and output types or explain the functionality of the node. Comments will appear when the user hovers over an input or output of a Custom Node.
-
-
 
 Double click the Custom Node to edit it. This will re-open the yellow background workspace.
 

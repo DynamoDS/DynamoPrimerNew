@@ -17,9 +17,11 @@ In the image below we are collecting all of the rooms in the Revit model, gettin
 
 ### Part I: Creating Room Dictionary
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [RoomDictionary.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/09\_Dictionaries/datasets/9-4\_roomDictionary.dyn).&#x20;
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/roomDictionary.dyn" %}
 
 Now let's recreate this idea using dictionaries. First we need to collect all of the rooms in our Revit model.
 
