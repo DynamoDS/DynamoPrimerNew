@@ -6,10 +6,10 @@ This Primer includes chapters developed with Mode Lab. These chapters focus on t
 
 This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and key concepts can be found in the following sections, we recommend new users to cover the following topics:
 
-* [1-what-is-dynamo.md](1-what-is-dynamo.md "mention")
-* [2\_setup\_for\_dynamo](../2\_setup\_for\_dynamo/ "mention")
-* [3\_user\_interface](../3\_user\_interface/ "mention")
-* [4\_nodes\_and\_wires](../4\_nodes\_and\_wires/ "mention")
+* [What is Dynamo & How Does It Work?](1-what-is-dynamo.md)
+* [Setup for Dynamo](../2\_setup\_for\_dynamo/)
+* [User Interface](../3\_user\_interface/)
+* [Nodes and Wires](../4\_nodes\_and\_wires/)
 
 For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
 
