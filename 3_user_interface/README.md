@@ -20,13 +20,13 @@ Here are Menus for basic functionality of the Dynamo application. Like most Wind
 
 #### Dynamo Menus
 
-General info and settings can be found on the **Dynamo** drop down menu.&#x20;
+General info and settings can be found on the **Dynamo** drop down menu.
 
 ![](<../.gitbook/assets/user interface - dynamo menu.jpg>)
 
 > 1. About - Find out the Dynamo version installed on your machine.
 > 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
-> 3. Preferences -  Includes settings such as define the application's decimal point precision and geometry render quality.
+> 3. Preferences - Includes settings such as define the application's decimal point precision and geometry render quality.
 > 4. Exit Dynamo
 
 #### Help
@@ -36,7 +36,7 @@ If you're stuck, check out the **Help** Menu. You may access one of the Dynamo r
 ![](<../.gitbook/assets/user interface - help menu.jpg>)
 
 > 1. Getting Started - A brief introduction to using Dynamo.
-> 2. Interactive Guides -&#x20;
+> 2. Interactive Guides -
 > 3. Samples - Reference example files.
 > 4. Dynamo Dictionary - Resource with documentation on all nodes.
 > 5. Dynamo Website - View the Dynamo Project on GitHub.
@@ -57,13 +57,13 @@ Dynamo's Toolbar contains a series of buttons for quick access to working with f
 
 ### Library
 
-The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [3-3\_dynamo\_libraries.md](3-3\_dynamo\_libraries.md "mention") section will cover a more detailed guidance on using it.
+The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [2-library.md](2-library.md "mention") section will cover a more detailed guidance on using it.
 
 ![](<../.gitbook/assets/user interface - library (4).jpg>)
 
 ### Workspace
 
-The Workspace is where we compose our visual programs, you may also change its Preview setting to view the 3D geometries from here. Refer [workspace.md](workspace.md "mention") for more details.
+The Workspace is where we compose our visual programs, you may also change its Preview setting to view the 3D geometries from here. Refer [1-workspace.md](1-workspace.md "mention") for more details.
 
 ![](<../.gitbook/assets/user interface - workspace (1).gif>)
 
@@ -75,6 +75,6 @@ Run your Dynamo script from here. Click the dropdown icon on the Execution butto
 
 * Automatic: Runs your script automatically. Changes is updated in realtime.
 * Manual: Script only runs when the 'Run' button is clicked. Useful for when making changes to complicated and 'heavy script'
-* Periodic: This option is grayed out by default. Only available when the DateTime.Now Node is used.
+* Periodic: This option is grayed out by default. Only available when the DateTime.Now Node is used. You can set the graph to run automatically at a specified interval.
 
 ![](<../.gitbook/assets/user interface - execution bar DateTime node.jpg>)
