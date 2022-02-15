@@ -1,7 +1,5 @@
 # What is Dynamo & How Does It Work?
 
-(video)
-
 Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
 
 {% hint style="info" %}
