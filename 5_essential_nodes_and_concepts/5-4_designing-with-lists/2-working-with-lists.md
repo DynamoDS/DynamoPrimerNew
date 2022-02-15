@@ -46,10 +46,8 @@ The image below is the base graph which we are drawing lines between two circles
 > 3. Plug the node from the previous step into the origin input of a Plane.ByOriginNormal node.
 > 4. Using a Circle.ByPlaneRadius node, plug the node from the previous step into the plane input.
 > 5. Using code block, designate a value of `50;` for the radius. This is the first circle we'll create.
-> 6. With a _Geometry.Translate_ node, move the circle up 100 units in the Z direction.
-> 7. With a code block node, define a range of ten numbers between 0 and 1 with this line: `0..1..#10;`
-> 8. Plug the code block from the previous step into the param input of two Curve.PointAtParameter nodes. Plug Circle.ByPlaneRadius into the curve input of the top node, and Geometry.Translate into the curve input of the node beneath it.
-> 9. Using a Line.ByStartPointEndPoint, connect the two Curve.PointAtParameter nodes.
+> 6. With a _Geometry.Translate_ node, move the circle up 100 units in the Z direction.I AM CREATING A CONFLICT..Plug the code block from the previous step into the param input of two Curve.PointAtParameter nodes. Plug Circle.ByPlaneRadius into the curve input of the top node, and Geometry.Translate into the curve input of the node beneath it.
+> 7. Using a Line.ByStartPointEndPoint, connect the two Curve.PointAtParameter nodes.
 
 ### List.Count
 
