@@ -13,15 +13,15 @@ This guide is designed to cater to readers from different backgrounds and skill 
 
 For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
 
-* [5\_essential\_nodes\_and\_concepts](../5\_essential\_nodes\_and\_concepts/ "mention")
+* [Essential Nodes & Concepts](../5\_essential\_nodes\_and\_concepts/)
 
 If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
 
-* [1-parametric-vase.md](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md "mention")
+* [Parametric Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
 ![](<../.gitbook/assets/vase1 (3).gif>)
 
-* [2-attractor-points.md](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md "mention")
+* [Attractor points](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](<../.gitbook/assets/attractor1 (1).gif>)
 
