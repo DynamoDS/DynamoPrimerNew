@@ -37,11 +37,13 @@ The examples below demonstrate ways to implement Revit-specific operations from 
 
 ## Exercise 1
 
-> Create a new Revit Project.&#x20;
+> Create a new Revit Project.
 >
-> Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix. [Revit-Doc.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/10\_Custom-Nodes/datasets/10-5/Revit-Doc.dyn)
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Revit-Doc.dyn" %}
 
 In these exercises, we'll explore elementary Python scripts in Dynamo for Revit. The exercise will focus on dealing with Revit files and elements, as well as the communication between Revit and Dynamo.
 
@@ -72,19 +74,17 @@ app = uiapp.Application
 OUT = [doc,uiapp,app]
 ```
 
-
-
 ## Exercise 2
 
-> Download the example files that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.&#x20;
->
-> 1. Revit-ReferenceCurve.dyn
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Revit-ReferenceCurve.dyn" %}
 
 In this exercise, we'll make a simple Model Curve in Revit using the Dynamo Python node.
 
-Begin by creating a new Conceptual Mass family in Revit.&#x20;
+Begin by creating a new Conceptual Mass family in Revit.
 
 ![](<../../.gitbook/assets/python & revit - exercise 02 - 01.jpg>)
 
@@ -140,11 +140,11 @@ In Dynamo, we've created two reference points with a line connecting them using 
 
 ## Exercise 3
 
-> Download and unzip the example files that accompany this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.&#x20;
->
-> 1. Revit-StructuralFraming.zip
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Revit-StructuralFraming.zip" %}
 
 This exercise keeps it simple, but drives home the topics of connecting data and geometry from Revit to Dynamo and back. Let's begin by opening Revit-StructuralFraming.rvt. Once opened, launch Dynamo and open the file Revit-StructuralFraming.dyn.
 

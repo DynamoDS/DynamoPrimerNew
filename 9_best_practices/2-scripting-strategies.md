@@ -4,7 +4,7 @@ Text-based scripting within the visual-scripting environment enables powerful an
 
 ![](../.gitbook/assets/cad-chart-textual.jpg)
 
-### Know When to Script &#x20;
+### Know When to Script
 
 Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
 
@@ -250,11 +250,11 @@ for i in range(xCount):
 
 ## Exercise: Steepest Path
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As...").
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
->
-> [SteepestPath.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/13\_Best-Practice/datasets/13-1/SteepestPath.dyn)
+
+{% file src="../.gitbook/assets/SteepestPath.dyn" %}
 
 With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
 

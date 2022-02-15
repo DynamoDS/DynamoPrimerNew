@@ -17,7 +17,7 @@ As a general analogy for the dot notation, how can we deal with a parametric app
 
 I don't know about you, but judging by the outputs in the table above, this looks like one tasty apple. I think I'll _Apple.eat()_ it.
 
-### Dot Notation in Code Block&#x20;
+### Dot Notation in Code Block
 
 With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block.
 
@@ -39,7 +39,7 @@ Regular nodes (most of your library), generally come in three types. You’ll fi
 > 2. **Action** - Perform an action on something
 > 3. **Query** - Get a property of something that already exists
 
-#### Create&#x20;
+#### Create
 
 The "Create" category will construct geometry from scratch. We input values in the code block from left-to-right. These inputs are in the same order as the inputs on the node from top-to-bottom.
 
@@ -64,7 +64,7 @@ Query-type methods get a property of an object. Since the object itself is the i
 
 ### How About Lacing?
 
-Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.&#x20;
+Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.
 
 ![](<../../.gitbook/assets/DesignScript - lacing.jpg>)
 
@@ -76,15 +76,17 @@ With this notation, we can also specify which list will be dominant: 2 lists of 
 
 ### Node to Code
 
-While the code block methods above may take some getting used to, there is a feature in Dynamo called "Node to Code" which will make the process easier.  To use this feature,  select an array of nodes in your Dynamo graph, right-click on the canvas and select "Node to Code". Dynamo condenses these nodes into a code block, with all of the inputs and outputs!  Not only is this a great tool for learning code block, but it also allows you to work with a more efficient and parametric Dynamo graph.  We'll conclude the exercise below by using "Node to Code", so don't miss it.
+While the code block methods above may take some getting used to, there is a feature in Dynamo called "Node to Code" which will make the process easier. To use this feature, select an array of nodes in your Dynamo graph, right-click on the canvas and select "Node to Code". Dynamo condenses these nodes into a code block, with all of the inputs and outputs! Not only is this a great tool for learning code block, but it also allows you to work with a more efficient and parametric Dynamo graph. We'll conclude the exercise below by using "Node to Code", so don't miss it.
 
 ![](<../../.gitbook/assets/DesignScript - node to code.jpg>)
 
 ## Exercise: Surface Attractor
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix. \[Dynamo-Syntax\_Attractor-Surface.dyn]
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
 To show the power of code block, we are going to translate an existing attractor field definition into code block form. Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
 
@@ -98,7 +100,7 @@ Begin by recreating the definition in the image above (or by opening the sample 
 
 ![](<../../.gitbook/assets/DesignScript - exercise - 02.jpg>)
 
-> 1. Starting from the beginning, let's define the reference point first: `Point.ByCoordinates(x,y,0);`  We use the same Point.ByCoordinates syntax as is specified on the top of the reference point node.
+> 1. Starting from the beginning, let's define the reference point first: `Point.ByCoordinates(x,y,0);` We use the same Point.ByCoordinates syntax as is specified on the top of the reference point node.
 > 2. The variables _x_ and _y_ are inserted into the code block so that we may update these dynamically with sliders.
 > 3. Add some _sliders_ to the Code Block inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
 
@@ -114,7 +116,7 @@ Begin by recreating the definition in the image above (or by opening the sample 
 ![](<../../.gitbook/assets/DesignScript - exercise - 05.jpg>)
 
 > 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. And since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
-> 2. Reading from the actual node on the canvas, we see that there are three inputs.  The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
+> 2. Reading from the actual node on the canvas, we see that there are three inputs. The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
 > 3. The direction is simple enough, we use a `Vector.ZAxis()` to move vertically.
 > 4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: `refPt.DistanceTo(gridPts)`
 > 5. The final line of code gives us the translated points: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
@@ -127,7 +129,7 @@ Begin by recreating the definition in the image above (or by opening the sample 
 
 > 1. And finally, to add some depth to the surface, we construct a solid using `solid = srf.Thicken(5);` In this case we thickened the surface by 5 units in the code, but we could always declare this as a variable (calling it thickness for example) and then control that value with a slider.
 
-#### Simplify the Graph with "Node to Code"&#x20;
+#### Simplify the Graph with "Node to Code"
 
 The "Node to Code" feature automates the entire exercise that we just completed with the click of a button. Not only is this powerful for creating custom definitions and reusable code blocks, but it is also a really helpful tool to learn how to script in Dynamo:
 

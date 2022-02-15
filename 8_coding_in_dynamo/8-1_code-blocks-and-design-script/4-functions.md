@@ -4,7 +4,7 @@ Functions can be created in a code block and recalled elsewhere in a Dynamo defi
 
 ### Parent
 
-The first line has the key word “def”, then the function name, then the names of inputs in parentheses. Braces define the body of the function. Return a value with “return =”. Code Blocks that define a function do not have input or output ports because they are called from other Code Blocks.&#x20;
+The first line has the key word “def”, then the function name, then the names of inputs in parentheses. Braces define the body of the function. Return a value with “return =”. Code Blocks that define a function do not have input or output ports because they are called from other Code Blocks.
 
 ![](<../../.gitbook/assets/functions parent def.jpg>)
 
@@ -32,11 +32,11 @@ FunctionName(in1,in2);
 
 ## Exercise: Sphere By Z
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.&#x20;
->
-> [Functions\_SphereByZ.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/07\_Code-Block/datasets/7-4/Functions\_SphereByZ.dyn)
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Functions_SphereByZ.dyn" %}
 
 In this exercise, we will make a generic definition that will create spheres from an input list of points. The radius of these spheres are driven by the Z property of each point.
 
@@ -86,7 +86,7 @@ Create a code block and introduce our definition.
 
 ![](<../../.gitbook/assets/functions - exercise - 06.jpg>)
 
-> 1. An important step, we need to define the output of the function by adding the line `return = sphereRadius;` to the _sphereByZ_ function.&#x20;
+> 1. An important step, we need to define the output of the function by adding the line `return = sphereRadius;` to the _sphereByZ_ function.
 > 2. Now we see that the output of the Code Block gives us the Z coordinates of each point.
 
 Let's create actual spheres now by editing the _Parent_ function.
@@ -98,7 +98,7 @@ Let's create actual spheres now by editing the _Parent_ function.
 
 ![](<../../.gitbook/assets/functions - exercise - 08.jpg>)
 
-> 1\. To temper the size of these spheres, let's update the sphereRadius value by adding a divider: `sphereRadius = inputPt.Z/20;`  Now we can see the separate spheres and start to make sense of the relationship between radius and Z value.
+> 1\. To temper the size of these spheres, let's update the sphereRadius value by adding a divider: `sphereRadius = inputPt.Z/20;` Now we can see the separate spheres and start to make sense of the relationship between radius and Z value.
 
 ![](<../../.gitbook/assets/functions - exercise - 09.jpg>)
 
@@ -117,7 +117,7 @@ One final step: let's drive the radius ratio with a user defined parameter. To d
 
 ![](<../../.gitbook/assets/functions - exercise - 12.jpg>)
 
-> 1.  Update the _sphereByZ_ definition to:&#x20;
+> 1.  Update the _sphereByZ_ definition to:
 >
 >     ```
 >     def sphereByZ(inputPt,radiusRatio)

@@ -10,23 +10,27 @@ This workflow will teach you how to:
 
 * Use number sliders to control variables in your design.
 * Create and modify geometric elements using nodes.
-* &#x20;Visualize design results in real-time.
+* Visualize design results in real-time.
 
 ![](<../../.gitbook/assets/vase1 (3).gif>)
 
 ## Defining Our Objectives
 
-Before jumping into dynamo let's conceptually design our vase.&#x20;
+Before jumping into dynamo let's conceptually design our vase.
 
-Let's say we are going to design a clay vase that takes into account manufacturing practices used by ceramists. Ceramists normally use a pottery wheel to fabricate cylindrical vases. Then, by applying pressure on various heights of the vase they can alter the shape of the vase and create varied designs.   &#x20;
+Let's say we are going to design a clay vase that takes into account manufacturing practices used by ceramists. Ceramists normally use a pottery wheel to fabricate cylindrical vases. Then, by applying pressure on various heights of the vase they can alter the shape of the vase and create varied designs.
 
 We would use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
 
 ![](../../.gitbook/assets/vase2.png)
 
-
-
 ## Getting Started
+
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+
 
 We need the nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a node that does so. Use the **Search field** or browse through the **Library** to find the **Circle.ByCenterPointRadius** node and add it to the Workspace
 
@@ -39,8 +43,6 @@ We need the nodes that will represent the sequence of actions Dynamo will execut
 Let's take a closer look at this node. On the left side, you have the node's inputs (_centerPoint_ and _radius_) and on the right side, you have the node's output (Circle). Notice that the outputs have a light blue line. This means that the input has a default value. To get more information about the input hover over its name. The _radius_ input needs a double input and has a default value of 1.
 
 ![](../../.gitbook/assets/vase10.png)
-
-
 
 We will leave the default value of _centerPoint_ but add a **Number Slider** to control the radius. As we did with the **Circle.ByCenterPointRadius** node, use the library to search for **Number Slider** and add it to your graph.
 
@@ -66,7 +68,7 @@ Let's continue adding some nodes and connections to our logic to define our vase
 
 ### Creating Circles of Different Radii
 
-Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.&#x20;
+Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
 
 ![](<../../.gitbook/assets/vase4 (1).png>)
 
@@ -92,11 +94,11 @@ Let's also turn off the preview in other nodes to only display the Surface.ByLof
 
 ![](<../../.gitbook/assets/vase6 (1).png>)
 
-> 3\. A surface is created by lofting the translated circles.&#x20;
+> 3\. A surface is created by lofting the translated circles.
 
 ## Results
 
-Our workflow is ready! We can now use the **Number Sliders** we defined in our script to create different vase designs.&#x20;
+Our workflow is ready! We can now use the **Number Sliders** we defined in our script to create different vase designs.
 
 ![](<../../.gitbook/assets/vase1 (3).gif>)
 

@@ -178,7 +178,11 @@ It is highly likely that someone else will be opening your program at some point
 
 ## Exercise - Architectural Roof
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. [RoofDrainageSim.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/13\_Best-Practice/datasets/13-2/RoofDrainageSim.zip)
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../.gitbook/assets/RoofDrainageSim.zip" %}
 
 Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
 
