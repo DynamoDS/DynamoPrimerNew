@@ -14,11 +14,13 @@ The sample Nodes above are strings. A number can be represented as a string, as 
 
 ## Exercise
 
-### Querying Strings
-
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Strings.dyn]
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Strings.dyn" %}
+
+### Querying Strings
 
 You can parse through large amounts of data quickly by querying strings. We'll talk about some basic operations which can speed up a workflow and help for software interoperability.
 

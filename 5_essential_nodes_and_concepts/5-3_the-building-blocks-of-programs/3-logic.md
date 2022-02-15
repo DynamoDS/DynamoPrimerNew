@@ -28,13 +28,15 @@ Again, the Nodes are working identically. If the _boolean_ is changed to _false_
 
 ## Exercise: Logic and Geometry
 
-### Part I: Filtering a List
-
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Logic.dyn]
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
 
-1.Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Logic.dyn" %}
+
+### Part I: Filtering a List
+
+1. Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
 
 ![](<../../.gitbook/assets/logic - exercise part I-01.jpg>)
 

@@ -15,9 +15,11 @@ Operators are a set of components that use algebraic functions with two numeric 
 
 ## Exercise: The Golden Spiral Formula
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Math.dyn]
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Math.dyn" %}
 
 ### Part I: Parametric Formula
 

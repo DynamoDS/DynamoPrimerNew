@@ -47,9 +47,11 @@ The key concept to understand about data hierarchy in Dynamo: **with respect to 
 
 ## Exercise: Using Data to Make a Chain of Cylinders
 
-> Download the example file Building Blocks of Programs - Data.dyn.
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Data.dyn" %}
 
 In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
 

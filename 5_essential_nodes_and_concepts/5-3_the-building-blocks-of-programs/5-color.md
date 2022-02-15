@@ -59,9 +59,11 @@ The **Display.BySurfaceColors** node gives us the ability to map data across a s
 
 ### Basic Helix with Colors
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - Color.dyn]
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Building Blocks of Programs - Color.dyn" %}
 
 This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
 
@@ -133,9 +135,11 @@ If we change the value of the _number slider_ from earlier in the definition, th
 
 ### Color on Surfaces Exercise
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): \[Building Blocks of Programs - ColorOnSurface.zip]
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
 First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
 
