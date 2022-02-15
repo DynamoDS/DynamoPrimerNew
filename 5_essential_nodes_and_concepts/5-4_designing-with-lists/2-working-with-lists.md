@@ -35,9 +35,11 @@ All of the operations listed above have analogous Dynamo nodes for working with 
 
 ### **List Operations**
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As...")
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/List-Operations.dyn" %}
 
 The image below is the base graph which we are drawing lines between two circles to represent basic list operations. We'll explore how to manage data within a list and demonstrate the visual results through the list actions below.
 
@@ -53,9 +55,15 @@ The image below is the base graph which we are drawing lines between two circles
 
 ### List.Count
 
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/List-Count.dyn" %}
+
 The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-Count.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-2/List-Count.dyn). A full list of example files can be found in the Appendix.
+
 
 ![Count](<../../.gitbook/assets/working with list - list operation - list count.jpg>)
 
@@ -63,9 +71,13 @@ The _List.Count_ node is straightforward: it counts the number of values in a li
 
 ### List.GetItemAtIndex
 
-_List.GetItemAtIndex_ is a fundamental way to query an item in the list.
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
 
-Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-GetItemAtIndex.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-2/List-GetItemAtIndex.dyn). A full list of example files can be found in the Appendix.
+{% file src="../../.gitbook/assets/List-GetItemAtIndex.dyn" %}
+
+_List.GetItemAtIndex_ is a fundamental way to query an item in the list.
 
 ![Exercise](<../../.gitbook/assets/working with list - get item index 01.jpg>)
 
@@ -78,9 +90,13 @@ Change slider value between 0 and 9 to select different item using List.GetItemA
 
 ### List.Reverse
 
-_List.Reverse_ reverses the order of all of the items in a list.
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-Reverse.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-2/List-Reverse.dyn). A full list of example files can be found in the Appendix.
+{% file src="../../.gitbook/assets/List-Reverse.dyn" %}
+
+_List.Reverse_ reverses the order of all of the items in a list.
 
 ![Exercise](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
@@ -90,9 +106,13 @@ _List.Reverse_ reverses the order of all of the items in a list.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
 
-_List.ShiftIndices_ is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-ShiftIndices.dyn](https://primer.dynamobim.org/06\_Designing-with-Lists/datasets/6-2/List-ShiftIndices.dyn). A full list of example files can be found in the Appendix.
+{% file src="../../.gitbook/assets/List-ShiftIndices.dyn" %}
+
+_List.ShiftIndices_ is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
 
 ![Exercise](<../../.gitbook/assets/working with list - shiftIndices 01.jpg>)
 
@@ -106,11 +126,15 @@ By changing to **Code Block** to a larger value, _"30"_ for example, we notice a
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
+
 ![](../../.gitbook/assets/ListFilterBool.png)
 
 _List.FilterByBooleanMask_ will remove certain items based on a list of booleans, or values reading "true" or "false".
-
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-FilterByBooleanMask.dyn](https://primer.dynamobim.org/06\_Designing-with-Lists/datasets/6-2/List-FilterByBooleanMask.dyn). A full list of example files can be found in the Appendix.
 
 ![Exercise](<../../.gitbook/assets/working with list - filter by bool mask.jpg>)
 

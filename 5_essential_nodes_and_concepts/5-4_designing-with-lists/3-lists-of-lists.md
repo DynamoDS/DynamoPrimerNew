@@ -34,9 +34,13 @@ When dealing with lists of lists, the data is layered and complex, but this prov
 
 ### Top-Down Hierarchy
 
-The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like List.GetItemAtIndex, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
 
-Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Top-Down-Hierarchy.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Top-Down-Hierarchy.dyn). A full list of example files can be found in the Appendix.
+{% file src="../../.gitbook/assets/Top-Down-Hierarchy.dyn" %}
+
+The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like List.GetItemAtIndex, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
 
 ![top-down](<../../.gitbook/assets/lists of lists - top down hierachy.jpg>)
 
@@ -47,9 +51,13 @@ Download the example file that accompanies this exercise (Right click and "Save 
 
 ### List.Flatten
 
-Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Flatten.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Flatten.dyn). A full list of example files can be found in the Appendix.
+{% file src="../../.gitbook/assets/Flatten.dyn" %}
+
+Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.
 
 ![Exercise](<../../.gitbook/assets/lists of lists - flatten 01.jpg>)
 
@@ -66,9 +74,13 @@ There are also options for flattening isolated tiers of data. Using the List.Fla
 
 ### Chop
 
-When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Chop.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Chop.dyn). A full list of example files can be found in the Appendix.
+{% file src="../../.gitbook/assets/Chop.dyn" %}
+
+When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
 
 The chop command divides lists based on a given list length. In some ways, chop is the opposite of flatten: rather than removing data structure, it adds new tiers to it. This is a helpful tool for geometric operations like the example below.
 
@@ -76,11 +88,15 @@ The chop command divides lists based on a given list length. In some ways, chop 
 
 ### List.Map
 
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Map.dyn" %}
+
 A _List.Map/Combine_ applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
 
 _Note: This exercise was created with a previous version of Dynamo. Much of the List.Map functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
-
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Map.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Map.dyn). A full list of example files can be found in the Appendix.
 
 As a quick introduction, let's review the List.Count node from a previous section.
 
@@ -119,9 +135,7 @@ List.Combine seems redundant for this exercise, adding a note here for a differe
 \*consider adding link for another example exercise in n-Dimensional Lists for using List.Combine
 {% endhint %}
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
-
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Combine.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Combine.dyn). A full list of example files can be found in the Appendix.
+_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below_
 
 In this exercise, we'll use a similar logic to List.Map, but with multiple elements. In this case, we want to divide a list of curves by a unique number of points.
 
@@ -156,11 +170,15 @@ In this exercise, we'll use a similar logic to List.Map, but with multiple eleme
 
 ### List@Level
 
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Listatlevel.dyn" %}
+
 Preferred to List.Map, the List@Level feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
 
 In this exercise, we will use the List@Level feature to isolate a specific level of data.
-
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List@Level](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Listatlevel.dyn). A full list of example files can be found in the Appendix.
 
 ![List@Level](<../../.gitbook/assets/lists of lists - list at level 01.jpg>)
 
@@ -195,11 +213,15 @@ Although this particular example can also be created with List.Map, List@Level g
 
 ### Transpose
 
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Transpose.dyn" %}
+
 Transpose is a fundamental function when dealing with lists of lists. Just as in spreadsheet programs, a transpose flips the columns and rows of a data structure. We'll demonstrate this with a basic matrix below, and in the following section, we'll demonstrate how a transpose can be use to create geometric relationships.
 
 ![Transpose](../../.gitbook/assets/transpose1.jpg)
-
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Transpose.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/Transpose.dyn). A full list of example files can be found in the Appendix.
 
 ![](<../../.gitbook/assets/lists of lists - transpose 01.jpg>)
 
@@ -216,7 +238,7 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 
 ## Code Block for List Creation
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the List.Create node. Code block is discussed in more detail in [7\_code-blocks-and-design-script](../../coding-in-dynamo/7\_code-blocks-and-design-script/ "mention"). Reference the image below to note how a list with multiple expressions can be defined with code block.
+Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the List.Create node. Code block is discussed in more detail in [Code Blocks and DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
 
 ![](<../../.gitbook/assets/lists of lists - codeblock for list creation 01.jpg>)
 
@@ -228,7 +250,11 @@ Code block shorthand uses "\[]" as a quick and easy way to select specific items
 
 ## Exercise - Querying and Inserting Data
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [ReplaceItems.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-3/ReplaceItems.dyn). A full list of example files can be found in the Appendix.
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/ReplaceItems.dyn" %}
 
 This exercise uses some of the logic established in the previous one to edit a surface. Our goal here is intuitive, but the data structure navigation will be more involved. We want to articulate a surface by moving a control point.
 

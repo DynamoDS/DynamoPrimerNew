@@ -79,9 +79,11 @@ As you can see there are different ways in which we can draw lines between these
 
 ## Exercise
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Lacing.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-1/Lacing.dyn).&#x20;
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Lacing.dyn" %}
 
 To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
 

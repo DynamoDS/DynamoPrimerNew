@@ -10,7 +10,7 @@ The analogy we'll work with here are Russian Nesting Dolls. Each list can be reg
 
 n-Dimensional lists are difficult to explain visually, but we've set up a few exercises in this chapter which focus on working with lists which venture beyond two dimensions.
 
-### Mapping and Combinations&#x20;
+### Mapping and Combinations
 
 Mapping is arguably the most complex part of data management in Dynamo, and is especially relevant when working with complex hierarchies of lists. With the series of exercises below, we'll demonstrate when to use mapping and combinations as data becomes multi-dimensional.
 
@@ -18,7 +18,11 @@ Preliminary introductions to List.Map and List.Combine can be found in the previ
 
 ## Exercise - 2D Lists - Basic
 
-> Download the example files that accompanies this exercise (Right click and "Save Link As..."). A full list of example files can be found in the Appendix. 1.[n-Dimensional-Lists.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-4/n-Dimensional-Lists.dyn) 2.[n-Dimensional-Lists.sat](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-4/n-Dimensional-Lists.sat)
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/n-Dimensional-Lists.zip" %}
 
 This exercise is the first in a series of three which focuses on articulating imported geometry. Each part in this series of exercises will increase in the complexity of data structure.
 
@@ -48,7 +52,7 @@ Next, used the Points from last step to generate ten curves along the surface.
 
 ![](<../../.gitbook/assets/n-dimensional lists - 2d lists basic 04.jpg>)
 
-> 1. To get a look at how the data structure is organized, let's connect a _NurbsCurve.ByPoints_ to the output of _Surface.PointAtParameter_.&#x20;
+> 1. To get a look at how the data structure is organized, let's connect a _NurbsCurve.ByPoints_ to the output of _Surface.PointAtParameter_.
 > 2. You may switch off the preview from the List.GetItemAtIndex Node for now for a clearer result.
 
 ![](<../../.gitbook/assets/n-dimensional lists - 2d lists basic 05.jpg>)
@@ -57,7 +61,7 @@ Next, used the Points from last step to generate ten curves along the surface.
 > 2. Connecting the output of _List.Transpose_ to _NurbsCurve.ByPoints_, we now get five curves running horizontally across the surface.
 > 3. You may switch off the preview from the NurbsCurve.ByPoints Node in the previous step to achieve the same result in the image.
 
-## Exercise - 2D Lists - Advanced&#x20;
+## Exercise - 2D Lists - Advanced
 
 Let's increase the complexity. Suppose we wanted to perform an operation on the curves created from the previous exercise. Perhaps we want to relate these curves to another surface and loft between them. This requires more attention to data structure, but the underlying logic is the same.
 
@@ -71,12 +75,12 @@ Let's increase the complexity. Suppose we wanted to perform an operation on the 
 
 ![](<../../.gitbook/assets/n-dimensional lists - 2d lists advance 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a _code block_ with these two lines of code: `0..1..#10;`  `0..1..#5;`
+> 1. In the same manner as the previous exercise, define a _code block_ with these two lines of code: `0..1..#10;` `0..1..#5;`
 > 2. Connect these outputs to two Surface.PointAtParameter nodes, each with _lacing_ set to _"Cross Product"_. One of these nodes is connected to the original surface, while the other is connected to the offset surface.
 
 ![](<../../.gitbook/assets/n-dimensional lists - 2d lists advance 04.jpg>)
 
-> 1. Switch off the preview of these Surfaces.&#x20;
+> 1. Switch off the preview of these Surfaces.
 > 2. As in the previous exercise, connect the outputs to two _NurbsCurve.ByPoints_ nodes. The result show curves corresponding to two surfaces.
 
 ![](<../../.gitbook/assets/n-dimensional lists - 2d lists advance 05.jpg>)
@@ -104,7 +108,7 @@ Next, we will demonstrate an alternative process to achieve this result
 
 > 1. Stepping back a few steps, if we want to switch the orientation of the curves in the ribbed structure, we want to use a List.Transpose before connect to _NurbsCurve.ByPoints_. This will flip the columns and rows, giving us 5 horizontal ribs.
 
-## Exercise - 3D Lists&#x20;
+## Exercise - 3D Lists
 
 Now, we're going to go even one step further. In this exercise, we'll work with both imported surfaces, creating a complex data hierarchy. Still, our aim is to complete the same operation with the same underlying logic.
 
@@ -182,4 +186,3 @@ Last step, let's reverse the direction of the striated members. As we used trans
 The first version of the rocking chair was sleek, so our second model offers an off-road, sport-utility version of recumbency.
 
 ![](<../../.gitbook/assets/n-Dimensional-Lists - 3d list 16.jpg>)
-
