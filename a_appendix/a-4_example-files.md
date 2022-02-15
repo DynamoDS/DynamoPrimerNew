@@ -2,8 +2,6 @@
 
 #### These example files accompany the Dynamo Primer, and are organized according to Chapter and Section.
 
-> Right click files and use "Save Link As..."
-
 ### Introduction
 
 | Section                    | Download File                                                                                      |
