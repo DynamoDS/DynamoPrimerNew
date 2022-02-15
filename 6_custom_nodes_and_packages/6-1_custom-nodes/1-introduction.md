@@ -1,11 +1,5 @@
 # Custom Node Introduction
 
-
-
-![](<../../.gitbook/assets/custom node intro - intro img.jpg>)
-
-### Cleaning up Your Graph
-
 Custom Nodes are constructed by nesting other nodes and custom nodes inside of a "Dynamo Custom Node," which we can think of conceptually as a container. When this container node is executed in your graph, everything inside it will be executed to allow you to reuse and share a useful combination of nodes.
 
 ### Adapting to Change
