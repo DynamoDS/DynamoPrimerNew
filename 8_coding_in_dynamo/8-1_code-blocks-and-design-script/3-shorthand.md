@@ -41,11 +41,11 @@ Creating advanced ranges allows us to work with list of lists in a simple fashio
 
 ![](<../../.gitbook/assets/shorthand - advance range 01.jpg>)
 
-> 1\. Creating nested ranges, compare the notation with a \*"#"\* vs. the notation without. The same logic applies as in basic ranges, except it gets a little more complex.
+> 1\. Creating nested ranges, compare the notation with a "#" vs. the notation without. The same logic applies as in basic ranges, except it gets a little more complex.
 >
 > 2\. We can define a sub-range at any place within the primary range, and notice that we can have two sub-ranges as well.
 >
-> 3\. By controlling the \*"end"\* value in a range, we create more ranges of differing lengths.
+> 3\. By controlling the "end" value in a range, we create more ranges of differing lengths.
 
 As a logic exercise, compare the two shorthands above and try to parse through how _subranges_ and the _#_ notation drive the resultant output.
 
@@ -87,14 +87,14 @@ Start by creating a surface by connecting the nodes above. Instead of using a nu
 
 ![](<../../.gitbook/assets/shorthand - exercise 02.jpg>)
 
-> 1. Define a range between 0 and 1 with 50 divisions by typing `0..1..#50` into a code block.
-> 2. Connect the range into Surface.PointAtParameter, which takes u and v values between 0 and 1 across the surface. Remember to change the Lacing to Cross Product by right clicking on the Surface.PointAtParameter node.
+> 1. Define a range between 0 and 1 with 50 divisions by typing `0..1..#50` into a **Code Block**.
+> 2. Connect the range into **Surface.PointAtParameter**, which takes u and v values between 0 and 1 across the surface. Remember to change the Lacing to Cross Product by right clicking on the **Surface.PointAtParameter** node.
 
-In this step, we employ our first function to move the grid of points up in the Z. This grid will drive a generated surface based on the underlying function. Add new nodes as shownim in image below
+In this step, we employ our first function to move the grid of points up in the Z. This grid will drive a generated surface based on the underlying function. Add new nodes as shown in image below
 
 ![](<../../.gitbook/assets/shorthand - exercise 03.jpg>)
 
-> 1. Rather than using a formula node, we use a code block with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
+> 1. Rather than using a formula node, we use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
 
 ![](<../../.gitbook/assets/shorthand - exercise 04.jpg>)
 
@@ -116,19 +116,19 @@ Let's change the sliders values specified below to 'calm the waters' of this alg
 
 ![](<../../.gitbook/assets/shorthand - exercise 08.jpg>)
 
-Last, let's query isolated parts of the data with the code block. To regenerate the surface with a specific range of points, add the code block above between the Geometry.Translate and NurbsSurface.ByPoints node. This has the line of text: `sineStrips[0..15..1];`. This will select the first 16 rows of points (out of 50). Recreating the surface, we can see that we've generated an isolated portion of the grid of points.
+Last, let's query isolated parts of the data with the Code Block. To regenerate the surface with a specific range of points, add the code block above between the **Geometry.Translate** and **NurbsSurface.ByPoints** node. This has the line of text: `sineStrips[0..15..1];`. This will select the first 16 rows of points (out of 50). Recreating the surface, we can see that we've generated an isolated portion of the grid of points.
 
 ![](<../../.gitbook/assets/shorthand - exercise 09.jpg>)
 
 ![](<../../.gitbook/assets/shorthand - exercise 10.jpg>)
 
-> 1. In the final step, to make this code block more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
+> 1. In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
 
-A value of \*.53\* on the slider creates a surface just past the midpoint of the grid.
+A value of `0.53` on the slider creates a surface just past the midpoint of the grid.
 
 ![](<../../.gitbook/assets/shorthand - exercise 11.jpg>)
 
-And as expected, a slider of \*1\* creates a surface from the full grid of points.
+And as expected, a slider of `1` creates a surface from the full grid of points.
 
 ![](<../../.gitbook/assets/shorthand - exercise 12.jpg>)
 
@@ -136,10 +136,10 @@ Looking at the visual graph, we can highlight the code blocks and see each of th
 
 ![](<../../.gitbook/assets/shorthand - exercise 13.jpg>)
 
-> 1\. The first code block replaces the Number node.
+> 1\. The first **Code Block** replaces the **Number** node.
 >
-> 2\. The second code block replaces the Number Range node.
+> 2\. The second **Code Block** replaces the **Number Range** node.
 >
-> 3\. The third code block replaces the Formula node (as well as List.Transpose, List.Count and Number Range).
+> 3\. The third **Code Block** replaces the **Formula** node (as well as **List.Transpose**, **List.Count** and **Number Range**).
 >
-> 4\. The fourth code block queries a list of lists, replacing the List.GetItemAtIndex node.
+> 4\. The fourth **Code Block** queries a list of lists, replacing the **List.GetItemAtIndex** node.
