@@ -8,7 +8,7 @@
 
 | Section                    | Download File                                                                                      |
 | -------------------------- | -------------------------------------------------------------------------------------------------- |
-| What is Visual Programming | [Visual Programming.dyn](https://github.com/DynamoDS/DynamoPrimer/tree/master/en/01\_Introduction) |
+| What is Visual Programming | {% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}|
 |                            |                                                                                                    |
 
 ### Anatomy of a Dynamo Definition
