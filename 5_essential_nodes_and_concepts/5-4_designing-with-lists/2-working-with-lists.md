@@ -51,7 +51,7 @@ The image below is the base graph which we are drawing lines between two circles
 > 8. Plug the code block from the previous step into the param input of two Curve.PointAtParameter nodes. Plug Circle.ByPlaneRadius into the curve input of the top node, and Geometry.Translate into the curve input of the node beneath it.
 > 9. Using a Line.ByStartPointEndPoint, connect the two Curve.PointAtParameter nodes.
 
-### List.Count ![Count](broken-reference)
+### List.Count
 
 The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
 
@@ -61,9 +61,9 @@ The _List.Count_ node is straightforward: it counts the number of values in a li
 
 > 1. The _List.Count_ node returns the number of lines in the _Line.ByStartPointEndPoint_ node. The value is 10 in this case, which agrees with the number of points created from the original _code block_ node.
 
-### List.GetItemAtIndex&#x20;
+### List.GetItemAtIndex
 
-_List.GetItemAtIndex_ is a fundamental way to query an item in the list.&#x20;
+_List.GetItemAtIndex_ is a fundamental way to query an item in the list.
 
 Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-GetItemAtIndex.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-2/List-GetItemAtIndex.dyn). A full list of example files can be found in the Appendix.
 
@@ -78,17 +78,15 @@ Change slider value between 0 and 9 to select different item using List.GetItemA
 
 ### List.Reverse
 
-&#x20;_List.Reverse_ reverses the order of all of the items in a list.
+_List.Reverse_ reverses the order of all of the items in a list.
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As..."): [List-Reverse.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/06\_Designing-with-Lists/datasets/6-2/List-Reverse.dyn). A full list of example files can be found in the Appendix.
 
 ![Exercise](<../../.gitbook/assets/working with list - list reverse.jpg>)
 
 > 1. To properly visualize the reversed list of lines, create more lines by changing the code block to `0..1..#50;`
-> 2. Duplicate the Line.ByStartPointEndPoint Node, insert a List.Reverse node in between Curve.PointAtParameter and the second Line.ByStartPointEndPoint&#x20;
+> 2. Duplicate the Line.ByStartPointEndPoint Node, insert a List.Reverse node in between Curve.PointAtParameter and the second Line.ByStartPointEndPoint
 > 3. Use Watch3D nodes to preview two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
-
-
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
 
@@ -105,8 +103,6 @@ _List.ShiftIndices_ is a good tool for creating twists or helical patterns, or a
 By changing to **Code Block** to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
 
 ![](<../../.gitbook/assets/working with list - shiftIndices 02.jpg>)
-
-
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -128,8 +124,3 @@ In order to create a list of values reading "true" or "false", we need to a litt
 > 6. Connect the _Curve.PointAtParameter_ node into each list input for the _List.FilterByBooleanMask_.
 > 7. The output of _Filter.ByBooleanMask_ reads _"in"_ and _"out"_. _"In"_ represents values which had a mask value of _"true"_ while _"out"_ represents values which had a value of _"false"_. By plugging the _"in"_ outputs into the _startPoint_ and _endPoint_ inputs of a _Line.ByStartPointEndPoint_ node, we've created a filtered list of lines.
 > 8. The _Watch3D_ node reveals that we have fewer lines than points. We've selected only 25% of the nodes by filtering only the true values!
-
-
-
-
-
