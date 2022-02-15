@@ -106,7 +106,7 @@ By changing to **Code Block** to a larger value, _"30"_ for example, we notice a
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
-![cull](https://primer.dynamobim.org/06\_Designing-with-Lists/images/6-2/cull2.jpg)
+![](../../.gitbook/assets/ListFilterBool.png)
 
 _List.FilterByBooleanMask_ will remove certain items based on a list of booleans, or values reading "true" or "false".
 
