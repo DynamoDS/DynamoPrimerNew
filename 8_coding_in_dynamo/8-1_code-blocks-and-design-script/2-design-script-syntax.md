@@ -53,8 +53,8 @@ An action is something you do to an object of that type. Dynamo uses _dot notati
 
 ![](<../../.gitbook/assets/DesignScript - action.jpg>)
 
-> 1. The _Point.Add_ node is an action-type node, so the syntax works a little differently.
-> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a _Code Block_, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the \*Point.Add \*node minus the first one. The first input for the \*Point.Add \*node is the point itself.
+> 1. The **Point.Add** node is an action-type node, so the syntax works a little differently.
+> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a **Code Block**, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the **Point.Add** node minus the first one. The first input for the **Point.Add** node is the point itself.
 
 #### Query
 
@@ -68,9 +68,9 @@ Lacing with nodes is somewhat different from lacing with code block. With nodes,
 
 ![](<../../.gitbook/assets/DesignScript - lacing.jpg>)
 
-> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7`is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a **Cross Product**).
-> 2. Using the syntax `Point.ByCoordinates(x_vals<1>,y_vals<2>);` we get **two** lists with **five** items in each list.
-> 3. Using the syntax `Point.ByCoordinates(x_vals<2>,y_vals<1>);` we get **five** lists with **two** items in each list.
+> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7`is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a Cross Product).
+> 2. Using the syntax **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` we get _two_ lists with _five_ items in each list.
+> 3. Using the syntax **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` we get _five_ lists with _two_ items in each list.
 
 With this notation, we can also specify which list will be dominant: 2 lists of 5 things or 5 lists of 2 things. In the example, changing the order of the replication guides makes the result a list of rows of points or a list of columns of points in a grid.
 
@@ -94,24 +94,24 @@ Begin by recreating the definition in the image above (or by opening the sample 
 
 ![](<../../.gitbook/assets/DesignScript - exercise - 01.jpg>)
 
-> 1. Notice that the lacing on _Point.ByCoordinates_ has been set to _Cross Product_.
+> 1. Notice that the lacing on **Point.ByCoordinates** has been set to _Cross Product_.
 > 2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
 > 3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
 
 ![](<../../.gitbook/assets/DesignScript - exercise - 02.jpg>)
 
-> 1. Starting from the beginning, let's define the reference point first: `Point.ByCoordinates(x,y,0);` We use the same Point.ByCoordinates syntax as is specified on the top of the reference point node.
-> 2. The variables _x_ and _y_ are inserted into the code block so that we may update these dynamically with sliders.
-> 3. Add some _sliders_ to the Code Block inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
+> 1. Starting from the beginning, let's define the reference point first: **Point.ByCoordinates**`(x,y,0);` We use the same **Point.ByCoordinates** syntax as is specified on the top of the reference point node.
+> 2. The variables _x_ and _y_ are inserted into the **Code Block** so that we may update these dynamically with sliders.
+> 3. Add some _sliders_ to the **Code Block** inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
 
 ![](<../../.gitbook/assets/DesignScript - exercise - 03.jpg>)
 
-> 1. In the second line of the _Code Block_, we define a shorthand to replace the number sequence node: `coordsXY = (-50..50..#11);`We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the _Number Sequence_ node in the visual script.
+> 1. In the second line of the **Code Block**, we define a shorthand to replace the number sequence node: `coordsXY = (-50..50..#11);`We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the **Number Sequence** node in the visual script.
 
 ![](<../../.gitbook/assets/DesignScript - exercise - 04.jpg>)
 
-> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the _Point.ByCoordinates_ syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` The angled brackets denote the cross product reference.
-> 2. Notice in the _Watch3D_ node that we have a grid of points across the Dynamo grid.
+> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the **Point.ByCoordinates** syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` The angled brackets denote the cross product reference.
+> 2. Notice in the **Watch3D** node that we have a grid of points across the Dynamo grid.
 
 ![](<../../.gitbook/assets/DesignScript - exercise - 05.jpg>)
 

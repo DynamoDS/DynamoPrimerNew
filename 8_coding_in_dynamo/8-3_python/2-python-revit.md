@@ -27,7 +27,7 @@ import System
 
 This gives us access to the Revit API and offers custom scripting for any Revit task. By combining the process of visual programming with Revit API scripting, collaboration and tool development improve significantly. For example, a BIM manager and a schematic designer can work together on the same graph. In this collaboration, they can improve design and execution of the model.
 
-![Exercise](../../.gitbook/assets/pythonRevit.png)
+![](<../../.gitbook/assets/python & revit - 01.jpg>)
 
 ### Platform Specific APIs
 
