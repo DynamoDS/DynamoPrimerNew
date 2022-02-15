@@ -2,6 +2,8 @@
 
 #### These example files accompany the Dynamo Primer, and are organized according to Chapter and Section.
 
+## Essential Nodes & Concept
+
 ### Geometry for Computational Design
 
 #### Geometry Overview&#x20;
@@ -99,4 +101,68 @@
 #### Revit Use-Cases
 
 {% file src="../.gitbook/assets/roomDictionary.dyn" %}
+
+## Custom Nodes & Packages
+
+### Custom Nodes
+
+#### Creating a Custom Node
+
+{% file src="../.gitbook/assets/UV-CustomNode.zip" %}
+
+#### Publishing to Your Library
+
+{% file src="../.gitbook/assets/PointsToSurface.dyf" %}
+
+### Packages
+
+#### Package Case Study - Mesh Toolkit
+
+{% file src="../.gitbook/assets/MeshToolkit.zip" %}
+
+#### Publishing a Package
+
+{% file src="../.gitbook/assets/MapToSurface.zip" %}
+
+#### Zero-Touch Importing
+
+{% file src="../.gitbook/assets/ZeroTouchImages.zip" %}
+
+## Dynamo for Revit
+
+### Selecting
+
+{% file src="../.gitbook/assets/Revit-Selecting.zip" %}
+
+### Editing
+
+{% file src="../.gitbook/assets/Revit-Editing.zip" %}
+
+### Creating
+
+{% file src="../.gitbook/assets/Revit-Creating.zip" %}
+
+{% file src="../.gitbook/assets/Revit-Creating-DirectShape.zip" %}
+
+### Customizing
+
+{% file src="../.gitbook/assets/Revit-Customizing.zip" %}
+
+### Documenting
+
+{% file src="../.gitbook/assets/Revit-Documenting.zip" %}
+
+## Coding in Dynamo
+
+
+
+Code Blocks and DesignScript
+
+
+
+Geometry with DesignScript
+
+
+
+Python
 
