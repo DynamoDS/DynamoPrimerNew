@@ -31,7 +31,9 @@ What **actions** can we perform on the list? This changes the list based on a gi
 
 All of the operations listed above have analogous Dynamo nodes for working with lists of generic data. The lessons below will demonstrate some of the fundamental operations we can perform on lists.
 
-## **Exercise - List Operations**
+## **Exercise**
+
+### **List Operations**
 
 > Download the example file that accompanies this exercise (Right click and "Save Link As...")
 >
