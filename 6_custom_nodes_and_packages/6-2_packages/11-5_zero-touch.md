@@ -13,7 +13,7 @@ With Zero-Touch, you can actually import a library which was not necessarily dev
 
 This section demonstrates how to use Zero-Touch to import a third party library. For information on developing your own Zero-Touch Library, reference the [Dynamo wiki page](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development).
 
-### Zero-Touch Packages&#x20;
+### Zero-Touch Packages
 
 Zero-touch packages are a good complement to user-defined custom nodes. A few packages which use C# libraries are listed in the table below. For more detailed information on packages, visit the [Packages section ](../../a\_appendix/a-3\_packages.md)in the Appendix.
 
@@ -28,9 +28,11 @@ Zero-touch packages are a good complement to user-defined custom nodes. A few pa
 
 In this case study, we'll show how to import the [AForge](http://www.aforgenet.com) external _.dll_ library. AForge is a robust library which offers a range of functionality from image processing to artificial intelligence. We'll reference the imaging class in AForge to do a few image processing exercises below.
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix. [Zero-Touch-Examples.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/Zero-Touch-Examples.zip).
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/ZeroTouchImages.zip" %}
 
 Let's begin by downloading AForge. On the [AForge download page](http://www.aforgenet.com/framework/downloads.html), select _\[Download Installer]_ and install after download has completed.
 
@@ -51,7 +53,7 @@ Back in Dynamo, you should see an **AForge** group of nodes added to your Librar
 
 ### Exercise 1 - Edge Detection
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").&#x20;
+> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").
 >
 > A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
 
@@ -64,8 +66,6 @@ To import an image, add a **File Path** node to the canvas and select "soapbubbl
 The File Path node simply provides a String of the path to the image we've selected. Next, we need to convert it into a usable image file in Dynamo.
 
 ![](<../../.gitbook/assets/case study aforge exercise 1 - 02.jpg>)
-
-
 
 > 1. Use **File From Path** to convert the file path item into an image in the Dynamo environment.
 > 2. Connect the **File Path** node to the **File.FromPath** node.
@@ -91,7 +91,7 @@ Let's use the desaturated image, and apply another filter on top of it. The desa
 
 ![](<../../.gitbook/assets/case study aforge exercise 1 - 05.jpg>)
 
-> 1. Add a **SobelEdgeDetector.SobelEdgeDetector** node to the canvas.&#x20;
+> 1. Add a **SobelEdgeDetector.SobelEdgeDetector** node to the canvas.
 > 2. Connect this to a **BaseUsingCopyPartialFilter.Apply** and connect the desaturated image to the image input of this node.
 > 3. The Sobel Edge Detector has highlighted the edges in a new image.
 
@@ -101,7 +101,7 @@ Zooming in, the edge detector has called out the outlines of the bubbles with pi
 
 ### Exercise 2 - Rectangle Creation
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").&#x20;
+> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").
 >
 > A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
 
@@ -116,7 +116,7 @@ In this next step, we want to reference the white squares in the image and conve
 
 ![](<../../.gitbook/assets/case study aforge exercise 2 - 02.jpg>)
 
-> 1. Add a BlobCounter to the canvas, then we need a way to process the image (similar to the ~~IFilter~~ tool in the previous exercise).&#x20;
+> 1. Add a BlobCounter to the canvas, then we need a way to process the image (similar to the ~~IFilter~~ tool in the previous exercise).
 
 Unfortunately the "Process Image" node is not immediately visible in the Dynamo library. This is because the function may not be visible in the AForge source code. In order to fix this, we'll need to find a work-around.
 
@@ -207,4 +207,3 @@ Last, change the both\_sides input to false and we get an extrusion in one direc
 ![](<../../.gitbook/assets/case study aforge exercise 2 - 11.jpg>)
 
 These are basic examples, but the concepts outlined here are transferable to exciting real-world applications. Computer vision can be used for a whole host of processes. To name a few: barcode readers, perspective matching, [projection mapping](https://www.youtube.com/watch?v=XSR0Xady02o), and [augmented reality](http://aforgenet.com/aforge/articles/gratf\_ar/). For more advanced topics with AForge related to this exercise, have a read through [this article](http://aforgenet.com/articles/shape\_checker/).
-

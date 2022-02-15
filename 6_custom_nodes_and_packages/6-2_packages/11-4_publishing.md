@@ -22,9 +22,11 @@ Then restart Dynamo. When reopening, when you check the _"Manage Packages"_ wind
 Dynamo package publication is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
 {% endhint %}
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix. [MapToSurface.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-4/MapToSurface.zip)
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/MapToSurface.zip" %}
 
 This is the first submission for our package, and we've placed all of the example files and custom nodes into one folder. With this folder prepared, we're ready to upload to the Dynamo Package Manager.
 
@@ -64,7 +66,7 @@ Notice that the root directory is in the local location of your package (remembe
 
 ### Publishing a Package Online
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Note: please do not follow along with this step unless you are actually publishing a package of your own!
 {% endhint %}
 
@@ -73,6 +75,6 @@ Note: please do not follow along with this step unless you are actually publishi
 > 1. When you're ready to publish, in the Preferences > Package Manager window, select the button the right of MapToSurface and choose _Publish..._
 > 2. If you're updating a package that has already been published, choose "Publish Version" and Dynamo will update your package online based on the new files in that package's root directory. Simple as that!
 
-### Publish Version...&#x20;
+### Publish Version...
 
 When you update the files in your published package's root folder, you can publish a new version of the package by selecting _"Publish Version..."_ in the _Manage Packages_ window. This is a seamless way to make necessary updates to your content and share with the community. _Publish Version_ will only work if you're the maintainer of the package.
