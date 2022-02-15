@@ -16,13 +16,11 @@ Import and evaluate a Surface at a Parameter in Dynamo to see what kind of infor
 > 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
 > 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
 
-> Download the example files by clicking on the links below.
+> Download the example files by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Surfaces.dyn" %}
-
-{% file src="../../.gitbook/assets/Surface.sat" %}
+{% file src="../../.gitbook/assets/Surfaces.zip" %}
 
 ## Deep Dive into...
 
