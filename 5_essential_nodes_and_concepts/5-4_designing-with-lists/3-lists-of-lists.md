@@ -30,8 +30,6 @@ Again, Dynamo has an analagous node for each one of the operations above. Since 
 
 When dealing with lists of lists, the data is layered and complex, but this provides an opportunity to do some awesome parametric operations. Let's break down the fundamentals and discuss a few more operations in the lessons below.
 
-
-
 ## Exercise
 
 ### Top-Down Hierarchy
@@ -42,7 +40,7 @@ Download the example file that accompanies this exercise (Right click and "Save 
 
 ![top-down](<../../.gitbook/assets/lists of lists - top down hierachy.jpg>)
 
-> 1. With _code block_, we've defined two ranges: `0..2; 0..3;`&#x20;
+> 1. With _code block_, we've defined two ranges: `0..2; 0..3;`
 > 2. These ranges are connected to a _Point.ByCoordinates_ node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
 > 3. Notice that the _Watch_ node gives 3 lists with 4 items in each list.
 > 4. When using _List.GetItemAtIndex_, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
@@ -55,7 +53,7 @@ Flatten removes all tiers of data from a data structure. This is helpful when th
 
 ![Exercise](<../../.gitbook/assets/lists of lists - flatten 01.jpg>)
 
-> 1. Insert one line of code to define a range in _code block_: `-250..-150..#4;`&#x20;
+> 1. Insert one line of code to define a range in _code block_: `-250..-150..#4;`
 > 2. Plugging the _code block_ into the _x_ and _y_ input of a _Point.ByCoordinates_ node, we set the lacing to _"Cross Product"_ to get a grid of points.
 > 3. The _Watch_ node shows that we have a list of lists.
 > 4. A _PolyCurve.ByPoints_ node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four Polycurve representing each row in the grid.
@@ -76,9 +74,9 @@ The chop command divides lists based on a given list length. In some ways, chop 
 
 ![Exercise](<../../.gitbook/assets/lists of lists - chop.jpg>)
 
-### List.Map&#x20;
+### List.Map
 
-A List.Map/Combine applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
+A _List.Map/Combine_ applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
 
 _Note: This exercise was created with a previous version of Dynamo. Much of the List.Map functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 
@@ -120,8 +118,6 @@ List.Combine seems redundant for this exercise, adding a note here for a differe
 
 \*consider adding link for another example exercise in n-Dimensional Lists for using List.Combine
 {% endhint %}
-
-
 
 _Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 
