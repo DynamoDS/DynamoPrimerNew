@@ -28,12 +28,6 @@ Zero-touch packages are a good complement to user-defined custom nodes. A few pa
 
 In this case study, we'll show how to import the [AForge](http://www.aforgenet.com) external _.dll_ library. AForge is a robust library which offers a range of functionality from image processing to artificial intelligence. We'll reference the imaging class in AForge to do a few image processing exercises below.
 
-> Download the example file by clicking on the link below.
->
-> A full list of example files can be found in the Appendix.
-
-{% file src="../../.gitbook/assets/ZeroTouchImages.zip" %}
-
 Let's begin by downloading AForge. On the [AForge download page](http://www.aforgenet.com/framework/downloads.html), select _\[Download Installer]_ and install after download has completed.
 
 In Dynamo, create a new file and select _File > Import Library..._
@@ -53,9 +47,11 @@ Back in Dynamo, you should see an **AForge** group of nodes added to your Librar
 
 ### Exercise 1 - Edge Detection
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/ZeroTouchImages.zip" %}
 
 Now that the library is imported, we'll start off simple with this first exercise (_01-EdgeDetection.dyn_). We'll do some basic image processing on a sample image to show how AForge image filters. We'll use the _"Watch Image"_ node to show our results and apply filters in Dynamo similar to those in Photoshop
 
@@ -101,10 +97,6 @@ Zooming in, the edge detector has called out the outlines of the bubbles with pi
 
 ### Exercise 2 - Rectangle Creation
 
-> Download and unzip the example files that accompany this package case study (Right click and "Save Link As...").
->
-> A full list of example files can be found in the Appendix. [ZeroTouchImages.zip](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/11\_Packages/datasets/11-5/ZeroTouchImages.zip)
-
 Now that we're introduced to some basic image processing, let's use an image to drive Dynamo geometry! On an elementary level, in this exercise we're aiming to do a _"Live Trace"_ of an image using AForge and Dynamo. We're going to keep it simple and extract rectangles from a reference image, but there are tools available in AForge for more complex operations. We'll be working with _02-RectangleCreation.dyn_ from the downloaded exercise files.
 
 ![](<../../.gitbook/assets/case study aforge exercise 2 - 01.jpg>)
@@ -116,7 +108,7 @@ In this next step, we want to reference the white squares in the image and conve
 
 ![](<../../.gitbook/assets/case study aforge exercise 2 - 02.jpg>)
 
-> 1. Add a BlobCounter to the canvas, then we need a way to process the image (similar to the ~~IFilter~~ tool in the previous exercise).
+> 1. Add a BlobCounter to the canvas, then we need a way to process the image (similar to the **BaseFilter.Apply** tool in the previous exercise).
 
 Unfortunately the "Process Image" node is not immediately visible in the Dynamo library. This is because the function may not be visible in the AForge source code. In order to fix this, we'll need to find a work-around.
 
