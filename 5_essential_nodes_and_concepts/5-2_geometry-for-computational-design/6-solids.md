@@ -19,9 +19,11 @@ You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify so
 > 5. **Topology.Edges**: Query the edges of the new Solid
 > 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
 
-> Download the example files(Right click and "Save Link As..."). \[Geometry for Computational Design - Solids.dyn]
+> Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.&#x20;
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Solids.dyn" %}
 
 ### Freezing
 
@@ -65,7 +67,7 @@ Solids are made up of three types of elements: Vertices, Edges, and Faces. Faces
 
 Solids can be modified by filleting or chamfering their edges to eliminate sharp corners and angles. The chamfer operation creates a ruled surface between two faces, while a fillet blends between faces to maintain tangency.
 
-&#x20;![](../../.gitbook/assets/SolidOperations.jpg)
+![](../../.gitbook/assets/SolidOperations.jpg)
 
 > 1. Solid Cube
 > 2. Chamfered Cube
@@ -90,7 +92,5 @@ In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **
 
 > 1. **UnionAll:** Union operation with sphere and outward-facing cones
 > 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
-
-
 
 ##
