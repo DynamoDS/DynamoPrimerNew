@@ -40,11 +40,11 @@ FunctionName(in1,in2);
 
 In this exercise, we will make a generic definition that will create spheres from an input list of points. The radius of these spheres are driven by the Z property of each point.
 
-Let's begin with a number range of ten values spanning from 0 to 100. Plug these into a _Point.ByCoordinates_ nodes to create a diagonal line.
+Let's begin with a number range of ten values spanning from 0 to 100. Plug these into a **Point.ByCoordinates** nodes to create a diagonal line.
 
 ![](<../../.gitbook/assets/functions - exercise - 01.jpg>)
 
-Create a code block and introduce our definition.
+Create a **Code Block** and introduce our definition.
 
 ![](<../../.gitbook/assets/functions - exercise - 02.jpg>)
 
@@ -61,7 +61,7 @@ Create a code block and introduce our definition.
 
 ![](<../../.gitbook/assets/functions - exercise - 03.jpg>)
 
-> 1. Adding to the _code block_ function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parenetheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
+> 1. Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parenetheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -73,7 +73,7 @@ Create a code block and introduce our definition.
 
 ![](<../../.gitbook/assets/functions - exercise - 04.jpg>)
 
-> 1. Now, let's recall the function we've created in another _code block_. If we double-click on the canvas to create a new _code block_, and type in _sphereB_, we notice that Dynamo suggest the _sphereByZ_ function that we've defined. Your function has been added to the intellisense library! Pretty cool.
+> 1. Now, let's recall the function we've created in another **Code Block**. If we double-click on the canvas to create a new _code block_, and type in _sphereB_, we notice that Dynamo suggest the _sphereByZ_ function that we've defined. Your function has been added to the intellisense library! Pretty cool.
 
 ![](<../../.gitbook/assets/functions - exercise - 05.jpg>)
 
@@ -102,11 +102,11 @@ Let's create actual spheres now by editing the _Parent_ function.
 
 ![](<../../.gitbook/assets/functions - exercise - 09.jpg>)
 
-> 1. On the _Point.ByCoordinates_ node, by changing the lacing from _Shortest List_ to _Cross Product_, we create a grid of points. The _sphereByZ_ function is still in full effect, so the points all create spheres with radii based on Z values.
+> 1. On the **Point.ByCoordinates** node, by changing the lacing from Shortest List to Cross Product, we create a grid of points. The _sphereByZ_ function is still in full effect, so the points all create spheres with radii based on Z values.
 
 ![](<../../.gitbook/assets/functions - exercise - 10.jpg>)
 
-> 1. And just to test the waters, we plug the original list of numbers into the X input for _Point.ByCoordinates_. We now have a cube of spheres.
+> 1. And just to test the waters, we plug the original list of numbers into the X input for **Point.ByCoordinates**. We now have a cube of spheres.
 > 2. Note: if this takes a long time to calculate on your computer, try to change _#10_ to something like _#5_.
 
 Remember, the _sphereByZ_ function we've created is a generic function, so we can recall the helix from an earlier lesson and apply the function to it.
@@ -130,4 +130,4 @@ One final step: let's drive the radius ratio with a user defined parameter. To d
 >     return sphere;
 >     };
 >     ```
-> 2. Update the children code blocks by adding a ratio variable to the input: `sphereByZ(Pt,ratio);` Plug a slider into the newly created code block input and vary the size of the radii based on the radius ratio.
+> 2. Update the children **Code Block** by adding a ratio variable to the input: `sphereByZ(Pt,ratio);` Plug a slider into the newly created **Code Block** input and vary the size of the radii based on the radius ratio.

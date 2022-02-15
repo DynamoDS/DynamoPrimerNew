@@ -30,7 +30,7 @@ The method for defining ranges and sequences can be reduced to basic shorthand. 
 
 ![](<../../.gitbook/assets/shorthand - ranges and sequences.jpg>)
 
-> 1. In this example, a number range is replaced by basic code block syntax defining the `beginning..end..step-size;` . Represented numerically, we get: `0..10..1;`
+> 1. In this example, a number range is replaced by basic **Code Block** syntax defining the `beginning..end..step-size;` . Represented numerically, we get: `0..10..1;`
 > 2. Notice that the syntax `0..10..1;` is equivalent to `0..10;` A step-size of 1 is the default value for the shorthand notation. So `0..10;` will give a sequence from 0 to 10 with a step-size of 1.
 > 3. The _Sequence_ example is similar, except we use a "#" to state that we want 15 values in the list, rather than a list which goes up to 15. In this case, we are defining: `beginning..#ofSteps..step-size:` The actual syntax for the sequence is `0..#15..2`
 > 4. Using the _"#"_ from the previous step, we now place it in the _"step-size"_ portion of the syntax. Now, we have a _number range_ spanning from the _"beginning"_ to the _"end"_ and the _"step-size"_ notation evenly distributes a number of values between the two: `beginning..end..#ofSteps`
@@ -98,7 +98,7 @@ In this step, we employ our first function to move the grid of points up in the 
 
 ![](<../../.gitbook/assets/shorthand - exercise 04.jpg>)
 
-> 1. While the previous code block worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
+> 1. While the previous **Code Block** worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
 
 By changing the sliders (ranging from 0 to 10), we get some interesting results.
 
