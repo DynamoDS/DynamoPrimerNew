@@ -141,20 +141,20 @@ In this exercise, we'll use a similar logic to List.Map, but with multiple eleme
 
 ![Exercise](<../../.gitbook/assets/lists of lists - combined 01.jpg>)
 
-> 1. Using the _code block_, define a range using the syntax: \`\`\`..20..#4; `and a value of`20; \`\`\` below that line.
-> 2. Connect the _code block_ to two _Point.ByCoordinates_ nodes.
-> 3. Create a _Line.ByStartPointEndPoint_ from the _Point.ByCoordinates_ nodes.
-> 4. The _Watch_ node shows four lines.
+> 1. Using the _code block_, define a range using the syntax: `0..20..#4;` and a value of `20;`  below that line.
+> 2. Connect the **Code Block** to two **Point.ByCoordinates** nodes.
+> 3. Create a **Line.ByStartPointEndPoint** from the **Point.ByCoordinates** nodes.
+> 4. The **Watch** node shows four lines.
 
 ![Exercise](<../../.gitbook/assets/lists of lists - combined 02.jpg>)
 
-> 1. Below the graph for line creation, we want to use \_code block \_to create four distinct ranges to divide the lines uniquely. We do this with the following lines of code:`0..1..#3;` `0..1..#4;` `0..1..#5;` `0..1..#6;`
-> 2. With a _List.Create_ node, we merge the four lines from the _code block_ into one list.
-> 3. The _Watch_ node reveals a list of lists.
+> 1. Below the graph for line creation, we want to use **Code Block** to create four distinct ranges to divide the lines uniquely. We do this with the following lines of code:`0..1..#3;` `0..1..#4;` `0..1..#5;` `0..1..#6;`
+> 2. With a **List.Create** node, we merge the four lines from the **Code Block** into one list.
+> 3. The **Watch** node reveals a list of lists.
 
 ![Exercise](../../.gitbook/assets/Combine-31.jpg)
 
-> 1. _Curve.PointAtParameter_ will not work by connecting the lines directly into the _parameter_ values. We need to step one level down on the hierarchy. For this, we'll use _List.Combine_.
+> 1. **Curve.PointAtParameter** will not work by connecting the lines directly into the _parameter_ values. We need to step one level down on the hierarchy. For this, we'll use _List.Combine_.
 
 ![Exercise](../../.gitbook/assets/Combine-30.jpg)
 
@@ -208,8 +208,8 @@ Although this particular example can also be created with List.Map, List@Level g
 ![](<../../.gitbook/assets/lists of lists - list at level 04.jpg>)
 
 > 1. Although both methods will give us access to the same points, the List@Level method allows us to easily toggle between layers of data within a single node.
-> 2. To access a point grid with List.Map, we will need a List.GetItemAtIndex node alongside the List.Map. For every list level that we are stepping down, we will need to use an additional List.Map node. Depending on the complexity of your lists, this could require you to add a significant amount of List.Map Nodes to your graph to access the right level of information.
-> 3. In this example, a List.GetItemAtIndex node with a List.Map node returns the same set of points with the same list structure as the List.GetItemAtIndex with '@L3' selected.
+> 2. To access a point grid with **List.Map**, we will need a **List.GetItemAtIndex** node alongside the **List.Map**. For every list level that we are stepping down, we will need to use an additional **List.Map** node. Depending on the complexity of your lists, this could require you to add a significant amount of **List.Map** Nodes to your graph to access the right level of information.
+> 3. In this example, a **List.GetItemAtIndex** node with a **List.Map** node returns the same set of points with the same list structure as the **List.GetItemAtIndex** with '@L3' selected.
 
 ### Transpose
 
@@ -225,16 +225,16 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 
 ![](<../../.gitbook/assets/lists of lists - transpose 01.jpg>)
 
-> Let's delete the _List.Count_ nodes from the previous exercise and move on to some geometry to see how the data structured.
+> Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
 >
-> 1. Connect a _PolyCurve.ByPoints_ to the output of the watch node from _Point.ByCoordinates_.
+> 1. Connect a **PolyCurve.ByPoints** to the output of the watch node from **Point.ByCoordinates**.
 > 2. The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.
 
 ![](<../../.gitbook/assets/lists of lists - transpose 02.jpg>)
 
-> 1. A _List.Transpose_ node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.
+> 1. A **List.Transpose** node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.
 > 2. Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.
-> 3. Notice the geometric result: using _PolyCurve.ByPoints_, we get 3 polycurves in the perpendicular direction to the original curves.
+> 3. Notice the geometric result: using **PolyCurve.ByPoints**, we get 3 polycurves in the perpendicular direction to the original curves.
 
 ## Code Block for List Creation
 
@@ -262,45 +262,45 @@ Begin with the string of nodes above. We are creating a basic surface which span
 
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 01.jpg>)
 
-> 1. Using _code block_, insert these two lines of code and connect to the _u_ and _v_ inputs of _Surface.PointAtParameter_, respectively: `-50..50..#3;` `-50..50..#5;`
-> 2. Be sure to set the Lacing of _Surface.PointAtParameter_ to _"Cross Product"_.
-> 3. The _Watch_ node show that we have a list of 3 lists, each with 5 items.
+> 1. Using **Code Block**, insert these two lines of code and connect to the _u_ and _v_ inputs of **Surface.PointAtParameter**, respectively: `-50..50..#3;` `-50..50..#5;`
+> 2. Be sure to set the Lacing of **Surface.PointAtParameter** to _"Cross Product"_.
+> 3. The **Watch** node show that we have a list of 3 lists, each with 5 items.
 
 In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
 
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 02.jpg>)
 
 > 1. To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.
-> 2. Using _code block_, we'll write a basic line of code for querying a list of lists:\
+> 2. Using **Code Block**, we'll write a basic line of code for querying a list of lists:\
 >    `points[1][2];`
-> 3. Using _Geometry.Translate_, we'll move the selected point up in the _Z_ direction by _20_ units.
+> 3. Using **Geometry.Translate**, we'll move the selected point up in the _Z_ direction by _20_ units.
 
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 03.jpg>)
 
-> 1. Let's also select the middle row of points with a _List.GetItemAtIndex_ node. Note: Similar to a previous step, we can also query the list with _code block_, using a line of `points[1];`
+> 1. Let's also select the middle row of points with a **List.GetItemAtIndex** node. Note: Similar to a previous step, we can also query the list with **Code Block**, using a line of `points[1];`
 
 So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
 
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 04.jpg>)
 
 > 1. First, we want to replace the item of the list we isolated in a previous step.
-> 2. Using _List.ReplaceItemAtIndex_, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (_Geometry.Translate_).
+> 2. Using **List.ReplaceItemAtIndex**, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (**Geometry.Translate**).
 > 3. The output shows that we've input the moved point into the middle item of the list.
 
 Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
 
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 05.jpg>)
 
-> 1. Following the same logic, use _List.ReplaceItemAtIndex_ to replace the middle list with the our modified list.
-> 2. Notice that the _code blocks_ defining the index for these two nodes are 1 and 2, which matches the original query from the _code block_ (_points\[1]\[2]_).
+> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
+> 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the _code block_ (_points\[1]\[2]_).
 > 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
 
 There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
 
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 06.jpg>)
 
-> 1. Create a _NurbsCurve.ByPoints_ node and connect the new data structure to create three nurbs curves.
+> 1. Create a **NurbsCurve.ByPoints** node and connect the new data structure to create three nurbs curves.
 
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 07.jpg>)
 
-> 1. Connect a _Surface.ByLoft_ to the output from _NurbsCurve.ByPoints_. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!
+> 1. Connect a **Surface.ByLoft** to the output from **NurbsCurve.ByPoints**. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!
