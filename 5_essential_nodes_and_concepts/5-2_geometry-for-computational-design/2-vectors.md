@@ -10,9 +10,11 @@
 
 > 1. We can use a line as a stand in for a Vector preview.
 
-> Download the example file (Right click and "Save Link As..."): \[Geometry for Computational Design - Vectors.dyn].
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Vectors.dyn" %}
 
 ### Plane
 
@@ -23,7 +25,11 @@
 > 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
 > 2. In Dynamo, Planes are rendered in the Background Preview.
 
-> Download the example file that accompanies this image (Right click and "Save Link As..."): \[Geometry for Computational Design - Planes.dyn]\(datasets/5-2/Geometry for Computational Design - Plane.dyn). A full list of example files can be found in the Appendix.
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Plane.dyn" %}
 
 ### Coordinate System
 
@@ -34,9 +40,11 @@
 > 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
 > 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
 
-> Download the example file (Right click and "Save Link As..."): \[Geometry for Computational Design - Coordinate System.dyn]
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Coordinate System.dyn" %}
 
 ## Deep Dive into...
 

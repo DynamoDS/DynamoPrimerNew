@@ -15,11 +15,11 @@ Additionally, making models in Dynamo and connecting the preview of what we see 
 > 1. Note the assumed coordinate system rendered by the grid and colored axes
 > 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
-
-> Download the example file (Right click and "Save Link As..."): \[Geometry for Computational Design - Geometry Overview.dyn].
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## The Concept of Geometry
 

@@ -26,11 +26,11 @@ Parameters for both Curves and Surfaces are continuous and extend beyond the edg
 > 2. Point relative to a given Coordinate System (Cylindrical)
 > 3. Point as UV Coordinate on a Surface
 
-> Download the example file (Right click and "Save Link As..."): \[Geometry for Computational Design - Points.dyn]
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
 
-
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Points.dyn" %}
 
 ## Deep Dive into...
 

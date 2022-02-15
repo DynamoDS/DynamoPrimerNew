@@ -31,9 +31,11 @@
 > 1. _NurbsCurve.ByControlPoints_ uses the List of Points as Control Points
 > 2. _NurbsCurve.ByPoints_ draws a Curve through the List of Points
 
-> Download the example file (Right click and "Save Link As..."): \[Geometry for Computational Design - Curves.dyn]
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
+
+{% file src="../../.gitbook/assets/Geometry for Computational Design - Curves.dyn" %}
 
 ## Deep Dive into...
 
