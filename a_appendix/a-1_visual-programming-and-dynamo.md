@@ -40,7 +40,11 @@ The key to and first hurdle we will find in Programming, is that we have to rely
 
 **Visual Programming Defined**
 
-> Download the example file that accompanies this exercise (Right click and "Save Link As..."): [Visual Programming - Circle Through Point.dyn](https://primer.dynamobim.org/01\_Introduction/datasets/1-1/Visual%20Programming%20-%20Circle%20Through%20Point.dyn). A full list of example files can be found in the Appendix.
+> Download the example file by clicking on the link below.
+>
+> A full list of example files can be found in the Appendix.
+
+{% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
 
 If you were tasked with writing instructions for folding an origami crane, how would you go about it? Would you make them with graphics, text, or some combination of the two?
 

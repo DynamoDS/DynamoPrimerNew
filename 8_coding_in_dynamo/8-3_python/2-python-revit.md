@@ -100,17 +100,17 @@ Launch Dynamo and create the set of nodes in the image below. We'll first create
 
 ![](<../../.gitbook/assets/python & revit - exercise 02 - 04.jpg>)
 
-> 1. Create a code block and give it a value of `"0;"`
-> 2. Plug this value into a ReferencePoint.ByCoordinates node for X,Y, and Z inputs.
+> 1. Create a **Code Block** and give it a value of `"0;"`
+> 2. Plug this value into a **ReferencePoint.ByCoordinates** node for X,Y, and Z inputs.
 > 3. Create three sliders, ranging from -100 to 100 with a step size of 1.
-> 4. Connect each slider to a ReferencePoint.ByCoordinates node.
-> 5. Add a Python node to the workspace, click the "+" button on the node to add another input and plug the two references points into each input. Open the Python node.
+> 4. Connect each slider to a **ReferencePoint.ByCoordinates** node.
+> 5. Add a **Python** node to the workspace, click the "+" button on the node to add another input and plug the two references points into each input. Open the **Python** node.
 
 Take a look at the Python node in Dynamo. Find the full code at the below.
 
 ![](<../../.gitbook/assets/python & revit - exercise 02 - 05.jpg>)
 
-> 1. **System.Array:** Revit needs a System Array as an input (rather than a Python list). This is just one more line of code, but paying attention to argument types will facilitate Python programming in Revit.
+> 1. **System.Array:** Revit needs a **System Array** as an input (rather than a Python list). This is just one more line of code, but paying attention to argument types will facilitate Python programming in Revit.
 
 ```
 import sys 
@@ -157,7 +157,7 @@ In this file we have a set of nodes plugging into five inputs of a Python node.
 ![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Select Model Element Nodes:** Hit the select button for each and select a corresponding curve in Revit.
-> 2. **Code Block:** using the syntax _"0..1..#x;"_, connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
+> 2. **Code Block:** using the syntax `0..1..#x;`_,_ connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
 > 3. **Structural Framing Types:** We'll choose the default W12x26 beam here from the dropdown menu.
 > 4. **Levels:** select "Level 1".
 
@@ -202,7 +202,7 @@ for val in IN[2]:
 
 In Revit, we have an array of beams spanning the two curves as structural elements. Note: this isn't a realistic example...the structural elements are used as an example for native Revit instances created from Dynamo.
 
-In Dynamo, we can see the results as well. The beams in the Watch3D node refer to the geometry queried from the Revit elements.
+In Dynamo, we can see the results as well. The beams in the **Watch3D** node refer to the geometry queried from the Revit elements.
 
 ![](<../../.gitbook/assets/python & revit - exercise 03 - 05.jpg>)
 
