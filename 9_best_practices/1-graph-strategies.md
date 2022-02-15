@@ -170,7 +170,7 @@ It is highly likely that someone else will be opening your program at some point
 * When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
 * When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
 
-![](../.gitbook/assets/graphstrategy10.png)
+![](<../.gitbook/assets/graphstrategy10 (2).png>)
 
 > 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
 > 2. The back-end of the program.
@@ -182,13 +182,13 @@ It is highly likely that someone else will be opening your program at some point
 
 Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
 
-![mindmap](../.gitbook/assets/1.jpg)
+![](../.gitbook/assets/graphstrategy11.png)
 
 > The program is functioning, but the graph is disorganized.
 
 Let's start by determining the data and geometry returned by the program.
 
-![data](../.gitbook/assets/1-1.JPG)
+![](../.gitbook/assets/graphstrategy12.png)
 
 > Understanding when major changes to the data occur is crucial to establishing logical divisions, or modularity. Try inspecting the rest of the program with Watch nodes to see if you can determine groups before moving on to the next step.
 >
@@ -197,7 +197,7 @@ Let's start by determining the data and geometry returned by the program.
 
 Once we understand the elemental parts of the program, let's put them in Groups.
 
-![groups](../.gitbook/assets/1-2.jpg)
+![](../.gitbook/assets/graphstrategy13.png)
 
 > Groups allow the user to visually differentiate the parts of the program.
 >
@@ -209,13 +209,13 @@ Once we understand the elemental parts of the program, let's put them in Groups.
 
 With Groups established, align the nodes to create visual continuity across the graph.
 
-![alignment](../.gitbook/assets/2.jpg)
+![](../.gitbook/assets/graphstrategy14.png)
 
 > Visual continuity helps the user to see the program flow and implicit relationships between nodes.
 
 Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
 
-![notes-rename](../.gitbook/assets/2-2.jpg)
+![](<../.gitbook/assets/graphstrategy15 (1).png>)
 
 > These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
 >
@@ -224,7 +224,7 @@ Make the program more accessible by adding another layer of graphic improvements
 
 Before we start to condense the program, let's find a strategic location to introduce the Python script drainage simulator. Plug the output of the first scaled roof surface into the respective scripting input.
 
-![integratescripting](../.gitbook/assets/3.jpg)
+![](../.gitbook/assets/graphstrategy16.png)
 
 > We've chosen to integrate scripting at this point in the program so the drainage simulation can be run on the original, single roof surface. That specific surface is not being previewed, but it saves us from having to choose the top surface of the chamfered Polysurface.
 >
@@ -235,7 +235,7 @@ Before we start to condense the program, let's find a strategic location to intr
 
 Let's simplify the graph now that everything is in place.
 
-![customnode-notetocode](../.gitbook/assets/3-2.jpg)
+![](../.gitbook/assets/graphstrategy17.png)
 
 > Condensing our program with Node to Code and Custom Node has greatly reduced the size of the graph. The groups that create the roof surface and walls have been converted to code since they are very specific to this program. The point translation group is contained in a Custom Node as it could be used in another program. In the example file, create your own custom node from the translate points group.
 >
@@ -244,14 +244,14 @@ Let's simplify the graph now that everything is in place.
 
 As a final step, create presets for exemplary roof forms.
 
-![presets](../.gitbook/assets/3-3.jpg)
+![](../.gitbook/assets/graphstrategy18.png)
 
 > These inputs are the primary drivers of the roof form and will help users see the potential of the program.
 
 Our program with views of two presets.
 
-![presets](../.gitbook/assets/3-4.jpg)
+![](../.gitbook/assets/graphstrategy19.png)
 
-![presets](../.gitbook/assets/3-5.jpg)
+![](../.gitbook/assets/graphstrategy20.png)
 
 > The roof drainage patterns give the user an analytical view of the respective presets.
