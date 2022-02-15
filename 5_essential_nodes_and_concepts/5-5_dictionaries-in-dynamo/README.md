@@ -8,4 +8,4 @@ _While dictionary functionality has been available in Dynamo for some time, Dyna
 
 ![](../../.gitbook/assets/wildDictionary.png)
 
-[_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+Original image courtesy of: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
