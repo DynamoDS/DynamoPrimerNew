@@ -6,8 +6,6 @@ Essentially, we can think of a dictionary as a really smart way to look somethin
 
 _While dictionary functionality has been available in Dynamo for some time, Dynamo 2.0 introduces a new way of managing this data type._
 
-&#x20;
+![](../../.gitbook/assets/wildDictionary.png)
 
-![](../../.gitbook/assets/dictionaryNodesAppeared.png)
-
-_Image Courtesy of_ [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+[_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

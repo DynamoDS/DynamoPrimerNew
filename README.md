@@ -29,21 +29,23 @@ If you would like to contribute a new section, edits, or anything else to this p
 
 ### The Dynamo Primer Project
 
-The Dynamo Primer is an open source project, initiated by Matt Jezyk and the Dynamo Development team at Autodesk.
+The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dynamo Development team at Autodesk.
 
 **Mode Lab** was commissioned to write the First Edition of the primer. We thank them for all of their efforts in establishing this valuable resource.
 
-[![](.gitbook/assets/MODELAB\_Logo.png)](http://modelab.is)
+![](.gitbook/assets/MODELAB\_Logo.png)
 
 ***
 
 **John Pierson of Parallax Team** was commissioned to update the primer to reflect the Dynamo 2.0. revisions.
 
-[![](.gitbook/assets/PRLX\_Logo.jpg)](http://www.parallaxteam.com)
+![](.gitbook/assets/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.![](.gitbook/assets/matterlab-logo.png)
+**Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.
+
+![](<.gitbook/assets/matterlab\_final-07 (3).jpg>)
 
 ### Acknowledgments
 
