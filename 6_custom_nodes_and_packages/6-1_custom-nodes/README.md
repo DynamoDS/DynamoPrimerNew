@@ -1,10 +1,6 @@
 # Custom Nodes
 
-You can use custom nodes to reuse and organize your dynamo logic. In this section you will find:
+Dynamo offers many Core Nodes for a wide range of visual programming tasks. Sometimes a quicker, more elegant, or more easily shared solution is to build your own Nodes. These can be reused among different projects, they make your graphs clearer and cleaner, and they can be pushed to the package manager and shared with the global Dynamo community.
 
-* [Custom Node Introduction](1-introduction.md)
-* [Creating a Custom Node](2-creating.md)
-* [Publishing to Your Library](3-library.md)
-
-![](../../.gitbook/assets/customNodes1.png)
+![](<../../.gitbook/assets/customNodes1 (1).png>)
 

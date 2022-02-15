@@ -22,12 +22,11 @@ Using Dynamo, the point locations of adaptive components can be used to create a
 
 ## Exercise
 
-> Download the example files that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
->
-> 1. [Customizing.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-5/Customizing.dyn)
-> 2. [ARCH-Customizing-BaseFile.rvt](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-5/ARCH-Customizing-BaseFile.rvt)
+
+{% file src="../.gitbook/assets/Revit-Customizing.zip" %}
 
 This exercise will expand on the techniques demonstrated in the previous section. In this case, we are defining a parametric surface from Revit elements, instantiating four-point adaptive components and then editing them based on orientation to the sun.
 
@@ -68,8 +67,6 @@ With the parametric surface, we want to define a way to panelize it in order to 
 
 > 1. Go to _Packages>Search for a Package..._
 > 2. Search for _"LunchBox"_ and install _"LunchBox for Dynamo"_. This is a really helpful set of tools for geometry operations such as this.
-
-
 
 > 1. After downloading, you now have full access to the LunchBox suite. Search for _"Quad Grid"_ and select _"LunchBox Quad Grid By Face"_. Plug the parametric surface into the _surface_ input and set the _U_ and _V_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
 

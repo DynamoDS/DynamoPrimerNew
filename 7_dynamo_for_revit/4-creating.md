@@ -34,12 +34,11 @@ Let's walk through [second exercise](8-4\_creating.md#exercise-directshape-eleme
 
 ## Exercise: Generate Elements and Lists
 
-> Download the example files that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
->
-> 1. [Creating.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-4/Creating.dyn)
-> 2. [ARCH-Creating-BaseFile.rvt](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-4/ARCH-Creating-BaseFile.rvt)
+
+{% file src="../.gitbook/assets/Revit-Creating.zip" %}
 
 Beginning with the example file from this section (or continuing with the Revit file from the previous session), we see the same Revit mass.
 
@@ -114,12 +113,11 @@ And for the final test, by selecting the mass in Revit and editing instance para
 
 ## Exercise: DirectShape Elements
 
-> Download the example files that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
->
-> 1. [DirectShape.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-4/DirectShape.dyn)
-> 2. [ARCH-DirectShape-BaseFile.rvt](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-4/ARCH-DirectShape-BaseFile.rvt)
+
+{% file src="../.gitbook/assets/Revit-Creating-DirectShape.zip" %}
 
 Begin by opening the sample file for this lesson - ARCH-DirectShape-BaseFile.rvt.
 

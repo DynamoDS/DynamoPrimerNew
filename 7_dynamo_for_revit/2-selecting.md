@@ -42,12 +42,11 @@ With the three images above in mind, let's dive into an exercise which selects e
 
 ## Exercise
 
-> Download the example files that accompanies this exercise (Right click and "Save Link As...").
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
->
-> 1. [Selecting.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-2/Selecting.dyn)
-> 2. ARCH-Selecing-BaseFile.rvt
+
+{% file src="../.gitbook/assets/Revit-Selecting.zip" %}
 
 In this example Revit file, we have three element types of a simple building. We're going to use this as an example for selecting Revit elements within the context of the Revit hierarchy.
 

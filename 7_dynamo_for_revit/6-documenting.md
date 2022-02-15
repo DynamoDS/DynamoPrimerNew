@@ -14,12 +14,11 @@ In the exercise below, we'll use a basic deviation from plane node to create a R
 
 ### Part I: Setting Panels Aperture Ratio Based on Deviation From Plane Node
 
-> Download the example files that accompanies this exercise (Right click and "Save Link As...").&#x20;
+> Download the example file by clicking on the link below.
 >
 > A full list of example files can be found in the Appendix.
->
-> 1. [Documenting.dyn](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-6/Documenting.dyn)
-> 2. [ARCH-Documenting-BaseFile.rvt](https://github.com/h-iL/ForkedDynamoPrimerReorganized/blob/main/08\_Dynamo-for-Revit/datasets/8-6/ARCH-Documenting-BaseFile.rvt)
+
+{% file src="../.gitbook/assets/Revit-Documenting.zip" %}
 
 Start with the Revit file for this section (or continue from the previous section). This file has an array of ETFE panels on the roof. We'll reference these panels for this exercise.
 
@@ -43,7 +42,7 @@ Just for kicks, like the previous exercise, let's set the aperture ratio of each
 
 ![](<../.gitbook/assets/documenting - exercise I - 04.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the deviation values to a domain between 0.15 and 0_._45 by entering `0.15; 0.45;`  into the _Code Block_.
+> 1. Using _Math.RemapRange_, remap the deviation values to a domain between 0.15 and 0\_.\_45 by entering `0.15; 0.45;` into the _Code Block_.
 > 2. Plug these results into the value input for _Element.SetParameterByName_.
 
 Back in Revit we can _kind of_ make sense of the change in aperture across the surface.
@@ -54,7 +53,7 @@ Zooming in, it becomes more clear that the closed panels are weighted towards th
 
 ![Exercise](../.gitbook/assets/13a.jpg)
 
-### Part II: Color and Documentation&#x20;
+### Part II: Color and Documentation
 
 Setting the Aperture Ratio doesn't clearly demonstrate the deviation of panels on the roof, and we're also changing the geometry of the actual element. Suppose we just want to study the deviation from the standpoint of fabrication feasibility. It would be helpful to color the panels based on deviation range for our documentation. We can do that with the series of steps below, and in a very similar process to the steps above.
 
