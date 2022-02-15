@@ -156,13 +156,63 @@
 
 
 
-Code Blocks and DesignScript
+### Code Blocks and DesignScript
+
+#### DesignScript Syntax
+
+{% file src="../.gitbook/assets/Dynamo-Syntax_Attractor-Surface.dyn" %}
+
+#### Shorthand
+
+{% file src="../.gitbook/assets/Obsolete-Nodes_Sine-Surface.dyn" %}
+
+#### Functions
+
+{% file src="../.gitbook/assets/Functions_SphereByZ.dyn" %}
+
+### Python
+
+#### Python Nodes
+
+{% file src="../.gitbook/assets/Python_Custom-Node.dyn" %}
+
+#### Python and Revit
+
+{% file src="../.gitbook/assets/Revit-Doc.dyn" %}
+
+{% file src="../.gitbook/assets/Revit-ReferenceCurve.dyn" %}
+
+{% file src="../.gitbook/assets/Revit-StructuralFraming.zip" %}
+Best
+{% endfile %}
+
+## Best Practices
+
+### Graph Strategies
+
+{% file src="../.gitbook/assets/RoofDrainageSim.zip" %}
+
+### Scripting Strategies
+
+{% file src="../.gitbook/assets/SteepestPath.dyn" %}
+
+## Sample Workflows
+
+### Getting Started Workflows
+
+#### Parametric Vase
 
 
 
-Geometry with DesignScript
+#### Attractor Points
 
 
 
-Python
+
+
+
+
+
+
+
 
