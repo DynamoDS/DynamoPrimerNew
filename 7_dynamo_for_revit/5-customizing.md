@@ -6,15 +6,15 @@ While we previously looked at editing a basic building mass, we want to dive dee
 
 Suppose we've created a range of adaptive components and want to edit parameters based on their point locations. The points, for example, could drive a thickness parameter which is related to the area of the element. Or, they could drive an opacity parameter related to solar exposure throughout the year. Dynamo allows the connection of analysis to parameters in a few easy steps, and we'll explore a basic version in the exercise below.
 
-![Points](../.gitbook/assets/points.jpg)
+![](<../.gitbook/assets/customizing - point location.jpg>)
 
-> Query the adaptive points of a selected adaptive component by using the _AdaptiveComponent.Locations_ node. This allows us to work with an abstracted version of a Revit element for analysis.
+> Query the adaptive points of a selected adaptive component by using the **AdaptiveComponent.Locations** node. This allows us to work with an abstracted version of a Revit element for analysis.
 
 By extracting the point location of adaptive components, we can run a range of analysis for that element. A four-point adaptive component will allow you to study the deviation from plane for a given panel for example.
 
 ### Solar Orientation Analysis
 
-![Points](../.gitbook/assets/points.jpg)
+![](<../.gitbook/assets/customizing - solar orientation analysis.jpg>)
 
 > Use remapping to map a set of a data into a parameter range. This is fundamental tool used in a parametric model, and we'll demonstrate it in the exercise below.
 
