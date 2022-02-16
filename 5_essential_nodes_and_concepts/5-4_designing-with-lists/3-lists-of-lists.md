@@ -40,14 +40,14 @@ When dealing with lists of lists, the data is layered and complex, but this prov
 
 {% file src="../../.gitbook/assets/Top-Down-Hierarchy.dyn" %}
 
-The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like List.GetItemAtIndex, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
+The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like **List.GetItemAtIndex**, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
 
 ![top-down](<../../.gitbook/assets/lists of lists - top down hierachy.jpg>)
 
-> 1. With _code block_, we've defined two ranges: `0..2; 0..3;`
-> 2. These ranges are connected to a _Point.ByCoordinates_ node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
-> 3. Notice that the _Watch_ node gives 3 lists with 4 items in each list.
-> 4. When using _List.GetItemAtIndex_, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
+> 1. With **Code Block**, we've defined two ranges: `0..2; 0..3;`
+> 2. These ranges are connected to a **Point.ByCoordinates** node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
+> 3. Notice that the **Watch** node gives 3 lists with 4 items in each list.
+> 4. When using **List.GetItemAtIndex**, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
 
 ### List.Flatten
 
@@ -61,16 +61,16 @@ Flatten removes all tiers of data from a data structure. This is helpful when th
 
 ![Exercise](<../../.gitbook/assets/lists of lists - flatten 01.jpg>)
 
-> 1. Insert one line of code to define a range in _code block_: `-250..-150..#4;`
-> 2. Plugging the _code block_ into the _x_ and _y_ input of a _Point.ByCoordinates_ node, we set the lacing to _"Cross Product"_ to get a grid of points.
-> 3. The _Watch_ node shows that we have a list of lists.
-> 4. A _PolyCurve.ByPoints_ node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four Polycurve representing each row in the grid.
+> 1. Insert one line of code to define a range in **Code Block**: `-250..-150..#4;`
+> 2. Plugging the _code block_ into the _x_ and _y_ input of a **Point.ByCoordinates** node, we set the lacing to _"Cross Product"_ to get a grid of points.
+> 3. The **Watch** node shows that we have a list of lists.
+> 4. A **PolyCurve.ByPoints** node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four polycurves representing each row in the grid.
 
 ![Exercise](<../../.gitbook/assets/lists of lists - flatten 02.jpg>)
 
-> 1. By inserting a _flatten_ before the polycurve node, we've created one single list for all of the points. The polycurve node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.
+> 1. By inserting a _flatten_ before the polycurve node, we've created one single list for all of the points. The **PolyCurve.ByPoints** node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.
 
-There are also options for flattening isolated tiers of data. Using the List.Flatten node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in List.Map. We'll discuss more about List.Map below.
+There are also options for flattening isolated tiers of data. Using the **List.Flatten** node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in **List.Map**. We'll discuss more about **List.Map** below.
 
 ### Chop
 
@@ -94,42 +94,42 @@ The chop command divides lists based on a given list length. In some ways, chop 
 
 {% file src="../../.gitbook/assets/Map.dyn" %}
 
-A _List.Map/Combine_ applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
+A **List.Map/Combine** applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Map functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Note: This exercise was created with a previous version of Dynamo. Much of the_ **List.Map** _functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 
-As a quick introduction, let's review the List.Count node from a previous section.
+As a quick introduction, let's review the **List.Count** node from a previous section.
 
-The _List.Count_ node counts all of the items in a list. We'll use this to demonstrate how _List.Map_ works.
+The **List.Count** node counts all of the items in a list. We'll use this to demonstrate how **List.Map** works.
 
 ![](<../../.gitbook/assets/lists of lists - map 01.jpg>)
 
-> 1.  Insert two lines of code into the _code block_: `-50..50..#Nx; -50..50..#Ny;`
+> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
 >
 >     After typing in this code, the code block will create two inputs for Nx and Ny.
-> 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the _code block_.
-> 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a _Point.ByCoordinates_ node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
-> 4. A _Watch_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
+> 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the **Code Block**.
+> 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
+> 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
 
 ![Exercise](<../../.gitbook/assets/lists of lists - map 02.jpg>)
 
-> 1. Attach a _List.Count_ node to the output of the watch node from the previous step.
-> 2. Connect a _Watch_ node to the List.Count output.
+> 1. Attach a **List.Count** node to the output of the watch node from the previous step.
+> 2. Connect a **Watch** node to the **List.Count** output.
 
 Notice that the List.Count node gives a value of 5. This is equal to the "Nx" variable as defined in the code block. Why is this?
 
-* First, the Point.ByCoordinates node uses the "x" input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.
-* Since Dynamo treats lists as objects in and of themselves, a List.Count node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.
+* First, the **Point.ByCoordinates** node uses the "x" input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.
+* Since Dynamo treats lists as objects in and of themselves, a **List.Count** node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.
 
 ![Exercise](<../../.gitbook/assets/lists of lists - map 03.jpg>)
 
-> 1. By using a _List.Map_ node, we take a step down in the hierarchy and perform a _"function"_ at this level.
-> 2. Notice that the _List.Count_ node has no input. It is being used as a function, so the _List.Count_ node will be applied to every individual list one step down in the hierarchy. The blank input of _List.Count_ corresponds to the list input of _List.Map_.
-> 3. The results of _List.Count_ now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.
+> 1. By using a **List.Map** node, we take a step down in the hierarchy and perform a _"function"_ at this level.
+> 2. Notice that the **List.Count** node has no input. It is being used as a function, so the **List.Count** node will be applied to every individual list one step down in the hierarchy. The blank input of **List.Count** corresponds to the list input of **List.Map**.
+> 3. The results of **List.Count** now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.
 
 ### **List.Combine**
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 
 In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
 
@@ -162,9 +162,9 @@ Refer to exercise in n-Dimensional Lists to see another example of using List.Co
 
 {% file src="../../.gitbook/assets/Listatlevel.dyn" %}
 
-Preferred to List.Map, the List@Level feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
+Preferred to **List.Map**, the **List@Level** feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
 
-In this exercise, we will use the List@Level feature to isolate a specific level of data.
+In this exercise, we will use the **List@Level** feature to isolate a specific level of data.
 
 ![List@Level](<../../.gitbook/assets/lists of lists - list at level 01.jpg>)
 
@@ -172,15 +172,15 @@ We will start with a simple 3D grid of points.
 
 > 1. The grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.
 > 2. These tiers exist at different **Levels**. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.
-> 3. The List Levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
+> 3. The list levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
 
 ![List@Level](<../../.gitbook/assets/lists of lists - list at level 02.jpg>)
 
-> 1. To use the List@Level function, click '>'. Inside this menu, you will see two checkboxes.
-> 2. **Use Levels** - This enables the List@Level functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.
-> 3. **Keep list structure** – If enabled, you will have the option to keep that input’s level structure. Sometimes, you may have purposefully organized your data into sublists. By checking this option, you can keep your list organization intact and not lose any information.
+> 1. To use the **List@Level** function, click '>'. Inside this menu, you will see two checkboxes.
+> 2. **Use Levels** - This enables the **List@Level** functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.
+> 3. _Keep list structure_ – If enabled, you will have the option to keep that input’s level structure. Sometimes, you may have purposefully organized your data into sublists. By checking this option, you can keep your list organization intact and not lose any information.
 
-With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each List Level and index combination will return a different set of points from our original 3D set.
+With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each list level and index combination will return a different set of points from our original 3D set.
 
 ![](<../../.gitbook/assets/lists of lists - list at level 03.jpg>)
 
@@ -189,11 +189,11 @@ With our simple 3D grid, we can access and visualize the list structure by toggl
 > 3. If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.
 > 4. If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.
 
-Although this particular example can also be created with List.Map, List@Level greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a List.Map and List@Level methods:
+Although this particular example can also be created with **List.Map**, **List@Level** greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a **List.Map** and **List@Level** methods:
 
 ![](<../../.gitbook/assets/lists of lists - list at level 04.jpg>)
 
-> 1. Although both methods will give us access to the same points, the List@Level method allows us to easily toggle between layers of data within a single node.
+> 1. Although both methods will give us access to the same points, the **List@Level** method allows us to easily toggle between layers of data within a single node.
 > 2. To access a point grid with **List.Map**, we will need a **List.GetItemAtIndex** node alongside the **List.Map**. For every list level that we are stepping down, we will need to use an additional **List.Map** node. Depending on the complexity of your lists, this could require you to add a significant amount of **List.Map** Nodes to your graph to access the right level of information.
 > 3. In this example, a **List.GetItemAtIndex** node with a **List.Map** node returns the same set of points with the same list structure as the **List.GetItemAtIndex** with '@L3' selected.
 
@@ -209,10 +209,10 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 
 ![Transpose](../../.gitbook/assets/transpose1.jpg)
 
+Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
+
 ![](<../../.gitbook/assets/lists of lists - transpose 01.jpg>)
 
-> Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
->
 > 1. Connect a **PolyCurve.ByPoints** to the output of the watch node from **Point.ByCoordinates**.
 > 2. The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.
 
@@ -224,13 +224,13 @@ Transpose is a fundamental function when dealing with lists of lists. Just as in
 
 ## Code Block for List Creation
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the List.Create node. Code block is discussed in more detail in [Code Blocks and DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
+Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
 
 ![](<../../.gitbook/assets/lists of lists - codeblock for list creation 01.jpg>)
 
 #### Code Block Query
 
-Code block shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. Code blocks are discussed in more detail in Chapter 7. Reference the image below to note how a list with multiple data types can be queried with code block.
+**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with code block.
 
 ![](<../../.gitbook/assets/lists of lists - codeblock for list creation 02.jpg>)
 
@@ -278,7 +278,7 @@ Now that we've modified the list, we need to insert this list back into the orig
 ![](<../../.gitbook/assets/list of lists - exercise cb insert & query 05.jpg>)
 
 > 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
-> 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the _code block_ (_points\[1]\[2]_).
+> 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
 > 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
 
 There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.

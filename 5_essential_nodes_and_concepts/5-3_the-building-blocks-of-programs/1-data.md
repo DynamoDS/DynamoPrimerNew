@@ -63,7 +63,7 @@ In this first example, we assemble a shelled cylinder which walks through the ge
 
 2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the _Plane.ByOriginNormal_ node. This gives us a rectangular plane in the Dynamo preview.
 
 ![](<../../.gitbook/assets/data - exercise step 2.jpg>)
 
@@ -121,7 +121,7 @@ In this first example, we assemble a shelled cylinder which walks through the ge
 >
 > d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original _Point.ByCoordinates_. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
 
 ![](<../../.gitbook/assets/data - exercise step 11.gif>)
 

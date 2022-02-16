@@ -36,7 +36,7 @@ The image below considers a string of data coming from an external spreadsheet. 
 > 2. Add a "_,_" string to the canvas and plug in to the new separator input.
 > 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
 
-While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a number. This is done with the **String.ToNumber** Node
+While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a Number. This is done with the **String.ToNumber** Node
 
 ![](<../../.gitbook/assets/strings - querying strings 03.jpg>)
 
@@ -61,7 +61,7 @@ The following represents the concatenation of three strings:
 
 The join method is very similar to concatenate, except it has an added layer of punctuation.
 
-If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the **String.Join** node in order to create a similar data structure.
+If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the join Node in order to create a similar data structure.
 
 The following image represents the joining of two strings:
 
@@ -100,7 +100,7 @@ Now, we want to drive home the repetition of the stanza by merging the two lines
 ![](<../../.gitbook/assets/strings - working with strings 04.jpg>)
 
 > 1. Using two **List.GetItemAtIndex** Nodes, we can isolate the items using the values of 0 and 1 as the index input.
-> 2. The output for each node gives us, in order, the final two lines.
+> 2. The output for each Node gives us, in order, the final two lines.
 
 To merge these two items into one, we use the **String.Join** Node:
 

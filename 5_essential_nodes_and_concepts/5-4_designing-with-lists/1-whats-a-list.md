@@ -34,26 +34,26 @@ These indices are a crucial element when working with lists.
 
 ### Inputs and Outputs
 
-Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius**:
+Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: _PolyCurve.ByPoints_ and _Circle.ByCenterPointRadius_:
 
 ![Input Examples](<../../.gitbook/assets/what's a list - inputs and outputs.jpg>)
 
-> 1. The _points_ input for **PolyCurve.ByPoints** is looking for _"Point\[]"_. This represents a list of points
-> 2. The output for **PolyCurve.ByPoints** is a single polycurve created from a list of five point.
-> 3. The _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_.
-> 4. The output for **Circle.ByCenterPointRadius** is a list of five circles, whose centers correspond to the original list of points.
+> 1. The _points_ input for _PolyCurve.ByPoints_ is looking for _"Point\[]"_. This represents a list of points
+> 2. The output for _PolyCurve.ByPoints_ is a single PolyCurve created from a list of five point.
+> 3. The _centerPoint_ input for _Circle.ByCenterPointRadius_ asks for _"Point"_.
+> 4. The output for _Circle.ByCenterPointRadius_ is a list of five circles, whose centers correspond to the original list of points.
 
-The input data for **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius** are the same, however the **Polycurve.ByPoints** node gives us one polycurve while the **Circle.ByCenterPointRadius** node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
+The input data for _PolyCurve.ByPoints_ and _Circle.ByCenterPointRadius_ are the same, however the Polycurve node gives us one polycurve while the Circle node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
 
-Hovering over the _points_ input for **Polycurve.ByPoints**, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
+Hovering over the _points_ input for _Polycurve.ByPoints_, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
 
-On the other hand, the _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
+On the other hand, the _centerPoint_ input for _Circle.ByCenterPointRadius_ asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
 
 ### Lacing
 
 Data matching is a problem without a clean solution. It occurs when a node has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
 
-Imagine a node which creates line segments between points (**Line.ByStartPointEndPoint**). It will have two input parameters which both supply point coordinates:
+Imagine a node which creates line segments between points (Line.ByStartPointEndPoint). It will have two input parameters which both supply point coordinates:
 
 #### Shortest List
 
@@ -87,7 +87,7 @@ As you can see there are different ways in which we can draw lines between these
 
 To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
 
-We'll change the lacing on **Point.ByCoordinates**, but won't change anything else about the graph above.
+We'll change the lacing on _Point.ByCoordinates_, but won't change anything else about the graph above.
 
 ### Shortest List
 
