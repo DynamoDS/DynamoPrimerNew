@@ -129,44 +129,30 @@ Notice that the List.Count node gives a value of 5. This is equal to the "Nx" va
 
 ### **List.Combine**
 
-{% hint style="warning" %}
-List.Combine seems redundant for this exercise, adding a note here for a different exercise once all images are updated!
+_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
 
-\*consider adding link for another example exercise in n-Dimensional Lists for using List.Combine
-{% endhint %}
+In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the List@Level feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below_
-
-In this exercise, we'll use a similar logic to List.Map, but with multiple elements. In this case, we want to divide a list of curves by a unique number of points.
+Start by setting up two lists of points.
 
 ![Exercise](<../../.gitbook/assets/lists of lists - combined 01.jpg>)
 
-> 1. Using the _code block_, define a range using the syntax: `0..20..#4;` and a value of `20;`  below that line.
-> 2. Connect the **Code Block** to two **Point.ByCoordinates** nodes.
-> 3. Create a **Line.ByStartPointEndPoint** from the **Point.ByCoordinates** nodes.
-> 4. The **Watch** node shows four lines.
+> 1. Use **Sequence** node to generate 10 values, each with a 10 step increment.
+> 2. Connect the result to the x input of a **Point.ByCoordinates** node. This will create a list of points in Dynamo.
+> 3. Add a second **Point.ByCoordinates** node to the workspace, use the same **Sequence** output as its x input, but use an **Interger Slider** as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.
+
+Next, we will use **List.Combine** to apply a function on objects in 2 separate lists. In this case, it will be a simple draw line function.
 
 ![Exercise](<../../.gitbook/assets/lists of lists - combined 02.jpg>)
 
-> 1. Below the graph for line creation, we want to use **Code Block** to create four distinct ranges to divide the lines uniquely. We do this with the following lines of code:`0..1..#3;` `0..1..#4;` `0..1..#5;` `0..1..#6;`
-> 2. With a **List.Create** node, we merge the four lines from the **Code Block** into one list.
-> 3. The **Watch** node reveals a list of lists.
+> 1. Add **List.Combine** to the workspace and connect the 2 set of points as its list0 & list1 input.
+> 2. Use a **Line.ByStartPointEndPoint** as the input function for **List.Combine**.&#x20;
 
-![Exercise](../../.gitbook/assets/Combine-31.jpg)
+Once completed, the 2 set of points are zipped/paired together through a **Line.ByStartPointEndPoint** function and returning 10 lines in Dynamo.
 
-> 1. **Curve.PointAtParameter** will not work by connecting the lines directly into the _parameter_ values. We need to step one level down on the hierarchy. For this, we'll use _List.Combine_.
-
-![Exercise](../../.gitbook/assets/Combine-30.jpg)
-
-> By using _List.Combine_, we can successfully divide each line by the given ranges. This gets a little tricky, so we'll break it down in-depth.
->
-> 1. First, add a _Curve.PointAtParameter_ node to the canvas. This will be the \_"function" \_or _"combinator"_ that we apply to _List.Combine_ node. More on that in a second.
-> 2. Add a _List.Combine_ node to the canvas. Hit the _"+"_ or _"-"_ to add or subtract inputs. In this case, we'll use the default two inputs on the node.
-> 3. We want to plug the _Curve.PointAtParameter_ node into the _"comb"_ input of _List.Combine_. And one more important node: be sure to right-click the \_"param" \_input of _Curve.PointAtParameter_ and uncheck _"use default value"_. Default values in Dynamo inputs have to be removed when running a node as a function. In other words, we should consider default values as having additional nodes wired to them. Because of this, we need to remove the default values in this case.
-> 4. We know we have two inputs, the lines and the parameters to create points. But how do we connect them to the _List.Combine_ inputs and in what order?
-> 5. The empty inputs of _Curve.PointAtParameter_, from top-to-bottom need to be filled in the combinator in the same order. So, the lines are plugged into _list1_ of _List.Combine_.
-> 6. Following suit, the parameter values are plugged into the _list2_ input of _List.Combine_.
-> 7. The _Watch_ node and the Dynamo preview shows us that we have 4 lines, each divided based on the _code block_ ranges.
+{% hint style="info" %}
+Refer to exercise in n-Dimensional Lists to see another example of using List.Combine.
+{% endhint %}
 
 ### List@Level
 
