@@ -15,19 +15,25 @@ Standard libraries are external to Dynamo and are present in the programming lan
 
 **Dynamo Libraries**
 
-* ProtoGeometry
-  * Functionality: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
-  * How to import: `import Autodesk.DesignScript.Geometry`
-  * **Note when using ProtoGeometry through Python or C#**, you are creating unmanaged objects, which need have their memory managed manually - please see section below: **Unmanaged Objects**, for more info.
-* DSCoreNodes
-  * Functionality: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
-  * How to import: `import DSCore`
-* Tessellation
-  * Functionality: Convex Hull, Delaunay, Voronoi.
-  * How to import: `import Tessellation`
-* DSOffice
-  * Functionality: Excel.
-  * How to import: `import DSOffice`
+1.  ProtoGeometry\*
+
+    * Functionality: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
+    * How to import: `import Autodesk.DesignScript.Geometry`
+
+    ``
+2. DSCoreNodes
+   * Functionality: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
+   * How to import: `import DSCore`
+3. Tessellation
+   * Functionality: Convex Hull, Delaunay, Voronoi.
+   * How to import: `import Tessellation`
+4. DSOffice
+   * Functionality: Excel.
+   * How to import: `import DSOffice`
+
+{% hint style="warning" %}
+\*Note: When using **ProtoGeometry** through Python or C#, you are creating unmanaged objects, which need have their memory managed manually - please see section below: **Unmanaged Objects**, for more info.
+{% endhint %}
 
 ## Label Carefully
 
