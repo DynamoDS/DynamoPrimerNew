@@ -6,9 +6,9 @@ In short, a Package is a collection of Custom Nodes. The Dynamo Package Manager 
 
 An open-source project such as Dynamo thrives on this type of community involvement. With dedicated third-party developers, Dynamo is able to extend its reach to workflows across a range of industries. For this reason, the Dynamo team has made concerted efforts to streamline package development and publishing (which will be discussed in more detail in the following sections).
 
-### Installing a Package&#x20;
+### Installing a Package
 
-The easiest way to install a package is by using the Packages toolbar in your Dynamo interface. Let's jump right into it and install one now. In this quick example, we'll install a popular package for creating quad panels on a grid.&#x20;
+The easiest way to install a package is by using the Packages toolbar in your Dynamo interface. Let's jump right into it and install one now. In this quick example, we'll install a popular package for creating quad panels on a grid.
 
 In Dynamo, go to _Packages>Search For a Package..._
 
@@ -16,7 +16,7 @@ In Dynamo, go to _Packages>Search For a Package..._
 
 In the search bar, let's search for "quads from rectangular grid". After a few moments, you should see all of the packages which match this search query. We want to select the first package with the matching name.
 
-Click on Ínstall __ to __ add this package to your library. Done!
+Click on Ínstall to add this package to your library. Done!
 
 ![](<../../.gitbook/assets/package introduction - installing a package 02.jpg>)
 
@@ -24,17 +24,17 @@ Notice that we now have another group in our Dynamo library called "buildz". Thi
 
 ![](<../../.gitbook/assets/package introduction - installing a package 03.jpg>)
 
-Use Code Block to quickly define a rectangular grid, output the result to a Polygon.ByPoints Node, subsequently a Surface.ByPatch Node to view the list of rectangular panels you have just created.
+Use **Code Block** to quickly define a rectangular grid, output the result to a **Polygon.ByPoints** Node, subsequently a **Surface.ByPatch** Node to view the list of rectangular panels you have just created.
 
 ![](<../../.gitbook/assets/package introduction - installing a package 04.jpg>)
 
-### Installing Package Folder - DynamoUnfold&#x20;
+### Installing Package Folder - DynamoUnfold
 
 The example above focuses on a package with one custom node, but you use the same process for downloading packages with several custom nodes and supporting data files. Let's demonstrate that now with a more comprehensive package: Dynamo Unfold.
 
-As in the example above, begin by selecting _Packages>Search for a Package..._.&#x20;
+As in the example above, begin by selecting _Packages>Search for a Package..._.
 
-This time, we'll search for _"_DynamoUnfold_"_, one word, minding the caps. When we see the packages, download by clicking on Install to add Dynamo Unfold to your Dynamo Library.
+This time, we'll search for _"DynamoUnfold"_, one word, minding the caps. When we see the packages, download by clicking on Install to add Dynamo Unfold to your Dynamo Library.
 
 ![](<../../.gitbook/assets/package introduction - installing package folder 01.jpg>)
 
@@ -42,17 +42,13 @@ In the Dynamo Library, we have a _DynamoUnfold_ Group with multiple categories a
 
 ![](<../../.gitbook/assets/package introduction - installing package folder 02.jpg>)
 
-Now, let's take a look at the package's file structure. First, select Dynamo > Preferences&#x20;
+Now, let's take a look at the package's file structure. First, select Dynamo > Preferences
 
 ![](<../../.gitbook/assets/package introduction - installing package folder 03.jpg>)
-
-
 
 From the Preferences pop-up, open Package Manager > next to DynamoUnfold, select the vertical dots menu ![](<../../.gitbook/assets/package introduction - vertical dots menu.jpg>) > Show Root Directory to open root folder for this package.
 
 ![](<../../.gitbook/assets/package introduction - installing package folder 04.jpg>)
-
-
 
 This will take us to the package's root directory. Notice that we have 3 folders and a file.
 
@@ -63,7 +59,7 @@ This will take us to the package's root directory. Notice that we have 3 folders
 > 3. The extra folder houses all additional files, including our example files.
 > 4. The pkg file is a basic text file defining the package settings. We can ignore this for now.
 
-Opening the "extra" folder, we see a bunch of example files that were downloaded with the install. Not all packages have example files, but this is where you can find them if they are part of a package.&#x20;
+Opening the "extra" folder, we see a bunch of example files that were downloaded with the install. Not all packages have example files, but this is where you can find them if they are part of a package.
 
 Let's open up "SphereUnfold".
 
@@ -73,7 +69,7 @@ After opening the file and hitting "Run" on the solver, we have an unfolded sphe
 
 ![](<../../.gitbook/assets/package introduction - installing package folder 07.jpg>)
 
-### Dynamo Package Manager&#x20;
+### Dynamo Package Manager
 
 Another way to discover Dynamo packages is to explore the [Dynamo Package Manager](http://dynamopackages.com) online. This is a good way to browse for packages, since the repository sorts packages in order of download count and popularity. Also, it's an easy way to gather information on recent updates for packages, as some Dynamo packages are subjected to versioning and dependencies of Dynamo builds.
 
@@ -83,14 +79,14 @@ By clicking on _"Quads from Rectangular Grid"_ in the Dynamo Package Manager, yo
 
 You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
 
-### Where are Packages Files Stored Locally?&#x20;
+### Where are Packages Files Stored Locally?
 
 If you do download files from the Dynamo package manager, or if you would like to see where all of your package files are kept, click on Dynamo > Package Manager > Node and Package Paths, you can find your current root folder directory from here.
 
 ![](<../../.gitbook/assets/package introduction - installing package folder 08.jpg>)
 
-&#x20;By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
+By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
 
-### Going Further with Packages&#x20;
+### Going Further with Packages
 
 The Dynamo community is constantly growing and evolving. By exploring the Dynamo Package Manager from time to time, you'll find some exciting new developments. In the following sections, we'll take a more in-depth look at packages, from the end-user perspective to authorship of your own Dynamo Package.
