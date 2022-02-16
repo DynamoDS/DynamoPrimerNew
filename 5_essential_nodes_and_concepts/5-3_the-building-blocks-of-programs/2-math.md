@@ -67,7 +67,7 @@ Now, the bulk of Nodes from the previous step will work fine, but it is a lot of
 
 ![](<../../.gitbook/assets/math - part II-01.gif>)
 
-**Polycurve.ByPoints:** Connect Point.ByCoordinates from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
+**Polycurve.ByPoints:** Connect **Point.ByCoordinates** from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
 
 ![](<../../.gitbook/assets/math - part II-02.jpg>)
 
@@ -97,13 +97,13 @@ Next, follow these mini steps to generate a series of spiral at various rotation
 
 ![](<../../.gitbook/assets/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** There are several Geometry.Rotate options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
+> a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
 >
 > ![](<../../.gitbook/assets/math - part IV-03 cross product.jpg>)
 >
 > b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
 >
-> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a Number Range component. Connect this into the _degrees_ input.
+> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a **Number Range** component. Connect this into the _degrees_ input.
 >
 > d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
 

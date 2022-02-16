@@ -46,7 +46,7 @@ Again, the Nodes are working identically. If the _boolean_ is changed to _false_
 >
 > c. **Output** - our output is a list of 11 numbers ranging from 0-10.
 >
-> d. **Modulo (%)-** _Number Range_ into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
+> d. **Modulo (%)-** **Number Range** into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
 >
 > e. **Equality Test (==) -** add an equality test to the canvas. Plug _modulo_ output into the _x_ input and _0.0_ into the _y_ input.
 >
@@ -64,9 +64,9 @@ Building off of the logic established in the first exercise, let's apply this se
 
 ![](<../../.gitbook/assets/logic - exercise part II-01.jpg>)
 
-> a. Use a sequence Node with these input values.
+> a. Use a **Sequence** Node with these input values.
 >
-> b. We've unplugged the in list input into _List.FilterByBoolMask_. We'll put these Nodes aside for now, but they'll come in handy later in the exercise.
+> b. We've unplugged the in list input into **List.FilterByBoolMask**. We'll put these Nodes aside for now, but they'll come in handy later in the exercise.
 
 3\. Let's begin by creating a separate group of Graph as shown in the image above. This group of Nodes represents a parametric equation to define a line curve. A few notes:
 
@@ -86,7 +86,7 @@ The method here for the inputs: use number nodes for more static properties and 
 
 ![](<../../.gitbook/assets/logic - exercise part II-04.jpg>)
 
-> a. Math.RemapRange - Using the number sequence created in step 02, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
+> a. **Math.RemapRange** - Using the number sequence created in step 02, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
 
 5\. Create a **Curve.PointAtParameter** Node, then connect the **Math.RemapRange** output from step 04 as its _param_ input.
 
@@ -98,11 +98,11 @@ This step creates points along the curve. We remapped the numbers to 0 to 1 beca
 
 ![](<../../.gitbook/assets/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask** - Plug _Curve.PointAtParameter_ from the previous step into the _list_ input.
+> a. **List.FilterByBoolMask** - Plug **Curve.PointAtParameter** from the previous step into the _list_ input.
 >
 > b. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
 
-7\. Next, we are going to use the output result from List.FilterByBoolMask in step 05 to generate geometries with sizes according to its indices.
+7\. Next, we are going to use the output result from **List.FilterByBoolMask** in step 05 to generate geometries with sizes according to its indices.
 
 **Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
 
