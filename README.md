@@ -12,7 +12,7 @@ You have just opened the Dynamo Primer, a comprehensive guide to visual programm
 
 The power of Dynamo can be found in a wide variety of design-related activities. Dynamo enables an expanding list of readily accessible ways for you to get started:
 
-* **Explore** visual programming for the first time.....
+* **Explore** visual programming for the first time
 * **Connect** workflows in various software
 * **Engage** an active community of users, contributors, and developers
 * **Develop** an open-source platform for continued improvement
