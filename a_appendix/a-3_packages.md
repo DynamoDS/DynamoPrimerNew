@@ -50,9 +50,13 @@ Here are a list of some of the more popular packages in the Dynamo community. De
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | Import vector art from Illustrator or the web using .svg. This allows you to import manually created drawings into Dynamo for parametric operations. | ![](../.gitbook/assets/dynastratorImage.jpg)                             |
 
+
+
 | ![](../.gitbook/assets/ea\_L.png) **ENERGY ANALYSIS FOR DYNAMO**                                                                                                                                                                                                                                                                                                                                              | [Visit the Energy Analysis for Dynamo Project on GitHub](https://github.com/tt-acm/EnergyAnalysisForDynamo) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | Energy Analysis for Dynamo allows for parametric energy modeling and whole-building energy analysis workflows in Dynamo 0.8. Energy Analysis for Dynamo allows the user to configure the energy model from Autodesk Revit, submit to Green Building Studio for DOE2 energy analysis, and dig into the results returned from the analysis. The package is being developed by Thornton Tomasetti's CORE studio. | ![](../.gitbook/assets/eaImage.png)                                                                         |
+
+
 
 | ![](../.gitbook/assets/Firefly\_L.png) **FIREFLY FOR DYNAMO**                                                                                                                                                                                                                                                                               | [Download Firefly at the Dynamo Package Manager](http://dynamopackages.com) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -62,7 +66,7 @@ Here are a list of some of the more popular packages in the Dynamo community. De
 
 | ![](<../.gitbook/assets/genius loci logo.png>) **GENIUS LOCI**                                                                                                                                                             | [Visit the Genius Loci GitHub](https://github.com/albandechasteigner/GeniusLociForDynamo) |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Genius Loci is a compilation of Nodes for Dynamo. It consists useful Nodes that benefits Revit users. Install the package  to explore some of the features, such as interact easily with linked files and Revit Documents. |                                                                                           |
+| Genius Loci is a compilation of Nodes for Dynamo. It consists useful Nodes that benefits Revit users. Install the package  to explore some of the features, such as interact easily with linked files and Revit Documents. | ![](<../.gitbook/assets/genius loci package sample nodes.png>)                            |
 
 
 
