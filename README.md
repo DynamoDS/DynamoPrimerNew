@@ -45,7 +45,7 @@ The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dyn
 
 **Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.
 
-![](<.gitbook/assets/matterlab\_final-07 (3).jpg>)
+![](<images/matterlab\_final-07 (3).jpg>)
 
 ### Acknowledgments
 
