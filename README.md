@@ -2,7 +2,7 @@
 
 ## For Dynamo v2.13
 
-![Dynamo Logo](.gitbook/assets/dynamo\_logo\_dark-trim.jpg)
+![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
 
 > Dynamo is an open source visual programming platform for designers.
 
@@ -45,7 +45,7 @@ The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dyn
 
 **Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.
 
-![](<images/matterlab\_final-07 (3).jpg>)
+![](<images\matterlab\_final-07 (3).jpg>)
 
 ### Acknowledgments
 
