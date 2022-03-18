@@ -12,7 +12,7 @@ Dynamo defines Meshes using a Face-Vertex data structure. At its most basic leve
 
 To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
 
-![](<./images/5-2/7/meshes - mesh elements.jpg>)
+![](<../../.gitbook/assets/meshes - mesh elements.jpg>)
 
 > 1. List of vertices
 > 2. List of index groups to define faces
@@ -25,7 +25,7 @@ The library also provides tools to modify Meshes, repair Meshes, or extract hori
 
 Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
 
-![Mesh Toolkit](<./images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Mesh Toolkit](<../../.gitbook/assets/meshes - mesh toolkit standford bunny.jpg>)
 
 ## Deep Dive into...
 
@@ -33,7 +33,7 @@ Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11
 
 A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
 
-![Mesh Elements](./images/5-2/7/MeshElements2.jpg)
+![Mesh Elements](../../.gitbook/assets/MeshElements2.jpg)
 
 > 1. Mesh vertices
 > 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
@@ -43,7 +43,7 @@ A Mesh is a collection of quadrilaterals and triangles that represents a surface
 
 The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
 
-![Vertices + Normals](./images/5-2/7/vertexNormals.jpg)
+![Vertices + Normals](../../.gitbook/assets/vertexNormals.jpg)
 
 > 1. Vertices
 > 2. Vertex Normals
@@ -52,7 +52,7 @@ The vertices of a Mesh are simply a list of points. The index of the vertices is
 
 A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
 
-![](./images/5-2/7/meshFaces.jpg)
+![](../../.gitbook/assets/meshFaces.jpg)
 
 > 1. A quad face made with indices 0, 1, 2, and 3
 > 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
@@ -65,7 +65,7 @@ How is Mesh geometry different from NURBS geometry? When might you want to use o
 
 In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
 
-![Control Points](./images/5-2/7/NURBSvsMESH-01.jpg)
+![Control Points](../../.gitbook/assets/NURBSvsMESH-01.jpg)
 
 > 1. Surface
 > 2. Isoparametric (Isoparm) Curve
@@ -86,7 +86,7 @@ Meshes, on the other hand, are comprised of a discrete number of exactly defined
 
 Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
 
-![Editing](./images/5-2/7/NURBSvsMESH-02.jpg)
+![Editing](../../.gitbook/assets/NURBSvsMESH-02.jpg)
 
 > 1. NURBS Surface - moving a control point has influence that extends across the shape
 > 2. Mesh geometry - moving a vertex has influence only on adjacent elements
