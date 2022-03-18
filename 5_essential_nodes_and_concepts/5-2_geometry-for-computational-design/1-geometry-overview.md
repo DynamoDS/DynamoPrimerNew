@@ -6,11 +6,11 @@
 
 Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
 
-![](<./images/5-2/1/geometry overview - geometry in dynamo.jpg>)
+![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
 
 Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
 
-![](<./images/5-2/1/Geometry for Computational Design - Overview.jpg>)
+![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
 
 > 1. Note the assumed coordinate system rendered by the grid and colored axes
 > 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
@@ -25,7 +25,7 @@ Additionally, making models in Dynamo and connecting the preview of what we see 
 
 Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.
 
-![Stanford Bunny](./images/5-2/1/StanfordBunny.jpg)
+![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
 
 > If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.
 
@@ -42,7 +42,7 @@ In practice, these principles mean that we need to be aware of what we are worki
 
 Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
 
-![Computational Geometry](./images/5-2/1/GeometryDimensionality.jpg)
+![Computational Geometry](../images/5-2/1/GeometryDimensionality.jpg)
 
 > 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
 > 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
@@ -51,7 +51,7 @@ Let's take a moment to look at the relationship between the Abstract and Hierarc
 
 Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
 
-![Geometry Hierarchy](./images/5-2/1/GeometryHierarchy.jpg)
+![Geometry Hierarchy](../images/5-2/1/GeometryHierarchy.jpg)
 
 ## Going Further with Geometry
 
