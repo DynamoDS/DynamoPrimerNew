@@ -6,7 +6,7 @@ Certain geometry objects can be created by explicitly stating x, y, and z coordi
 
 The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
 
-![](../../.gitbook/assets/Transformations\_01.png)
+![](../images/8-2/5/Transformations\_01.png)
 
 ```js
 // create a point at x = 1, y = 2, z = 3
@@ -22,7 +22,7 @@ p2 = p.Translate(10, -20, 50);
 
 While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
 
-![](../../.gitbook/assets/Transformations\_02.png)
+![](../images/8-2/5/Transformations\_02.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -42,7 +42,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
 
-![](../../.gitbook/assets/Transformations\_03.png)
+![](../images/8-2/5/Transformations\_03.png)
 
 ```js
 cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
@@ -58,7 +58,7 @@ cube2 = cube.Transform(old_cs, new_cs2);
 
 Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
 
-![](../../.gitbook/assets/Transformations\_04.png)
+![](../images/8-2/5/Transformations\_04.png)
 
 ```js
 new_cs = CoordinateSystem.ByOriginVectors(
@@ -68,7 +68,7 @@ new_cs = CoordinateSystem.ByOriginVectors(
 
 old_cs = CoordinateSystem.Identity();
 
-cube = Cuboid.ByLengths(CoordinateSystem.Identity(), 
+cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
     5, 5, 5);
 
 new_curves = cube.Transform(old_cs, new_cs);

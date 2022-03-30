@@ -6,7 +6,7 @@ The two-dimensional analog to a NurbsCurve is the NurbsSurface, and like the fre
 
 To create an interpolated surface, simply generate a two-dimensional collection of points approximating the shape of a surface. The collection must be rectangular, that is, not jagged. The method _NurbsSurface.ByPoints_ constructs a surface from these points.
 
-![](../../.gitbook/assets/Surfaces\_01.png)
+![](../images/8-2/6/Surfaces\_01.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -19,7 +19,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 Freeform NurbsSurfaces can also be created by specifying underlying control points of a surface. Like NurbsCurves, the control points can be thought of as representing a quadrilateral mesh with straight segments, which, depending on the degree of the surface, is smoothed into the final surface form. To create a NurbsSurface by control points, include two additional parameters to _NurbsSurface.ByPoints_, indicating the degrees of the underlying curves in both directions of the surface.
 
-![](../../.gitbook/assets/Surfaces\_02.png)
+![](../images/8-2/6/Surfaces\_02.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -31,7 +31,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 
 We can increase the degree of the NurbsSurface to change the resulting surface geometry:
 
-![](../../.gitbook/assets/Surfaces\_03.png)
+![](../images/8-2/6/Surfaces\_03.png)
 
 ```js
 // python_points_1 is a set of Points generated with
@@ -45,7 +45,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 Just as Surfaces can be created by interpolating between a set of input points, they can be created by interpolating between a set of base curves. This is called lofting. A lofted curve is created using the _Surface.ByLoft_ constructor, with a collection of input curves as the only parameter.
 
-![](../../.gitbook/assets/Surfaces\_04.png)
+![](../images/8-2/6/Surfaces\_04.png)
 
 ```js
 // python_points_2, 3, and 4 are generated with
@@ -64,7 +64,7 @@ Surfaces of revolution are an additional type of surface created by sweeping a b
 
 Surfaces of revolution are specified by a base curve, representing the “edge” of the surface; an axis origin, the base point of the surface; an axis direction, the central “core” direction; a sweep start angle; and a sweep end angle. These are used as the input to the _Surface.Revolve_ constructor.
 
-![](../../.gitbook/assets/Surfaces\_05.png)
+![](../images/8-2/6/Surfaces\_05.png)
 
 ```js
 pts = {};
