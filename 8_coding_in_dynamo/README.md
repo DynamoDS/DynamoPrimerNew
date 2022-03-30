@@ -6,4 +6,4 @@ Dynamo is a great door to start coding for the AEC world. You may be interested 
 * [Geometry with DesignScript](8-2\_geometry-with-design-script/)
 * [Python](8-3\_python/)
 
-![](<../.gitbook/assets/image (17).png>)
+![](<./images/image (17).png>)
