@@ -27,7 +27,7 @@ import System
 
 This gives us access to the Revit API and offers custom scripting for any Revit task. By combining the process of visual programming with Revit API scripting, collaboration and tool development improve significantly. For example, a BIM manager and a schematic designer can work together on the same graph. In this collaboration, they can improve design and execution of the model.
 
-![](<../../.gitbook/assets/python & revit - 01.jpg>)
+![](<../images/8-3/2/python & revit - 01.jpg>)
 
 ### Platform Specific APIs
 
@@ -51,7 +51,7 @@ This is a cut and dry method for retrieving the _doc_, _uiapp_, and _app_ of the
 
 Here is how we're importing Revit Services and retrieving the document data in Dynamo.
 
-![](<../../.gitbook/assets/python & revit - exercise 01 - 01.jpg>)
+![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
 
 Take a look at the Python node in Dynamo. You can also find the code from below:
 
@@ -86,19 +86,19 @@ In this exercise, we'll make a simple Model Curve in Revit using the Dynamo Pyth
 
 Begin by creating a new Conceptual Mass family in Revit.
 
-![](<../../.gitbook/assets/python & revit - exercise 02 - 01.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
 
 Open the _Conceptual Mass Folder_ and use the _Metric Mass.rft_ template file.
 
-![](<../../.gitbook/assets/python & revit - exercise 02 - 02.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
 
 In Revit, use the keyboard shortcut **`un`** to bring up the Project Unit settings, change the length unit to meters.
 
-![](<../../.gitbook/assets/python & revit - exercise 02 - 03.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
 
 Launch Dynamo and create the set of nodes in the image below. We'll first create two reference points in Revit from Dynamo nodes.
 
-![](<../../.gitbook/assets/python & revit - exercise 02 - 04.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
 
 > 1. Create a **Code Block** and give it a value of `"0;"`
 > 2. Plug this value into a **ReferencePoint.ByCoordinates** node for X,Y, and Z inputs.
@@ -108,35 +108,35 @@ Launch Dynamo and create the set of nodes in the image below. We'll first create
 
 Take a look at the Python node in Dynamo. Find the full code at the below.
 
-![](<../../.gitbook/assets/python & revit - exercise 02 - 05.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array:** Revit needs a **System Array** as an input (rather than a Python list). This is just one more line of code, but paying attention to argument types will facilitate Python programming in Revit.
 
 ```
-import sys 
+import sys
 import clr
 
 # Import RevitNodes
-clr.AddReference("RevitNodes") 
+clr.AddReference("RevitNodes")
 import Revit
 #Import Revit elements
-from Revit.Elements import * 
+from Revit.Elements import *
 import System
 
-#define inputs 
-startRefPt = IN[0] 
+#define inputs
+startRefPt = IN[0]
 endRefPt = IN[1]
 
-#define system array to match with required inputs 
-refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt]) 
+#define system array to match with required inputs
+refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 
-#create curve by reference points in Revit 
+#create curve by reference points in Revit
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
 In Dynamo, we've created two reference points with a line connecting them using Python. Let's take this a little further in the next exercise.
 
-![](<../../.gitbook/assets/python & revit - exercise 02 - 06.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
 
 ## Exercise 3
 
@@ -148,13 +148,13 @@ In Dynamo, we've created two reference points with a line connecting them using 
 
 This exercise keeps it simple, but drives home the topics of connecting data and geometry from Revit to Dynamo and back. Let's begin by opening Revit-StructuralFraming.rvt. Once opened, launch Dynamo and open the file Revit-StructuralFraming.dyn.
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 01.jpg>)
 
 This Revit file is about as basic as it gets. Two reference curves: one drawn on Level 1 and the other drawn on Level 2. We want to get these curves into Dynamo and maintain a live link.
 
 In this file we have a set of nodes plugging into five inputs of a Python node.
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 02.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Select Model Element Nodes:** Hit the select button for each and select a corresponding curve in Revit.
 > 2. **Code Block:** using the syntax `0..1..#x;`_,_ connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
@@ -163,7 +163,7 @@ In this file we have a set of nodes plugging into five inputs of a Python node.
 
 This code in Python is a little more dense, but the comments within the code describe what's happening in the process
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 03.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
 
 ```
 import clr
@@ -204,7 +204,7 @@ In Revit, we have an array of beams spanning the two curves as structural elemen
 
 In Dynamo, we can see the results as well. The beams in the **Watch3D** node refer to the geometry queried from the Revit elements.
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 05.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
 
 Notice that we have a continuous process of translating data from the Revit Environment to the Dynamo Environment. In summary, here's how the process plays out:
 
@@ -219,4 +219,4 @@ This may sound a little heavy handed, but the script makes it as simple as editi
 
 With an update to the reference curves in Revit, we get a new array of beams.
 
-![](<../../.gitbook/assets/python & revit - ex 03 - 06.gif>)
+![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
