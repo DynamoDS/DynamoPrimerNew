@@ -16,9 +16,9 @@ The colors in the table below query the properties used to define the color: Alp
 
 | Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Alpha (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| ![](<../images/5-3/5/Color Alpha.jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
 | ![](<../images/5-3/5/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-3/5/Color Green (1).jpg>) | Green (**Color.Green**)           | color  | G          |
+| ![](<../images/5-3/5/Color Green.jpg>) | Green (**Color.Green**)           | color  | G          |
 | ![](<../images/5-3/5/Color Blue.jpg>)      | Blue (**Color.Blue**)             | color  | B          |
 | ![](<../images/5-3/5/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
 
