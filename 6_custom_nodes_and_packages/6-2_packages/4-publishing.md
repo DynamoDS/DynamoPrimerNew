@@ -26,7 +26,7 @@ Dynamo package publication is only enabled in Dynamo for Revit and Dynamo for Ci
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/MapToSurface.zip" %}
+{% file src="../datasets/6-2/4/MapToSurface.zip" %}
 
 This is the first submission for our package, and we've placed all of the example files and custom nodes into one folder. With this folder prepared, we're ready to upload to the Dynamo Package Manager.
 

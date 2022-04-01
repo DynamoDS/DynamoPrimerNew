@@ -39,7 +39,7 @@ All of the operations listed above have analogous Dynamo nodes for working with 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/List-Operations.dyn" %}
+{% file src="../datasets/5-4/2/List-Operations.dyn" %}
 
 The image below is the base graph which we are drawing lines between two circles to represent basic list operations. We'll explore how to manage data within a list and demonstrate the visual results through the list actions below.
 
@@ -61,7 +61,7 @@ The image below is the base graph which we are drawing lines between two circles
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/List-Count.dyn" %}
+{% file src="../datasets/5-4/2/List-Count.dyn" %}
 
 The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
 
@@ -75,7 +75,7 @@ The _List.Count_ node is straightforward: it counts the number of values in a li
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/List-GetItemAtIndex.dyn" %}
+{% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
 
 **List.GetItemAtIndex** is a fundamental way to query an item in the list.
 
@@ -94,7 +94,7 @@ Change slider value between 0 and 9 to select different item using **List.GetIte
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/List-Reverse.dyn" %}
+{% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
 _List.Reverse_ reverses the order of all of the items in a list.
 
@@ -110,7 +110,7 @@ _List.Reverse_ reverses the order of all of the items in a list.
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/List-ShiftIndices.dyn" %}
+{% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
 
 **List.ShiftIndices** is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
 
@@ -130,7 +130,7 @@ By changing to **Code Block** to a larger value, _"30"_ for example, we notice a
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
+{% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
 ![](../images/5-4/2/ListFilterBool.png)
 

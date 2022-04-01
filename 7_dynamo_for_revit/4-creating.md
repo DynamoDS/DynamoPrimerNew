@@ -38,7 +38,7 @@ Let's walk through [second exercise](8-4\_creating.md#exercise-directshape-eleme
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Creating.zip" %}
+{% file src="./datasets/4/Revit-Creating.zip" %}
 
 Beginning with the example file from this section (or continuing with the Revit file from the previous session), we see the same Revit mass.
 
@@ -117,7 +117,7 @@ And for the final test, by selecting the mass in Revit and editing instance para
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Creating-DirectShape.zip" %}
+{% file src="./datasets/4/Revit-Creating-DirectShape.zip" %}
 
 Begin by opening the sample file for this lesson - ARCH-DirectShape-BaseFile.rvt.
 

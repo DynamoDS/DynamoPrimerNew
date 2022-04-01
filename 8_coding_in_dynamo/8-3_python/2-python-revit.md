@@ -43,7 +43,7 @@ The examples below demonstrate ways to implement Revit-specific operations from 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Revit-Doc.dyn" %}
+{% file src="../datasets/8-2/2/Revit-Doc.dyn" %}
 
 In these exercises, we'll explore elementary Python scripts in Dynamo for Revit. The exercise will focus on dealing with Revit files and elements, as well as the communication between Revit and Dynamo.
 
@@ -80,7 +80,7 @@ OUT = [doc,uiapp,app]
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Revit-ReferenceCurve.dyn" %}
+{% file src="../datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
 
 In this exercise, we'll make a simple Model Curve in Revit using the Dynamo Python node.
 
@@ -144,7 +144,7 @@ In Dynamo, we've created two reference points with a line connecting them using 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Revit-StructuralFraming.zip" %}
+{% file src="../datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
 This exercise keeps it simple, but drives home the topics of connecting data and geometry from Revit to Dynamo and back. Let's begin by opening Revit-StructuralFraming.rvt. Once opened, launch Dynamo and open the file Revit-StructuralFraming.dyn.
 

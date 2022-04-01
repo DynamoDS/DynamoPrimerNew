@@ -21,7 +21,7 @@ In the image below we are collecting all of the rooms in the Revit model, gettin
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/roomDictionary.dyn" %}
+{% file src="../datasets/5-5/4/roomDictionary.dyn" %}
 
 Now let's recreate this idea using dictionaries. First we need to collect all of the rooms in our Revit model.
 

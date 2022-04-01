@@ -182,7 +182,7 @@ It is highly likely that someone else will be opening your program at some point
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/RoofDrainageSim.zip" %}
+{% file src="./datasets/9/1/RoofDrainageSim.zip" %}
 
 Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
 

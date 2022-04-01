@@ -86,7 +86,7 @@ While the code block methods above may take some getting used to, there is a fea
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Dynamo-Syntax_Attractor-Surface.dyn" %}
+{% file src="../datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
 To show the power of code block, we are going to translate an existing attractor field definition into code block form. Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
 

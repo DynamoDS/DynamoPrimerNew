@@ -51,7 +51,7 @@ The key concept to understand about data hierarchy in Dynamo: **with respect to 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Building Blocks of Programs - Data.dyn" %}
+{% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
 In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
 

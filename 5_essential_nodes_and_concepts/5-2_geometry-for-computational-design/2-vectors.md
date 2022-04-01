@@ -14,7 +14,7 @@
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Vectors.dyn" %}
+{% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
 ### Plane
 
@@ -29,7 +29,7 @@
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Plane.dyn" %}
+{% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
 ### Coordinate System
 
@@ -44,7 +44,7 @@
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Coordinate System.dyn" %}
+{% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
 ## Deep Dive into...
 

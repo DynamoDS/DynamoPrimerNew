@@ -18,7 +18,7 @@ In the exercise below, we'll use a basic deviation from plane node to create a R
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Documenting.zip" %}
+{% file src="./datasets/6/Revit-Documenting.zip" %}
 
 Start with the Revit file for this section (or continue from the previous section). This file has an array of ETFE panels on the roof. We'll reference these panels for this exercise.
 

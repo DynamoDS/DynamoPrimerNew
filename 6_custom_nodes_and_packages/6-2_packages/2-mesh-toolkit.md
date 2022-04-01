@@ -22,7 +22,7 @@ In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/MeshToolkit.zip" %}
+{% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
 In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
 

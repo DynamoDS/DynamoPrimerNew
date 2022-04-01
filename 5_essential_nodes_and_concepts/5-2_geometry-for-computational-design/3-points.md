@@ -30,7 +30,7 @@ Parameters for both Curves and Surfaces are continuous and extend beyond the edg
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Points.dyn" %}
+{% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
 ## Deep Dive into...
 

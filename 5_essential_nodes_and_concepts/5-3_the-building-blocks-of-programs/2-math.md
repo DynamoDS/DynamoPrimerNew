@@ -19,7 +19,7 @@ Operators are a set of components that use algebraic functions with two numeric 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Building Blocks of Programs - Math.dyn" %}
+{% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
 ### Part I: Parametric Formula
 

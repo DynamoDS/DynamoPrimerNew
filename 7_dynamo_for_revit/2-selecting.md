@@ -46,7 +46,7 @@ With the three images above in mind, let's dive into an exercise which selects e
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Selecting.zip" %}
+{% file src="./datasets/2/Revit-Selecting.zip" %}
 
 In this example Revit file, we have three element types of a simple building. We're going to use this as an example for selecting Revit elements within the context of the Revit hierarchy.
 

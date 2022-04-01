@@ -20,7 +20,7 @@ Import and evaluate a Surface at a Parameter in Dynamo to see what kind of infor
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Surfaces.zip" %}
+{% file src="../datasets/5-2/5/Surfaces.zip" %}
 
 ## Deep Dive into...
 

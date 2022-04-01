@@ -34,7 +34,7 @@ For a quick conversion of units, use the _"Convert Between Units"_ node. This is
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Editing.zip" %}
+{% file src="./datasets/3/Revit-Editing.zip" %}
 
 {% hint style="warning" %}
 The exercise below works in meters.

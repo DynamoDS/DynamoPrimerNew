@@ -26,7 +26,7 @@ Using Dynamo, the point locations of adaptive components can be used to create a
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Customizing.zip" %}
+{% file src="./datasets/5/Revit-Customizing.zip" %}
 
 This exercise will expand on the techniques demonstrated in the previous section. In this case, we are defining a parametric surface from Revit elements, instantiating four-point adaptive components and then editing them based on orientation to the sun.
 

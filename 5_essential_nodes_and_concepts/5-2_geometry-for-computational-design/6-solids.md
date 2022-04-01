@@ -23,7 +23,7 @@ You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify so
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Solids.dyn" %}
+{% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
 ### Freezing
 

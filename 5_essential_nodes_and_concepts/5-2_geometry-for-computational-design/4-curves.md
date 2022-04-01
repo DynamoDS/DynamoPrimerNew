@@ -35,7 +35,7 @@
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Curves.dyn" %}
+{% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
 ## Deep Dive into...
 

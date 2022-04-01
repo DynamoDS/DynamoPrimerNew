@@ -36,7 +36,7 @@ FunctionName(in1,in2);
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Functions_SphereByZ.dyn" %}
+{% file src="../datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
 In this exercise, we will make a generic definition that will create spheres from an input list of points. The radius of these spheres are driven by the Z property of each point.
 

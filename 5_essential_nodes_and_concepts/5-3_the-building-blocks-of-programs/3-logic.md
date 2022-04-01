@@ -32,7 +32,7 @@ Again, the Nodes are working identically. If the _boolean_ is changed to _false_
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Building Blocks of Programs - Logic.dyn" %}
+{% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
 ### Part I: Filtering a List
 

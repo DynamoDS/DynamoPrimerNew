@@ -58,7 +58,7 @@ The Autodesk.DesignScript.Geometry library allows you to use dot notation simila
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Python_Custom-Node.dyn" %}
+{% file src="../datasets/8-2/1/Python_Custom-Node.dyn" %}
 
 In this example, we will write a python script that creates patterns from a solid module, and turn it into a custom node. First, let’s create our solid module using Dynamo nodes.
 

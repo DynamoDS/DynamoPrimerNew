@@ -19,7 +19,7 @@ Additionally, making models in Dynamo and connecting the preview of what we see 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## The Concept of Geometry
 

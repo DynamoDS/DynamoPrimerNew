@@ -77,7 +77,7 @@ And managing with nested lists is a similar process. Be aware of the list order 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Obsolete-Nodes_Sine-Surface.dyn" %}
+{% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
 In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code block and existing Dynamo nodes in tandem: we use the code block for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
 

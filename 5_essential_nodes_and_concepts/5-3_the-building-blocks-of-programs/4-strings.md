@@ -18,7 +18,7 @@ The sample Nodes above are strings. A number can be represented as a string, as 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Building Blocks of Programs - Strings.dyn" %}
+{% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
 ### Querying Strings
 

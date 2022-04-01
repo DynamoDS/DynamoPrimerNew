@@ -254,7 +254,7 @@ for i in range(xCount):
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/SteepestPath.dyn" %}
+{% file src="./datasets/9/2/SteepestPath.dyn" %}
 
 With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
 

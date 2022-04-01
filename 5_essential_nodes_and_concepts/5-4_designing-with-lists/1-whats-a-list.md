@@ -83,7 +83,7 @@ As you can see there are different ways in which we can draw lines between these
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/Lacing.dyn" %}
+{% file src="../datasets/5-4/1/Lacing.dyn" %}
 
 To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
 

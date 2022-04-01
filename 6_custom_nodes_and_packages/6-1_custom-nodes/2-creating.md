@@ -14,7 +14,7 @@ In the image below, we map a point from one surface to another using UV coordina
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/UV-CustomNode.zip" %}
+{% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
 Let’s start by creating a graph that we want to nest into a custom node. In this example, we will create a graph that maps polygons from a base surface to a target surface, using UV coordinates. This UV mapping process is something we use frequently, making it a good candidate for a custom node. For more information on surfaces and UV space, refer to the [Surface ](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)page. The complete graph is _UVmapping\_Custom-Node.dyn_ from the .zip file downloaded above.
 

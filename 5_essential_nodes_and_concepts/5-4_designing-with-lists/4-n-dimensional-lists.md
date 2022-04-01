@@ -22,7 +22,7 @@ Preliminary introductions to **List.Map** and **List.Combine** can be found in t
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/n-Dimensional-Lists.zip" %}
+{% file src="../datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
 This exercise is the first in a series of three which focuses on articulating imported geometry. Each part in this series of exercises will increase in the complexity of data structure.
 

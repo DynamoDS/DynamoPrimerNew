@@ -51,7 +51,7 @@ Back in Dynamo, you should see an **AForge** group of nodes added to your Librar
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/ZeroTouchImages.zip" %}
+{% file src="../datasets/6-2/5/ZeroTouchImages.zip" %}
 
 Now that the library is imported, we'll start off simple with this first exercise (_01-EdgeDetection.dyn_). We'll do some basic image processing on a sample image to show how AForge image filters. We'll use the _"Watch Image"_ node to show our results and apply filters in Dynamo similar to those in Photoshop
 

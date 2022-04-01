@@ -14,7 +14,7 @@ Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../../.gitbook/assets/PointsToSurface.dyf" %}
+{% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
 
 Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
 
