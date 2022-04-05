@@ -8,7 +8,7 @@ description: >-
 
 | Exercise list    | Key concepts introduced in exercise  | Link to further reading in later chapters                                                                  |
 | ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Parametric Vase  | Searching nodes throught the library | [Library](../3\_user_interface\2-library.md)                                                               |
+| Parametric Vase  | Searching nodes throught the library | [Library](../3\_user\_interface\2-library.md)                                                               |
 |                  | Using nodes and wires                | [Nodes and Wires](../3-1\_dynamo\_nodes/)                                                                  |
 |                  | Creating curves and surfaces         | [Geometry for Computational Design](../essential-nodes-and-concepts/5\_geometry-for-computational-design/) |
 |                  | Using code blocks                    | [Code Blocks and DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/)                      |
