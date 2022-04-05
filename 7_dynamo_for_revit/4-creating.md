@@ -2,7 +2,7 @@
 
 You can create an array of Revit elements in Dynamo with full parametric control. The Revit nodes in Dynamo offer the ability to import elements from generic geometries to specific category types (like walls and floors). In this section, we'll focus on importing parametrically flexible elements with adaptive components.
 
-![](<../.gitbook/assets/creating - dynamo nodes.jpg>)
+![](<./images/4/creating - dynamo nodes.jpg>)
 
 ### Adaptive Components
 
@@ -10,7 +10,7 @@ An adaptive component is a flexible family category which lends itself well to g
 
 Below is an example of a three-point adaptive component in the family editor. This generates a truss which is defined by the position of each adaptive point. In the exercise below, we'll use this component to generate a series of trusses across a facade.
 
-![](../.gitbook/assets/ac.jpg)
+![](./images/4/ac.jpg)
 
 ### Principles of Interoperability
 
@@ -24,7 +24,7 @@ The workflow we'll setup in the exercise below allows us to access all of this d
 
 The [first exercise](8-4\_creating.md#exercise) below will walk through how Dynamo references data for Revit element creation. To generate multiple adaptive components, we define a list of lists, where each list has three points representing each point of the adaptive component. We'll keep this in mind as we manage the data structures in Dynamo.
 
-![](<../.gitbook/assets/creating - multiple elements and lists 01.jpg>)
+![](<./images/4/creating - multiple elements and lists 01.jpg>)
 
 ### DirectShape Elements
 
@@ -38,18 +38,18 @@ Let's walk through [second exercise](8-4\_creating.md#exercise-directshape-eleme
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Creating.zip" %}
+{% file src="./datasets/4/Revit-Creating.zip" %}
 
 Beginning with the example file from this section (or continuing with the Revit file from the previous session), we see the same Revit mass.
 
-![](<../.gitbook/assets/creating - exercise 01.jpg>)
+![](<./images/4/creating - exercise 01.jpg>)
 
 > 1. This is the file as opened.
 > 2. This is the truss system we created with Dynamo, linked intelligently to the Revit mass.
 
 We've used the _"Select Model Element"_ and _"Select Face"_ nodes, now we're taking one step further down in the geometry hierarchy and using _"Select Edge"_. With the Dynamo solver set to run _"Automatic"_, the graph will continually update to changes in the Revit file. The edge we are selecting is tied dynamically to the Revit element topology. As long as the topology\* does not change, the connection remains linked between Revit and Dynamo.
 
-![](<../.gitbook/assets/creating - exercise 02.jpg>)
+![](<./images/4/creating - exercise 02.jpg>)
 
 > 1. Select the top most curve of the glazing facade. This spans the full length of the building. If you're having trouble selecting the edge, remember to choose the selection in Revit by hovering over the edge and hitting _"Tab"_ until the desired edge is highlighted.
 > 2. Using two _"Select Edge"_ nodes, select each edge representing the cant at the middle of the facade.
@@ -62,7 +62,7 @@ We've used the _"Select Model Element"_ and _"Select Face"_ nodes, now we're tak
 
 We first need to join the curves and merge them into one list. This way we can _"group"_ the curves to perform geometry operations.
 
-![](<../.gitbook/assets/creating - exercise 03.jpg>)
+![](<./images/4/creating - exercise 03.jpg>)
 
 > 1. Create a list for the two curves at the middle of the facade.
 > 2. Join the two curves into a Polycurve by plugging the _List.Create_ component into a _Polycurve.ByJoinedCurves_ node.
@@ -72,7 +72,7 @@ We first need to join the curves and merge them into one list. This way we can _
 
 We want to take advantage of the top curve, which is a line, and represents the full span of the facade. We'll create planes along this line to intersect with the set of curves we've grouped together in a list.
 
-![](<../.gitbook/assets/creating - exercise 04.jpg>)
+![](<./images/4/creating - exercise 04.jpg>)
 
 > 1. With a _code block_, define a range using the syntax: `0..1..#numberOfTrusses;`
 > 2. Plug an \*integer slider \*into the input for the code block. As you could have guessed, this will represent the number of trusses. Notice that the slider controls the number of items in the range defined from \*0 \*to _1_.
@@ -80,13 +80,13 @@ We want to take advantage of the top curve, which is a line, and represents the 
 
 A plane is an abstract piece of geometry, representing a two dimensional space which is infinite. Planes are great for contouring and intersecting, as we are setting up in this step.
 
-![](<../.gitbook/assets/creating - exercise 05.jpg>)
+![](<./images/4/creating - exercise 05.jpg>)
 
 > 1. Using the _Geometry.Intersect_ node (set lacing option to cross product), plug the _Curve.PlaneAtParameter_ into the _entity_ input of the _Geometry.Intersect_ node. Plug the main _List.Create_ node into the _geometry_ input. We now see points in the Dynamo viewport representing the intersection of each curve with the defined planes.
 
 Notice the output is a list of lists of lists. Too many lists for our purposes. We want to do a partial flatten here. We need to take one step down on the list and flatten the result. To do this, we use the _List.Map_ operation, as discussed in the list chapter of the primer.
 
-![](<../.gitbook/assets/creating - exercise 06.jpg>)
+![](<./images/4/creating - exercise 06.jpg>)
 
 > 1. Plug the _Geometry.Intersect_ node into the list input of _List.Map_.
 > 2. Plug a _Flatten_ node into the f(x) input of _List.Map_. The results gives 3 list, each with a count equal to the number of trusses.
@@ -96,7 +96,7 @@ Notice the output is a list of lists of lists. Too many lists for our purposes. 
 
 In the same way we created the polygons, we array the adaptive components.
 
-![](<../.gitbook/assets/creating - exercise 07.jpg>)
+![](<./images/4/creating - exercise 07.jpg>)
 
 > 1. Add an _AdaptiveComponent.ByPoints_ node to the canvas, plug the _List.Transpose_ node into the _points_ input.
 > 2. Using a _Family Types_ node, select the _"AdaptiveTruss"_ family, and plug this into the _FamilyType_ input of the _AdaptiveComponent.ByPoints_ node.
@@ -105,11 +105,11 @@ In Revit, we now have the ten trusses evenly spaced across the facade!
 
 "Flex" the graph, we turn up the numberOfTrusses to 30 by changing the slider. Lots of trusses, not very realistic, but the parametric link is working. Once verified, set the numberOfTrusses to 15.
 
-![](<../.gitbook/assets/creating - exercise 08.gif>)
+![](<./images/4/creating - exercise 08.gif>)
 
 And for the final test, by selecting the mass in Revit and editing instance parameters, we can change the form of the building and watch the truss follow suit. Remember, this Dynamo graph has to be open in order to see this update, and the link will be broken as soon as it's closed.
 
-![](<../.gitbook/assets/creating - exercise 09.jpg>)
+![](<./images/4/creating - exercise 09.jpg>)
 
 ## Exercise: DirectShape Elements
 
@@ -117,32 +117,32 @@ And for the final test, by selecting the mass in Revit and editing instance para
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Creating-DirectShape.zip" %}
+{% file src="./datasets/4/Revit-Creating-DirectShape.zip" %}
 
 Begin by opening the sample file for this lesson - ARCH-DirectShape-BaseFile.rvt.
 
-![](<../.gitbook/assets/creating - exercise II - 01.jpg>)
+![](<./images/4/creating - exercise II - 01.jpg>)
 
 > 1. In the 3D view, we see our building mass from the previous lesson.
 > 2. Along the edge of the atrium is one reference curve, we'll use this as a curve to reference in Dynamo.
 > 3. Along the opposing edge of the atrium is another reference curve which we'll reference in Dynamo as well.
 
-![](<../.gitbook/assets/creating - exercise II - 02.jpg>)
+![](<./images/4/creating - exercise II - 02.jpg>)
 
 > 1. To reference our geometry in Dynamo, we'll use _Select Model Element_ for each member in Revit. Select the mass in Revit and import the geometry into Dynamo by Using _Element.Faces_ - the mass should now be visible in your Dynamo preview.
 > 2. Import one reference curve into Dynamo by using _Select Model Element_ and _CurveElement.Curve_.
 > 3. Import the other reference curve into Dynamo by using _Select Model Element_ and _CurveElement.Curve_.
 
-![](<../.gitbook/assets/creating - exercise II - 03.jpg>)
+![](<./images/4/creating - exercise II - 03.jpg>)
 
 > 1. Zooming out and panning to the right in the sample graph, we see a large group of nodes - these are geometric operations which generate the trellis roof structure visible in the Dynamo preview. These nodes are generating using the _Node to Code_ functionality as discussed in the [code block section](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) of the primer.
 > 2. The structure is driven by three major parameters - Diagonal Shift, Camber, and Radius.
 
 Zooming a close-up look of the parameters for this graph. We can flex these to get different geometry outputs.
 
-![](<../.gitbook/assets/creating - exercise II - 04.jpg>)
+![](<./images/4/creating - exercise II - 04.jpg>)
 
-![](<../.gitbook/assets/creating - exercise II - 05.jpg>)
+![](<./images/4/creating - exercise II - 05.jpg>)
 
 > 1. Dropping the _DirectShape.ByGeometry_ node onto the canvas, we see that it has four inputs: _geometry_**,** _category_**,** _material_, and _name_.
 > 2. Geometry will be the solid created from the geometry creation portion of the graph
@@ -151,4 +151,4 @@ Zooming a close-up look of the parameters for this graph. We can flex these to g
 
 After running Dynamo, back in Revit, we have the imported geometry on the roof in our project. This is a structural framing element, rather than a generic model. The parametric link to Dynamo remains intact.
 
-![](<../.gitbook/assets/creating - exercise II - 06.jpg>)
+![](<./images/4/creating - exercise II - 06.jpg>)

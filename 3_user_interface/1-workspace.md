@@ -4,7 +4,7 @@
 
 The Dynamo Workspace consists of four main elements.
 
-![](<../.gitbook/assets/workspace - ui (2).jpg>)
+![](<./images/3-1/workspace - ui.jpg>)
 
 > 1. All Active Tabs.
 > 2. Preview Mode
@@ -15,11 +15,11 @@ The Dynamo Workspace consists of four main elements.
 
 When you open a new file, a new Home Workspace will be opened by default.
 
-![](<../.gitbook/assets/workspace - home tab.jpg>)
+![](<./images/3-1/workspace - home tab.jpg>)
 
 You may create a Custom Node and open it in a Custom Node Workspace.
 
-![](<../.gitbook/assets/workspace - custom node tab (1).jpg>)
+![](<./images/3-1/workspace - custom node tab.jpg>)
 
 {% hint style="info" %}
 Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.
@@ -31,18 +31,18 @@ There are 3 methods to switch between different previews:
 
 a. Using the top right icons
 
-* ![](<../.gitbook/assets/2.3-04 Graph preview icon.jpg>)Graph Preview
-* ![](<../.gitbook/assets/2.3-05 3D preview icon.jpg>)3D Preview
+* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Graph Preview
+* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)3D Preview
 
 b. Right-click in Workspace
 
 * Switch from 3D Preview to Graph Preview
 
-![](<../.gitbook/assets/2.3-06 right click switch to graph preview.jpg>)
+![](<./images/3-1/3-1-06 right click switch to graph preview.jpg>)
 
 * Switch from Graph Preview to 3D Preview
 
-![](<../.gitbook/assets/workspace - right click switch to geometry.jpg>)
+![](<./images/3-1/workspace - right click switch to geometry.jpg>)
 
 c. Using keyboard shortcut (Ctrl+B)
 
@@ -53,10 +53,10 @@ You may use icons or a mouse to navigate in either workspace.
 a. In **Graph Preview** Mode
 
 * Using icons:
-  * ![](<../.gitbook/assets/2.3-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<../.gitbook/assets/2.3-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<../.gitbook/assets/2.3-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<../.gitbook/assets/2.3-11 graph preview pan.jpg>)Pan
+  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
+  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
+  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
+  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
 * Using mouse:
   * Left-click - Select
   * Left-click and drag - Selection box to select multiple nodes
@@ -64,16 +64,16 @@ a. In **Graph Preview** Mode
   * Middle-click and drag - Pan
   * Right-click anywhere on canvas - Open In-Canvas Search
 
-![](<../.gitbook/assets/workspace - in canvas search.gif>)
+![](<./images/3-1/workspace - in canvas search.gif>)
 
 b. In **3D Preview** Mode
 
 * Using icons:
-  * ![](<../.gitbook/assets/2.3-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<../.gitbook/assets/2.3-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<../.gitbook/assets/2.3-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<../.gitbook/assets/2.3-11 graph preview pan.jpg>)Pan
-  * ![](<../.gitbook/assets/2.3-13 3D preview orbit.jpg>)Orbit
+  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
+  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
+  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
+  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
+  * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbit
 * Using mouse:
   * Middle scroll up/down - Zoom in/out
   * Middle-click and drag - Pan
@@ -85,4 +85,4 @@ Left-click to select any Node.
 
 To select multiple Nodes, Click and drag to create a selection box.
 
-![](<../.gitbook/assets/workspace - selection box.gif>)
+![](<./images/3-1/workspace - selection box.gif>)

@@ -6,7 +6,7 @@ While we previously looked at editing a basic building mass, we want to dive dee
 
 Suppose we've created a range of adaptive components and want to edit parameters based on their point locations. The points, for example, could drive a thickness parameter which is related to the area of the element. Or, they could drive an opacity parameter related to solar exposure throughout the year. Dynamo allows the connection of analysis to parameters in a few easy steps, and we'll explore a basic version in the exercise below.
 
-![](<../.gitbook/assets/customizing - point location.jpg>)
+![](<./images/5/customizing - point location.jpg>)
 
 > Query the adaptive points of a selected adaptive component by using the **AdaptiveComponent.Locations** node. This allows us to work with an abstracted version of a Revit element for analysis.
 
@@ -14,7 +14,7 @@ By extracting the point location of adaptive components, we can run a range of a
 
 ### Solar Orientation Analysis
 
-![](<../.gitbook/assets/customizing - solar orientation analysis.jpg>)
+![](<./images/5/customizing - solar orientation analysis.jpg>)
 
 > Use remapping to map a set of a data into a parameter range. This is fundamental tool used in a parametric model, and we'll demonstrate it in the exercise below.
 
@@ -26,44 +26,44 @@ Using Dynamo, the point locations of adaptive components can be used to create a
 >
 > A full list of example files can be found in the Appendix.
 
-{% file src="../.gitbook/assets/Revit-Customizing.zip" %}
+{% file src="./datasets/5/Revit-Customizing.zip" %}
 
 This exercise will expand on the techniques demonstrated in the previous section. In this case, we are defining a parametric surface from Revit elements, instantiating four-point adaptive components and then editing them based on orientation to the sun.
 
-![](<../.gitbook/assets/customizing - exercise 01.jpg>)
+![](<./images/5/customizing - exercise 01.jpg>)
 
 > 1. Beginning by selecting two edges with the _"Select Edge"_ node. The two edges are the long spans of the atrium.
 > 2. Combine the two edges into one list with the _List.Create_ node.
 > 3. Create a surface between the two edges with a _Surface.ByLoft_.
 
-![](<../.gitbook/assets/customizing - exercise 02.jpg>)
+![](<./images/5/customizing - exercise 02.jpg>)
 
 > 1. Using _code block_, define a range from 0 to 1 with 10 evenly spaced values: `0..1..#10;`
 > 2. Plug the _code block_ into the \*u \*and _v_ inputs of a _Surface.PointAtParameter_ node, and plug the _Surface.ByLoft_ node into the _surface_ input. Right click the node and change the _lacing_ to _Cross Product_. This will give a grid of points on the surface.
 
 This grid of points serves as the control points for a parametrically defined surface. We want to extract the u and v positions of each one of these points so that we can plug them into a parametric formula and keep the same data structure. We can do this by querying the parameter locations of the points we just created.
 
-![](<../.gitbook/assets/customizing - exercise 03.jpg>)
+![](<./images/5/customizing - exercise 03.jpg>)
 
 > 1. Add a _Surface.ParameterAtPoint_ node to the canvas, connect the inputs as shown above.
 > 2. Query the _u_ values of these parameters with the UV.U node.
 > 3. Query the _v_ values of these parameters with the UV.V node.
 > 4. The outputs show the corresponding _u_ and _v_ values for every point of the surface. We now have a range from _0_ to _1_ for each value, in the proper data structure, so we're ready to apply a parametric algorithm.
 
-![](<../.gitbook/assets/customizing - exercise 04.jpg>)
+![](<./images/5/customizing - exercise 04.jpg>)
 
 > 1. Add a _code block_ to the canvas and enter the code: `Math.Sin(u*180)*Math.Sin(v*180)*w;` This is a parametric function which creates a sine mound from a flat surface.
 > 2. Connects the _UV.U_ to the _u_ input and the UV.V to the _v_ input.
 > 3. The _w_ input represents the _amplitude_ of the shape, so we attach a _number slider_ to it.
 
-![](<../.gitbook/assets/customizing - exercise 05.jpg>)
+![](<./images/5/customizing - exercise 05.jpg>)
 
 > 1. Now, we have a list of values as defined by the algorithm. Let's use this list of values to move the points up in the _+Z_ direction. Using _Geometry.Translate_, plug the \*code block \*into _zTranslation_ and the _Surface.PointAtParameter_ into the _geometry_ input. You should see the new points displayed in the Dynamo preview.
 > 2. Finally, we create a surface with the _NurbsSurface.ByPoints_ node, plugging the node from the previous step into the points input. We have ourselves a parametric surface. Feel free to drag the slider to watch the mound shrink and grow.
 
 With the parametric surface, we want to define a way to panelize it in order to array four-point adaptive components. Dynamo does not have out-of-the-box functionality for surface panelization, so we can look to the community for helpful Dynamo packages.
 
-![](<../.gitbook/assets/customizing - exercise 06.jpg>)
+![](<./images/5/customizing - exercise 06.jpg>)
 
 > 1. Go to _Packages>Search for a Package..._
 > 2. Search for _"LunchBox"_ and install _"LunchBox for Dynamo"_. This is a really helpful set of tools for geometry operations such as this.

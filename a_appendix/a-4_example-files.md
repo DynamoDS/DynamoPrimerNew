@@ -8,99 +8,101 @@
 
 #### Geometry Overview&#x20;
 
-{% file src="../.gitbook/assets/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 #### Vector, Plane & Coordinate System
 
-{% file src="../.gitbook/assets/Geometry for Computational Design - Vectors.dyn" %}
+{% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-{% file src="../.gitbook/assets/Geometry for Computational Design - Plane.dyn" %}
+{% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-{% file src="../.gitbook/assets/Geometry for Computational Design - Coordinate System.dyn" %}
+{% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
 #### Points
 
-{% file src="../.gitbook/assets/Geometry for Computational Design - Points.dyn" %}
+{% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
 #### Curves
 
-{% file src="../.gitbook/assets/Geometry for Computational Design - Curves.dyn" %}
+{% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
 #### Surfaces
 
-{% file src="../.gitbook/assets/Surfaces.zip" %}
+{% file src="../datasets/5-2/5/Surfaces.zip" %}
 
 #### Solids
 
-{% file src="../.gitbook/assets/Geometry for Computational Design - Solids.dyn" %}
+{% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
 ### The Building Blocks of Programs
 
 #### Data
 
-{% file src="../.gitbook/assets/Building Blocks of Programs - Data.dyn" %}
+{% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
 #### Math
 
-{% file src="../.gitbook/assets/Building Blocks of Programs - Math.dyn" %}
+{% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
 #### Logic
 
-{% file src="../.gitbook/assets/Building Blocks of Programs - Logic.dyn" %}
+{% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
 #### Strings
 
-{% file src="../.gitbook/assets/Building Blocks of Programs - Strings.dyn" %}
+{% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
 #### Color
 
-{% file src="../.gitbook/assets/Building Blocks of Programs - Color.dyn" %}
+{% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
+
+{% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
 ### Designing with Lists
 
 #### What's a List
 
-{% file src="../.gitbook/assets/Lacing.dyn" %}
+{% file src="../datasets/5-4/1/Lacing.dyn" %}
 
 #### Working with Lists
 
-{% file src="../.gitbook/assets/List-Operations.dyn" %}
+{% file src="../datasets/5-4/2/List-Operations.dyn" %}
 
-{% file src="../.gitbook/assets/List-Count.dyn" %}
+{% file src="../datasets/5-4/2/List-Count.dyn" %}
 
-{% file src="../.gitbook/assets/List-GetItemAtIndex.dyn" %}
+{% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
 
-{% file src="../.gitbook/assets/List-Reverse.dyn" %}
+{% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
-{% file src="../.gitbook/assets/List-ShiftIndices.dyn" %}
+{% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
 
-{% file src="../.gitbook/assets/List-FilterByBooleanMask.dyn" %}
+{% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
 #### Lists of Lists
 
-{% file src="../.gitbook/assets/Top-Down-Hierarchy.dyn" %}
+{% file src="../datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
-{% file src="../.gitbook/assets/Flatten.dyn" %}
+{% file src="../datasets/5-4/3/Flatten.dyn" %}
 
-{% file src="../.gitbook/assets/Chop.dyn" %}
+{% file src="../datasets/5-4/3/Chop.dyn" %}
 
-{% file src="../.gitbook/assets/Map.dyn" %}
+{% file src="../datasets/5-4/3/Map.dyn" %}
 
-{% file src="../.gitbook/assets/Listatlevel.dyn" %}
+{% file src="../datasets/5-4/3/Listatlevel.dyn" %}
 
-{% file src="../.gitbook/assets/Transpose.dyn" %}
+{% file src="../datasets/5-4/3/Transpose.dyn" %}
 
-{% file src="../.gitbook/assets/ReplaceItems.dyn" %}
+{% file src="../datasets/5-4/3/ReplaceItems.dyn" %}
 
 #### n-Dimensional Lists
 
-{% file src="../.gitbook/assets/n-Dimensional-Lists.zip" %}
+{% file src="../datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
 ### Dictionaries in Dynamo
 
 #### Revit Use-Cases
 
-{% file src="../.gitbook/assets/roomDictionary.dyn" %}
+{% file src="../datasets/5-5/4/roomDictionary.dyn" %}
 
 ## Custom Nodes & Packages
 
@@ -108,49 +110,49 @@
 
 #### Creating a Custom Node
 
-{% file src="../.gitbook/assets/UV-CustomNode.zip" %}
+{% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
 #### Publishing to Your Library
 
-{% file src="../.gitbook/assets/PointsToSurface.dyf" %}
+{% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
 
 ### Packages
 
 #### Package Case Study - Mesh Toolkit
 
-{% file src="../.gitbook/assets/MeshToolkit.zip" %}
+{% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
 #### Publishing a Package
 
-{% file src="../.gitbook/assets/MapToSurface.zip" %}
+{% file src="../datasets/6-2/4/MapToSurface.zip" %}
 
 #### Zero-Touch Importing
 
-{% file src="../.gitbook/assets/ZeroTouchImages.zip" %}
+{% file src="../datasets/6-2/5/ZeroTouchImages.zip" %}
 
 ## Dynamo for Revit
 
 ### Selecting
 
-{% file src="../.gitbook/assets/Revit-Selecting.zip" %}
+{% file src="./datasets/2/Revit-Selecting.zip" %}
 
 ### Editing
 
-{% file src="../.gitbook/assets/Revit-Editing.zip" %}
+{% file src="./datasets/3/Revit-Editing.zip" %}
 
 ### Creating
 
-{% file src="../.gitbook/assets/Revit-Creating.zip" %}
+{% file src="./datasets/4/Revit-Creating.zip" %}
 
-{% file src="../.gitbook/assets/Revit-Creating-DirectShape.zip" %}
+{% file src="./datasets/4/Revit-Creating-DirectShape.zip" %}
 
 ### Customizing
 
-{% file src="../.gitbook/assets/Revit-Customizing.zip" %}
+{% file src="./datasets/5/Revit-Customizing.zip" %}
 
 ### Documenting
 
-{% file src="../.gitbook/assets/Revit-Documenting.zip" %}
+{% file src="./datasets/6/Revit-Documenting.zip" %}
 
 ## Coding in Dynamo
 
@@ -160,41 +162,40 @@
 
 #### DesignScript Syntax
 
-{% file src="../.gitbook/assets/Dynamo-Syntax_Attractor-Surface.dyn" %}
+{% file src="../datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
 #### Shorthand
 
-{% file src="../.gitbook/assets/Obsolete-Nodes_Sine-Surface.dyn" %}
+{% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
 #### Functions
 
-{% file src="../.gitbook/assets/Functions_SphereByZ.dyn" %}
+{% file src="../datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
 ### Python
 
 #### Python Nodes
 
-{% file src="../.gitbook/assets/Python_Custom-Node.dyn" %}
+{% file src="../datasets/8-2/1/Python_Custom-Node.dyn" %}
 
 #### Python and Revit
 
-{% file src="../.gitbook/assets/Revit-Doc.dyn" %}
+{% file src="../datasets/8-2/2/Revit-Doc.dyn" %}
 
-{% file src="../.gitbook/assets/Revit-ReferenceCurve.dyn" %}
+{% file src="../datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
 
-{% file src="../.gitbook/assets/Revit-StructuralFraming.zip" %}
-Best
-{% endfile %}
+{% file src="../datasets/8-2/2/Revit-StructuralFraming.zip" %}
+
 
 ## Best Practices
 
 ### Graph Strategies
 
-{% file src="../.gitbook/assets/RoofDrainageSim.zip" %}
+{% file src="./datasets/9/1/RoofDrainageSim.zip" %}
 
 ### Scripting Strategies
 
-{% file src="../.gitbook/assets/SteepestPath.dyn" %}
+{% file src="./datasets/9/2/SteepestPath.dyn" %}
 
 ## Sample Workflows
 
@@ -202,9 +203,11 @@ Best
 
 #### Parametric Vase
 
-
+{% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
 #### Attractor Points
+
+{% file src="../datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
 
 
 
