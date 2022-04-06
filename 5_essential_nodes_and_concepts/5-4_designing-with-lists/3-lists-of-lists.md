@@ -111,7 +111,7 @@ The **List.Count** node counts all of the items in a list. We'll use this to dem
 > 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
 > 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
 
-![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Exercise](<../images/5-4/3/lists of lists - map 02 (1).jpg>)
 
 > 1. Attach a **List.Count** node to the output of the watch node from the previous step.
 > 2. Connect a **Watch** node to the **List.Count** output.
@@ -146,7 +146,7 @@ Next, we will use **List.Combine** to apply a function on objects in 2 separate 
 ![Exercise](<../images/5-4/3/lists of lists - combined 02.jpg>)
 
 > 1. Add **List.Combine** to the workspace and connect the 2 set of points as its list0 & list1 input.
-> 2. Use a **Line.ByStartPointEndPoint** as the input function for **List.Combine**.&#x20;
+> 2. Use a **Line.ByStartPointEndPoint** as the input function for **List.Combine**.
 
 Once completed, the 2 set of points are zipped/paired together through a **Line.ByStartPointEndPoint** function and returning 10 lines in Dynamo.
 

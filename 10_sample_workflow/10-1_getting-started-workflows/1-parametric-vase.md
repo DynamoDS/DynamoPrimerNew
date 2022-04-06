@@ -70,7 +70,7 @@ Let's continue adding some nodes and connections to our logic to define our vase
 
 Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
 
-![](<../images/10-1/1/vase4 (1).png>)
+![](<../images/10-1/1/vase4 (1) (1).png>)
 
 > 1. Circles are created by a center point and a radius
 
@@ -92,7 +92,7 @@ In order to create a surface using the **Surface.ByLoft** node we need to combin
 
 Let's also turn off the preview in other nodes to only display the Surface.ByLoft display.
 
-![](<../images/10-1/1/vase6 (1).png>)
+![](<../images/10-1/1/vase6 (1) (1).png>)
 
 > 3\. A surface is created by lofting the translated circles.
 

@@ -10,29 +10,27 @@ In this image, we map a point from one surface to another using UV coordinates. 
 
 ![](../images/6-2/3/uvMap.jpg)
 
-### Installing the Package&#x20;
+### Installing the Package
 
 In the previous chapter, we explored ways for panelizing a surface in Dynamo based on curves defined in the XY plane. This case study extends these concepts for more dimensions of geometry. We're going to install this package as built in order to demonstrate how it was developed. In the next section, we'll demonstrate how this package was published.
 
-In Dynamo, click _Packages>Search for a Package... and s_earch for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
+In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
 
 ![](<../images/6-2/3/develop package - install package 01.jpg>)
 
-After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.&#x20;
+After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
 
-![](<../images/6-2/3/develop package - install package 02.jpg>)
-
-
+![](<../images/6-2/3/develop package - install package 02 (1).jpg>)
 
 With the package now installed, let's walk through how it's set up.
 
-### Custom Nodes&#x20;
+### Custom Nodes
 
 The package we're creating uses five custom nodes that we've built for reference. Let's walk through what each node does below. Some custom nodes build off of other custom nodes, and the graphs have a layout for other users to understand in a straightforward manner.
 
 This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
 
-![](<../images/6-2/3/develop package - custom nodes 01.jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,9 +62,9 @@ This is a simple node which creates a parametric surface to map from the source 
 
 ![](<../images/6-2/3/develop package -sampleSrf.jpg>)
 
-### Example Files&#x20;
+### Example Files
 
-The example files can be found in the package's root folder. Click Dynamo > Preferences > Package Manager&#x20;
+The example files can be found in the package's root folder. Click Dynamo > Preferences > Package Manager
 
 Next to MapToSurface, click verticle dots menu > Show Root Directory
 
