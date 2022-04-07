@@ -6,103 +6,103 @@
 
 ### Geometry for Computational Design
 
-#### Geometry Overview&#x20;
+#### Geometry Overview
 
-{% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 #### Vector, Plane & Coordinate System
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-{% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
 #### Points
 
-{% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
 #### Curves
 
-{% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-#### Surfaces
+#### Surface
 
-{% file src="../datasets/5-2/5/Surfaces.zip" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-2/5/Surfaces.zip" %}
 
 #### Solids
 
-{% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
 ### The Building Blocks of Programs
 
 #### Data
 
-{% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
 #### Math
 
-{% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
 #### Logic
 
-{% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
 #### Strings
 
-{% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
 #### Color
 
-{% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
-{% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
 ### Designing with Lists
 
 #### What's a List
 
-{% file src="../datasets/5-4/1/Lacing.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/1/Lacing.dyn" %}
 
 #### Working with Lists
 
-{% file src="../datasets/5-4/2/List-Operations.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-Operations.dyn" %}
 
-{% file src="../datasets/5-4/2/List-Count.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-Count.dyn" %}
 
-{% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-GetItemAtIndex.dyn" %}
 
-{% file src="../datasets/5-4/2/List-Reverse.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-Reverse.dyn" %}
 
-{% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-ShiftIndices.dyn" %}
 
-{% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
 #### Lists of Lists
 
-{% file src="../datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
-{% file src="../datasets/5-4/3/Flatten.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Flatten.dyn" %}
 
-{% file src="../datasets/5-4/3/Chop.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Chop.dyn" %}
 
-{% file src="../datasets/5-4/3/Map.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Map.dyn" %}
 
-{% file src="../datasets/5-4/3/Listatlevel.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Listatlevel.dyn" %}
 
-{% file src="../datasets/5-4/3/Transpose.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Transpose.dyn" %}
 
-{% file src="../datasets/5-4/3/ReplaceItems.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/ReplaceItems.dyn" %}
 
 #### n-Dimensional Lists
 
-{% file src="../datasets/5-4/4/n-Dimensional-Lists.zip" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
 ### Dictionaries in Dynamo
 
 #### Revit Use-Cases
 
-{% file src="../datasets/5-5/4/roomDictionary.dyn" %}
+{% file src="../5_essential_nodes_and_concepts/datasets/5-5/4/roomDictionary.dyn" %}
 
 ## Custom Nodes & Packages
 
@@ -110,92 +110,87 @@
 
 #### Creating a Custom Node
 
-{% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
+{% file src="../6_custom_nodes_and_packages/datasets/6-1/2/UV-CustomNode.zip" %}
 
 #### Publishing to Your Library
 
-{% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
+{% file src="../6_custom_nodes_and_packages/datasets/6-1/3/PointsToSurface.dyf" %}
 
 ### Packages
 
 #### Package Case Study - Mesh Toolkit
 
-{% file src="../datasets/6-2/2/MeshToolkit.zip" %}
+{% file src="../6_custom_nodes_and_packages/datasets/6-2/2/MeshToolkit.zip" %}
 
 #### Publishing a Package
 
-{% file src="../datasets/6-2/4/MapToSurface.zip" %}
+{% file src="../6_custom_nodes_and_packages/datasets/6-2/4/MapToSurface.zip" %}
 
 #### Zero-Touch Importing
 
-{% file src="../datasets/6-2/5/ZeroTouchImages.zip" %}
+{% file src="../6_custom_nodes_and_packages/datasets/6-2/5/ZeroTouchImages.zip" %}
 
 ## Dynamo for Revit
 
-### Selecting
+#### Selecting
 
-{% file src="./datasets/2/Revit-Selecting.zip" %}
+{% file src="../7_dynamo_for_revit/datasets/2/Revit-Selecting.zip" %}
 
-### Editing
+#### Editing
 
-{% file src="./datasets/3/Revit-Editing.zip" %}
+{% file src="../7_dynamo_for_revit/datasets/3/Revit-Editing.zip" %}
 
-### Creating
+#### Creating
 
-{% file src="./datasets/4/Revit-Creating.zip" %}
+{% file src="../7_dynamo_for_revit/datasets/4/Revit-Creating-DirectShape.zip" %}
 
-{% file src="./datasets/4/Revit-Creating-DirectShape.zip" %}
+#### Customizing
 
-### Customizing
+{% file src="../7_dynamo_for_revit/datasets/5/Revit-Customizing.zip" %}
 
-{% file src="./datasets/5/Revit-Customizing.zip" %}
+#### Documenting
 
-### Documenting
-
-{% file src="./datasets/6/Revit-Documenting.zip" %}
+{% file src="../7_dynamo_for_revit/datasets/6/Revit-Documenting.zip" %}
 
 ## Coding in Dynamo
-
-
 
 ### Code Blocks and DesignScript
 
 #### DesignScript Syntax
 
-{% file src="../datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
+{% file src="../8_coding_in_dynamo/datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
 #### Shorthand
 
-{% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
+{% file src="../8_coding_in_dynamo/datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
 #### Functions
 
-{% file src="../datasets/8-1/4/Functions_SphereByZ.dyn" %}
+{% file src="../8_coding_in_dynamo/datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
 ### Python
 
 #### Python Nodes
 
-{% file src="../datasets/8-2/1/Python_Custom-Node.dyn" %}
+{% file src="../8_coding_in_dynamo/datasets/8-2/1/Python_Custom-Node.dyn" %}
 
 #### Python and Revit
 
-{% file src="../datasets/8-2/2/Revit-Doc.dyn" %}
+{% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-Doc.dyn" %}
 
-{% file src="../datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
+{% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
 
-{% file src="../datasets/8-2/2/Revit-StructuralFraming.zip" %}
-
+{% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
 ## Best Practices
 
 ### Graph Strategies
 
-{% file src="./datasets/9/1/RoofDrainageSim.zip" %}
+{% file src="../9_best_practices/datasets/1/RoofDrainageSim.zip" %}
 
 ### Scripting Strategies
 
-{% file src="./datasets/9/2/SteepestPath.dyn" %}
+{% file src="../.gitbook/assets/SteepestPath.dyn" %}
 
 ## Sample Workflows
 
@@ -203,19 +198,8 @@
 
 #### Parametric Vase
 
-{% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
+{% file src="../10_sample_workflow/datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
 #### Attractor Points
 
-{% file src="../datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
-
-
-
-
-
-
-
-
-
-
-
+{% file src="../10_sample_workflow/datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
