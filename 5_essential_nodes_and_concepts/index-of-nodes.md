@@ -6,21 +6,21 @@ This index provides additional information on all the nodes used in this primer,
 
 ### Color
 
-|                                        |                                                                                                                       |                                                             |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-|                                        | CREATE                                                                                                                |                                                             |
-| ![](<images/5-1/Color byARGB.jpg>)     | <p><strong>Color.ByARGB</strong><br>Construct a color by alpha, red, green, and blue components.</p>                  | ![](<images/5-1/index of nodes - color byargb (1).jpg>)     |
-| ![](<images/5-1/Color Range.jpg>)      | <p><strong>Color Range</strong><br>Get a color from a color gradient between a start color and an end color.</p>      | ![](<images/5-1/index of nodes - color range (1).jpg>)      |
-|                                        | ACTIONS                                                                                                               |                                                             |
-| ![](<images/5-1/Color Brightness.jpg>) | <p><strong>Color.Brightness</strong><br>Gets the brightness value for this color.</p>                                 | ![](<images/5-1/index of nodes - color brightness (1).jpg>) |
-| ![](<images/5-1/Color Component.jpg>)  | <p><strong>Color.Components</strong><br>Lists the components for the color in the order: alpha, red, green, blue.</p> | ![](<images/5-1/index of nodes - color component.jpg>)      |
-| ![](<images/5-1/Color Saturation.jpg>) | <p><strong>Color.Saturation</strong><br>Gets the saturation value for this color</p>                                  | ![](<images/5-1/index of nodes - color saturation.jpg>)     |
-| ![](<images/5-1/Color Hue.jpg>)        | <p><strong>Color.Hue</strong><br>Gets the hue value for this color.</p>                                               | ![](<images/5-1/index of nodes - color hue.jpg>)            |
-|                                        | QUERY                                                                                                                 |                                                             |
-| ![](<images/5-1/Color Alpha (1).jpg>)  | <p><strong>Color.Alpha</strong><br>Find the alpha component of a color, 0 to 255.</p>                                 | ![](<images/5-1/index of nodes - color alpha.jpg>)          |
-| ![](<images/5-1/Color Blue.jpg>)       | <p><strong>Color.Blue</strong><br>Find the blue component of a color, 0 to 255.</p>                                   | ![](<images/5-1/index of nodes - color blue.jpg>)           |
-| ![](<images/5-1/Color Green (1).jpg>)  | <p><strong>Color.Green</strong><br>Find the green component of a color, 0 to 255.</p>                                 | ![](<images/5-1/index of nodes - color green.jpg>)          |
-| ![](<images/5-1/Color Red.jpg>)        | <p><strong>Color.Red</strong><br>Find the red component of a color, 0 to 255.</p>                                     | ![](<images/5-1/index of nodes - color red.jpg>)            |
+|                                           |                                                                                                                       |                                                             |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+|                                           | CREATE                                                                                                                |                                                             |
+| ![](<images/5-1/Color byARGB.jpg>)        | <p><strong>Color.ByARGB</strong><br>Construct a color by alpha, red, green, and blue components.</p>                  | ![](<images/5-1/index of nodes - color byargb (1).jpg>)     |
+| ![](<images/5-1/Color Range.jpg>)         | <p><strong>Color Range</strong><br>Get a color from a color gradient between a start color and an end color.</p>      | ![](<images/5-1/index of nodes - color range (1).jpg>)      |
+|                                           | ACTIONS                                                                                                               |                                                             |
+| ![](<images/5-1/Color Brightness.jpg>)    | <p><strong>Color.Brightness</strong><br>Gets the brightness value for this color.</p>                                 | ![](<images/5-1/index of nodes - color brightness (1).jpg>) |
+| ![](<images/5-1/Color Component.jpg>)     | <p><strong>Color.Components</strong><br>Lists the components for the color in the order: alpha, red, green, blue.</p> | ![](<images/5-1/index of nodes - color component.jpg>)      |
+| ![](<images/5-1/Color Saturation.jpg>)    | <p><strong>Color.Saturation</strong><br>Gets the saturation value for this color</p>                                  | ![](<images/5-1/index of nodes - color saturation.jpg>)     |
+| ![](<images/5-1/Color Hue.jpg>)           | <p><strong>Color.Hue</strong><br>Gets the hue value for this color.</p>                                               | ![](<images/5-1/index of nodes - color hue.jpg>)            |
+|                                           | QUERY                                                                                                                 |                                                             |
+| ![](<images/5-1/Color Alpha (1) (1).jpg>) | <p><strong>Color.Alpha</strong><br>Find the alpha component of a color, 0 to 255.</p>                                 | ![](<images/5-1/index of nodes - color alpha.jpg>)          |
+| ![](<images/5-1/Color Blue.jpg>)          | <p><strong>Color.Blue</strong><br>Find the blue component of a color, 0 to 255.</p>                                   | ![](<images/5-1/index of nodes - color blue.jpg>)           |
+| ![](<images/5-1/Color Green (1) (1).jpg>) | <p><strong>Color.Green</strong><br>Find the green component of a color, 0 to 255.</p>                                 | ![](<images/5-1/index of nodes - color green.jpg>)          |
+| ![](<images/5-1/Color Red.jpg>)           | <p><strong>Color.Red</strong><br>Find the red component of a color, 0 to 255.</p>                                     | ![](<images/5-1/index of nodes - color red.jpg>)            |
 
 |                                                            |                                                                                           |                                                                         |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -37,18 +37,18 @@ This index provides additional information on all the nodes used in this primer,
 
 ## Input
 
-|                                      |                                                                                                          |                                                       |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-|                                      | ACTIONS                                                                                                  |                                                       |
-| ![](images/5-1/Boolean.jpg)          | <p><strong>Boolean</strong><br>Selection between a true and false.</p>                                   | ![](<images/5-1/index of nodes - boolean.jpg>)        |
-| ![](<images/5-1/Code Block (1).jpg>) | <p><strong>Code Block</strong><br>Allows for DesignScript code to be authored directly.</p>              | ![](<images/5-1/index of nodes - code block.jpg>)     |
-| ![](<images/5-1/Directory Path.jpg>) | <p><strong>Directory Path</strong><br>Allows you to select a directory on the system to get its path</p> | ![](<images/5-1/index of nodes - directory path.jpg>) |
-| ![](<images/5-1/File Path.jpg>)      | <p><strong>File Path</strong><br>Allows you to select a file on the system to get its filenam</p>        | ![](<images/5-1/index of nodes - file path.jpg>)      |
-| ![](<images/5-1/Integer slider.jpg>) | <p><strong>Integer Slider</strong><br>A slider that produces integer values.</p>                         | ![](<images/5-1/index of nodes - integer slider.jpg>) |
-| ![](images/5-1/Number.jpg)           | <p><strong>Number</strong><br>Creates a number.</p>                                                      | ![](<images/5-1/index of nodes - number (1).jpg>)     |
-| ![](<images/5-1/Number slider.jpg>)  | <p><strong>Number Slider</strong><br>A slider that produces numeric values.</p>                          | ![](<images/5-1/index of nodes - number slider.jpg>)  |
-| ![](images/5-1/String.jpg)           | <p><strong>String</strong><br>Creates a string.</p>                                                      | ![](<images/5-1/index of nodes - string.jpg>)         |
-| ![](<images/5-1/Object is Null.jpg>) | <p><strong>Object.IsNull</strong><br>Determines if the given object is null.</p>                         | ![](<images/5-1/index of nodes - object is null.jpg>) |
+|                                          |                                                                                                          |                                                       |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+|                                          | ACTIONS                                                                                                  |                                                       |
+| ![](images/5-1/Boolean.jpg)              | <p><strong>Boolean</strong><br>Selection between a true and false.</p>                                   | ![](<images/5-1/index of nodes - boolean.jpg>)        |
+| ![](<images/5-1/Code Block (1) (1).jpg>) | <p><strong>Code Block</strong><br>Allows for DesignScript code to be authored directly.</p>              | ![](<images/5-1/index of nodes - code block.jpg>)     |
+| ![](<images/5-1/Directory Path.jpg>)     | <p><strong>Directory Path</strong><br>Allows you to select a directory on the system to get its path</p> | ![](<images/5-1/index of nodes - directory path.jpg>) |
+| ![](<images/5-1/File Path.jpg>)          | <p><strong>File Path</strong><br>Allows you to select a file on the system to get its filenam</p>        | ![](<images/5-1/index of nodes - file path.jpg>)      |
+| ![](<images/5-1/Integer slider.jpg>)     | <p><strong>Integer Slider</strong><br>A slider that produces integer values.</p>                         | ![](<images/5-1/index of nodes - integer slider.jpg>) |
+| ![](images/5-1/Number.jpg)               | <p><strong>Number</strong><br>Creates a number.</p>                                                      | ![](<images/5-1/index of nodes - number (1).jpg>)     |
+| ![](<images/5-1/Number slider.jpg>)      | <p><strong>Number Slider</strong><br>A slider that produces numeric values.</p>                          | ![](<images/5-1/index of nodes - number slider.jpg>)  |
+| ![](images/5-1/String.jpg)               | <p><strong>String</strong><br>Creates a string.</p>                                                      | ![](<images/5-1/index of nodes - string.jpg>)         |
+| ![](<images/5-1/Object is Null.jpg>)     | <p><strong>Object.IsNull</strong><br>Determines if the given object is null.</p>                         | ![](<images/5-1/index of nodes - object is null.jpg>) |
 
 ## List
 
@@ -271,13 +271,13 @@ Rectangle
 
 ## Operators
 
-|                                          |                                                                                                                         |                                                       |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| ![](<images/5-1/addition (1).jpg>)       | <p><strong>+</strong><br>Addition</p>                                                                                   | ![](<images/5-1/index of nodes - addition.jpg>)       |
-| ![](<images/5-1/Subtraction (1).jpg>)    | <p><strong>-</strong><br>Subtraction</p>                                                                                | ![](<images/5-1/index of nodes - subtraction.jpg>)    |
-| ![](<images/5-1/Multiplication (1).jpg>) | <p><strong>*</strong><br>Multiplication</p>                                                                             | ![](<images/5-1/index of nodes - multiplication.jpg>) |
-| ![](<images/5-1/Division (1).jpg>)       | <p><strong>/</strong><br>Division</p>                                                                                   | ![](<images/5-1/index of nodes - division.jpg>)       |
-| ![](<images/5-1/modular (1).jpg>)        | <p><strong>%</strong><br>Modular Division finds the remainder of the first input after dividing by the second input</p> | ![](<images/5-1/index of nodes - modular.jpg>)        |
-| ![](<images/5-1/Less than (1).jpg>)      | <p><strong>&#x3C;</strong><br>Less Than</p>                                                                             | ![](<images/5-1/index of nodes - less than.jpg>)      |
-| ![](<images/5-1/greater than (1).jpg>)   | <p><strong>></strong><br>Greater Than</p>                                                                               | ![](<images/5-1/index of nodes - greater than.jpg>)   |
-| ![](<images/5-1/== (1).jpg>)             | <p><strong>==</strong><br>Equality tests for equality between two values.</p>                                           | ![](<images/5-1/index of nodes - ==.jpg>)             |
+|                                              |                                                                                                                         |                                                       |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| ![](<images/5-1/addition (1) (1).jpg>)       | <p><strong>+</strong><br>Addition</p>                                                                                   | ![](<images/5-1/index of nodes - addition.jpg>)       |
+| ![](<images/5-1/Subtraction (1) (1).jpg>)    | <p><strong>-</strong><br>Subtraction</p>                                                                                | ![](<images/5-1/index of nodes - subtraction.jpg>)    |
+| ![](<images/5-1/Multiplication (1) (1).jpg>) | <p><strong>*</strong><br>Multiplication</p>                                                                             | ![](<images/5-1/index of nodes - multiplication.jpg>) |
+| ![](<images/5-1/Division (1) (1).jpg>)       | <p><strong>/</strong><br>Division</p>                                                                                   | ![](<images/5-1/index of nodes - division.jpg>)       |
+| ![](<images/5-1/modular (1).jpg>)            | <p><strong>%</strong><br>Modular Division finds the remainder of the first input after dividing by the second input</p> | ![](<images/5-1/index of nodes - modular.jpg>)        |
+| ![](<images/5-1/Less than (1).jpg>)          | <p><strong>&#x3C;</strong><br>Less Than</p>                                                                             | ![](<images/5-1/index of nodes - less than.jpg>)      |
+| ![](<images/5-1/greater than (1).jpg>)       | <p><strong>></strong><br>Greater Than</p>                                                                               | ![](<images/5-1/index of nodes - greater than.jpg>)   |
+| ![](<images/5-1/== (1).jpg>)                 | <p><strong>==</strong><br>Equality tests for equality between two values.</p>                                           | ![](<images/5-1/index of nodes - ==.jpg>)             |

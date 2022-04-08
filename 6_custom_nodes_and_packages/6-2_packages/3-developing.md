@@ -20,7 +20,7 @@ In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package
 
 After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
 
-![](<../images/6-2/3/develop package - install package 02 (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 With the package now installed, let's walk through how it's set up.
 
@@ -30,7 +30,7 @@ The package we're creating uses five custom nodes that we've built for reference
 
 This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 #### **PointsToSurface**
 
