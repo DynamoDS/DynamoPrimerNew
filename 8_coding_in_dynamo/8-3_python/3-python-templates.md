@@ -1,20 +1,20 @@
 # Setup Your Own Python Template
 
-With Dynamo 2.0 we have the ability to specify a default template `(.py extension)` to use when opening the python window for the first time. This has been a long-desired request as this expedites the usage of Python within Dynamo. Having the ability to use a template allows us to have default imports ready to go when we want to develop a custom Python script.
+使用 Dynamo 2.0，我们可以指定在首次打开 Python 窗口时要使用的默认模板`(.py extension)`（.py 扩展名）。 这是一个渴望已久的请求，因为这可加快 Dynamo 内 Python 的使用。通过使用模板，我们可以在计划开发自定义 Python 脚本时准备好默认导入。
 
-The location for this template is in the `APPDATA` location for your Dynamo install.
+此模板的位置位于 Dynamo 安装的 `APPDATA`APPDATA 位置。
 
-This is typically as follows `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
+`( %appdata%\Dynamo\Dynamo Core\{version}\ )`
 
-![](<../images/8-3/3/python templates - appdata folder location.jpg>)
+![]
 
-### Setting Up The Template
+### 设置模板
 
-In order to utilize this functionality we need to add the following line in our `DynamoSettings.xml` file. _(Edit in notepad)_
+为了利用此功能，我们需要在 `DynamoSettings.xml`DynamoSettings.xml 文件中添加以下行。 _（在记事本中编辑）_
 
-![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
+![]
 
-Where we see `<PythonTemplateFilePath />`, we can simply replace this with the following:
+在我们看到 `<PythonTemplateFilePath />`&lt;PythonTemplateFilePath /> 的位置，只需用以下内容替换它：
 
 ```
 <PythonTemplateFilePath>
@@ -22,13 +22,11 @@ Where we see `<PythonTemplateFilePath />`, we can simply replace this with the f
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Note: replace CURRENTUSER with your username_
-{% endhint %}
+__
 
-Next we need to build a template with the functionality that we want to use built-in. In our case lets embed the Revit related imports and some of the other typical items when working with Revit.
+接下来，我们需要使用要内置的功能构建模板。在本例中，我们在使用 Revit 时嵌入 Revit 相关的导入和一些其他典型项目。
 
-You can start a blank notepad document and paste the following code inside:
+您可以开始一个空白记事本文档，并在其中粘贴以下代码：
 
 ```
 import clr
@@ -67,16 +65,16 @@ TransactionManager.Instance.TransactionTaskDone()
 OUT = element
 ```
 
-Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` location.
+完成后，将此文件另存为 `PythonTemplate.py`PythonTemplate.py`APPDATA`，并保存在 APPDATA 位置。
 
-### Python Script Behavior After
+### Python 脚本行为
 
-A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
+定义了 Python 模板后，在每次放置 Python 节点时，Dynamo 都会查找该模板。 如果找不到，它将看起来像默认的 Python 窗口。
 
-![](<../images/8-3/3/python templates - before setup template.jpg>)
+![]
 
-If the Python template is found (like our Revit one for example) you will see all of the default items you built in.
+如果找到 Python 模板（如我们的 Revit 模板），将看到您内置的所有默认项目。
 
-![](<../images/8-3/3/python templates - after setup template.jpg>)
+![]
 
-Additional information regarding this great addition (by Radu Gidei) can be found here. https://github.com/DynamoDS/Dynamo/pull/8122
+有关此出色附加功能（由 Radu Gidei 提供）的其他信息可以在此处找到。https://github.com/DynamoDS/Dynamo/pull/8122

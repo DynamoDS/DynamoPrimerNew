@@ -1,10 +1,10 @@
-# Translation, Rotation, and Other Transformations
+# 平移、旋转和其他变换
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+通过在三维空间中明确指出 x、y 和 z 坐标，可以创建特定的几何体对象。但是，通常在对象本身或其基本 CoordinateSystem 上使用几何变换将几何体移动到其最终位置。
 
-### Translation
+### 平移
 
-The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
+最简单的几何变换是平移，可在 x、y 和 z 方向上将对象移动指定的单位数。
 
 ![](../images/8-2/5/Transformations\_01.png)
 
@@ -20,7 +20,7 @@ p2 = p.Translate(10, -20, 50);
 
 ### Rotation
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+虽然 Dynamo 中的所有对象均可通过在对象名称末尾附加 _.Translate_ 方法进行转换，但更复杂的变换需要将对象从一个基础坐标系变换到新坐标系。例如，要绕 x 轴将对象旋转 45 度，我们将对象从其现有 CoordinateSystem（不旋转）变换为 CoordinateSystem（已使用 _.Transform_ 方法绕 x 轴旋转 45 度）：
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Scale
+### 缩放
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+除了平移和旋转外，还可以缩放或剪切 CoordinateSystems。可以使用 _.Scale_ 方法缩放 CoordinateSystem：
 
 ![](../images/8-2/5/Transformations\_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+通过将非正交向量输入 CoordinateSystem 构造函数，可以创建剪切的 CoordinateSystem。
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+缩放和剪切是比旋转和平移更复杂的几何变换，因此并非每个 Dynamo 对象都能进行这些变换。下表概述了 Dynamo 对象可以具有非统一比例缩放的 CoordinateSystems 和剪切的 CoordinateSystems。
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| 类 | 非统一比例缩放的 CoordinateSystem | 剪切的 CoordinateSystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | No                                    | No                       |
-| NurbsCurve   | Yes                                   | Yes                      |
-| NurbsSurface | No                                    | No                       |
-| Circle       | No                                    | No                       |
-| Line         | Yes                                   | Yes                      |
-| Plane        | No                                    | No                       |
-| Point        | Yes                                   | Yes                      |
-| Polygon      | No                                    | No                       |
-| Solid        | No                                    | No                       |
-| Surface      | No                                    | No                       |
-| Text         | No                                    | No                       |
+| 弧 | 否 | 否 |
+| NurbsCurve | 是 | 是 |
+| Nurbs 曲面 | 否 | 否 |
+| 圆 | 否 | 否 |
+| 直线 | 是 | 是 |
+| 平面 | 否 | 否 |
+| 点 | 是 | 是 |
+| 多边形 | 否 | 否 |
+| 实体 | 否 | 否 |
+| 曲面 | 否 | 否 |
+| 文本 | 否 | 否 |

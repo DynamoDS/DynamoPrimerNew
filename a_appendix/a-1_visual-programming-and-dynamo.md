@@ -1,60 +1,60 @@
 # Visual Programming and Dynamo
 
-#### What is Visual Programming? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
+#### 什么是可视化编程？ <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
-Designing frequently involves establishing visual, systemic, or geometric relationships between the parts of a design. More times than not, these relationships are developed by workflows that gets us from concept to result by way of rules. Perhaps without knowing it, we are working algorithmically - defining a step-by-step set of actions that follow a basic logic of input, processing, and output. Programming allows us to continue to work this way but by formalizing our algorithms.
+设计工作经常涉及在设计各部分之间建立视觉、系统或几何关系。多数情况下，这些关系由工作流开发，工作流按一定规则实现从概念到结果的形成。也许并不了解，其实我们是按一定算法进行工作的 - 定义一组循序渐进的操作，这些操作遵循输入、处理和输出的基本逻辑。编程让我们可以继续通过这种方式进行工作，但采用的方法是对算法进行规范化。
 
-#### Algorithms in Hand <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
+#### 算法（手头） <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
-While offering some powerful opportunities, the term **Algorithm** can carry some misconceptions with it. Algorithms can generate unexpected, wild, or cool things, but they are not magic. In fact, they are pretty plain, in and of themselves. Let's use a tangible example like an origami crane. We start with a square piece of paper (input), follow a series of folding steps (processing actions), and result in a crane (output).
+尽管提供了一些强大机会，但**算法**这一术语本身可能会带来一些误解。算法可能会产生意外、疯狂或酷炫的效果，但它们并不是魔术。实际上，它们本身平淡无奇。让我们使用一个实例，如折纸鹤。我们从一张正方形纸开始（输入）、遵循一系列折叠步骤（处理操作），然后完成折叠一张纸鹤（输出）。
 
-![Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![]()
 
-So where is the Algorithm? It is the abstract set of steps, which we can represent in a couple of ways - either textually or graphically.
+算法存在于何处？它是抽象的步骤集，我们可以通过两种方式来表示它们 - 文字或图形。
 
-**Textual Instructions:**
+**文字说明：**
 
-1. Start with a square piece of paper, colored side up. Fold in half and open. Then fold in half the other way.
-2. Turn the paper over to the white side. Fold the paper in half, crease well and open, and then fold again in the other direction.
-3. Using the creases you have made, Bring the top 3 corners of the model down to the bottom corner. Flatten model.
-4. Fold top triangular flaps into the center and unfold.
-5. Fold top of model downwards, crease well and unfold.
-6. Open the uppermost flap of the model, bringing it upwards and pressing the sides of the model inwards at the same time. Flatten down, creasing well.
-7. Turn model over and repeat Steps 4-6 on the other side.
-8. Fold top flaps into the center.
-9. Repeat on other side.
-10. Fold both ‘legs’ of model up, crease very well, then unfold.
-11. Inside Reverse Fold the “legs” along the creases you just made.
-12. Inside Reverse Fold one side to make a head, then fold down the wings.
-13. You now have a crane.
+1. 从一张正方形纸开始，有颜色的一面朝上。对折，然后打开。换另一方向对折。
+2. 翻转纸张，白色一面朝上。将纸张对折、折出折痕并打开，然后换另一方向再次对折。
+3. 使用折出的折痕，将模型的 3 个顶角向下折到底角。展平模型。
+4. 向中心折叠顶部三角形翼片，然后展开。
+5. 向下折叠模型顶部、折出折痕，然后展开。
+6. 打开模型最上方的翼片、将它向上翻折，同时向内按压模型两侧。向下展平，折出折痕。
+7. 翻转模型，然后对另一侧重复步骤 4-6。
+8. 向中心折叠顶部翼片。
+9. 对另一侧重复上述操作。
+10. 向上折叠模型的两条“腿”、折出折痕，然后展开。
+11. 沿刚才折出的折痕向内反向折叠“腿”。
+12. 向内反向折叠一侧以制作头部，然后向下折叠翅膀。
+13. 现在，已完成制作一个纸鹤。
 
-**Graphical Instructions:**
+**图形说明：**
 
-![Needs Update- Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![]()
 
-#### Programming Defined <a href="#programming-defined" id="programming-defined"></a>
+#### 编程已定义 <a href="#programming-defined" id="programming-defined"></a>
 
-Using either of these sets of instructions should result in a crane, and if you followed along yourself, you've applied an algorithm. The only difference is the way in which we read the formalization of that set of instructions and that leads us to **Programming**. Programming, frequently shortened from _Computer Programming_, is the act of formalizing the processing of a series of actions into an executable program. If we turned the above instructions for a creating crane into a format our computer can read and execute, we are Programming.
+使用其中任一组说明都应该可以完成制作纸鹤，如果您按照自己的方式制作，那么您已应用了一种算法。唯一的区别是我们读取该组说明的形式化的方式，该方式会引导我们进行**编程**。编程（通常是_计算机编程_的简写）是将一系列操作的处理规范化为可执行程序的行为。如果我们将上述用于制作纸鹤的说明转换为计算机可以读取和执行的格式，那么我们就是在编程。
 
-The key to and first hurdle we will find in Programming, is that we have to rely on some form of abstraction to communicate effectively with our computer. That takes the form of any number of Programming Languages, such as JavaScript, Python, or C. If we can write out a repeatable set of instructions, like for the origami crane, we only need to translate it for the computer. We are on our way to having the computer be able to make a crane or even a multitude of different cranes where each one varies slightly. This is the power of Programming - the computer will repeatedly execute whatever task, or set of tasks, we assign to it, without delay and without human error.
+编程的关键及我们会遇到的第一个障碍是：必须依靠某种形式的抽象形式，才能与计算机进行有效通信。采用任何数量的编程语言（如 JavaScript、Python 或 C）形式。如果我们可以写出一组可重复的说明（如用于折纸鹤），我们只需为计算机转换它即可。我们正在努力让计算机能够制作纸鹤，甚至众多不同的纸鹤（其中每个纸鹤都略微不同）。这就是编程的力量 - 计算机将重复执行我们分配给它的任何任务或任务集，而不会出现延迟和人为错误。
 
-**Visual Programming Defined**
+**可视化编程已定义**
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
 
-If you were tasked with writing instructions for folding an origami crane, how would you go about it? Would you make them with graphics, text, or some combination of the two?
+如果您的任务是为折叠纸鹤编写说明，您将如何处理？您要使用图形、文字还是两者的某种组合来制作它们？
 
-If your answer contained graphics, then **Visual Programming** is definitely for you. The process is essentially the same for both Programming and Visual Programming. They utilize the same framework of formalization; however, we define the instructions and relationships of our program through a graphical (or "Visual") user interface. Instead of typing text bound by syntax, we connect pre-packaged nodes together. Here's a comparison of the same algorithm - "draw a circle through a point" - programmed with nodes versus code:
+如果您的回答中包含图形，那么**可视化编程**绝对适合您。编程和可视化编程的过程基本相同。它们利用相同的规范化框架；但是，我们通过图形（或“可视化”）用户界面定义程序的说明和关系。我们将预打包的节点连接在一起，而不是键入语法约束的文字。下面是对同一算法（即“通过点画圆”）的比较，分别用节点和代码编程：
 
-**Visual Program:**
+**可视化程序：**
 
-![](<./images/a-1/visualProgramming (2).png>)
+![](<.
 
-**Textual Program:**
+**文本程序**：
 
 ```
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
@@ -65,8 +65,8 @@ dist = myPoint.DistanceTo(attractorPoint);
 myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 ```
 
-The results of our algorithm:
+我们的算法结果：
 
-![](<./images/a-1/visualProgramming (1).png>)
+![](<.
 
-The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.
+以此类方式进行编程的可视化特性降低了入门门槛，无需与设计师经常沟通。Dynamo 属于可视化编程范例，但正如我们稍后所见到的，我们仍可以在应用程序中使用文本编程。

@@ -1,113 +1,113 @@
-# Strings
+# 字符串
 
-### What is a String
+### Vault 是什么
 
-Formally, a **String** is a sequence of characters representing a literal constant or some type of variable. Informally, a string is programming lingo for text. We've worked with numbers, both integers and decimal numbers, to drive parameters and we can do the same with text.
+正式地，**字符串**是代表文字常量或某种类型变量的字符序列。非正式，字符串是文本编程术语。我们已使用数字（整数和小数）来驱动参数，可以对文本执行相同操作。
 
-### Creating Strings
+### 创建字符串
 
-Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
+字符串可用于各种应用，包括定义自定义参数、注释文档集以及解析基于文本的数据集。字符串节点位于“核心”>“输入类别”中。
 
-The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
+上面的示例节点都是字符串。数字可以表示为字符串、字母或整个文本数组。
 
-![](<../images/5-3/4/strings - creating strings.jpg>)
+![]
 
-## Exercise
+## 练习
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-### Querying Strings
+### 查询字符串
 
-You can parse through large amounts of data quickly by querying strings. We'll talk about some basic operations which can speed up a workflow and help for software interoperability.
+通过查询字符串，即可快速解析大量数据。我们将介绍一些基本操作，这些操作可以加快工作流并帮助实现软件互操作性。
 
-The image below considers a string of data coming from an external spreadsheet. The string represents the vertices of a rectangle in the XY-Plane. Let's break down some string split operations in miniature exercise:
+下图考虑了来自外部电子表格的数据字符串。该字符串表示矩形在 XY 平面中的顶点。让我们在微型练习中分解一些字符串拆分操作：
 
-![](<../images/5-3/4/strings - querying strings 01.jpg>)
+![]
 
-> 1. The ";" separator splits each vertex of the rectangle. This creates a list with 3 items for each vertex.
+> 1. “;”分隔符分割矩形的每个顶点。这将为每个顶点创建一个包含 4 个项目的列表。
 
-![](<../images/5-3/4/strings - querying strings 02.jpg>)
+![]
 
-> 1. By hitting the "_+_" in the middle of the Node, we create new separator.
-> 2. Add a "_,_" string to the canvas and plug in to the new separator input.
-> 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
+> 1. 点击节点中间的“_+_”，即可创建新的分隔符。
+> 2. 向画布添加“_,_”字符串，然后连接到新的分隔符输入。
+> 3. 现在，我们得到了包含十个项目的列表。节点先基于 _separator0_ 进行分割，然后基于 _separator1_ 进行分割。
 
-While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a number. This is done with the **String.ToNumber** Node
+虽然上述项目列表看起来像数字，但在 Dynamo 中仍将它们视为单独的字符串。要创建点，需要将点的数据类型从字符串转换为数字。 使用 String.ToNumber 节点即可完成此操作****
 
-![](<../images/5-3/4/strings - querying strings 03.jpg>)
+![]
 
-> 1. This Node is straightforward. Plug the **String.Split** results into the input. The output doesn't look different, but the data type is now a _number_ instead of a _string_.
+> 1. 此节点简单明了。将 String.Split 结果连接到输入。**** 输出看起来没有什么不同，但数据类型现在是 _number_，而不是 _string_。
 
-With some basic additional operations, we now have a triangle drawn at the origin based on the original string input.
+使用其他一些基本操作，我们现在在原点处基于原始字符串输入绘制了一个矩形。
 
-![](<../images/5-3/4/strings - querying strings 04.jpg>)
+![]
 
-### Manipulating Strings
+### 处理字符串
 
-Since a string is a generic text object, they host a wide range of applications. Let's take a look at some of the major actions in the Core>String Category in Dynamo:
+由于字符串是通用文本对象，因此它们承载了各种应用。让我们来了解一下 Dynamo 的“核心”>“字符串类别”中的一些主要操作：
 
-This is a method of merging two strings together in order. This takes each literal string in a list and creates one merged string.
+这是一个将两个字符串按顺序合并到一起的方法。这将提取列表中的每个文字字符串，并创建一个合并字符串。
 
-The following represents the concatenation of three strings:
+上图表示三个字符串的串联：
 
-![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
+![Concatenate]
 
-> 1. Add or subtract strings to the concatenation by clicking the +/- buttons in the center of the Node.
-> 2. The output gives one concatenated string, with spaces and punctuation included.
+> 1. 通过单击节点中心的“+/-”按钮，即可在串联中添加或减少字符串。
+> 2. 输出会提供一个串联的字符串，其中包含空格和标点符号。
 
-The join method is very similar to concatenate, except it has an added layer of punctuation.
+合并方法与连接方法非常相似，只是它增加了标点图层。
 
-If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the **String.Join** node in order to create a similar data structure.
+如果您使用过 Excel，则可能遇到过 CSV 文件。这代表逗号分隔值。可以使用逗号（或在本例中，使用两个短划线）作为连接节点的分隔符，以创建类似的数据结构：**连接**
 
-The following image represents the joining of two strings:
+上图表示两个字符串的合并：
 
-![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
+![]
 
-> 1. The separator input allows one to create a string which divides the joined strings.
+> 1. 分隔符输入允许一个分隔符创建一个字符串，该字符串会分割已合并的字符串。
 
-### Working with Strings
+### 使用字符串
 
-In this exercise, we're going to use methods of querying and manipulating strings to deconstruct the final stanza of Robert Frost's [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Not the most practical application, but it will help us to grasp conceptual string actions as we apply them to legible lines of rhythm and rhyme.
+在本练习中，我们将使用查询和操作字符串的方法来解构 Robert Frost 的 [Stopping By Woods on a Snowy Evening]( 诗的最后一小节。) 这并非最实用的应用，但在我们将概念性的字符串操作应用于节奏和韵律的清晰各行时，它将有助于我们掌握此类操作。
 
-Let's begin with a basic string split of the stanza. We first notice that the writing is formatted based on commas. We'll use this format to separate each line into individual items.
+我们先从该诗小节的基本字符串拆分开始。首先，我们注意到书写格式基于逗号设置。我们将使用此格式来将每行分隔为单独的项目。
 
-![](<../images/5-3/4/strings - working with strings 01.jpg>)
+![]
 
-> 1. The base string is pasted into a **String** Node.
-> 2. Another **String** Node is used to denote the separator. In this case, we're using a comma.
-> 3. A **String.Split** Node is added to the canvas and connected to the two strings.
-> 4. The output shows that we've now separated the lines into individual elements.
+> 1. 基础字符串将粘贴到字符串节点中。****
+> 2. 另一个字符串节点用于表示分隔符。**** 在本例中，我们使用的是逗号。
+> 3. String.Split 节点将添加到画布并连接到两个字符串。****
+> 4. 输出表明，我们现在已将各行分成各个元素。
 
-Now, let's get to the good part of the poem: the last two lines. The original stanza was one item of data. We separated this data into individual items in the first step. Now we need to do a search for the text we're looking for. And while we _can_ do this by selecting the last two items of the list, if this were an entire book, we wouldn't want to read through everything and manually isolate the elements.
+现在，让我们了解这首诗的优美部分：最后两行。原始诗小节是一项数据。在第一步中，我们已将该数据分为各个项目。现在，我们需要搜索所需的文字。尽管我们_可以_通过选择列表的最后两项来完成此操作，但如果这是一本书，则我们不希望通读所有内容并手动隔离各元素。
 
-![](<../images/5-3/4/strings - working with strings 02.jpg>)
+![]
 
-> 1. Instead of manually searching, we use a **String.Contains** Node to perform a search for a set of characters. This is the similar to doing the "Find" command in a word processor. In this case, we get a return of "true" or "false" if that substring is found within the item.
-> 2. In the _searchFor_ input, we define a substring that we're looking for within the stanza. Let's use a **String** Node with the text "And miles".
-> 3. The output gives us a list of falses and trues. We'll use this boolean logic to filter the elements in the next step.
+> 1. 我们使用 String.Contains 节点来搜索一组字符，而不是手动搜索。**** 这类似于在文字处理器中执行“查找”命令。在本例中，如果在项目中找到相应子字符串，则返回“true”或“false”。
+> 2. 在“searchFor”输入中，我们定义了要在诗小节中查找的子字符串。__ 我们使用一个带有文字“And miles”的字符串节点。****
+> 3. 输出结果为一列 false 或 true。我们将在下一步中使用此布尔逻辑过滤各元素。
 
-![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
+![Split]
 
-> 1. **List.FilterByBoolMask** is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
-> 2. Our output from the "in" is as expected, giving us the final two lines of the stanza.
+> 1. **List.FilterByBoolMask 是我们要用来消隐 false 和 true 的节点。** “in”输出返回“mask”输入为“true”的语句，而“out”输出返回“mask”输入为“false”的语句。
+> 2. “in”的输出与预期一样，为我们提供了诗小节的最后两行。
 
-Now, we want to drive home the repetition of the stanza by merging the two lines together. When viewing the output of the previous step, we notice that there are two items in the list:
+现在，我们要通过合并这两行，来再现该诗小节。查看上一步的输出时，我们注意到列表中有两个项目：
 
-![](<../images/5-3/4/strings - working with strings 04.jpg>)
+![]
 
-> 1. Using two **List.GetItemAtIndex** Nodes, we can isolate the items using the values of 0 and 1 as the index input.
-> 2. The output for each node gives us, in order, the final two lines.
+> 1. 使用两个 List.GetItemAtIndex 节点，我们可以使用值 0 和 1 作为索引输入来隔离项目。****
+> 2. 每个节点的输出按顺序为我们提供最后两行。
 
-To merge these two items into one, we use the **String.Join** Node:
+要将这两个项目合并为一个项目，我们将使用 String.Join 节点：****
 
-![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
+![Split String]
 
-> 1. After adding the **String.Join** Node, we notice that we need a separator.
-> 2. To create the separator, we add a **String** Node to the canvas and type in a comma.
-> 3. The final output has merged the last two items into one.
+> 1. 在添加 String.Join 节点后，我们注意到需要分隔符。****
+> 2. 要创建分隔符，我们向画布中添加一个字符串节点，然后键入逗号。****
+> 3. 最终输出已将最后两个项目合并为一个项目。
 
-This may seem like a lot of work to isolate the last two lines; and it's true, string operations often require some up front work. But they are scalable, and they can be applied to large datasets with relative ease. If you are working parametrically with spreadsheets and interoperability, be sure to keep string operations in mind.
+隔离最后两行看起来可能需要大量工作；确实，字符串操作通常需要一些前期工作。但它们具有可伸缩性，可以相对轻松地应用于大型数据集。如果您以参数方式使用电子表格和互操作性，请务必记住字符串操作。

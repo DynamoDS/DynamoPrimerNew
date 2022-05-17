@@ -1,29 +1,29 @@
-# Dictionary Nodes
+# 词典节点
 
-Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
+Dynamo 2.0 带有各种词典节点供我们使用。这包括_创建、操作和查询_节点。
 
-![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
+![]
 
-#### Create
+#### 创建
 
-1.`Dictionary.ByKeysValues` will create a dictionary with the supplied values and keys. _(The number of entries will be whatever the shortest list input is)_
+`Dictionary.ByKeysValues`Dictionary.ByKeysValues 将使用提供的值和键创建词典。 _（条目数将是最短列表输入内容）_
 
-#### Action
+#### 操作
 
-2\. `Dictionary.Components` will produce the components of the input dictionary. _(This is the reverse of the create node.)_
+2\. `Dictionary.Components` Dictionary.Components 将生成输入词典的组件。 _（这与创建节点相反。）_
 
-3\. `Dictionary.RemoveKeys` will produce a new dictionary object with the input keys removed.
+3\. `Dictionary.RemoveKeys` Dictionary.RemoveKeys 将生成一个新的词典对象，其中输入键已删除。
 
-4\. `Dictionary.SetValueAtKeys` will produce a new dictionary based on the input keys and the values to replace the current value at the corresponding keys.
+4\. `Dictionary.SetValueAtKeys` Dictionary.SetValueAtKeys 将根据输入键和值生成新词典，以替换相应键上的当前值。
 
-5\. `Dictionary.ValueAtKey` will return the value at the input key.
+5\. `Dictionary.ValueAtKey` Dictionary.ValueAtKey 将返回输入键处的值。
 
 #### Count
 
-6\. `Dictionary.Count` will tell you how many key value pairs are in the dictionary.
+6\. `Dictionary.Count` Dictionary.Count 会告诉您词典中有多少键值对。
 
-7\. `Dictionary.Keys` will return what keys are currently stored in the dictionary.
+7\. `Dictionary.Keys` Dictionary.Keys 将返回当前存储在词典中的键。
 
-8\. `Dictionary.Values` will return what values are currently stored in the dictionary.
+8\. `Dictionary.Values` Dictionary.Values 将返回当前存储在词典中的值。
 
-Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.
+与词典建立整体关联数据是对使用索引和列表的旧方法的重大替代。

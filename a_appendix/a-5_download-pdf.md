@@ -1,8 +1,8 @@
-# Download PDF
+# 下载 PDF
 
 To access the information on this primer offline, download the pdf:&#x20;
 
-## Releases:
+## 版本：
 
 #### Dynamo Primer v2.13:
 

@@ -1,10 +1,10 @@
-# Surfaces: Interpolated, Control Points, Loft, Revolve
+# 曲面：内插、控制点、放样、旋转
 
-The two-dimensional analog to a NurbsCurve is the NurbsSurface, and like the freeform NurbsCurve, NurbsSurfaces can be constructed with two basic methods: inputting a set of base points and having Dynamo interpolate between them, and explicitly specifying the control points of the surface. Also like freeform curves, interpolated surfaces are useful when a designer knows precisely the shape a surface needs to take, or if a design requires the surface to pass through constraint points. On the other hand, Surfaces created by control points can be more useful for exploratory designs across various smoothing levels.
+对 NurbsCurve 的二维模拟是 NurbsSurface，与自由形式的 NurbsCurve 一样，可以使用两种基本方法构建 NurbsSurface：输入一组基点并在它们之间内插 Dynamo，然后明确指定曲面的控制点。当设计师确切知道曲面需要的形状或者设计需要曲面通过约束点时，内插曲面也与自由曲线一样非常有用。另一方面，由控制点创建的曲面对于各种平滑级别的探索式设计更为有用。
 
 ### Interpolated Surface
 
-To create an interpolated surface, simply generate a two-dimensional collection of points approximating the shape of a surface. The collection must be rectangular, that is, not jagged. The method _NurbsSurface.ByPoints_ constructs a surface from these points.
+要创建插值曲面，只需生成与曲面形状近似的点的二维集合即可。集合必须是矩形，即，不能出现锯齿。_NurbsSurface.ByPoints_ 方法通过这些点构造曲面。
 
 ![](../images/8-2/6/Surfaces\_01.png)
 
@@ -17,7 +17,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 ### Control Points Surface
 
-Freeform NurbsSurfaces can also be created by specifying underlying control points of a surface. Like NurbsCurves, the control points can be thought of as representing a quadrilateral mesh with straight segments, which, depending on the degree of the surface, is smoothed into the final surface form. To create a NurbsSurface by control points, include two additional parameters to _NurbsSurface.ByPoints_, indicating the degrees of the underlying curves in both directions of the surface.
+也可以通过指定曲面的基本控制点来创建自由形式的 NurbsSurfaces。与 NurbsCurves 一样，控制点可以看作是表示具有直线段的四边形网格，这可以平滑到最终的曲面形式（取决于曲面的阶数）。要按控制点创建 NurbsSurface，请为 _NurbsSurface.ByPoints_ 添加两个附加参数，指示基本曲线在曲面两个方向上的角度。
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
@@ -29,7 +29,7 @@ Freeform NurbsSurfaces can also be created by specifying underlying control poin
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-We can increase the degree of the NurbsSurface to change the resulting surface geometry:
+我们可以增加 NurbsSurface 的阶数来更改生成的曲面几何体：
 
 ![](../images/8-2/6/Surfaces\_03.png)
 
@@ -41,9 +41,9 @@ We can increase the degree of the NurbsSurface to change the resulting surface g
 surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 ```
 
-### Loft Surface
+### 放样曲面
 
-Just as Surfaces can be created by interpolating between a set of input points, they can be created by interpolating between a set of base curves. This is called lofting. A lofted curve is created using the _Surface.ByLoft_ constructor, with a collection of input curves as the only parameter.
+就像可以通过在一组输入点之间内插来创建曲面一样，可以通过在一组基础曲线之间内插来创建曲面。这称为放样。放样曲线是使用 _Surface.ByLoft_ 构造函数创建的，其中输入曲线集合作为唯一参数。
 
 ![](../images/8-2/6/Surfaces\_04.png)
 
@@ -58,11 +58,11 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### Revolve Surface
+### 旋转曲面
 
-Surfaces of revolution are an additional type of surface created by sweeping a base curve around a central axis. If interpolated surfaces are the two-dimensional analog to interpolated curves, then surfaces of revolution are the two-dimensional analog to circles and arcs.
+旋转曲面是通过绕中心轴扫掠基础曲线创建的附加类型的曲面。如果插值曲面是对插值曲线的二维模拟，则旋转曲面是对圆和圆弧的二维模拟。
 
-Surfaces of revolution are specified by a base curve, representing the “edge” of the surface; an axis origin, the base point of the surface; an axis direction, the central “core” direction; a sweep start angle; and a sweep end angle. These are used as the input to the _Surface.Revolve_ constructor.
+旋转曲面由基本曲线指定，表示曲面的“边”；轴原点、曲面的基点；轴方向、中心“核心”方向；扫掠开始角；以及扫掠结束角。这些曲面用作 _Surface.Revolve_ 构造函数的输入。
 
 ![](../images/8-2/6/Surfaces\_05.png)
 

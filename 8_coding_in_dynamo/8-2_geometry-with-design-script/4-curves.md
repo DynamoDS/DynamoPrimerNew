@@ -1,10 +1,10 @@
-# Curves: Interpolated and Control Points
+# 曲线：内插和控制点
 
-There are two fundamental ways to create free-form curves in Dynamo: specifying a collection of Points and having Dynamo interpolate a smooth curve between them, or a more low-level method by specifying the underlying control points of a curve of a certain degree. Interpolated curves are useful when a designer knows exactly the form a line should take, or if the design has specific constraints for where the curve can and cannot pass through. Curves specified via control points are in essence a series of straight line segments which an algorithm smooths into a final curve form. Specifying a curve via control points can be useful for explorations of curve forms with varying degrees of smoothing, or when a smooth continuity between curve segments is required.
+在 Dynamo 中，有两种基本方法可以创建自由形式的曲线：指定点集合，并使 Dynamo 在它们之间内插平滑曲线，或者通过指定一定阶数曲线的基本控制点的更低级别方法。当设计师确切知道线应采用的形状，或者设计是否具有特定约束来控制曲线可以和不能通过的位置时，插值曲线非常有用。通过控制点指定的曲线本质上是一系列直线线段，算法会将其平滑为最终曲线形式。对于通过不同平滑度探索曲线形状或在需要曲线段之间的平滑连续性时，通过控制点指定曲线非常有用。
 
 ### Interpolated Curve
 
-To create an interpolated curve, simply pass in a collection of Points to the _NurbsCurve.ByPoints_ method.
+若要创建插值曲线，只需将点集合传递到 _NurbsCurve.ByPoints_ 方法即可。
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -18,7 +18,7 @@ pts = Point.ByCoordinates(1..30..#num_pts, s, 0);
 int_curve = NurbsCurve.ByPoints(pts);
 ```
 
-The generated curve intersects each of the input points, beginning and ending at the first and last point in the collection, respectively. An optional periodic parameter can be used to create a periodic curve which is closed. Dynamo will automatically fill in the missing segment, so a duplicate end point (identical to the start point) isn’t needed.
+生成的曲线与每个输入点相交，分别在集合中的第一个点和最后一个点开始和结束。可以使用可选的周期性参数创建闭合的周期性曲线。Dynamo 将自动填充缺失的段，因此不需要重复的端点（与起点相同）。
 
 ![](../images/8-2/4/Curves\_02.png)
 
@@ -36,7 +36,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 ### Control Points Curve
 
-NurbsCurves are generated in much the same way, with input points represent the endpoints of a straight line segment, and a second parameter specifying the amount and type of smoothing the curve undergoes, called the degree.\* A curve with degree 1 has no smoothing; it is a polyline.
+NurbsCurves 的生成方式几乎相同，输入点表示直线段的端点，第二个参数用于指定曲线经历的平滑量和类型（称为阶数）。* 阶数为 1 的曲线没有平滑；它是多段线。
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-A curve with degree 2 is smoothed such that the curve intersects and is tangent to the midpoint of the polyline segments:
+对阶数为 2 的曲线进行平滑处理，使曲线相交并与多段线线段的中点相切：
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dynamo supports NURBS (Non-uniform rational B-spline) curves up to degree 20, and the following script illustrates the effect increasing levels of smoothing has on the shape of a curve:
+Dynamo 支持最多 20 阶的 NURBS（非均匀有理 B 样条曲线）曲线，以下脚本说明了增加平滑级别对曲线形状的影响：
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,9 +83,9 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-Note that you must have at least one more control point than the degree of the curve.
+请注意，必须至少比曲线阶数多一个控制点。
 
-Another benefit of constructing curves by control vertices is the ability to maintain tangency between individual curve segments. This is done by extracting the direction between the last two control points, and continuing this direction with the first two control points of the following curve. The following example creates two separate NURBS curves which are nevertheless as smooth as one curve:
+通过控制点构建曲线的另一个好处是能够保持各个曲线段之间的相切。通过提取最后两个控制点之间的方向，并继续使用以下曲线的前两个控制点来完成此操作。下例创建两条单独的 NURBS 曲线，它们仍然像一条曲线一样平滑：
 
 ![](../images/8-2/4/Curves\_06.png)
 
@@ -115,6 +115,5 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}
-\*This is a very simplified description of NURBS curve geometry, for a more accurate and detailed discussion see Pottmann, et al, 2007, in the references.
-{% endhint %}
+这是对 NURBS 曲线几何体的简单描述，对于更准确、更详细的讨论，请参见参考文献中的 Pottmann, et al, 2007。
+

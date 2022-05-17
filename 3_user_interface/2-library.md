@@ -1,62 +1,61 @@
-# Library
+# 库
 
-The Library contains all of the loaded Nodes, including the ten default categories Nodes that come with the installation as well as any additionally loaded Custom Nodes or Packages. The Nodes in the Library are organized hierarchically within libraries, categories, and, where appropriate, subcategories.
+该库中包含所有已加载的节点，包括安装时附带的 10 个默认类别节点以及任何额外加载的自定义节点或软件包。该库中的节点在库、类别和子类别（如果适用）中按层次进行组织。
 
 ![](<images/3-2/library - library UI.jpg>)
 
-* Basic Nodes: Comes with default installation.
-* Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
-* Nodes from the Package Manager: Collection of published Custom Nodes.
+* 基本节点：默认安装时随附。
+* 自定义节点：将常用例程或特殊图形存储为自定义节点。还可以与社区共享自定义节点
+* 软件包管理器中的节点：已发布自定义节点的集合。
 
-We will go through the [hierarchy of Nodes](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](3-3\_dynamo\_libraries.md#quick-search-in-library) and learn about some of the [frequently used Nodes](3-3\_dynamo\_libraries.md#frequently-used-nodes) among them.
+我们将浏览[节点层次结构](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories)类别、介绍如何[从库中快速搜索](3-3\_dynamo\_libraries.md#quick-search-in-library)，以及了解其中一些[常用节点](3-3\_dynamo\_libraries.md#frequently-used-nodes)。
 
-### Library Hierarchy for Categories
+### 类别的库层次结构
 
-Browsing through these categories is the fastest way to understand the hierarchy of what we can add to our Workspace and the best way to discover new Nodes you haven't used before.
+浏览这些类别是了解我们可以向“工作空间”添加的内容层次的最快方法，也是查找之前尚未使用的新节点的最佳方式。
 
-Browse the Library by clicking through the menus to expand each category and its subcategory
+通过单击菜单展开每个类别及其子类别来浏览库
 
 {% hint style="info" %}
-Geometry are great menus to begin exploring as they contain the largest quantity of Nodes.
-{% endhint %}
+“几何图形”是开始探索的最佳菜单，因为它们包含最多数量的节点。{% endhint %}
 
 ![](<images/3-2/library  - modified and resize library categories.jpg>)
 
-> 1. Library
-> 2. Category
-> 3. Subcategory
-> 4. Node
+> 1. 库
+> 2. 种类
+> 3. 子类别
+> 4. 节点
 
-These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
+这些选项会根据节点是**“创建”**数据、执行**“操作”**还是**“查询”**数据，来对同一子类别中的节点进行进一步分类。
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/3-2/user interface - create.jpg>) **创建**：从头开始创建或构建几何图形。例如，圆。
+* ![](<images/3-2/user interface - action.jpg>) **操作**：对对象执行操作。例如，缩放圆。
+* ![](<images/3-2/user interface - query.jpg>) **查询**：获取已存在对象的特性。例如，获取圆的半径。
 
-Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
+将鼠标光标悬停在节点上，即可显示除其名称和图标以外的更多详细信息。这使我们可以快速了解节点的作用、所需输入内容以及输出内容。
 
 ![](<images/3-2/user interface - node description.jpg>)
 
-> 1. Description - plain language description of the Node
-> 2. Icon - larger version of the icon in the Library Menu
-> 3. Input(s) - name, data type, and data structure
-> 4. Output(s) - data type and structure
+> 1. 描述 - 节点的纯语言描述
+> 2. 图标 - 库菜单中图标的较大版本
+> 3. 输入 - 名称、数据类型和数据结构
+> 4. 输出 - 数据类型和结构
 
-### Quick search in Library
+### 在库中快速搜索
 
-If you know with relative specificity which Node you want to add to your Workspace, type in the **Search** field to look up all matching Nodes.
+如果您相对具体地了解要添加到工作空间的节点，请在**“搜索”**字段中键入内容以查找所有匹配的节点。
 
-Choose by clicking on the Node you wish to add or hit Enter to add highlighted nodes to the center of the Workspace.
+通过单击要添加的节点进行选择，或按 Enter 键将亮显的节点添加到工作空间的中心。
 
 ![](<images/3-2/user interface - search.jpg>)
 
-#### Search by hierarchy
+#### 按层次结构搜索
 
-Beyond using keywords to try to find Nodes, we can type the hierarchy separated with a period in the Search Field or with Code Blocks (which use the _Dynamo textual language_).
+除了使用关键字尝试查找节点之外，我们还可以在“搜索”字段或代码块中键入以句点分隔的层次结构（这使用 _Dynamo 文本语言_）。
 
-The hierarchy of each library is reflected in the Name of Nodes added to the Workspace.
+每个库的层次结构都会反映在添加到工作空间的节点名称中。
 
-Typing in different portions of the Node's place in the Library hierarchy in the `library.category.nodeName` format returns different results
+以 `library.category.nodeName` 格式键入“库”层次结构中节点位置的不同部分会返回不同结果
 
 * `library.category.nodeName`
 
@@ -66,73 +65,73 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 ![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
 
-* `nodeName` or `keyword`
+* `nodeName`或`keyword`
 
 ![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
 
-Typically the Name of the Node in the Workspace will be rendered in the `category.nodeName` format, with some notable exceptions particularly in the Input and View Categories.
+通常，工作空间中的节点名称将以 `category.nodeName` 格式进行呈现，但存在一些明显例外，尤其是在“输入”和“视图”类别中。
 
-Beware of similarly named Nodes and note the category difference:
+小心类似的命名节点，并注意类别差异：
 
-* Nodes from most libraries will include the category format
+* 大多数库中的节点将包括类别格式
 
 ![](<images/3-2/library - node category differences 1.jpg>)
 
-* `Point.ByCoordinates` and `UV.ByCoordinates` have the same Name but come from different categories
+* `Point.ByCoordinates` 和 `UV.ByCoordinates` 有相同名称，但来自不同类别
 
 ![](<images/3-2/library - node category differences 2.jpg>)
 
-* Notable exceptions include Built-in Functions, Core.Input, Core.View, and Operators
+* 值得注意的例外情况包括内置函数、Core.Input、Core.View 和运算符
 
 ![](<images/3-2/library - node category differences 3.jpg>)
 
-### Frequently Used Nodes
+### 常用节点
 
-With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our Visual Programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
+Dynamo 的基本安装中包含数百个节点，哪些节点对于开发可视化程序至关重要？我们将重点介绍以下节点：定义程序的参数（**“Input”**）、查看节点操作的结果（**“Watch”**）以及通过快捷方式定义输入或功能（**“Code Block”**）。
 
-#### Input Nodes
+#### 输入节点
 
-Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
+“Input”节点是可视化程序的用户（无论是自己还是他人）与关键参数交互的主要手段。以下是核心库中提供的一些节点：
 
-| Node           |                                                | Node           |                                                |
+| 节点 |                                                | 节点 |                                                |
 | -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean        | ![](<images/3-2/library - boolean.jpg>)        | Number         | ![](<images/3-2/library - number.jpg>)         |
-| String         | ![](<images/3-2/library - string.jpg>)         | Number Slider  | ![](<images/3-2/library - number slider.jpg>)  |
-| Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path      | ![](<images/3-2/library - file path.jpg>)      |                |                                                |
+| 布尔运算 | ![](<images/3-2/library - boolean.jpg>) | 编号 | ![](<images/3-2/library - number.jpg>) |
+| 字符串 | ![](<images/3-2/library - string.jpg>) | 数字滑块 | ![](<images/3-2/library - number slider.jpg>) |
+| 目录路径 | ![](<images/3-2/library - directory path.jpg>) | 整数滑块 | ![](<images/3-2/library - integer slider.jpg>) |
+| 文件路径 | ![](<images/3-2/library - file path.jpg>) |                |                                                |
 
-#### Watch & Watch3D
+#### Watch 和 Watch3D
 
-The Watch Nodes are essential to managing the data that is flowing through your Visual Program. You can view the result of a Node through the **Node data preview** by hovering your mouse over the node.
+“Watch”节点对于管理流经可视化程序的数据至关重要。将鼠标光标悬停在节点上，即可通过**节点数据预览**查看节点的结果。
 
 ![](<images/3-2/library - node preview.jpg>)
 
-It will be useful to keep it revealed in a **Watch** Node
+它有助于在**“Watch”**节点中保持其显示
 
 ![](<images/3-2/library - watch node.jpg>)
 
-Or see the geometry results through a **Watch3D** Node.
+或者，通过**“Watch3D”**节点查看几何图形结果。
 
 ![](<images/3-2/library - watch3d node.gif>)
 
-Both of these are found in the View Category in the Core Library.
+这两个节点均位于核心库的“视图”类别中。
 
 {% hint style="info" %}
-Tip: Occasionally the 3D Preview can be distracting when your Visual Program contains a lot of Nodes. Consider unchecking the Showing Background Preview option in the Settings Menu and using a Watch3D Node to preview your geometry.
+提示：如果可视化程序中包含许多节点，则三维预览有时可能会分散注意力。请考虑取消选中“设置”菜单中的“显示背景预览”选项，然后使用“Watch3D”节点预览几何图形。
 {% endhint %}
 
-#### Code Block
+#### 代码块
 
-Code Block Nodes can be used to define a block of code with lines separated by semi-colons. This can be as simple as `X/Y`.
+Code Block 节点可用于定义代码块，其中各行用分号隔开。 这可以像 `X/Y` 一样简单。
 
-We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+我们还可以将“代码块”用作定义“数字输入”或调用另一个节点功能的快捷方式。执行此类操作的语法遵循 Dynamo 文本语言（即 [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md)）的命名约定。
 
-Here is a simple demonstration (with instructions) for using Code Block in your script.
+下面是有关在脚本中使用“代码块”的简单演示（带有说明）。
 
 ![](<images/3-2/library - code block demo.gif>)
 
-1. Double-click to create a Code Block Node
-2. Type `Circle.ByCenterPointRadius(x,y);`
-3. Click on Workspace to clear the selection should add `x` and `y` inputs automatically.
-4. Create a Point.ByCoordinates Node and a Number Slider then connect them to the inputs of the Code Block.
-5. The result of the executing the Visual Program is shown as the circle in the 3D Preview
+1. 双击以创建“Code Block”节点
+2. `Circle.ByCenterPointRadius(x,y);`Type
+3. 在工作空间上单击以清除选择内容，应会自动添加 `x` 和 `y` 输入。
+4. 创建“Point.ByCoordinates”节点和“数字滑块”，然后将它们连接到“代码块”的输入。
+5. 执行可视化程序的结果在三维预览中会显示为圆

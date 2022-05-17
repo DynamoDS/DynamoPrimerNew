@@ -1,161 +1,161 @@
-# Color
+# 颜色
 
-Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
+颜色是用于在可视化程序中创建引入注目的视觉效果以及渲染输出差异的绝佳数据类型。处理抽象数据和改变数字时，有时难以了解变化内容以及变化程度。这是颜色的绝佳应用。
 
-### Creating Colors
+### 创建颜色
 
-Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
+Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、绿和蓝通道。Alpha 表示颜色的_透明度_，而其他三种颜色用作原色来协调生成整个色谱。
 
-| Icon                                          | Name (Syntax)                 | Inputs  | Outputs |
+| 图标 | 名称/语法 | 输入(Inputs) | 输出 |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
+| ![] | **** | A,R,G,B | 颜色 |
 
-### Querying Color Values
+### 查询颜色值
 
-The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
+下表中的颜色查询用于定义相应颜色的特性：Alpha、红、绿和蓝。请注意，Color.Components 节点给出全部四个不同输出，这使得该节点更适合查询颜色的特性。
 
-| Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
+| 图标 | 名称/语法 | 输入(Inputs) | 输出 |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Alpha.jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-3/5/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-3/5/Color Green.jpg>) | Green (**Color.Green**)           | color  | G          |
-| ![](<../images/5-3/5/Color Blue.jpg>)      | Blue (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-3/5/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
+| ![] | **** | 颜色 | A |
+| ![] | **** | 颜色 | R |
+| ![] | **** | 颜色 | G |
+| ![] | **** | 颜色 | B |
+| ![] | **** | 颜色 | A,R,G,B |
 
-The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
+下表中的颜色对应于 **HSB 颜色空间**。对于我们如何解释颜色，将颜色分为色调、饱和度和亮度无疑更加直观：应该是什么颜色？应该如何呈现多彩？颜色应该如何变亮或变暗？这分别是色调、饱和度和亮度的细分。
 
-| Icon                                              | Name (Syntax)                     | Inputs | Outputs    |
+| 图标 | 名称/语法 | 输入(Inputs) | 输出 |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Hue.jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-3/5/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-3/5/Color Brightness.jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| ![] | **** | 颜色 | 色调 |
+| ![] | **** | 颜色 | Saturation |
+| ![] | **** | 颜色 | 亮度 |
 
-### Color Range
+### 颜色范围(Color Range)
 
-The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+****[](3-logic.md#part-ii-from-logic-to-geometry "")但它不会映射到_数字_域，而是基于 0 到 1 范围的输入数字映射到_颜色渐变_。
 
-The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
+当前节点运作良好，但第一次就使一切正常工作可能会有点勉强。熟悉颜色渐变的最佳方法是以交互方式对其进行测试。让我们快速练习，了解如何使用与数字对应的输出颜色设置渐变。
 
-![](<../images/5-3/5/color - color range.jpg>)
+![]
 
-> 1. Define three colors: Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
-> 2. **Create list:** Merge the three colors into one list.
-> 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. **Code Block**: Input values (between 0 and 1) to translate to colors.
+> 1. **定义三种颜色：**使用代码块节点，通过插入相应的 _0_ 和 _255_ 组合来定义_红、绿_和_蓝_。
+> 2. **创建列表：**将三种颜色合并到一个列表中。
+> 3. 定义索引：创建列表以定义每种颜色的夹点位置（范围从 0 到 1）。 请注意，值 0.75 表示绿色。这会将绿颜色 3/4 置于颜色范围滑块中水平渐变的位置。
+> 4. **代码块：**输入值（介于 0 和 1 之间）以转换为颜色。
 
-### Color Preview
+### 颜色预览
 
-The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **Range** Node.
+**Display.ByGeometry** 节点使我们能够在 Dynamo 视口中为几何图形着色。这有助于分离不同类型的几何图形、演示参数化概念或定义用于模拟的分析图例。输入很简单：几何图形和颜色。要创建与上图类似的渐变，请将颜色输入连接到**“颜色范围”(color range)** 节点。****
 
-![](<../images/5-3/5/color - color preview.jpg>)
+![]
 
-### Color On Surfaces
+### 曲面上的颜色
 
-The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
+**Display.BySurfaceColors** 节点使我们能够使用颜色在整个曲面上映射数据！此功能为可视化通过离散分析（例如日光、能量和接近度）获得的数据引入了一些令人兴奋的可能性。在 Dynamo 中将颜色应用于曲面类似于在其他 CAD 环境中将纹理应用于材质。在下面的简短练习中，我们来演示如何使用此工具。
 
-![](<../images/5-3/5/12 (1).jpg>)
+![]
 
-## Exercise
+## 练习
 
 ### Basic Helix with Colors
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
-This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
+本练习重点介绍如何以参数方式控制与几何图形平行的颜色。该几何图形是基本螺旋线，我们在下面使用**“代码块”**(3.2.3) 对其进行定义。 这是一种用于创建参数化函数的快速而简单的方法；由于我们的重点是颜色（而不是几何图形），因此我们使用代码块来有效地创建螺旋线，而不会使画布变得混乱。随着底漆迁移到更高级的材质，我们会更频繁地使用代码块。
 
-![](<../images/5-3/5/color - basic helix with colors 01.jpg>)
+![]
 
-> 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
-> 2. **Point.ByCoordinates**: Plug the three outputs from the code block into the coordinates for the Node.
+> 1. **代码块**：使用上述公式定义两个代码块。这是用于创建螺旋的快速参数化方法。
+> 2. **Point.ByCoordinates**：将代码块的三个输出连接到该节点的坐标。
 
-We now see an array of points creating a helix. The next step is to create a curve through the points so that we can visualize the helix.
+现在，我们会看到创建螺旋线的一组点。下一步是通过这些点创建曲线，以便我们可以可视化螺旋线。
 
-![](<../images/5-3/5/color - basic helix with colors 02.jpg>)
+![]
 
-> 1. **PolyCurve.ByPoints:** Connect the **Point.ByCoordinates** output into the _points_ input for the Node. We get a helical curve.
-> 2. **Curve.PointAtParameter:** Connect the **PolyCurve.ByPoints** output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
-> 3. **Number Slider:** After adding to the canvas, change the _min_ value to _0.0_, the _max_ value to _1.0_, and the _step_ value to _.01_. Plug the slider output into the _param_ input for **Curve.PointAtParameter**. We now see a point along the length of the helix, represented by a percentage of the slider (0 at the start point, 1 at the end point).
+> 1. **PolyCurve.ByPoints**：将 **Point.ByCoordinates** 输出连接到节点的_点_输入。我们会得到螺旋曲线。
+> 2. **Curve.PointAtParameter**：将 **PolyCurve.ByPoints** 输出连接到_曲线_输入。此步骤的目的是创建一个沿曲线滑动的参数化吸引器点。由于曲线将计算参数处的点，因此我们需要输入一个介于 0 和 1 之间的_参数_值。
+> 3. **数字滑块**：添加到画布后，将_最小_值更改为 _0.0_，将_最大_值更改为 _1.0_，将_步长_值更改为 _.01_。将滑块输出插入 **Curve.PointAtParameter** 的_参数_输入。现在，我们会沿螺旋线长度看到一个点，由滑块的百分比表示（起点处为 0，终点处为 1）。
 
-With the reference point created, we now compare the distance from the reference point to the original points defining the helix. This distance value will drive geometry as well as color.
+创建参照点后，我们现在将比较参照点与定义螺旋线的原始点之间的距离。此距离值将驱动几何图形以及颜色。
 
-![](<../images/5-3/5/color - basic helix with colors 03.jpg>)
+![]
 
-> 1. **Geometry.DistanceTo:** Connect **Curve.PointAtParameter** output into the _input_. Connect **Point.ByCoordinates** into the geometry input.
-> 2. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
+> 1. **Geometry.DistanceTo**：将 **Curve.PointAtParameter** 输出连接到_输入_。将 **Point.ByCoordinates** 连接到几何图形输入。
+> 2. **观察**：结果输出会显示沿曲线从每个螺旋点到参照点的距离列表。
 
-Our next step is to drive parameters with the list of distances from the helical points to the reference point. We use these distance values to define the radii of a series of spheres along the curve. In order to keep the spheres a suitable size, we need to _remap_ the values for distance.
+下一步是通过从螺旋点到参照点的距离列表来驱动参数。我们使用这些距离值来沿曲线定义一系列球体的半径。为了使球体保持合适大小，我们需要_重映射_距离值。
 
-![](<../images/5-3/5/color - basic helix with colors 04.jpg>)
+![]
 
-> 1. **Math.RemapRange:** Connect **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
-> 3. **Watch:** connect the **Math.RemapRange** output into one node and the **Geometry.DistanceTo** output into another. Compare the results.
+> 1. **Math.RemapRange**：将 **Geometry.DistanceTo** 输出连接到数字输入。
+> 2. **代码块**：将值为 _0.01_ 的代码块连接到 _newMin_ 输入，将值为 _1_ 的代码块连接到 _newMax_ 输入。
+> 3. **观察**：将 **Math.RemapRange** 输出连接到一个节点，并将 **Geometry.DistanceTo** 输出连接到另一个节点。 比较结果。
 
-This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
+此步骤已将距离列表重新映射为较小的范围。我们可以编辑 _newMin_ 和 _newMax_ 值，但我们认为合适。这些值将重新映射并在整个域中具有相同的_分布率_。
 
-![](<../images/5-3/5/color - basic helix with colors 05.jpg>)
+![]
 
-> 1. **Sphere.ByCenterPointRadius:** connect the **Math.RemapRange** output into the _radius_ input and the original **Point.ByCoordinates** output into the _centerPoint_ input.
+> 1. **Sphere.ByCenterPointRadius**：将 **Math.RemapRange** 输出连接到_半径_输入，将原始 **Point.ByCoordinates** 输出连接到 _centerPoint_ 输入。
 
-Change the value of the number slider and watch the size of the spheres update. We now have a parametric jig
+数字滑块：更改数字滑块的值，并观察球体更新的大小。 现在，我们有了一个参数化夹具。
 
-![](<../images/5-3/5/color - basic helix with colors 06.gif>)
+![]
 
-The size of the spheres demonstrates the parametric array defined by a reference point along the curve. Let's use the same concept for the sphere radius to drive their color.
+球体的大小演示了由沿曲线的参照点定义的参数化阵列。让我们对球体半径使用相同的概念来驱动其颜色。
 
-![](<../images/5-3/5/color - basic helix with colors 07.jpg>)
+![]
 
-> 1. **Color Range:** Add top the canvas. When hovering over the _value_ input, we notice that the numbers requested are between 0 and 1. We need to remap the numbers from the **Geometry.DistanceTo** output so that they are compatible with this domain.
-> 2. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this node (_Right Click > Preview_)
+> 1. **颜色范围**：在画布顶部添加。将光标悬停在_值_输入上时，我们注意到请求的数字介于 0 和 1 之间。我们需要重新映射 **Geometry.DistanceTo** 输出中的数字，以便它们与此域兼容。
+> 2. **Sphere.ByCenterPointRadius**：目前，我们禁用此节点上的预览（_单击鼠标右键 >“预览”_）
 
-![](<../images/5-3/5/color - basic helix with colors 08.jpg>)
+![]
 
-> 1. **Math.RemapRange:** This process should look familiar. Connect the **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
-> 3. **Color Range:** Connect the **Math.RemapRange** output into the _value_ input.
+> 1. **Math.RemapRange**：此过程看起来很熟悉。将 **Geometry.DistanceTo** 输出连接到数字输入。
+> 2. **代码块**：与之前的步骤类似，为 _newMin_ 输入创建值 _0_，为 _newMax_ 输入创建值 _1_。注意，在这种情况下，我们能够在一个代码块中定义两个输出。
+> 3. **颜色范围**：将 **Math.RemapRange** 输出连接到_值_输入。
 
-![](<../images/5-3/5/color - basic helix with colors 09.jpg>)
+![]
 
-> 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
-> 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two **Color.ByARGB** inputs in agreement with the image above (or create your favorite two colors).
-> 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for **Color Range**.
+> 1. **Color.ByARGB**：这是我们要为创建两种颜色所执行的操作。尽管此过程看起来可能有些古怪，但它与其他软件中的 RGB 颜色相同，我们只需使用可视化编程即可实现。
+> 2. **代码块**：创建由 _0_ 和 _255_ 组成的两个值。将两个输出连接到与上图一致的两个 **Color.ByARGB** 输入（或创建您最喜欢的两种颜色）。
+> 3. **颜色范围**：_颜色_输入要求一列颜色。我们需要基于上一步中创建的两种颜色创建此列表。
+> 4. **List.Create**：将两种颜色合并到一个列表中。将输出连接到**颜色范围**的_颜色_输入。
 
-![](<../images/5-3/5/color - basic helix with colors 10.jpg>)
+![]
 
-> 1. **Display.ByGeometryColor:** Connect **Sphere.ByCenterPointRadius** into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
+> 1. **Display.ByGeometryColor**：将 **Sphere.ByCenterPointRadius** 连接到_几何图形_输入，将_颜色范围_连接到_颜色_输入。现在，我们在曲线域上具有平滑渐变。
 
-If we change the value of the **Number Slider** from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
+如果我们在定义中的前面部分更改**数字滑块**的值，则颜色和尺寸会更新。 在这种情况下，颜色和半径大小直接相关：我们现在在两个参数之间有视觉链接！
 
-![](<../images/5-3/5/color - basic helix with colors 11.gif>)
+![]
 
-### Color on Surfaces Exercise
+### “曲面上的颜色”练习
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
+首先，我们需要创建（或引用）一个曲面以用作 **Display.BySurfaceColors** 节点的输入。在此示例中，我们将在正弦和余弦曲线之间放样。
 
-![](<../images/5-3/5/color - color on surface 01.jpg>)
+![]
 
-> 1. This group of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
-> 2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
+> 1. 该组节点将沿 Z 轴创建点，然后基于正弦和余弦函数置换它们。 然后，使用这两个点列表生成 NURBS 曲线。
+> 2. **Surface.ByLoft**：在 NURBS 曲线列表之间生成插值曲面。
 
-![](<../images/5-3/5/color - color on surface 02.jpg>)
+![]
 
-> 1. **File Path**: select an image file to sample for pixel data downstream
-> 2. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
-> 3. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
-> 4. **Slider**: provide sample values for **Image.Pixels**
-> 5. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
+> 1. **文件路径**：选择要取样的图像文件以获取下游像素数据
+> 2. 使用 **File.FromPath** 将文件路径转化为某个文件，然后传递给 **Image.ReadFromFile** 以输出图像进行采样
+> 3. **Image.Pixels**：输入某个图像并提供要沿图像的 X 和 Y 标注使用的样例值。
+> 4. **滑块**：为 **Image.Pixels** 提供样例值
+> 5. **Display.BySurfaceColors**：在整个曲面上分别沿 X 和 Y 映射颜色值数组
 
-Close-up preview of the output surface with resolution of 400x300 samples
+输出曲面的特写预览，分辨率为 400x300 样例
 
-![](<../images/5-3/5/color - color on surface 03.jpg>)
+![]

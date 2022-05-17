@@ -1,55 +1,54 @@
-# Managing Your Program
+# 管理您的程序
 
-Working within a Visual Programming process can be a powerful creative activity, but very quickly the Program Flow and key user inputs can be obscured by complexity and/or layout of the Workspace. Let's review some best practices for managing your program.
+在可视化编程过程中工作可能是一项强大的创意活动，但是程序流和关键用户输入很快可能会被工作空间的复杂性和/或布局所掩盖。让我们来了解一些管理程序的最佳实践。
 
 ### Alignment&#x20;
 
-Once we have added more than a few Nodes to the Workspace, we may want to re-organize the layout of the Nodes for clarity's sake. By selecting more than one Node and right-clicking on the Workspace, the pop up window includes an **Align Selection** menu with justification and distribution options in X and Y.
+向工作空间添加了多个节点后，为了清晰显示，我们可能需要重新组织节点的布局。通过选择多个节点并在工作空间上单击鼠标右键，弹出窗口将包括**“对齐当前选择”**菜单，其中 X 和 Y 中包含对正和分布选项。
 
-![](<./images/4/managing your program - alignment.jpg>)
+![](<.
 
-> 1. Select more than one Node
-> 2. Right-click on the Workspace
-> 3. Use the **Align Selection** options
+> 1. 选择多个节点
+> 2. 在工作空间中单击鼠标右键。
+> 3. 使用**“对齐当前选择”**选项
 
 ### Notes&#x20;
 
-With some experience, we may be able to "read" the Visual Program by reviewing the Node Names and following the Program Flow. For users of all experience levels, it is also good practice to include plain language labels and descriptions. Dynamo has a **Notes** Node with an editable text field to do so. We can add Notes to the Workspace in two ways:
+有了一些经验后，我们可以通过查看节点名称并遵循程序流来“读取”可视化程序。对于所有经验级别的用户，还最好包括纯语言标签和说明。Dynamo 有一个**注释**节点，该节点具有可编辑的文本字段来执行此操作。我们可以通过两种方式向工作空间添加注释：
 
-![](<./images/4/managing your program - notes.jpg>)
+![](<.
 
-> 1. Browse to the menu Edit > Create Note
-> 2. Use the keyboard shortcut Ctrl+W
+> 1. 浏览到菜单“编辑”>“创建注释”
+> 2. 使用键盘快捷键 Ctrl+W
 
-Once the Note is added to the Workspace a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
+将注释添加到工作空间后，将弹出一个文本字段，允许我们编辑注释中的文本。创建注释后，我们可以通过双击或在注释节点上单击鼠标右键来编辑注释。
 
-![](<./images/4/managing your program - notes 02.jpg>)
+![](<.
 
 ### Grouping&#x20;
 
-When our Visual Program gets big, it is helpful to identify the larger steps that will be executed. We can highlight larger collections of Nodes with a **Group** to label them with a colored rectangle in the background and a title. There are three ways to make a Group with more than one Node selected:
+当可视化程序变得非常大时，确定要执行的较大步骤会很有帮助。我们可以使用**组**亮显更大的节点集合，以在背景和标题中使用彩色矩形标记它们。有三种方法可以使具有多个节点的组处于选定状态：
 
-![](<./images/4/managing your program - grouping 01.jpg>)
+![](<.
 
-> 1. Browse to the menu Edit > Create Group
-> 2. Use the keyboard shortcut Ctrl+G
-> 3. Right-click on the Workspace and select "Create Group"
+> 1. 浏览到菜单“编辑”>“创建组”
+> 2. 使用键盘快捷键 Ctrl+G
+> 3. 在工作空间上单击鼠标右键，然后选择“创建组”
 
-Once a Group is created we can edit its settings, such as the title and color.&#x20;
+创建组后，我们可以编辑其设置，如标题和颜色。&#x20;
 
-![](<./images/4/managing your program - grouping 02.jpg>)
+![](<.
 
-{% hint style="info" %}
-Tip: Using both Notes and Groups is an effective way to annotate your file and increase readability.
-{% endhint %}
+提示：使用“注释”和“组”是注释文件和提高可读性的有效方法。
+
 
 Here's an example of program from with Notes and Groups added:
 
-![](<./images/4/managing your program - grouping 03.jpg>)
+![](<.
 
-> 1. Note: "Grid Parameters"
-> 2. Note: "Grid Points"
-> 3. Group: "Create a Grid of Points"
-> 4. Group: "Create an Attractor Point"
-> 5. Note: "Calibrate Distance Values"
-> 6. Note: "Variable Grid of Circles"
+> 1. 注释：“栅格参数”
+> 2. 注释：“栅格点”
+> 3. 组：“创建点栅格”
+> 4. 组：“创建吸引器点”
+> 5. 注释：“校准距离值”
+> 6. 注释：“圆的可变栅格”

@@ -1,154 +1,153 @@
-# Creating
+# 创建
 
-You can create an array of Revit elements in Dynamo with full parametric control. The Revit nodes in Dynamo offer the ability to import elements from generic geometries to specific category types (like walls and floors). In this section, we'll focus on importing parametrically flexible elements with adaptive components.
+可以在 Dynamo 中使用完全参数化控制创建 Revit 图元阵列。Dynamo 中的 Revit 节点支持将常规几何图形中的图元输入到特定类别类型（如墙和楼板）。在本部分中，我们将重点介绍如何以参数化方式输入具有自适应构件的灵活图元。
 
-![](<./images/4/creating - dynamo nodes.jpg>)
+![](<.
 
-### Adaptive Components
+### 自适应构件
 
-An adaptive component is a flexible family category which lends itself well to generative applications. Upon instantiation, you can create a complex geometric element which is driven by the fundamental location of adaptive points.
+自适应构件是一种灵活的族类别，非常适用于衍生应用程序。实例化后，即可创建复杂的几何图元，该图元由自适应点的基本位置驱动。
 
-Below is an example of a three-point adaptive component in the family editor. This generates a truss which is defined by the position of each adaptive point. In the exercise below, we'll use this component to generate a series of trusses across a facade.
+族编辑器中三点自适应构件的示例。 这将生成一个桁架，该桁架由每个自适应点的位置定义。在下面的练习中，我们将使用此构件在外墙上生成一系列桁架。
 
 ![](./images/4/ac.jpg)
 
-### Principles of Interoperability
+### 互操作性原则
 
-The adaptive component is a good example for best practices of interoperability. We can create an array of adaptive components by defining the fundamental adaptive points. And, when transferring this data to other programs, we have the ability to reduce the geometry to simple data. Importing and exporting with a program like Excel follows a similar logic.
+自适应构件是实现互操作性最佳实践的一个很好示例。我们可以通过定义基本自适应点来创建自适应构件阵列。在将该数据传输到其他程序时，我们能够将几何图形简化为简单数据。使用类似 Excel 的程序输入和输出遵循类似的逻辑。
 
-Suppose a facade consultant wants to know the location of the truss elements without needing to parse through fully articulated geometry. In preparation for fabrication, the consultant can reference the location of adaptive points to regenerate geometry in a program like Inventor.
+假定外墙顾问想要知道桁架图元的位置，而无需通过完全铰接的几何图形进行解析。在准备制造时，顾问可以参照自适应点的位置，以在类似 Inventor 的程序中重新生成几何图形。
 
-The workflow we'll setup in the exercise below allows us to access all of this data while creating the definition for Revit element creation. By this process, we can merge conceptualization, documentation, and fabrication into a seamless workflow. This creates a more intelligent and efficient process for interoperability.
+我们将在下面练习中设置的工作流允许我们在创建 Revit 图元创建定义的同时访问所有这些数据。通过此流程，我们可以将概念化、文档编制和制造合并为一个无缝工作流。这将为互操作性创造更智能、更高效的流程。
 
-### Multiple Elements and Lists
+### 多个元素和列表
 
-The [first exercise](8-4\_creating.md#exercise) below will walk through how Dynamo references data for Revit element creation. To generate multiple adaptive components, we define a list of lists, where each list has three points representing each point of the adaptive component. We'll keep this in mind as we manage the data structures in Dynamo.
+下面的练习将分步介绍 Dynamo 如何参照 Revit 图元创建数据。[](8-4\_creating.md#exercise) 为了生成多个自适应构件，我们会定义一列列表，其中每个列表中都有表示自适应构件的每个点的三个点。在 Dynamo 中管理数据结构时，我们要记住这一点。
 
-![](<./images/4/creating - multiple elements and lists 01.jpg>)
+![](<.
 
-### DirectShape Elements
+### DirectShape 图元
 
-Another method for importing parametric Dynamo geometry into Revit is with DirectShape. In summary, the DirectShape element and related classes support the ability to store externally created geometric shapes in a Revit document. The geometry can include closed solids or meshes. DirectShape is primarily intended for importing shapes from other data formats such as IFC or STEP where not enough information is available to create a "real" Revit element. Like the IFC and STEP workflow, the DirectShape functionality works well with importing Dynamo created geometries into Revit projects as real elements.
+将参数化 Dynamo 几何图形输入 Revit 的另一种方法是使用 DirectShape。总之，DirectShape 图元和相关类支持将外部创建的几何形状存储在 Revit 文档中。几何图形可以包含闭合实体或网格。DirectShape 主要用于从 IFC 或 STEP 等其他数据格式输入形状，这些格式中没有足够信息可用于创建“真实”的 Revit 图元。与 IFC 和 STEP 工作流程一样，DirectShape 功能非常适用于将 Dynamo 创建的几何图形作为真实图元输入 Revit 项目。
 
-Let's walk through [second exercise](8-4\_creating.md#exercise-directshape-elements) for importing Dynamo geometry as a DirectShape into our Revit project. Using this method, we can assign an imported geometry's category, material, and name - all while maintaining a parametric link to our Dynamo graph.
+下面，我们来分步介绍并练习如何将 Dynamo 几何图形作为 DirectShape 输入 Revit 项目。[](8-4\_creating.md#exercise-directshape-elements) 使用此方法，我们可以指定输入的几何图形的类别、材质和名称，而且所有这些都可以保留到 Dynamo 图形的参数化链接。
 
 ## Exercise: Generate Elements and Lists
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="./datasets/4/Revit-Creating.zip" %}
 
-Beginning with the example file from this section (or continuing with the Revit file from the previous session), we see the same Revit mass.
+从本部分的示例文件开始（或从上一任务中的 Revit 文件继续操作），我们会看到相同的 Revit 体量。
 
-![](<./images/4/creating - exercise 01.jpg>)
+![](<.
 
-> 1. This is the file as opened.
-> 2. This is the truss system we created with Dynamo, linked intelligently to the Revit mass.
+> 1. 这是已打开的文件。
+> 2. 这是我们用 Dynamo 创建的桁架系统，与 Revit 体量智能链接。
 
-We've used the _"Select Model Element"_ and _"Select Face"_ nodes, now we're taking one step further down in the geometry hierarchy and using _"Select Edge"_. With the Dynamo solver set to run _"Automatic"_, the graph will continually update to changes in the Revit file. The edge we are selecting is tied dynamically to the Revit element topology. As long as the topology\* does not change, the connection remains linked between Revit and Dynamo.
+我们已使用_“选择模型图元”_和_“选择面”_节点，现在我们在几何图形层次结构中向下进一步，并使用_“选择边”_。将 Dynamo 解算器设置为_“自动”_运行后，图形将不断更新到 Revit 文件中的更改。我们选择的边与 Revit 图元拓扑动态关联。只要拓扑* 不改变，Revit 和 Dynamo 之间的连接就会保持链接。
 
-![](<./images/4/creating - exercise 02.jpg>)
+![](<.
 
-> 1. Select the top most curve of the glazing facade. This spans the full length of the building. If you're having trouble selecting the edge, remember to choose the selection in Revit by hovering over the edge and hitting _"Tab"_ until the desired edge is highlighted.
-> 2. Using two _"Select Edge"_ nodes, select each edge representing the cant at the middle of the facade.
-> 3. Do the same for the bottom edges of the facade in Revit.
-> 4. The _Watch_ nodes reveal that we now have lines in Dynamo. This is automatically converted to Dynamo geometry since the edges themselves are not Revit elements. These curves are the references we'll use to instantiate adaptive trusses across the facade.
+> 1. 选择玻璃外墙的最顶部曲线。这将跨越建筑的整个长度。如果在选择边时遇到问题，请记得在 Revit 中进行选择，方法是将光标悬停在相应边上，然后点击_“Tab”_，直到所需边亮显。
+> 2. 使用两个_“选择边”_节点，选择表示外墙中间的斜面的每条边。
+> 3. 在 Revit 中，对外墙的底部边执行相同的操作。
+> 4. _观察_节点显示我们现在在 Dynamo 中有线。这会自动转换为 Dynamo 几何图形，因为边本身不是 Revit 图元。这些曲线是我们将用于实例化整个外墙的自适应桁架的参照。
 
-{% hint style="info" %}
-\*To keep a consistent topology, we're referring to a model that does not have additional faces or edges added. While parameters can change its shape, the way in which it is built remains consistent.
-{% endhint %}
+*注意 - 为了保持拓扑一致，我们所指的模型没有添加额外面或边。 尽管参数可以更改其形状，但构建方式仍保持一致。
 
-We first need to join the curves and merge them into one list. This way we can _"group"_ the curves to perform geometry operations.
 
-![](<./images/4/creating - exercise 03.jpg>)
+首先，我们需要连接曲线并将它们合并到一个列表中。这样，我们就可以_“分组”_曲线以执行几何图形操作。
 
-> 1. Create a list for the two curves at the middle of the facade.
-> 2. Join the two curves into a Polycurve by plugging the _List.Create_ component into a _Polycurve.ByJoinedCurves_ node.
-> 3. Create a list for the two curves at the bottom of the facade.
-> 4. Join the two curves into a Polycurve by plugging the _List.Create_ component into a _Polycurve.ByJoinedCurves_ node.
-> 5. Finally, join the three main curves (one line and two polycurves) into one list.
+![](<.
 
-We want to take advantage of the top curve, which is a line, and represents the full span of the facade. We'll create planes along this line to intersect with the set of curves we've grouped together in a list.
+> 1. 为外墙中间的两条曲线创建一个列表。
+> 2. 通过将 _List.Create_ 组件插入到 _Polycurve.ByJoinedCurves_ 节点，从而将两条曲线连接到复合线。
+> 3. 为外墙底部的两条曲线创建一个列表。
+> 4. 通过将 _List.Create_ 组件插入到 _Polycurve.ByJoinedCurves_ 节点，从而将两条曲线连接到复合线。
+> 5. 最后，将三条主要曲线（一条线和两条复合线）合并到一个列表中。
 
-![](<./images/4/creating - exercise 04.jpg>)
+我们要利用顶部曲线（即一条线），它表示外墙的整个跨度。我们将沿这条线创建平面，以与我们在列表中分组在一起的一组曲线相交。
 
-> 1. With a _code block_, define a range using the syntax: `0..1..#numberOfTrusses;`
-> 2. Plug an \*integer slider \*into the input for the code block. As you could have guessed, this will represent the number of trusses. Notice that the slider controls the number of items in the range defined from \*0 \*to _1_.
-> 3. Plug the _code block_ into the _param_ input of a _"Curve.PlaneAtParameter"_ node, and plug the top edge into the _curve_ input. This will give us ten planes, evenly distributed across the span of the facade.
+![](<.
 
-A plane is an abstract piece of geometry, representing a two dimensional space which is infinite. Planes are great for contouring and intersecting, as we are setting up in this step.
+> 1. 借助_代码块_，使用以下语法定义一个范围：`0..1..#numberOfTrusses;`0..1..#numberOfTrusses;
+> 2. 将整数滑块插入到代码块的输入。 正如您猜测的，这将表示桁架数。请注意，滑块控制在 _0_ 至 1 定义的范围内的项目数。
+> 3. 将_代码块_插入到_“Curve.PlaneAtParameter”_节点的_参数_输入，并将顶边插入到_曲线_输入。这样，我们将获得十个平面，这些平面均匀分布在外墙的跨度上。
 
-![](<./images/4/creating - exercise 05.jpg>)
+平面是几何图形的抽象部分，表示无限的二维空间。由于我们在此步骤中进行设置，因此平面非常适合轮廓和相交。
 
-> 1. Using the _Geometry.Intersect_ node (set lacing option to cross product), plug the _Curve.PlaneAtParameter_ into the _entity_ input of the _Geometry.Intersect_ node. Plug the main _List.Create_ node into the _geometry_ input. We now see points in the Dynamo viewport representing the intersection of each curve with the defined planes.
+![](<.
 
-Notice the output is a list of lists of lists. Too many lists for our purposes. We want to do a partial flatten here. We need to take one step down on the list and flatten the result. To do this, we use the _List.Map_ operation, as discussed in the list chapter of the primer.
+> 1. 使用 _Geometry.Intersect_ 节点（注意笛卡尔积连缀），将 _Curve.PlaneAtParameter_ 插入到 _Geometry.Intersect_ 节点的_实体_输入。 将主 _List.Create_ 节点插入到_几何图形_输入。现在，我们在 Dynamo 视口中会看到代表每个曲线与定义平面相交的点。
 
-![](<./images/4/creating - exercise 06.jpg>)
+请注意，输出是一列列表的列表。对于我们的目的而言，列表过多。我们想在这里进行部分展平。我们需要在列表中向下一步，然后展平结果。为此，我们使用 _List.Map_ 操作，如入门手册的列表章节中所述。
 
-> 1. Plug the _Geometry.Intersect_ node into the list input of _List.Map_.
-> 2. Plug a _Flatten_ node into the f(x) input of _List.Map_. The results gives 3 list, each with a count equal to the number of trusses.
-> 3. We need to change this data. If we want to instantiate the truss, we have to use the same number of adaptive points as defined in the family. This is a three point adaptive component, so instead of three lists with 10 items each (numberOfTrusses), we want 10 lists of three items each. This way we can create 10 adaptive components.
-> 4. Plug the _List.Map_ into a _List.Transpose_ node. Now we have the desired data output.
-> 5. To confirm that the data is correct, add a _Polygon.ByPoints_ node to the canvas and double check with the Dynamo preview.
+![](<.
 
-In the same way we created the polygons, we array the adaptive components.
+> 1. 将 _Geometry.Intersect_ 节点插入到 _List.Map_ 的列表输入。
+> 2. 将_“展平”_节点插入到 _List.Map_ 的 f(x) 输入。结果给出 3 个列表，每个列表的计数等于桁架数。
+> 3. 我们需要更改此数据。如果要实例化桁架，我们需要使用在族中定义的相同数量的自适应点。这是一个三点自适应构件，因此我们想要的不是三个列表（每个列表 10 个项目 (numberOfTrusses)），而是 10 个列表（每个列表三个项目）。这样，我们就可以创建 10 个自适应构件。
+> 4. 将 _List.Map_ 插入到 _List.Transpose_ 节点。现在，我们得到了所需的数据输出。
+> 5. 要确认数据正确无误，请将 _Polygon.ByPoints_ 节点添加到画布，然后使用 Dynamo 预览仔细检查。
 
-![](<./images/4/creating - exercise 07.jpg>)
+采用创建多边形的相同方式，我们对自适应构件进行排列。
 
-> 1. Add an _AdaptiveComponent.ByPoints_ node to the canvas, plug the _List.Transpose_ node into the _points_ input.
-> 2. Using a _Family Types_ node, select the _"AdaptiveTruss"_ family, and plug this into the _FamilyType_ input of the _AdaptiveComponent.ByPoints_ node.
+![](<.
 
-In Revit, we now have the ten trusses evenly spaced across the facade!
+> 1. 将 _AdaptiveComponent.ByPoints_ 节点添加到画布，将 _List.Transpose_ 节点插入到_点_输入。
+> 2. 使用_族类型_节点，选择_“自适应桁架”_族，然后将其插入到 _AdaptiveComponent.ByPoints_ 节点的_族符号_输入。
 
-"Flex" the graph, we turn up the numberOfTrusses to 30 by changing the slider. Lots of trusses, not very realistic, but the parametric link is working. Once verified, set the numberOfTrusses to 15.
+检入 Revit，我们现在有十个桁架均匀分布在外墙上！
 
-![](<./images/4/creating - exercise 08.gif>)
+“调整”图形，我们通过更改滑块将 numberOfTrusses 调大为 40。 许多桁架，不太真实，但参数化链接仍起作用。
 
-And for the final test, by selecting the mass in Revit and editing instance parameters, we can change the form of the building and watch the truss follow suit. Remember, this Dynamo graph has to be open in order to see this update, and the link will be broken as soon as it's closed.
+![](<.
 
-![](<./images/4/creating - exercise 09.jpg>)
+在最后的测试中，通过在 Revit 中选择体量并编辑实例参数，我们可以修改建筑的形状，并观察桁架的跟随效果。请记住，必须打开此 Dynamo 图形才能看到此更新，并且链接在该图形关闭后会立即断开。
+
+![](<.
 
 ## Exercise: DirectShape Elements
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="./datasets/4/Revit-Creating-DirectShape.zip" %}
 
-Begin by opening the sample file for this lesson - ARCH-DirectShape-BaseFile.rvt.
+首先，打开本课程的示例文件 - ARCH-DirectShape-BaseFile.rvt。
 
-![](<./images/4/creating - exercise II - 01.jpg>)
+![](<.
 
-> 1. In the 3D view, we see our building mass from the previous lesson.
-> 2. Along the edge of the atrium is one reference curve, we'll use this as a curve to reference in Dynamo.
-> 3. Along the opposing edge of the atrium is another reference curve which we'll reference in Dynamo as well.
+> 1. 在三维视图中，我们可以看到上一课程中的建筑体量。
+> 2. 沿着中庭的边是一条参照曲线，我们将此曲线用作 Dynamo 中的参照曲线。
+> 3. 沿着中庭的相对边是另一条参照曲线，我们也将在 Dynamo 中参照该曲线。
 
-![](<./images/4/creating - exercise II - 02.jpg>)
+![](<.
 
-> 1. To reference our geometry in Dynamo, we'll use _Select Model Element_ for each member in Revit. Select the mass in Revit and import the geometry into Dynamo by Using _Element.Faces_ - the mass should now be visible in your Dynamo preview.
-> 2. Import one reference curve into Dynamo by using _Select Model Element_ and _CurveElement.Curve_.
-> 3. Import the other reference curve into Dynamo by using _Select Model Element_ and _CurveElement.Curve_.
+> 1. 为了在 Dynamo 中参照我们的几何图形，我们将为 Revit 中的每个构件使用_“选择模型图元”_。在 Revit 中选择体量，然后使用 _Element.Faces_ 将几何图形输入 Dynamo - 体量现在应该在 Dynamo 预览中可见。
+> 2. 使用_选择模型图元_和 _CurveElement.Curve_ 将一条参照曲线输入 Dynamo。
+> 3. 使用_选择模型图元_和 _CurveElement.Curve_ 将其他参照曲线输入 Dynamo。
 
-![](<./images/4/creating - exercise II - 03.jpg>)
+![](<.
 
-> 1. Zooming out and panning to the right in the sample graph, we see a large group of nodes - these are geometric operations which generate the trellis roof structure visible in the Dynamo preview. These nodes are generating using the _Node to Code_ functionality as discussed in the [code block section](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) of the primer.
-> 2. The structure is driven by three major parameters - Diagonal Shift, Camber, and Radius.
+> 1. 缩小并平移到示例图的右侧，我们会看到一组大节点 - 这些是几何操作，可生成格子架屋顶结构，并在 Dynamo 预览中可见。这些节点使用_“节点到代码”_功能生成，如入门手册的[“代码块”部分](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node)中所述。
+> 2. 结构由三个主要参数（对角偏移、拱形和半径）驱动。
 
-Zooming a close-up look of the parameters for this graph. We can flex these to get different geometry outputs.
+缩放此图形的参数特写。我们可以进行调整，以获得不同的几何图形输出。
 
-![](<./images/4/creating - exercise II - 04.jpg>)
+![](<.
 
-![](<./images/4/creating - exercise II - 05.jpg>)
+![](<.
 
-> 1. Dropping the _DirectShape.ByGeometry_ node onto the canvas, we see that it has four inputs: _geometry_**,** _category_**,** _material_, and _name_.
-> 2. Geometry will be the solid created from the geometry creation portion of the graph
-> 3. The category input is chosen using the dropdown _Categories_ node. In this case we'll use "Structural Framing".
-> 4. The material input is selected through the array of nodes above - although it can be more simply defined as "Default" in this case.
+> 1. 将 _DirectShape.ByGeometry_ 节点添加到画布上，我们会看到它有四个输入：_几何图形、类别、材质_和**名称**。__****____
+> 2. 几何图形将是从图形的几何图形创建部分创建的实体
+> 3. 使用下拉_类别_节点选择类别输入。在本例中，我们将使用“结构框架”。
+> 4. 通过上述节点阵列选择材质输入 - 尽管在这种情况下，可以更加简单地将其定义为“默认”。
 
-After running Dynamo, back in Revit, we have the imported geometry on the roof in our project. This is a structural framing element, rather than a generic model. The parametric link to Dynamo remains intact.
+运行 Dynamo 后，返回 Revit，我们将输入的几何图形放置在项目的屋顶上。这是结构框架图元，而不是常规模型。到 Dynamo 的参数化链接保持不变。
 
-![](<./images/4/creating - exercise II - 06.jpg>)
+![](<.

@@ -1,26 +1,26 @@
-# What's a List
+# 什么是列表
 
-### What's a List?
+### 什么是列表？
 
-A list is a collection of elements, or items. Take a bunch of bananas, for example. Each banana is an item within the list (or bunch). It's easier to pick up a bunch of bananas rather than each banana individually, and the same holds for grouping elements by parametric relationships in a data structure.
+列表是元素或项目的集合。以一串香蕉为例。每个香蕉都是列表（或串）中的一个项目。拾取一串香蕉比单独拾取每个香蕉要容易得多，同样适用于通过数据结构中的参数化关系对元素进行分组。
 
-![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![香蕉](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> []()
 
-When we buy groceries, we put all of the purchased items into a bag. This bag is also a list. If we're making banana bread, we need 3 bunches of bananas (we're making a _lot_ of banana bread). The bag represents a list of banana bunches and each bunch represents a list of bananas. The bag is a list of lists (two-dimensional) and the banana bunch is a list (one-dimensional).
+当我们购买生活用品时，我们会将所有购买物品放入一个袋子中。这个袋子也是一个列表。如果我们要制作香蕉面包，需要 3 束香蕉（我们要制作_许多_香蕉面包）。袋子表示一列香蕉串，每串表示一列香蕉。袋子是一列列表（二维），香蕉是一个列表（一维）。
 
-In Dynamo, list data is ordered, and the first item in each list has an index "0". Below, we'll discuss how lists are defined in Dynamo and how multiple lists relate to one another.
+在 Dynamo 中，会对列表数据进行排序，并且每个列表中第一项的索引均为“0”。下面，我们将讨论如何在 Dynamo 中定义列表以及如何将多个列表相互关联。
 
-### Zero-Based Indices
+### 基于零的索引
 
-One thing that might seem odd at first is that the first index of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index 0.
+乍看起来可能有些奇怪的是，列表的第一个索引始终为 0，而不是 1。因此，当我们谈论列表的第一项时，实际上是指对应于索引 0 的项。
 
-For example, if you were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if you were to put your fingers in a list, Dynamo would have given them indices from 0 to 4. While this may seem a little strange to programming beginners, the zero-based index is standard practice in most computation systems.
+例如，如果要计算我们右手的手指数，则很有可能您的计数是 1 到 5。但是，如果要将手指放入列表，Dynamo 会为其指定索引 0 到 4。尽管这对于编程初学者来说似乎有些奇怪，但是从零开始的索引是大多数计算系统中的标准做法。
 
-Note that we still have 5 items in the list; it’s just that the list is using a zero-based counting system. And the items being stored in the list don’t just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
+请注意，列表中仍有 5 个项目；只是列表使用的是基于零的计数系统。而且，列表中存储的项目并不仅限于数字。它们可以是 Dynamo 支持的任何数据类型，例如点、曲线、曲面、族等。
 
-![](<../images/5-4/1/what's a list - zero based indices.jpg>)
+![]
 
 > a. Index
 >
@@ -28,81 +28,81 @@ Note that we still have 5 items in the list; it’s just that the list is using 
 >
 > c. Item
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a watch node to another node's output. By default, the watch node automatically shows all indices to the left side of the list and displays the data items on the right.
+通常，查看列表中存储的数据类型的最简单方法是将观察节点连接到另一个节点的输出。默认情况下，观察节点自动将所有索引显示在列表的左侧，并在右侧显示数据项。
 
-These indices are a crucial element when working with lists.
+这些索引是使用列表时的关键元素。
 
-### Inputs and Outputs
+### 输入和输出
 
-Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius**:
+与列表相关，输入和输出因使用的 Dynamo 节点而异。例如，我们使用一列 5 个点，并将该输出连接到两个不同的 Dynamo 节点：**PolyCurve.ByPoints** 和 **Circle.ByCenterPointRadius**：
 
-![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
+![Input Examples]
 
-> 1. The _points_ input for **PolyCurve.ByPoints** is looking for _"Point\[]"_. This represents a list of points
-> 2. The output for **PolyCurve.ByPoints** is a single polycurve created from a list of five point.
-> 3. The _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_.
-> 4. The output for **Circle.ByCenterPointRadius** is a list of five circles, whose centers correspond to the original list of points.
+> 1. **PolyCurve.ByPoints** 的_点_输入正在查找_“Point[]”_。 这表示一列点。
+> 2. **PolyCurve.ByPoints** 的输出是基于一列五个点所创建的单个 PolyCurve。
+> 3. **Circle.ByCenterPointRadius** 的 _centerPoint_ 输入要求提供_“点”_。
+> 4. **Circle.ByCenterPointRadius** 的输出是一列五个圆，其中心与点的原始列表相对应。
 
-The input data for **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius** are the same, however the **Polycurve.ByPoints** node gives us one polycurve while the **Circle.ByCenterPointRadius** node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
+**PolyCurve.ByPoints** 和 **Circle.ByCenterPointRadius** 的输入数据相同，但 Polycurve 节点会提供一条复合线，而 Circle 节点会提供 5 个圆（中心位于每个点处）。******** 直观地讲，这很有意义：将复合线绘制为连接 5 个点的曲线，而圆在每个点处创建不同的圆。数据发生了什么变化？
 
-Hovering over the _points_ input for **Polycurve.ByPoints**, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
+将光标悬停在 **Polycurve.ByPoints** 的_点_输入上，我们会看到输入正在查找_“Point[]”_。 请注意末端的括号。这表示一列点，并且要创建复合线，输入需要每个复合线是一个列表。因此，该节点会将每个列表压缩为一个复合线。
 
-On the other hand, the _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
+另一方面，**Circle.ByCenterPointRadius** 的 _centerPoint_ 输入要求提供_“点”_。此节点会查找一个点作为项目，以定义圆的圆心。这就是我们基于输入数据获得五个圆的原因。在 Dynamo 中识别输入的这些差异有助于在管理数据时更好地了解节点的运行方式。
 
-### Lacing
+### 连缀
 
-Data matching is a problem without a clean solution. It occurs when a node has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+在没有清晰解决方案的情况下，数据匹配会是一个问题。当节点有权访问不同大小的输入时，就会发生这种情况。更改数据匹配算法可能会导致结果差异极大。
 
-Imagine a node which creates line segments between points (**Line.ByStartPointEndPoint**). It will have two input parameters which both supply point coordinates:
+设想在各点之间创建线段的节点 (Line.ByStartPointEndPoint)。**** 它将有两个输入参数，两个输入参数均提供点坐标：
 
-#### Shortest List
+#### 最短列表
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the “Shortest List” algorithm. This is the default behavior for Dynamo nodes:
+最简单的方法是逐一连接输入，直到其中一个流运行干。这称为“最短列表”算法。这是 Dynamo 节点的默认行为：
 
-![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
+![]
 
-#### Longest List
+#### 最长列表
 
-The “Longest List” algorithm keeps connecting inputs, reusing elements, until all streams run dry:
+“最长列表”算法会一直连接输入、重用元素，直到所有流都流干为止：
 
-![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
+![]
 
-#### Cross Product
+#### 笛卡尔积
 
-Finally, the “Cross Product” method makes all possible connections:
+最后，“笛卡尔积”方法可以建立所有可能的连接：
 
-![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
+![]
 
-As you can see there are different ways in which we can draw lines between these sets of points. Lacing options are found by right-clicking the center of a node and choosing the "Lacing" menu.
+如您所见，我们可以通过不同的方式在这些点集之间绘制直线。通过在某个节点的中心上单击鼠标右键并选择“连缀”菜单，即可找到连缀选项。
 
-![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
+![]
 
-## Exercise
+## 练习
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-4/1/Lacing.dyn" %}
 
-To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
+为了演示下面的连缀操作，我们将使用此基础文件定义最短列表、最长列表和笛卡尔积。
 
-We'll change the lacing on **Point.ByCoordinates**, but won't change anything else about the graph above.
+我们将更改 **Point.ByCoordinates** 上的连缀，但不会更改有关上图的其他任何内容。
 
-### Shortest List
+### 最短列表
 
-Choosing _shortest list_ as the lacing option (also the default option), we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
+__五个点是较小列表的长度，因此最短列表连缀在到达一个列表的末尾后即停止。
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
+![Input Examples]
 
-### **Longest List**
+### **最长列表**
 
-By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
+通过将连缀更改为_“最长列表”_，我们得到一条垂直延伸的对角线。采用与概念图相同的方法，将重复该列表的 5 个项目中的最后一项，以达到较长列表的长度。
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
+![Input Examples]
 
-### **Cross Product**
+### **笛卡尔积**
 
-By changing the lacing to _Cross Product_, we get every combination between each list, giving us a 5x10 grid of points. This is an equivalent data structure to the cross product as shown in the concept diagram above, except our data is now a list of lists. By connecting a polycurve, we can see that each list is defined by its X-Value, giving us a row of vertical lines.
+通过将连缀更改为_“笛卡尔积”_，我们得到每个列表之间的每个组合，从而获得 5x10 点栅格。这是与上述概念图中所示的笛卡尔积等效的数据结构，但数据现在是一列列表。通过连接复合线，我们可以看到每个列表均由其 X 值定义，从而得到一行垂直线。
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
+![Input Examples]

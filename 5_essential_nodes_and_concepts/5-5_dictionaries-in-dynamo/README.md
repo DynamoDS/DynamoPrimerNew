@@ -1,11 +1,11 @@
-# Dictionaries in Dynamo
+# Dynamo 中的词典
 
-Dictionaries represent a collection of data that is related to another piece of data known as a key. Dictionaries expose the ability to search for, delete and insert data into a collection.
+词典表示与另一数据（称为主键）相关的数据集合。词典可以搜索、删除数据并将数据插入到集合中。
 
-Essentially, we can think of a dictionary as a really smart way to look something up.
+我们基本上可以将词典看作真正智能的查找内容的方式。
 
-_While dictionary functionality has been available in Dynamo for some time, Dynamo 2.0 introduces a new way of managing this data type._
+_虽然在 Dynamo 中提供词典功能有一段时间了，但 Dynamo 2.0 引入了管理此数据类型的新方式。_
 
 ![](../images/5-5/wildDictionary.png)
 
-Original image courtesy of: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+[__]()

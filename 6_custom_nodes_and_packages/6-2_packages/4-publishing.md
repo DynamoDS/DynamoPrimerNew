@@ -1,80 +1,78 @@
-# Publishing a Package
+# 发布软件包
 
-In the previous sections, we dove into the details of how our _MapToSurface_ package is set up with custom nodes and example files. But how do we publish a package that has been developed locally? This case study demonstrates how to publish a package from a set of files in a local folder.
+在前面的各部分中，我们详细介绍了如何使用自定义节点和示例文件构建 _MapToSurface_ 软件包。但是，我们如何发布本地开发的软件包？本案例分析演示了如何发布由本地文件夹中的一组文件构成的软件包。
 
-![](<../images/6-2/4/publish a package - custom nodes 01.jpg>)
+![]
 
-There are many ways to publish a package. Below is the process that we advise: **publish locally, develop locally and then publish online**. We'll start with a folder containing all of the files in the package.
+发布软件包的方法有多种。 下面是我们建议的流程：**本地发布、本地开发，然后联机发布**。 我们首先从包含软件包中所有文件的文件夹开始。
 
-### Uninstalling a Package
+### 卸载软件包
 
-Before we jump into publishing the MapToSurface package, if you installed the package from the previous lesson, uninstall it so that you're not working with identical packages.
+在开始发布 MapToSurface 软件包之前，如果您安装了上一课中的软件包，请将其卸载，以免使用相同的软件包。
 
 Begin by going to Dynamo > Preferences > Package Manager > next to MapToSurface click on vertical dots menu > delete
 
-![](<../images/6-2/4/publish a package - delete package.jpg>)
+![]
 
-Then restart Dynamo. When reopening, when you check the _"Manage Packages"_ window, the _MapToSurface_ should no longer be there. Now we're ready to start from the beginning!
+然后，重新启动 Dynamo。重新打开后，选中_“管理软件包”_窗口时，_MapToSurface_ 应不再存在。现在，我们已准备好从头开始！
 
-### Publishing a Package Locally
+### 本地发布软件包
 
-{% hint style="warning" %}
-Dynamo package publication is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
-{% endhint %}
+注意：自编写此内容起，Dynamo 软件包发布仅在 Dynamo for Revit 或 Dynamo for Civil 3d 中启用。 Dynamo 沙箱没有发布功能。
+
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/6-2/4/MapToSurface.zip" %}
 
-This is the first submission for our package, and we've placed all of the example files and custom nodes into one folder. With this folder prepared, we're ready to upload to the Dynamo Package Manager.
+这是软件包的首次提交，我们已将所有示例文件和自定义节点放入一个文件夹中。准备好此文件夹后，我们便可以上传到 Dynamo 软件包管理器。
 
-![](<../images/6-2/4/publish a package - publish locally 01.jpg>)
+![]
 
-> 1. This folder contains five custom nodes (.dyf).
-> 2. This folder also contains five example files (.dyn) and one imported vector file (.svg). These files will serve as introductory exercises to show the user how to work with the custom nodes.
+> 1. 此文件夹中包含五个自定义节点 (.dyf)。
+> 2. 此文件夹中还包含五个示例文件 (.dyn) 和一个输入的矢量文件 (.svg)。这些文件将用作介绍性练习，以向用户介绍如何使用自定义节点。
 
-In Dynamo, begin by clicking _Packages>Publish New Package..._
+在 Dynamo 中，先依次单击_“软件包”>“发布新软件包...”_
 
-![](<../images/6-2/4/publish a package - publish locally 02.jpg>)
+![]
 
-In the _"Publish a Dynamo Package"_ window, filled out the relevant forms on the left of the window.
+在_“发布 Dynamo 软件包”_窗口中，我们已填充了窗口左侧的相关表单。
 
-![](<../images/6-2/4/publish a package - publish locally 03.jpg>)
+![]
 
-> 1. By clicking _"Add File"_, we've also added the files from the folder structure on the right side of the screen (to add files which are not .dyf files, be sure to change your file type in the browser window to **"All Files(**_**.**_**)"**. Notice that we've added every file, custom node (.dyf) or example file (.dyn), indiscriminately. Dynamo will categories these items when we publish the package.
-> 2. The "Group" field defines which group to find the custom nodes in the Dynamo UI.
-> 3. Publish by clicking "Publish Locally". If you're following along, be certain to click _"Publish Locally"_ and **not** _"Publish Online"_; we don't want a bunch of duplicate packages on the Package Manager.
+> 1. 单击_“添加文件”_，我们还在屏幕右侧添加了文件夹结构中的文件以添加非 .dyf 文件的文件，请务必在浏览器窗口中将文件类型更改为**“所有文件(**._****_**)"**. 请注意，我们已随意地添加了每个文件、自定义节点 (.dyf) 或示例文件 (.dyn)。在发布软件包时，Dynamo 会对这些项目进行分类。
+> 2. “组”字段定义了在 Dynamo UI 中查找自定义节点的组。
+> 3. 单击“本地发布”即可发布。如果您遵照执行，请务必单击_“本地发布”_，而**不是**_“联机发布”_；我们不希望在软件包管理器中出现一系列重复的软件包。
 
-After publishing, the custom nodes should be available under the "DynamoPrimer" group or your Dynamo Library.
+发布后，“DynamoPrimer”组或 Dynamo 库下应提供自定义节点。
 
-![](<../images/6-2/4/publish a package - publish locally 04.jpg>)
+![]
 
-Now let's look at the root directory to see how Dynamo has formatted the package we just created. Do this by clicking Dynamo > Preferences > Package Manager > next to MapToSurface click on the vertical dots menu > select Show Root Directory
+现在，我们来查看根目录，以了解 Dynamo 如何设置刚刚创建的软件包的格式。
 
-![](<../images/6-2/4/publish a package - publish locally 05.jpg>)
+![]
 
-Notice that the root directory is in the local location of your package (remember, we published the package "locally"). Dynamo is currently referencing this folder to read custom nodes. It's therefore important to locally publish the directory to a permanent folder location (ie: not your desktop). Here is the Dynamo package folder breakdown.
+请注意，根目录位于软件包的本地位置（请记住，我们已“本地”发布了软件包）。Dynamo 当前正在引用此文件夹来读取自定义节点。因此，请务必将目录本地发布到永久文件夹位置（即：不是桌面）。以下内容详细介绍 Dynamo 软件包文件夹：
 
-![](<../images/6-2/4/publish a package - publish locally 06.jpg>)
+![]
 
-> 1. The _bin_ folder houses .dll files created with C# or Zero-Touch libraries. We don't have any for this package so this folder is blank for this example.
-> 2. The _dyf_ folder houses the custom nodes. Opening this will reveal all of the custom nodes (.dyf files) for this package.
-> 3. The extra folder houses all additional files. These files are likely to be Dynamo Files (.dyn) or any additional files required (.svg, .xls, .jpeg, .sat, etc.).
-> 4. The pkg file is a basic text file defining the package settings. This is automated in Dynamo, but can be edited if you want to get into the details.
+> 1. _bin_ 文件夹中存储了使用 C# 或 Zero-Touch 库创建的 .dll 文件。我们没有任何此软件包的内容，因此对此示例而言此文件夹为空。
+> 2. _dyf_ 文件夹中存储了自定义节点。打开此文件夹将显示该软件包的所有自定义节点（.dyf 文件）。
+> 3. 附加文件夹中存储了所有附加文件。这些文件可能是 Dynamo 文件 (.dyn)，也可能是所需的任何其他文件（.svg、.xls、.jpeg、.sat 等）。
+> 4. pkg 文件是一个基本文本文件，用于定义软件包设置。这是在 Dynamo 中自动生成的，但如果您想要了解详细信息，可以对其进行编辑。
 
-### Publishing a Package Online
+### 联机发布软件包
 
-{% hint style="warning" %}
-Note: please do not follow along with this step unless you are actually publishing a package of your own!
-{% endhint %}
+注意：除非您实际发布自己的软件包，否则请勿遵循此步骤！
 
-![](<../images/6-2/4/publish a package - publish online 01.jpg>)
 
-> 1. When you're ready to publish, in the Preferences > Package Manager window, select the button the right of MapToSurface and choose _Publish..._
-> 2. If you're updating a package that has already been published, choose "Publish Version" and Dynamo will update your package online based on the new files in that package's root directory. Simple as that!
+![]
 
-### Publish Version...
+> 1. 当您准备好发布时，在“管理软件包”窗口中选择 MapToSurface 右侧的按钮，然后选择_“发布...”_
+> 2. 如果要更新已发布的软件包，请选择“发布版本”，Dynamo 将根据该软件包的根目录中的新文件联机更新软件包。就这么简单！
 
-When you update the files in your published package's root folder, you can publish a new version of the package by selecting _"Publish Version..."_ in the _Manage Packages_ window. This is a seamless way to make necessary updates to your content and share with the community. _Publish Version_ will only work if you're the maintainer of the package.
+### 发布版本...
+
+更新已发布软件包的根文件夹中的文件时，可以通过在_“管理软件包”_窗口中选择_“发布版本...”_，来发布该软件包的新版本。这是对内容进行必要更新并与社区共享的无缝方式。仅当您是该软件包的维护人员时，_“发布版本”_才起作用。

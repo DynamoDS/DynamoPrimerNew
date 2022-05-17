@@ -1,115 +1,115 @@
-# Developing a Package
+# 开发软件包
 
-Dynamo offers a variety of ways to create a package for your personal use or for sharing with the Dynamo community. In the case study below, we'll walk through how a package is set up by deconstructing an existing one. This case study builds on lessons from the previous chapter, providing a set of custom nodes for mapping geometry, by UV coordinates, from one Dynamo surface to another.
+Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo 社区共享。在下面的案例研究中，我们将通过解构现有软件包来逐步介绍如何创建一个软件包。本案例研究基于上一章的课程构建，提供一组自定义节点用于按 UV 坐标映射几何图形（从一个 Dynamo 曲面到另一个 Dynamo 曲面）。
 
 ## MapToSurface Package
 
-We're going to work with a sample package which demonstrates the UV mapping of points from one surface to another. We've already built the fundamentals of the tool in the [Creating a Custom Node](../10\_custom-nodes/10-2\_creating.md) section of this primer. The files below demonstrate how we can take the concept of UV Mapping and develop a set of tools for a publishable library.
+我们将使用一个示例包，演示点从一个曲面到另一个曲面的 UV 映射。我们已在本入门手册的[创建自定义节点](../10\_custom-nodes/10-2\_creating.md)部分中构建了工具的基础知识。下面的文件演示了如何理解 UV 映射的概念，并为可发布库开发一组工具。
 
-In this image, we map a point from one surface to another using UV coordinates. The package is based on this concept, but with more complex geometry.
+在此图像中，我们使用 UV 坐标将点从一个曲面映射到另一个曲面。软件包基于此概念，但具有更加复杂的几何图形。
 
 ![](../images/6-2/3/uvMap.jpg)
 
-### Installing the Package
+### 安装软件包
 
-In the previous chapter, we explored ways for panelizing a surface in Dynamo based on curves defined in the XY plane. This case study extends these concepts for more dimensions of geometry. We're going to install this package as built in order to demonstrate how it was developed. In the next section, we'll demonstrate how this package was published.
+在前一章中，我们探讨了在 Dynamo 中基于在 XY 平面中定义的曲线为曲面镶板的方法。本案例研究扩展了这些概念，以获得更多几何图形尺寸。我们将以内置方式安装此软件包，以演示其开发方式。在下一节中，我们将演示如何发布此软件包。
 
 In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
 
-![](<../images/6-2/3/develop package - install package 01.jpg>)
+![]
 
 After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![]
 
-With the package now installed, let's walk through how it's set up.
+现在，软件包已完成安装，我们来介绍其设置方式。
 
-### Custom Nodes
+### 自定义节点
 
-The package we're creating uses five custom nodes that we've built for reference. Let's walk through what each node does below. Some custom nodes build off of other custom nodes, and the graphs have a layout for other users to understand in a straightforward manner.
+我们正在创建的软件包使用我们为参照而构建的五个自定义节点。下面，我们来介绍每个节点的作用。某些自定义节点基于其他自定义节点构建，图表具有布局，供其他用户直接理解。
 
-This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
+这是一个包含五个自定义节点的简单软件包。在下面的步骤中，我们将简要介绍每个自定义节点的设置。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![]
 
-#### **PointsToSurface**
+#### ****
 
-This is a basic custom node, and one from which all of the other mapping nodes are based. Simply put, the node maps a point from a source surface UV coordinate to the location of the target surface UV coordinate. And since points are the most primitive geometry, from which more complex geometry is built, we can use this logic to map 2D, and even 3D geometry from one surface to another.
+PointsToSurface：这是一个基本自定义节点，所有其他映射节点均基于该节点。 只需放置，该节点会将某个点从源曲面 UV 坐标映射到目标曲面 UV 坐标的位置。由于点是最基本的几何图形，基于它可构建更复杂的几何图形，因此我们可以使用此逻辑将二维几何图形（甚至三维几何图形）从一个曲面映射到另一个曲面。
 
-![](<../images/6-2/3/develop package -pointToSurface.jpg>)
+![]
 
-#### **PolygonsToSurface**
+#### ****
 
-The logic of extending mapped points from 1D geometry to 2D geometry is demonstrated simply with polygons here. Notice that we have nested the _"PointsToSurface"_ node into this custom node. This way we can map the points of each polygon to the surface, and then regenerate the polygon from those mapped points. By maintaining the proper data structure (a list of lists of points), we're able to keep the polygons separate after they're reduced to a set of points.
+PolygonsToSurface：仅使用此处的多边形即可演示将映射点从一维几何图形扩展到二维几何图形的逻辑。 请注意，我们已将_“PointsToSurface”_节点嵌套到此自定义节点中。这样，我们就可以将每个多边形的点映射到曲面，然后基于这些映射点重新生成多边形。通过保持正确的数据结构（一列点列表），我们可以在多边形简化为一组点后使多边形保持分离。
 
-![](<../images/6-2/3/develop package -polygonsToSurface.jpg>)
+![]
 
-#### **NurbsCrvtoSurface**
+#### ****
 
-The same logic applies here as in the _"PolygonsToSurface"_ node. But instead of mapping polygonal points, we're mapping control points of a nurbs curve.
+_NurbsCrvtoSurface_：此处应用的逻辑与“PolygonsToSurface”节点中的逻辑相同。 但是，我们不是映射多边形点，而是映射 NURBS 曲线的控制点。
 
-![](<../images/6-2/3/develop package -nurbsCrvtoSurface.jpg>)
+![]
 
-**OffsetPointsToSurface**
+****
 
-This node gets a little more complex, but the concept is simple: like the _"PointsToSurface"_ node, this node maps points from one surface to another. However, it also considers points which are not on the original source surface, gets their distance to the closest UV parameter, and maps this distance to the target surface normal at the corresponding UV coordinate. This will make more sense when looking at the example files.
+_OffsetPointsToSurface_：此节点变得更加复杂，但概念非常简单：与“PointsToSurface”节点类似，此节点会将点从一个曲面映射到另一个曲面。 但是，它还会考虑不在原始源曲面上的点，获取其与最近 UV 参数的距离，并将此距离映射到相应 UV 坐标处的目标曲面法线。在查看示例文件时，这会更有意义。
 
-![](<../images/6-2/3/develop package -OffsetPointsToSurface.jpg>)
+![]
 
-#### **SampleSrf**
+#### ****
 
-This is a simple node which creates a parametric surface to map from the source grid to an undulating surface in the example files.
+SampleSrf：这是一个简单节点，用于创建参数化曲面以从源栅格映射到示例文件中的波状曲面。
 
-![](<../images/6-2/3/develop package -sampleSrf.jpg>)
+![]
 
-### Example Files
+### 示例文件
 
 The example files can be found in the package's root folder. Click Dynamo > Preferences > Package Manager
 
 Next to MapToSurface, click verticle dots menu > Show Root Directory
 
-![](<../images/6-2/3/develop package - example files 01.jpg>)
+![]
 
-Next, open the _"extra"_ folder, which houses all of the files in the package which are not custom nodes. This is where examples files (if they exist) are stored for Dynamo packages. The screenshots below discuss the concepts demonstrated in each example file.
+打开根目录后，导航到_“extra”_文件夹，该文件夹中会存储软件包中所有非自定义节点的文件。 这是存储 Dynamo 软件包示例文件（如果存在）的位置。下面的屏幕截图介绍每个示例文件中演示的概念。
 
-#### **01-PanelingWithPolygons**
+#### ****
 
-This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../10\_custom-nodes/10-2\_creating.md).
+_01-PanellyWithPolygons_：此示例文件演示了如何使用“PointsToSurface”来根据矩形栅格为曲面镶板。 这应该看起来很熟悉，如我们在[上一章](../10\_custom-nodes/10-2\_creating.md)中演示的类似工作流。
 
-![](<../images/6-2/3/develop package -sample file 01.jpg>)
+![]
 
-#### **02-PanelingWithPolygons-II**
+#### ****
 
-Using a similar workflow, this exercise file shows a setup for mapping circles (or polygons representing circles) from one surface to another. This uses the _"PolygonsToSurface"_ node.
+02-PanellyWithPolygons-II：使用类似的工作流，本练习文件显示用于将圆（或表示圆的多边形）从一个曲面映射到另一个曲面的设置。 这将使用_“PolygonsToSurface”_节点。
 
-![](<../images/6-2/3/develop package -sample file 02.jpg>)
+![]
 
-#### **03-NurbsCrvsAndSurface**
+#### ****
 
-This example file adds some complexity by working with the "NurbsCrvToSurface" node. The target surface is offset a given distance and the nurbs curve is mapped to the original target surface and the offset surface. From there, the two mapped curves are lofted to create a surface, which is then thickened. This resulting solid has an undulation that is representative of the target surface normals.
+03-NurbsCrvsAndSurface：此示例文件通过使用“NurbsCrvToSurface”节点增加了一些复杂性。 目标曲面偏移给定距离，且 NURBS 曲线映射到原始目标曲面和偏移曲面。从这里，将放样两条映射曲线以创建曲面，然后加厚该曲面。此结果实体具有表示目标曲面法线的波动。
 
-![](<../images/6-2/3/develop package -sample file 03.jpg>)
+![]
 
-#### **04-PleatedPolysurface-OffsetPoints**
+#### ****
 
-This example file demonstrates how to map a pleated polysurface from a source surface to a target surface. The source and target surface are a rectangular surface spanning the grid and a revolved surface, respectively.
+04-PelleatedPolysurface-OffsetPoints：此示例文件演示如何将褶皱多重曲面从源曲面映射到目标曲面。 源曲面和目标曲面是分别跨栅格和旋转曲面的矩形曲面。
 
-![](<../images/6-2/3/develop package -sample file 04a.jpg>)
+![]
 
-The source polysurface mapped from the source surface to the target surface.
+04-PlevatedPolysurface-OffsetPoints：源多重曲面从源曲面映射到目标曲面。
 
-![](<../images/6-2/3/develop package -sample file 04b.jpg>)
+![]
 
-#### **05-SVG-Import**
+#### ****
 
-Since the custom nodes are able to map different types of curves, this last file references an SVG file exported from Illustrator and maps the imported curves to a target surface.
+05-SVG-Import：由于自定义节点能够映射不同类型的曲线，因此最后这个文件会引用从 Illustrator 输出的 SVG 文件，并将输入的曲线映射到目标曲面。
 
-![](<../images/6-2/3/develop package -sample file 05a.jpg>)
+![]
 
-By parsing through the syntax of a .svg file, curves are translated from .xml format to Dynamo polycurves.
+05-SVG-Import：通过解析 .svg 文件的语法，曲线将从 .xml 格式转换为 Dynamo 复合线。
 
-![](<../images/6-2/3/develop package -sample file 05b.jpg>)
+![]
 
-The imported curves are mapped to a target surface. This allows us to explicitly (point-and-click) design a panelization in Illustrator, import into Dynamo, and apply to a target surface.
+05-SVG-Import：输入的曲线将映射到目标曲面。 这样，我们可以在 Illustrator 中显式（点击）设计镶板、输入 Dynamo，然后应用于目标曲面。
 
-![](<../images/6-2/3/develop package -sample file 05c.jpg>)
+![]

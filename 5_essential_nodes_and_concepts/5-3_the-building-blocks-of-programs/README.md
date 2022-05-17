@@ -1,5 +1,5 @@
-# The Building Blocks of Programs
+# 程序的构建块
 
-Once we are ready to dive deeper into developing Visual Programs, we will need a deeper understanding of the building blocks we will use. This chapter introduces fundamental concepts around data - the stuff that travels through the Wires of our Dynamo program.
+在我们准备好深入探讨开发可视化程序后，我们将需要深入了解我们将使用的构建块。本章介绍有关数据的基本概念 - 介绍通过 Dynamo 程序的“导线”的内容。
 
-![](<../images/5-3/building blocks of program.png>)
+![]

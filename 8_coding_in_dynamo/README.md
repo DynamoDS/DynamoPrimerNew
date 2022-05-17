@@ -2,8 +2,8 @@
 
 Dynamo is a great door to start coding for the AEC world. You may be interested in some of these sections to start your coding journey:
 
-* [Code Blocks and DesignScript](8-1\_code-blocks-and-design-script/)
-* [Geometry with DesignScript](8-2\_geometry-with-design-script/)
+* [代码块和 DesignScript](8-1\_code-blocks-and-design-script/)
+* [使用 DesignScript 的几何体](8-2\_geometry-with-design-script/)
 * [Python](8-3\_python/)
 
-![](<./images/image (17).png>)
+![](<.

@@ -1,5 +1,5 @@
 # Custom Nodes & Packages
 
-Out of the box, Dynamo has a lot of functionality stored in its Library of Nodes. For those frequently used routines or that special graph you want to share with the community, Custom Nodes & Packages are a great way to extend Dynamo even further.
+Dynamo 的节点库中存储了许多即时可用的功能。对于那些常用例程或您要与社区共享的特殊图形，自定义节点是进一步扩展 Dynamo 的好方法。
 
 ![](./images/customNodes\_cover01.jpg)

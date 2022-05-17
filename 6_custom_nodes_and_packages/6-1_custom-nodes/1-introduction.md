@@ -1,50 +1,50 @@
-# Custom Node Introduction
+# 自定义节点简介
 
-Custom Nodes are constructed by nesting other nodes and custom nodes inside of a "Dynamo Custom Node," which we can think of conceptually as a container. When this container node is executed in your graph, everything inside it will be executed to allow you to reuse and share a useful combination of nodes.
+自定义节点通过在“Dynamo 自定义节点”内嵌套其他节点和自定义节点来构建，我们可以从概念上将其看作容器。在图形中执行该容器节点时，将执行其中的所有内容，以允许您重用和共享有用的节点组合。
 
-### Adapting to Change
+### 适应变化
 
-When you have multiple copies of a custom node in your graph, you can update all of them by editing the base custom node. This allows you to update your graph seamlessly by adapting to any changes that may occur in workflow or design.
+如果图形中有自定义节点的多个副本，可以通过编辑基础自定义节点更新所有副本。这样，您可以通过适应工作流或设计中可能发生的任何更改来无缝更新图形。
 
-### Work Sharing
+### 工作共享
 
-Arguably the best feature of custom nodes is their work sharing capabilities. If a "power user" creates a complex Dynamo graph and hands it off to a designer who is new to Dynamo, he/she can condense the graph to the bare essentials for design interaction. The custom node can be opened to edit the internal graph, but the "container" can be kept simple. With this process, custom nodes allow Dynamo users to design a graph that is clean and intuitive.
+可以说，自定义节点的最佳功能是其工作共享功能。如果“超级用户”创建复杂的 Dynamo 图形，并将其交给 Dynamo 的新手设计师，则他/她可以将图形压缩为用于设计交互的基本要素。可以打开自定义节点来编辑内部图形，但“容器”可以保持简单。借助此过程，自定义节点可让 Dynamo 用户设计清晰且直观的图形。
 
-![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
+![]
 
-### Many Ways to Build a Node
+### 构建节点的多种方法
 
-There are a wide variety of ways to build custom nodes in Dynamo. In the examples in this chapter, we'll create custom nodes directly from the Dynamo UI. If you are a programmer and you are interested in C# or Zero-Touch formatting, you can reference [this page ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)on the Dynamo Wiki for a more in-depth review.
+在 Dynamo 中，有多种方法可构建自定义节点。在本章的示例中，我们将直接从 Dynamo 用户界面创建自定义节点。如果您是程序员并且对 C# 或 Zero-Touch 格式感兴趣，则可以参考 Dynamo Wiki 上的[此页面](进行更深入的了解。)
 
 ### Custom Node Environment & Create Your First Custom Node
 
-Let's jump into the custom node environment and make a simple node to calculate a percentage. The custom node environment is different from the Dynamo graph environment, but the interaction is fundamentally the same. With that said, let's create our first custom node!
+我们跳到自定义节点环境，并创建一个简单节点来计算百分比。自定义节点环境与 Dynamo 图形环境不同，但交互基本相同。说到这里，让我们创建第一个自定义节点！
 
-To create a Custom Node from scratch, Launch Dynamo and select Custom Node, or type Ctrl + Shift + N from the canvas.
+若要从头开始创建自定义节点，请启动 Dynamo 并选择“自定义节点”,或者从画布键入 Ctrl + Shift + N。
 
-![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
+![]
 
-Assign a name, description, and category in the Custom Node Properties dialog.
+在“自定义节点属性”对话框中指定名称、说明和类别。
 
-![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
+![]
 
-> 1. **Name:** Percentage
-> 2. **Description**: Calculate the percentage of one value in relation to another.
-> 3. **Category:** Math.Functions
+> 1. **名称：**百分比
+> 2. **说明：**计算一个值相对于另一个值的百分比。
+> 3. ****
 
-This will open a canvas with a yellow background, indicating that you are working inside a custom node. In this canvas you have access to all of the core Dynamo nodes, as well as the Input and Output nodes, which label the data flowing into and out of the custom node. They can be found in Input>Basic.
+这将打开一个带黄色背景的画布，表示您正在自定义节点内部工作。在此画布中，您可以访问所有核心 Dynamo 节点，以及“输入”和“输出”节点，这些节点标记自定义节点的数据流入和流出。
 
-![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
+![]
 
-![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
+![]
 
-> 1. **Inputs:** Input nodes create input ports on the custom node. The syntax for an input node is _input\_name : datatype = default\_value(optional)._
-> 2. **Outputs:** Similar to inputs, these will create and name output ports on the custom node. Consider adding a **Custom Comment** to your Input and Output ports to hint at the Input and Output types. This is discussed in more detail in the [Creating Custom Nodes section](2-creating.md).
+> 1. **输入：**输入节点在自定义节点上创建输入端口。 __
+> 2. **输出：**与输入类似，这些输出将在自定义节点上创建和命名输出端口。考虑将**“自定义注释”**添加到输入和输出端口，以提示输入和输出类型。这将在[“创建自定义节点”部分](2-creating.md)中详细介绍。
 
-You can save this custom node as a .dyf (as opposed to the standard .dyn) file and it will automatically be added to your session and future sessions. You will find the custom node in your library from the Add-ons section.
+您可以将此自定义节点另存为 .dyf（与标准 .dyn 相反）文件，并且该文件将自动添加到您的会话和将来的会话中。
 
-![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
+![]
 
-### Moving Forward
+### 前进
 
-Now that we've created our first custom node, the next sections will dive deeper into custom node functionality and how to publish generic workflows. In the following section, we'll look at developing a custom node that transfers geometry from one surface to another.
+现在，我们已创建了第一个自定义节点，接下来的部分将更深入地介绍自定义节点功能以及如何发布常规工作流。在以下部分中，我们将介绍如何开发将几何体从一个曲面传输到另一个曲面的自定义节点。

@@ -1,130 +1,130 @@
-# Data
+# “数据”
 
-Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+数据是我们程序的内容。它穿过连线，为节点提供输入，在这些节点中处理为新形式的输出数据。让我们回顾一下数据的定义、数据的结构，然后开始在 Dynamo 中使用它。
 
-## What is Data?
+## 什么是数据？
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
+数据是一组定性变量或定量变量的值。最简单形式的数据是数字，如 `0`0`3.14`、`17`3.14 或 17。 但数据也可以是多种不同的类型：表示变化数字的变量 (`height`height`myName`)；字符 (`Circle`myName`1,2,3,5,8,13,...`)；几何图形 (Circle)；或一列数据项 (1,2,3,5,8,13,...)。
 
-In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+我们需要数据来添加到 Dynamo 节点的输入端口 - 我们可以具有无需操作的数据，但我们需要数据来处理节点表示的操作。 将某个节点添加到工作空间后，如果未提供任何输入，则结果将为函数，而不是操作本身的结果。
 
-![Data and Actions](<../images/5-3/1/data - what is data.jpg>)
+![Data and Actions]
 
-> 1. Simple Data
-> 2. Data and Action (A Node) successfully executes
-> 3. Action (A Node) without Data Inputs returns a generic function
+> 1. 简单数据
+> 2. 数据和操作（A 节点）成功执行
+> 3. 没有数据输入的操作（A 节点）返回通用函数
 
 ### Null - Absence of Data
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
+`'null'`尽管这是一个抽象概念，但在使用可视化编程时，您可能会遇到这种情况。如果某个操作未创建有效结果，则节点会返回空值。
 
-Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+测试空值并从数据结构中删除空值是创建健壮程序的关键部分。
 
-| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| 图标 | 名称/语法 | 输入(Inputs) | 输出 |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![] | Object.IsNull | obj | bool |
 
-### Data Structures
+### 数据结构
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
+在进行可视化编程时，我们可以非常快速地生成大量数据，并需要一种方式来管理其层次结构。这是数据结构的作用，也是我们存储数据的组织方案。数据结构的具体内容及其使用方法具体取决于编程语言。
 
-In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+在 Dynamo 中，我们通过列表向数据添加层次结构。我们将在后续章节中深入探讨这一点，但先让我们简单介绍一下：
 
-A list represents a collection of items placed into one structure of data:
+列表表示放置在一个数据结构中的项目集合：
 
-* I have five fingers (_items_) on my hand (_list_).
-* There are ten houses (_items_) on my street (_list_).
+* 我手（_列表_）上有五个手指（_项目_）。
+* 我的街道（_列表_）上有十个房屋（_项目_）。
 
-![List Breakdown](<../images/5-3/1/data - data structures.jpg>)
+![List Breakdown]
 
-> 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 1. **Number Sequence** 节点使用 _start_、_amount_ 和 _step_ 输入来定义一列数字。使用这些节点，我们创建了两个包含十个数字的单独列表，一个列表的范围为 _100-109_，另一列表的范围为 _0-9_。
+> 2. **List.GetItemAtIndex** 节点会选择列表中特定索引处的项目。选择 _0_ 时，我们会得到列表中的第一项（在本例中为 _100_）。
+> 3. 通过将相同过程应用于第二个列表，得到的值为 _0_，即列表中的第一项。
+> 4. 现在，我们使用 **List.Create** 节点将这两个列表合并为一个列表。请注意，该节点将创建_一列列表。_这会更改数据的结构。
+> 5. 再次使用 **List.GetItemAtIndex** 时，如果索引设置为 _0_，则我们将获得该列列表中的第一个列表。这就是将列表视为项目的含义，这与其他脚本编写语言略有不同。在后面的章节中，我们将通过列表操作和数据结构获得更高级的功能。
 
-The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
+在 Dynamo 中了解数据层次结构的关键概念：**在数据结构方面，列表被视为项目。**换句话说，Dynamo 通过自上而下的过程来了解数据结构。这意味着什么？ 我们通过一个示例来介绍它。
 
-## Exercise: Using Data to Make a Chain of Cylinders
+## 使用数据创建圆柱体链
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+在此第一个示例中，我们装配了一个带壳圆柱体，该圆柱体遍历本节中讨论的几何图像层次结构。
 
 ### Part I: Set up Graph for one cylinder with some changeable parameters.
 
-1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+**Point.ByCoordinates** - 向画布添加节点后，我们会在 Dynamo 预览栅格的原点处看到一个点。 _x,y_ 和 _z_ 输入的默认值为 _0.0_，从而在此位置处向我们提供一个点。
 
-![](<../images/5-3/1/data - exercise step 1.jpg>)
+![]
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+2\. **Plane.ByOriginNormal** - 几何图形层次结构中的下一步是平面。有几种构建平面的方法，我们使用原点和法线作为输入。原点是在上一步中创建的点节点。
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis** - 这是 Z 方向上单位化的矢量。请注意，没有输入，仅有值为 [0,0,1] 的矢量。 我们将此项用作 **Plane.ByOriginNormal** 节点的 _normal_ 输入。这样，我们在 Dynamo 预览中就得到了一个矩形平面。
 
-![](<../images/5-3/1/data - exercise step 2.jpg>)
+![]
 
-3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+3\. **Circle.ByPlaneRadius** - 逐步扩展层次结构，我们现在基于上一步中的平面创建曲线。在连接到节点后，我们会在原点处得到一个圆。节点上的默认半径值为 _1_。
 
-![](<../images/5-3/1/data - exercise step 3.jpg>)
+![]
 
-4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+4\. **Curve.Extrude** - 现在，我们通过增加其深度并进入第三维，使该内容弹出。该节点基于曲线创建曲面，方法是拉伸该曲线。节点上的默认距离为 _1_，应该可以在视口中看到一个圆柱体。
 
-![](<../images/5-3/1/data - exercise step 4.jpg>)
+![]
 
-5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+5\. **Surface.Thicken** - 此节点通过将曲面偏移给定距离并闭合形状，从而为我们提供一个闭合实体。默认厚度值为 _1_，我们会在视口中看到一个与这些值对应的带壳圆柱体。
 
-![](<../images/5-3/1/data - exercise step 5.jpg>)
+![]
 
-6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+6\. **数字滑块** - 我们不使用所有这些输入的默认值，而是向模型添加一些参数化控件。
 
-**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**域编辑** - 在向画布添加数字滑块后，单击左上角的插入符号即可显示域选项。
 
-**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+**最大值/最小值/步长** - 将 _min_、_max_ 和 _step_ 值分别更改为 _0_、_2_ 和 _0.01_。我们这样做的目的是控制整个几何图形的大小。
 
-![](<../images/5-3/1/data - exercise step 6.gif>)
+![]
 
-7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+7\. **数字滑块** - 在所有默认输入中，我们复制并粘贴此数字滑块（选择滑块，按 Ctrl+C，然后按 Ctrl+V）多次，直到具有默认值的所有输入都有滑块为止。某些滑块值必须大于零，才能使定义生效（即：需要拉伸深度才能加厚曲面）。
 
-![](<../images/5-3/1/data - exercise step 7a.gif>)
+![]
 
-![](<../images/5-3/1/data - exercise step 7b.gif>)
+![]
 
-8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+8\. 现在，我们已使用这些滑块创建参数化带壳圆柱体。尝试调整其中一些参数，然后在 Dynamo 视口中动态查看几何图形更新。
 
-![](<../images/5-3/1/data - exercise step 8a.gif>)
+![]
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**数字滑块** - 更进一步对此进行介绍，我们已向画布添加了很多滑块，并且需要清理刚刚创建的工具的界面。在一个滑块上单击鼠标右键、选择“重命名...”，然后将每个滑块更改为其参数的相应名称。
 
-![](<../images/5-3/1/data - exercise step 8b step.jpg>)
+![]
 
 ### Part II: Populate an array of cylinders from Part I
 
-9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+9\. 此时，我们创建了一个令人惊叹的加厚圆柱体。目前，这是一个对象，让我们来看看如何创建一个圆柱体阵列，其中圆柱体保持动态链接。为此，我们将创建一列圆柱体，而不是使用单个项。
 
-**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+**加(+)** - 我们的目的是在创建的圆柱体旁边添加一排圆柱体。如果要添加一个与当前圆柱体相邻的圆柱体，我们需要考虑圆柱体的半径及其壳厚度。通过添加滑块的两个值，即可得到此数字。
 
-![](<../images/5-3/1/data - exercise step 9.jpg>)
+![]
 
-10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+10\. 该步骤更加复杂，因此让我们缓慢地逐步介绍：最终目的是创建一列数字，用于定义每个圆柱体在一排中的位置。
 
-![](<../images/5-3/1/data - exercise step 10.jpg>)
+![]
 
-> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+> **相乘** - 首先，我们要将上一步中的值乘以 2。 上一步中的值表示半径，我们希望将圆柱体移动整个直径。
 >
-> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+> **数字序列** - 使用此节点创建数字数组。 第一个输入是上一步中的 _multiplication_ 节点到 _step_ 值。可以使用 _number_ 节点将 _start_ 值设置为 _0.0_。
 >
-> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+> **整数滑块** - 对于 _amount_ 值，我们会连接整数滑块。 这将定义创建多少个圆柱体。
 >
-> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+> **输出** - 此列表显示阵列中每个圆柱体移动的距离，并由原始滑块以参数化方式驱动。
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. 此步骤足够简单 - 将上一步中定义的序列连接到原始 **Point.ByCoordinates** 的 _x_ 输入。这将替换可以删除的滑块 _pointX_。现在，在视口中可以看到圆柱体阵列（确保整数滑块大于 0）。
 
-![](<../images/5-3/1/data - exercise step 11.gif>)
+![]
 
-12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+12\. 圆柱体链仍与所有滑块动态链接。调整每个滑块以观察定义更新！
 
-![](<../images/5-3/1/data - exercise step 12.gif>)
+![]

@@ -2,92 +2,92 @@
 
 ## Vector, Plane & Coordinates System in Dynamo
 
-### Vector
+### 向量
 
-[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+[](5-2\_vectors.md#vector-1)在 Dynamo 中，向量是模型的关键组件。 请注意，由于它们属于“辅助对象”的“抽象”类别，因此当我们创建向量时，不希望在背景预览中看到任何内容。
 
-![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
+![Vectors in Dynamo]
 
-> 1. We can use a line as a stand in for a Vector preview.
+> 1. 我们可以使用一条线作为向量预览的替代对象。
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-### Plane
+### 平面
 
-[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+[](5-2\_vectors.md#plane-1)
 
-![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
+![Planes in Dynamo]
 
-> 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
-> 2. In Dynamo, Planes are rendered in the Background Preview.
+> 1. 尽管它们是抽象的，但平面确实具有原点位置，以便我们可以在空间中定位它们。
+> 2. 在 Dynamo 中，平面在背景预览中渲染。
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-### Coordinate System
+### 坐标系
 
-[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+[](5-2\_vectors.md#coordinate-system-1)
 
-![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
+![Coordinate System in Dynamo]
 
-> 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
+> 1. 尽管它们是抽象的，但坐标系也具有原点位置，以便我们可以在空间中定位它们。
+> 2. 在 Dynamo 中，坐标系在背景预览中渲染为一个点（原点）和定义轴（X 为红色、Y 为绿色以及 Z 为蓝色，遵循约定）的线。
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
 ## Deep Dive into...
 
-Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
+向量、平面和坐标系构成了抽象几何图形类型的主组。它们帮助我们为描述形状的其他几何图形定义位置、方向和空间环境。如果我说我在纽约市第 42 街的百老汇（坐标系）、站在街道上（平面）、面朝北（向量），我刚刚使用这些“辅助对象”来定义我所在的位置。这同样适用于手机壳产品或摩天大楼 - 我们需要此环境来开发模型。
 
-![Vectors, Planes, and Coordinates](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![向量、平面和坐标](../images/5-2/2/VectorsPlanesCoodinates.jpg)
 
-### Vector
+### 向量
 
-A vector is a geometric quantity describing Direction and Magnitude. Vectors are abstract; ie. they represent a quantity, not a geometrical element. Vectors can be easily confused with Points because they both are composed of a list of values. There is a key difference though: Points describe a position in a given coordinate system while Vectors describe a relative difference in position which is the same as saying "direction."
+向量是描述方向和幅值的几何量。向量是抽象概念；即它们表示量，而不是几何图元。向量可能容易与“点”混淆，因为它们都是由一列值组成。不过，有一个关键区别：“点”描述给定坐标系中的位置，而“向量”描述位置中的相对差异（这就是所谓的“方向”）。
 
-![Vector Details](../images/5-2/2/Vector-Detailed.jpg)
+![向量详细信息](../images/5-2/2/Vector-Detailed.jpg)
 
-If the idea of relative difference is confusing, think of the Vector AB as "I'm standing at Point A, looking toward Point B." The direction, from here (A) to there (B), is our Vector.
+如果相对差异的概念令人困惑，请将“向量 AB”想象为“我站在点 A，面朝点 B”。从这里 (A) 到那里 (B) 的方向就是我们所谓的向量。
 
-Breaking down Vectors further into their parts using the same AB notation:
+使用相同 AB 符号将向量详解为其各组成部分：
 
-![Vector](../images/5-2/2/Vector.jpg)
+![向量(Vector)](../images/5-2/2/Vector.jpg)
 
-> 1. The **Start Point** of the Vector is called the **Base**.
-> 2. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
-> 3. Vector AB is not the same as Vector BA - that would point in the opposite direction.
+> 1. 向量的**“起点”**称为**“基底”**。
+> 2. 向量的**“终点”**称为**“尖端”**或“感官”。
+> 3. “向量 AB”与“向量 BA”不同 - 它们指向相反的方向。
 
-If you're ever in need of comic relief regarding Vectors (and their abstract definition), watch the classic comedy Airplane and listen for the oft-quoted tongue-in cheek line:
+如果您需要关于向量（及其抽象定义）的喜剧效果，请观看经典喜剧《飞机》，聆听时常引用的半开玩笑台词：
 
 > _Roger, Roger. What's our vector, Victor?_
 
-### Plane
+### 平面
 
-Planes are two-dimensional abstract "Helpers." More specifically, Planes are conceptually “flat,” extending infinitely in two directions. Usually they are rendered as a smaller rectangle near their origin.
+平面是二维抽象“辅助对象”。更具体地说，平面在概念上是“平”的，在两个方向上无限延伸。通常，它们在其原点附近被渲染为较小的矩形。
 
-![Plane](../images/5-2/2/Plane.jpg)
+![平面(Plane)](../images/5-2/2/Plane.jpg)
 
-You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
+您可能会想：“等等！原点？这听起来像是一个坐标系...就像我在 CAD 软件中建模所使用的坐标系！”
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
+您是对的！大多数建模软件都利用构造平面或“标高”来定义要拔模的本地二维环境。XY、XZ、YZ 或北、东南、平面图听起来可能更加熟悉。这些都是“平面”，用于定义无限的“平”环境。
 
-### Coordinate System
+### 坐标系
 
-If we are comfortable with Planes, we are a small step away from understanding Coordinate Systems. A Plane has all the same parts as a Coordinate System, provided it is a standard "Euclidean" or "XYZ" Coordinate System.
+如果我们对平面感到满意，那么我们只需一小步就能理解坐标系。平面与坐标系一样具有相同的各部分，前提是它是标准的“欧几里德”或“XYZ”坐标系。
 
-There are other, however, alternative Coordinate Systems such as Cylindrical or Spherical. As we will see in later sections, Coordinate Systems can also be applied to other Geometry types to define a position on that geometry.
+但是，还有其他可选坐标系，如圆柱坐标系或球形坐标系。如我们在后续各部分中所见，坐标系也可应用于其他几何图形类型，以定义该几何图形上的位置。
 
-![Coordinate System](../images/5-2/2/CoordinateSystem.jpg)
+![坐标系](../images/5-2/2/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical
+> 添加可选坐标系 - 圆柱坐标系、球形坐标系

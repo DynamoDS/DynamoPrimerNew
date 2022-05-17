@@ -1,92 +1,92 @@
-# Package Introduction
+# 软件包简介
 
-In short, a Package is a collection of Custom Nodes. The Dynamo Package Manager is a portal for the community to download any package which has been published online. These toolsets are developed by third parties in order to extend Dynamo's core functionality, accessible to all, and ready to download at the click of the button.
+简而言之，软件包是自定义节点集。Dynamo Package Manager 是一个社区门户，可以下载已在线发布的任何软件包。这些工具集由第三方开发，以扩展 Dynamo 的核心功能，可供所有人访问，并可以通过单击相应按钮进行下载。
 
-![Package Manager Site](../images/6-2/1/dpm.jpg)
+![](../images/6-2/1/dpm.jpg)
 
-An open-source project such as Dynamo thrives on this type of community involvement. With dedicated third-party developers, Dynamo is able to extend its reach to workflows across a range of industries. For this reason, the Dynamo team has made concerted efforts to streamline package development and publishing (which will be discussed in more detail in the following sections).
+诸如 Dynamo 之类的开源项目通过此类社区参与有了蓬勃发展。借助专门的第三方开发人员，Dynamo 能够将其应用范围扩展到各行各业的工作流。 因此，Dynamo 团队已共同努力来简化软件包的开发和发布（将在以下各节中详细讨论）。
 
-### Installing a Package
+### 安装软件包
 
-The easiest way to install a package is by using the Packages toolbar in your Dynamo interface. Let's jump right into it and install one now. In this quick example, we'll install a popular package for creating quad panels on a grid.
+安装软件包的最简单方法是使用 Dynamo 界面中的“软件包”工具栏。让我们直接跳转到该工具栏，然后立即安装一个软件包。在本快速示例中，我们将安装一个常用软件包，用于在栅格上创建四边形嵌板。
 
-In Dynamo, go to _Packages>Search For a Package..._
+在 Dynamo 中，转到_“软件包”>“搜索软件包...”_
 
-![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
+![]
 
-In the search bar, let's search for "quads from rectangular grid". After a few moments, you should see all of the packages which match this search query. We want to select the first package with the matching name.
+在搜索栏中，我们搜索“quads from rectangular grid”。片刻之后，您应该会看到与此搜索查询匹配的所有软件包。我们想要选择具有匹配名称的第一个软件包。
 
-Click on Ínstall to add this package to your library. Done!
+完成！
 
-![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
+![]
 
-Notice that we now have another group in our Dynamo library called "buildz". This name refers to the developer of the package, and the custom node is placed in this group. We can begin to use this right away.
+请注意，现在 Dynamo 库中有另一个名为“buildz”的组。 该名称指代软件包的开发人员，并且自定义节点将放置在此组中。 我们可以立即开始使用此组。
 
-![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
+![]
 
-Use **Code Block** to quickly define a rectangular grid, output the result to a **Polygon.ByPoints** Node, subsequently a **Surface.ByPatch** Node to view the list of rectangular panels you have just created.
+************
 
-![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
+![]
 
 ### Installing Package Folder - DynamoUnfold
 
-The example above focuses on a package with one custom node, but you use the same process for downloading packages with several custom nodes and supporting data files. Let's demonstrate that now with a more comprehensive package: Dynamo Unfold.
+上述示例重点介绍内含一个自定义节点的软件包，但相同过程可用于下载内含多个自定义节点的软件包以及支持数据文件。现在，我们通过一个更全面的软件包来进行演示：Dynamo Unfold。
 
-As in the example above, begin by selecting _Packages>Search for a Package..._.
+如上例中所示，首先依次选择_“软件包”>“搜索软件包...”_。
 
-This time, we'll search for _"DynamoUnfold"_, one word, minding the caps. When we see the packages, download by clicking on Install to add Dynamo Unfold to your Dynamo Library.
+这次，我们搜索_“DynamoUnfold”_（一个字词，注意大写）。
 
-![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
+![]
 
-In the Dynamo Library, we have a _DynamoUnfold_ Group with multiple categories and custom nodes.
+在 Dynamo 库中，我们有一个 _DynamoUnfold_ 组，其中包含多个类别和自定义节点。
 
-![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
+![]
 
-Now, let's take a look at the package's file structure. First, select Dynamo > Preferences
+现在，我们来看一下软件包的文件结构。
 
-![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
+![]
 
-From the Preferences pop-up, open Package Manager > next to DynamoUnfold, select the vertical dots menu ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) > Show Root Directory to open root folder for this package.
+![]
 
-![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
+![]
 
-This will take us to the package's root directory. Notice that we have 3 folders and a file.
+这会转到该软件包的根目录。请注意，我们有 3 个文件夹和一个文件。
 
-![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
+![]
 
-> 1. The _bin_ folder houses .dll files. This Dynamo package was developed using Zero-Touch, so the custom nodes are held in this folder.
-> 2. The _dyf_ folder houses the custom nodes. This package was not developed using Dynamo custom nodes, so this folder is empty for this package.
-> 3. The extra folder houses all additional files, including our example files.
-> 4. The pkg file is a basic text file defining the package settings. We can ignore this for now.
+> 1. _bin_ 文件夹中存储了 .dll 文件。此 Dynamo 软件包使用 Zero-Touch 开发，因此自定义节点保存在此文件夹中。
+> 2. _dyf_ 文件夹中存储了自定义节点。此软件包不是使用 Dynamo 自定义节点开发的，因此此软件包的该文件夹为空。
+> 3. “extra”文件夹中存储了所有附加文件，包括我们的示例文件。
+> 4. pkg 文件是一个基本文本文件，用于定义软件包设置。我们现在可以忽略该文件。
 
-Opening the "extra" folder, we see a bunch of example files that were downloaded with the install. Not all packages have example files, but this is where you can find them if they are part of a package.
+打开“extra”文件夹，我们会在其中看到随安装下载的一系列示例文件。 并非所有软件包中都有示例文件，如果示例文件是软件包的一部分，那么就可以在该位置找到它们。
 
-Let's open up "SphereUnfold".
+让我们打开“SphereUnfold”。
 
 ![](../images/6-2/1/rd2.jpg)
 
-After opening the file and hitting "Run" on the solver, we have an unfolded sphere! Example files like these are helpful for learning how to work with a new Dynamo package.
+在打开该文件并点击求解器上的“运行”后，我们会得到一个展开的球体！ 此类示例文件有助于了解如何使用新的 Dynamo 软件包。
 
-![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
+![]
 
 ### Dynamo Package Manager
 
-Another way to discover Dynamo packages is to explore the [Dynamo Package Manager](http://dynamopackages.com) online. This is a good way to browse for packages, since the repository sorts packages in order of download count and popularity. Also, it's an easy way to gather information on recent updates for packages, as some Dynamo packages are subjected to versioning and dependencies of Dynamo builds.
+了解 Dynamo 软件包的另一种方法是在线浏览 [Dynamo Package Manager](。) 这是浏览软件包的好方法，因为存储库会按照下载数量和受欢迎程度对软件包进行排序。此外，它也是一种用于收集有关最新软件包更新信息的简便方法，因为某些 Dynamo 软件包受 Dynamo 各内部版本的版本控制和依存关系的制约。
 
-By clicking on _"Quads from Rectangular Grid"_ in the Dynamo Package Manager, you can see its descriptions, versions, the developer, and possible dependencies.
+通过在 Dynamo Package Manager 中单击_“Quads from Rectangular Grid”_，即可查看其描述、版本、开发人员以及可能的依存关系。
 
 ![](../images/6-2/1/dpm2.jpg)
 
-You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
+还可以从 Dynamo Package Manager 下载软件包文件，但直接在 Dynamo 中进行下载是一个更无缝的过程。
 
-### Where are Packages Files Stored Locally?
+### 文件本地存储在何处？
 
 If you do download files from the Dynamo package manager, or if you would like to see where all of your package files are kept, click on Dynamo > Package Manager > Node and Package Paths, you can find your current root folder directory from here.
 
-![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
+![]
 
-By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
+默认情况下，软件包安装在与以下文件夹路径类似的位置：_C:/Users/[用户名]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
 
-### Going Further with Packages
+### 进一步了解软件包
 
-The Dynamo community is constantly growing and evolving. By exploring the Dynamo Package Manager from time to time, you'll find some exciting new developments. In the following sections, we'll take a more in-depth look at packages, from the end-user perspective to authorship of your own Dynamo Package.
+Dynamo 社区不断发展壮大。通过不时浏览 Dynamo Package Manager，您会发现一些令人兴奋的新进展。在以下各部分中，我们将更深入地探索软件包，从最终用户角度到您自己的 Dynamo 软件包制作。

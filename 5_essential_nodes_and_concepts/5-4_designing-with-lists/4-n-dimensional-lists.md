@@ -1,188 +1,188 @@
-# n-Dimensional Lists
+# n 维列表
 
-Further down the rabbit-hole, let's add even more tiers to hierarchy. Data structure can expand far beyond a two-dimensional list of lists. Since lists are items in and of themselves in Dynamo, we can create data with as many dimensions as possible.
+再往下钻，让我们为层次结构添加更多层。数据结构可以扩展到远超二维列表的列表。由于列表是 Dynamo 中的项目，而且它们本身也是项目，因此我们可以创建尽可能多维的数据。
 
-The analogy we'll work with here are Russian Nesting Dolls. Each list can be regarded as one container holding multiple items. Each list has its own properties and is also regarded as its own object.
+我们将在此处使用的类比是俄罗斯套娃。每个列表可视为一个包含多个项的容器。每个列表都有自己的属性，也被视为自己的对象。
 
-![Dolls](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
+![娃娃](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
 
-> A set of Russian Nesting Dolls (Photo by [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) is an analogy for n-Dimensional lists. Each layer represents a list, and each list contains items within it. In Dynamo's case, each container can have multiple containers inside (representing the items of each list).
+> 一组俄罗斯套娃（拍摄者[Zeta](https://www.flickr.com/photos/beppezizzi/145493363)）是 n 维列表的类比。每个层表示一个列表，每个列表在其中包含项目。在 Dynamo 的情况下，每个容器内可以有多个容器（表示每个列表的项目）。
 
-n-Dimensional lists are difficult to explain visually, but we've set up a few exercises in this chapter which focus on working with lists which venture beyond two dimensions.
+n 维列表很难用直观的方式进行解释，但是我们在本章中设置了一些练习，这些练习着重于处理超出二维范围的列表。
 
-### Mapping and Combinations
+### 映射和组合
 
-Mapping is arguably the most complex part of data management in Dynamo, and is especially relevant when working with complex hierarchies of lists. With the series of exercises below, we'll demonstrate when to use mapping and combinations as data becomes multi-dimensional.
+映射无疑是 Dynamo 中数据管理最复杂的部分，并且在处理列表的复杂层次结构时尤其重要。在下面的一系列练习中，我们将演示在数据变为多维时何时使用映射和组合。
 
-Preliminary introductions to **List.Map** and **List.Combine** can be found in the previous section. In the last exercise below, we'll use these nodes on a complex data structure.
+在上一节中，可以找到**“List.Map”**和**“List.Combine”**的初步介绍。在下面的最后一个练习中，我们将对复杂数据结构使用这些节点。
 
-## Exercise - 2D Lists - Basic
+## 练习 - 二维列表 - 基本
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-This exercise is the first in a series of three which focuses on articulating imported geometry. Each part in this series of exercises will increase in the complexity of data structure.
+本练习是三个练习中的第一个，侧重于阐述输入的几何图形。本系列练习中的每个部分都将增加数据结构的复杂性。
 
 ![Exercise](<../images/5-4/4/n-dimensional lists - 2d lists basic 01.jpg>)
 
-> 1. Let's begin with the .sat file in the exercise file folder. We can grab this file using the **File Path** node.
-> 2. With **Geometry.ImportFromSAT**, the geometry is imported into our Dynamo preview as two surfaces.
+> 1. 让我们从练习文件文件夹中的 .sat 文件开始。我们可以使用**“文件路径”(File Path)** 节点抓取此文件。
+> 2. 使用 **Geometry.ImportFromSAT**，该几何图形将作为两个曲面输入到 Dynamo 预览中。
 
-For this exercise, we want to keep it simple and work with one of the surfaces.
+在本练习中，我们希望保持简单并处理其中一个曲面。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 02.jpg>)
 
-> 1. Let's select the index of 1 to grab the upper surface. We do this with **List.GetItemAtIndex** node.
-> 2. Switch off the geometry preview from **Geometry.ImportFromSAT** preview.
+> 1. 让我们选择索引 1 以抓取上方曲面。 我们使用 **List.GetItemAtIndex** 节点来执行此操作。
+> 2. 关闭**“Geometry.ImportFromSAT”**预览中的几何图形预览。
 
-The next step is to divide the surface into a grid of points.
+下一步是将曲面分割为点栅格。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 03.jpg>)
 
-> 1\. Using **Code Block**, insert these two lines of code: `0..1..#10;` `0..1..#5;`
+> 1\.使用**“代码块”**，插入以下两行代码：`0..1..#10;` `0..1..#5;`
 >
-> 2\. With the **Surface.PointAtParameter**, connect the two code block values to u and _v_. Change the _lacing_ of this node to _"Cross Product"_.
+> 2\.使用**“Surface.PointAtParameter”**，将两个代码块值连接到 u 和 _v_。将此节点的_连缀_更改为_“叉积”_。
 >
-> 3\. The output reveals the data structure, which is also visible in the Dynamo preview.
+> 3\.输出显示数据结构，这在 Dynamo 预览中也可见。
 
-Next, used the Points from last step to generate ten curves along the surface.
+接下来，使用上一步中的点以沿曲面生成十条曲线。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 04.jpg>)
 
-> 1. To get a look at how the data structure is organized, let's connect a **NurbsCurve.ByPoints** to the output of **Surface.PointAtParameter**.
-> 2. You may switch off the preview from the **List.GetItemAtIndex** Node for now for a clearer result.
+> 1. 要了解数据结构的组织方式，我们将 **NurbsCurve.ByPoints** 连接到 **Surface.PointAtParameter** 的输出。
+> 2. 现在，可以关闭**“List.GetItemAtIndex”**节点的预览，以获得更清晰的结果。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 05.jpg>)
 
-> 1. A basic **List.Transpose** will flip the columns and rows of a list of lists.
-> 2. Connecting the output of **List.Transpose** to **NurbsCurve.ByPoints**, we now get five curves running horizontally across the surface.
-> 3. You may switch off the preview from the **NurbsCurve.ByPoints** Node in the previous step to achieve the same result in the image.
+> 1. 基本 **List.Transpose** 将翻转一列列表的列和行。
+> 2. 通过将 **List.Transpose** 的输出连接到 **NurbsCurve.ByPoints**，我们现在得到五条曲线在整个曲面上水平延伸。
+> 3. 可以在上一步中关闭**“NurbsCurve.ByPoints”**节点的预览，以在图像中获得相同的结果。
 
-## Exercise - 2D Lists - Advanced
+## 练习 - 二维列表 - 高级
 
-Let's increase the complexity. Suppose we wanted to perform an operation on the curves created from the previous exercise. Perhaps we want to relate these curves to another surface and loft between them. This requires more attention to data structure, but the underlying logic is the same.
+让我们增加复杂性。假定我们要对上一个练习中创建的曲线执行操作。也许，我们希望将这些曲线与其他曲面相关联，并在它们之间进行放样。这需要更加注意数据结构，但基本逻辑是相同的。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 01.jpg>)
 
-> 1. Begin with a step from the previous exercise, isolating the upper surface of the imported geometry with the **List.GetItemAtIndex** node.
+> 1. 从上一练习的步骤开始，使用 **List.GetItemAtIndex** 节点隔离已输入几何图形的上曲面。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 02.jpg>)
 
-> 1. Using **Surface.Offset**, offset the surface by a value of _10_.
+> 1. 使用 **Surface.Offset**，将曲面偏移值 _10_。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a _code block_ with these two lines of code: `0..1..#10;` `0..1..#5;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with _lacing_ set to _"Cross Product"_. One of these nodes is connected to the original surface, while the other is connected to the offset surface.
+> 1. 按照与上一练习相同的方式，使用以下两行代码定义_代码块_：`0..1..#10;` `0..1..#5;`
+> 2. 将这些输出连接到两个 **Surface.PointAtParameter** 节点，每个节点的_连缀_设置为_“叉积”_。 其中一个节点连接到原始曲面，而另一个节点连接到偏移曲面。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
 
-> 1. Switch off the preview of these Surfaces.
-> 2. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes. The result show curves corresponding to two surfaces.
+> 1. 关闭这些曲面的预览。
+> 2. 与上一练习中一样，将输出连接到两个 **NurbsCurve.ByPoints** 节点。 结果显示与两个曲面对应的曲线。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 05.jpg>)
 
-> 1. By using **List.Create**, we can combine the two sets of curves into one list of lists.
-> 2. Notice from the output, we have two lists with ten items each, representing each connect set of Nurbs curves.
-> 3. By performing a **Surface.ByLoft**, we can visually make sense of this data structure. The node lofts all of the curves in each sublist.
+> 1. 通过使用 **List.Create**，我们可以将两组曲线合并为一列列表。
+> 2. 在输出中注意到，我们有两个列表，其中每个列表包含十个项目，分别表示每个 NURBS 曲线的连接集。
+> 3. 通过执行 **Surface.ByLoft**，我们可以直观地了解此数据结构。该节点将放样每个子列表中的所有曲线。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 06.jpg>)
 
-> 1. Switch off the preview from **Surface.ByLoft** Node in previous step.
-> 2. By using **List.Transpose**, remember, we are flipping all of the columns and rows. This node will transfer two lists of ten curves into ten lists of two curves. We now have each nurbs curve related to the neighboring curve on the other surface.
-> 3. Using **Surface.ByLoft**, we arrive at a ribbed structure.
+> 1. 在上一步中，关闭**“Surface.ByLoft”**节点的预览。
+> 2. 通过使用 **List.Transpose**，请记住，我们将翻转所有列和行。此节点会将两列（每个列表十条曲线）转换为十列（每个列表两条曲线）。现在，我们得到与另一个曲面上的相邻曲线相关的每条 NURBS 曲线。
+> 3. 使用 **Surface.ByLoft**，我们得到一个带肋的结构。
 
-Next, we will demonstrate an alternative process to achieve this result
+接下来，我们将演示实现此结果的替代流程
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
 
-> 1. Before we start, switch off the **Surface.ByLoft** preview in previous step to avoid confusion.
-> 2. An alternative to **List.Transpose** uses **List.Combine**. This will operate a _"combinator"_ on each sublist.
-> 3. In this case, we're using **List.Create** as the _"combinator"_, which will create a list of each item in the sublists.
-> 4. Using the **Surface.ByLoft** node, we get the same surfaces as in the previous step. Transpose is easier to use in this case, but when the data structure becomes even more complex, **List.Combine** is more reliable.
+> 1. 在开始之前，请在上一步中关闭**“Surface.ByLoft”**预览以避免混淆。
+> 2. 除 **List.Transpose** 之外，还可以使用 **List.Combine**。这将对每个子列表运算_“连结符”_。
+> 3. 在本例中，我们使用 **List.Create** 作为_“连结符”_，这将在子列表中创建每个项目的列表。
+> 4. 使用 **Surface.ByLoft** 节点，我们得到与上一步中相同的曲面。在这种情况下，转置更容易使用，但当数据结构变得更加复杂时，**List.Combine** 更加可靠。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
 
-> 1. Stepping back a few steps, if we want to switch the orientation of the curves in the ribbed structure, we want to use a **List.Transpose** before connect to **NurbsCurve.ByPoints**. This will flip the columns and rows, giving us 5 horizontal ribs.
+> 1. 如果要切换带肋结构中曲线的方向，请后退几步，我们需要先使用**“List.Transpose”**，然后再连接到**“NurbsCurve.ByPoints”**。这将翻转列和行，从而得到 5 个水平加强筋。
 
-## Exercise - 3D Lists
+## 练习 - 三维列表
 
-Now, we're going to go even one step further. In this exercise, we'll work with both imported surfaces, creating a complex data hierarchy. Still, our aim is to complete the same operation with the same underlying logic.
+现在，我们将更进一步。在本练习中，我们将使用两个输入的曲面，从而创建复杂的数据层次结构。尽管如此，我们的目标是使用相同的基础逻辑来完成相同的操作。
 
-Begin with the imported file from previous exercise.
+从上一练习中输入的文件开始。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 01.jpg>)
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 02.jpg>)
 
-> 1. As in the previous exercise, use the **Surface.Offset** node to offset by a value of _10_.
-> 2. Notice from the output, that we've created two surfaces with the offset node.
+> 1. 与上一练习中一样，使用 **Surface.Offset** 节点按值 _10_ 进行偏移。
+> 2. 在输出中注意到，我们创建了两个具有偏移节点的曲面。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a **Code Block** with these two lines of code: `0..1..#20;` `0..1..#20;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with lacing set to _"Cross Product"_. One of these nodes is connected to the original surfaces, while the other is connected to the offset surfaces.
+> 1. 按照与上一练习相同的方式，使用以下两行代码定义**“代码块”**：`0..1..#20;` `0..1..#20;`
+> 2. 将这些输出连接到两个 **Surface.PointAtParameter** 节点，每个节点的连缀设置为_“叉积”_。其中一个节点连接到原始曲面，而另一个节点连接到偏移曲面。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
 
-> 1. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes.
-> 2. Looking at the output of the **NurbsCurve.ByPoints,** notice that this is a list of two lists, which is more complex than the previous exercise. The data is categorized by the underlying surface, so we've added another tier to the data structured.
-> 3. Notice that things become more complex in the **Surface.PointAtParameter** node. In this case we have a list of lists of lists.
+> 1. 与上一练习中一样，将输出连接到两个 **NurbsCurve.ByPoints** 节点。
+> 2. 查看**“NurbsCurve.ByPoints”**的输出，注意到这是一列两个列表，比上一练习更复杂。数据按基础曲面分类，因此我们为结构化数据添加了另一个层级。
+> 3. 请注意，**Surface.PointAtParameter** 节点中的对象变得更加复杂。在本例中，我们会看到一列列表。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 05.jpg>)
 
-> 1. Before we proceed, switch off the preview from the existing surfaces.
-> 2. Using the **List.Create** node, we merge the Nurbs curves into one data structure, creating a list of lists of lists.
-> 3. By connecting a **Surface.ByLoft** node, we get a version of the original surfaces, as they each remain in their own list as created from the original data structure.
+> 1. 在继续操作之前，请关闭现有曲面的预览。
+> 2. 使用**“List.Create”**节点，我们将 NURBS 曲线合并为一个数据结构，从而创建一列列表（其中每个元素也是一个列表）。
+> 3. 通过连接 **Surface.ByLoft** 节点，我们得到原始曲面的版本，因为它们各自保留在由原始数据结构创建的自己列表中。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 06.jpg>)
 
-> 1. In the previous exercise, we were able to use a **List.Transpose** to create a ribbed structure. This won't work here. A transpose should be used on a two-dimensional list, and since we have a three-dimensional list, an operation of "flipping columns and rows" won't work as easily. Remember, lists are objects, so **List.Transpose** will flip our lists with out sublists, but won't flip the nurbs curves one list further down in the hierarchy.
+> 1. 在上一练习中，我们能够使用 **List.Transpose** 创建带肋结构。这在此处不起作用。对二维列表应使用转置，但由于我们有三维列表，因此“翻转列和行”操作不会像之一样轻松。请记住，列表是对象，因此 **List.Transpose** 将翻转包含子列表的列表，但不会将 NURBS 曲线在层次结构中进一步向下翻转一个列表。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
-> 1. **List.Combine** will work better for us here. We want to use **List.Map** and **List.Combine** nodes when we get to more complex data structures.
-> 2. Using **List.Create** as the _"combinator"_, we create a data structure that will work better for us.
+> 1. **List.Combine** 在此处将更加适用。当访问更复杂的数据结构时，我们要使用 **List.Map** 和 **List.Combine** 节点。
+> 2. 使用 **List.Create** 作为_“连结符”_，我们可以创建一个数据结构，使其更加适用。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
-> 1. The data structure still needs to be transposed at one step down on the hierarchy. To do this we'll use **List.Map**. This is working like **List.Combine**, except with one input list, rather than two or more.
-> 2. The function we'll apply to **List.Map** is **List.Transpose**, which will flip the columns and rows of the sublists within our main list.
+> 1. 数据结构仍需要在层次结构上向下转置一步。为此，我们将使用 **List.Map**。除了使用一个输入列表（而不是两个或更多）之外，这类似于使用 **List.Combine**。
+> 2. 我们将应用于 **List.Map** 的函数是 **List.Transpose**，这将翻转主列表中子列表的列和行。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 09.jpg>)
 
-> 1. Finally, we can loft the Nurbs curves together with a proper data hierarchy, giving us a ribbed structure.
+> 1. 最后，我们可以结合使用正确的数据层次结构放样 NURBS 曲线，从而提供带肋结构。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 10.jpg>)
 
-> 1. Let's add some depth to the geometry with a **Surface.Thicken** Node with the input settings as shown.
+> 1. 我们使用**“Surface.Thicken”**节点和输入设置为几何图形添加一些深度，如图所示。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 11.jpg>)
 
-> 1. It'll be nice to add a surface backing two this structure, so add another **Surface.ByLoft** node and use the first output of **NurbsCurve.ByPoints** from an earlier step as input.
-> 2. As the preview is getting cluttered, switch off preview for these nodes by right clicking on each of them and uncheck 'preview' to see the result better.
+> 1. 最好添加一个曲面来支撑这两个结构，因此请添加另一个**“Surface.ByLoft”**节点，并使用上一步中**“NurbsCurve.ByPoints”**的第一个输出作为输入。
+> 2. 随着预览变得混乱，请通过在每个节点上单击鼠标右键并取消选中“预览”以关闭这些节点的预览，以便更好地查看结果。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 12.jpg>)
 
-> 1. And thickening these selected surfaces, our articulation is complete.
+> 1. 加厚这些选定曲面，完成连接。
 
-Not the most comfortable rocking chair ever, but it's got a lot of data going on.
+这不是有史以来最舒适的摇椅，但还会进行大量数据处理。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 13.jpg>)
 
-Last step, let's reverse the direction of the striated members. As we used transpose in the previous exercise, we'll do something similar here.
+最后一步，我们反转带条纹成员的方向。如在上一练习中使用转置一样，我们将在此处执行类似操作。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 14.jpg>)
 
-> 1. Since we have one more tier to the hierarchy, so we need to use **List.Map** with a **List.Tranpose** function to change the direction of our Nurbs curves.
+> 1. 由于我们的层次结构中还有一层级，因此我们需要将**“List.Map”**与**“List.Tranpose”**函数一起使用来更改 NURBS 曲线的方向。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 15.jpg>)
 
-> 1. We may want to increase the number of treads, so we can change the **Code Block** to `0..1..#20;` `0..1..#30;`
+> 1. 我们可能希望增加踏板数，因此可以将**“代码块”**更改为 `0..1..#20;` `0..1..#30;`
 
-The first version of the rocking chair was sleek, so our second model offers an off-road, sport-utility version of recumbency.
+摇椅的第一个版本很流畅，因此我们的第二个模型提供了越野、运动多功能版本的靠背。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 16.jpg>)

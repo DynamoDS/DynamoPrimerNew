@@ -1,10 +1,10 @@
-# Geometric Booleans
+# 几何布尔
 
-_Intersect_, _Trim_, and _SelectTrim_ are primarily used on lower-dimensional geometry such as Points, Curves, and Surfaces. Solid geometry on the other hand, has an additional set of methods for modifying form after their construction, both by subtracting material in a manner similar to _Trim_ and combining elements together to form a larger whole.
+_Intersect_、_Trim_ 和 _SelectTrim_ 主要用于较少维的几何体，例如点、曲线和曲面。另一方面，实体几何体还有一组附加方法用于在构造后修改形状，方法是以与 _Trim_ 类似的方式减去材质，并将图元合并到一起以形成更大的整体。
 
-### Union
+### 活接头
 
-The _Union_ method takes two solid objects and creates a single solid object out of the space covered by both objects. The overlapping space between objects is combined into the final form. This example combines a Sphere and a Cuboid into a single solid Sphere-Cube shape:
+_Union_ 方法可获取两个实体对象，并在两个对象覆盖的空间之外创建单个实体对象。对象之间的重叠空间将合并为最终形式。本例将球体和立方体合并为单个实体球体-立方体形状：
 
 ![](../images/8-2/9/GeometricBooleans\_01.png)
 
@@ -19,9 +19,9 @@ s2 = Sphere.ByCenterPointRadius(
 combined = s1.Union(s2);
 ```
 
-### Difference
+### 差异
 
-The _Difference_ method, like _Trim_, subtracts away the contents of the input tool solid from the base solid. In this example we carve out a small indentation out of a sphere:
+_Difference_ 方法类似 _Trim_，从基础实体中减去输入工具实体的内容。在本例中，我们从球体中穿凿出一个小凹穴：
 
 ![](../images/8-2/9/GeometricBooleans\_02.png)
 
@@ -36,9 +36,9 @@ tool = Sphere.ByCenterPointRadius(
 result = s.Difference(tool);
 ```
 
-### Intersect
+### 交集
 
-The _Intersect_ method returns the overlapping Solid between two solid Inputs. In the following example, _Difference_ has been changed to _Intersect_, and the resulting Solid is the missing void initially carved out:
+_Intersect_ 方法将返回两个实体输入之间的重叠实体。在以下示例中，_Difference_ 已更改为 _Intersect_，并且生成的实体是最初穿凿的缺失空心：
 
 ![](../images/8-2/9/GeometricBooleans\_03.png)
 

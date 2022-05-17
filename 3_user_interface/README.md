@@ -1,80 +1,80 @@
-# User Interface
+# 用户界面
 
-### User Interface Overview
+### 用户界面概述
 
-The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in the following sections.
+Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介绍概述，然后在以下各部分中进一步介绍工作空间和库。
 
 ![](<images/user interface - ui.jpg>)
 
-> 1. Menus
-> 2. Toolbar
-> 3. Library
-> 4. Workspace
-> 5. Execution bar
+> 1. 菜单
+> 2. 工具栏
+> 3. 库
+> 4. 工作空间
+> 5. 执行栏
 
-### Menus
+### 菜单
 
 ![](<images/user interface - menu.jpg>)
 
-Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
+以下是 Dynamo 应用程序基本功能的菜单。与大多数 Windows 软件一样，前两个菜单涉及文件管理、选择操作和内容编辑。其余菜单则更加特定于 Dynamo。
 
-#### Dynamo Menus
+#### Dynamo 菜单
 
-General info and settings can be found on the **Dynamo** drop down menu.
+常规信息和设置位于**“Dynamo”**下拉菜单中。
 
 ![](<images/user interface - dynamo menu.jpg>)
 
-> 1. About - Find out the Dynamo version installed on your machine.
-> 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
-> 3. Preferences - Includes settings such as define the application's decimal point precision and geometry render quality.
-> 4. Exit Dynamo
+> 1. 关于 - 了解计算机上安装的 Dynamo 版本。
+> 2. 同意收集可用性数据 - 这允许您选择加入或退出共享您的用户数据以改进 Dynamo。
+> 3. 首选项 - 包括定义应用程序的小数点精度和几何图形渲染质量等设置。
+> 4. 退出 Dynamo
 
-#### Help
+#### 帮助
 
-If you're stuck, check out the **Help** Menu. You may access one of the Dynamo reference websites through your internet browser.
+如果遇到问题，请查看**“帮助”**菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
 
 ![](<images/user interface - help menu.jpg>)
 
-> 1. Getting Started - A brief introduction to using Dynamo.
-> 2. Interactive Guides -
-> 3. Samples - Reference example files.
-> 4. Dynamo Dictionary - Resource with documentation on all nodes.
-> 5. Dynamo Website - View the Dynamo Project on GitHub.
-> 6. Dynamo Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
-> 7. Display Start Page - Return to the Dynamo start page when within a document.
-> 8. Report A Bug - Open an Issue on GitHub.
+> 1. 快速入门 - 简要介绍如何使用 Dynamo。
+> 2. 互动指南 -
+> 3. 示例 - 参考示例文件。
+> 4. Dynamo 词典 - 包含所有节点文档的资源。
+> 5. Dynamo 网站 - 在 GitHub 上查看 Dynamo 项目。
+> 6. Dynamo 项目 Wiki - 访问 Wiki 以了解如何使用 Dynamo API、支持库和工具进行开发。
+> 7. 显示“开始”页面 - 在文档内时返回 Dynamo 开始页面。
+> 8. 报告错误 - 在 GitHub 上打开问题。
 
-### Toolbar
+### 工具栏
 
-Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
+Dynamo 工具栏包含一系列快速访问的按钮，可用于处理文件以及执行“撤消 \[Ctrl + Z]”和“重做 \[Ctrl + Y]”命令。最右侧是另一个按钮，它将导出工作空间快照，这对于文档编制和共享非常重要。
 
-* ![](<images/user interface - new file.jpg>) New - Create a new .dyn file
-* ![](<images/user interface - open (1).jpg>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
-* ![](<images/user interface - save.jpg>) Save/Save As - Save your active .dyn or .dyf file
-* ![](<images/user interface - undo.jpg>) Undo - Undo your last action
-* ![](<images/user interface - redo.jpg>) Redo - Redo the next action
-* ![](<images/user interface - screenshot.jpg>) Export Workspace as Image - Export the visible workspace as a PNG file
+* ![](<images/user interface - new file.jpg>) 新建 - 创建一个新的 .dyn 文件
+* ![](<images/user interface - open (1).jpg>) 打开 - 打开现有的 .dyn（工作空间）或 .dyf（自定义节点）文件
+* ![](<images/user interface - save.jpg>) 保存/另存为 - 保存活动的 .dyn 或 .dyf 文件
+* ![](<images/user interface - undo.jpg>) 撤消 - 撤消上一个操作
+* ![](<images/user interface - redo.jpg>) 重做 - 重做下一个操作
+* ![](<images/user interface - screenshot.jpg>) 将工作空间输出为图像 - 将可见工作空间输出为 PNG 文件
 
-### Library
+### 库
 
-The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [2-library.md](2-library.md "mention") section will cover a more detailed guidance on using it.
+Dynamo 库是功能库的集合，每个库都包含按类别分组的节点。它包含在默认安装 Dynamo 期间添加的基本库，随着我们继续介绍其用法，我们将演示如何通过自定义节点和其他软件包扩展基本功能。[2-library.md](2-library.md "提及")部分将介绍有关如何使用它的更详细指导。
 
 ![](<images/user interface - library.jpg>)
 
-### Workspace
+### 工作空间
 
-The Workspace is where we compose our visual programs, you may also change its Preview setting to view the 3D geometries from here. Refer [1-workspace.md](1-workspace.md "mention") for more details.
+在工作空间中，我们可以编写可视化程序，您还可以更改其“预览”设置以从此处查看三维几何图形。有关更多详细信息，请参见 [1-workspace.md](1-workspace.md "提及")。
 
 ![](<images/user interface - workspace.gif>)
 
-### Execution Bar
+### 执行栏
 
-Run your Dynamo script from here. Click the dropdown icon on the Execution button to change between the different modes.
+从此处运行 Dynamo 脚本。单击“执行”按钮上的下拉图标，可在不同模式之间切换。
 
 ![](<images/user interface - execution bar.gif>)
 
-* Automatic: Runs your script automatically. Changes is updated in realtime.
-* Manual: Script only runs when the 'Run' button is clicked. Useful for when making changes to complicated and 'heavy script'
-* Periodic: This option is grayed out by default. Only available when the DateTime.Now Node is used. You can set the graph to run automatically at a specified interval.
+* 自动：自动运行脚本。更改会实时更新。
+* 手动：仅当单击“运行”按钮时，脚本才会运行。对复杂和“重型脚本”进行更改时很有用
+* 周期：默认情况下，此选项灰显。仅当使用“DateTime.Now”节点时可用。可以将图形设置为按指定的间隔自动运行。
 
 ![](<images/user interface - execution bar DateTime node.jpg>)

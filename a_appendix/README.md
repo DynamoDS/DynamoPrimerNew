@@ -1,6 +1,6 @@
-# Appendix
+# 附录
 
-In this section, you can find additional resources for taking your Dynamo game one step further. We've also added an index of important nodes, a collection of useful packages, and a repository of the example files in this primer. Please feel free to add to this section...remember, the [Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) is open source!
+在本节中，您可以找到使 Dynamo 技能更进一步的资源。我们还在本入门中添加了重要节点的索引、一组有用的软件包以及示例文件库。请随时添加到此部分...请记住，[Dynamo Primer]( 是开源的！)
 
 &#x20;
 

@@ -1,145 +1,145 @@
-# Shorthand
+# 简写
 
-### Shorthand
+### 简写
 
-There are a few basic shorthand methods in the code block which, simply put, make data management _a lot_ easier. We'll break down the basics below and discuss how this shorthand can be used both for creating and querying data.
+简单来说，代码块中有一些基本的简写方法，这些方法使数据管理_更加_容易。我们将详细介绍下面的基础知识，并讨论如何使用此简写来创建和查询数据。
 
-| **Data Type**          | **Standard Dynamo**                                      | **Code Block Equilvalent**                                    |
+| **数据类型(Data Type)** | **标准 Dynamo** | **等效代码块** |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Numbers                | ![](<../images/8-1/3/01 node - numbers.jpg>)       | ![](<../images/8-1/3/01 codeblock - numbers.jpg>)       |
-| Strings                | ![](<../images/8-1/3/02 node - string.jpg>)        | ![](<../images/8-1/3/02 codeblock- string.jpg>)         |
-| Sequences              | ![](<../images/8-1/3/03 node- sequence.jpg>)       | ![](<../images/8-1/3/03 codeblock- sequence.jpg>)       |
-| Ranges                 | ![](<../images/8-1/3/04 node- range.jpg>)          | ![](<../images/8-1/3/04 codeblock - range.jpg>)         |
-| Get Item at Index      | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../images/8-1/3/06 node - list create.jpg>)   | ![](<../images/8-1/3/06 codeblock - list create.jpg>)   |
-| Concatenate Strings    | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
-| Conditional Statements | ![](<../images/8-1/3/08 node - conditional.jpg>)   | ![](<../images/8-1/3/08 codeblock - conditional.jpg>)   |
+| 数字 | ![](<../images/8-1/3/01 node - numbers.jpg>) | ![](<../images/8-1/3/01 codeblock - numbers.jpg>) |
+| 字符串 | ![](<../images/8-1/3/02 node - string.jpg>) | ![](<../images/8-1/3/02 codeblock- string.jpg>) |
+| 序列 | ![](<../images/8-1/3/03 node- sequence.jpg>) | ![](<../images/8-1/3/03 codeblock- sequence.jpg>) |
+| 范围 | ![](<../images/8-1/3/04 node- range.jpg>) | ![](<../images/8-1/3/04 codeblock - range.jpg>) |
+| 获取索引处的项目 | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
+| 创建列表 | ![](<../images/8-1/3/06 node - list create.jpg>) | ![](<../images/8-1/3/06 codeblock - list create.jpg>) |
+| 连接字符串 | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
+| 条件语句 | ![](<../images/8-1/3/08 node - conditional.jpg>) | ![](<../images/8-1/3/08 codeblock - conditional.jpg>) |
 
-### Additional Syntax
+### 其他语法
 
 |                                     |                           |                                                                                          |
 | ----------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------- |
-| **Node(s)**                         | **Code Block Equivalent** | **Note**                                                                                 |
-| Any operator (+, &&, >=, Not, etc.) | +, &&, >=, !, etc.        | Note that “Not” becomes “!” but the node is called “Not” to distinguish from “Factorial” |
-| Boolean True                        | true;                     | Note lower case                                                                          |
-| Boolean False                       | false;                    | Note lower case                                                                          |
+| **节点** | **等效代码块** | **注释** |
+| 任何运算符（+、&&、>=、Not 等） | +、&&、>=、! 等 | 请注意，“Not”变为“!”但该节点称为“Not”以区分“阶乘” |
+| 布尔值 True | true; | 注意小写 |
+| 布尔值 False | false; | 注意小写 |
 
-### Ranges and Sequences
+### 范围和序列
 
-The method for defining ranges and sequences can be reduced to basic shorthand. Use the image below as a guide to the ".." syntax for defining a list of numerical data with code block. After getting the hang of this notation, creating numerical data is a really efficient process:
+定义范围和序列的方法可缩减为基本简写。使用下图作为“..”语法的指导，以使用代码块定义数值数据列表。在完成此标记法后，创建数值数据是一个非常有效的过程：
 
 ![](<../images/8-1/3/shorthand - ranges and sequences.jpg>)
 
-> 1. In this example, a number range is replaced by basic **Code Block** syntax defining the `beginning..end..step-size;` . Represented numerically, we get: `0..10..1;`
-> 2. Notice that the syntax `0..10..1;` is equivalent to `0..10;` A step-size of 1 is the default value for the shorthand notation. So `0..10;` will give a sequence from 0 to 10 with a step-size of 1.
-> 3. The _Sequence_ example is similar, except we use a "#" to state that we want 15 values in the list, rather than a list which goes up to 15. In this case, we are defining: `beginning..#ofSteps..step-size:` The actual syntax for the sequence is `0..#15..2`
-> 4. Using the _"#"_ from the previous step, we now place it in the _"step-size"_ portion of the syntax. Now, we have a _number range_ spanning from the _"beginning"_ to the _"end"_ and the _"step-size"_ notation evenly distributes a number of values between the two: `beginning..end..#ofSteps`
+> 1. 在此示例中，数字范围将替换为定义 `beginning..end..step-size;` 的基本**“代码块”**语法。通过数字表示，可以得到：`0..10..1;`
+> 2. 请注意，语法 `0..10..1;` 等同于 `0..10;`，步长 1 是简写表示法的默认值。因此，`0..10;` 将给出一个从 0 到 10 的序列（步长为 1）。
+> 3. _数字_示例类似，除了我们使用“#”来指明我们希望列表中包含 15 个值，而不是列表中的最大值为 15。在本例中，我们将定义：`beginning..#ofSteps..step-size:`，序列的实际语法为 `0..#15..2`
+> 4. 使用上一步中的_“#”_，现在将其放置在语法的_“step-size”_部分。现在，我们有一个_数字范围_，从_“beginning”_增长到_“end”_，_“step-size”_表示法指示在这两者之间均匀分布许多值：`beginning..end..#ofSteps`
 
-### Advanced Ranges
+### 高级范围
 
-Creating advanced ranges allows us to work with list of lists in a simple fashion. In the examples below, we're isolating a variable from the primary range notation, and creating another range of that list.
+创建高级范围后，我们即可简单地处理列表的列表。在下面的示例中，我们将隔离主要范围表示法的变量，并创建该列表的另一个范围。
 
 ![](<../images/8-1/3/shorthand - advance range 01.jpg>)
 
-> 1\. Creating nested ranges, compare the notation with a "#" vs. the notation without. The same logic applies as in basic ranges, except it gets a little more complex.
+> 1\.创建嵌套范围，将带“#”的表示法与不带符号的表示法进行比较。 相同逻辑在基本范围中都适用，但它稍显复杂。
 >
-> 2\. We can define a sub-range at any place within the primary range, and notice that we can have two sub-ranges as well.
+> 2\.我们可以在主范围内的任意位置处定义子范围，请注意，我们也可以有两个子范围。
 >
-> 3\. By controlling the "end" value in a range, we create more ranges of differing lengths.
+> 3\.通过控制范围中的“end”值，我们可以创建长度不同的更多范围。
 
-As a logic exercise, compare the two shorthands above and try to parse through how _subranges_ and the _#_ notation drive the resultant output.
+作为逻辑练习，请比较上述两个简写，并尝试解析 _subranges_ 和 _#_ 表示法如何驱动结果输出。
 
 ![](<../images/8-1/3/shorthand - advance range 02.jpg>)
 
-### Make Lists and Get Items From a List
+### 生成列表并从列表中获取项目
 
-In addition to making lists with shorthand, we can also create lists on the fly. These list can contain a wide range of element types and can also be queried (remember, lists are objects in themselves). To summarize, with code block you make lists and query items from a list with brackets (a.k.a. “square brackets”):
+除了使用简写生成列表外，我们还可以即时创建列表。这些列表可以包含多种元素类型，也可以进行查询（请记住，列表本身就是对象）。总之，在使用代码块的情况下，可以创建列表，并从带括号（即“方括号”）的列表中查询项目：
 
 ![](<../images/8-1/3/shorthand - list & get from list 01.jpg>)
 
-> 1\. Create lists quickly with strings and query them using the item index.
+> 1\.使用字符串快速创建列表，并使用项目索引进行查询。
 >
-> 2\. Create lists with variables and query using the range shorthand notation.
+> 2\.使用变量创建列表，并使用范围简写表示法进行查询。
 
-And managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
+管理嵌套列表的过程类似。请注意列表顺序，并使用多组方括号进行调用：
 
 ![](<../images/8-1/3/shorthand - list & get from list 02.jpg>)
 
-> 1\. Define a list of lists.
+> 1\.定义一列列表。
 >
-> 2\. Query a list with single bracket notation.
+> 2\.使用单括号表示法查询列表。
 >
-> 3\. Query an item with double bracket notation.
+> 3\.使用双括号表示法查询项目。
 
-## Exercise: Sine Surface
+## 练习：正弦曲面
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code block and existing Dynamo nodes in tandem: we use the code block for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
+在本练习中，我们将调整新的简写技能，以创建由范围和公式定义的精美蛋壳曲面。在本练习中，请注意我们如何串联使用代码块和现有 Dynamo 节点：我们将代码块用于繁重的数据提升，而 Dynamo 节点以可视方式布局来使定义清晰易读。
 
-Start by creating a surface by connecting the nodes above. Instead of using a number node to define width and length, double click on the canvas and type `100;` into a code block
+首先，通过连接上述节点创建曲面。请勿使用数字节点定义宽度和长度，而是双击画布并在代码块中键入 `100;`
 
 ![](<../images/8-1/3/shorthand - exercise 01.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 02.jpg>)
 
-> 1. Define a range between 0 and 1 with 50 divisions by typing `0..1..#50` into a **Code Block**.
-> 2. Connect the range into **Surface.PointAtParameter**, which takes u and v values between 0 and 1 across the surface. Remember to change the Lacing to Cross Product by right clicking on the **Surface.PointAtParameter** node.
+> 1. 通过在**“代码块”**中键入 `0..1..#50`，定义一个介于 0 和 1 之间的范围（其中包含 50 个划分）。
+> 2. 将该范围连接到**“Surface.PointAtParameter”**，该范围在曲面上提取介于 0 和 1 之间的 u 和 v 值。请记得通过在**“Surface.PointAtParameter”**节点上单击鼠标右键，将“连缀”更改为“叉积”。
 
-In this step, we employ our first function to move the grid of points up in the Z. This grid will drive a generated surface based on the underlying function. Add new nodes as shown in image below
+在此步骤中，我们将使用第一个函数以在 Z 方向上上移动点栅格。此栅格将基于底层函数驱动生成的曲面。 添加新节点，如下图所示
 
 ![](<../images/8-1/3/shorthand - exercise 03.jpg>)
 
-> 1. Rather than using a formula node, we use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
+> 1. 我们不使用公式节点，而是使用含有以下代码行的**“代码块”**：`(0..Math.Sin(x*360)..#50)*5;`。为了对此快速详细介绍，我们定义了一个内部带有公式的范围。此公式为正弦函数。在 Dynamo 中，正弦函数接收度数输入，因此为了获得完整正弦波，我们将x 值（这一范围输入介于 0 到 1 之间）乘以 360。 接下来，我们希望每行都具有与控制栅格点相同数量的划分，因此我们用 #50 定义了 50 个细分。 最后，乘数 5 只会增加平移幅度，因此我们可以在 Dynamo 预览中查看效果。
 
 ![](<../images/8-1/3/shorthand - exercise 04.jpg>)
 
-> 1. While the previous **Code Block** worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
+> 1. 虽然上一个**“代码块”**正常工作，但它并非完全参数化。我们希望动态驱动其参数，因此我们会将上一步中的代码行替换为 `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`。这使我们可以根据输入定义这些值。
 
-By changing the sliders (ranging from 0 to 10), we get some interesting results.
+通过更改滑块（范围介于 0 到 10 之间），我们得到了一些有趣的结果。
 
 ![](<../images/8-1/3/shorthand - exercise 05.gif>)
 
 ![](<../images/8-1/3/shorthand - exercise 06.jpg>)
 
-> 1. By doing a transpose on the number range, we reverse the direction of the curtain wave: `transposeList = List.Transpose(sineList);`
+> 1. 通过对数字范围执行转置，我们会反转幕墙波的方向：`transposeList = List.Transpose(sineList);`
 
 ![](<../images/8-1/3/shorthand - exercise 07.jpg>)
 
-> 1. We get a distorted eggshell surface when we add the sineList and the tranposeList: `eggShellList = sineList+transposeList;`
+> 1. 如果添加 sineList 和 tranposeList，我们会得到一个扭曲的蛋壳曲面：`eggShellList = sineList+transposeList;`
 
-Let's change the sliders values specified below to 'calm the waters' of this algorithm.
+我们会更改下面指定的滑块值，以使该算法“平静水面”。
 
 ![](<../images/8-1/3/shorthand - exercise 08.jpg>)
 
-Last, let's query isolated parts of the data with the Code Block. To regenerate the surface with a specific range of points, add the code block above between the **Geometry.Translate** and **NurbsSurface.ByPoints** node. This has the line of text: `sineStrips[0..15..1];`. This will select the first 16 rows of points (out of 50). Recreating the surface, we can see that we've generated an isolated portion of the grid of points.
+最后，让我们使用“代码块”查询数据的隔离部分。要使用特定范围的点重新生成曲面，请在 **Geometry.Translate** 和 **NurbsSurface.ByPoints** 节点之间添加上述代码块。以下是文本行：`sineStrips[0..15..1];`。这将选择前 16 行点（共 50 行）。通过重新创建曲面，可以查看我们生成了点栅格的隔离部分。
 
 ![](<../images/8-1/3/shorthand - exercise 09.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 10.jpg>)
 
-> 1. In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
+> 1. 在最后一步中，为了提高此**“代码块”**的参数化，我们使用介于 0 到 1 之间的滑块来驱动查询。我们使用以下代码行来执行此操作：`sineStrips[0..((List.Count(sineStrips)-1)*u)];`。这看起来可能会令人困惑，但代码行提供的方法让我们可以快速地将列表的长度缩放为 0 到 1 之间的乘数。
 
-A value of `0.53` on the slider creates a surface just past the midpoint of the grid.
+滑块上的值 `0.53` 会创建刚好经过栅格中点的曲面。
 
 ![](<../images/8-1/3/shorthand - exercise 11.jpg>)
 
-And as expected, a slider of `1` creates a surface from the full grid of points.
+如预期的一样，值为 `1` 的滑块会基于完整的栅格点创建曲面。
 
 ![](<../images/8-1/3/shorthand - exercise 12.jpg>)
 
-Looking at the visual graph, we can highlight the code blocks and see each of their functions.
+通过查看可视图形，我们可以亮显代码块并查看其每个函数。
 
 ![](<../images/8-1/3/shorthand - exercise 13.jpg>)
 
-> 1\. The first **Code Block** replaces the **Number** node.
+> 1\.第一个**“代码块”**替换**“Number”**节点。
 >
-> 2\. The second **Code Block** replaces the **Number Range** node.
+> 2\.第二个**“代码块”**替换**“Number Range”**节点。
 >
-> 3\. The third **Code Block** replaces the **Formula** node (as well as **List.Transpose**, **List.Count** and **Number Range**).
+> 3\.第三个**“代码块”**替换**“Formula”**节点（以及**“List.Transpose”**、**“List.Count”**和**“Number Range”**）。
 >
-> 4\. The fourth **Code Block** queries a list of lists, replacing the **List.GetItemAtIndex** node.
+> 4\.第四个**“代码块”**查询一列列表，以便替换**“List.GetItemAtIndex”**节点。

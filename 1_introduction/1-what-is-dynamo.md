@@ -1,25 +1,23 @@
 # What is Dynamo & How Does It Work?
 
-Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
+[](broken-reference/)
 
-{% hint style="info" %}
-Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
-{% endhint %}
+[************]()
 
-### The Process
+### 过程
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
+安装应用程序后，Dynamo 将使我们能够在可视化编程过程中工作，从而将元素连接在一起以定义关系和构成自定义算法的操作序列。 我们可以使用算法来处理各种应用程序（从处理数据到生成几何图形），所有操作均可实时完成，无需编写任何 `code`。
 
-![](<./images/1-1/nodes and wires - flow of data.jpg>)
+![](<.
 
-### Connecting Nodes and Wires
+### 使用线连接节点
 
-Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
+[](../a\_appendix/a-1\_visual-programming-and-dynamo.md)
 
-![](<./images/1-1/what is dynamo - connecting nodes with wires.gif>)
+![](<.
 
 ## What can Dynamo Achieve?
 
-From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
+从对项目工作流使用可视化编程到开发自定义工具，Dynamo 是各种令人兴奋的应用程序不可或缺的一部分。
 
-[Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[关注 Pinterest 上的“Dynamo 操作”讨论板。]()

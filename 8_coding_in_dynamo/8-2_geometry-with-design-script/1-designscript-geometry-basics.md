@@ -1,8 +1,8 @@
-# DesignScript Geometry Basics
+# DesignScript 几何体基础知识
 
-### Point
+### 点
 
-The simplest geometrical object in the Dynamo standard geometry library is a point. All geometry is created using special functions called constructors, which each return a new instance of that particular geometry type. In Dynamo, constructors begin with the name of the object’s type, in this case Point, followed by the method of construction. To create a three dimensional point specified by x, y, and z Cartesian coordinates, use the _ByCoordinates_ constructor:
+Dynamo 标准几何体库中最简单的几何对象是一个点。所有几何体均使用称为构造函数的特殊函数创建，每个函数都返回该特定几何体类型的新实例。在 Dynamo 中，构造函数以对象类型的名称（在本例中为“Point”）开始，然后是构造方法。要创建由 x、y 和 z 笛卡尔坐标指定的三维点，请使用 _ByCoordinates_ 构造函数：
 
 ![](../images/8-2/1/GeometryBasics\_01.png)
 
@@ -16,9 +16,9 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Constructors in Dynamo are typically designated with the “_By_” prefix, and invoking these functions returns a newly created object of that type. This newly created object is stored in the variable named on the left side of the equal sign.
+Dynamo 中的构造函数通常使用前缀为“_By_”指定，调用这些函数将返回该类型的新创建对象。此新创建的对象存储在等号左侧命名的变量中。
 
-Most objects have many different constructors, and we can use the _BySphericalCoordinates_ constructor to create a point lying on a sphere, specified by the sphere’s radius, a first rotation angle, and a second rotation angle (specified in degrees):
+大多数对象都有许多不同的构造函数，我们可以使用 _BySphericalCoordinates_ 构造函数创建位于球体上的点，由球体的半径、第一个旋转角度和第二个旋转角度（以度为单位指定）指定：
 
 ![](../images/8-2/1/GeometryBasics\_02.png)
 
@@ -34,9 +34,9 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
     phi);
 ```
 
-### From Point to Line
+### 点到直线
 
-Points can be used to construct higher dimensional geometry such as lines. We can use the _ByStartPointEndPoint_ constructor to create a Line object between two points:
+点可用于构造更大尺寸的几何体（例如直线）。我们可以使用 _ByStartPointEndPoint_ 构造函数在两点之间创建“直线”对象：
 
 ![](../images/8-2/1/GeometryBasics\_03.png)
 
@@ -51,7 +51,7 @@ l = Line.ByStartPointEndPoint(p1, p2);
 
 ### From Line to Surface
 
-Similarly, lines can be used to create higher dimensional surface geometry, for instance using the _Loft_ constructor, which takes a series of lines or curves and interpolates a surface between them.
+同样，直线可用于创建更多维的曲面几何体，例如使用_“放样”_构造函数，该构造函数可获取一系列直线或曲线，并在它们之间内插曲面。
 
 ![](../images/8-2/1/GeometryBasics\_04.png)
 
@@ -77,7 +77,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 ### From Surface to Solid
 
-Surfaces too can be used to create higher dimensional solid geometry, for instance by thickening the surface by a specified distance. Many objects have functions attached to them, called methods, allowing the programmer to perform commands on that particular object. Methods common to all pieces of geometry include _Translate_ and _Rotate_, which respectively translate (move) and rotate the geometry by a specified amount. Surfaces have a _Thicken_ method, which take a single input, a number specifying the new thickness of the surface.
+曲面也可用于创建更多维的实体几何体，例如通过按指定距离加厚曲面。许多对象都附加了函数（称为方法），程序员可以对该特定对象执行命令。所有几何体通用的方法包括_“平移”_和_“旋转”_，分别按指定的量平移（移动）和旋转几何体。曲面具有_“加厚”_方法，该方法采用单个输入，即指定曲面的新厚度的数字。
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 
@@ -97,9 +97,9 @@ surf = Surface.ByLoft([l1, l2]);
 solid = surf.Thicken(4.75, true);
 ```
 
-### Intersect
+### 交集
 
-_Intersection_ commands can extract lower dimensional geometry from higher dimensional objects. This extracted lower dimensional geometry can form the basis for higher dimensional geometry, in a cyclic process of geometrical creation, extraction, and recreation. In this example, we use the generated Solid to create a Surface, and use the Surface to create a Curve.
+_交点_命令可以从较多维的对象提取较少维的几何体。提取的较少维的几何体可以在几何体创建、提取和重建的循环过程中形成较多维几何体的基础。在本示例中，我们使用生成的实体来创建曲面，并使用曲面来创建曲线。
 
 ![](../images/8-2/1/GeometryBasics\_06.png)
 

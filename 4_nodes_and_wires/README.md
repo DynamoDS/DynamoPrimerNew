@@ -1,126 +1,125 @@
-# Nodes and Wires
+# 节点和导线
 
-## Nodes
+## 节点
 
-In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each **Node** performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.
+在 Dynamo 中，**节点**是连接到可视化程序的对象。每个**节点**都执行一项操作 - 有时这可能与存储数字一样简单，或者可能是更复杂的操作，例如创建或查询几何体。
 
-### Anatomy of a Node
+### 节点剖析
 
-Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
+Dynamo 中的大多数节点由五个部分组成。虽然存在例外（如输入节点），但每个节点的剖析可描述如下：
 
 ![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
-> 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
-> 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
+> 1. 名称 - 采用 `Category.Name` 命名约定的节点名称
+> 2. 主体 - 节点的主体 - 在此处单击鼠标右键可显示整个节点级别的选项
+> 3. 端口（输入和输出）- 导线的接受器，它们向节点提供输入数据以及节点操作的结果
+> 4. 默认值 - 在输入端口上单击鼠标右键 - 某些节点具有可以使用也可以不使用的默认值。
+> 5. 连缀图标 - 表示为匹配列表输入指定的[“连缀”选项](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing)（稍后再做详细介绍）
 
-### Nodes Input/Output Ports
+### 节点输入/输出端口
 
-The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.
+节点的输入和输出称为端口，并充当导线的接受器。数据通过左侧的端口进入节点，并在节点执行右侧的操作后流出节点。
 
-Ports expect to receive data of a certain type. For instance, connecting a number such as _2.75_ to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply _"Red"_ to the same Port it will result in an error.
+端口希望接收特定类型的数据。例如，将数字（如 _2.75_）连接到坐标点节点上的端口将成功创建点；但是，如果我们向同一端口提供_“Red”_，则会导致错误。
 
 {% hint style="info" %}
-Tip: Hover over a Port to see a tooltip containing the data type expected.
+提示：将光标悬停在端口上，可查看包含预期数据类型的工具提示。
 {% endhint %}
 
 ![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
-> 1. Port Label
-> 2. Tool Tip
-> 3. Data Type
-> 4. Default Value
+> 1. 端口标签
+> 2. 工具提示
+> 3. 数据类型
+> 4. 默认值
 
-### Node States
+### 节点状态
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
+Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，来提供执行可视化程序的状态的指示。状态层次结构遵循以下顺序：“错误”>“警告”>“信息”>“预览”。
 
-Hovering or right-clicking over the Name or Ports presents additional information and options.
+将光标悬停在名称或端口上或在其上单击鼠标右键，可显示其他信息和选项。
 
 ![](<images/nodes and wires - node states.jpg>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 1. 活动 - 背景为深灰色的节点连接良好，且已成功连接其所有输入
+> 2. 错误状态 - 节点下方的红色状态栏指示节点处于“错误”状态
+> 3. 冻结 - 透明节点已打开冻结，挂起节点的执行
+> 4. 背景预览 - 节点和眼睛图标下方的灰色状态栏 ![](<images/nodes and wires - preview off.jpg>) 指示几何图形预览已关闭。
+> 5. 已选定 - 当前选定节点在其边界上以浅绿色亮显
+> 6. 警告 - 节点下方的黄色状态栏指示“警告”状态，这意味着它们缺少输入数据，也可能数据类型不正确。
 
-#### Handling Error or Warning Nodes
+#### 处理错误或警告节点
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+如果可视化程序包含警告或错误，Dynamo 将提供有关该问题的其他信息。任何黄色节点在名称上方也有工具提示。将光标悬停在警告 ![](<images/nodes and wires - node warning icon.png>) 或错误 ![](<images/nodes and wires - node error icon.png>) 工具提示图标上以将其展开。
 
 {% hint style="info" %}
-Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
-{% endhint %}
+提示：掌握此工具提示信息后，检查上游节点以查看所需的数据类型或数据结构是否出错。{% endhint %}
 
 ![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
-> 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 1. 警告工具提示 -“空”或无数据不能理解为双精度，即一个数字
+> 2. 使用“Watch”节点检查输入数据
+> 3. 上游“Number”节点将“Red”存储为非数字
 
-## Wires
+## 导线
 
-Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.
+导线连接节点以创建关系并建立可视化程序的流。我们可以按照字面意思将其视为电线，用于将数据脉冲从一个对象传送到下一个对象。
 
 ### Program Flow <a href="#program-flow" id="program-flow"></a>
 
-Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the **Flow of Data** in the Visual Program.
+导线将一个节点的输出端口连接到另一个节点的输入端口。此方向性将在可视化程序中建立**数据流**。
 
-Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
+输入端口位于左侧，输出端口位于节点的右侧；因此，我们通常可以说程序流从左到右移动。
 
 ![](<images/nodes and wires - flow of data.jpg>)
 
 ### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+通过在一个端口上单击鼠标左键以创建导线，然后在另一个节点的端口上单击鼠标左键以创建连接。在建立连接的过程中，导线将显示为虚线，并在成功连接后进行捕捉以成为实线。
 
-The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
+数据将始终通过此导线从输出流到输入；但是，我们可以按照单击连接端口的顺序沿任意方向创建导线。
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
 ### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
 
-Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
+通常，我们要通过编辑导线表示的连接来调整可视化程序中的程序流。要编辑导线，请在已连接节点的输入端口上单击。现在有两种选择：
 
-* Change connection to an input Port, left-click on another input Port
+* 要更改到输入端口的连接，请在另一个输入端口上单击鼠标左键
 
 ![](<images/nodes and wires - edit wire change port (2).gif>)
 
-* To remove the Wire, pull the Wire away and left-click on Workspace
+* 要删除导线，请将导线移开并在工作空间上单击鼠标左键
 
 ![](<images/nodes and wires - edit wires remove.gif>)
 
-* Reconnect multiple wires using Shift+left-click
+* 使用 Shift+单击鼠标左键来重新连接多条导线
 
 ![](<images/nodes and wires - edit multi ports.gif>)
 
-* Duplicate a wire using Ctrl+left-click
+* 使用 Ctrl+单击鼠标左键来复制导线
 
 ![](<images/nodes and wires - duplicate wire.gif>)
 
-#### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
+#### 默认导线与亮显的导线<a href="#wire-previews" id="wire-previews"></a>
 
-By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
+默认情况下，导线将通过灰色笔划进行预览。选择某个节点后，它将使用与该节点相同的浅绿色亮显渲染任何连接导线。
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
-> 1. Highlighted Wire
-> 2. Default Wire
+> 1. 亮显的导线
+> 2. 默认导线
 
-**Hide Wires by Default**
+**默认隐藏导线**
 
-In case you prefer to hide the Wires in your graph, you can find this option from View > Connectors > untick Show Connectors.
+如果您希望在图形中隐藏导线，可以从“视图”>“连接器”>“取消勾选显示连接器”中找到此选项。
 
-With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
+使用此设置，只有选定的节点及其连接线将以淡绿色亮显。
 
 ![](<images/nodes and wires - hide wires setting (1).gif>)
 
-#### Hide Individual Wire Only
+#### 仅隐藏单条导线
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+还可以仅通过在节点输出上单击鼠标右键 > 选择“隐藏导线”来隐藏选定的导线
 
 ![](<images/nodes and wires - hide selected wire.gif>)

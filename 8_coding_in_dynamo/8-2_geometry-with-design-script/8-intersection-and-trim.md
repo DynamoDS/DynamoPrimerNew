@@ -1,19 +1,19 @@
-# Intersection and Trim
+# 相交和修剪
 
-Many of the examples so far have focused on the construction of higher dimensional geometry from lower dimensional objects. Intersection methods allow this higher dimensional geometry to generate lower dimensional objects, while the trim and select trim commands allow script to heavily modify geometric forms after they’ve been created.
+目前，许多示例都关注从较少维的对象构造较多维的几何体。相交方法允许此较多维的几何体生成较少维的对象，而修剪和选择修剪命令允许脚本在创建几何形状后对其进行大量修改。
 
-The _Intersect_ method is defined on all pieces of geometry in Dynamo, meaning that in theory any piece of geometry can be intersected with any other piece of geometry. Naturally some intersections are meaningless, such as intersections involving Points, as the resulting object will always be the input Point itself. The other possible combinations of intersections between objects are outlined in the following chart. The following chart outlines the result of various intersection operations:
+_Intersect_ 方法在 Dynamo 的所有几何体上定义，这意味着理论上，任何几何体都可以与任何其他几何体相交。某些交点自然没有意义（例如涉及点的交点），因为结果对象将始终是输入点本身。下图概述了对象之间可能存在的交点组合。下图概述了各种相交操作的结果：
 
-### **Intersect**
+### **相交(Intersect)**
 
-| _With:_     | Surface | Curve | Plane        | Solid   |
+| _使用:(With:)_ | 曲面 | 曲线 | 平面 | 实体 |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Surface** | Curve   | Point | Point, Curve | Surface |
-| **Curve**   | Point   | Point | Point        | Curve   |
-| **Plane**   | Curve   | Point | Curve        | Curve   |
-| **Solid**   | Surface | Curve | Curve        | Solid   |
+| **曲面** | 曲线 | 点 | 点，曲线 | 曲面 |
+| **曲线(Curve)** | 点 | 点 | 点 | 曲线 |
+| **平面(Plane)** | 曲线 | 点 | 曲线 | 曲线 |
+| **实体** | 曲面 | 曲线 | 曲线 | 实体 |
 
-The following very simple example demonstrates the intersection of a plane with a NurbsSurface. The intersection generates a NurbsCurve array, which can be used like any other NurbsCurve.
+下面非常简单的示例演示了平面与 NurbsSurface 的交集。该交集将生成 NurbsCurve 数组，可像使用任何其他 NurbsCurve 一样使用。
 
 ![](../images/8-2/8/IntersectionAndTrim\_01.png)
 
@@ -34,18 +34,18 @@ crvs = surf.Intersect(pl);
 crvs_moved = crvs.Translate(0, 0, 10);
 ```
 
-The _Trim_ method is very similar to the Intersect method, in that it is defined for almost every piece of geometry. However, there are far more limitations on _Trim_ than on _Intersect_.
+_Trim_ 方法与“Intersect”方法非常相似，因为几乎为每个几何体都定义了该方法。但是，与 _Intersect_ 相比，_Trim_ 存在更多限制。
 
-### **Trim**
+### **修剪**
 
-|             | _Using:_ Point | Curve | Plane | Surface | Solid |
+|             | _使用：_点 | 曲线 | 平面 | 曲面 | 实体 |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _On:_ Curve | Yes            | No    | No    | No      | No    |
-| Polygon     | -              | No    | Yes   | No      | No    |
-| Surface     | -              | Yes   | Yes   | Yes     | Yes   |
-| Solid       | -              | -     | Yes   | Yes     | Yes   |
+| _位置：_曲线 | 是 | 否 | 否 | 否 | 否 |
+| 多边形 | - | 否 | 是 | 否 | 否 |
+| 曲面 | - | 是 | 是 | 是 | 是 |
+| 实体 | - | - | 是 | 是 | 是 |
 
-Something to note about _Trim_ methods is the requirement of a “select” point, a point which determines which geometry to discard, and which pieces to keep. Dynamo finds and discards the trimmed geometry closest to the select point.
+关于 _Trim_ 方法需要注意的是，需要“选择”点、确定要丢弃哪些几何体的点以及要保留哪些部分。Dynamo 将查找并放弃与选择点最近的修剪的几何体。
 
 ![](../images/8-2/8/IntersectionAndTrim\_02.png)
 

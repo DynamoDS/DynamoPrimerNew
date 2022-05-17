@@ -1,38 +1,37 @@
-# Editing
+# 编辑
 
-A powerful feature of Dynamo is that you can edit parameters on a parametric level. For example, a generative algorithm or the results of a simulation can be used to drive the parameters of an array of elements. This way, a set of instances from the same family can have custom properties in your Revit project.
+Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例如，衍生式算法或模拟结果可用于驱动元素阵列的参数。这样，同一族中的一组实例可以在 Revit 项目中具有自定义特性。
 
-### Type and Instance Parameters
+### 类型和实例参数
 
-![Exercise](<./images/3/32 (2).jpg>)
+![Exercise](<.
 
-> 1. Instance parameters define the aperture of the panels on the roof surface, ranging from an Aperture Ratio of 0.1 to 0.4.
-> 2. Type-based parameters are applied to every element on the surface because they are the same family type. The material of each panel, for example, can be driven by a type-based parameter.
+> 1. 实例参数定义屋顶表面上嵌板的孔径，Aperture Ratio 的范围介于 0.1 到 0.4 之间。
+> 2. 基于类型的参数将应用于表面上的每个图元，因为它们的族类型相同。例如，每个嵌板的材质都可以由基于类型的参数驱动。
 
-![Exercise](./images/3/params.jpg)
+![练习](./images/3/params.jpg)
 
-> 1. If you've set up a Revit family before, remember that you have to assign a parameter type (string, number, dimension, etc.) Be sure to use the correct data type when assigning parameters from Dynamo.
-> 2. You can also use Dynamo in combination with parametric constraints defined in a Revit family's properties.
+> 1. 如果之前已设置过 Revit 族，请记住，需要指定参数类型（字符串、数字、尺寸标注等）在 Dynamo 中指定参数时，请务必使用正确的数据类型。
+> 2. 还可以将 Dynamo 与在 Revit 族的特性中定义的参数化约束结合使用。
 
-As a quick review of parameters in Revit, we recall that there are type parameters and instance parameters. Both can be edited from Dynamo, but we'll work with instance parameters in the exercise below.
+在 Revit 中快速查看参数时，我们要记得有类型参数和实例参数。这两个参数在 Dynamo 中都可以进行编辑，但我们在下面的练习中使用的是实例参数。
 
-{% hint style="info" %}
-As you discover the wide-reaching application of editing parameters, you may want to edit a large quantity of elements in Revit with Dynamo. This can be a _computationally expensive_ operation, meaning that it can be slow. If you're editing a large number of elements, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
-{% endhint %}
+注意：在发现了编辑参数的广泛应用后，您可能想在 Revit 中使用 Dynamo 编辑大量图元。 这可能是_计算成本高昂_的操作，这意味着它的速度可能会很慢。如果要编辑大量图元，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看[“实体”章节](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)中的“冻结”部分。
 
-### Units
 
-As of version 0.8, Dynamo is fundamentally unitless. This allows Dynamo to remain an abstract visual programming environment. Dynamo nodes that interact with Revit dimensions will reference the Revit project's units. For example, if you are setting a length parameter in Revit from Dynamo, the number in Dynamo for the value will correspond to the default units in the Revit project. The exercise below works in meters.
+### 单位
 
-For a quick conversion of units, use the _"Convert Between Units"_ node. This is a handy tool for converting Length, Area, and Volume units on the fly.
+从版本 0.8 开始，Dynamo 基本上是无单位的。这样，Dynamo 便可保持抽象的可视化编程环境。与 Revit 尺寸标注交互的 Dynamo 节点将参照 Revit 项目的单位。例如，如果在 Revit 中从 Dynamo 设置长度参数，则 Dynamo 中的值数值将对应 Revit 项目中的默认单位。下面的练习以米为单位。
 
-![](<./images/3/editing - units.jpg>)
+要快速转换单位，请使用_“Convert Between Units”_节点。这是一个方便工具，可用于即时转换长度、面积和体积单位。
 
-## Exercise
+![](<.
+
+## 练习
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="./datasets/3/Revit-Editing.zip" %}
 
@@ -40,55 +39,54 @@ For a quick conversion of units, use the _"Convert Between Units"_ node. This is
 The exercise below works in meters.
 {% endhint %}
 
-This exercise focuses on editing Revit elements without performing geometric operation in Dynamo. We're not importing Dynamo geometry here, just editing parameters in a Revit project. This exercise is basic, and to the more advanced Revit users, notice that these are instance parameters of a mass, but the same logic can be applied to an array of elements to customize on a large scale. This is all done with the "Element.SetParameterByName" node.
+本练习重点介绍如何编辑 Revit 图元，而无需在 Dynamo 中执行几何操作。我们在此处不会输入 Dynamo 几何图形，只需在 Revit 项目中编辑参数即可。本练习是基本练习，对于更高级的 Revit 用户，请注意这些是体量的实例参数，但可以将相同逻辑应用于图元阵列以进行大规模自定义。这全部是通过“Element.SetParameterByName”节点完成的。
 
 ### Editing Building Mass Parameters
 
-Begin with the example Revit file for this section. We've removed the structural elements and adaptive trusses from the previous section. In this exercise, we will focus on a parametric rig in Revit and manipulating in Dynamo.
+从本部分的 Revit 示例文件开始。我们已从上一部分中删除了结构图元和自适应桁架。在本练习中，我们将重点介绍 Revit 中的参数化装备，以及 Dynamo 中的操作。
 
-Selecting the building in Mass in Revit, we see an array of instance parameters in the properties panel.
+在 Revit 中，选择体量中的建筑，我们可以在“特性”面板中看到实例参数的阵列。
 
-![](<./images/3/editing - exercise 01.jpg>)
+![](<.
 
 In Dynamo, we can retrieve the parameters by selecting the targeting element.
 
-![](<./images/3/editing - exercise 02.jpg>)
+![](<.
 
-> 1. Select the building mass with the _"Select Model Element"_ node.
-> 2. We can query all of the parameters of this mass with the _"Element.Parameters"_ node. This includes type and instance parameters.
+> 1. 使用_“Select Model Element”_节点选择建筑体量。
+> 2. 我们可以使用_“Element.Parameters”_节点查询此体量的所有参数。这包括类型和实例参数。
 
-![](<./images/3/editing - exercise 03.jpg>)
+![](<.
 
-> 1. Reference the _Element. Parameters_ node to find target parameters. Or, we can view the properties panel from the previous step to choose which parameter names we want to edit. In this case, we are looking for the parameters which affect the large geometric moves on the building mass.
-> 2. We will make changes to the Revit element using the _Element.SetParameterByName_ node
-> 3. Use C\_ode Block to\_ define a list of parameters, with quotes around each item to denote a string. We can also use the List.Create node with a series of _"string"_ nodes connected to multiple inputs but Code block is faster and easier. Make sure that the string matches the exact name in Revit, case-specific: `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
+> 1. __或者，我们可以查看上一步中的“特性”面板，以选择要编辑的参数名称。在本例中，我们将查找影响建筑体量上较大几何移动的参数。
+> 2. 我们将使用 _Element.SetParameterByName_ 节点对 Revit 图元进行更改。
+> 3. __`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
-![](<./images/3/editing - exercise 04.jpg>)
+![](<.
 
-> 1. We also want to designate values for each parameter. Add six _"integer sliders"_ to the canvas and rename to the corresponding parameter in the list. Also, set the values of each slider to the image above. In order from top-to-bottom: 62,92,25,22,8,12
-> 2. Define another _code block_ with a list of the same length as the parameter names. In this case, we name variables (without quotes) which create inputs for the _code block._ Plug the _sliders_ into each respective input: `{bw,bl,bh,ao,io,lu};`
-> 3. Connect the Code Block _to the "Element.SetParameterByName"\*_ value input. With run automatically checked, we will automatically see results.
+> 1. 我们还要为每个参数指定值。向画布添加六个_“整数滑块”_，然后重命名为列表中相应的参数。此外，根据上图设置每个滑块的值。按从上到下的顺序：62,92,25,22,8,12
+> 2. 定义另一个_代码块_，其中列表与参数名称具有相同长度。在本例中，我们命名变量（不带引号），这将为_代码块创建输入。___`{bw,bl,bh,ao,io,lu};`
+> 3. __在选中“自动运行”后，我们将自动看到结果。
 
-{% hint style="warning" %}
-\*This demonstration works with instance parameters, but not type parameters.
-{% endhint %}
+*注意 - 此演示使用的是实例参数，而不是类型参数。
 
-Just as in Revit, many of these parameters are dependent on each other. There are of course combinations where the geometry may break. We can remedy this issue with defined formulas in the parameter properties, or we can setup a similar logic with math operations in Dynamo (this is an additional challenge if you'd like to expand on the exercise).
 
-![](<./images/3/editing - exercise 05.jpg>)
+练习与在 Revit 中一样，其中许多参数彼此相关。 当然，在这些组合中几何图形可能会中断。我们可以在参数特性中定义公式来解决这个问题，也可以在 Dynamo 中使用数学运算设置类似逻辑（如果您想扩展练习，这也是一项额外的挑战）。
 
-> 1. This combination gives a funky new design to the building mass: 100, 92, 100, 25, 13, 51
+![](<.
+
+> 1. 此组合为建筑体量提供了功能强大的新设计：100,92,100,25,13,51.4
 
 ### Editing Facade Parameters
 
 Next, let's look at how we can edit the facade using a similar process.
 
-![](<./images/3/editing - exercise 06.jpg>)
+![](<.
 
-> 1. Copy the graph and focus on the facade glazing which will house the truss system. We isolate four parameters in this case: `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
-> 2. Additionally, we create _number sliders_ and rename to the appropriate parameters. The first three sliders from top-to-bottom should be remapped to a domain of \[0,10], while the final slider, _"Facade Bend Location"_, should be remapped to a domain of \[0,1]. These values, from top-to-bottom should start with these values (although they're arbitrary): 2.68, 2.64, 2.29, 0.5
-> 3. Define a new Code block and connect the sliders: `{so,mo,no,fbl};`
+> 1. 我们复制图形，并重点介绍将容纳桁架系统的外立面玻璃。 `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
+> 2. 此外，我们还会创建_数字滑块_，然后重命名为相应的参数。前三个滑块（从上到下）应重新映射到 [0,10] 的域，而最后一个滑块（_“外立面弯曲位置”_）应重新映射到 [0,1] 的域。 这些值（从上到下）应从以下这些值开始（尽管它们是任意值）：2.68,2.64,2.29,0.5
+> 3. `{so,mo,no,fbl};`
 
-![](<./images/3/editing - exercise 07.jpg>)
+![](<.
 
-> 1. By changing the _sliders_ in this part of the graph, we can make the facade glazing much more substantial: 9.98, 10.0, 9.71 ,0.31
+> 1. 通过更改图形此部分中的_滑块_，我们可以使外立面玻璃更加实质：9.98,10.0,9.71,0.31

@@ -1,79 +1,77 @@
-# Scripting Strategies
+# 脚本编写策略
 
-Text-based scripting within the visual-scripting environment enables powerful and visual relationships using DesignScript, Python, and ZeroTouch (C#). The user can expose elements such as input sliders, condense large operations into DesignScript, and access powerful tools and libraries through Python or C# all within the same workspace. If managed effectively, combining these strategies can lend a great deal of customization, clarity, and efficiency to the overall program. The following are a set of guidelines to help you augment your visual-script with text-script.
+可视化脚本编写环境中基于文本的脚本编写支持使用 DesignScript、Python 和 ZeroTouch (C#) 实现功能强大的可视化关系。用户可以显示输入滑块等图元，将大型操作压缩为 DesignScript，以及通过 Python 或 C＃ 访问功能强大的工具和库，所有这些操作都可在同一工作空间内进行。在有效管理的情况下，结合使用这些策略可以将大量自定义、清晰和高效提供给整个程序。以下是一组准则，可帮助您用文本脚本来增强可视化脚本。
 
 ![](./images/2/cad-chart-textual.jpg)
 
-### Know When to Script
+### 了解何时编写脚本
 
-Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
+文本脚本编写可建立比可视化编程复杂度更高的关系，但其功能也会明显重叠。这很有意义，因为节点实际上是预打包的代码，我们可能会采用 DesignScript 或 Python 编写整个 Dynamo 程序。但是，我们使用可视化脚本编写，因为节点和线的接口会创建直观的图形信息流。了解文本脚本编写的功能在哪些方面超出可视化脚本编写，这将向您提供应在何时使用它的重大提示，从而不会放弃节点和线的直觉本质。以下是有关何时编辑脚本以及要使用语言的准则。
 
-**Use text-scripting for:**
+**文本脚本编写用于：**
 
-* Looping
-* Recursion
-* Accessing external libraries
+* 循环(Looping)
+* 递归
+* 访问外部库
 
-**Choose a language:**
+**选择语言：**
 
 |                    |             |               |                    |                    |               |
 | ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
-|                    | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
-| **DesignScript**   | Yes         | Yes           | Yes                | No                 | Yes           |
-| **Python**         | Yes         | Yes           | Partially          | Yes                | No            |
-| **ZeroTouch (C#)** | No          | No            | No                 | Yes                | No            |
+|                    | **循环(Looping)** | **递归** | **压缩节点** | **扩展名 库** | **简写** |
+| **DesignScript** | 是 | 是 | 是 | 否 | 是 |
+| **Python** | 是 | 是 | 部分 | 是 | 否 |
+| **ZeroTouch (C#)** | 否 | 否 | 否 | 是 | 否 |
 
-{% hint style="info" %}
-Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
-{% endhint %}
+有关每个 Dynamo 库提供的访问内容的列表，请参见[脚本编写参照](13-3\_scripting-reference.md)。
 
-### Think Parametrically
 
-When scripting in Dynamo, an inevitably parametric environment, it is wise to structure your code relative to the framework of nodes and wires it will be living in. Consider the node containing your text-script as though it is any other node in the program with a few specific inputs, a function, and an expected output. This immediately gives your code inside the node a small set of variables from which to work, the key to a clean parametric system. Here are some guidelines for better integrating code into a visual program.
+### 以参数化方式考虑
 
-**Identify the external variables:**
+在不可避免的参数化环境 Dynamo 中编写脚本时，明智的做法是相对于将要驻留的节点和线框架来构建代码。考虑使用包含文本脚本的节点，就像它是程序中具有几个特定输入、函数和预期输出的任何其他节点一样。这会立即为节点内的代码提供一小组在其中起作用的变量（这是干净参数系统的关键）。以下是一些将代码更好地集成到可视化程序中的准则。
 
-* Try to determine the given parameters in your design problem so that you can construct a model that directly builds off that data.
-* Before writing code, identify the variables:
-  * A minimal set of inputs
-  * The intended output
-  * Constants
+**标识外部变量：**
 
-![](<./images/2/think parametrically 01.jpg>)
+* 尝试确定设计问题中的给定参数，以便可以构造直接基于该数据构建的模型。
+* 编写代码之前，请标识变量：
+   * 最少的一组输入
+   * 预期输出
+   * 常数
 
-> Several variables have been established prior to writing code.
+![](<.
+
+> 编写代码之前已建立多个变量。
 >
-> 1. The surface we will simulate rainfall on.
-> 2. The number of rain drops (agents) we want.
-> 3. How far we want the rain drops to travel.
-> 4. Toggle between descending the steepest path versus traversing the surface.
-> 5. Python Node with the respective number of inputs.
-> 6. A Code Block to make the returned curves blue.
+> 1. 我们将模拟降雨所基于的曲面。
+> 2. 我们想要的雨滴（代理）数。
+> 3. 我们想让雨滴跑多远。
+> 4. 在降低最陡路径与遍历曲面之间切换。
+> 5. 具有相应数量输入的 Python 节点。
+> 6. 用于使返回的曲线变为蓝色的代码块。
 
-**Design the internal relationships:**
+**设计内部关系：**
 
-* Parametricism allows for certain parameters or variables to be edited in order to manipulate or alter the end result of an equation or system.
-* Whenever entities in your script are logically related, aim to define them as functions of each other. This way when one is modified, the other can update proportionally.
-* Minimize number of inputs by only exposing key parameters:
-  * If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.
+* 参数化允许编辑某些参数或变量，以便操纵或改变表达式或系统的最终结果。
+* 只要脚本中的实体在逻辑上相关，就应将它们定义为彼此的函数。这样，当修改一个实体时，另一个实体可以相应更新。
+* 通过仅显示关键参数来最大程度减少输入数量：
+   * 如果可以从更多父参数派生一组参数，则仅将父参数公开为脚本输入。通过降低脚本接口的复杂性，从而提高脚本的可用性。
 
-![](<./images/2/think parametrically 02.jpg>)
+![](<.
 
-> The code "modules" from the example in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> []()
 >
-> 1. Inputs.
-> 2. Variables internal to the script.
-> 3. A loop that uses these inputs and variables to perform its function.
+> 1. 输入。
+> 2. 脚本内部变量。
+> 3. 使用这些输入和变量执行其函数的循环。
 
-{% hint style="info" %}
-Tip: Place as much emphasis on the process as you do on the solution.
-{% endhint %}
+技巧：与解决方案一样，应尽可能重视过程。
 
-### **Don't repeat yourself (the DRY principle):**
 
-* When you have multiple ways to express the same thing in your script, at some point the duplicate representations will fall out of sync which can lead to maintenance nightmares, poor factoring, and internal contradictions.
-* The DRY principle is stated as "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system":
-  * When this principle is successfully applied, all the related elements in your script change predictably and uniformly and all the unrelated elements do not have logical consequences on each other.
+### **不要自我重复（DRY 原则）：**
+
+* 当有多种方法用于在脚本中表达同一内容时，有时重复的表示形式将无法进行同步，这可能导致维护困难、分解不良和内部矛盾。
+* DRY 原则表述为“系统中的每条知识都必须具有单一、明确、权威的表示形式”：
+   * 成功应用该原则后，脚本中的所有相关图元都会以可预测的方式统一更改，并且所有不相关的图元彼此之间不会产生逻辑上的后果。
 
 ```
 ### BAD
@@ -94,128 +92,126 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}
-Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
-{% endhint %}
+技巧：在脚本中复制实体（如上例中的常量）之前，请问自己是否可以改为链接到源。
 
-### Structure Modularly
 
-As your code gets longer and more complex the “big idea”, or overarching algorithm becomes increasingly illegible. It also becomes more difficult to keep track of what (and where) specific things happen, find bugs when things go wrong, integrate other code, and assign development tasks. To avoid these headaches it’s wise to write code in modules, an organizational strategy that breaks up code based on the task it executes. Here are some tips for making your scripts more manageable by way of modularization.
+### 结构模块化
 
-**Write code in modules:**
+随着代码变得越来越长，越来越复杂，“大创意”或总体算法变得越来越难以辨认。此外，在跟踪具体内容发生的情况（和地点）、在出错时发现 Bug、集成其他代码以及分配开发任务方面也变得更加困难。为了避免出现这些麻烦，明智的做法是以模块形式编写代码，这是一种根据代码所执行任务将代码分解的组织策略。以下是一些通过模块化方式使脚本更易于管理的一些技巧。
 
-* A "module" is a group of code that performs a specific task, similar to a Dynamo Node in the workspace.
-* This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).
-* Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.
+**以模块形式编写代码：**
 
-![](<./images/2/think parametrically 02.jpg>)
+* “模块”是执行特定任务的一组代码，类似于工作空间中的“Dynamo 节点”。
+* 这可以是应与相邻代码（函数、类、一组输入或要输入的库）在视觉上分开的任何内容。
+* 以模块形式开发代码可利用节点的可视化直观质量以及只有文本脚本编写才能实现的复杂关系。
 
-> These loops call a class named "agent" that we will develop in the exercise.
+![](<.
+
+> 这些循环调用我们将在练习中开发的名为“agent”的类。
 >
-> 1. A code module that defines the start point of each agent.
-> 2. A code module that updates the agent.
-> 3. A code module that draws a trail for the agent's path.
+> 1. 定义每个代理的起点的代码模块。
+> 2. 更新代理的代码模块。
+> 3. 为代理的路径绘制轨迹的代码模块。
 
-**Spotting code re-use:**
+**发现代码重用：**
 
-* If you find that your code does the same (or very similar) thing in more than once place, find ways to cluster it into a function that can be called.
-* "Manager" functions control program flow and primarily contain calls to "Worker" functions that handle low-level details, like moving data between structures.
+* 如果发现代码在多个位置执行相同（或非常相似）的操作，请找到将该代码聚类为可调用函数的方法。
+* “Manager”函数控制程序流，并且主要包含对处理底层细节（如在结构之间移动数据）的“Worker”函数的调用。
 
-This example creates spheres with radii and color based on the Z value of the center points.
+本示例根据中心点的 Z 值创建具有半径和颜色的球体。
 
-![](<./images/2/spot code resuse.jpg>)
+![](<.
 
-> 1. Two "worker" parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.
-> 2. A "manager" parent function that combines the two worker functions. Calling this will call both functions inside it.
+> 1. 两个“worker”父函数：根据中心点的 Z 值创建具有半径和颜色颜色的球体。
+> 2. 合并两个“worker”函数的“manager”父函数。调用此函数将调用其中的两个函数。
 
-**Only show what needs to be seen:**
+**仅显示需要查看的内容：**
 
-* A module interface expresses the elements that are provided and required by the module.
-* Once the interfaces between the units have been defined, the detailed design of each unit can proceed separately.
+* 模块接口表示该模块所提供和需要的图元。
+* 在已定义单元之间的接口后，即可分别对每个单元进行详细设计。
 
-**Separability/Replaceability:**
+**可分离性/可替换性：**
 
-* Modules don’t know or care about each other.
+* 模块之间互不通信。
 
-**General forms of modularization:**
+**模块化的常规形式：**
 
-*   Code Grouping:
+* 代码分组：
 
-    ```
-    # IMPORT LIBRARIES
-    import random
-    import math
-    import clr
-    clr.AddReference('ProtoGeometry')
-    from Autodesk.DesignScript.Geometry import *
+   ```
+   # IMPORT LIBRARIES
+   import random
+   import math
+   import clr
+   clr.AddReference('ProtoGeometry')
+   from Autodesk.DesignScript.Geometry import *
 
-    # DEFINE PARAMETER INPUTS
-    surfIn = IN[0]
-    maxSteps = IN[1]
-    ```
-*   Functions:
+   # DEFINE PARAMETER INPUTS
+   surfIn = IN[0]
+   maxSteps = IN[1]
+   ```
+* 函数：
 
-    ```
-    def get_step_size():
-      area = surfIn.Area
-      stepSize = math.sqrt(area)/100
-      return stepSize
+   ```
+   def get_step_size():
+     area = surfIn.Area
+     stepSize = math.sqrt(area)/100
+     return stepSize
 
-    stepSize = get_step_size()
-    ```
-*   Classes:
+   stepSize = get_step_size()
+   ```
+* 类：
 
-    ```
-    class MyClass:
-      i = 12345
+   ```
+   class MyClass:
+     i = 12345
 
-      def f(self):
-        return 'hello world'
+     def f(self):
+       return 'hello world'
 
-    numbers = MyClass.i
-    greeting = MyClass.f
-    ```
+   numbers = MyClass.i
+   greeting = MyClass.f
+   ```
 
-### Flex Continuously
+### 连续调整
 
-While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
+在 Dynamo 中开发文本脚本时，明智的做法是不断确保实际创建的内容符合您的预期。这将确保不可预见的事件（语法错误、逻辑差异、值不准确、异常输出等）在出现时即被迅速发现并进行处理，而不是在结束时立即全部处理。由于文本脚本位于画布上的节点内，因此它们已集成到可视化程序的数据流中。这使得对脚本的连续监视变得很简单，只需指定要输出的数据、运行程序以及使用“观察节点”评估从脚本流出的内容。以下是一些在构建脚本时不断检查脚本的技巧。
 
-**Test as you go:**
+**随手测试：**
 
-* Whenever you complete a cluster of functionality:
-  * Step back and inspect your code.
-  * Be critical. Could a collaborator understand what this is doing? Do I need to do this? Can this function be done more efficiently? Am I creating unnecessary duplicates or dependencies?
-  * Quickly test to make sure it is returning data that “makes sense”.
-* Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:
+* 每当完成一组功能时：
+   * 返回并检查代码。
+   * 非常重要。协作者是否能够了解这样做的目的？我需要这样做吗？是否可以更高效地执行此函数？我是否在创建不必要的重复项或从属关系？
+   * 快速测试以确保返回的数据“有意义”。
+* 将正在脚本中使用的最新数据指定为输出，以便在脚本更新时节点始终输出相关数据：
 
-![](<./images/2/flex continuously.jpg>)
+![](<.
 
-> 1. Check that all edges of the solid are being returned as curves to create a bounding box around.
-> 2. Check that our Count inputs are successfully being converted to Ranges.
-> 3. Check that coordinate systems have been properly translated and rotated in this loop.
+> 1. 检查实体的所有边是否都将作为曲线返回，以围绕其创建边界框。
+> 2. 检查“Count”输入是否成功转换为“Ranges”。
+> 3. 检查坐标系是否已在此循环中正确转换和旋转。
 
-**Anticipate “edge cases”:**
+**预测“边缘情况”：**
 
-* While scripting, crank your input parameters to the minimum and maximum values of their allotted domain to check if the program still functions under extreme conditions.
-* Even if the program is functioning at its extremes, check if it is returning unintended null/empty/zero values.
-* Sometimes bugs and errors that reveal some underlying problem with your script will only surface during these edge cases.
-  * Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.
+* 在编写脚本时，将输入参数故意指定为其分配域的最小值和最大值，以检查程序在极端条件下是否仍能正常运行。
+* 即使程序在其极端条件下正常运行，也应检查它是否会返回意外的 Null 值/空值/零值。
+* 有时，暴露脚本的一些潜在问题的 Bug 和错误仅在这些边缘情况下才会出现。
+   * 了解导致出现错误的原因，然后确定是需要进行内部修复还是需要重新定义参数域，来避免出现该问题。
 
-{% hint style="info" %}
-Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
-{% endhint %}
+技巧：始终假定用户将使用已呈现给他/她的每个输入值的每种组合。 这将有助于消除意外情况。
 
-### Debug Efficiently
 
-Debugging is the process of eliminating "bugs" from your script. Bugs can be errors, inefficiencies, inaccuracies, or any unintended results. Addressing a bug can be as simple as correcting a misspelled variable name to more pervasive, structural problems with your script. Ideally, flexing your script as you build it will help to catch these potential issues early, though this is no guarantee of it being bug-free. The following is a review of several best practices from above to help you address bugs systematically.
+### 高效调试
 
-**Use the watch bubble:**
+调试是从脚本中消除“Bug”的过程。Bug 可能是错误、效率低下、不准确或任何意外结果。解决 Bug 可能非常简单，只需更正拼写错误的变量名即可解决脚本中普遍存在的结构性问题。理想情况下，在构建脚本时对其进行调整将有助于及早发现这些潜在问题，尽管不能保证该脚本中没有 Bug。以下是对上述几种最佳实践的回顾，以帮助您系统地解决 Bug。
 
-* Check the data returned at different places in the code by assigning it to the OUT variable, similar to the concept of flexing the program.
+**使用观察气泡：**
 
-**Write meaningful comments:**
+* 通过将它指定给 OUT 变量（类似于调整程序的概念），来检查代码中不同位置返回的数据。
 
-* A module of code will be much easier to debug if its intended outcome is clearly described.
+**编写有意义的注释：**
+
+* 如果清楚地描述了代码模块的预期结果，则可以更加轻松地进行调试。
 
 ```py
 # Loop through X and Y
@@ -231,94 +227,94 @@ for i in range(xCount):
     solids.append(solid.Transform(fromCoord,toCoord))
 ```
 
-> Normally this would be an excessive amount of commenting and blank lines, but when debugging it can be useful to break things down into manageable pieces.
+> 通常，这会造成过多的注释行和空行，但在调试时，它有助于将内容分解为可管理的各部分。
 
-**Leverage the code's modularity:**
+**利用代码的模块化：**
 
-* The source of an issue can be isolated to certain modules.
-* Once the faulty module has been identified, fixing the problem is considerably simpler.
-* When a program must be modified, code that has been developed in modules will be much easier to change:
-  * You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.
+* 问题的根源可以隔离到特定模块。
+* 确定故障模块后，修复问题相当简单。
+* 当必须修改程序时，则以模块形式开发的代码将更容易更改：
+   * 可以将新模块或已调试模块插入到现有程序中，同时确保程序的其余部分不会更改。
 
-![](<./images/2/leverage code's modularity.jpg>)
+![](<.
 
-> Debugging the example file from [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> []()
 >
-> 1. The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.
-> 2. The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.
-> 3. The code "module" we've inserted to address the xDist and yDist value issue.
+> 1. 正如我们可以通过将 xDist 和 yDist 指定给 OUT 后所看到的那样，输入几何图元返回的边界框大于自身的大小。
+> 2. 输入几何图元的边曲线返回一个适当的边界框，该边界框具有 xDist 和 yDist 的正确距离。
+> 3. 我们插入的“模块”代码可解决 xDist 和 yDist 的值问题。
 
-## Exercise: Steepest Path
+## 练习 - 最陡路径
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="./datasets/9/2/SteepestPath.dyn" %}
 
-With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
+考虑到我们的文本脚本编写的最佳实践，让我们来编写一个下雨模拟脚本。尽管我们能够以“图形策略”将最佳实践应用于杂乱无章的可视化编程，但使用文本脚本编写更难以做到这一点。采用文本脚本编写建立的逻辑关系不太明显，并且几乎不可能在杂乱的代码中解开。借助文本脚本编写的强大功能，可以采用组织形式承担更大责任。我们将逐步完成每个步骤，并沿用最佳实践。
 
-Our script applied to an attractor-deformed surface.
+我们的脚本已应用于吸引器变形的曲面。
 
-![](<./images/2/scripting strategies - exercise - 01.jpg>)
+![](<.
 
-The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.
+首先，我们需要输入必要的 Dynamo 库。首先执行此操作将在 Python 中提供对 Dynamo 功能的全局访问。
 
-All the libraries we intend on using need to be imported here.
+我们打算使用的所有库都需要在此处输入。
 
-![](<./images/2/scripting strategies - exercise - 02.jpg>)
+![](<.
 
-Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.
+接下来，我们需要定义脚本的输入和输出，这些将在节点上显示为输入端口。这些外部输入是脚本的基础，也是建立参数化环境的关键。
 
-We need to define inputs that correspond to variables in the Python script and determine a desired output:
+我们需要定义与 Python 脚本中的变量对应的输入，并确定所需的输出：
 
-![](<./images/2/scripting strategies - exercise - 03.jpg>)
+![](<.
 
-> 1. The surface we want to walk down.
-> 2. The number of agents we want to walk.
-> 3. The maximum number of steps the agents are allowed to take.
-> 4. An option to take the shortest path down the surface or traverse it.
-> 5. The Python Node with input identifiers that correspond to inputs in the script (IN\[0], IN\[1]).
-> 6. Output curves that can be displayed with a different color.
+> 1. 我们要漫游的曲面。
+> 2. 我们要走的代理数。
+> 3. 允许代理采取的最大步数。
+> 4. 沿曲面走最短路径或对其进行遍历的选项。
+> 5. 具有与脚本中的输入相对应的输入标识符（IN[0]、IN[1]）的 Python 节点。
+> 6. 可以用不同颜色显示的输出曲线。
 
-Now let's employ the practice of modularity and create the body of our script. Simulating the shortest path down a surface for multiple start points is a significant task that will require several functions. Rather than call the different functions throughout the script, we can modularize our code by collecting them into a single class, our agent. The different functions of this class or "module" can be called with different variables or even reused in another script.
+现在，让我们采用模块化的做法，并创建脚本的主体。对于多个起点，沿曲面模拟最短路径是一项艰巨任务，这需要多个函数。与其在整个脚本中调用不同的函数，不如通过将这些函数收集到一个类（即我们的代理）中来对代码进行模块化。此类或“模块”的不同函数可以使用不同变量调用，甚至可以在其他脚本中重用。
 
-We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
+我们将需要为代理定义一个类或蓝图，以便代理每走一步时都选择沿尽可能陡峭的方向行进，从而漫游曲面：
 
-![](<./images/2/scripting strategies - exercise - 04.jpg>)
+![](<.
 
-> 1. Name.
-> 2. Global attributes that all the agents share.
-> 3. Instance attributes that are unique to each agent.
-> 4. A function for taking a step.
-> 5. A function for cataloging the position of each step to a trail list.
+> 1. 名称。
+> 2. 所有代理共享的全局属性。
+> 3. 每个代理特有的实例属性。
+> 4. 用于执行步骤的函数。
+> 5. 用于将每步的位置分类到轨迹列表的函数。
 
-Let's initialize the agents by defining their start location. This is a good opportunity to flex our script and make sure the agent class is working.
+让我们通过定义代理的起始位置来初始化代理。这是调整脚本并确保代理类正常工作的好机会。
 
-We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
+我们将需要实例化要观察漫游曲面的所有代理，并定义其初始属性：
 
-![](<./images/2/scripting strategies - exercise - 05.jpg>)
+![](<.
 
-> 1. A new empty trail list.
-> 2. Where they will start their journey on the surface.
-> 3. We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.
+> 1. 一个新的空轨迹列表。
+> 2. 它们将在曲面上开始其旅程的位置。
+> 3. 我们已将代理列表指定为输出，以检查脚本在此处返回的内容。返回的代理数目正确，但是稍后我们需要再次调整脚本以验证其返回的几何图元。
 
-Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
+每一步都更新每个代理。 然后，我们需要进入一个嵌套循环，在该循环中，针对每个代理和每一步，我们更新其位置并记录到其轨迹列表中。在每一步，我们还将确保代理尚未到达曲面上无法采取其他步骤（即允许代理下降）的点。如果满足该条件，我们将结束该代理的行程。
 
-![](<./images/2/scripting strategies - exercise - 06.jpg>)
+![](<.
 
-Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
+现在，我们的代理已完全更新，让我们返回代表它们的几何图元。 在所有代理达到其下降限制或最大步数后，我们将创建一条贯穿其轨迹列表中点的复合线并输出复合线轨迹。
 
-![](<./images/2/scripting strategies - exercise - 07.jpg>)
+![](<.
 
-Our script for finding the steepest paths.
+我们的脚本用于查找最陡路径。
 
-![](<./images/2/scripting strategies - exercise - 08.jpg>)
+![](<.
 
-> 1. A preset that simulates rainfall on the underlying surface.
-> 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.
+> 1. 预设在基础曲面上模拟降雨。
+> 2. 可以切换代理以遍历基础曲面，而不是查找最陡路径。
 
-The full Python text-script.
+完整的 Python 文本脚本。
 
 ```
 ### STEEPEST PATH ALGORITHM

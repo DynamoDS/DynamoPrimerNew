@@ -1,37 +1,37 @@
-# What's a Code Block
+# 什么是代码块？
 
-Code blocks are a window deep into DesignScript, the programming language at the heart of Dynamo. Built from scratch to support exploratory design workflows, DesignScript is a readable and concise language that offers both immediate feedback to small bits of code and also scales to large and complex interactions. DesignScript also forms the backbone of the engine that drives most aspects of Dynamo “under the hood”. Because nearly all of the functionality found in Dynamo nodes and interactions have a one-to-one relationship with the scripting language, there are unique opportunities to move between node-based interactions and scripting in a fluid way. &#x20;
+代码块是深入 Dynamo 的核心编程语言 DesignScript 的窗口。从头进行构建的 DesignScript 可支持探索式设计工作流，它是一种可读且简明的语言，既可提供对少量代码的即时反馈，也可扩展到大型和复杂交互。DesignScript 还构成引擎的支柱，该引擎推动 Dynamo 的大部分方面“处于底层”。由于在 Dynamo 节点和交互中找到的几乎所有功能都与脚本语言有一对一关系，因此有独特的机会在基于节点的交互和脚本之间以流畅的方式进行移动。&#x20;
 
 ![](../images/8-1/1/codeblock.jpg)
 
-For beginners, nodes can be automatically converted to text syntax to aid in learning DesignScript or simply to reduce the size of larger sections of graphs. This is done using a process called "Node to Code", which is outlined in more detail in the [DesignScript Syntax section](7-2\_design-script-syntax.md). More experienced users can use Code Blocks to create customized mashups of existing functionality and user authored relationships using many standard coding paradigms. In between the beginner and advanced user, there are a huge number of shortcuts and code snippets that will accelerate your designs. While the term 'code block' may be a little intimidating to non-programmers, it is both easy to use and robust. A beginner can use the code block efficiently with minimal coding, and an advanced user can define scripted definitions to be recalled elsewhere in a Dynamo definition.
+代码块简介对于初学者，节点可以自动转换为文本语法以帮助学习 DesignScript，或者只是缩小图形较大部分的大小。 这是使用“节点到代码”过程完成的，在[“DesignScript 语法”部分](7-2\_design-script-syntax.md)中会详细介绍该过程。有经验的用户可以使用代码块创建现有功能的自定义映射，并使用许多标准编码范例创建用户编写的关系。在初学者和高级用户之间，有大量可加快设计速度的快捷方式和代码段。虽然对于非程序员来说，术语“代码块”可能有点令人畏惧，但它既易于使用又功能强大。初学者可以高效地使用代码块（最少编码），高级用户可以定义脚本化定义以在 Dynamo 定义中的其他位置重新调用。
 
-### Code Block: A Brief Overview&#x20;
+### 代码块：简要概述
 
-In short, code blocks are a text-scripting interface within a visual-scripting environment. They can be used as numbers, strings, formulas, and other data types. The code block is designed for Dynamo, so one can define arbitrary variables in the code block, and those variables are automatically added to the inputs of the node:
+简而言之，代码块是可视化脚本环境中的文本脚本界面。它们可以用作数字、字符串、公式和其他数据类型。代码块专为 Dynamo 设计，因此用户可以在代码块中定义任意变量，这些变量会自动添加到节点的输入：
 
-With code blocks, a user has the flexibility to decide how to specify inputs. Here are several different ways to make a basic point with coordinates _(10, 5, 0)_:&#x20;
+使用代码块，用户可以灵活地确定如何指定输入。以下是通过坐标创建基点的几种不同方法 _(10, 5, 0)_：Flexibility
 
-![](<../images/8-1/1/codeblock brief overview.jpg>)
+![]
 
-As you learn more of the available functions in the library, you might even find that typing “Point.ByCoordinates” is faster than searching in the library and finding the proper node. When you type in _"Point."_ for example, Dynamo will display a list of possible functions to apply to a Point. This makes the scripting more intuitive and will help with learning how to apply functions in Dynamo.
+了解了库中的更多可用函数时，您甚至会发现键入“Point.ByCoordinates”比在库中搜索和查找正确的节点更快。比如，键入_“Point.”时，_Dynamo 将显示可能应用于点的函数列表。这使脚本更加直观，有助于了解如何在 Dynamo 中应用函数。
 
-### Creating Code Block Nodes
+### 创建代码块节点
 
-The code block can be found in _Core>Input>Actions>Code Block_. But even faster, just double click on the canvas and the code block appears. This node is used so often, it's given full double-click privileges.
+代码块可以在_“核心”>“输入”>“操作”>“代码块”_中找到。但是速度更快，只需双击画布，即可显示代码块。此节点经常被使用，因此赋予其完全双击权限。
 
-![](<../images/8-1/1/creating codeblock nodes.jpg>)
+![]
 
-### Numbers, Strings and Formulas
+### 数字、字符串和公式
 
-Code blocks are also flexible towards data types. The user can quickly define numbers, strings, and formulas and the code block will deliver the desired output.
+代码块在数据类型方面也很灵活。用户可以快速定义数字、字符串和公式，且代码块将提供所需的输出。
 
-In the image below, you can see the "old school" way of doing things is a little long-winded: the user searches for the intended node in the interface, adds the node to the canvas, and then inputs the data. With code block, the user can double-click on the canvas to pull up the node, and type in the correct data type with basic syntax.
+在下图中，您可以看到“旧学校”的操作方法有点长：用户在界面中搜索预期节点、将节点添加到画布，然后输入数据。使用代码块，用户可以双击画布来调出节点，然后使用基本语法键入正确的数据类型。
 
-The number, string, and formula nodes are three examples of Dynamo nodes which are arguably obsolete in comparison to the code block.
+数字、字符串和公式节点是三个 Dynamo 节点示例，这些节点相较于代码块无疑是过时的。
 
-![](<../images/8-1/1/old school vs code blocks nodes.jpg>)
+![]
 
-> 1. "Old-school"
-> 2. Code Blocks
+> 1. 过去
+> 2. 代码块
 

@@ -6,93 +6,93 @@ This workflow will teach you how to:
 
 * Create, manage and edit lists.
 * Move points in the 3D preview using direct manipulation.
-* Change the executing mode.
+* 改变显示模式
 
 ![](../images/10-1/2/attractor1.gif)
 
 ## Defining our Objectives
 
-In this exercise, we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
+在本练习中，我们要创建一个圆（_“目标”_），其中半径输入由距邻近点的距离定义（_“关系”_）。
 
-![Hand Sketch of Circle](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
+![手绘圆](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
 
-> A point that defines a distance-based relationship is commonly referred to as an "Attractor." Here the distance to our Attractor Point will be used to specify how big our circle should be.
+> 定义基于距离关系的点通常称为“吸引器”。此处，将使用距吸引器点的距离来指定圆应该有多大。
 
-## Next steps
+## 后续步骤
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
 
-Now that we have our objectives and relationships sketched we can begin creating our graph. We need the Nodes that will represent the sequence of actions Dynamo will execute. Let's start by adding the following nodes: **Number**, **Number Slider**, **Point.ByCoordinates**, **Geometry.DistanceTo, Circle.ByCenterPointRadius.**
+现在，我们已经绘制了“目标”和“关系”，可以开始创建图形。 我们需要节点来表示 Dynamo 将执行的操作序列。****************
 
-![](<../images/10-1/2/attractor (2).png>)
+![]
 
-> 1. Input > Basic > **Number**
-> 2. Input > Basic > **Number Slider**
-> 3. Geometry > Points > Point > **By Coordinates(x,y,z)**
-> 4. Geometry > Modifiers > Geometry > **DistanceTo**
-> 5. Geometry > Curves > Circle > **ByCenterPointRadius**
+> 1. “输入”>“基本”>**“Number”**
+> 2. “输入”>“基本”>**“Number Slider”**
+> 3. ****
+> 4. “几何图形”>“几何图形”>**“DistanceTo”**
+> 5. ****
 
-### Connecting Nodes with Wires
+### 使用线连接节点
 
-Now that we have a few Nodes, we need to connect the Ports of the Nodes with Wires. These connections will define the flow of data.
+现在，我们有几个节点，我们需要将节点端口用线连接起来。这些连接将定义数据流。
 
-![](<../images/10-1/2/attractor (3).png>)
+![]
 
-> 1. **Number** to **Point.ByCoordinates**
-> 2. **Number Sliders** to **Point.ByCoordinates**
-> 3. **Point.ByCoordinates** (2) to **DistanceTo**
-> 4. **Point.ByCoordinates** and **DistanceTo** to **Circle.ByCenterPointRadius**
+> 1. **“Number”**连接到**“Point.ByCoordinates”**
+> 2. **“Number Sliders”**连接到**“Point.ByCoordinates”**
+> 3. **“Point.ByCoordinates”**(2) 连接到**“DistanceTo”**
+> 4. **“Point.ByCoordinates”**和**“DistanceTo”**连接到**“Circle.ByCenterPointRadius”**
 
-### Executing the Program
+### 执行程序
 
-With our Program Flow defined, all we need to do is tell Dynamo to execute it. Once our program is executed (either Automatically or when we click Run in Manual Mode), data will pass through the Wires, and we should see the results in the 3d Preview.
+在完成定义程序流后，我们只需告知 Dynamo 执行它即可。在执行程序（“自动”或在“手动”模式下单击“运行”）后，数据将流经这些线，并且我们应该可以在三维预览中看到结果。
 
-![](<../images/10-1/2/attractor (4).png>)
+![]
 
-> 1. (Click Run) - If the Execution Bar is in Manual Mode, we need to Click Run to execute the graph
-> 2. Node Preview - Hovering your mouse over the box on the lower right corner of a Node will give you a pop-up of the results
-> 3. 3D Preview - If any of our Nodes create geometry, we will see it in the 3D Preview.
-> 4. The output geometry on the creation node.
+> 1. （单击“运行”）- 如果“执行栏”处于“手动”模式，则需要单击“运行”才能执行图形
+> 2. 节点预览 - 将鼠标光标悬停在节点右下角的框上会弹出结果
+> 3. 三维预览 - 如果有节点创建几何图形，我们将在三维预览中看到它。
+> 4. 创建节点上的输出几何图形。
 
-### Adding **a Code Block**
+### ****
 
-If our program is working, we should see a circle in the 3D Preview that is passing through our Attractor Point. This is great, but we may want to add more detail or more controls. Let's adjust the input to the circle Node so that we can calibrate the influence on the radius. Add another **Number Slider** to the Workspace, then double click on a blank area of the Workspace to add a **Code Block** Node. Edit the field in the Code Block, specifying `X/Y`.
+如果程序正常运行，我们应该会在三维预览中看到一个穿过吸引器点的圆。这很棒，但我们可能想要添加更多详细信息或更多控件。我们将调整对圆节点的输入，以便可以校准对半径的影响。将另一个**“Number Slider”**添加到工作空间，然后双击工作空间的空白区域以添加**“Code Block”**节点。编辑代码块中的字段，以便指定 `X/Y`X/Y。
 
-![](<../images/10-1/2/attractor (5).png>)
+![]
 
-> 1. **Code Block**
-> 2. **DistanceTo** and **Number Slider** to **Code Block**
-> 3. **Code Block** to **Circle.ByCenterPointRadius**
+> 1. **代码块**
+> 2. **“DistanceTo”**和**“Number Slider”**连接到**“Code Block”**
+> 3. **“Code Block”**连接到**“Circle.ByCenterPointRadius”**
 
 ### Using Sequences
 
-Starting simple and building complexity is an effective way to incrementally develop our program. Once it is working for one circle, let's apply the power of the program to more than one circle. Instead of one center point, if we use a grid of points and accommodate the change in the resulting data structure, our program will now create many circles - each with a unique radius value defined by the calibrated distance to the Attractor Point.
+简单开始后增加复杂性是循序渐进开发程序的有效方法。在一个圆正常工作后，让我们将程序的强大功能应用于多个圆。如果我们使用点栅格（而不是一个中心点）并适应结果数据结构中的变化，那么程序现在将创建多个圆 - 每个圆的唯一半径值由距吸引器点的校准距离进行定义。
 
-![](<../images/10-1/2/attractor (6).png>)
+![]
 
-> 1. Add a **Number Sequence** Node and replace the inputs of **Point.ByCoordinates** - Right Click Point.ByCoordinates and select Lacing > Cross Reference
-> 2. Add a **Flatten** Node after Point.ByCoordinates. To flatten a list completely, leave the `amt` input at the default of `-1`
-> 3. The 3D Preview will update with a grid of circles
+> 1. 添加**“Number Sequence”**节点并替换**“Point.ByCoordinates”**的输入 - 在“Point.ByCoordinates”上单击鼠标右键，然后依次选择“连缀”>“叉积”
+> 2. 在 Point.ByCoordinates 后添加**“Flatten”**节点。要完全展平列表，请将 `amt`amt`-1` 输入保留为默认值 -1
+> 3. 三维预览将使用圆栅格进行更新
 
-### Adjusting with Direct Manipulation
+### 使用“直接操纵”调整
 
-Sometimes numerical manipulation isn't the right approach. Now you can manually push and pull Point geometry when navigating in the background 3D preview. We can also control other geometry that was constructed by a point. For example, **Sphere.ByCenterPointRadius** is capable of Direct Manipulation as well. We can control the location of a point from a series of X, Y, and Z values with **Point.ByCoordinates**. With the Direct Manipulation approach, however, you are able to update the values of the sliders by manually moving the point in the **3D Preview Navigation** mode. This offers a more intuitive approach to controlling a set of discrete values that identify a point's location.
+有时，数字操作并不是正确的方法。现在，可以在后台三维预览中导航时手动推拉点几何图形。我们还可以控制由点构建的其他几何图形。例如，**“Sphere.ByCenterPointRadius”**也可以直接操纵。我们可以使用**“Point.ByCoordinates”**，通过一系列 X、Y 和 Z 控制点的位置。但是，使用“直接操纵”方法，可以通过在**“三维预览导航”**模式下手动移动点来更新滑块的值。这提供了一种更直观的方法，来控制一组用于标识点位置的离散值。
 
-![](<../images/10-1/2/attractor (7).png>)
+![]
 
-> 1. To use **Direct Manipulation**, select the panel of the point to be moved – arrows will appear over the point selected.
-> 2. Switch to **3D Preview Navigation** mode.
+> 1. 要使用**“直接操纵”**，请选择要移动的点面板 - 箭头将显示在选定点上。
+> 2. 切换到**“三维预览导航”**模式。
 
 ![](../images/10-1/2/attractor\(8\).png)
 
-> 1. Hover over the point and the X, Y, and Z axes will appear.
-> 2. Click and drag the colored arrow to move the corresponding axis, and the **Number Slider** values will update live with the manually moved point.
+> 1. 将光标悬停在点上，X、Y 和 Z 轴将显示。
+> 2. 单击并拖动彩色箭头以移动相应的轴，**“Number Slider”**值将使用手动移动的点实时更新。
 
-![](<../images/10-1/2/attractor (1).png>)
+![]
 
-> 1. Note that before **Direct Manipulation** only one slider was plugged into the **Point.ByCoordinates** component. When we manually move the point in the X-direction, Dynamo will automatically generate a new **Number Slider** for the X input.
+> 1. 请注意，在**“直接操纵”**之前，仅有一个滑块连接到**“Point.ByCoordinates”**组件。当我们在 X 方向上手动移动点时，Dynamo 将自动为 X 输入生成新的**“Number Slider”**。
 

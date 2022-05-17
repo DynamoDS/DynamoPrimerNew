@@ -1,10 +1,10 @@
-# Vector Math
+# 向量数学
 
-Objects in computational designs are rarely created explicitly in their final position and form, and are most often translated,rotated, and otherwise positioned based off of existing geometry. Vector math serves as a kind-of geometric scaffolding to give direction and orientation to geometry, as well as to conceptualize movements through 3D space without visual representation.
+计算设计中的对象很少在最终位置和形状中显式创建，并且通常基于现有几何体进行转换、旋转和定位。向量数学作为一种几何脚手架，用于提供几何体的方位和方向，以及概念化通过三维空间的移动而不是直观表示。
 
-At its most basic, a vector represents a position in 3D space, and is often times thought of as the endpoint of an arrow from the position (0, 0, 0) to that position. Vectors can be created with the _ByCoordinates_ constructor, taking the x, y, and z position of the newly created Vector object. Note that Vector objects are not geometric objects, and don’t appear in the Dynamo window. However, information about a newly created or modified vector can be printed in the console window:
+最基本的是，向量表示三维空间中的位置，并且通常被视为从位置 (0, 0, 0) 到该位置的箭头端点。可以使用 _ByCoordinates_ 构造函数创建向量，获取新创建的向量对象的 x、y 和 z 位置。请注意，向量对象不是几何对象，且不显示在 Dynamo 窗口中。但是，有关新创建或修改的向量的信息可以在控制台窗口中打印：
 
-![](<../images/8-2/3/vector math 01.jpg>)
+![]
 
 ```js
 // construct a Vector object
@@ -13,11 +13,11 @@ v = Vector.ByCoordinates(1, 2, 3);
 s = v.X + " " + v.Y + " " + v.Z;
 ```
 
-A set of mathematical operations are defined on Vector objects, allowing you to add, subtract, multiply, and otherwise move objects in 3D space as you would move real numbers in 1D space on a number line.
+在向量对象上定义一组数学运算，可允许您在三维空间中添加、减去、相乘和移动对象，就像在数字行上的一维空间中移动实数一样。
 
 ### Vector Addition
 
-Vector addition is defined as the sum of the components of two vectors, and can be thought of as the resulting vector if the two component vector arrows are placed “tip to tail.” Vector addition is performed with the _Add_ method, and is represented by the diagram on the left.
+向量相加定义为两个向量的分量之和，如果两个分量向量箭头按“尖端到尾部”放置，则可以将向量相加定义为结果向量。向量相加是使用 _Add_ 方法执行的，并由左侧的图表表示。
 
 ![](../images/8-2/3/VectorMath\_02.png)
 
@@ -31,7 +31,7 @@ c = a.Add(b);
 
 ### Vector Subtraction
 
-Similarly, two Vector objects can be subtracted from each other with the _Subtract_ method. Vector subtraction can be thought of as the direction from first vector to the second vector.
+同样，可以使用 _Subtract_ 方法将两个向量对象相互减去。可以将向量相减看作从第一个向量到第二个向量的方向。
 
 ![](../images/8-2/3/VectorMath\_03.png)
 
@@ -45,7 +45,7 @@ c = a.Subtract(b);
 
 ### Vector Multiplication
 
-Vector multiplication can be thought of as moving the endpoint of a vector in its own direction by a given scale factor.
+向量相乘可以看作是按给定比例因子在向量自身方向移动向量的端点。
 
 ![](../images/8-2/3/VectorMath\_04.png)
 
@@ -58,9 +58,9 @@ c = a.Scale(5);
 
 ### Normalize Vector Length
 
-Often it’s desired when scaling a vector to have the resulting vector’s length exactly equal to the scaled amount. This is easily achieved by first normalizing a vector, in other words setting the vector’s length exactly equal to one.
+在缩放向量时，通常需要使结果向量的长度与缩放量完全相等。通过首先标准化向量，即将向量的长度精确设置为一，可以轻松实现该目的。
 
-![](<../images/8-2/3/vector math 05.jpg>)
+![]
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -74,11 +74,11 @@ c = b.Scale(5);
 len = c.Length;
 ```
 
-c still points in the same direction as a (1, 2, 3), though now it has length exactly equal to 5.
+c 仍指向与 a (1, 2, 3) 相同的方向，虽然现在它的长度完全等于 5。
 
-### Cross Product
+### 笛卡尔积
 
-Two additional methods exist in vector math which don’t have clear parallels with 1D math, the cross product and dot product. The cross product is a means of generating a Vector which is orthogonal (at 90 degrees to) to two existing Vectors. For example, the cross product of the x and y axes is the z axis, though the two input Vectors don’t need to be orthogonal to each other. A cross product vector is calculated with the _Cross_ method.
+向量数学中还存在两种其他方法，它们与一维数学、矢积和点积不完全平行。矢积是生成向量的一种方法，该向量（在 90 度）与两个现有向量正交。例如，x 轴和 y 轴的矢积为 z 轴，尽管这两个输入向量不需要相互正交。使用 _Cross_ 方法计算矢积向量。
 
 ![](../images/8-2/3/VectorMath\_06.png)
 
@@ -90,11 +90,11 @@ b = Vector.ByCoordinates(0, 1, 1);
 c = a.Cross(b);
 ```
 
-### Dot Product
+### 点积(Dot Product)
 
-An additional, though somewhat more advanced function of vector math is the dot product. The dot product between two vectors is a real number (not a Vector object) that relates to, but is not exactly, the angle between two vectors. One useful properties of the dot product is that the dot product between two vectors will be 0 if and only if they are perpendicular. The dot product is calculated with the _Dot_ method.
+另外，某些向量数学的更高级函数是点积。两个向量之间的点积是一个实数（不是向量对象），它与两个向量之间的角度相关，但并不完全相关。点积的一个有用属性是，仅当两个向量垂直时，它们之间的点积将为 0。点积使用 _Dot_ 方法计算。
 
-![](<../images/8-2/3/vector math 07.jpg>)
+![]
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);

@@ -1,40 +1,40 @@
-# What is a Dictionary
+# 什么是词典？
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+Dynamo 2.0 引入了将词典数据类型与列表数据类型进行分隔的概念。此更改可能会对您在工作流中创建和使用数据的方式作出一些重大改变。在 2.0 之前，词典和列表已组合为一种数据类型。简而言之，列表实际上是带有整数键的词典。
 
-### **What is a dictionary?**
+### **什么是词典？**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+词典是由一组键值对组成的数据类型，其中每个键在每个集合中是唯一的。词典没有顺序，基本上您可以使用键而不是类似列表的索引值来“查找”内容。_在 Dynamo 2.0 中，键只能是字符串。_
 
-### **What is a list?**
+### **什么是列表？**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+列表是由有序值集合组成的数据类型。在 Dynamo 中，列表使用整数作为索引值。
 
-### **Why was this change made and why should I care?**
+### **为什么要进行此更改？为什么我应该关心此更改？**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+词典与列表之间的分离将词典作为“一等公民”，您可以使用它们快速、轻松地存储和查找值，无需记住索引值或在整个工作流中保持严格的列表结构。在用户测试期间，当使用词典而不是多个 `GetItemAtIndex`GetItemAtIndex 节点时，我们看到图形大小显著减小。
 
-### **What are the changes?**
+### **会产生哪些变化？**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* _语法_已发生更改，改变了初始化以及使用代码块中的词典和列表的方式。
+   * 词典使用以下语法 `{key:value}`{key:value}
+   * 然后，使用以下语法： `[value,value,value]`
+* 库中引入了_新节点_，以帮助您创建、修改和查询词典。
+* 加载脚本时，在 1.x 代码块中创建的列表将自动迁移为使用方括号 `[ ]`[ ]`{ }` 而不是大括号 { } 的新列表语法 IMAGE
 
-    ***
+   ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
+![]
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **我为什么应该关心？ 您会将它们用于什么？**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+在计算机科学中，词典（如列表）是对象集合。虽然列表按特定顺序排列，但词典是_无序_集合。它们并不依赖于顺序编号（索引），而是使用_键。_
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+在下图中，我们演示了词典的潜在使用案例。通常，词典用于关联两个可能没有直接相关性的数据。在本例中，我们将单词的西班牙语版本连接到英文版本，供以后查找。
 
-![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
+![]
 
 > 1. Build a dictionary to relate the two pieces of data.
 > 2. Get the value with the given key.

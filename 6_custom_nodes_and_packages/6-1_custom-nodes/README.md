@@ -1,6 +1,6 @@
-# Custom Nodes
+# 自定义节点
 
-Dynamo offers many Core Nodes for a wide range of visual programming tasks. Sometimes a quicker, more elegant, or more easily shared solution is to build your own Nodes. These can be reused among different projects, they make your graphs clearer and cleaner, and they can be pushed to the package manager and shared with the global Dynamo community.
+Dynamo 为各种可视化编程任务提供了许多核心节点。 有时，更快速、更简洁或更轻松共享的解决方案是构建自己的节点。 这些节点可以在不同项目中重用，使图形更清晰、更简洁，并且可以将它们推送到软件包管理器，并与全局 Dynamo 社区共享。
 
-![](<../images/6-1/customNodes1 (1).png>)
+![]
 

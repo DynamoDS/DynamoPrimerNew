@@ -1,69 +1,69 @@
-# Package Case Study - Mesh Toolkit
+# 软件包案例研究 - Mesh Toolkit
 
-The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+Dynamo Mesh Toolkit 包提供了多种工具，可从外部文件格式输入网格、从 Dynamo 几何体对象创建网格，以及按顶点和索引手动构建网格。该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。
 
 ![](<../images/6-2/2/meshToolkit case study 01.jpg>)
 
-The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
+Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未来几年内将继续增长。希望新方法经常出现在工具包中，您可以随时与 Dynamo 团队联系并提供评论、错误和新功能建议。
 
-### Meshes vs. Solids
+### 网格与实体
 
-The exercise below demonstrates some basic mesh operations using the Mesh Toolkit. In the exercise, we intersect a mesh with a series of planes, which can be computationally expensive using solids. Unlike a solid, a mesh has a set "resolution" and is not defined mathematically, but topologically, and we can define this resolution based on the task at hand. For more details on mesh to solid relationships, you can reference the[ Geometry For Computation Design](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) chapter in this primer. For a more thorough examination of Mesh Toolkit, you can reference the [Dynamo Wiki page.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Let's jump into the package in the exercise below.
+以下练习演示了使用 Mesh Toolkit 的一些基本网格操作。在该练习中，我们将网格与一系列平面相交，这可能需要使用实体进行大量的计算。与实体不同，网格具有设置的“分辨率”，且不是以数学方式而是以拓扑方式定义，我们可以基于手头的任务定义此分辨率。有关网格与实体关系的详细信息，可参考本入门中的[“用于计算设计的几何体”](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/)一章。若要更全面的了解 Mesh Toolkit，您可以参考 [Dynamo Wiki 页面。](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) 接下来我们转到下面练习中的软件包。
 
-### Install Mesh Toolkit
+### 安装 Mesh Toolkit
 
-In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
+在 Dynamo 中，转到顶部菜单栏中的_“软件包”>“搜索软件包...”_。在搜索字段中，键入_“MeshToolkit”_，全部写为一个单词并注意大小写。单击“安装”以开始下载。就这么简单！
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
-## Exercise: Intersect Mesh
+## 练习：使网格相交
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
-In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
+在此示例中，我们将查看网格工具包中的“相交”节点。 我们将导入网格并与一系列输入平面相交以创建切片。这是准备模型以在激光刀具、水射流刀具或 CNC 铣削上进行加工的起点。
 
-Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
+首先，在 Dynamo 中打开 _Mesh-Toolkit\_Intersect-Mesh.dyn。_
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 1. **File Path**：找到要输入的网格文件 (_stanford\_bunny\_tri.obj_)。支持的文件类型包括 .mix 和 .obj
+> 2. **Mesh.ImportFile：**连接文件路径以导入网格
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
-> 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes. \_\_ The settings are as follow: \_\_ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates：**构造点 - 这将是圆弧的中心。
+> 2. **Arc.ByCenterPointRadiusAngle：**围绕点构造圆弧。此曲线将用于定位一系列平面。 \_\_ 设置如下所示：\_\_ `radius: 40, startAngle: -90, endAngle:0`
 
-Create a series of planes oriented along the arc.
+创建一系列沿圆弧定向的平面。
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
-> 1. **Code Block**: Create 25 numbers between 0 and 1.
-> 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
-> 3. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
-> 4. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
+> 1. **代码块**：创建 25 个介于 0 和 1 之间的数字。
+> 2. **Curve.PointAtParameter：**将圆弧连接到_“curve”_输入，将代码块输出连接到_“param”_输入以沿曲线提取一系列点。
+> 3. **Curve.TangentAtParameter：**连接与上一个节点相同的输入。
+> 4. **Plane.ByOriginNormal：**将点连接到_“origin”_输入并将向量连接到_“normal”_输入，以在每个点处创建一系列平面。
 
-Next, we will use these planes to intersect the mesh.
+接下来，我们将使用这些平面来与网格相交。
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
-> 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
-> 3. **Curve.EndPoint:** Extract the end points of each curve.
-> 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
+> 1. **Mesh.Intersect：**使平面与导入的网格相交，从而创建一系列复合线轮廓。 在节点上单击鼠标右键并将连缀设置为最长
+> 2. **PolyCurve.Curves：**将复合线断为其曲线片段。
+> 3. **Curve.EndPoint：**提取每条曲线的端点。
+> 4. **NurbsCurve.ByPoints：**使用点来构建 NURBS 曲线。使用设定为 _True_ 的布尔节点闭合曲线。
 
-Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
+在继续操作之前，请关闭某些节点（例如：Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal 和 Arc.ByCenterPointRadiusAngle）的预览，以便更好地查看结果。
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch:** Construct surface patches for each contour to create “slices” of the mesh.
+> 1. **Surface.ByPatch：**为每个轮廓构造曲面面片以创建网格的“切片”。
 
-Add a second set of slices for a waffle/egg-crate effect.
+为一个格子/卵形木箱效果添加第二组切片。
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 06.jpg>)
 
-You may have noticed that the intersection operations calculate faster with a mesh vs. a comparable solid. Workflows such as the one demonstrated in this exercise lend themselves well to working with meshes.
+您可能已注意到，相交操作通过网格与类似实体进行更快的计算。此练习中演示的工作流适合于与网格结合使用。

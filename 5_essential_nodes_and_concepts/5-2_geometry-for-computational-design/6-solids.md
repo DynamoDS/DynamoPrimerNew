@@ -1,96 +1,96 @@
-# Solids
+# 实体
 
 ## Solids in Dynamo
 
 ### What is Solid?
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+如果我们要构建无法从单个曲面创建的更复杂模型，或者如果要定义明确的体积，我们现在必须进入到实体（和多边形曲面）领域。[](5-6\_solids.md#solids) 即使简单的立方体也足够复杂，需要六个曲面，每个面一个。实体可用于访问曲面所没有的两个关键概念 - 更加优化的拓扑描述（面、边、顶点）和布尔操作。
 
 ### Boolean Operation to Create Spiky Ball Solid
 
-You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
+[](5-6\_solids.md#boolean-operations)让我们使用几个布尔操作来创建一个尖球。
 
-![](<../images/5-2/6/solids  - spiky ball.jpg>)
+![]
 
-> 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
-> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
-> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface.
-> 4. **Solid.UnionAll**: Union the Cones and the Sphere.
-> 5. **Topology.Edges**: Query the edges of the new Solid
-> 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
+> 1. **Sphere.ByCenterPointRadius**：创建基本体。
+> 2. **Topology.Faces**、**Face.SurfaceGeometry**：查询实体的面并转换为曲面几何体（在本例中，球体仅有一个面）。
+> 3. **Cone.ByPointsRadius**：使用曲面上的点构造圆锥体。
+> 4. **Solid.UnionAll**：使圆锥体和球体合并。
+> 5. **Topology.Edges**：查询新实体的边
+> 6. **Solid.Fillet**：对尖球的边进行圆角处理
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### Freezing
+### 冻结
 
-Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
+布尔运算很复杂，计算速度可能很慢。使用“冻结”功能可暂停选定节点和受影响的下游节点的执行。
 
-![](<../images/5-2/6/solids - freeze node.jpg>)
+![]
 
-> 1.Use the right-click contextual menu to Freeze the Solid Union operation
+> 使用快捷上下文菜单可冻结“实体并集”操作
 >
-> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
+> 2\. 选定节点和所有下游节点将以浅灰色重影模式预览，并且受影响的线将显示为虚线。受影响的几何体预览也将生成重影。现在，您可以在上游修改值，而无需计算布尔并集。
 >
-> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
+> 3\. 要解冻节点，请单击鼠标右键，然后取消选中“冻结”。
 >
-> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 4\. 所有受影响的节点和关联的几何体预览将更新并还原为标准预览模式。
 
 ## Deep Dive into...
 
-### Solids
+### 实体
 
-Solids consist of one or more Surfaces that contain volume by way of a closed boundary that defines "in" or "out." Regardless of how many of these Surfaces there are, they must form a "watertight" volume to be considered a Solid. Solids can be created by joining Surfaces or Polysurfaces together or by using operations such as loft, sweep, and revolve. Sphere, Cube, Cone and Cylinder primitives are also Solids. A Cube with at least one face removed counts as a Polysurface, which has some similar properties, but it is not a Solid.
+实体由一个或多个曲面组成，这些曲面包含通过定义“内”或“外”的闭合边界进行定义的体积。无论这些曲面有多少，它们都必须形成“无间隙”体积才能视为实体。可以通过将曲面或多边形曲面连接在一起，或者使用放样、扫掠和旋转等操作来创建实体。球体、立方体、圆锥体和圆柱体基本体也是实体。至少删除了一个面的立方体视为多边形曲面，它具有一些类似的属性，但它不是实体。
 
-![Solids](../images/5-2/6/Primitives.jpg)
+![实体](../images/5-2/6/Primitives.jpg)
 
-> 1. A Plane is made of a single Surface and is not a Solid.
-> 2. A Sphere is made of one Surface but _is_ a Solid.
-> 3. A Cone is made of two surfaces joined together to make a Solid.
-> 4. A Cylinder is made of three surfaces joined together to make a Solid.
-> 5. A Cube is made of six surfaces joined together to make a Solid.
+> 1. 平面由单个曲面组成，而且不是实体。
+> 2. 球体由一个曲面组成，但_是_实体。
+> 3. 圆锥体由两个连接在一起以形成实体的曲面组成。
+> 4. 圆柱体由三个连接在一起以形成实体的曲面组成。
+> 5. 立方体由六个连接在一起以形成实体的曲面组成。
 
-### Topology
+### 拓扑
 
-Solids are made up of three types of elements: Vertices, Edges, and Faces. Faces are the surfaces that make up the Solid. Edges are the Curves that define the connection between adjacent faces, and vertices are the start and end points of those Curves. These elements can be queried using the Topology nodes.
+实体由三种类型的元素组成：顶点、边和面。面是组成实体的曲面。边是定义相邻面之间的连接的曲线，顶点是这些曲线的起点和终点。可以使用拓扑节点查询这些元素。
 
-![Topology](../images/5-2/6/Solid-topology.jpg)
+![拓扑(Topology)](../images/5-2/6/Solid-topology.jpg)
 
-> 1. Faces
-> 2. Edges
-> 3. Vertices
+> 1. 面
+> 2. 边
+> 3. 顶点
 
-### Operations
+### 操作
 
-Solids can be modified by filleting or chamfering their edges to eliminate sharp corners and angles. The chamfer operation creates a ruled surface between two faces, while a fillet blends between faces to maintain tangency.
+可以通过对实体的边进行圆角或倒角操作来修改实体，以消除锐角和角度。倒角操作可在两个面之间创建规则曲面，而圆角可在面之间过渡以保持相切。
 
 ![](../images/5-2/6/SolidOperations.jpg)
 
-> 1. Solid Cube
-> 2. Chamfered Cube
-> 3. Filleted Cube
+> 1. 实体立方体
+> 2. 倒角立方体
+> 3. 圆角立方体
 
-### Boolean Operations
+### 布尔运算
 
-Solid Boolean operations are methods for combining two or more Solids. A single Boolean operation actually means performing four operations:
+实体布尔运算是用于合并两个或两个以上实体的方法。单个布尔操作实际上意味着执行四项操作：
 
-1. **Intersect** two or more objects.
-2. **Split** them at the intersections.
-3. **Delete** unwanted portions of the geometry.
-4. **Join** everything back together.
+1. 与两个或多个对象**相交**。
+2. 在交点处**分割**它们。
+3. **删除**几何体中不需要的部分。
+4. 重新**连接**所有内容。
 
-This makes Solid Booleans a powerful time-saving process. There are three Solid Boolean operations that distinguish which parts of the geometry are kept. ![Solid Boolean](../images/5-2/6/SolidBooleans.jpg)
+这使实体布尔成为一个强大的省时过程。有三种实体布尔运算，它们可区分保留几何体的哪些部分。![Solid Boolean](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Union:** Remove the overlapping portions of the Solids and join them into a single Solid.
-> 2. **Difference:** Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume.
-> 3. **Intersection:** Keep only the intersecting volume of the two Solids.
+> 1. **并集：**删除实体的重叠部分，并将它们合并为单个实体。
+> 2. **差集：**从一个实体中减去另一个实体。要减去的实体称为工具。请注意，您可以切换哪个实体是保留反向体积的工具。
+> 3. **交集：**仅保留两个实体的相交体积。
 
-In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **Solid.UnionAll** nodes for performing difference and union operations with multiple Solids. ![](../images/5-2/6/BooleanAll.jpg)
+除了这三项操作，Dynamo 还具有 **Solid.DifferenceAll** 和 **Solid.UnionAll** 节点，用于对多个实体执行差集和并集操作。 ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** Union operation with sphere and outward-facing cones
-> 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
+> 1. **UnionAll：**使用球体和朝外的圆锥体进行并集操作
+> 2. **DifferenceAll：**使用球体和朝内圆锥体时的差集运算
 
 ##

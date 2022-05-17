@@ -1,79 +1,79 @@
-# Surfaces
+# 曲面
 
 ## Surfaces in Dynamo
 
-### What is Surface
+### 什么是曲面？
 
-We use [Surface](5-surfaces.md#surface) in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+[](5-surfaces.md#surface)虽然曲线并非总是平面，即它们是三维的，它们定义的空间始终绑定到一个维度。曲面为我们提供了另一个维度和一组附加特性，我们可以在其他建模操作中使用它们。
 
 ### Surface at Parameter
 
-Import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
+让我们在 Dynamo 中导入和评估 Surface At Parameter 节点，以查看我们可以提取的信息类型。
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![]
 
-> 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
-> 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
-> 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
+> 1. _Surface.PointAtParameter_ 返回给定 UV 坐标处的点
+> 2. _Surface.NormalAtParameter_ 返回给定 UV 坐标处的法线向量
+> 3. _Surface.GetIsoline_ 返回 U 或 V 坐标处的等参曲线 - 请注意 isoDirection 输入。
 
 > Download the example files by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-2/5/Surfaces.zip" %}
 
 ## Deep Dive into...
 
-### Surface
+### 曲面
 
-A Surface is a mathematical shape defined by a function and two parameters, Instead of `t` for Curves, we use `U` and `V` to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.
+曲面是由函数和两个参数定义的数学形状。我们使用 `V`U 和 V 而不是曲线的 `t`t`U` 来描述相应的参数空间。 这意味着，在处理此类型的几何体时，我们需要从中绘制更多的几何数据。例如，曲线具有切线向量和法线平面（可以沿曲线的长度旋转或扭曲），而曲面具有在其方向上保持一致的法线向量和切线平面。
 
-![Surface](../images/5-2/5/Surface.jpg)
+![曲面](../images/5-2/5/Surface.jpg)
 
-> 1. Surface
-> 2. U Isocurve
-> 3. V Isocurve
-> 4. UV Coordinate
-> 5. Perpendicular Plane
-> 6. Normal Vector
+> 1. 曲面
+> 2. U 向等参曲线
+> 3. V 向等参曲线
+> 4. UV 坐标
+> 5. 垂直平面
+> 6. 法线向量
 
-**Surface Domain**: A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).
+**曲面域**：曲面域定义为 (U,V) 参数的范围，这些参数评估为该曲面上的三维点。每个维度中的域（U 或 V）通常描述为两个数字（U 最小值到 U 最大值）和（V 最小值到 V 最大值）。
 
-![Surface](../images/5-2/5/SurfaceParameter.jpg)
+![曲面](../images/5-2/5/SurfaceParameter.jpg)
 
-Although the shape of the Surface by not look "rectangular" and it locally may have a tighter or looser set of isocurves, the "space" defined by its domain is always two dimensional. In Dynamo, Surfaces are always understood to have a domain defined by a minimum of 0.0 and maximum of 1.0 in both U and V directions. Planar or trimmed Surfaces may have different domains.
+尽管曲面的形状看起来不是“矩形”，但是局部可能有更紧或更松的等参曲线集，由其域定义的“空间”始终是二维的。在 Dynamo 中，始终可以将曲面理解为使域在 U 和 V 方向上最小为 0.0 且最大为 1.0。平面曲面或修剪曲面可能具有不同的域。
 
-**Isocurve** (or Isoparametric Curve): A curve defined by a constant U or V value on the surface and a domain of values for the corresponding other U or V direction.
+**等参曲线**：由曲面上的恒定 U 或 V 值定义的曲线，以及相应其他 U 或 V 方向的值域。
 
-**UV Coordinate**: The Point in UV Parameter Space defined by U, V, and sometimes W.
+**UV 坐标**：UV 参数空间中的点由 U、V（有时为 W）定义。
 
 ![Surface Coordinate](../images/5-2/5/SurfaceCoordinate.jpg)
 
-**Perpendicular Plane**: A Plane that is perpendicular to both U and V Isocurves at a given UV Coordinate.
+**垂直平面**：在给定 UV 坐标处与 U 向和 V 向等位曲线垂直的平面。
 
-**Normal Vector**: A Vector defining the direction of "up" relative to the Perpendicular Plane.
+**法线向量**：定义相对于垂直平面的“向上”方向向量。
 
-### NURBS Surfaces
+### NURBS 曲面
 
-**NURBS Surfaces** are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree.
+**NURBS 曲面**与 NURBS 曲线非常相似。可以将 NURBS 曲面视为位于两个方向上的 NURBS 曲线的栅格。NURBS 曲面的形状由多个控制点以及该曲面在 U 和 V 方向的阶数定义。相同的算法用于通过控制点、权重和阶数来计算形状、法线、切线、曲率和其他属性。
 
-![NURBS Surface](../images/5-2/5/NURBSsurface.jpg)
+![NURBS 曲面](../images/5-2/5/NURBSsurface.jpg)
 
-In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.
+对于 NURBS 曲面，几何体会隐含两个方向，因为无论我们看到的是什么形状，NURBS 曲面都是矩形控制点栅格。尽管这些方向通常与世界坐标系任意相关，但我们将经常使用它们来分析模型或基于曲面生成其他几何体。
 
-![NURBS Surface](../images/5-2/5/NURBSsurface-Degree.jpg)
+![NURBS 曲面](../images/5-2/5/NURBSsurface-Degree.jpg)
 
-> 1. Degree (U,V) = (3,3)
-> 2. Degree (U,V) = (3,1)
-> 3. Degree (U,V) = (1,2)
-> 4. Degree (U,V) = (1,1)
+> 1. 阶数 (U,V) = (3,3)
+> 2. 阶数 (U,V) = (3,1)
+> 3. 阶数 (U,V) = (1,2)
+> 4. 阶数 (U,V) = (1,1)
 
-### Polysurfaces
+### 多边形曲面
 
-**Polysurfaces** are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology.
+**多边形曲面**由跨边连接的曲面组成。多边形曲面提供了超过二维的 UV 定义，现在我们可以通过其拓扑在连接的形状中移动。
 
-While "Topology" generally describes a concept around how parts are connected and/or related Topology in Dynamo is also a type of Geometry. Specifically it is a parent category for Surfaces, Polysurfaces, and Solids.
+“拓扑”通常描述了有关零件连接方式的概念和/或 Dynamo 中的相关拓扑也是一种几何体类型。特别是，它是“曲面”、“多边形曲面”和“实体”的父类别。
 
 ![PolySurface](../images/5-2/5/PolySurface.jpg)
 
-Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.
+有时称为“面片”，以这种方式连接曲面可以创建更加复杂的形状，并定义跨接缝的细节。我们可以方便地将圆角或倒角操作应用到多边形曲面的边。

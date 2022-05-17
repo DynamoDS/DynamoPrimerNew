@@ -1,13 +1,13 @@
-# Dictionaries in Code Blocks
+# 代码块中的词典
 
-Not only does Dynamo 2.0 introduce the nodes previously discussed for dictionaries, there is new functionality in code blocks for this as well!
+Dynamo 2.0 不仅引入之前针对词典讨论的节点，还在代码块中提供了新功能！
 
-You can use syntax like below or DesignScript-based representations of the nodes.
+可以使用如下所示的语法或基于 DesignScript 的节点表示。
 
-![](<../images/5-5/3/dictionaries in cb - syntax (1).jpg>)
+![]
 
-Since a dictionary is an object type in Dynamo we can commit the following actions upon it.
+由于词典是 Dynamo 中的对象类型，因此我们可以对其提交以下操作。
 
-![](<../images/5-5/3/dictionaries in cb - actions with code blocks.jpg>)
+![]
 
-Maintaining these sort of interactions becomes especially useful when relating Revit data to strings. Next, we will look at some Revit use-cases.
+在将 Revit 数据与字符串相关联时，保持这些交互类型尤其有用。接下来，我们将了解一些 Revit 使用案例。

@@ -1,5 +1,5 @@
-# Designing with Lists
+# 使用列表进行设计
 
-Lists are the way we organize data. On your computer's operating system, you have files and folders. In Dynamo, we can regard these as items and lists, respectively. Like your operating system, there are many ways to create, modify, and query data. In this chapter, we'll break down how lists are managed in Dynamo.
+列表是我们组织数据的方式。在计算机的操作系统上，有文件和文件夹。在 Dynamo 中，我们可以分别将它们视为项目和列表。与操作系统一样，可通过多种方法创建、修改和查询数据。在本章中，我们将分析如何在 Dynamo 中管理列表。
 
-![](<../images/5-4/designing with lists.jpg>)
+![]

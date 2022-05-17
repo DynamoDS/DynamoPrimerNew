@@ -2,103 +2,103 @@
 description: suggested exercise
 ---
 
-# Parametric Vase
+# 参数化花瓶
 
-Creating a parametric vase is a great way to start learning Dynamo.
+创建参数化花瓶是开始学习 Dynamo 的最佳方法。
 
-This workflow will teach you how to:
+此工作流将指导您如何操作：
 
-* Use number sliders to control variables in your design.
-* Create and modify geometric elements using nodes.
-* Visualize design results in real-time.
+* 使用数字滑块控制设计中的变量。
+* 使用节点创建和修改几何图元。
+* 实时显示设计结果。
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 
-## Defining Our Objectives
+## 定义目标
 
-Before jumping into dynamo let's conceptually design our vase.
+在跳转到 Dynamo 之前，让我们先从概念上设计花瓶。
 
-Let's say we are going to design a clay vase that takes into account manufacturing practices used by ceramists. Ceramists normally use a pottery wheel to fabricate cylindrical vases. Then, by applying pressure on various heights of the vase they can alter the shape of the vase and create varied designs.
+假定我们要设计一个粘土花瓶，并考虑陶艺家所用的制造实践。陶艺家通常使用陶轮来制作圆柱形花瓶。然后，通过对花瓶的不同高度施加压力，他们可以改变花瓶的形状并创造出不同的设计。
 
-We would use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
+我们将使用类似的方法来定义花瓶。我们将创建 4 个不同高度和半径的圆，然后通过放样这些圆来创建一个曲面。
 
 ![](../images/10-1/1/vase2.png)
 
-## Getting Started
+## 快速入门
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
-> A full list of example files can be found in the Appendix.
+> 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-We need the nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a node that does so. Use the **Search field** or browse through the **Library** to find the **Circle.ByCenterPointRadius** node and add it to the Workspace
+我们需要节点来表示 Dynamo 将执行的操作序列。由于我们知道要创建一个圆，因此我们先找到一个执行该操作的节点。使用**“搜索”字段**或浏览**“库”**，以找到**“Circle.ByCenterPointRadius”**节点并将其添加到工作空间
 
 ![](../images/10-1/1/vase8.png)
 
-> 1. Search > "Circle..."
-> 2. Select > "ByCenterPointRadius"
-> 3. Node will appear in workspace
+> 1. 搜索 >“圆...”
+> 2. 选择 >“ByCenterPointRadius”
+> 3. 节点将显示在工作空间中
 
-Let's take a closer look at this node. On the left side, you have the node's inputs (_centerPoint_ and _radius_) and on the right side, you have the node's output (Circle). Notice that the outputs have a light blue line. This means that the input has a default value. To get more information about the input hover over its name. The _radius_ input needs a double input and has a default value of 1.
+让我们进一步了解一下此节点。在左侧，有节点的输入（_centerPoint_ 和 _radius_）；在右侧，有节点的输出（圆）。请注意，输出有浅蓝色线。这意味着输入有默认值。要获取有关输入的详细信息，请将光标悬停在输入名称上。_radius_ 输入需要双精度输入，默认值为 1。
 
 ![](../images/10-1/1/vase10.png)
 
-We will leave the default value of _centerPoint_ but add a **Number Slider** to control the radius. As we did with the **Circle.ByCenterPointRadius** node, use the library to search for **Number Slider** and add it to your graph.
+我们将保留 _centerPoint_ 的默认值，但会添加**“Number Slider”**以控制半径。正如我们使用**“Circle.ByCenterPointRadius”**节点所做的那样，使用库搜索**“Number Slider”**并将其添加到图形中。
 
-This node is a bit different than our previous node as it contains a slider. You can use the interface to change the output value of the slider.
+该节点与我们之前的节点稍有不同，因为它包含一个滑块。可以使用该界面更改滑块的输出值。
 
 ![](<../images/10-1/1/vase13 (1).gif>)
 
-The slider can be configured using the dropdown button at the left of the node. Let's limit the slider to a maximum value of 15.
+可以使用节点左侧的下拉按钮配置滑块。我们将滑块限制为最大值 15。
 
 ![](../images/10-1/1/vase11.png)
 
-Let's place it on the left of our **Circle.ByCenterPointRadius** node and connect both nodes by selecting the **Number Slider** output and connecting it to the Radius input.
+我们将它放置在**“Circle.ByCenterPointRadius”**节点的左侧，然后通过选择**“Number Slider”**输出并将其连接到“Radius”输入来连接两个节点。
 
 ![](../images/10-1/1/vase12.png)
 
-Let's also change the Number Slider name to "Top Radius" by double-clicking on the node's name.
+我们还通过双击节点的名称将“Number Slider”名称更改为“Top Radius”。
 
 ![](../images/10-1/1/vase14.png)
 
-## Next steps
+## 后续步骤
 
-Let's continue adding some nodes and connections to our logic to define our vase.
+我们继续向逻辑中添加一些节点和连接来定义花瓶。
 
-### Creating Circles of Different Radii
+### 创建不同半径的圆
 
-Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
+我们将这些节点复制 4 次，以便这些圆定义曲面，更改“Number Slider”的名称，如下所示。
 
 ![](<../images/10-1/1/vase4 (1) (1).png>)
 
-> 1. Circles are created by a center point and a radius
+> 1. 圆由圆心和半径创建
 
-### Moving Circles Through the Vase Height
+### 沿花瓶高度移动圆
 
-We are missing a key parameter to our vase, its height. In order to control the vase's height, we create another number slider. We also add a **Code Block** node. Code blocks can help as add personalized code snippets to our workflow. We will use the code block to multiply the height slider by different factors so that we can position our circles along the vase's height.
+我们的花瓶缺少一个关键参数，即花瓶的高度。为了控制花瓶的高度，我们创建了另一个数字滑块。我们还添加了**“Code Block”**节点。代码块有助于将个性化代码段添加到我们的工作流中。我们将使用代码块将高度滑块乘以不同的因子，以便可以沿花瓶高度放置圆。
 
 ![](<../images/10-1/1/vase15 (1).png>)
 
-We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
+然后，我们使用**“Geometry.Translate”**节点在所需高度放置圆。由于我们要沿花瓶分布圆，因此我们使用代码块将高度参数乘以一个因子。
 
 ![](../images/10-1/1/vase5.png)
 
-> 2\. Circles are translated (moved) by a variable in the z axis.
+> 2\.圆在 Z 轴上由变量平移（移动）。
 
-### Creating the Surface
+### 创建曲面
 
-In order to create a surface using the **Surface.ByLoft** node we need to combine all of our translated circles into a list. We use the **List.Create** to combine all of our circles into a single list, and then finally output this list to the **Surface.ByLoft** node to view results.
+为了使用**“Surface.ByLoft”**节点创建曲面，我们需要将所有平移的圆合并到一个列表中。我们使用**“List.Create”**将所有圆合并到一个列表中，最后将此列表输出到**“Surface.ByLoft”**节点以查看结果。
 
-Let's also turn off the preview in other nodes to only display the Surface.ByLoft display.
+我们还要关闭其他节点中的预览，以仅显示“Surface.ByLoft”显示。
 
 ![](<../images/10-1/1/vase6 (1) (1).png>)
 
-> 3\. A surface is created by lofting the translated circles.
+> 3\.通过放样平移的圆来创建曲面。
 
-## Results
+## 结果
 
-Our workflow is ready! We can now use the **Number Sliders** we defined in our script to create different vase designs.
+我们的工作流已准备就绪！现在，我们可以使用在脚本中定义的**“数字滑块”**创建不同的花瓶设计。
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 
