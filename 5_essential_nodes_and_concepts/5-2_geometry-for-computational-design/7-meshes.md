@@ -1,96 +1,96 @@
-# Meshes
+# 網面
 
 ## Mesh in Dynamo
 
 ### What is Mesh?
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+在運算塑型領域，網面是 3D 幾何圖形最普遍的表現形式之一。[](7-meshes.md#mesh)
 
-### Mesh Elements
+### 網面元素
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Dynamo 使用面-頂點資料結構定義網面。在最基本的層級，此結構只是歸入多邊形的點集合。網格的點稱為頂點，而類似於曲面的多邊形稱為面。
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+若要建立網格，我們需要頂點清單，以及將這些頂點歸入面的系統 (稱為索引群組)。
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![]
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. 頂點清單
+> 2. 將定義面的索引群組清單
 
 ### Mesh Toolkit
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+透過安裝 [Mesh Toolkit](，可以延伸 Dynamo 的網面功能。) Dynamo Mesh Toolkit 可提供工具，以匯入外部檔案格式的網面、根據 Dynamo 幾何圖形物件建立網面，並根據網面的頂點與索引手動建置網面。
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+該資源庫還提供工具以修改網面、修復網面，或萃取水平切片以用於製造。
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+[](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Mesh Toolkit]
 
 ## Deep Dive into...
 
-### Mesh
+### 網面
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+網面是表示曲面或實體幾何圖形的一系列四邊形與三角形。與實體相似，網面物件的結構包括頂點、邊與面。還存在使網面獨一無二的其他性質，例如法線。
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![網面元素](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. 網面頂點
+> 2. 網面邊 *只有一個相鄰面的邊稱為「裸露邊」。 所有其他邊稱為「覆蓋邊」
+> 3. 網面面
 
-### Vertices + Vertex Normals
+### 頂點 + 頂點法線
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+網面的頂點只是一系列點。在建構網面或取得網面結構的相關資訊時，頂點的索引非常重要。對於每個頂點，還有對應的頂點法線 (向量)，可描述所貼附面的平均方向，並有助於我們瞭解網面的「in」與「out」方位。
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![頂點 + 法線](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. 頂點
+> 2. 頂點法線
 
-### Faces
+### 面
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+面是按順序排列的三或四個頂點。因此，會根據編製索引的頂點位置指示網面面的「曲面」表現法。我們已擁有構成網面的頂點清單，因此不提供個別點以定義面，只需使用頂點索引即可。我們藉此也可以對多個面使用相同的頂點。
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. 由索引 0、1、2、3 構成的四邊形面
+> 2. 由索引 1、4、2 構成的三角形面 注意可以轉換索引群組的順序 - 只要序列的順序採用逆時鐘方式，就會正確定義面
 
-### Meshes versus NURBS Surfaces
+### 網面與 NURBS 曲面的比較
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+網面幾何圖形與 NURBS 幾何圖形有什麼不同？您什麼時候需要擇其一而使用？
 
-#### Parameterization
+#### 參數化
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+在上一章，我們看到 NURBS 曲面由兩個方向的一系列 NURBS 曲線定義。這些方向標示為 `U`U`V` 與 V，可藉此根據二維曲面範圍對 NURBS 曲面執行參數化。 在電腦中，曲線本身儲存為方程式，藉此可採用任意小的精確度計算產生的曲面。但是，合併多個 NURBS 曲面會很困難。接合兩個 NURBS 曲面將產生 Polysurface，該幾何圖形的不同部分會有不同的 UV 參數與曲線定義。
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![控制點](../images/5-2/7/NURBSvsMESH-01.jpg)
 
-> 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
-> 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 1. 曲面
+> 2. 等參數 (結構線) 曲線
+> 3. 曲面控制點
+> 4. 曲面控制多邊形
+> 5. 等參數點
+> 6. 曲面框
+> 7. 網面
+> 8. 裸露邊
+> 9. 網面網路
+> 10. 網面邊
+> 11. 頂點法線
+> 12. 網面面/網面面法線
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+另一方面，網面由離散數量的精確定義頂點及面構成。頂點的網路一般無法由簡單的 `UV`UV 座標定義，由於面是離散的，因此精確度內建於網面中，只能透過細化網面及加入更多面來變更。 由於缺少數學描述，因此網面可以更靈活地處理單一網面中的複雜幾何圖形。
 
-### Local versus Global Influence
+### 局部影響與整體影響的比較
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+另一項重要差異在於網面或 NURBS 幾何圖形的局部變更對整體形狀的影響程度。移動網面的一個頂點只會影響該頂點相鄰的面。在 NURBS 曲面中，影響程度較複雜，取決於曲面的度以及控制點的權值與節點。但是，一般而言，在 NURBS 曲面中移動單一控制點會提高幾何圖形的平滑度，並對幾何圖形產生更廣泛的變更。
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![編輯](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. NURBS 曲面 - 移動控制點會在整個造型範圍內產生影響
+> 2. 網面幾何圖形 - 移動頂點只對相鄰元素產生影響
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+向量影像 (由直線與曲線構成) 與點陣式影像 (由個別像素構成) 的對比有助於您理解這一點。若拉近向量影像，曲線仍清晰鮮明，而拉近點陣式影像時，會看到個別像素變得更大。在此類比中，NURBS 曲面相當於向量影像，因為存在平滑的數學關係，而網面的行為方式類似於具有固定解析度的點陣式影像。
 
 ##

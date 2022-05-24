@@ -1,57 +1,56 @@
-# Publishing to Your Library
+# 發佈至資源庫
 
-We've just created a custom node and applied it to a specific process in our Dynamo graph. And we like this node so much, we want to keep it in our Dynamo library to reference in other graphs. To do this, we'll publish the node locally. This is a similar process to publishing a package, which we'll walk through in more detail in the next chapter.
+我們剛剛建立了自訂節點並將其套用至 Dynamo 圖形中的特定程序。我們非常喜歡此節點，因此，我們要將其保留在我們的 Dynamo 資源庫以在其他圖形中進行參考。若要執行此作業，我們將在本端發佈此節點。此程序與發佈套件的程序類似，我們將在下一個章節中進行詳細討論。
 
-By publishing a node locally, the node will be accessible in your Dynamo library when you open a new session. Without publishing a node, a Dynamo graph which references a custom node must also have that custom node in its folder (or the custom node must be imported into Dynamo using _File>Import Library_).
+透過在本端發佈節點，當您開啟一個新的階段作業時該節點將可在 Dynamo 資源庫中存取。如果不發佈節點，參照自訂節點的 Dynamo 圖形也必須在其資料夾中具有該自訂節點（或必須使用 _「檔案」>「匯入資源庫」將自訂節點匯入至 Dynamo 中_)。
 
-{% hint style="warning" %}
-Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
-{% endhint %}
+Dynamo Sandbox 沒有發佈功能。
 
-## Exercise: Publishing a Custom Node Locally
+
+## 在本端發佈自訂節點
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
 
-Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
+讓我們繼續瞭解在前一個部份中建立的自訂節點。您也可以透過在「Dynamo 圖形編輯器」中按兩下自訂節點來開啟該自訂節點。
 
-![](<../images/6-1/3/publish custom node locally 01.jpg>)
+![]
 
-To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
+若要在本端發佈自訂節點，只需在畫布上按一下右鍵，然後選取_「發佈此自訂節點...」_
 
-![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
+![]
 
-Fill out the relevant information similar to the image above and select _"Publish Locally"._. Note that the Group field defines the main element accessible from the Dynamo menu.
+參照上圖填寫相關資訊，並選取_「在本端發佈」_. 請注意，「群組」欄位定義可從 Dynamo 功能表存取的主要元素。
 
-![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
+![]
 
-Choose a folder to house all of the custom nodes that you plan on publishing locally. Dynamo will check this folder each time it loads, so make sure the folder is in a permanent place. Navigate to this folder and choose _"Select Folder"._ Your Dynamo node is now published locally, and will remain in your Dynamo Toolbar each time you load the program!
+選取資料夾，以容納所有計劃在本端發佈的自訂節點。Dynamo 會在每次載入時檢查此資料夾，以便確認該資料夾位於固定位置。導覽至此資料夾，然後選擇 _「選取資料夾」。_Dynamo 節點現已在本端發佈，並將在每次載入程式時保留在 Dynamo 工具列中！
 
-![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
+![]
 
-To check on the custom node folder location, go to _Dynamo > Preferences > Package Manager > Node and Package Paths_
+要檢查自訂節點的資料夾位置，請跳至_「設定」>「管理節點和套件路徑...」_
 
-![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
+![]
 
 In this window we see a list of paths.
 
-![](<../images/6-1/3/publish custom node exercise - 06.jpg>)
+![]
 
-> 1. _Documents\DynamoCustomNodes..._ refers to the location of custom nodes we've published locally.
-> 2. _AppData\Roaming\Dynamo..._ refers to the default location of Dynamo Packages installed online.
-> 3. You may want to move your local folder path down in the list order above (by selecting the folder path and clicking on the down arrow to the left of the path names). The top folder is the default path for package installs. So by keeping the default Dynamo package install path as the default folder, online packages will be separated from your locally published nodes.
+> 1. _Documents\DynamoCustomNodes ..._，表示本端發佈之自訂節點的位置。 *
+> 2. __
+> 3. 您可能想要將本端資料夾路徑在上方清單順序中下移 （透過選取資料夾路徑並按一下路徑名稱左側的向下箭頭）。頂層資料夾是套件安裝的預設路徑。因此，透過將預設 Dynamo 套件安裝路徑保留為預設資料夾，線上套件將與本端發佈的節點分離。
 
-We switched the order of the path names in order to have Dynamo's default path as the package install location.
+我們已切換路徑名稱的順序，以將 Dynamo 的預設路徑作為套件的安裝位置。
 
-![](<../images/6-1/3/publish custom node exercise - 07.jpg>)
+![]
 
-Navigating to this local folder, we can find the original custom node in the _".dyf"_ folder, which is the extension for a Dynamo Custom Node file. We can edit the file in this folder and the node will update in the UI. We can also add more nodes to the main _DynamoCustomNode_ folder and Dynamo will add them to your library at restart!
+導覽至此本端資料夾，我們可以在_「.dyf 」_資料夾中找到原始自訂節點，.dyf 是 Dynamo 自訂節點檔案的副檔名。 我們可以編輯此資料夾中的檔案，節點將在使用者介面中更新。我們還可以新增更多節點至主 _DynamoCustomNode_ 資料夾，Dynamo 會在重新啟動時將其新增到您的資源庫！
 
-![](<../images/6-1/3/publish custom node exercise - 08.jpg>)
+![]
 
-Dynamo will now load each time with "PointsToSurface" in the "DynamoPrimer" group of your Dynamo library.
+Dynamo 現在每次會使用 Dynamo 資源庫「DynamoPrimer」組中的 「PointsToSurface 」進行載入。
 
-![](<../images/6-1/3/publish custom node exercise - 09.jpg>)
+![]

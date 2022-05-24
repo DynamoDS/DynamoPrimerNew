@@ -1,10 +1,10 @@
-# Python Point Generators
+# Python 點產生器
 
-The following Python scripts generate point arrays for several examples. They should be pasted into a Python Script node as follows:
+以下 Python 腳本會為多個範例產生點陣列。請將這些腳本貼至 Python 腳本節點，如下所示：
 
-![](<../images/8-2/10/python points 01.jpg>)
+![]
 
-**python\_points\_1**
+****
 
 ```python
 out_points = []
@@ -23,7 +23,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_2**
+****
 
 ```python
 out_points = []
@@ -37,7 +37,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_3**
+****
 
 ```python
 out_points = []
@@ -51,7 +51,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_4**
+****
 
 ```python
 out_points = []
@@ -65,7 +65,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_5**
+****
 
 ```python
 out_points = []

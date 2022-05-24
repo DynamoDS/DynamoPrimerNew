@@ -1,8 +1,8 @@
-# DesignScript Geometry Basics
+# DesignScript 幾何圖形基礎知識
 
 ### Point
 
-The simplest geometrical object in the Dynamo standard geometry library is a point. All geometry is created using special functions called constructors, which each return a new instance of that particular geometry type. In Dynamo, constructors begin with the name of the object’s type, in this case Point, followed by the method of construction. To create a three dimensional point specified by x, y, and z Cartesian coordinates, use the _ByCoordinates_ constructor:
+Dynamo 標準幾何圖形資源庫中最簡單的幾何圖形物件是一個點。所有幾何圖形都是使用稱作建構函式的特殊函數建立的，每個建構函式都會傳回一個該特定幾何圖形類型的新例證。在 Dynamo 中，建構函式以物件類型的名稱 (在此案例中為 Point) 為開頭，後接建構的方法。若要建立一個以 x、y、z 直角座標指定的三維點，請使用 _ByCoordinates_ 建構函式：
 
 ![](../images/8-2/1/GeometryBasics\_01.png)
 
@@ -16,9 +16,9 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Constructors in Dynamo are typically designated with the “_By_” prefix, and invoking these functions returns a newly created object of that type. This newly created object is stored in the variable named on the left side of the equal sign.
+Dynamo 中的建構函式通常以「_By_」字首指定，呼叫這些函數會傳回該類型新建立的物件。這個新建立的物件以等號左邊命名的變數儲存。
 
-Most objects have many different constructors, and we can use the _BySphericalCoordinates_ constructor to create a point lying on a sphere, specified by the sphere’s radius, a first rotation angle, and a second rotation angle (specified in degrees):
+大多數物件都有許多不同的建構函式，我們可以使用 _BySphericalCoordinates_ 建構函式，指定圓球的半徑、第一個旋轉角度和第二個旋轉角度 (以度為單位指定) 建立一個圓球上的點：
 
 ![](../images/8-2/1/GeometryBasics\_02.png)
 
@@ -34,9 +34,9 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
     phi);
 ```
 
-### From Point to Line
+### 點到線
 
-Points can be used to construct higher dimensional geometry such as lines. We can use the _ByStartPointEndPoint_ constructor to create a Line object between two points:
+點可以用來建構更高維度的幾何圖形，例如直線。我們可以使用 _ByStartPointEndPoint_ 建構函式在兩個點之間建立一個 Line 物件：
 
 ![](../images/8-2/1/GeometryBasics\_03.png)
 
@@ -51,7 +51,7 @@ l = Line.ByStartPointEndPoint(p1, p2);
 
 ### From Line to Surface
 
-Similarly, lines can be used to create higher dimensional surface geometry, for instance using the _Loft_ constructor, which takes a series of lines or curves and interpolates a surface between them.
+同樣的，直線也可以用來建立更高維度的曲面幾何圖形，例如使用 _Loft_ 建構函式，用一系列直線或曲線，在這之間內插一個曲面。
 
 ![](../images/8-2/1/GeometryBasics\_04.png)
 
@@ -77,7 +77,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 ### From Surface to Solid
 
-Surfaces too can be used to create higher dimensional solid geometry, for instance by thickening the surface by a specified distance. Many objects have functions attached to them, called methods, allowing the programmer to perform commands on that particular object. Methods common to all pieces of geometry include _Translate_ and _Rotate_, which respectively translate (move) and rotate the geometry by a specified amount. Surfaces have a _Thicken_ method, which take a single input, a number specifying the new thickness of the surface.
+曲面也可以用來建立更高維度的立體幾何圖形，例如把曲面加厚指定的距離。許多物件都會附加稱為方法的函數，程式設計師可以對該特定物件執行指令。所有幾何圖形都通用的方法包括 _Translate_ 和 _Rotate_，分別是按指定的量平移 (移動) 和旋轉幾何圖形。曲面有一個名為 _Thicken_ 的方法，它需要一個單一輸入，該數字用於指定曲面的新厚度。
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 
@@ -97,9 +97,9 @@ surf = Surface.ByLoft([l1, l2]);
 solid = surf.Thicken(4.75, true);
 ```
 
-### Intersect
+### 相交
 
-_Intersection_ commands can extract lower dimensional geometry from higher dimensional objects. This extracted lower dimensional geometry can form the basis for higher dimensional geometry, in a cyclic process of geometrical creation, extraction, and recreation. In this example, we use the generated Solid to create a Surface, and use the Surface to create a Curve.
+_Intersection_ 指令可以從較高維度的物件萃取出較低維度的幾何圖形。在建立、萃取和重新建立幾何圖形的循環過程中，萃取出的較低維度幾何圖形可以形成較高維度幾何圖形的基礎。在此範例中，我們使用產生的立體 (Solid) 來建立一個曲面 (Surface)，並使用曲面 (Surface) 來建立一條曲線 (Curve)。
 
 ![](../images/8-2/1/GeometryBasics\_06.png)
 

@@ -1,259 +1,259 @@
-# Graph Strategies
+# 圖表策略
 
-Prior to this chapter, the Primer has covered how to implement the powerful visual-scripting capabilities of Dynamo. A good understanding of these capabilities is a solid foundation and the first step in building robust visual programs. When we use our visual programs in the field, share them with colleagues, troubleshoot errors, or test limits we have additional issues to deal with. If someone else will be using your program or you are expecting to open it six months from now, it needs to have an immediate graphic and logical clarity. Dynamo has many tools to manage the complexity of your program, and this chapter will give guidelines on when to use them.
+在此章節之前，Primer 已涵蓋如何實施 Dynamo 的強大可視腳本功能。充分瞭解這些功能是重要的基礎，以及建置功能強大的視覺程式的第一步。當我們實際使用視覺程式、將其與同事共享、疑難排解錯誤或測試限制時，我們將需要處理其他問題。如果其他使用者將使用您的程式，或您預期六個月後將會打開它，程式則需要有直接、清晰的圖形和邏輯。Dynamo 有多個工具可管理您的程式的複雜性，本章節將提供有關何時使用它們的準則。
 
-![groups](images/1/cad-chart-visual.jpg)
+![群組](images/1/cad-chart-visual.jpg)
 
-## Reduce Complexity
+## 減少複雜性
 
-As you develop your Dynamo graph and test ideas, it can quickly grow in size and complexity. While it is important that you create a functioning program, it is equally important to make it as simple as possible. Not only will your graph run faster and more predictably, you along with other users will understand its logic later on. The following are several ways that will help you clarify the logic of your graph.
+當您開發 Dynamo 圖表和測試您的想法時，它的大小和複雜性可快速增加。建立可運行的程式和建立簡單的程式同樣重要。 圖表不僅更快且更有預測性地執行，您與其他使用者亦將瞭解其邏輯。以下幾種方法可協助您闡明圖表的邏輯。
 
-### **Modularize with Groups**
+### **模組化群組**
 
-* Groups allow you to **create functionally distinct parts** as you build a program
-* Groups allow you to **move large parts of the program** around while maintaining modularity and alignment
-* You can change the **color of the group to differentiate** what Groups are doing (inputs vs functions)
-* You can use groups to start **organizing your graph to streamline Custom Node creation**
+* 群組可讓您在建置程式的時候**建立不同功能的部分**
+* 群組可讓您**調動程式的大型部分**，同時保持模組性與對齊
+* 您可以變更**群組的顏色以便區分**群組執行的內容 (輸入 vs 函數)
+* 您可以使用群組來**組織圖表，以簡化自訂節點的建立**
 
 ![](images/1/graphstrategy2.png)
 
-> The colors in this program identify the purpose of each group. This strategy can be used to create hierarchy in any graphic standards or templates you develop.
+> 此程式中的顏色用於識別每個群組的目的。此策略可用於建立任何您開發的圖形標準或樣板裡的架構。
 >
-> 1. Function group (blue)
-> 2. Input group (orange)
-> 3. Script group (green)
+> 1. 函數群組 (藍色)
+> 2. 輸入群組 (橘色)
+> 3. 腳本群組 (綠色)
 >
-> For how to use Groups, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> []()
 
-### **Develop efficiently with Code Blocks**
+### **使用 Code Block 有效地開發**
 
-* At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
-* Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
+* 有時，您可以使用 Code Block，以**快於搜尋的方式輸入數字或節點方法** (Point.ByCoordinates、Number、String、Formula)
+* **如果您要在 DesignScript 定義自訂函數以減少圖表中的節點數量**，Code Block 則非常有用
 
-![](<images/1/graphstrategy3 (1).png>)
+![]
 
-> Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
+> 1 和 2 均執行相同的功能。寫入數行程式碼遠遠比搜尋並加入每個個別節點更快。Code block 也會更精確。
 >
-> 1. Design Script written in Code Block
-> 2. Equivalent program in nodes
+> 1. 使用 Code Block 編寫的設計腳本
+> 2. 節點中的相等程式
 >
-> For how to use Code Block, refer to [What's a Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> 若要瞭解如何使用 Code Block，請參閱[〈什麼是 Code Block〉](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md)。
 
-### **Condense with Node to Code**
+### **使用 Node to Code 進行壓縮**
 
-* You can **reduce the complexity of a graph by using Node to Code** which will take a collection of simple nodes and write their corresponding DesignScript in a single Code Block
-* Node to Code can\*\* condense code without eliminating the program’s clarity\*\*
-* The following are the **pros** of using Node to Code:
-  * Easily condenses code into one component that is still editable
-  * Can simplify a significant portion of the graph
-  * Useful if the ‘mini-program’ will not often be edited
-  * Useful for incorporating other code block functionality, like functions
-* The following are the **cons** of using Node to Code:
-  * Generic naming makes it less legible
-  * More difficult to understand for other users
-  * No easy way to return to the visual programming version
+* 您可以**使用 Node to Code 減低圖表的複雜性**，它會集合簡單的節點並在單一的 Code Block 裡寫入與其對應的 DesignScript。
+* Node to Code 可以 壓縮程式碼，而不會減低程式的清晰度
+* 以下是使用 Node to Code 的**優勢**：
+   * 輕鬆地將程式碼壓縮為仍可編輯的元件
+   * 可以簡化圖表的重要部分
+   * 如果不會對「小型程式」進行頻密的編輯，它將會很有用處
+   * 用於整合其他 code block 功能，如函數
+* 以下是使用 Node to Code 的**缺點**：
+   * 一般命名使其不易辨認
+   * 其他使用者比較難以瞭解
+   * 較難返回視覺程式版本
 
 ![](images/1/graphstrategy3\_1.png)
 
-> 1. Existing program
-> 2. Code Block created from Node to Code
+> 1. 既有的程式
+> 2. 從 Node to Code 建立的 Code Block
 >
-> For how to use Node to Code, refer to [Design Script Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> 若要瞭解如何使用 Node to Code，請參閱[〈設計腳本語法〉](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code)。
 
-### **Access data flexibly with List@Level**
+### **使用 List@Level 存取資料彈性**
 
-* Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
-* List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
+* 使用 List@Level 可以協助您**取代可能會佔用大量圖元區空間的 List.Map 和 List.Combine 節點，從而降低圖表的複雜性**。
+* List@Level 是比 List.Map/List.Combine 更快的建構節點邏輯的方法，可讓您從節點的輸入連接埠存取清單中任何層級的資料。
 
-![](<images/1/graphstrategy4 (1) (1).png>)
+![]
 
-> We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
+> 我們可以透過啟用 CountTrue「清單」輸入的 List@Level 來確認 BoundingBox.Contains 在哪些清單中傳回多少 True 值。List@Level 可讓使用者決定輸入將在哪個層級取得資料。使用 List@Level 更為彈性、有效，強烈建議您以它來取代涉及 List.Map 和 List.Combine 的其他方式。
 >
-> 1. Counting true values at List Level 2
-> 2. Counting true values at List Level 3
+> 1. 計算 List Level 2 的 true 值
+> 2. 計算 List Level 3 的 true 值
 >
-> For how to use List@Level, refer to [Lists of Lists](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> []()
 
-## Maintain Readability
+## 保持可讀性
 
-In addition to making your graph as simple and efficient as possible, strive for graphic clarity. Despite your best efforts to make your graph intuitive with logical groupings, relationships might not be readily apparent. A simple Note inside of a Group or renaming a slider can save you or another user from unnecessary confusion or panning across the graph. The following are several ways that will help you apply graphic consistency within and across your graphs.
+除了使圖表更為簡單和高效外，您亦應致力於維持它的清晰度。即使您盡最大的努力讓圖表擁有直覺式的邏輯分組，關係仍然可能不會立即顯現。在群組裡加入簡單的註記或更名滑棒可以幫助您或其他使用者避免不必要的混淆或橫跨圖表的麻煩。以下幾種方法可協助確保您的圖表的一致性。
 
-### **Visual continuity with Node Alignment**
+### **視覺連續性與對齊節點**
 
-* To reduce your work after you finished building your graph, you should try to ensure the node layout is legible by **aligning nodes often and as you go**
-* If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
-* To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
+* 為減少您在完成建構圖表的後續工作，您應該**時常對齊節點**以嘗試確保節點配置易於辨認
+* 如果其他人將會處理您的圖表，您應**確保節點配線的配置在傳輸前能夠輕鬆地流動**
+* 為了協助您對齊，**請使用「清理節點配置」功能以自動對齊**圖表，即使它未能如您自己手動對齊般精確
 
-![](<images/1/graphstrategy5 (2) (1).png>)
+![]
 
-> 1. Unorganized graph
-> 2. Aligned graph
+> 1. 未組織的圖表
+> 2. 對齊的圖表
 >
-> For how to use Node Alignment, refer to [Managing Your Program](3-4\_best\_practices.md).
+> 若要瞭解如何使用節點的對齊方式，請參閱[〈管理您的程式〉](3-4\_best\_practices.md)。
 
-### **Descriptive labeling by renaming**
+### **透過更名以進行描述性標示**
 
-* Renaming inputs can help others easily understand your graph, **especially if what they plug into will be off the screen**
-* **Be wary of renaming nodes other than inputs.** An alternative to this is creating a custom node from a node cluster and renaming that; it will be understood that it contains something else
+* 更名輸入可協助他人輕鬆瞭解您的圖表，**尤其是當他們插入的不會在螢幕上顯示**
+* **慎防更名節點。**另一種替代方法是從節點叢集建立自訂節點並對其進行更名；這會被瞭解為它包含其他內容
 
 ![](images/1/graphstrategy6.png)
 
-> 1. Inputs for surface manipulation
-> 2. Inputs for architectural parameters
-> 3. Inputs for drainage simulation script
+> 1. 操控曲面的輸入
+> 2. 建築參數的輸入
+> 3. 排水模擬腳本的輸入
 >
-> To rename a node, right click on its name and choose "Rename Node...".
+> 若要更名節點，在其名稱上按一下右鍵，然後選擇「更名節點...」。
 
-### **Explain with Notes**
+### **使用註記進行解釋**
 
-* You should add a Note if something in the **graph requires a plain language explanation** that the nodes can not express
-* You should add a Note if a collection of **nodes or a Group is too large or complex and can’t be easily understood right away**
+* 如果**圖表需要節點未能表達的普通語言說明**，您應該加入註記。
+* 如果**節點集或群組太大或太複雜，並且無法輕鬆瞭解**，您應該加入註記。
 
 ![](images/1/graphstrategy7.png)
 
-> 1. A Note describing the portion of the program that returns raw translation distances
-> 2. A Note describing the code that maps those values to a Sine wave
+> 1. 註記描述傳回原始轉換距離的程式部分
+> 2. 註記描述對映這些值至正弦波形的程式碼
 >
-> For how to add a Note, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> []()
 
-## Flex Continuously
+## 連續地調整
 
-While building your visual-script, it is important to verify that what is being returned is what you expected. Not all errors or issues will cause the program to fail immediately, especially null or zero values that could affect something far downstream. This strategy is also discussed in the context of text-scripting in [Scripting Strategies](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). The following practice will help ensure that you are getting what you expected.
+建置視覺腳本時，請務必確認所傳回的與您所預期的相符。並非所有錯誤或問題都會導致程式立即失敗，尤其是可能會影響下游遠處的 null 或零值。[]()以下練習將有助於確保您取得預期的內容。
 
-### **Monitor data with Watch and Preview Bubbles**
+### **使用觀看和預覽標示圈監視資料**
 
-* Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
+* 建立程式時，使用觀看或預覽標示圈以確認關鍵輸出傳回您所預期的內容
 
 ![](images/1/graphstrategy8.png)
 
-> The Watch nodes are being used to compare:
+> Watch 節點被用於比較：
 >
-> 1. The raw translation distances
-> 2. The values passed through the Sine equation
+> 1. 原始轉換距離
+> 2. 通過正弦方程式的值
 >
-> For how to use Watch, refer to [Library](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> []()
 
-## Ensure Reusability
+## 確保可重複使用性
 
-It is highly likely that someone else will be opening your program at some point, even if you are working independently. They should be able to quickly understand what the program needs and produces from its inputs and outputs. This is especially important when developing a Custom Node to be shared with the Dynamo community and used in someone else’s program. These practices lead to robust, reusable programs and nodes.
+即使您獨立工作，其他使用者亦很有可能會開啟您的程式。他們應該可以快速瞭解程式需要，以及使用程式的輸入與輸出執行作業。如果開發自訂節點是為了與 Dynamo 社群共用和用於其他人的程式，這點尤其重要。這些做法導致強大的、可重複使用的程式和節點。
 
-### **Manage the I/O**
+### **管理 I/O**
 
-* To ensure legibility and scalability, you should try and **minimize inputs and outputs as much as possible**
-* You should try to **strategize how you are going to build the logic by first creating a rough outline** of how the logic could work before you even add a single node to the canvas. As you develop the rough outline, you should keep track of which inputs and outputs will go into scripts
+* 若要確保易讀性和可調整性，您應嘗試**儘量最小化輸入與輸出**
+* 加入任何節點之前，您應該嘗試**策劃您要建置的邏輯，方法是先為這個邏輯建立粗略的大綱**。當您建立粗略的大綱時，您應該保持追蹤哪些輸入和輸出將被加入至腳本中。
 
-### **Use Presets to embed input values**
+### **使用「預置」以嵌入輸入值**
 
-* If there are **particular options or conditions that you want embedded in the graph**, you should use Presets for quick access
-* You can also use Presets to **reduce complexity by caching specific slider values** in a graph with long run times
+* 如果您有**想要嵌入至圖表中的特定選項或條件**， 您應該使用「預置」以快速存取。
+* 您也可以使用「預置」來**降低複雜性，方法是在執行時間較長的圖表中快取特定的滑棒值**。
 
-> For how to use Presets, refer to [Managing Your Data with Presets](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> []()
 
-### **Contain programs with Custom Nodes**
+### **包含自訂節點的程式**
 
-* You should use a Custom Node if your **program can be collected into a single container**
-* You should use a a Custom Node **when a portion of the graph will be reused often** in other programs
-* You should use a Custom Node if you want to **share a functionality with the Dynamo Community**
+* 如果您的**程式可以收集到單一容器**，您應該使用自訂節點。
+* **當圖表的部分經常在其他程式中重複使用**，您應該使用自訂節點。
+* 如果您想要**與 Dynamo 社群共用功能**，您應該使用自訂節點。
 
 ![](images/1/graphstrategy9.png)
 
-> Collecting the point translation program into a Custom Node makes a robust, unique program portable and far easier to understand. Well named input ports will help other users understand how to use the node. Remember to add descriptions and required data types for each input.
+> 將點轉換程式收集至自訂節點可建立一個功能強大的、唯一的、可攜式和更易於瞭解的程式。清晰地命名輸入連接埠將協助其他使用者瞭解如何使用節點。請記得為每個輸入加入描述和所需的資料類型。
 >
-> 1. Existing attractor program
-> 2. Custom Node that collects this program, PointGrid
+> 1. 既有牽引程式
+> 2. 收集此程式 「PointGrid」的自訂節點
 >
-> For how to use Custom Nodes, refer to [Custom Node Introduction](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> []()
 
-### **Build templates**
+### **建立樣板**
 
-* You can build templates to **establish graphic standards across your visual graphs to ensure collaborators have a standardized way of understanding graph**
-* When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
-* When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
+* 您可以建立樣板來**建立視覺圖表的圖形標準，以確保協同合作者使用標準化的方式瞭解圖表**
+* 建立樣板時，您可以標準化**群組顏色和字體大小**，以為工作流程類型或資料動作分類。
+* 建立樣板時，您甚至可以標準化您想要如何在圖表中**為前端與後端工作流程之間的差異進行標示、著色或型式化**。
 
-![](<images/1/graphstrategy10 (2).png>)
+![]
 
-> 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
-> 2. The back-end of the program.
-> 3. Group color categories (the general design, inputs, Python scripting, imported geometry).
+> 1. 程式的使用者介面或前端包括專案名稱、輸入滑棒和匯入幾何圖形。
+> 2. 程式的後端。
+> 3. 群組顏色品類 (一般設計、輸入、Python 腳本、匯入的幾何圖形)。
 
-## Exercise - Architectural Roof
+## 練習 - 建築的屋頂
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
-Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
+現在我們已建立多個最佳作法，讓我們將它們套用至一個快速建置的程式。雖然程式成功產生屋頂，但圖表的狀態是作者的思維導圖。它缺少任何組織或有關使用它的說明。我們將檢視最佳實踐，以組織、描述和分析程式，以便其他使用者可以瞭解如何使用它。
 
 ![](images/1/graphstrategy11.png)
 
-> The program is functioning, but the graph is disorganized.
+> 程式正常運作，但圖表缺乏組織。
 
-Let's start by determining the data and geometry returned by the program.
+讓我們先確定程式傳回的資料和幾何圖形。
 
 ![](images/1/graphstrategy12.png)
 
-> Understanding when major changes to the data occur is crucial to establishing logical divisions, or modularity. Try inspecting the rest of the program with Watch nodes to see if you can determine groups before moving on to the next step.
+> 瞭解資料會在何時發生重大變化對於建立邏輯分割或模組性至關重要。請嘗試利用 Watch 節點來檢查程式的其餘部分，以查看您是否可以先確定群組，然後才移至下一個步驟。
 >
-> 1. This **Code Block** with a math equation looks like a crucial piece of the program. A **Watch** node displays that it is returning lists of translation distances.
-> 2. The purpose of this area isn't readily obvious. The arrangement of True values at list level L2 from **BoundingBox.Contains** and the presence of **List.FilterByBoolMask** suggests we are sampling a portion of the point grid.
+> 1. 這個擁有數學方程式的 Code Block 似乎是程式的關鍵部分。**** Watch 節點會顯示其正在傳回轉換距離的清單。****
+> 2. 此區域的目的並不明顯。BoundingBox.Contains 在 List level L2 的 True 值排列，以及 List.FilterByBoolMask 的存在表示我們正在對點網格的一部分進行取樣。********
 
-Once we understand the elemental parts of the program, let's put them in Groups.
+一旦我們瞭解程式的元素部分，就可將其置於群組。
 
 ![](images/1/graphstrategy13.png)
 
-> Groups allow the user to visually differentiate the parts of the program.
+> 群組可讓使用者從視覺上區分程式的各個部分。
 >
-> 1. Import 3D site model
-> 2. Translate point grid based on Sine equation
-> 3. Sample portion of point grid
-> 4. Create architectural roof surface
-> 5. Create glass curtain wall
+> 1. 匯入 3D 敷地模型
+> 2. 根據正弦方程式轉換點網格
+> 3. 點網格的範例部分
+> 4. 建立建築屋頂的曲面
+> 5. 建立玻璃帷幕牆
 
-With Groups established, align the nodes to create visual continuity across the graph.
+建立群組後，對齊節點以建立圖表的視覺連續性。
 
 ![](images/1/graphstrategy14.png)
 
-> Visual continuity helps the user to see the program flow and implicit relationships between nodes.
+> 視覺連續性可協助使用者查看程式流程和節點之間的隱含關係。
 
-Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
+透過加入另一層圖形改進來使程式更容易存取。加入註釋以描述程式中特定區域的運作方式、為輸入自訂名稱，以及指定顏色到不同類型的群組。
 
-![](<images/1/graphstrategy15 (1).png>)
+![]
 
-> These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
+> 這些圖形改進可讓使用者瞭解更多有關程式的執行。不同的群組顏色有助於區分輸入與函數。
 >
-> 1. Notes
-> 2. Inputs with descriptive names
+> 1. 註釋
+> 2. 輸入的描述性名稱
 
-Before we start to condense the program, let's find a strategic location to introduce the Python script drainage simulator. Plug the output of the first scaled roof surface into the respective scripting input.
+在開始壓縮程式之前，讓我們先尋找關鍵位置引入 Python 腳本排水模擬器。將第一個已調整比例的屋頂曲面的輸出插入至各自的腳本輸入。
 
 ![](images/1/graphstrategy16.png)
 
-> We've chosen to integrate scripting at this point in the program so the drainage simulation can be run on the original, single roof surface. That specific surface is not being previewed, but it saves us from having to choose the top surface of the chamfered Polysurface.
+> 我們選擇將腳本整合到程式，以便可以在原始、單一的屋頂曲面執行排水模擬。指定的曲面無法被預覽，但它可讓我們不必選取倒角 Polysurface 的頂部表面。
 >
-> 1. Source geometry for script input
-> 2. Python node
-> 3. Input sliders
-> 4. On/off "switch"
+> 1. 腳本輸入的來源幾何圖形
+> 2. Python 節點
+> 3. 輸入滑棒
+> 4. 打開/關閉開關
 
-Let's simplify the graph now that everything is in place.
+一切就緒，讓我們來簡化圖表。
 
 ![](images/1/graphstrategy17.png)
 
-> Condensing our program with Node to Code and Custom Node has greatly reduced the size of the graph. The groups that create the roof surface and walls have been converted to code since they are very specific to this program. The point translation group is contained in a Custom Node as it could be used in another program. In the example file, create your own custom node from the translate points group.
+> 透過使用 Node to Code 和自訂節點來壓縮程式，令圖表的大小大幅減少。建立屋頂曲面和牆的群組已轉換為程式碼，因為它們特定於此程式。點轉換群組包含在自訂節點中，並且可以用於其他程式。在範例檔案中，從轉換點群組建立您的自訂節點。
 >
-> 1. Custom Node to contain the "translate point grid" group
-> 2. Node to Code to condense the "create architectural roof surface and curtain wall" groups
+> 1. 包含「轉換點網格」群組的自訂節點
+> 2. 壓縮「建立建築屋頂的曲面和帷幕牆」群組的 Node to Code
 
-As a final step, create presets for exemplary roof forms.
+最後一個步驟是建立典型屋頂塑形的預置。
 
 ![](images/1/graphstrategy18.png)
 
-> These inputs are the primary drivers of the roof form and will help users see the potential of the program.
+> 這些輸入是屋頂塑形的主要驅動程式，並將協助使用者發現程式的潛能。
 
-Our program with views of two presets.
+我們的程式隨附兩個預置視圖。
 
 ![](images/1/graphstrategy19.png)
 
 ![](images/1/graphstrategy20.png)
 
-> The roof drainage patterns give the user an analytical view of the respective presets.
+> 屋頂排水樣式為使用者提供各個預置的解析視圖。

@@ -1,115 +1,115 @@
-# Logic
+# 邏輯
 
-**Logic**, or more specifically, **Conditional Logic**, allows us to specify an action or set of actions based on a test. After evaluating the test, we will have a Boolean value representing `True` or `False` that we can use to control the Program Flow.
+藉由**邏輯**，或者更明確地說，藉由**條件邏輯**，我們可以根據測試指定單一或一組動作。在評估測試時，我們可以使用表示 `True` 或 `False` 的布林值控制程式流程。
 
-### Booleans
+### 布林
 
-Numeric variables can store a whole range of different numbers. Boolean variables can only store two values referred to as True or False, Yes or No, 1 or 0. We rarely use booleans to perform calculations because of their limited range.
+數值變數可以儲存所有範圍的不同數字。布林變數只能儲存兩個值，稱為 True 或 False、是或否、0 或 1。由於布林值範圍有限，因此很少使用布林值執行計算。
 
-### Conditional Statements
+### 條件陳述式
 
-The "If" statement is a key concept in programming: "If _this_ is true, then _that_ happens, otherwise _something else_ happens. The resulting action of the statement is driven by a boolean value. There are multiple ways to define an "If" statement in Dynamo:
+「If」陳述式是程式設計中的關鍵概念：「如果_這_是真的，則會發生_那件事_，否則會發生_其他事_。」由布林值確定所產生的陳述式動作。在 Dynamo 中，可以採用多種方式定義「if」陳述式：
 
-| Icon                                            | Name (Syntax)             | Inputs            | Outputs |
+| 圖示 | 名稱 (語法) | 輸入 | 輸出 |
 | ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](<../images/5-3/3/If.jpg>)         | If (**If**)               | test, true, false | result  |
-| ![](../images/5-3/3/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | result  |
-| ![](<../images/5-3/3/Code Block.jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
+| ![](<../images/5-3/3/If.jpg>) | If (**If**) | test、true、false | result |
+| ![](../images/5-3/3/Formula.jpg) | Formula (**IF(x,y,z)**) | x、y、z | result |
+| ![](<../images/5-3/3/Code Block.jpg>) | Code Block (**(x?y:z);**) | x? y、z | result |
 
-Let's go over a brief example on each of these three nodes in action using the conditional "If" statement.
+接下來瞭解使用條件「if」陳述式的三種有效節點中每種節點的簡單範例。
 
-In this image, the _boolean_ is set to _true_, which means that the result is a string reading: _"this is the result if true"._ The three Nodes creating the _If_ statement are working identically here.
+在此影像中，_boolean_設為 _true_，這意味著結果是字串_「this is the result if true」。_建立 _If_ 陳述式的三個節點在這裡的工作方式完全相同。
 
 ![](<../images/5-3/3/logic - conditional statements 01 false.jpg>)
 
-Again, the Nodes are working identically. If the _boolean_ is changed to _false_, our result is the number _Pi_, as defined in the original _If_ statement.
+再說一次，節點的工作方式完全相同。若_boolean_變更為 _false_，則結果是數字 _Pi_，如原始 _If_ 陳述式所定義。
 
 ![x](<../images/5-3/3/logic - conditional statements 02 true.jpg>)
 
-## Exercise: Logic and Geometry
+## 練習：邏輯和幾何圖形
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
-### Part I: Filtering a List
+### 第 I 部分：篩選清單
 
-1. Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
+1. 接下來使用邏輯將數字清單分隔為偶數清單與奇數清單。
 
 ![](<../images/5-3/3/logic - exercise part I-01.jpg>)
 
-> a. **Number Range -** add a number range to the canvas.
+> a. **Number Range -** 在圖元區加入一個數字範圍。
 >
-> b. **Numbers -** add three number nodes to the canvas. The value for each number node should be: _0.0_ for _start_, _10.0_ for _end_, and _1.0_ for _step_.
+> b. **Numbers -** 在圖元區加入三個數字節點。每個數字節點的值應為：_0.0_ (_start_)、_10.0_ (_end_) 與 _1.0_ (_step_)。
 >
-> c. **Output** - our output is a list of 11 numbers ranging from 0-10.
+> c. **輸出** - 輸出是一個 11 個數字 (從 0 到 10) 的清單。
 >
-> d. **Modulo (%)-** **Number Range** into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
+> d. **模除 (%)-** 將 **Number Range** 連接至 _x_，將 _2.0_ 連接至 _y_。這會計算清單中的每個數字除以 2 產生的餘數。此清單的輸出是 0 與 1 交替顯示的數值清單。
 >
-> e. **Equality Test (==) -** add an equality test to the canvas. Plug _modulo_ output into the _x_ input and _0.0_ into the _y_ input.
+> e. **相等性測試 (==) -** 在圖元區加入相等性測試。將_模除_輸出插入 _x_ 輸入，將 _0.0_ 插入 _y_ 輸入。
 >
-> f. **Watch -** The output of the equality test is a list of values alternating between true and false. These are the values used to separate the items in the list. _0_ (or _true_) represents even numbers and (_1_, or _false_) represents odd numbers.
+> f. **Watch -** 相等性測試的輸出是 true 與 false 交替顯示的清單。這些值用於分隔清單中的項目。_0_ (或 _true_) 表示偶數，_1_ (或 _false_) 表示奇數。
 >
-> g. **List.FilterByBoolMask -** this Node will filter the values into two different lists based on the input boolean. Plug the original _number range_ into the _list_ input and the _equality test_ output into the _mask_ input. The _in_ output represents true values while the _out_ output represents false values.
+> g. **List.FilterByBoolMask** - 此節點將根據輸入的布林值，將這些值篩選到兩個不同清單中。將原始的 _Number Range_ 插入 _list_ 輸入，將_相等性測試_輸出插入 _mask_ 輸入。輸出 _in_ 表示 true 值，而輸出 _out_ 表示 false 值。
 >
-> h. **Watch** - as a result, we now have a list of even numbers and a list of odd numbers. We've used logical operators to separate lists into patterns!
+> h. **Watch** - 結果是我們現在產生了偶數清單與奇數清單。我們已使用邏輯運算子將清單分隔為多種樣式！
 
-### Part II: From Logic to Geometry
+### 第 II 部分：從邏輯到幾何圖形
 
-Building off of the logic established in the first exercise, let's apply this setup into a modeling operation.
+接下來我們將建置第一個練習中建立的邏輯，將此設置套用到塑型作業中。
 
-2\. We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
+2\. 我們從上一個練習開始，採用相同的節點。唯一的例外 (除了變更格式) 是：
 
 ![](<../images/5-3/3/logic - exercise part II-01.jpg>)
 
-> a. Use a **Sequence** Node with these input values.
+> a. 使用 **Sequence** 節點搭配這些輸入值。
 >
-> b. We've unplugged the in list input into **List.FilterByBoolMask**. We'll put these Nodes aside for now, but they'll come in handy later in the exercise.
+> b. 我們取消插入 **List.FilterByBoolMask** 的 list 輸入。暫時將這些節點放在一旁，它們在稍後的練習中會有用。
 
-3\. Let's begin by creating a separate group of Graph as shown in the image above. This group of Nodes represents a parametric equation to define a line curve. A few notes:
+3\. 我們先為圖表建立不同群組，如以上影像所示。此節點群組表示定義曲線所用的參數式方程式。一些註記如下：
 
 ![](<../images/5-3/3/logic - exercise part II-02.jpg>)
 
-> a. The first **Number Slider** represents the frequency of the wave, it should have a min of 1, a max of 4, and a step of 0.01.
+> a. 第一個 **Number Slider** 表示波浪的頻率，最小值為 1，最大值為 4，步長為 0.01。
 >
-> b. The second **Number Slider** represents the amplitude of the wave, should have a min of 0, a max of 1, and a step of 0.01.
+> a. 第二個 **Number Slider** 表示波浪的振幅，最小值為 0，最大值為 1，步長為 0.01。
 >
-> c. **PolyCurve.ByPoints -** if the above Node diagram is copied, the result is a sine curve in the Dynamo Preview viewport.
+> c. **PolyCurve.ByPoints -** 若複製以上節點圖，在 Dynamo 預覽視埠中的結果將是一條正弦曲線。
 
-The method here for the inputs: use number nodes for more static properties and number sliders on the more flexible ones. We want to keep the original number range that we're defining in the beginning of this step. However, the sine curve that we create here should have some flexibility. We can move these sliders to watch the curve update its frequency and amplitude.
+此處採用的輸入方式：對比較靜態的性質使用數字節點，對比較彈性的性質使用數字滑棒。我們希望保留在這一步開始時定義的原始數字範圍。但是，我們在此建立的正弦曲線應具有某些彈性。我們可以移動這些滑棒以觀看曲線對其頻率與振幅的更新。
 
 ![](<../images/5-3/3/logic - exercise part II-03.gif>)
 
-4\. We're going to jump around a bit in the definition, so let's look at the end result so that we can reference what we're getting at. The first two steps are made separately, we now want to connect the two. We'll use the base sine curve to drive the location of the zipper components, and we'll use the true/false logic to alternate between little boxes and larger boxes.
+4\. 我們將對定義進行一些調整，因此接下來看一下最終結果，以便可以參考取得的結果。之前，前兩個步驟是分別執行的，現在我們要連接兩者。我們將使用基準正弦曲線以驅動拉鍊元件的位置，並使用 true/false 邏輯實現大小方塊的交替變化。
 
 ![](<../images/5-3/3/logic - exercise part II-04.jpg>)
 
-> a. **Math.RemapRange** - Using the number sequence created in step 02, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
+> a. **Math.RemapRange** - 接下來使用步驟 02 中建立的數字序列，透過重新對映範圍建立新的數字系列。步驟 01 的原始數字介於 0-100 之間。這些數字的範圍分別由 _newMin_ 與 _newMax_ 輸入限制為從 0 到 1。
 
-5\. Create a **Curve.PointAtParameter** Node, then connect the **Math.RemapRange** output from step 04 as its _param_ input.
+5\. 建立 **Curve.PointAtParameter** 節點，然後連接步驟 04 的 **Math.RemapRange** 輸出做為其 _param_ 輸入。
 
 ![](<../images/5-3/3/logic - exercise part II-05.jpg>)
 
-This step creates points along the curve. We remapped the numbers to 0 to 1 because the input of _param_ is looking for values in this range. A value of _0_ represents the start point, a value of _1_ represents the end points. All numbers in between evaluate within the _\[0,1]_ range.
+此步驟將沿曲線建立點。我們將數字重新對映到從 0 至 1 的範圍，因為 _param_ 的輸入會尋找此範圍內的值。_0_ 值表示起點，_1_ 值表示終點。這當中的所有數字都會在 _\[0,1]_ 範圍內運算。
 
-6\. Connect the output from **Curve.PointAtParameter** to the **List.FilterByBoolMask** to separate the list of odd and even indices.
+6\. 將 **Curve.PointAtParameter** 的輸出連接至 **List.FilterByBoolMask**，以分隔奇數和偶數索引的清單。
 
 ![](<../images/5-3/3/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask** - Plug **Curve.PointAtParameter** from the previous step into the _list_ input.
+> a. **List.FilterByBoolMask** - 將上一步的 **Curve.PointAtParameter** 插入 _list_ 輸入。
 >
-> b. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
+> b. **Watch -** _in_ 的 Watch 節點與 _out_ 的 Watch 節點顯示我們有兩個分別代表偶數索引與奇數索引的清單。這些點按照在曲線上的位置順序排序，我們將在下一步示範。
 
-7\. Next, we are going to use the output result from **List.FilterByBoolMask** in step 05 to generate geometries with sizes according to its indices.
+7\. 接下來，我們將使用步驟 05 中 **List.FilterByBoolMask** 的輸出結果，根據其索引產生不同大小的幾何圖形。
 
-**Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
+**Cuboid.ByLengths -** 重新建立以上影像顯示的連接，以產生一條沿正弦曲線的拉鍊。立方體在這裡只是方塊，我們將根據方塊中心的曲線點定義其大小。現在，模型中應該已清晰呈現偶數/奇數的區分邏輯。
 
 ![](<../images/5-3/3/logic - exercise part II-07.jpg>)
 
-> a. List of cuboids at even indices.
+> a. 偶數索引處的立方體清單。
 >
-> b. List of cuboids at odd indices.
+> b. 奇數索引處的立方體清單。
 
-Voila! You have just programmed a process of defining the geometry dimensions according to the logic operation demonstrated in this exercise.
+瞧！您剛剛根據本練習示範的邏輯作業，以程式設計了定義幾何圖形維度的過程。

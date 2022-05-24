@@ -1,39 +1,39 @@
-# Math
+# 數學
 
-If the simplest form of data is numbers, the easiest way to relate those numbers is through Mathematics. From simple operators like divide to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
+如果資料最簡單的形式是數字，則關聯這些數字最簡單的方式就是透過數學運算。從諸如除號等簡單運算子到三角函數，再到更複雜的公式，數學是開始探索數字關係與樣式的良好方式。
 
-### Arithmetic Operators
+### 算術運算子
 
-Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
+運算子是一組元件 (加、減、乘、除等)，使用代數函數與兩個數字輸入值，產生一個輸出值。在「運算子」>「動作」下可以找到這些運算子。
 
-| Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
+| 圖示 | 名稱 (語法) | 輸入 | 輸出 |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-3/2/addition.jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Subtraction.jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Multiplication.jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Division.jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/addition.jpg>) | 加 (**+**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Subtraction.jpg>) | 減 (**-**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Multiplication.jpg>) | 乘 (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Division.jpg>) | 除 (**/**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
-## Exercise: The Golden Spiral Formula
+## 練習：黃金螺旋線公式
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-### Part I: Parametric Formula
+### 第 I 部分：參數式公式
 
-Combine operators and variables to form a more complex relationship through **Formulas**. Use sliders to make a Formula that can be controlled with input parameters.
+透過**公式**結合運算子和變數，以構成更複雜的關係。使用滑棒建立可透過輸入參數控制的公式。
 
-1.Create Number sequence that represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
+1. 建立表示參數式方程式中「t」的數字序列，因此，我們希望使用大到足以定義螺旋線的清單。
 
-**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.
+**Number Sequence：**根據以下三項輸入定義數字序列：_start、amount_ 與 _step_。
 
 ![](<../images/5-3/2/math - part I-01.jpg>)
 
-2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.
+2\. 上述步驟已建立用於定義參數範圍的數字清單。接下來，建立表示黃金螺旋線方程式的節點群組。
 
-The golden spiral is defined as the equation:
+定義黃金螺旋線的方程式如下：
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -43,76 +43,76 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-The image below represents the golden spiral in in visual programming form. When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
+以下影像以視覺程式設計形式表示黃金螺旋線。逐步檢查節點群組時，請盡可能注意視覺程式與書寫方程式之間的對應。
 
 ![](<../images/5-3/2/math - part I-02.jpg>)
 
-> a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
+> a. **Number Slider：**在圖元區加入兩個數字滑棒。這些滑棒代表參數式方程式中的 _a_ 與 _b_ 變數。這些表示彈性的常數，或表示我們可以針對所需結果進行調整的參數。
 >
-> b. **Multiplication (\*)** : The multiplication Node is represented by an asterisk. We'll use this repeatedly to connect multiplying variables
+> b. **相乘 (\*)**：相乘節點由星號表示。我們會重複使用此符號連接相乘的變數
 >
-> c. **Math.RadiansToDegrees**: The '_t_' values need to be translated to degrees for their evaluation in the trigonometric functions. Remember, Dynamo defaults to degrees for evaluating these functions.
+> c. **Math.RadiansToDegrees**：「_t_」值需要轉換為度，才能在三角函數中運算。請記住，Dynamo 預設使用度來運算這些函數。
 >
-> d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
+> d. **Math.Pow**：「_t_」與數字「_e_」的函數，此函數會建立 Fibonacci 序列。
 >
-> e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
+> e. **Math.Cos 與 Math.Sin**：這兩個三角函數會分別將每個參數式點的 X 座標與 Y 座標微分。
 >
-> f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
+> f. **Watch**：現在可以看到輸出是兩個清單，分別是產生螺旋線的點的 _x_ 與 _y_ 座標。
 
-### Part II: From Formula to Geometry
+### 第 II 部分：從公式到幾何圖形
 
-Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
+現在，上一步的眾多節點都沒問題，但工作量很大。若要建立更有效率的工作流程，請參閱 [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) 將 Dynamo 表示式的字串定義為一個節點。在接下來的一系列步驟中，我們將瞭解使用參數式方程式來繪製 Fibonacci 螺旋線。
 
-**Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
+**Point.ByCoordinates：**將上方的相乘節點連接到「_x_」輸入，將下方的節點連接到「_y_」輸入。我們現在可以在螢幕上看到點的參數式螺旋線。
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints:** Connect **Point.ByCoordinates** from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
+**Polycurve.ByPoints：**將上一步的 **Point.ByCoordinates** 連接到_點_。我們可以保留 _connectLastToFirst_ 無輸入，因為不打算繪製封閉曲線。這會建立一條穿過上一步定義的每個點的螺旋線。
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
-We've now completed the Fibonacci Spiral! Let's take this further into two separate exercises from here, which we'll call the Nautilus and the Sunflower. These are abstractions of natural systems, but the two different applications of the Fibonacci spiral will be well represented.
+我們現在完成了 Fibonacci 螺旋線！接下來進一步將此分為兩個單獨的練習，我們分別稱之為鸚鵡螺與向日葵。這些是自然系統的抽象名稱，但可以充分呈現 Fibonacci 螺旋線的兩種不同應用。
 
-### Part III: From Spiral to Nautilus
+### 第 III 部分：從螺旋線到鸚鵡螺
 
-**Circle.ByCenterPointRadius:** We'll use a circle Node here with the same inputs as the previous step. The radius value defaults to _1.0_, so we see an immediate output of circles. It becomes immediately legible how the points diverge further from the origin.
+**Circle.ByCenterPointRadius：**我們在此處將使用圓節點，採用與上一步相同的輸入。半徑的預設值為 _1.0_，所以我們可以立即看到輸出的圓。它會立即清晰展示點如何進一步偏離原點。
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
-**Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.
+**Number Sequence：**這是「_t_」的原始陣列。將此序列插入 **Circle.ByCenterPointRadius** 的半徑值後，圓心仍會離原點越來越遠，但半徑會增加，因而產生很酷的 Fibonacci 圓形。
 
-Bonus points if you make it 3D!
+如果您使用 3D 製作會更酷！
 
 ![](<../images/5-3/2/math - part III-02.gif>)
 
-### Part IV: From Nautilus to Phyllotaxis
+### 第 IV 部分：從鸚鵡螺到葉序
 
-Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
+現在我們已經建立圓形的鸚鵡螺殼，接下來使用參數式格線。我們將對 Fibonacci 螺旋線使用基本旋轉，以建立 Fibonacci 格線，並在[向日葵種子長大後](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/)對結果進行塑型。
 
-As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
+一開始，我們先執行上一個練習中的相同步驟：使用 **Point.ByCoordinates** 節點建立點的螺旋線陣列。
 
 ![](<../images/5-3/2/math - part IV-01.jpg>)
 
-Next, follow these mini steps to generate a series of spiral at various rotation.
+接下來，依照這些小步驟，以各種旋轉產生一系列螺旋線。
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
+> a. **Geometry.Rotate：**有幾個 **Geometry.Rotate** 選項，請確保選擇以 _geometry_、_basePlane_ 及 _degrees_ 為輸入的節點。將 **Point.ByCoordinates** 連接至 geometry 輸入。在此節點上按一下右鍵，並確保將交織設定為「笛卡兒積」
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
-> b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
+> b. **Plane.XY：**連接至 _basePlane_ 輸入。我們將繞原點旋轉，此原點的位置與螺旋線的基準位置相同。
 >
-> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a **Number Range** component. Connect this into the _degrees_ input.
+> c. **Number Range：**對於角度輸入，我們希望建立多個旋轉。使用 **Number Range** 元件可以快速達成。將其連接至 _degrees_ 輸入。
 >
-> d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
+> d. **Number：**為了定義數字範圍，在圖元區中以垂直順序加入三個數字節點。從上到下分別指定值為 _0.0、360.0_ 與 _120.0_。這些值將驅動螺旋線旋轉。請注意將三個數字節點連接至 **Number Range** 節點後的輸出結果。
 
-Our output is beginning to resemble a whirlpool. Let's adjust some of the **Number Range** parameters and see how the results change.
+輸出開始形成一個漩渦。接下來調整某些 **Number Range** 參數，並查看結果的變化。
 
-Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.
+將 **Number Range** 節點的步長大小從 _120.0_ 變更為 _36.0_。請注意，這會建立更多旋轉，因此會產生更密的格線。
 
 ![](<../images/5-3/2/math - part IV-04.jpg>)
 
-Change the step size of the **Number Range** node from _36.0_ to _3.6_. This now gives us a much denser grid, and the directionality of the spiral is unclear. Ladies and gentlemen, we've created a sunflower.
+將 **Number Range** 節點的步長大小從 _36.0_ 變更為 _3.6_。現在，這會產生密度大得多的格線，螺旋線的方向性變得不清楚。各位，我們產生了一朵向日葵。
 
 ![](<../images/5-3/2/math - part IV-05.jpg>)

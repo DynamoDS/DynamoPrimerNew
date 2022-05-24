@@ -1,52 +1,52 @@
-# Points
+# 點
 
-## Points in Dynamo
+## Dynamo 中的點
 
-### What is a Point?
+### 什麼是清單？
 
-A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
+點即是稱為座標的一個以上值。[](5-3\_points.md#point-as-coordinates) 定義點需要的座標值數目取決於點所在的座標系統或環境定義。
 
-### 2D & 3D Point
+### 2D/3D 點:
 
-The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates \[X,Y,Z] (3D Point in Dynamo).
+Dynamo 中最常見的一種點存在於我們的三維世界座標系統中，並有三個座標 [X,Y,Z]」。
 
-![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
+![]
 
 A 2D Point in Dynamo has two coordinates \[X,Y].
 
-![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
+![]
 
 ### Point on Curves and Surfaces
 
-Parameters for both Curves and Surfaces are continuous and extend beyond the edge of the given geometry. Since the shapes that define the Parameter Space reside in a three-dimensional World Coordinate System, we can always translate a Parametric Coordinate into a "World" Coordinate. The point \[0.2, 0.5] on the surface for example is the same as point \[1.8, 2.0, 4.1] in world coordinates.
+由於定義參數空間的形狀位於三維世界座標系統中，我們可以一律將參數式座標轉換為「世界」座標。例如，平面上的點 [0.2,0.5] 等同於世界座標中的點 [1.8,2.0,4.1]。
 
-![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
+![]
 
-> 1. Point in assumed World XYZ Coordinates
-> 2. Point relative to a given Coordinate System (Cylindrical)
-> 3. Point as UV Coordinate on a Surface
+> 1. 假定世界 XYZ 座標中的點
+> 2. 相對於指定座標系統（圓柱）的點
+> 3. 平面上 UV 座標中的點
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
 ## Deep Dive into...
 
-If Geometry is the language of a model, then Points are the alphabet. Points are the foundation upon which all other geometry is created - we need at least two Points to create a Curve, we need at least three Points to make a Polygon or a Mesh Face, and so on. Defining the position, order, and relationship among Points (try a Sine Function) allows us to define higher order geometry like things we recognize as Circles or Curves.
+如果幾何圖形是模型的語言，那麼點是字母。點是建立所有其他幾何圖形的基礎 - 我們需要至少兩個點以建立曲線，我們需要至少三個點以使多邊形或網面等。定義點之間位置、順序和關係 (嘗試正弦函數) 可讓我們定義高級的幾何圖形，例如圓或曲線。
 
-![Point to Curve](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![點到曲線](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
 
-> 1. A Circle using the functions `x=r*cos(t)` and `y=r*sin(t)`
-> 2. A Sine Curve using the functions `x=(t)` and `y=r*sin(t)`
+> 1. `x=r*cos(t)``y=r*sin(t)`
+> 2. `x=(t)``y=r*sin(t)`
 
-### Point as Coordinates
+### 點座標
 
-Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using \[X,Y] on a Plane or \[U,V] if we are on a surface.
+點也可以存在於二維座標系統中。根據我們處理的空間種類，依慣例具有不同的字母表示法，對於平面，我們可能會使用 [[X,Y] ，而對於平面可能使用 [U,V]。
 
-![Point as Coordinates](../images/5-2/3/Coordinates.jpg)
+![點座標](../images/5-2/3/Coordinates.jpg)
 
-> 1. A Point in Euclidean Coordinate System: \[X,Y,Z]
-> 2. A Point in a Curve Parameter Coordinate System: \[t]
-> 3. A Point in a Surface Parameter Coordinate System: \[U,V]
+> 1. 歐幾里得座標系統中的點：[X,Y,Z]
+> 2. 曲線參數座標系統中的點：[t]
+> 3. 平面參數座標系統中的點：[U,V]

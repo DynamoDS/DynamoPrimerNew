@@ -1,117 +1,117 @@
-# Customizing
+# 自訂
 
-While we previously looked at editing a basic building mass, we want to dive deeper into the Dynamo/Revit link by editing a large number of elements in one go. Customizing on a large scale becomes more complex as data structures require more advanced list operations. However, the underlying principles behind their execution is fundamentally the same. Let's study some opportunities for analysis from a set of adaptive components.
+我們先前對編輯基本建築量體進行瞭解時，希望一次編輯大量元素，以更深入地探究 Dynamo/Revit 連結。大規模自訂變得更加複雜，因為資料結構需要更高級的清單作業。但是，此作業所遵循的基本原則在本質上並無不同。接下來針對一組自適應元件瞭解分析的某些因素。
 
-### Point Location
+### 點位置
 
-Suppose we've created a range of adaptive components and want to edit parameters based on their point locations. The points, for example, could drive a thickness parameter which is related to the area of the element. Or, they could drive an opacity parameter related to solar exposure throughout the year. Dynamo allows the connection of analysis to parameters in a few easy steps, and we'll explore a basic version in the exercise below.
+假設我們已建立一系列自適應元件，希望根據其點位置來編輯參數。例如，點可以驅動與元素面積相關的厚度參數。或者，點可以驅動與全年日曬相關的不透明度參數。藉由 Dynamo，可以使用一些簡單的步驟將分析連接至參數，我們將在以下練習中探究基本版本。
 
-![](<./images/5/customizing - point location.jpg>)
+![](<.
 
-> Query the adaptive points of a selected adaptive component by using the **AdaptiveComponent.Locations** node. This allows us to work with an abstracted version of a Revit element for analysis.
+> 使用 **AdaptiveComponent.Locations** 節點查詢所選自適應元件的自適應點。藉此我們可以使用所提取版本的 Revit 元素進行分析。
 
-By extracting the point location of adaptive components, we can run a range of analysis for that element. A four-point adaptive component will allow you to study the deviation from plane for a given panel for example.
+透過萃取自適應元件的點位置，我們可以對該元素執行一系列分析。藉由四點自適應元件，您可以針對諸如指定面板等物件研究平面的偏差。
 
-### Solar Orientation Analysis
+### 日光方位分析
 
-![](<./images/5/customizing - solar orientation analysis.jpg>)
+![](<.
 
-> Use remapping to map a set of a data into a parameter range. This is fundamental tool used in a parametric model, and we'll demonstrate it in the exercise below.
+> 使用重新對映將一組資料對映至參數範圍。這是參數式模型中使用的基本工具，我們將在以下練習中展示該工具。
 
-Using Dynamo, the point locations of adaptive components can be used to create a best-fit plane each element. We can also query the sun position in the Revit file and study the plane's relative orientation to the sun in comparison to other adaptive components. Let's set that up in the exercise below by creating an algorithmic roofscape.
+使用 Dynamo，自適應元件的點位置可用於建立每個元素的最佳擬合平面。我們也可以在 Revit 檔案中查詢日光位置，研究平面相對於日光的方位，並與其他自適應元件進行比較。在以下的練習中，我們將建立由演算法控制的屋頂，以設置該功能。
 
-## Exercise
+## 練習
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="./datasets/5/Revit-Customizing.zip" %}
 
-This exercise will expand on the techniques demonstrated in the previous section. In this case, we are defining a parametric surface from Revit elements, instantiating four-point adaptive components and then editing them based on orientation to the sun.
+此練習將詳細說明上一節中展示的技術。在此案例中，我們將使用 Revit 元素定義參數式曲面，同時例證化四點自適應元件，然後根據日光方位對其進行編輯。
 
-![](<./images/5/customizing - exercise 01.jpg>)
+![](<.
 
-> 1. Beginning by selecting two edges with the _"Select Edge"_ node. The two edges are the long spans of the atrium.
-> 2. Combine the two edges into one list with the _List.Create_ node.
-> 3. Create a surface between the two edges with a _Surface.ByLoft_.
+> 1. 先選取兩條邊與_「Select Edge」_節點。兩條邊是中庭的長跨距。
+> 2. 使用 _List.Create_ 節點將兩條邊合併到一個清單中。
+> 3. 使用 _Surface.ByLoft_ 在兩條邊之間建立曲面。
 
-![](<./images/5/customizing - exercise 02.jpg>)
+![](<.
 
-> 1. Using _code block_, define a range from 0 to 1 with 10 evenly spaced values: `0..1..#10;`
-> 2. Plug the _code block_ into the \*u \*and _v_ inputs of a _Surface.PointAtParameter_ node, and plug the _Surface.ByLoft_ node into the _surface_ input. Right click the node and change the _lacing_ to _Cross Product_. This will give a grid of points on the surface.
+> 1. 使用_code block_，定義從 0 至 1 的範圍 (包含均勻分佈的 10 個值)：`0..1..#10;`0..1..#10;
+> 2. 將 _code block_ 插入至 _Surface.PointAtParameter_ 節點的 _u_ 與 _v_ 輸入，並將 _Surface.ByLoft_ 節點插入至 surface 輸入。 在節點上按一下右鍵，將_交織_變更為_笛卡兒積_。這將在曲面上產生點的網格。
 
-This grid of points serves as the control points for a parametrically defined surface. We want to extract the u and v positions of each one of these points so that we can plug them into a parametric formula and keep the same data structure. We can do this by querying the parameter locations of the points we just created.
+此點網格可作為以參數式方式定義之曲面的控制點。我們希望萃取其中每個點的 u 與 v 位置，以便能將其插入至參數式公式，並保留相同的資料結構。我們可以查詢剛剛所建立點的參數位置，以執行此作業。
 
-![](<./images/5/customizing - exercise 03.jpg>)
+![](<.
 
-> 1. Add a _Surface.ParameterAtPoint_ node to the canvas, connect the inputs as shown above.
-> 2. Query the _u_ values of these parameters with the UV.U node.
-> 3. Query the _v_ values of these parameters with the UV.V node.
-> 4. The outputs show the corresponding _u_ and _v_ values for every point of the surface. We now have a range from _0_ to _1_ for each value, in the proper data structure, so we're ready to apply a parametric algorithm.
+> 1. 加入 _Surface.ParameterAtPoint_ 節點至圖元區，連接輸入，如上所示。
+> 2. 使用 UV.U 節點查詢這些參數的 _u_ 值。
+> 3. 使用 UV.V 節點查詢這些參數的 _v_ 值。
+> 4. 輸出會顯示每個曲面點的對應 _u_ 與 _v_ 值。現在我們已取得所需範圍，每個值都介於 _0_ 與 _1_ 之間，並具有正確的資料結構，已準備好套用參數式演算法。
 
-![](<./images/5/customizing - exercise 04.jpg>)
+![](<.
 
-> 1. Add a _code block_ to the canvas and enter the code: `Math.Sin(u*180)*Math.Sin(v*180)*w;` This is a parametric function which creates a sine mound from a flat surface.
-> 2. Connects the _UV.U_ to the _u_ input and the UV.V to the _v_ input.
-> 3. The _w_ input represents the _amplitude_ of the shape, so we attach a _number slider_ to it.
+> 1. 加入 _code block_ 至圖元區，然後輸入以下代碼：`Math.Sin(u*180)*Math.Sin(v*180)*w;`Math.Sin(u*180)*Math.Sin(v*180)*w;。這是參數式函數，可從平曲面建立正弦凸塊。
+> 2. ______
+> 3. _w_ 輸入表示造型的_幅度_，因此我們為其連接 _number slider_。
 
-![](<./images/5/customizing - exercise 05.jpg>)
+![](<.
 
-> 1. Now, we have a list of values as defined by the algorithm. Let's use this list of values to move the points up in the _+Z_ direction. Using _Geometry.Translate_, plug the \*code block \*into _zTranslation_ and the _Surface.PointAtParameter_ into the _geometry_ input. You should see the new points displayed in the Dynamo preview.
-> 2. Finally, we create a surface with the _NurbsSurface.ByPoints_ node, plugging the node from the previous step into the points input. We have ourselves a parametric surface. Feel free to drag the slider to watch the mound shrink and grow.
+> 1. 現在，已產生由演算法定義的值清單。接下來使用此值清單在 _+Z_ 方向將點上移。使用 _Geometry.Translate_，將 _code block _ 插入至 _zTranslation_，並將 _Surface.PointAtParameter_ 插入至geometry輸入。 您應該已看到新點顯示在 Dynamo 預覽中。
+> 2. 最後，我們使用 _NurbsSurface.ByPoints_ 節點建立曲面，將上一步驟中的節點插入至點輸入。我們已建立自己的參數式曲面。自由拖曳滑棒，觀看凸塊的收縮與膨脹。
 
-With the parametric surface, we want to define a way to panelize it in order to array four-point adaptive components. Dynamo does not have out-of-the-box functionality for surface panelization, so we can look to the community for helpful Dynamo packages.
+使用參數式曲面，我們要定義將其面板化的方式，以排列四點自適應元件。Dynamo 沒有即裝即用的曲面面板化功能，因此我們可以留心社群以尋找有用的 Dynamo 套件。
 
-![](<./images/5/customizing - exercise 06.jpg>)
+![](<.
 
-> 1. Go to _Packages>Search for a Package..._
-> 2. Search for _"LunchBox"_ and install _"LunchBox for Dynamo"_. This is a really helpful set of tools for geometry operations such as this.
+> 1. 移至_「套件」>「搜尋套件...」_
+> 2. 搜尋_「LunchBox」_，並下載_「LunchBox for Dynamo」_。 對於諸如此類的幾何圖形作業，這是非常有用的一組工具。
 
-> 1. After downloading, you now have full access to the LunchBox suite. Search for _"Quad Grid"_ and select _"LunchBox Quad Grid By Face"_. Plug the parametric surface into the _surface_ input and set the _U_ and _V_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
+> 1. 下載之後，您具有 LunchBox 套件的完整存取權。搜尋_「Quad Grid」_，然後選取_「LunchBox Quad Grid By Face」_。將參數式曲面插入至 _surface_ 輸入，並將 _U_ 與 _V_ 分割份數設定為 _15_。您在 Dynamo 預覽中應該會看到四邊面板化的曲面。
 
-> If you're curious about its setup, you can double click on the _Lunch Box_ node and see how it's made.
+> 如果您對其設置感到好奇，可以按兩下 _Lunch Box_ 節點，並查看其內容。
 
-> Back in Revit, let's take a quick look at the adaptive component we're using here. No need to follow along, but this is the roof panel we're going to instantiate. It is a four-point adaptive component which is a crude representation of an ETFE system. The aperture of the center void is on a parameter called _"ApertureRatio"_.
+> 返回 Revit，接下來快速查看我們將在這裡使用的自適應元件。無需沿其作業，但這是我們將要例證化的屋頂面板。它是四點自適應元件，是 ETFE 系統的粗略表示。中心空心的鎖點框與稱為_「ApertureRatio」_的參數有關。
 
-> 1. We're about to instantiate a lot of geometry in Revit, so make sure to turn the Dynamo solver to _"Manual"_.
-> 2. Add a _Family Types_ node to the canvas and select _"ROOF-PANEL-4PT"_.
-> 3. Add an _AdaptiveComponent.ByPoints_ node to the canvas, connect _Panel Pts_ from the _"LunchBox Quad Grid by Face"_ output into the _points_ input. Connect the _Family Types_ node to the _familySymbol_ input.
-> 4. Hit _Run_. Revit will have to _think_ for a bit while the geometry is being created. If it takes too long, reduce the _code block's '15'_ to a lower number. This will reduce the number of panels on the roof.
+> 1. 我們將在 Revit 中例證化大量幾何圖形，因此請確保將 Dynamo 求解器旋至_「手動」_。
+> 2. 加入 _Family Types_ 節點至圖元區，然後選取_「ROOF-PANEL-4PT」_。
+> 3. 加入 _AdaptiveComponent.ByPoints_ 節點至圖元區，將 _Panel Pts_ 從_「LunchBox Quad Grid by Face」_輸出連接至 _points_ 輸入。將 _Family Types_ 節點連接至 _familySymbol_ 輸入。
+> 4. 按一下_「執行」_。建立幾何圖形時，Revit 需要_考慮_一段時間。若該時間太長，請將 _code block 的「15」_降低至更小的數字。這將減少屋頂上面板的數量。
 
-_Note: If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "Freezing" section in the solids chapter._
+_注意：若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「freeze」節點功能以暫停所執行的 Revit 作業。若要取得有關凍結節點的更多資訊，請參閱「實體」一章中的「凍結」一節。_
 
-> Back in Revit, we have the array of panels on the roof.
+> 返回 Revit，我們已在屋頂上建立一系列面板。
 
-> Zooming in, we can get a closer look at their surface qualities.
+> 拉近，我們可以更近地查看其曲面品質。
 
-### Analysis
+### 分析
 
-> 1. Continuing from the previous step, let's go further and drive the aperture of each panel based on its exposure to the sun. Zooming into Revit and select one panel, we see in the properties bar that there is a parameter called _"Aperture Ratio"_. The family is setup so that the aperture ranges, roughly, from _0.05_ to _0.45_.
+> 1. 從上一步繼續執行，接下來更進一步，根據其日曬時間驅動每個面板的鎖點框。拉近至 Revit，選取一個面板，可以看到在性質列中，存在名為_「Aperture Ratio」_的參數。設置族群，以便鎖點框的範圍大致介於 _0.05_ 至 _0.45_ 之間。
 
-> 1. If we turn on the solar path, we can see the current sun location in Revit.
+> 1. 如果打開日光路徑，可以在 Revit 中看到目前的日光位置。
 
-> 1. We can reference this sun location using the _SunSettings.Current_ node.
+> 1. 我們可以使用 _SunSettings.Current_ 節點參考此日光位置。
 
-1. Plug the Sun settings into _Sunsetting.SunDirection_ to get the solar vector.
-2. From the _Panel Pts_ used to create the adaptive components, use _Plane.ByBestFitThroughPoints_ to approximate a plane for the component.
-3. Query the _normal_ of this plane.
-4. Use the _dot product_ to calculate solar orientation. The dot product is a formula which determines how parallel or anti-parallel two vectors may be. So we're taking the plane normal of each adaptive component and comparing it to the solar vector to roughly simulate solar orientation.
-5. Take the _absolute value_ of the result. This ensures that the dot product is accurate if the plane normal is facing the reverse direction.
-6. Hit _Run_.
+1. 將日光設定插入至 _Sunsetting.SunDirection_ 以取得日光向量。
+2. 從用於建立自適應元件的_「Panel Pts」_中，使用 _Plane.ByBestFitThroughPoints_ 以近似元件的平面。
+3. 查詢此平面的 _正垂_。
+4. 使用 _內積_ 計算日光方位。內積是公式，可用於確定兩個向量的平行程度或不平行程度。我們將取得每個自適應元件的平面法向，並對其與日光向量進行比較，以粗略模擬日光方位。
+5. 利用結果的_絕對值_。這可確保在平面法向指向相反方向時，點積準確無誤。
+6. 按一下_「執行」_。
 
-> 1. Looking at the _dot product_, we have a wide range of numbers. We want to use their relative distribution, but we need to condense the numbers into the appropriate range of the _"Aperture Ratio"_ parameter we plan to edit.
+> 1. 查看 _內積_，我們產生了許多數字。我們希望使用其相對分佈，但需要將這些數字縮攏到我們計劃編輯的適當的_「Aperture Ratio」_參數範圍內。
 
-1. The _Math.RemapRange_ is a great tool for this. It takes an input list and remaps its bounds into two target values.
-2. Define the target values as _0.15_ and _0.45_ in a _code block_.
-3. Hit _Run_.
+1. _Math.RemapRange_ 是執行此作業的強大工具。它採用輸入清單，並將邊界重新對映至兩個目標值。
+2. 在 _code block_ 中，將目標值定義為 _0.15_ 與 _0.45_。
+3. 按一下_「執行」_。
 
-> 1. Connect the remapped values into a _Element.SetParameterByName_ node.
+> 1. 將重新對映的值連接至 _Element.SetParameterByName_ 節點。
 
-1. Connect the string _"Aperture Ratio"_ into the _parameterName_ input.
-2. Connect the _adaptive components_ into the _element_ input.
-3. Hit _Run_.
+1. 將字串_「Aperture Ratio」_連接至 _parameterName_ 輸入。
+2. 將 _adaptive components_ 連接至 _element_ 輸入。
+3. 按一下_「執行」_。
 
-> Back in Revit, from a distance we can make out the affect of the solar orientation on the aperture of the ETFE panels.
+> 返回 Revit，透過距離，我們可以瞭解日光方位對 ETFE 面板的鎖點框產生的影響。
 
-> Zooming in, we see that the ETFE panels are more closed as the face the sun. Our target here is to reduce overheating from solar exposure. If we wanted to let in more light based on solar exposure, we just have to switch the domain on _Math.RemapRange_.
+> 拉近，我們可以看到在面向日光時，ETFE 面板更為封閉。此時我們的目標是減少日曬帶來的過熱。如果我們根據日曬而希望進入更多光線，只需在 _Math.RemapRange_ 上切換範圍即可。

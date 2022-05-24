@@ -1,5 +1,5 @@
-# Best Practices
+# 最佳實踐
 
-This part of the primer is organized in the spirit of a journal of “best practices”. It sheds light on several strategies that we have learned, through experience and research, to be most conducive to quality parametric workflows. As designers and programmers, our metric for quality is primarily concerned with the maintainability, dependability, usability, and efficiency of our tools. While these best practices have specific examples for either visual or text-based scripting, the principles are applicable to all programming environments and can inform many computational workflows.
+手冊的此部分是以「最佳實踐」日誌的理念組織的。它揭示了我們透過經驗和研究所得的多種策略，最有利於品質參數式工作流程。作為設計師與程式設計師，我們的質量指標主要包括我們工具的可維護性、可靠性、可用性和效率。雖然這些最佳實踐具有視覺或文字腳本方面的特定範例，它們的原則適用於所有程式設計環境，並可以告知許多計算工作流程。
 
 ![](./images/bestPractices.png)

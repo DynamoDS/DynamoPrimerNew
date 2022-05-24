@@ -1,6 +1,6 @@
-# Geometry with DesignScript
+# 使用 DesignScript 的幾何圖形
 
-In this section, you will find a series of lessons on the creation of geometry with DesignScript. Follow along by copying the example DesignScript into Dynamo Code Blocks.
+在本節中，您將會學習一系列如何使用 DesignScript 建立幾何圖形的課程。請將範例 DesignScript 複製到 Dynamo 程式碼區塊逐步進行。
 
 ```js
 // copy this code into a Code Block

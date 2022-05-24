@@ -1,156 +1,154 @@
-# Selecting
+# 選取
 
-### Select Revit Elements
+### 選取 Revit 元素
 
-Revit is a data-rich environment. This gives us a range of selection abilities which expands far beyond "point-and-click". We can query the Revit database and dynamically link Revit elements to Dynamo geometry while performing parametric operations.
+Revit 是資料豐富的環境。它能為我們提供許多選取功能，而不僅僅是「點選」。我們可以查詢 Revit 資料庫，並將 Revit 元素動態連結至 Dynamo 幾何圖形，同時執行參數式作業。
 
-The Revit library in the UI offers a "Selection" category which enables multiple ways to select geometry.
+使用者介面中的 Revit 資源庫提供「Selection」品類，藉此可採用許多方式選取幾何圖形。
 
-![](<./images/2/select revit elements 01.jpg>)
+![](<.
 
-### Revit Hierarchy
+### Revit 階層
 
-To select Revit elements properly, it's important to have a full-understanding of the Revit element hierarchy. Want to select all the walls in a project? Select by category. Want to select every Eames chair in your mid-century modern lobby? Select by family.
+若要正確選取 Revit 元素，請務必全面理解 Revit 元素階層。要選取專案中所有的牆嗎？依品類選取。要選取中世紀現代大廳中的每把 Eames 椅子嗎？依族群選取。
 
 Let's do a quick review of the Revit hierarchy.
 
 ![](./images/2/hierarchy.png)
 
-Remember the taxonomy from Biology? Kingdom, Phylum, Class, Order, Family, Genus, Species? Revit elements are categorized in a similar manner. On a basic level, the Revit hierarchy can be broken down into Categories, Families, Types\*, and Instances. An instance is an individual model element (with a unique ID) while a category defines a generic group (like "walls" or "floors"). With the Revit database organized in this manner, we can select one element and choose all similar elements based on a specified level in the hierarchy.
+記得生物學的分類法嗎？界、門、綱、目、科、屬、種？Revit 元素的分類方式與此類似。在基本層級，可將 Revit 階層分為不同的品類、族群、類型*及例證。 例證是個別模型元素 (具有唯一的 ID)，而品類可定義一般群組 (例如「牆」或「地板」)。以此方式組織 Revit 資料庫後，我們可以選取一個元素，然後根據階層中的指定層級選擇所有類似元素。
 
-{% hint style="warning" %}
-\*Types in Revit are defined differently from types in programming. In Revit, a type refers to a branch of the hierarchy, rather than a "data type".
-{% endhint %}
+*注意：Revit 中類型的定義與程式設計中的類型不同。 在 Revit 中，類型是指階層的分支，而非「資料類型」。
 
-### Database Navigation with Dynamo nodes
 
-The three images below breakdown the main categories for Revit element selection in Dynamo. These are great tools to use in combination, and we'll explore some of these in the following exercises.
+### 使用 Dynamo 節點進行資料庫導覽
 
-_Point-and-click_ is the easiest way to directly select a Revit element. You can select a full model element, or parts of its topology (like a face or an edge). This remains dynamically linked to that Revit object, so when the Revit file updates its location or parameters, the referenced Dynamo element will update in the graph.
+以下三個影像分別展示了 Dynamo 中 Revit 元素選取的主要品類。這些是搭配使用的強大工具，我們將在後續練習中探究其中一些工具。
 
-![](<./images/2/selecting - database navigation with dynamo nodes 01.jpg>)
+_點選_是直接選取 Revit 元素最簡單的方式。您可以選取完整的模型元素，也可以選取其拓樸的一部分 (例如一個面或一條邊)。這會與該 Revit 物件保持動態連結，因此在 Revit 檔案更新其位置或參數時，參考的 Dynamo 元素在圖表中也將更新。
 
-_Dropdown menus_ create a list of all accessible elements in a Revit project. You can use this to reference Revit elements which are not necessarily visible in a view. This is a great tool for querying existing elements or creating new ones in a Revit project or family editor.
+![](<.
 
-![](<./images/2/selecting - database navigation with dynamo nodes 02.jpg>)
+_下拉式功能表_會建立 Revit 專案中所有可存取元素的清單。您可以使用下拉式功能表參考視圖中不一定可見的 Revit 元素。這是非常強大的工具，可用於在 Revit 專案或族群編輯器中查詢既有元素或建立新元素。
 
-You can also select Revit element by specific tiers in the _Revit hierarchy_. This is a powerful option for customizing large arrays of data in preparation for documentation or generative instantiation and customization.
+![](<.
 
-![UI](./images/2/allelements.jpg)
+您也可以依 _Revit 階層_中的特定層選取 Revit 元素。這是功能強大的選項，可用於自訂大型資料陣列，以便為記錄或生產例證化及自訂做好準備。
 
-With the three images above in mind, let's dive into an exercise which selects elements from a basic Revit project in preparation for the parametric applications we'll create in the remaining sections of this chapter.
+![使用者介面](./images/2/allelements.jpg)
 
-## Exercise
+記住以上三個影像，接下來深入研習練習，練習會選取基本 Revit 專案中的元素，以便為我們將在本章的其餘各節建立的參數式應用程式做好準備。
+
+## 練習
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="./datasets/2/Revit-Selecting.zip" %}
 
-In this example Revit file, we have three element types of a simple building. We're going to use this as an example for selecting Revit elements within the context of the Revit hierarchy.
+在此範例 Revit 檔案中，包含簡單建築的三種元素類型。我們將以此為例，瞭解在 Revit 階層的環境中選取 Revit 元素：
 
-![](<./images/2/selecting - exercise 01.jpg>)
+![](<.
 
-> 1. Building Mass
-> 2. Beams (Structural Framing)
-> 3. Trusses (Adaptive Components)
+> 1. 建築量體
+> 2. 樑 (結構框架)
+> 3. 桁架 (自適應元件)
 
-What conclusions can we draw from the elements currently in the Revit project view? And how far down the hierarchy do we need to go to select the appropriate elements? This will of course become a more complex task when working on a large project. There are a lot of options available: we can select elements by categories, levels, families, instances, etc.
+根據 Revit 專案視圖中目前存在的元素，我們可以做出哪些結論？若要選取適當的元素，我們需要在階層中下移多遠？處理大型專案時，這無疑會變為更複雜的工作。提供許多選項：我們可以依品類、層級、族群、例證等選取元素。
 
 ### Selecting Mass and Surfaces
 
-![](<./images/2/selecting - exercise 02.jpg>)
+![](<.
 
-> 1. Since we're working with a basic setup, let's select the building mass by choosing _"Mass"_ in the Categories dropdown node. This can be found in the Revit>Selection tab.
-> 2. The output of the Mass category is just the category itself. We need to select the elements. To do this, we use the _"All Elements of Category"_ node.
+> 1. 由於我們使用基本設置，因此接下來選擇「Categories」下拉式節點中的「_Mass_」以選取建築量體。該選項位於 Revit > Selection 頁籤中。
+> 2. 「Mass」品類的輸出是品類自身。我們需要選取元素。為了執行此作業，我們使用 _All Elements of Category_節點。
 
-At this point, notice that we don't see any geometry in Dynamo. We've selected a Revit element, but have not converted the element into Dynamo geometry. This is an important separation. If you were to select a large number of elements, you don't want to preview all of them in Dynamo because this would slow everything down. Dynamo is a tool to manage a Revit project without necessarily performing geometry operations, and we'll look at that in the next section of this chapter.
+此時請注意，我們在 Dynamo 中看不到任何幾何圖形。我們已選取 Revit 元素，但尚未將該元素轉換為 Dynamo 幾何圖形。這是重要的區分。若您選取大量元素，不會希望在 Dynamo 中預覽所有這些元素，因為這會拖慢所有作業的速度。Dynamo 是無需執行幾何圖形作業即可對 Revit 專案進行管理的工具，我們將在本章的下一節瞭解該功能。
 
-In this case, we're working with simple geometry, so we want to bring the geometry into the Dynamo preview. The "BldgMass" in the watch node above has a green number next to it. This represents the element's ID and tells us that we are dealing with a Revit element, not Dynamo geometry. The next step is to convert this Revit element into geometry in Dynamo.
+在此案例中，我們將使用簡單的幾何圖形，因此希望將幾何圖形引入 Dynamo 預覽。以上觀看節點中的「BldgMass」旁有綠色的數字*。 這表示元素的 ID，並表明我們處理的是 Revit 元素，而不是 Dynamo 幾何圖形。下一步是將此 Revit 元素轉換為 Dynamo 中的幾何圖形。
 
-![](<./images/2/selecting - exercise 03.jpg>)
+![](<.
 
-> 1. Using the _Element.Faces_ node, we get a list of surfaces representing each face of the Revit Mass. We can now see the geometry in the Dynamo viewport and start to reference the face for parametric operations.
+> 1. 我們使用 _Element.Faces_ 節點，取得表示 Revit 量體每個面之曲面的清單。我們現在可以在 Dynamo 視埠中看到幾何圖形，可以開始參考用於參數式作業的面。
 
-Here's an alternative method. In this case, we're stepping away from selecting via the Revit Hierarchy _("All Elements of Category")_ and electing to explicitly select geometry in Revit.
+以下是替代方法。在此案例中，我們不是透過 Revit 階層進行選取 _(「All Elements of Category」)_，而是選擇在 Revit 中明確選取幾何圖形。
 
-![](<./images/2/selecting - exercise 04.jpg>)
+![](<.
 
-> 1. Using the _"Select Model Element"_ node, click the \*"select" \*(or _"change"_) button. In the Revit viewport, select the desired element. In this case, we're selecting the building mass.
-> 2. Rather than _Element.Faces_, we can select the full mass as one solid geometry using _Element.Geometry_. This selects all of the geometry contained within that mass.
-> 3. Using _Geometry.Explode,_ we can get the list of surfaces again. These two nodes work the same as _Element.Faces_ but offer alternative options for delving into the geometry of a Revit element.
+> 1. 使用_「Select Model Element」_節點，按一下_「select」_ (或「change」) 按鈕。 在 Revit 視埠中，選取所需的元素。在此案例中，我們將選取建築量體，
+> 2. 我們可以使用 _Element.Geometry_ 選取完整量體作為一個實體幾何圖形，而非 _Element.Faces_。這會選取量體內包含的所有幾何圖形。
+> 3. 我們可以使用 　_Geometry.Explode_　取得曲面清單。這兩個節點的工作方式與 _Element.Faces_ 相同，但是提供其他選項用於探究 Revit 元素的幾何圖形。
 
-Using some basic list operations, we can query a face of interest.
+使用一些基本清單作業，我們可以查詢感興趣的面。
 
-![](<./images/2/selecting - exercise 05.jpg>)
+![](<.
 
 > 1. First, output the selected elements from earlier to Element.Faces node.
-> 2. Next, use the _List.Count_ node reveals that we're working with 23 surfaces in the mass.
-> 3. Referencing this number, we change the Maximum value of an \*integer slider \*to _"22"_.
-> 4. Using _List.GetItemAtIndex_, we input the lists and the \*integer slider \*for the _index_. Sliding through with the selected, we stop when we get to _index 9_ and have isolated the main facade hosts the trusses.
+> 2. 首先，_List.Count_ 節點展示出我們正在處理量體中的 23 個曲面。
+> 3. 參考此數量，我們將 _integer slider_ 的最大值變更為「22」。
+> 4. 使用 _List.GetItemAtIndex_，我們輸入清單與 _integer slider_ 以提供 index。 採用所選值進行滑動時，若到達 _index 9_ 並已隔離對桁架提供支撐的主要正面，作業就會停止。
 
-The previous step was a little cumbersome. We can do this much faster with the _"Select Face"_ node. This allows us to isolate a face that is not an element itself in the Revit project. The same interaction applies as _"Select Model Element"_, except we select the surface rather than the full element.
+上一個步驟稍顯繁瑣。使用_「Select Face」_節點可以更快執行此作業。藉此可以隔離 Revit 專案中並非元素本身的面。套用與_「Select Model Element」_相同的互動，只是我們選取曲面，而不是完整的元素。
 
-![](<./images/2/selecting - exercise 06.jpg>)
+![](<.
 
-Suppose we want to isolate the main facade walls of the building. We can use the _"Select Faces"_ node to do this. Click the "Select" button and then select the four main facades in Revit.
+假設我們要隔離建築的主要正面牆。我們可以使用_「Select Faces」_節點執行此作業。按一下「Select」按鈕，然後在 Revit 中選取四個主要正面。
 
-![](<./images/2/selecting - exercise 07.jpg>)
+![](<.
 
-After selecting the four walls, make sure you click the "Finish" button in Revit.
+在 Revit 中選取四面牆後，確保按一下「Finish」按鈕。
 
-![](<./images/2/selecting - exercise 08.jpg>)
+![](<.
 
-The faces are now imported into Dynamo as surfaces.
+現在，這些面已作為曲面匯入至 Dynamo。
 
-![](<./images/2/selecting - exercise 09.jpg>)
+![](<.
 
 ### Selecting Beams
 
-Now, let's take a look at the beams over the atrium.
+現在，我們看看中庭上方的樑。
 
-![](<./images/2/selecting - exercise 10.jpg>)
+![](<.
 
-> 1. Use the _"Select Model Element"_ node, select one of the beams.
-> 2. Plug the beam element into the _Element.Geometry_ node and we now have the beam in the Dynamo viewport.
-> 3. We can zoom in on the geometry with a _Watch3D_ node (if you don't see the beam in Watch 3D, right click and hit "zoom to fit").
+> 1. 使用_「Select Model Element」_節點，選取其中一根樑。
+> 2. 將樑元素插入至 _Element.Geometry_ 節點，現在可在 Dynamo 視埠中看到樑。
+> 3. 可以使用 _Watch3D_ 節點拉近幾何圖形 (若未在 Watch3D 中看到樑，請按一下右鍵，然後按一下「zoom to fit」)。
 
-A question that may come up often in Revit/Dynamo workflows: how do I select one element and get all similar elements? Since the selected Revit element contains all of its hierarchical information, we can query its family type and select all elements of that type.
+Revit/Dynamo 工作流程中可能經常會遇到以下問題：如何選取一個元素並取得所有類似元素？由於選取的 Revit 元素包含其所有階層資訊，因此我們可以查詢其族群類型，並選取該類型的所有元素。
 
-![](<./images/2/selecting - exercise 11.jpg>)
+![](<.
 
-> 1. Plug the beam element into a _Element.ElementType_ node.
-> 2. The _Watch_ node reveals that the output is now a family symbol rather than a Revit element.
-> 3. _Element.ElementType_ is a simple query, so we can do this in the code block just as easily with `x.ElementType;` and get the same results.
+> 1. 將樑元素插入至 _FamilyInstance.Symbol*_ 節點。
+> 2. _Watch_ 節點顯示現在輸出是族群符號，而不是 Revit 元素。
+> 3. _FamilyInstance.Symbol_ 是簡單的查詢，因此我們在代碼區塊執行此作業可以像使用 `x.ElementType;`x.Symbol; 時一樣輕鬆，並會取得相同結果。
 
-![](<./images/2/selecting - exercise 12.jpg>)
+![](<.
 
-> 1. To select the remaining beams, we use the _"All Elements of Family Type"_ node.
-> 2. The watch node shows that we've selected five Revit elements.
+> 1. 為了選取其餘的樑，我們使用_「All Elements of Family Type」_節點。
+> 2. Watch 節點顯示我們已選取五個 Revit 元素。
 
-![](<./images/2/selecting - exercise 13.jpg>)
+![](<.
 
-> 1. We can convert all of these five elements to Dynamo geometry too.
+> 1. 我們也可以將所有這五個元素轉換為 Dynamo 幾何圖形。
 
-What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
+如果有 500 根樑會怎樣呢？將所有這些元素轉換為 Dynamo 幾何圖形會非常慢。若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「freeze」節點功能以暫停所執行的 Revit 作業。若要取得有關凍結節點的更多資訊，請參閱[「實體」一章](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)中的「凍結」一節。
 
-In any case, if we were to import 500 beams, do we need all of the surfaces to perform the intended parametric operation? Or can we extract basic information from the beams and perform generative tasks with fundamental geometry? This is a question that we'll keep in mind as we walk through this chapter. For example, let's take a look at the truss system next.
+在案例中，如果我們將匯入 500 根樑，是否需要所有曲面都執行所需的參數式作業？或者，我們能否萃取樑的基本資訊，並使用基本幾何圖形執行生產工作？我們在瞭解本章內容時，需要記住這個問題。例如，我們看看桁架系統：
 
 ### Selecting Trusses
 
-Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the Element.Geometry from the previous step.
+使用相同的節點圖表，選取桁架元素而不是樑元素。執行此作業之前，刪除上一步驟中的 Element.Geometry。
 
-![](<./images/2/selecting - exercise 14.jpg>)
+![](<.
 
 Next we are ready to extract some basic information from trusses family type.
 
-![](<./images/2/selecting - exercise 15.jpg>)
+![](<.
 
-> 1. In the _Watch_ node, we can see that we have a list of adaptive components selected from Revit. We want to extract the basic information, so we're start with the adaptive points.
-> 2. Plug the _"All Elements of Family Type"_ node into the _"AdaptiveComponent.Location"_ node. This gives us a list of lists, each with three points which represent the adaptive point locations.
-> 3. Connecting a _"Polygon.ByPoints"_ node returns a polycurve. We can see this in the Dynamo viewport. By this method, we've visualized the geometry of one element and abstracted the geometry of the remaining array of elements (which could be larger in number than this example).
+> 1. 在 _Watch_ 節點中，可以看到我們從 Revit 中所選自適應元件的清單。我們希望萃取基本資訊，因此從自適應點開始。
+> 2. 將_「All Elements of Family Type」_節點插入至_「AdaptiveComponent.Location」_節點。這將產生清單的清單，其中每個清單都包含三點，表示自適應點的位置。
+> 3. 連接_「Polygon.ByPoints」_節點將傳回 polycurve。我們可以在 Dynamo 視埠中看到它。透過此方法，我們已視覺化一個元素的幾何圖形，並提取了其餘一系列元素 (數量可能多於此範例) 的幾何圖形。
 
-{% hint style="info" %}
-Tip: if you click on the green number of a Revit element in Dynamo, the Revit viewport will zoom to that element.
-{% endhint %}
+*秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。
+

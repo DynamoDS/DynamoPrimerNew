@@ -1,5 +1,5 @@
-# The Building Blocks of Programs
+# 程式的建置區塊
 
-Once we are ready to dive deeper into developing Visual Programs, we will need a deeper understanding of the building blocks we will use. This chapter introduces fundamental concepts around data - the stuff that travels through the Wires of our Dynamo program.
+在我們已準備好要更深入瞭解如何開發視覺程式時，我們將需要更深入理解將使用的建置區塊。本章提供有關資料的基礎概念 - 透過 Dynamo 程式線路傳遞的物件。
 
-![](<../images/5-3/building blocks of program.png>)
+![]

@@ -1,16 +1,16 @@
-# Example Files
+# 範例檔案
 
-#### These example files accompany the Dynamo Primer, and are organized according to Chapter and Section.
+#### 這些範例檔案隨 Dynamo Primer 一起提供，並根據章和小節進行組織。
 
-## Essential Nodes & Concept
+## 基本節點與概念
 
-### Geometry for Computational Design
+### 用於計算設計的幾何圖形
 
-#### Geometry Overview
+#### 幾何圖形概述
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-#### Vector, Plane & Coordinate System
+#### 向量、平面與座標系統
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
@@ -18,53 +18,53 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-#### Points
+#### 點
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-#### Curves
+#### 曲線
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-#### Surface
+#### 曲面
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/5/Surfaces.zip" %}
 
-#### Solids
+#### 實體
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### The Building Blocks of Programs
+### 程式的建置區塊
 
-#### Data
+#### 資料
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-#### Math
+#### 數學
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-#### Logic
+#### 邏輯
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
-#### Strings
+#### 字串
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-#### Color
+#### 色彩
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-### Designing with Lists
+### 使用清單設計
 
-#### What's a List
+#### 什麼是清單
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/1/Lacing.dyn" %}
 
-#### Working with Lists
+#### 處理清單
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-Operations.dyn" %}
 
@@ -78,7 +78,7 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
-#### Lists of Lists
+#### 清單的清單
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
@@ -94,87 +94,87 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/ReplaceItems.dyn" %}
 
-#### n-Dimensional Lists
+#### n 維清單
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-### Dictionaries in Dynamo
+### Dynamo 中的字典
 
-#### Revit Use-Cases
+#### Revit 使用情況
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-5/4/roomDictionary.dyn" %}
 
-## Custom Nodes & Packages
+## 自訂節點和套件
 
-### Custom Nodes
+### 自訂節點
 
-#### Creating a Custom Node
+#### 建立自訂節點
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-1/2/UV-CustomNode.zip" %}
 
-#### Publishing to Your Library
+#### 發佈至資源庫
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-1/3/PointsToSurface.dyf" %}
 
-### Packages
+### 套件
 
-#### Package Case Study - Mesh Toolkit
+#### 套件案例研究 - Mesh Toolkit
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/2/MeshToolkit.zip" %}
 
-#### Publishing a Package
+#### 發佈套件
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/4/MapToSurface.zip" %}
 
-#### Zero-Touch Importing
+#### Zero-Touch 匯入
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/5/ZeroTouchImages.zip" %}
 
 ## Dynamo for Revit
 
-#### Selecting
+#### 選取
 
 {% file src="../7_dynamo_for_revit/datasets/2/Revit-Selecting.zip" %}
 
-#### Editing
+#### 編輯
 
 {% file src="../7_dynamo_for_revit/datasets/3/Revit-Editing.zip" %}
 
-#### Creating
+#### 建立
 
 {% file src="../7_dynamo_for_revit/datasets/4/Revit-Creating-DirectShape.zip" %}
 
-#### Customizing
+#### 自訂
 
 {% file src="../7_dynamo_for_revit/datasets/5/Revit-Customizing.zip" %}
 
-#### Documenting
+#### 記錄
 
 {% file src="../7_dynamo_for_revit/datasets/6/Revit-Documenting.zip" %}
 
-## Coding in Dynamo
+## 在 Dynamo 中撰寫程式碼
 
-### Code Blocks and DesignScript
+### 程式碼區塊和 DesignScript
 
-#### DesignScript Syntax
+#### DesignScript 語法
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-#### Shorthand
+#### 速寫
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-#### Functions
+#### 函數
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
 ### Python
 
-#### Python Nodes
+#### Python 節點
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/1/Python_Custom-Node.dyn" %}
 
-#### Python and Revit
+#### Python 和 Revit
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-Doc.dyn" %}
 
@@ -182,24 +182,24 @@
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-## Best Practices
+## 最佳實踐
 
-### Graph Strategies
+### 圖表策略
 
 {% file src="../9_best_practices/datasets/1/RoofDrainageSim.zip" %}
 
-### Scripting Strategies
+### 撰寫腳本策略
 
 {% file src="../.gitbook/assets/SteepestPath.dyn" %}
 
-## Sample Workflows
+## 工作流程範例
 
-### Getting Started Workflows
+### 開始使用工作流程
 
-#### Parametric Vase
+#### 參數式花瓶
 
 {% file src="../10_sample_workflow/datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-#### Attractor Points
+#### 牽引點
 
 {% file src="../10_sample_workflow/datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}

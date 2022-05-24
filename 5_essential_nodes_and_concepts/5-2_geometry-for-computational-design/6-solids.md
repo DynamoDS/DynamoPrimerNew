@@ -1,96 +1,96 @@
-# Solids
+# 立體
 
 ## Solids in Dynamo
 
 ### What is Solid?
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+如果我們要建構無法從單個平面建立的更複雜模型，或如果我們要定義明確的體積，我們現在必須瞭解立體（和多面體）領域。[](5-6\_solids.md#solids) 即使簡單的立方塊也比較複雜，需要六平面，每一面都表示一個平面。立體提供了兩個平面不提供的關鍵概念 - 更細化的拓樸說明 (面、邊、頂點) 和布林作業。
 
 ### Boolean Operation to Create Spiky Ball Solid
 
-You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
+[](5-6\_solids.md#boolean-operations)讓我們使用幾個布林運算建立一個尖釘球。
 
-![](<../images/5-2/6/solids  - spiky ball.jpg>)
+![]
 
-> 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
-> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
-> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface.
-> 4. **Solid.UnionAll**: Union the Cones and the Sphere.
-> 5. **Topology.Edges**: Query the edges of the new Solid
-> 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
+> 1. **Sphere.ByCenterPointRadius**：建立基礎立體。
+> 2. **Topology.Faces**、**Face.SurfaceGeometry**：查詢實體的面並將其轉換為平面幾何圖像 - 在此情況下，該圓球僅有一個面。
+> 3. **Cone.ByPointsRadii**：使用面上的點建構圓錐。
+> 4. **Solid.UnionAll**：聯合「圓錐」和「球」。
+> 5. **Topology.Edges**：查詢新立體的邊
+> 6. **Solid.Fillet**：對尖釘球的邊執行「圓角」作業
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### Freezing
+### 凍結
 
-Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
+布林作業很複雜且可降低計算速度。使用「凍結」功能以暫停執行選取的節點和受影響的下游節點。
 
-![](<../images/5-2/6/solids - freeze node.jpg>)
+![]
 
-> 1.Use the right-click contextual menu to Freeze the Solid Union operation
+> 使用右鍵環境定義功能表來凍結「立體聯合」作業
 >
-> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
+> 2\. 將以淺灰色重像模式預覽所選節點和所有下游節點，且受影響線路將顯示為虛線。受影響的幾何圖像預覽也將被重像。現在，您可以變更上游值，而不計算布林聯合。
 >
-> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
+> 3\. 要解凍節點，按一下右鍵，然後取消勾選「凍結」。
 >
-> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 4\. 所有受影響節點和關聯幾何圖像的預覽將更新並回復至標準預覽模式。
 
 ## Deep Dive into...
 
-### Solids
+### 立體
 
-Solids consist of one or more Surfaces that contain volume by way of a closed boundary that defines "in" or "out." Regardless of how many of these Surfaces there are, they must form a "watertight" volume to be considered a Solid. Solids can be created by joining Surfaces or Polysurfaces together or by using operations such as loft, sweep, and revolve. Sphere, Cube, Cone and Cylinder primitives are also Solids. A Cube with at least one face removed counts as a Polysurface, which has some similar properties, but it is not a Solid.
+立體由一個或多個平面組成，透過封閉邊界表示其體積，以定義立體「內」或「外」。無論有多少平面，它們必須形成一個「無縫」體積才會被視為立體。可透過連結平面或多面體來建立立體圖像，或透過使用作業 (例如，上升、沿伸和迴轉）來建立。圓球、立方體、圓錐與圓柱基本型也是立體。將立方塊至少一個面移除所得的圖像為多面體，其具有立體的某些相似性質，但它不是立體。
 
-![Solids](../images/5-2/6/Primitives.jpg)
+![立體](../images/5-2/6/Primitives.jpg)
 
-> 1. A Plane is made of a single Surface and is not a Solid.
-> 2. A Sphere is made of one Surface but _is_ a Solid.
-> 3. A Cone is made of two surfaces joined together to make a Solid.
-> 4. A Cylinder is made of three surfaces joined together to make a Solid.
-> 5. A Cube is made of six surfaces joined together to make a Solid.
+> 1. 平面是由單一表面組成，不是實體。
+> 2. 圓球由一個表面組成，但_是_立體。
+> 3. 圓錐是由兩個表面接合在一起而建立的立體。
+> 4. 圓柱是由三個表面接合在一起而建立的立體。
+> 5. 立方塊是由六個平面接合在一起而建立的立體。
 
-### Topology
+### 拓樸
 
-Solids are made up of three types of elements: Vertices, Edges, and Faces. Faces are the surfaces that make up the Solid. Edges are the Curves that define the connection between adjacent faces, and vertices are the start and end points of those Curves. These elements can be queried using the Topology nodes.
+立體由三種類型的元素組成： 頂點、邊和面。面是構成實體的平面。邊是定義相鄰面之間連結的曲線，頂點是這些曲線的起點和終點。這些元素可以使用拓樸節點進行查詢。
 
-![Topology](../images/5-2/6/Solid-topology.jpg)
+![拓樸](../images/5-2/6/Solid-topology.jpg)
 
-> 1. Faces
-> 2. Edges
-> 3. Vertices
+> 1. 面
+> 2. 邊
+> 3. 頂點
 
-### Operations
+### 作業
 
-Solids can be modified by filleting or chamfering their edges to eliminate sharp corners and angles. The chamfer operation creates a ruled surface between two faces, while a fillet blends between faces to maintain tangency.
+可透過對邊執行圓角或倒角作業來消除急轉角和角，從而對實體進行修改。「 倒角」作業會在兩個面之間建立符合規則的表面，而「圓角」作業會混合兩個面使其保持相切。
 
 ![](../images/5-2/6/SolidOperations.jpg)
 
-> 1. Solid Cube
-> 2. Chamfered Cube
-> 3. Filleted Cube
+> 1. 立體立方塊
+> 2. 倒角的立方塊
+> 3. 圓角的立方塊
 
-### Boolean Operations
+### 布林作業
 
-Solid Boolean operations are methods for combining two or more Solids. A single Boolean operation actually means performing four operations:
+立體布林作業是結合兩個或多個立體的方式。單一布林作業實際意味著執行四個作業：
 
-1. **Intersect** two or more objects.
-2. **Split** them at the intersections.
-3. **Delete** unwanted portions of the geometry.
-4. **Join** everything back together.
+1. 使兩個或多個物件**相交**。
+2. 使其在交點處**分離**。
+3. **刪除**幾何圖像的不需要部分。
+4. 將所有物件重新**接合**在一起。
 
-This makes Solid Booleans a powerful time-saving process. There are three Solid Boolean operations that distinguish which parts of the geometry are kept. ![Solid Boolean](../images/5-2/6/SolidBooleans.jpg)
+這樣可使立體布林運算成為功能強大且節省時間的流程。有三種立體布林運算，識別會保留幾何圖像的哪些部分。![立體布林運算](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Union:** Remove the overlapping portions of the Solids and join them into a single Solid.
-> 2. **Difference:** Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume.
-> 3. **Intersection:** Keep only the intersecting volume of the two Solids.
+> 1. **聯合：**移除立體的重疊部分並將它們接合為單一立體。
+> 2. **取異：**從一個實體減去另一個。 要減去的實體稱為一個工具。請注意，您可以切換作為工具的實體，以保留相反的部分。
+> 3. **相交：**僅保留兩個實體的相交部分。
 
-In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **Solid.UnionAll** nodes for performing difference and union operations with multiple Solids. ![](../images/5-2/6/BooleanAll.jpg)
+除了這三個作業，Dynamo 有 **Solid.DifferenceAll** 和 **Solid.UnionAll** 節點用於執行對多個立體的「取異」和「聯合」作業。 ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** Union operation with sphere and outward-facing cones
-> 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
+> 1. **UnionAll：**針對球和向外圓錐的「聯合」作業
+> 2. **DifferenceAll：** 針對球與向內圓錐的「取異」作業
 
 ##

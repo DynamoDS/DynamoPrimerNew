@@ -1,111 +1,111 @@
-# Useful Packages
+# 有用的套件
 
-Here are a list of some of the more popular packages in the Dynamo community. Developers, please add to the list! Remember, the [Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) is open-source!
+以下是 Dynamo 社群中一些較常用套件的清單。開發人員，請加入至清單！請記住，[Dynamo Primer]( 是開放原始碼產品！)
 
 
 
-| ![](./images/a-3/archilab\_L.jpg)**ARCHI-LAB**                                                                                                                                                                                                                                               | [Visit the Official archi-lab Site](http://archi-lab.net) |
+| ![](./images/a-3/archilab\_L.jpg)**ARCHI-LAB** | [造訪官方 archi-lab 網站]() |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| archi-lab is a collection of over 50+ custom packages that vastly extend Dynamo's ability to interact with Revit. Nodes contained in archi-lab package vary from basic list operations to advanced Analysis Visualization Framework nodes for Revit. archi-lab is available on the package manager | ![](./images/a-3/archilabImage.png)                 |
+| archi-lab 是超過 50 種自訂套件的集合，可大幅提升 Dynamo 與 Revit 互動的能力。archi-lab 套件中包含的節點各不相同，從基本清單作業到 Revit 的進階分析可視化框架節點，不一而足。  | ![](./images/a-3/archilabImage.png) |
 
 
 
-| ![](<./images/a-3/Bimorph Digital Engineering B Logo.png>) **BIMORPH NODES**                                                                                                                                                                                                                                                                                                                                             | [Visit the BimorphNodes Dictionary](https://bimorph.com/bimorph-nodes/) |
+| ![](<.**** | [造訪 BimorphNodes 字典]() |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| BimorphNodes is a versatile collection of powerful utility nodes. The package highlights include ultra-efficient clash detection and geometry intersection nodes, ImportInstance (CAD) curve conversion nodes, and linked element collectors that resolve limitations in the Revit API. To learn about the full range of nodes available, visit the BimorphNodes dictionary. BimorphNodes is available on the package manager. | ![](./images/a-3/Bimorph-Nodes-v2.2-Library-Catalog-header.jpg)   |
+| BimorphNodes 收集各種功能強大的公用程式節點。此套件的重點功能包括非常有效率的衝突偵測和幾何圖形相交節點、ImportInstance (CAD) 曲線轉換節點，以及可解決 Revit API 局限性的連結元素收集器。若要瞭解可用的完整節點範圍，請造訪 BimorphNodes 字典。  | ![](./images/a-3/Bimorph-Nodes-v2.2-Library-Catalog-header.jpg) |
 
 
 
-| ![](./images/a-3/logo02.png) **BUMBLEBEE FOR DYNAMO**                                                                   | [Visit the Official BumbleBee Site](http://archi-lab.net/bumblebee-dynamo-and-excel-interop/) |
+| ![](./images/a-3/logo02.png) **BUMBLEBEE FOR DYNAMO** | [造訪官方 BumbleBee 網站]() |
 | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Bumblebee is an Excel and Dynamo interoperability plugin that vastly improves Dynamo’s ability to read and write Excel files. | ![](./images/a-3/screengrab02.png)                                                      |
+| Bumblebee 是實現 Excel 與 Dynamo 之間互通性的外掛程式，可大幅提升 Dynamo 讀取及寫入 Excel 檔案的能力。 | ![](./images/a-3/screengrab02.png) |
 
 
 
-| ![](./images/a-3/logo01.png)**CLOCKWORK FOR DYNAMO**                                                                                                                                                                                                                                                                                                                            | [Visit the Clockwork For Dynamo GitHub](https://github.com/CAAD-RWTH/ClockworkForDynamo) |
+| ![](./images/a-3/logo01.png)**CLOCKWORK FOR DYNAMO** | [造訪 Clockwork For Dynamo GitHub]() |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Clockwork is a collection of custom nodes for the Dynamo visual programming environment. It contains many Revit-related nodes, but also lots of nodes for various other purposes such as list management, mathematical operations, string operations, unit conversions, geometric operations (mainly bounding boxes, meshes, planes, points, surfaces, UVs and vectors) and paneling. | ![](./images/a-3/screengrab01.png)                                                 |
+| Clockwork 是適用於 Dynamo 視覺程式設計環境的自訂節點集合。它不但包含許多 Revit 相關節點，還包含許多適用於諸如以下各種其他用途的節點：清單管理、數學作業、字串作業，單位轉換、幾何作業 (主要是邊界框、網面、平面、點、曲面、UV 與向量) 及面板化。 | ![](./images/a-3/screengrab01.png) |
 
 
 
-| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES**                                                                                                                                                                                                                      | [Visit Data\|Shapes on GitHub](https://github.com/MostafaElAyoubi/Data-shapes) |
+| ![](./images/a-3/DataShapes\_L.png) **DATA|SHAPES** | [請造訪 Github 上的 Data|Shapes]() |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| DataShapes is a package that aims to extend the user functionality of Dynamo scripts. This has a heavy focus on adding greater functionality to Dynamo player. For more infor visit https://data-shapes.net/. Want to create awesome Dynamo player workflows? Use this package. | ![](./images/a-3/DataShapes\_Image.png)                                  |
+| DataShapes 是一套件，旨在延伸 Dynamo 腳本的使用者功能。其聚焦在為 Dynamo 播放器加入更強大的功能。若要取得更多資訊，請造訪 https://data-shapes.net/。要建立精彩 Dynamo 播放器工作流程？使用此套件。 | ![](./images/a-3/DataShapes\_Image.png) |
 
 
 
-| ![](./images/a-3/ds\_L.png) **DYNAMO SAP**                                                                                                                                                                                                                                                                                                                                                           | [Visit the DynamoSAP Project at Core Studio](http://core.thorntontomasetti.com/dynamosap-is-now-open-source/) |
+| ![](./images/a-3/ds\_L.png) **DYNAMO SAP** | [在核心工作室造訪 DynamoSAP 專案]() |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| DynamoSAP is a parametric interface for SAP2000, built on top of Dynamo. The project enables designers and engineers to generatively author and analyze structural systems in SAP, using Dynamo to drive the SAP model. The project prescribes a few common workflows which are described in the included sample files, and provides a wide range of opportunities for automation of typical tasks in SAP. | ![](./images/a-3/sapImage.png)                                                                          |
+| DynamoSAP 是在 Dynamo 基礎上建置的適用於 SAP2000 的參數式介面。藉由該專案，設計師與工程師能以高生產力的方式建立及分析 SAP 中的結構系統，同時使用 Dynamo 來驅動 SAP 模型。該專案指定了一些通用工作流程 (在隨附的範例檔案中對這些工作流程進行了描述)，並提供在 SAP 中自動執行典型工作的諸多機會。 | ![](./images/a-3/sapImage.png) |
 
 
 
-| ![](./images/a-3/DynamoUnfold\_L.png) **DYNAMO UNFOLD**                                                                                                                                                                                                                                                                                       | [Visit the DynamoUnfold GitHub](https://github.com/mjkkirschner/DynamoUnfold) |
+| ![](./images/a-3/DynamoUnfold\_L.png) **DYNAMO UNFOLD** | [造訪 DynamoUnfold GitHub]() |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| This library extends Dynamo/Revit functionality by enabling users to unfold surface and poly-surface geometry. The library allows users to first translate surfaces into planar tessellated topology, then unfold them using Protogeometry tools in Dynamo. This package also includes some experimental nodes as well as a few basic sample files. | ![](./images/a-3/DynamoUnfold\_S.png)                                   |
+| 藉由此資源庫，使用者可以展開曲面與 polysurface 幾何圖形，從而延伸 Dynamo/Revit 的功能。藉由該資源庫，使用者可以先將曲面轉換為平面嵌合拓樸，然後使用 Dynamo 中的 ProtoGeometry 工具將其展開。此套件還包括一些實驗節點與一些基本範例檔案。 | ![](./images/a-3/DynamoUnfold\_S.png) |
 
 
 
-| ![](./images/a-3/Dynastrator\_L.png) **DYNASTRATOR**                                                                                           | [Download Dynastrator at the Package Manager](http://dynamopackages.com) |
+| ![](./images/a-3/Dynastrator\_L.png)**** | [在 Package Manager 下載 Dynastrator]() |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Import vector art from Illustrator or the web using .svg. This allows you to import manually created drawings into Dynamo for parametric operations. | ![](./images/a-3/dynastratorImage.jpg)                             |
+| 使用 .svg 從 Illustrator 或網路匯入向量作品。您可藉此將手動建立的圖面匯入至 Dynamo 以執行參數式作業。 | ![](./images/a-3/dynastratorImage.jpg) |
 
 
 
-| ![](./images/a-3/ea\_L.png) **ENERGY ANALYSIS FOR DYNAMO**                                                                                                                                                                                                                                                                                                                                              | [Visit the Energy Analysis for Dynamo Project on GitHub](https://github.com/tt-acm/EnergyAnalysisForDynamo) |
+| ![](./images/a-3/ea\_L.png) **ENERGY ANALYSIS FOR DYNAMO** | [在 GitHub 上造訪 Energy Analysis for Dynamo 專案]() |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Energy Analysis for Dynamo allows for parametric energy modeling and whole-building energy analysis workflows in Dynamo 0.8. Energy Analysis for Dynamo allows the user to configure the energy model from Autodesk Revit, submit to Green Building Studio for DOE2 energy analysis, and dig into the results returned from the analysis. The package is being developed by Thornton Tomasetti's CORE studio. | ![](./images/a-3/eaImage.png)                                                                         |
+| 藉由 Energy Analysis for Dynamo，可以在 Dynamo 0.8 中執行參數式能源塑型與整棟建築的能源分析工作流程。藉由 Energy Analysis for Dynamo，使用者可以在 Autodesk Revit 中設定能源模型，提交至 Green Building Studio 進行 DOE2 能源分析，然後深入研究分析傳回的結果。此套件的開發者是 Thornton Tomasetti 的核心工作室。 | ![](./images/a-3/eaImage.png) |
 
 
 
-| ![](./images/a-3/Firefly\_L.png) **FIREFLY FOR DYNAMO**                                                                                                                                                                                                                                                                               | [Download Firefly at the Dynamo Package Manager](http://dynamopackages.com) |
+| ![](./images/a-3/Firefly\_L.png) **FIREFLY FOR DYNAMO** | [在 Dynamo Package Manager 下載 Firefly]() |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Firefly is a collection of nodes which enable dynamo to talk to input/output devices, like the Arduino micro controller. Because the data flow happens “live”, Firefly opens up many opportunities for interactive prototyping between the digital and physical worlds through web cams, mobile phones, game controllers, sensors and more. | ![](./images/a-3/Firefly\_S.png)                                      |
+| Firefly 是節點的集合，藉由這些節點，Dynamo 可以與輸入/輸出裝置 (例如 Arduino 微控制器) 通訊。由於會「即時」發生資料流動，因此 Firefly 會為透過網路攝影機、行動電話、遊戲控制器、感應器等在數位與實體環境之間進行互動式原型開發帶來許多機會。 | ![](./images/a-3/Firefly\_S.png) |
 
 
 
-| ![](<./images/a-3/genius loci logo.png>) **GENIUS LOCI**                                                                                                                                                             | [Visit the Genius Loci GitHub](https://github.com/albandechasteigner/GeniusLociForDynamo) |
+| ![](<.**** | []() |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Genius Loci is a compilation of Nodes for Dynamo. It consists useful Nodes that benefits Revit users. Install the package  to explore some of the features, such as interact easily with linked files and Revit Documents. | ![](<./images/a-3/genius loci package sample nodes.png>)                            |
+| Genius Loci is a compilation of Nodes for Dynamo. It consists useful Nodes that benefits Revit users. Install the package  to explore some of the features, such as interact easily with linked files and Revit Documents. | ![](<. |
 
 
 
-| ![](./images/a-3/mantisshrimpLogo.png) **MANTIS SHRIMP**                                                               | [Visit the official Mantis Shrimp site.](http://archi-lab.net/mantis-shrimp-getting-started/) |
+| ![](./images/a-3/mantisshrimpLogo.png) **MANTIS SHRIMP** | [造訪官方 Mantis Shrimp 網站。]() |
 | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Mantis Shrimp is an interoperability project that allows you to easily import Grasshopper and/or Rhino geometry into Dynamo. | ![](./images/a-3/msImage.png)                                                           |
+| Mantis Shrimp 是互通性專案，您可藉此將 Grasshopper 及/或 Rhino 幾何圖形輕鬆匯入至 Dynamo。 | ![](./images/a-3/msImage.png) |
 
 
 
-| ![](./images/a-3/MeshToolkit\_L.png) **MESH TOOLKIT**                                                                                                                                                                                                                                                                                                                                              | [Visit the Dynamo Mesh Toolkit GitHub](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](./images/a-3/MeshToolkit\_L.png) **MESH TOOLKIT** | [造訪 Dynamo Mesh Toolkit GitHub]() |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| The Dynamo Mesh Toolkit provides many useful tools for working with mesh geometry. The functionality of this package includes the ability to import meshes from external file formats, generate meshes from pre-existing Dynamo geometry objects, and manually build meshes through vertices and connectivity information. Additionally, this toolkit includes tools to modify and repair mesh geometry. | ![](./images/a-3/MeshToolkit\_S.png)                                                          |
+| Dynamo Mesh Toolkit 可提供對網面幾何圖形進行處理的許多有用工具。此套件的功能包括匯入外部檔案格式的網面、根據預先存在的 Dynamo 幾何圖形物件產生網面，以及根據頂點與連接資訊手動建置網面。此外，該工具套件還包括用於修改及修復網面幾何圖形的工具。 | ![](./images/a-3/MeshToolkit\_S.png) |
 
 
 
-| 🧐 **MONOCLE**                                                                                                                                                                                                                                                                                                       | [Visit the Monocle GitHub](https://github.com/johnpierson/MonocleForDynamo) |
+| **** | []() |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Monocle is a View Extension for Dynamo 2.0.x. Monocle contains a set of useful tools for package identification, graph cleanup and more! Monocle aims to add functionality to the Dynamo UI in a seemless way that leaves you thinking, _"is this built into dynamo?"_. Monocle is available on the package manager. | ![](./images/a-3/monocleImage.png)                                    |
+| __.  | ![](./images/a-3/monocleImage.png) |
 
 
 
-| ![](./images/a-3/Optimo\_L.png) **OPTIMO**                                                                                                                                                                                       | [Visit the Optimo GitHub](https://github.com/BPOpt/Optimo/wiki/0\_-Home) |
+| ![](./images/a-3/Optimo\_L.png)**** | []() |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Optimo provides dynamo users with the capability to optimize self-defined design problems by using various evolutionary algorithms. Users can define the problem objective or set of objectives as well as specific fitness functions. | ![](./images/a-3/Optimo\_S.png)                                    |
+| 藉由 Optimo，Dynamo 使用者可以使用各種演化演算法，以最佳化自己定義的設計問題。使用者可以定義問題目標或目標組，以及特定的健康度函數。 | ![](./images/a-3/Optimo\_S.png) |
 
 
 
-| ![](./images/a-3/Rhynamo\_L.png) **RHYNAMO**                                                                                                                                                                                                                                                                                                                                                                          | [Visit the Rhynamo Bitbucket](https://bitbucket.org/caseinc/rhynamo) |
+| ![](./images/a-3/Rhynamo\_L.png)**** | [造訪 Rhynamo Bitbucket]() |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| The Rhynamo node library provides users with the ability to read and write Rhino 3DM files from within Dynamo. Rhynamo translates Rhino geometry into usable Dynamo geometry by using McNeel’s OpenNURBS library allowing for new workflows that can exchange geometry and data fluidly between Rhino and Revit. This package also contains some experimental nodes that allow for “live” access to the Rhino command line. | ![](./images/a-3/Rhynamo\_S.png)                               |
+| 藉由 Rhynamo 節點資源庫，使用者可以在 Dynamo 內，讀取及寫入 Rhino 3DM 檔案。Rhynamo 透過使用 McNeel 的 OpenNURBS 資源庫，可以採用能在 Rhino 與 Revit 之間順利交換幾何圖形及資料的新工作流程，從而將 Rhino 幾何圖形轉換為可使用的 Dynamo 幾何圖形。此套件也包含一些實驗節點，藉此可「即時」存取 Rhino 指令行。 | ![](./images/a-3/Rhynamo\_S.png) |
 
 
 
-| ![](./images/a-3/Rhythm\_L.png) **RHYTHM**                                                                                                                                                                                                                                                            | [Visit Rhythm on GitHub](https://github.com/sixtysecondrevit/RhythmForDynamo) |
+| ![](./images/a-3/Rhythm\_L.png)**** | [在 GitHub 上造訪 Rhythm]() |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Rhythm is a set of useful nodes to help your Revit project maintain a good rhythm with Dynamo. basically it does some pretty okay stuff. Rhythm is open source and primarily built in C#, and adds Revit nodes, core nodes and a view extension to your Dynamo. Rhythm is available on the package manager. | ![](./images/a-3/Rhythm\_Image.png)                                     |
+| Rhythm is a set of useful nodes to help your Revit project maintain a good rhythm with Dynamo. basically it does some pretty okay stuff. Rhythm is open source and primarily built in C#, and adds Revit nodes, core nodes and a view extension to your Dynamo. Rhythm is available on the package manager. | ![](./images/a-3/Rhythm\_Image.png) |
 
 
 
-| ![](./images/a-3/Springs\_L.png) **Spring Nodes**                                                                                                                                                                                                                                                                                                                      | [Visit Spring ](https://github.com/dimven/SpringNodes)[Nodes on GitHub](https://github.com/dimven/SpringNodes) |
+| ![](./images/a-3/Springs\_L.png)**** | []()[]() |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Spring nodes main focus is to improve Dynamo's interaction with Revit. The wider goal is to explore any and all means that can help accelerate BIM focused work-flows. Many of the nodes use either IronPython or DesignScript and can be a good starting point for learning the specific syntax and finer points of both. Spring nodes is available on the package manager. | ![](./images/a-3/springNodes\_image.jpg)                                                                 |
+| Spring nodes main focus is to improve Dynamo's interaction with Revit. The wider goal is to explore any and all means that can help accelerate BIM focused work-flows. Many of the nodes use either IronPython or DesignScript and can be a good starting point for learning the specific syntax and finer points of both. Spring nodes is available on the package manager. | ![](./images/a-3/springNodes\_image.jpg) |

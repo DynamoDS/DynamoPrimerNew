@@ -1,60 +1,60 @@
 # Visual Programming and Dynamo
 
-#### What is Visual Programming? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
+#### 什麼是視覺程式設計？ <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
-Designing frequently involves establishing visual, systemic, or geometric relationships between the parts of a design. More times than not, these relationships are developed by workflows that gets us from concept to result by way of rules. Perhaps without knowing it, we are working algorithmically - defining a step-by-step set of actions that follow a basic logic of input, processing, and output. Programming allows us to continue to work this way but by formalizing our algorithms.
+設計經常會涉及在設計的各環節之間建立視覺、系統或幾何關係。大多數狀況下，這些關係由工作流程制定，這些工作流程會透過規則方式讓我們完成從概念到結果的流程。您可能不知道，我們以演算法方式工作，會定義遵循輸入、處理與輸出基本邏輯的一組逐步動作。藉由程式設計，我們可以繼續使用此方式，但要對演算法進行形式化。
 
-#### Algorithms in Hand <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
+#### 現有演算法 <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
-While offering some powerful opportunities, the term **Algorithm** can carry some misconceptions with it. Algorithms can generate unexpected, wild, or cool things, but they are not magic. In fact, they are pretty plain, in and of themselves. Let's use a tangible example like an origami crane. We start with a square piece of paper (input), follow a series of folding steps (processing actions), and result in a crane (output).
+在提供一些良好機會的同時，**演算法**一詞也帶來一些錯誤觀念。演算法可以產生非預期的、瘋狂的或很酷的結果，但並非無所不能。實際上，演算法本身很普通。接下來我們使用紙鶴的實際範例進行說明。先使用一張方形紙 (輸入)，然後按照一系列折疊步驟 (處理動作)，最後會折成紙鶴 (輸出)。
 
-![Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![]()
 
-So where is the Algorithm? It is the abstract set of steps, which we can represent in a couple of ways - either textually or graphically.
+演算法在哪裡？演算法是一組抽象步驟，可以採用一系列方式 (文字或圖形) 來表示。
 
-**Textual Instructions:**
+**文字說明：**
 
-1. Start with a square piece of paper, colored side up. Fold in half and open. Then fold in half the other way.
-2. Turn the paper over to the white side. Fold the paper in half, crease well and open, and then fold again in the other direction.
-3. Using the creases you have made, Bring the top 3 corners of the model down to the bottom corner. Flatten model.
-4. Fold top triangular flaps into the center and unfold.
-5. Fold top of model downwards, crease well and unfold.
-6. Open the uppermost flap of the model, bringing it upwards and pressing the sides of the model inwards at the same time. Flatten down, creasing well.
-7. Turn model over and repeat Steps 4-6 on the other side.
-8. Fold top flaps into the center.
-9. Repeat on other side.
-10. Fold both ‘legs’ of model up, crease very well, then unfold.
-11. Inside Reverse Fold the “legs” along the creases you just made.
-12. Inside Reverse Fold one side to make a head, then fold down the wings.
-13. You now have a crane.
+1. 先使用一張方形紙，有顏色的一面朝上。對折然後展開。然後沿另一方向對折。
+2. 將紙翻轉到白色的一面。對折，折好後展開，然後再次沿另一方向對折。
+3. 使用已產生的折痕，將模型頂部的 3 個角向下折至底部的角。展平模型。
+4. 將頂部的三角形片折至中心，然後展開。
+5. 將模型頂部向下折，折好後展開。
+6. 展開模型最上方的片，將其向上折，同時向內按壓模型的兩側。展平，折好。
+7. 翻轉模型，在另一面重複步驟 4-6。
+8. 將頂部的片折至中心。
+9. 在另一面重複上述步驟。
+10. 向上折疊模型的兩條「腿」，折好然後展開。
+11. 沿剛剛產生的折痕對「腿」進行內側反向折疊。
+12. 對一面進行內側反向折疊以產生頭，然後向下折疊翅膀。
+13. 現在紙鶴就折成了。
 
-**Graphical Instructions:**
+**圖形說明：**
 
-![Needs Update- Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![]()
 
-#### Programming Defined <a href="#programming-defined" id="programming-defined"></a>
+#### 定義的程式設計 <a href="#programming-defined" id="programming-defined"></a>
 
-Using either of these sets of instructions should result in a crane, and if you followed along yourself, you've applied an algorithm. The only difference is the way in which we read the formalization of that set of instructions and that leads us to **Programming**. Programming, frequently shortened from _Computer Programming_, is the act of formalizing the processing of a series of actions into an executable program. If we turned the above instructions for a creating crane into a format our computer can read and execute, we are Programming.
+使用其中任何一組說明應該都會折成紙鶴，若您已遵循說明，即已套用演算法。唯一的差異在於我們對該組說明的形式化進行閱讀進而執行**程式設計**所採用的方式。程式設計常用作_電腦程式設計_的簡稱，是形式化動作，會將一系列動作處理成可執行的程式。如果我們將上述紙鶴摺疊說明轉化為電腦可以閱讀並執行的格式，就是在進行程式設計。
 
-The key to and first hurdle we will find in Programming, is that we have to rely on some form of abstraction to communicate effectively with our computer. That takes the form of any number of Programming Languages, such as JavaScript, Python, or C. If we can write out a repeatable set of instructions, like for the origami crane, we only need to translate it for the computer. We are on our way to having the computer be able to make a crane or even a multitude of different cranes where each one varies slightly. This is the power of Programming - the computer will repeatedly execute whatever task, or set of tasks, we assign to it, without delay and without human error.
+程式設計的關鍵與第一個障礙，是我們必須依賴某些抽象形式與電腦進行有效通訊。這需要採用多種形式的程式設計語言 (例如 JavaScript、Python 或 C)。如果我們能寫出一組可重複的說明 (例如紙鶴折疊說明)，只需針對電腦轉換說明即可。我們的電腦將會折疊紙鶴，甚至會折疊彼此略有不同的多種紙鶴。這是程式設計的力量所在，電腦將重複執行我們為其指定的任何單一工作或一組工作，而不會延遲或出現人為錯誤。
 
-**Visual Programming Defined**
+**定義的視覺程式設計**
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
 
-If you were tasked with writing instructions for folding an origami crane, how would you go about it? Would you make them with graphics, text, or some combination of the two?
+如果您承擔的工作是編寫紙鶴折疊說明，您會如何執行？您要使用圖形、文字或兩者的組合來編寫嗎？
 
-If your answer contained graphics, then **Visual Programming** is definitely for you. The process is essentially the same for both Programming and Visual Programming. They utilize the same framework of formalization; however, we define the instructions and relationships of our program through a graphical (or "Visual") user interface. Instead of typing text bound by syntax, we connect pre-packaged nodes together. Here's a comparison of the same algorithm - "draw a circle through a point" - programmed with nodes versus code:
+若您的回答包含圖形，則**視覺程式設計**無疑適合您使用。不論是程式設計還是視覺程式設計，此程序實質上是相同的。它們會利用相同的形式化架構，但是，我們會透過圖形 (即「視覺」) 使用者介面定義程式的說明與關係。我們不是鍵入受語法約束的文字，而是將預先封裝的節點連接在一起。以下是相同演算法的比較，對「繪製通過點的圓」分別使用節點與代碼進行程式設計：
 
-**Visual Program:**
+**視覺程式：**
 
-![](<./images/a-1/visualProgramming (2).png>)
+![](<.
 
-**Textual Program:**
+**文字程式：**
 
 ```
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
@@ -65,8 +65,8 @@ dist = myPoint.DistanceTo(attractorPoint);
 myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 ```
 
-The results of our algorithm:
+我們的演算法結果：
 
-![](<./images/a-1/visualProgramming (1).png>)
+![](<.
 
-The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.
+採用視覺特性進行程式設計的方式可減少入門以及與設計人員頻繁交流的障礙。Dynamo 是視覺程式設計的範例，但我們稍後將看到，在設計應用程式時仍可使用文字程式設計方式。

@@ -1,12 +1,12 @@
-# Revit Use-Cases
+# 字典 - Revit 使用情況
 
-Have you ever wanted to look up something in Revit by a piece of data that it has?
+您是否曾想要依據 Revit 包含的資料片段查看其中的一些內容？
 
-Chances are if you have you've done something like the following example.
+如果您完成了類似下列作業，就可能達到這個目的：
 
-In the image below we are collecting all of the rooms in the Revit model, getting the index of the room we want (by room number), and finally grabbing the room at the index.
+在上面的影像中，我們收集 Revit 模型中的所有房間、取得所需房間的索引 (依房間號碼)，最後取得索引處的房間。
 
-![](<../images/5-5/4/dictionary - collect room in revit model.jpg>)
+![]
 
 > 1. Collect all rooms in the model.
 > 2. Room number to find.
@@ -19,55 +19,55 @@ In the image below we are collecting all of the rooms in the Revit model, gettin
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-5/4/roomDictionary.dyn" %}
 
-Now let's recreate this idea using dictionaries. First we need to collect all of the rooms in our Revit model.
+現在讓我們使用字典重新創造這個構想。 影像 首先我們必須收集 Revit 模型中的所有房間。
 
-![](<../images/5-5/4/dictionary - exercise I - 01.jpg>)
+![]
 
-> 1. We choose the Revit category we want to work with, (In this case, we are working with rooms).
-> 2. We tell Dynamo to collect all of those elements
+> 1. 我們選擇我們想要使用的 Revit 品類 (在本案例中，我們使用房間)。
+> 2. 我們告訴 Dynamo 收集所有這些元素
 
-Next, we need to decide what keys we are going to use to look up this data by. (Information on keys can be found on the section, [What is a dictionary?](9-1\_what-is-a-dictionary.md)).
+影像 接著，我們必須決定要使用哪些鍵來查詢此資料。 (在 [9-1 什麼是字典？一節可以找到鍵的相關資訊)。](9-1\_what-is-a-dictionary.md)).
 
-![](<../images/5-5/4/dictionary - exercise I - 02.jpg>)
+![]
 
-> 1. The data that we will use is the room number.
+> 1. 我們要使用的資料是房間號碼。
 
-Now we will create the dictionary with the given keys and elements.
+影像 現在，我們要使用給定的鍵和元素建立字典。
 
-![](<../images/5-5/4/dictionary - exercise I - 03.jpg>)
+![]
 
-> 1. The node, **Dictionary.ByKeysValues** will create a dictionary given the appropriate inputs.
-> 2. `Keys` need to be a string, while `values` can be a variety of object types.
+> 1. **Dictionary.ByKeysValues** 節點會在給定適當輸入的狀況下建立字典。
+> 2. `Keys` Keys`values` 必須是字串，而 values 可以是各種物件類型。
 
-Lastly, we can retrieve a room from the dictionary with its room number now.
+影像 最後，我們現在可以從字典中使用房間號碼擷取房間。
 
-![](<../images/5-5/4/dictionary - exercise I - 04.jpg>)
+![]
 
-> 1. `String` will be the key that we are using to look up an object from the dictionary.
-> 2. **Dictionary.ValueAtKey** will obtain the object from the dictionary now.
+> 1. `String` Strings 是我們要用來從字典中查詢物件的鍵。
+> 2. **Dictionary.ValueAtKey** 現在會從字典中取得物件。
 
 ### Part II: Values Look Up
 
-Using this same dictionary logic, we can create dictionaries with grouped objects as well. If we wanted to look up all rooms at a given level we can modify the above graph as follows.
+使用同樣的字典邏輯，我們也可以使用群組的物件建立字典。如果我們想要查詢給定樓層的所有房間，可以修改上面的圖表，如下所示。
 
-![](<../images/5-5/4/dictionary - exercise II - 01.jpg>)
+![]
 
-> 1. Rather than using the room number as the key, we can now use a parameter value, (in this case we will use level).
+> 1. 我們現在不使用房間號碼做為鍵，而是使用參數值 (在此案例中，我們將使用樓層)。
 
-![](<../images/5-5/4/dictionary - exercise II - 02.jpg>)
+![]
 
-> 1. Now, we can group the rooms by the level that they reside on.
+> 1. 現在，我們可以依據房間所在的樓層將房間分組。
 
-![](<../images/5-5/4/dictionary - exercise II - 03.jpg>)
+![]
 
-> 1. With the elements grouped by the level, we can now use the shared keys (unique keys) as our key for our dictionary, and the lists of rooms as the elements.
+> 1. 有了依樓層分組的元素，我們現在可以使用共用鍵 (唯一鍵) 做為字典的鍵，使用房間的清單做為元素。
 
-![](<../images/5-5/4/dictionary - exercise II - 04.jpg>)
+![]
 
-> 1. Lastly, using the levels in the Revit model, we can look up which rooms reside on that level in the dictionary. `Dictionary.ValueAtKey` will take the level name and return the room objects at that level.
+> 1. 最後，使用 Revit 模型中的樓層，我們可以在字典中查詢哪些房間位於該樓層。`Dictionary.ValueAtKey` Dictionary.ValueAtKey 會取得樓層名稱，然後傳回該樓層的房間物件。
 
-The opportunities for Dictionary use are really endless. The ability to relate your BIM data in Revit to the element itself poses a variety of use cases.
+使用字典的時機非常多。將 Revit 中的 BIM 資料與元素本身建立關係，就可以產生各種使用情況。

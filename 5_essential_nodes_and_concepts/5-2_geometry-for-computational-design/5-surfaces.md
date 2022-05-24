@@ -1,24 +1,24 @@
-# Surfaces
+# 平面
 
-## Surfaces in Dynamo
+## Dynamo 中的曲面
 
 ### What is Surface
 
-We use [Surface](5-surfaces.md#surface) in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+[](5-surfaces.md#surface)雖然曲線並不總是平面曲線，例如三維曲線，但曲線所定義的空間始終是一維空間。曲面多了一個維度，並具有一系列其他性質，可供我們用於其他塑型作業。
 
 ### Surface at Parameter
 
-Import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
+接下來我們在 Dynamo 中匯入曲面，並根據參數演算曲面，以查看我們可以萃取哪類資訊。
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![]
 
-> 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
-> 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
-> 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
+> 1. _Surface.PointAtParameter_ 會傳回指定 UV 座標處的點
+> 2. _Surface.NormalAtParameter_ 會傳回指定 UV 座標處的法線向量
+> 3. _Surface.GetIsoline_ 會傳回指定 U 或 V 座標處的等參數曲線 - 注意 isoDirection 輸入。
 
 > Download the example files by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-2/5/Surfaces.zip" %}
 
@@ -26,54 +26,54 @@ Import and evaluate a Surface at a Parameter in Dynamo to see what kind of infor
 
 ### Surface
 
-A Surface is a mathematical shape defined by a function and two parameters, Instead of `t` for Curves, we use `U` and `V` to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.
+曲面是由函數與兩個參數定義的數學造型，我們不使用曲線的 `t`t`U`，而是使用 `V`U 與 V 來描述對應的參數空間。 這意味著我們使用此類型的幾何圖形時，需要提取更多的幾何資料。例如，曲線具有切線向量與法向平面 (可以沿曲線長度旋轉或扭轉)，而曲面具有方位一致的法線向量與相切平面。
 
-![Surface](../images/5-2/5/Surface.jpg)
+![曲面](../images/5-2/5/Surface.jpg)
 
-> 1. Surface
-> 2. U Isocurve
-> 3. V Isocurve
-> 4. UV Coordinate
-> 5. Perpendicular Plane
-> 6. Normal Vector
+> 1. 曲面
+> 2. U 等角曲線
+> 3. V 等角曲線
+> 4. UV 座標
+> 5. 互垂平面
+> 6. 法線向量
 
-**Surface Domain**: A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).
+**曲面範圍**：曲面範圍定義為對該曲面上的三維點進行演算的 (U, V) 參數的範圍。每個維度 (U 或 V) 的範圍通常描述為兩個數字，即 U 最小值到 U 最大值與 V 最小值到 V 最大值。
 
-![Surface](../images/5-2/5/SurfaceParameter.jpg)
+![曲面](../images/5-2/5/SurfaceParameter.jpg)
 
-Although the shape of the Surface by not look "rectangular" and it locally may have a tighter or looser set of isocurves, the "space" defined by its domain is always two dimensional. In Dynamo, Surfaces are always understood to have a domain defined by a minimum of 0.0 and maximum of 1.0 in both U and V directions. Planar or trimmed Surfaces may have different domains.
+雖然曲面的造型看上去可能不是「矩形」，而且局部可能存在更緊密或更鬆散的一組等角曲線，但曲面範圍所定義的「空間」始終是二維空間。在 Dynamo 中，我們都知道曲面範圍定義為在 U 與 V 兩個方向上從最小值 0.0 到最大值 1.0。平面曲面或修剪曲面可能具有不同的範圍。
 
-**Isocurve** (or Isoparametric Curve): A curve defined by a constant U or V value on the surface and a domain of values for the corresponding other U or V direction.
+**等角曲線** (即等參數曲線)：由曲面上固定的 U 或 V 值以及所對應其他 U 或 V 方向的值範圍所定義的曲線。
 
-**UV Coordinate**: The Point in UV Parameter Space defined by U, V, and sometimes W.
+**UV 座標**：UV 參數空間中由 U、V (有時還有 W) 定義的點。
 
-![Surface Coordinate](../images/5-2/5/SurfaceCoordinate.jpg)
+![曲面座標](../images/5-2/5/SurfaceCoordinate.jpg)
 
-**Perpendicular Plane**: A Plane that is perpendicular to both U and V Isocurves at a given UV Coordinate.
+**互垂平面**：在指定 UV 座標處與 U 及 V 等角曲線互垂的平面。
 
-**Normal Vector**: A Vector defining the direction of "up" relative to the Perpendicular Plane.
+**法線向量**：相對於互垂平面定義「向上」方向的向量。
 
-### NURBS Surfaces
+### NURBS 曲面
 
-**NURBS Surfaces** are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree.
+**NURBS 曲面**非常類似於 NURBS 曲線。您可以將 NURBS 曲面視為 NURBS 曲線在兩個方向構成的網格。NURBS 曲面的造型由許多控制點以及該曲面在 U 與 V 方向的度來定義。根據控制點、權值與度來計算造型、法線、切線、曲率及其他性質採用的演算法相同。
 
-![NURBS Surface](../images/5-2/5/NURBSsurface.jpg)
+![NURBS 曲面](../images/5-2/5/NURBSsurface.jpg)
 
-In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.
+對於 NURBS 曲面，幾何圖形會指示兩個方向，因為 NURBS 曲面不論造型為何，都是控制點的矩形網格。即使這些方向相對於世界座標系統而言通常是任意方向，但我們可以頻繁使用這些方向來分析模型，或根據曲面產生其他幾何圖形。
 
-![NURBS Surface](../images/5-2/5/NURBSsurface-Degree.jpg)
+![NURBS 曲面](../images/5-2/5/NURBSsurface-Degree.jpg)
 
-> 1. Degree (U,V) = (3,3)
-> 2. Degree (U,V) = (3,1)
-> 3. Degree (U,V) = (1,2)
-> 4. Degree (U,V) = (1,1)
+> 1. 度 (U,V) = (3,3)
+> 2. 度 (U,V) = (3,1)
+> 3. 度 (U,V) = (1,2)
+> 4. 度 (U,V) = (1,1)
 
-### Polysurfaces
+### PolySurface
 
-**Polysurfaces** are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology.
+**PolySurface** 由跨邊接合的曲面構成。PolySurface 提供超過二維的 UV 定義，現在我們可以由此透過拓樸在連接的造型中移動。
 
-While "Topology" generally describes a concept around how parts are connected and/or related Topology in Dynamo is also a type of Geometry. Specifically it is a parent category for Surfaces, Polysurfaces, and Solids.
+雖然「拓樸」通常描述有關部分如何連接及/或相關的概念，但 Dynamo 中的拓樸也是幾何圖形的類型。確切地說，它是曲面、Polysurface 及實體的父系品類。
 
 ![PolySurface](../images/5-2/5/PolySurface.jpg)
 
-Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.
+有時稱為修補，藉由以此方式接合曲面，我們可以製作更複雜的造型，並定義跨接縫的詳細資料。我們可以便利地將圓角或倒角作業套用至 PolySurface 的邊。

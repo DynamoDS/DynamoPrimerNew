@@ -1,12 +1,12 @@
-# Functions
+# 函數
 
-Functions can be created in a code block and recalled elsewhere in a Dynamo definition. This creates another layer of control in a parametric file, and can be viewed as a text-based version of a custom node. In this case, the "parent" code block is readily accessible and can be located anywhere on the graph. No wires needed!
+可以在程式碼塊中建立函數，然後在 Dynamo 定義中的其他位置重新呼叫函數。此作業會在參數式檔案中建立另一個控制層，可視為自訂節點的文字版本。在此案例中，「父系」程式碼塊可隨時存取，可在圖表中的任何位置找到。無需使用線！
 
-### Parent
+### 父系
 
-The first line has the key word “def”, then the function name, then the names of inputs in parentheses. Braces define the body of the function. Return a value with “return =”. Code Blocks that define a function do not have input or output ports because they are called from other Code Blocks.
+第一行包含關鍵字「def」，然後依次是函數名稱與輸入的名稱 (在括號中)。大括號定義函數的本體。使用「return =」傳回值。定義函數的程式碼塊沒有輸入或輸出連接埠，因為會從其他程式碼塊呼叫這些程式碼塊。
 
-![](<../images/8-1/4/functions parent def.jpg>)
+![]
 
 ```
 /*This is a multi-line comment,
@@ -20,11 +20,11 @@ return sum;
 };
 ```
 
-### Children
+### 子系
 
-Call the function with another Code Block in the same file by giving the name and the same number of arguments. It works just like the out-of-the-box nodes in your library.
+使用同一檔案中的其他程式碼塊，只需提供名稱與相同數量的引數即可呼叫函數。其工作方式類似於資源庫中的現成節點。
 
-![](<../images/8-1/4/functions children call def.jpg>)
+![]
 
 ```
 FunctionName(in1,in2);
@@ -34,34 +34,34 @@ FunctionName(in1,in2);
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
-In this exercise, we will make a generic definition that will create spheres from an input list of points. The radius of these spheres are driven by the Z property of each point.
+在本練習中，我們將進行根據輸入點清單建立圓球的一般定義。這些圓球的半徑由每個點的 Z 性質驅動。
 
-Let's begin with a number range of ten values spanning from 0 to 100. Plug these into a **Point.ByCoordinates** nodes to create a diagonal line.
+接下來先建立介於 0 到 100 之間的一系列十個值。將這些值插入至 **Point.ByCoordinates** 節點，以建立對角線。
 
-![](<../images/8-1/4/functions - exercise - 01.jpg>)
+![]
 
-Create a **Code Block** and introduce our definition.
+****
 
-![](<../images/8-1/4/functions - exercise - 02.jpg>)
+![]
 
-> 1.  Use these lines of code:
+> 1. Use these lines of code:
 >
->     ```
->     def sphereByZ(inputPt)
->     {
+>    ```
+>    def sphereByZ(inputPt)
+>    {
+>    
+>    };
+>    ```
 >
->     };
->     ```
->
-> The _inputPt_ is the name we've given to represent the points that will drive the function. As of now, the function isn't doing anything, but we'll build up this function in the steps to come.
+> _inputPt_ 是我們為了表示驅動函數的點而提供的名稱。到現在為止，函數不會執行任何作業，但我們將在後續步驟中建置此函數。
 
-![](<../images/8-1/4/functions - exercise - 03.jpg>)
+![]
 
-> 1. Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parenetheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
+> 1. 加入至**程式碼塊**函數後，我們放置註釋與 _sphereRadius_ 變數，它會查詢每個點的 _Z_ 位置。 請記住，_inputPt.Z_ 作為類函數不需要括號。這是對既有元素性質的_查詢_，因此不需要任何輸入：
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -71,63 +71,63 @@ Create a **Code Block** and introduce our definition.
 > };
 > ```
 
-![](<../images/8-1/4/functions - exercise - 04.jpg>)
+![]
 
-> 1. Now, let's recall the function we've created in another **Code Block**. If we double-click on the canvas to create a new _code block_, and type in _sphereB_, we notice that Dynamo suggest the _sphereByZ_ function that we've defined. Your function has been added to the intellisense library! Pretty cool.
+> 1. 現在，我們在其他 **code block** 中呼叫建立的函數。 如果在圖元區上按兩下以建立新的 _code block_，然後鍵入 _sphereB_，我們會注意到 Dynamo 建議使用我們定義的 _sphereByZ_ 函數。您的函數已加入至 intellisense 資源庫！太酷了。
 
-![](<../images/8-1/4/functions - exercise - 05.jpg>)
+![]
 
-> 1.  Now we call the function and create a variable called _Pt_ to plug in the points created in the earlier steps:
+> 1. 現在，我們呼叫函數，並建立稱為 _Pt_ 的變數以插入先前步驟中建立的點：
 >
->     ```
->     sphereByZ(Pt)
->     ```
-> 2. We notice from the output that we have all null values. Why is this? When we defined the function, we are calculating the _sphereRadius_ variable, but we did not define what the function should _return_ as an _output_. We can fix this in the next step.
+>    ```
+>    sphereByZ(Pt)
+>    ```
+> 2. 我們注意到輸出是所有空值。為何會發生這種情況？定義函數時，我們會計算 _sphereRadius_ 變數，但沒有定義函數應_傳回_哪些項目做為_輸出_。我們可以在下一步中修正此問題。
 
-![](<../images/8-1/4/functions - exercise - 06.jpg>)
+![]
 
-> 1. An important step, we need to define the output of the function by adding the line `return = sphereRadius;` to the _sphereByZ_ function.
-> 2. Now we see that the output of the Code Block gives us the Z coordinates of each point.
+> 1. 我們需要加入程式碼行 `return = sphereRadius;`return = sphereRadius;_ 至 _sphereByZ 函數，以定義函數的輸出，這是重要的步驟。
+> 2. 現在，我們可以看到程式碼塊的輸出會提供每個點的 Z 座標。
 
-Let's create actual spheres now by editing the _Parent_ function.
+現在，我們將編輯_父系_函數以建立實際的圓球。
 
-![](<../images/8-1/4/functions - exercise - 07.jpg>)
+![]
 
-> 1. We first define a sphere with the line of code: `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
-> 2. Next, we change the return value to be the _sphere_ instead of the _sphereRadius_: `return = sphere;` This gives us some giant spheres in our Dynamo preview!
+> 1. `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
+> 2. ____`return = sphere;`
 
-![](<../images/8-1/4/functions - exercise - 08.jpg>)
+![]
 
-> 1\. To temper the size of these spheres, let's update the sphereRadius value by adding a divider: `sphereRadius = inputPt.Z/20;` Now we can see the separate spheres and start to make sense of the relationship between radius and Z value.
+> 1\. `sphereRadius = inputPt.Z/20;`
 
-![](<../images/8-1/4/functions - exercise - 09.jpg>)
+![]
 
-> 1. On the **Point.ByCoordinates** node, by changing the lacing from Shortest List to Cross Product, we create a grid of points. The _sphereByZ_ function is still in full effect, so the points all create spheres with radii based on Z values.
+> 1. 在 **Point.ByCoordinates** 節點上，將交織從最短清單變更為笛卡兒積，我們要建立點的格線。 _sphereByZ_ 函數仍完全有效，因此所有點會建立半徑以 Z 值為基礎的圓球。
 
-![](<../images/8-1/4/functions - exercise - 10.jpg>)
+![]
 
-> 1. And just to test the waters, we plug the original list of numbers into the X input for **Point.ByCoordinates**. We now have a cube of spheres.
-> 2. Note: if this takes a long time to calculate on your computer, try to change _#10_ to something like _#5_.
+> 1. 為了進行測試，我們將原始數字清單插入至 **Point.ByCoordinates** 的 X 輸入。現在，將產生有一塊圓球。
+> 2. 注意事項：如果在您的電腦上需要花很長時間來執行此計算，請嘗試將 _#10_ 變更為諸如 _#5_ 等數字。
 
-Remember, the _sphereByZ_ function we've created is a generic function, so we can recall the helix from an earlier lesson and apply the function to it.
+請記住，我們建立的 _sphereByZ_ 函數是一般函數，因此可以呼叫先前課程中的螺旋線，並對其套用該函數。
 
-![](<../images/8-1/4/functions - exercise - 11.jpg>)
+![]
 
-One final step: let's drive the radius ratio with a user defined parameter. To do this, we need to create a new input for the function and also replace the _20_ divider with a parameter.
+接下來是最後一步：運用使用者定義的參數驅動半徑比。若要執行此作業，我們需要為函數建立新輸入，並使用參數取代除數 _20_。
 
-![](<../images/8-1/4/functions - exercise - 12.jpg>)
+![]
 
-> 1.  Update the _sphereByZ_ definition to:
+> 1. 將 _sphereByZ_ 定義更新為：
 >
->     ```
->     def sphereByZ(inputPt,radiusRatio)
->     {
->     //get Z Value, use it to drive radius of sphere
->     sphereRadius=inputPt.Z/radiusRatio;
->     //Define Sphere Geometry
->     sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
->     //Define output for function
->     return sphere;
->     };
->     ```
-> 2. Update the children **Code Block** by adding a ratio variable to the input: `sphereByZ(Pt,ratio);` Plug a slider into the newly created **Code Block** input and vary the size of the radii based on the radius ratio.
+>    ```
+>    def sphereByZ(inputPt,radiusRatio)
+>    {
+>    //get Z Value, use it to drive radius of sphere
+>    sphereRadius=inputPt.Z/radiusRatio;
+>    //Define Sphere Geometry
+>    sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
+>    //Define output for function
+>    return sphere;
+>    };
+>    ```
+> 2. 加入 **ratio** 變數至輸入：`sphereByZ(Pt,ratio);`sphereByZ(Pt,ratio);** 以更新子系程式碼塊，將滑棒插入至新建立的程式碼塊輸入，並根據半徑比變更半徑的大小。**

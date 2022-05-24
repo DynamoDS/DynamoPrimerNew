@@ -1,10 +1,10 @@
-# Translation, Rotation, and Other Transformations
+# 平移、旋轉和其他轉換
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+透過在三維空間中明確指出 x、y、z 座標，可以建立某些幾何圖形物件。但是，我們更常對物件本身或對其基本的 CoordinateSystem 使用幾何轉換，將幾何圖形移動到最終位置。
 
-### Translation
+### 翻譯
 
-The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
+最簡單的幾何轉換是平移，亦即將一個物件沿著 x、y、z 方向移動指定的單位數。
 
 ![](../images/8-2/5/Transformations\_01.png)
 
@@ -18,9 +18,9 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### Rotation
+### 旋轉
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+在 Dynamo 中，雖然可以在物件名稱的結尾附加 _.Translate_ 方法平移所有物件，但是還有更複雜的轉換需要將物件從一個基本的 CoordinateSystem 轉換到新的 CoordinateSystem。例如，若要讓物件繞 x 軸旋轉 45 度，我們要使用 _.Transform_ 方法，將物件從其既有無旋轉的 CoordinateSystem，轉換到一個已經繞 x 軸旋轉 45 度的 CoordinateSystem：
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Scale
+### 比例
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+除了平移和旋轉，也可以用調整比例或切變方式建立 CoordinateSystem。CoordinateSystem 可以使用 _.Scale_ 方法調整比例：
 
 ![](../images/8-2/5/Transformations\_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+在 CoordinateSystem 建構函式中輸入非正交的向量可以建立切變的 CoordinateSystem。
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+比起旋轉和平移，調整比例和切變是相對比較複雜的幾何轉換，所以並非每個 Dynamo 物件都能經過這些轉換。下表概述哪些 Dynamo 物件可以有非等比例調整的 CoordinateSystem，以及切變的 CoordinateSystem。
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| 類別 | 非等比例調整的 CoordinateSystem | 切變的 CoordinateSystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | No                                    | No                       |
-| NurbsCurve   | Yes                                   | Yes                      |
-| NurbsSurface | No                                    | No                       |
-| Circle       | No                                    | No                       |
-| Line         | Yes                                   | Yes                      |
-| Plane        | No                                    | No                       |
-| Point        | Yes                                   | Yes                      |
-| Polygon      | No                                    | No                       |
-| Solid        | No                                    | No                       |
-| Surface      | No                                    | No                       |
-| Text         | No                                    | No                       |
+| Arc | 否 | 否 |
+| NurbsCurve | 是 | 是 |
+| NurbsSurface | 否 | 否 |
+| Circle | 否 | 否 |
+| Line | 是 | 是 |
+| Plane | 否 | 否 |
+| Point | 是 | 是 |
+| Polygon | 否 | 否 |
+| Solid | 否 | 否 |
+| Surface | 否 | 否 |
+| Text | 否 | 否 |

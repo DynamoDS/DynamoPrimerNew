@@ -1,84 +1,84 @@
-# About
+# 關於
 
 ## For Dynamo v2.13
 
-![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
+![Dynamo 標誌](images/dynamo\_logo\_dark-trim.jpg)
 
-> Dynamo is an open source visual programming platform for designers.
+> Dynamo 是一種適用於設計人員的開放原始碼視覺程式設計平台。
 
-### Welcome
+### 歡迎
 
-You have just opened the Dynamo Primer, a comprehensive guide to visual programming in Autodesk Dynamo. This primer is an on-going project to share the fundamentals of programming. Topics include working with computational geometry, best practices for rules-based design, cross-disciplinary programming applications, and more with the Dynamo Platform.
+您剛剛開啟了 Dynamo Primer，它是 Autodesk Dynamo 中針對視覺程式設計的全面指南。本手冊是一個用於共享程式設計基礎知識的持續專案。主題包括處理計算幾何圖形、規則型設計的最佳實務、跨學科程式設計應用程式以及 Dynamo 平台的更多相關主題。
 
-The power of Dynamo can be found in a wide variety of design-related activities. Dynamo enables an expanding list of readily accessible ways for you to get started:
+在各種設計相關活動中可體現 Dynamo 的強大之處。Dynamo 擴展了可存取方式的清單來協助您入門：
 
-* **Explore** visual programming for the first time
-* **Connect** workflows in various software
-* **Engage** an active community of users, contributors, and developers
-* **Develop** an open-source platform for continued improvement
+* 第一次**探索**視覺程式設計
+* 在各種軟體中**連接**工作流程
+* **加入**一個活躍的使用者、貢獻者及開發人員社群
+* **開發**開放程式碼平台，以實現持續改進
 
-In the midst of this activity and exciting opportunity for working with Dynamo, we need a document of the same caliber, the Dynamo Primer.
+在此活動期間和利用處理 Dynamo 之激動人心的機會時，我們需要具有相同標準的文件，即 Dynamo Primer。
 
-Refer to the [primer user guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) to find out what you can expect to learn from this primer.
+[](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)
 
-### Open Source
+### 開放原始碼
 
-The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: https://github.com/DynamoDS/DynamoPrimer/issues
+Dynamo Primer 專案是開放原始碼專案！我們專注於提供品質內容，並感謝您可能提出的任何意見。如果您想要報告有關任何內容的問題，請將其發佈至我們的 GitHub 問題頁面：https://github.com/DynamoDS/DynamoPrimer/issues
 
-If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: https://github.com/DynamoDS/DynamoPrimer.
+如果您想要對此專案建立新的小節、進行編輯或新增任何其他內容，請查看 GitHub 存放庫來開始：https://github.com/DynamoDS/DynamoPrimer。
 
-### The Dynamo Primer Project
+### Dynamo Primer 專案
 
-The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dynamo Development team at Autodesk.
+Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 Dynamo 開發團隊所發起。
 
-**Mode Lab** was commissioned to write the First Edition of the primer. We thank them for all of their efforts in establishing this valuable resource.
+**Mode Lab** 受託撰寫此手冊的第一個版本。我們感謝他們為了建立這個寶貴資源付出的所有心力。
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-**John Pierson of Parallax Team** was commissioned to update the primer to reflect the Dynamo 2.0. revisions.
+**Parallax Team 的 John Pierson** 受託更新此手冊以反映 Dynamo 2.0 的修訂。
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.
+****
 
 ![](<images/matterlab\_final-07.jpg>)
 
-### Acknowledgments
+### 致謝
 
-A special thanks to Ian Keough for initiating and guiding the Dynamo project.
+特別感謝 Ian Keough 啟動和指導 Dynamo 專案。
 
-Thank you to Matt Jezyk, Ian Keough, Zach Kron, Racel Williams and Colin McCrone for enthusiastic collaboration and the opportunity to participate on a wide array of Dynamo projects.
+感謝 Matt Jezyk、Ian Keough、Zach Kron、Racel Williams 和 Colin McCrone 充滿熱情地協同合作和參與 Dynamo 專案的一系列活動。
 
-### Software and Resources
+### 軟體和資源
 
-**Dynamo** The current stable\* release of Dynamo is Version 2.1.0
+**Dynamo** Dynamo 目前的穩定* 版本為 2.1.0。
 
-http://dynamobim.com/download/ or http://dynamobuilds.com
+http://dynamobim.com/download/ 或 http://dynamobuilds.com
 
-\*Note: Starting with Revit 2020, Dynamo is bundled with Revit releases, resulting in manual installation not being required. More information is available at this [blog post](https://dynamobim.org/dynamo-core-2-1-release/).
+*注意事項：從 Revit 2020 開始，Dynamo 會與 Revit 版本搭售，您不需要再手動安裝。 如需更多資訊，請參閱此[部落格文章](https://dynamobim.org/dynamo-core-2-1-release/)。
 
-**DynamoBIM** The best source for additional information, learning content, and forums is the DynamoBIM website.
+**DynamoBIM** 其他資訊、學習內容和論壇的最佳來源是 DynamoBIM 網站。
 
 http://dynamobim.org
 
-**Dynamo GitHub** Dynamo is an open-source development project on GitHub. To contribute, check out DynamoDS.
+**Dynamo GitHub** Dynamo 是 GitHub 上的一個開放原始碼開發專案。若要參與開發，可查看 DynamoDS。
 
 https://github.com/DynamoDS/Dynamo
 
-**Contact** Let us know about any issues with this document.
+**聯絡方式** 讓我們瞭解關於此文件的所有問題。
 
 Dynamo@autodesk.com
 
-### License
+### 授權
 
-Copyright 2022 Autodesk
+Copyright 2018 Autodesk
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.您可在以下網站獲取此「授權」的副本：
 
 http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.

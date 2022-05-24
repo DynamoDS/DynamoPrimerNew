@@ -1,62 +1,62 @@
-# Geometry Overview
+# 幾何圖形概述
 
-## Geometry in Dynamo Sandbox
+## Dynamo Sandbox 中的幾何圖形
 
-**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
+**幾何圖形**是設計的語言。若程式設計語言或環境的核心是幾何圖形核心，則在設計精確健全的模型、自動化設計常式及使用演算法產生設計迭代方面將帶來無限可能。
 
-Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
+透過瞭解幾何圖形類型及其相關方式，我們可以導覽資源庫中提供的[幾何圖形節點](1-geometry-overview.md#stepping-through-the-hierarchy)集合。**** 幾何圖形節點依字母順序排列，與階層順序 (其顯示類似於在 Dynamo 介面中的配置) 截然不同。
 
-![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
+![]
 
-Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
+此外，在 Dynamo 中製作模型，以及將我們在背景預覽中看到的預覽連接至圖表中的資料流，這兩項功能隨時間演進將變得更直觀。
 
-![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
+![]
 
-> 1. Note the assumed coordinate system rendered by the grid and colored axes
-> 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
+> 1. 請注意由格線與彩色軸彩現的假設座標系統
+> 2. 選取的節點會以亮顯顏色彩現背景中的對應幾何圖形 (若該節點建立幾何圖形)
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
 ## The Concept of Geometry
 
-Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.
+幾何圖形一直以來的定義是對形狀、大小、圖形相對位置以及空間性質的研究。此領域具有數千年的悠久發展歷史。隨著電腦的問世與普及，我們在定義、探索及產生幾何圖形方面擁有了功能強大的工具。現在，可以很輕鬆地計算複雜幾何互動的結果，這種狀況幾乎隨處可見。
 
 ![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
 
-> If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.
+> 如果您很想瞭解多種多樣的複雜幾何圖形在運用電腦的力量後實現的發展，請在網路上快速搜尋 Stanford Bunny，這是用於測試演算法的權威模型。
 
-Understanding geometry in the context of algorithms, computing, and complexity, may sound daunting; however, there are a few key, and relatively simple, principles that we can establish as fundamentals to start building towards more advanced applications:
+在滿是演算法、運算與複雜性的環境中瞭解幾何圖形聽起來似乎讓人膽怯，但是存在一些關鍵且相對簡單的原則，我們可以以此為基礎開始建置更高級的應用：
 
-1. Geometry is **Data** - to the computer and Dynamo, a Bunny not all that different from a number.
-2. Geometry relies on **Abstraction** - fundamentally, geometric elements are described by numbers, relationships, and formulas within a given spatial coordinate system
-3. Geometry has a **Hierarchy** - points come together to make lines, lines come together to make surfaces, and so on
-4. Geometry simultaneously describes both **the Part and the Whole** - when we have a curve, it is both the shape as well as all the possible points along it
+1. 幾何圖形是**資料** - 對於電腦與 Dynamo 而言，Bunny 與數字沒有很大區別。
+2. 幾何圖形依賴於**抽象** - 基本上，幾何元素由指定空間座標系統中的數字、關係與公式來描述。
+3. 幾何圖形具有**階層** - 許多點共同構成線，許多線共同構成面，以此類推
+4. 幾何圖形可以同時描述**部分與整體** - 曲線既是指形狀，也是指曲線上的所有點
 
-In practice, these principles mean that we need to be aware of what we are working with (what type of geometry, how was it created, etc.) so that we can fluidly compose, decompose, and recompose different geometries as we develop more complex models.
+實際上，這些原則意味著我們需要注意所處理的項目 (幾何圖形的類型、建立方法等)以便在開發更複雜的模型時，能順暢地構建、分解及重新構建不同的幾何圖形。
 
-## Stepping through the Hierarchy
+## 逐步瞭解階層
 
-Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
+接下來花一些時間看一下幾何圖形的抽象描述與階層描述之間的關係。由於這兩個概念彼此相關，但起初並不總是很明顯，因此我們在開始開發更深入的工作流程或模型後，會很快遇到概念障礙。對於初學者，接下來將使用維度來簡單描述模型的「內容」。透過形狀描述所需的維數，可以瞭解幾何圖形所屬的階層。
 
-![Computational Geometry](../images/5-2/1/GeometryDimensionality.jpg)
+![運算幾何圖形](../images/5-2/1/GeometryDimensionality.jpg)
 
-> 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
-> 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
-> 3. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
-> 4. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
+> 1. **點** (由座標定義) 沒有維度，它只是描述每個座標的數字
+> 2. **直線** (由兩個點定義) 現在具有_一個_維度 - 我們可以沿直線向前 (正方向) 或向後 (負方向)「行走」
+> 3. **平面** (由兩條直線定義) 具有_兩個_維度 - 現在行走的範圍可以更左或更右
+> 4. **方塊** (由兩個平面定義) 具有_三個_維度 - 我們可以相對於上下來定義位置
 
-Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
+開始對幾何圖形分類時，維度是便利的方式，但不一定是最佳方式。畢竟我們不能只用點、直線、平面與方塊來塑型，如果需要彎曲的項目該怎麼辦呢？此外，還存在完全不同的幾何圖形類型品類，這些類型是完全抽象的，例如它們會定義諸如方位、體積或部分之間的關係等性質。我們無法真正擷取向量，那如何相對於我們在空間中看到的項目對其進行定義呢？幾何階層的更詳細分類應考慮到抽象類型或「協助工具」之間的差異，我們可以根據協助行為以及對描述模型元素形狀進行協助的類型來對每種抽象類型或協助工具分組。
 
-![Geometry Hierarchy](../images/5-2/1/GeometryHierarchy.jpg)
+![幾何階層](../images/5-2/1/GeometryHierarchy.jpg)
 
-## Going Further with Geometry
+## 使用幾何圖形更進一步
 
-Creating models in Dynamo is not limited to what we can generate with Nodes. Here are some key ways to take your process to the next level with Geometry:
+在 Dynamo 中建立模型並不限於使用節點可以產生的項目。以下是一些關鍵的方式，您可藉此運用幾何圖形讓程序更上一層樓：
 
-1. Dynamo allows you to import files - try using a CSV for point clouds or SAT for bringing in surfaces
-2. When working with Revit, we can reference Revit elements to use in Dynamo
-3. The Dynamo Package Manager offers additional functionality for extended geometry types and operations - check out the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package
+1. Dynamo 允許您匯入檔案 - 請嘗試對點雲使用 CSV，或使用 SAT 以引入曲面
+2. 使用 Revit 時，可以參考 Dynamo 中將使用的 Revit 元素
+3. Dynamo Package Manager 可對延伸的幾何圖形類型及作業提供其他功能 - 請檢查 [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) 套件

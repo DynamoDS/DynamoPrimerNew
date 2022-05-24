@@ -1,150 +1,150 @@
-# Working with Lists
+# 處理清單
 
-### Working with Lists
+### 使用清單
 
-Now that we've established what a list is, let's talk about operations we can perform on it. Imagine a list as a deck of playing cards. A deck is the list and each playing card represents an item.
+現在我們已建立清單，接下來討論可以對清單執行哪些作業。將清單想像為一副紙牌。這副紙牌是清單，而其中每張紙牌都代表一個項目。
 
-![cards](../images/5-4/2/Playing\_cards\_modified.jpg)
+![紙牌](../images/5-4/2/Playing\_cards\_modified.jpg)
 
-> Photo by [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> 相片由 [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg) 拍攝
 
-### Query
+### 查詢
 
-What **queries** can we make from the list? This accesses existing properties.
+我們可以對清單執行哪些**查詢**？這將存取既有性質。
 
-* Number of cards in the deck? 52.
-* Number of suits? 4.
-* Material? Paper.
-* Length? 3.5" or 89mm.
-* Width? 2.5" or 64mm.
+* 這副紙牌有多少張？52 張。
+* 有幾種花色？4 種。
+* 用哪種材料製成？紙。
+* 長度是多少？3.5" 或 89mm。
+* 寬度是多少？2.5" 或 64mm。
 
-### Action
+### 動作
 
-What **actions** can we perform on the list? This changes the list based on a given operation.
+我們可以對清單執行哪些**動作**？這會根據指定的作業變更清單。
 
-* We can shuffle the deck.
-* We can sort the deck by value.
-* We can sort the deck by suit.
-* We can split the deck.
-* We can partition the deck by dealing out individual hands.
-* We can select a specific card in the deck.
+* 我們可以重新洗牌。
+* 我們可以根據點數對紙牌排序。
+* 我們可以根據花色對紙牌排序。
+* 我們可以拆分紙牌。
+* 我們可以雙手各握一部分紙牌。
+* 我們可以選取其中特定的某張牌。
 
-All of the operations listed above have analogous Dynamo nodes for working with lists of generic data. The lessons below will demonstrate some of the fundamental operations we can perform on lists.
+以上列示的所有作業都有類似的 Dynamo 節點，供您使用一般資料的清單。以下課程將展示我們可以對清單執行的一些基本作業。
 
-## **Exercise**
+## **練習**
 
-### **List Operations**
+### **清單作業**
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/2/List-Operations.dyn" %}
 
-The image below is the base graph which we are drawing lines between two circles to represent basic list operations. We'll explore how to manage data within a list and demonstrate the visual results through the list actions below.
+以下影像是基礎圖表，我們在兩個圓之間繪製線以表示基本清單作業。我們將探究如何管理清單內的資料，並透過以下清單動作示範視覺結果。
 
 ![](<../images/5-4/2/working with list - list operation.jpg>)
 
-> 1. Begin with a **Code Block** with a value of `500;`
-> 2. Plug into the x input of a **Point.ByCoordinates** node.
-> 3. Plug the node from the previous step into the origin input of a **Plane.ByOriginNormal** node.
-> 4. Using a **Circle.ByPlaneRadius** node, plug the node from the previous step into the plane input.
-> 5. Using **Code Block**, designate a value of `50;` for the radius. This is the first circle we'll create.
-> 6. With a **Geometry.Translate** node, move the circle up 100 units in the Z direction.
-> 7. With a **Code Block** node, define a range of ten numbers between 0 and 1 with this line of code: `0..1..#10;`
-> 8. Plug the code block from the previous step into the _param_ input of two **Curve.PointAtParameter** nodes. Plug **Circle.ByPlaneRadius** into the curve input of the top node, and **Geometry.Translate** into the curve input of the node beneath it.
-> 9. Using a **Line.ByStartPointEndPoint**, connect the two **Curve.PointAtParamete**_r_ nodes.
+> 1. 首先使用一個 **Code Block**，值為 `500;`
+> 2. 插入 **Point.ByCoordinates** 節點的 x 輸入。
+> 3. 將上一步驟的節點插入 **Plane.ByOriginNormal** 節點的 origin 輸入。
+> 4. 使用 **Circle.ByPlaneRadius** 節點，將上一步驟的節點插入 plane 輸入。
+> 5. 使用 **Code Block**，為 radius 指定 `50;` 的值。這是我們要建立的第一個圓。
+> 6. 使用 **Geometry.Translate** 節點，在 Z 方向將圓上移 100 個單位。
+> 7. 使用 **Code Block** 節點，透過以下程式碼定義 10 個 0 和 1 之間的數字：`0..1..#10;`
+> 8. 將上一步驟的 Code Block 插入兩個 **Curve.PointAtParameter** 節點的 _param_ 輸入。將 **Circle.ByPlaneRadius** 插入頂部節點的 curve 輸入，將 **Geometry.Translate** 插入下方節點的 curve 輸入。
+> 9. 使用 **Line.ByStartPointEndPoint**，連接兩個 **Curve.PointAtParameter**__ 節點。
 
 ### List.Count
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/2/List-Count.dyn" %}
 
-The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
+_List.Count_ 節點很簡單：它會對清單中的值進行計數，並傳回該數量。使用清單的清單時，此節點將更為精細，不過我們將在後續章節示範該內容。
 
 ![Count](<../images/5-4/2/working with list - list operation - list count.jpg>)
 
-> 1. The **List.Count **_****_ node returns the number of lines in the **Line.ByStartPointEndPoint** node. The value is 10 in this case, which agrees with the number of points created from the original **Code Block** node.
+> 1. **List.Count**_****_ 節點會傳回 **Line.ByStartPointEndPoint** 節點中的線數量。在此案例中，該值為 10，這與從原始 **Code Block** 節點建立的點數一致。
 
 ### List.GetItemAtIndex
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
 
-**List.GetItemAtIndex** is a fundamental way to query an item in the list.
+**List.GetItemAtIndex** 是對清單中的項目進行查詢的基本方式。
 
 ![Exercise](<../images/5-4/2/working with list - get item index 01.jpg>)
 
-> 1. First, Right click on **Line.ByStartPointEndPoint** node to switch off its preview.
-> 2. Using the **List.GetItemAtIndex** node, we are selecting index _"0"_, or the first item in the list of lines.
+> 1. 首先，在 **Line.ByStartPointEndPoint** 節點上按一下右鍵以關閉其預覽。
+> 2. 使用 **List.GetItemAtIndex** 節點，我們將選取索引 _0_ 或線清單中的第一個項目。
 
-Change slider value between 0 and 9 to select different item using **List.GetItemAtIndex**.
+變更介於 0 到 9 之間的滑棒值，以使用 **List.GetItemAtIndex** 選取其他項目。
 
 ![](<../images/5-4/2/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
-_List.Reverse_ reverses the order of all of the items in a list.
+_List.Reverse_ 會反轉清單中所有項目的順序。
 
 ![Exercise](<../images/5-4/2/working with list - list reverse.jpg>)
 
-> 1. To properly visualize the reversed list of lines, create more lines by changing the **Code Block** to `0..1..#50;`
-> 2. Duplicate the **Line.ByStartPointEndPoint** node, insert a List.Reverse node in between **Curve.PointAtParameter** and the second **Line.ByStartPointEndPoint**
-> 3. Use **Watch3D** nodes to preview two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
+> 1. 若要正確顯示反轉的線清單，請將 **Code Block** 變更為 `0..1..#50;` 以建立更多條線
+> 2. 複製 **Line.ByStartPointEndPoint** 節點，在 **Curve.PointAtParameter** 與第二個 **Line.ByStartPointEndPoint** 之間插入 List.Reverse 節點
+> 3. 使用 **Watch3D** 節點可預覽兩個不同的結果。第一個節點顯示無反轉清單的結果。線垂直連接至相鄰的點。但是，反轉清單會以另一個清單中的相反順序連接所有點。
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
 
-**List.ShiftIndices** is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
+**List.ShiftIndices** 是建立扭轉或螺旋樣式或任何其他類似資料處理的良好工具。此節點會將清單中的項目移位指定數量的索引。
 
 ![Exercise](<../images/5-4/2/working with list - shiftIndices 01.jpg>)
 
-> 1. In the same process as the reverse list, insert a **List.ShiftIndices** into the **Curve.PointAtParameter** and **Line.ByStartPointEndPoint**.
-> 2. Using a **Code Block**, designated a value of "1" to shift the list one index.
-> 3. Notice that the change is subtle, but all of the lines in the lower **Watch3D** node have shifted one index when connecting to the other set of points.
+> 1. 採用對反轉清單的相同程序，將 **List.ShiftIndices** 插入 **Curve.PointAtParameter** 與 **Line.ByStartPointEndPoint**。
+> 2. 使用 **Code Block**，指定值「1」將清單移位一個索引。
+> 3. 請注意，變更很小，但下方 **Watch3D** 節點中所有的線在連接至其他組點時已移位一個索引。
 
-By changing to **Code Block** to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
+將 **Code Block** 變更為較大的值 (例如 _30_)，我們發現對角線有顯著不同。在此範例中，此移位的作用類似於相機的光圈，對原始圓柱形產生了扭轉。
 
 ![](<../images/5-4/2/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
 ![](../images/5-4/2/ListFilterBool.png)
 
-**List.FilterByBooleanMask** will remove certain items based on a list of booleans, or values reading "true" or "false".
+**List.FilterByBooleanMask** 將根據一系列布林值或者「True」或「False」值移除某些項目。
 
 ![Exercise](<../images/5-4/2/working with list - filter by bool mask.jpg>)
 
-In order to create a list of values reading "true" or "false", we need to a little more work...
+為了建立一系列「True」或「False」值，我們需要多做一些工作...
 
-> 1. Using a **Code Block**, define an expression with the syntax: `0..List.Count(list);`. Connect the **Curve.PointAtParameter** node to the _list_ input. We'll walk through this setup more in the code block chapter, but the line of code in this case is giving us a list representing each index of the **Curve.PointAtParameter** node.
-> 2. Using a _**%**_** (modulus)** node, connect the output of the _code block_ into the _x_ input, and a value of _4_ into the _y_ input. This will give us the remainder when dividing the list of indices by 4. Modulus is a really helpful node for pattern creation. All values will read as the possible remainders of 4: 0, 1, 2, 3.
-> 3. From the  _**%**_** (modulus)** node, we know that a value of 0 means that the index is divisible by 4 (0,4,8,etc...). By using a **==** node, we can test for the divisibility by testing it against a value of _"0"_.
-> 4. The **Watch** node reveals just this: we have a true/false pattern which reads: _true,false,false,false..._.
-> 5. Using this true/false pattern, connect to the mask input of two **List.FilterByBooleanMask** nodes.
-> 6. Connect the **Curve.PointAtParameter** node into each list input for the **List.FilterByBooleanMask**.
-> 7. The output of **Filter.ByBooleanMask** reads _"in"_ and _"out"_. _"In"_ represents values which had a mask value of _"true"_ while _"out"_ represents values which had a value of _"false"_. By plugging the _"in"_ outputs into the _startPoint_ and _endPoint_ inputs of a **Line.ByStartPointEndPoint** node, we've created a filtered list of lines.
-> 8. The **Watch3D** node reveals that we have fewer lines than points. We've selected only 25% of the nodes by filtering only the true values!
+> 1. 使用 **Code Block**，採用以下語法定義表示式：`0..List.Count(list);`。將 **Curve.PointAtParameter** 節點連接至 _list_ 輸入。我們將在程式碼區塊一章中更詳細地講解此設置，但此案例中的程式碼行將產生代表 **Curve.PointAtParameter** 節點每個索引的清單。
+> 2. 使用_**%**_** (模數) ** 節點，將 _code block_ 的輸出連接至 _x_ 輸入，將值 _4_ 連接至 _y_ 輸入。這會產生索引清單除以 4 時的餘數。模數在建立樣式時是非常有用的節點。4 的所有可能餘數包括：0、1、2、3。
+> 3. 從 _**%**_** (模數)** 節點，我們知道值 0 表示索引可由 4 整除 (0、4、8 等)。使用 **==** 節點，我們可以測試餘數的值是否為 _0_，以測試是否能整除。
+> 4. **Watch** 節點顯示此狀況：True/False 樣式為：_true,false,false,false..._。
+> 5. 使用此 True/False 樣式，連接至兩個 **List.FilterByBooleanMask** 節點的 mask 輸入。
+> 6. 將 **Curve.PointAtParameter** 節點連接至 **List.FilterByBooleanMask** 的每個 list 輸入。
+> 7. **Filter.ByBooleanMask** 的輸出為 _in_ 與 _out_。_in_ 表示遮罩值為 _true_ 的值，而 _out_ 表示遮罩值為 _false_ 的值。透過將 _in_ 輸出插入 **Line.ByStartPointEndPoint** 節點的 _startPoint_ 與 _endPoint_ 輸入，我們建立出經過篩選的線清單。
+> 8. **Watch3D** 節點顯示出線比點少。我們只篩選了 True 值，因此只選取了 25% 的節點。

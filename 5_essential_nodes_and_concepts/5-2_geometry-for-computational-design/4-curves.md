@@ -1,90 +1,89 @@
-# Curves
+# 曲線
 
 ## Curves in Dynamo
 
 ### What is Curve?
 
-[Curves ](5-4\_curves.md#curve)are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvey or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
+[曲線是我們討論的第一種幾何資料類型，具有我們更熟悉的一組形狀描述性質 - 彎曲程度有多大？](5-4\_curves.md#curve) 長度有多大？請記住，點仍是建置區塊，用於定義從直線到雲形線的所有項目以及所有曲線類型。
 
-![Curve Types](../images/5-2/4/CurveTypes.jpg)
+![曲線類型](../images/5-2/4/CurveTypes.jpg)
 
-> 1. Line
-> 2. Polyline
-> 3. Arc
-> 4. Circle
-> 5. Ellipse
-> 6. NURBS Curve
+> 1. 直線
+> 2. 聚合線
+> 3. 弧
+> 4. 圓
+> 5. 橢圓
+> 6. NURBS 曲線
 > 7. Polycurve
 
-### Line
+### 直線
 
-[Line ](5-4\_curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>) to create a Line in Dynamo.
+[](5-4\_curves.md#lines)`Line.ByStartPointEndPoint`![]
 
-![](<./images/5-2/4/curves - line by start point end point.jpg>)
+![](<.
 
-### NURBS Curve
+### NURBS 曲線
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) is a model used for representing curves and surfaces accurately. A sine curve in Dynamo using two different methods to create NURBS Curves to compare the results.
+[](5-4\_curves.md#nurbs-+-polycurves)接下來在 Dynamo 中建立正弦曲線，使用兩種不同方法來建立 NURBS 曲線以比較結果。
 
-![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
+![]
 
-> 1. _NurbsCurve.ByControlPoints_ uses the List of Points as Control Points
-> 2. _NurbsCurve.ByPoints_ draws a Curve through the List of Points
+> 1. _NurbsCurve.ByControlPoints_ 可使用一系列點做為控制點
+> 2. _NurbsCurve.ByPoints_ 可繪製通過一系列點的曲線
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
 ## Deep Dive into...
 
-### Curves
+### 曲線
 
-The term **Curve** is generally a catch-all for all different sort of curved (even if straight) shapes. Capital "C" Curve is the parent categorization for all of those shape types - Lines, Circles, Splines, etc. More technically, a Curve describes every possible Point that can be found by inputting "t" into a collection of functions, which may range from the simple (`x = -1.26*t, y = t`) to functions involving calculus. No matter what kind of Curve we are working with, this **Parameter** called "t" is a property we can evaluate. Furthermore, regardless of the look of the shape, all Curves also have a start point and end point, which coincidentally align with the minimum and maximum t values used to create the Curve. This also helps us understand its directionality.
+術語**曲線**通常是所有不同類型彎曲 (甚至筆直) 造型的統稱。曲線是所有這些造型類型 (直線、圓、雲形線等) 的父系分類。若以更具技術性的語言來表述，曲線描述了在一系列函數 (這些函數包含從諸如 `x = -1.26*t, y = t`x = -1.26*t, y = t 的簡單函數到涉及微積分的複雜函數) 中輸入「t」即可找到的每個可能點。 不論使用何種類型的曲線，稱為「t」的此**參數**都是我們可以演算的性質。此外，不論造型外觀為何，所有曲線都有起點與終點，兩者分別對應於建立曲線所使用的 t 最小值與最大值。這也有助於我們瞭解其定向性。
 
-![Curve Parameter](../images/5-2/4/CurveParameter.jpg)
+![曲線參數](../images/5-2/4/CurveParameter.jpg)
 
-> It's important to note that Dynamo assumes that the domain of "t" values for a Curve is understood to be 0.0 to 1.0.
+> 請務必注意，Dynamo 假設我們都知道曲線「t」值的範圍是 0.0 到 1.0。
 
-All Curves also possess a number of properties or characteristics which can be used to describe or analyze them. When the distance between the start and end points is zero, the curve is "closed." Also, every curve has a number of control-points, if all these points are located in the same plane, the curve is "planar." Some properties apply to the curve as a whole, while others only apply to specific points along the curve. For example, planarity is a global property while a tangent vector at a given t value is a local property.
+所有曲線還具有許多性質或特性，可用於對其進行描述或分析。若起點與終點之間的距離是零，則曲線是「封閉」曲線。此外，每條曲線都有許多控制點，若所有這些點都位於同一平面上，則該曲線是「平面」曲線。有些性質會套用至曲線的整體，而其他性質只會套用至曲線上的特定點。例如，平面性是曲線的整體性質，而指定 t 值處的切線向量是局部性質。
 
-### Lines
+### 直線
 
-**Lines** are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions.
+**直線**是形式最簡單的曲線。直線看上去可能並不彎曲，但實際上屬於曲線，只是沒有曲率而已。可以採用多種不同方式建立直線，最直觀的方式是從點 A 到點 B 繪線。直線 AB 的造型包含兩點之間的點，但在數學上，該直線在兩個方向無限延伸。
 
-![Line](../images/5-2/4/Line.jpg)
+![直線](../images/5-2/4/Line.jpg)
 
-When we connect two Lines together, we have a **Polyline**. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular.
+將兩條直線連接在一起，就產生**聚合線**。在此可以對控制點進行簡易展示。編輯其中任何點的位置都將變更聚合線的造型。若聚合線是封閉的，則會產生多邊形。若多邊形所有邊的長度都相同，則該多邊形是規則多邊形。
 
-![Polyline + Polygon](../images/5-2/4/Polyline.jpg)
+![聚合線 + 多邊形](../images/5-2/4/Polyline.jpg)
 
-### Arcs, Circles, Ellipse Arcs, and Ellipses
+### 弧、圓、橢圓弧與橢圓
 
-As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an **Arc**, **Circle**, **Ellipse Arc**, or **Ellipse** by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed.
+正如我們對定義造型的參數式函數提高複雜度一樣，我們可以在直線的基礎上更進一步，透過描述一或兩個半徑來建立**弧**、**圓**、**橢圓弧**或**橢圓**。弧版本與對應的圓或橢圓之間的差異只在於造型是否封閉。
 
-![Arcs + Circles](../images/5-2/4/Arcs+Circles.jpg)
+![弧 + 圓](../images/5-2/4/Arcs+Circles.jpg)
 
-### NURBS + Polycurves
+### NURBS + Polycurve
 
-**NURBS** (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing.
+**NURBS** (非均勻合理基準雲形線) 是數學表述，可以對從簡單的二維直線、圓、弧或矩形到最複雜的三維自由形式基本曲線的任何造型進行準確塑型。由於具備靈活性 (控制點相對較少，但根據度設定可以平滑內插) 與精確度 (受強大數學功能約束)，因此 NURBS 模型可用於從插圖與動畫到製造的任何程序。
 
-![NURBS Curve](../images/5-2/4/NURBScurve.jpg)
+![NURBS 曲線](../images/5-2/4/NURBScurve.jpg)
 
-**Degree**: The Degree of the Curve determines the range of influence the Control Points have on a Curve; where the higher the degree, the larger the range. The Degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any positive whole number. NURBS lines and polylines are usually Degree 1 and most free-form Curves are Degree 3 or 5.
+**度**：曲線的度會決定控制點對曲線的影響範圍，度越高，範圍越大。度是正整數。該數通常是 1、2、3 或 5，但可以是任意正整數。NURBS 直線與聚合線的度通常為 1，而多數自由曲線的度是 3 或 5。
 
-**Control Points**: The Control Points are a list of at least Degree+1 Points. One of the easiest ways to change the shape of a NURBS Curve is to move its Control Points.
+**控制點**：控制點是至少包含 (度 + 1) 個點的清單最簡單的 NURBS 曲線造型變更方式之一，是移動控制點。
 
-**Weight**: Control Points have an associated number called a Weight. Weights are usually positive numbers. When a Curve’s Control Points all have the same weight (usually 1), the Curve is called non-rational, otherwise the Curve is called rational. Most NURBS curves are non-rational.
+**線粗**：控制點具有稱為權值的關聯數字。權值通常是正數。若曲線控制點具有相同的權值 (通常為 1)，則曲線稱為不合理曲線，否則稱為合理曲線。多數 NURBS 曲線都是不合理曲線。
 
-**Knots**: Knots are a list of (Degree+N-1) numbers, where N is the number of Control Points. The Knots are used together with the weights to control the influence of the Control Points on the resulting Curve. One use for Knots is to create kinks at certain points in the curve.
+**節點**：節點是 (度 + N - 1) 個數字的清單，其中 N 為控制點的數量。節點與權值搭配使用，以控制控制點對結果曲線產生的影響。節點的一項用途是在曲線的特定點處建立扭折。
 
-![NURBS Curve Degree](../images/5-2/4/NURBScurve\_Degree.jpg)
+![NURBS 曲線的度](../images/5-2/4/NURBScurve\_Degree.jpg)
 
-> 1. Degree = 1
-> 2. Degree = 2
-> 3. Degree = 3
+> 1. 度 = 1
+> 2. 度 = 2
+> 3. 度 = 3
 
-{% hint style="info" %}
-Note that the higher the degree value, the more Control Points are used to interpolate the resulting Curve.
-{% endhint %}
+請注意，度值越高，內插產生的曲線所用的控制點就越多。
+

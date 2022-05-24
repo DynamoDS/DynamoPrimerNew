@@ -1,292 +1,291 @@
-# Lists of Lists
+# 清單的清單
 
-### Lists of Lists
+### 清單的清單
 
-Let's add one more tier to the hierarchy. If we take the deck of cards from the original example and create a box which contains multiple decks, the box now represents a list of decks, and each deck represents a list of cards. This is a list of lists. For the analogy in this section, the image below contains a list of coin rolls, and each roll contains a list of pennies.
+接下來在階層中再加入一層。我們以最初範例中的一副紙牌為例，如果製作容納多副紙牌的盒子，那麼現在盒子就代表各副紙牌的清單，而每副紙牌代表紙牌的清單。這是清單的清單。為了說明本節內容，我們進行類比，以下影像包含多疊硬幣，每疊包含多個一美分硬幣。
 
-![Coins](../images/5-4/3/coins-521245\_640.jpg)
+![硬幣](../images/5-4/3/coins-521245\_640.jpg)
 
-> Photo by [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
+> 相片由 [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg) 拍攝。
 
-### Query
+### 查詢
 
-What **queries** can we make from the list of lists? This accesses existing properties.
+我們可以對清單的清單執行哪些**查詢**？這將存取既有性質。
 
-* Number of coin types? 2.
-* Coin type values? $0.01 and $0.25.
-* Material of quarters? 75% copper and 25% nickel.
-* Material of pennies? 97.5% zinc and 2.5% copper.
+* 有幾種硬幣類型？2.
+* 硬幣類型的價值是多少？0.01 美元與 0.25 美元。
+* 25 美分硬幣的材料是什麼？75% 的銅與 25% 的鎳。
+* 一美分硬幣的材料是什麼？97.5% 的鋅與 2.5% 的銅。
 
-### Action
+### 動作
 
-What **actions** can we perform on the list of lists? This changes the list of lists based on a given operation.
+我們可以對清單的清單執行哪些**動作**？這會根據指定的作業變更清單的清單。
 
-* Select a specific stack of quarters or pennies.
-* Select a specific quarter or penny.
-* Rearrange the stacks of quarters and pennies.
-* Shuffle the stacks together.
+* 選取特定的一疊 25 美分硬幣或一美分硬幣。
+* 選取特定的一枚 25 美分硬幣或一美分硬幣。
+* 重新排列各疊 25 美分硬幣與一美分硬幣。
+* 攪亂各疊硬幣。
 
-Again, Dynamo has an analagous node for each one of the operations above. Since we're working with abstract data and not physical objects, we need a set of rules to govern how we move up and down the data hierarchy.
+再說一次，對於上述每項作業，Dynamo 都有類比節點。由於我們使用的是抽象資料，而不是實際物件，因此需要採用一組規則以管理資料階層上下移動的方式。
 
-When dealing with lists of lists, the data is layered and complex, but this provides an opportunity to do some awesome parametric operations. Let's break down the fundamentals and discuss a few more operations in the lessons below.
+處理清單的清單時，資料分層放置且非常複雜，但是您可藉此執行某些良好的參數式作業。在以下課程中，我們將分類講解基礎知識，並討論更多作業。
 
-## Exercise
+## 練習
 
-### Top-Down Hierarchy
+### 由上而下的階層
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
-The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like **List.GetItemAtIndex**, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
+本節將瞭解的基本概念：**Dynamo 將清單視為其本身的物件**。此由上而下的階層在開發時，考慮到以物件為導向的程式設計。Dynamo 並非使用類似於 **List.GetItemAtIndex** 的指令選取子元素，而是選取資料結構中的主要清單索引。項目可以是另一個清單。接下來我們使用範例影像進行分解說明：
 
 ![top-down](<../images/5-4/3/lists of lists - top down hierachy.jpg>)
 
-> 1. With **Code Block**, we've defined two ranges: `0..2; 0..3;`
-> 2. These ranges are connected to a **Point.ByCoordinates** node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
-> 3. Notice that the **Watch** node gives 3 lists with 4 items in each list.
-> 4. When using **List.GetItemAtIndex**, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
+> 1. 我們使用 **Code Block** 定義了兩個範圍：`0..2; 0..3;`
+> 2. 這些範圍連接至 **Point.ByCoordinates** 節點，交織設定為_「笛卡兒積」_。這會建立點的格線，也會傳回清單的清單作為輸出。
+> 3. 請注意，**Watch** 節點可產生 3 個清單，每個清單中包含 4 個項目。
+> 4. 使用 **List.GetItemAtIndex** 時，透過索引 0，Dynamo 會選取第一個清單及其所有內容。其他程式可能會在資料結構中選取每個清單的第一個項目，但 Dynamo 在處理資料時，採用由上而下的階層。
 
 ### List.Flatten
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/3/Flatten.dyn" %}
 
-Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.
+平坦化會移除資料結構中的所有資料層。若您的作業不需要資料階層，這會很有用，但是存在風險，因為它會移除資訊。以下範例將展示對資料清單進行平坦化的結果。
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 01.jpg>)
 
-> 1. Insert one line of code to define a range in **Code Block**: `-250..-150..#4;`
-> 2. Plugging the _code block_ into the _x_ and _y_ input of a **Point.ByCoordinates** node, we set the lacing to _"Cross Product"_ to get a grid of points.
-> 3. The **Watch** node shows that we have a list of lists.
-> 4. A **PolyCurve.ByPoints** node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four polycurves representing each row in the grid.
+> 1. 在 **Code Bock** 中插入一行程式碼以定義範圍：`-250..-150..#4;`
+> 2. 透過將 _Code Block_ 插入 **Point.ByCoordinates** 節點的 _x_ 與 _y_ 輸入，我們將交織設定為_「笛卡兒積」_以取得點的格線。
+> 3. **Watch** 節點顯示我們有一個清單的清單。
+> 4. **PolyCurve.ByPoints** 節點將參考每個清單，並建立各自的 polycurve。請注意，在 Dynamo 預覽中有四個 polycurve，分別代表格線的每一列。
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 02.jpg>)
 
-> 1. By inserting a _flatten_ before the polycurve node, we've created one single list for all of the points. The **PolyCurve.ByPoints** node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.
+> 1. 透過在 polycurve 節點前插入_平坦化_，我們建立了一個所有點的清單。**PolyCurve.ByPoints** 節點會參考清單來建立一條曲線，由於所有點都在一個清單上，因此我們將得到通過整個清單中所有點的一條曲折 polycurve。
 
-There are also options for flattening isolated tiers of data. Using the **List.Flatten** node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in **List.Map**. We'll discuss more about **List.Map** below.
+此外，還提供對隔離層的資料進行平坦化的選項。使用 **List.Flatten** 節點，您可以定義從階層頂部進行平坦化的資料層數量。如果您對運用複雜的資料結構感到吃力，而這些資料結構不一定與您的工作流程相關，則該工具確實非常有用。其他選項會將平坦化節點用作 **List.Map** 中的函數。我們將在下面詳細討論 **List.Map**。
 
-### Chop
+### 細分
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/3/Chop.dyn" %}
 
-When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
+執行參數式塑型時，有時您也會想要對既有清單修改資料結構。有許多節點可用於實現此功能，細分是最基本的版本。使用細分，我們可以將清單分割為包含一定數量項目的子清單。
 
-The chop command divides lists based on a given list length. In some ways, chop is the opposite of flatten: rather than removing data structure, it adds new tiers to it. This is a helpful tool for geometric operations like the example below.
+「細分」指令可根據指定的清單長度分割清單。在某種程度上，細分與平坦化恰恰相反：細分不是移除資料結構，而是在其中加入新層。對於諸如以下範例等幾何圖形作業，此工具很有用。
 
 ![Exercise](<../images/5-4/3/lists of lists - chop.jpg>)
 
 ### List.Map
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/3/Map.dyn" %}
 
-A **List.Map/Combine** applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
+**List.Map/Combine** 會對輸入清單套用一個設定好的函數，但下一階層的清單。組合與對映相同，只是組合可以有多個輸入對應於給定函數的輸入。
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the_ **List.Map** _functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_注意：此練習使用舊版本的 Dynamo 建立。大部分 _**List.Map**_ 功能已透過增加 _**List@Level**_ 功能解決。如需更多資訊，請參閱以下的 _[_List@Level_](6-3\_lists-of-lists.md#listlevel)_。_
 
-As a quick introduction, let's review the **List.Count** node from a previous section.
+我們回顧上一節的 **List.Count** 節點來快速介紹。
 
-The **List.Count** node counts all of the items in a list. We'll use this to demonstrate how **List.Map** works.
+**List.Count** 節點會對清單中的所有項目進行計數。我們將使用此節點示範 **List.Map** 的運作方式。
 
 ![](<../images/5-4/3/lists of lists - map 01.jpg>)
 
-> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
+> 1. 在 **Code Block** 中插入兩行程式碼：`-50..50..#Nx; -50..50..#Ny;`
 >
->     After typing in this code, the code block will create two inputs for Nx and Ny.
-> 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the **Code Block**.
-> 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
-> 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
+>    輸入此程式碼後，Code Block 會建立 Nx 與 Ny 兩個輸入。
+> 2. 使用兩個 _Integer Slider_ 連接至 **Code Block** 以定義 _Nx_ 與 _Ny_ 值。
+> 3. 將 Code Block 每一行分別連接至 **Point.ByCoordinates** 節點的 _X_ 與 _Y_ 輸入。在節點上按一下右鍵，選取「交織」，然後選擇_「笛卡兒積」_。這會建立點的格線。由於我們定義的範圍是從 -50 到 50，因此將跨越預設的 Dynamo 格線。
+> 4. _**Watch**_ 節點會顯示已建立的點。請注意資料結構。我們已建立一個清單的清單。每個清單都代表格線的一列點。
 
 ![Exercise](<../images/5-4/3/lists of lists - map 02 (1).jpg>)
 
-> 1. Attach a **List.Count** node to the output of the watch node from the previous step.
-> 2. Connect a **Watch** node to the **List.Count** output.
+> 1. 將 **List.Count** 節點連接至上一步驟中 Watch 節點的輸出。
+> 2. 將**Watch**節點連接至 **List.Count** 輸出。
 
-Notice that the List.Count node gives a value of 5. This is equal to the "Nx" variable as defined in the code block. Why is this?
+請注意，List.Count 節點提供的值為 5。這等於 Code Block 中定義的「Nx」變數。為何會發生這種情況？
 
-* First, the **Point.ByCoordinates** node uses the "x" input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.
-* Since Dynamo treats lists as objects in and of themselves, a **List.Count** node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.
+* 首先，**Point.ByCoordinates** 節點使用「x」輸入作為建立清單的主要輸入。若 Nx 為 5 且 Ny 為 3，我們會得到一個 5 個清單的清單，每個清單有 3 個項目。
+* 因為 Dynamo 單獨只把清單視為對象，因此 **List.Count** 節點是套用到階層中的主要清單。結果值為 5，即主要清單中的清單數量。
 
 ![Exercise](<../images/5-4/3/lists of lists - map 03.jpg>)
 
-> 1. By using a **List.Map** node, we take a step down in the hierarchy and perform a _"function"_ at this level.
-> 2. Notice that the **List.Count** node has no input. It is being used as a function, so the **List.Count** node will be applied to every individual list one step down in the hierarchy. The blank input of **List.Count** corresponds to the list input of **List.Map**.
-> 3. The results of **List.Count** now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.
+> 1. 使用 **List.Map** 節點，我們進到階層的下一層，並在此層級執行 _function_。
+> 2. 請注意，**List.Count** 節點沒有輸入。它是當作一個函數，因此會將 **List.Count** 節點套用至階層中下一層級的每個清單。**List.Count** 的空白輸入對應於 **List.Map** 的清單輸入。
+> 3. 現在 **List.Count** 的結果提供一個 5 個項目的清單，每個項目的值為 3。這代表每個子清單的長度。
 
 ### **List.Combine**
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能已透過增加 _**List@Level**_ 功能解決。如需更多資訊，請參閱以下的 _[_List@Level_](6-3\_lists-of-lists.md#listlevel)_。_
 
-In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
+在本練習中，我們將使用 **List.Combine** 示範如何對不同物件清單中套用函數。
 
-Start by setting up two lists of points.
+首先設定兩個點清單。
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 01.jpg>)
 
-> 1. Use **Sequence** node to generate 10 values, each with a 10 step increment.
-> 2. Connect the result to the x input of a **Point.ByCoordinates** node. This will create a list of points in Dynamo.
-> 3. Add a second **Point.ByCoordinates** node to the workspace, use the same **Sequence** output as its x input, but use an **Interger Slider** as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.
+> 1. 使用 **Sequence** 節點產生 10 個值，每個值都有 10 個步長增量。
+> 2. 將結果連接至 **Point.ByCoordinates** 節點的 x 輸入。這會在 Dynamo 中建立一個點清單。
+> 3. 在工作區中增加第二個 **Point.ByCoordinates** 節點，使用相同的 **Sequence** 輸出做為其 x 輸入，但使用 **Interger Slider** 做為其 y 輸入，並將其值設定為 31 (可以是任何值，只要不與第一組點重疊即可)，讓兩組點不會彼此重疊。
 
-Next, we will use **List.Combine** to apply a function on objects in 2 separate lists. In this case, it will be a simple draw line function.
+接下來，我們使用 **List.Combine** 對 2 個單獨清單中的物件套用函數。在此範例中，是一個簡單的繪製線條函數。
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 02.jpg>)
 
-> 1. Add **List.Combine** to the workspace and connect the 2 set of points as its list0 & list1 input.
-> 2. Use a **Line.ByStartPointEndPoint** as the input function for **List.Combine**.
+> 1. 在工作區中加入 **List.Combine**，連接 2 組點做為其 list0 與 list1 輸入。
+> 2. 使用 **Line.ByStartPointEndPoint** 做為 **List.Combine** 的輸入函數。
 
-Once completed, the 2 set of points are zipped/paired together through a **Line.ByStartPointEndPoint** function and returning 10 lines in Dynamo.
+完成後，2 組點會透過 **Line.ByStartPointEndPoint** 函數配對，並在 Dynamo 中傳回 10 條線。
 
 {% hint style="info" %}
-Refer to exercise in n-Dimensional Lists to see another example of using List.Combine.
-{% endhint %}
+請參閱 n 維清單中的練習，以查看使用 List.Combine 的另一個範例。{% endhint %}
 
 ### List@Level
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/3/Listatlevel.dyn" %}
 
-Preferred to **List.Map**, the **List@Level** feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
+比 **List.Map** 更好的是，**List@Level** 功能可讓您在節點的輸入埠直接選取要使用的清單層級。此功能可套用至節點的任何輸入，您可藉此較其他方法更快更輕鬆地存取清單的層級。您只需向節點告知要用作輸入的清單層級，節點會執行其餘作業。
 
-In this exercise, we will use the **List@Level** feature to isolate a specific level of data.
+在本練習中，我們將使用 **List@Level** 功能隔離特定層級的資料。
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 01.jpg>)
 
-We will start with a simple 3D grid of points.
+我們將從簡單的 3D 點格線開始。
 
-> 1. The grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.
-> 2. These tiers exist at different **Levels**. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.
-> 3. The list levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
+> 1. 格線是使用 X、Y 與 Z 的範圍建構而成，我們知道資料的結構包含 3 層：X 清單、Y 清單及 Z 清單。
+> 2. 這些層處於不同的**層級**。預覽標示圈底部指出了層級。清單的層級欄對應於上面的清單資料，可協助識別工作所在的層級。
+> 3. 清單層級以反轉順序排列，因此最低層級的資料始終位於「L1」。這有助於確保圖表按計劃工作，即使上游發生變更，也是如此。
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 02.jpg>)
 
-> 1. To use the **List@Level** function, click '>'. Inside this menu, you will see two checkboxes.
-> 2. **Use Levels** - This enables the **List@Level** functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.
-> 3. _Keep list structure_ – If enabled, you will have the option to keep that input’s level structure. Sometimes, you may have purposefully organized your data into sublists. By checking this option, you can keep your list organization intact and not lose any information.
+> 1. 若要使用 **List@Level** 函數，請按一下「>」。在此功能表中，您會看到兩個勾選方塊。
+> 2. **使用層級** - 這會啟用 **List@Level** 功能。按一下此選項後，您就能在當中點按，然後選取希望節點使用的輸入清單層級。透過此功能表，您就能按一下向上或向下，快速試用不同的層級選項。
+> 3. _保留清單結構_ - 如果啟用，您可以選擇保留該輸入的層級結構。有時，您可能會特意將資料組織到子清單中。勾選此選項，可以保持清單組織不變，確保不會遺失任何資訊。
 
-With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each list level and index combination will return a different set of points from our original 3D set.
+使用簡單的 3D 格線，我們可以切換清單層級，以存取與視覺化清單結構。清單層級與索引的每個組合都會從原始的 3D 點集傳回一組不同的點。
 
 ![](<../images/5-4/3/lists of lists - list at level 03.jpg>)
 
-> 1. “@L2” in DesignScript allows us to select only the List at Level 2. The List at Level 2 with the index 0 includes only the first set of Y points, returning only the XZ grid.
-> 2. If we change the Level filter to “L1”, we will be able to see everything in the first List Level. The List at Level 1 with the index 0 includes all of our 3D points in a flat list.
-> 3. If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.
-> 4. If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.
+> 1. 透過 DesignScript 中的「@L2」，我們可以只選取層級 2 的清單。層級 2 的清單 (索引為 0) 只會包括第一組 Y 點，只傳回 XZ 格線。
+> 2. 如果將層級篩選變更為「L1」，我們可以看到第一個清單層級內的所有內容。層級 1 的清單 (索引為 0) 會以一個展開清單包括所有 3D 點。
+> 3. 如果我們嘗試改成「L3」並執行相同作業，只會看到第三個清單層級的點。層級 3 的清單 (索引為 0) 只會包括第一組 Z 點，只傳回 XY 格線。
+> 4. 如果我們嘗試改成「L4」並執行相同作業，只會看到第三個清單層級的點。層級 4 的清單 (索引為 0) 只會包括第一組 X 點，只傳回 YZ 格線。
 
-Although this particular example can also be created with **List.Map**, **List@Level** greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a **List.Map** and **List@Level** methods:
+雖然我們也可以使用 **List.Map** 建立此特定範例，但是 **List@Level** 能夠大幅簡化互動方式，讓存取節點資料更輕鬆。請看下面 **List.Map** 與 **List@Level** 方法的比較：
 
 ![](<../images/5-4/3/lists of lists - list at level 04.jpg>)
 
-> 1. Although both methods will give us access to the same points, the **List@Level** method allows us to easily toggle between layers of data within a single node.
-> 2. To access a point grid with **List.Map**, we will need a **List.GetItemAtIndex** node alongside the **List.Map**. For every list level that we are stepping down, we will need to use an additional **List.Map** node. Depending on the complexity of your lists, this could require you to add a significant amount of **List.Map** Nodes to your graph to access the right level of information.
-> 3. In this example, a **List.GetItemAtIndex** node with a **List.Map** node returns the same set of points with the same list structure as the **List.GetItemAtIndex** with '@L3' selected.
+> 1. 雖然使用兩種方法都可以存取相同的點，但是使用 **List@Level** 方法可以在單一節點內輕鬆切換不同資料層。
+> 2. 若要使用 **List.Map** 存取點格線，我們需要一起使用 **List.GetItemAtIndex** 節點和 **List.Map**。如果我們要下移每個清單層級，都必須額外使用一個 **List.Map** 節點。視清單的複雜性而定，您可能需要在圖表中加入大量 **List.Map** 節點，才能存取適當層級的資訊。
+> 3. 在此範例中，**List.GetItemAtIndex** 節點搭配 **List.Map 節點**，與 **List.GetItemAtIndex** (選取「@L3」) 傳回相同清單結構的相同一組點。
 
-### Transpose
+### 轉置
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/3/Transpose.dyn" %}
 
-Transpose is a fundamental function when dealing with lists of lists. Just as in spreadsheet programs, a transpose flips the columns and rows of a data structure. We'll demonstrate this with a basic matrix below, and in the following section, we'll demonstrate how a transpose can be use to create geometric relationships.
+轉置是處理清單的清單時的基本功能。正如在試算表程式中，轉置會翻轉資料結構的欄與列。我們將使用以下的基本矩陣展示這一點，在之後的一節中，我們將展示如何使用轉置建立幾何關係。
 
-![Transpose](../images/5-4/3/transpose1.jpg)
+![轉置](../images/5-4/3/transpose1.jpg)
 
-Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
+接下來刪除上一個練習中的 **List.Count** 節點，而改用某些幾何圖形以查看資料的構建方式。
 
 ![](<../images/5-4/3/lists of lists - transpose 01.jpg>)
 
-> 1. Connect a **PolyCurve.ByPoints** to the output of the watch node from **Point.ByCoordinates**.
-> 2. The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.
+> 1. 將 **PolyCurve.ByPoints** 從 **Point.ByCoordinates** 連接至 Watch 節點的輸出。
+> 2. 輸出顯示 5 條 PolyCurve，我們可以在 Dynamo 預覽中看到這些曲線。Dynamo 節點將尋找點清單 (在此案例中是點清單的清單)，並根據點清單建立單一 polycurve。實質上，每個清單都已轉換為資料結構中的曲線。
 
 ![](<../images/5-4/3/lists of lists - transpose 02.jpg>)
 
-> 1. A **List.Transpose** node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.
-> 2. Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.
-> 3. Notice the geometric result: using **PolyCurve.ByPoints**, we get 3 polycurves in the perpendicular direction to the original curves.
+> 1. **List.Transpose** 節點會切換所有項目，以及清單的清單中的所有清單。這似乎很複雜，但其邏輯與 Microsoft Excel 中的轉置相同：切換資料結構中的欄與列。
+> 2. 請注意摘要結果：轉置會將清單結構從 5 個清單 (每個含 3 個項目) 變更為 3 個清單 (每個含 5 個項目)。
+> 3. 請注意幾何圖形結果：使用 **PolyCurve.ByPoints**，會在原始曲線的垂直方向產生 3 條 PolyCurve。
 
-## Code Block for List Creation
+## 清單建立的程式碼區塊
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
+程式碼區塊速寫使用「\[]」定義清單。與 **List.Create** 節點相比，這是更快速更流暢的清單建立方式。在[程式碼區塊和 DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)中會更詳細地討論**程式碼區塊**。參考以下影像，請注意使用程式碼區塊如何定義具有多個表示式的清單。
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 01.jpg>)
 
-#### Code Block Query
+#### 程式碼區塊查詢
 
-**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with code block.
+**程式碼區塊**速寫使用「\[]」是一個快速輕鬆的方式，可從複雜的資料結構中選取所需的特定項目。在[程式碼區塊和 DesignScript 一章](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)會更詳細地討論**程式碼區塊**。參考以下影像，請注意使用程式碼區塊如何查詢具有多種資料類型的清單。
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 02.jpg>)
 
-## Exercise - Querying and Inserting Data
+## 練習 - 查詢與插入資料
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-4/3/ReplaceItems.dyn" %}
 
-This exercise uses some of the logic established in the previous one to edit a surface. Our goal here is intuitive, but the data structure navigation will be more involved. We want to articulate a surface by moving a control point.
+此練習將使用上一個練習中建立的一些邏輯以編輯曲面。我們在這裡的目標非常直觀，但資料結構導覽較為複雜。我們要透過移動控制點來連接曲面。
 
-Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.
+先從上述節點的字串開始。我們將建立跨越預設 Dynamo 格線的基本曲面。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 01.jpg>)
 
-> 1. Using **Code Block**, insert these two lines of code and connect to the _u_ and _v_ inputs of **Surface.PointAtParameter**, respectively: `-50..50..#3;` `-50..50..#5;`
-> 2. Be sure to set the Lacing of **Surface.PointAtParameter** to _"Cross Product"_.
-> 3. The **Watch** node show that we have a list of 3 lists, each with 5 items.
+> 1. 使用 **Code Block**，插入這兩行程式碼，然後分別連接到 **Surface.PointAtParameter** 的 _u_ 與 _v_ 輸入：`-50..50..#3;` `-50..50..#5;`
+> 2. 請確保將 **Surface.PointAtParameter** 的「交織」設定為_「笛卡兒積」_。
+> 3. **Watch** 節點顯示我們有一個 3 個清單的清單，每個清單有 5 個項目。
 
-In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
+在這一步，我們要查詢所建立格線內的中心點。為了執行此作業，我們將選取中間清單內的中間點。很合理，對嗎？
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 02.jpg>)
 
-> 1. To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.
-> 2. Using **Code Block**, we'll write a basic line of code for querying a list of lists:\
+> 1. 為了確認這是否為正確的點，也可以在 Watch 節點項目中到處按一下，以確認我們針對的是正確的點。
+> 2. 使用 **Code Block**，我們將編寫一行基本程式碼來查詢清單的清單：\
 >    `points[1][2];`
-> 3. Using **Geometry.Translate**, we'll move the selected point up in the _Z_ direction by _20_ units.
+> 3. 使用 **Geometry.Translate**，我們將選取的點沿 _Z_ 方向上移 _20_ 個單位。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 03.jpg>)
 
-> 1. Let's also select the middle row of points with a **List.GetItemAtIndex** node. Note: Similar to a previous step, we can also query the list with **Code Block**, using a line of `points[1];`
+> 1. 我們也使用 **List.GetItemAtIndex** 節點選取中間列的點。注意：與上一個步驟類似，我們也可以透過 **Code Block**，使用 `points[1];` 這一行查詢清單
 
-So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
+到目前為止，我們已成功查詢到中心點，並將其上移。現在，我們需要將移動的該點重新插入至原始資料結構。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 04.jpg>)
 
-> 1. First, we want to replace the item of the list we isolated in a previous step.
-> 2. Using **List.ReplaceItemAtIndex**, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (**Geometry.Translate**).
-> 3. The output shows that we've input the moved point into the middle item of the list.
+> 1. 首先，我們要更換上一步驟中所隔離清單的項目。
+> 2. 使用 **List.ReplaceItemAtIndex**，我們將運用索引_「2」_，將中間項目更換為連接至移動點的更換項目 (**Geometry.Translate**)。
+> 3. 輸出顯示出我們已將移動點輸入至清單的中間項目。
 
-Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
+現在，我們已修改清單，需要將此清單重新插入至原始資料結構：清單的清單。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 05.jpg>)
 
-> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
-> 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
-> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
+> 1. 採用相同的邏輯，使用 **List.ReplaceItemAtIndex** 將中間清單更換為我們修改後的清單。
+> 2. 請注意，對這兩個節點定義索引的 **Code Block**__ 為 1 與 2，這與 **Code Block** (_points\[1]\[2]_) 中的原始查詢相符。
+> 3. 透過選取位於_索引 1_ 的清單，我們可以在 Dynamo 預覽中看到亮顯的資料結構。我們已成功將移動點合併至原始資料結構中。
 
-There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
+有許多方式可以使用這組點建立曲面。在此案例中，我們將對曲線進行斷面混成，以建立曲面。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 06.jpg>)
 
-> 1. Create a **NurbsCurve.ByPoints** node and connect the new data structure to create three nurbs curves.
+> 1. 建立 **NurbsCurve.ByPoints** 節點，並連接新資料結構以建立三條 nurbs 曲線。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 07.jpg>)
 
-> 1. Connect a **Surface.ByLoft** to the output from **NurbsCurve.ByPoints**. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!
+> 1. 將 **Surface.ByLoft** 連接至 **NurbsCurve.ByPoints** 的輸出。現在我們已修改曲面。我們可以變更幾何圖形的原始 _Z_ 值。平移並查看幾何圖形更新！

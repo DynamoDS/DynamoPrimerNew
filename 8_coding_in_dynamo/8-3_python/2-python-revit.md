@@ -1,8 +1,8 @@
-# Python and Revit
+# Python 和 Revit
 
-### Python and Revit
+### Python 與 Revit
 
-Now that we've demonstrated how to use Python scripts in Dynamo, let's take a look at connecting Revit libraries into the scripting environment. Remember, we imported Python Standard and our Dynamo core nodes with the first four lines in the block of code below. To import the Revit nodes, Revit elements, and the Revit document manager, we only have to add a few more lines:
+現在我們已經演示了如何在 Dynamo 中使用 Python 腳本，接下來瞭解將 Revit 資源庫連接至腳本環境。請記住，我們已匯入 Dynamo 核心節點 (含以下程式碼塊的前三行)。 若要匯入 Revit 節點、Revit 元素及 Revit 文件管理員，我們只需再加入幾行程式碼：
 
 ```
 import sys
@@ -25,35 +25,35 @@ from RevitServices.Persistence import DocumentManager
 import System
 ```
 
-This gives us access to the Revit API and offers custom scripting for any Revit task. By combining the process of visual programming with Revit API scripting, collaboration and tool development improve significantly. For example, a BIM manager and a schematic designer can work together on the same graph. In this collaboration, they can improve design and execution of the model.
+這會提供 Revit API 的存取權，以及適用於 Revit 工作的自訂腳本。透過合併視覺程式設計程序與 Revit API 腳本，將大幅改進協同合作與工具開發。例如，BIM 管理員與線路圖設計者可以針對同一圖表進行合作。透過這種協同合作，他們可以改善模型的設計與執行。
 
-![](<../images/8-3/2/python & revit - 01.jpg>)
+![]
 
-### Platform Specific APIs
+### 平台特定 API
 
-The plan behind the Dynamo Project is to widen the scope of platform implementation. As Dynamo adds more programs to the docket, users will gain access to platform-specific APIs from the Python scripting environment. While Revit is the case study for this section, we can anticipate more chapters in the future which offer comprehensive tutorials on scripting in other platforms. Additionally, there are many [IronPython](http://ironpython.net) libraries accessible now which can be imported into Dynamo!
+Dynamo 專案的潛在宗旨是拓寬平台的實作範圍。隨著 Dynamo 加入更多程式至事項表，使用者可以從 Python 腳本環境存取平台特定 API。雖然在本節中只是對 Revit 進行案例研究，但我們可以預期在將來的更多章節中，會針對在其他平台中編寫腳本提供全面的自學課程。此外，現在還可以存取許多 [IronPython]( 資源庫，可將這些資源庫匯入至 Dynamo！)
 
-The examples below demonstrate ways to implement Revit-specific operations from Dynamo using Python. For a more detailed review on Python's relationship to Dynamo and Revit, refer to the [Dynamo Wiki page](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration). Another useful resource for Python and Revit is the [Revit Python Shell ](https://github.com/architecture-building-systems/revitpythonshell)Project.
+以下範例展示了使用 Python 從 Dynamo 實作 Revit 特定作業的方式。若要更詳細地檢閱 Python 與 Dynamo 及 Revit 之間的關係，請參閱 [Dynamo Wiki 頁面](。) Python 與 Revit 的另一項有用資源是 [Revit Python Shell]( 專案。)
 
-## Exercise 1
+## 練習
 
-> Create a new Revit Project.
+> 建立新的 Revit 專案。
 >
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/8-2/2/Revit-Doc.dyn" %}
 
-In these exercises, we'll explore elementary Python scripts in Dynamo for Revit. The exercise will focus on dealing with Revit files and elements, as well as the communication between Revit and Dynamo.
+在以下練習中，我們將探索 Dynamo for Revit 中的基本 Python 腳本。此練習重點是處理 Revit 檔案及元素，以及 Revit 與 Dynamo 之間的通訊。
 
-This is a cut and dry method for retrieving the _doc_, _uiapp_, and _app_ of the Revit file linked to your Dynamo sesson. Programmers who have worked in the Revit API before may notice the items in the watch list. If these items do not look familiar, that's okay; we'll be using other examples in the exercises below.
+這是對連結至 Dynamo 階段作業的 Revit 檔案擷取 _doc_、_uiapp_ 及 _app_ 的現成方法。先前使用 Revit API 的程式設計人員可能會注意到觀看清單中的項目。如果對這些項目不熟悉，沒有問題，我們會在以下練習中使用其他範例。
 
-Here is how we're importing Revit Services and retrieving the document data in Dynamo.
+以下將講述在 Dynamo 中如何匯入 Revit 服務及擷取文件資料：練習
 
-![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
+![]
 
-Take a look at the Python node in Dynamo. You can also find the code from below:
+看一下 Dynamo 中的 Python 節點。
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -74,43 +74,43 @@ app = uiapp.Application
 OUT = [doc,uiapp,app]
 ```
 
-## Exercise 2
+## 練習
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
 
-In this exercise, we'll make a simple Model Curve in Revit using the Dynamo Python node.
+在本練習中，我們將在 Revit 內使用 Dynamo Python 節點建立簡單的模型曲線。
 
-Begin by creating a new Conceptual Mass family in Revit.
+首先，在 Revit 中建立新的概念量體族群。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
+![]
 
-Open the _Conceptual Mass Folder_ and use the _Metric Mass.rft_ template file.
+____
 
-![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
+![]
 
-In Revit, use the keyboard shortcut **`un`** to bring up the Project Unit settings, change the length unit to meters.
+**`un`**
 
-![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
+![]
 
-Launch Dynamo and create the set of nodes in the image below. We'll first create two reference points in Revit from Dynamo nodes.
+啟動 Dynamo，然後建立以上影像中的一組節點。 我們先在 Revit 中使用 Dynamo 節點建立兩個參考點。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
+![]
 
-> 1. Create a **Code Block** and give it a value of `"0;"`
-> 2. Plug this value into a **ReferencePoint.ByCoordinates** node for X,Y, and Z inputs.
-> 3. Create three sliders, ranging from -100 to 100 with a step size of 1.
-> 4. Connect each slider to a **ReferencePoint.ByCoordinates** node.
-> 5. Add a **Python** node to the workspace, click the "+" button on the node to add another input and plug the two references points into each input. Open the **Python** node.
+> 1. 建立程式碼塊，並為其賦值「0;」。****`"0;"`
+> 2. 將此值插入至 ReferencePoint.ByCoordinates 節點做為 X、Y 與 Z 輸入。****
+> 3. 建立三個滑棒，讓其範圍介於 -100 與 100 之間，且步長大小為 1。
+> 4. 將每個滑棒連接至 ReferencePoint.ByCoordinates 節點。****
+> 5. 加入 Python 節點至工作區，按一下節點上的「+」按鈕以加入另一個輸入，然後將兩個參考點插入至每個輸入。**** 開啟 Python 節點。****
 
-Take a look at the Python node in Dynamo. Find the full code at the below.
+看一下 Dynamo 中的 Python 節點。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
+![]
 
-> 1. **System.Array:** Revit needs a **System Array** as an input (rather than a Python list). This is just one more line of code, but paying attention to argument types will facilitate Python programming in Revit.
+> 1. **System.Array：**Revit 需要系統陣列做為輸入 (而非 Python 清單)。**** 這只是又一行程式碼，但請注意引數類型將為 Revit 中的 Python 程式設計提供便利。
 
 ```
 import sys
@@ -134,36 +134,36 @@ refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
-In Dynamo, we've created two reference points with a line connecting them using Python. Let's take this a little further in the next exercise.
+我們已從 Dynamo 使用 Python 建立直線連接的兩個參考點。 接下來在下一個練習中更進一步。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
+![]
 
-## Exercise 3
+## 練習
 
 > Download the example file by clicking on the link below.
 >
-> A full list of example files can be found in the Appendix.
+> 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-This exercise keeps it simple, but drives home the topics of connecting data and geometry from Revit to Dynamo and back. Let's begin by opening Revit-StructuralFraming.rvt. Once opened, launch Dynamo and open the file Revit-StructuralFraming.dyn.
+此練習仍很簡單，但講述了在 Revit 與 Dynamo 之間連接資料與幾何圖形的主題。我們從開啟 Revit-StructuralFraming.rvt 開始。開啟後，載入 Dynamo，並開啟檔案 Revit-StructuralFraming.dyn。
 
-![](<../images/8-3/2/python & revit - exercise 03 - 01.jpg>)
+![]
 
-This Revit file is about as basic as it gets. Two reference curves: one drawn on Level 1 and the other drawn on Level 2. We want to get these curves into Dynamo and maintain a live link.
+此 Revit 檔案是基本檔案。兩條參考曲線：一條繪製在 Level 1 上，另一條繪製在 Level 2 上。我們要將這些曲線匯入 Dynamo 並保持即時連結。
 
-In this file we have a set of nodes plugging into five inputs of a Python node.
+在此檔案中，我們將一組節點插入至 Python 節點的五個輸入。
 
-![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
+![]
 
-> 1. **Select Model Element Nodes:** Hit the select button for each and select a corresponding curve in Revit.
-> 2. **Code Block:** using the syntax `0..1..#x;`_,_ connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
-> 3. **Structural Framing Types:** We'll choose the default W12x26 beam here from the dropdown menu.
-> 4. **Levels:** select "Level 1".
+> 1. **Select Model Element Nodes：**按一下每個輸入的選取按鈕，然後選取 Revit 中的對應曲線。
+> 2. **Code Block：**使用語法 `0..1..#x;`"0..1..#x;"_，將介於 0 與 20 之間的整數滑棒連接至 _x_ 輸入。_ 此作業會指定將在兩條曲線之間繪製樑的數量。
+> 3. **Structural Framing Types：**在此我們將從下拉式功能表中選擇預設的 W12x26 樑。
+> 4. **Levels：**選取「Level 1」。
 
-This code in Python is a little more dense, but the comments within the code describe what's happening in the process
+此 Python 程式碼稍多一些，但程式碼中的註釋描述了程序的狀況：
 
-![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
+![]
 
 ```
 import clr
@@ -200,23 +200,23 @@ for val in IN[2]:
 	OUT.append(beam.Faces)
 ```
 
-In Revit, we have an array of beams spanning the two curves as structural elements. Note: this isn't a realistic example...the structural elements are used as an example for native Revit instances created from Dynamo.
+在 Revit 中，我們將建立做為結構元素跨越兩條曲線的樑陣列。注意事項：這不是真實範例...結構元素用做從 Dynamo 所建立原生 Revit 例證的範例。
 
-In Dynamo, we can see the results as well. The beams in the **Watch3D** node refer to the geometry queried from the Revit elements.
+在 Dynamo 中也可以看到結果。 Watch3D 節點中的樑是指從 Revit 元素查詢的幾何圖形。****
 
-![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
+![]
 
-Notice that we have a continuous process of translating data from the Revit Environment to the Dynamo Environment. In summary, here's how the process plays out:
+請注意，我們可以採用連續的程序，將資料從 Revit 環境平移至 Dynamo 環境。總之，程序的工作方式如下：
 
-1. Select Revit element
-2. Convert Revit element to Dynamo Curve
-3. Divide Dynamo curve into a series of Dynamo points
-4. Use the Dynamo points between two curves to create Dynamo lines
-5. Create Revit beams by referencing Dynamo lines
-6. Output Dynamo surfaces by querying the geometry of Revit beams
+1. 選取 Revit 元素
+2. 將 Revit 元素轉換為 Dynamo 曲線
+3. 將 Dynamo 曲線分割為一系列 Dynamo 點
+4. 使用兩條曲線之間的 Dynamo 點建立 Dynamo 線
+5. 透過參考 Dynamo 線建立 Revit 樑
+6. 透過查詢 Revit 樑的幾何圖形，輸出 Dynamo 曲面
 
-This may sound a little heavy handed, but the script makes it as simple as editing the curve in Revit and re-running the solver (although you may have to delete the previous beams when doing so). _This is due to the fact that we are placing beams in python, thus breaking the association that OOTB nodes have._
+這聽上去可能有點笨拙，但腳本可讓該作業非常簡單，只需在 Revit 中編輯曲線並重新執行解析器即可 (雖然在執行此作業時，您可能不得不刪除先前的樑)。_這是因為我們是以 Python 放置樑，因此破壞了 OOTB 節點所擁有的關聯。_
 
-With an update to the reference curves in Revit, we get a new array of beams.
+在 Revit 中更新參考曲線後，我們將取得新的樑陣列。
 
-![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
+![]

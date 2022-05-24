@@ -1,62 +1,62 @@
-# Library
+# 資源庫
 
-The Library contains all of the loaded Nodes, including the ten default categories Nodes that come with the installation as well as any additionally loaded Custom Nodes or Packages. The Nodes in the Library are organized hierarchically within libraries, categories, and, where appropriate, subcategories.
+資源庫包含所有載入的節點，其中包括 10 個安裝隨附的預設品類節點，以及已載入的其他所有自訂節點或套件。資源庫中的節點在資源庫、品類和子品類 (如果有) 內以階層方式組織。
 
 ![](<images/3-2/library - library UI.jpg>)
 
-* Basic Nodes: Comes with default installation.
-* Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
-* Nodes from the Package Manager: Collection of published Custom Nodes.
+* 基本節點：預設安裝隨附。
+* 自訂節點：將常用常式或特殊圖表儲存為自訂節點。您也可以與社群共用您的自訂節點
+* 套件管理員中的節點：已發佈自訂節點的集合。
 
-We will go through the [hierarchy of Nodes](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](3-3\_dynamo\_libraries.md#quick-search-in-library) and learn about some of the [frequently used Nodes](3-3\_dynamo\_libraries.md#frequently-used-nodes) among them.
+我們將瀏覽[節點品類的階層](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories)，示範如何[從資源庫快速搜尋](3-3\_dynamo\_libraries.md#quick-search-in-library)，並了解其中某些[常用節點](3-3\_dynamo\_libraries.md#frequently-used-nodes)。
 
-### Library Hierarchy for Categories
+### 品類的資源庫階層
 
-Browsing through these categories is the fastest way to understand the hierarchy of what we can add to our Workspace and the best way to discover new Nodes you haven't used before.
+透過在這些品類中進行瀏覽，能以最快方式瞭解可以加入到工作區的項目所在的階層，並以最佳方式探索尚未使用的新節點。
 
-Browse the Library by clicking through the menus to expand each category and its subcategory
+透過按一下功能表瀏覽資源庫，以展開每個品類及其子品類
 
 {% hint style="info" %}
-Geometry are great menus to begin exploring as they contain the largest quantity of Nodes.
+Geometry 功能表很適合在開始探索時使用，因為它們包含最大數量的節點。
 {% endhint %}
 
 ![](<images/3-2/library  - modified and resize library categories.jpg>)
 
-> 1. Library
-> 2. Category
-> 3. Subcategory
-> 4. Node
+> 1. 資源庫
+> 2. 品類
+> 3. 子品類
+> 4. 節點
 
-These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
+這些項目會根據節點是**建立**資料、執行**動作**或**查詢**資料，進一步分類成有相同子品類的節點。
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/3-2/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
+* ![](<images/3-2/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
+* ![](<images/3-2/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
 
-Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
+將滑鼠懸停在節點上，可顯示名稱和圖示之外更詳細的資訊。我們由此可以快速瞭解節點的功能、所需的輸入及其提供的輸出。
 
 ![](<images/3-2/user interface - node description.jpg>)
 
-> 1. Description - plain language description of the Node
-> 2. Icon - larger version of the icon in the Library Menu
-> 3. Input(s) - name, data type, and data structure
-> 4. Output(s) - data type and structure
+> 1. 描述 - 節點的普通語言描述
+> 2. 圖示 -「資源庫」功能表中更大版本的圖示
+> 3. 輸入 - 名稱、資料類型與資料結構
+> 4. 輸出 - 資料類型與結構
 
-### Quick search in Library
+### 在資源庫中快速搜尋
 
-If you know with relative specificity which Node you want to add to your Workspace, type in the **Search** field to look up all matching Nodes.
+如果您知道希望加入至工作區的節點相關特性，在**「搜尋」**欄位中鍵入可查詢所有相符的節點。
 
-Choose by clicking on the Node you wish to add or hit Enter to add highlighted nodes to the center of the Workspace.
+選擇按一下要加入的節點，或按 Enter 將亮顯的節點加入工作區的中心。
 
 ![](<images/3-2/user interface - search.jpg>)
 
-#### Search by hierarchy
+#### 依階層搜尋
 
-Beyond using keywords to try to find Nodes, we can type the hierarchy separated with a period in the Search Field or with Code Blocks (which use the _Dynamo textual language_).
+除了使用關鍵字嘗試尋找節點，我們還可以在「搜尋欄位」中鍵入以句點分隔的階層，或使用程式碼區塊 (使用 _Dynamo 文字語言_)。
 
-The hierarchy of each library is reflected in the Name of Nodes added to the Workspace.
+每個資源庫的階層都會反映在加入工作區的節點名稱中。
 
-Typing in different portions of the Node's place in the Library hierarchy in the `library.category.nodeName` format returns different results
+在資源庫階層中以 `library.category.nodeName` 格式鍵入節點位置的不同部分，會傳回不同的結果
 
 * `library.category.nodeName`
 
@@ -66,73 +66,73 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 ![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
 
-* `nodeName` or `keyword`
+* `nodeName` 或 `keyword`
 
 ![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
 
-Typically the Name of the Node in the Workspace will be rendered in the `category.nodeName` format, with some notable exceptions particularly in the Input and View Categories.
+通常，工作區中節點的名稱將以 `category.nodeName` 格式呈現，但在「Input」與「View」品類中有一些明顯的例外。
 
-Beware of similarly named Nodes and note the category difference:
+請注意名稱相似的節點，並注意品類差異：
 
-* Nodes from most libraries will include the category format
+* 大多數資源庫中的節點將包括品類格式
 
 ![](<images/3-2/library - node category differences 1.jpg>)
 
-* `Point.ByCoordinates` and `UV.ByCoordinates` have the same Name but come from different categories
+* `Point.ByCoordinates` 和 `UV.ByCoordinates` 的名稱相同，但來自不同品類
 
 ![](<images/3-2/library - node category differences 2.jpg>)
 
-* Notable exceptions include Built-in Functions, Core.Input, Core.View, and Operators
+* 明顯的例外包括內建函數、Core.Input、Core.View 及運算子
 
 ![](<images/3-2/library - node category differences 3.jpg>)
 
-### Frequently Used Nodes
+### 常用的節點
 
-With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our Visual Programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
+Dynamo 的基本安裝中包括數百個節點，哪些節點對於開發視覺程式必不可少？接下來我們著重瞭解定義程式參數 (**Input**)、查看節點動作結果 (**Watch**) 以及透過捷徑 (**Code Block**) 定義輸入或功能所使用的節點。
 
-#### Input Nodes
+#### 輸入節點
 
-Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
+輸入節點是視覺程式的使用者 (不論是您自己還是他人) 與關鍵參數結合的主要方式。以下是核心資源庫中一些可用的項目：
 
-| Node           |                                                | Node           |                                                |
+| 節點 |                                                | 節點 |                                                |
 | -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean        | ![](<images/3-2/library - boolean.jpg>)        | Number         | ![](<images/3-2/library - number.jpg>)         |
-| String         | ![](<images/3-2/library - string.jpg>)         | Number Slider  | ![](<images/3-2/library - number slider.jpg>)  |
+| Boolean | ![](<images/3-2/library - boolean.jpg>) | Number | ![](<images/3-2/library - number.jpg>) |
+| 字串 | ![](<images/3-2/library - string.jpg>) | Number Slider | ![](<images/3-2/library - number slider.jpg>) |
 | Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path      | ![](<images/3-2/library - file path.jpg>)      |                |                                                |
+| File Path | ![](<images/3-2/library - file path.jpg>) |                |                                                |
 
-#### Watch & Watch3D
+#### Watch 與 Watch3D
 
-The Watch Nodes are essential to managing the data that is flowing through your Visual Program. You can view the result of a Node through the **Node data preview** by hovering your mouse over the node.
+Watch 節點對於管理流經視覺程式的資料非常重要。您可以透過**節點資料預覽**，將滑鼠懸停在節點上，來檢視節點的結果。
 
 ![](<images/3-2/library - node preview.jpg>)
 
-It will be useful to keep it revealed in a **Watch** Node
+在 **Watch** 節點中保持顯示將會很有用
 
 ![](<images/3-2/library - watch node.jpg>)
 
-Or see the geometry results through a **Watch3D** Node.
+或透過 **Watch3D** 節點查看幾何圖形結果。
 
 ![](<images/3-2/library - watch3d node.gif>)
 
-Both of these are found in the View Category in the Core Library.
+這兩個節點都位於核心資源庫內的視圖品類中。
 
 {% hint style="info" %}
-Tip: Occasionally the 3D Preview can be distracting when your Visual Program contains a lot of Nodes. Consider unchecking the Showing Background Preview option in the Settings Menu and using a Watch3D Node to preview your geometry.
+秘訣：若視覺程式包含許多節點，3D 預覽有時可能會分散您的注意力。請考慮不勾選「設定」功能表中的「展示背景預覽」選項，並使用 Watch3D 節點以預覽幾何圖形。
 {% endhint %}
 
 #### Code Block
 
-Code Block Nodes can be used to define a block of code with lines separated by semi-colons. This can be as simple as `X/Y`.
+Code Block 節點可以用於定義一塊程式碼 (以分號分隔各行)。這可以像 `X/Y` 一樣簡單。
 
-We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+我們也可以使用 Code Block 做為捷徑，以定義數字輸入或呼叫其他節點的功能。執行此作業的語法遵循 Dynamo 文字語言 [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md) 的命名慣例。
 
-Here is a simple demonstration (with instructions) for using Code Block in your script.
+以下是在指令碼中使用 Code Block 的簡單示範 (含指示)。
 
 ![](<images/3-2/library - code block demo.gif>)
 
-1. Double-click to create a Code Block Node
-2. Type `Circle.ByCenterPointRadius(x,y);`
-3. Click on Workspace to clear the selection should add `x` and `y` inputs automatically.
-4. Create a Point.ByCoordinates Node and a Number Slider then connect them to the inputs of the Code Block.
-5. The result of the executing the Visual Program is shown as the circle in the 3D Preview
+1. 按兩下以建立 Code Block 節點
+2. 鍵入 `Circle.ByCenterPointRadius(x,y);`
+3. 按一下工作區以清除選取，這會自動加入 `x` 和 `y` 輸入。
+4. 建立 Point.ByCoordinates 節點與 Number Slider，然後將其連接至 Code Block 的輸入。
+5. 執行視覺程式的結果如 3D 預覽中顯示為圓

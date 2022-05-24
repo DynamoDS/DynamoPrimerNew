@@ -1,12 +1,12 @@
-# Geometric Primitives
+# 幾何基本型
 
-### CoordinateSystem
+### 座標系統
 
-While Dynamo is capable of creating a variety of complex geometric forms, simple geometric primitives form the backbone of any computational design: either directly expressed in the final designed form, or used as scaffolding off of which more complex geometry is generated.
+雖然 Dynamo 能夠建立各種複雜幾何形狀，但是簡單的幾何基本型是構成任何計算設計的骨架：無論是以最終設計的形式直接表示，或是用來做為產生更複雜幾何圖形的鷹架。
 
-While not strictly a piece of geometry, the CoordinateSystem is an important tool for constructing geometry. A CoordinateSystem object keeps track of both position and geometric transformations such as rotation, sheer, and scaling.
+雖然 CoordinateSystem 嚴格來說不算是一個幾何圖形，但卻是建構幾何圖形的一個重要工具。一個 CoordinateSystem 物件可以同時追蹤位置和幾何的轉換，例如旋轉、切變和調整比例。
 
-Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with no rotations, scaling, or sheering transformations, simply requires calling the Identity constructor:
+建立一個中心點位於 x=0，y=0，z=0 的 CoordinateSystem (沒有旋轉、調整比例或切變轉換)，只需要呼叫 Identity 建構函式：
 
 ![](../images/8-2/2/GeometricPrimitives\_01.png)
 
@@ -17,7 +17,7 @@ Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with n
 cs = CoordinateSystem.Identity();
 ```
 
-CoordinateSystems with geometric transformations are beyond the scope of this chapter, though another constructor allows you to create a coordinate system at a specific point, _CoordinateSystem.ByOriginVectors_:
+具有幾何轉換的 CoordinateSystems 超出本章節的範圍，不過有另一個建構函式 _CoordinateSystem.ByOriginVectors_ 可以讓您在特定的點建立座標系統：
 
 ![](../images/8-2/2/GeometricPrimitives\_02.png)
 
@@ -37,9 +37,9 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 ### Point
 
-The simplest geometric primitive is a Point, representing a zero-dimensional location in three-dimensional space. As mentioned earlier there are several different ways to create a point in a particular coordinate system: _Point.ByCoordinates_ creates a point with specified x, y, and z coordinates; _Point.ByCartesianCoordinates_ creates a point with a specified x, y, and z coordinates in a specific coordinate system; _Point.ByCylindricalCoordinates_ creates a point lying on a cylinder with radius, rotation angle, and height; and _Point.BySphericalCoordinates_ creates a point lying on a sphere with radius and two rotation angle.
+最簡單的幾何基本型是一個點 (Point)，代表三維空間中的一個零維位置。如先前所述，在特定座標系統中建立一個點有幾種不同的方式：_ByCoordinates_ 以指定的 x、y、z 座標建立一個點；_Point.ByCartesianCoordinates_ 在特定座標系統中以指定的 x、y、z 座標建立一個點；_Point.ByCylindricalCoordinates_ 在有半徑、旋轉角度和高度的圓柱上建立一個點；_Point.BySphericalCoordinates_ 在有半徑和兩個旋轉角度的圓球上建立一個點。
 
-This example shows points created at various coordinate systems:
+本範例會顯示在各種座標系統建立的點：
 
 ![](../images/8-2/2/GeometricPrimitives\_03.png)
 
@@ -75,7 +75,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 ### Line&#x20;
 
-The next higher dimensional Dynamo primitive is a line segment, representing an infinite number of points between two end points. Lines can be created by explicitly stating the two boundary points with the constructor _Line.ByStartPointEndPoint_, or by specifying a start point, direction, and length in that direction, _Line.ByStartPointDirectionLength_.
+下一個較高維度的 Dynamo 基本型是直線，代表兩個端點之間有無限數目的點。使用 _Line.ByStartPointEndPoint_ 建構函式明確指出兩個邊界點，或使用 _Line.ByStartPointDirectionLength_ 建構函式指定起點、方向和沿著該方向的長度，可以建立直線。
 
 ![](../images/8-2/2/GeometricPrimitives\_04.png)
 
@@ -94,7 +94,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 ### 3D Primitives - Cuboid, Cone, Cylinder, Sphere, etc
 
-Dynamo has objects representing the most basic types of geometric primitives in three dimensions: Cuboids, created with _Cuboid.ByLengths_; Cones, created with _Cone.ByPointsRadius_ and _Cone.ByPointsRadii_; Cylinders, created with _Cylinder.ByRadiusHeight_; and Spheres, created with _Sphere.ByCenterPointRadius_.
+Dynamo 有幾個物件，代表三維的幾何基本型的最基本類型：使用 _Cuboid.ByLengths_ 建立的立方體 (Cuboid)；使用 _Cone.ByPointsRadius_ 和 _Cone.ByPointsRadii_ 建立的圓錐 (Cone)；使用 _Cylinder.ByRadiusHeight_ 建立的圓柱 (Cylinder)；以及使用 _Sphere.ByCenterPointRadius_ 建立的圓球 (Sphere)。
 
 ![](../images/8-2/2/GeometricPrimitives\_05.png)
 
