@@ -1,35 +1,36 @@
-# Primer User Guide, Dynamo Community & Platform
+# Primer 用户手册、Dynamo 社区和平台
 
 本入门包含由 Mode Lab 开发的章节。这些章节重点介绍使用 Dynamo 开始和运行自己的视觉程序所需的基本技能，以及有关如何进一步使用 Dynamo 的关键信息。&#x20;
 
-### Primer User Guide
+### Primer 用户手册
 
-This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and key concepts can be found in the following sections, we recommend new users to cover the following topics:
+本手册旨在满足不同背景和技能水平的读者的需求。有关 Dynamo 设置、用户界面和关键概念的一般简介位于以下各部分中，建议新用户浏览以下主题：
 
-* [](1-what-is-dynamo.md)
-* [](../2\_setup\_for\_dynamo/)
+* [什么是 Dynamo 以及它是如何工作的？](1-what-is-dynamo.md)
+* [Dynamo 设置](../2\_setup\_for\_dynamo/)
 * [用户界面](../3\_user\_interface/)
-* [](../4\_nodes\_and\_wires/)
+* [节点和导线](../4\_nodes\_and\_wires/)
 
-For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
+对于希望更深入地了解每个元素（例如，特定节点及其背后的概念）的用户，我们会在各自相应章节中介绍基础知识。
 
-* [](../5\_essential\_nodes\_and\_concepts/)
+* [基本节点和概念](../5\_essential\_nodes\_and\_concepts/)
 
-If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
+如果您想要查看 Dynamo 工作流的演示，我们在“示例工作流”部分中包含了一些图形。按照随附的说明创建您自己的 Dynamo 图形。
 
-* [](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
+* [参数化花瓶](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
 ![](<./images/1-2/vase1.gif>)
 
-* [](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
+* [吸引器点](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](<./images/1-2/attractor1.gif>)
 
-****
+{% hint style="info" %}
+我们会介绍有关 Dynamo 的不同主题，因此可以在后面的章节中找到更多特定于主题的练习。**“练习”**通常位于每个页面的最后一部分。{% endhint %}
 
 ### 社区
 
-如果没有众多热衷的用户和积极贡献者，Dynamo 就不能成为现在的样子。通过查看博客、将作品添加到库或在论坛中讨论 Dynamo，来与社区进行交流。[]()[]()
+如果没有众多热衷的用户和积极贡献者，Dynamo 就不能成为现在的样子。通过关注[博客](http://dynamobim.org/blog/)、将作品添加到库或在[论坛](https://forum.dynamobim.com)中讨论 Dynamo，来参与社区交流。
 
 ![The Forum](./images/1-2/02-Community.png)
 

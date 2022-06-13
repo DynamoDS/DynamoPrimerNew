@@ -4,24 +4,24 @@
 
 **“几何图形”**是设计语言。当编程语言或环境的核心有几何图形内核时，我们可以针对以下目标开启各种可能性：设计精确而稳健的模型、自动执行设计例程以及使用算法生成设计迭代。
 
-了解几何图形类型及其之间的关系，将使我们能够浏览库中可用的[“几何图形节点”](1-geometry-overview.md#stepping-through-the-hierarchy)的集合。**** 几何图形节点按字母顺序组织，而不是按层次组织 - 它们在此处的显示类似于其在 Dynamo 界面中的布局。
+了解几何图形类型及[其之间的关系](1-geometry-overview.md#stepping-through-the-hierarchy)，将使我们能够浏览库中可用的**“几何图形节点”**的集合。几何图形节点按字母顺序组织，而不是按层次组织 - 它们在此处的显示类似于其在 Dynamo 界面中的布局。
 
-![]
+![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
 
 此外，随着时间的流逝，在 Dynamo 中制作模型并将在“背景预览”中所看到内容的预览连接到图形中的数据流应会变得更加直观。
 
-![]
+![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
 
 > 1. 请注意，假定坐标系由栅格和彩色轴渲染
 > 2. “选定节点”将在背景中以亮显颜色渲染相应的几何图形（如果节点创建几何图形）
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
 > 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-## The Concept of Geometry
+## 几何图形的概念
 
 传统上定义的几何图形是对形状、大小、图形的相对位置和空间特性的研究。这一领域悠久历史，可以追溯到数千年前。随着计算机的出现和普及，我们在定义、浏览和生成几何图形方面获得了强大的工具。现在，可以非常轻松地计算复杂几何交互的结果；实际上，我们所做的几乎是透明的。
 

@@ -1,88 +1,87 @@
 # 工作空间
 
-### Main Workspace
+### 主工作空间
 
-The Dynamo Workspace consists of four main elements.
+Dynamo 工作空间由四个主要元素组成。
 
-![](<.
+![](<./images/3-1/workspace - ui.jpg>)
 
-> 1. All Active Tabs.
+> 1. 所有活动选项卡。
 > 2. 预览模式
-> 3. Zoom/Pan Controls
-> 4. Node in Workspace
+> 3. 缩放/平移控件
+> 4. 工作空间中的节点
 
-### All Active Tabs
+### 所有活动选项卡
 
-When you open a new file, a new Home Workspace will be opened by default.
+打开新文件时，将默认打开新的主工作空间。
 
-![](<.
+![](<./images/3-1/workspace - home tab.jpg>)
 
-You may create a Custom Node and open it in a Custom Node Workspace.
+可以创建一个自定义节点，然后在自定义节点工作空间中将其打开。
 
-![](<.
+![](<./images/3-1/workspace - custom node tab.jpg>)
 
 {% hint style="info" %}
-Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.
-{% endhint %}
+每个 Dynamo 窗口中仅允许有一个主工作空间，但可能在选项卡中打开多个自定义节点工作空间。{% endhint %}
 
 ### 预览模式
 
-There are 3 methods to switch between different previews:
+有 3 种方法可在不同预览之间切换：
 
-a. Using the top right icons
+a. 使用右上角图标
 
-* ![](<.
-* ![](<.
+* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)图形预览
+* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)三维预览
 
-b. Right-click in Workspace
+b. 在工作空间中单击鼠标右键
 
-* Switch from 3D Preview to Graph Preview
+* 从三维预览切换到图形预览
 
-![](<.
+![](<./images/3-1/3-1-06 right click switch to graph preview.jpg>)
 
-* Switch from Graph Preview to 3D Preview
+* 从图形预览切换到三维预览
 
-![](<.
+![](<./images/3-1/workspace - right click switch to geometry.jpg>)
 
-c. Using keyboard shortcut (Ctrl+B)
+c. 使用键盘快捷键 (Ctrl+B)
 
-### Zoom/Pan Controls
+### 缩放/平移控件
 
-You may use icons or a mouse to navigate in either workspace.
+可以使用图标或鼠标在任一工作空间中导航。
 
-****
+a. 在**“图形预览”**模式下
 
-* Using icons:
-   * ![](<.
-   * ![](<.
-   * ![](<.
-   * ![](<.
-* Using mouse:
-   * Left-click - Select
-   * Left-click and drag - Selection box to select multiple nodes
-   * Middle scroll up/down - Zoom in/out
-   * 单击鼠标中键并拖动以进行平移。
-   * Right-click anywhere on canvas - Open In-Canvas Search
+* 使用图标：
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)缩放以适配
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)放大
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)缩小
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)平移
+* 使用鼠标：
+   * 单击鼠标左键 - 选择
+   * 单击鼠标左键并拖动 - 选择框用于选择多个节点
+   * 鼠标中键向上/向下滚动 - 放大/缩小
+   * 单击鼠标中键并拖动 - 平移
+   * 在画布上的任意位置单击鼠标右键 - 打开画布内搜索
 
-![](<.
+![](<./images/3-1/workspace - in canvas search.gif>)
 
-****
+b. 在**“三维预览”**模式下
 
-* Using icons:
-   * ![](<.
-   * ![](<.
-   * ![](<.
-   * ![](<.
-   * ![](<.
-* Using mouse:
-   * Middle scroll up/down - Zoom in/out
-   * 单击鼠标中键并拖动以进行平移。
-   * 单击鼠标右键并拖动
+* 使用图标：
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)缩放以适配
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)放大
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)缩小
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)平移
+   * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)动态观察
+* 使用鼠标：
+   * 鼠标中键向上/向下滚动 - 放大/缩小
+   * 单击鼠标中键并拖动 - 平移
+   * 单击鼠标右键并拖动 - 动态观察
 
-### Node in Workspace
+### 工作空间中的节点
 
-Left-click to select any Node.
+单击鼠标左键以选择任意节点。
 
-To select multiple Nodes, Click and drag to create a selection box.
+要选择多个节点，请单击并拖动以创建选择框。
 
-![](<.
+![](<./images/3-1/workspace - selection box.gif>)

@@ -1,20 +1,20 @@
-# Setup Your Own Python Template
+# 设置自己的 Python 模板
 
-使用 Dynamo 2.0，我们可以指定在首次打开 Python 窗口时要使用的默认模板`(.py extension)`（.py 扩展名）。 这是一个渴望已久的请求，因为这可加快 Dynamo 内 Python 的使用。通过使用模板，我们可以在计划开发自定义 Python 脚本时准备好默认导入。
+使用 Dynamo 2.0，我们可以指定在首次打开 Python 窗口时要使用的默认模板 `(.py extension)`。这是一个渴望已久的请求，因为这可加快 Dynamo 内 Python 的使用。通过使用模板，我们可以在计划开发自定义 Python 脚本时准备好默认导入。
 
-此模板的位置位于 Dynamo 安装的 `APPDATA`APPDATA 位置。
+此模板的位置位于 Dynamo 安装的 `APPDATA` 位置。
 
-`( %appdata%\Dynamo\Dynamo Core\{version}\ )`
+这通常如下所示：`( %appdata%\Dynamo\Dynamo Core\{version}\ )`。
 
-![]
+![](<../images/8-3/3/python templates - appdata folder location.jpg>)
 
 ### 设置模板
 
-为了利用此功能，我们需要在 `DynamoSettings.xml`DynamoSettings.xml 文件中添加以下行。 _（在记事本中编辑）_
+为了利用此功能，我们需要在 `DynamoSettings.xml` 文件中添加以下行。_（在记事本中编辑）_
 
-![]
+![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
 
-在我们看到 `<PythonTemplateFilePath />`&lt;PythonTemplateFilePath /> 的位置，只需用以下内容替换它：
+在我们看到 `<PythonTemplateFilePath />` 的位置，只需将这一路径替换为以下内容：
 
 ```
 <PythonTemplateFilePath>
@@ -22,7 +22,9 @@
 </PythonTemplateFilePath>
 ```
 
-__
+{% hint style="warning" %}
+_注意：将 CURRENTUSER 替换为您的用户名_
+{% endhint %}
 
 接下来，我们需要使用要内置的功能构建模板。在本例中，我们在使用 Revit 时嵌入 Revit 相关的导入和一些其他典型项目。
 
@@ -65,16 +67,16 @@ TransactionManager.Instance.TransactionTaskDone()
 OUT = element
 ```
 
-完成后，将此文件另存为 `PythonTemplate.py`PythonTemplate.py`APPDATA`，并保存在 APPDATA 位置。
+完成后，将此文件在 `APPDATA` 位置中另存为 `PythonTemplate.py`。
 
 ### Python 脚本行为
 
-定义了 Python 模板后，在每次放置 Python 节点时，Dynamo 都会查找该模板。 如果找不到，它将看起来像默认的 Python 窗口。
+完成定义 Python 模板后，每次放置 Python 节点时，Dynamo 都会查找该模板。如果找不到，它将看起来像默认的 Python 窗口。
 
-![]
+![](<../images/8-3/3/python templates - before setup template.jpg>)
 
 如果找到 Python 模板（如我们的 Revit 模板），将看到您内置的所有默认项目。
 
-![]
+![](<../images/8-3/3/python templates - after setup template.jpg>)
 
 有关此出色附加功能（由 Radu Gidei 提供）的其他信息可以在此处找到。https://github.com/DynamoDS/Dynamo/pull/8122

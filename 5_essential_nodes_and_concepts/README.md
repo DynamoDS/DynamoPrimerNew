@@ -1,8 +1,8 @@
-# Essential Nodes & Concepts
+# 基本节点和概念
 
-In this section, we introduce the essential Nodes available in the Dynamo Library that will help you create your own visual program like a pro.
+在本节中，我们将介绍 Dynamo 库中提供的基本节点，这些节点将帮助您像专业人员一样创建自己的可视化程序。
 
-* [用于设计的几何体](5-2\_geometry-for-computational-design/) - 如何在 Dynamo 中使用几何元素？
-* [构建块](5-3\_the-building-blocks-of-programs/) -“数据”是什么，我可以在程序中开始使用哪些基本类型？
-* [列表、列表、列表](5-4\_designing-with-lists/) - 如何管理和协调数据结构？
-* [](5-5\_dictionaries-in-dynamo/)
+* [用于计算设计的几何图形](5-2\_geometry-for-computational-design/)：如何在 Dynamo 中使用几何图元？探索基于基本体创建简单或复杂几何体的多种方法。
+* [程序的构建块](5-3\_the-building-blocks-of-programs/)：“数据”是什么，我可以在程序中开始使用哪些基本类型？此外，还要了解有关在设计工作流中结合数学和逻辑运算的更多信息。
+* [使用列表进行设计](5-4\_designing-with-lists/)：如何管理和协调数据结构？详细了解“列表”的概念，并使用它来高效管理设计数据。
+* [Dynamo 中的词典](5-5\_dictionaries-in-dynamo/)：什么是词典？了解如何使用词典查找现有结果中的特定数据和值。

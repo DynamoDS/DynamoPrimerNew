@@ -34,7 +34,7 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
     phi);
 ```
 
-### 点到直线
+### 从点到线
 
 点可用于构造更大尺寸的几何体（例如直线）。我们可以使用 _ByStartPointEndPoint_ 构造函数在两点之间创建“直线”对象：
 
@@ -49,7 +49,7 @@ p2 = Point.ByCoordinates(-15, 7, 0.5);
 l = Line.ByStartPointEndPoint(p1, p2);
 ```
 
-### From Line to Surface
+### 从线到曲面
 
 同样，直线可用于创建更多维的曲面几何体，例如使用_“放样”_构造函数，该构造函数可获取一系列直线或曲线，并在它们之间内插曲面。
 
@@ -75,7 +75,7 @@ l3 = Line.ByStartPointEndPoint(p5, p6);
 surf = Surface.ByLoft([l1, l2, l3]);
 ```
 
-### From Surface to Solid
+### 从曲面到实体
 
 曲面也可用于创建更多维的实体几何体，例如通过按指定距离加厚曲面。许多对象都附加了函数（称为方法），程序员可以对该特定对象执行命令。所有几何体通用的方法包括_“平移”_和_“旋转”_，分别按指定的量平移（移动）和旋转几何体。曲面具有_“加厚”_方法，该方法采用单个输入，即指定曲面的新厚度的数字。
 

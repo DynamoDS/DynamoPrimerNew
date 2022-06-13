@@ -1,6 +1,6 @@
 # 关于
 
-## For Dynamo v2.13
+## 对于 Dynamo v2.13
 
 ![Dynamo 徽标](images/dynamo\_logo\_dark-trim.jpg)
 
@@ -19,7 +19,7 @@ Dynamo 的强大功能可在多种与设计相关的活动中找到。Dynamo 带
 
 在此活动中以及使用 Dynamo 的令人兴奋的机会中，我们需要一个具有相同水准的文档 - Dynamo Primer。
 
-[](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)
+请参见 [Primer 用户手册](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)，以了解您可通过本 Primer 学到的内容。
 
 ### 开源
 
@@ -29,7 +29,7 @@ Dynamo Primer 项目是开源的！我们致力于提供高质量内容，并感
 
 ### Dynamo Primer 项目
 
-Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开发团队启动。
+Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开发团队发起。
 
 已委派 **Mode Lab** 编写本入门的第一版。我们感谢他们在建立这些宝贵资源方面付出的努力。
 
@@ -43,7 +43,7 @@ Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开
 
 ***
 
-****
+**Matterlab** 受委托更新 Primer，以反映 Dynamo 2.13. 修订版。
 
 ![](<images/matterlab\_final-07.jpg>)
 
@@ -55,11 +55,11 @@ Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开
 
 ### 软件和资源
 
-**Dynamo** Dynamo 的当前稳定*版本为 2.1.0 版
+**Dynamo** Dynamo 的当前稳定\*版本为 2.1.0 版
 
 http://dynamobim.com/download/ 或 http://dynamobuilds.com
 
-*注意：从 Revit 2020 开始，Dynamo 与 Revit 版本捆绑在一起，无需手动安装。 有关详细信息，请访问此[博客帖子](https://dynamobim.org/dynamo-core-2-1-release/)。
+*注意：从 Revit 2020 开始，Dynamo 与 Revit 版本捆绑在一起，因此无需手动安装。有关详细信息，请访问此[博客帖子](https://dynamobim.org/dynamo-core-2-1-release/)。
 
 **DynamoBIM** 获取其他信息、学习内容和论坛的最佳来源是 DynamoBIM 网站。
 
@@ -75,7 +75,7 @@ Dynamo@autodesk.com
 
 ### 许可
 
-Copyright 2019 Autodesk
+Copyright 2022 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

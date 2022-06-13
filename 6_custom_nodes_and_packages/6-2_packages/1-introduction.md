@@ -2,9 +2,9 @@
 
 简而言之，软件包是自定义节点集。Dynamo Package Manager 是一个社区门户，可以下载已在线发布的任何软件包。这些工具集由第三方开发，以扩展 Dynamo 的核心功能，可供所有人访问，并可以通过单击相应按钮进行下载。
 
-![](../images/6-2/1/dpm.jpg)
+![Package Manager 站点](../images/6-2/1/dpm.jpg)
 
-诸如 Dynamo 之类的开源项目通过此类社区参与有了蓬勃发展。借助专门的第三方开发人员，Dynamo 能够将其应用范围扩展到各行各业的工作流。 因此，Dynamo 团队已共同努力来简化软件包的开发和发布（将在以下各节中详细讨论）。
+诸如 Dynamo 之类的开源项目通过此类社区参与有了蓬勃发展。借助专门的第三方开发人员，Dynamo 能够将其应用范围扩展到各行各业的工作流。因此，Dynamo 团队已共同努力来简化软件包的开发和发布（将在以下各节中详细讨论）。
 
 ### 安装软件包
 
@@ -12,47 +12,47 @@
 
 在 Dynamo 中，转到_“软件包”>“搜索软件包...”_
 
-![]
+![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
 
 在搜索栏中，我们搜索“quads from rectangular grid”。片刻之后，您应该会看到与此搜索查询匹配的所有软件包。我们想要选择具有匹配名称的第一个软件包。
 
-完成！
+单击“安装”以将此软件包添加到库中。完成！
 
-![]
+![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
 
 请注意，现在 Dynamo 库中有另一个名为“buildz”的组。 该名称指代软件包的开发人员，并且自定义节点将放置在此组中。 我们可以立即开始使用此组。
 
-![]
+![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
 
-************
+使用**“代码块”**以快速定义矩形栅格、将结果输出到**“Polygon.ByPoints”**节点，然后输出到**“Surface.ByPatch”**节点以查看刚创建的矩形面板列表。
 
-![]
+![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
 
-### Installing Package Folder - DynamoUnfold
+### 安装软件包文件夹 - DynamoUnfold
 
 上述示例重点介绍内含一个自定义节点的软件包，但相同过程可用于下载内含多个自定义节点的软件包以及支持数据文件。现在，我们通过一个更全面的软件包来进行演示：Dynamo Unfold。
 
 如上例中所示，首先依次选择_“软件包”>“搜索软件包...”_。
 
-这次，我们搜索_“DynamoUnfold”_（一个字词，注意大写）。
+这次，我们搜索_“DynamoUnfold”_（一个字词，注意大写）。当我们看到软件包时，请通过单击“安装”下载，以将“Dynamo Unfold”添加到 Dynamo 库中。
 
-![]
+![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
 
 在 Dynamo 库中，我们有一个 _DynamoUnfold_ 组，其中包含多个类别和自定义节点。
 
-![]
+![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
 
-现在，我们来看一下软件包的文件结构。
+现在，我们来看一下软件包的文件结构。首先，选择“Dynamo”>“首选项”
 
-![]
+![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
 
-![]
+在“首选项”弹出窗口中，打开“Package Manager”> 在“DynamoUnfold”旁边，选择垂直点菜单 ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) >“显示根目录”以打开此软件包的根文件夹。
 
-![]
+![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
 
 这会转到该软件包的根目录。请注意，我们有 3 个文件夹和一个文件。
 
-![]
+![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
 
 > 1. _bin_ 文件夹中存储了 .dll 文件。此 Dynamo 软件包使用 Zero-Touch 开发，因此自定义节点保存在此文件夹中。
 > 2. _dyf_ 文件夹中存储了自定义节点。此软件包不是使用 Dynamo 自定义节点开发的，因此此软件包的该文件夹为空。
@@ -67,11 +67,11 @@
 
 在打开该文件并点击求解器上的“运行”后，我们会得到一个展开的球体！ 此类示例文件有助于了解如何使用新的 Dynamo 软件包。
 
-![]
+![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
 
 ### Dynamo Package Manager
 
-了解 Dynamo 软件包的另一种方法是在线浏览 [Dynamo Package Manager](。) 这是浏览软件包的好方法，因为存储库会按照下载数量和受欢迎程度对软件包进行排序。此外，它也是一种用于收集有关最新软件包更新信息的简便方法，因为某些 Dynamo 软件包受 Dynamo 各内部版本的版本控制和依存关系的制约。
+发现 Dynamo 软件包的另一种方法是在线浏览 [Dynamo Package Manager](http://dynamopackages.com)。这是浏览软件包的好方法，因为存储库会按照下载数量和受欢迎程度对软件包进行排序。此外，它也是一种用于收集有关最新软件包更新信息的简便方法，因为某些 Dynamo 软件包受 Dynamo 各内部版本的版本控制和依存关系的制约。
 
 通过在 Dynamo Package Manager 中单击_“Quads from Rectangular Grid”_，即可查看其描述、版本、开发人员以及可能的依存关系。
 
@@ -79,13 +79,13 @@
 
 还可以从 Dynamo Package Manager 下载软件包文件，但直接在 Dynamo 中进行下载是一个更无缝的过程。
 
-### 文件本地存储在何处？
+### 软件包文件存储在本地何处？
 
-If you do download files from the Dynamo package manager, or if you would like to see where all of your package files are kept, click on Dynamo > Package Manager > Node and Package Paths, you can find your current root folder directory from here.
+如果确实要从 Dynamo 软件包管理器下载文件，或者要查看所有软件包文件的保存位置，请依次单击“Dynamo”>“Package Manager”>“节点和软件包路径”，可以从此处找到当前根文件夹目录。
 
-![]
+![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
 
-默认情况下，软件包安装在与以下文件夹路径类似的位置：_C:/Users/[用户名]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
+默认情况下，软件包安装在与以下文件夹路径类似的位置：_C:/Users/\[用户名]/AppData/Roaming/Dynamo/\[Dynamo 版本]_。
 
 ### 进一步了解软件包
 

@@ -73,7 +73,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Line&#x20;
+### 线
 
 下一个更多维的 Dynamo 基本体是一条线段，表示两个端点之间的无限多个点。可以通过构造函数 _Line.ByStartPointEndPoint_ 明确指定两个边界点，或者通过 _Line.ByStartPointDirectionLength_ 在该方向指定起点、方向和长度来创建直线。
 
@@ -92,7 +92,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### 3D Primitives - Cuboid, Cone, Cylinder, Sphere, etc
+### 三维基本体 - 立方体、圆锥体、圆柱体、球体等
 
 Dynamo 有表示三维中大多数基本类型的几何基本体的对象：立方体，使用 _Cuboid.ByLengths_ 创建；圆锥体，使用 _Cone.ByPointsRadius_ 和 _Cone.ByPointsRadius_ 创建；圆柱体，使用 _Cylinder.ByRadiusHeight_ 创建；球体，使用 _Sphere.ByCenterPointRadius_ 创建。
 

@@ -12,9 +12,9 @@
 
 ## 练习
 
-### Part I: Setting Panels Aperture Ratio Based on Deviation From Plane Node
+### 第 I 部分：基于平面节点偏差设置嵌板孔径比
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
 > 可以在附录中找到示例文件的完整列表。
 
@@ -22,12 +22,12 @@
 
 从本部分的 Revit 文件开始（或从上一节继续）。此文件中具有屋顶上 ETFE 嵌板的阵列。在本练习中，我们将参照这些嵌板。
 
-![](<.
+![](<./images/6/documenting - exercise I - 01.jpg>)
 
 > 1. 向画布添加_“族类型”_节点，然后选择_“ROOF-PANEL-4PT”_。
 > 2. 将此节点连接到“选择_族类型的所有图元_”节点，以将所有图元从 Revit 输入到 Dynamo。
 
-![](<.
+![](<./images/6/documenting - exercise I - 02.jpg>)
 
 > 1. 使用 _AdaptiveComponent.Locations_ 节点查询每个图元的自适应点位置。
 > 2. 使用 _Polygon.ByPoints_ 节点基于这四个点创建多边形。请注意，我们现在在 Dynamo 中拥有镶板系统的抽象版本，无需输入 Revit 图元的完整几何图形。
@@ -35,14 +35,14 @@
 
 接下来，与上一练习一样，我们会根据每个嵌板的平面偏差设置其 Aperture Ratio。
 
-![](<.
+![](<./images/6/documenting - exercise I - 03.jpg>)
 
-> 1. 将 _Element.SetParameterByName_ 节点添加到画布，然后将自适应构件连接到 _element_ 输入。将读取_“Aperture Ratio”_的_代码块_连接到 _parameterName_ 输入。
+> 1. 将 _Element.SetParameterByName_ 节点添加到画布，然后将自适应构件连接到 _element_ 输入。将读取_“Aperture Ratio”_的_“代码块”_连接到_“parameterName”_输入。
 > 2. 我们无法直接将偏差结果连接到值输入，因为我们需要将这些值重新映射到参数范围。
 
-![](<.
+![](<./images/6/documenting - exercise I - 04.jpg>)
 
-> 1. 使用 _Math.RemapRange_，将偏差值重新映射到介于 .15 和 .45 之间的域。`0.15; 0.45;`__
+> 1. 使用_“Math.RemapRange”_，将偏差值重新映射到介于 .15 和 .45 之间的域，方法是在_“代码块”_中输入 `0.15; 0.45;`。
 > 2. 将这些结果连接到 _Element.SetParameterByName_ 的值输入。
 
 返回 Revit，我们可以_稍微_了解表面上孔径的变化。
@@ -53,19 +53,19 @@
 
 ![练习](./images/6/13a.jpg)
 
-### Part II: Color and Documentation
+### 第 II 部分：颜色和文档
 
 设置“Aperture Ratio”并不能清楚地显示屋顶上嵌板的偏差，而且我们还要修改实际图元的几何图形。假定我们只想研究制造可行性的偏差。根据我们文档的偏差范围对嵌板进行着色会很有帮助。我们可以通过以下一系列步骤实现，并且流程与上述步骤非常相似。
 
-![](<.
+![](<./images/6/documenting - exercise II - 01.jpg>)
 
-> 1. ____
+> 1. 删除_“Element.SetParameterByName”_及其输入节点，然后添加_“Element.OverrideColorInView”_。
 > 2. 将 _Color Range_ 节点添加到画布，然后连接到 _Element.OverrideColorInView_ 的颜色输入。为了创建渐变，我们仍需将偏差值连接到颜色范围。
 > 3. 将光标悬停在 _value_ 输入上，我们可以看到输入值必须介于 _0_ 和 _1_ 之间，以便将颜色映射到每个值。我们需要将偏差值重新映射到此范围。
 
-![](<.
+![](<./images/6/documenting - exercise II - 02.jpg>)
 
-> 1. 使用 _Math.RemapRange_，将平面偏差值重新映射到介于 _0_ 和 _1_ 之间的范围（注意：也可以使用“MapTo”节点定义源域）。
+> 1. 使用_“Math.RemapRange”_，将平面偏差值重新映射到介于 \*0\* 和 _1_ 之间的范围（注意：也可以使用_“MapTo”_节点定义源域）。
 > 2. 将结果连接到 _Color Range_ 节点。
 > 3. 请注意，我们的输出是颜色范围，而不是数字范围。
 > 4. 如果设置为“手动”，请单击_“运行”_。此时，应该能够无需再设置为“自动”。
@@ -74,52 +74,52 @@
 
 ![](./images/6/09.jpg)
 
-![](<.
+![](<./images/6/documenting - exercise II - 04.jpg>)
 
-> 1. 使用_代码块_，在两个不同代码行上添加两个数字：`0;`0;`255;` 和 255;。
+> 1. 使用_“代码块”_，在两个不同代码行上添加两个数字：`0;` 和 `255;`。
 > 2. 通过将相应值连接到两个 _Color.ByARGB_ 节点，即可创建红色和蓝色。
 > 3. 以这两种颜色创建列表。
 > 4. 将此列表连接到 _Color Range_ 的 _colors_ 输入，然后观察自定义颜色范围更新。
 
 返回 Revit，我们现在可以更好地了解角点处最大偏差的区域。请记住，此节点用于替代视图中的颜色，因此如果我们在专注于特定分析类型的工程图集中有特定图纸，这将非常有用。
 
-![Exercise](<.
+![Exercise](<./images/6/07 (6).jpg>)
 
-### Part III: Scheduling
+### 第 III 部分：明细表
 
 在 Revit 中选择一个 ETFE 嵌板，我们会看到有四个实例参数：XYZ1、XYZ2、XYZ3 和 XYZ4。 创建这些参数后，它们的内容都为空。这些是基于文字的参数，都需要值。我们会使用 Dynamo 将自适应点位置写入每个参数。如果需要将几何图形发送给外立面顾问工程师，这有助于实现互操作性。
 
-![](<.
+![](<./images/6/documenting - exercise III - 01.jpg>)
 
 在样例图纸中，我们有一个大的空明细表。XYZ 参数是 Revit 文件中的共享参数，这样我们便可将它们添加到明细表中。
 
-![Exercise](<.
+![Exercise](<./images/6/03 (8).jpg>)
 
 放大后，XYZ 参数尚未填充。前两个参数由 Revit 处理。
 
-![Exercise](<.
+![Exercise](<./images/6/02 (9).jpg>)
 
 要写入这些值，我们将执行复杂的列表操作。该图本身很简单，但是这些概念在列表一章中讨论的列表映射的基础上进行了大量构建。
 
-![](<.
+![](<./images/6/documenting - exercise III - 04.jpg>)
 
 > 1. 选择具有两个节点的所有自适应构件。
 > 2. 使用 _AdaptiveComponent.Locations_ 提取每个点的位置。
 > 3. 将这些点转换为字符串。请记住，参数基于文字，因此我们需要输入正确的数据类型。
 > 4. 创建四个字符串列表，该列表定义要更改的参数：_XYZ1、XYZ2、XYZ3_ 和 _XYZ4_。
 > 5. 将此列表连接到 _Element.SetParameterByName_ 的 _parameterName_ 输入。
-> 6. 将 _Element.SetParameterByName_ 连接到 _List.Combine 的 _combinator_ 输入。_ 将自适应构件_连接到 _list1_。_ 将 Object 的 _String_ 连接到 _list2_。
+> 6. 将 _Element.SetParameterByName_ 连接到 _List.Combine 的 _combinator_ 输入。_ 将_自适应构件_连接到_“list1”_。将 Object 的 _String_ 连接到 _list2_。
 
-我们在此处进行列表映射，因为我们要为每个元素编写四个值，从而创建一个复杂的数据结构。_List.Combine_ 节点在数据层次结构中定义一个向下步骤的操作。这就是元素和值输入保留为空的原因。__ _List.Combine_ 将根据其连接顺序将其输入的子列表连接到 _List.SetParameterByName_ 的空输入。
+我们在此处进行列表映射，因为我们要为每个元素编写四个值，从而创建一个复杂的数据结构。_List.Combine_ 节点在数据层次结构中定义一个向下步骤的操作。这就是_“Element.SetParameterByName”_的图元和值输入保留为空的原因。根据_“Element.SetParameterByName”_的空输入的连接顺序，_“List.Combine”_将其输入的子列表连接到这些空输入。
 
 在 Revit 中选择一个嵌板后，现在会看到每个参数都有字符串值。实际上，我们将创建更简单的格式来写入点 (X,Y,Z)。这可以在 Dynamo 中使用字符串操作完成，但是我们会绕过此处以停留在本章的范围内。
 
-![](<.
+![](<./images/6/04 (5).jpg>)
 
 样例明细表的视图，其中已填充参数。
 
-![](<.
+![](<./images/6/01 (9).jpg>)
 
 现在，每个 ETFE 嵌板都为每个自适应点写入了 XYZ 坐标，从而表示每个嵌板的角点以进行预制。
 
-![Exercise](<.
+![Exercise](<./images/6/00 (8).jpg>)

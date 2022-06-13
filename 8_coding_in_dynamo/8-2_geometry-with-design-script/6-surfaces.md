@@ -2,7 +2,7 @@
 
 对 NurbsCurve 的二维模拟是 NurbsSurface，与自由形式的 NurbsCurve 一样，可以使用两种基本方法构建 NurbsSurface：输入一组基点并在它们之间内插 Dynamo，然后明确指定曲面的控制点。当设计师确切知道曲面需要的形状或者设计需要曲面通过约束点时，内插曲面也与自由曲线一样非常有用。另一方面，由控制点创建的曲面对于各种平滑级别的探索式设计更为有用。
 
-### Interpolated Surface
+### 插值曲面
 
 要创建插值曲面，只需生成与曲面形状近似的点的二维集合即可。集合必须是矩形，即，不能出现锯齿。_NurbsSurface.ByPoints_ 方法通过这些点构造曲面。
 
@@ -15,7 +15,7 @@
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### Control Points Surface
+### 控制点曲面
 
 也可以通过指定曲面的基本控制点来创建自由形式的 NurbsSurfaces。与 NurbsCurves 一样，控制点可以看作是表示具有直线段的四边形网格，这可以平滑到最终的曲面形式（取决于曲面的阶数）。要按控制点创建 NurbsSurface，请为 _NurbsSurface.ByPoints_ 添加两个附加参数，指示基本曲线在曲面两个方向上的角度。
 

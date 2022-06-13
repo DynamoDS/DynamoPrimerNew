@@ -4,14 +4,14 @@ description: >-
   workflows.
 ---
 
-# Concept Index
+# 概念索引
 
-| Exercise list | Key concepts introduced in exercise | Link to further reading in later chapters |
+| 练习列表 | 练习中介绍的关键概念 | 链接到后面章节的进一步阅读 |
 | ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Parametric Vase | Searching nodes throught the library | [库](../3\_user\_interface/2-library.md) |
-|                  | Using nodes and wires | [](../4\_nodes\_and\_wires/) |
-|                  | 重塑曲线和曲面 | [计算设计的几何体](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
-|                  | Using code blocks | [代码块和 DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) |
-| Attractor Points | Create manage and edit lists | [使用列表进行设计](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/) |
-|                  | Changing preview modes | [预览模式](../3\_user\_interface/1-workspace.md#preview-mode) |
-|                  | Changing execution modes | [执行栏](../3\_user\_interface/#execution-bar) |
+| 参数化花瓶 | 在库中搜索节点 | [库](../3\_user\_interface/2-library.md) |
+|                  | 使用节点和导线 | [节点和导线](../4\_nodes\_and\_wires/) |
+|                  | 创建曲线和曲面 | [计算设计的几何体](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
+|                  | 使用代码块 | [代码块和 DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) |
+| 吸引器点 | 创建管理和编辑列表 | [使用列表进行设计](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/) |
+|                  | 更改预览模式 | [预览模式](../3\_user\_interface/1-workspace.md#preview-mode) |
+|                  | 更改执行模式 | [执行栏](../3\_user\_interface/#execution-bar) |

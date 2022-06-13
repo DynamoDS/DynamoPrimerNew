@@ -1,16 +1,16 @@
-# Vector, Plane & Coordinate System
+# 向量、平面和坐标系
 
-## Vector, Plane & Coordinates System in Dynamo
+## Dynamo 中的向量、平面和坐标系
 
 ### 向量
 
-[](5-2\_vectors.md#vector-1)在 Dynamo 中，向量是模型的关键组件。 请注意，由于它们属于“辅助对象”的“抽象”类别，因此当我们创建向量时，不希望在背景预览中看到任何内容。
+[向量](5-2\_vectors.md#vector-1)表示大小和方向，可以将其视为以给定速度朝特定方向加速的箭头。在 Dynamo 中，它是模型的关键组件。请注意，由于它们属于“辅助对象”的“抽象”类别，因此当我们创建向量时，不希望在背景预览中看到任何内容。
 
-![Vectors in Dynamo]
+![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
 
 > 1. 我们可以使用一条线作为向量预览的替代对象。
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
 > 可以在附录中找到示例文件的完整列表。
 
@@ -18,14 +18,14 @@
 
 ### 平面
 
-[](5-2\_vectors.md#plane-1)
+[平面](5-2\_vectors.md#plane-1)是二维曲面，可以将其视为无限延伸的平面。每个平面都有一个原点、X 方向、Y 方向和 Z（向上）方向。
 
-![Planes in Dynamo]
+![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
 
 > 1. 尽管它们是抽象的，但平面确实具有原点位置，以便我们可以在空间中定位它们。
 > 2. 在 Dynamo 中，平面在背景预览中渲染。
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
 > 可以在附录中找到示例文件的完整列表。
 
@@ -33,20 +33,20 @@
 
 ### 坐标系
 
-[](5-2\_vectors.md#coordinate-system-1)
+[坐标系](5-2\_vectors.md#coordinate-system-1)是用于确定点或其他几何图元位置的系统。下图介绍了它在 Dynamo 中的外观以及每种颜色所表示的含义。
 
-![Coordinate System in Dynamo]
+![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. 尽管它们是抽象的，但坐标系也具有原点位置，以便我们可以在空间中定位它们。
 > 2. 在 Dynamo 中，坐标系在背景预览中渲染为一个点（原点）和定义轴（X 为红色、Y 为绿色以及 Z 为蓝色，遵循约定）的线。
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
 > 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Deep Dive into...
+## 深入探讨...
 
 向量、平面和坐标系构成了抽象几何图形类型的主组。它们帮助我们为描述形状的其他几何图形定义位置、方向和空间环境。如果我说我在纽约市第 42 街的百老汇（坐标系）、站在街道上（平面）、面朝北（向量），我刚刚使用这些“辅助对象”来定义我所在的位置。这同样适用于手机壳产品或摩天大楼 - 我们需要此环境来开发模型。
 
@@ -65,7 +65,7 @@
 ![向量(Vector)](../images/5-2/2/Vector.jpg)
 
 > 1. 向量的**“起点”**称为**“基底”**。
-> 2. 向量的**“终点”**称为**“尖端”**或“感官”。
+> 2. 向量的\*\*“终点”\*\*称为**“尖端”**或**“指向”**。
 > 3. “向量 AB”与“向量 BA”不同 - 它们指向相反的方向。
 
 如果您需要关于向量（及其抽象定义）的喜剧效果，请观看经典喜剧《飞机》，聆听时常引用的半开玩笑台词：
@@ -80,7 +80,7 @@
 
 您可能会想：“等等！原点？这听起来像是一个坐标系...就像我在 CAD 软件中建模所使用的坐标系！”
 
-您是对的！大多数建模软件都利用构造平面或“标高”来定义要拔模的本地二维环境。XY、XZ、YZ 或北、东南、平面图听起来可能更加熟悉。这些都是“平面”，用于定义无限的“平”环境。
+您是对的！大多数建模软件都利用构造平面或“标高”来定义要拔模的本地二维环境。XY、XZ、YZ 或北、东南、平面图听起来可能更加熟悉。这些都是“平面”，用于定义无限的“平”环境。平面没有深度，但也有助于我们描述方向 -
 
 ### 坐标系
 

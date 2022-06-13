@@ -1,10 +1,10 @@
 # 曲线
 
-## Curves in Dynamo
+## Dynamo 中的曲线
 
-### What is Curve?
+### 什么是曲线？
 
-[曲线是我们介绍的第一个几何数据类型，具有一组更熟悉的形状描述特性 - 弯曲度或笔直度如何？](5-4\_curves.md#curve) 多长或多短？请记住，点仍然是我们的构建块，用于定义从直线到样条曲线以及它们之间的所有曲线类型。
+[曲线](5-4\_curves.md#curve)是我们介绍的第一个几何数据类型，有一组更熟悉的形状描述特性 - 弯曲度或笔直度如何？多长或多短？请记住，点仍然是我们的构建块，用于定义从直线到样条曲线以及它们之间的所有曲线类型。
 
 ![曲线类型](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,30 +18,30 @@
 
 ### 直线
 
-[](5-4\_curves.md#lines)`Line.ByStartPointEndPoint`![]
+[直线](5-4\_curves.md#lines)由一组点组成，每条直线至少有 2 个点。在 Dynamo 中创建直线的最常见方法之一是使用 `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>)，以在 Dynamo 中创建线。
 
-![](<.
+![](<./images/5-2/4/curves - line by start point end point.jpg>)
 
 ### NURBS 曲线
 
-[](5-4\_curves.md#nurbs-+-polycurves)让我们在 Dynamo 中使用两种不同方法制作正弦曲线，以创建 NURBS 曲线来比较结果。
+[NURBS](5-4\_curves.md#nurbs-+-polycurves) 是用于精确表示曲线和曲面的模型。在 Dynamo 中使用两种不同方法制作正弦曲线，以创建 NURBS 曲线来比较结果。
 
-![]
+![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ 使用一列点作为控制点
 > 2. _NurbsCurve.ByPoints_ 通过一列点绘制曲线
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
 > 可以在附录中找到示例文件的完整列表。
 
 {% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-## Deep Dive into...
+## 深入探讨...
 
 ### 曲线
 
-术语**“曲线”**通常是所有不同类型弯曲（即使是笔直）形状的全部捕捉。大写字母“C”（即“Curve”）是所有这些形状类型（直线、圆、样条曲线等）的父分类。从技术上讲，“曲线”描述了通过将“t”输入到函数集合中可以找到的所有可能点，范围可能从简单形式 (`x = -1.26*t, y = t`x = -1.26*t, y = t) 到涉及微积分的函数。 不论我们使用何种类型的曲线，这一名为“t”的**“参数”**都是我们可以计算的特性。此外，不论形状的外观如何，所有曲线也都具有起点和终点，它们与用于创建曲线的最小和最大 t 值一致符合。这也有助于我们了解其方向性。
+术语**“曲线”**通常是所有不同类型弯曲（即使是笔直）形状的全部捕捉。大写字母“C”（即“Curve”）是所有这些形状类型（直线、圆、样条曲线等）的父分类。从技术上讲，“曲线”描述了通过将“t”输入到函数集合中可以找到的所有可能点，范围可能从简单形式 (`x = -1.26*t, y = t`) 到涉及微积分的函数。不论我们使用何种类型的曲线，这一名为“t”的**“参数”**都是我们可以计算的特性。此外，不论形状的外观如何，所有曲线也都具有起点和终点，它们与用于创建曲线的最小和最大 t 值一致符合。这也有助于我们了解其方向性。
 
 ![曲线参数](../images/5-2/4/CurveParameter.jpg)
 
@@ -85,5 +85,5 @@
 > 2. 阶数 = 2
 > 3. 阶数 = 3
 
-请注意，阶数值越高，则用于对生成的曲线进行插值的控制点越多。
-
+{% hint style="info" %}
+请注意，阶数值越高，则用于对生成的曲线进行插值的控制点越多。{% endhint %}

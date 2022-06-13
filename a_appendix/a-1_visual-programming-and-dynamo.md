@@ -1,4 +1,4 @@
-# Visual Programming and Dynamo
+# 可视化编程和 Dynamo
 
 #### 什么是可视化编程？ <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
@@ -8,7 +8,7 @@
 
 尽管提供了一些强大机会，但**算法**这一术语本身可能会带来一些误解。算法可能会产生意外、疯狂或酷炫的效果，但它们并不是魔术。实际上，它们本身平淡无奇。让我们使用一个实例，如折纸鹤。我们从一张正方形纸开始（输入）、遵循一系列折叠步骤（处理操作），然后完成折叠一张纸鹤（输出）。
 
-![]()
+![折纸鹤](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
 
 算法存在于何处？它是抽象的步骤集，我们可以通过两种方式来表示它们 - 文字或图形。
 
@@ -30,7 +30,7 @@
 
 **图形说明：**
 
-![]()
+![需要更新 - 折纸鹤](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### 编程已定义 <a href="#programming-defined" id="programming-defined"></a>
 
@@ -40,7 +40,7 @@
 
 **可视化编程已定义**
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
 > 可以在附录中找到示例文件的完整列表。
 
@@ -52,7 +52,7 @@
 
 **可视化程序：**
 
-![](<.
+![](<./images/a-1/visualProgramming (2).png>)
 
 **文本程序**：
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 我们的算法结果：
 
-![](<.
+![](<./images/a-1/visualProgramming (1).png>)
 
 以此类方式进行编程的可视化特性降低了入门门槛，无需与设计师经常沟通。Dynamo 属于可视化编程范例，但正如我们稍后所见到的，我们仍可以在应用程序中使用文本编程。

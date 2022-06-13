@@ -6,9 +6,9 @@
 
 ![香蕉](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> []()
+> 拍摄者 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list)。
 
-当我们购买生活用品时，我们会将所有购买物品放入一个袋子中。这个袋子也是一个列表。如果我们要制作香蕉面包，需要 3 束香蕉（我们要制作_许多_香蕉面包）。袋子表示一列香蕉串，每串表示一列香蕉。袋子是一列列表（二维），香蕉是一个列表（一维）。
+当我们购买生活用品时，我们会将所有购买物品放入一个袋子中。这个袋子也是一个列表。如果我们要制作香蕉面包，需要 3 束香蕉（我们要制作_许多_香蕉面包）。袋子表示一列香蕉串，每串表示一列香蕉。袋子是一列列表（二维），香蕉串是一个列表（一维）。
 
 在 Dynamo 中，会对列表数据进行排序，并且每个列表中第一项的索引均为“0”。下面，我们将讨论如何在 Dynamo 中定义列表以及如何将多个列表相互关联。
 
@@ -20,13 +20,13 @@
 
 请注意，列表中仍有 5 个项目；只是列表使用的是基于零的计数系统。而且，列表中存储的项目并不仅限于数字。它们可以是 Dynamo 支持的任何数据类型，例如点、曲线、曲面、族等。
 
-![]
+![](<../images/5-4/1/what's a list - zero based indices.jpg>)
 
-> a. Index
+> a. 索引
 >
-> b. Point
+> b. 点
 >
-> c. Item
+> c. 项目
 
 通常，查看列表中存储的数据类型的最简单方法是将观察节点连接到另一个节点的输出。默认情况下，观察节点自动将所有索引显示在列表的左侧，并在右侧显示数据项。
 
@@ -36,16 +36,16 @@
 
 与列表相关，输入和输出因使用的 Dynamo 节点而异。例如，我们使用一列 5 个点，并将该输出连接到两个不同的 Dynamo 节点：**PolyCurve.ByPoints** 和 **Circle.ByCenterPointRadius**：
 
-![Input Examples]
+![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
 
-> 1. **PolyCurve.ByPoints** 的_点_输入正在查找_“Point[]”_。 这表示一列点。
-> 2. **PolyCurve.ByPoints** 的输出是基于一列五个点所创建的单个 PolyCurve。
+> 1. **“PolyCurve.ByPoints”**的_“points”_输入正在查找_“Point\[]”_。这表示一列点
+> 2. **“PolyCurve.ByPoints”**的输出是基于一列五个点所创建的一条复合线。
 > 3. **Circle.ByCenterPointRadius** 的 _centerPoint_ 输入要求提供_“点”_。
 > 4. **Circle.ByCenterPointRadius** 的输出是一列五个圆，其中心与点的原始列表相对应。
 
-**PolyCurve.ByPoints** 和 **Circle.ByCenterPointRadius** 的输入数据相同，但 Polycurve 节点会提供一条复合线，而 Circle 节点会提供 5 个圆（中心位于每个点处）。******** 直观地讲，这很有意义：将复合线绘制为连接 5 个点的曲线，而圆在每个点处创建不同的圆。数据发生了什么变化？
+**“PolyCurve.ByPoints”**和**“Circle.ByCenterPointRadius”**的输入数据相同，但**“Polycurve.ByPoints”**节点会提供一条复合线，而**“Circle.ByCenterPointRadius”**节点会提供 5 个圆（中心位于每个点处）。直观地讲，这很有意义：将复合线绘制为连接 5 个点的曲线，而圆在每个点处创建不同的圆。数据发生了什么变化？
 
-将光标悬停在 **Polycurve.ByPoints** 的_点_输入上，我们会看到输入正在查找_“Point[]”_。 请注意末端的括号。这表示一列点，并且要创建复合线，输入需要每个复合线是一个列表。因此，该节点会将每个列表压缩为一个复合线。
+通过将光标悬停在**“Polycurve.ByPoints”**的_“points”_输入上，我们会看到该输入正在查找_“Point\[]”_。请注意末端的括号。这表示一列点，并且要创建复合线，输入需要每个复合线是一个列表。因此，该节点会将每个列表压缩为一个复合线。
 
 另一方面，**Circle.ByCenterPointRadius** 的 _centerPoint_ 输入要求提供_“点”_。此节点会查找一个点作为项目，以定义圆的圆心。这就是我们基于输入数据获得五个圆的原因。在 Dynamo 中识别输入的这些差异有助于在管理数据时更好地了解节点的运行方式。
 
@@ -53,33 +53,33 @@
 
 在没有清晰解决方案的情况下，数据匹配会是一个问题。当节点有权访问不同大小的输入时，就会发生这种情况。更改数据匹配算法可能会导致结果差异极大。
 
-设想在各点之间创建线段的节点 (Line.ByStartPointEndPoint)。**** 它将有两个输入参数，两个输入参数均提供点坐标：
+假定在各点之间创建线段的节点（**“Line.ByStartPointEndPoint”**）。它将有两个输入参数，两个输入参数均提供点坐标：
 
 #### 最短列表
 
 最简单的方法是逐一连接输入，直到其中一个流运行干。这称为“最短列表”算法。这是 Dynamo 节点的默认行为：
 
-![]
+![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
 
 #### 最长列表
 
 “最长列表”算法会一直连接输入、重用元素，直到所有流都流干为止：
 
-![]
+![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
 
 #### 笛卡尔积
 
 最后，“笛卡尔积”方法可以建立所有可能的连接：
 
-![]
+![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
 
 如您所见，我们可以通过不同的方式在这些点集之间绘制直线。通过在某个节点的中心上单击鼠标右键并选择“连缀”菜单，即可找到连缀选项。
 
-![]
+![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
 
 ## 练习
 
-> Download the example file by clicking on the link below.
+> 单击下面的链接下载示例文件。
 >
 > 可以在附录中找到示例文件的完整列表。
 
@@ -91,18 +91,18 @@
 
 ### 最短列表
 
-__五个点是较小列表的长度，因此最短列表连缀在到达一个列表的末尾后即停止。
+通过选择_“最短列表”_作为连缀选项（也是默认选项），我们会得到一条由五个点组成的基本对角线。五个点是较小列表的长度，因此最短列表连缀在到达一个列表的末尾后即停止。
 
-![Input Examples]
+![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
 
 ### **最长列表**
 
 通过将连缀更改为_“最长列表”_，我们得到一条垂直延伸的对角线。采用与概念图相同的方法，将重复该列表的 5 个项目中的最后一项，以达到较长列表的长度。
 
-![Input Examples]
+![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
 
 ### **笛卡尔积**
 
 通过将连缀更改为_“笛卡尔积”_，我们得到每个列表之间的每个组合，从而获得 5x10 点栅格。这是与上述概念图中所示的笛卡尔积等效的数据结构，但数据现在是一列列表。通过连接复合线，我们可以看到每个列表均由其 X 值定义，从而得到一行垂直线。
 
-![Input Examples]
+![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)

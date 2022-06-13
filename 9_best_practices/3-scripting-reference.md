@@ -15,24 +15,24 @@
 
 **Dynamo 库**
 
-1. ProtoGeometry
+1. ProtoGeometry\*
 
    * 功能：圆弧、边界框、圆、圆锥体、坐标系、立方体、曲线、圆柱体、边、椭圆、椭圆弧、面、几何图形、螺旋、索引组、线、网格、Nurbs 曲线、Nurbs 曲面、平面、点、多边形、矩形、实体、球体、曲面、拓扑、T 样条曲线、UV、向量、顶点。
-   * `import Autodesk.DesignScript.Geometry`
+   * 如何输入：`import Autodesk.DesignScript.Geometry`
 
    ``
 2. DSCoreNodes
    * 功能：颜色、二维颜色范围、日期时间、时间跨度、IO、公式、逻辑、列表、数学、四元树、字符串、线程。
-   * `import DSCore`
+   * 如何输入：`import DSCore`
 3. 细分
    * 功能：凸面外壳、Delaunay、Voronoi。
-   * `import Tessellation`
+   * 如何输入：`import Tessellation`
 4. DSOffice
    * 功能：Excel。
-   * `import DSOffice`
+   * 如何输入：`import DSOffice`
 
-**通过 Python 或 C# 使用 ProtoGeometry 时请注意**，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分：**非托管对象**，以了解详细信息。
-
+{% hint style="warning" %}
+\*注意：通过 Python 或 C# 使用**“ProtoGeometry”**时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分：**“非托管对象”**以了解详细信息。{% endhint %}
 
 ## 小心标记
 
@@ -268,12 +268,12 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 **查看这些 Wiki 页面，以了解有关为 Zerotouch 编写 C# 以及有益于 Dynamo 的指南：**
 
-* 此 Wiki 介绍了一些用于记录和测试代码的常规编码标准：[https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards]()
-* 此 Wiki 专门介绍了用于库、类别、节点名称、端口名称和缩写的命名标准：[https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards]()
+* 此 Wiki 介绍了一些用于记录和测试代码的常规编码标准：[https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
+* 此 Wiki 专门介绍了用于库、类别、节点名称、端口名称和缩写的命名标准：[https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
 **非托管对象：**
 
-从创建的 Python 或 C# 几何图形对象使用 Dynamo 的几何图形库 _(ProtoGeometry)_ 时将不由虚拟机进行托管，将需要手动清理其中许多对象的内存。要清理本地对象或非托管对象，可以使用 **Dispose** 方法或 **using** 关键字。请参见此 Wiki 条目以了解概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](。)
+从创建的 Python 或 C# 几何图形对象使用 Dynamo 的几何图形库 _(ProtoGeometry)_ 时将不由虚拟机进行托管，将需要手动清理其中许多对象的内存。要清理本地对象或非托管对象，可以使用 **Dispose** 方法或 **using** 关键字。请参见此 Wiki 条目以了解概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
 
 只需处理不返回到图形或存储对其参照的非托管资源。在本节的其余部分中，我们将这些对象称为_中间几何图形_。在下面的代码示例中，可以看到此类对象的示例。此零接触 C# 函数 **singleCube** 会返回单个立方体，但在其执行期间会额外创建 10000 个立方体。我们可以假定这个其他几何图形用作一些中间构造几何图形。
 
@@ -311,4 +311,4 @@ public Cuboid singleCube(){
  }
 ```
 
-通常，只需处理几何图形，如 `Surfaces`Surfaces`Curves`、`Solids`Curves 和 Solids。 但为安全起见，可以处理所有几何图形类型（`Vectors`Vectors`Points`、`CoordinateSystems`Points、CoordinateSystems）。
+通常，只需处理几何图形，如 `Surfaces`、`Curves` 和 `Solids`。但是，为了安全起见，可以处理所有几何图形类型(`Vectors`、`Points`、`CoordinateSystems`)。
