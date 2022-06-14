@@ -1,5 +1,5 @@
-# Geometry for Computational Design
+# Геометрия для машинного проектирования
 
-As a Visual Programming environment, Dynamo enables you to craft the way that data is processed. Data is numbers or text, but so is Geometry. As understood by the Computer, Geometry - or sometimes called Computational Geometry - is the data we can use to create beautiful, intricate, or performance-driven models. To do so, we need to understand the ins and outs of the various types of Geometry we can use.
+Dynamo — это среда визуального программирования, которая позволяет пользователям создавать процессы обработки данных. Данные — это числа или текст. Но это также и геометрия. С точки зрения компьютера, геометрия (иногда ее также называют вычислительной геометрией) — это данные, которые можно использовать для создания эстетичных, детализированных или высокопроизводительных моделей. Для этого нужно сначала внимательно изучить различные типы геометрических объектов, доступных для использования.
 
 ![](<../images/5-2/Geometry for Computational Design-01.jpg>)

@@ -1,39 +1,39 @@
-# Math
+# Математика
 
-If the simplest form of data is numbers, the easiest way to relate those numbers is through Mathematics. From simple operators like divide to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
+Числа являются самой простой формой данных, а самым простым способом связать эти числа между собой является математика. Начиная от элементарных операторов, таких как деление, и заканчивая тригонометрическими функциями и более сложными формулами, математика — отличный способ начать знакомство с отношениями и закономерностями в мире чисел.
 
-### Arithmetic Operators
+### Арифметические операторы
 
-Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
+Оператор — это набор компонентов, в которых используются алгебраические функции с двумя входными числовыми значениями, результатом которых является одно выходное значение (сложение, вычитание, умножение, деление и т. д.). Они находятся в разделе «Операторы» > «Действия».
 
-| Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
+| Значок | Имя (синтаксис) | Входные данные | Выходные данные |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-3/2/addition.jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Subtraction.jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Multiplication.jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Division.jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/addition.jpg>) | Add (**+**) (сложение) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Subtraction.jpg>) | Substract (**–**) (вычитание) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Multiplication.jpg>) | Multiply (**\***) (умножение) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Division.jpg>) | Divide (**/**) (деление) | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
-## Exercise: The Golden Spiral Formula
+## Упражнение «Формула золотой спирали»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-### Part I: Parametric Formula
+### Часть I. Параметрическая формула
 
-Combine operators and variables to form a more complex relationship through **Formulas**. Use sliders to make a Formula that can be controlled with input parameters.
+Объединяйте операторы и переменные для формирования более сложной связи с помощью **формул**. Используйте регуляторы для создания формулы, которой можно управлять с помощью входных параметров.
 
-1.Create Number sequence that represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
+1. Создайте числовую последовательность, которая представляет собой t в параметрическом уравнении. Теперь нужен достаточно большой список для определения спирали.
 
-**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.
+**Number Sequence.** Определим последовательность чисел на основе трех входных значений: _start, amount_ и _step_.
 
 ![](<../images/5-3/2/math - part I-01.jpg>)
 
-2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.
+2\. В предыдущем шаге был создан список чисел для определения области параметрических компонентов. Создайте группу узлов, представляющих уравнение золотой спирали.
 
-The golden spiral is defined as the equation:
+Золотая спираль определяется по следующей формуле:
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -43,76 +43,76 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-The image below represents the golden spiral in in visual programming form. When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
+На изображении ниже представлена золотая спираль в форме визуального программирования. Рассматривая группу узлов, обратите внимание на соответствие между визуальной программой и уравнением в записи.
 
 ![](<../images/5-3/2/math - part I-02.jpg>)
 
-> a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
+> a. **Number Slider**. Добавьте два регулятора чисел в рабочую область. Эти регуляторы будут задавать переменные _a_ и _b_ параметрического уравнения. Они представляют собой гибкую константу или параметры, которые можно настроить для получения желаемого результата.
 >
-> b. **Multiplication (\*)** : The multiplication Node is represented by an asterisk. We'll use this repeatedly to connect multiplying variables
+> b. **Multiplication (\*)**. Узел умножения обозначен звездочкой. Он будет часто использоваться для соединения умножаемых переменных
 >
-> c. **Math.RadiansToDegrees**: The '_t_' values need to be translated to degrees for their evaluation in the trigonometric functions. Remember, Dynamo defaults to degrees for evaluating these functions.
+> c. **Math.RadiansToDegrees**. Значения переменной _t_ необходимо преобразовать в градусы для их оценки в тригонометрических функциях. Помните, что для оценки этих функций в Dynamo по умолчанию используются градусы.
 >
-> d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
+> d. **Math.Pow**. Являясь функцией переменной _t_ и числа _e_, этот узел создает последовательность Фибоначчи.
 >
-> e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
+> e. **Math.Cos и Math.Sin**. С помощью этих двух тригонометрических функций будут различаться координаты X и Y (соответственно) для каждой параметрической точки.
 >
-> f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
+> f. **Watch**. В качестве выходных данных отображаются два списка, которые будут выступать в качестве координат _x_ и _y_ точек, используемых для формирования спирали.
 
-### Part II: From Formula to Geometry
+### Часть II. От формулы к геометрии
 
-Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
+Хотя набор узлов из предыдущего этапа будет выполнять поставленные задачи, этот процесс довольно трудоемкий. Для повышения эффективности работы в разделе [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) ознакомьтесь со сведениями о том, как в одном узле разместить строку выражений Dynamo. На последующих этапах рассмотрим использование параметрического уравнения для построения спирали Фибоначчи.
 
-**Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
+**Point.ByCoordinates.** Соедините верхний узел умножения с входным параметром _x_, а нижний с входным параметром _y_. На экране отобразится параметрическая спираль, проходящая через точки.
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints:** Connect **Point.ByCoordinates** from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
+**Polycurve.ByPoints**. Соедините узел **Point.ByCoordinates** из предыдущего шага с входным параметром _points_. Параметр _connectLastToFirst_ можно оставить без входных данных, поскольку мы не будем создавать замкнутую кривую. Таким образом, получаем спираль, которая проходит через каждую точку, заданную в предыдущем шаге.
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
-We've now completed the Fibonacci Spiral! Let's take this further into two separate exercises from here, which we'll call the Nautilus and the Sunflower. These are abstractions of natural systems, but the two different applications of the Fibonacci spiral will be well represented.
+Спираль Фибоначчи создана. Продолжим работу и выполним еще два упражнения, которые назовем «Наутилус» и «Подсолнух». Продемонстрируем два варианта использования спирали Фибоначчи на примере этих представителей естественных систем.
 
-### Part III: From Spiral to Nautilus
+### Часть III. От спирали к наутилусу
 
-**Circle.ByCenterPointRadius:** We'll use a circle Node here with the same inputs as the previous step. The radius value defaults to _1.0_, so we see an immediate output of circles. It becomes immediately legible how the points diverge further from the origin.
+**Circle.ByCenterPointRadius.** Узел построения окружности будет иметь те же входные данные, что и в предыдущем шаге. Значение радиуса по умолчанию равно _1.0_, поэтому окружности создаются сразу. Четко видно, каким образом точки отклоняются от начала координат.
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
-**Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.
+**Number Sequence.** Это исходный массив элементов _t_. Если соединить его со значением радиуса узла **Circle.ByCenterPointRadius**, центры окружностей будут по-прежнему отклоняться дальше от начального положения, но радиус окружностей будет увеличиваться, создавая необычный график спирали Фибоначчи.
 
-Bonus points if you make it 3D!
+3D-изображение этого объекта будет выглядеть замечательно.
 
 ![](<../images/5-3/2/math - part III-02.gif>)
 
-### Part IV: From Nautilus to Phyllotaxis
+### Часть IV. От наутилуса к подсолнуху
 
-Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
+Массив. После создания раковины наутилуса перейдем к параметрическим сеткам. Используя основной угол вращения спирали Фибоначчи, создайте сетку Фибоначчи, а на ее основе — модель [расположения семян цветка подсолнуха](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
 
-As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
+Начнем с того же шага, что и в предыдущем упражнении: создадим массив точек спирали с помощью узла **Point.ByCoordinates**.
 
 ![](<../images/5-3/2/math - part IV-01.jpg>)
 
-Next, follow these mini steps to generate a series of spiral at various rotation.
+Далее выполните следующие небольшие действия, чтобы создать последовательность спиралей с различным вращением.
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
+> a. **Geometry.Rotate**. Существует несколько вариантов узла **Geometry.Rotate**. Убедитесь, что выбран узел с входными параметрами _geometry_, _basePlane_ и _degrees_. Соедините узел **Point.ByCoordinates** с входным параметром geometry. Щелкните правой кнопкой мыши этот узел и убедитесь, что для переплетения задано значение «Векторное произведение».
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
-> b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
+> b. **Plane.XY**. Соедините узел с входным параметром _basePlane_. Вращение будет выполняться вокруг начала координат, которое совпадает с основанием спирали.
 >
-> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a **Number Range** component. Connect this into the _degrees_ input.
+> c. **Number Range**. Для входного параметра значений градусов необходимо создать несколько вращений. Это можно сделать быстро с помощью компонента **Number Range**. Соедините его с входным параметром _degrees_.
 >
-> d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
+> d. **Number**. Чтобы задать диапазон чисел, добавьте три узла Number в рабочую область вертикально. В нисходящей последовательности назначьте значения _0.0,360.0_ и _120.0_ соответственно. Они будут определять вращение спирали. Обратите внимание на результаты выходного параметра из узла **Number Range** после соединения с ним трех узлов Number.
 
-Our output is beginning to resemble a whirlpool. Let's adjust some of the **Number Range** parameters and see how the results change.
+Полученное изображение начинает напоминать водоворот. Скорректируйте некоторые параметры **Number Range** и посмотрите, как изменятся результаты.
 
-Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.
+Измените размер шага в узле **Number Range**, задав вместо значения _120.0_ значение _36.0_. Обратите внимание, что при этом генерируется больше вращений, и, следовательно, создается более плотная сетка.
 
 ![](<../images/5-3/2/math - part IV-04.jpg>)
 
-Change the step size of the **Number Range** node from _36.0_ to _3.6_. This now gives us a much denser grid, and the directionality of the spiral is unclear. Ladies and gentlemen, we've created a sunflower.
+Измените размер шага в узле **Number Range**, задав вместо значения _36.0_ значение _3.6_. Получится более плотная сетка, а у спирали будет отсутствовать направление. Итак, мы создали подсолнух.
 
 ![](<../images/5-3/2/math - part IV-05.jpg>)

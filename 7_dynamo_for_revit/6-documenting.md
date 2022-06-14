@@ -1,125 +1,125 @@
-# Documenting
+# Выпуск документации
 
-Editing parameters for documentation follows suit with the lessons learned in prior sections. In this section, we'll look at editing parameters which don't affect the geometric properties of an element, but instead prepare a Revit file for documentation.
+Параметры выпуска документации редактируются по тому же принципу, что и в предыдущих разделах. В этом разделе мы рассмотрим редактирование параметров, которые не влияют на геометрические свойства элементов, но необходимы для подготовки файла Revit к выпуску документации.
 
-### Deviation
+### Отклонение
 
-In the exercise below, we'll use a basic deviation from plane node to create a Revit sheet for documentation. Each panel on our parametrically defined roof structure has a different value for deviation, and we want to call out the range of values using color and by scheduling out the adaptive points to hand off to a facade consultant, engineer, or contractor.
+В упражнении ниже, чтобы создать лист Revit для документации, будет использоваться стандартный узел Deviation from Plane (отклонение от плоскости). Каждая панель в конструкции крыши, определенной параметрически, имеет собственное значение отклонения. Необходимо указать диапазон значений, используя цвет и составив спецификацию адаптивных точек, для передачи консультанту, инженеру или подрядчику, работающим с фасадом.
 
-![deviation](./images/6/deviation.jpg)
+![отклонение](./images/6/deviation.jpg)
 
-> The deviation from plane node will calculate the distance that the set of four points varies from the best-fit plane between them. This is a quick and easy way to study constructability.
+> Узел Deviation from Plane вычисляет расстояние, на которое отклоняется набор из четырех точек относительно оптимально вписанной между ними плоскости. Это простой и быстрый способ проверки технологичности конструкции.
 
-## Exercise
+## Упражнение
 
-### Part I: Setting Panels Aperture Ratio Based on Deviation From Plane Node
+### Часть I. Задание коэффициента апертуры панелей на основе отклонения от узла плоскости
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="./datasets/6/Revit-Documenting.zip" %}
 
-Start with the Revit file for this section (or continue from the previous section). This file has an array of ETFE panels on the roof. We'll reference these panels for this exercise.
+Начнем с файла Revit (можно также продолжить работу с файлом из предыдущего раздела). В этом файле представлен массив панелей ETFE на крыше. Мы будем использовать эти панели в ходе выполнения упражнения.
 
 ![](<./images/6/documenting - exercise I - 01.jpg>)
 
-> 1. Add a _Family Types_ node to the canvas and choose _"ROOF-PANEL-4PT"_.
-> 2. Plug this node into a Select _All Elements of Family Type_ node to get all of the elements from Revit into Dynamo.
+> 1. Добавьте узел _Family Types_ в рабочую область и выберите _ROOF-PANEL-4PT_.
+> 2. Соедините этот узел с узлом _All Elements of Family Type_, чтобы перенести все элементы из Revit в Dynamo.
 
 ![](<./images/6/documenting - exercise I - 02.jpg>)
 
-> 1. Query the location of adaptive points for each element with the _AdaptiveComponent.Locations_ node.
-> 2. Create a polygon from these four points with the _Polygon.ByPoints_ node. Notice we now have an abstract version of the paneled system in Dynamo without having to import the full geometry of the Revit element.
-> 3. Calculate planar deviation with the _Polygon.PlaneDeviation_ node.
+> 1. Запросите местоположение адаптивных точек каждого элемента с помощью узла _AdaptiveComponent.Locations_.
+> 2. Создайте полигон по этим четырем точкам с помощью узла _Polygon.ByPoints_. Обратите внимание, что в Dynamo используется абстрактная версия системы панелей (без необходимости импорта всей геометрии элемента Revit).
+> 3. Вычислите отклонение от плоскости с помощью узла _Polygon.PlaneDeviation_.
 
-Just for kicks, like the previous exercise, let's set the aperture ratio of each panel based on its planar deviation.
+Просто в качестве дополнения, как и в предыдущем упражнении, укажем коэффициент апертуры каждой панели на основе отклонения от плоскости.
 
 ![](<./images/6/documenting - exercise I - 03.jpg>)
 
-> 1. Add an _Element.SetParameterByName_ node to the canvas and connect the adaptive components to the _element_ input. Connect a _Code Block_ reading _"Aperture Ratio"_ into the _parameterName_ input.
-> 2. We cannot directly connect the deviation results into the value input because we need to remap the values to the parameter range.
+> 1. Добавьте узел _Element.SetParameterByName_ в активное окно и соедините адаптивные компоненты с входным параметром _element_. Соедините узел _Code Block_, содержащий строку _Aperture Ratio_, с входным параметром _parameterName_.
+> 2. Напрямую соединить результаты отклонения с входным параметром значения невозможно, так как необходимо перенастроить значения на другой диапазон параметров.
 
 ![](<./images/6/documenting - exercise I - 04.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the deviation values to a domain between 0.15 and 0\_.\_45 by entering `0.15; 0.45;` into the _Code Block_.
-> 2. Plug these results into the value input for _Element.SetParameterByName_.
+> 1. С помощью узла _Math.RemapRange_ перенастройте значения отклонения на область между 0,15 и 0,45, введя `0.15; 0.45;` в узле _Code Block_.
+> 2. Соедините эти результаты с входным параметром value узла _Element.SetParameterByName_.
 
-Back in Revit we can _kind of_ make sense of the change in aperture across the surface.
+Вернувшись в Revit, можно _примерно_ оценить изменение в апертуре на поверхности.
 
-![Exercise](./images/6/13.jpg)
+![Упражнение](./images/6/13.jpg)
 
-Zooming in, it becomes more clear that the closed panels are weighted towards the corners of the surface. The open corners are towards the top. The corners represent areas of larger deviation while bulge has minimal curvature, so this makes sense.
+При увеличении масштаба становится понятно, что вес замкнутых панелей направлен к углам поверхности. Незамкнутые углы направлены вверх. Углы представляют собой участки более значительных отклонений, в то время как выпуклость имеет минимальную кривизну, что вполне оправдано.
 
-![Exercise](./images/6/13a.jpg)
+![Упражнение](./images/6/13a.jpg)
 
-### Part II: Color and Documentation
+### Часть II. Цвет и документация
 
-Setting the Aperture Ratio doesn't clearly demonstrate the deviation of panels on the roof, and we're also changing the geometry of the actual element. Suppose we just want to study the deviation from the standpoint of fabrication feasibility. It would be helpful to color the panels based on deviation range for our documentation. We can do that with the series of steps below, and in a very similar process to the steps above.
+Указание коэффициента апертуры не дает четкой картины отклонения панелей на крыше. Кроме того, изменяется геометрия самого элемента. Предположим, нужно просто изучить отклонение с точки зрения технической осуществимости изготовления. Для этого в документации можно окрасить панели в различные цвета в зависимости от диапазона отклонений. Это можно сделать при помощи следующих шагов, которые очень похожи на действия, описанные выше.
 
 ![](<./images/6/documenting - exercise II - 01.jpg>)
 
-> 1. Remove the _Element.SetParameterByName_ and its input nodes and add _Element.OverrideColorInView_.
-> 2. Add a _Color Range_ node to the canvas and plug into the color input of _Element.OverrideColorInView_. We still have to connect the deviation values to the color range in order to create the gradient.
-> 3. Hovering over the _value_ input, we can see that the values for the input must be between _0_ and _1_ in order to map a color to each value. We need to remap the deviation values to this range.
+> 1. Удалите узел _Element.SetParameterByName_ и его входные параметры, а затем добавьте узел _Element.OverrideColorInView_.
+> 2. Добавьте узел _Color Range_ в рабочую область и соедините с входным параметром color узла _Element.OverrideColorInView_. Для создания градиента необходимо также соединить значения отклонения с цветовым диапазоном.
+> 3. При наведении курсора на входной параметр _value_ видно, что значения входного параметра должны быть в диапазоне от _0_ до _1_. Только в этом случае можно сопоставить цвета со значениями. Необходимо перенастроить значения отклонения, задав этот диапазон.
 
 ![](<./images/6/documenting - exercise II - 02.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the planar deviation values to a range between\* 0\* and _1_ (note: you can use the _"MapTo"_ node to define a source domain as well).
-> 2. Plug the results into a _Color Range_ node.
-> 3. Notice our output is a range of colors instead of a range of numbers.
-> 4. If you're set to Manual, hit _Run_. You should be able to get away with being set to Automatic from this point forward.
+> 1. С помощью узла _Math.RemapRange_ перенастройте значения отклонения от плоскости, задав диапазон от \*0\* до _1_. (Примечание. Чтобы задать исходную область, также можно использовать узел _MapTo_.)
+> 2. Соедините результаты с узлом _Color Range_.
+> 3. Обратите внимание, что в результате получается диапазон цветов, а не диапазон чисел.
+> 4. Если используется режим «Вручную», нажмите кнопку _Запуск_. С этого момента необходимо избегать работы в автоматическом режиме.
 
-Back in Revit, we see a much more legible gradient which is representative of planar deviation based on our color range. But what if we want to customize the colors? Notice that the minimum deviation values are represented in red, which seems to be the opposite of what we'd expect. We want to have maximum deviation to be red, with minimum deviation represented by a calmer color. Let's go back to Dynamo and fix this.
+Вернувшись в Revit, видим значительно более наглядный градиент, характеризующий отклонение от плоскости на основе цветового диапазона. Но что, если требуется изменить цвета? Обратите внимание, что минимальные значения отклонения обозначены красным цветом, что не вполне логично. Необходимо, чтобы максимальному отклонению соответствовал красный, а минимальному — более спокойный цвет. Вернемся в Dynamo и устраним этот недостаток.
 
 ![](./images/6/09.jpg)
 
 ![](<./images/6/documenting - exercise II - 04.jpg>)
 
-> 1. Using a _code block_, add two numbers on two different lines: `0;` and `255;`.
-> 2. Create a red and blue color by plugging the appropriate values into two _Color.ByARGB_ nodes.
-> 3. Create a list from these two colors.
-> 4. Plug this list into the _colors_ input of the _Color Range_, and watch the custom color range update.
+> 1. Используя _блок кода_, добавьте два числа в две разные строки: `0;` и `255;`.
+> 2. Создайте красный и синий цвета, соединив соответствующие значения с двумя узлами _Color.ByARGB_.
+> 3. Создайте список из этих двух цветов.
+> 4. Соедините этот список с входным параметром _colors_ узла _Color Range_, наблюдая за изменением пользовательского цветового диапазона.
 
-Back in Revit, we can now make better sense of areas of maximum deviation in the corners. Remember, this node is for overriding a color in a view, so it can be really helpful if we had a particular sheet in the set of drawings which focuses on a particular type of analysis.
+Вернувшись в Revit, теперь можно получить более наглядное представление о максимальном отклонении в углах. Помните, что этот узел служит для переопределения цвета на виде, поэтому он может оказаться действительно полезным, если в наборе чертежей определенный лист предназначен для определенного типа расчета.
 
 ![Exercise](<./images/6/07 (6).jpg>)
 
-### Part III: Scheduling
+### Часть III. Планирование
 
-Selecting one ETFE panel in Revit, we see that there are four instance parameters, XYZ1, XYZ2, XYZ3, and XYZ4. These are all blank after they're created. These are text-based parameters and need values. We'll use Dynamo to write the adaptive point locations to each parameter. This helps interoperability if the geometry needs to be sent to an engineer of facade consultant.
+При выборе в Revit одной панели ETFE отображаются четыре параметра экземпляра: XYZ1, XYZ2, XYZ3 и XYZ4. После создания все они будут пустыми. Это текстовые параметры, для которых требуется задать значения. С помощью Dynamo создадим местоположения адаптивных точек для каждого параметра. Это способствует взаимодействию, если необходимо отправить геометрический объект инженеру или консультанту по фасадам.
 
 ![](<./images/6/documenting - exercise III - 01.jpg>)
 
-In a sample sheet, we have a large, empty schedule. The XYZ parameters are shared parameters in the Revit file, which allows us to add them to the schedule.
+На образце листа представлена большая пустая спецификация. Параметры XYZ являются общедоступными параметрами в файле Revit, что позволяет добавить их в спецификацию.
 
 ![Exercise](<./images/6/03 (8).jpg>)
 
-Zooming in, the XYZ parameters are yet to be filled in. The first two parameters are taken care of by Revit.
+Если увеличить масштаб, видно, что параметры XYZ еще не заполнены. Первые два столбца автоматически заполняются из Revit.
 
 ![Exercise](<./images/6/02 (9).jpg>)
 
-To write in these values, we'll do a complex list operation. The graph itself is simple, but the concepts build heavily from the list mapping as discussed in the list chapter.
+Для ввода этих значений выполним сложную операцию со списком. Сам график довольно прост, но его логика строится на основе сопоставления списков, которое рассматривалось в разделе, посвященном спискам.
 
 ![](<./images/6/documenting - exercise III - 04.jpg>)
 
-> 1. Select all the adaptive components with two nodes.
-> 2. Extract the location of each point with _AdaptiveComponent.Locations_.
-> 3. Convert these points to strings. Remember, the parameter is text-based so we need to input the correct data type.
-> 4. Create a list of the four strings which define the parameters to change: _XYZ1, XYZ2, XYZ3,_ and _XYZ4_.
-> 5. Plug this list into the _parameterName_ input of _Element.SetParameterByName_.
-> 6. Connect _Element.SetParameterByName_ into the the _combinator_ input of _List.Combine._ Connect the _adaptive components_ into _list1_. Connect _String_ from Object into _list2_.
+> 1. Выберите все адаптивные компоненты с двумя узлами.
+> 2. Извлеките местоположение каждой точки с помощью узла _AdaptiveComponent.Locations_.
+> 3. Преобразуйте эти точки в строки. Следует помнить, что параметр является текстовым, поэтому необходимо ввести правильный тип данных.
+> 4. Создайте список из четырех строк, которые определяют изменяемые параметры: _XYZ1, XYZ2, XYZ3_ и _XYZ4_.
+> 5. Соедините этот список с входным параметром _parameterName_ узла _Element.SetParameterByName_.
+> 6. Соедините узел _Element.SetParameterByName_ с входным параметром _combinator_ узла _List.Combine._ Соедините _адаптивные компоненты_ с входным параметром _list1_. Соедините узел _String from Object_ с входным параметром _list2_.
 
-We are list mapping here, because we are writing four values for each element, which creates a complex data structure. The _List.Combine_ node defines an operation one step down in the data hierarchy. This is why element and value inputs of _Element.SetParameterByName_ are left blank. _List.Combine_ is connecting the sublists of its inputs into the empty inputs of _Element.SetParameterByName_, based on the order in which they are connected.
+В данном случае мы сопоставляем списки, так как вводим четыре значения для каждого элемента, что создает сложную структуру данных. Узел _List.Combine_ управляет операцией, выполняемой на один шаг вниз по иерархии данных. Именно поэтому входные параметры element и value узла _Element.SetParameterByName_ остаются пустыми. Узел _List.Combine_ соединяет вложенные списки своих входных данных с пустыми входными параметрами узла _Element.SetParameterByName_ в зависимости от порядка их подсоединения.
 
-Selecting a panel in Revit, we see now that we have string values for each parameter. Realistically, we would create a simpler format to write a point (X,Y,Z). This can be done with string operations in Dynamo, but we're bypassing that here to stay within the scope of this chapter.
+При выборе панели в Revit видим, что для каждого параметра есть строковые значения. В реальном проекте для создания точки (X,Y,Z) использовался бы более простой формат. Это можно сделать с помощью строковых операций в Dynamo, но этот метод не рассматривается в рамках данного раздела.
 
 ![](<./images/6/04 (5).jpg>)
 
-A view of the sample schedule with parameters filled in.
+Вид образца спецификации с заполненными параметрами.
 
 ![](<./images/6/01 (9).jpg>)
 
-Each ETFE panel now has the XYZ coordinates written for each adaptive point, representing the corners of each panel for fabrication.
+Каждая панель ETFE теперь имеет координаты XYZ, которые были созданы для каждой адаптивной точки, соответствующей углам изготавливаемой панели.
 
 ![Exercise](<./images/6/00 (8).jpg>)

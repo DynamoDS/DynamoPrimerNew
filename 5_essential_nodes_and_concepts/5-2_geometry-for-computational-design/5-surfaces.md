@@ -1,79 +1,79 @@
-# Surfaces
+# Поверхности
 
-## Surfaces in Dynamo
+## Поверхности в Dynamo
 
-### What is Surface
+### Что такое поверхность
 
-We use [Surface](5-surfaces.md#surface) in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+[Поверхность](5-surfaces.md#surface) в модели используется для представления объектов, которые мы видим в нашем трехмерном мире. Несмотря на то что кривые не всегда являются плоскими и по сути трехмерны, пространство, определяемое ими, всегда является одномерным. Поверхности позволяют придать модели дополнительное измерение, а также включают набор специальных свойств, которые можно использовать при выполнении других операций моделирования.
 
-### Surface at Parameter
+### Поверхность по параметру
 
-Import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
+Импортируйте в Dynamo и проанализируйте объект Surface в конкретном параметре, чтобы узнать, какие сведения можно извлечь.
 
 ![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
 
-> 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
-> 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
-> 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
+> 1. _Surface.PointAtParameter_ возвращает объект Point в заданной координате UV.
+> 2. _Surface.NormalAtParameter_ возвращает вектор нормали в заданной координате UV.
+> 3. _Surface.GetIsoline_ возвращает изопараметрическую кривую в координате U или V (обратите внимание на порт ввода isoDirection).
 
-> Download the example files by clicking on the link below.
+> Скачайте файлы примеров, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-2/5/Surfaces.zip" %}
 
-## Deep Dive into...
+## Углубленное изучение
 
-### Surface
+### Поверхность
 
-A Surface is a mathematical shape defined by a function and two parameters, Instead of `t` for Curves, we use `U` and `V` to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.
+Поверхность — это математическая форма, определяемая функцией и двумя параметрами. Вместо параметра `t`, используемого для кривых, здесь для описания соответствующего пространства используются параметры `U` и `V`. Это означает, что при работе с геометрией этого типа появляются дополнительные данные для использования. Например, у кривых есть касательные векторы и плоскости нормали (которые могут поворачиваться или скручиваться вдоль кривой), а у поверхностей есть векторы нормали и касательные плоскости с последовательной ориентацией.
 
-![Surface](../images/5-2/5/Surface.jpg)
+![Поверхность](../images/5-2/5/Surface.jpg)
 
-> 1. Surface
-> 2. U Isocurve
-> 3. V Isocurve
-> 4. UV Coordinate
-> 5. Perpendicular Plane
-> 6. Normal Vector
+> 1. Поверхность
+> 2. Изолиния U
+> 3. Изолиния V
+> 4. Координата UV
+> 5. Перпендикулярная плоскость
+> 6. Вектор нормали
 
-**Surface Domain**: A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).
+**Область поверхности**: определяется как диапазон параметров (U,V), каждый из которых соответствует трехмерной точке на этой поверхности. Область каждого измерения (U или V) обычно определяется двумя числами: (от U мин. до U макс.) и (от V мин. до V макс.).
 
-![Surface](../images/5-2/5/SurfaceParameter.jpg)
+![Поверхность](../images/5-2/5/SurfaceParameter.jpg)
 
-Although the shape of the Surface by not look "rectangular" and it locally may have a tighter or looser set of isocurves, the "space" defined by its domain is always two dimensional. In Dynamo, Surfaces are always understood to have a domain defined by a minimum of 0.0 and maximum of 1.0 in both U and V directions. Planar or trimmed Surfaces may have different domains.
+Хотя поверхность может не выглядеть как прямоугольник, а некоторые ее участки могут отличаться более или менее плотным расположением изолиний, «пространство», определяемое областью поверхности, всегда является двумерным. В Dynamo всегда подразумевается, что область поверхности определяется диапазоном значений U и V, где минимальное значение равно 0.0, а максимальное — 1.0. У плоских или обрезанных поверхностей могут быть разные области.
 
-**Isocurve** (or Isoparametric Curve): A curve defined by a constant U or V value on the surface and a domain of values for the corresponding other U or V direction.
+**Изолиния** (или изопараметрическая кривая): кривая, определяемая постоянным значением для одного направления (U или V) на поверхности и областью значений для другого направления (V или U, соответственно).
 
-**UV Coordinate**: The Point in UV Parameter Space defined by U, V, and sometimes W.
+**Координата UV**: точка в пространстве параметров UV, определяемая значениями U, V и иногда W.
 
-![Surface Coordinate](../images/5-2/5/SurfaceCoordinate.jpg)
+![Координата поверхности](../images/5-2/5/SurfaceCoordinate.jpg)
 
-**Perpendicular Plane**: A Plane that is perpendicular to both U and V Isocurves at a given UV Coordinate.
+**Перпендикулярная плоскость**: плоскость, перпендикулярная изолиниям U и V в заданной координате UV.
 
-**Normal Vector**: A Vector defining the direction of "up" relative to the Perpendicular Plane.
+**Вектор нормали**: вектор, определяющий направление вверх относительно перпендикулярной плоскости.
 
-### NURBS Surfaces
+### Поверхности NURBS
 
-**NURBS Surfaces** are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree.
+**Поверхности NURBS** очень похожи на NURBS-кривые. Такую поверхность можно представить как сетку из NURBS-кривых, идущих в двух направлениях. Форма поверхности NURBS определяется набором управляющих точек и степенью сглаживания этой поверхности в направлениях U и V. Те же алгоритмы используются для вычисления формы, нормалей, касательных, кривизны и других свойств с помощью управляющих точек, весов и степени сглаживания.
 
-![NURBS Surface](../images/5-2/5/NURBSsurface.jpg)
+![Поверхность NURBS](../images/5-2/5/NURBSsurface.jpg)
 
-In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.
+В случае с поверхностями NURBS для геометрии подразумевается два направления, поскольку эти поверхности являются прямоугольными сетками из управляющих точек, хотя они и могут выглядеть совсем по-другому. Эти направления во многих случаях задаются произвольным образом на основе мировой системы координат, однако они часто используются для анализа моделей или создания других геометрических объектов на основе поверхности.
 
-![NURBS Surface](../images/5-2/5/NURBSsurface-Degree.jpg)
+![Поверхность NURBS](../images/5-2/5/NURBSsurface-Degree.jpg)
 
-> 1. Degree (U,V) = (3,3)
-> 2. Degree (U,V) = (3,1)
-> 3. Degree (U,V) = (1,2)
-> 4. Degree (U,V) = (1,1)
+> 1. Степень сглаживания (U,V) = (3,3)
+> 2. Степень сглаживания (U,V) = (3,1)
+> 3. Степень сглаживания (U,V) = (1,2)
+> 4. Степень сглаживания (U,V) = (1,1)
 
-### Polysurfaces
+### Полиповерхности
 
-**Polysurfaces** are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology.
+**Полиповерхности** состоят из нескольких поверхностей, кромки которых соединены. Полиповерхности обеспечивают более детализированные сведения, нежели простое двумерное определение UV, благодаря чему их можно использовать для перехода по соединенным формам посредством их топологии.
 
-While "Topology" generally describes a concept around how parts are connected and/or related Topology in Dynamo is also a type of Geometry. Specifically it is a parent category for Surfaces, Polysurfaces, and Solids.
+Термин «топология» в большинстве случаев используется для обозначения того, как различные элементы связаны и взаимодействуют друг с другом. В Dynamo топология (Topology) также является типом геометрии. Topology является родительской категорией таких объектов, как поверхности (Surface), полиповерхности (Polysurface) и тела (Solid).
 
-![PolySurface](../images/5-2/5/PolySurface.jpg)
+![Полиповерхность](../images/5-2/5/PolySurface.jpg)
 
-Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.
+Объединение поверхностей таким образом (иногда называемым замыканием) позволяет создавать более сложные формы, а также детализировать стыки. К кромкам объекта Polysurface можно применять операции сопряжения или фаски.

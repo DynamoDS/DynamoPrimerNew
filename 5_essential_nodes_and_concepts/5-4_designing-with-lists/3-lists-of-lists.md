@@ -1,292 +1,292 @@
-# Lists of Lists
+# Списки списков
 
-### Lists of Lists
+### Списки списков
 
-Let's add one more tier to the hierarchy. If we take the deck of cards from the original example and create a box which contains multiple decks, the box now represents a list of decks, and each deck represents a list of cards. This is a list of lists. For the analogy in this section, the image below contains a list of coin rolls, and each roll contains a list of pennies.
+Добавим еще один уровень в иерархию. Если взять колоду карт из первого примера и создать рамку, в которой будет находиться несколько колод, то эта рамка будет представлять собой список колод, а каждая колода — список карт. Это и есть список списков. В качестве аналогичного примера для этого раздела ниже представлен список столбиков монет, каждый из которых содержит список монет.
 
-![Coins](../images/5-4/3/coins-521245\_640.jpg)
+![Монеты](../images/5-4/3/coins-521245\_640.jpg)
 
-> Photo by [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
+> Фотография предоставлена [Дори (Dori)](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
 
 ### Query
 
-What **queries** can we make from the list of lists? This accesses existing properties.
+Какие **запросы** доступны в таком списке списков? Таким образом можно вызвать существующие свойства.
 
-* Number of coin types? 2.
-* Coin type values? $0.01 and $0.25.
-* Material of quarters? 75% copper and 25% nickel.
-* Material of pennies? 97.5% zinc and 2.5% copper.
+* Сколько всего типов монет? 2.
+* Какова ценность типов монет? 0,01 долл. США и 0,25 долл. США.
+* Какие материалы используются для изготовления монет номиналом 0,25 долл. США? 75 % меди и 25 % никеля.
+* Какие материалы используются для изготовления цента? 97,5 % цинка и 2,5 % меди.
 
 ### Action
 
-What **actions** can we perform on the list of lists? This changes the list of lists based on a given operation.
+Какие **действия** можно выполнять со списком списков? Они приведут к изменению списка списков в зависимости от конкретной операции.
 
-* Select a specific stack of quarters or pennies.
-* Select a specific quarter or penny.
-* Rearrange the stacks of quarters and pennies.
-* Shuffle the stacks together.
+* Выбрать один столбик из монет номиналом 1 или 25 центов.
+* Выбрать одну монету номиналом 1 или 25 центов.
+* Переупорядочить столбики.
+* Перемешать столбики.
 
-Again, Dynamo has an analagous node for each one of the operations above. Since we're working with abstract data and not physical objects, we need a set of rules to govern how we move up and down the data hierarchy.
+Для каждой из перечисленных выше операций в Dynamo имеется отдельный узел. Поскольку мы работаем с абстрактными данными, а не с физическими объектами, необходимо установить набор правил, определяющих порядок перемещения вверх и вниз по иерархии данных.
 
-When dealing with lists of lists, the data is layered and complex, but this provides an opportunity to do some awesome parametric operations. Let's break down the fundamentals and discuss a few more operations in the lessons below.
+При работе со списками списков данные располагаются по слоям и имеют сложную структуру, но это дает возможность выполнять ряд уникальных параметрических операций. Остановимся подробнее на основных операциях, оставив другие для последующих занятий.
 
-## Exercise
+## Упражнение
 
-### Top-Down Hierarchy
+### Нисходящая иерархия
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
-The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like **List.GetItemAtIndex**, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
+В данном разделе необходимо усвоить один базовый принцип: **Dynamo рассматривает списки как объекты самих себя, расположенные в самих себе**. Эта нисходящая иерархия разработана с учетом объектно-ориентированного программирования. Вместо выбора вложенных элементов с помощью, например, команды **List.GetItemAtIndex** в Dynamo будет выбран индекс основного списка в структуре данных. Этот объект, в свою очередь, может быть другим списком. Рассмотрим этот вопрос подробнее на примере изображения ниже.
 
 ![top-down](<../images/5-4/3/lists of lists - top down hierachy.jpg>)
 
-> 1. With **Code Block**, we've defined two ranges: `0..2; 0..3;`
-> 2. These ranges are connected to a **Point.ByCoordinates** node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
-> 3. Notice that the **Watch** node gives 3 lists with 4 items in each list.
-> 4. When using **List.GetItemAtIndex**, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
+> 1. С помощью узла **Code Block** было задано два диапазона: `0..2; 0..3;`.
+> 2. Эти диапазоны соединены с узлом **Point.ByCoordinates**, а в качестве переплетения выбран вариант _Cross Product_ (векторное произведение). При этом создается сетка точек, а в качестве выходных данных возвращается список списков.
+> 3. Обратите внимание, что узел **Watch** содержит 3 списка с 4 элементами в каждом.
+> 4. При использовании функции **List.GetItemAtIndex** с индексом 0, Dynamo выберет первый список и все его содержимое. Другие программы могут выбрать первый элемент каждого списка в структуре данных, но в Dynamo при работе с данными используется иерархия «сверху вниз».
 
 ### List.Flatten
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/3/Flatten.dyn" %}
 
-Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.
+Функция Flatten удаляет все уровни в структуре данных. Это удобно, если для выполнения операции не требуется наличие иерархий данных, но имеются определенные риски, так как удаляется информация. В примере ниже показан результат выравнивания списка данных.
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 01.jpg>)
 
-> 1. Insert one line of code to define a range in **Code Block**: `-250..-150..#4;`
-> 2. Plugging the _code block_ into the _x_ and _y_ input of a **Point.ByCoordinates** node, we set the lacing to _"Cross Product"_ to get a grid of points.
-> 3. The **Watch** node shows that we have a list of lists.
-> 4. A **PolyCurve.ByPoints** node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four polycurves representing each row in the grid.
+> 1. Вставьте одну строку кода для определения диапазона в узле **Code Block**: `-250..-150..#4;`.
+> 2. При вставке _блока кода_ во входные данные _x_ и _y_ узла **Point.ByCoordinates** в качестве варианта переплетения укажем _Cross Product_ (векторное произведение), чтобы получить сетку точек.
+> 3. Узел **Watch** показывает наличие списка списков.
+> 4. Узел **PolyCurve.ByPoints** создаст ссылки для каждого списка и построит соответствующую сложную кривую. Обратите внимание, что в области предварительного просмотра Dynamo отобразятся четыре сложные кривые, представляющие каждый ряд сетки.
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 02.jpg>)
 
-> 1. By inserting a _flatten_ before the polycurve node, we've created one single list for all of the points. The **PolyCurve.ByPoints** node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.
+> 1. После вставки функции _Flatten_ перед узлом сложной кривой был создан один список для всех точек. Узел **PolyCurve.ByPoints** создает ссылку для списка, чтобы создать одну кривую, а так как все точки находятся в одном списке, получается одна зигзагообразная сложная кривая, которая проходит по всему списку точек.
 
-There are also options for flattening isolated tiers of data. Using the **List.Flatten** node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in **List.Map**. We'll discuss more about **List.Map** below.
+Можно также выровнять изолированные уровни данных. С помощью узла **List.Flatten** можно указать определенное количество уровней данных, выравниваемых от верхнего уровня иерархии. Это очень полезный инструмент при работе со сложными структурами данных, которые могут быть не нужны в рабочем процессе. Еще один вариант — использовать узел Flatten в качестве функции в **List.Map**. Далее мы подробнее обсудим **List.Map**.
 
 ### Chop
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/3/Chop.dyn" %}
 
-When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
+При параметрическом моделировании бывает необходимо изменить структуру данных в существующем списке. С этой целью можно использовать множество других узлов, из которых Chop — самая базовая версия. С помощью функции Chop можно разделить список на вложенные списки с заданным количеством элементов.
 
-The chop command divides lists based on a given list length. In some ways, chop is the opposite of flatten: rather than removing data structure, it adds new tiers to it. This is a helpful tool for geometric operations like the example below.
+Команда Chop (обрезка) делит списки на основе заданной длины списка. В некотором смысле обрезка обратна выравниванию: вместо упрощения структуры данных она добавляет в нее новые уровни. Это удобный инструмент для геометрических операций, таких как в примере ниже.
 
 ![Exercise](<../images/5-4/3/lists of lists - chop.jpg>)
 
 ### List.Map
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/3/Map.dyn" %}
 
-A **List.Map/Combine** applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
+Узел **List.Map/Combine** позволяет применить заданную функцию к списку входных данных, но на один шаг вниз по иерархии. Набор комбинаций аналогичен команде Maps, за исключением наличия нескольких наборов входных данных, соответствующих входным данным заданной функции.
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the_ **List.Map** _functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Примечание. Это упражнение было создано в предыдущей версии Dynamo. Большая часть функциональных возможностей_ **List.Map** _была упразднена с добавлением функции_ **List@Level**_. Дополнительные сведения см. в разделе_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ниже._
 
-As a quick introduction, let's review the **List.Count** node from a previous section.
+В качестве краткого введения рассмотрим узел **List.Count** из предыдущего раздела.
 
-The **List.Count** node counts all of the items in a list. We'll use this to demonstrate how **List.Map** works.
+Узел **List.Count** подсчитывает все элементы в списке. Мы воспользуемся этим для демонстрации работы **List.Map**.
 
 ![](<../images/5-4/3/lists of lists - map 01.jpg>)
 
-> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
+> 1. Вставьте следующие две строки кода в узел **Code Block**: `-50..50..#Nx; -50..50..#Ny;`.
 >
->     After typing in this code, the code block will create two inputs for Nx and Ny.
-> 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the **Code Block**.
-> 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
-> 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
+>    После ввода этих данных блок кода создаст два набора входных данных для Nx и Ny.
+> 2. С помощью двух узлов _Integer Slider_ задайте значения _Nx_ и _Ny_ путем их присоединения к **Code Block**.
+> 3. Соедините каждую строку блока кода с соответствующими входными данными _X_ и _Y_ узла **Point.ByCoordinates**. Щелкните узел правой кнопкой мыши, выберите Lacing (переплетение), а затем _Cross Product_ (векторное произведение). Будет создана сетка точек. Так как мы определили диапазон от -50 до 50, он охватывает сетку Dynamo по умолчанию.
+> 4. Созданные точки отображаются в узле _**Watch**_. Обратите внимание на структуру данных. Мы создали список списков. Каждый список представляет собой ряд точек сетки.
 
 ![Exercise](<../images/5-4/3/lists of lists - map 02 (1).jpg>)
 
-> 1. Attach a **List.Count** node to the output of the watch node from the previous step.
-> 2. Connect a **Watch** node to the **List.Count** output.
+> 1. Вставьте узел **List.Count** в выходные данные узла Watch из предыдущего шага.
+> 2. Соедините узел **Watch** с выходными данными **List.Count**.
 
-Notice that the List.Count node gives a value of 5. This is equal to the "Nx" variable as defined in the code block. Why is this?
+Обратите внимание, что узел List.Count выдает значение 5. Это значение равно переменной Nx, заданной в блоке кода. Почему?
 
-* First, the **Point.ByCoordinates** node uses the "x" input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.
-* Since Dynamo treats lists as objects in and of themselves, a **List.Count** node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.
+* Во-первых, в качестве основного входного параметра для создания списков в узле **Point.ByCoordinates** используется входной параметр x. Если Nx равно 5, а Ny — 3, получается список, состоящий из 5 списков, в каждом из которых содержится 3 элемента.
+* Так как Dynamo рассматривает списки как объекты самих себя, расположенные в самих себе, то узел **List.Count** применяется к основному списку в иерархии. В результате получается значение 5 (количество списков в главном списке).
 
 ![Exercise](<../images/5-4/3/lists of lists - map 03.jpg>)
 
-> 1. By using a **List.Map** node, we take a step down in the hierarchy and perform a _"function"_ at this level.
-> 2. Notice that the **List.Count** node has no input. It is being used as a function, so the **List.Count** node will be applied to every individual list one step down in the hierarchy. The blank input of **List.Count** corresponds to the list input of **List.Map**.
-> 3. The results of **List.Count** now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.
+> 1. С помощью узла **List.Map** спустимся на один шаг вниз по иерархии и на этом уровне выполним _функцию_.
+> 2. Обратите внимание, что узел **List.Count** не имеет входных данных. Так как узел **List.Count** используется в качестве функции, он будет применен к каждому отдельному списку на один шаг вниз по иерархии. Пустые входные данные узла **List.Count** соответствуют входным данным списка в узле **List.Map**.
+> 3. Результаты **List.Count** теперь выдают список из 5 элементов, в каждом из которых имеется значение 3. Это соответствует длине каждого вложенного списка.
 
 ### **List.Combine**
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Примечание. Это упражнение было создано в предыдущей версии Dynamo. Большая часть функциональных возможностей List.Combine была упразднена с добавлением функции_ **List@Level**_. Дополнительные сведения см. в разделе_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ниже._
 
-In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
+В этом упражнении узел **List.Combine** используется, чтобы продемонстрировать, как его с его помощью можно применять функцию к отдельным спискам объектов.
 
-Start by setting up two lists of points.
+Начните с настройки двух списков точек.
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 01.jpg>)
 
-> 1. Use **Sequence** node to generate 10 values, each with a 10 step increment.
-> 2. Connect the result to the x input of a **Point.ByCoordinates** node. This will create a list of points in Dynamo.
-> 3. Add a second **Point.ByCoordinates** node to the workspace, use the same **Sequence** output as its x input, but use an **Interger Slider** as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.
+> 1. Используйте узел **Sequence** для создания 10 значений, каждое с увеличением на 10.
+> 2. Соедините результат с входным параметром «x» узла **Point.ByCoordinates**. В Dynamo будет создан список точек.
+> 3. Добавьте второй узел **Point.ByCoordinates** в рабочее пространство. Используйте тот же выходной параметр **Sequence** в качестве входного параметра x, но добавьте **Interger Slider** в качестве входного параметра y и задайте для него значение 31 (оно может быть любым, если не перекрывается первым набором точек), чтобы два набора точек не перекрывались друг другом.
 
-Next, we will use **List.Combine** to apply a function on objects in 2 separate lists. In this case, it will be a simple draw line function.
+Используйте **List.Combine**, чтобы применить функцию к объектам в 2 отдельных списках. В данном случае это будет простая функция рисования линий.
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 02.jpg>)
 
-> 1. Add **List.Combine** to the workspace and connect the 2 set of points as its list0 & list1 input.
-> 2. Use a **Line.ByStartPointEndPoint** as the input function for **List.Combine**.
+> 1. Добавьте узел **List.Combine** в рабочее пространство и соедините 2 набора точек в качестве входных данных list0 и list1.
+> 2. Используйте узел **Line.ByStartPointEndPoint** в качестве входной функции для узла **List.Combine**.
 
-Once completed, the 2 set of points are zipped/paired together through a **Line.ByStartPointEndPoint** function and returning 10 lines in Dynamo.
+После этого 2 набора точек с помощью функции **Line.ByStartPointEndPoint** архивируются или связываются вместе и в Dynamo возвращаются 10 строк.
 
 {% hint style="info" %}
-Refer to exercise in n-Dimensional Lists to see another example of using List.Combine.
+См. упражнение в многомерных списках для просмотра другого примера использования List.Combine.
 {% endhint %}
 
 ### List@Level
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/3/Listatlevel.dyn" %}
 
-Preferred to **List.Map**, the **List@Level** feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
+В отличие от **List.Map** функция **List@Level** позволяет выбрать необходимый уровень списка непосредственно на входном порте узла. Эту функцию можно применять ко всем поступающим входным данным узлов и получать доступ к уровням списков быстрее, чем при использовании других методов. Просто сообщите узлу, какой уровень списка требуется использовать в качестве входных данных, и он сам сделает все необходимое.
 
-In this exercise, we will use the **List@Level** feature to isolate a specific level of data.
+В этом упражнении с помощью функции **List@Level** изолируется определенный уровень данных.
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 01.jpg>)
 
-We will start with a simple 3D grid of points.
+Начнем с простой 3D-сетки точек.
 
-> 1. The grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.
-> 2. These tiers exist at different **Levels**. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.
-> 3. The list levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
+> 1. Поскольку сетка создается с диапазоном для X, Y и Z, структура данных будет иметь 3 уровня: список X, список Y и список Z.
+> 2. Эти уровни расположены на разной высоте (**уровнях**). Они указаны в нижней части марки предварительного просмотра. Столбцы уровня списка соответствуют данным списка выше, что позволяет быстрее найти нужный уровень.
+> 3. Уровни списка располагаются в обратном порядке, так что данные самого низкого уровня всегда находятся на высоте L1. Благодаря этому графики будут функционировать запланированным образом, даже если что-то изменится в предыдущем алгоритме.
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 02.jpg>)
 
-> 1. To use the **List@Level** function, click '>'. Inside this menu, you will see two checkboxes.
-> 2. **Use Levels** - This enables the **List@Level** functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.
-> 3. _Keep list structure_ – If enabled, you will have the option to keep that input’s level structure. Sometimes, you may have purposefully organized your data into sublists. By checking this option, you can keep your list organization intact and not lose any information.
+> 1. Чтобы использовать функцию **List@Level**, нажмите кнопку «>». В меню отобразятся два флажка.
+> 2. **Используйте уровни**: этот параметр включает функцию **List@Level**. После выбора этого параметра можно с помощью мыши выбрать уровни списка входных данных, которые будут использованы узлом. С помощью этого меню можно быстро проверить различные конфигурации уровней, щелкая мышью выше или ниже.
+> 3. _Сохранить структуру списков_: если установить этот флажок, можно будет сохранить структуру уровней этих входных данных. Иногда данные бывают сознательно разделены по вложенным спискам. Если установить этот флажок, можно сохранить структуру списка неизменной без какой-либо потери информации.
 
-With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each list level and index combination will return a different set of points from our original 3D set.
+Благодаря этой простой 3D-сетке можно получить доступ к структуре списка и визуализировать ее, переключаясь между уровнями списка. Любая комбинация уровня списка и индекса возвращает собственный набор точек из исходного 3D-набора.
 
 ![](<../images/5-4/3/lists of lists - list at level 03.jpg>)
 
-> 1. “@L2” in DesignScript allows us to select only the List at Level 2. The List at Level 2 with the index 0 includes only the first set of Y points, returning only the XZ grid.
-> 2. If we change the Level filter to “L1”, we will be able to see everything in the first List Level. The List at Level 1 with the index 0 includes all of our 3D points in a flat list.
-> 3. If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.
-> 4. If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.
+> 1. С помощью элемента @L2 в DesignScript можно выбрать только список на уровне 2. Список на уровне 2 с индексом 0 включает в себя только первый набор точек Y и возвращает только сетку XZ.
+> 2. Если задать фильтр уровней L1, можно увидеть все содержимое первого уровня списка. Список на уровне 1 с индексом 0 включает в себя все 3D-точки в одноуровневом списке.
+> 3. В аналогичном случае с L3 будут видны только точки третьего уровня списка. Список на уровне 3 с индексом 0 включает в себя только первый набор точек Z и возвращает только сетку XY.
+> 4. В аналогичном случае с L4 будут видны только точки третьего уровня списка. Список на уровне 4 с индексом 0 включает в себя только первый набор точек X и возвращает только сетку YZ.
 
-Although this particular example can also be created with **List.Map**, **List@Level** greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a **List.Map** and **List@Level** methods:
+Несмотря на то что данный конкретный пример можно воссоздать с помощью **List.Map**, функция **List@Level** существенно упрощает операцию и доступ к данным узла. Ниже представлено сравнение методов **List.Map** и **List@Level**.
 
 ![](<../images/5-4/3/lists of lists - list at level 04.jpg>)
 
-> 1. Although both methods will give us access to the same points, the **List@Level** method allows us to easily toggle between layers of data within a single node.
-> 2. To access a point grid with **List.Map**, we will need a **List.GetItemAtIndex** node alongside the **List.Map**. For every list level that we are stepping down, we will need to use an additional **List.Map** node. Depending on the complexity of your lists, this could require you to add a significant amount of **List.Map** Nodes to your graph to access the right level of information.
-> 3. In this example, a **List.GetItemAtIndex** node with a **List.Map** node returns the same set of points with the same list structure as the **List.GetItemAtIndex** with '@L3' selected.
+> 1. Оба метода предоставляют доступ к одним и тем же точкам, однако **List@Level** позволяет легко переключаться между слоями данных в одном узле.
+> 2. Для доступа к сетке точек с помощью **List.Map** требуется добавить узел **List.GetItemAtIndex** в дополнение к **List.Map**. Для каждого нижестоящего уровня списка необходимо использовать дополнительный узел **List.Map**. В некоторых сложных списках для получения доступа к нужному уровню информации требуется включение в график значительного количества узлов **List.Map**.
+> 3. В этом примере узел **List.GetItemAtIndex** с узлом **List.Map** возвращает тот же набор точек и ту же структуру списка, что и **List.GetItemAtIndex** со значением @L3.
 
 ### Transpose
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/3/Transpose.dyn" %}
 
-Transpose is a fundamental function when dealing with lists of lists. Just as in spreadsheet programs, a transpose flips the columns and rows of a data structure. We'll demonstrate this with a basic matrix below, and in the following section, we'll demonstrate how a transpose can be use to create geometric relationships.
+Transpose (транспонирование) — это одна из основных функций при работе со списками списков. Как и в электронных таблицах, при транспонировании происходит перестановка столбцов и строк в структуре данных. Продемонстрируем это с помощью следующей базовой матрицы, а в следующем разделе покажем, как с помощью функции транспонирования создавать геометрические взаимосвязи.
 
 ![Transpose](../images/5-4/3/transpose1.jpg)
 
-Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
+Удалите узлы **List.Count** из предыдущего упражнения и перенесите их на геометрические объекты, чтобы увидеть, как структурированы данные.
 
 ![](<../images/5-4/3/lists of lists - transpose 01.jpg>)
 
-> 1. Connect a **PolyCurve.ByPoints** to the output of the watch node from **Point.ByCoordinates**.
-> 2. The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.
+> 1. Соедините узел **PolyCurve.ByPoints** с выходными данными узла Watch от узла **Point.ByCoordinates**.
+> 2. На выходе отобразятся 5 сложных кривых, которые можно видеть в области предварительного просмотра Dynamo. Узел Dynamo выполняет поиск списка точек (в данном случае — списка списков точек) и создает из них одну сложную кривую. По сути, каждый список в структуре данных преобразован в кривую.
 
 ![](<../images/5-4/3/lists of lists - transpose 02.jpg>)
 
-> 1. A **List.Transpose** node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.
-> 2. Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.
-> 3. Notice the geometric result: using **PolyCurve.ByPoints**, we get 3 polycurves in the perpendicular direction to the original curves.
+> 1. Узел **List.Transpose** переставляет все элементы со всеми списками в списке списков. Это может показаться сложным, но в Microsoft Excel используется точно такая же логическая схема транспонирования данных: перестановка столбцов со строками в структуре данных.
+> 2. Обратите внимание на изменение в списках: после транспонирования структура, состоявшая из 5 списков с 3 элементами, изменилась на 3 списка с 5 элементами в каждом.
+> 3. Кроме того, обратите внимание на изменение в геометрии: использование узла **PolyCurve.ByPoints** привело к появлению 3 сложных кривых в перпендикулярном направлении к исходным кривым.
 
-## Code Block for List Creation
+## Применение Code Block для создания списка
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
+Для определения списка в сокращенном языке узла Code Block используются квадратные скобки (\[]). Это гораздо более быстрый и простой способ создания списков, чем с помощью узла **List.Create**. Узел **Code Block** подробно рассматривается в разделе [Узлы Code Block и DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). На изображении ниже показано, как можно задать список с несколькими выражениями с помощью блока кода.
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 01.jpg>)
 
-#### Code Block Query
+#### Запрос блока кода
 
-**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with code block.
+Для упрощенного выбора определенных элементов, которые требуется извлечь из сложной структуры данных, в сокращенном языке узла **Code Block** используются квадратные скобки (\[]). Узлы **Code Block** подробно рассматриваются в главе [Узлы Code Block и DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). На изображение ниже показано, как запросить список с несколькими типами данных с помощью блока кода.
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 02.jpg>)
 
-## Exercise - Querying and Inserting Data
+## Упражнение «Запрос и вставка данных»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/3/ReplaceItems.dyn" %}
 
-This exercise uses some of the logic established in the previous one to edit a surface. Our goal here is intuitive, but the data structure navigation will be more involved. We want to articulate a surface by moving a control point.
+В этом упражнении для редактирования поверхности используется логическая схема из предыдущего упражнения. Эту задачу можно решить интуитивным способом, однако при этом потребуется дополнительная навигация по структуре данных. Необходимо определить поверхность путем перемещения контрольной точки.
 
-Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.
+Начните со строки узлов выше. Создайте базовую поверхность, которая охватывает всю сетку Dynamo по умолчанию.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 01.jpg>)
 
-> 1. Using **Code Block**, insert these two lines of code and connect to the _u_ and _v_ inputs of **Surface.PointAtParameter**, respectively: `-50..50..#3;` `-50..50..#5;`
-> 2. Be sure to set the Lacing of **Surface.PointAtParameter** to _"Cross Product"_.
-> 3. The **Watch** node show that we have a list of 3 lists, each with 5 items.
+> 1. С помощью узла **Code Block** вставьте следующие две строки кода и соедините их с входными параметрами _u_ и _v_ узла **Surface.PointAtParameter** соответственно: `-50..50..#3;` `-50..50..#5;`.
+> 2. Убедитесь, что для параметра Lacing (переплетение) узла **Surface.PointAtParameter** задано значение _Cross Product_ (векторное произведение).
+> 3. Узел **Watch** показывает, что имеется список из 3 списков, каждый из которых содержит 5 элементов.
 
-In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
+На этом этапе следует запросить центральную точку созданной сетки. Для этого выберите центральную точку в списке посередине. Логично, не так ли?
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 02.jpg>)
 
-> 1. To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.
-> 2. Using **Code Block**, we'll write a basic line of code for querying a list of lists:\
+> 1. Чтобы убедиться в правильности выбора точки, можно щелкнуть элементы узла Watch для проверки правильности выбора элемента.
+> 2. При помощи узла **Code Block** создайте базовую строку кода для запроса списка списков:\
 >    `points[1][2];`
-> 3. Using **Geometry.Translate**, we'll move the selected point up in the _Z_ direction by _20_ units.
+> 3. С помощью функции **Geometry.Translate** переместите выбранную точку вверх в направлении оси _Z_ на _20_ единиц.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 03.jpg>)
 
-> 1. Let's also select the middle row of points with a **List.GetItemAtIndex** node. Note: Similar to a previous step, we can also query the list with **Code Block**, using a line of `points[1];`
+> 1. Кроме того, выберите ряд точек посредине с помощью узла **List.GetItemAtIndex**. Примечание. Как и при выполнении предыдущего шага, можно запросить список с помощью узла **Code Block**, используя строку `points[1];`.
 
-So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
+Итак, мы успешно запросили центральную точку и переместили ее вверх. Теперь необходимо вставить эту перемещенную точку обратно в исходную структуру данных.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 04.jpg>)
 
-> 1. First, we want to replace the item of the list we isolated in a previous step.
-> 2. Using **List.ReplaceItemAtIndex**, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (**Geometry.Translate**).
-> 3. The output shows that we've input the moved point into the middle item of the list.
+> 1. Сначала замените элемент списка, который был изолирован при выполнении предыдущего шага.
+> 2. С помощью узла **List.ReplaceItemAtIndex** замените центральный элемент с помощью индекса _2_ на замещающий элемент, соединенный с перемещенной точкой (**Geometry.Translate**).
+> 3. Выходные данные показывают, что перемещенная точка была вставлена в набор входных данных элемента в середине списка.
 
-Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
+После изменения списка необходимо вставить его обратно в исходную структуру данных — список списков.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 05.jpg>)
 
-> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
-> 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
-> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
+> 1. Используя ту же логическую схему, заменим список в середине на измененный список с помощью узла **List.ReplaceItemAtIndex**.
+> 2. Обратите внимание, что индекс этих двух узлов определяется узлами **Code Block**__ 1 и 2, что соответствует исходному запросу узла **Code Block** (_points\[1]\[2]_).
+> 3. Если выбрать список с помощью _index 1_, то структура данных будет выделена в области предварительного просмотра Dynamo. Итак, мы успешно встроили перемещенную точку в исходную структуру данных.
 
-There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
+Существует множество способов создания поверхности из этого набора точек. В данном случае необходимо создать поверхность за счет лофтинга кривых.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 06.jpg>)
 
-> 1. Create a **NurbsCurve.ByPoints** node and connect the new data structure to create three nurbs curves.
+> 1. Создайте узел **NurbsCurve.ByPoints** и присоедините новую структуру данных для создания трех NURBS-кривых.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 07.jpg>)
 
-> 1. Connect a **Surface.ByLoft** to the output from **NurbsCurve.ByPoints**. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!
+> 1. Соедините узел **Surface.ByLoft** с выходными данными из узла **NurbsCurve.ByPoints**. Получится модифицированная поверхность. Можно изменить исходное значение _Z_ геометрии. Выполните преобразование и посмотрите, как изменится геометрия.

@@ -1,96 +1,96 @@
-# Meshes
+# Сети
 
-## Mesh in Dynamo
+## Сеть в Dynamo
 
-### What is Mesh?
+### Что такое сеть?
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+В сфере вычислительного моделирования [сети](7-meshes.md#mesh) представляют собой одну из наиболее распространенных форм представления 3D-геометрии. Геометрия сети обычно состоит из набора четырехугольников или треугольников. Она может быть простой и гибкой альтернативой работе с поверхностями NURBS. Сети используются во всех областях, от визуализации до цифрового производства и 3D-печати.
 
-### Mesh Elements
+### Элементы сети
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Приложение Dynamo определяет сети, используя структуру данных «грань—вершина». На элементарном уровне эта структура представляет собой набор точек, сгруппированных по полигонам. Точки сети называются вершинами, а полигоны, похожие на поверхности, — гранями.
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+Для создания сети требуется список вершин и система, позволяющая группировать эти вершины в грани, называемая группой индексов.
 
 ![](<../images/5-2/7/meshes - mesh elements.jpg>)
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. Список вершин
+> 2. Список групп индексов для определения граней
 
 ### Mesh Toolkit
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+Возможности работы с сетями в Dynamo можно расширить за счет установки пакета [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. Dynamo Mesh Toolkit содержит инструменты для импорта сетей из внешних файлов в других форматах, создания сетей из геометрических объектов Dynamo и построения сетей вручную по вершинам и индексам.
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+В библиотеке также содержатся инструменты для изменения сетей, восстановления сетей или извлечения горизонтальных срезов для использования в производстве.
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+Посмотрите [примеры работы с Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) на основе данного пакета.
 
 ![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deep Dive into...
+## Углубленное изучение
 
-### Mesh
+### Сеть
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+Сеть — это набор четырехугольников и треугольников, образующих геометрию поверхности или тела. Как и в случае с телами, структура объекта-сети включает в себя вершины, ребра и грани. Существуют свойства, которыми обладают только сети, например нормали.
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![Элементы сети](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. Вершины сети
+> 2. Ребра сети. (Ребра, у которых только одна прилегающая грань, называются открытыми, все остальные ребра являются закрытыми.)
+> 3. Грани сети
 
-### Vertices + Vertex Normals
+### Вершины и нормали вершин
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+Вершины сети представляют собой обычный список точек. Индекс вершин очень важен при создании сети или получении информации о структуре сети. У каждой вершины также есть нормаль (вектор), задающая усредненное направление прилегающих граней и позволяющая определить ориентацию сети «внутрь» или «наружу».
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![Вершины + нормали](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. Вершины
+> 2. Нормали вершин
 
-### Faces
+### Грани
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+Грань представляет собой упорядоченный список из трех или четырех вершин. Таким образом, представление грани сети зависит от положения индексируемых вершин. Благодаря наличию списка вершин, образующих сеть, вместо указания отдельных точек для определения грани достаточно использовать индекс вершин. Это также позволяет использовать одну и ту же вершину в нескольких гранях.
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. Квадратная грань, созданная на основе индексов 0, 1, 2 и 3
+> 2. Треугольная грань, созданная на основе индексов 1, 4 и 2 (обратите внимание, что очередность групп индексов может быть изменена: если очередность следует направлению против часовой стрелки, то грань будет определена правильно)
 
-### Meshes versus NURBS Surfaces
+### Сети и NURBS-поверхности
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+В чем отличие геометрии сети от геометрии NURBS? Когда следует использовать геометрию каждого из этих типов?
 
-#### Parameterization
+#### Параметризация
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+В предыдущей главе мы узнали, что NURBS-поверхности определяются набором NURBS-кривых, идущих в двух направлениях. Эти направления обозначаются как `U` и `V` и позволяют осуществлять параметризацию поверхности NURBS в соответствии с областью определения двумерной поверхности. Сами кривые хранятся на компьютере в виде формул, что позволяет рассчитывать итоговые поверхности с произвольно малой степенью точности. Тем не менее скомбинировать несколько NURBS-поверхностей достаточно сложно. Объединение двух NURBS-поверхностей приведет к созданию сложной поверхности, причем различные сегменты геометрии будут иметь различные параметры UV и определения кривых.
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Управляющие точки](../images/5-2/7/NURBSvsMESH-01.jpg)
 
-> 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
-> 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 1. Поверхность
+> 2. Изопараметрическая кривая
+> 3. Управляющая точка поверхности
+> 4. Управляющей полигон поверхности
+> 5. Изопараметрическая точка
+> 6. Рамка поверхности
+> 7. Сеть
+> 8. Открытое ребро
+> 9. Сетка сети
+> 10. Ребра сети
+> 11. Нормаль вершины
+> 12. Грань сети/нормаль грани сети
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+Сети состоят из дискретного количества точно заданных вершин и граней. Сетка вершин, как правило, не может быть определена простыми координатами `UV`, а так как грани дискретны, степень точности уже встроена в сеть и ее можно изменить только путем уточнения сети и добавления дополнительных граней. Отсутствие математических описаний у сетей обеспечивает гибкость при работе со сложными геометрическими объектами в пределах одной сети.
 
-### Local versus Global Influence
+### Локальное и глобальное влияние
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+Еще одно важное отличие заключается в том, насколько локальные изменения геометрии сети или геометрии NURBS влияют на всю форму. Перемещение одной вершины сети влияет только на грани, прилегающие к этой вершине. В NURBS-поверхностях механизм влияния более сложен и зависит от степени, а также веса и узлов управляющих точек. Однако в целом при перемещении одной управляющей точки на NURBS-поверхности изменения в геометрии будут более сглаженными и масштабными.
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Редактирование](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. NURBS-поверхность: перемещение управляющей точки влияет на всю форму.
+> 2. Геометрия сети: перемещение влияет только на прилегающие элементы.
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+В качестве аналогии можно сравнить векторное изображение (состоящее из отрезков и кривых) с растровым изображением (состоящим из отдельных пикселей). При увеличении векторного изображения кривые остаются плотными и четкими, а при увеличении растрового изображения увеличивается размер отдельных пикселей. В этом случае NURBS-поверхности можно сравнить с векторным изображением, так как здесь работает плавная математическая связь, а сеть ведет себя так же, как растровое изображение с заданным разрешением.
 
 ##

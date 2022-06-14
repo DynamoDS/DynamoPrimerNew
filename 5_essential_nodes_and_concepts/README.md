@@ -1,8 +1,8 @@
-# Essential Nodes & Concepts
+# Основные узлы и понятия
 
-In this section, we introduce the essential Nodes available in the Dynamo Library that will help you create your own visual program like a pro.
+В этом разделе рассматриваются основные узлы, доступные в библиотеке Dynamo, которые помогут создать собственную визуальную программу на профессиональном уровне.
 
-* [Geometry for Computational Design](5-2\_geometry-for-computational-design/): How do I work with geometric elements in Dynamo? Explore multiple ways to create simple or complex geometries from primitives.
-* [The Building Blocks of Programs:](5-3\_the-building-blocks-of-programs/) What is "Data" and what are some fundamental types I can start using in my programs? Also, learn more about incorporating math and logic operations in your design workflow.
-* [Designing with Lists: ](5-4\_designing-with-lists/)How do I manage and coordinate my data structures? Understand more about the concept of List and use it to manage your design data efficiently.
-* [Dictionaries in Dynamo: ](5-5\_dictionaries-in-dynamo/)What are Dictionaries? Find out how to use dictionaries to look up specific data and values from existing results.
+* [Геометрия для вычислительного проектирования](5-2\_geometry-for-computational-design/): принципы работы с геометрическими элементами в Dynamo. Изучите несколько способов создания простых или сложных геометрий на основе примитивов.
+* [Компоновочные блоки программ](5-3\_the-building-blocks-of-programs/): сведения о том, что такое данные и каковы основные типы данных, которые можно использовать в программе. Узнаете больше о том, как внедрять математические и логические операции в рабочий процесс проектирования.
+* [Проектирование на основе списков](5-4\_designing-with-lists/): сведения о том, как управлять структурами данных и координировать их. Узнайте больше о понятии списка и используйте его для эффективного управления проектными данными.
+* [Словари в Dynamo:](5-5\_dictionaries-in-dynamo/) сведения о том, что такое словари. Узнайте, как использовать словари для поиска конкретных данных и значений из набора существующих результатов.

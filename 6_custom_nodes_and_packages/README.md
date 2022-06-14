@@ -1,5 +1,5 @@
-# Custom Nodes & Packages
+# Пользовательские узлы и пакеты
 
-Out of the box, Dynamo has a lot of functionality stored in its Library of Nodes. For those frequently used routines or that special graph you want to share with the community, Custom Nodes & Packages are a great way to extend Dynamo even further.
+Готовые узлы, доступные в библиотеке Dynamo, поддерживают широкий спектр функциональных возможностей. Если требуются дополнительные возможности, например для внедрения повторяющихся процедур или разработки особого графика для демонстрации коллегам, в Dynamo можно создать собственные пользовательские узлы и пакеты.
 
 ![](./images/customNodes\_cover01.jpg)

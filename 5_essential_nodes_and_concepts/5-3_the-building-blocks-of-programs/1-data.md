@@ -1,130 +1,130 @@
-# Data
+# Данные
 
-Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+Данные — это содержимое программы. Они передаются по проводам, предоставляя входные значения узлам, в которых затем обрабатываются и преобразуются в выходные данные новой формы. Давайте рассмотрим определение данных и их структуру, а затем начнем работу с данными в Dynamo.
 
-## What is Data?
+## Что такое данные?
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
+Данные — это набор значений количественных и качественных переменных. Самая простая форма данных — это числа, например `0`, `3.14` и `17`. Однако существуют и другие типы данных: переменные, представляющие меняющиеся числа (`height`); символы (`myName`); геометрические объекты (`Circle`); список элементов данных (`1,2,3,5,8,13,...`).
 
-In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+В Dynamo данные добавляются (или передаются) в порты ввода узлов. Данные могут существовать без действий, однако они необходимы для обработки действий, которые представлены в форме узлов. Если узел добавлен в рабочее пространство, но не имеет входных данных, результатом будет функция, а не результат самого действия.
 
 ![Data and Actions](<../images/5-3/1/data - what is data.jpg>)
 
-> 1. Simple Data
-> 2. Data and Action (A Node) successfully executes
-> 3. Action (A Node) without Data Inputs returns a generic function
+> 1. Простые данные
+> 2. Данные и действие (узел), которое успешно выполняется.
+> 3. Действие (узел) без входных данных возвращает типовую функцию.
 
-### Null - Absence of Data
+### Null — отсутствие данных
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
+Остерегайтесь значений null. Тип `'null'` указывает на отсутствие данных. Это абстрактное понятие, с которым можно, тем не менее, столкнуться при визуальном программировании. Если результат действия недопустим, узел возвращает нулевой объект.
 
-Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+Проверка наличия нулевых объектов и их удаление из структуры данных крайне важны для создания надежных программ.
 
-| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| Значок | Имя/синтаксис | Входные данные | Выходные данные |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj | bool |
 
-### Data Structures
+### Структуры данных
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
+При визуальном программировании можно очень быстро генерировать большие объемы данных, поэтому необходимы средства для управления их иерархией. Эту роль выполняют структуры данных — организационные схемы, в которых хранятся данные. Особенности структур данных и их использования зависят от языка программирования.
 
-In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+В Dynamo для построения иерархии данных используются списки. Они будут подробнее рассмотрены в следующих главах, пока же приведем только общие сведения.
 
-A list represents a collection of items placed into one structure of data:
+Список — это набор элементов, размещенных в одной структуре данных:
 
-* I have five fingers (_items_) on my hand (_list_).
-* There are ten houses (_items_) on my street (_list_).
+* У меня пять пальцев (_элементы_) на руке (_список_).
+* На моей улице (_список_) десять домов (_элементы_).
 
 ![List Breakdown](<../images/5-3/1/data - data structures.jpg>)
 
-> 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 1. Узел **Number Sequence** определяет список чисел на основе входных данных _start_, _amount_ и _step_. С помощью этих узлов было создано два отдельных списка из десяти чисел, один из которых охватывает диапазон _100–109_, а другой — _0–9_.
+> 2. Узел **List.GetItemAtIndex** позволяет выбрать элемент в списке по определенному индексу. При выборе значения _0_ будет получен первый элемент в списке (в данном случае — _100_).
+> 3. Та же процедура применительно ко второму списку дает значение _0_ — первый элемент в списке.
+> 4. Объединим оба списка в один с помощью узла **List.Create**. Обратите внимание, что узел создает _список списков._ Это меняет структуру данных.
+> 5. При повторном использовании узла **List.GetItemAtIndex** с индексом _0_ получаем первый список в списке списков. Это означает, что список рассматривается как элемент, в чем и состоит отличие от других языков программирования. В последующих главах операции со списками и структуры данных будут рассмотрены подробнее.
 
-The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
+Главное, что следует помнить об иерархии данных в Dynamo — **в случае со структурой данных списки рассматриваются как элементы.** Другими словами, в Dynamo структура данных рассматривается сверху вниз. Что это означает? Рассмотрим пример.
 
-## Exercise: Using Data to Make a Chain of Cylinders
+## Упражнение «Использование данных для создания цепочки цилиндров»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+В первом примере создадим цилиндр с оболочкой, пройдя по ступеням геометрической иерархии, описанной в этом разделе.
 
-### Part I: Set up Graph for one cylinder with some changeable parameters.
+### Часть I. Настройка графика для одного цилиндра с набором изменяемых параметров
 
-1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+1. Добавьте узел **Point.ByCoordinates**. После его добавления в рабочую область в начале координат сетки предварительного просмотра Dynamo появляется точка. Значения по умолчанию для выходных параметров _x,y_ и _z_ равны _0,0_. В этом месте и была создана точка.
 
 ![](<../images/5-3/1/data - exercise step 1.jpg>)
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+2\. **Plane.ByOriginNormal.** Следующий шаг в построении геометрической иерархии — плоскость. Существует несколько способов построения плоскости. В этом случае в качестве входных данных используется начало координат и нормаль. Начало координат — это узел-точка, созданный в предыдущем шаге.
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis.** Построение унифицированного вектора в направлении Z. Обратите внимание, что входные данные отсутствуют, а есть только вектор со значением \[0,0,1]. Он будет использоваться в качестве входных данных _нормали_ для узла **Plane.ByOriginNormal**. В результате получается прямоугольная плоскость в области предварительного просмотра Dynamo.
 
 ![](<../images/5-3/1/data - exercise step 2.jpg>)
 
-3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+3\. **Circle.ByPlaneRadius.** Продвигаясь вверх по иерархии, создадим кривую из плоскости, полученной в предыдущем шаге. После соединения с узлом получаем окружность в начале координат. По умолчанию радиус в узле имеет значение _1_.
 
 ![](<../images/5-3/1/data - exercise step 3.jpg>)
 
-4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+4\. **Curve.Extrude.** Теперь выполним выдавливание фигуры, задав глубину и двигаясь в третьем измерении. Этот узел создает поверхность из кривой путем выдавливания. По умолчанию расстояние в узле равно _1_, а на видовом экране должен отображаться цилиндр.
 
 ![](<../images/5-3/1/data - exercise step 4.jpg>)
 
-5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+5\. **Surface.Thicken.** Этот узел создает замкнутое тело путем смещения поверхности на заданное расстояние и замыкания формы. По умолчанию значение толщины равно _1_, а на видовом экране в соответствии с этими значениями отображается цилиндр с оболочкой.
 
 ![](<../images/5-3/1/data - exercise step 5.jpg>)
 
-6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+6\. **Number Slider.** Вместо использования в качестве значений по умолчанию для входных данных добавим в модель параметрические элементы управления.
 
-**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**Редактирование области.** После добавления регулятора чисел в рабочую область щелкните значок в левом верхнем углу окна, чтобы отобразить параметры области.
 
-**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+**Min/Max/Step.** Задайте для _min_, _max_ и _step_ значения _0_,_2_ и _0.01_ соответственно. Это необходимо для управления размером всего геометрического объекта.
 
 ![](<../images/5-3/1/data - exercise step 6.gif>)
 
-7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+7\. **Регуляторы чисел.** Вместо входных значений по умолчанию скопируйте и вставьте этот регулятор чисел (выберите его, нажмите CTRL + C, затем CTRL + V), пока во всех входных параметрах со значениями по умолчанию не будут заданы регуляторы. Чтобы алгоритм действовал, некоторые значения регуляторов должны быть больше нуля (например, для увеличения толщины поверхности требуется глубина выдавливания).
 
 ![](<../images/5-3/1/data - exercise step 7a.gif>)
 
 ![](<../images/5-3/1/data - exercise step 7b.gif>)
 
-8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+8\. В итоге с помощью регуляторов создан параметрический цилиндр с оболочкой. Попробуйте изменить некоторые из параметров, наблюдая за динамическим обновлением геометрических объектов на видовом экране Dynamo.
 
 ![](<../images/5-3/1/data - exercise step 8a.gif>)
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**Регуляторы чисел.** На следующем этапе мы добавили в рабочую область множество регуляторов, и теперь необходимо очистить интерфейс только что созданного инструмента. Щелкните один регулятор правой кнопкой мыши и выберите «Переименовать...». Замените имя каждого регулятора именем соответствующего параметра (толщина, радиус, высота и т. п.).
 
 ![](<../images/5-3/1/data - exercise step 8b step.jpg>)
 
-### Part II: Populate an array of cylinders from Part I
+### Часть II. Заполнение массива цилиндров из части I
 
-9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+9\. На данный момент создан цилиндр с толстыми стенками. Пока это только один объект. Теперь рассмотрим, как создать массив цилиндров, которые динамически связаны друг с другом. Для этого вместо одного объекта создадим список цилиндров.
 
-**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+**Добавление (+).** Наша цель — добавить ряд цилиндров возле уже имеющегося цилиндра. При вставке еще одного цилиндра рядом с текущим необходимо учитывать радиус цилиндра и толщину его оболочки. Это число можно получить, сложив два значения регуляторов.
 
 ![](<../images/5-3/1/data - exercise step 9.jpg>)
 
-10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+10\. Это более сложный шаг, поэтому рассмотрим его подробнее. Конечная цель — создать список чисел, определяющих местоположение каждого цилиндра в последовательности.
 
 ![](<../images/5-3/1/data - exercise step 10.jpg>)
 
-> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+> a. **Умножение**. Сначала умножим значение из предыдущего шага на 2. Это было значение радиуса, а цилиндр необходимо переместить на полный диаметр.
 >
-> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+> b. **Number Sequence**. С помощью этого узла создайте массив чисел. Сначала вставим узел _умножения_ из предыдущего шага в качестве значения _step_. В качестве значения _start_ можно указать _0.0_, используя узел _number_.
 >
-> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+> c. **Integer Slider**. Чтобы задать значение _amount_, присоедините регулятор целых чисел. Он будет определять количество создаваемых цилиндров.
 >
-> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+> d. **Выходные данные**. В этом списке показано расстояние смещения каждого цилиндра в массиве, которое управляется параметрически с помощью первоначальных регуляторов.
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. Этот шаг достаточно прост: соедините последовательность из предыдущего шага с входным параметром _x_ исходного узла **Point.ByCoordinates**. При этом регулятор _pointX_ будет заменен и его можно удалить. Теперь на видовом экране отображается массив цилиндров (убедитесь, что регулятор целых чисел имеет значение больше 0).
 
 ![](<../images/5-3/1/data - exercise step 11.gif>)
 
-12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+12\. Цепь цилиндров по-прежнему динамически связана со всеми регуляторами. Перемещайте регуляторы и вы увидите, как изменится картина.
 
 ![](<../images/5-3/1/data - exercise step 12.gif>)

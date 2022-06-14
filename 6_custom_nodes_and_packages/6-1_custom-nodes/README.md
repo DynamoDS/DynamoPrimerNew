@@ -1,6 +1,6 @@
-# Custom Nodes
+# Пользовательские узлы
 
-Dynamo offers many Core Nodes for a wide range of visual programming tasks. Sometimes a quicker, more elegant, or more easily shared solution is to build your own Nodes. These can be reused among different projects, they make your graphs clearer and cleaner, and they can be pushed to the package manager and shared with the global Dynamo community.
+В Dynamo доступно большое количество базовых узлов, позволяющих решать широкий спектр задач визуального программирования. Однако иногда создание пользовательских узлов позволяет прийти к более быстрому, оригинальному или удобному для совместного использования решению. Такие узлы можно многократно использовать в разных проектах, они помогают упростить и очистить график. Опубликовав их в Package Manager, этими узлами можно поделиться с другими пользователями Dynamo по всему миру.
 
 ![](<../images/6-1/customNodes1 (1).png>)
 

@@ -1,80 +1,80 @@
-# User Interface
+# Пользовательский интерфейс
 
-### User Interface Overview
+### Обзор пользовательского интерфейса
 
-The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in the following sections.
+Пользовательский интерфейс Dynamo разделен на пять основных областей. В следующих разделах подробно рассматривается рабочее пространство и библиотека.
 
 ![](<images/user interface - ui.jpg>)
 
-> 1. Menus
-> 2. Toolbar
-> 3. Library
-> 4. Workspace
-> 5. Execution bar
+> 1. Меню
+> 2. Панель инструментов
+> 3. Библиотека
+> 4. Рабочее пространство
+> 5. Панель выполнения
 
-### Menus
+### Меню
 
 ![](<images/user interface - menu.jpg>)
 
-Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
+Здесь приведены меню с основными функциями приложения Dynamo. Как и в большинстве программ Windows, первые два меню связаны с управлением файлами, операциями выбора и редактированием содержимого. В остальных меню содержатся функции, присущие именно Dynamo.
 
-#### Dynamo Menus
+#### Меню Dynamo
 
-General info and settings can be found on the **Dynamo** drop down menu.
+Общие сведения и параметры можно найти в раскрывающемся меню **Dynamo**.
 
 ![](<images/user interface - dynamo menu.jpg>)
 
-> 1. About - Find out the Dynamo version installed on your machine.
-> 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
-> 3. Preferences - Includes settings such as define the application's decimal point precision and geometry render quality.
-> 4. Exit Dynamo
+> 1. О программе: данные о версии Dynamo, установленной на компьютере.
+> 2. Соглашение о сборе данных об использовании: возможность принять участие в обмене пользовательскими данными для улучшения работы Dynamo или отказаться от него.
+> 3. Настройки: параметры, такие как точность десятичных знаков в приложении и качество визуализации геометрии.
+> 4. Выход из Dynamo
 
-#### Help
+#### Справка
 
-If you're stuck, check out the **Help** Menu. You may access one of the Dynamo reference websites through your internet browser.
+При возникновении вопросов по работе программы можно воспользоваться меню **Справка**. Справочные веб-сайты Dynamo можно открыть в веб-браузере.
 
 ![](<images/user interface - help menu.jpg>)
 
-> 1. Getting Started - A brief introduction to using Dynamo.
-> 2. Interactive Guides -
-> 3. Samples - Reference example files.
-> 4. Dynamo Dictionary - Resource with documentation on all nodes.
-> 5. Dynamo Website - View the Dynamo Project on GitHub.
-> 6. Dynamo Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
-> 7. Display Start Page - Return to the Dynamo start page when within a document.
-> 8. Report A Bug - Open an Issue on GitHub.
+> 1. «Начало работы»: краткое введение в работу с приложением Dynamo.
+> 2. Интерактивные руководства.
+> 3. «Образцы»: файлы примеров для справки.
+> 4. «Словарь Dynamo»: ресурс с документацией по всем узлам.
+> 5. «Веб-сайт Dynamo»: просмотр проекта Dynamo на GitHub.
+> 6. «Проект Dynamo Wiki»: переход на страницу справки Wiki, посвященную методам разработки с помощью API Dynamo, вспомогательных библиотек и инструментов.
+> 7. «Показ начальной страницы»: возврат на начальную страницу Dynamo при работе с документом.
+> 8. «Отчет об ошибке»: создание инцидента на веб-сайте GitHub.
 
-### Toolbar
+### Панель инструментов
 
-Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
+Панель инструментов Dynamo содержит ряд кнопок для быстрого доступа к файлам, а также команды «Отменить» \[CTRL + Z] и «Повторить» \[CTRL + Y]. Справа находится еще одна кнопка, с помощью которой можно экспортировать снимок рабочего пространства, что часто требуется при создании документации и обмене данными.
 
-* ![](<images/user interface - new file.jpg>) New - Create a new .dyn file
-* ![](<images/user interface - open (1).jpg>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
-* ![](<images/user interface - save.jpg>) Save/Save As - Save your active .dyn or .dyf file
-* ![](<images/user interface - undo.jpg>) Undo - Undo your last action
-* ![](<images/user interface - redo.jpg>) Redo - Redo the next action
-* ![](<images/user interface - screenshot.jpg>) Export Workspace as Image - Export the visible workspace as a PNG file
+* ![](<images/user interface - new file.jpg>) Создать: создать файл DYN.
+* ![](<images/user interface - open (1).jpg>) Открыть: открыть существующий файл DYN (рабочее пространство) или DYF (пользовательский узел).
+* ![](<images/user interface - save.jpg>) Сохранить/Сохранить как: сохранить активный файл DYN или DYF
+* ![](<images/user interface - undo.jpg>) Отменить: отмена последней операции.
+* ![](<images/user interface - redo.jpg>) Повторить: повтор последующей операции.
+* ![](<images/user interface - screenshot.jpg>) Экспорт рабочего пространства в виде изображения: экспорт видимого рабочего пространства в файл PNG.
 
-### Library
+### Библиотека
 
-The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [2-library.md](2-library.md "mention") section will cover a more detailed guidance on using it.
+Библиотека Dynamo — это набор функциональных библиотек, каждая из которых содержит узлы, сгруппированные по категориям. Она содержит базовые библиотеки, которые добавляются при установке Dynamo по умолчанию. В рамках этой процедуры мы продолжим знакомство с ее использованием. Мы рассмотрим, как расширить базовые функции с помощью пользовательских узлов и дополнительных пакетов. В разделе [2-library.md](2-library.md "mention") содержатся подробные инструкции по использованию.
 
 ![](<images/user interface - library.jpg>)
 
-### Workspace
+### Рабочее пространство
 
-The Workspace is where we compose our visual programs, you may also change its Preview setting to view the 3D geometries from here. Refer [1-workspace.md](1-workspace.md "mention") for more details.
+Рабочее пространство позволяет создавать визуальные программы и изменять настройки предварительного просмотра для отображения 3D-геометрии. Дополнительные сведения см. в разделе [1-workspace.md](1-workspace.md "mention").
 
 ![](<images/user interface - workspace.gif>)
 
-### Execution Bar
+### Панель выполнения
 
-Run your Dynamo script from here. Click the dropdown icon on the Execution button to change between the different modes.
+Обеспечивает запуск сценария Dynamo. Щелкните значок раскрывающегося списка на кнопке «Выполнение», чтобы переключиться между различными режимами.
 
 ![](<images/user interface - execution bar.gif>)
 
-* Automatic: Runs your script automatically. Changes is updated in realtime.
-* Manual: Script only runs when the 'Run' button is clicked. Useful for when making changes to complicated and 'heavy script'
-* Periodic: This option is grayed out by default. Only available when the DateTime.Now Node is used. You can set the graph to run automatically at a specified interval.
+* Автоматически: сценарий запускается автоматически. Изменения обновляются в реальном времени.
+* Вручную: сценарий выполняется только при нажатии кнопки «Выполнить». Используется при внесении изменений в сложный и крупный сценарий.
+* Периодически: этот параметр по умолчанию неактивен. Доступно только при использовании узла DateTime.Now. Можно настроить автоматическое выполнение графика с заданным интервалом.
 
 ![](<images/user interface - execution bar DateTime node.jpg>)

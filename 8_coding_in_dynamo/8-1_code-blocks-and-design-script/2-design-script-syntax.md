@@ -1,142 +1,142 @@
-# DesignScript Syntax
+# Синтаксис DesignScript
 
-You may have noticed a common theme in the names of nodes in Dynamo: each node uses a _"."_ syntax without spaces. This is because the text at the top of each node represents the actual syntax for scripting, and the _"."_ (or _dot notation_) separates an element from the possible methods we can call. This creates an easy translation from visual scripting to text-based scripting.
+Возможно, вы уже заметили закономерность в именах узлов Dynamo: каждое из них состоит из слов, разделенных точкой (_«.»_) без пробелов. Это связано с тем, что текст в верхней части каждого узла представляет собой фактический синтаксис для создания сценариев, а символ _«.»_ (или _запись через точку_) отделяет элемент от доступных методов, которые можно вызвать. Это позволяет легко переходить от визуальных сценариев к текстовым.
 
 ![NodeNames](../images/8-1/2/apple.jpg)
 
-As a general analogy for the dot notation, how can we deal with a parametric apple in Dynamo? Below are a few methods we'll run on the apple before deciding to eat it. (Note: these are not actual Dynamo methods):
+В качестве примера использования записи через точку рассмотрим возможные действия с параметрическим яблоком в Dynamo. Ниже представлены несколько методов, которые можно применить к яблоку, перед тем как съесть (разумеется, на самом деле этих методов в Dynamo не существует, не ищите).
 
-| Human Readible                 | Dot Notation              | Output |
+| На языке пользователя | Запись через точку | Вывод |
 | ------------------------------ | ------------------------- | ------ |
-| What color is the apple?       | Apple.color               | red    |
-| Is the apple ripe?             | Apple.isRipe              | true   |
-| How much does the apple weigh? | Apple.weight              | 6 oz.  |
-| Where did the apple come from? | Apple.parent              | tree   |
-| What does the apple create?    | Apple.children            | seeds  |
-| Is this apple locally grown?   | Apple.distanceFromOrchard | 60 mi. |
+| Какого цвета яблоко? | Apple.color | Красный |
+| Яблоко зрелое? | Apple.isRipe | true |
+| Сколько весит это яблоко? | Apple.weight | 170 г |
+| Откуда взялось это яблоко? | Apple.parent | дерево |
+| Что останется после яблока? | Apple.children | семена |
+| Это яблоко выращено недалеко отсюда? | Apple.distanceFromOrchard | 96,5 км |
 
-I don't know about you, but judging by the outputs in the table above, this looks like one tasty apple. I think I'll _Apple.eat()_ it.
+Судя по данным в таблице выше, это очень вкусное яблоко. Я бы его с удовольствием _Apple.eat()_.
 
-### Dot Notation in Code Block
+### Запись через точку в узлах Code Block
 
-With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block.
+Используя аналогию с яблоком, рассмотрим узел _Point.ByCoordinates_ и процесс создания точки с помощью узла Code Block.
 
-The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
+Синтаксис _Code Block_ `Point.ByCoordinates(0,10);` позволяет получить тот же результат, что и узел _Point.ByCoordinates_ в Dynamo, но его преимущество состоит в том, что для создания точки требуется лишь один узел. Это проще и эффективнее, чем соединять отдельный узел с портами ввода _X_ и _Y_.
 
 ![](<../images/8-1/2/codeblock dot notation.jpg>)
 
-> 1. By using _Point.ByCoordinates_ in the code block, we are specifying the inputs in the same order as the out-of-the-box node _(X,Y)_.
+> 1. Используя синтаксис _Point.ByCoordinates_ в узле Code Block, необходимо указать входные данные в том же порядке, что и в готовом узле _(X,Y)_.
 
-### Calling Nodes - Create, Actions, Query
+### Вызов узлов Create, Actions, Query
 
-You can call any regular node in the library through a Code Block as long as the node isn’t a special _“UI” node_: those with a special user interface feature. For instance, you can call _Circle.ByCenterPointRadius_, but it wouldn’t make much sense to call a _Watch 3D_ node.
+С помощью узла Code Block можно вызвать любой стандартный узел библиотеки, кроме _узлов пользовательского интерфейса_, обладающих особыми функциями для пользовательского интерфейса. Например, можно вызвать узел _Circle.ByCenterPointRadius_, а вот вызывать узел _Watch 3D_ не стоит.
 
-Regular nodes (most of your library), generally come in three types. You’ll find that the library is organized with these categories in mind. Methods, or nodes, of these three types are treated differently when invoked within a Code Block.
+Стандартные узлы, которых в библиотеке большинство, делятся на три типа. Как вы видите, вся библиотека упорядочена с учетом этих категорий. Методы (или узлы) этих трех типов обрабатываются иначе при вызове с помощью Code Block.
 
 ![](<../images/8-1/2/action create query category.jpg>)
 
-> 1. **Create** - Create (or construct) something
-> 2. **Action** - Perform an action on something
-> 3. **Query** - Get a property of something that already exists
+> 1. **Create** — узлы, позволяющие создавать или конструировать что-либо.
+> 2. **Action** — узлы для выполнения действий с чем-либо.
+> 3. **Query** — узлы для получения свойства существующего объекта.
 
 #### Create
 
-The "Create" category will construct geometry from scratch. We input values in the code block from left-to-right. These inputs are in the same order as the inputs on the node from top-to-bottom.
+Категория Create позволяет создавать геометрию с нуля. Значения вводятся в Code Block слева направо. Они располагаются в том же порядке, что и порты ввода в узле (сверху вниз).
 
-Comparing the _Line.ByStartPointEndPoint_ node and the corresponding syntax in the code block, we get the same results.
+При сравнении узла _Line.ByStartPointEndPoint_ и соответствующего синтаксиса в узле Code Block мы получаем один и тот же результат.
 
 ![](../images/8-1/2/create.jpg)
 
 #### Action
 
-An action is something you do to an object of that type. Dynamo uses _dot notation_, common to many coding languages, to apply an action to a thing. Once you have the thing, type a dot then the name of the action. The action-type method’s input is placed in parentheses just like create-type methods, only you don’t have to specify the first input you see on the corresponding node. Instead, we specify the element upon which we are performing the action:
+Действие — это операция, выполняемая с объектами определенного типа. Для применения действий к объектам в Dynamo используется _запись через точку_, что является распространенным принципом для многих языков программирования. Если у вас есть объект, введите его название, затем точку, а затем название действия, которое с этим объектом нужно выполнить. Входные данные для метода этого типа помещаются в скобки, как и при использовании методов Create, однако для него не требуется указывать первые входные данные, которые отображаются в соответствующем узле. Вместо этого требуется указать элемент, с которым будет выполняться действие:
 
 ![](<../images/8-1/2/DesignScript - action.jpg>)
 
-> 1. The **Point.Add** node is an action-type node, so the syntax works a little differently.
-> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a **Code Block**, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the **Point.Add** node minus the first one. The first input for the **Point.Add** node is the point itself.
+> 1. Поскольку узел **Point.Add** представляет собой узел типа Action, его синтаксис работает несколько иначе.
+> 2. Входные данные включают (1) _точку_ и (2) _вектор_, который требуется к ней добавить. В синтаксисе узла **Code Block** точка (объект) обозначена как _pt_. Чтобы добавить вектор (\*vec \*) к точке (_pt_), нужно ввести _pt.Add(vec)_, то есть «объект, точка, действие». Для операции добавления используются все порты ввода узла **Point.Add**, кроме первого. Первый порт ввода узла **Point.Add** — это сама точка.
 
 #### Query
 
-Query-type methods get a property of an object. Since the object itself is the input, you don’t have to specify any inputs. No parentheses required.
+Методы типа Query позволяют получить свойство объекта. Указывать какие-либо входные данные в этом случае не требуется, так как входными данными является сам объект. Скобки также не нужны.
 
 ![](../images/8-1/2/query.jpg)
 
-### How About Lacing?
+### Использование переплетения
 
-Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.
+Переплетение при использовании узлов отличается от переплетения с помощью Code Block. В первом случае пользователь щелкает узлы правой кнопкой мыши и выбирает параметр переплетения, который требуется применить. При работе с Code Block у пользователя есть гораздо больше возможностей для управления структурой данных. При объединении нескольких одномерных списков в пары с помощью собирательного метода Code Block используются _руководства по репликации_. Цифры в угловых скобках «<>» определяют уровень иерархии итогового вложенного списка: <1>, <2>, <3> и т. д.
 
 ![](<../images/8-1/2/DesignScript - lacing.jpg>)
 
-> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7`is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a Cross Product).
-> 2. Using the syntax **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` we get _two_ lists with _five_ items in each list.
-> 3. Using the syntax **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` we get _five_ lists with _two_ items in each list.
+> 1. В этом примере мы используем собирательный метод для определения двух диапазонов (подробнее о собирательном методе можно узнать в следующем разделе этой главы). Проще говоря, `0..1;` эквивалентно `{0,1}`, а `-3..-7` эквивалентно `{-3,-4,-5,-6,-7}`. В результате мы получаем список из двух значений X и пяти значений Y. Если работать с этими несогласованными списками без руководств по репликации, то будет получен список, содержащий две точки, что соответствует длине кратчайшего списка. Использование руководств по репликации позволяет найти все возможные сочетания двух и пяти значений координат (а точнее, их векторное произведение).
+> 2. Синтаксис **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` позволяет получить _два_ списка с _пятью_ элементами в каждом.
+> 3. Синтаксис **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` позволяет получить _пять_ списков с _двумя_ элементами в каждом.
 
-With this notation, we can also specify which list will be dominant: 2 lists of 5 things or 5 lists of 2 things. In the example, changing the order of the replication guides makes the result a list of rows of points or a list of columns of points in a grid.
+Такой способ записи позволяет указать, какой список будет основным: два списка из пяти элементов или пять списков из двух. В этом примере результат будет представлять собой список строк точек или список столбцов точек в сетке в зависимости от изменения порядка руководств по репликации.
 
-### Node to Code
+### Узел для кодировки
 
-While the code block methods above may take some getting used to, there is a feature in Dynamo called "Node to Code" which will make the process easier. To use this feature, select an array of nodes in your Dynamo graph, right-click on the canvas and select "Node to Code". Dynamo condenses these nodes into a code block, with all of the inputs and outputs! Not only is this a great tool for learning code block, but it also allows you to work with a more efficient and parametric Dynamo graph. We'll conclude the exercise below by using "Node to Code", so don't miss it.
+Чтобы овладеть описанными выше методами работы с Code Block, требуется определенное время. Функция «Узел для кодировки» Dynamo значительно упрощает этот процесс. Чтобы использовать эту функцию, выберите массив узлов в графике Dynamo, щелкните правой кнопкой мыши в рабочей области и выберите «Узел для кодировки». Программа Dynamo объединяет эти узлы в единый узел Code Block, содержащий все входные и выходные данные. Это не только отличный инструмент для изучения принципов работы узлов Code Block, но также он позволяет создавать с более эффективные параметрические графики Dynamo. Рекомендуем выполнить упражнение ниже, так как в нем используется функция «Узел для кодировки».
 
 ![](<../images/8-1/2/DesignScript - node to code.jpg>)
 
-## Exercise: Surface Attractor
+## Упражнение «Точка притяжения поверхности»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-To show the power of code block, we are going to translate an existing attractor field definition into code block form. Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
+Для демонстрации возможностей узла Code Block преобразуйте существующее определение поля притяжения в форму Code Block. Использование существующего определения позволяет продемонстрировать связь Code Block с визуальным программированием, а также помогает в изучении синтаксиса DesignScript.
 
-Begin by recreating the definition in the image above (or by opening the sample file).
+Для начала повторно создайте определение, показанное на изображении выше (или просто откройте файл примера).
 
 ![](<../images/8-1/2/DesignScript - exercise - 01.jpg>)
 
-> 1. Notice that the lacing on **Point.ByCoordinates** has been set to _Cross Product_.
-> 2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
-> 3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
+> 1. Обратите внимание, что для параметра переплетения узла **Point.ByCoordinates** задано значение _Векторное произведение_.
+> 2. Каждая точка сетки перемещена вверх по оси Z в соответствии с расстоянием от опорной точки.
+> 3. Поверхность создана повторно и утолщена, что создает прогиб в геометрии относительно расстояния до опорной точки.
 
 ![](<../images/8-1/2/DesignScript - exercise - 02.jpg>)
 
-> 1. Starting from the beginning, let's define the reference point first: **Point.ByCoordinates**`(x,y,0);` We use the same **Point.ByCoordinates** syntax as is specified on the top of the reference point node.
-> 2. The variables _x_ and _y_ are inserted into the **Code Block** so that we may update these dynamically with sliders.
-> 3. Add some _sliders_ to the **Code Block** inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
+> 1. Сначала определите опорную точку: **Point.ByCoordinates** `(x,y,0);`. Используйте синтаксис **Point.ByCoordinates**, указанный в верхней части узла опорной точки.
+> 2. Переменные _x_ и _y_ вставляются в **Code Block**, чтобы их можно было динамически обновлять с помощью регуляторов.
+> 3. Присоедините _регуляторы_ к портам ввода узла **Code Block** и задайте их значения в диапазоне от –50 до 50. Это позволит работать по всей сетке Dynamo по умолчанию.
 
 ![](<../images/8-1/2/DesignScript - exercise - 03.jpg>)
 
-> 1. In the second line of the **Code Block**, we define a shorthand to replace the number sequence node: `coordsXY = (-50..50..#11);`We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the **Number Sequence** node in the visual script.
+> 1. Во второй строке **Code Block** определите сокращенный узел для замены узла порядкового номера: `coordsXY = (-50..50..#11);`. Мы рассмотрим это подробнее в следующем разделе. Обратите внимание, что этот собирательный метод эквивалентен узлу визуального программирования **Number Sequence**.
 
 ![](<../images/8-1/2/DesignScript - exercise - 04.jpg>)
 
-> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the **Point.ByCoordinates** syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` The angled brackets denote the cross product reference.
-> 2. Notice in the **Watch3D** node that we have a grid of points across the Dynamo grid.
+> 1. Теперь нужно создать сетку из точек последовательности _coordsXY_. Для этого необходимо использовать синтаксис **Point.ByCoordinates**. Кроме того, требуется запустить _векторное произведение_ списка так же, как вы делали это при визуальном программировании. Для этого введите следующую строку: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);`. Угловые скобки обозначают векторное произведение.
+> 2. Обратите внимание на узел **Watch3D**, в котором отображается сетка точек на сетке Dynamo.
 
 ![](<../images/8-1/2/DesignScript - exercise - 05.jpg>)
 
-> 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. And since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
-> 2. Reading from the actual node on the canvas, we see that there are three inputs. The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
-> 3. The direction is simple enough, we use a `Vector.ZAxis()` to move vertically.
-> 4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: `refPt.DistanceTo(gridPts)`
-> 5. The final line of code gives us the translated points: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
+> 1. Теперь самое сложное: нужно переместить сетку точек вверх в соответствии с расстоянием от опорной точки. Для начала присвойте этому новому набору точек имя _transPts_. Так как выполняется преобразование уже существующего элемента, вместо узла `Geometry.Translate...` используйте узел `gridPts.Translate`.
+> 2. Считывая данные из этого узла в рабочей области, мы видим, что он содержит три порта ввода. Преобразуемая геометрия уже определена, так как действие выполняется с текущим элементом (с использованием _gridPts.Translate_). Названия двух оставшихся портов (direction и _distance_) следует поместить в скобки функции.
+> 3. Определить значение direction несложно, так как для перемещения по вертикали используется `Vector.ZAxis()`.
+> 4. Теперь необходимо рассчитать расстояние между опорной точкой и каждой точкой сетки. Выполните это действие с опорной точкой аналогичным образом: `refPt.DistanceTo(gridPts)`.
+> 5. Последняя строка кода содержит преобразованные точки: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`.
 
 ![](<../images/8-1/2/DesignScript - exercise - 06.jpg>)
 
-> 1. We now have a grid of points with the appropriate data structure to create a Nurbs Surface. We construct the surface using `srf = NurbsSurface.ByControlPoints(transPts);`
+> 1. Теперь у вас есть сетка точек, структура данных которой позволяет создать поверхность NURBS. Поверхность создается с помощью `srf = NurbsSurface.ByControlPoints(transPts);`.
 
 ![](<../images/8-1/2/DesignScript - exercise - 07.jpg>)
 
-> 1. And finally, to add some depth to the surface, we construct a solid using `solid = srf.Thicken(5);` In this case we thickened the surface by 5 units in the code, but we could always declare this as a variable (calling it thickness for example) and then control that value with a slider.
+> 1. Чтобы придать поверхности глубину, создайте тело с помощью синтаксиса `solid = srf.Thicken(5);`. Данный код увеличивает толщину поверхности на пять единиц, однако толщину также можно сделать переменной (например, с именем thickness), а затем изменять ее значение с помощью регулятора.
 
-#### Simplify the Graph with "Node to Code"
+#### Упрощение графика с помощью функции «Узел для кодировки»
 
-The "Node to Code" feature automates the entire exercise that we just completed with the click of a button. Not only is this powerful for creating custom definitions and reusable code blocks, but it is also a really helpful tool to learn how to script in Dynamo:
+Функция «Узел для кодировки» позволяет автоматизировать все действия, которые вы выполнили в предыдущем упражнении, и применять их одним нажатием кнопки. Этот мощный инструмент не только позволяет создавать пользовательские определения и узлы Code Block для многократного использования, но и помогает в изучении процесса создания сценариев в Dynamo.
 
 ![](<../images/8-1/2/DesignScript - exercise - 08.jpg>)
 
-> 1. Start with the existing visual script from step 1 of the exercise. Select all of the nodes, right click on the canvas, and select _"Node to Code"_. Simple as that.
+> 1. Для начала откройте существующий визуальный сценарий из первого шага упражнения. Выберите все узлы, щелкните правой кнопкой мыши в рабочей области и выберите _Узел для кодировки_. Проще простого.
 
-Dynamo has automated a text based version of the visual graph, lacing and all. Test this out on your visual scripts and release the power of the code block!
+Приложение Dynamo позволяет автоматизировать текстовую версию визуального графика, включая переплетение и прочие операции. Поэкспериментируйте с использованием этой функции при работе с другими визуальными сценариями и откройте все возможности Code Block.
 
 ![](<../images/8-1/2/DesignScript - exercise - 09.jpg>)

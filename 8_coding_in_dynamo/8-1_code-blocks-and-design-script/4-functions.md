@@ -1,10 +1,10 @@
-# Functions
+# Функции
 
-Functions can be created in a code block and recalled elsewhere in a Dynamo definition. This creates another layer of control in a parametric file, and can be viewed as a text-based version of a custom node. In this case, the "parent" code block is readily accessible and can be located anywhere on the graph. No wires needed!
+Узлы Code Block позволяют вставлять в график функции, к которым смогут обращаться другие компоненты программы Dynamo. При этом в параметрическом файле создается еще один слой управления, который можно рассматривать как текстовую версию пользовательского узла. При этом «родительский» узел Code Block легко доступен и может находиться в любом месте графика. И никаких проводов!
 
-### Parent
+### Родительский узел Code Block
 
-The first line has the key word “def”, then the function name, then the names of inputs in parentheses. Braces define the body of the function. Return a value with “return =”. Code Blocks that define a function do not have input or output ports because they are called from other Code Blocks.
+Первая строка содержит ключевое слово «def», затем название функции и наименования входных данных в скобках. Тело функции заключено в фигурные скобки. Значение возвращается с помощью оператора «return =». В узлах Code Block, определяющих функцию, отсутствуют порты ввода и вывода, так как они вызываются из других блоков кода.
 
 ![](<../images/8-1/4/functions parent def.jpg>)
 
@@ -20,9 +20,9 @@ return sum;
 };
 ```
 
-### Children
+### Дочерние узлы Code Block
 
-Call the function with another Code Block in the same file by giving the name and the same number of arguments. It works just like the out-of-the-box nodes in your library.
+Функцию можно вызвать с помощью другого узла Code Block в том же файле, указав имя и такое же число аргументов. Этот процесс аналогичен использованию готовых узлов из библиотеки.
 
 ![](<../images/8-1/4/functions children call def.jpg>)
 
@@ -30,38 +30,38 @@ Call the function with another Code Block in the same file by giving the name an
 FunctionName(in1,in2);
 ```
 
-## Exercise: Sphere By Z
+## Упражнение «Сфера по оси Z»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
-In this exercise, we will make a generic definition that will create spheres from an input list of points. The radius of these spheres are driven by the Z property of each point.
+В этом упражнении мы создадим типовую программу, которая будет генерировать сферы на основе вводимого списка точек. Радиус сфер определяется свойством Z каждой точки.
 
-Let's begin with a number range of ten values spanning from 0 to 100. Plug these into a **Point.ByCoordinates** nodes to create a diagonal line.
+Для начала зададим десять числовых значений в диапазоне от 0 до 100. Соединим этот узел с узлом **Point.ByCoordinates** для создания диагональной линии.
 
 ![](<../images/8-1/4/functions - exercise - 01.jpg>)
 
-Create a **Code Block** and introduce our definition.
+Создайте узел **Code Block** и введите определение.
 
 ![](<../images/8-1/4/functions - exercise - 02.jpg>)
 
-> 1.  Use these lines of code:
+> 1. Используйте следующие строки кода:
 >
->     ```
->     def sphereByZ(inputPt)
->     {
+>    ```
+>    def sphereByZ(inputPt)
+>    {
+>    
+>    };
+>    ```
 >
->     };
->     ```
->
-> The _inputPt_ is the name we've given to represent the points that will drive the function. As of now, the function isn't doing anything, but we'll build up this function in the steps to come.
+> _inputPt_ — это имя, заданное для точек, которые будут определять функцию. В настоящее время эта функция не выполняет никаких действий, но она будет дополнена по ходу работы.
 
 ![](<../images/8-1/4/functions - exercise - 03.jpg>)
 
-> 1. Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parenetheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
+> 1. Дополните функцию **Code Block**, разместив комментарий и переменную _sphereRadius_, которая запрашивает положение каждой точки по оси _Z_. Напомним, что метод _inputPt.Z_ не нужно заключать в скобки. Это _запрос_ свойств существующего элемента, поэтому указывать входные данные не требуется.
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -73,61 +73,61 @@ Create a **Code Block** and introduce our definition.
 
 ![](<../images/8-1/4/functions - exercise - 04.jpg>)
 
-> 1. Now, let's recall the function we've created in another **Code Block**. If we double-click on the canvas to create a new _code block_, and type in _sphereB_, we notice that Dynamo suggest the _sphereByZ_ function that we've defined. Your function has been added to the intellisense library! Pretty cool.
+> 1. Вызовите функцию, созданную в другом узле **Code Block**. Если дважды щелкнуть в активном окне для создания нового узла _Code Block_ и ввести _sphereB_, то вы увидите, что Dynamo предложит использовать созданную выше функцию _sphereByZ_. Функция была добавлена в библиотеку IntelliSense! Неплохо.
 
 ![](<../images/8-1/4/functions - exercise - 05.jpg>)
 
-> 1.  Now we call the function and create a variable called _Pt_ to plug in the points created in the earlier steps:
+> 1. Теперь вызовем функцию и создадим переменную _Pt_, чтобы использовать созданные ранее точки.
 >
->     ```
->     sphereByZ(Pt)
->     ```
-> 2. We notice from the output that we have all null values. Why is this? When we defined the function, we are calculating the _sphereRadius_ variable, but we did not define what the function should _return_ as an _output_. We can fix this in the next step.
+>    ```
+>    sphereByZ(Pt)
+>    ```
+> 2. Обратите внимание, что на выходе мы получили нулевые значения. С чем это связано? При определении функции был задан расчет переменной _sphereRadius_, но не было указано, что именно функция должна _возвращать_ в качестве _выходных данных_. Наших следующим шагом будет исправление этого упущения.
 
 ![](<../images/8-1/4/functions - exercise - 06.jpg>)
 
-> 1. An important step, we need to define the output of the function by adding the line `return = sphereRadius;` to the _sphereByZ_ function.
-> 2. Now we see that the output of the Code Block gives us the Z coordinates of each point.
+> 1. Это важный шаг: необходимо задать выходные данные функции, добавив строку `return = sphereRadius;` в функцию _sphereByZ_.
+> 2. Теперь Code Block выводит координаты Z каждой точки.
 
-Let's create actual spheres now by editing the _Parent_ function.
+Создадим сферы, отредактировав _родительскую_ функцию.
 
 ![](<../images/8-1/4/functions - exercise - 07.jpg>)
 
-> 1. We first define a sphere with the line of code: `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
-> 2. Next, we change the return value to be the _sphere_ instead of the _sphereRadius_: `return = sphere;` This gives us some giant spheres in our Dynamo preview!
+> 1. Сначала определите сферу с помощью строки кода: `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`.
+> 2. Теперь измените возвращаемое значение на _sphere_ вместо _sphereRadius_: `return = sphere;`. В области предварительного просмотра Dynamo появятся гигантские сферы.
 
 ![](<../images/8-1/4/functions - exercise - 08.jpg>)
 
-> 1\. To temper the size of these spheres, let's update the sphereRadius value by adding a divider: `sphereRadius = inputPt.Z/20;` Now we can see the separate spheres and start to make sense of the relationship between radius and Z value.
+> 1\. Чтобы уменьшить размер этих сфер, обновите значение sphereRadius, добавив разделитель: `sphereRadius = inputPt.Z/20;`. Теперь видно отдельные сферы, что позволяет понять взаимосвязь между радиусом и значением Z.
 
 ![](<../images/8-1/4/functions - exercise - 09.jpg>)
 
-> 1. On the **Point.ByCoordinates** node, by changing the lacing from Shortest List to Cross Product, we create a grid of points. The _sphereByZ_ function is still in full effect, so the points all create spheres with radii based on Z values.
+> 1. В узле **Point.ByCoordinates** измените режим переплетения с «Самый короткий список» на «Векторное произведение», в результате чего будет создана сетка точек. Функция _sphereByZ_ все еще действует, поэтому все точки создают сферы с радиусами, основанными на значениях Z.
 
 ![](<../images/8-1/4/functions - exercise - 10.jpg>)
 
-> 1. And just to test the waters, we plug the original list of numbers into the X input for **Point.ByCoordinates**. We now have a cube of spheres.
-> 2. Note: if this takes a long time to calculate on your computer, try to change _#10_ to something like _#5_.
+> 1. Для проверки соединим исходный список чисел с входным портом X узла **Point.ByCoordinates**. Мы получили куб из сфер.
+> 2. Примечание. Если для расчета компьютеру требуется много времени, попробуйте уменьшить значение _#10_ и задать вместо него, например, _#5_.
 
-Remember, the _sphereByZ_ function we've created is a generic function, so we can recall the helix from an earlier lesson and apply the function to it.
+Поскольку созданная нами функция _sphereByZ_ является типовой, можно вызвать спираль из предыдущего урока и применить эту функцию к ней.
 
 ![](<../images/8-1/4/functions - exercise - 11.jpg>)
 
-One final step: let's drive the radius ratio with a user defined parameter. To do this, we need to create a new input for the function and also replace the _20_ divider with a parameter.
+И последний шаг: настройка коэффициента радиуса с помощью пользовательских параметров. Для этого необходимо создать новый входной порт для функции и заменить делитель _20_ параметром.
 
 ![](<../images/8-1/4/functions - exercise - 12.jpg>)
 
-> 1.  Update the _sphereByZ_ definition to:
+> 1. Изменим определение _sphereByZ_ на следующее:
 >
->     ```
->     def sphereByZ(inputPt,radiusRatio)
->     {
->     //get Z Value, use it to drive radius of sphere
->     sphereRadius=inputPt.Z/radiusRatio;
->     //Define Sphere Geometry
->     sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
->     //Define output for function
->     return sphere;
->     };
->     ```
-> 2. Update the children **Code Block** by adding a ratio variable to the input: `sphereByZ(Pt,ratio);` Plug a slider into the newly created **Code Block** input and vary the size of the radii based on the radius ratio.
+>    ```
+>    def sphereByZ(inputPt,radiusRatio)
+>    {
+>    //get Z Value, use it to drive radius of sphere
+>    sphereRadius=inputPt.Z/radiusRatio;
+>    //Define Sphere Geometry
+>    sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
+>    //Define output for function
+>    return sphere;
+>    };
+>    ```
+> 2. Обновите дочерние узлы **Code Block**, добавив переменную ratio к входным данным: `sphereByZ(Pt,ratio);`. Добавьте регулятор к только что созданному узлу **Code Block**. Теперь можно изменять размер радиусов на основе коэффициента.

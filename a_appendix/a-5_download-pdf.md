@@ -1,9 +1,9 @@
-# Download PDF
+# PDF для скачивания
 
-To access the information on this primer offline, download the pdf:&#x20;
+Для получения доступа к информации по учебному пособию Primer в автономном режиме скачайте файл PDF.&#x20;
 
-## Releases:
+## Версии
 
-#### Dynamo Primer v2.13:
+#### Dynamo Primer 2.13
 
 {% file src="../.gitbook/assets/Dynamo-Primer-v1.2.pdf" %}

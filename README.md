@@ -1,84 +1,84 @@
-# About
+# О программе
 
-## For Dynamo v2.13
+## Для Dynamo 2.13
 
-![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
+![Логотип Dynamo](images/dynamo\_logo\_dark-trim.jpg)
 
-> Dynamo is an open source visual programming platform for designers.
+> Dynamo — платформа визуального программирования для проектировщиков с открытым исходным кодом.
 
-### Welcome
+### Добро пожаловать
 
-You have just opened the Dynamo Primer, a comprehensive guide to visual programming in Autodesk Dynamo. This primer is an on-going project to share the fundamentals of programming. Topics include working with computational geometry, best practices for rules-based design, cross-disciplinary programming applications, and more with the Dynamo Platform.
+Представляем Dynamo Primer — исчерпывающее руководство по визуальному программированию в Autodesk Dynamo. Это активный проект, целью которого является распространение сведений по основам программирования. Здесь содержатся практические советы по проектированию на основе правил, рассматриваются такие темы, как работа с вычислительной геометрией, применение программирования в различных направлениях деятельности, а также многие другие возможности платформы Dynamo.
 
-The power of Dynamo can be found in a wide variety of design-related activities. Dynamo enables an expanding list of readily accessible ways for you to get started:
+Преимущество Dynamo заключается в широком спектре поддерживаемых операций, связанных с проектированием. Dynamo предлагает широкий спектр возможностей по началу работы.
 
-* **Explore** visual programming for the first time
-* **Connect** workflows in various software
-* **Engage** an active community of users, contributors, and developers
-* **Develop** an open-source platform for continued improvement
+* **Познакомьтесь** с понятием визуального программирования.
+* **Объедините** рабочие процессы из разных программ.
+* **Участвуйте** в жизни активного сообщества пользователей, приглашенных участников и разработчиков.
+* **Разрабатывайте** проект на платформе с открытым исходным кодом, чтобы способствовать его развитию.
 
-In the midst of this activity and exciting opportunity for working with Dynamo, we need a document of the same caliber, the Dynamo Primer.
+Нам нужно руководство по работе с Dynamo, отвечающее потребностям пользователей на всех перечисленных уровнях, от новичков до опытных. Это и есть Dynamo Primer.
 
-Refer to the [primer user guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) to find out what you can expect to learn from this primer.
+Подробные сведения о преимуществах данного руководства Primer приведены в [руководстве пользователя](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md).
 
-### Open Source
+### Открытый исходный код
 
-The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: https://github.com/DynamoDS/DynamoPrimer/issues
+Проект Dynamo Primer открыт для всех. Мы стремимся предоставлять качественную информацию и будем рады вашим отзывам. Если вы хотите сообщить о какой-либо проблеме, опубликуйте свой вопрос на соответствующей странице GitHub: https://github.com/DynamoDS/DynamoPrimer/issues.
 
-If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: https://github.com/DynamoDS/DynamoPrimer.
+Если вы хотите предложить новый раздел, правки или другие изменения по этому проекту, ознакомьтесь с нашим проектом на GitHub: https://github.com/DynamoDS/DynamoPrimer.
 
-### The Dynamo Primer Project
+### Проект Dynamo Primer
 
-The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dynamo Development team at Autodesk.
+Dynamo Primer — проект с открытым исходным кодом, который был инициирован Мэттом Ензыком (Matt Jezyk) и рабочей группой по разработке Dynamo в компании Autodesk.
 
-**Mode Lab** was commissioned to write the First Edition of the primer. We thank them for all of their efforts in establishing this valuable resource.
+Первая версия этого руководства была составлена специалистами **Mode Lab**. Мы выражаем им благодарность за то, что положили начало этому ресурсу.
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-**John Pierson of Parallax Team** was commissioned to update the primer to reflect the Dynamo 2.0. revisions.
+Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.0, было выполнено **Джоном Пирсоном (John Pierson), Parallax Team**.
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.
+Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.13, было выполнено **Matterlab**.
 
 ![](<images/matterlab\_final-07.jpg>)
 
-### Acknowledgments
+### Благодарности
 
-A special thanks to Ian Keough for initiating and guiding the Dynamo project.
+Выражаем особую благодарность Иэну Кио (Ian Keough) за то, что положил начало проекту Dynamo.
 
-Thank you to Matt Jezyk, Ian Keough, Zach Kron, Racel Williams and Colin McCrone for enthusiastic collaboration and the opportunity to participate on a wide array of Dynamo projects.
+Мы благодарим Мэтта Ензыка, Иэна Кио, Зака Крона (Zach Kron), Рэйсел Уильямс (Racel Williams) и Колина МакКрона (Colin McCrone) за активную совместную работу и возможность принять участие в широком спектре проектов Dynamo.
 
-### Software and Resources
+### Программное обеспечение и ресурсы
 
-**Dynamo** The current stable\* release of Dynamo is Version 2.1.0
+**Dynamo**: текущая стабильная\* версия Dynamo — 2.1.0.
 
-http://dynamobim.com/download/ or http://dynamobuilds.com
+http://dynamobim.com/download/ или http://dynamobuilds.com
 
-\*Note: Starting with Revit 2020, Dynamo is bundled with Revit releases, resulting in manual installation not being required. More information is available at this [blog post](https://dynamobim.org/dynamo-core-2-1-release/).
+\* Примечание. Начиная с версии Revit 2020, Dynamo входит в комплект установки Revit, поэтому устанавливать Dynamo вручную не требуется. Подробные сведения см. в этом [блоге](https://dynamobim.org/dynamo-core-2-1-release/).
 
-**DynamoBIM** The best source for additional information, learning content, and forums is the DynamoBIM website.
+**DynamoBIM**: веб-сайт DynamoBIM — это лучшее место для получения дополнительной информации, поиска обучающих материалов и общения на форумах.
 
 http://dynamobim.org
 
-**Dynamo GitHub** Dynamo is an open-source development project on GitHub. To contribute, check out DynamoDS.
+**Страница Dynamo на GitHub**: Dynamo — это проект разработки с открытым исходным кодом, размещенный на GitHub. Если вы хотите внести свой вклад в работу над ним, посетите DynamoDS.
 
 https://github.com/DynamoDS/Dynamo
 
-**Contact** Let us know about any issues with this document.
+**Контакты**: если вы обнаружите какую-либо проблему в этом документе, сообщите нам об этом.
 
 Dynamo@autodesk.com
 
-### License
+### Лицензия
 
 Copyright 2022 Autodesk
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Лицензировано Apache License, Version 2.0 ("Лицензия"); использовать только в совокупности с Лицензией. Копию Лицензии можно получить по следующему адресу:
 
 http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+За исключением случаев, предусматриваемых соответствующим законом или заключенным в письменном виде соглашением, программное обеспечение, распространяемое на условиях Лицензии, распространяется "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО УСЛОВИЙ И ГАРАНТИЙ, выраженных в явной форме или подразумеваемых. Текст Лицензии содержит точные разъяснения разрешенного и запрещенного использования программных продуктов на условиях Лицензии.

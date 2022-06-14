@@ -1,10 +1,10 @@
-# Translation, Rotation, and Other Transformations
+# Перенос, поворот и другие преобразования
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+Определенные геометрические объекты можно создавать путем непосредственного указания их координат по осям X, Y и Z в трехмерном пространстве. Однако в большинстве случаев итоговое положение геометрии задается путем преобразований, применяемых либо к самому объекту, либо к его базовой системе координат (CoordinateSystem).
 
-### Translation
+### Перемещение
 
-The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
+Простейшим геометрическим преобразованием является перенос, в результате которого объект перемещается на заданное число делений вдоль осей X, Y и Z.
 
 ![](../images/8-2/5/Transformations\_01.png)
 
@@ -18,9 +18,9 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### Rotation
+### Поворот
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+Любой объект в Dynamo можно перенести, просто добавив метод _.Translate_ после имени объекта, однако более сложные преобразования требуют изменения базовой системы координат объекта (CoordinateSystem). Например, чтобы повернуть объект на 45 градусов вокруг оси X, потребуется заменить существующую систему координат (без поворота) на систему координат, повернутую на 45 градусов вокруг оси X с помощью метода _.Transform_.
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Scale
+### Масштабировать
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+Помимо операций переноса и поворота к объектам CoordinateSystem также можно применять операции масштабирования и сдвига. Для масштабирования объектов CoordinateSystem используется метод _.Scale_.
 
 ![](../images/8-2/5/Transformations\_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+Для сдвига объекта CoordinateSystem используется конструктор CoordinateSystem, в который нужно ввести неортогональные векторы.
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+По сравнению с поворотом и переносом операции масштабирования и сдвига являются более сложными и поддерживаются не всеми объектами Dynamo. Объекты Dynamo, которые поддерживают операции изменения масштаба и сдвига системы координат, перечислены в следующей таблице.
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| Класс | Объект CoordinateSystem с измененным масштабом | Объект CoordinateSystem со сдвигом |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | No                                    | No                       |
-| NurbsCurve   | Yes                                   | Yes                      |
-| NurbsSurface | No                                    | No                       |
-| Circle       | No                                    | No                       |
-| Line         | Yes                                   | Yes                      |
-| Plane        | No                                    | No                       |
-| Point        | Yes                                   | Yes                      |
-| Polygon      | No                                    | No                       |
-| Solid        | No                                    | No                       |
-| Surface      | No                                    | No                       |
-| Text         | No                                    | No                       |
+| Дуга | Нет | Нет  |
+| Объект NurbsCurve | Да | Да |
+| Объект NurbsSurface | Нет | Нет  |
+| Окружность | Нет | Нет  |
+| Отрезок | Да | Да |
+| Плоскость | Нет | Нет  |
+| Точка | Да | Да |
+| Полигон | Нет | Нет  |
+| Тело | Нет | Нет  |
+| Поверхность | Нет | Нет  |
+| Текст | Нет | Нет  |

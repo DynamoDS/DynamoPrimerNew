@@ -1,62 +1,62 @@
-# Geometry Overview
+# Обзор концепции геометрии
 
-## Geometry in Dynamo Sandbox
+## Геометрия в Dynamo Sandbox
 
-**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
+**Геометрия** — это язык, на котором осуществляется разработка. Если в основе языка или среды программирования лежит геометрия, это открывает широкие возможности для создания точных и надежных моделей, автоматизации процессов разработки и итерации проектов на основе алгоритмов.
 
-Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
+Зная типы геометрии и то, [как они связаны друг с другом](1-geometry-overview.md#stepping-through-the-hierarchy), можно легко ориентироваться в наборе **узлов Geometry**, доступных в библиотеке. Узлы Geometry располагаются в библиотеке в алфавитном порядке, а не по иерархическому принципу. Здесь они отображаются примерно так же, как и в интерфейсе Dynamo.
 
 ![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
 
-Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
+Кроме этого, эти знания позволят упростить и сделать более понятым процесс создания моделей в Dynamo, а также соотнесение потока данных в графике с изображением в области предварительного просмотра.
 
 ![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
 
-> 1. Note the assumed coordinate system rendered by the grid and colored axes
-> 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
+> 1. Обратите внимание на предполагаемую систему координат, представленную сеткой и цветными осями.
+> 2. Выбранные узлы визуализируют соответствующую геометрию (если узел создает геометрию) в фоновом режиме.
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-## The Concept of Geometry
+## Понятие геометрии
 
-Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.
+В обычном понимании геометрия — это исследование формы, размера, относительного положения фигур и свойств пространства. Эта дисциплина имеет богатую историю, берущую свое начало тысячи лет назад. Благодаря появлению компьютеров мы получили мощный инструмент для описания, изучения и генерирования геометрических объектов. В настоящее время можно с легкостью рассчитать сложнейшие геометрические взаимосвязи, и ни для кого не секрет, что мы активно используем эти возможности.
 
-![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
+![Стенфордский кролик](../images/5-2/1/StanfordBunny.jpg)
 
-> If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.
+> Если вы хотите узнать, насколько разнообразной и сложной может быть геометрия, разрабатываемая с помощью компьютеров, введите словосочетание «стенфордский кролик» в любой поисковой системе. Это каноническая модель, которая используется для тестирования алгоритмов.
 
-Understanding geometry in the context of algorithms, computing, and complexity, may sound daunting; however, there are a few key, and relatively simple, principles that we can establish as fundamentals to start building towards more advanced applications:
+Перспектива применения геометрии в контексте алгоритмов, компьютерных вычислений и повышенной сложности может показаться пугающей. Однако есть несколько относительно простых ключевых принципов, освоив которые, мы сможем приступить к изучению более сложных вариантов применения геометрии.
 
-1. Geometry is **Data** - to the computer and Dynamo, a Bunny not all that different from a number.
-2. Geometry relies on **Abstraction** - fundamentally, geometric elements are described by numbers, relationships, and formulas within a given spatial coordinate system
-3. Geometry has a **Hierarchy** - points come together to make lines, lines come together to make surfaces, and so on
-4. Geometry simultaneously describes both **the Part and the Whole** - when we have a curve, it is both the shape as well as all the possible points along it
+1. Геометрия —это **данные**, поэтому с точки зрения компьютера и приложения Dynamo геометрический кролик практически ничем не отличается от обычного числа.
+2. Геометрия основана на **абстракции**: по сути, все геометрические элементы определяются с помощью чисел, отношений и формул в заданной пространственной системе координат.
+3. Геометрия имеет **иерархию**: точки образуют линии, линии образуют поверхности и т. д.
+4. Геометрия одновременно описывает **часть и целое**: если есть кривая, то она представляет собой и форму, и все возможные точки вдоль нее.
 
-In practice, these principles mean that we need to be aware of what we are working with (what type of geometry, how was it created, etc.) so that we can fluidly compose, decompose, and recompose different geometries as we develop more complex models.
+На практике эти принципы означают, что пользователи должны понимать, над чем они работают (тип геометрии, как она была создана и т. д.). Это понимание позволит нам с легкостью конструировать, разбирать и снова собирать различные геометрические объекты в ходе разработки сложных моделей.
 
-## Stepping through the Hierarchy
+## Перемещение между уровнями иерархии
 
-Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
+Давайте рассмотрим геометрию с точки зрения принципов абстракции и иерархии. Хоть это и не всегда очевидно, эти принципы тесно взаимосвязаны, и если в этом не разобраться, то при разработке детализированных рабочих процессов и моделей можно столкнуться с серьезным препятствием. Для начала давайте воспользуемся понятием пространственным измерений в качестве основной характеристики моделируемых нами объектов. Зная количество измерений, необходимых для описания формы, мы сможем приблизиться к пониманию иерархического устройства геометрии.
 
-![Computational Geometry](../images/5-2/1/GeometryDimensionality.jpg)
+![Вычислительная геометрия](../images/5-2/1/GeometryDimensionality.jpg)
 
-> 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
-> 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
-> 3. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
-> 4. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
+> 1. **Точка** (определяемая координатами) не имеет измерений. Она представлена только числами, соответствующими каждой из координат.
+> 2. **Отрезок** (определяемый двумя точками), в свою очередь, имеет _одно_ измерение: мы можем перемещаться вдоль отрезка вперед (положительное направление) и назад (отрицательное направление).
+> 3. **Плоскость** (определяемая двумя линиями) имеет _два_ измерения: мы можем перемещаться не только вперед и назад, но и влево или вправо.
+> 4. **Параллелепипед** (определяемый двумя плоскостями) имеет _три_ измерения: в дополнение к указанному выше, мы можем перемещаться вверх и вниз.
 
-Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
+Пространственные измерения — это удобный способ классификации геометрический объектов, но не всегда самый лучший. В конце концов, при моделировании используются не только точки, отрезки, плоскости и параллелепипеды. Что если нужен изогнутый объект? Кроме этого, существует другая категория типов геометрических объектов, которые являются полностью абстрактными: они определяют такие свойства, как ориентация, объем или связи между отдельными частями объекта. Такой объект, как вектор, например, абсолютно неосязаем, так как же описать его относительно того, что мы видим в пространстве? Нужна более подробная классификация иерархии геометрических объектов, которая должна отражать разницу между абстрактными типами (вспомогательными средствами), которые можно сгруппировать по выполняемой ими функции, и типами, которые используются для описания формы элементов модели.
 
-![Geometry Hierarchy](../images/5-2/1/GeometryHierarchy.jpg)
+![Иерархия геометрии](../images/5-2/1/GeometryHierarchy.jpg)
 
-## Going Further with Geometry
+## Дальнейшая работа с геометрией
 
-Creating models in Dynamo is not limited to what we can generate with Nodes. Here are some key ways to take your process to the next level with Geometry:
+Создание моделей в Dynamo не ограничено объектами, которые можно создать с помощью узлов. Есть несколько способов расширить возможности использования геометрии.
 
-1. Dynamo allows you to import files - try using a CSV for point clouds or SAT for bringing in surfaces
-2. When working with Revit, we can reference Revit elements to use in Dynamo
-3. The Dynamo Package Manager offers additional functionality for extended geometry types and operations - check out the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package
+1. Dynamo позволяет импортировать файлы: используйте файлы CSV для создания облаков точек или файлы SAT для добавления поверхностей.
+2. При работе с Revit можно ссылаться на элементы Revit, чтобы использовать их в Dynamo.
+3. Менеджер пакетов Dynamo содержит дополнительные функции, поддерживающие расширенный набор типов геометрии и операций. Изучите возможности пакета [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)

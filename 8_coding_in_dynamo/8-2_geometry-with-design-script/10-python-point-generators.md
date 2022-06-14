@@ -1,6 +1,6 @@
-# Python Point Generators
+# Генераторы точек Python
 
-The following Python scripts generate point arrays for several examples. They should be pasted into a Python Script node as follows:
+Приведенные ниже сценарии Python позволяют создать массивы точек, которые будут использованы в нескольких примерах. Их требуется вставить в узел Python Script следующим образом:
 
 ![](<../images/8-2/10/python points 01.jpg>)
 

@@ -1,98 +1,98 @@
-# Attractor Points
+# Точки притяжения
 
-Attractor points are great for experimenting with geometric patterns. They can be used to create gradual changes to objects based on their distance.
+Точки притяжения можно использовать для экспериментов с геометрическими узорами. Их можно применять для постепенного изменения объектов на основании расстояния.
 
-This workflow will teach you how to:
+В ходе данного рабочего процесса вы получите следующие навыки:
 
-* Create, manage and edit lists.
-* Move points in the 3D preview using direct manipulation.
-* Change the executing mode.
+* создание, редактирование списков и управление ими;
+* перемещение точек в окне 3D-просмотра с помощью непосредственной манипуляции;
+* изменение режима выполнения.
 
 ![](../images/10-1/2/attractor1.gif)
 
-## Defining our Objectives
+## Определение целей
 
-In this exercise, we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
+В рамках этого упражнения требуется создать окружность (_цель_), в которой входные значения радиуса определяются расстоянием до ближайшей точки (_связь_).
 
-![Hand Sketch of Circle](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
+![Нарисованный от руки эскиз окружности](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
 
-> A point that defines a distance-based relationship is commonly referred to as an "Attractor." Here the distance to our Attractor Point will be used to specify how big our circle should be.
+> Точка, определяющая отношение на основе расстояния, обычно называется точкой притяжения. В данном случае расстояние до точки притяжения будет использоваться для определения размера окружности.
 
-## Next steps
+## Дальнейшие действия
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
 
-Now that we have our objectives and relationships sketched we can begin creating our graph. We need the Nodes that will represent the sequence of actions Dynamo will execute. Let's start by adding the following nodes: **Number**, **Number Slider**, **Point.ByCoordinates**, **Geometry.DistanceTo, Circle.ByCenterPointRadius.**
+Наметив цели и связи, можно приступать к созданию графика. Необходимо выбрать узлы, которые будут представлять последовательность действий, выполняемых приложением Dynamo. Сначала добавьте следующие узлы: **Number**, **Number Slider**, **Point.ByCoordinates**, **Geometry.DistanceTo, Circle.ByCenterPointRadius.**
 
 ![](<../images/10-1/2/attractor (2).png>)
 
-> 1. Input > Basic > **Number**
-> 2. Input > Basic > **Number Slider**
-> 3. Geometry > Points > Point > **By Coordinates(x,y,z)**
-> 4. Geometry > Modifiers > Geometry > **DistanceTo**
-> 5. Geometry > Curves > Circle > **ByCenterPointRadius**
+> 1. Input > Basic > **Number**
+> 2. Input > Basic > **Number Slider**
+> 3. Geometry > Points > Point > **By Coordinates(x,y,z)**
+> 4. Geometry > Modifiers > Geometry > **DistanceTo**
+> 5. Geometry > Curves > Circle > **ByCenterPointRadius**
 
-### Connecting Nodes with Wires
+### Соединение узлов с помощью проводов
 
-Now that we have a few Nodes, we need to connect the Ports of the Nodes with Wires. These connections will define the flow of data.
+Разместив узлы, необходимо соединить их порты с помощью проводов. Эти соединения будут определять поток данных.
 
 ![](<../images/10-1/2/attractor (3).png>)
 
-> 1. **Number** to **Point.ByCoordinates**
-> 2. **Number Sliders** to **Point.ByCoordinates**
-> 3. **Point.ByCoordinates** (2) to **DistanceTo**
-> 4. **Point.ByCoordinates** and **DistanceTo** to **Circle.ByCenterPointRadius**
+> 1. От узла **Number** к узлу **Point.ByCoordinates**
+> 2. От узла **Number Sliders** к узлу **Point.ByCoordinates**
+> 3. От узла **Point.ByCoordinates** (2) к узлу **DistanceTo**
+> 4. От узлов **Point.ByCoordinates** и **DistanceTo** к узлу **Circle.ByCenterPointRadius**
 
-### Executing the Program
+### Выполнение программы
 
-With our Program Flow defined, all we need to do is tell Dynamo to execute it. Once our program is executed (either Automatically or when we click Run in Manual Mode), data will pass through the Wires, and we should see the results in the 3d Preview.
+После того как мы определили последовательность потока данных, нам остается только дать Dynamo команду на выполнение программы. После выполнения программы (автоматически или путем нажатия кнопки «Запуск» в ручном режиме) данные пойдут по проводам, а результаты появятся в области 3D-просмотра.
 
 ![](<../images/10-1/2/attractor (4).png>)
 
-> 1. (Click Run) - If the Execution Bar is in Manual Mode, we need to Click Run to execute the graph
-> 2. Node Preview - Hovering your mouse over the box on the lower right corner of a Node will give you a pop-up of the results
-> 3. 3D Preview - If any of our Nodes create geometry, we will see it in the 3D Preview.
-> 4. The output geometry on the creation node.
+> 1. Запуск: если на панели выполнения задан ручной режим, нажмите кнопку «Запуск», чтобы запустить выполнение графика.
+> 2. Просмотр узла: при наведении указателя на поле в правом нижнем углу узла появится всплывающее окно результатов.
+> 3. 3D-просмотр: если какой-либо узел создает геометрию, то она будет отображаться в области 3D-просмотра.
+> 4. Выходная геометрия узла создания данных.
 
-### Adding **a Code Block**
+### Добавление узла **Code Block**
 
-If our program is working, we should see a circle in the 3D Preview that is passing through our Attractor Point. This is great, but we may want to add more detail or more controls. Let's adjust the input to the circle Node so that we can calibrate the influence on the radius. Add another **Number Slider** to the Workspace, then double click on a blank area of the Workspace to add a **Code Block** Node. Edit the field in the Code Block, specifying `X/Y`.
+Если программа работает правильно, то в области 3D-просмотра должна появиться окружность, проходящая через точку притяжения. Теперь можно добавить дополнительные подробности или элементы управления. Выполним настройку входных портов для узла окружности, чтобы можно было регулировать влияние входных данных на радиус. Добавьте еще один узел **Number Slider** в рабочую область, а затем дважды щелкните в пустом месте рабочего пространства, чтобы добавить узел **Code Block**. Отредактируйте поле в узле Code Block, указав значения `X/Y`.
 
 ![](<../images/10-1/2/attractor (5).png>)
 
 > 1. **Code Block**
-> 2. **DistanceTo** and **Number Slider** to **Code Block**
-> 3. **Code Block** to **Circle.ByCenterPointRadius**
+> 2. От узлов **DistanceTo** и **Number Slider** к узлу **Code Block**
+> 3. От узла **Code Block** к узлу **Circle.ByCenterPointRadius**
 
-### Using Sequences
+### Использование последовательностей
 
-Starting simple and building complexity is an effective way to incrementally develop our program. Once it is working for one circle, let's apply the power of the program to more than one circle. Instead of one center point, if we use a grid of points and accommodate the change in the resulting data structure, our program will now create many circles - each with a unique radius value defined by the calibrated distance to the Attractor Point.
+Чтобы процесс пошаговой разработки программы был эффективен, рекомендуется начинать с простой структуры, которую затем можно постепенно усложнять. Если программа позволяет успешно создавать одну окружность, то ее можно усложнить и использовать для создания сразу нескольких окружностей. Чтобы сделать это, вместо одной центральной точки можно задать сетку точек, данные из которой будут использоваться в итоговой структуре. В результате каждая из полученных окружностей будет иметь уникальное значение радиуса, определяемое калибруемым расстоянием до точки притяжения.
 
 ![](<../images/10-1/2/attractor (6).png>)
 
-> 1. Add a **Number Sequence** Node and replace the inputs of **Point.ByCoordinates** - Right Click Point.ByCoordinates and select Lacing > Cross Reference
-> 2. Add a **Flatten** Node after Point.ByCoordinates. To flatten a list completely, leave the `amt` input at the default of `-1`
-> 3. The 3D Preview will update with a grid of circles
+> 1. Добавьте узел **Number Sequence** и замените входные порты узла **Point.ByCoordinates**. Щелкните узел Point.ByCoordinates правой кнопкой мыши и выберите «Переплетение» > «Перекрестная ссылка».
+> 2. Добавьте узел **Flatten** после узла Point.ByCoordinates. Чтобы выровнять список полностью, оставьте для порта ввода `amt` значение по умолчанию (`-1`).
+> 3. Область 3D-просмотра обновляется, и в ней появляется сетка окружностей.
 
-### Adjusting with Direct Manipulation
+### Настройка с помощью непосредственных манипуляций
 
-Sometimes numerical manipulation isn't the right approach. Now you can manually push and pull Point geometry when navigating in the background 3D preview. We can also control other geometry that was constructed by a point. For example, **Sphere.ByCenterPointRadius** is capable of Direct Manipulation as well. We can control the location of a point from a series of X, Y, and Z values with **Point.ByCoordinates**. With the Direct Manipulation approach, however, you are able to update the values of the sliders by manually moving the point in the **3D Preview Navigation** mode. This offers a more intuitive approach to controlling a set of discrete values that identify a point's location.
+Манипуляции с числами не всегда являются оптимальным подходом. Теперь геометрию точки можно корректировать вручную при навигации по области фонового 3D-просмотра. Можно также управлять другой геометрией, построенной на основе точки. Например, узел **Sphere.ByCenterPointRadius** поддерживает режим непосредственной манипуляции. Можно управлять положением точки, задавая наборы значений X, Y и Z с помощью узла **Point.ByCoordinates**. При использовании метода непосредственных манипуляций можно обновлять значения регуляторов путем перемещения точки вручную в режиме **навигации по области 3D-просмотра**. Это обеспечивает более интуитивный способ управления набором отдельных значений, которые определяют положение точки.
 
 ![](<../images/10-1/2/attractor (7).png>)
 
-> 1. To use **Direct Manipulation**, select the panel of the point to be moved – arrows will appear over the point selected.
-> 2. Switch to **3D Preview Navigation** mode.
+> 1. Для использования метода **Непосредственная манипуляция** выберите панель перемещаемой точки. Над выбранной точкой появятся стрелки.
+> 2. Переключитесь в режим **Навигация по области 3D-просмотра**.
 
 ![](../images/10-1/2/attractor\(8\).png)
 
-> 1. Hover over the point and the X, Y, and Z axes will appear.
-> 2. Click and drag the colored arrow to move the corresponding axis, and the **Number Slider** values will update live with the manually moved point.
+> 1. Наведите указатель на точку. Появятся оси X, Y и Z.
+> 2. Чтобы переместить ось, щелкните и перетащите соответствующую цветную стрелку. При перемещении точки вручную значения в узле **Number Slider** динамически обновляются.
 
 ![](<../images/10-1/2/attractor (1).png>)
 
-> 1. Note that before **Direct Manipulation** only one slider was plugged into the **Point.ByCoordinates** component. When we manually move the point in the X-direction, Dynamo will automatically generate a new **Number Slider** for the X input.
+> 1. Обратите внимание, что до перехода в режим **непосредственной манипуляции** с компонентом **Point.ByCoordinates** был соединен только один регулятор. При перемещении точки в направлении по оси X вручную автоматически создается новый узел **Number Slider** для указания входных данных по оси X.
 

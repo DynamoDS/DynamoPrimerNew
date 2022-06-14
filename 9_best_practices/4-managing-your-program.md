@@ -1,55 +1,55 @@
-# Managing Your Program
+# Управление структурой программы
 
-Working within a Visual Programming process can be a powerful creative activity, but very quickly the Program Flow and key user inputs can be obscured by complexity and/or layout of the Workspace. Let's review some best practices for managing your program.
+Процесс визуального программирования может быть очень увлекательным и вдохновляющим, однако работа с потоком выполнения операций и ключевыми входными данными пользователя может очень быстро зайти в тупик из-за запутанности программы или неудачной компоновки рабочего пространства. Далее представлены некоторые практические советы по управлению структурой программы.
 
-### Alignment&#x20;
+### Выравнивание&#x20;
 
-Once we have added more than a few Nodes to the Workspace, we may want to re-organize the layout of the Nodes for clarity's sake. By selecting more than one Node and right-clicking on the Workspace, the pop up window includes an **Align Selection** menu with justification and distribution options in X and Y.
+Когда рабочее пространство постепенно начнет заполняться узлами, может потребоваться переупорядочить их для большей наглядности. Выберите несколько узлов и щелкните в рабочем пространстве правой кнопкой мыши. Появится всплывающее окно с меню **Выбор выравнивания**, содержащим параметры выравнивания и распределения по осям X и Y.
 
 ![](<./images/4/managing your program - alignment.jpg>)
 
-> 1. Select more than one Node
-> 2. Right-click on the Workspace
-> 3. Use the **Align Selection** options
+> 1. Выберите несколько узлов.
+> 2. Щелкните в рабочем пространстве правой кнопкой мыши.
+> 3. Воспользуйтесь параметрами меню **Выбор выравнивания**.
 
-### Notes&#x20;
+### Примечания&#x20;
 
-With some experience, we may be able to "read" the Visual Program by reviewing the Node Names and following the Program Flow. For users of all experience levels, it is also good practice to include plain language labels and descriptions. Dynamo has a **Notes** Node with an editable text field to do so. We can add Notes to the Workspace in two ways:
+По мере накопления опыта вы научитесь «считывать» содержимое визуальной программы, просматривая имена узлов и следуя последовательности выполнения операций. Чтобы дополнительно упростить работу как опытным пользователям, так и новичкам, мы рекомендуем добавлять простые текстовые метки и описания. Для этого в Dynamo можно использовать узел **Notes** с редактируемым текстовым полем. Добавить примечания в рабочее пространство можно двумя способами.
 
 ![](<./images/4/managing your program - notes.jpg>)
 
-> 1. Browse to the menu Edit > Create Note
-> 2. Use the keyboard shortcut Ctrl+W
+> 1. Перейдите в меню «Редактировать» > «Создать примечание».
+> 2. Используйте клавиши быстрого вызова CTRL + W.
 
-Once the Note is added to the Workspace a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
+После добавления примечания в рабочее пространство появится текстовое поле, позволяющее отредактировать текст примечания. Созданные примечания можно изменить, щелкнув узел примечаний правой кнопкой мыши или щелкнув его дважды.
 
 ![](<./images/4/managing your program - notes 02.jpg>)
 
-### Grouping&#x20;
+### Группировка&#x20;
 
-When our Visual Program gets big, it is helpful to identify the larger steps that will be executed. We can highlight larger collections of Nodes with a **Group** to label them with a colored rectangle in the background and a title. There are three ways to make a Group with more than one Node selected:
+Когда число компонентов визуальной программы становится по-настоящему большим, для упрощения работы с ними рекомендуется выделить крупные этапы процесса выполнения. Большие наборы узлов можно объединять в **группы**, в результате чего они помечаются цветным фоновым прямоугольником и заголовком. Создать группу на основе нескольких выбранных узлов можно тремя способами.
 
 ![](<./images/4/managing your program - grouping 01.jpg>)
 
-> 1. Browse to the menu Edit > Create Group
-> 2. Use the keyboard shortcut Ctrl+G
-> 3. Right-click on the Workspace and select "Create Group"
+> 1. Перейдите в меню «Редактировать» > «Создать группу».
+> 2. Используйте клавиши быстрого вызова CTRL + G.
+> 3. Щелкните в рабочем пространстве правой кнопкой мыши и выберите «Создать группу».
 
-Once a Group is created we can edit its settings, such as the title and color.&#x20;
+После создания группы можно отредактировать ее параметры, например название и цвет фона.&#x20;
 
 ![](<./images/4/managing your program - grouping 02.jpg>)
 
 {% hint style="info" %}
-Tip: Using both Notes and Groups is an effective way to annotate your file and increase readability.
+Совет. Использование примечаний и групп является эффективным способом аннотирования файла и повышения его читабельности.
 {% endhint %}
 
-Here's an example of program from with Notes and Groups added:
+Далее представлен пример программы с добавленными примечаниями и группами.
 
 ![](<./images/4/managing your program - grouping 03.jpg>)
 
-> 1. Note: "Grid Parameters"
-> 2. Note: "Grid Points"
-> 3. Group: "Create a Grid of Points"
-> 4. Group: "Create an Attractor Point"
-> 5. Note: "Calibrate Distance Values"
-> 6. Note: "Variable Grid of Circles"
+> 1. Примечание: «Параметры сетки»
+> 2. Примечание: «Точки сетки»
+> 3. Группа: «Создать сетку из точек»
+> 4. Группа: «Создать точку аттрактора»
+> 5. Примечание: «Откалибровать значения расстояния»
+> 6. Примечание: «Переменная сетка окружностей»

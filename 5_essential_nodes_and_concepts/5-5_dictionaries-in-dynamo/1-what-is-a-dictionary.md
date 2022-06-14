@@ -1,40 +1,40 @@
-# What is a Dictionary
+# Что такое словарь
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+Dynamo 2.0 включает новый тип данных — список, являющийся ответвлением типа данных словаря. Это нововведение может повлечь за собой существенные изменения в подходах к созданию и использованию данных в рамках рабочих процессов. До версии 2.0 словари и списки относились к одному типу данных. Если говорить коротко, то списки — это словари с целочисленными ключами.
 
-### **What is a dictionary?**
+### **Что такое словарь**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+Словарь — это тип данных, образуемый набором пар «ключ — значение». Ключ каждого набора является уникальным. Содержимое словаря не упорядочено. Поиск данных осуществляется с использованием ключа, а не по значению индекса, как в списке. _В Dynamo 2.0 поддерживаются только строковые ключи._
 
-### **What is a list?**
+### **Что такое список**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+Список — это тип данных, образуемый набором упорядоченных значений. В списках Dynamo в качестве индексов используются целочисленные значения.
 
-### **Why was this change made and why should I care?**
+### **Зачем были сделаны эти изменения и как это касается пользователей**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+В результате разделения словарей и списков словари получили своеобразный статус высшего класса: они позволяют легко и быстро хранить и находить значения, и для этого не нужно запоминать значения индекса или поддерживать строгую структуру списка на протяжении всего рабочего процесса. На этапе тестирования было выявлено значительное уменьшение размеров графиков при использовании словарей вместо нескольких узлов `GetItemAtIndex`.
 
-### **What are the changes?**
+### **В чем заключаются изменения**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* _Синтаксис_: обновления привели к изменениям в процессах запуска и использования словарей и списков в блоках кода.
+   * В словарях используется следующий синтаксис: `{key:value}`.
+   * В списках используется следующий синтаксис: `[value,value,value]`.
+* В библиотеку добавлены _новые узлы_, которые позволяют создавать, изменять и запрашивать словари.
+* Списки, созданные в блоках кода версии 1.x, при загрузке сценария автоматически обновляются до нового синтаксиса списка, в котором используются квадратные скобки `[ ]` вместо фигурных `{ }`.
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **Как эти изменения повлияют на пользователей и что они им дают**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+С точки зрения информатики как науки, словари, как и списки, являются наборами объектов. Элементы в списках хранятся с соблюдением определенного порядка. Содержимое словарей _не упорядочивается_. В словарях не используется последовательная нумерация (индексы). Вместо этого в них используются _ключи._
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+На изображении ниже представлен пример возможного использования словаря. Во многих случаях словари используются для соотнесения двух элементов данных, которые могут не иметь прямой корреляции. В нашем случае испанский перевод английского слова соотносится с его оригиналом для поиска в дальнейшем.
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. Создайте словарь, чтобы связать два фрагмента данных.
+> 2. Получите значение с помощью заданного ключа.

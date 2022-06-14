@@ -1,103 +1,103 @@
-# Creating a Custom Node
+# Создание пользовательских узлов
 
-Dynamo offers several different methods for creating custom nodes. You can build custom nodes from scratch, from an existing graph, or explicitly in C#. In this section we will cover building a custom node in the Dynamo UI from an existing graph. This method is ideal for cleaning up the workspace, as well as packaging a sequence of nodes to reuse elsewhere.
+В Dynamo предусмотрено несколько способов создания пользовательских узлов. Их можно создавать с нуля на основе существующего графика или непосредственно на языке C#. В этом разделе рассматривается создание пользовательского узла в интерфейсе Dynamo на основе существующего графика. Этот метод идеально подходит для очистки рабочего пространства, а также для упаковки последовательности узлов с целью их повторного использования в другом месте.
 
-## Exercise: Custom Nodes for UV Mapping
+## Упражнение «Пользовательские узлы для UV-наложения»
 
-### Part I: Start with a Graph
+### Часть I. Начало работы с графиком
 
-In the image below, we map a point from one surface to another using UV coordinates. We'll use this concept to create a panelized surface which references curves in the XY plane. We'll create quad panels for our panelization here, but using the same logic, we can create a wide variety of panels with UV mapping. This is a great opportunity for custom node development because we will be able to repeat a similar process more easily in this graph or in other Dynamo workflows.
+На изображении ниже точка одной поверхности сопоставляется с другой точкой с помощью UV-координат. Этот принцип будет использоваться для создания панелей поверхности, ссылающихся на кривые в плоскости XY. В данном случае сформируем прямоугольные панели, но этим же способом можно создавать разнообразные панели с использованием UV-наложения. Это отличная возможность для разработки пользовательских узлов, так как данную процедуру можно повторять в этом же графике или в других рабочих процессах Dynamo.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 01.jpg>)
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-Let’s start by creating a graph that we want to nest into a custom node. In this example, we will create a graph that maps polygons from a base surface to a target surface, using UV coordinates. This UV mapping process is something we use frequently, making it a good candidate for a custom node. For more information on surfaces and UV space, refer to the [Surface ](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)page. The complete graph is _UVmapping\_Custom-Node.dyn_ from the .zip file downloaded above.
+Начните с создания графика, который будет вложен в пользовательский узел. В этом примере с помощью UV-координат мы создадим график, который сопоставляет полигоны базовой поверхности с целевой поверхностью. Эта процедура UV-наложения используется часто, благодаря чему хорошо подходит для создания пользовательских узлов. Подробности о поверхностях и UV-пространстве см. на странице [Поверхность](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). Полный график _UVmapping\_Custom-Node.dyn_ из скачанного ранее файла ZIP.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
 
-> 1. **Code Block:** Use this line to create a range of 10 numbers between -45 and 45 `45..45..#10;`
-> 2. **Point.ByCoordinates:** Connect the output of the **Code Block** to the ‘x’ and ‘y’ inputs and set the lacing to cross-reference. You should now have a grid of points.
-> 3. **Plane.ByOriginNormal:** Connect the _‘Point’_ output to the _‘origin’_ input to create a plane at each of the points. The default normal vector of (0,0,1) will be used.
-> 4. **Rectangle.ByWidthLength:** Connect the planes from the previous step into the _‘plane’_ input, and use a **Code Block** with a value of _10_ to specify the width and length.
+> 1. **Code Block**. Используйте эту строку для создания диапазона из 10 чисел от –45 до 45: `45..45..#10;`.
+> 2. **Point.ByCoordinates**. Соедините выходные данные узла **Code Block** с входными данными x и y, выбрав в качестве переплетения перекрестную ссылку. При этом будет создана сетка точек.
+> 3. **Plane.ByOriginNormal.** Соедините выходные данные _Point_ с входными данными _origin_, чтобы создать плоскость в каждой из точек. Будет использован вектор нормали по умолчанию (0,0,1).
+> 4. **Rectangle.ByWidthLength**. Соедините плоскости из предыдущего шага с выходными данными _plane_ и с помощью узла **Code Block** со значением _10_ задайте ширину и длину.
 
-You should now see a grid of rectangles. Let’s map these rectangles to a target surface using UV coordinates.
+При этом появится сетка прямоугольников. Сопоставьте эти прямоугольники с целевой поверхностью, используя UV-координаты.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
 
-> 1. **Polygon.Points:** Connect the **Rectangle.ByWidthLength** output from the previous step to the _‘polygon’_ input to extract the corner points of each rectangle. These are the points that we will map to the target surface.
-> 2. **Rectangle.ByWidthLength:** Use a **Code Block** with a value of _100_ to specify the width and length of a rectangle. This will be the boundary of our base surface.
-> 3. **Surface.ByPatch:** Connect the **Rectangle.ByWidthLength** from the previous step to the _‘closedCurve’_ input to create a base surface.
-> 4. **Surface.UVParameterAtPoint:** Connect the _‘Point’_ output of the **Polygon.Points** node and the _‘Surface’_ output of the **Surface.ByPatch** node to return the UV parameter at each point.
+> 1. **Polygon.Points**. Соедините выходные данные **Rectangle.ByWidthLength** из предыдущего шага с входными данными _polygon_, чтобы извлечь угловые точки каждого прямоугольника. Именно эти точки будут сопоставляться с целевой поверхностью.
+> 2. **Rectangle.ByWidthLength**. С помощью узла **Code Block** со значением _100_ задайте ширину и длину прямоугольника. Это будет граница базовой поверхности.
+> 3. **Surface.ByPatch**. Соедините **Rectangle.ByWidthLength** из предыдущего шага с входными данными _closedCurve_ для создания базовой поверхности.
+> 4. **Surface.UVParameterAtPoint.** Соедините выходные данные _Point_ узла **Polygon.Points** с выходными данными _Surface_ узла **Surface.ByPatch** для получения параметра UV в каждой точке.
 
-Now that we have a base surface and a set of UV coordinates, we can import a target surface and map the points between surfaces.
+Теперь, имея базовую поверхность и набор UV-координат, можно импортировать целевую поверхность и сопоставить точки между поверхностями.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 04.jpg>)
 
-> 1. **File Path:** Select the file path of the surface you want to import. The file type should be .SAT. Click the _"Browse..."_ button and navigate to the _UVmapping\_srf.sat_ file from the .zip file downloaded above.
-> 2. **Geometry.ImportFromSAT:** Connect the file path to import the surface. You should see the imported surface in the geometry preview.
-> 3. **UV:** Connect the UV parameter output to a _UV.U_ and a _UV.V_ node.
-> 4. **Surface.PointAtParameter:** Connect the imported surface as well as the u and v coordinates. You should now see a grid of 3D points on the target surface.
+> 1. **Путь к файлу.** Выберите путь к файлу поверхности, которую требуется импортировать. Файл должен иметь тип SAT. Нажмите кнопку _Обзор..._ и перейдите к файлу _UVmapping\_srf.sat_ из скачанного ранее файла ZIP.
+> 2. **Geometry.ImportFromSAT.** Для импорта поверхности присоедините путь к файлу. При этом в области предварительного просмотра геометрии должна появиться импортированная поверхность.
+> 3. **UV.** Соедините выходные данные параметра UV с узлами _UV.U_ и _UV.V_.
+> 4. **Surface.PointAtParameter.** Присоедините импортированную поверхность, а также координаты u и v. Теперь на целевой поверхности должна появиться сетка 3D-точек.
 
-The final step is to use the 3D points to construct rectangular surface patches.
+Последний шаг — построение прямоугольных участков поверхности с помощью 3D-точек.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 05.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the points on the surface to construct a polycurve through the points.
-> 2. **Boolean:** Add a **Boolean** to the workspace and connect it to the _‘connectLastToFirst’_ input and toggle to True to close the polycurves. You should now see rectangles mapped to the surface.
-> 3. **Surface.ByPatch:** Connect the polycurves to the _‘closedCurve’_ input to construct surface patches.
+> 1. **PolyCurve.ByPoints.** Соедините точки на поверхности, чтобы построить поликривую через точки.
+> 2. **Boolean**. Добавьте в рабочее пространство узел **Boolean** и соедините его с входными данными _connectLastToFirst_, задав значение True, чтобы замкнуть поликривые. При этом должны появиться прямоугольники, сопоставленные с поверхностью.
+> 3. **Surface.ByPatch.** Соедините поликривые с входными данными _closedCurve_ для создания участков поверхности.
 
-### Part II: From Graph to Custom Node
+### Часть II. От графика к пользовательскому узлу
 
-Now let’s select the nodes that we want to nest into a Custom Node, thinking about what we want to be the inputs and outputs of our node. We want our Custom Node to be as flexible as possible, so it should be able to map any polygons, not just rectangles.
+Теперь выберите узлы, которые необходимо вложить в пользовательский узел, учитывая, какие входные и выходные данные должны быть у конечного узла. Пользовательский узел должен быть максимально гибким и пригодным для сопоставления любых полигонов, а не только прямоугольников.
 
-Select the following Nodes (beginning with Polygon.Points), right click on the workspace and select ‘Create Custom Node’.
+Выберите следующие узлы (начиная с Polygon.Points), щелкните правой кнопкой мыши рабочее пространство и выберите «Создание пользовательского узла».
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 01.jpg>)
 
-In the Custom Node Properties dialog, assign a name, description, and category to the Custom Node.
+В диалоговом окне «Свойства пользовательского узла» присвойте пользовательскому узлу имя, укажите описание и категорию.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 02.jpg>)
 
-> 1. Name: MapPolygonsToSurface
-> 2. Description: Map polygon(s) from a base to target surface
-> 3. Add-ons Category: Geometry.Curve
+> 1. Имя: MapPolygonsToSurface
+> 2. Описание: сопоставление полигонов из базы с целевой поверхностью
+> 3. Категория в разделе «Надстройки»: Geometry.Curve
 
-The Custom Node has considerably cleaned up the workspace. Notice that the inputs and outputs have been named based on the original nodes. Let’s edit the Custom Node to make the names more descriptive.
+Пользовательский узел в значительной мере очистил рабочее пространство. Обратите внимание, что входным и выходным данным были присвоены имена, соответствующие исходным узлам. Отредактируйте пользовательский узел, чтобы сделать имена более описательными.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 03.jpg>)
 
-Double click the Custom Node to edit it. This will open a workspace with a yellow background representing the inside of the node.
+Дважды щелкните пользовательский узел, чтобы отредактировать его. Откроется рабочее пространство с желтым фоном, представляющее собой внутреннюю часть узла.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
 
-> 1. **Inputs:** Change the input names to _baseSurface_ and _targetSurface_.
-> 2. **Outputs:** Add an additional output for the mapped polygons.
+> 1. **Входные данные.** Измените имена входных параметров, задав _baseSurface_ и _targetSurface_.
+> 2. **Выходные данные.** Добавьте дополнительных выходной параметр для сопоставленных полигонов.
 
-Save the custom node and return to the home workspace. Notice the **MapPolygonsToSurface** node reflects the changes we just made.
+Сохраните пользовательский узел и вернитесь в исходное рабочее пространство. Внесенные изменения отражаются в узле **MapPolygonsToSurface**.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 05.jpg>)
 
-We can also add to the robustness of the Custom Node by adding in **Custom Comments**. Comments can help to hint at the input and output types or explain the functionality of the node. Comments will appear when the user hovers over an input or output of a Custom Node.
+Для наглядности можно добавить к узлу **Пользовательские комментарии**. В комментариях можно задать сведения о типах входных и выходных данных или разъяснить функции узла. Комментарии отображаются при наведении курсора на входной или выходной параметр пользовательского узла.
 
-Double click the Custom Node to edit it. This will re-open the yellow background workspace.
+Дважды щелкните пользовательский узел, чтобы отредактировать его. Снова откроется рабочее пространство с желтым фоном.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 06.jpg>)
 
-> 1. Begin editing the Input **Code Block**. To start a Comment, type "//" followed by the comment text. Type anything that may help to clarify the Node - Here we will describe the _targetSurface_.
-> 2. Let's also set the default value for the _inputSurface_ by setting the input type equal to a value. Here, we will set the default value to the original **Surface.ByPatch** set.
+> 1. Начните редактировать **блок кода** Input. Чтобы создать комментарий, введите символы «//», а затем текст комментария. Добавьте любые пояснения к узлу. В данном случае будет дано описание входного параметра _targetSurface_.
+> 2. Кроме того, задайте значение по умолчанию для входного параметра _inputSurface_, указав это значение в качестве типа входных данных. В данном случае в качестве значения по умолчанию будет задан исходный набор **Surface.ByPatch**.
 
-Comments can also be applied to the Outputs.
+Комментарии также можно применить к выходным параметрам.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 07.jpg>)
 
-> Edit the text in the Output Code Block. Type "//" followed by the comment text. Here we will clarify the _Polygons_ and the _surfacePatches_ Outputs by adding a more in-depth description.
+> Отредактируйте текст блока кода Output. Введите «//», а затем текст комментария. Добавьте пояснения к выходным параметрам _Polygons_ и _surfacePatches_, добавив для них подробное описание.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 08.jpg>)
 
-> 1. Hover over the Custom Node Inputs to see the Comments.
-> 2. With the default value set on our _inputSurface_, we can also run the definition without a surface input.
+> 1. Наведите курсор на пользовательский узел Inputs, чтобы просмотреть комментарии.
+> 2. Так как для входного параметра _inputSurface_ задано значение по умолчанию, при запуске определения можно не вводить значение поверхности.

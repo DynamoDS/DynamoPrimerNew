@@ -1,12 +1,12 @@
-# Python Nodes
+# Узлы Python
 
-Why would you use textual programming in Dynamo's visual programming environment? [Visual programming](../../a\_appendix/visual-programming-and-dynamo.md) has many advantages. It allows you to create programs without learning special syntax in an intuitive visual interface. However, a visual program can become cluttered, and can at times fall short in functionality. For example, Python offers much more achieveable methods for writing conditional statements (if/then) and looping. Python is a powerful tool that can extend the capabilities of Dynamo and allow you to replace many nodes with a few concise lines of code.
+Зачем использовать текстовое программирование в среде визуального программирования Dynamo? [Визуальное программирование](../../a\_appendix/visual-programming-and-dynamo.md) имеет много преимуществ. Оно позволяет создавать программы в интуитивно-понятном визуальном интерфейсе, не обладая навыками работы со специальным синтаксисом. Однако визуальная программа может оказаться перегруженной, а порой и недостаточно функциональной. Для сравнения, в Python реализованы гораздо более доступные способы записи условных выражений (если/то) и создания циклов. Python — это мощный инструмент, который позволяет расширить возможности Dynamo и заменить большое количество узлов компактными строками кода.
 
-**Visual Program:**
+**Визуальная программа**
 
 ![](<../images/8-3/1/python node - visual vs textual programming.jpg>)
 
-**Textual Program:**
+**Текстовая программа**
 
 ```
 import clr
@@ -34,63 +34,63 @@ for i in xRange:
 OUT = solids
 ```
 
-### The Python Node
+### Узел Python
 
-Like code blocks, Python nodes are a scripting interface within a visual programming environment. The Python node can be found under Script>Editor>Python Script in the library.
+Подобно блокам кода узлы Python представляют собой интерфейс сценариев в среде визуального программирования. Узел Python находится в библиотеке в разделе Script > Editor > Python Script.
 
 ![](<../images/8-3/1/python node - the python node 01.jpg>)
 
-Double clicking the node opens the python script editor (you can also right click on the node and select _Edit..._). You’ll notice some boilerplate text at the top, which is meant to help you reference the libraries you’ll need. Inputs are stored in the IN array. Values are returned to Dynamo by assigning them to the OUT variable
+Двойной щелчок на узле приводит к открытию редактора сценариев Python (можно также щелкнуть узел правой кнопкой мыши и выбрать команду _Редактировать..._). Сверху находится подсказка, которая поможет обратиться к нужным библиотекам. Входные данные хранятся в массиве IN. Значения возвращаются в Dynamo путем назначения переменной OUT.
 
 ![](<../images/8-3/1/python node - the python node 02.jpg>)
 
-The Autodesk.DesignScript.Geometry library allows you to use dot notation similar to Code Blocks. For more information on Dynamo syntax, refer to [7-2\_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention") as well as the [DesignScript Guide](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (To download this PDF doc, please right-click on link and choose "Save link as..."). Typing a geometry type such as 'Point.' will bring up a list of methods for creating and querying points.
+Библиотека Autodesk.DesignScript.Geometry позволяет использовать точечные обозначения, аналогичные блокам кода. Дополнительные сведения о синтаксисе Dynamo см. в файле [7-2\_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention"), а также в [Руководстве по DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (чтобы скачать этот файл PDF, щелкните правой кнопкой мыши ссылку и выберите «Сохранить как»). При вводе определенного типа геометрии (например, Point.) отображается список методов, доступных для создания и запроса точек.
 
 ![](<../images/8-3/1/python node - the python node 03.jpg>)
 
-> Methods include constructors such as _ByCoordinates_, actions like _Add_, and queries like _X_, _Y_ and _Z_ coordinates.
+> Методы включают в себя конструкторы (например, _ByCoordinates_), действия (например, _Add_) и запросы (например, координаты _X_, _Y_ и _Z_).
 
-## Exercise: Custom Node with Python Script for Creating Patterns from Solid Module
+## Упражнение «Пользовательский узел со сценарием Python для создания массивов из твердотельного модуля»
 
-### Part I: Setting Up Python Script
+### Часть I. Настройка сценария Python
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/8-2/1/Python_Custom-Node.dyn" %}
 
-In this example, we will write a python script that creates patterns from a solid module, and turn it into a custom node. First, let’s create our solid module using Dynamo nodes.
+В этом примере мы напишем сценарий Python для создания образцов на основе твердотельного модуля и преобразуем этот сценарий в пользовательский узел. Сначала создадим твердотельный модуль с помощью узлов Dynamo.
 
 ![](<../images/8-3/1/python node - exercise pt I-01.jpg>)
 
-> 1. **Rectangle.ByWidthLength:** Create a rectangle that will be the base of our solid.
-> 2. **Surface.ByPatch:** Connect the rectangle to the ‘_closedCurve_’ input to create the bottom surface.
+> 1. **Rectangle.ByWidthLength.** Создайте прямоугольник, который будет служить основой твердого тела.
+> 2. **Surface.ByPatch.** Соедините прямоугольник с входным параметром _closedCurve_ для создания нижней поверхности.
 
 ![](<../images/8-3/1/python node - exercise pt I-02.jpg>)
 
-> 1. **Geometry.Translate:** Connect the rectangle to the ‘_geometry_’ input to move it up, using a code block to specify the base thickness of our solid.
-> 2. **Polygon.Points:** Query the translated rectangle to extract the corner points.
-> 3. **Geometry.Translate:** Use a code block to create a list of four values corresponding to the four points, translating one corner of the solid up.
-> 4. **Polygon.ByPoints:** Use the translated points to reconstruct the top polygon.
-> 5. **Surface.ByPatch:** Connect the polygon to create the top surface.
+> 1. **Geometry.Translate.** Соедините прямоугольник с входным параметром _geometry_ для его перемещения вверх, используя блок кода для указания толщины основания тела.
+> 2. **Polygon.Points.** Запросите извлечение угловых точек из преобразованного прямоугольника.
+> 3. **Geometry.Translate.** Используйте блок кода для создания списка из четырех значений, соответствующих четырем точкам, перемещающим один угол тела вверх.
+> 4. **Polygon.ByPoints.** С помощью преобразованных точек воссоздайте верхний полигон.
+> 5. **Surface.ByPatch.** Присоедините полигон для создания верхней поверхности.
 
-Now that we have our top and bottom surfaces, let’s loft between the two profiles to create the sides of the solid.
+Теперь, имея в распоряжении верхнюю и нижнюю поверхности, выполним лофтинг между двумя профилями, чтобы создать стороны тела.
 
 ![](<../images/8-3/1/python node - exercise pt I-03.jpg>)
 
-> 1. **List.Create:** Connect the bottom rectangle and the top polygon to the index inputs.
-> 2. **Surface.ByLoft:** Loft the two profiles to create the sides of the solid.
-> 3. **List.Create:** Connect the top, side, and bottom surfaces to the index inputs to create a list of surfaces.
-> 4. **Solid.ByJoinedSurfaces:** Join the surfaces to create the solid module.
+> 1. **List.Create.** Соедините нижний прямоугольник и верхний полигон с входными параметрами индекса.
+> 2. **Surface.ByLoft.** Выполните лофтинг двух профилей для создания сторон тела.
+> 3. **List.Create.** Соедините верхнюю, боковую и нижнюю поверхности с входными параметрами индекса для создания списка поверхностей.
+> 4. **Solid.ByJoinedSurfaces.** Соедините поверхности для создания твердотельного модуля.
 
-Now that we have our solid, let’s drop a Python Script node onto the workspace.
+Теперь, получив твердое тело, перетащите в рабочее пространство узел сценария Python.
 
 ![](<../images/8-3/1/python node - exercise pt I-04.jpg>)
 
-> 1. To add additional inputs to the node, click the + icon on the node. The inputs are named IN\[0], IN\[1], etc. to indicate that they represent items in a list.
+> 1. Чтобы добавить дополнительные входные параметры к узлу, закройте редактор и щелкните значок «+» на узле. Входным параметрам присваиваются имена IN\[0], IN\[1] и т. д. Это говорит о том, что они представляют элементы в списке.
 
-Let’s start by defining our inputs and output. Double click the node to open the python editor. Follow the code below to modify the code in the editor.
+Начнем с определения входных и выходных параметров. Дважды щелкните узел, чтобы открыть редактор Python. Используйте приведенный ниже код, чтобы изменить код в редакторе.
 
 ![](<../images/8-3/1/python node - exercise pt I-05.jpg>)
 
@@ -122,11 +122,11 @@ solids = []
 OUT = solids
 ```
 
-This code will make more sense as we progress in the exercise. Next we need to think about what information is required in order to array our solid module. First, we will need to know the dimensions of the solid to determine the translation distance. Due to a bounding box bug, we will have to use the edge curve geometry to create a bounding box.
+Смысл этого кода будет понятен позже по мере выполнения упражнения. Далее необходимо подумать о том, какая информация необходима для создания массива на основе имеющегося твердотельного модуля. Во-первых, необходимо знать размеры тела, чтобы определить расстояние переноса. Из-за ошибки, связанной с ограничивающей рамкой, для ее создания необходимо использовать геометрию кривой кромки.
 
 ![](../images/8-3/1/python07.png)
 
-> Take a look at the Python node in Dynamo. Notice that we're using the same syntax as we see in the titles of the nodes in Dynamo. Check out the commented code below.
+> Посмотрите пример узла Python в Dynamo. Обратите внимание, что используется тот же синтаксис, что и в заголовках узлов Dynamo. Ознакомьтесь с кодом, приведенным ниже.
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -167,7 +167,7 @@ xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 OUT = solids
 ```
 
-Since we will be both translating and rotating the solid modules, let’s use the Geometry.Transform operation. By looking at the Geometry.Transform node, we know that we will need a source coordinate system and a target coordinate system to transform the solid. The source is the context coordinate system of our solid, while the target will be a different coordinate system for each arrayed module. That means we will have to loop through the x and y values to transform the coordinate system differently each time.
+Поскольку твердотельные модули будут не только преобразовываться, но и поворачиваться, воспользуемся операцией Geometry.Transform. Если посмотреть на узел Geometry.Transform, становится понятно, что для преобразования тела потребуется исходная система координат и целевая система координат. В качестве первой выступает контекстная система координат тела, а в качестве второй — система координат, которая различна для каждого модуля массива. Таким образом, чтобы система координат каждый раз преобразовывалась по-разному, необходимо перебирать значения координат по осям X и Y.
 
 ![](<../images/8-3/1/python node - exercise pt I-06.jpg>)
 
@@ -223,35 +223,35 @@ for i in range(xCount):
 OUT = solids
 ```
 
-Click Run then Save the code. Connect the Python node with our existing script as following.
+Нажмите кнопку «Выполнить», а затем сохраните код. Соедините узел Python с существующим сценарием следующим образом.
 
 ![](<../images/8-3/1/python node - exercise pt I-07.jpg>)
 
-> 1. Connect the output from **Solid.ByJoinedSurfaces** as the first input for the Python Node and use a Code Block to define the other inputs.
-> 2. Create a **Topology.Edges** node and use the output from Python node as its input.
-> 3. Finally, create an **Edge.CurveGeometry** node and use the output from Topology.Edges as its input.
+> 1. Соедините выходные данные узла Python с узлом **Solid.ByJoinedSurfaces** в качестве первого порта ввода и используйте узел Code Block для определения других входных данных.
+> 2. Создайте узел **Topology.Edges** и используйте в качестве входных данных выходные данные узла Python.
+> 3. Наконец, создайте узел **Edge.CurveGeometry** и в качестве входных данных используйте выходные данные Topology.Edges.
 
-Try changing the seed value to create different patterns. You can also change the parameters of the solid module itself for different effects.
+Попробуйте изменить начальное значение для создания различных образцов. Кроме того, можно изменять параметры самого твердотельного модуля для получения различных эффектов.
 
 ![](../images/8-3/1/python10.png)
 
-### Part II: Turn Your Python Script Node into Custom Node
+### Часть II. Преобразование узла сценария Python в пользовательский узел
 
-Now that we have created a useful python script, let’s save it as a custom node. Select the python script node, right-click on Workspace and select ‘Create Custom Node.’
+Создав нужный сценарий Python, сохраним его как пользовательский узел. Выберите узел сценария Python, щелкните правой кнопкой мыши рабочее пространство и выберите «Создание пользовательского узла».
 
 ![](<../images/8-3/1/python node - exercise pt II-01.jpg>)
 
-Assign a name, description and category.
+Присвойте имя, добавьте описание и категорию.
 
 ![](<../images/8-3/1/python node - exercise pt II-02.jpg>)
 
-This will open a new workspace in which to edit the custom node.
+При этом откроется новое рабочее пространство для редактирования пользовательского узла.
 
 ![](<../images/8-3/1/python node - exercise pt II-03.jpg>)
 
-> 1. **Inputs:** Change the input names to be more descriptive and add data types and default values.
-> 2. **Output:** Change the output name
+> 1. **Входные параметры.** Измените имена входных параметров, сделав их более описательными, и добавьте типы данных и значения по умолчанию.
+> 2. **Output**: измените имя узла Output.
 
-Save the node as a .dyf file and you should see the custom node reflects the changes we just made.
+Сохраните узел в файле DYF. В пользовательском узле отобразятся внесенные изменения.
 
 ![](<../images/8-3/1/python node - exercise pt II-04.jpg>)

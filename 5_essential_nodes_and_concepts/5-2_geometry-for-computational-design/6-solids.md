@@ -1,96 +1,96 @@
-# Solids
+# Тела
 
-## Solids in Dynamo
+## Твердые тела в Dynamo
 
-### What is Solid?
+### Что такое твердое тело?
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+Чтобы создавать более сложные модели, которые невозможно получить из одной поверхности, или определять явный объем, следует научиться работе с [телами](5-6\_solids.md#solids) (и полиповерхностями). Даже для самого простого куба требуется целых шесть поверхностей, по одной на каждую грань. Тела позволяют получить доступ к двум ключевым концепциям, не доступным при работе с поверхностями, а именно к уточненным топологическим описаниям (граням, кромкам, вершинам) и логическим операциям.
 
-### Boolean Operation to Create Spiky Ball Solid
+### Логическая операция для создания шара с шипами
 
-You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
+Для изменения тел применяются [Логические операции](5-6\_solids.md#boolean-operations). Попробуйте использовать несколько логических операций для создания шара с шипами.
 
 ![](<../images/5-2/6/solids  - spiky ball.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
-> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
-> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface.
-> 4. **Solid.UnionAll**: Union the Cones and the Sphere.
-> 5. **Topology.Edges**: Query the edges of the new Solid
-> 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
+> 1. **Sphere.ByCenterPointRadius**: создайте базовый объект тела Solid.
+> 2. **Topology.Faces**, **Face.SurfaceGeometry**: выполните запрос граней тела и преобразование в геометрию поверхности (в данном случае сфера имеет только одну грань).
+> 3. **Cone.ByPointsRadii**: постройте конусы, используя точки на поверхности.
+> 4. **Solid.UnionAll**: объедините конусы со сферой.
+> 5. **Topology.Edges**: выполните запрос кромок нового объекта Solid.
+> 6. **Solid.Fillet**: выполните сглаживание кромок шара с шипами.
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### Freezing
+### Замораживание
 
-Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
+Логические операции сложны, и их вычисление может занимать много времени. Используйте команду «Заморозить», чтобы приостановить выполнение операций в выбранных и следующих за выбранными узлах.
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1.Use the right-click contextual menu to Freeze the Solid Union operation
+> 1. Используйте контекстное меню, чтобы заморозить операцию объединения тел.
 >
-> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
+> 2\. Выбранный узел и все следующие за ним узлы отображаются светло-серым полупрозрачным цветом, а все затронутые провода отображаются в виде прерывистых линий. Предварительный просмотр соответствующей геометрии также будет полупрозрачным. Теперь можно изменить значения в узлах, предшествующих выбранному, не перегружая приложение расчетом логической операции объединения.
 >
-> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
+> 3\. Чтобы разморозить узлы, щелкните правой кнопкой мыши и снимите флажок «Заморозить».
 >
-> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 4\. Все затронутые узлы и изображения предварительного просмотра связанных геометрических объектов обновляются и возвращаются к стандартному виду.
 
-## Deep Dive into...
+## Углубленное изучение
 
-### Solids
+### Тела
 
-Solids consist of one or more Surfaces that contain volume by way of a closed boundary that defines "in" or "out." Regardless of how many of these Surfaces there are, they must form a "watertight" volume to be considered a Solid. Solids can be created by joining Surfaces or Polysurfaces together or by using operations such as loft, sweep, and revolve. Sphere, Cube, Cone and Cylinder primitives are also Solids. A Cube with at least one face removed counts as a Polysurface, which has some similar properties, but it is not a Solid.
+Тела состоят из одной или нескольких поверхностей, внутри которых заключен объем, определенный замкнутым контуром, который отделяет то, что внутри тела, от того, что снаружи. Независимо от количества используемых поверхностей, для того чтобы объект считался телом, содержащийся в нем объем должен быть полностью замкнутым. Тела можно создавать путем объединения поверхностей или полиповерхностей либо с помощью таких операций, как лофтинг, сдвиг и вращение. Такие примитивы, как сфера, куб, конус и цилиндр, также являются телами. Объект Cube, у которого отсутствует хотя бы одна грань, считается полиповерхностью, которая уже не является телом, хотя и обладает многими аналогичными свойствами.
 
-![Solids](../images/5-2/6/Primitives.jpg)
+![Тела](../images/5-2/6/Primitives.jpg)
 
-> 1. A Plane is made of a single Surface and is not a Solid.
-> 2. A Sphere is made of one Surface but _is_ a Solid.
-> 3. A Cone is made of two surfaces joined together to make a Solid.
-> 4. A Cylinder is made of three surfaces joined together to make a Solid.
-> 5. A Cube is made of six surfaces joined together to make a Solid.
+> 1. Плоскость состоит из одной поверхности и не является телом.
+> 2. Сфера состоит из одной поверхности и _является_ телом.
+> 3. Конус состоит из двух соединенных поверхностей и является телом.
+> 4. Цилиндр состоит из трех соединенных поверхностей и является телом.
+> 5. Куб состоит из шести соединенных поверхностей и является телом.
 
-### Topology
+### Топология
 
-Solids are made up of three types of elements: Vertices, Edges, and Faces. Faces are the surfaces that make up the Solid. Edges are the Curves that define the connection between adjacent faces, and vertices are the start and end points of those Curves. These elements can be queried using the Topology nodes.
+Элементы, из которых состоят тела, делятся на три типа: вершины, кромки и грани. Грани — это поверхности, образующие тело. Кромки — это кривые, обозначающие области соединения смежных граней, а вершины — это начальные и конечные точки этих кривых. Эти элементы можно запросить с помощью узлов Topology.
 
-![Topology](../images/5-2/6/Solid-topology.jpg)
+![Топология](../images/5-2/6/Solid-topology.jpg)
 
-> 1. Faces
-> 2. Edges
-> 3. Vertices
+> 1. Грани
+> 2. Кромки
+> 3. Вершины
 
-### Operations
+### Операции
 
-Solids can be modified by filleting or chamfering their edges to eliminate sharp corners and angles. The chamfer operation creates a ruled surface between two faces, while a fillet blends between faces to maintain tangency.
+Тела можно изменять путем применения скруглений и фасок к кромкам, чтобы тем самым сгладить острые углы. Операция фаски создает поверхность соединения между двумя гранями, а операция сопряжения сглаживает переход между гранями для сохранения касательности.
 
 ![](../images/5-2/6/SolidOperations.jpg)
 
-> 1. Solid Cube
-> 2. Chamfered Cube
-> 3. Filleted Cube
+> 1. Твердотельный куб
+> 2. Куб с фасками
+> 3. Скругленный куб
 
-### Boolean Operations
+### Логические операции
 
-Solid Boolean operations are methods for combining two or more Solids. A single Boolean operation actually means performing four operations:
+Логические операции для тел — это методы, позволяющие объединить несколько тел в одно. Каждая логическая операция включает в себя четыре операции:
 
-1. **Intersect** two or more objects.
-2. **Split** them at the intersections.
-3. **Delete** unwanted portions of the geometry.
-4. **Join** everything back together.
+1. **Пересечение** нескольких объектов.
+2. **Разделение** их в местах пересечения.
+3. **Удаление** ненужных частей геометрии.
+4. **Объединение** оставшихся частей.
 
-This makes Solid Booleans a powerful time-saving process. There are three Solid Boolean operations that distinguish which parts of the geometry are kept. ![Solid Boolean](../images/5-2/6/SolidBooleans.jpg)
+Благодаря этому использование логических операций для тел позволяет значительно сэкономить время. Существует три логические операции для тел, позволяющие определить, как части геометрии должны сохраняться. ![Логические операции с телами](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Union:** Remove the overlapping portions of the Solids and join them into a single Solid.
-> 2. **Difference:** Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume.
-> 3. **Intersection:** Keep only the intersecting volume of the two Solids.
+> 1. **Объединение:** несколько тел объединяются в одно с удалением перекрывающихся частей.
+> 2. **Разница:** одно тело вычитается из другого. Тело, которое вычитается, называется инструментом. Обратите внимание, что для сохранения обратного объема вычитаемое и подвергающееся вычитанию тела можно поменять местами.
+> 3. **Пересечение:** при пересечении сохраняются только перекрывающиеся части двух тел.
 
-In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **Solid.UnionAll** nodes for performing difference and union operations with multiple Solids. ![](../images/5-2/6/BooleanAll.jpg)
+В дополнение к этим трем операциям в Dynamo доступны узлы **Solid.DifferenceAll** и **Solid.UnionAll** для выполнения операций разности и объединения с несколькими телами. ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** Union operation with sphere and outward-facing cones
-> 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
+> 1. **UnionAll:** операция объединения сферы и повернутых наружу конусов.
+> 2. **DifferenceAll:** операция разности между сферой и повернутыми внутрь конусами.
 
 ##

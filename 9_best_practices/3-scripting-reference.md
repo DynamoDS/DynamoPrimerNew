@@ -1,45 +1,45 @@
-# Scripting Reference
+# Справочник по созданию сценариев
 
-This reference page extends the best practices covered in Scripting Strategies with greater detail on code libraries, labeling, and styling. We will be using Python to illustrate the concepts below, but the same principles would apply in Python and C#(Zerotouch) but in different syntax.
+Данный справочник представляет собой дополнение к практическим рекомендациям, рассмотренным в главе «Методы создания сценариев». В нем содержатся дополнительные сведения о библиотеках кодов, метках и стиле. Для иллюстрации будет использоваться язык Python, однако принципы являются общими для Python и C# (Zero Touch) с учетом различий в синтаксисе.
 
-## Which Libraries to Use
+## Используемые библиотеки
 
-Standard libraries are external to Dynamo and are present in the programming languages Python and C# (Zerotouch). Dynamo also has its own set of libraries that directly correspond to it's node hierarchy, enabling the user to build anything in code that could be made with nodes and wires. The following is a guide for what each Dynamo library gives access to and when to use a standard one.
+Стандартные библиотеки не входят в состав Dynamo и написаны на языках программирования Python и C# (Zero Touch). В Dynamo также имеется собственный набор библиотек, которые точно отражают иерархию узлов модуля. Благодаря этому пользователи могут создавать программы с помощью узлов и проводов в форме кода. В представленном ниже руководстве описано содержимое каждой из библиотек Dynamo и случаи использования стандартных библиотек.
 
 ![](./images/3/textual-programming.jpg)
 
-**Standard Libraries and Dynamo Libraries**
+**Стандартные библиотеки и библиотеки Dynamo**
 
-* Standard libraries from Python and C# can be used to build advanced data and flow structures in the Dynamo environment.
-* Dynamo libraries directly correspond to the node hierarchy for creating geometry and other Dynamo objects.
+* Для формирования данных и процессов со сложной структурой в среде Dynamo можно использовать стандартные библиотеки Python и C#.
+* Библиотеки Dynamo в точности следуют иерархии узлов, что удобно при создании геометрических и других объектов Dynamo.
 
-**Dynamo Libraries**
+**Библиотеки Dynamo**
 
-1.  ProtoGeometry\*
+1. ProtoGeometry\*
 
-    * Functionality: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
-    * How to import: `import Autodesk.DesignScript.Geometry`
+   * Функции: дуга, ограничивающая рамка, окружность, конус, система координат, кубоид, кривая, цилиндр, ребро, эллипс, дуга эллипса, грань, геометрия, спираль, группа индексов, линия, сеть, NURBS-кривая, NURBS-поверхность, плоскость, точка, полигон, прямоугольник, тело, сфера, поверхность, топология, T-сплайн, UV, вектор, вершина.
+   * Импорт: `import Autodesk.DesignScript.Geometry`
 
-    ``
+   ``
 2. DSCoreNodes
-   * Functionality: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
-   * How to import: `import DSCore`
+   * Функции: цвет, диапазон цветов 2D, дата и время, интервал времени, ввод/вывод, формула, логика, список, математическое вычисление, квадрадерево, строка, поток.
+   * Импорт: `import DSCore`
 3. Tessellation
-   * Functionality: Convex Hull, Delaunay, Voronoi.
-   * How to import: `import Tessellation`
+   * Функции: выпуклая оболочка, Делоне, Вороной.
+   * Импорт: `import Tessellation`
 4. DSOffice
-   * Functionality: Excel.
-   * How to import: `import DSOffice`
+   * Функции: Excel.
+   * Импорт: `import DSOffice`
 
 {% hint style="warning" %}
-\*Note: When using **ProtoGeometry** through Python or C#, you are creating unmanaged objects, which need have their memory managed manually - please see section below: **Unmanaged Objects**, for more info.
+\* Примечание. При работе с библиотекой **ProtoGeometry** в Python или C# создаются неуправляемые объекты, память которых можно освободить только вручную. Дополнительные сведения см. в разделе **Неуправляемые объекты** ниже.
 {% endhint %}
 
-## Label Carefully
+## Осторожное использование меток
 
-While scripting, we are constantly using identifiers to denote things like variables, types, functions, and other entities. Through this system of symbolic notation, while building algorithms we can conveniently refer to information by way of labels --usually made up of a sequence of characters. Naming things well plays a significant role in writing code that can be easily read and understood by others as well as your future self! Here are some tips to keep in mind while naming things in your script:
+При написании сценариев постоянно используются идентификаторы, которые служат для обозначения переменных, типов, функций и других элементов. Благодаря этой системе условных обозначений можно строить алгоритмы, ссылаясь на данные посредством меток, которые обычно представляют собой последовательность символов. Правильное присвоение имен очень важно при написании кода, так как позволяет сделать его понятным не только другим пользователям, но и самому автору в будущем. Ниже приводятся рекомендации по присвоению имен элементам сценария.
 
-**It´s OK to use abbreviations, but explain the abbreviation with a comment:**
+**Использование сокращений допускается, но с поясняющим комментарием:**
 
 ```
 ### BAD
@@ -56,7 +56,7 @@ csfY= 1.3
 csfZ = 1.0
 ```
 
-**Avoid redundant labeling:**
+**Избегайте избыточных меток:**
 
 ```
 ### BAD
@@ -72,7 +72,7 @@ seat = car.Seat()
 tire = car.Tire()
 ```
 
-**Use positive logic for your variable names instead of negative logic:**
+**В именах переменных используйте положительную, а не отрицательную логику:**
 
 ```
 ### BAD
@@ -92,7 +92,7 @@ else:
     print 'not found'
 ```
 
-**Prefer “reverse notation”:**
+**Старайтесь использовать обратный порядок слов в обозначениях:**
 
 ```
 ### BAD
@@ -108,9 +108,9 @@ agents_active = …
 agents_dead = ...
 ```
 
-> It’s more sensible, in structural terms.
+> Это более целесообразно с точки зрения структуры.
 
-**Aliases should be used to shorten overly long and often repeated chains:**
+**Для сокращения длинных или часто повторяющихся цепочек наименований используйте псевдонимы:**
 
 ```
 ### BAD
@@ -130,9 +130,9 @@ doc = DM.Instance.CurrentDBDocument
 uiapp = DM.Instance.CurrentUIApplication
 ```
 
-> Aliasing can quickly lead to very confusing and non-standard programs.
+> Однако помните, что использование псевдонимов может сделать программу непонятной и нестандартной.
 
-**Only use necessary words:**
+**Используйте только необходимые слова:**
 
 ```
 ### BAD
@@ -144,141 +144,141 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> “Everything should be made as simple as possible, but not simpler.” – Albert Einstein
+> «Все должно быть изложено так просто, как только возможно, но не проще». — Альберт Эйнштейн
 
-## Style Consistently
+## Единообразие стиля
 
-Generally speaking there is more than one way to program just about anything, therefore your “personal style” of scripting is the result of the countless small decisions you choose to make (or not make) along the way. That said, the readability and maintainability of your code is a direct result of its internal consistency as well as its adherence to general stylistic conventions. As a rule of thumb, code that looks the same in two places should work the same, too. Here are a few tips for writing clear and consistent code.
+Любую программу можно написать несколькими способами, то есть персональный стиль создания сценариев формируется в результате принятия (или непринятия) бесчисленных мелких решений по ходу работы. Это означает, что читаемость и возможность доработки кода — прямой результат внутренней согласованности и соблюдения общих стилистических правил. Главное правило: одинаковый код в двух разных местах должен работать одинаково. Ниже приводятся советы по созданию понятного единообразного кода.
 
-**Naming conventions:** (Choose one of the conventions below for each type of entity in your code and stick to it!)
+**Правила именования** (выберите одно из следующих правил для каждого типа объекта в коде и придерживайтесь его)
 
-* Variables, functions, methods, packages, modules:\
-  `lower_case_with_underscores`
-* Classes and Exceptions:\
-  `CapWords`
-* Protected methods and internal functions:\
-  `_single_leading_underscore(self, ...)`
-* Private methods:\
-  `__double_leading_underscore(self, ...)`
-* Constants:\
-  `ALL_CAPS_WITH_UNDERSCORES`
+* Переменные, функции, методы, пакеты, модули:\
+   `lower_case_with_underscores`
+* Классы и исключения:\
+   `CapWords`
+* Защищенные методы и внутренние функции:\
+   `_single_leading_underscore(self, ...)`
+* Собственные методы:\
+   `__double_leading_underscore(self, ...)`
+* Константы:\
+   `ALL_CAPS_WITH_UNDERSCORES`
 
-> Tip: Avoid one-letter variables (esp. l, O, I) except in very short blocks, when the meaning is clearly visible from the immediate context.
+> Совет. Следует избегать использования переменных из одной буквы (особенно l, O, I). Исключением могут быть очень короткие блоки, когда значение легко понять из ближайшего контекста.
 
-**Use of blank lines:**
+**Использование пустых строк**
 
-* Surround top-level function and class definitions with two blank lines.
-  * Method definitions inside a class are surrounded by a single blank line.
-  * Extra blank lines may be used (sparingly) to separate groups of related functions.
+* До и после определения функции верхнего уровня или класса следует оставлять две пустые строки.
+   * До и после определения метода внутри класса следует оставлять одну пустую строку.
+   * Для разделения групп связанных функций можно использовать дополнительные пустые строки (в разумных количествах).
 
-**Avoid extraneous whitespace:**
+**Избегайте ненужных пробелов**
 
-*   Immediately inside parentheses, brackets or braces:
+* После открывающейся или перед закрывающейся круглой скобкой, квадратной скобкой или фигурной скобкой:
 
-    ```
-    ### BAD
-    function( apples[ 1 ], { oranges: 2 } )
-    ```
+   ```
+   ### BAD
+   function( apples[ 1 ], { oranges: 2 } )
+   ```
 
-    ```
-    ### GOOD:
-    function(apples[1], {oranges: 2})
-    ```
-*   Immediately before a comma, semicolon, or colon:
+   ```
+   ### GOOD:
+   function(apples[1], {oranges: 2})
+   ```
+* Перед запятой, точкой с запятой или двоеточием:
 
-    ```
-    ### BAD
-     if x == 2 : print x , y ; x , y = y , x
-    ```
+   ```
+   ### BAD
+    if x == 2 : print x , y ; x , y = y , x
+   ```
 
-    ```
-    ### GOOD
-      if x == 2: print x, y; x, y = y, x
-    ```
-*   Immediately before the open parenthesis that starts the argument list of a function call:
+   ```
+   ### GOOD
+     if x == 2: print x, y; x, y = y, x
+   ```
+* Перед открывающейся скобкой, за которой следует список аргументов вызываемой функции:
 
-    ```
-    ### BAD
-    function (1)
-    ```
+   ```
+   ### BAD
+   function (1)
+   ```
 
-    ```
-    ### GOOD
-    function(1)
-    ```
-*   Immediately before the open parenthesis that starts an indexing or slicing:
+   ```
+   ### GOOD
+   function(1)
+   ```
+* Перед открывающейся скобкой, за которой следует индексирование или членение:
 
-    ```
-    ### BAD
-    dict ['key'] = list [index]
-    ```
+   ```
+   ### BAD
+   dict ['key'] = list [index]
+   ```
 
-    ```
-    ### GOOD
-    dict['key'] = list[index]
-    ```
-*   Always surround these binary operators with a single space on either side:
+   ```
+   ### GOOD
+   dict['key'] = list[index]
+   ```
+* До и после следующих двоичных операторов всегда вставляйте одиночный пробел:
 
-    ```
-    assignment ( = )
-    augmented assignment ( += , -= etc.)
-    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-    Booleans ( and , or , not )
-    ```
+   ```
+   assignment ( = )
+   augmented assignment ( += , -= etc.)
+   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+   Booleans ( and , or , not )
+   ```
 
-**Watch line length:**
+**Следите за длиной строки**
 
-* Don't stress over it \~ 79 characters.
-* Limiting the required editor window width makes it possible to have several files open side-by-side, and works well when using code review tools that present the two versions in adjacent columns.
-* Long lines can be broken over multiple lines by wrapping expressions in parentheses:
+* Она должна содержать около 79 символов.
+* Если ограничить ширину окна редактора, можно открыть несколько файлов рядом. Это также удобно при использовании инструментов проверки кода, когда обе версии кода представлены в соседних столбцах.
+* Длинные строки можно разбить на несколько строк, заключив выражения в круглые скобки:
 
-**Avoid obvious and redundant comments:**
+**Избегайте очевидных и лишних комментариев**
 
-* Sometimes fewer comments makes for more readable code. Especially if it forces you to use meaningful symbol names instead.
-*   Adopting good coding habits reduces dependence on comments:
+* Иногда меньшее количество комментариев делает код более читабельным, особенно если вместо них используются понятные идентификаторы.
+* Хороший стиль написания кода уменьшает зависимость от комментариев:
 
-    ```
-    ### BAD
-      # get the country code
-      country_code = get_country_code(address)
+   ```
+   ### BAD
+     # get the country code
+     country_code = get_country_code(address)
 
-      # if country code is US
-      if (country_code == 'US'):
-        # display the form input for state
-        print form_input_state()
-    ```
+     # if country code is US
+     if (country_code == 'US'):
+       # display the form input for state
+       print form_input_state()
+   ```
 
-    ```
-    ### GOOD
-      # display state selection for US users
-      country_code = get_country_code(address)
-      if (country_code == 'US'):
-        print form_input_state()
-    ```
+   ```
+   ### GOOD
+     # display state selection for US users
+     country_code = get_country_code(address)
+     if (country_code == 'US'):
+       print form_input_state()
+   ```
 
-> Tip: Comments tell you why, Code tells you how.
+> Совет. Комментарии отвечают на вопрос «Почему?», код — на вопрос «Как?».
 
-**Check out open source code:**
+**Просматривайте открытый исходный код**
 
-* Open Source projects are built on the collaborative efforts of many developers. These projects need to maintain a high level of code readability so that the team can work together as efficiently as possible. Therefore, it is a good idea to browse through the source code of these projects to observe what these developers are doing.
-* Improve your conventions:
-  * Question whether or not each convention is working for the needs at hand.
-  * Is functionality/efficiency being compromised?
+* Проекты с открытым исходным кодом создаются совместными усилиями многих разработчиков. Код, на котором пишутся эти проекты, должен быть максимально понятным, чтобы обеспечить эффективную работу всей группы. Поэтому рекомендуется просматривать исходный код подобных проектов, чтобы понять ход мыслей разработчиков.
+* Совершенствуйте правила:
+   * Задавайте вопросы о том, срабатывает ли то или иное правило в отношении текущих задач.
+   * Не ухудшается ли функциональность или эффективность?
 
-## C# (Zerotouch) Standards
+## Стандарты C# (Zero Touch)
 
-**Check out these wiki pages for guidance on writing C# for Zerotouch and contributing to Dynamo:**
+**Посетите эти страницы Wiki, чтобы узнать об особенностях написания кода на C# для Zero Touch и его вставки в Dynamo.**
 
-* This wiki covers some general coding standards for documenting and testing your code: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
-* This wiki specifically covers naming standards for libraries, categories, node names, port names, and abbreviations: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
+* На этой странице рассматриваются некоторые общие стандарты, касающиеся документирования и проверки кода: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards).
+* На этой странице рассматриваются стандарты именования для библиотек, категорий, имен узлов, имен портов и сокращений: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards).
 
-**Unmanaged Objects:**
+**Неуправляемые объекты**
 
-When using Dynamo's Geometry library _(ProtoGeometry)_ from Python or C# geometry objects that you create will not be managed by the virtual machine, and the memory of many of these objects will need to be cleaned up manually. To cleanup native or unmanaged objects you can use the **Dispose** method or the **using** keyword. See this wiki entry for an overview: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
+При использовании библиотеки геометрических объектов Dynamo _(ProtoGeometry)_ в Python или C# управлять геометрическими объектами с помощью виртуальной машины будет невозможно, и память многих из этих объектов необходимо освобождать вручную. Для удаления локальных или неуправляемых объектов можно использовать метод **Dispose** или ключевое слово **using**. Дополнительные сведения см. на следующей странице Wiki: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-You only need to dispose unmanaged resources that you don't return into the graph or store a reference to. For the rest of this section, we'll refer to these objects as _intermediate geometry_. You can see an example of this class of object in the code example below. This zero touch C# function **singleCube** returns a single cube, but creates 10000 extra cubes during its execution. We can pretend this other geometry was used as some intermediate construction geometry.
+Удалять следует только неуправляемые ресурсы, которые не возвращаются в график или на которые не указывают ссылки. Далее в этом разделе подобные объекты будут называться _промежуточной геометрией_. Этот класс объектов используется в примере кода, приведенном ниже. Функция C# Zero Touch c именем **singleCube** возвращает один куб, но в процессе выполнения создает еще 10 000 кубов. Предположим, что оставшиеся геометрические объекты были использованы в качестве некой промежуточной вспомогательной геометрии.
 
-**This zero touch function will most likely crash Dynamo.** Since we created 10000 solids, but only stored one of them, and only returned that one. We should instead, dispose all of our intermediate cubes, except the one that we return. We don't want to dipose what we return, as it will be propogated into the graph and used by other nodes.
+**Скорее всего, эта функция вызовет аварийное завершение работы Dynamo.**В результате ее использования было создано 10 000 тел, а сохранено и возвращено одно из них. В этом случае необходимо удалить все промежуточные кубы, кроме возвращаемого. Возвращаемый объект удалять не нужно, так как он будет распространен по графику и использован в других узлах.
 
 ```
 public Cuboid singleCube(){
@@ -292,7 +292,7 @@ public Cuboid singleCube(){
 }
 ```
 
-The fixed code would look something like:
+Постоянный код должен выглядеть примерно так:
 
 ```
  public Cuboid singleCube(){
@@ -312,4 +312,4 @@ The fixed code would look something like:
  }
 ```
 
-In general you only need to dispose geometry like `Surfaces`, `Curves`, and `Solids`. To be safe though, you can dispose all geometry types (`Vectors`, `Points`, `CoordinateSystems`).
+Обычно необходимо удалить только геометрию, например `Surfaces`, `Curves` и `Solids`. Однако в целях безопасности можно удалить все типы геометрии (`Vectors`, `Points`, `CoordinateSystems`).

@@ -1,62 +1,62 @@
-# Library
+# Библиотека
 
-The Library contains all of the loaded Nodes, including the ten default categories Nodes that come with the installation as well as any additionally loaded Custom Nodes or Packages. The Nodes in the Library are organized hierarchically within libraries, categories, and, where appropriate, subcategories.
+Библиотека содержит все загруженные узлы, включая десять узлов по умолчанию, входящих в установочный пакет, а также все дополнительно загруженные пользовательские узлы и пакеты. Узлы в библиотеке организованы иерархически в виде библиотек, категорий и подкатегорий (если доступно).
 
 ![](<images/3-2/library - library UI.jpg>)
 
-* Basic Nodes: Comes with default installation.
-* Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
-* Nodes from the Package Manager: Collection of published Custom Nodes.
+* Основные узлы: поставляются с установкой по умолчанию.
+* Пользовательские узлы: сохраняйте часто используемые процедуры или специальные графики в качестве пользовательских узлов. Ими также можно поделиться с сообществом.
+* Узлы из Диспетчера пакетов: коллекция опубликованных пользовательских узлов.
 
-We will go through the [hierarchy of Nodes](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](3-3\_dynamo\_libraries.md#quick-search-in-library) and learn about some of the [frequently used Nodes](3-3\_dynamo\_libraries.md#frequently-used-nodes) among them.
+Мы рассмотрим [иерархию категорий узлов](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories), а также [быстрый поиск в библиотеке](3-3\_dynamo\_libraries.md#quick-search-in-library) и некоторые из [часто используемых узлов](3-3\_dynamo\_libraries.md#frequently-used-nodes).
 
-### Library Hierarchy for Categories
+### Иерархия библиотек для категорий
 
-Browsing through these categories is the fastest way to understand the hierarchy of what we can add to our Workspace and the best way to discover new Nodes you haven't used before.
+Обзор узлов по категориям позволяет быстро разобраться в иерархии узлов, которые требуется добавить в рабочее пространство, а также найти узлы, которыми вы еще не пользовались.
 
-Browse the Library by clicking through the menus to expand each category and its subcategory
+Откройте библиотеку, щелкнув меню, чтобы развернуть каждую категорию и подкатегорию.
 
 {% hint style="info" %}
-Geometry are great menus to begin exploring as they contain the largest quantity of Nodes.
+Начинать знакомство с программой рекомендуется с меню Geometry, в котором представлено наибольшее количество узлов.
 {% endhint %}
 
 ![](<images/3-2/library  - modified and resize library categories.jpg>)
 
-> 1. Library
-> 2. Category
-> 3. Subcategory
-> 4. Node
+> 1. Библиотека
+> 2. Категория
+> 3. Подкатегория
+> 4. Узел
 
-These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
+Далее узлы распределяются внутри подкатегории в зависимости от их функции: **создание** данных, выполнение **действия** или **запрос**.
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/3-2/user interface - create.jpg>) **Create**: создание или построение геометрии с нуля. Например, окружности.
+* ![](<images/3-2/user interface - action.jpg>)**Action**: выполнение действия с объектом. Например, масштабирование окружности.
+* ![](<images/3-2/user interface - query.jpg>) **Query**: получение свойства уже существующего объекта. Например, получение радиуса окружности.
 
-Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
+Наведите указатель на узел, чтобы посмотреть подробные сведения, помимо его имени и значка. Такие подсказки позволяют быстро определить функции, выполняемые узлом, какие данные ему требуются на входе и что он дает на выходе.
 
 ![](<images/3-2/user interface - node description.jpg>)
 
-> 1. Description - plain language description of the Node
-> 2. Icon - larger version of the icon in the Library Menu
-> 3. Input(s) - name, data type, and data structure
-> 4. Output(s) - data type and structure
+> 1. Описание: описание узла на обычном языке.
+> 2. Значок: увеличенная версия значка, используемого в меню библиотеки.
+> 3. Входные данные: наименование, тип и структура данных.
+> 4. Выходные данные: наименование, тип и структура данных.
 
-### Quick search in Library
+### Быстрый поиск в библиотеке
 
-If you know with relative specificity which Node you want to add to your Workspace, type in the **Search** field to look up all matching Nodes.
+Если вам известно с относительной точностью, какой узел необходимо добавить в рабочее пространство, введите ключевые слова в поле **Поиск**, чтобы найти все соответствующие узлы.
 
-Choose by clicking on the Node you wish to add or hit Enter to add highlighted nodes to the center of the Workspace.
+Щелчком выберите необходимый узел или нажмите клавишу ENTER, чтобы добавить выделенные узлы в центр рабочего пространства.
 
 ![](<images/3-2/user interface - search.jpg>)
 
-#### Search by hierarchy
+#### Поиск по иерархии
 
-Beyond using keywords to try to find Nodes, we can type the hierarchy separated with a period in the Search Field or with Code Blocks (which use the _Dynamo textual language_).
+Поиск узлов можно выполнять не только по ключевым словам, но и по иерархии, разделяя ее уровни точкой в поле поиска, или с помощью узлов Code Block, в которых используется _текстовый язык Dynamo_.
 
-The hierarchy of each library is reflected in the Name of Nodes added to the Workspace.
+Иерархия каждой библиотеки отражена в имени узла, добавляемого в рабочее пространство.
 
-Typing in different portions of the Node's place in the Library hierarchy in the `library.category.nodeName` format returns different results
+При вводе тех или иных фрагментов расположения узла в библиотечной иерархии в формате `library.category.nodeName` отображаются различные результаты.
 
 * `library.category.nodeName`
 
@@ -66,73 +66,73 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 ![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
 
-* `nodeName` or `keyword`
+* `nodeName` или `keyword`
 
 ![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
 
-Typically the Name of the Node in the Workspace will be rendered in the `category.nodeName` format, with some notable exceptions particularly in the Input and View Categories.
+В рабочем пространстве имя узла обычно представлено в формате `category.nodeName`. Есть некоторые исключения, в частности, узлы категорий Input и View.
 
-Beware of similarly named Nodes and note the category difference:
+Соблюдайте осторожность при использовании узлов с одинаковыми именами и обращайте особое внимание на различия в категориях, к которым они относятся.
 
-* Nodes from most libraries will include the category format
+* Узлы из большинства библиотек содержат наименование категории.
 
 ![](<images/3-2/library - node category differences 1.jpg>)
 
-* `Point.ByCoordinates` and `UV.ByCoordinates` have the same Name but come from different categories
+* Имена узлов `Point.ByCoordinates` и `UV.ByCoordinates` совпадают, но они относятся к разным категориям.
 
 ![](<images/3-2/library - node category differences 2.jpg>)
 
-* Notable exceptions include Built-in Functions, Core.Input, Core.View, and Operators
+* К исключениям относятся встроенные функции, Core.Input, Core.View и логические операторы.
 
 ![](<images/3-2/library - node category differences 3.jpg>)
 
-### Frequently Used Nodes
+### Часто используемые узлы
 
-With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our Visual Programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
+В комплект установки приложения Dynamo входят сотни стандартных узлов. Какие же из них наиболее важны при разработке визуальных программ? Давайте рассмотрим узлы, которые позволяют определять параметры программы (**Input**), отображать результаты действия, выполненного тем или иным узлом (**Watch**), и задавать входные данные и функции ускоренным методом (**Code Block**).
 
-#### Input Nodes
+#### Узлы Input
 
-Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
+Узлы Input — это ключевой инструмент, благодаря которому пользователи визуальных программ могут работать с основными параметрами. Ниже перечислены некоторые узлы, доступные в основной библиотеке.
 
-| Node           |                                                | Node           |                                                |
+| Узел |                                                | Узел |                                                |
 | -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean        | ![](<images/3-2/library - boolean.jpg>)        | Number         | ![](<images/3-2/library - number.jpg>)         |
-| String         | ![](<images/3-2/library - string.jpg>)         | Number Slider  | ![](<images/3-2/library - number slider.jpg>)  |
+| Boolean | ![](<images/3-2/library - boolean.jpg>) | Number | ![](<images/3-2/library - number.jpg>) |
+| String | ![](<images/3-2/library - string.jpg>) | Number Slider | ![](<images/3-2/library - number slider.jpg>) |
 | Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path      | ![](<images/3-2/library - file path.jpg>)      |                |                                                |
+| File Path | ![](<images/3-2/library - file path.jpg>) |                |                                                |
 
-#### Watch & Watch3D
+#### Узлы Watch и Watch3D
 
-The Watch Nodes are essential to managing the data that is flowing through your Visual Program. You can view the result of a Node through the **Node data preview** by hovering your mouse over the node.
+Узлы Watch играют важную роль в управлении потоком данных в визуальной программе. Результат работы узла можно увидеть в окне **предварительного просмотра данных узла**, наведя указатель на узел.
 
 ![](<images/3-2/library - node preview.jpg>)
 
-It will be useful to keep it revealed in a **Watch** Node
+Удобно просматривать элемент в узле **Watch**.
 
 ![](<images/3-2/library - watch node.jpg>)
 
-Or see the geometry results through a **Watch3D** Node.
+Кроме того, можно просмотреть результаты геометрии с помощью узла **Watch3D**.
 
 ![](<images/3-2/library - watch3d node.gif>)
 
-Both of these are found in the View Category in the Core Library.
+Оба этих узла находятся в категории View основной библиотеки.
 
 {% hint style="info" %}
-Tip: Occasionally the 3D Preview can be distracting when your Visual Program contains a lot of Nodes. Consider unchecking the Showing Background Preview option in the Settings Menu and using a Watch3D Node to preview your geometry.
+Совет. Иногда при работе с большим количеством узлов пользоваться функцией 3D-просмотра может быть неудобно. В этом случае можно снять флажок фонового просмотра в меню параметров и использовать узел Watch3D для предварительного просмотра геометрии.
 {% endhint %}
 
 #### Code Block
 
-Code Block Nodes can be used to define a block of code with lines separated by semi-colons. This can be as simple as `X/Y`.
+Узлы Code Block позволяют создавать блоки кода, состоящие из строк, разделенных запятыми. Это так же просто, как и с узлом `X/Y`.
 
-We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+Кроме того, узлы Code Block можно использовать в качестве упрощенного метода ввода чисел или вызова функции другого узла. Для этого используется синтаксис в соответствии с соглашением об именовании для текстового языка Dynamo — [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
 
-Here is a simple demonstration (with instructions) for using Code Block in your script.
+Ниже приведена простая демонстрация (с инструкциями) по использованию Code Block в сценарии.
 
 ![](<images/3-2/library - code block demo.gif>)
 
-1. Double-click to create a Code Block Node
-2. Type `Circle.ByCenterPointRadius(x,y);`
-3. Click on Workspace to clear the selection should add `x` and `y` inputs automatically.
-4. Create a Point.ByCoordinates Node and a Number Slider then connect them to the inputs of the Code Block.
-5. The result of the executing the Visual Program is shown as the circle in the 3D Preview
+1. Дважды щелкните для создания узла Code Block.
+2. Введите `Circle.ByCenterPointRadius(x,y);`.
+3. Щелкните в рабочем пространстве, чтобы отменить выбор и автоматически добавить входные порты `x` и `y`.
+4. Создайте узлы Point.ByCoordinates и Number Slider, затем соедините их с портами ввода в узле Code Block.
+5. Результат выполнения визуальной программы отображается в виде окружности в окне 3D-просмотра.

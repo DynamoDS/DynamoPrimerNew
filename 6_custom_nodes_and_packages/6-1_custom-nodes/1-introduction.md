@@ -1,50 +1,50 @@
-# Custom Node Introduction
+# Пользовательские узлы: введение
 
-Custom Nodes are constructed by nesting other nodes and custom nodes inside of a "Dynamo Custom Node," which we can think of conceptually as a container. When this container node is executed in your graph, everything inside it will be executed to allow you to reuse and share a useful combination of nodes.
+Пользовательские узлы создаются путем помещения стандартных и созданных разработчиками узлов в так называемый пользовательский узел Dynamo, который можно рассматривать как своего рода контейнер. При запуске такого узла-контейнера в графике происходит запуск всех содержащихся в нем компонентов. В результате получается удобная комбинация узлов для многократного использования и предоставления другим пользователям.
 
-### Adapting to Change
+### Адаптация к изменениям
 
-When you have multiple copies of a custom node in your graph, you can update all of them by editing the base custom node. This allows you to update your graph seamlessly by adapting to any changes that may occur in workflow or design.
+Если в графике присутствует несколько копий пользовательского узла, их все можно отредактировать одновременно, изменив базовый экземпляр этого узла. Это позволяет с легкостью редактировать график и адаптировать его к изменениям, которые могут возникнуть в проекте или рабочем процессе.
 
-### Work Sharing
+### Совместная работа
 
-Arguably the best feature of custom nodes is their work sharing capabilities. If a "power user" creates a complex Dynamo graph and hands it off to a designer who is new to Dynamo, he/she can condense the graph to the bare essentials for design interaction. The custom node can be opened to edit the internal graph, but the "container" can be kept simple. With this process, custom nodes allow Dynamo users to design a graph that is clean and intuitive.
+Главное преимущество пользовательских узлов — удобство совместной работы. Например, если опытный программист создает в Dynamo сложный график, который затем требуется передать проектировщику, не работавшему с Dynamo, то программист может упростить представление графика и сделать его максимально доступным для проектировщика. Пользовательский узел-контейнер, в который помещается график, можно открывать для редактирования его содержимого, однако внешний вид контейнера при этом может оставаться простым и аккуратным. Таким образом, пользовательские узлы позволяют делать графики Dynamo лаконичными и интуитивно понятными.
 
 ![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
 
-### Many Ways to Build a Node
+### Способы создания узлов
 
-There are a wide variety of ways to build custom nodes in Dynamo. In the examples in this chapter, we'll create custom nodes directly from the Dynamo UI. If you are a programmer and you are interested in C# or Zero-Touch formatting, you can reference [this page ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)on the Dynamo Wiki for a more in-depth review.
+Создавать пользовательские узлы в Dynamo можно самыми разными способами. В примерах, которые приведены в этой главе, пользовательские узлы создаются с помощью функций интерфейса Dynamo. Программисты, интересующиеся возможностями форматирования в C# или Zero Touch, могут ознакомиться с подробным обзором на [этой странице](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes) справки Wiki по Dynamo.
 
-### Custom Node Environment & Create Your First Custom Node
+### Среда пользовательских узлов и создание первого пользовательского узла
 
-Let's jump into the custom node environment and make a simple node to calculate a percentage. The custom node environment is different from the Dynamo graph environment, but the interaction is fundamentally the same. With that said, let's create our first custom node!
+Перейдите в среду пользовательского узла, чтобы создать простой узел для расчета процентного соотношения. Среда пользовательского узла отличается от среды графика Dynamo, но работа в ней осуществляется на основе тех же принципов. Итак, пора создать первый пользовательский узел.
 
-To create a Custom Node from scratch, Launch Dynamo and select Custom Node, or type Ctrl + Shift + N from the canvas.
+Чтобы создать пользовательский узел с нуля, запустите Dynamo и выберите «Пользовательский узел» или используйте сочетание клавиш CTRL + SHIFT + N в рабочей области.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
 
-Assign a name, description, and category in the Custom Node Properties dialog.
+Задайте имя, описание и категорию в диалоговом окне «Свойства пользовательского узла».
 
 ![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
 
-> 1. **Name:** Percentage
-> 2. **Description**: Calculate the percentage of one value in relation to another.
-> 3. **Category:** Math.Functions
+> 1. **Имя:** Percentage
+> 2. **Описание:** расчет процентного соотношения между двумя значениями.
+> 3. **Категория**: Math.Functions
 
-This will open a canvas with a yellow background, indicating that you are working inside a custom node. In this canvas you have access to all of the core Dynamo nodes, as well as the Input and Output nodes, which label the data flowing into and out of the custom node. They can be found in Input>Basic.
+Откроется рабочая область с желтым фоном, указывающим на то, что вы находитесь в среде пользовательского узла. В этом окне можно получить доступ ко всем стандартным узлам Dynamo, а также к узлам ввода и вывода, которые используются для обозначения данных, поступающих в пользовательский узел на входе и получаемых из него на выходе. Их можно найти в разделе Input > Basic.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
 
 ![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
 
-> 1. **Inputs:** Input nodes create input ports on the custom node. The syntax for an input node is _input\_name : datatype = default\_value(optional)._
-> 2. **Outputs:** Similar to inputs, these will create and name output ports on the custom node. Consider adding a **Custom Comment** to your Input and Output ports to hint at the Input and Output types. This is discussed in more detail in the [Creating Custom Nodes section](2-creating.md).
+> 1. **Input**: узлы Input используются для настройки портов ввода пользовательского узла. Синтаксис узла ввода: _имя\_ввода : тип\_данных = значение\_по\_умолчанию (необязательно)._
+> 2. **Вывод:** аналогично узлам ввода узлы вывода используются для настройки портов вывода пользовательского узла. К портам ввода и вывода можно добавлять **пользовательские комментарии**, указывающие на тип входных и выходных данных. Подробную информацию см. в разделе [Создание пользовательских узлов](2-creating.md).
 
-You can save this custom node as a .dyf (as opposed to the standard .dyn) file and it will automatically be added to your session and future sessions. You will find the custom node in your library from the Add-ons section.
+Этот пользовательский узел можно сохранить в файле DYF (вместо стандартного формата DYN), после чего он автоматически станет доступен в текущем и будущих сеансах. Пользовательский узел находится в разделе Add-ons библиотеки.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
 
-### Moving Forward
+### Дальнейшее изучение
 
-Now that we've created our first custom node, the next sections will dive deeper into custom node functionality and how to publish generic workflows. In the following section, we'll look at developing a custom node that transfers geometry from one surface to another.
+После создания первого пользовательского узла можно переходить к дальнейшим разделам, в которых подробнее рассматриваются функциональные возможности пользовательских узлов и процесс публикации типовых рабочих процессов. В следующем разделе представлен процесс разработки пользовательского узла, позволяющего переносить геометрию с одной поверхности на другую.

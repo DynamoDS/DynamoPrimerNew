@@ -1,9 +1,9 @@
-# Coding in Dynamo
+# Создание кода в Dynamo
 
-Dynamo is a great door to start coding for the AEC world. You may be interested in some of these sections to start your coding journey:
+Dynamo — это отличная возможность начать разработку программного обеспечения для архитектурно-строительной отрасли. Для начала работы с кодом вам будут полезны следующие разделы.
 
-* [Code Blocks and DesignScript](8-1\_code-blocks-and-design-script/)
-* [Geometry with DesignScript](8-2\_geometry-with-design-script/)
+* [Узлы Code Block и DesignScript](8-1\_code-blocks-and-design-script/)
+* [Создание геометрии с помощью DesignScript](8-2\_geometry-with-design-script/)
 * [Python](8-3\_python/)
 
 ![](<./images/image (17).png>)

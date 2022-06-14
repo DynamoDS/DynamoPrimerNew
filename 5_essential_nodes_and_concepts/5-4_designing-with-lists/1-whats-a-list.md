@@ -1,108 +1,108 @@
-# What's a List
+# Что такое список
 
-### What's a List?
+### Что такое список
 
-A list is a collection of elements, or items. Take a bunch of bananas, for example. Each banana is an item within the list (or bunch). It's easier to pick up a bunch of bananas rather than each banana individually, and the same holds for grouping elements by parametric relationships in a data structure.
+Список — это набор элементов или компонентов. Возьмем, к примеру, связку бананов. Каждый банан является элементом списка (или связки). Проще взять в руки связку бананов, чем брать бананы по одному. Точно так же работать с элементами, сгруппированными по параметрическим связям в структуре данных, проще, чем с отдельными элементами.
 
-![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Бананы](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Фотография [Августа Бину (Augustus Binu)](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
-When we buy groceries, we put all of the purchased items into a bag. This bag is also a list. If we're making banana bread, we need 3 bunches of bananas (we're making a _lot_ of banana bread). The bag represents a list of banana bunches and each bunch represents a list of bananas. The bag is a list of lists (two-dimensional) and the banana bunch is a list (one-dimensional).
+Когда мы идем в магазин, мы кладем все, что купили, в пакет. Этот пакет также является списком. Мы хотим испечь банановый кекс, и нам нужно три связки бананов (мы печем _очень большой_ кекс). Пакет представляет собой список связок, а каждая связка представляет собой список бананов. Пакет — это список списков (двумерный), а банан — это простой список (одномерный).
 
-In Dynamo, list data is ordered, and the first item in each list has an index "0". Below, we'll discuss how lists are defined in Dynamo and how multiple lists relate to one another.
+В Dynamo данные в списках упорядочиваются, и первому элементу в каждом списке присваивается индекс 0. Ниже мы рассмотрим то, как задать список в Dynamo, а также то, как разные списки могут быть связаны друг с другом.
 
-### Zero-Based Indices
+### Индексы, отсчитываемые от нуля
 
-One thing that might seem odd at first is that the first index of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index 0.
+Первому элементу в списке всегда назначается индекс 0, а не 1, и поначалу это может показаться странным. Поэтому запомните, что, если речь идет о первом элементе в списке, подразумевается элемент с индексом 0.
 
-For example, if you were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if you were to put your fingers in a list, Dynamo would have given them indices from 0 to 4. While this may seem a little strange to programming beginners, the zero-based index is standard practice in most computation systems.
+Например, если бы вам потребовалось посчитать количество пальцев на правой руке, то вы бы начали считать с 1 до 5. Однако если бы вам потребовалось внести ваши пальцы в список, то приложение Dynamo назначило бы им индексы от 0 до 4. Это может показаться странным тем, кто только начинает заниматься программированием, однако индекс, отсчитываемые от нуля, является стандартным для большинства вычислительных систем.
 
-Note that we still have 5 items in the list; it’s just that the list is using a zero-based counting system. And the items being stored in the list don’t just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
+Обратите внимание, что такой список по-прежнему включает пять элементов, просто в нем используется система отсчета от нуля, а не от единицы. Элементы списка не обязательно должны быть числами. Это могут быть данные любого типа, который поддерживается Dynamo, например точки, кривые, поверхности, семейства и т. д.
 
 ![](<../images/5-4/1/what's a list - zero based indices.jpg>)
 
-> a. Index
+> a. Индекс
 >
-> b. Point
+> b. Точка
 >
-> c. Item
+> c. Элемент
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a watch node to another node's output. By default, the watch node automatically shows all indices to the left side of the list and displays the data items on the right.
+Зачастую самым простым способом узнать тип данных в списке является подключение узла Watch к порту вывода другого узла. По умолчанию узел Watch автоматически отображает все индексы в левой части списка, а элементы данных — в правой.
 
-These indices are a crucial element when working with lists.
+Эти индексы играют ключевую роль при работе со списками.
 
-### Inputs and Outputs
+### Входные и выходные данные
 
-Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius**:
+При работе со списками требуемые входные и выходные данные различаются в зависимости от используемого узла Dynamo. Для примера возьмем список из пяти точек и соединим его порт вывода с двумя разными узлами Dynamo: **PolyCurve.ByPoints** и **Circle.ByCenterPointRadius**:
 
 ![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
 
-> 1. The _points_ input for **PolyCurve.ByPoints** is looking for _"Point\[]"_. This represents a list of points
-> 2. The output for **PolyCurve.ByPoints** is a single polycurve created from a list of five point.
-> 3. The _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_.
-> 4. The output for **Circle.ByCenterPointRadius** is a list of five circles, whose centers correspond to the original list of points.
+> 1. Порт ввода _points_ узла **PolyCurve.ByPoints** выполняет поиск элемента _Point[]_. Этот элемент представляет собой список точек.
+> 2. Выходные данные узла **PolyCurve.ByPoints** — это элемент PolyCurve, созданный на основе списка из пяти точек.
+> 3. Порт ввода _centerPoint_ узла **Circle.ByCenterPointRadius** запрашивает элемент _Point_.
+> 4. Выходные данные **Circle.ByCenterPointRadius** представляют собой список из пяти окружностей, центры которых соответствуют точкам из исходного списка.
 
-The input data for **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius** are the same, however the **Polycurve.ByPoints** node gives us one polycurve while the **Circle.ByCenterPointRadius** node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
+Узлы **PolyCurve.ByPoints** и **Circle.ByCenterPointRadius** используют одни и те же входные данные, однако узел **Polycurve.ByPoints** на выходе дает одну сложную кривую, а узел **Circle.ByCenterPointRadius** — пять окружностей для каждой точки из списка. На интуитивном уровне это кажется понятным, так как сложная кривая строится путем соединения всех пяти точек, а при создании окружностей каждая точка используется в качества центра отдельной окружности. Что же происходит с данными?
 
-Hovering over the _points_ input for **Polycurve.ByPoints**, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
+При наведении указателя мыши на порт ввода _points_ узла **Polycurve.ByPoints** можно увидеть, что этому порту требуется элемент _Point\[]_. Обратите внимание на скобки в конце. Этот элемент представляет список точек, и чтобы создать сложную кривую, в качестве входных данных этому узлу требуется отдельный список точек для каждой кривой. В результате узел объединяет каждый полученный на вводе список в одну сложную кривую.
 
-On the other hand, the _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
+Порт ввода _centrePoint_ узла **Circle.ByCenterPointRadius** запрашивает элемент _Point_. Этому узлу требуется одна точка, являющаяся отдельным элементом, которую он будет использовать в качестве центра окружности. Поэтому на основе тех же входных данных мы получаем пять отдельных окружностей. Знание различий в использовании входных данных в Dynamo помогает лучше понимать, как узлы распоряжаются данными.
 
-### Lacing
+### Переплетение
 
-Data matching is a problem without a clean solution. It occurs when a node has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+Сопоставление данных является проблемой, для которой не существует четкого решения. Это происходит, когда узел получается доступ к входным данных разных размеров. Изменение алгоритма сопоставления данных может привести к существенным различиям в результатах.
 
-Imagine a node which creates line segments between points (**Line.ByStartPointEndPoint**). It will have two input parameters which both supply point coordinates:
+Рассмотрим в качестве примера узел, который создает линейные сегменты между точками (**Line.ByStartPointEndPoint**). У него два входных параметра, которые используются для представления координат точек:
 
-#### Shortest List
+#### Самый короткий список
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the “Shortest List” algorithm. This is the default behavior for Dynamo nodes:
+Самый простой способ — попарно соединять входные данные с одинаковыми индексами, пока один из списков не закончится. Это алгоритм по самому короткому списку. Узлы Dynamo используют этот алгоритм по умолчанию.
 
 ![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
 
-#### Longest List
+#### Самый длинный список
 
-The “Longest List” algorithm keeps connecting inputs, reusing elements, until all streams run dry:
+Алгоритм переплетения по самому длинному списку соединяет все входные элементы, используя некоторые элементы повторно, пока не закончатся оба списка:
 
 ![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
 
-#### Cross Product
+#### Векторное произведение
 
-Finally, the “Cross Product” method makes all possible connections:
+Наконец, при использовании метода «Векторное произведение» создаются все возможные соединения:
 
 ![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
 
-As you can see there are different ways in which we can draw lines between these sets of points. Lacing options are found by right-clicking the center of a node and choosing the "Lacing" menu.
+Как мы видим, прочертить линию через эти наборы точек можно разными способами. Параметры переплетения можно просмотреть, щелкнув центр узла правой кнопкой мыши и выбрав меню «Переплетение».
 
 ![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
 
-## Exercise
+## Упражнение
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-4/1/Lacing.dyn" %}
 
-To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
+Для изучении операций переплетения ниже мы воспользуемся этим базовым файлом, чтобы определить самый короткий и длинный списки, а также векторное произведение.
 
-We'll change the lacing on **Point.ByCoordinates**, but won't change anything else about the graph above.
+Измените настройку переплетения узла **Point.ByCoordinates** в графике выше, оставив остальные элементы без изменений.
 
-### Shortest List
+### Самый короткий список
 
-Choosing _shortest list_ as the lacing option (also the default option), we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
+При выборе _Самый короткий список_ в качестве параметра переплетения (также является параметром по умолчанию) мы получаем базовую диагональную линию, состоящую из пяти точек. Пять точек — это длина наименьшего списка. Таким образом, переплетение по самому короткому списку прекращается по достижении конца этого списка.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
 
-### **Longest List**
+### **Самый длинный список**
 
-By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
+При изменении способа переплетения на _Самый длинный_ вы получите диагональную линию, которая имеет продолжение по вертикали. Аналогично схематическому изображению выше, пятый элемент короткого списка используется повторно, пока не будет достигнут конец более длинного списка.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
 
-### **Cross Product**
+### **Векторное произведение**
 
-By changing the lacing to _Cross Product_, we get every combination between each list, giving us a 5x10 grid of points. This is an equivalent data structure to the cross product as shown in the concept diagram above, except our data is now a list of lists. By connecting a polycurve, we can see that each list is defined by its X-Value, giving us a row of vertical lines.
+Изменив способ переплетения на _Векторное произведение_, вы получите все возможные соединения между списками, в результате чего создается сетка 5 х 10 точек. Эта структура данных эквивалентна векторному произведению, показанному в схематическом изображении выше, однако данные теперь являются списком списков. Путем соединения сложной кривой можно увидеть, что каждый список определяется значением X, в результате чего образуется ряд вертикальных линий.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)

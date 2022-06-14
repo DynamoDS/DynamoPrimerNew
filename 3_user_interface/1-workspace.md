@@ -1,88 +1,88 @@
-# Workspace
+# Рабочее пространство
 
-### Main Workspace
+### Основное рабочее пространство
 
-The Dynamo Workspace consists of four main elements.
+Рабочее пространство Dynamo состоит из четырех основных элементов.
 
 ![](<./images/3-1/workspace - ui.jpg>)
 
-> 1. All Active Tabs.
-> 2. Preview Mode
-> 3. Zoom/Pan Controls
-> 4. Node in Workspace
+> 1. Все активные вкладки
+> 2. Режим предварительного просмотра
+> 3. Элементы управления масштабированием/панорамированием
+> 4. Узел в рабочем пространстве
 
-### All Active Tabs
+### Все активные вкладки
 
-When you open a new file, a new Home Workspace will be opened by default.
+При открытии нового файла по умолчанию открывается новое исходное рабочее пространство.
 
 ![](<./images/3-1/workspace - home tab.jpg>)
 
-You may create a Custom Node and open it in a Custom Node Workspace.
+Можно создать пользовательский узел и открыть его в рабочем пространстве пользовательского узла.
 
 ![](<./images/3-1/workspace - custom node tab.jpg>)
 
 {% hint style="info" %}
-Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.
+В каждом окне Dynamo можно использовать только одно исходное рабочее пространство, однако на вкладках можно открыть несколько рабочих пространств пользовательского узла.
 {% endhint %}
 
-### Preview Mode
+### Режим предварительного просмотра
 
-There are 3 methods to switch between different previews:
+Существует три способа переключения между режимами предварительного просмотра.
 
-a. Using the top right icons
+a. Использование значков в верхней части экрана справа
 
-* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Graph Preview
-* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)3D Preview
+* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Предварительный просмотр графика
+* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)3D-просмотр
 
-b. Right-click in Workspace
+b. Щелчком правой кнопкой мыши в рабочем пространстве
 
-* Switch from 3D Preview to Graph Preview
+* Переключение из режима 3D-просмотра в режим предварительного просмотра графика
 
 ![](<./images/3-1/3-1-06 right click switch to graph preview.jpg>)
 
-* Switch from Graph Preview to 3D Preview
+* Переключение из режима предварительного просмотра графика в режим 3D-просмотра
 
 ![](<./images/3-1/workspace - right click switch to geometry.jpg>)
 
-c. Using keyboard shortcut (Ctrl+B)
+c. С помощью сочетания клавиш (CTRL + B)
 
-### Zoom/Pan Controls
+### Элементы управления масштабированием/панорамированием
 
-You may use icons or a mouse to navigate in either workspace.
+Для навигации в любом рабочем пространстве можно использовать значки или мышь.
 
-a. In **Graph Preview** Mode
+a. В режиме **Предварительный просмотр графика**
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-* Using mouse:
-  * Left-click - Select
-  * Left-click and drag - Selection box to select multiple nodes
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click anywhere on canvas - Open In-Canvas Search
+* Используйте значки:
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Вписать
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Увеличить
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Уменьшить
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Панорамирование
+* Используйте мышь:
+   * Щелчок левой кнопкой мыши — выбор
+   * Щелчок левой кнопкой мыши и перетаскивание — выбор нескольких точек
+   * Прокрутка колесика вперед/назад — увеличение/уменьшение
+   * Перетаскивание с удерживаемой средней кнопкой мыши — панорамирование
+   * Щелчок правой кнопкой мыши в любом месте активного окна — открытие окна поиска в активном окне
 
 ![](<./images/3-1/workspace - in canvas search.gif>)
 
-b. In **3D Preview** Mode
+b. В режиме **3D-просмотра**
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-  * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbit
-* Using mouse:
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click and drag - Orbit
+* Используйте значки:
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Вписать
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Увеличить
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Уменьшить
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Панорамирование
+   * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Орбита
+* Используйте мышь:
+   * Прокрутка колесика вперед/назад — увеличение/уменьшение
+   * Перетаскивание с удерживаемой средней кнопкой мыши — панорамирование
+   * Щелчок правой кнопкой мыши и перетаскивание — вращение
 
-### Node in Workspace
+### Узел в рабочем пространстве
 
-Left-click to select any Node.
+Щелкните левой кнопкой мыши, чтобы выбрать какой-либо узел.
 
-To select multiple Nodes, Click and drag to create a selection box.
+Чтобы выбрать несколько узлов, щелкните и перетащите указатель, чтобы создать рамку выбора.
 
 ![](<./images/3-1/workspace - selection box.gif>)

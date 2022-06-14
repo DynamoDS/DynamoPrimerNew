@@ -1,69 +1,69 @@
-# Package Case Study - Mesh Toolkit
+# Практикум по работе с пакетом: Mesh Toolkit
 
-The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+Dynamo Mesh Toolkit содержит инструменты для импорта сетей из внешних файлов других форматов, создания сетей из геометрических объектов Dynamo и построения сетей вручную по вершинам и индексам. В библиотеке также содержатся инструменты для редактирования и восстановления сетей, а также для извлечения горизонтальных срезов, используемых в ходе изготовления изделий.
 
 ![](<../images/6-2/2/meshToolkit case study 01.jpg>)
 
-The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
+Пакет Dynamo Mesh Toolkit создан в рамках непрерывной работы специалистов Autodesk, направленной на исследование сетей, и в ближайшие годы функциональные возможности пакета будут постоянно улучшаться и пополняться. Разработчики Dynamo с нетерпением ждут ваших отзывов и предложений по новым функциям, а также сообщений об обнаруженных ошибках.
 
-### Meshes vs. Solids
+### Сети и тела
 
-The exercise below demonstrates some basic mesh operations using the Mesh Toolkit. In the exercise, we intersect a mesh with a series of planes, which can be computationally expensive using solids. Unlike a solid, a mesh has a set "resolution" and is not defined mathematically, but topologically, and we can define this resolution based on the task at hand. For more details on mesh to solid relationships, you can reference the[ Geometry For Computation Design](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) chapter in this primer. For a more thorough examination of Mesh Toolkit, you can reference the [Dynamo Wiki page.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Let's jump into the package in the exercise below.
+В упражнении ниже демонстрируются некоторые базовые операции с сетями, выполняемые с помощью Mesh Toolkit. В этом упражнении сеть рассекается на несколько частей при помощи плоскостей, что при использовании тел потребовало бы больших вычислительных мощностей. Сеть, в отличие от тела, имеет заданное «разрешение». Кроме того, она определяется не математически, а топологически. Благодаря этому определение сети можно адаптировать в соответствии с поставленной задачей. Дополнительные сведения о взаимоотношениях сетей и тел см. в разделе [Геометрия для машинного проектирования](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) данного руководства. Подробный обзор пакета Mesh Toolkit см. в [справке Wiki по Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Выполните следующее упражнение, чтобы узнать, как использовать этот пакет на практике.
 
-### Install Mesh Toolkit
+### Установка Mesh Toolkit
 
-In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
+В строке меню Dynamo выберите _Пакеты > Поиск пакета..._ В поле поиска введите _MeshToolkit_ без пробелов и с соблюдением регистра. Нажмите кнопку «Установить», чтобы начать скачивание. Проще простого.
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
-## Exercise: Intersect Mesh
+## Упражнение «Пересечение сети»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
-In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
+В этом примере рассматривается работа с узлом Intersect в составе MeshToolkit. Вам потребуется импортировать сеть, а затем рассечь ее с использованием нескольких входных плоскостей для получения срезов. Это первый этап подготовки модели изделия к изготовлению с помощью лазерной или водоструйной резки либо фрезерного станка с ЧПУ.
 
-Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
+Для начала откройте в Dynamo файл _Mesh-Toolkit_Intersect-Mesh.dyn_.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 1. **Путь к файлу:** найдите файл сети для импорта (_stanford\_bunny\_tri.obj_). Поддерживаются файлы MIX и OBJ.
+> 2. **Mesh.ImportFile:** соедините этот узел с узлом File Path, чтобы импортировать сеть.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
-> 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes. \_\_ The settings are as follow: \_\_ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates:** создайте точку, которая станет центром дуги.
+> 2. **Arc.ByCenterPointRadiusAngle**: создайте дугу на основе заданной точки. Эта кривая будет использована для размещения набора плоскостей. \_\_ Предусмотрены следующие параметры: \_\_ `radius: 40, startAngle: -90, endAngle:0`.
 
-Create a series of planes oriented along the arc.
+Создайте серию плоскостей, ориентированных вдоль дуги.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
-> 1. **Code Block**: Create 25 numbers between 0 and 1.
-> 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
-> 3. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
-> 4. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
+> 1. **Code Block**: создайте 25 чисел в диапазоне от 0 до 1.
+> 2. **Curve.PointAtParameter:** соедините порт вывода Arc с портом ввода _curve_, а порт вывода Code Block — с портом ввода _param_, чтобы получить набор точек вдоль кривой.
+> 3. **Curve.TangentAtParameter:** соедините порты этого узла аналогично портам предыдущего.
+> 4. **Plane.ByOriginNormal:** соедините порт вывода Point с портом ввода _origin_, а порт вывода Vector — с портом ввода _normal_, чтобы создать набор плоскостей на основе полученных точек.
 
-Next, we will use these planes to intersect the mesh.
+Рассеките сеть с помощью этих плоскостей.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
-> 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
-> 3. **Curve.EndPoint:** Extract the end points of each curve.
-> 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
+> 1. **Mesh.Intersect:** плоскости рассекают импортированную сеть, в результате чего создается набор контуров, состоящих из поликривых. Щелкните правой кнопкой мыши узел и задайте для переплетения значение «Самый длинный».
+> 2. **PolyCurve.Curves:** поликривые разбиваются на составляющие их кривые.
+> 3. **Curve.EndPoint:** извлеките значения конечных точек для каждой кривой.
+> 4. **NurbsCurve.ByPoints:** постройте NURBS-кривую на основе полученных точек. Добавьте узел Boolean и установите для него значение _True_, чтобы замкнуть кривые.
 
-Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
+Теперь отключите предварительный просмотр для некоторых узлов, таких как Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal и Arc.ByCenterPointRadiusAngle, чтобы лучше рассмотреть результат.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch:** Construct surface patches for each contour to create “slices” of the mesh.
+> 1. **Surface.ByPatch:** создайте участки поверхности для каждого контура, чтобы сформировать срезы сети.
 
-Add a second set of slices for a waffle/egg-crate effect.
+Добавьте второй набор срезов для получения «вафельного» эффекта.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 06.jpg>)
 
-You may have noticed that the intersection operations calculate faster with a mesh vs. a comparable solid. Workflows such as the one demonstrated in this exercise lend themselves well to working with meshes.
+Как вы могли заметить, операции пересечения при работе с сетями выполняются гораздо быстрее, чем при работе с аналогичным телом. Использование сетей позволяет ускорить многие рабочие процессы, подобные представленному в этом упражнении.

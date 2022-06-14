@@ -1,154 +1,154 @@
-# Creating
+# Создание
 
-You can create an array of Revit elements in Dynamo with full parametric control. The Revit nodes in Dynamo offer the ability to import elements from generic geometries to specific category types (like walls and floors). In this section, we'll focus on importing parametrically flexible elements with adaptive components.
+В Dynamo можно создать массив элементов Revit с полным параметрическим управлением. Узлы Revit в Dynamo позволяют импортировать элементы из типовых геометрических объектов в категории определенных типов (например, стены и перекрытия). В этом разделе рассматривается импорт параметрически гибких элементов с адаптивными компонентами.
 
 ![](<./images/4/creating - dynamo nodes.jpg>)
 
-### Adaptive Components
+### Адаптивные компоненты
 
-An adaptive component is a flexible family category which lends itself well to generative applications. Upon instantiation, you can create a complex geometric element which is driven by the fundamental location of adaptive points.
+Адаптивный компонент — это гибкая категория семейства, которая хорошо подходит для генеративных приложений. После создания экземпляра можно построить сложный геометрический элемент, который определяется исходным положением адаптивных точек.
 
-Below is an example of a three-point adaptive component in the family editor. This generates a truss which is defined by the position of each adaptive point. In the exercise below, we'll use this component to generate a series of trusses across a facade.
+Ниже приведен пример адаптивного компонента на основе трех точек в редакторе семейств. Создается ферма, определяемая положением каждой адаптивной точки. В упражнении ниже с помощью этого компонента будет создана серия ферм по ширине фасада.
 
 ![](./images/4/ac.jpg)
 
-### Principles of Interoperability
+### Принципы взаимодействия
 
-The adaptive component is a good example for best practices of interoperability. We can create an array of adaptive components by defining the fundamental adaptive points. And, when transferring this data to other programs, we have the ability to reduce the geometry to simple data. Importing and exporting with a program like Excel follows a similar logic.
+Адаптивный компонент — хороший пример применения взаимодействия. Задав опорные адаптивные точки, можно создать массив адаптивных компонентов. В свою очередь, при переносе этих данных в другие программы есть возможность свести геометрию к простым данным. Примерно такая же логическая схема используется при импорте и экспорте в программе Excel.
 
-Suppose a facade consultant wants to know the location of the truss elements without needing to parse through fully articulated geometry. In preparation for fabrication, the consultant can reference the location of adaptive points to regenerate geometry in a program like Inventor.
+Предположим, что консультант по фасадным работам хочет узнать местоположение элементов фермы без разбиения готовой геометрии. При подготовке к производству консультант может указать местоположение адаптивных точек для регенерации геометрии в такой программе, как Inventor.
 
-The workflow we'll setup in the exercise below allows us to access all of this data while creating the definition for Revit element creation. By this process, we can merge conceptualization, documentation, and fabrication into a seamless workflow. This creates a more intelligent and efficient process for interoperability.
+Рабочий процесс, который будет рассмотрен в упражнении ниже, позволяет получить доступ ко всем этим данным во время создания определения формирования элементов Revit. Благодаря этому можно объединить этапы создания концепции, разработки документации и производства в единый рабочий процесс. В результате формируется более интеллектуальный и эффективный механизм взаимодействия.
 
-### Multiple Elements and Lists
+### Несколько элементов и списков
 
-The [first exercise](8-4\_creating.md#exercise) below will walk through how Dynamo references data for Revit element creation. To generate multiple adaptive components, we define a list of lists, where each list has three points representing each point of the adaptive component. We'll keep this in mind as we manage the data structures in Dynamo.
+В [первом упражнении](8-4\_creating.md#exercise) ниже описывается, каким образом в Dynamo создаются ссылки на данные для создания элементов Revit. Для формирования нескольких адаптивных компонентов необходимо создать список списков, где в каждом списке будет три точки, соответствующие трем точкам адаптивного компонента. Это будет необходимо учитывать при управлении структурой данных в Dynamo.
 
 ![](<./images/4/creating - multiple elements and lists 01.jpg>)
 
-### DirectShape Elements
+### Элементы DirectShape
 
-Another method for importing parametric Dynamo geometry into Revit is with DirectShape. In summary, the DirectShape element and related classes support the ability to store externally created geometric shapes in a Revit document. The geometry can include closed solids or meshes. DirectShape is primarily intended for importing shapes from other data formats such as IFC or STEP where not enough information is available to create a "real" Revit element. Like the IFC and STEP workflow, the DirectShape functionality works well with importing Dynamo created geometries into Revit projects as real elements.
+Еще одним способом импорта параметрической геометрии Dynamo в Revit является DirectShape. В целом элемент DirectShape и связанные классы отвечают за хранение созданных во внешних программах геометрических форм в документах Revit. Геометрия может включать в себя замкнутые тела или сети. Основной задачей DirectShape является импорт форм из других форматов данных, например IFC или STEP, когда недостаточно информации для создания реального элемента Revit. Как и при работе с форматами IFC и STEP, функция DirectShape подходит для импорта созданных в Dynamo геометрических объектов в проекты Revit в качестве реальных элементов.
 
-Let's walk through [second exercise](8-4\_creating.md#exercise-directshape-elements) for importing Dynamo geometry as a DirectShape into our Revit project. Using this method, we can assign an imported geometry's category, material, and name - all while maintaining a parametric link to our Dynamo graph.
+Во [втором упражнении](8-4\_creating.md#exercise-directshape-elements) рассматривается импорт геометрии Dynamo в проект Revit с помощью DirectShape. С помощью этого метода можно назначить категорию, материал и имя импортированной геометрии, сохранив при этом параметрическую связь с графиком Dynamo.
 
-## Exercise: Generate Elements and Lists
+## Упражнение «Создание элементов и списков»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="./datasets/4/Revit-Creating.zip" %}
 
-Beginning with the example file from this section (or continuing with the Revit file from the previous session), we see the same Revit mass.
+Возьмите файл примера из этого раздела (или продолжите работу с файлом Revit из предыдущего сеанса). В файле есть знакомый формообразующий элемент Revit.
 
 ![](<./images/4/creating - exercise 01.jpg>)
 
-> 1. This is the file as opened.
-> 2. This is the truss system we created with Dynamo, linked intelligently to the Revit mass.
+> 1. После открытия файл выглядит следующим образом.
+> 2. А в данном случае видна система ферм, созданная при помощи Dynamo и интеллектуально связанная с формообразующим элементом Revit.
 
-We've used the _"Select Model Element"_ and _"Select Face"_ nodes, now we're taking one step further down in the geometry hierarchy and using _"Select Edge"_. With the Dynamo solver set to run _"Automatic"_, the graph will continually update to changes in the Revit file. The edge we are selecting is tied dynamically to the Revit element topology. As long as the topology\* does not change, the connection remains linked between Revit and Dynamo.
+Применив узлы _Select Model Element_ и _Select Face_, опустимся на одну ступень вниз по иерархии геометрии и воспользуемся узлом _Select Edge_. Если решатель Dynamo находится в _автоматическом_ режиме, то при внесении изменений в файл Revit график будет постоянно обновляться. Кромка, которую необходимо выбрать, динамически привязана к топологии элементов Revit. Пока топология\* остается неизменной, связь между Revit и Dynamo не прерывается.
 
 ![](<./images/4/creating - exercise 02.jpg>)
 
-> 1. Select the top most curve of the glazing facade. This spans the full length of the building. If you're having trouble selecting the edge, remember to choose the selection in Revit by hovering over the edge and hitting _"Tab"_ until the desired edge is highlighted.
-> 2. Using two _"Select Edge"_ nodes, select each edge representing the cant at the middle of the facade.
-> 3. Do the same for the bottom edges of the facade in Revit.
-> 4. The _Watch_ nodes reveal that we now have lines in Dynamo. This is automatically converted to Dynamo geometry since the edges themselves are not Revit elements. These curves are the references we'll use to instantiate adaptive trusses across the facade.
+> 1. Выберите самую верхнюю кривую остекленного фасада. Она проходит по всей длине здания. Если выбрать кромку не удается, в Revit можно навести на нее курсор и нажимать клавишу _TAB_ до тех пор, пока этот объект не будет выделен.
+> 2. С помощью двух узлов _Select Edge_ выберите кромки, представляющие скос в центре фасада.
+> 3. Проделайте то же самое с нижними кромками фасада в Revit.
+> 4. Узлы _Watch_ теперь демонстрируют наличие линий в Dynamo. Данные автоматически преобразуются в геометрию Dynamo, так как сами кромки не являются элементами Revit. Эти кривые будут использоваться в качестве опорных элементов для создания экземпляров адаптивных ферм по ширине фасада.
 
 {% hint style="info" %}
-\*To keep a consistent topology, we're referring to a model that does not have additional faces or edges added. While parameters can change its shape, the way in which it is built remains consistent.
+\* Чтобы сохранить единообразную топологию, используется модель, в которую не были включены дополнительные грани или кромки. Параметры могут изменять ее форму, однако способ ее построения остается неизменным.
 {% endhint %}
 
-We first need to join the curves and merge them into one list. This way we can _"group"_ the curves to perform geometry operations.
+Сначала нужно соединить кривые и объединить их в общем списке. Это позволит _«сгруппировать»_ кривые для выполнения операций с геометрией.
 
 ![](<./images/4/creating - exercise 03.jpg>)
 
-> 1. Create a list for the two curves at the middle of the facade.
-> 2. Join the two curves into a Polycurve by plugging the _List.Create_ component into a _Polycurve.ByJoinedCurves_ node.
-> 3. Create a list for the two curves at the bottom of the facade.
-> 4. Join the two curves into a Polycurve by plugging the _List.Create_ component into a _Polycurve.ByJoinedCurves_ node.
-> 5. Finally, join the three main curves (one line and two polycurves) into one list.
+> 1. Создайте список для двух кривых в центре фасада.
+> 2. Объедините две кривые в сложную кривую, встроив компонент _List.Create_ в узел _Polycurve.ByJoinedCurves_.
+> 3. Создайте список для двух кривых в нижней части фасада.
+> 4. Объедините эти две кривые в сложную кривую, встроив компонент _List.Create_ в узел _Polycurve.ByJoinedCurves_.
+> 5. Наконец, объедините три основные кривые (одну линию и две сложные кривые) в один список.
 
-We want to take advantage of the top curve, which is a line, and represents the full span of the facade. We'll create planes along this line to intersect with the set of curves we've grouped together in a list.
+Воспользуйтесь верхней кривой, которая представляет собой линию, расположенную по всей ширине фасада. Создайте плоскости вдоль этой линии для пересечения с набором кривых, которые были сгруппированы в списке.
 
 ![](<./images/4/creating - exercise 04.jpg>)
 
-> 1. With a _code block_, define a range using the syntax: `0..1..#numberOfTrusses;`
-> 2. Plug an \*integer slider \*into the input for the code block. As you could have guessed, this will represent the number of trusses. Notice that the slider controls the number of items in the range defined from \*0 \*to _1_.
-> 3. Plug the _code block_ into the _param_ input of a _"Curve.PlaneAtParameter"_ node, and plug the top edge into the _curve_ input. This will give us ten planes, evenly distributed across the span of the facade.
+> 1. С помощью узла _Code Block_ задайте диапазон, используя синтаксис `0..1..#numberOfTrusses;`.
+> 2. Встройте узел \*Integer Slider\* в набор входных данных узла Code Block. Как можно догадаться, он будет задавать количество ферм. Обратите внимание, что регулятор контролирует количество объектов в диапазоне от \*0\* до _1_.
+> 3. Встройте _блок кода_ в набор входных данных _param_ узла _Curve.PlaneAtParameter_, а верхнюю кромку — в набор входных данных _curve_. Будет создано десять плоскостей, равномерно распределенных по ширине фасада.
 
-A plane is an abstract piece of geometry, representing a two dimensional space which is infinite. Planes are great for contouring and intersecting, as we are setting up in this step.
+Плоскость — это абстрактный элемент геометрии, представляющий собой бесконечное двумерное пространство. Плоскости отлично подходят для создания контуров и пересечений, что и требуется на данном этапе.
 
 ![](<./images/4/creating - exercise 05.jpg>)
 
-> 1. Using the _Geometry.Intersect_ node (set lacing option to cross product), plug the _Curve.PlaneAtParameter_ into the _entity_ input of the _Geometry.Intersect_ node. Plug the main _List.Create_ node into the _geometry_ input. We now see points in the Dynamo viewport representing the intersection of each curve with the defined planes.
+> 1. Используя узел _Geometry.Intersect_ (задайте режим переплетения «Векторное произведение»), встройте компонент _Curve.PlaneAtParameter_ в набор входных данных _entity_ узла _Geometry.Intersect_. Встройте основной узел _List.Create_ в набор входных данных _geometry_. Теперь на видовом экране Dynamo можно увидеть точки, обозначающие пересечение кривых с заданными плоскостями.
 
-Notice the output is a list of lists of lists. Too many lists for our purposes. We want to do a partial flatten here. We need to take one step down on the list and flatten the result. To do this, we use the _List.Map_ operation, as discussed in the list chapter of the primer.
+Обратите внимание, что выходные данные содержат список, в который вложен список с еще одним вложенным списком. Слишком большое число списков для решаемой задачи. Необходимо частично выровнять их. Спустимся на шаг вниз по списку и применим к результату функцию выравнивания. Для этого используем операцию _List.Map_, описанную в главе о списках.
 
 ![](<./images/4/creating - exercise 06.jpg>)
 
-> 1. Plug the _Geometry.Intersect_ node into the list input of _List.Map_.
-> 2. Plug a _Flatten_ node into the f(x) input of _List.Map_. The results gives 3 list, each with a count equal to the number of trusses.
-> 3. We need to change this data. If we want to instantiate the truss, we have to use the same number of adaptive points as defined in the family. This is a three point adaptive component, so instead of three lists with 10 items each (numberOfTrusses), we want 10 lists of three items each. This way we can create 10 adaptive components.
-> 4. Plug the _List.Map_ into a _List.Transpose_ node. Now we have the desired data output.
-> 5. To confirm that the data is correct, add a _Polygon.ByPoints_ node to the canvas and double check with the Dynamo preview.
+> 1. Встройте узел _Geometry.Intersect_ в набор входных данных List узла _List.Map_.
+> 2. Встройте узел _Flatten_ в набор входных данных f(x) узла _List.Map_. В результате получится 3 списка с количеством элементов, соответствующим количеству ферм.
+> 3. Необходимо изменить эти данные. Для создания экземпляра фермы следует использовать такое же количество адаптивных точек, какое определено в семействе. Так как адаптивный компонент состоит из трех точек, вместо трех списков, содержащих по 10 элементов (numberOfTrusses), необходимо получить 10 списков с тремя элементами в каждом. Так можно создать 10 адаптивных компонентов.
+> 4. Встройте узел _List.Map_ в узел _List.Transpose_. Теперь получены нужные данные.
+> 5. Чтобы убедиться в правильности данных, добавьте узел _Polygon.ByPoints_ в рабочую область и проверьте результат в области предварительного просмотра Dynamo.
 
-In the same way we created the polygons, we array the adaptive components.
+Массив адаптивных компонентов создается так же, как полигоны.
 
 ![](<./images/4/creating - exercise 07.jpg>)
 
-> 1. Add an _AdaptiveComponent.ByPoints_ node to the canvas, plug the _List.Transpose_ node into the _points_ input.
-> 2. Using a _Family Types_ node, select the _"AdaptiveTruss"_ family, and plug this into the _FamilyType_ input of the _AdaptiveComponent.ByPoints_ node.
+> 1. Добавьте узел _AdaptiveComponent.ByPoints_ в рабочую область, встройте узел _List.Transpose_ в набор входных данных _points_.
+> 2. С помощью узла _Family Types_ выберите семейство _AdaptiveTruss_ и встройте его в набор входных данных _FamilyType_ узла _AdaptiveComponent.ByPoints_.
 
-In Revit, we now have the ten trusses evenly spaced across the facade!
+В Revit можно увидеть десять ферм, равномерно размещенных по ширине фасада.
 
-"Flex" the graph, we turn up the numberOfTrusses to 30 by changing the slider. Lots of trusses, not very realistic, but the parametric link is working. Once verified, set the numberOfTrusses to 15.
+Для «зондирования» графика увеличьте значение numberOfTrusses до 30 с помощью регулятора. В итоге получилось слишком большое и нереальное количество ферм, но при этом параметрическая связь действует. После проверки задайте для параметра numberOfTrusses значение 15.
 
 ![](<./images/4/creating - exercise 08.gif>)
 
-And for the final test, by selecting the mass in Revit and editing instance parameters, we can change the form of the building and watch the truss follow suit. Remember, this Dynamo graph has to be open in order to see this update, and the link will be broken as soon as it's closed.
+В качестве финальной проверки выберем формообразующий элемент в Revit и отредактируем параметры экземпляра. После изменения формы здания ферма должна тоже измениться. Обратите внимание, что это изменение можно наблюдать, только если график Dynamo открыт. Сразу после закрытия связь будет разорвана.
 
 ![](<./images/4/creating - exercise 09.jpg>)
 
-## Exercise: DirectShape Elements
+## Упражнение «Элементы DirectShape»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="./datasets/4/Revit-Creating-DirectShape.zip" %}
 
-Begin by opening the sample file for this lesson - ARCH-DirectShape-BaseFile.rvt.
+Сначала откройте файла примера для этого урока — ARCH-DirectShape-BaseFile.rvt.
 
 ![](<./images/4/creating - exercise II - 01.jpg>)
 
-> 1. In the 3D view, we see our building mass from the previous lesson.
-> 2. Along the edge of the atrium is one reference curve, we'll use this as a curve to reference in Dynamo.
-> 3. Along the opposing edge of the atrium is another reference curve which we'll reference in Dynamo as well.
+> 1. На 3D-виде отображается формообразующий элемент здания из предыдущего урока.
+> 2. Вдоль кромки атриума имеется одна базовая кривая. Она будет использоваться в Dynamo в качестве опорной.
+> 3. Вдоль противоположной кромки атриума проходит еще одна базовая кривая. Она также будет использоваться в Dynamo в качестве опорной.
 
 ![](<./images/4/creating - exercise II - 02.jpg>)
 
-> 1. To reference our geometry in Dynamo, we'll use _Select Model Element_ for each member in Revit. Select the mass in Revit and import the geometry into Dynamo by Using _Element.Faces_ - the mass should now be visible in your Dynamo preview.
-> 2. Import one reference curve into Dynamo by using _Select Model Element_ and _CurveElement.Curve_.
-> 3. Import the other reference curve into Dynamo by using _Select Model Element_ and _CurveElement.Curve_.
+> 1. Чтобы установить связь с геометрией в Dynamo, используем узел _Select Model Element_ для каждого элемента в Revit. Выберите формообразующий элемент в Revit и импортируйте геометрию в Dynamo с помощью функции _Element.Faces_. Формообразующий элемент должен отображаться в области предварительного просмотра Dynamo.
+> 2. Импортируйте первую базовую кривую в Dynamo с помощью функций _Select Model Element_ и _CurveElement.Curve_.
+> 3. Импортируйте вторую базовую кривую в Dynamo с помощью функций _Select Model Element_ и _CurveElement.Curve_.
 
 ![](<./images/4/creating - exercise II - 03.jpg>)
 
-> 1. Zooming out and panning to the right in the sample graph, we see a large group of nodes - these are geometric operations which generate the trellis roof structure visible in the Dynamo preview. These nodes are generating using the _Node to Code_ functionality as discussed in the [code block section](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) of the primer.
-> 2. The structure is driven by three major parameters - Diagonal Shift, Camber, and Radius.
+> 1. Если уменьшить масштаб графика и панорамировать его вправо, можно увидеть большую группу узлов. Это геометрические операции, которые создают решетчатую конструкцию на крыше в области предварительного просмотра Dynamo. Эти узлы генерируются с помощью функции _Node to Code_, описанной в [разделе о блоках кода](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) данного учебника.
+> 2. Конструкция определяется тремя основными параметрами: Diagonal Shift, Camber и Radius.
 
-Zooming a close-up look of the parameters for this graph. We can flex these to get different geometry outputs.
+Увеличьте масштаб отображения параметров этого графика. Можно выполнить их зондирование, чтобы получить другие выходные данные геометрии.
 
 ![](<./images/4/creating - exercise II - 04.jpg>)
 
 ![](<./images/4/creating - exercise II - 05.jpg>)
 
-> 1. Dropping the _DirectShape.ByGeometry_ node onto the canvas, we see that it has four inputs: _geometry_**,** _category_**,** _material_, and _name_.
-> 2. Geometry will be the solid created from the geometry creation portion of the graph
-> 3. The category input is chosen using the dropdown _Categories_ node. In this case we'll use "Structural Framing".
-> 4. The material input is selected through the array of nodes above - although it can be more simply defined as "Default" in this case.
+> 1. Если поместить узел _DirectShape.ByGeometry_ в рабочую область, можно увидеть, что он имеет четыре набора входных данных: _geometry_**,** _category_**,** _material_ и _name_.
+> 2. Геометрия представляет собой твердое тело, созданное на базе части графика, с помощью которой формируется геометрия.
+> 3. Входные данные категории выбираются с помощью узла _Categories_. В данном случае используется значение Structural Framing.
+> 4. Входные данные материала выбираются с помощью вышеупомянутого массива узлов, хотя в данном случае проще задать значение по умолчанию.
 
-After running Dynamo, back in Revit, we have the imported geometry on the roof in our project. This is a structural framing element, rather than a generic model. The parametric link to Dynamo remains intact.
+Вернитесь в Revit после выполнения сценария Dynamo. Импортированную геометрию можно видеть на крыше в проекте. Это скорее не обобщенная модель, а элемент несущего каркаса. Параметрическая связь с Dynamo сохраняется.
 
 ![](<./images/4/creating - exercise II - 06.jpg>)

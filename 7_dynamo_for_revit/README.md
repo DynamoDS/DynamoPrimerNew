@@ -1,5 +1,5 @@
-# Dynamo for Revit
+# Dynamo для Revit
 
-While Dynamo is a flexible environment, designed to port into a wide range of programs, it was originally created for use with Revit. A visual program creates robust options for a Building Information Model (BIM). Dynamo offers a whole suite of nodes specifically designed for Revit, as well as third-party libraries from a thriving AEC community. This chapter focuses on the basics of using Dynamo in Revit.
+Dynamo — это гибкая среда, предназначенная для совместного использования с широким спектром программ, однако изначально она разрабатывалась для использования в Revit. Средства визуального программирования обеспечивают мощные дополнительные возможности для информационного моделирования зданий (BIM). Dynamo включает отдельный набор узлов, разработанных специально для Revit, а также библиотеки сторонних разработчиков из числа участников сообщества пользователей в сфере архитектуры и строительства. В этой главе рассматриваются основные принципы работы с Dynamo в Revit.
 
 ![](<./images/Dynamo for Revit-01.jpg>)

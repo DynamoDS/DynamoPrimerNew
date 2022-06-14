@@ -1,8 +1,8 @@
-# DesignScript Geometry Basics
+# Основы работы с геометрией посредством DesignScript
 
-### Point
+### Точка
 
-The simplest geometrical object in the Dynamo standard geometry library is a point. All geometry is created using special functions called constructors, which each return a new instance of that particular geometry type. In Dynamo, constructors begin with the name of the object’s type, in this case Point, followed by the method of construction. To create a three dimensional point specified by x, y, and z Cartesian coordinates, use the _ByCoordinates_ constructor:
+Простейший геометрический объект, доступный в библиотеке стандартных геометрических объектов Dynamo, — это точка. Вся геометрия создается с помощью специальных функций (конструкторов), каждая из которых возвращает новый экземпляр геометрического объекта определенного типа. В Dynamo название каждого конструктора начинается с наименования типа объекта (в данном случае Point, точка), за которым следует метод построения объекта. Чтобы построить трехмерную точку на основе значений X, Y и Z в прямоугольной системе координат, используйте конструктор _ByCoordinates_:
 
 ![](../images/8-2/1/GeometryBasics\_01.png)
 
@@ -16,9 +16,9 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Constructors in Dynamo are typically designated with the “_By_” prefix, and invoking these functions returns a newly created object of that type. This newly created object is stored in the variable named on the left side of the equal sign.
+Конструкторы в Dynamo обычно обозначаются приставкой _By_, и при вызове эти функции возвращают новый объект соответствующего типа. Этот объект сохраняется в переменной, имя которой указано слева от знака равенства.
 
-Most objects have many different constructors, and we can use the _BySphericalCoordinates_ constructor to create a point lying on a sphere, specified by the sphere’s radius, a first rotation angle, and a second rotation angle (specified in degrees):
+Для создания большинства объектов можно использовать множество различных конструкторов. Используя конструктор _BySphericalCoordinates_, можно задать точку на сфере, определяемой по радиусу, а также первому и второму углам поворота (заданным в градусах):
 
 ![](../images/8-2/1/GeometryBasics\_02.png)
 
@@ -34,9 +34,9 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
     phi);
 ```
 
-### From Point to Line
+### От точки к отрезку
 
-Points can be used to construct higher dimensional geometry such as lines. We can use the _ByStartPointEndPoint_ constructor to create a Line object between two points:
+Используя точки, можно создавать геометрические объекты более высокого уровня, например отрезки. С помощью конструктора _ByStartPointEndPoint_ создайте объект Line (отрезок) между двумя точками:
 
 ![](../images/8-2/1/GeometryBasics\_03.png)
 
@@ -49,9 +49,9 @@ p2 = Point.ByCoordinates(-15, 7, 0.5);
 l = Line.ByStartPointEndPoint(p1, p2);
 ```
 
-### From Line to Surface
+### От отрезка к поверхности
 
-Similarly, lines can be used to create higher dimensional surface geometry, for instance using the _Loft_ constructor, which takes a series of lines or curves and interpolates a surface between them.
+Аналогичным образом из отрезков можно создавать геометрические объекты следующего уровня — поверхности. Для этого можно использовать, например, конструктор _Loft_, который выполняет интерполяцию поверхности между заданными отрезками или кривыми.
 
 ![](../images/8-2/1/GeometryBasics\_04.png)
 
@@ -75,9 +75,9 @@ l3 = Line.ByStartPointEndPoint(p5, p6);
 surf = Surface.ByLoft([l1, l2, l3]);
 ```
 
-### From Surface to Solid
+### От поверхности к телу
 
-Surfaces too can be used to create higher dimensional solid geometry, for instance by thickening the surface by a specified distance. Many objects have functions attached to them, called methods, allowing the programmer to perform commands on that particular object. Methods common to all pieces of geometry include _Translate_ and _Rotate_, which respectively translate (move) and rotate the geometry by a specified amount. Surfaces have a _Thicken_ method, which take a single input, a number specifying the new thickness of the surface.
+Поверхности также можно использовать для создания геометрии более высокого уровня, а именно тел. Сделать это можно, например, путем увеличения толщины поверхности на заданную величину. Многим объектам изначально назначены определенные функции, называемые методами, которые позволяют программистам выполнять действия с определенным объектом. К методам, доступным для всех геометрических объектов, относятся операции _Translate_ и _Rotate_, которые позволяют переносить и поворачивать геометрию в соответствии с заданной величиной переноса или поворота. Для поверхностей доступен метод _Thicken_, для использования которого требуется одно входное значение — число, определяющее новую толщину поверхности.
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 
@@ -97,9 +97,9 @@ surf = Surface.ByLoft([l1, l2]);
 solid = surf.Thicken(4.75, true);
 ```
 
-### Intersect
+### Пересечение
 
-_Intersection_ commands can extract lower dimensional geometry from higher dimensional objects. This extracted lower dimensional geometry can form the basis for higher dimensional geometry, in a cyclic process of geometrical creation, extraction, and recreation. In this example, we use the generated Solid to create a Surface, and use the Surface to create a Curve.
+Команды _Intersect_ позволяют извлекать из геометрии высокого уровня более простые геометрические объекты. Такие объекты могут затем послужить основой для создания другой сложной геометрии. В результате получается циклический процесс создания, извлечения и повторного построения геометрии. В этом примере объект поверхности Surface, извлеченный из объекта тела Solid, используется для создания объекта кривой Curve.
 
 ![](../images/8-2/1/GeometryBasics\_06.png)
 

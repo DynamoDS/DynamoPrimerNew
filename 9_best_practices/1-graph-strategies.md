@@ -1,259 +1,259 @@
-# Graph Strategies
+# Методы создания графиков
 
-Prior to this chapter, the Primer has covered how to implement the powerful visual-scripting capabilities of Dynamo. A good understanding of these capabilities is a solid foundation and the first step in building robust visual programs. When we use our visual programs in the field, share them with colleagues, troubleshoot errors, or test limits we have additional issues to deal with. If someone else will be using your program or you are expecting to open it six months from now, it needs to have an immediate graphic and logical clarity. Dynamo has many tools to manage the complexity of your program, and this chapter will give guidelines on when to use them.
+В предыдущих главах было описано, как пользоваться мощными возможностями создания визуальных сценариев в Dynamo. Понимание этих возможностей является основой и первым шагом к созданию надежных визуальных программ. При работе с визуальными программами в полевых условиях, обмене ими с коллегами, устранении неполадок или проверке ограничений приходится сталкиваться и с другими проблемами. Если программа рассчитана на другого пользователя или предполагается открыть ее только через полгода, она должна обладать абсолютно понятной графикой и логикой. В Dynamo есть множество инструментов для работы со сложными программами. В этой главе приводятся рекомендации по их своевременному использованию.
 
-![groups](images/1/cad-chart-visual.jpg)
+![группы](images/1/cad-chart-visual.jpg)
 
-## Reduce Complexity
+## Упрощение
 
-As you develop your Dynamo graph and test ideas, it can quickly grow in size and complexity. While it is important that you create a functioning program, it is equally important to make it as simple as possible. Not only will your graph run faster and more predictably, you along with other users will understand its logic later on. The following are several ways that will help you clarify the logic of your graph.
+По мере разработки графика Dynamo и проверки различных идей он увеличивается в размере и становится сложнее. Несомненно, очень важно создать работающую программу, однако столь же важно сделать ее максимально простой. Благодаря этому работа графика будет более быстрой и предсказуемой, а пользователи вместе с разработчиком смогут понять его логику по прошествии времени. Ниже представлены варианты того, как можно упорядочить логику графиков.
 
-### **Modularize with Groups**
+### **Модульная организация за счет групп**
 
-* Groups allow you to **create functionally distinct parts** as you build a program
-* Groups allow you to **move large parts of the program** around while maintaining modularity and alignment
-* You can change the **color of the group to differentiate** what Groups are doing (inputs vs functions)
-* You can use groups to start **organizing your graph to streamline Custom Node creation**
+* Благодаря группам можно **создавать функционально автономные части** при разработке программы.
+* Группы позволяют **перемещать крупные части программы**, соблюдая при этом модульность и выравнивание.
+* Можно менять **цвета групп, чтобы различать** их предназначение (входные данные или функции).
+* С помощью групп можно **структурировать график таким образом, чтобы упростить создание пользовательских узлов**.
 
 ![](images/1/graphstrategy2.png)
 
-> The colors in this program identify the purpose of each group. This strategy can be used to create hierarchy in any graphic standards or templates you develop.
+> Цвета в этой программе обозначают назначение каждой группы. Этот метод может использоваться для создания иерархии в любых разрабатываемых графических стандартах или шаблонах.
 >
-> 1. Function group (blue)
-> 2. Input group (orange)
-> 3. Script group (green)
+> 1. Группа функций (синий)
+> 2. Группа входных данных (оранжевый)
+> 3. Группа сценариев (зеленый)
 >
-> For how to use Groups, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Сведения об использовании групп см. в разделе [Управление программой](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-### **Develop efficiently with Code Blocks**
+### **Эффективная разработка с помощью блоков кода**
 
-* At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
-* Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
+* Иногда с помощью блока кода можно **быстрее ввести число или метод узла, чем при поиске** (Point.ByCoordinates, Number, String, Formula).
+* Блоки кода можно использовать **для настройки пользовательских функций в DesignScript, уменьшающих количество узлов в графике**.
 
 ![](<images/1/graphstrategy3 (1).png>)
 
-> Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
+> Примеры 1 и 2 выполняют одну и ту же функцию. Получилось значительно быстрее написать несколько строк кода, чем прибегать к функции поиска и добавлять каждый узел по отдельности. Кроме того, блок кода значительно меньше по объему.
 >
-> 1. Design Script written in Code Block
-> 2. Equivalent program in nodes
+> 1. Сценарий DesignScript, написанный с помощью блока кода
+> 2. Аналогичная программа с использованием узлов
 >
-> For how to use Code Block, refer to [What's a Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Сведения об использовании блоков кода см. в разделе [Определение блока кода](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
 
-### **Condense with Node to Code**
+### **Сжатие узла в код**
 
-* You can **reduce the complexity of a graph by using Node to Code** which will take a collection of simple nodes and write their corresponding DesignScript in a single Code Block
-* Node to Code can\*\* condense code without eliminating the program’s clarity\*\*
-* The following are the **pros** of using Node to Code:
-  * Easily condenses code into one component that is still editable
-  * Can simplify a significant portion of the graph
-  * Useful if the ‘mini-program’ will not often be edited
-  * Useful for incorporating other code block functionality, like functions
-* The following are the **cons** of using Node to Code:
-  * Generic naming makes it less legible
-  * More difficult to understand for other users
-  * No easy way to return to the visual programming version
+* **Сложность графика можно уменьшить с помощью преобразования узла в код (Node to Code)**. При этом для набора простых узлов будет создан соответствующий сценарий DesignScript, состоящий из одного блока кода.
+* Функция «Узел для кодировки» позволяет\*\* сжать код, не усложнив восприятие программы\*\*.
+* Далее перечислены **преимущества** использования функции Node to Code.
+   * Простое сжатие кода в один редактируемый компонент.
+   * Упрощение значительной части графика.
+   * Удобство применения к мини-программам, которые редко редактируются.
+   * Возможность встраивания других типов блоков кода, таких как функции.
+* Ниже представлены **недостатки** использования функции Node to Code.
+   * Типовые имена ухудшают удобочитаемость.
+   * Сложность восприятия для других пользователей.
+   * Нет простого способа вернуться к визуальной версии программы.
 
 ![](images/1/graphstrategy3\_1.png)
 
-> 1. Existing program
-> 2. Code Block created from Node to Code
+> 1. Существующая программа
+> 2. Блок кода, созданный с помощью функции Node to Code
 >
-> For how to use Node to Code, refer to [Design Script Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Сведения об использовании функции Node to Code см. в разделе [Синтаксис DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
 
-### **Access data flexibly with List@Level**
+### **Гибкий доступ к данным с помощью функции List@Level**
 
-* Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
-* List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
+* С помощью функции List@Level можно **упростить график, заменив узлы List.Map и List.Combine**, которые могут занимать значительное место рабочей области.
+* При построении логики узла List@Level работает быстрее\*\*, чем List.Map/List.Combine\*\*, так как предоставляет доступ к данным любого уровня в списке непосредственно с порта ввода узла.
 
 ![](<images/1/graphstrategy4 (1) (1).png>)
 
-> We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
+> Активировав функцию List@Level для входных данных списка CountTrue, можно проверить, сколько истинных значений и в каких списках возвращает функция BoundingBox.Contains. List@Level позволяет определить, с какого уровня данные будут подаваться на ввод. Работа с List@Level отличается гибкостью, эффективностью и более предпочтительна по сравнению с другими методами, где используются функции List.Map и List.Combine.
 >
-> 1. Counting true values at List Level 2
-> 2. Counting true values at List Level 3
+> 1. Подсчет истинных значений на 2 уровне списка.
+> 2. Подсчет истинных значений на 3 уровне списка.
 >
-> For how to use List@Level, refer to [Lists of Lists](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Сведения об использовании List@Level см. в разделе [Списки списков](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
 
-## Maintain Readability
+## Обеспечение наглядности
 
-In addition to making your graph as simple and efficient as possible, strive for graphic clarity. Despite your best efforts to make your graph intuitive with logical groupings, relationships might not be readily apparent. A simple Note inside of a Group or renaming a slider can save you or another user from unnecessary confusion or panning across the graph. The following are several ways that will help you apply graphic consistency within and across your graphs.
+Помимо простоты и эффективности графиков, необходимо позаботится об их максимальной наглядности. Несмотря на все усилия по созданию интуитивного графика за счет логических группировок, взаимосвязи могут быть видны недостаточно хорошо. Лишних поисков и неопределенности можно избежать благодаря простому примечанию внутри группы или переименованному регулятору. Описанные ниже способы помогут обеспечить визуальное единообразие в одном или нескольких графиках.
 
-### **Visual continuity with Node Alignment**
+### **Достижение визуальной целостности посредством выравнивания узлов**
 
-* To reduce your work after you finished building your graph, you should try to ensure the node layout is legible by **aligning nodes often and as you go**
-* If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
-* To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
+* Чтобы уменьшить количество доработок после построения графика, попытайтесь сделать компоновку узлов удобочитаемой, **периодически выравнивая их**.
+* Если с графиком будут работать другие пользователи, **убедитесь, что компоновка проводов и узлов имеет четкую логику**.
+* Для упрощения выравнивания **используйте функцию «Очистить компоновку узла», чтобы автоматически выровнять** график (однако в таком случае точность будет меньше, чем при выравнивании вручную).
 
 ![](<images/1/graphstrategy5 (2) (1).png>)
 
-> 1. Unorganized graph
-> 2. Aligned graph
+> 1. Неупорядоченный график
+> 2. Выровненный график
 >
-> For how to use Node Alignment, refer to [Managing Your Program](3-4\_best\_practices.md).
+> Сведения об использовании функции выравнивания узлов см. в разделе [Управление программой](3-4\_best\_practices.md).
 
-### **Descriptive labeling by renaming**
+### **Использование описательных меток при переименовании**
 
-* Renaming inputs can help others easily understand your graph, **especially if what they plug into will be off the screen**
-* **Be wary of renaming nodes other than inputs.** An alternative to this is creating a custom node from a node cluster and renaming that; it will be understood that it contains something else
+* Переименование входных данных сделает график более понятным другим пользователям, **особенно если требуется подсоединиться к узлу, который не будет виден на экране**.
+* **При переименовании любых узлов, кроме узлов входных данных, будьте максимально осторожны.** Можно также создать пользовательский узел из кластера узлов и переименовать его: при этом будет понятно, что в нем содержится нечто другое.
 
 ![](images/1/graphstrategy6.png)
 
-> 1. Inputs for surface manipulation
-> 2. Inputs for architectural parameters
-> 3. Inputs for drainage simulation script
+> 1. Входные данные для управления поверхностью
+> 2. Входные данные архитектурных параметров
+> 3. Входные данные в сценарии моделирования водоспуска
 >
-> To rename a node, right click on its name and choose "Rename Node...".
+> Чтобы переименовать узел, щелкните его имя правой кнопкой мыши и выберите «Переименовать узел...».
 
-### **Explain with Notes**
+### **Разъяснения в примечаниях**
 
-* You should add a Note if something in the **graph requires a plain language explanation** that the nodes can not express
-* You should add a Note if a collection of **nodes or a Group is too large or complex and can’t be easily understood right away**
+* Примечание добавляется, если для какой-либо части **графика требуется пояснение на простом языке**, которое не может быть выражено с помощью узла.
+* Примечание добавляется, если набор **узлов или группа имеют слишком большой размер, сложную структуру или логику**.
 
 ![](images/1/graphstrategy7.png)
 
-> 1. A Note describing the portion of the program that returns raw translation distances
-> 2. A Note describing the code that maps those values to a Sine wave
+> 1. Примечание, описывающее часть программы, которая возвращает примерные расстояния переноса.
+> 2. Примечание, описывающее код, который сопоставляет эти значения с синусоидальной волной.
 >
-> For how to add a Note, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Инструкции по добавлению примечания см. в разделе [Управление программой](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-## Flex Continuously
+## Зондирование на всех этапах работы
 
-While building your visual-script, it is important to verify that what is being returned is what you expected. Not all errors or issues will cause the program to fail immediately, especially null or zero values that could affect something far downstream. This strategy is also discussed in the context of text-scripting in [Scripting Strategies](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). The following practice will help ensure that you are getting what you expected.
+При создании визуального сценария важно убедиться в том, что возвращаемые результаты соответствуют ожидаемым. Не все ошибки или проблемы ведут к немедленному сбою в работе программы. Особенно это касается нулевых значений, которые могут повлиять на работу значительно позже. Эта стратегия также рассматривается в контексте текстовых сценариев в разделе [Методы создания сценариев](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). Следующие рекомендации помогут получить ожидаемые результаты.
 
-### **Monitor data with Watch and Preview Bubbles**
+### **Мониторинг данных с помощью марок наблюдения (Watch) и предварительного просмотра (Preview)**
 
-* Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
+* При создании программы используйте марки Watch и Preview, чтобы\*\* убедиться в правильности ключевых выходных данных\*\*.
 
 ![](images/1/graphstrategy8.png)
 
-> The Watch nodes are being used to compare:
+> Узлы Watch используются для сравнения следующих данных:
 >
-> 1. The raw translation distances
-> 2. The values passed through the Sine equation
+> 1. примерные расстояния переноса;
+> 2. значения, проходящие через уравнение синусоиды.
 >
-> For how to use Watch, refer to [Library](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Сведения об использовании узла Watch см. в разделе [Библиотека](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
 
-## Ensure Reusability
+## Повторное использование
 
-It is highly likely that someone else will be opening your program at some point, even if you are working independently. They should be able to quickly understand what the program needs and produces from its inputs and outputs. This is especially important when developing a Custom Node to be shared with the Dynamo community and used in someone else’s program. These practices lead to robust, reusable programs and nodes.
+Весьма вероятно, что рано или поздно вашу программу откроет другой пользователь, даже если вы работаете самостоятельно. На основе входных и выходных данных этому пользователю нужно будет быстро понять, что требуется для работы программы и каковы результаты этой работы. Это особенно важно при разработке пользовательских узлов, которые будут применяться сообществом Dynamo и добавляться в программы других разработчиков. Следующие рекомендации помогут создавать надежные, многократно используемые программы и узлы.
 
-### **Manage the I/O**
+### **Управление вводом/выводом**
 
-* To ensure legibility and scalability, you should try and **minimize inputs and outputs as much as possible**
-* You should try to **strategize how you are going to build the logic by first creating a rough outline** of how the logic could work before you even add a single node to the canvas. As you develop the rough outline, you should keep track of which inputs and outputs will go into scripts
+* Чтобы обеспечить удобочитаемость и масштабируемость, попробуйте **минимизировать входные и выходные данные**.
+* Перед тем, как добавить первый узел в рабочую область, необходимо **определить метод построения логики, создав примерный план** ее действия. При создании примерного плана отслеживайте, какие входные и выходные данные войдут в сценарии.
 
-### **Use Presets to embed input values**
+### **Использование наборов параметров при добавлении входных значений**
 
-* If there are **particular options or conditions that you want embedded in the graph**, you should use Presets for quick access
-* You can also use Presets to **reduce complexity by caching specific slider values** in a graph with long run times
+* При наличии **определенных вариантов или условий, которые требуется включить в график**, для быстрого доступа к ним следует использовать наборы параметров.
+* Наборы параметров можно также использовать для **уменьшения сложности путем кэширования определенных значений регулятора** на графике с длительным временем выполнения.
 
-> For how to use Presets, refer to [Managing Your Data with Presets](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Сведения об использовании наборов параметров см. в разделе [Управление данными с помощью наборов параметров](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
-### **Contain programs with Custom Nodes**
+### **Упаковка программ с пользовательскими узлами в контейнеры**
 
-* You should use a Custom Node if your **program can be collected into a single container**
-* You should use a a Custom Node **when a portion of the graph will be reused often** in other programs
-* You should use a Custom Node if you want to **share a functionality with the Dynamo Community**
+* Пользовательский узел применяется, если **можно объединить программу в одном контейнере**.
+* Еще пользовательский узел применяется, если **часть графика будет повторно использоваться ** в других программах.
+* И, наконец, пользовательский узел применяется, если **необходимо сделать функцию доступной сообществу Dynamo**.
 
 ![](images/1/graphstrategy9.png)
 
-> Collecting the point translation program into a Custom Node makes a robust, unique program portable and far easier to understand. Well named input ports will help other users understand how to use the node. Remember to add descriptions and required data types for each input.
+> Если собрать программу преобразования точек в пользовательский узел, получится более надежная и оригинальная переносная программа, в которой легко разобраться. Правильно обозначенные порты ввода помогут другим пользователям понять, как применять узел. Не забудьте добавить описания и требуемые типы данных для каждого входного элемента.
 >
-> 1. Existing attractor program
-> 2. Custom Node that collects this program, PointGrid
+> 1. Существующая программа точки притяжения
+> 2. Пользовательский узел для размещения программы, PointGrid
 >
-> For how to use Custom Nodes, refer to [Custom Node Introduction](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Сведения о применении пользовательских узлов см. в разделе [Введение в пользовательские узлы](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
 
-### **Build templates**
+### **Создание шаблонов**
 
-* You can build templates to **establish graphic standards across your visual graphs to ensure collaborators have a standardized way of understanding graph**
-* When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
-* When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
+* Шаблоны используются в качестве **визуальных стандартов, чтобы обеспечить общий подход к построению графиков среди пользователей, осуществляющих совместную работу**.
+* При создании шаблона можно стандартизировать **цвета и размеры шрифтов группы**, чтобы отнести типы рабочих процессов или операции с данными к определенным категориям.
+* При создании шаблона можно даже стандартизировать **метки, цвета или стили для обозначения различий между внешними и внутренними рабочими процессами** на графике.
 
 ![](<images/1/graphstrategy10 (2).png>)
 
-> 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
-> 2. The back-end of the program.
-> 3. Group color categories (the general design, inputs, Python scripting, imported geometry).
+> 1. Пользовательский интерфейс (внешняя часть программы). Включает в себя имя проекта, регуляторы ввода и импортируемую геометрию.
+> 2. Внутренняя часть программы.
+> 3. Цветовые категории групп (проект в целом, входные данные, сценарии на языке Python, импортированная геометрия).
 
-## Exercise - Architectural Roof
+## Упражнение «Архитектурная крыша»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
-Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
+Ознакомившись с некоторыми практическими советами, попробуйте применить их к быстро составленной программе. Несмотря на то, что программа успешно создает крышу, график отражает «поток сознания» автора. Отсутствует какая-либо структура и руководство по использованию. Применив практические советы по организации, описанию и анализу программы, мы поможем понять другим пользователям, как ее использовать.
 
 ![](images/1/graphstrategy11.png)
 
-> The program is functioning, but the graph is disorganized.
+> Программа работает, но график не структурирован.
 
-Let's start by determining the data and geometry returned by the program.
+Начните с определения данных и геометрии, возвращаемых программой.
 
 ![](images/1/graphstrategy12.png)
 
-> Understanding when major changes to the data occur is crucial to establishing logical divisions, or modularity. Try inspecting the rest of the program with Watch nodes to see if you can determine groups before moving on to the next step.
+> Чтобы создать логические разделы или модули, очень важно понимать, когда данные подвергаются наибольшим изменениям. Перед переходом к следующему шагу попробуйте проверить остальную часть программы с помощью узлов Watch, чтобы убедиться в возможности определить группы.
 >
-> 1. This **Code Block** with a math equation looks like a crucial piece of the program. A **Watch** node displays that it is returning lists of translation distances.
-> 2. The purpose of this area isn't readily obvious. The arrangement of True values at list level L2 from **BoundingBox.Contains** and the presence of **List.FilterByBoolMask** suggests we are sampling a portion of the point grid.
+> 1. Этот узел **Code Block** с математическим уравнением выглядит как ключевая часть программы. Узел **Watch** возвращает списки расстояний переноса.
+> 2. Назначение этой области не очевидно. Расположение истинных значений на уровне списка L2 из **BoundingBox.Contains** и наличие **List.FilterByBoolMask** говорит о том, что это выборка части из сетки точек.
 
-Once we understand the elemental parts of the program, let's put them in Groups.
+Разобравшись в компонентах программы, разделите их на группы.
 
 ![](images/1/graphstrategy13.png)
 
-> Groups allow the user to visually differentiate the parts of the program.
+> Группы позволяют визуально дифференцировать компоненты программы.
 >
-> 1. Import 3D site model
-> 2. Translate point grid based on Sine equation
-> 3. Sample portion of point grid
-> 4. Create architectural roof surface
-> 5. Create glass curtain wall
+> 1. Импорт 3D-модели площадки
+> 2. Преобразование сетки точек на основе уравнения синусоиды
+> 3. Выборка части из сетки точек
+> 4. Создание поверхности архитектурной крыши
+> 5. Создание стеклянного витража
 
-With Groups established, align the nodes to create visual continuity across the graph.
+После определения групп выровняйте узлы, чтобы обеспечить визуальную целостность графика.
 
 ![](images/1/graphstrategy14.png)
 
-> Visual continuity helps the user to see the program flow and implicit relationships between nodes.
+> Визуальная целостность позволяет видеть ход выполнения программы и скрытые взаимосвязи между узлами.
 
-Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
+Сделайте программу более понятной, добавив еще один слой улучшений графического интерфейса. Добавьте примечания, чтобы пояснить, как работает та или иная часть программы, укажите пользовательские имена входных данных и назначьте цвета различным типам групп.
 
 ![](<images/1/graphstrategy15 (1).png>)
 
-> These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
+> Благодаря этим улучшениям графического интерфейса пользователи лучше поймут назначение этой программы. Различные цвета групп позволяют отличать входные данные от функций.
 >
-> 1. Notes
-> 2. Inputs with descriptive names
+> 1. Примечания
+> 2. Входные данные с описательными именами
 
-Before we start to condense the program, let's find a strategic location to introduce the Python script drainage simulator. Plug the output of the first scaled roof surface into the respective scripting input.
+Перед тем как приступить к сжатию программы, определим предполагаемое место вставки сценария Python для моделирования водоспуска. Разместите выходные данные первой масштабированной поверхности крыши в соответствующих входных данных сценария.
 
 ![](images/1/graphstrategy16.png)
 
-> We've chosen to integrate scripting at this point in the program so the drainage simulation can be run on the original, single roof surface. That specific surface is not being previewed, but it saves us from having to choose the top surface of the chamfered Polysurface.
+> Сценарий встраивается в эту часть программы, чтобы можно было запустить моделирование водоспуска на одной исходной поверхности крыши. Данная поверхность не отображается в области предварительного просмотра, но при этом не нужно выбирать верхнюю поверхность на сложной поверхности с фаской.
 >
-> 1. Source geometry for script input
-> 2. Python node
-> 3. Input sliders
-> 4. On/off "switch"
+> 1. Исходная геометрия для входных данных сценария
+> 2. Узел Python
+> 3. Регуляторы ввода
+> 4. Переключатель вкл./откл.
 
-Let's simplify the graph now that everything is in place.
+Упростите график, чтобы расставить все по местам.
 
 ![](images/1/graphstrategy17.png)
 
-> Condensing our program with Node to Code and Custom Node has greatly reduced the size of the graph. The groups that create the roof surface and walls have been converted to code since they are very specific to this program. The point translation group is contained in a Custom Node as it could be used in another program. In the example file, create your own custom node from the translate points group.
+> Сжатие программы с помощью функций Node to Code и Custom Node привело к значительному уменьшению размера графика. Группы, отвечающие за создание поверхности крыши и стен, преобразованы в код, так как характерны только для данной программы. Группа преобразования точек содержится в пользовательском узле, так как ее можно использовать в другой программе. Создайте в файле примера собственный пользовательский узел из группы преобразования точек.
 >
-> 1. Custom Node to contain the "translate point grid" group
-> 2. Node to Code to condense the "create architectural roof surface and curtain wall" groups
+> 1. Пользовательский узел для размещения группы «преобразование сетки точек»
+> 2. Функция Node to Code для сжатия групп «Создание поверхности архитектурной крыши и виража»
 
-As a final step, create presets for exemplary roof forms.
+В завершение создайте наборы параметров для образцов формы крыши.
 
 ![](images/1/graphstrategy18.png)
 
-> These inputs are the primary drivers of the roof form and will help users see the potential of the program.
+> Эти входные данные в существенной мере определяют форму крыши и помогут пользователям увидеть возможности программы.
 
-Our program with views of two presets.
+Программа, где видны два набора параметров.
 
 ![](images/1/graphstrategy19.png)
 
 ![](images/1/graphstrategy20.png)
 
-> The roof drainage patterns give the user an analytical view of the respective presets.
+> Аналитический вид наборов параметров, соответствующих образцам водостока крыши.

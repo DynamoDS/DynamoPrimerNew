@@ -1,16 +1,16 @@
-# Example Files
+# Файлы примеров
 
-#### These example files accompany the Dynamo Primer, and are organized according to Chapter and Section.
+#### Эти файлы примеров дополняют руководство Dynamo Primer. Они упорядочены по главам и разделам.
 
-## Essential Nodes & Concept
+## Основные узлы и концепция
 
-### Geometry for Computational Design
+### Геометрия для машинного проектирования
 
-#### Geometry Overview
+#### Обзор концепции геометрии
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-#### Vector, Plane & Coordinate System
+#### Вектор, плоскость и система координат
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
@@ -18,53 +18,53 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-#### Points
+#### Точки
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-#### Curves
+#### Кривые
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-#### Surface
+#### Поверхность
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/5/Surfaces.zip" %}
 
-#### Solids
+#### Тела
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### The Building Blocks of Programs
+### Компоновочные блоки программ
 
-#### Data
+#### Данные
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-#### Math
+#### Математика
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-#### Logic
+#### Логика
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
-#### Strings
+#### Строки
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-#### Color
+#### Цвет
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-### Designing with Lists
+### Проектирование на основе списков
 
-#### What's a List
+#### Что такое список
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/1/Lacing.dyn" %}
 
-#### Working with Lists
+#### Работа со списками
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-Operations.dyn" %}
 
@@ -78,7 +78,7 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
-#### Lists of Lists
+#### Списки списков
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
@@ -94,87 +94,87 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/ReplaceItems.dyn" %}
 
-#### n-Dimensional Lists
+#### Многомерные списки
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-### Dictionaries in Dynamo
+### Словари в Dynamo
 
-#### Revit Use-Cases
+#### Примеры использования Revit
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-5/4/roomDictionary.dyn" %}
 
-## Custom Nodes & Packages
+## Пользовательские узлы и пакеты
 
-### Custom Nodes
+### Пользовательские узлы
 
-#### Creating a Custom Node
+#### Создание пользовательских узлов
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-1/2/UV-CustomNode.zip" %}
 
-#### Publishing to Your Library
+#### Публикация узлов в библиотеку
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-1/3/PointsToSurface.dyf" %}
 
-### Packages
+### Пакеты
 
-#### Package Case Study - Mesh Toolkit
+#### Практикум по работе с пакетом: Mesh Toolkit
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/2/MeshToolkit.zip" %}
 
-#### Publishing a Package
+#### Публикация пакетов
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/4/MapToSurface.zip" %}
 
-#### Zero-Touch Importing
+#### Импорт Zero Touch
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/5/ZeroTouchImages.zip" %}
 
-## Dynamo for Revit
+## Dynamo для Revit
 
-#### Selecting
+#### Выбор
 
 {% file src="../7_dynamo_for_revit/datasets/2/Revit-Selecting.zip" %}
 
-#### Editing
+#### Редактирование
 
 {% file src="../7_dynamo_for_revit/datasets/3/Revit-Editing.zip" %}
 
-#### Creating
+#### Создание
 
 {% file src="../7_dynamo_for_revit/datasets/4/Revit-Creating-DirectShape.zip" %}
 
-#### Customizing
+#### Адаптация
 
 {% file src="../7_dynamo_for_revit/datasets/5/Revit-Customizing.zip" %}
 
-#### Documenting
+#### Выпуск документации
 
 {% file src="../7_dynamo_for_revit/datasets/6/Revit-Documenting.zip" %}
 
-## Coding in Dynamo
+## Создание кода в Dynamo
 
-### Code Blocks and DesignScript
+### Узлы Code Block и DesignScript
 
-#### DesignScript Syntax
+#### Синтаксис DesignScript
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-#### Shorthand
+#### Сокращение
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-#### Functions
+#### Функции
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
 ### Python
 
-#### Python Nodes
+#### Узлы Python
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/1/Python_Custom-Node.dyn" %}
 
-#### Python and Revit
+#### Python и Revit
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-Doc.dyn" %}
 
@@ -182,24 +182,24 @@
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-## Best Practices
+## Практические рекомендации
 
-### Graph Strategies
+### Методы создания графиков
 
 {% file src="../9_best_practices/datasets/1/RoofDrainageSim.zip" %}
 
-### Scripting Strategies
+### Методы создания сценариев
 
 {% file src="../.gitbook/assets/SteepestPath.dyn" %}
 
-## Sample Workflows
+## Примеры рабочих процессов
 
-### Getting Started Workflows
+### Рабочие процессы для начала работы
 
-#### Parametric Vase
+#### Параметрическая ваза
 
 {% file src="../10_sample_workflow/datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-#### Attractor Points
+#### Точки притяжения
 
 {% file src="../10_sample_workflow/datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}

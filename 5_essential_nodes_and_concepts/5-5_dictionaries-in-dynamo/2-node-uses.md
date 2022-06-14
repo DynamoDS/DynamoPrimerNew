@@ -1,29 +1,29 @@
-# Dictionary Nodes
+# Узлы Dictionary
 
-Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
+В Dynamo 2.0 доступны различные узлы Dictionary для работы со словарями. К ним относятся узлы _создания, действия и запроса_.
 
 ![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
 
 #### Create
 
-1.`Dictionary.ByKeysValues` will create a dictionary with the supplied values and keys. _(The number of entries will be whatever the shortest list input is)_
+1. С помощью метода `Dictionary.ByKeysValues` создается словарь с заданными значениями и ключами. _Количество записей определяется кратчайшим входным списком._
 
 #### Action
 
-2\. `Dictionary.Components` will produce the components of the input dictionary. _(This is the reverse of the create node.)_
+2\. Метод `Dictionary.Components` создает компоненты входного словаря. _Это функция, противоположная функции узла создания._
 
-3\. `Dictionary.RemoveKeys` will produce a new dictionary object with the input keys removed.
+3\. Метод `Dictionary.RemoveKeys` создает объект словаря с удаленными входными ключами.
 
-4\. `Dictionary.SetValueAtKeys` will produce a new dictionary based on the input keys and the values to replace the current value at the corresponding keys.
+4\. Метод `Dictionary.SetValueAtKeys` создает словарь на основе входных ключей и значений, заменяющих текущее значение в соответствующих ключах.
 
-5\. `Dictionary.ValueAtKey` will return the value at the input key.
+5\. Метод `Dictionary.ValueAtKey` возвращает значение во входном ключе.
 
-#### Count
+#### Количество
 
-6\. `Dictionary.Count` will tell you how many key value pairs are in the dictionary.
+6\. С помощью метода `Dictionary.Count` можно узнать, сколько пар «ключ — значение» хранится в словаре.
 
-7\. `Dictionary.Keys` will return what keys are currently stored in the dictionary.
+7\. Метод `Dictionary.Keys` возвращает наименования ключей, хранящихся в настоящий момент в словаре.
 
-8\. `Dictionary.Values` will return what values are currently stored in the dictionary.
+8\. Метод `Dictionary.Values` возвращает значения, хранящиеся в настоящий момент в словаре.
 
-Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.
+Соотнесение данных с помощью словарей — это отличная альтернатива традиционный методам работы с индексами и списками.

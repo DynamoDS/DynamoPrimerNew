@@ -1,150 +1,150 @@
-# Working with Lists
+# Работа со списками
 
-### Working with Lists
+### Работа со списками
 
-Now that we've established what a list is, let's talk about operations we can perform on it. Imagine a list as a deck of playing cards. A deck is the list and each playing card represents an item.
+Определившись с тем, что такое список, поговорим о том, какие операции можно выполнять с ним. Представим список в виде колоды карт. Колода — это список, а каждая карта — элемент.
 
-![cards](../images/5-4/2/Playing\_cards\_modified.jpg)
+![карты](../images/5-4/2/Playing\_cards\_modified.jpg)
 
-> Photo by [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Фотография предоставлена [Кристианом Гидлефом (Christian Gidlöf)](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
 
 ### Query
 
-What **queries** can we make from the list? This accesses existing properties.
+Какие **запросы** доступны в списке? Это возможность вызова существующих свойств.
 
-* Number of cards in the deck? 52.
-* Number of suits? 4.
-* Material? Paper.
-* Length? 3.5" or 89mm.
-* Width? 2.5" or 64mm.
+* Сколько карт в колоде? 52.
+* Количество мастей? 4.
+* Из какого материала они изготовлены? Бумага.
+* Какова их длина? 3,5 дюйма, или 89 мм.
+* Какова их ширина? 2,5 дюйма, или 64 мм.
 
 ### Action
 
-What **actions** can we perform on the list? This changes the list based on a given operation.
+Какие **действия** можно выполнять со списком? Это изменения списка в зависимости от конкретной операции.
 
-* We can shuffle the deck.
-* We can sort the deck by value.
-* We can sort the deck by suit.
-* We can split the deck.
-* We can partition the deck by dealing out individual hands.
-* We can select a specific card in the deck.
+* Колоду можно перемешать.
+* Колоду можно отсортировать по значению.
+* Колоду можно отсортировать по масти.
+* Колоду можно разделить.
+* Колоду можно раздать отдельным игрокам.
+* Можно выбрать отдельную карту из колоды.
 
-All of the operations listed above have analogous Dynamo nodes for working with lists of generic data. The lessons below will demonstrate some of the fundamental operations we can perform on lists.
+У всех перечисленных выше операций есть аналогичные узлы Dynamo для работы со списками типовых данных. В уроке ниже будут рассмотрены основные операции, которые можно выполнять со списками.
 
-## **Exercise**
+## **Упражнение**
 
-### **List Operations**
+### **Операции со списками**
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/2/List-Operations.dyn" %}
 
-The image below is the base graph which we are drawing lines between two circles to represent basic list operations. We'll explore how to manage data within a list and demonstrate the visual results through the list actions below.
+На изображении ниже показан базовый график для построения линий между двумя окружностями с целью представления основных операций со списками. Далее рассматривается управление данными в списке и демонстрируются визуальные результаты с помощью действий со списком.
 
 ![](<../images/5-4/2/working with list - list operation.jpg>)
 
-> 1. Begin with a **Code Block** with a value of `500;`
-> 2. Plug into the x input of a **Point.ByCoordinates** node.
-> 3. Plug the node from the previous step into the origin input of a **Plane.ByOriginNormal** node.
-> 4. Using a **Circle.ByPlaneRadius** node, plug the node from the previous step into the plane input.
-> 5. Using **Code Block**, designate a value of `50;` for the radius. This is the first circle we'll create.
-> 6. With a **Geometry.Translate** node, move the circle up 100 units in the Z direction.
-> 7. With a **Code Block** node, define a range of ten numbers between 0 and 1 with this line of code: `0..1..#10;`
-> 8. Plug the code block from the previous step into the _param_ input of two **Curve.PointAtParameter** nodes. Plug **Circle.ByPlaneRadius** into the curve input of the top node, and **Geometry.Translate** into the curve input of the node beneath it.
-> 9. Using a **Line.ByStartPointEndPoint**, connect the two **Curve.PointAtParamete**_r_ nodes.
+> 1. Начните с узла **Code Block** со значением `500;`.
+> 2. Соедините его с входным параметром «x» узла **Point.ByCoordinates**.
+> 3. Соединим узел из предыдущего шага с входным параметром origin узла **Plane.ByOriginNormal**.
+> 4. Соединим узел из предыдущего шага с входным параметром plane узла **Circle.ByPlaneRadius**
+> 5. С помощью узла **Code Block** укажите значение `50;` в качестве значения параметра radius. Это будет первая окружность.
+> 6. С помощью узла **Geometry.Translate** переместим окружность вверх на 100 единиц в направлении Z.
+> 7. С помощью узла **Code Block** задайте диапазон из десяти чисел от 0 до 1, используя следующую строку кода: `0..1..#10;`.
+> 8. Соединим блок кода из предыдущего шага с входным значением _param_ двух узлов **Curve.PointAtParameter**. Соединим узел **Circle.ByPlaneRadius** с входным параметром curve верхнего узла, а узел **Geometry.Translate** с входным параметром curve узла под ним.
+> 9. С помощью узла **Line.ByStartPointEndPoint** соедините два узла **Curve.PointAtParamete**_r_.
 
 ### List.Count
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/2/List-Count.dyn" %}
 
-The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
+Узел _List.Count_ сравнительно прост: он подсчитывает количество значений в списке и возвращает это число. При работе со списками списков в использовании этого узла появляются дополнительные нюансы. О них мы поговорим в следующих разделах.
 
 ![Count](<../images/5-4/2/working with list - list operation - list count.jpg>)
 
-> 1. The **List.Count **_****_ node returns the number of lines in the **Line.ByStartPointEndPoint** node. The value is 10 in this case, which agrees with the number of points created from the original **Code Block** node.
+> 1. Узел **List.Count **_****_ возвращает количество линий в узле **Line.ByStartPointEndPoint**. В данном случае значение равно 10, что соответствует количеству точек, созданных с помощью исходного узла **Code Block**.
 
 ### List.GetItemAtIndex
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
 
-**List.GetItemAtIndex** is a fundamental way to query an item in the list.
+**List.GetItemAtIndex** — основной способ запроса элементов в списке.
 
 ![Exercise](<../images/5-4/2/working with list - get item index 01.jpg>)
 
-> 1. First, Right click on **Line.ByStartPointEndPoint** node to switch off its preview.
-> 2. Using the **List.GetItemAtIndex** node, we are selecting index _"0"_, or the first item in the list of lines.
+> 1. Сначала щелкните правой кнопкой мыши узел **Line.ByStartPointEndPoint**, чтобы отключить его предварительный просмотр.
+> 2. С помощью узла **List.GetItemAtIndex** выбираем индекс _0_ или первый элемент в списке линий.
 
-Change slider value between 0 and 9 to select different item using **List.GetItemAtIndex**.
+Измените значение регулятора от 0 до 9, чтобы выбрать другой элемент с помощью **List.GetItemAtIndex**.
 
 ![](<../images/5-4/2/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
-_List.Reverse_ reverses the order of all of the items in a list.
+Узел _List.Reverse_ располагает все элементы в списке в обратном порядке.
 
 ![Exercise](<../images/5-4/2/working with list - list reverse.jpg>)
 
-> 1. To properly visualize the reversed list of lines, create more lines by changing the **Code Block** to `0..1..#50;`
-> 2. Duplicate the **Line.ByStartPointEndPoint** node, insert a List.Reverse node in between **Curve.PointAtParameter** and the second **Line.ByStartPointEndPoint**
-> 3. Use **Watch3D** nodes to preview two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
+> 1. Для правильной визуализации обращенного списка линий создайте дополнительные линии, изменив значение узла **Code Block** на `0..1..#50;`.
+> 2. Создайте копию узла **Line.ByStartPointEndPoint**, вставьте узел List.Reverse между узлом **Curve.PointAtParameter** и вторым узлом **Line.ByStartPointEndPoint**.
+> 3. Используйте узлы **Watch3D** для предварительного просмотра двух различных результатов. Первый узел показывает результат без обращенного списка. Линии соединяются вертикально с точками напротив. Второй узел показывает результат обращения списка, где все точки соединяются с точками напротив в обратном порядке.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
 
-**List.ShiftIndices** is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
+**List.ShiftIndices** — это удобный инструмент для создания скручиваний или спиралей и других подобных манипуляций с данными. Этот узел смещает элементы в списке на заданное количество индексов.
 
 ![Exercise](<../images/5-4/2/working with list - shiftIndices 01.jpg>)
 
-> 1. In the same process as the reverse list, insert a **List.ShiftIndices** into the **Curve.PointAtParameter** and **Line.ByStartPointEndPoint**.
-> 2. Using a **Code Block**, designated a value of "1" to shift the list one index.
-> 3. Notice that the change is subtle, but all of the lines in the lower **Watch3D** node have shifted one index when connecting to the other set of points.
+> 1. В том же сценарии, где был создан обращенный список, вставьте узел **List.ShiftIndices** между узлами **Curve.PointAtParameter** и **Line.ByStartPointEndPoint**.
+> 2. С помощью узла **Code Block** укажите значение 1 для сдвига списка на один индекс.
+> 3. Изменение незначительное, но все линии в нижнем узле **Watch3D** сместились на один индекс при соединении с другим набором точек.
 
-By changing to **Code Block** to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
+Если увеличить значение в узле **Block Code**, например, до _30_, в диагональных линиях появляется существенное различие. В данном случае сдвиг работает аналогично диафрагме камеры, закручивая исходную цилиндрическую форму.
 
 ![](<../images/5-4/2/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
 ![](../images/5-4/2/ListFilterBool.png)
 
-**List.FilterByBooleanMask** will remove certain items based on a list of booleans, or values reading "true" or "false".
+Узел **List.FilterByBooleanMask** удаляет определенные элементы на основе списка логических операций или значений «Истина»/«Ложь».
 
 ![Exercise](<../images/5-4/2/working with list - filter by bool mask.jpg>)
 
-In order to create a list of values reading "true" or "false", we need to a little more work...
+Чтобы создать список значений «Истина» или «Ложь», необходимо выполнить несколько дополнительных действий.
 
-> 1. Using a **Code Block**, define an expression with the syntax: `0..List.Count(list);`. Connect the **Curve.PointAtParameter** node to the _list_ input. We'll walk through this setup more in the code block chapter, but the line of code in this case is giving us a list representing each index of the **Curve.PointAtParameter** node.
-> 2. Using a _**%**_** (modulus)** node, connect the output of the _code block_ into the _x_ input, and a value of _4_ into the _y_ input. This will give us the remainder when dividing the list of indices by 4. Modulus is a really helpful node for pattern creation. All values will read as the possible remainders of 4: 0, 1, 2, 3.
-> 3. From the  _**%**_** (modulus)** node, we know that a value of 0 means that the index is divisible by 4 (0,4,8,etc...). By using a **==** node, we can test for the divisibility by testing it against a value of _"0"_.
-> 4. The **Watch** node reveals just this: we have a true/false pattern which reads: _true,false,false,false..._.
-> 5. Using this true/false pattern, connect to the mask input of two **List.FilterByBooleanMask** nodes.
-> 6. Connect the **Curve.PointAtParameter** node into each list input for the **List.FilterByBooleanMask**.
-> 7. The output of **Filter.ByBooleanMask** reads _"in"_ and _"out"_. _"In"_ represents values which had a mask value of _"true"_ while _"out"_ represents values which had a value of _"false"_. By plugging the _"in"_ outputs into the _startPoint_ and _endPoint_ inputs of a **Line.ByStartPointEndPoint** node, we've created a filtered list of lines.
-> 8. The **Watch3D** node reveals that we have fewer lines than points. We've selected only 25% of the nodes by filtering only the true values!
+> 1. С помощью узла **Code Block** задайте выражение со следующим синтаксисом: `0..List.Count(list);`. Соединим узел **Curve.PointAtParameter** с входным параметром _list_. Этот процесс будет рассмотрен подробнее в главе о блоках кода, но в данном случае строка кода дает список, где представлены все индексы узла **Curve.PointAtParameter**.
+> 2. С помощью узла _**%**_** (коэффициент)** соедините выходной параметр узла _Code Block_ с входным параметром _x_, а значение _4_ с входным параметром _y_. Это позволит вычислить остаток при делении списка индексов на 4. Узел «Коэффициент» очень полезен при создании массивов. Все значения будут представлять собой возможный остаток от 4: 0, 1, 2, 3.
+> 3. Благодаря узлу _**%**_** (коэффициент)** мы знаем, что значение 0 означает делимость индекса на 4 (0, 4, 8 и т. д.). С помощью узла **==** можно проверить делимость по значению _0_.
+> 4. Узел **Watch** выводит лишь следующий результат: массив истинных и ложных значений в виде _ true,false,false,false...._.
+> 5. Соедините этот массив с входным параметром mask обоих узлов **List.FilterByBooleanMask**.
+> 6. Соедините узел **Curve.PointAtParameter** с входными параметрами list узлов **List.FilterByBooleanMask**.
+> 7. Выходными данными **Filter.ByBooleanMask** будут_in_ и _out_. _In_ — это значения, которым было присвоено значение маски _true_, а _out_ — значения, которым было присвоено значение _false_. Соедините выходные параметры _in_ с входными параметрами _startPoint_ и _endPoint_ узла **Line.ByStartPointEndPoint**, создав тем самым отфильтрованный список линий.
+> 8. Узел **Watch3D** показывает, что количество линий меньше, чем количество точек. Отфильтровав только истинные значения, мы выбрали 25 % узлов.

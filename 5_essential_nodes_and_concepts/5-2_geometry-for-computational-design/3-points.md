@@ -1,52 +1,52 @@
-# Points
+# Точки
 
-## Points in Dynamo
+## Точки в Dynamo
 
-### What is a Point?
+### Что такое точка?
 
-A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
+[Точка](5-3\_points.md#point-as-coordinates) определяется одним или несколькими значениями, которые называются координатами. Количество необходимых для определения точки значений координат зависит от системы координат или пространства, в котором она находится.
 
-### 2D & 3D Point
+### 2D- и 3D-точка
 
-The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates \[X,Y,Z] (3D Point in Dynamo).
+Самый распространенный тип точки в Dynamo существует в трехмерной мировой системе координат и имеет три координаты: \[X,Y,Z] (3D-точка в Dynamo).
 
 ![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
 
-A 2D Point in Dynamo has two coordinates \[X,Y].
+2D-точка в Dynamo имеет две координаты — \[X,Y].
 
 ![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
 
-### Point on Curves and Surfaces
+### Точка на кривых и поверхностях
 
-Parameters for both Curves and Surfaces are continuous and extend beyond the edge of the given geometry. Since the shapes that define the Parameter Space reside in a three-dimensional World Coordinate System, we can always translate a Parametric Coordinate into a "World" Coordinate. The point \[0.2, 0.5] on the surface for example is the same as point \[1.8, 2.0, 4.1] in world coordinates.
+Параметры кривых и поверхностей являются непрерывными и выходят за пределы заданной геометрии. Поскольку формы, определяющие параметрическое пространство, находятся в трехмерной мировой системе координат, параметрическую координату легко можно преобразовать в мировую. Например, точка \[0.2, 0.5] на поверхности соответствует точке \[1.8, 2.0, 4.1] в мировой системе координат.
 
 ![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
 
-> 1. Point in assumed World XYZ Coordinates
-> 2. Point relative to a given Coordinate System (Cylindrical)
-> 3. Point as UV Coordinate on a Surface
+> 1. Точка в предполагаемой мировой системе координат XYZ.
+> 2. Точка, представленная относительно заданной системы координат (цилиндрической).
+> 3. Точка, представленная координатами UV на поверхности.
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-## Deep Dive into...
+## Углубленное изучение
 
-If Geometry is the language of a model, then Points are the alphabet. Points are the foundation upon which all other geometry is created - we need at least two Points to create a Curve, we need at least three Points to make a Polygon or a Mesh Face, and so on. Defining the position, order, and relationship among Points (try a Sine Function) allows us to define higher order geometry like things we recognize as Circles or Curves.
+Если геометрия — это язык модели, то точки — ее алфавит. Точки являются основой для создания всех прочих объектов геометрии. Для создания кривой требуется не менее двух точек, для создания полигона или грани сети — не менее трех и т. д. Определение положения, порядка и отношений между точками (например, с помощью функции синуса) позволяет работать с геометрией более высокого порядка, в том числе с такими элементами, как окружности или кривые.
 
-![Point to Curve](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![От точки до кривой](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
 
-> 1. A Circle using the functions `x=r*cos(t)` and `y=r*sin(t)`
-> 2. A Sine Curve using the functions `x=(t)` and `y=r*sin(t)`
+> 1. Окружность, построенная с помощью функций `x=r*cos(t)` и `y=r*sin(t)`.
+> 2. Синусоидальная кривая, построенная с помощью функций `x=(t)` и `y=r*sin(t)`.
 
-### Point as Coordinates
+### Точка в системе координат
 
-Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using \[X,Y] on a Plane or \[U,V] if we are on a surface.
+Точки также могут существовать в двумерной системе координат. В зависимости от типа рабочего пространства могут использоваться различные буквенные обозначения — \[X,Y] на плоскости и \[U,V] на поверхности.
 
-![Point as Coordinates](../images/5-2/3/Coordinates.jpg)
+![Точка в системе координат](../images/5-2/3/Coordinates.jpg)
 
-> 1. A Point in Euclidean Coordinate System: \[X,Y,Z]
-> 2. A Point in a Curve Parameter Coordinate System: \[t]
-> 3. A Point in a Surface Parameter Coordinate System: \[U,V]
+> 1. Точка в евклидовой системе координат: \[X,Y,Z].
+> 2. Точка в системе координат параметров кривой: \[t].
+> 3. Точка в системе координат параметров поверхности: \[U,V].

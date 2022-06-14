@@ -1,94 +1,94 @@
-# Editing
+# Редактирование
 
-A powerful feature of Dynamo is that you can edit parameters on a parametric level. For example, a generative algorithm or the results of a simulation can be used to drive the parameters of an array of elements. This way, a set of instances from the same family can have custom properties in your Revit project.
+Одной из мощнейших возможностей Dynamo является редактирование параметров на параметрическом уровне. Например, для управления параметрами массива элементов можно использовать генеративный алгоритм или результаты моделирования. Таким образом, в проекте Revit набору экземпляров из одного семейства можно присвоить пользовательские свойства.
 
-### Type and Instance Parameters
+### Параметры типов и экземпляров
 
 ![Exercise](<./images/3/32 (2).jpg>)
 
-> 1. Instance parameters define the aperture of the panels on the roof surface, ranging from an Aperture Ratio of 0.1 to 0.4.
-> 2. Type-based parameters are applied to every element on the surface because they are the same family type. The material of each panel, for example, can be driven by a type-based parameter.
+> 1. Параметры экземпляра определяют апертуру панелей на поверхности крыши в диапазоне значений коэффициента апертуры от 0,1 до 0,4.
+> 2. Параметры на основе типа применяются к каждому элементу на поверхности, так как они относятся к одному и тому же типоразмеру в семействе. Например, материал каждой панели может определяться параметром на основе типа.
 
-![Exercise](./images/3/params.jpg)
+![Упражнение](./images/3/params.jpg)
 
-> 1. If you've set up a Revit family before, remember that you have to assign a parameter type (string, number, dimension, etc.) Be sure to use the correct data type when assigning parameters from Dynamo.
-> 2. You can also use Dynamo in combination with parametric constraints defined in a Revit family's properties.
+> 1. Если вы уже настраивали семейства Revit, то должны помнить, что необходимо назначить тип параметра (строка, номер, размер и т. д.). При назначении параметров в Dynamo убедитесь, что выбран правильный тип данных.
+> 2. Dynamo можно также использовать в сочетании с параметрическими зависимостями, определенными в свойствах семейства Revit.
 
-As a quick review of parameters in Revit, we recall that there are type parameters and instance parameters. Both can be edited from Dynamo, but we'll work with instance parameters in the exercise below.
+Напоминаем, что в Revit существуют параметры типа и параметры экземпляра. Их все можно редактировать в Dynamo, но в данном упражнении рассматриваются параметры экземпляра.
 
 {% hint style="info" %}
-As you discover the wide-reaching application of editing parameters, you may want to edit a large quantity of elements in Revit with Dynamo. This can be a _computationally expensive_ operation, meaning that it can be slow. If you're editing a large number of elements, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
+По мере открытия новых возможностей, которые обеспечивают параметры редактирования, будет увеличиваться и количество элементов Revit, которые можно изменить с помощью Dynamo. Это может потребовать _дополнительных вычислительных ресурсов_, что, естественно, повлияет на скорость работы. При редактировании большого количества элементов можно воспользоваться узлом заморозки, чтобы приостановить выполнение операций Revit во время создания графика. Для получения дополнительных сведений о замораживании узлов см. раздел [Замораживание](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) в главе «Тела».
 {% endhint %}
 
-### Units
+### Единицы измерения
 
-As of version 0.8, Dynamo is fundamentally unitless. This allows Dynamo to remain an abstract visual programming environment. Dynamo nodes that interact with Revit dimensions will reference the Revit project's units. For example, if you are setting a length parameter in Revit from Dynamo, the number in Dynamo for the value will correspond to the default units in the Revit project. The exercise below works in meters.
+Начиная с версии 0.8, в Dynamo практически не используются единицы измерения. Это позволяет модулю оставаться абстрактной средой визуального программирования. Узлы Dynamo, которые взаимодействуют с размерами Revit, будут ссылаться на единицы измерения проекта Revit. Например, если в Revit с помощью Dynamo задается параметр длины, число, указанное в качестве значения в Dynamo, будет соответствовать единицам измерения по умолчанию в проекте Revit. В приведенном ниже упражнении используются метры.
 
-For a quick conversion of units, use the _"Convert Between Units"_ node. This is a handy tool for converting Length, Area, and Volume units on the fly.
+Для быстрого преобразования единиц измерения используйте узел _Convert Between Units_. Это удобный инструмент для динамического преобразования единиц измерения длины, площади и объема.
 
 ![](<./images/3/editing - units.jpg>)
 
-## Exercise
+## Упражнение
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="./datasets/3/Revit-Editing.zip" %}
 
 {% hint style="warning" %}
-The exercise below works in meters.
+В упражнении ниже используются метры.
 {% endhint %}
 
-This exercise focuses on editing Revit elements without performing geometric operation in Dynamo. We're not importing Dynamo geometry here, just editing parameters in a Revit project. This exercise is basic, and to the more advanced Revit users, notice that these are instance parameters of a mass, but the same logic can be applied to an array of elements to customize on a large scale. This is all done with the "Element.SetParameterByName" node.
+В этом упражнении основное внимание уделяется редактированию элементов Revit без выполнения геометрических операций в Dynamo. В данном случае геометрия Dynamo не импортируется, а просто редактируются параметры в проекте Revit. Это упражнение базового уровня. Опытным пользователям Revit следует обратить внимание на то, что хотя речь идет о параметрах экземпляров формообразующего элемента, тот же принцип можно применить и к целому массиву элементов. Все действия выполняются с помощью узла Element.SetParameterByName.
 
-### Editing Building Mass Parameters
+### Редактирование параметров формообразующих элементов здания
 
-Begin with the example Revit file for this section. We've removed the structural elements and adaptive trusses from the previous section. In this exercise, we will focus on a parametric rig in Revit and manipulating in Dynamo.
+Начнем с файла Revit, используемого в этом разделе в качестве примера. Несущие элементы и адаптивные фермы из предыдущего раздела были удалены. В этом упражнении мы рассмотрим параметрическую оснастку в Revit и манипуляции в Dynamo.
 
-Selecting the building in Mass in Revit, we see an array of instance parameters in the properties panel.
+При выборе здания в разделе «Формообразующий элемент» в Revit на панели «Свойства» отображается массив параметров экземпляра.
 
 ![](<./images/3/editing - exercise 01.jpg>)
 
-In Dynamo, we can retrieve the parameters by selecting the targeting element.
+В Dynamo можно извлечь параметры, выбрав целевой элемент.
 
 ![](<./images/3/editing - exercise 02.jpg>)
 
-> 1. Select the building mass with the _"Select Model Element"_ node.
-> 2. We can query all of the parameters of this mass with the _"Element.Parameters"_ node. This includes type and instance parameters.
+> 1. Выберите формообразующий элемент здания с помощью узла _Select Model Element_.
+> 2. Можно запросить все параметры этого формообразующего элемента с помощью узла _Element.Parameters_. Сюда входят параметры типа и экземпляра.
 
 ![](<./images/3/editing - exercise 03.jpg>)
 
-> 1. Reference the _Element. Parameters_ node to find target parameters. Or, we can view the properties panel from the previous step to choose which parameter names we want to edit. In this case, we are looking for the parameters which affect the large geometric moves on the building mass.
-> 2. We will make changes to the Revit element using the _Element.SetParameterByName_ node
-> 3. Use C\_ode Block to\_ define a list of parameters, with quotes around each item to denote a string. We can also use the List.Create node with a series of _"string"_ nodes connected to multiple inputs but Code block is faster and easier. Make sure that the string matches the exact name in Revit, case-specific: `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
+> 1. См. узел _Element. Parameters_, чтобы найти целевые параметры. Кроме того, можно выбрать имена параметров для редактирования, изучив панель свойств из предыдущего шага. В данном случае необходимы параметры, которые влияют на большие геометрические перемещения формообразующего элемента здания.
+> 2. Измените элемент Revit, используя узел _Element.SetParameterByName_.
+> 3. Используйте узел \_Code Block\_, чтобы определить список параметров, заключив каждый элемент в кавычки для обозначения строки. Кроме того, можно использовать узел List.Create с рядом узлов _string_, подключенных к нескольким входным параметрам, однако применение блока кода ускоряет и упрощает эту операцию. Убедитесь, что строка соответствует точному имени в Revit с учетом регистра: `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`.
 
 ![](<./images/3/editing - exercise 04.jpg>)
 
-> 1. We also want to designate values for each parameter. Add six _"integer sliders"_ to the canvas and rename to the corresponding parameter in the list. Also, set the values of each slider to the image above. In order from top-to-bottom: 62,92,25,22,8,12
-> 2. Define another _code block_ with a list of the same length as the parameter names. In this case, we name variables (without quotes) which create inputs for the _code block._ Plug the _sliders_ into each respective input: `{bw,bl,bh,ao,io,lu};`
-> 3. Connect the Code Block _to the "Element.SetParameterByName"\*_ value input. With run automatically checked, we will automatically see results.
+> 1. Кроме того, необходимо указать значения для каждого параметра. Добавьте шесть узлов _Integer Slider_ в рабочую область и переименуйте их в соответствии с параметром в списке. Для каждого регулятора установите значение, показанное на изображении выше (сверху вниз — 62,92,25,22,8,12).
+> 2. Создайте другой _блок кода_, содержащий список той же длины, что и имена параметров. В этом случае мы присваиваем имена переменным (без кавычек), которые создают входные данные для _блока кода._ Соедините _регуляторы_ с соответствующими входными параметрами: `{bw,bl,bh,ao,io,lu};`.
+> 3. Соедините узел Code Block _с входным значением Element.SetParameterByName\*_. Если установлен флажок «Автоматическое выполнение процесса», результаты отобразятся автоматически.
 
 {% hint style="warning" %}
-\*This demonstration works with instance parameters, but not type parameters.
+\* В этом примере рассматриваются параметры экземпляра, а не параметры типа.
 {% endhint %}
 
-Just as in Revit, many of these parameters are dependent on each other. There are of course combinations where the geometry may break. We can remedy this issue with defined formulas in the parameter properties, or we can setup a similar logic with math operations in Dynamo (this is an additional challenge if you'd like to expand on the exercise).
+Как и в Revit, многие параметры зависят друг от друга. Существует множество комбинаций, когда геометрия может нарушаться. Эту проблему можно решить с помощью формул, заданных в свойствах параметров. Кроме того, аналогичный алгоритм можно воспроизвести с помощью математических операций в Dynamo (можно выполнить в дополнение к этому упражнению).
 
 ![](<./images/3/editing - exercise 05.jpg>)
 
-> 1. This combination gives a funky new design to the building mass: 100, 92, 100, 25, 13, 51
+> 1. С помощью следующей комбинации можно придать оригинальный дизайн формообразующему элементу здания: 100, 92, 100, 25, 13, 51.
 
-### Editing Facade Parameters
+### Редактирование параметров фасада
 
-Next, let's look at how we can edit the facade using a similar process.
+Теперь посмотрим, как можно отредактировать фасад, используя аналогичный процесс.
 
 ![](<./images/3/editing - exercise 06.jpg>)
 
-> 1. Copy the graph and focus on the facade glazing which will house the truss system. We isolate four parameters in this case: `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
-> 2. Additionally, we create _number sliders_ and rename to the appropriate parameters. The first three sliders from top-to-bottom should be remapped to a domain of \[0,10], while the final slider, _"Facade Bend Location"_, should be remapped to a domain of \[0,1]. These values, from top-to-bottom should start with these values (although they're arbitrary): 2.68, 2.64, 2.29, 0.5
-> 3. Define a new Code block and connect the sliders: `{so,mo,no,fbl};`
+> 1. Скопируйте график и рассмотрите остекление фасада, где будет находиться ферма. В данном случае мы изолируем четыре параметра: `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`.
+> 2. Кроме того, создадим _регуляторы чисел_ и присвоим им имена соответствующих параметров. Первые три регулятора (сверху вниз) необходимо перенастроить на область \[0,10], а последний (_Facade Bend Location_) — на область \[0,1]. Эти значения в нисходящем порядке должны начинаться со следующих чисел (хотя сами они произвольные): 2,68; 2,64; 2,29; 0,5.
+> 3. Определите новый блок кода и соедините регуляторы: `{so,mo,no,fbl};`.
 
 ![](<./images/3/editing - exercise 07.jpg>)
 
-> 1. By changing the _sliders_ in this part of the graph, we can make the facade glazing much more substantial: 9.98, 10.0, 9.71 ,0.31
+> 1. Изменяя _регуляторы_ в этой части графика, можно сделать остекление фасада значительно более прочным: 9,98; 10,0; 9,71; 0,31.

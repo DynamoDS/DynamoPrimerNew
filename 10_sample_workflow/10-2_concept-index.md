@@ -4,14 +4,14 @@ description: >-
   workflows.
 ---
 
-# Concept Index
+# Индекс понятий
 
-| Exercise list    | Key concepts introduced in exercise  | Link to further reading in later chapters                                                                  |
+| Список упражнений | Ключевые понятия, представленные в упражнении | Ссылка на подробную информацию из последующих глав |
 | ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Parametric Vase  | Searching nodes throught the library | [Library](../3\_user\_interface/2-library.md)                                                              |
-|                  | Using nodes and wires                | [Nodes and Wires](../4\_nodes\_and\_wires/)                                                                |
-|                  | Creating curves and surfaces         | [Geometry for Computational Design](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
-|                  | Using code blocks                    | [Code Blocks and DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)                |
-| Attractor Points | Create manage and edit lists         | [Designing with Lists](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/)                   |
-|                  | Changing preview modes               | [Preview Mode](../3\_user\_interface/1-workspace.md#preview-mode)                                          |
-|                  | Changing execution modes             | [Execution Bar](../3\_user\_interface/#execution-bar)                                                      |
+| Параметрическая ваза | Поиск узлов в библиотеке | [Библиотека](../3\_user\_interface/2-library.md) |
+|                  | Использование узлов и проводов | [Узлы и провода](../4\_nodes\_and\_wires/) |
+|                  | Создание кривых и поверхностей | [Геометрия для машинного проектирования](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
+|                  | Использование блоков кода | [Узлы Code Block и DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) |
+| Точки притяжения | Создание, редактирование списков и управление ими | [Проектирование на основе списков](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/) |
+|                  | Изменение режимов просмотра | [Режим просмотра](../3\_user\_interface/1-workspace.md#preview-mode) |
+|                  | Изменение режимов выполнения | [Панель выполнения](../3\_user\_interface/#execution-bar) |

@@ -1,10 +1,10 @@
-# Curves: Interpolated and Control Points
+# Кривые: интерполяционные и по управляющим точкам
 
-There are two fundamental ways to create free-form curves in Dynamo: specifying a collection of Points and having Dynamo interpolate a smooth curve between them, or a more low-level method by specifying the underlying control points of a curve of a certain degree. Interpolated curves are useful when a designer knows exactly the form a line should take, or if the design has specific constraints for where the curve can and cannot pass through. Curves specified via control points are in essence a series of straight line segments which an algorithm smooths into a final curve form. Specifying a curve via control points can be useful for explorations of curve forms with varying degrees of smoothing, or when a smooth continuity between curve segments is required.
+Создавать кривые произвольной формы в Dynamo можно двумя основными способами: задать набор точек и создать сглаженную кривую между ними путем интерполяции либо, если требуется получить кривую с конкретной степенью сглаживания, задать построение по управляющим точкам. Интерполяционные кривые подходят для случаев, когда проектировщик точно знает, какой формы должна быть линия, или когда в проекте заданы конкретные зависимости, определяющие то, где кривая может проходить, а где не может. Кривые по управляющим точкам представляют собой набор прямолинейных сегментов, который путем применения алгоритма сглаживается до получения требуемой кривой. Построение кривой по управляющим точкам позволяет сравнивать варианты с разными степенями сглаживания, а также обеспечивать последовательное применение сглаживания к криволинейным сегментам.
 
-### Interpolated Curve
+### Интерполированная кривая
 
-To create an interpolated curve, simply pass in a collection of Points to the _NurbsCurve.ByPoints_ method.
+Для построения интерполяционной кривой достаточно задать набор точек и использовать его в качестве входных данных для метода _NurbsCurve.ByPoints_.
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -18,7 +18,7 @@ pts = Point.ByCoordinates(1..30..#num_pts, s, 0);
 int_curve = NurbsCurve.ByPoints(pts);
 ```
 
-The generated curve intersects each of the input points, beginning and ending at the first and last point in the collection, respectively. An optional periodic parameter can be used to create a periodic curve which is closed. Dynamo will automatically fill in the missing segment, so a duplicate end point (identical to the start point) isn’t needed.
+Полученная кривая пересекает каждую из заданных точек, а ее начало и конец находятся в первой и последней точках заданного набора соответственно. Задав дополнительный параметр периодичности, можно получить замкнутую периодическую кривую. При этом Dynamo автоматически подставит отсутствующий сегмент, так что отдельно задавать конечную точку, совпадающую с начальной точкой, не требуется.
 
 ![](../images/8-2/4/Curves\_02.png)
 
@@ -34,9 +34,9 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
     false);
 ```
 
-### Control Points Curve
+### Кривая по управляющим точкам
 
-NurbsCurves are generated in much the same way, with input points represent the endpoints of a straight line segment, and a second parameter specifying the amount and type of smoothing the curve undergoes, called the degree.\* A curve with degree 1 has no smoothing; it is a polyline.
+Построение объектов NurbsCurve выполняется схожим образом. В качестве первого параметра задается набор точек (а именно конечных точек прямолинейных сегментов), а в качестве второго — величина и тип (т. е. степень) сглаживания кривой.\* Кривая со степенью сглаживания 1 не сглаживается и представляет собой полилинию.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-A curve with degree 2 is smoothed such that the curve intersects and is tangent to the midpoint of the polyline segments:
+Кривая со степенью сглаживания 2 сглаживается таким образом, чтобы она проходила сквозь и по касательной к средним точкам сегментов полилинии:
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dynamo supports NURBS (Non-uniform rational B-spline) curves up to degree 20, and the following script illustrates the effect increasing levels of smoothing has on the shape of a curve:
+В Dynamo поддерживаются NURBS-кривые (неоднородные рациональные B-сплайны) со степенью сглаживания от 1 до 20. Приведенный ниже сценарий демонстрирует, как повышение степени сглаживания влияет на форму кривой.
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,9 +83,9 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-Note that you must have at least one more control point than the degree of the curve.
+Обратите внимание, что число управляющих точек должно превышать значение степени сглаживания как минимум на единицу.
 
-Another benefit of constructing curves by control vertices is the ability to maintain tangency between individual curve segments. This is done by extracting the direction between the last two control points, and continuing this direction with the first two control points of the following curve. The following example creates two separate NURBS curves which are nevertheless as smooth as one curve:
+Еще одно преимущество построения кривых по управляющим вершинам — возможность сохранения касательности между отдельными криволинейными сегментами. Для этого программа определяет направление при движении от предпоследней управляющей точки сегмента к последней, а затем размещает две первые управляющие точки следующего сегмента в соответствии с этим направлением. В следующем примере показаны две отдельные NURBS-кривые, которые при этом выглядят как единая сглаженная кривая.
 
 ![](../images/8-2/4/Curves\_06.png)
 
@@ -116,5 +116,5 @@ crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
 {% hint style="info" %}
-\*This is a very simplified description of NURBS curve geometry, for a more accurate and detailed discussion see Pottmann, et al, 2007, in the references.
+\* В данной главе приведено упрощенное описание геометрии кривых NURBS. Для получения подробных сведений см. Pottmann, et al, 2007 г., в списке литературы.
 {% endhint %}

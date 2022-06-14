@@ -1,188 +1,188 @@
-# n-Dimensional Lists
+# Многомерные списки
 
-Further down the rabbit-hole, let's add even more tiers to hierarchy. Data structure can expand far beyond a two-dimensional list of lists. Since lists are items in and of themselves in Dynamo, we can create data with as many dimensions as possible.
+Добавим еще больше уровней в иерархию и углубимся в нашу кроличью нору. Структура данных может быть гораздо более объемной, чем простой двумерный список списков. Поскольку списки являются самостоятельными элементами в Dynamo, мы можем создать данные с практически неограниченным количеством измерений.
 
-The analogy we'll work with here are Russian Nesting Dolls. Each list can be regarded as one container holding multiple items. Each list has its own properties and is also regarded as its own object.
+Это похоже на матрешку. Каждый список можно рассматривать как один контейнер, который содержит несколько элементов. Каждый список обладает собственными свойствами и рассматривается как отдельный объект.
 
-![Dolls](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
+![Матрешки](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
 
-> A set of Russian Nesting Dolls (Photo by [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) is an analogy for n-Dimensional lists. Each layer represents a list, and each list contains items within it. In Dynamo's case, each container can have multiple containers inside (representing the items of each list).
+> Набор матрешек (фотография предоставлена [Зета (Zeta)](https://www.flickr.com/photos/beppezizzi/145493363)) является аналогией многомерных списков. Каждый слой представляет список, и каждый список содержит элементы. В Dynamo каждый контейнер может содержать несколько контейнеров (представляющих элементы каждого списка).
 
-n-Dimensional lists are difficult to explain visually, but we've set up a few exercises in this chapter which focus on working with lists which venture beyond two dimensions.
+Многомерные списки сложно объяснить визуально, но в данном разделе есть несколько упражнений, которые помогут вам разобраться в работе со списками, число измерений которых превышает два.
 
-### Mapping and Combinations
+### Сопоставление и комбинации
 
-Mapping is arguably the most complex part of data management in Dynamo, and is especially relevant when working with complex hierarchies of lists. With the series of exercises below, we'll demonstrate when to use mapping and combinations as data becomes multi-dimensional.
+Сопоставление — возможно, самый сложный аспект управления данными в Dynamo, особенно когда речь идет о сложных иерархических структурах, состоящих из списков. В рамках приведенных ниже упражнений мы рассмотрим случаи, в которых следует использовать сопоставление и комбинации при работе с многомерными данными.
 
-Preliminary introductions to **List.Map** and **List.Combine** can be found in the previous section. In the last exercise below, we'll use these nodes on a complex data structure.
+Основные сведения по работе с узлами **List.Map** и **List.Combine** можно найти в предыдущем разделе. Эти узлы будут использованы для работы со сложной структурой данных в последнем из приведенных ниже упражнений.
 
-## Exercise - 2D Lists - Basic
+## Упражнение. Двумерные списки. Основы
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-This exercise is the first in a series of three which focuses on articulating imported geometry. Each part in this series of exercises will increase in the complexity of data structure.
+Это первое из трех упражнений, направленных на работу с импортированной геометрией. От упражнения к упражнению структура данных будет усложняться.
 
 ![Exercise](<../images/5-4/4/n-dimensional lists - 2d lists basic 01.jpg>)
 
-> 1. Let's begin with the .sat file in the exercise file folder. We can grab this file using the **File Path** node.
-> 2. With **Geometry.ImportFromSAT**, the geometry is imported into our Dynamo preview as two surfaces.
+> 1. Начнем с файла SAT, расположенного в папке с файлами для упражнения. Добавим его в приложение с помощью узла **File Path**.
+> 2. Узел **Geometry.ImportFromSAT** импортирует геометрию в Dynamo и отображает ее в виде двух поверхностей.
 
-For this exercise, we want to keep it simple and work with one of the surfaces.
+Для простоты в этом упражнении вы будете работать только с одной поверхностью.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 02.jpg>)
 
-> 1. Let's select the index of 1 to grab the upper surface. We do this with **List.GetItemAtIndex** node.
-> 2. Switch off the geometry preview from **Geometry.ImportFromSAT** preview.
+> 1. Чтобы выбрать верхнюю поверхность, задайте индекс 1. Для этого добавьте узел **List.GetItemAtIndex**.
+> 2. Отключите предварительный просмотр геометрии в области предварительного просмотра **Geometry.ImportFromSAT**.
 
-The next step is to divide the surface into a grid of points.
+Теперь нужно преобразовать поверхность в сетку из точек.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 03.jpg>)
 
-> 1\. Using **Code Block**, insert these two lines of code: `0..1..#10;` `0..1..#5;`
+> 1\. С помощью узла **Code Block** вставьте две следующие строки кода: `0..1..#10;` `0..1..#5;`.
 >
-> 2\. With the **Surface.PointAtParameter**, connect the two code block values to u and _v_. Change the _lacing_ of this node to _"Cross Product"_.
+> 2\. Используя узел **Surface.PointAtParameter**, соедините два значения Code Block с входными параметрами u и _v_. Задайте для параметра _Переплетение_ этого узла значение _Векторное произведение_.
 >
-> 3\. The output reveals the data structure, which is also visible in the Dynamo preview.
+> 3\. Полученная структура данных отображается в области предварительного просмотра Dynamo.
 
-Next, used the Points from last step to generate ten curves along the surface.
+Затем используйте точки из последнего шага для создания десяти кривых вдоль поверхности.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 04.jpg>)
 
-> 1. To get a look at how the data structure is organized, let's connect a **NurbsCurve.ByPoints** to the output of **Surface.PointAtParameter**.
-> 2. You may switch off the preview from the **List.GetItemAtIndex** Node for now for a clearer result.
+> 1. Чтобы отобразить структуру данных, соедините узел **NurbsCurve.ByPoints** с портом вывода узла **Surface.PointAtParameter**.
+> 2. Для получения более четкого результата можно отключить предварительный просмотр в узле **List.GetItemAtIndex**.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 05.jpg>)
 
-> 1. A basic **List.Transpose** will flip the columns and rows of a list of lists.
-> 2. Connecting the output of **List.Transpose** to **NurbsCurve.ByPoints**, we now get five curves running horizontally across the surface.
-> 3. You may switch off the preview from the **NurbsCurve.ByPoints** Node in the previous step to achieve the same result in the image.
+> 1. Базовый узел **List.Transpose** позволяет поменять местами столбцы и строки в списке списков.
+> 2. При соединении порта вывода узла **List.Transpose** с узлом **NurbsCurve.ByPoints** вы получите пять кривых, идущих горизонтально вдоль поверхности.
+> 3. Для получения того же результата можно отключить предварительный просмотр в узле **NurbsCurve.ByPoints** на предыдущем шаге.
 
-## Exercise - 2D Lists - Advanced
+## Упражнение. 2D-списки. Для опытных пользователей
 
-Let's increase the complexity. Suppose we wanted to perform an operation on the curves created from the previous exercise. Perhaps we want to relate these curves to another surface and loft between them. This requires more attention to data structure, but the underlying logic is the same.
+Усложним задачу. Предположим, что нам нужно выполнить определенное действие с кривыми, которые мы получили в предыдущем упражнении. Например, нужно связать эти кривые с другой поверхностью и выполнить лофтинг между ними По сути, логика остается прежней, но задача требует более внимательной работы со структурой данных.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 01.jpg>)
 
-> 1. Begin with a step from the previous exercise, isolating the upper surface of the imported geometry with the **List.GetItemAtIndex** node.
+> 1. Начнем с операции, уже знакомой вам по предыдущему упражнению. Изолируйте верхнюю поверхность импортированной геометрии с помощью узла **List.GetItemAtIndex**.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 02.jpg>)
 
-> 1. Using **Surface.Offset**, offset the surface by a value of _10_.
+> 1. Используя узел **Surface.Offset**, задайте значение _10_, чтобы сместить поверхность.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a _code block_ with these two lines of code: `0..1..#10;` `0..1..#5;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with _lacing_ set to _"Cross Product"_. One of these nodes is connected to the original surface, while the other is connected to the offset surface.
+> 1. Как и в предыдущем упражнении, добавьте узел _Code Block_ с двумя следующими строками кода: `0..1..#10;` `0..1..#5;`.
+> 2. Соедините порты вывода этого узла с двумя узлами **Surface.PointAtParameter** и задайте для параметра _Переплетение_ каждого из них значение _Векторное произведение_. Один из этих узлов соединен с исходной поверхностью, а второй — с поверхностью смещения.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
 
-> 1. Switch off the preview of these Surfaces.
-> 2. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes. The result show curves corresponding to two surfaces.
+> 1. Отключите предварительный просмотр этих поверхностей.
+> 2. Как и в предыдущем упражнении, соедините порты вывода с двумя узлами **NurbsCurve.ByPoints**. В результате отображаются кривые, соответствующие двум поверхностям.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 05.jpg>)
 
-> 1. By using **List.Create**, we can combine the two sets of curves into one list of lists.
-> 2. Notice from the output, we have two lists with ten items each, representing each connect set of Nurbs curves.
-> 3. By performing a **Surface.ByLoft**, we can visually make sense of this data structure. The node lofts all of the curves in each sublist.
+> 1. С помощью узла **List.Create** можно объединить два набора кривых в один список списков.
+> 2. В результате создаются два списка с десятью элементами, каждый из которых представляет собой связанный набор NURBS-кривых.
+> 3. С помощью узла **Surface.ByLoft** можно создать визуальное представление этой структуры данных. Узел выполняет лофтинг для всех кривых в каждом списке.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 06.jpg>)
 
-> 1. Switch off the preview from **Surface.ByLoft** Node in previous step.
-> 2. By using **List.Transpose**, remember, we are flipping all of the columns and rows. This node will transfer two lists of ten curves into ten lists of two curves. We now have each nurbs curve related to the neighboring curve on the other surface.
-> 3. Using **Surface.ByLoft**, we arrive at a ribbed structure.
+> 1. Отключите предварительный просмотр узла **Surface.ByLoft** на предыдущем шаге.
+> 2. Как вы помните, узел **List.Transpose** позволяет поменять местами столбцы и строки в списке списков. В результате использования этого узла два списка из десяти кривых каждый преобразуются в десять списков из двух кривых каждый. Теперь каждая NURBS-кривая связана с соседней кривой на другой поверхности.
+> 3. С помощью узла **Surface.ByLoft** мы получили реберную конструкцию.
 
-Next, we will demonstrate an alternative process to achieve this result
+Далее демонстрируется альтернативный процесс получения этого результата
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
 
-> 1. Before we start, switch off the **Surface.ByLoft** preview in previous step to avoid confusion.
-> 2. An alternative to **List.Transpose** uses **List.Combine**. This will operate a _"combinator"_ on each sublist.
-> 3. In this case, we're using **List.Create** as the _"combinator"_, which will create a list of each item in the sublists.
-> 4. Using the **Surface.ByLoft** node, we get the same surfaces as in the previous step. Transpose is easier to use in this case, but when the data structure becomes even more complex, **List.Combine** is more reliable.
+> 1. Перед началом отключите предварительный просмотр **Surface.ByLoft** во избежание путаницы.
+> 2. Вместо узла **List.Transpose** можно использовать узел **List.Combine**. Он выполняет роль _«обьединителя»_ для каждого вложенного списка.
+> 3. В данном случае мы используем **List.Create** в качестве _«обьединителя»_ для создания списка по каждому элементу во вложенных списках.
+> 4. Добавив узел **Surface.ByLoft**, мы получаем те же поверхности, что и в предыдущем шаге. В данном случае узел Transpose является более простым вариантом, но при работе с еще более сложной структурой данных надежнее будет использовать узел **List.Combine**.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
 
-> 1. Stepping back a few steps, if we want to switch the orientation of the curves in the ribbed structure, we want to use a **List.Transpose** before connect to **NurbsCurve.ByPoints**. This will flip the columns and rows, giving us 5 horizontal ribs.
+> 1. Вернемся на несколько шагов назад. Если вы хотите изменить ориентацию кривых в реберной конструкции, узел **List.Transpose** следует применить до соединения с узлом **NurbsCurve.ByPoints**. В результате столбцы и строки поменяются местами, и мы получим пять горизонтальных ребер.
 
-## Exercise - 3D Lists
+## Упражнение. Трехмерные списки
 
-Now, we're going to go even one step further. In this exercise, we'll work with both imported surfaces, creating a complex data hierarchy. Still, our aim is to complete the same operation with the same underlying logic.
+Продолжаем усложнять задачи. В этом упражнении мы используем обе импортированные поверхности, чтобы создать сложную иерархическую структуру данных. По сути, вам предстоит выполнить то же самое действие, пользуясь той же самой логикой, что и ранее.
 
-Begin with the imported file from previous exercise.
+Вернемся к файлу, импортированному в предыдущем упражнении.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 01.jpg>)
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 02.jpg>)
 
-> 1. As in the previous exercise, use the **Surface.Offset** node to offset by a value of _10_.
-> 2. Notice from the output, that we've created two surfaces with the offset node.
+> 1. Как и в предыдущем упражнении, используйте узел **Surface.Offset**, чтобы задать значение смещения, равное _10_.
+> 2. Обратите внимание, что добавление узла смещения привело к созданию двух поверхностей.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a **Code Block** with these two lines of code: `0..1..#20;` `0..1..#20;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with lacing set to _"Cross Product"_. One of these nodes is connected to the original surfaces, while the other is connected to the offset surfaces.
+> 1. Как и в предыдущем упражнении, добавьте узел **Code Block** с двумя следующими строками кода: `0..1..#20;` `0..1..#20;`.
+> 2. Соедините порты вывода этого узла с двумя узлами **Surface.PointAtParameter** и задайте для параметра «Переплетение» каждого из них значение _Векторное произведение_. Один из этих узлов соединен с исходными поверхностями, а второй — с поверхностями смещения.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
 
-> 1. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes.
-> 2. Looking at the output of the **NurbsCurve.ByPoints,** notice that this is a list of two lists, which is more complex than the previous exercise. The data is categorized by the underlying surface, so we've added another tier to the data structured.
-> 3. Notice that things become more complex in the **Surface.PointAtParameter** node. In this case we have a list of lists of lists.
+> 1. Как и в предыдущем упражнении, соедините порты вывода с двумя узлами **NurbsCurve.ByPoints**.
+> 2. Посмотрите на выходные данные узла **NurbsCurve.ByPoints** и обратите внимание, что они представляют собой список, состоящий из двух списков, что является более сложной структурой, чем в предыдущем упражнении. Данные упорядочиваются по базовой поверхности, поэтому в структуру данных добавлен еще один уровень.
+> 3. Обратите внимание, что структура данных в узле **Surface.PointAtParameter** стала более сложной. В нем представлен список, состоящих из списков списков.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 05.jpg>)
 
-> 1. Before we proceed, switch off the preview from the existing surfaces.
-> 2. Using the **List.Create** node, we merge the Nurbs curves into one data structure, creating a list of lists of lists.
-> 3. By connecting a **Surface.ByLoft** node, we get a version of the original surfaces, as they each remain in their own list as created from the original data structure.
+> 1. Перед продолжением отключите предварительный просмотр существующих поверхностей.
+> 2. С помощью узла **List.Create** объедините NURBS-кривые в одну структуру данных, чтобы создать список, состоящий из списков списков.
+> 3. При подключении узла **Surface.ByLoft** мы получаем новую версию исходных поверхностей, так как они остаются в собственном списке в соответствии с исходной структурой данных.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 06.jpg>)
 
-> 1. In the previous exercise, we were able to use a **List.Transpose** to create a ribbed structure. This won't work here. A transpose should be used on a two-dimensional list, and since we have a three-dimensional list, an operation of "flipping columns and rows" won't work as easily. Remember, lists are objects, so **List.Transpose** will flip our lists with out sublists, but won't flip the nurbs curves one list further down in the hierarchy.
+> 1. В предыдущем упражнении мы использовали узел **List.Transpose** для создания реберной конструкции. В этом случае данная функция не подходит. Перенос следует использовать с двумерными списками, но мы имеем дело с трехмерным списком, поэтому перестановка столбцов и строк не сработает. Поскольку списки являются объектами, то узел **List.Transpose** выполнит перестановку между списками с вложенными списками, но она не затронет NURBS-кривые в списках на уровень ниже.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
-> 1. **List.Combine** will work better for us here. We want to use **List.Map** and **List.Combine** nodes when we get to more complex data structures.
-> 2. Using **List.Create** as the _"combinator"_, we create a data structure that will work better for us.
+> 1. В этом случае **List.Combine** является более подходящим инструментом. При работе с более сложными структурами данных используются узлы **List.Map** и **List.Combine**.
+> 2. Используя **List.Create** в качестве _«обьединителя»_, создайте структуру данных, которая лучше подойдет для ваших целей.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
-> 1. The data structure still needs to be transposed at one step down on the hierarchy. To do this we'll use **List.Map**. This is working like **List.Combine**, except with one input list, rather than two or more.
-> 2. The function we'll apply to **List.Map** is **List.Transpose**, which will flip the columns and rows of the sublists within our main list.
+> 1. Структуру данных все еще требуется перенести на один уровень вниз по иерархии. Для этого используйте узел **List.Map**. Его работа аналогична узлу **List.Combine**, однако в нем используется только один список входных данных, а не два или больше.
+> 2. К узлу **List.Map** будет применена функция **List.Transpose**, которая меняет местами столбцы и строки вложенных списков в главном списке.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 09.jpg>)
 
-> 1. Finally, we can loft the Nurbs curves together with a proper data hierarchy, giving us a ribbed structure.
+> 1. Наконец, выполните лофтинг между NURBS-кривыми с использованием соответствующей иерархии данных, чтобы получить реберную конструкцию.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 10.jpg>)
 
-> 1. Let's add some depth to the geometry with a **Surface.Thicken** Node with the input settings as shown.
+> 1. Добавим глубину геометрии с помощью узла **Surface.Thicken** с входными параметрами, как показано на изображении.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 11.jpg>)
 
-> 1. It'll be nice to add a surface backing two this structure, so add another **Surface.ByLoft** node and use the first output of **NurbsCurve.ByPoints** from an earlier step as input.
-> 2. As the preview is getting cluttered, switch off preview for these nodes by right clicking on each of them and uncheck 'preview' to see the result better.
+> 1. Будет полезно добавить поверхность, поддерживающую конструкцию, поэтому добавьте еще один узел **Surface.ByLoft** и используйте в качестве входного параметра первый вывод узла **NurbsCurve.ByPoints** из предыдущего шага.
+> 2. Чтобы не перегружать экран, отключите предварительный просмотр этих узлов. Щелкните узел правой кнопкой мыши и снимите флажок «Предварительный просмотр», чтобы лучше рассмотреть результат.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 12.jpg>)
 
-> 1. And thickening these selected surfaces, our articulation is complete.
+> 1. Теперь увеличьте толщину выбранных поверхностей.
 
-Not the most comfortable rocking chair ever, but it's got a lot of data going on.
+В результате мы получили нечто, похожее на слегка неустойчивое кресло-качалку. Зато сколько данных ушло на его создание!
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 13.jpg>)
 
-Last step, let's reverse the direction of the striated members. As we used transpose in the previous exercise, we'll do something similar here.
+Наконец, изменим направление бороздок. Для этого выполните процедуру, аналогичную преобразованию, которое вы уже использовали ранее.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 14.jpg>)
 
-> 1. Since we have one more tier to the hierarchy, so we need to use **List.Map** with a **List.Tranpose** function to change the direction of our Nurbs curves.
+> 1. Чтобы заполнить еще один уровень иерархии, используйте узел **List.Map** с функцией **List.Tranpose**, чтобы изменить направление NURBS-кривых.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 15.jpg>)
 
-> 1. We may want to increase the number of treads, so we can change the **Code Block** to `0..1..#20;` `0..1..#30;`
+> 1. Если требуется увеличить количество канавок, то данные узла **Code Block** можно изменить на следующие: `0..1..#20;` `0..1..#30;`.
 
-The first version of the rocking chair was sleek, so our second model offers an off-road, sport-utility version of recumbency.
+Если первая версия кресла-качалки была обтекаемой, то вторая получилась более похожей на колесо внедорожника.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 16.jpg>)

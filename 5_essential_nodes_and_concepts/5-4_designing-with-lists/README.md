@@ -1,5 +1,5 @@
-# Designing with Lists
+# Проектирование на основе списков
 
-Lists are the way we organize data. On your computer's operating system, you have files and folders. In Dynamo, we can regard these as items and lists, respectively. Like your operating system, there are many ways to create, modify, and query data. In this chapter, we'll break down how lists are managed in Dynamo.
+Списки помогают упорядочивать данные. В операционной системе компьютера существуют файлы и папки. Приложение Dynamo устроено аналогично, только роль файлов в нем играют элементы, а папок — списки. Как и в операционной системе, в Dynamo существует множество способов создания, изменения и запроса данных. В этой главе рассказывается о том, как управлять списками в Dynamo.
 
 ![](<../images/5-4/designing with lists.jpg>)

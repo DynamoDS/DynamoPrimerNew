@@ -1,161 +1,163 @@
-# Color
+# Цвет
 
-Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
+Цвет — это тип данных, который помогает создавать наглядные визуальные представления, а также отражать различия в результатах визуального программирования. При работе с абстрактными данными и численными переменными бывает трудно определить, что именно изменилось и в какой степени. Для решения этой проблемы можно использовать цвета.
 
-### Creating Colors
+### Создание цветов
 
-Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
+Цвета в Dynamo создаются с использованием входных данных ARGB, что является сокращенным обозначением комбинации альфа-канала (Alpha) с красным (Red), зеленым (Green) и синим (Blue) каналами. Альфа-канал служит для задания _прозрачности_ цвета, а остальные три канала используются как основные цвета для создания всего цветового спектра.
 
-| Icon                                          | Name (Syntax)                 | Inputs  | Outputs |
+| Значок | Имя (синтаксис) | Входные данные | Выходные данные |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
+| ![](<../images/5-3/5/Color byARGB.jpg>) | Цвет ARGB (**Color.ByARGB**) | A,R,G,B | color |
 
-### Querying Color Values
+### Запрос значений цвета
 
-The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
+Цвета в таблице ниже запрашивают свойства, использованные для настройки итогового цвета: альфа, красный цвет, зеленый цвет и синий цвет. Обратите внимание, что узел Color.Components включает все четыре свойства в качестве портов вывода, поэтому его удобнее всего использовать для запроса свойств цвета.
 
-| Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
+| Значок | Имя (синтаксис) | Входные данные | Выходные данные |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Alpha.jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-3/5/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-3/5/Color Green.jpg>) | Green (**Color.Green**)           | color  | G          |
-| ![](<../images/5-3/5/Color Blue.jpg>)      | Blue (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-3/5/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
+| ![](<../images/5-3/5/Color Alpha.jpg>) | Альфа (**Color.Alpha**) | color | A |
+| ![](<../images/5-3/5/Color Red.jpg>) | Красный (**Color.Red**) | color | R |
+| ![](<../images/5-3/5/Color Green.jpg>) | Зеленый (**Color.Green**) | color | G |
+| ![](<../images/5-3/5/Color Blue.jpg>) | Синий (**Color.Blue**) | color | B |
+| ![](<../images/5-3/5/Color Component.jpg>) | Компоненты (**Color.Components**) | color | A,R,G,B |
 
-The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
+Цвета в таблице ниже соответствуют **цветовому пространству HSB**. Разделение цвета на такие составляющие, как оттенок, насыщенность и яркость, является более понятным и привычным с точки зрения интерпретации цвета. Какого оттенка должен быть цвет? Насколько ярким он должен быть? Насколько светлым или темным? Отвечая на эти вопросы, мы тем самым разбиваем цвет на составляющие, то есть на оттенок, насыщенность и яркость соответственно.
 
-| Icon                                              | Name (Syntax)                     | Inputs | Outputs    |
+| Значок | Имя (синтаксис) | Входные данные | Выходные данные |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Hue.jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-3/5/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-3/5/Color Brightness.jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| ![](<../images/5-3/5/Color Hue.jpg>) | Оттенок (**Color.Hue**) | color | Hue |
+| ![](<../images/5-3/5/Color Saturation.jpg>) | Насыщенность (**Color.Saturation**) | color | Saturation |
+| ![](<../images/5-3/5/Color Brightness.jpg>) | Яркость (**Color.Brightness**) | color | Brightness |
 
-### Color Range
+### Цветовой диапазон
 
-The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+Цветовой диапазон аналогичен узлу **Remap Range** из упражнения [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention"): он повторно сопоставляет список чисел с другой областью. Однако вместо сопоставления с областью _чисел_ цветовой диапазон выполняет сопоставление с _цветовым градиентом_ в соответствии со входными значениями в диапазоне от 0 до 1.
 
-The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
+Текущий узел хорошо выполняет свои функции, но с ним может быть трудно добиться нужных результатов с первого раза. Чтобы уверенно работать с цветовым градиентом, стоит несколько раз опробовать его на практике в интерактивном режиме. Выполните небольшое упражнение, чтобы узнать, как настроить градиент, так чтобы цвета на выходе соответствовали заданным числам.
 
 ![](<../images/5-3/5/color - color range.jpg>)
 
-> 1. Define three colors: Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
-> 2. **Create list:** Merge the three colors into one list.
-> 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. **Code Block**: Input values (between 0 and 1) to translate to colors.
+> 1. Определите три цвета. С помощью узла **Code Block** определите _красный, зеленый_ и _синий_ цвета, назначив каждому из них соответствующие сочетания значений _0_ и _255_.
+> 2. **Создайте список.** Объедините три цвета в один список.
+> 3. Определите индексы. Создайте список для определения положения ручек каждого цвета (в диапазоне от 0 до 1). Обратите внимание, что для зеленого цвета задано значение 0,75. Это смещает зеленый цвет на 3/4 вдоль горизонтального градиента в регуляторе цветового диапазона.
+> 4. **Code Block**. Введите значения (от 0 до 1), которые будут преобразованы в цвета.
 
-### Color Preview
+### Образец цвета
 
-The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **Range** Node.
+Узел **Display.ByGeometry** позволяет раскрашивать геометрию на видовом экране Dynamo. Это позволяет наглядно показывать различные типы геометрии, демонстрировать параметрические концепции и задавать условные обозначения для расчета при моделировании.
+В качестве входных данных здесь требуются только геометрия и цвет. Для создания градиента, как на изображении выше, порт ввода **Color** соединяется с узлом **Range**.
 
 ![](<../images/5-3/5/color - color preview.jpg>)
 
-### Color On Surfaces
+### Цвет на поверхностях
 
-The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
+Узел **Display.BySurfaceColors** позволяет использовать цвет для сопоставления данных на поверхности. Это дает нам широкие возможности для визуализации данных, полученных с помощью таких типов дискретного анализа, как расчеты инсоляции и энергопотребления, а также анализ близости. Применение цвета к поверхности в Dynamo аналогично применению текстуры к материалу в других средах САПР. Выполните небольшое упражнение ниже, чтобы ознакомиться с этим инструментом.
 
 ![](<../images/5-3/5/12 (1).jpg>)
 
-## Exercise
+## Упражнение
 
-### Basic Helix with Colors
+### Базовая спираль с цветами
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
-This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
+В этом упражнении основное внимание уделяется параметрическому управлению цветом параллельно с геометрией. Геометрия — стандартная спираль, определение которой выполнено ниже с помощью узла **Code Block**. Это простой и быстрый способ создания параметрической функции. Так как в данном уроке рассматривается работа с цветом (а не с геометрией), то Code Block идеально подходит для быстрого создания спирали без загромождения рабочей области. Мы будем использовать Code Block все чаще и чаще по мере изучения более сложных процессов.
 
 ![](<../images/5-3/5/color - basic helix with colors 01.jpg>)
 
-> 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
-> 2. **Point.ByCoordinates**: Plug the three outputs from the code block into the coordinates for the Node.
+> 1. **Code Block:** создайте два узла Code Block, используя приведенные выше формулы. Это быстрый параметрический метод создания спирали.
+> 2. **Point.ByCoordinates**: соедините порты координат этого узла с тремя портами вывода узла Code Block.
 
-We now see an array of points creating a helix. The next step is to create a curve through the points so that we can visualize the helix.
+Отображается массив точек, которые образуют спираль. Далее необходимо создать кривую, проходящую через точки, чтобы получить изображение спирали.
+
 
 ![](<../images/5-3/5/color - basic helix with colors 02.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the **Point.ByCoordinates** output into the _points_ input for the Node. We get a helical curve.
-> 2. **Curve.PointAtParameter:** Connect the **PolyCurve.ByPoints** output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
-> 3. **Number Slider:** After adding to the canvas, change the _min_ value to _0.0_, the _max_ value to _1.0_, and the _step_ value to _.01_. Plug the slider output into the _param_ input for **Curve.PointAtParameter**. We now see a point along the length of the helix, represented by a percentage of the slider (0 at the start point, 1 at the end point).
+> 1. **PolyCurve.ByPoints:** соедините порт вывода **Point.ByCoordinates** с портом ввода _points_ этого узла. Отображается спиральная кривая.
+> 2. **Curve.PointAtParameter:** соедините порт вывода **PolyCurve.ByPoints** с портом ввода _curve_. Это требуется, чтобы создать параметрическую точку притяжения, которая перемещается вдоль кривой. Так как кривая вычисляет положение точки с помощью параметра, необходимо задать значение _param_ в диапазоне от 0 до 1.
+> 3. **Number Slider:** добавьте этот узел в рабочую область и измените значение _min_ на _0,0_, значение _max_ на _1_, а значение _step_ на _0,01_. Соедините порт вывода регулятора с портом ввода _param_ узла **Curve.PointAtParameter**. Появляется точка, которая перемещается вдоль спирали в соответствии с положением регулятора (0 — в начальной точке, 1 — в конечной).
 
-With the reference point created, we now compare the distance from the reference point to the original points defining the helix. This distance value will drive geometry as well as color.
+Создав опорную точку, мы можем сравнить расстояние от нее до исходных точек, определяющих геометрию спирали. Данное расстояние будет определять геометрию и цвет.
 
 ![](<../images/5-3/5/color - basic helix with colors 03.jpg>)
 
-> 1. **Geometry.DistanceTo:** Connect **Curve.PointAtParameter** output into the _input_. Connect **Point.ByCoordinates** into the geometry input.
-> 2. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
+> 1. **Geometry.DistanceTo:** соедините порт вывода узла **Curve.PointAtParameter** с портом _ввода_ этого узла. Соедините узел **Point.ByCoordinates** с входным параметром geometry.
+> 2. **Watch:** в результате мы получаем список значений расстояния от каждой точки спирали до опорной точки, перемещающейся вдоль кривой.
 
-Our next step is to drive parameters with the list of distances from the helical points to the reference point. We use these distance values to define the radii of a series of spheres along the curve. In order to keep the spheres a suitable size, we need to _remap_ the values for distance.
+Следующий шаг — определение параметров на основе списка расстояний между точками спирали и опорной точкой. Эти значения расстояний будут использованы для определения радиусов сфер, размещаемых вдоль кривой. Чтобы обеспечить подходящий размер сфер, необходимо _повторно сопоставить_ значения расстояния.
 
 ![](<../images/5-3/5/color - basic helix with colors 04.jpg>)
 
-> 1. **Math.RemapRange:** Connect **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
-> 3. **Watch:** connect the **Math.RemapRange** output into one node and the **Geometry.DistanceTo** output into another. Compare the results.
+> 1. **Math.RemapRange:** соедините порт вывода узла **Geometry.DistanceTo** с портом ввода numbers.
+> 2. **Code Block**: соедините узел Code Block со значением _0,01_ с портом ввода _newMin_, а узел Code Block со значением _1_ с портом ввода _newMax_.
+> 3. **Watch**: соедините порт вывода **Math.RemapRange** с одним узлом Watch, а порт вывода **Geometry.DistanceTo** — с другим. Сравните результаты.
 
-This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
+Выполнив этого шаг, мы получили повторно сопоставленный список расстояний меньшего диапазона. При необходимости можно задать другие значения _newMin_ и _newMax_. Новые значения будут повторно сопоставлены и будут иметь одинаковый _коэффициент распределения_ в пределах области.
 
 ![](<../images/5-3/5/color - basic helix with colors 05.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius:** connect the **Math.RemapRange** output into the _radius_ input and the original **Point.ByCoordinates** output into the _centerPoint_ input.
+> 1. **Sphere.ByCenterPointRadius:** соедините порт вывода узла **Math.RemapRange** с портом ввода _radius_, а порт вывода исходного узла **Point.ByCoordinates** — с портом ввода _centerPoint_.
 
-Change the value of the number slider and watch the size of the spheres update. We now have a parametric jig
+Измените значение числового регулятора и посмотрите, как при этом изменится размер сфер. Теперь у нас есть параметрический шаблон.
 
 ![](<../images/5-3/5/color - basic helix with colors 06.gif>)
 
-The size of the spheres demonstrates the parametric array defined by a reference point along the curve. Let's use the same concept for the sphere radius to drive their color.
+Размер сфер является представлением параметрического массива, определяемого опорной точкой, перемещающейся вдоль кривой. Применим эту же концепцию к радиусу сфер, чтобы определить их цвет.
 
 ![](<../images/5-3/5/color - basic helix with colors 07.jpg>)
 
-> 1. **Color Range:** Add top the canvas. When hovering over the _value_ input, we notice that the numbers requested are between 0 and 1. We need to remap the numbers from the **Geometry.DistanceTo** output so that they are compatible with this domain.
-> 2. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this node (_Right Click > Preview_)
+> 1. **Color Range:** добавьте в рабочую область этот узел. При наведении указателя мыши на порт ввода _value_ обратите внимание, что запрашиваемые числа находятся в диапазоне от 0 до 1. Необходимо повторно сопоставить числа, указанные для порта вывода узла **Geometry.DistanceTo**, чтобы они были совместимы с этой областью.
+> 2. **Sphere.ByCenterPointRadius**: временно отключите предварительный просмотр узла (_щелкните правой кнопкой мыши, а затем выберите «Предварительный просмотр»_).
 
 ![](<../images/5-3/5/color - basic helix with colors 08.jpg>)
 
-> 1. **Math.RemapRange:** This process should look familiar. Connect the **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
-> 3. **Color Range:** Connect the **Math.RemapRange** output into the _value_ input.
+> 1. **Math.RemapRange:** эта процедура должна быть вам уже знакома. Соедините порт вывода узла **Geometry.DistanceTo** с портом ввода numbers.
+> 2. **Code Block:** аналогично шагу выше задайте значение _0_ для порта ввода _newMin_ и значение _1_ для порта ввода _newMax_. Обратите внимание, что в данном случае мы задаем два порта вывода для одного узла Code Block.
+> 3. **Color Range:** соедините порт вывода узла **Math.RemapRange** с портом ввода _value_.
 
 ![](<../images/5-3/5/color - basic helix with colors 09.jpg>)
 
-> 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
-> 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two **Color.ByARGB** inputs in agreement with the image above (or create your favorite two colors).
-> 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for **Color Range**.
+> 1. **Color.ByARGB**: этот блок позволит нам создать два цвета. Хотя процесс может показаться не самым очевидным, по сути, это то же самое, что и работа с цветами RGB в другом программном обеспечении, просто здесь мы используем возможности визуального программирования.
+> 2. **Code Block:** создайте два значения: _0_ и _255_. Соедините два порта вывода с двумя портами ввода **Color.ByARGB** в соответствии с изображением выше (или создайте другие цвета на ваш выбор).
+> 3. **Color Range:** порт ввода _colors_ запрашивает список цветов. Необходимо создать этот список из двух цветов, заданных на предыдущем шаге.
+> 4. **List.Create:**: объедините два цвета в один список. Соедините порт вывода этого узла с портом ввода _colors_ узла **Color Range**.
 
 ![](<../images/5-3/5/color - basic helix with colors 10.jpg>)
 
-> 1. **Display.ByGeometryColor:** Connect **Sphere.ByCenterPointRadius** into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
+> 1. **Display.ByGeometryColor:** соедините узел **Sphere.ByCenterPointRadius** с портом ввода _geometry_, а узел _Color Range_ — с портом ввода _color_. К области кривой применяется мягкий цветовой градиент.
 
-If we change the value of the **Number Slider** from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
+Если изменить в определении значение узла **Number Slider**, который мы изучили ранее, то цвета и размеры геометрии будут обновлены. Цвета и размер радиуса в данном случае связаны напрямую, и теперь между этими двумя параметрами существует и визуальная связь.
 
 ![](<../images/5-3/5/color - basic helix with colors 11.gif>)
 
-### Color on Surfaces Exercise
+### Упражнение по работе с цветом на поверхностях
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
+Сначала необходимо создать поверхность (или выбрать существующую поверхность в качестве опорной) для использования в качестве входных данных узла **Display.BySurfaceColors**. В этом примере поверхность образуется путем лофтинга между синусоидой и косинусоидой.
 
 ![](<../images/5-3/5/color - color on surface 01.jpg>)
 
-> 1. This group of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
-> 2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
+> 1. Эта группа узлов выполняет создание точек вдоль оси Z с последующим смещением в соответствии с функциями синуса и косинуса. Два полученных списка точек затем используются для создания NURBS-кривых.
+> 2. **Surface.ByLoft**: сформируйте интерполированную поверхность между NURBS-кривыми из списка.
 
 ![](<../images/5-3/5/color - color on surface 02.jpg>)
 
-> 1. **File Path**: select an image file to sample for pixel data downstream
-> 2. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
-> 3. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
-> 4. **Slider**: provide sample values for **Image.Pixels**
-> 5. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
+> 1. **File Path**: выберите файл изображения, который будет использоваться в качестве образца для пиксельных данных на последующих этапах.
+> 2. Используйте узел **File.FromPath**, чтобы преобразовать путь к файлу в файл, а затем передайте этот файл в узел **Image.ReadFromFile**, чтобы вывести изображение для использования в качестве образца.
+> 3. **Image.Pixels**: используйте изображение в качестве входных данных и введите значение количества образцов, получаемых вдоль осей X и Y изображения.
+> 4. **Регуляторы**: задайте значения количества образцов для узла **Image.Pixels**.
+> 5. **Display.BySurfaceColors**: сопоставьте массив значений цветов на поверхности со значениями по осями X и Y соответственно.
 
-Close-up preview of the output surface with resolution of 400x300 samples
+Приближенная предварительная версия итоговой поверхности с разрешением 400 x 300.
 
 ![](<../images/5-3/5/color - color on surface 03.jpg>)

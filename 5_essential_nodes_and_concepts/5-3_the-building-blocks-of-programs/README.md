@@ -1,5 +1,5 @@
-# The Building Blocks of Programs
+# Компоновочные блоки программ
 
-Once we are ready to dive deeper into developing Visual Programs, we will need a deeper understanding of the building blocks we will use. This chapter introduces fundamental concepts around data - the stuff that travels through the Wires of our Dynamo program.
+Чтобы углубиться в процесс разработки визуальных программ, нам потребуется более тонкое понимание того, что представляют собой компоновочные блоки программ. В этой главе описываются основные понятия, относящиеся к данным, проходящим по проводам программ Dynamo.
 
 ![](<../images/5-3/building blocks of program.png>)

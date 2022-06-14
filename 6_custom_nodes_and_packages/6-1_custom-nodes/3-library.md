@@ -1,57 +1,57 @@
-# Publishing to Your Library
+# Публикация узлов в библиотеку
 
-We've just created a custom node and applied it to a specific process in our Dynamo graph. And we like this node so much, we want to keep it in our Dynamo library to reference in other graphs. To do this, we'll publish the node locally. This is a similar process to publishing a package, which we'll walk through in more detail in the next chapter.
+Вы создали пользовательский узел и применили его к определенному процессу на графике Dynamo. Это очень полезный узел, поэтому его надо сохранить в библиотеке Dynamo для использования в других графиках. Для этого нужно опубликовать узел локально. Этот процесс аналогичен публикации пакета, который будет рассмотрен подробнее в следующей главе.
 
-By publishing a node locally, the node will be accessible in your Dynamo library when you open a new session. Without publishing a node, a Dynamo graph which references a custom node must also have that custom node in its folder (or the custom node must be imported into Dynamo using _File>Import Library_).
+Узел, опубликованный локально, станет доступен в библиотеке Dynamo после запуска нового сеанса. Если пользовательский узел не опубликован, его необходимо разместить в папке графика Dynamo, ссылающегося на этот узел (либо этот узел нужно импортировать в Dynamo с помощью меню _Файл > Импорт библиотеки_).
 
 {% hint style="warning" %}
-Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
+Публикация пользовательского узла включена только в Dynamo для Revit и Dynamo для Civil 3D. В Dynamo Sandbox функция публикации отсутствует.
 {% endhint %}
 
-## Exercise: Publishing a Custom Node Locally
+## Упражнение «Локальная публикация пользовательского узла»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
 
-Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
+Продолжайте работу с пользовательским узлом, созданным в предыдущем разделе. После открытия пользовательского узла PointsToSurface график отображается в редакторе пользовательских узлов Dynamo. Пользовательский узел также можно открыть, дважды щелкнув его в редакторе графика Dynamo.
 
 ![](<../images/6-1/3/publish custom node locally 01.jpg>)
 
-To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
+Чтобы опубликовать пользовательский узел локально, щелкните правой кнопкой мыши в рабочей области и выберите _Опубликовать данный пользовательский узел..._
 
 ![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
 
-Fill out the relevant information similar to the image above and select _"Publish Locally"._. Note that the Group field defines the main element accessible from the Dynamo menu.
+Укажите все необходимые сведения, как показано на изображении выше, и выберите _Опубликовать локально_. Обратите внимание, что в поле «Группа» задается основной элемент, который будет доступен в меню Dynamo.
 
 ![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
 
-Choose a folder to house all of the custom nodes that you plan on publishing locally. Dynamo will check this folder each time it loads, so make sure the folder is in a permanent place. Navigate to this folder and choose _"Select Folder"._ Your Dynamo node is now published locally, and will remain in your Dynamo Toolbar each time you load the program!
+Выберите папку для хранения всех пользовательских узлов, которые планируется опубликовать локально. Приложение Dynamo будет проверять эту папку каждый раз при загрузке, поэтому она должна находиться в постоянном расположении. Перейдите к этой папке и нажмите _Выбрать папку_. Пользовательский узел Dynamo публикуется локально и теперь будет отображаться на панели инструментов Dynamo при каждой загрузке программы.
 
 ![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
 
-To check on the custom node folder location, go to _Dynamo > Preferences > Package Manager > Node and Package Paths_
+Чтобы проверить расположение папки пользовательского узла, откройте меню _Dynamo > Настройки > Package Manager > Пути к узлу и пакету_.
 
 ![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
 
-In this window we see a list of paths.
+В этом окне отображается список путей.
 
 ![](<../images/6-1/3/publish custom node exercise - 06.jpg>)
 
-> 1. _Documents\DynamoCustomNodes..._ refers to the location of custom nodes we've published locally.
-> 2. _AppData\Roaming\Dynamo..._ refers to the default location of Dynamo Packages installed online.
-> 3. You may want to move your local folder path down in the list order above (by selecting the folder path and clicking on the down arrow to the left of the path names). The top folder is the default path for package installs. So by keeping the default Dynamo package install path as the default folder, online packages will be separated from your locally published nodes.
+> 1. _Documents\DynamoCustomNodes..._ — расположение пользовательских узлов, которые были опубликованы локально.
+> 2. _AppData\Roaming\Dynamo..._ — путь по умолчанию к пакетам Dynamo, установленным из интернета.
+> 3. Рекомендуется переместить путь к локальной папке вниз по списку (для этого выберите путь к папке и щелкните стрелку вниз на панели слева от строк с путями). Верхняя папка всегда по умолчанию используется как расположение для установки пакетов. Поэтому если в качестве верхней папки будет указан путь для установки пакетов Dynamo, все полученные через интернет пакеты будут храниться отдельно от узлов, опубликованных локально
 
-We switched the order of the path names in order to have Dynamo's default path as the package install location.
+Порядок путей к папкам изменен, чтобы в качестве пути по умолчанию в Dynamo использовалась папка установки пакетов.
 
 ![](<../images/6-1/3/publish custom node exercise - 07.jpg>)
 
-Navigating to this local folder, we can find the original custom node in the _".dyf"_ folder, which is the extension for a Dynamo Custom Node file. We can edit the file in this folder and the node will update in the UI. We can also add more nodes to the main _DynamoCustomNode_ folder and Dynamo will add them to your library at restart!
+Перейдите в эту локальную папку. Исходный пользовательский узел находится в папке _dyf_, имя которой является расширением для файлов пользовательских узлов Dynamo. Если отредактировать файл в этой папке, соответствующий узел будет обновлен в пользовательском интерфейсе. Кроме того, можно добавить дополнительные узлы в главную папку _DynamoCustomNode_, и после перезапуска Dynamo они появятся в библиотеке.
 
 ![](<../images/6-1/3/publish custom node exercise - 08.jpg>)
 
-Dynamo will now load each time with "PointsToSurface" in the "DynamoPrimer" group of your Dynamo library.
+Теперь при каждой загрузке Dynamo узел PointsToSurface будет отображаться в группе DynamoPrimer библиотеки Dynamo.
 
 ![](<../images/6-1/3/publish custom node exercise - 09.jpg>)

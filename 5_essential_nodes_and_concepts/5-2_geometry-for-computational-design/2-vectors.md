@@ -1,93 +1,93 @@
-# Vector, Plane & Coordinate System
+# Вектор, плоскость и система координат
 
-## Vector, Plane & Coordinates System in Dynamo
+## Вектор, плоскость и система координат в Dynamo
 
-### Vector
+### Работа с векторами
 
-[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+[Вектор](5-2\_vectors.md#vector-1) — это представление величины и направления. Его можно изобразить как стрелку, которая движется в определенном направлении на заданной скорости. Векторы являются ключевым компонентом при разработке моделей в Dynamo. Обратите внимание, что поскольку они относятся к категории вспомогательных средств, то при создании они не отображаются в области фонового просмотра.
 
 ![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
 
-> 1. We can use a line as a stand in for a Vector preview.
+> 1. В качестве замены вектору в области предварительного просмотра можно использовать отрезок.
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-### Plane
+### Плоскость
 
-[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+[Плоскость](5-2\_vectors.md#plane-1) — это двухмерная поверхность, которую можно представить как бесконечную плоскую поверхность. Каждая плоскость имеет начало координат и направления по осям X, Y и Z (вверх).
 
 ![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
 
-> 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
-> 2. In Dynamo, Planes are rendered in the Background Preview.
+> 1. Хотя плоскости являются абстрактными, они имеют исходную точку, что позволяет определить их положение в пространстве.
+> 2. В Dynamo плоскости визуализируются в области фонового просмотра.
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-### Coordinate System
+### Система координат
 
-[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+[Система координат](5-2\_vectors.md#coordinate-system-1) — это система для определения местоположения точек и других геометрических элементов. На изображении ниже показано, как это выглядит в Dynamo и что представляет каждый цвет.
 
 ![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
 
-> 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
+> 1. Хотя системы координат являются абстрактными, они имеют исходную точку, что позволяет определить их положение в пространстве.
+> 2. В Dynamo системы координат визуализируются в области фонового просмотра в виде точки (начало координат) и линий, определяющих оси (согласно принятым нормам, ось X обозначается красным цветом, Y — зеленым, а Z — синим).
 
-> Download the example file by clicking on the link below.
+> Скачайте файл примера, щелкнув указанную ниже ссылку.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов примеров можно найти в приложении.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Deep Dive into...
+## Углубленное изучение
 
-Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
+Векторы, плоскости и системы координат составляют основную группу абстрактных типов геометрии. Они помогают задавать расположение, ориентацию и пространственный контекст для других геометрических объектов, определяющих формы. Представим себе человека, который находится в Нью-Йорке на пересечении 42-й улицы и Бродвея (система координат), стоит на тротуаре (плоскость) и смотрит на север (вектор). Мы только что описали местонахождение человека с помощью вспомогательных абстрактных средств. Таким же образом можно задать местонахождение любого объекта, от чехла телефона до небоскреба. Это контекст, необходимый для разработки любой модели.
 
-![Vectors, Planes, and Coordinates](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![Векторы, плоскости и координаты](../images/5-2/2/VectorsPlanesCoodinates.jpg)
 
-### Vector
+### Работа с векторами
 
-A vector is a geometric quantity describing Direction and Magnitude. Vectors are abstract; ie. they represent a quantity, not a geometrical element. Vectors can be easily confused with Points because they both are composed of a list of values. There is a key difference though: Points describe a position in a given coordinate system while Vectors describe a relative difference in position which is the same as saying "direction."
+Вектор — это геометрическая величина, описывающая направление и длину. Векторы абстрактны, то есть они представляют собой некоторую величину, а не геометрический элемент. Векторы легко спутать с точками, поскольку они также состоят из списка значений. Однако существует одно важное отличие: точки описывают положение в заданной системе координат, а векторы описывают относительную разницу в положении, что аналогично понятию направления.
 
-![Vector Details](../images/5-2/2/Vector-Detailed.jpg)
+![Подробнее о векторах](../images/5-2/2/Vector-Detailed.jpg)
 
-If the idea of relative difference is confusing, think of the Vector AB as "I'm standing at Point A, looking toward Point B." The direction, from here (A) to there (B), is our Vector.
+Если идея относительной разницы не вполне ясна, представьте, что вектор AB означает следующее: вы стоите в точке A и смотрите в точку B. Направление от одной точки (A) до другой (B) и будет вектором.
 
-Breaking down Vectors further into their parts using the same AB notation:
+Рассмотрим подробнее структуру вектором на примере вектора AB.
 
-![Vector](../images/5-2/2/Vector.jpg)
+![Вектор](../images/5-2/2/Vector.jpg)
 
-> 1. The **Start Point** of the Vector is called the **Base**.
-> 2. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
-> 3. Vector AB is not the same as Vector BA - that would point in the opposite direction.
+> 1. **Начальная точка** вектора называется его **началом**.
+> 2. \*\*Конечная точка\*\* вектора называется его **концом** или **направлением**.
+> 3. Вектор AB и вектор BA — это два разных вектора, поскольку они указывают в противоположных направлениях.
 
-If you're ever in need of comic relief regarding Vectors (and their abstract definition), watch the classic comedy Airplane and listen for the oft-quoted tongue-in cheek line:
+Чтобы отдохнуть от слишком формальных и абстрактных определений вектора и посмеяться, посмотрите классическую комедию «Аэроплан!» (Airplane!), где есть следующая знаменитая цитата:
 
-> _Roger, Roger. What's our vector, Victor?_
+> _Roger, Roger. What's our vector, Victor? (Роджер, Роджер. Каков наш вектор, Виктор?)_
 
-### Plane
+### Плоскость
 
-Planes are two-dimensional abstract "Helpers." More specifically, Planes are conceptually “flat,” extending infinitely in two directions. Usually they are rendered as a smaller rectangle near their origin.
+Плоскости являются двумерной абстрактной вспомогательной геометрией. Плоскости по определению являются «плоскими» и бесконечно расширяются в двух направлениях. Обычно они визуализируются в виде небольшого прямоугольника в начале координат.
 
-![Plane](../images/5-2/2/Plane.jpg)
+![Плоскость](../images/5-2/2/Plane.jpg)
 
-You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
+Но постойте, скажете вы. Начало координат? Как в системе координат, которая используется для моделирования в САПР?
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
+Совершенно верно. В большинстве программ моделирования используются плоскости построения, или «уровни», с помощью которых определяется локальный двумерный контекст для создания черновиков чертежей. XY, XZ, YZ или, возможно, более знакомые вам «север», «юго-восток», «план» — все это плоскости, определяющие бесконечный «плоский» контекст. Плоскости не имеют глубины, но они помогают описать направление.
 
-### Coordinate System
+### Система координат
 
-If we are comfortable with Planes, we are a small step away from understanding Coordinate Systems. A Plane has all the same parts as a Coordinate System, provided it is a standard "Euclidean" or "XYZ" Coordinate System.
+Если мы с вами освоили плоскости, то разобраться с системами координат нам не составит труда. Плоскость состоит из тех же компонентов, что и система координат, при условии что это стандартная евклидова система координат или система координат XYZ.
 
-There are other, however, alternative Coordinate Systems such as Cylindrical or Spherical. As we will see in later sections, Coordinate Systems can also be applied to other Geometry types to define a position on that geometry.
+Однако имеются и другие альтернативные системы координат, например цилиндрические или сферические. Как будет показано в следующих разделах, системы координат можно также применять к другим типам геометрии для указания положения в пределах этой геометрии.
 
-![Coordinate System](../images/5-2/2/CoordinateSystem.jpg)
+![Система координат](../images/5-2/2/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical
+> Можно добавить альтернативные системы координат — цилиндрические и сферические.

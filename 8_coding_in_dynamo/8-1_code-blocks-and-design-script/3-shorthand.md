@@ -1,145 +1,145 @@
-# Shorthand
+# Сокращение
 
-### Shorthand
+### Сокращение
 
-There are a few basic shorthand methods in the code block which, simply put, make data management _a lot_ easier. We'll break down the basics below and discuss how this shorthand can be used both for creating and querying data.
+Существует несколько основных способов сокращенной записи команд в блоке кода, что _существенно_ упрощает управление данными. Далее мы подробно рассмотрим, как использовать подобные сокращенные записи для создания и запроса данных.
 
-| **Data Type**          | **Standard Dynamo**                                      | **Code Block Equilvalent**                                    |
+| **Тип данных** | **Стандартный код Dynamo** | **Аналог в блоке кода** |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Numbers                | ![](<../images/8-1/3/01 node - numbers.jpg>)       | ![](<../images/8-1/3/01 codeblock - numbers.jpg>)       |
-| Strings                | ![](<../images/8-1/3/02 node - string.jpg>)        | ![](<../images/8-1/3/02 codeblock- string.jpg>)         |
-| Sequences              | ![](<../images/8-1/3/03 node- sequence.jpg>)       | ![](<../images/8-1/3/03 codeblock- sequence.jpg>)       |
-| Ranges                 | ![](<../images/8-1/3/04 node- range.jpg>)          | ![](<../images/8-1/3/04 codeblock - range.jpg>)         |
-| Get Item at Index      | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../images/8-1/3/06 node - list create.jpg>)   | ![](<../images/8-1/3/06 codeblock - list create.jpg>)   |
-| Concatenate Strings    | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
-| Conditional Statements | ![](<../images/8-1/3/08 node - conditional.jpg>)   | ![](<../images/8-1/3/08 codeblock - conditional.jpg>)   |
+| Цифры | ![](<../images/8-1/3/01 node - numbers.jpg>) | ![](<../images/8-1/3/01 codeblock - numbers.jpg>) |
+| Строки | ![](<../images/8-1/3/02 node - string.jpg>) | ![](<../images/8-1/3/02 codeblock- string.jpg>) |
+| Последовательности | ![](<../images/8-1/3/03 node- sequence.jpg>) | ![](<../images/8-1/3/03 codeblock- sequence.jpg>) |
+| Диапазоны | ![](<../images/8-1/3/04 node- range.jpg>) | ![](<../images/8-1/3/04 codeblock - range.jpg>) |
+| Получение элемента по индексу | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
+| Создание списка | ![](<../images/8-1/3/06 node - list create.jpg>) | ![](<../images/8-1/3/06 codeblock - list create.jpg>) |
+| Объединение строк | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
+| Условные выражения | ![](<../images/8-1/3/08 node - conditional.jpg>) | ![](<../images/8-1/3/08 codeblock - conditional.jpg>) |
 
-### Additional Syntax
+### Дополнительный синтаксис
 
 |                                     |                           |                                                                                          |
 | ----------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------- |
-| **Node(s)**                         | **Code Block Equivalent** | **Note**                                                                                 |
-| Any operator (+, &&, >=, Not, etc.) | +, &&, >=, !, etc.        | Note that “Not” becomes “!” but the node is called “Not” to distinguish from “Factorial” |
-| Boolean True                        | true;                     | Note lower case                                                                          |
-| Boolean False                       | false;                    | Note lower case                                                                          |
+| **Узлы** | **Аналог в блоке кода** | **Примечание** |
+| Любой оператор (+, &&, >=, Not и т. д.) | +, &&, >=, ! и т. д. | Обратите внимание, что Not заменяется на «!», однако узел называется Not для отличия от Factorial. |
+| Boolean True | true; | Все в нижнем регистре |
+| Boolean False | false; | Все в нижнем регистре |
 
-### Ranges and Sequences
+### Диапазоны и последовательности
 
-The method for defining ranges and sequences can be reduced to basic shorthand. Use the image below as a guide to the ".." syntax for defining a list of numerical data with code block. After getting the hang of this notation, creating numerical data is a really efficient process:
+Метод определения диапазонов и последовательностей можно заменить обычной сокращенной записью. Приведенное ниже изображение можно рассматривать как руководство по использованию синтаксиса «..» для определения списка числовых данных с помощью блока кода. Освоение этой системы записи позволит более эффективно формировать числовые данные.
 
 ![](<../images/8-1/3/shorthand - ranges and sequences.jpg>)
 
-> 1. In this example, a number range is replaced by basic **Code Block** syntax defining the `beginning..end..step-size;` . Represented numerically, we get: `0..10..1;`
-> 2. Notice that the syntax `0..10..1;` is equivalent to `0..10;` A step-size of 1 is the default value for the shorthand notation. So `0..10;` will give a sequence from 0 to 10 with a step-size of 1.
-> 3. The _Sequence_ example is similar, except we use a "#" to state that we want 15 values in the list, rather than a list which goes up to 15. In this case, we are defining: `beginning..#ofSteps..step-size:` The actual syntax for the sequence is `0..#15..2`
-> 4. Using the _"#"_ from the previous step, we now place it in the _"step-size"_ portion of the syntax. Now, we have a _number range_ spanning from the _"beginning"_ to the _"end"_ and the _"step-size"_ notation evenly distributes a number of values between the two: `beginning..end..#ofSteps`
+> 1. В этом примере числовой диапазон заменяется элементарной синтаксической конструкцией узла **Code Block**, определяющей `beginning..end..step-size;`. В числовом выражении получаем `0..10..1;`.
+> 2. Обратите внимание, что синтаксис `0..10..1;` эквивалентен синтаксису `0..10;`. Значение шага 1 является значением по умолчанию для сокращенного обозначения. Таким образом, значение `0..10;` соответствует последовательности от 0 до 10 с шагом 1.
+> 3. Похожий пример наблюдаем с узлом _Sequence_. Единственное исключение — знак #, указывающий на список из 15 значений, а не на список с увеличением до 15. В данном случае мы определяем `beginning..#ofSteps..step-size:`. Фактический синтаксис для последовательности: `0..#15..2`.
+> 4. Разместим символ _#_ из предыдущего шага в компоненте _размер шага_ синтаксической конструкции. Теперь есть _диапазон чисел_, идущий от _начала_ к _концу_, а _размер шага_ равномерно распределяет несколько значений между этими двумя точками: `beginning..end..#ofSteps`.
 
-### Advanced Ranges
+### Дополнительные диапазоны
 
-Creating advanced ranges allows us to work with list of lists in a simple fashion. In the examples below, we're isolating a variable from the primary range notation, and creating another range of that list.
+Создание дополнительных диапазонов упрощает работу со списками списков. В примерах ниже переменная изолируется от обозначений основного диапазона и создается другой диапазон этого списка.
 
 ![](<../images/8-1/3/shorthand - advance range 01.jpg>)
 
-> 1\. Creating nested ranges, compare the notation with a "#" vs. the notation without. The same logic applies as in basic ranges, except it gets a little more complex.
+> 1\. При создании вложенных диапазонов сравните запись с символом # и без него. Действует тот же принцип, что и в случае с основными диапазонами, но в усложненном варианте.
 >
-> 2\. We can define a sub-range at any place within the primary range, and notice that we can have two sub-ranges as well.
+> 2\. Вложенный диапазон может находиться в любом месте основного диапазона. Обратите внимание на возможность наличия двух вложенных диапазонов.
 >
-> 3\. By controlling the "end" value in a range, we create more ranges of differing lengths.
+> 3\. Используя различные значения конца диапазона, можно создавать дополнительные диапазоны с различной длиной.
 
-As a logic exercise, compare the two shorthands above and try to parse through how _subranges_ and the _#_ notation drive the resultant output.
+В качестве упражнения сравните две сокращенные записи на изображении выше и попытайтесь проанализировать, как _вложенные диапазоны_ и символ _#_ влияют на конечный результат.
 
 ![](<../images/8-1/3/shorthand - advance range 02.jpg>)
 
-### Make Lists and Get Items From a List
+### Создание списков и получение элементов из списка
 
-In addition to making lists with shorthand, we can also create lists on the fly. These list can contain a wide range of element types and can also be queried (remember, lists are objects in themselves). To summarize, with code block you make lists and query items from a list with brackets (a.k.a. “square brackets”):
+С помощью сокращений можно не только создавать списки, но и делать это динамически. Эти списки могут содержать множество типов элементов и поддерживают запросы (помните, что списки — это объекты в объектах). Наконец, в узле Code Block для создания списков используются фигурные скобки, а для запроса элементов из списка — квадратные скобки.
 
 ![](<../images/8-1/3/shorthand - list & get from list 01.jpg>)
 
-> 1\. Create lists quickly with strings and query them using the item index.
+> 1\. Быстрое создание списков с помощью строк и запрос содержимого списков с помощью индекса элементов.
 >
-> 2\. Create lists with variables and query using the range shorthand notation.
+> 2\. Создание списков с переменными и запрос содержимого с помощью сокращенной записи диапазонов.
 
-And managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
+Аналогичным образом можно работать с вложенными списками. Учитывайте порядок расположения списков, а для вызова используйте несколько наборов квадратных скобок:
 
 ![](<../images/8-1/3/shorthand - list & get from list 02.jpg>)
 
-> 1\. Define a list of lists.
+> 1\. Определение списка списков.
 >
-> 2\. Query a list with single bracket notation.
+> 2\. Запрос содержимого списка с помощью одного набора квадратных скобок.
 >
-> 3\. Query an item with double bracket notation.
+> 3\. Запрос содержимого списка с помощью двух наборов квадратных скобок.
 
-## Exercise: Sine Surface
+## Упражнение «Синусоидальная поверхность»
 
-> Download the example file by clicking on the link below.
+> Скачайте файл с примером, щелкнув ссылку ниже.
 >
-> A full list of example files can be found in the Appendix.
+> Полный список файлов с примерами можно найти в приложении.
 
 {% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code block and existing Dynamo nodes in tandem: we use the code block for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
+В этом упражнении мы применим навыки сокращенной записи для создания оригинальной яйцевидной поверхности, которая будет определяться диапазонами и формулами. При выполнении упражнения обратите внимание на одновременное использование блока кода и существующих узлов Dynamo. Блок кода используется для обработки больших данных, а узлы Dynamo для наглядности.
 
-Start by creating a surface by connecting the nodes above. Instead of using a number node to define width and length, double click on the canvas and type `100;` into a code block
+Начните с создания поверхности путем соединения узлов, представленных на изображении выше. Вместо использования узла Number для определения ширины и длины поверхности дважды щелкните в рабочей области и в узле Code Block введите `100;`.
 
 ![](<../images/8-1/3/shorthand - exercise 01.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 02.jpg>)
 
-> 1. Define a range between 0 and 1 with 50 divisions by typing `0..1..#50` into a **Code Block**.
-> 2. Connect the range into **Surface.PointAtParameter**, which takes u and v values between 0 and 1 across the surface. Remember to change the Lacing to Cross Product by right clicking on the **Surface.PointAtParameter** node.
+> 1. Создайте диапазон от 0 до 1 с 50 делениями. Для этого введите `0..1..#50` в узле **Code Block**.
+> 2. Соедините диапазон с узлом **Surface.PointAtParameter**, который извлекает значения u и v в диапазоне от 0 до 1 по всей поверхности. Не забудьте в качестве режима «Переплетение» выбрать «Векторное произведение», щелкнув правой кнопкой мыши узел **Surface.PointAtParameter**.
 
-In this step, we employ our first function to move the grid of points up in the Z. This grid will drive a generated surface based on the underlying function. Add new nodes as shown in image below
+На этом этапе с помощью первой функции переместим сетку точек вверх по оси Z. Эта сетка будет управлять поверхностью на основе базовой функции. Добавьте новые узлы, как показано на изображении ниже.
 
 ![](<../images/8-1/3/shorthand - exercise 03.jpg>)
 
-> 1. Rather than using a formula node, we use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
+> 1. Вместо узла Formula используйте узел **Code Block** и укажите в нем следующую строку: `(0..Math.Sin(x*360)..#50)*5;`. Для быстроты мы определяем диапазон с помощью формулы внутри него. Эта формула представляет собой функцию синуса. Функция синуса получает входные данные в градусах в Dynamo, поэтому для получения полной синусоиды необходимо умножить значения x (диапазон входных значений от 0 до 1) на 360. Далее необходимо получить количество делений, соответствующее количеству точек управляющей сетки для каждого ряда, поэтому зададим пятьдесят подразделов, введя #50. Наконец, с помощью множителя 5 просто увеличим амплитуду преобразования, чтобы увидеть результат в области предварительного просмотра Dynamo.
 
 ![](<../images/8-1/3/shorthand - exercise 04.jpg>)
 
-> 1. While the previous **Code Block** worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
+> 1. Несмотря на то что предыдущие узлы **Code Block** работали нормально, процесс не был полностью параметрическим. Поскольку необходимо динамически изменять его параметры, замените строку из предыдущего шага на `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. Это позволит задавать значения на основе входных данных.
 
-By changing the sliders (ranging from 0 to 10), we get some interesting results.
+Изменим положение регуляторов (в диапазоне от 0 до 10) и получим интересный результат.
 
 ![](<../images/8-1/3/shorthand - exercise 05.gif>)
 
 ![](<../images/8-1/3/shorthand - exercise 06.jpg>)
 
-> 1. By doing a transpose on the number range, we reverse the direction of the curtain wave: `transposeList = List.Transpose(sineList);`
+> 1. Транспонируйте диапазон чисел, чтобы обратить направление волны: `transposeList = List.Transpose(sineList);`.
 
 ![](<../images/8-1/3/shorthand - exercise 07.jpg>)
 
-> 1. We get a distorted eggshell surface when we add the sineList and the tranposeList: `eggShellList = sineList+transposeList;`
+> 1. Добавьте элементы sineList и tranposeList, чтобы получить деформированную яйцевидную поверхность: `eggShellList = sineList+transposeList;`.
 
-Let's change the sliders values specified below to 'calm the waters' of this algorithm.
+Измените значения регуляторов, указанные ниже, чтобы «усреднить значения» алгоритма.
 
 ![](<../images/8-1/3/shorthand - exercise 08.jpg>)
 
-Last, let's query isolated parts of the data with the Code Block. To regenerate the surface with a specific range of points, add the code block above between the **Geometry.Translate** and **NurbsSurface.ByPoints** node. This has the line of text: `sineStrips[0..15..1];`. This will select the first 16 rows of points (out of 50). Recreating the surface, we can see that we've generated an isolated portion of the grid of points.
+Осталось запросить отдельные элементы данных с помощью узла Code Block. Чтобы сформировать поверхность с определенным диапазоном точек, добавим блок кода, который показан на изображении выше, между узлами **Geometry.Translate** и **NurbsSurface.ByPoints**. В нем содержится строка текста: `sineStrips[0..15..1];`. С помощью нее будут выбраны первые 16 рядов точек (из 50). Если снова сгенерировать поверхность, можно увидеть, что была создана отдельная часть сетки точек.
 
 ![](<../images/8-1/3/shorthand - exercise 09.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 10.jpg>)
 
-> 1. In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
+> 1. Наконец, чтобы сделать узел **Code Block** более параметрическим, для запроса используйте регулятор с диапазоном от 0 до 1. Для этого примените следующую строку кода: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. Для большей ясности — данная строка кода позволяет представить длину списка в виде множителя с диапазоном от 0 до 1.
 
-A value of `0.53` on the slider creates a surface just past the midpoint of the grid.
+Значение `0.53` регулятора позволяет создать поверхность сразу за центром сетки.
 
 ![](<../images/8-1/3/shorthand - exercise 11.jpg>)
 
-And as expected, a slider of `1` creates a surface from the full grid of points.
+Как и ожидалось, если с помощью регулятора указать значение `1`, поверхность будет создана из всей сетки точек.
 
 ![](<../images/8-1/3/shorthand - exercise 12.jpg>)
 
-Looking at the visual graph, we can highlight the code blocks and see each of their functions.
+На полученном графике можно выделить узлы Code Block и увидеть их функции.
 
 ![](<../images/8-1/3/shorthand - exercise 13.jpg>)
 
-> 1\. The first **Code Block** replaces the **Number** node.
+> 1\. Первый **Code Block** заменяет узел **Number**.
 >
-> 2\. The second **Code Block** replaces the **Number Range** node.
+> 2\. Второй **Code Block** заменяет узел **Number Range**.
 >
-> 3\. The third **Code Block** replaces the **Formula** node (as well as **List.Transpose**, **List.Count** and **Number Range**).
+> 3\. Третий **Code Block** заменяет узел **Formula** (а также узлы **List.Transpose**, **List.Count** и **Number Range**).
 >
-> 4\. The fourth **Code Block** queries a list of lists, replacing the **List.GetItemAtIndex** node.
+> 4\. Четвертый **Code Block** запрашивает элементы в списке списков, заменяя узел **List.GetItemAtIndex**.

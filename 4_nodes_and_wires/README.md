@@ -1,126 +1,126 @@
-# Nodes and Wires
+# Узлы и провода
 
-## Nodes
+## Узлы
 
-In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each **Node** performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.
+**Узлы** Dynamo — это объекты, путем соединения которых создается визуальная программа. Каждый **узел** выполняет ту или иную операцию. Это может быть как простая операция, например хранение числа, так и более сложная, например создание или запрос геометрического объекта.
 
-### Anatomy of a Node
+### Структура узла
 
-Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
+Большинство узлов Dynamo состоит из пяти частей. За некоторыми исключениями (например, входные узлы) узлы в большинстве своем устроены следующим образом.
 
 ![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
-> 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
-> 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
+> 1. Имя: имя узла, составленное по шаблону `Category.Name`.
+> 2. Основная часть узла: если щелкнуть ее правой кнопкой мыши, отобразятся параметры, действующие на уровне узла.
+> 3. Порты (ввода и вывода): разъемы для проводов, передающих входные данные для узла, а также результаты выполненной узлом операции.
+> 4. Значение по умолчанию: щелкните порт ввода правой кнопкой мыши. Для некоторых узлов заданы значения по умолчанию, которые можно использовать или игнорировать.
+> 5. Значок переплетения: значение [параметра «Переплетение»](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing), заданное для совпадающих входных данных списка (подробные сведения см. далее).
 
-### Nodes Input/Output Ports
+### Порты ввода/вывода узлов
 
-The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.
+Порты — это вводы и выводы узлов, играющие роль разъемов для проводов. В порты, расположенные слева, поступают входящие данные, а из портов, расположенных справа, передаются далее результаты выполненной операции.
 
-Ports expect to receive data of a certain type. For instance, connecting a number such as _2.75_ to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply _"Red"_ to the same Port it will result in an error.
+Каждый порт рассчитан на прием данных определенного типа. Если соединить с портами узла Point.ByCoordinates число, например _2.75_, то операция выполнится успешно и будет создана точка. Но если вместо числа соединить с тем же портом, например, текстовое значение _Red_, это приведет к ошибке.
 
 {% hint style="info" %}
-Tip: Hover over a Port to see a tooltip containing the data type expected.
+Совет. Наведите указатель на порт, чтобы увидеть подсказку о требуемом типе данных.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
-> 1. Port Label
-> 2. Tool Tip
-> 3. Data Type
-> 4. Default Value
+> 1. Метка порта
+> 2. Подсказка
+> 3. Тип данных
+> 4. Значение по умолчанию
 
-### Node States
+### Состояния узла
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
+Для демонстрации состояния выполнения операций в узлах визуальной программы в Dynamo используются разные цвета. Иерархия состояний определяется следующим образом: ошибка > предупреждение > информация > просмотр.
 
-Hovering or right-clicking over the Name or Ports presents additional information and options.
+Кроме того, наведя указатель на имя узла или его порты либо щелкнув их правой кнопкой мыши, можно просмотреть дополнительные сведения и параметры.
 
 ![](<images/nodes and wires - node states.jpg>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 1. Активный: если узлы правильно подключены и в них поступают входные данные нужного типа, то их имя отображается на темно-сером фоне.
+> 2. Ошибка: красный цвет строки состояния под узлом указывает на то, что произошла ошибка узла.
+> 3. Замороженный: если узел заморожен, выполнение его операции приостанавливается, и он становится прозрачным.
+> 4. Фоновый просмотр: серый цвет строки состояния под узлом и значок глаза ![](<images/nodes and wires - preview off.jpg>) указывают на то, что предварительный просмотр геометрии отключен.
+> 5. Выбранный: выбранный узел выделяется голубой рамкой.
+> 6. Предупреждение: желтый цвет строки состояния под узлом указывает на состояние предупреждения, то есть отсутствуют входные данные или могут быть неверные типы данных.
 
-#### Handling Error or Warning Nodes
+#### Обработка ошибок и предупреждений узлов
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+Если визуальная программа содержит предупреждения или ошибки, то Dynamo предоставляет подробную информацию о проблеме. Над именем каждого желтого узла отображается подсказка. Наведите указатель на значок предупреждения ![](<images/nodes and wires - node warning icon.png>) или ошибки ![](<images/nodes and wires - node error icon.png>), чтобы посмотреть подробности.
 
 {% hint style="info" %}
-Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
+Совет. Используя информацию из подсказки, проверьте узлы, предшествующие текущему, на наличие ошибок в типе или структуре требуемых данных.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
-> 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 1. Подсказка с предупреждением: не заданные данные или значение Null не могут использоваться как данные типа Double, например число.
+> 2. Используйте узел Watch, чтобы просмотреть входные данные.
+> 3. Узел Number, предшествующий текущему, передает на выходе текстовое значение Red, а не число.
 
-## Wires
+## Провода
 
-Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.
+Провода соединяют друг с другом узлы, создавая тем самым связи и обеспечивая поток выполнения операций в рамках визуальной программы. Их можно воспринимать как настоящие электрические провода, передающие заряды (данные) от одного объекта к другому.
 
-### Program Flow <a href="#program-flow" id="program-flow"></a>
+### Поток выполнения операций в программе <a href="#program-flow" id="program-flow"></a>
 
-Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the **Flow of Data** in the Visual Program.
+Каждый порт соединяет порт вывода одного узла с портом ввода другого. Такой порядок подключения определяет направление **потока данных** в визуальной программе.
 
-Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
+Порты ввода находятся на левой стороне, а порты вывода — на правой, поэтому можно сказать, что поток выполнения программы происходит слева направо.
 
 ![](<images/nodes and wires - flow of data.jpg>)
 
-### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
+### Создание проводов <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+Создайте провод, последовательного щелкнув левой кнопкой мыши исходный порт и порт другого узла для создания соединения. В процессе создания соединения провод отображается пунктирной линией, после чего становится сплошным.
 
-The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
+Данные всегда проходят по проводам в направлении от вывода к вводу, однако провод можно создавать в любом направлении в последовательности щелчков соединенных портов.
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
-### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
+### Редактирование проводов <a href="#editing-wires" id="editing-wires"></a>
 
-Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
+Зачастую при работе над визуальной программой возникает необходимость в корректировке потока выполнения операций путем редактирования проводов, играющих роль соединительных элементов. Чтобы отредактировать провод, щелкните порт ввода подсоединенного узла. Далее выберите один из двух вариантов:
 
-* Change connection to an input Port, left-click on another input Port
+* Чтобы изменить подключение к порту ввода, щелкните другой порт ввода.
 
 ![](<images/nodes and wires - edit wire change port (2).gif>)
 
-* To remove the Wire, pull the Wire away and left-click on Workspace
+* Чтобы удалить провод, перетащите его в сторону и щелкните в рабочем пространстве.
 
 ![](<images/nodes and wires - edit wires remove.gif>)
 
-* Reconnect multiple wires using Shift+left-click
+* Чтобы повторно соединить несколько проводов, щелкните левой кнопкой мыши, нажав и удерживая клавишу SHIFT.
 
 ![](<images/nodes and wires - edit multi ports.gif>)
 
-* Duplicate a wire using Ctrl+left-click
+* Чтобы скопировать провод, щелкните левой кнопкой мыши, нажав и удерживая клавишу CTRL.
 
 ![](<images/nodes and wires - duplicate wire.gif>)
 
-#### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
+#### Провода по умолчанию и выделенные провода <a href="#wire-previews" id="wire-previews"></a>
 
-By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
+По умолчанию провода отображаются в режиме предварительного просмотра как серые прерывистые линии. При выборе узла все подключенные к нему провода выделяются тем же синим цветом, что и узел.
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
-> 1. Highlighted Wire
-> 2. Default Wire
+> 1. Выделенный провод
+> 2. Провод по умолчанию
 
-**Hide Wires by Default**
+**Скрытие проводов по умолчанию**
 
-In case you prefer to hide the Wires in your graph, you can find this option from View > Connectors > untick Show Connectors.
+Если требуется скрыть провода на графике, это можно сделать, сняв флажок «Показать соединители» в меню «Вид» > «Соединители».
 
-With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
+При такой настройке только выбранные узлы и соединенные с ними провода будут отображаться бледно-голубым цветом.
 
 ![](<images/nodes and wires - hide wires setting (1).gif>)
 
-#### Hide Individual Wire Only
+#### Скрытие отдельных проводов
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+Чтобы скрыть выбранный провод, щелкните правой кнопкой мыши выходной параметр узла и выберите «Скрыть провода».
 
 ![](<images/nodes and wires - hide selected wire.gif>)
