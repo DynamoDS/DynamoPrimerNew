@@ -27,7 +27,7 @@ import System
 
 This gives us access to the Revit API and offers custom scripting for any Revit task. By combining the process of visual programming with Revit API scripting, collaboration and tool development improve significantly. For example, a BIM manager and a schematic designer can work together on the same graph. In this collaboration, they can improve design and execution of the model.
 
-![](<../images/8-3/2/python & revit - 01.jpg>)
+![](<../../.gitbook/assets/python & revit - 01.jpg>)
 
 ### Platform Specific APIs
 
@@ -148,7 +148,7 @@ In Dynamo, we've created two reference points with a line connecting them using 
 
 This exercise keeps it simple, but drives home the topics of connecting data and geometry from Revit to Dynamo and back. Let's begin by opening Revit-StructuralFraming.rvt. Once opened, launch Dynamo and open the file Revit-StructuralFraming.dyn.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 01.jpg>)
+![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
 
 This Revit file is about as basic as it gets. Two reference curves: one drawn on Level 1 and the other drawn on Level 2. We want to get these curves into Dynamo and maintain a live link.
 
