@@ -1,84 +1,84 @@
-# About
+# à propos de
 
-## For Dynamo v2.13
+## Pour Dynamo v2.13
 
-![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
+![Logo Dynamo](images/dynamo\_logo\_dark-trim.jpg)
 
-> Dynamo is an open source visual programming platform for designers.
+> Dynamo est une plate-forme de programmation visuelle open source pour les concepteurs.
 
-### Welcome
+### Bienvenue
 
-You have just opened the Dynamo Primer, a comprehensive guide to visual programming in Autodesk Dynamo. This primer is an on-going project to share the fundamentals of programming. Topics include working with computational geometry, best practices for rules-based design, cross-disciplinary programming applications, and more with the Dynamo Platform.
+Vous venez d’ouvrir le guide Dynamo, un guide complet de programmation visuelle dans Autodesk Dynamo. Ce guide est un projet en cours de partage des fondamentaux de la programmation. Les rubriques suivantes concernent l'utilisation de la géométrie de calcul, les recommandations pour la conception basée sur des règles, des applications de programmation pluridisciplinaires et plus encore, avec la plate-forme Dynamo.
 
-The power of Dynamo can be found in a wide variety of design-related activities. Dynamo enables an expanding list of readily accessible ways for you to get started:
+La puissance de Dynamo est offerte par une large gamme d'activités liées à la conception. Dynamo vous offre une liste étendue de méthodes facilement accessibles pour commencer à utiliser les logiciels suivants :
 
-* **Explore** visual programming for the first time
-* **Connect** workflows in various software
-* **Engage** an active community of users, contributors, and developers
-* **Develop** an open-source platform for continued improvement
+* **Découvrez** la programmation visuelle
+* **Connectez** les workflows de différents logiciels
+* **Interagissez** avec une communauté active d'utilisateurs, de contributeurs et de développeurs
+* **Développez** une plate-forme open source pour une amélioration continue
 
-In the midst of this activity and exciting opportunity for working with Dynamo, we need a document of the same caliber, the Dynamo Primer.
+Dans le cadre de cette activité et de l'opportunité passionnante de travailler avec Dynamo, nous avons besoin d'un document du même calibre, le guide Dynamo.
 
-Refer to the [primer user guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) to find out what you can expect to learn from this primer.
+Consultez le [manuel d’utilisation du guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) pour découvrir en quoi consiste le guide Dynamo.
 
 ### Open Source
 
-The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: https://github.com/DynamoDS/DynamoPrimer/issues
+Le projet Dynamo Primer est open source. Nous nous efforçons de fournir du contenu de qualité et prenons en compte vos commentaires. Si vous souhaitez signaler un problème à un niveau quelconque, veuillez le publier sur la page des problèmes GitHub : https://github.com/DynamoDS/DynamoPrimer/issues
 
-If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: https://github.com/DynamoDS/DynamoPrimer.
+Si vous souhaitez contribuer à une nouvelle section, à des modifications ou à tout autre élément de ce projet, consultez le référentiel GitHub pour commencer : https://github.com/DynamoDS/DynamoPrimer.
 
-### The Dynamo Primer Project
+### Le projet Dynamo Primer
 
-The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dynamo Development team at Autodesk.
+Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équipe de développement Dynamo chez Autodesk.
 
-**Mode Lab** was commissioned to write the First Edition of the primer. We thank them for all of their efforts in establishing this valuable resource.
+**Mode Lab** a été chargé d'écrire la première édition du guide. Nous remercions l'équipe pour tous ses efforts afin d'établir cette précieuse ressource.
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-**John Pierson of Parallax Team** was commissioned to update the primer to reflect the Dynamo 2.0. revisions.
+**John Pierson de Parallax Team** a été chargé de mettre à jour le guide pour qu'il contienne les révisions de Dynamo 2.0.
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.
+**Matterlab** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.13.
 
 ![](<images/matterlab\_final-07.jpg>)
 
-### Acknowledgments
+### Remerciements
 
-A special thanks to Ian Keough for initiating and guiding the Dynamo project.
+Un grand merci à Ian Keough pour avoir lancé et dirigé le projet Dynamo.
 
-Thank you to Matt Jezyk, Ian Keough, Zach Kron, Racel Williams and Colin McCrone for enthusiastic collaboration and the opportunity to participate on a wide array of Dynamo projects.
+Merci à Matt Jezyk, Ian Keough, Zach Kron, Racel Williams et Colin McCrone pour leur collaboration enthousiaste et pour l'opportunité de participer à un large éventail de projets Dynamo.
 
-### Software and Resources
+### Logiciels et ressources
 
-**Dynamo** The current stable\* release of Dynamo is Version 2.1.0
+**Dynamo** La version stable\* actuelle de Dynamo est la version 2.1.0
 
-http://dynamobim.com/download/ or http://dynamobuilds.com
+http://dynamobim.com/download/ ou http://dynamobuilds.com
 
-\*Note: Starting with Revit 2020, Dynamo is bundled with Revit releases, resulting in manual installation not being required. More information is available at this [blog post](https://dynamobim.org/dynamo-core-2-1-release/).
+\*Remarque : à partir de Revit 2020, Dynamo est fourni avec les versions de Revit, ce qui fait que l’installation manuelle n’est pas requise. Pour plus d’informations, consultez ce [billet de blog](https://dynamobim.org/dynamo-core-2-1-release/).
 
-**DynamoBIM** The best source for additional information, learning content, and forums is the DynamoBIM website.
+**DynamoBIM** La meilleure source d’informations supplémentaires, de contenu de formation et de forums est le site Web DynamoBIM.
 
 http://dynamobim.org
 
-**Dynamo GitHub** Dynamo is an open-source development project on GitHub. To contribute, check out DynamoDS.
+**Dynamo GitHub** Dynamo est un projet de développement open source sur GitHub. Pour contribuer, découvrez DynamoDS.
 
 https://github.com/DynamoDS/Dynamo
 
-**Contact** Let us know about any issues with this document.
+**Contact** Faites-nous part de tous les problèmes rencontrés dans ce document.
 
 Dynamo@autodesk.com
 
-### License
+### Licence
 
-Copyright 2022 Autodesk
+Copyright 2022 Autodesk.
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Autorisé par la Licence Apache, version 2.0 (la "Licence") ; vous ne devez utiliser ce fichier que conformément à la Licence. Vous pouvez obtenir une copie de la Licence à l'adresse
 
 http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Sauf si cela est requis par la loi applicable ou convenu par écrit, le logiciel distribué dans le cadre de la Licence est distribué "EN L'ÉTAT", SANS GARANTIES OU CONDITIONS D'AUCUNE SORTE, expresses ou implicites. Consultez la Licence pour connaître les autorisations et les limitations existant dans une langue spécifique dans le cadre de la Licence.

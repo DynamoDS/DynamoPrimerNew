@@ -1,39 +1,39 @@
 # Math
 
-If the simplest form of data is numbers, the easiest way to relate those numbers is through Mathematics. From simple operators like divide to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
+Si la forme de données la plus simple est le nombre, la méthode la plus simple pour lier ces nombres est d'utiliser les mathématiques. Des opérateurs simples, tels que la division, aux fonctions trigonométriques et aux formules plus complexes, Math est un excellent moyen de commencer à explorer les relations numériques et les motifs.
 
-### Arithmetic Operators
+### Opérateurs arithmétiques
 
-Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
+Les opérateurs sont un ensemble de composants qui utilisent des fonctions algébriques avec deux valeurs numériques d'entrée, ce qui génère une valeur de sortie unique (addition, soustraction, multiplication, division, etc.). Ces commandes sont disponibles sous Opérateurs > Actions.
 
-| Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
+| Icône | Nom (Syntaxe) | Entrées | Sorties |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-3/2/addition.jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Subtraction.jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Multiplication.jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Division.jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/addition.jpg>) | Ajouter (**+**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Subtraction.jpg>) | Soustraire (**-**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Multiplication.jpg>) | Multiplier (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Division.jpg>) | Diviser (**/**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
-## Exercise: The Golden Spiral Formula
+## Exercice : Formule de la clothoïde dorée
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-### Part I: Parametric Formula
+### Partie I : Formule paramétrique
 
-Combine operators and variables to form a more complex relationship through **Formulas**. Use sliders to make a Formula that can be controlled with input parameters.
+Combinez les opérateurs et les variables pour créer une relation plus complexe à l’aide de **formules**. Utilisez les curseurs pour créer une formule qui peut être contrôlée à l’aide des paramètres d’entrée.
 
-1.Create Number sequence that represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
+1. Créez une séquence de nombres qui représente le « t » dans l’équation paramétrique. Vous devez donc utiliser une liste suffisamment grande pour définir une clothoïde.
 
-**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.
+**Number Sequence :** définissez une séquence de nombres reposant sur les trois entrées _start, amount_ et _step_.
 
 ![](<../images/5-3/2/math - part I-01.jpg>)
 
-2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.
+2\. L'étape ci-dessus a permis de créer une liste de nombres pour définir le domaine paramétrique. Ensuite, créez un groupe de nœuds représentant l’équation de la clothoïde dorée.
 
-The golden spiral is defined as the equation:
+La clothoïde dorée est définie comme l’équation suivante :
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -43,76 +43,76 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-The image below represents the golden spiral in in visual programming form. When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
+L’image ci-dessous représente la spirale dorée sous forme de programmation visuelle. Lorsque vous parcourez le groupe de nœuds, essayez de faire le parallèle entre le programme visuel et l'équation écrite.
 
 ![](<../images/5-3/2/math - part I-02.jpg>)
 
-> a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
+> a. **Number Slider** : ajoutez deux curseurs de numérotation dans la zone de dessin. Ces curseurs représentent les variables _a_ et _b_ de l'équation paramétrique. Elles représentent une constante flexible, ou des paramètres que vous pouvez ajuster afin d'obtenir le résultat souhaité.
 >
-> b. **Multiplication (\*)** : The multiplication Node is represented by an asterisk. We'll use this repeatedly to connect multiplying variables
+> b. **Multiplication (\*)** : le nœud de multiplication est représenté par un astérisque. Vous utiliserez ce noeud à plusieurs reprises pour connecter des variables de multiplication.
 >
-> c. **Math.RadiansToDegrees**: The '_t_' values need to be translated to degrees for their evaluation in the trigonometric functions. Remember, Dynamo defaults to degrees for evaluating these functions.
+> c. **Math.RadiansToDegrees** : les valeurs « _t_ » doivent être converties en degrés pour être évaluées dans les fonctions trigonométriques. N'oubliez pas que Dynamo utilise par défaut les degrés pour évaluer ces fonctions.
 >
-> d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
+> d. **Math.Pow** : la fonction de « _t_ » et le numéro « _e_ » permettent de créer la séquence de Fibonacci.
 >
-> e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
+> e. **Math.Cos et Math.Sin** : ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
 >
-> f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
+> f. **Watch** : le résultat obtenu se compose de deux listes. Elles représentent les coordonnées _x_ et _y_ des points utilisés pour générer la clothoïde.
 
-### Part II: From Formula to Geometry
+### Partie II : De la formule à la géométrie
 
-Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
+Le bloc de nœuds de l'étape précédente fonctionne correctement, mais cela demande beaucoup de travail. Pour créer un workflow plus efficace, consultez la section [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) pour définir une chaîne d’expressions Dynamo en un nœud. Dans cette prochaine série d’étapes, vous allez utiliser l’équation paramétrique pour dessiner la clothoïde de Fibonacci.
 
-**Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
+**Point.ByCoordinates :** connectez le nœud de multiplication supérieur à l'entrée "_x_" et le nœud inférieur à l'entrée "_y_". Une clothoïde paramétrique de points apparaît à l'écran.
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints:** Connect **Point.ByCoordinates** from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
+**Polycurve.ByPoints :** connectez **Point.ByCoordinates** de l’étape précédente à _points_. Vous pouvez laisser _connectLastToFirst_ sans entrée, car vous ne créez pas de courbe fermée. Cela permet de créer une spirale qui passe par chaque point défini à l'étape précédente.
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
-We've now completed the Fibonacci Spiral! Let's take this further into two separate exercises from here, which we'll call the Nautilus and the Sunflower. These are abstractions of natural systems, but the two different applications of the Fibonacci spiral will be well represented.
+La clothoïde de Fibonacci est désormais terminée. Vous allez désormais effectuer deux exercices distincts, appelés Nautilus et Tournesol. Ce sont des abstractions de systèmes naturels, mais qui représentent bien les deux applications différentes de la clothoïde de Fibonacci.
 
-### Part III: From Spiral to Nautilus
+### Partie III : De la clothoïde au Nautilus
 
-**Circle.ByCenterPointRadius:** We'll use a circle Node here with the same inputs as the previous step. The radius value defaults to _1.0_, so we see an immediate output of circles. It becomes immediately legible how the points diverge further from the origin.
+**Circle.ByCenterPointRadius :** utilisez un nœud circulaire avec les mêmes entrées que celles de l'étape précédente. Étant donné que la valeur du rayon par défaut est de _1,0_, un réseau de cercles apparaît immédiatement. La façon dont les points divergent à partir du point d'origine est immédiatement lisible.
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
-**Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.
+**Number Sequence :** réseau d'origine de "_t_". Si vous connectez ceci à la valeur du rayon de **Circle.ByCenterPointRadius**, les centres des cercles divergent davantage à partir de l’origine, mais le rayon des cercles augmente, créant ainsi un super graphique circulaire de Fibonacci.
 
-Bonus points if you make it 3D!
+Et c'est encore mieux en 3D !
 
 ![](<../images/5-3/2/math - part III-02.gif>)
 
-### Part IV: From Nautilus to Phyllotaxis
+### Partie IV : Du Nautilus à la phyllotaxie
 
-Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
+Maintenant que vous avez créé une coque Nautilus circulaire, passez aux grilles paramétriques. Vous allez utiliser une rotation de base sur la clothoïde Fibonacci pour créer une grille de Fibonacci, et le résultat est modélisé d’après la [croissance des graines de tournesol](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
 
-As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
+Comme point de départ, commencez par la même étape qu'à l'exercice précédent : la création d'un réseau de points en forme de spirale avec le nœud **Point.ByCoordinates**.
 
 ![](<../images/5-3/2/math - part IV-01.jpg>)
 
-Next, follow these mini steps to generate a series of spiral at various rotation.
+Ensuite, suivez ces courtes étapes pour générer une série de clothoïdes à différentes rotations.
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
+> a. **Geometry.Rotate :** il existe plusieurs options **Geometry.Rotate**. Assurez-vous que vous avez choisi le nœud avec les entrées _geometry_, _basePlane_ et _degrees_. Connectez **Point.ByCoordinates** à l'entrée geometry. Cliquez avec le bouton droit de la souris sur ce nœud et assurez-vous que la combinaison est définie sur « Produit vectoriel ».
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
-> b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
+> b. **Plane.XY :** connexion à l’entrée _basePlane_. Vous allez effectuer une rotation autour de l'origine, servant également de base pour la clothoïde.
 >
-> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a **Number Range** component. Connect this into the _degrees_ input.
+> c. **Intervalle de nombres :** pour la saisie des degrés, vous devez créer plusieurs rotations. Pour ce faire, il suffit d’utiliser un composant **Number Range**. Connectez-le à l'entrée _degrees_.
 >
-> d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
+> d. **Number :** pour définir l’intervalle de nombres, ajoutez trois nœuds Number à la zone de dessin dans l’ordre vertical. De haut en bas, affectez respectivement les valeurs _0.0,360.0,_ et _120.0_. Elles pilotent la rotation de la clothoïde. Après avoir connecté les trois nœuds Number au nœud Range, observez les sorties du nœud **Number Range**.
 
-Our output is beginning to resemble a whirlpool. Let's adjust some of the **Number Range** parameters and see how the results change.
+Le résultat obtenu commence à ressembler à un tourbillon. Ajustez certains paramètres de **Number Range** et observez le changement des résultats.
 
-Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.
+Modifiez la taille du pas du nœud **Number Range** de _120.0_ à _36.0_. Cette action crée davantage de rotations et permet donc d'obtenir une grille plus dense.
 
 ![](<../images/5-3/2/math - part IV-04.jpg>)
 
-Change the step size of the **Number Range** node from _36.0_ to _3.6_. This now gives us a much denser grid, and the directionality of the spiral is unclear. Ladies and gentlemen, we've created a sunflower.
+Modifiez la taille du pas du nœud **Number Range** de _36,0_ à _3,6_. Vous obtenez une grille beaucoup plus dense, et la direction de la clothoïde n'est pas claire. Bravo, vous avez créé un tournesol.
 
 ![](<../images/5-3/2/math - part IV-05.jpg>)

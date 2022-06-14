@@ -1,142 +1,142 @@
-# DesignScript Syntax
+# Syntaxe DesignScript
 
-You may have noticed a common theme in the names of nodes in Dynamo: each node uses a _"."_ syntax without spaces. This is because the text at the top of each node represents the actual syntax for scripting, and the _"."_ (or _dot notation_) separates an element from the possible methods we can call. This creates an easy translation from visual scripting to text-based scripting.
+Vous avez peut-être remarqué que les noms des nœuds dans Dynamo ont un point commun : chaque nœud utilise la syntaxe _"."_ sans espaces. Cela est dû au fait que le texte situé en haut de chaque nœud représente la syntaxe réelle pour l’écriture de scripts, et que la syntaxe _« . »_ (ou _notation par points_) sépare un élément des méthodes qu’il est possible d’appeler. Cette syntaxe permet de convertir facilement les scripts visuels en scripts basés sur du texte.
 
-![NodeNames](../images/8-1/2/apple.jpg)
+![Noms de nœud](../images/8-1/2/apple.jpg)
 
-As a general analogy for the dot notation, how can we deal with a parametric apple in Dynamo? Below are a few methods we'll run on the apple before deciding to eat it. (Note: these are not actual Dynamo methods):
+Prenons une pomme paramétrique comme analogie générale de la notation par points : comment pouvez-vous la traiter dans Dynamo ? Voici quelques méthodes que vous allez exécuter sur la pomme avant de la manger. (Remarque : il ne s’agit pas de méthodes Dynamo réelles) :
 
-| Human Readible                 | Dot Notation              | Output |
+| Visible de tous | Notation par points | Sortie |
 | ------------------------------ | ------------------------- | ------ |
-| What color is the apple?       | Apple.color               | red    |
-| Is the apple ripe?             | Apple.isRipe              | true   |
-| How much does the apple weigh? | Apple.weight              | 6 oz.  |
-| Where did the apple come from? | Apple.parent              | tree   |
-| What does the apple create?    | Apple.children            | seeds  |
-| Is this apple locally grown?   | Apple.distanceFromOrchard | 60 mi. |
+| De quelle couleur est la pomme ? | Apple.color | rouge |
+| La pomme est-elle mûre ? | Apple.isRipe | true |
+| Combien la pomme pèse-t-elle ? | Apple.weight | 170 g |
+| D’où vient la pomme ? | Apple.parent | arborescence |
+| Qu’est-ce que la pomme crée ? | Apple.children | graines |
+| Cette pomme est-elle produite localement ? | Apple.distanceFromOrchard | 100 km |
 
-I don't know about you, but judging by the outputs in the table above, this looks like one tasty apple. I think I'll _Apple.eat()_ it.
+Je ne sais pas ce que vous en pensez, mais à en juger par les sorties du tableau ci-dessus, cette pomme est très appétissante. Je pense que je vais la manger : _Apple.eat()_.
 
-### Dot Notation in Code Block
+### Notation par points dans le bloc de code
 
-With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block.
+En ayant à l’esprit l’analogie de la pomme, examinez _Point.ByCoordinates_ et découvrez comment créer un point à l’aide du nœud Code Block.
 
-The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
+La syntaxe du nœud _Code Block_ `Point.ByCoordinates(0,10);` donne le même résultat qu’un nœud _Point.ByCoordinates_ dans Dynamo, sauf que vous pouvez créer un point à l’aide d’un nœud. Cette opération est plus efficace que la connexion d’un nœud distinct à _"X"_ et _"Y"_.
 
 ![](<../images/8-1/2/codeblock dot notation.jpg>)
 
-> 1. By using _Point.ByCoordinates_ in the code block, we are specifying the inputs in the same order as the out-of-the-box node _(X,Y)_.
+> 1. L’utilisation de _Point.ByCoordinates_ dans le nœud Code Block vous permet d’indiquer les entrées dans le même ordre que le nœud prêt à l’emploi _(X,Y)_.
 
-### Calling Nodes - Create, Actions, Query
+### Appel de nœuds - Création, Actions, Requête
 
-You can call any regular node in the library through a Code Block as long as the node isn’t a special _“UI” node_: those with a special user interface feature. For instance, you can call _Circle.ByCenterPointRadius_, but it wouldn’t make much sense to call a _Watch 3D_ node.
+Vous pouvez appeler n’importe quel nœud standard dans la bibliothèque par le biais d’un nœud Code Block tant que le nœud n’est pas un _nœud d’interface utilisateur_ spécial : les nœuds dotés d’une fonction d’interface utilisateur spéciale. Par exemple, vous pouvez appeler _Circle.ByCenterPointRadius_, mais il n’est pas logique d’appeler un nœud _Watch 3D_.
 
-Regular nodes (most of your library), generally come in three types. You’ll find that the library is organized with these categories in mind. Methods, or nodes, of these three types are treated differently when invoked within a Code Block.
+Il existe généralement trois types de nœuds standard (la plupart des nœuds de votre bibliothèque). La bibliothèque est organisée en fonction de ces catégories. Les méthodes ou les nœuds de ces trois types sont traités différemment lorsqu’ils sont appelés dans un nœud Code Block.
 
 ![](<../images/8-1/2/action create query category.jpg>)
 
-> 1. **Create** - Create (or construct) something
-> 2. **Action** - Perform an action on something
-> 3. **Query** - Get a property of something that already exists
+> 1. **Create** : permet de créer (ou de construire) un élément
+> 2. **Action** : permet d’effectuer une action sur un élément
+> 3. **Query** : permet d’obtenir une propriété d’un élément existant
 
 #### Create
 
-The "Create" category will construct geometry from scratch. We input values in the code block from left-to-right. These inputs are in the same order as the inputs on the node from top-to-bottom.
+La catégorie "Create" permet de créer une géométrie à partir de zéro. Vous entrez des valeurs de gauche à droite dans le bloc de code. Ces entrées apparaissent dans le même ordre que les entrées du nœud de haut en bas.
 
-Comparing the _Line.ByStartPointEndPoint_ node and the corresponding syntax in the code block, we get the same results.
+En comparant le nœud _Line.ByStartPointEndPoint_ et la syntaxe correspondante dans le bloc de code, vous obtenez les mêmes résultats.
 
 ![](../images/8-1/2/create.jpg)
 
 #### Action
 
-An action is something you do to an object of that type. Dynamo uses _dot notation_, common to many coding languages, to apply an action to a thing. Once you have the thing, type a dot then the name of the action. The action-type method’s input is placed in parentheses just like create-type methods, only you don’t have to specify the first input you see on the corresponding node. Instead, we specify the element upon which we are performing the action:
+Une action est une opération effectuée sur un objet de ce type. Pour appliquer une action à un élément, Dynamo utilise la _notation par points_, commune à de nombreux langages de codage. Une fois que vous avez l’élément, tapez un point, puis le nom de l’action. L’entrée de la méthode de type action est mise entre parenthèses tout comme celle des méthodes de type création. Cependant, il n’est pas nécessaire de spécifier la première entrée que vous voyez sur le nœud correspondant. Au lieu de cela, vous devez indiquer l’élément sur lequel vous effectuez l’action :
 
 ![](<../images/8-1/2/DesignScript - action.jpg>)
 
-> 1. The **Point.Add** node is an action-type node, so the syntax works a little differently.
-> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a **Code Block**, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the **Point.Add** node minus the first one. The first input for the **Point.Add** node is the point itself.
+> 1. Étant donné que le nœud **Point.Add **est un nœud de type action, la syntaxe fonctionne un peu différemment.
+> 2. Les entrées sont (1) le _point_ et (2) le _vecteur_ à ajouter. Dans un nœud **Code Block**, le point (l’élément) est nommé _"pt"_. Pour ajouter un vecteur nommé \*“vec” \*to _“pt”_, écrivez _pt.Add(vec)_ ou : élément, point, action. L’action Ajouter ne possède qu’une seule entrée, ou toutes les entrées du nœud **Point.Add** sauf la première. La première entrée du nœud **Point.Add** est le point lui-même.
 
 #### Query
 
-Query-type methods get a property of an object. Since the object itself is the input, you don’t have to specify any inputs. No parentheses required.
+Les méthodes de type Query permettent d’obtenir une propriété d’un objet. Puisque l’objet lui-même est l’entrée, vous n’avez pas besoin de spécifier d’entrées. Aucune parenthèse n’est requise.
 
 ![](../images/8-1/2/query.jpg)
 
-### How About Lacing?
+### Qu’en est-il de la combinaison ?
 
-Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.
+Avec des nœuds, la combinaison est légèrement différente de celle avec le bloc de code. Avec les nœuds, l’utilisateur clique avec le bouton droit de la souris sur le nœud et sélectionne l’option de combinaison à effectuer. Avec Code Block, l’utilisateur dispose d’un contrôle bien plus précis sur la structure des données. La méthode de raccourci du bloc de code utilise des _guides de réplication_ pour définir la manière dont plusieurs listes unidimensionnelles sont associées. Les nombres mis entre crochets angulaires « <> » définissent la hiérarchie de la liste imbriquée obtenue : <1>,<2>,<3>, etc.
 
 ![](<../images/8-1/2/DesignScript - lacing.jpg>)
 
-> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7`is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a Cross Product).
-> 2. Using the syntax **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` we get _two_ lists with _five_ items in each list.
-> 3. Using the syntax **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` we get _five_ lists with _two_ items in each list.
+> 1. Dans cet exemple, un raccourci est utilisé pour définir deux intervalles (vous trouverez plus d’informations sur le raccourci dans la section suivante de ce chapitre). En résumé, `0..1;` équivaut à `{0,1}` et `-3..-7` à `{-3,-4,-5,-6,-7}`. Le résultat vous donne des listes de 2 valeurs X et 5 valeurs Y. Si vous n’utilisez pas de guides de réplication avec ces listes incohérentes, vous obtenez une liste de deux points, correspondant à la longueur de la liste la plus courte. Les guides de réplication vous permettent de trouver toutes les liaisons possibles de 2 et 5 coordonnées (ou, un Produit cartésien).
+> 2. La syntaxe **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` vous permet d’obtenir _deux_ listes contenant chacune _cinq_ éléments.
+> 3. La syntaxe **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` vous permet d’obtenir _cinq_ listes contenant chacune _deux_ éléments.
 
-With this notation, we can also specify which list will be dominant: 2 lists of 5 things or 5 lists of 2 things. In the example, changing the order of the replication guides makes the result a list of rows of points or a list of columns of points in a grid.
+Avec cette notation, vous pouvez également indiquer le type de liste dominant : 2 listes de 5 éléments ou 5 listes de 2 éléments. Dans cet exemple, la modification de l’ordre des guides de réplication crée une liste de lignes de points ou une liste de colonnes de points dans une grille.
 
-### Node to Code
+### Nœud vers code
 
-While the code block methods above may take some getting used to, there is a feature in Dynamo called "Node to Code" which will make the process easier. To use this feature, select an array of nodes in your Dynamo graph, right-click on the canvas and select "Node to Code". Dynamo condenses these nodes into a code block, with all of the inputs and outputs! Not only is this a great tool for learning code block, but it also allows you to work with a more efficient and parametric Dynamo graph. We'll conclude the exercise below by using "Node to Code", so don't miss it.
+Bien que les méthodes de bloc de code susmentionnées puissent prendre en charge certains éléments, Dynamo inclut une fonctionnalité appelée "Nœud vers code" qui facilite le processus. Pour utiliser cette fonction, sélectionnez un réseau de nœuds dans votre graphique Dynamo, cliquez avec le bouton droit de la souris sur la zone de dessin et sélectionnez "Nœud vers code". Dynamo convertit ces nœuds en bloc de code, avec toutes les entrées et sorties ! Non seulement cet outil est idéal pour découvrir les blocs de code, mais il vous permet également de travailler avec un graphique Dynamo paramétrique et plus efficace. Ne manquez pas la fin de l’exercice ci-dessous : vous découvrirez l’utilisation de "Nœud vers code".
 
 ![](<../images/8-1/2/DesignScript - node to code.jpg>)
 
-## Exercise: Surface Attractor
+## Exercice : attraction de surface
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d’exemple dans l’annexe.
 
 {% file src="../datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-To show the power of code block, we are going to translate an existing attractor field definition into code block form. Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
+Pour afficher la puissance du bloc de code, vous allez convertir une définition de champ d’attraction existante en formulaire de bloc de code. L’utilisation d’une définition existante montre comment le bloc de code est lié aux scripts visuels et est utile pour découvrir la syntaxe DesignScript.
 
-Begin by recreating the definition in the image above (or by opening the sample file).
+Commencez par recréer la définition dans l’image ci-dessus (ou en ouvrant le fichier d’exemple).
 
 ![](<../images/8-1/2/DesignScript - exercise - 01.jpg>)
 
-> 1. Notice that the lacing on **Point.ByCoordinates** has been set to _Cross Product_.
-> 2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
-> 3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
+> 1. Notez que la liaison sur **Point.ByCoordinates** a été définie sur _Produit cartésien_.
+> 2. Chaque point d’une grille est déplacé vers le haut dans la direction Z en fonction de sa distance par rapport au point de référence.
+> 3. Une surface est recréée et épaissie, créant ainsi un renflement dans la géométrie par rapport à la distance par rapport au point de référence.
 
 ![](<../images/8-1/2/DesignScript - exercise - 02.jpg>)
 
-> 1. Starting from the beginning, let's define the reference point first: **Point.ByCoordinates**`(x,y,0);` We use the same **Point.ByCoordinates** syntax as is specified on the top of the reference point node.
-> 2. The variables _x_ and _y_ are inserted into the **Code Block** so that we may update these dynamically with sliders.
-> 3. Add some _sliders_ to the **Code Block** inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
+> 1. Commencez par définir le point de référence : **Point.ByCoordinates**`(x,y,0);`. Utilisez la même syntaxe **Point.ByCoordinates** que celle spécifiée dans la partie supérieure du nœud du point de référence.
+> 2. Les variables _x_ et _y_ sont insérées dans le nœud **Code Block** afin que vous puissiez les mettre à jour de façon dynamique avec des curseurs.
+> 3. Ajoutez des _curseurs_ aux entrées du nœud **Code Block** qui vont de -50 à 50. Vous pouvez ainsi étendre la grille Dynamo par défaut.
 
 ![](<../images/8-1/2/DesignScript - exercise - 03.jpg>)
 
-> 1. In the second line of the **Code Block**, we define a shorthand to replace the number sequence node: `coordsXY = (-50..50..#11);`We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the **Number Sequence** node in the visual script.
+> 1. Dans la deuxième ligne du nœud **Code Block**, définissez un raccourci pour remplacer le nœud Number Sequence : `coordsXY = (-50..50..#11);`. Vous en saurez plus dans la section suivante. Pour le moment, notez que ce raccourci est équivalent au nœud **Number Sequence** dans le script visuel.
 
 ![](<../images/8-1/2/DesignScript - exercise - 04.jpg>)
 
-> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the **Point.ByCoordinates** syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` The angled brackets denote the cross product reference.
-> 2. Notice in the **Watch3D** node that we have a grid of points across the Dynamo grid.
+> 1. Vous devez désormais créer une grille de points à partir de la séquence _coordsXY_. Pour ce faire, utilisez la syntaxe **Point.ByCoordinates**, et lancez un _Produit cartésien_ de la liste de la même manière que dans le script visuel. Pour ce faire, tapez la ligne : `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);`. Les crochets angulaires indiquent la référence du produit vectoriel.
+> 2. Le nœud **Watch3D** présente une grille de points sur la grille Dynamo.
 
 ![](<../images/8-1/2/DesignScript - exercise - 05.jpg>)
 
-> 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. And since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
-> 2. Reading from the actual node on the canvas, we see that there are three inputs. The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
-> 3. The direction is simple enough, we use a `Vector.ZAxis()` to move vertically.
-> 4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: `refPt.DistanceTo(gridPts)`
-> 5. The final line of code gives us the translated points: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
+> 1. Difficulté : déplacer la grille de points vers le haut en fonction de leur distance par rapport au point de référence. Tout d’abord, appelez ce nouvel ensemble de points _transPts_. Étant donné qu’une conversion est une action sur un élément existant, au lieu d’utiliser `Geometry.Translate...`, utilisez `gridPts.Translate`.
+> 2. Le nœud réel sur la zone de dessin indique trois entrées. La géométrie à convertir est déjà déclarée, car vous effectuez l’action sur cet élément (avec _gridPts.Translate_). Les deux entrées restantes seront insérées entre les parenthèses de la fonction : direction et _distance_.
+> 3. La direction est assez simple :·utilisez un nœud `Vector.ZAxis()` pour vous déplacer verticalement.
+> 4. La distance entre le point de référence et chaque point de grille doit encore être calculée. Pour ce faire, effectuez une action au point de référence de la même manière : `refPt.DistanceTo(gridPts)`.
+> 5. La dernière ligne de code donne les points convertis : `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
 
 ![](<../images/8-1/2/DesignScript - exercise - 06.jpg>)
 
-> 1. We now have a grid of points with the appropriate data structure to create a Nurbs Surface. We construct the surface using `srf = NurbsSurface.ByControlPoints(transPts);`
+> 1. Vous disposez à présent d’une grille de points avec la structure de données appropriée pour créer une surface NURBS. Construisez la surface en utilisant `srf = NurbsSurface.ByControlPoints(transPts);`.
 
 ![](<../images/8-1/2/DesignScript - exercise - 07.jpg>)
 
-> 1. And finally, to add some depth to the surface, we construct a solid using `solid = srf.Thicken(5);` In this case we thickened the surface by 5 units in the code, but we could always declare this as a variable (calling it thickness for example) and then control that value with a slider.
+> 1. Enfin, pour ajouter de la profondeur à la surface, construisez un solide en utilisant `solid = srf.Thicken(5);`. Dans ce cas, la surface a été épaissie de 5 unités dans le code, mais vous pouvez toujours déclarer cela comme variable (en l’appelant épaisseur, par exemple), puis contrôler cette valeur avec un curseur.
 
-#### Simplify the Graph with "Node to Code"
+#### Simplifier le graphique avec "Nœud vers code"
 
-The "Node to Code" feature automates the entire exercise that we just completed with the click of a button. Not only is this powerful for creating custom definitions and reusable code blocks, but it is also a really helpful tool to learn how to script in Dynamo:
+La fonctionnalité "Nœud vers code" permet d'automatiser d'un simple clic l'ensemble de l'exercice que vous venez de réaliser. Non seulement cette fonctionnalité est très utile pour créer des définitions personnalisées et des blocs de code réutilisables, mais elle est également un outil très pratique pour apprendre à utiliser des scripts dans Dynamo :
 
-![](<../images/8-1/2/DesignScript - exercise - 08.jpg>)
+![](<../images/8-1/2/DesignScript - exercice - 08.jpg>)
 
-> 1. Start with the existing visual script from step 1 of the exercise. Select all of the nodes, right click on the canvas, and select _"Node to Code"_. Simple as that.
+> 1. Commencez par le script visuel existant de l'étape 1 de l'exercice. Sélectionnez tous les nœuds, cliquez avec le bouton droit de la souris sur la zone de dessin et sélectionnez _"Nœud vers code"_. C'est aussi simple que ça.
 
-Dynamo has automated a text based version of the visual graph, lacing and all. Test this out on your visual scripts and release the power of the code block!
+Dynamo a automatisé une version texte du graphique visuel, de la combinaison, etc. Testez cette opération sur vos scripts visuels et libérez la puissance du bloc de code !
 
-![](<../images/8-1/2/DesignScript - exercise - 09.jpg>)
+![](<../images/8-1/2/DesignScript - exercice - 09.jpg>)

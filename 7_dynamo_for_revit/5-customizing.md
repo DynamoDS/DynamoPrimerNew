@@ -1,117 +1,118 @@
-# Customizing
+# Personnalisation
 
-While we previously looked at editing a basic building mass, we want to dive deeper into the Dynamo/Revit link by editing a large number of elements in one go. Customizing on a large scale becomes more complex as data structures require more advanced list operations. However, the underlying principles behind their execution is fundamentally the same. Let's study some opportunities for analysis from a set of adaptive components.
+Bien que vous ayez précédemment étudié la modification d'un volume de construction de base, vous devez approfondir le lien Dynamo/Revit en modifiant un grand nombre d'éléments en une seule opération. La personnalisation à grande échelle devient plus complexe, car les structures de données nécessitent des opérations de listes plus avancées. Toutefois, les principes sous-jacents de leur exécution sont fondamentalement les mêmes. Examinez certaines possibilités d'effectuer des analyses à partir d'un ensemble de composants adaptatifs.
 
-### Point Location
+### Emplacement du point
 
-Suppose we've created a range of adaptive components and want to edit parameters based on their point locations. The points, for example, could drive a thickness parameter which is related to the area of the element. Or, they could drive an opacity parameter related to solar exposure throughout the year. Dynamo allows the connection of analysis to parameters in a few easy steps, and we'll explore a basic version in the exercise below.
+Imaginez que vous avez créé une série de composants adaptatifs et que vous souhaitez modifier les paramètres en fonction de leurs emplacements de point.
+Les points, par exemple, peuvent définir un paramètre d'épaisseur lié à la zone de l'élément. Ils peuvent aussi définir un paramètre d'opacité lié à l'exposition solaire tout au long de l'année. Dynamo permet la connexion de l'analyse aux paramètres en quelques étapes simples. Dans l'exercice ci-dessous, vous allez explorer une version de base.
 
 ![](<./images/5/customizing - point location.jpg>)
 
-> Query the adaptive points of a selected adaptive component by using the **AdaptiveComponent.Locations** node. This allows us to work with an abstracted version of a Revit element for analysis.
+> Interrogez les points adaptatifs d'un composant adaptatif sélectionné à l'aide du nœud **AdaptiveComponent.Locations**. Cela vous permet de travailler avec une version abstraite d'un élément Revit pour l'analyse.
 
-By extracting the point location of adaptive components, we can run a range of analysis for that element. A four-point adaptive component will allow you to study the deviation from plane for a given panel for example.
+En extrayant l'emplacement des points des composants adaptatifs, vous pouvez exécuter une série d'analyses pour cet élément. Par exemple, un composant adaptatif à quatre points vous permet d'étudier l'écart par rapport au plan d'un panneau donné.
 
-### Solar Orientation Analysis
+### Analyse de l'orientation du soleil
 
 ![](<./images/5/customizing - solar orientation analysis.jpg>)
 
-> Use remapping to map a set of a data into a parameter range. This is fundamental tool used in a parametric model, and we'll demonstrate it in the exercise below.
+> Utilisez la fonction de remappage pour mapper un jeu de données dans une plage de paramètres. Il s'agit d'un outil fondamental utilisé dans un modèle paramétrique, que vous allez découvrir dans l'exercice ci-dessous.
 
-Using Dynamo, the point locations of adaptive components can be used to create a best-fit plane each element. We can also query the sun position in the Revit file and study the plane's relative orientation to the sun in comparison to other adaptive components. Let's set that up in the exercise below by creating an algorithmic roofscape.
+Avec Dynamo, vous pouvez utiliser les emplacements des points des composants adaptatifs pour créer un plan d'ajustement optimal pour chaque élément. Vous pouvez également interroger la position du soleil dans le fichier Revit et étudier l'orientation relative du plan par rapport au soleil en comparaison avec les autres composants adaptatifs. Étudiez ce cas dans l'exercice ci-dessous en créant un environnement de toiture algorithmique.
 
-## Exercise
+## Exercice
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="./datasets/5/Revit-Customizing.zip" %}
 
-This exercise will expand on the techniques demonstrated in the previous section. In this case, we are defining a parametric surface from Revit elements, instantiating four-point adaptive components and then editing them based on orientation to the sun.
+Cet exercice fournit des informations sur les techniques présentées dans la section précédente. Dans ce cas, définissez une surface paramétrique à partir d'éléments Revit, instanciant des composants adaptatifs à quatre points, puis modifiez-les en fonction de l'orientation par rapport au soleil.
 
 ![](<./images/5/customizing - exercise 01.jpg>)
 
-> 1. Beginning by selecting two edges with the _"Select Edge"_ node. The two edges are the long spans of the atrium.
-> 2. Combine the two edges into one list with the _List.Create_ node.
-> 3. Create a surface between the two edges with a _Surface.ByLoft_.
+> 1. Sélectionnez d'abord deux arêtes avec le nœud _"Select Edge"_. Les deux arêtes sont les longues travées de l'atrium.
+> 2. Combinez les deux arêtes dans une liste avec le nœud _List.Create_.
+> 3. Créez une surface entre les deux arêtes avec un noeud _surface.ByLoft_.
 
 ![](<./images/5/customizing - exercise 02.jpg>)
 
-> 1. Using _code block_, define a range from 0 to 1 with 10 evenly spaced values: `0..1..#10;`
-> 2. Plug the _code block_ into the \*u \*and _v_ inputs of a _Surface.PointAtParameter_ node, and plug the _Surface.ByLoft_ node into the _surface_ input. Right click the node and change the _lacing_ to _Cross Product_. This will give a grid of points on the surface.
+> 1. À l’aide du nœud _Code Block_, définissez une plage comprise entre 0 et 1 avec 10 valeurs équidistantes : `0..1..#10;`
+> 2. Connectez le nœud _Code Block_ aux entrées \*u \*et _v_ d’un nœud _Surface.PointAtParameter_, puis connectez le nœud _Surface.ByLoft_ à l’entrée _surface_. Cliquez avec le bouton droit de la souris sur le nœud et définissez la _liaison_ sur _Produit cartésien_. Cette action permet de créer une grille de points sur la surface.
 
-This grid of points serves as the control points for a parametrically defined surface. We want to extract the u and v positions of each one of these points so that we can plug them into a parametric formula and keep the same data structure. We can do this by querying the parameter locations of the points we just created.
+Cette grille de points sert de points de contrôle pour une surface définie de manière paramétrique. Vous devez extraire les positions u et v de chacun de ces points afin de pouvoir les relier à une formule paramétrique et conserver la même structure de données. Pour ce faire, vous pouvez interroger les emplacements des paramètres des points que vous venez de créer.
 
 ![](<./images/5/customizing - exercise 03.jpg>)
 
-> 1. Add a _Surface.ParameterAtPoint_ node to the canvas, connect the inputs as shown above.
-> 2. Query the _u_ values of these parameters with the UV.U node.
-> 3. Query the _v_ values of these parameters with the UV.V node.
-> 4. The outputs show the corresponding _u_ and _v_ values for every point of the surface. We now have a range from _0_ to _1_ for each value, in the proper data structure, so we're ready to apply a parametric algorithm.
+> 1. Ajoutez un nœud _Surface.ParameterAtPoint_ à la zone de dessin et connectez les entrées comme indiqué ci-dessus.
+> 2. Interrogez les valeurs _u_ de ces paramètres avec le nœud UV.U.
+> 3. Interrogez les valeurs _v_ de ces paramètres avec le nœud UV.V.
+> 4. Les sorties montrent les valeurs _u_ et _v_ correspondantes pour chaque point de la surface. Vous disposez à présent d'une plage de _0_ à _1_ pour chaque valeur dans la structure de données appropriée. Vous êtes prêts à appliquer un algorithme paramétrique.
 
 ![](<./images/5/customizing - exercise 04.jpg>)
 
-> 1. Add a _code block_ to the canvas and enter the code: `Math.Sin(u*180)*Math.Sin(v*180)*w;` This is a parametric function which creates a sine mound from a flat surface.
-> 2. Connects the _UV.U_ to the _u_ input and the UV.V to the _v_ input.
-> 3. The _w_ input represents the _amplitude_ of the shape, so we attach a _number slider_ to it.
+> 1. Ajoutez un nœud _Block Code_ dans la zone de dessin et entrez le code : `Math.Sin(u*180)*Math.Sin(v*180)*w;`. Il s’agit d’une fonction paramétrique qui crée un sinus à partir d’une surface plane.
+> 2. Connectez _UV.U_ à l’entrée _u_ et UV.V à l’entrée _v_.
+> 3. Étant donné que l'entrée _w_ représente l'_amplitude_ de la forme, joignez-y un _curseur de numérotation_.
 
 ![](<./images/5/customizing - exercise 05.jpg>)
 
-> 1. Now, we have a list of values as defined by the algorithm. Let's use this list of values to move the points up in the _+Z_ direction. Using _Geometry.Translate_, plug the \*code block \*into _zTranslation_ and the _Surface.PointAtParameter_ into the _geometry_ input. You should see the new points displayed in the Dynamo preview.
-> 2. Finally, we create a surface with the _NurbsSurface.ByPoints_ node, plugging the node from the previous step into the points input. We have ourselves a parametric surface. Feel free to drag the slider to watch the mound shrink and grow.
+> 1. La liste des valeurs définies par l'algorithme est maintenant disponible. Utilisez cette liste de valeurs pour déplacer les points vers le haut dans la direction _+Z_. À l’aide de _Geometry.Translate_, connectez le nœud \*Code Block \*à _zTranslation_ et le nœud _Surface.PointAtParameter_ à l’entrée _geometry_. Les nouveaux points doivent s'afficher dans l'aperçu Dynamo.
+> 2. Enfin, créez une surface avec le nœud _NurbsSurface.ByPoints_ en connectant le nœud de l'étape précédente à l'entrée des points. Vous obtenez une surface paramétrique. N'hésitez pas à déplacer le curseur pour observer la taille du monticule diminuer ou augmenter.
 
-With the parametric surface, we want to define a way to panelize it in order to array four-point adaptive components. Dynamo does not have out-of-the-box functionality for surface panelization, so we can look to the community for helpful Dynamo packages.
+En ce qui concerne la surface paramétrique, vous devez définir un moyen de la paneliser afin de mettre en réseau les composants adaptatifs à quatre points. Étant donné que Dynamo ne dispose pas de fonctionnalités prêtes à l'emploi pour la panelisation des surfaces, contactez la communauté pour des packages Dynamo utiles.
 
 ![](<./images/5/customizing - exercise 06.jpg>)
 
-> 1. Go to _Packages>Search for a Package..._
-> 2. Search for _"LunchBox"_ and install _"LunchBox for Dynamo"_. This is a really helpful set of tools for geometry operations such as this.
+> 1. Accédez à _Packages > Rechercher un package..._
+> 2. Recherchez _« LunchBox »_ et installez _« LunchBox for Dynamo »_. Il s'agit d'un ensemble d'outils très utiles pour les opérations de géométrie telles que celle-ci.
 
-> 1. After downloading, you now have full access to the LunchBox suite. Search for _"Quad Grid"_ and select _"LunchBox Quad Grid By Face"_. Plug the parametric surface into the _surface_ input and set the _U_ and _V_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
+> 1. Après le téléchargement, vous disposez maintenant d'un accès complet à la suite LunchBox. Recherchez _"Quad Grid"_ et sélectionnez _"LunchBox Quad Grid By Face"_. Connectez la surface paramétrique à l'entrée _surface_ et définissez les divisions _U_ et _V_ sur _15_. Vous devriez voir apparaître une surface à quatre panneaux dans l'aperçu Dynamo.
 
-> If you're curious about its setup, you can double click on the _Lunch Box_ node and see how it's made.
+> Si vous souhaitez en savoir plus sur la configuration, cliquez deux fois sur le nœud _Lunch Box_ pour voir comment il est créé.
 
-> Back in Revit, let's take a quick look at the adaptive component we're using here. No need to follow along, but this is the roof panel we're going to instantiate. It is a four-point adaptive component which is a crude representation of an ETFE system. The aperture of the center void is on a parameter called _"ApertureRatio"_.
+> Dans Revit, examinez rapidement le composant adaptatif utilisé ici. Pas besoin de suivre, mais c'est le panneau de toit à instancier. Il s'agit d'un composant adaptatif à quatre points, qui est une représentation grossière d'un système ETFE. L'ouverture du vide au centre se trouve sur un paramètre appelé _"ApertureRatio"_.
 
-> 1. We're about to instantiate a lot of geometry in Revit, so make sure to turn the Dynamo solver to _"Manual"_.
-> 2. Add a _Family Types_ node to the canvas and select _"ROOF-PANEL-4PT"_.
-> 3. Add an _AdaptiveComponent.ByPoints_ node to the canvas, connect _Panel Pts_ from the _"LunchBox Quad Grid by Face"_ output into the _points_ input. Connect the _Family Types_ node to the _familySymbol_ input.
-> 4. Hit _Run_. Revit will have to _think_ for a bit while the geometry is being created. If it takes too long, reduce the _code block's '15'_ to a lower number. This will reduce the number of panels on the roof.
+> 1. Étant donné que vous allez instancier un grand nombre de géométries dans Revit, veillez à définir le solveur Dynamo sur _Manuel_.
+> 2. Ajoutez un nœud _Family Types_ à la zone de dessin et sélectionnez _"ROOF-PANEL-4PT"_.
+> 3. Ajoutez un nœud _AdaptiveComponent.ByPoints_ à la zone de dessin, connectez les points _Panel Pts_ de la sortie _"LunchBox Quad Grid by Face"_ à l'entrée _points_. Connectez le nœud _Family Types_ à l'entrée _FamilySymbol_.
+> 4. Cliquez sur _Exécuter_. La création de la géométrie nécessite un peu de _temps_ sur Revit. Si l'opération est trop longue, réduisez la valeur du bloc de code qui est égale à _15_. Cela permet de réduire le nombre de panneaux sur le toit.
 
-_Note: If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "Freezing" section in the solids chapter._
+_Remarque : si Dynamo prend trop de temps pour calculer les nœuds, vous pouvez utiliser la fonctionnalité "geler" du nœud pour interrompre l'exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d'informations sur le gel des nœuds, consultez la section "Gel" du chapitre Solides._
 
-> Back in Revit, we have the array of panels on the roof.
+> Dans Revit, vous avez le réseau de panneaux sur le toit.
 
-> Zooming in, we can get a closer look at their surface qualities.
+> En zoomant, vous pouvez mieux observer leurs qualités de surface.
 
-### Analysis
+### Analyse
 
-> 1. Continuing from the previous step, let's go further and drive the aperture of each panel based on its exposure to the sun. Zooming into Revit and select one panel, we see in the properties bar that there is a parameter called _"Aperture Ratio"_. The family is setup so that the aperture ranges, roughly, from _0.05_ to _0.45_.
+> 1. À partir de l'étape précédente, reprenez l'ouverture de chaque panneau en fonction de son exposition au soleil. Dans Revit, en zoomant et en sélectionnant un panneau, vous pouvez constater la présence d'un paramètre appelé _"Aperture Ratio"_ dans la barre des propriétés. La famille est configurée de façon à ce que l'ouverture s'étende, approximativement, de _0,05_ à _0,45_.
 
-> 1. If we turn on the solar path, we can see the current sun location in Revit.
+> 1. Si vous activez la trajectoire d'ensoleillement, vous pouvez voir l'emplacement actuel du soleil dans Revit.
 
-> 1. We can reference this sun location using the _SunSettings.Current_ node.
+> 1. Vous pouvez référencer l'emplacement du soleil à l'aide du nœud _SunSettings.Current_.
 
-1. Plug the Sun settings into _Sunsetting.SunDirection_ to get the solar vector.
-2. From the _Panel Pts_ used to create the adaptive components, use _Plane.ByBestFitThroughPoints_ to approximate a plane for the component.
-3. Query the _normal_ of this plane.
-4. Use the _dot product_ to calculate solar orientation. The dot product is a formula which determines how parallel or anti-parallel two vectors may be. So we're taking the plane normal of each adaptive component and comparing it to the solar vector to roughly simulate solar orientation.
-5. Take the _absolute value_ of the result. This ensures that the dot product is accurate if the plane normal is facing the reverse direction.
-6. Hit _Run_.
+1. Connectez l'entrée SunSettings à _Sunsetting.SunDirection_ pour obtenir le vecteur solaire.
+2. À partir des points _Panel Pts_ utilisés pour créer les composants adaptatifs, ayez recours à _Plane.ByBaestFitThroughPoints_ pour obtenir une approximation du plan du composant.
+3. Interrogez la _normale_ de ce plan.
+4. Utilisez le _produit scalaire_ pour calculer l'orientation du soleil. Le produit scalaire est une formule qui détermine la mesure selon laquelle deux vecteurs sont parallèles ou antiparallèles. Prenez donc la normale du plan de chaque composant adaptatif et comparez-la au vecteur solaire pour simuler l'orientation du soleil de façon approximative.
+5. Prenez la _valeur absolue_ du résultat. Cela permet de garantir que le produit scalaire est précis si la normale du plan est orientée vers l'arrière.
+6. Cliquez sur _Exécuter_.
 
-> 1. Looking at the _dot product_, we have a wide range of numbers. We want to use their relative distribution, but we need to condense the numbers into the appropriate range of the _"Aperture Ratio"_ parameter we plan to edit.
+> 1. Le _produit scalaire_ contient une grande quantité de nombres. Pour utiliser leur distribution relative, vous devez condenser les nombres dans la plage appropriée du paramètre _"Aperture Ratio"_ à modifier.
 
-1. The _Math.RemapRange_ is a great tool for this. It takes an input list and remaps its bounds into two target values.
-2. Define the target values as _0.15_ and _0.45_ in a _code block_.
-3. Hit _Run_.
+1. L'outil _Math.RemapRange_ est idéal pour cela. Il prend une liste d'entrée et remappe ses limites en deux valeurs cibles.
+2. Définissez les valeurs cibles sur _0,15_ et _0,45_ dans un _bloc de code_.
+3. Cliquez sur _Exécuter_.
 
-> 1. Connect the remapped values into a _Element.SetParameterByName_ node.
+> 1. Connectez les valeurs remappées à un nœud _Element.SetParameterByName_.
 
-1. Connect the string _"Aperture Ratio"_ into the _parameterName_ input.
-2. Connect the _adaptive components_ into the _element_ input.
-3. Hit _Run_.
+1. Connectez la chaîne _"Aperture Ratio"_ à l'entrée _parameterName_.
+2. Connectez les _composants adaptatifs_ à l'entrée _element_.
+3. Cliquez sur _Exécuter_.
 
-> Back in Revit, from a distance we can make out the affect of the solar orientation on the aperture of the ETFE panels.
+> Dans Revit, à partir d'une distance, vous pouvez définir l'impact de l'orientation du soleil sur l'ouverture des panneaux ETFE.
 
-> Zooming in, we see that the ETFE panels are more closed as the face the sun. Our target here is to reduce overheating from solar exposure. If we wanted to let in more light based on solar exposure, we just have to switch the domain on _Math.RemapRange_.
+> En zoomant, vous pouvez voir que plus les panneaux ETFE font face au soleil et plus ils sont fermés. L'objectif ici est de réduire la surchauffe de l'exposition au soleil. Si vous voulez laisser davantage de lumière en fonction de l'exposition solaire, vous devez simplement définir le domaine sur _Math.RemapRange_.

@@ -1,96 +1,96 @@
-# Meshes
+# Mailles
 
-## Mesh in Dynamo
+## Maillage dans Dynamo
 
-### What is Mesh?
+### Qu’est-ce qu’un maillage ?
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+Dans le domaine de la modélisation informatique, les [maillages ](7-meshes.md#mesh)sont l’une des formes de représentation les plus répandues de la géométrie 3D. La géométrie de maillage est généralement un ensemble de quadrilatères ou de triangles. Elle représente une alternative simple et flexible à l’utilisation des NURBS. Les maillages sont utilisés dans tous les domaines : du rendu aux visualisations, jusqu’à la fabrication numérique et à l’impression 3D.
 
-### Mesh Elements
+### Éléments maillage
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Dynamo définit les maillages à l'aide d'une structure de données Face-Sommet. À la base, cette structure est simplement un ensemble de points regroupés en polygones. Les points d'un maillage sont appelés sommets, tandis que les polygones de surface sont appelés faces.
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+Pour créer un maillage, vous avez besoin d'une liste de sommets et d'un système de regroupement de ces sommets en faces appelé groupe d'index.
 
 ![](<../images/5-2/7/meshes - mesh elements.jpg>)
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. Liste de sommets
+> 2. Liste des groupes d'index permettant de définir les faces.
 
 ### Mesh Toolkit
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+L’installation du package [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) permet d’étendre les fonctionnalités de maillage de Dynamo. Le package Mesh Toolkit de Dynamo fournit des outils permettant d'importer des maillages à partir de formats de fichiers externes, de créer un maillage à partir d'objets de géométrie Dynamo et de créer manuellement des maillages selon leurs sommets et leurs index.
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+La bibliothèque fournit également des outils permettant de modifier les maillages, de réparer les maillages ou d'extraire des sections horizontales à utiliser lors de la fabrication.
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+Consultez les [études de cas Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) pour découvrir des exemples d’utilisation de ce package.
 
 ![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deep Dive into...
+## Approfondir...
 
-### Mesh
+### Maillage
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+Un maillage est un ensemble de quadrilatères et de triangles représentant une géométrie de surface ou de solide. Comme pour les solides, la structure d'un objet maillé comprend des sommets, des arêtes et des faces. Il existe d'autres propriétés qui rendent les maillages uniques, telles que les normales.
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![Éléments maillage](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. Sommets de maillage.
+> 2. Arêtes de maillage. \*Les arêtes avec une seule face adjacente sont appelées « nues ». Toutes les autres arêtes sont "habillées".
+> 3. Faces de maillage.
 
-### Vertices + Vertex Normals
+### Sommets + normales de sommet
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+Les sommets d'un maillage sont simplement une liste de points. L'index des sommets est très important lors de la construction d'un maillage ou de l'obtention d'informations sur la structure d'un maillage. Pour chaque sommet, il existe également une normale de sommet (vecteur) correspondante qui décrit la direction moyenne des faces attachées et vous aide à comprendre l'orientation "intérieure" et "extérieure" du maillage.
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![Sommets + normales](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. Sommets
+> 2. Normales de sommet
 
 ### Faces
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+Une face est une liste ordonnée de trois ou quatre sommets. La représentation de la "surface" d'une face maillée est donc implicite en fonction de la position des sommets indexés. Étant donné que vous avez déjà la liste des sommets qui constituent le maillage, au lieu de fournir des points individuels pour définir une face, utilisez simplement l'index des sommets. Cela vous permet également d'utiliser le même sommet dans plusieurs faces.
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. Une face quadrilatérale composée des index 0, 1, 2 et 3.
+> 2. Une face triangulaire composée des index 1, 4 et 2. Les groupes d'index peuvent être modifiés dans leur ordre : tant que la séquence est ordonnée dans le sens trigonométrique, la face est correctement définie.
 
-### Meshes versus NURBS Surfaces
+### Maillages et surfaces NURBS
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+Quelles sont les différences entre la géométrie de maillage et la géométrie NURBS ? Quand utiliseriez-vous l'une ou l'autre ?
 
-#### Parameterization
+#### Définition des paramètres
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+Dans le chapitre précédent, vous avez découvert que les surfaces NURBS sont définies par une série de courbes NURBS allant dans deux directions. Ces directions sont libellées `U` et `V`, et permettent de paramétrer une surface NURBS en fonction d’un domaine de surface 2D. Les courbes elles-mêmes sont stockées en tant qu'équations dans l'ordinateur, ce qui permet de calculer les surfaces qui en résultent dans un degré de précision arbitrairement petit. Il peut cependant être difficile de combiner plusieurs surfaces NURBS. La jonction de deux surfaces NURBS génère une polysurface, où différentes sections de la géométrie auront des définitions de courbe et des paramètres UV différents.
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Points de contrôle](../images/5-2/7/NURBSvsMESH-01.jpg)
 
 > 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
-> 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 2. Courbe isoparamétrique (isoparm)
+> 3. Point de contrôle de surface
+> 4. Polygone de contrôle de surface
+> 5. Point isoparamétrique
+> 6. Cadre de surface
+> 7. Maillage
+> 8. Arête nue
+> 9. Réseau de maillage
+> 10. Arêtes de maillage
+> 11. Normale de sommet
+> 12. Face de maillage/Normale de face de maillage
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+Les maillages, en revanche, sont constitués d'un nombre distinct de sommets et de faces exactement définis. Le réseau de sommets ne peut généralement pas être défini par de simples coordonnées`UV`. En effet, étant donné que les faces sont distinctes, la précision est créée dans le maillage et ne peut être modifiée qu’en affinant le maillage et en ajoutant des faces supplémentaires. L'absence de descriptions mathématiques permet aux maillages de gérer plus facilement une géométrie complexe au sein d'un maillage unique.
 
-### Local versus Global Influence
+### Influence locale et globale
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+Une autre différence importante est la mesure dans laquelle une modification locale de la géométrie de maillage ou NURBS affecte l'ensemble de la forme. Le déplacement d'un sommet d'un maillage affecte uniquement les faces adjacentes à ce sommet. Dans les surfaces NURBS, l'étendue de l'influence est plus complexe et dépend du degré de la surface ainsi que des poids et des noeuds des points de contrôle. En général, cependant, le déplacement d'un seul point de contrôle dans une surface NURBS crée un changement plus lisse et plus important de la géométrie.
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Modification](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. Surface NURBS : le déplacement d'un point de contrôle a une influence qui s'étend sur toute la forme.
+> 2. Géométrie de maillage : le déplacement d'un sommet a une influence uniquement sur les éléments adjacents.
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+Une analogie qui peut être utile consiste à comparer une image vectorielle (composée de lignes et de courbes) à une image raster (composée de pixels individuels). Si vous effectuez un zoom avant sur une image vectorielle, les courbes restent nettes et claires, tandis que si vous effectuez un zoom sur une image raster, les pixels individuels deviennent plus grands. Dans cette analogie, vous pouvez comparer les surfaces NURBS à une image vectorielle, car il existe une relation mathématique lisse, tandis qu'un maillage se comporte de la même façon qu'une image raster avec une résolution définie.
 
 ##

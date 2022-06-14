@@ -1,37 +1,37 @@
-# What's a Code Block
+# Qu'est-ce qu'un bloc de code ?
 
-Code blocks are a window deep into DesignScript, the programming language at the heart of Dynamo. Built from scratch to support exploratory design workflows, DesignScript is a readable and concise language that offers both immediate feedback to small bits of code and also scales to large and complex interactions. DesignScript also forms the backbone of the engine that drives most aspects of Dynamo “under the hood”. Because nearly all of the functionality found in Dynamo nodes and interactions have a one-to-one relationship with the scripting language, there are unique opportunities to move between node-based interactions and scripting in a fluid way. &#x20;
+Les blocs de code permettent d'aborder de manière approfondie DesignScript, le langage de programmation au coeur de Dynamo. Conçu à partir de zéro pour prendre en charge les workflows de conception exploratoires, DesignScript est un langage lisible et concis qui offre un retour immédiat aux petits éléments de code et s'adapte aux interactions complexes et importantes. DesignScript constitue également la "colonne vertébrale" du moteur qui pilote la plupart des aspects de Dynamo "sous le capot". Étant donné que la quasi-totalité des fonctionnalités que l'on trouve dans les nœuds et les interactions Dynamo ont une relation individuelle avec le langage de génération de script, il existe des possibilités uniques de se déplacer entre les interactions basées sur les nœuds et la génération de scripts de manière fluide. &#x20;
 
 ![](../images/8-1/1/codeblock.jpg)
 
-For beginners, nodes can be automatically converted to text syntax to aid in learning DesignScript or simply to reduce the size of larger sections of graphs. This is done using a process called "Node to Code", which is outlined in more detail in the [DesignScript Syntax section](7-2\_design-script-syntax.md). More experienced users can use Code Blocks to create customized mashups of existing functionality and user authored relationships using many standard coding paradigms. In between the beginner and advanced user, there are a huge number of shortcuts and code snippets that will accelerate your designs. While the term 'code block' may be a little intimidating to non-programmers, it is both easy to use and robust. A beginner can use the code block efficiently with minimal coding, and an advanced user can define scripted definitions to be recalled elsewhere in a Dynamo definition.
+Pour les débutants, les nœuds peuvent être automatiquement convertis en syntaxe de texte pour faciliter l’apprentissage de DesignScript ou simplement pour réduire la taille des sections de graphiques plus grandes. Cette opération est effectuée à l'aide d'un processus appelé "Nœud vers code", qui est présenté en détail dans la [section Syntaxe DesignScript](7-2\_design-script-syntax.md). Les utilisateurs plus expérimentés peuvent utiliser les blocs de code pour créer des combinaisons personnalisées de fonctionnalités existantes et de relations créées par l'utilisateur à l'aide de nombreux paradigmes de codage standard. Entre l'utilisation par des débutants et celle d'utilisateurs expérimentés, il existe un grand nombre de raccourcis et d'extraits de code qui pourront accélérer vos conceptions. Bien que le terme "bloc de code" soit un peu intimidant pour les utilisateurs qui ne sont pas programmeurs, ce concept est à la fois facile à utiliser et robuste. Un débutant peut utiliser le bloc de code efficacement avec un minimum de codage, et un utilisateur avancé peut définir des définitions de script à utiliser ailleurs dans une définition Dynamo.
 
-### Code Block: A Brief Overview&#x20;
+### Nœud Code Block : présentation générale&#x20;
 
-In short, code blocks are a text-scripting interface within a visual-scripting environment. They can be used as numbers, strings, formulas, and other data types. The code block is designed for Dynamo, so one can define arbitrary variables in the code block, and those variables are automatically added to the inputs of the node:
+Pour faire court, les blocs de code sont une interface de génération de script de texte au sein d'un environnement de script visuel. Ils peuvent être utilisés en tant que nombres, chaînes, formules et autres types de données. Le bloc de code est conçu pour Dynamo, de sorte que l'on peut définir des variables arbitraires dans le bloc de code, et ces variables sont automatiquement ajoutées aux entrées du nœud :
 
-With code blocks, a user has the flexibility to decide how to specify inputs. Here are several different ways to make a basic point with coordinates _(10, 5, 0)_:&#x20;
+Avec les blocs de code, l'utilisateur peut décider de la méthode de spécification des entrées de manière flexible. Voici plusieurs méthodes pour créer un point de base avec les coordonnées _(10, 5, 0)_ :&#x20;
 
 ![](<../images/8-1/1/codeblock brief overview.jpg>)
 
-As you learn more of the available functions in the library, you might even find that typing “Point.ByCoordinates” is faster than searching in the library and finding the proper node. When you type in _"Point."_ for example, Dynamo will display a list of possible functions to apply to a Point. This makes the scripting more intuitive and will help with learning how to apply functions in Dynamo.
+Au fur et à mesure que vous découvrez les fonctions disponibles dans la bibliothèque, vous pouvez même constater que saisir "Point.ByCoordinates" est plus rapide que d'effectuer une recherche dans la bibliothèque et trouver le nœud approprié. Lorsque vous tapez _"Point",_ par exemple, Dynamo affiche une liste des fonctions possibles à appliquer à un point. Cela rend le script plus intuitif et aide à apprendre comment appliquer les fonctions dans Dynamo.
 
-### Creating Code Block Nodes
+### Création de nœuds de bloc de code
 
-The code block can be found in _Core>Input>Actions>Code Block_. But even faster, just double click on the canvas and the code block appears. This node is used so often, it's given full double-click privileges.
+Le bloc de code se trouve dans _Core > Entrée > Actions > Bloc de code_. Pour aller plus vite, il suffit de cliquer deux fois sur la zone de dessin pour afficher le bloc de code. Ce nœud est si souvent utilisé qu'il dispose de privilèges de double-clic.
 
 ![](<../images/8-1/1/creating codeblock nodes.jpg>)
 
-### Numbers, Strings and Formulas
+### Numéros, chaînes et formules
 
-Code blocks are also flexible towards data types. The user can quickly define numbers, strings, and formulas and the code block will deliver the desired output.
+Les blocs de code sont également flexibles en ce qui concerne les types de données. L'utilisateur peut rapidement définir des nombres, des chaînes et des formules, et le bloc de code fournit la sortie souhaitée.
 
-In the image below, you can see the "old school" way of doing things is a little long-winded: the user searches for the intended node in the interface, adds the node to the canvas, and then inputs the data. With code block, the user can double-click on the canvas to pull up the node, and type in the correct data type with basic syntax.
+Dans l'image ci-dessous, vous pouvez voir que la manière "classique" de faire les choses est un peu longue : l'utilisateur recherche le nœud voulu dans l'interface, ajoute le nœud à la zone de dessin, puis saisit les données. Avec le bloc de code, l'utilisateur peut double-cliquer sur la zone de dessin pour afficher le nœud et entrer le type de données correct avec la syntaxe de base.
 
-The number, string, and formula nodes are three examples of Dynamo nodes which are arguably obsolete in comparison to the code block.
+Les nœuds number, string et formula sont trois exemples de nœuds Dynamo qui sont probablement obsolètes par rapport au bloc de code.
 
 ![](<../images/8-1/1/old school vs code blocks nodes.jpg>)
 
-> 1. "Old-school"
-> 2. Code Blocks
+> 1. « La vieille école »
+> 2. Nœuds Code Block
 

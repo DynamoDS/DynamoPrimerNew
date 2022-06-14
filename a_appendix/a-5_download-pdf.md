@@ -1,9 +1,9 @@
-# Download PDF
+# Télécharger le PDF
 
-To access the information on this primer offline, download the pdf:&#x20;
+Pour accéder aux informations de ce guide hors ligne, téléchargez le fichier PDF :&#x20;
 
-## Releases:
+## Versions :
 
-#### Dynamo Primer v2.13:
+#### Guide Dynamo v2.13 :
 
 {% file src="../.gitbook/assets/Dynamo-Primer-v1.2.pdf" %}

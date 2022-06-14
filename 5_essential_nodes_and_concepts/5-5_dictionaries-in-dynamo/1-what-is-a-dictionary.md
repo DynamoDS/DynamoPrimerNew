@@ -1,40 +1,40 @@
-# What is a Dictionary
+# Qu'est-ce qu'un dictionnaire ?
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+Dynamo 2.0 introduit le concept de séparation du type de données de dictionnaire du type de données de liste. Ce changement peut entraîner des modifications importantes de la façon dont vous créez et utilisez les données dans vos workflows. Avant la version 2.0, les dictionnaires et les listes étaient combinés en tant que type de données. En résumé, les listes étaient en fait des dictionnaires avec des clés d'entier.
 
-### **What is a dictionary?**
+### **Qu'est-ce qu'un dictionnaire ?**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+Un dictionnaire est un type de données composé d'un ensemble de paires clé-valeur, où chaque clé est unique dans chaque ensemble. Un dictionnaire n'a pas d'ordre et vous pouvez, en fait, rechercher des éléments à l'aide d'une clé au lieu d'une valeur d'index, comme dans une liste. _Dans Dynamo 2.0, les clés peuvent uniquement être des chaînes._
 
-### **What is a list?**
+### **Qu'est-ce qu'une liste ?**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+Une liste est un type de données composé d'un ensemble de valeurs ordonnées. Dans Dynamo, les listes utilisent des entiers comme valeurs d'index.
 
-### **Why was this change made and why should I care?**
+### **Pourquoi ce changement a-t-il été fait et en quoi suis-je concerné ?**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+La séparation des dictionnaires et des listes place les dictionnaires comme citoyens de première classe que vous pouvez utiliser pour stocker et rechercher rapidement et facilement des valeurs, sans avoir à mémoriser une valeur d'index ou à maintenir une structure de listes stricte tout au long de votre workflow. Lors des tests utilisateur, nous avons constaté une réduction significative de la taille du graphique lorsque les dictionnaires étaient utilisés à la place de plusieurs nœuds `GetItemAtIndex`.
 
-### **What are the changes?**
+### **Quels sont les changements ?**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* Des modifications de _syntaxe_ ont été apportées. Elles changent la façon dont vous allez initialiser et utiliser les dictionnaires et les listes dans les blocs de code.
+   * Les dictionnaires utilisent la syntaxe suivante : `{key:value}`
+   * Les listes utilisent la syntaxe suivante : `[value,value,value]`
+* De _nouveaux nœuds_ ont été introduits dans la bibliothèque pour vous aider à créer et à modifier les dictionnaires, ainsi qu'à leur envoyer des requêtes.
+* Les listes créées dans les nœuds Code Block v1.x seront automatiquement migrées au chargement du script vers la nouvelle syntaxe de liste qui utilise des crochets `[ ]` au lieu des accolades `{ }` \\
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **En quoi suis-je concerné ? Dans quel but dois-je les utiliser ?**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+En informatique, les dictionnaires, comme les listes, sont des collections d'objets. Tandis que les listes suivent un ordre spécifique, les dictionnaires sont des ensembles _non ordonnés_. Ils ne dépendent pas des numéros séquentiels (index), mais utilisent des _clés._
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+Dans l'image ci-dessous, nous présentons un cas d'utilisation potentiel d'un dictionnaire. Souvent, les dictionnaires servent à relier deux types de données qui ne possèdent pas de corrélation directe. Dans notre cas, nous connectons la version espagnole d'un mot à la version anglaise pour une recherche ultérieure.
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. Créez un dictionnaire pour relier les deux types de données.
+> 2. Obtenez la valeur avec la clé donnée.

@@ -1,12 +1,12 @@
-# Geometric Primitives
+# Primitives géométriques
 
-### CoordinateSystem
+### Système de coordonnées
 
-While Dynamo is capable of creating a variety of complex geometric forms, simple geometric primitives form the backbone of any computational design: either directly expressed in the final designed form, or used as scaffolding off of which more complex geometry is generated.
+Bien que Dynamo soit capable de créer diverses formes géométriques complexes, les primitives géométriques simples constituent la base de toute conception informatique. Elles sont soit directement exprimées dans la forme finale de la conception, soit utilisées comme armature à partir de laquelle une géométrie plus complexe est générée.
 
-While not strictly a piece of geometry, the CoordinateSystem is an important tool for constructing geometry. A CoordinateSystem object keeps track of both position and geometric transformations such as rotation, sheer, and scaling.
+Bien qu'il ne s'agisse pas d'une partie de la géométrie à strictement parler, le CoordinateSystem est un outil important pour la construction d'une géométrie. Un objet CoordinateSystem conserve une trace des transformations de position et géométriques, telles que la rotation, la transvection et la mise à l'échelle.
 
-Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with no rotations, scaling, or sheering transformations, simply requires calling the Identity constructor:
+La création d'un CoordinateSystem centré sur un point avec x = 0, y = 0, z = 0, sans rotation ni transformation de transvection ni de mise à l'échelle, requiert simplement l'appel du constructeur Identity :
 
 ![](../images/8-2/2/GeometricPrimitives\_01.png)
 
@@ -17,7 +17,7 @@ Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with n
 cs = CoordinateSystem.Identity();
 ```
 
-CoordinateSystems with geometric transformations are beyond the scope of this chapter, though another constructor allows you to create a coordinate system at a specific point, _CoordinateSystem.ByOriginVectors_:
+Les CoordinateSystems avec transformations géométriques dépassent la portée de ce chapitre, bien qu'un autre constructeur vous permette de créer un système de coordonnées à un point spécifique, à savoir _CoordinateSystem.ByOriginVectors_ :
 
 ![](../images/8-2/2/GeometricPrimitives\_02.png)
 
@@ -37,9 +37,9 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 ### Point
 
-The simplest geometric primitive is a Point, representing a zero-dimensional location in three-dimensional space. As mentioned earlier there are several different ways to create a point in a particular coordinate system: _Point.ByCoordinates_ creates a point with specified x, y, and z coordinates; _Point.ByCartesianCoordinates_ creates a point with a specified x, y, and z coordinates in a specific coordinate system; _Point.ByCylindricalCoordinates_ creates a point lying on a cylinder with radius, rotation angle, and height; and _Point.BySphericalCoordinates_ creates a point lying on a sphere with radius and two rotation angle.
+La primitive géométrique la plus simple est un point, représentant un emplacement à zéro dimension dans un espace tridimensionnel. Comme indiqué précédemment, il existe plusieurs méthodes pour créer un point dans un système de coordonnées particulier : _Point.ByCoordinates_ crée un point avec les coordonnées x, y et z spécifiées ; _Point.ByCartesianCoordinates_ crée un point avec les coordonnées x, y et z dans un système de coordonnées spécifique ; _Point.ByCylindricalCoordinates_ crée un point se trouvant sur un cylindre, avec rayon, angle de rotation et hauteur ; et _Point.BySphericalCoordinates_ crée un point situé sur une sphère avec un rayon et deux angles de rotation.
 
-This example shows points created at various coordinate systems:
+Cet exemple montre des points créés sur différents systèmes de coordonnées :
 
 ![](../images/8-2/2/GeometricPrimitives\_03.png)
 
@@ -73,9 +73,9 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Line&#x20;
+### Ligne&#x20;
 
-The next higher dimensional Dynamo primitive is a line segment, representing an infinite number of points between two end points. Lines can be created by explicitly stating the two boundary points with the constructor _Line.ByStartPointEndPoint_, or by specifying a start point, direction, and length in that direction, _Line.ByStartPointDirectionLength_.
+La primitive Dynamo dimensionnelle supérieure suivante est un segment de ligne, représentant un nombre infini de points entre deux extrémités. Les lignes peuvent être créées en spécifiant explicitement les deux points de limite avec le constructeur _Line.ByStartPointEndPoint_, ou en spécifiant un point de départ, une direction et une longueur dans cette direction, _Line.ByStartPointDirectionLength_.
 
 ![](../images/8-2/2/GeometricPrimitives\_04.png)
 
@@ -92,9 +92,9 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### 3D Primitives - Cuboid, Cone, Cylinder, Sphere, etc
+### Primitives 3D : cuboïde, cône, cylindre, sphère, etc.
 
-Dynamo has objects representing the most basic types of geometric primitives in three dimensions: Cuboids, created with _Cuboid.ByLengths_; Cones, created with _Cone.ByPointsRadius_ and _Cone.ByPointsRadii_; Cylinders, created with _Cylinder.ByRadiusHeight_; and Spheres, created with _Sphere.ByCenterPointRadius_.
+Dynamo comporte des objets représentant les principaux types de primitives géométriques de base en trois dimensions : des cuboïdes créés avec _Cuboid.ByLengths_ ; des cônes créés avec _Cone.ByPointsRadius_ et _Cone.ByPointsRadii_ ; des cylindres créés avec _Cylindre.ByRadiusHeight_ ; et des sphères créées avec _Sphere.ByCenterPointRadius_.
 
 ![](../images/8-2/2/GeometricPrimitives\_05.png)
 

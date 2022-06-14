@@ -1,259 +1,259 @@
-# Graph Strategies
+# Stratégies de graphiques
 
-Prior to this chapter, the Primer has covered how to implement the powerful visual-scripting capabilities of Dynamo. A good understanding of these capabilities is a solid foundation and the first step in building robust visual programs. When we use our visual programs in the field, share them with colleagues, troubleshoot errors, or test limits we have additional issues to deal with. If someone else will be using your program or you are expecting to open it six months from now, it needs to have an immediate graphic and logical clarity. Dynamo has many tools to manage the complexity of your program, and this chapter will give guidelines on when to use them.
+Avant ce chapitre, le guide a présenté les étapes à suivre pour mettre en œuvre les puissantes fonctionnalités de script visuel de Dynamo. Une bonne compréhension de ces fonctionnalités est une base solide et la première étape dans la construction de programmes visuels fiables. Lorsque vous utilisez vos programmes visuels sur le terrain, partagez-les avec vos collègues, corrigez les erreurs ou testez les limites avec lesquelles vous rencontrez d'autres problèmes. Si une autre personne va utiliser votre programme ou si vous souhaitez l'ouvrir dans six mois, il doit être clair d'un point de vue graphique et logique dès l'ouverture. Dynamo dispose de nombreux outils pour gérer la complexité de votre programme. Ce chapitre vous expliquera les conditions d'utilisation de ces derniers.
 
-![groups](images/1/cad-chart-visual.jpg)
+![groupes](images/1/cad-chart-visual.jpg)
 
-## Reduce Complexity
+## Simplification des processus
 
-As you develop your Dynamo graph and test ideas, it can quickly grow in size and complexity. While it is important that you create a functioning program, it is equally important to make it as simple as possible. Not only will your graph run faster and more predictably, you along with other users will understand its logic later on. The following are several ways that will help you clarify the logic of your graph.
+Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille et la complexité de ce dernier peuvent rapidement augmenter. Bien qu’il soit important de créer un programme fonctionnel, il est tout aussi crucial de le faire le plus simplement possible. Non seulement votre graphique s'exécutera plus rapidement et de manière plus prévisible, mais vous comprendrez sa logique ultérieurement. Les méthodes suivantes vous aideront à clarifier la logique de votre graphique.
 
-### **Modularize with Groups**
+### **Modularisation avec les groupes**
 
-* Groups allow you to **create functionally distinct parts** as you build a program
-* Groups allow you to **move large parts of the program** around while maintaining modularity and alignment
-* You can change the **color of the group to differentiate** what Groups are doing (inputs vs functions)
-* You can use groups to start **organizing your graph to streamline Custom Node creation**
+* Les groupes vous permettent de **créer des pièces fonctionnellement distinctes** lorsque vous construisez un programme
+* Les groupes vous permettent de **déplacer de grandes parties du programme** tout en maintenant la modularité et l'alignement
+* Vous pouvez modifier la **couleur du groupe pour différencier** ce que font les groupes (entrées et fonctions)
+* Vous pouvez utiliser des groupes pour commencer à **organiser votre graphique afin de simplifier la création de nœuds personnalisés**
 
 ![](images/1/graphstrategy2.png)
 
-> The colors in this program identify the purpose of each group. This strategy can be used to create hierarchy in any graphic standards or templates you develop.
+> Les couleurs de ce programme identifient l'objectif de chaque groupe. Cette stratégie sert à créer une hiérarchie dans les normes graphiques ou les gabarits que vous développez.
 >
-> 1. Function group (blue)
-> 2. Input group (orange)
-> 3. Script group (green)
+> 1. Groupe de fonctions (bleu)
+> 2. Groupe d'entrées (orange)
+> 3. Groupe de scripts (vert)
 >
-> For how to use Groups, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Pour savoir comment utiliser les groupes, reportez-vous à la rubrique [Gestion de votre programme](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-### **Develop efficiently with Code Blocks**
+### **Développement efficace avec les blocs de code**
 
-* At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
-* Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
+* Vous pouvez parfois utiliser un bloc de code pour **saisir un nombre ou une méthode de nœud plus rapidement qu'en effectuant une recherche** (Point.ByCoordinates, Number, String, Formula)
+* Les blocs de code sont utiles **lorsque vous souhaitez définir des fonctions personnalisées dans DesignScript afin de réduire le nombre de nœuds dans un graphique**
 
 ![](<images/1/graphstrategy3 (1).png>)
 
-> Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
+> Les deux encadrés exécutent la même fonction. Il était beaucoup plus rapide d'écrire quelques lignes de code que de rechercher et d'ajouter chaque nœud individuellement. Le bloc de code est également beaucoup plus concis.
 >
-> 1. Design Script written in Code Block
-> 2. Equivalent program in nodes
+> 1. Script de conception écrit en bloc de code
+> 2. Programme équivalent en nœuds
 >
-> For how to use Code Block, refer to [What's a Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Pour savoir comment utiliser le bloc de code, reportez-vous à la rubrique [Définition d'un bloc de code](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
 
-### **Condense with Node to Code**
+### **Condenser grâce à Nœud vers code**
 
-* You can **reduce the complexity of a graph by using Node to Code** which will take a collection of simple nodes and write their corresponding DesignScript in a single Code Block
-* Node to Code can\*\* condense code without eliminating the program’s clarity\*\*
-* The following are the **pros** of using Node to Code:
-  * Easily condenses code into one component that is still editable
-  * Can simplify a significant portion of the graph
-  * Useful if the ‘mini-program’ will not often be edited
-  * Useful for incorporating other code block functionality, like functions
-* The following are the **cons** of using Node to Code:
-  * Generic naming makes it less legible
-  * More difficult to understand for other users
-  * No easy way to return to the visual programming version
+* Vous pouvez **réduire la complexité d'un graphique en utilisant la fonctionnalité Nœud vers code** : elle permet de sélectionner un ensemble de nœuds simples et d'en écrire le DesignScript correspondant dans un bloc de code unique
+* La fonctionnalité Nœud vers code permet de\*\* condenser du code sans nuire à la clarté du programme\*\*
+* Voici les **avantages** de l'utilisation de Nœud vers code :
+   * Condense facilement du code en un composant qui reste modifiable
+   * Peut simplifier une partie significative du graphique
+   * Utile si le mini-programme ne sera pas souvent modifié
+   * Utile pour intégrer d'autres fonctionnalités de bloc de code, telles que des fonctions
+* Voici les **inconvénients** de l'utilisation de Nœud vers code :
+   * L'attribution de noms génériques réduit la lisibilité
+   * Plus difficile à comprendre pour les autres utilisateurs
+   * Aucun moyen simple de revenir à la version de programmation visuelle
 
 ![](images/1/graphstrategy3\_1.png)
 
-> 1. Existing program
-> 2. Code Block created from Node to Code
+> 1. Programme existant
+> 2. Bloc de code créé à partir de Nœud vers code
 >
-> For how to use Node to Code, refer to [Design Script Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Pour savoir comment utiliser la fonctionnalité Nœud vers code, reportez-vous à la rubrique [Syntaxe du script de conception](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
 
-### **Access data flexibly with List@Level**
+### **Accès aux données en toute flexibilité grâce à List@Level**
 
-* Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
-* List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
+* L'utilisation de List@Level vous permet de **réduire la complexité de votre graphique en remplaçant les nœuds List.Map et List.Combine** qui peuvent occuper une grande partie de la zone de dessin
+* List@Level fournit une méthode plus\*\* rapide que List.Map/List.Combine pour établir la logique de nœud\*\* en vous permettant d’accéder aux données à n’importe quel niveau d’une liste, directement à partir du port d’entrée d’un nœud
 
 ![](<images/1/graphstrategy4 (1) (1).png>)
 
-> We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
+> Vous pouvez vérifier le nombre de valeurs True renvoyées par BoundingBox.Contains et dans quelles listes ces valeurs sont renvoyées en activant List@Level pour l'entrée "list" de CountTrue. La fonction List@Level permet à l'utilisateur de déterminer à quel niveau l'entrée va extraire des données. La fonction List@Level est flexible, efficace et vivement recommandée par rapport à d'autres méthodes impliquant List.Map et List.Combine.
 >
-> 1. Counting true values at List Level 2
-> 2. Counting true values at List Level 3
+> 1. Comptage des valeurs True au niveau de la liste 2
+> 2. Comptage de valeurs True au niveau de la liste 3
 >
-> For how to use List@Level, refer to [Lists of Lists](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Pour savoir comment utiliser List@Level, reportez-vous à la rubrique [Listes de listes](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
 
-## Maintain Readability
+## Maintenir la lisibilité
 
-In addition to making your graph as simple and efficient as possible, strive for graphic clarity. Despite your best efforts to make your graph intuitive with logical groupings, relationships might not be readily apparent. A simple Note inside of a Group or renaming a slider can save you or another user from unnecessary confusion or panning across the graph. The following are several ways that will help you apply graphic consistency within and across your graphs.
+En plus de rendre le graphique aussi simple et efficace que possible, essayez d'améliorer la clarté graphique. Malgré vos efforts pour rendre votre graphique intuitif grâce à des regroupements logiques, les relations risquent de ne pas être évidentes. L'insertion d'une note simple dans un groupe ou l'attribution de nouveaux noms aux curseurs permet aux utilisateurs d'éviter tout malentendu ou mouvement panoramique inutile sur le graphique. Les méthodes suivantes vous aideront à appliquer la cohérence graphique dans vos graphiques.
 
-### **Visual continuity with Node Alignment**
+### **Continuité visuelle grâce à l'alignement des nœuds**
 
-* To reduce your work after you finished building your graph, you should try to ensure the node layout is legible by **aligning nodes often and as you go**
-* If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
-* To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
+* Pour réduire votre charge de travail après avoir créé votre graphique, assurez-vous que la disposition des nœuds est lisible en **alignant les nœuds régulièrement et au fur et à mesure de votre travail**
+* Si d'autres utilisateurs vont travailler avec votre graphique, **assurez-vous que la disposition des liaisons de nœud s'enchaîne facilement avant la livraison**
+* Pour vous aider avec la tâche d'alignement, **utilisez la fonction "Arranger l'affichage des nœuds" pour aligner automatiquement** votre graphique, même si elle est moins précise que vous-même
 
 ![](<images/1/graphstrategy5 (2) (1).png>)
 
-> 1. Unorganized graph
-> 2. Aligned graph
+> 1. Graphique non organisé
+> 2. Graphe aligné
 >
-> For how to use Node Alignment, refer to [Managing Your Program](3-4\_best\_practices.md).
+> Pour utiliser l'alignement de nœud, reportez-vous à la rubrique [Gestion de votre programme](3-4\_best\_practices.md).
 
-### **Descriptive labeling by renaming**
+### **Étiquetage descriptif par changement de nom**
 
-* Renaming inputs can help others easily understand your graph, **especially if what they plug into will be off the screen**
-* **Be wary of renaming nodes other than inputs.** An alternative to this is creating a custom node from a node cluster and renaming that; it will be understood that it contains something else
+* L'attribution de nouveaux noms aux entrées permet aux autres utilisateurs de comprendre facilement votre graphique, **notamment si ce qu'ils connectent n'est pas affiché à l'écran**
+* **Veillez à renommer les nœuds en plus des entrées.** Une autre solution consiste à créer un nœud personnalisé à partir d'un cluster de nœuds et à le renommer. Il sera alors évident qu'il contient autre chose
 
 ![](images/1/graphstrategy6.png)
 
-> 1. Inputs for surface manipulation
-> 2. Inputs for architectural parameters
-> 3. Inputs for drainage simulation script
+> 1. Entrées pour la manipulation de surfaces
+> 2. Entrées pour les paramètres architecturaux
+> 3. Entrées du script de simulation de drainage
 >
-> To rename a node, right click on its name and choose "Rename Node...".
+> Pour renommer un nœud, cliquez avec le bouton droit de la souris sur son nom et sélectionnez "Renommer le nœud...".
 
-### **Explain with Notes**
+### **Explication avec des notes**
 
-* You should add a Note if something in the **graph requires a plain language explanation** that the nodes can not express
-* You should add a Note if a collection of **nodes or a Group is too large or complex and can’t be easily understood right away**
+* Vous devez ajouter une note si quelque chose dans le **graphique requiert une explication en langage simple** que les nœuds ne peuvent pas exprimer
+* Vous devez ajouter une note si un ensemble de **nœuds ou de groupes est trop volumineux ou trop complexe et ne peut pas être facilement compris immédiatement**
 
 ![](images/1/graphstrategy7.png)
 
-> 1. A Note describing the portion of the program that returns raw translation distances
-> 2. A Note describing the code that maps those values to a Sine wave
+> 1. Note décrivant la partie du programme qui renvoie les distances de conversion brutes
+> 2. Note décrivant le code qui mappe ces valeurs avec une onde sinusoïdale
 >
-> For how to add a Note, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Pour savoir comment ajouter une note, reportez-vous à la rubrique [Gestion de votre programme](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-## Flex Continuously
+## Flexibilité continue
 
-While building your visual-script, it is important to verify that what is being returned is what you expected. Not all errors or issues will cause the program to fail immediately, especially null or zero values that could affect something far downstream. This strategy is also discussed in the context of text-scripting in [Scripting Strategies](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). The following practice will help ensure that you are getting what you expected.
+Lors de la création de votre script visuel, il est important de vérifier que le résultat renvoyé est celui attendu. Les erreurs ou les problèmes ne provoqueront pas tous l'échec immédiat du programme, notamment les valeurs nulles qui peuvent avoir une incidence sur un élément en aval. Cette stratégie est également abordée dans le contexte de la création de scripts de texte dans [Stratégies de script](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). La pratique suivante permet de vous assurer que vous obtenez le résultat attendu.
 
-### **Monitor data with Watch and Preview Bubbles**
+### **Surveiller les données avec les bulles Watch et d'aperçu**
 
-* Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
+* Utilisez les bulles Watch et d’aperçu lorsque vous créez le programme pour\*\* vérifier que les sorties clés renvoient le résultat attendu\*\*
 
 ![](images/1/graphstrategy8.png)
 
-> The Watch nodes are being used to compare:
+> Les nœuds Watch sont utilisés pour comparer :
 >
-> 1. The raw translation distances
-> 2. The values passed through the Sine equation
+> 1. Distances de conversion brutes
+> 2. Valeurs transmises par l'équation sinusoïdale
 >
-> For how to use Watch, refer to [Library](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Pour savoir comment utiliser le nœud Watch, reportez-vous à la rubrique [Bibliothèque](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
 
-## Ensure Reusability
+## Garantir la réutilisation
 
-It is highly likely that someone else will be opening your program at some point, even if you are working independently. They should be able to quickly understand what the program needs and produces from its inputs and outputs. This is especially important when developing a Custom Node to be shared with the Dynamo community and used in someone else’s program. These practices lead to robust, reusable programs and nodes.
+Il est fort probable qu'une autre personne ouvre votre programme à un moment donné, même si vous travaillez indépendamment. Cette personne doit pouvoir comprendre rapidement ce dont le programme a besoin et ce qu'il produit à partir de ses entrées et sorties. Cela est particulièrement important lorsque vous développez un nœud personnalisé à partager avec la communauté Dynamo et à utiliser dans le programme d'un autre utilisateur. Ces pratiques permettent de construire des programmes et des nœuds robustes et réutilisables.
 
-### **Manage the I/O**
+### **Gérer les E/S**
 
-* To ensure legibility and scalability, you should try and **minimize inputs and outputs as much as possible**
-* You should try to **strategize how you are going to build the logic by first creating a rough outline** of how the logic could work before you even add a single node to the canvas. As you develop the rough outline, you should keep track of which inputs and outputs will go into scripts
+* Pour garantir la lisibilité et l'évolutivité, essayez de **réduire les entrées et les sorties autant que possible**
+* Essayez de **déterminer la méthode de création de la logique en créant d'abord une ébauche** de la manière dont la logique peut fonctionner avant d'ajouter un nœud à la zone de dessin. Lorsque vous développez la première ébauche, effectuez un suivi des entrées et des sorties qui seront converties en scripts
 
-### **Use Presets to embed input values**
+### **Utiliser les valeurs prédéfinies pour incorporer les valeurs d'entrée**
 
-* If there are **particular options or conditions that you want embedded in the graph**, you should use Presets for quick access
-* You can also use Presets to **reduce complexity by caching specific slider values** in a graph with long run times
+* Si vous souhaitez **intégrer des options ou conditions particulières au graphique**, utilisez les valeurs prédéfinies pour y accéder rapidement
+* Vous pouvez également utiliser les valeurs prédéfinies pour **réduire la complexité en mettant en cache des valeurs de curseur spécifiques** dans un graphique avec des temps d'exécution longs
 
-> For how to use Presets, refer to [Managing Your Data with Presets](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Pour savoir comment utiliser les valeurs prédéfinies, reportez-vous à la rubrique [Gestion des données à l’aide des valeurs prédéfinies](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
-### **Contain programs with Custom Nodes**
+### **Limiter les programmes grâce aux nœuds personnalisés**
 
-* You should use a Custom Node if your **program can be collected into a single container**
-* You should use a a Custom Node **when a portion of the graph will be reused often** in other programs
-* You should use a Custom Node if you want to **share a functionality with the Dynamo Community**
+* Vous devez utiliser un nœud personnalisé si votre **programme peut être regroupé dans un seul conteneur**
+* Vous devez utiliser un nœud personnalisé **lorsqu'une partie du graphique sera réutilisée souvent** dans d'autres programmes
+* Vous devez utiliser un nœud personnalisé pour **partager une fonctionnalité avec la communauté Dynamo**
 
 ![](images/1/graphstrategy9.png)
 
-> Collecting the point translation program into a Custom Node makes a robust, unique program portable and far easier to understand. Well named input ports will help other users understand how to use the node. Remember to add descriptions and required data types for each input.
+> La collecte du programme de conversion de points dans un nœud personnalisé permet de simplifier et de rendre transférable un programme robuste et unique. Les ports d'entrée bien nommés aideront d'autres utilisateurs à comprendre comment utiliser le nœud. N'oubliez pas d'ajouter des descriptions et des types de données requis pour chaque entrée.
 >
-> 1. Existing attractor program
-> 2. Custom Node that collects this program, PointGrid
+> 1. Programme d'attraction existant
+> 2. Nœud personnalisé qui collecte ce programme, PointGrid
 >
-> For how to use Custom Nodes, refer to [Custom Node Introduction](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Pour savoir comment utiliser les nœuds personnalisés, reportez-vous à la rubrique [Présentation des nœuds personnalisés](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
 
-### **Build templates**
+### **Créer des gabarits**
 
-* You can build templates to **establish graphic standards across your visual graphs to ensure collaborators have a standardized way of understanding graph**
-* When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
-* When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
+* Vous pouvez créer des gabarits pour **établir des normes graphiques dans vos graphiques visuels afin de vous assurer que les collaborateurs comprennent le graphique de manière standardisée**
+* Lors de la création d'un gabarit, vous pouvez normaliser **les tailles de police et les couleurs de groupe** afin de classer les types de workflow ou d'actions de données.
+* Lors de la création d'un gabarit, vous pouvez même normaliser la façon dont vous souhaitez **étiqueter, colorer ou styliser la différence entre les workflows front-end et back-end** dans votre graphique.
 
 ![](<images/1/graphstrategy10 (2).png>)
 
-> 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
-> 2. The back-end of the program.
-> 3. Group color categories (the general design, inputs, Python scripting, imported geometry).
+> 1. L'interface utilisateur, ou la partie frontale, du programme inclut un nom de projet, des curseurs d'entrée et une géométrie d'importation.
+> 2. La partie back-end du programme.
+> 3. Regroupez les catégories de couleurs (conception générale, entrées, scripts Python, géométrie importée).
 
-## Exercise - Architectural Roof
+## Exercice - Toit architectural
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
-Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
+Maintenant que vous avez établi plusieurs meilleures pratiques, appliquez-les à un programme qui a été mis en place rapidement. Bien que le programme réussisse à générer le toit, l'état du graphique reflète le cheminement de pensée de l'auteur, à la manière d'une carte mentale. Il n'y a aucune organisation ou description de son utilisation. Vous allez parcourir les meilleures pratiques pour organiser, décrire et analyser le programme afin que d'autres utilisateurs puissent comprendre comment l'utiliser.
 
 ![](images/1/graphstrategy11.png)
 
-> The program is functioning, but the graph is disorganized.
+> Le programme fonctionne, mais le graphique est désorganisé.
 
-Let's start by determining the data and geometry returned by the program.
+Commençons par déterminer les données et la géométrie renvoyées par le programme.
 
 ![](images/1/graphstrategy12.png)
 
-> Understanding when major changes to the data occur is crucial to establishing logical divisions, or modularity. Try inspecting the rest of the program with Watch nodes to see if you can determine groups before moving on to the next step.
+> Comprendre quand des modifications importantes des données se produisent est crucial pour établir des divisions logiques, ou des modularités. Inspectez le reste du programme avec les nœuds Watch pour voir si vous pouvez déterminer les groupes avant de passer à l'étape suivante.
 >
-> 1. This **Code Block** with a math equation looks like a crucial piece of the program. A **Watch** node displays that it is returning lists of translation distances.
-> 2. The purpose of this area isn't readily obvious. The arrangement of True values at list level L2 from **BoundingBox.Contains** and the presence of **List.FilterByBoolMask** suggests we are sampling a portion of the point grid.
+> 1. Ce nœud **Code Block** avec une équation mathématique semble être un élément crucial du programme. Un nœud **Watch** indique qu’il renvoie des listes de distances de conversion.
+> 2. L'objectif de cette zone n'est pas évident. La disposition des valeurs True au niveau de la liste L2 de **BoundingBox.Contains** et la présence de **List.FilterByBoolMask** suggèrent que vous échantillonnez une partie de la grille de points.
 
-Once we understand the elemental parts of the program, let's put them in Groups.
+Une fois que vous avez identifié les composantes essentielles du programme, placez-les dans des groupes.
 
 ![](images/1/graphstrategy13.png)
 
-> Groups allow the user to visually differentiate the parts of the program.
+> Les groupes permettent à l'utilisateur de différencier visuellement les parties du programme.
 >
-> 1. Import 3D site model
-> 2. Translate point grid based on Sine equation
-> 3. Sample portion of point grid
-> 4. Create architectural roof surface
-> 5. Create glass curtain wall
+> 1. Importer un modèle de site 3D
+> 2. Convertir la grille de points en fonction de l'équation sinusoïdale
+> 3. Exemple de portion de grille de points
+> 4. Créer une surface de toit architecturale
+> 5. Créer un mur-rideau en verre
 
-With Groups established, align the nodes to create visual continuity across the graph.
+Lorsque les groupes sont établis, alignez les nœuds pour créer une continuité visuelle sur le graphique.
 
 ![](images/1/graphstrategy14.png)
 
-> Visual continuity helps the user to see the program flow and implicit relationships between nodes.
+> La continuité visuelle aide l'utilisateur à voir le flux du programme et les relations implicites entre les nœuds.
 
-Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
+Rendez le programme plus accessible en ajoutant un autre calque d'améliorations graphiques. Ajoutez des notes pour décrire le fonctionnement d'une zone spécifique du programme, donnez des noms personnalisés aux entrées et affectez des couleurs à différents types de groupes.
 
 ![](<images/1/graphstrategy15 (1).png>)
 
-> These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
+> Ces améliorations graphiques permettent à l'utilisateur de mieux connaître les activités du programme. Les différentes couleurs de groupe permettent de distinguer les entrées des fonctions.
 >
 > 1. Notes
-> 2. Inputs with descriptive names
+> 2. Entrées avec des noms descriptifs
 
-Before we start to condense the program, let's find a strategic location to introduce the Python script drainage simulator. Plug the output of the first scaled roof surface into the respective scripting input.
+Avant de commencer à condenser le programme, identifions un emplacement stratégique pour présenter le simulateur de drainage du script Python. Branchez la sortie de la première surface de toit mise à l'échelle dans l'entrée de script correspondante.
 
 ![](images/1/graphstrategy16.png)
 
-> We've chosen to integrate scripting at this point in the program so the drainage simulation can be run on the original, single roof surface. That specific surface is not being previewed, but it saves us from having to choose the top surface of the chamfered Polysurface.
+> Vous avez choisi d'intégrer les scripts à ce stade du programme afin que la simulation de drainage puisse être exécutée sur la surface de toit unique d'origine. Cette surface spécifique n'est pas affichée en aperçu, mais elle vous évite d'avoir à choisir la surface supérieure de la polysurface chanfreinée.
 >
-> 1. Source geometry for script input
-> 2. Python node
-> 3. Input sliders
-> 4. On/off "switch"
+> 1. Géométrie source pour l'entrée du script
+> 2. Nœud Python
+> 3. Curseurs d'entrée
+> 4. "Commutateur" activé/désactivé
 
-Let's simplify the graph now that everything is in place.
+Maintenant que tout est en place, simplifions le graphique.
 
 ![](images/1/graphstrategy17.png)
 
-> Condensing our program with Node to Code and Custom Node has greatly reduced the size of the graph. The groups that create the roof surface and walls have been converted to code since they are very specific to this program. The point translation group is contained in a Custom Node as it could be used in another program. In the example file, create your own custom node from the translate points group.
+> La condensation du programme grâce à Nœud vers code et à Nœud personnalisé a permis de réduire considérablement la taille du graphique. Les groupes qui créent la surface du toit et les murs ont été convertis en code, car ils sont très spécifiques de ce programme. Le groupe de conversion de points est contenu dans un nœud personnalisé, car il peut être utilisé dans un autre programme. Dans le fichier d'exemple, créez votre propre nœud personnalisé à partir du groupe Convertir les points.
 >
-> 1. Custom Node to contain the "translate point grid" group
-> 2. Node to Code to condense the "create architectural roof surface and curtain wall" groups
+> 1. Nœud personnalisé contenant le groupe "Convertir la grille de points"
+> 2. Nœud vers code permettant de condenser les groupes "Créer une surface de toit architecturale et un mur-rideau"
 
-As a final step, create presets for exemplary roof forms.
+Pour finir, créez des valeurs prédéfinies pour des formes de toit représentatives.
 
 ![](images/1/graphstrategy18.png)
 
-> These inputs are the primary drivers of the roof form and will help users see the potential of the program.
+> Ces entrées sont les principaux pilotes de la forme du toit et permettent aux utilisateurs de découvrir le potentiel du programme.
 
-Our program with views of two presets.
+Votre programme avec des vues de deux valeurs prédéfinies.
 
 ![](images/1/graphstrategy19.png)
 
 ![](images/1/graphstrategy20.png)
 
-> The roof drainage patterns give the user an analytical view of the respective presets.
+> Les motifs de drainage du toit permettent à l'utilisateur d'obtenir une vue analytique des valeurs prédéfinies respectives.

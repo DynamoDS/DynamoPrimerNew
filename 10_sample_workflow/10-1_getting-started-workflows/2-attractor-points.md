@@ -1,98 +1,98 @@
-# Attractor Points
+# Points d’attraction
 
-Attractor points are great for experimenting with geometric patterns. They can be used to create gradual changes to objects based on their distance.
+Les points d’attraction sont idéaux pour expérimenter les motifs géométriques. Ils peuvent être utilisés pour créer des changements progressifs aux objets en fonction de leur distance.
 
-This workflow will teach you how to:
+Ce workflow vous apprendra à effectuer les actions suivantes :
 
-* Create, manage and edit lists.
-* Move points in the 3D preview using direct manipulation.
-* Change the executing mode.
+* créer, gérer et modifier des listes ;
+* déplacer des points dans l’aperçu 3D à l’aide de la manipulation directe ;
+* modifier le mode d’exécution.
 
 ![](../images/10-1/2/attractor1.gif)
 
-## Defining our Objectives
+## Définition des objectifs
 
-In this exercise, we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
+Dans cet exercice, vous allez créer un cercle (_objectif_) dans lequel l’entrée radius est définie par une distance par rapport à un point situé à proximité (_relation_).
 
-![Hand Sketch of Circle](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
+![Esquisse à main levée du cercle](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
 
-> A point that defines a distance-based relationship is commonly referred to as an "Attractor." Here the distance to our Attractor Point will be used to specify how big our circle should be.
+> Un point qui définit une relation basée sur la distance est généralement appelé "point d'attraction". Ici, la distance jusqu'au point d'attraction est utilisée pour spécifier la taille du cercle.
 
-## Next steps
+## Etapes suivantes
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
 
-Now that we have our objectives and relationships sketched we can begin creating our graph. We need the Nodes that will represent the sequence of actions Dynamo will execute. Let's start by adding the following nodes: **Number**, **Number Slider**, **Point.ByCoordinates**, **Geometry.DistanceTo, Circle.ByCenterPointRadius.**
+Maintenant que vos objectifs et relations sont schématisés, vous pouvez commencer à créer votre graphique. Vous avez besoin des nœuds qui représentent la séquence d'actions exécutée par Dynamo. Tout d’abord, ajoutez les nœuds suivants : **Number**, **Number Slider**, **Point.ByCoordinates**, **Geometry.DistanceTo, Circle.ByCenterPointRadius.**
 
 ![](<../images/10-1/2/attractor (2).png>)
 
-> 1. Input > Basic > **Number**
-> 2. Input > Basic > **Number Slider**
-> 3. Geometry > Points > Point > **By Coordinates(x,y,z)**
-> 4. Geometry > Modifiers > Geometry > **DistanceTo**
-> 5. Geometry > Curves > Circle > **ByCenterPointRadius**
+> 1. Input > Basic > **Number**
+> 2. Input > Basic > **Number Slider**
+> 3. Geometry > Points > Point > **By Coordinates(x,y,z)**
+> 4. Geometry > Modifiers > Geometry > **DistanceTo**
+> 5. Geometry > Curves > Circle > **ByCenterPointRadius**
 
-### Connecting Nodes with Wires
+### Connexion de nœuds avec des fils
 
-Now that we have a few Nodes, we need to connect the Ports of the Nodes with Wires. These connections will define the flow of data.
+Maintenant que vous avez quelques nœuds, connectez les ports des nœuds avec des fils. Ces connexions définissent le flux de données.
 
 ![](<../images/10-1/2/attractor (3).png>)
 
-> 1. **Number** to **Point.ByCoordinates**
-> 2. **Number Sliders** to **Point.ByCoordinates**
-> 3. **Point.ByCoordinates** (2) to **DistanceTo**
-> 4. **Point.ByCoordinates** and **DistanceTo** to **Circle.ByCenterPointRadius**
+> 1. **Number** avec **Point.ByCoordinates**
+> 2. **Number Sliders** avec **Point.ByCoordinates**
+> 3. **Point.ByCoordinates** (2) avec **DistanceTo**
+> 4. **Point.ByCoordinates** et **DistanceTo** avec **Circle.ByCenterPointRadius**
 
-### Executing the Program
+### Exécution du programme
 
-With our Program Flow defined, all we need to do is tell Dynamo to execute it. Once our program is executed (either Automatically or when we click Run in Manual Mode), data will pass through the Wires, and we should see the results in the 3d Preview.
+Lorsque le flux de programme a été défini, il suffit de demander à Dynamo de l'exécuter. Une fois le programme exécuté (automatiquement ou en mode manuel), les données passent par les fils et les résultats s'affichent dans l'aperçu 3D.
 
 ![](<../images/10-1/2/attractor (4).png>)
 
-> 1. (Click Run) - If the Execution Bar is in Manual Mode, we need to Click Run to execute the graph
-> 2. Node Preview - Hovering your mouse over the box on the lower right corner of a Node will give you a pop-up of the results
-> 3. 3D Preview - If any of our Nodes create geometry, we will see it in the 3D Preview.
-> 4. The output geometry on the creation node.
+> 1. Cliquez sur Exécuter : si la barre d'exécution est en mode manuel, cliquez sur Exécuter pour exécuter le graphique.
+> 2. Aperçu du nœud : placez le curseur de la souris sur la boîte située dans le coin inférieur droit d'un nœud pour afficher une fenêtre contextuelle des résultats.
+> 3. Aperçu 3D : si l'un des nœuds crée une géométrie, elle s'affiche dans l'aperçu 3D.
+> 4. Géométrie de sortie sur le nœud de création.
 
-### Adding **a Code Block**
+### Ajout d’**un nœud Code Block**
 
-If our program is working, we should see a circle in the 3D Preview that is passing through our Attractor Point. This is great, but we may want to add more detail or more controls. Let's adjust the input to the circle Node so that we can calibrate the influence on the radius. Add another **Number Slider** to the Workspace, then double click on a blank area of the Workspace to add a **Code Block** Node. Edit the field in the Code Block, specifying `X/Y`.
+Si votre programme fonctionne, un cercle qui passe par le point d'attraction doit apparaître dans l'aperçu 3D. C'est parfait, mais vous pouvez ajouter plus de détails ou plus de contrôles. Ajustez l'entrée au nœud de cercle afin de pouvoir calibrer l'influence sur le rayon. Ajoutez un autre **Number Slider** à l'espace de travail, puis cliquez deux fois sur une zone vide de l'espace de travail pour ajouter un nœud **Code Block**. Modifiez le champ dans le nœud Code Block pour spécifier `X/Y`.
 
 ![](<../images/10-1/2/attractor (5).png>)
 
 > 1. **Code Block**
-> 2. **DistanceTo** and **Number Slider** to **Code Block**
-> 3. **Code Block** to **Circle.ByCenterPointRadius**
+> 2. **DistanceTo** et **Number Slider** avec **Code Block**
+> 3. **Code Block** avec **Circle.ByCenterPointRadius**
 
-### Using Sequences
+### Utilisation de séquences
 
-Starting simple and building complexity is an effective way to incrementally develop our program. Once it is working for one circle, let's apply the power of the program to more than one circle. Instead of one center point, if we use a grid of points and accommodate the change in the resulting data structure, our program will now create many circles - each with a unique radius value defined by the calibrated distance to the Attractor Point.
+Commencer simplement et augmenter la complexité au fur et à mesure est un moyen efficace de développer progressivement votre programme. Une fois que ce programme fonctionne pour un cercle, appliquez sa puissance à plusieurs cercles. Au lieu d'un point central, si vous utilisez une grille de points et prenez en compte la modification de la structure de données obtenue, votre programme va créer un grand nombre de cercles, chacun avec une valeur de rayon unique définie par la distance calibrée par rapport au point d'attraction.
 
 ![](<../images/10-1/2/attractor (6).png>)
 
-> 1. Add a **Number Sequence** Node and replace the inputs of **Point.ByCoordinates** - Right Click Point.ByCoordinates and select Lacing > Cross Reference
-> 2. Add a **Flatten** Node after Point.ByCoordinates. To flatten a list completely, leave the `amt` input at the default of `-1`
-> 3. The 3D Preview will update with a grid of circles
+> 1. Ajoutez un nœud **Number Sequence** et remplacez les entrées de **Point.ByCoordinates**. Cliquez avec le bouton droit sur Point.ByCoordinates et sélectionnez Combination > Produit vectoriel.
+> 2. Ajoutez un nœud **Flatten** après Point.ByCoordinates. Pour aplanir complètement une liste, laissez l’entrée `amt` à la valeur par défaut de `-1`.
+> 3. L'aperçu 3D est mis à jour avec une grille de cercles.
 
-### Adjusting with Direct Manipulation
+### Ajustement avec manipulation directe
 
-Sometimes numerical manipulation isn't the right approach. Now you can manually push and pull Point geometry when navigating in the background 3D preview. We can also control other geometry that was constructed by a point. For example, **Sphere.ByCenterPointRadius** is capable of Direct Manipulation as well. We can control the location of a point from a series of X, Y, and Z values with **Point.ByCoordinates**. With the Direct Manipulation approach, however, you are able to update the values of the sliders by manually moving the point in the **3D Preview Navigation** mode. This offers a more intuitive approach to controlling a set of discrete values that identify a point's location.
+Parfois, la manipulation numérique n'est pas la bonne approche. Vous pouvez désormais manipuler manuellement la géométrie de points lorsque vous naviguez dans l'aperçu 3D en arrière-plan. Vous pouvez également contrôler d'autres géométries créées à l'aide d'un point. Par exemple, **Sphere.ByCenterPointRadius** peut également être manipulé directement. Vous pouvez contrôler l'emplacement d'un point à partir d'une série de valeurs X, Y et Z à l'aide de **Point.ByCoordinates**. Toutefois, avec l'approche de manipulation directe, vous pouvez mettre à jour les valeurs des curseurs en déplaçant manuellement le point dans le mode de **navigation de l'aperçu 3D**. Cela offre une approche plus intuitive afin de contrôler un ensemble de valeurs discrètes qui identifient l'emplacement d'un point.
 
 ![](<../images/10-1/2/attractor (7).png>)
 
-> 1. To use **Direct Manipulation**, select the panel of the point to be moved – arrows will appear over the point selected.
-> 2. Switch to **3D Preview Navigation** mode.
+> 1. Pour utiliser la **manipulation directe**, sélectionnez le panneau du point à déplacer : les flèches apparaissent sur le point sélectionné.
+> 2. Passez en mode de **navigation dans l'aperçu 3D**.
 
 ![](../images/10-1/2/attractor\(8\).png)
 
-> 1. Hover over the point and the X, Y, and Z axes will appear.
-> 2. Click and drag the colored arrow to move the corresponding axis, and the **Number Slider** values will update live with the manually moved point.
+> 1. Placez le curseur sur le point pour afficher les axes X, Y et Z.
+> 2. Cliquez sur la flèche de couleur et faites-la glisser pour déplacer l'axe correspondant. Les valeurs de **Number Slider** sont mises à jour à mesure que le point est déplacé manuellement.
 
 ![](<../images/10-1/2/attractor (1).png>)
 
-> 1. Note that before **Direct Manipulation** only one slider was plugged into the **Point.ByCoordinates** component. When we manually move the point in the X-direction, Dynamo will automatically generate a new **Number Slider** for the X input.
+> 1. Avant la **manipulation directe**, un seul curseur était branché au composant **Point.ByCoordinates**. Lorsque vous déplacez manuellement le point dans la direction X, Dynamo génère automatiquement un nouveau **Number Slider** pour l'entrée X.
 

@@ -1,6 +1,6 @@
-# Custom Nodes
+# Nœuds personnalisés
 
-Dynamo offers many Core Nodes for a wide range of visual programming tasks. Sometimes a quicker, more elegant, or more easily shared solution is to build your own Nodes. These can be reused among different projects, they make your graphs clearer and cleaner, and they can be pushed to the package manager and shared with the global Dynamo community.
+Dynamo propose de nombreux nœuds clés pour une large gamme de tâches de programmation visuelle. Parfois, la création de vos propres nœuds est une solution plus rapide, plus élégante ou plus facilement partageable. Ces nœuds peuvent être réutilisés dans différents projets, ils rendent vos graphiques plus clairs et plus propres, et ils peuvent être transférés vers le gestionnaire de packages et partagés avec la communauté Dynamo mondiale.
 
 ![](<../images/6-1/customNodes1 (1).png>)
 

@@ -1,5 +1,5 @@
-# Designing with Lists
+# Conception avec des listes
 
-Lists are the way we organize data. On your computer's operating system, you have files and folders. In Dynamo, we can regard these as items and lists, respectively. Like your operating system, there are many ways to create, modify, and query data. In this chapter, we'll break down how lists are managed in Dynamo.
+Les listes servent à organiser les données. Dans le système d'exploitation de votre ordinateur, vous disposez de fichiers et de dossiers. Dans Dynamo, vous pouvez les considérer respectivement comme des éléments et des listes. Comme dans votre système d'exploitation, il existe de nombreuses façons de créer et de modifier des données, ainsi que de leur envoyer des requêtes. Dans ce chapitre, nous allons détailler la façon dont les listes sont gérées dans Dynamo.
 
 ![](<../images/5-4/designing with lists.jpg>)

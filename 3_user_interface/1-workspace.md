@@ -1,88 +1,88 @@
-# Workspace
+# Espace de travail
 
-### Main Workspace
+### Espace de travail principal
 
-The Dynamo Workspace consists of four main elements.
+L’espace de travail de Dynamo se compose de quatre éléments principaux.
 
 ![](<./images/3-1/workspace - ui.jpg>)
 
-> 1. All Active Tabs.
-> 2. Preview Mode
-> 3. Zoom/Pan Controls
-> 4. Node in Workspace
+> 1. Tous les onglets actifs.
+> 2. Mode aperçu
+> 3. Commandes Zoom/Panoramique
+> 4. Nœud dans l’espace de travail
 
-### All Active Tabs
+### Tous les onglets actifs
 
-When you open a new file, a new Home Workspace will be opened by default.
+Lorsque vous ouvrez un nouveau fichier, un nouvel espace de travail d’accueil s’ouvre par défaut.
 
 ![](<./images/3-1/workspace - home tab.jpg>)
 
-You may create a Custom Node and open it in a Custom Node Workspace.
+Vous pouvez créer un nœud personnalisé et l’ouvrir dans un espace de travail de nœud personnalisé.
 
 ![](<./images/3-1/workspace - custom node tab.jpg>)
 
 {% hint style="info" %}
-Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.
+Vous ne pouvez ouvrir qu’un seul espace de travail d’accueil dans chaque fenêtre Dynamo, mais vous pouvez ouvrir plusieurs espaces de travail de nœud personnalisé dans les onglets.
 {% endhint %}
 
-### Preview Mode
+### Mode aperçu
 
-There are 3 methods to switch between different previews:
+Il existe 3 méthodes permettant de passer d’un aperçu à un autre :
 
-a. Using the top right icons
+a. Utilisation des icônes situées en haut à droite
 
-* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Graph Preview
-* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)3D Preview
+* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Aperçu du graphique
+* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)Aperçu 3D
 
-b. Right-click in Workspace
+b. Clic avec le bouton droit de la souris dans l’espace de travail
 
-* Switch from 3D Preview to Graph Preview
+* Passage de l’aperçu 3D à l’aperçu du graphique
 
 ![](<./images/3-1/3-1-06 right click switch to graph preview.jpg>)
 
-* Switch from Graph Preview to 3D Preview
+* Passage de l’aperçu du graphique à l’aperçu 3D
 
 ![](<./images/3-1/workspace - right click switch to geometry.jpg>)
 
-c. Using keyboard shortcut (Ctrl+B)
+c. Utilisation du raccourci clavier (Ctrl+B)
 
-### Zoom/Pan Controls
+### Commandes Zoom/Panoramique
 
-You may use icons or a mouse to navigate in either workspace.
+Vous pouvez utiliser des icônes ou la souris pour naviguer dans l’un ou l’autre des espaces de travail.
 
-a. In **Graph Preview** Mode
+a. En mode **Aperçu du graphique**
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-* Using mouse:
-  * Left-click - Select
-  * Left-click and drag - Selection box to select multiple nodes
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click anywhere on canvas - Open In-Canvas Search
+* À l’aide d’icônes :
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom tout
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom avant
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom arrière
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Panoramique
+* À l’aide de la souris :
+   * Clic avec le bouton gauche de la souris – Sélection
+   * Clic avec le bouton gauche de la souris et glissement – Zone de sélection permettant de sélectionner plusieurs nœuds
+   * Défilement vers le haut/bas au milieu – Zoom avant/arrière
+   * Clic avec le bouton du milieu de la souris et glissement – Panoramique
+   * Clic avec le bouton droit de la souris n’importe où dans la zone de dessin – Ouvrir la recherche dans la zone de dessin
 
 ![](<./images/3-1/workspace - in canvas search.gif>)
 
-b. In **3D Preview** Mode
+b. En mode **Aperçu 3D**
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-  * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbit
-* Using mouse:
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click and drag - Orbit
+* À l’aide d’icônes :
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom tout
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom avant
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom arrière
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Panoramique
+   * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbite
+* À l’aide de la souris :
+   * Défilement vers le haut/bas au milieu – Zoom avant/arrière
+   * Clic avec le bouton du milieu de la souris et glissement – Panoramique
+   * Clic avec le bouton droit de la souris et glissement – Orbite
 
-### Node in Workspace
+### Nœud dans l’espace de travail
 
-Left-click to select any Node.
+Cliquez avec le bouton droit de la souris pour sélectionner un nœud.
 
-To select multiple Nodes, Click and drag to create a selection box.
+Pour sélectionner plusieurs nœuds, cliquez et effectuez un glisser-déposer afin de créer une zone de sélection.
 
 ![](<./images/3-1/workspace - selection box.gif>)

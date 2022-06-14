@@ -1,126 +1,126 @@
-# Nodes and Wires
+# Nœuds et fils
 
-## Nodes
+## Nœuds
 
-In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each **Node** performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.
+Dans Dynamo, les **nœuds** sont les objets que vous connectez pour former un programme visuel. Chaque **nœud** effectue une opération, parfois aussi simple que le stockage d'un nombre, ou plus complexe, comme la création ou l'envoi de requêtes à une géométrie.
 
-### Anatomy of a Node
+### Anatomie d'un nœud
 
-Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
+La plupart des nœuds de Dynamo sont composés de cinq éléments. Bien qu’il existe des exceptions, telles que les nœuds Input, l’anatomie de chaque nœud peut être décrite comme suit :
 
 ![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
-> 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
-> 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
+> 1. Nom : nom du nœud conforme à la convention d’appellation `Category.Name`.
+> 2. Corps principal : corps principal du nœud. Cliquez ici avec le bouton droit de la souris pour afficher les options au niveau du nœud entier
+> 3. Ports (entrants et sortants) : récepteurs des fils qui fournissent les données d'entrée au nœud, ainsi que les résultats de l'action du nœud
+> 4. Valeur par défaut : cliquez avec le bouton droit de la souris sur un port d'entrée. Certains nœuds ont des valeurs par défaut qui peuvent être utilisées ou non.
+> 5. Icône de combinaison : indique l’[option de combinaison](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) spécifiée pour les entrées de liste correspondantes (plus d’informations sur cette option ultérieurement).
 
-### Nodes Input/Output Ports
+### Ports d’entrée/de sortie des nœuds
 
-The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.
+Les entrées et les sorties des nœuds sont appelées "ports" et servent de récepteurs pour les fils. Les données sont intégrées au nœud via des ports sur la gauche et sortent du nœud après l'exécution de son opération sur la droite.
 
-Ports expect to receive data of a certain type. For instance, connecting a number such as _2.75_ to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply _"Red"_ to the same Port it will result in an error.
+Les ports doivent recevoir des données d'un certain type. Par exemple, la connexion d'un nombre tel que _2.75_ aux ports d'un nœud Point By Coordinates permet de créer un point. Toutefois, si vous indiquez _Red_ sur le même port, une erreur se produira.
 
 {% hint style="info" %}
-Tip: Hover over a Port to see a tooltip containing the data type expected.
+Conseil : placez le curseur sur un port pour afficher une info-bulle contenant le type de données attendu.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
-> 1. Port Label
-> 2. Tool Tip
-> 3. Data Type
-> 4. Default Value
+> 1. Libellé de port
+> 2. Info-bulle
+> 3. Type de données
+> 4. Valeur par défaut
 
-### Node States
+### États des nœuds
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
+Dynamo donne une indication de l'état d'exécution de votre programme visuel en effectuant le rendu des nœuds avec différents schémas de couleurs en fonction de l'état de chaque nœud. La hiérarchie des états suit la séquence suivante : Erreur > Avertissement > Infos > Aperçu.
 
-Hovering or right-clicking over the Name or Ports presents additional information and options.
+Lorsque vous placez le curseur ou cliquez avec le bouton droit de la souris sur le nom ou les ports, vous affichez des informations et des options supplémentaires.
 
 ![](<images/nodes and wires - node states.jpg>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 1. Actif : les nœuds dont le nom est sur un arrière-plan gris foncé sont bien connectés et leurs entrées sont connectées
+> 2. État d’erreur : la barre d’état rouge située sous le nœud indique que le nœud est en état d’erreur.
+> 3. Geler : un nœud transparent a l'option Geler activée, ce qui interrompt l'exécution du nœud
+> 4. Aperçu en arrière-plan : la barre d’état grise située sous l’icône en forme de nœud et d’œil ![](<images/nodes and wires - preview off.jpg>) indique que l’aperçu de la géométrie est désactivé.
+> 5. Sélectionné : les nœuds actuellement sélectionnés ont une bordure bleue
+> 6. Avertissement : la barre d’état jaune située sous le nœud indique l’état d’avertissement, ce qui signifie qu’il manque des données d’entrée ou que les types de données peuvent être incorrects.
 
-#### Handling Error or Warning Nodes
+#### Gestion des nœuds d’erreur ou d’avertissement
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+Si votre programme visuel contient des avertissements ou des erreurs, Dynamo fournit des informations supplémentaires sur le problème. Tout nœud jaune comporte également une info-bulle au-dessus de son nom. Placez le curseur de la souris sur l’icône d’info-bulle d’avertissement ![](<images/nodes and wires - node warning icon.png>) ou d’erreur ![](<images/nodes and wires - node error icon.png>) pour la développer.
 
 {% hint style="info" %}
-Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
+Conseil : examinez les nœuds en amont à la lumière de ces informations d’info-bulle pour voir si le type ou la structure de données requis est erroné.
 {% endhint %}
 
-![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![] (<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
-> 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 1. Info-bulle d'avertissement : une valeur "Null" ou l'absence de donnée ne peut être comprise comme un double, c'est-à-dire un nombre
+> 2. Utilisez le nœud Watch pour examiner les données d'entrée
+> 3. En amont, le nœud Number contient "Red" et non un nombre
 
-## Wires
+## Fils
 
-Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.
+Les fils connectent les nœuds entre eux pour créer des relations et établir le flux de votre programme visuel. Vous pouvez les considérer comme des fils électriques qui transportent des données d'un objet à l'autre.
 
-### Program Flow <a href="#program-flow" id="program-flow"></a>
+### Flux de programme <a href="#program-flow" id="program-flow"></a>
 
-Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the **Flow of Data** in the Visual Program.
+Les fils connectent le port de sortie d'un nœud au port d'entrée d'un autre nœud. Cette direction établit le **flux de données** dans le programme visuel.
 
-Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
+Les ports d’entrée se trouvent sur le côté gauche et les ports de sortie sur le côté droit des nœuds. Par conséquent, vous pouvez généralement dire que le flux du programme se déplace de gauche à droite.
 
-![](<images/nodes and wires - flow of data.jpg>)
+![] (<images/nœuds et fils - flux de données.jpg>)
 
-### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
+### Création de fils <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+Cliquez avec le bouton gauche de la souris sur un port pour créer un fil, puis cliquez avec le bouton gauche de la souris sur le port d’un autre nœud pour créer une connexion. Pendant que vous réalisez une connexion, le fil s'affiche en pointillés et devient continu lorsque la connexion est établie.
 
-The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
+Les données passent toujours par ce fil d'une sortie à une entrée. Toutefois, vous pouvez créer le fil dans les deux directions en termes d'ordre de clic sur les ports connectés.
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
-### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
+### Modification des fils <a href="#editing-wires" id="editing-wires"></a>
 
-Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
+Souvent, vous souhaitez ajuster le flux du programme dans votre programme visuel en modifiant les connexions représentées par les fils. Pour modifier un fil, cliquez avec le bouton gauche de la souris sur le port d'entrée du nœud déjà connecté. Vous pouvez ensuite procéder de l'une des manières suivantes :
 
-* Change connection to an input Port, left-click on another input Port
+* Pour définir la connexion sur un port d’entrée, cliquez avec le bouton gauche de la souris sur un autre port d’entrée.
 
 ![](<images/nodes and wires - edit wire change port (2).gif>)
 
-* To remove the Wire, pull the Wire away and left-click on Workspace
+* Pour supprimer le fil, retirez-le et cliquez avec le bouton gauche de la souris sur l’espace de travail.
 
 ![](<images/nodes and wires - edit wires remove.gif>)
 
-* Reconnect multiple wires using Shift+left-click
+* Reconnectez plusieurs fils à l’aide de la combinaison Maj+clic gauche.
 
 ![](<images/nodes and wires - edit multi ports.gif>)
 
-* Duplicate a wire using Ctrl+left-click
+* Dupliquez un fil à l’aide de la combinaison Ctrl+clic gauche.
 
 ![](<images/nodes and wires - duplicate wire.gif>)
 
-#### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
+#### Fils par défaut et fils en surbrillance <a href="#wire-previews" id="wire-previews"></a>
 
-By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
+Par défaut, l'aperçu des fils s'affiche avec un trait gris. Lorsqu'un nœud est sélectionné, il effectue le rendu de tous les fils connectés avec la même bordure bleue que le nœud.
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
-> 1. Highlighted Wire
-> 2. Default Wire
+> 1. Fil en surbrillance
+> 2. Fil par défaut
 
-**Hide Wires by Default**
+**Masquage des fils par défaut**
 
-In case you prefer to hide the Wires in your graph, you can find this option from View > Connectors > untick Show Connectors.
+Si vous préférez masquer les fils dans le graphique, vous pouvez accéder à cette option en sélectionnant Affichage > Connecteurs > Afficher les connecteurs.
 
-With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
+Avec ce paramètre, seuls les nœuds sélectionnés et les fils qui les rejoignent présentent une bordure bleu clair.
 
 ![](<images/nodes and wires - hide wires setting (1).gif>)
 
-#### Hide Individual Wire Only
+#### Masquage des fils individuels uniquement
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+Vous pouvez également masquer le fil sélectionné uniquement. Pour ce faire, cliquez avec le bouton droit de la souris sur la sortie Nœuds > Masquer les fils.
 
 ![](<images/nodes and wires - hide selected wire.gif>)

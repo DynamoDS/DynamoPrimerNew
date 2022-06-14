@@ -1,93 +1,93 @@
-# Vector, Plane & Coordinate System
+# Vecteur, plan et système de coordonnées
 
-## Vector, Plane & Coordinates System in Dynamo
+## Vecteur, plan et système de coordonnées dans Dynamo
 
-### Vector
+### Vecteur
 
-[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+Un [vecteur](5-2\_vectors.md#vector-1) est une représentation de magnitude et de direction. Imaginez-vous une flèche accélérant vers une direction spécifique à une vitesse donnée. C’est·un composant clé des modèles dans Dynamo. Dans la mesure où ils se trouvent dans la catégorie Abstract des "assistants", lorsque vous créez un vecteur, vous ne verrez rien dans l'aperçu en arrière-plan.
 
 ![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
 
-> 1. We can use a line as a stand in for a Vector preview.
+> 1. Vous pouvez utiliser une ligne comme support pour un aperçu vectoriel.
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-### Plane
+### Plan
 
-[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+Un [plan](5-2\_vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vous une surface plane qui s’étend indéfiniment. Chaque plan possède une origine, une direction X, une direction Y et une direction Z (vers le haut).
 
 ![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
 
-> 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
-> 2. In Dynamo, Planes are rendered in the Background Preview.
+> 1. Bien qu'ils soient abstraits, les plans possèdent une position d'origine qui permet de les placer dans l'espace.
+> 2. Dans Dynamo, les plans sont rendus dans l'aperçu en arrière-plan.
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-### Coordinate System
+### Système de coordonnées
 
-[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+Le [système de coordonnées](5-2\_vectors.md#coordinate-system-1) est un système permettant de déterminer l’emplacement des points ou d’autres éléments géométriques. L’image ci-dessous explique à quoi il ressemble dans Dynamo et à quoi correspond chaque couleur.
 
 ![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
 
-> 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
+> 1. Bien qu'ils soient abstraits, les systèmes de coordonnées possèdent également une position d'origine qui permet de les placer dans l'espace.
+> 2. Dans Dynamo, les systèmes de coordonnées sont rendus dans l'aperçu en arrière-plan en tant que point (origine) et lignes définissant les axes (X est rouge, Y est vert et Z est bleu suivant la convention).
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Deep Dive into...
+## Approfondir...
 
-Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
+Les vecteurs, les plans et les systèmes de coordonnées constituent le groupe principal de types de géométrie abstraits. Ils vous aident à définir l'emplacement, l'orientation et le contexte spatial d'autres géométries décrivant des formes. Si vous dites que vous êtes à New York, au croisement de la 42e rue et de Broadway (système de coordonnées), debout au niveau de la rue (plan), regardant au nord (vecteur), vous venez d'utiliser ces "assistants" pour définir votre position. Il en va de même pour une coque de téléphone ou un gratte-ciel : vous avez besoin de ce contexte pour développer votre modèle.
 
-![Vectors, Planes, and Coordinates](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![Vecteurs, plans et coordonnées](../images/5-2/2/VectorsPlanesCoodinates.jpg)
 
-### Vector
+### Vecteur
 
-A vector is a geometric quantity describing Direction and Magnitude. Vectors are abstract; ie. they represent a quantity, not a geometrical element. Vectors can be easily confused with Points because they both are composed of a list of values. There is a key difference though: Points describe a position in a given coordinate system while Vectors describe a relative difference in position which is the same as saying "direction."
+Un vecteur est une quantité géométrique décrivant la direction et la magnitude. Les vecteurs sont abstraits, c'est-à-dire qu'ils représentent une quantité et non un élément géométrique. Les vecteurs peuvent être facilement confondus avec les points, car ils sont tous les deux composés d'une liste de valeurs. Il existe cependant une différence essentielle : les points décrivent une position dans un système de coordonnées donné, tandis que les vecteurs décrivent une différence par rapport à la position qui est la même que la "direction".
 
-![Vector Details](../images/5-2/2/Vector-Detailed.jpg)
+![Détails du vecteur](../images/5-2/2/Vector-Detailed.jpg)
 
-If the idea of relative difference is confusing, think of the Vector AB as "I'm standing at Point A, looking toward Point B." The direction, from here (A) to there (B), is our Vector.
+Si l'idée d'une différence relative est source de confusion, considérez le vecteur AB comme "Je suis debout au point A, et je regarde vers le point B." La direction, d'ici (A) vers là-bas (B), est le vecteur.
 
-Breaking down Vectors further into their parts using the same AB notation:
+Décomposez davantage les vecteurs en parties en utilisant la même notation AB :
 
-![Vector](../images/5-2/2/Vector.jpg)
+![Vecteur](../images/5-2/2/Vector.jpg)
 
-> 1. The **Start Point** of the Vector is called the **Base**.
-> 2. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
-> 3. Vector AB is not the same as Vector BA - that would point in the opposite direction.
+> 1. Le **point de départ** du vecteur est appelé **base**.
+> 2. Le \*\*point d’arrivée\*\* du vecteur est appelé **pointe** ou **sens**.
+> 3. Le vecteur AB est différent du vecteur BA, qui pointe dans la direction opposée.
 
-If you're ever in need of comic relief regarding Vectors (and their abstract definition), watch the classic comedy Airplane and listen for the oft-quoted tongue-in cheek line:
+Pour ajouter une touche de légèreté en ce qui concerne les vecteurs (et leur définition abstraite), impossible de ne pas mentionner la fameuse réplique de la comédie "Y a-t-il un pilote dans l'avion" :
 
-> _Roger, Roger. What's our vector, Victor?_
+> _Roger, Roger. Quel est votre vecteur, Victor ?_
 
-### Plane
+### Plan
 
-Planes are two-dimensional abstract "Helpers." More specifically, Planes are conceptually “flat,” extending infinitely in two directions. Usually they are rendered as a smaller rectangle near their origin.
+Les plans sont des "assistants" abstraits 2D. Plus spécifiquement, les plans sont conceptuellement "plats", s'étendant de manière infinie dans deux directions. En général, ils sont rendus sous la forme d'un rectangle plus petit près de leur origine.
 
-![Plane](../images/5-2/2/Plane.jpg)
+![Plan](../images/5-2/2/Plane.jpg)
 
-You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
+Vous pensez peut-être, "Attendez ! Et l'origine ? Cela ressemble à un système de coordonnées... comme celui que j'utilise pour modéliser des éléments dans mon logiciel de CAO !"
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
+Et vous avez raison ! La plupart des logiciels de modélisation tirent parti des plans de construction ou des "niveaux" afin de définir un contexte local bidimensionnel pour le dessin. XY, XZ, YZ ou Nord, Sud-est, le plan peut sembler plus familier. Il s'agit de tous les plans, définissant un contexte "plat" infini. Les plans n’ont pas de profondeur, mais ils permettent aussi de décrire la direction.
 
-### Coordinate System
+### Système de coordonnées
 
-If we are comfortable with Planes, we are a small step away from understanding Coordinate Systems. A Plane has all the same parts as a Coordinate System, provided it is a standard "Euclidean" or "XYZ" Coordinate System.
+Si vous maîtrisez parfaitement les plans, les systèmes de coordonnées ne vous poseront pas de difficultés. Un plan possède les mêmes composants qu'un système de coordonnées, à condition qu'il s'agisse d'un système de coordonnées "euclidiennes" ou "XYZ" standard.
 
-There are other, however, alternative Coordinate Systems such as Cylindrical or Spherical. As we will see in later sections, Coordinate Systems can also be applied to other Geometry types to define a position on that geometry.
+Cependant, il existe d'autres systèmes de coordonnées, tels que les systèmes cylindriques ou sphériques. Comme vous le verrez dans les sections suivantes, les systèmes de coordonnées peuvent également être appliqués à d'autres types de géométrie afin de définir une position sur la géométrie en question.
 
-![Coordinate System](../images/5-2/2/CoordinateSystem.jpg)
+![Système de coordonnées](../images/5-2/2/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical
+> Ajout de systèmes de coordonnées alternatifs : cylindrique, sphérique

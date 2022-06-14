@@ -1,80 +1,80 @@
-# User Interface
+# Interface utilisateur
 
-### User Interface Overview
+### Aperçu de l'interface utilisateur
 
-The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in the following sections.
+L’interface utilisateur de Dynamo est organisée en cinq zones principales. Nous allons faire ici une présentation succincte et expliquer plus en détail l’espace de travail et la bibliothèque dans les sections suivantes.
 
 ![](<images/user interface - ui.jpg>)
 
 > 1. Menus
-> 2. Toolbar
-> 3. Library
-> 4. Workspace
-> 5. Execution bar
+> 2. Barre d'outils
+> 3. Bibliothèque
+> 4. Espace de travail
+> 5. Barre d’exécution
 
 ### Menus
 
 ![](<images/user interface - menu.jpg>)
 
-Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
+Voici les menus des fonctionnalités de base de l’application Dynamo. Comme la plupart des logiciels Windows, les deux premiers menus concernent la gestion des fichiers, les opérations de sélection et la modification du contenu. Les autres menus sont plus spécifiques de Dynamo.
 
-#### Dynamo Menus
+#### Menus Dynamo
 
-General info and settings can be found on the **Dynamo** drop down menu.
+Des informations générales et des paramètres sont disponibles dans le menu déroulant **Dynamo**.
 
 ![](<images/user interface - dynamo menu.jpg>)
 
-> 1. About - Find out the Dynamo version installed on your machine.
-> 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
-> 3. Preferences - Includes settings such as define the application's decimal point precision and geometry render quality.
-> 4. Exit Dynamo
+> 1. À propos de : découvrez la version de Dynamo installée sur votre ordinateur.
+> 2. Accord sur la collecte des données d’utilisation : permet d’accepter ou de refuser le partage de vos données utilisateur pour améliorer Dynamo.
+> 3. Préférences : inclut des paramètres tels que la précision décimale de l’application et la qualité du rendu de la géométrie.
+> 4. Quitter Dynamo.
 
-#### Help
+#### Aide
 
-If you're stuck, check out the **Help** Menu. You may access one of the Dynamo reference websites through your internet browser.
+Si vous êtes bloqué, consultez le menu **Aide**. Vous pouvez accéder à l’un des sites Web de référence Dynamo via votre navigateur Internet.
 
 ![](<images/user interface - help menu.jpg>)
 
-> 1. Getting Started - A brief introduction to using Dynamo.
-> 2. Interactive Guides -
-> 3. Samples - Reference example files.
-> 4. Dynamo Dictionary - Resource with documentation on all nodes.
-> 5. Dynamo Website - View the Dynamo Project on GitHub.
-> 6. Dynamo Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
-> 7. Display Start Page - Return to the Dynamo start page when within a document.
-> 8. Report A Bug - Open an Issue on GitHub.
+> 1. Mise en route : brève introduction à l'utilisation de Dynamo.
+> 2. Guides interactifs.
+> 3. Exemples : fichiers d'exemple de référence.
+> 4. Dictionnaire Dynamo : ressource avec documentation sur tous les nœuds.
+> 5. Site Web de Dynamo : affichez le projet Dynamo sur GitHub.
+> 6. Wiki du projet Dynamo : permet de consulter le wiki pour en savoir plus sur le développement à l’aide de l’API Dynamo, qui prend en charge les bibliothèques et les outils.
+> 7. Afficher la page de démarrage : permet de revenir à la page de démarrage de Dynamo lorsque vous vous trouvez dans un document.
+> 8. Signaler un bogue : permet d'ouvrir un problème sur GitHub.
 
-### Toolbar
+### Barre d'outils
 
-Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
+La barre d’outils de Dynamo contient une série de boutons permettant d’accéder rapidement aux fichiers et aux commandes Annuler \[Ctrl + Z] et Rétablir \[Ctrl + Y]. À l'extrémité droite se trouve un autre bouton qui permet d'exporter un cliché de l'espace de travail, ce qui est extrêmement utile pour la documentation et le partage.
 
-* ![](<images/user interface - new file.jpg>) New - Create a new .dyn file
-* ![](<images/user interface - open (1).jpg>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
-* ![](<images/user interface - save.jpg>) Save/Save As - Save your active .dyn or .dyf file
-* ![](<images/user interface - undo.jpg>) Undo - Undo your last action
-* ![](<images/user interface - redo.jpg>) Redo - Redo the next action
-* ![](<images/user interface - screenshot.jpg>) Export Workspace as Image - Export the visible workspace as a PNG file
+* ![](<images/user interface - new file.jpg>) Nouveau : permet de créer un fichier .dyn.
+* ![](<images/user interface - open (1).jpg>) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé).
+* ![](<images/user interface - save.jpg>) Enregistrer/Enregistrer sous : permet d’enregistrer le fichier .dyn ou .dyf actif.
+* ![](<images/user interface - undo.jpg>) Annuler : permet d’annuler la dernière action.
+* ![](<images/user interface - redo.jpg>) Rétablir : permet de rétablir l’action suivante.
+* ![](<images/user interface - screenshot.jpg>) Exporter l’espace de travail en tant qu’image : permet d’exporter l’espace de travail visible en tant que fichier PNG.
 
-### Library
+### Bibliothèque
 
-The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [2-library.md](2-library.md "mention") section will cover a more detailed guidance on using it.
+La bibliothèque Dynamo est un ensemble de bibliothèques fonctionnelles, chaque bibliothèque contenant des nœuds regroupés par catégorie. Elle se compose de bibliothèques de base qui sont ajoutées lors de l’installation par défaut de Dynamo. Au fur et à mesure de la présentation de son utilisation, vous allez découvrir comment étendre la fonctionnalité de base avec des nœuds personnalisés et d’autres packages. La section [2-library.md](2-library.md "mention") fournit des instructions plus détaillées sur son utilisation.
 
 ![](<images/user interface - library.jpg>)
 
-### Workspace
+### Espace de travail
 
-The Workspace is where we compose our visual programs, you may also change its Preview setting to view the 3D geometries from here. Refer [1-workspace.md](1-workspace.md "mention") for more details.
+L’espace de travail est l’endroit où vous composez vos programmes visuels, vous pouvez également modifier son paramètre d’aperçu pour afficher les géométries 3D à partir d’ici. Pour plus d’informations, reportez-vous à [1-workspace.md](1-workspace.md "mention").
 
 ![](<images/user interface - workspace.gif>)
 
-### Execution Bar
+### Barre d'exécution
 
-Run your Dynamo script from here. Click the dropdown icon on the Execution button to change between the different modes.
+Exécutez votre script Dynamo à partir d’ici. Cliquez sur l’icône déroulante du bouton Exécution pour passer d’un mode à l’autre.
 
-![](<images/user interface - execution bar.gif>)
+![]<images/user interface - execution bar.gif>)
 
-* Automatic: Runs your script automatically. Changes is updated in realtime.
-* Manual: Script only runs when the 'Run' button is clicked. Useful for when making changes to complicated and 'heavy script'
-* Periodic: This option is grayed out by default. Only available when the DateTime.Now Node is used. You can set the graph to run automatically at a specified interval.
+* Automatique : exécute votre script automatiquement. Les modifications sont mises à jour en temps réel.
+* Manuel : le script s’exécute uniquement lorsque vous cliquez sur le bouton « Exécuter ». Utile pour modifier des scripts complexes.
+* Périodique : cette option est grisée par défaut. Disponible uniquement lorsque le nœud DateTime.Now est utilisé. Vous pouvez définir l’exécution automatique du graphique à un intervalle spécifié.
 
 ![](<images/user interface - execution bar DateTime node.jpg>)

@@ -1,66 +1,66 @@
-# The Revit Connection
+# La connexion Revit
 
 
 
 ![](<./images/1/revit connection link.jpg>)
 
-Dynamo for Revit extends buildin g information modeling with the data and logic environment of a graphical algorithm editor. Its flexibility, coupled with a robust Revit database, offers a new perspective for BIM.
+Dynamo for Revit étend la modélisation des données du bâtiment à l'environnement de données et de logique d'un éditeur d'algorithmes graphiques. Sa flexibilité, associée à une base de données Revit robuste, offre une nouvelle perspective pour le BIM.
 
-This chapter focuses on the Dynamo workflows for BIM. Sections are primarily exercise-based, since jumping right into a project is the best way to get familiar with a graphical algorithm editor for BIM. But first, let's talk about the beginnings of the program.
+Ce chapitre se concentre sur les workflows Dynamo pour le BIM. Les coupes sont principalement basées sur des exercices, car le passage immédiat à un projet est le meilleur moyen de se familiariser avec un éditeur d'algorithmes graphiques pour le BIM. Mais d'abord, voici les débuts du programme.
 
-### Revit Version Compatibility
+### Compatibilité de la version de Revit
 
-As both Revit and Dynamo continue to evolve, you may notice that the Revit version you are working with is not compatible with the Dynamo for Revit version you have installed on your machine. Below outlines which versions of Dynamo for Revit are compatible with Revit.
+Comme Revit et Dynamo évoluent encore, il se peut que vous constatiez que la version de Revit sur laquelle vous travaillez n'est pas compatible avec la version de Dynamo for Revit que vous avez installée sur votre ordinateur. Les versions de Dynamo for Revit compatibles avec Revit sont répertoriées ci-dessous.
 
-| Revit Version | First Stable Dynamo Version                                                       | Last Supported Dynamo for Revit Version                                                                                                                                |
+| Version de Revit | Première version stable de Dynamo | Dernière version de Dynamo for Revit prise en charge |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
-| 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
-| 2015          | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe)                                                                                      |
-| 2016          | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe)                                                                                      |
-| 2017          | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2018          | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2019          | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
-| 2020+         | 2.1.0 - Revit 2020+ now includes Dynamo and receives updates as Revit does.)      | N/A                                                                                                                                                                    |
+| 2013 | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe) |
+| 2014 | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe) |
+| 2015 | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe) |
+| 2016 | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe) |
+| 2017 | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
+| 2018 | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
+| 2019 | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
+| 2020+ | 2.1.0 - Revit 2020+ inclut désormais Dynamo et reçoit les mises à jour comme Revit. | N/A |
 
-### History of Dynamo
+### Historique de Dynamo
 
-![History](./images/1/earlyScreenshot.jpg)
+![Historique](./images/1/earlyScreenshot.jpg)
 
-With a dedicated team of developers and a passionate community, the project has come a long way from its humble beginnings.
+Avec une équipe de développeurs dédiée et une communauté passionnée, le projet est loin de ses débuts timides.
 
-Dynamo was originally created to streamline AEC workflows in Revit. While Revit creates a robust database for every project, it can be difficult for an average user to access this information outside of the constraints of the interface. Revit hosts a comprehensive API (Application Program Interface), allowing third-party developers to create custom tools. And programmers have been using this API for years, but text-based scripting isn't accessible to everyone. Dynamo seeks to democratize Revit data through an approachable graphical algorithm editor.
+Dynamo a été créé à l'origine pour rationaliser les workflows AEC dans Revit. Bien que Revit crée une base de données solide pour chaque projet, il peut être difficile pour un utilisateur lambda d'accéder à ces informations en dehors des contraintes de l'interface. Revit héberge une API (Application Program Interface) complète, permettant aux développeurs tiers de créer des outils personnalisés. Les programmeurs utilisent cette API depuis des années, mais les scripts basés sur du texte ne sont pas accessibles à tous. Dynamo vise à démocratiser les données Revit via un éditeur d'algorithmes graphiques abordable.
 
-Using the core Dynamo nodes in tandem with custom Revit ones, a user can substantially expand parametric workflows for interoperability, documentation, analysis, and generation. With Dynamo, tedious workflows can be automated while design explorations can thrive.
+En utilisant les principaux nœuds Dynamo conjointement avec des nœuds Revit personnalisés, un utilisateur peut considérablement étendre les workflows paramétriques pour l'interopérabilité, la documentation, l'analyse et la génération. Avec Dynamo, les workflows fastidieux peuvent être automatisés tandis que les explorations de conception peuvent se développer.
 
-### Running Dynamo in Revit
+### Exécution de Dynamo dans Revit
 
-In a Revit project or family editor, navigate to Addins and click Dynamo.\*
+Dans un projet Revit ou un éditeur de familles, accédez à Compléments et cliquez sur Dynamo.\*
 
 {% hint style="warning" %}
-\*Dynamo will run only in the file in which it was opened.
+\*Dynamo s’exécute uniquement dans le fichier dans lequel il a été ouvert.
 {% endhint %}
 
 ![](<./images/1/launch dynamo from revit.jpg>)
 
-When opening Dynamo in Revit, there is a new category called "Revit". This is a comprehensive addition to the UI which offers nodes specifically catering to Revit workflows.\*
+Lors de l'ouverture de Dynamo dans Revit, une nouvelle catégorie appelée Revit apparaît. Il s’agit d’un ajout complet à l’interface utilisateur qui offre des nœuds spécifiquement conçus pour les workflows Revit.\*
 
 {% hint style="warning" %}
-\*By using the Revit-specific family of nodes, the Dynamo graph will only work when opening in Dynamo for Revit. If a Dynamo for Revit graph is opened in Dynamo Sandbox for example, the Revit nodes will be missing.
+\*En utilisant la famille de nœuds propre à Revit, le graphique Dynamo fonctionne uniquement lorsqu’il est ouvert dans Dynamo for Revit. Si un graphique Dynamo for Revit est ouvert dans Dynamo Sandbox par exemple, les nœuds Revit sont manquants.
 {% endhint %}
 
 ![](<./images/1/revit connection - running dynamo in revit 02.jpg>)
 
-### Freezing Nodes
+### Gel des nœuds
 
-Since Revit is a platform which provides robust project management, parametric operations in Dynamo can be complex and slow to calculate. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
+Revit étant une plate-forme qui fournit une gestion de projet robuste, les opérations paramétriques dans Dynamo peuvent être complexes et lentes à calculer. Si Dynamo prend du temps pour calculer des nœuds, vous pouvez utiliser la fonctionnalité de nœud "geler" pour interrompre l'exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d’informations sur le gel des nœuds, consultez la section « [Gel](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) » du chapitre Solides.
 
-### Community & Dynamo Blog
+### Blog Communauté et Dynamo
 
-Since Dynamo was originally created for AEC, its large and growing community is a great resource for learning from and connecting with experts in the industry. Dynamo’s community is made of architects, engineers, programmers, and designers who all have a passion for sharing and making.
+Depuis que Dynamo a été créé pour le secteur AEC, sa vaste communauté dynamique est une excellente ressource pour apprendre et créer des liens avec des experts du secteur. La communauté de Dynamo est constituée d'architectes, d'ingénieurs, de programmeurs et de concepteurs dont la passion commune est de partager ce qu'ils font.
 
-Dynamo is an open-source project that is constantly evolving, and a lot of development is Revit-related. If you're new to the game, get on the discussion forum and start [posting questions](http://dynamobim.org/forums/forum/dyn/)! If you're a programmer and want to get involved in Dynamo's development, check out the [github page](https://github.com/DynamoDS/Dynamo). Also, a great resource for third-party libraries is the [Dynamo package manager](http://dynamopackages.com). Many of these packages are made with AEC in mind, and we'll take a look at third-party packages for panelization in this chapter.
+Dynamo est un projet open source en constante évolution et un grand nombre de développements sont liés à Revit. Si vous êtes nouveau, rendez-vous sur le forum de discussion et [posez des questions](http://dynamobim.org/forums/forum/dyn/). Si vous êtes programmeur et que vous souhaitez vous impliquer dans le développement de Dynamo, consultez la [page github](https://github.com/DynamoDS/Dynamo). En outre, le [gestionnaire de packages Dynamo](http://dynamopackages.com) constitue une ressource très utile pour les bibliothèques tierces. Beaucoup de ces packages sont conçus pour le secteur AEC. Dans ce chapitre, vous étudierez les packages tiers pour la panélisation.
 
-Dynamo also maintains an active blog. Read up on recent posts to learn about the latest developments!
+Dynamo maintient également un blog actif. Lisez les articles récents pour en savoir plus sur les derniers développements.
 
 ![Blog](./images/1/blog.png)

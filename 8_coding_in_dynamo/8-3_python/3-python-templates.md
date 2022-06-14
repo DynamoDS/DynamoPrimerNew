@@ -1,20 +1,20 @@
-# Setup Your Own Python Template
+# Configuration de votre propre gabarit Python
 
-With Dynamo 2.0 we have the ability to specify a default template `(.py extension)` to use when opening the python window for the first time. This has been a long-desired request as this expedites the usage of Python within Dynamo. Having the ability to use a template allows us to have default imports ready to go when we want to develop a custom Python script.
+Avec Dynamo 2.0, vous pouvez spécifier un gabarit par défaut `(.py extension)` à utiliser lors de la première ouverture de la fenêtre Python. Cette option a longtemps été attendue, car elle accélère l'utilisation de Python dans Dynamo. La possibilité d'utiliser un gabarit vous permet d'obtenir des importations par défaut prêtes à l'emploi lorsque vous voulez développer un script Python personnalisé.
 
-The location for this template is in the `APPDATA` location for your Dynamo install.
+Ce gabarit se trouve à l’emplacement `APPDATA` de votre installation de Dynamo.
 
-This is typically as follows `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
+L’emplacement habituel est le suivant : `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
 ![](<../images/8-3/3/python templates - appdata folder location.jpg>)
 
-### Setting Up The Template
+### Configuration du gabarit
 
-In order to utilize this functionality we need to add the following line in our `DynamoSettings.xml` file. _(Edit in notepad)_
+Pour utiliser cette fonctionnalité, vous devez ajouter la ligne suivante dans le fichier `DynamoSettings.xml`. _(Modifier dans le bloc-notes)_
 
 ![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
 
-Where we see `<PythonTemplateFilePath />`, we can simply replace this with the following:
+Vous pouvez simplement remplacer `<PythonTemplateFilePath />` par ce qui suit :
 
 ```
 <PythonTemplateFilePath>
@@ -23,12 +23,12 @@ Where we see `<PythonTemplateFilePath />`, we can simply replace this with the f
 ```
 
 {% hint style="warning" %}
-_Note: replace CURRENTUSER with your username_
+_Remarque : remplacez CURRENTUSER par votre nom d’utilisateur _
 {% endhint %}
 
-Next we need to build a template with the functionality that we want to use built-in. In our case lets embed the Revit related imports and some of the other typical items when working with Revit.
+Ensuite, vous devez créer un gabarit en intégrant la fonctionnalité que vous voulez utiliser. Dans cet exemple, vous allez incorporer les importations liées à Revit et d'autres éléments que vous utilisez généralement lorsque vous travaillez avec Revit.
 
-You can start a blank notepad document and paste the following code inside:
+Vous pouvez ouvrir un document de bloc-notes vide et coller le code suivant à l'intérieur :
 
 ```
 import clr
@@ -67,16 +67,16 @@ TransactionManager.Instance.TransactionTaskDone()
 OUT = element
 ```
 
-Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` location.
+Une fois cela fait, enregistrez ce fichier sous le nom `PythonTemplate.py` à l’emplacement `APPDATA`.
 
-### Python Script Behavior After
+### Comportement du script Python par la suite
 
-A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
+Une fois le gabarit Python défini, Dynamo le recherche à chaque fois qu’un nœud Python est positionné. Si le gabarit est introuvable, l'affichage sera comparable à la fenêtre Python par défaut.
 
 ![](<../images/8-3/3/python templates - before setup template.jpg>)
 
-If the Python template is found (like our Revit one for example) you will see all of the default items you built in.
+Si Dynamo trouve le gabarit Python (par exemple, notre gabarit Revit), il affiche tous les éléments par défaut que vous avez intégrés.
 
 ![](<../images/8-3/3/python templates - after setup template.jpg>)
 
-Additional information regarding this great addition (by Radu Gidei) can be found here. https://github.com/DynamoDS/Dynamo/pull/8122
+Vous trouverez ici des informations supplémentaires sur cet ajout important (par Radu Gidei). https://github.com/DynamoDS/Dynamo/pull/8122

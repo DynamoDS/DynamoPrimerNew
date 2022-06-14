@@ -1,80 +1,80 @@
-# Publishing a Package
+# Publication d'un package
 
-In the previous sections, we dove into the details of how our _MapToSurface_ package is set up with custom nodes and example files. But how do we publish a package that has been developed locally? This case study demonstrates how to publish a package from a set of files in a local folder.
+Dans les sections précédentes, vous avez découvert en détail comment configurer le package _MapToSurface_ avec des nœuds personnalisés et des fichiers d'exemple. Mais comment publier un package développé localement ? Cette étude de cas montre comment publier un package à partir d'un ensemble de fichiers dans un dossier local.
 
 ![](<../images/6-2/4/publish a package - custom nodes 01.jpg>)
 
-There are many ways to publish a package. Below is the process that we advise: **publish locally, develop locally and then publish online**. We'll start with a folder containing all of the files in the package.
+Il existe plusieurs façons de publier un package. Voici le processus recommandé :**publier localement, développer localement, puis publier en ligne**. Vous allez commencer par un dossier contenant tous les fichiers du package.
 
-### Uninstalling a Package
+### Désinstallation d'un package
 
-Before we jump into publishing the MapToSurface package, if you installed the package from the previous lesson, uninstall it so that you're not working with identical packages.
+Avant de commencer la publication du package MapToSurface, si vous avez installé le package à partir de la leçon précédente, désinstallez-le afin de ne pas utiliser les mêmes packages.
 
-Begin by going to Dynamo > Preferences > Package Manager > next to MapToSurface click on vertical dots menu > delete
+Dans Dynamo, sélectionnez Préférences > Gestionnaire de package, puis cliquez sur Supprimer en regard de MapToSurface dans le menu des points verticaux.
 
 ![](<../images/6-2/4/publish a package - delete package.jpg>)
 
-Then restart Dynamo. When reopening, when you check the _"Manage Packages"_ window, the _MapToSurface_ should no longer be there. Now we're ready to start from the beginning!
+Ensuite, redémarrez Dynamo. Lors de la réouverture, vérifiez la fenêtre _"Gérer les packages"_ : le package _MapToSurface_ ne doit plus être présent. Vous pouvez désormais commencer !
 
-### Publishing a Package Locally
+### Publication locale d'un package
 
 {% hint style="warning" %}
-Dynamo package publication is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
+La publication du package Dynamo est uniquement activée dans Dynamo for Revit et Dynamo pour Civil 3D. Dynamo Sandbox ne dispose pas de la fonctionnalité de publication.
 {% endhint %}
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/6-2/4/MapToSurface.zip" %}
 
-This is the first submission for our package, and we've placed all of the example files and custom nodes into one folder. With this folder prepared, we're ready to upload to the Dynamo Package Manager.
+Il s'agit de la première soumission du package, et tous les fichiers d'exemple et les nœuds personnalisés sont placés dans un dossier unique. Maintenant que ce dossier est prêt, vous pouvez effectuer le chargement dans le gestionnaire de package Dynamo.
 
 ![](<../images/6-2/4/publish a package - publish locally 01.jpg>)
 
-> 1. This folder contains five custom nodes (.dyf).
-> 2. This folder also contains five example files (.dyn) and one imported vector file (.svg). These files will serve as introductory exercises to show the user how to work with the custom nodes.
+> 1. Ce dossier contient cinq nœuds personnalisés (.dyf).
+> 2. Ce dossier contient également cinq fichiers d'exemple (.dyn) et un fichier vectoriel importé (.svg). Ces fichiers serviront d'exercices préliminaires pour montrer à l'utilisateur comment utiliser les nœuds personnalisés.
 
-In Dynamo, begin by clicking _Packages>Publish New Package..._
+Dans Dynamo, cliquez sur _Packages > Publier un nouveau package..._
 
 ![](<../images/6-2/4/publish a package - publish locally 02.jpg>)
 
-In the _"Publish a Dynamo Package"_ window, filled out the relevant forms on the left of the window.
+Dans la fenêtre _« Publier un package Dynamo »_, remplissez les formulaires pertinents à gauche de la fenêtre comme illustré.
 
 ![](<../images/6-2/4/publish a package - publish locally 03.jpg>)
 
-> 1. By clicking _"Add File"_, we've also added the files from the folder structure on the right side of the screen (to add files which are not .dyf files, be sure to change your file type in the browser window to **"All Files(**_**.**_**)"**. Notice that we've added every file, custom node (.dyf) or example file (.dyn), indiscriminately. Dynamo will categories these items when we publish the package.
-> 2. The "Group" field defines which group to find the custom nodes in the Dynamo UI.
-> 3. Publish by clicking "Publish Locally". If you're following along, be certain to click _"Publish Locally"_ and **not** _"Publish Online"_; we don't want a bunch of duplicate packages on the Package Manager.
+> 1. Cliquez sur _« Ajouter un fichier »_ afin d’ajouter les fichiers de la structure de dossiers sur le côté droit de l’écran (pour ajouter des fichiers qui ne sont pas des fichiers .dyf, définissez le type de fichier dans la fenêtre du navigateur sur **« Tous les fichiers(**_**.**_**)"**. Tous les fichiers, nœuds personnalisés (.dyf) ou fichiers d'exemple (.dyn) ont été ajoutés, sans distinction. Dynamo classe ces éléments lors de la publication du package.
+> 2. Le champ "Groupe" définit le groupe dans lequel rechercher les nœuds personnalisés dans l'interface utilisateur de Dynamo.
+> 3. Cliquez sur "Publier localement" afin d'effectuer la publication. Si vous suivez, veillez à cliquer sur _"Publier localement"_ et **non** sur _"Publier en ligne"_. Vous ne voulez pas de packages en double dans le gestionnaire de package.
 
-After publishing, the custom nodes should be available under the "DynamoPrimer" group or your Dynamo Library.
+Une fois la publication terminée, les nœuds personnalisés doivent être disponibles sous le groupe "DynamoPrimer" ou votre bibliothèque Dynamo.
 
 ![](<../images/6-2/4/publish a package - publish locally 04.jpg>)
 
-Now let's look at the root directory to see how Dynamo has formatted the package we just created. Do this by clicking Dynamo > Preferences > Package Manager > next to MapToSurface click on the vertical dots menu > select Show Root Directory
+Examinez maintenant le répertoire racine pour découvrir comment Dynamo a mis en forme le package créé. Pour ce faire, cliquez sur Dynamo > Préférences > Gestionnaire de package > en regard de MapToSurface, cliquez sur le menu des points verticaux, puis sélectionnez Afficher le répertoire racine
 
 ![](<../images/6-2/4/publish a package - publish locally 05.jpg>)
 
-Notice that the root directory is in the local location of your package (remember, we published the package "locally"). Dynamo is currently referencing this folder to read custom nodes. It's therefore important to locally publish the directory to a permanent folder location (ie: not your desktop). Here is the Dynamo package folder breakdown.
+Le répertoire racine se trouve à l'emplacement local de votre package (n'oubliez pas que vous avez publié le package "localement"). Dynamo utilise actuellement ce dossier pour lire les nœuds personnalisés. Il est donc important de publier localement le répertoire dans un emplacement permanent (par exemple, pas sur votre bureau). Voici la répartition du dossier du package Dynamo :
 
 ![](<../images/6-2/4/publish a package - publish locally 06.jpg>)
 
-> 1. The _bin_ folder houses .dll files created with C# or Zero-Touch libraries. We don't have any for this package so this folder is blank for this example.
-> 2. The _dyf_ folder houses the custom nodes. Opening this will reveal all of the custom nodes (.dyf files) for this package.
-> 3. The extra folder houses all additional files. These files are likely to be Dynamo Files (.dyn) or any additional files required (.svg, .xls, .jpeg, .sat, etc.).
-> 4. The pkg file is a basic text file defining the package settings. This is automated in Dynamo, but can be edited if you want to get into the details.
+> 1. Le dossier _bin_ contient les fichiers .dll créés avec des bibliothèques C# ou Zero Touch. Étant donné qu'il n'en existe pas pour ce package, ce dossier est vide pour cet exemple.
+> 2. Le dossier _dyf_ contient les nœuds personnalisés. L'ouverture de ce dossier permet d'afficher tous les nœuds personnalisés (fichiers .dyf) de ce package.
+> 3. Le dossier supplémentaire contient tous les fichiers supplémentaires. Il est probable que ces fichiers soient des fichiers Dynamo (.dyn) ou d'autres fichiers requis (.svg, .xls, .jpeg, .sat, etc.).
+> 4. Le fichier pkg est un fichier texte de base qui définit les paramètres du package. Cette opération est automatisée dans Dynamo, mais elle peut être modifiée si vous souhaitez obtenir des détails.
 
-### Publishing a Package Online
+### Publication d'un package en ligne
 
 {% hint style="warning" %}
-Note: please do not follow along with this step unless you are actually publishing a package of your own!
+Remarque : ne suivez pas cette étape, sauf si vous publiez réellement un package de votre choix.
 {% endhint %}
 
 ![](<../images/6-2/4/publish a package - publish online 01.jpg>)
 
-> 1. When you're ready to publish, in the Preferences > Package Manager window, select the button the right of MapToSurface and choose _Publish..._
-> 2. If you're updating a package that has already been published, choose "Publish Version" and Dynamo will update your package online based on the new files in that package's root directory. Simple as that!
+> 1. Lorsque vous êtes prêt à effectuer la publication, cliquez sur le bouton situé à droite de MapToSurface dans la fenêtre Préférences > Gestionnaire de package et choisissez _Publier..._
+> 2. Si vous mettez à jour un package qui a déjà été publié, choisissez "Publier la version" et Dynamo mettra à jour votre package en ligne en fonction des nouveaux fichiers contenus dans le répertoire racine de ce package. C'est aussi simple que ça !
 
-### Publish Version...
+### Version de publication...
 
-When you update the files in your published package's root folder, you can publish a new version of the package by selecting _"Publish Version..."_ in the _Manage Packages_ window. This is a seamless way to make necessary updates to your content and share with the community. _Publish Version_ will only work if you're the maintainer of the package.
+Lorsque vous mettez à jour les fichiers dans le dossier racine de votre package publié, vous pouvez publier une nouvelle version du package en sélectionnant _"Publier la version..."_ dans la fenêtre _Gérer les packages_. Cette méthode vous permet d'apporter les mises à jour nécessaires à votre contenu et de le partager en toute transparence avec la communauté. La _ version de publication_ fonctionne uniquement si vous êtes le gestionnaire du package.

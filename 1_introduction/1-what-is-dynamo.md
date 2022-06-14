@@ -1,25 +1,25 @@
-# What is Dynamo & How Does It Work?
+# Qu’est-ce que Dynamo et comment fonctionne-t-il ?
 
-Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
+Dynamo est une application de [programmation visuelle ](broken-reference/) qui peut être téléchargée et exécutée en mode « Sandbox » autonome ou en tant que plug-in pour d’autres logiciels tels que Revit, FormIt ou Civil 3D.
 
 {% hint style="info" %}
-Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
+En savoir plus sur la [différence entre **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
 {% endhint %}
 
-### The Process
+### Processus
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
+Dynamo vous permet de travailler au sein d’un processus de programmation visuelle dans lequel vous connectez des éléments pour définir les relations et les séquences d’actions qui composent les algorithmes personnalisés. Vous pouvez utiliser vos algorithmes pour un large éventail d’applications, du traitement de données à la génération de géométries, le tout en temps réel et sans avoir à écrire une ligne de `code`.
 
 ![](<./images/1-1/nodes and wires - flow of data.jpg>)
 
-### Connecting Nodes and Wires
+### Connexion de nœuds et des fils
 
-Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
+Les nœuds et les fils sont les composants clés de Dynamo qui prennent en charge un processus de [programmation visuelle](../a\_appendix/a-1\_visual-programming-and-dynamo.md). Ils permettent d’établir des relations visuelles et systémiques solides entre les parties d’une conception. Utilisez la souris pour connecter les nœuds en toute simplicité lorsque vous développez et optimisez votre workflow de conception.
 
 ![](<./images/1-1/what is dynamo - connecting nodes with wires.gif>)
 
-## What can Dynamo Achieve?
+## Quels sont les avantages de Dynamo ?
 
-From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
+De l’utilisation de la programmation visuelle pour des workflows de projet au développement d’outils personnalisés, Dynamo est l’aspect essentiel d’une large gamme d’applications passionnantes.
 
-[Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[Suivez le tableau Dynamo en action sur Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)

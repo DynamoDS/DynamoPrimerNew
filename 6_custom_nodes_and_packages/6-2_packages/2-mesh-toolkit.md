@@ -1,69 +1,69 @@
-# Package Case Study - Mesh Toolkit
+# Étude de cas de package – Mesh Toolkit
 
-The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+Le package Dynamo Mesh Toolkit fournit des outils permettant d'importer des maillages à partir de formats de fichiers externes, de créer un maillage à partir d'objets de géométrie Dynamo et de créer manuellement des maillages à partir de leurs sommets et index. La bibliothèque fournit également des outils permettant de modifier et de réparer les maillages, ainsi que d'extraire des sections horizontales à utiliser lors de la fabrication.
 
 ![](<../images/6-2/2/meshToolkit case study 01.jpg>)
 
-The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
+Le package Dynamo Mesh Toolkit s'inscrit dans le cadre des recherches en cours d'Autodesk sur les maillages, et il continuera à évoluer au cours des prochaines années. Attendez-vous à voir apparaître fréquemment de nouvelles méthodes applicables à ce package, et n'hésitez pas à faire parvenir à l'équipe de Dynamo vos commentaires, bogues et suggestions en vue d'intégrer de nouvelles fonctionnalités.
 
-### Meshes vs. Solids
+### Maillages et solides
 
-The exercise below demonstrates some basic mesh operations using the Mesh Toolkit. In the exercise, we intersect a mesh with a series of planes, which can be computationally expensive using solids. Unlike a solid, a mesh has a set "resolution" and is not defined mathematically, but topologically, and we can define this resolution based on the task at hand. For more details on mesh to solid relationships, you can reference the[ Geometry For Computation Design](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) chapter in this primer. For a more thorough examination of Mesh Toolkit, you can reference the [Dynamo Wiki page.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Let's jump into the package in the exercise below.
+L'exercice ci-dessous présente certaines opérations de maillage de base à l'aide de Mesh Toolkit. Dans l'exercice, nous allons entrecouper un maillage avec une série de plans, une opération qui peut s'avérer coûteuse en ressources informatiques si elle est effectuée avec des solides. Contrairement à un solide, un maillage a une "résolution" établie et n'est pas défini sur un plan mathématique, mais topologique. Cette résolution peut être définie sur la base de la tâche en cours. Pour plus d'informations sur les relations entre les maillages et les solides, reportez-vous au chapitre [Géométrie pour la conception informatique](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) de ce guide. Pour en savoir plus sur le package Mesh Toolkit, vous pouvez consulter la page [wiki de Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)Vous allez découvrir le package dans l’exercice ci-dessous.
 
-### Install Mesh Toolkit
+### Installation de Mesh Toolkit
 
-In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
+Dans Dynamo, accédez à _Packages > Rechercher un package..._ dans la barre de menus supérieure. Dans le champ de recherche, tapez _"MeshToolkit"_ en un mot, en gardant les majuscules. Cliquez sur Installer pour lancer le téléchargement. C'est aussi simple que ça !
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
-## Exercise: Intersect Mesh
+## Exercice : Entrecouper le maillage
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
-In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
+Dans cet exemple, nous allons examiner le nœud Intersect dans Mesh Toolkit. Nous allons importer un maillage et l'entrecouper avec une série de plans d'entrée pour créer des sections. Il s'agit du point de départ pour préparer le modèle pour la fabrication sur un découpeur au laser, une machine de coupe à jet d'eau ou une fraiseuse commandée par ordinateur.
 
-Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
+Commencez par ouvrir _Mesh-Toolkit\_Intersect-Mesh.dyn dans Dynamo._
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 1. **Chemin d’accès au fichier :** recherchez le fichier de maillage à importer (_stanford\_bunny\_tri.obj_). Les types de fichiers pris en charge sont .mix et .obj.
+> 2. **Mesh.ImportFile :** associez le chemin d'accès au fichier pour importer le maillage.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
-> 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes. \_\_ The settings are as follow: \_\_ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates :** crée un point. Il s'agit du centre d'un arc.
+> 2. **Arc.ByCenterPointRadiusAngle** : crée un arc autour du point. Cette courbe sera utilisée pour positionner une série de plans. \_\_ Les paramètres sont les suivants :\_\_ `radius: 40, startAngle: -90, endAngle:0`
 
-Create a series of planes oriented along the arc.
+Créez une série de plans orientés le long de l’arc.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
-> 1. **Code Block**: Create 25 numbers between 0 and 1.
-> 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
-> 3. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
-> 4. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
+> 1. **Code Block** : créez 25 nombres compris entre 0 et 1.
+> 2. **Curve.PointAtParameter :** connectez l'arc à l'entrée _‘curve’_ et le bloc de code de sortie à l'entrée _‘param’_ pour extraire une série de points le long de la courbe.
+> 3. **Curve.TangentAtParameter :** connectez les mêmes entrées que le nœud précédent.
+> 4. **Plan.ByOriginNormal :** connectez les points à l'entrée _‘origin’_ et les vecteurs à l'entrée _‘normal’_ pour créer une série de plans à chaque point.
 
-Next, we will use these planes to intersect the mesh.
+Vous allez ensuite utiliser ces plans pour entrecouper le maillage.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
-> 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
-> 3. **Curve.EndPoint:** Extract the end points of each curve.
-> 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
+> 1. **Mesh.Intersect :** entrecoupez les plans avec le maillage importé, ce qui crée une série de contours de polycourbe. Cliquez avec le bouton droit de la souris sur Nœud et définissez la liaison sur la plus longue.
+> 2. **PolyCurve.Curves :** divisez les polycourbes en fragments de courbe.
+> 3. **Curve.EndPoint :** extrayez les points de fin de chaque courbe.
+> 4. **NurbsCurve.ByPoints :** utilisez les points pour construire une courbe NURBS. Utilisez un nœud booléen défini sur _Vrai (True)_ pour fermer les courbes.
 
-Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
+Avant de continuer, désactivez l’aperçu de certains nœuds, tels que Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal et Arc.ByCenterPointRadiusAngle, pour mieux voir le résultat.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch:** Construct surface patches for each contour to create “slices” of the mesh.
+> 1. **Surface.ByPatch :** créez des corrections de surface pour chaque contour afin de créer des "sections" du maillage.
 
-Add a second set of slices for a waffle/egg-crate effect.
+Ajoutez un deuxième jeu de sections pour un effet gaufré/alvéolé.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 06.jpg>)
 
-You may have noticed that the intersection operations calculate faster with a mesh vs. a comparable solid. Workflows such as the one demonstrated in this exercise lend themselves well to working with meshes.
+Vous avez peut-être remarqué que les opérations d'intersection sont calculées plus rapidement avec un maillage plutôt qu'avec un solide comparable. Les workflows tels que ceux présentés dans cet exercice se prêtent bien à l'utilisation de maillages.

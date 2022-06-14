@@ -1,115 +1,115 @@
-# Logic
+# Logique
 
-**Logic**, or more specifically, **Conditional Logic**, allows us to specify an action or set of actions based on a test. After evaluating the test, we will have a Boolean value representing `True` or `False` that we can use to control the Program Flow.
+La **logique**, ou plus spécifiquement, la **logique conditionnelle**, vous permet de spécifier une action ou un jeu d'actions en fonction d'un test. Après avoir évalué le test, vous obtenez une valeur booléenne représentant `True` ou `False` que vous pouvez utiliser pour contrôler le flux du programme.
 
-### Booleans
+### Valeurs booléennes
 
-Numeric variables can store a whole range of different numbers. Boolean variables can only store two values referred to as True or False, Yes or No, 1 or 0. We rarely use booleans to perform calculations because of their limited range.
+Les variables numériques peuvent stocker un intervalle entier de nombres différents. Les variables booléennes ne peuvent stocker que deux valeurs appelées True ou False, Yes ou No, 1 ou 0. Les valeurs booléennes sont rarement utilisées pour effectuer des calculs en raison de leur intervalle limité.
 
-### Conditional Statements
+### Instructions conditionnelles
 
-The "If" statement is a key concept in programming: "If _this_ is true, then _that_ happens, otherwise _something else_ happens. The resulting action of the statement is driven by a boolean value. There are multiple ways to define an "If" statement in Dynamo:
+L'instruction "If" est un concept clé de la programmation : "If" cet _élément_ a la valeur True, voici le _résultat_, sinon _autre chose_ se produit. L'action résultant de l'instruction est déterminée par une valeur booléenne. Il existe plusieurs méthodes pour définir une instruction "If" dans Dynamo :
 
-| Icon                                            | Name (Syntax)             | Inputs            | Outputs |
+| Icône | Nom (Syntaxe) | Entrées | Sorties |
 | ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](<../images/5-3/3/If.jpg>)         | If (**If**)               | test, true, false | result  |
-| ![](../images/5-3/3/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | result  |
-| ![](<../images/5-3/3/Code Block.jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
+| ![](<../images/5-3/3/If.jpg>) | If (**If**) | test, true, false | résultat |
+| ![](../images/5-3/3/Formula.jpg) | Formula (**IF(x,y,z)**) | x, y, z | résultat |
+| ![](<../images/5-3/3/Code Block.jpg>) | Code Block (**(x?y:z);**) | x? y, z | résultat |
 
-Let's go over a brief example on each of these three nodes in action using the conditional "If" statement.
+Voici un bref exemple de chacun de ces trois nœuds en action à l’aide de l’instruction conditionnelle « If ».
 
-In this image, the _boolean_ is set to _true_, which means that the result is a string reading: _"this is the result if true"._ The three Nodes creating the _If_ statement are working identically here.
+Dans cette image, la _valeur booléenne_ est définie sur _True_, ce qui signifie que le résultat est une chaîne indiquant : _"voici le résultat si True"._ Les trois nœuds qui créent l'instruction _If_ fonctionnent de la même manière ici.
 
 ![](<../images/5-3/3/logic - conditional statements 01 false.jpg>)
 
-Again, the Nodes are working identically. If the _boolean_ is changed to _false_, our result is the number _Pi_, as defined in the original _If_ statement.
+Là encore, les nœuds fonctionnent de la même façon. Si la _valeur booléenne_ est définie sur _False_, le résultat est le nombre _Pi_, tel que défini dans l'instruction _If_ d'origine.
 
-![x](<../images/5-3/3/logic - conditional statements 02 true.jpg>)
+![ x](<../images/5-3/3/logic - conditional statements 02 true.jpg>)
 
-## Exercise: Logic and Geometry
+## Exercice : Logique et géométrie
 
-> Download the example file by clicking on the link below.
+> Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
-### Part I: Filtering a List
+### Partie I : Filtrage d’une liste
 
-1. Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
+1. Utilisez la logique pour séparer une liste de nombres en une liste de nombres pairs et une liste de nombres impairs.
 
 ![](<../images/5-3/3/logic - exercise part I-01.jpg>)
 
-> a. **Number Range -** add a number range to the canvas.
+> a. **Number Range :** ajoutez un intervalle de nombres dans la zone de dessin.
 >
-> b. **Numbers -** add three number nodes to the canvas. The value for each number node should be: _0.0_ for _start_, _10.0_ for _end_, and _1.0_ for _step_.
+> b. **Number :** ajoutez trois nœuds numériques dans la zone de dessin. La valeur de chaque nœud numérique doit être : _0.0_ pour _start_, _10.0_ pour _end_ et _1.0_ pour _step_.
 >
-> c. **Output** - our output is a list of 11 numbers ranging from 0-10.
+> c. **Sortie :** le résultat est une liste de 11 chiffres compris entre 0 et 10.
 >
-> d. **Modulo (%)-** **Number Range** into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
+> d. **Module (%) :** **Number Range** en _x_ et _2.0_ en _y_. Cela permet de calculer le reste pour chaque nombre de la liste divisé par 2. La sortie de cette liste vous donne une liste de valeurs alternant entre 0 et 1.
 >
-> e. **Equality Test (==) -** add an equality test to the canvas. Plug _modulo_ output into the _x_ input and _0.0_ into the _y_ input.
+> e. **Test d’égalité (==) :** permet d’ajouter un test d’égalité à la zone de dessin. Connectez la sortie du _module_ à l'entrée _x_ et _0.0_ à l'entrée _y_.
 >
-> f. **Watch -** The output of the equality test is a list of values alternating between true and false. These are the values used to separate the items in the list. _0_ (or _true_) represents even numbers and (_1_, or _false_) represents odd numbers.
+> f. **Watch :** la sortie du test d’égalité est une liste de valeurs alternant entre true et false. Il s'agit des valeurs utilisées pour séparer les éléments de la liste. _0_ (ou _true_) représente des nombres pairs et _1_ (ou _false_) des nombres impairs.
 >
-> g. **List.FilterByBoolMask -** this Node will filter the values into two different lists based on the input boolean. Plug the original _number range_ into the _list_ input and the _equality test_ output into the _mask_ input. The _in_ output represents true values while the _out_ output represents false values.
+> g. **List.FilterByBoolMask :** ce nœud filtre les valeurs dans deux listes différentes en fonction de la valeur booléenne d’entrée. Connectez le noeud _Number Range_ d'origine à l'entrée _list_ et la sortie du _test d'égalité_ à l'entrée _mask_. La sortie _in_ représente des valeurs True, tandis que la sortie _out_ représente des valeurs False.
 >
-> h. **Watch** - as a result, we now have a list of even numbers and a list of odd numbers. We've used logical operators to separate lists into patterns!
+> h. **Watch :** le résultat est une liste de nombres pairs et une liste de nombres impairs. Vous avez utilisé des opérateurs logiques pour séparer des listes en modèles.
 
-### Part II: From Logic to Geometry
+### Partie II : De la logique à la géométrie
 
-Building off of the logic established in the first exercise, let's apply this setup into a modeling operation.
+En partant de la logique établie dans le premier exercice, appliquez cette configuration dans une opération de modélisation.
 
-2\. We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
+2\. Partez de l'exercice précédent avec les mêmes nœuds. Les seules exceptions (outre la modification du format) sont les suivantes :
 
 ![](<../images/5-3/3/logic - exercise part II-01.jpg>)
 
-> a. Use a **Sequence** Node with these input values.
+> a. Utilisez un nœud **Sequence** avec ces valeurs d’entrée.
 >
-> b. We've unplugged the in list input into **List.FilterByBoolMask**. We'll put these Nodes aside for now, but they'll come in handy later in the exercise.
+> b. L’entrée de liste in de **List.FilterByBoolMask** est déconnectée. Pour l'instant, mettez ces nœuds de côté. Vous les utiliserez plus tard dans l'exercice.
 
-3\. Let's begin by creating a separate group of Graph as shown in the image above. This group of Nodes represents a parametric equation to define a line curve. A few notes:
+3\. Commencez par créer un groupe distinct de graphiques, comme illustré dans l’image ci-dessus. Ce groupe de nœuds représente une équation paramétrique permettant de définir une courbe de ligne. Remarques :
 
 ![](<../images/5-3/3/logic - exercise part II-02.jpg>)
 
-> a. The first **Number Slider** represents the frequency of the wave, it should have a min of 1, a max of 4, and a step of 0.01.
+> a. Le premier nœud **Number Slider** représente la fréquence de l’onde. Il doit avoir une valeur minimale de 1, une valeur maximale de 4 et un pas de 0,01.
 >
-> b. The second **Number Slider** represents the amplitude of the wave, should have a min of 0, a max of 1, and a step of 0.01.
+> b. Le second nœud **Number Slider** représente l’amplitude de l’onde. Il doit avoir une valeur minimale de 0, une valeur maximale de 1 et un pas de 0,01.
 >
-> c. **PolyCurve.ByPoints -** if the above Node diagram is copied, the result is a sine curve in the Dynamo Preview viewport.
+> c. **PolyCurve.ByPoints :** si vous copiez le diagramme de nœud ci-dessus, vous obtenez une courbe sinusoïdale dans la fenêtre d’aperçu Dynamo.
 
-The method here for the inputs: use number nodes for more static properties and number sliders on the more flexible ones. We want to keep the original number range that we're defining in the beginning of this step. However, the sine curve that we create here should have some flexibility. We can move these sliders to watch the curve update its frequency and amplitude.
+Méthode utilisée ici pour les entrées : utilisez des nœuds Number pour obtenir davantage de propriétés statiques et des curseurs de numérotation sur les valeurs plus flexibles. Conservez l'intervalle de nombres d'origine défini au début de cette étape. Toutefois, la courbe sinusoïdale créée ici doit garder une certaine flexibilité. Vous pouvez déplacer ces curseurs pour observer la fréquence et l'amplitude de la courbe se mettre à jour.
 
 ![](<../images/5-3/3/logic - exercise part II-03.gif>)
 
-4\. We're going to jump around a bit in the definition, so let's look at the end result so that we can reference what we're getting at. The first two steps are made separately, we now want to connect the two. We'll use the base sine curve to drive the location of the zipper components, and we'll use the true/false logic to alternate between little boxes and larger boxes.
+4\. Vous allez désormais passer à la définition. Examinez le résultat final pour pouvoir référencer ce que vous obtenez. Les deux premières étapes sont effectuées séparément, mais vous devez maintenant les connecter. Utilisez la courbe sinusoïdale de base pour déterminer l'emplacement des composants de zipper, et utilisez la logique True/False pour alterner entre les petites boîtes et les grandes boîtes.
 
 ![](<../images/5-3/3/logic - exercise part II-04.jpg>)
 
-> a. **Math.RemapRange** - Using the number sequence created in step 02, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
+> a. **Math.RemapRange :** à l’aide de la séquence de nombres créée à l’étape 2, créez une nouvelle série de nombres en remappant l’intervalle. Les nombres d'origine de l'étape 1 sont compris entre 0 et 100. Ces nombres sont compris entre 0 et 1, respectivement par les entrées _newMin_ et _newMax_.
 
-5\. Create a **Curve.PointAtParameter** Node, then connect the **Math.RemapRange** output from step 04 as its _param_ input.
+5\. Créez un nœud **Curve.PointAtParameter**, puis connectez la sortie **Math.RemapRange** de l’étape 4 en tant qu’entrée _param_.
 
 ![](<../images/5-3/3/logic - exercise part II-05.jpg>)
 
-This step creates points along the curve. We remapped the numbers to 0 to 1 because the input of _param_ is looking for values in this range. A value of _0_ represents the start point, a value of _1_ represents the end points. All numbers in between evaluate within the _\[0,1]_ range.
+Cette étape permet de créer des points le long de la courbe. Remappez les nombres entre 0 et 1, car l'entrée _param_ recherche les valeurs dans cet intervalle. Une valeur de _0_ représente le point de départ, une valeur de _1_ représente les points de fin. Tous les nombres compris entre ces valeurs sont évalués dans l’intervalle _[0,1]_.
 
-6\. Connect the output from **Curve.PointAtParameter** to the **List.FilterByBoolMask** to separate the list of odd and even indices.
+6\. Connectez la sortie de **Curve.PointAtParameter** à **List.FilterByBoolMask** pour séparer la liste des index impairs et pairs.
 
 ![](<../images/5-3/3/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask** - Plug **Curve.PointAtParameter** from the previous step into the _list_ input.
+> a. **List.FilterByBoolMask :** connectez **Curve.PointAtParameter** de l’étape précédente à l’entrée _list_.
 >
-> b. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
+> b. **Watch :** le fait d’avoir un nœud Watch pour _in_ et un nœud Watch pour _out_ indique que deux listes représentent des index pairs et des index impairs. Ces points sont ordonnés de la même façon sur la courbe, illustrée à l'étape suivante.
 
-7\. Next, we are going to use the output result from **List.FilterByBoolMask** in step 05 to generate geometries with sizes according to its indices.
+7\. Vous allez maintenant utiliser le résultat de la sortie de **List.FilterByBoolMask** à l’étape 5 pour générer des géométries avec des tailles en fonction de leurs index.
 
-**Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
+**Cuboid.ByLengths :** recréez les connexions illustrées à l'image ci-dessus pour obtenir un zipper le long de la courbe sinusoïdale. Ici, un cuboïde ne représente qu'une boîte, et vous définissez sa taille en fonction du point de courbe au centre de la boîte. La logique de la division paire/impaire doit maintenant être claire dans le modèle.
 
 ![](<../images/5-3/3/logic - exercise part II-07.jpg>)
 
-> a. List of cuboids at even indices.
+> a. Liste de cuboïdes à des index pairs.
 >
-> b. List of cuboids at odd indices.
+> b. Liste de cuboïdes à des index impairs.
 
-Voila! You have just programmed a process of defining the geometry dimensions according to the logic operation demonstrated in this exercise.
+Voilà ! Vous venez de programmer un processus de définition de cotes de géométrie en fonction de l’opération logique présentée dans cet exercice.

@@ -1,6 +1,6 @@
-# Python Point Generators
+# Générateurs de points Python
 
-The following Python scripts generate point arrays for several examples. They should be pasted into a Python Script node as follows:
+Les scripts Python suivants génèrent des réseaux de points pour plusieurs exemples. Ils doivent être collés dans un nœud de script Python comme suit :
 
 ![](<../images/8-2/10/python points 01.jpg>)
 

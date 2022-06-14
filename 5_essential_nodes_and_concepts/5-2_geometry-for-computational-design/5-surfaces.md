@@ -1,79 +1,79 @@
 # Surfaces
 
-## Surfaces in Dynamo
+## Surfaces dans Dynamo
 
-### What is Surface
+### Qu’est-ce qu’une surface ?
 
-We use [Surface](5-surfaces.md#surface) in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+Grâce à l’utilisation de la [surface](5-surfaces.md#surface) dans le modèle, vous pouvez représenter des objets dans un univers en trois dimensions. Tandis que les courbes ne sont pas toujours planes (elles sont en trois dimensions), l'espace qu'elles définissent est toujours lié à une dimension. Les surfaces nous donnent une autre dimension et un ensemble de propriétés supplémentaires que vous pouvez utiliser dans d'autres opérations de modélisation.
 
-### Surface at Parameter
+### Surface au niveau d’un paramètre
 
-Import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
+Importez et évaluez une surface au niveau d’un paramètre dans Dynamo pour voir quel type d’informations vous pouvez extraire.
 
 ![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
 
-> 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
-> 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
-> 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
+> 1. _Surface.PointAtParameter_ renvoie le point à une coordonnée UV donnée.
+> 2. _Surface.NormalAtParameter_ renvoie le vecteur normal à une coordonnée UV donnée.
+> 3. _Surface.GetIsoline_ renvoie la courbe isoparamétrique à une coordonnée U ou V. Notez l'entrée isoDirection.
 
-> Download the example files by clicking on the link below.
+> Téléchargez les fichiers d’exemple en cliquant sur le lien ci-dessous.
 >
-> A full list of example files can be found in the Appendix.
+> Vous trouverez la liste complète des fichiers d'exemple dans l'annexe.
 
 {% file src="../datasets/5-2/5/Surfaces.zip" %}
 
-## Deep Dive into...
+## Approfondir...
 
 ### Surface
 
-A Surface is a mathematical shape defined by a function and two parameters, Instead of `t` for Curves, we use `U` and `V` to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.
+Une surface est une forme mathématique définie par une fonction et deux paramètres. Au lieu de `t` pour les courbes, vous utilisez `U` et `V` pour décrire l’espace de paramètre correspondant. Cela signifie que vous disposez de plus de données géométriques à partir desquelles dessiner lorsque vous utilisez ce type de géométrie. Par exemple, les courbes ont des vecteurs tangents et des plans normaux (qui peuvent pivoter ou se tordre le long de la courbe), alors que les surfaces ont des vecteurs normaux et des plans tangents qui seront cohérents dans leur orientation.
 
 ![Surface](../images/5-2/5/Surface.jpg)
 
 > 1. Surface
-> 2. U Isocurve
-> 3. V Isocurve
-> 4. UV Coordinate
-> 5. Perpendicular Plane
-> 6. Normal Vector
+> 2. Isocourbe U
+> 3. Isocourbe V
+> 4. Coordonnées UV
+> 5. Plan perpendiculaire
+> 6. Vecteur normal
 
-**Surface Domain**: A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).
+**Domaine de surface** : un domaine de surface est défini comme l'intervalle de paramètres (U,V) qui s'évaluent en un point tridimensionnel sur cette surface. Le domaine dans chaque dimension (U ou V) est généralement décrit par deux nombres (U Min à U Max) et (V Min à V Max).
 
 ![Surface](../images/5-2/5/SurfaceParameter.jpg)
 
-Although the shape of the Surface by not look "rectangular" and it locally may have a tighter or looser set of isocurves, the "space" defined by its domain is always two dimensional. In Dynamo, Surfaces are always understood to have a domain defined by a minimum of 0.0 and maximum of 1.0 in both U and V directions. Planar or trimmed Surfaces may have different domains.
+Bien que la forme de la surface ne paraisse pas rectangulaire et qu'elle puisse avoir localement un ensemble d'isocourbes plus ou moins étroit, l'"espace" défini par son domaine est toujours en deux dimensions. Dans Dynamo, les surfaces sont toujours considérées comme ayant un domaine défini par un minimum de 0.0 et un maximum de 1.0 dans les directions U et V. Les surfaces planes ou ajustées peuvent avoir des domaines différents.
 
-**Isocurve** (or Isoparametric Curve): A curve defined by a constant U or V value on the surface and a domain of values for the corresponding other U or V direction.
+**Isocourbe** (ou courbe isométrique) : courbe définie par une valeur U ou V constante sur la surface et par un domaine de valeurs pour l'autre direction U ou V correspondante.
 
-**UV Coordinate**: The Point in UV Parameter Space defined by U, V, and sometimes W.
+**Coordonnée UV** : point dans l'espace de paramètre UV défini par U, V et parfois W.
 
-![Surface Coordinate](../images/5-2/5/SurfaceCoordinate.jpg)
+![Coordonnée de surface](../images/5-2/5/SurfaceCoordinate.jpg)
 
-**Perpendicular Plane**: A Plane that is perpendicular to both U and V Isocurves at a given UV Coordinate.
+**Plan perpendiculaire** : plan perpendiculaire aux isocourbes U et V au niveau d'une coordonnée UV donnée.
 
-**Normal Vector**: A Vector defining the direction of "up" relative to the Perpendicular Plane.
+**Vecteur normal** : vecteur définissant la direction vers le haut par rapport au plan perpendiculaire.
 
-### NURBS Surfaces
+### Surfaces NURBS
 
-**NURBS Surfaces** are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree.
+Les **surfaces NURBS** sont assez comparables aux courbes NURBS. Les surfaces NURBS peuvent être considérées comme une grille de courbes NURBS qui vont dans deux directions. La forme d'une surface NURBS est définie par un certain nombre de points de contrôle et le degré de cette surface dans les directions U et V. Les mêmes algorithmes sont utilisés pour calculer la forme, les normales, les tangentes, les courbures et d'autres propriétés par le biais de points de contrôle, de poids et de degrés.
 
-![NURBS Surface](../images/5-2/5/NURBSsurface.jpg)
+![Surface NURBS](../images/5-2/5/NURBSsurface.jpg)
 
-In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.
+Dans le cas des surfaces NURBS, il existe deux directions impliquées par la géométrie, car les surfaces NURBS sont, quelle que soit la forme que vous voyez, des grilles rectangulaires de points de contrôle. Et même si ces directions sont souvent arbitraires par rapport au système de coordonnées général, vous les utiliserez fréquemment pour analyser vos modèles ou générer d'autres géométries basées sur la surface.
 
-![NURBS Surface](../images/5-2/5/NURBSsurface-Degree.jpg)
+![Surface NURBS](../images/5-2/5/NURBSsurface-Degree.jpg)
 
-> 1. Degree (U,V) = (3,3)
-> 2. Degree (U,V) = (3,1)
-> 3. Degree (U,V) = (1,2)
-> 4. Degree (U,V) = (1,1)
+> 1. Degré (U,V) = (3,3)
+> 2. Degré (U,V) = (3,1)
+> 3. Degré (U,V) = (1,2)
+> 4. Degré (U,V) = (1,1)
 
 ### Polysurfaces
 
-**Polysurfaces** are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology.
+Les **polysurfaces** sont composées de surfaces qui sont jointes sur une arête. Les polysurfaces offrent plus de deux définitions UV dimensionnelles, car vous pouvez maintenant parcourir les formes connectées au moyen de leur topologie.
 
-While "Topology" generally describes a concept around how parts are connected and/or related Topology in Dynamo is also a type of Geometry. Specifically it is a parent category for Surfaces, Polysurfaces, and Solids.
+Bien que le terme "topologie" décrive généralement un concept relatif à la façon dont les composants sont connectés et/ou la topologie associée, dans Dynamo, il s'agit également d'un type de géométrie. Il s'agit en particulier d'une catégorie parent pour les surfaces, les polysurfaces et les solides.
 
-![PolySurface](../images/5-2/5/PolySurface.jpg)
+![Polysurface](../images/5-2/5/PolySurface.jpg)
 
-Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.
+La jonction de surfaces, parfois appelée face de fermeture, de cette manière vous permet de créer des formes plus complexes et de définir des détails sur la jointure. Vous pouvez appliquer facilement une opération de congé ou de chanfrein aux arêtes d'une polysurface.

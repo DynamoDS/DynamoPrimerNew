@@ -1,5 +1,5 @@
-# Best Practices
+# Pratiques recommandées
 
-This part of the primer is organized in the spirit of a journal of “best practices”. It sheds light on several strategies that we have learned, through experience and research, to be most conducive to quality parametric workflows. As designers and programmers, our metric for quality is primarily concerned with the maintainability, dependability, usability, and efficiency of our tools. While these best practices have specific examples for either visual or text-based scripting, the principles are applicable to all programming environments and can inform many computational workflows.
+Cette partie du guide compile des pratiques recommandées. Elle met en lumière plusieurs stratégies qui se sont avérées, via l'expérience et la recherche, les plus propices à des workflows paramétriques de qualité. En tant que concepteurs et programmeurs, notre indicateur de qualité est principalement axé sur la pérennité, la fiabilité, la facilité d'utilisation et l'efficacité de nos outils. Bien que ces pratiques recommandées soient associées à des exemples spécifiques pour les scripts visuels ou textuels, les principes s’appliquent à tous les environnements de programmation et peuvent alimenter de nombreux workflows de calcul.
 
 ![](./images/bestPractices.png)
