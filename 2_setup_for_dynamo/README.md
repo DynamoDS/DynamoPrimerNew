@@ -1,69 +1,69 @@
-# Setup for Dynamo
+# Setup für Dynamo
 
-### Dynamo as Extension vs Dynamo Sandbox
+### Dynamo als Erweiterung im Vergleich zu Dynamo Sandbox
 
-Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
+Dynamo ist ein aktives Open Source-Entwicklungsprojekt. Hier finden Sie eine [Liste der Software, die Dynamo unterstützt](http://dynamobim.org/download/).
 
 ![](<images/setup for dynamo - dynamo revit.png>) ![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>)
 
-### Launch Dynamo as Extension
+### Starten von Dynamo als Erweiterung
 
-Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civil3D** and etc.
+Dynamo ist im Lieferumfang von Software wie **Revit3D**, **FormIt**, **Civil3D** usw. enthalten.
 
-To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](images/dynamoCore-halfSize.png) to launch it.
+Um Dynamo zu verwenden, starten Sie es über die Gruppe Werkzeugkasten. Je nachdem, welche Software Sie verwenden, befindet sich das Startsymbol in der Regel unter Menü > Registerkarte **Verwalten**. Klicken Sie auf das Dynamo-Symbol ![](images/dynamoCore-halfSize.png), um die Anwendung zu starten.
 
 ![](<images/launch dynamo from revit.jpg>)
 
-For more guidance on using Dynamo with a specific software, we recommend referring to the following sections:
+Weitere Informationen zur Verwendung von Dynamo mit einer bestimmten Software finden Sie in den folgenden Abschnitten:
 
 * [Dynamo for Revit](../7\_dynamo\_for\_revit/)
 
-If you would like to use Dynamo as a standalone application. Continue reading for guidance on downloading the Sandbox.
+Wenn Sie Dynamo als eigenständige Anwendung verwenden möchten. Lesen Sie weiter, um Anweisungen zum Herunterladen der Sandbox zu erhalten.
 
-### Get Dynamo Sandbox
+### Dynamo Sandbox herunterladen
 
-#### Download
+#### Herunterladevorgang läuft
 
-The Dynamo application is available from the [Dynamo website](http://dynamobim.com). Both official, past or pre-released versions are available from the download page. Visit [Get Dynamo](http://dynamobim.org/download/) page and Click **Download** for the official released version.
+Die Dynamo-Anwendung ist auf der [Dynamo-Website](http://dynamobim.com) verfügbar. Sowohl offizielle als auch frühere oder vorab veröffentlichte Versionen sind auf der Download-Seite verfügbar. Besuchen Sie die Seite [Dynamo herunterladen](http://dynamobim.org/download/), und klicken Sie auf **Herunterladen**, um die offizielle veröffentlichte Version herunterzuladen.
 
 ![](<images/dynamo-sandbox (1).png>)
 
-If you are looking for previous or 'bleeding edge' development releases, all versions can be found in the lower section from the same page.
+Wenn Sie nach früheren oder aktuellen Entwicklungsversionen suchen, finden Sie alle Versionen im unteren Bereich derselben Seite.
 
 ![](<images/Dynamo Sandbox All builds.jpg>)
 
 {% hint style="info" %}
-'Bleeding edge' development may include some new and experimental features that are yet to be fully tested, hence may be unstable. By using this, you may discover bugs or issues, help us improve the application by reporting issues to our team.
+Aktuelle Entwicklungsversionen können einige neue und experimentelle Funktionen enthalten, die noch nicht vollständig getestet wurden und daher instabil sein können. Durch die Verwendung dieser Versionen können Sie Fehler oder Probleme entdecken und uns helfen, die Anwendung zu verbessern, indem Sie Probleme an unser Team melden.
 
-Beginners are advised to download the official stable release.
+Einsteiger sollten die offizielle stabile Version herunterladen.
 {% endhint %}
 
-#### Unzip
+#### Extrahieren
 
-Before launching any version you have downloaded, you are required to unzip the content to your chosen folder.
+Bevor Sie eine Version starten, die Sie heruntergeladen haben, müssen Sie den Inhalt in den ausgewählten Ordner extrahieren.
 
-Download and install [7zip](https://www.7-zip.org/download.html) to your computer for this step.
+Laden Sie für diesen Schritt [7zip](https://www.7-zip.org/download.html) auf Ihren Computer herunter, und installieren Sie es.
 
-Right-click on the zip file and select **Extract All**...
+Klicken Sie mit der rechten Maustaste auf die ZIP-Datei, und wählen Sie **Alle extrahieren**...
 
 ![](<images/02-03 Extract zip file.jpg>)
 
-Choose a destination to unzip all the files.
+Wählen Sie ein Ziel zum Entpacken aller Dateien.
 
 ![](<images/02-04 Extract destination folder.jpg>)
 
-#### Launching
+#### Starten
 
-In your destination folder, double-click on **DynamoSandbox.exe** to launch it
+Doppelklicken Sie im Zielordner auf **DynamoSandbox.exe**, um die Anwendung zu starten.
 
 ![](<images/02-05 Dynamo exe.jpg>)
 
-You will see the DynamoSandbox startup screen as follow.
+Der Startbildschirm von DynamoSandbox wird wie folgt angezeigt.
 
 ![](<images/02-06 Dynamo startup screen.jpg>)
 
-Congratulations, you have now finished the setup for using DynamoSandbox!
+Sie haben die Einrichtung für die Verwendung von DynamoSandbox abgeschlossen!
 
 {% hint style="info" %}
-**Geometry** is an additional functionality in Dynamo Sandbox that is only available to users who have a current subscription or license to the following Autodesk software: Revit, Robot Structural Analysis, FormIt, and Civil 3D.  **Geometry** allows users too import, create, edit and export geometry from Dynamo Sandbox.
+**Geometry** ist eine zusätzliche Funktion in Dynamo Sandbox, die nur Benutzern mit einem aktuellen Abonnement oder einer Lizenz für die folgende Autodesk-Software zur Verfügung steht: Revit, Robot Structural Analysis, FormIt und Civil 3D.  **Geometry** ermöglicht Benutzern das Importieren, Erstellen, Bearbeiten und Exportieren von Geometrie aus Dynamo Sandbox.
 {% endhint %}

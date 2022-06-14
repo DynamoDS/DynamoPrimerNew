@@ -1,25 +1,25 @@
-# What is Dynamo & How Does It Work?
+# Was ist Dynamo und wie funktioniert es?
 
-Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
+Dynamo ist eine [visuelle Programmieranwendung](broken-reference/), die Sie herunterladen und entweder im Standalone-Modus (Sandbox) oder als Plug-In für andere Software wie Revit, FormIt oder Civil 3D ausführen können.
 
 {% hint style="info" %}
-Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
+Erfahren Sie mehr über die [Unterschiede zwischen **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
 {% endhint %}
 
-### The Process
+### Prozess
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
+In Dynamo haben Sie die Möglichkeit, in einem visuellen Programmierprozess zu arbeiten, wobei Sie Elemente miteinander verbinden und dadurch die Beziehungen und Abfolgen von Aktionen definieren, aus denen sich benutzerdefinierte Algorithmen zusammensetzen. Ihre Algorithmen können Sie für ein breites Spektrum an Verwendungszwecken von der Verarbeitung von Daten bis zum Generieren von Geometrie einsetzen – in Echtzeit und ohne eine einzige Zeile `code` zu schreiben.
 
 ![](<./images/1-1/nodes and wires - flow of data.jpg>)
 
-### Connecting Nodes and Wires
+### Verbinden von Blöcken und Drähten
 
-Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
+Blöcke und Drähte sind die wichtigsten Komponenten in Dynamo zur Unterstützung eines [visuellen Programmierungsprozesses](../a\_appendix/a-1\_visual-programming-and-dynamo.md). Sie helfen beim Aufbau starker visueller und systemischer Beziehungen zwischen den Teilen eines Entwurfs. Verwenden Sie einen einfachen Mausklick, um die Blöcke während der Entwicklung und Optimierung Ihres Entwurfsarbeitsablaufs einfach zu verbinden.
 
 ![](<./images/1-1/what is dynamo - connecting nodes with wires.gif>)
 
-## What can Dynamo Achieve?
+## Was kann Dynamo leisten?
 
-From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
+Ob Sie die visuelle Programmierung für Arbeitsabläufe in Projekten nutzen oder eigene Werkzeuge entwickeln: Dynamo ist unverzichtbarer Bestandteil in einer Vielzahl möglicher Anwendungen.
 
-[Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[Folgen Sie dem Dynamo in Action-Board auf Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)

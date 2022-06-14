@@ -1,113 +1,113 @@
-# Strings
+# Zeichenfolgen
 
-### What is a String
+### Was ist eine Zeichenfolge?
 
-Formally, a **String** is a sequence of characters representing a literal constant or some type of variable. Informally, a string is programming lingo for text. We've worked with numbers, both integers and decimal numbers, to drive parameters and we can do the same with text.
+Eine **Zeichenfolge** ist in der Fachsprache eine Folge von Zeichen, die für eine Literalkonstante oder verschiedene Typen von Variablen steht. Im Zusammenhang mit Programmierung ist "Zeichenfolge" eine Bezeichnung für Text. Sie haben bereits Zahlen (Ganzzahlen und Dezimalzahlen) zur Steuerung von Parametern verwendet. Dasselbe ist auch mit Text möglich.
 
-### Creating Strings
+### Erstellen von Zeichenfolgen
 
-Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
+Zeichenfolgen können auf vielfältige Weise eingesetzt werden. Dazu gehören das Definieren benutzerdefinierter Parameter, Beschriftungen für Dokumentation sowie die Analyse mithilfe textbasierter Datensätze. Der String-Block befindet sich in der Kategorie Core > Input.
 
-The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
+Die oben gezeigten Blöcke sind Zeichenfolgen. Zeichenfolgen können Zahlen, Buchstaben oder ganze Textabschnitte sein.
 
 ![](<../images/5-3/4/strings - creating strings.jpg>)
 
-## Exercise
+## Übungslektion
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-### Querying Strings
+### Abfragen von Zeichenfolgen
 
-You can parse through large amounts of data quickly by querying strings. We'll talk about some basic operations which can speed up a workflow and help for software interoperability.
+Sie können große Datenmengen rasch analysieren, indem Sie Zeichenfolgen abfragen. In diesem Abschnitt werden einige grundlegende Vorgänge behandelt, die Arbeitsabläufe beschleunigen und die Interoperabilität von Software verbessern können.
 
-The image below considers a string of data coming from an external spreadsheet. The string represents the vertices of a rectangle in the XY-Plane. Let's break down some string split operations in miniature exercise:
+Die folgende Abbildung zeigt eine Folge von Daten aus einer externen Kalkulationstabelle. Diese Zeichenfolge steht für die Scheitelpunkt eines Rechtecks in der xy-Ebene. In dieser kurzen Übung wird die Zeichenfolge geteilt:
 
 ![](<../images/5-3/4/strings - querying strings 01.jpg>)
 
-> 1. The ";" separator splits each vertex of the rectangle. This creates a list with 3 items for each vertex.
+> 1. Das Trennzeichen ";" trennt die einzelnen Scheitelpunkte des Rechtecks voneinander. Dadurch erhalten Sie eine Liste mit drei Einträgen für die einzelnen Scheitelpunkte.
 
 ![](<../images/5-3/4/strings - querying strings 02.jpg>)
 
-> 1. By hitting the "_+_" in the middle of the Node, we create new separator.
-> 2. Add a "_,_" string to the canvas and plug in to the new separator input.
-> 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
+> 1. Durch Klicken auf "_+_" in der Mitte des Blocks erstellen Sie ein neues Trennzeichen.
+> 2. Fügen Sie einen String-Block mit der Angabe "_,_" in den Ansichtsbereich ein und verbinden Sie ihn mit der neuen separator-Eingabe.
+> 3. Als Ergebnis erhalten Sie jetzt eine Liste mit zehn Einträgen. In diesem Block wird die Liste zuerst entsprechend _separator0_ und dann entsprechend _separator1_ geteilt.
 
-While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a number. This is done with the **String.ToNumber** Node
+Die Einträge in der oben gezeigten Liste sehen zwar wie Zahlen aus, werden jedoch in Dynamo nach wie vor als einzelne Zeichen betrachtet. Damit Sie Punkte erstellen können, müssen Sie ihren Datentyp aus Zeichenfolgen in Zahlen konvertieren. Dazu verwenden Sie den **String.ToNumber**-Block.
 
 ![](<../images/5-3/4/strings - querying strings 03.jpg>)
 
-> 1. This Node is straightforward. Plug the **String.Split** results into the input. The output doesn't look different, but the data type is now a _number_ instead of a _string_.
+> 1. Dieser Block ist einfach zu verwenden. Verbinden Sie das Ergebnis von **String.Split** mit der Eingabe. Die Ausgabe sieht genau so aus wie zuvor, der Datentyp ist jetzt jedoch _number_ anstelle von _string_.
 
-With some basic additional operations, we now have a triangle drawn at the origin based on the original string input.
+Mit einigen weiteren grundlegenden Operationen wird am Ursprungspunkt ein Dreieck gezeichnet, dem die Zeichenfolge aus der ursprünglichen Eingabe zugrunde liegt.
 
 ![](<../images/5-3/4/strings - querying strings 04.jpg>)
 
-### Manipulating Strings
+### Bearbeiten von Zeichenfolgen
 
-Since a string is a generic text object, they host a wide range of applications. Let's take a look at some of the major actions in the Core>String Category in Dynamo:
+Da Zeichenfolgen allgemeine Textobjekte sind, eignen sie sich für eine Vielzahl von Verwendungszwecken. In diesem Abschnitt werden einige der wichtigsten Aktionen in der Kategorie Core > String in Dynamo beschrieben:
 
-This is a method of merging two strings together in order. This takes each literal string in a list and creates one merged string.
+Die folgende Methode verbindet zwei Zeichenfolgen in der angegebenen Reihenfolge. Dabei werden die einzelnen Literalzeichenfolgen in einer Liste zu einer einzigen Zeichenfolge zusammengeführt.
 
-The following represents the concatenation of three strings:
+Die folgende Abbildung zeigt die Verkettung dreier Zeichenfolgen:
 
 ![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
 
-> 1. Add or subtract strings to the concatenation by clicking the +/- buttons in the center of the Node.
-> 2. The output gives one concatenated string, with spaces and punctuation included.
+> 1. Mithilfe der Schaltflächen + und - in der Mitte des Blocks können Sie der Verkettung weitere Zeichenfolgen hinzufügen oder sie daraus entfernen.
+> 2. Die Ausgabe zeigt die aus der Verkettung resultierende Zeichenfolge einschließlich Leerzeichen und Satzzeichen.
 
-The join method is very similar to concatenate, except it has an added layer of punctuation.
+Die Verbindung ist der Verkettung ähnlich, wobei das Ergebnis jedoch zusätzlich gegliedert wird.
 
-If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the **String.Join** node in order to create a similar data structure.
+Aus der Arbeit mit Excel sind Sie wahrscheinlich mit CSV-Dateien vertraut. Dies steht für kommagetrennte Werte. Sie könnten im **String.Join**-Block ein Komma (oder in diesem Fall zwei Bindestriche) als Trennzeichen verwenden, um eine ähnliche Datenstruktur zu erhalten.
 
-The following image represents the joining of two strings:
+Die folgende Abbildung zeigt die Verbindung zweier Zeichenfolgen:
 
 ![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
 
-> 1. The separator input allows one to create a string which divides the joined strings.
+> 1. Die separator-Eingabe ermöglicht es, eine Zeichenfolge zu erstellen, die als Trennzeichen zwischen den verbundenen Zeichenfolgen steht.
 
-### Working with Strings
+### Arbeiten mit Zeichenfolgen
 
-In this exercise, we're going to use methods of querying and manipulating strings to deconstruct the final stanza of Robert Frost's [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Not the most practical application, but it will help us to grasp conceptual string actions as we apply them to legible lines of rhythm and rhyme.
+In dieser Übungslektion zerlegen Sie die letzte Strophe von Robert Frosts Gedicht [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621) mithilfe von Methoden zum Abfragen und Bearbeiten von Zeichenfolgen. Diese zugegebenermaßen nicht unbedingt praxisnahe Anwendung verdeutlicht die grundlegenden Aktionen für Zeichenfolgen durch Anwendung auf die Zeilen mit ihrem Rhythmus und Reim, wie sie im Gedicht erscheinen.
 
-Let's begin with a basic string split of the stanza. We first notice that the writing is formatted based on commas. We'll use this format to separate each line into individual items.
+Als Erstes teilen Sie einfach die Zeichenfolge, die die Strophe bildet. Zunächst fällt auf, dass der Text durch Kommas gegliedert ist. Anhand dieses Formats definieren Sie jede Zeile als eigenen Eintrag.
 
 ![](<../images/5-3/4/strings - working with strings 01.jpg>)
 
-> 1. The base string is pasted into a **String** Node.
-> 2. Another **String** Node is used to denote the separator. In this case, we're using a comma.
-> 3. A **String.Split** Node is added to the canvas and connected to the two strings.
-> 4. The output shows that we've now separated the lines into individual elements.
+> 1. Fügen Sie die Ausgangszeichenfolge in einen **String**-Block ein.
+> 2. Legen Sie mithilfe eines zweiten **String**-Blocks das Trennzeichen fest. Verwenden Sie in diesem Fall ein Komma.
+> 3. Fügen Sie im Ansichtsbereich einen **String.Split**-Block hinzu und verbinden Sie ihn mit den beiden String-Blöcken.
+> 4. Die Ausgabe zeigt die einzelnen Zeilen als separate Einträge.
 
-Now, let's get to the good part of the poem: the last two lines. The original stanza was one item of data. We separated this data into individual items in the first step. Now we need to do a search for the text we're looking for. And while we _can_ do this by selecting the last two items of the list, if this were an entire book, we wouldn't want to read through everything and manually isolate the elements.
+Betrachten Sie jetzt den besten Teil des Gedichts – die letzten beiden Zeilen. Die ursprüngliche Strophe war ein einziges Datenelement. Diese Daten haben Sie im ersten Schritt in einzelne Einträge aufgeteilt. Als Nächstes müssen Sie nach dem gewünschten Text suchen. In diesem Fall _können_ Sie dies zwar erreichen, indem Sie die letzten beiden Einträge in der Liste auswählen. In einem ganzen Buch wäre es jedoch unrealistisch, dieses komplett durchzulesen und die Elemente manuell zu isolieren.
 
 ![](<../images/5-3/4/strings - working with strings 02.jpg>)
 
-> 1. Instead of manually searching, we use a **String.Contains** Node to perform a search for a set of characters. This is the similar to doing the "Find" command in a word processor. In this case, we get a return of "true" or "false" if that substring is found within the item.
-> 2. In the _searchFor_ input, we define a substring that we're looking for within the stanza. Let's use a **String** Node with the text "And miles".
-> 3. The output gives us a list of falses and trues. We'll use this boolean logic to filter the elements in the next step.
+> 1. Verwenden Sie daher, anstatt manuell zu suchen, einen **String.Contains**-Block für die Suche nach einer Gruppe von Zeichen. Diese Funktion ist dem Befehl Suchen in Textverarbeitungsprogrammen ähnlich. In diesem Falle erhalten Sie True oder False als Ergebnis, je nachdem, ob die betreffende Teilzeichenfolge in einem Eintrag gefunden wurde.
+> 2. Definieren Sie in der _searchFor_-Eingabe die Teilzeichenfolge, nach der Sie in der Strophe suchen. Verwenden Sie dazu einen **String**-Block mit dem Text "And miles".
+> 3. Die Ausgabe zeigt eine Liste von True- und False-Werten. Im nächsten Schritt filtern Sie die Elemente mithilfe dieser Booleschen Logik.
 
 ![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
 
-> 1. **List.FilterByBoolMask** is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
-> 2. Our output from the "in" is as expected, giving us the final two lines of the stanza.
+> 1. Mit einem **List.FilterByBoolMask**-Block bereinigen Sie die True- und False-Werte. Die in-Ausgabe gibt die Aussagen mit dem Wert True für die mask-Eingabe zurück, die out-Ausgabe diejenigen mit dem Wert False.
+> 2. Die in-Ausgabe zeigt wie erwartet die letzten beiden Zeilen der Strophe.
 
-Now, we want to drive home the repetition of the stanza by merging the two lines together. When viewing the output of the previous step, we notice that there are two items in the list:
+Heben Sie jetzt die Wiederholung in der Strophe hervor, indem Sie diese beiden Zeilen zusammenführen. In der Ausgabe aus dem vorigen Schritt sehen Sie eine Liste mit zwei Einträgen.
 
 ![](<../images/5-3/4/strings - working with strings 04.jpg>)
 
-> 1. Using two **List.GetItemAtIndex** Nodes, we can isolate the items using the values of 0 and 1 as the index input.
-> 2. The output for each node gives us, in order, the final two lines.
+> 1. Mithilfe zweier **List.GetItemAtIndex**-Blöcke können Sie die Einträge durch Angabe der Werte 0 bzw. 1 für die index-Eingabe isolieren.
+> 2. Die Ausgabe jedes Blocks zeigt die letzten beiden Zeilen in der angegebenen Reihenfolge.
 
-To merge these two items into one, we use the **String.Join** Node:
+Verwenden Sie zum Zusammenführen der beiden Einträge einen **String.Join**-Block:
 
 ![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
 
-> 1. After adding the **String.Join** Node, we notice that we need a separator.
-> 2. To create the separator, we add a **String** Node to the canvas and type in a comma.
-> 3. The final output has merged the last two items into one.
+> 1. Nachdem Sie den **String.Join**-Block hinzugefügt haben, zeigt sich, dass ein Trennzeichen benötigt wird.
+> 2. Fügen Sie zum Erstellen des Trennzeichens im Ansichtsbereich einen **String**-Block hinzu und geben Sie ein Komma ein.
+> 3. In der letzten Ausgabe wurden beide Einträge zu einem zusammengeführt.
 
-This may seem like a lot of work to isolate the last two lines; and it's true, string operations often require some up front work. But they are scalable, and they can be applied to large datasets with relative ease. If you are working parametrically with spreadsheets and interoperability, be sure to keep string operations in mind.
+Dieser Vorgang zum Isolieren der letzten beiden Zeilen mag recht aufwendig erscheinen. Für Operationen mit Zeichenfolgen sind in der Tat zuweilen einige Vorarbeiten nötig. Diese Operationen sind jedoch skalierbar und können relativ leicht auf große Datensätze angewendet werden. Berücksichtigen Sie bei der parametrischen Arbeit mit Kalkulationstabellen und Interoperabiltät die Operationen für Zeichenfolgen.

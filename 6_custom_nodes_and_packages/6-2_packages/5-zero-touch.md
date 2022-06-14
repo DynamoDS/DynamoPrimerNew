@@ -1,120 +1,120 @@
-# Zero-Touch Importing
+# Zero-Touch-Import
 
-### What is Zero-Touch?
+### Was ist Zero-Touch?
 
-Zero-Touch Importing refers to a simple point-and-click method for importing C# libraries. Dynamo will read the public methods of a _.dll_ file and convert them to Dynamo nodes. You can use Zero-Touch to develop your own custom nodes and packages, and to import external libraries into the Dynamo environment.
+Unter Zero-Touch-Import versteht man ein einfaches Verfahren zum Importieren von C#-Bibliotheken durch Zeigen und Klicken. Dynamo liest die öffentlichen Methoden einer _DLL_-Datei und konvertiert sie in Dynamo-Blöcke. Sie können mithilfe von Zero-Touch Ihre eigenen benutzerdefinierten Blöcke und Pakete entwickeln sowie externe Bibliotheken in die Dynamo-Umgebung importieren.
 
 ![](<../images/6-2/5/zero-touch importing 01.jpg>)
 
-> 1. .dll files
-> 2. Dynamo Nodes
+> 1. DLL-Dateien
+> 2. Dynamo-Blöcke
 
-With Zero-Touch, you can actually import a library which was not necessarily developed for Dynamo and create a suite of new nodes. The current Zero-Touch functionality demonstrates the cross-platform mentality of the Dynamo Project.
+Mit Zero-Touch können Sie Bibliotheken importieren, die nicht unbedingt für Dynamo entwickelt wurden, und Suites mit neuen Blöcken erstellen. Die aktuelle Zero-Touch-Funktion zeigt das plattformübergreifende Konzept des Dynamo-Projekts.
 
-This section demonstrates how to use Zero-Touch to import a third party library. For information on developing your own Zero-Touch Library, reference the [Dynamo wiki page](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development).
+In diesem Abschnitt wird gezeigt, wie Sie mithilfe von Zero-Touch externe Bibliotheken importieren können. Informationen zum Entwickeln eigener Zero-Touch-Bibliotheken finden Sie auf der [Dynamo-Wiki-Seite](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development).
 
-### Zero-Touch Packages
+### Zero-Touch-Pakete
 
-Zero-touch packages are a good complement to user-defined custom nodes. A few packages which use C# libraries are listed in the table below. For more detailed information on packages, visit the [Packages section ](../../a\_appendix/a-3\_packages.md)in the Appendix.
+Zero-Touch-Pakete sind eine gute Ergänzung für benutzerdefinierte Blöcke. In der folgenden Tabelle sind einige Pakete angegeben, in denen C#-Bibliotheken verwendet werden. Genauere Informationen über die Pakete finden Sie im [Abschnitt zu Paketen](../../a\_appendix/a-3\_packages.md) im Anhang.
 
-| **Logo/Image**                                                                       | **Name**                                                                    |
+| **Logo/Abbildung** | **Name** |
 | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| ![](<../images/6-2/5/meshToolkit case study 01.jpg>)                           | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](<../images/6-2/5/package introduction - installing package folder 07.jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                               | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                                | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| ![](<../images/6-2/5/meshToolkit case study 01.jpg>) | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](<../images/6-2/5/package introduction - installing package folder 07.jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/) |
+| ![](../images/6-2/5/rhynamo.jpg) | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo) |
+| ![](../images/6-2/5/optimo.jpg) | [Optimo](https://github.com/BPOpt/Optimo) |
 
-## Case Study - Importing AForge
+## Fallstudie – Importieren von AForge
 
-In this case study, we'll show how to import the [AForge](http://www.aforgenet.com) external _.dll_ library. AForge is a robust library which offers a range of functionality from image processing to artificial intelligence. We'll reference the imaging class in AForge to do a few image processing exercises below.
+In dieser Fallstudie wird der Import der externen [AForge](http://www.aforgenet.com)-_DLL_-Bibliothek gezeigt. AForge ist eine zuverlässige Bibliothek mit einem breiten Spektrum von Funktionen, angefangen mit der Bildbearbeitung und bis hin zu künstlicher Intelligenz. Hier referenzieren Sie die Bildverarbeitungsklasse von AForge für die im weiteren Verlauf dieses Abschnitts folgenden Übungen zur Bildverarbeitung.
 
-Let's begin by downloading AForge. On the [AForge download page](http://www.aforgenet.com/framework/downloads.html), select _\[Download Installer]_ and install after download has completed.
+Beginnen Sie, indem Sie AForge herunterladen. Wählen Sie auf der [Download-Seite von AForge](http://www.aforgenet.com/framework/downloads.html) die Option _\[Download Installer]_. Wenn der Download abgeschlossen ist, installieren Sie das Programm.
 
-In Dynamo, create a new file and select _File > Import Library..._
+Erstellen Sie in Dynamo eine neue Datei und wählen Sie _Datei > Bibliothek importieren_.
 
 ![](<../images/6-2/5/case study aforge 01.jpg>)
 
-Next, locate the dll file.
+Suchen Sie als Nächstes die DLL-Datei.
 
 ![](<../images/6-2/5/case study aforge 02.jpg>)
 
-> 1. In the pop-up window, navigate to the release folder in your AForge install. This will likely be in a folder similar to this one: _C:\Program Files (x86)\AForge.NET\Framework\Release_.
-> 2. **AForge.Imaging.dll:** We only want to use this one file from the AForge library for this case study. Select this _.dll_ and hit _"Open"._
+> 1. Navigieren Sie im Popup-Fenster zum Release-Ordner in Ihrer AForge-Installation. Dies ist wahrscheinlich ein Ordner ähnlich dem folgenden: _C:\Program Files (x86)\AForge.NET\Framework\Release_.
+> 2. **AForge.Imaging.dll**: Für diese Fallstudie benötigen Sie nur diese eine Datei aus der AForge-Bibliothek. Wählen Sie diese _DLL_-Datei aus und klicken Sie auf _Öffnen._
 
-Back in Dynamo, you should see an **AForge** group of nodes added to your Library. We now have access to the AForge imaging library from our visual program!
+In Dynamo sollte in der Bibliothek jetzt eine Gruppe von Blöcken namens **AForge** hinzugekommen sein. Damit haben Sie innerhalb des visuellen Programms Zugriff auf die AForge-Bildbearbeitungsbibliothek.
 
 ![](<../images/6-2/5/case study aforge 03.jpg>)
 
-### Exercise 1 - Edge Detection
+### Übung 1 – Kantenerkennung
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/6-2/5/ZeroTouchImages.zip" %}
 
-Now that the library is imported, we'll start off simple with this first exercise (_01-EdgeDetection.dyn_). We'll do some basic image processing on a sample image to show how AForge image filters. We'll use the _"Watch Image"_ node to show our results and apply filters in Dynamo similar to those in Photoshop
+Nachdem Sie die Bibliothek importiert haben, beginnen Sie mit der ersten einfachen Übung (_01-EdgeDetection.dyn_). Sie führen einige einfache Bildverarbeitungsvorgänge an einem Beispielbild durch, um die Funktionsweise der Bildfilter in AForge zu demonstrieren. Dabei zeigen Sie die Ergebnisse in einem _Watch Image_-Block an und wenden in Dynamo Filter an, die denen von Photoshop ähnlich sind.
 
-To import an image, add a **File Path** node to the canvas and select "soapbubbles.jpg" from the exercise folder (photo cred: [flickr](https://www.flickr.com/photos/wwworks/667298782)).
+Um ein Bild zu importieren, fügen Sie im Ansichtsbereich einen **File Path**-Block hinzu und wählen Sie "soapbubbles.jpg" aus dem Übungsordner (Bildnachweis: [flickr](https://www.flickr.com/photos/wwworks/667298782)).
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 01.jpg>)
 
-The File Path node simply provides a String of the path to the image we've selected. Next, we need to convert it into a usable image file in Dynamo.
+Im File Path-Block wird lediglich der Pfad zum ausgewählten Bild als Zeichenfolge angegeben. Als Nächstes müssen Sie den Pfad in eine verwendbare Bilddatei in Dynamo konvertieren.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 02.jpg>)
 
-> 1. Use **File From Path** to convert the file path item into an image in the Dynamo environment.
-> 2. Connect the **File Path** node to the **File.FromPath** node.
-> 3. To convert this File into an Image, we'll use the **Image.ReadFromFile** node.
-> 4. Last, let's see the result! Drop a **Watch Image** node onto the canvas and connect to **Image.ReadFromFile**. We haven't used AForge yet, but we've successfully imported an image into Dynamo.
+> 1. Verwenden Sie einen **File.FromPath**-Block, um das Dateipfadelement in ein Bild in der Dynamo-Umgebung zu konvertieren.
+> 2. Verbinden Sie den **File Path**-Block mit dem **File.FromPath**-Block.
+> 3. Um diese Datei in ein Bild zu konvertieren, verwenden Sie den **Image.ReadFromFile**-Block.
+> 4. Schließlich zeigen Sie das Ergebnis an. Fügen Sie einen **Watch Image**-Block in den Ansichtsbereich ein und verbinden Sie ihn mit dem **Image.ReadFromFile**-Block. Sie haben AForge noch nicht verwendet, aber das Bild erfolgreich in Dynamo importiert.
 
-Under AForge.Imaging.AForge.Imaging.Filters (in the navigation menu), you'll notice that there is a wide array of filters available. We're going to use one of these filters now to desaturate an image based on threshold values.
+Unter AForge.Imaging.AForge.Imaging.Filters (im Navigationsmenü) stehen zahlreiche Filter zur Verfügung. Sie reduzieren mithilfe eines dieser Filter die Farbsättigung des Bildes anhand von Schwellenwerten.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 03.jpg>)
 
-> 1. Drop three sliders onto the canvas, change their ranges to be from 0 to 1 and their step values to be 0.01.
-> 2. Add the **Grayscale.Grayscale** node to the canvas. This is an AForge filter which applies a grayscale filter to an image. Connect the three sliders from step 1 into cr, cg, and cb. Change the top and bottom sliders to have a value of 1 and the middle slider to have a value of 0.
-> 3. In order to apply the Grayscale filter, we need an action to perform on our image. For this, we use **BaseFilter.Apply**. Connect the image into the image input and **Grayscale.Grayscale** into the baseFilter input.
-> 4. Plugging into a **Watch Image** node, we get a desaturated image.
+> 1. Fügen Sie drei Schieberegler in den Ansichtsbereich ein und ändern Sie ihre Bereiche in 0 bis 1 und ihre Schrittwerte in 0,01.
+> 2. Fügen Sie den **Grayscale.Grayscale**-Block in den Ansichtsbereich ein. Dies ist ein AForge-Filter, der einen Graustufenfilter auf das Bild anwendet. Verbinden Sie die drei Schieberegler aus Schritt 1 mit cr, cg und cb. Legen Sie im oberen und unteren Schieberegler jeweils den Wert 1 und im mittleren den Wert 0 fest.
+> 3. Damit der Graustufenfilter angewendet wird, benötigen Sie eine Aktion für das Bild. Verwenden Sie hierfür einen **BaseFilter.Apply**-Block. Verbinden Sie das Bild mit der image-Eingabe und den **Grayscale.Grayscale**-Block mit der baseFilter-Eingabe.
+> 4. Wenn Sie hier einen **Watch Image**-Block verbinden, erhalten Sie ein entsättigtes Bild.
 
-We can have control over how to desaturate this image based on threshold values for red, green, and blue. These are defined by the inputs to the **Grayscale.Grayscale** node. Notice that the image looks pretty dim - this is because the green value is set to 0 from our slider.
+Sie können mithilfe von Schwellenwerten für Rot, Grün und Blau steuern, wie das Bild entsättigt werden soll. Diese Werte werden über die Eingaben des **Grayscale.Grayscale**-Blocks definiert. Das Bild wirkt recht dunkel. Der Grund dafür ist, dass im Schieberegler für den Grün-Wert auf 0 eingestellt ist.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 04.jpg>)
 
-> 1. Change the top and bottom sliders to have a value of 0 and the middle slider to have a value of 1. This way we get a more legible desaturated image.
+> 1. Legen Sie im oberen und unteren Schieberegler jeweils den Wert 0 und im mittleren den Wert 1 fest. Auf diese Weise erhalten Sie deutlicheres entsättigtes Bild.
 
-Let's use the desaturated image, and apply another filter on top of it. The desaturated image has some contrast, so we we're going to test some edge detection.
+Als Nächstes wenden Sie einen zusätzlichen Filter auf das entsättigte Bild an. Das entsättigte Bild weist einen gewissen Kontrast auf. Testen Sie daher jetzt die Kantenerkennung.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 05.jpg>)
 
-> 1. Add a **SobelEdgeDetector.SobelEdgeDetector** node to the canvas.
-> 2. Connect this to a **BaseUsingCopyPartialFilter.Apply** and connect the desaturated image to the image input of this node.
-> 3. The Sobel Edge Detector has highlighted the edges in a new image.
+> 1. Fügen Sie im Ansichtsbereich einen **SobelEdgeDetector.SobelEdgeDetector**-Block hinzu.
+> 2. Verbinden Sie diesen mit einem **BaseUsingCopyPartialFilter.Apply**-Block, und verbinden Sie das entsättigte Bild mit der image-Eingabe dieses Blocks.
+> 3. Die Sobel-Kantenerkennung hebt in einem neuen Bild die Kanten hervor.
 
-Zooming in, the edge detector has called out the outlines of the bubbles with pixels. The AForge library has tools to take results like this and create Dynamo geometry. We'll explore that in the next exercise.
+Die vergrößerte Darstellung zeigt, dass die Kantenerkennung die Umrisse der Blasen mit Pixeln markiert. In der AForge-Bibliothek stehen Werkzeuge zur Verfügung, mit denen Sie aus Ergebnissen wie diesem Dynamo-Geometrie erstellen können. Dies wird in der nächsten Übung genauer betrachtet.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 06.jpg>)
 
-### Exercise 2 - Rectangle Creation
+### Übung 2 – Rechtecke erstellen
 
-Now that we're introduced to some basic image processing, let's use an image to drive Dynamo geometry! On an elementary level, in this exercise we're aiming to do a _"Live Trace"_ of an image using AForge and Dynamo. We're going to keep it simple and extract rectangles from a reference image, but there are tools available in AForge for more complex operations. We'll be working with _02-RectangleCreation.dyn_ from the downloaded exercise files.
+Nach dieser Einführung in die einfache Bildverarbeitung wird hier gezeigt, wie Sie ein Bild dazu verwenden können, um Dynamo-Geometrie zu steuern. In dieser Übung führen Sie mithilfe von AForge und Dynamo einen einfachen _Live Trace_-Vorgang für ein Bild durch. Dieses Beispiel ist relativ einfach: Aus einem Referenzbild werden Rechtecke extrahiert. In AForge stehen jedoch auch Werkzeuge für komplexere Operationen zur Verfügung. Sie arbeiten mit der Datei _02-RectangleCreation.dyn_ aus den heruntergeladenen Übungsdateien.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 01.jpg>)
 
-> 1. With the File Path node, navigate to grid.jpg in the exercise folder.
-> 2. Connect the remaining series of nodes above to reveal a course parametric grid.
+> 1. Navigieren Sie im File Path-Block zu grid.jpg im Übungsordner.
+> 2. Verbinden Sie die übrigen Blöcke der oben gezeigten Folge, um ein durch Verlaufsparameter definiertes Raster anzuzeigen.
 
-In this next step, we want to reference the white squares in the image and convert them to actual Dynamo geometry. AForge has a lot of powerful Computer Vision tools, and here we're going to use a particularly important one for the library called [BlobCounter](http://www.aforgenet.com/framework/docs/html/d7d5c028-7a23-e27d-ffd0-5df57cbd31a6.htm).
+Im nächsten Schritt sollen die weißen Quadrate in diesem Bild referenziert und in Dynamo-Geometrie konvertiert werden. AForge bietet eine Vielfalt leistungsstarker Computer Vision-Werkzeuge. Hier verwenden wir ein besonders wichtiges Werkzeug in der Bibliothek: [BlobCounter](http://www.aforgenet.com/framework/docs/html/d7d5c028-7a23-e27d-ffd0-5df57cbd31a6.htm).
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 02.jpg>)
 
-> 1. Add a BlobCounter to the canvas, then we need a way to process the image (similar to the **BaseFilter.Apply** tool in the previous exercise).
+> 1. Nachdem Sie einen BlobCounter-Block im Ansichtsbereich hinzugefügt haben, benötigen Sie eine Funktion zur Verarbeitung des Bildes (ähnlich dem **BaseFilter.Apply**-Werkzeug in der vorigen Übung).
 
-Unfortunately the "Process Image" node is not immediately visible in the Dynamo library. This is because the function may not be visible in the AForge source code. In order to fix this, we'll need to find a work-around.
+Der Process Image-Block ist jedoch nicht direkt in der Dynamo-Bibliothek sichtbar. Der Grund hierfür ist, dass die Funktion eventuell nicht im AForge-Quellcode sichtbar ist. Dies müssen Sie mit einer Umgehungslösung beheben.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 03.jpg>)
 
-> 1. Add a Python node to the canvas and add the following code to the Python node. This code imports the AForge library and then processes the imported image.
+> 1. Fügen Sie im Ansichtsbereich einen Python-Block hinzu, und geben Sie im Python-Block den folgenden Code ein. Dieser Code importiert die AForge-Bibliothek und verarbeitet dann das importierte Bild.
 
 ```
 import sys
@@ -127,19 +127,19 @@ bc.ProcessImage(IN[0])
 OUT=bc
 ```
 
-Connecting the image output to the Python node input, we get an AForge.Imaging.BlobCounter result from the Python node.
+Indem Sie die image-Ausgabe mit der Eingabe des Python-Blocks verbinden, erhalten Sie ein AForge.Imaging.BlobCounter-Ergebnis aus dem Python-Block.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 04.jpg>)
 
-The next steps will do some tricks that demonstrate familiarity with the [AForge Imaging API](http://www.aforgenet.com/framework/docs/html/d087503e-77da-dc47-0e33-788275035a90.htm). It's not necessary to learn all of this for Dynamo work. This is more of a demonstration of working with external libraries within the flexibility of the Dynamo environment.
+Die Vorgänge in den nächsten Schritten setzen eine gewisse Kenntnis der [AForge-Imaging-API](http://www.aforgenet.com/framework/docs/html/d087503e-77da-dc47-0e33-788275035a90.htm) voraus. Für die Arbeit mit Dynamo müssen Sie diese nicht komplett erlernen. Dies dient mehr zur Demonstration der Arbeit mit externen Bibliotheken innerhalb der Dynamo-Umgebung mit ihrer großen Flexibilität.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 05.jpg>)
 
-> 1. Connect the output of the Python script to BlobCounterBase.GetObjectRectangles. This reads objects in an image, based on a threshold value, and extracts quantified rectangles from the pixel space.
+> 1. Verbinden Sie die Ausgabe des Python-Skripts mit BlobCounterBase.GetObjectRectangles. Dieser Block liest Objekte in einem Bild anhand eines Schwellenwerts und extrahiert quantifizierte Rechtecke aus dem Pixelraum.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 06.jpg>)
 
-> 1. Adding another Python node to the canvas, connect to the GetObjectRectangles, and input the code below. This will create an organized list of Dynamo objects.
+> 1. Fügen Sie einen weiteren Python-Block in den Ansichtsbereich ein, verbinden Sie ihn mit GetObjectRectangles und geben Sie den unten stehenden Code ein. Dadurch erhalten Sie eine strukturierte Liste von Dynamo-Objekten.
 
 ```
 OUT = []
@@ -154,8 +154,8 @@ for rec in IN[0]:
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 07.jpg>)
 
-> 1. Transpose the output of the Python node from the previous step. This creates 4 lists, each representing X,Y, Width, and Height for each rectangle.
-> 2. Using Code Block, we organize the data into a structure that accommodates the Rectangle.ByCornerPoints node (code below).
+> 1. Vertauschen Sie die Listenebenen aus der Ausgabe des Python-Blocks aus dem vorigen Schritt mithilfe von Transpose. Dadurch erhalten Sie vier Listen, jeweils mit den x-, y-, Breiten- und Höhenwerten der einzelnen Rechtecke.
+> 2. Mithilfe eines Codeblocks ordnen Sie die Daten in einer für den Rectangle.ByCornerPoints-Block geeigneten Struktur (mithilfe des folgenden Codes).
 
 ```
 recData;
@@ -170,17 +170,17 @@ p2=Autodesk.Point.ByCoordinates(x1,y1);
 p3=Autodesk.Point.ByCoordinates(x1,y0);
 ```
 
-We have an array of rectangles representing the white squares in the image. Through programming, we've done something (roughly) similar to a live trace in Illustrator!
+Wir sehen eine Reihe von Rechtecken, die die weißen Quadrate aus dem Bild darstellen. Durch diese Programmierung haben Sie einen Vorgang durchgeführt, der der Live Trace-Funktion von Illustrator recht nahe kommt.
 
-We still need some cleanup, however. Zooming in, we can see that we have a bunch of small, unwanted rectangles.
+Das Ergebnis muss jedoch noch bereinigt werden. Die vergrößerte Darstellung zeigt, dass einige unerwünschte kleine Rechtecke vorhanden sind.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 08.jpg>)
 
-Next, we are going to write codes to get rid of unwanted rectangles.
+Als Nächstes schreiben wir Code, um unerwünschte Rechtecke zu entfernen.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 09.jpg>)
 
-> 1. Insert a Python node in between the GetObjectRectangles node and another Python node. The node's code is below, and removes all rectangles which are below a given size.
+> 1. Fügen Sie einen Python-Block zwischen dem GetObjectRectangles-Block und einem anderen Python-Block ein. Der Code für diesen Block wird unten gezeigt. Er entfernt alle Rechtecke, die kleiner als die angegebene Größe sind.
 
 ```
 rectangles=IN[0]
@@ -190,12 +190,12 @@ for rec in rectangles:
   OUT.append(rec)
 ```
 
-With the superfluous rectangles gone, just for kicks, let's create a surface from these rectangles and extrude them by a distance based on their areas.
+Damit haben Sie die überflüssigen Rechtecke beseitigt. Erstellen Sie jetzt interessehalber eine Oberfläche aus diesen Rechtecken und extrudieren Sie diese um eine Entfernung in Abhängigkeit von ihrer Fläche.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 10.jpg>)
 
-Last, change the both\_sides input to false and we get an extrusion in one direction. Dip this baby in resin and you've got yourself one super nerdy table.
+Ändern Sie zum Schluss die both\_sides-Eingabe in false. Damit erhalten Sie eine Extrusion in nur eine Richtung. Tauchen Sie diese Form in Kunstharz, um den perfekten Tisch für Nerds zu erhalten!
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 11.jpg>)
 
-These are basic examples, but the concepts outlined here are transferable to exciting real-world applications. Computer vision can be used for a whole host of processes. To name a few: barcode readers, perspective matching, [projection mapping](https://www.youtube.com/watch?v=XSR0Xady02o), and [augmented reality](http://aforgenet.com/aforge/articles/gratf\_ar/). For more advanced topics with AForge related to this exercise, have a read through [this article](http://aforgenet.com/articles/shape\_checker/).
+Die hier gezeigten Beispiele sind relativ einfach, die beschriebenen Konzepte jedoch lassen sich auf faszinierende reale Anwendungen übertragen. Computer Vision kann für eine Vielzahl von Prozessen verwendet werden. Hierzu gehören, um nur einige Beispiele zu nennen, Barcode-Scanner, Perspective-Matching, [Projektions-Mapping](https://www.youtube.com/watch?v=XSR0Xady02o) und [erweiterte Realität](http://aforgenet.com/aforge/articles/gratf\_ar/). Fortgeschrittene Themen mit AForge zu dieser Übung finden Sie in [diesem Artikel](http://aforgenet.com/articles/shape\_checker/).

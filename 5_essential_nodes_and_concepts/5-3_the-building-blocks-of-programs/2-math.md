@@ -1,39 +1,39 @@
 # Math
 
-If the simplest form of data is numbers, the easiest way to relate those numbers is through Mathematics. From simple operators like divide to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
+Zahlen stellen die einfachste Form von Daten dar und sind am einfachsten durch mathematische Operationen zu verknüpfen. Von einfachen Operatoren etwa zur Division über trigonometrische Funktionen bis hin zu komplexen Formeln: Mathematische Operationen eignen sich ausgezeichnet zur Analyse von Zahlenverhältnissen und -mustern.
 
-### Arithmetic Operators
+### Arithmetische Operatoren
 
-Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
+Operatoren sind Komponenten für algebraische Funktionen, die zwei Eingabewerte benötigen, um einen Ausgabewert zu erhalten (etwa bei der Addition, Subtraktion, Multiplikation, Division usw.). Sie finden die Operatoren unter Operators > Actions.
 
-| Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
+| Symbol | Name (Syntax) | Eingaben | Ausgaben |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-3/2/addition.jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Subtraction.jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Multiplication.jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Division.jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/addition.jpg>) | Addieren (**+**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Subtraction.jpg>) | Subtrahieren (**-**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Multiplication.jpg>) | Multiplizieren (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Division.jpg>) | Dividieren (**/**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
-## Exercise: The Golden Spiral Formula
+## Übung: Die Goldene Spirale-Formel
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-### Part I: Parametric Formula
+### Teil I: Parametrische Formel
 
-Combine operators and variables to form a more complex relationship through **Formulas**. Use sliders to make a Formula that can be controlled with input parameters.
+Kombinieren Sie Operatoren und Variablen, um mithilfe von **Formeln** eine komplexere Beziehung zu bilden. Verwenden Sie die Schieberegler, um eine Formel zu erstellen, die mit Eingabeparametern gesteuert werden kann.
 
-1.Create Number sequence that represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
+1. Wir erstellen eine Nummernfolge, die für die Angabe "t" in der parametrischen Gleichung steht. Wir benötigen daher eine Liste mit genügend Werten zum Definieren einer Spirale.
 
-**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.
+**Sequence**: Definieren Sie eine Zahlenfolge mithilfe von drei Eingaben: _start, amount_ und _step_.
 
 ![](<../images/5-3/2/math - part I-01.jpg>)
 
-2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.
+2\. Mit dem oben beschriebenen Schritt haben Sie eine Liste von Zahlen erstellt, die die parametrische Domäne definieren. Als Nächstes erstellen Sie eine Gruppe von Blöcken, die die Goldene Spirale-Gleichung darstellen.
 
-The golden spiral is defined as the equation:
+Die Goldene Spirale ist durch die folgende Gleichungen definiert:
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -43,76 +43,76 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-The image below represents the golden spiral in in visual programming form. When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
+Die folgende Abbildung zeigt die goldene Spirale in visueller Programmierung. Beachten Sie bei der Betrachtung dieser Blockgruppe die Entsprechungen zwischen dem visuellen Programm und der schriftlichen Gleichung.
 
 ![](<../images/5-3/2/math - part I-02.jpg>)
 
-> a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
+> a. **Number Slider**: Fügen Sie im Ansichtsbereich zwei Zahlen-Schieberegler ein. Diese Schieberegler steuern die Variablen _a_ und _b_ in der parametrischen Gleichung. Sie stehen für einstellbare Konstanten bzw. Parameter, die Sie anpassen können, um das gewünschte Ergebnis zu erhalten.
 >
-> b. **Multiplication (\*)** : The multiplication Node is represented by an asterisk. We'll use this repeatedly to connect multiplying variables
+> b. **Multiplication (\*)**: Der Block für die Multiplikation wird mit einem Sternchen dargestellt. Er kommt hier mehrmals zum Einsatz, um Variable miteinander zu multiplizieren.
 >
-> c. **Math.RadiansToDegrees**: The '_t_' values need to be translated to degrees for their evaluation in the trigonometric functions. Remember, Dynamo defaults to degrees for evaluating these functions.
+> c. **Math.RadiansToDegrees**: Die Werte für _t_ müssen in Grad umgewandelt werden, damit sie in den trigonometrischen Funktionen verwendet werden können. Dynamo verwendet per Vorgabe Grad zur Auswertung dieser Funktionen.
 >
-> d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
+> d. **Math.Pow**: Als Funktion von _t_ und der Zahl _e_ erstellt dieser Block die Fibonacci-Folge.
 >
-> e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
+> e. **Math.Cos und Math.Sin**: Diese beiden trigonometrischen Funktionen differenzieren die x- und y-Koordinaten der einzelnen parametrischen Punkte.
 >
-> f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
+> f. **Watch**: Als Ausgabe erhalten wir zwei Listen mit Werten für die _x_- und _y_-Koordinaten der Punkte, aus denen die Spirale erstellt wird.
 
-### Part II: From Formula to Geometry
+### Teil II: Von der Formel zur Geometrie
 
-Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
+Die Gruppe von Blöcken aus dem letzten Schritt funktioniert einwandfrei, erfordert jedoch erheblichen Aufwand. Einen effizienteren Arbeitsablauf finden Sie unter [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md). Dort wird beschrieben, wie Sie eine Reihe von Dynamo-Ausdrücken in ein und demselben Block definieren können. In den nächsten Schritten zeichnen Sie mithilfe der parametrischen Gleichung die Fibonacci-Spirale.
 
-**Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
+**Point.ByCoordinates:** Verbinden Sie den oberen Multiplikationsblock mit der _x_-Eingabe und den unteren mit der _y_-Eingabe. Dadurch wird auf dem Bildschirm eine parametrische Spirale aus Punkten angezeigt.
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints:** Connect **Point.ByCoordinates** from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
+**Polycurve.ByPoints**: Verbinden Sie **Point.ByCoordinates** aus dem vorigen Schritt mit _points_. Für _connectLastToFirst_ wird keine Eingabe benötigt, da Sie keine geschlossene Kurve erstellen. Dadurch wird eine durch die im vorigen Schritt erstellten Punkte verlaufende Spirale erstellt.
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
-We've now completed the Fibonacci Spiral! Let's take this further into two separate exercises from here, which we'll call the Nautilus and the Sunflower. These are abstractions of natural systems, but the two different applications of the Fibonacci spiral will be well represented.
+Damit haben Sie die Fibonacci-Spirale erstellt. Dies entwickeln Sie in zwei weiteren Übungen weiter, die hier als "Nautilus" und "Sonnenblume" bezeichnet werden. Dabei handelt es sich um Abstraktionen aus Systemen, die in der Natur vorkommen und gute Beispiele für zwei verschiedene Verwendungsweisen der Fibonacci-Spirale darstellen.
 
-### Part III: From Spiral to Nautilus
+### Teil III: Von der Spirale zur Nautilusmuschel
 
-**Circle.ByCenterPointRadius:** We'll use a circle Node here with the same inputs as the previous step. The radius value defaults to _1.0_, so we see an immediate output of circles. It becomes immediately legible how the points diverge further from the origin.
+**Circle.ByCenterPointRadius**: Verwenden Sie hier einen Circle-Block mit denselben Eingaben wie im vorigen Schritt. Als Radius ist der Wert _1.0_ vorgegeben, d. h., Sie sehen sofort die ausgegebenen Kreise. Die zunehmende Entfernung der Punkte vom Ursprung ist sofort ersichtlich.
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
-**Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.
+**Number Sequence**: Dies ist das Original-Array für "_t_". Die Verbindung mit dem Radiuswert **Circle.ByCenterPointRadius** bewirkt, dass die Mittelpunkte der Kreise sich nach wie vor vom Ursprung entfernen, wobei jedoch auch ihr Radius zunimmt. Sie erhalten eine recht originelle Fibonacci-Grafik.
 
-Bonus points if you make it 3D!
+Versuchen Sie, dies in 3D darzustellen!
 
 ![](<../images/5-3/2/math - part III-02.gif>)
 
-### Part IV: From Nautilus to Phyllotaxis
+### Teil IV: Von der Nautilusmuschel zur Phyllotaxis
 
-Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
+Muster: Nachdem Sie eine Nautilusmuschel aus Kreisen erstellt haben, betrachten Sie jetzt parametrische Raster. Durch einfaches Drehen der Fibonacci-Spirale erstellen Sie ein Fibonacci-Raster. Das Ergebnis ist anhand des [Wachstums vom Sonnenblumensamen](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/) modelliert.
 
-As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
+Beginnen Sie mit demselben Schritt wie in der vorigen Übung, d. h., indem Sie mithilfe des **Point.ByCoordinates**-Blocks ein spiralförmiges Array aus Punkten erstellen.
 
 ![](<../images/5-3/2/math - part IV-01.jpg>)
 
-Next, follow these mini steps to generate a series of spiral at various rotation.
+Als Nächstes führen Sie diese kleinen Schritte aus, um eine Reihe von Spiralen mit verschiedenen Drehungen zu erstellen.
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
+> a. **Geometry.Rotate**: Es stehen mehrere Optionen für **Geometry.Rotate** zur Verfügung. Achten Sie darauf, den Block mit den Eingaben _geometry_, _basePlane_ und _degrees_ zu wählen. Verbinden Sie **Point.ByCoordinates** mit der geometry-Eingabe. Klicken Sie mit der rechten Maustaste auf diesen Block, und vergewissern Sie sich, dass die Vergitterung auf Kreuzprodukt festgelegt ist.
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
-> b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
+> b. **Plane.XY**: Verbinden Sie dies mit der _basePlane_-Eingabe. Das Zentrum der Drehung ist der Ursprung, d. h. derselbe Punkt wie die Basis der Spirale.
 >
-> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a **Number Range** component. Connect this into the _degrees_ input.
+> c. **Number Range**: Sie benötigen mehrere Drehungen für die degree-Eingabe. Dies erreichen Sie schnell mit der Komponente für den **Zahlenbereich**. Verbinden Sie diese mit der _degrees_-Eingabe.
 >
-> d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
+> d. **Number**: Fügen Sie im Ansichtsbereich drei Zahlenblöcke übereinander ein, um den Zahlenbereich zu definieren. Weisen Sie diesen von oben nach unten die Werte _0.0,360.0,_ und _120.0_ zu. Diese Werte steuern die Drehung der Spirale. Beachten Sie die Ergebnisse der Ausgabe aus dem **Range**-Block, nachdem Sie die drei Zahlenblöcke mit ihm verbunden haben.
 
-Our output is beginning to resemble a whirlpool. Let's adjust some of the **Number Range** parameters and see how the results change.
+Die Ausgabe nimmt eine gewisse Ähnlichkeit mit einem Wirbel an. Passen Sie jetzt einige der für **Number Range** verwendeten Parameter an und beobachten Sie, wie sich die Ergebnisse verändern.
 
-Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.
+Ändern Sie die Schrittgröße für den **Range**-Block von _120.0_ in _36.0_. Damit erhalten Sie mehr Drehungen und daher ein dichteres Raster.
 
 ![](<../images/5-3/2/math - part IV-04.jpg>)
 
-Change the step size of the **Number Range** node from _36.0_ to _3.6_. This now gives us a much denser grid, and the directionality of the spiral is unclear. Ladies and gentlemen, we've created a sunflower.
+Ändern Sie die Schrittgröße für den **Range**-Block von _36.0_ in _3.6_. Dadurch erhalten Sie ein wesentlich dichteres Raster und die Richtung der Spiralen ist nicht mehr erkennbar. Damit haben Sie ein Sonnenblumenmuster erstellt.
 
 ![](<../images/5-3/2/math - part IV-05.jpg>)

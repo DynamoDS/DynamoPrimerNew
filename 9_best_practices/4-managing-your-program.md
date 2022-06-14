@@ -1,55 +1,55 @@
-# Managing Your Program
+# Programme verwalten
 
-Working within a Visual Programming process can be a powerful creative activity, but very quickly the Program Flow and key user inputs can be obscured by complexity and/or layout of the Workspace. Let's review some best practices for managing your program.
+Der visuelle Programmierungsprozesses ist eine äußerst leistungsstarke, kreative Aktivität, wobei der Programmablauf und die wichtigsten Benutzereingaben jedoch schnell durch ihre Komplexität und/oder das Layout des Arbeitsbereichs unübersichtlich werden können. Machen Sie sich im Folgenden mit einigen bewährten Verfahren für die Verwaltung von Programmen vertraut.
 
-### Alignment&#x20;
+### Ausrichtung&#x20;
 
-Once we have added more than a few Nodes to the Workspace, we may want to re-organize the layout of the Nodes for clarity's sake. By selecting more than one Node and right-clicking on the Workspace, the pop up window includes an **Align Selection** menu with justification and distribution options in X and Y.
+Nachdem Sie bereits zahlreiche Blöcke zum Arbeitsbereich hinzugefügt haben, möchten Sie sie möglicherweise neu anordnen, um das Layout übersichtlicher zu gestalten. Indem Sie mehrere Blöcke auswählen und mit der rechten Maustaste in den Arbeitsbereich klicken, wird ein Popup-Fenster mit dem Menü **Auswahl ausrichten** angezeigt, das Optionen zum Ausrichten und Verteilen in X- und Y-Richtung enthält.
 
 ![](<./images/4/managing your program - alignment.jpg>)
 
-> 1. Select more than one Node
-> 2. Right-click on the Workspace
-> 3. Use the **Align Selection** options
+> 1. Wählen Sie mehrere Blöcke aus.
+> 2. Klicken Sie mit der rechten Maustaste in den Arbeitsbereich.
+> 3. Verwenden Sie die Optionen von **Auswahl ausrichten**.
 
-### Notes&#x20;
+### Anmerkungen&#x20;
 
-With some experience, we may be able to "read" the Visual Program by reviewing the Node Names and following the Program Flow. For users of all experience levels, it is also good practice to include plain language labels and descriptions. Dynamo has a **Notes** Node with an editable text field to do so. We can add Notes to the Workspace in two ways:
+Mit etwas Erfahrung werden Sie auch in der Lage sein, visuelle Programme zu "lesen", indem Sie die Blocknamen überprüfen und den Programmablauf verfolgen. Für Benutzer unterschiedlicher Erfahrungsniveaus hat es sich ebenfalls bewährt, aussagekräftige Beschriftungen und Beschreibungen einzufügen. In Dynamo ist hierfür ein **Notes**-Block mit einem bearbeitbaren Textfeld verfügbar. Für das Hinzufügen von Anmerkungen zum Arbeitsbereich bestehen zwei Möglichkeiten:
 
 ![](<./images/4/managing your program - notes.jpg>)
 
-> 1. Browse to the menu Edit > Create Note
-> 2. Use the keyboard shortcut Ctrl+W
+> 1. Navigieren Sie zum Menü Datei > Anmerkung erstellen.
+> 2. Die Tastenkombination Strg+W verwenden
 
-Once the Note is added to the Workspace a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
+Nachdem Sie eine Anmerkung zum Arbeitsbereich hinzugefügt haben, wird ein Popup-Textfeld angezeigt, in dem Sie den Text für die Anmerkung bearbeiten können. Nach der Erstellung einer Anmerkung können Sie sie bearbeiten, indem Sie darauf doppelklicken oder mit der rechten Maustaste auf den Note-Block klicken.
 
 ![](<./images/4/managing your program - notes 02.jpg>)
 
-### Grouping&#x20;
+### Gruppierung&#x20;
 
-When our Visual Program gets big, it is helpful to identify the larger steps that will be executed. We can highlight larger collections of Nodes with a **Group** to label them with a colored rectangle in the background and a title. There are three ways to make a Group with more than one Node selected:
+Je umfangreicher ein visuelles Programm wird, desto hilfreicher kann es sein, größere Schritte zu identifizieren, die ausgeführt werden. Sie können größere Sammlungen von Blöcken durch ein Rechteck mit farbigem Hintergrund und einen Titel zu einer **Gruppe** zusammenfassen. Für das Erstellen einer Gruppe mit mehreren ausgewählten Blöcken sind drei Möglichkeiten verfügbar:
 
 ![](<./images/4/managing your program - grouping 01.jpg>)
 
-> 1. Browse to the menu Edit > Create Group
-> 2. Use the keyboard shortcut Ctrl+G
-> 3. Right-click on the Workspace and select "Create Group"
+> 1. Navigieren Sie zum Menü Datei > Gruppe erstellen.
+> 2. Die Tastenkombination Strg+G verwenden
+> 3. Klicken Sie mit der rechten Maustaste in den Arbeitsbereich und wählen Sie "Gruppe erstellen".
 
-Once a Group is created we can edit its settings, such as the title and color.&#x20;
+Nachdem Sie eine Gruppe erstellt haben, können Sie deren Einstellungen wie den Titel und die Farbe bearbeiten.&#x20;
 
 ![](<./images/4/managing your program - grouping 02.jpg>)
 
 {% hint style="info" %}
-Tip: Using both Notes and Groups is an effective way to annotate your file and increase readability.
+Tipp: Verwenden Sie Anmerkungen und Gruppen auf effektive Weise, um Ihre Datei zu beschriften und die Lesbarkeit zu erhöhen.
 {% endhint %}
 
-Here's an example of program from with Notes and Groups added:
+Hier sehen Sie ein Beispiel für ein Programm mit hinzugefügten Anmerkungen und Gruppen:
 
 ![](<./images/4/managing your program - grouping 03.jpg>)
 
-> 1. Note: "Grid Parameters"
-> 2. Note: "Grid Points"
-> 3. Group: "Create a Grid of Points"
-> 4. Group: "Create an Attractor Point"
-> 5. Note: "Calibrate Distance Values"
-> 6. Note: "Variable Grid of Circles"
+> 1. Anmerkung: "Rasterparameter"
+> 2. Anmerkung: "Rasterpunkte"
+> 3. Gruppe: "Raster aus Punkten erstellen"
+> 4. Gruppe: "Attraktorpunkt erstellen"
+> 5. Anmerkung: "Entfernungswerte kalibrieren"
+> 6. Anmerkung: "Variables Raster von Kreisen"

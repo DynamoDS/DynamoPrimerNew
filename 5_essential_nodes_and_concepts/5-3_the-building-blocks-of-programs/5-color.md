@@ -1,161 +1,161 @@
-# Color
+# Farbe
 
-Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
+Der Datentyp Farbe eignet sich ausgezeichnet zum Erstellen beeindruckender Präsentationen sowie zur Darstellung von Unterschieden in der Ausgabe Ihres Grafikprogramms. Bei der Arbeit mit abstrakten Daten und veränderlichen Zahlen ist es zuweilen schwierig, zu erkennen, was sich in welchem Umfang verändert. Dies ist ein nützlicher Anwendungsbereich für Farben.
 
-### Creating Colors
+### Erstellen von Farben
 
-Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
+Farben werden in Dynamo mithilfe von ARGB-Eingaben erstellt. Dies entspricht den Angaben Alpha, Rot, Grün und Blau. Der Alpha-Kanal gibt die _Transparenz_ der Farbe an, während die drei anderen Angaben als Primärfarben zur Darstellung des gesamten Farbspektrums verwendet werden.
 
-| Icon                                          | Name (Syntax)                 | Inputs  | Outputs |
+| Symbol | Name (Syntax) | Eingaben | Ausgaben |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
+| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB-Farbe (**Color.ByARGB**) | A, R, G, B | color |
 
-### Querying Color Values
+### Abfragen von Farbwerten
 
-The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
+Mithilfe der Farben in der Tabelle unten werden die Eigenschaften zum Definieren von Farben abgefragt: Alpha, Rot, Grün und Blau. Beachten Sie, dass der Block Color.Components alle vier unterschiedlichen Ausgaben bereitstellt. Diesem Block ist daher für die Abfrage der Eigenschaften einer Farbe der Vorzug zu geben.
 
-| Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
+| Symbol | Name (Syntax) | Eingaben | Ausgaben |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Alpha.jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-3/5/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-3/5/Color Green.jpg>) | Green (**Color.Green**)           | color  | G          |
-| ![](<../images/5-3/5/Color Blue.jpg>)      | Blue (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-3/5/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
+| ![](<../images/5-3/5/Color Alpha.jpg>) | Alpha (**Color.Alpha**) | color | A |
+| ![](<../images/5-3/5/Color Red.jpg>) | Rot (**Color.Red**) | color | R |
+| ![](<../images/5-3/5/Color Green.jpg>) | Grün (**Color.Green**) | color | G |
+| ![](<../images/5-3/5/Color Blue.jpg>) | Blau (**Color.Blue**) | color | B |
+| ![](<../images/5-3/5/Color Component.jpg>) | Komponenten (**Color.Components**) | color | A, R, G, B |
 
-The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
+Die Farben in der Tabelle unten entsprechen dem **HSB-Farbraum**. Die Interpretation einer anhand von Farbton, Sättigung und Helligkeit definierten Farbe mag intuitiver scheinen: Welche Farbe ist gemeint? Wie intensiv soll sie sein? Wie hell oder dunkel soll die Farbe sein? Dies ist die Differenzierung nach Farbton, Sättigung und Helligkeit.
 
-| Icon                                              | Name (Syntax)                     | Inputs | Outputs    |
+| Symbol | Name (Syntax) | Eingaben | Ausgaben |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Hue.jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-3/5/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-3/5/Color Brightness.jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| ![](<../images/5-3/5/Color Hue.jpg>) | Farbton (**Color.Hue**) | color | Hue |
+| ![](<../images/5-3/5/Color Saturation.jpg>) | Sättigung (**Color.Saturation**) | color | Saturation |
+| ![](<../images/5-3/5/Color Brightness.jpg>) | Helligkeit (**Color.Brightness**) | color | Brightness |
 
-### Color Range
+### Farbbereich
 
-The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+Der Farbbereich ist dem **Remap Range**-Block aus der Übung [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention") ähnlich: Eine Liste von Zahlen wird in einer anderen Domäne neu zugeordnet. Allerdings wird sie nicht einer _number_-Domäne, sondern anhand eingegebener Zahlenwerte zwischen 0 und 1 einem _Farbverlauf_ zugeordnet.
 
-The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
+Der derzeit verwendete Block funktioniert problemlos, seine Funktionsweise ist jedoch anfangs möglicherweise sehr ungewohnt. Die beste Möglichkeit, mit dem Farbverlauf vertraut zu werden, besteht darin, ihn in der Praxis auszuprobieren. Die folgende kurze Übung zeigt, wie Sie einen Farbverlauf mit Ausgabe der Farben anhand von Zahlen erstellen können.
 
 ![](<../images/5-3/5/color - color range.jpg>)
 
-> 1. Define three colors: Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
-> 2. **Create list:** Merge the three colors into one list.
-> 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. **Code Block**: Input values (between 0 and 1) to translate to colors.
+> 1. Definieren Sie drei Farben: Definieren Sie mithilfe eines **Code Block**-Blocks _Rot, Grün_ und _Blau_, indem Sie die jeweiligen Kombinationen von _0_ und _255_ verbinden.
+> 2. **Liste erstellen**: Führen Sie die drei Farben zu einer Liste zusammen.
+> 3. Definieren Sie Indizes: Erstellen Sie eine Liste zum Definieren der Griffpositionen für jede Farbe (von 0 bis 1). Beachten Sie, dass für Grün der Wert 0.75 festgelegt wurde. Dadurch wird die Farbe Grün an der Position bei 3/4 der Strecke des horizontalen Verlaufs im Schieberegler für den Farbbereich platziert.
+> 4. **Code Block**: Geben Sie Werte (zwischen 0 und 1) zum Versetzen der Farben ein.
 
-### Color Preview
+### Farbvorschau
 
-The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **Range** Node.
+Der **Display.ByGeometry**-Block ermöglicht die farbige Darstellung von Geometrie im Ansichtsfenster. Dies ist hilfreich zur Unterscheidung verschiedenartiger Geometrie, zur Verdeutlichung eines parametrischen Konzepts oder zum Definieren einer Analyselegende für die Simulation. Die Eingaben sind einfach: geometry und color. Um einen Farbverlauf wie in der Abbildung oben gezeigt zu erstellen, wird die color-Eingabe mit dem **Color** **Range**-Block verbunden.
 
 ![](<../images/5-3/5/color - color preview.jpg>)
 
-### Color On Surfaces
+### Farbe auf Oberflächen
 
-The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
+Der **Display.BySurfaceColors**-Block ermöglicht die Zuordnung von Daten auf einer Oberfläche mithilfe von Farben. Mithilfe dieser Funktion können Sie durch diskrete Auswertung gewonnene Daten, etwa zu Sonneneinstrahlung, Energie und Entfernung, überzeugend veranschaulichen. Die Anwendung von Farben auf eine Oberfläche in Dynamo ist der Anwendung von Texturen auf Materialien in anderen CAD-Umgebungen ähnlich. Die folgende kurze Übung demonstriert die Verwendung dieses Werkzeugs.
 
 ![](<../images/5-3/5/12 (1).jpg>)
 
-## Exercise
+## Übungslektion
 
-### Basic Helix with Colors
+### Grundlegende Helix mit Farben
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
-This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
+In dieser Übung soll Farbe zusammen mit Geometrie parametrisch gesteuert werden. Die Geometrie ist eine einfache, wie unten gezeigt in einem **Code Block** definierte Schraubenform. Dies ist ein schnelles und einfaches Verfahren zum Erstellen parametrischer Funktionen. Da das Thema dieses Abschnitts nicht Geometrie, sondern Farbe ist, wird die Helix auf effiziente Weise mithilfe des Codeblocks erstellt, ohne dass zu viel Platz im Ansichtsbereich beansprucht wird. Codeblöcke werden in den weiteren Kapiteln dieses Handbuchs bei der Behandlung komplexerer Themen häufiger verwendet.
 
 ![](<../images/5-3/5/color - basic helix with colors 01.jpg>)
 
-> 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
-> 2. **Point.ByCoordinates**: Plug the three outputs from the code block into the coordinates for the Node.
+> 1. **Code Block**: Definieren Sie die beiden Codeblöcke mit den oben gezeigten Formeln. Dies ist eine schnelle parametrische Methode zum Erstellen einer Helix.
+> 2. **Point.ByCoordinates**: Verbinden Sie die drei Ausgaben des Codeblocks mit den Koordinaten dieses Blocks.
 
-We now see an array of points creating a helix. The next step is to create a curve through the points so that we can visualize the helix.
+Daraufhin wird ein Array aus Punkten angezeigt, das eine Helixform bildet. Im nächsten Schritt erstellen Sie zur Visualisierung der Helix eine Kurve durch diese Punkte.
 
 ![](<../images/5-3/5/color - basic helix with colors 02.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the **Point.ByCoordinates** output into the _points_ input for the Node. We get a helical curve.
-> 2. **Curve.PointAtParameter:** Connect the **PolyCurve.ByPoints** output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
-> 3. **Number Slider:** After adding to the canvas, change the _min_ value to _0.0_, the _max_ value to _1.0_, and the _step_ value to _.01_. Plug the slider output into the _param_ input for **Curve.PointAtParameter**. We now see a point along the length of the helix, represented by a percentage of the slider (0 at the start point, 1 at the end point).
+> 1. **PolyCurve.ByPoints**: Verbinden Sie die **Point.ByCoordinates**-Ausgabe mit der _points_-Eingabe für den Block. Sie erhalten eine schraubenförmige Kurve.
+> 2. **Curve.PointAtParameter:** Verbinden Sie die **PolyCurve.ByPoints**-Ausgabe mit der _curve_-Eingabe. Mithilfe dieses Schritts erstellen Sie einen geometrischen Attraktorpunkt, der entlang der Kurve verschoben werden kann. Da die Kurve einen Punkt an einer Parameterposition auswertet, müssen Sie einen _param_-Wert zwischen 0 und 1 eingeben.
+> 3. **Number Slider**: Nachdem Sie diesen Block im Ansichtsbereich hinzugefügt haben, ändern Sie seinen _min_-Wert in _0.0_, den _max_-Wert in _1.0_ und den _step_-Wert in _.01_. Verbinden Sie die Ausgabe des Schiebereglers mit der _param_-Eingabe für **Curve.PointAtParameter**. Daraufhin wird auf der Helix ein Punkt angezeigt, dessen Position durch die Prozentangabe im Schieberegler definiert wird (0 am Startpunkt, 1 am Endpunkt).
 
-With the reference point created, we now compare the distance from the reference point to the original points defining the helix. This distance value will drive geometry as well as color.
+Nachdem Sie den Referenzpunkt erstellt haben, vergleichen Sie die Abstände vom Referenzpunkt zu den Originalpunkten, durch die die Helix definiert ist. Der Wert für diesen Abstand bestimmt sowohl die Geometrie als auch die Farbe.
 
 ![](<../images/5-3/5/color - basic helix with colors 03.jpg>)
 
-> 1. **Geometry.DistanceTo:** Connect **Curve.PointAtParameter** output into the _input_. Connect **Point.ByCoordinates** into the geometry input.
-> 2. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
+> 1. **Geometry.DistanceTo**: Verbinden Sie die Ausgabe von **Curve.PointAtParameter** mit der _other_-Eingabe. Verbinden Sie **Point.ByCoordinates** mit der geometry-Eingabe.
+> 2. **Watch**: Die Ausgabe zeigt als Ergebnis eine Liste der Abstände von jedem der Punkte auf der Helix zum Referenzpunkt.
 
-Our next step is to drive parameters with the list of distances from the helical points to the reference point. We use these distance values to define the radii of a series of spheres along the curve. In order to keep the spheres a suitable size, we need to _remap_ the values for distance.
+Im nächsten Schritt soll die Liste der Abstände zwischen den Helixpunkten und dem Referenzpunkt zur Steuerung von Parametern genutzt werden. Mithilfe dieser Werte werden die Radien einer Reihe von Kugeln entlang der Kurve definiert. Damit die Kugeln die richtige Größe annehmen, müssen Sie die Werte der Abstände mithilfe von _remap_ neu zuordnen.
 
 ![](<../images/5-3/5/color - basic helix with colors 04.jpg>)
 
-> 1. **Math.RemapRange:** Connect **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
-> 3. **Watch:** connect the **Math.RemapRange** output into one node and the **Geometry.DistanceTo** output into another. Compare the results.
+> 1. **Math.RemapRange**: Verbinden Sie die Ausgabe von **Geometry.DistanceTo** mit der numbers-Eingabe.
+> 2. **Code Block**: Verbinden Sie einen Codeblock mit dem Wert _0.01_ mit der _newMin_-Eingabe und einen zweiten Codeblock mit dem Wert _1_ mit der _newMax_-Eingabe.
+> 3. **Watch**: Verbinden Sie die Ausgabe von **Math.RemapRange** mit einem solchen Block und die Ausgabe von **Geometry.DistanceTo** mit einem zweiten. Vergleichen Sie die Ergebnisse.
 
-This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
+Mit diesem Schritt haben Sie die Liste der Abstände auf einen kleineren Bereich reduziert. Sie können die Werte für _newMin_ und _newMax_ wie gewünscht bearbeiten. Die Werte werden neu zugeordnet, wobei ihre _proportionale Verteilung_ im Bereich erhalten bleibt.
 
 ![](<../images/5-3/5/color - basic helix with colors 05.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius:** connect the **Math.RemapRange** output into the _radius_ input and the original **Point.ByCoordinates** output into the _centerPoint_ input.
+> 1. **Sphere.ByCenterPointRadius**: Verbinden Sie die Ausgabe von **Math.RemapRange** mit der _radius_-Eingabe und die ursprüngliche Ausgabe von **Point.ByCoordinates** mit der _centerPoint_-Eingabe.
 
-Change the value of the number slider and watch the size of the spheres update. We now have a parametric jig
+Ändern Sie den Wert im Schieberegler und beobachten Sie, wie die Größe der Kugeln aktualisiert wird. Damit haben Sie eine parametrische Schablone erstellt.
 
 ![](<../images/5-3/5/color - basic helix with colors 06.gif>)
 
-The size of the spheres demonstrates the parametric array defined by a reference point along the curve. Let's use the same concept for the sphere radius to drive their color.
+Die Größe der Kugeln zeigt das parametrische Array, das durch den Referenzpunkt entlang der Kurve definiert wird. Als Nächstes soll die Farbe der Kugeln nach demselben Prinzip wie ihr Radius bestimmt werden.
 
 ![](<../images/5-3/5/color - basic helix with colors 07.jpg>)
 
-> 1. **Color Range:** Add top the canvas. When hovering over the _value_ input, we notice that the numbers requested are between 0 and 1. We need to remap the numbers from the **Geometry.DistanceTo** output so that they are compatible with this domain.
-> 2. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this node (_Right Click > Preview_)
+> 1. **Color Range**: Fügen Sie diesen Block im Ansichtsbereich hinzu. Wenn Sie den Mauszeiger auf die _value_-Eingabe setzen, fällt auf, dass die angeforderten Zahlenwerte zwischen 0 und 1 liegen. Sie müssen die Zahlen aus der **Geometry.DistanceTo**-Ausgabe neu zuordnen, damit sie mit diesem Bereich kompatibel sind.
+> 2. **Sphere.ByCenterPointRadius**: Deaktivieren Sie vorübergehend die Vorschau für diesen Block (_Rechtsklick > Vorschau_).
 
 ![](<../images/5-3/5/color - basic helix with colors 08.jpg>)
 
-> 1. **Math.RemapRange:** This process should look familiar. Connect the **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
-> 3. **Color Range:** Connect the **Math.RemapRange** output into the _value_ input.
+> 1. **Math.RemapRange**: Dieser Vorgang ist inzwischen bekannt. Verbinden Sie die Ausgabe von **Geometry.DistanceTo** mit der numbers-Eingabe.
+> 2. **Code Block**: Erstellen Sie ähnlich wie in einem der vorigen Schritte den Wert _0_ für die _newMin_-Eingabe und den Wert _1_ für die _newMax_-Eingabe. In diesem Fall können Sie zwei Ausgaben aus demselben Codeblock erstellen.
+> 3. **Color Range**: Verbinden Sie die **Math.RemapRange**-Ausgabe mit der _value_-Eingabe.
 
 ![](<../images/5-3/5/color - basic helix with colors 09.jpg>)
 
-> 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
-> 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two **Color.ByARGB** inputs in agreement with the image above (or create your favorite two colors).
-> 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for **Color Range**.
+> 1. **Color.ByARGB**: Mithilfe dieses Blocks erstellen Sie zwei Farben. Dieser Prozess wirkt eventuell etwas umständlich, unterscheidet sich jedoch nicht von den RGB-Farben in anderen Programmen. Er wird hier lediglich mithilfe visueller Programmierung durchgeführt.
+> 2. **Code Block**: Erstellen Sie die beiden Werte _0_ und _255_. Verbinden Sie die beiden Ausgaben mit den Eingaben der beiden **Color.ByARGB**-Blöcke wie in der Abbildung oben gezeigt (oder definieren Sie ganz nach Wunsch Ihre eigenen Farben).
+> 3. **Color Range**: Für die _colors_-Eingabe ist eine Liste von Farben erforderlich. Diese Liste müssen Sie aus den beiden im vorigen Schritt erstellten Farben erstellen.
+> 4. **List.Create**: Führen Sie die beiden Farben zu einer Liste zusammen. Verbinden Sie die Ausgabe mit der _colors_-Eingabe von **Color Range**.
 
 ![](<../images/5-3/5/color - basic helix with colors 10.jpg>)
 
-> 1. **Display.ByGeometryColor:** Connect **Sphere.ByCenterPointRadius** into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
+> 1. **Display.ByGeometryColor**: Verbinden Sie **Sphere.ByCenterPointRadius** mit der _geometry_-Eingabe und _Color Range_ mit der _color_-Eingabe. Damit erhalten Sie einen fließenden Farbübergang über die Länge der Kurve.
 
-If we change the value of the **Number Slider** from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
+Wenn Sie den Wert im **Number Slider** aus einem früheren Schritt in der Definition ändern, werden die Farben und Größen aktualisiert. Zwischen den Farben und den Radien besteht in diesem Fall ein direkter Zusammenhang: Damit haben Sie eine visuelle Verknüpfung zweier Parameter erstellt.
 
 ![](<../images/5-3/5/color - basic helix with colors 11.gif>)
 
-### Color on Surfaces Exercise
+### Übungslektion: Farbe auf Oberflächen
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
+Als Erstes müssen Sie eine Oberfläche erstellen (oder referenzieren), die als Eingabe für den **Display.BySurfaceColors**-Block verwendet werden soll. In diesem Beispiel wird dies durch Erhebung zwischen einer Sinus- und einer Kosinuskurve erreicht.
 
 ![](<../images/5-3/5/color - color on surface 01.jpg>)
 
-> 1. This group of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
-> 2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
+> 1. Die oben gezeigte Gruppe von Blöcken erstellt Punkte entlang der z-Achse und verschiebt sie anschließend unter Verwendung von Sinus- und Kosinusfunktionen. Aus den beiden Punktlisten werden anschließend Nurbs-Kurven erstellt.
+> 2. **Surface.ByLoft**: Dieser Block erstellt eine interpolierte Oberfläche zwischen den Nurbs-Kurven in der Kurvenliste.
 
 ![](<../images/5-3/5/color - color on surface 02.jpg>)
 
-> 1. **File Path**: select an image file to sample for pixel data downstream
-> 2. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
-> 3. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
-> 4. **Slider**: provide sample values for **Image.Pixels**
-> 5. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
+> 1. **File Path**: Wählen Sie die Bilddatei, aus der Samples für die in den folgenden Schritten zu verwendenden Pixeldaten entnommen werden sollen.
+> 2. Konvertieren Sie mithilfe von **File.FromPath** den Dateipfad in eine Datei und übergeben Sie diese an **Image.ReadFromFile**, sodass ein Bild für das Sampling ausgegeben wird.
+> 3. **Image.Pixels**: Geben Sie ein Bild ein und legen Sie die Sample-Werte für die x- und y-Richtung des Bilds fest.
+> 4. **Schieberegler**: Verwenden Sie diese zum Angeben der Sample-Werte für **Image.Pixels**.
+> 5. **Display.BySurfaceColors**: Dieser Block ordnet das Array der Farbwerte den Positionen auf der Oberfläche in x- und y-Richtung zu.
 
-Close-up preview of the output surface with resolution of 400x300 samples
+Detailansicht: Vorschau der ausgegebenen Oberfläche mit der Auflösung 400 x 300 Samples
 
 ![](<../images/5-3/5/color - color on surface 03.jpg>)

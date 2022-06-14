@@ -1,79 +1,79 @@
-# Scripting Strategies
+# Vorgehensweisen zur Skripterstellung
 
-Text-based scripting within the visual-scripting environment enables powerful and visual relationships using DesignScript, Python, and ZeroTouch (C#). The user can expose elements such as input sliders, condense large operations into DesignScript, and access powerful tools and libraries through Python or C# all within the same workspace. If managed effectively, combining these strategies can lend a great deal of customization, clarity, and efficiency to the overall program. The following are a set of guidelines to help you augment your visual-script with text-script.
+Die textbasierte Skripterstellung innerhalb der Umgebung für visuelle Skripterstellung ermöglicht leistungsstarke und visuelle Beziehungen mithilfe von DesignScript, Python und ZeroTouch (C#). Die Benutzer können in ein und demselben Arbeitsbereich Elemente wie Eingabe-Schieberegler bereitstellen, umfangreiche Abläufe in DesignScript zusammenfassen sowie in Python oder C# auf leistungsstarke Werkzeuge und Bibliotheken zugreifen. Diese Vorgehensweisen können bei effizientem Einsatz die Möglichkeiten zur benutzerdefinierten Anpassung, die Verständlichkeit und die Effizienz des gesamten Programms erheblich steigern. Die im Folgenden beschriebenen Richtlinien helfen Ihnen dabei, Ihre visuellen Skripts um Textskripte zu ergänzen.
 
 ![](./images/2/cad-chart-textual.jpg)
 
-### Know When to Script
+### Wann sollten Skripts verwendet werden?
 
-Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
+Mit Textskripts können Sie komplexere Beziehungen erstellen als durch visuelle Programmierung, jedoch sind beiden Verfahren auch zahlreiche Funktionen gemeinsam. Dies ist sinnvoll, da Blöcke letzten Endes vorgefertigter Code sind. Es ist wahrscheinlich möglich, ein ganzes Dynamo-Programm in DesignScript oder Python zu schreiben. Die visuellen Skripte kommen jedoch zum Einsatz, weil die Benutzeroberfläche mit Blöcken und Drähten eine intuitive Darstellung des Ablaufs in grafischer Form bietet. Indem Sie sich klarmachen, inwiefern die Möglichkeiten von Textskripts über diejenigen visueller Skripts hinausgehen, erhalten Sie eine wichtige Grundlage für die Entscheidung, wann Textskripts verwendet werden sollten, ohne dabei die intuitive Arbeitsweise mit Blöcken und Drähten aufgeben zu müssen. Die folgenden Richtlinien beschreiben, wann und in welcher Sprache Skripts erstellt werden sollten.
 
-**Use text-scripting for:**
+**Verwenden Sie Textskripts für:**
 
-* Looping
-* Recursion
-* Accessing external libraries
+* Schleifen
+* Rekursionen
+* Zugriff auf externe Bibliotheken
 
-**Choose a language:**
+**Wählen Sie eine Sprache:**
 
 |                    |             |               |                    |                    |               |
 | ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
-|                    | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
-| **DesignScript**   | Yes         | Yes           | Yes                | No                 | Yes           |
-| **Python**         | Yes         | Yes           | Partially          | Yes                | No            |
-| **ZeroTouch (C#)** | No          | No            | No                 | Yes                | No            |
+|                    | **Schleifen** | **Rekursionen** | **Zusammenfassen von Blöcken** | **Ext. Bibliotheken** | **Kurzschreibweisen** |
+| **DesignScript** | Ja | Ja | Ja | Nein | Ja |
+| **Python** | Ja | Ja | Teilweise | Ja | Nein |
+| **ZeroTouch (C#)** | Nein | Nein | Nein | Ja | Nein |
 
 {% hint style="info" %}
-Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
+Unter [Referenz für die Skripterstellung](13-3\_scripting-reference.md) ist aufgelistet, worauf Sie mit welcher Dynamo-Bibliothek zugreifen können.
 {% endhint %}
 
-### Think Parametrically
+### Parametrischer Denkansatz
 
-When scripting in Dynamo, an inevitably parametric environment, it is wise to structure your code relative to the framework of nodes and wires it will be living in. Consider the node containing your text-script as though it is any other node in the program with a few specific inputs, a function, and an expected output. This immediately gives your code inside the node a small set of variables from which to work, the key to a clean parametric system. Here are some guidelines for better integrating code into a visual program.
+Bei der Skripterstellung in Dynamo, einer zwangsläufig parametrischen Umgebung, ist es sinnvoll, Ihren Code bezogen auf die Blöcke und Drähte zu strukturieren, in denen er zum Einsatz kommt. Betrachten Sie den Block mit Ihrem Textskript als einen normalen Block wie andere Blöcke im Programm mit spezifischen Eingaben, einer Funktion und einer erwarteten Ausgabe. Dadurch stellen Sie dem Code im Block direkt eine kleine Gruppe von Variablen zur Verarbeitung zur Verfügung, was für ein ordnungsgemäßes parametrisches System entscheidend ist. Im Folgenden finden Sie einige Richtlinien für eine bessere Integration von Code in ein visuelles Programm.
 
-**Identify the external variables:**
+**Identifizieren der externen Variablen:**
 
-* Try to determine the given parameters in your design problem so that you can construct a model that directly builds off that data.
-* Before writing code, identify the variables:
-  * A minimal set of inputs
-  * The intended output
-  * Constants
+* Versuchen Sie, die gegebenen Parameter in der Designaufgabe so festzulegen, dass Sie ein Modell direkt auf Basis dieser Daten konstruieren können.
+* Identifizieren Sie die Variablen, bevor Sie mit dem Erstellen von Code beginnen:
+   * Eine auf das absolut Notwendige beschränkte Gruppe von Eingaben
+   * Die beabsichtigte Ausgabe
+   * Konstanten
 
 ![](<./images/2/think parametrically 01.jpg>)
 
-> Several variables have been established prior to writing code.
+> Vor dem Schreiben des Codes wurden mehrere Variablen festgelegt.
 >
-> 1. The surface we will simulate rainfall on.
-> 2. The number of rain drops (agents) we want.
-> 3. How far we want the rain drops to travel.
-> 4. Toggle between descending the steepest path versus traversing the surface.
-> 5. Python Node with the respective number of inputs.
-> 6. A Code Block to make the returned curves blue.
+> 1. Die in der Simulation dem Regen ausgesetzte Oberfläche.
+> 2. Die gewünschte Anzahl Regentropfen (Agents).
+> 3. Die von den Regentropfen zurückgelegte Strecke.
+> 4. Umschalten zwischen steilstmöglichem Pfad und Überqueren der Oberfläche.
+> 5. Python-Block mit der entsprechenden Anzahl Eingaben.
+> 6. Ein Codeblock, mit dem die zurückgegebenen Kurven blau gefärbt werden.
 
-**Design the internal relationships:**
+**Entwerfen der internen Beziehungen:**
 
-* Parametricism allows for certain parameters or variables to be edited in order to manipulate or alter the end result of an equation or system.
-* Whenever entities in your script are logically related, aim to define them as functions of each other. This way when one is modified, the other can update proportionally.
-* Minimize number of inputs by only exposing key parameters:
-  * If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.
+* Das parametrische Prinzip ermöglicht die Bearbeitung bestimmter Parameter oder Variablen, um das Endergebnis einer Gleichung zu ändern oder zu beeinflussen.
+* Versuchen Sie stets, Objekte in Ihrem Skript, die logisch miteinander verbunden sind, als Funktionen voneinander zu definieren. Auf diese Weise wird bei einer Änderung eines der Objekte auch das andere proportional dazu aktualisiert.
+* Beschränken Sie die Anzahl der Eingaben, indem Sie nur die wichtigsten Parameter bereitstellen:
+   * Wenn eine Gruppe von Parametern aus Parametern auf einer höheren Hierarchieebene abgeleitet werden kann, stellen Sie nur die übergeordneten Parameter als Skripteingaben bereit. Auf diese Weise vereinfachen Sie die Benutzeroberfläche des Skripts und machen dieses dadurch benutzerfreundlicher.
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> The code "modules" from the example in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Der Code "modules" aus dem Beispiel in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
-> 1. Inputs.
-> 2. Variables internal to the script.
-> 3. A loop that uses these inputs and variables to perform its function.
+> 1. Eingaben.
+> 2. Interne Variablen für das Skript.
+> 3. Eine Schleife, die diese Eingaben und Variablen für ihre Funktion nutzt.
 
 {% hint style="info" %}
-Tip: Place as much emphasis on the process as you do on the solution.
+Tipp: Wenden Sie für den Prozess dieselbe Sorgfalt an wie für die Lösung.
 {% endhint %}
 
-### **Don't repeat yourself (the DRY principle):**
+### **Vermeiden von Wiederholungen (das DRY-Prinzip – Don't repeat yourself):**
 
-* When you have multiple ways to express the same thing in your script, at some point the duplicate representations will fall out of sync which can lead to maintenance nightmares, poor factoring, and internal contradictions.
-* The DRY principle is stated as "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system":
-  * When this principle is successfully applied, all the related elements in your script change predictably and uniformly and all the unrelated elements do not have logical consequences on each other.
+* Falls es mehrere Möglichkeiten für denselben Vorgang in Ihrem Skript gibt, werden die doppelt vorhandenen Darstellungen schließlich asynchron, was die Wartung extrem schwierig macht, die Faktorisierung verschlechtert und interne Widersprüche verursacht.
+* Das DRY-Prinzip besagt, dass jede für jede Information genau eine eindeutige und maßgebliche Darstellung im System vorhanden sein muss.
+   * Wird dieses Prinzip erfolgreich angewendet, erfolgen Änderungen an allen verbundenen Elementen in Ihrem Skript in vorhersehbarer und einheitlicher Weise und Elemente, die nicht miteinander verbunden sind, haben keine logischen Auswirkungen aufeinander.
 
 ```
 ### BAD
@@ -95,127 +95,127 @@ for i in range(count):
 ```
 
 {% hint style="info" %}
-Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
+Tipp: Bevor Sie Objekte in Ihrem Skript duplizieren (wie die Konstante im obigen Beispiel), überlegen Sie, ob Sie stattdessen eine Verknüpfung zur Quelle erstellen können.
 {% endhint %}
 
-### Structure Modularly
+### Modulares Strukturieren
 
-As your code gets longer and more complex the “big idea”, or overarching algorithm becomes increasingly illegible. It also becomes more difficult to keep track of what (and where) specific things happen, find bugs when things go wrong, integrate other code, and assign development tasks. To avoid these headaches it’s wise to write code in modules, an organizational strategy that breaks up code based on the task it executes. Here are some tips for making your scripts more manageable by way of modularization.
+Mit zunehmender Länge und Komplexität des Codes ist das Grundkonzept bzw. der Gesamtalgorithmus immer schwieriger zu entziffern. Es wird zudem schwieriger, zu verfolgen, welche spezifischen Vorgänge ablaufen (und wo dies geschieht), bei Fehlfunktionen den Fehler zu finden, anderen Code zu integrieren und Entwicklungsaufgaben zuzuweisen. Um diese Probleme zu vermeiden, ist es sinnvoll, Code in Modulen zu erstellen: Bei diesem Organisationsverfahren wird Code anhand der jeweils ausgeführten Aufgaben aufgegliedert. Im Folgenden finden Sie einige Tipps, die es Ihnen erleichtern sollen, durch Modularisierung leichter zu verwaltende Skripts zu erstellen.
 
-**Write code in modules:**
+**Schreiben von Code in Modulen:**
 
-* A "module" is a group of code that performs a specific task, similar to a Dynamo Node in the workspace.
-* This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).
-* Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.
+* Ein Modul ist eine Sammlung von Code, der eine bestimmte Aufgabe ausführt, ähnlich wie ein Dynamo-Block im Arbeitsbereich.
+* Dabei kann es sich um beliebigen Code handeln, der visuell von angrenzendem Code abgetrennt sollte (eine Funktion, eine Klasse, eine Gruppe von Eingaben oder die von Ihnen importierten Bibliotheken).
+* Durch die Entwicklung von Code in Form von Modulen können Sie sowohl die visuellen, intuitiven Eigenschaften von Blöcken als auch die komplexen Beziehungen nutzen, die nur mit Textskripts zu erreichen sind.
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> These loops call a class named "agent" that we will develop in the exercise.
+> Diese Schleifen rufen eine Klasse namens „agent“ auf, die in dieser Übung entwickelt wird.
 >
-> 1. A code module that defines the start point of each agent.
-> 2. A code module that updates the agent.
-> 3. A code module that draws a trail for the agent's path.
+> 1. Ein Code-Modul, das den Startpunkt jedes Agents definiert.
+> 2. Ein Code-Modul, das den Agent aktualisiert.
+> 3. Ein Code-Modul, das den Pfad zeichnet, dem der Agent folgt.
 
-**Spotting code re-use:**
+**Erkennen der Wiederverwendung von Code:**
 
-* If you find that your code does the same (or very similar) thing in more than once place, find ways to cluster it into a function that can be called.
-* "Manager" functions control program flow and primarily contain calls to "Worker" functions that handle low-level details, like moving data between structures.
+* Wenn Sie feststellen, dass Ihr Code dieselbe (oder eine sehr ähnliche) Aufgabe an mehr als einer Stelle ausführt, suchen Sie nach Möglichkeiten, ihn zu einer Funktion zusammenzufassen, die aufgerufen werden kann.
+* „Manager“-Funktionen steuern den Programmablauf und enthalten in erster Linie Aufrufe an „Worker“-Funktionen, die Details auf unteren Ebenen, etwa das Verschieben von Daten zwischen Strukturen, verarbeiten.
 
-This example creates spheres with radii and color based on the Z value of the center points.
+In diesem Beispiel werden Kugeln erstellt, deren Radien und Farben vom Z-Wert ihrer Mittelpunkte abhängig sind.
 
 ![](<./images/2/spot code resuse.jpg>)
 
-> 1. Two "worker" parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.
-> 2. A "manager" parent function that combines the two worker functions. Calling this will call both functions inside it.
+> 1. Zwei übergeordnete „Worker“-Funktionen zum Erstellen von Kugeln mit Radien und mit Anzeigefarben anhand des Z-Werts des Mittelpunkts.
+> 2. Eine übergeordnete „Manager“-Funktion, die die beiden „Worker“-Funktionen kombiniert. Durch Aufrufen dieser Funktion werden beide darin enthaltenen Funktionen aufgerufen.
 
-**Only show what needs to be seen:**
+**Beschränken der Anzeige auf das Nötige:**
 
-* A module interface expresses the elements that are provided and required by the module.
-* Once the interfaces between the units have been defined, the detailed design of each unit can proceed separately.
+* Die Schnittstelle eines Moduls gibt die vom Modul bereitgestellten und benötigten Elemente an.
+* Nachdem Sie die Schnittstellen zwischen den Einheiten definiert haben, kann die detaillierte Entwicklung jeder Einheit separat erfolgen.
 
-**Separability/Replaceability:**
+**Möglichkeit zum Trennen bzw. Ersetzen:**
 
-* Modules don’t know or care about each other.
+* Module erkennen oder berücksichtigen einander nicht.
 
-**General forms of modularization:**
+**Allgemeine Formen der Modularisierung :**
 
-*   Code Grouping:
+* Codegruppierung:
 
-    ```
-    # IMPORT LIBRARIES
-    import random
-    import math
-    import clr
-    clr.AddReference('ProtoGeometry')
-    from Autodesk.DesignScript.Geometry import *
+   ```
+   # IMPORT LIBRARIES
+   import random
+   import math
+   import clr
+   clr.AddReference('ProtoGeometry')
+   from Autodesk.DesignScript.Geometry import *
 
-    # DEFINE PARAMETER INPUTS
-    surfIn = IN[0]
-    maxSteps = IN[1]
-    ```
-*   Functions:
+   # DEFINE PARAMETER INPUTS
+   surfIn = IN[0]
+   maxSteps = IN[1]
+   ```
+* Funktionen:
 
-    ```
-    def get_step_size():
-      area = surfIn.Area
-      stepSize = math.sqrt(area)/100
-      return stepSize
+   ```
+   def get_step_size():
+     area = surfIn.Area
+     stepSize = math.sqrt(area)/100
+     return stepSize
 
-    stepSize = get_step_size()
-    ```
-*   Classes:
+   stepSize = get_step_size()
+   ```
+* Klassen:
 
-    ```
-    class MyClass:
-      i = 12345
+   ```
+   class MyClass:
+     i = 12345
 
-      def f(self):
-        return 'hello world'
+     def f(self):
+       return 'hello world'
 
-    numbers = MyClass.i
-    greeting = MyClass.f
-    ```
+   numbers = MyClass.i
+   greeting = MyClass.f
+   ```
 
-### Flex Continuously
+### Laufendes Testen
 
-While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
+Es ist sinnvoll, während der Entwicklung von Textskripts in Dynamo laufend zu überprüfen, ob die tatsächlich erstellten Funktionen Ihren Erwartungen entsprechen. Dadurch stellen Sie sicher, dass unvorhergesehene Ereignisse wie Syntaxfehler, logische Diskrepanzen, falsche Werte, regelwidrige Ausgaben usw.nicht erst zum Schluss alle zusammen, sondern direkt bei ihrem Auftreten schnell erkannt und korrigiert werden. Da die Textskripts sich innerhalb der Blöcke im Ansichtsbereich befinden, sind sie bereits in den Datenfluss des visuellen Programms integriert. Die laufende Überwachung des Skripts gestaltet sich dadurch so einfach wie das Zuweisen von Daten für die Ausgabe, die Ausführung des Programms und die Auswertung des Skriptergebnisses über einen Beobachtungsblock. Im Folgenden finden Sie einige Tipps für die laufende Überwachung Ihrer Skripts, während Sie sie konstruieren.
 
-**Test as you go:**
+**Testen Sie während der Entwicklung:**
 
-* Whenever you complete a cluster of functionality:
-  * Step back and inspect your code.
-  * Be critical. Could a collaborator understand what this is doing? Do I need to do this? Can this function be done more efficiently? Am I creating unnecessary duplicates or dependencies?
-  * Quickly test to make sure it is returning data that “makes sense”.
-* Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:
+* Wenn Sie eine Gruppe von Funktionen erstellt haben:
+   * Überprüfen Sie Ihren Code aus distanzierter Sicht.
+   * Seien Sie dabei kritisch. Ist die Funktionsweise für einen Teamkollegen verständlich? Brauche ich das wirklich? Kann diese Funktion effizienter durchgeführt werden? Werden unnötige Duplikate oder Abhängigkeiten erstellt?
+   * Führen Sie rasch Tests durch, um sich zu überzeugen, dass plausible Daten zurückgegebenen werden.
+* Weisen Sie die aktuellsten Daten, mit denen Sie arbeiten, in Ihrem Skript als Ausgabedaten zu, damit der Block bei einer Aktualisierung des Skripts immer relevante Daten ausgibt:
 
 ![](<./images/2/flex continuously.jpg>)
 
-> 1. Check that all edges of the solid are being returned as curves to create a bounding box around.
-> 2. Check that our Count inputs are successfully being converted to Ranges.
-> 3. Check that coordinate systems have been properly translated and rotated in this loop.
+> 1. Überprüfen Sie, ob alle Kanten des Volumenkörpers als Kurven zurückgegeben werden, damit ein Begrenzungsrahmen darum erstellt wird.
+> 2. Überprüfen Sie, ob die Count-Eingaben in Ranges konvertiert werden.
+> 3. Überprüfen Sie, ob Koordinatensysteme in dieser Schleife ordnungsgemäß verschoben und gedreht wurden.
 
-**Anticipate “edge cases”:**
+**Vorwegnehmen von Grenzfällen:**
 
-* While scripting, crank your input parameters to the minimum and maximum values of their allotted domain to check if the program still functions under extreme conditions.
-* Even if the program is functioning at its extremes, check if it is returning unintended null/empty/zero values.
-* Sometimes bugs and errors that reveal some underlying problem with your script will only surface during these edge cases.
-  * Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.
+* Geben Sie während der Skripterstellung die Mindest- und Höchstwerte der Eingabeparameter innerhalb ihrer zugewiesenen Domäne an, um zu testen, ob das Programm auch unter extremen Bedingungen funktioniert.
+* Überprüfen Sie auch dann, wenn das Programm mit seinen Extremwerten funktioniert, ob es unbeabsichtigte Nullwerte oder leere Werte zurückgibt.
+* Bugs und Fehler, die auf grundlegende Probleme mit dem Skript hinweisen, werden zuweilen nur in solchen Grenzfällen erkennbar.
+   * Ermitteln Sie die Fehlerursache, und entscheiden Sie, ob sie intern behoben werden muss oder ob zur Vermeidung des Problems eine Parameterdomäne neu definiert werden muss.
 
 {% hint style="info" %}
-Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+Tipp: Gehen Sie stets davon aus, dass die Benutzer jede mögliche Kombination sämtlicher für sie bereitgestellten Eingabewerte verwenden werden. Auf diese Weise vermeiden Sie unangenehme Überraschungen.
 {% endhint %}
 
-### Debug Efficiently
+### Effiziente Fehlersuche
 
-Debugging is the process of eliminating "bugs" from your script. Bugs can be errors, inefficiencies, inaccuracies, or any unintended results. Addressing a bug can be as simple as correcting a misspelled variable name to more pervasive, structural problems with your script. Ideally, flexing your script as you build it will help to catch these potential issues early, though this is no guarantee of it being bug-free. The following is a review of several best practices from above to help you address bugs systematically.
+Debugging ist der Prozess der Beseitigung von Fehlern („Bugs“) in Ihrem Skript. Bugs können Fehler, Ineffizienzen, Ungenauigkeiten oder beliebige nicht beabsichtigte Ergebnisse sein. Um einen Bug zu beheben, kann ein einfacher Schritt wie die Korrektur eines falsch geschriebenen Variablennamens genügen, es können jedoch auch tiefergehende, die Struktur des Skripts betreffende Probleme vorhanden sein. Im Idealfall erkennen Sie solche potenziellen Probleme frühzeitig, indem Sie das Skript während des Erstellens testen, eine Garantie für Fehlerfreiheit ist dadurch jedoch nicht gegeben. Im Folgenden werden einige der oben genannten optimalen Verfahren genauer beschrieben, um Ihnen die systematische Beseitigung von Bugs zu erleichtern.
 
-**Use the watch bubble:**
+**Verwenden Sie den Beobachtungsblock:**
 
-* Check the data returned at different places in the code by assigning it to the OUT variable, similar to the concept of flexing the program.
+* Überprüfen Sie die an verschiedenen Stellen des Codes zurückgegebenen Daten, indem Sie ihn ähnlich wie beim Testen des Programms der OUT-Variablen zuweisen:
 
-**Write meaningful comments:**
+**Schreiben Sie aussagekräftige Kommentare:**
 
-* A module of code will be much easier to debug if its intended outcome is clearly described.
+* Das Debugging eines Codemoduls ist erheblich einfacher, wenn das beabsichtigte Ergebnis klar beschrieben ist.
 
 ```py
 # Loop through X and Y
@@ -231,94 +231,94 @@ for i in range(xCount):
     solids.append(solid.Transform(fromCoord,toCoord))
 ```
 
-> Normally this would be an excessive amount of commenting and blank lines, but when debugging it can be useful to break things down into manageable pieces.
+> Normalerweise wäre dies ein Übermaß an Kommentaren und leeren Zeilen, beim Debugging kann es jedoch hilfreich sein, den Code in überschaubare Abschnitte aufzuteilen.
 
-**Leverage the code's modularity:**
+**Nutzen Sie die Modularität des Codes:**
 
-* The source of an issue can be isolated to certain modules.
-* Once the faulty module has been identified, fixing the problem is considerably simpler.
-* When a program must be modified, code that has been developed in modules will be much easier to change:
-  * You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.
+* Die Ursache eines Problems kann gezielt auf bestimmte Module zurückgeführt werden.
+* Nachdem Sie das fehlerhafte Modul identifiziert haben, lässt sich das Problem wesentlich leichter beheben.
+* Wenn ein Programm geändert werden muss, ist Code, der in Form von Modulen entwickelt wurde, erheblich leichter zu ändern.
+   * Sie können neue oder korrigierte Module in ein bestehendes Programm einfügen und sich dabei darauf verlassen, dass der Rest des Programms unverändert bleibt.
 
 ![](<./images/2/leverage code's modularity.jpg>)
 
-> Debugging the example file from [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Debuggen der Beispieldatei aus [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
-> 1. The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.
-> 2. The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.
-> 3. The code "module" we've inserted to address the xDist and yDist value issue.
+> 1. Die Eingabegeometrie gibt einen Begrenzungsrahmen zurück, der größer ist als sie selbst, wie durch Zuweisen von xDist und yDist zu OUT zu erkennen ist.
+> 2. Die Kantenkurven der Eingabegeometrie geben einen passenden Begrenzungsrahmen mit den richtigen Entfernungen für xDist und yDist zurück.
+> 3. Das zur Behebung des Problems mit den xDist- und yDist-Werten eingefügte Codemodul.
 
-## Exercise: Steepest Path
+## Übung: Steilstmöglicher Pfad
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="./datasets/9/2/SteepestPath.dyn" %}
 
-With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
+In dieser Übung schreiben Sie unter Beachtung der optimalen Verfahren für Textskripts ein Skript zur Simulation von Regen. Im Kapitel „Strategien für Diagramme“ war es möglich, optimale Verfahren auf ein unstrukturiertes visuelles Programm anzuwenden. Bei Textskripts ist dies jedoch wesentlich schwieriger. Logische Beziehungen, die in Textskripts erstellt werden, sind weniger sichtbar und können in unzureichend strukturiertem Code kaum unterschieden werden. Die Leistungsfähigkeit der Textskripts bringt einen größeren Organisationsbedarf mit sich. Hier werden die einzelnen Schritte gezeigt und während des ganzen Vorgangs die optimalen Verfahren angewendet.
 
-Our script applied to an attractor-deformed surface.
+Das auf eine durch einen Attraktor verformte Oberfläche angewendete Skript.
 
 ![](<./images/2/scripting strategies - exercise - 01.jpg>)
 
-The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.
+Als Erstes müssen Sie die benötigten Dynamo-Bibliotheken importieren. Indem Sie dies zu Anfang durchführen, erhalten Sie globalen Zugriff auf Dynamo-Funktionen in Python.
 
-All the libraries we intend on using need to be imported here.
+Sie müssen hier sämtliche Bibliotheken importieren, die Sie verwenden möchten.
 
 ![](<./images/2/scripting strategies - exercise - 02.jpg>)
 
-Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.
+Anschließend müssen Sie die Eingaben und die Ausgabe definieren, die als Eingabeanschlüsse am Block angezeigt werden. Diese externen Eingaben sind die Grundlage für das Skript und der Schlüssel zum Erstellen einer parametrischen Umgebung.
 
-We need to define inputs that correspond to variables in the Python script and determine a desired output:
+Sie müssen Eingaben definieren, die Variablen im Python-Skript entsprechen, und die gewünschte Ausgabe bestimmen:
 
 ![](<./images/2/scripting strategies - exercise - 03.jpg>)
 
-> 1. The surface we want to walk down.
-> 2. The number of agents we want to walk.
-> 3. The maximum number of steps the agents are allowed to take.
-> 4. An option to take the shortest path down the surface or traverse it.
-> 5. The Python Node with input identifiers that correspond to inputs in the script (IN\[0], IN\[1]).
-> 6. Output curves that can be displayed with a different color.
+> 1. Die Oberfläche, über die die Bewegung nach unten erfolgen soll.
+> 2. Die Anzahl der Agents, die sich bewegen sollen.
+> 3. Die maximale Anzahl an Schritten, die die Agents ausführen dürfen.
+> 4. Eine Option, mit der entweder der kürzeste Weg abwärts auf der Oberfläche oder eine seitliche Bewegung gewählt werden kann.
+> 5. Der Python-Block mit Eingabe-IDs, die den Eingaben im Skript (IN\[0], IN\[1]) entsprechen.
+> 6. Ausgabekurven, die in einer anderen Farbe angezeigt werden können.
 
-Now let's employ the practice of modularity and create the body of our script. Simulating the shortest path down a surface for multiple start points is a significant task that will require several functions. Rather than call the different functions throughout the script, we can modularize our code by collecting them into a single class, our agent. The different functions of this class or "module" can be called with different variables or even reused in another script.
+Erstellen Sie jetzt unter Beachtung des Modularitätsprinzips den Hauptteil des Skripts. Die Simulation des kürzesten Wegs abwärts auf einer Oberfläche ausgehend von unterschiedlichen Startpunkten ist eine größere Aufgabe, die mehrere Funktionen erfordert. Anstatt die verschiedenen Funktionen im Verlauf des ganzen Skripts aufzurufen, können Sie den Code modularisieren, indem Sie sie in einer einzigen Klasse, dem Agent, sammeln. Die verschiedenen Funktionen dieser Klasse – des „Moduls“ – können über unterschiedliche Variablen aufgerufen oder sogar in einem anderen Skripts wiederverwendet werden.
 
-We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
+Sie müssen eine Klasse bzw. eine Vorlage für einen Agent definieren, der eine Abwärtsbewegung über eine Oberfläche darstellt, wobei bei jedem Schritt der Bewegung jeweils die Richtung mit der maximalen Neigung gewählt wird:
 
 ![](<./images/2/scripting strategies - exercise - 04.jpg>)
 
 > 1. Name.
-> 2. Global attributes that all the agents share.
-> 3. Instance attributes that are unique to each agent.
-> 4. A function for taking a step.
-> 5. A function for cataloging the position of each step to a trail list.
+> 2. Globale, allen Agents gemeinsame Attribute.
+> 3. Exemplarattribute, die für jeden Agent spezifisch sind.
+> 4. Eine Funktion zum Ausführen eines Schritts.
+> 5. Eine Funktion zum Katalogisieren der Position jedes Schritts in einer Liste für den Pfad.
 
-Let's initialize the agents by defining their start location. This is a good opportunity to flex our script and make sure the agent class is working.
+Initialisieren Sie die Agents, indem Sie ihre Startpositionen definieren. Dies ist eine gute Gelegenheit, das Skript zu testen und sicherzustellen, dass die Agent-Klasse funktioniert.
 
-We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
+Sie müssen alle Agents, deren Abwärtsbewegung über die Oberfläche Sie beobachten möchten, instanziieren und ihre Anfangsattribute definieren.
 
 ![](<./images/2/scripting strategies - exercise - 05.jpg>)
 
-> 1. A new empty trail list.
-> 2. Where they will start their journey on the surface.
-> 3. We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.
+> 1. Eine neue, leere Pfadliste.
+> 2. Ausgangspunkt der Bewegung über die Oberfläche.
+> 3. Die Liste der Agents wird als Ausgabe zugewiesen, um zu überprüfen, was das Skript hier zurückgibt. Die richtige Anzahl der Agents wird zurückgegeben, das Skript muss jedoch später erneut getestet werden, um die zurückgegebene Geometrie zu prüfen.
 
-Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
+Aktualisieren Sie die einzelnen Agents bei jedem Schritt. Anschließend müssen Sie eine verschachtelte Schleife starten, wobei die Position für jeden Agent und jeden Schritt aktualisiert und in der jeweiligen Pfadliste aufgezeichnet wird. Bei jedem Schritt wird außerdem geprüft, ob der Agent einen Punkt auf der Oberfläche erreicht hat, von dem aus keine weiteren Abwärtsschritte mehr möglich sind. Ist diese Bedingung erfüllt, wird die Bewegung des Agent beendet.
 
 ![](<./images/2/scripting strategies - exercise - 06.jpg>)
 
-Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
+Nachdem die Agents vollständig aktualisiert sind, können Sie Geometrie ausgeben, durch die sie dargestellt werden. Nachdem alle Agents entweder den Endpunkt ihrer Abwärtsbewegung erreicht oder die maximale Anzahl Schritte ausgeführt haben, erstellen Sie eine Polykurve durch die Punkte in ihrem Pfad und geben die Polykurvenpfade aus.
 
 ![](<./images/2/scripting strategies - exercise - 07.jpg>)
 
-Our script for finding the steepest paths.
+Das Skript zur Ermittlung der steilstmöglichen Pfade.
 
 ![](<./images/2/scripting strategies - exercise - 08.jpg>)
 
-> 1. A preset that simulates rainfall on the underlying surface.
-> 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.
+> 1. Voreinstellung zur Simulation von Regen auf der zugrunde liegenden Oberfläche.
+> 2. Die Agents können umgeschaltet werden, sodass sie nicht die steilstmöglichen Pfade suchen, sondern die Oberfläche überqueren.
 
-The full Python text-script.
+Das vollständige Python-Textskript.
 
 ```
 ### STEEPEST PATH ALGORITHM

@@ -1,5 +1,5 @@
-# The Building Blocks of Programs
+# Die Bausteine von Programmen
 
-Once we are ready to dive deeper into developing Visual Programs, we will need a deeper understanding of the building blocks we will use. This chapter introduces fundamental concepts around data - the stuff that travels through the Wires of our Dynamo program.
+Um die Entwicklung visueller Programme detaillierter kennenzulernen, benötigen Sie ein genaueres Verständnis der hierfür verwendeten Grundbausteine. In diesem Kapitel werden die Grundbegriffe zum Thema Daten vorgestellt: zu den Informationen, die durch die Verbindungen von Dynamo-Programmen geleitet werden.
 
 ![](<../images/5-3/building blocks of program.png>)

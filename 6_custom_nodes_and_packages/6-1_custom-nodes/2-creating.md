@@ -1,103 +1,103 @@
-# Creating a Custom Node
+# Benutzerdefinierte Blöcke erstellen
 
-Dynamo offers several different methods for creating custom nodes. You can build custom nodes from scratch, from an existing graph, or explicitly in C#. In this section we will cover building a custom node in the Dynamo UI from an existing graph. This method is ideal for cleaning up the workspace, as well as packaging a sequence of nodes to reuse elsewhere.
+Dynamo bietet mehrere Methoden zum Erstellen benutzerdefinierter Blöcke. Sie können benutzerdefinierte Blöcke neu, aus bestehenden Diagrammen oder explizit in C# erstellen. In diesem Abschnitt wird die Erstellung eines benutzerdefinierten Blocks in der Benutzeroberfläche von Dynamo aus einem bestehenden Diagramm beschrieben. Dieses Verfahren eignet sich ausgezeichnet dazu, den Arbeitsbereich übersichtlicher zu gestalten und Gruppen von Blöcken zur Wiederverwendung zusammenzufassen.
 
-## Exercise: Custom Nodes for UV Mapping
+## Übung: Benutzerdefinierte Blöcke für die UV-Zuordnung
 
-### Part I: Start with a Graph
+### Teil I: Beginnen mit einem Diagramm
 
-In the image below, we map a point from one surface to another using UV coordinates. We'll use this concept to create a panelized surface which references curves in the XY plane. We'll create quad panels for our panelization here, but using the same logic, we can create a wide variety of panels with UV mapping. This is a great opportunity for custom node development because we will be able to repeat a similar process more easily in this graph or in other Dynamo workflows.
+In der unten gezeigten Abbildung wird ein Punkt aus einer Oberfläche mithilfe von UV-Koordinaten einer anderen zugeordnet. Nach diesem Prinzip erstellen Sie eine in Elemente aufgeteilte Oberfläche, die Kurven in der xy-Ebene referenziert. In diesem Fall erstellen Sie viereckige Elemente für die Unterteilung. Nach derselben Logik können Sie jedoch mithilfe der UV-Zuordnung eine große Vielfalt von Elementen erstellen. Es bietet sich an, hier einen benutzerdefinierten Block zu entwickeln, da Sie auf diese Weise ähnliche Vorgänge in diesem Diagramm oder in anderen Dynamo-Arbeitsabläufen leichter wiederholen können.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 01.jpg>)
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-Let’s start by creating a graph that we want to nest into a custom node. In this example, we will create a graph that maps polygons from a base surface to a target surface, using UV coordinates. This UV mapping process is something we use frequently, making it a good candidate for a custom node. For more information on surfaces and UV space, refer to the [Surface ](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)page. The complete graph is _UVmapping\_Custom-Node.dyn_ from the .zip file downloaded above.
+Sie beginnen mit einem Diagramm, das in einem benutzerdefinierten Block verschachtelt werden soll. In diesem Beispiel erstellen Sie ein Diagramm, mit dem Polygone aus einer Basisoberfläche mithilfe von UV-Koordinaten einer Zieloberfläche zugeordnet werden. Diese UV-Zuordnung wird häufig verwendet. Sie bietet sich daher für einen benutzerdefinierten Block an. Weitere Informationen zu Oberflächen und UV-Raum finden Sie auf der Seite [Oberfläche](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). Das vollständige Diagramm ist _UVmapping\_Custom-Node.dyn_ aus der oben heruntergeladenen ZIP-Datei.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
 
-> 1. **Code Block:** Use this line to create a range of 10 numbers between -45 and 45 `45..45..#10;`
-> 2. **Point.ByCoordinates:** Connect the output of the **Code Block** to the ‘x’ and ‘y’ inputs and set the lacing to cross-reference. You should now have a grid of points.
-> 3. **Plane.ByOriginNormal:** Connect the _‘Point’_ output to the _‘origin’_ input to create a plane at each of the points. The default normal vector of (0,0,1) will be used.
-> 4. **Rectangle.ByWidthLength:** Connect the planes from the previous step into the _‘plane’_ input, and use a **Code Block** with a value of _10_ to specify the width and length.
+> 1. **Code Block**: Verwenden Sie diese Zeile, um einen Bereich mit 10 Zahlen zwischen -45 und 45 zu erstellen. `45..45..#10;`
+> 2. **Point.ByCoordinates**: Verbinden Sie die Ausgaben des **Codeblocks** mit den x- und y-Eingaben und legen Sie Kreuzprodukt als Vergitterung fest. Sie haben nun ein Raster von Punkten.
+> 3. **Plane.ByOriginNormal**: Verbinden Sie die _Point_-Ausgabe mit der _origin_-Eingabe, um an jeder der Punktpositionen eine Ebene zu erstellen. Dabei wird der vorgegebene Normalenvektor (0,0,1) verwendet.
+> 4. **Rectangle.ByWidthLength**: Verbinden Sie die Ebenen aus dem vorigen Schritt mit der _plane_-Eingabe und legen Sie mithilfe eines **Codeblocks** jeweils _10_ als Breite und Länge fest.
 
-You should now see a grid of rectangles. Let’s map these rectangles to a target surface using UV coordinates.
+Daraufhin müsste ein Raster aus Rechtecken angezeigt werden. Diese Rechtecke ordnen Sie mithilfe von UV-Koordinaten einer Zieloberfläche zu.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
 
-> 1. **Polygon.Points:** Connect the **Rectangle.ByWidthLength** output from the previous step to the _‘polygon’_ input to extract the corner points of each rectangle. These are the points that we will map to the target surface.
-> 2. **Rectangle.ByWidthLength:** Use a **Code Block** with a value of _100_ to specify the width and length of a rectangle. This will be the boundary of our base surface.
-> 3. **Surface.ByPatch:** Connect the **Rectangle.ByWidthLength** from the previous step to the _‘closedCurve’_ input to create a base surface.
-> 4. **Surface.UVParameterAtPoint:** Connect the _‘Point’_ output of the **Polygon.Points** node and the _‘Surface’_ output of the **Surface.ByPatch** node to return the UV parameter at each point.
+> 1. **Polygon.Points**: Verbinden Sie die **Rectangle.ByWidthLength**-Ausgabe aus dem vorigen Schritt mit der _polygon_-Eingabe, um die Eckpunkte der einzelnen Rechtecke zu extrahieren. Diese Punkte werden wird dann der Zieloberfläche zuordnen.
+> 2. **Rectangle.ByWidthLength**: Legen Sie mithilfe eines **Codeblocks** mit dem Wert _100_ die Breite und Länge eines Rechtecks fest. Dies definiert die Begrenzung der Basisfläche.
+> 3. **Surface.ByPatch**: Verbinden Sie den **Rectangle.ByWidthLength**-Block aus dem vorigen Schritt mit der _closedCurve_-Eingabe, um eine Basisoberfläche zu erstellen.
+> 4. **Surface.UVParameterAtPoint**: Verbinden Sie die _Point_-Ausgabe des **Polygon.Points**-Blocks und die _Surface_-Ausgabe des **Surface.ByPatch**-Blocks, um die UV-Parameter an den einzelnen Punkten zu erhalten.
 
-Now that we have a base surface and a set of UV coordinates, we can import a target surface and map the points between surfaces.
+Damit haben Sie eine Basisoberfläche und einen Satz UV-Koordinaten erstellt. Jetzt können Sie eine Zieloberfläche importieren und die Punkte auf den Oberflächen zuordnen.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 04.jpg>)
 
-> 1. **File Path:** Select the file path of the surface you want to import. The file type should be .SAT. Click the _"Browse..."_ button and navigate to the _UVmapping\_srf.sat_ file from the .zip file downloaded above.
-> 2. **Geometry.ImportFromSAT:** Connect the file path to import the surface. You should see the imported surface in the geometry preview.
-> 3. **UV:** Connect the UV parameter output to a _UV.U_ and a _UV.V_ node.
-> 4. **Surface.PointAtParameter:** Connect the imported surface as well as the u and v coordinates. You should now see a grid of 3D points on the target surface.
+> 1. **File Path**: Wählen Sie den Dateipfad der Oberfläche aus, den Sie importieren möchten. Die Datei muss eine SAT-Datei sein. Klicken Sie auf die Schaltfläche _Durchsuchen_ und navigieren Sie zur Datei _UVmapping\_srf.sat_ aus der im oben beschriebenen Schritt heruntergeladenen ZIP-Datei.
+> 2. **Geometry.ImportFromSAT**: Verbinden Sie den Dateipfad, um die Oberfläche zu importieren. Die importierte Oberfläche sollte in der Geometrievorschau angezeigt werden.
+> 3. **UV**: Verbinden Sie die Ausgabe der UV-Parameter mit einem _UV.U_- und einem _UV.V_-Block.
+> 4. **Surface.PointAtParameter**: Verbinden Sie die importierte Oberfläche sowie die U- und V-Koordinaten. Damit sollte ein Raster von 3D-Punkten auf der Zieloberfläche angezeigt werden.
 
-The final step is to use the 3D points to construct rectangular surface patches.
+Der letzte Schritt besteht darin, mithilfe der 3D-Punkte rechteckige Oberflächenelemente zu erstellen.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 05.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the points on the surface to construct a polycurve through the points.
-> 2. **Boolean:** Add a **Boolean** to the workspace and connect it to the _‘connectLastToFirst’_ input and toggle to True to close the polycurves. You should now see rectangles mapped to the surface.
-> 3. **Surface.ByPatch:** Connect the polycurves to the _‘closedCurve’_ input to construct surface patches.
+> 1. **PolyCurve.ByPoints**: Verbinden Sie die Punkte auf der Oberfläche, um eine durch die Punkte verlaufende Polykurve zu konstruieren.
+> 2. **Boolean**: Fügen Sie im Ansichtsbereich einen **Boolean**-Block hinzu, verbinden Sie ihn mit der _connectLastToFirst_-Eingabe und legen Sie True fest, um die Polykurven zu schließen. Die Oberfläche sollte jetzt in rechteckige Felder unterteilt sein.
+> 3. **Surface.ByPatch**: Verbinden Sie die Polykurven mit der _closedCurve_-Eingabe, um die Oberflächenfelder zu erstellen.
 
-### Part II: From Graph to Custom Node
+### Teil II: Vom Diagramm zum benutzerdefinierten Block
 
-Now let’s select the nodes that we want to nest into a Custom Node, thinking about what we want to be the inputs and outputs of our node. We want our Custom Node to be as flexible as possible, so it should be able to map any polygons, not just rectangles.
+Als Nächstes wählen Sie die Blöcke aus, die in einem benutzerdefinierten Block verschachtelt werden sollen, wobei Sie berücksichtigen, welche Ein- und Ausgaben Sie für Ihren Block benötigen. Der benutzerdefinierte Block soll so flexibel wie möglich sein, d. h., es sollten nicht nur Rechtecke, sondern beliebige Polygone zugeordnet werden können.
 
-Select the following Nodes (beginning with Polygon.Points), right click on the workspace and select ‘Create Custom Node’.
+Wählen Sie die folgenden Blöcke (beginnend mit Polygon.Points) aus, klicken Sie mit der rechten Maustaste auf den Arbeitsbereich, und wählen Sie Benutzerdefinierten Block erstellen aus.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 01.jpg>)
 
-In the Custom Node Properties dialog, assign a name, description, and category to the Custom Node.
+Weisen Sie im Dialogfeld Eigenschaften für den benutzerdefinierten Block einen Namen, eine Beschreibung und eine Kategorie zu.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 02.jpg>)
 
 > 1. Name: MapPolygonsToSurface
-> 2. Description: Map polygon(s) from a base to target surface
-> 3. Add-ons Category: Geometry.Curve
+> 2. Beschreibung: Zuordnung von Polygonen von einer Basis- zu einer Zieloberfläche
+> 3. Add-On-Kategorie: Geometry.Curve
 
-The Custom Node has considerably cleaned up the workspace. Notice that the inputs and outputs have been named based on the original nodes. Let’s edit the Custom Node to make the names more descriptive.
+Der Ansichtsbereich ist mit dem benutzerdefinierten Block wesentlich übersichtlicher. Den Namen der Ein- und Ausgaben wurden die entsprechenden Angaben aus den Originalblöcken zugrunde gelegt. Bearbeiten Sie den benutzerdefinierten Block, um aussagekräftigere Namen anzugeben.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 03.jpg>)
 
-Double click the Custom Node to edit it. This will open a workspace with a yellow background representing the inside of the node.
+Doppelklicken Sie auf den benutzerdefinierten Block, um ihn zu bearbeiten. Dadurch öffnen Sie einen Arbeitsbereich mit gelbem Hintergrund, der darauf hinweist, dass Sie im Inneren eines Blocks arbeiten.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
 
-> 1. **Inputs:** Change the input names to _baseSurface_ and _targetSurface_.
-> 2. **Outputs:** Add an additional output for the mapped polygons.
+> 1. **Eingaben**: Ändern Sie die Namen der Eingaben zu _baseSurface_ und _targetSurface_.
+> 2. **Ausgaben**: Fügen Sie eine zusätzliche Ausgabe für die zugeordneten Polygone hinzu.
 
-Save the custom node and return to the home workspace. Notice the **MapPolygonsToSurface** node reflects the changes we just made.
+Speichern Sie den benutzerdefinierten Block, und kehren Sie zur Ausgangsansicht zurück. Beachten Sie, wie im **MapPolygonsToSurface**-Block die eben vorgenommenen Änderungen übernommen wurden.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 05.jpg>)
 
-We can also add to the robustness of the Custom Node by adding in **Custom Comments**. Comments can help to hint at the input and output types or explain the functionality of the node. Comments will appear when the user hovers over an input or output of a Custom Node.
+Um den benutzerdefinierten Block noch zuverlässiger zu gestalten, können Sie außerdem **benutzerdefinierte Kommentare** hinzufügen. Kommentare können Aufschluss über den Typ der Ein- und Ausgaben geben oder Erläuterungen zur Funktionsweise des Blocks enthalten. Kommentare werden angezeigt, wenn der Benutzer den Cursor auf eine Eingabe oder Ausgabe eines benutzerdefinierten Blocks setzt.
 
-Double click the Custom Node to edit it. This will re-open the yellow background workspace.
+Doppelklicken Sie auf den benutzerdefinierten Block, um ihn zu bearbeiten. Dadurch wird erneut der Arbeitsbereich mit dem gelben Hintergrund geöffnet.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 06.jpg>)
 
-> 1. Begin editing the Input **Code Block**. To start a Comment, type "//" followed by the comment text. Type anything that may help to clarify the Node - Here we will describe the _targetSurface_.
-> 2. Let's also set the default value for the _inputSurface_ by setting the input type equal to a value. Here, we will set the default value to the original **Surface.ByPatch** set.
+> 1. Beginnen Sie mit der Bearbeitung des Eingabe-**Codeblocks**. Um mit einem Kommentar zu beginnen, geben Sie "//" und anschließend den Kommentartext ein. Geben Sie Informationen ein, die das Verständnis des Blocks erleichtern können. In diesem Fall wird _targetSurface_ beschrieben.
+> 2. Legen Sie außerdem den Vorgabewert für _inputSurface_ fest, indem Sie als Eingabetyp einen Wert vorgeben. In diesem Fall wird als Vorgabewert das ursprüngliche **Surface.ByPatch** angegeben.
 
-Comments can also be applied to the Outputs.
+Kommentare können auch auf Ausgaben angewendet werden.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 07.jpg>)
 
-> Edit the text in the Output Code Block. Type "//" followed by the comment text. Here we will clarify the _Polygons_ and the _surfacePatches_ Outputs by adding a more in-depth description.
+> Bearbeiten Sie den Text im Ausgabe-Codeblock. Geben Sie "//" gefolgt vom Kommentartext ein. In diesem Fall werden die Ausgaben _Polygons_ und _surfacePatches_ mit ausführlicheren Beschreibungen erläutert.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 08.jpg>)
 
-> 1. Hover over the Custom Node Inputs to see the Comments.
-> 2. With the default value set on our _inputSurface_, we can also run the definition without a surface input.
+> 1. Setzen Sie den Cursor auf die Eingaben des benutzerdefinierten Blocks, um die Kommentare anzuzeigen.
+> 2. Da für _inputSurface_ ein Vorgabewert festgelegt ist, können Sie die Definition auch ohne Eingabewert für die Oberfläche ausführen.

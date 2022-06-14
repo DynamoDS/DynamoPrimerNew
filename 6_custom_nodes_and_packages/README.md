@@ -1,5 +1,5 @@
-# Custom Nodes & Packages
+# Benutzerdefinierte Blöcke und Pakete
 
-Out of the box, Dynamo has a lot of functionality stored in its Library of Nodes. For those frequently used routines or that special graph you want to share with the community, Custom Nodes & Packages are a great way to extend Dynamo even further.
+In der Blockbibliothek von Dynamo steht eine Vielfalt vorgegebener Funktionen zur Verfügung. Wenn Sie bestimmte Routinen häufig einsetzen oder spezielle Diagramme an die Community weitergeben möchten, bietet Ihnen Dynamo mit benutzerdefinierten Blöcken und Paketen noch weiterreichende Möglichkeiten.
 
 ![](./images/customNodes\_cover01.jpg)

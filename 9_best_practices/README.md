@@ -1,5 +1,5 @@
-# Best Practices
+# Optimale Verfahren
 
-This part of the primer is organized in the spirit of a journal of “best practices”. It sheds light on several strategies that we have learned, through experience and research, to be most conducive to quality parametric workflows. As designers and programmers, our metric for quality is primarily concerned with the maintainability, dependability, usability, and efficiency of our tools. While these best practices have specific examples for either visual or text-based scripting, the principles are applicable to all programming environments and can inform many computational workflows.
+Dieser Teil des Leitfadens ist quasi ein laufendes Protokoll für optimale Verfahren. Wir stellen hier eine Reihe von Vorgehensweisen vor, die sich unserer Erfahrung nach und bei Recherchen als besonders nützlich für hochwertige parametrische Arbeitsabläufe erwiesen haben. Als Designer und Programmierer legen wir einen Qualitätsmaßstab mit den Hauptkriterien einfache Wartung, Zuverlässigkeit, Benutzerfreundlichkeit und Effizienz unserer Werkzeuge zugrunde. In diesen optimalen Verfahren werden zwar spezielle Beispiele für visuelle oder textbasierte Skripterstellung gegeben, ihre Prinzipien gelten jedoch für alle Programmierumgebungen und können als Anregung für viele berechnungsbasierte Arbeitsabläufe dienen.
 
 ![](./images/bestPractices.png)

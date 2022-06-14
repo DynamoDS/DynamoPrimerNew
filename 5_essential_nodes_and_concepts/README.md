@@ -1,8 +1,8 @@
-# Essential Nodes & Concepts
+# Wichtige Blöcke und Konzepte
 
-In this section, we introduce the essential Nodes available in the Dynamo Library that will help you create your own visual program like a pro.
+In diesem Abschnitt stellen wir die wichtigsten Blöcke vor, die in der Dynamo-Bibliothek verfügbar sind und mit denen Sie Ihr eigenes visuelles Programm wie ein Profi erstellen können.
 
-* [Geometry for Computational Design](5-2\_geometry-for-computational-design/): How do I work with geometric elements in Dynamo? Explore multiple ways to create simple or complex geometries from primitives.
-* [The Building Blocks of Programs:](5-3\_the-building-blocks-of-programs/) What is "Data" and what are some fundamental types I can start using in my programs? Also, learn more about incorporating math and logic operations in your design workflow.
-* [Designing with Lists: ](5-4\_designing-with-lists/)How do I manage and coordinate my data structures? Understand more about the concept of List and use it to manage your design data efficiently.
-* [Dictionaries in Dynamo: ](5-5\_dictionaries-in-dynamo/)What are Dictionaries? Find out how to use dictionaries to look up specific data and values from existing results.
+* [Geometrie für Computational Design](5-2\_geometry-for-computational-design/) – Wie arbeite ich mit geometrischen Elementen in Dynamo? Lernen Sie mehrere Möglichkeiten zum Erstellen einfacher oder komplexer Geometrien aus Grundkörpern kennen.
+* [Bausteine von Programmen](5-3\_the-building-blocks-of-programs/) – Was sind "Daten", und was sind einige grundlegende Typen, mit deren Verwendung ich in meinen Programmen beginnen kann? Darüber hinaus erfahren Sie mehr über die Integration von mathematischen und logischen Operationen in Ihren Konstruktionsarbeitsablauf.
+* [Entwürfe mit Listen](5-4\_designing-with-lists/) – Wie verwalte und koordiniere ich meine Datenstrukturen? Lernen Sie, das Konzept von Listen besser zu verstehen, und verwenden Sie es zur effizienten Verwaltung Ihrer Konstruktionsdaten.
+* [Wörterbücher in Dynamo: ](5-5\_dictionaries-in-dynamo/)Was sind Wörterbücher? Erfahren Sie, wie Sie mithilfe von Wörterbüchern bestimmte Daten und Werte aus vorhandenen Ergebnissen abrufen können.

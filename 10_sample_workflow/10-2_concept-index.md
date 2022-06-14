@@ -4,14 +4,14 @@ description: >-
   workflows.
 ---
 
-# Concept Index
+# Konzeptindex
 
-| Exercise list    | Key concepts introduced in exercise  | Link to further reading in later chapters                                                                  |
+| Übungsliste | Wichtige Konzepte, die in der Übung vorgestellt werden | Link zur weiteren Lektüre in späteren Kapiteln |
 | ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Parametric Vase  | Searching nodes throught the library | [Library](../3\_user\_interface/2-library.md)                                                              |
-|                  | Using nodes and wires                | [Nodes and Wires](../4\_nodes\_and\_wires/)                                                                |
-|                  | Creating curves and surfaces         | [Geometry for Computational Design](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
-|                  | Using code blocks                    | [Code Blocks and DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)                |
-| Attractor Points | Create manage and edit lists         | [Designing with Lists](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/)                   |
-|                  | Changing preview modes               | [Preview Mode](../3\_user\_interface/1-workspace.md#preview-mode)                                          |
-|                  | Changing execution modes             | [Execution Bar](../3\_user\_interface/#execution-bar)                                                      |
+| Parametrische Vase | Durchsuchen von Blöcken in der Bibliothek | [Bibliothek](../3\_user\_interface/2-library.md) |
+|                  | Verwenden von Blocken und Drähten | [Blöcke und Drähte](../4\_nodes\_and\_wires/) |
+|                  | Erstellung von Kurven und Oberflächen | [Geometrie für Computational Design](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
+|                  | Verwenden von Codeblöcken | [Codeblöcke und DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) |
+| Attraktorpunkte | Erstellen, Verwalten und Bearbeiten von Listen | [Entwerfen mit Listen](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/) |
+|                  | Ändern der Vorschaumodi | [Voransichtsmodus](../3\_user\_interface/1-workspace.md#preview-mode) |
+|                  | Ändern der Ausführungsmodi | [Ausführungsleiste](../3\_user\_interface/#execution-bar) |

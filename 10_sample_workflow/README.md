@@ -1,12 +1,12 @@
-# Sample Workflows
+# Beispielarbeitsabläufe
 
-This section will explore a series of workflows that will guide you through using Dynamo.
+In diesem Abschnitt werden eine Reihe von Arbeitsabläufen vorgestellt, die Sie durch die Verwendung von Dynamo führen.
 
-The following sample workflows are available:
+Folgende Beispielarbeitsabläufe stehen zur Verfügung:
 
-**Getting Started Workflows**
+**Erste Schritte – Arbeitsabläufe**
 
-* [Parametric Vase](10-1\_getting-started-workflows/1-parametric-vase.md)
-* [Attractor Points](10-1\_getting-started-workflows/2-attractor-points.md)
+* [Parametrische Vase](10-1\_getting-started-workflows/1-parametric-vase.md)
+* [Attraktorpunkte](10-1\_getting-started-workflows/2-attractor-points.md)
 
-You can also locate concepts introduced in workflows using the [concept index](table-of-summary-for-some-concept-used-in-previous-exercises.md)
+Sie können auch mithilfe des [Konzeptindex](table-of-summary-for-some-concept-used-in-previous-exercises.md) Konzepte suchen, die in Arbeitsabläufen eingeführt wurden.

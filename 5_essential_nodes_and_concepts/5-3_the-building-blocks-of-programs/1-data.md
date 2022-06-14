@@ -1,130 +1,130 @@
-# Data
+# Daten
 
-Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+Daten sind das Material unserer Programme. Sie fließen als Eingaben durch "Drähte" in Blöcke, wo sie verarbeitet und in eine neue Form von Ausgabedaten umgewandelt werden. Hier sollen zunächst die Definition und Struktur von Daten betrachtet werden, bevor Sie damit beginnen, sie in Dynamo zu verwenden.
 
-## What is Data?
+## Was sind Daten?
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
+Unter Daten versteht man eine Gruppe von Werten für qualitative oder quantitative Variable. Die einfachste Form von Daten sind Zahlen wie z. B. `0`, `3.14` oder `17`. Es gibt jedoch eine Reihe unterschiedlicher Datentypen: Variable, die für veränderliche Zahlen stehen (`height`), Zeichen (`myName`), Geometrie (`Circle`) oder eine Liste von Datenelementen (`1,2,3,5,8,13,...`).
 
-In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+In Dynamo geben wir Daten in die Eingabeanschlüsse von Blöcken ein: Daten können ohne Aktionen existieren, aber die Aktionen, die durch die Blöcke dargestellt werden, können nur durchgeführt werden, wenn Daten vorhanden sind. Wenn Sie im Arbeitsbereich einen Block hinzufügen, ohne Eingaben bereitzustellen, ist das Ergebnis eine Funktion, nicht das Ergebnis der eigentlichen Aktion.
 
 ![Data and Actions](<../images/5-3/1/data - what is data.jpg>)
 
-> 1. Simple Data
-> 2. Data and Action (A Node) successfully executes
-> 3. Action (A Node) without Data Inputs returns a generic function
+> 1. Einfache Daten
+> 2. Daten und Aktion (Block): erfolgreiche Ausführung
+> 3. Aktion (Block) ohne Daten gibt eine allgemeine Funktion zurück
 
-### Null - Absence of Data
+### Null – Keine Daten
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
+Vorsicht vor Nullwerten: Der Typ `'null'` steht für das Fehlen von Daten. Dies ist zwar ein abstraktes Konzept, dem Sie jedoch bei der Arbeit mit visueller Programmierung sehr wahrscheinlich begegnen werden. Wenn eine Aktion kein gültiges Ergebnis erstellt, gibt der Block Null zurück.
 
-Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+Das Ermitteln und Entfernen von Nullwerten aus Datenstrukturen ist ein entscheidender Schritt zum Erstellen stabiler Programme.
 
-| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| Symbol | Name/Syntax | Eingaben | Ausgaben |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj | bool |
 
-### Data Structures
+### Datenstrukturen
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
+Bei der visuellen Programmierung können sehr schnell große Datenmengen generiert werden. Aus diesem Grund benötigen Sie ein Verfahren zur Verwaltung von deren Hierarchie. Dies ist die Funktion der Datenstrukturen, der organisatorischen Schemata, in denen Daten gespeichert werden. Die Charakteristika der Datenstrukturen und ihrer Verwendung sind von Programmiersprache zu Programmiersprache unterschiedlich.
 
-In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+in Dynamo werden Daten mithilfe von Listen hierarchisch geordnet. Dies wird in den weiteren Kapiteln ausführlich erläutert. Am Anfang sollen einige einfache Beispiele stehen:
 
-A list represents a collection of items placed into one structure of data:
+Eine Liste für eine Sammlung von Elementen, die in einer Struktur von Daten abgelegt wurden:
 
-* I have five fingers (_items_) on my hand (_list_).
-* There are ten houses (_items_) on my street (_list_).
+* Sie haben fünf Finger (_Elemente_) an einer Hand (_Liste_).
+* Zehn Häuser (_Elemente_) stehen entlang einer Straße (_Liste_).
 
 ![List Breakdown](<../images/5-3/1/data - data structures.jpg>)
 
-> 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 1. Ein **Number Sequence**-Block definiert eine Liste von Zahlen mithilfe der Eingaben _start_, _amount_ und _step_. Mithilfe dieser beiden Blöcke wurden zwei separate Listen mit je zehn Zahlen – _100–109_ und _0–9_ erstellt.
+> 2. Mithilfe des Blocks **List.GetItemAtIndex** wird das Element an einer bestimmten Indexposition ausgewählt. Wenn Sie _0_ wählen, wird das erste Element in der Liste (in diesem Fall_100_) abgerufen.
+> 3. In der zweiten Liste erhalten Sie mit demselben Verfahren den Wert _0_, das erste Element in der Liste.
+> 4. Als Nächstes führen Sie die beiden Listen mithilfe eines **List.Create**-Blocks zu einer zusammen. Mit diesem Block wird eine _Liste von Listen erstellt._ Dies verändert die Struktur der Daten.
+> 5. Wenn Sie **List.GetItemAtIndex** erneut mit dem Index _0_ verwenden, erhalten Sie die erste der in der übergeordneten Liste enthaltenen Listen. Dieses Beispiel verdeutlicht, wie Listen behandelt werden: Sie gelten – anders als in anderen Skriptsprachen – als Objekte. Listenbearbeitung und Datenstruktur werden in den später folgenden Kapiteln genauer beschrieben.
 
-The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
+Als wichtigstes Prinzip zum Verständnis der Datenhierarchie in Dynamo gilt: **Innerhalb der Datenstruktur gelten Listen als Elemente.** In anderen Worten: In Dynamo kommt ein hierarchisch von oben nach unten geordneter Prozess für Datenstrukturen zum Einsatz. Was bedeutet das? Das folgende Beispiel soll dies verdeutlichen:
 
-## Exercise: Using Data to Make a Chain of Cylinders
+## Übung: Erstellen einer Kette von Zylindern mithilfe von Daten
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+In diesem ersten Beispiel erstellen Sie zur Demonstration der in diesem Abschnitt behandelten Geometriehierarchie einen Zylinder und geben seine Wandstärke an.
 
-### Part I: Set up Graph for one cylinder with some changeable parameters.
+### Teil I: Einrichten des Diagramms für einen Zylinder mit einigen veränderbaren Parametern
 
-1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+1. Fügen Sie **Point.ByCoordinates** hinzu: Nachdem Sie diesen Block im Ansichtsbereich hinzugefügt haben, wird ein Punkt am Ursprung des Rasters in der Dynamo-Vorschau angezeigt. Die Vorgabewerte der Eingaben für _x, y_ und _z_ sind _0.0_, wodurch ein Punkt an dieser Position definiert wird.
 
 ![](<../images/5-3/1/data - exercise step 1.jpg>)
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+2\. **Plane.ByOriginNormal**: Die nächste Stufe in der Geometriehierarchie ist eine Ebene. Es gibt mehrere Möglichkeiten für die Konstruktion einer Ebene: Hier werden ein Ursprung und eine Normale als Eingaben verwendet. Der Ursprung ist der Punkt, den Sie mithilfe des Blocks im vorigen Schritt erstellt haben.
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis**: Dies ist ein Vektor mit Einheiten in z-Richtung. Beachten Sie, dass hier keine Eingaben vorhanden sind, sondern nur ein Vektor mit dem Wert \[0,0,1]. Dieser wird für die _normal_-Eingabe des **Plane.ByOriginNormal**-Blocks verwendet. In der Dynamo-Vorschau wird daraufhin eine rechteckige Ebene angezeigt.
 
 ![](<../images/5-3/1/data - exercise step 2.jpg>)
 
-3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+3\. **Circle.ByPlaneRadius**: Eine Stufe höher in der Hierarchie erstellen Sie aus der Ebene, die Sie im letzten Schritt erstellt haben, eine Kurve. Nachdem Sie den Block verbunden haben, erhalten Sie einen Kreis um den Ursprungspunkt. Als Radius ist in diesem Block der Wert _1_ vorgegeben.
 
 ![](<../images/5-3/1/data - exercise step 3.jpg>)
 
-4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+4\. **Curve.Extrude**: In diesem Schritt wandeln Sie dieses Objekt in einen 3D-Körper um. Dieser Block erstellt durch Extrusion eine Oberfläche aus einer Kurve. Der vorgegebene Abstand im Block beträgt _1_ und im Ansichtsfenster ist jetzt ein Zylinder zu sehen.
 
 ![](<../images/5-3/1/data - exercise step 4.jpg>)
 
-5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+5\. **Surface.Thicken**: Mit diesem Block erhalten Sie einen geschlossenen Körper, indem die Oberfläche um den angegebenen Wert versetzt und die entstehende Form geschlossen wird. Der Vorgabewert für die Verdickung ist _1_. Im Ansichtsfenster wird ein Zylinder mit der entsprechenden Wandstärke angezeigt.
 
 ![](<../images/5-3/1/data - exercise step 5.jpg>)
 
-6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+6\. **Number Slider**: Anstatt die Vorgabewerte für alle diese Eingaben zu verwenden, können Sie dem Modell auch Funktionen zur parametrischen Steuerung hinzufügen.
 
-**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**Domänenbearbeitung**: Nachdem Sie den Zahlen-Schieberegler im Ansichtsbereich hinzugefügt haben, klicken Sie auf die Pfeilspitze oben links, um die Domänenoptionen anzuzeigen.
 
-**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+**Min/Max/Step**: Ändern Sie die Werte für _min_, _max_ und _step_ in _0_,_2_ und _0.01_. Mit diesen Angaben steuern Sie die Gesamtgröße der Geometrie.
 
 ![](<../images/5-3/1/data - exercise step 6.gif>)
 
-7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+7\. **Number Slider**-Blöcke: Erstellen Sie mehrere Kopien dieses Number Slider-Blocks (indem Sie ihn auswählen und anschließend zuerst Strg+C und dann Strg+V drücken), bis für alle Eingaben anstelle der bisherigen Vorgaben Verbindungen zu den Number Sliders verwendet werden. Manche Werte für diese Schieberegler müssen größer als Null sein, damit die Definition verwendbar ist. So wird beispielsweise eine Tiefe für die Extrusion benötigt, damit eine Oberfläche entsteht, die verdickt werden kann.
 
 ![](<../images/5-3/1/data - exercise step 7a.gif>)
 
 ![](<../images/5-3/1/data - exercise step 7b.gif>)
 
-8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+8\. Sie haben jetzt mithilfe dieser Regler einen parametrischen Zylinder mit Angabe einer Wandstärke erstellt. Experimentieren Sie mit einigen dieser Parameter und beobachten Sie die dynamische Veränderung der Geometrie im Dynamo-Ansichtsfenster.
 
 ![](<../images/5-3/1/data - exercise step 8a.gif>)
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**Number Sliders**-Blöcke: In einem weiteren Schritt wurden etliche weitere Schieberegler im Ansichtsbereich hinzugefügt und die Benutzeroberfläche des neu erstellten Werkzeugs muss übersichtlicher gestaltet werden. Klicken Sie mit der rechten Maustaste nacheinander auf die einzelnen Schieberegler, wählen Sie Umbenennen und ändern Sie den Namen jedes Schiebereglers in den Namen des dazugehörigen Parameters (Dicke, Radius, Höhe usw.).
 
 ![](<../images/5-3/1/data - exercise step 8b step.jpg>)
 
-### Part II: Populate an array of cylinders from Part I
+### Teil II: Füllen eines Arrays von Zylindern aus Teil I
 
-9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+9\. Damit haben Sie einen perfekten verdickten Zylinder erstellt. Dies ist jedoch nur ein einzelnes Objekt. Im nächsten Schritt wird gezeigt, wie Sie ein Array von Zylindern erstellen, die dynamisch miteinander verbunden bleiben. Zu diesem Zweck arbeiten Sie nicht mit einem einzelnen Element, sondern erstellen eine Liste von Zylindern.
 
-**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+**Addition (+)**: Neben dem eben erstellten Zylinder soll eine Reihe weiterer Zylinder hinzugefügt werden. Um einen Zylinder direkt neben dem vorhandenen hinzuzufügen, müssen Sie sowohl dessen Radius als auch die Stärke seiner Wand berücksichtigen. Diesen Wert erhalten Sie durch Addition der Werte aus den beiden Schiebereglern.
 
 ![](<../images/5-3/1/data - exercise step 9.jpg>)
 
-10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+10\. Dieser Schritt ist etwas komplexer und wird daher im Einzelnen erläutert: Erstellt werden soll eine Liste mit Zahlen, die die Positionen der einzelnen Zylinder in einer Reihe definieren.
 
 ![](<../images/5-3/1/data - exercise step 10.jpg>)
 
-> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+> a. **Multiplication**: Als Erstes müssen Sie den Wert aus dem vorigen Schritt mit 2 multiplizieren. Der Wert aus dem vorherigen Schritt gibt den Radius an, der Zylinder muss jedoch um den vollständigen Durchmesser verschoben werden.
 >
-> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+> b. **Number Sequence**: Mithilfe dieses Blocks erstellen Sie ein Array von Zahlen. Die erste Eingabe ist der Wert des _Multiplikation_-Blocks aus dem vorigen Schritt in den _step_-Wert. Als _start_-Wert können Sie _0.0_ festlegen. Verwenden Sie hierfür einen _number_-Block.
 >
-> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+> c. **Integer Slider**: Verbinden Sie für den _amount_-Wert einen Integer Slider-Block. Diese Funktion definiert, wie viele Zylinder erstellt werden.
 >
-> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+> d. **Output**: Diese Liste zeigt den Abstand, um den die einzelnen Zylinder im Array versetzt werden. Sie wird parametrisch durch die ursprünglichen Schieberegler gesteuert.
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. Dieser Schritt ist einfach: Verbinden Sie die im letzten Schritt erstellte Sequenz mit der _x_-Eingabe des ursprünglichen **Point.ByCoordinates**. Dies ersetzt den Schieberegler _pointX_, den Sie löschen können. Im Ansichtsfenster wird jetzt ein Array von Zylindern angezeigt (achten Sie darauf, dass im Integer Slider ein Wert größer als Null angegeben ist).
 
 ![](<../images/5-3/1/data - exercise step 11.gif>)
 
-12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+12\. Die Kette der Zylinder ist weiterhin dynamisch mit allen Schiebereglern verknüpft. Experimentieren Sie mit den Schiebereglern, und beobachten Sie, wie die Definition aktualisiert wird.
 
 ![](<../images/5-3/1/data - exercise step 12.gif>)

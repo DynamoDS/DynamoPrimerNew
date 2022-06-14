@@ -1,10 +1,10 @@
-# Surfaces: Interpolated, Control Points, Loft, Revolve
+# Oberflächen: Interpolation, Steuerpunkte, Erhebung, Drehung
 
-The two-dimensional analog to a NurbsCurve is the NurbsSurface, and like the freeform NurbsCurve, NurbsSurfaces can be constructed with two basic methods: inputting a set of base points and having Dynamo interpolate between them, and explicitly specifying the control points of the surface. Also like freeform curves, interpolated surfaces are useful when a designer knows precisely the shape a surface needs to take, or if a design requires the surface to pass through constraint points. On the other hand, Surfaces created by control points can be more useful for exploratory designs across various smoothing levels.
+Die zweidimensionale Entsprechung zur NurbsCurve ist die NurbsSurface, und wie die Freiform-NurbsCurve können NurbsSurfaces mit zwei grundlegenden Methoden konstruiert werden: durch Eingabe eines Satzes von Basispunkten, zwischen denen Dynamo interpoliert, oder durch explizites Angeben der Steuerpunkte der Oberfläche. Ebenso wie Freiformkurven sind interpolierte Oberflächen nützlich, wenn ein Konstrukteur die präzise Form kennt, die eine Oberfläche aufweisen soll, oder ein Entwurf erfordert, dass die Oberfläche durch Abhängigkeitspunkte führt. Mit Steuerpunkten erstellte Oberflächen wiederum können dann nützlich sein, wenn es um experimentelle Entwürfe mit unterschiedlichen Glättungsgraden geht.
 
-### Interpolated Surface
+### Interpolierte Oberfläche
 
-To create an interpolated surface, simply generate a two-dimensional collection of points approximating the shape of a surface. The collection must be rectangular, that is, not jagged. The method _NurbsSurface.ByPoints_ constructs a surface from these points.
+Zum Erstellen einer interpolierten Oberfläche generieren Sie einfach eine zweidimensionale Punktsammlung als Annäherung an die Form einer Oberfläche. Die Sammlung muss rechteckig sein, also nicht gezackt. Die Methode _NurbsSurface.ByPoints_ erstellt eine Oberfläche aus diesen Punkten.
 
 ![](../images/8-2/6/Surfaces\_01.png)
 
@@ -15,9 +15,9 @@ To create an interpolated surface, simply generate a two-dimensional collection 
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### Control Points Surface
+### Kontrollpunktoberfläche
 
-Freeform NurbsSurfaces can also be created by specifying underlying control points of a surface. Like NurbsCurves, the control points can be thought of as representing a quadrilateral mesh with straight segments, which, depending on the degree of the surface, is smoothed into the final surface form. To create a NurbsSurface by control points, include two additional parameters to _NurbsSurface.ByPoints_, indicating the degrees of the underlying curves in both directions of the surface.
+Freiform-NurbsSurfaces können auch erstellt werden, indem die zugrunde liegenden Steuerpunkte einer Oberfläche angegeben werden. Wie bei NurbsCurves kann man sich die Steuerpunkte als Darstellung eines vierseitigen Netzes mit geraden Segmenten vorstellen, das je nach dem Grad der Oberfläche zur endgültigen Oberflächenform geglättet wird. Um eine NurbsSurface aus Steuerpunkten zu erstellen, schließen Sie zwei zusätzliche Parameter in _NurbsSurface.ByPoints_ ein, die den Grad der zugrunde liegenden Kurven in beide Richtungen der Oberfläche angeben.
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
@@ -29,7 +29,7 @@ Freeform NurbsSurfaces can also be created by specifying underlying control poin
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-We can increase the degree of the NurbsSurface to change the resulting surface geometry:
+Wir können den Grad der NurbsSurface erhöhen, um die resultierende Oberflächengeometrie zu ändern:
 
 ![](../images/8-2/6/Surfaces\_03.png)
 
@@ -41,9 +41,9 @@ We can increase the degree of the NurbsSurface to change the resulting surface g
 surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 ```
 
-### Loft Surface
+### Erhabene Fläche
 
-Just as Surfaces can be created by interpolating between a set of input points, they can be created by interpolating between a set of base curves. This is called lofting. A lofted curve is created using the _Surface.ByLoft_ constructor, with a collection of input curves as the only parameter.
+Genauso wie Oberflächen durch Interpolation zwischen einer Reihe eingegebener Punkte erstellt werden können, können sie auch durch Interpolation zwischen einem Satz von Basiskurven erstellt werden. Dieser Ansatz wird als Erhebung bezeichnet. Eine Erhebungskurve wird mit dem Konstruktor _Surface.ByLoft_ und einer Sammlung von Eingabekurven als einzigem Parameter erstellt.
 
 ![](../images/8-2/6/Surfaces\_04.png)
 
@@ -58,11 +58,11 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### Revolve Surface
+### Fläche drehen
 
-Surfaces of revolution are an additional type of surface created by sweeping a base curve around a central axis. If interpolated surfaces are the two-dimensional analog to interpolated curves, then surfaces of revolution are the two-dimensional analog to circles and arcs.
+Rotationsflächen sind ein weiterer Typ von Oberflächen, die durch Sweeping einer Basiskurve um eine Mittelachse erstellt werden. Wenn interpolierte Oberflächen zweidimensional analog zu interpolierten Kurven sind, dann sind Rotationsflächen zweidimensional analog zu Kreisen und Bogen.
 
-Surfaces of revolution are specified by a base curve, representing the “edge” of the surface; an axis origin, the base point of the surface; an axis direction, the central “core” direction; a sweep start angle; and a sweep end angle. These are used as the input to the _Surface.Revolve_ constructor.
+Rotationsflächen werden definiert durch eine Basiskurve, die die „Kante“ der Oberfläche darstellt, einen Achsenursprung, der den Basispunkt der Oberfläche bildet, eine Achsenrichtung, die die Kernrichtung vorgibt, einen Sweeping-Startwinkel sowie einen Sweeping-Endwinkel. Diese Parameter werden als Eingabe für den Konstruktor _Surface.Revolve_ verwendet.
 
 ![](../images/8-2/6/Surfaces\_05.png)
 

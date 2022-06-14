@@ -1,126 +1,126 @@
-# Nodes and Wires
+# Blöcke und Drähte
 
-## Nodes
+## Blöcke
 
-In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each **Node** performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.
+In Dynamo stellen **Blöcke** die Objekte dar, die zum Bilden eines visuellen Programms miteinander verbunden werden. Jeder **Block** führt einen Vorgang aus –  vom einfachen Speichern einer Zahl bis hin zu komplexen Aktionen wie das Erstellen oder Abfragen von Geometrie.
 
-### Anatomy of a Node
+### Anatomie von Blöcken
 
-Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
+In Dynamo setzen sich die meisten Blöcke aus fünf Teilen zusammen. Abgesehen von einigen Ausnahmen (z. B. Eingabeblöcke) kann die Anatomie eines jeden Blocks wie folgt beschrieben werden:
 
 ![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
-> 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
-> 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
+> 1. Name: Der Name des Blocks gemäß `Category.Name`-Benennungskonvention
+> 2. Hauptkörper: Der Hauptkörper des Blocks. Durch Klicken mit der rechten Maustaste auf diesen Bereich werden Optionen für den gesamten Block angezeigt.
+> 3. Anschlüsse (eingehend und ausgehend): Die Rezeptoren für Drähte, über die die eingegebenen Daten sowie die Ergebnisse von Blockaktionen an Blöcke geliefert werden.
+> 4. Vorgabewert: Klicken Sie mit der rechten Maustaste auf einen Eingabeanschluss. Einige Blöcke verfügen über Vorgabewerte, die verwendet werden können, aber nicht verwendet werden müssen.
+> 5. Symbol Vergitterung: Zeigt die Option [Vergitterung](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) an, die für übereinstimmende Listeneingaben angegeben ist (mehr dazu später).
 
-### Nodes Input/Output Ports
+### Eingabe-/Ausgabeanschlüsse von Blöcken
 
-The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.
+Die Eingaben und Ausgaben für Blöcke werden als Anschlüsse bezeichnet. Sie fungieren als Kontakte für Drähte. Daten gelangen über die Anschlüsse auf der linken Seite in Blöcke und strömen auf der rechten Seite wieder aus den Blöcken hinaus, nachdem der entsprechende Vorgang ausgeführt wurde.
 
-Ports expect to receive data of a certain type. For instance, connecting a number such as _2.75_ to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply _"Red"_ to the same Port it will result in an error.
+Anschlüsse erwarten Daten eines bestimmten Typs. Das Verbinden einer Zahl wie _2,75_ mit den Anschlüssen eines Point By Coordinates-Blocks führt beispielsweise dazu, dass ein Punkt erfolgreich erstellt wird. Wenn jedoch _"Rot"_ an denselben Anschluss geliefert wird, tritt ein Fehler auf.
 
 {% hint style="info" %}
-Tip: Hover over a Port to see a tooltip containing the data type expected.
+Tipp: Bewegen Sie den Cursor auf einen Anschluss, um eine QuickInfo mit dem erwarteten Datentyp aufzurufen.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
-> 1. Port Label
-> 2. Tool Tip
-> 3. Data Type
-> 4. Default Value
+> 1. Anschlussbezeichnung
+> 2. QuickInfo
+> 3. Datentyp
+> 4. Vorgabewert
 
-### Node States
+### Blockstatus
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
+Dynamo gibt einen Hinweis auf den Status der Ausführung eines visuellen Programms aus, indem Blöcke mit unterschiedlichen Farbschemata basierend auf dem Status der einzelnen Blöcke gerendert werden. Die Hierarchie der Status ist wie folgt: Fehler > Warnung > Info > Vorschau.
 
-Hovering or right-clicking over the Name or Ports presents additional information and options.
+Durch Bewegen des Cursors auf den Namen bzw. die Anschlüsse oder durch Klicken mit der rechten Maustaste darauf werden zusätzliche Informationen und Optionen angezeigt.
 
 ![](<images/nodes and wires - node states.jpg>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 1. Aktiv: Blöcke, deren Namen einen dunkelgrauen Hintergrund aufweisen, sind ordnungsgemäß angeschlossen, d. h., alle Eingaben konnten erfolgreich verbunden werden.
+> 2. Fehlerstatus: Die rote Statusleiste unter dem Block gibt an, dass der Block einen Fehlerstatus aufweist.
+> 3. Anhalten: Bei transparent dargestellten Blöcken ist Anhalten aktiviert, d. h., ihre Ausführung wurde unterbrochen.
+> 4. Hintergrundvorschau: Die graue Statusleiste unter dem Block und das Augensymbol ![](<images/nodes and wires - preview off.jpg>) geben an, dass die Geometrievorschau deaktiviert ist.
+> 5. Ausgewählt: Aktuell ausgewählte Blöcke weisen eine aquamarinblau hervorgehobenen Rand auf.
+> 6. Warnung: Die gelbe Statusleiste unter dem Block zeigt einen Warnstatus an, d. h., es fehlen Eingabedaten oder es sind möglicherweise falsche Datentypen vorhanden.
 
-#### Handling Error or Warning Nodes
+#### Umgang mit Fehler- oder Warnungsblöcken
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+Wenn Ihr visuelles Programm Warnungen oder Fehler aufweist, gibt Dynamo zusätzliche Informationen zu dem Problem an. Alle Blöcke, die in gelb angezeigt werden, verfügen auch über eine QuickInfo über dem Namen. Bewegen Sie den Mauszeiger über das Symbol der QuickInfo für die Warnung ![](<images/nodes and wires - node warning icon.png>) oder den Fehler ![](<images/nodes and wires - node error icon.png>), um sie zu erweitern.
 
 {% hint style="info" %}
-Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
+Tipp: Untersuchen Sie vor dem Hintergrund dieser QuickInfo die vorgelagerten Blöcke, um zu sehen, ob der erforderliche Datentyp oder die erforderliche Datenstruktur fehlerhaft ist.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
-> 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 1. QuickInfo zu Warnung: "Null" oder keine Daten können nicht als Double verstanden werden, d. h. eine Zahl.
+> 2. Verwenden Sie den Watch-Block, um die Eingabedaten zu untersuchen.
+> 3. Der vorgelagerte Number-Block speichert "Rot", keine Zahl.
 
-## Wires
+## Drähte
 
-Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.
+Drähte verbinden Blöcke miteinander, um Beziehungen zu erstellen und den Ablauf eines visuellen Programms festzulegen. Sie können sie sich buchstäblich als elektrische Drähte vorstellen, die Datenimpulse von einem Objekt zum nächsten transportieren.
 
-### Program Flow <a href="#program-flow" id="program-flow"></a>
+### Programmablauf <a href="#program-flow" id="program-flow"></a>
 
-Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the **Flow of Data** in the Visual Program.
+Drähte verbinden den Ausgabeanschluss eines Blocks mit dem Eingabeanschluss eines anderen Blocks. Diese Direktionalität legt den **Datenfluss** im visuellen Programm fest.
 
-Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
+Die Eingabeanschlüsse befinden sich auf der linken Seite, die Ausgabeanschlüsse auf der rechten Seite der Blöcke. Daher kann man allgemein sagen, dass der Programmablauf von links nach rechts verläuft.
 
 ![](<images/nodes and wires - flow of data.jpg>)
 
-### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
+### Drähte erstellen <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+Erstellen Sie einen Draht, indem Sie mit der linken Maustaste auf einen Anschluss und anschließend mit der linken Maustaste auf den Anschluss eines anderen Blocks klicken, um eine Verbindung zu erstellen. Während der Herstellung der Verbindung wird der Draht gestrichelt angezeigt. Nachdem die Verbindung erfolgreich hergestellt wurde, erscheint er als durchgezogene Linie.
 
-The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
+Die Daten fließen immer von Ausgabe zu Eingabe durch diesen Draht. Sie können den Draht jedoch in beliebiger Richtung erstellen, die dadurch definiert wird, in welcher Reihenfolge Sie auf die Anschlüsse klicken.
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
-### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
+### Drähte bearbeiten <a href="#editing-wires" id="editing-wires"></a>
 
-Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
+Es kommt häufig vor, dass Sie den Programmablauf in Ihrem visuellen Programm anpassen müssen, indem Sie die durch Drähte dargestellten Verbindungen bearbeiten. Um einen Draht zu bearbeiten, klicken Sie mit der linken Maustaste auf den Eingabeanschluss eines Blocks, der bereits verbunden ist. Sie haben jetzt zwei Möglichkeiten:
 
-* Change connection to an input Port, left-click on another input Port
+* Um die Verbindung zu einem Eingabeanschluss zu ändern, klicken Sie mit der linken Maustaste auf einen anderen Eingabeanschluss.
 
 ![](<images/nodes and wires - edit wire change port (2).gif>)
 
-* To remove the Wire, pull the Wire away and left-click on Workspace
+* Um den Draht zu entfernen, ziehen Sie den Draht weg und klicken Sie mit der linken Maustaste in den Arbeitsbereich.
 
 ![](<images/nodes and wires - edit wires remove.gif>)
 
-* Reconnect multiple wires using Shift+left-click
+* Erneutes Verbinden mehrerer Drähte mit UMSCHALT+Linksklick
 
 ![](<images/nodes and wires - edit multi ports.gif>)
 
-* Duplicate a wire using Ctrl+left-click
+* Duplizieren eines Drahts mit STRG+Linksklick
 
 ![](<images/nodes and wires - duplicate wire.gif>)
 
-#### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
+#### Vorgabemäßige und markierte Drähte im Vergleich <a href="#wire-previews" id="wire-previews"></a>
 
-By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
+Standardmäßig werden Drähte in der Vorschau mit einem grauen Strich angezeigt. Wenn ein Block ausgewählt wird, werden alle Verbindungsdrähte wie der Block in aquamarinblau hervorgehoben.
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
-> 1. Highlighted Wire
-> 2. Default Wire
+> 1. Hervorgehobener Draht
+> 2. Standarddraht
 
-**Hide Wires by Default**
+**Drähte vorgabemäßig ausblenden**
 
-In case you prefer to hide the Wires in your graph, you can find this option from View > Connectors > untick Show Connectors.
+Falls Sie es vorziehen, die Drähte im Diagramm auszublenden, können Sie diese Option über Ansicht > Connectors > Connectors anzeigen deaktivieren.
 
-With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
+Mit dieser Einstellung werden nur die ausgewählten Blöcke und die verbindenden Drähte in hellem Aquamarin hervorgehoben.
 
 ![](<images/nodes and wires - hide wires setting (1).gif>)
 
-#### Hide Individual Wire Only
+#### Nur einzelne Drähte ausblenden
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+Sie können auch nur ausgewählte Drähte ausblenden, indem Sie mit der rechten Maustaste auf die Blockausgabe klicken und Drähte ausblenden auswählen.
 
 ![](<images/nodes and wires - hide selected wire.gif>)

@@ -1,29 +1,29 @@
-# Dictionary Nodes
+# Wörterbuch-Blöcke
 
-Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
+Dynamo 2.0 stellt eine Reihe von Wörterbuch-Blöcken für die Verwendung bereit. Dies umfasst die Blöcke _create, action und query_.
 
 ![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
 
-#### Create
+#### Erstellen
 
-1.`Dictionary.ByKeysValues` will create a dictionary with the supplied values and keys. _(The number of entries will be whatever the shortest list input is)_
+1. `Dictionary.ByKeysValues` erstellt ein Wörterbuch mit den bereitgestellten Werten und Schlüsseln. _(Die Anzahl der Einträge entspricht der Länge der kürzesten Liste.)_
 
-#### Action
+#### Aktion
 
-2\. `Dictionary.Components` will produce the components of the input dictionary. _(This is the reverse of the create node.)_
+2\. `Dictionary.Components` erstellt die Komponenten des Eingabe-Wörterbuchs. _(Dieser Vorgang ist die Umkehrung der Block-Erstellung.)_
 
-3\. `Dictionary.RemoveKeys` will produce a new dictionary object with the input keys removed.
+3\. `Dictionary.RemoveKeys` erzeugt ein neues Wörterbuch-Objekt und entfernt die Eingabe-Schlüssel.
 
-4\. `Dictionary.SetValueAtKeys` will produce a new dictionary based on the input keys and the values to replace the current value at the corresponding keys.
+4\. `Dictionary.SetValueAtKeys` erzeugt ein neues Wörterbuch anhand der eingegebenen Schlüssel und Werte und ersetzt den aktuellen Wert in den entsprechenden Schlüsseln.
 
-5\. `Dictionary.ValueAtKey` will return the value at the input key.
+5\. `Dictionary.ValueAtKey` gibt den Wert am Eingabeschlüssel zurück.
 
-#### Count
+#### Anzahl
 
-6\. `Dictionary.Count` will tell you how many key value pairs are in the dictionary.
+6\. `Dictionary.Count` gibt an, wie viele Schlüssel-Wert-Paare sich im Wörterbuch befinden.
 
-7\. `Dictionary.Keys` will return what keys are currently stored in the dictionary.
+7\. `Dictionary.Keys` gibt zurück, welche Schlüssel derzeit im Wörterbuch gespeichert sind.
 
-8\. `Dictionary.Values` will return what values are currently stored in the dictionary.
+8\. `Dictionary.Values` gibt zurück, welche Werte derzeit im Wörterbuch gespeichert sind.
 
-Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.
+Die Möglichkeit, Daten allgemein mit Wörterbücher in Beziehung zu setzen, ist eine großartige Alternative zur vorherigen Verwendung von Indizen und Listen.

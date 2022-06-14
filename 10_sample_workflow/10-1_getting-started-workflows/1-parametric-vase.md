@@ -2,103 +2,103 @@
 description: suggested exercise
 ---
 
-# Parametric Vase
+# Parametrische Vase
 
-Creating a parametric vase is a great way to start learning Dynamo.
+Das Erstellen einer parametrischen Vase ist eine gute Möglichkeit, in die Arbeit mit Dynamo einzusteigen.
 
-This workflow will teach you how to:
+In diesem Arbeitsablauf lernen Sie Folgendes:
 
-* Use number sliders to control variables in your design.
-* Create and modify geometric elements using nodes.
-* Visualize design results in real-time.
+* Verwenden der Number Sliders, um Variablen in Ihrer Konstruktion zu steuern.
+* Erstellen und ändern von geometrischen Elementen mithilfe von Blöcken.
+* Visualisieren der Ergebnisse in Echtzeit.
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 
-## Defining Our Objectives
+## Definieren der Ziele
 
-Before jumping into dynamo let's conceptually design our vase.
+Bevor wir mit Dynamo beginnen, sollten wir zunächst die Vase konzeptionell entwerfen.
 
-Let's say we are going to design a clay vase that takes into account manufacturing practices used by ceramists. Ceramists normally use a pottery wheel to fabricate cylindrical vases. Then, by applying pressure on various heights of the vase they can alter the shape of the vase and create varied designs.
+Angenommen, wir entwerfen eine Tonvase, die die von Keramikern verwendeten Fertigungsverfahren berücksichtigt. Keramiker verwenden normalerweise eine Töpferscheibe zur Herstellung von zylindrischen Vasen. Durch die Anwendung von Druck auf verschiedene Höhen der Vase können sie dann die Form der Vase ändern und verschiedene Designs erstellen.
 
-We would use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
+Wir verwenden eine ähnliche Methode, um unsere Vase zu definieren. Wir erstellen 4 Kreise mit unterschiedlichen Höhen und Radien und erstellen dann eine Oberfläche durch Erhebung dieser Kreise.
 
 ![](../images/10-1/1/vase2.png)
 
-## Getting Started
+## Erste Schritte
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-We need the nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a node that does so. Use the **Search field** or browse through the **Library** to find the **Circle.ByCenterPointRadius** node and add it to the Workspace
+Wir benötigen die Blöcke, die die Reihenfolge der Aktionen darstellen, die von Dynamo ausgeführt werden. Da wir einen Kreis erstellen möchten, suchen Sie nach einem Block, der diese Aktion ausführt. Verwenden Sie das **Suchfeld**, oder durchsuchen Sie die **Bibliothek**, um den **Circle.ByCenterPointRadius**-Block zu suchen und ihn dem Arbeitsbereich hinzuzufügen.
 
 ![](../images/10-1/1/vase8.png)
 
-> 1. Search > "Circle..."
-> 2. Select > "ByCenterPointRadius"
-> 3. Node will appear in workspace
+> 1. Suchen > "Circle..."
+> 2. Auswählen > "ByCenterPointRadius"
+> 3. Block wird im Arbeitsbereich angezeigt
 
-Let's take a closer look at this node. On the left side, you have the node's inputs (_centerPoint_ and _radius_) and on the right side, you have the node's output (Circle). Notice that the outputs have a light blue line. This means that the input has a default value. To get more information about the input hover over its name. The _radius_ input needs a double input and has a default value of 1.
+Sehen wir uns diesen Block genauer an. Auf der linken Seite befinden sich die Eingaben des Blocks (_centerPoint_ und _radius_), auf der rechten Seite die Ausgabe des Blocks (Circle). Beachten Sie, dass die Ausgaben eine hellblaue Linie aufweisen. Dies bedeutet, dass die Eingabe einen Vorgabewert hat. Um weitere Informationen über die Eingabe zu erhalten, bewegen Sie den Mauszeiger über den Namen. Die _radius_-Eingabe erfordert eine doppelte Eingabe und hat den Vorgabewert 1.
 
 ![](../images/10-1/1/vase10.png)
 
-We will leave the default value of _centerPoint_ but add a **Number Slider** to control the radius. As we did with the **Circle.ByCenterPointRadius** node, use the library to search for **Number Slider** and add it to your graph.
+Wir behalten den Vorgabewert für _centerPoint_ bei, fügen jedoch einen **Number Slider** hinzu, um den Radius zu steuern. Verwenden Sie wie beim **Circle.ByCenterPointRadius**-Block die Bibliothek, um nach dem **Number Slider** zu suchen und ihn Ihrem Diagramm hinzuzufügen.
 
-This node is a bit different than our previous node as it contains a slider. You can use the interface to change the output value of the slider.
+Dieser Block unterscheidet sich etwas von dem vorherigen Block, da er einen Schieberegler enthält. Mit der Benutzeroberfläche können Sie den Ausgabewert des Schiebereglers ändern.
 
 ![](<../images/10-1/1/vase13 (1).gif>)
 
-The slider can be configured using the dropdown button at the left of the node. Let's limit the slider to a maximum value of 15.
+Der Schieberegler kann über die Dropdown-Schaltfläche auf der linken Seite des Blocks konfiguriert werden. Wir beschränken den Schieberegler auf einen Höchstwert von 15.
 
 ![](../images/10-1/1/vase11.png)
 
-Let's place it on the left of our **Circle.ByCenterPointRadius** node and connect both nodes by selecting the **Number Slider** output and connecting it to the Radius input.
+Platzieren Sie ihn auf der linken Seite des **Circle.ByCenterPointRadius**-Blocks, und verbinden Sie beide Blöcke, indem Sie die **Number Slider**-Ausgabe auswählen und mit der Radius-Eingabe verbinden.
 
 ![](../images/10-1/1/vase12.png)
 
-Let's also change the Number Slider name to "Top Radius" by double-clicking on the node's name.
+Ändern Sie außerdem den Namen des Number Slider in "Top Radius", indem Sie auf den Namen des Blocks doppelklicken.
 
 ![](../images/10-1/1/vase14.png)
 
-## Next steps
+## Nächste Schritte
 
-Let's continue adding some nodes and connections to our logic to define our vase.
+Wir fahren fort, indem wir der Logik einige Blöcke und Verbindungen hinzufügen, um die Vase zu definieren.
 
-### Creating Circles of Different Radii
+### Erstellen von Kreisen mit unterschiedlichen Radien
 
-Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
+Wir kopieren diese Blöcke 4 Mal, sodass diese Kreise unsere Oberfläche definieren. Ändern Sie die Namen der Number Slider wie unten gezeigt.
 
 ![](<../images/10-1/1/vase4 (1) (1).png>)
 
-> 1. Circles are created by a center point and a radius
+> 1. Kreise werden durch einen Mittelpunkt und einen Radius erstellt.
 
-### Moving Circles Through the Vase Height
+### Verschieben von Kreisen durch die Vasenhöhe
 
-We are missing a key parameter to our vase, its height. In order to control the vase's height, we create another number slider. We also add a **Code Block** node. Code blocks can help as add personalized code snippets to our workflow. We will use the code block to multiply the height slider by different factors so that we can position our circles along the vase's height.
+Es fehlt noch ein Schlüsselparameter für die Vase, nämlich ihre Höhe. Um die Höhe der Vase zu steuern, erstellen wir einen weiteren Number Slider. Außerdem fügen wir einen **Code Block**-Block hinzu. Codeblöcke können hilfreich sein, wenn Sie personalisierte Code-Snippets zu Ihrem Arbeitsablauf hinzufügen möchten. Der Codeblock wird verwendet, um den Schieberegler für die Höhe mit verschiedenen Faktoren zu multiplizieren, sodass die Kreise entlang der Höhe der Vase positioniert werden können.
 
 ![](<../images/10-1/1/vase15 (1).png>)
 
-We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
+Verwenden Sie dann einen **Geometry.Translate**-Block, um Kreise in der gewünschten Höhe zu platzieren. Da die Kreise über die Vase verteilt werden sollen, verwenden wir Codeblöcke, um den Höhenparameter mit einem Faktor zu multiplizieren.
 
 ![](../images/10-1/1/vase5.png)
 
-> 2\. Circles are translated (moved) by a variable in the z axis.
+> 2\. Kreise werden durch eine Variable in der Z-Achse verschoben.
 
-### Creating the Surface
+### Erstellen der Oberfläche
 
-In order to create a surface using the **Surface.ByLoft** node we need to combine all of our translated circles into a list. We use the **List.Create** to combine all of our circles into a single list, and then finally output this list to the **Surface.ByLoft** node to view results.
+Um eine Oberfläche mithilfe des **Surface.ByLoft**-Blocks zu erstellen, müssen wir alle verschobenen Kreise in einer Liste zusammenfassen. Wir verwenden **List.Create**, um alle Kreise in einer Liste zu kombinieren, und geben dann diese Liste im **Surface.ByLoft**-Block aus, um die Ergebnisse anzuzeigen.
 
-Let's also turn off the preview in other nodes to only display the Surface.ByLoft display.
+Wir deaktivieren außerdem die Vorschau in anderen Blöcken, um nur die Surface.ByLoft-Anzeige darzustellen.
 
 ![](<../images/10-1/1/vase6 (1) (1).png>)
 
-> 3\. A surface is created by lofting the translated circles.
+> 3\. Eine Oberfläche wird durch Erhebung der verschobenen Kreise erstellt.
 
-## Results
+## Ergebnisse
 
-Our workflow is ready! We can now use the **Number Sliders** we defined in our script to create different vase designs.
+Unser Arbeitsablauf ist bereit. Wir können jetzt die **Number Slider** verwenden, die wir in unserem Skript definiert haben, um verschiedene Vasendesigns zu erstellen.
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 

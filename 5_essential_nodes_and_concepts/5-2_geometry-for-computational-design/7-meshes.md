@@ -1,96 +1,96 @@
-# Meshes
+# Netze
 
-## Mesh in Dynamo
+## Netze in Dynamo
 
-### What is Mesh?
+### Was ist ein Netz?
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+Im Bereich der computergestützten Modellierung stellen [Netze](7-meshes.md#mesh) eine der am weitesten verbreiteten Formen für die Darstellung von 3D-Geometrie dar. Netzgeometrie besteht im Allgemeinen aus einer Sammlung von Vierecken oder Dreiecken. Sie kann eine einfache und flexible Alternative zum Arbeiten mit NURBS sein, und Netze werden in praktisch allen Bereichen verwendet, von Renderings und Visualisierungen bis hin zur digitalen Fertigung und zum 3D-Druck.
 
-### Mesh Elements
+### Netzelemente
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Dynamo definiert Netze mit einer Flächen-Scheitelpunkt-Datenstruktur. Auf elementarster Ebene handelt es sich bei dieser Struktur einfach um eine Sammlung von Punkten, die in Polygonen gruppiert sind. Die Punkte eines Netzes werden als Scheitelpunkte bezeichnet, während die oberflächenartigen Polygone als Flächen bezeichnet werden.
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+Um ein Netz zu erstellen, benötigen Sie eine Liste von Scheitelpunkten und ein System für die Gruppierung dieser Scheitelpunkte in Flächen. Dies wird auch als Indexgruppe bezeichnet.
 
 ![](<../images/5-2/7/meshes - mesh elements.jpg>)
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. Liste von Scheitelpunkten
+> 2. Liste von Indexgruppen zum Definieren von Flächen
 
 ### Mesh Toolkit
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+Der Funktionsumfang in Bezug auf Netze von Dynamo kann durch die Installation des Pakets [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) erweitert werden. Das Dynamo Mesh Toolkit bietet Werkzeuge zum Importieren von Netzen aus externen Dateiformaten, zum Erstellen von Netzen aus Dynamo Geometrieobjekten und zum manuellen Erstellen von Netzen aus ihren Scheitelpunkten und Indizes.
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+Die Bibliothek enthält auch Werkzeuge zum Ändern und Reparieren von Netzen sowie zum Extrahieren horizontaler Scheiben zur Verwendung in der Fertigung.
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+Ein Beispiel zur Verwendung dieses Pakets finden Sie in den [Fallstudien zu Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md).
 
 ![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deep Dive into...
+## Vertiefung...
 
-### Mesh
+### Netz
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+Ein Netz ist eine Sammlung von Vierecken und Dreiecken, die eine Oberfläche oder einen Volumenkörper darstellt. Wie bei Volumenkörpern enthält auch die Struktur von Netzobjekten Scheitelpunkte, Kanten und Flächen. Darüber hinaus gibt es weitere Eigenschaften, die Netze eindeutig machen, z. B. Normalen.
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![Netzelemente](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. Netzscheitelpunkte
+> 2. Netzkanten: \*Kanten mit nur einer angrenzenden Fläche werden als "nackt" bezeichnet. Alle anderen Kanten sind "angezogen".
+> 3. Netzflächen
 
-### Vertices + Vertex Normals
+### Scheitelpunkte + Scheitelpunktnormalen
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+Die Scheitelpunkte eines Netzes entsprechen einfach einer Liste von Punkten. Der Index der Scheitelpunkte ist beim Konstruieren eines Netzes oder Abrufen von Informationen über die Struktur eines Netzes sehr wichtig. Für jeden Scheitelpunkt gibt es auch eine entsprechende Scheitelpunktnormale (Vektor), die die durchschnittliche Richtung der verbundenen Flächen beschreibt und Sie dabei unterstützt, die nach innen und nach außen gerichtete Orientierung des Netzes zu verstehen.
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![Scheitelpunkte + Normalen](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. Scheitelpunkte
+> 2. Scheitelpunktnormalen
 
-### Faces
+### Flächen
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+Eine Fläche ist eine geordnete Liste von drei oder vier Scheitelpunkten. Die "Oberflächendarstellung" einer Netzfläche ist deshalb gemäß der Position der indizierten Scheitelpunkte impliziert. Sie verfügen bereits über die Liste der Scheitelpunkte, die ein Netz bilden. Statt also individuelle Punkte anzugeben, um eine Fläche zu definieren, verwenden Sie einfach den Index der Scheitelpunkte. Dies ermöglicht Ihnen auch die Verwendung desselben Scheitelpunkts in weiteren Flächen.
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. Quadratische Fläche, die aus den Indizes 0, 1, 2 und 3 erstellt wurde
+> 2. Dreieckige Fläche, die aus den Indizes 1, 4 und 2 erstellt wurde. Beachten Sie, dass die Indexgruppen in ihrer Reihenfolge verschoben werden können – solange die Sequenz gegen den Uhrzeigersinn angeordnet ist, ist die Fläche korrekt definiert
 
-### Meshes versus NURBS Surfaces
+### Netze und NURBS-Oberflächen im Vergleich
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+Welche Unterschiede bestehen zwischen Netz- und NURBS-Geometrie? Wann möchten Sie die eine Geometrie anstelle der anderen verwenden?
 
-#### Parameterization
+#### Parametrisierung
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+In einem früheren Kapitel haben wir gesehen, dass NURBS-Oberflächen durch eine Reihe von NURBS-Kurven in zwei Richtungen definiert werden. Diese Richtungen werden als `U` und `V` bezeichnet und ermöglichen, dass eine NURBS-Oberfläche gemäß einer zweidimensionalen Oberflächendomäne parametrisiert wird. Die Kurven selbst werden als Gleichungen im Computer gespeichert, sodass die resultierenden Oberflächen auf einen beliebigen, verhältnismäßig kleinen Genauigkeitsbereich berechnet werden können. Es kann jedoch schwierig sein, mehrere NURBS-Oberflächen miteinander zu kombinieren. Das Verbinden von zwei NURBS-Oberflächen führt zu einem Flächenverband, in dem verschiedene Bereiche der Geometrie unterschiedliche UV-Parameter und Kurvendefinitionen aufweisen.
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Steuerpunkte](../images/5-2/7/NURBSvsMESH-01.jpg)
 
-> 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
-> 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 1. Oberfläche
+> 2. Isoparametrische (Isoparm) Kurve
+> 3. Steuerpunkt der Oberfläche
+> 4. Steuerpunkt des Flächenverbands
+> 5. Isoparametrischer Punkt
+> 6. Oberflächenrahmen
+> 7. Netz
+> 8. Nackte Kante
+> 9. Maschennetz
+> 10. Netzkanten
+> 11. Scheitelpunktnormale
+> 12. Netzfläche/Netzflächennormale
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+Netze auf der anderen Seite bestehen aus einer diskreten Anzahl von genau definierten Scheitelpunkten und Flächen. Das Netzwerk von Scheitelpunkten kann im Allgemeinen nicht durch einfache `UV`-Koordinaten definiert werden. Da die Anzahl an Flächen diskret ist, bestimmt sich daraus auch der Genauigkeitsgrad des Netzes, der nur geändert werden kann, indem das Netz neu definiert und weitere Flächen hinzugefügt werden. Das Fehlen der mathematischen Beschreibungen ermöglicht Netzen die flexiblere Handhabung komplexer Geometrie innerhalb eines einzelnen Netzes.
 
-### Local versus Global Influence
+### Lokaler und globaler Einfluss im Vergleich
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+Ein weiterer wichtiger Unterschied ist das Ausmaß, in dem sich eine lokale Änderung der Netz- oder NURBS-Geometrie auf die gesamte Form auswirkt. Das Verschieben von einem Scheitelpunkt eines Netzes wirkt sich nur auf die an diesen Scheitelpunkt angrenzenden Flächen aus. In NURBS-Oberflächen ist das Ausmaß des Einflusses wesentlich komplizierter und richtet sich sowohl nach dem Grad der Oberfläche als auch nach den Gewichtungen und Knoten der Steuerpunkte. Allgemein wird durch das Verschieben eines einzelnen Steuerpunkts in einer NURBS-Oberfläche eine glattere, umfassendere Änderungen in der Geometrie erzeugt.
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Bearbeiten](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. NURBS-Oberfläche: Das Verschieben eines Steuerpunkts wirkt sich über die Form hinaus aus.
+> 2. Netzgeometrie – Das Verschieben eines Scheitelpunkts wirkt sich nur auf die angrenzenden Elemente aus.
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+Eine Analogie, die hilfreich sein kann, besteht im Vergleich eines Vektorbilds (bestehend aus Linien und Kurven) mit einem Rasterbild (bestehend aus einzelnen Pixeln). Wenn Sie die Anzeige eines Vektorbilds vergrößern, sind die Kurven weiterhin klar und deutlich zu sehen, während das Vergrößern eines Rasterbilds dazu führt, dass die einzelnen Pixel größer werden. In dieser Analogie können NURBS-Oberflächen mit einem Vektorbild verglichen werden, da eine glatte mathematische Beziehung besteht, während sich ein Netz ähnlich wie ein Rasterbild mit einer festgelegten Auflösung verhält.
 
 ##

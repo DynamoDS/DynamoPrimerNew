@@ -1,40 +1,40 @@
-# What is a Dictionary
+# Was ist ein Wörterbuch?
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+Dynamo 2.0 führt das Konzept der Trennung des Datentyps Wörterbuch und des Datentyps Liste ein. Diese Neuerung bewirkt einige wichtige Änderungen hinsichtlich der Art und Weise, wie Sie Daten erstellen und in Ihren Arbeitsabläufen verwenden. Vor Version 2.0 waren Wörterbücher und Listen ein kombinierter Datentyp. Kurz gesagt: Listen waren eigentlich Wörterbücher mit ganzzahligen Schlüsseln.
 
-### **What is a dictionary?**
+### **Was ist ein Wörterbuch?**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+Bei einem Wörterbuch handelt es sich um einen Datentyp, der aus einer Sammlung von Schlüssel-Wert-Paaren besteht. Jeder Schlüssel in einer Sammlung ist eindeutig. In einem Wörterbuch gibt es keine Reihenfolge. Im Prinzip "schlagen Sie Dinge nach", indem Sie einen Schlüssel anstelle eines Indexwerts in einer Liste verwenden. _In Dynamo 2.0 können Schlüssel nur Zeichenfolgen sein._
 
-### **What is a list?**
+### **Was ist eine Liste?**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+Bei einer Liste handelt es sich um einen Datentyp, der aus einer Sammlung von sortierten Werten besteht. In Dynamo verwenden Listen Ganzzahlen als Indexwerte.
 
-### **Why was this change made and why should I care?**
+### **Warum wurde diese Änderung vorgenommen und warum ist sie wichtig für mich?**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+Durch die Trennung von Wörterbüchern und Listen werden Wörterbücher zu wichtigen Datentypen, mit denen Sie schnell und einfach Werte speichern und nachschlagen können, ohne die Indexwerte kennen oder eine exakte Listenstruktur durch Ihre Arbeitsabläufe beibehalten zu müssen. Während der Benutzertests sahen wir eine erhebliche Reduzierung der Diagrammgröße, wenn Wörterbücher anstatt mehrerer `GetItemAtIndex`-Blöcke verwendet wurden.
 
-### **What are the changes?**
+### **Welche Änderungen wurden vorgenommen?**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* Es wurden Änderungen an der _Syntax_ vorgenommen. Die Initialisierung und Verwendung von Wörterbüchern und Listen in Codeblöcken funktioniert jetzt anders.
+   * Wörterbücher verwenden die folgende Syntax: `{key:value}`
+   * Listen verwenden die folgende Syntax: `[value,value,value]`
+* Es wurden _neue Blöcke_ in der Bibliothek eingeführt, mit denen Sie einfacher Wörterbücher erstellen, ändern und abfragen können.
+* Listen, die in v1.x-Codeblöcken erstellt wurden, werden automatisch beim Laden des Skripts zur neuen Syntax migriert, die eckige `[ ]` anstelle von geschweiften Klammern `{ }` verwendet. \\
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **Warum ist dies wichtig für mich? Wie würde ich diese Dateitypen verwenden?**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+In der Computerwissenschaft handelt es sich bei Wörterbüchern – wie bei Listen – um Sammlungen von Objekten. Während Listen jedoch in einer bestimmten Reihenfolge erstellt werden, sind die Sammlungen in Wörterbüchern _nicht sortiert_. Es sind keine Nummernsequenzen (Indizes) erforderlich. Stattdessen werden _Schlüssel verwendet._
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+In der folgenden Abbildung sehen Sie eine mögliche Verwendung eines Wörterbuchs. Wörterbücher werden häufig genutzt, um zwei Teile von Daten zu verbinden, die vielleicht keine direkte Beziehung zueinander aufweisen. In unserem Fall verbinden wir die spanische Version eines Worts mit der englischen Version, so dass wir das Wort später nachschlagen können.
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. Erstellt ein Wörterbuch, um die beiden Daten miteinander zu verknüpfen.
+> 2. Ruft den Wert mit dem angegebenen Schlüssel ab.

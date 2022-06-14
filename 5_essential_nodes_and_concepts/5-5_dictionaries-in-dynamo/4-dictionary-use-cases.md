@@ -1,73 +1,73 @@
-# Revit Use-Cases
+# Revit-Anwendungsfälle
 
-Have you ever wanted to look up something in Revit by a piece of data that it has?
+Wollten Sie jemals etwas in Revit anhand eines Datenelements nachschlagen?
 
-Chances are if you have you've done something like the following example.
+Wahrscheinlich haben Sie bereits etwas wie das folgende Beispiel durchgeführt.
 
-In the image below we are collecting all of the rooms in the Revit model, getting the index of the room we want (by room number), and finally grabbing the room at the index.
+In der Abbildung unten sammeln wir alle Räume im Revit-Modell, rufen den Index des gewünschten Raum (nach Raumnummer) ab, und erhalten schließlich die Indexnummer des Raums.
 
 ![](<../images/5-5/4/dictionary - collect room in revit model.jpg>)
 
-> 1. Collect all rooms in the model.
-> 2. Room number to find.
-> 3. Get the room number and find what index it is at.
-> 4. Obtain the room at the index.
+> 1. Alle Räume im Modell sammeln.
+> 2. Zu suchende Raumnummer.
+> 3. Rufen Sie die Raumnummer ab und ermitteln Sie, an welchem Index sie sich befindet.
+> 4. Rufen Sie den Raum am Index ab.
 
-## Exercise : Room Dictionary
+## Übung : Raumwörterbuch
 
-### Part I: Creating Room Dictionary
+### Teil I: Erstellen eines Raumwörterbuchs
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/5-5/4/roomDictionary.dyn" %}
 
-Now let's recreate this idea using dictionaries. First we need to collect all of the rooms in our Revit model.
+Lassen Sie uns das nun mit Wörterbüchern probieren. Zuerst müssen wir alle Räume in das Revit-Modell sammeln.
 
 ![](<../images/5-5/4/dictionary - exercise I - 01.jpg>)
 
-> 1. We choose the Revit category we want to work with, (In this case, we are working with rooms).
-> 2. We tell Dynamo to collect all of those elements
+> 1. Wir wählen wir die Revit-Kategorie, die wir verwendenden möchten (in diesem Fall Räume).
+> 2. Wir weisen Dynamo an, alle diese Elemente zu sammeln.
 
-Next, we need to decide what keys we are going to use to look up this data by. (Information on keys can be found on the section, [What is a dictionary?](9-1\_what-is-a-dictionary.md)).
+Als Nächstes müssen wir entscheiden, welche Schlüssel wir verwenden, um diese Daten zu suchen. (Informationen zu Schlüsseln finden Sie im Abschnitt [Was ist ein Wörterbuch?).](9-1\_what-is-a-dictionary.md)).
 
 ![](<../images/5-5/4/dictionary - exercise I - 02.jpg>)
 
-> 1. The data that we will use is the room number.
+> 1. Die Daten, die wir verenden, ist die Raumnummer.
 
-Now we will create the dictionary with the given keys and elements.
+Jetzt erstellen wir das Wörterbuch mit den angegebenen Schlüsseln und Elementen.
 
 ![](<../images/5-5/4/dictionary - exercise I - 03.jpg>)
 
-> 1. The node, **Dictionary.ByKeysValues** will create a dictionary given the appropriate inputs.
-> 2. `Keys` need to be a string, while `values` can be a variety of object types.
+> 1. Der Block **Dictionary.ByKeysValues** erstellt ein Wörterbuch anhand der entsprechenden Eingaben.
+> 2. Bei `Keys` muss es sich um eine Zeichenfolge handelt, aber `values` können verschiedene Objekttypen sein.
 
-Lastly, we can retrieve a room from the dictionary with its room number now.
+Jetzt können wir einen Raum aus dem Wörterbuch über seine Raumnummer abrufen.
 
 ![](<../images/5-5/4/dictionary - exercise I - 04.jpg>)
 
-> 1. `String` will be the key that we are using to look up an object from the dictionary.
-> 2. **Dictionary.ValueAtKey** will obtain the object from the dictionary now.
+> 1. `String` ist der Schlüssel, den wir verwenden, um ein Objekt im Wörterbuch nachzuschlagen.
+> 2. **Dictionary.ValueAtKey** ruft das Objekt aus dem Wörterbuch ab.
 
-### Part II: Values Look Up
+### Teil II: Abrufen von Werten
 
-Using this same dictionary logic, we can create dictionaries with grouped objects as well. If we wanted to look up all rooms at a given level we can modify the above graph as follows.
+Mit derselben Wörterbuch-Logik können wir auch Wörterbücher mit gruppierten Objekten erstellen. Wenn wir zum Beispiel alle Räume auf einer bestimmten Ebene nachschlagen möchten, können das obige Diagramm folgendermaßen verändern.
 
 ![](<../images/5-5/4/dictionary - exercise II - 01.jpg>)
 
-> 1. Rather than using the room number as the key, we can now use a parameter value, (in this case we will use level).
+> 1. Anstatt die Zimmernummer als Schlüssel zu nutzen, können wir nun einen Parameterwert verwenden (in diesem Fall Ebene).
 
 ![](<../images/5-5/4/dictionary - exercise II - 02.jpg>)
 
-> 1. Now, we can group the rooms by the level that they reside on.
+> 1. Jetzt können wir die Räume mach der Ebene gruppieren, auf der sie sich befinden.
 
 ![](<../images/5-5/4/dictionary - exercise II - 03.jpg>)
 
-> 1. With the elements grouped by the level, we can now use the shared keys (unique keys) as our key for our dictionary, and the lists of rooms as the elements.
+> 1. Wir haben die Elemente nach Ebene gruppiert. Jetzt können wir die gemeinsam verwendeten Schlüssel (eindeutige Schlüssel) als unsere eindeutigen Schlüssel für das Wörterbuch und die Listen der Räume als die Elemente verwenden.
 
 ![](<../images/5-5/4/dictionary - exercise II - 04.jpg>)
 
-> 1. Lastly, using the levels in the Revit model, we can look up which rooms reside on that level in the dictionary. `Dictionary.ValueAtKey` will take the level name and return the room objects at that level.
+> 1. Letztendlich können wird wie Ebenen im Revit-Modell nutzen, um zu ermitteln, welche Räume sich auf dieser Ebene im Wörterbuch befinden. `Dictionary.ValueAtKey` nimmt den Ebenennamen und gibt die Raumobjekte auf dieser Ebene wieder.
 
-The opportunities for Dictionary use are really endless. The ability to relate your BIM data in Revit to the element itself poses a variety of use cases.
+Mit dem Wörterbuch stehen uns praktisch unbeschränkte Möglichkeiten zur Verfügung. Die Möglichkeit, eine Beziehung zwischen Ihren BIM-Daten in Revit und dem eigentlichen Element herzustellen, ermöglicht zahlreiche Anwendungsfälle.

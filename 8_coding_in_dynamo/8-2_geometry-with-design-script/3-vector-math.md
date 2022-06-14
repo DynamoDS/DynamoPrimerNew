@@ -1,8 +1,8 @@
-# Vector Math
+# Vektormathematik
 
-Objects in computational designs are rarely created explicitly in their final position and form, and are most often translated,rotated, and otherwise positioned based off of existing geometry. Vector math serves as a kind-of geometric scaffolding to give direction and orientation to geometry, as well as to conceptualize movements through 3D space without visual representation.
+Objekte in computergestützten Entwürfen werden selten explizit in ihrer endgültigen Position und Form erstellt, meist werden sie verschoben, gedreht und anderweitig anhand von bestehender Geometrie positioniert. Die Vektormathematik dient als eine Art geometrisches Gerüst, um der Geometrie Richtung und Ausrichtung zu verleihen sowie Bewegungen durch den dreidimensionalen Raum ohne visuelle Darstellung zu konzeptuieren.
 
-At its most basic, a vector represents a position in 3D space, and is often times thought of as the endpoint of an arrow from the position (0, 0, 0) to that position. Vectors can be created with the _ByCoordinates_ constructor, taking the x, y, and z position of the newly created Vector object. Note that Vector objects are not geometric objects, and don’t appear in the Dynamo window. However, information about a newly created or modified vector can be printed in the console window:
+In seiner einfachsten Form stellt ein Vektor eine Position im dreidimensionalen Raum dar. Man stellt sich ihn oft als Endpunkt eines Pfeils zwischen der Position (0, 0, 0) und der gegebenen Position vor. Vektoren können unter Verwendung des Konstruktors _ByCoordinates_ erstellt werden, wobei die x-, y- und z-Position des neu erstellten Vektorobjekts angegeben wird. Beachten Sie, dass Vektoren keine geometrischen Objekte sind und nicht im Dynamo-Fenster angezeigt werden. Informationen zu einem neu erstellten oder geänderten Vektor können jedoch im Konsolenfenster gedruckt werden:
 
 ![](<../images/8-2/3/vector math 01.jpg>)
 
@@ -13,11 +13,11 @@ v = Vector.ByCoordinates(1, 2, 3);
 s = v.X + " " + v.Y + " " + v.Z;
 ```
 
-A set of mathematical operations are defined on Vector objects, allowing you to add, subtract, multiply, and otherwise move objects in 3D space as you would move real numbers in 1D space on a number line.
+Für Vektoren ist ein Satz von mathematischen Operationen definiert, sodass Sie Objekte im dreidimensionalen Raum genauso addieren, subtrahieren, multiplizieren und anderweitig verschieben können wie reelle Zahlen im eindimensionalen Raum auf einer Zahlengeraden.
 
-### Vector Addition
+### Vektoraddition
 
-Vector addition is defined as the sum of the components of two vectors, and can be thought of as the resulting vector if the two component vector arrows are placed “tip to tail.” Vector addition is performed with the _Add_ method, and is represented by the diagram on the left.
+Vektoraddition ist definiert als die Summe der Komponenten von zwei Vektoren. Man kann sie sich so vorstellen, dass der resultierende Vektor aus zwei mit der Spitze des einen am Ende des anderen platzierten Vektoren entsteht. Vektoraddition wird mit der Methode _Add_ durchgeführt und wird im Diagramm auf der linken Seite abgebildet.
 
 ![](../images/8-2/3/VectorMath\_02.png)
 
@@ -29,9 +29,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Add(b);
 ```
 
-### Vector Subtraction
+### Vektorsubtraktion
 
-Similarly, two Vector objects can be subtracted from each other with the _Subtract_ method. Vector subtraction can be thought of as the direction from first vector to the second vector.
+Gleichermaßen können zwei Vektorobjekte mit der Methode _Subtract_ voneinander subtrahiert werden. Vektorsubtraktion kann man sich als die Richtung vom ersten zum zweiten Vektor vorstellen.
 
 ![](../images/8-2/3/VectorMath\_03.png)
 
@@ -43,9 +43,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Subtract(b);
 ```
 
-### Vector Multiplication
+### Vektormultiplikation
 
-Vector multiplication can be thought of as moving the endpoint of a vector in its own direction by a given scale factor.
+Vektormultiplikation kann man sich so vorstellen, dass der Endpunkt eines Vektors in seiner eigenen Richtung um einen angegebenen Skalierungsfaktor verschoben wird.
 
 ![](../images/8-2/3/VectorMath\_04.png)
 
@@ -56,9 +56,9 @@ a = Vector.ByCoordinates(4, 4, 0);
 c = a.Scale(5);
 ```
 
-### Normalize Vector Length
+### Vektorlänge normalisieren
 
-Often it’s desired when scaling a vector to have the resulting vector’s length exactly equal to the scaled amount. This is easily achieved by first normalizing a vector, in other words setting the vector’s length exactly equal to one.
+Häufig ist beim Skalieren eines Vektors erwünscht, dass die Länge des resultierenden Vektors genau gleich dem skalierten Betrag ist. Dies wird einfach erreicht, indem zuerst ein Vektor normalisiert wird, also die Länge des Vektors auf genau eins festgelegt wird.
 
 ![](<../images/8-2/3/vector math 05.jpg>)
 
@@ -74,11 +74,11 @@ c = b.Scale(5);
 len = c.Length;
 ```
 
-c still points in the same direction as a (1, 2, 3), though now it has length exactly equal to 5.
+c weist weiterhin in dieselbe Richtung wie (1, 2, 3), hat jetzt jedoch eine Länge genau gleich 5.
 
-### Cross Product
+### Kreuzprodukt
 
-Two additional methods exist in vector math which don’t have clear parallels with 1D math, the cross product and dot product. The cross product is a means of generating a Vector which is orthogonal (at 90 degrees to) to two existing Vectors. For example, the cross product of the x and y axes is the z axis, though the two input Vectors don’t need to be orthogonal to each other. A cross product vector is calculated with the _Cross_ method.
+In der Vektormathematik gibt es zwei weitere Methoden, die keine eindeutigen Parallelen zur eindimensionalen Mathematik aufweisen, das Kreuzprodukt und das Skalarprodukt. Das Kreuzprodukt ist eine Methode zum Erstellen eines Vektors, der sich im rechten Winkel (90 Grad) zu zwei vorhandenen Vektoren befindet. Beispielsweise ist das Kreuzprodukt der x- und y-Achsen die Z-Achse, auch wenn die beiden Eingabevektoren nicht orthogonal zueinander sein müssen. Ein Kreuzproduktvektor wird mit der Methode _Cross_ berechnet.
 
 ![](../images/8-2/3/VectorMath\_06.png)
 
@@ -90,9 +90,9 @@ b = Vector.ByCoordinates(0, 1, 1);
 c = a.Cross(b);
 ```
 
-### Dot Product
+### Punktprodukt
 
-An additional, though somewhat more advanced function of vector math is the dot product. The dot product between two vectors is a real number (not a Vector object) that relates to, but is not exactly, the angle between two vectors. One useful properties of the dot product is that the dot product between two vectors will be 0 if and only if they are perpendicular. The dot product is calculated with the _Dot_ method.
+Eine weitere, wenn auch fortgeschrittenere Funktion der Vektormathematik ist das Skalarprodukt. Das Skalarprodukt zwischen zwei Vektoren ist eine reelle Zahl (kein Vektorobjekt), die mit dem Winkel zwischen zwei Vektoren zusammenhängt, jedoch nicht exakt diesem Winkel entspricht. Ein hilfreiche Eigenschaft des Skalarprodukts besteht darin, dass das Skalarprodukt zweier Vektoren nur genau dann 0 ist, wenn sie lotrecht zueinander stehen. Das Skalarprodukt wird mit der Methode _Dot_ berechnet.
 
 ![](<../images/8-2/3/vector math 07.jpg>)
 

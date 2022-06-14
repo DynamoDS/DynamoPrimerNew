@@ -1,10 +1,10 @@
-# Translation, Rotation, and Other Transformations
+# Verschiebung, Drehung und andere Transformationen
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+Bestimmte geometrische Objekte können erstellt werden, indem Sie die x-, y- und z-Koordinaten im dreidimensionalen Raum explizit angeben. Häufiger wird die Geometrie jedoch mithilfe von geometrischen Transformationen auf das Objekt selbst oder auf das zugrunde liegende Koordinatensystem in ihre endgültige Position verschoben.
 
 ### Translation
 
-The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
+Die einfachste geometrische Transformation ist eine Verschiebung, bei der ein Objekt um eine bestimmte Anzahl von Einheiten in x-, y- und z-Richtung verschoben wird.
 
 ![](../images/8-2/5/Transformations\_01.png)
 
@@ -18,9 +18,9 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### Rotation
+### Drehen
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+Zwar können alle Objekte in Dynamo durch Anhängen der Methode _.Translate_ ans Ende des Objektnamens verschoben werden, jedoch erfordern komplexere Transformationen, dass das Objekt von einem zugrunde liegenden Koordinatensystem in ein neues Koordinatensystem überführt wird. Um beispielsweise ein Objekt um 45 Grad um die x-Achse zu drehen, können wir das Objekt aus seinem bisherigen Koordinatensystem ohne Drehung in ein Koordinatensystem überführen, das mit der Methode _.Transform_ um 45 Grad um die x-Achse gedreht wurde:
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Scale
+### Skalieren
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+Zusätzlich zu den Möglichkeiten, Koordinatensysteme zu verschieben und zu drehen, können sie auch skaliert oder geschert erstellt werden. Ein Koordinatensystem kann mit der Methode _.Scale_ skaliert werden:
 
 ![](../images/8-2/5/Transformations\_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+Gescherte Koordinatensysteme werden erstellt, indem nicht-orthogonale Vektoren in den Konstruktor CoordinateSystem eingegeben werden.
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+Skalieren und Scheren sind erheblich komplexere geometrische Transformationen als Drehen und Verschieben, daher können sie nicht auf alle Dynamo-Objekte angewendet werden. Die folgende Tabelle gibt Aufschluss darüber, welche Dynamo-Objekte ungleichmäßig skalierte sowie gescherte Koordinatensysteme aufweisen können.
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| Klasse | Ungleichmäßig skaliertes Koordinatensystem | Geschertes Koordinatensystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | No                                    | No                       |
-| NurbsCurve   | Yes                                   | Yes                      |
-| NurbsSurface | No                                    | No                       |
-| Circle       | No                                    | No                       |
-| Line         | Yes                                   | Yes                      |
-| Plane        | No                                    | No                       |
-| Point        | Yes                                   | Yes                      |
-| Polygon      | No                                    | No                       |
-| Solid        | No                                    | No                       |
-| Surface      | No                                    | No                       |
-| Text         | No                                    | No                       |
+| Bogen | Nein | No |
+| NurbsCurve | Ja | Ja |
+| NurbsSurface | Nein | No |
+| Kreis | Nein | No |
+| Linie | Ja | Ja |
+| Ebene | Nein | No |
+| Punkt | Ja | Ja |
+| Polygon | Nein | No |
+| Volumenkörper | Nein | No |
+| Oberfläche | Nein | No |
+| Text | Nein | No |

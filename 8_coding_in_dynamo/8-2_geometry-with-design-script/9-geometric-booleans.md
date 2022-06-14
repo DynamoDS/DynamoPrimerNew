@@ -1,10 +1,10 @@
-# Geometric Booleans
+# Geometrische boolesche Operationen
 
-_Intersect_, _Trim_, and _SelectTrim_ are primarily used on lower-dimensional geometry such as Points, Curves, and Surfaces. Solid geometry on the other hand, has an additional set of methods for modifying form after their construction, both by subtracting material in a manner similar to _Trim_ and combining elements together to form a larger whole.
+_Intersect_, _Trim_ und _SelectTrim_ werden hauptsächlich für niedrigerdimensionale Geometrien wie Punkte, Kurven und Oberflächen genutzt. Volumenkörper-Geometrie verfügt über einen zusätzlichen Satz von Methoden zum Ändern der Form nach ihrer Erstellung, sowohl durch Subtraktion von Material, ähnlich wie _Trim_, als auch durch Kombination von Elementen zu einem größeren Ganzen.
 
-### Union
+### Union (Vereinigung)
 
-The _Union_ method takes two solid objects and creates a single solid object out of the space covered by both objects. The overlapping space between objects is combined into the final form. This example combines a Sphere and a Cuboid into a single solid Sphere-Cube shape:
+Die Methode _Union_ nimmt zwei Volumenkörper-Objekte und erstellt ein einzelnes Volumenkörper-Objekt aus dem Raum, der von beiden Objekten abgedeckt wird. Der Überlappungsbereich zwischen den einzelnen Objekten wird zur endgültigen Form kombiniert. In diesem Beispiel werden eine Kugel und ein Quader in einer einzigen Volumenkörper-Kugel-Quader-Form kombiniert:
 
 ![](../images/8-2/9/GeometricBooleans\_01.png)
 
@@ -19,9 +19,9 @@ s2 = Sphere.ByCenterPointRadius(
 combined = s1.Union(s2);
 ```
 
-### Difference
+### Unterschied
 
-The _Difference_ method, like _Trim_, subtracts away the contents of the input tool solid from the base solid. In this example we carve out a small indentation out of a sphere:
+Die Methode _Difference_ subtrahiert ähnlich wie _Trim_ die Inhalte des eingegebenen Werkzeug-Volumenkörpers vom Basis-Volumenkörper. In diesem Beispiel kerben wir eine Kugel leicht ein:
 
 ![](../images/8-2/9/GeometricBooleans\_02.png)
 
@@ -36,9 +36,9 @@ tool = Sphere.ByCenterPointRadius(
 result = s.Difference(tool);
 ```
 
-### Intersect
+### Schneiden
 
-The _Intersect_ method returns the overlapping Solid between two solid Inputs. In the following example, _Difference_ has been changed to _Intersect_, and the resulting Solid is the missing void initially carved out:
+Die Methode _Intersect_ gibt den überlappenden Volumenkörper zwischen zwei Eingabe-Volumenkörpern zurück. Im folgenden Beispiel wurde _Difference_ zu _Intersect_ geändert, und der resultierende Volumenkörper entspricht dem ursprünglich eingekerbten Leerraum:
 
 ![](../images/8-2/9/GeometricBooleans\_03.png)
 

@@ -1,62 +1,62 @@
-# Geometry Overview
+# Geometrie – Überblick
 
-## Geometry in Dynamo Sandbox
+## Geometrie in Dynamo Sandbox
 
-**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
+**Geometrie** ist die Sprache der Konstruktion. Wenn eine Programmiersprache oder Programmierungsumgebung in seinem Kern einen geometrischen Kernel aufweist, können Sie die Möglichkeiten für das Konstruktion präziser und robuster Modelle, die Automatisierung von Konstruktionsroutinen und die Generierung von Konstruktionsiterationen mit Algorithmen erschließen.
 
-Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
+Durch das Verstehen der Geometrietypen und der [Beziehungen, die sie zueinander aufweisen](1-geometry-overview.md#stepping-through-the-hierarchy), können Sie leichter durch die Sammlung der **Geometry-Blöcke** navigieren, die in der Bibliothek für Sie verfügbar sind. Die Geometrieknoten sind in alphabetischer Reihenfolge im Gegensatz zu hierarchischen angeordnet. Sie werden hier also ähnlich wie in ihrem Layout in der Dynamo Benutzeroberfläche angezeigt.
 
 ![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
 
-Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
+Darüber hinaus sollte das Erstellen von Modellen in Dynamo und das Verbindung der Vorschau in der Hintergrundvorschau mit dem Datenstrom in unserem Diagramm im Laufe der Zeit intuitiver werden.
 
 ![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
 
-> 1. Note the assumed coordinate system rendered by the grid and colored axes
-> 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
+> 1. Beachten Sie das angenommene Koordinatensystem, das durch das Raster und die farbigen Achsen dargestellt wird.
+> 2. Die ausgewählten Knoten rendern die entsprechende Geometrie (wenn der Knoten Geometrie erstellt) im Hintergrund in der Hervorhebungsfarbe.
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-## The Concept of Geometry
+## Das Konzept der Geometrie
 
-Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.
+Die Geometrie ist nach traditioneller Definition die Studie der Form, Größe, relativen Position von Zahlen und der Eigenschaften im Raum. Dieser Bereich weist eine reiche Geschichte auf, die Tausende von Jahren zurückreicht. Mit dem Aufkommen und der Verbreitung des Computers verfügen Sie über ein leistungsstarkes Werkzeug für die Definition, Erforschung und Generierung von Geometrie. Es ist heute ein Leichtes, das Ergebnis komplexer geometrischer Interaktionen zu berechnen. Die Tatsache, dass dies getan wird, ist fast transparent.
 
 ![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
 
-> If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.
+> Wenn Sie neugierig sind und mithilfe Ihres Computers herausfinden wollen, wie vielfältig und komplex Geometrie sein kann, führen Sie eine schnelle Internetsuche nach dem Stanford Bunny durch – einem kanonischen Modell zum Testen von Algorithmen.
 
-Understanding geometry in the context of algorithms, computing, and complexity, may sound daunting; however, there are a few key, and relatively simple, principles that we can establish as fundamentals to start building towards more advanced applications:
+Das Verstehen von Geometrie im Kontext von Algorithmen, Berechnungen und Komplexität kann wie eine gewaltige Aufgabe erscheinen, es gibt jedoch einige wichtige und relativ einfachen Prinzipien, die als Grundlagen für weitergehende Anwendungen etabliert werden können:
 
-1. Geometry is **Data** - to the computer and Dynamo, a Bunny not all that different from a number.
-2. Geometry relies on **Abstraction** - fundamentally, geometric elements are described by numbers, relationships, and formulas within a given spatial coordinate system
-3. Geometry has a **Hierarchy** - points come together to make lines, lines come together to make surfaces, and so on
-4. Geometry simultaneously describes both **the Part and the Whole** - when we have a curve, it is both the shape as well as all the possible points along it
+1. Geometrie sind **Daten**: Für den Computer und Dynamo unterscheidet sich ein Bunny nicht wesentlich von einer Zahl.
+2. Geometrie basiert auf **Abstraktion** – grundsätzlich werden geometrische Elemente durch Zahlen, Beziehungen und Formeln innerhalb eines bestimmten räumlichen Koordinatensystems beschrieben.
+3. Geometrie verfügt über eine **Hierarchie** – Punkte werden verbunden, um Linien zu bilden, Linien werden verbunden, um Flächen zu bilden, usw.
+4. Geometrie beschreibt gleichzeitig sowohl **das Bauteil als auch das Ganze** – bei einer Kurve handelt es sich sowohl um die Form als auch um alle möglichen Punkte entlang der Kurve
 
-In practice, these principles mean that we need to be aware of what we are working with (what type of geometry, how was it created, etc.) so that we can fluidly compose, decompose, and recompose different geometries as we develop more complex models.
+In der Praxis bedeutet dies, dass uns bewusst sein muss, womit wir arbeiten (welche Art von Geometrie, wie sie erzeugt wurde usw.), damit wir fließend unterschiedliche Geometrien zusammenstellen, zerlegen und neu zusammensetzen können, um komplexere Modelle zu entwickeln.
 
-## Stepping through the Hierarchy
+## Durchlaufen der Hierarchie
 
-Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
+Nehmen Sie sich etwas Zeit, um die Beziehung zwischen der abstrakten und hierarchischen Beschreibung von Geometrie näher zu betrachten. Da diese beiden Konzepte miteinander verbunden, aber nicht immer auf den ersten Blick ersichtlich sind, können Sie schnell in eine konzeptuelle Sackgasse gelangen, sobald Sie damit beginnen, tiefergehende Arbeitsabläufe oder Modelle zu entwickeln. Verwenden Sie zunächst Dimensionalität als eine einfache Beschreibung des "Zeugs", das Sie modellieren. Die Anzahl der Bemaßungen, die erforderlich sind, um eine Form zu beschreiben, verdeutlich, wie Geometrie hierarchisch aufgebaut ist.
 
-![Computational Geometry](../images/5-2/1/GeometryDimensionality.jpg)
+![Rechnerische Geometrie](../images/5-2/1/GeometryDimensionality.jpg)
 
-> 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
-> 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
-> 3. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
-> 4. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
+> 1. Ein **Punkt** (definiert durch Koordinaten) verfügt über keine Bemaßungen, sondern weist nur Zahlen auf, die die einzelnen Koordinaten beschreiben.
+> 2. Eine **Linie** (definiert durch zwei Punkte) verfügt jetzt über _eine_ Bemaßung – Sie können sich vorwärts (in positiver Richtung) oder rückwärts (in negativer Richtung) entlang der Linie bewegen.
+> 3. Eine **Ebene** (definiert durch zwei Linien) verfügt über _zwei_ Bemaßungen – Sie können sich jetzt weiter nach links oder nach rechts bewegen.
+> 4. Ein **Quader** (definiert durch zwei Ebenen) verfügt über _drei_ Bemaßungen – Sie können eine Position relativ zu oben oder unten definieren.
 
-Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
+Dimensionalität stellt eine praktische Möglichkeit zum Kategorisieren von Geometrie dar, jedoch nicht unbedingt die beste. Schließlich verwenden wir zum Modellieren nicht nur Punkte, Linien, Ebenen und Quader, sondern auch mal etwas Gekrümmtes? Darüber hinaus gibt es eine vollkommen andere Kategorie der geometrischen Typen, die vollständig abstrakt sind, d. h. die Eigenschaften wie Ausrichtung, Volumen und Beziehungen zwischen Bauteilen definieren. Ein Vektor ist nicht wirklich greifbar. Wie kann er also relativ zu dem definiert werden, was im Raum angezeigt wird? Eine detailliertere Kategorisierung der geometrischen Hierarchie sollte den Unterschied zwischen abstrakten Typen und "Helfern" berücksichtigen, die jeweils danach gruppiert werden können, welche Schritte sie unterstützen, und nach den Typen, die die Beschreibung der Form von Modellelementen unterstützen.
 
-![Geometry Hierarchy](../images/5-2/1/GeometryHierarchy.jpg)
+![Geometriehierarchie](../images/5-2/1/GeometryHierarchy.jpg)
 
-## Going Further with Geometry
+## Weitere Informationen zu Geometrie
 
-Creating models in Dynamo is not limited to what we can generate with Nodes. Here are some key ways to take your process to the next level with Geometry:
+Das Erstellen von Modellen in Dynamo ist nicht darauf beschränkt, was mit Knoten generiert werden kann. Im Folgenden sind einige wichtige Möglichkeiten aufgeführt, wie Sie Ihren Prozess mit Geometrie auf die nächste Stufe stellen können:
 
-1. Dynamo allows you to import files - try using a CSV for point clouds or SAT for bringing in surfaces
-2. When working with Revit, we can reference Revit elements to use in Dynamo
-3. The Dynamo Package Manager offers additional functionality for extended geometry types and operations - check out the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package
+1. Dynamo ermöglicht das Importieren von Dateien. Versuchen Sie, CSV-Dateien für Punktewolken zu verwenden, oder SAT-Dateien für das Einbeziehen von Flächen.
+2. Bei Verwendung von Revit können Revit-Elemente für die Verwendung in Dynamo referenziert werden.
+3. Der Dynamo Package Manager bietet zusätzliche Funktionen für erweiterte Geometrietypen und Vorgänge. Sehen Sie sich doch das [Mesh Toolkit]((https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit))-Paket mal an.

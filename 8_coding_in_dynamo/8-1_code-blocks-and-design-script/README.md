@@ -1,6 +1,6 @@
-# Code Blocks and DesignScript
+# Codeblöcke und DesignScript
 
-The code block is a unique feature in Dynamo that dynamically links a visual programming environment with a text-based one. The code-block has access to all of the Dynamo nodes and can define an entire graph in one node. Read this chapter closely, as the code block is a fundamental building block of Dynamo.
+Codeblöcke sind eine spezielle Funktion in Dynamo, die eine dynamische Verbindung zwischen visueller und textbasierter Programmierumgebung darstellt. In einem Codeblock haben Sie Zugriff auf sämtliche Dynamo-Blöcke und können ein komplettes Diagramm in einem einzigen Block definieren. Lesen Sie die Informationen in diesem Kapitel sorgfältig, da Codeblöcke zu den wichtigsten Komponenten von Dynamo gehören.
 
 ![](<../images/8-1/Code Blocks-01.jpg>)
 

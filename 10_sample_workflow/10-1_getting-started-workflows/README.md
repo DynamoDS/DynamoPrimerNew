@@ -1,5 +1,5 @@
-# Getting Started Workflows
+# Erste Schritte - Arbeitsabläufe
 
-This section has simple workflows to get you started using Dynamo.&#x20;
+Dieser Abschnitt enthält einfache Arbeitsabläufe, mit denen Sie Dynamo am Anfang verwenden können.&#x20;
 
 ![](../images/10-1/sampleWorkflows.gif)

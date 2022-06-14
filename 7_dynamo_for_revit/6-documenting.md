@@ -1,125 +1,125 @@
-# Documenting
+# Dokumentation
 
-Editing parameters for documentation follows suit with the lessons learned in prior sections. In this section, we'll look at editing parameters which don't affect the geometric properties of an element, but instead prepare a Revit file for documentation.
+Die Bearbeitung von Parametern für die Dokumentation schließt sich an die in den vorigen Abschnitten behandelten Aufgaben an. In diesem Abschnitt bearbeiten Sie Parameter, mit deren Hilfe Sie nicht die geometrischen Eigenschaften von Elementen steuern, sondern eine Revit-Datei für die Konstruktionsunterlagen erstellen können.
 
-### Deviation
+### Abweichung
 
-In the exercise below, we'll use a basic deviation from plane node to create a Revit sheet for documentation. Each panel on our parametrically defined roof structure has a different value for deviation, and we want to call out the range of values using color and by scheduling out the adaptive points to hand off to a facade consultant, engineer, or contractor.
+In der folgenden Übung verwenden Sie einen einfachen Block für die Abweichung von der Ebene, um einen Revit-Plan für die Dokumentation zu erstellen. Die einzelnen Elemente der parametrisch definierten Dachkonstruktion weisen unterschiedliche Abweichungswerte auf. Die Werte innerhalb dieses Bereichs sollen mithilfe von Farben gekennzeichnet und die adaptiven Punkte in einer Bauteilliste ausgegeben werden, sodass die Daten an einen Fassadenspezialisten, Bauingenieur oder Subunternehmer weitergegeben werden können.
 
 ![deviation](./images/6/deviation.jpg)
 
-> The deviation from plane node will calculate the distance that the set of four points varies from the best-fit plane between them. This is a quick and easy way to study constructability.
+> Der Block für die Abweichung von der Ebene berechnet, in welchem Grad die Gruppe aus vier Punkten von der optimalen Ebene zwischen ihnen abweicht. Dies ist eine schnelle und einfache Möglichkeit zur Untersuchung der Realisierbarkeit.
 
-## Exercise
+## Übungslektion
 
-### Part I: Setting Panels Aperture Ratio Based on Deviation From Plane Node
+### Teil I: Einstellen des Blendenverhältnisses der Platten basierend auf der Abweichung vom Ebenenblöcken
 
-> Download the example file by clicking on the link below.
+> Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
-> A full list of example files can be found in the Appendix.
+> Eine vollständige Liste der Beispieldateien finden Sie im Anhang.
 
 {% file src="./datasets/6/Revit-Documenting.zip" %}
 
-Start with the Revit file for this section (or continue from the previous section). This file has an array of ETFE panels on the roof. We'll reference these panels for this exercise.
+Beginnen Sie mit der Revit-Datei für diesen Abschnitt (oder verwenden Sie weiterhin die Datei aus dem vorigen Abschnitt). Diese Datei zeigt eine Gruppe von EFTE-Elementen auf dem Dach. Diese Elemente werden in dieser Übung referenziert.
 
 ![](<./images/6/documenting - exercise I - 01.jpg>)
 
-> 1. Add a _Family Types_ node to the canvas and choose _"ROOF-PANEL-4PT"_.
-> 2. Plug this node into a Select _All Elements of Family Type_ node to get all of the elements from Revit into Dynamo.
+> 1. Fügen Sie einen _Family Types_-Block in den Ansichtsbereich ein und wählen Sie _"ROOF-PANEL-4PT"_.
+> 2. Verbinden Sie diesen Block mit einem _All Elements of Family Type_-Block, um alle diese Elemente auszuwählen und aus Revit in Dynamo zu übernehmen.
 
 ![](<./images/6/documenting - exercise I - 02.jpg>)
 
-> 1. Query the location of adaptive points for each element with the _AdaptiveComponent.Locations_ node.
-> 2. Create a polygon from these four points with the _Polygon.ByPoints_ node. Notice we now have an abstract version of the paneled system in Dynamo without having to import the full geometry of the Revit element.
-> 3. Calculate planar deviation with the _Polygon.PlaneDeviation_ node.
+> 1. Rufen Sie die Positionen der adaptiven Punkte für die einzelnen Elemente mithilfe eines _AdaptiveComponent.Locations_-Blocks ab.
+> 2. Erstellen Sie mithilfe eines _Polygon.ByPoints_-Blocks Polygone jeweils aus den vier Eckpunkten. Dadurch erhalten Sie eine abstrakte Version des aus Einzelelementen bestehenden Systems in Dynamo, ohne dass die vollständige Geometrie des Revit-Elements importiert werden muss.
+> 3. Berechnen Sie die planare Abweichung mithilfe des _Polygon.PlaneDeviation_-Blocks.
 
-Just for kicks, like the previous exercise, let's set the aperture ratio of each panel based on its planar deviation.
+In der folgenden kurzen Zusatzübung legen Sie den Öffnungsgrad der einzelnen Elemente anhand ihrer planaren Abweichung fest.
 
 ![](<./images/6/documenting - exercise I - 03.jpg>)
 
-> 1. Add an _Element.SetParameterByName_ node to the canvas and connect the adaptive components to the _element_ input. Connect a _Code Block_ reading _"Aperture Ratio"_ into the _parameterName_ input.
-> 2. We cannot directly connect the deviation results into the value input because we need to remap the values to the parameter range.
+> 1. Fügen Sie im Ansichtsbereich einen _Element.SetParameterByName_-Block hinzu und verbinden Sie die adaptiven Bauteile mit der _element_-Eingabe. Verbinden Sie einen _Code Block_ mit der Angabe _"Aperture Ratio"_ mit der _parameterName_-Eingabe.
+> 2. Die Ergebnisse der Abweichungsberechnung können nicht direkt mit der value-Eingabe verbunden werden, da die Werte zunächst dem Parameterbereich neu zugeordnet werden müssen.
 
 ![](<./images/6/documenting - exercise I - 04.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the deviation values to a domain between 0.15 and 0\_.\_45 by entering `0.15; 0.45;` into the _Code Block_.
-> 2. Plug these results into the value input for _Element.SetParameterByName_.
+> 1. Ordnen Sie mithilfe von _Math.RemapRange_ die Abweichungswerte einer Domäne zwischen 0.15 und 0\_ zu.\_45, indem Sie `0.15; 0.45;` in den _Code Block_ eingeben.
+> 2. Verbinden Sie diese Ergebnisse mit der value-Eingabe von _Element.SetParameterByName_.
 
-Back in Revit we can _kind of_ make sense of the change in aperture across the surface.
+In Revit ist die Veränderung der Öffnungen in der Oberfläche _ungefähr_ zu erkennen.
 
 ![Exercise](./images/6/13.jpg)
 
-Zooming in, it becomes more clear that the closed panels are weighted towards the corners of the surface. The open corners are towards the top. The corners represent areas of larger deviation while bulge has minimal curvature, so this makes sense.
+Die vergrößerte Darstellung zeigt deutlicher, dass die weniger weit geöffneten Elemente sich näher an den Ecken befinden. Die weit geöffneten Elemente befinden sich hingegen ganz oben. Die Eckbereiche weisen stärkere Abweichungen, der Scheitel der Wölbung dagegen die geringste Krümmung auf. Das Ergebnis ist daher überzeugend.
 
-![Exercise](./images/6/13a.jpg)
+![Übung](./images/6/13a.jpg)
 
-### Part II: Color and Documentation
+### Teil II: Farbe und Dokumentation
 
-Setting the Aperture Ratio doesn't clearly demonstrate the deviation of panels on the roof, and we're also changing the geometry of the actual element. Suppose we just want to study the deviation from the standpoint of fabrication feasibility. It would be helpful to color the panels based on deviation range for our documentation. We can do that with the series of steps below, and in a very similar process to the steps above.
+Durch Festlegen des Öffnungsgrads wird die Abweichung der Elemente des Dachs nicht präzise dargestellt. Zudem kommt es zu Änderungen an der Geometrie des Elements selbst. Angenommen, Sie möchten lediglich die Abweichung unter dem Gesichtspunkt der Realisierbarkeit analysieren. In diesem Fall wäre es hilfreich, für die Dokumentation die Elemente in Abhängigkeit von Abweichungsbereichen farbig zu kennzeichnen. Dies ist mithilfe der folgenden Schritte möglich, wobei der Vorgang dem oben beschriebenen sehr ähnlich ist.
 
 ![](<./images/6/documenting - exercise II - 01.jpg>)
 
-> 1. Remove the _Element.SetParameterByName_ and its input nodes and add _Element.OverrideColorInView_.
-> 2. Add a _Color Range_ node to the canvas and plug into the color input of _Element.OverrideColorInView_. We still have to connect the deviation values to the color range in order to create the gradient.
-> 3. Hovering over the _value_ input, we can see that the values for the input must be between _0_ and _1_ in order to map a color to each value. We need to remap the deviation values to this range.
+> 1. Entfernen Sie _Element.SetParameterByName_ und die zugehörigen Eingabeblöcke, und fügen Sie _Element.OverrideColorInView_ hinzu.
+> 2. Fügen Sie im Ansichtsbereich einen _Color Range_-Block hinzu und verbinden Sie ihn mit der color-Eingabe von _Element.OverrideColorInView_. Um den Farbverlauf zu erstellen, müssen Sie noch die Abweichungswerte mit dem Farbbereich verbinden.
+> 3. Wenn Sie den Mauszeiger auf die _value_-Eingabe setzen, wird angezeigt, dass Werte zwischen _0_ und _1_ für die Zuordnung von Farben zu Werten erforderlich sind. Sie müssen daher die Abweichungswerte für diesen Bereich neu zuordnen.
 
 ![](<./images/6/documenting - exercise II - 02.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the planar deviation values to a range between\* 0\* and _1_ (note: you can use the _"MapTo"_ node to define a source domain as well).
-> 2. Plug the results into a _Color Range_ node.
-> 3. Notice our output is a range of colors instead of a range of numbers.
-> 4. If you're set to Manual, hit _Run_. You should be able to get away with being set to Automatic from this point forward.
+> 1. Ordnen Sie mithilfe von _Math.RemapRange_ die Werte für die planare Abweichung dem Bereich zwischen\* 0\* und _1_ zu. (Anmerkung: Sie können die Quelldomäne auch mithilfe eines _MapTo_-Blocks definieren.)
+> 2. Verbinden Sie die Ergebnisse mit einem _Color Range_-Block.
+> 3. Dadurch erhalten Sie als Ausgabe einen Bereich von Farben anstelle eines Bereichs von Zahlen.
+> 4. Falls Manuell eingestellt ist, klicken Sie auf _Ausführen_. Für den Rest dieses Vorgangs können Sie die Einstellung Automatisch verwenden.
 
-Back in Revit, we see a much more legible gradient which is representative of planar deviation based on our color range. But what if we want to customize the colors? Notice that the minimum deviation values are represented in red, which seems to be the opposite of what we'd expect. We want to have maximum deviation to be red, with minimum deviation represented by a calmer color. Let's go back to Dynamo and fix this.
+In Revit ist jetzt eine wesentlich übersichtlichere Darstellung mit einem Farbverlauf zu sehen, der die planare Abweichung unter Verwendung des Farbbereichs zeigt. Die Farben müssen jedoch möglicherweise angepasst werden. Momentan werden die Werte für die kleinste Abweichung in Rot angezeigt: Dies scheint das Gegenteil des erwarteten Resultats zu sein. Stattdessen soll der Höchstwert der Abweichung in Rot dargestellt werden, während für die kleinste Abweichung eine ruhigere Farbe verwendet wird. Kehren Sie zu Dynamo zurück, um dies zu korrigieren.
 
 ![](./images/6/09.jpg)
 
 ![](<./images/6/documenting - exercise II - 04.jpg>)
 
-> 1. Using a _code block_, add two numbers on two different lines: `0;` and `255;`.
-> 2. Create a red and blue color by plugging the appropriate values into two _Color.ByARGB_ nodes.
-> 3. Create a list from these two colors.
-> 4. Plug this list into the _colors_ input of the _Color Range_, and watch the custom color range update.
+> 1. Geben Sie in einem _Code Block_ zwei Zahlen in zwei getrennten Zeilen ein: `0;` und `255;`.
+> 2. Erstellen Sie die Farben Rot und Blau, indem Sie die entsprechenden Werte mit zwei _Color.ByARGB_-Blöcken verbinden.
+> 3. Erstellen Sie eine Liste aus diesen beiden Farben.
+> 4. Verbinden Sie diese Liste mit der _colors_-Eingabe des _Color Range_ und beobachten Sie die Aktualisierung dieses benutzerdefinierten Farbbereichs.
 
-Back in Revit, we can now make better sense of areas of maximum deviation in the corners. Remember, this node is for overriding a color in a view, so it can be really helpful if we had a particular sheet in the set of drawings which focuses on a particular type of analysis.
+In Revit ist die Darstellung der Bereiche mit maximaler Abweichung in den Ecken jetzt besser verständlich. Mithilfe dieses Blocks werden Farben in einer Ansicht überschrieben. Aus diesem Grund kann es sehr hilfreich sein, wenn unter den Zeichnungen ein bestimmter Plan für einen bestimmten Analysetyp vorhanden ist.
 
 ![Exercise](<./images/6/07 (6).jpg>)
 
-### Part III: Scheduling
+### Teil III: Bauteillisten
 
-Selecting one ETFE panel in Revit, we see that there are four instance parameters, XYZ1, XYZ2, XYZ3, and XYZ4. These are all blank after they're created. These are text-based parameters and need values. We'll use Dynamo to write the adaptive point locations to each parameter. This helps interoperability if the geometry needs to be sent to an engineer of facade consultant.
+Wenn Sie eines der ETFE-Elemente in Revit auswählen, werden vier Exemplarparameter angezeigt: XYZ1, XYZ2, XYZ3 und XYZ4. Diese sind nach der Erstellung leer. Diese Parameter sind textbasiert und benötigen Werte. Sie schreiben mithilfe von Dynamo die Positionen der adaptiven Punkte in die einzelnen Parameter. Dies verbessert die Interoperabilität, falls die Geometrie an einen Bauingenieur oder Fassadenspezialisten weitergegeben werden soll.
 
 ![](<./images/6/documenting - exercise III - 01.jpg>)
 
-In a sample sheet, we have a large, empty schedule. The XYZ parameters are shared parameters in the Revit file, which allows us to add them to the schedule.
+Der Beispielplan zeigt eine große, leere Bauteilliste. Die XYZ-Parameter sind gemeinsam genutzte Parameter in der Revit-Datei und können daher in die Bauteilliste aufgenommen werden.
 
 ![Exercise](<./images/6/03 (8).jpg>)
 
-Zooming in, the XYZ parameters are yet to be filled in. The first two parameters are taken care of by Revit.
+Die vergrößerte Darstellung zeigt, dass die XYZ-Parameter noch ausgefüllt werden müssen. Die ersten beiden Parameter werden von Revit vorgegeben.
 
 ![Exercise](<./images/6/02 (9).jpg>)
 
-To write in these values, we'll do a complex list operation. The graph itself is simple, but the concepts build heavily from the list mapping as discussed in the list chapter.
+Um diese Werte zu schreiben, ist eine komplexe Listenoperation erforderlich. Das Diagramm selbst ist recht einfach, nutzt jedoch in großem Umfang die Listenzuordnung wie im Kapitel zu Listen beschrieben.
 
 ![](<./images/6/documenting - exercise III - 04.jpg>)
 
-> 1. Select all the adaptive components with two nodes.
-> 2. Extract the location of each point with _AdaptiveComponent.Locations_.
-> 3. Convert these points to strings. Remember, the parameter is text-based so we need to input the correct data type.
-> 4. Create a list of the four strings which define the parameters to change: _XYZ1, XYZ2, XYZ3,_ and _XYZ4_.
-> 5. Plug this list into the _parameterName_ input of _Element.SetParameterByName_.
-> 6. Connect _Element.SetParameterByName_ into the the _combinator_ input of _List.Combine._ Connect the _adaptive components_ into _list1_. Connect _String_ from Object into _list2_.
+> 1. Wählen Sie mithilfe der oben gezeigten Blöcke alle adaptiven Bauteile aus.
+> 2. Extrahieren Sie die Positionen der einzelnen Punkte mithilfe von _AdaptiveComponent.Locations_.
+> 3. Konvertieren Sie diese Punkte in Zeichenfolgen. Beachten Sie, dass Sie hier textbasierte Parameter verwenden, und achten Sie darauf, den richtigen Datentyp einzugeben.
+> 4. Erstellen Sie eine Liste mit den vier Zeichenfolgen, die die zu ändernden  Parameter definieren: _XYZ1, XYZ2, XYZ3_ und _XYZ4_.
+> 5. Verbinden Sie diese Liste mit der _parameterName_-Eingabe von _Element.SetParameterByName_.
+> 6. Verbinden Sie _Element.SetParameterByName_ mit der _combinator_-Eingabe von _List.Combine._ Verbinden Sie die _adaptiven Bauteile_ mit _list1_. Verbinden Sie _String from Object_ mit _list2_.
 
-We are list mapping here, because we are writing four values for each element, which creates a complex data structure. The _List.Combine_ node defines an operation one step down in the data hierarchy. This is why element and value inputs of _Element.SetParameterByName_ are left blank. _List.Combine_ is connecting the sublists of its inputs into the empty inputs of _Element.SetParameterByName_, based on the order in which they are connected.
+In diesem Vorgang werden Listen zugeordnet: Für jedes Element werden vier Werte geschrieben, wodurch eine komplexe Datenstruktur entsteht. Der _List.Combine_-Block definiert eine Operation, die eine Stufe tiefer in der Datenhierarchie abläuft. Aus diesem Grund wurden die Eingaben für Element und Wert von _Element.SetParameterByName_ leer gelassen. _List.Combine_ verbindet die Unterlisten aus seinen Eingaben mit den leeren Eingaben von _Element.SetParameterByName_ in der Reihenfolge, in der sie verbunden wurden.
 
-Selecting a panel in Revit, we see now that we have string values for each parameter. Realistically, we would create a simpler format to write a point (X,Y,Z). This can be done with string operations in Dynamo, but we're bypassing that here to stay within the scope of this chapter.
+Wenn Sie jetzt ein Element in Revit auswählen, werden die Werte der einzelnen Parameter als Zeichenfolgen angezeigt. In der Praxis würden Sie ein einfacheres Format zum Schreiben von Punkten (x, y, z) erstellen. Sie könnten dies mithilfe von Zeichenfolgenoperationen in Dynamo erreichen. Da dies jedoch den Rahmen dieses Kapitels sprengen würde, wird dieses Verfahren hier nicht behandelt.
 
 ![](<./images/6/04 (5).jpg>)
 
-A view of the sample schedule with parameters filled in.
+Ansicht der Bauteilliste mit ausgefüllten Parametern
 
 ![](<./images/6/01 (9).jpg>)
 
-Each ETFE panel now has the XYZ coordinates written for each adaptive point, representing the corners of each panel for fabrication.
+Für jedes EFTE-Element sind jetzt die xyz-Koordinaten der adaptiven Punkte an seinen Ecken angegeben und können für die Fertigung der Elemente verwendet werden.
 
 ![Exercise](<./images/6/00 (8).jpg>)
