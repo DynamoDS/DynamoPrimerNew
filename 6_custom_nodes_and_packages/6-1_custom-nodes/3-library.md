@@ -4,53 +4,54 @@
 
 透過在本端發佈節點，當您開啟一個新的階段作業時該節點將可在 Dynamo 資源庫中存取。如果不發佈節點，參照自訂節點的 Dynamo 圖形也必須在其資料夾中具有該自訂節點（或必須使用 _「檔案」>「匯入資源庫」將自訂節點匯入至 Dynamo 中_)。
 
-Dynamo Sandbox 沒有發佈功能。
+{% hint style="warning" %}
+只能在 Dynamo for Revit 和 Dynamo for Civil 3d 中發佈自訂節點。Dynamo Sandbox 沒有發佈功能。
+{% endhint %}
 
+## 練習：在本端發佈自訂節點
 
-## 在本端發佈自訂節點
-
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
 > 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
 
-讓我們繼續瞭解在前一個部份中建立的自訂節點。您也可以透過在「Dynamo 圖形編輯器」中按兩下自訂節點來開啟該自訂節點。
+讓我們繼續瞭解在前一個部份中建立的自訂節點。開啟 PointsToSurface 自訂節點後，我們會在 Dynamo 自訂節點編輯器中看到圖表。您也可以透過在「Dynamo 圖形編輯器」中按兩下自訂節點來開啟該自訂節點。
 
-![]
+![](<../images/6-1/3/publish custom node locally 01.jpg>)
 
-若要在本端發佈自訂節點，只需在畫布上按一下右鍵，然後選取_「發佈此自訂節點...」_
+若要在本端發佈自訂節點，只需在圖元區上按一下右鍵，然後選取_「發佈此自訂節點...」_
 
-![]
+![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
 
-參照上圖填寫相關資訊，並選取_「在本端發佈」_. 請注意，「群組」欄位定義可從 Dynamo 功能表存取的主要元素。
+參照上圖填寫相關資訊，並選取_「本端發佈」_。請注意，「群組」欄位定義可從 Dynamo 功能表存取的主要元素。
 
-![]
+![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
 
 選取資料夾，以容納所有計劃在本端發佈的自訂節點。Dynamo 會在每次載入時檢查此資料夾，以便確認該資料夾位於固定位置。導覽至此資料夾，然後選擇 _「選取資料夾」。_Dynamo 節點現已在本端發佈，並將在每次載入程式時保留在 Dynamo 工具列中！
 
-![]
+![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
 
-要檢查自訂節點的資料夾位置，請跳至_「設定」>「管理節點和套件路徑...」_
+若要查看自訂節點的資料夾位置，請移至_「Dynamo」>「偏好」>「Package Manager」>「節點和套件路徑」_
 
-![]
+![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
 
-In this window we see a list of paths.
+在此視窗中，我們看到路徑清單。
 
-![]
+![](<../images/6-1/3/publish custom node exercise - 06.jpg>)
 
-> 1. _Documents\DynamoCustomNodes ..._，表示本端發佈之自訂節點的位置。 *
-> 2. __
-> 3. 您可能想要將本端資料夾路徑在上方清單順序中下移 （透過選取資料夾路徑並按一下路徑名稱左側的向下箭頭）。頂層資料夾是套件安裝的預設路徑。因此，透過將預設 Dynamo 套件安裝路徑保留為預設資料夾，線上套件將與本端發佈的節點分離。
+> 1. _Documents\DynamoCustomNodes..._ 表示本端發佈之自訂節點的位置。
+> 2. _AppData\Roaming\Dynamo..._ 表示線上安裝的 Dynamo 套件的預設位置。
+> 3. 您可以將上面清單順序的本端資料夾路徑向下移 (選取資料夾路徑並按一下路徑名稱左側的向下箭頭)。頂層資料夾是套件安裝的預設路徑。因此，透過將預設 Dynamo 套件安裝路徑保留為預設資料夾，線上套件將與本端發佈的節點分離。
 
 我們已切換路徑名稱的順序，以將 Dynamo 的預設路徑作為套件的安裝位置。
 
-![]
+![](<../images/6-1/3/publish custom node exercise - 07.jpg>)
 
-導覽至此本端資料夾，我們可以在_「.dyf 」_資料夾中找到原始自訂節點，.dyf 是 Dynamo 自訂節點檔案的副檔名。 我們可以編輯此資料夾中的檔案，節點將在使用者介面中更新。我們還可以新增更多節點至主 _DynamoCustomNode_ 資料夾，Dynamo 會在重新啟動時將其新增到您的資源庫！
+導覽至此本端資料夾，我們可以在_「.dyf」_資料夾中找到原始自訂節點，.dyf 是 Dynamo 自訂節點檔案的副檔名。我們可以編輯此資料夾中的檔案，節點將在使用者介面中更新。我們還可以新增更多節點至主 _DynamoCustomNode_ 資料夾，Dynamo 會在重新啟動時將其新增到您的資源庫！
 
-![]
+![](<../images/6-1/3/publish custom node exercise - 08.jpg>)
 
-Dynamo 現在每次會使用 Dynamo 資源庫「DynamoPrimer」組中的 「PointsToSurface 」進行載入。
+Dynamo 現在每次會使用 Dynamo 資源庫「DynamoPrimer」群組中的 「PointsToSurface 」進行載入。
 
-![]
+![](<../images/6-1/3/publish custom node exercise - 09.jpg>)

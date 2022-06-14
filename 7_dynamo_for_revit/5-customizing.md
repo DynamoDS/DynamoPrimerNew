@@ -6,7 +6,7 @@
 
 假設我們已建立一系列自適應元件，希望根據其點位置來編輯參數。例如，點可以驅動與元素面積相關的厚度參數。或者，點可以驅動與全年日曬相關的不透明度參數。藉由 Dynamo，可以使用一些簡單的步驟將分析連接至參數，我們將在以下練習中探究基本版本。
 
-![](<.
+![](<./images/5/customizing - point location.jpg>)
 
 > 使用 **AdaptiveComponent.Locations** 節點查詢所選自適應元件的自適應點。藉此我們可以使用所提取版本的 Revit 元素進行分析。
 
@@ -14,7 +14,7 @@
 
 ### 日光方位分析
 
-![](<.
+![](<./images/5/customizing - solar orientation analysis.jpg>)
 
 > 使用重新對映將一組資料對映至參數範圍。這是參數式模型中使用的基本工具，我們將在以下練習中展示該工具。
 
@@ -22,64 +22,64 @@
 
 ## 練習
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
 > 附錄中提供範例檔案的完整清單。
 
 {% file src="./datasets/5/Revit-Customizing.zip" %}
 
-此練習將詳細說明上一節中展示的技術。在此案例中，我們將使用 Revit 元素定義參數式曲面，同時例證化四點自適應元件，然後根據日光方位對其進行編輯。
+此練習將詳細說明上一節中展示的技術。在此案例中，我們將使用 Revit 元素定義參數式曲面，同時實體化四點自適應元件，然後根據日光方位對其進行編輯。
 
-![](<.
+![](<./images/5/customizing - exercise 01.jpg>)
 
 > 1. 先選取兩條邊與_「Select Edge」_節點。兩條邊是中庭的長跨距。
 > 2. 使用 _List.Create_ 節點將兩條邊合併到一個清單中。
 > 3. 使用 _Surface.ByLoft_ 在兩條邊之間建立曲面。
 
-![](<.
+![](<./images/5/customizing - exercise 02.jpg>)
 
-> 1. 使用_code block_，定義從 0 至 1 的範圍 (包含均勻分佈的 10 個值)：`0..1..#10;`0..1..#10;
-> 2. 將 _code block_ 插入至 _Surface.PointAtParameter_ 節點的 _u_ 與 _v_ 輸入，並將 _Surface.ByLoft_ 節點插入至 surface 輸入。 在節點上按一下右鍵，將_交織_變更為_笛卡兒積_。這將在曲面上產生點的網格。
+> 1. 使用 _Code Block_，定義從 0 至 1 的範圍 (包含均勻分佈的 10 個值)：`0..1..#10;`
+> 2. 將 _Code Block_ 插入 _Surface.PointAtParameter_ 節點的 \*u\* 與 _v_ 輸入，並將 _Surface.ByLoft_ 節點插入 _surface_ 輸入。在節點上按一下右鍵，將_交織_變更為_笛卡兒積_。這將在曲面上產生點的網格。
 
 此點網格可作為以參數式方式定義之曲面的控制點。我們希望萃取其中每個點的 u 與 v 位置，以便能將其插入至參數式公式，並保留相同的資料結構。我們可以查詢剛剛所建立點的參數位置，以執行此作業。
 
-![](<.
+![](<./images/5/customizing - exercise 03.jpg>)
 
 > 1. 加入 _Surface.ParameterAtPoint_ 節點至圖元區，連接輸入，如上所示。
 > 2. 使用 UV.U 節點查詢這些參數的 _u_ 值。
 > 3. 使用 UV.V 節點查詢這些參數的 _v_ 值。
 > 4. 輸出會顯示每個曲面點的對應 _u_ 與 _v_ 值。現在我們已取得所需範圍，每個值都介於 _0_ 與 _1_ 之間，並具有正確的資料結構，已準備好套用參數式演算法。
 
-![](<.
+![](<./images/5/customizing - exercise 04.jpg>)
 
-> 1. 加入 _code block_ 至圖元區，然後輸入以下代碼：`Math.Sin(u*180)*Math.Sin(v*180)*w;`Math.Sin(u*180)*Math.Sin(v*180)*w;。這是參數式函數，可從平曲面建立正弦凸塊。
-> 2. ______
-> 3. _w_ 輸入表示造型的_幅度_，因此我們為其連接 _number slider_。
+> 1. 加入 _Code Block_ 至圖元區，然後輸入以下程式碼：`Math.Sin(u*180)*Math.Sin(v*180)*w;`。這是參數式函數，可從平曲面建立正弦凸塊。
+> 2. 將 _UV.U_ 連接至 _u_ 輸入，將 UV.V 連接至 _v_ 輸入。
+> 3. _w_ 輸入表示造型的_幅度_，因此我們為其連接 _Number Slider_。
 
-![](<.
+![](<./images/5/customizing - exercise 05.jpg>)
 
-> 1. 現在，已產生由演算法定義的值清單。接下來使用此值清單在 _+Z_ 方向將點上移。使用 _Geometry.Translate_，將 _code block _ 插入至 _zTranslation_，並將 _Surface.PointAtParameter_ 插入至geometry輸入。 您應該已看到新點顯示在 Dynamo 預覽中。
+> 1. 現在，已產生由演算法定義的值清單。接下來使用此值清單在 _+Z_ 方向將點上移。使用 _Geometry.Translate_，將 \*Code Block\* 插入 _zTranslation_，並將 _Surface.PointAtParameter_ 插入 _geometry_ 輸入。您應該已看到新點顯示在 Dynamo 預覽中。
 > 2. 最後，我們使用 _NurbsSurface.ByPoints_ 節點建立曲面，將上一步驟中的節點插入至點輸入。我們已建立自己的參數式曲面。自由拖曳滑棒，觀看凸塊的收縮與膨脹。
 
 使用參數式曲面，我們要定義將其面板化的方式，以排列四點自適應元件。Dynamo 沒有即裝即用的曲面面板化功能，因此我們可以留心社群以尋找有用的 Dynamo 套件。
 
-![](<.
+![](<./images/5/customizing - exercise 06.jpg>)
 
 > 1. 移至_「套件」>「搜尋套件...」_
-> 2. 搜尋_「LunchBox」_，並下載_「LunchBox for Dynamo」_。 對於諸如此類的幾何圖形作業，這是非常有用的一組工具。
+> 2. 搜尋_「LunchBox」_，並安裝_「LunchBox for Dynamo」_。對於諸如此類的幾何圖形作業，這是非常有用的一組工具。
 
 > 1. 下載之後，您具有 LunchBox 套件的完整存取權。搜尋_「Quad Grid」_，然後選取_「LunchBox Quad Grid By Face」_。將參數式曲面插入至 _surface_ 輸入，並將 _U_ 與 _V_ 分割份數設定為 _15_。您在 Dynamo 預覽中應該會看到四邊面板化的曲面。
 
 > 如果您對其設置感到好奇，可以按兩下 _Lunch Box_ 節點，並查看其內容。
 
-> 返回 Revit，接下來快速查看我們將在這裡使用的自適應元件。無需沿其作業，但這是我們將要例證化的屋頂面板。它是四點自適應元件，是 ETFE 系統的粗略表示。中心空心的鎖點框與稱為_「ApertureRatio」_的參數有關。
+> 返回 Revit，接下來快速查看我們將在這裡使用的自適應元件。無需沿其作業，但這是我們將要實體化的屋頂面板。它是四點自適應元件，是 ETFE 系統的粗略表示。中心空心的鎖點框與稱為_「ApertureRatio」_的參數有關。
 
-> 1. 我們將在 Revit 中例證化大量幾何圖形，因此請確保將 Dynamo 求解器旋至_「手動」_。
+> 1. 我們將在 Revit 中實體化大量幾何圖形，因此請確保將 Dynamo 求解器調整為_「手動」_。
 > 2. 加入 _Family Types_ 節點至圖元區，然後選取_「ROOF-PANEL-4PT」_。
 > 3. 加入 _AdaptiveComponent.ByPoints_ 節點至圖元區，將 _Panel Pts_ 從_「LunchBox Quad Grid by Face」_輸出連接至 _points_ 輸入。將 _Family Types_ 節點連接至 _familySymbol_ 輸入。
 > 4. 按一下_「執行」_。建立幾何圖形時，Revit 需要_考慮_一段時間。若該時間太長，請將 _code block 的「15」_降低至更小的數字。這將減少屋頂上面板的數量。
 
-_注意：若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「freeze」節點功能以暫停所執行的 Revit 作業。若要取得有關凍結節點的更多資訊，請參閱「實體」一章中的「凍結」一節。_
+_注意：若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停所執行的 Revit 作業。若要取得有關凍結節點的更多資訊，請參閱「實體」一章中的「凍結」一節。_
 
 > 返回 Revit，我們已在屋頂上建立一系列面板。
 
@@ -95,8 +95,8 @@ _注意：若 Dynamo 花費很長時間來計算節點，您可能要在開發�
 
 1. 將日光設定插入至 _Sunsetting.SunDirection_ 以取得日光向量。
 2. 從用於建立自適應元件的_「Panel Pts」_中，使用 _Plane.ByBestFitThroughPoints_ 以近似元件的平面。
-3. 查詢此平面的 _正垂_。
-4. 使用 _內積_ 計算日光方位。內積是公式，可用於確定兩個向量的平行程度或不平行程度。我們將取得每個自適應元件的平面法向，並對其與日光向量進行比較，以粗略模擬日光方位。
+3. 查詢此平面的_法線_。
+4. 使用_內積_計算日光方位。內積是公式，可用於確定兩個向量的平行程度或不平行程度。我們將取得每個自適應元件的平面法向，並對其與日光向量進行比較，以粗略模擬日光方位。
 5. 利用結果的_絕對值_。這可確保在平面法向指向相反方向時，點積準確無誤。
 6. 按一下_「執行」_。
 

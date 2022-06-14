@@ -1,31 +1,31 @@
-# Vector, Plane & Coordinate System
+# 向量、平面和座標系統
 
-## Vector, Plane & Coordinates System in Dynamo
+## Dynamo 中的向量、平面和座標系統
 
 ### 向量
 
-[](5-2\_vectors.md#vector-1)在 Dynamo 中，向量是模型的關鍵元件。 請注意，由於向量屬於「協助工具」抽象品類，因為我們建立向量時，不會在背景預覽中看到任何項目。
+[向量](5-2\_vectors.md#vector-1)是一種大小和方向的表現法，您可以將其視為以指定速度向特定方向加速的箭頭。在 Dynamo 中，向量是模型的關鍵元件。請注意，由於向量屬於「協助工具」抽象品類，因為我們建立向量時，不會在背景預覽中看到任何項目。
 
-![Vectors in Dynamo]
+![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design - vectors.jpg>)
 
 > 1. 進行向量預覽時，我們可以使用直線代替向量。
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
 > 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-### Plane
+### 平面
 
-[](5-2\_vectors.md#plane-1)
+[平面](5-2\_vectors.md#plane-1)是一個二維表面，您可以將其視為無限延伸的平面。每個平面都有原點、X 方向、Y 方向和 Z (向上) 方向。
 
-![Planes in Dynamo]
+![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design - plane.jpg>)
 
 > 1. 雖然平面是抽象的，但是具有原點位置，因此我們可以在空間中對其定位。
 > 2. 在 Dynamo 中，會在背景預覽中彩現平面。
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
 > 附錄中提供範例檔案的完整清單。
 
@@ -33,20 +33,20 @@
 
 ### 座標系統
 
-[](5-2\_vectors.md#coordinate-system-1)
+[座標系統](5-2\_vectors.md#coordinate-system-1)是一個決定點或其他幾何元素位置的系統。下圖說明座標系統在 Dynamo 中的外觀，以及每種顏色代表的意義。
 
-![Coordinate System in Dynamo]
+![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
 
 > 1. 雖然座標系統是抽象的，但是也具有原點位置，因此我們可以在空間中對其定位。
 > 2. 在 Dynamo 中，會在背景預覽中將座標系統彩現為一點 (原點) 與定義軸的直線 (遵循慣例，X 軸為紅色，Y 軸為綠色，Z 軸為藍色)。
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
 > 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Deep Dive into...
+## 深入探索...
 
 向量、平面與座標系統構成抽象幾何圖形類型的主要群組。它們能協助我們定義位置、方位以及對造型進行描述的其他幾何圖形空間環境。如果我說我在紐約城第 42 號街，位於百老匯 (座標系統)，站在街面上 (平面)，面向北方 (向量)，這是使用了「協助工具」以定義我的位置。這相同適用於手機殼產品或摩天大樓 - 我們需要此環境來開發模型。
 
@@ -65,14 +65,14 @@
 ![向量](../images/5-2/2/Vector.jpg)
 
 > 1. 向量的**起點**稱為**底端**。
-> 2. 向量的**終點**稱為**頂端**或指向。
+> 2. 向量的\*\*終點\*\*稱為**頂端**或**指向**。
 > 3. 向量 AB 與向量 BA 不同，兩者指向相反方向。
 
 如果您需要喜劇慈善相關的向量 (及其抽象定義)，請觀看經典喜劇 Airplane，聽聽那句膾炙人口的幽默台詞：
 
 > _Roger, Roger. What's our vector, Victor?_
 
-### Plane
+### 平面
 
 平面是二維抽象「協助工具」。更具體地說，平面在概念上是「平」的，在兩個方向無限延伸。通常會將平面彩現為原點附近的較小矩形。
 
@@ -80,7 +80,7 @@
 
 您可能會想，「等等！原點？聽上去像是座標系統...就像我在 CAD 軟體中用於塑型的工具！」
 
-您想得對！大多數塑型軟體會利用建構平面或「水平面」來定義用於繪圖的局部二維環境。平面採用 XY、YZ、XZ 或北、東南等表述，聽上去可能更熟悉。這些都是定義無限「平」環境的平面。
+您想得對！大多數塑型軟體會利用建構平面或「水平面」來定義用於繪圖的局部二維環境。平面採用 XY、YZ、XZ 或北、東南等表述，聽上去可能更熟悉。這些都是定義無限「平」環境的平面。平面沒有深度，但它們也同樣能幫助我們描述方向。
 
 ### 座標系統
 

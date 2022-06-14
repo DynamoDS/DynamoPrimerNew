@@ -1,6 +1,6 @@
 # 關於
 
-## For Dynamo v2.13
+## 適用於 Dynamo 2.13 版
 
 ![Dynamo 標誌](images/dynamo\_logo\_dark-trim.jpg)
 
@@ -19,7 +19,7 @@
 
 在此活動期間和利用處理 Dynamo 之激動人心的機會時，我們需要具有相同標準的文件，即 Dynamo Primer。
 
-[](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)
+請參閱[手冊使用者指南](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)，以瞭解您可以從此手冊學習的內容。
 
 ### 開放原始碼
 
@@ -43,7 +43,7 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 ***
 
-****
+**Matterlab** 受託更新手冊，以反映 Dynamo 2.13 的修訂。
 
 ![](<images/matterlab\_final-07.jpg>)
 
@@ -55,11 +55,11 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 ### 軟體和資源
 
-**Dynamo** Dynamo 目前的穩定* 版本為 2.1.0。
+**Dynamo** Dynamo 目前的穩定\* 版本為 2.1.0。
 
 http://dynamobim.com/download/ 或 http://dynamobuilds.com
 
-*注意事項：從 Revit 2020 開始，Dynamo 會與 Revit 版本搭售，您不需要再手動安裝。 如需更多資訊，請參閱此[部落格文章](https://dynamobim.org/dynamo-core-2-1-release/)。
+\*注意：從 Revit 2020 開始，Dynamo 會與 Revit 版本搭售，您不需要再手動安裝。如需更多資訊，請參閱此[部落格文章](https://dynamobim.org/dynamo-core-2-1-release/)。
 
 **DynamoBIM** 其他資訊、學習內容和論壇的最佳來源是 DynamoBIM 網站。
 
@@ -75,7 +75,7 @@ Dynamo@autodesk.com
 
 ### 授權
 
-Copyright 2018 Autodesk
+Copyright 2022 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.您可在以下網站獲取此「授權」的副本：
 

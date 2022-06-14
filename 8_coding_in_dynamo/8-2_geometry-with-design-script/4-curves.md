@@ -2,7 +2,7 @@
 
 在 Dynamo 中有兩種基本方法可以建立自由形式的曲線：指定一些點，讓 Dynamo 在這些點之間插出一條平滑的曲線，另一個比較低階的方法是指定某種程度的曲線的基本控制點。如果設計師很清楚知道要產生的線條形狀，或如果設計有一些特定的約束讓曲線可以或無法通過，內插的曲線會很好用。透過控制點指定的曲線實際上是一系列的直線段，演算法會將這些線段平滑產生一條最終的曲線形狀。如果是要探索各種不同平滑程度的曲線形狀，或者當曲線段之間的平滑連續性很重要時，透過控制點指定曲線就很好用。
 
-### Interpolated Curve
+### 內插曲線
 
 若要建立內插的曲線，只要將一些點傳入 _NurbsCurve.ByPoints_ 方法即可。
 
@@ -34,9 +34,9 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
     false);
 ```
 
-### Control Points Curve
+### 控制點曲線
 
-NurbsCurve 以幾乎相同的方式產生，輸入點代表直線段的端點，第二個參數稱為程度，指定平滑化曲線的量和類型。* 程度 1 的曲線沒有平滑化；它是一條聚合線。
+NurbsCurve 以幾乎相同的方式產生，輸入點代表直線段的端點，第二個參數稱為階數，指定平滑化曲線的量和類型。\* 1 階的曲線沒有平滑化；它是一條聚合線。
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-程度 2 的曲線會平滑化讓曲線相交，而且會與聚合線線段的中點相切：
+2 階的曲線會平滑化讓曲線相交，而且會與聚合線線段的中點相切：
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dynamo 支援最高到程度 20 的 NURBS (非均勻的合理 B 雲形線) 曲線，以下腳本說明增加平滑程度對曲線造型的影響：
+Dynamo 支援最高到 20 階的 NURBS (非均勻的合理 B 雲形線) 曲線，以下指令碼說明增加平滑程度對曲線造型的影響：
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,7 +83,7 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-請注意，至少要比曲線的程度多一個控制點。
+請注意，至少要比曲線的階數多一個控制點。
 
 透過控制頂點來建構曲線的另一個好處是，能夠在個別的曲線段之間維持相切。只要萃取出最後兩個控制點之間的方向，然後讓後續曲線的前兩個控制點繼續沿著此方向即可。以下範例會建立兩條獨立的 NURBS 曲線，不過這兩條曲線如一條曲線般平滑：
 
@@ -115,5 +115,6 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-這是一個非常簡化的 NURBS 曲線幾何圖形說明，如需更準確更詳細的討論，請參閱參考資料中的 Pottmann, et al, 2007。
-
+{% hint style="info" %}
+\*這是一個非常簡化的 NURBS 曲線幾何圖形說明，如需更準確更詳細的討論，請參閱參考資料中的 Pottmann, et al, 2007。
+{% endhint %}

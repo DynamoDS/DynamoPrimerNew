@@ -2,7 +2,7 @@
 
 NurbsCurve 的二維類比是 NurbsSurface，就像自由形式的 NurbsCurve，您可以使用兩種基本方法建構 NurbsSurface：一個是輸入一組基準點，讓 Dynamo 在這些點之間內插，另一個是明確指定曲面的控制點。就像自由形式的曲線，如果設計師很清楚知道要產生的曲面形狀，或如果設計需要曲面通過約束點，內插的曲面會很好用。相反地，如果是要探索各種平滑程度的設計，透過控制點建立的曲面就比較有用。
 
-### Interpolated Surface
+### 內插曲面
 
 若要建立內插的曲面，只要產生一些近似曲面形狀的二維點即可。這些點必須是矩形，亦即不是鋸齒狀。_NurbsSurface.ByPoints_ 方法會從這些點建構一個曲面。
 
@@ -15,9 +15,9 @@ NurbsCurve 的二維類比是 NurbsSurface，就像自由形式的 NurbsCurve，
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### Control Points Surface
+### 控制點曲面
 
-指定曲面的基本控制點，也可以建立自由形式的 NurbsSurface。就像 NurbsCurve 一樣，控制點可以視為是代表一個有直線段的四邊形網面，這會根據曲面的程度，平滑化成最終的曲面形狀。若要使用控制點來建立 NurbsSurface，請在 _NurbsSurface.ByPoints_ 中包含另外兩個參數，指出基本曲線在曲面兩個方向的程度。
+指定曲面的基本控制點，也可以建立自由形式的 NurbsSurface。就像 NurbsCurve 一樣，控制點可以視為是代表一個有直線段的四邊形網格，這會根據曲面的程度，平滑化成最終的曲面形狀。若要使用控制點來建立 NurbsSurface，請在 _NurbsSurface.ByPoints_ 中包含另外兩個參數，指出基本曲線在曲面兩個方向的程度。
 
 ![](../images/8-2/6/Surfaces\_02.png)
 

@@ -2,4 +2,4 @@
 
 一旦建立了一些自訂節點的下一個步驟是開始組織和發佈它們透過套件 - 便利的方式來儲存和共用您的節點 Dynamo 社群。
 
-![IMAGE]
+![IMAGE](<../images/6-2/packages cover.jpg>)

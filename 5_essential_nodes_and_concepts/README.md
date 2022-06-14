@@ -1,8 +1,8 @@
-# Essential Nodes & Concepts
+# 基本節點和概念
 
-In this section, we introduce the essential Nodes available in the Dynamo Library that will help you create your own visual program like a pro.
+在本節中，我們將介紹 Dynamo 資源庫中提供的基本節點，這些節點將協助您像專業人士一樣建立自己的視覺程式。
 
-* [用於設計的幾何圖形](5-2\_geometry-for-computational-design/) - 如何在 Dynamo 中使用幾何元素？
-* [建置區塊](5-3\_the-building-blocks-of-programs/) - 什麼是「資料」以及我可以在程式中開始使用哪些基本類型？
-* [清單，清單，清單](5-4\_designing-with-lists/) - 如何管理資料結構並為其建立座標？
-* [](5-5\_dictionaries-in-dynamo/)
+* [用於計算設計的幾何圖形](5-2\_geometry-for-computational-design/)：如何在 Dynamo 中使用幾何元素？探索從基本圖元建立簡單或複雜幾何圖形的多種方法。
+* [建置程式的區塊：](5-3\_the-building-blocks-of-programs/)什麼是「資料」？我可以在程式中開始使用哪些基本類型？此外，進一步瞭解如何在設計工作流程中納入數學和邏輯運算。
+* [使用清單設計：](5-4\_designing-with-lists/)如何管理和協調資料結構？進一步瞭解「清單」的概念，並使用它來有效地管理您的設計資料。
+* [Dynamo 中的字典：](5-5\_dictionaries-in-dynamo/)什麼是字典？瞭解如何使用字典從既有結果中尋找特定資料和值。

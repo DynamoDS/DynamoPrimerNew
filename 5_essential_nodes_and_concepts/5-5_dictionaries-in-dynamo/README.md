@@ -8,4 +8,4 @@ _雖然字典功能在 Dynamo 中已經存在好一段時間，但是 Dynamo 2.0
 
 ![](../images/5-5/wildDictionary.png)
 
-[__]()
+原始影像出處：[_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

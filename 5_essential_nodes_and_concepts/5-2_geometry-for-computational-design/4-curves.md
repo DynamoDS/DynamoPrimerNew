@@ -1,10 +1,10 @@
 # 曲線
 
-## Curves in Dynamo
+## Dynamo 中的曲線
 
-### What is Curve?
+### 什麼是曲線？
 
-[曲線是我們討論的第一種幾何資料類型，具有我們更熟悉的一組形狀描述性質 - 彎曲程度有多大？](5-4\_curves.md#curve) 長度有多大？請記住，點仍是建置區塊，用於定義從直線到雲形線的所有項目以及所有曲線類型。
+[曲線](5-4\_curves.md#curve)是我們討論的第一種幾何資料類型，具有我們更熟悉的一組形狀描述性質 - 多彎或多直？多長或多短？請記住，點仍是建置區塊，用於定義從直線到雲形線的所有項目以及所有曲線類型。
 
 ![曲線類型](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,30 +18,30 @@
 
 ### 直線
 
-[](5-4\_curves.md#lines)`Line.ByStartPointEndPoint`![]
+[直線](5-4\_curves.md#lines)由一組點組成，每條直線至少有 2 個點。在 Dynamo 中建立直線的最常使用的其中一個方法是使用 `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>) 在 Dynamo 中建立直線。
 
-![](<.
+![](<./images/5-2/4/curves - line by start point end point.jpg>)
 
 ### NURBS 曲線
 
-[](5-4\_curves.md#nurbs-+-polycurves)接下來在 Dynamo 中建立正弦曲線，使用兩種不同方法來建立 NURBS 曲線以比較結果。
+[NURBS](5-4\_curves.md#nurbs-+-polycurves) 是一個用於精確表示曲線和曲面的模型。在 Dynamo 中的正弦曲線使用兩種不同方法來建立 NURBS 曲線以比較結果。
 
-![]
+![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ 可使用一系列點做為控制點
 > 2. _NurbsCurve.ByPoints_ 可繪製通過一系列點的曲線
 
-> Download the example file by clicking on the link below.
+> 按一下下方的連結下載範例檔案。
 >
 > 附錄中提供範例檔案的完整清單。
 
 {% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-## Deep Dive into...
+## 深入探索...
 
 ### 曲線
 
-術語**曲線**通常是所有不同類型彎曲 (甚至筆直) 造型的統稱。曲線是所有這些造型類型 (直線、圓、雲形線等) 的父系分類。若以更具技術性的語言來表述，曲線描述了在一系列函數 (這些函數包含從諸如 `x = -1.26*t, y = t`x = -1.26*t, y = t 的簡單函數到涉及微積分的複雜函數) 中輸入「t」即可找到的每個可能點。 不論使用何種類型的曲線，稱為「t」的此**參數**都是我們可以演算的性質。此外，不論造型外觀為何，所有曲線都有起點與終點，兩者分別對應於建立曲線所使用的 t 最小值與最大值。這也有助於我們瞭解其定向性。
+術語**曲線**通常是所有不同類型彎曲 (甚至筆直) 造型的統稱。曲線是所有這些造型類型 (直線、圓、雲形線等) 的父系分類。若以更具技術性的語言來表述，曲線描述了在一系列函數 (這些函數包含從諸如 `x = -1.26*t, y = t` 的簡單函數到涉及微積分的複雜函數) 中輸入「t」即可找到的每個可能點。不論使用何種類型的曲線，稱為「t」的此**參數**都是我們可以演算的性質。此外，不論造型外觀為何，所有曲線都有起點與終點，兩者分別對應於建立曲線所使用的 t 最小值與最大值。這也有助於我們瞭解其定向性。
 
 ![曲線參數](../images/5-2/4/CurveParameter.jpg)
 
@@ -79,11 +79,12 @@
 
 **節點**：節點是 (度 + N - 1) 個數字的清單，其中 N 為控制點的數量。節點與權值搭配使用，以控制控制點對結果曲線產生的影響。節點的一項用途是在曲線的特定點處建立扭折。
 
-![NURBS 曲線的度](../images/5-2/4/NURBScurve\_Degree.jpg)
+![NURBS 曲線的階數](../images/5-2/4/NURBScurve\_Degree.jpg)
 
-> 1. 度 = 1
-> 2. 度 = 2
-> 3. 度 = 3
+> 1. 階數 = 1
+> 2. 階數 = 2
+> 3. 階數 = 3
 
-請注意，度值越高，內插產生的曲線所用的控制點就越多。
-
+{% hint style="info" %}
+請注意，階數值越高，內插產生的曲線所用的控制點就越多。
+{% endhint %}
