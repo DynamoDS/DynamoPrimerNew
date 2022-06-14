@@ -1,73 +1,73 @@
-# Revit Use-Cases
+# Przypadki zastosowań w programie Revit
 
-Have you ever wanted to look up something in Revit by a piece of data that it has?
+Czy kiedykolwiek zdarzyło Ci się wyszukiwać coś w programie Revit za pomocą zawartych w nim danych?
 
-Chances are if you have you've done something like the following example.
+W takim przypadku zwykle robi się to jak w poniższym przykładzie.
 
-In the image below we are collecting all of the rooms in the Revit model, getting the index of the room we want (by room number), and finally grabbing the room at the index.
+Na poniższej ilustracji zbieramy wszystkie pomieszczenia w modelu programu Revit, uzyskujemy indeks żądanego pomieszczenia (według numeru pomieszczenia), a następnie pobieramy pomieszczenie o danym indeksie.
 
 ![](<../images/5-5/4/dictionary - collect room in revit model.jpg>)
 
-> 1. Collect all rooms in the model.
-> 2. Room number to find.
-> 3. Get the room number and find what index it is at.
-> 4. Obtain the room at the index.
+> 1. Zbierz wszystkie pomieszczenia w modelu.
+> 2. Numer pomieszczenia do znalezienia.
+> 3. Pobierz numer pomieszczenia i znajdź indeks, w którym się ono znajduje.
+> 4. Uzyskaj pomieszczenie o określonym indeksie.
 
-## Exercise : Room Dictionary
+## Ćwiczenie: słownik pomieszczeń
 
-### Part I: Creating Room Dictionary
+### Część I. Tworzenie słownika pomieszczeń
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-5/4/roomDictionary.dyn" %}
 
-Now let's recreate this idea using dictionaries. First we need to collect all of the rooms in our Revit model.
+Teraz odtwórzmy ten pomysł, używając słowników. Najpierw musimy zebrać wszystkie pomieszczenia w modelu programu Revit.
 
 ![](<../images/5-5/4/dictionary - exercise I - 01.jpg>)
 
-> 1. We choose the Revit category we want to work with, (In this case, we are working with rooms).
-> 2. We tell Dynamo to collect all of those elements
+> 1. Wybieramy kategorię programu Revit, z którą chcemy pracować (w tym przypadku pracujemy z pomieszczeniami).
+> 2. Zlecamy dodatkowi Dynamo zebranie wszystkich tych elementów.
 
-Next, we need to decide what keys we are going to use to look up this data by. (Information on keys can be found on the section, [What is a dictionary?](9-1\_what-is-a-dictionary.md)).
+Następnie musimy zdecydować, jakich kluczy użyjemy do wyszukiwania tych danych. (Informacje na temat kluczy można znaleźć w sekcji [Co to jest słownik?](9-1\_what-is-a-dictionary.md)).
 
 ![](<../images/5-5/4/dictionary - exercise I - 02.jpg>)
 
-> 1. The data that we will use is the room number.
+> 1. Dane, których użyjemy, to numer pomieszczenia.
 
-Now we will create the dictionary with the given keys and elements.
+Teraz utworzymy słownik z danymi kluczami i elementami.
 
 ![](<../images/5-5/4/dictionary - exercise I - 03.jpg>)
 
-> 1. The node, **Dictionary.ByKeysValues** will create a dictionary given the appropriate inputs.
-> 2. `Keys` need to be a string, while `values` can be a variety of object types.
+> 1. Węzeł **Dictionary.ByKeysValues** utworzy słownik na podstawie odpowiednich danych wejściowych.
+> 2. `Keys` muszą być ciągami, a `values` mogą być różnymi typami obiektów.
 
-Lastly, we can retrieve a room from the dictionary with its room number now.
+Na koniec możemy pobrać pomieszczenie ze słownika za pomocą jego numeru.
 
 ![](<../images/5-5/4/dictionary - exercise I - 04.jpg>)
 
-> 1. `String` will be the key that we are using to look up an object from the dictionary.
-> 2. **Dictionary.ValueAtKey** will obtain the object from the dictionary now.
+> 1. `String` będzie kluczem, który jest używany do wyszukania obiektu w słowniku.
+> 2. Teraz węzeł **Dictionary.ValueAtKey** pobierze obiekt ze słownika.
 
-### Part II: Values Look Up
+### Część II. Wyszukiwanie wartości
 
-Using this same dictionary logic, we can create dictionaries with grouped objects as well. If we wanted to look up all rooms at a given level we can modify the above graph as follows.
+Używając tej samej logiki słowników, można także tworzyć słowniki ze zgrupowanymi obiektami. Jeśli chcemy wyszukać wszystkie pomieszczenia na danym poziomie, możemy zmienić powyższy wykres w następujący sposób.
 
 ![](<../images/5-5/4/dictionary - exercise II - 01.jpg>)
 
-> 1. Rather than using the room number as the key, we can now use a parameter value, (in this case we will use level).
+> 1. Zamiast używać jako klucza numeru pomieszczenia, możemy teraz użyć wartości parametru (w tym przypadku użyjemy poziomu).
 
 ![](<../images/5-5/4/dictionary - exercise II - 02.jpg>)
 
-> 1. Now, we can group the rooms by the level that they reside on.
+> 1. Teraz możemy pogrupować pomieszczenia według poziomu, na którym się znajdują.
 
 ![](<../images/5-5/4/dictionary - exercise II - 03.jpg>)
 
-> 1. With the elements grouped by the level, we can now use the shared keys (unique keys) as our key for our dictionary, and the lists of rooms as the elements.
+> 1. Po pogrupowaniu elementów według poziomów możemy używać wspólnych (niepowtarzalnych) kluczy jako kluczy w słowniku, a list pomieszczeń jako elementów.
 
 ![](<../images/5-5/4/dictionary - exercise II - 04.jpg>)
 
-> 1. Lastly, using the levels in the Revit model, we can look up which rooms reside on that level in the dictionary. `Dictionary.ValueAtKey` will take the level name and return the room objects at that level.
+> 1. Na koniec, korzystając z poziomów w modelu programu Revit, możemy sprawdzić w słowniku, które pomieszczenia znajdują się na danym poziomie. Węzeł `Dictionary.ValueAtKey` pobierze nazwę poziomu i zwróci obiekty pomieszczeń na tym poziomie.
 
-The opportunities for Dictionary use are really endless. The ability to relate your BIM data in Revit to the element itself poses a variety of use cases.
+Możliwości zastosowań słowników są naprawdę nieograniczone. Już sama możliwość powiązywania danych BIM w programie Revit z elementem zapewnia wiele różnych przypadków zastosowań.

@@ -1,6 +1,6 @@
-# Python Point Generators
+# Generatory punktów w języku Python
 
-The following Python scripts generate point arrays for several examples. They should be pasted into a Python Script node as follows:
+Poniższe skrypty w języku Python generują szyki punktów dla kilku przykładów. Powinny zostać wklejone do węzła skryptu w języku Python w następujący sposób:
 
 ![](<../images/8-2/10/python points 01.jpg>)
 

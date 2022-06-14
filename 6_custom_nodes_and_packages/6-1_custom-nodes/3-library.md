@@ -1,57 +1,57 @@
-# Publishing to Your Library
+# Publikowanie w bibliotece użytkownika
 
-We've just created a custom node and applied it to a specific process in our Dynamo graph. And we like this node so much, we want to keep it in our Dynamo library to reference in other graphs. To do this, we'll publish the node locally. This is a similar process to publishing a package, which we'll walk through in more detail in the next chapter.
+Właśnie utworzyliśmy węzeł niestandardowy i zastosowaliśmy go do określonego procesu na wykresie Dynamo. Ten węzeł podoba nam się tak bardzo, że chcemy pozostawić go w naszej bibliotece dodatku Dynamo, aby odwoływać się do niego na innych wykresach. Aby to zrobić, opublikujemy ten węzeł lokalnie. Jest to proces podobny do publikowania pakietu, który bardziej szczegółowo omówimy w następnym rozdziale.
 
-By publishing a node locally, the node will be accessible in your Dynamo library when you open a new session. Without publishing a node, a Dynamo graph which references a custom node must also have that custom node in its folder (or the custom node must be imported into Dynamo using _File>Import Library_).
+Węzeł opublikowany lokalnie będzie dostępny w bibliotece dodatku Dynamo po otwarciu nowej sesji. Jeśli nie opublikujemy węzła, w folderze wykresu Dynamo, który odwołuje się do węzła niestandardowego, musi również znajdować się ten węzeł niestandardowy (lub węzeł niestandardowy musi być zaimportowany do dodatku Dynamo za pomocą polecenia _Plik > Importuj bibliotekę_).
 
 {% hint style="warning" %}
-Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
+Publikowanie węzła niestandardowego jest możliwe tylko w dodatku Dynamo dla programu Revit i dodatku Dynamo dla programu Civil 3d. Obszar izolowany (piaskownica) dodatku Dynamo nie ma funkcji publikowania.
 {% endhint %}
 
-## Exercise: Publishing a Custom Node Locally
+## Ćwiczenie: publikowanie węzła niestandardowego lokalnie
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
 
-Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
+Kontynuujmy pracę z węzłem niestandardowym, który utworzyliśmy w poprzedniej sekcji. Po otwarciu węzła niestandardowego PointsToSurface widać wykres w Edytorze węzłów niestandardowych dodatku Dynamo. Węzeł niestandardowy można również otworzyć, klikając go dwukrotnie w Edytorze wykresu Dynamo.
 
 ![](<../images/6-1/3/publish custom node locally 01.jpg>)
 
-To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
+Aby opublikować węzeł niestandardowy lokalnie, wystarczy kliknąć prawym przyciskiem myszy obszar rysunku i wybrać opcję _„Opublikuj ten węzeł niestandardowy...”_
 
 ![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
 
-Fill out the relevant information similar to the image above and select _"Publish Locally"._. Note that the Group field defines the main element accessible from the Dynamo menu.
+Podaj odpowiednie informacje (podobnie, jak to zrobiono na ilustracji powyżej) i wybierz opcję _„Opublikuj lokalnie”._. Należy zwrócić uwagę, że pole Grupa definiuje element główny dostępny w menu dodatku Dynamo.
 
 ![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
 
-Choose a folder to house all of the custom nodes that you plan on publishing locally. Dynamo will check this folder each time it loads, so make sure the folder is in a permanent place. Navigate to this folder and choose _"Select Folder"._ Your Dynamo node is now published locally, and will remain in your Dynamo Toolbar each time you load the program!
+Wybierz folder, w którym będą przechowywane wszystkie węzły niestandardowe publikowane lokalnie. Ten folder będzie sprawdzany przy każdym wczytywaniu dodatku Dynamo, dlatego upewnij się, że jest to folder trwały. Przejdź do tego folderu i wybierz opcję _„Wybierz folder”._ Węzeł Dynamo jest teraz publikowany lokalnie i będzie dostępny na pasku narzędzi dodatku Dynamo po każdym wczytaniu programu.
 
 ![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
 
-To check on the custom node folder location, go to _Dynamo > Preferences > Package Manager > Node and Package Paths_
+Aby sprawdzić położenie folderu węzłów niestandardowych, przejdź do obszaru _Dynamo > Preferencje > Menedżer pakietów > Ścieżki do węzłów i pakietów_
 
 ![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
 
-In this window we see a list of paths.
+W tym oknie jest widoczna lista ścieżek.
 
 ![](<../images/6-1/3/publish custom node exercise - 06.jpg>)
 
-> 1. _Documents\DynamoCustomNodes..._ refers to the location of custom nodes we've published locally.
-> 2. _AppData\Roaming\Dynamo..._ refers to the default location of Dynamo Packages installed online.
-> 3. You may want to move your local folder path down in the list order above (by selecting the folder path and clicking on the down arrow to the left of the path names). The top folder is the default path for package installs. So by keeping the default Dynamo package install path as the default folder, online packages will be separated from your locally published nodes.
+> 1. Ścieżka _Documents\DynamoCustomNodes..._ odnosi się do położenia węzłów niestandardowych, które zostały opublikowane lokalnie.
+> 2. _AppData\Roaming\Dynamo..._ odnosi się do domyślnego położenia pakietów dodatku Dynamo instalowanych online.
+> 3. Możesz przenieść ścieżkę folderu lokalnego w dół powyższej listy (wybierając ścieżkę folderu i klikając strzałkę skierowaną w dół po lewej stronie nazwy ścieżki). Folder na początku listy stanowi domyślną ścieżkę do instalacji pakietów. Dlatego jeśli domyślna ścieżka instalacji pakietów Dynamo zostanie zachowana jako folder domyślny, pakiety online będą oddzielone od węzłów opublikowanych lokalnie.
 
-We switched the order of the path names in order to have Dynamo's default path as the package install location.
+Zmieniliśmy kolejność nazw ścieżek, aby lokalizacją instalacji pakietu była domyślna ścieżka dodatku Dynamo.
 
 ![](<../images/6-1/3/publish custom node exercise - 07.jpg>)
 
-Navigating to this local folder, we can find the original custom node in the _".dyf"_ folder, which is the extension for a Dynamo Custom Node file. We can edit the file in this folder and the node will update in the UI. We can also add more nodes to the main _DynamoCustomNode_ folder and Dynamo will add them to your library at restart!
+Po przejściu do tego folderu lokalnego oryginalny węzeł niestandardowy znajdziemy w folderze _„.dyf”_ — ta nazwa stanowi rozszerzenie pliku węzła niestandardowego dodatku Dynamo (Dynamo Custom Node). Możemy edytować plik w tym folderze, a węzeł zostanie zaktualizowany w interfejsie użytkownika. Możemy także dodać więcej węzłów do głównego folderu _DynamoCustomNode_, a dodatek Dynamo doda je do biblioteki po ponownym uruchomieniu.
 
 ![](<../images/6-1/3/publish custom node exercise - 08.jpg>)
 
-Dynamo will now load each time with "PointsToSurface" in the "DynamoPrimer" group of your Dynamo library.
+Dodatek Dynamo będzie teraz za każdym razem wczytywany z elementem „PointsToSurface” w grupie „DynamoPrimer” w bibliotece dodatku Dynamo.
 
 ![](<../images/6-1/3/publish custom node exercise - 09.jpg>)

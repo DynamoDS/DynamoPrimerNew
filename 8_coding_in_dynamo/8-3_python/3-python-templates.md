@@ -1,20 +1,20 @@
-# Setup Your Own Python Template
+# Konfigurowanie własnego szablonu w języku Python
 
-With Dynamo 2.0 we have the ability to specify a default template `(.py extension)` to use when opening the python window for the first time. This has been a long-desired request as this expedites the usage of Python within Dynamo. Having the ability to use a template allows us to have default imports ready to go when we want to develop a custom Python script.
+W dodatku Dynamo 2.0 można określić domyślny szablon `(.py extension)`, który ma być używany podczas otwierania okna języka Python po raz pierwszy. Od dawna proszono o dodanie tej funkcji, ponieważ przyspiesza ona korzystanie z języka Python w dodatku Dynamo. Dzięki możliwości użycia szablonu można przygotować domyślny import gotowy do użycia, gdy chcemy utworzyć skrypt niestandardowy w języku Python.
 
-The location for this template is in the `APPDATA` location for your Dynamo install.
+Położenie tego szablonu to `APPDATA` dla instalacji dodatku Dynamo.
 
-This is typically as follows `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
+Zwykle jest to ścieżka `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
 ![](<../images/8-3/3/python templates - appdata folder location.jpg>)
 
-### Setting Up The Template
+### Konfigurowanie szablonu
 
-In order to utilize this functionality we need to add the following line in our `DynamoSettings.xml` file. _(Edit in notepad)_
+Aby korzystać z tej funkcji, należy dodać następujący wiersz w pliku `DynamoSettings.xml`. _(Edytuj w Notatniku)_
 
 ![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
 
-Where we see `<PythonTemplateFilePath />`, we can simply replace this with the following:
+Część `<PythonTemplateFilePath />` można po prostu zastąpić następującą treścią:
 
 ```
 <PythonTemplateFilePath>
@@ -23,12 +23,12 @@ Where we see `<PythonTemplateFilePath />`, we can simply replace this with the f
 ```
 
 {% hint style="warning" %}
-_Note: replace CURRENTUSER with your username_
+_Uwaga: zastąp element CURRENTUSER nazwą użytkownika_
 {% endhint %}
 
-Next we need to build a template with the functionality that we want to use built-in. In our case lets embed the Revit related imports and some of the other typical items when working with Revit.
+Następnie musimy utworzyć szablon z funkcjami, które mają być wbudowane. W tym przypadku osadźmy powiązane z programem Revit importy i niektóre inne typowe elementy podczas pracy z programem Revit.
 
-You can start a blank notepad document and paste the following code inside:
+Można rozpocząć od pustego dokumentu Notatnika i wkleić do niego następujący kod:
 
 ```
 import clr
@@ -67,16 +67,16 @@ TransactionManager.Instance.TransactionTaskDone()
 OUT = element
 ```
 
-Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` location.
+Po zakończeniu zapisz ten plik jako `PythonTemplate.py` w lokalizacji `APPDATA`.
 
-### Python Script Behavior After
+### Późniejsze zachowanie skryptu w języku Python
 
-A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
+\_P\_o zdefiniowaniu szablonu w języku Python dodatek Dynamo będzie go szukać po każdym umieszczeniu węzła w języku Python. Jeśli go nie znajdzie, okno będzie wyglądać jak domyślne okno języka Python.
 
 ![](<../images/8-3/3/python templates - before setup template.jpg>)
 
-If the Python template is found (like our Revit one for example) you will see all of the default items you built in.
+Jeśli szablon w języku Python zostanie znaleziony (np. nasz szablon dotyczący programu Revit), zostaną wyświetlone wszystkie domyślne wbudowane elementy.
 
 ![](<../images/8-3/3/python templates - after setup template.jpg>)
 
-Additional information regarding this great addition (by Radu Gidei) can be found here. https://github.com/DynamoDS/Dynamo/pull/8122
+Dodatkowe informacje dotyczące tego wspaniałego dodatku (którego autorem jest Radu Gidei) można znaleźć tutaj. https://github.com/DynamoDS/Dynamo/pull/8122

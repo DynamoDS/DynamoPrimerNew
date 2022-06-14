@@ -1,10 +1,10 @@
-# Curves: Interpolated and Control Points
+# Krzywe: interpolowane i punkty kontrolne
 
-There are two fundamental ways to create free-form curves in Dynamo: specifying a collection of Points and having Dynamo interpolate a smooth curve between them, or a more low-level method by specifying the underlying control points of a curve of a certain degree. Interpolated curves are useful when a designer knows exactly the form a line should take, or if the design has specific constraints for where the curve can and cannot pass through. Curves specified via control points are in essence a series of straight line segments which an algorithm smooths into a final curve form. Specifying a curve via control points can be useful for explorations of curve forms with varying degrees of smoothing, or when a smooth continuity between curve segments is required.
+W dodatku Dynamo istnieją dwa podstawowe sposoby tworzenia krzywych o dowolnych kształtach: określanie kolekcji punktów i interpolowanie gładkiej krzywej między nimi za pomocą dodatku Dynamo oraz metoda niższego poziomu polegająca na określeniu bazowych punktów kontrolnych krzywej o określonym stopniu. Krzywe interpolowane są przydatne, gdy projektant dokładnie wie, jaką postać powinna przyjąć linia, lub gdy projekt ma specyficzne ograniczenia dotyczące tego, przez co krzywa może i nie może przechodzić. Krzywe określone za pomocą punktów kontrolnych są w istocie serią segmentów linii prostej, które algorytm wygładza do końcowej postaci krzywej. Określenie krzywej za pomocą punktów sterujących może być przydatne w przypadku badania postaci krzywych o różnych stopniach wygładzenia lub gdy wymagana jest gładka ciągłość między segmentami krzywej.
 
-### Interpolated Curve
+### Krzywa interpolowana
 
-To create an interpolated curve, simply pass in a collection of Points to the _NurbsCurve.ByPoints_ method.
+Aby utworzyć krzywą interpolowaną, wystarczy przekazać kolekcję punktów do metody _NurbsCurve.ByPoints_.
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -18,7 +18,7 @@ pts = Point.ByCoordinates(1..30..#num_pts, s, 0);
 int_curve = NurbsCurve.ByPoints(pts);
 ```
 
-The generated curve intersects each of the input points, beginning and ending at the first and last point in the collection, respectively. An optional periodic parameter can be used to create a periodic curve which is closed. Dynamo will automatically fill in the missing segment, so a duplicate end point (identical to the start point) isn’t needed.
+Wygenerowana krzywa przecina każdy z punktów wejściowych, zaczynając i kończąc odpowiednio na pierwszym i ostatnim punkcie w kolekcji. Opcjonalny parametr okresowy pozwala utworzyć krzywą okresową, która jest zamknięta. Dodatek Dynamo automatycznie wypełni brakujący segment, dlatego powielony punkt końcowy (identyczny z punktem początkowym) nie jest potrzebny.
 
 ![](../images/8-2/4/Curves\_02.png)
 
@@ -34,9 +34,9 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
     false);
 ```
 
-### Control Points Curve
+### Krzywa punktów kontrolnych
 
-NurbsCurves are generated in much the same way, with input points represent the endpoints of a straight line segment, and a second parameter specifying the amount and type of smoothing the curve undergoes, called the degree.\* A curve with degree 1 has no smoothing; it is a polyline.
+Krzywe NurbsCurve są generowane w ten sam sposób, przy czym punkty wejściowe reprezentują punkty końcowe segmentu linii prostej, a drugi parametr, nazywany stopniem, określa wielkość i typ wygładzania krzywej.\* Krzywa stopnia 1. nie ma wygładzenia; to polilinia.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-A curve with degree 2 is smoothed such that the curve intersects and is tangent to the midpoint of the polyline segments:
+Krzywa stopnia 2. zostaje wygładzona w taki sposób, że przecina i jest styczna do punktu środkowego segmentów polilinii:
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dynamo supports NURBS (Non-uniform rational B-spline) curves up to degree 20, and the following script illustrates the effect increasing levels of smoothing has on the shape of a curve:
+Dodatek Dynamo obsługuje krzywe NURBS (niejednorodne wymierne B-splajn) do 20. stopnia, a poniższy skrypt ilustruje wpływ zwiększającego się poziomu wygładzania na kształt krzywej:
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,9 +83,9 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-Note that you must have at least one more control point than the degree of the curve.
+Należy zwrócić uwagę, że musi istnieć co najmniej jeden punkt kontrolny więcej niż wynosi stopień krzywej.
 
-Another benefit of constructing curves by control vertices is the ability to maintain tangency between individual curve segments. This is done by extracting the direction between the last two control points, and continuing this direction with the first two control points of the following curve. The following example creates two separate NURBS curves which are nevertheless as smooth as one curve:
+Inną zaletą tworzenia krzywych przez wierzchołki kontrolne jest możliwość utrzymania styczności między poszczególnymi segmentami krzywej. Odbywa się to przez wyodrębnienie kierunku między dwoma ostatnimi punktami kontrolnymi i kontynuowanie tego kierunku z dwoma pierwszymi punktami kontrolnymi kolejnej krzywej. W poniższym przykładzie tworzone są dwie oddzielne krzywe NURBS, które mimo to są gładkie jak jedna krzywa:
 
 ![](../images/8-2/4/Curves\_06.png)
 
@@ -116,5 +116,5 @@ crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
 {% hint style="info" %}
-\*This is a very simplified description of NURBS curve geometry, for a more accurate and detailed discussion see Pottmann, et al, 2007, in the references.
+\*Jest to bardzo uproszczony opis geometrii krzywej NURBS. Aby uzyskać dokładniejsze i bardziej szczegółowe omówienie, skorzystaj z dokumentacji w odniesieniach: Pottmann i inni, 2007 r.
 {% endhint %}

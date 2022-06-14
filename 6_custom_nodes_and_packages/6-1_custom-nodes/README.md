@@ -1,6 +1,6 @@
-# Custom Nodes
+# Węzły niestandardowe
 
-Dynamo offers many Core Nodes for a wide range of visual programming tasks. Sometimes a quicker, more elegant, or more easily shared solution is to build your own Nodes. These can be reused among different projects, they make your graphs clearer and cleaner, and they can be pushed to the package manager and shared with the global Dynamo community.
+Dodatek Dynamo oferuje wiele węzłów podstawowych, które umożliwiają wykonywanie szerokiej gamy zadań programowania wizualnego. Czasami szybszym, bardziej eleganckim lub łatwiejszym do udostępnienia rozwiązaniem jest utworzenie własnych węzłów. Można ich ponownie używać w różnych projektach, dzięki czemu wykresy stają się czytelniejsze. Można je też przekazywać do Menedżera pakietów i udostępniać globalnej społeczności dodatku Dynamo.
 
 ![](<../images/6-1/customNodes1 (1).png>)
 

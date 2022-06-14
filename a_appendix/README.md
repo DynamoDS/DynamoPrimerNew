@@ -1,6 +1,6 @@
-# Appendix
+# Dodatek
 
-In this section, you can find additional resources for taking your Dynamo game one step further. We've also added an index of important nodes, a collection of useful packages, and a repository of the example files in this primer. Please feel free to add to this section...remember, the [Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) is open source!
+W tej sekcji można znaleźć dodatkowe zasoby do doskonalenia umiejętności związanych z dodatkiem Dynamo. W tym przewodniku udostępniliśmy również indeks ważnych węzłów, kolekcję użytecznych pakietów i repozytorium plików przykładowych. Zachęcamy do swobodnego rozbudowywania tej sekcji. Warto pamiętać, że przewodnik [Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) jest zasobem typu open source.
 
 &#x20;
 

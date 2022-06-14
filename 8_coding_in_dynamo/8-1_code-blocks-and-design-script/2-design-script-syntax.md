@@ -1,142 +1,142 @@
-# DesignScript Syntax
+# Składnia języka DesignScript
 
-You may have noticed a common theme in the names of nodes in Dynamo: each node uses a _"."_ syntax without spaces. This is because the text at the top of each node represents the actual syntax for scripting, and the _"."_ (or _dot notation_) separates an element from the possible methods we can call. This creates an easy translation from visual scripting to text-based scripting.
+W nazwach węzłów w dodatku Dynamo można zauważyć wspólną cechę: w każdym węźle używana jest składnia _„.”_ bez spacji. Jest tak dlatego, że tekst znajdujący się na górze każdego węzła odzwierciedla rzeczywistą składnię skryptów, a znak _„.”_ (_notacja kropkowa_) oddziela element od metod, które możemy wywołać. W ten sposób można łatwo przekształcać skrypty wizualne w skrypty tekstowe.
 
-![NodeNames](../images/8-1/2/apple.jpg)
+![Nazwy węzłów](../images/8-1/2/apple.jpg)
 
-As a general analogy for the dot notation, how can we deal with a parametric apple in Dynamo? Below are a few methods we'll run on the apple before deciding to eat it. (Note: these are not actual Dynamo methods):
+Omawiając notację kropkową przez analogię, zobaczmy, co możemy zrobić z parametrycznym jabłkiem w dodatku Dynamo. Poniżej przedstawiono kilka metod, które zastosujemy do jabłka, zanim zdecydujemy się je zjeść. (Uwaga: to nie są rzeczywiste metody dodatku Dynamo):
 
-| Human Readible                 | Dot Notation              | Output |
+| Czytelne dla człowieka | Notacja kropkowa | Wynik |
 | ------------------------------ | ------------------------- | ------ |
-| What color is the apple?       | Apple.color               | red    |
-| Is the apple ripe?             | Apple.isRipe              | true   |
-| How much does the apple weigh? | Apple.weight              | 6 oz.  |
-| Where did the apple come from? | Apple.parent              | tree   |
-| What does the apple create?    | Apple.children            | seeds  |
-| Is this apple locally grown?   | Apple.distanceFromOrchard | 60 mi. |
+| Jakiego koloru jest to jabłko? | Apple.color (Jabłko.kolor) | red (czerwone) |
+| Czy to jabłko jest dojrzałe? | Apple.isRipe (Jabłko.czyDojrzałe) | true (prawda) |
+| Ile waży to jabłko? | Apple.weight (Jabłko.waga) | 6 uncji |
+| Skąd pochodzi to jabłko? | Apple.parent (Jabłko.elementNadrzędny) | tree (drzewo) |
+| Co tworzy to jabłko? | Apple.children (Jabłko.elementyPodrzędne) | seeds (nasiona) |
+| Czy to jabłko jest uprawiane lokalnie? | Apple.distanceFromOrchard (Jabłko.odległośćOdSadu) | 60 mil |
 
-I don't know about you, but judging by the outputs in the table above, this looks like one tasty apple. I think I'll _Apple.eat()_ it.
+Można się nie zgodzić, ale wyniki w powyższej tabeli wskazują, że to bardzo smaczne jabłko. Możemy zastosować do niego funkcję _Apple.eat()_ (Jabłko.zjeść).
 
-### Dot Notation in Code Block
+### Notacja kropkowa w bloku kodu
 
-With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block.
+Pamiętając o porównaniu z jabłkiem, przyjrzyjmy się węzłowi _Point.ByCoordinates_ i zobaczmy, jak można utworzyć punkt za pomocą bloku kodu.
 
-The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
+Składnia `Point.ByCoordinates(0,10);` w _bloku kodu_ daje taki sam wynik jak węzeł _Point.ByCoordinates_ w dodatku Dynamo, z tą różnicą, że umożliwia utworzenie punktu za pomocą jednego węzła. Jest to bardziej wydajne niż łączenie oddzielnego węzła ze współrzędnymi _„X”_ i _„Y”_.
 
 ![](<../images/8-1/2/codeblock dot notation.jpg>)
 
-> 1. By using _Point.ByCoordinates_ in the code block, we are specifying the inputs in the same order as the out-of-the-box node _(X,Y)_.
+> 1. Używając polecenia _Point.ByCoordinates_ w bloku kodu, określamy dane wejściowe w takiej samej kolejności jak w gotowym węźle: _(X,Y)_.
 
-### Calling Nodes - Create, Actions, Query
+### Wywoływanie węzłów — tworzenie, operacje, zapytanie
 
-You can call any regular node in the library through a Code Block as long as the node isn’t a special _“UI” node_: those with a special user interface feature. For instance, you can call _Circle.ByCenterPointRadius_, but it wouldn’t make much sense to call a _Watch 3D_ node.
+Można wywołać dowolny zwykły węzeł w bibliotece za pomocą bloku kodu, o ile nie jest to specjalny _węzeł interfejsu użytkownika_, pełniący szczególną funkcję w interfejsie użytkownika. Można na przykład wywołać węzeł _Circle.ByCenterPointRadius_, ale wywołanie węzła _Watch 3D_ nie miałoby sensu.
 
-Regular nodes (most of your library), generally come in three types. You’ll find that the library is organized with these categories in mind. Methods, or nodes, of these three types are treated differently when invoked within a Code Block.
+Zwykłe węzły (stanowiące większość biblioteki) należą do trzech ogólnych typów. Warto zauważyć, że biblioteka jest uporządkowana zgodnie z tymi kategoriami. Metody, czyli węzły, tych trzech typów są traktowane inaczej po wywołaniu w bloku kodu.
 
 ![](<../images/8-1/2/action create query category.jpg>)
 
-> 1. **Create** - Create (or construct) something
-> 2. **Action** - Perform an action on something
-> 3. **Query** - Get a property of something that already exists
+> 1. **Create** — umożliwiają utworzenie (lub konstruowanie) elementu.
+> 2. **Action** — umożliwiają wykonywanie operacji na elementach.
+> 3. **Query** — umożliwiają pobranie właściwości istniejącego elementu.
 
 #### Create
 
-The "Create" category will construct geometry from scratch. We input values in the code block from left-to-right. These inputs are in the same order as the inputs on the node from top-to-bottom.
+Kategoria „Create” umożliwia tworzenie geometrii od podstaw. Wprowadzamy wartości w bloku kodu od lewej do prawej. Te dane wejściowe mają taką samą kolejność, jak elementy wejściowe węzła uporządkowane od góry do dołu.
 
-Comparing the _Line.ByStartPointEndPoint_ node and the corresponding syntax in the code block, we get the same results.
+Porównując węzeł _Line.ByStartPointEndPoint_ i odpowiadającą mu składnię w bloku kodu, otrzymujemy te same wyniki.
 
 ![](../images/8-1/2/create.jpg)
 
 #### Action
 
-An action is something you do to an object of that type. Dynamo uses _dot notation_, common to many coding languages, to apply an action to a thing. Once you have the thing, type a dot then the name of the action. The action-type method’s input is placed in parentheses just like create-type methods, only you don’t have to specify the first input you see on the corresponding node. Instead, we specify the element upon which we are performing the action:
+Określa operację wykonywaną na obiekcie danego typu. W dodatku Dynamo do wykonywania operacji na obiekcie używana jest _notacja kropkowa_, wspólna dla wielu języków kodowania. Po wpisaniu obiektu wpisz kropkę, a następnie nazwę operacji. Dane wejściowe metod typu Action są umieszczane w nawiasach, podobnie jak w przypadku metod typu Create, z tym że nie trzeba określać pierwszego elementu wejściowego widocznego w odpowiednim węźle. Zamiast tego należy określić element, na którym wykonywana jest operacja:
 
 ![](<../images/8-1/2/DesignScript - action.jpg>)
 
-> 1. The **Point.Add** node is an action-type node, so the syntax works a little differently.
-> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a **Code Block**, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the **Point.Add** node minus the first one. The first input for the **Point.Add** node is the point itself.
+> 1. Węzeł **Point.Add **stanowi węzeł typu Action, dlatego składnia nieco się różni.
+> 2. Dane wejściowe to (1) _punkt_ i (2) _wektor_, który ma być do niego dodany. W węźle **Code Block** nazwaliśmy ten punkt (obiekt) _„pt”_. Aby dodać wektor o nazwie \*„vec”\* do punktu _„pt”_, należy napisać _pt.Add(vec)_, czyli: obiekt, kropka, operacja. Operacja Add ma tylko jeden element wejściowy, czyli wszystkie elementy wejściowe węzła **Point.Add** z wyjątkiem pierwszego. Pierwszym elementem wejściowym węzła **Point.Add **jest sam punkt.
 
 #### Query
 
-Query-type methods get a property of an object. Since the object itself is the input, you don’t have to specify any inputs. No parentheses required.
+Metody typu Query pobierają właściwość obiektu. Ponieważ sam obiekt jest elementem wejściowym, nie trzeba określać żadnych danych wejściowych. Nie są wymagane nawiasy.
 
 ![](../images/8-1/2/query.jpg)
 
-### How About Lacing?
+### A co ze skratowaniem?
 
-Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.
+Skratowanie w przypadku węzłów i bloków kodu nieco się różni. W przypadku węzłów użytkownik klika prawym przyciskiem myszy węzeł i wybiera opcję skratowania, którą chce zastosować. W bloku kodu użytkownik ma znacznie większą kontrolę nad strukturą danych. W krótkiej składni metody w bloku kodu wykorzystuje się _prowadnice replikacji_ do określenia, w jaki sposób połączyć w pary kilka jednowymiarowych list. Numery w nawiasach ostrych „<>” definiują hierarchię wynikowej listy zagnieżdżonej: <1>,<2>,<3> i tak dalej.
 
 ![](<../images/8-1/2/DesignScript - lacing.jpg>)
 
-> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7`is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a Cross Product).
-> 2. Using the syntax **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` we get _two_ lists with _five_ items in each list.
-> 3. Using the syntax **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` we get _five_ lists with _two_ items in each list.
+> 1. W tym przykładzie użyjemy krótkiej składni do zdefiniowania dwóch zakresów (więcej informacji na temat krótkiej składni przedstawiono w następnej sekcji tego rozdziału). Krótko mówiąc: `0..1;` odpowiada `{0,1}`, a `-3..-7` odpowiada `{-3,-4,-5,-6,-7}`. W wyniku tej operacji zostaną zwrócone listy 2 wartości x i 5 wartości y. Jeśli nie użyjemy prowadnic replikacji z tymi niedopasowanymi listami, otrzymamy listę dwóch punktów, ponieważ tyle wynosi długość najkrótszej listy. Za pomocą prowadnic replikacji można znaleźć wszystkie możliwe kombinacje 2 i 5 współrzędnych (czyli iloczyn wektorowy).
+> 2. Użycie składni **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` umożliwia uzyskanie _dwóch_ list, z których każda zawiera _pięć_ elementów.
+> 3. Użycie składni **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` umożliwia uzyskanie _pięciu_ list, z których każda zawiera _dwa_ elementy.
 
-With this notation, we can also specify which list will be dominant: 2 lists of 5 things or 5 lists of 2 things. In the example, changing the order of the replication guides makes the result a list of rows of points or a list of columns of points in a grid.
+Przy tym zapisie możemy także określić, która lista będzie dominująca: 2 listy po 5 elementów czy 5 list po 2 elementy. W tym przykładzie zmiana kolejności prowadnic replikacji powoduje, że wynikiem jest lista wierszy punktów lub lista kolumn punktów w siatce.
 
-### Node to Code
+### Konwersja węzłów na kod
 
-While the code block methods above may take some getting used to, there is a feature in Dynamo called "Node to Code" which will make the process easier. To use this feature, select an array of nodes in your Dynamo graph, right-click on the canvas and select "Node to Code". Dynamo condenses these nodes into a code block, with all of the inputs and outputs! Not only is this a great tool for learning code block, but it also allows you to work with a more efficient and parametric Dynamo graph. We'll conclude the exercise below by using "Node to Code", so don't miss it.
+Chociaż przyzwyczajenie się do metod bloków kodu może wymagać trochę wysiłku, w dodatku Dynamo dostępna jest funkcja konwersji węzłów na kod, która to ułatwia. Aby użyć tej funkcji, wybierz szyk węzłów na wykresie dodatku Dynamo, kliknij prawym przyciskiem myszy obszar rysunku i wybierz opcję „Węzeł do kodowania”. Dodatek Dynamo połączy te węzły w blok kodu zawierający wszystkie dane wejściowe i wyjściowe. To nie tylko doskonałe narzędzie do poznawania bloków kodu, ale też sposób na uzyskanie bardziej wydajnych i parametrycznych wykresów dodatku Dynamo. Poniższe ćwiczenie wymaga użycia konwersji węzłów na kod, więc nie przegap tego.
 
 ![](<../images/8-1/2/DesignScript - node to code.jpg>)
 
-## Exercise: Surface Attractor
+## Ćwiczenie: przyciąganie powierzchni
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-To show the power of code block, we are going to translate an existing attractor field definition into code block form. Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
+Aby pokazać możliwości bloków kodu, przekształcimy istniejącą definicję pola atraktorowego w formę bloków kodu. Praca z istniejącą definicją pokazuje powiązania między blokiem kodu a skryptami wizualnymi i ułatwia naukę składni języka DesignScript.
 
-Begin by recreating the definition in the image above (or by opening the sample file).
+Rozpocznij od odtworzenia definicji z powyższego rysunku (lub otwarcia pliku przykładowego).
 
 ![](<../images/8-1/2/DesignScript - exercise - 01.jpg>)
 
-> 1. Notice that the lacing on **Point.ByCoordinates** has been set to _Cross Product_.
-> 2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
-> 3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
+> 1. Zwróć uwagę, że skratowanie węzła **Point.ByCoordinates** zostało ustawione na _iloczyn wektorowy_.
+> 2. Każdy punkt na siatce jest przesunięty w górę w kierunku Z na podstawie odległości od punktu odniesienia.
+> 3. Po odtworzeniu i pogrubieniu powierzchni w geometrii powstaje wypukłość zależna od odległości od punktu odniesienia.
 
 ![](<../images/8-1/2/DesignScript - exercise - 02.jpg>)
 
-> 1. Starting from the beginning, let's define the reference point first: **Point.ByCoordinates**`(x,y,0);` We use the same **Point.ByCoordinates** syntax as is specified on the top of the reference point node.
-> 2. The variables _x_ and _y_ are inserted into the **Code Block** so that we may update these dynamically with sliders.
-> 3. Add some _sliders_ to the **Code Block** inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
+> 1. Najpierw zdefiniujmy punkt odniesienia: **Point.ByCoordinates**`(x,y,0);`. Użyjemy tej samej składni **Point.ByCoordinates** jak ta widoczna w górnej części węzła tworzącego punkt odniesienia.
+> 2. Zmienne _x_ i _y_**** są wstawione do bloku kodu, dzięki czemu można je dynamicznie aktualizować za pomocą suwaków.
+> 3. Dodaj _suwaki_ do wejść węzła **Code Block** mające zakres od –50 do 50. W ten sposób można objąć cały obszar domyślnej siatki dodatku Dynamo.
 
 ![](<../images/8-1/2/DesignScript - exercise - 03.jpg>)
 
-> 1. In the second line of the **Code Block**, we define a shorthand to replace the number sequence node: `coordsXY = (-50..50..#11);`We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the **Number Sequence** node in the visual script.
+> 1. W drugim wierszu węzła **Code Block** zdefiniujemy skrót, który zastąpi węzeł sekwencji liczb: `coordsXY = (-50..50..#11);`Więcej informacji na ten temat podamy w następnej sekcji. Na razie wystarczy zauważyć, że ten skrót odpowiada węzłowi **Number Sequence** w skrypcie wizualnym.
 
 ![](<../images/8-1/2/DesignScript - exercise - 04.jpg>)
 
-> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the **Point.ByCoordinates** syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` The angled brackets denote the cross product reference.
-> 2. Notice in the **Watch3D** node that we have a grid of points across the Dynamo grid.
+> 1. Teraz chcemy utworzyć siatkę punktów na podstawie sekwencji _coordsXY_. W tym celu chcemy użyć składni **Point.ByCoordinates**, ale musimy też utworzyć _iloczyn wektorowy_ listy w taki sam sposób, jak w skrypcie wizualnym. W tym celu należy wpisać wiersz: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` Nawiasy ostre oznaczają odniesienie do iloczynu wektorowego.
+> 2. W węźle **Watch 3D** widać, że na siatce dodatku Dynamo znajduje się siatka punktów.
 
 ![](<../images/8-1/2/DesignScript - exercise - 05.jpg>)
 
-> 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. And since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
-> 2. Reading from the actual node on the canvas, we see that there are three inputs. The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
-> 3. The direction is simple enough, we use a `Vector.ZAxis()` to move vertically.
-> 4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: `refPt.DistanceTo(gridPts)`
-> 5. The final line of code gives us the translated points: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
+> 1. Teraz trudniejsza część: chcemy przesunąć siatkę punktów w górę na podstawie ich odległości od punktu odniesienia. Najpierw nazwiemy nowy zestaw punktów _transPts_. Ponieważ przekształcenie jest operacją na istniejącym elemencie, zamiast `Geometry.Translate...` użyjemy `gridPts.Translate`.
+> 2. Odczytując węzeł na obszarze rysunku, widzimy, że zawiera on trzy elementy wejściowe. Geometria do przekształcenia jest już zadeklarowana, ponieważ wykonujemy operację na tym elemencie (za pomocą składni _gridPts.Translate_). Pozostałe dwie wartości wejściowe, direction i _distance_, wstawimy w nawiasach funkcji.
+> 3. Kierunek jest łatwy do ustawienia — użyjemy składni `Vector.ZAxis()` do przesunięcia w pionie.
+> 4. Należy też obliczyć odległość między punktem odniesienia a każdym punktem siatki, dlatego wykonamy operację dotyczącą punktu odniesienia w ten sam sposób: `refPt.DistanceTo(gridPts)`
+> 5. Ostatni wiersz kodu pozwala uzyskać przekształcone punkty: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
 
 ![](<../images/8-1/2/DesignScript - exercise - 06.jpg>)
 
-> 1. We now have a grid of points with the appropriate data structure to create a Nurbs Surface. We construct the surface using `srf = NurbsSurface.ByControlPoints(transPts);`
+> 1. Otrzymaliśmy siatkę punktów ze strukturą danych odpowiednią do utworzenia powierzchni NURBS. Konstruujemy powierzchnię, używając składni `srf = NurbsSurface.ByControlPoints(transPts);`
 
 ![](<../images/8-1/2/DesignScript - exercise - 07.jpg>)
 
-> 1. And finally, to add some depth to the surface, we construct a solid using `solid = srf.Thicken(5);` In this case we thickened the surface by 5 units in the code, but we could always declare this as a variable (calling it thickness for example) and then control that value with a slider.
+> 1. Na koniec dodamy do powierzchni głębię, tworząc bryłę przy użyciu składni `solid = srf.Thicken(5);` W tym przypadku pogrubiliśmy powierzchnię o 5 jednostek w kodzie, ale zawsze możemy zadeklarować tę wartość jako zmienną (na przykład o nazwie thickness) i określać ją suwakiem.
 
-#### Simplify the Graph with "Node to Code"
+#### Upraszczanie wykresu dzięki konwersji węzłów na kod
 
-The "Node to Code" feature automates the entire exercise that we just completed with the click of a button. Not only is this powerful for creating custom definitions and reusable code blocks, but it is also a really helpful tool to learn how to script in Dynamo:
+Funkcja konwersji węzłów na kod umożliwia zautomatyzowanie całego ćwiczenia, które właśnie wykonaliśmy, jednym kliknięciem przycisku. Jest to nie tylko wydajny sposób tworzenia niestandardowych definicji i bloków kodu wielokrotnego użytku, ale również naprawdę przydatne narzędzie do nauki tworzenia skryptów w dodatku Dynamo:
 
 ![](<../images/8-1/2/DesignScript - exercise - 08.jpg>)
 
-> 1. Start with the existing visual script from step 1 of the exercise. Select all of the nodes, right click on the canvas, and select _"Node to Code"_. Simple as that.
+> 1. Rozpocznij od istniejącego skryptu wizualnego z kroku 1. ćwiczenia. Wybierz wszystkie węzły, kliknij prawym przyciskiem myszy obszar rysunku i wybierz polecenie _„Węzeł do kodowania”_. To wystarczy.
 
-Dynamo has automated a text based version of the visual graph, lacing and all. Test this out on your visual scripts and release the power of the code block!
+W dodatku Dynamo została automatycznie utworzona tekstowa wersja wykresu graficznego, wraz ze skratowaniem i innymi elementami. Przetestuj tę funkcję na własnych skryptach wizualnych i wykorzystaj możliwości bloków kodu.
 
 ![](<../images/8-1/2/DesignScript - exercise - 09.jpg>)

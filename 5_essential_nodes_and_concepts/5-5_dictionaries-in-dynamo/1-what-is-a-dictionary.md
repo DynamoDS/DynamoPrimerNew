@@ -1,40 +1,40 @@
-# What is a Dictionary
+# Co to jest słownik
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+W dodatku Dynamo 2.0 wprowadzono oddzielenie typu danych słownika od typu danych listy. Ta modyfikacja może spowodować istotne zmiany w sposobie tworzenia i pracy z danymi w procesach roboczych. Przed wersją 2.0 słowniki i listy stanowiły jeden typ danych. W skrócie: listy były w rzeczywistości słownikami z kluczami w formie liczb całkowitych.
 
-### **What is a dictionary?**
+### **Co to jest słownik?**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+Słownik jest typem danych składającym się z kolekcji par wartości i kluczy, przy czym każdy klucz jest niepowtarzalny w danej kolekcji. Słownik nie jest uporządkowany i zasadniczo można „wyszukiwać elementy”, używając klucza zamiast wartości indeksu — jak w przypadku listy. _W dodatku Dynamo 2.0 klucze mogą być tylko ciągami._
 
-### **What is a list?**
+### **Co to jest lista?**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+Lista jest typem danych składającym się z kolekcji uporządkowanych wartości. W dodatku Dynamo indeksy listy są liczbami całkowitymi.
 
-### **Why was this change made and why should I care?**
+### **Dlaczego ta zmiana została wprowadzona i jakie ma znaczenie dla użytkownika?**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+Rozdzielenie słowników od list sprawia, że słowniki stają się pierwszoligowym narzędziem, którego można używać do szybkiego i łatwego przechowywania i wyszukiwania wartości bez konieczności zapamiętywania wartości indeksu ani utrzymywania ścisłej struktury listy w całym procesie roboczym. Podczas testowania u użytkowników dostrzegliśmy znaczne zmniejszenie rozmiaru wykresu, gdy używano słowników zamiast kilku węzłów `GetItemAtIndex`.
 
-### **What are the changes?**
+### **Na czym polegają różnice?**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* Wprowadzono zmiany w _składni_ w zakresie inicjalizacji słowników i list w blokach kodu oraz pracy z nimi.
+   * W przypadku słowników używana jest następująca składnia: `{key:value}`
+   * Listy mają następującą składnię `[value,value,value]`
+* W bibliotece wprowadzono _nowe węzły_, aby ułatwić tworzenie i modyfikowanie słowników oraz stosowanie do nich zapytań.
+* Listy tworzone w blokach kodu w wersji 1.x będą automatycznie migrowane po wczytaniu skryptu do nowej składni listy, w której są używane nawiasy kwadratowe `[ ]` zamiast nawiasów klamrowych `{ }` \\
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **Dlaczego należy się tym przejmować? Do czego służą te elementy?**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+W informatyce słowniki — tak jak listy — to kolekcje obiektów. Listy mają określony porządek, natomiast słowniki są kolekcjami _nieuporządkowanymi_. Nie są one zależne od sekwencji liczby (indeksów). Wykorzystuje się w nich _klucze._
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+Na poniższej ilustracji pokazano potencjalny przypadek zastosowania słownika. Często słowniki są używane do powiązania dwóch fragmentów danych, które mogą nie mieć bezpośredniej korelacji. W naszym przypadku połączymy hiszpańską wersję słowa z angielską do późniejszego wyszukania.
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. Utwórz słownik, aby powiązać te dwa elementy danych.
+> 2. Pobierz wartość związaną z podanym kluczem.

@@ -1,103 +1,103 @@
-# Creating a Custom Node
+# Tworzenie węzła niestandardowego
 
-Dynamo offers several different methods for creating custom nodes. You can build custom nodes from scratch, from an existing graph, or explicitly in C#. In this section we will cover building a custom node in the Dynamo UI from an existing graph. This method is ideal for cleaning up the workspace, as well as packaging a sequence of nodes to reuse elsewhere.
+Dodatek Dynamo oferuje kilka różnych metod tworzenia węzłów niestandardowych. Węzły niestandardowe można tworzyć od podstaw, z istniejącego wykresu lub bezpośrednio w języku C#. W tej części omówimy tworzenie węzła niestandardowego w interfejsie użytkownika dodatku Dynamo z istniejącego wykresu. Ta metoda jest idealna do czyszczenia obszaru roboczego, jak również do pakowania sekwencji węzłów do ponownego użycia w innym miejscu.
 
-## Exercise: Custom Nodes for UV Mapping
+## Ćwiczenie: węzły niestandardowe dla odwzorowania UV
 
-### Part I: Start with a Graph
+### Część I. Rozpoczynanie od wykresu
 
-In the image below, we map a point from one surface to another using UV coordinates. We'll use this concept to create a panelized surface which references curves in the XY plane. We'll create quad panels for our panelization here, but using the same logic, we can create a wide variety of panels with UV mapping. This is a great opportunity for custom node development because we will be able to repeat a similar process more easily in this graph or in other Dynamo workflows.
+Na poniższej ilustracji odwzorowujemy punkt z jednej powierzchni na drugą za pomocą współrzędnych UV. Użyjemy tej koncepcji do utworzenia panelowanej powierzchni, która odwołuje się do krzywych na płaszczyźnie XY. Utworzymy tu panele czworokątne dla naszego panelowania, ale stosując tę samą logikę, możemy utworzyć szeroką gamę paneli z odwzorowaniem UV. Jest to świetna okazja do tworzenia węzłów niestandardowych, ponieważ w ten sposób łatwiej będzie powtórzyć podobny proces na tym wykresie lub w innych procesach roboczych Dynamo.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 01.jpg>)
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-Let’s start by creating a graph that we want to nest into a custom node. In this example, we will create a graph that maps polygons from a base surface to a target surface, using UV coordinates. This UV mapping process is something we use frequently, making it a good candidate for a custom node. For more information on surfaces and UV space, refer to the [Surface ](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)page. The complete graph is _UVmapping\_Custom-Node.dyn_ from the .zip file downloaded above.
+Zacznijmy od utworzenia wykresu, który zagnieździmy w węźle niestandardowym. W tym przykładzie utworzymy wykres, który będzie odwzorowywać wieloboki z powierzchni bazowej na powierzchnię docelową, za pomocą współrzędnych UV. Ten proces odwzorowywania UV jest często używany, przez co jest to dobra opcja dla węzła niestandardowego. Aby uzyskać więcej informacji na temat powierzchni i przestrzeni UV, zobacz stronę [Powierzchnia](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). Pełny wykres: _UVmapping\_Custom-Node.dyn_ z pliku .zip pobranego powyżej.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
 
-> 1. **Code Block:** Use this line to create a range of 10 numbers between -45 and 45 `45..45..#10;`
-> 2. **Point.ByCoordinates:** Connect the output of the **Code Block** to the ‘x’ and ‘y’ inputs and set the lacing to cross-reference. You should now have a grid of points.
-> 3. **Plane.ByOriginNormal:** Connect the _‘Point’_ output to the _‘origin’_ input to create a plane at each of the points. The default normal vector of (0,0,1) will be used.
-> 4. **Rectangle.ByWidthLength:** Connect the planes from the previous step into the _‘plane’_ input, and use a **Code Block** with a value of _10_ to specify the width and length.
+> 1. **Code Block:** użyj tego wiersza, aby utworzyć zakres 10 liczb od -45 do 45 `45..45..#10;`
+> 2. **Point.ByCoordinates**: połącz wyjście węzła **Code Block** z wejściami „x” i „y” oraz ustaw skratowanie na odniesienie krzyżowe. Powinna teraz istnieć siatka punktów.
+> 3. **Plane.ByOriginNormal:** połącz wyjście _„Point”_ z wejściem _„origin”_, aby utworzyć płaszczyznę w każdym z punktów. Zostanie użyty domyślny wektor normalny (0,0,1).
+> 4. **Rectangle.ByWidthLength**: połącz płaszczyzny z poprzedniego kroku z wejściem „_plane_” i użyj węzła **Code Block** z wartością _10_ w celu określenia szerokości i długości.
 
-You should now see a grid of rectangles. Let’s map these rectangles to a target surface using UV coordinates.
+Powinna teraz istnieć siatka prostokątów. Odwzorujmy te prostokąty na powierzchnię docelową za pomocą współrzędnych UV.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
 
-> 1. **Polygon.Points:** Connect the **Rectangle.ByWidthLength** output from the previous step to the _‘polygon’_ input to extract the corner points of each rectangle. These are the points that we will map to the target surface.
-> 2. **Rectangle.ByWidthLength:** Use a **Code Block** with a value of _100_ to specify the width and length of a rectangle. This will be the boundary of our base surface.
-> 3. **Surface.ByPatch:** Connect the **Rectangle.ByWidthLength** from the previous step to the _‘closedCurve’_ input to create a base surface.
-> 4. **Surface.UVParameterAtPoint:** Connect the _‘Point’_ output of the **Polygon.Points** node and the _‘Surface’_ output of the **Surface.ByPatch** node to return the UV parameter at each point.
+> 1. **Polygon.Points**: połącz wyjście **Rectangle.ByWidthLength** z poprzedniego kroku z wejściem „_polygon_”, aby wyodrębnić punkty narożne każdego prostokąta. Są to punkty, które odwzorujemy na powierzchnię docelową.
+> 2. **Rectangle.ByWidthLength**: użyj węzła **Code Block** z wartością _100_, aby określić szerokość i długość prostokąta. Będzie to obwiednia powierzchni bazowej.
+> 3. **Surface.ByPatch**: połącz węzeł **Rectangle.ByWidthLength** z poprzedniego kroku z wejściem „_closedCurve_”, aby utworzyć powierzchnię bazową.
+> 4. **Surface.UVParameterAtPoint:** połącz wyjście _„Point”_ węzła **Polygon.Points** i wyjście _„Surface”_ węzła **Surface.ByPatch**, aby zwrócić parametr UV w każdym punkcie.
 
-Now that we have a base surface and a set of UV coordinates, we can import a target surface and map the points between surfaces.
+Teraz gdy mamy powierzchnię bazową i zbiór współrzędnych UV, możemy zaimportować powierzchnię docelową i odwzorować punkty między powierzchniami.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 04.jpg>)
 
-> 1. **File Path:** Select the file path of the surface you want to import. The file type should be .SAT. Click the _"Browse..."_ button and navigate to the _UVmapping\_srf.sat_ file from the .zip file downloaded above.
-> 2. **Geometry.ImportFromSAT:** Connect the file path to import the surface. You should see the imported surface in the geometry preview.
-> 3. **UV:** Connect the UV parameter output to a _UV.U_ and a _UV.V_ node.
-> 4. **Surface.PointAtParameter:** Connect the imported surface as well as the u and v coordinates. You should now see a grid of 3D points on the target surface.
+> 1. **Ścieżka pliku:** wybierz ścieżkę pliku dla powierzchni, którą chcesz zaimportować. Powinien to być plik typu .SAT. Kliknij przycisk _„Przeglądaj”_ i przejdź do pliku _UVmapping\_srf.sat_ z pliku .zip pobranego powyżej.
+> 2. **Geometry.ImportFromSAT:** połącz ścieżkę pliku, aby zaimportować powierzchnię. W podglądzie geometrii powinna być widoczna zaimportowana powierzchnia.
+> 3. **UV:** połącz wyjście parametru UV z węzłami _UV.U_ i _UV.V_.
+> 4. **Surface.PointAtParameter:** połącz zaimportowaną powierzchnię oraz współrzędne u i v. Na powierzchni docelowej powinna być teraz widoczna siatka punktów 3D.
 
-The final step is to use the 3D points to construct rectangular surface patches.
+Ostatnią czynnością jest użycie punktów 3D do utworzenia prostokątnych płatów powierzchni.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 05.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the points on the surface to construct a polycurve through the points.
-> 2. **Boolean:** Add a **Boolean** to the workspace and connect it to the _‘connectLastToFirst’_ input and toggle to True to close the polycurves. You should now see rectangles mapped to the surface.
-> 3. **Surface.ByPatch:** Connect the polycurves to the _‘closedCurve’_ input to construct surface patches.
+> 1. **PolyCurve.ByPoints:** połącz punkty na powierzchni, aby skonstruować krzywą PolyCurve przez punkty.
+> 2. **Boolean**: dodaj węzeł **Boolean** do obszaru roboczego i połącz go z wejściem _„connectLastToFirst”_ oraz przełącz na wartość True, aby zamknąć krzywe PolyCurve. Powinny być teraz widoczne prostokąty odwzorowane na powierzchnię.
+> 3. **Surface.ByPatch:** połącz krzywe PolyCurve z wejściem _„closedCurve”_, aby skonstruować płaty powierzchni.
 
-### Part II: From Graph to Custom Node
+### Część II. Od wykresu do węzła niestandardowego
 
-Now let’s select the nodes that we want to nest into a Custom Node, thinking about what we want to be the inputs and outputs of our node. We want our Custom Node to be as flexible as possible, so it should be able to map any polygons, not just rectangles.
+Teraz wybierzmy węzły do zagnieżdżenia w węźle niestandardowym, uwzględniając to, jakie powinny być wejścia i wyjścia węzła. Chcemy, aby węzeł niestandardowy był możliwie najbardziej elastyczny, by umożliwiał odwzorowanie dowolnych wieloboków, a nie tylko prostokątów.
 
-Select the following Nodes (beginning with Polygon.Points), right click on the workspace and select ‘Create Custom Node’.
+Wybierz następujące węzły (począwszy od węzła Polygon.Points), kliknij prawym przyciskiem myszy obszar roboczy i wybierz opcję „Utwórz węzeł niestandardowy”.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 01.jpg>)
 
-In the Custom Node Properties dialog, assign a name, description, and category to the Custom Node.
+W oknie dialogowym Właściwości węzła niestandardowego przypisz nazwę, opis i kategorię do węzła niestandardowego.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 02.jpg>)
 
-> 1. Name: MapPolygonsToSurface
-> 2. Description: Map polygon(s) from a base to target surface
-> 3. Add-ons Category: Geometry.Curve
+> 1. Nazwa: MapPolygonsToSurface
+> 2. Opis: odwzoruj wielokąty z powierzchni bazowej na powierzchnię docelową
+> 3. Kategoria dodatków: Geometry.Curve
 
-The Custom Node has considerably cleaned up the workspace. Notice that the inputs and outputs have been named based on the original nodes. Let’s edit the Custom Node to make the names more descriptive.
+Węzeł niestandardowy znacznie wyczyścił obszar roboczy. Warto zauważyć, że wejścia i wyjścia zostały nazwane na podstawie oryginalnych węzłów. Zmodyfikujmy węzeł niestandardowy, zmieniając te nazwy na bardziej opisowe.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 03.jpg>)
 
-Double click the Custom Node to edit it. This will open a workspace with a yellow background representing the inside of the node.
+Kliknij dwukrotnie węzeł niestandardowy, aby go edytować. Spowoduje to otwarcie obszaru roboczego z żółtym tłem reprezentującym wnętrze węzła.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
 
-> 1. **Inputs:** Change the input names to _baseSurface_ and _targetSurface_.
-> 2. **Outputs:** Add an additional output for the mapped polygons.
+> 1. **Węzły Input:** zmień nazwy wejść na _baseSurface_ i _targetSurface_.
+> 2. **Węzły Output:** dodaj kolejne wyjście dla odwzorowanych wieloboków.
 
-Save the custom node and return to the home workspace. Notice the **MapPolygonsToSurface** node reflects the changes we just made.
+Zapisz węzeł niestandardowy i wróć do głównego obszaru roboczego. Uwaga: węzeł **MapPolygonsToSurface** odzwierciedla wprowadzone zmiany.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 05.jpg>)
 
-We can also add to the robustness of the Custom Node by adding in **Custom Comments**. Comments can help to hint at the input and output types or explain the functionality of the node. Comments will appear when the user hovers over an input or output of a Custom Node.
+Można również zwiększyć niezawodność węzła niestandardowego przez dodanie treści w sekcji **Komentarze niestandardowe**. Komentarze mogą pomóc w ustaleniu typów wejść i wyjść lub objaśnieniu funkcjonalności węzła. Komentarze pojawią się, gdy użytkownik ustawi kursor na wejściu lub wyjściu węzła niestandardowego.
 
-Double click the Custom Node to edit it. This will re-open the yellow background workspace.
+Kliknij dwukrotnie węzeł niestandardowy, aby go edytować. Spowoduje to ponowne otwarcie żółtego obszaru roboczego.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 06.jpg>)
 
-> 1. Begin editing the Input **Code Block**. To start a Comment, type "//" followed by the comment text. Type anything that may help to clarify the Node - Here we will describe the _targetSurface_.
-> 2. Let's also set the default value for the _inputSurface_ by setting the input type equal to a value. Here, we will set the default value to the original **Surface.ByPatch** set.
+> 1. Rozpocznij edycję wejściowego węzła **Code Block**. Aby rozpocząć komentarz, wpisz „//”, a następnie wpisz tekst komentarza. Wpisz wszelkie informacje, które mogą pomóc w objaśnieniu węzła — w tym miejscu opiszemy węzeł _targetSurface_.
+> 2. Ustawmy również domyślną wartość dla węzła _inputSurface_ przez ustawienie typu wejścia równego wartości. W tym miejscu ustawimy wartość domyślną na oryginalny zestaw **Surface.ByPatch**.
 
-Comments can also be applied to the Outputs.
+Komentarze można również stosować do wyjścia.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 07.jpg>)
 
-> Edit the text in the Output Code Block. Type "//" followed by the comment text. Here we will clarify the _Polygons_ and the _surfacePatches_ Outputs by adding a more in-depth description.
+> Edytuj tekst w wyjściowym węźle węzła Code Block. Wpisz „//”, a następnie wpisz tekst komentarza. W tym miejscu objaśnimy wyjścia _Polygons_ i _surfacePatches_ poprzez dodanie bardziej szczegółowego opisu.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 08.jpg>)
 
-> 1. Hover over the Custom Node Inputs to see the Comments.
-> 2. With the default value set on our _inputSurface_, we can also run the definition without a surface input.
+> 1. Ustaw kursor na wejściach węzła niestandardowego, aby wyświetlić komentarze.
+> 2. Po ustawieniu wartości domyślnej na _inputSurface_ można również uruchomić definicję bez wejścia powierzchni.

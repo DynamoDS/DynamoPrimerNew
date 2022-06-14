@@ -1,113 +1,113 @@
-# Strings
+# Ciągi
 
-### What is a String
+### Co to jest ciąg
 
-Formally, a **String** is a sequence of characters representing a literal constant or some type of variable. Informally, a string is programming lingo for text. We've worked with numbers, both integers and decimal numbers, to drive parameters and we can do the same with text.
+Formalnie **ciąg** jest sekwencją znaków reprezentujących stałą literową lub pewnego typu zmienną. Nieformalnie ciąg to programistyczne określenie tekstu. Pracowaliśmy już z liczbami, zarówno z liczbami całkowitymi, jak i z liczbami dziesiętnymi, aby sterować parametrami. Tak samo możemy pracować z tekstem.
 
-### Creating Strings
+### Tworzenie ciągów
 
-Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
+Ciągi mogą być używane w wielu zastosowaniach, w tym do definiowania parametrów niestandardowych, opisywania zestawów dokumentacji i analizowania zestawów danych tekstowych. Węzeł string (ciąg) znajduje się w kategorii Podstawowe > Kategoria wejściowa.
 
-The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
+Przykładowe węzły powyżej są ciągami. Liczba może być przedstawiona jako ciąg, podobnie jak litera lub cały szyk tekstu.
 
 ![](<../images/5-3/4/strings - creating strings.jpg>)
 
-## Exercise
+## Ćwiczenie
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-### Querying Strings
+### Stosowanie zapytań do ciągów
 
-You can parse through large amounts of data quickly by querying strings. We'll talk about some basic operations which can speed up a workflow and help for software interoperability.
+Można szybko analizować duże ilości danych, stosując zapytania do ciągów. Omówimy niektóre podstawowe operacje, które przyspieszają proces roboczy i ułatwiają współdziałanie oprogramowania.
 
-The image below considers a string of data coming from an external spreadsheet. The string represents the vertices of a rectangle in the XY-Plane. Let's break down some string split operations in miniature exercise:
+Na poniższej ilustracji przedstawiono ciąg danych pochodzących z zewnętrznego arkusza kalkulacyjnego. Ciąg reprezentuje wierzchołki prostokąta na płaszczyźnie XY. Przeanalizujmy niektóre operacje dzielenia ciągów w miniaturowym ćwiczeniu:
 
 ![](<../images/5-3/4/strings - querying strings 01.jpg>)
 
-> 1. The ";" separator splits each vertex of the rectangle. This creates a list with 3 items for each vertex.
+> 1. Separator „;” oddziela każdy wierzchołek prostokąta. Powoduje to utworzenie listy z 3 elementami dla każdego wierzchołka.
 
 ![](<../images/5-3/4/strings - querying strings 02.jpg>)
 
-> 1. By hitting the "_+_" in the middle of the Node, we create new separator.
-> 2. Add a "_,_" string to the canvas and plug in to the new separator input.
-> 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
+> 1. Naciśnięcie klawisza „_+_” w środku węzła powoduje utworzenie nowego separatora.
+> 2. Dodaj ciąg „_,_” do obszaru rysunku i utwórz podłączenie do nowego wejścia separatora.
+> 3. Wynik stanowi teraz listę dziesięciu elementów. Węzeł wykonuje dzielenie najpierw na podstawie separatora _separator0_, a następnie na podstawie separatora _separator1_.
 
-While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a number. This is done with the **String.ToNumber** Node
+Powyższa lista elementów może wyglądać jak liczby, ale nadal są one traktowane w dodatku Dynamo jak pojedyncze ciągi. Aby można było utworzyć punkty, ich typ danych musi zostać przekształcony z ciągu w liczbę. Jest to wykonywane za pomocą węzła **String.ToNumber**
 
 ![](<../images/5-3/4/strings - querying strings 03.jpg>)
 
-> 1. This Node is straightforward. Plug the **String.Split** results into the input. The output doesn't look different, but the data type is now a _number_ instead of a _string_.
+> 1. Ten węzeł jest prosty. Podłącz wyniki węzła **String.Split** do wejścia. Wynik nie wygląda inaczej, ale typ danych to teraz _number_ (liczba), a nie _string_ (ciąg).
 
-With some basic additional operations, we now have a triangle drawn at the origin based on the original string input.
+Po wykonaniu pewnych dodatkowych podstawowych operacji mamy teraz trójkąt narysowany w punkcie początkowym na podstawie oryginalnego wejścia string.
 
 ![](<../images/5-3/4/strings - querying strings 04.jpg>)
 
-### Manipulating Strings
+### Manipulowanie ciągami
 
-Since a string is a generic text object, they host a wide range of applications. Let's take a look at some of the major actions in the Core>String Category in Dynamo:
+Ponieważ ciąg jest ogólnym obiektem tekstowym, zakres jego zastosowań jest szeroki. Przyjrzyjmy się niektórym istotnym operacjom w obszarze Podstawowe > Kategoria ciągu w dodatku Dynamo:
 
-This is a method of merging two strings together in order. This takes each literal string in a list and creates one merged string.
+Jest to metoda łączenia dwóch ciągów w kolejności. Powoduje pobranie każdego ciągu literalnego z listy i utworzenie jednego scalonego ciągu.
 
-The following represents the concatenation of three strings:
+Poniżej przedstawiono scalanie trzech ciągów:
 
 ![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
 
-> 1. Add or subtract strings to the concatenation by clicking the +/- buttons in the center of the Node.
-> 2. The output gives one concatenated string, with spaces and punctuation included.
+> 1. Aby dodać lub odjąć ciągi w scaleniu, można kliknąć przyciski +/- w środku węzła.
+> 2. Wynikiem jest jeden scalony ciąg ze spacjami i interpunkcją.
 
-The join method is very similar to concatenate, except it has an added layer of punctuation.
+Metoda łączenia jest bardzo podobna do scalania, ale zawiera dodatkową warstwę interpunkcji.
 
-If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the **String.Join** node in order to create a similar data structure.
+Osoby pracujące w programie Excel prawdopodobnie miały już do czynienia z plikami CSV. Są to pliki z wartościami rozdzielonymi przecinkami. Można użyć przecinka (lub, jak w tym przypadku, dwóch kresek) jako separatora z węzłem **String.Join**, aby utworzyć podobną strukturę danych.
 
-The following image represents the joining of two strings:
+Poniższa ilustracja przedstawia łączenie dwóch ciągów:
 
 ![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
 
-> 1. The separator input allows one to create a string which divides the joined strings.
+> 1. Wejście separatora umożliwia utworzenie ciągu rozdzielającego łączone ciągi.
 
-### Working with Strings
+### Praca z ciągami
 
-In this exercise, we're going to use methods of querying and manipulating strings to deconstruct the final stanza of Robert Frost's [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Not the most practical application, but it will help us to grasp conceptual string actions as we apply them to legible lines of rhythm and rhyme.
+W tym ćwiczeniu użyjemy metod wykonywania zapytań i manipulowania ciągami w celu zdekonstruowania ostatniej zwrotki wiersza autorstwa Roberta Frosta [Stopping By Woods on a Snowy Evening (Przystając pod lasem w śnieżny wieczór)](http://www.poetryfoundation.org/poem/171621). Nie jest to najpraktyczniejsze zastosowanie, ale pomoże nam zrozumieć koncepcje operacji na ciągach podczas stosowania ich do czytelnych wierszy z rytmem i rymem.
 
-Let's begin with a basic string split of the stanza. We first notice that the writing is formatted based on commas. We'll use this format to separate each line into individual items.
+Zacznijmy od podstawowego podziału ciągu zwrotki. Na początku należy zauważyć, że zapis jest sformatowany za pomocą przecinków. Użyjemy tego formatu, aby rozdzielić wiersze na poszczególne elementy.
 
 ![](<../images/5-3/4/strings - working with strings 01.jpg>)
 
-> 1. The base string is pasted into a **String** Node.
-> 2. Another **String** Node is used to denote the separator. In this case, we're using a comma.
-> 3. A **String.Split** Node is added to the canvas and connected to the two strings.
-> 4. The output shows that we've now separated the lines into individual elements.
+> 1. Ciąg podstawowy zostaje wklejony do węzła **String**.
+> 2. Do oznaczenia separatora używany jest inny węzeł **String**. W tym przypadku używamy przecinka.
+> 3. Do obszaru rysunku zostaje dodany węzeł **String.Split**. Zostaje on połączony z tymi dwoma ciągami.
+> 4. Wynik na wyjściu to wiersze będące osobnymi elementami.
 
-Now, let's get to the good part of the poem: the last two lines. The original stanza was one item of data. We separated this data into individual items in the first step. Now we need to do a search for the text we're looking for. And while we _can_ do this by selecting the last two items of the list, if this were an entire book, we wouldn't want to read through everything and manually isolate the elements.
+Przejdźmy teraz do interesującej części wiersza: ostatnich dwóch wierszy. Oryginalna zwrotka była jednym elementem danych. Dane te zostały rozdzielone na poszczególne elementy w pierwszym kroku. Teraz musimy wyszukać tekst, który próbujemy znaleźć. Mimo że _możemy_ to zrobić, wybierając dwa ostatnie elementy listy, to jednak jeśli byłaby to cała książka, nie chcielibyśmy czytać wszystkiego i ręcznie wyodrębniać elementów.
 
 ![](<../images/5-3/4/strings - working with strings 02.jpg>)
 
-> 1. Instead of manually searching, we use a **String.Contains** Node to perform a search for a set of characters. This is the similar to doing the "Find" command in a word processor. In this case, we get a return of "true" or "false" if that substring is found within the item.
-> 2. In the _searchFor_ input, we define a substring that we're looking for within the stanza. Let's use a **String** Node with the text "And miles".
-> 3. The output gives us a list of falses and trues. We'll use this boolean logic to filter the elements in the next step.
+> 1. Zamiast ręcznego wyszukiwania używamy węzła **String.Contains**, aby wyszukać zestaw znaków. Jest to podobne do wykonywania polecenia „Znajdź” w edytorze tekstu. W tym przypadku zostanie zwrócona wartość „true” lub „false”, jeśli ten ciąg podrzędny zostanie znaleziony w elemencie.
+> 2. W wejściu _searchFor_ definiujemy ciąg podrzędny, którego szukamy w zwrotce. Użyjmy węzła **String** z tekstem „And miles”.
+> 3. Zwrócony wynik zawiera listę pozycji false i true. Użyjemy tych wartości logicznych, aby przefiltrować elementy w następnym kroku.
 
 ![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
 
-> 1. **List.FilterByBoolMask** is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
-> 2. Our output from the "in" is as expected, giving us the final two lines of the stanza.
+> 1. **List.FilterByBoolMask** jest węzłem, za pomocą którego wyodrębnimy pozycje odpowiadające wartościom false i true. Wyjście „in” zwraca frazy z wejściem „mask” równym „true”, a wyjście „out” — te odpowiadające wartości „false”.
+> 2. Wyniki na wyjściu „in” są zgodne z oczekiwaniami, czyli zwracają dwa ostatnie wiersze zwrotki.
 
-Now, we want to drive home the repetition of the stanza by merging the two lines together. When viewing the output of the previous step, we notice that there are two items in the list:
+Chcemy teraz podkreślić powtórzenie w tej zwrotce, scalając te dwa wiersze. Przeglądając wyniki na wyjściu w poprzednim kroku, łatwo zauważyć, że na liście znajdują się dwa elementy:
 
 ![](<../images/5-3/4/strings - working with strings 04.jpg>)
 
-> 1. Using two **List.GetItemAtIndex** Nodes, we can isolate the items using the values of 0 and 1 as the index input.
-> 2. The output for each node gives us, in order, the final two lines.
+> 1. Za pomocą dwóch węzłów **List.GetItemAtIndex** można wyodrębnić te elementy, używając wartości 0 i 1 jako wejścia indeksu.
+> 2. Na wyjściu każdego z tych węzłów pojawiają się dwa ostatnie wiersze — w kolejności.
 
-To merge these two items into one, we use the **String.Join** Node:
+Aby scalić te dwa elementy w jeden, użyjemy węzła **String.Join**:
 
 ![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
 
-> 1. After adding the **String.Join** Node, we notice that we need a separator.
-> 2. To create the separator, we add a **String** Node to the canvas and type in a comma.
-> 3. The final output has merged the last two items into one.
+> 1. Po dodaniu węzła **String.Join** widać, że potrzebny jest separator.
+> 2. Aby utworzyć separator, dodamy węzeł **String** do obszaru rysunku i wpiszemy przecinek.
+> 3. Ostatnie wyjście scala dwa ostatnie elementy w jeden.
 
-This may seem like a lot of work to isolate the last two lines; and it's true, string operations often require some up front work. But they are scalable, and they can be applied to large datasets with relative ease. If you are working parametrically with spreadsheets and interoperability, be sure to keep string operations in mind.
+Może to wydawać się dużą ilością pracy w celu wyodrębnienia dwóch ostatnich wierszy i to prawda — operacje na ciągach często wymagają pewnych początkowych nakładów pracy na. Ale są one skalowalne i mogą być względnie łatwo stosowane do dużych zestawów danych. Podczas pracy z zastosowaniem parametrów z arkuszami kalkulacyjnymi i funkcjami współdziałania należy pamiętać o operacjach na ciągach.

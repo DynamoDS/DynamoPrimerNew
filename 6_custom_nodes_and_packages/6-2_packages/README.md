@@ -1,5 +1,5 @@
-# Packages
+# Pakiety
 
-Once you have created a few Custom Nodes the very next step is to begin organizing and publishing them by way of Packages - a convenient way to store and share your nodes with the Dynamo Community.
+Po utworzeniu kilku węzłów niestandardowych kolejnym krokiem jest rozpoczęcie organizowania i publikowania ich za pomocą pakietów — to wygodny sposób przechowywania i udostępniania węzłów w społeczności dodatku Dynamo.
 
 ![IMAGE](<../images/6-2/packages cover.jpg>)

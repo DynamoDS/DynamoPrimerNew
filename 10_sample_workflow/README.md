@@ -1,12 +1,12 @@
-# Sample Workflows
+# Przykładowe procesy robocze
 
-This section will explore a series of workflows that will guide you through using Dynamo.
+W tej sekcji omówiono szereg procesów roboczych, które ułatwiają korzystanie z dodatku Dynamo.
 
-The following sample workflows are available:
+Dostępne są następujące przykładowe procesy robocze:
 
-**Getting Started Workflows**
+**Procesy robocze — pierwsze kroki**
 
-* [Parametric Vase](10-1\_getting-started-workflows/1-parametric-vase.md)
-* [Attractor Points](10-1\_getting-started-workflows/2-attractor-points.md)
+* [Wazon parametryczny](10-1\_getting-started-workflows/1-parametric-vase.md)
+* [Punkty przyciągania](10-1\_getting-started-workflows/2-attractor-points.md)
 
-You can also locate concepts introduced in workflows using the [concept index](table-of-summary-for-some-concept-used-in-previous-exercises.md)
+Pojęcia wprowadzone w procesach roboczych można również odszukać za pomocą [indeksu pojęć](table-of-summary-for-some-concept-used-in-previous-exercises.md)

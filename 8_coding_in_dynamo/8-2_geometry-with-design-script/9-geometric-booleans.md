@@ -1,10 +1,10 @@
-# Geometric Booleans
+# Geometryczne wartości logiczne
 
-_Intersect_, _Trim_, and _SelectTrim_ are primarily used on lower-dimensional geometry such as Points, Curves, and Surfaces. Solid geometry on the other hand, has an additional set of methods for modifying form after their construction, both by subtracting material in a manner similar to _Trim_ and combining elements together to form a larger whole.
+Metody _Intersect_, _Trim_ i _SelectTrim_ są używane przede wszystkim na geometriach niższych wymiarów, takich jak punkty, krzywe i powierzchnie. Natomiast geometria brył ma dodatkowy zestaw metod do modyfikowania postaci po jej utworzeniu, zarówno przez odjęcie materiału w sposób podobny do zastosowania metody _Trim_, jak i przez połączenie elementów w celu utworzenia większej części.
 
-### Union
+### Suma
 
-The _Union_ method takes two solid objects and creates a single solid object out of the space covered by both objects. The overlapping space between objects is combined into the final form. This example combines a Sphere and a Cuboid into a single solid Sphere-Cube shape:
+Metoda _Union_ pobiera dwa obiekty brył i tworzy pojedynczy obiekt bryły z przestrzeni objętej tymi dwoma obiektami. Przestrzeń wspólna między obiektami jest łączona w postać końcową. W tym przykładzie kula i prostopadłościan łączą się w pojedynczy kształt bryły złożonej z kuli i sześcianu:
 
 ![](../images/8-2/9/GeometricBooleans\_01.png)
 
@@ -19,9 +19,9 @@ s2 = Sphere.ByCenterPointRadius(
 combined = s1.Union(s2);
 ```
 
-### Difference
+### Różnica
 
-The _Difference_ method, like _Trim_, subtracts away the contents of the input tool solid from the base solid. In this example we carve out a small indentation out of a sphere:
+Metoda _Difference_, podobnie jak metoda _Trim_, odejmuje zawartość bryły wejściowej od bryły bazowej. W tym przykładzie tworzymy małe wcięcie w sferze:
 
 ![](../images/8-2/9/GeometricBooleans\_02.png)
 
@@ -36,9 +36,9 @@ tool = Sphere.ByCenterPointRadius(
 result = s.Difference(tool);
 ```
 
-### Intersect
+### Iloczyn logiczny
 
-The _Intersect_ method returns the overlapping Solid between two solid Inputs. In the following example, _Difference_ has been changed to _Intersect_, and the resulting Solid is the missing void initially carved out:
+Metoda _Intersect_ zwraca bryłę wspólną między dwiema bryłami wejściowymi. W poniższym przykładzie metodę _Difference_ zmieniono na metodę _Intersect_, a wynikowa bryła to brakująca wcześniej wycięta pustka:
 
 ![](../images/8-2/9/GeometricBooleans\_03.png)
 

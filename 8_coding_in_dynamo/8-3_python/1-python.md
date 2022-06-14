@@ -1,12 +1,12 @@
-# Python Nodes
+# Węzły języka Python
 
-Why would you use textual programming in Dynamo's visual programming environment? [Visual programming](../../a\_appendix/visual-programming-and-dynamo.md) has many advantages. It allows you to create programs without learning special syntax in an intuitive visual interface. However, a visual program can become cluttered, and can at times fall short in functionality. For example, Python offers much more achieveable methods for writing conditional statements (if/then) and looping. Python is a powerful tool that can extend the capabilities of Dynamo and allow you to replace many nodes with a few concise lines of code.
+Dlaczego w środowisku programowania wizualnego Dynamo warto używać programowania tekstowego? [Programowanie wizualne](../../a\_appendix/visual-programming-and-dynamo.md) ma wiele zalet. Umożliwia tworzenie programów bez konieczności poznawania specjalnej składni w intuicyjnym interfejsie wizualnym. Jednak program wizualny może z czasem zawierać zbyt wiele elementów i nie działać zgodnie z założeniami. Na przykład język Python oferuje znacznie więcej dostępnych metod pisania instrukcji warunkowych (jeśli/to) i zapętlania. Język Python jest zaawansowanym narzędziem, które umożliwia rozszerzenie możliwości dodatku Dynamo i zastąpienie wielu węzłów kilkoma zwięzłymi liniami kodu.
 
-**Visual Program:**
+**Program wizualny:**
 
 ![](<../images/8-3/1/python node - visual vs textual programming.jpg>)
 
-**Textual Program:**
+**Program tekstowy:**
 
 ```
 import clr
@@ -34,63 +34,63 @@ for i in xRange:
 OUT = solids
 ```
 
-### The Python Node
+### Węzeł w języku Python
 
-Like code blocks, Python nodes are a scripting interface within a visual programming environment. The Python node can be found under Script>Editor>Python Script in the library.
+Podobnie jak bloki kodu węzły języka Python są interfejsem skryptowym w środowisku programowania wizualnego. Węzeł Python można znaleźć w bibliotece w obszarze Skrypt>Edytor>Skrypt w języku Python.
 
 ![](<../images/8-3/1/python node - the python node 01.jpg>)
 
-Double clicking the node opens the python script editor (you can also right click on the node and select _Edit..._). You’ll notice some boilerplate text at the top, which is meant to help you reference the libraries you’ll need. Inputs are stored in the IN array. Values are returned to Dynamo by assigning them to the OUT variable
+Dwukrotne kliknięcie węzła powoduje otwarcie edytora skryptów języka Python (można również kliknąć prawym przyciskiem myszy węzeł i wybrać polecenie _Edytuj_). Na górze jest wyświetlany tekst wstępny, który ma ułatwić odnoszenie się do potrzebnych bibliotek. Dane wejściowe są przechowywane w szyku IN. Wartości są zwracane do dodatku Dynamo przez przypisanie ich do zmiennej OUT
 
 ![](<../images/8-3/1/python node - the python node 02.jpg>)
 
-The Autodesk.DesignScript.Geometry library allows you to use dot notation similar to Code Blocks. For more information on Dynamo syntax, refer to [7-2\_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention") as well as the [DesignScript Guide](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (To download this PDF doc, please right-click on link and choose "Save link as..."). Typing a geometry type such as 'Point.' will bring up a list of methods for creating and querying points.
+Biblioteka Autodesk.DesignScript.Geometry umożliwia używanie zapisu kropkowego podobnego do bloków kodu (Code Block). Aby uzyskać więcej informacji na temat składni dodatku Dynamo, zapoznaj się z materiałem [7-2\_design-script-scritax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention") oraz [Przewodnikiem języka DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf). (Aby pobrać ten dokument PDF, kliknij prawym przyciskiem myszy łącze i wybierz opcję „Zapisz łącze jako...”). Wpisanie typu geometrii, takiego jak „Point.”, spowoduje pojawienie się listy metod tworzenia punktów i stosowania do nich zapytań.
 
 ![](<../images/8-3/1/python node - the python node 03.jpg>)
 
-> Methods include constructors such as _ByCoordinates_, actions like _Add_, and queries like _X_, _Y_ and _Z_ coordinates.
+> Metody obejmują konstruktory, takie jak _ByCoordinates_, akcje, takie jak _Add_, oraz zapytania, takie jak współrzędne _X_, _Y_ i _Z_.
 
-## Exercise: Custom Node with Python Script for Creating Patterns from Solid Module
+## Ćwiczenie: węzeł niestandardowy ze skryptem w języku Python do tworzenia wzorów z modułu bryłowego
 
-### Part I: Setting Up Python Script
+### Część I. Konfigurowanie skryptu w języku Python
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/8-2/1/Python_Custom-Node.dyn" %}
 
-In this example, we will write a python script that creates patterns from a solid module, and turn it into a custom node. First, let’s create our solid module using Dynamo nodes.
+W tym przykładzie napiszemy skrypt w języku Python, który tworzy wzorce z modułu bryłowego, i zmienimy go w węzeł niestandardowy. Najpierw utworzymy moduł bryłowy za pomocą węzłów Dynamo.
 
 ![](<../images/8-3/1/python node - exercise pt I-01.jpg>)
 
-> 1. **Rectangle.ByWidthLength:** Create a rectangle that will be the base of our solid.
-> 2. **Surface.ByPatch:** Connect the rectangle to the ‘_closedCurve_’ input to create the bottom surface.
+> 1. **Rectangle.ByWidthLength:** utwórz prostokąt, który będzie podstawą bryły.
+> 2. **Surface.ByPatch:** połącz prostokąt z wejściem „_closedCurve_”, aby utworzyć dolną powierzchnię.
 
 ![](<../images/8-3/1/python node - exercise pt I-02.jpg>)
 
-> 1. **Geometry.Translate:** Connect the rectangle to the ‘_geometry_’ input to move it up, using a code block to specify the base thickness of our solid.
-> 2. **Polygon.Points:** Query the translated rectangle to extract the corner points.
-> 3. **Geometry.Translate:** Use a code block to create a list of four values corresponding to the four points, translating one corner of the solid up.
-> 4. **Polygon.ByPoints:** Use the translated points to reconstruct the top polygon.
-> 5. **Surface.ByPatch:** Connect the polygon to create the top surface.
+> 1. **Geometry.Translate:** połącz prostokąt z wejściem „_geometry_”, aby przesunąć go w górę, używając bloku kodu do określenia grubości bazowej bryły.
+> 2. **Polygon.Points:** zastosuj zapytanie do przekształconego prostokąta w celu wyodrębnienia punktów narożnych.
+> 3. **Geometry.Translate:** użyj bloku kodu, aby utworzyć listę czterech wartości odpowiadających czterem punktom, przekształcając jeden narożnik bryły w górę.
+> 4. **Polygon.ByPoints:** użyj przekształconych punktów, aby odtworzyć górny wielobok.
+> 5. **Surface.ByPatch:** połącz wielobok, aby utworzyć górną powierzchnię.
 
-Now that we have our top and bottom surfaces, let’s loft between the two profiles to create the sides of the solid.
+Teraz gdy mamy górną i dolną powierzchnię, wyciągnijmy między dwoma profilami, aby utworzyć boki bryły.
 
 ![](<../images/8-3/1/python node - exercise pt I-03.jpg>)
 
-> 1. **List.Create:** Connect the bottom rectangle and the top polygon to the index inputs.
-> 2. **Surface.ByLoft:** Loft the two profiles to create the sides of the solid.
-> 3. **List.Create:** Connect the top, side, and bottom surfaces to the index inputs to create a list of surfaces.
-> 4. **Solid.ByJoinedSurfaces:** Join the surfaces to create the solid module.
+> 1. **List.Create:** połącz dolny prostokąt i górny wielobok z wejściami indeksu.
+> 2. **Surface.ByLoft:** wyciągnij dwa profile w celu utworzenia boków bryły.
+> 3. **List.Create:** połącz górną, boczną i dolną powierzchnię z wejściami indeksu, aby utworzyć listę powierzchni.
+> 4. **Solid.ByJoinedSurfaces:** połącz powierzchnie, aby utworzyć moduł bryły.
 
-Now that we have our solid, let’s drop a Python Script node onto the workspace.
+Po uzyskaniu bryły upuść węzeł skryptu w języku Python w obszarze roboczym.
 
 ![](<../images/8-3/1/python node - exercise pt I-04.jpg>)
 
-> 1. To add additional inputs to the node, click the + icon on the node. The inputs are named IN\[0], IN\[1], etc. to indicate that they represent items in a list.
+> 1. Aby dodać kolejne wejścia do węzła, kliknij ikonę „+” na węźle. Nazwy wejść to IN\[0], IN\[1] itd., aby wskazać, że reprezentują one elementy na liście.
 
-Let’s start by defining our inputs and output. Double click the node to open the python editor. Follow the code below to modify the code in the editor.
+Zacznijmy od zdefiniowania wejść i wyjść. Kliknij dwukrotnie węzeł, aby otworzyć edytor języka Python. Zmodyfikuj kod w edytorze na podstawie poniższego kodu.
 
 ![](<../images/8-3/1/python node - exercise pt I-05.jpg>)
 
@@ -122,11 +122,11 @@ solids = []
 OUT = solids
 ```
 
-This code will make more sense as we progress in the exercise. Next we need to think about what information is required in order to array our solid module. First, we will need to know the dimensions of the solid to determine the translation distance. Due to a bounding box bug, we will have to use the edge curve geometry to create a bounding box.
+Ten kod będzie bardziej przejrzysty w trakcie dalszej analizy tego ćwiczenia. Następnie należy zastanowić się, jakie informacje są wymagane, aby ułożyć moduł bryłowy w szyku. Najpierw musimy znać wymiary bryły, aby określić odległość przekształcenia. Z powodu błędu ramki ograniczającej należy użyć geometrii krzywej krawędzi, aby utworzyć ramkę ograniczającą.
 
 ![](../images/8-3/1/python07.png)
 
-> Take a look at the Python node in Dynamo. Notice that we're using the same syntax as we see in the titles of the nodes in Dynamo. Check out the commented code below.
+> Przyjrzyj się węzłowi Python w dodatku Dynamo. Zauważ, że używamy tej samej składni, która jest używana w węzłach w dodatku Dynamo. Zapoznaj się z poniższym skomentowanym kodem.
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -167,7 +167,7 @@ xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 OUT = solids
 ```
 
-Since we will be both translating and rotating the solid modules, let’s use the Geometry.Transform operation. By looking at the Geometry.Transform node, we know that we will need a source coordinate system and a target coordinate system to transform the solid. The source is the context coordinate system of our solid, while the target will be a different coordinate system for each arrayed module. That means we will have to loop through the x and y values to transform the coordinate system differently each time.
+Ponieważ będziemy zarówno przekształcać, jak i obracać moduły brył, użyjmy operacji Geometry.Transform. Z węzła Geometry.Transform wynika, że będziemy potrzebować źródłowego układu współrzędnych i docelowego układu współrzędnych do przekształcenia bryły. Źródłem jest kontekstowy układ współrzędnych bryły, natomiast elementem docelowym będzie inny układ współrzędnych dla każdego modułu ustawionego w szyku. Oznacza to, że należy utworzyć pętlę przez wartości x i y, aby przekształcić układ współrzędnych za każdym razem w inny sposób.
 
 ![](<../images/8-3/1/python node - exercise pt I-06.jpg>)
 
@@ -223,35 +223,35 @@ for i in range(xCount):
 OUT = solids
 ```
 
-Click Run then Save the code. Connect the Python node with our existing script as following.
+Kliknij przycisk Uruchom, a następnie Zapisz kod. Połącz węzeł w języku Python z istniejącym skryptem w następujący sposób.
 
 ![](<../images/8-3/1/python node - exercise pt I-07.jpg>)
 
-> 1. Connect the output from **Solid.ByJoinedSurfaces** as the first input for the Python Node and use a Code Block to define the other inputs.
-> 2. Create a **Topology.Edges** node and use the output from Python node as its input.
-> 3. Finally, create an **Edge.CurveGeometry** node and use the output from Topology.Edges as its input.
+> 1. Połącz dane wyjściowe z węzła **Solid.ByJoinedSurfaces** z pierwszym wejściem węzła Python i użyj węzła Code Block, aby zdefiniować pozostałe wejścia.
+> 2. Utwórz węzeł **Topology.Edges** i użyj danych wyjściowych z węzła Python jako jego danych wejściowych.
+> 3. Na koniec utwórz węzeł **Edge.CurveGeometry** i użyj danych wyjściowych z węzła Topology.Edges jako jego danych wejściowych.
 
-Try changing the seed value to create different patterns. You can also change the parameters of the solid module itself for different effects.
+Spróbuj zmienić wartość źródłową, aby utworzyć różne wzorce. Można również zmienić parametry samego modułu bryły w celu uzyskania różnych efektów.
 
 ![](../images/8-3/1/python10.png)
 
-### Part II: Turn Your Python Script Node into Custom Node
+### Część II. Przekształcanie węzła skryptu w języku Python w węzeł niestandardowy
 
-Now that we have created a useful python script, let’s save it as a custom node. Select the python script node, right-click on Workspace and select ‘Create Custom Node.’
+Teraz po utworzeniu przydatnego skryptu w języku Python zapiszemy go jako węzeł niestandardowy. Wybierz węzeł skryptu w języku Python, kliknij prawym przyciskiem myszy obszar roboczy i wybierz opcję „Utwórz węzeł niestandardowy”.
 
 ![](<../images/8-3/1/python node - exercise pt II-01.jpg>)
 
-Assign a name, description and category.
+Przypisz nazwę, opis i kategorię.
 
 ![](<../images/8-3/1/python node - exercise pt II-02.jpg>)
 
-This will open a new workspace in which to edit the custom node.
+Spowoduje to otwarcie nowego obszaru roboczego, w którym będzie edytowany węzeł niestandardowy.
 
 ![](<../images/8-3/1/python node - exercise pt II-03.jpg>)
 
-> 1. **Inputs:** Change the input names to be more descriptive and add data types and default values.
-> 2. **Output:** Change the output name
+> 1. **Wejścia Input:** zmień nazwy wejść na bardziej opisowe i dodaj typy danych oraz wartości domyślne.
+> 2. **Output:** zmień nazwę węzła danych wyjściowych
 
-Save the node as a .dyf file and you should see the custom node reflects the changes we just made.
+Zapisz węzeł jako plik .dyf. Węzeł niestandardowy powinien odzwierciedlać wprowadzone zmiany.
 
 ![](<../images/8-3/1/python node - exercise pt II-04.jpg>)

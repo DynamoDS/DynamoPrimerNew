@@ -1,126 +1,126 @@
-# Nodes and Wires
+# Węzły i przewody
 
-## Nodes
+## Węzły
 
-In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each **Node** performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.
+W dodatku Dynamo **węzły** są obiektami, które można połączyć w celu utworzenia programu wizualnego. Każdy **węzeł** wykonuje operację — czasami może ona być tak prosta, jak przechowywanie liczby, ale może być bardziej skomplikowana, na przykład tworzenie lub przywoływanie geometrii.
 
-### Anatomy of a Node
+### Budowa węzła
 
-Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
+Większość węzłów w dodatku Dynamo składa się z pięciu części. Istnieją wyjątki, takie jak węzły Input, ale budowę każdego węzła można opisać w następujący sposób:
 
 ![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
-> 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
-> 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
+> 1. Nazwa — nazwa węzła w konwencji nazewnictwa `Category.Name`
+> 2. Część główna — treść główna węzła, kliknięcie której prawym przyciskiem myszy powoduje przedstawienie opcji na poziomie całego węzła
+> 3. Porty (wejściowe i wyjściowe) — gniazda dla przewodów, które dostarczają dane wejściowe do węzła, jak również wyprowadzają wyniki działania węzła
+> 4. Wartość domyślna — po kliknięciu prawym przyciskiem myszy portu wejściowego: niektóre węzły mają wartości domyślne, które mogą być używane lub nie.
+> 5. Ikona skratowania — wskazuje [opcję skratowania](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) określoną dla wejść zgodnej listy (więcej informacji na ten temat przedstawiono w dalszej części)
 
-### Nodes Input/Output Ports
+### Porty wejść/wyjść węzłów
 
-The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.
+Wejścia i wyjścia węzłów są nazywane portami i działają jak gniazda dla przewodów. Dane są przekazywane do węzła przez porty po lewej stronie i wypływają z węzła po wykonaniu jego operacji po prawej stronie.
 
-Ports expect to receive data of a certain type. For instance, connecting a number such as _2.75_ to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply _"Red"_ to the same Port it will result in an error.
+Porty oczekują, że otrzymają dane określonego typu. Na przykład podłączenie liczby, takiej jak _2,75_, do portów w węźle Point By Coordinates („punkt według współrzędnych”) spowoduje utworzenie punktu. Jednak jeśli do tego samego portu zostanie podłączony ciąg _„Czerwony”_, spowoduje to błąd.
 
 {% hint style="info" %}
-Tip: Hover over a Port to see a tooltip containing the data type expected.
+Wskazówka: umieść kursor na porcie, aby wyświetlić etykietę narzędzia zawierającą oczekiwany typ danych.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
-> 1. Port Label
-> 2. Tool Tip
-> 3. Data Type
-> 4. Default Value
+> 1. Etykieta portu
+> 2. Etykieta narzędzia
+> 3. Typ danych
+> 4. Wartość domyślna
 
-### Node States
+### Stany węzłów
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
+Dodatek Dynamo wskazuje stan wykonania programu wizualnego przez renderowanie węzłów w różnych schematach kolorów na podstawie stanów poszczególnych węzłów. Hierarchia stanów jest zgodna z następującą sekwencją: Błąd > Ostrzeżenie > Informacje > Podgląd.
 
-Hovering or right-clicking over the Name or Ports presents additional information and options.
+Po ustawieniu wskaźnika myszy na nazwie lub portach albo kliknięciu ich prawym przyciskiem myszy wyświetlane są dodatkowe informacje i opcje.
 
 ![](<images/nodes and wires - node states.jpg>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 1. Aktywne — węzły, których nazwy mają ciemnoszare tło, są dobrze połączone i wszystkie ich wejścia zostały pomyślnie połączone
+> 2. Stan błędu — czerwony pasek stanu poniżej węzła wskazuje, że węzeł jest w stanie błędu
+> 3. Zablokowanie — węzeł przezroczysty jest zablokowany, co oznacza zawieszenie jego wykonywania
+> 4. Podgląd tła — szary pasek stanu pod węzłem i ikoną oka ![](<images/nodes and wires - preview off.jpg>) wskazuje, że podgląd geometrii jest wyłączony.
+> 5. Wybrane — obecnie wybrane węzły mają obramowanie wyróżnione kolorem błękitnym
+> 6. Ostrzeżenie — żółty pasek stanu pod węzłem wskazuje stan ostrzeżenia, co oznacza, że brakuje danych wejściowych lub typy danych są nieprawidłowe.
 
-#### Handling Error or Warning Nodes
+#### Obsługa węzłów z błędami lub ostrzeżeniami
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+Jeśli program wizualny zawiera ostrzeżenie lub błędy, dodatek Dynamo dostarczy dodatkowe informacje na temat problemu. Każdy żółty węzeł ma również etykietę narzędzia nad nazwą. Ustaw wskaźnik myszy na ikonie etykiety narzędzia ostrzeżenia ![](<images/nodes and wires - node warning icon.png>) lub błędu ![](<images/nodes and wires - node error icon.png>), aby ją rozwinąć.
 
 {% hint style="info" %}
-Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
+Wskazówka: na podstawie informacji z etykiety narzędzia sprawdź we wcześniejszych węzłach, czy wymagane typy danych lub struktury danych nie są błędne.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
-> 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 1. Etykieta narzędzia z ostrzeżeniem — wartość „null” lub nie można zinterpretować danych jako wartości typu Double, czyli liczby
+> 2. Użyj węzła Watch, aby sprawdzić dane wejściowe
+> 3. Wcześniejszy węzeł przechowuje wartość „Czerwony”, a nie liczbę
 
-## Wires
+## Przewody
 
-Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.
+Przewody łączą węzły, aby utworzyć zależności i ustalić przepływ programu wizualnego. Możemy interpretować je jako przewody elektryczne, które przenoszą impulsy z jednego obiektu do następnego.
 
-### Program Flow <a href="#program-flow" id="program-flow"></a>
+### Przepływ programu <a href="#program-flow" id="program-flow"></a>
 
-Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the **Flow of Data** in the Visual Program.
+Przewód łączy port wyjściowy jednego węzła z portem wejściowym innego węzła. Ta kierunkowość określa **przepływ danych** w programie wizualnym.
 
-Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
+Porty wejściowe znajdują się po lewej stronie węzłów, a porty wyjściowe — po ich prawej stronie, dlatego możemy ogólnie powiedzieć, że program przepływa od lewej strony do prawej.
 
 ![](<images/nodes and wires - flow of data.jpg>)
 
-### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
+### Tworzenie przewodów <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+Utwórz przewód, klikając lewym przyciskiem myszy port, a następnie klikając lewym przyciskiem myszy port innego węzła, aby utworzyć połączenie. W trakcie tworzenia połączenia przewód będzie wyświetlany jako kreskowany, a po pomyślnym połączeniu zostanie przyciągnięty i stanie się linią ciągłą.
 
-The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
+Dane zawsze będą przepływać przez ten przewód z wyjścia do wejścia. Można jednak utworzyć przewód w dowolnym kierunku, jeśli chodzi o sekwencję klikania połączonych portów.
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
-### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
+### Edytowanie przewodów <a href="#editing-wires" id="editing-wires"></a>
 
-Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
+Często chcemy dostosować przepływ programu w programie wizualnym, edytując połączenia reprezentowane przez przewody. Aby edytować przewód, kliknij lewym przyciskiem myszy już połączony port wejściowy węzła. Dostępne są teraz dwie opcje:
 
-* Change connection to an input Port, left-click on another input Port
+* Zmień połączenie z portem wejściowym: kliknij lewym przyciskiem myszy inny port wejściowy
 
 ![](<images/nodes and wires - edit wire change port (2).gif>)
 
-* To remove the Wire, pull the Wire away and left-click on Workspace
+* Aby usunąć przewód, odciągnij przewód, a następnie kliknij lewym przyciskiem myszy obszar roboczy
 
 ![](<images/nodes and wires - edit wires remove.gif>)
 
-* Reconnect multiple wires using Shift+left-click
+* Połącz ponownie wiele przewodów, używając kombinacji Shift+lewy przycisk myszy
 
 ![](<images/nodes and wires - edit multi ports.gif>)
 
-* Duplicate a wire using Ctrl+left-click
+* Powiel przewód, używając kombinacji Ctrl+lewy przycisk myszy
 
 ![](<images/nodes and wires - duplicate wire.gif>)
 
-#### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
+#### Przewody domyślne a przewody wyróżnione <a href="#wire-previews" id="wire-previews"></a>
 
-By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
+Domyślnie podgląd wszystkich przewodów jest wyświetlany jako szare pociągnięcie. Po wybraniu węzła wszystkie łączące przewody są renderowane z tym samym wyróżnieniem w kolorze błękitnym co węzeł.
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
-> 1. Highlighted Wire
-> 2. Default Wire
+> 1. Wyróżniony przewód
+> 2. Domyślny przewód
 
-**Hide Wires by Default**
+**Domyślne ukrywanie przewodów**
 
-In case you prefer to hide the Wires in your graph, you can find this option from View > Connectors > untick Show Connectors.
+Jeśli wolisz ukryć przewody na wykresie, anuluj zaznaczenie opcji Widok > Złącza > Pokaż złącza.
 
-With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
+To ustawienie sprawia, że będą wyświetlane tylko wybrane węzły i połączone z nimi przewody z delikatnym niebieskim wyróżnieniem.
 
 ![](<images/nodes and wires - hide wires setting (1).gif>)
 
-#### Hide Individual Wire Only
+#### Ukrywanie tylko pojedynczego przewodu
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+Można również ukryć wybrany przewód, klikając prawym przyciskiem myszy wyjście węzła i wybierając opcję Ukryj przewody.
 
 ![](<images/nodes and wires - hide selected wire.gif>)

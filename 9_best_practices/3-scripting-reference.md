@@ -1,45 +1,45 @@
-# Scripting Reference
+# Dokumentacja obsługi skryptów
 
-This reference page extends the best practices covered in Scripting Strategies with greater detail on code libraries, labeling, and styling. We will be using Python to illustrate the concepts below, but the same principles would apply in Python and C#(Zerotouch) but in different syntax.
+Ta strona informacyjna stanowi rozszerzenie wzorców postępowania omówionych w strategiach dotyczących skryptów, zapewniając więcej szczegółów na temat bibliotek kodu, etykiet i stylów. Będziemy używać języka Python, aby zilustrować poniższe koncepcje, lecz te same zasady miałyby zastosowanie w języku Python i C# (Zerotouch), ale w innej składni.
 
-## Which Libraries to Use
+## Których bibliotek należy użyć
 
-Standard libraries are external to Dynamo and are present in the programming languages Python and C# (Zerotouch). Dynamo also has its own set of libraries that directly correspond to it's node hierarchy, enabling the user to build anything in code that could be made with nodes and wires. The following is a guide for what each Dynamo library gives access to and when to use a standard one.
+Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w językach programowania Python i C# (Zerotouch). Dodatek Dynamo zawiera również własny zestaw bibliotek bezpośrednio odpowiadających hierarchii węzłów, umożliwiając użytkownikowi tworzenie dowolnego kodu, który może zostać utworzony za pomocą węzłów i przewodów. Poniżej przedstawiono wskazówki na temat tego, do czego każda biblioteka Dynamo zapewnia dostęp i kiedy należy używać standardowej.
 
 ![](./images/3/textual-programming.jpg)
 
-**Standard Libraries and Dynamo Libraries**
+**Biblioteki standardowe i biblioteki Dynamo**
 
-* Standard libraries from Python and C# can be used to build advanced data and flow structures in the Dynamo environment.
-* Dynamo libraries directly correspond to the node hierarchy for creating geometry and other Dynamo objects.
+* Biblioteki standardowe z języka Python i języka C# mogą być używane do tworzenia zaawansowanych struktur danych i przepływów w środowisku dodatku Dynamo.
+* Biblioteki Dynamo bezpośrednio odpowiadają hierarchii węzłów w celu tworzenia geometrii i innych obiektów Dynamo.
 
-**Dynamo Libraries**
+**Biblioteki Dynamo**
 
-1.  ProtoGeometry\*
+1. ProtoGeometry\*
 
-    * Functionality: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
-    * How to import: `import Autodesk.DesignScript.Geometry`
+   * Funkcjonalność: łuk, ramka ograniczająca, okrąg, stożek, układ współrzędnych, prostopadłościan, krzywa, walec, krawędź, elipsa, łuk eliptyczny, powierzchnia, geometria, helisa, grupa indeksu, linia, siatka, krzywa nurbs, powierzchnia nurbs, płaszczyzna, punkt, wielobok, prostokąt, bryła, sfera, powierzchnia, topologia, T-splajn, UV, wektor, wierzchołek.
+   * Sposób importowania: `import Autodesk.DesignScript.Geometry`
 
-    ``
+   ``
 2. DSCoreNodes
-   * Functionality: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
-   * How to import: `import DSCore`
-3. Tessellation
-   * Functionality: Convex Hull, Delaunay, Voronoi.
-   * How to import: `import Tessellation`
+   * Funkcjonalność: kolor, zakres kolorów 2D, data i godzina, przedział czasu, IO, formuła, logika, lista, matematyka, drzewo czwórkowe, ciąg, gwint.
+   * Sposób importowania: `import DSCore`
+3. Mozaikowatość
+   * Funkcjonalność: powłoka wypukła, Delaunay, Woronoj.
+   * Sposób importowania: `import Tessellation`
 4. DSOffice
-   * Functionality: Excel.
-   * How to import: `import DSOffice`
+   * Funkcjonalność: Excel.
+   * Sposób importowania: `import DSOffice`
 
 {% hint style="warning" %}
-\*Note: When using **ProtoGeometry** through Python or C#, you are creating unmanaged objects, which need have their memory managed manually - please see section below: **Unmanaged Objects**, for more info.
+\*Uwaga: podczas używania obiektu **ProtoGeometry** za pomocą języka Python lub C# tworzone są obiekty niezarządzane, które wymagają ręcznego zarządzania pamięcią — więcej informacji znajduje się w poniższej sekcji: **Obiekty niezarządzane**.
 {% endhint %}
 
-## Label Carefully
+## Uważne etykietowanie
 
-While scripting, we are constantly using identifiers to denote things like variables, types, functions, and other entities. Through this system of symbolic notation, while building algorithms we can conveniently refer to information by way of labels --usually made up of a sequence of characters. Naming things well plays a significant role in writing code that can be easily read and understood by others as well as your future self! Here are some tips to keep in mind while naming things in your script:
+Podczas tworzenia skryptów ciągle wykorzystujemy identyfikatory do oznaczania takich elementów, jak zmienne, typy, funkcje i inne elementy. Poprzez ten system symbolicznej notacji podczas tworzenia algorytmów można wygodnie korzystać z informacji poprzez etykiety — zwykle składające się z sekwencji znaków. Nazewnictwo odgrywa ważną rolę w pisaniu kodu, który jest czytelny i zrozumiały dla jego twórcy i dla innych. Poniżej przedstawiono kilka wskazówek, o których należy pamiętać podczas nazywania elementów w skrypcie:
 
-**It´s OK to use abbreviations, but explain the abbreviation with a comment:**
+**Używanie skrótów jest dozwolone, ale należy je objaśniać za pomocą komentarzy:**
 
 ```
 ### BAD
@@ -56,7 +56,7 @@ csfY= 1.3
 csfZ = 1.0
 ```
 
-**Avoid redundant labeling:**
+**Unikaj nadmiarowego etykietowania:**
 
 ```
 ### BAD
@@ -72,7 +72,7 @@ seat = car.Seat()
 tire = car.Tire()
 ```
 
-**Use positive logic for your variable names instead of negative logic:**
+**W nazwach zmiennych używaj logiki dodatniej zamiast logiki ujemnej:**
 
 ```
 ### BAD
@@ -92,7 +92,7 @@ else:
     print 'not found'
 ```
 
-**Prefer “reverse notation”:**
+**Preferuj „notację odwrotną”:**
 
 ```
 ### BAD
@@ -108,9 +108,9 @@ agents_active = …
 agents_dead = ...
 ```
 
-> It’s more sensible, in structural terms.
+> Jest sensowniejsza pod względem strukturalnym.
 
-**Aliases should be used to shorten overly long and often repeated chains:**
+**Do skracania zbyt długich i często powtarzanych łańcuchów powinny być używane aliasy:**
 
 ```
 ### BAD
@@ -130,9 +130,9 @@ doc = DM.Instance.CurrentDBDocument
 uiapp = DM.Instance.CurrentUIApplication
 ```
 
-> Aliasing can quickly lead to very confusing and non-standard programs.
+> Stosowanie aliasów może szybko doprowadzić do bardzo mylących i niestandardowych programów.
 
-**Only use necessary words:**
+**Używaj tylko niezbędnych słów:**
 
 ```
 ### BAD
@@ -144,141 +144,141 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> “Everything should be made as simple as possible, but not simpler.” – Albert Einstein
+> „Wszystko powinno zostać tak uproszczone, jak to tylko możliwe, ale nie bardziej”. — Albert Einstein
 
-## Style Consistently
+## Styl spójny
 
-Generally speaking there is more than one way to program just about anything, therefore your “personal style” of scripting is the result of the countless small decisions you choose to make (or not make) along the way. That said, the readability and maintainability of your code is a direct result of its internal consistency as well as its adherence to general stylistic conventions. As a rule of thumb, code that looks the same in two places should work the same, too. Here are a few tips for writing clear and consistent code.
+Ogólnie rzecz biorąc, istnieje więcej niż jeden sposób na zaprogramowanie praktycznie wszystkiego, a zatem „osobisty styl” tworzenia skryptów jest wynikiem niezliczonych małych decyzji podejmowanych (lub nie) w całym procesie. Jednocześnie czytelność i możliwości konserwacji kodu są bezpośrednio wynikiem jego wewnętrznej spójności, a także przestrzegania ogólnych konwencji stylistycznych. Według ogólnej zasady kod, który wygląda tak samo w dwóch miejscach, powinien także działać tak samo. Poniżej przedstawiono kilka wskazówek dotyczących pisania przejrzystego i spójnego kodu.
 
-**Naming conventions:** (Choose one of the conventions below for each type of entity in your code and stick to it!)
+**Konwencje nazewnictwa:** (wybierz jedną z poniższych konwencji dla każdego typu elementu w kodzie i trzymaj się jej).
 
-* Variables, functions, methods, packages, modules:\
-  `lower_case_with_underscores`
-* Classes and Exceptions:\
-  `CapWords`
-* Protected methods and internal functions:\
-  `_single_leading_underscore(self, ...)`
-* Private methods:\
-  `__double_leading_underscore(self, ...)`
-* Constants:\
-  `ALL_CAPS_WITH_UNDERSCORES`
+* Zmienne, funkcje, metody, pakiety, moduły:\
+   `lower_case_with_underscores`
+* Klasy i wyjątki:\
+   `CapWords`
+* Metody chronione i funkcje wewnętrzne:\
+   `_single_leading_underscore(self, ...)`
+* Metody prywatne:\
+   `__double_leading_underscore(self, ...)`
+* Stałe:\
+   `ALL_CAPS_WITH_UNDERSCORES`
 
-> Tip: Avoid one-letter variables (esp. l, O, I) except in very short blocks, when the meaning is clearly visible from the immediate context.
+> Wskazówka: unikaj zmiennych jednoliterowych (szczególnie l, O, I) z wyjątkiem w bardzo krótkich blokach, kiedy ich znaczenie jest wyraźnie widoczne z bezpośredniego kontekstu.
 
-**Use of blank lines:**
+**Używaj pustych wierszy:**
 
-* Surround top-level function and class definitions with two blank lines.
-  * Method definitions inside a class are surrounded by a single blank line.
-  * Extra blank lines may be used (sparingly) to separate groups of related functions.
+* Otaczaj definicje funkcji i klas najwyższego poziomu dwoma pustymi wierszami.
+   * Definicje metod wewnątrz klas są otoczone pojedynczym pustym wierszem.
+   * Dodatkowe puste wiersze mogą być używane (sporadycznie) do oddzielenia grup powiązanych funkcji.
 
-**Avoid extraneous whitespace:**
+**Unikaj zbędnych odstępów:**
 
-*   Immediately inside parentheses, brackets or braces:
+* Bezpośrednio wewnątrz nawiasów okrągłych, kwadratowych i klamrowych:
 
-    ```
-    ### BAD
-    function( apples[ 1 ], { oranges: 2 } )
-    ```
+   ```
+   ### BAD
+   function( apples[ 1 ], { oranges: 2 } )
+   ```
 
-    ```
-    ### GOOD:
-    function(apples[1], {oranges: 2})
-    ```
-*   Immediately before a comma, semicolon, or colon:
+   ```
+   ### GOOD:
+   function(apples[1], {oranges: 2})
+   ```
+* Bezpośrednio przed przecinkiem, średnikiem lub dwukropkiem:
 
-    ```
-    ### BAD
-     if x == 2 : print x , y ; x , y = y , x
-    ```
+   ```
+   ### BAD
+    if x == 2 : print x , y ; x , y = y , x
+   ```
 
-    ```
-    ### GOOD
-      if x == 2: print x, y; x, y = y, x
-    ```
-*   Immediately before the open parenthesis that starts the argument list of a function call:
+   ```
+   ### GOOD
+     if x == 2: print x, y; x, y = y, x
+   ```
+* Bezpośrednio przed nawiasem otwierającym, który rozpoczyna listę argumentów wywołania funkcji:
 
-    ```
-    ### BAD
-    function (1)
-    ```
+   ```
+   ### BAD
+   function (1)
+   ```
 
-    ```
-    ### GOOD
-    function(1)
-    ```
-*   Immediately before the open parenthesis that starts an indexing or slicing:
+   ```
+   ### GOOD
+   function(1)
+   ```
+* Bezpośrednio przed nawiasem otwierającym, który rozpoczyna indeksowanie lub fragmentowanie:
 
-    ```
-    ### BAD
-    dict ['key'] = list [index]
-    ```
+   ```
+   ### BAD
+   dict ['key'] = list [index]
+   ```
 
-    ```
-    ### GOOD
-    dict['key'] = list[index]
-    ```
-*   Always surround these binary operators with a single space on either side:
+   ```
+   ### GOOD
+   dict['key'] = list[index]
+   ```
+* Zawsze otaczaj te operatory binarne pojedynczym odstępem po obu stronach:
 
-    ```
-    assignment ( = )
-    augmented assignment ( += , -= etc.)
-    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-    Booleans ( and , or , not )
-    ```
+   ```
+   assignment ( = )
+   augmented assignment ( += , -= etc.)
+   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+   Booleans ( and , or , not )
+   ```
 
-**Watch line length:**
+**Przestrzegaj ograniczeń długości wiersza:**
 
-* Don't stress over it \~ 79 characters.
-* Limiting the required editor window width makes it possible to have several files open side-by-side, and works well when using code review tools that present the two versions in adjacent columns.
-* Long lines can be broken over multiple lines by wrapping expressions in parentheses:
+* Nie twórz wierszy dłuższych niż około 79 znaków.
+* Ograniczenie wymaganej szerokości okna edytora umożliwia otwarcie kilku plików jednocześnie obok siebie i dobrze sprawdza się podczas używania narzędzi weryfikacji kodu, które prezentują dwie wersje w sąsiednich kolumnach.
+* Długie wiersze można dzielić na wiele wierszy, ujmując wyrażenia w nawiasy:
 
-**Avoid obvious and redundant comments:**
+**Unikaj oczywistych i nadmiarowych komentarzy:**
 
-* Sometimes fewer comments makes for more readable code. Especially if it forces you to use meaningful symbol names instead.
-*   Adopting good coding habits reduces dependence on comments:
+* Czasami mniejsza liczba komentarzy zapewnia większą czytelność kodu. Zwłaszcza jeśli wymusza to używanie znaczących nazw symboli.
+* Przyjęcie dobrych nawyków kodowania zmniejsza zależność od komentarzy:
 
-    ```
-    ### BAD
-      # get the country code
-      country_code = get_country_code(address)
+   ```
+   ### BAD
+     # get the country code
+     country_code = get_country_code(address)
 
-      # if country code is US
-      if (country_code == 'US'):
-        # display the form input for state
-        print form_input_state()
-    ```
+     # if country code is US
+     if (country_code == 'US'):
+       # display the form input for state
+       print form_input_state()
+   ```
 
-    ```
-    ### GOOD
-      # display state selection for US users
-      country_code = get_country_code(address)
-      if (country_code == 'US'):
-        print form_input_state()
-    ```
+   ```
+   ### GOOD
+     # display state selection for US users
+     country_code = get_country_code(address)
+     if (country_code == 'US'):
+       print form_input_state()
+   ```
 
-> Tip: Comments tell you why, Code tells you how.
+> Wskazówka: komentarze informują „dlaczego”, kod informuje „jak”.
 
-**Check out open source code:**
+**Sprawdź kod typu Open Source:**
 
-* Open Source projects are built on the collaborative efforts of many developers. These projects need to maintain a high level of code readability so that the team can work together as efficiently as possible. Therefore, it is a good idea to browse through the source code of these projects to observe what these developers are doing.
-* Improve your conventions:
-  * Question whether or not each convention is working for the needs at hand.
-  * Is functionality/efficiency being compromised?
+* Projekty typu Open Source są wynikiem wspólnych wysiłków wielu programistów. W tych projektach trzeba utrzymywać wysoki poziom czytelności kodu, aby zespół mógł jak najsprawniej współpracować. Dlatego dobrze jest przeglądać kod źródłowy tych projektów, aby obserwować, co robią ci programiści.
+* Popraw konwencje:
+   * Analizuj, czy dana konwencja dobrze sprawdza się w odniesieniu do konkretnych potrzeb.
+   * Czy nie pogarsza funkcjonalności/wydajności?
 
-## C# (Zerotouch) Standards
+## Standardy języka C# (Zerotouch)
 
-**Check out these wiki pages for guidance on writing C# for Zerotouch and contributing to Dynamo:**
+**Zapoznaj się z poniższymi stronami wiki, aby uzyskać wskazówki dotyczące pisania kodu C# dla narzędzia Zerotouch i rozwijania dodatku Dynamo:**
 
-* This wiki covers some general coding standards for documenting and testing your code: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
-* This wiki specifically covers naming standards for libraries, categories, node names, port names, and abbreviations: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
+* Na tej stronie wiki opisano niektóre ogólne standardy kodowania służące do dokumentowania i testowania kodu: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
+* Na tej stronie wiki opisano szczegółowo standardy nazewnictwa bibliotek, kategorii, nazw węzłów, nazw portów i skrótów: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
-**Unmanaged Objects:**
+**Obiekty niezarządzane:**
 
-When using Dynamo's Geometry library _(ProtoGeometry)_ from Python or C# geometry objects that you create will not be managed by the virtual machine, and the memory of many of these objects will need to be cleaned up manually. To cleanup native or unmanaged objects you can use the **Dispose** method or the **using** keyword. See this wiki entry for an overview: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
+W przypadku używania biblioteki geometrii dodatku Dynamo _(ProtoGeometry)_ z języka Python lub geometrii C# utworzone obiekty nie będą zarządzane przez maszynę wirtualną, a pamięć wielu z tych obiektów będzie musiała zostać wyczyszczona ręcznie. Aby wyczyścić natywne lub niezarządzane obiekty, można użyć metody **Dispose** lub słowa kluczowego **using**. Na tej stronie wiki przedstawiono omówienie: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-You only need to dispose unmanaged resources that you don't return into the graph or store a reference to. For the rest of this section, we'll refer to these objects as _intermediate geometry_. You can see an example of this class of object in the code example below. This zero touch C# function **singleCube** returns a single cube, but creates 10000 extra cubes during its execution. We can pretend this other geometry was used as some intermediate construction geometry.
+Wystarczy usunąć zasoby niezarządzane, które nie są zwracane w wykresie ani do których nie są zapisywane odwołania. W pozostałej części tej sekcji określamy te obiekty jako _geometrię pośrednią_. Przykład tej klasy obiektów można zobaczyć w poniższym przykładzie kodu. Ta funkcja **singleCube** w języku C# (Zerotouch) zwraca pojedynczy sześcian, ale podczas wykonywania generuje 10 000 dodatkowych sześcianów. Możemy udawać, że ta druga geometria została użyta jako pewnego rodzaju pośrednia geometria konstrukcji.
 
-**This zero touch function will most likely crash Dynamo.** Since we created 10000 solids, but only stored one of them, and only returned that one. We should instead, dispose all of our intermediate cubes, except the one that we return. We don't want to dipose what we return, as it will be propogated into the graph and used by other nodes.
+**Ta funkcja Zerotouch najprawdopodobniej spowoduje awarię dodatku Dynamo.** Jest tak dlatego, że utworzyliśmy 10 000 brył, ale tylko jedną z nich zapisaliśmy i tę właśnie zwróciliśmy. Zamiast tego powinniśmy usunąć wszystkie sześciany pośrednie z wyjątkiem tego, który zwracamy. Nie chcemy usuwać tego, który zwracamy, ponieważ zostanie on propagowany do wykresu i będzie używany przez inne węzły.
 
 ```
 public Cuboid singleCube(){
@@ -292,7 +292,7 @@ public Cuboid singleCube(){
 }
 ```
 
-The fixed code would look something like:
+Kod stały może wyglądać następująco:
 
 ```
  public Cuboid singleCube(){
@@ -312,4 +312,4 @@ The fixed code would look something like:
  }
 ```
 
-In general you only need to dispose geometry like `Surfaces`, `Curves`, and `Solids`. To be safe though, you can dispose all geometry types (`Vectors`, `Points`, `CoordinateSystems`).
+Ogólnie rzecz biorąc, konieczność usuwania występuje tylko w przypadku takiej geometrii, jak `Surfaces`, `Curves` i `Solids`. Jednak najlepiej jest usuwać wszystkie typy geometrii (`Vectors`, `Points`, `CoordinateSystems`).

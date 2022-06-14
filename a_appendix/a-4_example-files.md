@@ -1,16 +1,16 @@
-# Example Files
+# Pliki przykładowe
 
-#### These example files accompany the Dynamo Primer, and are organized according to Chapter and Section.
+#### Te pliki przykładowe są dołączone do przewodnika Dynamo Primer i są zorganizowane zgodnie z rozdziałami i sekcjami.
 
-## Essential Nodes & Concept
+## Węzły podstawowe i koncepcja
 
-### Geometry for Computational Design
+### Geometria do projektowania obliczeniowego
 
-#### Geometry Overview
+#### Geometria — przegląd
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-#### Vector, Plane & Coordinate System
+#### Wektor, płaszczyzna i układ współrzędnych
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
@@ -18,53 +18,53 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-#### Points
+#### Punkty
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-#### Curves
+#### Krzywe
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-#### Surface
+#### Powierzchnia
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/5/Surfaces.zip" %}
 
-#### Solids
+#### Bryły
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### The Building Blocks of Programs
+### Składniki programów
 
-#### Data
+#### Dane
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-#### Math
+#### Matematyka
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-#### Logic
+#### Logika
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
-#### Strings
+#### Ciągi
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-#### Color
+#### Kolor
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-### Designing with Lists
+### Projektowanie z użyciem list
 
-#### What's a List
+#### Co to jest lista
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/1/Lacing.dyn" %}
 
-#### Working with Lists
+#### Praca z listami
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-Operations.dyn" %}
 
@@ -78,7 +78,7 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
-#### Lists of Lists
+#### Listy list
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
@@ -94,73 +94,73 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/ReplaceItems.dyn" %}
 
-#### n-Dimensional Lists
+#### Listy n-wymiarowe
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-### Dictionaries in Dynamo
+### Słowniki w dodatku Dynamo
 
-#### Revit Use-Cases
+#### Przypadki zastosowań w programie Revit
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-5/4/roomDictionary.dyn" %}
 
-## Custom Nodes & Packages
+## Węzły i pakiety niestandardowe
 
-### Custom Nodes
+### Węzły niestandardowe
 
-#### Creating a Custom Node
+#### Tworzenie węzła niestandardowego
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-1/2/UV-CustomNode.zip" %}
 
-#### Publishing to Your Library
+#### Publikowanie w bibliotece użytkownika
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-1/3/PointsToSurface.dyf" %}
 
-### Packages
+### Pakiety
 
-#### Package Case Study - Mesh Toolkit
+#### Analiza przypadku pakietu — zestaw Mesh Toolkit
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/2/MeshToolkit.zip" %}
 
-#### Publishing a Package
+#### Publikowanie pakietu
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/4/MapToSurface.zip" %}
 
-#### Zero-Touch Importing
+#### Zero-Touch — importowanie
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/5/ZeroTouchImages.zip" %}
 
-## Dynamo for Revit
+## Dodatek Dynamo dla programu Revit
 
-#### Selecting
+#### Wybieranie
 
 {% file src="../7_dynamo_for_revit/datasets/2/Revit-Selecting.zip" %}
 
-#### Editing
+#### Edytowanie
 
 {% file src="../7_dynamo_for_revit/datasets/3/Revit-Editing.zip" %}
 
-#### Creating
+#### Tworzenie
 
 {% file src="../7_dynamo_for_revit/datasets/4/Revit-Creating-DirectShape.zip" %}
 
-#### Customizing
+#### Dostosowywanie
 
 {% file src="../7_dynamo_for_revit/datasets/5/Revit-Customizing.zip" %}
 
-#### Documenting
+#### Dokumentowanie
 
 {% file src="../7_dynamo_for_revit/datasets/6/Revit-Documenting.zip" %}
 
-## Coding in Dynamo
+## Kodowanie w dodatku Dynamo
 
-### Code Blocks and DesignScript
+### Bloki kodu i język DesignScript
 
-#### DesignScript Syntax
+#### Składnia języka DesignScript
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-#### Shorthand
+#### Krótka składnia
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
@@ -170,11 +170,11 @@
 
 ### Python
 
-#### Python Nodes
+#### Węzły języka Python
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/1/Python_Custom-Node.dyn" %}
 
-#### Python and Revit
+#### Python i Revit
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-Doc.dyn" %}
 
@@ -182,24 +182,24 @@
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-## Best Practices
+## Wzorce postępowania
 
-### Graph Strategies
+### Strategie dotyczące wykresów
 
 {% file src="../9_best_practices/datasets/1/RoofDrainageSim.zip" %}
 
-### Scripting Strategies
+### Strategie dotyczące skryptów
 
 {% file src="../.gitbook/assets/SteepestPath.dyn" %}
 
-## Sample Workflows
+## Przykładowe procesy robocze
 
-### Getting Started Workflows
+### Procesy robocze — pierwsze kroki
 
-#### Parametric Vase
+#### Wazon parametryczny
 
 {% file src="../10_sample_workflow/datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-#### Attractor Points
+#### Punkty przyciągania
 
 {% file src="../10_sample_workflow/datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}

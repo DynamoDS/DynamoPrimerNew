@@ -1,29 +1,29 @@
-# Dictionary Nodes
+# Węzły słownika
 
-Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
+Dodatek Dynamo 2.0 udostępnia różne węzły słownika do wykorzystania. Obejmuje to węzły _tworzenia, operacji i zapytań_.
 
 ![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
 
-#### Create
+#### Tworzenie
 
-1.`Dictionary.ByKeysValues` will create a dictionary with the supplied values and keys. _(The number of entries will be whatever the shortest list input is)_
+1. Węzeł `Dictionary.ByKeysValues` tworzy słownik z określonymi wartościami i kluczami. _(Liczba pozycji będzie zgodna z liczbą pozycji na najkrótszej liście wejściowej)_
 
 #### Action
 
-2\. `Dictionary.Components` will produce the components of the input dictionary. _(This is the reverse of the create node.)_
+2\. Węzeł `Dictionary.Components` tworzy składniki słownika wejściowego. _(Jest to operacja odwrotna do operacji węzła tworzenia)._
 
-3\. `Dictionary.RemoveKeys` will produce a new dictionary object with the input keys removed.
+3\. Węzeł `Dictionary.RemoveKeys` tworzy nowy obiekt słownika z usuniętymi kluczami wejściowymi.
 
-4\. `Dictionary.SetValueAtKeys` will produce a new dictionary based on the input keys and the values to replace the current value at the corresponding keys.
+4\. Węzeł `Dictionary.SetValueAtKeys` tworzy nowy słownik na podstawie wejściowych kluczy i wartości zastępujących bieżące wartości dla odpowiednich kluczy.
 
-5\. `Dictionary.ValueAtKey` will return the value at the input key.
+5\. Węzeł `Dictionary.ValueAtKey` zwraca wartość dla klucza wejściowego.
 
-#### Count
+#### Ilość
 
-6\. `Dictionary.Count` will tell you how many key value pairs are in the dictionary.
+6\. Węzeł `Dictionary.Count` zwraca liczbę par wartości i kluczy w słowniku.
 
-7\. `Dictionary.Keys` will return what keys are currently stored in the dictionary.
+7\. Węzeł `Dictionary.Keys` zwraca aktualnie przechowywane w słowniku klucze.
 
-8\. `Dictionary.Values` will return what values are currently stored in the dictionary.
+8\. Węzeł `Dictionary.Values` zwraca aktualnie przechowywane w słowniku wartości.
 
-Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.
+Ogólnie powiązywanie danych ze słownikami stanowi świetną alternatywę dla starej metody pracy z indeksami i listami.

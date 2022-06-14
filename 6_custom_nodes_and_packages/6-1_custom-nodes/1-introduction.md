@@ -1,50 +1,50 @@
-# Custom Node Introduction
+# Węzeł niestandardowy — wprowadzenie
 
-Custom Nodes are constructed by nesting other nodes and custom nodes inside of a "Dynamo Custom Node," which we can think of conceptually as a container. When this container node is executed in your graph, everything inside it will be executed to allow you to reuse and share a useful combination of nodes.
+Węzły niestandardowe są tworzone przez zagnieżdżanie innych węzłów i węzłów niestandardowych wewnątrz „węzła niestandardowego Dynamo”, który można traktować koncepcyjnie jako kontener. Gdy ten węzeł kontenera zostaje wykonany na wykresie, wykonywana jest cała jego zawartość, co umożliwia ponowne używanie i udostępnianie przydatnego połączenia węzłów.
 
-### Adapting to Change
+### Przystosowywanie się do zmiany
 
-When you have multiple copies of a custom node in your graph, you can update all of them by editing the base custom node. This allows you to update your graph seamlessly by adapting to any changes that may occur in workflow or design.
+Jeśli na wykresie znajduje się wiele kopii węzła niestandardowego, można zaktualizować je wszystkie, edytując podstawowy węzeł niestandardowy. Umożliwia to płynną aktualizację wykresu przez dostosowanie rozwiązania do zmian, które mogą wystąpić w procesie roboczym lub w projekcie.
 
-### Work Sharing
+### Współdzielenie pracy
 
-Arguably the best feature of custom nodes is their work sharing capabilities. If a "power user" creates a complex Dynamo graph and hands it off to a designer who is new to Dynamo, he/she can condense the graph to the bare essentials for design interaction. The custom node can be opened to edit the internal graph, but the "container" can be kept simple. With this process, custom nodes allow Dynamo users to design a graph that is clean and intuitive.
+Prawdopodobnie największą zaletą węzłów niestandardowych jest możliwość ich udostępniania. Jeśli „użytkownik zaawansowany” utworzy złożony wykres Dynamo i przekaże go projektantowi, który jest nowym użytkownikiem dodatku Dynamo, może on uprościć ten wykres do elementów najistotniejszych dla interakcji projektowych. Węzeł niestandardowy można otworzyć w celu edycji wewnętrznego wykresu, zachowując przy tym prostotę „kontenera”. Dzięki tej procedurze węzły niestandardowe umożliwiają użytkownikom dodatku Dynamo projektowanie wykresów, które będą przejrzyste i intuicyjne.
 
 ![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
 
-### Many Ways to Build a Node
+### Wiele sposobów tworzenia węzła
 
-There are a wide variety of ways to build custom nodes in Dynamo. In the examples in this chapter, we'll create custom nodes directly from the Dynamo UI. If you are a programmer and you are interested in C# or Zero-Touch formatting, you can reference [this page ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)on the Dynamo Wiki for a more in-depth review.
+W dodatku Dynamo można tworzyć węzły niestandardowe na wiele sposobów. W przykładach w tym rozdziale utworzymy węzły niestandardowe bezpośrednio za pomocą interfejsu użytkownika dodatku Dynamo. Programista interesujący się formatowaniem C# lub Zero-Touch może skorzystać z [tej strony](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes) na stronie wiki dodatku Dynamo, aby zapoznać się z bardziej szczegółowym omówieniem.
 
-### Custom Node Environment & Create Your First Custom Node
+### Środowisko węzłów niestandardowych i tworzenie pierwszego węzła niestandardowego
 
-Let's jump into the custom node environment and make a simple node to calculate a percentage. The custom node environment is different from the Dynamo graph environment, but the interaction is fundamentally the same. With that said, let's create our first custom node!
+Przejdźmy do środowiska węzłów niestandardowych i utwórzmy prosty węzeł, aby obliczyć wartość procentową. Środowisko węzłów niestandardowych różni się od środowiska wykresu Dynamo, ale obsługuje się je zasadniczo tak samo. Utwórzmy więc pierwszy węzeł niestandardowy.
 
-To create a Custom Node from scratch, Launch Dynamo and select Custom Node, or type Ctrl + Shift + N from the canvas.
+Aby utworzyć węzeł niestandardowy od podstaw, uruchom dodatek Dynamo i wybierz opcję Węzeł niestandardowy lub naciśnij kombinację klawiszy Ctrl+Shift+N w obszarze rysunku.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
 
-Assign a name, description, and category in the Custom Node Properties dialog.
+W oknie dialogowym Właściwości węzła niestandardowego przypisz nazwę, opis i kategorię.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
 
-> 1. **Name:** Percentage
-> 2. **Description**: Calculate the percentage of one value in relation to another.
-> 3. **Category:** Math.Functions
+> 1. **Nazwa:** Percentage
+> 2. **Opis**: oblicza procent (ang. percentage) jednej wartości względem innej.
+> 3. **Kategoria:** Math.Functions
 
-This will open a canvas with a yellow background, indicating that you are working inside a custom node. In this canvas you have access to all of the core Dynamo nodes, as well as the Input and Output nodes, which label the data flowing into and out of the custom node. They can be found in Input>Basic.
+Spowoduje to otwarcie obszaru rysunku z żółtym tłem, co oznacza, że użytkownik pracuje w węźle niestandardowym. W tym obszarze rysunku użytkownik ma dostęp do wszystkich podstawowych węzłów Dynamo oraz do węzłów Input i Output, które opisują dane wpływające do węzła niestandardowego i wypływające z niego. Można je znaleźć w obszarze Input (Dane wejściowe)>Basic (Podstawowe).
 
 ![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
 
 ![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
 
-> 1. **Inputs:** Input nodes create input ports on the custom node. The syntax for an input node is _input\_name : datatype = default\_value(optional)._
-> 2. **Outputs:** Similar to inputs, these will create and name output ports on the custom node. Consider adding a **Custom Comment** to your Input and Output ports to hint at the Input and Output types. This is discussed in more detail in the [Creating Custom Nodes section](2-creating.md).
+> 1. **Węzły Input:** węzły wejściowe tworzą porty wejściowe w węźle niestandardowym. Składnia węzła wejściowego to: _nazwa\_węzła\_wejściowego : datatype = wartość\_domyślna (opcjonalnie)._
+> 2. **Węzły Output:** podobnie jak w przypadku węzłów wejściowych te węzły tworzą porty wyjściowe w węźle niestandardowym. Rozważ dodanie komentarza niestandardowego (**Custom Comment**) do portów wejściowych i wyjściowych, aby poinformować o typach danych wejściowych i wyjściowych. Więcej szczegółów znajduje się w sekcji [Tworzenie węzłów niestandardowych](2-creating.md).
 
-You can save this custom node as a .dyf (as opposed to the standard .dyn) file and it will automatically be added to your session and future sessions. You will find the custom node in your library from the Add-ons section.
+Ten węzeł niestandardowy można zapisać jako plik .dyf (w przeciwieństwie do standardowego pliku .dyn), który zostanie automatycznie dodany do bieżącej sesji i przyszłych sesji. Ten węzeł niestandardowy można znaleźć w bibliotece w sekcji dodatków.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
 
-### Moving Forward
+### Dalsze kroki
 
-Now that we've created our first custom node, the next sections will dive deeper into custom node functionality and how to publish generic workflows. In the following section, we'll look at developing a custom node that transfers geometry from one surface to another.
+Teraz po utworzeniu pierwszego węzła niestandardowego w kolejnych sekcjach dokładniej omówimy funkcje węzłów niestandardowych i to, jak publikuje się ogólne procesy robocze. W kolejnej sekcji przyjrzymy się opracowywaniu węzła niestandardowego, który przenosi geometrię z jednej powierzchni do drugiej.

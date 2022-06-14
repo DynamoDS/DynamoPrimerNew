@@ -1,92 +1,92 @@
-# Package Introduction
+# Pakiet — wprowadzenie
 
-In short, a Package is a collection of Custom Nodes. The Dynamo Package Manager is a portal for the community to download any package which has been published online. These toolsets are developed by third parties in order to extend Dynamo's core functionality, accessible to all, and ready to download at the click of the button.
+W skrócie: pakiet jest zbiorem węzłów niestandardowych. Dynamo Package Manager to portal dla społeczności umożliwiający pobranie dowolnego pakietu, który został opublikowany online. Te zestawy narzędzi zostały opracowane przez strony trzecie w celu rozszerzenia podstawowej funkcjonalności dodatku Dynamo i są dostępne dla wszystkich. Są gotowe do pobrania po kliknięciu przycisku.
 
-![Package Manager Site](../images/6-2/1/dpm.jpg)
+![Witryna Menedżera pakietów](../images/6-2/1/dpm.jpg)
 
-An open-source project such as Dynamo thrives on this type of community involvement. With dedicated third-party developers, Dynamo is able to extend its reach to workflows across a range of industries. For this reason, the Dynamo team has made concerted efforts to streamline package development and publishing (which will be discussed in more detail in the following sections).
+Projekt open-source, taki jak dodatek Dynamo, rozwija się dzięki takiemu zaangażowaniu społeczności. Dzięki zaangażowanym programistom zewnętrznym dodatek Dynamo może rozszerzyć zasięg na procesy robocze w różnych branżach. Z tego powodu zespół dodatku Dynamo podjął skoncentrowane wysiłki w celu usprawnienia opracowywania i publikowania pakietów (zostanie to omówione bardziej szczegółowo w kolejnych sekcjach).
 
-### Installing a Package
+### Instalowanie pakietu
 
-The easiest way to install a package is by using the Packages toolbar in your Dynamo interface. Let's jump right into it and install one now. In this quick example, we'll install a popular package for creating quad panels on a grid.
+Najprostszym sposobem instalacji pakietu jest użycie paska narzędzi Pakiety w interfejsie dodatku Dynamo. Przejdźmy od razu do rzeczy i zainstalujmy pakiet teraz. W tym szybkim przykładzie zainstalujemy popularny pakiet umożliwiający tworzenie paneli czworokątnych na siatce.
 
-In Dynamo, go to _Packages>Search For a Package..._
+W dodatku Dynamo przejdź do obszaru _Pakiety > Wyszukaj pakiet_.
 
 ![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
 
-In the search bar, let's search for "quads from rectangular grid". After a few moments, you should see all of the packages which match this search query. We want to select the first package with the matching name.
+Na pasku wyszukiwania wyszukaj frazę „quads from rectangular grid”. Po kilku chwilach powinny pojawić się wszystkie pakiety zgodne z tym zapytaniem. Wybierzmy pierwszy pakiet z pasującą nazwą.
 
-Click on Ínstall to add this package to your library. Done!
+Kliknij przycisk Zainstaluj, aby dodać ten pakiet do biblioteki. Gotowe.
 
 ![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
 
-Notice that we now have another group in our Dynamo library called "buildz". This name refers to the developer of the package, and the custom node is placed in this group. We can begin to use this right away.
+Zwróć uwagę, że w bibliotece Dynamo pojawiła się kolejna grupa o nazwie „buildz”. Ta nazwa odnosi się do programisty pakietu, a węzeł niestandardowy zostaje umieszczony w tej grupie. Możemy od razu zacząć z niego korzystać.
 
 ![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
 
-Use **Code Block** to quickly define a rectangular grid, output the result to a **Polygon.ByPoints** Node, subsequently a **Surface.ByPatch** Node to view the list of rectangular panels you have just created.
+Użyj węzła **Code Block**, aby szybko zdefiniować prostokątną siatkę, zapisać wynik w węźle **Polygon.ByPoints**, a następnie użyj węzła **Surface.ByPatch**, aby wyświetlić listę właśnie utworzonych prostokątnych paneli.
 
 ![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
 
-### Installing Package Folder - DynamoUnfold
+### Instalowanie folderu pakietu — DynamoUnfold
 
-The example above focuses on a package with one custom node, but you use the same process for downloading packages with several custom nodes and supporting data files. Let's demonstrate that now with a more comprehensive package: Dynamo Unfold.
+W powyższym przykładzie skupiono się na pakiecie z jednym węzłem niestandardowym, ale ten sam proces jest używany do pobierania pakietów z kilkoma węzłami niestandardowymi i plikami danych pomocniczych. Zademonstrujmy to teraz z wszechstronniejszym pakietem: Dynamo Unfold.
 
-As in the example above, begin by selecting _Packages>Search for a Package..._.
+Tak jak w przykładzie powyżej, rozpocznij od wybrania opcji _Pakiety > Wyszukaj pakiet_.
 
-This time, we'll search for _"DynamoUnfold"_, one word, minding the caps. When we see the packages, download by clicking on Install to add Dynamo Unfold to your Dynamo Library.
+Tym razem poszukamy jednego słowa, _„DynamoUnfold”_, zwracając uwagę na wielkość liter. Po wyświetleniu pakietów pobierz je, klikając przycisk Zainstaluj, aby dodać składniki Dynamo Unfold do biblioteki Dynamo.
 
 ![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
 
-In the Dynamo Library, we have a _DynamoUnfold_ Group with multiple categories and custom nodes.
+W bibliotece Dynamo dostępna jest grupa _DynamoUnfold_ z wieloma kategoriami i węzłami niestandardowymi.
 
 ![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
 
-Now, let's take a look at the package's file structure. First, select Dynamo > Preferences
+Spójrzmy teraz na strukturę plików pakietu. Najpierw wybierz opcję Dynamo > Preferencje
 
 ![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
 
-From the Preferences pop-up, open Package Manager > next to DynamoUnfold, select the vertical dots menu ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) > Show Root Directory to open root folder for this package.
+W oknie podręcznym Preferencje otwórz Menedżera pakietów > obok opcji DynamoUnfold wybierz menu w postaci pionowych kropek ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) > Pokaż katalog główny, aby otworzyć folder główny dla tego pakietu.
 
 ![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
 
-This will take us to the package's root directory. Notice that we have 3 folders and a file.
+Spowoduje to przejście do katalogu głównego pakietu. Zwróć uwagę, że mamy 3 foldery i plik.
 
 ![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
 
-> 1. The _bin_ folder houses .dll files. This Dynamo package was developed using Zero-Touch, so the custom nodes are held in this folder.
-> 2. The _dyf_ folder houses the custom nodes. This package was not developed using Dynamo custom nodes, so this folder is empty for this package.
-> 3. The extra folder houses all additional files, including our example files.
-> 4. The pkg file is a basic text file defining the package settings. We can ignore this for now.
+> 1. Folder _bin_ zawiera pliki .dll. Ten pakiet Dynamo został opracowany przy użyciu narzędzia Zero-Touch, więc węzły niestandardowe są przechowywane w tym folderze.
+> 2. Folder _dyf_ zawiera węzły niestandardowe. Ten pakiet nie został opracowany przy użyciu węzłów niestandardowych Dynamo, dlatego ten folder jest w przypadku tego pakietu pusty.
+> 3. Ten dodatkowy folder zawiera wszystkie dodatkowe pliki, w tym pliki przykładowe.
+> 4. Plik pkg jest podstawowym plikiem tekstowym definiującym ustawienia pakietu. Na razie możemy to zignorować.
 
-Opening the "extra" folder, we see a bunch of example files that were downloaded with the install. Not all packages have example files, but this is where you can find them if they are part of a package.
+Po otwarciu folderu „extra” zostaje wyświetlona seria plików przykładowych, które zostały pobrane wraz z instalacją. Nie wszystkie pakiety zawierają pliki przykładowe, ale jeśli są one częścią pakietu, można je znaleźć tutaj.
 
-Let's open up "SphereUnfold".
+Otwórzmy plik „SphereUnfold”.
 
 ![](../images/6-2/1/rd2.jpg)
 
-After opening the file and hitting "Run" on the solver, we have an unfolded sphere! Example files like these are helpful for learning how to work with a new Dynamo package.
+Po otwarciu pliku i naciśnięciu przycisku „Uruchom” w solwerze dostępna jest rozwinięta sfera. Pliki przykładowe są przydatne do nauki pracy z nowym pakietem Dynamo.
 
 ![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
 
-### Dynamo Package Manager
+### Menedżer pakietów Dynamo
 
-Another way to discover Dynamo packages is to explore the [Dynamo Package Manager](http://dynamopackages.com) online. This is a good way to browse for packages, since the repository sorts packages in order of download count and popularity. Also, it's an easy way to gather information on recent updates for packages, as some Dynamo packages are subjected to versioning and dependencies of Dynamo builds.
+Innym sposobem odkrywania pakietów Dynamo jest zapoznanie się z [Menedżerem pakietów Dynamo](http://dynamopackages.com) online. Jest to dobry sposób przeglądania w poszukiwaniu pakietów, ponieważ repozytorium sortuje pakiety w kolejności ich pobierania i popularności. Jest również łatwym sposobem na gromadzenie informacji o najnowszych aktualizacjach pakietów, ponieważ w przypadku niektórych pakietów Dynamo ma zastosowanie obsługa wersji i zależności kompilacji dodatku Dynamo.
 
-By clicking on _"Quads from Rectangular Grid"_ in the Dynamo Package Manager, you can see its descriptions, versions, the developer, and possible dependencies.
+Klikając opcję _„Quads from Rectangular Grid”_ w Menedżerze pakietów Dynamo, można wyświetlić odpowiednie opisy, wersje, informacje o programiście i możliwe zależności.
 
 ![](../images/6-2/1/dpm2.jpg)
 
-You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
+Pliki pakietu można również pobrać z Menedżera pakietów Dynamo, ale robienie tego bezpośrednio z poziomu dodatku Dynamo stanowi płynniejszy proces.
 
-### Where are Packages Files Stored Locally?
+### Gdzie lokalnie są przechowywane pliki pakietów?
 
-If you do download files from the Dynamo package manager, or if you would like to see where all of your package files are kept, click on Dynamo > Package Manager > Node and Package Paths, you can find your current root folder directory from here.
+Jeśli pobierasz pliki z Menedżera pakietów Dynamo lub chcesz sprawdzić, gdzie są przechowywane wszystkie pliki pakietu, kliknij opcje Dynamo > Menedżer pakietów > Ścieżki do węzłów i pakietów, a następnie odszukaj bieżący katalog główny folderu.
 
 ![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
 
-By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
+Domyślnie pakiety są instalowane w położeniu podobnym do tej ścieżki folderu: _C:/Users/\[nazwa_użytkownika]/AppData/Roaming/Dynamo/\[wersja dodatku Dynamo]_.
 
-### Going Further with Packages
+### Dalsze kroki z pakietami
 
-The Dynamo community is constantly growing and evolving. By exploring the Dynamo Package Manager from time to time, you'll find some exciting new developments. In the following sections, we'll take a more in-depth look at packages, from the end-user perspective to authorship of your own Dynamo Package.
+Społeczność dodatku Dynamo stale rośnie i ewoluuje. Przeglądając Menedżera pakietów Dynamo od czasu do czasu, znajdziesz nowe interesujące rozwiązania. W poniższych sekcjach przyjrzymy się dokładniej pakietom: od perspektywy użytkownika końcowego po perspektywę twórcy własnego pakietu Dynamo.

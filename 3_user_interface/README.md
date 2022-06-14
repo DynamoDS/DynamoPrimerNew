@@ -1,80 +1,80 @@
-# User Interface
+# Interfejs użytkownika
 
-### User Interface Overview
+### Przegląd interfejsu użytkownika
 
-The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in the following sections.
+Interfejs użytkownika (UI) aplikacji Dynamo jest podzielony na pięć głównych regionów. Krótko je tutaj omówimy i objaśnimy dokładniej obszar roboczy oraz bibliotekę w kolejnych sekcjach.
 
 ![](<images/user interface - ui.jpg>)
 
-> 1. Menus
-> 2. Toolbar
-> 3. Library
-> 4. Workspace
-> 5. Execution bar
+> 1. Menu
+> 2. Pasek narzędzi
+> 3. Biblioteka
+> 4. Obszar roboczy
+> 5. Pasek uruchamiania
 
-### Menus
+### Menu
 
 ![](<images/user interface - menu.jpg>)
 
-Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
+Tutaj znajdują się menu podstawowych funkcji aplikacji Dynamo. Podobnie jak w większości programów systemu Windows, operacje związane z zarządzaniem plikami i dotyczące wyboru oraz edycji elementów znajdują się w dwóch pierwszych menu. Pozostałe menu są bardziej specyficzne dla dodatku Dynamo.
 
-#### Dynamo Menus
+#### Menu aplikacji Dynamo
 
-General info and settings can be found on the **Dynamo** drop down menu.
+Ogólne informacje i ustawienia można znaleźć w menu rozwijanym aplikacji **Dynamo**.
 
 ![](<images/user interface - dynamo menu.jpg>)
 
-> 1. About - Find out the Dynamo version installed on your machine.
-> 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
-> 3. Preferences - Includes settings such as define the application's decimal point precision and geometry render quality.
-> 4. Exit Dynamo
+> 1. Informacje — dowiedz się, jaka wersja aplikacji Dynamo jest zainstalowana na komputerze.
+> 2. Umowa dotycząca gromadzenia danych o użytkowaniu — umożliwia to zaakceptowanie lub odrzucenie opcji udostępniania danych użytkownika w celu ulepszenia aplikacji Dynamo.
+> 3. Preferencje — zawiera ustawienia, takie jak dokładność dziesiętna i jakość renderingu geometrii w aplikacji.
+> 4. Zakończ dodatek Dynamo
 
-#### Help
+#### Pomoc
 
-If you're stuck, check out the **Help** Menu. You may access one of the Dynamo reference websites through your internet browser.
+Jeśli nie wiesz, co zrobić dalej, skorzystaj z menu **Pomoc**. Możesz odwiedzić jedną z informacyjnych witryn internetowych dotyczących aplikacji Dynamo za pośrednictwem przeglądarki internetowej.
 
 ![](<images/user interface - help menu.jpg>)
 
-> 1. Getting Started - A brief introduction to using Dynamo.
-> 2. Interactive Guides -
-> 3. Samples - Reference example files.
-> 4. Dynamo Dictionary - Resource with documentation on all nodes.
-> 5. Dynamo Website - View the Dynamo Project on GitHub.
-> 6. Dynamo Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
-> 7. Display Start Page - Return to the Dynamo start page when within a document.
-> 8. Report A Bug - Open an Issue on GitHub.
+> 1. Pierwsze kroki — krótkie wprowadzenie do korzystania z dodatku Dynamo.
+> 2. Interaktywne podręczniki —
+> 3. Przykłady — informacyjne pliki przykładowe.
+> 4. Słownik Dynamo — zasoby z dokumentacją dla wszystkich węzłów.
+> 5. Witryna Dynamo — wyświetl projekt Dynamo w serwisie GitHub.
+> 6. Witryna wiki Dynamo — odwiedź witrynę wiki, aby dowiedzieć się więcej na temat opracowywania rozwiązań za pomocą interfejsu API Dynamo, obsługi bibliotek i narzędzi.
+> 7. Wyświetl stronę startową — wróć do strony startowej dodatku Dynamo z poziomu dokumentu.
+> 8. Zgłoś błąd — zgłoś problem w serwisie GitHub.
 
-### Toolbar
+### Pasek narzędzi
 
-Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
+Pasek narzędzi Dynamo zawiera szereg przycisków umożliwiających szybki dostęp do plików oraz polecenia Cofnij \[Ctrl+Z] i Ponów \[Ctrl+Y]. Po skrajnej prawej stronie znajduje się kolejny przycisk, który umożliwia wyeksportowanie migawki obszaru roboczego. Jest on wyjątkowo przydatny do tworzenia dokumentacji i udostępniania.
 
-* ![](<images/user interface - new file.jpg>) New - Create a new .dyn file
-* ![](<images/user interface - open (1).jpg>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
-* ![](<images/user interface - save.jpg>) Save/Save As - Save your active .dyn or .dyf file
-* ![](<images/user interface - undo.jpg>) Undo - Undo your last action
-* ![](<images/user interface - redo.jpg>) Redo - Redo the next action
-* ![](<images/user interface - screenshot.jpg>) Export Workspace as Image - Export the visible workspace as a PNG file
+* ![](<images/user interface - new file.jpg>) Nowy — utwórz nowy plik .dyn
+* ![](<images/user interface - open (1).jpg>) Otwórz — otwórz istniejący plik .dyn (obszar roboczy) lub .dyf (węzeł niestandardowy)
+* ![](<images/user interface - save.jpg>) Zapisz/Zapisz jako — zapisz aktywny plik .dyn lub .dyf
+* ![](<images/user interface - undo.jpg>) Cofnij — cofnij ostatnią operację
+* ![](<images/user interface - redo.jpg>) Ponów — ponów następną operację
+* ![](<images/user interface - screenshot.jpg>) Eksportuj obszar roboczy jako obraz — eksportuj widoczny obszar roboczy jako plik PNG
 
-### Library
+### Biblioteka
 
-The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [2-library.md](2-library.md "mention") section will cover a more detailed guidance on using it.
+Biblioteka Dynamo jest kolekcją bibliotek funkcjonalnych, z których każda zawiera węzły pogrupowane według kategorii. Składa się ona z bibliotek podstawowych dodawanych podczas domyślnej instalacji aplikacji Dynamo. W miarę objaśniania korzystania z niej będziemy demonstrować, jak rozszerzyć funkcje podstawowe za pomocą węzłów niestandardowych i dodatkowych pakietów. W sekcji [2-library.md](2-library.md "mention") przedstawimy bardziej szczegółowe wskazówki dotyczące korzystania z niej.
 
 ![](<images/user interface - library.jpg>)
 
-### Workspace
+### Obszar roboczy
 
-The Workspace is where we compose our visual programs, you may also change its Preview setting to view the 3D geometries from here. Refer [1-workspace.md](1-workspace.md "mention") for more details.
+W obszarze roboczym tworzymy programy wizualne. Można również zmienić odpowiednie ustawienie podglądu, aby wyświetlać tu geometrie 3D. Aby uzyskać więcej informacji, zobacz [1-workspace.md](1-workspace.md "mention").
 
 ![](<images/user interface - workspace.gif>)
 
-### Execution Bar
+### Pasek uruchamiania
 
-Run your Dynamo script from here. Click the dropdown icon on the Execution button to change between the different modes.
+Tutaj uruchamia się skrypty Dynamo. Kliknij ikonę listy rozwijanej na przycisku wykonywania, aby przełączać się między trybami.
 
 ![](<images/user interface - execution bar.gif>)
 
-* Automatic: Runs your script automatically. Changes is updated in realtime.
-* Manual: Script only runs when the 'Run' button is clicked. Useful for when making changes to complicated and 'heavy script'
-* Periodic: This option is grayed out by default. Only available when the DateTime.Now Node is used. You can set the graph to run automatically at a specified interval.
+* Automatycznie: uruchamia skrypt automatycznie. Zmiany są aktualizowane w czasie rzeczywistym.
+* Ręcznie: skrypt jest uruchamiany tylko po kliknięciu przycisku Uruchom. Ta opcja jest przydatna przy wprowadzaniu zmian w złożonym, „intensywnym” skrypcie.
+* Okresowy: ta opcja jest domyślnie wyszarzona. Jest dostępna tylko wtedy, gdy używany jest węzeł DateTime.Now. Wykres można skonfigurować tak, aby był uruchamiany automatycznie w określonych odstępach czasu.
 
 ![](<images/user interface - execution bar DateTime node.jpg>)

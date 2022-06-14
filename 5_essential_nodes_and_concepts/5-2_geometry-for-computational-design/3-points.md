@@ -1,52 +1,52 @@
-# Points
+# Punkty
 
-## Points in Dynamo
+## Punkty w dodatku Dynamo
 
-### What is a Point?
+### Co to jest punkt?
 
-A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
+[Punkt](5-3\_points.md#point-as-coordinates) jest zdefiniowany przez tylko jedną wartość lub tylko kilka wartości nazywanych współrzędnymi. Liczba wartości współrzędnych potrzebnych do zdefiniowania punktu zależy od układu współrzędnych lub kontekstu, w którym się on znajduje.
 
-### 2D & 3D Point
+### Punkt 2D/3D
 
-The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates \[X,Y,Z] (3D Point in Dynamo).
+Najczęściej używany typ punktu w dodatku Dynamo istnieje w trójwymiarowym globalnym układzie współrzędnych i ma trzy współrzędne \[X,Y,Z] (w dodatku Dynamo jest to punkt 3D).
 
 ![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
 
-A 2D Point in Dynamo has two coordinates \[X,Y].
+Punkt 2D w dodatku Dynamo ma dwie współrzędne \[X,Y].
 
 ![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
 
-### Point on Curves and Surfaces
+### Punkt na krzywych i powierzchniach
 
-Parameters for both Curves and Surfaces are continuous and extend beyond the edge of the given geometry. Since the shapes that define the Parameter Space reside in a three-dimensional World Coordinate System, we can always translate a Parametric Coordinate into a "World" Coordinate. The point \[0.2, 0.5] on the surface for example is the same as point \[1.8, 2.0, 4.1] in world coordinates.
+Parametry dla krzywych i powierzchni są ciągłe i rozciągają się poza krawędź danej geometrii. Ponieważ kształty definiujące przestrzeń parametryczną znajdują się w trójwymiarowym globalnym układzie współrzędnych, zawsze można przekształcić współrzędną parametryczną we współrzędną „globalną”. Na przykład punkt \[0,2, 0,5] na powierzchni jest taki sam jak punkt \[1,8, 2,0, 4,1] we współrzędnych globalnych.
 
 ![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
 
-> 1. Point in assumed World XYZ Coordinates
-> 2. Point relative to a given Coordinate System (Cylindrical)
-> 3. Point as UV Coordinate on a Surface
+> 1. Punkt w zakładanych współrzędnych globalnych XYZ
+> 2. Punkt względem danego układu współrzędnych (walcowego)
+> 3. Punkt jako współrzędne UV na powierzchni
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-## Deep Dive into...
+## Bliższe spojrzenie na...
 
-If Geometry is the language of a model, then Points are the alphabet. Points are the foundation upon which all other geometry is created - we need at least two Points to create a Curve, we need at least three Points to make a Polygon or a Mesh Face, and so on. Defining the position, order, and relationship among Points (try a Sine Function) allows us to define higher order geometry like things we recognize as Circles or Curves.
+Jeśli geometria jest językiem modelu, punkty są alfabetem. Punkty są podstawą tworzenia całej geometrii — do utworzenia krzywej potrzebne są co najmniej dwa punkty, do utworzenia wieloboku lub powierzchni siatki potrzebne są co najmniej trzy punkty itd. Zdefiniowanie położenia, kolejności i relacji między punktami (np. funkcji sinus) umożliwia zdefiniowanie geometrii wyższego rzędu, takich jak elementy rozpoznawane przez użytkownika jako okręgi lub krzywe.
 
-![Point to Curve](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![Z punktu do krzywej](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
 
-> 1. A Circle using the functions `x=r*cos(t)` and `y=r*sin(t)`
-> 2. A Sine Curve using the functions `x=(t)` and `y=r*sin(t)`
+> 1. Okrąg na podstawie funkcji `x=r*cos(t)` i `y=r*sin(t)`
+> 2. Krzywa sinusoidalna na podstawie funkcji `x=(t)` i `y=r*sin(t)`
 
-### Point as Coordinates
+### Punkt jako współrzędne
 
-Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using \[X,Y] on a Plane or \[U,V] if we are on a surface.
+Punkty mogą również występować w dwuwymiarowym układzie współrzędnych. Konwencja wskazuje różne notacje literowe w zależności od tego, z którym typem przestrzeni pracujemy — możemy używać \[X,Y] na płaszczyźnie lub \[U,V] na powierzchni.
 
-![Point as Coordinates](../images/5-2/3/Coordinates.jpg)
+![Punkt jako współrzędne](../images/5-2/3/Coordinates.jpg)
 
-> 1. A Point in Euclidean Coordinate System: \[X,Y,Z]
-> 2. A Point in a Curve Parameter Coordinate System: \[t]
-> 3. A Point in a Surface Parameter Coordinate System: \[U,V]
+> 1. Punkt w euklidesowym układzie współrzędnych: \[X,Y,Z]
+> 2. Punkt w układzie współrzędnych z parametrem krzywej: \[t]
+> 3. Punkt w układzie współrzędnych z parametrami powierzchni: \[U,V]

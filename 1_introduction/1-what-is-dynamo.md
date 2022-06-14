@@ -1,25 +1,25 @@
-# What is Dynamo & How Does It Work?
+# Co to jest dodatek Dynamo i jak działa?
 
-Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
+Dynamo to aplikacja do [programowania wizualnego](broken-reference/), którą można pobrać i uruchomić w samodzielnym trybie „piaskownicy” (odizolowanym) lub jako wtyczkę do innego oprogramowania, takiego jak Revit, FormIt lub Civil 3D.
 
 {% hint style="info" %}
-Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
+Dowiedz się więcej na temat [różnicy między **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
 {% endhint %}
 
-### The Process
+### Proces
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
+Dodatek Dynamo umożliwia pracę w procesie programowania wizualnego, w którym łączy się elementy, aby zdefiniować zależności i sekwencje działań składających się na algorytmy niestandardowe. Algorytmów można używać do tworzenia szerokiej gamy aplikacji — od przetwarzania danych po generowanie geometrii — wszystko to w czasie rzeczywistym i bez pisania jakiegokolwiek kodu (`code`).
 
 ![](<./images/1-1/nodes and wires - flow of data.jpg>)
 
-### Connecting Nodes and Wires
+### Łączenie węzłów z przewodami
 
-Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
+Węzły i przewody są kluczowymi komponentami dodatku Dynamo, które obsługują proces [programowania wizualnego](../a\_appendix/a-1\_visual-programming-and-dynamo.md). Pomaga to w tworzeniu silnych powiązań wizualnych i systemowych między częściami projektu. Za pomocą prostego kliknięcia myszą można łatwo połączyć węzły podczas opracowywania i optymalizowania procesu roboczego projektowania.
 
 ![](<./images/1-1/what is dynamo - connecting nodes with wires.gif>)
 
-## What can Dynamo Achieve?
+## Co można osiągnąć za pomocą dodatku Dynamo?
 
-From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
+Od programowania wizualnego do obsługi procesów projektowych po opracowywanie niestandardowych narzędzi — dodatek Dynamo stanowi nieodłączną część szerokiej gamy niezwykłych zastosowań.
 
-[Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[Obserwuj tablicę dodatku Dynamo w działaniu w serwisie Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)

@@ -1,259 +1,259 @@
-# Graph Strategies
+# Strategie dotyczące wykresów
 
-Prior to this chapter, the Primer has covered how to implement the powerful visual-scripting capabilities of Dynamo. A good understanding of these capabilities is a solid foundation and the first step in building robust visual programs. When we use our visual programs in the field, share them with colleagues, troubleshoot errors, or test limits we have additional issues to deal with. If someone else will be using your program or you are expecting to open it six months from now, it needs to have an immediate graphic and logical clarity. Dynamo has many tools to manage the complexity of your program, and this chapter will give guidelines on when to use them.
+Przed tym rozdziałem w tym elementarzu omówiono sposób korzystania z zaawansowanych funkcji skryptów wizualnych dostępnych w dodatku Dynamo. Zrozumienie tego systemu jest ważnym wstępem do pracy nad niezawodnymi programami wizualnymi. Kiedy programy wizualne są używane w środowisku produkcyjnym, udostępniane współpracownikom oraz badane w celu usunięcia błędów lub zbadania ich ograniczeń, powstają dodatkowe problemy wymagające rozwiązania. Jeśli opracowany program będzie używany przez inne osoby lub zamierzasz go otworzyć za kilka miesięcy, jego układ graficzny i logika muszą być od razu czytelne. Dodatek Dynamo zawiera szereg narzędzi ułatwiających obsługę złożonych programów. W tym rozdziale wyjaśniono, kiedy należy ich używać.
 
-![groups](images/1/cad-chart-visual.jpg)
+![Grupy](images/1/cad-chart-visual.jpg)
 
-## Reduce Complexity
+## Ograniczanie złożoności
 
-As you develop your Dynamo graph and test ideas, it can quickly grow in size and complexity. While it is important that you create a functioning program, it is equally important to make it as simple as possible. Not only will your graph run faster and more predictably, you along with other users will understand its logic later on. The following are several ways that will help you clarify the logic of your graph.
+Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko przybrać duży rozmiar. Choć uzyskanie działającego programu jest ważne, należy też pamiętać, że powinien on być możliwie prosty. Dzięki temu wykres będzie działać szybciej, w bardziej przewidywalny sposób, a przyszli użytkownicy łatwiej zrozumieją jego logikę. Poniżej opisano kilka metod poprawiania czytelności logiki wykresu.
 
-### **Modularize with Groups**
+### **Podział na moduły przy użyciu grup**
 
-* Groups allow you to **create functionally distinct parts** as you build a program
-* Groups allow you to **move large parts of the program** around while maintaining modularity and alignment
-* You can change the **color of the group to differentiate** what Groups are doing (inputs vs functions)
-* You can use groups to start **organizing your graph to streamline Custom Node creation**
+* Grupy umożliwiają **tworzenie części o oddzielnych funkcjach** podczas pracy nad programem.
+* Grupy umożliwiają **przenoszenie dużych części programów** z zachowaniem podziału na moduły i rozkładu.
+* Można **zmienić kolor grupy, aby wyróżnić** grupy realizujące różne działania (obsługujące dane wejściowe lub funkcje).
+* Grupy pozwalają rozpocząć **porządkowanie wykresu w celu usprawnienia pracy nad węzłami niestandardowymi**.
 
 ![](images/1/graphstrategy2.png)
 
-> The colors in this program identify the purpose of each group. This strategy can be used to create hierarchy in any graphic standards or templates you develop.
+> Kolory w tym programie wskazują przeznaczenie poszczególnych grup. Ta strategia pozwala wprowadzić hierarchię opracowywanych standardów graficznych (szablonów).
 >
-> 1. Function group (blue)
-> 2. Input group (orange)
-> 3. Script group (green)
+> 1. Grupa funkcji (niebieskie)
+> 2. Grupa danych wejściowych (pomarańczowe)
+> 3. Grupa skryptów (zielone)
 >
-> For how to use Groups, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informacje o korzystaniu z grup można znaleźć w temacie [Zarządzanie programem](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-### **Develop efficiently with Code Blocks**
+### **Efektywne programowanie przy użyciu bloków kodu**
 
-* At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
-* Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
+* Czasami przy użyciu bloku kodu można **szybko wpisać numer lub metodę węzła, zamiast wyszukiwać tę informację ** (Point.ByCoordinates, Number, String, Formula).
+* Bloki kodu są przydatne, **gdy trzeba zdefiniować funkcje niestandardowe w skrypcie DesignScript w celu ograniczenia liczby węzłów wykresu**.
 
 ![](<images/1/graphstrategy3 (1).png>)
 
-> Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
+> Bloki 1 i 2 realizują tę samą funkcję. Szybciej jest napisać kilka wierszy kodu niż wyszukiwać i dodawać poszczególne węzły. Blok kodu jest też krótszy.
 >
-> 1. Design Script written in Code Block
-> 2. Equivalent program in nodes
+> 1. Kod DesignScript w bloku kodu
+> 2. Równoważny program w węzłach
 >
-> For how to use Code Block, refer to [What's a Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Informacje o korzystaniu z bloków kodu można znaleźć w artykule [Co to jest blok kodu](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
 
-### **Condense with Node to Code**
+### **Kondensowanie przez konwersję węzłów na kod**
 
-* You can **reduce the complexity of a graph by using Node to Code** which will take a collection of simple nodes and write their corresponding DesignScript in a single Code Block
-* Node to Code can\*\* condense code without eliminating the program’s clarity\*\*
-* The following are the **pros** of using Node to Code:
-  * Easily condenses code into one component that is still editable
-  * Can simplify a significant portion of the graph
-  * Useful if the ‘mini-program’ will not often be edited
-  * Useful for incorporating other code block functionality, like functions
-* The following are the **cons** of using Node to Code:
-  * Generic naming makes it less legible
-  * More difficult to understand for other users
-  * No easy way to return to the visual programming version
+* Aby **zmniejszyć złożoność wykresu, można przekonwertować węzły na kod**. Kolekcja prostych węzłów zostanie przekształcona w jeden blok kodu z odpowiadającym im kodem DesignScript.
+* Konwersja węzłów na kod pozwala\*\* skondensować kod z zachowaniem czytelności programu\*\*
+* Poniżej wymieniono **zalety** konwersji węzłów na kod:
+   * Kod można łatwo skondensować w jeden komponent, który nadal jest dostępny do edycji.
+   * Pozwala uprościć znaczną część wykresu.
+   * Jest przydatna, gdy powstający miniprogram nie będzie często edytowany.
+   * Ułatwia integrowanie elementów innych bloków kodu, na przykład funkcji.
+* Poniżej wymieniono **wady** konwersji węzłów na kod:
+   * Nazwy ogólne pogarszają czytelność wykresu.
+   * Utrudnia innym użytkownikom zrozumienie wykresu.
+   * Nie można łatwo przywrócić wersji wizualnej programu.
 
 ![](images/1/graphstrategy3\_1.png)
 
-> 1. Existing program
-> 2. Code Block created from Node to Code
+> 1. Istniejący program
+> 2. Blok kodu utworzony przez konwersję węzłów na kod
 >
-> For how to use Node to Code, refer to [Design Script Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Informacje o konwersji węzłów na kod można znaleźć w artykule [Składnia języka DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
 
-### **Access data flexibly with List@Level**
+### **Elastyczny dostęp do danych przy użyciu funkcji List@Level**
 
-* Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
-* List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
+* Funkcja List@Level umożliwia **ograniczenie złożoności wykresu przez zastąpienie węzłów List.Map i List.Combine**, które mogą zajmować dużo miejsca na obszarze projektowania.
+* Funkcja List@Level oferuje\*\* szybszą metodę tworzenia logiki węzłów niż węzły List.Map/List.Combine\*\*. Umożliwia ona uzyskiwanie dostępu do danych na każdym poziomie listy wprost z poziomu portu wejściowego węzła.
 
 ![](<images/1/graphstrategy4 (1) (1).png>)
 
-> We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
+> Można zweryfikować, ile wartości True z których list zwraca funkcja BoundingBox.Contains, aktywując funkcję List@Level dla wejścia „list” (lista) modułu CountTrue. Funkcja List@Level pozwala użytkownikowi określić, z jakiego poziomu danych wejściowych są pobierane dane. Korzystanie z funkcji List@Level jest elastyczne, efektywne i zalecane jako metoda skuteczniejsza niż stosowanie węzłów List.Map i List.Combine.
 >
-> 1. Counting true values at List Level 2
-> 2. Counting true values at List Level 3
+> 1. Liczenie wartości True na poziomie 2 listy
+> 2. Liczenie wartości True na poziomie 3 listy
 >
-> For how to use List@Level, refer to [Lists of Lists](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Informacje o korzystaniu z funkcji List@Level można znaleźć w temacie [Listy list](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
 
-## Maintain Readability
+## Zachowywanie czytelności
 
-In addition to making your graph as simple and efficient as possible, strive for graphic clarity. Despite your best efforts to make your graph intuitive with logical groupings, relationships might not be readily apparent. A simple Note inside of a Group or renaming a slider can save you or another user from unnecessary confusion or panning across the graph. The following are several ways that will help you apply graphic consistency within and across your graphs.
+Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o jego czytelności graficznej. Choć staramy się, aby wykres był intuicyjny w oparciu o grupy logiczne, relacje między węzłami mogą nie być oczywiste. Czasami dodanie prostej notatki w grupie lub zmiana nazwy suwaka pozwala wyeliminować nieporozumienia, jakie powstają podczas przeglądania wykresu. Poniżej omówiono kilka sposobów zachowywania spójności graficznej w obrębie wykresu i pomiędzy wykresami.
 
-### **Visual continuity with Node Alignment**
+### **Ciągłość wizualna — wyrównywanie węzłów**
 
-* To reduce your work after you finished building your graph, you should try to ensure the node layout is legible by **aligning nodes often and as you go**
-* If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
-* To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
+* Aby ograniczyć nakłady pracy po zakończeniu tworzenia wykresu, warto zadbać o czytelność układu węzłów przez **ich częste wyrównywanie podczas tworzenia wykresu**.
+* Jeśli inne osoby będą pracowały nad tym samym wykresem, należy **zagwarantować płynny przepływ połączeń między węzłami przed dostarczeniem wykresu**.
+* Aby w prosty sposób wyrównać wykres, **można użyć funkcji Wyczyść układ węzłów, która robi to automatycznie** (choć mniej dokładnie niż człowiek).
 
 ![](<images/1/graphstrategy5 (2) (1).png>)
 
-> 1. Unorganized graph
-> 2. Aligned graph
+> 1. Nieuporządkowany wykres
+> 2. Wyrównany wykres
 >
-> For how to use Node Alignment, refer to [Managing Your Program](3-4\_best\_practices.md).
+> Informacje o wyrównywaniu węzłów można znaleźć w artykule [Zarządzanie programem](3-4\_best\_practices.md).
 
-### **Descriptive labeling by renaming**
+### **Opisowe etykiety — zmienianie nazw**
 
-* Renaming inputs can help others easily understand your graph, **especially if what they plug into will be off the screen**
-* **Be wary of renaming nodes other than inputs.** An alternative to this is creating a custom node from a node cluster and renaming that; it will be understood that it contains something else
+* Zmieniając nazwy danych wejściowych, można poprawić czytelność wykresu, **szczególnie jeśli elementy połączone z wejściami znajdują się poza ekranem**.
+* **Należy ostrożnie podchodzić do zmian nazw węzłów innych niż wejściowe.** Zamiast tego można utworzyć węzeł niestandardowy ze zbioru węzłów i zmienić jego nazwę. Pozwoli to wskazać, że ten węzeł zawiera coś innego.
 
 ![](images/1/graphstrategy6.png)
 
-> 1. Inputs for surface manipulation
-> 2. Inputs for architectural parameters
-> 3. Inputs for drainage simulation script
+> 1. Dane wejściowe modyfikacji powierzchni
+> 2. Dane wejściowe parametrów architektonicznych
+> 3. Dane wejściowe skryptu symulacji odwadniania
 >
-> To rename a node, right click on its name and choose "Rename Node...".
+> Aby zmienić nazwę węzła, kliknij ją prawym przyciskiem myszy i wybierz opcję „Zmień nazwę węzła”.
 
-### **Explain with Notes**
+### **Wyjaśnienia w notatkach**
 
-* You should add a Note if something in the **graph requires a plain language explanation** that the nodes can not express
-* You should add a Note if a collection of **nodes or a Group is too large or complex and can’t be easily understood right away**
+* Dodaj notatkę, jeśli **część wykresu wymaga wyjaśnienia prostym językiem**, a węzeł tego nie wyraża.
+* Dodaj notatkę, jeśli **zbiór lub grupa węzłów zawiera wiele elementów lub osiąga taką złożoność, że utrudnia szybkie zrozumienie programu**.
 
 ![](images/1/graphstrategy7.png)
 
-> 1. A Note describing the portion of the program that returns raw translation distances
-> 2. A Note describing the code that maps those values to a Sine wave
+> 1. Notatka opisująca część programu, która zwraca pierwotne odległości przekształcenia
+> 2. Notatka opisująca kod odwzorowujący te wartości na falę sinusoidalną
 >
-> For how to add a Note, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informacje o dodawaniu notatki można znaleźć w temacie [Zarządzanie programem](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-## Flex Continuously
+## Ciągłe sprawdzanie
 
-While building your visual-script, it is important to verify that what is being returned is what you expected. Not all errors or issues will cause the program to fail immediately, especially null or zero values that could affect something far downstream. This strategy is also discussed in the context of text-scripting in [Scripting Strategies](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). The following practice will help ensure that you are getting what you expected.
+Podczas tworzenia skryptu wizualnego ważne jest weryfikowanie, że zwracane dane są zgodne z oczekiwaniami. Nie każdy błąd lub problem powoduje natychmiastową awarię programu. Szczególnie wartości null i zerowe mogą generować błędy dopiero w innych, zależnych węzłach. Tę strategię omówiono również w kontekście skryptów tekstowych w artykule [Strategie dotyczące skryptów](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). Poniższa procedura pozwala zagwarantować, że zawsze powstają dane zgodne z oczekiwaniami.
 
-### **Monitor data with Watch and Preview Bubbles**
+### **Monitorowanie danych przy użyciu węzłów obserwacyjnych i podglądów**
 
-* Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
+* Węzły obserwacyjne (Watch) i podglądy pozwalają podczas tworzenia programu\*\* weryfikować, że ważne dane wyjściowe są zwracane zgodnie z oczekiwaniami\*\*
 
 ![](images/1/graphstrategy8.png)
 
-> The Watch nodes are being used to compare:
+> Węzły Watch umożliwiają porównywanie:
 >
-> 1. The raw translation distances
-> 2. The values passed through the Sine equation
+> 1. pierwotnych odległości przekształcenia,
+> 2. wartości przekazywanych przez równanie sinusoidy.
 >
-> For how to use Watch, refer to [Library](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Informacje na temat korzystania z węzła Watch można znaleźć w temacie [Biblioteka](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
 
-## Ensure Reusability
+## Gwarantowanie możliwości wielokrotnego użycia
 
-It is highly likely that someone else will be opening your program at some point, even if you are working independently. They should be able to quickly understand what the program needs and produces from its inputs and outputs. This is especially important when developing a Custom Node to be shared with the Dynamo community and used in someone else’s program. These practices lead to robust, reusable programs and nodes.
+Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet jeśli pracujemy niezależnie. Powinno wtedy być możliwe szybkie zrozumienie wymagań i wyników programu na podstawie jego wejść i wyjść. Jest to szczególnie istotne podczas programowania węzła niestandardowego, który zostanie udostępniony w społeczności Dynamo do użytku w cudzych programach. Te procedury pozwalają tworzyć niezawodne, gotowe do ponownego użycia programy i węzły.
 
-### **Manage the I/O**
+### **Zarządzanie wejściem i wyjściem**
 
-* To ensure legibility and scalability, you should try and **minimize inputs and outputs as much as possible**
-* You should try to **strategize how you are going to build the logic by first creating a rough outline** of how the logic could work before you even add a single node to the canvas. As you develop the rough outline, you should keep track of which inputs and outputs will go into scripts
+* Aby zagwarantować czytelność i skalowalność programu, należy **używać jak najmniejszej liczby wejść i wyjść**.
+* O ile to możliwe, należy **rozważyć strukturę logiczną i opracować ogólny algorytm algorytmu** przed dodaniem jakichkolwiek węzłów w obszarze projektowania. Podczas opracowywania ogólnego algorytmu należy sprawdzić, które wejścia i wyjścia będą stosowane w skryptach.
 
-### **Use Presets to embed input values**
+### **Osadzanie wartości wejściowych za pomocą ustawień wstępnych**
 
-* If there are **particular options or conditions that you want embedded in the graph**, you should use Presets for quick access
-* You can also use Presets to **reduce complexity by caching specific slider values** in a graph with long run times
+* Jeśli **wykres powinien zawierać pewne opcje lub warunki**, szybki dostęp do nich zapewniają ustawienia wstępne.
+* Ustawienia wstępne pozwalają też **ograniczyć złożoność wykresu przez buforowanie określonych wartości suwaków**, gdy czas działania wykresu jest długi.
 
-> For how to use Presets, refer to [Managing Your Data with Presets](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Informacje na temat korzystania z ustawień wstępnych można znaleźć w artykule [Zarządzanie danymi przy użyciu ustawień wstępnych](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
-### **Contain programs with Custom Nodes**
+### **Umieszczanie programów w węzłach niestandardowych**
 
-* You should use a Custom Node if your **program can be collected into a single container**
-* You should use a a Custom Node **when a portion of the graph will be reused often** in other programs
-* You should use a Custom Node if you want to **share a functionality with the Dynamo Community**
+* Użyj węzła niestandardowego, jeśli **program można umieścić w pojedynczym kontenerze**.
+* Użyj węzła niestandardowego, jeśli **część wykresu będzie często używana ponownie** w innych programach.
+* Użyj węzła niestandardowego, jeśli **pewne funkcje mają być udostępniane w społeczności Dynamo**.
 
 ![](images/1/graphstrategy9.png)
 
-> Collecting the point translation program into a Custom Node makes a robust, unique program portable and far easier to understand. Well named input ports will help other users understand how to use the node. Remember to add descriptions and required data types for each input.
+> Umieszczenie całego programu przekształcającego punkty w węźle niestandardowym pozwala uzyskać niezawodny, unikalny i przenośny program, który jest o wiele łatwiejszy do zrozumienia. Odpowiednio nazwane porty wejściowe pomagają użytkownikom w zrozumieniu sposobu użycia węzła. Warto dodać opisy i podać wymagane typy poszczególnych wejść.
 >
-> 1. Existing attractor program
-> 2. Custom Node that collects this program, PointGrid
+> 1. Istniejący program punktu przyciągania
+> 2. Węzeł niestandardowy zawierający ten program — PointGrid
 >
-> For how to use Custom Nodes, refer to [Custom Node Introduction](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Informacje na temat korzystania z węzłów niestandardowych można znaleźć w artykule [Wstęp do węzłów niestandardowych](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
 
-### **Build templates**
+### **Tworzenie szablonów**
 
-* You can build templates to **establish graphic standards across your visual graphs to ensure collaborators have a standardized way of understanding graph**
-* When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
-* When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
+* Tworząc szablony, można **budować standardy graficzne obejmujące wszystkie wykresy. Spójność wizualna ułatwia współpracownikom zrozumienie wykresu**.
+* W ramach szablonu można ustalić **standardowe kolory i rozmiary czcionek grup**, które ułatwiają klasyfikację typów procesów roboczych i działań na danych.
+* Tworząc szablon, można nawet określić standardowe **etykiety, kolory lub różnice stylów między procesami roboczymi (dostępnymi dla użytkownika) a wewnętrznymi** na wykresie.
 
 ![](<images/1/graphstrategy10 (2).png>)
 
-> 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
-> 2. The back-end of the program.
-> 3. Group color categories (the general design, inputs, Python scripting, imported geometry).
+> 1. Interfejs programu (elementy dostępne dla użytkownika) — nazwa projektu, suwaki danych wejściowych i importowana geometria.
+> 2. Elementy wewnętrzne programu.
+> 3. Kategorie kolorów grup (projekt ogólny, dane wejściowe, skrypty Python, importowana geometria).
 
-## Exercise - Architectural Roof
+## Ćwiczenie — dach w architekturze
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
-Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
+Ustaliliśmy kilka wzorców postępowania, które teraz zastosujemy do utworzonego naprędce programu. Choć program poprawnie generuje dach, jego wykres jest równie złożony jak myśli autora. Nie jest w żaden sposób uporządkowany i nie zawiera opisu sposobu użycia. Stosując wzorce postępowania, uporządkujemy, opiszemy i przeanalizujemy ten program, tak aby inni użytkownicy wiedzieli, jak z niego korzystać.
 
 ![](images/1/graphstrategy11.png)
 
-> The program is functioning, but the graph is disorganized.
+> Program działa, ale jego wykres nie jest uporządkowany.
 
-Let's start by determining the data and geometry returned by the program.
+Zaczniemy od określenia, jakie są dane i jaką geometrię zwraca program.
 
 ![](images/1/graphstrategy12.png)
 
-> Understanding when major changes to the data occur is crucial to establishing logical divisions, or modularity. Try inspecting the rest of the program with Watch nodes to see if you can determine groups before moving on to the next step.
+> Zrozumienie najważniejszych zmian w danych jest kluczowe w celu ustalenia podziałów logicznych (podziału na moduły). Spróbuj zbadać resztę programu przy użyciu węzłów obserwacyjnych, aby ustalić podział na grupy przed kolejnym krokiem.
 >
-> 1. This **Code Block** with a math equation looks like a crucial piece of the program. A **Watch** node displays that it is returning lists of translation distances.
-> 2. The purpose of this area isn't readily obvious. The arrangement of True values at list level L2 from **BoundingBox.Contains** and the presence of **List.FilterByBoolMask** suggests we are sampling a portion of the point grid.
+> 1. Ten węzeł **Code Block** zawierający równanie matematyczne wygląda na istotny element programu. Węzeł **Watch** wskazuje, że zwraca on listę odległości przekształcenia.
+> 2. Przeznaczenie tego obszaru nie jest oczywiste. Rozkład wartości True na poziomie listy L2 uzyskanym z funkcji **BoundingBox.Contains** oraz użycie funkcji **List.FilterByBoolMask** wskazują, że próbkujemy część siatki punktów.
 
-Once we understand the elemental parts of the program, let's put them in Groups.
+Teraz wiemy, co robią podstawowe części programu. Umieścimy je w grupach.
 
 ![](images/1/graphstrategy13.png)
 
-> Groups allow the user to visually differentiate the parts of the program.
+> Grupy pomagają użytkownikom wizualnie odróżniać części programu.
 >
-> 1. Import 3D site model
-> 2. Translate point grid based on Sine equation
-> 3. Sample portion of point grid
-> 4. Create architectural roof surface
-> 5. Create glass curtain wall
+> 1. Importowanie modelu 3D
+> 2. Przekształcanie siatki punktów przy użyciu równania sinusoidy
+> 3. Próbkowanie części siatki punktów
+> 4. Tworzenie architektonicznej powierzchni dachu
+> 5. Tworzenie szklanej ściany osłonowej
 
-With Groups established, align the nodes to create visual continuity across the graph.
+Po ustaleniu grup rozmieścimy węzły tak, aby wykres zawierał ciągły przepływ działań.
 
 ![](images/1/graphstrategy14.png)
 
-> Visual continuity helps the user to see the program flow and implicit relationships between nodes.
+> Ciągłość wizualna ułatwia użytkownikowi zrozumienie przepływu programu i domniemanych relacji między węzłami.
 
-Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
+Program będzie czytelniejszy, gdy dodamy kolejną warstwę ulepszeń graficznych. Dodaj notatki, aby opisać działanie danej części programu. Nadaj niestandardowe nazwy danym wejściowym. Przypisz kolory różnym typom grup.
 
 ![](<images/1/graphstrategy15 (1).png>)
 
-> These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
+> Te ulepszenia graficzne powiedzą użytkownikom więcej o działaniu programu. Różne kolory grup ułatwiają odróżnianie danych wejściowych od funkcji.
 >
-> 1. Notes
-> 2. Inputs with descriptive names
+> 1. Notatki
+> 2. Opisowe nazwy danych wejściowych
 
-Before we start to condense the program, let's find a strategic location to introduce the Python script drainage simulator. Plug the output of the first scaled roof surface into the respective scripting input.
+Zanim przystąpimy do kondensowania programu, musimy wybrać strategiczną lokalizację, w której zostanie wstawiony skrypt Python symulujący odwadnianie. Podłącz dane wyjściowe pierwszej skalowanej powierzchni dachu do odpowiedniego wejścia skryptu.
 
 ![](images/1/graphstrategy16.png)
 
-> We've chosen to integrate scripting at this point in the program so the drainage simulation can be run on the original, single roof surface. That specific surface is not being previewed, but it saves us from having to choose the top surface of the chamfered Polysurface.
+> Podjęliśmy decyzję, że skrypt zostanie zintegrowany z programem w tym miejscu, tak aby symulację odwadniania było można uruchamiać na oryginalnej, pojedynczej powierzchni dachu. Ta powierzchnia nie jest objęta podglądem, ale dzięki temu nie musimy wybierać górnej powierzchni z fazowanej polipowierzchni.
 >
-> 1. Source geometry for script input
-> 2. Python node
-> 3. Input sliders
-> 4. On/off "switch"
+> 1. Geometria źródłowa danych wejściowych skryptu
+> 2. Węzeł Python
+> 3. Suwaki danych wejściowych
+> 4. Przełącznik wł./wył.
 
-Let's simplify the graph now that everything is in place.
+Teraz mamy potrzebne informacje, więc możemy uprościć wykres.
 
 ![](images/1/graphstrategy17.png)
 
-> Condensing our program with Node to Code and Custom Node has greatly reduced the size of the graph. The groups that create the roof surface and walls have been converted to code since they are very specific to this program. The point translation group is contained in a Custom Node as it could be used in another program. In the example file, create your own custom node from the translate points group.
+> Skondensowanie kodu przy użyciu konwersji węzłów na kod i węzłów niestandardowych pozwoliło znacznie zmniejszyć rozmiar wykresu. Grupy generujące powierzchnię dachu i ściany zostały przekonwertowane na kod, ponieważ są specyficzne dla tego programu. Grupa przekształcenia punktów jest zawarta w węźle niestandardowym, gdyż może zostać użyta w innym programie. W pliku przykładowym utwórz własny węzeł niestandardowy z grupy przekształcenia punktów.
 >
-> 1. Custom Node to contain the "translate point grid" group
-> 2. Node to Code to condense the "create architectural roof surface and curtain wall" groups
+> 1. Węzeł niestandardowy, który będzie zawierał grupę „Przekształcenie siatki punktów”
+> 2. Konwersja węzłów na kod w celu skondensowania grup „Tworzenie architektonicznej powierzchni dachu i ściany osłonowej”
 
-As a final step, create presets for exemplary roof forms.
+W ostatnim kroku utwórz ustawienia wstępne przykładowych form dachu.
 
 ![](images/1/graphstrategy18.png)
 
-> These inputs are the primary drivers of the roof form and will help users see the potential of the program.
+> Przede wszystkim od tych danych wejściowych zależy forma dachu. Dzięki nim użytkownicy rozumieją potencjał programu.
 
-Our program with views of two presets.
+Nasz program z widokami przy dwóch ustawieniach wstępnych.
 
 ![](images/1/graphstrategy19.png)
 
 ![](images/1/graphstrategy20.png)
 
-> The roof drainage patterns give the user an analytical view of the respective presets.
+> Wzory odwodnienia dachu udostępniają użytkownikom widok analityczny poszczególnych ustawień wstępnych.

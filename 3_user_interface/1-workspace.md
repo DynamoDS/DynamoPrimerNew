@@ -1,88 +1,88 @@
-# Workspace
+# Obszar roboczy
 
-### Main Workspace
+### Główny obszar roboczy
 
-The Dynamo Workspace consists of four main elements.
+Obszar roboczy dodatku Dynamo składa się z czterech głównych elementów.
 
 ![](<./images/3-1/workspace - ui.jpg>)
 
-> 1. All Active Tabs.
-> 2. Preview Mode
-> 3. Zoom/Pan Controls
-> 4. Node in Workspace
+> 1. Wszystkie aktywne karty.
+> 2. Tryb podglądu
+> 3. Elementy sterujące powiększania/przesuwania
+> 4. Węzeł w obszarze roboczym
 
-### All Active Tabs
+### Wszystkie aktywne karty
 
-When you open a new file, a new Home Workspace will be opened by default.
+Po otwarciu nowego pliku zostanie domyślnie otwarty nowy główny obszar roboczy.
 
 ![](<./images/3-1/workspace - home tab.jpg>)
 
-You may create a Custom Node and open it in a Custom Node Workspace.
+Można utworzyć węzeł niestandardowy i otworzyć go w obszarze roboczym węzła niestandardowego.
 
 ![](<./images/3-1/workspace - custom node tab.jpg>)
 
 {% hint style="info" %}
-Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.
+W każdym oknie dodatku Dynamo jest dozwolony tylko jeden główny obszar roboczy, ale na kartach może być otwartych wiele obszarów roboczych węzłów niestandardowych.
 {% endhint %}
 
-### Preview Mode
+### Tryb podglądu
 
-There are 3 methods to switch between different previews:
+Istnieją 3 metody przełączania między różnymi podglądami:
 
-a. Using the top right icons
+a. Używanie ikon w prawym górnym obszarze
 
-* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Graph Preview
-* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)3D Preview
+* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Podgląd wykresu
+* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)Podgląd 3D
 
-b. Right-click in Workspace
+b. Kliknięcie prawym przyciskiem myszy w obszarze roboczym
 
-* Switch from 3D Preview to Graph Preview
+* Przełączanie się z podglądu 3D na podgląd wykresu
 
 ![](<./images/3-1/3-1-06 right click switch to graph preview.jpg>)
 
-* Switch from Graph Preview to 3D Preview
+* Przełączanie się z podglądu wykresu na podgląd 3D
 
 ![](<./images/3-1/workspace - right click switch to geometry.jpg>)
 
-c. Using keyboard shortcut (Ctrl+B)
+c. Używanie skrótu klawiaturowego (Ctrl+B)
 
-### Zoom/Pan Controls
+### Elementy sterujące powiększania/przesuwania
 
-You may use icons or a mouse to navigate in either workspace.
+Do nawigacji w dowolnym obszarze roboczym można używać ikon lub myszy.
 
-a. In **Graph Preview** Mode
+a. W trybie **podglądu wykresu**
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-* Using mouse:
-  * Left-click - Select
-  * Left-click and drag - Selection box to select multiple nodes
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click anywhere on canvas - Open In-Canvas Search
+* Używanie ikon:
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Dopasuj do okna
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Powiększ
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Pomniejsz
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Przesuń
+* Używanie myszy:
+   * Kliknięcie lewym przyciskiem myszy — wybranie/zaznaczenie
+   * Kliknięcie lewym przyciskiem myszy i przeciągnięcie — prostokąt zaznaczania do wybrania wielu węzłów
+   * Przewinięcie środkowym przyciskiem myszy w górę/w dół — powiększenie/pomniejszenie
+   * Kliknięcie środkowym przyciskiem myszy i przeciągnięcie — przesunięcie
+   * Kliknięcie prawym przyciskiem myszy w dowolnym miejscu obszaru rysunku — otwarcie wyszukiwania w obszarze rysunku
 
 ![](<./images/3-1/workspace - in canvas search.gif>)
 
-b. In **3D Preview** Mode
+b. W trybie **podglądu 3D**
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-  * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbit
-* Using mouse:
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click and drag - Orbit
+* Używanie ikon:
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Dopasuj do okna
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Powiększ
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Pomniejsz
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Przesuń
+   * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbit
+* Używanie myszy:
+   * Przewinięcie środkowym przyciskiem myszy w górę/w dół — powiększenie/pomniejszenie
+   * Kliknięcie środkowym przyciskiem myszy i przeciągnięcie — przesunięcie
+   * Kliknięcie prawym przyciskiem myszy i przeciągnięcie — orbitowanie
 
-### Node in Workspace
+### Węzeł w obszarze roboczym
 
-Left-click to select any Node.
+Kliknij lewym przyciskiem myszy, aby wybrać dowolny węzeł.
 
-To select multiple Nodes, Click and drag to create a selection box.
+Aby wybrać wiele węzłów, kliknij i przeciągnij w celu utworzenia prostokąta zaznaczania.
 
 ![](<./images/3-1/workspace - selection box.gif>)

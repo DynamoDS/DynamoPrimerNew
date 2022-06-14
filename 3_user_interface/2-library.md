@@ -1,62 +1,62 @@
-# Library
+# Biblioteka
 
-The Library contains all of the loaded Nodes, including the ten default categories Nodes that come with the installation as well as any additionally loaded Custom Nodes or Packages. The Nodes in the Library are organized hierarchically within libraries, categories, and, where appropriate, subcategories.
+Biblioteka zawiera wszystkie wczytane węzły, w tym dziesięć domyślnych kategorii węzłów dołączonych do instalacji oraz dodatkowo wczytane węzły niestandardowe lub pakiety. Węzły w bibliotece są zorganizowane hierarchicznie w obrębie bibliotek, kategorii i, w razie potrzeby, podkategorii.
 
 ![](<images/3-2/library - library UI.jpg>)
 
-* Basic Nodes: Comes with default installation.
-* Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
-* Nodes from the Package Manager: Collection of published Custom Nodes.
+* Węzły podstawowe: dostarczane z instalacją domyślną.
+* Węzły niestandardowe: zapisz często używane procedury lub wykres specjalny jako węzły niestandardowe. Węzły niestandardowe można również udostępniać społeczności
+* Węzły z aplikacji Package Manager: kolekcja opublikowanych węzłów niestandardowych.
 
-We will go through the [hierarchy of Nodes](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](3-3\_dynamo\_libraries.md#quick-search-in-library) and learn about some of the [frequently used Nodes](3-3\_dynamo\_libraries.md#frequently-used-nodes) among them.
+Przeanalizujemy kategorie [hierarchii węzłów](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories), pokażemy, w jaki sposób można [szybko wyszukiwać w bibliotece](3-3\_dynamo\_libraries.md#quick-search-in-library), i zapoznamy się z niektórymi z [często używanych węzłów](3-3\_dynamo\_libraries.md#frequently-used-nodes), jakie się tam znajdują.
 
-### Library Hierarchy for Categories
+### Hierarchia biblioteki dla kategorii
 
-Browsing through these categories is the fastest way to understand the hierarchy of what we can add to our Workspace and the best way to discover new Nodes you haven't used before.
+Przeglądanie tych kategorii jest najszybszym sposobem zrozumienia hierarchii tego, co można dodać do obszaru roboczego, a także najlepszym sposobem odnajdowania nowych węzłów, których wcześniej nie używano.
 
-Browse the Library by clicking through the menus to expand each category and its subcategory
+Przeglądaj bibliotekę, klikając poszczególne menu, aby rozwijać kategorie i ich podkategorie
 
 {% hint style="info" %}
-Geometry are great menus to begin exploring as they contain the largest quantity of Nodes.
+Geometria to świetne menu, które świetnie nadają się do rozpoczęcia przeglądania, ponieważ zawierają największą liczbę węzłów.
 {% endhint %}
 
 ![](<images/3-2/library  - modified and resize library categories.jpg>)
 
-> 1. Library
-> 2. Category
-> 3. Subcategory
-> 4. Node
+> 1. Biblioteka
+> 2. Kategoria
+> 3. Podkategoria
+> 4. Węzeł
 
-These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
+Zapewnia to dodatkowe skategoryzowanie węzłów należących do tej samej podkategorii w zależności od tego, czy węzły **tworzą** dane, wykonują **operacje**, czy wysyłają **zapytania** dotyczące danych.
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/3-2/user interface - create.jpg>) **Create — węzły tworzenia**: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
+* ![](<images/3-2/user interface - action.jpg>) **Action — węzły operacji**: wykonują operacje na obiekcie. Np. skalowanie okręgu.
+* ![](<images/3-2/user interface - query.jpg>) **Query — węzły zapytań**: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
 
-Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
+Umieść wskaźnik myszy na węźle, aby wyświetlić informacje bardziej szczegółowe od jego nazwy i ikony. Dzięki temu można szybko zrozumieć, do czego służy węzeł, jakich wejść wymaga i jakie będą jego dane wyjściowe.
 
 ![](<images/3-2/user interface - node description.jpg>)
 
-> 1. Description - plain language description of the Node
-> 2. Icon - larger version of the icon in the Library Menu
-> 3. Input(s) - name, data type, and data structure
-> 4. Output(s) - data type and structure
+> 1. Opis — prosty opis węzła
+> 2. Ikona — większa wersja ikony w menu Biblioteka
+> 3. Wejścia — nazwa, typ danych i struktura danych
+> 4. Wyjścia — typ danych i struktura
 
-### Quick search in Library
+### Szybkie wyszukiwanie w bibliotece
 
-If you know with relative specificity which Node you want to add to your Workspace, type in the **Search** field to look up all matching Nodes.
+Jeśli dosyć dobrze wiadomo, jaki węzeł ma zostać dodany do obszaru roboczego, wpisz w polu **Wyszukaj** nazwę węzła, aby wyszukać wszystkie pasujące węzły.
 
-Choose by clicking on the Node you wish to add or hit Enter to add highlighted nodes to the center of the Workspace.
+Wybierz, klikając węzeł, który chcesz dodać, lub naciśnij klawisz Enter, aby dodać wyróżnione węzły do środka obszaru roboczego.
 
 ![](<images/3-2/user interface - search.jpg>)
 
-#### Search by hierarchy
+#### Wyszukiwanie według hierarchii
 
-Beyond using keywords to try to find Nodes, we can type the hierarchy separated with a period in the Search Field or with Code Blocks (which use the _Dynamo textual language_).
+Podczas wyszukiwania węzłów oprócz słów kluczowych można wpisywać hierarchię, oddzielając jej elementy kropkami w polu wyszukiwania. Można tak również robić w blokach kodu (w których jest używany _język tekstowy dodatku Dynamo_).
 
-The hierarchy of each library is reflected in the Name of Nodes added to the Workspace.
+Hierarchia każdej biblioteki jest odzwierciedlona w nazwach węzłów dodawanych do obszaru roboczego.
 
-Typing in different portions of the Node's place in the Library hierarchy in the `library.category.nodeName` format returns different results
+Wpisanie różnych części miejsca węzła w hierarchii biblioteki w formacie `library.category.nodeName` zwraca różne wyniki:
 
 * `library.category.nodeName`
 
@@ -66,73 +66,73 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 ![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
 
-* `nodeName` or `keyword`
+* `nodeName`lub`keyword`
 
 ![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
 
-Typically the Name of the Node in the Workspace will be rendered in the `category.nodeName` format, with some notable exceptions particularly in the Input and View Categories.
+Zazwyczaj nazwa węzła w obszarze roboczym jest renderowana w formacie `category.nodeName`, z pewnymi ważnymi wyjątkami, szczególnie w przypadku kategorii widoków i wejść.
 
-Beware of similarly named Nodes and note the category difference:
+Należy zwrócić uwagę na podobnie nazwane węzły i na różnicę ich kategorii:
 
-* Nodes from most libraries will include the category format
+* Węzły z większości bibliotek mają format kategorii
 
 ![](<images/3-2/library - node category differences 1.jpg>)
 
-* `Point.ByCoordinates` and `UV.ByCoordinates` have the same Name but come from different categories
+* Węzły `Point.ByCoordinates` i `UV.ByCoordinates` mają tę samą nazwę, ale pochodzą z różnych kategorii
 
 ![](<images/3-2/library - node category differences 2.jpg>)
 
-* Notable exceptions include Built-in Functions, Core.Input, Core.View, and Operators
+* Istotne wyjątki to funkcje wbudowane, Core.Input, Core.View i operatory
 
 ![](<images/3-2/library - node category differences 3.jpg>)
 
-### Frequently Used Nodes
+### Często używane węzły
 
-With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our Visual Programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
+Do podstawowej instalacji dodatku Dynamo dołączono setki węzłów — które są niezbędne do tworzenia programów wizualnych? Skupmy się na tych, które pozwalają zdefiniować parametry programu (**Input**), wyświetlić wyniki działania węzła (**Watch**) oraz zdefiniować wyjścia lub funkcjonalność za pomocą skrótu (**Code Block**).
 
-#### Input Nodes
+#### Węzły Input
 
-Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
+Węzły Input (wejścia) są podstawowym sposobem obsługi kluczowych parametrów programu wizualnego przez użytkownika — Ciebie lub kogoś innego. Oto kilka pozycji dostępnych w bibliotece podstawowej:
 
-| Node           |                                                | Node           |                                                |
+| Węzeł |                                                | Węzeł |                                                |
 | -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean        | ![](<images/3-2/library - boolean.jpg>)        | Number         | ![](<images/3-2/library - number.jpg>)         |
-| String         | ![](<images/3-2/library - string.jpg>)         | Number Slider  | ![](<images/3-2/library - number slider.jpg>)  |
-| Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path      | ![](<images/3-2/library - file path.jpg>)      |                |                                                |
+| Operacje logiczne | ![](<images/3-2/library - boolean.jpg>) | Liczba | ![](<images/3-2/library - number.jpg>) |
+| Ciąg | ![](<images/3-2/library - string.jpg>) | Suwaka liczby | ![](<images/3-2/library - number slider.jpg>) |
+| Ścieżka do katalogu | ![](<images/3-2/library - directory path.jpg>) | Suwak liczby całkowitej | ![](<images/3-2/library - integer slider.jpg>) |
+| Ścieżka pliku | ![](<images/3-2/library - file path.jpg>) |                |                                                |
 
-#### Watch & Watch3D
+#### Watch oraz Watch3D
 
-The Watch Nodes are essential to managing the data that is flowing through your Visual Program. You can view the result of a Node through the **Node data preview** by hovering your mouse over the node.
+Węzły Watch (obserwacyjne) są niezbędne do zarządzania danymi, które przepływają przez program wizualny. Wynik węzła można wyświetlić w **podglądzie danych węzła**, umieszczając wskaźnik myszy na węźle.
 
 ![](<images/3-2/library - node preview.jpg>)
 
-It will be useful to keep it revealed in a **Watch** Node
+Przydatne jest wyświetlenie informacji w węźle **Watch**
 
 ![](<images/3-2/library - watch node.jpg>)
 
-Or see the geometry results through a **Watch3D** Node.
+Można też wyświetlić wyniki geometrii za pomocą węzła **Watch3D**.
 
 ![](<images/3-2/library - watch3d node.gif>)
 
-Both of these are found in the View Category in the Core Library.
+Oba te elementy znajdują się w kategorii widoku w bibliotece podstawowej.
 
 {% hint style="info" %}
-Tip: Occasionally the 3D Preview can be distracting when your Visual Program contains a lot of Nodes. Consider unchecking the Showing Background Preview option in the Settings Menu and using a Watch3D Node to preview your geometry.
+Wskazówka: czasami podgląd 3D może rozpraszać, gdy program wizualny zawiera wiele węzłów. Warto rozważyć wyczyszczenie zaznaczenia opcji Wyświetlanie podglądu tła w menu Ustawienia i użycie zamiast tego węzła Watch3D do wyświetlania podglądu geometrii.
 {% endhint %}
 
 #### Code Block
 
-Code Block Nodes can be used to define a block of code with lines separated by semi-colons. This can be as simple as `X/Y`.
+Węzły Code Block (bloki kodu) umożliwiają definiowanie bloku kodu z wierszami oddzielonych średnikami. Może to być coś tak prostego, jak `X/Y`.
 
-We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+Bloków kodu można też używać jako skrótów do definiowania wejścia liczbowego lub wywoływania funkcji innego węzła. Składnia potrzebna do tego celu jest zgodna z konwencją nazewnictwa języka tekstowego Dynamo, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
 
-Here is a simple demonstration (with instructions) for using Code Block in your script.
+Oto prosty przykład (z instrukcjami) użycia bloku kodu w skrypcie.
 
 ![](<images/3-2/library - code block demo.gif>)
 
-1. Double-click to create a Code Block Node
-2. Type `Circle.ByCenterPointRadius(x,y);`
-3. Click on Workspace to clear the selection should add `x` and `y` inputs automatically.
-4. Create a Point.ByCoordinates Node and a Number Slider then connect them to the inputs of the Code Block.
-5. The result of the executing the Visual Program is shown as the circle in the 3D Preview
+1. Kliknij dwukrotnie, aby utworzyć węzeł Code Block
+2. `Circle.ByCenterPointRadius(x,y);`Typ
+3. Kliknij obszar roboczy, aby wyczyścić zaznaczenie i automatycznie dodać wejścia `x` i `y`.
+4. Utwórz węzły Point.ByCoordinates i Number Slider, a następnie połącz je z wejściami bloku kodu.
+5. Wynik wykonania programu wizualnego jest pokazany jako okrąg w podglądzie 3D

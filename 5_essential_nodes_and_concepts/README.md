@@ -1,8 +1,8 @@
-# Essential Nodes & Concepts
+# Podstawowe węzły i pojęcia
 
-In this section, we introduce the essential Nodes available in the Dynamo Library that will help you create your own visual program like a pro.
+Ta część zawiera wprowadzenie do podstawowych węzłów dostępnych w bibliotece dodatku Dynamo, które pomogą w profesjonalnym tworzeniu własnego programu wizualnego.
 
-* [Geometry for Computational Design](5-2\_geometry-for-computational-design/): How do I work with geometric elements in Dynamo? Explore multiple ways to create simple or complex geometries from primitives.
-* [The Building Blocks of Programs:](5-3\_the-building-blocks-of-programs/) What is "Data" and what are some fundamental types I can start using in my programs? Also, learn more about incorporating math and logic operations in your design workflow.
-* [Designing with Lists: ](5-4\_designing-with-lists/)How do I manage and coordinate my data structures? Understand more about the concept of List and use it to manage your design data efficiently.
-* [Dictionaries in Dynamo: ](5-5\_dictionaries-in-dynamo/)What are Dictionaries? Find out how to use dictionaries to look up specific data and values from existing results.
+* [Geometria do projektowania obliczeniowego](5-2\_geometry-for-computational-design/): jak pracować z elementami geometrycznymi w dodatku Dynamo? Poznaj wiele sposobów tworzenia prostych lub złożonych geometrii z obiektów elementarnych.
+* [Składniki programów:](5-3\_the-building-blocks-of-programs/) co to są „dane” i jakie są podstawowe typy, z których można korzystać w programach? Dowiedz się więcej na temat włączania operacji matematycznych i logicznych do procesu roboczego projektowania.
+* [Projektowanie z użyciem list: ](5-4\_designing-with-lists/)jak zarządzać strukturami danych i je koordynować? Dowiedz się więcej na temat pojęcia listy i wykorzystaj ją do efektywnego zarządzania danymi projektowymi.
+* [Słowniki w dodatku Dynamo: ](5-5\_dictionaries-in-dynamo/)czym są słowniki? Dowiedz się, jak używać słowników do wyszukiwania określonych danych i wartości z istniejących wyników.

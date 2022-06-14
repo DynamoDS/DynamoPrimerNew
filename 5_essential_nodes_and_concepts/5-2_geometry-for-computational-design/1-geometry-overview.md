@@ -1,62 +1,62 @@
-# Geometry Overview
+# Geometria — przegląd
 
-## Geometry in Dynamo Sandbox
+## Geometria w środowisku Dynamo Sandbox
 
-**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
+**Geometria** to język projektowania. Kiedy rdzeń środowiska lub języka programowania ma jądro geometryczne, daje to olbrzymie możliwości w zakresie projektowania precyzyjnych i wydajnych modeli, automatyzacji procedur projektowania oraz generowania iteracji projektowych za pomocą algorytmów.
 
-Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
+Zrozumienie typów geometrii i [ich zależności](1-geometry-overview.md#stepping-through-the-hierarchy) pozwala na nawigację w kolekcji **Węzły geometrii** dostępnej w bibliotece. Węzły geometrii są uporządkowane alfabetycznie (nie hierarchicznie) — tutaj są one wyświetlane podobnie do ich układu w interfejsie dodatku Dynamo.
 
 ![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
 
-Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
+Ponadto tworzenie modeli w dodatku Dynamo i łączenie podglądu elementów widocznych w podglądzie tła z przepływem danych na wykresie powinno stawać się w miarę upływu czasu bardziej intuicyjne.
 
 ![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
 
-> 1. Note the assumed coordinate system rendered by the grid and colored axes
-> 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
+> 1. Zwróć uwagę na zakładany układ współrzędnych renderowany przez siatkę i kolorowe osie
+> 2. Wybrane węzły spowodują renderowanie odpowiedniej geometrii (jeśli dany węzeł tworzy geometrię) w tle w kolorze wyróżnienia
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-## The Concept of Geometry
+## Pojęcie geometrii
 
-Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.
+Geometria, definiowana tradycyjnie, stanowi analizę kształtu, rozmiaru, względnego położenia figur i właściwości przestrzeni. Ta dziedzina ma bogatą historię obejmującą tysiące lat. Wraz z nadejściem i popularyzacją komputerów zyskaliśmy potężne narzędzie do definiowania, badania i generowania geometrii. Obecnie obliczenie wyniku złożonych interakcji geometrycznych jest tak łatwe, że nawet nie zauważamy, gdy to robimy.
 
-![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
+![Królik Stanford](../images/5-2/1/StanfordBunny.jpg)
 
-> If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.
+> Aby przekonać się, jak zróżnicowana i złożona może być geometria tworzona za pomocą komputera, szybko wyszukaj w Internecie królika Stanford — model kanoniczny używany do testowania algorytmów.
 
-Understanding geometry in the context of algorithms, computing, and complexity, may sound daunting; however, there are a few key, and relatively simple, principles that we can establish as fundamentals to start building towards more advanced applications:
+Zrozumienie geometrii w kontekście algorytmów, obliczeń i złożoności może wydawać się prawdziwym wyzwaniem. Istnieje jednak kilka kluczowych i stosunkowo prostych zasad stanowiących podstawy do rozpoczęcia tworzenia bardziej zaawansowanych aplikacji:
 
-1. Geometry is **Data** - to the computer and Dynamo, a Bunny not all that different from a number.
-2. Geometry relies on **Abstraction** - fundamentally, geometric elements are described by numbers, relationships, and formulas within a given spatial coordinate system
-3. Geometry has a **Hierarchy** - points come together to make lines, lines come together to make surfaces, and so on
-4. Geometry simultaneously describes both **the Part and the Whole** - when we have a curve, it is both the shape as well as all the possible points along it
+1. Geometria to **dane** — zarówno dla komputera, jak i dla dodatku Dynamo królik nie różni się zbytnio od liczby.
+2. Geometria bazuje na **abstrakcji** — zasadniczo elementy geometryczne są opisywane przez liczby, zależności i wzory w ramach danego przestrzennego układu współrzędnych
+3. Geometria ma **hierarchię** — punkty łączą się, tworząc linie, linie stykają się ze sobą, tworząc powierzchnie itd.
+4. Geometria jednocześnie opisuje **część i całość** — kiedy mamy daną krzywą, jest to zarówno kształt, jak i wszystkie możliwe punkty wzdłuż niej
 
-In practice, these principles mean that we need to be aware of what we are working with (what type of geometry, how was it created, etc.) so that we can fluidly compose, decompose, and recompose different geometries as we develop more complex models.
+W praktyce zasady te oznaczają, że musimy mieć świadomość tego, z czym pracujemy (jaki to typ geometrii, jak został utworzony itd.), aby móc płynnie składać, rozkładać i ponownie składać różne geometrie, opracowując bardziej złożone modele.
 
-## Stepping through the Hierarchy
+## Analiza hierarchii
 
-Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
+Przyjrzyjmy się zależności między abstrakcyjnym a hierarchicznym opisem geometrii. Ponieważ te dwie koncepcje są powiązane, ale nie zawsze są od razu oczywiste, już zaraz po rozpoczęciu tworzenia bardziej złożonych procesów roboczych lub modeli można natrafić na problemy związane z pojęciami. Na początek użyjmy wymiarowości jako łatwego deskryptora „przedmiotów”, które modelujemy. Liczba wymiarów wymaganych do opisania kształtu daje nam pogląd na hierarchiczne uporządkowanie geometrii.
 
-![Computational Geometry](../images/5-2/1/GeometryDimensionality.jpg)
+![Geometria obliczeniowa](../images/5-2/1/GeometryDimensionality.jpg)
 
-> 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
-> 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
-> 3. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
-> 4. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
+> 1. **Punkt** (definiowany przez współrzędne) nie ma wymiarów — to tylko liczby opisujące poszczególne współrzędne
+> 2. **Linia** (definiowana przez dwa punkty) ma _jeden_ wymiar — po linii można podróżować do przodu (kierunek dodatni) lub do tyłu (kierunek ujemny)
+> 3. **Płaszczyzna** (zdefiniowana przez dwie linie) ma _dwa_ wymiary — można po niej podróżować bardziej w lewo lub bardziej w prawo
+> 4. **Prostopadłościan** (zdefiniowany przez dwie płaszczyzny) ma _trzy_ wymiary — można zdefiniować położenie względem góry lub dołu
 
-Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
+Wymiarowość jest wygodnym sposobem rozpoczęcia kategoryzowania geometrii, ale niekoniecznie jest najlepszym rozwiązaniem. W końcu nie modelujemy tylko za pomocą punktów, linii, płaszczyzn i prostopadłościanów — co jeśli chcemy użyć czegoś zakrzywionego? Ponadto istnieje cała inna kategoria typów geometrycznych, które są całkowicie abstrakcyjne. Oznacza to, że definiują one właściwości, takie jak orientacja, objętość lub zależności między częściami. Nie możemy dosłownie uchwycić wektora, więc jak zdefiniować go względem tego, co widzimy w przestrzeni? Bardziej szczegółowa kategoryzacja hierarchii geometrycznej powinna uwzględniać różnicę między typami abstrakcyjnymi („pomocniczymi”), które można pogrupować według tego, co pomagają osiągnąć, a typami, które pomagają opisać kształt elementów modelu.
 
-![Geometry Hierarchy](../images/5-2/1/GeometryHierarchy.jpg)
+![Hierarchia geometrii](../images/5-2/1/GeometryHierarchy.jpg)
 
-## Going Further with Geometry
+## Dalsze kroki z geometrią
 
-Creating models in Dynamo is not limited to what we can generate with Nodes. Here are some key ways to take your process to the next level with Geometry:
+Tworzenie modeli w dodatku Dynamo nie ogranicza się do tego, co można wygenerować za pomocą węzłów. Poniżej przedstawiono kilka najważniejszych sposobów, w jakie można przenieść proces na następny poziom za pomocą geometrii:
 
-1. Dynamo allows you to import files - try using a CSV for point clouds or SAT for bringing in surfaces
-2. When working with Revit, we can reference Revit elements to use in Dynamo
-3. The Dynamo Package Manager offers additional functionality for extended geometry types and operations - check out the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package
+1. Dodatek Dynamo umożliwia importowanie plików — spróbuj użyć pliku CSV dla chmur punktów lub pliku SAT w celu dołączenia powierzchni
+2. W przypadku pracy z programem Revit można odwoływać się do elementów programu Revit, aby używać ich w dodatku Dynamo
+3. Menedżer pakietów Dynamo udostępnia dodatkowe funkcje dotyczące rozszerzonych operacji i typów geometrii. Zapoznaj się z pakietem [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit).

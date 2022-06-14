@@ -1,108 +1,108 @@
-# What's a List
+# Co to jest lista
 
-### What's a List?
+### Co to jest lista?
 
-A list is a collection of elements, or items. Take a bunch of bananas, for example. Each banana is an item within the list (or bunch). It's easier to pick up a bunch of bananas rather than each banana individually, and the same holds for grouping elements by parametric relationships in a data structure.
+Lista to zbiór elementów. Weźmy na przykład kiść bananów. Każdy banan jest elementem listy (czyli kiści). Łatwiej jest chwycić kiść bananów niż zbierać pojedyncze banany — i tak samo jest w przypadku grupowania elementów według zależności parametrycznych w strukturze danych.
 
-![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Banany](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Zdjęcie autorstwa: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
-When we buy groceries, we put all of the purchased items into a bag. This bag is also a list. If we're making banana bread, we need 3 bunches of bananas (we're making a _lot_ of banana bread). The bag represents a list of banana bunches and each bunch represents a list of bananas. The bag is a list of lists (two-dimensional) and the banana bunch is a list (one-dimensional).
+Robiąc zakupy, wkładamy wszystkie kupione artykuły do torby. Taka torba również jest listą. Jeśli chcemy upiec chleb bananowy, potrzebujemy 3 kiści bananów (robimy _dużo_ chleba bananowego). Torba to lista kiści bananów, a każda kiść to lista bananów. Torba jest więc listą list (dwuwymiarową), a kiść bananów jest listą (jednowymiarową).
 
-In Dynamo, list data is ordered, and the first item in each list has an index "0". Below, we'll discuss how lists are defined in Dynamo and how multiple lists relate to one another.
+W dodatku Dynamo dane list są uporządkowane, a pierwszy element na każdej liście ma indeks „0”. Poniżej omówiono sposób definiowania list w dodatku Dynamo oraz to, jak listy wiążą się ze sobą nawzajem.
 
-### Zero-Based Indices
+### Indeksowanie od zera
 
-One thing that might seem odd at first is that the first index of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index 0.
+Jedno, co może z początku wydawać się dziwne, to fakt, że pierwszy indeks listy zawsze ma wartość 0, a nie 1. Gdy zatem mówimy o pierwszym elemencie listy, oznacza to tak naprawdę element odpowiadający indeksowi 0.
 
-For example, if you were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if you were to put your fingers in a list, Dynamo would have given them indices from 0 to 4. While this may seem a little strange to programming beginners, the zero-based index is standard practice in most computation systems.
+Jeśli na przykład liczymy palce prawej dłoni, najprawdopodobniej ponumerujemy je od 1 do 5. Gdybyśmy jednak umieścili te palce na liście, w dodatku Dynamo otrzymałyby indeksy od 0 do 4. Chociaż początkującym programistom może się to wydawać trochę dziwne, indeksowanie od zera stanowi standardową praktykę w większości systemów obliczeniowych.
 
-Note that we still have 5 items in the list; it’s just that the list is using a zero-based counting system. And the items being stored in the list don’t just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
+Należy pamiętać, że lista wciąż zawiera 5 elementów, po prostu korzystamy z systemu liczenia od zera. Elementy na liście nie muszą być liczbami. Mogą to być dane dowolnego typu obsługiwanego przez dodatek Dynamo, takie jak punkty, krzywe, powierzchnie, rodziny itp.
 
 ![](<../images/5-4/1/what's a list - zero based indices.jpg>)
 
-> a. Index
+> a. Indeks
 >
-> b. Point
+> b. Punkt
 >
-> c. Item
+> c. Element
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a watch node to another node's output. By default, the watch node automatically shows all indices to the left side of the list and displays the data items on the right.
+Często najprostszym sposobem na sprawdzenie typu danych przechowywanych na liście jest połączenie węzła Watch z elementem wyjściowym innego węzła. Domyślnie węzeł Watch automatycznie wyświetla wszystkie indeksy po lewej stronie listy, a elementy danych po prawej stronie.
 
-These indices are a crucial element when working with lists.
+Indeksy są kluczowym elementem podczas pracy z listami.
 
-### Inputs and Outputs
+### Dane wejściowe i wyjściowe
 
-Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius**:
+W odniesieniu do list dane wejściowe i wyjściowe różnią się w zależności od używanego węzła Dynamo. Możemy na przykład użyć listy 5 punktów i połączyć jej elementy wyjściowe z dwoma różnymi węzłami Dynamo, **PolyCurve.ByPoints** i **Circle.ByCenterPointRadius**:
 
 ![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
 
-> 1. The _points_ input for **PolyCurve.ByPoints** is looking for _"Point\[]"_. This represents a list of points
-> 2. The output for **PolyCurve.ByPoints** is a single polycurve created from a list of five point.
-> 3. The _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_.
-> 4. The output for **Circle.ByCenterPointRadius** is a list of five circles, whose centers correspond to the original list of points.
+> 1. Element wejściowy _points_ węzła **PolyCurve.ByPoints** wyszukuje wartości _„Point\[]”_. Reprezentuje listę punktów.
+> 2. Elementem wyjściowym węzła **PolyCurve.ByPoints** jest jedna krzywa PolyCurve utworzona na podstawie listy pięciu punktów.
+> 3. Element wejściowy _centerPoint_ węzła **Circle.ByCenterPointRadius** wymaga wartości _„Point”_.
+> 4. Elementem wyjściowym węzła **Circle.ByCenterPointRadius** jest lista pięciu okręgów, których środki odpowiadają pierwotnej liście punktów.
 
-The input data for **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius** are the same, however the **Polycurve.ByPoints** node gives us one polycurve while the **Circle.ByCenterPointRadius** node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
+Dane wejściowe dla węzłów **PolyCurve.ByPoints** i **Circle.ByCenterPointRadius** są takie same, ale węzeł **Polycurve.ByPoints** pozwala uzyskać jedną krzywą PolyCurve, a węzeł **Circle.ByCenterPointRadius** — 5 okręgów ze środkami w poszczególnych punktach. Jest to intuicyjnie zrozumiałe: krzywa PolyCurve jest rysowana jako łuk łączący 5 punktów, a okręgi tworzone są w każdym punkcie osobno. Co zatem dzieje się z danymi?
 
-Hovering over the _points_ input for **Polycurve.ByPoints**, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
+Po najechaniu kursorem myszy na element wejściowy _points_ węzła **Polycurve.ByPoints** widzimy, że wyszukuje on wartości _„Point\[]”_. Zwróć uwagę na nawiasy na końcu. To oznacza listę punktów, a do utworzenia krzywej PolyCurve potrzebne są dane wejściowe w postaci listy. Ten węzeł będzie więc sumował każdą listę w jedną krzywą PolyCurve.
 
-On the other hand, the _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
+Natomiast element wejściowy _centerPoint_ węzła **Circle.ByCenterPointRadius** wymaga wartości _„Point”_. W tym węźle wyszukiwany jest jeden punkt, czyli element, w celu zdefiniowania środka okręgu. Dlatego otrzymujemy pięć okręgów z danych wejściowych. Zrozumienie tej różnicy w danych wejściowych w dodatku Dynamo pomaga lepiej zrozumieć działanie węzłów podczas zarządzania danymi.
 
-### Lacing
+### Skratowanie
 
-Data matching is a problem without a clean solution. It occurs when a node has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+Dopasowywanie danych stanowi problem bez idealnego rozwiązania. Ma on miejsce, gdy węzeł ma dostęp do danych wejściowych o różnych rozmiarach. Zmiana algorytmu dopasowywania danych może prowadzić do uzyskania całkiem różnych wyników.
 
-Imagine a node which creates line segments between points (**Line.ByStartPointEndPoint**). It will have two input parameters which both supply point coordinates:
+Wyobraź sobie węzeł służący do tworzenia odcinków między punktami (**Line.ByStartPointEndPoint**). Ma on dwa parametry wejściowe, określające współrzędne obu punktów:
 
-#### Shortest List
+#### Najkrótsza lista
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the “Shortest List” algorithm. This is the default behavior for Dynamo nodes:
+Najprostszym sposobem jest łączenie elementów wejściowych pojedynczo, aż jeden ze strumieni się wyczerpie. Jest to tak zwany algorytm „najkrótszej listy”. Jest to domyślne działanie węzłów Dynamo:
 
 ![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
 
-#### Longest List
+#### Najdłuższa lista
 
-The “Longest List” algorithm keeps connecting inputs, reusing elements, until all streams run dry:
+Algorytm „najdłuższa lista” kontynuuje łączenie elementów wejściowych i ponownie używa elementów do momentu, aż wszystkie strumienie się wyczerpią:
 
 ![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
 
-#### Cross Product
+#### Iloczyn wektorowy
 
-Finally, the “Cross Product” method makes all possible connections:
+Metoda iloczynu wektorowego służy do wykonania wszystkich możliwych połączeń:
 
 ![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
 
-As you can see there are different ways in which we can draw lines between these sets of points. Lacing options are found by right-clicking the center of a node and choosing the "Lacing" menu.
+Jak widać, istnieją różne sposoby rysowania linii między tymi zbiorami punktów. Opcje skratowania można znaleźć, klikając prawym przyciskiem myszy środek węzła i wybierając menu „Skratowanie”.
 
 ![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
 
-## Exercise
+## Ćwiczenie
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-4/1/Lacing.dyn" %}
 
-To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
+Aby zademonstrować poniżej operacje skratowania, użyjemy tego pliku bazowego do zdefiniowania najkrótszej listy, najdłuższej listy i iloczynu wektorowego.
 
-We'll change the lacing on **Point.ByCoordinates**, but won't change anything else about the graph above.
+Zmienimy skratowanie w węźle **Point.ByCoordinates**, ale nie zmienimy żadnych innych elementów na wykresie powyżej.
 
-### Shortest List
+### Najkrótsza lista
 
-Choosing _shortest list_ as the lacing option (also the default option), we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
+Wybierając opcję _najkrótsza lista_ jako opcję skratowania (jest to również opcja domyślna), otrzymujemy podstawową linię ukośną złożoną z pięciu punktów. Pięć punktów to długość krótszej listy, a więc skratowanie według najkrótszej listy zatrzymuje się po dotarciu do końca tej listy.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
 
-### **Longest List**
+### **Najdłuższa lista**
 
-By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
+Po zmianie skratowania na opcję _najdłuższa lista_ otrzymujemy linię ukośną, która dalej przebiega pionowo. Tak samo, jak na diagramie koncepcyjnym, ostatni element z listy 5 elementów będzie używany ponownie do momentu osiągnięcia długości dłuższej listy.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
 
-### **Cross Product**
+### **Iloczyn wektorowy**
 
-By changing the lacing to _Cross Product_, we get every combination between each list, giving us a 5x10 grid of points. This is an equivalent data structure to the cross product as shown in the concept diagram above, except our data is now a list of lists. By connecting a polycurve, we can see that each list is defined by its X-Value, giving us a row of vertical lines.
+Po zmianie opcji skratowania na _iloczyn wektorowy_ otrzymujemy wszystkie kombinacje wszystkich list, co daje siatkę punktów 5x10. Jest to struktura danych równoważna wobec iloczynu wektorowego pokazanego na powyższym diagramie koncepcyjnym, z tą różnicą, że dane stanowią teraz listę list. Po połączeniu w krzywą PolyCurve widzimy, że każda lista jest zdefiniowana przez wartość X, co daje rząd pionowych linii.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)

@@ -1,145 +1,145 @@
-# Shorthand
+# Krótka składnia
 
-### Shorthand
+### Krótka składnia
 
-There are a few basic shorthand methods in the code block which, simply put, make data management _a lot_ easier. We'll break down the basics below and discuss how this shorthand can be used both for creating and querying data.
+W bloku kodu dostępnych jest kilka podstawowych metod o krótkiej składni, które _znacznie_ ułatwiają zarządzanie danymi. Podstawy zostały szczegółowo omówione poniżej. Wyjaśniamy też, jak za pomocą tej krótkiej składni można tworzyć dane i stosować do nich zapytania.
 
-| **Data Type**          | **Standard Dynamo**                                      | **Code Block Equilvalent**                                    |
+| **Typ danych** | **Standard Dynamo** | **Odpowiednik w bloku kodu** |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Numbers                | ![](<../images/8-1/3/01 node - numbers.jpg>)       | ![](<../images/8-1/3/01 codeblock - numbers.jpg>)       |
-| Strings                | ![](<../images/8-1/3/02 node - string.jpg>)        | ![](<../images/8-1/3/02 codeblock- string.jpg>)         |
-| Sequences              | ![](<../images/8-1/3/03 node- sequence.jpg>)       | ![](<../images/8-1/3/03 codeblock- sequence.jpg>)       |
-| Ranges                 | ![](<../images/8-1/3/04 node- range.jpg>)          | ![](<../images/8-1/3/04 codeblock - range.jpg>)         |
-| Get Item at Index      | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../images/8-1/3/06 node - list create.jpg>)   | ![](<../images/8-1/3/06 codeblock - list create.jpg>)   |
-| Concatenate Strings    | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
-| Conditional Statements | ![](<../images/8-1/3/08 node - conditional.jpg>)   | ![](<../images/8-1/3/08 codeblock - conditional.jpg>)   |
+| Liczby | ![](<../images/8-1/3/01 node - numbers.jpg>) | ![](<../images/8-1/3/01 codeblock - numbers.jpg>) |
+| Ciągi | ![](<../images/8-1/3/02 node - string.jpg>) | ![](<../images/8-1/3/02 codeblock- string.jpg>) |
+| Sekwencje | ![](<../images/8-1/3/03 node- sequence.jpg>) | ![](<../images/8-1/3/03 codeblock- sequence.jpg>) |
+| Przedziały | ![](<../images/8-1/3/04 node- range.jpg>) | ![](<../images/8-1/3/04 codeblock - range.jpg>) |
+| Pobierz element o indeksie | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
+| Utwórz listę | ![](<../images/8-1/3/06 node - list create.jpg>) | ![](<../images/8-1/3/06 codeblock - list create.jpg>) |
+| Scal ciągi | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
+| Instrukcje warunkowe | ![](<../images/8-1/3/08 node - conditional.jpg>) | ![](<../images/8-1/3/08 codeblock - conditional.jpg>) |
 
-### Additional Syntax
+### Dodatkowa składnia
 
 |                                     |                           |                                                                                          |
 | ----------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------- |
-| **Node(s)**                         | **Code Block Equivalent** | **Note**                                                                                 |
-| Any operator (+, &&, >=, Not, etc.) | +, &&, >=, !, etc.        | Note that “Not” becomes “!” but the node is called “Not” to distinguish from “Factorial” |
-| Boolean True                        | true;                     | Note lower case                                                                          |
-| Boolean False                       | false;                    | Note lower case                                                                          |
+| **Węzły** | **Odpowiednik w bloku kodu** | **Uwagi** |
+| Dowolny operator (+, &&, >=, Not itp.) | +, &&, >=, ! itp. | Uwaga: „Not” staje się „!”, ale węzeł nazywa się „Not”, aby odróżnić go od „Factorial” |
+| Wartość logiczna True | true; | Uwaga: małe litera |
+| Wartość logiczna False | false; | Uwaga: małe litera |
 
-### Ranges and Sequences
+### Zakresy i sekwencje
 
-The method for defining ranges and sequences can be reduced to basic shorthand. Use the image below as a guide to the ".." syntax for defining a list of numerical data with code block. After getting the hang of this notation, creating numerical data is a really efficient process:
+Metoda definiowania zakresów i sekwencji może zostać zredukowana do krótkiej składni. Poniższa ilustracja przedstawia składnię „..”, która umożliwia definiowanie listy danych liczbowych za pomocą bloku kodu. Po zaznajomieniu się z tą notacją tworzenie danych liczbowych jest bardzo wydajnym procesem:
 
 ![](<../images/8-1/3/shorthand - ranges and sequences.jpg>)
 
-> 1. In this example, a number range is replaced by basic **Code Block** syntax defining the `beginning..end..step-size;` . Represented numerically, we get: `0..10..1;`
-> 2. Notice that the syntax `0..10..1;` is equivalent to `0..10;` A step-size of 1 is the default value for the shorthand notation. So `0..10;` will give a sequence from 0 to 10 with a step-size of 1.
-> 3. The _Sequence_ example is similar, except we use a "#" to state that we want 15 values in the list, rather than a list which goes up to 15. In this case, we are defining: `beginning..#ofSteps..step-size:` The actual syntax for the sequence is `0..#15..2`
-> 4. Using the _"#"_ from the previous step, we now place it in the _"step-size"_ portion of the syntax. Now, we have a _number range_ spanning from the _"beginning"_ to the _"end"_ and the _"step-size"_ notation evenly distributes a number of values between the two: `beginning..end..#ofSteps`
+> 1. W tym przykładzie zakres liczb zostaje zastąpiony podstawową składnią węzła **Code Block** definiującą `beginning..end..step-size;`. Liczbowo będzie to: `0..10..1;`
+> 2. Warto zauważyć, że składnia `0..10..1;` odpowiada `0..10;` Wielkość kroku równa 1 jest domyślną wartością w krótkiej składni. Dlatego `0..10;` daje sekwencję od 0 do 10 o kroku 1.
+> 3. Przykład _Sequence_ jest podobny, ale do ustawienia 15 wartości na liście używamy znaku „#” zamiast listy do 15. W tym przypadku definiujemy: `beginning..#ofSteps..step-size:` Rzeczywista składnia dla tej sekwencji to `0..#15..2`
+> 4. Używając znaku _„#”_ z poprzedniego kroku, umieścimy go teraz w części _„rozmiar-kroku”_ składni. Teraz mamy _zakres liczb_ (Number Range) od początku _„beginning”_ do końca _„end”_ z ustalonym rozmiarem kroku _„step-size”_, co powoduje równomierne rozmieszczenie wartości między dwoma punktami: `beginning..end..#ofSteps`
 
-### Advanced Ranges
+### Zakresy zaawansowane
 
-Creating advanced ranges allows us to work with list of lists in a simple fashion. In the examples below, we're isolating a variable from the primary range notation, and creating another range of that list.
+Tworzenie zakresów zaawansowanych pozwala na łatwe korzystanie z listy list. W poniższych przykładach wyodrębniamy zmienną z notacji zakresu głównego i tworzymy inny zakres tej listy.
 
 ![](<../images/8-1/3/shorthand - advance range 01.jpg>)
 
-> 1\. Creating nested ranges, compare the notation with a "#" vs. the notation without. The same logic applies as in basic ranges, except it gets a little more complex.
+> 1\. Tworząc zakresy zagnieżdżone, porównaj notację z „#” z notacją bez tego znaku. Zastosowanie ma ta sama logika co w zakresach podstawowych, choć rozwiązanie jest nieco bardziej złożone.
 >
-> 2\. We can define a sub-range at any place within the primary range, and notice that we can have two sub-ranges as well.
+> 2\. Możemy zdefiniować zakres podrzędny w dowolnym miejscu w zakresie głównym i możemy też używać dwóch zakresów podrzędnych.
 >
-> 3\. By controlling the "end" value in a range, we create more ranges of differing lengths.
+> 3\. Sterując wartością „końca” w zakresie, tworzymy więcej zakresów o różnych długościach.
 
-As a logic exercise, compare the two shorthands above and try to parse through how _subranges_ and the _#_ notation drive the resultant output.
+W ramach ćwiczenia logicznego porównaj dwie wersje krótkiej składni i spróbuj przeanalizować, w jaki sposób _zakresy podrzędne_ i notacja _#_ wpływają na wynik na wyjściu.
 
 ![](<../images/8-1/3/shorthand - advance range 02.jpg>)
 
-### Make Lists and Get Items From a List
+### Tworzenie list i pobieranie elementów z listy
 
-In addition to making lists with shorthand, we can also create lists on the fly. These list can contain a wide range of element types and can also be queried (remember, lists are objects in themselves). To summarize, with code block you make lists and query items from a list with brackets (a.k.a. “square brackets”):
+Poza tworzeniem list za pomocą krótkiej składni możemy również tworzyć listy na bieżąco. Te listy mogą zawierać szeroki zakres typów elementów i można stosować do nich zapytania (należy pamiętać, że listy to także obiekty). Podsumowując: blok kodu pozwala tworzyć listy i stosować zapytania o elementy z listy za pomocą nawiasów kwadratowych:
 
 ![](<../images/8-1/3/shorthand - list & get from list 01.jpg>)
 
-> 1\. Create lists quickly with strings and query them using the item index.
+> 1\. Szybko twórz listy za pomocą ciągów i stosuj do nich zapytania, korzystając z indeksu elementu.
 >
-> 2\. Create lists with variables and query using the range shorthand notation.
+> 2\. Twórz listy ze zmiennymi i stosuj do nich zapytania za pomocą notacji krótkiej składni zakresu.
 
-And managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
+Zarządzanie z listami zagnieżdżonymi jest podobnym procesem. Pamiętaj o kolejności listy i o korzystaniu z wielu zestawów nawiasów kwadratowych:
 
 ![](<../images/8-1/3/shorthand - list & get from list 02.jpg>)
 
-> 1\. Define a list of lists.
+> 1\. Zdefiniuj listę list.
 >
-> 2\. Query a list with single bracket notation.
+> 2\. Zastosuj zapytanie do listy za pomocą notacji z jedną parą nawiasów kwadratowych.
 >
-> 3\. Query an item with double bracket notation.
+> 3\. Zastosuj zapytanie do elementu za pomocą notacji z dwiema parami nawiasów kwadratowych.
 
-## Exercise: Sine Surface
+## Ćwiczenie: powierzchnia sinusoidalna
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code block and existing Dynamo nodes in tandem: we use the code block for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
+W tym ćwiczeniu przećwiczymy nowe umiejętności dotyczące krótkiej składni, aby utworzyć „jajowatą” powierzchnię zdefiniowaną przez zakresy i formuły. W trakcie ćwiczenia zwróć uwagę na to, w jaki sposób używane są blok kodu i istniejące węzły Dynamo: blok kodu jest używany do złożonej obsługi danych, natomiast węzły Dynamo są rozmieszczone wizualnie w celu zapewnienia czytelności definicji.
 
-Start by creating a surface by connecting the nodes above. Instead of using a number node to define width and length, double click on the canvas and type `100;` into a code block
+Rozpocznij od utworzenia powierzchni przez połączenie powyższych węzłów. Zamiast używać węzła number do zdefiniowania szerokości i długości, kliknij dwukrotnie obszar rysunku i wpisz `100;` w bloku kodu.
 
 ![](<../images/8-1/3/shorthand - exercise 01.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 02.jpg>)
 
-> 1. Define a range between 0 and 1 with 50 divisions by typing `0..1..#50` into a **Code Block**.
-> 2. Connect the range into **Surface.PointAtParameter**, which takes u and v values between 0 and 1 across the surface. Remember to change the Lacing to Cross Product by right clicking on the **Surface.PointAtParameter** node.
+> 1. Zdefiniuj zakres od 0 do 1 z 50 podziałami, wpisując `0..1..#50` w węźle **Code Block**.
+> 2. Połącz ten zakres z węzłem **Surface.PointAtParameter**, który pobiera wartości u i v z zakresu od 0 do 1 na powierzchni. Pamiętaj, aby zmienić skratowanie na Iloczyn wektorowy, klikając prawym przyciskiem myszy węzeł **Surface.PointAtParameter**.
 
-In this step, we employ our first function to move the grid of points up in the Z. This grid will drive a generated surface based on the underlying function. Add new nodes as shown in image below
+W tym kroku użyjemy pierwszej funkcji do przesunięcia siatki punktów w górę na osi Z. Ta siatka będzie sterować generowaną powierzchnią na podstawie funkcji źródłowej. Dodaj nowe węzły, jak pokazano na ilustracji poniżej
 
 ![](<../images/8-1/3/shorthand - exercise 03.jpg>)
 
-> 1. Rather than using a formula node, we use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
+> 1. Zamiast używać węzła formuły, użyjemy węzła **Code Block** z wierszem: `(0..Math.Sin(x*360)..#50)*5;`. Krótkie objaśnienie: definiujemy zakres z formułą w jego wnętrzu. Ta formuła jest funkcją sinus. Funkcja sinus przyjmuje w dodatku Dynamo dane wejściowe w stopniach, więc aby uzyskać pełny kształt funkcji sinus, należy przemnożyć wartości x (jest to wejście zakresu od 0 do 1) przez 360. Następnie chcemy uzyskać taką samą liczbę podziałów, ile jest punktów siatki sterującej dla każdego wiersza, dlatego zdefiniujemy pięćdziesiąt podziałów podrzędnych za pomocą instrukcji #50. Na koniec: mnożnik 5 po prostu zwiększa amplitudę przekształcenia, dzięki czemu możemy zobaczyć efekt w podglądzie Dynamo.
 
 ![](<../images/8-1/3/shorthand - exercise 04.jpg>)
 
-> 1. While the previous **Code Block** worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
+> 1. Mimo że poprzedni węzeł **Code Block** działał dobrze, nie był całkowicie parametryczny. Chcemy dynamicznie sterować jego parametrami, dlatego zastąpimy wiersz z poprzedniego kroku wierszem `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. Daje to możliwość zdefiniowania tych wartości na podstawie wejść.
 
-By changing the sliders (ranging from 0 to 10), we get some interesting results.
+Zmieniając suwaki (w zakresie od 0 do 10), otrzymujemy interesujące wyniki.
 
 ![](<../images/8-1/3/shorthand - exercise 05.gif>)
 
 ![](<../images/8-1/3/shorthand - exercise 06.jpg>)
 
-> 1. By doing a transpose on the number range, we reverse the direction of the curtain wave: `transposeList = List.Transpose(sineList);`
+> 1. Transponując zakres liczb, odwrócimy kierunek fali kurtynowej: `transposeList = List.Transpose(sineList);`
 
 ![](<../images/8-1/3/shorthand - exercise 07.jpg>)
 
-> 1. We get a distorted eggshell surface when we add the sineList and the tranposeList: `eggShellList = sineList+transposeList;`
+> 1. Po dodaniu wartości sineList i transposeList uzyskujemy zniekształconą „jajowatą” powierzchnię: `eggShellList = sineList+transposeList;`
 
-Let's change the sliders values specified below to 'calm the waters' of this algorithm.
+Zmienimy wartości suwaków określone poniżej, aby zmniejszyć zniekształcenia tworzone przez ten algorytm.
 
 ![](<../images/8-1/3/shorthand - exercise 08.jpg>)
 
-Last, let's query isolated parts of the data with the Code Block. To regenerate the surface with a specific range of points, add the code block above between the **Geometry.Translate** and **NurbsSurface.ByPoints** node. This has the line of text: `sineStrips[0..15..1];`. This will select the first 16 rows of points (out of 50). Recreating the surface, we can see that we've generated an isolated portion of the grid of points.
+Na koniec zastosujmy zapytania do wyodrębnionych części danych za pomocą węzła Code Block. Aby ponownie wygenerować powierzchnię za pomocą określonego zakresu punktów, dodaj blok kodu powyżej między węzłami **Geometry.Translate** i **NurbsSurface.ByPoints**. Będzie on zawierać wiersz tekstu: `sineStrips[0..15..1];`. Spowoduje to wybranie pierwszych 16 wierszy punktów (spośród 50). Po ponownym utworzeniu powierzchni widać, że wygenerowaliśmy wyodrębnioną część siatki punktów.
 
 ![](<../images/8-1/3/shorthand - exercise 09.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 10.jpg>)
 
-> 1. In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
+> 1. W ostatnim kroku, aby uczynić ten węzeł **Code Block** bardziej parametrycznym, będziemy sterować zapytaniem za pomocą suwaka o zakresie od 0 do 1. W tym celu dodamy ten wiersz kodu: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. Może to wydawać się skomplikowane, ale ten wiersz kodu pozwala szybko przeskalować długość listy do mnożnika z zakresu od 0 do 1.
 
-A value of `0.53` on the slider creates a surface just past the midpoint of the grid.
+Wartość `0.53` na suwaku powoduje utworzenie powierzchni tuż za punktem środkowym siatki.
 
 ![](<../images/8-1/3/shorthand - exercise 11.jpg>)
 
-And as expected, a slider of `1` creates a surface from the full grid of points.
+Zgodnie z oczekiwaniami wartość `1` na suwaku tworzy powierzchnię z pełnej siatki punktów.
 
 ![](<../images/8-1/3/shorthand - exercise 12.jpg>)
 
-Looking at the visual graph, we can highlight the code blocks and see each of their functions.
+Przyglądając się wykresowi wizualnemu, możemy wyróżnić bloki kodu i przejrzeć ich poszczególne funkcje.
 
 ![](<../images/8-1/3/shorthand - exercise 13.jpg>)
 
-> 1\. The first **Code Block** replaces the **Number** node.
+> 1\. Pierwszy węzeł **Code Block** zastępuje węzeł **Numer**.
 >
-> 2\. The second **Code Block** replaces the **Number Range** node.
+> 2\. Drugi węzeł **Code Block** zastępuje węzeł **Number Range**.
 >
-> 3\. The third **Code Block** replaces the **Formula** node (as well as **List.Transpose**, **List.Count** and **Number Range**).
+> 3\. Trzeci węzeł **Code Block** zastępuje węzeł **Formula** (jak również węzły **List.Transpose**, **List.Count** i **Number Range**).
 >
-> 4\. The fourth **Code Block** queries a list of lists, replacing the **List.GetItemAtIndex** node.
+> 4\. Czwarty węzeł **Code Block** stosuje zapytania do listy list, zastępując węzeł **List.GetItemAtIndex**.

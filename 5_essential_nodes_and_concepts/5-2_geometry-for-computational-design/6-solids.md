@@ -1,96 +1,96 @@
-# Solids
+# Bryły
 
-## Solids in Dynamo
+## Bryły w dodatku Dynamo
 
-### What is Solid?
+### Co to jest bryła?
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+Jeśli chcemy tworzyć bardziej złożone modele, których nie można utworzyć z pojedynczej powierzchni, lub jeśli chcemy zdefiniować dokładną objętość, musimy teraz omówić [bryły](5-6\_solids.md#solids) (i polipowierzchnie). Nawet prosty sześcian jest wystarczająco złożony, aby wymagać sześciu powierzchni — po jednej na ścianę. Bryły zapewniają dostęp do dwóch kluczowych pojęć, które nie istnieją w przypadku powierzchni — bardziej szczegółowego opisu topologicznego (powierzchni, krawędzi, wierzchołków) i operacji logicznych.
 
-### Boolean Operation to Create Spiky Ball Solid
+### Operacja logiczna mająca utworzyć bryłę kolczastej kuli
 
-You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
+Do modyfikowania brył można używać [operacji logicznych](5-6\_solids.md#boolean-operations). Użyjmy kilku operacji logicznych, by utworzyć kolczastą kulę.
 
 ![](<../images/5-2/6/solids  - spiky ball.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
-> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
-> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface.
-> 4. **Solid.UnionAll**: Union the Cones and the Sphere.
-> 5. **Topology.Edges**: Query the edges of the new Solid
-> 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
+> 1. **Sphere.ByCenterPointRadius**: utwórz bryłę bazową.
+> 2. **Topology.Faces**, **Face.SurfaceGeometry**: wykonaj zapytanie dotyczące powierzchni bryły i przekształć w geometrię powierzchni — w tym przypadku sfera ma tylko jedną powierzchnię.
+> 3. **Cone.ByPointsRadii**: utwórz stożki przy użyciu punktów na powierzchni.
+> 4. **Solid.UnionAll**: zsumuj stożki i sferę.
+> 5. **Topology.Edges**: wykonaj zapytanie dotyczące krawędzi nowej bryły.
+> 6. **Solid.Fillet**: dodaj do krawędzi kolczastej kuli zaokrąglenia.
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### Freezing
+### Blokowanie
 
-Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
+Operacje logiczne są złożone i ich obliczanie może być powolne. Funkcja blokowania pozwala wstrzymać wykonywanie wybranych węzłów i zależnych od nich węzłów na dalszym etapie przepływu.
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1.Use the right-click contextual menu to Freeze the Solid Union operation
+> 1. Użyj menu kontekstowego wyświetlanego po kliknięciu prawym przyciskiem myszy, aby zablokować operację sumowania brył
 >
-> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
+> 2\. Wybrany węzeł i wszystkie węzły na dalszym etapie przepływu będą wyświetlane w podglądzie z jasnoszarym cieniowaniem, a zależne przewody będą wyświetlane jako linie kreskowane. Także zależny podgląd geometrii będzie cieniowany. Teraz można zmienić wartości na wcześniejszym etapie przepływu bez obliczania sumy logicznej.
 >
-> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
+> 3\. Aby odblokować węzły, kliknij prawym przyciskiem myszy i wyczyść pole wyboru Zablokuj.
 >
-> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 4\. Wszystkie zależne węzły i skojarzone podglądy geometrii zostaną zaktualizowane i wrócą do standardowego trybu podglądu.
 
-## Deep Dive into...
+## Bliższe spojrzenie na...
 
-### Solids
+### Bryły
 
-Solids consist of one or more Surfaces that contain volume by way of a closed boundary that defines "in" or "out." Regardless of how many of these Surfaces there are, they must form a "watertight" volume to be considered a Solid. Solids can be created by joining Surfaces or Polysurfaces together or by using operations such as loft, sweep, and revolve. Sphere, Cube, Cone and Cylinder primitives are also Solids. A Cube with at least one face removed counts as a Polysurface, which has some similar properties, but it is not a Solid.
+Bryły składają się z jednej lub większej liczby powierzchni, które obejmują objętość w ramach zamkniętej obwiedni definiującej kierunek „do wewnątrz” lub „na zewnątrz”. Niezależnie od tego, ile jest tych powierzchni, muszą one tworzyć „szczelną” objętość, aby można było je uważać za bryłę. Bryły można tworzyć przez połączenie powierzchni lub polipowierzchni albo za pomocą operacji, takich jak wyciągnięcie złożone, przeciągnięcie i obrót. Obiekty elementarne takie jak sfera, sześcian, stożek i walec są również bryłami. Sześcian z usuniętą co najmniej jedną powierzchnią to polipowierzchnia, która ma podobne właściwości, ale nie jest bryłą.
 
-![Solids](../images/5-2/6/Primitives.jpg)
+![Bryły](../images/5-2/6/Primitives.jpg)
 
-> 1. A Plane is made of a single Surface and is not a Solid.
-> 2. A Sphere is made of one Surface but _is_ a Solid.
-> 3. A Cone is made of two surfaces joined together to make a Solid.
-> 4. A Cylinder is made of three surfaces joined together to make a Solid.
-> 5. A Cube is made of six surfaces joined together to make a Solid.
+> 1. Płaszczyzna składa się z pojedynczej powierzchni i nie jest bryłą.
+> 2. Sfera składa się z pojedynczej powierzchni, ale _jest_ bryłą.
+> 3. Stożek składa się z dwóch połączonych ze sobą powierzchni tworzących bryłę.
+> 4. Walec składa się z trzech połączonych ze sobą powierzchni tworzących bryłę.
+> 5. Sześcian składa się z sześciu połączonych ze sobą powierzchni tworzących bryłę.
 
-### Topology
+### Topologia
 
-Solids are made up of three types of elements: Vertices, Edges, and Faces. Faces are the surfaces that make up the Solid. Edges are the Curves that define the connection between adjacent faces, and vertices are the start and end points of those Curves. These elements can be queried using the Topology nodes.
+Bryły składają się z trzech typów elementów: wierzchołków, krawędzi i ścian. Ściany to powierzchnie tworzące bryłę. Krawędziami są krzywe definiujące połączenie pomiędzy przyległymi ścianami, a wierzchołki to punkty początkowe i końcowe tych krzywych. Te elementy mogą być przywoływane za pomocą węzłów topologii.
 
-![Topology](../images/5-2/6/Solid-topology.jpg)
+![Topologia](../images/5-2/6/Solid-topology.jpg)
 
-> 1. Faces
-> 2. Edges
-> 3. Vertices
+> 1. Powierzchnie
+> 2. Krawędzie
+> 3. Wierzchołki
 
-### Operations
+### Operacje
 
-Solids can be modified by filleting or chamfering their edges to eliminate sharp corners and angles. The chamfer operation creates a ruled surface between two faces, while a fillet blends between faces to maintain tangency.
+Bryły można modyfikować przez zaokrąglenie lub fazowanie ich krawędzi w celu wyeliminowania ostrych narożników i kątów. Operacja fazowania tworzy powierzchnię prostokreślną między dwiema ścianami, natomiast zaokrąglenie łączy ściany, aby zachować styczność.
 
 ![](../images/5-2/6/SolidOperations.jpg)
 
-> 1. Solid Cube
-> 2. Chamfered Cube
-> 3. Filleted Cube
+> 1. Przygotówka
+> 2. Sześcian z fazowaniem
+> 3. Sześcian z zaokrągleniami
 
-### Boolean Operations
+### Operacje logiczne
 
-Solid Boolean operations are methods for combining two or more Solids. A single Boolean operation actually means performing four operations:
+Operacje logiczne na bryłach są metodami łączenia dwóch lub większej liczby brył. Pojedyncza operacja logiczna oznacza właściwie wykonanie czterech operacji:
 
-1. **Intersect** two or more objects.
-2. **Split** them at the intersections.
-3. **Delete** unwanted portions of the geometry.
-4. **Join** everything back together.
+1. **Przecięcie** dwóch lub większej liczby obiektów.
+2. **Podzielenie** ich w punktach przecięcia.
+3. **Usunięcie** niepotrzebnych części geometrii.
+4. **Połączenie** wszystkiego z powrotem.
 
-This makes Solid Booleans a powerful time-saving process. There are three Solid Boolean operations that distinguish which parts of the geometry are kept. ![Solid Boolean](../images/5-2/6/SolidBooleans.jpg)
+Dzięki temu operacje logiczne na bryłach są zaawansowanym i oszczędzającym czas procesem. Istnieją trzy operacje logiczne na bryłach rozróżniające, które części geometrii zostają zachowane. ![Operacja logiczna na bryle](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Union:** Remove the overlapping portions of the Solids and join them into a single Solid.
-> 2. **Difference:** Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume.
-> 3. **Intersection:** Keep only the intersecting volume of the two Solids.
+> 1. **Union (suma):** usuń nakładające się części brył i połącz je w jedną bryłę.
+> 2. **Difference (różnica):** odejmij jedną bryłę od drugiej. Bryła odejmowana jest określana jako narzędzie. Warto zauważyć, że można zamienić bryłę wskazaną jako narzędzie, aby zachować odwrotną objętość.
+> 3. **Intersection (przecięcie):** zachowaj tylko przecinającą się objętość dwóch brył.
 
-In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **Solid.UnionAll** nodes for performing difference and union operations with multiple Solids. ![](../images/5-2/6/BooleanAll.jpg)
+Oprócz tych trzech operacji dodatek Dynamo udostępnia też węzły **Solid.DifferenceAll** i **Solid.UnionAll**, które umożliwiają wykonywanie operacji różnicy i sumy dla wielu brył. ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** Union operation with sphere and outward-facing cones
-> 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
+> 1. **UnionAll:** operacja sumy ze sferą i stożkami skierowanymi na zewnątrz
+> 2. **DifferenceAll:** operacja różnicy ze sferą i stożkami skierowanymi do wewnątrz
 
 ##

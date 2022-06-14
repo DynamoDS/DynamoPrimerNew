@@ -1,8 +1,8 @@
-# Vector Math
+# Matematyka wektorowa
 
-Objects in computational designs are rarely created explicitly in their final position and form, and are most often translated,rotated, and otherwise positioned based off of existing geometry. Vector math serves as a kind-of geometric scaffolding to give direction and orientation to geometry, as well as to conceptualize movements through 3D space without visual representation.
+Obiekty w projektach obliczeniowych rzadko są tworzone jawnie w końcowym położeniu i formie. Najczęściej są przekształcane, obracane i umieszczane w oparciu o istniejącą geometrię. Matematyka wektorowa służy jako rodzaj geometrycznego rusztowania pozwalającego nadać geometrii kierunek i orientację, jak również do konceptualizowania ruchów w przestrzeni 3D bez reprezentacji wizualnej.
 
-At its most basic, a vector represents a position in 3D space, and is often times thought of as the endpoint of an arrow from the position (0, 0, 0) to that position. Vectors can be created with the _ByCoordinates_ constructor, taking the x, y, and z position of the newly created Vector object. Note that Vector objects are not geometric objects, and don’t appear in the Dynamo window. However, information about a newly created or modified vector can be printed in the console window:
+Podstawowy wektor reprezentuje położenie w przestrzeni 3D i zwykle jest uważany za punkt końcowy strzałki od położenia (0, 0, 0) do położenia grotu. Wektory mogą być tworzone za pomocą konstruktora _ByCoordinates_ po podaniu położenia x, y i z nowo utworzonego obiektu wektora. Należy zauważyć, że obiekty wektorów nie są obiektami geometrycznymi i nie pojawiają się w oknie dodatku Dynamo. Jednak w oknie konsoli można wyświetlić informacje o nowo utworzonym lub zmodyfikowanym wektorze:
 
 ![](<../images/8-2/3/vector math 01.jpg>)
 
@@ -13,11 +13,11 @@ v = Vector.ByCoordinates(1, 2, 3);
 s = v.X + " " + v.Y + " " + v.Z;
 ```
 
-A set of mathematical operations are defined on Vector objects, allowing you to add, subtract, multiply, and otherwise move objects in 3D space as you would move real numbers in 1D space on a number line.
+Dla obiektów wektorów zdefiniowany jest zestaw operacji matematycznych umożliwiający dodawanie, odejmowanie, mnożenie i w inny sposób przenoszenie obiektów w przestrzeni 3D, podobnie jak w przypadku przesuwania rzeczywistych liczb w przestrzeni jednowymiarowej na oznaczonej liczbami linii.
 
-### Vector Addition
+### Dodawanie wektorów
 
-Vector addition is defined as the sum of the components of two vectors, and can be thought of as the resulting vector if the two component vector arrows are placed “tip to tail.” Vector addition is performed with the _Add_ method, and is represented by the diagram on the left.
+Dodawanie wektorów jest zdefiniowane jako suma składników dwóch wektorów i może być traktowane jako wektor wynikowy, jeśli dwie składowe strzałki wektorów stykają się „grotem do końcówki”. Dodawanie wektorów odbywa się za pomocą metody _Add_ i jest przedstawione za pomocą wykresu po lewej stronie.
 
 ![](../images/8-2/3/VectorMath\_02.png)
 
@@ -29,9 +29,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Add(b);
 ```
 
-### Vector Subtraction
+### Odejmowanie wektorów
 
-Similarly, two Vector objects can be subtracted from each other with the _Subtract_ method. Vector subtraction can be thought of as the direction from first vector to the second vector.
+Podobnie dwa obiekty wektorów można od siebie odjąć za pomocą metody _Substract_. Odejmowanie wektorów może być traktowane jako kierunek od pierwszego wektora do drugiego wektora.
 
 ![](../images/8-2/3/VectorMath\_03.png)
 
@@ -43,9 +43,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Subtract(b);
 ```
 
-### Vector Multiplication
+### Mnożenie wektorów
 
-Vector multiplication can be thought of as moving the endpoint of a vector in its own direction by a given scale factor.
+Mnożenie wektorów może być traktowane jako przesuwanie punktu końcowego wektora w jego własnym kierunku z danym współczynnikiem skalowania.
 
 ![](../images/8-2/3/VectorMath\_04.png)
 
@@ -56,9 +56,9 @@ a = Vector.ByCoordinates(4, 4, 0);
 c = a.Scale(5);
 ```
 
-### Normalize Vector Length
+### Normalizowanie długości wektora
 
-Often it’s desired when scaling a vector to have the resulting vector’s length exactly equal to the scaled amount. This is easily achieved by first normalizing a vector, in other words setting the vector’s length exactly equal to one.
+Często podczas skalowania wektora wymagane jest uzyskanie długości wynikowego wektora dokładnie równej wielkości skalowanej. Można to łatwo osiągnąć przez najpierw znormalizowanie wektora, czyli ustawienie długości wektora równej dokładnie jeden.
 
 ![](<../images/8-2/3/vector math 05.jpg>)
 
@@ -74,11 +74,11 @@ c = b.Scale(5);
 len = c.Length;
 ```
 
-c still points in the same direction as a (1, 2, 3), though now it has length exactly equal to 5.
+c nadal wskazuje w tym samym kierunku co a (1, 2, 3), ale teraz ma długość dokładnie równą 5.
 
-### Cross Product
+### Iloczyn wektorowy
 
-Two additional methods exist in vector math which don’t have clear parallels with 1D math, the cross product and dot product. The cross product is a means of generating a Vector which is orthogonal (at 90 degrees to) to two existing Vectors. For example, the cross product of the x and y axes is the z axis, though the two input Vectors don’t need to be orthogonal to each other. A cross product vector is calculated with the _Cross_ method.
+Istnieją dwie dodatkowe metody w matematyce wektorowej, które nie mają wyraźnych odpowiedników w matematyce jednowymiarowej: iloczyn wektorowy i iloczyn skalarny. Iloczyn wektorowy to metoda generowania wektora, który jest prostopadły (jest pod kątem 90 stopni) do dwóch istniejących wektorów. Na przykład wynikiem iloczynu wektorowego osi x i y jest oś z, chociaż dwa wektory wejściowe nie muszą być do siebie prostopadłe. Wektor będący wynikiem iloczynu wektorowego jest obliczany za pomocą metody _Cross_.
 
 ![](../images/8-2/3/VectorMath\_06.png)
 
@@ -90,9 +90,9 @@ b = Vector.ByCoordinates(0, 1, 1);
 c = a.Cross(b);
 ```
 
-### Dot Product
+### Iloczyn skalarny
 
-An additional, though somewhat more advanced function of vector math is the dot product. The dot product between two vectors is a real number (not a Vector object) that relates to, but is not exactly, the angle between two vectors. One useful properties of the dot product is that the dot product between two vectors will be 0 if and only if they are perpendicular. The dot product is calculated with the _Dot_ method.
+Dodatkowa, choć nieco bardziej zaawansowana funkcja matematyki wektorowej, to iloczyn skalarny. Iloczyn skalarny dwóch wektorów jest liczbą rzeczywistą (nie obiektem wektora), która odnosi się do, ale nie jest dokładnie kątem między dwoma wektorami. Jedną z przydatnych właściwości iloczynu skalarnego jest to, że ma on wartość 0 wtedy i tylko wtedy, gdy mnożone wektory są prostopadłe. Iloczyn skalarny jest obliczany za pomocą metody _Dot_.
 
 ![](<../images/8-2/3/vector math 07.jpg>)
 

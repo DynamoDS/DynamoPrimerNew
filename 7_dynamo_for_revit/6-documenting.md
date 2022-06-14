@@ -1,125 +1,125 @@
-# Documenting
+# Dokumentowanie
 
-Editing parameters for documentation follows suit with the lessons learned in prior sections. In this section, we'll look at editing parameters which don't affect the geometric properties of an element, but instead prepare a Revit file for documentation.
+Edytowanie parametrów na potrzeby dokumentacji odbywa się zgodnie z informacjami przedstawionymi w poprzednich sekcjach. W tej części omówione zostanie edytowanie parametrów, które nie mają wpływu na właściwości geometryczne elementu, lecz pozwalają przygotować plik programu Revit do dokumentacji.
 
-### Deviation
+### Odchyłka
 
-In the exercise below, we'll use a basic deviation from plane node to create a Revit sheet for documentation. Each panel on our parametrically defined roof structure has a different value for deviation, and we want to call out the range of values using color and by scheduling out the adaptive points to hand off to a facade consultant, engineer, or contractor.
+W poniższym ćwiczeniu użyjemy podstawowego odchylenia od węzła płaszczyzny, aby utworzyć arkusz programu Revit do dokumentacji. Każdy panel w konstrukcji dachu zdefiniowanej parametrycznie ma inną wartość odchylenia. Chcemy odwoływać się do zakresu wartości za pomocą koloru i zestawiając punkty adaptacyjne w celu przekazania ich konsultantowi, inżynierowi lub wykonawcy fasady.
 
-![deviation](./images/6/deviation.jpg)
+![odchylenie](./images/6/deviation.jpg)
 
-> The deviation from plane node will calculate the distance that the set of four points varies from the best-fit plane between them. This is a quick and easy way to study constructability.
+> Odchylenie od węzła płaszczyzny spowoduje obliczenie odległości, o jaką zestaw czterech punktów odbiega od najlepiej dopasowanej płaszczyzny między nimi. Jest to szybki i łatwy sposób na zbadanie możliwości realizacji projektu.
 
-## Exercise
+## Ćwiczenie
 
-### Part I: Setting Panels Aperture Ratio Based on Deviation From Plane Node
+### Część I. Ustawianie współczynnika apertury paneli na podstawie odchylenia od węzła płaszczyzny
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="./datasets/6/Revit-Documenting.zip" %}
 
-Start with the Revit file for this section (or continue from the previous section). This file has an array of ETFE panels on the roof. We'll reference these panels for this exercise.
+Rozpocznij od pliku programu Revit dla tej sekcji (lub kontynuuj pracę z plikiem z poprzedniej sekcji). Ten plik zawiera szyk paneli ETFE na dachu. W ramach tego ćwiczenia będziemy odwoływać się do tych paneli.
 
 ![](<./images/6/documenting - exercise I - 01.jpg>)
 
-> 1. Add a _Family Types_ node to the canvas and choose _"ROOF-PANEL-4PT"_.
-> 2. Plug this node into a Select _All Elements of Family Type_ node to get all of the elements from Revit into Dynamo.
+> 1. Dodaj węzeł _Family Types_ do obszaru rysunku i wybierz opcję _„ROOF-PANEL-4PT”_.
+> 2. Podłącz ten węzeł do węzła _All Elements of Family Type_, aby pobrać wszystkie elementy z programu Revit do dodatku Dynamo.
 
 ![](<./images/6/documenting - exercise I - 02.jpg>)
 
-> 1. Query the location of adaptive points for each element with the _AdaptiveComponent.Locations_ node.
-> 2. Create a polygon from these four points with the _Polygon.ByPoints_ node. Notice we now have an abstract version of the paneled system in Dynamo without having to import the full geometry of the Revit element.
-> 3. Calculate planar deviation with the _Polygon.PlaneDeviation_ node.
+> 1. Za pomocą węzła _AdaptiveComponent.Locations_ sprawdź położenie poszczególnych punktów adaptacyjnych dla każdego elementu.
+> 2. Utwórz wielobok z tych czterech punktów za pomocą węzła _Polygon.ByPoints_. Zwróć uwagę, że obecnie w dodatku Dynamo jest dostępna abstrakcyjna wersja systemu panelowanego bez konieczności importowania pełnej geometrii elementu programu Revit.
+> 3. Oblicz odchylenie od płaszczyzny za pomocą węzła _Polygon.PlaneDeviation_.
 
-Just for kicks, like the previous exercise, let's set the aperture ratio of each panel based on its planar deviation.
+Podobnie jak w poprzednim ćwiczeniu, w celu przeprowadzenia testu ustawmy współczynnik apertury każdego panelu na podstawie jego odchylenia od płaszczyzny.
 
 ![](<./images/6/documenting - exercise I - 03.jpg>)
 
-> 1. Add an _Element.SetParameterByName_ node to the canvas and connect the adaptive components to the _element_ input. Connect a _Code Block_ reading _"Aperture Ratio"_ into the _parameterName_ input.
-> 2. We cannot directly connect the deviation results into the value input because we need to remap the values to the parameter range.
+> 1. Dodaj węzeł _Element.SetParameterByName_ do obszaru rysunku i połącz komponenty adaptacyjne z wejściem _element_. Węzeł _Code Block_ z ciągiem _„Aperture Ratio”_ połącz z wejściem _parameterName_.
+> 2. Nie można bezpośrednio połączyć wyników odchylenia z wejściem wartości, ponieważ należy ponownie odwzorować te wartości na zakres parametrów.
 
 ![](<./images/6/documenting - exercise I - 04.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the deviation values to a domain between 0.15 and 0\_.\_45 by entering `0.15; 0.45;` into the _Code Block_.
-> 2. Plug these results into the value input for _Element.SetParameterByName_.
+> 1. Używając węzła _Math.RemapRange_, ponownie odwzoruj wartości odchylenia na domenę o zakresie od 0,15 do 0\_,\_45 przez wprowadzenie `0.15; 0.45;` w węźle _Code Block_.
+> 2. Podłącz te wyniki do wejścia value węzła _Element.SetParameterByName_.
 
-Back in Revit we can _kind of_ make sense of the change in aperture across the surface.
+W programie Revit można _w pewnym sensie_ zinterpretować zmianę apertury na całej powierzchni.
 
-![Exercise](./images/6/13.jpg)
+![Ćwiczenie](./images/6/13.jpg)
 
-Zooming in, it becomes more clear that the closed panels are weighted towards the corners of the surface. The open corners are towards the top. The corners represent areas of larger deviation while bulge has minimal curvature, so this makes sense.
+Po powiększeniu staje się jasne, że panele zamknięte przeważają bliżej narożników powierzchni. Otwarte narożniki przeważają u góry. Narożniki reprezentują obszary o większym odchyleniu, podczas gdy wypukłość ma minimalną krzywiznę, więc ma to sens.
 
-![Exercise](./images/6/13a.jpg)
+![Ćwiczenie](./images/6/13a.jpg)
 
-### Part II: Color and Documentation
+### Część II. Kolor i dokumentacja
 
-Setting the Aperture Ratio doesn't clearly demonstrate the deviation of panels on the roof, and we're also changing the geometry of the actual element. Suppose we just want to study the deviation from the standpoint of fabrication feasibility. It would be helpful to color the panels based on deviation range for our documentation. We can do that with the series of steps below, and in a very similar process to the steps above.
+Ustawienie współczynnika apertury nie wykazuje wyraźnie odchylenia paneli na dachu, a zmieniamy również geometrię rzeczywistego elementu. Załóżmy, że chcemy tylko zbadać odchylenie z punktu widzenia wykonalności elementów produkcyjnych. Pomocne byłoby nadanie kolorów panelom na podstawie zakresu odchylenia dla dokumentacji. Możemy to zrobić za pomocą serii kroków poniżej i w bardzo podobnym procesie do przedstawionego w krokach powyżej.
 
 ![](<./images/6/documenting - exercise II - 01.jpg>)
 
-> 1. Remove the _Element.SetParameterByName_ and its input nodes and add _Element.OverrideColorInView_.
-> 2. Add a _Color Range_ node to the canvas and plug into the color input of _Element.OverrideColorInView_. We still have to connect the deviation values to the color range in order to create the gradient.
-> 3. Hovering over the _value_ input, we can see that the values for the input must be between _0_ and _1_ in order to map a color to each value. We need to remap the deviation values to this range.
+> 1. Usuń węzeł _Element.SetParameterByName_ i jego węzły wejściowe, a następnie dodaj węzeł _Element.OverrideColorInView_.
+> 2. Dodaj węzeł _Color Range_ do obszaru rysunku. Następnie podłącz go do wejścia color węzła _Element.OverrideColorInView_. Nadal musimy połączyć wartości odchyleń z zakresem kolorów, aby utworzyć gradient.
+> 3. Po ustawieniu kursora na wejściu _value_ można zauważyć, że wartości dla tego wejścia muszą zawierać się między _0_ a _1_, aby można było odwzorować kolor na każdą z wartości. Musimy ponownie odwzorować wartości odchylenia na ten zakres.
 
 ![](<./images/6/documenting - exercise II - 02.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the planar deviation values to a range between\* 0\* and _1_ (note: you can use the _"MapTo"_ node to define a source domain as well).
-> 2. Plug the results into a _Color Range_ node.
-> 3. Notice our output is a range of colors instead of a range of numbers.
-> 4. If you're set to Manual, hit _Run_. You should be able to get away with being set to Automatic from this point forward.
+> 1. Używając węzła _Math.RemapRange_, ponownie odwzoruj wartości odchylenia od płaszczyzny na zakres od\* 0\* do _1_ (uwaga: można również użyć węzła _„MapTo”_, aby zdefiniować domenę źródłową).
+> 2. Podłącz wyniki do węzła _Color Range_.
+> 3. Zauważ, że wyjście stanowi zakres kolorów, a nie zakres liczb.
+> 4. Jeśli ustawiono opcję uruchamiania ręcznego, kliknij przycisk _Uruchom_. Od tego momentu powinno być możliwe bezproblemowe korzystanie z opcji uruchamiania automatycznego.
 
-Back in Revit, we see a much more legible gradient which is representative of planar deviation based on our color range. But what if we want to customize the colors? Notice that the minimum deviation values are represented in red, which seems to be the opposite of what we'd expect. We want to have maximum deviation to be red, with minimum deviation represented by a calmer color. Let's go back to Dynamo and fix this.
+W programie Revit widzimy znacznie czytelniejszy gradient, który reprezentuje odchylenie od płaszczyzny za pomocą zakresu kolorów. Jak jednak można dostosować te kolory? Minimalne wartości odchylenia są reprezentowane kolorem czerwonym, a więc odwrotnie do oczekiwań. Chcemy, aby maksymalne odchylenie miało kolor czerwony, a minimalne — kolor spokojniejszy. Wróćmy do dodatku Dynamo i poprawmy to.
 
 ![](./images/6/09.jpg)
 
 ![](<./images/6/documenting - exercise II - 04.jpg>)
 
-> 1. Using a _code block_, add two numbers on two different lines: `0;` and `255;`.
-> 2. Create a red and blue color by plugging the appropriate values into two _Color.ByARGB_ nodes.
-> 3. Create a list from these two colors.
-> 4. Plug this list into the _colors_ input of the _Color Range_, and watch the custom color range update.
+> 1. Używając węzła _Code Block_, dodaj dwie liczby w dwóch różnych wierszach: `0;` i `255;`.
+> 2. Utwórz kolor czerwony i niebieski, podłączając odpowiednie wartości do dwóch węzłów _Color.ByARGB_.
+> 3. Utwórz z tych dwóch kolorów listę.
+> 4. Podłącz tę listę do wejścia _colors_ węzła _Color Range_ i obserwuj aktualizację niestandardowego zakresu kolorów.
 
-Back in Revit, we can now make better sense of areas of maximum deviation in the corners. Remember, this node is for overriding a color in a view, so it can be really helpful if we had a particular sheet in the set of drawings which focuses on a particular type of analysis.
+W programie Revit łatwiej jest teraz zrozumieć obszary maksymalnego odchylenia w narożnikach. Ten węzeł służy do nadpisywania koloru w widoku, więc dobrym rozwiązaniem jest używanie w zestawie rysunków określonych arkuszy poświęconych konkretnym typom analiz.
 
 ![Exercise](<./images/6/07 (6).jpg>)
 
-### Part III: Scheduling
+### Część III. Zestawienia
 
-Selecting one ETFE panel in Revit, we see that there are four instance parameters, XYZ1, XYZ2, XYZ3, and XYZ4. These are all blank after they're created. These are text-based parameters and need values. We'll use Dynamo to write the adaptive point locations to each parameter. This helps interoperability if the geometry needs to be sent to an engineer of facade consultant.
+Po wybraniu jednego panelu ETFE w programie Revit widoczne są cztery parametry wystąpienia: XYZ1, XYZ2, XYZ3 i XYZ4. Po utworzeniu wszystkie są puste. Są to parametry tekstowe i wymagają wartości. Użyjemy dodatku Dynamo do zapisania położeń punktów adaptacyjnych dla każdego parametru. Ułatwia to współdziałanie, jeśli geometrię trzeba wysłać do inżyniera na potrzeby doradztwa w sprawie fasady.
 
 ![](<./images/6/documenting - exercise III - 01.jpg>)
 
-In a sample sheet, we have a large, empty schedule. The XYZ parameters are shared parameters in the Revit file, which allows us to add them to the schedule.
+W przykładowym arkuszu mamy duże, puste zestawienie. Parametry XYZ są współdzielone w pliku programu Revit, co pozwala dodać je do zestawienia.
 
 ![Exercise](<./images/6/03 (8).jpg>)
 
-Zooming in, the XYZ parameters are yet to be filled in. The first two parameters are taken care of by Revit.
+Po powiększeniu widzimy, że parametry XYZ nie są jeszcze wypełnione. Pierwsze dwa parametry są obsługiwane przez program Revit.
 
 ![Exercise](<./images/6/02 (9).jpg>)
 
-To write in these values, we'll do a complex list operation. The graph itself is simple, but the concepts build heavily from the list mapping as discussed in the list chapter.
+Aby zapisać te wartości, wykonamy złożoną operację na liście. Sam wykres jest prosty, ale używane koncepcje opierają się w znacznym stopniu na odwzorowaniu listy omówionym w rozdziale poświęconym listom.
 
 ![](<./images/6/documenting - exercise III - 04.jpg>)
 
-> 1. Select all the adaptive components with two nodes.
-> 2. Extract the location of each point with _AdaptiveComponent.Locations_.
-> 3. Convert these points to strings. Remember, the parameter is text-based so we need to input the correct data type.
-> 4. Create a list of the four strings which define the parameters to change: _XYZ1, XYZ2, XYZ3,_ and _XYZ4_.
-> 5. Plug this list into the _parameterName_ input of _Element.SetParameterByName_.
-> 6. Connect _Element.SetParameterByName_ into the the _combinator_ input of _List.Combine._ Connect the _adaptive components_ into _list1_. Connect _String_ from Object into _list2_.
+> 1. Wybierz wszystkie komponenty adaptacyjne z dwoma węzłami.
+> 2. Wyodrębnij położenie każdego punktu za pomocą węzła _AdaptiveComponent.Locations_.
+> 3. Przekształć te punkty w ciągi. Pamiętaj, że parametr jest oparty na tekście, dlatego trzeba wprowadzić poprawny typ danych.
+> 4. Utwórz listę czterech ciągów definiujących parametry do zmiany: _XYZ1, XYZ2, XYZ3_ i _XYZ4_.
+> 5. Podłącz tę listę do wejścia _parameterName_ węzła _Element.SetParameterByName_.
+> 6. Połącz węzeł _Element.SetParameterByName_ z wejściem _combinator_ węzła _List.Combine._ Połącz _komponenty adaptacyjne_ z wejściem _list1_. Połącz węzeł _String from Object_ z wejściem _list2_.
 
-We are list mapping here, because we are writing four values for each element, which creates a complex data structure. The _List.Combine_ node defines an operation one step down in the data hierarchy. This is why element and value inputs of _Element.SetParameterByName_ are left blank. _List.Combine_ is connecting the sublists of its inputs into the empty inputs of _Element.SetParameterByName_, based on the order in which they are connected.
+Tworzymy w tym miejscu odwzorowanie listy, ponieważ zapisujemy cztery wartości dla każdego elementu, co powoduje utworzenie złożonej struktury danych. Węzeł _List.Combine_ definiuje operację o jeden krok w dół w hierarchii danych. Dlatego właśnie wejścia element i value węzła _Element.SetParameterByName_ są pozostawione puste. Węzeł _List.Combine_ łączy listy podrzędne na swoich wejściach z pustymi wejściami węzła _Element.SetParameterByName_ na podstawie kolejności, w jakiej są one połączone.
 
-Selecting a panel in Revit, we see now that we have string values for each parameter. Realistically, we would create a simpler format to write a point (X,Y,Z). This can be done with string operations in Dynamo, but we're bypassing that here to stay within the scope of this chapter.
+Po wybraniu panelu w programie Revit widać teraz, że dla każdego parametru istnieją wartości ciągów. W rzeczywistości utworzylibyśmy prostszy format do zapisania punktu (X, Y, Z). Można to zrobić za pomocą operacji na ciągach w dodatku Dynamo, ale pominiemy to tutaj, aby nie wykraczać poza zakres niniejszego rozdziału.
 
 ![](<./images/6/04 (5).jpg>)
 
-A view of the sample schedule with parameters filled in.
+Widok przykładowego zestawienia z wypełnionymi parametrami.
 
 ![](<./images/6/01 (9).jpg>)
 
-Each ETFE panel now has the XYZ coordinates written for each adaptive point, representing the corners of each panel for fabrication.
+Każdy panel ETFE ma teraz współrzędne XYZ zapisane dla każdego punktu adaptacyjnego, co reprezentuje narożniki każdego panelu na potrzeby produkcji.
 
 ![Exercise](<./images/6/00 (8).jpg>)

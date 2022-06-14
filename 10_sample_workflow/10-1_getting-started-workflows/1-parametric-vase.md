@@ -2,103 +2,103 @@
 description: suggested exercise
 ---
 
-# Parametric Vase
+# Wazon parametryczny
 
-Creating a parametric vase is a great way to start learning Dynamo.
+Utworzenie wazonu parametrycznego to doskonały sposób na rozpoczęcie nauki korzystania z dodatku Dynamo.
 
-This workflow will teach you how to:
+Ten proces roboczy ilustruje:
 
-* Use number sliders to control variables in your design.
-* Create and modify geometric elements using nodes.
-* Visualize design results in real-time.
+* Sterowanie zmiennymi w projekcie za pomocą suwaków liczb.
+* Tworzenie i modyfikowanie elementów geometrycznych za pomocą węzłów.
+* Wizualizowanie wyników projektu w czasie rzeczywistym.
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 
-## Defining Our Objectives
+## Definiowanie celów
 
-Before jumping into dynamo let's conceptually design our vase.
+Zanim przejdziemy do dodatku Dynamo, zaprojektujmy wazon koncepcyjnie.
 
-Let's say we are going to design a clay vase that takes into account manufacturing practices used by ceramists. Ceramists normally use a pottery wheel to fabricate cylindrical vases. Then, by applying pressure on various heights of the vase they can alter the shape of the vase and create varied designs.
+Załóżmy, że zaprojektujemy wazon gliniany z uwzględnieniem praktyk wytwarzania stosowanych przez garncarzy. Garncarze zwykle używają koła garncarskiego do produkcji wazonów walcowych. Naciskając na różnych wysokościach wazonu, mogą zmienić jego kształt i tworzyć różne wzory.
 
-We would use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
+Do zdefiniowania wazonu użyjemy podobnej metodologii. Utworzymy 4 okręgi na różnych wysokościach i o różnych promieniach, a następnie utworzymy powierzchnię przez wyciągnięcie tych okręgów.
 
 ![](../images/10-1/1/vase2.png)
 
-## Getting Started
+## Pierwsze kroki
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-We need the nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a node that does so. Use the **Search field** or browse through the **Library** to find the **Circle.ByCenterPointRadius** node and add it to the Workspace
+Potrzebne są węzły reprezentujące sekwencję operacji wykonywanych przez dodatek Dynamo. Ponieważ wiemy, że chcemy utworzyć okrąg, zacznijmy od zlokalizowania węzła, który do tego służy. Użyj **pola wyszukiwania** lub przejdź do **biblioteki**, aby znaleźć węzeł **Circle.ByCenterPointRadius**, i dodaj go do obszaru roboczego
 
 ![](../images/10-1/1/vase8.png)
 
-> 1. Search > "Circle..."
-> 2. Select > "ByCenterPointRadius"
-> 3. Node will appear in workspace
+> 1. Wyszukaj > „Circle...”
+> 2. Wybierz > „ByCenterPointRadius”
+> 3. Węzeł pojawi się w obszarze roboczym
 
-Let's take a closer look at this node. On the left side, you have the node's inputs (_centerPoint_ and _radius_) and on the right side, you have the node's output (Circle). Notice that the outputs have a light blue line. This means that the input has a default value. To get more information about the input hover over its name. The _radius_ input needs a double input and has a default value of 1.
+Przyjrzyjmy się bliżej temu węzłowi. Po lewej stronie znajdują się dane wejściowe węzła (_centerPoint_ i _radius_), a po prawej stronie znajdują się dane wyjściowe węzła (Circle). Zwróć uwagę, że dane wyjściowe mają jasnoniebieską linię. Oznacza to, że dane wejściowe mają wartość domyślną. Aby uzyskać więcej informacji na temat danych wejściowych, ustaw kursor na nazwie odpowiedniego wejścia. Dane wejściowe _radius_ wymagają wprowadzenia liczby o podwójnej precyzji (double) i mają wartość domyślną 1.
 
 ![](../images/10-1/1/vase10.png)
 
-We will leave the default value of _centerPoint_ but add a **Number Slider** to control the radius. As we did with the **Circle.ByCenterPointRadius** node, use the library to search for **Number Slider** and add it to your graph.
+Zostawimy wartość domyślną _centerPoint_, ale dodamy suwak liczb, **Number Slider**, aby sterować promieniem. Podobnie jak w przypadku węzła **Circle.ByCenterPointRadius**, użyj biblioteki, aby wyszukać **Number Slider**, i dodaj go do wykresu.
 
-This node is a bit different than our previous node as it contains a slider. You can use the interface to change the output value of the slider.
+Ten węzeł jest nieco inny niż poprzedni węzeł, ponieważ zawiera suwak. Interfejs umożliwia zmianę wartości wyjściowej suwaka.
 
 ![](<../images/10-1/1/vase13 (1).gif>)
 
-The slider can be configured using the dropdown button at the left of the node. Let's limit the slider to a maximum value of 15.
+Suwak można skonfigurować za pomocą przycisku listy rozwijanej po lewej stronie węzła. Ograniczmy suwak do maksymalnej wartości 15.
 
 ![](../images/10-1/1/vase11.png)
 
-Let's place it on the left of our **Circle.ByCenterPointRadius** node and connect both nodes by selecting the **Number Slider** output and connecting it to the Radius input.
+Umieśćmy go po lewej stronie węzła **Circle.ByCenterPointRadius** i połączmy oba węzły, wybierając wyjście **Number Slider** oraz łącząc je z wejściem Radius.
 
 ![](../images/10-1/1/vase12.png)
 
-Let's also change the Number Slider name to "Top Radius" by double-clicking on the node's name.
+Zmieńmy również nazwę suwaka Number Slider na „Top Radius”, klikając dwukrotnie nazwę węzła.
 
 ![](../images/10-1/1/vase14.png)
 
-## Next steps
+## Następne kroki
 
-Let's continue adding some nodes and connections to our logic to define our vase.
+Kontynuujmy dodawanie węzłów i połączeń do logiki w celu zdefiniowania wazonu.
 
-### Creating Circles of Different Radii
+### Tworzenie okręgów o różnych promieniach
 
-Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
+Skopiujmy te węzły 4 razy, aby uzyskać okręgi definiujące powierzchnię. Zmień nazwy suwaków Number Slider, jak pokazano poniżej.
 
 ![](<../images/10-1/1/vase4 (1) (1).png>)
 
-> 1. Circles are created by a center point and a radius
+> 1. Okręgi są tworzone za pomocą punktu środkowego i promienia
 
-### Moving Circles Through the Vase Height
+### Przesuwanie okręgów na wysokości wazonu
 
-We are missing a key parameter to our vase, its height. In order to control the vase's height, we create another number slider. We also add a **Code Block** node. Code blocks can help as add personalized code snippets to our workflow. We will use the code block to multiply the height slider by different factors so that we can position our circles along the vase's height.
+Brakuje nam kluczowego parametru wazonu: jego wysokości. Aby sterować wysokością wazonu, należy utworzyć kolejny suwak liczb. Dodamy również węzeł bloku kodu: **Code Block**. Bloki kodu ułatwiają dodawanie do procesu roboczego spersonalizowanych fragmentów kodu. Użyjemy bloku kodu do pomnożenia suwaka wysokości przez różne współczynniki, co pozwoli nam rozmieścić okręgi wzdłuż wysokości wazonu.
 
 ![](<../images/10-1/1/vase15 (1).png>)
 
-We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
+Następnie za pomocą węzła **Geometry.Translate** umieścimy okręgi na żądanej wysokości. Ponieważ chcemy rozmieścić okręgi w wazonie, użyjemy bloków kodu do pomnożenia parametru wysokości przez współczynnik.
 
 ![](../images/10-1/1/vase5.png)
 
-> 2\. Circles are translated (moved) by a variable in the z axis.
+> 2\. Okręgi są przesuwane (przekształcane) o zmienną na osi Z.
 
-### Creating the Surface
+### Tworzenie powierzchni
 
-In order to create a surface using the **Surface.ByLoft** node we need to combine all of our translated circles into a list. We use the **List.Create** to combine all of our circles into a single list, and then finally output this list to the **Surface.ByLoft** node to view results.
+Aby utworzyć powierzchnię za pomocą węzła **Surface.ByLoft**, należy połączyć wszystkie przekształcone okręgi w listę. Użyjemy węzła **List.Create**, aby połączyć wszystkie okręgi w jedną listę, a następnie wyprowadzimy tę listę do węzła **Surface.ByLoft**, aby wyświetlić wyniki.
 
-Let's also turn off the preview in other nodes to only display the Surface.ByLoft display.
+Wyłączmy również podgląd w innych węzłach, aby wyświetlić tylko wyświetlanie Surface.ByLoft.
 
 ![](<../images/10-1/1/vase6 (1) (1).png>)
 
-> 3\. A surface is created by lofting the translated circles.
+> 3\. Przez wyciągnięcie przekształconych okręgów zostanie utworzona powierzchnia.
 
-## Results
+## Wyniki
 
-Our workflow is ready! We can now use the **Number Sliders** we defined in our script to create different vase designs.
+Nasz proces roboczy jest gotowy. Teraz możemy użyć węzła **Number Slider** zdefiniowanego w skrypcie, aby utworzyć różne projekty wazonów.
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 

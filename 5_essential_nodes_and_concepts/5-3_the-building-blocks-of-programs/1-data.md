@@ -1,130 +1,130 @@
-# Data
+# Dane
 
-Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+Dane są niezbędnym elementem programów. Podróżują przez przewody, trafiając na wejścia węzłów, w których są przetwarzane i przekształcane do nowej postaci — danych wyjściowych. Przeanalizujmy definicję danych, ich strukturę i rozpocznijmy korzystanie z nich w dodatku Dynamo.
 
-## What is Data?
+## Co to są dane?
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
+Dane to zestaw wartości zmiennych jakościowych lub ilościowych. Najprostszą formą danych są liczby, takie jak `0`, `3.14` lub `17`. Jednak dane mogą być wielu innych typów, jak na przykład zmienna reprezentująca zmieniające się liczby (`height`), znaki (`myName`), geometria (`Circle`) lub lista elementów danych (`1,2,3,5,8,13,...`).
 
-In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+W dodatku Dynamo dodaje się/przekazuje się dane do portów wejściowych węzłów — można mieć dane bez operacji, ale aby przetworzyć operacje reprezentowane przez węzły, dane są niezbędne. Po dodaniu węzła do obszaru roboczego, jeśli nie ma on żadnych wejść, wynik będzie funkcją, a nie wynikiem samej operacji.
 
 ![Data and Actions](<../images/5-3/1/data - what is data.jpg>)
 
-> 1. Simple Data
-> 2. Data and Action (A Node) successfully executes
-> 3. Action (A Node) without Data Inputs returns a generic function
+> 1. Proste dane
+> 2. Pomyślne wykonanie danych i operacji (węzeł A)
+> 3. Operacja (węzeł A) bez danych wejściowych zwraca funkcję ogólną
 
-### Null - Absence of Data
+### Null — brak danych
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
+Uwaga: typ `'null'` „null” reprezentuje brak danych. Chociaż jest to pojęcie abstrakcyjne, często można się z nim spotkać podczas pracy z programowaniem wizualnym. Jeśli operacja nie utworzy poprawnego wyniku, węzeł zwróci wartość null.
 
-Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+Testowanie pod kątem wartości null i usuwanie ich ze struktury danych jest kluczową częścią tworzenia skutecznych programów.
 
-| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| Ikona | Nazwa/składnia | Dane wejściowe | Wyjścia |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj | bool |
 
-### Data Structures
+### Struktury danych
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
+Programowanie wizualne umożliwia bardzo szybkie generowanie dużej ilości danych, co może wymagać metod zarządzania ich hierarchią. Taka właśnie jest rola struktur danych, schematów organizacyjnych, w których przechowujemy dane. Specyfika struktur danych i sposób ich używania zależą od konkretnego języka programowania.
 
-In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+W dodatku Dynamo dodajemy hierarchię do danych za pomocą list. Przeanalizujemy to szczegółowo w kolejnych rozdziałach, ale na początek możemy po prostu stwierdzić, że:
 
-A list represents a collection of items placed into one structure of data:
+Lista reprezentuje kolekcję elementów umieszczonych w jednej strukturze danych:
 
-* I have five fingers (_items_) on my hand (_list_).
-* There are ten houses (_items_) on my street (_list_).
+* Mam pięć palców (_elementy_) dłoni (_lista_).
+* Na mojej ulicy (_lista_) jest dziesięć domów (_elementy_).
 
 ![List Breakdown](<../images/5-3/1/data - data structures.jpg>)
 
-> 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 1. Węzeł **Number Sequence** definiuje listę liczb za pomocą wejść _start_, _amount_ i _step_. Za pomocą tych węzłów utworzyliśmy dwie oddzielne listy dziesięciu liczb, jedna z nich obejmuje liczby _100–109_, a druga — _0–9_.
+> 2. Węzeł **List.GetItemAtIndex** wybiera element z listy o określonym indeksie. W przypadku wybierania indeksu _0_ pobieramy pierwszy element z listy (w tym przypadku _100_).
+> 3. Stosując ten sam proces do drugiej listy, otrzymujemy wartość _0_, czyli pierwszy element na liście.
+> 4. Teraz scalamy dwie listy w jedną, używając węzła **List.Create**. Warto zauważyć, że węzeł tworzy _listę list._ Powoduje to zmianę struktury danych.
+> 5. Teraz gdy ponownie użyjemy węzła **List.GetItemAtIndex** z indeksem _0_, pobierzemy pierwszą listę na liście list. Oznacza to, że lista jest traktowana jak element — stanowi to pewną różnicę w porównaniu z innymi językami skryptowymi. W kolejnych rozdziałach bardziej szczegółowo zajmiemy się manipulowaniem listami i strukturami danych.
 
-The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
+Kluczowe pojęcie hierarchii danych w dodatku Dynamo, które należy zrozumieć: **w odniesieniu do struktury danych listy są traktowane jak elementy.** Innymi słowy, analizując strukturę danych, dodatek Dynamo stosuje proces „od góry do dołu”. Co to oznacza? Przeanalizujmy to na przykładzie.
 
-## Exercise: Using Data to Make a Chain of Cylinders
+## Ćwiczenie: używanie danych do tworzenia łańcucha walców
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+W pierwszym przykładzie złożymy walec z powłoką, stosując hierarchię geometrii opisaną w tej sekcji.
 
-### Part I: Set up Graph for one cylinder with some changeable parameters.
+### Część I. Konfigurowanie wykresu dla jednego walca z pewnymi zmieniającymi się parametrami.
 
-1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+1. Dodaj węzeł **Point.ByCoordinates**. Po dodaniu węzła do obszaru rysunku widać punkt w początku siatki podglądu dodatku Dynamo. Domyślne wartości wejść _x, y_ i _z_ to _0,0_, co daje punkt w tym położeniu.
 
 ![](<../images/5-3/1/data - exercise step 1.jpg>)
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+2\. **Plane.ByOriginNormal —** następny krok w hierarchii geometrii to płaszczyzna. Istnieje kilka sposobów skonstruowania płaszczyzny — użyjemy dla wejścia pozycji origin i normal. Origin (początek) to węzeł punktu utworzony w poprzednim kroku.
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis —** jest to wektor jednostkowy w kierunku z. Warto zwrócić uwagę, że nie ma wejść, tylko wektor o wartości \[0,0,1]. Użyjemy go jako wejścia _normal_ dla węzła **Plane.ByOriginNormal**. Pozwala to uzyskać prostokątną płaszczyznę w podglądzie dodatku Dynamo.
 
 ![](<../images/5-3/1/data - exercise step 2.jpg>)
 
-3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+3\. **Circle.ByPlaneRadius —** dodając następny etap w hierarchii, tworzymy teraz krzywą z płaszczyzny w poprzednim kroku. Po utworzeniu podłączenia do węzła uzyskujemy okrąg w początku. Domyślna wartość promienia (radius) węzła wynosi _1_.
 
 ![](<../images/5-3/1/data - exercise step 3.jpg>)
 
-4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+4\. **Curve.Extrude —** teraz dodamy temu elementowi wyrazu, nadając mu głębię i dodając trzeci wymiar. Ten węzeł tworzy powierzchnię z krzywej poprzez jej wyciągnięcie. Domyślna odległość w węźle wynosi _1_, a w rzutni powinien być widoczny walec.
 
 ![](<../images/5-3/1/data - exercise step 4.jpg>)
 
-5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+5\. **Surface.Thicken —** ten węzeł umożliwia uzyskanie zamkniętej bryły przez odsunięcie powierzchni o określoną odległość i zamknięcie formy. Domyślna wartość grubości wynosi _1_, a w rzutni widoczny jest walec z powłoką, zgodny z tymi wartościami.
 
 ![](<../images/5-3/1/data - exercise step 5.jpg>)
 
-6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+6\. **Number Slider —** zamiast używać domyślnych wartości dla wszystkich tych wejść, dodajmy do modelu kontrolę parametryczną.
 
-**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**Domain Edit —** po dodaniu do obszaru rysunku węzła Number Slider kliknij daszek w lewym górnym rogu, aby wyświetlić opcje domeny.
 
-**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+**Min/Max/Step —** zmień wartości _min_, _max_ i _step_ na odpowiednio _0_,_2_ i _0,01_. Umożliwia to sterowanie wielkością całkowitej geometrii.
 
 ![](<../images/5-3/1/data - exercise step 6.gif>)
 
-7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+7\. **Węzły Number Slider —** we wszystkich domyślnych wejściach skopiujmy i wklejmy kilka razy ten suwak liczby (wybierz suwak, naciśnij klawisze Ctrl+C, a następnie klawisze Ctrl+V), tak aby wszystkie wejścia z domyślnymi wartościami miały zamiast nich suwaki. Niektóre z wartości suwaka muszą być większe od zera, aby definicja działała (na przykład potrzebna jest głębokość wyciągnięcia w celu pogrubienia powierzchni).
 
 ![](<../images/5-3/1/data - exercise step 7a.gif>)
 
 ![](<../images/5-3/1/data - exercise step 7b.gif>)
 
-8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+8\. Za pomocą tych suwaków utworzyliśmy teraz parametryczny walec z powłoką. Spróbuj zmieniać niektóre z tych parametrów i obserwuj, jak geometria jest aktualizowana dynamicznie w rzutni dodatku Dynamo.
 
 ![](<../images/5-3/1/data - exercise step 8a.gif>)
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**Węzły Number Slider —** w ramach kontynuacji dodaliśmy wiele suwaków do obszaru rysunku i musimy oczyścić interfejs właśnie utworzonego narzędzia. Kliknij prawym przyciskiem myszy jeden suwak, wybierz polecenie „Zmień nazwę” i zmień nazwę każdego suwaka na odpowiednią dla danego parametru (thickness — „grubość”, Radius — „promień”, Height — „wysokość” itp.).
 
 ![](<../images/5-3/1/data - exercise step 8b step.jpg>)
 
-### Part II: Populate an array of cylinders from Part I
+### Część II. Wypełnianie szyku walców z części I
 
-9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+9\. W tym momencie mamy już utworzony wspaniały walec z pogrubieniem. Obecnie jest to jeden obiekt. Przyjrzyjmy się temu, jak utworzyć szyk walców pozostających dynamicznie połączonych. W tym celu utworzymy listę walców, zamiast pracować z pojedynczym elementem.
 
-**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+**Dodawanie (+) —** naszym celem jest dodanie wiersza walców obok utworzonego walca. Aby dodać jeden walec przylegający do bieżącego, musimy uwzględnić zarówno promień walca, jak i grubość jego powłoki. Uzyskamy tę liczbę przez dodanie dwóch wartości suwaków.
 
 ![](<../images/5-3/1/data - exercise step 9.jpg>)
 
-10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+10\. Ten krok jest trudniejszy, więc przeanalizujmy go powoli: celem końcowym jest utworzenie listy liczb definiujących położenie każdego walca w wierszu.
 
 ![](<../images/5-3/1/data - exercise step 10.jpg>)
 
-> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+> a. **Multiplication —** najpierw pomnożymy wartość z poprzedniego kroku przez 2. Wartość z poprzedniego kroku reprezentuje promień. Chcemy przesunąć walec o pełną średnicę.
 >
-> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+> b. **Number Sequence —** za pomocą tego węzła tworzymy szyk liczb. Pierwsze wejście to węzeł _mnożenia_ z poprzedniego kroku skierowany do wartości _step_. Wartość _start_ można ustawić na _0,0_ za pomocą węzła _number_.
 >
-> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+> c. **Integer Slider** — w przypadku wartości _amount_ połączymy suwak liczby całkowitej. Określi to liczbę utworzonych walców.
 >
-> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+> d. **Output** — na tej liście znajduje się przesunięcie każdego walca w szyku i jest ona parametrycznie sterowana przez oryginalne suwaki.
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. Ten krok jest prosty — podłącz sekwencję zdefiniowaną w poprzednim kroku do wejścia _x_ oryginalnego węzła **Point.ByCoordinates**. Spowoduje to zastąpienie suwaka _pointX_, który można usunąć. Teraz widzimy szyk walców w rzutni (upewnij się, że suwak liczby całkowitej ma wartość większą niż 0).
 
 ![](<../images/5-3/1/data - exercise step 11.gif>)
 
-12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+12\. Łańcuch cylindrów jest nadal dynamicznie połączony ze wszystkimi suwakami. Zmieniaj wartości poszczególnych suwaków i obserwuj aktualizację definicji.
 
 ![](<../images/5-3/1/data - exercise step 12.gif>)

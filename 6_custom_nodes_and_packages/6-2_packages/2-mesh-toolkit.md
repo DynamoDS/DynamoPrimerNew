@@ -1,69 +1,69 @@
-# Package Case Study - Mesh Toolkit
+# Analiza przypadku pakietu — zestaw Mesh Toolkit
 
-The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+Zestaw Dynamo Mesh Toolkit zawiera narzędzia do importowania siatek z zewnętrznych formatów plików, tworzenia siatki z obiektów geometrii Dynamo oraz ręcznego tworzenia siatek na podstawie wierzchołków i indeksów. Ta biblioteka zawiera również narzędzia do modyfikowania siatek, naprawiania siatek i wyodrębniania warstw poziomych do użycia w produkcji.
 
 ![](<../images/6-2/2/meshToolkit case study 01.jpg>)
 
-The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
+Zestaw narzędzi Dynamo Mesh Toolkit jest częścią nieustających badań firmy Autodesk nad siatką, więc w nadchodzących latach będzie się rozwijać. Należy spodziewać się częstego dodawania do zestawu nowych metod. Zachęcamy też do kierowania do zespołu Dynamo komentarzy, informacji o błędach i sugestii dotyczących nowych funkcji.
 
-### Meshes vs. Solids
+### Siatki a bryły
 
-The exercise below demonstrates some basic mesh operations using the Mesh Toolkit. In the exercise, we intersect a mesh with a series of planes, which can be computationally expensive using solids. Unlike a solid, a mesh has a set "resolution" and is not defined mathematically, but topologically, and we can define this resolution based on the task at hand. For more details on mesh to solid relationships, you can reference the[ Geometry For Computation Design](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) chapter in this primer. For a more thorough examination of Mesh Toolkit, you can reference the [Dynamo Wiki page.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Let's jump into the package in the exercise below.
+W poniższym ćwiczeniu przedstawiono niektóre podstawowe operacje na siatce przeprowadzane za pomocą zestawu Mesh Toolkit. W tym ćwiczeniu przetniemy siatkę serią płaszczyzn, co w przypadku używania brył może być kosztowne z punktu widzenia obliczeń. W przeciwieństwie do bryły siatka ma stałą „rozdzielczość” i nie jest zdefiniowana matematycznie, lecz topologicznie. Tę rozdzielczość można zdefiniować na podstawie bieżącego zadania. Aby uzyskać więcej informacji na temat relacji między siatką a bryłami, zapoznaj się z rozdziałem [Geometria w projektowaniu obliczeniowym](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) tego przewodnika. Bardziej dogłębną analizę zestawu Mesh Toolkit można znaleźć na [stronie wiki dodatku Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Przejdźmy do pakietu w ćwiczeniu poniżej.
 
-### Install Mesh Toolkit
+### Instalowanie zestawu Mesh Toolkit
 
-In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
+W dodatku Dynamo przejdź do obszaru _Pakiety > Wyszukaj pakiety..._ na górnym pasku menu. W polu wyszukiwania wpisz _„MeshToolkit”_ (jedno słowo), pamiętając o wielkich literach. Kliknij przycisk Zainstaluj, aby rozpocząć pobieranie. To wystarczy.
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
-## Exercise: Intersect Mesh
+## Ćwiczenie: przecinająca się siatka
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
-In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
+W tym przykładzie przyjrzymy się węzłowi Intersect w zestawie Mesh Toolkit. Zaimportujemy siatkę i przetniemy ją szeregiem płaszczyzn wejściowych, aby utworzyć warstwy. Jest to punkt wyjścia do przygotowania modelu do produkcji na przecinarce laserowej, wodnej lub frezarce CNC.
 
-Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
+Rozpocznij od otwarcia pliku _Mesh-Toolkit\_Intersect-Mesh.dyn w dodatku Dynamo._
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 1. **File Path:** odszukaj plik siatki do zaimportowania (_stanford\_bunny\_tri.obj_). Obsługiwane typy plików to .mix i .obj
+> 2. **Mesh.ImportFile:** połącz ścieżkę pliku w celu zaimportowania siatki.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
-> 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes. \_\_ The settings are as follow: \_\_ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates:** utwórz punkt — będzie to środek łuku.
+> 2. **Arc.ByCenterPointRadiusAngle:** utwórz łuk wokół punktu. Ta krzywa zostanie użyta do rozmieszczenia szeregu płaszczyzn. \_\_ Znajdują się tu następujące ustawienia: \_\_ `radius: 40, startAngle: -90, endAngle:0`
 
-Create a series of planes oriented along the arc.
+Utwórz szereg płaszczyzn zorientowanych wzdłuż łuku.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
-> 1. **Code Block**: Create 25 numbers between 0 and 1.
-> 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
-> 3. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
-> 4. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
+> 1. **Code Block**: utwórz 25 liczb z zakresu od 0 do 1.
+> 2. **Curve.PointAtParameter:** połącz łuk z wejściem _„curve”_ i wyjście bloku kodu z wejściem _„param”_, aby wyodrębnić szereg punktów wzdłuż krzywej.
+> 3. **Curve.TangentAtParameter:** połącz te same wejścia co w poprzednim węźle.
+> 4. **Plane.ByOriginNormal:** połącz punkty z wejściem _„origin”_ i wektory z wejściem _„normal”_, aby utworzyć szereg płaszczyzn w każdym punkcie.
 
-Next, we will use these planes to intersect the mesh.
+Następnie użyjemy tych płaszczyzn do przecięcia siatki.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
-> 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
-> 3. **Curve.EndPoint:** Extract the end points of each curve.
-> 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
+> 1. **Mesh.Intersect:** utwórz przecięcie płaszczyzn z zaimportowaną siatką, tworząc szereg konturów polikrzywej. Kliknij prawym przyciskiem myszy węzeł i ustaw skratowanie na najdłuższe
+> 2. **PolyCurve.Curves:** rozbij polikrzywe na zakrzywione fragmenty.
+> 3. **Curve.EndPoint:** wyodrębnij punkty końcowe każdej krzywej.
+> 4. **NurbsCurve.ByPoints:** użyj punktów do utworzenia krzywej NURBS. Użyj węzła Boolean ustawionego na _True_, aby zamknąć krzywe.
 
-Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
+Przed kontynuowaniem wyłącz podgląd niektórych węzłów, takich jak Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal i Arc.ByCenterPointRadiusAngle, aby lepiej uwidocznić wynik.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch:** Construct surface patches for each contour to create “slices” of the mesh.
+> 1. **Surface.ByPatch:** utwórz ścieżki powierzchni dla każdego konturu, aby utworzyć „warstwy” siatki.
 
-Add a second set of slices for a waffle/egg-crate effect.
+Dodaj drugi zestaw warstw, aby uzyskać efekt wafla.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 06.jpg>)
 
-You may have noticed that the intersection operations calculate faster with a mesh vs. a comparable solid. Workflows such as the one demonstrated in this exercise lend themselves well to working with meshes.
+Można zauważyć, że operacje przecięcia są dla siatki wykonywane szybciej niż dla porównywalnej bryły. Procesy robocze, takie jak ten przedstawiony w tym ćwiczeniu, dobrze nadają się do stosowania siatek.

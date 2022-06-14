@@ -1,93 +1,93 @@
-# Vector, Plane & Coordinate System
+# Wektor, płaszczyzna i układ współrzędnych
 
-## Vector, Plane & Coordinates System in Dynamo
+## Wektor, płaszczyzna i układ współrzędnych w dodatku Dynamo
 
-### Vector
+### Wektor
 
-[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+[Wektor](5-2\_vectors.md#vector-1) jest reprezentacją wielkości i kierunku. Można go interpretować jako strzałkę zmierzającą w określonym kierunku z daną prędkością. Jest to kluczowy element modeli w dodatku Dynamo. Ponieważ należą one do kategorii abstrakcyjnych „elementów pomocniczych”, gdy utworzymy wektor, nie zobaczymy niczego w podglądzie tła.
 
 ![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
 
-> 1. We can use a line as a stand in for a Vector preview.
+> 1. Można użyć linii jako symbolu zastępczego dla podglądu wektora.
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-### Plane
+### Płaszczyzna
 
-[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+[Płaszczyzna](5-2\_vectors.md#plane-1) jest powierzchnią dwuwymiarową. Można ją interpretować jako płaską powierzchnię, która rozciąga się w nieskończoność. Każda płaszczyzna ma początek, kierunek X, kierunek Y i kierunek Z (w górę).
 
 ![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
 
-> 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
-> 2. In Dynamo, Planes are rendered in the Background Preview.
+> 1. Chociaż płaszczyzny są abstrakcyjne, mają początek, więc można je umieścić w przestrzeni.
+> 2. W dodatku Dynamo płaszczyzny są renderowane w podglądzie tła.
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-### Coordinate System
+### Układ współrzędnych
 
-[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+[Układ współrzędnych](5-2\_vectors.md#coordinate-system-1) jest układem określającym położenie punktów lub innych elementów geometrycznych. Na poniższym rysunku wyjaśniono, jak to wygląda w dodatku Dynamo i co reprezentuje każdy kolor.
 
 ![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
 
-> 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
+> 1. Chociaż układy współrzędnych są abstrakcyjne, mają początek, więc można je umieścić w przestrzeni.
+> 2. W dodatku Dynamo układy współrzędnych są renderowane w podglądzie tła jako punkt (początek) oraz linie definiujące osie (oś X jest czerwona, oś Y — zielona, a oś Z — niebieska, zgodnie z konwencją).
 
-> Download the example file by clicking on the link below.
+> Pobierz plik przykładowy, klikając poniższe łącze.
 >
-> A full list of example files can be found in the Appendix.
+> Pełna lista plików przykładowych znajduje się w załączniku.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Deep Dive into...
+## Bliższe spojrzenie na...
 
-Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
+Wektory, płaszczyzny i układy współrzędnych tworzą podstawową grupę abstrakcyjnych typów geometrii. Pomagają definiować położenie, orientację i kontekst przestrzenny dla innych typów geometrii, które opisują kształty. Jeśli stwierdzam, że jestem w Nowym Jorku przy 42-tej ulicy oraz Broadwayu (układ współrzędnych), stoję na poziomie ulicy (płaszczyzna) i patrzę na północ (wektor), używam tych „elementów pomocniczych”, by określić, gdzie jestem. To samo dotyczy produktu takiego jak etui telefonu czy drapacza chmur — potrzebujemy tego kontekstu do opracowania modelu.
 
-![Vectors, Planes, and Coordinates](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![Wektory, płaszczyzny i współrzędne](../images/5-2/2/VectorsPlanesCoodinates.jpg)
 
-### Vector
+### Wektor
 
-A vector is a geometric quantity describing Direction and Magnitude. Vectors are abstract; ie. they represent a quantity, not a geometrical element. Vectors can be easily confused with Points because they both are composed of a list of values. There is a key difference though: Points describe a position in a given coordinate system while Vectors describe a relative difference in position which is the same as saying "direction."
+Wektor jest wielkością geometryczną opisującą kierunek i wartość. Wektory są abstrakcyjne. To znaczy, że reprezentują wielkość, a nie element geometryczny. Wektory można łatwo pomylić z punktami, ponieważ i jedne, i drugie zawierają listę wartości. Istnieje jednak zasadnicza różnica: punkty opisują położenie w danym układzie współrzędnych, natomiast wektory opisują względną różnicę w pozycji, która odpowiada pojęciu „kierunku”.
 
-![Vector Details](../images/5-2/2/Vector-Detailed.jpg)
+![Szczegóły wektora](../images/5-2/2/Vector-Detailed.jpg)
 
-If the idea of relative difference is confusing, think of the Vector AB as "I'm standing at Point A, looking toward Point B." The direction, from here (A) to there (B), is our Vector.
+Jeśli pojęcie względnej różnicy jest niejasne, o wektorze AB można myśleć w ten sposób: „stoję w punkcie A, patrząc w kierunku punktu B”. Kierunek, stąd (A) dotąd (B), jest wektorem.
 
-Breaking down Vectors further into their parts using the same AB notation:
+Dalsze rozbicie wektorów na ich części przy użyciu tej samej notacji AB:
 
-![Vector](../images/5-2/2/Vector.jpg)
+![Wektor](../images/5-2/2/Vector.jpg)
 
-> 1. The **Start Point** of the Vector is called the **Base**.
-> 2. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
-> 3. Vector AB is not the same as Vector BA - that would point in the opposite direction.
+> 1. **Punkt początkowy** wektora nosi nazwę **punktu zaczepienia**.
+> 2. \*\*Punkt końcowy \*\*wektora nosi nazwę **wierzchołka** lub **zwrotu**.
+> 3. Wektor AB nie jest taki sam jak wektor BA, który wskazuje w przeciwnym kierunku.
 
-If you're ever in need of comic relief regarding Vectors (and their abstract definition), watch the classic comedy Airplane and listen for the oft-quoted tongue-in cheek line:
+Z wektorów i ich abstrakcyjnej definicji można się pośmiać, oglądając klasyczną komedię „Czy leci z nami pilot?”:
 
-> _Roger, Roger. What's our vector, Victor?_
+> _Zrozumiałem, zrozumiałem. Jaki jest nasz wektor, Victor?_
 
-### Plane
+### Płaszczyzna
 
-Planes are two-dimensional abstract "Helpers." More specifically, Planes are conceptually “flat,” extending infinitely in two directions. Usually they are rendered as a smaller rectangle near their origin.
+Płaszczyzny to dwuwymiarowe abstrakcyjne „elementy pomocnicze”. Mówiąc konkretniej, płaszczyzny są „płaskie” i rozciągają się w dwóch kierunkach w nieskończoność. Zazwyczaj są one renderowane jako mniejsze prostokąty w pobliżu ich początku.
 
-![Plane](../images/5-2/2/Plane.jpg)
+![Płaszczyzna](../images/5-2/2/Plane.jpg)
 
-You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
+W tym momencie zapewne myślisz sobie: „Chwileczkę! Początek? Brzmi to jak układ współrzędnych... Taki jak używany do modelowania w oprogramowaniu CAD”!
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
+I masz rację. Większość programów do modelowania wykorzystuje płaszczyzny konstrukcyjne lub „poziomy” do definiowania lokalnego kontekstu dwuwymiarowego, w którym odbywa się szkicowanie. Bardziej znajomo mogą brzmieć określenia XY, XZ, YZ — lub — północ, południowy wschód czy rzut. Wszystkie one to płaszczyzny definiujące nieskończony „płaski” kontekst. Płaszczyzny nie mają głębokości, ale również pomagają w opisie kierunku —
 
-### Coordinate System
+### Układ współrzędnych
 
-If we are comfortable with Planes, we are a small step away from understanding Coordinate Systems. A Plane has all the same parts as a Coordinate System, provided it is a standard "Euclidean" or "XYZ" Coordinate System.
+Jeśli pojęcie płaszczyzny jest już dla nas jasne, zrozumienie układów współrzędnych jest już o krok od tego. Płaszczyzna ma te same części co układ współrzędnych pod warunkiem, że mamy na myśli standardowy układ współrzędnych — „euklidesowy” lub „XYZ”.
 
-There are other, however, alternative Coordinate Systems such as Cylindrical or Spherical. As we will see in later sections, Coordinate Systems can also be applied to other Geometry types to define a position on that geometry.
+Istnieją jednak inne, alternatywne układy współrzędnych, takie jak walcowy lub sferyczny. Jak zostanie to przedstawione w kolejnych sekcjach, układy współrzędnych można również stosować do innych typów geometrii w celu zdefiniowania położenia w ramach takiej geometrii.
 
-![Coordinate System](../images/5-2/2/CoordinateSystem.jpg)
+![Układ współrzędnych](../images/5-2/2/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical
+> Dodawanie alternatywnych układów współrzędnych — walcowego, sferycznego

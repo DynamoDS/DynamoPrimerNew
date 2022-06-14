@@ -1,9 +1,9 @@
-# Coding in Dynamo
+# Kodowanie w dodatku Dynamo
 
-Dynamo is a great door to start coding for the AEC world. You may be interested in some of these sections to start your coding journey:
+Dodatek Dynamo doskonale nadaje się do rozpoczęcia przygody z kodowaniem w świecie architektury, inżynierii i budownictwa. Niektóre z tych sekcji mogą Cię zainteresować — rozpocznij przygodę z kodowaniem:
 
-* [Code Blocks and DesignScript](8-1\_code-blocks-and-design-script/)
-* [Geometry with DesignScript](8-2\_geometry-with-design-script/)
+* [Bloki kodu i język DesignScript](8-1\_code-blocks-and-design-script/)
+* [Geometria przy użyciu języka DesignScript](8-2\_geometry-with-design-script/)
 * [Python](8-3\_python/)
 
 ![](<./images/image (17).png>)
