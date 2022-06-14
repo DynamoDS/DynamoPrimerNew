@@ -1,96 +1,96 @@
-# Meshes
+# Mesh
 
 ## Mesh in Dynamo
 
-### What is Mesh?
+### Cos'è una mesh?
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+Nel campo della modellazione computazionale, le [mesh](7-meshes.md#mesh) sono una delle forme più pervasive di rappresentazione della geometria 3D. La geometria delle mesh è generalmente composta da una raccolta di quadrilateri o triangoli, può essere un'alternativa leggera e flessibile all'utilizzo di NURBS e le mesh vengono utilizzate in tutto, dal rendering e dalle visualizzazioni alla fabbricazione digitale e alla stampa 3D.
 
-### Mesh Elements
+### Elementi della mesh
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Dynamo definisce le mesh utilizzando una struttura di dati di faccia-vertice. Al livello più elementare, questa struttura è semplicemente una raccolta di punti raggruppati in poligoni. I punti di una mesh sono denominati vertici, mentre i poligoni simili a superfici sono denominati facce.
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+Per creare una mesh, è necessario un elenco di vertici e un sistema per raggruppare tali vertici in facce denominate gruppo di indici.
 
 ![](<../images/5-2/7/meshes - mesh elements.jpg>)
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. Elenco dei vertici
+> 2. Elenco dei gruppi di indici per definire le facce
 
 ### Mesh Toolkit
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+Le funzionalità della mesh di Dynamo possono essere estese installando il pacchetto [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). Dynamo Mesh Toolkit fornisce strumenti per importare mesh da formati di file esterni, creare mesh da oggetti della geometria di Dynamo e generare manualmente mesh in base ai vertici e agli indici.
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+La libreria fornisce inoltre strumenti per modificare e correggere la mesh o estrarre sezioni orizzontali da utilizzare nella fabbricazione.
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+Visitare i [case study di Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md), ad esempio sull'utilizzo di questo pacchetto.
 
 ![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deep Dive into...
+## Approfondimento su...
 
 ### Mesh
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+Una mesh è una raccolta di quadrilateri e triangoli che rappresenta una geometria di superfici o solidi. Analogamente ai solidi, la struttura di un oggetto mesh include vertici, bordi e facce. Sono disponibili ulteriori proprietà che rendono anche univoche le mesh, come le normali.
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![Elementi della mesh](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. Vertici della mesh
+> 2. Bordi della mesh \*I bordi con una sola faccia adiacente vengono denominati "nudi". Tutti gli altri bordi sono "vestiti"
+> 3. Facce della mesh
 
-### Vertices + Vertex Normals
+### Vertici + normali dei vertici
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+I vertici di una mesh sono semplicemente un elenco di punti. L'indice dei vertici è molto importante quando si costruisce una mesh o si ottengono informazioni sulla struttura di una mesh. Per ogni vertice, esiste anche una normale del vertice corrispondente (vettore) che descrive la direzione media delle facce associate e consente di comprendere l'orientamento in ingresso e in uscita della mesh.
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![Vertici + normali](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. Vertici
+> 2. Normali dei vertici
 
-### Faces
+### Facce
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+Una faccia è un elenco ordinato di tre o quattro vertici. La rappresentazione della "superficie" di una faccia della mesh è pertanto implicita in base alla posizione dei vertici indicizzati. Si dispone già dell'elenco dei vertici che compongono la mesh, quindi, invece di fornire singoli punti per definire una faccia, si utilizza semplicemente l'indice dei vertici. Questo consente anche di utilizzare lo stesso vertice in più di una faccia.
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. Una faccia quadrangolare composta con indici 0, 1, 2 e 3
+> 2. Una faccia triangolare composta con indici 1, 4 e 2; notare che i gruppi di indici possono essere spostati nel loro ordine - purché la sequenza sia ordinata in senso antiorario, la faccia verrà definita correttamente
 
-### Meshes versus NURBS Surfaces
+### Mesh e superfici NURBS
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+Quali sono le differenze tra la geometria della mesh e la geometria NURBS? Quando è consigliabile utilizzare una al posto dell'altra?
 
-#### Parameterization
+#### Parametrizzazione
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+In un capitolo precedente, si è visto che le superfici NURBS sono definite da una serie di curve NURBS che vanno in due direzioni. Queste direzioni sono etichettate `U` e `V` e consentono la parametrizzazione di una superficie NURBS in base ad un dominio di superficie bidimensionale. Le curve stesse sono memorizzate come equazioni nel computer, consentendo il calcolo delle superfici risultanti ad un grado di precisione arbitrariamente ridotto. Può essere difficile, tuttavia, combinare insieme più superfici NURBS. L'unione di due superfici NURBS determina una polisuperficie, in cui diverse sezioni della geometria avranno parametri UV e definizioni delle curve differenti.
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Punti di controllo](../images/5-2/7/NURBSvsMESH-01.jpg)
 
-> 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
+> 1. Superficie
+> 2. Curva isoparametrica (isoparm)
+> 3. Punto di controllo della superficie
+> 4. Poligono di controllo della superficie
+> 5. Punto isoparametrico
+> 6. Cornice della superficie
 > 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 8. Bordo nudo
+> 9. Rete della mesh
+> 10. Spigoli mesh
+> 11. Normale del vertice
+> 12. Faccia della mesh/Normale della faccia della mesh
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+Le mesh, invece, sono costituite da un numero discreto di facce e vertici esattamente definiti. La rete di vertici in genere non può essere definita da coordinate `UV` semplici e, poiché le facce sono distinte, il grado di precisione viene integrato nella mesh e può essere modificato solo mediante l'affinamento della mesh e l'aggiunta di più facce. La mancanza di descrizioni matematiche consente alle mesh di gestire in modo più flessibile la geometria complessa all'interno di una singola mesh.
 
-### Local versus Global Influence
+### Influenza locale rispetto a globale
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+Un'altra importante differenza è rappresentata dall'entità con cui una modifica locale nella geometria della mesh o NURBS influisce sull'intera forma. Lo spostamento di un vertice di una mesh influisce solo sulle facce adiacenti a tale vertice. Nelle superfici NURBS, l'entità dell'influenza è più complessa e dipende dal grado della superficie, nonché dai pesi e dai nodi dei punti di controllo. In generale, tuttavia, lo spostamento di un singolo punto di controllo in una superficie NURBS crea un cambiamento più uniforme e più esteso nella geometria.
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Modifica](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. Superficie NURBS: lo spostamento di un punto di controllo ha un'influenza che si estende lungo la forma.
+> 2. Geometria della mesh: lo spostamento di un vertice influisce solo sugli elementi adiacenti.
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+Un'analogia che può essere utile è confrontare un'immagine vettoriale (composta da linee e curve) con un'immagine raster (composta da singoli pixel). Se si esegue lo zoom avanti di un'immagine vettoriale, le curve restano nitide e chiare, mentre lo zoom avanti di un'immagine raster consente di ottenere pixel più grandi. In questa analogia, le superfici NURBS possono essere confrontate con un'immagine vettoriale perché esiste una relazione matematica uniforme, mentre la mesh si comporta in modo simile ad un'immagine raster con una risoluzione impostata.
 
 ##

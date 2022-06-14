@@ -1,25 +1,25 @@
-# What is Dynamo & How Does It Work?
+# Che cos'è Dynamo e come funziona?
 
-Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
+Dynamo è un'applicazione di [programmazione visiva](broken-reference/) che può essere scaricata ed eseguita in modalità "Sandbox" indipendente o come plug-in per altri software come Revit, FormIt o Civil 3D.
 
 {% hint style="info" %}
-Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
+Ulteriori informazioni sulla [differenza tra **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
 {% endhint %}
 
-### The Process
+### Processo
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
+Dynamo consentirà di lavorare all'interno di un processo di programmazione visiva in cui si collegano gli elementi per definire le relazioni e le sequenze di azioni che compongono algoritmi personalizzati. Si possono utilizzare gli algoritmi per una vasta gamma di applicazioni, dall'elaborazione dei dati alla generazione della geometria, il tutto in tempo reale e senza dover scrivere una riga di `code`.
 
 ![](<./images/1-1/nodes and wires - flow of data.jpg>)
 
-### Connecting Nodes and Wires
+### Collegamento di nodi con fili
 
-Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
+Nodi e fili sono i componenti chiave di Dynamo per supportare un processo di [programmazione visiva](../a\_appendix/a-1\_visual-programming-and-dynamo.md). Consente di stabilire forti relazioni visive e sistemiche tra le parti di un progetto. Con un semplice clic del mouse è possibile collegare facilmente i nodi, sviluppando e ottimizzando il workflow di progettazione.
 
 ![](<./images/1-1/what is dynamo - connecting nodes with wires.gif>)
 
-## What can Dynamo Achieve?
+## Cosa è possibile ottenere con Dynamo?
 
-From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
+Dall'utilizzo della programmazione visiva per i workflow dei progetti allo sviluppo di strumenti personalizzati, Dynamo è un aspetto integrante di un'ampia gamma di applicazioni straordinarie.
 
-[Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[Seguire la bacheca su Dynamo in azione su Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)

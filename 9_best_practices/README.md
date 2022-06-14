@@ -1,5 +1,5 @@
-# Best Practices
+# Procedure ottimali
 
-This part of the primer is organized in the spirit of a journal of “best practices”. It sheds light on several strategies that we have learned, through experience and research, to be most conducive to quality parametric workflows. As designers and programmers, our metric for quality is primarily concerned with the maintainability, dependability, usability, and efficiency of our tools. While these best practices have specific examples for either visual or text-based scripting, the principles are applicable to all programming environments and can inform many computational workflows.
+Questa parte della guida introduttiva è organizzata come una raccolta di procedure ottimali. Evidenzia diverse strategie apprese, attraverso l'esperienza e la ricerca, per favorire workflow parametrici di qualità. In qualità di progettisti e programmatori, la metrica di qualità è principalmente interessata alla manutenibilità, all'affidabilità, all'usabilità e all'efficienza degli strumenti. Benché queste procedure ottimali presentino esempi specifici per lo scripting basato su testo o visivo, i principi sono applicabili a tutti gli ambienti di programmazione e possono caratterizzare molti workflow computazionali.
 
 ![](./images/bestPractices.png)

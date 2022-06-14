@@ -1,10 +1,10 @@
-# Curves: Interpolated and Control Points
+# Curve: punti interpolati e di controllo
 
-There are two fundamental ways to create free-form curves in Dynamo: specifying a collection of Points and having Dynamo interpolate a smooth curve between them, or a more low-level method by specifying the underlying control points of a curve of a certain degree. Interpolated curves are useful when a designer knows exactly the form a line should take, or if the design has specific constraints for where the curve can and cannot pass through. Curves specified via control points are in essence a series of straight line segments which an algorithm smooths into a final curve form. Specifying a curve via control points can be useful for explorations of curve forms with varying degrees of smoothing, or when a smooth continuity between curve segments is required.
+In Dynamo vi sono due metodi fondamentali per creare curve di forma libera: la specifica di una raccolta di punti e l'impostazione del programma in modo che venga interpolata una curva levigata tra di essi oppure esiste un metodo di livello molto più basso, ossia specificare i punti di controllo sottostanti di una curva di un determinato grado. Le curve interpolate sono utili quando un progettista sa esattamente la forma che deve assumere una linea o se il progetto ha vincoli specifici per il punto in cui la curva può e non può attraversare. Le curve specificate tramite i punti di controllo sono essenzialmente una serie di segmenti di linee rette che un algoritmo leviga in una forma di curva finale. Specificare una curva tramite punti di controllo può essere utile per esplorare forme di curva con diversi gradi di levigatezza o quando è necessaria una continuità uniforme tra segmenti di curva.
 
-### Interpolated Curve
+### Curva interpolata
 
-To create an interpolated curve, simply pass in a collection of Points to the _NurbsCurve.ByPoints_ method.
+Per creare una curva interpolata, è sufficiente trasferire una raccolta di punti al metodo _NurbsCurve.ByPoints_.
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -18,7 +18,7 @@ pts = Point.ByCoordinates(1..30..#num_pts, s, 0);
 int_curve = NurbsCurve.ByPoints(pts);
 ```
 
-The generated curve intersects each of the input points, beginning and ending at the first and last point in the collection, respectively. An optional periodic parameter can be used to create a periodic curve which is closed. Dynamo will automatically fill in the missing segment, so a duplicate end point (identical to the start point) isn’t needed.
+La curva generata interseca ciascuno dei punti di input, iniziando e terminando rispettivamente nel primo e nell'ultimo punto della raccolta. È possibile utilizzare un parametro periodico facoltativo per creare una curva periodica chiusa. Dynamo inserirà automaticamente il segmento mancante, pertanto non è necessario un punto finale duplicato (identico al punto iniziale).
 
 ![](../images/8-2/4/Curves\_02.png)
 
@@ -34,9 +34,9 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
     false);
 ```
 
-### Control Points Curve
+### Curva con punti di controllo
 
-NurbsCurves are generated in much the same way, with input points represent the endpoints of a straight line segment, and a second parameter specifying the amount and type of smoothing the curve undergoes, called the degree.\* A curve with degree 1 has no smoothing; it is a polyline.
+Le NurbsCurve vengono generate in modo molto simile, con i punti di input che rappresentano i punti finali di un segmento di linea retta e un secondo parametro che specifica il livello e il tipo di levigatezza a cui è sottoposta la curva, denominati grado.\* Una curva di grado 1 non ha alcuna levigatezza; è una polilinea.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-A curve with degree 2 is smoothed such that the curve intersects and is tangent to the midpoint of the polyline segments:
+Una curva di grado 2 viene levigata in modo che si intersechi ed è tangente al punto medio dei segmenti della polilinea:
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dynamo supports NURBS (Non-uniform rational B-spline) curves up to degree 20, and the following script illustrates the effect increasing levels of smoothing has on the shape of a curve:
+Dynamo supporta curve NURBS (Non-Uniform Rational B-Spline) fino ad un massimo di 20 gradi. Nel seguente script è illustrato l'effetto che l'aumento dei livelli di levigatezza ha sulla forma di una curva:
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,9 +83,9 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-Note that you must have at least one more control point than the degree of the curve.
+Notare che è necessario disporre di almeno un altro punto di controllo rispetto al grado della curva.
 
-Another benefit of constructing curves by control vertices is the ability to maintain tangency between individual curve segments. This is done by extracting the direction between the last two control points, and continuing this direction with the first two control points of the following curve. The following example creates two separate NURBS curves which are nevertheless as smooth as one curve:
+Un altro vantaggio della costruzione delle curve tramite vertici di controllo è la possibilità di mantenere la tangenza tra singoli segmenti della curva. Per eseguire questa operazione, estrarre la direzione tra gli ultimi due punti di controllo e continuare in questa direzione con i primi due punti di controllo della curva seguente. Nel seguente esempio vengono create due curve NURBS separate, che sono tuttavia levigate come una curva:
 
 ![](../images/8-2/4/Curves\_06.png)
 
@@ -116,5 +116,5 @@ crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
 {% hint style="info" %}
-\*This is a very simplified description of NURBS curve geometry, for a more accurate and detailed discussion see Pottmann, et al, 2007, in the references.
+\*Questa è una descrizione molto semplificata della geometria della curva NURBS. Per una descrizione più accurata e dettagliata, vedere Pottmann, et al, 2007, nei riferimenti.
 {% endhint %}

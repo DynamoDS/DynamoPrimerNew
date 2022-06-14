@@ -1,40 +1,40 @@
-# What is a Dictionary
+# Che cos'è un dizionario?
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+Dynamo 2.0 introduce il concetto di separazione del tipo di dati del dizionario dal tipo di dati dell'elenco. Questa modifica può portare a modifiche significative al modo in cui si creano e si utilizzano i dati nei workflow. Prima della versione 2.0, i dizionari e gli elenchi venivano combinati come tipo di dati. In breve, gli elenchi erano in realtà dizionari con chiavi di numeri interi.
 
-### **What is a dictionary?**
+### **Che cos'è un dizionario?**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+Un dizionario è un tipo di dati composto da una raccolta di coppie chiave-valore, in cui ogni chiave è univoca in ogni raccolta. Un dizionario non ha un ordine e in pratica è possibile cercare elementi mediante una chiave anziché un valore di indice, come in un elenco. _In Dynamo 2.0, le chiavi possono essere solo stringhe._
 
-### **What is a list?**
+### **Che cos'è un elenco?**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+Un elenco è un tipo di dati composto da una raccolta di valori ordinati. In Dynamo, gli elenchi utilizzano numeri interi come valori di indice.
 
-### **Why was this change made and why should I care?**
+### **Perché questo aspetto è stato cambiato e perché dovrebbe essere importante?**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+La separazione dei dizionari dagli elenchi introduce i dizionari come cittadino di prima classe che è possibile utilizzare per memorizzare e cercare i valori in modo semplice e rapido, senza dover ricordare un valore di indice o mantenere una struttura di elenchi rigorosa durante tutto il workflow. Durante i test degli utenti, è stata riscontrata una riduzione significativa della dimensione del grafico quando sono stati utilizzati dizionari anziché diversi nodi `GetItemAtIndex`.
 
-### **What are the changes?**
+### **Quali sono i cambiamenti?**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* Sono state apportate modifiche alla _sintassi_ che consentono di modificare la modalità di inizializzazione e utilizzo dei dizionari e degli elenchi nei blocchi di codice.
+   * I dizionari utilizzano la seguente sintassi: `{key:value}`.
+   * Gli elenchi utilizzano la seguente sintassi: `[value,value,value]`.
+* Nella libreria sono stati introdotti _nuovi nodi_ per aiutare a creare, modificare o sottoporre a query i dizionari.
+* Gli elenchi creati nei blocchi di codice v1.x verranno migrati automaticamente al caricamento dello script nella nuova sintassi dell'elenco che utilizza parentesi quadre `[ ]` anziché parentesi graffe `{ }` \\.
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **Perché dovrebbe essere importante? Per cosa si utilizzerebbero questi elementi?**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+Nel settore scientifico dei computer, i dizionari, come gli elenchi, sono raccolte di oggetti. Sebbene gli elenchi siano in un ordine specifico, i dizionari sono raccolte _non ordinate_. Non si basano su numeri sequenziali (indici), ma utilizzano _chiavi._
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+Nella seguente immagine viene illustrato un caso di utilizzo potenziale di un dizionario. Spesso i dizionari vengono utilizzati per correlare due dati che potrebbero non avere una correlazione diretta. In questo caso, si sta collegando la versione spagnola di una parola alla versione inglese per una successiva ricerca.
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. Creare un dizionario per correlare i due dati.
+> 2. Ottenere il valore con la chiave specificata.

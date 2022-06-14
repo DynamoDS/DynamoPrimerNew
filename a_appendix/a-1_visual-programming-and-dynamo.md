@@ -1,60 +1,60 @@
-# Visual Programming and Dynamo
+# Programmazione visiva e Dynamo
 
-#### What is Visual Programming? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
+#### Cos'è la programmazione visiva? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
-Designing frequently involves establishing visual, systemic, or geometric relationships between the parts of a design. More times than not, these relationships are developed by workflows that gets us from concept to result by way of rules. Perhaps without knowing it, we are working algorithmically - defining a step-by-step set of actions that follow a basic logic of input, processing, and output. Programming allows us to continue to work this way but by formalizing our algorithms.
+La progettazione spesso implica la definizione di relazioni visive, sistemiche o geometriche tra le parti di un progetto. Per la maggior parte delle volte, queste relazioni vengono sviluppate da workflow che consentono di passare dal concetto al risultato tramite regole. Forse senza saperlo, si lavora in modo algoritmico: definendo un insieme di azioni passo-passo che seguono una logica di base di input, elaborazione e output. La programmazione consente di continuare a lavorare in questo modo, ma formalizzando gli algoritmi.
 
-#### Algorithms in Hand <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
+#### Algoritmi alla mano <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
-While offering some powerful opportunities, the term **Algorithm** can carry some misconceptions with it. Algorithms can generate unexpected, wild, or cool things, but they are not magic. In fact, they are pretty plain, in and of themselves. Let's use a tangible example like an origami crane. We start with a square piece of paper (input), follow a series of folding steps (processing actions), and result in a crane (output).
+Sebbene offra alcune potenti opportunità, il termine **algoritmo** può portare con sé alcune errate concezioni. Gli algoritmi possono generare cose impreviste, incontrollate o fantastiche, ma non sono magici. In realtà sono piuttosto semplici, di per sé. Verrà utilizzato un esempio tangibile come una gru origami. Si inizierà con un foglio di carta quadrato (input), si seguirà una serie di passaggi di piegatura (azioni di elaborazione) e si genererà una gru (output).
 
-![Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![Gru origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
 
-So where is the Algorithm? It is the abstract set of steps, which we can represent in a couple of ways - either textually or graphically.
+Quindi dov'è l'algoritmo? Si tratta di una serie di passaggi astratti, che possono essere rappresentati in due modi: dal punto di vista testuale o grafico.
 
-**Textual Instructions:**
+**Istruzioni testuali:**
 
-1. Start with a square piece of paper, colored side up. Fold in half and open. Then fold in half the other way.
-2. Turn the paper over to the white side. Fold the paper in half, crease well and open, and then fold again in the other direction.
-3. Using the creases you have made, Bring the top 3 corners of the model down to the bottom corner. Flatten model.
-4. Fold top triangular flaps into the center and unfold.
-5. Fold top of model downwards, crease well and unfold.
-6. Open the uppermost flap of the model, bringing it upwards and pressing the sides of the model inwards at the same time. Flatten down, creasing well.
-7. Turn model over and repeat Steps 4-6 on the other side.
-8. Fold top flaps into the center.
-9. Repeat on other side.
-10. Fold both ‘legs’ of model up, crease very well, then unfold.
-11. Inside Reverse Fold the “legs” along the creases you just made.
-12. Inside Reverse Fold one side to make a head, then fold down the wings.
-13. You now have a crane.
+1. Iniziare con un foglio di carta quadrato, colorato su lato verso l'alto. Ripiegare a metà e aprire. Quindi, ripiegare a metà sull'altro lato.
+2. Capovolgere il foglio sul lato bianco. Ripiegare il foglio a metà, piegare bene e aprire, quindi ripiegare nuovamente nell'altra direzione.
+3. Utilizzando le pieghe create, portare i 3 angoli superiori del modello nell'angolo inferiore. Appiattire il modello.
+4. Ripiegare i lembi triangolari superiori al centro e spiegare.
+5. Ripiegare la parte superiore del modello verso il basso, piegare bene e spiegare.
+6. Aprire il lembo più alto del modello, riportandolo verso l'alto e premendo contemporaneamente i lati del modello verso l'interno. Appiattire, piegando bene.
+7. Capovolgere il modello e ripetere i passaggi 4-6 sull'altro lato.
+8. Ripiegare i lembi superiori al centro.
+9. Ripetere l'operazione sull'altro lato.
+10. Ripiegare entrambe le "gambe" del modello, piegare molto bene, quindi spiegare.
+11. Ripiegare le "gambe" rovesciandole all'interno lungo le pieghe appena create.
+12. Ripiegare un lato rovesciandolo all'interno per creare una testa, quindi ripiegare le ali.
+13. Ora è stata realizzata una gru.
 
-**Graphical Instructions:**
+**Istruzioni grafiche:**
 
-![Needs Update- Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Aggiornamento necessario - Gru origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
-#### Programming Defined <a href="#programming-defined" id="programming-defined"></a>
+#### Programmazione definita <a href="#programming-defined" id="programming-defined"></a>
 
-Using either of these sets of instructions should result in a crane, and if you followed along yourself, you've applied an algorithm. The only difference is the way in which we read the formalization of that set of instructions and that leads us to **Programming**. Programming, frequently shortened from _Computer Programming_, is the act of formalizing the processing of a series of actions into an executable program. If we turned the above instructions for a creating crane into a format our computer can read and execute, we are Programming.
+L'utilizzo di uno di questi insiemi di istruzioni dovrebbe creare una gru e, se si è seguita la procedura, è stato applicato un algoritmo. L'unica differenza è il modo in cui si legge la formalizzazione di quell'insieme di istruzioni e che porta alla **programmazione**. La programmazione, spesso abbreviata da _programmazione informatica_, è l'atto di formalizzare l'elaborazione di una serie di azioni in un programma eseguibile. Se le istruzioni precedenti per creare una gru sono state convertite in un formato che il computer può leggere ed eseguire, si sta parlando di programmazione.
 
-The key to and first hurdle we will find in Programming, is that we have to rely on some form of abstraction to communicate effectively with our computer. That takes the form of any number of Programming Languages, such as JavaScript, Python, or C. If we can write out a repeatable set of instructions, like for the origami crane, we only need to translate it for the computer. We are on our way to having the computer be able to make a crane or even a multitude of different cranes where each one varies slightly. This is the power of Programming - the computer will repeatedly execute whatever task, or set of tasks, we assign to it, without delay and without human error.
+La chiave al primo ostacolo che si troverà nella programmazione è che occorre ricorrere a qualche forma di astrazione per comunicare in modo efficace con il computer. Questo prende la forma di un numero qualsiasi di linguaggi di programmazione, come JavaScript, Python o C. Se si può scrivere un insieme di istruzioni ripetibili, come per la gru origami, occorre solo convertirlo per il computer. Si è sulla buona strada per avere un computer in grado di creare una gru o persino una moltitudine di gru differenti, dove ciascuna di esse varia leggermente. Questo è il potere della programmazione: il computer eseguirà ripetutamente qualsiasi attività, o serie di attività, assegnata, senza ritardi e senza errori umani.
 
-**Visual Programming Defined**
+**Programmazione visiva definita**
 
-> Download the example file by clicking on the link below.
+> Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
-> A full list of example files can be found in the Appendix.
+> Un elenco completo di file di esempio è disponibile nell'Appendice.
 
 {% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
 
-If you were tasked with writing instructions for folding an origami crane, how would you go about it? Would you make them with graphics, text, or some combination of the two?
+Se ci fosse stato assegnato il compito di scrivere istruzioni per ripiegare una gru origami, come si potrebbe procedere? Utilizzando la grafica, il testo o una combinazione dei due metodi?
 
-If your answer contained graphics, then **Visual Programming** is definitely for you. The process is essentially the same for both Programming and Visual Programming. They utilize the same framework of formalization; however, we define the instructions and relationships of our program through a graphical (or "Visual") user interface. Instead of typing text bound by syntax, we connect pre-packaged nodes together. Here's a comparison of the same algorithm - "draw a circle through a point" - programmed with nodes versus code:
+Se la risposta è la grafica, allora la **programmazione visiva** è sicuramente la soluzione ideale. Il processo è essenzialmente lo stesso per la programmazione e la programmazione visiva. Utilizzano la stessa struttura di formalizzazione; tuttavia, si definiscono le istruzioni e le relazioni del programma attraverso un'interfaccia utente grafica (o "visiva"). Anziché digitare il testo associato tramite sintassi, vengono collegati tra loro i nodi preconfezionati. Di seguito è riportato un confronto dello stesso algoritmo - "disegnare un cerchio attraverso un punto" - programmato con nodi e codice:
 
-**Visual Program:**
+**Programma visivo:**
 
 ![](<./images/a-1/visualProgramming (2).png>)
 
-**Textual Program:**
+**Programma testuale:**
 
 ```
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
@@ -65,8 +65,8 @@ dist = myPoint.DistanceTo(attractorPoint);
 myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 ```
 
-The results of our algorithm:
+I risultati del nostro algoritmo:
 
 ![](<./images/a-1/visualProgramming (1).png>)
 
-The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.
+La caratteristica visiva della programmazione in questo modo abbatte la barriera iniziale e di frequente parla con i progettisti. Dynamo rientra nel paradigma della programmazione visiva, ma, come si vedrà più avanti, è possibile comunque utilizzare anche la programmazione testuale nell'applicazione.

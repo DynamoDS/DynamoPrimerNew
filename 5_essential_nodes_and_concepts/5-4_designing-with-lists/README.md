@@ -1,5 +1,5 @@
-# Designing with Lists
+# Progettazione con elenchi
 
-Lists are the way we organize data. On your computer's operating system, you have files and folders. In Dynamo, we can regard these as items and lists, respectively. Like your operating system, there are many ways to create, modify, and query data. In this chapter, we'll break down how lists are managed in Dynamo.
+Gli elenchi rappresentano il modo in cui vengono organizzati i dati. Nel sistema operativo del computer, sono presenti file e cartelle. In Dynamo, è possibile considerare questi elementi rispettivamente come voci ed elenchi. Analogamente al sistema operativo in uso, esistono molti modi per creare, modificare e sottoporre a query i dati. In questo capitolo, verrà descritto come vengono gestiti gli elenchi in Dynamo.
 
 ![](<../images/5-4/designing with lists.jpg>)

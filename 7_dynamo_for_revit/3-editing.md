@@ -1,94 +1,94 @@
-# Editing
+# Modifica
 
-A powerful feature of Dynamo is that you can edit parameters on a parametric level. For example, a generative algorithm or the results of a simulation can be used to drive the parameters of an array of elements. This way, a set of instances from the same family can have custom properties in your Revit project.
+Una potente funzionalità di Dynamo è la possibilità di modificare i parametri su un livello parametrico. Ad esempio, un algoritmo generativo o i risultati di una simulazione possono essere utilizzati per determinare i parametri di una serie di elementi. In questo modo, un gruppo di istanze della stessa famiglia può avere proprietà personalizzate nel progetto di Revit.
 
-### Type and Instance Parameters
+### Parametri di istanza e tipo
 
 ![Exercise](<./images/3/32 (2).jpg>)
 
-> 1. Instance parameters define the aperture of the panels on the roof surface, ranging from an Aperture Ratio of 0.1 to 0.4.
-> 2. Type-based parameters are applied to every element on the surface because they are the same family type. The material of each panel, for example, can be driven by a type-based parameter.
+> 1. I parametri di istanza definiscono l'apertura dei pannelli sulla superficie del tetto, che prevedono un rapporto di apertura compreso tra 0.1 e 0.4.
+> 2. I parametri basati sul tipo vengono applicati ad ogni elemento della superficie in quanto si tratta dello stesso tipo di famiglia. Il materiale di ciascun pannello, ad esempio, può essere determinato da un parametro basato sul tipo.
 
-![Exercise](./images/3/params.jpg)
+![Esercizio](./images/3/params.jpg)
 
-> 1. If you've set up a Revit family before, remember that you have to assign a parameter type (string, number, dimension, etc.) Be sure to use the correct data type when assigning parameters from Dynamo.
-> 2. You can also use Dynamo in combination with parametric constraints defined in a Revit family's properties.
+> 1. Se in precedenza è stata configurata una famiglia di Revit, ricordarsi che è necessario assegnare un tipo di parametro (stringa, numero, quota e così via). Assicurarsi di utilizzare il tipo di dati corretto durante l'assegnazione di parametri da Dynamo.
+> 2. È inoltre possibile utilizzare Dynamo in combinazione con i vincoli parametrici definiti nelle proprietà di una famiglia di Revit.
 
-As a quick review of parameters in Revit, we recall that there are type parameters and instance parameters. Both can be edited from Dynamo, but we'll work with instance parameters in the exercise below.
+Come rapido ripasso dei parametri in Revit, si ricorda che sono presenti parametri di tipo e di istanza. Entrambi possono essere modificati da Dynamo, ma nell'esercizio riportato di seguito verranno utilizzati i parametri di istanza.
 
 {% hint style="info" %}
-As you discover the wide-reaching application of editing parameters, you may want to edit a large quantity of elements in Revit with Dynamo. This can be a _computationally expensive_ operation, meaning that it can be slow. If you're editing a large number of elements, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
+Mentre si rileva l'applicazione estesa della modifica di parametri, potrebbe essere necessario modificare una grande quantità di elementi in Revit con Dynamo. Questa operazione può essere _costosa dal punto di vista computazionale_, ovvero può risultare lenta. Se si modifica un numero elevato di elementi, è possibile utilizzare la funzionalità Congela del nodo per interrompere l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) nel capitolo sui solidi.
 {% endhint %}
 
-### Units
+### Unità
 
-As of version 0.8, Dynamo is fundamentally unitless. This allows Dynamo to remain an abstract visual programming environment. Dynamo nodes that interact with Revit dimensions will reference the Revit project's units. For example, if you are setting a length parameter in Revit from Dynamo, the number in Dynamo for the value will correspond to the default units in the Revit project. The exercise below works in meters.
+A partire dalla versione 0.8, Dynamo è fondamentalmente senza unità. Ciò consente a Dynamo di rimanere un ambiente di programmazione visiva astratto. I nodi di Dynamo che interagiscono con le quote di Revit faranno riferimento alle unità del progetto di Revit. Ad esempio, se si imposta un parametro della lunghezza in Revit da Dynamo, il numero in Dynamo per il valore corrisponderà alle unità di default nel progetto di Revit. L'esercizio riportato di seguito è basato sui metri.
 
-For a quick conversion of units, use the _"Convert Between Units"_ node. This is a handy tool for converting Length, Area, and Volume units on the fly.
+Per una conversione rapida delle unità, utilizzare il nodo _"Convert Between Units"_. Questo è un comodo strumento per la conversione delle unità di lunghezza, area e volume al volo.
 
 ![](<./images/3/editing - units.jpg>)
 
-## Exercise
+## Esercizio
 
-> Download the example file by clicking on the link below.
+> Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
-> A full list of example files can be found in the Appendix.
+> Un elenco completo di file di esempio è disponibile nell'Appendice.
 
 {% file src="./datasets/3/Revit-Editing.zip" %}
 
 {% hint style="warning" %}
-The exercise below works in meters.
+L'esercizio riportato di seguito è basato sui metri.
 {% endhint %}
 
-This exercise focuses on editing Revit elements without performing geometric operation in Dynamo. We're not importing Dynamo geometry here, just editing parameters in a Revit project. This exercise is basic, and to the more advanced Revit users, notice that these are instance parameters of a mass, but the same logic can be applied to an array of elements to customize on a large scale. This is all done with the "Element.SetParameterByName" node.
+Questo esercizio si concentra sulla modifica degli elementi di Revit senza eseguire un'operazione geometrica in Dynamo. Qui non si sta importando la geometria di Dynamo, ma si stanno modificando solo i parametri in un progetto di Revit. Questo è un esercizio di base e, per gli utenti più avanzati di Revit, notare che si tratta di parametri di istanza di una massa, ma la stessa logica può essere applicata ad una serie di elementi per la personalizzazione su larga scala. Tutto questo viene eseguito con il nodo "Element.SetParameterByName".
 
-### Editing Building Mass Parameters
+### Modifica dei parametri di massa dell'edificio
 
-Begin with the example Revit file for this section. We've removed the structural elements and adaptive trusses from the previous section. In this exercise, we will focus on a parametric rig in Revit and manipulating in Dynamo.
+Iniziare con il file di esempio di Revit per questa sezione. Sono stati rimossi gli elementi strutturali e le travi reticolari adattive della sezione precedente. In questo esercizio, ci si concentrerà su una piattaforma petrolifera parametrica in Revit e sulla manipolazione in Dynamo.
 
-Selecting the building in Mass in Revit, we see an array of instance parameters in the properties panel.
+Selezionando la massa dell'edificio in Revit, si vedono una serie di parametri di istanza nel gruppo Proprietà.
 
 ![](<./images/3/editing - exercise 01.jpg>)
 
-In Dynamo, we can retrieve the parameters by selecting the targeting element.
+In Dynamo, è possibile recuperare i parametri selezionando l'elemento di destinazione.
 
 ![](<./images/3/editing - exercise 02.jpg>)
 
-> 1. Select the building mass with the _"Select Model Element"_ node.
-> 2. We can query all of the parameters of this mass with the _"Element.Parameters"_ node. This includes type and instance parameters.
+> 1. Selezionare la massa dell'edificio con il nodo _Select Model Element_.
+> 2. È possibile eseguire una query su tutti i parametri di questa massa con il nodo _"Element.Parameters"_. Ciò include i parametri di tipo e istanza.
 
 ![](<./images/3/editing - exercise 03.jpg>)
 
-> 1. Reference the _Element. Parameters_ node to find target parameters. Or, we can view the properties panel from the previous step to choose which parameter names we want to edit. In this case, we are looking for the parameters which affect the large geometric moves on the building mass.
-> 2. We will make changes to the Revit element using the _Element.SetParameterByName_ node
-> 3. Use C\_ode Block to\_ define a list of parameters, with quotes around each item to denote a string. We can also use the List.Create node with a series of _"string"_ nodes connected to multiple inputs but Code block is faster and easier. Make sure that the string matches the exact name in Revit, case-specific: `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
+> 1. Fare riferimento al nodo _Element. Parameters_ per trovare i parametri di destinazione. In alternativa, è possibile visualizzare il gruppo Proprietà del passaggio precedente per scegliere i nomi dei parametri da modificare. In questo caso, si stanno cercando i parametri che influenzano i grandi movimenti geometrici sulla massa dell'edificio.
+> 2. Verranno apportate modifiche all'elemento di Revit utilizzando il nodo _Element.SetParameterByName_.
+> 3. Utilizzare C\_ode Block per\_ definire un elenco di parametri, con virgolette intorno ad ogni elemento per indicare una stringa. È inoltre possibile utilizzare il nodo List.Create con una serie di nodi _string_ collegati a più input, ma Code Block è più veloce e più semplice. Assicurarsi che la stringa corrisponda al nome esatto in Revit, specifico per le maiuscole e minuscole: `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
 ![](<./images/3/editing - exercise 04.jpg>)
 
-> 1. We also want to designate values for each parameter. Add six _"integer sliders"_ to the canvas and rename to the corresponding parameter in the list. Also, set the values of each slider to the image above. In order from top-to-bottom: 62,92,25,22,8,12
-> 2. Define another _code block_ with a list of the same length as the parameter names. In this case, we name variables (without quotes) which create inputs for the _code block._ Plug the _sliders_ into each respective input: `{bw,bl,bh,ao,io,lu};`
-> 3. Connect the Code Block _to the "Element.SetParameterByName"\*_ value input. With run automatically checked, we will automatically see results.
+> 1. Si desidera inoltre designare i valori per ogni parametro. Aggiungere sei _"dispositivi di scorrimento di numeri interi"_ all'area di disegno e rinominarli in base al parametro corrispondente nell'elenco. Inoltre, impostare i valori di ciascun dispositivo di scorrimento sull'immagine riportata sopra. In ordine dall'alto verso il basso: 62, 92, 25, 22, 8, 12.
+> 2. Definire un altro _Code Block_ con un elenco della stessa lunghezza dei nomi dei parametri. In questo caso, vengono denominate variabili (senza virgolette) che creano input per _Code Block._ Collegare i _dispositivi di scorrimento_ a ciascun rispettivo input: `{bw,bl,bh,ao,io,lu};`.
+> 3. Collegare Code Block all'input del valore _Element.SetParameterByName\*_. Con l'opzione Automatico selezionata, i risultati verranno visualizzati automaticamente.
 
 {% hint style="warning" %}
-\*This demonstration works with instance parameters, but not type parameters.
+\*Questa dimostrazione funziona con i parametri di istanza, ma non con i parametri di tipo.
 {% endhint %}
 
-Just as in Revit, many of these parameters are dependent on each other. There are of course combinations where the geometry may break. We can remedy this issue with defined formulas in the parameter properties, or we can setup a similar logic with math operations in Dynamo (this is an additional challenge if you'd like to expand on the exercise).
+Come in Revit, molti di questi parametri dipendono l'uno dall'altro. Ci sono naturalmente delle combinazioni in cui la geometria può interrompersi. È possibile risolvere questo problema con formule definite nelle proprietà dei parametri oppure è possibile configurare una logica simile con operazioni matematiche in Dynamo (questa è una difficoltà aggiuntiva se si desidera espandere l'esercizio).
 
 ![](<./images/3/editing - exercise 05.jpg>)
 
-> 1. This combination gives a funky new design to the building mass: 100, 92, 100, 25, 13, 51
+> 1. Questa combinazione conferisce una nuova bizzarra progettazione alla massa dell'edificio: 100, 92, 100, 25, 13, 51.
 
-### Editing Facade Parameters
+### Modifica dei parametri delle facciate
 
-Next, let's look at how we can edit the facade using a similar process.
+Si vedrà ora come modificare la facciata utilizzando un processo simile.
 
 ![](<./images/3/editing - exercise 06.jpg>)
 
-> 1. Copy the graph and focus on the facade glazing which will house the truss system. We isolate four parameters in this case: `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
-> 2. Additionally, we create _number sliders_ and rename to the appropriate parameters. The first three sliders from top-to-bottom should be remapped to a domain of \[0,10], while the final slider, _"Facade Bend Location"_, should be remapped to a domain of \[0,1]. These values, from top-to-bottom should start with these values (although they're arbitrary): 2.68, 2.64, 2.29, 0.5
-> 3. Define a new Code block and connect the sliders: `{so,mo,no,fbl};`
+> 1. Copiare il grafico e concentrarsi sulla vetrata della facciata che ospiterà il sistema di travi reticolari. In questo caso, vengono isolati quattro parametri: `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`.
+> 2. Inoltre, creare _dispositivi di scorrimento numerici_ e rinominarli in base ai parametri appropriati. I primi tre dispositivi di scorrimento dall'alto verso il basso devono essere riassociati ad un dominio di \[0,10], mentre il dispositivo di scorrimento finale _Facade Bend Location_ deve essere riassociato ad un dominio di \[0,1]. Questi valori, dall'alto verso il basso, dovrebbero iniziare con questi valori (sebbene siano arbitrari): 2.68, 2.64, 2.29, 0.5.
+> 3. Definire un nuovo Code Block e collegare i dispositivi di scorrimento: `{so,mo,no,fbl};`.
 
 ![](<./images/3/editing - exercise 07.jpg>)
 
-> 1. By changing the _sliders_ in this part of the graph, we can make the facade glazing much more substantial: 9.98, 10.0, 9.71 ,0.31
+> 1. Modificando i _dispositivi di scorrimento_ in questa parte del grafico, è possibile ingrandire di molto la vetrata della facciata: 9.98, 10.0, 9.71 ,0.31.

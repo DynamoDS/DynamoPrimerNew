@@ -1,113 +1,113 @@
-# Strings
+# Stringhe
 
-### What is a String
+### Definizione di una stringa
 
-Formally, a **String** is a sequence of characters representing a literal constant or some type of variable. Informally, a string is programming lingo for text. We've worked with numbers, both integers and decimal numbers, to drive parameters and we can do the same with text.
+Formalmente, una **stringa** è una sequenza di caratteri che rappresenta una costante letterale o un tipo di variabile. Informalmente, una stringa sta programmando un linguaggio per il testo. Sono stati utilizzati i numeri, sia interi che decimali, per determinare i parametri ed è possibile fare lo stesso con il testo.
 
-### Creating Strings
+### Creazione di stringhe
 
-Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
+Le stringhe possono essere utilizzate per una vasta gamma di applicazioni, tra cui la definizione di parametri personalizzati, l'annotazione di gruppi di documentazione e l'analisi tramite set di dati basati su testo. Il nodo String si trova in Core > Input Category.
 
-The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
+I nodi di esempio riportati sopra sono stringhe. Un numero può essere rappresentato come una stringa, una lettera o un'intera matrice di testo.
 
 ![](<../images/5-3/4/strings - creating strings.jpg>)
 
-## Exercise
+## Esercizio
 
-> Download the example file by clicking on the link below.
+> Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
-> A full list of example files can be found in the Appendix.
+> Un elenco completo di file di esempio è disponibile nell'Appendice.
 
 {% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-### Querying Strings
+### Esecuzione di una query sulle stringhe
 
-You can parse through large amounts of data quickly by querying strings. We'll talk about some basic operations which can speed up a workflow and help for software interoperability.
+È possibile analizzare una grande quantità di dati rapidamente eseguendo una query sulle stringhe. Saranno descritte alcune operazioni di base che possono accelerare un workflow e aiutare ad ottenere l'interoperabilità del software.
 
-The image below considers a string of data coming from an external spreadsheet. The string represents the vertices of a rectangle in the XY-Plane. Let's break down some string split operations in miniature exercise:
+Nell'immagine riportata di seguito è mostrata una stringa di dati proveniente da un foglio di calcolo esterno. La stringa rappresenta i vertici di un rettangolo nel piano XY. Si eseguiranno alcune operazioni di divisione delle stringhe nel mini-esercizio:
 
 ![](<../images/5-3/4/strings - querying strings 01.jpg>)
 
-> 1. The ";" separator splits each vertex of the rectangle. This creates a list with 3 items for each vertex.
+> 1. Il separatore ";" divide ogni vertice del rettangolo. In questo modo viene creato un elenco con 3 voci per ogni vertice.
 
 ![](<../images/5-3/4/strings - querying strings 02.jpg>)
 
-> 1. By hitting the "_+_" in the middle of the Node, we create new separator.
-> 2. Add a "_,_" string to the canvas and plug in to the new separator input.
-> 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
+> 1. Premendo il pulsante "_+_" al centro del nodo, si crea un nuovo separatore.
+> 2. Aggiungere una stringa "_,_" all'area di disegno e collegarla all'input del nuovo separatore.
+> 3. Il risultato è ora un elenco di dieci voci. Il nodo viene prima diviso in base a _separator0_, quindi in base a _separator1_.
 
-While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a number. This is done with the **String.ToNumber** Node
+Sebbene possa sembrare che l'elenco di voci riportato sopra contenga numeri, tali elementi vengono comunque considerati come singole stringhe in Dynamo. Per creare punti, è necessario convertire il tipo di dati da una stringa in un numero. Questa operazione viene eseguita con il nodo **String.ToNumber**.
 
 ![](<../images/5-3/4/strings - querying strings 03.jpg>)
 
-> 1. This Node is straightforward. Plug the **String.Split** results into the input. The output doesn't look different, but the data type is now a _number_ instead of a _string_.
+> 1. Questo nodo è semplice. Collegare i risultati di **String.Split** all'input. L'output non risulta diverso, ma il tipo di dati è ora un _numero_ anziché una _stringa_.
 
-With some basic additional operations, we now have a triangle drawn at the origin based on the original string input.
+Con alcune operazioni aggiuntive di base, ora si dispone di un triangolo disegnato in corrispondenza dell'origine in base all'input di stringa originale.
 
 ![](<../images/5-3/4/strings - querying strings 04.jpg>)
 
-### Manipulating Strings
+### Manipolazione di stringhe
 
-Since a string is a generic text object, they host a wide range of applications. Let's take a look at some of the major actions in the Core>String Category in Dynamo:
+Poiché una stringa è un oggetto di testo generico, ospita un'ampia gamma di applicazioni. Si esamineranno alcune delle principali azioni in Core > String Category in Dynamo:
 
-This is a method of merging two strings together in order. This takes each literal string in a list and creates one merged string.
+Questo metodo consente di unire insieme due stringhe in ordine. In questo modo, si acquisisce ogni stringa letterale in un elenco e si crea una stringa unita.
 
-The following represents the concatenation of three strings:
+Nell'immagine seguente è rappresentata la concatenazione di tre stringhe:
 
 ![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
 
-> 1. Add or subtract strings to the concatenation by clicking the +/- buttons in the center of the Node.
-> 2. The output gives one concatenated string, with spaces and punctuation included.
+> 1. Aggiungere o sottrarre stringhe alla concatenazione facendo clic sui pulsanti +/- al centro del nodo.
+> 2. L'output fornisce una stringa concatenata, con spazi e segni di punteggiatura inclusi.
 
-The join method is very similar to concatenate, except it has an added layer of punctuation.
+Il metodo di unione è molto simile a quello della concatenazione, tranne per il fatto che presenta un livello aggiunto di punteggiatura.
 
-If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the **String.Join** node in order to create a similar data structure.
+Se è stato utilizzato Excel, è possibile che sia stato notato un file CSV. Questo è l'acronimo di Comma Separated Values, ossia valori separati da virgola. Per creare una struttura dei dati simile, si potrebbe utilizzare una virgola (o in questo caso, due trattini) come separatore con il nodo **String.Join**.
 
-The following image represents the joining of two strings:
+Nell'immagine seguente è rappresentata l'unione di due stringhe:
 
 ![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
 
-> 1. The separator input allows one to create a string which divides the joined strings.
+> 1. L'input separator consente di creare una stringa che divide le stringhe unite.
 
-### Working with Strings
+### Utilizzo di stringhe
 
-In this exercise, we're going to use methods of querying and manipulating strings to deconstruct the final stanza of Robert Frost's [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Not the most practical application, but it will help us to grasp conceptual string actions as we apply them to legible lines of rhythm and rhyme.
+In questo esercizio, si utilizzeranno i metodi di esecuzione delle query e manipolazione delle stringhe per analizzare l'ultima strofa di [Fermandosi accanto a un bosco in una sera di neve](http://www.poetryfoundation.org/poem/171621) di Robert Frost. Non è l'applicazione più pratica, ma aiuterà a cogliere le azioni concettuali delle stringhe mentre vengono applicate alle righe leggibili di ritmo e rima.
 
-Let's begin with a basic string split of the stanza. We first notice that the writing is formatted based on commas. We'll use this format to separate each line into individual items.
+Iniziare con una stringa di base divisa della strofa. Si noti innanzitutto che la scrittura è formattata in base alle virgole. Questo formato verrà utilizzato per separare ogni riga in singoli elementi.
 
 ![](<../images/5-3/4/strings - working with strings 01.jpg>)
 
-> 1. The base string is pasted into a **String** Node.
-> 2. Another **String** Node is used to denote the separator. In this case, we're using a comma.
-> 3. A **String.Split** Node is added to the canvas and connected to the two strings.
-> 4. The output shows that we've now separated the lines into individual elements.
+> 1. La stringa di base viene incollata in un nodo **String**.
+> 2. Un altro nodo **String** viene utilizzato per indicare il separatore. In questo caso, si utilizza una virgola.
+> 3. Un nodo **String.Split** viene aggiunto all'area di disegno e collegato alle due stringhe.
+> 4. L'output ora mostra che le righe sono state separate in singoli elementi.
 
-Now, let's get to the good part of the poem: the last two lines. The original stanza was one item of data. We separated this data into individual items in the first step. Now we need to do a search for the text we're looking for. And while we _can_ do this by selecting the last two items of the list, if this were an entire book, we wouldn't want to read through everything and manually isolate the elements.
+Ora, viene la parte interessante della poesia: le ultime due righe. La strofa originale era un elemento di dati. Questi dati sono stati separati in singoli elementi nel primo passaggio. Ora occorre cercare il testo in questione. E sebbene sia _possibile_ farlo selezionando le ultime due voci dell'elenco, se si trattasse di un intero libro, non si vorrebbe leggere tutto e isolare manualmente gli elementi.
 
 ![](<../images/5-3/4/strings - working with strings 02.jpg>)
 
-> 1. Instead of manually searching, we use a **String.Contains** Node to perform a search for a set of characters. This is the similar to doing the "Find" command in a word processor. In this case, we get a return of "true" or "false" if that substring is found within the item.
-> 2. In the _searchFor_ input, we define a substring that we're looking for within the stanza. Let's use a **String** Node with the text "And miles".
-> 3. The output gives us a list of falses and trues. We'll use this boolean logic to filter the elements in the next step.
+> 1. Invece di cercare manualmente, utilizzare un nodo **String.Contains** per eseguire una ricerca di un set di caratteri. Questa operazione è simile all'esecuzione del comando "Trova" in un elaboratore di testi. In questo caso, se all'interno della voce viene trovata una sottostringa, viene restituito "true" o "false".
+> 2. Nell'input _searchFor_, definire una sottostringa che si sta cercando all'interno della strofa. Utilizzare un nodo **String** con il testo "And miles".
+> 3. L'output fornisce un elenco di false e true. Questa logica booleana verrà utilizzata per filtrare gli elementi nel passaggio successivo.
 
 ![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
 
-> 1. **List.FilterByBoolMask** is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
-> 2. Our output from the "in" is as expected, giving us the final two lines of the stanza.
+> 1. **List.FilterByBoolMask** è il nodo che si desidera utilizzare per escludere false e true. L'output "in" restituisce le istruzioni con un input "mask" di "true", mentre l'output "out" restituisce quelle che sono "false".
+> 2. L'output di "in" è come previsto e fornisce le due righe finali della strofa.
 
-Now, we want to drive home the repetition of the stanza by merging the two lines together. When viewing the output of the previous step, we notice that there are two items in the list:
+Ora, si desidera enfatizzare la ripetizione della strofa unendo insieme le due righe. Quando si visualizza l'output del passaggio precedente, si noterà che nell'elenco sono presenti due voci:
 
 ![](<../images/5-3/4/strings - working with strings 04.jpg>)
 
-> 1. Using two **List.GetItemAtIndex** Nodes, we can isolate the items using the values of 0 and 1 as the index input.
-> 2. The output for each node gives us, in order, the final two lines.
+> 1. Utilizzando due nodi **List.GetItemAtIndex**, è possibile isolare le voci utilizzando i valori di 0 e 1 come l'input index.
+> 2. L'output per ogni nodo fornisce, in ordine, le due righe finali.
 
-To merge these two items into one, we use the **String.Join** Node:
+Per unire questi due voci in una, utilizzare il nodo **String.Join**:
 
 ![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
 
-> 1. After adding the **String.Join** Node, we notice that we need a separator.
-> 2. To create the separator, we add a **String** Node to the canvas and type in a comma.
-> 3. The final output has merged the last two items into one.
+> 1. Dopo aver aggiunto il nodo **String.Join**, si noterà che è necessario un separatore.
+> 2. Per creare il separatore, aggiungere un nodo **String** all'area di disegno e digitare una virgola.
+> 3. L'output finale ha unito le ultime due voci in un unico elemento.
 
-This may seem like a lot of work to isolate the last two lines; and it's true, string operations often require some up front work. But they are scalable, and they can be applied to large datasets with relative ease. If you are working parametrically with spreadsheets and interoperability, be sure to keep string operations in mind.
+Può sembrare complesso isolare le ultime due righe ed è vero, perché le operazioni di stringa spesso richiedono un lavoro iniziale. Ma sono scalabili e possono essere applicate a set di dati di grandi dimensioni con relativa facilità. Se si lavora in modo parametrico con fogli di calcolo e interoperabilità, assicurarsi di tenere a mente le operazioni di stringa.

@@ -1,46 +1,46 @@
-# Primer User Guide, Dynamo Community & Platform
+# Guida introduttiva, comunità e piattaforma di Dynamo
 
-This Primer includes chapters developed with Mode Lab. These chapters focus on the essentials you will need to get up and running developing your own visual programs with Dynamo and key insights on how to take Dynamo further.&#x20;
+Questa guida introduttiva include capitoli sviluppati con Mode Lab. Questi capitoli sono incentrati sugli elementi essenziali necessari per imparare a sviluppare i propri programmi visivi con Dynamo e sulle informazioni essenziali su come far evolvere Dynamo.&#x20;
 
-### Primer User Guide
+### Guida introduttiva
 
-This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and key concepts can be found in the following sections, we recommend new users to cover the following topics:
+Questa guida è stata progettata per fornire ai lettori contenuti su diversi livelli di esperienza e competenza. L'introduzione generale sull'impostazione di Dynamo, sull'interfaccia utente e sui concetti chiave è disponibile nelle seguenti sezioni. Si consiglia ai nuovi utenti di approfondire i seguenti argomenti:
 
-* [What is Dynamo & How Does It Work?](1-what-is-dynamo.md)
-* [Setup for Dynamo](../2\_setup\_for\_dynamo/)
-* [User Interface](../3\_user\_interface/)
-* [Nodes and Wires](../4\_nodes\_and\_wires/)
+* [Che cos'è Dynamo e come funziona?](1-what-is-dynamo.md)
+* [Impostazione di Dynamo](../2\_setup\_for\_dynamo/)
+* [Interfaccia utente](../3\_user\_interface/)
+* [Nodi e fili](../4\_nodes\_and\_wires/)
 
-For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
+Per gli utenti che desiderano sviluppare una comprensione più approfondita di ciascun elemento, ad esempio un nodo specifico e il concetto che sta alla base, vengono trattati i concetti fondamentali nel capitolo dedicato.
 
-* [Essential Nodes & Concepts](../5\_essential\_nodes\_and\_concepts/)
+* [Nodi e concetti essenziali](../5\_essential\_nodes\_and\_concepts/)
 
-If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
+Se si desidera visualizzare la dimostrazione dei workflow di Dynamo, sono stati inclusi alcuni grafici nella sezione Esempi di workflow. Seguire le istruzioni allegate per creare grafici di Dynamo personalizzati.
 
-* [Parametric Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
+* [Vaso parametrico](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
 ![](<./images/1-2/vase1.gif>)
 
-* [Attractor points](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
+* [Punti attrattore](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](<./images/1-2/attractor1.gif>)
 
 {% hint style="info" %}
-There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each page.
+Nei capitoli successivi sono disponibili altri esercizi specifici per gli argomenti, poiché vengono trattati argomenti diversi su Dynamo. Gli **esercizi** sono in genere disponibili nell'ultima sezione di ogni pagina.
 {% endhint %}
 
-### The Community
+### Comunità
 
-Dynamo wouldn't be what it is without a strong group of avid users and active contributors. Engage the community by following the [Blog](http://dynamobim.org/blog/), adding your work to the Gallery, or discussing Dynamo in the [Forum](https://forum.dynamobim.com).
+Dynamo non sarebbe quello che è senza un forte gruppo di utenti avidi e collaboratori attivi. Per coinvolgere la comunità, è possibile seguire il [blog](http://dynamobim.org/blog/), aggiungere il proprio lavoro alla galleria o discutere di Dynamo nel [forum](https://forum.dynamobim.com).
 
-![The Forum](./images/1-2/02-Community.png)
+![Forum](./images/1-2/02-Community.png)
 
-### The Platform
+### Piattaforma
 
-Dynamo is envisioned as a visual programming tool for designers, allowing us to make tools that make use of external libraries or any Autodesk product that has an API. With Dynamo Sandbox we can develop programs in a "Sandbox" style application - but the Dynamo ecosystem continues to grow.
+Dynamo è concepito come uno strumento di programmazione visiva per i progettisti che consente di realizzare strumenti i quali sfruttano le librerie esterne o qualsiasi prodotto Autodesk dotato di un'API. Con Dynamo Sandbox è possibile sviluppare programmi in un'applicazione di tipo "sandbox", ma l'ecosistema di Dynamo continua a crescere.
 
-The source code for the project is open-source, enabling us to extend its functionality to our hearts content. Check out the project on GitHub and browse the Works in Progress of users customizing Dynamo.
+Il codice sorgente del progetto è open source e permette di estenderne le funzionalità nel modo desiderato. È possibile consultare il progetto su GitHub e individuare le iniziative in corso di personalizzazione di Dynamo da parte degli utenti.
 
-![The Repo](./images/1-2/03-TheRepo.png)
+![Repository](./images/1-2/03-TheRepo.png)
 
-> Browse, Fork, and start extending Dynamo for your needs
+> È possibile sfogliare, creare una copia tramite fork e iniziare ad estendere Dynamo in base alle proprie esigenze.

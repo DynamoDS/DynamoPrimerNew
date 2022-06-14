@@ -1,130 +1,130 @@
-# Data
+# Dati
 
-Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+I dati sono gli oggetti dei nostri programmi. Viaggiano attraverso i fili, fornendo input per i nodi in cui vengono elaborati in una nuova forma di dati di output. Quindi si esaminerà la definizione di dati e la relativa struttura e si inizierà ad utilizzarli in Dynamo.
 
-## What is Data?
+## Cosa sono i dati?
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
+I dati sono un insieme di valori di variabili qualitative o quantitative. Il formato più semplice di dati è costituito da numeri quali `0`, `3.14` o `17`. Tuttavia, i dati possono anche essere di diversi tipi: una variabile che rappresenta numeri che cambiano (`height`), caratteri (`myName`), geometria (`Circle`) o un elenco di elementi di dati (`1,2,3,5,8,13,...`).
 
-In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+In Dynamo vengono aggiunti/inviati dati alle porte di input dei nodi, pertanto è possibile disporre di dati senza eseguire alcuna azione, ma per eseguire le azioni rappresentate dai nodi sono necessari i dati. Quando è stato aggiunto un nodo all'area di lavoro, se non sono stati forniti eventuali input, il risultato sarà una funzione, non il risultato dell'azione stessa.
 
 ![Data and Actions](<../images/5-3/1/data - what is data.jpg>)
 
-> 1. Simple Data
-> 2. Data and Action (A Node) successfully executes
-> 3. Action (A Node) without Data Inputs returns a generic function
+> 1. Dati semplici
+> 2. Dati ed esecuzione corretta di un'azione (un nodo)
+> 3. Restituzione di una funzione generica tramite un'azione (nodo) senza input di dati
 
-### Null - Absence of Data
+### Null - Assenza di dati
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
+Attenzione ai valori null. Il tipo `'null'` rappresenta l'assenza di dati. Sebbene si tratti di un concetto astratto, è probabile incontrarlo utilizzando la programmazione visiva. Se un'azione non crea un risultato valido, il nodo restituirà un valore null.
 
-Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+I test per i valori null e la rimozione dei valori null dalla struttura dei dati sono una parte fondamentale per la creazione di programmi efficienti.
 
-| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| Icona | Nome/Sintassi | Input | Output |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj | booleano |
 
-### Data Structures
+### Strutture dei dati
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
+Quando si è in presenza della programmazione visiva, è possibile generare molto rapidamente parecchi dati e richiedere un metodo per gestirne la gerarchia. Questo è il ruolo delle strutture dei dati, ovvero gli schemi organizzativi in cui si memorizzano i dati. Le specifiche delle strutture dei dati e il loro utilizzo variano a seconda del linguaggio di programmazione.
 
-In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+In Dynamo, si aggiunge la gerarchia ai dati tramite gli elenchi. Questo argomento verrà approfondito nei capitoli successivi. Si inizierà in maniera semplice:
 
-A list represents a collection of items placed into one structure of data:
+Un elenco rappresenta una raccolta di elementi posizionati in una struttura di dati:
 
-* I have five fingers (_items_) on my hand (_list_).
-* There are ten houses (_items_) on my street (_list_).
+* Ho cinque dita (_elementi_) sulla mia mano (_elenco_).
+* Ci sono dieci case (_elementi_) sulla mia strada (_elenco_).
 
 ![List Breakdown](<../images/5-3/1/data - data structures.jpg>)
 
-> 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 1. Un nodo **Number Sequence** definisce un elenco di numeri utilizzando un input _start_, _amount_ e _step_. Con questi nodi, sono stati creati due elenchi distinti di dieci numeri, uno che comprende _100-109_ e un altro che include _0-9_.
+> 2. Il nodo **List.GetItemAtIndex** seleziona una voce di un elenco in corrispondenza di un indice specifico. Quando si sceglie _0_, viene visualizzata la prima voce dell'elenco (in questo caso _100_).
+> 3. Applicando lo stesso processo al secondo elenco, si ottiene un valore di _0_, la prima voce dell'elenco.
+> 4. Ora si uniscono i due elenchi in uno utilizzando il nodo **List.Create**. Notare che il nodo crea un _elenco di elenchi._ Questa operazione modifica la struttura dei dati.
+> 5. Quando si utilizza di nuovo **List.GetItemAtIndex**, con l'indice impostato su _0_, si ottiene il primo elenco nell'elenco di elenchi. Questo è ciò che significa considerare un elenco come voce, che è in qualche modo diverso da altri linguaggi di scripting. Nei capitoli successivi verranno fornite informazioni più avanzate sulla manipolazione degli elenchi e sulla struttura dei dati.
 
-The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
+Il concetto chiave da comprendere sulla gerarchia dei dati in Dynamo: **rispetto alla struttura dei dati, gli elenchi vengono considerati come voci.** In altre parole, Dynamo funziona con un processo dall'alto in basso per la comprensione delle strutture dei dati. Ciò che cosa significa? Si esaminerà un esempio.
 
-## Exercise: Using Data to Make a Chain of Cylinders
+## Esercizio: Utilizzo di dati per creare una catena di cilindri
 
-> Download the example file by clicking on the link below.
+> Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
-> A full list of example files can be found in the Appendix.
+> Un elenco completo di file di esempio è disponibile nell'Appendice.
 
 {% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+In questo primo esempio, si assembla un cilindro svuotato che mostra la gerarchia della geometria descritta in questa sezione.
 
-### Part I: Set up Graph for one cylinder with some changeable parameters.
+### Parte I: Impostazione del grafico per un cilindro con alcuni parametri modificabili
 
-1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+1. Aggiungere **Point.ByCoordinates:** dopo aver aggiunto il nodo all'area di disegno, viene visualizzato un punto in corrispondenza dell'origine della griglia di anteprima di Dynamo. I valori di default degli input _x, y_ e _z_ sono _0.0_, per fornire un punto in questa posizione.
 
 ![](<../images/5-3/1/data - exercise step 1.jpg>)
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+2\. **Plane.ByOriginNormal:** il passaggio successivo nella gerarchia della geometria è un piano. Esistono diversi modi per costruire un piano e si sta utilizzando un'origine e una normale per l'input. L'origine è il nodo del punto creato nel passaggio precedente.
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis:** questo è un vettore unitario nella direzione z. Notare che non sono presenti input, ma solo un vettore di valore \[0,0,1]. Viene utilizzato come input _normal_ per il nodo **Plane.ByOriginNormal**. In questo modo si ottiene un piano rettangolare nell'anteprima di Dynamo.
 
 ![](<../images/5-3/1/data - exercise step 2.jpg>)
 
-3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+3\. **Circle.ByPlaneRadius:** passando al livello superiore nella gerarchia, a questo punto si crea una curva dal piano del passaggio precedente. Dopo il collegamento al nodo, si ottiene un cerchio in corrispondenza dell'origine. Il raggio di default sul nodo è il valore di _1_.
 
 ![](<../images/5-3/1/data - exercise step 3.jpg>)
 
-4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+4\. **Curve.Extrude:** ora è possibile far comparire questo oggetto assegnandogli profondità e rendendolo tridimensionale. Questo nodo crea una superficie da una curva tramite l'estrusione. La distanza di default sul nodo è _1_. Nella finestra dovrebbe essere visualizzato un cilindro.
 
 ![](<../images/5-3/1/data - exercise step 4.jpg>)
 
-5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+5\. **Surface.Thicken:** questo nodo fornisce un solido chiuso eseguendo l'offset della superficie ad una determinata distanza e chiudendo la forma. Il valore dello spessore di default è _1_. Nella finestra viene visualizzato un cilindro svuotato in linea con questi valori.
 
 ![](<../images/5-3/1/data - exercise step 5.jpg>)
 
-6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+6\. **Number Slider:** anziché utilizzare i valori di default per tutti questi input, aggiungere al modello un controllo parametrico.
 
-**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**Modifica del dominio:** dopo aver aggiunto il dispositivo di scorrimento numerico all'area di disegno, fare clic sull'accento circonflesso in alto a sinistra per visualizzare le opzioni di dominio.
 
-**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+**Min/Max/Step:** modificare rispettivamente i valori _min_, _max_ e _step_ in _0_, _2_ e _0.01_. Questa operazione consente di controllare la dimensione della geometria complessiva.
 
 ![](<../images/5-3/1/data - exercise step 6.gif>)
 
-7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+7\. **Number Slider:** in tutti gli input di default, copiare e incollare questo dispositivo di scorrimento numerico (selezionare il dispositivo di scorrimento, premere CTRL+C, quindi CTRL+V) più volte, finché tutti gli input con valori di default non mostreranno un dispositivo di scorrimento. Alcuni dei valori del dispositivo di scorrimento devono essere maggiori di zero per far funzionare la definizione (ossia, è necessaria una profondità di estrusione per avere una superficie da ispessire).
 
 ![](<../images/5-3/1/data - exercise step 7a.gif>)
 
 ![](<../images/5-3/1/data - exercise step 7b.gif>)
 
-8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+8\. Ora è stato creato un cilindro svuotato parametrico con questi dispositivi di scorrimento. Provare a regolare alcuni di questi parametri e vedere l'aggiornamento dinamico della geometria nella finestra di Dynamo.
 
 ![](<../images/5-3/1/data - exercise step 8a.gif>)
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**Dispositivi di scorrimento**: per fare un ulteriore passo avanti, sono stati aggiunti molti dispositivi di scorrimento all'area di disegno e occorre ripulire l'interfaccia dello strumento appena creato. Fare clic con il pulsante destro del mouse su un dispositivo di scorrimento, selezionare Rinomina e assegnare ad ogni dispositivo di scorrimento il nome appropriato per il relativo parametro (thickness, radius, height, etc).
 
 ![](<../images/5-3/1/data - exercise step 8b step.jpg>)
 
-### Part II: Populate an array of cylinders from Part I
+### Parte II: Popolamento di una serie di cilindri della Parte I
 
-9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+9\. A questo punto, è stato creato un fantastico cilindro ispessito. Attualmente, questo è un oggetto. Si può vedere come creare una serie di cilindri che restano dinamicamente collegati. Per eseguire questa operazione, si creerà un elenco di cilindri, anziché utilizzare un singolo elemento.
 
-**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+**Aggiunta (+):** l'obiettivo è aggiungere una fila di cilindri accanto al cilindro creato. Se si desidera aggiungere un cilindro adiacente a quello corrente, è necessario considerare sia il raggio del cilindro che lo spessore dell'involucro. Si ottiene questo numero aggiungendo i due valori dei dispositivi di scorrimento.
 
 ![](<../images/5-3/1/data - exercise step 9.jpg>)
 
-10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+10\. Questo passaggio è più complicato, quindi occorre esaminarlo lentamente: l'obiettivo finale è creare un elenco di numeri che definiscano le posizioni di ogni cilindro in una riga.
 
 ![](<../images/5-3/1/data - exercise step 10.jpg>)
 
-> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+> a. **Moltiplicazione:** per prima cosa, si desidera moltiplicare il valore del passaggio precedente per 2. Il valore del passaggio precedente rappresenta un raggio e si desidera spostare il cilindro in base al diametro completo.
 >
-> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+> b. **Number Sequence:** viene creata una serie di numeri con questo nodo. Il primo input è il nodo della _moltiplicazione_ del passaggio precedente che viene collegato al valore _step_. Il valore _start_ può essere impostato su _0.0_ utilizzando un nodo _Number_.
 >
-> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+> c. **Integer Slider:** per il valore _amount_, collegare un dispositivo di scorrimento di numeri interi. In questo modo si definirà il numero di cilindri creati.
 >
-> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+> d. **Output:** questo elenco mostra la distanza di spostamento per ogni cilindro nella serie e viene parametricamente determinato dai dispositivi di scorrimento originali.
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. Questo passaggio è abbastanza semplice: collegare la sequenza definita nel passaggio precedente all'input _x_ del nodo **Point.ByCoordinates** originale. Questa operazione sostituirà il dispositivo di scorrimento _pointX_ che è possibile eliminare. Ora nella finestra è visibile una serie di cilindri (assicurarsi che il dispositivo di scorrimento di numeri interi sia maggiore di 0).
 
 ![](<../images/5-3/1/data - exercise step 11.gif>)
 
-12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+12\. La catena di cilindri è ancora collegata dinamicamente a tutti i dispositivi di scorrimento. Regolare ogni dispositivo di scorrimento per controllare l'aggiornamento della definizione.
 
 ![](<../images/5-3/1/data - exercise step 12.gif>)

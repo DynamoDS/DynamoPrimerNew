@@ -1,20 +1,20 @@
-# Setup Your Own Python Template
+# Impostazione del modello di Python personalizzato
 
-With Dynamo 2.0 we have the ability to specify a default template `(.py extension)` to use when opening the python window for the first time. This has been a long-desired request as this expedites the usage of Python within Dynamo. Having the ability to use a template allows us to have default imports ready to go when we want to develop a custom Python script.
+Con Dynamo 2.0 è possibile specificare un modello di default `(.py extension)` da utilizzare all'apertura della finestra di Python per la prima volta. Questa è stata una richiesta a lungo desiderata perché consente di accelerare l'utilizzo di Python all'interno di Dynamo. La possibilità di utilizzare un modello consente di avere importazioni di default pronte per lo sviluppo di uno script Python personalizzato.
 
-The location for this template is in the `APPDATA` location for your Dynamo install.
+La posizione di questo modello è `APPDATA` per l'installazione di Dynamo.
 
-This is typically as follows `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
+In genere, è la seguente: `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
 ![](<../images/8-3/3/python templates - appdata folder location.jpg>)
 
-### Setting Up The Template
+### Configurazione del modello
 
-In order to utilize this functionality we need to add the following line in our `DynamoSettings.xml` file. _(Edit in notepad)_
+Per utilizzare questa funzionalità, è necessario aggiungere la seguente riga nel file `DynamoSettings.xml`. _(Modifica nel Blocco note)_
 
 ![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
 
-Where we see `<PythonTemplateFilePath />`, we can simply replace this with the following:
+Dove è visibile la riga `<PythonTemplateFilePath />`, è sufficiente sostituirla con quanto segue:
 
 ```
 <PythonTemplateFilePath>
@@ -23,12 +23,12 @@ Where we see `<PythonTemplateFilePath />`, we can simply replace this with the f
 ```
 
 {% hint style="warning" %}
-_Note: replace CURRENTUSER with your username_
+_Nota Sostituire CURRENTUSER con il nome utente._
 {% endhint %}
 
-Next we need to build a template with the functionality that we want to use built-in. In our case lets embed the Revit related imports and some of the other typical items when working with Revit.
+Successivamente, è necessario creare un modello con le funzionalità incorporate che si desidera utilizzare. In questo caso, si incorporano le importazioni correlate a Revit e alcuni degli altri elementi tipici quando si utilizza Revit.
 
-You can start a blank notepad document and paste the following code inside:
+È possibile aprire un documento del Blocco note vuoto e incollare il seguente codice all'interno:
 
 ```
 import clr
@@ -67,16 +67,16 @@ TransactionManager.Instance.TransactionTaskDone()
 OUT = element
 ```
 
-Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` location.
+Al termine, salvare il file come `PythonTemplate.py` nella posizione `APPDATA`.
 
-### Python Script Behavior After
+### Funzionamento successivo dello script Python
 
-A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
+D\_o\_po aver definito un modello di Python, verrà cercato in Dynamo ogni volta che viene posizionato un nodo Python. Se non viene trovato, sarà simile alla finestra di Python di default.
 
 ![](<../images/8-3/3/python templates - before setup template.jpg>)
 
-If the Python template is found (like our Revit one for example) you will see all of the default items you built in.
+Se viene trovato il modello di Python (ad esempio, come il modello di Revit), verranno visualizzati tutti gli elementi di default incorporati.
 
 ![](<../images/8-3/3/python templates - after setup template.jpg>)
 
-Additional information regarding this great addition (by Radu Gidei) can be found here. https://github.com/DynamoDS/Dynamo/pull/8122
+Ulteriori informazioni su questa straordinaria aggiunta (di Radu Gidei) sono disponibili qui. https://github.com/DynamoDS/Dynamo/pull/8122

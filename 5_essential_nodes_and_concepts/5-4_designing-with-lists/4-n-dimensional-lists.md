@@ -1,188 +1,188 @@
-# n-Dimensional Lists
+# Elenchi n-dimensionali
 
-Further down the rabbit-hole, let's add even more tiers to hierarchy. Data structure can expand far beyond a two-dimensional list of lists. Since lists are items in and of themselves in Dynamo, we can create data with as many dimensions as possible.
+Per rendere le cose più complicate, aggiungere ancora più livelli alla gerarchia. La struttura di dati può essere espansa ben oltre un elenco bidimensionale di elenchi. Poiché gli elenchi sono elementi di per sé in Dynamo, è possibile creare dati con il maggior numero possibile di quote.
 
-The analogy we'll work with here are Russian Nesting Dolls. Each list can be regarded as one container holding multiple items. Each list has its own properties and is also regarded as its own object.
+Qui come analogia si utilizzeranno le bambole matrioske russe. Ogni elenco può essere considerato come un contenitore contenente più elementi. Ogni elenco ha le sue proprietà ed è anche considerato come il suo oggetto.
 
-![Dolls](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
+![Bambole](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
 
-> A set of Russian Nesting Dolls (Photo by [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) is an analogy for n-Dimensional lists. Each layer represents a list, and each list contains items within it. In Dynamo's case, each container can have multiple containers inside (representing the items of each list).
+> Una serie di bambole matrioske russe (foto di [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) è un'analogia per gli elenchi n-dimensionali. Ogni livello rappresenta un elenco e ogni elenco contiene voci al suo interno. Nel caso di Dynamo, ogni contenitore può avere più contenitori all'interno (che rappresentano le voci di ogni elenco).
 
-n-Dimensional lists are difficult to explain visually, but we've set up a few exercises in this chapter which focus on working with lists which venture beyond two dimensions.
+Gli elenchi n-dimensionali sono difficili da spiegare visivamente, ma in questo capitolo sono stati creati alcuni esercizi che si concentrano sull'utilizzo di elenchi che si estendono per oltre due dimensioni.
 
-### Mapping and Combinations
+### Mappaggio e combinazioni
 
-Mapping is arguably the most complex part of data management in Dynamo, and is especially relevant when working with complex hierarchies of lists. With the series of exercises below, we'll demonstrate when to use mapping and combinations as data becomes multi-dimensional.
+Il mappaggio è probabilmente la parte più complessa della gestione di dati in Dynamo ed è particolarmente importante quando si utilizzano gerarchie complesse di elenchi. Con la serie di esercizi riportati di seguito, sarà illustrato quando utilizzare il mappaggio e le combinazioni quando i dati diventano multidimensionali.
 
-Preliminary introductions to **List.Map** and **List.Combine** can be found in the previous section. In the last exercise below, we'll use these nodes on a complex data structure.
+Le introduzioni preliminari di **List.Map** e **List.Combine** sono disponibili nella sezione precedente. Nell'ultimo esercizio riportato di seguito, questi nodi verranno utilizzati in una struttura di dati complessa.
 
-## Exercise - 2D Lists - Basic
+## Esercizio - Elenchi 2D - Base
 
-> Download the example file by clicking on the link below.
+> Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
-> A full list of example files can be found in the Appendix.
+> Un elenco completo di file di esempio è disponibile nell'Appendice.
 
 {% file src="../datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-This exercise is the first in a series of three which focuses on articulating imported geometry. Each part in this series of exercises will increase in the complexity of data structure.
+Questo esercizio è il primo di una serie di tre che si concentra sull'articolazione della geometria importata. Ogni parte di questa serie di esercizi incrementerà la complessità della struttura di dati.
 
 ![Exercise](<../images/5-4/4/n-dimensional lists - 2d lists basic 01.jpg>)
 
-> 1. Let's begin with the .sat file in the exercise file folder. We can grab this file using the **File Path** node.
-> 2. With **Geometry.ImportFromSAT**, the geometry is imported into our Dynamo preview as two surfaces.
+> 1. Si inizia con il file .sat nella cartella dei file degli esercizi. È possibile selezionare questo file utilizzando il nodo **File Path**.
+> 2. Con **Geometry.ImportFromSAT**, la geometria viene importata nell'anteprima di Dynamo come due superfici.
 
-For this exercise, we want to keep it simple and work with one of the surfaces.
+Per questo esercizio, si desidera eseguire una procedura semplice e utilizzare una delle superfici.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 02.jpg>)
 
-> 1. Let's select the index of 1 to grab the upper surface. We do this with **List.GetItemAtIndex** node.
-> 2. Switch off the geometry preview from **Geometry.ImportFromSAT** preview.
+> 1. Selezionare l'indice di 1 per acquisire la superficie superiore. Questa operazione viene eseguita con il nodo **List.GetItemAtIndex**.
+> 2. Disattivare l'anteprima della geometria dall'anteprima di **Geometry.ImportFromSAT**.
 
-The next step is to divide the surface into a grid of points.
+Il passaggio successivo consiste nel dividere la superficie in una griglia di punti.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 03.jpg>)
 
-> 1\. Using **Code Block**, insert these two lines of code: `0..1..#10;` `0..1..#5;`
+> 1\. Utilizzando **Code Block**, inserire queste due righe di codice: `0..1..#10;` `0..1..#5;`.
 >
-> 2\. With the **Surface.PointAtParameter**, connect the two code block values to u and _v_. Change the _lacing_ of this node to _"Cross Product"_.
+> 2\. Con **Surface.PointAtParameter**, collegare i due valori di Code Block a _u _e v. Modificare il _collegamento_ di questo nodo in _Globale_.
 >
-> 3\. The output reveals the data structure, which is also visible in the Dynamo preview.
+> 3\. L'output mostra la struttura di dati, visibile anche nell'anteprima di Dynamo.
 
-Next, used the Points from last step to generate ten curves along the surface.
+Quindi, utilizzare i punti dell'ultimo passaggio per generare dieci curve lungo la superficie.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 04.jpg>)
 
-> 1. To get a look at how the data structure is organized, let's connect a **NurbsCurve.ByPoints** to the output of **Surface.PointAtParameter**.
-> 2. You may switch off the preview from the **List.GetItemAtIndex** Node for now for a clearer result.
+> 1. Per esaminare come è organizzata la struttura di dati, collegare **NurbsCurve.ByPoints** all'output di **Surface.PointAtParameter**.
+> 2. Per ora, è possibile disattivare l'anteprima del nodo **List.GetItemAtIndex** per ottenere un risultato più chiaro.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 05.jpg>)
 
-> 1. A basic **List.Transpose** will flip the columns and rows of a list of lists.
-> 2. Connecting the output of **List.Transpose** to **NurbsCurve.ByPoints**, we now get five curves running horizontally across the surface.
-> 3. You may switch off the preview from the **NurbsCurve.ByPoints** Node in the previous step to achieve the same result in the image.
+> 1. Un nodo **List.Transpose** di base inverte le colonne e le righe di un elenco di elenchi.
+> 2. Collegando l'output di **List.Transpose** a **NurbsCurve.ByPoints**, si ottengono cinque curve che percorrono orizzontalmente la superficie.
+> 3. È possibile disattivare l'anteprima del nodo **NurbsCurve.ByPoints** nel passaggio precedente per ottenere lo stesso risultato nell'immagine.
 
-## Exercise - 2D Lists - Advanced
+## Esercizio - Elenchi 2D - Avanzato
 
-Let's increase the complexity. Suppose we wanted to perform an operation on the curves created from the previous exercise. Perhaps we want to relate these curves to another surface and loft between them. This requires more attention to data structure, but the underlying logic is the same.
+Viene aumentata la complessità. Si supponga di voler eseguire un'operazione sulle curve create nell'esercizio precedente. Forse si desidera correlare queste curve ad un'altra superficie ed eseguire il loft tra di esse. Ciò richiede maggiore attenzione alla struttura di dati, ma la logica sottostante è la stessa.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 01.jpg>)
 
-> 1. Begin with a step from the previous exercise, isolating the upper surface of the imported geometry with the **List.GetItemAtIndex** node.
+> 1. Iniziare con un passaggio dell'esercizio precedente, isolando la superficie superiore della geometria importata con il nodo **List.GetItemAtIndex**.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 02.jpg>)
 
-> 1. Using **Surface.Offset**, offset the surface by a value of _10_.
+> 1. Utilizzando **Surface.Offset**, eseguire l'offset della superficie di un valore di _10_.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a _code block_ with these two lines of code: `0..1..#10;` `0..1..#5;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with _lacing_ set to _"Cross Product"_. One of these nodes is connected to the original surface, while the other is connected to the offset surface.
+> 1. Allo stesso modo dell'esercizio precedente, definire un _Code Block_ con queste due righe di codice: `0..1..#10;` `0..1..#5;`.
+> 2. Collegare questi output a due nodi **Surface.PointAtParameter**, ciascuno con il _collegamento_ impostato su _Globale_. Uno di questi nodi è collegato alla superficie originale, mentre l'altro è collegato alla superficie di offset.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
 
-> 1. Switch off the preview of these Surfaces.
-> 2. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes. The result show curves corresponding to two surfaces.
+> 1. Disattivare l'anteprima di queste superfici.
+> 2. Come nell'esercizio precedente, collegare gli output a due nodi **NurbsCurve.ByPoints**. Il risultato mostra le curve corrispondenti a due superfici.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 05.jpg>)
 
-> 1. By using **List.Create**, we can combine the two sets of curves into one list of lists.
-> 2. Notice from the output, we have two lists with ten items each, representing each connect set of Nurbs curves.
-> 3. By performing a **Surface.ByLoft**, we can visually make sense of this data structure. The node lofts all of the curves in each sublist.
+> 1. Utilizzando **List.Create**, è possibile combinare i due gruppi di curve in un elenco di elenchi.
+> 2. Notare dall'output che sono presenti due elenchi con dieci voci ciascuno, che rappresentano ogni serie di curve NURBS collegate.
+> 3. Se si esegue **Surface.ByLoft**, è possibile rendere visivamente chiara questa struttura di dati. Il nodo esegue il loft di tutte le curve in ogni sottoelenco.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 06.jpg>)
 
-> 1. Switch off the preview from **Surface.ByLoft** Node in previous step.
-> 2. By using **List.Transpose**, remember, we are flipping all of the columns and rows. This node will transfer two lists of ten curves into ten lists of two curves. We now have each nurbs curve related to the neighboring curve on the other surface.
-> 3. Using **Surface.ByLoft**, we arrive at a ribbed structure.
+> 1. Disattivare l'anteprima del nodo **Surface.ByLoft** nel passaggio precedente.
+> 2. Utilizzando **List.Transpose**, tenere presente che si stanno invertendo tutte le colonne e le righe. Questo nodo trasferirà due elenchi di dieci curve in dieci elenchi di due curve. Ora si ha ogni curva NURBS correlata alla curva adiacente sull'altra superficie.
+> 3. Utilizzando **Surface.ByLoft**, si arriva a una struttura con nervatura.
 
-Next, we will demonstrate an alternative process to achieve this result
+Successivamente, verrà illustrato un processo alternativo per ottenere questo risultato.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
 
-> 1. Before we start, switch off the **Surface.ByLoft** preview in previous step to avoid confusion.
-> 2. An alternative to **List.Transpose** uses **List.Combine**. This will operate a _"combinator"_ on each sublist.
-> 3. In this case, we're using **List.Create** as the _"combinator"_, which will create a list of each item in the sublists.
-> 4. Using the **Surface.ByLoft** node, we get the same surfaces as in the previous step. Transpose is easier to use in this case, but when the data structure becomes even more complex, **List.Combine** is more reliable.
+> 1. Prima di iniziare, disattivare l'anteprima di **Surface.ByLoft** nel passaggio precedente per evitare confusione.
+> 2. In alternativa a **List.Transpose** utilizzare **List.Combine**. In questo modo verrà eseguito un _"combinatore"_ in ogni sottoelenco.
+> 3. In questo caso, si utilizza **List.Create **come _"combinatore"_, che crea un elenco di ogni voce nei sottoelenchi.
+> 4. Utilizzando il nodo **Surface.ByLoft**, si ottengono le stesse superfici del passaggio precedente. La trasposizione è più semplice da utilizzare in questo caso, ma quando la struttura di dati diventa ancora più complessa, **List.Combine** è più affidabile.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
 
-> 1. Stepping back a few steps, if we want to switch the orientation of the curves in the ribbed structure, we want to use a **List.Transpose** before connect to **NurbsCurve.ByPoints**. This will flip the columns and rows, giving us 5 horizontal ribs.
+> 1. Tornando indietro di alcuni passaggi, per cambiare l'orientamento delle curve nella struttura con nervatura, si desidera utilizzare **List.Transpose** prima di collegarsi a **NurbsCurve.ByPoints**. In questo modo verranno invertite le colonne e le righe, ottenendo 5 nervature orizzontali.
 
-## Exercise - 3D Lists
+## Esercizio - Elenchi 3D
 
-Now, we're going to go even one step further. In this exercise, we'll work with both imported surfaces, creating a complex data hierarchy. Still, our aim is to complete the same operation with the same underlying logic.
+Adesso si farà un passo avanti. In questo esercizio, si utilizzeranno entrambe le superfici importate, creando una gerarchia di dati complessa. Tuttavia, il nostro obiettivo è completare la stessa operazione con la stessa logica sottostante.
 
-Begin with the imported file from previous exercise.
+Iniziare con il file importato dell'esercizio precedente.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 01.jpg>)
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 02.jpg>)
 
-> 1. As in the previous exercise, use the **Surface.Offset** node to offset by a value of _10_.
-> 2. Notice from the output, that we've created two surfaces with the offset node.
+> 1. Come nell'esercizio precedente, utilizzare il nodo **Surface.Offset** per eseguire l'offset di un valore di _10_.
+> 2. Notare dall'output che sono state create due superfici con il nodo di offset.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a **Code Block** with these two lines of code: `0..1..#20;` `0..1..#20;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with lacing set to _"Cross Product"_. One of these nodes is connected to the original surfaces, while the other is connected to the offset surfaces.
+> 1. Allo stesso modo dell'esercizio precedente, definire un **Code Block** con queste due righe di codice: `0..1..#20;` `0..1..#20;`.
+> 2. Collegare questi output a due nodi **Surface.PointAtParameter**, ciascuno con il collegamento impostato su _Globale_. Uno di questi nodi è collegato alle superfici originali, mentre l'altro è collegato alle superfici di offset.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
 
-> 1. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes.
-> 2. Looking at the output of the **NurbsCurve.ByPoints,** notice that this is a list of two lists, which is more complex than the previous exercise. The data is categorized by the underlying surface, so we've added another tier to the data structured.
-> 3. Notice that things become more complex in the **Surface.PointAtParameter** node. In this case we have a list of lists of lists.
+> 1. Come nell'esercizio precedente, collegare gli output a due nodi **NurbsCurve.ByPoints**.
+> 2. Osservando l'output di **NurbsCurve.ByPoints**, si noterà che questo è un elenco di due elenchi, che è più complesso rispetto all'esercizio precedente. I dati vengono suddivisi in categorie in base alla superficie sottostante, pertanto è stato aggiunto un altro livello ai dati strutturati.
+> 3. Notare che le cose diventano più complesse nel nodo **Surface.PointAtParameter**. In questo caso abbiamo un elenco di elenchi di elenchi.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 05.jpg>)
 
-> 1. Before we proceed, switch off the preview from the existing surfaces.
-> 2. Using the **List.Create** node, we merge the Nurbs curves into one data structure, creating a list of lists of lists.
-> 3. By connecting a **Surface.ByLoft** node, we get a version of the original surfaces, as they each remain in their own list as created from the original data structure.
+> 1. Prima di procedere, disattivare l'anteprima delle superfici esistenti.
+> 2. Utilizzando il nodo **List.Create**, le curve NURBS vengono unite in una struttura di dati, creando un elenco di elenchi di elenchi.
+> 3. Collegando un nodo **Surface.ByLoft**, si ottiene una versione delle superfici originali, in quanto ciascuna di esse rimane nel proprio elenco, così come è stata creata dalla struttura di dati originale.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 06.jpg>)
 
-> 1. In the previous exercise, we were able to use a **List.Transpose** to create a ribbed structure. This won't work here. A transpose should be used on a two-dimensional list, and since we have a three-dimensional list, an operation of "flipping columns and rows" won't work as easily. Remember, lists are objects, so **List.Transpose** will flip our lists with out sublists, but won't flip the nurbs curves one list further down in the hierarchy.
+> 1. Nell'esercizio precedente, è stato possibile utilizzare **List.Transpose** per creare una struttura a nervatura. Questo metodo non funzionerà qui. Una trasposizione deve essere utilizzata in un elenco bidimensionale e, poiché disponiamo di un elenco tridimensionale, un'operazione di "inversione di colonne e righe" non sarà facile. Tenere presente che gli elenchi sono oggetti, pertanto **List.Transpose** inverte gli elenchi con sottoelenchi, ma non inverte le curve NURBS ad un elenco inferiore nella gerarchia.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
-> 1. **List.Combine** will work better for us here. We want to use **List.Map** and **List.Combine** nodes when we get to more complex data structures.
-> 2. Using **List.Create** as the _"combinator"_, we create a data structure that will work better for us.
+> 1. **List.Combine** funzionerà meglio in questo caso. Per ottenere strutture di dati più complesse, si desidera utilizzare i nodi **List.Map** e **List.Combine**.
+> 2. Utilizzando **List.Create **come _"combinatore"_, verrà creata una struttura di dati che funzionerà meglio.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
-> 1. The data structure still needs to be transposed at one step down on the hierarchy. To do this we'll use **List.Map**. This is working like **List.Combine**, except with one input list, rather than two or more.
-> 2. The function we'll apply to **List.Map** is **List.Transpose**, which will flip the columns and rows of the sublists within our main list.
+> 1. La struttura di dati deve ancora essere trasposta ad un livello più basso nella gerarchia. Per eseguire questa operazione, utilizzare **List.Map**. Funziona come **List.Combine**, tranne che con un elenco di input, anziché due o più.
+> 2. La funzione che verrà applicata a **List.Map** è **List.Transpose**, che consente di invertire le colonne e le righe dei sottoelenchi all'interno dell'elenco principale.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 09.jpg>)
 
-> 1. Finally, we can loft the Nurbs curves together with a proper data hierarchy, giving us a ribbed structure.
+> 1. Infine, è possibile eseguire il loft delle curve NURBS con una gerarchia di dati corretta, restituendo una struttura con nervatura.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 10.jpg>)
 
-> 1. Let's add some depth to the geometry with a **Surface.Thicken** Node with the input settings as shown.
+> 1. Aggiungere un po' di profondità alla geometria con un nodo **Surface.Thicken** con le impostazioni di input come mostrato.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 11.jpg>)
 
-> 1. It'll be nice to add a surface backing two this structure, so add another **Surface.ByLoft** node and use the first output of **NurbsCurve.ByPoints** from an earlier step as input.
-> 2. As the preview is getting cluttered, switch off preview for these nodes by right clicking on each of them and uncheck 'preview' to see the result better.
+> 1. Sarà utile aggiungere una superficie di supporto a questa struttura, quindi aggiungere un altro nodo **Surface.ByLoft** e utilizzare il primo output di **NurbsCurve.ByPoints** di un passaggio precedente come input.
+> 2. Poiché l'anteprima sta diventando ingombra di oggetti, disattivare l'anteprima di questi nodi facendo clic con il pulsante destro del mouse su ciascuno di essi e deselezionare Anteprima per vedere meglio il risultato.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 12.jpg>)
 
-> 1. And thickening these selected surfaces, our articulation is complete.
+> 1. E con l'ispessimento di queste superfici selezionate, l'articolazione è completata.
 
-Not the most comfortable rocking chair ever, but it's got a lot of data going on.
+Non è la sedia a dondolo più comoda di sempre, ma include molti dati.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 13.jpg>)
 
-Last step, let's reverse the direction of the striated members. As we used transpose in the previous exercise, we'll do something similar here.
+Come ultimo passaggio, invertire la direzione dei membri striati. Dal momento che è stata utilizzata la trasposizione nell'esercizio precedente, si farà qualcosa di simile qui.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 14.jpg>)
 
-> 1. Since we have one more tier to the hierarchy, so we need to use **List.Map** with a **List.Tranpose** function to change the direction of our Nurbs curves.
+> 1. Poiché c'è un livello in più nella gerarchia, è necessario utilizzare **List.Map** con una funzione **List.Tranpose** per modificare la direzione delle curve NURBS.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 15.jpg>)
 
-> 1. We may want to increase the number of treads, so we can change the **Code Block** to `0..1..#20;` `0..1..#30;`
+> 1. Potrebbe essere necessario aumentare il numero di pedate, in modo da poter modificare **Code Block** in `0..1..#20;` `0..1..#30;`.
 
-The first version of the rocking chair was sleek, so our second model offers an off-road, sport-utility version of recumbency.
+La prima versione della sedia a dondolo era elegante, quindi il secondo modello offre una versione sportiva e informale della seduta.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 16.jpg>)

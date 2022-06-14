@@ -1,10 +1,10 @@
-# Surfaces: Interpolated, Control Points, Loft, Revolve
+# Superfici: punti interpolati e di controllo, loft, rivoluzione
 
-The two-dimensional analog to a NurbsCurve is the NurbsSurface, and like the freeform NurbsCurve, NurbsSurfaces can be constructed with two basic methods: inputting a set of base points and having Dynamo interpolate between them, and explicitly specifying the control points of the surface. Also like freeform curves, interpolated surfaces are useful when a designer knows precisely the shape a surface needs to take, or if a design requires the surface to pass through constraint points. On the other hand, Surfaces created by control points can be more useful for exploratory designs across various smoothing levels.
+L'analogia bidimensionale con una NurbsCurve è la NurbsSurface e, come la NurbsCurve di forma libera, le NurbsSurface possono essere costruite con due metodi di base: l'inserimento di un insieme di punti base con l'interpolazione di Dynamo tra di essi e l'indicazione esplicita dei punti di controllo della superficie. Come per le curve a mano libera, le superfici interpolate sono utili quando un progettista conosce con precisione la forma che una superficie deve assumere o se un progetto richiede che la superficie attraversi punti di vincolo. Dall'altra parte, le superfici create mediante punti di controllo possono essere più utili per la progettazione esplorativa in diversi livelli di levigatezza.
 
-### Interpolated Surface
+### Superficie interpolata
 
-To create an interpolated surface, simply generate a two-dimensional collection of points approximating the shape of a surface. The collection must be rectangular, that is, not jagged. The method _NurbsSurface.ByPoints_ constructs a surface from these points.
+Per creare una superficie interpolata, è sufficiente generare una raccolta bidimensionale di punti che si avvicinano alla forma di una superficie. La raccolta deve essere rettangolare, ovvero non irregolare. Il metodo _NurbsSurface.ByPoints_ costruisce una superficie da questi punti.
 
 ![](../images/8-2/6/Surfaces\_01.png)
 
@@ -15,9 +15,9 @@ To create an interpolated surface, simply generate a two-dimensional collection 
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### Control Points Surface
+### Superficie con punti di controllo
 
-Freeform NurbsSurfaces can also be created by specifying underlying control points of a surface. Like NurbsCurves, the control points can be thought of as representing a quadrilateral mesh with straight segments, which, depending on the degree of the surface, is smoothed into the final surface form. To create a NurbsSurface by control points, include two additional parameters to _NurbsSurface.ByPoints_, indicating the degrees of the underlying curves in both directions of the surface.
+Le NurbsSurface di forma libera possono essere create anche specificando i punti di controllo sottostanti di una superficie. Come per le NurbsCurve, i punti di controllo possono essere considerati come la rappresentazione di una mesh quadrilatera con segmenti retti, che, a seconda del grado della superficie, viene levigata nella forma della superficie finale. Per creare una NurbsSurface tramite punti di controllo, includere due parametri aggiuntivi a _NurbsSurface.ByPoints_, indicando i gradi delle curve sottostanti in entrambe le direzioni della superficie.
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
@@ -29,7 +29,7 @@ Freeform NurbsSurfaces can also be created by specifying underlying control poin
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-We can increase the degree of the NurbsSurface to change the resulting surface geometry:
+È possibile aumentare il grado della NurbsSurface per modificare la geometria della superficie risultante:
 
 ![](../images/8-2/6/Surfaces\_03.png)
 
@@ -41,9 +41,9 @@ We can increase the degree of the NurbsSurface to change the resulting surface g
 surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 ```
 
-### Loft Surface
+### Superficie di loft
 
-Just as Surfaces can be created by interpolating between a set of input points, they can be created by interpolating between a set of base curves. This is called lofting. A lofted curve is created using the _Surface.ByLoft_ constructor, with a collection of input curves as the only parameter.
+Così come è possibile creare le superfici interpolando un insieme di punti di input, è possibile crearle interpolando un insieme di curve di base. Questa procedura è denominata loft. Viene creata una curva di loft utilizzando il costruttore _Surface.ByLoft_, con una raccolta di curve di input come unico parametro.
 
 ![](../images/8-2/6/Surfaces\_04.png)
 
@@ -58,11 +58,11 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### Revolve Surface
+### Superficie di rivoluzione
 
-Surfaces of revolution are an additional type of surface created by sweeping a base curve around a central axis. If interpolated surfaces are the two-dimensional analog to interpolated curves, then surfaces of revolution are the two-dimensional analog to circles and arcs.
+Le superfici di rivoluzione sono un tipo aggiuntivo di superficie creato tramite l'estrusione di una curva di base attorno ad un asse centrale. Se le superfici interpolate sono l'analogia bidimensionale con le curve interpolate, le superfici di rivoluzione sono l'analogia bidimensionale con i cerchi e gli archi.
 
-Surfaces of revolution are specified by a base curve, representing the “edge” of the surface; an axis origin, the base point of the surface; an axis direction, the central “core” direction; a sweep start angle; and a sweep end angle. These are used as the input to the _Surface.Revolve_ constructor.
+Le superfici di rivoluzione sono specificate da una curva di base, che rappresenta lo "spigolo" della superficie; l'origine di un asse, il punto base della superficie; la direzione di un asse, la direzione centrale; un angolo iniziale di sweep e un angolo finale di sweep. Questi vengono utilizzati come input per il costruttore _Surface.Revolve_.
 
 ![](../images/8-2/6/Surfaces\_05.png)
 

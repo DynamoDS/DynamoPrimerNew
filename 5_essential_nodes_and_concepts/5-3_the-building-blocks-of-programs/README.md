@@ -1,5 +1,5 @@
-# The Building Blocks of Programs
+# Elementi di base dei programmi
 
-Once we are ready to dive deeper into developing Visual Programs, we will need a deeper understanding of the building blocks we will use. This chapter introduces fundamental concepts around data - the stuff that travels through the Wires of our Dynamo program.
+Una volta pronti ad approfondire lo sviluppo di programmi visivi, sarà necessario acquisire una comprensione più dettagliata degli elementi di base che si utilizzeranno. In questo capitolo sono presentati i concetti fondamentali relativi ai dati, ovvero gli oggetti che attraversano i fili del programma Dynamo.
 
 ![](<../images/5-3/building blocks of program.png>)

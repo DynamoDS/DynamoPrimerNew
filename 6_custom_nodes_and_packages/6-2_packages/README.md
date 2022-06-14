@@ -1,5 +1,5 @@
-# Packages
+# Pacchetti
 
-Once you have created a few Custom Nodes the very next step is to begin organizing and publishing them by way of Packages - a convenient way to store and share your nodes with the Dynamo Community.
+Dopo aver creato alcuni nodi personalizzati, il passaggio successivo consiste nell'iniziare a organizzarli e pubblicarli tramite pacchetti, un modo pratico per memorizzare e condividere i nodi con la comunità di Dynamo.
 
 ![IMAGE](<../images/6-2/packages cover.jpg>)

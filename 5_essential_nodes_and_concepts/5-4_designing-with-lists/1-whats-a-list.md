@@ -1,108 +1,108 @@
-# What's a List
+# Che cos'è un elenco?
 
-### What's a List?
+### Che cos'è un elenco?
 
-A list is a collection of elements, or items. Take a bunch of bananas, for example. Each banana is an item within the list (or bunch). It's easier to pick up a bunch of bananas rather than each banana individually, and the same holds for grouping elements by parametric relationships in a data structure.
+Un elenco è una raccolta di elementi o voci. Si prenda, ad esempio, un casco di banane. Ogni banana è una voce all'interno dell'elenco (o del casco). È più semplice raccogliere un casco di banane piuttosto che ogni singola banana e ciò vale anche per il raggruppamento di elementi secondo relazioni parametriche in una struttura di dati.
 
-![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Banane](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Foto di [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
-When we buy groceries, we put all of the purchased items into a bag. This bag is also a list. If we're making banana bread, we need 3 bunches of bananas (we're making a _lot_ of banana bread). The bag represents a list of banana bunches and each bunch represents a list of bananas. The bag is a list of lists (two-dimensional) and the banana bunch is a list (one-dimensional).
+Quando si fanno acquisti nei negozi di alimentari, si mettono tutti gli oggetti acquistati in una borsa. Questa borsa è anche un elenco. Per fare il pane alla banana, occorrono 3 caschi di banane (servono per fare _molto_ pane alla banana). La borsa rappresenta un elenco di caschi di banane e ogni casco rappresenta un elenco di banane. La borsa è un elenco di elenchi (bidimensionali) e il casco di banane è un elenco (unidimensionale).
 
-In Dynamo, list data is ordered, and the first item in each list has an index "0". Below, we'll discuss how lists are defined in Dynamo and how multiple lists relate to one another.
+In Dynamo, i dati dell'elenco vengono ordinati e la prima voce di ogni elenco ha un indice 0. Di seguito, saranno descritte la modalità di definizione degli elenchi in Dynamo e la modalità di relazione reciproca tra più elenchi.
 
-### Zero-Based Indices
+### Indici in base zero
 
-One thing that might seem odd at first is that the first index of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index 0.
+Una cosa che potrebbe sembrare strana all'inizio è che il primo indice di un elenco è sempre 0; non 1. Così, quando si parla della prima voce di un elenco, si intende in realtà la voce che corrisponde all'indice 0.
 
-For example, if you were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if you were to put your fingers in a list, Dynamo would have given them indices from 0 to 4. While this may seem a little strange to programming beginners, the zero-based index is standard practice in most computation systems.
+Ad esempio, se si dovesse contare il numero di dita della mano destra, è probabile aver contato da 1 a 5. Tuttavia, se si dovessero inserire le dita in un elenco, in Dynamo sarebbero stati assegnati loro indici compresi tra 0 e 4. Sebbene questo possa sembrare un po' strano ai principianti in fatto di programmazione, l'indice in base zero è una pratica standard nella maggior parte dei sistemi di calcolo.
 
-Note that we still have 5 items in the list; it’s just that the list is using a zero-based counting system. And the items being stored in the list don’t just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
+Nell'elenco sono ancora presenti 5 voci, questo perché l'elenco sta utilizzando un sistema di conteggio in base zero. E le voci memorizzate nell'elenco non devono essere solo numeri. Possono essere qualsiasi tipo di dati supportato da Dynamo, ad esempio punti, curve, superfici, famiglie e così via.
 
 ![](<../images/5-4/1/what's a list - zero based indices.jpg>)
 
-> a. Index
+> a. Indice
 >
-> b. Point
+> b. Punto
 >
-> c. Item
+> c. Elemento
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a watch node to another node's output. By default, the watch node automatically shows all indices to the left side of the list and displays the data items on the right.
+Spesso il modo più semplice per esaminare il tipo di dati memorizzati in un elenco è collegare un nodo di controllo all'output di un altro nodo. Per default, il nodo di controllo mostra automaticamente tutti gli indici sul lato sinistro dell'elenco e visualizza gli elementi di dati sul lato destro.
 
-These indices are a crucial element when working with lists.
+Questi indici sono un elemento fondamentale quando si utilizzano gli elenchi.
 
-### Inputs and Outputs
+### Input e output
 
-Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius**:
+Per quanto riguarda gli elenchi, input e output variano a seconda del nodo di Dynamo utilizzato. Ad esempio, è possibile utilizzare un elenco di 5 punti e collegare questo output a due diversi nodi di Dynamo: **PolyCurve.ByPoints** e **Circle.ByCenterPointRadius**:
 
 ![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
 
-> 1. The _points_ input for **PolyCurve.ByPoints** is looking for _"Point\[]"_. This represents a list of points
-> 2. The output for **PolyCurve.ByPoints** is a single polycurve created from a list of five point.
-> 3. The _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_.
-> 4. The output for **Circle.ByCenterPointRadius** is a list of five circles, whose centers correspond to the original list of points.
+> 1. L'input _points_ per **PolyCurve.ByPoints** cerca _Point\[]_. Rappresenta un elenco di punti.
+> 2. L'output per **PolyCurve.ByPoints** è una PolyCurve singola creata da un elenco di cinque punti.
+> 3. L'input _centerPoint_ per **Circle.ByCenterPointRadius** richiede _"Point"_.
+> 4. L'output per **Circle.ByCenterPointRadius** è un elenco di cinque cerchi i cui centri corrispondono all'elenco originale di punti.
 
-The input data for **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius** are the same, however the **Polycurve.ByPoints** node gives us one polycurve while the **Circle.ByCenterPointRadius** node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
+I dati di input per **PolyCurve.ByPoints** e **Circle.ByCenterPointRadius** sono gli stessi, tuttavia il nodo **Polycurve.ByPoints** fornisce una PolyCurve mentre il nodo **Circle.ByCenterPointRadius** fornisce 5 cerchi con centri in ogni punto. In modo intuitivo, questa operazione ha senso: la PolyCurve viene disegnata come curva che collega i 5 punti, mentre i cerchi creano un cerchio diverso in ogni punto. Quindi cosa sta succedendo con i dati?
 
-Hovering over the _points_ input for **Polycurve.ByPoints**, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
+Posizionando il cursore sull'input _points_ per **Polycurve.ByPoints**, si noterà che l'input cerca _Point\[]_. Notare le parentesi alla fine. Rappresenta un elenco di punti e, per creare una PolyCurve, l'input deve essere un elenco per ogni PolyCurve. Questo nodo comprimerà pertanto ogni elenco in una PolyCurve.
 
-On the other hand, the _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
+Dall'altro lato, l'input _centerPoint_ per **Circle.ByCenterPointRadius** richiede _"Point"_. Questo nodo cerca un punto, come elemento, per definire il punto centrale del cerchio. Per questo motivo, si ottengono cinque cerchi dai dati di input. Riconoscere queste differenze con gli input in Dynamo aiuta a comprendere meglio il funzionamento dei nodi durante la gestione dei dati.
 
-### Lacing
+### Collegamento
 
-Data matching is a problem without a clean solution. It occurs when a node has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+La corrispondenza dei dati è un problema senza una soluzione chiara. Si verifica quando un nodo ha accesso a input di dimensioni diverse. La modifica dell'algoritmo di corrispondenza dei dati può portare a risultati molto diversi.
 
-Imagine a node which creates line segments between points (**Line.ByStartPointEndPoint**). It will have two input parameters which both supply point coordinates:
+Si immagini un nodo che crea segmenti di linea tra punti (**Line.ByStartPointEndPoint**). Avrà due parametri di input che forniscono entrambi le coordinate dei punti:
 
-#### Shortest List
+#### L'elenco più breve
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the “Shortest List” algorithm. This is the default behavior for Dynamo nodes:
+Il modo più semplice consiste nel collegare gli input uno ad uno finché uno dei flussi non si esaurisce. Viene definito l'algoritmo "l'elenco più breve". Questo è il funzionamento di default per i nodi di Dynamo:
 
 ![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
 
-#### Longest List
+#### L'elenco più lungo
 
-The “Longest List” algorithm keeps connecting inputs, reusing elements, until all streams run dry:
+L'algoritmo "l'elenco più lungo" continua a collegare gli input e a riutilizzare gli elementi, finché tutti i flussi non si esauriscono:
 
 ![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
 
-#### Cross Product
+#### Globale
 
-Finally, the “Cross Product” method makes all possible connections:
+Infine, il metodo Globale rende possibili tutti i collegamenti:
 
 ![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
 
-As you can see there are different ways in which we can draw lines between these sets of points. Lacing options are found by right-clicking the center of a node and choosing the "Lacing" menu.
+Come si può vedere, esistono diversi modi in cui è possibile disegnare linee tra questi gruppi di punti. Per trovare le opzioni del collegamento, fare clic con il pulsante destro del mouse sul centro di un nodo e scegliere il menu Collegamento.
 
 ![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
 
-## Exercise
+## Esercizio
 
-> Download the example file by clicking on the link below.
+> Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
-> A full list of example files can be found in the Appendix.
+> Un elenco completo di file di esempio è disponibile nell'Appendice.
 
 {% file src="../datasets/5-4/1/Lacing.dyn" %}
 
-To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
+Per dimostrare le operazioni di collegamento riportate di seguito, si utilizzerà questo file di base per definire l'elenco più breve, l'elenco più lungo e il collegamento globale.
 
-We'll change the lacing on **Point.ByCoordinates**, but won't change anything else about the graph above.
+Si modificherà il collegamento in **Point.ByCoordinates**, ma non cambierà nient'altro del grafico riportato sopra.
 
-### Shortest List
+### L'elenco più breve
 
-Choosing _shortest list_ as the lacing option (also the default option), we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
+Scegliendo _Più breve_ come opzione di collegamento (anche l'opzione di default), si ottiene una linea diagonale di base composta da cinque punti. I cinque punti indicano la lunghezza dell'elenco minore, pertanto il collegamento con l'elenco più breve viene interrotto dopo che si è arrivati alla fine di un elenco.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
 
-### **Longest List**
+### **L'elenco più lungo**
 
-By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
+Modificando il collegamento in _Più lungo_, si ottiene una linea diagonale che si estende verticalmente. Con lo stesso metodo del diagramma concettuale, l'ultima voce nell'elenco di 5 voci verrà ripetuta per raggiungere la lunghezza dell'elenco più lungo.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
 
-### **Cross Product**
+### **Globale**
 
-By changing the lacing to _Cross Product_, we get every combination between each list, giving us a 5x10 grid of points. This is an equivalent data structure to the cross product as shown in the concept diagram above, except our data is now a list of lists. By connecting a polycurve, we can see that each list is defined by its X-Value, giving us a row of vertical lines.
+Modificando il collegamento in _Globale_, si ottiene ogni combinazione tra ciascun elenco, fornendo una griglia di punti 5 x 10. Si tratta di una struttura di dati equivalente secondo il metodo globale come mostrato nel diagramma concettuale riportato sopra, tranne per il fatto che i dati sono ora un elenco di elenchi. Collegando una PolyCurve, è possibile vedere che ogni elenco viene definito dal relativo valore X, restituendo una riga di linee verticali.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
