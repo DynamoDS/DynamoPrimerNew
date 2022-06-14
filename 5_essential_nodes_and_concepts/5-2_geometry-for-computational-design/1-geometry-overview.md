@@ -1,62 +1,62 @@
-# Geometry Overview
+# 형상 개요
 
-## Geometry in Dynamo Sandbox
+## Dynamo Sandbox의 형상
 
-**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
+**형상**은 설계를 위한 언어입니다. 프로그래밍 언어나 환경의 핵심에 형상 커널이 포함되어 있으면 알고리즘을 통해 정확하고 강력한 모델을 설계하고, 설계 루틴을 자동화하고, 설계를 반복해서 생성할 수 있게 됩니다.
 
-Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
+형상 유형과 **이러한 유형이 어떻게 관련되어 있는지**를 잘 이해하면 라이브러리에서 사용할 수 있는 [형상 노드](1-geometry-overview.md#stepping-through-the-hierarchy) 모음을 탐색할 수 있습니다. Geometry 노드는 계층이 아닌 알파벳순으로 정리되어 있습니다. 여기서는 Dynamo 인터페이스 내 배치와 유사하게 표시됩니다.
 
 ![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
 
-Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
+또한 Dynamo에서 모델을 만들고 배경 미리보기에 표시되는 항목의 미리보기를 그래프의 데이터 흐름에 연결하는 작업은 시간이 갈수록 점점 더 간단해집니다.
 
 ![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
 
-> 1. Note the assumed coordinate system rendered by the grid and colored axes
-> 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
+> 1. 가정된 좌표계는 그리드 및 색상 축으로 렌더링됩니다.
+> 2. 선택된 노드에서는 해당하는 형상(노드에서 형상을 작성하는 경우)을 강조 표시 색상으로 배경에 렌더링합니다.
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-## The Concept of Geometry
+## 형상 개념
 
-Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.
+일반적으로 정의된 형상은 그림의 모양, 크기, 상대 위치 및 공간 특성을 연구한 것입니다. 이 분야에는 수천 년의 유구한 역사가 있습니다. 컴퓨터의 출현과 대중화를 통해 우리는 형상을 정의하고 탐색하고 생성하는 강력한 도구를 얻었습니다. 이제 복잡한 기하학적 상호 작용의 결과를 계산하는 작업이 매우 쉬워졌기에 우리가 실제로 그렇게 하고 있다는 사실은 거의 분명합니다.
 
 ![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
 
-> If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.
+> 컴퓨터의 성능을 통해 얼마나 다양하고 복잡한 형상을 얻을 수 있는지 궁금하다면 알고리즘을 테스트하는 데 사용되는 표준 모델인 Stanford Bunny를 웹에서 빠르게 검색해 보십시오.
 
-Understanding geometry in the context of algorithms, computing, and complexity, may sound daunting; however, there are a few key, and relatively simple, principles that we can establish as fundamentals to start building towards more advanced applications:
+알고리즘, 컴퓨팅 및 복잡성의 맥락에서 형상을 파악하는 일은 다소 어려울 수 있지만, 고급 응용프로그램 작성을 시작하기 위한 기본 사항으로 설정할 수 있는 핵심적이고 비교적 간단한 원칙이 몇 가지 있습니다.
 
-1. Geometry is **Data** - to the computer and Dynamo, a Bunny not all that different from a number.
-2. Geometry relies on **Abstraction** - fundamentally, geometric elements are described by numbers, relationships, and formulas within a given spatial coordinate system
-3. Geometry has a **Hierarchy** - points come together to make lines, lines come together to make surfaces, and so on
-4. Geometry simultaneously describes both **the Part and the Whole** - when we have a curve, it is both the shape as well as all the possible points along it
+1. 형상은 **데이터**입니다. 컴퓨터 및 Dynamo의 입장에서 볼 때 Bunny는 숫자와 그렇게 다르지 않습니다.
+2. 형상은 **추상화**를 활용합니다. 기본적으로 기하학적 요소는 지정된 공간 좌표계 내에서 숫자, 관계 및 공식으로 설명됩니다.
+3. 형상에는 **계층**이 있습니다. 점이 함께 모여 선을 만들고 선이 함께 모여 표면을 만드는 식입니다.
+4. 형상은 **부분과 전체**를 동시에 설명합니다. 곡선이 있는 경우 곡선의 모양뿐만 아니라 해당 곡선을 구성하는 모든 점도 볼 수 있습니다.
 
-In practice, these principles mean that we need to be aware of what we are working with (what type of geometry, how was it created, etc.) so that we can fluidly compose, decompose, and recompose different geometries as we develop more complex models.
+실제로 이러한 원칙은 우리가 작업 중인 항목(형상의 유형, 형상이 작성된 방식 등)을 잘 알고 있어야 함을 의미합니다. 그래야 보다 복잡한 모델을 개발할 때 여러 형상을 유동적으로 구성, 분해 및 재구성할 수 있습니다.
 
-## Stepping through the Hierarchy
+## 계층 구조 단계별 이동
 
-Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
+잠시 형상에 대한 추상적 설명 및 계층적 설명 간의 관계를 살펴보겠습니다. 이러한 두 가지 개념은 서로 관련되어 있지만 처음에는 명확하게 드러나지 않을 수 있으므로 좀 더 심층적인 워크플로우 또는 모델 개발을 시작하면 개념적 장애물에 빠르게 도달할 수 있습니다. 초보자인 경우 차원을 통해 우리가 모델링하는 "대상"을 쉽게 파악해 보십시오. 모양을 나타내는 데 필요한 차원을 통해 형상이 계층적으로 구성된 방식을 이해할 수 있습니다.
 
-![Computational Geometry](../images/5-2/1/GeometryDimensionality.jpg)
+![계산 형상](../images/5-2/1/GeometryDimensionality.jpg)
 
-> 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
-> 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
-> 3. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
-> 4. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
+> 1. **점**(좌표로 정의됨)에는 차원이 없습니다. 이는 각 좌표를 나타내는 숫자일 뿐입니다.
+> 2. **선**(두 점으로 정의됨)은 _1_차원입니다. 선을 따라 앞으로(양의 방향) 또는 뒤로(음의 방향) "걸어갈 수 있습니다".
+> 3. **평면**(두 선으로 정의됨)은 _2_차원입니다. 이제 좀 더 왼쪽으로 또는 좀 더 오른쪽으로 걸어갈 수 있습니다.
+> 4. **상자**(두 평면으로 정의됨)는 _3_차원입니다. 위쪽 또는 아래쪽에 상대적인 위치를 정의할 수 있습니다.
 
-Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
+차원은 형상 분류를 시작하는 편리한 방법이지만 가장 좋은 방법은 아닙니다. 결국 점, 선, 평면 및 상자만으로 모델링하지는 않게 됩니다. 곡선이 필요할 수도 있으니까요. 또한 완전히 추상화된 형상 유형의 완전히 다른 카테고리가 있습니다. 이에 따라 방향, 체적 또는 부분 간의 관계와 같은 특성이 정의됩니다. 실제로는 벡터를 적용할 수 없으므로 공간에 표시되는 대상과 비교해서 정의하려면 어떻게 해야 할까요? 기하학적 계층을 더 상세하게 분류하면 추상 유형과 "도우미" 간의 차이점이 적용됩니다. 이는 각각 지원하는 항목 및 모델 요소의 모양을 그리는 데 도움이 되는 유형별로 그룹화할 수 있습니다.
 
-![Geometry Hierarchy](../images/5-2/1/GeometryHierarchy.jpg)
+![형상 계층](../images/5-2/1/GeometryHierarchy.jpg)
 
-## Going Further with Geometry
+## 형상에 대해 자세히 알아보기
 
-Creating models in Dynamo is not limited to what we can generate with Nodes. Here are some key ways to take your process to the next level with Geometry:
+Dynamo에서 모델을 작성하는 작업은 노드를 사용하여 생성할 수 있는 작업으로만 국한되지 않습니다. 다음은 형상을 사용하여 프로세스를 다음 단계로 발전시키는 몇 가지 주요 방법입니다.
 
-1. Dynamo allows you to import files - try using a CSV for point clouds or SAT for bringing in surfaces
-2. When working with Revit, we can reference Revit elements to use in Dynamo
-3. The Dynamo Package Manager offers additional functionality for extended geometry types and operations - check out the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package
+1. Dynamo를 사용하면 파일을 가져올 수 있습니다. 점 구름에는 CSV를 사용하고, 표면을 가져올 때는 SAT를 사용해 보십시오.
+2. Revit으로 작업하는 경우 Revit 요소를 참조하여 Dynamo에서 사용할 수 있습니다.
+3. Dynamo Package Manager에서는 확장된 형상 유형 및 작업에 대한 추가 기능을 제공합니다. [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) 패키지를 확인하십시오.

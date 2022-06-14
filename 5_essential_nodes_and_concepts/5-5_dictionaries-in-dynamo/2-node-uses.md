@@ -1,29 +1,29 @@
-# Dictionary Nodes
+# 사전 노드
 
-Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
+Dynamo 2.0은 다양한 사전 노드를 제공하는데, 그러한 노드 중에는 _create, action 및 query_ 노드가 있습니다.
 
 ![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
 
-#### Create
+#### 작성
 
-1.`Dictionary.ByKeysValues` will create a dictionary with the supplied values and keys. _(The number of entries will be whatever the shortest list input is)_
+1.`Dictionary.ByKeysValues`는 제공된 값과 키를 사용해서 사전을 작성합니다. _항목 수는 가장 짧은 리스트 입력이 됩니다._
 
-#### Action
+#### 동작
 
-2\. `Dictionary.Components` will produce the components of the input dictionary. _(This is the reverse of the create node.)_
+2\. `Dictionary.Components`는 입력 사전의 구성요소를 생성합니다. _create 노드의 역 작업입니다._
 
-3\. `Dictionary.RemoveKeys` will produce a new dictionary object with the input keys removed.
+3\. `Dictionary.RemoveKeys`는 입력 키가 제거된 새 사전 객체를 생성합니다.
 
-4\. `Dictionary.SetValueAtKeys` will produce a new dictionary based on the input keys and the values to replace the current value at the corresponding keys.
+4\. `Dictionary.SetValueAtKeys`는 입력 키와 값을 기준으로 새 사전을 생성하여 해당 키의 현재 값을 대치합니다.
 
-5\. `Dictionary.ValueAtKey` will return the value at the input key.
+5\. `Dictionary.ValueAtKey`는 입력 키의 값을 반환합니다.
 
-#### Count
+#### 개수
 
-6\. `Dictionary.Count` will tell you how many key value pairs are in the dictionary.
+6\. `Dictionary.Count`는 사전에 있는 키 값 쌍의 수를 알려줍니다.
 
-7\. `Dictionary.Keys` will return what keys are currently stored in the dictionary.
+7\. `Dictionary.Keys`는 현재 사전에 저장된 키를 반환합니다.
 
-8\. `Dictionary.Values` will return what values are currently stored in the dictionary.
+8\. `Dictionary.Values`는 현재 사전에 저장된 값을 반환합니다.
 
-Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.
+색인과 리스트로 작업하는 이전 방법 대신, 전반적으로 데이터를 사전과 연관 짓는 것이 유용한 대안이 될 수 있습니다.

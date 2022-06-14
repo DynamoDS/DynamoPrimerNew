@@ -1,79 +1,79 @@
-# Scripting Strategies
+# 스크립팅 전략
 
-Text-based scripting within the visual-scripting environment enables powerful and visual relationships using DesignScript, Python, and ZeroTouch (C#). The user can expose elements such as input sliders, condense large operations into DesignScript, and access powerful tools and libraries through Python or C# all within the same workspace. If managed effectively, combining these strategies can lend a great deal of customization, clarity, and efficiency to the overall program. The following are a set of guidelines to help you augment your visual-script with text-script.
+시각적 스크립팅 환경 내의 텍스트 기반 스크립팅을 활용하면 DesignScript, Python, ZeroTouch(C#)를 사용하여 강력한 시각적 관계를 사용할 수 있습니다. 사용자는 입력 슬라이더와 같은 요소를 노출시키고, 대규모 작업을 DesignScript로 압축하며, 동일한 작업공간 내에서 Python 또는 C#을 통해 강력한 도구 및 라이브러리에 액세스할 수 있습니다. 효과적으로 관리할 경우 이러한 전략을 결합하면 전체 프로그램에 대해 사용자화 사용 가능성, 명확성 및 효율성을 많이 향상할 수 있습니다. 아래에는 텍스트 스크립트를 사용하여 시각적 스크립트를 보강하는 데 도움이 되는 일련의 지침이 나와 있습니다.
 
 ![](./images/2/cad-chart-textual.jpg)
 
-### Know When to Script
+### 스크립팅해야 하는 경우에 대해 알아보기
 
-Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
+텍스트 스크립팅의 경우 시각적 프로그래밍보다 더 복잡한 관계를 설정할 수 있지만 그와 겹치는 기능도 많습니다. 노드가 효과적으로 사전에 패키지된 코드이고, 전체 Dynamo 프로그램을 DesignScript 또는 Python으로 작성할 수 있기 때문에 그렇습니다. 그러나 노드와 와이어의 인터페이스에서 그래픽 정보의 직관적인 흐름을 작성하므로 우리는 시각적 스크립팅을 사용합니다. 텍스트 스크립팅의 기능이 시각적 스크립팅보다 유용한 지점을 알면 노드와 와이어의 직관적인 특성을 포기하지 않고 이 기능을 사용해야 하는 경우에 대한 중요한 단서를 얻게 될 것입니다. 아래에는 스크립팅해야 하는 경우와 사용해야 하는 언어에 대한 지침이 나와 있습니다.
 
-**Use text-scripting for:**
+**텍스트 스크립팅의 목적:**
 
-* Looping
-* Recursion
-* Accessing external libraries
+* 루핑
+* 재귀
+* 외부 라이브러리에 액세스
 
-**Choose a language:**
+**언어 선택:**
 
 |                    |             |               |                    |                    |               |
 | ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
-|                    | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
-| **DesignScript**   | Yes         | Yes           | Yes                | No                 | Yes           |
-| **Python**         | Yes         | Yes           | Partially          | Yes                | No            |
-| **ZeroTouch (C#)** | No          | No            | No                 | Yes                | No            |
+|                    | **루핑** | **재귀** | **노드 압축** | **Ext. 라이브러리** | **줄임** |
+| **DesignScript** | 예 | 예 | 예 | 아니오 | 예 |
+| **Python** | 예 | 예 | 부분적 | 예 | 아니오 |
+| **ZeroTouch(C#)** | 아니요 | 아니오 | 아니오 | 예 | 아니오 |
 
 {% hint style="info" %}
-Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
+각 Dynamo 라이브러리에서 액세스 가능한 리스트를 보려면 [스크립팅 참조](13-3\_scripting-reference.md)를 참조하십시오.
 {% endhint %}
 
-### Think Parametrically
+### 파라메트릭 방식으로 생각하기
 
-When scripting in Dynamo, an inevitably parametric environment, it is wise to structure your code relative to the framework of nodes and wires it will be living in. Consider the node containing your text-script as though it is any other node in the program with a few specific inputs, a function, and an expected output. This immediately gives your code inside the node a small set of variables from which to work, the key to a clean parametric system. Here are some guidelines for better integrating code into a visual program.
+필연적으로 파라메트릭 환경인 Dynamo에서 스크립팅할 경우 코드가 상주할 노드 및 와이어의 프레임워크를 기준으로 코드를 구성하는 것이 좋습니다. 텍스트 스크립트가 포함된 노드는 소수의 특정 입력, 함수 및 예상 출력이 있는 프로그램의 다른 노드처럼 생각하십시오. 그러면 즉시 해당 노드 내의 코드에 작은 변수 세트가 포함되어 작동하게 되며, 이것이 깔끔한 파라메트릭 시스템의 열쇠입니다. 아래에는 코드를 시각적 프로그램에 보다 효율적으로 통합하기 위한 몇 가지 지침이 나와 있습니다.
 
-**Identify the external variables:**
+**외부 변수 식별하기:**
 
-* Try to determine the given parameters in your design problem so that you can construct a model that directly builds off that data.
-* Before writing code, identify the variables:
-  * A minimal set of inputs
-  * The intended output
-  * Constants
+* 해당 데이터를 직접 작성하는 모델을 구성할 수 있도록 설계 문제에서 지정된 매개변수를 확인해 보십시오.
+* 코드를 작성하기 전에 다음 변수를 식별하십시오.
+   * 최소한의 입력 세트
+   * 의도한 출력
+   * 상수
 
 ![](<./images/2/think parametrically 01.jpg>)
 
-> Several variables have been established prior to writing code.
+> 몇 가지 변수는 코드를 작성하기 전에 설정되어 있습니다.
 >
-> 1. The surface we will simulate rainfall on.
-> 2. The number of rain drops (agents) we want.
-> 3. How far we want the rain drops to travel.
-> 4. Toggle between descending the steepest path versus traversing the surface.
-> 5. Python Node with the respective number of inputs.
-> 6. A Code Block to make the returned curves blue.
+> 1. 강우를 시뮬레이션할 표면
+> 2. 기본 빗방울 수(에이전트)
+> 3. 기본 빗방울 이동 거리
+> 4. 가장 가파른 경로를 내려가는 경우와 표면을 횡단하는 경우 간의 전환
+> 5. Python 노드(각 입력 수 포함)
+> 6. 반환된 곡선을 파란색으로 만드는 Code Block
 
-**Design the internal relationships:**
+**내부 관계 설계하기:**
 
-* Parametricism allows for certain parameters or variables to be edited in order to manipulate or alter the end result of an equation or system.
-* Whenever entities in your script are logically related, aim to define them as functions of each other. This way when one is modified, the other can update proportionally.
-* Minimize number of inputs by only exposing key parameters:
-  * If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.
+* 매개변수화를 사용하면 방정식 또는 시스템의 최종 결과를 조작하거나 변경하기 위해 특정 매개변수 또는 변수를 편집할 수 있습니다.
+* 스크립트의 엔터티가 논리적으로 관련된 경우 항상 서로의 함수로 정의하십시오. 이렇게 하면 하나가 수정되는 경우 나머지 요소가 비례적으로 업데이트될 수 있습니다.
+* 다음과 같이 키 매개변수를 노출하는 방식으로만 입력 수를 최소화합니다.
+   * 매개변수 세트를 더 많은 상위 매개변수에서 파생할 수 있는 경우 상위 매개변수만 스크립트 입력으로 노출합니다. 그러면 인터페이스의 복잡성이 줄어들어 스크립트의 가용성이 높아집니다.
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> The code "modules" from the example in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> [Python 노드](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html)의 예제에 있는 코드 "모듈"입니다.
 >
-> 1. Inputs.
-> 2. Variables internal to the script.
-> 3. A loop that uses these inputs and variables to perform its function.
+> 1. 입력
+> 2. 스크립트 내부의 변수
+> 3. 이러한 입력 및 변수를 사용하여 해당 함수를 수행하는 루프
 
 {% hint style="info" %}
-Tip: Place as much emphasis on the process as you do on the solution.
+팁: 솔루션에서처럼 과정에 최대한 중점을 두십시오.
 {% endhint %}
 
-### **Don't repeat yourself (the DRY principle):**
+### **DRY(Don't Repeat Yourself) 원칙:**
 
-* When you have multiple ways to express the same thing in your script, at some point the duplicate representations will fall out of sync which can lead to maintenance nightmares, poor factoring, and internal contradictions.
-* The DRY principle is stated as "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system":
-  * When this principle is successfully applied, all the related elements in your script change predictably and uniformly and all the unrelated elements do not have logical consequences on each other.
+* 스크립트에서 동일한 항목을 표현할 방법이 여러 가지 있는 경우 어느 시점에 중복 표현이 동기화되지 않아 유지보수 문제, 공통 분할 불량, 내부 모순이 초래될 수 있습니다.
+* DRY 원칙에 따르면 "모든 지식은 시스템 내에서 단일하고, 명백하며, 권위 있게 표현되어야 합니다."
+   * 이 원칙이 제대로 적용되면 스크립트의 모든 관련 요소가 예측 가능한 방식으로 균일하게 변경되고, 모든 관련 없는 요소가 서로 간에 논리적인 결과를 일으키지 않습니다.
 
 ```
 ### BAD
@@ -95,127 +95,127 @@ for i in range(count):
 ```
 
 {% hint style="info" %}
-Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
+팁: 스크립트에서 엔터티(위 예에서는 상수)를 복제하기 전에 소스에 링크할 수 있는지에 대해 자문해 보십시오.
 {% endhint %}
 
-### Structure Modularly
+### 모듈 방식으로 구성하기
 
-As your code gets longer and more complex the “big idea”, or overarching algorithm becomes increasingly illegible. It also becomes more difficult to keep track of what (and where) specific things happen, find bugs when things go wrong, integrate other code, and assign development tasks. To avoid these headaches it’s wise to write code in modules, an organizational strategy that breaks up code based on the task it executes. Here are some tips for making your scripts more manageable by way of modularization.
+코드가 점점 길어지고 복잡해짐에 따라 “중요한 아이디어”나 매우 중요한 알고리즘은 점점 더 읽기 어려워집니다. 또한 어떤 특정 상황이 어디에서 발생하는지 추적하거나, 문제가 발생하는 경우 버그를 찾거나, 다른 코드를 통합하거나, 개발 작업을 지정하기가 더욱 어려워집니다. 이러한 문제를 방지하기 위해 실행하는 작업에 따라 코드를 분할하는 구성 전략으로, 모듈에서 코드를 작성하는 것이 좋습니다. 다음은 모듈화 방식으로 스크립트를 보다 쉽게 관리할 수 있는 몇 가지 팁입니다.
 
-**Write code in modules:**
+**모듈에 코드 작성하기:**
 
-* A "module" is a group of code that performs a specific task, similar to a Dynamo Node in the workspace.
-* This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).
-* Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.
+* "모듈"은 작업공간의 Dynamo 노드와 유사하게 특정 작업을 수행하는 코드 그룹입니다.
+* 인접 코드(함수, 클래스, 입력 그룹 또는 가져오고 있는 라이브러리)와 시각적으로 분리해야 하는 무엇이든 모듈이 될 수 있습니다.
+* 모듈에서 코드를 개발하면 시각적이고 직관적인 품질의 노드뿐만 아니라 텍스트 스크립팅에서만 가능한 복잡한 관계도 활용할 수 있습니다.
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> These loops call a class named "agent" that we will develop in the exercise.
+> 이러한 루프에서는 우리가 연습에서 개발할 "agent"라는 클래스를 호출합니다.
 >
-> 1. A code module that defines the start point of each agent.
-> 2. A code module that updates the agent.
-> 3. A code module that draws a trail for the agent's path.
+> 1. 각 에이전트의 시작점을 정의하는 코드 모듈
+> 2. 에이전트를 업데이트하는 코드 모듈
+> 3. 에이전트 경로에 대한 트레일을 그리는 코드 모듈
 
-**Spotting code re-use:**
+**코드 재사용 발견하기:**
 
-* If you find that your code does the same (or very similar) thing in more than once place, find ways to cluster it into a function that can be called.
-* "Manager" functions control program flow and primarily contain calls to "Worker" functions that handle low-level details, like moving data between structures.
+* 코드가 두 곳 이상에서 같은(또는 매우 유사한) 작업을 수행하는 것을 발견한 경우 호출할 수 있는 함수로 클러스터링할 방법을 찾으십시오.
+* “관리자” 함수는 프로그램 흐름을 제어하며, 주로 구조 간 데이터 이동과 같은 낮은 레벨의 세부 정보를 처리하는 “작업자” 함수에 대한 호출을 포함합니다.
 
-This example creates spheres with radii and color based on the Z value of the center points.
+이 예시에서는 중심점의 Z 값을 기준으로 반지름과 색상을 사용하여 구를 작성합니다.
 
 ![](<./images/2/spot code resuse.jpg>)
 
-> 1. Two "worker" parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.
-> 2. A "manager" parent function that combines the two worker functions. Calling this will call both functions inside it.
+> 1. "작업자" 상위 함수 두 개: 반지름이 있는 구를 작성하고 중심점의 Z 값을 기준으로 색상을 표시하는 함수.
+> 2. 두 작업자 함수를 결합하는 "관리자" 상위 함수. 이를 호출하면 내부의 두 함수가 모두 호출됩니다.
 
-**Only show what needs to be seen:**
+**확인해야 할 사항만 표시하기:**
 
-* A module interface expresses the elements that are provided and required by the module.
-* Once the interfaces between the units have been defined, the detailed design of each unit can proceed separately.
+* 모듈 인터페이스에는 모듈에서 제공하거나 요구하는 요소가 나타납니다.
+* 단위 간의 인터페이스가 정의되면 각 단위의 세부 설계를 별도로 진행할 수 있습니다.
 
-**Separability/Replaceability:**
+**분리 가능성/대치 가능성:**
 
-* Modules don’t know or care about each other.
+* 모듈에서는 서로에 대해 잘 모르거나 상관하지 않습니다.
 
-**General forms of modularization:**
+**모듈화의 일반적인 형태:**
 
-*   Code Grouping:
+* 코드 그룹화:
 
-    ```
-    # IMPORT LIBRARIES
-    import random
-    import math
-    import clr
-    clr.AddReference('ProtoGeometry')
-    from Autodesk.DesignScript.Geometry import *
+   ```
+   # IMPORT LIBRARIES
+   import random
+   import math
+   import clr
+   clr.AddReference('ProtoGeometry')
+   from Autodesk.DesignScript.Geometry import *
 
-    # DEFINE PARAMETER INPUTS
-    surfIn = IN[0]
-    maxSteps = IN[1]
-    ```
-*   Functions:
+   # DEFINE PARAMETER INPUTS
+   surfIn = IN[0]
+   maxSteps = IN[1]
+   ```
+* 함수:
 
-    ```
-    def get_step_size():
-      area = surfIn.Area
-      stepSize = math.sqrt(area)/100
-      return stepSize
+   ```
+   def get_step_size():
+     area = surfIn.Area
+     stepSize = math.sqrt(area)/100
+     return stepSize
 
-    stepSize = get_step_size()
-    ```
-*   Classes:
+   stepSize = get_step_size()
+   ```
+* 클래스:
 
-    ```
-    class MyClass:
-      i = 12345
+   ```
+   class MyClass:
+     i = 12345
 
-      def f(self):
-        return 'hello world'
+     def f(self):
+       return 'hello world'
 
-    numbers = MyClass.i
-    greeting = MyClass.f
-    ```
+   numbers = MyClass.i
+   greeting = MyClass.f
+   ```
 
-### Flex Continuously
+### 지속적으로 조정하기
 
-While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
+Dynamo에서 텍스트 스크립트를 개발하는 동안 실제로 작성되는 것이 기대하는 바와 일치하는지 지속적으로 확인하는 것이 좋습니다. 그러면 예기치 못한 이벤트(구문 오류, 논리 불일치, 부정확한 값, 이상 출력 등)를마지막에 한꺼번에 확인하는 대신 중간중간 드러나는 대로 빠르게 확인할 수 있습니다. 텍스트 스크립트는 캔버스의 노드 내에 있으므로 시각적 프로그램의 데이터 흐름에 이미 통합되어 있습니다. 따라서 출력할 데이터를 지정하고, 프로그램을 실행하고, Watch 노드를 사용하여 스크립트에서 흐름 상태를 평가하는 것처럼 간단하게 연속적 스크립트 모니터링을 수행할 수 있습니다. 다음은 스크립트를 구성할 때 지속적으로 검사할 수 있는 몇 가지 팁입니다.
 
-**Test as you go:**
+**진행하면서 테스트하기:**
 
-* Whenever you complete a cluster of functionality:
-  * Step back and inspect your code.
-  * Be critical. Could a collaborator understand what this is doing? Do I need to do this? Can this function be done more efficiently? Am I creating unnecessary duplicates or dependencies?
-  * Quickly test to make sure it is returning data that “makes sense”.
-* Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:
+* 기능 클러스터를 완료할 때마다 다음을 수행합니다.
+   * 이전 단계로 이동하여 코드를 검사합니다.
+   * 엄격하게 확인합니다. 공동작업자가 이 작업이 무엇인지 이해할 수 있는가? 이 작업을 수행할 필요가 있는가? 이 기능을 보다 효율적으로 수행할 수 있는가? 불필요한 중복이나 의존성을 작성하고 있는가?
+   * 빠르게 테스트하여 "타당한" 데이터가 반환되는지 확인합니다.
+* 다음과 같이 스크립트가 업데이트되면 노드에서 항상 관련 데이터를 출력하도록 스크립트에서 작업 중인 최신 데이터를 출력으로 지정합니다.
 
 ![](<./images/2/flex continuously.jpg>)
 
-> 1. Check that all edges of the solid are being returned as curves to create a bounding box around.
-> 2. Check that our Count inputs are successfully being converted to Ranges.
-> 3. Check that coordinate systems have been properly translated and rotated in this loop.
+> 1. 솔리드의 모든 모서리가 곡선으로 돌아가 경계 상자를 작성하는지 확인합니다.
+> 2. 개수 입력이 범위로 변환되는지 확인합니다.
+> 3. 이 루프에서 좌표계가 제대로 변환되고 회전되었는지 확인합니다.
 
-**Anticipate “edge cases”:**
+**"극단적인 경우" 예상하기:**
 
-* While scripting, crank your input parameters to the minimum and maximum values of their allotted domain to check if the program still functions under extreme conditions.
-* Even if the program is functioning at its extremes, check if it is returning unintended null/empty/zero values.
-* Sometimes bugs and errors that reveal some underlying problem with your script will only surface during these edge cases.
-  * Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.
+* 스크립팅하는 동안 할당된 도메인의 최솟값 및 최댓값에 입력 매개변수를 크랭크하여 프로그램이 극단적인 조건에서도 계속 작동하는지 확인합니다.
+* 프로그램이 극단적인 조건에서 작동하더라도 의도하지 않은 null/공백/0 값을 반환하는지 확인합니다.
+* 어떤 경우에는 몇몇 스크립트 관련 기본 문제를 나타내는 버그와 오류가 이러한 극단적인 경우에만 드러납니다.
+   * 오류의 원인을 파악한 다음 문제를 방지하려면 내부적으로 수정해야 할지 아니면 매개변수 도메인을 다시 정의해야 할지를 결정합니다.
 
 {% hint style="info" %}
-Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+팁: 항상 사용자가 자신에게 표시된 모든 입력 값의 모든 조합을 사용한다고 가정하십시오. 그러면 원치 않는 갑작스러운 상황이 발생하지 않습니다.
 {% endhint %}
 
-### Debug Efficiently
+### 효율적으로 디버깅하기
 
-Debugging is the process of eliminating "bugs" from your script. Bugs can be errors, inefficiencies, inaccuracies, or any unintended results. Addressing a bug can be as simple as correcting a misspelled variable name to more pervasive, structural problems with your script. Ideally, flexing your script as you build it will help to catch these potential issues early, though this is no guarantee of it being bug-free. The following is a review of several best practices from above to help you address bugs systematically.
+디버깅은 스크립트에서 "버그"를 제거하는 프로세스입니다. 버그는 오류, 비효율성, 부정확성 또는 예상치 못한 결과일 수 있습니다. 버그는 스크립트를 사용하여 철자가 잘못된 변수 이름을 보다 널리 퍼진 구조적 문제로 수정하는 것처럼 간단하게 해결할 수 있습니다. 스크립트를 만들면서 조정하면 버그가 완전히 없어진다는 보장은 없지만 이러한 잠재적 문제를 조기에 포착할 수 있습니다. 아래에는 버그를 체계적으로 해결하는 데 도움이 되는 몇 가지 모범 사례를 검토한 내용이 나와 있습니다.
 
-**Use the watch bubble:**
+**Watch 풍선 사용하기:**
 
-* Check the data returned at different places in the code by assigning it to the OUT variable, similar to the concept of flexing the program.
+* 프로그램 조정이라는 개념과 유사하게 OUT 변수에 데이터를 지정하여 코드의 여러 위치에서 반환되는 데이터를 확인합니다.
 
-**Write meaningful comments:**
+**의미 있는 주석 작성하기:**
 
-* A module of code will be much easier to debug if its intended outcome is clearly described.
+* 의도한 결과를 명확하게 설명하면 코드 모듈을 디버깅하기가 훨씬 쉽습니다.
 
 ```py
 # Loop through X and Y
@@ -231,94 +231,94 @@ for i in range(xCount):
     solids.append(solid.Transform(fromCoord,toCoord))
 ```
 
-> Normally this would be an excessive amount of commenting and blank lines, but when debugging it can be useful to break things down into manageable pieces.
+> 이 경우 일반적으로 주석과 빈 줄이 과도하게 많아지지만, 디버깅할 때 주석 내용을 관리 가능한 여러 부분으로 나누면 유용할 수 있습니다.
 
-**Leverage the code's modularity:**
+**코드의 모듈성 활용하기:**
 
-* The source of an issue can be isolated to certain modules.
-* Once the faulty module has been identified, fixing the problem is considerably simpler.
-* When a program must be modified, code that has been developed in modules will be much easier to change:
-  * You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.
+* 문제의 소스는 특정 모듈로 격리할 수 있습니다.
+* 잘못된 모듈을 식별하고 나면 문제를 훨씬 더 간단하게 해결할 수 있습니다.
+* 프로그램을 수정해야 하는 경우 모듈에서 개발된 코드는 다음과 같이 훨씬 더 쉽게 변경할 수 있습니다.
+   * 새 모듈 또는 디버깅된 모듈을 기존 프로그램에 삽입할 수 있으며, 삽입하더라도 프로그램의 나머지 부분은 변경되지 않습니다.
 
 ![](<./images/2/leverage code's modularity.jpg>)
 
-> Debugging the example file from [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> [Python 노드](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html)에서 예제 파일 디버그.
 >
-> 1. The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.
-> 2. The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.
-> 3. The code "module" we've inserted to address the xDist and yDist value issue.
+> 1. 입력 형상에서 형상 자체보다 큰 경계 상자를 반환합니다. 이는 xDist 및 yDist를 OUT에 지정하면 볼 수 있습니다.
+> 2. 입력 형상의 모서리 곡선에서 xDist 및 yDist에 대해 올바른 거리로 적절한 경계 상자를 반환합니다.
+> 3. xDist 및 yDist 값 문제를 해결하기 위해 삽입한 코드 "모듈"입니다.
 
-## Exercise: Steepest Path
+## 연습: 가장 가파른 경로
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="./datasets/9/2/SteepestPath.dyn" %}
 
-With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
+텍스트 스크립팅의 모범 사례를 고려하여 비 시뮬레이션 스크립트를 작성해 보겠습니다. 그래프 전략에서 체계적이지 않은 시각적 프로그램에 모범 사례를 적용할 수 있었지만 그렇게 하는 것은 텍스트 스크립팅을 사용하는 것보다 훨씬 더 어렵습니다. 텍스트 스크립팅에서 설정한 논리적 관계는 가시성이 낮아 복잡한 코드에서는 풀기가 거의 불가능할 수 있습니다. 텍스트 스크립팅의 기능을 사용하면 조직의 책임이 더 커집니다. 각 단계를 살펴보고 그 과정에서 모범 사례를 적용해 보겠습니다.
 
-Our script applied to an attractor-deformed surface.
+우리의 스크립트는 어트랙터가 변형된 표면에 적용됩니다.
 
 ![](<./images/2/scripting strategies - exercise - 01.jpg>)
 
-The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.
+가장 먼저 해야 할 작업은 필요한 Dynamo 라이브러리를 가져오는 것입니다. 먼저 이렇게 하면 Python에서 Dynamo 기능에 전역적으로 액세스할 수 있게 됩니다.
 
-All the libraries we intend on using need to be imported here.
+사용하려는 모든 라이브러리를 여기로 가져와야 합니다.
 
 ![](<./images/2/scripting strategies - exercise - 02.jpg>)
 
-Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.
+다음으로, 스크립트의 입력과 출력을 정의해야 합니다. 이는 노드에서 입력 포트로 표시됩니다. 이러한 외부 입력이 스크립트의 토대가 되고 파라메트릭 환경을 설정하는 열쇠가 됩니다.
 
-We need to define inputs that correspond to variables in the Python script and determine a desired output:
+Python 스크립트에서 변수에 해당하는 입력을 정의하고 원하는 출력을 결정해야 합니다.
 
 ![](<./images/2/scripting strategies - exercise - 03.jpg>)
 
-> 1. The surface we want to walk down.
-> 2. The number of agents we want to walk.
-> 3. The maximum number of steps the agents are allowed to take.
-> 4. An option to take the shortest path down the surface or traverse it.
-> 5. The Python Node with input identifiers that correspond to inputs in the script (IN\[0], IN\[1]).
-> 6. Output curves that can be displayed with a different color.
+> 1. 우리가 걸어갈 표면
+> 2. 우리가 걷게 할 에이전트의 수
+> 3. 에이전트가 걸을 수 있는 최대 걸음 수
+> 4. 표면 아래로 최단 경로를 택하거나 횡단할 수 있는 옵션
+> 5. 스크립트의 입력(IN\[0], IN\[1])에 해당하는 입력 식별자가 있는 Python 노드
+> 6. 다른 색상으로 표시할 수 있는 출력 곡선
 
-Now let's employ the practice of modularity and create the body of our script. Simulating the shortest path down a surface for multiple start points is a significant task that will require several functions. Rather than call the different functions throughout the script, we can modularize our code by collecting them into a single class, our agent. The different functions of this class or "module" can be called with different variables or even reused in another script.
+이제 모듈성 실습을 이용하여 스크립트 본문을 작성해 보겠습니다. 여러 시작점에 대해 표면 아래의 최단 경로를 시뮬레이션하는 것은 여러 함수가 필요한 중대한 작업입니다. 스크립트 전체에서 다른 함수를 호출하는 대신 이를 단일 클래스인 당사의 에이전트로 수집하여 코드를 모듈화할 수 있습니다. 이 클래스 또는 "모듈"의 여러 함수는 다른 변수를 사용하여 호출하거나 다른 스크립트에서 재사용할 수도 있습니다.
 
-We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
+한 걸음씩 걸을 때마다 가능한 가장 가파른 방향으로 이동하도록 선택하여 표면을 걷게 하려는 에이전트에 대해 다음과 같은 클래스 또는 청사진을 정의해야 합니다.
 
 ![](<./images/2/scripting strategies - exercise - 04.jpg>)
 
-> 1. Name.
-> 2. Global attributes that all the agents share.
-> 3. Instance attributes that are unique to each agent.
-> 4. A function for taking a step.
-> 5. A function for cataloging the position of each step to a trail list.
+> 1. 이름.
+> 2. 모든 에이전트가 공유하는 전역 속성
+> 3. 각 에이전트마다 고유한 인스턴스 속성
+> 4. 걷게 하는 함수
+> 5. 각 걸음의 위치를 트레일 리스트로 카탈로그화하는 함수
 
-Let's initialize the agents by defining their start location. This is a good opportunity to flex our script and make sure the agent class is working.
+시작 위치를 정의하여 에이전트를 초기화하겠습니다. 이는 스크립트를 조정하고 에이전트 클래스가 제대로 작동하는지 확인할 수 있는 좋은 기회입니다.
 
-We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
+표면을 걷는 것을 관찰하고 해당 초기 속성을 정의하려는 모든 에이전트를 인스턴스화해야 합니다.
 
 ![](<./images/2/scripting strategies - exercise - 05.jpg>)
 
-> 1. A new empty trail list.
-> 2. Where they will start their journey on the surface.
-> 3. We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.
+> 1. 비어 있는 새 트레일 리스트
+> 2. 표면에서 여정을 시작할 위치
+> 3. 여기서 스크립트가 반환하는 결과를 확인하기 위해 에이전트 리스트를 출력으로 지정했습니다. 올바른 수의 에이전트가 반환되지만, 반환되는 형상을 확인하려면 나중에 스크립트를 다시 조정해야 합니다.
 
-Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
+각 단계에서 각 에이전트를 업데이트합니다. 그런 다음 내포된 루프를 입력해야 합니다. 여기서 각 에이전트와 각 걸음에 대해 해당 위치를 업데이트하고 해당 트레일 리스트에 기록합니다. 또한 걸음마다 에이전트가 표면에서 한 걸음 더 내디뎌서 내려갈 수 없는 지점에 도달하지 않았는지 확인합니다. 그러한 조건이 충족되면 해당 에이전트의 여정이 종료됩니다.
 
 ![](<./images/2/scripting strategies - exercise - 06.jpg>)
 
-Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
+에이전트가 완전히 업데이트되었으므로 이들을 나타내는 형상을 반환해 보겠습니다. 모든 에이전트가 하강 제한 또는 최대 걸음 수에 도달한 후, 해당 트레일 리스트의 지점을 통해 polycurve를 작성하고 polycurve 트레일을 출력합니다.
 
 ![](<./images/2/scripting strategies - exercise - 07.jpg>)
 
-Our script for finding the steepest paths.
+가장 가파른 경로를 찾는 스크립트입니다.
 
 ![](<./images/2/scripting strategies - exercise - 08.jpg>)
 
-> 1. A preset that simulates rainfall on the underlying surface.
-> 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.
+> 1. 기본 표면의 강우를 시뮬레이션하는 사전 설정입니다.
+> 2. 가장 가파른 경로를 찾는 대신 기본 표면을 횡단하도록 에이전트를 전환할 수 있습니다.
 
-The full Python text-script.
+전체 Python 텍스트 스크립트입니다.
 
 ```
 ### STEEPEST PATH ALGORITHM

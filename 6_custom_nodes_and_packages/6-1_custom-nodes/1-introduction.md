@@ -1,50 +1,50 @@
-# Custom Node Introduction
+# 사용자 노드 소개
 
-Custom Nodes are constructed by nesting other nodes and custom nodes inside of a "Dynamo Custom Node," which we can think of conceptually as a container. When this container node is executed in your graph, everything inside it will be executed to allow you to reuse and share a useful combination of nodes.
+사용자 노드는 개념상 컨테이너로 간주할 수 있는 "Dynamo 사용자 노드" 내에 다른 노드 및 사용자 노드를 중첩하여 생성됩니다. 이 컨테이너 노드가 그래프에서 실행되면 해당 컨테이너 노드 내의 모든 항목이 실행되어 유용한 노드 조합을 재사용하고 공유할 수 있게 됩니다.
 
-### Adapting to Change
+### 변경 사항에 맞게 조정
 
-When you have multiple copies of a custom node in your graph, you can update all of them by editing the base custom node. This allows you to update your graph seamlessly by adapting to any changes that may occur in workflow or design.
+그래프에 여러 개의 사용자 노드 사본이 있는 경우 기본 사용자 노드를 편집하여 모든 사본을 업데이트할 수 있습니다. 이렇게 하면 워크플로우나 설계에서 발생할 수 있는 변경 사항에 맞게 조정하는 방식으로 그래프를 원활하게 업데이트할 수 있습니다.
 
-### Work Sharing
+### 작업 공유
 
-Arguably the best feature of custom nodes is their work sharing capabilities. If a "power user" creates a complex Dynamo graph and hands it off to a designer who is new to Dynamo, he/she can condense the graph to the bare essentials for design interaction. The custom node can be opened to edit the internal graph, but the "container" can be kept simple. With this process, custom nodes allow Dynamo users to design a graph that is clean and intuitive.
+사용자 노드의 가장 좋은 기능은 작업 공유 기능입니다. "파워 유저"가 복잡한 Dynamo 그래프를 만들고 Dynamo를 처음 접하는 설계자에게 전달하는 경우 그래프를 설계 상호작용을 위한 필수 요소로 압축할 수 있습니다. 사용자 노드를 열어 내부 그래프를 편집할 수 있지만 "컨테이너"는 단순하게 유지할 수 있습니다. 이 프로세스에서 사용자 노드를 사용하면 Dynamo 사용자가 깔끔하고 직관적인 그래프를 설계할 수 있습니다.
 
 ![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
 
-### Many Ways to Build a Node
+### 노드를 작성하는 여러 가지 방법
 
-There are a wide variety of ways to build custom nodes in Dynamo. In the examples in this chapter, we'll create custom nodes directly from the Dynamo UI. If you are a programmer and you are interested in C# or Zero-Touch formatting, you can reference [this page ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)on the Dynamo Wiki for a more in-depth review.
+Dynamo에서 사용자 노드를 작성하는 방법에는 여러 가지가 있습니다. 이 장의 예에서는 Dynamo UI에서 직접 사용자 노드를 작성해 보겠습니다. 자신이 프로그래머이며 C# 또는 Zero-Touch 형식에 관심이 있는 경우 Dynamo Wiki에서 [이 페이지](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)를 참조하여 더 자세히 알아볼 수 있습니다.
 
-### Custom Node Environment & Create Your First Custom Node
+### 사용자 노드 환경 및 첫 번째 사용자 노드 작성
 
-Let's jump into the custom node environment and make a simple node to calculate a percentage. The custom node environment is different from the Dynamo graph environment, but the interaction is fundamentally the same. With that said, let's create our first custom node!
+사용자 노드 환경으로 이동하여 백분율을 계산하는 단순 노드를 만들어 보겠습니다. 사용자 노드 환경은 Dynamo 그래프 환경과 다르지만, 기본적으로 상호작용은 동일합니다. 언급한 김에 바로 첫 번째 사용자 노드를 작성해 보겠습니다.
 
-To create a Custom Node from scratch, Launch Dynamo and select Custom Node, or type Ctrl + Shift + N from the canvas.
+사용자 노드를 처음부터 새로 작성하려면 Dynamo를 시작하고 사용자 노드를 선택하거나 캔버스에서 Ctrl+Shift+N을 누릅니다.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
 
-Assign a name, description, and category in the Custom Node Properties dialog.
+사용자 노드 특성 대화상자에서 이름, 설명 및 카테고리를 지정합니다.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
 
-> 1. **Name:** Percentage
-> 2. **Description**: Calculate the percentage of one value in relation to another.
-> 3. **Category:** Math.Functions
+> 1. **이름:** Percentage
+> 2. **설명**: 값 하나의 다른 값 대비 백분율을 계산합니다.
+> 3. **카테고리:** Math.Functions
 
-This will open a canvas with a yellow background, indicating that you are working inside a custom node. In this canvas you have access to all of the core Dynamo nodes, as well as the Input and Output nodes, which label the data flowing into and out of the custom node. They can be found in Input>Basic.
+지정하면 노란색 배경의 캔버스가 열립니다. 이는 사용자 노드 내에서 작업하고 있음을 나타냅니다. 이 캔버스에서는 모든 코어 Dynamo 노드와 함께 사용자 노드에서 들어오고 나가는 데이터에 레이블을 지정하는 입력 및 출력 노드에 액세스할 수 있습니다. 입력>기본에서 찾을 수 있습니다.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
 
 ![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
 
-> 1. **Inputs:** Input nodes create input ports on the custom node. The syntax for an input node is _input\_name : datatype = default\_value(optional)._
-> 2. **Outputs:** Similar to inputs, these will create and name output ports on the custom node. Consider adding a **Custom Comment** to your Input and Output ports to hint at the Input and Output types. This is discussed in more detail in the [Creating Custom Nodes section](2-creating.md).
+> 1. **입력:** 입력 노드는 사용자 노드에 입력 포트를 작성합니다. 입력 노드의 구문은 _input\_name : datatype = default\_value(선택 사항)_입니다.
+> 2. **출력:** 입력과 유사하지만, 이러한 노드는 사용자 노드에서 출력 포트를 만들고 이름을 지정합니다. 입력 및 출력 유형에 힌트를 제공하는 **사용자 주석**을 입력 및 출력 포트에 추가해 보십시오. 이는 [사용자 노드 작성 섹션](2-creating.md)에 자세히 설명되어 있습니다.
 
-You can save this custom node as a .dyf (as opposed to the standard .dyn) file and it will automatically be added to your session and future sessions. You will find the custom node in your library from the Add-ons section.
+이 사용자 노드를 .dyf(표준 .dyn와는 다름) 파일로 저장할 수 있으며, 이 노드는 사용자 세션 및 후속 세션에 자동으로 추가됩니다. 라이브러리의 사용자 노드는 애드온 섹션에서 찾을 수 있습니다.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
 
-### Moving Forward
+### 다음에 알아볼 내용
 
-Now that we've created our first custom node, the next sections will dive deeper into custom node functionality and how to publish generic workflows. In the following section, we'll look at developing a custom node that transfers geometry from one surface to another.
+이제 첫 번째 사용자 노드를 작성했으므로 다음 섹션에서는 사용자 노드 기능 및 일반 워크플로우를 게시하는 방법에 대해 자세히 알아보겠습니다. 또한 한 표면에서 다른 표면으로 형상을 전송하는 사용자 노드를 개발하는 과정도 살펴보겠습니다.

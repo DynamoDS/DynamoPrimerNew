@@ -1,150 +1,150 @@
-# Working with Lists
+# 리스트 작업
 
-### Working with Lists
+### 리스트 작업
 
-Now that we've established what a list is, let's talk about operations we can perform on it. Imagine a list as a deck of playing cards. A deck is the list and each playing card represents an item.
+지금까지 리스트가 무엇인지 확인했으므로 리스트에서 수행할 수 있는 작업에 대해 설명하겠습니다. 리스트가 하나의 게임 카드 세트라고 생각해 보십시오. 세트는 리스트이며, 각 카드는 하나의 항목을 나타냅니다.
 
-![cards](../images/5-4/2/Playing\_cards\_modified.jpg)
+![카드](../images/5-4/2/Playing\_cards\_modified.jpg)
 
-> Photo by [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> 사진 제공: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
 
-### Query
+### 조회
 
-What **queries** can we make from the list? This accesses existing properties.
+리스트에서는 어떤 **조회**를 만들 수 있을까요? 이러한 조회에서는 기존 특성을 확인합니다.
 
-* Number of cards in the deck? 52.
-* Number of suits? 4.
-* Material? Paper.
-* Length? 3.5" or 89mm.
-* Width? 2.5" or 64mm.
+* 한 세트에 들어 있는 카드의 수는? 52.
+* 짝을 이루는 패의 수는? 4.
+* 재료? 종이.
+* 길이는? 3.5" 또는 89mm.
+* 폭은? 2.5" 또는 64mm.
 
-### Action
+### 동작
 
-What **actions** can we perform on the list? This changes the list based on a given operation.
+리스트에서 수행할 수 있는 **작업**은 무엇일까요? 작업을 수행하면 해당 작업을 기준으로 리스트가 변경됩니다.
 
-* We can shuffle the deck.
-* We can sort the deck by value.
-* We can sort the deck by suit.
-* We can split the deck.
-* We can partition the deck by dealing out individual hands.
-* We can select a specific card in the deck.
+* 세트를 섞을 수 있습니다.
+* 값별로 세트를 정렬할 수 있습니다.
+* 짝을 이루는 패별로 세트를 정렬할 수 있습니다.
+* 세트를 나눌 수 있습니다.
+* 각 사람에게 카드를 나눠주기 위해 세트를 나눌 수 있습니다.
+* 세트에서 특정 카드를 선택할 수 있습니다.
 
-All of the operations listed above have analogous Dynamo nodes for working with lists of generic data. The lessons below will demonstrate some of the fundamental operations we can perform on lists.
+위에 나열된 모든 작업에는 일반 데이터 리스트로 작업할 수 있도록 비슷한 Dynamo 노드가 있습니다. 아래 단원에는 리스트에서 수행할 수 있는 기본적인 작업 중 일부가 나와 있습니다.
 
-## **Exercise**
+## **연습**
 
-### **List Operations**
+### **리스트 작업**
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-4/2/List-Operations.dyn" %}
 
-The image below is the base graph which we are drawing lines between two circles to represent basic list operations. We'll explore how to manage data within a list and demonstrate the visual results through the list actions below.
+아래 이미지는 두 원 사이에 선을 그려 기본 리스트 작업을 표현하는 기준 그래프입니다. 리스트 내에서 데이터를 관리하는 방법을 살펴보고 아래의 리스트 작업을 통해 시각적 결과를 보여줍니다.
 
 ![](<../images/5-4/2/working with list - list operation.jpg>)
 
-> 1. Begin with a **Code Block** with a value of `500;`
-> 2. Plug into the x input of a **Point.ByCoordinates** node.
-> 3. Plug the node from the previous step into the origin input of a **Plane.ByOriginNormal** node.
-> 4. Using a **Circle.ByPlaneRadius** node, plug the node from the previous step into the plane input.
-> 5. Using **Code Block**, designate a value of `50;` for the radius. This is the first circle we'll create.
-> 6. With a **Geometry.Translate** node, move the circle up 100 units in the Z direction.
-> 7. With a **Code Block** node, define a range of ten numbers between 0 and 1 with this line of code: `0..1..#10;`
-> 8. Plug the code block from the previous step into the _param_ input of two **Curve.PointAtParameter** nodes. Plug **Circle.ByPlaneRadius** into the curve input of the top node, and **Geometry.Translate** into the curve input of the node beneath it.
-> 9. Using a **Line.ByStartPointEndPoint**, connect the two **Curve.PointAtParamete**_r_ nodes.
+> 1. 값이 `500;`인 **Code Block**으로 시작합니다.
+> 2. **Point.ByCoordinates** 노드의 x 입력에 연결합니다.
+> 3. 이전 단계의 노드를 **Plane.ByOriginNormal** 노드의 원점 입력에 연결합니다.
+> 4. **Circle.ByPlaneRadius** 노드를 사용하여 이전 단계의 노드를 평면 입력에 연결합니다.
+> 5. **Code Block**을 사용하여 radius에 대해 값 `50;`을 지정합니다. 다음은 작성할 첫 번째 원입니다.
+> 6. **Geometry.Translate** 노드를 사용하여 Z 방향으로 최대 100개 단위만큼 원을 이동합니다.
+> 7. **Code Block** 노드에서 코드 줄 `0..1..#10;`을 사용하여 0과 1 사이의 10개 숫자 범위를 정의합니다.
+> 8. 이전 단계의 code block을 두 _Curve.PointAtParameter_ 노드의 **param** 입력에 연결합니다. **Circle.ByPlaneRadius**를 최상위 노드의 곡선 입력에 연결하고 **Geometry.Translate**를 그 아래 노드의 곡선 입력에 연결합니다.
+> 9. **Line.ByStartPointEndPoint**를 사용하여 두 **Curve.PointAtParamete**_r_ 노드를 연결합니다.
 
 ### List.Count
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-4/2/List-Count.dyn" %}
 
-The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
+_List.Count_ 노드는 간단합니다. 리스트의 값 개수를 계산하고 해당 수를 반환합니다. 이 노드는 리스트의 리스트로 작업할 경우 미묘한 차이가 있으며, 이 내용은 다음 섹션에서 살펴보겠습니다.
 
 ![Count](<../images/5-4/2/working with list - list operation - list count.jpg>)
 
-> 1. The **List.Count **_****_ node returns the number of lines in the **Line.ByStartPointEndPoint** node. The value is 10 in this case, which agrees with the number of points created from the original **Code Block** node.
+> 1. **List.Count **_****_ 노드에서는 **Line.ByStartPointEndPoint** 노드의 줄 수를 반환합니다. 이 경우 해당 값은 원래 **Code Block** 노드에서 작성된 점 수와 일치하는 10입니다.
 
 ### List.GetItemAtIndex
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
 
-**List.GetItemAtIndex** is a fundamental way to query an item in the list.
+**List.GetItemAtIndex**는 기본적으로 리스트의 항목을 조회하는 기본적인 방법입니다.
 
 ![Exercise](<../images/5-4/2/working with list - get item index 01.jpg>)
 
-> 1. First, Right click on **Line.ByStartPointEndPoint** node to switch off its preview.
-> 2. Using the **List.GetItemAtIndex** node, we are selecting index _"0"_, or the first item in the list of lines.
+> 1. 먼저 **Line.ByStartPointEndPoint** 노드를 마우스 오른쪽 버튼으로 클릭하여 해당 미리보기를 끕니다.
+> 2. **List.GetItemAtIndex** 노드를 사용하여 색인 _"0"_ 또는 줄 리스트의 첫 번째 항목을 선택합니다.
 
-Change slider value between 0 and 9 to select different item using **List.GetItemAtIndex**.
+슬라이더 값을 0에서 9 사이로 변경하여 **List.GetItemAtIndex**를 통해 다른 항목을 선택합니다.
 
 ![](<../images/5-4/2/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
-_List.Reverse_ reverses the order of all of the items in a list.
+_List.Reverse_는 리스트의 모든 항목 순서를 반대로 합니다.
 
 ![Exercise](<../images/5-4/2/working with list - list reverse.jpg>)
 
-> 1. To properly visualize the reversed list of lines, create more lines by changing the **Code Block** to `0..1..#50;`
-> 2. Duplicate the **Line.ByStartPointEndPoint** node, insert a List.Reverse node in between **Curve.PointAtParameter** and the second **Line.ByStartPointEndPoint**
-> 3. Use **Watch3D** nodes to preview two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
+> 1. 반전된 줄 리스트를 올바르게 시각화하려면 **Code Block**을 `0..1..#50;`으로 변경하여 더 많은 줄을 작성합니다.
+> 2. **Line.ByStartPointEndPoint** 노드를 복제하고 **Curve.PointAtParameter** 및 두 번째 **Line.ByStartPointEndPoint** 사이에 List.Reverse 노드를 삽입합니다.
+> 3. **Watch3D** 노드를 사용하여 두 가지 다른 결과를 미리 봅니다. 첫 번째 항목에서는 반전된 리스트가 없는 결과를 보여 줍니다. 줄은 인접한 점에 수직으로 연결됩니다. 그러나 반전된 리스트에서는 모든 점을 다른 리스트에 반대 순서로 연결합니다.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
 
-**List.ShiftIndices** is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
+**List.ShiftIndices**는 틀기 또는 나선형 패턴이나 기타 유사한 데이터 조작을 작성하는 데 유용한 도구입니다. 이 노드에서는 리스트의 항목을 지정된 색인만큼 이동합니다.
 
 ![Exercise](<../images/5-4/2/working with list - shiftIndices 01.jpg>)
 
-> 1. In the same process as the reverse list, insert a **List.ShiftIndices** into the **Curve.PointAtParameter** and **Line.ByStartPointEndPoint**.
-> 2. Using a **Code Block**, designated a value of "1" to shift the list one index.
-> 3. Notice that the change is subtle, but all of the lines in the lower **Watch3D** node have shifted one index when connecting to the other set of points.
+> 1. 반전 리스트와 동일한 프로세스에서 **Curve.PointAtParameter** 및 **Line.ByStartPointEndPoint**에 **List.ShiftIndices**를 삽입합니다.
+> 2. **Code Block**을 사용하여 리스트를 1개 색인만큼 이동하기 위해 값 "1"을 지정했습니다.
+> 3. 변경된 정도는 미세하지만 다른 점 세트에 연결할 때 하단 **Watch3D** 노드의 모든 줄이 1개 색인만큼 이동되었습니다.
 
-By changing to **Code Block** to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
+예를 들어 **Code Block**을 더 큰 값인 _"30"_으로 변경하면 대각선이 크게 달라진다는 것을 알 수 있습니다. 이 경우 이동은 카메라의 홍채처럼 작동하여 원래의 원통형 형식에서 틀기가 작성됩니다.
 
 ![](<../images/5-4/2/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
 ![](../images/5-4/2/ListFilterBool.png)
 
-**List.FilterByBooleanMask** will remove certain items based on a list of booleans, or values reading "true" or "false".
+**List.FilterByBooleanMask**는 부울 리스트나 "true" 또는 "false" 값을 기준으로 특정 항목을 제거합니다.
 
 ![Exercise](<../images/5-4/2/working with list - filter by bool mask.jpg>)
 
-In order to create a list of values reading "true" or "false", we need to a little more work...
+"true" 또는 "false" 값 리스트를 작성하려면 좀 더 많은 작업이 필요합니다.
 
-> 1. Using a **Code Block**, define an expression with the syntax: `0..List.Count(list);`. Connect the **Curve.PointAtParameter** node to the _list_ input. We'll walk through this setup more in the code block chapter, but the line of code in this case is giving us a list representing each index of the **Curve.PointAtParameter** node.
-> 2. Using a _**%**_** (modulus)** node, connect the output of the _code block_ into the _x_ input, and a value of _4_ into the _y_ input. This will give us the remainder when dividing the list of indices by 4. Modulus is a really helpful node for pattern creation. All values will read as the possible remainders of 4: 0, 1, 2, 3.
-> 3. From the  _**%**_** (modulus)** node, we know that a value of 0 means that the index is divisible by 4 (0,4,8,etc...). By using a **==** node, we can test for the divisibility by testing it against a value of _"0"_.
-> 4. The **Watch** node reveals just this: we have a true/false pattern which reads: _true,false,false,false..._.
-> 5. Using this true/false pattern, connect to the mask input of two **List.FilterByBooleanMask** nodes.
-> 6. Connect the **Curve.PointAtParameter** node into each list input for the **List.FilterByBooleanMask**.
-> 7. The output of **Filter.ByBooleanMask** reads _"in"_ and _"out"_. _"In"_ represents values which had a mask value of _"true"_ while _"out"_ represents values which had a value of _"false"_. By plugging the _"in"_ outputs into the _startPoint_ and _endPoint_ inputs of a **Line.ByStartPointEndPoint** node, we've created a filtered list of lines.
-> 8. The **Watch3D** node reveals that we have fewer lines than points. We've selected only 25% of the nodes by filtering only the true values!
+> 1. **Code Block**을 사용하여 `0..List.Count(list);` 구문으로 표현식을 정의합니다. **Curve.PointAtParameter** 노드를 _list_ 입력에 연결합니다. code block록 장에서 이 설정에 대해 좀 더 자세히 설명하겠지만, 이 경우에는 코드 줄에서 **Curve.PointAtParameter** 노드의 각 색인을 나타내는 리스트를 제공합니다.
+> 2. _**%**_** (modulus)** 노드를 사용하여 _code block_의 출력을 _x_ 입력에 연결하고 _4_ 값을 _y_ 입력에 연결합니다. 이렇게 하면 색인 리스트를 4로 나눈 나머지가 표시됩니다. Modulus는 패턴 작성에 매우 유용한 노드입니다. 모든 값은 가능한 나머지 4개(0, 1, 2, 3)로 표시됩니다.
+> 3. _**%**_** (modulus)** 노드에서 0 값은 색인이 4로 나누어떨어짐을 의미합니다(0,4,8 등). **==** 노드를 사용하면 _"0"_ 값을 기준으로 테스트하여 나누어떨어지는지 테스트할 수 있습니다.
+> 4. **Watch** 노드에서는 _true,false,false,false..._로 표시되는 true/false 패턴이 있음을 나타냅니다.
+> 5. 이 true/false 패턴을 사용하여 두 **List.FilterByBooleanMask** 노드의 마스크 입력에 연결합니다.
+> 6. **Curve.PointAtParameter** 노드를 **List.FilterByBooleanMask**의 각 리스트 입력에 연결합니다.
+> 7. **Filter.ByBooleanMask**의 출력은 _"in"_ 및 _"out"_으로 표시됩니다. _"In"_은 마스크 값이 _"true"_인 값을 나타내고 _"out"_은 마스크 값이 _"false"_인 값을 나타냅니다. **Line.ByStartPointEndPoint** 노드의 _"in"_ 출력을 _startPoint_ 및 _endPoint_ 입력에 연결하여 필터링된 선 리스트를 작성했습니다.
+> 8. **Watch3D** 노드에서는 점보다 선 수가 더 적은 것을 나타냅니다. true 값만 필터링하여 노드의 25%만 선택했습니다.

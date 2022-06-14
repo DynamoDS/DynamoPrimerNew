@@ -1,126 +1,126 @@
-# Nodes and Wires
+# 노드 및 와이어
 
-## Nodes
+## 노드
 
-In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each **Node** performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.
+Dynamo에서 **노드**는 시각적 프로그램을 형성하기 위해 연결하는 객체입니다. 각 **노드**는 작업을 수행합니다. 이 작업은 숫자를 저장하는 것처럼 간단할 수도 있고 형상을 작성하거나 조회하는 경우처럼 더 복잡할 수도 있습니다.
 
-### Anatomy of a Node
+### 노드 분석
 
-Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
+Dynamo의 노드 대부분은 5개 부분으로 구성되어 있습니다. 입력 노드와 같은 예외도 있지만, 각 노드의 분석을 다음과 같이 설명할 수 있습니다.
 
 ![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
-> 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
-> 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
+> 1. 이름 - `Category.Name` 명명 규칙을 사용하는 노드의 이름입니다.
+> 2. 주 본체 - 노드의 주 본체 - 여기를 마우스 오른쪽 버튼으로 클릭하면 전체 노드 수준의 옵션이 표시됩니다.
+> 3. 포트(입력 및 출력) - 노드에 입력 데이터를 제공하는 와이어에 대한 수용기이며 노드 작업의 결과입니다.
+> 4. 기본값 - 입력 포트를 마우스 오른쪽 버튼으로 클릭 - 일부 노드에서 사용 가능하거나 불가능한 기본값이 있습니다.
+> 5. 레이싱 아이콘 - 일치하는 리스트 입력에 대해 지정된 [레이싱 옵션](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing)을 나타냅니다(뒷부분에서 자세히 다룸).
 
-### Nodes Input/Output Ports
+### 노드 입력/출력 포트
 
-The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.
+노드의 입력 및 출력을 포트라고 하며, 와이어에 대한 수용기로 작동합니다. 데이터는 왼쪽에 있는 포트를 통해 노드에 들어오고, 해당 작업을 실행한 후에는 오른쪽 노드 밖으로 나갑니다.
 
-Ports expect to receive data of a certain type. For instance, connecting a number such as _2.75_ to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply _"Red"_ to the same Port it will result in an error.
+포트는 특정 유형의 데이터를 수신해야 합니다. 예를 들어 _2.75_과 같은 숫자를 좌표로 정의된 점 노드의 포트에 연결하면 점이 성공적으로 작성됩니다. 그러나 동일한 포트에 _"Red"_를 제공하면 오류가 발생합니다.
 
 {% hint style="info" %}
-Tip: Hover over a Port to see a tooltip containing the data type expected.
+팁: 포트 위에 마우스를 놓으면 예상 데이터 유형이 포함된 툴팁이 표시됩니다.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
-> 1. Port Label
-> 2. Tool Tip
-> 3. Data Type
+> 1. 포트 레이블
+> 2. 툴팁
+> 3. 데이터 유형
 > 4. Default Value
 
-### Node States
+### 노드 상태
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
+Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌더링하여 시각적 프로그램의 실행 상태를 나타냅니다. 상태 계층은 오류 > 경고 > 정보 > 미리보기와 같은 순서로 표시됩니다.
 
-Hovering or right-clicking over the Name or Ports presents additional information and options.
+이름 또는 포트를 마우스 오른쪽 버튼으로 클릭하거나 그 위에 커서를 놓으면 추가 정보 및 옵션이 표시됩니다.
 
 ![](<images/nodes and wires - node states.jpg>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 1. 활성 - 진회색 이름 배경이 있는 노드는 제대로 연결되었으며 모든 입력이 성공적으로 연결된 것입니다.
+> 2. 오류 상태 - 노드 아래의 빨간색 상태 막대는 노드가 오류 상태임을 나타냅니다.
+> 3. 동결 - 투명 노드는 동결이 켜져 있는 것으로, 노드 실행이 일시 중단됩니다.
+> 4. 배경 미리보기 - 노드 및 눈 모양 아이콘 ![](<images/nodes and wires - preview off.jpg>) 아래의 회색 상태 막대는 형상 미리보기가 꺼져 있음을 나타냅니다.
+> 5. 선택됨 - 현재 선택된 노드의 테두리에는 청록색 하이라이트가 표시됩니다.
+> 6. 경고 - 노드 아래의 노란색 상태 막대는 경고 상태를 나타냅니다. 즉, 입력 데이터가 없거나 데이터 유형이 잘못되었을 수 있습니다.
 
-#### Handling Error or Warning Nodes
+#### 오류 또는 경고 노드 처리
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+시각적 프로그램에 경고 또는 오류가 포함된 경우 Dynamo는 해당 문제에 대한 추가 정보를 제공합니다. 노란색인 모든 노드는 이름 위에 툴팁도 표시됩니다. 경고 ![](<images/nodes and wires - node warning icon.png>) 또는 오류 ![](<images/nodes and wires - node error icon.png>) 툴팁 아이콘 위에 마우스를 놓고 확장합니다.
 
 {% hint style="info" %}
-Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
+팁: 이 툴팁 정보를 통해 업스트림 노드를 검사하여 필수 데이터 유형이나 데이터 구조에 오류가 있는지 확인합니다.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
-> 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 1. 경고 툴팁 - "Null" 또는 데이터 없음은 Double(예: 숫자)로 인식될 수 없습니다.
+> 2. Watch 노드를 사용하여 입력 데이터를 검사합니다.
+> 3. Upstream the Number 노드는 숫자가 아닌 "Red"를 저장합니다.
 
-## Wires
+## 와이어
 
-Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.
+와이어는 노드 간에 연결되어 관계를 생성하고 시각적 프로그램의 흐름을 구성합니다. 문자 그대로 한 객체에서 다음 객체로 데이터 펄스를 운반하는 전기 와이어로 간주할 수 있습니다.
 
-### Program Flow <a href="#program-flow" id="program-flow"></a>
+### 프로그램 흐름 <a href="#program-flow" id="program-flow"></a>
 
-Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the **Flow of Data** in the Visual Program.
+와이어는 한 노드의 출력 포트를 다른 노드의 입력 포트에 연결합니다. 이 방향이 시각적 프로그램의 **데이터 흐름**을 설정합니다.
 
-Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
+입력 포트는 노드의 왼쪽에 있고 출력 포트는 오른쪽에 있습니다. 따라서 일반적으로 프로그램 흐름이 왼쪽에서 오른쪽으로 이동한다고 말할 수 있습니다.
 
 ![](<images/nodes and wires - flow of data.jpg>)
 
-### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
+### 와이어 작성 <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+연결을 작성하려면 포트를 마우스 왼쪽 버튼으로 클릭한 다음, 다른 노드의 포트를 마우스 왼쪽 버튼으로 클릭하여 와이어를 작성합니다. 연결 중에는 와이어가 점선으로 표시되며 성공적으로 연결되면 스냅되어 실선이 됩니다.
 
-The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
+데이터는 항상 출력에서 입력으로 이 와이어를 따라 흐르지만, 연결된 포트를 클릭하는 순서에 따라 어떤 방향으로도 와이어를 만들 수 있습니다.
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
-### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
+### 와이어 편집 <a href="#editing-wires" id="editing-wires"></a>
 
-Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
+시각적 프로그램에서 와이어로 표시된 연결을 편집하여 프로그램 흐름을 자주 조정하게 됩니다. 와이어를 편집하려면 이미 연결된 노드의 입력 포트를 마우스 왼쪽 버튼으로 클릭합니다. 다음 두 가지 옵션을 사용할 수 있습니다.
 
-* Change connection to an input Port, left-click on another input Port
+* 입력 포트로의 연결을 변경하려면 다른 입력 포트를 마우스 왼쪽 버튼으로 클릭합니다.
 
 ![](<images/nodes and wires - edit wire change port (2).gif>)
 
-* To remove the Wire, pull the Wire away and left-click on Workspace
+* 와이어를 제거하려면 와이어를 바깥쪽으로 당긴 다음, 작업공간을 마우스 왼쪽 버튼으로 클릭합니다.
 
 ![](<images/nodes and wires - edit wires remove.gif>)
 
-* Reconnect multiple wires using Shift+left-click
+* Shift 키를 누른 채 마우스 왼쪽 버튼을 클릭하여 여러 와이어를 다시 연결합니다.
 
 ![](<images/nodes and wires - edit multi ports.gif>)
 
-* Duplicate a wire using Ctrl+left-click
+* Ctrl 키를 누른 채 마우스 왼쪽 버튼을 클릭하여 와이어를 복제합니다.
 
 ![](<images/nodes and wires - duplicate wire.gif>)
 
-#### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
+#### 기본 와이어 및 강조 표시된 와이어 <a href="#wire-previews" id="wire-previews"></a>
 
-By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
+기본적으로 와이어는 회색 스트로크로 미리 표시됩니다. 노드가 선택되면 연결 와이어는 노드와 동일한 청록색 하이라이트가 표시됩니다.
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
-> 1. Highlighted Wire
-> 2. Default Wire
+> 1. 강조 표시된 와이어
+> 2. 기본 와이어
 
-**Hide Wires by Default**
+**기본적으로 와이어 숨기기**
 
-In case you prefer to hide the Wires in your graph, you can find this option from View > Connectors > untick Show Connectors.
+그래프에서 와이어를 숨기려는 경우 뷰 > 커넥터에서 이 옵션을 찾고 커넥터 표시를 선택취소할 수 있습니다.
 
-With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
+이 설정을 사용하면 선택한 노드 및 해당 결합 와이어만 연한 청록색으로 강조 표시됩니다.
 
 ![](<images/nodes and wires - hide wires setting (1).gif>)
 
-#### Hide Individual Wire Only
+#### 개별 와이어만 숨기기
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+노드 출력을 마우스 오른쪽 버튼으로 클릭하고 와이어 숨기기를 선택하여 선택한 와이어를 숨길 수도 있습니다.
 
 ![](<images/nodes and wires - hide selected wire.gif>)

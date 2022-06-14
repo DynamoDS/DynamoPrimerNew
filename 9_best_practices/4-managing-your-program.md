@@ -1,55 +1,55 @@
-# Managing Your Program
+# 프로그램 관리
 
-Working within a Visual Programming process can be a powerful creative activity, but very quickly the Program Flow and key user inputs can be obscured by complexity and/or layout of the Workspace. Let's review some best practices for managing your program.
+시각적 프로그래밍 프로세스 내에서 작업하는 것은 유용한 크리에이티브 활동일 수 있지만, 작업공간의 복잡성 및/또는 배치 때문에 프로그램 흐름과 핵심 사용자 입력이 빠르게 가려질 수 있습니다. 프로그램 관리를 위한 몇 가지 모범 사례를 살펴보겠습니다.
 
-### Alignment&#x20;
+### 정렬&#x20;
 
-Once we have added more than a few Nodes to the Workspace, we may want to re-organize the layout of the Nodes for clarity's sake. By selecting more than one Node and right-clicking on the Workspace, the pop up window includes an **Align Selection** menu with justification and distribution options in X and Y.
+작업공간에 여러 개의 노드를 추가했으면 명확성을 위해 노드의 배치를 재구성하려고 할 수 있습니다. 둘 이상의 노드를 선택하고 작업공간을 마우스 오른쪽 버튼으로 클릭하면 팝업 창에는 X 및 Y에 맞춤 및 분배 옵션이 있는 **선택 항목 정렬** 메뉴가 표시됩니다.
 
 ![](<./images/4/managing your program - alignment.jpg>)
 
-> 1. Select more than one Node
-> 2. Right-click on the Workspace
-> 3. Use the **Align Selection** options
+> 1. 둘 이상의 노드를 선택합니다.
+> 2. 작업공간을 마우스 오른쪽 버튼으로 클릭합니다.
+> 3. **선택 항목 정렬** 옵션을 사용합니다.
 
-### Notes&#x20;
+### 참고&#x20;
 
-With some experience, we may be able to "read" the Visual Program by reviewing the Node Names and following the Program Flow. For users of all experience levels, it is also good practice to include plain language labels and descriptions. Dynamo has a **Notes** Node with an editable text field to do so. We can add Notes to the Workspace in two ways:
+일부 환경에서는 노드 이름을 검토하고 프로그램 흐름에 따라 시각적 프로그램을 "읽을 수" 있습니다. 다양한 경험을 갖춘 사용자들을 위해 일반 언어 레이블과 설명을 추가하는 것도 좋은 방법입니다. Dynamo에는 이 작업을 위해 편집할 수 있는 텍스트 필드가 있는 **Notes** 노드가 제공됩니다. 다음 두 가지 방법으로 작업공간에 참고 사항을 추가할 수 있습니다.
 
 ![](<./images/4/managing your program - notes.jpg>)
 
-> 1. Browse to the menu Edit > Create Note
-> 2. Use the keyboard shortcut Ctrl+W
+> 1. 편집 > 참고 만들기 메뉴로 이동합니다.
+> 2. 키보드 바로 가기 Ctrl+W를 사용합니다.
 
-Once the Note is added to the Workspace a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
+참고 사항이 작업공간에 추가되면 텍스트 필드가 팝업되어 참고 사항의 텍스트를 편집할 수 있습니다. 작성한 후에는 Note 노드를 두 번 클릭하거나 마우스 오른쪽 버튼으로 클릭하여 참고 사항을 편집할 수 있습니다.
 
 ![](<./images/4/managing your program - notes 02.jpg>)
 
-### Grouping&#x20;
+### 그룹화&#x20;
 
-When our Visual Program gets big, it is helpful to identify the larger steps that will be executed. We can highlight larger collections of Nodes with a **Group** to label them with a colored rectangle in the background and a title. There are three ways to make a Group with more than one Node selected:
+시각적 프로그램의 규모가 커지면 실행될 더 큰 단계를 정해 두는 것이 도움이 됩니다. 더 큰 노드 모음을 **그룹**으로 강조 표시하고 배경 및 제목에 색상 직사각형을 사용하여 레이블을 지정할 수 있습니다. 다음 세 가지 방법으로 둘 이상의 노드를 선택하여 그룹을 만들 수 있습니다.
 
 ![](<./images/4/managing your program - grouping 01.jpg>)
 
-> 1. Browse to the menu Edit > Create Group
-> 2. Use the keyboard shortcut Ctrl+G
-> 3. Right-click on the Workspace and select "Create Group"
+> 1. 편집 > 그룹 만들기 메뉴로 이동합니다.
+> 2. 키보드 바로 가기 Ctrl+C를 사용합니다.
+> 3. 작업공간을 마우스 오른쪽 버튼으로 클릭하고 "그룹 작성"을 선택합니다.
 
-Once a Group is created we can edit its settings, such as the title and color.&#x20;
+그룹이 작성되면 제목, 색상 등의 설정을 편집할 수 있습니다.&#x20;
 
 ![](<./images/4/managing your program - grouping 02.jpg>)
 
 {% hint style="info" %}
-Tip: Using both Notes and Groups is an effective way to annotate your file and increase readability.
+팁: 파일에 주석을 달고 가독성을 높이기 위해서는 참고와 그룹을 둘 다 사용하는 것이 효과적입니다.
 {% endhint %}
 
-Here's an example of program from with Notes and Groups added:
+다음은 참고와 그룹이 추가된 프로그램의 예입니다.
 
 ![](<./images/4/managing your program - grouping 03.jpg>)
 
-> 1. Note: "Grid Parameters"
-> 2. Note: "Grid Points"
-> 3. Group: "Create a Grid of Points"
-> 4. Group: "Create an Attractor Point"
-> 5. Note: "Calibrate Distance Values"
-> 6. Note: "Variable Grid of Circles"
+> 1. 참고: "그리드 매개변수"
+> 2. 참고: "그리드 점"
+> 3. 그룹: "점 그리드 작성"
+> 4. 그룹: "어트랙터 점 작성"
+> 5. 참고: "거리 값 보정"
+> 6. 참고: "원의 가변 그리드"

@@ -1,69 +1,69 @@
-# Setup for Dynamo
+# Dynamo 설정
 
-### Dynamo as Extension vs Dynamo Sandbox
+### Dynamo 확장 및 Dynamo Sandbox
 
-Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
+Dynamo는 활성 오픈 소스 개발 프로젝트입니다. [Dynamo를 지원하는 소프트웨어 목록](http://dynamobim.org/download/)을 참고하십시오.
 
 ![](<images/setup for dynamo - dynamo revit.png>) ![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>)
 
-### Launch Dynamo as Extension
+### Dynamo 확장 시작
 
-Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civil3D** and etc.
+Dynamo는 **Revit3D**, **FormIt**, **Civil3D** 등의 소프트웨어와 함께 사전 설치됩니다.
 
-To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](images/dynamoCore-halfSize.png) to launch it.
+사용하려면 도구막대 패널에서 시작합니다. 사용 중인 소프트웨어에 따라 일반적으로 시작 아이콘은 메뉴 > **관리** 탭에서 사용할 수 있습니다. Dynamo 아이콘 ![](images/dynamoCore-halfSize.png)을 클릭하여 시작합니다.
 
 ![](<images/launch dynamo from revit.jpg>)
 
-For more guidance on using Dynamo with a specific software, we recommend referring to the following sections:
+특정 소프트웨어에서 Dynamo를 사용하는 방법에 대한 자세한 지침은 다음 섹션을 참고하십시오.
 
 * [Dynamo for Revit](../7\_dynamo\_for\_revit/)
 
-If you would like to use Dynamo as a standalone application. Continue reading for guidance on downloading the Sandbox.
+Dynamo를 독립 실행형 응용프로그램으로 사용하려는 경우, Sandbox 다운로드에 대한 지침을 계속 읽습니다.
 
-### Get Dynamo Sandbox
+### Dynamo Sandbox 가져오기
 
-#### Download
+#### 다운로드
 
-The Dynamo application is available from the [Dynamo website](http://dynamobim.com). Both official, past or pre-released versions are available from the download page. Visit [Get Dynamo](http://dynamobim.org/download/) page and Click **Download** for the official released version.
+Dynamo 응용프로그램은 [Dynamo 웹 사이트](http://dynamobim.com)에서 다운로드할 수 있습니다. 공식 버전, 이전 버전 또는 시험판 버전 모두 다운로드 페이지에서 받을 수 있습니다. 공식 출시 버전을 보려면 [Dynamo 다운로드](http://dynamobim.org/download/) 페이지를 방문하고 **다운로드**를 클릭합니다.
 
 ![](<images/dynamo-sandbox (1).png>)
 
-If you are looking for previous or 'bleeding edge' development releases, all versions can be found in the lower section from the same page.
+이전 또는 '최신' 개발 버전을 찾으려는 경우 모든 버전을 동일한 페이지의 아래쪽 섹션에서 찾을 수 있습니다.
 
 ![](<images/Dynamo Sandbox All builds.jpg>)
 
 {% hint style="info" %}
-'Bleeding edge' development may include some new and experimental features that are yet to be fully tested, hence may be unstable. By using this, you may discover bugs or issues, help us improve the application by reporting issues to our team.
+'최신' 개발 버전에는 아직 완전히 테스트되지 않아 불안정한 몇 가지 새로운 실험 기능이 포함될 수 있습니다. 이 기능을 사용하여 버그 또는 문제를 발견하고, Autodesk 팀에 문제를 보고하여 응용프로그램을 개선할 수 있습니다.
 
-Beginners are advised to download the official stable release.
+초보자는 안정적인 공식 버전을 다운로드하는 것이 좋습니다.
 {% endhint %}
 
-#### Unzip
+#### 압축 해제
 
-Before launching any version you have downloaded, you are required to unzip the content to your chosen folder.
+다운로드한 버전을 시작하기 전에 선택한 폴더로 컨텐츠의 압축을 풀어야 합니다.
 
-Download and install [7zip](https://www.7-zip.org/download.html) to your computer for this step.
+이 단계를 수행하려면 컴퓨터에 [7zip](https://www.7-zip.org/download.html)를 다운로드하여 설치하십시오.
 
-Right-click on the zip file and select **Extract All**...
+zip 파일을 마우스 오른쪽 버튼으로 클릭하고 **모두 압축 풀기**를 선택합니다.
 
 ![](<images/02-03 Extract zip file.jpg>)
 
-Choose a destination to unzip all the files.
+모든 파일의 압축을 풀 대상을 선택합니다.
 
 ![](<images/02-04 Extract destination folder.jpg>)
 
-#### Launching
+#### 실행
 
-In your destination folder, double-click on **DynamoSandbox.exe** to launch it
+대상 폴더에서 **DynamoSandbox.exe**를 두 번 클릭하여 시작합니다.
 
 ![](<images/02-05 Dynamo exe.jpg>)
 
-You will see the DynamoSandbox startup screen as follow.
+DynamoSandbox 시작 화면이 다음과 같이 표시됩니다.
 
 ![](<images/02-06 Dynamo startup screen.jpg>)
 
-Congratulations, you have now finished the setup for using DynamoSandbox!
+축하합니다. DynamoSandbox 사용을 위한 설정이 완료되었습니다.
 
 {% hint style="info" %}
-**Geometry** is an additional functionality in Dynamo Sandbox that is only available to users who have a current subscription or license to the following Autodesk software: Revit, Robot Structural Analysis, FormIt, and Civil 3D.  **Geometry** allows users too import, create, edit and export geometry from Dynamo Sandbox.
+**형상**은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다.  **형상**을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다.
 {% endhint %}

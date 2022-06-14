@@ -1,40 +1,40 @@
-# What is a Dictionary
+# 사전이란
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+Dynamo 2.0에서는 사전 데이터 유형을 리스트 데이터 유형과 분리하는 개념을 도입했습니다. 이러한 변경으로 인해 워크플로우에서 데이터를 작성하고 사용하는 방법도 크게 달라질 수 있습니다. 2.0 이전에는 사전과 리스트가 데이터 유형으로 결합되어 있었습니다. 간단히 말해, 리스트는 실제로 정수 키가 있는 사전이었습니다.
 
-### **What is a dictionary?**
+### **사전이란 무엇입니까?**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+사전은 각 키가 각 모음에서 고유한 키-값 쌍 집합으로 구성된 데이터 유형입니다. 사전에는 순서가 없으므로 기본적으로 리스트의 경우처럼 색인 값 대신, 키를 사용하여 "항목을 조회"할 수 있습니다. _Dynamo 2.0에서 문자열만 키가 될 수 있습니다._
 
-### **What is a list?**
+### **리스트란 무엇입니까?**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+리스트는 정렬된 값의 모음으로 구성된 데이터 유형입니다. Dynamo에서 리스트는 정수를 색인 값으로 사용합니다.
 
-### **Why was this change made and why should I care?**
+### **이렇게 변경된 이유와 주의해야 하는 이유는 무엇입니까?**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+리스트에서 사전을 분리하면서 사전이 일급 객체가 되었고, 사전을 사용하여 색인 값을 기억하거나 엄격한 리스트 구조를 유지할 필요없이 전체 워크플로우에서 빠르고 쉽게 값을 저장하고 조회할 수 있게 되었습니다. 사용자 테스트를 통해 일부 `GetItemAtIndex` 노드 대신, 사전을 활용할 때 그래프 크기가 크게 감소된 것을 확인할 수 있었습니다.
 
-### **What are the changes?**
+### **어떤 변화가 있습니까?**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* _구문_이 변경되었으며 이로 인해 코드 블록에서 사전 및 리스트를 초기화하고 사용하는 방법도 달라졌습니다.
+   * 사전은 구문 `{key:value}`를 사용합니다.
+   * 이제 다음 구문을 사용합니다. `[value,value,value]`
+* 사전을 작성, 수정 및 조회할 수 있도록 _새 노드_가 라이브러리에 추가되었습니다.
+* v1.x 코드 블록에서 작성된 리스트는 스크립트를 로드할 때 중괄호 `{ }` 대신 대괄호 `[ ]`를 사용하는 새 리스트 구문으로 자동으로 마이그레이션됩니다. \\
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **주의해야 하는 이유는 무엇입니까? 리스트를 어디에 사용할 수 있습니까?**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+컴퓨터 과학에서 리스트와 같은 사전은 객체 모음을 의미합니다. 리스트는 특정 순서로 나열되지만, 사전은 _정렬되지 않은_ 모음입니다. 순차적인 번호(색인)를 사용하지 않고 대신 _키를 사용합니다._
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+아래 이미지는 사전의 잠재적인 사용 사례를 보여줍니다. 사전은 직접적인 상관 관계가 없을 수도 있는 두 가지 데이터 조각을 연관 짓는 데 사용되는 경우가 많습니다. 여기에서는 나중에 조회할 수 있도록 스페인어 버전 단어를 영어 버전에 연결합니다.
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. 두 가지 데이터 요소를 연결할 사전을 작성합니다.
+> 2. 지정된 키를 사용하여 값을 가져옵니다.

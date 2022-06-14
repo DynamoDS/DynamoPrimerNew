@@ -1,10 +1,10 @@
-# Surfaces: Interpolated, Control Points, Loft, Revolve
+# 표면: 보간, 제어점, 로프트, 회전
 
-The two-dimensional analog to a NurbsCurve is the NurbsSurface, and like the freeform NurbsCurve, NurbsSurfaces can be constructed with two basic methods: inputting a set of base points and having Dynamo interpolate between them, and explicitly specifying the control points of the surface. Also like freeform curves, interpolated surfaces are useful when a designer knows precisely the shape a surface needs to take, or if a design requires the surface to pass through constraint points. On the other hand, Surfaces created by control points can be more useful for exploratory designs across various smoothing levels.
+NurbsCurve의 2D 아날로그는 NurbsSurface입니다. 자유형 NurbsCurve와 마찬가지로 NurbsSurface는 두 가지 기본 방법으로 생성할 수 있습니다. 기준점 세트를 입력하고 Dynamo에서 사이를 보간하도록 하거나, 표면의 제어점을 명시적으로 지정할 수 있습니다. 또한 자유형 곡선과 마찬가지로, 보간된 표면은 설계자가 표면에 필요한 모양을 정확하게 파악하고 있거나 설계에서 표면이 제약 조건 점을 통과해야 하는 경우에 유용합니다. 반면에 제어점으로 작성된 표면은 예비 설계의 다양한 다듬기 수준에서 더 유용할 수 있습니다.
 
-### Interpolated Surface
+### 보간된 표면
 
-To create an interpolated surface, simply generate a two-dimensional collection of points approximating the shape of a surface. The collection must be rectangular, that is, not jagged. The method _NurbsSurface.ByPoints_ constructs a surface from these points.
+보간된 표면을 작성하려면 표면의 모양을 대략적으로 나타내는 2D 점 모음을 생성하기만 하면 됩니다. 이 모음은 톱니 모양이 아닌 직사각형이어야 합니다. _NurbsSurface.ByPoints_ 메서드는 이러한 점에서 표면을 생성합니다.
 
 ![](../images/8-2/6/Surfaces\_01.png)
 
@@ -15,9 +15,9 @@ To create an interpolated surface, simply generate a two-dimensional collection 
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### Control Points Surface
+### 제어점 표면
 
-Freeform NurbsSurfaces can also be created by specifying underlying control points of a surface. Like NurbsCurves, the control points can be thought of as representing a quadrilateral mesh with straight segments, which, depending on the degree of the surface, is smoothed into the final surface form. To create a NurbsSurface by control points, include two additional parameters to _NurbsSurface.ByPoints_, indicating the degrees of the underlying curves in both directions of the surface.
+표면의 기본 제어점을 지정하여 자유형 NurbsSurface를 작성할 수도 있습니다. NurbsCurve와 마찬가지로, 제어점은 표면의 차수에 따라 최종 표면 형태로 완화되는 직선 세그먼트로 사각형 메쉬를 나타내는 것으로 간주할 수 있습니다. 제어점으로 NurbsSurface를 작성하려면 표면의 양방향에서 기본 곡선의 각도를 나타내는 두 개의 추가 매개변수를 _NurbsSurface.ByPoints_에 포함합니다.
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
@@ -29,7 +29,7 @@ Freeform NurbsSurfaces can also be created by specifying underlying control poin
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-We can increase the degree of the NurbsSurface to change the resulting surface geometry:
+다음과 같이 NurbsSurface의 각도를 늘려 결과 표면 형상을 변경할 수 있습니다.
 
 ![](../images/8-2/6/Surfaces\_03.png)
 
@@ -41,9 +41,9 @@ We can increase the degree of the NurbsSurface to change the resulting surface g
 surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 ```
 
-### Loft Surface
+### 로프트 곡면
 
-Just as Surfaces can be created by interpolating between a set of input points, they can be created by interpolating between a set of base curves. This is called lofting. A lofted curve is created using the _Surface.ByLoft_ constructor, with a collection of input curves as the only parameter.
+입력 점 세트 간을 보간하여 표면을 작성할 수 있는 것처럼 기준 곡선 세트 간에 보간하여 표면을 작성할 수 있는데, 이를 로프트라고 합니다. 로프트된 곡선은 입력 곡선의 모음을 유일한 매개변수로 사용하여 _Surface.ByLoft_ 생성자를 통해 작성됩니다.
 
 ![](../images/8-2/6/Surfaces\_04.png)
 
@@ -58,11 +58,11 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### Revolve Surface
+### 곡면 회전
 
-Surfaces of revolution are an additional type of surface created by sweeping a base curve around a central axis. If interpolated surfaces are the two-dimensional analog to interpolated curves, then surfaces of revolution are the two-dimensional analog to circles and arcs.
+회전 표면은 중심 축 주위로 기준 곡선을 스윕하여 작성된 추가적인 표면 유형입니다. 보간된 표면이 보간된 곡선의 2D 아날로그라면 회전 표면은 원 및 호의 2D 아날로그입니다.
 
-Surfaces of revolution are specified by a base curve, representing the “edge” of the surface; an axis origin, the base point of the surface; an axis direction, the central “core” direction; a sweep start angle; and a sweep end angle. These are used as the input to the _Surface.Revolve_ constructor.
+회전 표면은 기준 곡선(표면의 "모서리"를 나타냄), 축 원점(표면의 기준점), 축 방향(중심 "코어" 방향), 스윕 시작 각도와 끝 각도에 의해 지정됩니다. 이러한 항목이 _Surface.Revolve_ 생성자의 입력으로 사용됩니다.
 
 ![](../images/8-2/6/Surfaces\_05.png)
 

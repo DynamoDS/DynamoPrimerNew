@@ -1,161 +1,161 @@
-# Color
+# 색상
 
-Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
+색상은 시각적 프로그램의 출력에서 차이를 렌더링하고, 우수한 시각적 요소를 작성하는 데 유용한 데이터 유형입니다. 추상 데이터와 다양한 숫자를 사용할 경우 무엇이 어느 정도로 달라지는지 확인하기 어려운 경우가 있습니다. 이러한 경우 색상을 적용하면 매우 유용합니다.
 
-### Creating Colors
+### 색상 작성하기
 
-Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
+Dynamo의 색상은 ARGB 입력을 사용하여 작성됩니다. ARGB는 알파, 빨간색, 초록색 및 파란색 채널에 해당합니다. 알파는 색상의 _투명도_를 나타내고, 다른 3개의 색상은 전체 색상 스펙트럼을 생성하기 위한 기본 색상으로 사용됩니다.
 
-| Icon                                          | Name (Syntax)                 | Inputs  | Outputs |
+| 아이콘 | 이름(구문) | 입력 | 출력 |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
+| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB 색상(**Color.ByARGB**) | A,R,G,B | 색상 |
 
-### Querying Color Values
+### 색상 값 조회하기
 
-The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
+아래 표의 색상을 사용하면 색상을 정의하는 데 사용되는 특성(알파, 빨간색, 초록색 및 파란색)이 조회됩니다. Color.Components 노드는 다른 출력으로 4개의 색상을 모두 제공하므로 색상의 특성을 조회할 때 선호됩니다.
 
-| Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
+| 아이콘 | 이름(구문) | 입력 | 출력 |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Alpha.jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-3/5/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-3/5/Color Green.jpg>) | Green (**Color.Green**)           | color  | G          |
-| ![](<../images/5-3/5/Color Blue.jpg>)      | Blue (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-3/5/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
+| ![](<../images/5-3/5/Color Alpha.jpg>) | 알파(**Color.Alpha**) | 색상 | A |
+| ![](<../images/5-3/5/Color Red.jpg>) | 빨간색(**Color.Red**) | 색상 | R |
+| ![](<../images/5-3/5/Color Green.jpg>) | 초록색(**Color.Green**) | 색상 | G |
+| ![](<../images/5-3/5/Color Blue.jpg>) | 파란색(**Color.Blue**) | 색상 | B |
+| ![](<../images/5-3/5/Color Component.jpg>) | 구성요소(**Color.Components**) | 색상 | A,R,G,B |
 
-The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
+아래 표의 색상은 **HSB 색상 공간**에 해당합니다. 색상을 색조, 채도 및 밝기로 나누면 색상을 좀 더 직관적으로 해석할 수 있습니다. 즉, '어떤 색상인가?', '색상이 얼마나 선명한가?', '색상이 얼마나 밝거나 어두운가?'와 같은 질문으로 각각 색조, 채도 및 밝기를 분석할 수 있습니다.
 
-| Icon                                              | Name (Syntax)                     | Inputs | Outputs    |
+| 아이콘 | 이름(구문) | 입력 | 출력 |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Hue.jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-3/5/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-3/5/Color Brightness.jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| ![](<../images/5-3/5/Color Hue.jpg>) | 색조(**Color.Hue**) | 색상 | 색조 |
+| ![](<../images/5-3/5/Color Saturation.jpg>) | 채도(**Color.Saturation**) | 색상 | 채도 |
+| ![](<../images/5-3/5/Color Brightness.jpg>) | 밝기(**Color.Brightness**) | 색상 | 밝기 |
 
-### Color Range
+### 색상 범위
 
-The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+색상 범위는 [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention") 연습의 **Remap Range** 노드와 비슷합니다. 이 노드에서는 숫자 리스트를 다른 영역에 다시 매핑합니다. 그러나 _숫자_ 영역으로 매핑하는 대신, 0에서 1 사이의 입력 숫자를 기준으로 _색상 그라데이션_에 매핑합니다.
 
-The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
+현재 노드는 잘 작동하지만 처음에는 모든 항목이 다 제대로 작동하지는 않을 수 있습니다. 색상 그라데이션에 익숙해지려면 대화식으로 테스트하는 것이 가장 좋습니다. 간단한 연습을 통해 숫자에 해당하는 출력 색상으로 그라데이션을 설정하는 방법을 살펴보겠습니다.
 
 ![](<../images/5-3/5/color - color range.jpg>)
 
-> 1. Define three colors: Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
-> 2. **Create list:** Merge the three colors into one list.
-> 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. **Code Block**: Input values (between 0 and 1) to translate to colors.
+> 1. 세 가지 색상 정의: **Code Block** 노드를 사용하여 적절한 _0_ 및 _255_ 조합을 연결함으로써 _빨간색, 초록색_ 및 _파란색_을 정의합니다.
+> 2. **리스트 작성:** 세 개의 색상을 하나의 리스트로 병합합니다.
+> 3. 색인 정의: 리스트를 작성하여 각 색상의 그립 위치를 정의합니다(0에서 1 사이). 초록색 값이 0.75인지 확인합니다. 이 경우 색상 범위 슬라이더의 수평 그라데이션을 따라 3/4 위치에 초록색이 배치됩니다.
+> 4. **Code Block: ** 값(0에서 1 사이)을 입력하여 색상을 변환합니다.
 
-### Color Preview
+### 색상 미리보기
 
-The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **Range** Node.
+**Display.ByGeometry** 노드를 사용하면 Dynamo 뷰포트의 형상에 색상을 지정할 수 있습니다. 이 노드는 여러 다른 유형의 형상을 구분하거나, 파라메트릭 개념을 보여 주거나, 시뮬레이션을 위한 해석 범례를 정의하는 데 유용합니다. 입력은 형상과 색상으로, 간단합니다. 위 이미지와 같은 그라데이션을 작성하기 위해 색상 입력이 **색상** **범위** 노드에 연결됩니다.
 
 ![](<../images/5-3/5/color - color preview.jpg>)
 
-### Color On Surfaces
+### 표면의 색상
 
-The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
+**Display.BySurfaceColors** 노드를 사용하면 색상을 사용하여 표면 전반에서 데이터를 매핑할 수 있습니다. 이 기능을 통해 태양, 에너지, 근접성 등과 같은 불연속 해석을 통해 얻은 데이터를 시각화할 수 있게 됩니다. Dynamo의 표면에 색상을 적용하는 것은 다른 CAD 환경의 재료에 텍스처를 적용하는 것과 유사합니다. 아래 간단한 연습에서 이 도구를 사용하는 방법을 살펴보겠습니다.
 
 ![](<../images/5-3/5/12 (1).jpg>)
 
-## Exercise
+## 연습
 
-### Basic Helix with Colors
+### 색상이 있는 기본 나선
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
-This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
+이 연습에서는 형상과 함께 파라메트릭 방식으로 색상을 제어하는 데 중점을 둡니다. 형상은 아래에서 **Code Block**을 사용하여 정의하는 기본 나선입니다. 이렇게 하면 파라메트릭 함수를 쉽고 빠르게 작성할 수 있습니다. 또한 이 작업에서는 형상이 아닌 색상에 주안점을 두므로 캔버스를 복잡하게 만들지 않고 Code Block을 사용하여 나선을 효율적으로 작성합니다. 좀 더 고급 자료로 넘어가게 되면 이 code block을 더 자주 사용하게 될 것입니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 01.jpg>)
 
-> 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
-> 2. **Point.ByCoordinates**: Plug the three outputs from the code block into the coordinates for the Node.
+> 1. **Code Block:** 위의 공식을 사용하여 두 개의 code block을 정의합니다. 이 방법은 나선을 작성하는 빠른 파라메트릭 방법입니다.
+> 2. **Point.ByCoordinates:** code block의 세 가지 출력을 노드의 좌표에 연결합니다.
 
-We now see an array of points creating a helix. The next step is to create a curve through the points so that we can visualize the helix.
+이제 나선을 작성하는 점의 배열이 표시됩니다. 다음 단계는 나선을 시각화할 수 있도록 점을 통과하는 곡선을 작성하는 것입니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 02.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the **Point.ByCoordinates** output into the _points_ input for the Node. We get a helical curve.
-> 2. **Curve.PointAtParameter:** Connect the **PolyCurve.ByPoints** output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
-> 3. **Number Slider:** After adding to the canvas, change the _min_ value to _0.0_, the _max_ value to _1.0_, and the _step_ value to _.01_. Plug the slider output into the _param_ input for **Curve.PointAtParameter**. We now see a point along the length of the helix, represented by a percentage of the slider (0 at the start point, 1 at the end point).
+> 1. **PolyCurve.ByPoints:** **Point.ByCoordinates** 출력을 노드의 _points_ 입력에 연결합니다. 나선형 곡선이 생성됩니다.
+> 2. **Curve.PointAtParameter:** **PolyCurve.ByPoints** 출력을 _curve_ 입력에 연결합니다. 이 단계의 목적은 곡선을 따라 미끄러지는 파라메트릭 어트랙터 점을 작성하는 것입니다. 이 곡선은 매개변수의 점을 평가하므로 0에서 1 사이의 _param_ 값을 입력해야 합니다.
+> 3. **Number Slider:** 캔버스에 추가한 후 _min_ 값을 _0.0_으로 변경하고 _max_ 값을 _1.0_으로 변경한 다음, _step_ 값을 _.01_로 변경합니다. 슬라이더 출력을 _Curve.PointAtParameter_에 대한 **param** 입력에 연결합니다. 이제 슬라이더의 백분율(시작점 0, 끝점 1)로 표시되는 나선 길이를 따라 점이 표시됩니다.
 
-With the reference point created, we now compare the distance from the reference point to the original points defining the helix. This distance value will drive geometry as well as color.
+참조점이 작성되었으므로 이제 참조점부터 나선을 정의하는 원래 점까지의 거리를 비교합니다. 이 거리 값에 따라 형상 및 색상이 결정됩니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 03.jpg>)
 
-> 1. **Geometry.DistanceTo:** Connect **Curve.PointAtParameter** output into the _input_. Connect **Point.ByCoordinates** into the geometry input.
-> 2. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
+> 1. **Geometry.DistanceTo:** **Curve.PointAtParameter** 출력을 _입력_에 연결합니다. **Point.ByCoordinates**를 형상 입력에 연결합니다.
+> 2. **Watch:** 결과 출력에서는 각 나선형 점부터 곡선을 따라 표시되는 참조점까지의 거리 리스트를 표시합니다.
 
-Our next step is to drive parameters with the list of distances from the helical points to the reference point. We use these distance values to define the radii of a series of spheres along the curve. In order to keep the spheres a suitable size, we need to _remap_ the values for distance.
+다음 단계는 나선형 점부터 참조점까지의 거리 리스트로 매개변수를 구동하는 것입니다. 이러한 거리 값을 사용하여 곡선을 따라 일련의 구 반지름을 정의합니다. 구형이 적절한 크기로 유지되도록 하려면 거리 값을 _다시 매핑_해야 합니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 04.jpg>)
 
-> 1. **Math.RemapRange:** Connect **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
-> 3. **Watch:** connect the **Math.RemapRange** output into one node and the **Geometry.DistanceTo** output into another. Compare the results.
+> 1. **Math.RemapRange:** **Geometry.DistanceTo** 출력을 numbers 입력에 연결합니다.
+> 2. **Code Block:** 값이 _0.01_인 code block을 _newMin_ 입력에 연결하고 값이 _1_인 code block을 _newMax_ 입력에 연결합니다.
+> 3. **Watch:** **Math.RemapRange** 출력을 하나의 노드에 연결하고 **Geometry.DistanceTo** 출력을 다른 노드에 연결합니다. 결과를 비교합니다.
 
-This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
+이 단계에서는 거리 리스트를 더 작은 범위로 다시 매핑했습니다. _newMin_ 및 _newMax_ 값은 적합하다고 여기는 대로 편집할 수 있습니다. 값이 다시 매핑되고 영역 전체에서 동일한 _분포 비율_이 적용됩니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 05.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius:** connect the **Math.RemapRange** output into the _radius_ input and the original **Point.ByCoordinates** output into the _centerPoint_ input.
+> 1. **Sphere.ByCenterPointRadius:** **Math.RemapRange** 출력을 _radius_ 입력에 연결하고 원래 **Point.ByCoordinates** 출력을 _centerPoint_ 입력에 연결합니다.
 
-Change the value of the number slider and watch the size of the spheres update. We now have a parametric jig
+number slider의 값을 변경하고 구의 크기가 업데이트되는 것을 확인합니다. 이제 파라메트릭 지그가 생성되었습니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 06.gif>)
 
-The size of the spheres demonstrates the parametric array defined by a reference point along the curve. Let's use the same concept for the sphere radius to drive their color.
+구의 크기는 곡선을 따라 표시되는 참조점으로 정의된 파라메트릭 배열을 보여 줍니다. 구 반지름에 동일한 개념을 사용하여 해당 색상을 지정해 보겠습니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 07.jpg>)
 
-> 1. **Color Range:** Add top the canvas. When hovering over the _value_ input, we notice that the numbers requested are between 0 and 1. We need to remap the numbers from the **Geometry.DistanceTo** output so that they are compatible with this domain.
-> 2. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this node (_Right Click > Preview_)
+> 1. **Color Range:** 캔버스 위에 추가합니다. _value_ 입력 위에 마우스를 놓으면 요청된 번호가 0에서 1 사이인 것을 알 수 있습니다. 이 영역과 호환되도록 **Geometry.DistanceTo** 출력의 숫자를 다시 매핑해야 합니다.
+> 2. **Sphere.ByCenterPointRadius:** 지금은 이 노드에 대한 미리보기를 사용하지 않도록 설정하겠습니다(_마우스 오른쪽 버튼 클릭 > 미리보기_).
 
 ![](<../images/5-3/5/color - basic helix with colors 08.jpg>)
 
-> 1. **Math.RemapRange:** This process should look familiar. Connect the **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
-> 3. **Color Range:** Connect the **Math.RemapRange** output into the _value_ input.
+> 1. **Math.RemapRange:** 이 프로세스는 익숙해졌을 것입니다. **Geometry.DistanceTo** 출력을 numbers 입력에 연결합니다.
+> 2. **Code Block:** 이전 단계와 마찬가지로, _newMin_ 입력에 대해 _0_ 값을 작성하고 _newMax_에 대해 _1_ 값을 작성합니다. 이 경우 한 code block에서 두 개의 출력을 정의할 수 있습니다.
+> 3. **Color Range:** **Math.RemapRange** 출력을 _value_ 입력에 연결합니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 09.jpg>)
 
-> 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
-> 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two **Color.ByARGB** inputs in agreement with the image above (or create your favorite two colors).
-> 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for **Color Range**.
+> 1. **Color.ByARGB:** 두 개의 색상을 작성하려면 이 항목을 사용합니다. 이 프로세스가 생소할 수도 있지만 다른 소프트웨어의 RGB 색상과 동일한 것입니다. 여기서는 단순히 시각적 프로그래밍을 사용하여 이 프로세스를 수행합니다.
+> 2. **Code Block:** _0_과 _255_의 두 값을 작성합니다. 위 이미지에 따라 두 출력을 두 **Color.ByARGB** 입력에 연결합니다(또는 선호하는 두 가지 색상 작성).
+> 3. **Color Range:** _colors_ 입력에서 색상 리스트를 요청합니다. 이전 단계에서 작성한 두 가지 색상으로부터 이 리스트를 작성해야 합니다.
+> 4. **List.Create:** 두 색상을 하나의 리스트로 병합합니다. 출력을 _Color Range_에 대한 **colors** 입력에 연결합니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 10.jpg>)
 
-> 1. **Display.ByGeometryColor:** Connect **Sphere.ByCenterPointRadius** into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
+> 1. **Display.ByGeometryColor:** **Sphere.ByCenterPointRadius**를 _geometry_ 입력에 연결하고 _Color Range_를 _color_ 입력에 연결합니다. 이제 곡선의 영역을 따라 부드러운 그라데이션이 생성되었습니다.
 
-If we change the value of the **Number Slider** from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
+정의에서 **Number Slider** 값을 이전과 다르게 변경하면 색상 및 크기가 업데이트됩니다. 이 경우 색상 및 반지름 크기가 직접 연계됩니다. 이제 두 매개변수 사이에 시각적 링크가 표시됩니다.
 
 ![](<../images/5-3/5/color - basic helix with colors 11.gif>)
 
-### Color on Surfaces Exercise
+### 표면의 색상 연습
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
+먼저 **Display.BySurfaceColors** 노드의 입력으로 사용할 표면을 작성(또는 참조)해야 합니다. 이 예에서는 사인 및 코사인 곡선 사이에서 로프트를 시도합니다.
 
 ![](<../images/5-3/5/color - color on surface 01.jpg>)
 
-> 1. This group of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
-> 2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
+> 1. 이 노드 그룹은 Z축을 따라 점을 작성한 다음, 사인 및 코사인 함수를 기준으로 재배치합니다. 그런 다음, 두 점 리스트를 사용하여 NURBS 곡선을 생성합니다.
+> 2. **Surface.ByLoft**: NURBS 곡선 리스트 사이에 보간된 표면을 생성합니다.
 
 ![](<../images/5-3/5/color - color on surface 02.jpg>)
 
-> 1. **File Path**: select an image file to sample for pixel data downstream
-> 2. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
-> 3. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
-> 4. **Slider**: provide sample values for **Image.Pixels**
-> 5. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
+> 1. **File Path**: 픽셀 데이터 다운스트림에 대해 샘플링할 이미지 파일을 선택합니다.
+> 2. **File.FromPath**를 사용하여 파일 경로를 파일로 변환한 다음, **Image.ReadFromFile**에 전달하여 샘플링할 이미지를 출력합니다.
+> 3. **Image.Pixels**: 이미지를 입력하고 이미지의 X 및 Y 치수에 따라 사용할 샘플 값을 제공합니다.
+> 4. **Slider**: **Image.Pixels**의 샘플 값을 제공합니다.
+> 5. **Display.BySurfaceColors**: 각각 X와 Y를 따라 표면에서 색상 값 배열을 매핑합니다.
 
-Close-up preview of the output surface with resolution of 400x300 samples
+해상도가 400x300인 샘플의 출력 표면 미리보기 클로즈업
 
 ![](<../images/5-3/5/color - color on surface 03.jpg>)

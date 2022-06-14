@@ -1,8 +1,8 @@
-# Python and Revit
+# Python 및 Revit
 
-### Python and Revit
+### Python 및 Revit
 
-Now that we've demonstrated how to use Python scripts in Dynamo, let's take a look at connecting Revit libraries into the scripting environment. Remember, we imported Python Standard and our Dynamo core nodes with the first four lines in the block of code below. To import the Revit nodes, Revit elements, and the Revit document manager, we only have to add a few more lines:
+Dynamo에서 Python 스크립트를 사용하는 방법에 대해 설명했으므로 이제 Revit 라이브러리를 스크립팅 환경에 연결하는 방법을 살펴보겠습니다. 아래의 code block에서 처음 네 줄을 포함하는 Python Standard 및 Dynamo 코어 노드를 가져왔습니다. Revit 노드, Revit 요소 및 Revit 문서 관리자를 가져오려는 경우 다음과 같은 일부 코드 줄만 추가하면 됩니다.
 
 ```
 import sys
@@ -25,35 +25,35 @@ from RevitServices.Persistence import DocumentManager
 import System
 ```
 
-This gives us access to the Revit API and offers custom scripting for any Revit task. By combining the process of visual programming with Revit API scripting, collaboration and tool development improve significantly. For example, a BIM manager and a schematic designer can work together on the same graph. In this collaboration, they can improve design and execution of the model.
+이렇게 하면 Revit API에 액세스할 수 있으며 모든 Revit 작업에 대한 사용자 스크립트가 제공됩니다. 시각적 프로그래밍 프로세스와 Revit API 스크립팅을 결합하면 공동 작업 및 도구 개발이 크게 개선됩니다. 예를 들어 BIM 관리자와 구조도 설계자는 동일한 그래프에서 함께 작업할 수 있습니다. 이러한 공동 작업을 통해 모델의 설계 및 실행을 개선할 수 있습니다.
 
 ![](<../images/8-3/2/python & revit - 01.jpg>)
 
-### Platform Specific APIs
+### 플랫폼별 API
 
-The plan behind the Dynamo Project is to widen the scope of platform implementation. As Dynamo adds more programs to the docket, users will gain access to platform-specific APIs from the Python scripting environment. While Revit is the case study for this section, we can anticipate more chapters in the future which offer comprehensive tutorials on scripting in other platforms. Additionally, there are many [IronPython](http://ironpython.net) libraries accessible now which can be imported into Dynamo!
+Dynamo Project 이면의 계획은 플랫폼 구현 범위를 넓히는 것입니다. Dynamo에서 일람표에 프로그램을 추가하면 사용자는 Python 스크립팅 환경에서 플랫폼별 API에 액세스할 수 있습니다. Revit이 이 섹션의 성공 사례에 해당하지만, 앞으로는 다른 플랫폼의 스크립팅에 대한 포괄적인 튜토리얼을 제공하는 더 많은 장이 제공될 예정입니다. 또한 이제 Dynamo로 가져올 수 있는 많은 [IronPython](http://ironpython.net) 라이브러리에 액세스할 수 있습니다.
 
-The examples below demonstrate ways to implement Revit-specific operations from Dynamo using Python. For a more detailed review on Python's relationship to Dynamo and Revit, refer to the [Dynamo Wiki page](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration). Another useful resource for Python and Revit is the [Revit Python Shell ](https://github.com/architecture-building-systems/revitpythonshell)Project.
+아래의 예는 Python을 사용하여 Dynamo에서 Revit 관련 작업을 구현하는 방법을 보여 줍니다. Dynamo 및 Revit과의 Python 관계에 대한 자세한 검토가 필요한 경우 [Dynamo Wiki 페이지](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration)를 참고하십시오. Python 및 Revit의 또 다른 유용한 리소스는 [Revit Python 쉘](https://github.com/architecture-building-systems/revitpythonshell) 프로젝트입니다.
 
-## Exercise 1
+## 연습 1
 
-> Create a new Revit Project.
+> 새로운 Revit 프로젝트를 작성합니다.
 >
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/8-2/2/Revit-Doc.dyn" %}
 
-In these exercises, we'll explore elementary Python scripts in Dynamo for Revit. The exercise will focus on dealing with Revit files and elements, as well as the communication between Revit and Dynamo.
+이 연습에서는 Dynamo for Revit의 기본적인 Python 스크립트를 살펴볼 것입니다. 이 연습은 Revit 파일 및 요소 처리, Revit과 Dynamo 간의 커뮤니케이션 등에 중점을 둡니다.
 
-This is a cut and dry method for retrieving the _doc_, _uiapp_, and _app_ of the Revit file linked to your Dynamo sesson. Programmers who have worked in the Revit API before may notice the items in the watch list. If these items do not look familiar, that's okay; we'll be using other examples in the exercises below.
+이는 Dynamo 세션에 링크된 Revit 파일의 _doc_, _uiapp_ 및 _app_을 검색하기 위해 미리 마련된 메서드입니다. 이전에 Revit API에서 작업해본 적이 있는 프로그래머는 감시 리스트의 항목을 알아차릴 수도 있습니다. 이러한 항목이 익숙하지 않더라도 아래의 연습에서 다른 예시를 사용하므로 괜찮습니다.
 
-Here is how we're importing Revit Services and retrieving the document data in Dynamo.
+Dynamo에서 Revit 서비스를 가져오고 문서 데이터를 검색하는 방법은 다음과 같습니다.
 
 ![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
 
-Take a look at the Python node in Dynamo. You can also find the code from below:
+Dynamo의 Python 노드를 살펴봅니다. 아래에서 코드를 찾을 수도 있습니다.
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -74,43 +74,43 @@ app = uiapp.Application
 OUT = [doc,uiapp,app]
 ```
 
-## Exercise 2
+## 연습 2
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
 
-In this exercise, we'll make a simple Model Curve in Revit using the Dynamo Python node.
+이 연습에서는 Dynamo Python 노드를 사용하여 Revit에서 간단한 모델 곡선을 작성하겠습니다.
 
-Begin by creating a new Conceptual Mass family in Revit.
+Revit에서 새로운 개념 매스 패밀리를 작성하여 시작합니다.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
 
-Open the _Conceptual Mass Folder_ and use the _Metric Mass.rft_ template file.
+_개념 매스 폴더_를 열고 _Metric Mass.rft_ 템플릿 파일을 사용합니다.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
 
-In Revit, use the keyboard shortcut **`un`** to bring up the Project Unit settings, change the length unit to meters.
+Revit에서 키보드 단축키 **`un`**를 사용하여 프로젝트 단위 설정을 표시하고 길이 단위를 미터로 변경합니다.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
 
-Launch Dynamo and create the set of nodes in the image below. We'll first create two reference points in Revit from Dynamo nodes.
+Dynamo를 시작하고 아래 이미지의 노드 세트를 작성합니다. 먼저 Dynamo 노드에서 Revit에 두 개의 참조점을 작성합니다.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
 
-> 1. Create a **Code Block** and give it a value of `"0;"`
-> 2. Plug this value into a **ReferencePoint.ByCoordinates** node for X,Y, and Z inputs.
-> 3. Create three sliders, ranging from -100 to 100 with a step size of 1.
-> 4. Connect each slider to a **ReferencePoint.ByCoordinates** node.
-> 5. Add a **Python** node to the workspace, click the "+" button on the node to add another input and plug the two references points into each input. Open the **Python** node.
+> 1. **Code Block**을 작성하고 값을 `"0;"`으로 지정합니다.
+> 2. 이 값을 X, Y 및 Z 입력에 대한 **ReferencePoint.ByCoordinates** 노드에 연결합니다.
+> 3. 단계 크기가 1인 -100에서 100 사이의 슬라이더를 3개 작성합니다.
+> 4. 각 슬라이더를 **ReferencePoint.ByCoordinates** 노드에 연결합니다.
+> 5. **Python** 노드를 작업공간에 추가하고, 노드에서 "+" 버튼을 클릭하여 다른 입력을 추가한 후 두 참조점을 각 입력에 연결합니다. **Python** 노드를 엽니다.
 
-Take a look at the Python node in Dynamo. Find the full code at the below.
+Dynamo의 Python 노드를 살펴봅니다. 아래에서 전체 코드를 찾습니다.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
 
-> 1. **System.Array:** Revit needs a **System Array** as an input (rather than a Python list). This is just one more line of code, but paying attention to argument types will facilitate Python programming in Revit.
+> 1. **System.Array:** Revit에는 입력으로 Python 리스트가 아닌 **시스템 배열**이 필요합니다. 이 경우 코드 줄이 1개 더 추가될 뿐이지만 인수 유형에 신경 쓰면 Revit에서 Python 프로그래밍을 쉽게 처리할 수 있습니다.
 
 ```
 import sys
@@ -134,34 +134,34 @@ refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
-In Dynamo, we've created two reference points with a line connecting them using Python. Let's take this a little further in the next exercise.
+Dynamo에서 Python을 사용하여 하나의 선으로 연결된 참조점 두 개를 작성했습니다. 다음 연습에서 좀 더 자세히 살펴보겠습니다.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
 
-## Exercise 3
+## 연습 3
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-This exercise keeps it simple, but drives home the topics of connecting data and geometry from Revit to Dynamo and back. Let's begin by opening Revit-StructuralFraming.rvt. Once opened, launch Dynamo and open the file Revit-StructuralFraming.dyn.
+이 연습은 간단하지만, Revit에서 Dynamo로, 그리고 그 반대로 데이터와 형상을 연결하는 항목을 이해하는 데 도움이 됩니다. 먼저 Revit-StructuralFraming.rvt를 열어 보겠습니다. 이 파일이 열리면 Dynamo를 시작하고 Revit-StructuralFraming.dyn 파일을 엽니다.
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 01.jpg>)
 
-This Revit file is about as basic as it gets. Two reference curves: one drawn on Level 1 and the other drawn on Level 2. We want to get these curves into Dynamo and maintain a live link.
+이 Revit 파일에는 기본적인 내용이 포함됩니다. 2개의 참조 곡선(레벨 1에 1개, 레벨 2에 1개)이 그려집니다. 이러한 곡선을 Dynamo로 가져와 라이브 링크를 유지하려고 합니다.
 
-In this file we have a set of nodes plugging into five inputs of a Python node.
+이 파일에는 Python 노드의 5개 입력에 연결된 노드 세트가 있습니다.
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
-> 1. **Select Model Element Nodes:** Hit the select button for each and select a corresponding curve in Revit.
-> 2. **Code Block:** using the syntax `0..1..#x;`_,_ connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
-> 3. **Structural Framing Types:** We'll choose the default W12x26 beam here from the dropdown menu.
-> 4. **Levels:** select "Level 1".
+> 1. **Select Model Element Nodes:** 각각에 대한 선택 버튼을 누르고 Revit에서 해당 곡선을 선택합니다.
+> 2. **Code Block:** `0..1..#x;`_,_ 구문을 사용하여 0에서 20 사이의 정수 슬라이더를 _x_ 입력에 연결합니다. 이렇게 하면 두 곡선 사이에 그릴 빔 수가 지정됩니다.
+> 3. **Structural Framing Types:** 드롭다운 메뉴에서 기본 W12x26 빔을 선택합니다.
+> 4. **Levels:** "레벨 1"을 선택합니다.
 
-This code in Python is a little more dense, but the comments within the code describe what's happening in the process
+Python의 이 코드는 약간 더 조밀하지만, 코드 내의 해설에 프로세스에서 발생하는 상황이 설명됩니다.
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
 
@@ -200,23 +200,23 @@ for val in IN[2]:
 	OUT.append(beam.Faces)
 ```
 
-In Revit, we have an array of beams spanning the two curves as structural elements. Note: this isn't a realistic example...the structural elements are used as an example for native Revit instances created from Dynamo.
+Revit에는 두 곡선을 구조적 요소로 스패닝하는 빔 배열이 있습니다. 참고: 이는 실제 예가 아닙니다. 해당 구조적 요소는 Dynamo에서 작성된 기본 Revit 인스턴스의 예로 사용됩니다.
 
-In Dynamo, we can see the results as well. The beams in the **Watch3D** node refer to the geometry queried from the Revit elements.
+Dynamo에서는 결과도 볼 수 있습니다. **Watch3D** 노드의 빔은 Revit 요소에서 조회된 형상을 나타냅니다.
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
 
-Notice that we have a continuous process of translating data from the Revit Environment to the Dynamo Environment. In summary, here's how the process plays out:
+Revit 환경에서 Dynamo 환경으로 데이터를 변환하는 프로세스가 지속됩니다. 요약하면 프로세스가 진행되는 방식은 다음과 같습니다.
 
-1. Select Revit element
-2. Convert Revit element to Dynamo Curve
-3. Divide Dynamo curve into a series of Dynamo points
-4. Use the Dynamo points between two curves to create Dynamo lines
-5. Create Revit beams by referencing Dynamo lines
-6. Output Dynamo surfaces by querying the geometry of Revit beams
+1. Revit 요소 선택
+2. Revit 요소를 Dynamo 곡선으로 변환
+3. Dynamo 곡선을 일련의 Dynamo 점으로 분할
+4. 두 곡선 사이의 Dynamo 점을 사용하여 Dynamo 선 작성
+5. Dynamo 선을 참조하여 Revit 빔 작성
+6. Revit 빔의 형상을 조회하여 Dynamo 표면 출력
 
-This may sound a little heavy handed, but the script makes it as simple as editing the curve in Revit and re-running the solver (although you may have to delete the previous beams when doing so). _This is due to the fact that we are placing beams in python, thus breaking the association that OOTB nodes have._
+이 작업은 약간 까다로워 보일 수 있지만 스크립트를 사용하면 Revit에서 곡선을 편집하고 솔버를 다시 실행하는 것만큼 간단해집니다(단, 이렇게 하는 경우 이전 빔을 삭제해야 할 수도 있음). _이는 Python에서 빔을 배치하여 OOTB 노드에 있는 연결이 끊어지기 때문입니다._
 
-With an update to the reference curves in Revit, we get a new array of beams.
+Revit에서 참조 곡선을 업데이트하여 새로운 빔 배열을 얻게 됩니다.
 
 ![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)

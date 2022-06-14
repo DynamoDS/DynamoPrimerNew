@@ -1,130 +1,130 @@
-# Data
+# 패널 >
 
-Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+데이터는 프로그램과 관련된 항목입니다. 데이터는 유선으로 이동되며, 새로운 형식의 출력 데이터로 처리되는 노드에 입력을 제공합니다. 데이터의 정의, 구성 방법을 검토하고 Dynamo에서 사용해 보겠습니다.
 
-## What is Data?
+## 데이터란?
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
+데이터는 정성적 또는 정량적 변수 값의 세트입니다. 가장 간단한 데이터 형식은 `0`, `3.14` 또는 `17`과 같은 숫자입니다. 그러나 데이터는 변화하는 숫자(`height`), 문자(`myName`), 형상(`Circle`) 또는 데이터 항목 리스트(`1,2,3,5,8,13,...`)를 나타내는 다양한 유형의 변수가 될 수도 있습니다.
 
-In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+Dynamo에서 노드의 입력 포트에 데이터를 추가/공급합니다. 작업이 없는 데이터가 있을 수 있지만 노드가 나타내는 작업을 처리하기 위해서는 데이터가 필요합니다. 노드를 작업공간에 추가할 때 입력을 제공하지 않으면 결과는 작업 자체의 결과가 아니라 함수가 됩니다.
 
 ![Data and Actions](<../images/5-3/1/data - what is data.jpg>)
 
-> 1. Simple Data
-> 2. Data and Action (A Node) successfully executes
-> 3. Action (A Node) without Data Inputs returns a generic function
+> 1. 단순 데이터
+> 2. 데이터 및 작업(노드)이 성공적으로 실행됩니다.
+> 3. 데이터 입력이 없는 작업(노드)에서는 일반 함수를 반환합니다.
 
-### Null - Absence of Data
+### Null - 데이터가 없음
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
+Null 인식 - `'null'` 유형은 데이터가 없음을 나타냅니다. 이는 추상적인 개념이지만 시각적 프로그래밍 작업 중에 이 개념을 마주하게 될 가능성이 높습니다. 작업을 통해 유효한 결과가 작성되지 않는 경우 노드에서는 null을 반환합니다.
 
-Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+null이 발생하는지 테스트하고 데이터 구조에서 null을 제거하는 작업은 강력한 프로그램을 작성하는 데 있어서 매우 중요한 부분입니다.
 
-| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| 아이콘 | 이름/구문 | 입력 | 출력 |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj | 부울 |
 
-### Data Structures
+### 데이터 구조
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
+시각적 프로그래밍을 사용하는 경우 많은 데이터를 아주 빠르게 생성할 수 있으며, 계층 구조를 관리할 방법이 필요합니다. 이는 데이터를 저장하는 조직 체계인 데이터 구조의 역할입니다. 데이터 구조의 세부 사항과 사용 방법은 프로그래밍 언어마다 다릅니다.
 
-In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+Dynamo에서는 리스트 기능을 통해 데이터에 계층을 추가합니다. 이러한 내용은 뒤쪽에 나오는 장에서 자세히 살펴보겠지만 여기서는 다음 내용부터 간단히 알아봅니다.
 
-A list represents a collection of items placed into one structure of data:
+리스트는 하나의 데이터 구조에 배치된 항목의 모음을 나타냅니다.
 
-* I have five fingers (_items_) on my hand (_list_).
-* There are ten houses (_items_) on my street (_list_).
+* 내 손(_리스트_)에는 5개의 손가락(_항목_)이 있습니다.
+* 도로(_리스트_)에는 10개의 가구(_항목_)가 있습니다.
 
 ![List Breakdown](<../images/5-3/1/data - data structures.jpg>)
 
-> 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 1. **Number Sequence** 노드에서는 _start_, _amount_ 및 _step_ 입력을 사용하여 번호 리스트를 정의합니다. 이러한 노드를 사용하여 _100-109_ 범위 및 _0-9_ 범위에 대해 10개 숫자가 포함된 별도의 리스트를 2개를 작성했습니다.
+> 2. **List.GetItemAtIndex** 노드에서는 특정 색인에 있는 리스트의 항목을 선택합니다. _0_을 선택하면 리스트의 첫 번째 항목이 표시됩니다(이 경우 _100_).
+> 3. 두 번째 리스트에 동일한 프로세스를 적용하면 리스트의 첫 번째 항목인 _0_ 값이 표시됩니다.
+> 4. 이제 **List.Create** 노드를 사용하여 두 개의 리스트를 하나로 병합합니다. 노드에서 _리스트의 리스트를 작성합니다._ 그러면 데이터 구조가 변경됩니다.
+> 5. 색인을 _0_으로 설정하여 **List.GetItemAtIndex**를 다시 사용하면 리스트의 리스트에서 첫 번째 리스트가 표시됩니다. 이는 리스트를 항목으로 처리하는 것을 의미하며, 이 점은 다른 스크립팅 언어와 다소 다릅니다. 뒤쪽에 나오는 장에서 리스트 조작 및 데이터 구조에 대해 좀 더 자세히 살펴보겠습니다.
 
-The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
+Dynamo의 데이터 계층을 이해하기 위한 주요 개념은 **데이터 구조와 관련해서 리스트가 항목으로 간주된다는 점입니다.** 즉, Dynamo는 데이터 구조의 이해를 위해 하향식 프로세스로 작동합니다. 이것은 무엇을 의미합니까? 예시를 통해 살펴보겠습니다.
 
-## Exercise: Using Data to Make a Chain of Cylinders
+## 연습: 데이터를 사용하여 원통 체인 만들기
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+첫 번째 예에서는 이 섹션에서 설명한 형상 계층을 통과하는 쉘 원통을 조립합니다.
 
-### Part I: Set up Graph for one cylinder with some changeable parameters.
+### I부: 몇 가지 변경 가능한 매개변수를 사용하여 하나의 원통에 대한 그래프를 설정합니다.
 
-1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+1.**Point.ByCoordinates 추가 -** 캔버스에 노드를 추가하면 Dynamo 미리보기 그리드의 원점에 점이 표시됩니다. _x,y_ 및 _z_ 입력의 기본값은 _0.0_이며, 이 값을 사용하면 해당 위치에 점이 생깁니다.
 
 ![](<../images/5-3/1/data - exercise step 1.jpg>)
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+2\. **Plane.ByOriginNormal -** 형상 계층의 다음 단계는 평면입니다. 평면은 여러 가지 방법으로 구성할 수 있는데 우리는 입력을 위해 원점과 법선을 사용하겠습니다. 원점은 이전 단계에서 작성한 점 노드입니다.
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis -** z 방향으로 결합된 벡터입니다. 입력이 없으며 \[0,0,1] 값의 벡터만 있습니다. 이 값을 _Plane.ByOriginNormal_ 노드에 대한 **normal** 입력으로 사용합니다. 그러면 Dynamo 미리보기에 직사각형 평면이 표시됩니다.
 
 ![](<../images/5-3/1/data - exercise step 2.jpg>)
 
-3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+3\. **Circle.ByPlaneRadius -** 계층을 따라 위로 이동하면서 이제 이전 단계의 평면에서 곡선을 작성합니다. 노드에 연결한 후 원점에 원을 가져옵니다. 노드의 기본 반지름 값은 _1_입니다.
 
 ![](<../images/5-3/1/data - exercise step 3.jpg>)
 
-4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+4\. **Curve.Extrude -** 이제 항목에 깊이를 지정하고 세 번째 치수로 이동하여 항목이 팝업되도록 합니다. 이 노드에서는 곡선을 돌출시켜 곡선에서 표면을 작성합니다. 노드의 기본 거리는 _1_이며 뷰포트에 원통이 표시됩니다.
 
 ![](<../images/5-3/1/data - exercise step 4.jpg>)
 
-5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+5\. **Surface.Thicken -** 이 노드에서는 표면을 지정된 거리만큼 간격띄우기하고 양식을 닫아 닫힌 솔리드를 제공합니다. 기본 두께 값은 _1_이고 뷰포트에서 쉘 원통이 이러한 값과 함께 표시됩니다.
 
 ![](<../images/5-3/1/data - exercise step 5.jpg>)
 
-6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+6\. **Number Slider -** 이러한 모든 입력에 대해 기본값을 사용하는 대신, 파라메트릭 컨트롤을 몇 가지 모델에 추가해 보겠습니다.
 
-**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**Domain Edit- **숫자 슬라이더를 캔버스에 추가한 후 왼쪽 상단에 있는 캐럿을 클릭하여 도메인 옵션을 표시합니다.
 
-**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+**Min/Max/Step -** _min_, _max_ 및 _step_ 값을 각각 _0_,_2_ 및 _0.01_로 변경합니다. 이 작업은 전체 형상의 크기를 제어하기 위해 수행합니다.
 
 ![](<../images/5-3/1/data - exercise step 6.gif>)
 
-7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+7\. **Number Slider -** 모든 기본 입력에서 기본값을 갖는 모든 입력에 슬라이더가 대신 생길 때까지 이 숫자 슬라이더를 여러 번 복사하여 붙여넣어 보겠습니다(슬라이더를 선택하고 Ctrl+C, Ctrl+V 키를 차례로 누름). 정의가 작동하려면 일부 슬라이더 값이 0보다 커야 합니다(즉, 표면을 두껍게 하려면 돌출 깊이가 있어야 함).
 
 ![](<../images/5-3/1/data - exercise step 7a.gif>)
 
 ![](<../images/5-3/1/data - exercise step 7b.gif>)
 
-8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+8\. 이제 이러한 슬라이더를 사용하여 파라메트릭 쉘 원통을 작성했습니다. 이러한 매개변수 중 일부를 조정해 보고 Dynamo 뷰포트에서 형상이 동적으로 업데이트되는 것을 확인합니다.
 
 ![](<../images/5-3/1/data - exercise step 8a.gif>)
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**Number Slider -** 이 작업에서 한 단계 더 나아가 캔버스에 슬라이더를 많이 추가했으며, 방금 작성한 도구의 인터페이스를 정리해야 합니다. 하나의 슬라이더를 마우스 오른쪽 버튼으로 클릭하고 "이름 바꾸기..."를 선택한 다음, 각 슬라이더의 이름을 해당 매개변수(thickness, Radius, Height 등)에 대해 적절한 이름으로 변경합니다.
 
 ![](<../images/5-3/1/data - exercise step 8b step.jpg>)
 
-### Part II: Populate an array of cylinders from Part I
+### 2부: 1부의 원통 배열 채우기
 
-9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+9\. 여기서는 원통을 두껍게 작성했습니다. 이러한 객체는 현재 1개가 있습니다. 동적으로 연결된 상태를 유지하는 원통 배열을 작성하는 방법을 살펴보겠습니다. 이렇게 하기 위해 단일 항목으로 작업하는 대신 원통 리스트를 작성하겠습니다.
 
-**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+**Addition (+) -** 작성한 원통 옆에 원통 행을 추가하는 것이 목표입니다. 현재 원통과 인접한 원통을 추가하려는 경우 원통의 반지름과 해당 쉘의 두께를 둘 다 고려해야 합니다. 이 수는 슬라이더의 두 값을 더하여 얻습니다.
 
 ![](<../images/5-3/1/data - exercise step 9.jpg>)
 
-10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+10\. 이 단계는 더 많이 관련되어 있으므로 좀 더 천천히 살펴보겠습니다. 최종 목표는 행에서 각 원통의 위치를 정의하는 숫자 리스트를 작성하는 것입니다.
 
 ![](<../images/5-3/1/data - exercise step 10.jpg>)
 
-> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+> a. **Multiplication -** 먼저 이전 단계의 값에 2를 곱합니다. 이전 단계의 값은 반지름을 나타냅니다. 원통을 전체 지름만큼 이동하겠습니다.
 >
-> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+> b. **Number Sequence -** 이 노드를 사용하여 숫자 배열을 작성합니다. 첫 번째 입력은 이전 단계에서 _step_ 값으로의 _multiplication_ 노드입니다. _number_ 노드를 사용하여 _start_ 값을 _0.0_으로 설정할 수 있습니다.
 >
-> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+> c. **Integer Slider - ** _amount_ 값의 경우 정수 슬라이더를 연결합니다. 그러면 작성되는 원통의 수가 정의됩니다.
 >
-> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+> d. **Output - ** 이 리스트는 배열의 각 원통에 대해 이동된 거리를 표시하며 원래 슬라이더에서 파라메트릭 방식으로 구동됩니다.
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. 이 단계는 매우 간단합니다. 이전 단계에서 정의한 시퀀스를 원래 _Point.ByCoordinates_의 **x** 입력에 연결합니다. 그러면 삭제할 수 있는 _pointX_ 슬라이더가 바뀝니다. 이제 뷰포트에 원통 배열이 표시됩니다(정수 슬라이더가 0보다 큰지 확인).
 
 ![](<../images/5-3/1/data - exercise step 11.gif>)
 
-12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+12\. 원통 체인은 여전히 모든 슬라이더에 동적으로 연결되어 있습니다. 각 슬라이더를 조정하며 정의가 업데이트되는 것을 확인해 보십시오.
 
 ![](<../images/5-3/1/data - exercise step 12.gif>)

@@ -1,5 +1,5 @@
-# Packages
+# 패키지
 
-Once you have created a few Custom Nodes the very next step is to begin organizing and publishing them by way of Packages - a convenient way to store and share your nodes with the Dynamo Community.
+몇 개의 사용자 노드를 작성했으면 다음 단계는 패키지를 통해 노드를 구성 및 게시하는 것입니다. 이렇게 하면 편리하게 노드를 저장하고 Dynamo 커뮤니티와 쉽게 공유할 수 있습니다.
 
 ![IMAGE](<../images/6-2/packages cover.jpg>)

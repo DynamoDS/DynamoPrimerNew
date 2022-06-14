@@ -1,98 +1,98 @@
-# Attractor Points
+# 어트랙터 점
 
-Attractor points are great for experimenting with geometric patterns. They can be used to create gradual changes to objects based on their distance.
+어트랙터 점은 형상 패턴을 실험해 보는 데 유용합니다. 객체의 거리를 기준으로 점진적인 변화를 작성하는 데 사용할 수 있습니다.
 
-This workflow will teach you how to:
+이 워크플로우에서는 다음과 같은 작업을 수행하는 방법을 설명합니다.
 
-* Create, manage and edit lists.
-* Move points in the 3D preview using direct manipulation.
-* Change the executing mode.
+* 리스트를 작성, 관리 및 편집합니다.
+* 직접 조작을 사용하여 3D 미리보기에서 점을 이동합니다.
+* 실행 모드를 변경합니다.
 
 ![](../images/10-1/2/attractor1.gif)
 
-## Defining our Objectives
+## 목표 정의
 
-In this exercise, we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
+이 연습에서는 반지름 입력이 근처 점까지의 거리(_관계_)로 정의되는 원(_목표_)을 작성하려고 합니다.
 
-![Hand Sketch of Circle](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
+![손으로 스케치한 원](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
 
-> A point that defines a distance-based relationship is commonly referred to as an "Attractor." Here the distance to our Attractor Point will be used to specify how big our circle should be.
+> 거리 기반 관계를 정의하는 점을 일반적으로 “어트랙터”라고 합니다. 여기서 어트랙터 점까지의 거리가 원의 크기를 지정하는 데 사용됩니다.
 
-## Next steps
+## 다음 단계
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
 
-Now that we have our objectives and relationships sketched we can begin creating our graph. We need the Nodes that will represent the sequence of actions Dynamo will execute. Let's start by adding the following nodes: **Number**, **Number Slider**, **Point.ByCoordinates**, **Geometry.DistanceTo, Circle.ByCenterPointRadius.**
+목표와 관계를 스케치했으므로 그래프 작성을 시작할 수 있습니다. Dynamo에서 실행할 작업의 순서를 나타내는 노드가 필요합니다. 먼저 **Number**, **Number Slider**, **Point.ByCoordinates**, **Geometry.DistanceTo, Circle.ByCenterPointRadius 노드를 추가해 보겠습니다.**
 
 ![](<../images/10-1/2/attractor (2).png>)
 
-> 1. Input > Basic > **Number**
-> 2. Input > Basic > **Number Slider**
-> 3. Geometry > Points > Point > **By Coordinates(x,y,z)**
-> 4. Geometry > Modifiers > Geometry > **DistanceTo**
-> 5. Geometry > Curves > Circle > **ByCenterPointRadius**
+> 1. 입력 > 기본 > **Number**
+> 2. 입력 > 기본 > **Number Slider**
+> 3. 형상 > 점 > 점 > **By Coordinates(x,y,z)**
+> 4. 형상 > 수정자 > 형상 > **DistanceTo**
+> 5. 형상 > 곡선 > 원 > **ByCenterPointRadius**
 
-### Connecting Nodes with Wires
+### 와이어로 노드 연결하기
 
-Now that we have a few Nodes, we need to connect the Ports of the Nodes with Wires. These connections will define the flow of data.
+몇 개의 노드가 있으므로 노드의 포트를 와이어로 연결해야 합니다. 이러한 연결은 데이터의 흐름을 정의합니다.
 
 ![](<../images/10-1/2/attractor (3).png>)
 
-> 1. **Number** to **Point.ByCoordinates**
-> 2. **Number Sliders** to **Point.ByCoordinates**
-> 3. **Point.ByCoordinates** (2) to **DistanceTo**
-> 4. **Point.ByCoordinates** and **DistanceTo** to **Circle.ByCenterPointRadius**
+> 1. **Number** - **Point.ByCoordinates**
+> 2. **Number Slider** - **Point.ByCoordinates**
+> 3. **Point.ByCoordinates**(2) - **DistanceTo**
+> 4. **Point.ByCoordinates** - **DistanceTo** - **Circle.ByCenterPointRadius**
 
-### Executing the Program
+### 프로그램 실행하기
 
-With our Program Flow defined, all we need to do is tell Dynamo to execute it. Once our program is executed (either Automatically or when we click Run in Manual Mode), data will pass through the Wires, and we should see the results in the 3d Preview.
+프로그램 흐름이 정의되었으므로 Dynamo에 프로그램을 실행하도록 지시하기만 하면 됩니다. 프로그램이 자동으로 또는 수동 모드에서 실행을 클릭하여 실행되면 데이터가 와이어를 통과하게 되며 3D 미리보기에서 결과를 확인할 수 있습니다.
 
 ![](<../images/10-1/2/attractor (4).png>)
 
-> 1. (Click Run) - If the Execution Bar is in Manual Mode, we need to Click Run to execute the graph
-> 2. Node Preview - Hovering your mouse over the box on the lower right corner of a Node will give you a pop-up of the results
-> 3. 3D Preview - If any of our Nodes create geometry, we will see it in the 3D Preview.
-> 4. The output geometry on the creation node.
+> 1. (실행 클릭) - 실행 막대가 수동 모드인 경우 실행을 클릭하여 그래프를 실행해야 합니다.
+> 2. 노드 미리보기 - 노드의 오른쪽 하단에 있는 상자 위로 마우스를 가져가면 결과 팝업이 표시됩니다.
+> 3. 3D 미리보기 - 노드에서 형상을 작성하면 3D 미리보기에서 확인할 수 있습니다.
+> 4. 작성 노드의 출력 형상입니다.
 
-### Adding **a Code Block**
+### **Code Block** 추가
 
-If our program is working, we should see a circle in the 3D Preview that is passing through our Attractor Point. This is great, but we may want to add more detail or more controls. Let's adjust the input to the circle Node so that we can calibrate the influence on the radius. Add another **Number Slider** to the Workspace, then double click on a blank area of the Workspace to add a **Code Block** Node. Edit the field in the Code Block, specifying `X/Y`.
+프로그램이 작동 중인 경우 어트랙터 점을 통과하는 원이 3D 미리보기에 표시됩니다. 만족스러운 결과이지만, 상세 정보와 컨트롤을 더 추가할 수도 있습니다. 반지름에 미치는 영향을 교정할 수 있도록 원 노드에 대한 입력을 조정해 보겠습니다. 다른 **Number Slider**를 작업공간에 추가한 다음, 작업공간의 빈 영역을 두 번 클릭하여 **Code Block** 노드를 추가합니다. Code Block에서 필드를 편집하고 `X/Y`를 지정합니다.
 
 ![](<../images/10-1/2/attractor (5).png>)
 
 > 1. **Code Block**
-> 2. **DistanceTo** and **Number Slider** to **Code Block**
-> 3. **Code Block** to **Circle.ByCenterPointRadius**
+> 2. **DistanceTo** 및 **Number Slider** - **Code Block**
+> 3. **Code Block** - **Circle.ByCenterPointRadius**
 
-### Using Sequences
+### 시퀀스 사용
 
-Starting simple and building complexity is an effective way to incrementally develop our program. Once it is working for one circle, let's apply the power of the program to more than one circle. Instead of one center point, if we use a grid of points and accommodate the change in the resulting data structure, our program will now create many circles - each with a unique radius value defined by the calibrated distance to the Attractor Point.
+단순하게 시작해서 복잡성을 더하는 것은 프로그램을 점진적으로 개발하는 효과적인 방법입니다. 프로그램이 원 1개에 작동하면 2개 이상의 원에 프로그램의 기능을 적용해 보겠습니다. 1개의 중심점 대신, 점 그리드를 사용하고 결과 데이터 구조에서 변경 사항을 적용하면 프로그램에서는 이제 각각 어트랙터 점까지의 교정된 거리로 정의되는 고유한 반지름 값을 갖는 원을 많이 작성합니다.
 
 ![](<../images/10-1/2/attractor (6).png>)
 
-> 1. Add a **Number Sequence** Node and replace the inputs of **Point.ByCoordinates** - Right Click Point.ByCoordinates and select Lacing > Cross Reference
-> 2. Add a **Flatten** Node after Point.ByCoordinates. To flatten a list completely, leave the `amt` input at the default of `-1`
-> 3. The 3D Preview will update with a grid of circles
+> 1. **Number Sequence** 노드를 추가하고 **Point.ByCoordinates**의 입력을 대치합니다. Point.ByCoordinates를 마우스 오른쪽 버튼으로 클릭하고 레이싱 > 교차 참조를 선택합니다.
+> 2. Point.ByCoordinates 다음으로 **Flatten** 노드를 추가합니다. 리스트를 완전히 단순화하려면 `amt` 입력을 기본값인 `-1`로 둡니다.
+> 3. 3D 미리보기가 원의 그리드로 업데이트됩니다.
 
-### Adjusting with Direct Manipulation
+### 직접 조작으로 조정하기
 
-Sometimes numerical manipulation isn't the right approach. Now you can manually push and pull Point geometry when navigating in the background 3D preview. We can also control other geometry that was constructed by a point. For example, **Sphere.ByCenterPointRadius** is capable of Direct Manipulation as well. We can control the location of a point from a series of X, Y, and Z values with **Point.ByCoordinates**. With the Direct Manipulation approach, however, you are able to update the values of the sliders by manually moving the point in the **3D Preview Navigation** mode. This offers a more intuitive approach to controlling a set of discrete values that identify a point's location.
+숫자 조작이 적절한 방법이 아닌 경우도 있습니다. 이제 배경 3D 미리보기에서 탐색할 때 점 형상을 수동으로 밀어 넣고 끌어올 수 있습니다. 또한 점으로 구성된 다른 형상을 제어할 수도 있습니다. 예를 들어, **Sphere.ByCenterPointRadius**는 직접 조작도 수행할 수 있습니다. **Point.ByCoordinates**로 일련의 X, Y 및 Z 값에서 점의 위치를 제어할 수 있습니다. 그러나 직접 조작 방법을 사용하면 **3D 미리보기 탐색** 모드에서 점을 수동으로 이동하여 슬라이더 값을 업데이트할 수 있습니다. 이렇게 하면 점의 위치를 식별하는 개별 값 세트를 보다 간단하게 제어할 수 있습니다.
 
 ![](<../images/10-1/2/attractor (7).png>)
 
-> 1. To use **Direct Manipulation**, select the panel of the point to be moved – arrows will appear over the point selected.
-> 2. Switch to **3D Preview Navigation** mode.
+> 1. **직접 조작**을 사용하려면 이동할 점의 패널을 선택합니다. 그러면 선택한 점 위에 화살표가 나타납니다.
+> 2. **3D 미리보기 탐색** 모드로 전환합니다.
 
 ![](../images/10-1/2/attractor\(8\).png)
 
-> 1. Hover over the point and the X, Y, and Z axes will appear.
-> 2. Click and drag the colored arrow to move the corresponding axis, and the **Number Slider** values will update live with the manually moved point.
+> 1. 점 위로 마우스를 가져가면 X, Y 및 Z축이 나타납니다.
+> 2. 색상 화살표를 클릭하고 끌어 해당 축을 이동하면 **Number Slider** 값이 수동으로 이동한 점으로 실시간 업데이트됩니다.
 
 ![](<../images/10-1/2/attractor (1).png>)
 
-> 1. Note that before **Direct Manipulation** only one slider was plugged into the **Point.ByCoordinates** component. When we manually move the point in the X-direction, Dynamo will automatically generate a new **Number Slider** for the X input.
+> 1. **직접 조작** 이전에는 하나의 슬라이더만 **Point.ByCoordinates** 구성요소에 연결되어 있었습니다. 점을 X 방향으로 수동으로 이동하면 Dynamo에서는 X 입력에 대해 새 **Number Slider**를 자동으로 생성합니다.
 

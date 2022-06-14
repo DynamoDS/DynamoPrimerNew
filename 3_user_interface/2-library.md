@@ -1,62 +1,62 @@
-# Library
+# 라이브러리
 
-The Library contains all of the loaded Nodes, including the ten default categories Nodes that come with the installation as well as any additionally loaded Custom Nodes or Packages. The Nodes in the Library are organized hierarchically within libraries, categories, and, where appropriate, subcategories.
+라이브러리에는 설치와 함께 제공되는 10개의 기본 카테고리 노드뿐만 아니라 추가로 로드된 사용자 노드 또는 패키지까지, 로드된 모든 노드가 포함되어 있습니다. 라이브러리의 노드는 라이브러리, 카테고리 및 하위 카테고리(해당되는 경우) 내에서 계층적으로 구성되어 있습니다.
 
 ![](<images/3-2/library - library UI.jpg>)
 
-* Basic Nodes: Comes with default installation.
-* Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
-* Nodes from the Package Manager: Collection of published Custom Nodes.
+* 기본 노드: 기본 설치와 함께 제공됩니다.
+* 사용자 노드: 자주 사용하는 루틴 또는 특수 그래프를 사용자 노드로 저장합니다. 또한 커뮤니티와 사용자 노드를 공유할 수도 있습니다.
+* 패키지 관리자의 노드: 게시된 사용자 노드의 모음입니다.
 
-We will go through the [hierarchy of Nodes](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](3-3\_dynamo\_libraries.md#quick-search-in-library) and learn about some of the [frequently used Nodes](3-3\_dynamo\_libraries.md#frequently-used-nodes) among them.
+이제 [노드 카테고리의 계층](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories)을 살펴보고, [라이브러리에서 빠르게 검색](3-3\_dynamo\_libraries.md#quick-search-in-library)하는 방법과 그중 [자주 사용하는 노드](3-3\_dynamo\_libraries.md#frequently-used-nodes)에 대해 알아보겠습니다.
 
-### Library Hierarchy for Categories
+### 카테고리의 라이브러리 계층
 
-Browsing through these categories is the fastest way to understand the hierarchy of what we can add to our Workspace and the best way to discover new Nodes you haven't used before.
+이러한 카테고리를 훑어보면 작업공간에 추가할 수 있는 작업의 계층을 파악하고 이전에 사용해 본 적이 없는 새 노드를 빠르게 확인할 수 있습니다.
 
-Browse the Library by clicking through the menus to expand each category and its subcategory
+메뉴를 통해 각 카테고리와 하위 카테고리를 확장하여 라이브러리를 검색합니다.
 
 {% hint style="info" %}
-Geometry are great menus to begin exploring as they contain the largest quantity of Nodes.
+형상은 가장 많은 노드 수를 포함하고 있으므로 탐색을 시작하기에 유용한 메뉴입니다.
 {% endhint %}
 
 ![](<images/3-2/library  - modified and resize library categories.jpg>)
 
-> 1. Library
-> 2. Category
-> 3. Subcategory
-> 4. Node
+> 1. 라이브러리
+> 2. 카테고리
+> 3. 하위카테고리
+> 4. 노드
 
-These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
+노드가 데이터를 **작성(Create)**하는지, **작업(Action)**을 실행하는지 또는 데이터를 **조회(Query)**하는지에 따라 노드를 동일한 하위 카테고리로 추가로 분류합니다.
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/3-2/user interface - create.jpg>) **Create**: 처음부터 새로 형상을 작성하거나 구성합니다. 예: 원.
+* ![](<images/3-2/user interface - action.jpg>) **Action**: 객체에 대해 작업을 수행합니다. 예: 원 축척.
+* ![](<images/3-2/user interface - query.jpg>) **Query**: 이미 존재하는 객체의 특성을 가져옵니다. 예: 원의 반지름 가져오기.
 
-Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
+노드 위에 마우스를 놓으면 해당 노드의 이름 및 아이콘 외에 자세한 정보가 표시됩니다. 이를 통해 노드에서 수행하는 작업, 입력에 필요한 항목, 출력으로 제공되는 항목을 쉽게 파악할 수 있습니다.
 
 ![](<images/3-2/user interface - node description.jpg>)
 
-> 1. Description - plain language description of the Node
-> 2. Icon - larger version of the icon in the Library Menu
-> 3. Input(s) - name, data type, and data structure
-> 4. Output(s) - data type and structure
+> 1. 설명 - 노드에 대한 일반 언어 설명
+> 2. 아이콘 - 더 큰 버전의 라이브러리 메뉴 아이콘
+> 3. 입력 - 이름, 데이터 유형 및 데이터 구조
+> 4. 출력 - 데이터 유형 및 구조
 
-### Quick search in Library
+### 라이브러리에서 빠른 검색
 
-If you know with relative specificity which Node you want to add to your Workspace, type in the **Search** field to look up all matching Nodes.
+작업공간에 추가할 노드에 대해 상대적 특수성을 알고 있는 경우 **검색** 필드에 입력하여 일치하는 모든 노드를 조회합니다.
 
-Choose by clicking on the Node you wish to add or hit Enter to add highlighted nodes to the center of the Workspace.
+추가하려는 노드를 클릭하여 선택하거나 Enter 키를 눌러 강조 표시된 노드를 작업공간의 중심에 추가합니다.
 
 ![](<images/3-2/user interface - search.jpg>)
 
-#### Search by hierarchy
+#### 계층별 검색
 
-Beyond using keywords to try to find Nodes, we can type the hierarchy separated with a period in the Search Field or with Code Blocks (which use the _Dynamo textual language_).
+키워드를 사용하여 노드를 찾는 것 외에도, 검색 필드 또는 코드 블록(_Dynamo 텍스트 언어_ 사용)에서 계층을 점으로 구분하여 입력할 수 있습니다.
 
-The hierarchy of each library is reflected in the Name of Nodes added to the Workspace.
+각 라이브러리의 계층 구조는 작업공간에 추가된 노드의 이름에 반영됩니다.
 
-Typing in different portions of the Node's place in the Library hierarchy in the `library.category.nodeName` format returns different results
+라이브러리 계층에 있는 노드 위치의 서로 다른 부분을 `library.category.nodeName` 형식으로 입력하면 다음과 같이 서로 다른 결과가 반환됩니다.
 
 * `library.category.nodeName`
 
@@ -66,73 +66,73 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 ![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
 
-* `nodeName` or `keyword`
+* `nodeName` 또는 `keyword`
 
 ![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
 
-Typically the Name of the Node in the Workspace will be rendered in the `category.nodeName` format, with some notable exceptions particularly in the Input and View Categories.
+일반적으로 작업공간에서 노드의 이름은 `category.nodeName` 형식으로 렌더링됩니다. 단, Input 및 View 카테고리에는 특히 몇 가지 중요한 예외가 있습니다.
 
-Beware of similarly named Nodes and note the category difference:
+유사한 이름의 노드에 유의하고 카테고리 차이를 기록해 두십시오.
 
-* Nodes from most libraries will include the category format
+* 대부분 라이브러리의 노드에는 카테고리 형식이 포함됩니다.
 
 ![](<images/3-2/library - node category differences 1.jpg>)
 
-* `Point.ByCoordinates` and `UV.ByCoordinates` have the same Name but come from different categories
+* `Point.ByCoordinates` 및 `UV.ByCoordinates`는 이름은 같지만 출처 카테고리는 서로 다릅니다.
 
 ![](<images/3-2/library - node category differences 2.jpg>)
 
-* Notable exceptions include Built-in Functions, Core.Input, Core.View, and Operators
+* 중요한 예외에는 내장된 함수, Core.Input, Core.View 및 연산자가 포함됩니다.
 
 ![](<images/3-2/library - node category differences 3.jpg>)
 
-### Frequently Used Nodes
+### 자주 사용하는 노드
 
-With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our Visual Programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
+Dynamo의 기본 설치에는 수백 가지의 노드가 포함되어 있습니다. 이 중에서 시각적 프로그램 개발에 필수적인 노드는 무엇일까요? 프로그램의 매개변수(**Input**)를 정의할 수 있도록 하는 노드를 집중적으로 살펴보고, 노드 작업(**Watch**) 결과를 확인하고, 바로 가기(**Code Block**)를 통해 입력 또는 기능을 정의해 보겠습니다.
 
-#### Input Nodes
+#### 입력 노드
 
-Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
+Input 노드는 시각적 프로그램의 사용자(자신 또는 다른 사용자)가 핵심 매개변수를 사용하기 위한 주요 수단입니다. 다음은 Core 라이브러리에서 제공되는 일부 노드입니다.
 
-| Node           |                                                | Node           |                                                |
+| 노드 |                                                | 노드 |                                                |
 | -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean        | ![](<images/3-2/library - boolean.jpg>)        | Number         | ![](<images/3-2/library - number.jpg>)         |
-| String         | ![](<images/3-2/library - string.jpg>)         | Number Slider  | ![](<images/3-2/library - number slider.jpg>)  |
-| Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path      | ![](<images/3-2/library - file path.jpg>)      |                |                                                |
+| 부울 | ![](<images/3-2/library - boolean.jpg>) | 번호 | ![](<images/3-2/library - number.jpg>) |
+| 문자열 | ![](<images/3-2/library - string.jpg>) | 번호 슬라이더 | ![](<images/3-2/library - number slider.jpg>) |
+| 디렉토리 경로 | ![](<images/3-2/library - directory path.jpg>) | 정수 슬라이더 | ![](<images/3-2/library - integer slider.jpg>) |
+| 파일 경로 | ![](<images/3-2/library - file path.jpg>) |                |                                                |
 
-#### Watch & Watch3D
+#### Watch 및 Watch3D
 
-The Watch Nodes are essential to managing the data that is flowing through your Visual Program. You can view the result of a Node through the **Node data preview** by hovering your mouse over the node.
+Watch 노드는 시각적 프로그램을 통해 흐르는 데이터를 관리하는 데 필수적입니다. 노드 위로 마우스를 가져가면 **노드 데이터 미리보기**를 통해 노드의 결과를 볼 수 있습니다.
 
 ![](<images/3-2/library - node preview.jpg>)
 
-It will be useful to keep it revealed in a **Watch** Node
+**Watch** 노드에 계속 표시하면 유용합니다.
 
 ![](<images/3-2/library - watch node.jpg>)
 
-Or see the geometry results through a **Watch3D** Node.
+또는 **Watch3D** 노드를 통해 형상 결과를 확인할 수 있습니다.
 
 ![](<images/3-2/library - watch3d node.gif>)
 
-Both of these are found in the View Category in the Core Library.
+이러한 두 노드는 Core 라이브러리의 View 카테고리에 있습니다.
 
 {% hint style="info" %}
-Tip: Occasionally the 3D Preview can be distracting when your Visual Program contains a lot of Nodes. Consider unchecking the Showing Background Preview option in the Settings Menu and using a Watch3D Node to preview your geometry.
+팁: 시각적 프로그램에 많은 노드가 포함된 경우 3D 미리보기가 혼란스러울 수 있습니다. 설정 메뉴에서 배경 미리보기 표시 옵션의 선택을 취소하고 Watch3D 노드를 사용하여 형상을 미리 보는 방법을 고려하십시오.
 {% endhint %}
 
 #### Code Block
 
-Code Block Nodes can be used to define a block of code with lines separated by semi-colons. This can be as simple as `X/Y`.
+Code Block 노드는 줄을 세미콜론으로 구분하여 코드 블록을 정의하는 데 사용할 수 있습니다. 이는 `X/Y`만큼이나 간단합니다.
 
-We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+Code Block을 숫자 입력 정의에 대한 바로 가기나 다른 노드 기능에 대한 호출로 사용할 수도 있습니다. 이렇게 하는 구문은 Dynamo 텍스트 언어인 [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md)의 명명 규칙을 따릅니다.
 
-Here is a simple demonstration (with instructions) for using Code Block in your script.
+다음은 스크립트에서 Code Block을 사용하는 간단한 데모(지침 포함)입니다.
 
 ![](<images/3-2/library - code block demo.gif>)
 
-1. Double-click to create a Code Block Node
-2. Type `Circle.ByCenterPointRadius(x,y);`
-3. Click on Workspace to clear the selection should add `x` and `y` inputs automatically.
-4. Create a Point.ByCoordinates Node and a Number Slider then connect them to the inputs of the Code Block.
-5. The result of the executing the Visual Program is shown as the circle in the 3D Preview
+1. 두 번 클릭하여 Code Block 노드를 작성합니다.
+2. `Circle.ByCenterPointRadius(x,y);`를 입력합니다.
+3. 작업공간을 클릭하여 선택을 취소합니다. 그러면 `x` 및 `y` 입력이 자동으로 추가됩니다.
+4. Point.ByCoordinates 노드와 Number Slider를 작성한 다음, Code Block의 입력에 연결합니다.
+5. 시각적 프로그램을 실행한 결과가 3D 미리보기에 원으로 표시됩니다.

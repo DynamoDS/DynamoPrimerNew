@@ -1,5 +1,5 @@
-# Custom Nodes & Packages
+# 사용자 노드 및 패키지
 
-Out of the box, Dynamo has a lot of functionality stored in its Library of Nodes. For those frequently used routines or that special graph you want to share with the community, Custom Nodes & Packages are a great way to extend Dynamo even further.
+기본적으로 Dynamo의 노드 라이브러리에는 많은 기능이 저장되어 있습니다. 자주 사용하는 루틴이나 커뮤니티와 공유하려는 특수 그래프의 경우, 사용자 노드 및 패키지를 통해 Dynamo를 더욱 확장할 수 있습니다.
 
 ![](./images/customNodes\_cover01.jpg)

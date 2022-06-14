@@ -1,93 +1,93 @@
-# Vector, Plane & Coordinate System
+# 벡터, 평면 및 좌표계
 
-## Vector, Plane & Coordinates System in Dynamo
+## Dynamo의 벡터, 평면 및 좌표계
 
 ### Vector
 
-[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+[벡터](5-2\_vectors.md#vector-1)는 크기 및 방향을 표현한 것으로, 지정된 속도로 특정 방향으로 가속화되는 화살표로 나타낼 수 있습니다. Dynamo에서 모델의 핵심 구성요소입니다. 추상적인 "도우미" 카테고리에 속하기 때문에 벡터를 작성할 때는 때 배경 미리보기에 아무것도 표시되지 않습니다.
 
 ![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
 
-> 1. We can use a line as a stand in for a Vector preview.
+> 1. 벡터 미리보기를 위한 자리 표시자로 선을 사용할 수 있습니다.
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-### Plane
+### 평면
 
-[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+[평면](5-2\_vectors.md#plane-1)은 2D 표면으로, 무한하게 연장되는 평평한 표면으로 나타낼 수 있습니다. 각 평면에는 원점, X 방향, Y 방향 및 Z(위쪽) 방향이 있습니다.
 
 ![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
 
-> 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
-> 2. In Dynamo, Planes are rendered in the Background Preview.
+> 1. 평면은 추상적이지만, 평면에는 원점 위치가 있어 이를 공간에서 찾을 수 있습니다.
+> 2. Dynamo에서 평면은 배경 미리보기에서 렌더링됩니다.
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-### Coordinate System
+### 좌표계
 
-[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+[좌표계](5-2\_vectors.md#coordinate-system-1)는 점 또는 기타 형상 요소의 위치를 결정하는 시스템입니다. 아래 이미지는 Dynamo에서 어떻게 보이는지와 각 색상이 무엇을 나타내는지 설명합니다.
 
 ![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
 
-> 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
+> 1. 평면은 추상적이지만, 좌표계에도 원점 위치가 있어 이를 공간에서 찾을 수 있습니다.
+> 2. Dynamo에서 좌표계는 배경 미리보기에서 축을 정의하는 점(원점)과 선으로 렌더링됩니다(규칙에 따라 X는 빨간색, Y는 초록색, Z는 파란색임).
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Deep Dive into...
+## 자세히 알아보기...
 
-Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
+벡터, 평면 및 좌표계는 추상 형상 유형의 기본 그룹을 구성합니다. 이러한 항목은 모양을 나타내는 다른 형상의 위치, 방향 및 공간 컨텍스트를 정의하는 데 유용합니다. 예를 들어 New York City, 42nd Street 및 Broadway(좌표계)에서 지상층(평면)에 선 채 북쪽(벡터)을 바라보고 있다면 이러한 "도우미"를 사용하여 현재 위치를 정의할 수 있습니다. 휴대폰 케이스 제품이나 고층 건물의 경우도 마찬가지입니다. 모델을 개발하려면 이러한 컨텍스트가 필요합니다.
 
-![Vectors, Planes, and Coordinates](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![벡터, 평면 및 좌표](../images/5-2/2/VectorsPlanesCoodinates.jpg)
 
 ### Vector
 
-A vector is a geometric quantity describing Direction and Magnitude. Vectors are abstract; ie. they represent a quantity, not a geometrical element. Vectors can be easily confused with Points because they both are composed of a list of values. There is a key difference though: Points describe a position in a given coordinate system while Vectors describe a relative difference in position which is the same as saying "direction."
+벡터는 방향 및 크기를 설명하는 기하학적 수량입니다. 벡터는 추상적입니다. 즉, 기하학적 요소가 아니라 수량을 나타냅니다. 벡터와 점은 둘 다 값 리스트로 구성되기 때문에 벡터가 점으로 혼동되기 쉽습니다. 그러나 점은 지정된 좌표계에서의 위치를 나타내지만, 벡터는 "방향"과 같은 의미의 상대적인 위치 차이를 나타낸다는 점이 주요 차이점입니다.
 
-![Vector Details](../images/5-2/2/Vector-Detailed.jpg)
+![벡터 상세 정보](../images/5-2/2/Vector-Detailed.jpg)
 
-If the idea of relative difference is confusing, think of the Vector AB as "I'm standing at Point A, looking toward Point B." The direction, from here (A) to there (B), is our Vector.
+상대적 차이를 이해하는 것이 어렵다면, 벡터 AB를 "점 A에 서서 점 B 쪽을 바라보고 있는" 상태라고 생각해 보십시오. 여기(A)에서 저기(B)까지의 방향이 벡터입니다.
 
-Breaking down Vectors further into their parts using the same AB notation:
+동일한 AB 표기법을 사용하여 벡터를 좀 더 분석해 보겠습니다.
 
 ![Vector](../images/5-2/2/Vector.jpg)
 
-> 1. The **Start Point** of the Vector is called the **Base**.
-> 2. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
-> 3. Vector AB is not the same as Vector BA - that would point in the opposite direction.
+> 1. 벡터의 **시작점**을 **기준**이라고 합니다.
+> 2. 벡터의 \*\*끝점\*\*을 **팁** 또는 **센스**라고 합니다.
+> 3. 벡터 AB는 반대 방향을 향하는 벡터 BA와 같지 않습니다.
 
-If you're ever in need of comic relief regarding Vectors (and their abstract definition), watch the classic comedy Airplane and listen for the oft-quoted tongue-in cheek line:
+벡터(및 그 추상적 정의)에 관해 기분전환이 필요하다면 클래식 코미디인 Airplane을 보고 자주 인용되는 다음 농담을 들어보세요.
 
-> _Roger, Roger. What's our vector, Victor?_
+> _알았다, 오버. 우리 벡터는 뭐지? Victor?(Roger, Roger. What's our vector, Victor?)_
 
-### Plane
+### 평면
 
-Planes are two-dimensional abstract "Helpers." More specifically, Planes are conceptually “flat,” extending infinitely in two directions. Usually they are rendered as a smaller rectangle near their origin.
+평면은 추상적인 2D "도우미"입니다. 보다 구체적으로 말하면 평면은 개념적으로 "평평하여" 두 방향으로 무한하게 확장되며, 일반적으로 원점 근처에서 좀 더 작은 사각형으로 렌더링됩니다.
 
-![Plane](../images/5-2/2/Plane.jpg)
+![평면](../images/5-2/2/Plane.jpg)
 
-You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
+"잠깐! 원점이요? CAD 소프트웨어에서 모델링할 때 제가 사용하는 것과 같은 좌표계처럼 들리는데요."라는 생각이 드실 수 있습니다.
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
+맞습니다. 대부분의 모델링 소프트웨어에서는 구성 평면이나 "레벨"을 활용하여 초안을 작성할 로컬 2D 컨텍스트를 정의합니다. XY, XZ, YZ 또는 북쪽, 남동쪽, 평면이 더 친숙하게 들릴 수 있습니다. 이러한 항목은 모두 무한 "평면" 컨텍스트를 정의하는 평면입니다. 평면에는 깊이가 없지만 방향을 설명하는 데 도움이 됩니다.
 
-### Coordinate System
+### 좌표계
 
-If we are comfortable with Planes, we are a small step away from understanding Coordinate Systems. A Plane has all the same parts as a Coordinate System, provided it is a standard "Euclidean" or "XYZ" Coordinate System.
+평면에 익숙하다면 좌표계를 이해하는 것이 다소 어려울 수 있습니다. 평면은 좌표계(표준 "유클리드" 또는 "XYZ" 좌표계인 경우)와 모든 부분이 동일합니다.
 
-There are other, however, alternative Coordinate Systems such as Cylindrical or Spherical. As we will see in later sections, Coordinate Systems can also be applied to other Geometry types to define a position on that geometry.
+하지만 원통형 또는 구형과 같은 대체 좌표계가 있습니다. 이후 섹션에서 살펴볼 텐데, 좌표계는 다른 형상 유형에 적용하여 해당 형상에서 위치를 정의할 수도 있습니다.
 
-![Coordinate System](../images/5-2/2/CoordinateSystem.jpg)
+![좌표계](../images/5-2/2/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical
+> 대체 좌표계(원통형, 구형) 추가

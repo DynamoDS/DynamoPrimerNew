@@ -1,6 +1,6 @@
-# Geometry with DesignScript
+# DesignScript를 사용한 형상
 
-In this section, you will find a series of lessons on the creation of geometry with DesignScript. Follow along by copying the example DesignScript into Dynamo Code Blocks.
+이 섹션에서는 DesignScript를 사용하여 형상을 작성하는 방법에 대한 일련의 학습 내용을 찾을 수 있습니다. 예제 DesignScript를 Dynamo 코드 블록으로 복사하여 후속 작업을 수행합니다.
 
 ```js
 // copy this code into a Code Block

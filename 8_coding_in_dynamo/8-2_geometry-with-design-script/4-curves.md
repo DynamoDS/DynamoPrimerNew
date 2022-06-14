@@ -1,10 +1,10 @@
-# Curves: Interpolated and Control Points
+# 곡선: 보간 및 제어점
 
-There are two fundamental ways to create free-form curves in Dynamo: specifying a collection of Points and having Dynamo interpolate a smooth curve between them, or a more low-level method by specifying the underlying control points of a curve of a certain degree. Interpolated curves are useful when a designer knows exactly the form a line should take, or if the design has specific constraints for where the curve can and cannot pass through. Curves specified via control points are in essence a series of straight line segments which an algorithm smooths into a final curve form. Specifying a curve via control points can be useful for explorations of curve forms with varying degrees of smoothing, or when a smooth continuity between curve segments is required.
+Dynamo에는 자유형 곡선을 만드는 두 가지 기본적인 방법이 있습니다. 점 모음을 지정하고 Dynamo에서 점 간에 부드러운 곡선을 보간하도록 하거나, 특정 차수 곡선의 기본 제어점을 지정하는 보다 쉬운 방법을 사용할 수 있습니다. 보간된 곡선은 설계자가 필요한 선의 형태를 정확히 알고 있거나 설계에 곡선이 통과할 수 있는 경우와 통과할 수 없는 경우에 대한 특정 구속조건이 있을 때 유용합니다. 제어점을 통해 지정된 곡선은 본질적으로 알고리즘이 최종 곡선 형태로 부드럽게 연결되는 일련의 직선 세그먼트입니다. 제어점을 통해 곡선을 지정하면 다듬기 차수가 다양한 곡선 형태를 살펴보거나, 곡선 세그먼트 간에 매끄럽게 연결되어야 하는 경우에 유용할 수 있습니다.
 
-### Interpolated Curve
+### 보간된 곡선
 
-To create an interpolated curve, simply pass in a collection of Points to the _NurbsCurve.ByPoints_ method.
+보간된 곡선을 작성하려면 점 모음을 _NurbsCurve.ByPoints_ 메서드에 전달하기만 하면 됩니다.
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -18,7 +18,7 @@ pts = Point.ByCoordinates(1..30..#num_pts, s, 0);
 int_curve = NurbsCurve.ByPoints(pts);
 ```
 
-The generated curve intersects each of the input points, beginning and ending at the first and last point in the collection, respectively. An optional periodic parameter can be used to create a periodic curve which is closed. Dynamo will automatically fill in the missing segment, so a duplicate end point (identical to the start point) isn’t needed.
+생성된 곡선은 각각 모음의 첫 번째 점과 마지막 점에서 시작하고 끝나는 각 입력 점과 교차합니다. 선택적 주기 매개변수를 사용하여 닫힌 주기 곡선을 작성할 수 있습니다. Dynamo가 누락된 세그먼트를 자동으로 채우므로 중복된 끝점(시작점과 동일)은 필요하지 않습니다.
 
 ![](../images/8-2/4/Curves\_02.png)
 
@@ -34,9 +34,9 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
     false);
 ```
 
-### Control Points Curve
+### 제어점 곡선
 
-NurbsCurves are generated in much the same way, with input points represent the endpoints of a straight line segment, and a second parameter specifying the amount and type of smoothing the curve undergoes, called the degree.\* A curve with degree 1 has no smoothing; it is a polyline.
+NurbsCurve는 많은 부분 동일한 방식으로 생성됩니다. 입력 점이 직선 세그먼트의 끝점을 나타내고, 두 번째 매개변수가 곡선에 적용되는 다듬기의 정도와 유형을 지정합니다.\* 차수가 1인 곡선은 매끄러움이 없는 폴리선입니다.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-A curve with degree 2 is smoothed such that the curve intersects and is tangent to the midpoint of the polyline segments:
+차수가 2인 곡선은 폴리선 세그먼트의 중간점과 교차하고 접하도록 매끄럽게 표시됩니다.
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dynamo supports NURBS (Non-uniform rational B-spline) curves up to degree 20, and the following script illustrates the effect increasing levels of smoothing has on the shape of a curve:
+Dynamo는 차수 20까지 NURBS(비균일 유리 B-스플라인) 곡선을 지원하며, 다음 스크립트는 다듬기 수준을 늘릴 경우 곡선 모양에 미치는 영향을 보여줍니다.
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,9 +83,9 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-Note that you must have at least one more control point than the degree of the curve.
+곡선의 차수보다 적어도 하나 더 많은 제어점이 있어야 합니다.
 
-Another benefit of constructing curves by control vertices is the ability to maintain tangency between individual curve segments. This is done by extracting the direction between the last two control points, and continuing this direction with the first two control points of the following curve. The following example creates two separate NURBS curves which are nevertheless as smooth as one curve:
+제어 정점으로 곡선을 생성할 때의 또 다른 이점은 개별 곡선 세그먼트 간에 접선을 유지할 수 있다는 것입니다. 마지막 두 제어점 사이의 방향을 추출하고, 다음 곡선의 처음 두 제어점으로 이 방향을 계속 진행하는 방식으로 이 작업을 수행할 수 있습니다. 다음 예에서는 곡선을 부드럽게 하여 별도의 NURBS 곡선을 두 개 작성합니다.
 
 ![](../images/8-2/4/Curves\_06.png)
 
@@ -116,5 +116,5 @@ crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
 {% hint style="info" %}
-\*This is a very simplified description of NURBS curve geometry, for a more accurate and detailed discussion see Pottmann, et al, 2007, in the references.
+\*위 내용은 NURBS 곡선 형상에 대한 매우 간단한 설명입니다. 더 정확하고 자세한 내용은 Potmann, et al, 2007을 참고하십시오.
 {% endhint %}

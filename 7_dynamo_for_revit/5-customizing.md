@@ -1,117 +1,117 @@
-# Customizing
+# 사용자화
 
-While we previously looked at editing a basic building mass, we want to dive deeper into the Dynamo/Revit link by editing a large number of elements in one go. Customizing on a large scale becomes more complex as data structures require more advanced list operations. However, the underlying principles behind their execution is fundamentally the same. Let's study some opportunities for analysis from a set of adaptive components.
+앞서 기본 건물 매스 편집을 살펴보았지만 한 번에 많은 요소를 편집하면서 Dynamo/Revit 링크를 좀 더 자세히 살펴보려고 합니다. 데이터 구조에는 고급 리스트 작업이 필요하므로 대형 축척으로 사용자화하는 것이 훨씬 더 복잡해집니다. 그러나 실행 이면의 기본 원칙은 근본적으로 동일합니다. 일련의 가변 구성요소를 통해 해석할 수 있는 몇 가지 기회를 살펴보겠습니다.
 
-### Point Location
+### 점 위치
 
-Suppose we've created a range of adaptive components and want to edit parameters based on their point locations. The points, for example, could drive a thickness parameter which is related to the area of the element. Or, they could drive an opacity parameter related to solar exposure throughout the year. Dynamo allows the connection of analysis to parameters in a few easy steps, and we'll explore a basic version in the exercise below.
+일련의 가변 구성요소를 작성하고 해당 점 위치를 기준으로 매개변수를 편집한다고 가정합니다. 예를 들어 점은 요소의 면적과 관련된 두께 매개변수를 구동할 수 있습니다. 또는 한 해 동안의 일조 노출과 관련된 불투명도 매개변수를 구동할 수 있습니다. Dynamo를 사용하면 몇 가지 간단한 단계를 통해 매개변수에 해석을 연결할 수 있으며, 아래 연습에서 기본 버전을 살펴보겠습니다.
 
 ![](<./images/5/customizing - point location.jpg>)
 
-> Query the adaptive points of a selected adaptive component by using the **AdaptiveComponent.Locations** node. This allows us to work with an abstracted version of a Revit element for analysis.
+> **AdaptiveComponent.Locations** 노드를 사용하여 선택한 가변 구성요소의 가변 점을 조회합니다. 이 도구를 사용하면 해석을 위해 Revit 요소의 추상화된 버전으로 작업할 수 있습니다.
 
-By extracting the point location of adaptive components, we can run a range of analysis for that element. A four-point adaptive component will allow you to study the deviation from plane for a given panel for example.
+가변 구성요소의 점 위치를 추출하여 해당 요소에 대해 특정 범위의 해석을 실행할 수 있습니다. 예를 들어, 4점 가변 구성요소를 사용하면 지정된 패널에 대해 평면에서의 편차를 연구할 수 있습니다.
 
-### Solar Orientation Analysis
+### 일조 방향 해석
 
 ![](<./images/5/customizing - solar orientation analysis.jpg>)
 
-> Use remapping to map a set of a data into a parameter range. This is fundamental tool used in a parametric model, and we'll demonstrate it in the exercise below.
+> 재매핑을 사용하여 데이터 세트를 매개변수 범위에 매핑합니다. 이는 파라메트릭 모델에 사용되는 기본적인 도구이며 아래 연습에서 이러한 기본적인 내용을 보여드리겠습니다.
 
-Using Dynamo, the point locations of adaptive components can be used to create a best-fit plane each element. We can also query the sun position in the Revit file and study the plane's relative orientation to the sun in comparison to other adaptive components. Let's set that up in the exercise below by creating an algorithmic roofscape.
+Dynamo를 사용하면 가변 구성요소의 점 위치를 사용하여 각 요소에 가장 잘 맞는 평면을 작성할 수 있습니다. 또한 Revit 파일에서 태양 위치를 조회하고 다른 가변 구성요소를 기준으로 태양에 대한 평면의 상대적 방향을 연구할 수 있습니다. 알고리즘 방식의 지붕 전망을 작성하여 아래 연습에서 이 작업을 설정해 보겠습니다.
 
-## Exercise
+## 연습
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="./datasets/5/Revit-Customizing.zip" %}
 
-This exercise will expand on the techniques demonstrated in the previous section. In this case, we are defining a parametric surface from Revit elements, instantiating four-point adaptive components and then editing them based on orientation to the sun.
+이 연습에서는 이전 섹션에서 설명한 기술을 확장합니다. 이 경우 4점 가변 구성요소를 인스턴스화한 다음, 태양에 대한 방향을 기준으로 편집하여 Revit 요소에서 파라메트릭 표면을 정의합니다.
 
 ![](<./images/5/customizing - exercise 01.jpg>)
 
-> 1. Beginning by selecting two edges with the _"Select Edge"_ node. The two edges are the long spans of the atrium.
-> 2. Combine the two edges into one list with the _List.Create_ node.
-> 3. Create a surface between the two edges with a _Surface.ByLoft_.
+> 1. 먼저 _"Select Edge"_ 노드를 사용하여 두 개의 모서리를 선택합니다. 두 모서리는 아트리움의 긴 스팬입니다.
+> 2. _List.Create_ 노드를 사용하여 두 모서리를 하나의 리스트로 결합합니다.
+> 3. _Surface.ByLoft_로 두 모서리 사이에 표면을 작성합니다.
 
 ![](<./images/5/customizing - exercise 02.jpg>)
 
-> 1. Using _code block_, define a range from 0 to 1 with 10 evenly spaced values: `0..1..#10;`
-> 2. Plug the _code block_ into the \*u \*and _v_ inputs of a _Surface.PointAtParameter_ node, and plug the _Surface.ByLoft_ node into the _surface_ input. Right click the node and change the _lacing_ to _Cross Product_. This will give a grid of points on the surface.
+> 1. _code block_을 사용하여 0부터 1까지 10개의 동일한 간격으로 배치된 값을 정의합니다(`0..1..#10;`).
+> 2. _code block_을 _Surface.PointAtParameter_ 노드의 \*u\* 및 _v_ 입력에 연결하고 _Surface.ByLoft_ 노드를 _surface_ 입력에 연결합니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 _레이싱_을 _외적_으로 변경합니다. 그러면 표면에 점 그리드가 나타납니다.
 
-This grid of points serves as the control points for a parametrically defined surface. We want to extract the u and v positions of each one of these points so that we can plug them into a parametric formula and keep the same data structure. We can do this by querying the parameter locations of the points we just created.
+이 점 그리드는 파라메트릭 방식으로 정의된 표면에 대한 제어점 역할을 합니다. 이러한 각 점의 u 및 v 위치를 추출하여 파라메트릭 수식에 연결하고 동일한 데이터 구조를 유지해 보겠습니다. 방금 작성한 점의 매개변수 위치를 조회하여 이를 수행할 수 있습니다.
 
 ![](<./images/5/customizing - exercise 03.jpg>)
 
-> 1. Add a _Surface.ParameterAtPoint_ node to the canvas, connect the inputs as shown above.
-> 2. Query the _u_ values of these parameters with the UV.U node.
-> 3. Query the _v_ values of these parameters with the UV.V node.
-> 4. The outputs show the corresponding _u_ and _v_ values for every point of the surface. We now have a range from _0_ to _1_ for each value, in the proper data structure, so we're ready to apply a parametric algorithm.
+> 1. 캔버스에 _Surface.ParameterAtPoint_ 노드를 추가하고 위에 표시된 대로 입력을 연결합니다.
+> 2. UV.U 노드를 사용하여 이러한 매개변수의 _u_ 값을 조회합니다.
+> 3. UV.V 노드를 사용하여 이러한 매개변수의 _v_ 값을 조회합니다.
+> 4. 출력은 표면의 모든 점에 대해 해당 _u_ 및 _v_ 값을 표시합니다. 이제 적절한 데이터 구조에 각 값의 _0_~_1_ 범위가 구성되었으므로 파라메트릭 알고리즘을 적용할 준비가 되었습니다.
 
 ![](<./images/5/customizing - exercise 04.jpg>)
 
-> 1. Add a _code block_ to the canvas and enter the code: `Math.Sin(u*180)*Math.Sin(v*180)*w;` This is a parametric function which creates a sine mound from a flat surface.
-> 2. Connects the _UV.U_ to the _u_ input and the UV.V to the _v_ input.
-> 3. The _w_ input represents the _amplitude_ of the shape, so we attach a _number slider_ to it.
+> 1. 캔버스에 _code block_을 추가하고 코드 `Math.Sin(u*180)*Math.Sin(v*180)*w;`를 입력합니다. 이는 평평한 표면에서 사인 마운드를 작성하는 파라메트릭 함수입니다.
+> 2. _UV.U_를 _u_ 입력에 연결하고 UV.V를 _v_ 입력에 연결합니다.
+> 3. _w_ 입력은 모양의 _진폭_을 나타내므로 _number slider_를 부착합니다.
 
 ![](<./images/5/customizing - exercise 05.jpg>)
 
-> 1. Now, we have a list of values as defined by the algorithm. Let's use this list of values to move the points up in the _+Z_ direction. Using _Geometry.Translate_, plug the \*code block \*into _zTranslation_ and the _Surface.PointAtParameter_ into the _geometry_ input. You should see the new points displayed in the Dynamo preview.
-> 2. Finally, we create a surface with the _NurbsSurface.ByPoints_ node, plugging the node from the previous step into the points input. We have ourselves a parametric surface. Feel free to drag the slider to watch the mound shrink and grow.
+> 1. 이제 알고리즘에 의해 정의된 값 리스트가 있습니다. 이 값 리스트를 사용하여 점을 _+Z_ 방향으로 위로 이동합니다. _Geometry.Translate_를 사용하여 \*code block\*을 _zTranslation_에 연결하고 _Surface.PointAtParameter_를 _geometry_ 입력에 연결합니다. Dynamo 미리보기에 새 점이 표시됩니다.
+> 2. 마지막으로 _NurbsSurface.ByPoints_ 노드를 사용하여 표면을 작성하고 이전 단계의 노드를 점 입력에 연결합니다. 이제 파라메트릭 표면이 생겼습니다. 슬라이더를 자유롭게 끌어 마운드가 축소 및 확장되는 것을 확인합니다.
 
-With the parametric surface, we want to define a way to panelize it in order to array four-point adaptive components. Dynamo does not have out-of-the-box functionality for surface panelization, so we can look to the community for helpful Dynamo packages.
+파라메트릭 표면을 사용하여 4점 가변 구성요소를 배열하기 위해 패널화하는 방법을 정의하려고 합니다. Dynamo에는 표면 패널화를 위한 즉시 사용 가능한 기능이 없기 때문에 커뮤니티에서 유용한 Dynamo 패키지를 찾아보겠습니다.
 
 ![](<./images/5/customizing - exercise 06.jpg>)
 
-> 1. Go to _Packages>Search for a Package..._
-> 2. Search for _"LunchBox"_ and install _"LunchBox for Dynamo"_. This is a really helpful set of tools for geometry operations such as this.
+> 1. _패키지>패키지 검색..._으로 이동합니다.
+> 2. _"LunchBox"_를 검색하고 _"LunchBox for Dynamo"_를 설치합니다. 이는 이러한 형상 작업에 매우 유용한 도구 세트입니다.
 
-> 1. After downloading, you now have full access to the LunchBox suite. Search for _"Quad Grid"_ and select _"LunchBox Quad Grid By Face"_. Plug the parametric surface into the _surface_ input and set the _U_ and _V_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
+> 1. 다운로드가 완료되면 LunchBox 제품군에 완전히 액세스할 수 있게 됩니다. _"쿼드 그리드"_를 검색하고 _"LunchBox Quad Grid by Face"_를 선택합니다. 파라메트릭 표면을 _surface_ 입력에 연결하고 _U_ 및 _V_ 분할을 _15_로 설정합니다. Dynamo 미리 보기에 쿼드 패널 표면이 표시되어야 합니다.
 
-> If you're curious about its setup, you can double click on the _Lunch Box_ node and see how it's made.
+> 설정에 대해 궁금한 점이 있으면 _Lunch Box_ 노드를 두 번 클릭하여 어떻게 만들어졌는지 확인할 수 있습니다.
 
-> Back in Revit, let's take a quick look at the adaptive component we're using here. No need to follow along, but this is the roof panel we're going to instantiate. It is a four-point adaptive component which is a crude representation of an ETFE system. The aperture of the center void is on a parameter called _"ApertureRatio"_.
+> 다시 Revit으로 돌아와 여기에서 사용할 가변 구성요소를 잠시 살펴보겠습니다. 이 과정을 반드시 진행할 필요는 없지만, 이는 인스턴스화하려는 지붕 패널입니다. 이는 ETFE 시스템을 대략적으로 나타낸 4점 가변 구성요소입니다. 중심 보이드의 조리개는 _"ApertureRatio"_라는 매개변수에 있습니다.
 
-> 1. We're about to instantiate a lot of geometry in Revit, so make sure to turn the Dynamo solver to _"Manual"_.
-> 2. Add a _Family Types_ node to the canvas and select _"ROOF-PANEL-4PT"_.
-> 3. Add an _AdaptiveComponent.ByPoints_ node to the canvas, connect _Panel Pts_ from the _"LunchBox Quad Grid by Face"_ output into the _points_ input. Connect the _Family Types_ node to the _familySymbol_ input.
-> 4. Hit _Run_. Revit will have to _think_ for a bit while the geometry is being created. If it takes too long, reduce the _code block's '15'_ to a lower number. This will reduce the number of panels on the roof.
+> 1. Revit에서 많은 형상을 인스턴스화하고자 하므로 Dynamo 솔버를 _"수동"_으로 바꿔야 합니다.
+> 2. 캔버스에 _Family Types_ 노드를 추가하고 _"ROOF-PANEL-4PT"_를 선택합니다.
+> 3. 캔버스에 _AdaptiveComponent.ByPoints_ 노드를 추가하고 _"LunchBox Quad Grid by Face"_ 출력의 _Panel Pts_를 _points_ 입력에 연결합니다. _Family Types_ 노드를 _familySymbol_ 입력에 연결합니다.
+> 4. _실행_을 누릅니다. Revit은 형상이 작성되는 동안 잠깐 _멈춥니다_. 시간이 너무 오래 걸리는 경우 _code block의 '15'_를 더 작은 숫자로 줄이십시오. 그러면 지붕의 패널 수가 줄어듭니다.
 
-_Note: If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "Freezing" section in the solids chapter._
+_참고: Dynamo에서 노드를 계산하는 데 시간이 오래 걸리는 경우 그래프를 개발하는 동안 Revit 작업 실행을 일시 중지하기 위해 노드 "고정" 기능을 사용할 수도 있습니다. 노드 고정에 대한 자세한 내용은 솔리드 장의 "고정" 섹션을 확인하십시오._
 
-> Back in Revit, we have the array of panels on the roof.
+> 다시 Revit으로 돌아가면 지붕에 패널 배열이 표시됩니다.
 
-> Zooming in, we can get a closer look at their surface qualities.
+> 확대하면 표면 품질을 더 자세히 확인할 수 있습니다.
 
-### Analysis
+### 해석
 
-> 1. Continuing from the previous step, let's go further and drive the aperture of each panel based on its exposure to the sun. Zooming into Revit and select one panel, we see in the properties bar that there is a parameter called _"Aperture Ratio"_. The family is setup so that the aperture ranges, roughly, from _0.05_ to _0.45_.
+> 1. 이전 단계에서 계속 진행하면서 태양에 대한 노출을 기준으로 각 패널의 조리개를 더 많이 움직이도록 해보겠습니다. Revit으로 줌하고 패널 하나를 선택하면 특성 막대에 _"조리개 비율"_이라는 매개변수가 표시됩니다. 조리개 범위가 대략 _0.05_에서 _0.45_가 되도록 패밀리가 설정됩니다.
 
-> 1. If we turn on the solar path, we can see the current sun location in Revit.
+> 1. 태양 경로를 켜면 Revit에서 현재 태양 위치를 볼 수 있습니다.
 
-> 1. We can reference this sun location using the _SunSettings.Current_ node.
+> 1. _SunSettings.Current_ 노드를 사용하여 이 태양 위치를 참조할 수 있습니다.
 
-1. Plug the Sun settings into _Sunsetting.SunDirection_ to get the solar vector.
-2. From the _Panel Pts_ used to create the adaptive components, use _Plane.ByBestFitThroughPoints_ to approximate a plane for the component.
-3. Query the _normal_ of this plane.
-4. Use the _dot product_ to calculate solar orientation. The dot product is a formula which determines how parallel or anti-parallel two vectors may be. So we're taking the plane normal of each adaptive component and comparing it to the solar vector to roughly simulate solar orientation.
-5. Take the _absolute value_ of the result. This ensures that the dot product is accurate if the plane normal is facing the reverse direction.
-6. Hit _Run_.
+1. 태양 설정을 _Sunsetting.SunDirection_에 연결하여 일조 벡터를 가져옵니다.
+2. 가변 구성요소를 작성하는 데 사용된 _패널 점_에서 _Plane.ByBestFitThroughPoints_를 사용하여 구성요소의 대략적인 평면을 만듭니다.
+3. 이 평면의 _법선_을 조회합니다.
+4. _내적_을 사용하여 일조 방향을 계산합니다. 내적은 두 벡터의 평행 또는 반 평행 정도를 결정하는 수식입니다. 따라서 각 가변 구성요소의 평면 법선을 선택한 다음, 일조 벡터와 비교하여 일조 방향을 대략적으로 시뮬레이션합니다.
+5. 결과의 _절댓값_을 사용합니다. 그래야 평면 법선이 반대 방향을 향하고 있는 경우 내적이 정확해집니다.
+6. _실행_을 누릅니다.
 
-> 1. Looking at the _dot product_, we have a wide range of numbers. We want to use their relative distribution, but we need to condense the numbers into the appropriate range of the _"Aperture Ratio"_ parameter we plan to edit.
+> 1. _내적_을 보면 다양한 범위의 숫자가 표시됩니다. 상대 분산을 사용할 것이지만, 이러한 숫자를 편집하려는 _"조리개 비율"_ 매개변수의 적절한 범위로 압축해야 합니다.
 
-1. The _Math.RemapRange_ is a great tool for this. It takes an input list and remaps its bounds into two target values.
-2. Define the target values as _0.15_ and _0.45_ in a _code block_.
-3. Hit _Run_.
+1. _Math.RemapRange_는 이 작업에 유용한 도구입니다. 입력 리스트를 가져와서 해당 경계를 두 대상 값으로 다시 매핑합니다.
+2. 대상 값을 _code block_에서 _0.15_ 및 _0.45_로 정의합니다.
+3. _실행_을 누릅니다.
 
-> 1. Connect the remapped values into a _Element.SetParameterByName_ node.
+> 1. 다시 매핑된 값을 _Element.SetParameterByName_ 노드에 연결합니다.
 
-1. Connect the string _"Aperture Ratio"_ into the _parameterName_ input.
-2. Connect the _adaptive components_ into the _element_ input.
-3. Hit _Run_.
+1. 문자열 _"조리개 비율"_을 _parameterName_ 입력에 연결합니다.
+2. _가변 구성요소_를 _element_ 입력에 연결합니다.
+3. _실행_을 누릅니다.
 
-> Back in Revit, from a distance we can make out the affect of the solar orientation on the aperture of the ETFE panels.
+> Revit으로 다시 돌아와, 멀리에서 ETFE 패널의 조리개에 일조 방향이 미치는 영향을 파악할 수 있습니다.
 
-> Zooming in, we see that the ETFE panels are more closed as the face the sun. Our target here is to reduce overheating from solar exposure. If we wanted to let in more light based on solar exposure, we just have to switch the domain on _Math.RemapRange_.
+> 확대하면 ETFE 패널이 태양을 향할 때 더 많이 닫히는 것을 볼 수 있습니다. 여기서 목표는 태양 노출에 따른 과열을 줄이는 것입니다. 태양 노출을 기준으로 더 많은 빛이 들어오게 하려면 _Math.RemapRange_에서 영역을 전환하기만 하면 됩니다.

@@ -1,10 +1,10 @@
-# Translation, Rotation, and Other Transformations
+# 전환, 회전 및 기타 변환
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+3D 공간에서 x, y, z 좌표를 명시적으로 지정하여 특정 형상 객체를 작성할 수 있습니다. 그러나 형상은 객체 자체 또는 기본 CoordinateSystem에서 기하학적 변환을 사용하여 최종 위치로 이동되는 경우가 더 많습니다.
 
-### Translation
+### 이동
 
-The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
+가장 간단한 기하학적 변환은 x, y, z 방향으로 지정된 단위 수만큼 객체를 이동하는 전환입니다.
 
 ![](../images/8-2/5/Transformations\_01.png)
 
@@ -18,9 +18,9 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### Rotation
+### 회전
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+Dynamo의 모든 객체는 _.Translate_ 메서드를 객체 이름의 끝에 추가하여 변환할 수 있지만, 좀 더 복잡한 변환은 기본 CoordinateSystem에서 새 CoordinateSystem으로 객체를 변환해야 합니다. 예를 들어 객체를 x축을 중심으로 45도 회전하려면 객체를 회전 없는 기존 CoordinateSystem에서 _.Transform_ 메서드를 사용하여 x축을 중심으로 45도 회전한 CoordinateSystem으로 변환해야 합니다.
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Scale
+### 축척
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+CoordinateSystem은 변환 및 회전뿐 아니라 축척 또는 전단이 조정되어 작성될 수도 있습니다. CoordinateSystem은 다음과 같이 _.Scale_ 메서드로 축척할 수 있습니다.
 
 ![](../images/8-2/5/Transformations\_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+전단된 CoordinateSystem은 직교하지 않는 벡터를 CoordinateSystem 생성자에 입력하여 작성합니다.
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+축척 및 전단은 회전 및 변환보다 비교적 더 복잡한 기하학적 변환이므로 모든 Dynamo 객체가 이러한 변환을 거치는 것은 아닙니다. 다음 표는 균일하지 않게 축척이 조정된 CoordinateSystem 및 전단된 CoordinateSystem이 있을 수 있는 Dynamo 객체를 간략하게 설명합니다.
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| 클래스 | 균일하지 않게 축척이 조정된 CoordinateSystem | 전단 CoordinateSystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | No                                    | No                       |
-| NurbsCurve   | Yes                                   | Yes                      |
-| NurbsSurface | No                                    | No                       |
-| Circle       | No                                    | No                       |
-| Line         | Yes                                   | Yes                      |
-| Plane        | No                                    | No                       |
-| Point        | Yes                                   | Yes                      |
-| Polygon      | No                                    | No                       |
-| Solid        | No                                    | No                       |
-| Surface      | No                                    | No                       |
-| Text         | No                                    | No                       |
+| 호 | 아니요 | 아니오 |
+| NurbsCurve | 예 | 예 |
+| NurbsSurface | 아니요 | 아니오 |
+| 원 | 아니요 | 아니오 |
+| 선 | 예 | 예 |
+| 평면 | 아니요 | 아니오 |
+| 점 | 예 | 예 |
+| 폴리곤 | 아니요 | 아니오 |
+| 솔리드 | 아니요 | 아니오 |
+| 표면 | 아니요 | 아니오 |
+| 문자 | 아니요 | 아니오 |

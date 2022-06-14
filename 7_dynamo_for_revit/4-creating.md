@@ -1,154 +1,154 @@
-# Creating
+# 작성
 
-You can create an array of Revit elements in Dynamo with full parametric control. The Revit nodes in Dynamo offer the ability to import elements from generic geometries to specific category types (like walls and floors). In this section, we'll focus on importing parametrically flexible elements with adaptive components.
+전체 파라메트릭 컨트롤을 사용하여 Dynamo에서 Revit 요소의 배열을 작성할 수 있습니다. Dynamo의 Revit 노드에서는 일반 형상에서 특정 카테고리 유형(예: 벽 및 바닥)으로 요소를 가져올 수 있는 기능을 제공합니다. 이 섹션에서는 가변 구성요소와 함께 파라메트릭 방식으로 유연한 요소를 가져오는 방법에 중점을 두겠습니다.
 
 ![](<./images/4/creating - dynamo nodes.jpg>)
 
-### Adaptive Components
+### 가변 구성요소
 
-An adaptive component is a flexible family category which lends itself well to generative applications. Upon instantiation, you can create a complex geometric element which is driven by the fundamental location of adaptive points.
+가변 구성요소는 생성 응용프로그램에 유용한 유연한 패밀리 카테고리입니다. 인스턴스화할 때 가변 점의 기본 위치에 의해 구동되는 복잡한 형상 요소를 작성할 수 있습니다.
 
-Below is an example of a three-point adaptive component in the family editor. This generates a truss which is defined by the position of each adaptive point. In the exercise below, we'll use this component to generate a series of trusses across a facade.
+다음은 패밀리 편집기의 세 점 가변 구성요소 예입니다. 이렇게 하면 각 가변 점의 위치에 의해 정의된 트러스가 생성됩니다. 아래 연습에서는 이 구성요소를 사용하여 정면에 걸친 일련의 트러스를 생성하겠습니다.
 
 ![](./images/4/ac.jpg)
 
-### Principles of Interoperability
+### 상호 운용성의 원칙
 
-The adaptive component is a good example for best practices of interoperability. We can create an array of adaptive components by defining the fundamental adaptive points. And, when transferring this data to other programs, we have the ability to reduce the geometry to simple data. Importing and exporting with a program like Excel follows a similar logic.
+가변 구성요소는 상호 운용성의 모범 사례에 대한 좋은 예입니다. 기본 가변 점을 정의하여 가변 구성요소의 배열을 작성할 수 있습니다. 그리고 이 데이터를 다른 프로그램으로 전송할 때 형상을 단순한 데이터로 줄일 수 있습니다. Excel 같은 프로그램을 사용한 가져오기 및 내보내기는 유사한 논리를 따릅니다.
 
-Suppose a facade consultant wants to know the location of the truss elements without needing to parse through fully articulated geometry. In preparation for fabrication, the consultant can reference the location of adaptive points to regenerate geometry in a program like Inventor.
+정면 컨설턴트가 완전히 명확하게 표현된 형상을 통해 해석할 필요 없이 트러스 요소의 위치를 알고 싶어 한다고 가정해 보십시오. 제작을 준비할 때 컨설턴트가 가변 점의 위치를 참조하여 Inventor 같은 프로그램에서 형상을 재생성할 수 있습니다.
 
-The workflow we'll setup in the exercise below allows us to access all of this data while creating the definition for Revit element creation. By this process, we can merge conceptualization, documentation, and fabrication into a seamless workflow. This creates a more intelligent and efficient process for interoperability.
+아래 연습에서 설정할 워크플로우를 통해 Revit 요소 작성을 위한 정의를 작성하는 동안 이 모든 데이터에 액세스할 수 있습니다. 이 프로세스를 통해 개념화, 문서화 및 제작을 원활한 워크플로우로 병합할 수 있습니다. 이렇게 하면 상호 운용성을 위한 더 지능형의 효율적인 프로세스가 작성됩니다.
 
-### Multiple Elements and Lists
+### 여러 요소 및 리스트
 
-The [first exercise](8-4\_creating.md#exercise) below will walk through how Dynamo references data for Revit element creation. To generate multiple adaptive components, we define a list of lists, where each list has three points representing each point of the adaptive component. We'll keep this in mind as we manage the data structures in Dynamo.
+아래의 [첫 번째 연습](8-4\_creating.md#exercise)에서는 Dynamo에서 Revit 요소 작성을 위해 데이터를 참조하는 방법에 대해 설명하겠습니다. 여러 개의 가변 구성요소를 생성하기 위해 가변 구성요소의 각 점을 나타내는 세 개의 점이 각 리스트에 있는 리스트의 리스트를 정의합니다. Dynamo에서 데이터 구조를 관리할 때 이 점을 염두에 두어야 합니다.
 
 ![](<./images/4/creating - multiple elements and lists 01.jpg>)
 
-### DirectShape Elements
+### DirectShape 요소
 
-Another method for importing parametric Dynamo geometry into Revit is with DirectShape. In summary, the DirectShape element and related classes support the ability to store externally created geometric shapes in a Revit document. The geometry can include closed solids or meshes. DirectShape is primarily intended for importing shapes from other data formats such as IFC or STEP where not enough information is available to create a "real" Revit element. Like the IFC and STEP workflow, the DirectShape functionality works well with importing Dynamo created geometries into Revit projects as real elements.
+파라메트릭 Dynamo 형상을 Revit으로 가져오는 또 다른 방법은 DirectShape를 사용하는 것입니다. 요약하면, DirectShape 요소 및 관련 클래스는 외부에서 작성된 형상 모양을 Revit 문서에 저장하는 기능을 지원합니다. 형상에 닫힌 솔리드나 메쉬가 포함될 수 있습니다. DirectShape는 기본적으로 "실제" Revit 요소를 작성하는 데 정보가 충분하지 않은 IFC 또는 STEP와 같은 다른 데이터 형식에서 모양을 가져오도록 되어 있습니다. IFC 및 STEP 워크플로우와 마찬가지로 DirectShape 기능은 Dynamo에서 작성된 형상을 Revit 프로젝트에 실제 요소로 가져오는 작업과 함께 사용하기에 적합합니다.
 
-Let's walk through [second exercise](8-4\_creating.md#exercise-directshape-elements) for importing Dynamo geometry as a DirectShape into our Revit project. Using this method, we can assign an imported geometry's category, material, and name - all while maintaining a parametric link to our Dynamo graph.
+Dynamo 형상을 DirectShape로 Revit 프로젝트에 가져오는 [두 번째 연습](8-4\_creating.md#exercise-directshape-elements)을 진행해 보겠습니다. 이 방법을 사용하면 가져온 형상의 카테고리, 재료, 이름을 지정할 수 있으며, 그동안 Dynamo 그래프에 대한 파라메트릭 링크는 유지됩니다.
 
-## Exercise: Generate Elements and Lists
+## 연습: 요소 및 리스트 생성
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="./datasets/4/Revit-Creating.zip" %}
 
-Beginning with the example file from this section (or continuing with the Revit file from the previous session), we see the same Revit mass.
+이 섹션의 예시 파일로 시작하거나 이전 세션의 Revit 파일을 계속 사용하면 동일한 Revit 매스가 표시됩니다.
 
 ![](<./images/4/creating - exercise 01.jpg>)
 
-> 1. This is the file as opened.
-> 2. This is the truss system we created with Dynamo, linked intelligently to the Revit mass.
+> 1. 이것은 파일을 열었을 때의 상태입니다.
+> 2. 이것은 Revit 매스에 지능형으로 링크된 Dynamo를 사용하여 작성한 트러스 시스템입니다.
 
-We've used the _"Select Model Element"_ and _"Select Face"_ nodes, now we're taking one step further down in the geometry hierarchy and using _"Select Edge"_. With the Dynamo solver set to run _"Automatic"_, the graph will continually update to changes in the Revit file. The edge we are selecting is tied dynamically to the Revit element topology. As long as the topology\* does not change, the connection remains linked between Revit and Dynamo.
+우리는 _"Select Model Element"_ 및 _"Select Face"_ 노드를 사용했으며, 이제 형상 계층에서 한 단계 더 아래로 이동하여 _"Select Edge"_를 사용해 보겠습니다. Dynamo 솔버가 _"자동"_을 실행하도록 설정되어 있으면 그래프가 Revit 파일의 변경 사항에 따라 지속적으로 업데이트됩니다. 선택하는 모서리는 Revit 요소 토폴로지에 동적으로 연결됩니다. 토폴로지\*가 변경되지 않는 한, 연결은 Revit과 Dynamo 사이에 링크된 상태로 유지됩니다.
 
 ![](<./images/4/creating - exercise 02.jpg>)
 
-> 1. Select the top most curve of the glazing facade. This spans the full length of the building. If you're having trouble selecting the edge, remember to choose the selection in Revit by hovering over the edge and hitting _"Tab"_ until the desired edge is highlighted.
-> 2. Using two _"Select Edge"_ nodes, select each edge representing the cant at the middle of the facade.
-> 3. Do the same for the bottom edges of the facade in Revit.
-> 4. The _Watch_ nodes reveal that we now have lines in Dynamo. This is automatically converted to Dynamo geometry since the edges themselves are not Revit elements. These curves are the references we'll use to instantiate adaptive trusses across the facade.
+> 1. 유리 정면의 맨 위 곡선을 선택합니다. 이 길이는 건물의 전체 길이에 걸쳐 있습니다. 모서리를 선택하는 데 문제가 있을 경우 원하는 모서리가 강조 표시될 때까지 모서리 위에 마우스를 놓고 _"Tab"_ 키를 눌러 Revit에서 선택 항목을 선택해야 합니다.
+> 2. 두 _"Select Edge"_ 노드를 사용하여 정면의 중간에 있는 돌각을 나타내는 각 모서리를 선택합니다.
+> 3. Revit에서 정면 맨 아래 모서리에 대해 동일한 작업을 수행합니다.
+> 4. _Watch_ 노드에서 이제 Dynamo에 선이 있음을 나타냅니다. 그러면, 모서리 자체는 Revit 요소가 아니므로 자동으로 Dynamo 형상으로 변환됩니다. 이러한 곡선은 정면 전체에서 가변 트러스를 인스턴스화하는 데 사용할 참조입니다.
 
 {% hint style="info" %}
-\*To keep a consistent topology, we're referring to a model that does not have additional faces or edges added. While parameters can change its shape, the way in which it is built remains consistent.
+\*위상을 일관되게 유지하기 위해 추가된 면이나 모서리가 없는 모델을 지칭합니다. 매개변수는 모양을 변경할 수 있지만, 작성 방식은 그대로 유지됩니다.
 {% endhint %}
 
-We first need to join the curves and merge them into one list. This way we can _"group"_ the curves to perform geometry operations.
+먼저 곡선을 결합하여 하나의 리스트로 병합해야 합니다. 이러한 방식으로 곡선을 _"그룹화"_하여 형상 작업을 수행할 수 있습니다.
 
 ![](<./images/4/creating - exercise 03.jpg>)
 
-> 1. Create a list for the two curves at the middle of the facade.
-> 2. Join the two curves into a Polycurve by plugging the _List.Create_ component into a _Polycurve.ByJoinedCurves_ node.
-> 3. Create a list for the two curves at the bottom of the facade.
-> 4. Join the two curves into a Polycurve by plugging the _List.Create_ component into a _Polycurve.ByJoinedCurves_ node.
-> 5. Finally, join the three main curves (one line and two polycurves) into one list.
+> 1. 정면 가운데에 두 개의 곡선에 대한 리스트를 작성합니다.
+> 2. _List.Create_ 구성요소를 _Polycurve.ByJoinedCurves_ 노드에 플러깅하여 두 곡선을 Polycurve에 결합합니다.
+> 3. 정면 아래쪽에 두 개의 곡선에 대한 리스트를 작성합니다.
+> 4. _List.Create_ 구성요소를 _Polycurve.ByJoinedCurves_ 노드에 플러깅하여 두 곡선을 Polycurve에 결합합니다.
+> 5. 마지막으로 세 개의 주 곡선(선 1개와 polycurve 2개)을 하나의 리스트에 결합합니다.
 
-We want to take advantage of the top curve, which is a line, and represents the full span of the facade. We'll create planes along this line to intersect with the set of curves we've grouped together in a list.
+맨 위 곡선(선)을 활용하여 정면의 전체 범위를 나타내려고 합니다. 이 선을 따라 평면을 작성하여 리스트에서 함께 그룹화한 곡선 세트와 교차할 것입니다.
 
 ![](<./images/4/creating - exercise 04.jpg>)
 
-> 1. With a _code block_, define a range using the syntax: `0..1..#numberOfTrusses;`
-> 2. Plug an \*integer slider \*into the input for the code block. As you could have guessed, this will represent the number of trusses. Notice that the slider controls the number of items in the range defined from \*0 \*to _1_.
-> 3. Plug the _code block_ into the _param_ input of a _"Curve.PlaneAtParameter"_ node, and plug the top edge into the _curve_ input. This will give us ten planes, evenly distributed across the span of the facade.
+> 1. _code block_에서 `0..1..#numberOfTrusses;` 구문을 사용하여 범위를 정의합니다.
+> 2. code block의 입력에 \*integer slider\*를 플러깅합니다. 추측한 바와 같이, 이를 통해 트러스의 수를 나타낼 것입니다. 슬라이더가 \*0\*에서 _1_로 정의된 범위의 항목 수를 제어합니다.
+> 3. _code block_을 _"Curve.PlaneAtParameter"_ 노드의 _param_ 입력에 플러깅하고 맨 위 모서리를 _곡선_ 입력에 플러깅합니다. 이렇게 하면 10개의 평면이 생기고 정면 전체에 균등하게 분산됩니다.
 
-A plane is an abstract piece of geometry, representing a two dimensional space which is infinite. Planes are great for contouring and intersecting, as we are setting up in this step.
+평면은 무한한 2차원 공간을 나타내는 추상적인 형상 조각입니다. 또한 이 단계에서 설정한 것처럼 등고선을 작성하고 교차할 때 적합합니다.
 
 ![](<./images/4/creating - exercise 05.jpg>)
 
-> 1. Using the _Geometry.Intersect_ node (set lacing option to cross product), plug the _Curve.PlaneAtParameter_ into the _entity_ input of the _Geometry.Intersect_ node. Plug the main _List.Create_ node into the _geometry_ input. We now see points in the Dynamo viewport representing the intersection of each curve with the defined planes.
+> 1. _Geometry.Intersect_ 노드(레이싱 옵션을 외적으로 설정)를 사용하여 _Curve.PlaneAtParameter_를 _Geometry.Intersect_ 노드의 _entity_ 입력에 플러깅합니다. 주 _List.Create_ 노드를 _geometry_ 입력에 플러깅합니다. 이제 Dynamo 뷰포트에 정의된 평면과 함께 각 곡선의 교차를 나타내는 점이 표시됩니다.
 
-Notice the output is a list of lists of lists. Too many lists for our purposes. We want to do a partial flatten here. We need to take one step down on the list and flatten the result. To do this, we use the _List.Map_ operation, as discussed in the list chapter of the primer.
+출력은 리스트의 리스트입니다. 목적을 위해 너무 많은 리스트가 있습니다. 여기서 부분 단순화를 수행하려고 합니다. 리스트에서 한 단계 내려가 결과를 단순화해야 합니다. 이를 위해 Primer의 리스트 장에 설명된 대로 _List.Map_ 작업을 사용합니다.
 
 ![](<./images/4/creating - exercise 06.jpg>)
 
-> 1. Plug the _Geometry.Intersect_ node into the list input of _List.Map_.
-> 2. Plug a _Flatten_ node into the f(x) input of _List.Map_. The results gives 3 list, each with a count equal to the number of trusses.
-> 3. We need to change this data. If we want to instantiate the truss, we have to use the same number of adaptive points as defined in the family. This is a three point adaptive component, so instead of three lists with 10 items each (numberOfTrusses), we want 10 lists of three items each. This way we can create 10 adaptive components.
-> 4. Plug the _List.Map_ into a _List.Transpose_ node. Now we have the desired data output.
-> 5. To confirm that the data is correct, add a _Polygon.ByPoints_ node to the canvas and double check with the Dynamo preview.
+> 1. _Geometry.Intersect_ 노드를 _List.Map_의 리스트 입력에 플러깅합니다.
+> 2. _Flatten_ 노드를 _List.Map_의 f(x) 입력에 플러깅합니다. 결과에서 3개의 리스트를 제공하며 각 리스트에는 트러스 수와 동일한 개수가 포함됩니다.
+> 3. 이 데이터를 변경해야 합니다. 트러스를 인스턴스화하려면 패밀리에 정의된 것과 동일한 수의 가변 점을 사용해야 합니다. 이는 세 점 가변 구성요소이므로 각각 10개의 항목(numberOfTrusses)이 있는 리스트 3개 대신, 각각 3개의 항목이 있는 리스트 10개가 필요합니다. 이 방식으로 10개의 가변 구성요소를 작성할 수 있습니다.
+> 4. _List.Map_을 _List.Transpose_ 노드에 플러깅합니다. 이제 원하는 데이터 출력이 만들어졌습니다.
+> 5. 데이터가 올바른지 확인하려면 캔버스에 _Polygon.ByPoints_ 노드를 추가하고 Dynamo 미리보기에서 다시 확인합니다.
 
-In the same way we created the polygons, we array the adaptive components.
+다각형을 작성한 방법과 같은 방법으로 가변 구성요소를 배열합니다.
 
 ![](<./images/4/creating - exercise 07.jpg>)
 
-> 1. Add an _AdaptiveComponent.ByPoints_ node to the canvas, plug the _List.Transpose_ node into the _points_ input.
-> 2. Using a _Family Types_ node, select the _"AdaptiveTruss"_ family, and plug this into the _FamilyType_ input of the _AdaptiveComponent.ByPoints_ node.
+> 1. 캔버스에 _AdaptiveComponent.ByPoints_ 노드를 추가하고 _List.Transpose_ 노드를 _점_ 입력에 플러깅합니다.
+> 2. _Family Types_ 노드를 사용하여 _"AdaptiveTruss"_ 패밀리를 선택하고 이 패밀리를 _AdaptiveComponent.ByPoints_ 노드의 _FamilyType_ 입력에 플러깅합니다.
 
-In Revit, we now have the ten trusses evenly spaced across the facade!
+Revit에서 이제 정면 전체에 걸쳐 10개의 트러스가 균일하게 배치되었습니다!
 
-"Flex" the graph, we turn up the numberOfTrusses to 30 by changing the slider. Lots of trusses, not very realistic, but the parametric link is working. Once verified, set the numberOfTrusses to 15.
+그래프를 "조정"하면, 슬라이더가 변경되어 numberOfTrusses가 30으로 바뀝니다. 많은 트러스가 사실적이지는 않지만 파라메트릭 링크가 작동합니다. 확인이 끝나면 numberOfTrusses를 15로 설정합니다.
 
 ![](<./images/4/creating - exercise 08.gif>)
 
-And for the final test, by selecting the mass in Revit and editing instance parameters, we can change the form of the building and watch the truss follow suit. Remember, this Dynamo graph has to be open in order to see this update, and the link will be broken as soon as it's closed.
+최종 테스트의 경우 Revit에서 매스를 선택하고 인스턴스 매개변수를 편집하여 건물의 형태를 변경하고 트러스가 그에 따라 바뀌는 것을 확인할 수 있습니다. 이 업데이트를 보려면 이 Dynamo 그래프가 열려 있어야 하며, 그래프가 닫히면 바로 링크가 끊어집니다.
 
 ![](<./images/4/creating - exercise 09.jpg>)
 
-## Exercise: DirectShape Elements
+## 연습: DirectShape 요소
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="./datasets/4/Revit-Creating-DirectShape.zip" %}
 
-Begin by opening the sample file for this lesson - ARCH-DirectShape-BaseFile.rvt.
+먼저 이 교육의 샘플 파일(ARCH-DirectShape-BaseFile.rvt)을 엽니다.
 
 ![](<./images/4/creating - exercise II - 01.jpg>)
 
-> 1. In the 3D view, we see our building mass from the previous lesson.
-> 2. Along the edge of the atrium is one reference curve, we'll use this as a curve to reference in Dynamo.
-> 3. Along the opposing edge of the atrium is another reference curve which we'll reference in Dynamo as well.
+> 1. 3D 뷰에서는 이전 교육에서 건물 매스를 확인할 수 있습니다.
+> 2. 아트리움의 모서리를 따라 참조 곡선이 하나 있는데 이를 Dynamo에서 참조할 곡선으로 사용하겠습니다.
+> 3. 아트리움의 반대쪽 모서리를 따라 또 다른 참조 곡선이 있으며, 이 곡선도 Dynamo에서 참조할 것입니다.
 
 ![](<./images/4/creating - exercise II - 02.jpg>)
 
-> 1. To reference our geometry in Dynamo, we'll use _Select Model Element_ for each member in Revit. Select the mass in Revit and import the geometry into Dynamo by Using _Element.Faces_ - the mass should now be visible in your Dynamo preview.
-> 2. Import one reference curve into Dynamo by using _Select Model Element_ and _CurveElement.Curve_.
-> 3. Import the other reference curve into Dynamo by using _Select Model Element_ and _CurveElement.Curve_.
+> 1. Dynamo에서 형상을 참조하기 위해 Revit에서 각 부재에 대해 _Select Model Element_를 사용하겠습니다. Revit에서 매스를 선택하고 _Element.Faces_를 사용하여 이 형상을 Dynamo로 가져옵니다. 이제 Dynamo 미리보기에 매스가 표시됩니다.
+> 2. _Select Model Element_ 및 _CurveElement.Curve_를 사용하여 하나의 참조 곡선을 Dynamo로 가져옵니다.
+> 3. _Select Model Element_ 및 _CurveElement.Curve_를 사용하여 다른 참조 곡선을 Dynamo로 가져옵니다.
 
 ![](<./images/4/creating - exercise II - 03.jpg>)
 
-> 1. Zooming out and panning to the right in the sample graph, we see a large group of nodes - these are geometric operations which generate the trellis roof structure visible in the Dynamo preview. These nodes are generating using the _Node to Code_ functionality as discussed in the [code block section](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) of the primer.
-> 2. The structure is driven by three major parameters - Diagonal Shift, Camber, and Radius.
+> 1. 샘플 그래프에서 오른쪽으로 줌을 축소하고 초점이동하면 큰 노드 그룹이 표시됩니다. 이러한 노드 그룹은 Dynamo 미리보기에 표시된 격자 지붕 구조를 생성하는 형상 작업입니다. 이러한 노드는 Primer의 _code block 섹션_에서 설명한 대로 [Node to Code](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) 기능을 사용하여 생성됩니다.
+> 2. 이 구조는 대각선 이동, 캠버 및 반지름이라는 세 가지 주요 매개변수에 의해 구동됩니다.
 
-Zooming a close-up look of the parameters for this graph. We can flex these to get different geometry outputs.
+이 그래프에 대한 매개변수의 근접 모양을 줌합니다. 이를 조정하여 다른 형상 출력을 얻을 수 있습니다.
 
 ![](<./images/4/creating - exercise II - 04.jpg>)
 
 ![](<./images/4/creating - exercise II - 05.jpg>)
 
-> 1. Dropping the _DirectShape.ByGeometry_ node onto the canvas, we see that it has four inputs: _geometry_**,** _category_**,** _material_, and _name_.
-> 2. Geometry will be the solid created from the geometry creation portion of the graph
-> 3. The category input is chosen using the dropdown _Categories_ node. In this case we'll use "Structural Framing".
-> 4. The material input is selected through the array of nodes above - although it can be more simply defined as "Default" in this case.
+> 1. _DirectShape.ByGeometry_ 노드를 캔버스에 놓으면 _형상_**,** _카테고리_**,** _재료_, _이름_ 등 네 가지 입력이 표시됩니다.
+> 2. 형상은 그래프의 형상 작성 부분에서 작성된 솔리드가 됩니다.
+> 3. 카테고리 입력은 드롭다운 _Categories_ 노드를 사용하여 선택합니다. 이 경우에는 "구조 프레임"을 사용하겠습니다.
+> 4. 이 경우 더욱 단순하게 "기본값"으로 정의할 수 있지만 위의 노드 배열을 통해 재료 입력이 선택됩니다.
 
-After running Dynamo, back in Revit, we have the imported geometry on the roof in our project. This is a structural framing element, rather than a generic model. The parametric link to Dynamo remains intact.
+Dynamo를 실행하고 Revit으로 돌아오면 프로젝트의 지붕에 가져온 형상이 표시됩니다. 이는 일반 모델이 아니라 구조 프레임 요소입니다. Dynamo에 대한 파라메트릭 링크는 그대로 유지됩니다.
 
 ![](<./images/4/creating - exercise II - 06.jpg>)

@@ -1,142 +1,142 @@
-# DesignScript Syntax
+# DesignScript 구문
 
-You may have noticed a common theme in the names of nodes in Dynamo: each node uses a _"."_ syntax without spaces. This is because the text at the top of each node represents the actual syntax for scripting, and the _"."_ (or _dot notation_) separates an element from the possible methods we can call. This creates an easy translation from visual scripting to text-based scripting.
+Dynamo의 노드 이름에서는 일반적인 테마를 확인할 수 있습니다. 각 노드에서는 공백 없이 _"."_ 구문을 사용합니다. 이는 각 노드의 맨 위에 있는 문자는 스크립팅의 실제 구문을 나타내고, _"."_(또는 _점 표기법_)은 호출할 수 있는 가능한 메서드에서 요소를 구분하기 때문입니다. 이를 통해 시각적 스크립팅에서 문자 기반 스크립팅으로 쉽게 변환할 수 있습니다.
 
 ![NodeNames](../images/8-1/2/apple.jpg)
 
-As a general analogy for the dot notation, how can we deal with a parametric apple in Dynamo? Below are a few methods we'll run on the apple before deciding to eat it. (Note: these are not actual Dynamo methods):
+점 표기법의 일반적인 비유로, Dynamo에서 파라메트릭 사과는 어떻게 처리할 수 있을까요? 다음은 사과를 먹기로 결정하기 전에 사과에 대해 실행할 몇 가지 메서드입니다. 참고: 이는 실제 Dynamo 메서드가 아닙니다.
 
-| Human Readible                 | Dot Notation              | Output |
+| 인간 판독 가능 | 점 표기법 | Output |
 | ------------------------------ | ------------------------- | ------ |
-| What color is the apple?       | Apple.color               | red    |
-| Is the apple ripe?             | Apple.isRipe              | true   |
-| How much does the apple weigh? | Apple.weight              | 6 oz.  |
-| Where did the apple come from? | Apple.parent              | tree   |
-| What does the apple create?    | Apple.children            | seeds  |
-| Is this apple locally grown?   | Apple.distanceFromOrchard | 60 mi. |
+| 사과가 무슨 색인가? | Apple.color | 빨간색 |
+| 사과가 잘 익었는가? | Apple.isRipe | true |
+| 사과 무게는 어떻게 되는가? | Apple.weight | 6oz |
+| 사과가 어디에서 왔는가? | Apple.parent | 트리 |
+| 사과에서 만들어지는 것은 무엇인가? | Apple.children | seeds |
+| 이 사과는 현지에서 키운 것인가? | Apple.distanceFromOrchard | 60mi. |
 
-I don't know about you, but judging by the outputs in the table above, this looks like one tasty apple. I think I'll _Apple.eat()_ it.
+여러분에 대해서는 잘 모르지만 위 표의 출력을 통해 판단해보면 이는 맛있는 사과처럼 보입니다. _Apple.eat()_을 수행해 보겠습니다.
 
-### Dot Notation in Code Block
+### Code Block의 점 표기법
 
-With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block.
+사과의 비유를 생각하면서 _Point.ByCoordinates_를 살펴보고 code block을 사용하여 점을 작성하는 방법을 살펴보겠습니다.
 
-The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
+_code block_ 구문 `Point.ByCoordinates(0,10);`는 하나의 노드를 사용하여 점을 작성할 수 있다는 점을 제외하고 Dynamo의 _Point.ByCoordinates_ 노드와 동일한 결과를 제공합니다. 이 구문은 별도의 노드를 _"X"_ 및 _"Y"_에 연결하는 것보다 더 효율적입니다.
 
 ![](<../images/8-1/2/codeblock dot notation.jpg>)
 
-> 1. By using _Point.ByCoordinates_ in the code block, we are specifying the inputs in the same order as the out-of-the-box node _(X,Y)_.
+> 1. code block에서 _Point.ByCoordinates_를 사용하여 즉시 사용 가능한 노드 _(X,Y)_과 동일한 순서로 입력을 지정합니다.
 
-### Calling Nodes - Create, Actions, Query
+### 노드 호출 - Create, Actions, Query
 
-You can call any regular node in the library through a Code Block as long as the node isn’t a special _“UI” node_: those with a special user interface feature. For instance, you can call _Circle.ByCenterPointRadius_, but it wouldn’t make much sense to call a _Watch 3D_ node.
+노드가 특수한 _"UI" 노드_가 아닌 한, Code Block을 통해 특수 사용자 인터페이스 기능을 사용하는 라이브러리의 모든 일반 노드를 호출할 수 있습니다. 예를 들어 _Circle.ByCenterPointRadius_는 호출할 수 있지만 _Watch 3D_ 노드를 호출하는 것은 적절하지 않습니다.
 
-Regular nodes (most of your library), generally come in three types. You’ll find that the library is organized with these categories in mind. Methods, or nodes, of these three types are treated differently when invoked within a Code Block.
+일반 노드(대부분의 라이브러리)는 일반적으로 다음과 같은 세 가지 유형으로 사용됩니다. 이러한 카테고리에 유의하면 라이브러리 구성을 이해할 수 있습니다. 이러한 세 가지 유형의 메서드 또는 노드는 Code Block 내에서 호출될 때 다르게 취급됩니다.
 
 ![](<../images/8-1/2/action create query category.jpg>)
 
-> 1. **Create** - Create (or construct) something
-> 2. **Action** - Perform an action on something
-> 3. **Query** - Get a property of something that already exists
+> 1. **Create** - 항목 작성 또는 구성
+> 2. **Action** - 항목에 대해 작업 수행
+> 3. **Query** - 이미 존재하는 항목의 특성을 가져오기
 
-#### Create
+#### 작성
 
-The "Create" category will construct geometry from scratch. We input values in the code block from left-to-right. These inputs are in the same order as the inputs on the node from top-to-bottom.
+"Create" 카테고리에서는 형상을 처음부터 새로 구성합니다. code block에 값을 왼쪽에서 오른쪽으로 입력합니다. 이러한 입력은 위에서 아래로의 노드 입력과 같은 순서로 되어 있습니다.
 
-Comparing the _Line.ByStartPointEndPoint_ node and the corresponding syntax in the code block, we get the same results.
+_Line.ByStartPointEndPoint_ 노드와 code block의 해당 구문을 비교해 보면 동일한 결과를 얻을 수 있습니다.
 
 ![](../images/8-1/2/create.jpg)
 
-#### Action
+#### 동작
 
-An action is something you do to an object of that type. Dynamo uses _dot notation_, common to many coding languages, to apply an action to a thing. Once you have the thing, type a dot then the name of the action. The action-type method’s input is placed in parentheses just like create-type methods, only you don’t have to specify the first input you see on the corresponding node. Instead, we specify the element upon which we are performing the action:
+Action은 해당 유형의 객체에 대해 수행할 수 있는 작업입니다. Dynamo에서는 많은 코딩 언어에 공통되는 _점 표기법_을 사용하여 항목에 작업을 적용합니다. 작업이 완료되면 점을 입력한 후 작업의 이름을 입력합니다. action-type 메서드의 입력은 create-type 메서드와 같이 괄호로 묶으며, 표시되는 첫 번째 입력을 해당 노드에 지정할 필요가 없습니다. 대신, 작업을 수행할 요소를 지정합니다.
 
 ![](<../images/8-1/2/DesignScript - action.jpg>)
 
-> 1. The **Point.Add** node is an action-type node, so the syntax works a little differently.
-> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a **Code Block**, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the **Point.Add** node minus the first one. The first input for the **Point.Add** node is the point itself.
+> 1. **Point.Add ** 노드는 action-type 노드이므로 구문이 조금 다르게 작동합니다.
+> 2. 입력은 (1) _point_와 여기에 추가할 (2) _vector_입니다. **Code Block**에서는 점(항목)의 이름을 _"pt"_로 지정했습니다. \*“vec”\*라는 벡터를 _"pt"_에 추가하려면 _pt.Add(vec)_ 또는 thing, dot, action이라고 씁니다. Add 작업에는 입력이 하나만 있거나 **Point.Add** 노드의 모든 입력에서 첫 번째 입력을 뺀 입력이 포함됩니다. **Point.Add** 노드에 대한 첫 번째 입력은 점 자체입니다.
 
-#### Query
+#### 조회
 
-Query-type methods get a property of an object. Since the object itself is the input, you don’t have to specify any inputs. No parentheses required.
+query-type 메서드는 객체의 특성을 가져옵니다. 객체 자체가 입력이므로 입력을 지정할 필요가 없습니다. 괄호는 필요하지 않습니다.
 
 ![](../images/8-1/2/query.jpg)
 
-### How About Lacing?
+### 레이싱의 경우
 
-Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.
+노드를 사용하는 레이싱은 code block을 사용하는 레이싱과 약간 다릅니다. 노드를 사용할 경우 사용자는 노드를 마우스 오른쪽 버튼으로 클릭하고 수행할 레이싱 옵션을 선택하면 됩니다. code block을 사용할 경우에는 사용자가 데이터 구성 방법을 보다 강력하게 제어할 수 있습니다. code block 줄임 메서드에서는 _복제 안내서_를 사용하여 여러 1차원 리스트를 쌍으로 연결하는 방법을 설정합니다. "<>" 꺾쇠괄호로 묶은 숫자를 통해 내포된 결과 리스트의 계층(<1>,<2>,<3> 등)이 정의됩니다.
 
 ![](<../images/8-1/2/DesignScript - lacing.jpg>)
 
-> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7`is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a Cross Product).
-> 2. Using the syntax **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` we get _two_ lists with _five_ items in each list.
-> 3. Using the syntax **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` we get _five_ lists with _two_ items in each list.
+> 1. 이 예에서는 두 개의 범위를 정의하는 줄임 메서드를 사용합니다(이 장의 다음 섹션에서 줄임 메서드에 대해 좀 더 자세히 설명함). 간단히 말해 `0..1;`은 `{0,1}`과 동일하며 `-3..-7`은 `{-3,-4,-5,-6,-7}`과 동일합니다. 결과적으로 x 값 2개와 y 값 5개가 표시됩니다. 이러한 불일치 리스트에서 복제 가이드를 사용하지 않는 경우 최단 리스트의 길이에 해당하는 두 점의 리스트가 표시됩니다. 복제 가이드를 사용하여 2개 및 5개 좌표의 가능한 모든 조합(또는 외적)을 찾을 수 있습니다.
+> 2. **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` 구문을 사용하면 각 리스트에 _5_개의 항목이 포함된 _2_개의 리스트를 얻게 됩니다.
+> 3. **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` 구문을 사용하면 각 리스트에 _2_개의 항목이 포함된 _5_개의 리스트를 얻게 됩니다.
 
-With this notation, we can also specify which list will be dominant: 2 lists of 5 things or 5 lists of 2 things. In the example, changing the order of the replication guides makes the result a list of rows of points or a list of columns of points in a grid.
+이 표기법을 사용하여 주요 리스트(5개 항목으로 구성된 2개 리스트 또는 2개 항목으로 구성된 5개 리스트)를 지정할 수도 있습니다. 이 예에서 복제 가이드의 순서를 변경하여 그리드 내의 점 행 리스트나 그리드 내의 점 열 리스트를 포함하는 결과를 생성합니다.
 
 ### Node to Code
 
-While the code block methods above may take some getting used to, there is a feature in Dynamo called "Node to Code" which will make the process easier. To use this feature, select an array of nodes in your Dynamo graph, right-click on the canvas and select "Node to Code". Dynamo condenses these nodes into a code block, with all of the inputs and outputs! Not only is this a great tool for learning code block, but it also allows you to work with a more efficient and parametric Dynamo graph. We'll conclude the exercise below by using "Node to Code", so don't miss it.
+위의 code block 메서드에 익숙해지는 데 다시 시간이 걸릴 수 있지만 Dynamo에는 프로세스를 보다 쉽게 만들어주는 "Node to Code"라는 기능이 있습니다. 이 기능을 사용하려면 Dynamo 그래프에서 노드 배열을 선택하고 캔버스를 마우스 오른쪽 버튼으로 클릭한 다음, "Node to Code"를 선택합니다. Dynamo에서는 이러한 노드를 입출력을 모두 포함하는 하나의 code block으로 축소했습니다. 이 기능은 code block을 학습하는 데 유용한 도구일 뿐만 아니라 보다 효율적인 파라메트릭 Dynamo 그래프를 사용하여 작업할 수 있도록 합니다. "Node to Code"를 사용하여 아래의 연습을 마무리할 예정이므로 이 내용을 빼먹지 마십시오.
 
 ![](<../images/8-1/2/DesignScript - node to code.jpg>)
 
-## Exercise: Surface Attractor
+## 연습: 표면 어트랙터
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-To show the power of code block, we are going to translate an existing attractor field definition into code block form. Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
+code block의 효과를 표시하기 위해 기존 어트랙터 필드 정의를 code block 형식으로 변환하려고 합니다. 기존 정의로 작업하면 code block이 시각적 스크립팅과 어떻게 연관되는지 알 수 있으며 DesignScript 구문을 배우는 데 도움이 됩니다.
 
-Begin by recreating the definition in the image above (or by opening the sample file).
+먼저 위 이미지의 정의를 다시 작성하거나 샘플 파일을 엽니다.
 
 ![](<../images/8-1/2/DesignScript - exercise - 01.jpg>)
 
-> 1. Notice that the lacing on **Point.ByCoordinates** has been set to _Cross Product_.
-> 2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
-> 3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
+> 1. **Point.ByCoordinates**의 레이싱이 _외적_으로 설정되어 있습니다.
+> 2. 그리드의 각 점이 참조점까지의 거리를 기준으로 Z 방향으로 위로 이동합니다.
+> 3. 표면이 다시 작성되고 두꺼워지면서 참조점까지의 거리를 기준으로 형상에 돌출이 작성됩니다.
 
 ![](<../images/8-1/2/DesignScript - exercise - 02.jpg>)
 
-> 1. Starting from the beginning, let's define the reference point first: **Point.ByCoordinates**`(x,y,0);` We use the same **Point.ByCoordinates** syntax as is specified on the top of the reference point node.
-> 2. The variables _x_ and _y_ are inserted into the **Code Block** so that we may update these dynamically with sliders.
-> 3. Add some _sliders_ to the **Code Block** inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
+> 1. 가장 첫 단계로, **Point.ByCoordinates**`(x,y,0);` 참조점을 먼저 정의해 보겠습니다. 참조점 노드 맨 위에 지정된 것과 동일한 **Point.ByCoordinates** 구문을 사용합니다.
+> 2. 슬라이더를 사용하여 동적으로 업데이트할 수 있도록 변수 _x_ 및 _y_가 **Code Block**에 삽입됩니다.
+> 3. -50에서 50까지의 범위에 해당하는 **Code Block** 입력에 _슬라이더_를 추가합니다. 이렇게 하면 기본 Dynamo 그리드에 걸쳐 나타낼 수 있습니다.
 
 ![](<../images/8-1/2/DesignScript - exercise - 03.jpg>)
 
-> 1. In the second line of the **Code Block**, we define a shorthand to replace the number sequence node: `coordsXY = (-50..50..#11);`We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the **Number Sequence** node in the visual script.
+> 1. **Code Block**의 두 번째 줄에서는 Number Sequence 노드를 대치할 축약형 `coordsXY = (-50..50..#11);`을 정의합니다. 이 내용은 다음 섹션에서 자세히 살펴보겠습니다. 지금은 일단 이 줄임 코드가 시각적 스크립트의 **Number Sequence** 노드와 동일하다는 것만 이해합니다.
 
 ![](<../images/8-1/2/DesignScript - exercise - 04.jpg>)
 
-> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the **Point.ByCoordinates** syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` The angled brackets denote the cross product reference.
-> 2. Notice in the **Watch3D** node that we have a grid of points across the Dynamo grid.
+> 1. 이제 _coordsXY_ 시퀀스에서 점의 그리드를 작성하려고 합니다. 이렇게 하려면 **Point.ByCoordinates** 구문을 사용해야 하지만, 시각적 스크립트에서 수행한 것과 동일한 방식으로 리스트의 _외적_도 시작해야 합니다. 이를 위해 `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` 줄을 입력합니다. 꺾쇠괄호는 외적 참조를 나타냅니다.
+> 2. **Watch3D** 노드에는 Dynamo 그리드를 가로지르는 점 그리드가 있습니다.
 
 ![](<../images/8-1/2/DesignScript - exercise - 05.jpg>)
 
-> 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. And since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
-> 2. Reading from the actual node on the canvas, we see that there are three inputs. The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
-> 3. The direction is simple enough, we use a `Vector.ZAxis()` to move vertically.
-> 4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: `refPt.DistanceTo(gridPts)`
-> 5. The final line of code gives us the translated points: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
+> 1. 이제 다소 까다롭지만 참조점까지의 거리를 기준으로 점 그리드를 위로 이동하려고 합니다. 먼저 이 새 점 세트를 _transPts_라고 지정합니다. 변환은 기존 요소에 대한 작업이므로 `Geometry.Translate...`를 사용하는 대신, `gridPts.Translate`를 사용합니다.
+> 2. 캔버스의 실제 노드에서 읽으면 3개의 입력이 있는 것을 알 수 있습니다. 해당 요소에 대해 작업을 수행하고 있으므로(_gridPts.Translate_ 사용) 변환할 형상은 이미 선언되어 있습니다. 나머지 두 입력은 함수 direction 및 _distance_의 괄호 안에 삽입됩니다.
+> 3. 방향은 충분히 단순하므로 `Vector.ZAxis()`를 사용하여 수직으로 이동합니다.
+> 4. 여전히 참조점과 각 그리드 점 사이의 거리를 계산해야 하므로 이 작업을 참조점에 대한 작업과 동일한 방식으로 수행합니다. `refPt.DistanceTo(gridPts)`
+> 5. 코드의 마지막 줄은 변환된 점을 반환합니다. `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
 
 ![](<../images/8-1/2/DesignScript - exercise - 06.jpg>)
 
-> 1. We now have a grid of points with the appropriate data structure to create a Nurbs Surface. We construct the surface using `srf = NurbsSurface.ByControlPoints(transPts);`
+> 1. 이제 Nurbs 표면을 작성하기 위한 적절한 데이터 구조를 가진 점 그리드가 있습니다. `srf = NurbsSurface.ByControlPoints(transPts);`를 사용하여 표면을 구성합니다.
 
 ![](<../images/8-1/2/DesignScript - exercise - 07.jpg>)
 
-> 1. And finally, to add some depth to the surface, we construct a solid using `solid = srf.Thicken(5);` In this case we thickened the surface by 5 units in the code, but we could always declare this as a variable (calling it thickness for example) and then control that value with a slider.
+> 1. 마지막으로, 표면에 깊이를 추가하기 위해 `solid = srf.Thicken(5);`을 사용하여 솔리드를 구성합니다. 이 경우 코드에서 표면을 5개 단위씩 두껍게 만들었지만 항상 이 값을 변수로 선언한 다음(예: thickness로 지칭) 슬라이더를 사용하여 해당 값을 제어할 수 있습니다.
 
-#### Simplify the Graph with "Node to Code"
+#### "Node to Code"로 그래프를 단순화하기
 
-The "Node to Code" feature automates the entire exercise that we just completed with the click of a button. Not only is this powerful for creating custom definitions and reusable code blocks, but it is also a really helpful tool to learn how to script in Dynamo:
+"Node to Code" 기능은 방금 버튼 클릭으로 완료한 전체 연습을 자동화합니다. 이 기능은 사용자 정의 및 재사용 가능한 code block을 작성하는 데 유용할 뿐만 아니라 Dynamo에서 스크립팅하는 방법을 배우기 위한 매우 유용한 도구이기도 합니다.
 
 ![](<../images/8-1/2/DesignScript - exercise - 08.jpg>)
 
-> 1. Start with the existing visual script from step 1 of the exercise. Select all of the nodes, right click on the canvas, and select _"Node to Code"_. Simple as that.
+> 1. 연습의 1단계에서 사용했던 기존 시각적 스크립트로 시작합니다. 모든 노드를 선택하고 캔버스를 마우스 오른쪽 버튼으로 클릭한 다음, _"Node to Code"_를 선택합니다. 아주 간단합니다.
 
-Dynamo has automated a text based version of the visual graph, lacing and all. Test this out on your visual scripts and release the power of the code block!
+Dynamo에서는 시각적 그래프, 레이싱 및 모든 항목의 문자 기반 버전을 자동화했습니다. 시각적 스크립트에서 이 기능을 테스트하고 code block의 강력한 성능을 활용해보십시오.
 
 ![](<../images/8-1/2/DesignScript - exercise - 09.jpg>)

@@ -1,8 +1,8 @@
-# DesignScript Geometry Basics
+# DesignScript 형상 기본 사항
 
-### Point
+### 점
 
-The simplest geometrical object in the Dynamo standard geometry library is a point. All geometry is created using special functions called constructors, which each return a new instance of that particular geometry type. In Dynamo, constructors begin with the name of the object’s type, in this case Point, followed by the method of construction. To create a three dimensional point specified by x, y, and z Cartesian coordinates, use the _ByCoordinates_ constructor:
+Dynamo 표준 형상 라이브러리의 가장 단순한 기하학적 객체는 점입니다. 모든 형상은 생성자라는 특수 함수를 사용하여 작성되며, 생성자는 각각 해당 특정 형상 유형의 새 인스턴스를 반환합니다. Dynamo에서 생성자는 객체 유형의 이름(이 경우 Point)으로 시작되며 뒤에 생성 메서드가 옵니다. x, y 및 z 데카르트 좌표로 지정한 3D 점을 작성하기 위해 _ByCoordinates_ 생성자를 사용합니다.
 
 ![](../images/8-2/1/GeometryBasics\_01.png)
 
@@ -16,9 +16,9 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Constructors in Dynamo are typically designated with the “_By_” prefix, and invoking these functions returns a newly created object of that type. This newly created object is stored in the variable named on the left side of the equal sign.
+Dynamo의 생성자는 일반적으로 "_By_" 접두어로 지정되고, 이러한 함수를 호출하면 새로 작성된 해당 유형의 객체가 반환됩니다. 새로 작성된 이 객체는 등호 기호의 왼쪽에 명명된 변수에 저장됩니다.
 
-Most objects have many different constructors, and we can use the _BySphericalCoordinates_ constructor to create a point lying on a sphere, specified by the sphere’s radius, a first rotation angle, and a second rotation angle (specified in degrees):
+대부분의 객체에는 여러 다른 생성자가 있으며 _BySphericalCoordinates_ 생성자를 사용하여 구의 반지름, 첫 번째 회전 각도 및 두 번째 회전 각도(도 단위로 지정됨)로 지정된 구에 있는 점을 작성할 수 있습니다.
 
 ![](../images/8-2/1/GeometryBasics\_02.png)
 
@@ -34,9 +34,9 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
     phi);
 ```
 
-### From Point to Line
+### 점에서 선으로
 
-Points can be used to construct higher dimensional geometry such as lines. We can use the _ByStartPointEndPoint_ constructor to create a Line object between two points:
+선처럼 더 높은 차원의 형상을 생성하는 데 점을 사용할 수 있으며, _ByStartPointEndPoint_ 생성자를 사용하여 두 점 간에 선 객체를 작성할 수 있습니다.
 
 ![](../images/8-2/1/GeometryBasics\_03.png)
 
@@ -49,9 +49,9 @@ p2 = Point.ByCoordinates(-15, 7, 0.5);
 l = Line.ByStartPointEndPoint(p1, p2);
 ```
 
-### From Line to Surface
+### 선에서 표면으로
 
-Similarly, lines can be used to create higher dimensional surface geometry, for instance using the _Loft_ constructor, which takes a series of lines or curves and interpolates a surface between them.
+마찬가지로 일련의 선 또는 곡선을 가져와 그 사이의 표면을 보간하는 _Loft_ 생성자를 사용하는 경우처럼 선을 사용하여 더 높은 차원의 표면 형상을 만들 수 있습니다.
 
 ![](../images/8-2/1/GeometryBasics\_04.png)
 
@@ -75,9 +75,9 @@ l3 = Line.ByStartPointEndPoint(p5, p6);
 surf = Surface.ByLoft([l1, l2, l3]);
 ```
 
-### From Surface to Solid
+### 표면에서 솔리드로
 
-Surfaces too can be used to create higher dimensional solid geometry, for instance by thickening the surface by a specified distance. Many objects have functions attached to them, called methods, allowing the programmer to perform commands on that particular object. Methods common to all pieces of geometry include _Translate_ and _Rotate_, which respectively translate (move) and rotate the geometry by a specified amount. Surfaces have a _Thicken_ method, which take a single input, a number specifying the new thickness of the surface.
+표면 역시 더 높은 차원의 솔리드 형상을 작성하는 데 사용할 수 있는데, 예를 들어 지정된 거리만큼 표면을 두껍게 할 수 있습니다. 많은 객체에는 프로그래머가 해당 객체에 대해 명령을 수행할 수 있도록 하는 메서드라고 하는 함수가 연결되어 있습니다. 모든 형상 조각에 공통적으로 적용되는 메서드에는 각각 지정된 양만큼 형상을 변환(이동) 및 회전하는 _Translate_ 및 _Rotate_가 포함됩니다. 표면에는 표면의 새 두께를 지정하는 숫자인 단일 입력을 사용하는 _Thicken_ 메서드가 있습니다.
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 
@@ -97,9 +97,9 @@ surf = Surface.ByLoft([l1, l2]);
 solid = surf.Thicken(4.75, true);
 ```
 
-### Intersect
+### 교집합
 
-_Intersection_ commands can extract lower dimensional geometry from higher dimensional objects. This extracted lower dimensional geometry can form the basis for higher dimensional geometry, in a cyclic process of geometrical creation, extraction, and recreation. In this example, we use the generated Solid to create a Surface, and use the Surface to create a Curve.
+_Intersection_ 명령은 더 높은 차원 객체에서 더 낮은 차원 형상을 추출할 수 있습니다. 이렇게 추출한 낮은 차원 형상은 형상 작성, 추출, 재작성으로 연결되는 일련의 프로세스에서 더 높은 차원 형상의 기준을 형성할 수 있습니다. 이 예에서는 생성된 솔리드를 사용하여 표면을 작성하고 표면을 사용하여 곡선을 작성합니다.
 
 ![](../images/8-2/1/GeometryBasics\_06.png)
 

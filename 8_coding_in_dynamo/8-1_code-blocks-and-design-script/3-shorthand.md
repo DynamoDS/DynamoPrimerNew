@@ -1,145 +1,145 @@
-# Shorthand
+# 축약형
 
-### Shorthand
+### 축약형
 
-There are a few basic shorthand methods in the code block which, simply put, make data management _a lot_ easier. We'll break down the basics below and discuss how this shorthand can be used both for creating and querying data.
+code block에는 데이터 관리를 _훨씬_ 더 쉽게 해주는 몇 가지 기본적인 축약 방법이 있습니다. 아래의 기본 사항을 분석하고 이러한 축약형을 데이터 작성 및 조회에 어떻게 사용할 수 있는지 알아보겠습니다.
 
-| **Data Type**          | **Standard Dynamo**                                      | **Code Block Equilvalent**                                    |
+| **데이터 유형** | **표준 Dynamo** | **해당하는 Code Block 항목** |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Numbers                | ![](<../images/8-1/3/01 node - numbers.jpg>)       | ![](<../images/8-1/3/01 codeblock - numbers.jpg>)       |
-| Strings                | ![](<../images/8-1/3/02 node - string.jpg>)        | ![](<../images/8-1/3/02 codeblock- string.jpg>)         |
-| Sequences              | ![](<../images/8-1/3/03 node- sequence.jpg>)       | ![](<../images/8-1/3/03 codeblock- sequence.jpg>)       |
-| Ranges                 | ![](<../images/8-1/3/04 node- range.jpg>)          | ![](<../images/8-1/3/04 codeblock - range.jpg>)         |
-| Get Item at Index      | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../images/8-1/3/06 node - list create.jpg>)   | ![](<../images/8-1/3/06 codeblock - list create.jpg>)   |
-| Concatenate Strings    | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
-| Conditional Statements | ![](<../images/8-1/3/08 node - conditional.jpg>)   | ![](<../images/8-1/3/08 codeblock - conditional.jpg>)   |
+| 번호 | ![](<../images/8-1/3/01 node - numbers.jpg>) | ![](<../images/8-1/3/01 codeblock - numbers.jpg>) |
+| 문자열 | ![](<../images/8-1/3/02 node - string.jpg>) | ![](<../images/8-1/3/02 codeblock- string.jpg>) |
+| 시퀀스 | ![](<../images/8-1/3/03 node- sequence.jpg>) | ![](<../images/8-1/3/03 codeblock- sequence.jpg>) |
+| 범위 | ![](<../images/8-1/3/04 node- range.jpg>) | ![](<../images/8-1/3/04 codeblock - range.jpg>) |
+| 색인의 항목 가져오기 | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
+| 리스트 작성 | ![](<../images/8-1/3/06 node - list create.jpg>) | ![](<../images/8-1/3/06 codeblock - list create.jpg>) |
+| 문자열 연결 | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
+| 조건문 | ![](<../images/8-1/3/08 node - conditional.jpg>) | ![](<../images/8-1/3/08 codeblock - conditional.jpg>) |
 
-### Additional Syntax
+### 추가 구문
 
 |                                     |                           |                                                                                          |
 | ----------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------- |
-| **Node(s)**                         | **Code Block Equivalent** | **Note**                                                                                 |
-| Any operator (+, &&, >=, Not, etc.) | +, &&, >=, !, etc.        | Note that “Not” becomes “!” but the node is called “Not” to distinguish from “Factorial” |
-| Boolean True                        | true;                     | Note lower case                                                                          |
-| Boolean False                       | false;                    | Note lower case                                                                          |
+| **노드** | **해당하는 Code Block 항목** | **주** |
+| 모든 연산자(+, &&, >=, Not 등) | +, &&, >=, ! 등 | “Not”은 “!”가 되지만 "Factorial"과 구분하기 위해 노드를 "Not"으로 지칭합니다. |
+| Boolean True | true; | 소문자입니다. |
+| Boolean False | false; | 소문자입니다. |
 
-### Ranges and Sequences
+### 범위 및 시퀀스
 
-The method for defining ranges and sequences can be reduced to basic shorthand. Use the image below as a guide to the ".." syntax for defining a list of numerical data with code block. After getting the hang of this notation, creating numerical data is a really efficient process:
+범위 및 시퀀스를 정의하는 방법을 기본 축약형으로 줄일 수 있습니다. code block으로 숫자 데이터 리스트를 정의하기 위한 ".." 구문을 작성할 때 아래 이미지를 참고하십시오. 이 표기법을 이해한 후에는 숫자 데이터를 정말 효율적으로 작성할 수 있게 됩니다.
 
 ![](<../images/8-1/3/shorthand - ranges and sequences.jpg>)
 
-> 1. In this example, a number range is replaced by basic **Code Block** syntax defining the `beginning..end..step-size;` . Represented numerically, we get: `0..10..1;`
-> 2. Notice that the syntax `0..10..1;` is equivalent to `0..10;` A step-size of 1 is the default value for the shorthand notation. So `0..10;` will give a sequence from 0 to 10 with a step-size of 1.
-> 3. The _Sequence_ example is similar, except we use a "#" to state that we want 15 values in the list, rather than a list which goes up to 15. In this case, we are defining: `beginning..#ofSteps..step-size:` The actual syntax for the sequence is `0..#15..2`
-> 4. Using the _"#"_ from the previous step, we now place it in the _"step-size"_ portion of the syntax. Now, we have a _number range_ spanning from the _"beginning"_ to the _"end"_ and the _"step-size"_ notation evenly distributes a number of values between the two: `beginning..end..#ofSteps`
+> 1. 이 예에서는 숫자 범위가 `beginning..end..step-size;`를 정의하는 기본 **Code Block** 구문으로 대치됩니다. 숫자로 표현하면 `0..10..1;`입니다.
+> 2. `0..10..1;` 구문은 `0..10;`과 같습니다. 단계 크기 1은 축약형 표기의 기본값입니다. 따라서 `0..10;`을 사용하면 단계 크기가 1인 0~10의 시퀀스가 지정됩니다.
+> 3. _Sequence_의 예는 최대 15개의 리스트가 아니라, 리스트에 포함된 15개의 값을 원한다는 사실을 나타내기 위해 "#"을 사용한다는 점을 제외하고 비슷합니다. 여기서는 `beginning..#ofSteps..step-size:`를 정의합니다. 시퀀스의 실제 구문은 `0..#15..2`입니다.
+> 4. 이번에는 이전 단계의 _"#"_을 구문의 _"step-size"_ 부분에 배치합니다. 이제 _숫자 범위_는 _"beginning"_부터 _"end"_까지 걸쳐 있으며, _"step-size"_ 표기법은 여러 개의 값을 둘 사이에 균일하게 분산합니다(`beginning..end..#ofSteps`).
 
-### Advanced Ranges
+### 고급 범위
 
-Creating advanced ranges allows us to work with list of lists in a simple fashion. In the examples below, we're isolating a variable from the primary range notation, and creating another range of that list.
+고급 범위를 작성하면 리스트의 리스트를 간단하게 사용할 수 있습니다. 아래 예에서는 1차 범위 표기법에서 변수를 분리한 후 해당 리스트의 다른 범위를 작성합니다.
 
 ![](<../images/8-1/3/shorthand - advance range 01.jpg>)
 
-> 1\. Creating nested ranges, compare the notation with a "#" vs. the notation without. The same logic applies as in basic ranges, except it gets a little more complex.
+> 1\. 중첩된 범위를 작성하여 "#"이 있는 표기법과 없는 표기법을 비교합니다. 약간 더 복잡해질 수 있지만 기본 범위와 동일한 논리가 적용됩니다.
 >
-> 2\. We can define a sub-range at any place within the primary range, and notice that we can have two sub-ranges as well.
+> 2\. 1차 범위 내의 임의 위치에서 하위 범위를 정의할 수 있으며, 하위 범위가 2개 있을 수도 있습니다.
 >
-> 3\. By controlling the "end" value in a range, we create more ranges of differing lengths.
+> 3\. 범위의 "end" 값을 제어하여 길이가 다른 범위를 더 많이 작성합니다.
 
-As a logic exercise, compare the two shorthands above and try to parse through how _subranges_ and the _#_ notation drive the resultant output.
+논리 연습의 일환으로, 위의 두 축약형을 비교하고, _하위 범위_ 및 _#_ 표기법에 따라 결과 출력이 어떻게 달라지는지 구문 분석해 봅니다.
 
 ![](<../images/8-1/3/shorthand - advance range 02.jpg>)
 
-### Make Lists and Get Items From a List
+### 리스트 만들기 및 리스트에서 항목 가져오기
 
-In addition to making lists with shorthand, we can also create lists on the fly. These list can contain a wide range of element types and can also be queried (remember, lists are objects in themselves). To summarize, with code block you make lists and query items from a list with brackets (a.k.a. “square brackets”):
+또한 축약형을 사용해서 리스트를 만드는 것 외에, 리스트를 즉석에서 작성할 수도 있습니다. 이러한 리스트는 광범위한 요소 유형을 포함할 수 있으며 조회도 가능합니다(리스트는 그 자체가 객체임). 요약하면, Code Block을 통해 대괄호를 사용해서 리스트를 만들고, 리스트의 항목을 조회합니다.
 
 ![](<../images/8-1/3/shorthand - list & get from list 01.jpg>)
 
-> 1\. Create lists quickly with strings and query them using the item index.
+> 1\. 문자열을 사용하여 리스트를 빠르게 작성하고 항목 색인을 사용하여 조회합니다.
 >
-> 2\. Create lists with variables and query using the range shorthand notation.
+> 2\. 변수를 사용해서 리스트를 작성하고, 범위 축약형 표기법을 사용해서 조회합니다.
 
-And managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
+내포된 리스트로 관리하는 작업도 유사한 프로세스입니다. 리스트 순서를 인식하고 여러 대괄호 세트를 사용해서 명확히 구분합니다.
 
 ![](<../images/8-1/3/shorthand - list & get from list 02.jpg>)
 
-> 1\. Define a list of lists.
+> 1\. 리스트의 리스트를 정의합니다.
 >
-> 2\. Query a list with single bracket notation.
+> 2\. 단일 대괄호 표기법으로 리스트를 조회합니다.
 >
-> 3\. Query an item with double bracket notation.
+> 3\. 이중 대괄호 표기법을 사용하여 항목을 조회합니다.
 
-## Exercise: Sine Surface
+## 연습: 사인 표면
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code block and existing Dynamo nodes in tandem: we use the code block for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
+이 연습에서는 새로운 축약형 기술을 조정하면서 범위 및 수식으로 정의된 달걀 껍질형 표면을 작성합니다. 이 연습에서는 code block과 기존 Dynamo 노드를 동시에 사용하는 방법을 살펴봅니다. 정의를 이해할 수 있도록 Dynamo 노드를 시각적으로 배치하면서, 과도한 데이터 이동 작업에는 code block을 사용합니다.
 
-Start by creating a surface by connecting the nodes above. Instead of using a number node to define width and length, double click on the canvas and type `100;` into a code block
+먼저 위의 노드를 연결하여 표면을 작성해 보겠습니다. 숫자 노드를 사용하여 폭과 길이를 정의하는 대신, 캔버스를 두 번 클릭하고 Code Block에 `100;`을 입력합니다.
 
 ![](<../images/8-1/3/shorthand - exercise 01.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 02.jpg>)
 
-> 1. Define a range between 0 and 1 with 50 divisions by typing `0..1..#50` into a **Code Block**.
-> 2. Connect the range into **Surface.PointAtParameter**, which takes u and v values between 0 and 1 across the surface. Remember to change the Lacing to Cross Product by right clicking on the **Surface.PointAtParameter** node.
+> 1. **Code Block**에 `0..1..#50`을 입력하여 0과 1 사이에 50개 분할 영역으로 구분된 범위를 정의합니다.
+> 2. 범위를 **Surface.PointAtParameter**에 연결합니다. 이 노드에서는 표면 전체에서 0과 1 사이의 u 및 v 값을 사용합니다. **Surface.PointAtParameter** 노드를 마우스 오른쪽 버튼으로 클릭하여 Lacing을 Cross Product로 변경해야 합니다.
 
-In this step, we employ our first function to move the grid of points up in the Z. This grid will drive a generated surface based on the underlying function. Add new nodes as shown in image below
+이 단계에서는 첫 번째 함수를 사용하여 Z에서 위쪽으로 점 그리드를 이동합니다. 이 그리드는 기본 함수를 기준으로 생성된 표면을 구동합니다. 아래 이미지에 표시된 대로 새 노드를 추가합니다.
 
 ![](<../images/8-1/3/shorthand - exercise 03.jpg>)
 
-> 1. Rather than using a formula node, we use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
+> 1. 수식 노드를 사용하는 대신, `(0..Math.Sin(x*360)..#50)*5;` 줄이 있는 **Code Block**을 사용합니다. 빠른 분석을 위해 내부에 수식을 사용하여 범위를 정의합니다. 이 수식은 사인 함수입니다. 사인 함수에는 Dynamo에서 각도 입력이 수신되므로 전체 사인파를 가져오려면 x 값(0에서 1 범위의 입력)에 360을 곱합니다. 다음으로, 각 행의 제어 그리드 점과 동일한 수의 분할을 원하므로 #50을 사용하여 50개의 재분할 영역을 정의합니다. 마지막으로 승수 5는 변환의 진폭을 늘리므로 Dynamo 미리보기에서 결과를 확인할 수 있습니다.
 
 ![](<../images/8-1/3/shorthand - exercise 04.jpg>)
 
-> 1. While the previous **Code Block** worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
+> 1. 이전 **Code Block**이 제대로 작동했지만 완전한 파라메트릭은 아니었습니다. 매개변수를 동적으로 구동하려고 하므로, 이전 단계의 줄을 `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`로 대치하겠습니다. 이렇게 하면 입력을 기준으로 이러한 값을 정의할 수 있습니다.
 
-By changing the sliders (ranging from 0 to 10), we get some interesting results.
+0부터 10 사이에서 슬라이더를 변경하면 몇 가지 흥미로운 결과를 얻을 수 있습니다.
 
 ![](<../images/8-1/3/shorthand - exercise 05.gif>)
 
 ![](<../images/8-1/3/shorthand - exercise 06.jpg>)
 
-> 1. By doing a transpose on the number range, we reverse the direction of the curtain wave: `transposeList = List.Transpose(sineList);`
+> 1. 숫자 범위에서 행과 열을 바꾸어 커튼 파형의 방향을 반대로 바꿉니다. `transposeList = List.Transpose(sineList);`
 
 ![](<../images/8-1/3/shorthand - exercise 07.jpg>)
 
-> 1. We get a distorted eggshell surface when we add the sineList and the tranposeList: `eggShellList = sineList+transposeList;`
+> 1. 다음과 같이 sineList 및 tranposeList를 추가하면 왜곡된 달걀 껍질형 표면이 표시됩니다. `eggShellList = sineList+transposeList;`
 
-Let's change the sliders values specified below to 'calm the waters' of this algorithm.
+아래에 지정된 슬라이더 값을 변경하여 이 알고리즘의 '파형을 진정'시켜 보겠습니다.
 
 ![](<../images/8-1/3/shorthand - exercise 08.jpg>)
 
-Last, let's query isolated parts of the data with the Code Block. To regenerate the surface with a specific range of points, add the code block above between the **Geometry.Translate** and **NurbsSurface.ByPoints** node. This has the line of text: `sineStrips[0..15..1];`. This will select the first 16 rows of points (out of 50). Recreating the surface, we can see that we've generated an isolated portion of the grid of points.
+마지막으로, 이 Code Block을 사용하여 분리된 데이터 부분을 조회해 보겠습니다. 특정 점 범위를 사용해서 표면을 재생성하려면 위 code block을 **Geometry.Translate**와 **NurbsSurface.ByPoints** 노드 사이에 추가합니다. 여기에는 `sineStrips[0..15..1];` 텍스트 줄이 있습니다. 이는 50개 중에서 처음 16개의 점 행을 선택합니다. 표면을 재작성하면 점 그리드의 분리된 부분이 생성된 것을 볼 수 있습니다.
 
 ![](<../images/8-1/3/shorthand - exercise 09.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 10.jpg>)
 
-> 1. In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
+> 1. 마지막 단계에서 이 **Code Block**을 좀 더 파라메트릭하게 만들기 위해 0에서 1 사이의 슬라이더를 사용하여 조회를 실행합니다. `sineStrips[0..((List.Count(sineStrips)-1)*u)];` 코드 줄을 사용하여 이 작업을 수행합니다. 혼란스러워 보일 수 있지만, 이 코드 줄을 사용하면 리스트 길이를 0에서 1 사이의 승수로 빠르게 축척할 수 있습니다.
 
-A value of `0.53` on the slider creates a surface just past the midpoint of the grid.
+슬라이더에서 `0.53` 값을 사용하면 표면이 그리드의 중간점을 지나 작성됩니다.
 
 ![](<../images/8-1/3/shorthand - exercise 11.jpg>)
 
-And as expected, a slider of `1` creates a surface from the full grid of points.
+또한 예상대로 슬라이더에서 `1`을 사용하면 표면이 전체 점 그리드에서 작성됩니다.
 
 ![](<../images/8-1/3/shorthand - exercise 12.jpg>)
 
-Looking at the visual graph, we can highlight the code blocks and see each of their functions.
+시각적 그래프를 보면 Code Block을 강조 표시하고 해당 기능을 확인할 수 있습니다.
 
 ![](<../images/8-1/3/shorthand - exercise 13.jpg>)
 
-> 1\. The first **Code Block** replaces the **Number** node.
+> 1\. 첫 번째 **Code Block**은 **Number** 노드를 대치합니다.
 >
-> 2\. The second **Code Block** replaces the **Number Range** node.
+> 2\. 두 번째 **Code Block**은 **Number Range** 노드를 대치합니다.
 >
-> 3\. The third **Code Block** replaces the **Formula** node (as well as **List.Transpose**, **List.Count** and **Number Range**).
+> 3\. 세 번째 **Code Block**은 **Formula** 노드(**List.Transpose**, **List.Count** 및 **Number Range**)를 대치합니다.
 >
-> 4\. The fourth **Code Block** queries a list of lists, replacing the **List.GetItemAtIndex** node.
+> 4\. 네 번째 **Code Block**은 리스트의 리스트를 조회하고 **List.GetItemAtIndex** 노드를 대치합니다.

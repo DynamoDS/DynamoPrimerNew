@@ -1,19 +1,19 @@
-# Intersection and Trim
+# 교차 및 자르기
 
-Many of the examples so far have focused on the construction of higher dimensional geometry from lower dimensional objects. Intersection methods allow this higher dimensional geometry to generate lower dimensional objects, while the trim and select trim commands allow script to heavily modify geometric forms after they’ve been created.
+지금까지 많은 예는 더 낮은 차원의 객체에서 더 높은 차원의 형상을 생성하는 데 초점을 맞추었습니다. 교차 메서드를 사용하면 더 높은 차원의 형상에서 더 낮은 차원의 객체를 생성할 수 있으며, 자르기 및 선택 자르기 명령을 사용하면 기하학적 형태가 작성된 후에 스크립트를 통해 세밀하게 수정할 수 있습니다.
 
-The _Intersect_ method is defined on all pieces of geometry in Dynamo, meaning that in theory any piece of geometry can be intersected with any other piece of geometry. Naturally some intersections are meaningless, such as intersections involving Points, as the resulting object will always be the input Point itself. The other possible combinations of intersections between objects are outlined in the following chart. The following chart outlines the result of various intersection operations:
+_Intersect_ 메서드는 Dynamo의 모든 형상 조각에 대해 정의됩니다. 즉, 이론상 모든 형상 조각은 다른 형상 조각과 교차할 수 있습니다. 물론 결과 객체가 항상 입력 점 자체가 되는 점 관련 교차처럼, 일부 교차의 경우에는 의미가 없을 수 있습니다. 객체 간의 가능한 다른 교차 조합은 다음 차트에 설명되어 있습니다. 또한 이 차트에는 다양한 교차 작업의 결과도 나와 있습니다.
 
-### **Intersect**
+### **교차**
 
-| _With:_     | Surface | Curve | Plane        | Solid   |
+| _대상:_ | 표면 | 곡선 | 평면 | 솔리드 |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Surface** | Curve   | Point | Point, Curve | Surface |
-| **Curve**   | Point   | Point | Point        | Curve   |
-| **Plane**   | Curve   | Point | Curve        | Curve   |
-| **Solid**   | Surface | Curve | Curve        | Solid   |
+| **표면** | 곡선 | 점 | 점, 곡선 | 표면 |
+| **Curve** | 점 | 점 | 점 | 곡선 |
+| **평면** | 곡선 | 점 | 곡선 | 곡선 |
+| **솔리드** | 표면 | 곡선 | 곡선 | 솔리드 |
 
-The following very simple example demonstrates the intersection of a plane with a NurbsSurface. The intersection generates a NurbsCurve array, which can be used like any other NurbsCurve.
+다음의 간단한 예는 평면과 NurbsSurface의 교차점을 보여줍니다. 교차는 다른 모든 NurbsCurve처럼 사용할 수 있는 NurbsCurve 배열을 생성합니다.
 
 ![](../images/8-2/8/IntersectionAndTrim\_01.png)
 
@@ -34,18 +34,18 @@ crvs = surf.Intersect(pl);
 crvs_moved = crvs.Translate(0, 0, 10);
 ```
 
-The _Trim_ method is very similar to the Intersect method, in that it is defined for almost every piece of geometry. However, there are far more limitations on _Trim_ than on _Intersect_.
+_Trim_ 메서드는 거의 모든 형상 조각에 정의된다는 점에서 Intersect 메서드와 매우 유사합니다. 그러나 _Intersect_보다 _Trim_에 훨씬 더 많은 제한이 있습니다.
 
-### **Trim**
+### **자르기**
 
-|             | _Using:_ Point | Curve | Plane | Surface | Solid |
+|             | _사용 대상:_점 | 곡선 | 평면 | 표면 | 솔리드 |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _On:_ Curve | Yes            | No    | No    | No      | No    |
-| Polygon     | -              | No    | Yes   | No      | No    |
-| Surface     | -              | Yes   | Yes   | Yes     | Yes   |
-| Solid       | -              | -     | Yes   | Yes     | Yes   |
+| _위치:_ 곡선 | 예 | 아니오 | 아니오 | 아니오 | 아니오 |
+| 폴리곤 | - | 아니오 | 예 | 아니오 | 아니오 |
+| 표면 | - | 예 | 예 | 예 | 예 |
+| 솔리드 | - | - | 예 | 예 | 예 |
 
-Something to note about _Trim_ methods is the requirement of a “select” point, a point which determines which geometry to discard, and which pieces to keep. Dynamo finds and discards the trimmed geometry closest to the select point.
+_Trim_ 메서드에서 유의할 사항은 삭제할 형상 및 유지할 조각을 결정하는 "선택" 점이 필요하다는 것입니다. Dynamo는 선택 점에서 가장 가까운 잘린 형상을 찾아서 이를 버립니다.
 
 ![](../images/8-2/8/IntersectionAndTrim\_02.png)
 

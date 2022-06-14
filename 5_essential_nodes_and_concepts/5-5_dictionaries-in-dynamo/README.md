@@ -1,11 +1,11 @@
-# Dictionaries in Dynamo
+# Dynamo의 사전
 
-Dictionaries represent a collection of data that is related to another piece of data known as a key. Dictionaries expose the ability to search for, delete and insert data into a collection.
+사전은 키라고 하는 다른 데이터 부분과 연관된 데이터 모음을 나타냅니다. 사전은 데이터를 검색하고, 삭제하고, 모음에 삽입할 수 있는 기능을 제공합니다.
 
-Essentially, we can think of a dictionary as a really smart way to look something up.
+기본적으로 사전을 항목을 조회하는 매우 지능적인 방법으로 생각할 수 있습니다.
 
-_While dictionary functionality has been available in Dynamo for some time, Dynamo 2.0 introduces a new way of managing this data type._
+_그동안 Dynamo에서 사전 기능을 사용할 수 있었지만, Dynamo 2.0에서는 이 데이터 유형을 관리하는 새로운 방법을 도입했습니다._
 
 ![](../images/5-5/wildDictionary.png)
 
-Original image courtesy of: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+원본 이미지 제공: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

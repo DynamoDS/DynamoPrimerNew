@@ -1,90 +1,90 @@
-# Curves
+# 곡선
 
-## Curves in Dynamo
+## Dynamo의 곡선
 
-### What is Curve?
+### 곡선이란?
 
-[Curves ](5-4\_curves.md#curve)are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvey or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
+[곡선](5-4\_curves.md#curve)은 선이 얼마나 구부러지거나 펴져 있는가? 또는 얼마나 길거나 짧은가? 등의 보다 익숙한 모양 설명 특성 세트를 포함하는 첫 번째 기하학적 데이터 유형입니다. 또한 점이 선에서 스플라인 사이의 모든 항목과 그 사이의 모든 곡선 유형을 정의하기 위한 빌딩 블록이라는 점은 그대로입니다.
 
-![Curve Types](../images/5-2/4/CurveTypes.jpg)
+![원곡선 유형](../images/5-2/4/CurveTypes.jpg)
 
-> 1. Line
-> 2. Polyline
-> 3. Arc
-> 4. Circle
-> 5. Ellipse
-> 6. NURBS Curve
-> 7. Polycurve
+> 1. 선
+> 2. 폴리선
+> 3. 호
+> 4. 원
+> 5. 타원
+> 6. NURBS 곡선
+> 7. 폴리 곡선
 
-### Line
+### 선
 
-[Line ](5-4\_curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>) to create a Line in Dynamo.
+[선](5-4\_curves.md#lines)은 점 세트로 구성되며 각 선에는 최소 2개의 점이 있습니다. Dynamo에서 선을 작성하는 가장 일반적인 방법 중 하나는 `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end.jpg>)를 사용하여 Dynamo에서 선을 작성합니다.
 
 ![](<./images/5-2/4/curves - line by start point end point.jpg>)
 
-### NURBS Curve
+### NURBS 곡선
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) is a model used for representing curves and surfaces accurately. A sine curve in Dynamo using two different methods to create NURBS Curves to compare the results.
+[NURBS](5-4\_curves.md#nurbs-+-polycurves)는 곡선과 표면을 정확하게 표현하는 데 사용되는 모델입니다. 결과를 비교하기 위해 NURBS 곡선을 작성하는 두 개의 서로 다른 방법을 사용하여 Dynamo에서 사인 곡선을 작성합니다.
 
 ![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
 
-> 1. _NurbsCurve.ByControlPoints_ uses the List of Points as Control Points
-> 2. _NurbsCurve.ByPoints_ draws a Curve through the List of Points
+> 1. _NurbsCurve.ByControlPoints_는 점 리스트를 제어점으로 사용합니다.
+> 2. _NurbsCurve.ByPoints_는 점 리스트를 통해 곡선을 그립니다.
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-## Deep Dive into...
+## 자세히 알아보기...
 
-### Curves
+### 곡선
 
-The term **Curve** is generally a catch-all for all different sort of curved (even if straight) shapes. Capital "C" Curve is the parent categorization for all of those shape types - Lines, Circles, Splines, etc. More technically, a Curve describes every possible Point that can be found by inputting "t" into a collection of functions, which may range from the simple (`x = -1.26*t, y = t`) to functions involving calculus. No matter what kind of Curve we are working with, this **Parameter** called "t" is a property we can evaluate. Furthermore, regardless of the look of the shape, all Curves also have a start point and end point, which coincidentally align with the minimum and maximum t values used to create the Curve. This also helps us understand its directionality.
+**곡선**이라는 용어는 일반적으로 다양한 종류의 곡선형(직선인 경우에도) 모양에 사용하는 다목적 용어입니다. 곡선(Curve의 "C"가 대문자인 경우)은 선, 원, 스플라인 등 해당 모양 유형 모두에 대한 상위 분류입니다. 보다 기술적으로 접근하면 곡선은 단순 함수(`x = -1.26*t, y = t`)에서 미적분학과 관련된 함수까지 다양한 함수 모음에 "t"를 입력하여 찾을 수 있는 가능한 모든 점을 그립니다. 어떤 종류의 곡선으로 작업하든 "t"라고 하는 이 **매개변수**는 평가할 수 있는 특성입니다. 또한 모양과 관계없이 모든 곡선에는 곡선을 작성하는 데 사용되는 최소 및 최대 t 값과 일치하는 시작점 및 끝점도 있습니다. 이는 해당 방향성을 이해하는 데도 도움이 됩니다.
 
-![Curve Parameter](../images/5-2/4/CurveParameter.jpg)
+![곡선 매개변수](../images/5-2/4/CurveParameter.jpg)
 
-> It's important to note that Dynamo assumes that the domain of "t" values for a Curve is understood to be 0.0 to 1.0.
+> Dynamo에서는 곡선에 대한 "t" 값의 도메인이 0.0부터 1.0까지의 범위라고 가정합니다.
 
-All Curves also possess a number of properties or characteristics which can be used to describe or analyze them. When the distance between the start and end points is zero, the curve is "closed." Also, every curve has a number of control-points, if all these points are located in the same plane, the curve is "planar." Some properties apply to the curve as a whole, while others only apply to specific points along the curve. For example, planarity is a global property while a tangent vector at a given t value is a local property.
+또한 모든 곡선에는 곡선을 그리거나 해석하는 데 사용할 수 있는 다양한 특성이나 특징이 있습니다. 시작점과 끝점 사이의 거리가 0이면 곡선이 "닫힌" 상태입니다. 또한 모든 곡선에는 많은 제어점이 있습니다. 이러한 모든 점이 동일한 평면에 있는 경우 곡선은 "평면"입니다. 전체적으로 곡선에 적용되는 특성도 있고, 곡선을 따라 특정 점에만 적용되는 특성도 있습니다. 예를 들어, 지정된 T 값의 접선 벡터는 로컬 특성이지만 평면성은 전역 특성입니다.
 
-### Lines
+### 선
 
-**Lines** are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions.
+**선**은 가장 간단한 곡선 형식입니다. 별로 곡선처럼 보이지 않을 수 있지만 실제로는 곡률이 없는 곡선입니다. 선을 작성하는 방법에는 몇 가지가 있습니다. 가장 직관적인 방법은 점 A에서 점 B까지 연결하는 것입니다. 선 AB의 모양은 점 사이에 그려지지만 수학적으로는 양방향으로 무한하게 확장됩니다.
 
-![Line](../images/5-2/4/Line.jpg)
+![선](../images/5-2/4/Line.jpg)
 
-When we connect two Lines together, we have a **Polyline**. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular.
+두 선을 연결하면 **폴리선**이 생성됩니다. 여기에 제어점이란 무엇인지가 직관적으로 나타나 있습니다. 이러한 점 위치를 편집하면 폴리선의 모양이 변경됩니다. 폴리선이 닫혀 있으면 다각형이 생성됩니다. 다각형의 모서리 길이가 모두 같으면 정다각형으로 그려집니다.
 
-![Polyline + Polygon](../images/5-2/4/Polyline.jpg)
+![폴리선 + 다각형](../images/5-2/4/Polyline.jpg)
 
-### Arcs, Circles, Ellipse Arcs, and Ellipses
+### 호, 원, 타원 호 및 타원
 
-As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an **Arc**, **Circle**, **Ellipse Arc**, or **Ellipse** by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed.
+모양을 정의하는 파라메트릭 함수가 더 복잡해지면서 하나 또는 두 개의 반지름을 그려 선에서 한 단계 더 나아가 **호**, **원**, **타원 호** 또는 **타원**을 작성할 수 있습니다. 호 버전과 원 또는 타원의 차이는 모양이 닫혀 있는지 여부뿐입니다.
 
-![Arcs + Circles](../images/5-2/4/Arcs+Circles.jpg)
+![호 + 원](../images/5-2/4/Arcs+Circles.jpg)
 
-### NURBS + Polycurves
+### NURBS + 폴리 곡선
 
-**NURBS** (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing.
+**NURBS**(비균일 유리 기준 스플라인)은 단순한 2D 선, 원, 호 또는 직사각형에서 가장 복잡한 3D 자유형 유기적 곡선까지 모든 모양을 정확하게 모델링할 수 있는 수학적 표현입니다. NURBS 모델은 유연하고(제어점이 비교적 적지만 차수 설정에 따라 매끄럽게 보간됨) 정밀하므로(탄탄한 수학으로 묶여 있음) 그림이나 애니메이션에서 제조에 이르는 모든 프로세스에서 사용될 수 있습니다.
 
-![NURBS Curve](../images/5-2/4/NURBScurve.jpg)
+![NURBS 곡선](../images/5-2/4/NURBScurve.jpg)
 
-**Degree**: The Degree of the Curve determines the range of influence the Control Points have on a Curve; where the higher the degree, the larger the range. The Degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any positive whole number. NURBS lines and polylines are usually Degree 1 and most free-form Curves are Degree 3 or 5.
+**차수**: 곡선의 차수는 제어점이 곡선에 미치는 영향의 범위를 결정합니다. 즉, 차수가 클수록 영향 범위가 커집니다. 차수는 양의 정수입니다. 이 숫자는 일반적으로 1, 2, 3 또는 5이지만 어떤 양의 정수도 될 수 있습니다. NURBS 선과 폴리선은 일반적으로 차수가 1이고 대부분의 자유형 곡선은 차수가 3 또는 5입니다.
 
-**Control Points**: The Control Points are a list of at least Degree+1 Points. One of the easiest ways to change the shape of a NURBS Curve is to move its Control Points.
+**제어점**: 제어점은 차수가 +1 이상인 점으로 이루어진 리스트입니다. NURBS 곡선의 모양을 변경하는 가장 쉬운 방법 중 하나는 해당 제어점을 이동하는 것입니다.
 
-**Weight**: Control Points have an associated number called a Weight. Weights are usually positive numbers. When a Curve’s Control Points all have the same weight (usually 1), the Curve is called non-rational, otherwise the Curve is called rational. Most NURBS curves are non-rational.
+**가중치**: 제어점에는 가중치라고 하는 연관된 숫자가 있습니다. 가중치는 일반적으로 양수입니다. 곡선 제어점의 모든 가중치가 같은 경우(일반적으로 1) 해당 곡선을 비유리라고 하고, 그렇지 않은 경우 유리라고 합니다. 대부분의 NURBS 곡선은 비유리입니다.
 
-**Knots**: Knots are a list of (Degree+N-1) numbers, where N is the number of Control Points. The Knots are used together with the weights to control the influence of the Control Points on the resulting Curve. One use for Knots is to create kinks at certain points in the curve.
+**노트**: 노트는 (차수+N-1) 숫자의 리스트입니다. 여기서 N은 제어점의 수입니다. 노트는 가중치와 함께 사용되어 결과 곡선에 제어점이 미치는 영향을 제어합니다. 노트의 한 가지 용도는 곡선의 특정 점에 꼬임을 작성하는 것입니다.
 
-![NURBS Curve Degree](../images/5-2/4/NURBScurve\_Degree.jpg)
+![NURBS 곡선 차수](../images/5-2/4/NURBScurve\_Degree.jpg)
 
-> 1. Degree = 1
-> 2. Degree = 2
-> 3. Degree = 3
+> 1. 차수 = 1
+> 2. 차수 = 2
+> 3. 차수 = 3
 
 {% hint style="info" %}
-Note that the higher the degree value, the more Control Points are used to interpolate the resulting Curve.
+차수 값이 높을수록 결과 곡선을 보간하는 데 더 많은 제어점이 사용됩니다.
 {% endhint %}

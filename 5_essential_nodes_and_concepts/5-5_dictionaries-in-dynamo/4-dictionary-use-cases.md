@@ -1,73 +1,73 @@
-# Revit Use-Cases
+# Revit 사용 사례
 
-Have you ever wanted to look up something in Revit by a piece of data that it has?
+Revit에서 포함된 데이터의 일부를 사용해서 항목을 조회하려고 한 적이 있습니까?
 
-Chances are if you have you've done something like the following example.
+다음 예와 같이 작업을 수행할 수 있습니다.
 
-In the image below we are collecting all of the rooms in the Revit model, getting the index of the room we want (by room number), and finally grabbing the room at the index.
+아래 이미지에서는 Revit 모델의 모든 룸을 수집하고, 원하는 룸의 색인(룸 번호 기준)을 가져오고, 마지막으로 색인의 룸을 가져오는 작업을 수행합니다.
 
 ![](<../images/5-5/4/dictionary - collect room in revit model.jpg>)
 
-> 1. Collect all rooms in the model.
-> 2. Room number to find.
-> 3. Get the room number and find what index it is at.
-> 4. Obtain the room at the index.
+> 1. 모델의 모든 룸을 수집합니다.
+> 2. 찾을 룸 번호입니다.
+> 3. 룸 번호를 가져오고 해당 룸 번호가 있는 색인을 찾습니다.
+> 4. 색인에서 룸을 가져옵니다.
 
-## Exercise : Room Dictionary
+## 연습: 룸 사전
 
-### Part I: Creating Room Dictionary
+### 1부: 룸 사전 작성
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-5/4/roomDictionary.dyn" %}
 
-Now let's recreate this idea using dictionaries. First we need to collect all of the rooms in our Revit model.
+이제 사전을 사용하여 이 아이디어를 다시 작성해 보겠습니다. 먼저 Revit 모델에서 모든 룸을 수집해야 합니다.
 
 ![](<../images/5-5/4/dictionary - exercise I - 01.jpg>)
 
-> 1. We choose the Revit category we want to work with, (In this case, we are working with rooms).
-> 2. We tell Dynamo to collect all of those elements
+> 1. 작업할 Revit 카테고리를 선택합니다(이 경우에는 룸 사용).
+> 2. Dynamo에 모든 요소를 수집하도록 지시합니다.
 
-Next, we need to decide what keys we are going to use to look up this data by. (Information on keys can be found on the section, [What is a dictionary?](9-1\_what-is-a-dictionary.md)).
+다음에는 이 데이터를 조회하는 데 사용할 키를 결정해야 합니다. 키에 대한 정보는 [사전이란 무엇입니까?](9-1\_what-is-a-dictionary.md)) 섹션에서 찾을 수 있습니다.
 
 ![](<../images/5-5/4/dictionary - exercise I - 02.jpg>)
 
-> 1. The data that we will use is the room number.
+> 1. 사용할 데이터는 룸 번호입니다.
 
-Now we will create the dictionary with the given keys and elements.
+이제 지정된 키 및 요소로 사전을 작성합니다.
 
 ![](<../images/5-5/4/dictionary - exercise I - 03.jpg>)
 
-> 1. The node, **Dictionary.ByKeysValues** will create a dictionary given the appropriate inputs.
-> 2. `Keys` need to be a string, while `values` can be a variety of object types.
+> 1. 적절한 입력이 주어지면 노드 **Dictionary.ByKeysValues**가 사전을 작성합니다.
+> 2. `Keys`는 문자열이어야 하지만, `values`는 다양한 객체 유형일 수 있습니다.
 
-Lastly, we can retrieve a room from the dictionary with its room number now.
+마지막으로, 이제 룸 번호를 사용해서 사전에서 룸을 검색할 수 있습니다.
 
 ![](<../images/5-5/4/dictionary - exercise I - 04.jpg>)
 
-> 1. `String` will be the key that we are using to look up an object from the dictionary.
-> 2. **Dictionary.ValueAtKey** will obtain the object from the dictionary now.
+> 1. `String`은 사전에서 객체를 조회하는 데 사용하는 키입니다.
+> 2. **Dictionary.ValueAtKey**가 이제 사전에서 객체를 가져옵니다.
 
-### Part II: Values Look Up
+### 2부: 값 조회
 
-Using this same dictionary logic, we can create dictionaries with grouped objects as well. If we wanted to look up all rooms at a given level we can modify the above graph as follows.
+동일한 사전 논리를 사용하여 그룹화된 객체로 사전을 작성할 수도 있습니다. 지정된 레벨에서 모든 룸을 조회하려면 다음과 같이 위 그래프를 수정하면 됩니다.
 
 ![](<../images/5-5/4/dictionary - exercise II - 01.jpg>)
 
-> 1. Rather than using the room number as the key, we can now use a parameter value, (in this case we will use level).
+> 1. 이제 룸 번호를 키로 사용하는 대신, 매개변수 값을 사용할 수 있습니다(이 경우에는 레벨 사용).
 
 ![](<../images/5-5/4/dictionary - exercise II - 02.jpg>)
 
-> 1. Now, we can group the rooms by the level that they reside on.
+> 1. 이제 룸이 있는 레벨을 기준으로 룸을 그룹화할 수 있습니다.
 
 ![](<../images/5-5/4/dictionary - exercise II - 03.jpg>)
 
-> 1. With the elements grouped by the level, we can now use the shared keys (unique keys) as our key for our dictionary, and the lists of rooms as the elements.
+> 1. 이제 요소가 레벨로 그룹화되므로 공유 키(고유 키)를 사전용 키로 사용하고 룸 리스트를 요소로 사용할 수 있습니다.
 
 ![](<../images/5-5/4/dictionary - exercise II - 04.jpg>)
 
-> 1. Lastly, using the levels in the Revit model, we can look up which rooms reside on that level in the dictionary. `Dictionary.ValueAtKey` will take the level name and return the room objects at that level.
+> 1. 마지막으로 Revit 모형의 레벨을 사용하여 사전에서 해당 레벨에 있는 룸을 조회할 수 있습니다. `Dictionary.ValueAtKey`는 레벨 이름을 가져온 후 해당 레벨에서 룸 객체를 반환합니다.
 
-The opportunities for Dictionary use are really endless. The ability to relate your BIM data in Revit to the element itself poses a variety of use cases.
+사전을 사용할 수 있는 기회는 무궁무진합니다. Revit의 BIM 데이터를 요소 자체에 연결하는 기능은 다양한 사용 사례에 제시할 수 있습니다.

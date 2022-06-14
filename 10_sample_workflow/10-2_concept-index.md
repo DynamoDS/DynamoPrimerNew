@@ -4,14 +4,14 @@ description: >-
   workflows.
 ---
 
-# Concept Index
+# 개념 색인
 
-| Exercise list    | Key concepts introduced in exercise  | Link to further reading in later chapters                                                                  |
+| 연습 리스트 | 연습에서 소개된 주요 개념 | 이후 장의 추가 자료에 대한 링크 |
 | ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Parametric Vase  | Searching nodes throught the library | [Library](../3\_user\_interface/2-library.md)                                                              |
-|                  | Using nodes and wires                | [Nodes and Wires](../4\_nodes\_and\_wires/)                                                                |
-|                  | Creating curves and surfaces         | [Geometry for Computational Design](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
-|                  | Using code blocks                    | [Code Blocks and DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)                |
-| Attractor Points | Create manage and edit lists         | [Designing with Lists](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/)                   |
-|                  | Changing preview modes               | [Preview Mode](../3\_user\_interface/1-workspace.md#preview-mode)                                          |
-|                  | Changing execution modes             | [Execution Bar](../3\_user\_interface/#execution-bar)                                                      |
+| 파라메트릭 꽃병 | 라이브러리를 통해 노드 검색 | [라이브러리](../3\_user\_interface/2-library.md) |
+|                  | 노드 및 와이어 사용 | [노드 및 와이어](../4\_nodes\_and\_wires/) |
+|                  | 곡선 및 표면 작성 | [계산 방식 설계를 위한 형상](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
+|                  | 코드 블록 사용 | [코드 블록과 DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) |
+| 어트랙터 점 | 리스트 작성, 관리 및 편집 | [리스트로 설계](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/) |
+|                  | 미리보기 모드 변경 | [미리보기 모드](../3\_user\_interface/1-workspace.md#preview-mode) |
+|                  | 실행 모드 변경 | [실행 막대](../3\_user\_interface/#execution-bar) |

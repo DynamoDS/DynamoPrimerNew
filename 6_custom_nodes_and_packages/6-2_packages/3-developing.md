@@ -1,115 +1,115 @@
-# Developing a Package
+# 패키지 개발
 
-Dynamo offers a variety of ways to create a package for your personal use or for sharing with the Dynamo community. In the case study below, we'll walk through how a package is set up by deconstructing an existing one. This case study builds on lessons from the previous chapter, providing a set of custom nodes for mapping geometry, by UV coordinates, from one Dynamo surface to another.
+Dynamo에서는 개인적으로 사용하거나 Dynamo 커뮤니티와 공유하기 위해 패키지를 작성하는 다양한 방법을 제공합니다. 아래의 성공 사례에서 기존 패키지를 분해하여 설정 방법을 살펴보겠습니다. 이 성공 사례는 이전 장의 단원을 토대로 작성되었으며, 한 Dynamo 표면에서 다른 표면으로 UV 좌표별로 형상을 매핑하기 위한 사용자 노드 세트를 제공합니다.
 
-## MapToSurface Package
+## MapToSurface 패키지
 
-We're going to work with a sample package which demonstrates the UV mapping of points from one surface to another. We've already built the fundamentals of the tool in the [Creating a Custom Node](../10\_custom-nodes/10-2\_creating.md) section of this primer. The files below demonstrate how we can take the concept of UV Mapping and develop a set of tools for a publishable library.
+한 표면에서 다른 표면으로의 점 UV 매핑을 보여 주는 샘플 패키지로 작업해 보겠습니다. 우리는 이 기본서의 [사용자 노드 작성](../10\_custom-nodes/10-2\_creating.md) 섹션에서 도구의 기본 사항을 이미 만들었습니다. 아래의 파일은 UV 매핑의 개념을 파악하고 게시 가능한 라이브러리를 위한 도구 세트를 개발하는 방법을 보여 줍니다.
 
-In this image, we map a point from one surface to another using UV coordinates. The package is based on this concept, but with more complex geometry.
+이 이미지에서는 UV 좌표를 사용하여 한 표면에서 다른 표면으로 점을 매핑합니다. 이 패키지는 이러한 개념을 기준으로 하지만, 좀 더 복잡한 형상을 나타냅니다.
 
 ![](../images/6-2/3/uvMap.jpg)
 
-### Installing the Package
+### 패키지 설치
 
-In the previous chapter, we explored ways for panelizing a surface in Dynamo based on curves defined in the XY plane. This case study extends these concepts for more dimensions of geometry. We're going to install this package as built in order to demonstrate how it was developed. In the next section, we'll demonstrate how this package was published.
+이전 장에서는 XY 평면에 정의된 곡선을 기준으로 Dynamo에서 표면을 패널화하기 위한 방법을 살펴보았습니다. 이 성공 사례에서는 더 많은 치수를 포함하는 형상을 위해 이러한 개념을 확장합니다. 이 패키지가 개발된 방식을 보여 주기 위해 이를 구축된 대로 설치해 보겠습니다. 다음 섹션에서는 이 패키지가 게시된 방식을 살펴보겠습니다.
 
-In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
+Dynamo에서 \_패키지>패키지 검색...을 클릭하고 "MapToSurface"(1개의 단어) 패키지를 검색합니다. 설치를 클릭하여 다운로드를 시작하고 패키지를 라이브러리에 추가합니다.
 
 ![](<../images/6-2/3/develop package - install package 01.jpg>)
 
-After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
+설치 후에 사용자 노드를 애드온 > Dynamo Primer 섹션에서 사용할 수 있습니다.
 
 ![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
-With the package now installed, let's walk through how it's set up.
+이제 패키지가 설치되었으므로 설정 방법을 살펴보겠습니다.
 
-### Custom Nodes
+### 사용자 노드
 
-The package we're creating uses five custom nodes that we've built for reference. Let's walk through what each node does below. Some custom nodes build off of other custom nodes, and the graphs have a layout for other users to understand in a straightforward manner.
+현재 작성 중인 패키지에서는 참조용으로 만든 5개의 사용자 노드를 사용합니다. 아래에서는 각 노드가 수행하는 작업을 살펴보겠습니다. 일부 사용자 노드는 다른 사용자 노드를 통해 만들어지며, 그래프는 다른 사용자가 쉽게 이해할 수 있도록 배치되어 있습니다.
 
-This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
+이는 5개의 사용자 노드로 구성된 간단한 패키지입니다. 아래 단계에서는 각 사용자 노드의 설정에 대해 간략하게 설명하겠습니다.
 
 ![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 #### **PointsToSurface**
 
-This is a basic custom node, and one from which all of the other mapping nodes are based. Simply put, the node maps a point from a source surface UV coordinate to the location of the target surface UV coordinate. And since points are the most primitive geometry, from which more complex geometry is built, we can use this logic to map 2D, and even 3D geometry from one surface to another.
+다른 모든 매핑 노드의 기준이 되는 기본 사용자 노드입니다. 간단히 말해, 해당 노드에서는 소스 표면 UV 좌표의 점을 대상 표면 UV 좌표의 위치에 매핑합니다. 점은 보다 복잡한 형상이 만들어지는 기준이 되는 가장 기본적인 형상이기 때문에 이 논리를 사용하여 2D 및 3D 형상을 한 표면에서 다른 표면으로 매핑할 수 있습니다.
 
 ![](<../images/6-2/3/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
-The logic of extending mapped points from 1D geometry to 2D geometry is demonstrated simply with polygons here. Notice that we have nested the _"PointsToSurface"_ node into this custom node. This way we can map the points of each polygon to the surface, and then regenerate the polygon from those mapped points. By maintaining the proper data structure (a list of lists of points), we're able to keep the polygons separate after they're reduced to a set of points.
+매핑된 점을 1D 형상에서 2D 형상으로 연장하는 논리가 여기서는 간단히 다각형으로 나와 있습니다. _"PointsToSurface"_ 노드를 이 사용자 노드에 중첩했습니다. 이런 식으로 각 다각형의 점을 표면에 매핑한 다음, 매핑된 해당 점에서 다각형을 재생성할 수 있습니다. 적절한 데이터 구조(점 리스트의 리스트)를 유지하여 다각형을 점 세트로 줄인 후에 따로 유지할 수 있습니다.
 
 ![](<../images/6-2/3/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
-The same logic applies here as in the _"PolygonsToSurface"_ node. But instead of mapping polygonal points, we're mapping control points of a nurbs curve.
+_"PolygonsToSurface"_ 노드에서와 같이 동일한 논리가 여기에 적용됩니다. 하지만 다각형 점을 매핑하는 대신, NURBS 곡선의 제어점을 매핑합니다.
 
 ![](<../images/6-2/3/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
-This node gets a little more complex, but the concept is simple: like the _"PointsToSurface"_ node, this node maps points from one surface to another. However, it also considers points which are not on the original source surface, gets their distance to the closest UV parameter, and maps this distance to the target surface normal at the corresponding UV coordinate. This will make more sense when looking at the example files.
+이 노드는 조금 더 복잡하지만 개념은 단순합니다. 즉, _"PointsToSurface"_ 노드와 같이 이 노드에서는 한 표면에서 다른 표면으로 점을 매핑합니다. 그러나 원래 소스 표면에 없는 점도 고려하고, 가장 가까운 UV 매개변수에 대한 거리를 가져온 후 이 거리를 해당 UV 좌표의 대상 표면 법선에 매핑합니다. 이 방법은 예시 파일을 통해 보다 잘 이해할 수 있습니다.
 
 ![](<../images/6-2/3/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
-This is a simple node which creates a parametric surface to map from the source grid to an undulating surface in the example files.
+예시 파일에서 소스 그리드부터 물결형 표면으로 매핑할 파라메트릭 표면을 작성하는 간단한 노드입니다.
 
 ![](<../images/6-2/3/develop package -sampleSrf.jpg>)
 
-### Example Files
+### 예시 파일
 
-The example files can be found in the package's root folder. Click Dynamo > Preferences > Package Manager
+예제 파일은 패키지의 루트 폴더에 있습니다. Dynamo > 기본 설정 > Package Manager를 클릭합니다.
 
-Next to MapToSurface, click verticle dots menu > Show Root Directory
+MapToSurface 옆의 세로 점 메뉴 > 루트 디렉토리 표시를 클릭합니다.
 
 ![](<../images/6-2/3/develop package - example files 01.jpg>)
 
-Next, open the _"extra"_ folder, which houses all of the files in the package which are not custom nodes. This is where examples files (if they exist) are stored for Dynamo packages. The screenshots below discuss the concepts demonstrated in each example file.
+다음으로 _"extra"_ 폴더를 엽니다. 이 폴더에는 사용자 노드가 아닌 패키지의 모든 파일이 들어 있습니다. 여기에는 Dynamo 패키지에 대한 예시 파일(있는 경우)이 저장되어 있습니다. 아래의 스크린샷에는 각 예시 파일에 설명된 개념이 나와 있습니다.
 
 #### **01-PanelingWithPolygons**
 
-This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../10\_custom-nodes/10-2\_creating.md).
+이 예시 파일에서는 직사각형 그리드를 기준으로 표면을 패널화하는 데 _"PointsToSurface"_를 사용하는 방법을 보여 줍니다. [이전 장](../10\_custom-nodes/10-2\_creating.md)에서 비슷한 워크플로우를 설명했기 때문에 이 과정은 익숙하게 느껴질 것입니다.
 
 ![](<../images/6-2/3/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
-Using a similar workflow, this exercise file shows a setup for mapping circles (or polygons representing circles) from one surface to another. This uses the _"PolygonsToSurface"_ node.
+이 연습 파일에서는 비슷한 워크플로우를 사용하여 한 표면에서 다른 표면으로 원(또는 원을 나타내는 다각형)을 매핑하는 설정을 보여 줍니다. 여기서는 _"PolygonsToSurface"_ 노드가 사용됩니다.
 
 ![](<../images/6-2/3/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
-This example file adds some complexity by working with the "NurbsCrvToSurface" node. The target surface is offset a given distance and the nurbs curve is mapped to the original target surface and the offset surface. From there, the two mapped curves are lofted to create a surface, which is then thickened. This resulting solid has an undulation that is representative of the target surface normals.
+이 예시 파일에서는 "NurbsCrvToSurface" 노드를 사용하므로 약간 더 복잡해집니다. 대상 표면이 지정된 거리만큼 간격이 띄어지고 NURBS 곡선은 원래 대상 표면과 간격띄우기 표면에 매핑됩니다. 여기서 매핑된 두 곡선은 표면을 작성하기 위해 로프트된 후 두꺼워집니다. 그 결과 솔리드는 대상 표면 법선을 나타내는 굴곡을 가지게 됩니다.
 
 ![](<../images/6-2/3/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
-This example file demonstrates how to map a pleated polysurface from a source surface to a target surface. The source and target surface are a rectangular surface spanning the grid and a revolved surface, respectively.
+이 예시 파일에서는 소스 표면에서 대상 표면으로 주름식 polysurface를 매핑하는 방법을 보여 줍니다. 소스 및 대상 표면은 각각 그리드와 회전된 표면에 걸쳐 있는 직사각형 표면입니다.
 
 ![](<../images/6-2/3/develop package -sample file 04a.jpg>)
 
-The source polysurface mapped from the source surface to the target surface.
+소스 표면에서 대상 표면으로 매핑된 소스 polysurface입니다.
 
 ![](<../images/6-2/3/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
-Since the custom nodes are able to map different types of curves, this last file references an SVG file exported from Illustrator and maps the imported curves to a target surface.
+사용자 노드에서는 여러 유형의 곡선을 매핑할 수 있으므로 이 마지막 파일에서는 Illustrator에서 내보낸 SVG 파일을 참조하고 가져온 곡선을 대상 표면에 매핑합니다.
 
 ![](<../images/6-2/3/develop package -sample file 05a.jpg>)
 
-By parsing through the syntax of a .svg file, curves are translated from .xml format to Dynamo polycurves.
+.svg 파일의 구문을 분석하면 곡선이 .xml 형식에서 Dynamo polycurve로 변환됩니다.
 
 ![](<../images/6-2/3/develop package -sample file 05b.jpg>)
 
-The imported curves are mapped to a target surface. This allows us to explicitly (point-and-click) design a panelization in Illustrator, import into Dynamo, and apply to a target surface.
+가져온 곡선이 대상 표면에 매핑됩니다. 따라서 Illustrator에서 패널화를 명시적으로(마우스를 클릭하여) 설계하고, Dynamo로 가져온 후 대상 표면에 적용할 수 있습니다.
 
 ![](<../images/6-2/3/develop package -sample file 05c.jpg>)

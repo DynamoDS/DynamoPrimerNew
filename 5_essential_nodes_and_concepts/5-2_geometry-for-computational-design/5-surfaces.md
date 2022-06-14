@@ -1,79 +1,79 @@
-# Surfaces
+# 표면
 
-## Surfaces in Dynamo
+## Dynamo의 표면
 
-### What is Surface
+### 표면이란?
 
-We use [Surface](5-surfaces.md#surface) in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+모형에서 [표면](5-surfaces.md#surface)을 사용하여 3D 세계에서 보이는 객체를 나타냅니다. 곡선이 항상 평면형인 것은 아닙니다. 곡선은 3차원에 있지만 정의되는 공간이 항상 하나의 차원에 묶이게 되는 것입니다. 표면은 다른 모델링 작업에서 사용할 수 있는 추가 특성 모음과 다른 차원을 제공해 줍니다.
 
-### Surface at Parameter
+### 매개변수의 표면
 
-Import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
+Dynamo의 매개변수에서 표면을 가져와 평가하여 추출할 수 있는 정보의 종류를 알아보겠습니다.
 
 ![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
 
-> 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
-> 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
-> 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
+> 1. _Surface.PointAtParameter_는 지정된 UV 좌표의 점을 반환합니다.
+> 2. _Surface.NormalAtParameter_는 지정된 UV 좌표의 법선 벡터를 반환합니다.
+> 3. _Surface.GetIsoline_은 U 또는 V 좌표에서 Isoparametric 곡선을 반환합니다. IsoDirection 입력을 확인해 주십시오.
 
-> Download the example files by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-2/5/Surfaces.zip" %}
 
-## Deep Dive into...
+## 자세히 알아보기...
 
-### Surface
+### 표면
 
-A Surface is a mathematical shape defined by a function and two parameters, Instead of `t` for Curves, we use `U` and `V` to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.
+표면은 함수와 두 개의 매개변수로 정의되는 수학적 모양으로, 곡선을 위한 `t` 대신, `U` 및 `V`를 사용하여 해당 매개변수 공간을 설명합니다. 즉, 이 유형의 형상으로 작업하는 경우 더 많은 기하학적 데이터를 그려야 합니다. 예를 들어 곡선에는 접선 벡터와 법선 평면(곡선의 길이를 따라 회전 또는 비틀릴 수 있음)이 있지만, 표면에는 방향이 일치하는 법선 벡터와 접선 평면이 있습니다.
 
-![Surface](../images/5-2/5/Surface.jpg)
+![표면](../images/5-2/5/Surface.jpg)
 
-> 1. Surface
-> 2. U Isocurve
-> 3. V Isocurve
-> 4. UV Coordinate
-> 5. Perpendicular Plane
-> 6. Normal Vector
+> 1. 표면
+> 2. U Iso 곡선
+> 3. V Iso 곡선
+> 4. UV 좌표
+> 5. 수직 평면
+> 6. 법선 벡터
 
-**Surface Domain**: A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).
+**표면 도메인**: 표면 도메인은 해당 곡면의 3D 점으로 평가되는 (U,V) 매개변수의 범위로 정의됩니다. 각 차원(U 또는 V)의 도메인은 일반적으로 두 개의 숫자(U 최소값~U 최대값)와 (V 최소값~V 최대값)로 기술됩니다.
 
-![Surface](../images/5-2/5/SurfaceParameter.jpg)
+![표면](../images/5-2/5/SurfaceParameter.jpg)
 
-Although the shape of the Surface by not look "rectangular" and it locally may have a tighter or looser set of isocurves, the "space" defined by its domain is always two dimensional. In Dynamo, Surfaces are always understood to have a domain defined by a minimum of 0.0 and maximum of 1.0 in both U and V directions. Planar or trimmed Surfaces may have different domains.
+표면의 모양이 "직사각형"처럼 보이지 않고 위치상 보다 조밀하거나 느슨한 Iso 곡선 세트를 포함할 수 있지만, 해당 도메인으로 정의된 "공간"은 항상 2D입니다. Dynamo에서 표면은 항상 U와 V 방향 모두에서 최소값 0.0 및 최대값 1.0으로 정의된 도메인을 가지는 것으로 인식됩니다. 평면 또는 잘린 표면은 다른 도메인을 가질 수 있습니다.
 
-**Isocurve** (or Isoparametric Curve): A curve defined by a constant U or V value on the surface and a domain of values for the corresponding other U or V direction.
+**Iso 곡선**(또는 아이소파라메트릭 곡선): 곡면의 상수 U 또는 V 값과 해당하는 다른 U 또는 V 방향에 대한 값 도메인으로 정의되는 곡선입니다.
 
-**UV Coordinate**: The Point in UV Parameter Space defined by U, V, and sometimes W.
+**UV 좌표**: U, V 및 경우에 따라 W로 정의되는 UV 매개변수 공간의 점입니다.
 
-![Surface Coordinate](../images/5-2/5/SurfaceCoordinate.jpg)
+![표면 좌표](../images/5-2/5/SurfaceCoordinate.jpg)
 
-**Perpendicular Plane**: A Plane that is perpendicular to both U and V Isocurves at a given UV Coordinate.
+**수직 평면**: 지정된 UV 좌표에서 U 및 V Iso 곡선 모두에 수직인 평면입니다.
 
-**Normal Vector**: A Vector defining the direction of "up" relative to the Perpendicular Plane.
+**법선 벡터**: 수직 평면을 기준으로 "위쪽" 방향을 정의하는 벡터입니다.
 
-### NURBS Surfaces
+### NURBS 표면
 
-**NURBS Surfaces** are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree.
+**NURBS 표면**은 NURBS 곡선과 매우 유사합니다. NURBS 표면을 양방향으로 이동하는 NURBS 곡선의 그리드로 생각할 수 있습니다. NURBS 표면의 모양은 U 및 V 방향의 여러 제어점 및 해당 표면의 각도에 따라 정의됩니다. 동일한 알고리즘을 사용하여 제어점, 가중치 및 각도를 통해 모양, 법선, 접선, 곡률 및 기타 특성을 계산할 수 있습니다.
 
-![NURBS Surface](../images/5-2/5/NURBSsurface.jpg)
+![NURBS 표면](../images/5-2/5/NURBSsurface.jpg)
 
-In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.
+NURBS 표면의 경우 사용자에게 표시되는 모양에 관계없이 제어점의 직사각형 그리드이므로 형상이 내포하는 두 개의 방향이 있습니다. 이러한 방향은 종종 표준 좌표계에 상대적으로 임의 방향이지만, 모델을 분석하거나 표면을 따라 다른 형상을 생성하는 데 자주 사용됩니다.
 
-![NURBS Surface](../images/5-2/5/NURBSsurface-Degree.jpg)
+![NURBS 표면](../images/5-2/5/NURBSsurface-Degree.jpg)
 
-> 1. Degree (U,V) = (3,3)
-> 2. Degree (U,V) = (3,1)
-> 3. Degree (U,V) = (1,2)
-> 4. Degree (U,V) = (1,1)
+> 1. 차수 (U,V) = (3,3)
+> 2. 차수 (U,V) = (3,1)
+> 3. 차수 (U,V) = (1,2)
+> 4. 차수 (U,V) = (1,1)
 
-### Polysurfaces
+### Polysurface
 
-**Polysurfaces** are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology.
+**Polysurface**는 모서리를 따라 결합된 표면으로 구성됩니다. Polysurface에서는 이제 토폴로지 방식에 따라 연결된 모양을 이동할 수 있다는 점에서 2D UV 정의 이상의 기능을 제공합니다.
 
-While "Topology" generally describes a concept around how parts are connected and/or related Topology in Dynamo is also a type of Geometry. Specifically it is a parent category for Surfaces, Polysurfaces, and Solids.
+“토폴로지”는 일반적으로 부분이 연결되는 방식 및/또는 Dynamo의 관련 토폴로지가 형상 유형이 되는지에 대한 개념을 설명합니다. 구체적으로 토폴로지는 표면, Polysurface 및 솔리드의 상위 카테고리입니다.
 
 ![PolySurface](../images/5-2/5/PolySurface.jpg)
 
-Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.
+이러한 방식으로 표면을 결합하면(패치라고도 함) 이음새를 가로질러 상세정보를 정의할 뿐만 아니라 좀 더 복잡한 모양을 만들 수 있습니다. Polysurface의 모서리에는 모깎기 또는 모따기 작업을 편리하게 적용할 수 있습니다.

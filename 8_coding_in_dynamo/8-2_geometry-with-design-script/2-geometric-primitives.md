@@ -1,12 +1,12 @@
-# Geometric Primitives
+# 기하학적 원형
 
-### CoordinateSystem
+### 좌표계
 
-While Dynamo is capable of creating a variety of complex geometric forms, simple geometric primitives form the backbone of any computational design: either directly expressed in the final designed form, or used as scaffolding off of which more complex geometry is generated.
+Dynamo가 다양한 복합 형상 형태를 작성할 수 있지만, 간단한 기하학적 원형은 모든 계산 방식 설계의 토대를 형성합니다. 이는 최종 설계 형태로 직접 표현되거나 보다 복잡한 형상이 생성되는 비계로 사용됩니다.
 
-While not strictly a piece of geometry, the CoordinateSystem is an important tool for constructing geometry. A CoordinateSystem object keeps track of both position and geometric transformations such as rotation, sheer, and scaling.
+CoordinateSystem은 반드시 형상의 일부는 아니지만 형상을 생성하기 위한 중요한 도구입니다. CoordinateSystem 객체는 회전, 방향 및 축척 등의 위치 및 형상 변환을 모두 추적합니다.
 
-Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with no rotations, scaling, or sheering transformations, simply requires calling the Identity constructor:
+회전, 축척 또는 방향 전환 없이 한 점(x = 0, y = 0, z = 0)을 중심으로 CoordinateSystem을 작성하려면 ID 생성자를 호출하기만 하면 됩니다.
 
 ![](../images/8-2/2/GeometricPrimitives\_01.png)
 
@@ -17,7 +17,7 @@ Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with n
 cs = CoordinateSystem.Identity();
 ```
 
-CoordinateSystems with geometric transformations are beyond the scope of this chapter, though another constructor allows you to create a coordinate system at a specific point, _CoordinateSystem.ByOriginVectors_:
+형상 변환이 있는 CoordinateSystem은 이 장의 범위를 벗어나지만 다른 생성자를 사용하여 특정 지점에서 _CoordinateSystem.ByOriginVectors_라는 좌표계를 작성할 수 있습니다.
 
 ![](../images/8-2/2/GeometricPrimitives\_02.png)
 
@@ -35,11 +35,11 @@ cs = CoordinateSystem.ByOriginVectors(origin,
     identity.XAxis, identity.YAxis, identity.ZAxis);
 ```
 
-### Point
+### 점
 
-The simplest geometric primitive is a Point, representing a zero-dimensional location in three-dimensional space. As mentioned earlier there are several different ways to create a point in a particular coordinate system: _Point.ByCoordinates_ creates a point with specified x, y, and z coordinates; _Point.ByCartesianCoordinates_ creates a point with a specified x, y, and z coordinates in a specific coordinate system; _Point.ByCylindricalCoordinates_ creates a point lying on a cylinder with radius, rotation angle, and height; and _Point.BySphericalCoordinates_ creates a point lying on a sphere with radius and two rotation angle.
+가장 간단한 기하학적 원형은 3D 공간에서 0차원 위치를 나타내는 점입니다. 앞에서 설명한 것처럼 특정 좌표계에서 점을 작성하는 여러 가지 방법이 있습니다. _Point.ByCoordinates_는 지정된 X, Y 및 Z 좌표를 사용하여 점을 작성하고 _Point.ByCartesianCoordinates_는 특정 좌표계에서 지정된 X, Y 및 Z 좌표를 사용하여 점을 작성합니다. _Point.ByCylindricalCoordinates_는 반지름, 회전 각도 및 높이를 갖는 원통에 놓여 있는 점을 작성하고, _Point.BySphericalCoordinates_는 반지름 및 2개의 회전 각도가 있는 구에 놓여 있는 점을 작성합니다.
 
-This example shows points created at various coordinate systems:
+이 예는 다양한 좌표계에서 작성된 점을 보여줍니다.
 
 ![](../images/8-2/2/GeometricPrimitives\_03.png)
 
@@ -73,9 +73,9 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Line&#x20;
+### 선&#x20;
 
-The next higher dimensional Dynamo primitive is a line segment, representing an infinite number of points between two end points. Lines can be created by explicitly stating the two boundary points with the constructor _Line.ByStartPointEndPoint_, or by specifying a start point, direction, and length in that direction, _Line.ByStartPointDirectionLength_.
+그 다음으로 높은 차원의 Dynamo 원형은 두 끝점 사이의 무한한 수의 점을 나타내는 선 세그먼트입니다. 생성자 _Line.ByStartPointEndPoint_로 두 개의 경계점을 명시적으로 지정하거나 해당 방향에서 시작점, 방향 및 길이(_Line.ByStartPointDirectionLength_)를 지정하여 선을 작성할 수 있습니다.
 
 ![](../images/8-2/2/GeometricPrimitives\_04.png)
 
@@ -92,9 +92,9 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### 3D Primitives - Cuboid, Cone, Cylinder, Sphere, etc
+### 3D 기본체 - 직육면체, 원추, 원통, 구 등
 
-Dynamo has objects representing the most basic types of geometric primitives in three dimensions: Cuboids, created with _Cuboid.ByLengths_; Cones, created with _Cone.ByPointsRadius_ and _Cone.ByPointsRadii_; Cylinders, created with _Cylinder.ByRadiusHeight_; and Spheres, created with _Sphere.ByCenterPointRadius_.
+Dynamo에는 3D로 만든 기하학적 원형의 가장 기본적인 유형을 나타내는 객체가 있습니다. 예를 들어 직육면체는 _Cuboid.ByLength_로 작성되고, 원추는 _Cone.ByPointsRadius_ 및 _Cone.ByPointsRadii_로 작성됩니다. 원통은 _Cylinder.ByRadiusHeight_로 작성되고, 구는 _Sphere.ByCenterPointRadius_로 작성됩니다.
 
 ![](../images/8-2/2/GeometricPrimitives\_05.png)
 

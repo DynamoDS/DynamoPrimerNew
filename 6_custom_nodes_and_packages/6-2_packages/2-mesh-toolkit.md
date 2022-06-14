@@ -1,69 +1,69 @@
-# Package Case Study - Mesh Toolkit
+# 패키지 성공 사례 - Mesh Toolkit
 
-The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+Dynamo Mesh Toolkit에서는 외부 파일 형식에서 메쉬를 가져오고, Dynamo 형상 객체에서 메쉬를 작성하고, 정점 및 색인으로 메쉬를 수동으로 작성하는 도구를 제공합니다. 라이브러리에서는 메쉬를 수정 또는 복구하거나, 제작에 사용할 수평 슬라이스를 추출하는 도구도 제공합니다.
 
 ![](<../images/6-2/2/meshToolkit case study 01.jpg>)
 
-The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
+Dynamo Mesh Toolkit은 Autodesk의 지속적인 메쉬 연구의 한 부분으로, 향후 몇 년 동안 지속적으로 성장할 것입니다. 툴킷에서 새로운 메서드가 자주 제공될 계획이니, 새 기능에 대한 의견, 버그 및 제안 사항과 관련하여 언제든지 Dynamo 팀에 연락해 주십시오.
 
-### Meshes vs. Solids
+### 메쉬와 솔리드 비교
 
-The exercise below demonstrates some basic mesh operations using the Mesh Toolkit. In the exercise, we intersect a mesh with a series of planes, which can be computationally expensive using solids. Unlike a solid, a mesh has a set "resolution" and is not defined mathematically, but topologically, and we can define this resolution based on the task at hand. For more details on mesh to solid relationships, you can reference the[ Geometry For Computation Design](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) chapter in this primer. For a more thorough examination of Mesh Toolkit, you can reference the [Dynamo Wiki page.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Let's jump into the package in the exercise below.
+아래 연습에서는 Mesh Toolkit을 사용하는 몇 가지 기본적인 메쉬 작업을 보여줍니다. 이 연습에서는 메쉬를 일련의 평면과 교차하는데, 이는 솔리드를 사용하는 경우 계산이 많이 필요할 수 있습니다. 솔리드와 달리 메쉬에는 설정된 “해상도”가 있으며 수학적으로 정의되지 않고 위상적으로 정의되며, 작업에 따라 이 해상도를 손쉽게 정의할 수 있습니다. 메쉬-솔리드 관계에 대한 자세한 내용은 이 입문서의 [계산 방식 설계를 위한 형상](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) 장을 참조하십시오. Mesh Toolkit을 보다 철저하게 검사하려면 [Dynamo Wiki 페이지](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)를 참조할 수 있습니다. 이제 아래 연습의 패키지로 이동하겠습니다.
 
-### Install Mesh Toolkit
+### Mesh Toolkit 설치
 
-In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
+Dynamo의 맨 위 메뉴 막대에서 _패키지 > 패키지 검색..._으로 이동합니다. 검색 필드에 _"MeshToolkit"_을 한 글자씩 입력합니다. 이때 대/소문자를 지켜야 합니다. 설치를 클릭하여 다운로드를 시작합니다. 아주 간단합니다.
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
-## Exercise: Intersect Mesh
+## 연습: 메쉬 교차
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
-In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
+이 예에서는 Mesh Toolkit에서 교차 노드를 살펴보고, 메쉬를 가져와 일련의 입력 평면과 교차시켜 슬라이스를 작성해 보겠습니다. 이 작업은 레이저 커터, 워터젯 커터 또는 CNC 밀에서의 제작을 위한 모형을 준비하기 위한 출발점입니다.
 
-Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
+먼저 Dynamo에서 _Mesh-Toolkit_Intersect-Mesh.dyn를 엽니다._
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 1. **File Path:** 가져올 메쉬 파일을 찾습니다(_stanford\_bunny\_tri.obj_). 지원되는 파일 유형은 .mix 및 .obj입니다.
+> 2. **Mesh.ImportFile:** 파일 경로를 연결하여 메쉬를 가져옵니다.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
-> 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes. \_\_ The settings are as follow: \_\_ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates:** 한 점을 생성합니다. 이 점이 호의 중심이 됩니다.
+> 2. **Arc.ByCenterPointRadiusAngle:** 점을 중심으로 호를 생성합니다. 이 곡선은 일련의 평면을 배치하는 데 사용됩니다. \_\_ 설정은 다음과 같습니다. \_\_ `radius: 40, startAngle: -90, endAngle:0`
 
-Create a series of planes oriented along the arc.
+호를 따라 방향이 지정된 일련의 평면을 작성합니다.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
-> 1. **Code Block**: Create 25 numbers between 0 and 1.
-> 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
-> 3. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
-> 4. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
+> 1. **Code Block**: 0에서 1 사이의 25개 숫자를 작성합니다.
+> 2. **Curve.PointAtParameter:** 호를 _‘curve’_ 입력에 연결하고 코드 블록 출력을 _‘param’_ 입력에 연결하여 곡선을 따라 일련의 점을 추출합니다.
+> 3. **Curve.TangentAtParameter:** 동일한 입력을 이전 노드에 연결합니다.
+> 4. **Plane.ByOriginNormal:** 점을 _'origin'_ 입력에 연결하고 벡터를 _'normal'_ 입력에 연결하여 각 점에서 일련의 평면을 작성합니다.
 
-Next, we will use these planes to intersect the mesh.
+다음으로 이러한 평면을 사용하여 메쉬를 교차시키겠습니다.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
-> 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
-> 3. **Curve.EndPoint:** Extract the end points of each curve.
-> 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
+> 1. **Mesh.Intersect:** 평면을 가져온 메쉬와 교차시켜 일련의 PolyCurve 윤곽을 작성합니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 Lacing을 Longest로 설정합니다.
+> 2. **PolyCurve.Curves:** PolyCurve를 해당 곡선 조각으로 나눕니다.
+> 3. **Curve.EndPoint:** 각 곡선의 끝점을 추출합니다.
+> 4. **NurbsCurve.ByPoints:** 점을 사용하여 NURBS 곡선을 구성합니다. 부울 노드를 _True_로 설정하여 곡선을 닫습니다.
 
-Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
+계속하기 전에 결과를 더 잘 볼 수 있도록 Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal 및 Arc.ByCenterPointRadiusAngle 등의 일부 노드의 미리보기를 끕니다.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch:** Construct surface patches for each contour to create “slices” of the mesh.
+> 1. **Surface.ByPatch:** 각 윤곽에 대한 표면 패치를 생성하여 메쉬의 "슬라이스"를 작성합니다.
 
-Add a second set of slices for a waffle/egg-crate effect.
+와플/계란 상자 효과를 위해 두 번째 슬라이스 세트를 추가합니다.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 06.jpg>)
 
-You may have noticed that the intersection operations calculate faster with a mesh vs. a comparable solid. Workflows such as the one demonstrated in this exercise lend themselves well to working with meshes.
+메쉬와 유사한 솔리드를 비교하면 교차 작업이 더 빠르게 계산되는 것을 알 수 있습니다. 이 연습에 설명된 것과 같은 워크플로우에는 메쉬 작업이 적합합니다.

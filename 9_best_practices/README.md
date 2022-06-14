@@ -1,5 +1,5 @@
-# Best Practices
+# 모범 사례
 
-This part of the primer is organized in the spirit of a journal of “best practices”. It sheds light on several strategies that we have learned, through experience and research, to be most conducive to quality parametric workflows. As designers and programmers, our metric for quality is primarily concerned with the maintainability, dependability, usability, and efficiency of our tools. While these best practices have specific examples for either visual or text-based scripting, the principles are applicable to all programming environments and can inform many computational workflows.
+입문서의 이 부분은 "모범 사례" 형식으로 구성되어 있습니다. 여기에서는 품질 파라메트릭 워크플로우에 가장 도움이 되는 경험과 연구를 통해, 학습한 몇 가지 전략에 대해 설명합니다. 디자이너 및 프로그래머 입장에서 품질 메트릭은 주로 유지보수 용이성, 신뢰성, 유용성, 도구 효율성 등과 관련이 있습니다. 이러한 모범 사례에는 시각적 또는 텍스트 기반 스크립팅에 대한 구체적인 예가 포함되어 있지만, 기본 원칙은 모든 프로그래밍 환경에 적용될 수 있으며 많은 계산 방식 워크플로우의 기초를 이룰 수 있습니다.
 
 ![](./images/bestPractices.png)

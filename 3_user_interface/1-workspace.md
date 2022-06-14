@@ -1,88 +1,88 @@
-# Workspace
+# 작업공간
 
-### Main Workspace
+### 주 작업공간
 
-The Dynamo Workspace consists of four main elements.
+Dynamo 작업공간은 네 가지 기본 요소로 구성됩니다.
 
 ![](<./images/3-1/workspace - ui.jpg>)
 
-> 1. All Active Tabs.
-> 2. Preview Mode
-> 3. Zoom/Pan Controls
-> 4. Node in Workspace
+> 1. 모든 활성 탭
+> 2. 미리보기 모드
+> 3. 줌/초점이동 컨트롤
+> 4. 작업공간의 노드
 
-### All Active Tabs
+### 모든 활성 탭
 
-When you open a new file, a new Home Workspace will be opened by default.
+새 파일을 열면 기본적으로 새 홈 작업공간이 열립니다.
 
 ![](<./images/3-1/workspace - home tab.jpg>)
 
-You may create a Custom Node and open it in a Custom Node Workspace.
+사용자 노드를 작성하여 사용자 노드 작업공간에서 열 수 있습니다.
 
 ![](<./images/3-1/workspace - custom node tab.jpg>)
 
 {% hint style="info" %}
-Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.
+각 Dynamo 창에는 하나의 홈 작업공간만 허용되지만 탭에는 여러 개의 사용자 노드 작업공간이 열려 있을 수 있습니다.
 {% endhint %}
 
-### Preview Mode
+### 미리보기 모드
 
-There are 3 methods to switch between different previews:
+다음과 같은 세 가지 방법으로 서로 다른 미리보기 간을 전환할 수 있습니다.
 
-a. Using the top right icons
+a. 오른쪽 위 아이콘 사용
 
 * ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Graph Preview
 * ![](<./images/3-1/3-1-05 3D preview icon.jpg>)3D Preview
 
-b. Right-click in Workspace
+b. 작업공간을 마우스 오른쪽 버튼으로 클릭
 
-* Switch from 3D Preview to Graph Preview
+* 3D 미리보기에서 그래프 미리보기로 전환
 
 ![](<./images/3-1/3-1-06 right click switch to graph preview.jpg>)
 
-* Switch from Graph Preview to 3D Preview
+* 그래프 미리보기에서 3D 미리보기로 전환
 
 ![](<./images/3-1/workspace - right click switch to geometry.jpg>)
 
-c. Using keyboard shortcut (Ctrl+B)
+c. 키보드 바로 가기(Ctrl+B) 사용
 
-### Zoom/Pan Controls
+### 줌/초점이동 컨트롤
 
-You may use icons or a mouse to navigate in either workspace.
+아이콘 또는 마우스를 사용하여 두 작업공간 중 하나를 탐색할 수 있습니다.
 
-a. In **Graph Preview** Mode
+a. **그래프 미리보기** 모드에서
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-* Using mouse:
-  * Left-click - Select
-  * Left-click and drag - Selection box to select multiple nodes
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click anywhere on canvas - Open In-Canvas Search
+* 아이콘 사용:
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)창에 맞게 줌
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)줌 확대
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)줌 축소
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)초점이동
+* 마우스 사용:
+   * 마우스 왼쪽 버튼 클릭 - 선택
+   * 마우스 왼쪽 버튼을 클릭하고 끌기 - 여러 노드를 선택하려면 선택 상자 사용
+   * 마우스 가운데 버튼을 클릭하고 위/아래로 스크롤 - 줌 확대/축소
+   * 마우스 가운데 버튼을 클릭하고 끌기 - 초점이동
+   * 캔버스의 아무 곳이나 마우스 오른쪽 버튼으로 클릭 - 캔버스 내 검색 열기
 
 ![](<./images/3-1/workspace - in canvas search.gif>)
 
-b. In **3D Preview** Mode
+b. **3D 미리보기** 모드에서
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-  * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbit
-* Using mouse:
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click and drag - Orbit
+* 아이콘 사용:
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)창에 맞게 줌
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)줌 확대
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)줌 축소
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)초점이동
+   * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)궤도
+* 마우스 사용:
+   * 마우스 가운데 버튼을 클릭하고 위/아래로 스크롤 - 줌 확대/축소
+   * 마우스 가운데 버튼을 클릭하고 끌기 - 초점이동
+   * 마우스 오른쪽 버튼을 클릭하고 끌기 - 궤도
 
-### Node in Workspace
+### 작업공간의 노드
 
-Left-click to select any Node.
+마우스 왼쪽 버튼을 클릭하여 노드를 선택합니다.
 
-To select multiple Nodes, Click and drag to create a selection box.
+여러 노드를 선택하려면 클릭하고 끌어 선택 상자를 작성합니다.
 
 ![](<./images/3-1/workspace - selection box.gif>)

@@ -1,92 +1,92 @@
-# Package Introduction
+# 패키지 소개
 
-In short, a Package is a collection of Custom Nodes. The Dynamo Package Manager is a portal for the community to download any package which has been published online. These toolsets are developed by third parties in order to extend Dynamo's core functionality, accessible to all, and ready to download at the click of the button.
+간단히 말해서 패키지는 사용자 노드의 모음입니다. Dynamo Package Manager는 커뮤니티가 온라인으로 게시된 패키지를 다운로드할 수 있는 포털입니다. 이러한 툴셋은 Dynamo의 핵심 기능을 확장하고, 누구나 액세스 가능하며, 버튼 클릭으로 다운로드되도록 타사에서 개발합니다.
 
-![Package Manager Site](../images/6-2/1/dpm.jpg)
+![Package Manager 사이트](../images/6-2/1/dpm.jpg)
 
-An open-source project such as Dynamo thrives on this type of community involvement. With dedicated third-party developers, Dynamo is able to extend its reach to workflows across a range of industries. For this reason, the Dynamo team has made concerted efforts to streamline package development and publishing (which will be discussed in more detail in the following sections).
+Dynamo와 같은 오픈 소스 프로젝트에서는 이러한 유형의 커뮤니티 참여가 활성화되어 있습니다. 전용 타사 개발자가 있으므로 Dynamo는 다양한 산업 분야에 해당하는 워크플로우로 확장할 수 있습니다. 이러한 이유로 Dynamo 팀에서는 패키지 개발 및 게시를 간소화하기 위해 합심하여 노력했습니다. 이 내용은 다음 섹션에서 좀 더 자세히 다룰 예정입니다.
 
-### Installing a Package
+### 패키지 설치
 
-The easiest way to install a package is by using the Packages toolbar in your Dynamo interface. Let's jump right into it and install one now. In this quick example, we'll install a popular package for creating quad panels on a grid.
+패키지를 설치하는 가장 쉬운 방법은 Dynamo 인터페이스에서 패키지 도구막대를 사용하는 것입니다. 이 기능으로 이동한 후 바로 설치하겠습니다. 이 빠른 예에서는 그리드에서 쿼드 패널을 작성할 때 자주 사용하는 패키지를 설치합니다.
 
-In Dynamo, go to _Packages>Search For a Package..._
+Dynamo에서 _패키지>패키지 검색..._으로 이동합니다.
 
 ![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
 
-In the search bar, let's search for "quads from rectangular grid". After a few moments, you should see all of the packages which match this search query. We want to select the first package with the matching name.
+검색 막대에서 "직사각형 그리드의 쿼드"를 검색해 보겠습니다. 그러면 이 검색 조회와 일치하는 모든 패키지가 표시됩니다. 일치하는 이름을 가진 첫 번째 패키지를 선택하려고 합니다.
 
-Click on Ínstall to add this package to your library. Done!
+설치를 클릭하여 이 패키지를 라이브러리에 추가합니다. 완료되었습니다.
 
 ![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
 
-Notice that we now have another group in our Dynamo library called "buildz". This name refers to the developer of the package, and the custom node is placed in this group. We can begin to use this right away.
+이제 Dynamo 라이브러리에 "buildz"라는 다른 그룹이 있는 것을 확인할 수 있습니다. 이 이름은 패키지의 개발자를 나타내며, 사용자 노드가 이 그룹에 배치됩니다. 이는 바로 사용할 수 있습니다.
 
 ![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
 
-Use **Code Block** to quickly define a rectangular grid, output the result to a **Polygon.ByPoints** Node, subsequently a **Surface.ByPatch** Node to view the list of rectangular panels you have just created.
+**Code Block**을 사용하여 직사각형 그리드를 빠르게 정의하고 그 결과를 **Polygon.ByPoints** 노드로 출력한 다음, **Surface.ByPatch** 노드를 사용하여 방금 작성한 직사각형 패널 리스트를 봅니다.
 
 ![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
 
-### Installing Package Folder - DynamoUnfold
+### 패키지 폴더 설치 - DynamoUnfold
 
-The example above focuses on a package with one custom node, but you use the same process for downloading packages with several custom nodes and supporting data files. Let's demonstrate that now with a more comprehensive package: Dynamo Unfold.
+위의 예에서는 하나의 사용자 노드가 있는 패키지에 초점을 맞추고 있지만, 여러 개의 사용자 노드 및 지원 데이터 파일이 있는 패키지를 다운로드할 때도 동일한 프로세스를 사용합니다. 이제 보다 포괄적인 패키지인 Dynamo Unfold를 사용하여 살펴보겠습니다.
 
-As in the example above, begin by selecting _Packages>Search for a Package..._.
+위의 예에서와 같이 먼저 _패키지>패키지 검색.._을 선택합니다.
 
-This time, we'll search for _"DynamoUnfold"_, one word, minding the caps. When we see the packages, download by clicking on Install to add Dynamo Unfold to your Dynamo Library.
+이번에는 대/소문자에 주의하면서 한 단어 _"DynamoUnfold"_를 검색해 보겠습니다. 패키지가 표시되면 설치를 클릭하여 Dynamo Unfold를 Dynamo 라이브러리에 추가하여 다운로드합니다.
 
 ![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
 
-In the Dynamo Library, we have a _DynamoUnfold_ Group with multiple categories and custom nodes.
+Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _DynamoUnfold_ 그룹이 있습니다.
 
 ![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
 
-Now, let's take a look at the package's file structure. First, select Dynamo > Preferences
+이제 패키지의 파일 구조를 살펴보겠습니다. 먼저 Dynamo > 기본 설정을 선택합니다.
 
 ![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
 
-From the Preferences pop-up, open Package Manager > next to DynamoUnfold, select the vertical dots menu ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) > Show Root Directory to open root folder for this package.
+기본 설정 팝업에서 Package Manager > DynamoUnfold 옆에 있는 세로 점 메뉴 ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) > 루트 디렉토리 표시를 선택하여 이 패키지의 루트 폴더를 엽니다.
 
 ![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
 
-This will take us to the package's root directory. Notice that we have 3 folders and a file.
+이렇게 하면 패키지의 루트 디렉토리로 이동됩니다. 3개의 폴더와 1개의 파일이 있는지 확인합니다.
 
 ![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
 
-> 1. The _bin_ folder houses .dll files. This Dynamo package was developed using Zero-Touch, so the custom nodes are held in this folder.
-> 2. The _dyf_ folder houses the custom nodes. This package was not developed using Dynamo custom nodes, so this folder is empty for this package.
-> 3. The extra folder houses all additional files, including our example files.
-> 4. The pkg file is a basic text file defining the package settings. We can ignore this for now.
+> 1. _bin_ 폴더에는 .dll 파일이 있습니다. 이 Dynamo 패키지는 Zero-Touch를 사용하여 개발되었으므로 사용자 노드가 이 폴더에 저장됩니다.
+> 2. _dyf_ 폴더에는 사용자 노드가 있습니다. 이 패키지는 Dynamo 사용자 노드를 사용하여 개발되지 않았으므로 이 패키지의 경우 이 폴더는 비어 있습니다.
+> 3. extra 폴더에는 예시 파일을 비롯한 모든 추가 파일이 저장됩니다.
+> 4. pkg 파일은 패키지 설정을 정의하는 기본 텍스트 파일입니다. 지금은 이를 무시해도 됩니다.
 
-Opening the "extra" folder, we see a bunch of example files that were downloaded with the install. Not all packages have example files, but this is where you can find them if they are part of a package.
+"extra" 폴더를 열면 설치 중에 다운로드된 여러 가지 예시 파일이 있습니다. 모든 패키지에 예시 파일이 있는 것은 아니지만, 패키지에 속하는 예시가 있는 경우 여기서 찾을 수 있습니다.
 
-Let's open up "SphereUnfold".
+"SphereUnfold"를 열어 보겠습니다.
 
 ![](../images/6-2/1/rd2.jpg)
 
-After opening the file and hitting "Run" on the solver, we have an unfolded sphere! Example files like these are helpful for learning how to work with a new Dynamo package.
+파일을 열고 솔버에서 "실행"을 누르면 펼쳐진 구가 표시됩니다. 이와 같은 예시 파일은 새 Dynamo 패키지를 사용하는 방법을 배우는 데 유용합니다.
 
 ![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
 
 ### Dynamo Package Manager
 
-Another way to discover Dynamo packages is to explore the [Dynamo Package Manager](http://dynamopackages.com) online. This is a good way to browse for packages, since the repository sorts packages in order of download count and popularity. Also, it's an easy way to gather information on recent updates for packages, as some Dynamo packages are subjected to versioning and dependencies of Dynamo builds.
+Dynamo 패키지를 찾는 또 다른 방법은 온라인으로 [Dynamo Package Manager](http://dynamopackages.com)를 탐색하는 것입니다. 이 리포지토리는 다운로드 횟수와 인기 순서대로 패키지를 정렬하기 때문에 패키지를 찾는 좋은 방법입니다. 또한 일부 Dynamo 패키지는 Dynamo 빌드의 버전 및 종속성에 따라 영향을 받기 때문에 이는 패키지의 최신 업데이트에 대한 정보를 쉽게 수집하는 방법이기도 합니다.
 
-By clicking on _"Quads from Rectangular Grid"_ in the Dynamo Package Manager, you can see its descriptions, versions, the developer, and possible dependencies.
+Dynamo Package Manager에서 _"직사각형 그리드의 쿼드"_를 클릭하면 설명, 버전, 개발자 및 가능한 종속성을 확인할 수 있습니다.
 
 ![](../images/6-2/1/dpm2.jpg)
 
-You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
+패키지 파일은 Dynamo Package Manager에서 다운로드할 수도 있지만 Dynamo에서 바로 다운로드하는 프로세스가 더 원활합니다.
 
-### Where are Packages Files Stored Locally?
+### 패키지 파일이 로컬로 저장되는 위치
 
-If you do download files from the Dynamo package manager, or if you would like to see where all of your package files are kept, click on Dynamo > Package Manager > Node and Package Paths, you can find your current root folder directory from here.
+Dynamo Package Manager에서 파일을 다운로드하거나 모든 패키지 파일이 저장되는 위치를 보려면 Dynamo > Package Manager > 노드 및 패키지 경로를 클릭합니다. 여기에서 현재 루트 폴더 디렉토리를 찾을 수 있습니다.
 
 ![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
 
-By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
+기본적으로 패키지는 _C:/Users/\[사용자 이름]/AppData/Roaming/Dynamo/\[Dynamo 버전]_ 폴더 경로와 비슷한 위치에 설치됩니다.
 
-### Going Further with Packages
+### 패키지에 대해 좀 더 자세히 알아보기
 
-The Dynamo community is constantly growing and evolving. By exploring the Dynamo Package Manager from time to time, you'll find some exciting new developments. In the following sections, we'll take a more in-depth look at packages, from the end-user perspective to authorship of your own Dynamo Package.
+Dynamo 커뮤니티는 끊임없이 발전하고 진화하고 있습니다. 때때로 Dynamo Package Manager를 탐색하면 흥미로운 새 개발 항목을 찾아낼 수 있습니다. 다음 섹션에서는 최종 사용자 관점부터 고유한 Dynamo 패키지 작성자의 관점까지 고려하며 패키지를 좀 더 자세히 살펴보겠습니다.

@@ -1,96 +1,96 @@
-# Meshes
+# 메쉬
 
-## Mesh in Dynamo
+## Dynamo의 메쉬
 
-### What is Mesh?
+### 메쉬란?
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+계산 모델링 분야에서는 [메쉬](7-meshes.md#mesh)는 3D 형상을 나타내는 가장 널리 사용되는 양식 중 하나입니다. 메쉬 형상은 일반적으로 사변형 또는 삼각형 모음으로 구성되며, 간단하고 유연하며 NURBS 대신 사용할 수 있습니다. 또한 메쉬는 렌더링 및 시각화에서 디지털 제작 및 3D 인쇄에 이르는 모든 분야에서 사용됩니다.
 
-### Mesh Elements
+### 메시 요소
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Dynamo에서는 면-정점 데이터 구조를 사용하여 메쉬를 정의합니다. 가장 기본적인 수준에서 이 구조는 단순히 다각형으로 그룹화된 점의 모음입니다. 메쉬의 점은 정점이라고 하고, 표면 같은 다각형은 면이라고 합니다.
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+메쉬를 작성하려면 정점 리스트와 이러한 정점을 색인 그룹이라는 면으로 그룹화하는 시스템이 필요합니다.
 
 ![](<../images/5-2/7/meshes - mesh elements.jpg>)
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. 정점 리스트
+> 2. 면을 정의할 색인 그룹 리스트
 
 ### Mesh Toolkit
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+[Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) 패키지를 설치하여 Dynamo의 메쉬 기능을 확장할 수 있습니다. Dynamo Mesh Toolkit에서는 외부 파일 형식에서 메쉬를 가져오고, Dynamo 형상 객체에서 메쉬를 작성하고, 정점 및 색인으로 메쉬를 수동으로 작성하는 도구를 제공합니다.
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+라이브러리에서는 메쉬를 수정 또는 복구하거나, 제작에 사용할 수평 슬라이스를 추출하는 도구도 제공합니다.
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+예를 들어 이 패키지 사용에 대한 자세한 내용은 [Mesh Toolkit 사례 연구](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)를 참조하십시오.
 
 ![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deep Dive into...
+## 자세히 알아보기...
 
-### Mesh
+### 메쉬
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+메쉬는 표면 또는 솔리드 형상을 나타내는 사변형 및 삼각형의 모음입니다. 솔리드와 마찬가지로 메쉬 객체의 구조에는 정점, 모서리 및 면이 포함됩니다. 법선과 같이 메쉬를 고유하게 만드는 추가 특성이 있습니다.
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![메시 요소](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. 메쉬 정점
+> 2. 메쉬 모서리 \*인접 면이 하나만 있는 모서리를 "Naked"라고 하며, 다른 모든 모서리는 "Clothed"임)
+> 3. 메쉬 면
 
-### Vertices + Vertex Normals
+### 정점 + 정점 법선
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+메쉬의 정점은 점 리스트일 뿐입니다. 정점의 색인은 메쉬를 구성하거나 메쉬 구조에 대한 정보를 가져올 때 매우 중요합니다. 각 정점에는 부착된 면의 평균 방향을 그리고 메쉬의 "안쪽" 및 "바깥쪽" 방향을 파악하는 데 도움이 되는 해당 정점 법선(벡터)도 있습니다.
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![정점 + 법선](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. 정점
+> 2. 정점 법선
 
-### Faces
+### 면
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+면은 3개 또는 4개의 정점이 정렬된 리스트입니다. 따라서 메쉬 면의 "표면" 표현은 색인화되는 정점의 위치에 따라 포함됩니다. 메쉬를 구성하는 정점 리스트가 이미 있으므로 개별 점을 제공하여 면을 정의하는 대신, 간단히 정점의 색인을 사용합니다. 이렇게 하면 둘 이상의 면에서 동일한 정점을 사용할 수도 있습니다.
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. 색인 0, 1, 2 및 3으로 만들어진 쿼드 면
+> 2. 색인 1, 4, 2로 만든 삼각형 면. 색인 그룹은 순서대로 이동될 수 있습니다. 시퀀스가 시계 반대 방향으로 정렬되기만 하면 면이 올바르게 정의됩니다.
 
-### Meshes versus NURBS Surfaces
+### 메쉬 및 NURBS 표면 비교
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+메쉬 형상은 NURBS 형상과 어떻게 다르고, 이러한 형상은 각기 언제 사용해야 할까요?
 
-#### Parameterization
+#### 매개변수화
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+이전 장에서는 두 방향으로 진행되는 일련의 NURBS 곡선에 의해 NURBS 표면이 정의되는 것을 확인했습니다. `U` 및 `V`라는 레이블이 지정되는 이러한 방향을 통해 2D 표면 도메인에 따라 NURBS 표면을 매개변수화할 수 있게 됩니다. 곡선 자체는 컴퓨터에 방정식으로 저장되므로 결과 표면을 임의의 작은 정밀도로 계산할 수 있습니다. 그러나 여러 NURBS 표면을 함께 결합하는 것은 어려울 수 있습니다. 두 NURBS 표면을 결합하면 형상의 서로 다른 단면이 서로 다른 UV 매개변수 및 곡선 정의를 갖는 폴리 표면이 만들어집니다.
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![기준점](../images/5-2/7/NURBSvsMESH-01.jpg)
 
-> 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
-> 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 1. 표면
+> 2. 아이소파라메트릭(아이소팜) 곡선
+> 3. 표면 제어점
+> 4. 표면 제어 다각형
+> 5. 아이소파라메트릭 점
+> 6. 표면 프레임
+> 7. 메쉬
+> 8. Naked 모서리
+> 9. 메쉬 네트워크
+> 10. 메쉬 모서리
+> 11. 정점 법선
+> 12. 메쉬 면/메쉬 면 법선
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+반면, 메쉬는 정확하게 정의된 불연속 개수의 정점 및 면으로 구성됩니다. 일반적으로 정점 네트워크는 간단한 `UV` 좌표로 정의할 수 없으며, 면이 불연속적이므로 정밀도는 메쉬로 구축되고 메쉬를 미세 조정하고 면을 더 추가하는 방법으로만 변경할 수 있습니다. 수학적 설명이 부족하면 메쉬가 단일 메쉬 내에서 복잡한 형상을 보다 유연하게 처리할 수 있습니다.
 
-### Local versus Global Influence
+### 로컬 영향 및 전역 영향 비교
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+또 다른 중요한 차이점은 메쉬나 NURBS 형상의 로컬 변경이 전체 형태에 영향을 미치는 정도입니다. 메쉬의 한 정점을 이동하면 해당 정점에 인접한 면에만 영향을 줍니다. NURBS 표면에서는 영향의 범위가 보다 복잡하며 제어점의 가중치 및 노트뿐만 아니라 표면의 각도에 따라 달라집니다. 그러나 일반적으로 NURBS 표면에서 단일 제어점을 이동하면 형상에서 보다 매끄럽고 광범위한 변화가 일어납니다.
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![편집](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. NURBS 표면 - 제어점을 이동하면 모양 전체에 영향이 미칩니다.
+> 2. 메쉬 형상 - 정점을 이동하면 인접 요소에만 영향을 미칩니다.
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+유용한 하나의 유추 방식은 벡터 이미지(선과 곡선으로 구성)와 래스터 이미지(개별 픽셀로 구성)를 비교하는 것입니다. 벡터 이미지를 줌 확대하면 곡선이 선명하고 명확하게 유지되지만, 래스터 이미지를 줌 확대하면 개별 픽셀이 더 커집니다. 이러한 유추에서 NURBS 표면은 원활한 수학적 관계가 있으므로 벡터 이미지와 비교될 수 있지만, 메쉬는 해상도가 설정된 래스터 이미지와 유사하게 동작합니다.
 
 ##

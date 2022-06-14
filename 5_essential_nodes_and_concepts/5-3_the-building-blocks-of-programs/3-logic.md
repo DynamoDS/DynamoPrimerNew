@@ -1,115 +1,115 @@
-# Logic
+# 논리
 
-**Logic**, or more specifically, **Conditional Logic**, allows us to specify an action or set of actions based on a test. After evaluating the test, we will have a Boolean value representing `True` or `False` that we can use to control the Program Flow.
+**논리** 또는 좀 더 구체적으로 말해서 **조건부 논리**를 사용하면 테스트를 기준으로 하나의 작업 또는 작업 세트를 지정할 수 있습니다. 테스트를 평가한 후에는 프로그램 흐름을 제어하는 데 사용할 수 있는 `True` 또는 `False`를 나타내는 부울 값을 얻게 됩니다.
 
-### Booleans
+### 부울
 
-Numeric variables can store a whole range of different numbers. Boolean variables can only store two values referred to as True or False, Yes or No, 1 or 0. We rarely use booleans to perform calculations because of their limited range.
+숫자 변수는 여러 숫자의 전체 범위를 포함할 수 있습니다. 부울 변수는 True 또는 False, Yes 또는 No, 1 또는 0과 같이 2개의 값만 포함할 수 있습니다. 이렇게 범위가 제한되어 있기 때문에 부울을 사용하여 계산을 수행하는 경우는 드뭅니다.
 
-### Conditional Statements
+### 조건문
 
-The "If" statement is a key concept in programming: "If _this_ is true, then _that_ happens, otherwise _something else_ happens. The resulting action of the statement is driven by a boolean value. There are multiple ways to define an "If" statement in Dynamo:
+"If" 문은 프로그래밍의 기본 개념입니다. "_이것_이 true이면 _저것_이 발생하고, 그렇지 않으면 _다른 작업_이 발생합니다. 문의 결과 동작은 부울 값에 의해 구동됩니다. 다음과 같은 여러 가지 방법으로 Dynamo에서 "If" 문을 정의할 수 있습니다.
 
-| Icon                                            | Name (Syntax)             | Inputs            | Outputs |
+| 아이콘 | 이름(구문) | 입력 | 출력 |
 | ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](<../images/5-3/3/If.jpg>)         | If (**If**)               | test, true, false | result  |
-| ![](../images/5-3/3/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | result  |
-| ![](<../images/5-3/3/Code Block.jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
+| ![](<../images/5-3/3/If.jpg>) | If (**If**) | test, true, false | 결과 |
+| ![](../images/5-3/3/Formula.jpg) | Formula (**IF(x,y,z)**) | x, y, z | 결과 |
+| ![](<../images/5-3/3/Code Block.jpg>) | Code Block(**(x?y:z);**) | x? y, z | 결과 |
 
-Let's go over a brief example on each of these three nodes in action using the conditional "If" statement.
+조건문 "If"를 사용하여 이러한 세 가지 노드 각각의 동작에 대한 간단한 예를 살펴보겠습니다.
 
-In this image, the _boolean_ is set to _true_, which means that the result is a string reading: _"this is the result if true"._ The three Nodes creating the _If_ statement are working identically here.
+이 이미지에서 _boolean_은 _true_로 설정되어 있습니다. 따라서 결과는 _"this is the result if true"_ 문자열이 됩니다. 여기서 _If_ 문을 작성하는 3개의 노드는 동일하게 작동합니다.
 
 ![](<../images/5-3/3/logic - conditional statements 01 false.jpg>)
 
-Again, the Nodes are working identically. If the _boolean_ is changed to _false_, our result is the number _Pi_, as defined in the original _If_ statement.
+다시 한번 말씀드리지만 노드는 동일하게 작동합니다. _boolean_이 _false_로 변경되면 결과는 원래 _If_ 문에 정의된 대로 숫자 _Pi_가 됩니다.
 
 ![x](<../images/5-3/3/logic - conditional statements 02 true.jpg>)
 
-## Exercise: Logic and Geometry
+## 연습: 논리 및 형상
 
-> Download the example file by clicking on the link below.
+> 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> A full list of example files can be found in the Appendix.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
-### Part I: Filtering a List
+### 파트 I: 리스트 필터링
 
-1. Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
+1. 논리를 사용하여 숫자 리스트를 짝수 리스트와 홀수 리스트로 구분해보겠습니다.
 
 ![](<../images/5-3/3/logic - exercise part I-01.jpg>)
 
-> a. **Number Range -** add a number range to the canvas.
+> a. **Number Range -** 캔버스에 숫자 범위를 추가합니다.
 >
-> b. **Numbers -** add three number nodes to the canvas. The value for each number node should be: _0.0_ for _start_, _10.0_ for _end_, and _1.0_ for _step_.
+> b. **Numbers -** 캔버스에 3개의 숫자 노드를 추가합니다. 각 숫자 노드의 값은 _start_의 경우 _0.0_, _end_의 경우 _10.0_, _step_의 경우 _1.0_이어야 합니다.
 >
-> c. **Output** - our output is a list of 11 numbers ranging from 0-10.
+> c. **Output** - 출력은 0~10 범위의 11개 숫자로 이루어진 리스트입니다.
 >
-> d. **Modulo (%)-** **Number Range** into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
+> d. **Modulo(%)-** **Number Range**를 _x_로, _2.0_을 _y_로 지정합니다. 그러면 리스트에 포함된 각 숫자를 2로 나눈 나머지가 계산됩니다. 이 리스트의 출력에서는 0과 1이 번갈아 나오는 값 리스트가 제공됩니다.
 >
-> e. **Equality Test (==) -** add an equality test to the canvas. Plug _modulo_ output into the _x_ input and _0.0_ into the _y_ input.
+> e. **Equality Test(==) -** 캔버스에 동일성 테스트를 추가합니다. _modulo_ 출력을 _x_ 입력에, _0.0_을 _y_ 입력에 연결합니다.
 >
-> f. **Watch -** The output of the equality test is a list of values alternating between true and false. These are the values used to separate the items in the list. _0_ (or _true_) represents even numbers and (_1_, or _false_) represents odd numbers.
+> f. **Watch -** 동일성 테스트의 출력은 true와 false가 번갈아 나오는 값의 리스트입니다. 이러한 값은 리스트의 항목을 구분하는 데 사용됩니다. _0_(또는 _true_)은 짝수를 나타내고, _1_(또는 _false_)은 홀수를 나타냅니다.
 >
-> g. **List.FilterByBoolMask -** this Node will filter the values into two different lists based on the input boolean. Plug the original _number range_ into the _list_ input and the _equality test_ output into the _mask_ input. The _in_ output represents true values while the _out_ output represents false values.
+> g. **List.FilterByBoolMask -** 이 노드에서는 입력 부울을 기준으로 2개의 다른 리스트로 값을 필터링합니다. 원래 _number range_를 _list_ 입력에 연결하고 _equality test_ 출력을 _mask_ 입력에 연결합니다. _in_ 출력은 true 값을 나타내고 _out_ 출력은 false 값을 나타냅니다.
 >
-> h. **Watch** - as a result, we now have a list of even numbers and a list of odd numbers. We've used logical operators to separate lists into patterns!
+> h. **Watch** - 결과적으로 이제 짝수 리스트와 홀수 리스트가 표시됩니다. 논리 연산자를 사용하여 리스트를 패턴으로 구분했습니다.
 
-### Part II: From Logic to Geometry
+### 파트 2: 논리에서 형상으로
 
-Building off of the logic established in the first exercise, let's apply this setup into a modeling operation.
+첫 번째 연습에서 설정한 논리를 토대로, 이 설정을 모델링 작업에 적용해 보겠습니다.
 
-2\. We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
+2\. 동일한 노드를 사용하여 이전 연습에서 시작합니다. 유일한 예외는 다음과 같습니다(형식 변경 이외).
 
 ![](<../images/5-3/3/logic - exercise part II-01.jpg>)
 
-> a. Use a **Sequence** Node with these input values.
+> a. 이러한 입력 값과 함께 **Sequence** 노드를 사용합니다.
 >
-> b. We've unplugged the in list input into **List.FilterByBoolMask**. We'll put these Nodes aside for now, but they'll come in handy later in the exercise.
+> b. **List.FilterByBoolMask**에 대한 list 입력의 연결을 끊었습니다. 지금은 이러한 노드를 그대로 두지만 이는 연습 후반부에서 도움이 될 것입니다.
 
-3\. Let's begin by creating a separate group of Graph as shown in the image above. This group of Nodes represents a parametric equation to define a line curve. A few notes:
+3\. 먼저 위의 이미지에 표시된 것처럼 별도의 그래프 그룹을 만들어 보겠습니다. 이 노드 그룹은 선 곡선을 정의하는 파라메트릭 방정식을 나타냅니다. 몇 가지 참고 사항은 다음과 같습니다.
 
 ![](<../images/5-3/3/logic - exercise part II-02.jpg>)
 
-> a. The first **Number Slider** represents the frequency of the wave, it should have a min of 1, a max of 4, and a step of 0.01.
+> a. 첫 번째 **Number Slider**는 파형의 주파수를 나타내며, Min은 1이고, Max는 4이고, step은 0.01입니다.
 >
-> b. The second **Number Slider** represents the amplitude of the wave, should have a min of 0, a max of 1, and a step of 0.01.
+> a. 두 번째 **Number Slider**는 파형의 진폭을 나타내며, Min은 0이고, Max는 1이고, step은 0.01입니다.
 >
-> c. **PolyCurve.ByPoints -** if the above Node diagram is copied, the result is a sine curve in the Dynamo Preview viewport.
+> c. **PolyCurve.ByPoints -** 위의 노드 다이어그램이 복사된 경우 결과는 Dynamo 미리보기 뷰포트에서 사인 곡선으로 나타납니다.
 
-The method here for the inputs: use number nodes for more static properties and number sliders on the more flexible ones. We want to keep the original number range that we're defining in the beginning of this step. However, the sine curve that we create here should have some flexibility. We can move these sliders to watch the curve update its frequency and amplitude.
+입력 방법: 보다 정적인 특성에 대해서는 숫자 노드를 사용하고 보다 유동적인 특성에는 숫자 슬라이더를 사용합니다. 이 단계를 시작할 때 정의하는 원래 숫자 범위를 유지하겠습니다. 그러나 여기에서 작성하는 사인 곡선은 유동적이어야 합니다. 이러한 슬라이더를 이동하면서 곡선의 진동수와 진폭이 업데이트되는 것을 볼 수 있습니다.
 
 ![](<../images/5-3/3/logic - exercise part II-03.gif>)
 
-4\. We're going to jump around a bit in the definition, so let's look at the end result so that we can reference what we're getting at. The first two steps are made separately, we now want to connect the two. We'll use the base sine curve to drive the location of the zipper components, and we'll use the true/false logic to alternate between little boxes and larger boxes.
+4\. 잠시 정의를 확인하기 위해 다음 작업 상황을 참조할 수 있도록 최종 결과를 살펴보겠습니다. 처음에 따로 생성된 두 단계를 이제 연결합니다. 기본 사인 곡선을 사용하여 지퍼 구성요소의 위치를 움직이고, true/false 논리를 사용하여 작은 상자와 큰 상자를 번갈아 표시합니다.
 
 ![](<../images/5-3/3/logic - exercise part II-04.jpg>)
 
-> a. **Math.RemapRange** - Using the number sequence created in step 02, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
+> a. **Math.RemapRange** - 02단계에서 작성한 숫자 시퀀스를 사용합니다. 범위를 다시 매핑하여 새로운 일련의 숫자를 작성해 보겠습니다. 01단계의 원래 숫자 범위는 0~100입니다. 이러한 숫자의 범위는 각각 _newMin_ 및 _newMax_ 입력을 기준으로 0에서 1까지입니다.
 
-5\. Create a **Curve.PointAtParameter** Node, then connect the **Math.RemapRange** output from step 04 as its _param_ input.
+5\. **Curve.PointAtParameter** 노드를 작성한 다음, **param** 입력으로 04단계의 _Math.RemapRange_ 출력을 연결합니다.
 
 ![](<../images/5-3/3/logic - exercise part II-05.jpg>)
 
-This step creates points along the curve. We remapped the numbers to 0 to 1 because the input of _param_ is looking for values in this range. A value of _0_ represents the start point, a value of _1_ represents the end points. All numbers in between evaluate within the _\[0,1]_ range.
+이 단계에서는 곡선을 따라 점을 작성합니다. _param_의 입력에서는 이 범위의 값을 찾으므로 숫자를 0에서 1로 다시 매핑했습니다. 값 _0_은 시작점을 나타내고 값 _1_은 끝점을 나타냅니다. 그 사이의 모든 숫자는 _\[0,1]_ 범위 내에서 계산됩니다.
 
-6\. Connect the output from **Curve.PointAtParameter** to the **List.FilterByBoolMask** to separate the list of odd and even indices.
+6\. **Curve.PointAtParameter**의 출력을 **List.FilterByBoolMask**에 연결하여 홀수 및 짝수 색인 리스트를 구분합니다.
 
 ![](<../images/5-3/3/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask** - Plug **Curve.PointAtParameter** from the previous step into the _list_ input.
+> a. **List.FilterByBoolMask** - 이전 단계의 **Curve.PointAtParameter**를 _list_ 입력에 연결합니다.
 >
-> b. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
+> b. **Watch -** _in_에 대한 Watch 노드와 _out_에 대한 Watch 노드에서는 짝수 색인과 홀수 색인을 나타내는 두 개의 리스트가 있음을 보여 줍니다. 이러한 점은 다음 단계에 나와 있는 곡선에서 동일한 방법으로 정렬됩니다.
 
-7\. Next, we are going to use the output result from **List.FilterByBoolMask** in step 05 to generate geometries with sizes according to its indices.
+7\. 다음으로 05단계에서 살펴본 **List.FilterByBoolMask**의 출력 결과를 사용하여 색인에 따른 크기를 가진 형상을 생성합니다.
 
-**Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
+**Cuboid.ByLengths -** 위의 이미지에 나와 있는 연결을 다시 작성하여 사인 곡선을 따라 지퍼를 가져옵니다. 여기서 직육면체는 상자에 불과하며, 상자 중심의 곡선 점을 기준으로 해당 크기를 정의합니다. 이제 짝수/홀수 분할 논리가 모델에서 명확히 드러나야 합니다.
 
 ![](<../images/5-3/3/logic - exercise part II-07.jpg>)
 
-> a. List of cuboids at even indices.
+> a. 짝수 색인의 직육면체 리스트.
 >
-> b. List of cuboids at odd indices.
+> b. 홀수 색인의 직육면체 리스트.
 
-Voila! You have just programmed a process of defining the geometry dimensions according to the logic operation demonstrated in this exercise.
+지금까지 이 연습에서 살펴본 논리 연산에 따라 형상 치수를 정의하는 프로세스를 프로그래밍해 보았습니다.
