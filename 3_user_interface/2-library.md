@@ -1,62 +1,62 @@
-# Library
+# ライブラリ
 
-The Library contains all of the loaded Nodes, including the ten default categories Nodes that come with the installation as well as any additionally loaded Custom Nodes or Packages. The Nodes in the Library are organized hierarchically within libraries, categories, and, where appropriate, subcategories.
+ライブラリには、付属の 10 の既定カテゴリ ノード、追加でロードされるカスタム ノードやパッケージなど、ロードされたすべてのノードが格納されます。ライブラリ内のノードは、ライブラリ、カテゴリ、サブカテゴリ(該当する場合)内で階層で整理されます。
 
 ![](<images/3-2/library - library UI.jpg>)
 
-* Basic Nodes: Comes with default installation.
-* Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
-* Nodes from the Package Manager: Collection of published Custom Nodes.
+* 基本ノード: 既定のインストールに付属します。
+* カスタム ノード: 頻繁に使用するルーチンまたは特殊なグラフをカスタム ノードとして格納します。また、カスタム ノードをコミュニティに共有することもできます。
+* Package Manager のノード: パブリッシュされたカスタム ノードのコレクション。
 
-We will go through the [hierarchy of Nodes](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](3-3\_dynamo\_libraries.md#quick-search-in-library) and learn about some of the [frequently used Nodes](3-3\_dynamo\_libraries.md#frequently-used-nodes) among them.
+[ノードの階層](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories)カテゴリを確認し、[ライブラリからすばやく検索する](3-3\_dynamo\_libraries.md#quick-search-in-library)方法を示し、その中で[頻繁に使用するノード](3-3\_dynamo\_libraries.md#frequently-used-nodes)の一部について学習します。
 
-### Library Hierarchy for Categories
+### カテゴリのライブラリ階層
 
-Browsing through these categories is the fastest way to understand the hierarchy of what we can add to our Workspace and the best way to discover new Nodes you haven't used before.
+これらのカテゴリを参照すると、ワークスペースに追加できるノードの階層や、これまでに使用したことがない新しいノードを探す最適な方法について、簡単に理解することができます。
 
-Browse the Library by clicking through the menus to expand each category and its subcategory
+メニューをクリックしてライブラリを参照し、各カテゴリとそのサブカテゴリを展開します。
 
 {% hint style="info" %}
-Geometry are great menus to begin exploring as they contain the largest quantity of Nodes.
+[Geometry]には最も多くのノードが含まれているため、ノードを探す場合は最初にこれらのカテゴリを使用することをお勧めします。
 {% endhint %}
 
 ![](<images/3-2/library  - modified and resize library categories.jpg>)
 
-> 1. Library
-> 2. Category
-> 3. Subcategory
-> 4. Node
+> 1. ライブラリ
+> 2. カテゴリ
+> 3. サブカテゴリ
+> 4. ノード
 
-These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
+これらにより、**Create** データ、**Action** の実行、または **Query** データのいずれかのノードに基づいて、同じサブカテゴリ内のノードがさらに分類されます。
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/3-2/user interface - create.jpg>) **Create**: 最初からジオメトリを作成または構築します。円など。
+* ![](<images/3-2/user interface - action.jpg>) **Action**: オブジェクトに対してアクションを実行します。たとえば、円をスケーリングします。
+* ![](<images/3-2/user interface - query.jpg>) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
 
-Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
+ノードの名前とアイコン以外の詳細情報を表示するには、ノードにマウスを合わせます。これにより、そのノードの機能、必要な入力、生成される出力について、すばやく確認することができます。
 
 ![](<images/3-2/user interface - node description.jpg>)
 
-> 1. Description - plain language description of the Node
-> 2. Icon - larger version of the icon in the Library Menu
-> 3. Input(s) - name, data type, and data structure
-> 4. Output(s) - data type and structure
+> 1. ノードに関する簡単な説明
+> 2. [ライブラリ]メニューの大きなアイコン
+> 3. 入力(名前、データ タイプ、データ構造)
+> 4. 出力(データ タイプと構造)
 
-### Quick search in Library
+### ライブラリ内のクイック検索
 
-If you know with relative specificity which Node you want to add to your Workspace, type in the **Search** field to look up all matching Nodes.
+ワークスペースに追加するノードが相対的に特定できるか分かっている場合は、[**検索**]フィールドに入力して、一致するすべてのノードを検索します。
 
-Choose by clicking on the Node you wish to add or hit Enter to add highlighted nodes to the center of the Workspace.
+追加するノードをクリックして選択するか、Enter キーを押してハイライト表示されたノードをワークスペースの中心に追加します。
 
 ![](<images/3-2/user interface - search.jpg>)
 
-#### Search by hierarchy
+#### 階層ごとの検索
 
-Beyond using keywords to try to find Nodes, we can type the hierarchy separated with a period in the Search Field or with Code Blocks (which use the _Dynamo textual language_).
+キーワードを使用してノードを検索するだけでなく、検索フィールドまたは Code Block (_Dynamo テキスト言語_を使用)でピリオドで区切って階層を入力することもできます。
 
-The hierarchy of each library is reflected in the Name of Nodes added to the Workspace.
+各ライブラリの階層は、ワークスペースに追加されたノードの名前に反映されます。
 
-Typing in different portions of the Node's place in the Library hierarchy in the `library.category.nodeName` format returns different results
+ライブラリ階層内のノードの場所の任意の部分を `library.category.nodeName` という形式で入力すると、次のように異なる結果が返されます。
 
 * `library.category.nodeName`
 
@@ -66,73 +66,72 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 ![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
 
-* `nodeName` or `keyword`
+* `nodeName`または`keyword`
 
 ![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
 
-Typically the Name of the Node in the Workspace will be rendered in the `category.nodeName` format, with some notable exceptions particularly in the Input and View Categories.
+通常、ワークスペース内のノードの名前は `category.nodeName` という形式で表示されますが、いくつかの例外があります。特に注意が必要な例外は、Input カテゴリと View カテゴリです。
 
-Beware of similarly named Nodes and note the category difference:
+ノードの名前は同じですが、カテゴリが異なっていることに注意してください。
 
-* Nodes from most libraries will include the category format
+* ほとんどのライブラリのノードには、カテゴリ形式が含まれています。
 
 ![](<images/3-2/library - node category differences 1.jpg>)
 
-* `Point.ByCoordinates` and `UV.ByCoordinates` have the same Name but come from different categories
+* `Point.ByCoordinates` ノードと `UV.ByCoordinates` ノードは、名前は同じですがカテゴリが異なっています。
 
 ![](<images/3-2/library - node category differences 2.jpg>)
 
-* Notable exceptions include Built-in Functions, Core.Input, Core.View, and Operators
+* 注意する例外としては、Built-in Functions、Core.Input、Core.View、Operators などがあります。
 
 ![](<images/3-2/library - node category differences 3.jpg>)
 
-### Frequently Used Nodes
+### 頻繁に使用されるノード
 
-With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our Visual Programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
+Dynamo の既定のインストールには、数百個のノードが付属しています。では、ビジュアル プログラムを作成するために必要なノードはどれでしょうか。ここでは、プログラムのパラメータを定義するノード(**Input**)に注目し、ノードのアクション(**Watch**)の結果を確認して、ショートカット(**Code Block**)を使用して入力や機能を定義してみましょう。
 
-#### Input Nodes
+#### 入力ノード
 
-Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
+Input ノードは、ビジュアル プログラムのユーザが重要なパラメータを使用する場合の主要な手段です。Core ライブラリから以下のものを利用できます。
 
-| Node           |                                                | Node           |                                                |
+| ノード |                                                | ノード |                                                |
 | -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean        | ![](<images/3-2/library - boolean.jpg>)        | Number         | ![](<images/3-2/library - number.jpg>)         |
-| String         | ![](<images/3-2/library - string.jpg>)         | Number Slider  | ![](<images/3-2/library - number slider.jpg>)  |
+| Boolean | ![](<images/3-2/library - boolean.jpg>) | Number | ![](<images/3-2/library - number.jpg>) |
+| String ノード | ![](<images/3-2/library - string.jpg>) | Number Slider | ![](<images/3-2/library - number slider.jpg>) |
 | Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path      | ![](<images/3-2/library - file path.jpg>)      |                |                                                |
+| File Path | ![](<images/3-2/library - file path.jpg>) |                |                                                |
 
-#### Watch & Watch3D
+#### Watch と Watch3D
 
-The Watch Nodes are essential to managing the data that is flowing through your Visual Program. You can view the result of a Node through the **Node data preview** by hovering your mouse over the node.
+Watch ノードは、ビジュアル プログラムを経由してやり取りされるデータを管理するために必要なノードです。ノードの上にマウス カーソルを合わせると、**ノード データのプレビュー**でノードの結果を表示できます。
 
 ![](<images/3-2/library - node preview.jpg>)
 
-It will be useful to keep it revealed in a **Watch** Node
+**Watch** ノードで表示したままにしておくと便利です。
 
 ![](<images/3-2/library - watch node.jpg>)
 
-Or see the geometry results through a **Watch3D** Node.
+または、**Watch3D** ノードを使用してジオメトリの結果を確認します。
 
 ![](<images/3-2/library - watch3d node.gif>)
 
-Both of these are found in the View Category in the Core Library.
+これらのノードは、どちらも Core ライブラリの View カテゴリに含まれています。
 
 {% hint style="info" %}
-Tip: Occasionally the 3D Preview can be distracting when your Visual Program contains a lot of Nodes. Consider unchecking the Showing Background Preview option in the Settings Menu and using a Watch3D Node to preview your geometry.
-{% endhint %}
+ヒント: ビジュアル プログラムに多数のノードが含まれている場合、3D プレビューの表示が見にくくなることがあります。その場合は、[設定]メニューの[背景 3D プレビューの表示]オプションを選択解除し、Watch3D ノードを使用してジオメトリをプレビューすることをお勧めします。{% endhint %}
 
 #### Code Block
 
-Code Block Nodes can be used to define a block of code with lines separated by semi-colons. This can be as simple as `X/Y`.
+Code Block ノードでセミコロン区切りの行を使用して、Code Block を定義することができます。 これは、`X/Y` のように単純な場合もあります。
 
-We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+また、Code Block ノードをショートカットとして使用して Number Input ノードを定義したり、別のノードの機能を呼び出すこともできます。構文は、Dynamo テキスト言語である [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md) の命名規則に従って作成されます。
 
-Here is a simple demonstration (with instructions) for using Code Block in your script.
+次に、スクリプトで Code Block を使用するための簡単なデモンストレーションを示します(手順を含む)。
 
 ![](<images/3-2/library - code block demo.gif>)
 
-1. Double-click to create a Code Block Node
-2. Type `Circle.ByCenterPointRadius(x,y);`
-3. Click on Workspace to clear the selection should add `x` and `y` inputs automatically.
-4. Create a Point.ByCoordinates Node and a Number Slider then connect them to the inputs of the Code Block.
-5. The result of the executing the Visual Program is shown as the circle in the 3D Preview
+1. ダブルクリックして Code Block ノードを作成します。
+2. `Circle.ByCenterPointRadius(x,y);` と入力します。
+3. ワークスペースをクリックして選択をクリアすると、`x` と `y` の入力が自動的に追加されます。
+4. Point.ByCoordinates ノードと Number Slider ノードを作成して Code Block の入力に接続します。
+5. ビジュアル プログラムの実行結果は、3D プレビューに円として表示されます。

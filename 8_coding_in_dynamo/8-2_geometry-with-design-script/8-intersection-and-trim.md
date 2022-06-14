@@ -1,19 +1,19 @@
-# Intersection and Trim
+# 交差およびトリム
 
-Many of the examples so far have focused on the construction of higher dimensional geometry from lower dimensional objects. Intersection methods allow this higher dimensional geometry to generate lower dimensional objects, while the trim and select trim commands allow script to heavily modify geometric forms after they’ve been created.
+これまでの多くの例では、低い次元のオブジェクトから高い次元のジオメトリを構築することに注目してきました。交差メソッドを使用すると、この高い次元のジオメトリから低い次元のオブジェクトを生成でき、一方でトリム コマンドを選択すると、ジオメトリ形状を作成した後にスクリプトによって大幅に修正できます。
 
-The _Intersect_ method is defined on all pieces of geometry in Dynamo, meaning that in theory any piece of geometry can be intersected with any other piece of geometry. Naturally some intersections are meaningless, such as intersections involving Points, as the resulting object will always be the input Point itself. The other possible combinations of intersections between objects are outlined in the following chart. The following chart outlines the result of various intersection operations:
+_Intersect_ メソッドは Dynamo のジオメトリのすべてのピース上で定義されます。つまり、理論的にはジオメトリのどのピースもジオメトリの他の任意のピースと交差できます。点に関する交差では結果として得られるオブジェクトは常に入力された点そのものとなるなど、意味のない交差も当然あります。オブジェクト間での交差のその他の可能な組み合わせについて、次の表で概要を示します。次の表はさまざまな交差の操作の結果の概要を示しています。
 
-### **Intersect**
+### **交差**
 
-| _With:_     | Surface | Curve | Plane        | Solid   |
+| _対象: _ | サーフェス | 曲線 | 平面 | ソリッド |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Surface** | Curve   | Point | Point, Curve | Surface |
-| **Curve**   | Point   | Point | Point        | Curve   |
-| **Plane**   | Curve   | Point | Curve        | Curve   |
-| **Solid**   | Surface | Curve | Curve        | Solid   |
+| **サーフェス** | 曲線 | 点 | 点、曲線 | サーフェス |
+| **曲線** | 点 | 点 | 点 | 曲線 |
+| **平面** | 曲線 | 点 | 曲線 | 曲線 |
+| **ソリッド** | サーフェス | 曲線 | 曲線 | ソリッド |
 
-The following very simple example demonstrates the intersection of a plane with a NurbsSurface. The intersection generates a NurbsCurve array, which can be used like any other NurbsCurve.
+次の非常に簡単な例では、平面と NURBS 曲面の交差を示しています。交差によって NURBS 曲線の配列が生成され、これを他の NURBS 曲線のように使用できます。
 
 ![](../images/8-2/8/IntersectionAndTrim\_01.png)
 
@@ -34,18 +34,18 @@ crvs = surf.Intersect(pl);
 crvs_moved = crvs.Translate(0, 0, 10);
 ```
 
-The _Trim_ method is very similar to the Intersect method, in that it is defined for almost every piece of geometry. However, there are far more limitations on _Trim_ than on _Intersect_.
+_Trim_ メソッドは Intersect メソッドに非常によく似ており、ジオメトリのほぼすべてのピースに対して定義されます。ただし _Trim_ には _Intersect_ よりもはるかに多くの制限があります。
 
-### **Trim**
+### **トリム**
 
-|             | _Using:_ Point | Curve | Plane | Surface | Solid |
+|             | _使用:_ 点 | 曲線 | 平面 | サーフェス | ソリッド |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _On:_ Curve | Yes            | No    | No    | No      | No    |
-| Polygon     | -              | No    | Yes   | No      | No    |
-| Surface     | -              | Yes   | Yes   | Yes     | Yes   |
-| Solid       | -              | -     | Yes   | Yes     | Yes   |
+| _対象:_ 曲線 | 可 | 不可 | 不可 | 不可 | 不可 |
+| ポリゴン | - | 不可 | 可 | 不可 | 不可 |
+| サーフェス | - | 可 | 可 | 可 | 可 |
+| ソリッド | - | - | 可 | 可 | 可 |
 
-Something to note about _Trim_ methods is the requirement of a “select” point, a point which determines which geometry to discard, and which pieces to keep. Dynamo finds and discards the trimmed geometry closest to the select point.
+_Trim_ メソッドについては、「選択」点が必要であることに注意が必要です。この点によってどのジオメトリを破棄してどの部分を保持するかが決まります。Dynamo は、選択点に最も近いトリムされたジオメトリを見つけて破棄します。
 
 ![](../images/8-2/8/IntersectionAndTrim\_02.png)
 

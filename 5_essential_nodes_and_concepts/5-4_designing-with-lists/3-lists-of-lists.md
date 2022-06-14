@@ -1,292 +1,292 @@
-# Lists of Lists
+# リストのリスト
 
-### Lists of Lists
+### リストのリスト
 
-Let's add one more tier to the hierarchy. If we take the deck of cards from the original example and create a box which contains multiple decks, the box now represents a list of decks, and each deck represents a list of cards. This is a list of lists. For the analogy in this section, the image below contains a list of coin rolls, and each roll contains a list of pennies.
+ここでは、階層にもう 1 つの層を追加してみましょう。「リストの操作」の章で例として取り上げたトランプを、ここでも例として使用します。たとえば、複数のデッキ(デッキとは 1 組のトランプのこと)が含まれたボックスを作成したとすると、そのボックスはデッキを格納するリストで、各デッキはカードのリストということになります。これが、「リストのリスト」という考え方です。たとえば次の図では、硬貨の山のリストが入っていて、それぞれの山には硬貨のリストが含まれています。
 
-![Coins](../images/5-4/3/coins-521245\_640.jpg)
+![硬貨](../images/5-4/3/coins-521245\_640.jpg)
 
-> Photo by [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
+> 写真: [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg)
 
 ### Query
 
-What **queries** can we make from the list of lists? This accesses existing properties.
+リストのリストに関する質問(**クエリー**)を作成する場合、次のような質問が考えられます。これにより、リストの特性(プロパティ)がわかります。
 
-* Number of coin types? 2.
-* Coin type values? $0.01 and $0.25.
-* Material of quarters? 75% copper and 25% nickel.
-* Material of pennies? 97.5% zinc and 2.5% copper.
+* Q: 硬貨は何種類?2.
+* Q: 各硬貨の価値は?A: $0.01 と $0.25
+* Q: 25 セント硬貨の材質は?A: 銅 75%、ニッケル 25%
+* Q: 1 セント硬貨の材質は?A: 亜鉛 97.5%、銅 2.5%
 
 ### Action
 
-What **actions** can we perform on the list of lists? This changes the list of lists based on a given operation.
+リストのリストに対して実行できる操作(**アクション**)としては、次のような操作が考えられます。この場合、実行する操作に応じてリストのリストが変化します。
 
-* Select a specific stack of quarters or pennies.
-* Select a specific quarter or penny.
-* Rearrange the stacks of quarters and pennies.
-* Shuffle the stacks together.
+* 25 セント硬貨または 1 セント硬貨の特定の山を選ぶ。
+* 特定の 25 セント硬貨または 1 セント硬貨を選ぶ。
+* 25 セント硬貨の山と 1 セント硬貨の山の配置を変える。
+* 25 セント硬貨の山と 1 セント硬貨の山をすべて入れ替える。
 
-Again, Dynamo has an analagous node for each one of the operations above. Since we're working with abstract data and not physical objects, we need a set of rules to govern how we move up and down the data hierarchy.
+前の章でも説明したように、Dynamo の各ノードを使用して、上記の操作に似た操作を実行することができます。ここでは、物理的な物体ではなく抽象的なデータを操作するため、データ階層を上下に移動する方法をコントロールするための一連のルールが必要になります。
 
-When dealing with lists of lists, the data is layered and complex, but this provides an opportunity to do some awesome parametric operations. Let's break down the fundamentals and discuss a few more operations in the lessons below.
+リストのリストを操作する場合、データは複雑な階層構造になっていますが、この複雑な構造により、非常に高度なパラメータ操作を実行することができます。これ以降の各演習では、基礎的な概念といくつかの操作方法を確認していきます。
 
-## Exercise
+## 演習
 
-### Top-Down Hierarchy
+### トップダウン階層
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
-The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like **List.GetItemAtIndex**, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
+このセクションで説明する基本的な概念は、「**Dynamo は、リストをオブジェクトとして処理する**」ということです。トップダウン階層は、オブジェクト指向プログラミングをベースとして開発されています。Dynamo は、**List.GetItemAtIndex** などのコマンドでサブ要素を選択するのではなく、データ構造内でメイン リストのインデックスを選択します。リスト中で選択したその項目が、別のリストである場合もあります。ここからは、サンプルの図を使用して詳しく説明していきます。
 
 ![top-down](<../images/5-4/3/lists of lists - top down hierachy.jpg>)
 
-> 1. With **Code Block**, we've defined two ranges: `0..2; 0..3;`
-> 2. These ranges are connected to a **Point.ByCoordinates** node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
-> 3. Notice that the **Watch** node gives 3 lists with 4 items in each list.
-> 4. When using **List.GetItemAtIndex**, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
+> 1. **Code Block** ノードを使用して、`0..2; 0..3;` という 2 つの範囲が定義されています。
+> 2. これらの範囲は、レーシングが「_外積_」に設定された **Point.ByCoordinates** ノードに接続されています。これにより、点のグリッドが作成され、リストのリストが出力として返されます。
+> 3. **Watch** ノードの各リストで、4 つの項目を持つ 3 つのリストが指定されていることに注意してください。
+> 4. インデックス値 0 を指定して **List.GetItemAtIndex** ノードを使用した場合、Dynamo は、最初のリストとそのリスト内のすべてのコンテンツを選択します。他のプログラムでは、データ構造内のすべてのリストの最初の項目だけが選択される場合がありますが、Dynamo は、トップダウン階層を使用してデータの処理を行います。
 
 ### List.Flatten
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/3/Flatten.dyn" %}
 
-Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.
+フラット化を行うと、データ構造からすべてのデータ層が削除されます。この機能は、操作にデータ階層が必要ない場合に便利ですが、情報が削除される可能性があります。次の図は、データのリストをフラット化した結果を示しています。
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 01.jpg>)
 
-> 1. Insert one line of code to define a range in **Code Block**: `-250..-150..#4;`
-> 2. Plugging the _code block_ into the _x_ and _y_ input of a **Point.ByCoordinates** node, we set the lacing to _"Cross Product"_ to get a grid of points.
-> 3. The **Watch** node shows that we have a list of lists.
-> 4. A **PolyCurve.ByPoints** node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four polycurves representing each row in the grid.
+> 1. **Code Block** ノードで `-250..-150..#4;` というコード行を挿入して範囲を定義します。
+> 2. _Code Block_ ノードを **Point.ByCoordinates** ノードの _x_ 入力と _y_ 入力に接続します。これにより、点のグリッドを取得するための「_外積_」に対するレーシングが設定されます。
+> 3. **Watch** ノードに、リストのリストが表示されます。
+> 4. **PolyCurve.ByPoints** ノードは、各リストを参照して個別のポリカーブを作成します。Dynamo のプレビューに 4 つのポリカーブが表示されます。それぞれのポリカーブが、グリッド内の各行を表しています。
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 02.jpg>)
 
-> 1. By inserting a _flatten_ before the polycurve node, we've created one single list for all of the points. The **PolyCurve.ByPoints** node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.
+> 1. PolyCurve.ByPoints ノードの前に _Flatten_ ノードを挿入して、すべての点を含む単一のリストを作成します。**PolyCurve.ByPoints** ノードは、リストを参照して 1 つのカーブを作成しますが、すべての点が 1 つのリスト上に存在しているため、点のリスト全体を通過するジグザクのポリカーブが 1 つだけ作成されます。
 
-There are also options for flattening isolated tiers of data. Using the **List.Flatten** node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in **List.Map**. We'll discuss more about **List.Map** below.
+独立したデータ層をフラット化する方法も用意されています。**List.Flatten** ノードを使用すると、データ層の数を定義して、最上位の階層からデータ層をフラット化することができます。このノードは、現在のワークフローに必ずしも関係しない複雑なデータ構造を操作する場合に特に便利です。別の方法として、Flatten ノードを関数として **List.Map** ノードで使用することもできます。**List.Map** ノードの詳細については、以下で説明します。
 
-### Chop
+### 分割
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/3/Chop.dyn" %}
 
-When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
+パラメトリック モデリングを行う際に、既存のリストのデータ構造を修正したい場合があります。その場合、さまざまなノードを使用できますが、List.Chop ノードが最も基本的なノードです。List.Chop ノードで設定された数の項目を使用すると、1 つのリストを複数のサブリストに分割することができます。
 
-The chop command divides lists based on a given list length. In some ways, chop is the opposite of flatten: rather than removing data structure, it adds new tiers to it. This is a helpful tool for geometric operations like the example below.
+Chop コマンドを実行すると、指定されたリストの長さに従ってリストが分割されます。List.Chop ノードは、データ構造を削除するのではなく新しいデータ層をデータ構造に追加するなど、いくつかの点で List.Flatten ノードとは逆の動作を行います。List.Chop ノードは、次の例のようなジオメトリに関する操作を実行する場合に便利です。
 
 ![Exercise](<../images/5-4/3/lists of lists - chop.jpg>)
 
 ### List.Map
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/3/Map.dyn" %}
 
-A **List.Map/Combine** applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
+**List.Map ノードと List.Combine** ノードは、階層内の 1 段階下の層で、設定された関数を入力リストに適用します。リストの組み合わせとリストのマップはほとんど同じ操作ですが、組み合わせの場合は、特定の関数の入力に対応する複数の入力を使用できる点が、マップとは異なっています。
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the_ **List.Map** _functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_注: この演習は前バージョンの Dynamo を使用して作成されました。_**List.Map**_ の機能に関する問題の大半は、_**List@Level**_ 機能の追加によって解決されました。詳細については、後述の _[_List@Level_](6-3\_lists-of-lists.md#listlevel)_ を参照してください。_
 
-As a quick introduction, let's review the **List.Count** node from a previous section.
+簡単な例として、前のセクションで説明した **List.Count** ノードをもう一度確認してみましょう。
 
-The **List.Count** node counts all of the items in a list. We'll use this to demonstrate how **List.Map** works.
+**List.Count** ノードは、リスト内のすべての項目をカウントします。ここでは、List.Count ノードを使用して、**List.Map** ノードの仕組みについて説明します。
 
 ![](<../images/5-4/3/lists of lists - map 01.jpg>)
 
-> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
+> 1. **Code Block** ノードで、次の 2 行を挿入します。 `-50..50..#Nx; -50..50..#Ny;`
 >
->     After typing in this code, the code block will create two inputs for Nx and Ny.
-> 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the **Code Block**.
-> 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
-> 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
+>    このコードを入力すると、Code Block ノードに Nx と Ny という 2 つの入力が作成されます。
+> 2. 2 つの _Integer Slider_ ノードを使用して _Nx_ の値と _Ny_ の値を **Code Block** ノードに接続すると、これらの値が定義されます。
+> 3. 次に、Code Block ノードの各行を **Point.ByCoordinates** ノードの _x_ 入力と _y_ 入力に接続します。このノードを右クリックして「レーシング」と「_外積_」を続けて選択します。この操作により、点のグリッドが作成されます。-50 から 50 までの範囲が定義されているため、ここでは既定の Dynamo グリッド全体を使用しています。
+> 4. _**Watch**_ ノードに、作成された点が表示されます。データ構造を確認すると、リストのリストが作成されていることがわかります。それぞれのリストが、グリッドの点の 1 行を表しています。
 
 ![Exercise](<../images/5-4/3/lists of lists - map 02 (1).jpg>)
 
-> 1. Attach a **List.Count** node to the output of the watch node from the previous step.
-> 2. Connect a **Watch** node to the **List.Count** output.
+> 1. 前の手順の Watch ノードの出力に **List.Count** ノードを接続します。
+> 2. **Watch** ノードを **List.Count** ノードの出力に接続します。
 
-Notice that the List.Count node gives a value of 5. This is equal to the "Nx" variable as defined in the code block. Why is this?
+List.Count ノードによって 5 という値が生成されていることに注意してください。これは、Code Block ノードで定義されている「Nx」変数と同じ値です。こうなる理由は次のとおりです。
 
-* First, the **Point.ByCoordinates** node uses the "x" input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.
-* Since Dynamo treats lists as objects in and of themselves, a **List.Count** node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.
+* まず、**Point.ByCoordinates** ノードは、リストを作成するための主要な入力として「x」入力を使用します。Nx の値が 5 で Ny の値が 3 の場合、3 つの項目を持つ 5 つのリストが含まれた 1 つのリストが作成されます。
+* Dynamo は、リストをオブジェクトとして処理するため、**List.Count** ノードは、階層内のメインのリストに適用されます。その結果、メインのリストに含まれているリストの数である 5 という値が生成されることになります。
 
 ![Exercise](<../images/5-4/3/lists of lists - map 03.jpg>)
 
-> 1. By using a **List.Map** node, we take a step down in the hierarchy and perform a _"function"_ at this level.
-> 2. Notice that the **List.Count** node has no input. It is being used as a function, so the **List.Count** node will be applied to every individual list one step down in the hierarchy. The blank input of **List.Count** corresponds to the list input of **List.Map**.
-> 3. The results of **List.Count** now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.
+> 1. **List.Map** ノードを使用して、階層内の 1 段階下の層で「_関数_」を実行します。
+> 2. **List.Count** ノードには入力がないことに注意してください。**List.Count** ノードは関数として使用されるため、このノードは階層内の 1 段階下の層にあるすべてのリストに適用されます。 **List.Count** ノードの空の入力は、**List.Map** ノードの list 入力に対応しています。
+> 3. **List.Count** ノードにより、5 つの項目を持つリストが 1 つ作成されます。それぞれの項目の値は 3 になります。この値は、各サブリストの長さを表しています。
 
 ### **List.Combine**
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_注: この演習は前バージョンの Dynamo を使用して作成されました。List.Combine の機能に関する問題の大半は、_**List@Level**_ 機能の追加によって解決されました。詳細については、後述の _[_List@Level_](6-3\_lists-of-lists.md#listlevel)_ を参照してください。_
 
-In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
+この演習では、**List.Combine** ノードを使用して、個別のオブジェクト リストに関数を適用する方法を説明します。
 
-Start by setting up two lists of points.
+最初に、2 つの点のリストを設定します。
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 01.jpg>)
 
-> 1. Use **Sequence** node to generate 10 values, each with a 10 step increment.
-> 2. Connect the result to the x input of a **Point.ByCoordinates** node. This will create a list of points in Dynamo.
-> 3. Add a second **Point.ByCoordinates** node to the workspace, use the same **Sequence** output as its x input, but use an **Interger Slider** as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.
+> 1. **Sequence** ノードを使用して 10 の値を生成し、各値に 10 のステップ増分を指定します。
+> 2. 結果を **Point.ByCoordinates** ノードの x 入力に接続します。これにより、Dynamo で点のリストが作成されます。
+> 3. 2 番目の **Point.ByCoordinates** ノードをワークスペースに追加し、x 入力として同じ **Sequence** 出力を使用し、y 入力として **Integer Slider** を使用し、その値を 31 (1 番目の点のセットと重ならない限り任意の値)に設定して、2 つの点のセットがお互いに重ならないようにします。
 
-Next, we will use **List.Combine** to apply a function on objects in 2 separate lists. In this case, it will be a simple draw line function.
+次に、**List.Combine** ノードを使用して、2 つの異なるリスト内のオブジェクトに関数を適用します。この場合、単純な線描画関数になります。
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 02.jpg>)
 
-> 1. Add **List.Combine** to the workspace and connect the 2 set of points as its list0 & list1 input.
-> 2. Use a **Line.ByStartPointEndPoint** as the input function for **List.Combine**.
+> 1. ワークスペースに **List.Combine** ノードを追加し、2 つの点のセットを list0 と list1 入力として接続します。
+> 2. **List.Combine** ノードの入力関数として **Line.ByStartPointEndPoint** ノードを使用します。
 
-Once completed, the 2 set of points are zipped/paired together through a **Line.ByStartPointEndPoint** function and returning 10 lines in Dynamo.
+完了すると、2 つの点のセットが **Line.ByStartPointEndPoint** 関数を介して一緒に圧縮またはペアリングされ、Dynamo で 10 行が返されます。
 
 {% hint style="info" %}
-Refer to exercise in n-Dimensional Lists to see another example of using List.Combine.
+List.Combine の別の使用例については、N 次元のリストの演習を参照してください。
 {% endhint %}
 
 ### List@Level
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/3/Listatlevel.dyn" %}
 
-Preferred to **List.Map**, the **List@Level** feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
+**List.Map** ではなく **List@Level** 機能を使用すると、ノードの入力ポートに使用するリストのレベルを直接選択することができます。この機能は、入力ポートに指定されたあらゆる入力値に使用できます。使用すると、もっともすばやく簡単にリストのレベルにアクセスすることができます。ノードの入力として使用するリストのレベルを指定するだけで、後はすべてをノードに任せることができます。
 
-In this exercise, we will use the **List@Level** feature to isolate a specific level of data.
+この演習では、**List@Level** 機能を使用して特定のデータ レベルを分離してみましょう。
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 01.jpg>)
 
-We will start with a simple 3D grid of points.
+点によって構成される単純な 3D グリッドから始めることにします。
 
-> 1. The grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.
-> 2. These tiers exist at different **Levels**. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.
-> 3. The list levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
+> 1. X、Y、Z に Range ノードを接続することでグリッドが構成されています。したがって、データの構造は X リスト、Y リスト、Z リストの 3 層から成ることがわかります。
+> 2. これらの層は、異なる**レベル**に存在します。レベルは、プレビュー バルーンの下に表示されます。リスト レベルの列はリスト データに対応しています。ここで、作業中のレベルを確認することができます。
+> 3. リスト レベルは逆順で階層化されているので、最低レベルのデータは常に「L1」にあります。これにより、上流で何かが変更されたとしても、グラフを意図したとおりに動作させることができます。
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 02.jpg>)
 
-> 1. To use the **List@Level** function, click '>'. Inside this menu, you will see two checkboxes.
-> 2. **Use Levels** - This enables the **List@Level** functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.
-> 3. _Keep list structure_ – If enabled, you will have the option to keep that input’s level structure. Sometimes, you may have purposefully organized your data into sublists. By checking this option, you can keep your list organization intact and not lose any information.
+> 1. **List@Level** 機能を使用するには、[>]をクリックします。このメニュー内部では、2 つのチェックボックスが表示されます。
+> 2. **レベルを使用** - このオプションをオンにすると、**List@Level** の機能が有効になります。このオプションをクリックした後で、ノードで使用する入力リスト レベルをすべてクリックして選択することができます。このメニューで上矢印か下矢印をクリックすることにより、さまざまなレベル オプションを試すことができます。
+> 3. _リスト構造を保持_ - オンにしていると、その入力のレベル構造を保持することができます。意図的にデータを複数のサブリストに整理している場合は、このオプションをオンにしておくと、いかなる情報も失わずにリスト構造をそのまま保持しておくことができます。
 
-With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each list level and index combination will return a different set of points from our original 3D set.
+リスト レベル全体を切り替えることにより、単純な 3D グリッド上でリスト構造を視覚的に確認することができます。リスト レベルとインデックスの組み合わせを変更すると、元の 3D セットとは異なる点のセットが返されます。
 
 ![](<../images/5-4/3/lists of lists - list at level 03.jpg>)
 
-> 1. “@L2” in DesignScript allows us to select only the List at Level 2. The List at Level 2 with the index 0 includes only the first set of Y points, returning only the XZ grid.
-> 2. If we change the Level filter to “L1”, we will be able to see everything in the first List Level. The List at Level 1 with the index 0 includes all of our 3D points in a flat list.
-> 3. If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.
-> 4. If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.
+> 1. DesignScript で「@L2」を選択すると、レベル 2 のリストのみを選択することができます。index に 0 が入力されているとき、レベル 2 のリストには Y を 0 とする点のセットのみが含まれているので、XZ のグリッド面のみが返されます。
+> 2. レベル フィルタを「@L1」に変更すると、リスト レベル 1 に含まれるすべての点を確認することができます。index に 0 が入力されているとき、レベル 1 のリストにはフラット リストの 3D ポイントがすべて含まれています。
+> 3. 同様に「@L3」に変更すると、リスト レベル 3 の点のみが表示されます。index に 0 が入力されているとき、レベル 3 のリストには Z を 0 とする点のセットのみが含まれているので、XY のグリッド面のみが返されます。
+> 4. 同様に「@L4」に変更すると、リスト レベル 4 の点のみが表示されます。index に 0 が入力されているとき、レベル 4 のリストには X を 0 とする点のセットのみが含まれているので、YZ のグリッド面のみが返されます。
 
-Although this particular example can also be created with **List.Map**, **List@Level** greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a **List.Map** and **List@Level** methods:
+今回の例は **List.Map** でも作成できますが、**List@Level** を使用すると、動作を単純化して簡単にノード データにアクセスできるようになります。次に **List.Map** と **List@Level** の比較をご覧ください。
 
 ![](<../images/5-4/3/lists of lists - list at level 04.jpg>)
 
-> 1. Although both methods will give us access to the same points, the **List@Level** method allows us to easily toggle between layers of data within a single node.
-> 2. To access a point grid with **List.Map**, we will need a **List.GetItemAtIndex** node alongside the **List.Map**. For every list level that we are stepping down, we will need to use an additional **List.Map** node. Depending on the complexity of your lists, this could require you to add a significant amount of **List.Map** Nodes to your graph to access the right level of information.
-> 3. In this example, a **List.GetItemAtIndex** node with a **List.Map** node returns the same set of points with the same list structure as the **List.GetItemAtIndex** with '@L3' selected.
+> 1. どちらの方法でも同じ点にアクセスすることができますが、**List@Level** を使用するとたった 1 個のノードだけでデータのレイヤを簡単に切り替えることができます。
+> 2. **List.Map** を使用して点構成のグリッドにアクセスするには、**List.Map** の隣に **List.GetItemAtIndex** ノードを配置する必要があります。レベルの階層を下りていくたびに、**List.Map** ノードを追加していく必要があります。リストが複雑になればなるほど、目的の情報レベルにアクセスするには、多数の **List.Map** ノードをグラフに追加しなければなりません。
+> 3. この例では、**List.GetItemAtIndex** ノードを **List.Map** ノードに接続することにより、**List.GetItemAtIndex** で「@L3」を選択したときと同じリスト構造を持つ同じ点のセットを取得しています。
 
-### Transpose
+### 転置
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/3/Transpose.dyn" %}
 
-Transpose is a fundamental function when dealing with lists of lists. Just as in spreadsheet programs, a transpose flips the columns and rows of a data structure. We'll demonstrate this with a basic matrix below, and in the following section, we'll demonstrate how a transpose can be use to create geometric relationships.
+転置は、リストのリストを操作する場合の基本的な機能です。転置を実行すると、スプレッドシート プログラムの場合と同様に、データ構造内の列と行の位置が反転します。次の基本的な行列を使用して、転置の仕組みを説明します。また、次のセクションでは、転置機能を使用して幾何学的な関係を作成する方法について説明します。
 
-![Transpose](../images/5-4/3/transpose1.jpg)
+![転置](../images/5-4/3/transpose1.jpg)
 
-Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
+最初に、前の演習で使用した **List.Count** ノードを削除して別のジオメトリに移動し、データ構造がどのようになっているかを確認します。
 
 ![](<../images/5-4/3/lists of lists - transpose 01.jpg>)
 
-> 1. Connect a **PolyCurve.ByPoints** to the output of the watch node from **Point.ByCoordinates**.
-> 2. The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.
+> 1. **Point.ByCoordinates** ノードから続く Watch ノードの出力に、**PolyCurve.ByPoints** ノードを接続します。
+> 2. 出力として 5 つのポリカーブが作成され、Dynamo のプレビューにそれらのポリカーブが表示されます。Dynamo ノードは点のリスト(この場合は、点のリストのリスト)を検索し、そのリストから 1 つのポリカーブを作成します。原則として、各リストはデータ構造内で曲線に変換されます。
 
 ![](<../images/5-4/3/lists of lists - transpose 02.jpg>)
 
-> 1. A **List.Transpose** node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.
-> 2. Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.
-> 3. Notice the geometric result: using **PolyCurve.ByPoints**, we get 3 polycurves in the perpendicular direction to the original curves.
+> 1. **List.Transpose** ノードは、すべての項目をメイン リスト内のすべてのリストと切り替えます。この動作は少し複雑に感じるかもしれませんが、データ構造内の列と行を入れ替える Microsoft Excel と同じ仕組みです。
+> 2. 転置により、リストの構造が変更されていることを確認します。転置前は 3 つの項目を持つ 5 つのリストだったのに対して、転置後は 5 つの項目を持つ 3 つのリストに変わっています。
+> 3. **PolyCurve.ByPoints** ノードにより、元の曲線に対して垂直方向に 3 つのポリカーブが作成されます。
 
-## Code Block for List Creation
+## リスト作成用 Code Block
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
+Code Block では、「\[]」という省略表記を使用してリストを定義します。この方法を使用すると、**List.Create** ノードを使用するよりも素早く柔軟にリストを作成することができます。**Code Block** の詳細は、「[Code Block と DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)」を参照してください。次の図は、Code Block を使用して、複数の式を持つリストを作成する方法を示しています。
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 01.jpg>)
 
-#### Code Block Query
+#### Code Block のクエリー
 
-**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with code block.
+**Code Block** で「\[]」という省略表記を使用すると、複雑なデータ構造で特定の項目をすばやく簡単に選択することができます。**Code Block** の詳細は、[「Code Block と DesignScript」の章](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)で説明しています。次の図は、Code Block を使用して、複数のデータ タイプが存在するリストのクエリーを実行する方法を示しています。
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 02.jpg>)
 
-## Exercise - Querying and Inserting Data
+## 演習 - データのクエリーと挿入
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/3/ReplaceItems.dyn" %}
 
-This exercise uses some of the logic established in the previous one to edit a surface. Our goal here is intuitive, but the data structure navigation will be more involved. We want to articulate a surface by moving a control point.
+この演習では、前の演習で作成したロジックを使用してサーフェスを編集します。この演習の目的は直感的な操作を行うことですが、データ構造のナビゲーションは少し複雑な操作です。ここでは、制御点を移動することにより、サーフェスの編集を行います。
 
-Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.
+最初に、上図の各ノードの文字列を操作します。既定の Dynamo グリッド全体にわたる基本的なサーフェスを作成します。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 01.jpg>)
 
-> 1. Using **Code Block**, insert these two lines of code and connect to the _u_ and _v_ inputs of **Surface.PointAtParameter**, respectively: `-50..50..#3;` `-50..50..#5;`
-> 2. Be sure to set the Lacing of **Surface.PointAtParameter** to _"Cross Product"_.
-> 3. The **Watch** node show that we have a list of 3 lists, each with 5 items.
+> 1. **Code Block** ノードを使用して次の 2 つのコード行を入力し、**Surface.PointAtParameter** ノードの _u_ 入力と _v_ 入力にそれぞれのコード行を接続します(`-50..50..#3;` と `-50..50..#5;`)。
+> 2. **Surface.PointAtParameter** ノードのレーシングを「_外積_」に設定します。
+> 3. **Watch** ノードに、5 つの項目を持つ 3 つのリストが含まれた 1 つのリストが表示されます。
 
-In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
+この演習では、作成したグリッドの中心点のクエリーを実行します。これを行うには、中央のリストの中心点を選択します。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 02.jpg>)
 
-> 1. To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.
-> 2. Using **Code Block**, we'll write a basic line of code for querying a list of lists:\
+> 1. 正しい点を選択するには、Watch ノードの各項目をクリックして、正しい点が選択されているかどうかを確認します。
+> 2. **Code Block** ノードを使用して、リストのリストをクエリーするための基礎となるコード行を次の形式で指定します。\
 >    `points[1][2];`
-> 3. Using **Geometry.Translate**, we'll move the selected point up in the _Z_ direction by _20_ units.
+> 3. **Geometry.Translate** ノードを使用して、選択した点を _Z_ の正の向きに _20_ 単位移動します。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 03.jpg>)
 
-> 1. Let's also select the middle row of points with a **List.GetItemAtIndex** node. Note: Similar to a previous step, we can also query the list with **Code Block**, using a line of `points[1];`
+> 1. **List.GetItemAtIndex** ノードを使用して、点の中央の行を選択します。前の手順と同様に、**Code Block** ノードで `points[1];` というコード行を指定してクエリーを実行することもできます。
 
-So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
+ここまでの手順で、中心点のクエリーを実行し、中心点を上方向に移動しました。ここでは、この中心点を元のデータ構造に戻します。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 04.jpg>)
 
-> 1. First, we want to replace the item of the list we isolated in a previous step.
-> 2. Using **List.ReplaceItemAtIndex**, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (**Geometry.Translate**).
-> 3. The output shows that we've input the moved point into the middle item of the list.
+> 1. 最初に、前の手順で分離したリストの項目を置き換えます。
+> 2. **List.ReplaceItemAtIndex** ノードで「_2_」というインデックス値を使用し、置き換える項目を対象となる点(**Geometry.Translate** ノードの Geometry 出力)に接続して、中心点を置き換えます。
+> 3. 対象の点がリストの中央の項目に入力されたことが出力として表示されます。
 
-Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
+ここでは、前の演習で変更したリストを、元のデータ構造であるリストのリストに戻します。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 05.jpg>)
 
-> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
-> 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
-> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
+> 1. 前の演習と同様に、**List.ReplaceItemAtIndex** ノードを使用して、中央のリストを変更したリストで置き換えます。
+> 2. これら 2 つのノードのインデックスを定義する **Code Block**__ ノードの値は、それぞれ 1 と 2 であることに注意してください。これらの値は、**Code Block** ノードで指定した元のクエリー(_points[1][2]_)に対応しています。
+> 3. _インデックス 1_ の位置でリストを選択すると、Dynamo のプレビューでデータ構造がハイライト表示されます。 これで、対象の点が元のデータ構造に正しく移動されたことになります。
 
-There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
+上図の点のセットからサーフェスを作成する方法はいくつかあります。ここでは、複数の曲線をまとめてロフトしてサーフェスを作成してみましょう。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 06.jpg>)
 
-> 1. Create a **NurbsCurve.ByPoints** node and connect the new data structure to create three nurbs curves.
+> 1. **NurbsCurve.ByPoints** ノードを作成し、新しいデータ構造を接続して、3 つの NURBS 曲線を作成します。
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 07.jpg>)
 
-> 1. Connect a **Surface.ByLoft** to the output from **NurbsCurve.ByPoints**. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!
+> 1. **Surface.ByLoft** ノードを **NurbsCurve.ByPoints** ノードの出力に接続します。これで、サーフェスが変更されました。ジオメトリの元の _Z_ 値を変更することができます。この値を変更して、ジオメトリがどのように変化するかを確認してください。

@@ -1,46 +1,46 @@
-# Primer User Guide, Dynamo Community & Platform
+# Primer ユーザ ガイド、Dynamo コミュニティ、プラットフォーム
 
-This Primer includes chapters developed with Mode Lab. These chapters focus on the essentials you will need to get up and running developing your own visual programs with Dynamo and key insights on how to take Dynamo further.&#x20;
+この Primer には、Mode Lab で作成された各章から構成されています。各章では、Dynamo を使用してビジュアル プログラミング開発を行うために必要な基本的知識と、その知識を応用するための重要な情報を紹介しています。&#x20;
 
-### Primer User Guide
+### Primer ユーザ ガイド
 
-This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and key concepts can be found in the following sections, we recommend new users to cover the following topics:
+このガイドは、さまざまな背景やスキル レベルを持つ読者に役立つよう作られています。Dynamo の設定、ユーザ インタフェース、および主要な概念に関する一般的な概要については、次のセクションを参照してください。新規ユーザは次のトピックを参照することをお勧めします。
 
-* [What is Dynamo & How Does It Work?](1-what-is-dynamo.md)
-* [Setup for Dynamo](../2\_setup\_for\_dynamo/)
-* [User Interface](../3\_user\_interface/)
-* [Nodes and Wires](../4\_nodes\_and\_wires/)
+* [Dynamo とは、その動作の仕組みとは](1-what-is-dynamo.md)
+* [Dynamo のセットアップ](../2\_setup\_for\_dynamo/)
+* [ユーザ インタフェース](../3\_user\_interface/)
+* [ノードとワイヤ](../4\_nodes\_and\_wires/)
 
-For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
+特定のノードやその背後にある概念など、各要素についてより深く理解を深めたいユーザについては、それぞれの章で基礎的事項を説明します。
 
-* [Essential Nodes & Concepts](../5\_essential\_nodes\_and\_concepts/)
+* [基本ノードと概念](../5\_essential\_nodes\_and\_concepts/)
 
-If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
+Dynamo ワークフローのデモンストレーション確認用に、「サンプル ワークフロー」セクションにいくつかのグラフを追加しました。独自の Dynamo グラフを作成するには、添付されている手順に従います。
 
-* [Parametric Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
+* [パラメータを使用する花瓶](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
 ![](<./images/1-2/vase1.gif>)
 
-* [Attractor points](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
+* [アトラクタ ポイント](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](<./images/1-2/attractor1.gif>)
 
 {% hint style="info" %}
-There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each page.
+Dynamo に関するトピックについては、後の章で詳しく説明します。また、トピックに合わせた演習も用意しています。**演習**は、通常各ページの最後のセクションにあります。
 {% endhint %}
 
-### The Community
+### コミュニティ
 
-Dynamo wouldn't be what it is without a strong group of avid users and active contributors. Engage the community by following the [Blog](http://dynamobim.org/blog/), adding your work to the Gallery, or discussing Dynamo in the [Forum](https://forum.dynamobim.com).
+現在の Dynamo があるのは、熱心なユーザと開発者のコミュニティによって支えられてきたからです。開発チームの[ブログ](http://dynamobim.org/blog/)を読む、ギャラリーに自分の作品を追加する、[フォーラム](https://forum.dynamobim.com)で Dynamo について話し合うなどの形でコミュニティに参加しましょう。
 
 ![The Forum](./images/1-2/02-Community.png)
 
-### The Platform
+### プラットフォーム
 
-Dynamo is envisioned as a visual programming tool for designers, allowing us to make tools that make use of external libraries or any Autodesk product that has an API. With Dynamo Sandbox we can develop programs in a "Sandbox" style application - but the Dynamo ecosystem continues to grow.
+Dynamo は、設計者向けのビジュアル プログラミング ツールとして設計されており、外部ライブラリを使用するツールや、API をサポートしているオートデスク製品を使用するツールを作成することができます。Dynamo Sandbox では、「サンドボックス」スタイルでプログラムを開発できます。Dynamo を取り巻くユーザや開発者のコミュニティは拡大を続けています。
 
-The source code for the project is open-source, enabling us to extend its functionality to our hearts content. Check out the project on GitHub and browse the Works in Progress of users customizing Dynamo.
+プロジェクトのソース コードはオープン ソースとして公開されているため、個々のニーズに合わせて機能を拡張することができます。GitHub のプロジェクトにアクセスして、ユーザによる Dynamo のカスタマイズ作業の進行状況を確認してください。
 
-![The Repo](./images/1-2/03-TheRepo.png)
+![Dynamo リポジトリ](./images/1-2/03-TheRepo.png)
 
-> Browse, Fork, and start extending Dynamo for your needs
+> プロジェクトにアクセスしてプロジェクトをフォークし、Dynamo をニーズに合わせて拡張することができます。

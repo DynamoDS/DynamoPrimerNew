@@ -1,16 +1,16 @@
-# Example Files
+# サンプル ファイル
 
-#### These example files accompany the Dynamo Primer, and are organized according to Chapter and Section.
+#### ここでは、Dynamo Primer に付属しているサンプル ファイルを、章とセクションで分類して記載します。
 
-## Essential Nodes & Concept
+## 基本ノードと概念
 
-### Geometry for Computational Design
+### 計算設計用のジオメトリ
 
-#### Geometry Overview
+#### ジオメトリの概要
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-#### Vector, Plane & Coordinate System
+#### ベクトル、平面、座標系
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
@@ -18,53 +18,53 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-#### Points
+#### 点
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-#### Curves
+#### 曲線
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-#### Surface
+#### Surface ノード
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/5/Surfaces.zip" %}
 
-#### Solids
+#### ソリッド
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### The Building Blocks of Programs
+### プログラムの構成要素
 
-#### Data
+#### データ
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-#### Math
+#### Math ノード
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-#### Logic
+#### ロジック
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
-#### Strings
+#### 文字列
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-#### Color
+#### Color ノード
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-### Designing with Lists
+### リストを使用した設計
 
-#### What's a List
+#### リストの概要
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/1/Lacing.dyn" %}
 
-#### Working with Lists
+#### リストの操作
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-Operations.dyn" %}
 
@@ -78,7 +78,7 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
-#### Lists of Lists
+#### リストのリスト
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
@@ -94,35 +94,35 @@
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/3/ReplaceItems.dyn" %}
 
-#### n-Dimensional Lists
+#### N 次元のリスト
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-### Dictionaries in Dynamo
+### Dynamo のディクショナリ
 
-#### Revit Use-Cases
+#### Revit の使用事例
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-5/4/roomDictionary.dyn" %}
 
-## Custom Nodes & Packages
+## カスタム ノードとパッケージ
 
-### Custom Nodes
+### カスタム ノード
 
-#### Creating a Custom Node
+#### カスタム ノードの作成
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-1/2/UV-CustomNode.zip" %}
 
-#### Publishing to Your Library
+#### ライブラリへのパブリッシュ
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-1/3/PointsToSurface.dyf" %}
 
-### Packages
+### パッケージ
 
-#### Package Case Study - Mesh Toolkit
+#### パッケージのケース スタディ - Mesh Toolkit
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/2/MeshToolkit.zip" %}
 
-#### Publishing a Package
+#### パッケージをパブリッシュする
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/4/MapToSurface.zip" %}
 
@@ -130,51 +130,51 @@
 
 {% file src="../6_custom_nodes_and_packages/datasets/6-2/5/ZeroTouchImages.zip" %}
 
-## Dynamo for Revit
+## Revit で Dynamo を使用する
 
-#### Selecting
+#### 選択
 
 {% file src="../7_dynamo_for_revit/datasets/2/Revit-Selecting.zip" %}
 
-#### Editing
+#### 編集
 
 {% file src="../7_dynamo_for_revit/datasets/3/Revit-Editing.zip" %}
 
-#### Creating
+#### 作成
 
 {% file src="../7_dynamo_for_revit/datasets/4/Revit-Creating-DirectShape.zip" %}
 
-#### Customizing
+#### カスタマイズ
 
 {% file src="../7_dynamo_for_revit/datasets/5/Revit-Customizing.zip" %}
 
-#### Documenting
+#### 設計図書の作成
 
 {% file src="../7_dynamo_for_revit/datasets/6/Revit-Documenting.zip" %}
 
-## Coding in Dynamo
+## Dynamo でのコーディング
 
-### Code Blocks and DesignScript
+### Code Blocks と DesignScript
 
-#### DesignScript Syntax
+#### DesignScript 構文
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-#### Shorthand
+#### 省略表記
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-#### Functions
+#### 関数
 
 {% file src="../8_coding_in_dynamo/datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
 ### Python
 
-#### Python Nodes
+#### Python Script ノード
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/1/Python_Custom-Node.dyn" %}
 
-#### Python and Revit
+#### Python と Revit
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-Doc.dyn" %}
 
@@ -182,24 +182,24 @@
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-## Best Practices
+## ベスト プラクティス
 
-### Graph Strategies
+### 見やすいプログラムを作成するためのガイドライン
 
 {% file src="../9_best_practices/datasets/1/RoofDrainageSim.zip" %}
 
-### Scripting Strategies
+### スクリプト作成のガイドライン
 
 {% file src="../.gitbook/assets/SteepestPath.dyn" %}
 
-## Sample Workflows
+## サンプル ワークフロー
 
-### Getting Started Workflows
+### スタートアップ ワークフロー
 
-#### Parametric Vase
+#### パラメータを使用する花瓶
 
 {% file src="../10_sample_workflow/datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-#### Attractor Points
+#### アトラクタ ポイント
 
 {% file src="../10_sample_workflow/datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}

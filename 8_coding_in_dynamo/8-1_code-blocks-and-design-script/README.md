@@ -1,6 +1,6 @@
-# Code Blocks and DesignScript
+# コード ブロックと DesignScript
 
-The code block is a unique feature in Dynamo that dynamically links a visual programming environment with a text-based one. The code-block has access to all of the Dynamo nodes and can define an entire graph in one node. Read this chapter closely, as the code block is a fundamental building block of Dynamo.
+コード ブロックは、ビジュアル プログラミング環境をテキストベースの環境に動的にリンクさせる、Dyanamo 独自の機能です。コード ブロックでは、1 つのノードですべての Dynamo ノードにアクセスし、グラフ全体を定義することができます。コード ブロックは Dynamo の基本的な要素です。この章をよく読んで、コード ブロックを理解してください。
 
 ![](<../images/8-1/Code Blocks-01.jpg>)
 

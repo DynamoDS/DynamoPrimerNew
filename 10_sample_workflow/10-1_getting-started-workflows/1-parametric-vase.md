@@ -2,103 +2,103 @@
 description: suggested exercise
 ---
 
-# Parametric Vase
+# パラメータを使用する花瓶
 
-Creating a parametric vase is a great way to start learning Dynamo.
+パラメータを使用する花瓶の作成は、Dynamo 学習の出発点に最適です。
 
-This workflow will teach you how to:
+このワークフローでは、次の方法を学習します。
 
-* Use number sliders to control variables in your design.
-* Create and modify geometric elements using nodes.
-* Visualize design results in real-time.
+* 数値スライダを使用して、設計の変数をコントロールする。
+* ノードを使用してジオメトリ要素を作成および修正する。
+* 設計の結果をリアルタイムで視覚化する。
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 
-## Defining Our Objectives
+## 目標を定義する
 
-Before jumping into dynamo let's conceptually design our vase.
+Dynamo を始める前に、概念上の花瓶をデザインします。
 
-Let's say we are going to design a clay vase that takes into account manufacturing practices used by ceramists. Ceramists normally use a pottery wheel to fabricate cylindrical vases. Then, by applying pressure on various heights of the vase they can alter the shape of the vase and create varied designs.
+陶芸家の製造基準を考慮した陶器製の花瓶を設計するとします。陶芸家は通常、筒状の花瓶を作るためにろくろを使います。そして、花瓶にさまざまな高さの圧力をかけることにより、花瓶の形状を変えたり、さまざまなデザインを作成したりすることができます。
 
-We would use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
+私たちも同様の方法で花瓶を定義します。異なる高さと半径を持つ 4 つの円を作成し、これらの円をロフトしてサーフェスを作成します。
 
 ![](../images/10-1/1/vase2.png)
 
-## Getting Started
+## はじめに
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-We need the nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a node that does so. Use the **Search field** or browse through the **Library** to find the **Circle.ByCenterPointRadius** node and add it to the Workspace
+Dynamo が実行するアクションの順番を表すノードが必要になります。ここでは円を作成することになるため、最初に、円を作成するノードを探しましょう。**[検索]フィールド** を使用するか、[**ライブラリ**] を参照して **Circle.ByCenterPointRadius** ノードを検索し、ワークスペースに追加します
 
 ![](../images/10-1/1/vase8.png)
 
-> 1. Search > "Circle..."
-> 2. Select > "ByCenterPointRadius"
-> 3. Node will appear in workspace
+> 1. 検索 > 「Circle...」
+> 2. 選択 > [ByCenterPointRadius]
+> 3. ワークスペースにノードが表示されます
 
-Let's take a closer look at this node. On the left side, you have the node's inputs (_centerPoint_ and _radius_) and on the right side, you have the node's output (Circle). Notice that the outputs have a light blue line. This means that the input has a default value. To get more information about the input hover over its name. The _radius_ input needs a double input and has a default value of 1.
+このノードについて詳しく見て行きましょう。左側にはノードの入力(_centerPoint_ と _radius_)があり、右側にはノードの出力(Circle)があります。出力が水色の線で表示されています。これは、入力に既定値があることを意味します。入力に関する詳細情報を取得するには、名前の上にカーソルを合わせます。_radius_ 入力には 2 重入力が必要で、既定値は 1 です。
 
 ![](../images/10-1/1/vase10.png)
 
-We will leave the default value of _centerPoint_ but add a **Number Slider** to control the radius. As we did with the **Circle.ByCenterPointRadius** node, use the library to search for **Number Slider** and add it to your graph.
+既定値の _centerPoint_ をそのままにして、半径をコントロールする **Number Slider** を追加します。**Circle.ByCenterPointRadius** ノードで行ったように、ライブラリを使用して **Number Slider** を検索し、グラフに追加します。
 
-This node is a bit different than our previous node as it contains a slider. You can use the interface to change the output value of the slider.
+このノードはスライダを含んでいるため、前のノードとは少し異なります。インタフェースを使用して、スライダの出力値を変更できます。
 
 ![](<../images/10-1/1/vase13 (1).gif>)
 
-The slider can be configured using the dropdown button at the left of the node. Let's limit the slider to a maximum value of 15.
+スライダは、ノードの左側にあるドロップダウン ボタンを使用して設定できます。スライダを最大値 15 に制限してみましょう。
 
 ![](../images/10-1/1/vase11.png)
 
-Let's place it on the left of our **Circle.ByCenterPointRadius** node and connect both nodes by selecting the **Number Slider** output and connecting it to the Radius input.
+**Circle.ByCenterPointRadius** ノードの左側に配置し、**Number Slider** 出力を選択して Radius 入力に接続することで、両方のノードを接続します。
 
 ![](../images/10-1/1/vase12.png)
 
-Let's also change the Number Slider name to "Top Radius" by double-clicking on the node's name.
+また、ノード名をダブルクリックして、Number Slider 名を「Top Radius」に変更します。
 
 ![](../images/10-1/1/vase14.png)
 
-## Next steps
+## 次のステップ
 
-Let's continue adding some nodes and connections to our logic to define our vase.
+続けて、いくつかのノードと接続をロジックに追加して花瓶を定義しましょう。
 
-### Creating Circles of Different Radii
+### 異なる半径の円を作成する
 
-Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
+これらのノードを 4 回コピーして、これらの円がサーフェスを定義するようにし、次に示すように Number Slider の名前を変更します。
 
 ![](<../images/10-1/1/vase4 (1) (1).png>)
 
-> 1. Circles are created by a center point and a radius
+> 1. 円は、中心点と半径によって作成されます
 
-### Moving Circles Through the Vase Height
+### 花瓶の高さまで円を移動させる
 
-We are missing a key parameter to our vase, its height. In order to control the vase's height, we create another number slider. We also add a **Code Block** node. Code blocks can help as add personalized code snippets to our workflow. We will use the code block to multiply the height slider by different factors so that we can position our circles along the vase's height.
+花瓶の高さに対するキー パラメータが欠落しています。花瓶の高さをコントロールするために、別の数値スライダを作成します。また、**Code Block** ノードも追加します。Code Block は、ワークフローにパーソナライズされたコード スニペットを追加する場合に役立ちます。Code Block を使用して高さスライダにさまざまな係数を掛け、花瓶の高さに沿って円を配置できるようにします。
 
 ![](<../images/10-1/1/vase15 (1).png>)
 
-We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
+次に、**Geometry.Translate** ノードを使用して、円を目的の高さに配置します。花瓶全体に円を分布させるため、Code Block を使用して高さパラメータに係数を掛けます。
 
 ![](../images/10-1/1/vase5.png)
 
-> 2\. Circles are translated (moved) by a variable in the z axis.
+> 2\. 円は、Z 軸の変数によって変換(移動)されます。
 
-### Creating the Surface
+### サーフェスを作成する
 
-In order to create a surface using the **Surface.ByLoft** node we need to combine all of our translated circles into a list. We use the **List.Create** to combine all of our circles into a single list, and then finally output this list to the **Surface.ByLoft** node to view results.
+**Surface.ByLoft** ノードを使用してサーフェスを作成するには、変換されたすべての円をリストに結合する必要があります。**List.Create** ノードを使用して、すべての円を単一のリストに結合し、最後にこのリストを **Surface.ByLoft** ノードに出力して結果を表示します。
 
-Let's also turn off the preview in other nodes to only display the Surface.ByLoft display.
+また、他のノードのプレビューをオフにして、Surface.ByLoft 表示のみを表示します。
 
 ![](<../images/10-1/1/vase6 (1) (1).png>)
 
-> 3\. A surface is created by lofting the translated circles.
+> 3\. 変換された円をロフトして、サーフェスを作成します。
 
-## Results
+## 結果
 
-Our workflow is ready! We can now use the **Number Sliders** we defined in our script to create different vase designs.
+ワークフローの準備ができました。これで、スクリプトで定義した **Number Slider** を使用して、さまざまな花瓶のデザインを作成できるようになりました。
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 

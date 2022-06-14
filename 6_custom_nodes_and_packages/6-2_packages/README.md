@@ -1,5 +1,5 @@
-# Packages
+# パッケージ
 
-Once you have created a few Custom Nodes the very next step is to begin organizing and publishing them by way of Packages - a convenient way to store and share your nodes with the Dynamo Community.
+前の章では、いくつかのカスタム ノードを作成しました。ここでは、パッケージを使用してカスタム ノードを整理し、パブリッシュしてみましょう。パッケージは、独自のノードを保存し、Dynamo コミュニティと共有できる便利な方法です。
 
 ![IMAGE](<../images/6-2/packages cover.jpg>)

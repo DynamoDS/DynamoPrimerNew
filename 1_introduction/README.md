@@ -1,5 +1,5 @@
-# Introduction
+# はじめに
 
-From its origins as an add-on for Building Information Modeling in Revit, Dynamo has matured to become many things. Above all else it is a platform, enabling designers to explore visual programming, solve problems, and make their own tools. Let's start our journey with Dynamo by setting some context - what is it and how do I approach using it?
+Revit の ビルディング インフォメーション モデリング(BIM)用アドオンとして開発が始まった Dynamo は、さまざまな機能を持つソフトウェアに成長しました。設計者は、開発プラットフォームである Dynamo を使用して問題を解決し、独自のツールを作成することができます。コンテキストを設定して、Dynamo を使用してみましょう。このセクションでは、Dynamo の概要と使用方法について説明します。
 
 ![Dynamo Ecosystem](<./images/intro dynamo cover.jpg>)

@@ -1,145 +1,145 @@
-# Shorthand
+# 省略表記
 
-### Shorthand
+### 省略表記
 
-There are a few basic shorthand methods in the code block which, simply put, make data management _a lot_ easier. We'll break down the basics below and discuss how this shorthand can be used both for creating and querying data.
+Code Block にはデータ管理を_大幅に_容易にする基本的な省略表記方法がいくつかあります。ここでは基本の概要を示し、この省略表記をデータの作成とクエリーの両方に使用する方法を説明します。
 
-| **Data Type**          | **Standard Dynamo**                                      | **Code Block Equilvalent**                                    |
+| **データ タイプ** | **標準 Dynamo** | **Code Block の同等表記** |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Numbers                | ![](<../images/8-1/3/01 node - numbers.jpg>)       | ![](<../images/8-1/3/01 codeblock - numbers.jpg>)       |
-| Strings                | ![](<../images/8-1/3/02 node - string.jpg>)        | ![](<../images/8-1/3/02 codeblock- string.jpg>)         |
-| Sequences              | ![](<../images/8-1/3/03 node- sequence.jpg>)       | ![](<../images/8-1/3/03 codeblock- sequence.jpg>)       |
-| Ranges                 | ![](<../images/8-1/3/04 node- range.jpg>)          | ![](<../images/8-1/3/04 codeblock - range.jpg>)         |
-| Get Item at Index      | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
-| Create List            | ![](<../images/8-1/3/06 node - list create.jpg>)   | ![](<../images/8-1/3/06 codeblock - list create.jpg>)   |
-| Concatenate Strings    | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
-| Conditional Statements | ![](<../images/8-1/3/08 node - conditional.jpg>)   | ![](<../images/8-1/3/08 codeblock - conditional.jpg>)   |
+| 数値 | ![](<../images/8-1/3/01 node - numbers.jpg>) | ![](<../images/8-1/3/01 codeblock - numbers.jpg>) |
+| 文字列 | ![](<../images/8-1/3/02 node - string.jpg>) | ![](<../images/8-1/3/02 codeblock- string.jpg>) |
+| シーケンス | ![](<../images/8-1/3/03 node- sequence.jpg>) | ![](<../images/8-1/3/03 codeblock- sequence.jpg>) |
+| 範囲 | ![](<../images/8-1/3/04 node- range.jpg>) | ![](<../images/8-1/3/04 codeblock - range.jpg>) |
+| インデックスでの項目の取得 | ![](<../images/8-1/3/05 node - list get item.jpg>) | ![](<../images/8-1/3/05 codeblock - list get item.jpg>) |
+| リストの作成 | ![](<../images/8-1/3/06 node - list create.jpg>) | ![](<../images/8-1/3/06 codeblock - list create.jpg>) |
+| 文字列の連結 | ![](<../images/8-1/3/07 node - string concat.jpg>) | ![](<../images/8-1/3/07 codeblock - string concat.jpg>) |
+| 条件ステートメント | ![](<../images/8-1/3/08 node - conditional.jpg>) | ![](<../images/8-1/3/08 codeblock - conditional.jpg>) |
 
-### Additional Syntax
+### その他の構文
 
 |                                     |                           |                                                                                          |
 | ----------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------- |
-| **Node(s)**                         | **Code Block Equivalent** | **Note**                                                                                 |
-| Any operator (+, &&, >=, Not, etc.) | +, &&, >=, !, etc.        | Note that “Not” becomes “!” but the node is called “Not” to distinguish from “Factorial” |
-| Boolean True                        | true;                     | Note lower case                                                                          |
-| Boolean False                       | false;                    | Note lower case                                                                          |
+| **ノード** | **Code Block の同等表記** | **注** |
+| 演算子(+、&&、>=、Not など) | +、&&、>=、 ! など | 「Not」は「!」になりますが、「Factorial」(階乗)と区別するためノードは「Not」と呼ばれます |
+| ブールの True | true; | 小文字を使用します |
+| ブールの False | false; | 小文字を使用します |
 
-### Ranges and Sequences
+### 範囲とシーケンス
 
-The method for defining ranges and sequences can be reduced to basic shorthand. Use the image below as a guide to the ".." syntax for defining a list of numerical data with code block. After getting the hang of this notation, creating numerical data is a really efficient process:
+基本的な省略表記を組み合わせることで、範囲とシーケンスを設定することができます。下記の画像を「..」構文のガイドとして参照し、Code Block を使用して数値データのリストを設定してみましょう。この表記に慣れると、数値データを効率的に作成できるようになります。
 
 ![](<../images/8-1/3/shorthand - ranges and sequences.jpg>)
 
-> 1. In this example, a number range is replaced by basic **Code Block** syntax defining the `beginning..end..step-size;` . Represented numerically, we get: `0..10..1;`
-> 2. Notice that the syntax `0..10..1;` is equivalent to `0..10;` A step-size of 1 is the default value for the shorthand notation. So `0..10;` will give a sequence from 0 to 10 with a step-size of 1.
-> 3. The _Sequence_ example is similar, except we use a "#" to state that we want 15 values in the list, rather than a list which goes up to 15. In this case, we are defining: `beginning..#ofSteps..step-size:` The actual syntax for the sequence is `0..#15..2`
-> 4. Using the _"#"_ from the previous step, we now place it in the _"step-size"_ portion of the syntax. Now, we have a _number range_ spanning from the _"beginning"_ to the _"end"_ and the _"step-size"_ notation evenly distributes a number of values between the two: `beginning..end..#ofSteps`
+> 1. この例では、数値範囲を `beginning..end..step-size;` の基本的な **Code Block** 構文で置き換えて設定します。数値で表すと、`0..10..1;` になります。
+> 2. 構文 `0..10..1;` は `0..10;` と同等です。ステップサイズの 1 は、省略表記の既定値です。つまり、`0..10;` はステップサイズが 1 であるシーケンス 0 から 10 を表しています。
+> 3. _シーケンス_の例も同様です。ただし、「#」を使用して、15 までの値を含むリストではなく、15 個の値を含むリストを指定しています。このケースでは、`beginning..#ofSteps..step-size:` を定義しています。シーケンスの実際の構文は `0..#15..2` です。
+> 4. 今度は前の手順の「_#_」を構文の _step-size_ 部分に配置してみましょう。これで、_数値範囲_は _beginning_ から _end_ に設定され、これらの 2 つの間の値が _step-size_ 表記に指定された値で均等に分割されます: `beginning..end..#ofSteps`
 
-### Advanced Ranges
+### 高度な範囲
 
-Creating advanced ranges allows us to work with list of lists in a simple fashion. In the examples below, we're isolating a variable from the primary range notation, and creating another range of that list.
+高度な範囲を作成すると、リストのリストを簡単な方法で使用できます。次の例では、メイン範囲の表記から変数を分離して、このリストに別の範囲を作成します。
 
 ![](<../images/8-1/3/shorthand - advance range 01.jpg>)
 
-> 1\. Creating nested ranges, compare the notation with a "#" vs. the notation without. The same logic applies as in basic ranges, except it gets a little more complex.
+> 1\. ネストされた範囲を作成して、「#」が指定されている表記と指定されていない表記とを比較してみましょう。ロジックは基本的な範囲と同じですが、多少複雑になります。
 >
-> 2\. We can define a sub-range at any place within the primary range, and notice that we can have two sub-ranges as well.
+> 2\. サブ範囲はメイン範囲内の任意の場所に設定できます。また、2 つのサブ範囲を設定することもできます。
 >
-> 3\. By controlling the "end" value in a range, we create more ranges of differing lengths.
+> 3\. 範囲内の「end」値をコントロールすることにより、長さが異なる範囲を追加で作成できます。
 
-As a logic exercise, compare the two shorthands above and try to parse through how _subranges_ and the _#_ notation drive the resultant output.
+ロジックの演習として上記の 2 つの省略表記を比較し、_サブ範囲_と _#_ 表記が出力をどのようにコントロールしているかを読み解いてください。
 
 ![](<../images/8-1/3/shorthand - advance range 02.jpg>)
 
-### Make Lists and Get Items From a List
+### リストを作成してリストから項目を取得する
 
-In addition to making lists with shorthand, we can also create lists on the fly. These list can contain a wide range of element types and can also be queried (remember, lists are objects in themselves). To summarize, with code block you make lists and query items from a list with brackets (a.k.a. “square brackets”):
+リストは省略表記を使用して作成できる他、すばやく作成することも可能です。これらのリストには幅広い要素タイプを含めることができ、クエリーを実行することも可能です(リストはリスト自体がオブジェクトです)。簡単に言うと、Code Block でブラケット(角括弧)を使用してリストを作成し、リスト内の項目のクエリーを実行します。
 
 ![](<../images/8-1/3/shorthand - list & get from list 01.jpg>)
 
-> 1\. Create lists quickly with strings and query them using the item index.
+> 1\. 文字列を使用してリストをすばやく作成し、項目のインデックスを使用してクエリーを実行します。
 >
-> 2\. Create lists with variables and query using the range shorthand notation.
+> 2\. 変数を使用してリストを作成し、範囲の省略表記を使用してクエリーを実行します。
 
-And managing with nested lists is a similar process. Be aware of the list order and recall using multiple sets of square brackets:
+ネストされたリストを管理するプロセスは同様です。リストの順番に配慮し、複数の角括弧のセットを使用します。
 
 ![](<../images/8-1/3/shorthand - list & get from list 02.jpg>)
 
-> 1\. Define a list of lists.
+> 1\. リストのリストを設定します。
 >
-> 2\. Query a list with single bracket notation.
+> 2\. 1 つの角括弧の表記を使用してクエリーを実行します。
 >
-> 3\. Query an item with double bracket notation.
+> 3\. 2 つの角括弧の表記を使用して項目のクエリーを実行します。
 
-## Exercise: Sine Surface
+## 演習: 正弦サーフェス
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-In this exercise, we will flex our new shorthand skills to create a funky-cool eggshell surface defined by ranges and formulas. During this exercise, notice how we use code block and existing Dynamo nodes in tandem: we use the code block for the heavy data lifting while the Dynamo nodes are visually laid out for legibility of the definition.
+この演習では、新しい省略表記のスキルを使用して範囲と式を設定し、一風変わった卵型のサーフェスを作成します。この演習では、Code Block と既存の Dynamo ノードを並行して使用する方法を学習します。Dynamo ノードを視覚的に配置して設定を確認しながら、Code Block を使用して大きなデータを処理します。
 
-Start by creating a surface by connecting the nodes above. Instead of using a number node to define width and length, double click on the canvas and type `100;` into a code block
+まず上記のノードを接続してサーフェスを作成します。数値ノードを使用して幅と長さを設定する代わりに、キャンバスをダブルクリックして、Code Block に `100;` と入力します。
 
 ![](<../images/8-1/3/shorthand - exercise 01.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 02.jpg>)
 
-> 1. Define a range between 0 and 1 with 50 divisions by typing `0..1..#50` into a **Code Block**.
-> 2. Connect the range into **Surface.PointAtParameter**, which takes u and v values between 0 and 1 across the surface. Remember to change the Lacing to Cross Product by right clicking on the **Surface.PointAtParameter** node.
+> 1. **Code Block** に `0..1..#50` と入力して、0 から 1 の範囲を 50 個に分割するように設定します。
+> 2. 範囲を **Surface.PointAtParameter** ノードに接続します。これは 0 から 1 の範囲内にある u と v の値を取得してサーフェス全体に設定します。**Surface.PointAtParameter** ノードを右クリックし、レーシングを[外積]に変更します。
 
-In this step, we employ our first function to move the grid of points up in the Z. This grid will drive a generated surface based on the underlying function. Add new nodes as shown in image below
+この手順では、最初の関数を適用して、グリッドを Z の正の向きに移動します。このグリッドは基盤となる関数に基づいて生成されるサーフェスをコントロールします。下図に示すように、新しいノードを追加します。
 
 ![](<../images/8-1/3/shorthand - exercise 03.jpg>)
 
-> 1. Rather than using a formula node, we use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
+> 1. 式ノードを使用する代わりに、**Code Block** を使用して `(0..Math.Sin(x*360)..#50)*5;` を指定します。この式を簡単に分割して説明するために、式内に範囲を設定します。この式は正弦関数です。正弦関数は Dynamo で角度(度)入力を受け取ります。このため、完全な正弦波を取得するには、x 値(0 から 1 までの入力範囲)を 360 で乗算します。次に、各行のコントロール グリッドの点と同じ数だけ分割するため、#50 を指定して 50 個のサブディビジョンを設定します。最後に、Dynamo プレビューで効果を確認できるようにするため、累乗の指数に 5 を指定して変換の振幅を大きくします。
 
 ![](<../images/8-1/3/shorthand - exercise 04.jpg>)
 
-> 1. While the previous **Code Block** worked fine, it wasn't completely parametric. We want to dynamically drive its parameters, so we'll replace the line from the previous step with `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;`. This gives us the ability to define these values based on inputs.
+> 1. 以前の **Code Block** は正常に動作しましたが、完全にパラメータではありませんでした。動的にパラメータをコントロールするため、前の手順の行を `(0..Math.Sin(x*360*cycles)..#List.Count(x))*amp;` に置き換えます。こうすることで、これらの値を入力に基づいて設定できるようになります。
 
-By changing the sliders (ranging from 0 to 10), we get some interesting results.
+スライダ(範囲 0 から 10)を変更して、どのような結果が生じるか確認します。
 
 ![](<../images/8-1/3/shorthand - exercise 05.gif>)
 
 ![](<../images/8-1/3/shorthand - exercise 06.jpg>)
 
-> 1. By doing a transpose on the number range, we reverse the direction of the curtain wave: `transposeList = List.Transpose(sineList);`
+> 1. 数値範囲を転置することにより、カーテン ウェーブの方向を反転します: `transposeList = List.Transpose(sineList);`。
 
 ![](<../images/8-1/3/shorthand - exercise 07.jpg>)
 
-> 1. We get a distorted eggshell surface when we add the sineList and the tranposeList: `eggShellList = sineList+transposeList;`
+> 1. sineList と tranposeList を追加すると、歪曲した卵型のサーフェスが生成されます: `eggShellList = sineList+transposeList;`。
 
-Let's change the sliders values specified below to 'calm the waters' of this algorithm.
+以下に指定するスライダの値を変更して、このアルゴリズムをなだらかにします。
 
 ![](<../images/8-1/3/shorthand - exercise 08.jpg>)
 
-Last, let's query isolated parts of the data with the Code Block. To regenerate the surface with a specific range of points, add the code block above between the **Geometry.Translate** and **NurbsSurface.ByPoints** node. This has the line of text: `sineStrips[0..15..1];`. This will select the first 16 rows of points (out of 50). Recreating the surface, we can see that we've generated an isolated portion of the grid of points.
+最後に、Code Block を使用して、データの一部のクエリーを実行しましょう。特定の範囲の点を指定してサーフェスを再生成するには、**Geometry.Translate** ノードと **NurbsSurface.ByPoints** ノードの間に上記の Code Block ノードを追加します。`sineStrips[0..15..1];` が指定されています。これにより、50 行の最初の 16 行の点が選択されます。サーフェスを再作成すると、点のグリッドの一部が分離されて生成されていることがわかります。
 
 ![](<../images/8-1/3/shorthand - exercise 09.jpg>)
 
 ![](<../images/8-1/3/shorthand - exercise 10.jpg>)
 
-> 1. In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
+> 1. 最後の手順では、この **Code Block** をよりパラメトリックなものにするため、範囲 0 から 1 のスライダを使用してクエリーをコントロールします。これは、次のコード行で行います。`sineStrips[0..((List.Count(sineStrips)-1)*u)];`わかりにくいかもしれませんが、このコード行により、リストの長さを乗数 0 から 1 の値を使用してすばやくスケールできます。
 
-A value of `0.53` on the slider creates a surface just past the midpoint of the grid.
+スライダに `0.53` の値を設定すると、グリッドの中央をわずかに超えるサーフェスが作成されます。
 
 ![](<../images/8-1/3/shorthand - exercise 11.jpg>)
 
-And as expected, a slider of `1` creates a surface from the full grid of points.
+想定どおり、スライダを `1` に設定すると、すべての点のグリッドを使用してサーフェスが作成されます。
 
 ![](<../images/8-1/3/shorthand - exercise 12.jpg>)
 
-Looking at the visual graph, we can highlight the code blocks and see each of their functions.
+ビジュアル グラフを参照する際、Code Block をハイライト表示して Code Block ノードの各関数を確認できます。
 
 ![](<../images/8-1/3/shorthand - exercise 13.jpg>)
 
-> 1\. The first **Code Block** replaces the **Number** node.
+> 1\. 最初の **Code Block** ノードは **Number** ノードを置き換えます。
 >
-> 2\. The second **Code Block** replaces the **Number Range** node.
+> 2\. 2 番目の **Code Block** ノードは **Number Range** ノードを置き換えます。
 >
-> 3\. The third **Code Block** replaces the **Formula** node (as well as **List.Transpose**, **List.Count** and **Number Range**).
+> 3\. 3 番目の **Code Block** ノードは **Formula** ノード(および **List.Transpose**、**List.Count**、**Number Range** の各ノード)を置き換えます。
 >
-> 4\. The fourth **Code Block** queries a list of lists, replacing the **List.GetItemAtIndex** node.
+> 4\. 4 番目の **Code Block** ノードはリストのリストのクエリーを実行し、**List.GetItemAtIndex** ノードを置き換えます。

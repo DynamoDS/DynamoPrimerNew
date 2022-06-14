@@ -1,50 +1,50 @@
-# Custom Node Introduction
+# カスタム ノードの概要
 
-Custom Nodes are constructed by nesting other nodes and custom nodes inside of a "Dynamo Custom Node," which we can think of conceptually as a container. When this container node is executed in your graph, everything inside it will be executed to allow you to reuse and share a useful combination of nodes.
+カスタム ノードは、他のノードとカスタム ノードを「Dynamo のカスタム ノード」内にネストすることによって作成されます。Dynamo のカスタム ノードは、コンテナとして考えることができます。このコンテナ ノードをグラフ内で実行すると、コンテナ ノード内のすべてのノードが実行されるため、ノードを自由に組み合わせて再利用や共有を行うことができます。
 
-### Adapting to Change
+### 変更に対応する
 
-When you have multiple copies of a custom node in your graph, you can update all of them by editing the base custom node. This allows you to update your graph seamlessly by adapting to any changes that may occur in workflow or design.
+グラフ内でカスタム ノードの複数のコピーを使用している場合、基準となるカスタム ノードを編集することにより、一度にすべてのコピーを更新することができます。これにより、ワークフローや設計にどのような変更が生じた場合でも、グラフをシームレスに更新して変更に対応することができます。
 
-### Work Sharing
+### ワーク シェアリング
 
-Arguably the best feature of custom nodes is their work sharing capabilities. If a "power user" creates a complex Dynamo graph and hands it off to a designer who is new to Dynamo, he/she can condense the graph to the bare essentials for design interaction. The custom node can be opened to edit the internal graph, but the "container" can be kept simple. With this process, custom nodes allow Dynamo users to design a graph that is clean and intuitive.
+カスタム ノードの最も便利な機能は、ワーク シェアリング機能です。たとえば、Dynamo の上級ユーザが複雑な Dynamo グラフを作成し、そのグラフを Dynamo を初めて使用する設計者に渡したとします。この場合、グラフを渡されたユーザはそのグラフを簡素化し、設計についてのやり取りに必要な最小限の要素だけに絞り込むことができます。カスタム ノードを開いて内部のグラフを編集することができますが、「コンテナ」はシンプルな状態に保たれます。このプロセスにより、カスタム ノードを使用する Dynamo ユーザは、直感的で見やすいグラフを設計することができます。
 
 ![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
 
-### Many Ways to Build a Node
+### ノードを作成するさまざまな方法
 
-There are a wide variety of ways to build custom nodes in Dynamo. In the examples in this chapter, we'll create custom nodes directly from the Dynamo UI. If you are a programmer and you are interested in C# or Zero-Touch formatting, you can reference [this page ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)on the Dynamo Wiki for a more in-depth review.
+Dynamo では、さまざまな方法でカスタム ノードを作成することができます。この章の例では、Dynamo UI からカスタム ノードを直接作成します。C# や Zero-Touch の構文の詳細については、Dynamo Wiki の[こちらのページ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)を参照してください。
 
-### Custom Node Environment & Create Your First Custom Node
+### カスタム ノード環境を作成して最初のカスタム ノードを作成する
 
-Let's jump into the custom node environment and make a simple node to calculate a percentage. The custom node environment is different from the Dynamo graph environment, but the interaction is fundamentally the same. With that said, let's create our first custom node!
+カスタム ノード環境を実際に使用して、パーセンテージを計算する単純なノードを作成してみましょう。カスタム ノード環境は、Dynamo のグラフ環境とは異なりますが、インタラクションは基本的に同じです。では、最初のカスタム ノードを作成してみましょう。
 
-To create a Custom Node from scratch, Launch Dynamo and select Custom Node, or type Ctrl + Shift + N from the canvas.
+カスタム ノードを一から作成するには、Dynamo を起動して[カスタム ノード]を選択するか、キャンバスで[Ctrl]+[Shift]+[N]を押します。
 
 ![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
 
-Assign a name, description, and category in the Custom Node Properties dialog.
+[カスタム ノード プロパティ]ダイアログボックスで、カスタム ノードの名前、説明、カテゴリを入力します。
 
 ![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
 
-> 1. **Name:** Percentage
-> 2. **Description**: Calculate the percentage of one value in relation to another.
-> 3. **Category:** Math.Functions
+> 1. **名前:** Percentage
+> 2. **説明**: Calculate the percentage of one value in relation to another (一方の値に対するもう一方の値のパーセンテージを計算)
+> 3. **カテゴリ:** Math.Functions
 
-This will open a canvas with a yellow background, indicating that you are working inside a custom node. In this canvas you have access to all of the core Dynamo nodes, as well as the Input and Output nodes, which label the data flowing into and out of the custom node. They can be found in Input>Basic.
+キャンバスの背景色が黄色で表示されます。これは、カスタム ノードの内部を表しています。このキャンバス内では、Input ノードや Output ノードなど、Dynamo の核となるすべてのノードを使用することができます。この 2 つのノードにより、カスタム ノードでやり取りされるデータにラベルが付けられます。 これらは[Input] > [Basic]にあります。
 
 ![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
 
 ![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
 
-> 1. **Inputs:** Input nodes create input ports on the custom node. The syntax for an input node is _input\_name : datatype = default\_value(optional)._
-> 2. **Outputs:** Similar to inputs, these will create and name output ports on the custom node. Consider adding a **Custom Comment** to your Input and Output ports to hint at the Input and Output types. This is discussed in more detail in the [Creating Custom Nodes section](2-creating.md).
+> 1. **Input** ノードは、カスタム ノード上に入力ポートを作成します。入力ノードの構文は、_input\_name : datatype = default\_value(オプション)_です。
+> 2. **Output** ノードは、Input ノードと同様に、カスタム ノード上に出力ポートを作成して名前を付けます。**カスタム コメント**を入力ポートと出力ポートに追加して、入力タイプと出力タイプがわかるようにすることをお勧めします。 詳細については、「[カスタム ノードを作成する](2-creating.md)」セクションを参照してください。
 
-You can save this custom node as a .dyf (as opposed to the standard .dyn) file and it will automatically be added to your session and future sessions. You will find the custom node in your library from the Add-ons section.
+作成したカスタム ノードは、.dyf ファイルとして保存することができます(標準ノードの場合は .dyn ファイルとして保存されます)。保存したファイルは、現在のセッションと将来のセッションに自動的に追加されます。カスタム ノードは、ライブラリの[Add-ons]セクションにあります。
 
 ![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
 
-### Moving Forward
+### 今後の予定
 
-Now that we've created our first custom node, the next sections will dive deeper into custom node functionality and how to publish generic workflows. In the following section, we'll look at developing a custom node that transfers geometry from one surface to another.
+ここまでの手順では、最初のカスタム ノードを作成しました。これ以降の各セクションでは、カスタム ノードの機能と、一般的なワークフローをパブリッシュする方法について詳しく説明します。次のセクションでは、ジオメトリを特定のサーフェスから別のサーフェスに転送するカスタム ノードを作成する方法について説明します。

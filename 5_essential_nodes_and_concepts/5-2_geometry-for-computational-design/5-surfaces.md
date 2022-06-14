@@ -1,79 +1,79 @@
-# Surfaces
+# サーフェス
 
-## Surfaces in Dynamo
+## Dynamo におけるサーフェス
 
-### What is Surface
+### サーフェスとは
 
-We use [Surface](5-surfaces.md#surface) in model to represent objects we see in our three dimensional world. While Curves are not always planar ie. they are three dimensional, the space they define is always bound to one dimension. Surfaces give us another dimension and a collection of additional properties we can use within other modeling operations.
+モデル内で[サーフェス](5-surfaces.md#surface)を使用して、オブジェクトを 3 次元の世界で表現できるようにします。曲線は常に平らというわけではありません。曲線は 3 次元のオブジェクトですが、曲線が定義する空間は必ず 1 次元になります。サーフェスを定義すると、次元をもう 1 つ増やし、別のプロパティの集合を他のモデリング操作で使用できるようになります。
 
-### Surface at Parameter
+### パラメータによるサーフェス
 
-Import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
+Dynamo のパラメータにサーフェスを読み込んで評価し、どのような情報を抽出できるかを確認します。
 
 ![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
 
-> 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
-> 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate
-> 3. _Surface.GetIsoline_ returns the Isoparametric Curve at a U or V Coordinate - note the isoDirection input.
+> 1. _Surface.PointAtParameter_ ノードは、指定された UV 座標における点を返します。
+> 2. _Surface.NormalAtParameter_ ノードは、指定された UV 座標における法線ベクトルを返します。
+> 3. _Surface.GetIsoline_ ノードは、U 座標または V 座標におけるアイソパラメトリック曲線を返します。入力が isoDirection であることに注意してください。
 
-> Download the example files by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-2/5/Surfaces.zip" %}
 
-## Deep Dive into...
+## 詳細を説明します。
 
-### Surface
+### サーフェス
 
-A Surface is a mathematical shape defined by a function and two parameters, Instead of `t` for Curves, we use `U` and `V` to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.
+サーフェスは、1 つの関数と 2 つのパラメータによって定義される数学的な形状です。曲線を定義する `t` ではなく、サーフェスでは `U` と `V` を使用してパラメータ空間を定義します。そのため、このタイプのジオメトリを使用すると、より多くのジオメトリ データを描画することができます。たとえば、曲線には法線ベクトルと接平面があり、接平面は曲線に沿って回転させることができます。一方、サーフェスの法線ベクトルと接平面は、方向が固定されています。
 
-![Surface](../images/5-2/5/Surface.jpg)
+![サーフェス](../images/5-2/5/Surface.jpg)
 
-> 1. Surface
-> 2. U Isocurve
-> 3. V Isocurve
-> 4. UV Coordinate
-> 5. Perpendicular Plane
-> 6. Normal Vector
+> 1. サーフェス
+> 2. U アイソカーブ
+> 3. V アイソカーブ
+> 4. UV 座標
+> 5. 接平面
+> 6. 法線ベクトル
 
-**Surface Domain**: A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).
+**サーフェスの範囲**: サーフェスの範囲は、そのサーフェス上の 3 次元の点を指定する(U,V)パラメータの範囲として定義されます。 各次元(U または V)の範囲は、通常 2 つの数値(U の最小値から U の最大値までの数値と、V の最小値から V の最大値までの数値)で表されます。
 
-![Surface](../images/5-2/5/SurfaceParameter.jpg)
+![サーフェス](../images/5-2/5/SurfaceParameter.jpg)
 
-Although the shape of the Surface by not look "rectangular" and it locally may have a tighter or looser set of isocurves, the "space" defined by its domain is always two dimensional. In Dynamo, Surfaces are always understood to have a domain defined by a minimum of 0.0 and maximum of 1.0 in both U and V directions. Planar or trimmed Surfaces may have different domains.
+サーフェスの形状が「長方形」に見えない場合や、サーフェスのローカルのアイソカーブの密度が高い場合や低い場合がありますが、サーフェスの範囲によって定義される「空間」は常に 2 次元になります。Dynamo におけるサーフェスの範囲は、U 方向と V 方向の両方向で、最小値 0.0 から最大値 1.0 までの範囲内で定義する必要があります。ただし、平らなサーフェスやトリム サーフェスについては、範囲が異なる場合があります。
 
-**Isocurve** (or Isoparametric Curve): A curve defined by a constant U or V value on the surface and a domain of values for the corresponding other U or V direction.
+**アイソカーブ**(アイソパラメトリック曲線): サーフェス上の U 定数値または V 定数値と、対応するもう一方の U 方向または V 方向の値の範囲によって定義される曲線です。
 
-**UV Coordinate**: The Point in UV Parameter Space defined by U, V, and sometimes W.
+**UV 座標**: U と V (場合によってはさらに W)を使用して定義される、UV パラメータ空間内の点です。
 
-![Surface Coordinate](../images/5-2/5/SurfaceCoordinate.jpg)
+![サーフェス座標](../images/5-2/5/SurfaceCoordinate.jpg)
 
-**Perpendicular Plane**: A Plane that is perpendicular to both U and V Isocurves at a given UV Coordinate.
+**接平面**: 特定の UV 座標において、U アイソカーブと V アイソカーブの両方に接する平面です。
 
-**Normal Vector**: A Vector defining the direction of "up" relative to the Perpendicular Plane.
+**法線ベクトル**: 接平面に対して相対的に「上」方向を定義するベクトルです。
 
-### NURBS Surfaces
+### NURBS サーフェス
 
-**NURBS Surfaces** are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree.
+**NURBS サーフェス**は、NURBS 曲線によく似ています。 NURBS サーフェスは、2 つの方向に向かう NURBS 曲線のグリッドとして考えることができます。NURBS サーフェスの形状は、制御点の数と、そのサーフェスの U 方向および V 方向の次数によって定義されます。制御点、ウェイト、次元を使用して、形状、法線、接線、曲率などのプロパティを計算する場合にも、同じアルゴリズムが使用されます。
 
-![NURBS Surface](../images/5-2/5/NURBSsurface.jpg)
+![NURBS サーフェス](../images/5-2/5/NURBSsurface.jpg)
 
-In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.
+NURBS サーフェスの場合、ジオメトリによって 2 つの方向が暗黙的に定義されます。これは、表示される形状に関係なく、NURBS サーフェスは制御点から構成される長方形のグリッドであるためです。これらの方向は、多くの場合、ワールド座標系に対して任意の方向が相対的に設定されています。このチュートリアルでは、これらの方向を頻繁に使用し、サーフェスに基づいてモデルの解析や他のジオメトリの生成を行います。
 
-![NURBS Surface](../images/5-2/5/NURBSsurface-Degree.jpg)
+![NURBS サーフェス](../images/5-2/5/NURBSsurface-Degree.jpg)
 
 > 1. Degree (U,V) = (3,3)
 > 2. Degree (U,V) = (3,1)
 > 3. Degree (U,V) = (1,2)
 > 4. Degree (U,V) = (1,1)
 
-### Polysurfaces
+### ポリサーフェス
 
-**Polysurfaces** are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology.
+**ポリサーフェス**は、エッジで結合されているサーフェスによって構成されます。 ポリサーフェスのトポロジを経由して結合された形状間を移動できるため、ポリサーフェスは 2 次元の UV 定義よりも多くの機能を持っています。
 
-While "Topology" generally describes a concept around how parts are connected and/or related Topology in Dynamo is also a type of Geometry. Specifically it is a parent category for Surfaces, Polysurfaces, and Solids.
+一般的にトポロジとは、パーツの結合や関連についての概念を指しますが、Dynamo におけるトポロジとは、一種のジオメトリでもあります。具体的には、トポロジは、サーフェス、ポリサーフェス、ソリッドの親カテゴリにあたります。
 
-![PolySurface](../images/5-2/5/PolySurface.jpg)
+![ポリサーフェス](../images/5-2/5/PolySurface.jpg)
 
-Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.
+このような方法でサーフェスを結合することにより、複雑な形状を作成したり、継ぎ目の形状の詳細を定義することができます。このように結合されたサーフェスは、パッチと呼ばれる場合もあります。ポリサーフェスのエッジに対して、フィレット操作や面取り操作を簡単に適用することができます。

@@ -1,117 +1,117 @@
-# Customizing
+# カスタマイズ
 
-While we previously looked at editing a basic building mass, we want to dive deeper into the Dynamo/Revit link by editing a large number of elements in one go. Customizing on a large scale becomes more complex as data structures require more advanced list operations. However, the underlying principles behind their execution is fundamentally the same. Let's study some opportunities for analysis from a set of adaptive components.
+ここまで、基本的な建物のマスを編集する方法について紹介してきました。ここからは、多数の要素を一度に編集することで Dynamo と Revit のリンクについてより深く掘り下げていきましょう。カスタマイズする対象の規模が拡大すると、リストのデータ構造においてより高度な操作が要求されるので、カスタマイズの操作がより複雑になります。ただし、それを実行する背景で駆動している原理原則は、根本的にはこれまでと変わりありません。検討のために、アダプティブ コンポーネントのセットからいくつかの事例を取り上げてみましよう。
 
-### Point Location
+### 点の位置
 
-Suppose we've created a range of adaptive components and want to edit parameters based on their point locations. The points, for example, could drive a thickness parameter which is related to the area of the element. Or, they could drive an opacity parameter related to solar exposure throughout the year. Dynamo allows the connection of analysis to parameters in a few easy steps, and we'll explore a basic version in the exercise below.
+アダプティブ コンポーネントを既に作成したという前提で、これからその点群の位置に基づいてパラメータを編集していくことにします。点群により、たとえば、要素の領域にかかわる厚みのパラメータをコントロールすることができます。また、太陽光の年間露光量にかかわる透過性のパラメータをコントロールすることもできます。Dynamo では、少ない手順で簡単に解析結果をパラメータに渡すことができます。次の演習でその基本的な手順を実践してみましょう。
 
 ![](<./images/5/customizing - point location.jpg>)
 
-> Query the adaptive points of a selected adaptive component by using the **AdaptiveComponent.Locations** node. This allows us to work with an abstracted version of a Revit element for analysis.
+> **AdaptiveComponent.Locations** ノードを使用して、選択したアダプティブ コンポーネントのアダプティブ点のクエリーを実行します。 これにより、Revit の要素を解析用に抽出したバージョンを使用して作業することができます。
 
-By extracting the point location of adaptive components, we can run a range of analysis for that element. A four-point adaptive component will allow you to study the deviation from plane for a given panel for example.
+アダプティブ コンポーネントを構成する点の位置を抽出することで、その要素に関するさまざまな解析を行うことができます。4 点構成のアダプティブ コンポーネントにより、たとえば指定したパネルにおける水平面からの偏差を検討することができます。
 
-### Solar Orientation Analysis
+### 太陽の向きの解析
 
 ![](<./images/5/customizing - solar orientation analysis.jpg>)
 
-> Use remapping to map a set of a data into a parameter range. This is fundamental tool used in a parametric model, and we'll demonstrate it in the exercise below.
+> 再マッピング機能を使用すると、一連のデータ セットを一定のパラメータ範囲にマッピングすることができます。これはパラメトリック モデリングで使用する基本的なツールです。これ以降の演習で実際に扱ってみることにします。
 
-Using Dynamo, the point locations of adaptive components can be used to create a best-fit plane each element. We can also query the sun position in the Revit file and study the plane's relative orientation to the sun in comparison to other adaptive components. Let's set that up in the exercise below by creating an algorithmic roofscape.
+Dynamo を使用すると、アダプティブ コンポーネントを構成する点群の位置から、要素ごとに最も適した平面を作成することができます。さらに Revit ファイル内の太陽の位置を参照して、太陽に対するその平面の向きを、他のアダプティブ コンポーネントと比較しながら検討することもできます。これ以降の演習で、アルゴリズムに基づいて屋根の形状を生成することで、その設定を行っていきましょう。
 
-## Exercise
+## 演習
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="./datasets/5/Revit-Customizing.zip" %}
 
-This exercise will expand on the techniques demonstrated in the previous section. In this case, we are defining a parametric surface from Revit elements, instantiating four-point adaptive components and then editing them based on orientation to the sun.
+この演習では、前のセクションで紹介したテクニックについて詳しく説明します。このケースでは、Revit の要素からパラメトリック サーフェスを設定して、4 点構成のアダプティブ コンポーネントをインスタンス化し、太陽に対する向きに基づいて編集します。
 
 ![](<./images/5/customizing - exercise 01.jpg>)
 
-> 1. Beginning by selecting two edges with the _"Select Edge"_ node. The two edges are the long spans of the atrium.
-> 2. Combine the two edges into one list with the _List.Create_ node.
-> 3. Create a surface between the two edges with a _Surface.ByLoft_.
+> 1. まず、_Select Edge_ ノードを使用して 2 本のエッジを選択します。 2 本のエッジはアトリウムの長辺です。
+> 2. _List.Create_ ノードを使用して、2 本のエッジを組み合わせて 1 つのリストを作成します。
+> 3. _Surface.ByLoft_ ノードを使用して、2 本のエッジの間に 1 つのサーフェスを作成します。
 
 ![](<./images/5/customizing - exercise 02.jpg>)
 
-> 1. Using _code block_, define a range from 0 to 1 with 10 evenly spaced values: `0..1..#10;`
-> 2. Plug the _code block_ into the \*u \*and _v_ inputs of a _Surface.PointAtParameter_ node, and plug the _Surface.ByLoft_ node into the _surface_ input. Right click the node and change the _lacing_ to _Cross Product_. This will give a grid of points on the surface.
+> 1. _Code Block_ ノードを使用して、0 から 1 までの範囲を 10 等分した値 `0..1..#10;` に指定します。
+> 2. _Code Block_ ノードから _Surface.PointAtParameter_ ノードの \*u \*入力と _v_ 入力に接続し、_Surface.ByLoft_ ノードを _surface_ 入力に接続します。ノードを右クリックして、_レーシング_を[_直積_]に変更します。 これで、サーフェス上の点群から構成されるグリッドを取得できるようになります。
 
-This grid of points serves as the control points for a parametrically defined surface. We want to extract the u and v positions of each one of these points so that we can plug them into a parametric formula and keep the same data structure. We can do this by querying the parameter locations of the points we just created.
+この点群によるグリッドは、パラメータに基づいて設定されたサーフェスの制御点として機能します。これら各点の位置を u と v の値として抽出することで、その値をパラメータの式に代入し、同一のデータ構造を保持できます。これを行うには、先ほど作成した点群の位置のパラメータをクエリーする必要があります。
 
 ![](<./images/5/customizing - exercise 03.jpg>)
 
-> 1. Add a _Surface.ParameterAtPoint_ node to the canvas, connect the inputs as shown above.
-> 2. Query the _u_ values of these parameters with the UV.U node.
-> 3. Query the _v_ values of these parameters with the UV.V node.
-> 4. The outputs show the corresponding _u_ and _v_ values for every point of the surface. We now have a range from _0_ to _1_ for each value, in the proper data structure, so we're ready to apply a parametric algorithm.
+> 1. _Surface.ParameterAtPoint_ ノードをキャンバスに追加し、その入力を上図のように接続します。
+> 2. UV.U ノードを使用して、上記のパラメータの _u_ の値をクエリーします。
+> 3. UV.V ノードを使用して、上記のパラメータの _v_ の値をクエリーします。
+> 4. サーフェス上のすべての点に対応する _u_ と _v_ の値が出力されます。 これで、適切なデータ構造で _0_ から _1_ までの範囲で各値を取得したので、パラメトリック アルゴリズムを適用する準備ができました。
 
 ![](<./images/5/customizing - exercise 04.jpg>)
 
-> 1. Add a _code block_ to the canvas and enter the code: `Math.Sin(u*180)*Math.Sin(v*180)*w;` This is a parametric function which creates a sine mound from a flat surface.
-> 2. Connects the _UV.U_ to the _u_ input and the UV.V to the _v_ input.
-> 3. The _w_ input represents the _amplitude_ of the shape, so we attach a _number slider_ to it.
+> 1. キャンバスに _Code Block_ ノードを追加して、次のコードを入力します。`Math.Sin(u*180)*Math.Sin(v*180)*w;` これは、平坦なサーフェスから正弦波状の隆起を作成するパラメトリック関数です。
+> 2. _UV.U_ を _u_ 入力に、UV.V を _v_ 入力に接続します。
+> 3. _w_ 入力は形状の_振幅_を表します。そのため、ここには _Number Slider_ を接続します。
 
 ![](<./images/5/customizing - exercise 05.jpg>)
 
-> 1. Now, we have a list of values as defined by the algorithm. Let's use this list of values to move the points up in the _+Z_ direction. Using _Geometry.Translate_, plug the \*code block \*into _zTranslation_ and the _Surface.PointAtParameter_ into the _geometry_ input. You should see the new points displayed in the Dynamo preview.
-> 2. Finally, we create a surface with the _NurbsSurface.ByPoints_ node, plugging the node from the previous step into the points input. We have ourselves a parametric surface. Feel free to drag the slider to watch the mound shrink and grow.
+> 1. ここまでの手順で、アルゴリズムによって定義された値のリストを取得することができました。この値のリストを使用して、点群を _Z_ の正の向きに動かしましょう。 _Geometry.Translate_ を使用して、\*Code Block \* ノードを _zTranslation_ 入力に、_Surface.PointAtParameter_ ノードを _geometry_ 入力に接続します。Dynamo のプレビューに新しい点群が表示されるはずです。
+> 2. 最後に、前の手順から _NurbsSurface.ByPoints_ ノードの points 入力に接続することで、サーフェスを作成します。 こうしてパラメトリック サーフェスができあがりました。スライダを自由に動かして、隆起面が上下するのを確認してください。
 
-With the parametric surface, we want to define a way to panelize it in order to array four-point adaptive components. Dynamo does not have out-of-the-box functionality for surface panelization, so we can look to the community for helpful Dynamo packages.
+パラメトリック サーフェスを使用して、その曲面を多数の小さなパネルから成る構造に変換する方法を設定し、4 点構成のアダプティブ コンポーネントを配列していきましょう。Dynamo で提供されている既定のノードには、サーフェスを多面構造に変換する機能をもつものはありません。そこで、コミュニティにアクセスして便利な Dynamo パッケージを入手しましょう。
 
 ![](<./images/5/customizing - exercise 06.jpg>)
 
-> 1. Go to _Packages>Search for a Package..._
-> 2. Search for _"LunchBox"_ and install _"LunchBox for Dynamo"_. This is a really helpful set of tools for geometry operations such as this.
+> 1. _[パッケージ] > [パッケージの検索]_に進みます。
+> 2. 「_LunchBox_」のキーワードで検索し、「_LunchBox for Dynamo_」をインストールします。このパッケージは、この種のジオメトリ操作にじつに役に立つツール セットです。
 
-> 1. After downloading, you now have full access to the LunchBox suite. Search for _"Quad Grid"_ and select _"LunchBox Quad Grid By Face"_. Plug the parametric surface into the _surface_ input and set the _U_ and _V_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
+> 1. ダウンロードすると、LunchBox スイートに完全にアクセスできるようになります。「_Quad Grid_」を検索し、_LunchBox Quad Grid By Face_ ノードを選択します。 このノードの _surface_ 入力にパラメトリック サーフェスを接続し、_U_ 区分と _V_ 区分を _15_ に設定します。 複数の長方形のパネルから成るサーフェスが Dynamo のプレビューに表示されます。
 
-> If you're curious about its setup, you can double click on the _Lunch Box_ node and see how it's made.
+> 構成の詳細については、_Lunch Box_ ノードをダブルクリックして確認してください。
 
-> Back in Revit, let's take a quick look at the adaptive component we're using here. No need to follow along, but this is the roof panel we're going to instantiate. It is a four-point adaptive component which is a crude representation of an ETFE system. The aperture of the center void is on a parameter called _"ApertureRatio"_.
+> Revit に戻って、ここで使用しているアダプティブ コンポーネントを簡単に確認しておきましょう。必ずしも実際に確認する必要はありませんが、いずれにせよこれからインスタンス化する対象であるこのコンポーネントは屋根のパネルです。この 4 点構成のアダプティブ コンポーネントは、ETFE システムをおおまかに表現しています。中央の開口部は _ApertureRatio_ というパラメータによってコントロールされています。
 
-> 1. We're about to instantiate a lot of geometry in Revit, so make sure to turn the Dynamo solver to _"Manual"_.
-> 2. Add a _Family Types_ node to the canvas and select _"ROOF-PANEL-4PT"_.
-> 3. Add an _AdaptiveComponent.ByPoints_ node to the canvas, connect _Panel Pts_ from the _"LunchBox Quad Grid by Face"_ output into the _points_ input. Connect the _Family Types_ node to the _familySymbol_ input.
-> 4. Hit _Run_. Revit will have to _think_ for a bit while the geometry is being created. If it takes too long, reduce the _code block's '15'_ to a lower number. This will reduce the number of panels on the roof.
+> 1. これから Revit 内の多数のジオメトリをインスタンス化するので、必ず事前に Dynamo のソルバを[_手動_]に切り替えてください。
+> 2. _Family Types_ ノードをキャンバスに追加し、[_ROOF-PANEL-4PT_]を選択します。
+> 3. _AdaptiveComponent.ByPoints_ ノードをキャンバスに追加し、その _points_ 入力に _LunchBox Quad Grid by Face_ ノードの _Panel Pts_ 出力を接続します。 _familySymbol_ 入力に _Family Types_ ノードを接続します。
+> 4. [_実行_]をクリックします。 Revit はジオメトリの作成中に計算に_少々時間をかける_必要があります。 あまりにも時間がかかりすぎている場合、_Code Block ノードの「15」の値を_より小さな数に減らしてください。 これを行うと、屋根の部分に使用されるパネルの数が減少します。
 
-_Note: If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "Freezing" section in the solids chapter._
+_注: Dynamo でノードの計算に膨大な時間がかかる場合は、ノードをフリーズする機能を使用して、グラフの開発中に Revit 関連操作の実行を停止することができます。 ノードをフリーズする操作の詳細については、「ソリッド」の章の「フリーズ」セクションを参照してください。_
 
-> Back in Revit, we have the array of panels on the roof.
+> Revit に戻ると、屋根の上にバネルの配列が出現しています。
 
-> Zooming in, we can get a closer look at their surface qualities.
+> 拡大表示すると、サーフェスの品質を詳細に確認できます。
 
-### Analysis
+### 解析
 
-> 1. Continuing from the previous step, let's go further and drive the aperture of each panel based on its exposure to the sun. Zooming into Revit and select one panel, we see in the properties bar that there is a parameter called _"Aperture Ratio"_. The family is setup so that the aperture ranges, roughly, from _0.05_ to _0.45_.
+> 1. 前の手順からさらに先へと進み、各パネルが太陽光を浴びている量に基づいてそれぞれのパネルの開き方をコントロールしてみましょう。Revit でビューを拡大表示して 1 つのパネルを選択すると、プロパティ バーに[_開口率_]というパラメータが表示されます。 ファミリは、開口率の範囲が _0.05_ ～ _0.45_ になるように設定されています。
 
-> 1. If we turn on the solar path, we can see the current sun location in Revit.
+> 1. 太陽の軌道の表示をオンにすると、Revit で現在の太陽の位置を確認することができます。
 
-> 1. We can reference this sun location using the _SunSettings.Current_ node.
+> 1. _SunSettings.Current_ ノードを使用すると、この太陽の位置を参照することができます。
 
-1. Plug the Sun settings into _Sunsetting.SunDirection_ to get the solar vector.
-2. From the _Panel Pts_ used to create the adaptive components, use _Plane.ByBestFitThroughPoints_ to approximate a plane for the component.
-3. Query the _normal_ of this plane.
-4. Use the _dot product_ to calculate solar orientation. The dot product is a formula which determines how parallel or anti-parallel two vectors may be. So we're taking the plane normal of each adaptive component and comparing it to the solar vector to roughly simulate solar orientation.
-5. Take the _absolute value_ of the result. This ensures that the dot product is accurate if the plane normal is facing the reverse direction.
-6. Hit _Run_.
+1. そのノードの SunSettings の出力を _Sunsetting.SunDirection_ ノードの入力に接続し、太陽光のベクトルを取得します。
+2. アダプティブ コンポーネントの作成に使用した _Panel Pts_ からの出力を、_Plane.ByBestFitThroughPoints_ ノードを使用して、そのコンポーネントのために平面に近づけます。
+3. この平面の_法線_のクエリーを実行します。
+4. _内積_を使用して太陽の向きを計算します。 内積に基づいて、2 つのベクトルが平行であるかどうかを判定することができます。つまり、各アダプティブ コンポーネントの平面法線を取得し、それと太陽光のベクトルを比較することで、太陽の向きをおおまかにシミュレートします。
+5. 結果の_絶対値_を取得します。 これにより、平面法線が逆方向を向いている場合に正確な内積が算出されます。
+6. [_実行_]をクリックします。
 
-> 1. Looking at the _dot product_, we have a wide range of numbers. We want to use their relative distribution, but we need to condense the numbers into the appropriate range of the _"Aperture Ratio"_ parameter we plan to edit.
+> 1. _内積_を確認すると、複数の数値が広範囲にわたって取得されています。 これからその相対分布を使用するのですが、しかしそれらの数値を集約して[_開口率_]の適切な範囲に収めなければなりません。
 
-1. The _Math.RemapRange_ is a great tool for this. It takes an input list and remaps its bounds into two target values.
-2. Define the target values as _0.15_ and _0.45_ in a _code block_.
-3. Hit _Run_.
+1. これにたいへん役立つツールが _Math.RemapRange_ ノードです。 そのノードにリストを入力し、その分布範囲を 2 つの目標値にマッピングし直します。
+2. 目標値を _Code Block_ ノードで _0.15_ と _0.45_ として定義します。
+3. [_実行_]をクリックします。
 
-> 1. Connect the remapped values into a _Element.SetParameterByName_ node.
+> 1. マッピングし直した値を _Element.SetParameterByName_ ノードに接続します。
 
-1. Connect the string _"Aperture Ratio"_ into the _parameterName_ input.
-2. Connect the _adaptive components_ into the _element_ input.
-3. Hit _Run_.
+1. そのノードの _parameterName_ 入力に、「_Aperture Ratio_」という文字列を接続します。
+2. 同じノードの _element_ 入力に、_AdaptiveComponent.ByPoints_ ノードの Adaptive Components 出力を接続します。
+3. [_実行_]をクリックします。
 
-> Back in Revit, from a distance we can make out the affect of the solar orientation on the aperture of the ETFE panels.
+> Revit に戻って建物のマスを遠くから見てみると、ETFE パネルの開き方が太陽の向きによって変化していることが確認できます。
 
-> Zooming in, we see that the ETFE panels are more closed as the face the sun. Our target here is to reduce overheating from solar exposure. If we wanted to let in more light based on solar exposure, we just have to switch the domain on _Math.RemapRange_.
+> 拡大表示すると、太陽により向き合っているパネルほどより閉じていることがわかります。太陽光の照射による過熱を抑えることがねらいです。太陽光をたくさん浴びている面ほどより多く採光するように設定するには、ただ _Math.RemapRange_ ノードで範囲を逆に切り替えるだけで済みます。

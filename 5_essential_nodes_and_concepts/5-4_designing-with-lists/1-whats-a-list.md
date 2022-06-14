@@ -1,108 +1,108 @@
-# What's a List
+# リストの概要
 
-### What's a List?
+### リストの概要
 
-A list is a collection of elements, or items. Take a bunch of bananas, for example. Each banana is an item within the list (or bunch). It's easier to pick up a bunch of bananas rather than each banana individually, and the same holds for grouping elements by parametric relationships in a data structure.
+リストとは、要素(項目)の集合です。例として、1 房のバナナを考えてみましょう。1 本のバナナが、リスト(房)内の 1 つの項目になります。それぞれのバナナをばらばらに取り上げるより、房をまとめて持ち上げる方が簡単です。同じことが、データ構造内のパラメータに基づく関係によって各要素をグループ化する場合についても当てはまります。
 
-![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![バナナ](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> 写真: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
-When we buy groceries, we put all of the purchased items into a bag. This bag is also a list. If we're making banana bread, we need 3 bunches of bananas (we're making a _lot_ of banana bread). The bag represents a list of banana bunches and each bunch represents a list of bananas. The bag is a list of lists (two-dimensional) and the banana bunch is a list (one-dimensional).
+日用品を購入する場合、購入した商品をすべて買い物カゴに入れます。このカゴも、リストと考えることができます。たとえば、3 房のバナナを使用して多くのバナナ ブレッドを作るとします。__ この場合、すべてのバナナが入っている袋がバナナの房のリストで、それぞれの房がバナナのリストになります。この袋は 2 次元の「リストのリスト」で、バナナの房は 1 次元の「リスト」です。
 
-In Dynamo, list data is ordered, and the first item in each list has an index "0". Below, we'll discuss how lists are defined in Dynamo and how multiple lists relate to one another.
+Dynamo では、リスト データには順序が付けられ、各リストの最初の項目にはインデックス「0」が割り当てられます。次のセクションでは、Dynamo におけるリストの定義の仕組みと、複数のリストの相互関係について説明します。
 
-### Zero-Based Indices
+### ゼロで始まるインデックス
 
-One thing that might seem odd at first is that the first index of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index 0.
+リストのインデックスは、1 ではなく必ず 0 から始まります。これは、最初は不思議に感じるかもしれません。今後、リストの最初の項目と言う場合は、インデックス 0 の付いた項目のことを意味します。
 
-For example, if you were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if you were to put your fingers in a list, Dynamo would have given them indices from 0 to 4. While this may seem a little strange to programming beginners, the zero-based index is standard practice in most computation systems.
+たとえば、右手の指を使って数を数える場合、1 から 5 の順序で数えます。0 から数え始めることはほとんどないはずです。しかし、右手の指を Dynamo のリストだと仮定すると、それぞれの指に 0 から 4 のインデックスが割り当てられることになります。プログラミングの初心者にとっては少し不思議に感じられるかもしれませんが、ほとんどのコンピュータ システムでは、インデックスの値はゼロで始まるのが普通です。
 
-Note that we still have 5 items in the list; it’s just that the list is using a zero-based counting system. And the items being stored in the list don’t just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
+ここでも、引き続きリスト内に 5 つの項目が含まれています。ただし、最初の項目に 0 のインデックス値が割り当てられているものと仮定して説明を続けます。リストに格納できる項目は、数値だけではありません。Dynamo でサポートされているデータ タイプであれば、点、曲線、サーフェス、ファミリなど、任意のデータ タイプをリスト内に格納することができます。
 
 ![](<../images/5-4/1/what's a list - zero based indices.jpg>)
 
-> a. Index
+> a. インデックス
 >
-> b. Point
+> b. 点
 >
-> c. Item
+> c. アイテム
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a watch node to another node's output. By default, the watch node automatically shows all indices to the left side of the list and displays the data items on the right.
+多くの場合、リストに格納されているデータのタイプを確認する最も簡単な方法は、ノードの出力を Watch ノードに接続する方法です。既定では、Watch ノードにはリストの左側のすべてのインデックスと、右側のすべてのデータ項目が自動的に表示されます。
 
-These indices are a crucial element when working with lists.
+これらのインデックスは、リストを操作する場合の重要な要素です。
 
-### Inputs and Outputs
+### 入力と出力
 
-Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius**:
+リストの入力と出力は、使用する Dynamo ノードによって異なります。例として、5 つの点を持つリストのノードの出力を **PolyCurve.ByPoints** ノードと **Circle.ByCenterPointRadius** ノードに接続してみましょう。
 
 ![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
 
-> 1. The _points_ input for **PolyCurve.ByPoints** is looking for _"Point\[]"_. This represents a list of points
-> 2. The output for **PolyCurve.ByPoints** is a single polycurve created from a list of five point.
-> 3. The _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_.
-> 4. The output for **Circle.ByCenterPointRadius** is a list of five circles, whose centers correspond to the original list of points.
+> 1. **PolyCurve.ByPoints** ノードの _points_ 入力には、_Point\[]_ が必要です。これは、点のリストを表しています。
+> 2. **PolyCurve.ByPoints** ノードの出力は、5 つの点を持つリストから作成された単一のポリカーブです。
+> 3. **Circle.ByCenterPointRadius** ノードの _CenterPoint_ 入力には、_Point_ が必要です。
+> 4. **Circle.ByCenterPointRadius** ノードの出力は、5 つの円を持つリストです。それぞれの円の中心が、元のリスト内の点に対応しています。
 
-The input data for **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius** are the same, however the **Polycurve.ByPoints** node gives us one polycurve while the **Circle.ByCenterPointRadius** node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
+**PolyCurve.ByPoints** と **Circle.ByCenterPointRadius** の入力データは同じですが、**PolyCurve.ByPoints** ノードは 1 つのポリカーブを返し、**Circle.ByCenterPointRadius** ノードは各点を中心とする 5 つの円を返します。この場合、5 つの点をつなぐ曲線としてポリカーブが描画され、Circle.ByCenterPointRadius ノードは各点を中心とする個別の円を描画します。これは、直感的に理解することができます。では、データには何が起きているのでしょうか。
 
-Hovering over the _points_ input for **Polycurve.ByPoints**, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
+**Polycurve.ByPoints** の _points_ 入力の上にカーソルを置くと、この入力に _Point\[]_ が必要であることがわかります。最後の角括弧に注意してください。これは、点のリストであることを表しています。ポリカーブを作成するには、ポリカーブごとにリストを入力する必要があります。入力された各リストは、Polycurve.ByPoints ノードによって 1 つのポリカーブに集約されます。
 
-On the other hand, the _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
+一方、**Circle.ByCenterPointRadius** ノードの _centerPoint_ 入力には、_Point_ が必要です。 このノードはリストの項目である 1 つの点を取得し、それを円の中心として定義します。入力されたデータから 5 つの円が生成されるのは、このためです。Dynamo の入力に関するこれらの違いを認識しておくと、ノードによるデータ処理の仕組みを正しく理解することができます。
 
-### Lacing
+### レーシング
 
-Data matching is a problem without a clean solution. It occurs when a node has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+データの一致は、明確に解決することができない問題です。このような問題は、異なるサイズの入力をノードに渡すときに発生します。データ一致アルゴリズムを変更すると、結果が大きく変わってしまうことがあります。
 
-Imagine a node which creates line segments between points (**Line.ByStartPointEndPoint**). It will have two input parameters which both supply point coordinates:
+例として、2 点の間に直線セグメントを作成するノード(**Line.ByStartPointEndPoint**)を考えてみます。このノードは、点の座標を指定する 2 つの入力パラメータを使用します。
 
-#### Shortest List
+#### 最短リスト
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the “Shortest List” algorithm. This is the default behavior for Dynamo nodes:
+最も単純な方法は、一方のリストが終了するまで、入力された点を 1 対 1 で接続していく方法です。これは、「最短リスト」アルゴリズムと呼ばれます。Dynamo ノードの既定の動作です。
 
 ![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
 
-#### Longest List
+#### 最長リスト
 
-The “Longest List” algorithm keeps connecting inputs, reusing elements, until all streams run dry:
+「最長リスト」アルゴリズムの場合、すべてのリストの最後の項目に達するまで、同じ要素を繰り返し使用して入力が接続されたままの状態になります。
 
 ![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
 
-#### Cross Product
+#### 直積
 
-Finally, the “Cross Product” method makes all possible connections:
+最後に、「直積」方式について説明します。この方式では、考えられる接続がすべて生成されます。
 
 ![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
 
-As you can see there are different ways in which we can draw lines between these sets of points. Lacing options are found by right-clicking the center of a node and choosing the "Lacing" menu.
+これらの点の集まりの間に直線を描画する場合、いくつかの方法があります。レーシング オプションを使用するには、ノードの中心を右クリックして[レーシング]メニューを選択します。
 
 ![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
 
-## Exercise
+## 演習
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/1/Lacing.dyn" %}
 
-To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
+次の図を使用して、レーシング操作について説明します。ここでは、上記の基準ファイルを使用して、最短リスト、最長リスト、直積を定義します。
 
-We'll change the lacing on **Point.ByCoordinates**, but won't change anything else about the graph above.
+**Point.ByCoordinates** ノードでレーシングを変更しますが、上図のグラフについては何も変更しません。
 
-### Shortest List
+### 最短リスト
 
-Choosing _shortest list_ as the lacing option (also the default option), we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
+レーシング オプション(既定のオプションも同様)として_最短リスト_を選択すると、5 つのポイントで構成される基本的な対角線が得られます。最短リストのレーシングは、2 つのリストのうち短い方のリストの最後の項目に達した場合に動作が終了します。そのためこの例では、5 つの点が含まれているリストの最後に達すると、レーシング動作が停止します。
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
 
-### **Longest List**
+### **最長リスト**
 
-By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
+レーシングを[_最長リスト_]に変更すると、垂直方向に伸びる対角線が生成されます。 上の概念図のように、長い方のリストの最後の項目に達するまで、短い方のリスト(項目数が 5 のリスト)の最後の項目が繰り返し使用されます。
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
 
-### **Cross Product**
+### **直積**
 
-By changing the lacing to _Cross Product_, we get every combination between each list, giving us a 5x10 grid of points. This is an equivalent data structure to the cross product as shown in the concept diagram above, except our data is now a list of lists. By connecting a polycurve, we can see that each list is defined by its X-Value, giving us a row of vertical lines.
+レーシングを[_直積_]に変更すると、各リスト間で考えられるすべての組み合わせの 5x10 の点のグリッドが生成されます。 これは、上の概念図に示す直積に該当するデータ構造です。ただし、ここで使用しているデータは、「リストのリスト」です。ポリカーブを接続すると、各リストは X 値によって定義され、垂直な直線の列が生成されていることがわかります。
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)

@@ -1,73 +1,73 @@
-# Revit Use-Cases
+# Revit での使用例
 
-Have you ever wanted to look up something in Revit by a piece of data that it has?
+Revit 内で、そこに含まれるデータの一部を使って検索しようとしたことがありますか?
 
-Chances are if you have you've done something like the following example.
+次の例のような作業を行ったことがあるのではないでしょうか。
 
-In the image below we are collecting all of the rooms in the Revit model, getting the index of the room we want (by room number), and finally grabbing the room at the index.
+下図では、Revit モデル内のすべての部屋を収集し、必要な部屋のインデックスを(部屋番号で)取得し、最終的にそのインデックスにある部屋がわかります。
 
 ![](<../images/5-5/4/dictionary - collect room in revit model.jpg>)
 
-> 1. Collect all rooms in the model.
-> 2. Room number to find.
-> 3. Get the room number and find what index it is at.
-> 4. Obtain the room at the index.
+> 1. モデル内のすべての部屋を収集します。
+> 2. 検索する部屋番号。
+> 3. 部屋番号を取得し、その番号のインデックスを見つけます。
+> 4. インデックスで部屋を取得します。
 
-## Exercise : Room Dictionary
+## 演習: 部屋のディクショナリ
 
-### Part I: Creating Room Dictionary
+### パート I: 部屋のディクショナリを作成する
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-5/4/roomDictionary.dyn" %}
 
-Now let's recreate this idea using dictionaries. First we need to collect all of the rooms in our Revit model.
+次に、ディクショナリを使用して、これを再作成してみましょう。 まず、Revit モデル内のすべての部屋を収集する必要があります。
 
 ![](<../images/5-5/4/dictionary - exercise I - 01.jpg>)
 
-> 1. We choose the Revit category we want to work with, (In this case, we are working with rooms).
-> 2. We tell Dynamo to collect all of those elements
+> 1. 操作する Revit カテゴリを選択します(ここでは部屋を操作します)。
+> 2. Dynamo に対して、これらの要素すべての収集を指示します。
 
-Next, we need to decide what keys we are going to use to look up this data by. (Information on keys can be found on the section, [What is a dictionary?](9-1\_what-is-a-dictionary.md)).
+次に、このデータを検索するために使うキーを決定する必要があります。(キーに関する情報は、セクション「[ディクショナリとは」を参照してください)。](9-1\_what-is-a-dictionary.md)).
 
 ![](<../images/5-5/4/dictionary - exercise I - 02.jpg>)
 
-> 1. The data that we will use is the room number.
+> 1. 使用するデータは部屋番号です。
 
-Now we will create the dictionary with the given keys and elements.
+ここでは、指定されたキーと要素でディクショナリを作成します。
 
 ![](<../images/5-5/4/dictionary - exercise I - 03.jpg>)
 
-> 1. The node, **Dictionary.ByKeysValues** will create a dictionary given the appropriate inputs.
-> 2. `Keys` need to be a string, while `values` can be a variety of object types.
+> 1. **Dictionary.ByKeysValues** ノードは、適切に入力されるとディクショナリを作成します。
+> 2. `Keys` は文字列であることが必要ですが、`values` はさまざまなオブジェクト タイプにすることができます。
 
-Lastly, we can retrieve a room from the dictionary with its room number now.
+最終的に、部屋番号を使って、ディクショナリから部屋を取得することができます。
 
 ![](<../images/5-5/4/dictionary - exercise I - 04.jpg>)
 
-> 1. `String` will be the key that we are using to look up an object from the dictionary.
-> 2. **Dictionary.ValueAtKey** will obtain the object from the dictionary now.
+> 1. `String` は、ディクショナリからオブジェクトを検索するために使用しているキーです。
+> 2. **Dictionary.ValueAtKey** ノードで、ディクショナリからオブジェクトを取得します。
 
-### Part II: Values Look Up
+### パート II: 値の検索
 
-Using this same dictionary logic, we can create dictionaries with grouped objects as well. If we wanted to look up all rooms at a given level we can modify the above graph as follows.
+ディクショナリによるこの同じ方法を使用して、グループ化されたオブジェクトでディクショナリを作成することもできます。指定されたレベルですべての部屋を検索する場合、上のグラフを次のように修正できます。
 
 ![](<../images/5-5/4/dictionary - exercise II - 01.jpg>)
 
-> 1. Rather than using the room number as the key, we can now use a parameter value, (in this case we will use level).
+> 1. キーとして部屋番号を使用するのではなく、パラメータの値(ここではレベル)を使用できます。
 
 ![](<../images/5-5/4/dictionary - exercise II - 02.jpg>)
 
-> 1. Now, we can group the rooms by the level that they reside on.
+> 1. これで、部屋をそのレベルごとにグループ化することができます。
 
 ![](<../images/5-5/4/dictionary - exercise II - 03.jpg>)
 
-> 1. With the elements grouped by the level, we can now use the shared keys (unique keys) as our key for our dictionary, and the lists of rooms as the elements.
+> 1. レベルごとにグループ化された要素を使用することで、共有のキー(固有のキー)をディクショナリのキーとして使用し、部屋のリストを要素として使用できるようになります。
 
 ![](<../images/5-5/4/dictionary - exercise II - 04.jpg>)
 
-> 1. Lastly, using the levels in the Revit model, we can look up which rooms reside on that level in the dictionary. `Dictionary.ValueAtKey` will take the level name and return the room objects at that level.
+> 1. 最終的に、Revit モデル内のレベルを使用して、ディクショナリ内で、そのレベルに配置されている部屋を検索できます。`Dictionary.ValueAtKey` は、レベル名を取得して、そのレベルの部屋オブジェクトを返します。
 
-The opportunities for Dictionary use are really endless. The ability to relate your BIM data in Revit to the element itself poses a variety of use cases.
+[Dictionary]カテゴリのノードを使用する機会は、実際には無限にあるのです。Revit 内の BIM データを要素自体に関連付けることができるので、さまざまな使用例が考えられます。

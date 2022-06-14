@@ -1,98 +1,98 @@
-# Attractor Points
+# アトラクタ ポイント
 
-Attractor points are great for experimenting with geometric patterns. They can be used to create gradual changes to objects based on their distance.
+アトラクタ ポイントは、ジオメトリ パターンを試すのに適しています。距離に基づいてオブジェクトを徐々に変化させるために使用できます。
 
-This workflow will teach you how to:
+このワークフローでは、次の方法を学習します。
 
-* Create, manage and edit lists.
-* Move points in the 3D preview using direct manipulation.
-* Change the executing mode.
+* リストを作成、管理、編集する。
+* 直接操作を使用して 3D プレビューでポイントを移動する。
+* 実行モードを変更する。
 
 ![](../images/10-1/2/attractor1.gif)
 
-## Defining our Objectives
+## 目的を定義する
 
-In this exercise, we want to create a circle (_Objective_) where the radius input is defined by a distance to a nearby point (_Relationship_).
+この演習では円を作成し、近接する点までの距離により、円の半径の入力値を定義します。この場合、円を作成することが「_目的_」で、近接する点までの距離が「_関係_」になります。
 
-![Hand Sketch of Circle](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
+![手書きの円](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
 
-> A point that defines a distance-based relationship is commonly referred to as an "Attractor." Here the distance to our Attractor Point will be used to specify how big our circle should be.
+> 距離ベースの関係を定義する点は、通常「アトラクタ」と呼ばれます。ここでは、アトラクタ点までの距離を使用して、円の大きさを指定します。
 
-## Next steps
+## 次のステップ
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
 
-Now that we have our objectives and relationships sketched we can begin creating our graph. We need the Nodes that will represent the sequence of actions Dynamo will execute. Let's start by adding the following nodes: **Number**, **Number Slider**, **Point.ByCoordinates**, **Geometry.DistanceTo, Circle.ByCenterPointRadius.**
+目的と関係を確認したところで、グラフの作成を開始します。グラフを作成するには、Dynamo が実行するアクションの順番を表すノードが必要になります。まず、**Number**、**Number Slider**、**Point.ByCoordinates**、**Geometry.DistanceTo、Circle.ByCenterPointRadius の各ノードを追加します。**
 
 ![](<../images/10-1/2/attractor (2).png>)
 
-> 1. Input > Basic > **Number**
-> 2. Input > Basic > **Number Slider**
-> 3. Geometry > Points > Point > **By Coordinates(x,y,z)**
-> 4. Geometry > Modifiers > Geometry > **DistanceTo**
-> 5. Geometry > Curves > Circle > **ByCenterPointRadius**
+> 1. [Input] > [Basic] > [**Number**]を選択します。
+> 2. [Input] > [Basic] > [**Number Slider**]を選択します。
+> 3. [Geometry] > [Points] > [Point] > [**By Coordinates(x,y,z)**]
+> 4. [Geometry] > [Modifiers] > [Geometry] > [**DistanceTo**]
+> 5. [Geometry] > [Curves] > [Circle] > [**ByCenterPointRadius**]
 
-### Connecting Nodes with Wires
+### ノードをワイヤで接続する
 
-Now that we have a few Nodes, we need to connect the Ports of the Nodes with Wires. These connections will define the flow of data.
+ノードを追加したら、そのノードのポートをワイヤで接続する必要があります。この接続により、データのフローが定義されます。
 
 ![](<../images/10-1/2/attractor (3).png>)
 
-> 1. **Number** to **Point.ByCoordinates**
-> 2. **Number Sliders** to **Point.ByCoordinates**
-> 3. **Point.ByCoordinates** (2) to **DistanceTo**
-> 4. **Point.ByCoordinates** and **DistanceTo** to **Circle.ByCenterPointRadius**
+> 1. **Number** ノードを **Point.ByCoordinates** ノードに接続します。
+> 2. **Number Sliders** ノードを **Point.ByCoordinates** ノードに接続します。
+> 3. **Point.ByCoordinates** (2)ノードを **DistanceTo** ノードに接続します。
+> 4. **Point.ByCoordinates** ノードと **DistanceTo** ノードを **Circle.ByCenterPointRadius** ノードに接続します。
 
-### Executing the Program
+### プログラムを実行する
 
-With our Program Flow defined, all we need to do is tell Dynamo to execute it. Once our program is executed (either Automatically or when we click Run in Manual Mode), data will pass through the Wires, and we should see the results in the 3d Preview.
+プログラム フローの定義が完了したら、後はプログラム フローの実行を Dynamo に対して指示するだけです。プログラムを実行すると、自動的に実行したか手動モードで[実行]をクリックして実行したかに関係なく、データがワイヤ経由で送信され、結果が 3D プレビューに表示されます。
 
 ![](<../images/10-1/2/attractor (4).png>)
 
-> 1. (Click Run) - If the Execution Bar is in Manual Mode, we need to Click Run to execute the graph
-> 2. Node Preview - Hovering your mouse over the box on the lower right corner of a Node will give you a pop-up of the results
-> 3. 3D Preview - If any of our Nodes create geometry, we will see it in the 3D Preview.
-> 4. The output geometry on the creation node.
+> 1. [実行]をクリック - 実行バーが手動モードになっている場合は、[実行]をクリックしてグラフを実行する必要があります。
+> 2. ノードのプレビュー - ノードの右下隅にあるボックス上にカーソルを合わせると、ポップアップに結果が表示されます。
+> 3. 3D プレビュー - ノードを使用してジオメトリを作成した場合は、そのジオメトリが 3D プレビューに表示されます。
+> 4. 作成ノードに関する出力ジオメトリが表示されます。
 
-### Adding **a Code Block**
+### **Code Block** を追加する
 
-If our program is working, we should see a circle in the 3D Preview that is passing through our Attractor Point. This is great, but we may want to add more detail or more controls. Let's adjust the input to the circle Node so that we can calibrate the influence on the radius. Add another **Number Slider** to the Workspace, then double click on a blank area of the Workspace to add a **Code Block** Node. Edit the field in the Code Block, specifying `X/Y`.
+プログラムが稼働している場合、アトラクタ点を通過する円が 3D プレビューに表示されます。この状態で、さらに詳細やコントロールを追加することができます。ここでは、半径に対する影響を調整できるように、Circle ノードの入力を調整しましょう。別の **Number Slider** ノードをワークスペースに追加してから、ワークスペースの空白領域をダブルクリックして **Code Block** ノードを追加します。 次に、Code Block ノードのフィールドで「`X/Y`」を指定します。
 
 ![](<../images/10-1/2/attractor (5).png>)
 
-> 1. **Code Block**
-> 2. **DistanceTo** and **Number Slider** to **Code Block**
-> 3. **Code Block** to **Circle.ByCenterPointRadius**
+> 1. **Code Block ノード**
+> 2. **DistanceTo** ノードと **Number Slider** ノードを **Code Block** ノードに接続します。
+> 3. **Code Block** ノードを **Circle.ByCenterPointRadius** ノードに接続します。
 
-### Using Sequences
+### シーケンスを使用する
 
-Starting simple and building complexity is an effective way to incrementally develop our program. Once it is working for one circle, let's apply the power of the program to more than one circle. Instead of one center point, if we use a grid of points and accommodate the change in the resulting data structure, our program will now create many circles - each with a unique radius value defined by the calibrated distance to the Attractor Point.
+単純なプログラムを作成して次第に複雑なものにしていく方法は、プログラムを段階的に開発するための効果的な方法です。1 つの円で機能するプログラムを作成したら、複数の円でも機能するようにプログラムの性能を拡張してみましょう。1 つの中心点の代わりに点のグリッドを使用し、生成されるデータ構造の変更を適用すると、プログラムによって多くの円が作成されます。各円の半径の値は、アトラクタ点までの調整された距離によって定義されたユニークな値になります。
 
 ![](<../images/10-1/2/attractor (6).png>)
 
-> 1. Add a **Number Sequence** Node and replace the inputs of **Point.ByCoordinates** - Right Click Point.ByCoordinates and select Lacing > Cross Reference
-> 2. Add a **Flatten** Node after Point.ByCoordinates. To flatten a list completely, leave the `amt` input at the default of `-1`
-> 3. The 3D Preview will update with a grid of circles
+> 1. **Number Sequence** ノードを追加して **Point.ByCoordinates** ノードの入力を置き換え、Point.ByCoordinates ノードを右クリックして[レーシング] > [外積]を選択します。
+> 2. Point.ByCoordinates ノードの後に **Flatten** ノードを追加します。リストを完全にフラット化するには、`amt` 入力を既定の `-1` のままにします。
+> 3. 3D プレビューが円のグリッドによって更新されます。
 
-### Adjusting with Direct Manipulation
+### 直接操作で値を調整する
 
-Sometimes numerical manipulation isn't the right approach. Now you can manually push and pull Point geometry when navigating in the background 3D preview. We can also control other geometry that was constructed by a point. For example, **Sphere.ByCenterPointRadius** is capable of Direct Manipulation as well. We can control the location of a point from a series of X, Y, and Z values with **Point.ByCoordinates**. With the Direct Manipulation approach, however, you are able to update the values of the sliders by manually moving the point in the **3D Preview Navigation** mode. This offers a more intuitive approach to controlling a set of discrete values that identify a point's location.
+場合によっては、数値を操作しない方がいいことがあります。このような場合、背景の 3D プレビューをナビゲートする際に、点ジオメトリを手動で操作することができます。また、点によって作成された他のジオメトリをコントロールすることもできます。たとえば、**Sphere.ByCenterPointRadius** ノードの場合、直接操作を行うこともできます。 点の位置は、**Point.ByCoordinates** ノードで X、Y、Z の値を使用してコントロールすることができます。 ただし、直接操作の場合、**3D プレビュー ナビゲーション** モードで点を手動で移動することにより、スライダの値を更新することができます。 この方法により、点の場所を識別する個別の値セットを直感的にコントロールすることができます。
 
 ![](<../images/10-1/2/attractor (7).png>)
 
-> 1. To use **Direct Manipulation**, select the panel of the point to be moved – arrows will appear over the point selected.
-> 2. Switch to **3D Preview Navigation** mode.
+> 1. **直接操作**を使用するには、移動する点のパネルを選択します。選択した点の上に矢印が表示されます。
+> 2. **3D プレビュー ナビゲーション** モードに切り替えます。
 
 ![](../images/10-1/2/attractor\(8\).png)
 
-> 1. Hover over the point and the X, Y, and Z axes will appear.
-> 2. Click and drag the colored arrow to move the corresponding axis, and the **Number Slider** values will update live with the manually moved point.
+> 1. 点の上にカーソルを合わせると、X 軸、Y 軸、Z 軸が表示されます。
+> 2. 色付きの矢印をクリックして対応する軸にドラッグすると、手動で移動した点に合わせて **Number Slider** ノードの値が更新されます。
 
 ![](<../images/10-1/2/attractor (1).png>)
 
-> 1. Note that before **Direct Manipulation** only one slider was plugged into the **Point.ByCoordinates** component. When we manually move the point in the X-direction, Dynamo will automatically generate a new **Number Slider** for the X input.
+> 1. **直接操作**を実行する前は、1 つのスライダだけが **Point.ByCoordinates** コンポーネントに接続されていたことに注意してください。 点を X 方向に手動で移動すると、X 入力用として新しい **Number Slider** ノードが自動的に生成されます。
 

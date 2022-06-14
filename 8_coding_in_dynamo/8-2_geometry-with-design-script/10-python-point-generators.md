@@ -1,6 +1,6 @@
-# Python Point Generators
+# Python 点ジェネレータ
 
-The following Python scripts generate point arrays for several examples. They should be pasted into a Python Script node as follows:
+次の Python スクリプトは、点の配列を生成する例をいくつか示しています。これらは、次のように、Python Script ノードに貼り付ける必要があります。
 
 ![](<../images/8-2/10/python points 01.jpg>)
 

@@ -1,52 +1,52 @@
-# Points
+# 点
 
-## Points in Dynamo
+## Dynamo における点
 
-### What is a Point?
+### 点とは
 
-A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
+[点](5-3\_points.md#point-as-coordinates)は、座標と呼ばれる 1 つまたは複数の値によって定義されます。点を定義するために必要な座標値の数は、その点が存在する座標系やコンテキストによって異なります。
 
-### 2D & 3D Point
+### 2D と 3D の点
 
-The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates \[X,Y,Z] (3D Point in Dynamo).
+Dynamo で使用される最も一般的な種類の点は、3 次元のワールド座標系内に存在します。それらの点には、[X,Y,Z]の 3 つの座標があります(Dynamo の 3D 点)。
 
 ![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
 
-A 2D Point in Dynamo has two coordinates \[X,Y].
+Dynamo の 2D 点には 2 つの座標\[X,Y]があります。
 
 ![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
 
-### Point on Curves and Surfaces
+### 曲線とサーフェス上の点
 
-Parameters for both Curves and Surfaces are continuous and extend beyond the edge of the given geometry. Since the shapes that define the Parameter Space reside in a three-dimensional World Coordinate System, we can always translate a Parametric Coordinate into a "World" Coordinate. The point \[0.2, 0.5] on the surface for example is the same as point \[1.8, 2.0, 4.1] in world coordinates.
+曲線とサーフェスのパラメータは連続しており、指定されたジオメトリのエッジを超えて拡張されます。パラメータ空間を定義する形状は 3 次元のワールド座標系内に存在しているため、パラメータ座標をいつでも「ワールド」座標に変換することができます。たとえば、サーフェス上の点\[0.2, 0.5]は、ワールド座標系の点\[1.8, 2.0, 4.1]と同一です。
 
 ![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
 
-> 1. Point in assumed World XYZ Coordinates
-> 2. Point relative to a given Coordinate System (Cylindrical)
-> 3. Point as UV Coordinate on a Surface
+> 1. ワールド XYZ 座標とみなされる座標で表された点
+> 2. 指定された座標系(円柱座標)で表された点
+> 3. サーフェス上の UV 座標で表された点
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-## Deep Dive into...
+## 詳細を説明します。
 
-If Geometry is the language of a model, then Points are the alphabet. Points are the foundation upon which all other geometry is created - we need at least two Points to create a Curve, we need at least three Points to make a Polygon or a Mesh Face, and so on. Defining the position, order, and relationship among Points (try a Sine Function) allows us to define higher order geometry like things we recognize as Circles or Curves.
+ジオメトリがモデルの言語だと仮定すると、点はアルファベットにあたります。点は、点以外のすべてのジオメトリを作成するための基礎になります。たとえば、1 本の曲線を作成するには、少なくとも 2 つの点が必要です。また、1 つのポリゴンまたはメッシュ面を作成するには、少なくとも 3 つの点が必要です。正弦関数を使用して点群の位置、順序、関係を定義すると、円や曲線など、高次元のジオメトリを定義することができます。
 
-![Point to Curve](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![点から曲線へ](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
 
-> 1. A Circle using the functions `x=r*cos(t)` and `y=r*sin(t)`
-> 2. A Sine Curve using the functions `x=(t)` and `y=r*sin(t)`
+> 1. 関数 `x=r*cos(t)` と `y=r*sin(t)` を使用する円
+> 2. 関数 `x=(t)` と `y=r*sin(t)` を使用した正弦曲線
 
-### Point as Coordinates
+### 座標としての点
 
-Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using \[X,Y] on a Plane or \[U,V] if we are on a surface.
+点は、2 次元の座標系内にも存在することができます。通常は、使用する空間に応じて異なる文字表記を使用します。この手引では、平面上では\[X,Y]を使用し、サーフェス上では\[U,V]を使用します。
 
-![Point as Coordinates](../images/5-2/3/Coordinates.jpg)
+![座標としての点](../images/5-2/3/Coordinates.jpg)
 
-> 1. A Point in Euclidean Coordinate System: \[X,Y,Z]
-> 2. A Point in a Curve Parameter Coordinate System: \[t]
-> 3. A Point in a Surface Parameter Coordinate System: \[U,V]
+> 1. ユークリッド座標系上の点: \[X,Y,Z]
+> 2. 曲線パラメータの座標系上の点: \[t]
+> 3. サーフェス パラメータの座標系上の点: \[U,V]

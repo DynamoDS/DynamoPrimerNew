@@ -1,126 +1,126 @@
-# Nodes and Wires
+# ノードとワイヤ
 
-## Nodes
+## ノード
 
-In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each **Node** performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.
+Dynamo の**ノード**は、ビジュアル プログラムを形成するために接続するオブジェクトです。各**ノード**は、特定の操作を実行します。操作には、数値の保存といった単純なものもあれば、ジオメトリの作成やクエリーの実行といった複雑なものもあります。
 
-### Anatomy of a Node
+### ノードの構造
 
-Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
+Dynamo のほとんどのノードは、5 つのパーツで構成されています。入力ノードなどの例外はありますが、各ノードの構造は次のようになります。
 
 ![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
-> 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
-> 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
+> 1. 名前 - `Category.Name` の命名規則に準拠したノードの名前。
+> 2. メイン - ノードの本体。ここを右クリックすると、ノード全体レベルのオプションが表示されます。
+> 3. ポート(入力および出力) - ワイヤの出入り口。ノードに入力データを渡し、ノードのアクションの結果を出力します。
+> 4. 既定値 - 入力ポートを右クリックすると、一部のノードでは既定値が表示されます。既定値は、使用しても使用しなくてもかまいません。
+> 5. レーシング アイコン - 一致する list 入力に対して指定されている[レーシング オプション](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing)を示します(後で詳しく説明します)
 
-### Nodes Input/Output Ports
+### ノードの入力/出力ポート
 
-The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.
+ノードの入力と出力はポートと呼ばれ、ワイヤの出入り口として機能します。データは左側のポートを経由して入力され、操作が実行されるとノードの右側から出力されます。
 
-Ports expect to receive data of a certain type. For instance, connecting a number such as _2.75_ to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply _"Red"_ to the same Port it will result in an error.
+ポートは、特定のタイプのデータを受信するように設定されています。たとえば、_2.75_ という数値を Point.ByCoordinates ノードのポートに接続すると、点が正常に作成されます。ただし、同じポートに対して「_Red_」を指定すると、エラーが発生します。
 
 {% hint style="info" %}
-Tip: Hover over a Port to see a tooltip containing the data type expected.
+ヒント: ポートにカーソルを合わせると、そのポートの正しいデータ タイプを含むツールチップが表示されます。
 {% endhint %}
 
 ![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
-> 1. Port Label
-> 2. Tool Tip
-> 3. Data Type
-> 4. Default Value
+> 1. ポートのラベル
+> 2. ツールチップ
+> 3. データ タイプ
+> 4. 既定値
 
-### Node States
+### ノードの状態
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
+Dynamo は、各ノードのステータスに基づいて異なるカラー スキームでノードをレンダリングすることにより、ビジュアル プログラムの実行状態を示します。状態の階層は、エラー > 警告 > 情報 > プレビューの順に表示されます。
 
-Hovering or right-clicking over the Name or Ports presents additional information and options.
+名前やポートにカーソルを合わせるか右クリックすると、追加の情報やオプションが表示されます。
 
 ![](<images/nodes and wires - node states.jpg>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 1. アクティブ - ノード名の背景がダーク グレーになっているノードは正常に接続されており、すべての入力が正常に接続されています。
+> 2. エラー状態 - ノードの下にある赤いステータス バーは、ノードがエラー状態にあることを示します。
+> 3. フリーズ - フリーズ状態のノードは半透明で表示されます。こうしたノードの実行は中止されています。
+> 4. バックグラウンド プレビュー - ノードと目のアイコンの下のグレーのステータス バー![](<images/nodes and wires - preview off.jpg>)は、ジオメトリ プレビューがオフになっていることを示します。
+> 5. 選択済み - 現在選択されているノードは、境界が水色でハイライト表示されます。
+> 6. 警告 - ノードの下の黄色のステータス バーは、入力データが不足しているか、不正なデータ タイプである可能性があることを意味する警告状態を示します。
 
-#### Handling Error or Warning Nodes
+#### エラーまたは警告ノードを処理する
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+ビジュアル プログラムに警告やエラーが含まれている場合、その問題に関する追加情報が表示されます。また、黄色のノードでも、ノード名の上にツールチップが表示されます。警告![](<images/nodes and wires - node warning icon.png>)またはエラー![](<images/nodes and wires - node error icon.png>)ツールチップ アイコンにマウス カーソルを合わせて展開します。
 
 {% hint style="info" %}
-Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
+ヒント: このツールチップ情報を使用して上流のノードを検査することにより、必要なデータ タイプまたはデータ構造にエラーがないかどうかを確認することができます。
 {% endhint %}
 
 ![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
-> 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 1. 警告ツールチップ - 「Null」を指定した場合、またはデータを指定しなかった場合、倍精度浮動小数点数(数値)として認識されません。
+> 2. Watch ノードを使用して入力データを検査します。
+> 3. 上流の Number ノードに数値ではなく「Red」が指定されています。
 
-## Wires
+## ワイヤ
 
-Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.
+ワイヤは各ノードを接続してノード間の関係を作成し、ビジュアル プログラムのフローを確立します。ワイヤはその名前のとおり、特定のオブジェクトから次のオブジェクトにデータ パルスを送信するための電線と考えることができます。
 
-### Program Flow <a href="#program-flow" id="program-flow"></a>
+### プログラム フロー <a href="#program-flow" id="program-flow"></a>
 
-Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the **Flow of Data** in the Visual Program.
+ワイヤは、特定のノードの出力ポートを別のノードの入力ポートに接続します。この接続により、ビジュアル プログラムの**データ フロー**が確立します。
 
-Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
+入力ポートは左側にあり、出力ポートはノードの右側にあります。そのため、通常、プログラム フローは左から右に移動します。
 
 ![](<images/nodes and wires - flow of data.jpg>)
 
-### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
+### ワイヤを作成する <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+ポートを左クリックしてワイヤを作成し、続いて別のノードのポートを左クリックして接続を作成します。接続の作成中、ワイヤは破線で表示され、正常に接続されると実線に変わります。
 
-The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
+データは常にこのワイヤを経由して出力から入力へと移動します。ただし、接続されている一連のポートをクリックすると、どちらの方向にもワイヤを作成できます。
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
-### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
+### ワイヤを編集する <a href="#editing-wires" id="editing-wires"></a>
 
-Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
+多くの場合、ワイヤで表示されている接続を編集して、ビジュアル プログラムのプログラム フローを調整する必要が生じます。ワイヤを編集するには、既に接続されているノードの入力ポートを左クリックします。ワイヤを編集する場合の方法は 2 つあります。
 
-* Change connection to an input Port, left-click on another input Port
+* 入力ポートへの接続を変更するには、別の入力ポートを左クリックします。
 
 ![](<images/nodes and wires - edit wire change port (2).gif>)
 
-* To remove the Wire, pull the Wire away and left-click on Workspace
+* ワイヤを削除するには、ワイヤを入力ポートから離してワークスペースを左クリックします。
 
 ![](<images/nodes and wires - edit wires remove.gif>)
 
-* Reconnect multiple wires using Shift+left-click
+* Shift+ 左クリックを使用して複数のワイヤを再接続します。
 
 ![](<images/nodes and wires - edit multi ports.gif>)
 
-* Duplicate a wire using Ctrl+left-click
+* Ctrl+ 左クリックを使用してワイヤを複製します。
 
 ![](<images/nodes and wires - duplicate wire.gif>)
 
-#### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
+#### 既定のワイヤとハイライト表示されたワイヤ<a href="#wire-previews" id="wire-previews"></a>
 
-By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
+既定では、ワイヤはグレーのストロークでプレビュー表示されます。特定のノードを選択すると、接続されているワイヤがそのノードと同じ水色でハイライト表示されます。
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
-> 1. Highlighted Wire
-> 2. Default Wire
+> 1. ハイライト表示されたワイヤ
+> 2. 既定のワイヤ
 
-**Hide Wires by Default**
+**既定でワイヤを非表示**
 
-In case you prefer to hide the Wires in your graph, you can find this option from View > Connectors > untick Show Connectors.
+グラフ内のワイヤを非表示にする場合は、[表示] > [コネクタ] > [コネクタを表示]のチェックを外すと、このオプションが表示されます。
 
-With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
+この設定では、選択したノードとその連結ワイヤのみが薄い水色でハイライト表示されます。
 
 ![](<images/nodes and wires - hide wires setting (1).gif>)
 
-#### Hide Individual Wire Only
+#### 個別のワイヤのみを非表示
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+また、[ノード出力] > [ワイヤを非表示]を右クリックすることで、選択したワイヤのみを非表示にすることもできます。
 
 ![](<images/nodes and wires - hide selected wire.gif>)

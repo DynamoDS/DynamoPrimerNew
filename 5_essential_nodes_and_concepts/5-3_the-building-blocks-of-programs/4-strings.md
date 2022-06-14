@@ -1,113 +1,113 @@
-# Strings
+# 文字列
 
-### What is a String
+### 文字列とは
 
-Formally, a **String** is a sequence of characters representing a literal constant or some type of variable. Informally, a string is programming lingo for text. We've worked with numbers, both integers and decimal numbers, to drive parameters and we can do the same with text.
+**文字列**とは、正確には、リテラル定数や何らかのタイプの変数を表す一連の文字の集合のことです。広い意味では、文字列とは、テキストを意味するプログラミング用語です。ここまでの手順では、整数と小数の両方を使用してパラメータをコントロールしてきましたが、テキストについても同じ処理を行うことができます。
 
-### Creating Strings
+### 文字列を作成する
 
-Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
+文字列は、カスタム パラメータの定義、ドキュメント セットの注釈付け、テキストベースのデータ セットの解析など、さまざまな目的で使用することができます。String ノードは、[Core] > [Input]カテゴリで使用することができます。
 
-The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
+上記のサンプル ノードは、すべて文字列用のノードです。数値は文字と同様に、文字列として表すことも、テキスト配列全体として表すこともできます。
 
 ![](<../images/5-3/4/strings - creating strings.jpg>)
 
-## Exercise
+## 演習
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-### Querying Strings
+### 文字列のクエリーを実行する
 
-You can parse through large amounts of data quickly by querying strings. We'll talk about some basic operations which can speed up a workflow and help for software interoperability.
+文字列のクエリーを実行することにより、大量のデータをすばやく解析することができます。ここでは、ワークフローを促進してソフトウェアの相互運用性を向上させるための基本的な操作について説明します。
 
-The image below considers a string of data coming from an external spreadsheet. The string represents the vertices of a rectangle in the XY-Plane. Let's break down some string split operations in miniature exercise:
+次の図は、外部のスプレッドシートから取得したデータの文字列を示しています。この文字列は、XY 面上の長方形の頂点を表しています。簡単な演習として、文字列の分割操作を確認してみましょう。
 
 ![](<../images/5-3/4/strings - querying strings 01.jpg>)
 
-> 1. The ";" separator splits each vertex of the rectangle. This creates a list with 3 items for each vertex.
+> 1. 「;」セパレータは、長方形の各頂点を分割します。これにより、各頂点の 3 つの項目が含まれているリストが作成されます。
 
 ![](<../images/5-3/4/strings - querying strings 02.jpg>)
 
-> 1. By hitting the "_+_" in the middle of the Node, we create new separator.
-> 2. Add a "_,_" string to the canvas and plug in to the new separator input.
-> 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
+> 1. String.Split ノードの中央にある[_+_]をクリックして、新しいセパレータを作成します。
+> 2. 「_,_」という文字をキャンバスに追加し、separator1 入力に接続します。
+> 3. リストの項目が 10 個になります。String.Split ノードは、_separator0_ に基づいて分割を行ってから、_separator1_ に基づいて分割を行います。
 
-While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a number. This is done with the **String.ToNumber** Node
+上記のリストの項目は数値に見えますが、Dynamo 内では個別の文字列として認識されます。点群を作成するには、データ タイプを文字列から数値に変換する必要があります。これを行うには **String.ToNumber** ノードを使用します。
 
 ![](<../images/5-3/4/strings - querying strings 03.jpg>)
 
-> 1. This Node is straightforward. Plug the **String.Split** results into the input. The output doesn't look different, but the data type is now a _number_ instead of a _string_.
+> 1. String.ToNumber ノードは、単純なノードです。**String.Split** ノードの出力を String.ToNumber ノードの入力に接続します。出力の表示は変わりませんが、データ タイプは_文字列_から_数値_に変換されています。
 
-With some basic additional operations, we now have a triangle drawn at the origin based on the original string input.
+いくつかの基本的な操作を実行すると、元の文字列の入力に基づいて基準点に三角形が描画されます。
 
 ![](<../images/5-3/4/strings - querying strings 04.jpg>)
 
-### Manipulating Strings
+### 文字列を操作する
 
-Since a string is a generic text object, they host a wide range of applications. Let's take a look at some of the major actions in the Core>String Category in Dynamo:
+文字列は一般的なテキスト オブジェクトであるため、さまざまな目的で使用することができます。ここでは、[Core] > [String]カテゴリの主要なアクションをいくつか見てみましょう。
 
-This is a method of merging two strings together in order. This takes each literal string in a list and creates one merged string.
+このカテゴリには、複数の文字列を順に結合する方法が用意されています。リストから各リテラル文字列を取得して、1 つの文字列に結合します。
 
-The following represents the concatenation of three strings:
+以下は、3 つの文字列を連結する方法を示しています。
 
 ![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
 
-> 1. Add or subtract strings to the concatenation by clicking the +/- buttons in the center of the Node.
-> 2. The output gives one concatenated string, with spaces and punctuation included.
+> 1. String.Concat ノード中央の[+]/[-]ボタンをクリックして、連結する文字列の追加と除外を行います。
+> 2. 出力として、スペースと句読点を含む 1 つの連結された文字列が生成されます。
 
-The join method is very similar to concatenate, except it has an added layer of punctuation.
+結合操作は連結操作に非常によく似ていますが、句読点のレイヤーが追加される点が異なります。
 
-If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the **String.Join** node in order to create a similar data structure.
+Excel を使用したことがあれば、CSV ファイルについても知っているでしょう。CSV とは、カンマ区切り値という意味です。セパレータとしてカンマ(この場合は 2 つのダッシュ)を **String.Join** ノードで使用すると、CSV に似たデータ構造を作成することができます。
 
-The following image represents the joining of two strings:
+次の図は、2 つの文字列を結合する方法を示しています。
 
 ![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
 
-> 1. The separator input allows one to create a string which divides the joined strings.
+> 1. separator 入力を使用して、結合された文字列の区切り文字を指定することができます。
 
-### Working with Strings
+### 文字列を操作する
 
-In this exercise, we're going to use methods of querying and manipulating strings to deconstruct the final stanza of Robert Frost's [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Not the most practical application, but it will help us to grasp conceptual string actions as we apply them to legible lines of rhythm and rhyme.
+この演習では、文字列のクエリーと文字列の操作を実行して、Robert Frost の [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621) という詩の最後の節を分解してみましょう。実際の開発作業で詩の文字列を操作することはありませんが、文字列に対する操作を理解するのに役立ちます。
 
-Let's begin with a basic string split of the stanza. We first notice that the writing is formatted based on commas. We'll use this format to separate each line into individual items.
+最初に、節の文字列を分解する基本的な操作を実行します。文字はカンマに基づいて書式設定されていることがわかります。この書式を使用して、各行を個々の項目に分割します。
 
 ![](<../images/5-3/4/strings - working with strings 01.jpg>)
 
-> 1. The base string is pasted into a **String** Node.
-> 2. Another **String** Node is used to denote the separator. In this case, we're using a comma.
-> 3. A **String.Split** Node is added to the canvas and connected to the two strings.
-> 4. The output shows that we've now separated the lines into individual elements.
+> 1. ベースとなる文字列を **String** ノードに貼り付けます。
+> 2. 別の **String** ノードを使用して、セパレータを指定します。ここでは、カンマをセパレータとして使用します。
+> 3. **String.Split** ノードをキャンバスに追加し、2 つの String ノードに接続します。
+> 4. 出力として、各行が個別の要素に分割されます。
 
-Now, let's get to the good part of the poem: the last two lines. The original stanza was one item of data. We separated this data into individual items in the first step. Now we need to do a search for the text we're looking for. And while we _can_ do this by selecting the last two items of the list, if this were an entire book, we wouldn't want to read through everything and manually isolate the elements.
+次に、詩のサビとなる最後の 2 行を処理しましょう。元の節は 1 つのデータ項目でした。最初の手順で、このデータを個別の項目に分割しました。そのため、必要な文字列を検索する必要があります。この例では、リストの最後にある 2 つの項目を選択することは難しくありませんが__、書籍全体が処理対象になるような場合、内容をすべて読んでから各要素を手作業で区別するのは大変な作業になります。
 
 ![](<../images/5-3/4/strings - working with strings 02.jpg>)
 
-> 1. Instead of manually searching, we use a **String.Contains** Node to perform a search for a set of characters. This is the similar to doing the "Find" command in a word processor. In this case, we get a return of "true" or "false" if that substring is found within the item.
-> 2. In the _searchFor_ input, we define a substring that we're looking for within the stanza. Let's use a **String** Node with the text "And miles".
-> 3. The output gives us a list of falses and trues. We'll use this boolean logic to filter the elements in the next step.
+> 1. **String.Contains** ノードを使用して文字セットを検索すれば、こうした手作業を行う必要はありません。これは、文書ファイルで「検索」コマンドを実行するのと似ています。この場合、対象のサブストリングが項目内で見つかったかどうかに応じて、「true」または「false」が返されます。
+> 2. String.Contains ノードの _searchFor_ 入力で、節内で検索するサブストリングを定義します。ここでは、**String** ノードで「And miles」と指定します。
+> 3. 出力として、false と true のリストが表示されます。次の手順では、このブール値ロジックを使用して各要素をフィルタします。
 
 ![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
 
-> 1. **List.FilterByBoolMask** is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
-> 2. Our output from the "in" is as expected, giving us the final two lines of the stanza.
+> 1. **List.FilterByBoolMask** ノードを使用して false と true を抽出します。in 出力は、mask 入力が true になっているステートメントを返し、out 出力は、mask 入力が false になっているステートメントを返します。
+> 2. in 出力により、節の最後の 2 行が返されます。この 2 行には、「And miles」という文字列が含まれています。
 
-Now, we want to drive home the repetition of the stanza by merging the two lines together. When viewing the output of the previous step, we notice that there are two items in the list:
+次に、最後の 2 行を結合して節の繰り返しを強調します。前の手順の出力を確認すると、リスト内に 2 つの項目が含まれていることがわかります。
 
 ![](<../images/5-3/4/strings - working with strings 04.jpg>)
 
-> 1. Using two **List.GetItemAtIndex** Nodes, we can isolate the items using the values of 0 and 1 as the index input.
-> 2. The output for each node gives us, in order, the final two lines.
+> 1. 2 つの **List.GetItemAtIndex** ノードを使用し、0 と 1 を index 入力の値として指定することにより、2 つの項目を分離することができます。
+> 2. 各ノードの出力として、最後の 2 行が順に表示されます。
 
-To merge these two items into one, we use the **String.Join** Node:
+これらの 2 つの項目を 1 つに結合するには、**String.Join** ノードを使用します。
 
 ![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
 
-> 1. After adding the **String.Join** Node, we notice that we need a separator.
-> 2. To create the separator, we add a **String** Node to the canvas and type in a comma.
-> 3. The final output has merged the last two items into one.
+> 1. **String.Join** ノードを追加したら、セパレータを指定する必要があります。
+> 2. セパレータを指定するには、キャンバスに **String** ノードを追加してカンマを入力します。
+> 3. 最終的な出力として、最後の 2 行が 1 行に結合されます。
 
-This may seem like a lot of work to isolate the last two lines; and it's true, string operations often require some up front work. But they are scalable, and they can be applied to large datasets with relative ease. If you are working parametrically with spreadsheets and interoperability, be sure to keep string operations in mind.
+このように、最後の 2 行を分割する作業は手間がかかります。文字列の操作では、多くの場合、事前の作業が必要になります。ただし、文字列の操作は拡張可能であるため、大規模なデータセットにも比較的簡単に適用することができます。スプレッドシートでパラメータを使用して対話式に操作する場合は、文字列の操作を実行すると便利です。

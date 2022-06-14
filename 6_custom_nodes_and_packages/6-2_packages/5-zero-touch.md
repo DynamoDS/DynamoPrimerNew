@@ -1,120 +1,120 @@
 # Zero-Touch Importing
 
-### What is Zero-Touch?
+### Zero-Touch の概要
 
-Zero-Touch Importing refers to a simple point-and-click method for importing C# libraries. Dynamo will read the public methods of a _.dll_ file and convert them to Dynamo nodes. You can use Zero-Touch to develop your own custom nodes and packages, and to import external libraries into the Dynamo environment.
+Zero-Touch Importing とは、C# ライブラリを読み込むための単純なポイント アンド クリック操作のことです。Dynamo は、_.dll_ ファイルの public メソッドを読み取って Dynamo ノードに変換します。Zero-Touch を使用して、独自のカスタム ノードとカスタム パッケージを開発し、外部のライブラリを Dynamo 環境に読み込むことができます。
 
 ![](<../images/6-2/5/zero-touch importing 01.jpg>)
 
-> 1. .dll files
-> 2. Dynamo Nodes
+> 1. .dll ファイル
+> 2. Dynamo ノード
 
-With Zero-Touch, you can actually import a library which was not necessarily developed for Dynamo and create a suite of new nodes. The current Zero-Touch functionality demonstrates the cross-platform mentality of the Dynamo Project.
+Zero-Touch により、Dynamo 用に開発されたものではないライブラリを読み込み、一連の新しいノードを作成することができます。現在の Zero-Touch 機能は、Dynamo プロジェクトのクロスプラットフォーム志向性を体現しています。
 
-This section demonstrates how to use Zero-Touch to import a third party library. For information on developing your own Zero-Touch Library, reference the [Dynamo wiki page](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development).
+このセクションでは、Zero-Touch を使用してサードパーティのライブラリを読み込む方法について説明します。独自の Zero-Touch ライブラリを開発する方法については、[Dynamo の Wiki ページ](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development)を参照してください。
 
-### Zero-Touch Packages
+### Zero-Touch パッケージ
 
-Zero-touch packages are a good complement to user-defined custom nodes. A few packages which use C# libraries are listed in the table below. For more detailed information on packages, visit the [Packages section ](../../a\_appendix/a-3\_packages.md)in the Appendix.
+Zero-touch パッケージは、ユーザが定義するカスタム ノードを補完するパッケージです。次の図は、C# ライブラリを使用するいくつかのパッケージを示しています。パッケージの詳細については、付録の「[パッケージ](../../a\_appendix/a-3\_packages.md)」セクションを参照してください。
 
-| **Logo/Image**                                                                       | **Name**                                                                    |
+| **ロゴ/イメージ** | **名前** |
 | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| ![](<../images/6-2/5/meshToolkit case study 01.jpg>)                           | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](<../images/6-2/5/package introduction - installing package folder 07.jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                               | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                                | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| ![](<../images/6-2/5/meshToolkit case study 01.jpg>) | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](<../images/6-2/5/package introduction - installing package folder 07.jpg>) | [Dynamo の展開](http://dynamobim.com/dynamounfold/) |
+| ![](../images/6-2/5/rhynamo.jpg) | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo) |
+| ![](../images/6-2/5/optimo.jpg) | [Optimo](https://github.com/BPOpt/Optimo) |
 
-## Case Study - Importing AForge
+## ケース スタディ - AForge の読み込み
 
-In this case study, we'll show how to import the [AForge](http://www.aforgenet.com) external _.dll_ library. AForge is a robust library which offers a range of functionality from image processing to artificial intelligence. We'll reference the imaging class in AForge to do a few image processing exercises below.
+このケース スタディでは、[AForge](http://www.aforgenet.com) の外部 _.dll_ ライブラリをインポートする方法について説明します。AForge は、イメージ処理機能から人工知能まで、さまざまな機能を提供する堅固なライブラリです。ここでは、AForge のイメージ クラスを使用して、いくつかのイメージ処理を行う方法について説明します。
 
-Let's begin by downloading AForge. On the [AForge download page](http://www.aforgenet.com/framework/downloads.html), select _\[Download Installer]_ and install after download has completed.
+最初に、AForge をダウンロードします。[AForge のダウンロード ページ](http://www.aforgenet.com/framework/downloads.html) で _\[Download Installer]_を選択し、ダウンロードが完了したらインストールを実行します。
 
-In Dynamo, create a new file and select _File > Import Library..._
+Dynamo で、新しいファイルを作成して_[ファイル] > [ライブラリを読み込む...]_を選択します。
 
 ![](<../images/6-2/5/case study aforge 01.jpg>)
 
-Next, locate the dll file.
+次に、dll ファイルを見つけます。
 
 ![](<../images/6-2/5/case study aforge 02.jpg>)
 
-> 1. In the pop-up window, navigate to the release folder in your AForge install. This will likely be in a folder similar to this one: _C:\Program Files (x86)\AForge.NET\Framework\Release_.
-> 2. **AForge.Imaging.dll:** We only want to use this one file from the AForge library for this case study. Select this _.dll_ and hit _"Open"._
+> 1. ポップアップ ウィンドウで、AForge のインストール環境のリリース フォルダにナビゲートします。通常は、_C:¥Program Files (x86)¥AForge.NET¥Framework¥Release_ などのフォルダになります。
+> 2. このケース スタディでは、**AForge.Imaging.dll** だけを使用します。この _.dll_ ファイルを選択して_[開く]_をクリックします。
 
-Back in Dynamo, you should see an **AForge** group of nodes added to your Library. We now have access to the AForge imaging library from our visual program!
+Dynamo に戻ると、ノードの**[AForge]** グループがライブラリに新しく表示されます。これで、ビジュアル プログラミングから AForge のイメージ ライブラリにアクセスできるようになりました。
 
 ![](<../images/6-2/5/case study aforge 03.jpg>)
 
-### Exercise 1 - Edge Detection
+### 演習 1 - 輪郭線の検出
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/6-2/5/ZeroTouchImages.zip" %}
 
-Now that the library is imported, we'll start off simple with this first exercise (_01-EdgeDetection.dyn_). We'll do some basic image processing on a sample image to show how AForge image filters. We'll use the _"Watch Image"_ node to show our results and apply filters in Dynamo similar to those in Photoshop
+ライブラリを読み込んだら、最初に簡単な演習を行います(_01-EdgeDetection.dyn_)。ここでは、サンプルのイメージに対して基本的なイメージ処理を実行することにより、AForge イメージのフィルタ機能について説明します。_Watch Image_ ノードを使用して処理の実行結果を表示し、Dynamo のフィルタを適用します。Dynamo のフィルタは、Photoshop のフィルタに似ています。
 
-To import an image, add a **File Path** node to the canvas and select "soapbubbles.jpg" from the exercise folder (photo cred: [flickr](https://www.flickr.com/photos/wwworks/667298782)).
+イメージを読み込むには、キャンバスに **File Path** ノードを追加し、演習フォルダ(写真コード: [flickr](https://www.flickr.com/photos/wwworks/667298782))から「soapbubbles.jpg」を選択します。
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 01.jpg>)
 
-The File Path node simply provides a String of the path to the image we've selected. Next, we need to convert it into a usable image file in Dynamo.
+File Path ノードにより、ユーザが選択したイメージのパスの文字列が提供されます。次に、Dynamo で使用可能なイメージファイルに変換する必要があります。
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 02.jpg>)
 
-> 1. Use **File From Path** to convert the file path item into an image in the Dynamo environment.
-> 2. Connect the **File Path** node to the **File.FromPath** node.
-> 3. To convert this File into an Image, we'll use the **Image.ReadFromFile** node.
-> 4. Last, let's see the result! Drop a **Watch Image** node onto the canvas and connect to **Image.ReadFromFile**. We haven't used AForge yet, but we've successfully imported an image into Dynamo.
+> 1. **File From Path** を使用して、ファイル パス項目を Dynamo 環境のイメージに変換します。
+> 2. **File Path** ノードを **File.FromPath** ノードに接続します。
+> 3. **Image.ReadFromFile** ノードを使用して、file 出力をイメージに変換します。
+> 4. 最後に、結果を確認します。**Watch Image** ノードをキャンバスにドロップして **Image.ReadFromFile** ノードに接続します。ここでは AForge をまだ使用していませんが、イメージを Dynamo 環境に正しく読み込むことができました。
 
-Under AForge.Imaging.AForge.Imaging.Filters (in the navigation menu), you'll notice that there is a wide array of filters available. We're going to use one of these filters now to desaturate an image based on threshold values.
+ナビゲーション メニューの AForge.Imaging.AForge.Filters の下に、さまざまな使用可能なフィルタが表示されます。ここでは、1 つのフィルタを使用し、しきい値に基づいてイメージの彩度を下げてみましょう。
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 03.jpg>)
 
-> 1. Drop three sliders onto the canvas, change their ranges to be from 0 to 1 and their step values to be 0.01.
-> 2. Add the **Grayscale.Grayscale** node to the canvas. This is an AForge filter which applies a grayscale filter to an image. Connect the three sliders from step 1 into cr, cg, and cb. Change the top and bottom sliders to have a value of 1 and the middle slider to have a value of 0.
-> 3. In order to apply the Grayscale filter, we need an action to perform on our image. For this, we use **BaseFilter.Apply**. Connect the image into the image input and **Grayscale.Grayscale** into the baseFilter input.
-> 4. Plugging into a **Watch Image** node, we get a desaturated image.
+> 1. 3 つのスライダをキャンバスにドロップし、各スライダの範囲を 0 から 1 に変更して、ステップ値を 0.01 に変更します。
+> 2. キャンバスに **Grayscale.Grayscale** ノードを追加します。これは、グレースケール フィルタをイメージに適用する AForge フィルタです。手順 1 の 3 つのスライダを、Grayscale.Grayscale ノードの入力(cr、cg、cb)にそれぞれ接続します。1 番目と 3 番目のスライダの値を 1 に設定し、2 番目のスライダの値を 0 に設定します。
+> 3. グレースケール フィルタを適用するには、イメージに対してアクションを実行する必要があります。この場合、**BaseFilter.Apply** を使用します。イメージを image 入力に接続し、**Grayscale.Grayscale** ノードを baseFilter 入力に接続します。
+> 4. **Watch Image** ノードに接続すると、イメージの彩度が下がります。
 
-We can have control over how to desaturate this image based on threshold values for red, green, and blue. These are defined by the inputs to the **Grayscale.Grayscale** node. Notice that the image looks pretty dim - this is because the green value is set to 0 from our slider.
+赤、緑、青のしきい値に基づいて、イメージの彩度を下げる方法をコントロールすることができます。これらのしきい値は、**Grayscale.Grayscale** ノードに対する入力によって定義されます。上図のイメージは暗くなっていますが、これは、スライダで緑のしきい値が 0 に設定されているためです。
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 04.jpg>)
 
-> 1. Change the top and bottom sliders to have a value of 0 and the middle slider to have a value of 1. This way we get a more legible desaturated image.
+> 1. 次に、1 番目と 3 番目のスライダの値を 0 に設定し、2 番目のスライダの値を 1 に設定します。この設定により、彩度を下げたイメージが明確に表示されます。
 
-Let's use the desaturated image, and apply another filter on top of it. The desaturated image has some contrast, so we we're going to test some edge detection.
+次に、彩度を下げたイメージに対して別のフィルタを適用します。彩度が低いイメージにはいくらかのコントラストがあります。ここでは、輪郭線の検出をテストしてみましょう。
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 05.jpg>)
 
-> 1. Add a **SobelEdgeDetector.SobelEdgeDetector** node to the canvas.
-> 2. Connect this to a **BaseUsingCopyPartialFilter.Apply** and connect the desaturated image to the image input of this node.
-> 3. The Sobel Edge Detector has highlighted the edges in a new image.
+> 1. キャンバスに **SobelEdgeDetector.SobelEdgeDetector** ノードを追加します。
+> 2. これを **BaseUsingCopyPartialFilter.Apply** に接続し、彩度を下げたイメージをこのノードの image 入力に接続します。
+> 3. Sobel Edge Detector により、新しいイメージ内で輪郭線がハイライト表示されます。
 
-Zooming in, the edge detector has called out the outlines of the bubbles with pixels. The AForge library has tools to take results like this and create Dynamo geometry. We'll explore that in the next exercise.
+拡大表示すると、Edge Detector により、イメージ内の泡の輪郭がピクセル単位で描画されていることがわかります。AForge ライブラリには、このような処理を行うためのツールや、Dynamo のジオメトリを作成するためのツールが用意されています。Dynamo のジオメトリを作成する方法については、次の演習で説明します。
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 06.jpg>)
 
-### Exercise 2 - Rectangle Creation
+### 演習 2 - 長方形の作成
 
-Now that we're introduced to some basic image processing, let's use an image to drive Dynamo geometry! On an elementary level, in this exercise we're aiming to do a _"Live Trace"_ of an image using AForge and Dynamo. We're going to keep it simple and extract rectangles from a reference image, but there are tools available in AForge for more complex operations. We'll be working with _02-RectangleCreation.dyn_ from the downloaded exercise files.
+前の演習では、基本的なイメージ処理について確認しました。この演習では、イメージを使用して Dynamo のジオメトリを操作してみましょう。簡単な操作として、AForge と Dynamo を使用してイメージの「_ライブ トレース_」を実行します。 説明を簡単にするため、ここでは参照イメージから長方形を抽出しますが、AForge には、より複雑な操作を実行するための各種ツールが用意されています。この演習では、ダウンロードした演習ファイルの _02-RectangleCreation.dyn_ を使用します。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 01.jpg>)
 
-> 1. With the File Path node, navigate to grid.jpg in the exercise folder.
-> 2. Connect the remaining series of nodes above to reveal a course parametric grid.
+> 1. File Path ノードを使用して、演習フォルダの grid.jpg にナビゲートします。
+> 2. 残りの一連のノードを接続し、パラメトリック グリッドを表示します。
 
-In this next step, we want to reference the white squares in the image and convert them to actual Dynamo geometry. AForge has a lot of powerful Computer Vision tools, and here we're going to use a particularly important one for the library called [BlobCounter](http://www.aforgenet.com/framework/docs/html/d7d5c028-7a23-e27d-ffd0-5df57cbd31a6.htm).
+次の手順では、イメージ内の白い正方形を表示して、実際の Dynamo ジオメトリに変換します。AForge には、多くの便利な Computer Vision ツールが用意されていますが、ここでは、その中でも特に重要なツールを [BlobCounter](http://www.aforgenet.com/framework/docs/html/d7d5c028-7a23-e27d-ffd0-5df57cbd31a6.htm) というライブラリに対して使用します。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 02.jpg>)
 
-> 1. Add a BlobCounter to the canvas, then we need a way to process the image (similar to the **BaseFilter.Apply** tool in the previous exercise).
+> 1. BlobCounter をキャンバスに追加したら、前の演習で使用した **BaseFilter.Apply** ツールと同じような方法でイメージを処理する必要があります。
 
-Unfortunately the "Process Image" node is not immediately visible in the Dynamo library. This is because the function may not be visible in the AForge source code. In order to fix this, we'll need to find a work-around.
+しかし、Process Image ノードは Dynamo ライブラリ内に直接表示されません。これは、このノード(関数)を AForge のソース コード内で表示することができないためです。この問題を解決するには、何らかの回避策が必要です。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 03.jpg>)
 
-> 1. Add a Python node to the canvas and add the following code to the Python node. This code imports the AForge library and then processes the imported image.
+> 1. キャンバスに Python ノードを追加し、Python ノードに次のコードを追加します。このコードによって AForge ライブラリが読み込まれ、読み込まれたイメージが処理されます。
 
 ```
 import sys
@@ -127,19 +127,19 @@ bc.ProcessImage(IN[0])
 OUT=bc
 ```
 
-Connecting the image output to the Python node input, we get an AForge.Imaging.BlobCounter result from the Python node.
+Watch Image ノードの image 出力を Python Script ノードの入力に接続すると、Python Script ノードによって AForge.Imaging.BlobCounter の結果が取得されます。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 04.jpg>)
 
-The next steps will do some tricks that demonstrate familiarity with the [AForge Imaging API](http://www.aforgenet.com/framework/docs/html/d087503e-77da-dc47-0e33-788275035a90.htm). It's not necessary to learn all of this for Dynamo work. This is more of a demonstration of working with external libraries within the flexibility of the Dynamo environment.
+次の手順では、[AForge Imaging API](http://www.aforgenet.com/framework/docs/html/d087503e-77da-dc47-0e33-788275035a90.htm) を使用する場合のヒントとなる操作をいくつか紹介します。ただし、Dynamo で作業を行う場合に、すべての操作を理解する必要はありません。これらの操作を参照して、外部のライブラリを Dynamo 環境内で柔軟に使用できることを理解するのが目的です。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 05.jpg>)
 
-> 1. Connect the output of the Python script to BlobCounterBase.GetObjectRectangles. This reads objects in an image, based on a threshold value, and extracts quantified rectangles from the pixel space.
+> 1. Python Script ノードの出力を BlobCounterBase.GetObjectRectangles に接続します。この操作により、しきい値に基づいてイメージ内のオブジェクトが読み取られ、定量化された長方形がピクセル スペースから抽出されます。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 06.jpg>)
 
-> 1. Adding another Python node to the canvas, connect to the GetObjectRectangles, and input the code below. This will create an organized list of Dynamo objects.
+> 1. 別の Python Script ノードをキャンバスに追加して GetObjectRectangles に接続し、次のコードを入力します。この操作により、Dynamo オブジェクトの整理されたリストが作成されます。
 
 ```
 OUT = []
@@ -154,8 +154,8 @@ for rec in IN[0]:
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 07.jpg>)
 
-> 1. Transpose the output of the Python node from the previous step. This creates 4 lists, each representing X,Y, Width, and Height for each rectangle.
-> 2. Using Code Block, we organize the data into a structure that accommodates the Rectangle.ByCornerPoints node (code below).
+> 1. 前の手順で追加した Python Script ノードの出力を置き換えます。この操作により、各長方形の X 座標、Y 座標、幅、高さを表す 4 つのリストが作成されます。
+> 2. Code Block ノードを使用して、Rectangle.ByCornerPoints ノードに対応する構造にデータを編成します(次のコードを参照)。
 
 ```
 recData;
@@ -170,17 +170,17 @@ p2=Autodesk.Point.ByCoordinates(x1,y1);
 p3=Autodesk.Point.ByCoordinates(x1,y0);
 ```
 
-We have an array of rectangles representing the white squares in the image. Through programming, we've done something (roughly) similar to a live trace in Illustrator!
+イメージ内の白い正方形を表す長方形の配列が表示されます。この演習では、プログラミング コードを入力して、Illustrator のライブ トレースに類似する機能を作成しました。
 
-We still need some cleanup, however. Zooming in, we can see that we have a bunch of small, unwanted rectangles.
+ただし、まだクリーンアップが必要です。拡大表示すると、必要のない小さな長方形がたくさん残っていることがわかります。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 08.jpg>)
 
-Next, we are going to write codes to get rid of unwanted rectangles.
+次に、不要な長方形を削除するためのコードを記述します。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 09.jpg>)
 
-> 1. Insert a Python node in between the GetObjectRectangles node and another Python node. The node's code is below, and removes all rectangles which are below a given size.
+> 1. GetObjectRectangles ノードと別の Python ノードの間に Python ノードを挿入します。このノードのコードは次のとおりです。このコードで指定したサイズよりも小さな長方形がすべて削除されます。
 
 ```
 rectangles=IN[0]
@@ -190,12 +190,12 @@ for rec in rectangles:
   OUT.append(rec)
 ```
 
-With the superfluous rectangles gone, just for kicks, let's create a surface from these rectangles and extrude them by a distance based on their areas.
+不要な長方形を削除したら、それらの長方形からサーフェスを作成し、その長方形の面積に基づく距離を使用して長方形を押し出してみましょう。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 10.jpg>)
 
-Last, change the both\_sides input to false and we get an extrusion in one direction. Dip this baby in resin and you've got yourself one super nerdy table.
+最後に、both\_sides 入力を false に変更すると、長方形が一方向に押し出されます。この操作により、非常に面白いテーブルが作成されます。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 11.jpg>)
 
-These are basic examples, but the concepts outlined here are transferable to exciting real-world applications. Computer vision can be used for a whole host of processes. To name a few: barcode readers, perspective matching, [projection mapping](https://www.youtube.com/watch?v=XSR0Xady02o), and [augmented reality](http://aforgenet.com/aforge/articles/gratf\_ar/). For more advanced topics with AForge related to this exercise, have a read through [this article](http://aforgenet.com/articles/shape\_checker/).
+ここで紹介した例はどれも基本的なものばかりですが、その概念は実際のアプリケーションでも応用することができます。Computer Vision は、さまざまなプロセスで使用することができます。バーコード リーダー、パースペクティブ マッチング、[プロジェクション マッピング](https://www.youtube.com/watch?v=XSR0Xady02o)、[オーグメンテッド リアリティ](http://aforgenet.com/aforge/articles/gratf\_ar/) などはその一例です。この演習に関する AForge の詳細なトピックについては、[この記事](http://aforgenet.com/articles/shape\_checker/) を参照してください。

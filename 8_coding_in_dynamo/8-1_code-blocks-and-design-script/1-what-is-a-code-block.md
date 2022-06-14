@@ -1,37 +1,37 @@
-# What's a Code Block
+# コード ブロックとは
 
-Code blocks are a window deep into DesignScript, the programming language at the heart of Dynamo. Built from scratch to support exploratory design workflows, DesignScript is a readable and concise language that offers both immediate feedback to small bits of code and also scales to large and complex interactions. DesignScript also forms the backbone of the engine that drives most aspects of Dynamo “under the hood”. Because nearly all of the functionality found in Dynamo nodes and interactions have a one-to-one relationship with the scripting language, there are unique opportunities to move between node-based interactions and scripting in a fluid way. &#x20;
+コード ブロックを使用すると、Dynamo の核となる DesignScript というプログラミング言語を詳しく理解することができます。予備的な設計ワークフローをサポートするためにまったく新しく開発された DesignScript は、簡潔で理解しやすい言語です。短いコードを迅速に変更することも、大規模で複雑な相互作用に対応することもできます。DesignScript は、Dynamo 内部のほとんどの要素を駆動するエンジンの中核でもあります。Dynamo ノード内のほぼすべての機能と相互作用について、スクリプト言語に対する 1 対 1 の関係が存在するため、ノードベースの相互作用とスクリプトを柔軟に切り替えることができます。これは、Dynamo 独自の機能です。&#x20;
 
 ![](../images/8-1/1/codeblock.jpg)
 
-For beginners, nodes can be automatically converted to text syntax to aid in learning DesignScript or simply to reduce the size of larger sections of graphs. This is done using a process called "Node to Code", which is outlined in more detail in the [DesignScript Syntax section](7-2\_design-script-syntax.md). More experienced users can use Code Blocks to create customized mashups of existing functionality and user authored relationships using many standard coding paradigms. In between the beginner and advanced user, there are a huge number of shortcuts and code snippets that will accelerate your designs. While the term 'code block' may be a little intimidating to non-programmers, it is both easy to use and robust. A beginner can use the code block efficiently with minimal coding, and an advanced user can define scripted definitions to be recalled elsewhere in a Dynamo definition.
+操作に慣れていない初級ユーザのために、ノードを自動的にテキスト構文に変換する機能が用意されています。これにより、DesignScript の理解をサポートしたり、グラフの大きな部分のサイズを簡単に小さくすることができます。この操作は、「ノードをコード化」という処理を使用して実行されます。この処理については、[DesignScript 構文](7-2\_design-script-syntax.md)のセクションで詳しく説明します。 操作に慣れている上級ユーザは、コード ブロックで各種の標準的なコードのパラダイムを使用して、既存の機能とユーザ定義の関係を組み合わせてカスタマイズすることができます。初心者ユーザと上級ユーザの間に位置する中級ユーザについては、設計作業をすばやく行うためのさまざまなショートカットやコード スニペットが用意されています。プログラミング経験のないユーザにとって、「コード ブロック」という言葉は難しそうに感じるかもしれませんが、使用方法も簡単で、安定して動作します。初級ユーザは、最小限のコードを記述してコード ブロックを効率的に使用でき、上級ユーザは、Dynamo 定義内の任意の場所で呼び出すことのできるスクリプト定義を作成することができます。
 
-### Code Block: A Brief Overview&#x20;
+### コード ブロックの概要&#x20;
 
-In short, code blocks are a text-scripting interface within a visual-scripting environment. They can be used as numbers, strings, formulas, and other data types. The code block is designed for Dynamo, so one can define arbitrary variables in the code block, and those variables are automatically added to the inputs of the node:
+コード ブロックとは、一言でいうと、ビジュアル スクリプティング環境内で使用するテキスト スクリプティング インタフェースです。コード ブロックは、数値、文字列、式などのデータ タイプとして使用することができます。コード ブロックは Dynamo 専用に設計されているため、コード ブロック内で任意の変数を定義することができます。定義した変数は、自動的にノードの入力に追加されます。
 
-With code blocks, a user has the flexibility to decide how to specify inputs. Here are several different ways to make a basic point with coordinates _(10, 5, 0)_:&#x20;
+コード ブロックを使用すると、入力値の指定方法を柔軟に決定することができます。_(10, 5, 0)_ という座標の基本的な点を作成するには、次のようにいくつかの方法があります。:&#x20;
 
 ![](<../images/8-1/1/codeblock brief overview.jpg>)
 
-As you learn more of the available functions in the library, you might even find that typing “Point.ByCoordinates” is faster than searching in the library and finding the proper node. When you type in _"Point."_ for example, Dynamo will display a list of possible functions to apply to a Point. This makes the scripting more intuitive and will help with learning how to apply functions in Dynamo.
+ライブラリ内の使用可能な各種の関数に慣れてくると、「Point.ByCoordinates」と入力する方が、ライブラリ内を検索して目的のノードを探すよりも早いということがわかるようになります。たとえば「_Point_」と入力すると、点に対して適用できる関数のリストが表示されます。 これにより、直感的にスクリプトを作成することができ、Dynamo で関数を適用する方法を理解することができます。
 
-### Creating Code Block Nodes
+### Code Block ノードを作成する
 
-The code block can be found in _Core>Input>Actions>Code Block_. But even faster, just double click on the canvas and the code block appears. This node is used so often, it's given full double-click privileges.
+Code Block ノードは、_[Core] > [Input] > [Actions] > [Code Block]_で使用することができます。 または、キャンバス上でダブルクリックするだけで Code Block ノードが表示されます。この方が簡単です。Code Block ノードは頻繁に使用されるため、キャンバス上でダブルクリックするだけで Code Block ノードが表示されるようになっています。
 
 ![](<../images/8-1/1/creating codeblock nodes.jpg>)
 
-### Numbers, Strings and Formulas
+### 数値、文字列、式
 
-Code blocks are also flexible towards data types. The user can quickly define numbers, strings, and formulas and the code block will deliver the desired output.
+Code Block ノードを使用すると、データ タイプについても柔軟に操作することができます。Code Block ノードを使用して、数値、文字列、式をすばやく定義し、目的の値を出力することができます。
 
-In the image below, you can see the "old school" way of doing things is a little long-winded: the user searches for the intended node in the interface, adds the node to the canvas, and then inputs the data. With code block, the user can double-click on the canvas to pull up the node, and type in the correct data type with basic syntax.
+次の図を見ると、値を定義するための従来の方法(左側の方法)は少し冗長であることがわかります。この方法では、インタフェース内で目的のノードを検索してキャンバスに追加し、データを入力する必要があります。Code Block ノードを使用すると、キャンバス上でダブルクリックするだけで Code Block ノードを表示し、基本的な構文で正しいデータ タイプを入力することができます。
 
-The number, string, and formula nodes are three examples of Dynamo nodes which are arguably obsolete in comparison to the code block.
+Code Block ノードと比べた場合、Number、String、Formula の各ノードは旧式のノードということができます。
 
 ![](<../images/8-1/1/old school vs code blocks nodes.jpg>)
 
-> 1. "Old-school"
-> 2. Code Blocks
+> 1. 従来の方法
+> 2. コード ブロック
 

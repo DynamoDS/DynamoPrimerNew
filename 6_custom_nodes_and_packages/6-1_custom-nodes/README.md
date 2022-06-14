@@ -1,6 +1,6 @@
-# Custom Nodes
+# カスタム ノード
 
-Dynamo offers many Core Nodes for a wide range of visual programming tasks. Sometimes a quicker, more elegant, or more easily shared solution is to build your own Nodes. These can be reused among different projects, they make your graphs clearer and cleaner, and they can be pushed to the package manager and shared with the global Dynamo community.
+Dynamo には、ビジュアル プログラミングのさまざまなタスクで使用できる多くのコア ノードが用意されています。ただし、独自のノードを作成した方が、迅速かつ効率的な方法で、簡単に問題を解決できる場合があります。これらの独自のノードは複数の異なるプロジェクトで再利用できるため、グラフが見やすくなります。これらのノードを Package Manager にプッシュして、世界中の Dynamo コミュニティと共有することもできます。
 
 ![](<../images/6-1/customNodes1 (1).png>)
 

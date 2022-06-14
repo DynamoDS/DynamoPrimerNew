@@ -1,10 +1,10 @@
-# Surfaces: Interpolated, Control Points, Loft, Revolve
+# サーフェス: 補間、制御点、ロフト、回転
 
-The two-dimensional analog to a NurbsCurve is the NurbsSurface, and like the freeform NurbsCurve, NurbsSurfaces can be constructed with two basic methods: inputting a set of base points and having Dynamo interpolate between them, and explicitly specifying the control points of the surface. Also like freeform curves, interpolated surfaces are useful when a designer knows precisely the shape a surface needs to take, or if a design requires the surface to pass through constraint points. On the other hand, Surfaces created by control points can be more useful for exploratory designs across various smoothing levels.
+2 次元のアナログから NURBS 曲線への変換が NURBS 曲面であり、フリーフォーム NURBS 曲線のように、2 つの基本的な方法で NURBS 曲面を構築できます。その方法とは、基点のセットを入力して Dynamo によってその間を補間する方法と、サーフェスの制御点を明示的に指定する方法です。また、フリーフォーム曲線のように、補間によるサーフェスは、サーフェスが取るべき形状を設計者が正確に認識している場合や、サーフェスが拘束点を通過することが必要な設計の場合に便利です。一方、制御点によって作成されたサーフェスは、さまざまなスムージング レベルで実験的な設計を行う場合に便利です。
 
-### Interpolated Surface
+### 補間されたサーフェス
 
-To create an interpolated surface, simply generate a two-dimensional collection of points approximating the shape of a surface. The collection must be rectangular, that is, not jagged. The method _NurbsSurface.ByPoints_ constructs a surface from these points.
+補間されたサーフェスを作成するには、サーフェスの形状を近似する 2 次元の点の集合を生成するだけです。集合は、長方形であることが必要です。つまり、ギザギザではありません。_NurbsSurface.ByPoints_ メソッドで、これらの点からサーフェスが構築されます。
 
 ![](../images/8-2/6/Surfaces\_01.png)
 
@@ -15,9 +15,9 @@ To create an interpolated surface, simply generate a two-dimensional collection 
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### Control Points Surface
+### 制御点のサーフェス
 
-Freeform NurbsSurfaces can also be created by specifying underlying control points of a surface. Like NurbsCurves, the control points can be thought of as representing a quadrilateral mesh with straight segments, which, depending on the degree of the surface, is smoothed into the final surface form. To create a NurbsSurface by control points, include two additional parameters to _NurbsSurface.ByPoints_, indicating the degrees of the underlying curves in both directions of the surface.
+フリーフォーム NURBS 曲面も、サーフェスの基礎となる制御点を指定することで作成できます。NURBS 曲線のように、制御点は直線セグメントによる四角形のメッシュを表すと考えることができ、このメッシュはサーフェスの次数に応じてスムージングされて最終的なサーフェス形状となります。NURBS 曲面を制御点によって作成するには、2 つのパラメータを _NurbsSurface.ByPoints_ に追加して、サーフェスの両方向での基礎となる曲線の次数を示します。
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
@@ -29,7 +29,7 @@ Freeform NurbsSurfaces can also be created by specifying underlying control poin
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-We can increase the degree of the NurbsSurface to change the resulting surface geometry:
+NURBS 曲面の次数を増やして、結果として得られるサーフェス ジオメトリを変更できます。
 
 ![](../images/8-2/6/Surfaces\_03.png)
 
@@ -41,9 +41,9 @@ We can increase the degree of the NurbsSurface to change the resulting surface g
 surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 ```
 
-### Loft Surface
+### ロフト サーフェス
 
-Just as Surfaces can be created by interpolating between a set of input points, they can be created by interpolating between a set of base curves. This is called lofting. A lofted curve is created using the _Surface.ByLoft_ constructor, with a collection of input curves as the only parameter.
+サーフェスは、一連の入力された点の間を補間することで作成できるのと同様に、一連のベースとなる曲線の間を補間することで作成できます。これをロフトと呼びます。ロフトによるサーフェスは、_Surface.ByLoft_ コンストラクタを使用して、入力された曲線の集合のみをパラメータとして作成されます。
 
 ![](../images/8-2/6/Surfaces\_04.png)
 
@@ -58,11 +58,11 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### Revolve Surface
+### サーフェス回転
 
-Surfaces of revolution are an additional type of surface created by sweeping a base curve around a central axis. If interpolated surfaces are the two-dimensional analog to interpolated curves, then surfaces of revolution are the two-dimensional analog to circles and arcs.
+回転のサーフェスは別のタイプのサーフェスで、中心軸を中心にベースとなる曲線をスイープして作成されます。補間されたサーフェスが 2 次元のアナログから補間された曲線への変換だとすると、回転のサーフェスは、2 次元のアナログから円や円弧への変換です。
 
-Surfaces of revolution are specified by a base curve, representing the “edge” of the surface; an axis origin, the base point of the surface; an axis direction, the central “core” direction; a sweep start angle; and a sweep end angle. These are used as the input to the _Surface.Revolve_ constructor.
+回転のサーフェスは、サーフェスの「エッジ」を表すベースとなる曲線、サーフェスの基点となる軸の原点、中心の「核」の方向となる軸方向、スイープの開始角度、およびスイープの終了角度によって指定されます。これらは _Surface.Revolve_ コンストラクタへの入力として使用されます。
 
 ![](../images/8-2/6/Surfaces\_05.png)
 

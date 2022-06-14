@@ -1,96 +1,96 @@
-# Meshes
+# メッシュ
 
-## Mesh in Dynamo
+## Dynamo のメッシュ
 
-### What is Mesh?
+### メッシュとは
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+コンピュータ モデリングの分野では、3D ジオメトリを表現する形式として[メッシュ](7-meshes.md#mesh)が広く普及しています。メッシュ ジオメトリは一般的に四角形または三角形の集合で構成され、NURBS 操作の代替として、軽量で柔軟なジオメトリにすることができます。メッシュは、レンダリングやビジュアライゼーションからデジタル製造や 3D プリントまで、あらゆる用途に使用されます。
 
-### Mesh Elements
+### メッシュの要素
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Dynamo では、面と頂点のデータ構造を使用してメッシュを定義します。最も基本的なレベルでは、この構造はポリゴンにグループ化された単なる点の集合です。メッシュの点を頂点と呼び、サーフェスのような形状のポリゴンを面と呼びます。
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+メッシュを作成するには、頂点のリストと、それらの頂点をインデックス グループと呼ばれる面にグループ化するための仕組みが必要です。
 
 ![](<../images/5-2/7/meshes - mesh elements.jpg>)
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. 頂点のリスト
+> 2. 面を定義するためのインデックス グループのリスト
 
 ### Mesh Toolkit
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+Dynamo のメッシュ機能は、[Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) パッケージをインストールして拡張することができます。Dynamo Mesh Toolkit は、外部ファイル形式からメッシュを読み込む機能、Dynamo のジオメトリ オブジェクトからメッシュを作成する機能、頂点とインデックスからメッシュを手動で作成する機能を提供するライブラリです。
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+このライブラリには、メッシュの変更や修復を行うためのツールや、製造処理で使用する水平方向のスライスを抽出するためのツールも用意されています。
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+このパッケージの使用例については、「[Mesh Toolkit のケース スタディ](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)」を参照してください。
 
 ![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deep Dive into...
+## 詳細を説明します。
 
-### Mesh
+### メッシュ
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+メッシュは、サーフェスまたはソリッド ジオメトリを表す四角形と三角形の集まりです。メッシュ オブジェクトは、ソリッドと同様に、頂点、辺、面から構成されます。メッシュには、標準のプロパティの他に、法線のような独自のプロパティもあります。
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![メッシュの要素](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. メッシュの頂点
+> 2. メッシュの辺: \*隣接する面が 1 つだけの辺を「裸の辺」と呼びます。それ以外のすべての辺を、「おおわれた辺」と呼びます。
+> 3. メッシュの面
 
-### Vertices + Vertex Normals
+### 頂点と頂点法線
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+メッシュの頂点は、単純な点のリストです。メッシュを作成する場合や、メッシュの構造に関する情報を取得する場合、頂点のインデックスは非常に重要です。各頂点には、対応する頂点法線(ベクトル)があります。この頂点法線は、頂点において隣接する面の方向の平均を表すため、メッシュが「内向き」か「外向き」かを判断する場合に役立ちます。
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![頂点と法線](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. 頂点
+> 2. 頂点法線
 
-### Faces
+### 面
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+面は、3 つまたは 4 つの頂点の順番付きリストです。そのため、メッシュ面の「サーフェス」としての表示方法は、インデックス化された頂点の位置によって決まります。メッシュを構成する頂点のリストは既に作成されているため、ここでは個々の点を指定して面を定義するのではなく、頂点のインデックスをそのまま使用します。これにより、複数の面で同じ頂点を使用することができます。
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. 四角形の面は、0、1、2、3 のインデックスから構成されます。
+> 2. 三角形の面は、1、4、2 のインデックスから構成されます。インデックス グループの順序は、変更することができます。ただし、反時計回りに並んでいる必要があります。これにより、面が正しく定義されます。
 
-### Meshes versus NURBS Surfaces
+### メッシュと NURBS サーフェスとの比較
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+メッシュ ジオメトリと NURBS ジオメトリとの違いは何でしょうか。どのような場合にどちらのジオメトリを使用したらよいのでしょうか。
 
-#### Parameterization
+#### パラメータ化
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+前の章で、NURBS サーフェスは 2 つの方向に向かう一連の NURBS 曲線によって定義されるということを説明しました。これらの方向には、`U` と `V` というラベルが付けられます。これにより、2 次元サーフェスの範囲に応じて、NURBS サーフェスをパラメータ化することができます。曲線自体は、計算式としてコンピュータに格納されます。これにより、生成されるサーフェスを任意の精度で計算することができます。ただし、複数の NURBS サーフェスを結合するのは難しい場合があります。2 つの NURBS サーフェスを結合すると、ポリサーフェスが作成されます。ジオメトリの異なる部分には、異なる UV パラメータと曲線がそれぞれ定義されます。
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![制御点](../images/5-2/7/NURBSvsMESH-01.jpg)
 
-> 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
-> 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 1. サーフェス
+> 2. アイソパラメトリック(Isoparm)曲線
+> 3. サーフェス制御点
+> 4. サーフェス制御ポリゴン
+> 5. パラメトリック点
+> 6. サーフェス フレーム
+> 7. メッシュ
+> 8. 裸の辺
+> 9. メッシュ ネットワーク
+> 10. メッシュの辺
+> 11. 頂点法線
+> 12. メッシュ面、メッシュ面の法線
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+NURBS サーフェスとは異なり、メッシュは、正確に定義された複数の不連続な頂点と面で構成されます。頂点のネットワークは、通常、単純な `UV` 座標で定義することはできません。面は互いに連続していないため、精度はメッシュ内で定義されます。精度を高めるには、メッシュを変更し、面の数を増やす必要があります。メッシュには数学的な表現方法がないため、1 つのメッシュ内で複雑なジオメトリをより柔軟に処理することができます。
 
-### Local versus Global Influence
+### ローカルな影響とグローバルな影響
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+メッシュと NURBS サーフェスのもう一つの重要な違いは、メッシュ内または NURBS ジオメトリ内のローカルの変更が形状全体に与える影響の度合いです。メッシュで 1 つの頂点を移動すると、その頂点に隣接する面だけが影響を受けます。NURBS サーフェスの場合、影響の範囲はより複雑で、サーフェスの次数、制御点のウェイト、制御点のノットによって影響の範囲が異なります。ただし、一般的には、NURBS サーフェスで 1 つの制御点を移動した場合の方が、ジオメトリの変更はより広範囲で滑らかなものになります。
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![編集](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. NURBS サーフェスで 1 つの制御点を移動すると、形状全体に影響が及びます。
+> 2. メッシュ ジオメトリで 1 つの頂点を移動すると、隣接する要素にのみ影響が及びます。
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+この対比関係は、直線と曲線で構成されるベクター イメージと、個々のピクセルで構成されるラスター イメージとの関係に似ています。ベクター イメージを拡大表示しても曲線はくっきりと表示されるのに対して、ラスター イメージを拡大表示すると個々のピクセルが拡大されて表示されます。つまり、NURBS サーフェスは、数学的に滑らかな関係があるという点でベクター イメージに似ています。一方メッシュは、一定の解像度を持つという点でラスター イメージに似ています。
 
 ##

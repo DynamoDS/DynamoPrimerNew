@@ -1,9 +1,9 @@
-# Coding in Dynamo
+# Dynamo でのコーディング
 
-Dynamo is a great door to start coding for the AEC world. You may be interested in some of these sections to start your coding journey:
+Dynamo は、AEC の世界に向けてコーディングを開始するのに最適です。コーディングの旅を始めるにあたり、次のセクションを参照することをお勧めします。
 
-* [Code Blocks and DesignScript](8-1\_code-blocks-and-design-script/)
-* [Geometry with DesignScript](8-2\_geometry-with-design-script/)
+* [コード ブロックと DesignScript](8-1\_code-blocks-and-design-script/)
+* [DesignScript を使用するジオメトリ](8-2\_geometry-with-design-script/)
 * [Python](8-3\_python/)
 
 ![](<./images/image (17).png>)

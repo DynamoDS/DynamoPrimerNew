@@ -1,8 +1,8 @@
-# Python and Revit
+# Python と Revit
 
-### Python and Revit
+### Python と Revit
 
-Now that we've demonstrated how to use Python scripts in Dynamo, let's take a look at connecting Revit libraries into the scripting environment. Remember, we imported Python Standard and our Dynamo core nodes with the first four lines in the block of code below. To import the Revit nodes, Revit elements, and the Revit document manager, we only have to add a few more lines:
+前のセクションでは、Dynamo で Python スクリプトを使用する方法について説明しました。このセクションでは、スクリプティング環境に Revit ライブラリを接続する方法を見てみましょう。ここまでの手順で、次のコード ブロックの最初の 4 行を使用して、Python 標準ライブラリと Dynamo の Core ノードが既に読み込まれています。数行のコードを追加するだけで、Revit の各種のノード、要素、ドキュメント マネージャを読み込むことができます。
 
 ```
 import sys
@@ -25,35 +25,35 @@ from RevitServices.Persistence import DocumentManager
 import System
 ```
 
-This gives us access to the Revit API and offers custom scripting for any Revit task. By combining the process of visual programming with Revit API scripting, collaboration and tool development improve significantly. For example, a BIM manager and a schematic designer can work together on the same graph. In this collaboration, they can improve design and execution of the model.
+これにより、Revit API にアクセスし、任意の Revit タスクでカスタム スクリプトを使用できるようになります。ビジュアル プログラミングのプロセスと Revit API スクリプトを組み合わせることにより、コラボレーションやツールの開発が容易になります。たとえば、BIM マネージャと回路設計者が、同じグラフを使用して同時に作業することができます。こうしたコラボレーションにより、モデルの設計と施工を改善することができます。
 
 ![](<../images/8-3/2/python & revit - 01.jpg>)
 
-### Platform Specific APIs
+### プラットフォーム固有の API
 
-The plan behind the Dynamo Project is to widen the scope of platform implementation. As Dynamo adds more programs to the docket, users will gain access to platform-specific APIs from the Python scripting environment. While Revit is the case study for this section, we can anticipate more chapters in the future which offer comprehensive tutorials on scripting in other platforms. Additionally, there are many [IronPython](http://ironpython.net) libraries accessible now which can be imported into Dynamo!
+Dynamo プロジェクトの背景には、プラットフォーム実装のスコープを拡大するという計画があります。そのため、Dynamo には新しいプログラムが追加されていく予定になっています。ユーザは、Python スクリプティング環境からプラットフォーム固有の API にアクセスできるようになります。このセクションでは Revit を扱いますが、今後は章の数を増やして、別のプラットフォーム上でのスクリプティングに関する説明を追加する予定になっています。また、さまざまな [IronPython](http://ironpython.net) ライブラリにアクセスして Dynamo に読み込むことができるようになりました。
 
-The examples below demonstrate ways to implement Revit-specific operations from Dynamo using Python. For a more detailed review on Python's relationship to Dynamo and Revit, refer to the [Dynamo Wiki page](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration). Another useful resource for Python and Revit is the [Revit Python Shell ](https://github.com/architecture-building-systems/revitpythonshell)Project.
+次の例では、Dynamo で Python を使用して、Revit 固有の操作を実行する方法について説明します。Dynamo および Revit との Python の関係における詳細については、[Dynamo の Wiki ページ](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration)を参照してください。Python と Revit のもう 1 つの便利なリソースは、[Revit Python Shell ](https://github.com/architecture-building-systems/revitpythonshell) プロジェクトです。
 
-## Exercise 1
+## 演習1
 
-> Create a new Revit Project.
+> 新しい Revit プロジェクトを作成します。
 >
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/8-2/2/Revit-Doc.dyn" %}
 
-In these exercises, we'll explore elementary Python scripts in Dynamo for Revit. The exercise will focus on dealing with Revit files and elements, as well as the communication between Revit and Dynamo.
+これ以降の一連の演習では、Dynamo for Revit における基本的な Python スクリプトについて説明します。この演習では、Revit のファイルと要素を使用します。また、Revit と Dynamo 間の通信についても説明します。
 
-This is a cut and dry method for retrieving the _doc_, _uiapp_, and _app_ of the Revit file linked to your Dynamo sesson. Programmers who have worked in the Revit API before may notice the items in the watch list. If these items do not look familiar, that's okay; we'll be using other examples in the exercises below.
+ここでは、Dynamo セッションにリンクされた Revit ファイルの _doc_、_uiapp_、_app_ を取得するための一般的な方法について説明します。 Revit API を使用したことのあるプログラマならば、上図の Watch リストのような項目を見たことがあるでしょう。これらの項目を見たことがなくても、特に問題はありません。これ以降の演習で、別の例を使用して説明します。
 
-Here is how we're importing Revit Services and retrieving the document data in Dynamo.
+RevitServices を読み込み、Dynamo のドキュメント データを取得するには、次のようなスクリプトを記述します。
 
 ![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
 
-Take a look at the Python node in Dynamo. You can also find the code from below:
+ここで、Dynamo の Python Script ノードを確認します。次のコードを参照することもできます。
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -74,43 +74,43 @@ app = uiapp.Application
 OUT = [doc,uiapp,app]
 ```
 
-## Exercise 2
+## 演習 2
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
 
-In this exercise, we'll make a simple Model Curve in Revit using the Dynamo Python node.
+この演習では、Dynamo の Python Script ノードを使用して、Revit 内に単純なモデル曲線を作成します。
 
-Begin by creating a new Conceptual Mass family in Revit.
+最初に、Revit 内に新しいコンセプト マス ファミリを作成します。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
 
-Open the _Conceptual Mass Folder_ and use the _Metric Mass.rft_ template file.
+_コンセプト マス フォルダ_を開き、_Metric Mass.rft_ テンプレート ファイルを使用します。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
 
-In Revit, use the keyboard shortcut **`un`** to bring up the Project Unit settings, change the length unit to meters.
+Revit で、キーボード ショートカット **`un`** を使用してプロジェクトの単位の設定を表示し、長さの単位をメートルに変更します。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
 
-Launch Dynamo and create the set of nodes in the image below. We'll first create two reference points in Revit from Dynamo nodes.
+Dynamo を起動し、下図に示す一連のノードを作成します。次に、Dynamo のノードを使用して、Revit 内に 2 つの参照点を作成します。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
 
-> 1. Create a **Code Block** and give it a value of `"0;"`
-> 2. Plug this value into a **ReferencePoint.ByCoordinates** node for X,Y, and Z inputs.
-> 3. Create three sliders, ranging from -100 to 100 with a step size of 1.
-> 4. Connect each slider to a **ReferencePoint.ByCoordinates** node.
-> 5. Add a **Python** node to the workspace, click the "+" button on the node to add another input and plug the two references points into each input. Open the **Python** node.
+> 1. **Code Block** ノードを作成し、`"0;"` の値を設定します。
+> 2. この値を、**ReferencePoint.ByCoordinates** ノードの X、Y、Z 入力に接続します。
+> 3. -100 ～ 100 の範囲内で、ステップ値が 1 の Number Slider ノードを 3 つ作成します。
+> 4. 各スライダを **ReferencePoint.ByCoordinates** ノードに接続します。
+> 5. **Python Script** ノードをワークスペースに追加し、このノードの[+]ボタンをクリックして入力をもう 1 つ追加し、各入力に参照点を接続します。**Python Script** ノードを開きます。
 
-Take a look at the Python node in Dynamo. Find the full code at the below.
+ここで、Dynamo の Python Script ノードを確認します。下の完全なコードを見つけます。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
 
-> 1. **System.Array:** Revit needs a **System Array** as an input (rather than a Python list). This is just one more line of code, but paying attention to argument types will facilitate Python programming in Revit.
+> 1. **System Array:** Revit の入力には、Python リストではなく **System.Array** が必要です。これは 1 行のコードに過ぎませんが、引数のタイプに注意すると、Revit での Python プログラミングが容易になります。
 
 ```
 import sys
@@ -134,34 +134,34 @@ refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
-In Dynamo, we've created two reference points with a line connecting them using Python. Let's take this a little further in the next exercise.
+ここまでの手順では、Dynamo で Python を使用して、線分で接続された 2 つの参照点を作成しました。次の演習で、さらに操作を進めてみましょう。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
 
-## Exercise 3
+## 演習 3
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-This exercise keeps it simple, but drives home the topics of connecting data and geometry from Revit to Dynamo and back. Let's begin by opening Revit-StructuralFraming.rvt. Once opened, launch Dynamo and open the file Revit-StructuralFraming.dyn.
+この演習では、簡単な操作を実行することにより、Revit と Dynamo 間で相互にデータやジオメトリを接続する場合の要点について説明します。最初に Revit-StructuralFraming.rvt を開き、次に Dynamo を起動して、Revit-StructuralFraming.dyn ファイルを開きます。
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 01.jpg>)
 
-This Revit file is about as basic as it gets. Two reference curves: one drawn on Level 1 and the other drawn on Level 2. We want to get these curves into Dynamo and maintain a live link.
+この Revit ファイルは、基本的なファイルです。レベル 1 とレベル 2 にそれぞれ 1 本ずつ、2 本の異なる参照曲線が描画されています。これらの曲線を Dynamo に読み込み、ライブ リンクを作成します。
 
-In this file we have a set of nodes plugging into five inputs of a Python node.
+このファイルでは、Python Script ノードの 5 つの入力に一連のノードが接続されています。
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
-> 1. **Select Model Element Nodes:** Hit the select button for each and select a corresponding curve in Revit.
-> 2. **Code Block:** using the syntax `0..1..#x;`_,_ connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
-> 3. **Structural Framing Types:** We'll choose the default W12x26 beam here from the dropdown menu.
-> 4. **Levels:** select "Level 1".
+> 1. 各 **Select Model Element** ノードの[選択]ボタンをクリックし、Revit 内の対応する曲線を選択します。
+> 2. **Code Block** ノードで「`0..1..#x;`_」という構文を使用して、_0 ～ 20 までの範囲を持つ Integer Slider ノードを _x_ 入力に接続します。この操作により、2 本の曲線の間に作成する梁の数を指定します。
+> 3. **Structural Framing Types** ノードのドロップダウン メニューで、既定の W12x26 梁を選択します。
+> 4. **Levels** ノードで、「Level 1」を選択します。
 
-This code in Python is a little more dense, but the comments within the code describe what's happening in the process
+この Python コードは、これまでのコードよりも行数が多くなっていますが、コード行の前後のコメントを参照すると、プロセス内の処理内容を確認することができます。
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
 
@@ -200,23 +200,23 @@ for val in IN[2]:
 	OUT.append(beam.Faces)
 ```
 
-In Revit, we have an array of beams spanning the two curves as structural elements. Note: this isn't a realistic example...the structural elements are used as an example for native Revit instances created from Dynamo.
+Revit で、2 つの曲線にわたる梁の配列が構造要素として作成されました。注: この構造要素は、Dynamo でネイティブの Revit インスタンスを作成する場合の例として使用しているもので、実際にはあり得ない構造要素であることに注意してください。
 
-In Dynamo, we can see the results as well. The beams in the **Watch3D** node refer to the geometry queried from the Revit elements.
+Dynamo でも、結果を確認することができます。 **Watch3D** ノードの梁は、Revit 要素からクエリーされたジオメトリを参照します。
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
 
-Notice that we have a continuous process of translating data from the Revit Environment to the Dynamo Environment. In summary, here's how the process plays out:
+このセクションでは、Revit 環境から Dynamo 環境にデータを変換する一連のプロセスを作成しました。このプロセスをまとめると、次のようになります。
 
-1. Select Revit element
-2. Convert Revit element to Dynamo Curve
-3. Divide Dynamo curve into a series of Dynamo points
-4. Use the Dynamo points between two curves to create Dynamo lines
-5. Create Revit beams by referencing Dynamo lines
-6. Output Dynamo surfaces by querying the geometry of Revit beams
+1. Revit の要素を選択する
+2. Revit の要素を Dynamo の曲線に変換する
+3. Dynamo の曲線を一連の Dynamo の点に分割する
+4. Dynamo の 2 つの曲線間の点を使用して Dynamo の線分を作成する
+5. Dynamo の線分を参照することにより、Revit の梁を作成する
+6. Revit の梁のジオメトリに対してクエリーを実行することにより、Dynamo のサーフェスを出力する
 
-This may sound a little heavy handed, but the script makes it as simple as editing the curve in Revit and re-running the solver (although you may have to delete the previous beams when doing so). _This is due to the fact that we are placing beams in python, thus breaking the association that OOTB nodes have._
+これは複雑なプロセスに見えるかもしれませんが、スクリプトを使用すると、Revit で曲線を編集してソルバを再実行するのと変わらないほど単純な処理になります(ただし、そのためには、元の梁を削除する必要があります)。_これは、Python で梁を配置することによって、初期設定のままのノードにある関連付けが解除されるためです。_
 
-With an update to the reference curves in Revit, we get a new array of beams.
+Revit で参照曲線を更新すると、梁の新しい配列が作成されます。
 
 ![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)

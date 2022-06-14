@@ -1,103 +1,103 @@
-# Creating a Custom Node
+# カスタム ノードを作成する
 
-Dynamo offers several different methods for creating custom nodes. You can build custom nodes from scratch, from an existing graph, or explicitly in C#. In this section we will cover building a custom node in the Dynamo UI from an existing graph. This method is ideal for cleaning up the workspace, as well as packaging a sequence of nodes to reuse elsewhere.
+Dynamo では、いくつかの方法でカスタム ノードを作成することができます。最初からカスタム ノードを作成することも、既存のグラフから作成することも、C# を使用して明示的に作成することもできます。このセクションでは、既存のグラフを使用して Dynamo UI 内にカスタム ノードを作成する方法について説明します。ワークスペースを整理し、一連のノードをパッケージ化して別の場所で再利用する場合は、この方法が最適です。
 
-## Exercise: Custom Nodes for UV Mapping
+## 演習: UV マッピング用のカスタム ノード
 
-### Part I: Start with a Graph
+### パート I: グラフから開始する
 
-In the image below, we map a point from one surface to another using UV coordinates. We'll use this concept to create a panelized surface which references curves in the XY plane. We'll create quad panels for our panelization here, but using the same logic, we can create a wide variety of panels with UV mapping. This is a great opportunity for custom node development because we will be able to repeat a similar process more easily in this graph or in other Dynamo workflows.
+次の図は、UV 座標を使用して、1 つのサーフェスから別のサーフェスに点をマッピングする場合の例を示しています。この概念を適用して、XY 平面上の曲線を参照する、複数の小さなパネルから構成されるサーフェスを作成してみましょう。ここでは、パネル化用の四角形のパネルを作成しますが、同じ概念を適用して、UV マッピングを使用する多様なパネルを作成することもできます。この演習を行うと、このグラフや Dynamo の別のワークフローで同様のプロセスを簡単に繰り返すことができるようになるため、カスタム ノード開発のよい練習になります。
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 01.jpg>)
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-Let’s start by creating a graph that we want to nest into a custom node. In this example, we will create a graph that maps polygons from a base surface to a target surface, using UV coordinates. This UV mapping process is something we use frequently, making it a good candidate for a custom node. For more information on surfaces and UV space, refer to the [Surface ](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)page. The complete graph is _UVmapping\_Custom-Node.dyn_ from the .zip file downloaded above.
+最初に、カスタム ノード内にネストするグラフを作成します。この例では、UV 座標を使用して、基準となるサーフェスから目的のサーフェスにポリゴンをマッピングするグラフを作成します。この UV マッピング プロセスは頻繁に使用するプロセスであるため、カスタム ノードの演習素材として適しています。サーフェスと UV 空間の詳細については、「[サーフェス](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)」ページを参照してください。完全なグラフは、上記でダウンロードした .zip ファイルの _UVmapping\_Custom-Node.dyn_ になります。
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
 
-> 1. **Code Block:** Use this line to create a range of 10 numbers between -45 and 45 `45..45..#10;`
-> 2. **Point.ByCoordinates:** Connect the output of the **Code Block** to the ‘x’ and ‘y’ inputs and set the lacing to cross-reference. You should now have a grid of points.
-> 3. **Plane.ByOriginNormal:** Connect the _‘Point’_ output to the _‘origin’_ input to create a plane at each of the points. The default normal vector of (0,0,1) will be used.
-> 4. **Rectangle.ByWidthLength:** Connect the planes from the previous step into the _‘plane’_ input, and use a **Code Block** with a value of _10_ to specify the width and length.
+> 1. **Code Block:** この行を使用して、-45 ～ 45 `45..45..#10;`の範囲の 10 個の数値を作成します。
+> 2. **Point.ByCoordinates:** **Code Block** ノードの出力を x 入力と y 入力に接続し、[レーシング]を[外積]に設定します。これで、点のグリッドが作成されます。
+> 3. **Plane.ByOriginNormal:** _Point_ 出力を _origin_ 入力に接続して、各点に平面を作成します。 この操作では、既定の法線ベクトル(0,0,1)が使用されます。
+> 4. **Rectangle.ByWidthLength:** 前の手順で作成した平面を _plane_ 入力に接続し、値 _10_ の **Code Block** ノードを使用して幅と長さを指定します。
 
-You should now see a grid of rectangles. Let’s map these rectangles to a target surface using UV coordinates.
+これで、長方形のグリッドが作成されます。UV 座標を使用して、これらの長方形を目的のサーフェスにマッピングします。
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
 
-> 1. **Polygon.Points:** Connect the **Rectangle.ByWidthLength** output from the previous step to the _‘polygon’_ input to extract the corner points of each rectangle. These are the points that we will map to the target surface.
-> 2. **Rectangle.ByWidthLength:** Use a **Code Block** with a value of _100_ to specify the width and length of a rectangle. This will be the boundary of our base surface.
-> 3. **Surface.ByPatch:** Connect the **Rectangle.ByWidthLength** from the previous step to the _‘closedCurve’_ input to create a base surface.
-> 4. **Surface.UVParameterAtPoint:** Connect the _‘Point’_ output of the **Polygon.Points** node and the _‘Surface’_ output of the **Surface.ByPatch** node to return the UV parameter at each point.
+> 1. **Polygon.Points:** 前の手順の **Rectangle.ByWidthLength** 出力を _polygon_ 入力に接続し、各長方形の頂点を抽出します。これらの点を、目的のサーフェスにマッピングします。
+> 2. **Rectangle.ByWidthLength:** 値 _100_ で **Code Block** ノードを使用して、長方形の幅と長さを指定します。これが、基準サーフェスの境界線になります。
+> 3. **Surface.ByPatch:** 前の手順の **Rectangle.ByWidthLength** 出力を _closedCurve_ 入力に接続し、基準となるサーフェスを作成します。
+> 4. **Surface.UVParameterAtPoint:** **Polygon.Points** ノードの _Point_ 出力と **Surface.ByPatch** ノードの _Surface_ 出力を接続して、各点で UV パラメータを返します。
 
-Now that we have a base surface and a set of UV coordinates, we can import a target surface and map the points between surfaces.
+これで、基準となるサーフェスと UV 座標のセットが作成されました。次に、目的のサーフェスを読み込み、2 つのサーフェス間で点をマッピングします。
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 04.jpg>)
 
-> 1. **File Path:** Select the file path of the surface you want to import. The file type should be .SAT. Click the _"Browse..."_ button and navigate to the _UVmapping\_srf.sat_ file from the .zip file downloaded above.
-> 2. **Geometry.ImportFromSAT:** Connect the file path to import the surface. You should see the imported surface in the geometry preview.
-> 3. **UV:** Connect the UV parameter output to a _UV.U_ and a _UV.V_ node.
-> 4. **Surface.PointAtParameter:** Connect the imported surface as well as the u and v coordinates. You should now see a grid of 3D points on the target surface.
+> 1. **File Path:** 読み込むサーフェスのファイル パスを選択します。 ファイル タイプは .sat にしてください。[_参照..._]ボタンをクリックして、上でダウンロードした .zip ファイルの _UVmapping\_srf.sat_ にナビゲートします。
+> 2. **Geometry.ImportFromSAT:** ファイル パスを接続して、サーフェスを読み込みます。 読み込んだサーフェスがジオメトリのプレビューに表示されます。
+> 3. **UV:** UV パラメータ出力を _UV.U_ ノードと _UV.V_ ノードに接続します。
+> 4. **Surface.PointAtParameter:** 読み込んだサーフェス、U 座標、V 座標を接続します。 これで、目的のサーフェス上に 3D の点のグリッドが表示されます。
 
-The final step is to use the 3D points to construct rectangular surface patches.
+最後に、3D の点を使用して長方形のサーフェス パッチを作成します。
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 05.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the points on the surface to construct a polycurve through the points.
-> 2. **Boolean:** Add a **Boolean** to the workspace and connect it to the _‘connectLastToFirst’_ input and toggle to True to close the polycurves. You should now see rectangles mapped to the surface.
-> 3. **Surface.ByPatch:** Connect the polycurves to the _‘closedCurve’_ input to construct surface patches.
+> 1. **PolyCurve.ByPoints:** サーフェス上の点群を接続し、その点群からポリカーブを作成します。
+> 2. **Boolean:** **Boolean** ノードをワークスペースに追加して _connectLastToFirst_ 入力に接続し、値を True に切り替えてポリカーブを閉じます。これで、サーフェスに長方形がマッピングされて表示されます。
+> 3. **Surface.ByPatch:** ポリカーブを _closedCurve_ 入力に接続し、サーフェス パッチを作成します。
 
-### Part II: From Graph to Custom Node
+### パート II: グラフからカスタム ノードへ
 
-Now let’s select the nodes that we want to nest into a Custom Node, thinking about what we want to be the inputs and outputs of our node. We want our Custom Node to be as flexible as possible, so it should be able to map any polygons, not just rectangles.
+次に、ノードの入力と出力を考慮しながら、カスタム ノード内にネストするノードを選択します。長方形以外の任意のポリゴンをマッピングできるように、カスタム ノードの柔軟性を可能な限り高めてみましょう。
 
-Select the following Nodes (beginning with Polygon.Points), right click on the workspace and select ‘Create Custom Node’.
+次のノード(Polygon.Points から始まる)を選択し、ワークスペースを右クリックして[カスタム ノードを作成]を選択します。
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 01.jpg>)
 
-In the Custom Node Properties dialog, assign a name, description, and category to the Custom Node.
+[カスタム ノード プロパティ]ダイアログボックスで、カスタム ノードに名前、説明、カテゴリを割り当てます。
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 02.jpg>)
 
-> 1. Name: MapPolygonsToSurface
-> 2. Description: Map polygon(s) from a base to target surface
-> 3. Add-ons Category: Geometry.Curve
+> 1. 名前: MapPolygonsToSurface
+> 2. 説明: 基準点からターゲット サーフェスにポリゴンをマッピングします
+> 3. アドオン カテゴリ: Geometry.Curve
 
-The Custom Node has considerably cleaned up the workspace. Notice that the inputs and outputs have been named based on the original nodes. Let’s edit the Custom Node to make the names more descriptive.
+カスタム ノードにより、ワークスペースが見やすくなりました。入力と出力には、元のノードに基づいて名前が付いています。カスタム ノードを編集して、これらの名前をもっとわかりやすい名前に変更しましょう。
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 03.jpg>)
 
-Double click the Custom Node to edit it. This will open a workspace with a yellow background representing the inside of the node.
+編集するカスタム ノードをダブルクリックします。ワークスペースの背景色が黄色で表示されます。これは、カスタム ノードの内部を表しています。
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
 
-> 1. **Inputs:** Change the input names to _baseSurface_ and _targetSurface_.
-> 2. **Outputs:** Add an additional output for the mapped polygons.
+> 1. 各 **Input** ノードの入力名を _baseSurface_ と _targetSurface_ に変更します。
+> 2. マッピングするポリゴン用に **Output** ノードを追加します。
 
-Save the custom node and return to the home workspace. Notice the **MapPolygonsToSurface** node reflects the changes we just made.
+カスタム ノードを保存し、ホーム ワークスペースに戻ります。 **MapPolygonsToSurface** ノードに変更内容が反映されます。
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 05.jpg>)
 
-We can also add to the robustness of the Custom Node by adding in **Custom Comments**. Comments can help to hint at the input and output types or explain the functionality of the node. Comments will appear when the user hovers over an input or output of a Custom Node.
+**カスタム コメント**を追加して、カスタム ノードの内容をさらにわかりやすくすることもできます。 コメントを入力すると、入力タイプと出力タイプの内容だけでなく、ノードの機能を説明することができます。カスタム ノードの入力や出力にカーソルを置くと、コメントが表示されます。
 
-Double click the Custom Node to edit it. This will re-open the yellow background workspace.
+編集するカスタム ノードをダブルクリックします。背景が黄色のワークスペースがもう一度表示されます。
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 06.jpg>)
 
-> 1. Begin editing the Input **Code Block**. To start a Comment, type "//" followed by the comment text. Type anything that may help to clarify the Node - Here we will describe the _targetSurface_.
-> 2. Let's also set the default value for the _inputSurface_ by setting the input type equal to a value. Here, we will set the default value to the original **Surface.ByPatch** set.
+> 1. Input の **Code Block** ノードの編集を開始します。コメントを入力する場合は、最初に「//」を入力してから、コメント テキストを入力します。ノードの内容を説明するためのコメントを入力してください。ここでは、_targetSurface_ ノードの説明を入力します。
+> 2. 特定の値に一致する入力タイプを設定して、_inputSurface_ ノードの既定値を設定します。 ここでは、既定値を元の **Surface.ByPatch** のセットに設定します。
 
-Comments can also be applied to the Outputs.
+コメントは、Output に適用することもできます。
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 07.jpg>)
 
-> Edit the text in the Output Code Block. Type "//" followed by the comment text. Here we will clarify the _Polygons_ and the _surfacePatches_ Outputs by adding a more in-depth description.
+> Output の Code Block ノードのテキストを編集します。「//」の後ろにコメント テキストを入力します。ここでは、_Polygons_ と _surfacePatches_ の Output の詳細な説明を追加します。
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 08.jpg>)
 
-> 1. Hover over the Custom Node Inputs to see the Comments.
-> 2. With the default value set on our _inputSurface_, we can also run the definition without a surface input.
+> 1. カスタム ノード入力にカーソルを置いてコメントを表示します。
+> 2. _inputSurface_ ノードの既定値が設定されているため、Surface 入力を使用することなく定義を実行することができます。

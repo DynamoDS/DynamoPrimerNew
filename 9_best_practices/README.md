@@ -1,5 +1,5 @@
-# Best Practices
+# ベスト プラクティス
 
-This part of the primer is organized in the spirit of a journal of “best practices”. It sheds light on several strategies that we have learned, through experience and research, to be most conducive to quality parametric workflows. As designers and programmers, our metric for quality is primarily concerned with the maintainability, dependability, usability, and efficiency of our tools. While these best practices have specific examples for either visual or text-based scripting, the principles are applicable to all programming environments and can inform many computational workflows.
+ここでは、さまざまなベスト プラクティスを紹介します。これらのベスト プラクティスは、これまでの経験と調査によって得たいくつかの方策が、品質の高いパラメトリック ワークフローを構築するために最も効果的であることを明らかにしています。設計者やプログラマのは、オートデスクの各種ツールの保守性、信頼性、利便性、効率性を主な指標として、品質を評価します。ここで紹介するベスト プラクティスでは、ビジュアルベースのスクリプト作成またはとテキストベースのスクリプト作成における具体的な例を挙げていますが、これらの原則は、すべてのプログラミング環境に適用でき、さまざまな計算ワークフローを示すことができます。
 
 ![](./images/bestPractices.png)

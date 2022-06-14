@@ -1,12 +1,12 @@
-# Sample Workflows
+# サンプル ワークフロー
 
-This section will explore a series of workflows that will guide you through using Dynamo.
+このセクションでは、Dynamo の使用について紹介する一連のワークフローについて説明します。
 
-The following sample workflows are available:
+次のワークフローを使用できます。
 
-**Getting Started Workflows**
+**スタートアップ ワークフロー**
 
-* [Parametric Vase](10-1\_getting-started-workflows/1-parametric-vase.md)
-* [Attractor Points](10-1\_getting-started-workflows/2-attractor-points.md)
+* [パラメータを使用する花瓶](10-1\_getting-started-workflows/1-parametric-vase.md)
+* [アトラクタ ポイント](10-1\_getting-started-workflows/2-attractor-points.md)
 
-You can also locate concepts introduced in workflows using the [concept index](table-of-summary-for-some-concept-used-in-previous-exercises.md)
+また、[概念インデックス](table-of-summary-for-some-concept-used-in-previous-exercises.md)を使用して、ワークフローで導入された概念を探すことができます。

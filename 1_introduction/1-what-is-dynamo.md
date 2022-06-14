@@ -1,25 +1,24 @@
-# What is Dynamo & How Does It Work?
+# Dynamo とは、その動作の仕組みとは
 
-Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
+Dynamo は、スタンドアロンの「Sandbox」モードで、または Revit、FormIt、Civil 3D などの他のソフトウェアのプラグインとして、ダウンロードして実行できる、[ビジュアル プログラミング](broken-reference/) アプリケーションです。
 
 {% hint style="info" %}
-Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
-{% endhint %}
+[**Dynamo Core**/**Revit**/**Sandbox** の違いについて説明します。](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/){% endhint %}
 
-### The Process
+### プロセス
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
+Dynamo を使用すると、要素を相互に接続して、カスタム アルゴリズムを構成できる動作の関係とシーケンスを定義するビジュアル プログラミングのプロセス内での作業を可能にします。データの処理からジオメトリの生成まで、すべてリアルタイムで `code` を記述せずに、さまざまな用途にアルゴリズムを使用できます。
 
 ![](<./images/1-1/nodes and wires - flow of data.jpg>)
 
-### Connecting Nodes and Wires
+### ノードとワイヤを接続する
 
-Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
+ノードとワイヤは、[ビジュアル プログラミング](../a\_appendix/a-1\_visual-programming-and-dynamo.md) プロセスをサポートする Dynamo の主要なコンポーネントです。これにより、設計のパーツ間に明瞭な視覚的および体系的な関係を確立するのに役立ちます。マウスをクリックするだけでノードを簡単に接続しながら、設計ワークフローの開発および最適化ができます。
 
 ![](<./images/1-1/what is dynamo - connecting nodes with wires.gif>)
 
-## What can Dynamo Achieve?
+## Dynamo で実現できること
 
-From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
+プロジェクトのワークフローにおけるビジュアル プログラミングの活用から、カスタマイズされたツールの開発まで、幅広い用途で使用できる Dynamo は、アプリケーションの開発に欠かせないツールです。
 
-[Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[Pinterest で Dynamo in Action のボードをフォローしてください。](http://www.pinterest.com/modelabnyc/dynamo-in-action/)

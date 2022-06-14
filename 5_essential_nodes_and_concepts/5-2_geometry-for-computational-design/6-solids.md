@@ -1,96 +1,96 @@
-# Solids
+# ソリッド
 
-## Solids in Dynamo
+## Dynamo のソリッド
 
-### What is Solid?
+### ソリッドとは
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+単一のサーフェスから作成することのできない複雑なモデルを構築する場合や、明示的な体積を定義する場合は、[ソリッド](5-6\_solids.md#solids)(およびポリサーフェス)を使用する必要があります。単純な立方体でさえ、全部で 6 つのサーフェスが必要になる複雑な構造をしています。ソリッドには、サーフェスには存在しない 2 つの重要な概念があります。それは、高度な位相幾何学的な概念(面、辺、頂点)と、ブール演算という概念です。
 
-### Boolean Operation to Create Spiky Ball Solid
+### スパイク状の球体ソリッドを作成するブール演算
 
-You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
+[ブール演算](5-6\_solids.md#boolean-operations)を使用して、ソリッドを修正することができます。いくつかのブール演算を使用して、スパイク状のボールを作成してみましょう。
 
 ![](<../images/5-2/6/solids  - spiky ball.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
-> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
-> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface.
-> 4. **Solid.UnionAll**: Union the Cones and the Sphere.
-> 5. **Topology.Edges**: Query the edges of the new Solid
-> 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
+> 1. **Sphere.ByCenterPointRadius** ノードを使用して、ベースとなるソリッドを作成します。
+> 2. **Topology.Faces** ノードと **Face.SurfaceGeometry** ノードを使用してソリッドの面のクエリーを実行し、サーフェス ジオメトリに変換します。この場合、球体には 1 つの面しかありません。
+> 3. **Cone.ByPointsRadii** ノードで、サーフェス上の点を使用して円錐を作成します。
+> 4. **Solid.UnionAll** ノードを使用して、円錐と球体との和演算を行います。
+> 5. **Topology.Edges** ノードを使用して、新しいソリッドの辺のクエリーを実行します。
+> 6. **Solid.Fillet** ノードを使用して、スパイク状の球体のエッジの面取りを行います。
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### Freezing
+### フリーズ
 
-Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
+ブール演算は複雑なため、計算に時間がかかります。選択したノードとその影響を受ける下流ノードの実行を中止するには、フリーズ機能を使用します。
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1.Use the right-click contextual menu to Freeze the Solid Union operation
+> 1. Solid.UnionAll ノードの和演算をフリーズするには、右クリックしてコンテキスト メニューを使用します。
 >
-> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
+> 2\. 選択したノードとすべての下流ノードがライト グレーのゴースト モードでプレビュー表示され、影響を受けるワイヤが破線で表示されます。影響を受けるジオメトリのプレビューも、ゴースト モードになります。これで、ブール論理和を計算することなく、上流で値を変更することができます。
 >
-> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
+> 3\. ノードのフリーズを解除するには、ノードを右クリックして[フリーズ]の選択を解除します。
 >
-> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 4\. 影響を受けるすべてのノードとそれに関連するジオメトリのプレビューが更新され、標準プレビュー モードに戻ります。
 
-## Deep Dive into...
+## 詳細を説明します。
 
-### Solids
+### ソリッド
 
-Solids consist of one or more Surfaces that contain volume by way of a closed boundary that defines "in" or "out." Regardless of how many of these Surfaces there are, they must form a "watertight" volume to be considered a Solid. Solids can be created by joining Surfaces or Polysurfaces together or by using operations such as loft, sweep, and revolve. Sphere, Cube, Cone and Cylinder primitives are also Solids. A Cube with at least one face removed counts as a Polysurface, which has some similar properties, but it is not a Solid.
+ソリッドは 1 つまたは複数のサーフェスから構成され、「内部」と「外部」を定義する閉じた境界によって体積が定義されます。ソリッドとして認識される条件は、サーフェスの数に関係なく、全体が完全に閉じた形状になっているということです。ソリッドは、サーフェスまたはポリサーフェスを結合して作成することも、ロフト、スイープ、回転などの操作を使用して作成することもできます。球体、立方体、円錐、円柱プリミティブなどもソリッドです。立方体から 1 つまたは複数の面を取り除いた場合、その形状はポリサーフェスとして認識されます。ポリサーフェスのプロパティはソリッドのプロパティと似ていますが、このポリサーフェスはソリッドではありません。
 
-![Solids](../images/5-2/6/Primitives.jpg)
+![立体](../images/5-2/6/Primitives.jpg)
 
-> 1. A Plane is made of a single Surface and is not a Solid.
-> 2. A Sphere is made of one Surface but _is_ a Solid.
-> 3. A Cone is made of two surfaces joined together to make a Solid.
-> 4. A Cylinder is made of three surfaces joined together to make a Solid.
-> 5. A Cube is made of six surfaces joined together to make a Solid.
+> 1. 単一のサーフェスで構成される平面は、ソリッドではありません。
+> 2. 単一のサーフェスで構成される球体は、_ソリッドです_。
+> 3. 2 つの結合されたサーフェスで構成される円錐は、ソリッドです。
+> 4. 3 つの結合されたサーフェスで構成される円柱は、ソリッドです。
+> 5. 6 つの結合されたサーフェスで構成される立方体は、ソリッドです。
 
-### Topology
+### トポロジ
 
-Solids are made up of three types of elements: Vertices, Edges, and Faces. Faces are the surfaces that make up the Solid. Edges are the Curves that define the connection between adjacent faces, and vertices are the start and end points of those Curves. These elements can be queried using the Topology nodes.
+ソリッドは、頂点、辺、面という 3 種類の要素で構成されます。面は、ソリッドを構成するサーフェスです。辺は、隣接する面の接続を定義する曲線です。頂点は、これらの曲線の開始点と終了点です。Topology ノードを使用すると、これらの要素についてクエリーを実行することができます。
 
-![Topology](../images/5-2/6/Solid-topology.jpg)
+![トポロジ](../images/5-2/6/Solid-topology.jpg)
 
-> 1. Faces
-> 2. Edges
-> 3. Vertices
+> 1. 面
+> 2. 辺
+> 3. 頂点
 
-### Operations
+### 操作
 
-Solids can be modified by filleting or chamfering their edges to eliminate sharp corners and angles. The chamfer operation creates a ruled surface between two faces, while a fillet blends between faces to maintain tangency.
+ソリッドの辺をフィレット操作や面取り操作で変更することにより、角のとがりや出っ張りを取り除くことができます。面取り操作を実行すると、2 つの面の間に直線的なサーフェスが作成され、フィレット操作を実行すると、2 つの面がなめらかに接合されます。
 
 ![](../images/5-2/6/SolidOperations.jpg)
 
-> 1. Solid Cube
-> 2. Chamfered Cube
-> 3. Filleted Cube
+> 1. ソリッド立方体
+> 2. 面取りされた立方体
+> 3. フィレットされた立方体
 
-### Boolean Operations
+### ブール演算
 
-Solid Boolean operations are methods for combining two or more Solids. A single Boolean operation actually means performing four operations:
+ソリッドのブール演算は、2 つ以上のソリッドを組み合わせるための方法です。ブール演算を 1 回実行すると、実際には次に示す 4 つの操作が実行されます。
 
-1. **Intersect** two or more objects.
-2. **Split** them at the intersections.
-3. **Delete** unwanted portions of the geometry.
-4. **Join** everything back together.
+1. 2 つ以上のオブジェクトを**交差**させる。
+2. すべてのオブジェクトを交点で**分割**する。
+3. ジオメトリの不要な部分を**削除**する。
+4. すべてのオブジェクトを 1 つに**結合**する。
 
-This makes Solid Booleans a powerful time-saving process. There are three Solid Boolean operations that distinguish which parts of the geometry are kept. ![Solid Boolean](../images/5-2/6/SolidBooleans.jpg)
+このように、ソリッドのブール演算は、作業時間を節約するための強力な機能です。ソリッドのブール演算には、ジオメトリのどの部分を保持するかを区別する 3 つの操作があります。![ソリッドのブール演算](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Union:** Remove the overlapping portions of the Solids and join them into a single Solid.
-> 2. **Difference:** Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume.
-> 3. **Intersection:** Keep only the intersecting volume of the two Solids.
+> 1. **和:** ソリッドの重複部分を削除して 1 つのソリッドに結合します。
+> 2. **差:** 一方のソリッドから別のソリッドを取り除きます。 取り除く側のソリッドは、ツールと呼ばれます。ツールとなるソリッドを切り替えて、逆のボリュームを作成することができます。
+> 3. **積:** 2 つのソリッドが交差している部分だけを保持します。
 
-In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **Solid.UnionAll** nodes for performing difference and union operations with multiple Solids. ![](../images/5-2/6/BooleanAll.jpg)
+これら 3 つの演算に加えて、Dynamo には、さまざまなソリッドの差演算と和演算を実行するための **Solid.DifferenceAll** ノードと **Solid.UnionAll** ノードが用意されています。 ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** Union operation with sphere and outward-facing cones
-> 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
+> 1. **UnionAll** ノードは、球体と外側を向いた円錐の和演算を行います。
+> 2. **DifferenceAll** ノードは、球体と内側を向いた円錐の差演算を行います。
 
 ##

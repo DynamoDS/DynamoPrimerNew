@@ -1,161 +1,161 @@
-# Color
+# 色
 
-Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
+色は、効果的なビジュアルを作成するためだけではなく、ビジュアル プログラムの出力で差異をレンダリングするためにも重要なデータ タイプです。抽象的なデータや変化する数値を操作する場合、何がどの程度変化するのかを確認するのが難しいことがあります。Dynamo は、色の処理に優れたアプリケーションです。
 
-### Creating Colors
+### 色を作成する
 
-Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
+Dynamo では、ARGB 入力を使用して色を作成します。これは、アルファ、赤、緑、青の各チャネルに対応しています。アルファは色の_透明度_を表し、他の 3 つのチャネルは、色のスペクトル全体を生成するための原色として組み合わせて使用されます。
 
-| Icon                                          | Name (Syntax)                 | Inputs  | Outputs |
+| アイコン | 名前(構文) | 入力 | 出力 |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
+| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB カラー(**Color.ByARGB**) | A、R、G、B | color |
 
-### Querying Color Values
+### 色の値のクエリー
 
-The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
+次の表に記載されている各ノードにより、色を定義するアルファ、赤、緑、青の各プロパティのクエリーが実行されます。Color.Components ノードは、これら 4 つのプロパティをそれぞれ異なる出力として生成します。そのため、色のプロパティのクエリーを実行する場合は、このノードを使用すると便利です。
 
-| Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
+| アイコン | 名前(構文) | 入力 | 出力 |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Alpha.jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-3/5/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-3/5/Color Green.jpg>) | Green (**Color.Green**)           | color  | G          |
-| ![](<../images/5-3/5/Color Blue.jpg>)      | Blue (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-3/5/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
+| ![](<../images/5-3/5/Color Alpha.jpg>) | アルファ(**Color.Alpha**) | color | A |
+| ![](<../images/5-3/5/Color Red.jpg>) | 赤(**Color.Red**) | color | R |
+| ![](<../images/5-3/5/Color Green.jpg>) | 緑(**Color.Green**) | color | G |
+| ![](<../images/5-3/5/Color Blue.jpg>) | 青(**Color.Blue**) | color | B |
+| ![](<../images/5-3/5/Color Component.jpg>) | コンポーネント(**Color.Components**) | color | A、R、G、B |
 
-The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
+次の表に記載されている色は、**HSB 色空間**に対応しています。 色を、色相、彩度、明るさに分割すると、より直感的に色を解釈することができます。たとえば、最初に処理する色を決め、次にその色の彩度と明るさを設定します。このように、色相、彩度、明るさをそれぞれ個別に設定していきます。
 
-| Icon                                              | Name (Syntax)                     | Inputs | Outputs    |
+| アイコン | 名前(構文) | 入力 | 出力 |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Hue.jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-3/5/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-3/5/Color Brightness.jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| ![](<../images/5-3/5/Color Hue.jpg>) | 色相(**Color.Hue**) | color | Hue |
+| ![](<../images/5-3/5/Color Saturation.jpg>) | 彩度(**Color.Saturation**) | color | Saturation |
+| ![](<../images/5-3/5/Color Brightness.jpg>) | 明るさ(**Color.Brightness**) | color | Brightness |
 
-### Color Range
+### 色範囲
 
-The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+色範囲は、[#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")の演習で説明した、数値のリストを別の範囲に再マッピングする **Remap Range** ノードに似ています。ただし、色範囲は、_数値_の範囲にマッピングされるのではなく、入力された 0 から 1 までの数値に基づいて_色のグラデーション_にマッピングされます。
 
-The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
+現在のノードは正しく機能しますが、最初からすべてを正しく機能させるのは少し大変です。色のグラデーションを理解するための最適な方法は、色のグラデーションを対話式に試す方法です。ここでは、簡単な演習を行い、数値に対応する色の出力を使用してグラデーションを設定する方法を確認します。
 
 ![](<../images/5-3/5/color - color range.jpg>)
 
-> 1. Define three colors: Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
-> 2. **Create list:** Merge the three colors into one list.
-> 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. **Code Block**: Input values (between 0 and 1) to translate to colors.
+> 1. 3 つの色を定義する: **Code Block** ノードを使用して _0_ から _255_ までの適切な数値の組み合わせに接続することにより、_赤、緑、__青_を定義します。
+> 2. **リストを作成する:** 3 つの色を 1 つのリストにマージします。
+> 3. インデックスを定義する: 0 から 1 までの範囲で、各色のグリップ位置を定義するリストを作成します。緑の値が 0.75 になっていることに注意してください。これにより、色範囲スライダの水平方向のグラデーションの 4 分の 3 が緑色になります。
+> 4. **Code Block ノードを設定する: **0 から 1 までの値を入力することで、グラデーションを色に変換します。
 
-### Color Preview
+### 色のプレビュー
 
-The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **Range** Node.
+**Display.ByGeometry** ノードを使用すると、Dynamo のビューポート内でジオメトリに色を付けることができます。 この機能は、ジオメトリの各種タイプを区別する場合、パラメータの概念を表現する場合、シミュレーション用の解析凡例を定義する場合に便利です。この場合の入力は単純で、ジオメトリと色だけです。上の図のようなグラデーションを作成するには、color 入力を **Color** **Range** ノードに接続します。
 
 ![](<../images/5-3/5/color - color preview.jpg>)
 
-### Color On Surfaces
+### サーフェス上の色
 
-The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
+**Display.BySurfaceColors** ノードを使用すると、サーフェス全体にデータを色でマッピングすることができます。 この機能により、日照解析、エネルギー解析、近接度解析など、各種の解析で取得したデータを視覚化することができます。Dynamo では、他の CAD 環境でマテリアルにテクスチャを適用する場合と同様に、サーフェスに色を適用することができます。次の簡単な演習で、このツールの使用方法を確認します。
 
 ![](<../images/5-3/5/12 (1).jpg>)
 
-## Exercise
+## 演習
 
-### Basic Helix with Colors
+### 色付き基本らせん
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
-This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
+この演習では、パラメータを使用して、ジオメトリと並行して色の管理を行います。この演習で使用するジオメトリは、単純ならせん構造です。このらせん構造は、**Code Block** ノードを使用して定義します。これは、パラメータを使用する関数をすばやく簡単に作成するための方法です。この演習の目的は、ジオメトリではなく色を操作することであるため、コード ブロックを使用してキャンバスを見やすい状態に保ったまま、らせん構造を効率的に作成します。この手引ではより高度なマテリアルを取り上げるようになるため、ここからは、コード ブロックを頻繁に使用することになります。
 
 ![](<../images/5-3/5/color - basic helix with colors 01.jpg>)
 
-> 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
-> 2. **Point.ByCoordinates**: Plug the three outputs from the code block into the coordinates for the Node.
+> 1. **Code Block** ノードを使用して、上図に示す式を持つ 2 つのコード ブロックを定義します。 これは、パラメータを使用してらせん構造をすばやく作成するための方法です。
+> 2. **Point.ByCoordinates** ノードの座標(x,y,z)に Code Block ノードの 3 つの出力を接続します。
 
-We now see an array of points creating a helix. The next step is to create a curve through the points so that we can visualize the helix.
+これで、らせん構造を形成する点の配列が表示されます。次の手順では、このらせん構造の点群から曲線を作成して、完全ならせん構造を作成します。
 
 ![](<../images/5-3/5/color - basic helix with colors 02.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the **Point.ByCoordinates** output into the _points_ input for the Node. We get a helical curve.
-> 2. **Curve.PointAtParameter:** Connect the **PolyCurve.ByPoints** output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
-> 3. **Number Slider:** After adding to the canvas, change the _min_ value to _0.0_, the _max_ value to _1.0_, and the _step_ value to _.01_. Plug the slider output into the _param_ input for **Curve.PointAtParameter**. We now see a point along the length of the helix, represented by a percentage of the slider (0 at the start point, 1 at the end point).
+> 1. **PolyCurve.ByPoints** ノードの _points_ 入力に **Point.ByCoordinates** ノードの出力を接続します。 これにより、らせん状の曲線が作成されます。
+> 2. **Curve.PointAtParameter** ノードの _curve_ 入力に **PolyCurve.ByPoints** ノードの出力を接続します。 この手順の目的は、曲線に沿ってスライドするパラメータのアトラクタ点を作成することです。この曲線によってパラメータの点が評価されるため、0 から 1 の範囲で _param_ の値を入力する必要があります。
+> 3. **Number Slider** ノードをキャンバスに追加したら、_Min_ の値を _0.0_、_Max_ の値を _1.0_、_Step_ の値を _.01_ に変更します。 次に、Number Slider ノードの出力を **Curve.PointAtParameter** ノードの _param_ 入力に接続します。 らせん構造全体に沿って表示されている点を、スライダのパーセンテージとして表すことができるようになりました(開始点は 0、終点は 1)。
 
-With the reference point created, we now compare the distance from the reference point to the original points defining the helix. This distance value will drive geometry as well as color.
+これで、参照点が作成されました。次に、この参照点から、らせん構造を定義する元の点までの距離を比較します。この距離により、色とジオメトリをコントロールします。
 
 ![](<../images/5-3/5/color - basic helix with colors 03.jpg>)
 
-> 1. **Geometry.DistanceTo:** Connect **Curve.PointAtParameter** output into the _input_. Connect **Point.ByCoordinates** into the geometry input.
-> 2. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
+> 1. **Geometry.DistanceTo** ノードの _other_ 入力に **Curve.PointAtParameter** ノードの出力を接続します。 geometry 入力に **Point.ByCoordinates** ノードを接続します。
+> 2. **Watch** ノードに、らせん構造の曲線を構成するそれぞれの点から参照点までの距離のリストが表示されます。
 
-Our next step is to drive parameters with the list of distances from the helical points to the reference point. We use these distance values to define the radii of a series of spheres along the curve. In order to keep the spheres a suitable size, we need to _remap_ the values for distance.
+次の手順では、らせん構造の各点から参照点までの距離のリストを使用して、パラメータを設定します。また、これらの距離の値を使用して、曲線に沿った一連の球形の半径を定義します。これらの球形を適切なサイズに保つには、距離の値を_再マッピング_する必要があります。
 
 ![](<../images/5-3/5/color - basic helix with colors 04.jpg>)
 
-> 1. **Math.RemapRange:** Connect **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
-> 3. **Watch:** connect the **Math.RemapRange** output into one node and the **Geometry.DistanceTo** output into another. Compare the results.
+> 1. **Math.RemapRange** ノードの numbers 入力に **Geometry.DistanceTo** ノードの出力を接続します。
+> 2. 値が _0.01_ の **Code Block** ノードを Math.RemapRange ノードの _newMin_ 入力に接続し、値が _1_ の Code Block ノードを Math.RemapRange ノードの _newMax_ 入力に接続します。
+> 3. いずれかの **Watch** ノードに **Math.RemapRange** ノードの出力を接続し、もう一方の Watch ノードに **Geometry.DistanceTo** ノードの出力を接続します。次に、結果を比較します。
 
-This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
+この手順により、距離のリストがより狭い範囲に再マッピングされます。再マッピングの結果が適切な場合であっても、_newMin_ と _newMax_ の値を編集することができます。 これらの値は、範囲全体で_分布比率_を保持したまま再マッピングされます。
 
 ![](<../images/5-3/5/color - basic helix with colors 05.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius:** connect the **Math.RemapRange** output into the _radius_ input and the original **Point.ByCoordinates** output into the _centerPoint_ input.
+> 1. **Sphere.ByCenterPointRadius** ノードの _radius_ 入力に **Math.RemapRange** ノードの出力を接続し、元の **Point.ByCoordinates** ノードの出力を Sphere.ByCenterPointRadius ノードの _centerPoint_ 入力に接続します。
 
-Change the value of the number slider and watch the size of the spheres update. We now have a parametric jig
+Number Slider ノードの値を変更し、球体のサイズが更新されることを確認します。ここで、パラメータ ツールを使用します。
 
 ![](<../images/5-3/5/color - basic helix with colors 06.gif>)
 
-The size of the spheres demonstrates the parametric array defined by a reference point along the curve. Let's use the same concept for the sphere radius to drive their color.
+球体のサイズは、曲線に沿った参照点によって定義されるパラメータ配列を示しています。ここでは、球体の半径と同じ考え方で、球体の色を操作してみます。
 
 ![](<../images/5-3/5/color - basic helix with colors 07.jpg>)
 
-> 1. **Color Range:** Add top the canvas. When hovering over the _value_ input, we notice that the numbers requested are between 0 and 1. We need to remap the numbers from the **Geometry.DistanceTo** output so that they are compatible with this domain.
-> 2. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this node (_Right Click > Preview_)
+> 1. **Color Range** ノードをキャンバス上に追加します。 _value_ 入力にマウス ポインタを置くと、0 から 1 までの範囲で数値を指定する必要があることがわかります。 ここでは、**Geometry.DistanceTo** ノードの出力から数値を再マッピングして、それらの数値をこの範囲に対応させる必要があります。
+> 2. **Sphere.ByCenterPointRadius** ノードでのプレビューを一時的に無効にします(_右クリックして[プレビュー]を選択_)。
 
 ![](<../images/5-3/5/color - basic helix with colors 08.jpg>)
 
-> 1. **Math.RemapRange:** This process should look familiar. Connect the **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
-> 3. **Color Range:** Connect the **Math.RemapRange** output into the _value_ input.
+> 1. **Math.RemapRange** ノードの numbers 入力にも同様に  **Geometry.DistanceTo** ノードの出力を接続します。
+> 2. **Code Block** ノードを使用して、Math.RemapRange ノードの _newMin_ 入力の値として _0_ を設定し、_newMax_ 入力の値として _1_ を設定します。 この場合、1 つのコード ブロックで 2 つの出力を定義できることに注意してください。
+> 3. **Color Range** ノードの _value_ 入力に **Math.RemapRange** 出力を接続します。
 
 ![](<../images/5-3/5/color - basic helix with colors 09.jpg>)
 
-> 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
-> 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two **Color.ByARGB** inputs in agreement with the image above (or create your favorite two colors).
-> 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for **Color Range**.
+> 1. **Color.ByARGB** ノードを使用して、2 つの色を作成します。 この手順は複雑そうに感じるかもしれませんが、他のソフトウェアで使用する RGB カラーの場合と同じです。ここでは、ビジュアル プログラミングを使用して色を処理するというだけのことです。
+> 2. **Code Block** ノードを使用して、_0_ と _255_ という 2 つの値を作成します。 次に、上の図のように、この 2 つの値を **Color.ByARGB** の各入力に接続します(または、任意の色を 2 つ作成します)。
+> 3. **Color Range** ノードの _colors_ 入力では、色のリストが必要になります。 上の手順で作成した 2 つの色を使用して、色のリストを作成する必要があります。
+> 4. **List.Create** ノードを使用して、2 つの色を 1 つのリストにマージします。 次に、このノードの出力を **Color Range** ノードの _colors_ 入力に接続します。
 
 ![](<../images/5-3/5/color - basic helix with colors 10.jpg>)
 
-> 1. **Display.ByGeometryColor:** Connect **Sphere.ByCenterPointRadius** into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
+> 1. **Display.ByGeometryColor** ノードの _geometry_ 入力に **Sphere.ByCenterPointRadius** ノードを接続し、_Color Range_ ノードを Display.ByGeometryColor ノードの _color_ 入力に接続します。 これで、曲線領域全体にスムーズな色のグラデーションが適用されます。
 
-If we change the value of the **Number Slider** from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
+前の手順の **Number Slider** ノードの値を定義内で変更すると、色とサイズが変更されます。この場合、色と半径のサイズは相互に直接関係しています。これで、2 つのパラメータ間の関係を視覚的に確認することができます。
 
 ![](<../images/5-3/5/color - basic helix with colors 11.gif>)
 
-### Color on Surfaces Exercise
+### サーフェスで色を処理するための演習
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
+最初に、**Display.BySurfaceColors** ノードの入力として使用するサーフェスを作成(または参照)する必要があります。 この例では、正弦曲線と余弦曲線間をロフトします。
 
 ![](<../images/5-3/5/color - color on surface 01.jpg>)
 
-> 1. This group of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
-> 2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
+> 1. このノード グループ は、Z 軸に沿って点を作成してから、正弦関数と余弦関数に基づいてそれらの点の位置を変更します。その後、2 つの点リストを使用して NURBS 曲線が生成されます。
+> 2. **Surface.ByLoft** ノードを使用して、NURBS 曲線のリスト間に、補間されたサーフェスを生成します。
 
 ![](<../images/5-3/5/color - color on surface 02.jpg>)
 
-> 1. **File Path**: select an image file to sample for pixel data downstream
-> 2. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
-> 3. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
-> 4. **Slider**: provide sample values for **Image.Pixels**
-> 5. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
+> 1. **File Path** ノードを使用して、下流のピクセル データのサンプリングを行うためのイメージ ファイルを選択します。
+> 2. **File.FromPath** ノードを使用してファイル パスをファイルに変換し、そのファイルを **Image.ReadFromFile** ノードに渡してサンプリング用のイメージを出力します。
+> 3. **Image.Pixels** ノードを使用してイメージを入力し、そのイメージの X、Y 座標に対応して使用されるサンプル値を指定します。
+> 4. **Slider** ノードを使用して、**Image.Pixels** ノードのサンプル値を指定します。
+> 5. **Display.BySurfaceColors** ノードを使用して、色の値の配列を、X、Y 座標に対応してサーフェス全体にマッピングします。
 
-Close-up preview of the output surface with resolution of 400x300 samples
+400x300 のサンプル解像度で、出力サーフェスのプレビューを拡大します。
 
 ![](<../images/5-3/5/color - color on surface 03.jpg>)

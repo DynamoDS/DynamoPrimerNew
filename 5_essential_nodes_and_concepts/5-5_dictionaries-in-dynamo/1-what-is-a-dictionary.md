@@ -1,40 +1,40 @@
-# What is a Dictionary
+# ディクショナリとは
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+Dynamo 2.0 では、ディクショナリのデータ タイプをリストのデータ タイプと分離する概念が導入されました。この変更により、ワークフローにおけるデータの作成や操作の方法が大幅に変更される可能性があります。2.0 よりも前のバージョンでは、ディクショナリとリストは 1 つのデータ タイプとして統合されていました。つまり、リストが実際には整数キーを持つディクショナリだったのです。
 
-### **What is a dictionary?**
+### **ディクショナリとは**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+ディクショナリは、キーと値のペアの集合で構成されたデータ タイプで、各キーは各集合に固有です。ディクショナリは順序付けされておらず、基本的には、リストにあるようなインデックス値の代わりにキーを使用して「調べる」ことができます。_Dynamo 2.0 では、キーに文字列のみを使用できます。_
 
-### **What is a list?**
+### **リストとは**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+リストは、順序付けされた値の集合で構成されたデータ タイプです。Dynamo では、リストはインデックス値として整数を使用します。
 
-### **Why was this change made and why should I care?**
+### **この変更を行った理由、および注意すべき理由**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+ディクショナリは、リストと分離されたことによって第一級オブジェクトとなりました。そのため、インデックス値を覚えたり、ワークフロー全体で厳密なリスト構造を維持することなく、値の格納や検索をすばやく容易に行うことができます。ユーザのテストにおいて、複数の `GetItemAtIndex` ノードの代わりにディクショナリを使用した場合に、グラフのサイズが大幅に低減することがわかりました。
 
-### **What are the changes?**
+### **変更内容**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* _構文_の変更により、コード ブロック内のディクショナリとリストの初期化および操作の方法が変更されました。
+   * ディクショナリは `{key:value}` の構文を使用します。
+   * リストは `[value,value,value]` の構文を使用します。
+* ディクショナリを作成、編集、クエリーするための_新しいノード_が、ライブラリに追加されました。
+* v1.x のコード ブロックで作成されたリストは、スクリプトのロード時に、角括弧 `[ ]` を波括弧 `{ }` の代わりに使用する新しいリスト構文に自動的に移行されます。\\
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **注意すべき理由、使用する目的**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+コンピュータ サイエンスにおいて、ディクショナリはリストのように、オブジェクトの集合です。リストは特定の順序で並んでいますが、ディクショナリは_順序なし_の集合です。一連番号(インデックス)に依存せず、_キーを使用します。_
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+次の画像では、可能性のあるディクショナリの使用例を示しています。多くの場合、ディクショナリを使用して、直接的な関係を持たない 2 つのデータを関連付けます。ここでは、スペイン語バージョンの単語を英語バージョンに接続して、後で検索できるようにしています。
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. 2 つのデータを関連付けるディクショナリを作成します。
+> 2. 指定されたキーを使用して値を取得します。

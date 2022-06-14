@@ -1,10 +1,10 @@
-# Translation, Rotation, and Other Transformations
+# 移動、回転、およびその他の変換
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+3 次元空間で X、Y、Z 座標を明示的に指定することで、特定のジオメトリ オブジェクトを作成できます。ただし、多くの場合、オブジェクト自体またはその基礎となる座標系でジオメトリ変換を使用して、ジオメトリを最終的な位置に移動します。
 
-### Translation
+### 並進
 
-The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
+最も単純な幾何学的変換は移動であり、オブジェクトを X、Y、Z 軸方向に指定した単位の数だけ動かします。
 
 ![](../images/8-2/5/Transformations\_01.png)
 
@@ -20,7 +20,7 @@ p2 = p.Translate(10, -20, 50);
 
 ### Rotation
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+Dynamo 内のすべてのオブジェクトは、オブジェクト名の末尾に _.Translate_ メソッドを追加することで移動できますが、より複雑な変換では、基礎となる座標系から新しい座標系にオブジェクトを変換する必要があります。たとえば、オブジェクトを X 軸を中心にして 45 度回転させるには、回転していない既存の座標系から、_.Transform_ メソッドで X 軸を中心にして 45 度回転した座標系にオブジェクトを移動します。
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Scale
+### スケール
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+移動と回転だけではなく、スケーリングやせん断変形された座標系も作成できます。座標系は _.Scale_ メソッドを使用してスケーリングできます。
 
 ![](../images/8-2/5/Transformations\_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+せん断変形された座標系は、非直交ベクトルを CoordinateSystem コンストラクタに入力することで作成されます。
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+スケーリングとせん断変形は回転や移動よりも比較的複雑なジオメトリ変換であるため、すべての Dynamo オブジェクトで実行できるわけではありません。次の表は、スケールが均一でない座標系およびせん断変形された座標系を持つことができる Dynamo オブジェクトの概略です。
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| クラス | スケールが均一でない座標系 | せん断変形された座標系 |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | No                                    | No                       |
-| NurbsCurve   | Yes                                   | Yes                      |
-| NurbsSurface | No                                    | No                       |
-| Circle       | No                                    | No                       |
-| Line         | Yes                                   | Yes                      |
-| Plane        | No                                    | No                       |
-| Point        | Yes                                   | Yes                      |
-| Polygon      | No                                    | No                       |
-| Solid        | No                                    | No                       |
-| Surface      | No                                    | No                       |
-| Text         | No                                    | No                       |
+| 円弧 | 不可 | 不可 |
+| NURBS 曲線 | 可 | 可 |
+| NURBS 曲面 | 不可 | 不可 |
+| 円 | 不可 | 不可 |
+| 線分 | 可 | 可 |
+| 平面 | 不可 | 不可 |
+| 点 | 可 | 可 |
+| ポリゴン | 不可 | 不可 |
+| ソリッド | 不可 | 不可 |
+| サーフェス | 不可 | 不可 |
+| 文字 | 不可 | 不可 |

@@ -1,125 +1,125 @@
-# Documenting
+# 設計図書の作成
 
-Editing parameters for documentation follows suit with the lessons learned in prior sections. In this section, we'll look at editing parameters which don't affect the geometric properties of an element, but instead prepare a Revit file for documentation.
+ここまでのセクションの演習に続けて、パラメータを編集して設計図書を作成してみましょう。このセクションでは、パラメータを編集することで、要素のジオメトリの特性を左右するのではなく、Revit ファイルから設計図書を作成できるようにする方法について紹介します。
 
-### Deviation
+### 偏差
 
-In the exercise below, we'll use a basic deviation from plane node to create a Revit sheet for documentation. Each panel on our parametrically defined roof structure has a different value for deviation, and we want to call out the range of values using color and by scheduling out the adaptive points to hand off to a facade consultant, engineer, or contractor.
+以降の演習では、水平面からの基本的な偏差を使用して、設計図書作成用に Revit のシートを作成します。パラメータで定義した屋根構造上のパネルにはそれぞれ異なる偏差の値が与えられています。そこで、色分けによって値の範囲をわかりやすく表示し、アダプティブ点を集計表に書き出してファサード設計の監修者、設計者、または施工業者に渡すことができるようにしましょう。
 
-![deviation](./images/6/deviation.jpg)
+![偏差](./images/6/deviation.jpg)
 
-> The deviation from plane node will calculate the distance that the set of four points varies from the best-fit plane between them. This is a quick and easy way to study constructability.
+> 水平面からの偏差を取得するノードにより、4 つの点群と最適な水平面の間の距離が計算されます。これで施工性をすばやく簡単に検討することができます。
 
-## Exercise
+## 演習
 
-### Part I: Setting Panels Aperture Ratio Based on Deviation From Plane Node
+### パート I: 平面ノードからの偏差に基づいてパネル開口率を設定する
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="./datasets/6/Revit-Documenting.zip" %}
 
-Start with the Revit file for this section (or continue from the previous section). This file has an array of ETFE panels on the roof. We'll reference these panels for this exercise.
+このセクション用の Revit ファイルを使用して(または前のセクションからの続きとして)演習を開始しましょう。このファイルには、屋根上の ETFE パネルの配列が収録されています。以降の演習でこれらのパネルを参照します。
 
 ![](<./images/6/documenting - exercise I - 01.jpg>)
 
-> 1. Add a _Family Types_ node to the canvas and choose _"ROOF-PANEL-4PT"_.
-> 2. Plug this node into a Select _All Elements of Family Type_ node to get all of the elements from Revit into Dynamo.
+> 1. _Family Types_ ノードをキャンバスに追加し、[_ROOF-PANEL-4PT_]を選択します。
+> 2. このノードを _All Elements of Family Type_ ノードに接続することで、すべての要素を Revit から Dynamo に取得します。
 
 ![](<./images/6/documenting - exercise I - 02.jpg>)
 
-> 1. Query the location of adaptive points for each element with the _AdaptiveComponent.Locations_ node.
-> 2. Create a polygon from these four points with the _Polygon.ByPoints_ node. Notice we now have an abstract version of the paneled system in Dynamo without having to import the full geometry of the Revit element.
-> 3. Calculate planar deviation with the _Polygon.PlaneDeviation_ node.
+> 1. _AdaptiveComponent.Locations_ ノードにより、各要素のアダプティブ点の位置をクエリーします。
+> 2. _Polygon.ByPoints_ ノードを使用して、これら 4 点から 1 つのポリゴンを作成します。 これにより、Revit 要素のジオメトリをすべて読み込むことなく、パネル システムの抽象化されたバージョンを Dynamo で取得することができます。
+> 3. _Polygon.PlaneDeviation_ ノードを使用して、水平面からの偏差を計算します。
 
-Just for kicks, like the previous exercise, let's set the aperture ratio of each panel based on its planar deviation.
+前の演習と同様に、各パネルの開口率を水平面からの偏差に基づいて設定してみましょう。
 
 ![](<./images/6/documenting - exercise I - 03.jpg>)
 
-> 1. Add an _Element.SetParameterByName_ node to the canvas and connect the adaptive components to the _element_ input. Connect a _Code Block_ reading _"Aperture Ratio"_ into the _parameterName_ input.
-> 2. We cannot directly connect the deviation results into the value input because we need to remap the values to the parameter range.
+> 1. _Element.SetParameterByName_ ノードをキャンバスに追加して、その _element_ 入力にアダプティブ コンポーネントを接続します。 [_開口率_]を読み取っている _Code Block_ ノードを、_parameterName_ 入力に接続します。
+> 2. 偏差の出力を直接 value 入力に接続することはできません。なぜなら、複数の値をパラメータ範囲にマッピングし直す必要があるからです。
 
 ![](<./images/6/documenting - exercise I - 04.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the deviation values to a domain between 0.15 and 0\_.\_45 by entering `0.15; 0.45;` into the _Code Block_.
-> 2. Plug these results into the value input for _Element.SetParameterByName_.
+> 1. _Math.RemapRange_ ノードを使用して、偏差の値を 0.15 から 0.\_\_45 までの範囲にマッピングし直します。この場合、_Code Block_ ノードに·`0.15; 0.45;` と入力します。
+> 2. そのノードの出力を _Element.SetParameterByName_ の value 入力に接続します。
 
-Back in Revit we can _kind of_ make sense of the change in aperture across the surface.
+Revit に戻ると、サーフェス全体の開口率が_多少_変化したことがわかります。
 
-![Exercise](./images/6/13.jpg)
+![演習](./images/6/13.jpg)
 
-Zooming in, it becomes more clear that the closed panels are weighted towards the corners of the surface. The open corners are towards the top. The corners represent areas of larger deviation while bulge has minimal curvature, so this makes sense.
+拡大表示するとはっきりわかるように、サーフェスの四隅に近付くほどパネルが閉じていく傾向にあり、また隆起の頂点へ近付くほどパネルが開いていく傾向にあります。これは、四隅のあたりでは水平面からの偏差が大きく、ふくらみの部分では水平に近くになっているためです。
 
-![Exercise](./images/6/13a.jpg)
+![演習](./images/6/13a.jpg)
 
-### Part II: Color and Documentation
+### パート II: 色分けと設計図書作成
 
-Setting the Aperture Ratio doesn't clearly demonstrate the deviation of panels on the roof, and we're also changing the geometry of the actual element. Suppose we just want to study the deviation from the standpoint of fabrication feasibility. It would be helpful to color the panels based on deviation range for our documentation. We can do that with the series of steps below, and in a very similar process to the steps above.
+[開口率]の設定では、屋根上のパネルの偏差があまりよくわかりません。また、実際の要素のジオメトリが変更されてしまいます。単に製造性の観点から偏差を検討するだけであれば、設計図書作成の際に、偏差の範囲に基づいてパネルを色分けするとよいでしょう。下記の一連の手順によってそのような色分けを行うことができます。これは上記の手順にとてもよく似ています。
 
 ![](<./images/6/documenting - exercise II - 01.jpg>)
 
-> 1. Remove the _Element.SetParameterByName_ and its input nodes and add _Element.OverrideColorInView_.
-> 2. Add a _Color Range_ node to the canvas and plug into the color input of _Element.OverrideColorInView_. We still have to connect the deviation values to the color range in order to create the gradient.
-> 3. Hovering over the _value_ input, we can see that the values for the input must be between _0_ and _1_ in order to map a color to each value. We need to remap the deviation values to this range.
+> 1. _Element.SetParameterByName_ ノードとその入力ノードを削除し、_Element.OverrideColorInView_ ノードを追加します。
+> 2. _Color Range_ ノードをキャンバスに追加して、そのノードを _Element.OverrideColorInView_ の color 入力に接続します。 さらに、グラデーションを作成するために偏差の値を Color Range ノードに接続する必要があります。
+> 3. _value_ 入力にカーソルを合わせると、その入力の値が_0_ から _1_ までの範囲で表示されます。この値は、値ごとに色をマッピングするのに使用されます。 偏差の値をこの範囲にマッピングし直す必要があります。
 
 ![](<./images/6/documenting - exercise II - 02.jpg>)
 
-> 1. Using _Math.RemapRange_, remap the planar deviation values to a range between\* 0\* and _1_ (note: you can use the _"MapTo"_ node to define a source domain as well).
-> 2. Plug the results into a _Color Range_ node.
-> 3. Notice our output is a range of colors instead of a range of numbers.
-> 4. If you're set to Manual, hit _Run_. You should be able to get away with being set to Automatic from this point forward.
+> 1. _Math.RemapRange_ を使用して、水平面からの偏差を \*0\* から _1_ までの範囲にマッピングし直します(注: なお、_MapTo_ ノードを使用してソースの範囲を設定することもできます)。
+> 2. その出力結果を _Color Range_ ノードに接続します。
+> 3. ここでの出力は、数値の範囲ではなく、色の範囲です。
+> 4. [手動]に設定している場合は[_実行_]をクリックします。 これ以降の手順では、[自動]に設定しないように注意してください。
 
-Back in Revit, we see a much more legible gradient which is representative of planar deviation based on our color range. But what if we want to customize the colors? Notice that the minimum deviation values are represented in red, which seems to be the opposite of what we'd expect. We want to have maximum deviation to be red, with minimum deviation represented by a calmer color. Let's go back to Dynamo and fix this.
+Revit に戻ると、かなり見やすいグラデーションが表示されます。これは、ユーザが指定した色の範囲に基づいて、水平面からの偏差を表しています。色分けをカスタマイズするには、どうすればよいでしょうか。 いま偏差の最小値は赤色で表示されていますが、これとは逆の色分けに変更してみましょう。つまり、偏差の最大値を赤色に、偏差の最小値をもっと落ちついた色に設定することにします。Dynamo に戻ってこの修正を行ってみましょう。
 
 ![](./images/6/09.jpg)
 
 ![](<./images/6/documenting - exercise II - 04.jpg>)
 
-> 1. Using a _code block_, add two numbers on two different lines: `0;` and `255;`.
-> 2. Create a red and blue color by plugging the appropriate values into two _Color.ByARGB_ nodes.
-> 3. Create a list from these two colors.
-> 4. Plug this list into the _colors_ input of the _Color Range_, and watch the custom color range update.
+> 1. _Code Block_ ノードを使用して、`0;` と `255;` という 2 つの数値を、2 行に分けて追加します。
+> 2. 2 つ の _Color.ByARGB_ ノードに適切な値を接続することで、赤色と青色を作成します。
+> 3. これらの 2 色から 1 つのリストを作成します。
+> 4. このリストを _Color Range_ ノードの _colors_ 入力に接続し、カスタマイズした色の範囲が更新されていることを確認します。
 
-Back in Revit, we can now make better sense of areas of maximum deviation in the corners. Remember, this node is for overriding a color in a view, so it can be really helpful if we had a particular sheet in the set of drawings which focuses on a particular type of analysis.
+Revit に戻ると、水平面からの偏差が四隅の領域で最大になっていることがよりはっきり確認できます。なお、このノードはビュー内の色の優先設定に使用されます。したがって、一連の図面のなかで特定のシートが特定のタイプの解析を目的としている場合に、とても役に立ちます。
 
 ![Exercise](<./images/6/07 (6).jpg>)
 
-### Part III: Scheduling
+### パート III: 集計表
 
-Selecting one ETFE panel in Revit, we see that there are four instance parameters, XYZ1, XYZ2, XYZ3, and XYZ4. These are all blank after they're created. These are text-based parameters and need values. We'll use Dynamo to write the adaptive point locations to each parameter. This helps interoperability if the geometry needs to be sent to an engineer of facade consultant.
+Revit で ETFE パネルを選択すると、XYZ1、XYZ2、XYZ3、XYZ4 という 4 つのインスタンス パラメータが表示されます。 作成後、これらのパラメータはすべて空になっています。これらは文字ベースのパラメータであり、値を必要とします。Dynamo を使用して、各パラメータにアダプティブ点の位置を入力します。この機能は、ジオメトリをファサード設計の監修者に送信する必要がある場合に、相互運用性の確保に役立ちます。
 
 ![](<./images/6/documenting - exercise III - 01.jpg>)
 
-In a sample sheet, we have a large, empty schedule. The XYZ parameters are shared parameters in the Revit file, which allows us to add them to the schedule.
+サンプルのシートには大規模な空の集計表が含まれています。XYZ パラメータは Revit ファイルでも使用される共有パラメータであり、このファイルによってパラメータを集計表に追加することができます。
 
 ![Exercise](<./images/6/03 (8).jpg>)
 
-Zooming in, the XYZ parameters are yet to be filled in. The first two parameters are taken care of by Revit.
+拡大表示すると、XYZ パラメータはまだ入力されていません。左側 2 つのパラメータは Revit によって処理されています。
 
 ![Exercise](<./images/6/02 (9).jpg>)
 
-To write in these values, we'll do a complex list operation. The graph itself is simple, but the concepts build heavily from the list mapping as discussed in the list chapter.
+これらのパラメータに値を入力するために、これから複雑なリスト操作を行います。グラフそれ自体は単純ですが、考え方はリストの章で紹介したリストのマッピングを大いに活用しています。
 
 ![](<./images/6/documenting - exercise III - 04.jpg>)
 
-> 1. Select all the adaptive components with two nodes.
-> 2. Extract the location of each point with _AdaptiveComponent.Locations_.
-> 3. Convert these points to strings. Remember, the parameter is text-based so we need to input the correct data type.
-> 4. Create a list of the four strings which define the parameters to change: _XYZ1, XYZ2, XYZ3,_ and _XYZ4_.
-> 5. Plug this list into the _parameterName_ input of _Element.SetParameterByName_.
-> 6. Connect _Element.SetParameterByName_ into the the _combinator_ input of _List.Combine._ Connect the _adaptive components_ into _list1_. Connect _String_ from Object into _list2_.
+> 1. 2 つのノードを使用してアダプティブ コンポーネントをすべて選択します。
+> 2. _AdaptiveComponent.Locations_ ノードを使用して、各点の位置を抽出します。
+> 3. これらの点群を文字列に変換します。なお、パラメータはテキストベースですから、正しいデータ タイプを入力する必要があることに注意してください。
+> 4. 変更するパラメータを定義する 4 つの文字列 _XYZ1、XYZ2、XYZ3、__XYZ4_ から、1 つのリストを作成します。
+> 5. このリストを _Element.SetParameterByName_ ノードの _parameterName_ 入力に接続します。
+> 6. _Element.SetParameterByName_ ノードを _List.Combine ノードの _combinator_ 入力に接続します。__アダプティブ コンポーネントを_ _list1_ 入力に接続します。_String from Object_ ノードを _list2_ 入力に接続します。
 
-We are list mapping here, because we are writing four values for each element, which creates a complex data structure. The _List.Combine_ node defines an operation one step down in the data hierarchy. This is why element and value inputs of _Element.SetParameterByName_ are left blank. _List.Combine_ is connecting the sublists of its inputs into the empty inputs of _Element.SetParameterByName_, based on the order in which they are connected.
+ここでリスト マッピングを行います。各要素につき 4 つのパラメータに値を入力することで、複雑なデータ構造を作成するためです。_List.Combine_ ノードはデータ階層内の 1 段階下の層で操作を定義します。 _Element.SetParameterByName_ の element 入力と value の入力が空のままになっているのはこのためです。_List.Combine_ ノードは、入力のサブリストを、接続された順番に基づいて _Element.SetParameterByName_ ノードの空の入力に接続します。
 
-Selecting a panel in Revit, we see now that we have string values for each parameter. Realistically, we would create a simpler format to write a point (X,Y,Z). This can be done with string operations in Dynamo, but we're bypassing that here to stay within the scope of this chapter.
+Revit でパネルを選択すると、各パラメータに文字列値が入力された状態で表示されます。実際のプログラミングでは、(X,Y,Z)のようにより単純な形式で 1 つの点を作成するものです。これは Dynamo の文字列操作で可能ですが、この章で取り扱う範囲から逸脱しないようにするために、その方法はここでは紹介しません。
 
 ![](<./images/6/04 (5).jpg>)
 
-A view of the sample schedule with parameters filled in.
+パラメータへの入力が完了しているサンプル集計表のビューです。
 
 ![](<./images/6/01 (9).jpg>)
 
-Each ETFE panel now has the XYZ coordinates written for each adaptive point, representing the corners of each panel for fabrication.
+各 ETFE パネルを構成するすべてのアダプティブ点について XYZ 座標が記入されています。これらが製造用の各パネルの四隅を表します。
 
 ![Exercise](<./images/6/00 (8).jpg>)

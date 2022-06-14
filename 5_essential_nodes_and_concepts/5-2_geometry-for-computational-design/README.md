@@ -1,5 +1,5 @@
-# Geometry for Computational Design
+# 計算設計用のジオメトリ
 
-As a Visual Programming environment, Dynamo enables you to craft the way that data is processed. Data is numbers or text, but so is Geometry. As understood by the Computer, Geometry - or sometimes called Computational Geometry - is the data we can use to create beautiful, intricate, or performance-driven models. To do so, we need to understand the ins and outs of the various types of Geometry we can use.
+ビジュアル プログラミング環境の Dynamo では、データの処理方法を構築することができます。数値やテキストだけでなく、ジオメトリもデータです。コンピュータが認識できるジオメトリ(計算設計用のジオメトリと呼ぶ場合もあります)は、美しいモデル、複雑なモデル、パフォーマンス重視のモデルを作成するためのデータです。ジオメトリを使用するには、そのジオメトリのさまざまな入力と出力を理解する必要があります。
 
 ![](<../images/5-2/Geometry for Computational Design-01.jpg>)

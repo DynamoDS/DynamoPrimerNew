@@ -1,156 +1,156 @@
-# Selecting
+# 選択
 
-### Select Revit Elements
+### Revit 要素を選択する
 
-Revit is a data-rich environment. This gives us a range of selection abilities which expands far beyond "point-and-click". We can query the Revit database and dynamically link Revit elements to Dynamo geometry while performing parametric operations.
+Revit は、非常に豊富なデータを扱う環境です。このため、選択機能が「ポイント アンド クリック」をはるかに超えた範囲にまで拡張されています。パラメトリックな操作の実行中に、Revit のデータベースにクエリーを行い、Revit の要素を Dynamo のジオメトリに動的にリンクすることができます。
 
-The Revit library in the UI offers a "Selection" category which enables multiple ways to select geometry.
+[Revit]ライブラリの[選択]カテゴリから、さまざまな方法でジオメトリを選択することができます。
 
 ![](<./images/2/select revit elements 01.jpg>)
 
-### Revit Hierarchy
+### Revit の階層
 
-To select Revit elements properly, it's important to have a full-understanding of the Revit element hierarchy. Want to select all the walls in a project? Select by category. Want to select every Eames chair in your mid-century modern lobby? Select by family.
+Revit の要素を選択するには、Revit の要素の階層構造について十分に理解しておくことが大切です。プロジェクト内のすべての壁を選択するには、カテゴリ単位で選択します。ミッドセンチュリー モダン スタイルのロビーに配置したイームズ チェアをすべて選択するには、ファミリ単位で選択します。
 
-Let's do a quick review of the Revit hierarchy.
+Revit の階層を簡単に確認してみましょう。
 
 ![](./images/2/hierarchy.png)
 
-Remember the taxonomy from Biology? Kingdom, Phylum, Class, Order, Family, Genus, Species? Revit elements are categorized in a similar manner. On a basic level, the Revit hierarchy can be broken down into Categories, Families, Types\*, and Instances. An instance is an individual model element (with a unique ID) while a category defines a generic group (like "walls" or "floors"). With the Revit database organized in this manner, we can select one element and choose all similar elements based on a specified level in the hierarchy.
+生物学ではあらゆる生物が体系的に分類されており、その分類法は、上位から下位にかけて、界、門、網、目、科、属、種という階層構造から成り立っています。Revit における要素の分類法はこれに似ています。基本的には、Revit の階層構造は、上位から下位にかけて、カテゴリ、ファミリ、タイプ\*、インスタンスに分かれています。インスタンスは(ユニークな ID を持つ)個別のモデル要素です。カテゴリは、「壁」や「床」などの一般的なグループのことです。このようにして構成されている Revit のデータベースを使用して、1 つの要素を選択したり、階層構造の中の指定したレベルに基づいて同種の要素をすべて選択することができます。
 
 {% hint style="warning" %}
-\*Types in Revit are defined differently from types in programming. In Revit, a type refers to a branch of the hierarchy, rather than a "data type".
+\*Revit における「タイプ」の定義は、プログラミングでいう「型」とは異なります。Revit でいう「タイプ」は、いわゆる「データ タイプ」ではなく、分類階層における 1 つの枝を指します。*
 {% endhint %}
 
-### Database Navigation with Dynamo nodes
+### Dynamo のノードを使用したデータベース ナビゲーション
 
-The three images below breakdown the main categories for Revit element selection in Dynamo. These are great tools to use in combination, and we'll explore some of these in the following exercises.
+次の 3 つの画像では、Revit の要素を Dynamo で 選択するいくつかの主だった方法を紹介しています。これらのツールを組み合わせて使用すると便利です。その一部をこれ以降の演習で実際に使用してみましょう。
 
-_Point-and-click_ is the easiest way to directly select a Revit element. You can select a full model element, or parts of its topology (like a face or an edge). This remains dynamically linked to that Revit object, so when the Revit file updates its location or parameters, the referenced Dynamo element will update in the graph.
+_ポイント アンド クリック_は、Revit の要素を直接選択する最も簡単な方法です。 モデル要素全体であれ、そのトポロジの一部 (たとえば 1 つの面や 1 つのエッジ)であれ、選択することができます。この方法では Revit オブジェクトへの動的なリンクが維持されるので、Revit ファイルの場所やパラメータが変更されると、グラフ内で参照されている Dynamo の要素が更新されます。
 
 ![](<./images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
-_Dropdown menus_ create a list of all accessible elements in a Revit project. You can use this to reference Revit elements which are not necessarily visible in a view. This is a great tool for querying existing elements or creating new ones in a Revit project or family editor.
+_ドロップダウン メニュー_で、Revit プロジェクト内のアクセス可能なすべての要素のリストが作成されます。 ビューで確認できない Revit の要素も含めて、これで参照することができます。Revit プロジェクトやファミリ エディタで既存の要素をクエリーしたり、新しい要素を作成するには、このツールが役に立ちます。
 
 ![](<./images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
-You can also select Revit element by specific tiers in the _Revit hierarchy_. This is a powerful option for customizing large arrays of data in preparation for documentation or generative instantiation and customization.
+Revit の要素の選択方法としては、他に _Revit の階層構造_から特定の階層を指定する方法もあります。 この方法は、設計図書作成、インスタンスの生成とカスタマイズなどのために準備されている大規模なデータ配列をカスタマイズするのにとても役立ちます。
 
 ![UI](./images/2/allelements.jpg)
 
-With the three images above in mind, let's dive into an exercise which selects elements from a basic Revit project in preparation for the parametric applications we'll create in the remaining sections of this chapter.
+上記の 3 点の画像に留意して、この章の続きで説明するパラメトリック アプリケーションの作成に備えて、基本的な Revit プロジェクトから要素を選択する演習を開始しましょう。
 
-## Exercise
+## 演習
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="./datasets/2/Revit-Selecting.zip" %}
 
-In this example Revit file, we have three element types of a simple building. We're going to use this as an example for selecting Revit elements within the context of the Revit hierarchy.
+この Revit ファイルのサンプルには、3 つの要素タイプから成る 1 つの単純な建物モデルが収録されています。それでは、このモデルを見本として使用して、次に挙げる Revit の階層構造の中で Revit の要素を選択してみましょう。
 
 ![](<./images/2/selecting - exercise 01.jpg>)
 
-> 1. Building Mass
-> 2. Beams (Structural Framing)
-> 3. Trusses (Adaptive Components)
+> 1. 建物のマス(基本形状)
+> 2. 梁(構造フレーム)
+> 3. トラス(アダプティブ コンポーネント)
 
-What conclusions can we draw from the elements currently in the Revit project view? And how far down the hierarchy do we need to go to select the appropriate elements? This will of course become a more complex task when working on a large project. There are a lot of options available: we can select elements by categories, levels, families, instances, etc.
+Revit のプロジェクト ビューに表示されている要素から、どのような結論を導き出すことができますか。また、適切な要素を選択するには、階層をいくつ降りていく必要があるでしょうか。言うまでもありませんが、大規模なプロジェクトで作業する際にはこの問題はもっと複雑になります。使用できるオプションはたくさんあり、カテゴリ別、レベル別、ファミリ別、インスタンス別に要素を選択することができます。
 
-### Selecting Mass and Surfaces
+### マスとサーフェスを選択する
 
 ![](<./images/2/selecting - exercise 02.jpg>)
 
-> 1. Since we're working with a basic setup, let's select the building mass by choosing _"Mass"_ in the Categories dropdown node. This can be found in the Revit>Selection tab.
-> 2. The output of the Mass category is just the category itself. We need to select the elements. To do this, we use the _"All Elements of Category"_ node.
+> 1. ここでは基本的な構造を扱っているので、Categories ドロップダウン ノードで[_Mass_]を選択して、建物のマスを選択してみましょう。 これは、[Revit] > [選択]タブにあります。
+> 2. [Mass]カテゴリのノードでは、単純にカテゴリ自体が出力されるので、要素を選択する必要があります。これを実行するには、_All Elements of Category_ ノードを使用します。
 
-At this point, notice that we don't see any geometry in Dynamo. We've selected a Revit element, but have not converted the element into Dynamo geometry. This is an important separation. If you were to select a large number of elements, you don't want to preview all of them in Dynamo because this would slow everything down. Dynamo is a tool to manage a Revit project without necessarily performing geometry operations, and we'll look at that in the next section of this chapter.
+この時点では、Dynamo にジオメトリが表示されないことに注意してください。Revit の要素が既に選択されていますが、まだ Dynamo ジオメトリに変換されてはいません。この区別は重要です。多数の要素を選択する場合は、すべての動作が非常に遅くなるおそれがあるため、すべての要素を Dynamo でプレビューすることは好ましくありません。Dynamo は、ジオメトリ操作の実行を必要とせずに Revit のプロジェクトを管理することのできるツールです。そのことについては、この章の次のセクションで説明します。
 
-In this case, we're working with simple geometry, so we want to bring the geometry into the Dynamo preview. The "BldgMass" in the watch node above has a green number next to it. This represents the element's ID and tells us that we are dealing with a Revit element, not Dynamo geometry. The next step is to convert this Revit element into geometry in Dynamo.
+ここでは単純なジオメトリを使用して演習を行っているので、Dynamo のプレビューでジオメトリを表示できるようにします。上記の Watch ノード中の「BldgMass」の隣に、緑の背景色付きで数値が表示されています。これは要素の ID を表しており、この ID からユーザが Dynamo ジオメトリではなく Revit 要素を扱っていることがわかります。次の手順で、この Revit 要素を Dynamo ジオメトリに変換してみましょう。
 
 ![](<./images/2/selecting - exercise 03.jpg>)
 
-> 1. Using the _Element.Faces_ node, we get a list of surfaces representing each face of the Revit Mass. We can now see the geometry in the Dynamo viewport and start to reference the face for parametric operations.
+> 1. _Element.Faces_ ノードを使用して、Revit のマスの各面を表すサーフェスのリストを取得します。 これで、Dynamo のビューポートでジオメトリを表示し、その面をパラメトリック操作の際に参照できるようになりました。
 
-Here's an alternative method. In this case, we're stepping away from selecting via the Revit Hierarchy _("All Elements of Category")_ and electing to explicitly select geometry in Revit.
+別の方法を紹介します。この場合は、(_All Elements of Category_ ノードを使用して) Revit の階層構造から選択を行い、Revit のジオメトリを指定して明示的に選択するという方法を採りません。
 
 ![](<./images/2/selecting - exercise 04.jpg>)
 
-> 1. Using the _"Select Model Element"_ node, click the \*"select" \*(or _"change"_) button. In the Revit viewport, select the desired element. In this case, we're selecting the building mass.
-> 2. Rather than _Element.Faces_, we can select the full mass as one solid geometry using _Element.Geometry_. This selects all of the geometry contained within that mass.
-> 3. Using _Geometry.Explode,_ we can get the list of surfaces again. These two nodes work the same as _Element.Faces_ but offer alternative options for delving into the geometry of a Revit element.
+> 1. _Select Model Element_ ノードを使用して、[\*選択\*] (または[_変更_])ボタンをクリックします。Revit のビューポートで、目的の要素を選択します。この場合は、建物のマスを選択することにします。
+> 2. _Element.Faces_ ノードではなく _Element.Geometry_ ノードを使用すると、マス全体を 1 つのソリッド ジオメトリとして選択することができます。 このノードでは、そのマスの内部に含まれるすべてのジオメトリが選択されます。
+> 3. _Geometry.Explode_ ノードを使用すると、やはりサーフェスのリストを取得することができます。 これら 2 つのノードは、_Element.Faces_ と同様の機能に加えて、Revit 要素のジオメトリを掘り下げるのに役立つオプションを提供します。
 
-Using some basic list operations, we can query a face of interest.
+リストの基本的操作をいくつか行うことで、対象の面のクエリーを実行できます。
 
 ![](<./images/2/selecting - exercise 05.jpg>)
 
-> 1. First, output the selected elements from earlier to Element.Faces node.
-> 2. Next, use the _List.Count_ node reveals that we're working with 23 surfaces in the mass.
-> 3. Referencing this number, we change the Maximum value of an \*integer slider \*to _"22"_.
-> 4. Using _List.GetItemAtIndex_, we input the lists and the \*integer slider \*for the _index_. Sliding through with the selected, we stop when we get to _index 9_ and have isolated the main facade hosts the trusses.
+> 1. 最初に、選択した要素を以前のノードから Element.Faces ノードに出力します。
+> 2. 次に _List.Count_ ノードを使用して、作業中のマスに 23 のサーフェスが含まれていることを確認します。
+> 3. この数値を基準として、\*Integer Slider\* ノードの最大値を「_22_」に変更します。
+> 4. _List.GetItemAtIndex_ ノードを使用して、リストと _index_ に使用する \*Integer Slider\* ノードを入力します。選択したスライダを _index 9_ まで動かして、トラスをホストしているメイン ファサードが選択表示された段階で停止します。
 
-The previous step was a little cumbersome. We can do this much faster with the _"Select Face"_ node. This allows us to isolate a face that is not an element itself in the Revit project. The same interaction applies as _"Select Model Element"_, except we select the surface rather than the full element.
+前の手順は少しばかり面倒でした。_Select Face_ ノードを使用すると、同じことをもっとすばやく実行することができます。 これにより、Revit プロジェクト内ではそれ自体で 1 つの要素として扱われない面も選択できます。_Select Model Element_ でも同様の操作を行うことができます。ただし、こちらでは要素全体ではなくサーフェスを選択します。
 
 ![](<./images/2/selecting - exercise 06.jpg>)
 
-Suppose we want to isolate the main facade walls of the building. We can use the _"Select Faces"_ node to do this. Click the "Select" button and then select the four main facades in Revit.
+建物のメイン ファサードの壁を選択してみましょう。_Select Faces_ ノードを使用してこれを行うことができます。 [選択]ボタンをクリックし、Revit の 4 つのメイン ファサードを選択します。
 
 ![](<./images/2/selecting - exercise 07.jpg>)
 
-After selecting the four walls, make sure you click the "Finish" button in Revit.
+4 つの壁面を選択した後で、必ず Revit で[終了]ボタンをクリックしてください。
 
 ![](<./images/2/selecting - exercise 08.jpg>)
 
-The faces are now imported into Dynamo as surfaces.
+これで、面が Dynamo にサーフェスとして読み込まれました。
 
 ![](<./images/2/selecting - exercise 09.jpg>)
 
-### Selecting Beams
+### 梁を選択する
 
-Now, let's take a look at the beams over the atrium.
+さて、アトリウムの上の梁を見てみましょう。
 
 ![](<./images/2/selecting - exercise 10.jpg>)
 
-> 1. Use the _"Select Model Element"_ node, select one of the beams.
-> 2. Plug the beam element into the _Element.Geometry_ node and we now have the beam in the Dynamo viewport.
-> 3. We can zoom in on the geometry with a _Watch3D_ node (if you don't see the beam in Watch 3D, right click and hit "zoom to fit").
+> 1. _Select Model Element_ ノードを使用して、梁のうち 1 つを選択します。
+> 2. 梁の要素を _Element.Geometry_ ノードに接続すると、Dynamo のビューポートで梁が表示されるようになります。
+> 3. _Watch3D_ ノードを使用してジオメトリを拡大表示することができます(Watch 3D で梁が表示されない場合は、右クリックしてから[全体表示]を選択します)。
 
-A question that may come up often in Revit/Dynamo workflows: how do I select one element and get all similar elements? Since the selected Revit element contains all of its hierarchical information, we can query its family type and select all elements of that type.
+Revit と Dynamo の使用中にしばしば生じる疑問として、1 つの要素を選択して、それに類似するすべての要素を取得するにはどうすればいいのか、というものがあります。選択した Revit 要素にはその要素の階層に関する情報がすべて含まれているので、そのファミリ タイプをクエリーして、同じタイプの要素をすべて選択することができます。
 
 ![](<./images/2/selecting - exercise 11.jpg>)
 
-> 1. Plug the beam element into a _Element.ElementType_ node.
-> 2. The _Watch_ node reveals that the output is now a family symbol rather than a Revit element.
-> 3. _Element.ElementType_ is a simple query, so we can do this in the code block just as easily with `x.ElementType;` and get the same results.
+> 1. 梁の要素を _Element.ElementType_ ノードに接続します。
+> 2. _Watch_ ノードで、出力が Revit 要素ではなくファミリ記号になっていることが確認できます。
+> 3. _Element.ElementType_ は単純なクエリであるため、コード ブロック内で `x.ElementType;` と入力するだけで同様の結果を得ることができます。
 
 ![](<./images/2/selecting - exercise 12.jpg>)
 
-> 1. To select the remaining beams, we use the _"All Elements of Family Type"_ node.
-> 2. The watch node shows that we've selected five Revit elements.
+> 1. 残りの梁を選択するには、_All Elements of Family Type_ ノードを使用します。
+> 2. Watch ノードで、5 つの Revit 要素が選択されていることを確認します。
 
 ![](<./images/2/selecting - exercise 13.jpg>)
 
-> 1. We can convert all of these five elements to Dynamo geometry too.
+> 1. これら 5 つの要素すべてを Dynamo のジオメトリに変換することもできます。
 
-What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
+しかし、500 本の梁を変換しなければならないとしたら、どうでしょうか。すべての要素を Dynamo ジオメトリに変換するにはたいへんな時間がかかるでしょう。Dynamo でノードの計算に膨大な時間がかかる場合は、ノードを「フリーズ」する機能を使用して、グラフの開発中に Revit 関連操作の実行を停止することができます。ノードをフリーズする操作の詳細については、「ソリッド」の章の「[フリーズ](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)」セクションを参照してください。
 
-In any case, if we were to import 500 beams, do we need all of the surfaces to perform the intended parametric operation? Or can we extract basic information from the beams and perform generative tasks with fundamental geometry? This is a question that we'll keep in mind as we walk through this chapter. For example, let's take a look at the truss system next.
+いずれにせよ、500 本の梁を読み込まなければならない場合、目的のパラメータ操作を実行するのにすべてのサーフェスは必要あるでしょうか。それとも、梁から基本情報を抽出して、基本的なジオメトリを使用して生成タスクを実行すればよいでしょうか。この問いを念頭に置きながら、この章での演習を進めていくことにしましょう。たとえば、次はトラス システムについて考えてみましょう。
 
-### Selecting Trusses
+### トラスを選択する
 
-Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the Element.Geometry from the previous step.
+同じノードのグラフを使用して、梁要素ではなくトラス要素を選択します。この操作を行う前に、ここまでの手順で使用した Element.Geometry を削除してください。
 
 ![](<./images/2/selecting - exercise 14.jpg>)
 
-Next we are ready to extract some basic information from trusses family type.
+次に、トラスのファミリ タイプから基本的な情報を抽出する準備を行います。
 
 ![](<./images/2/selecting - exercise 15.jpg>)
 
-> 1. In the _Watch_ node, we can see that we have a list of adaptive components selected from Revit. We want to extract the basic information, so we're start with the adaptive points.
-> 2. Plug the _"All Elements of Family Type"_ node into the _"AdaptiveComponent.Location"_ node. This gives us a list of lists, each with three points which represent the adaptive point locations.
-> 3. Connecting a _"Polygon.ByPoints"_ node returns a polycurve. We can see this in the Dynamo viewport. By this method, we've visualized the geometry of one element and abstracted the geometry of the remaining array of elements (which could be larger in number than this example).
+> 1. _Watch_ ノードで、Revit から選択されたアダプティブ コンポーネントのリストを取得していることを確認できます。 基本情報を抽出するために、まずはアダプティブ点からとりかかります。
+> 2. _All Elements of Family Type_ ノードを _AdaptiveComponent.Location_ ノードに接続します。 これによってリストのリストが 1 つ作成されます。各リストは、アダプティブ点の場所を表す 3 つの点から構成されています。
+> 3. _Polygon.ByPoints_ ノードを接続すると、ポリカーブが返されます。 これは Dynamo のビューポートで確認できます。この方法により、1 つの要素のジオメトリを表示し、残りの要素配列のジオメトリを抽出しました(なお、ここで扱った例よりも多くの要素を抽出することが可能です)。
 
 {% hint style="info" %}
-Tip: if you click on the green number of a Revit element in Dynamo, the Revit viewport will zoom to that element.
+ヒント: Dynamo で、Revit 要素の緑の背景色付きで表示されている数字をクリックすると、Revit のビューポートでその要素が拡大表示されます。
 {% endhint %}

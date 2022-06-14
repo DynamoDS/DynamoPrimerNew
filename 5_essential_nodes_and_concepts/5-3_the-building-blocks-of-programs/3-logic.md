@@ -1,115 +1,115 @@
-# Logic
+# ロジック
 
-**Logic**, or more specifically, **Conditional Logic**, allows us to specify an action or set of actions based on a test. After evaluating the test, we will have a Boolean value representing `True` or `False` that we can use to control the Program Flow.
+**ロジック**(正確には**条件付きロジック**)により、テストに基づく単一のアクションや一連のアクションを指定することができます。テストの評価を行うと、`True` または `False` のブール値が返されます。このブール値を使用して、プログラム フローをコントロールすることができます。
 
-### Booleans
+### ブール値
 
-Numeric variables can store a whole range of different numbers. Boolean variables can only store two values referred to as True or False, Yes or No, 1 or 0. We rarely use booleans to perform calculations because of their limited range.
+数値変数には、さまざまな数値の範囲全体を格納することができます。ブール変数には、True または False、Yes または No、1 または 0 など、2 つの値のみを格納することができます。このようにブール値の範囲は限られているため、ブール値を使用して計算を行うことはほとんどありません。
 
-### Conditional Statements
+### 条件ステートメント
 
-The "If" statement is a key concept in programming: "If _this_ is true, then _that_ happens, otherwise _something else_ happens. The resulting action of the statement is driven by a boolean value. There are multiple ways to define an "If" statement in Dynamo:
+If ステートメントは、プログラミングにおける重要な概念です。このステートメントは、「_この条件_が真である場合は_この処理_を実行し、偽である場合は_別の処理_を実行する」という形式で記述されます。 このステートメントの結果として出力されるアクションは、ブール値によって制御されます。Dynamo で If ステートメントを定義する場合、いくつかの方法があります。
 
-| Icon                                            | Name (Syntax)             | Inputs            | Outputs |
+| アイコン | 名前(構文) | 入力 | 出力 |
 | ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](<../images/5-3/3/If.jpg>)         | If (**If**)               | test, true, false | result  |
-| ![](../images/5-3/3/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | result  |
-| ![](<../images/5-3/3/Code Block.jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
+| ![](<../images/5-3/3/If.jpg>) | If (**If**) | test、true、false | result |
+| ![](../images/5-3/3/Formula.jpg) | Formula (**IF(x,y,z)**) | x、y、z | result |
+| ![](<../images/5-3/3/Code Block.jpg>) | Code Block (**(x?y:z);**) | x ? y、z | result |
 
-Let's go over a brief example on each of these three nodes in action using the conditional "If" statement.
+ここでは簡単な例を使用して、If 条件ステートメントを使用する 3 つのノードの動作を確認していきます。
 
-In this image, the _boolean_ is set to _true_, which means that the result is a string reading: _"this is the result if true"._ The three Nodes creating the _If_ statement are working identically here.
+上の図では、_Boolean_ ノードの出力値が _True_ に設定されているため、その結果として_"this is the result if true"_ という文が表示されます。この場合、_If_ ステートメントを構成する 3 つのノードの動作は同じになります。
 
 ![](<../images/5-3/3/logic - conditional statements 01 false.jpg>)
 
-Again, the Nodes are working identically. If the _boolean_ is changed to _false_, our result is the number _Pi_, as defined in the original _If_ statement.
+繰り返しますが、これら 3 つのノードの動作はすべて同じになります。_ブール値_を _False_ に変更すると、元の _If_ ステートメントで定義されているとおりに、出力結果の値が _Pi_ になります。
 
 ![x](<../images/5-3/3/logic - conditional statements 02 true.jpg>)
 
-## Exercise: Logic and Geometry
+## 演習: ロジックとジオメトリ
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-3/3/Building Blocks of Programs - Logic.dyn" %}
 
-### Part I: Filtering a List
+### パート I: リストをフィルタする
 
-1. Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
+1. ここでは、ロジックを使用して、数値のリストを偶数のリストと奇数のリストに分割してみましょう。
 
 ![](<../images/5-3/3/logic - exercise part I-01.jpg>)
 
-> a. **Number Range -** add a number range to the canvas.
+> a. **Number Range** ノードを使用して、数値の範囲をキャンバスに追加します。
 >
-> b. **Numbers -** add three number nodes to the canvas. The value for each number node should be: _0.0_ for _start_, _10.0_ for _end_, and _1.0_ for _step_.
+> b. **Number** ノードを使用して、3 つの Number ノードをキャンバスに追加します。各 Number ノードで、次のように値を指定します。_start_ 入力: _0.0_、_end_ 入力: _10.0_、_step_ 入力: _1.0_。
 >
-> c. **Output** - our output is a list of 11 numbers ranging from 0-10.
+> c. **Output** として、0 から 10 までの範囲にわたる 11 個の数値のリストが生成されます。
 >
-> d. **Modulo (%)-** **Number Range** into _x_ and _2.0_ into _y_. This calculates the remainder for each number in the list divided by 2. The output from this list gives us a list of values alternating between 0 and 1.
+> d. 「**(%)**」ノード(モジュロ演算ノード)の _x_ 入力に **Number Range** ノードを接続し、_y_ 入力に _2.0_ を指定します。この操作により、リスト内の各数値を 2 で除算した場合の余りが算出されます。このリストの出力値は、0 と 1 が交互に現れる数値のリストになります。
 >
-> e. **Equality Test (==) -** add an equality test to the canvas. Plug _modulo_ output into the _x_ input and _0.0_ into the _y_ input.
+> e. 「**(==)** 」ノード(等価テスト ノード)を使用して、キャンバスに等価テストを追加します。「_(%)_」ノードの出力を「(==)」ノードの _x_ 入力に接続し、Number ノードの _0.000_ 出力を「(==)」ノードの _y_ 入力に接続します。
 >
-> f. **Watch -** The output of the equality test is a list of values alternating between true and false. These are the values used to separate the items in the list. _0_ (or _true_) represents even numbers and (_1_, or _false_) represents odd numbers.
+> f. **Watch** ノードを使用して、等価テストの出力が true と false の値を交互に繰り返すリストになっていることを確認します。これらの値を使用して、リスト内の項目が区別されます。_0_ (または _true_)は偶数を表し、_1_ (または _false_)は奇数を表します。
 >
-> g. **List.FilterByBoolMask -** this Node will filter the values into two different lists based on the input boolean. Plug the original _number range_ into the _list_ input and the _equality test_ output into the _mask_ input. The _in_ output represents true values while the _out_ output represents false values.
+> g. **List.FilterByBoolMask** ノードは、ブール値の入力に基づいて数値をフィルタし、2 つの異なるリストに分割します。元の_数値の範囲_を _list_ 入力に接続し、「_(==)」ノードの出力を _mask_ 入力に接続します。 _ _in_ 出力は true の値を表し、_out_ 出力は false の値を表します。
 >
-> h. **Watch** - as a result, we now have a list of even numbers and a list of odd numbers. We've used logical operators to separate lists into patterns!
+> h. **Watch** ノードを使用して、偶数のリストと奇数のリストが生成されたことを確認します。これで、論理演算子を使用して、リストがパターン別に分類されました。
 
-### Part II: From Logic to Geometry
+### パート II: ロジックからジオメトリへ
 
-Building off of the logic established in the first exercise, let's apply this setup into a modeling operation.
+ここでは、最初の演習で作成したロジックを変更してモデリング操作に適用してみましょう。
 
-2\. We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
+2\. ここでも、前の演習と同じノードを使用します。ただし、次のように、いくつか違いがあります。
 
 ![](<../images/5-3/3/logic - exercise part II-01.jpg>)
 
-> a. Use a **Sequence** Node with these input values.
+> a. これらの入力値で **Sequence** ノードを使用します。
 >
-> b. We've unplugged the in list input into **List.FilterByBoolMask**. We'll put these Nodes aside for now, but they'll come in handy later in the exercise.
+> b. **List.FilterByBoolMask** ノードの list 入力に対する接続が解除されています。これらのノードは、この演習の後半で使用します。
 
-3\. Let's begin by creating a separate group of Graph as shown in the image above. This group of Nodes represents a parametric equation to define a line curve. A few notes:
+3\. 最初に、上の図に示されているように、グラフの別のグループを作成します。このノード グループは、曲線を定義するためのパラメータ制御式を表しています。ここで、次の点に注意する必要があります。
 
 ![](<../images/5-3/3/logic - exercise part II-02.jpg>)
 
-> a. The first **Number Slider** represents the frequency of the wave, it should have a min of 1, a max of 4, and a step of 0.01.
+> a. 最初の **Number Slider** は、波の周波数を表します。最小 1、最大 4、ステップ 0.01 の値である必要があります。
 >
-> b. The second **Number Slider** represents the amplitude of the wave, should have a min of 0, a max of 1, and a step of 0.01.
+> b. 2 番目の **Number Slider** は、波の振幅を表します。最小 0、最大 1、ステップ 0.01 の値である必要があります。
 >
-> c. **PolyCurve.ByPoints -** if the above Node diagram is copied, the result is a sine curve in the Dynamo Preview viewport.
+> c. **PolyCurve.ByPoints** ノードにより、上図のとおりにノード ダイアグラムを構成した時点で、Dynamo のプレビューに正弦曲線が出力されます。
 
-The method here for the inputs: use number nodes for more static properties and number sliders on the more flexible ones. We want to keep the original number range that we're defining in the beginning of this step. However, the sine curve that we create here should have some flexibility. We can move these sliders to watch the curve update its frequency and amplitude.
+ここでは、静的なプロパティで Number ノードを使用し、動的なプロパティで Number Slider ノードを使用して入力を行います。この手順の最初で定義した元の数値の範囲をそのまま使用してもかまいませんが、ここで作成する正弦曲線に対して、ある程度の柔軟性を設定しておく必要があります。Number Slider ノードの値を変更して、曲線の周波数と振幅がどのように変化するかを確認してください。
 
 ![](<../images/5-3/3/logic - exercise part II-03.gif>)
 
-4\. We're going to jump around a bit in the definition, so let's look at the end result so that we can reference what we're getting at. The first two steps are made separately, we now want to connect the two. We'll use the base sine curve to drive the location of the zipper components, and we'll use the true/false logic to alternate between little boxes and larger boxes.
+4\. ここで少し先回りをして、最終的な結果を確認しましょう。個別に作成した最初の 2 つのステップを接続する必要があります。基本の正弦曲線を使用して、ジッパー状のコンポーネントの位置をコントロールし、真偽判定のロジックを使用して、小さなボックスと大きなボックスを交互に配置します。
 
 ![](<../images/5-3/3/logic - exercise part II-04.jpg>)
 
-> a. **Math.RemapRange** - Using the number sequence created in step 02, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
+> a. ステップ 02 で作成された数値シーケンスを使用し、**Math.RemapRange** ノードで再マッピングして、新しい一連の数値を作成します。元の数値の範囲は、0 から 100 までになります(step 値 1)。新しい数値の範囲は、0 から 1 になります。最小値の 0 を _newMin_ 入力に接続し、最大値の 1 を _newMax_ 入力に接続します。
 
-5\. Create a **Curve.PointAtParameter** Node, then connect the **Math.RemapRange** output from step 04 as its _param_ input.
+5\. **Curve.PointAtParameter** ノードを作成し、ステップ 04 の **Math.RemapRange** 出力を _param_ 入力として接続します。
 
 ![](<../images/5-3/3/logic - exercise part II-05.jpg>)
 
-This step creates points along the curve. We remapped the numbers to 0 to 1 because the input of _param_ is looking for values in this range. A value of _0_ represents the start point, a value of _1_ represents the end points. All numbers in between evaluate within the _\[0,1]_ range.
+この操作により、曲線に沿って点群が作成されます。ここでは数値の範囲を 0 から 1 までの範囲に再マッピングしましたが、その理由は、_param_ 入力に 0 から 1 までの範囲の値を指定する必要があるためです。_0_ の値は始点を表し、_1_ の値は終点を表します。すべての中間値は、_\[0,1]_ の範囲内で評価されます。
 
-6\. Connect the output from **Curve.PointAtParameter** to the **List.FilterByBoolMask** to separate the list of odd and even indices.
+6\. **Curve.PointAtParameter** ノードの出力を **List.FilterByBoolMask** ノードに接続し、奇数インデックスと偶数インデックスのリストを分離します。
 
 ![](<../images/5-3/3/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask** - Plug **Curve.PointAtParameter** from the previous step into the _list_ input.
+> a. **List.FilterByBoolMask** ノードの _list_ 入力に、前の手順で使用した **Curve.PointAtParameter** ノードを接続します。
 >
-> b. **Watch -** a watch node for _in_ and a watch node for _out_ shows that we have two lists representing even indices and odd indices. These points are ordered in the same way on the curve, which we demonstrate in the next step.
+> b. **Watch** ノードを _in_ 出力と _out_ 出力に 1 つずつ接続し、偶数値のインデックスを表すリストと奇数値のインデックスを表す 2 つのリストが生成されたことを確認します。これらの点群は、曲線上に同じ方法で配置されます。これについては、次の手順で確認します。
 
-7\. Next, we are going to use the output result from **List.FilterByBoolMask** in step 05 to generate geometries with sizes according to its indices.
+7\. 次に、ステップ 05 で **List.FilterByBoolMask** ノードの出力結果を使用して、インデックスに従ってサイズが設定されたジオメトリを生成します。
 
-**Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
+**Cuboid.ByLengths** ノードを上の図のように接続し、正弦曲線に沿ったジッパー構造を作成します。ノード名の「Cuboid」とは、直方体という意味です。ここでは、直方体の中央に位置する曲線上の点を基準として、直方体のサイズを定義します。この操作により、偶数と奇数の除算ロジックがモデル内に明示的に定義されます。
 
 ![](<../images/5-3/3/logic - exercise part II-07.jpg>)
 
-> a. List of cuboids at even indices.
+> a. 偶数インデックスの直方体のリスト。
 >
-> b. List of cuboids at odd indices.
+> b. 奇数インデックスの直方体のリスト。
 
-Voila! You have just programmed a process of defining the geometry dimensions according to the logic operation demonstrated in this exercise.
+できました!この演習で説明したロジック演算に従ってジオメトリ寸法を定義するプロセスをプログラムしました。

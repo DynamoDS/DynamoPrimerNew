@@ -1,8 +1,8 @@
-# Essential Nodes & Concepts
+# 基本ノードと概念
 
-In this section, we introduce the essential Nodes available in the Dynamo Library that will help you create your own visual program like a pro.
+このセクションでは、プロのような独自のビジュアル プログラムを作成する際に役立つ、Dynamo ライブラリで使用できる基本ノードについて説明します。
 
-* [Geometry for Computational Design](5-2\_geometry-for-computational-design/): How do I work with geometric elements in Dynamo? Explore multiple ways to create simple or complex geometries from primitives.
-* [The Building Blocks of Programs:](5-3\_the-building-blocks-of-programs/) What is "Data" and what are some fundamental types I can start using in my programs? Also, learn more about incorporating math and logic operations in your design workflow.
-* [Designing with Lists: ](5-4\_designing-with-lists/)How do I manage and coordinate my data structures? Understand more about the concept of List and use it to manage your design data efficiently.
-* [Dictionaries in Dynamo: ](5-5\_dictionaries-in-dynamo/)What are Dictionaries? Find out how to use dictionaries to look up specific data and values from existing results.
+* [計算設計用のジオメトリ](5-2\_geometry-for-computational-design/) - Dynamo のジオメトリ要素の仕組みについて。プリミティブから単純な、または複雑なジオメトリを作成する複数の方法について説明します。
+* [プログラムの構成要素](5-3\_the-building-blocks-of-programs/) - データの定義と、プログラムで使用できる基本的なタイプを紹介します。また、設計ワークフローに数値演算と論理演算を組み込む方法についても学習します。
+* [リストを使用した設計](5-4\_designing-with-lists/) - データ構造の管理と調整の仕組みを紹介します。リストの概念の詳細を理解し、リストを使用して設計データを効率的に管理できるようにします。
+* [Dynamo のディクショナリ:](5-5\_dictionaries-in-dynamo/) ディクショナリとは。ディクショナリを使用して、既存の結果から特定のデータと値を検索する方法を確認してください。

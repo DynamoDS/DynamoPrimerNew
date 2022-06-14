@@ -1,94 +1,93 @@
-# Editing
+# 編集
 
-A powerful feature of Dynamo is that you can edit parameters on a parametric level. For example, a generative algorithm or the results of a simulation can be used to drive the parameters of an array of elements. This way, a set of instances from the same family can have custom properties in your Revit project.
+Dynamo には、パラメトリック レベルでパラメータを編集するための強力な機能が用意されています。たとえば、生成アルゴリズムやシミュレーションの結果を使用して、要素の配列のパラメータをコントロールすることができます。この方法で、同じファミリのインスタンスの集合に、Revit プロジェクトのカスタム プロパティを設定することができます。
 
-### Type and Instance Parameters
+### タイプ パラメータとインスタンス パラメータ
 
 ![Exercise](<./images/3/32 (2).jpg>)
 
-> 1. Instance parameters define the aperture of the panels on the roof surface, ranging from an Aperture Ratio of 0.1 to 0.4.
-> 2. Type-based parameters are applied to every element on the surface because they are the same family type. The material of each panel, for example, can be driven by a type-based parameter.
+> 1. インスタンス パラメータは、0.1 ～ 0.4 の開口率で、屋根サーフェス上のパネルの開口部を定義します。
+> 2. タイプベースのパラメータは、サーフェス上のすべての要素に適用されます。これらの要素は同じファミリ タイプであるためです。たとえば、各パネルのマテリアルをタイプベースのパラメータによってコントロールすることができます。
 
-![Exercise](./images/3/params.jpg)
+![演習](./images/3/params.jpg)
 
-> 1. If you've set up a Revit family before, remember that you have to assign a parameter type (string, number, dimension, etc.) Be sure to use the correct data type when assigning parameters from Dynamo.
-> 2. You can also use Dynamo in combination with parametric constraints defined in a Revit family's properties.
+> 1. これまでに Revit ファミリを使用したことがあれば、文字列、数値、寸法などのパラメータ タイプを指定する必要があることはわかるでしょう。Dynamo からパラメータを割り当てる場合は、必ず正しいデータ タイプを使用してください。
+> 2. また、Revit ファミリのプロパティで定義されたパラメトリック拘束と組み合わせて Dynamo を使用することもできます。
 
-As a quick review of parameters in Revit, we recall that there are type parameters and instance parameters. Both can be edited from Dynamo, but we'll work with instance parameters in the exercise below.
+Revit のパラメータの簡単な復習として、タイプ パラメータとインスタンス パラメータの 2 種類があることを思い出してください。両方とも Dynamo で編集できますが、次の演習ではインスタンス パラメータを使用します。
 
 {% hint style="info" %}
-As you discover the wide-reaching application of editing parameters, you may want to edit a large quantity of elements in Revit with Dynamo. This can be a _computationally expensive_ operation, meaning that it can be slow. If you're editing a large number of elements, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
-{% endhint %}
+編集するパラメータの用途は幅広いため、Revit と Dynamo を併用すると、多くの要素を編集することができます。これは_計算量が多い_演算であるため、速度が低下することがあります。 多くの要素を編集する場合は、ノードを「フリーズ」する機能を使用して、グラフの作成中に Revit に関連した操作の実行を一時的に停止することをお勧めします。ノードをフリーズする操作の詳細については、「ソリッド」の章の「[フリーズ](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)」セクションを参照してください。{% endhint %}
 
-### Units
+### 単位
 
-As of version 0.8, Dynamo is fundamentally unitless. This allows Dynamo to remain an abstract visual programming environment. Dynamo nodes that interact with Revit dimensions will reference the Revit project's units. For example, if you are setting a length parameter in Revit from Dynamo, the number in Dynamo for the value will correspond to the default units in the Revit project. The exercise below works in meters.
+バージョン 0.8 以降、基本的に Dynamo では単位が使用されなくなりました。これにより、抽象的なビジュアル プログラミング環境が実現します。Revit の寸法を使用する Dynamo のノードは、Revit プロジェクトの単位を参照します。 たとえば、Revit の長さパラメータを Dynamo で設定する場合、Dynamo の数値は Revit プロジェクトの既定の単位に対応します。次の演習では、メートル単位の数値を操作します。
 
-For a quick conversion of units, use the _"Convert Between Units"_ node. This is a handy tool for converting Length, Area, and Volume units on the fly.
+単位を素早く変換するには、_Convert Between Units_ ノードを使用します。 このノードは、長さ、面積、体積の単位をその場で変換できる便利なツールです。
 
 ![](<./images/3/editing - units.jpg>)
 
-## Exercise
+## 演習
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="./datasets/3/Revit-Editing.zip" %}
 
 {% hint style="warning" %}
-The exercise below works in meters.
+次の演習では、メートル単位の数値を操作します。
 {% endhint %}
 
-This exercise focuses on editing Revit elements without performing geometric operation in Dynamo. We're not importing Dynamo geometry here, just editing parameters in a Revit project. This exercise is basic, and to the more advanced Revit users, notice that these are instance parameters of a mass, but the same logic can be applied to an array of elements to customize on a large scale. This is all done with the "Element.SetParameterByName" node.
+この演習では、Dynamo でジオメトリ操作を実行することなく Revit 要素を編集します。Dynamo ジオメトリを読み込まず、Revit プロジェクトで直接パラメータを編集します。これは基本的な演習です。Revit の上級ユーザであれば、次の図のパラメータはマスのインスタンス パラメータであることがわかるでしょう。同じロジックを要素の配列に適用し、大規模なカスタマイズを行うことができます。これは、すべて Element.SetParameterByName ノードで行います。
 
-### Editing Building Mass Parameters
+### 建物マスのパラメータを編集する
 
-Begin with the example Revit file for this section. We've removed the structural elements and adaptive trusses from the previous section. In this exercise, we will focus on a parametric rig in Revit and manipulating in Dynamo.
+このセクションでは、最初にサンプルの Revit ファイルを使用します。構造要素とアダプティブ トラスは、前のセクションで削除されました。この演習では、Revit のパラメータ機能を確認しながら、Dynamo で操作を行います。
 
-Selecting the building in Mass in Revit, we see an array of instance parameters in the properties panel.
+Revit で建物のマスを選択すると、プロパティ パネルにインスタンス パラメータの配列が表示されます。
 
 ![](<./images/3/editing - exercise 01.jpg>)
 
-In Dynamo, we can retrieve the parameters by selecting the targeting element.
+Dynamo では、ターゲット要素を選択してパラメータを取得することができます。
 
 ![](<./images/3/editing - exercise 02.jpg>)
 
-> 1. Select the building mass with the _"Select Model Element"_ node.
-> 2. We can query all of the parameters of this mass with the _"Element.Parameters"_ node. This includes type and instance parameters.
+> 1. _Select Model Element_ ノードを使用して、建物のマスを選択します。
+> 2. _Element.Parmaters_ ノードを使用して、このマスのすべてのパラメータのクエリーを実行することができます。 パラメータには、タイプ パラメータとインスタンス パラメータがあります。
 
 ![](<./images/3/editing - exercise 03.jpg>)
 
-> 1. Reference the _Element. Parameters_ node to find target parameters. Or, we can view the properties panel from the previous step to choose which parameter names we want to edit. In this case, we are looking for the parameters which affect the large geometric moves on the building mass.
-> 2. We will make changes to the Revit element using the _Element.SetParameterByName_ node
-> 3. Use C\_ode Block to\_ define a list of parameters, with quotes around each item to denote a string. We can also use the List.Create node with a series of _"string"_ nodes connected to multiple inputs but Code block is faster and easier. Make sure that the string matches the exact name in Revit, case-specific: `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
+> 1. _ 要素を参照します。Parameters_ ノードをクリックして、ターゲット パラメータを検索します。または、前の手順のプロパティ パネルを表示して、編集するパラメータ名を選択することもできます。この場合、建物のマスの形状に大きく影響するパラメータを探す必要があります。
+> 2. _Element.SetParameterByName_ ノードを使用して、Revit 要素に変更を加えます。
+> 3. Code Block ノードを使用してパラメータ リストを定義します。各アイテムを引用符で囲んで文字列を示します。List.Create ノードを複数の入力に接続された一連の「_文字列_」ノードとともに使用することもできますが、Code Block ノードを使用すると処理が高速かつ簡単になります。文字列が Revit の名前と一致していることを確認します(大文字と小文字は区別されます)。`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
 ![](<./images/3/editing - exercise 04.jpg>)
 
-> 1. We also want to designate values for each parameter. Add six _"integer sliders"_ to the canvas and rename to the corresponding parameter in the list. Also, set the values of each slider to the image above. In order from top-to-bottom: 62,92,25,22,8,12
-> 2. Define another _code block_ with a list of the same length as the parameter names. In this case, we name variables (without quotes) which create inputs for the _code block._ Plug the _sliders_ into each respective input: `{bw,bl,bh,ao,io,lu};`
-> 3. Connect the Code Block _to the "Element.SetParameterByName"\*_ value input. With run automatically checked, we will automatically see results.
+> 1. 各パラメータの値を指定します。_Integer Slider_ ノードを 6 つキャンバスに追加し、リスト内のパラメータに合わせて名前を変更します。 また、各スライダの値を上の図のように設定します。上から下に、62、92、25、22、8、12 の順で設定します。
+> 2. パラメータ名の数と同じ長さのリストを使用して、別の _Code Block_ ノードを定義します。 その際、Code Block ノードの入力を作成する変数の名前を、引用符を使用せずに入力します。__それぞれの入力に_スライダ_を接続します。`{bw,bl,bh,ao,io,lu};`
+> 3. Code Block ノードを _「Element.SetParameterByName」\*_ の入力値に接続します。[自動実行]をオンにすると、結果が自動的に表示されます。
 
 {% hint style="warning" %}
-\*This demonstration works with instance parameters, but not type parameters.
+\*このデモンストレーションは、インスタンス パラメータには対応していますが、タイプ パラメータには対応していません。
 {% endhint %}
 
-Just as in Revit, many of these parameters are dependent on each other. There are of course combinations where the geometry may break. We can remedy this issue with defined formulas in the parameter properties, or we can setup a similar logic with math operations in Dynamo (this is an additional challenge if you'd like to expand on the exercise).
+Revit と同様に、これらのパラメータの多くは相互に依存関係があります。これらの中には、ジオメトリが壊れてしまう組み合わせもあります。この問題を解決するには、定義済みの式をパラメータ プロパティで使用するか、Dynamo の数値演算で同様のロジックを設定します。余裕があれば、この演習の追加の課題として取り組んでみてください。
 
 ![](<./images/3/editing - exercise 05.jpg>)
 
-> 1. This combination gives a funky new design to the building mass: 100, 92, 100, 25, 13, 51
+> 1. 100、92、100、25、13、51 という組み合わせにより、特徴的な新しいデザインが建物のマスに追加されます。
 
-### Editing Facade Parameters
+### ファサードのパラメータを編集する
 
-Next, let's look at how we can edit the facade using a similar process.
+次に、同様のプロセスを使用してファサードを編集する方法について説明します。
 
 ![](<./images/3/editing - exercise 06.jpg>)
 
-> 1. Copy the graph and focus on the facade glazing which will house the truss system. We isolate four parameters in this case: `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
-> 2. Additionally, we create _number sliders_ and rename to the appropriate parameters. The first three sliders from top-to-bottom should be remapped to a domain of \[0,10], while the final slider, _"Facade Bend Location"_, should be remapped to a domain of \[0,1]. These values, from top-to-bottom should start with these values (although they're arbitrary): 2.68, 2.64, 2.29, 0.5
-> 3. Define a new Code block and connect the sliders: `{so,mo,no,fbl};`
+> 1. グラフをコピーして、トラス システムを格納するファサード ガラスを確認します。この場合、4 つのパラメータを分離します。`{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
+> 2. また、_Number Slider_ ノードを使用して、対応するパラメータに合わせて名前を変更します。 上から 3 つのスライダは\[0,10]の範囲に再マップし、一番下のスライダ(_Facade Bend Location_)は\[0,1]の範囲に再マップします。次に、これらの値を 2.68、2.64、2.29、0.5 にそれぞれ設定します(実際は任意です)。
+> 3. 新しい Code Block ノードを定義し、スライダを接続します。`{so,mo,no,fbl};`
 
 ![](<./images/3/editing - exercise 07.jpg>)
 
-> 1. By changing the _sliders_ in this part of the graph, we can make the facade glazing much more substantial: 9.98, 10.0, 9.71 ,0.31
+> 1. グラフのこの部分の各 _Number Slider_ ノードの値をそれぞれ 9.98、10.0、9.71、0.31 に変更すると、ファサード ガラスがさらにがっしりとした形状になります。

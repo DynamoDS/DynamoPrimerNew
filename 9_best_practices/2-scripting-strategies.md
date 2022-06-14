@@ -1,79 +1,79 @@
-# Scripting Strategies
+# スクリプト作成のガイドライン
 
-Text-based scripting within the visual-scripting environment enables powerful and visual relationships using DesignScript, Python, and ZeroTouch (C#). The user can expose elements such as input sliders, condense large operations into DesignScript, and access powerful tools and libraries through Python or C# all within the same workspace. If managed effectively, combining these strategies can lend a great deal of customization, clarity, and efficiency to the overall program. The following are a set of guidelines to help you augment your visual-script with text-script.
+ビジュアル スクリプト環境内で、DesignScript、Python、ZeroTouch (C#)を使用してテキストベースのスクリプトを作成すると、機能性の高い視覚的な関係を構築することができます。同じワークスペース内で Python や C# を使用して、入力スライダなどの要素を画面上に表示したり、大規模な操作を DesignScript 内に集約したり、便利なツールやライブラリにアクセスすることができます。こうした方法を組み合わせて効率的に管理することにより、プログラム全体のカスタマイズ性、明確性、効率性が大幅に向上します。ここでは、テキスト スクリプトを使用してビジュアル スクリプトを拡張するための一連のガイドラインを紹介します。
 
 ![](./images/2/cad-chart-textual.jpg)
 
-### Know When to Script
+### どのような場合にスクリプトを作成するのかを理解する
 
-Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
+テキスト スクリプトを使用すると、ビジュアル スクリプトよりも複雑な関係を記述することができます。ただし、テキスト スクリプトとビジュアル スクリプトの機能は多くの点で重複しています。事前にパッケージ化された便利なコードがビジュアル スクリプトのノードであるため、ビジュアル スクリプトで多くの機能が重複するのは避けられないことです。ビジュアル スクリプトを使用すると、Dynamo プログラム全体を DesignScript または Python で作成することができます。ただし、ノードとワイヤのインタフェースを使用すると、グラフィカルな情報を直感的なフローで作成できるため、Dynamo ではビジュアル スクリプトを使用しています。テキスト スクリプトの機能がビジュアル スクリプトの機能よりも優れている点について理解しておくと、ノードやワイヤの直感的な機能の代わりにテキスト スクリプトの機能を使用した方が効率的な場合を特定できるようになります。どのような場合にどの言語を使用してスクリプトを作成するかについては、次に示すガイドラインを参照してください。
 
-**Use text-scripting for:**
+**テキスト スクリプトを使用するケース:**
 
-* Looping
-* Recursion
-* Accessing external libraries
+* ループ
+* 反復処理を記述する場合
+* 外部ライブラリへのアクセス処理を記述する場合
 
-**Choose a language:**
+**言語の選択**
 
 |                    |             |               |                    |                    |               |
 | ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
-|                    | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
-| **DesignScript**   | Yes         | Yes           | Yes                | No                 | Yes           |
-| **Python**         | Yes         | Yes           | Partially          | Yes                | No            |
-| **ZeroTouch (C#)** | No          | No            | No                 | Yes                | No            |
+|                    | **ループ（Looping）** | **反復処理を記述する場合** | **ノードの集約** | **外部 ライブラリへのアクセス** | **省略表記** |
+| **DesignScript** | 可 | 可 | 可 | 不可 | 可 |
+| **Python** | 可 | 可 | 一部可 | 可 | 不可 |
+| **ZeroTouch (C#)** | 不可 | 不可 | 不可 | 可 | 不可 |
 
 {% hint style="info" %}
-Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
+各 Dynamo ライブラリでアクセスできるコンテンツのリストについては、「[スクリプトの参照情報](13-3\_scripting-reference.md)」を参照してください。
 {% endhint %}
 
-### Think Parametrically
+### パラメトリックに考える
 
-When scripting in Dynamo, an inevitably parametric environment, it is wise to structure your code relative to the framework of nodes and wires it will be living in. Consider the node containing your text-script as though it is any other node in the program with a few specific inputs, a function, and an expected output. This immediately gives your code inside the node a small set of variables from which to work, the key to a clean parametric system. Here are some guidelines for better integrating code into a visual program.
+Dynamo でスクリプトを作成する場合は必ずパラメトリック環境で作業を行うことになるため、使用するノードとワイヤのフレームワークに関連する形で、構造化されたコードを記述することをお勧めします。例として、テキスト スクリプトが記述されているノードを考えてみます。このノードは、複数の入力、1 つの関数、予想される 1 つの出力が指定されている、プログラム内の他のノードと同じように構成されているとします。この場合、ノード内のコードにいくつかの作業用変数が即時に設定されます。これらの変数が、クリーンなパラメトリック システムの重要な要素になります。コードをビジュアル プログラムに統合するための適切な方法については、次のガイドラインを参照してください。
 
-**Identify the external variables:**
+**外部変数を特定する**
 
-* Try to determine the given parameters in your design problem so that you can construct a model that directly builds off that data.
-* Before writing code, identify the variables:
-  * A minimal set of inputs
-  * The intended output
-  * Constants
+* 設計内で使用するパラメータを特定します。これにより、対象のデータから直接作成されるモデルを構築できるようになります。
+* コードを記述する前に、次の変数を特定します。
+   * 入力の最小セット
+   * 目的の出力
+   * 定数
 
 ![](<./images/2/think parametrically 01.jpg>)
 
-> Several variables have been established prior to writing code.
+> 一部の変数については、コードを記述する前に既に定義されています。
 >
-> 1. The surface we will simulate rainfall on.
-> 2. The number of rain drops (agents) we want.
-> 3. How far we want the rain drops to travel.
-> 4. Toggle between descending the steepest path versus traversing the surface.
-> 5. Python Node with the respective number of inputs.
-> 6. A Code Block to make the returned curves blue.
+> 1. 降雨のシミュレーションを実行するサーフェス。
+> 2. 必要な雨粒の数(エージェント)。
+> 3. 雨粒の移動距離。
+> 4. 最も急なパスの下降とサーフェス横断との切り替え。
+> 5. 各入力の番号が指定された Python Script ノード。
+> 6. 返された曲線が青で表示されるコード ブロック。
 
-**Design the internal relationships:**
+**内部的な関係を設計する**
 
-* Parametricism allows for certain parameters or variables to be edited in order to manipulate or alter the end result of an equation or system.
-* Whenever entities in your script are logically related, aim to define them as functions of each other. This way when one is modified, the other can update proportionally.
-* Minimize number of inputs by only exposing key parameters:
-  * If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.
+* パラメトリシズム機能で特定のパラメータや変数を編集することにより、計算式やシステムの最終結果を操作または変更できます。
+* スクリプト内のエンティティが論理的に関連付けられている場合は、常にそれらのエンティティを相互の関数として定義します。この場合、一方の関数を変更すると、その変更内容に応じてもう一方の関数が更新されます。
+* 重要なパラメータだけを表示し、入力の数を最小限に抑えます。
+   * 追加の親パラーメータから一連のパラメータを継承できる場合は、それらの親パラメータだけをスクリプトの入力として表示してください。こうすることにより、インタフェースの複雑さが軽減されるため、スクリプトが使いやすくなります。
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> The code "modules" from the example in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> 上記のコードは、[Python Script ノード](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html)の「modules」というサンプル コードです。
 >
-> 1. Inputs.
-> 2. Variables internal to the script.
-> 3. A loop that uses these inputs and variables to perform its function.
+> 1. 入力。
+> 2. スクリプト内で使用される変数。
+> 3. 上記の入力と変数を使用して関数を実行するループ。
 
 {% hint style="info" %}
-Tip: Place as much emphasis on the process as you do on the solution.
+ヒント: スクリプトの結果だけでなく、途中のプロセスも非常に重要です。どちらにも同じように重点を置いてください。
 {% endhint %}
 
-### **Don't repeat yourself (the DRY principle):**
+### **Don't repeat yourself (DRY 原則)**
 
-* When you have multiple ways to express the same thing in your script, at some point the duplicate representations will fall out of sync which can lead to maintenance nightmares, poor factoring, and internal contradictions.
-* The DRY principle is stated as "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system":
-  * When this principle is successfully applied, all the related elements in your script change predictably and uniformly and all the unrelated elements do not have logical consequences on each other.
+* スクリプト内で同じ処理を複数の方法で記述すると、いずれかのタイミングで、重複するコード記述間における整合性が取れなくなることがあります。その結果、保守作業に時間がかかったり、コードの解析効率が落ちたり、システム内部の不整合が発生する可能性があります。
+* DRY 原則は、「すべての情報は、システム内において、ただ 1 つの明確な信頼できる表現を持っている」ということを表す原則です。
+   * この原則を正しく適用することにより、スクリプト内の関連要素が予期したとおりに統一して変更されます。関連しない要素については、相互に論理的な影響が及ぶことはありません。
 
 ```
 ### BAD
@@ -95,127 +95,127 @@ for i in range(count):
 ```
 
 {% hint style="info" %}
-Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
+ヒント: 上記の「BAD」の例では定数を記述していますが、スクリプト内でエンティティを複製する前に、ソースにリンクさせることができないかどうかを検討することをお勧めします。
 {% endhint %}
 
-### Structure Modularly
+### モジュール単位で構成する
 
-As your code gets longer and more complex the “big idea”, or overarching algorithm becomes increasingly illegible. It also becomes more difficult to keep track of what (and where) specific things happen, find bugs when things go wrong, integrate other code, and assign development tasks. To avoid these headaches it’s wise to write code in modules, an organizational strategy that breaks up code based on the task it executes. Here are some tips for making your scripts more manageable by way of modularization.
+コードが長くなってより複雑になるにつれて、スクリプトの目的や全体的なアルゴリズムが分かりにくくなります。また、特定の処理の内容や、特定の処理が記述されている箇所を簡単に追跡できなくなり、エラーが発生した場合も、その原因となるバグを見つけることが難しくなります。さらに、他のコードへの統合や開発作業の割り当てについても、困難になります。こうした困難を避けるため、モジュール単位でコードを記述することをお勧めします。この方法では、コードで実行する処理に基づいて、コードを組織的に分割して記述します。ここでは、モジュール化の手法を使用して、スクリプトを簡単に管理するためのヒントをいくつか紹介します。
 
-**Write code in modules:**
+**モジュール単位でコードを記述する**
 
-* A "module" is a group of code that performs a specific task, similar to a Dynamo Node in the workspace.
-* This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).
-* Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.
+* 「モジュール」とは、特定の処理を実行するコードの集まりで、ワークスペース内の Dynamo ノードに似ています。
+* モジュールは、隣接するコードから視覚的に離れた位置に記述します(関数、クラス、入力のグループ、読み込むライブラリなどがモジュールになります)。
+* モジュール単位でコードを記述すると、視覚的で直感的なノードの利点を活用できるだけなく、テキスト スクリプトでしか記述できない複雑な関係を使用することもできます。
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> These loops call a class named "agent" that we will develop in the exercise.
+> 上記のループ処理では、「agent」というクラスを呼び出しています。このクラスは、次の演習で作成します。
 >
-> 1. A code module that defines the start point of each agent.
-> 2. A code module that updates the agent.
-> 3. A code module that draws a trail for the agent's path.
+> 1. 各エージェントの開始点を定義するコード モジュール。
+> 2. エージェントを更新するコード モジュール。
+> 3. エージェントのパスの基準線を描画するコード モジュール。
 
-**Spotting code re-use:**
+**複数の箇所に記述されている同じコードを関数としてまとめる**
 
-* If you find that your code does the same (or very similar) thing in more than once place, find ways to cluster it into a function that can be called.
-* "Manager" functions control program flow and primarily contain calls to "Worker" functions that handle low-level details, like moving data between structures.
+* 同じ処理(または非常に類似した処理)を実行するコードが複数の箇所に記述されている場合は、呼び出し可能な関数としてそれらのコードをまとめます。
+* 「Manager」関数は、プログラム フローをコントロールします。この関数には主に、構造間でのデータ移動などの低レベル詳細の動作を処理する「Worker」関数に対する呼び出しが格納されます。
 
-This example creates spheres with radii and color based on the Z value of the center points.
+上記の例では、中心点の Z 値に基づき、半径と色を指定して球体を作成しています。
 
 ![](<./images/2/spot code resuse.jpg>)
 
-> 1. Two "worker" parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.
-> 2. A "manager" parent function that combines the two worker functions. Calling this will call both functions inside it.
+> 1. 中心線の Z 値に基づき、半径と表示色を指定して球体を作成する 2 つの「Worker」親関数。
+> 2. 2 つの Worker 関数を組み合わせる「Manager」親関数。この関数を呼び出すと、この関数に含まれている 2 つの Worker 関数が呼び出されることになります。
 
-**Only show what needs to be seen:**
+**必要な要素だけを表示する**
 
-* A module interface expresses the elements that are provided and required by the module.
-* Once the interfaces between the units have been defined, the detailed design of each unit can proceed separately.
+* モジュールのインタフェースには、そのモジュールで指定されている必要な要素が表示されます。
+* ユニット間のインタフェースを定義すると、各ユニットの詳細設計を個別に進めることができるようになります。
 
-**Separability/Replaceability:**
+**モジュールの分離や置き換え**
 
-* Modules don’t know or care about each other.
+* モジュール間には相互の関係はないため、必要に応じて分離や置き換えを行うことができます。
 
-**General forms of modularization:**
+**モジュール化の一般的な形式**
 
-*   Code Grouping:
+* コードをグループ化する場合は、次のように記述します。
 
-    ```
-    # IMPORT LIBRARIES
-    import random
-    import math
-    import clr
-    clr.AddReference('ProtoGeometry')
-    from Autodesk.DesignScript.Geometry import *
+   ```
+   # IMPORT LIBRARIES
+   import random
+   import math
+   import clr
+   clr.AddReference('ProtoGeometry')
+   from Autodesk.DesignScript.Geometry import *
 
-    # DEFINE PARAMETER INPUTS
-    surfIn = IN[0]
-    maxSteps = IN[1]
-    ```
-*   Functions:
+   # DEFINE PARAMETER INPUTS
+   surfIn = IN[0]
+   maxSteps = IN[1]
+   ```
+* 関数は、次のように記述します。
 
-    ```
-    def get_step_size():
-      area = surfIn.Area
-      stepSize = math.sqrt(area)/100
-      return stepSize
+   ```
+   def get_step_size():
+     area = surfIn.Area
+     stepSize = math.sqrt(area)/100
+     return stepSize
 
-    stepSize = get_step_size()
-    ```
-*   Classes:
+   stepSize = get_step_size()
+   ```
+* クラスは、次のように記述します。
 
-    ```
-    class MyClass:
-      i = 12345
+   ```
+   class MyClass:
+     i = 12345
 
-      def f(self):
-        return 'hello world'
+     def f(self):
+       return 'hello world'
 
-    numbers = MyClass.i
-    greeting = MyClass.f
-    ```
+   numbers = MyClass.i
+   greeting = MyClass.f
+   ```
 
-### Flex Continuously
+### スクリプトを継続的にモニタリングする
 
-While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
+Dynamo でテキスト スクリプトを開発する場合は、目的とする結果と、実際に作成される結果を頻繁に確認することをお勧めします。こうすることにより、構文エラー、論理的な矛盾点、不正確な値、正しくない出力など、予期しない状況をすばやく検出し、そのたびに修正することができます。最後にまとめて修正するよりも、効率的に作業を進めることができます。テキスト スクリプトは、キャンバス上のノード内でアクティブになっているため、ビジュアル プログラムのデータ フローに既に統合された状態になっています。そのため、出力データを割り当ててプログラムを実行し、Watch ノードを使用してスクリプトからのフローを評価するだけで、スクリプトを継続的にモニタリングすることができます。ここでは、スクリプトを作成しながら、そのスクリプトを継続的に検査する場合のヒントをいくつか紹介します。
 
-**Test as you go:**
+**スクリプトを開発しながらテストを行う**
 
-* Whenever you complete a cluster of functionality:
-  * Step back and inspect your code.
-  * Be critical. Could a collaborator understand what this is doing? Do I need to do this? Can this function be done more efficiently? Am I creating unnecessary duplicates or dependencies?
-  * Quickly test to make sure it is returning data that “makes sense”.
-* Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:
+* 機能を実行するためのコードの記述が完了するたびに、次の点を確認します。
+   * コードの内容を客観的に確認します。
+   * コードの内容を批判的に確認します。たとえば、共同作業を行っている他のメンバーがこのコードの内容を理解できるかどうか、この処理は本当に必要なのかどうか、この機能をさらに効率的に記述することができないかどうか、不要な重複コードや依存コードが記述されていないかどうか、などを確認します。
+   * 正しいデータが返されるかどうかを簡単にテストします。
+* スクリプト内で使用する最新のデータを出力として割り当てます。これにより、スクリプトを更新するたびに、関連するデータがノードによって常に出力されるようになります。
 
 ![](<./images/2/flex continuously.jpg>)
 
-> 1. Check that all edges of the solid are being returned as curves to create a bounding box around.
-> 2. Check that our Count inputs are successfully being converted to Ranges.
-> 3. Check that coordinate systems have been properly translated and rotated in this loop.
+> 1. ソリッドのすべてのエッジが、境界ボックスを作成するための曲線として返されるかどうかを確認します。
+> 2. Count 入力が正しく Range に変換されるかどうかを確認します。
+> 3. 座標系が適切に変換され、ループ内で回転するかどうかを確認します。
 
-**Anticipate “edge cases”:**
+**極端な条件を想定してテストを行う**
 
-* While scripting, crank your input parameters to the minimum and maximum values of their allotted domain to check if the program still functions under extreme conditions.
-* Even if the program is functioning at its extremes, check if it is returning unintended null/empty/zero values.
-* Sometimes bugs and errors that reveal some underlying problem with your script will only surface during these edge cases.
-  * Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.
+* スクリプトの作成中に、割り当てられているドメインの最小値と最大値に入力パラメータを設定すると、極端な条件下でもプログラムが正常に機能するかどうかを確認することができます。
+* 最小値や最大値を指定して正常にプログラムが機能する場合であっても、予期しない Null 値、空の値、ゼロが返されることがないかどうかを確認する必要があります。
+* こうした極端な条件を設定しないと、スクリプト内に存在する問題を示すバグやエラーが見つからないことがあります。
+   * エラーの原因を特定し、エラーを内部的に修正する必要があるのかどうか、またはパラメータ ドメインを調整してエラーを回避する必要があるのかどうかを判断します。
 
 {% hint style="info" %}
-Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+ヒント: ユーザは、使用可能なすべての入力値のあらゆる組み合わせを使用するということを常に想定しておく必要があります。これにより、予期しない問題が発生するのを防ぐことができます。
 {% endhint %}
 
-### Debug Efficiently
+### 効率的なデバッグを行う
 
-Debugging is the process of eliminating "bugs" from your script. Bugs can be errors, inefficiencies, inaccuracies, or any unintended results. Addressing a bug can be as simple as correcting a misspelled variable name to more pervasive, structural problems with your script. Ideally, flexing your script as you build it will help to catch these potential issues early, though this is no guarantee of it being bug-free. The following is a review of several best practices from above to help you address bugs systematically.
+デバッグとは、スクリプトからバグをなくすためのプロセスのことです。エラー、非効率な処理、不正確な値、予期しない結果などをまとめて「バグ」と呼びます。バグの修正は、変数名のスペルミスを修正するような単純なものもあれば、スクリプトの構成に関する問題のように、広範囲にわたるものもあります。スクリプトを作成しながら、早い段階で潜在的な問題を検出して修正するのが理想的な方法ですが、この方法でも、バグのまったくないスクリプトを作成できるという保証はありません。ここでは、バグを系統的な方法で修正するためのベスト プラクティスをいくつか紹介します。これらのベスト プラクティスは、優先度の高い順に記載されています。
 
-**Use the watch bubble:**
+**ウォッチ バルーンを使用する**
 
-* Check the data returned at different places in the code by assigning it to the OUT variable, similar to the concept of flexing the program.
+* 返されるデータを OUT 変数に割り当てて、コード内の複数の場所でそのデータを確認します。これは、スクリプトを作成しながらバグを修正する方法に似ています。
 
-**Write meaningful comments:**
+**分かりやすいコメントを書く**
 
-* A module of code will be much easier to debug if its intended outcome is clearly described.
+* コードをモジュール化して、目的とする結果をコメントとして明確に記述すると、デバッグが簡単になります。
 
 ```py
 # Loop through X and Y
@@ -231,94 +231,94 @@ for i in range(xCount):
     solids.append(solid.Transform(fromCoord,toCoord))
 ```
 
-> Normally this would be an excessive amount of commenting and blank lines, but when debugging it can be useful to break things down into manageable pieces.
+> 通常、コメント行と空白行は余分な情報ですが、デバッグを行う場合は、コードを細分化して内容を追跡できるため、便利です。
 
-**Leverage the code's modularity:**
+**モジュール化されたコードの利点を活用する**
 
-* The source of an issue can be isolated to certain modules.
-* Once the faulty module has been identified, fixing the problem is considerably simpler.
-* When a program must be modified, code that has been developed in modules will be much easier to change:
-  * You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.
+* 分離された特定のモジュール内に問題の原因が存在している場合があります。
+* 問題のあるモジュールを特定できれば、問題の修正が非常に簡単になります。
+* プログラムを修正する必要がある場合、コードがモジュール化されていれば、非常に簡単に修正を行うことができます。
+   * プログラムの他の部分を変更することなく、新しいモジュールやデバッグ済みのモジュールを既存のプログラムに挿入することができます。
 
 ![](<./images/2/leverage code's modularity.jpg>)
 
-> Debugging the example file from [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> 「[Python Script ノード](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html)」のサンプル ファイルをデバッグする
 >
-> 1. The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.
-> 2. The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.
-> 3. The code "module" we've inserted to address the xDist and yDist value issue.
+> 1. 自分よりも大きな境界ボックスを返す入力ジオメトリ(これを確認するには、xDist と yDist の値を OUT 変数に割り当てます)。
+> 2. xDist と yDist の正しい距離が設定された適切な境界ボックスを返す入力ジオメトリのエッジ曲線。
+> 3. xDist と yDist の値に関する問題に対応するための「module」コード(これは、これまでの説明で挿入したコードです)。
 
-## Exercise: Steepest Path
+## 演習: 最も急なパスを作成する
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="./datasets/9/2/SteepestPath.dyn" %}
 
-With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
+上で説明したテキスト スクリプトのベスト プラクティスを意識しながら、降雨シミュレーション スクリプトを作成してみましょう。「見やすいプログラムを作成するためのガイドライン」の演習では、ベスト プラクティスに従い、構造化されていないビジュアル プログラムを見やすく整理することができましたが、テキスト スクリプトの場合、それは非常に難しくなります。テキスト スクリプトで記述された論理的な関係は、視覚的に把握するのが難しいため、複雑なコードになると、関係を解読するのがほとんど不可能になる場合もあります。そのため、テキスト スクリプトの高度な機能を使用する場合は、組織的に記述する必要性が高くなります。この演習では、ステップごとに操作を確認しながら、ベスト プラクティスについて説明していきます。
 
-Our script applied to an attractor-deformed surface.
+アトラクタが変形しているサーフェスに適用されるスクリプト
 
 ![](<./images/2/scripting strategies - exercise - 01.jpg>)
 
-The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.
+最初に、必要な Dynamo ライブラリを読み込みます。これにより、Python 内で Dynamo の機能にグローバルにアクセスできるようになります。
 
-All the libraries we intend on using need to be imported here.
+この段階で、必要なライブラリをすべて読み込む必要があります。
 
 ![](<./images/2/scripting strategies - exercise - 02.jpg>)
 
-Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.
+次に、スクリプトの入力と出力を定義する必要があります。定義した入力は、ノード上で入力ポートとして表示されます。これらの外部入力が、このスクリプトの基礎となり、パラメトリック環境を構築するための重要なデータになります。
 
-We need to define inputs that correspond to variables in the Python script and determine a desired output:
+Python スクリプト内の変数に対応する入力を定義する必要があります。これらの入力により、目的とする出力が設定されます。
 
 ![](<./images/2/scripting strategies - exercise - 03.jpg>)
 
-> 1. The surface we want to walk down.
-> 2. The number of agents we want to walk.
-> 3. The maximum number of steps the agents are allowed to take.
-> 4. An option to take the shortest path down the surface or traverse it.
-> 5. The Python Node with input identifiers that correspond to inputs in the script (IN\[0], IN\[1]).
-> 6. Output curves that can be displayed with a different color.
+> 1. ベースとなるサーフェス。
+> 2. 使用するエージェントの数。
+> 3. エージェントが進むことができるステップの最大数。
+> 4. サーフェスからの最短距離のパスを取得するためのオプション(または、サーフェスを横断するためのオプション)。
+> 5. スクリプト IN\[0] とスクリプト IN\[1] の入力に対応する入力 ID が設定された Python Script ノード。
+> 6. 異なる色で表示可能な出力曲線。
 
-Now let's employ the practice of modularity and create the body of our script. Simulating the shortest path down a surface for multiple start points is a significant task that will require several functions. Rather than call the different functions throughout the script, we can modularize our code by collecting them into a single class, our agent. The different functions of this class or "module" can be called with different variables or even reused in another script.
+では、モジュール化の手法を使用して、スクリプトの本文を作成してみましょう。複数の始点に対して、サーフェスからの最短パスのシミュレーションを実行するのは、複数の関数が必要になる複雑な作業です。そのため、スクリプト内の異なる場所で異なる関数を呼び出すのではなく、それらの関数をエージェントの 1 つのクラスとしてまとめることにより、コードをモジュール化します。このクラス(モジュール)の各関数は、それぞれ異なる変数を使用して呼び出すことができます。また、別のスクリプト内で再利用することもできます。
 
-We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
+サーフェス上を下降するエージェントに対して、その動作を指示するクラスを定義する必要があります。このクラスを使用して、エージェントがステップを進むたびに、最も急な方向へ移動することを選択します。
 
 ![](<./images/2/scripting strategies - exercise - 04.jpg>)
 
-> 1. Name.
-> 2. Global attributes that all the agents share.
-> 3. Instance attributes that are unique to each agent.
-> 4. A function for taking a step.
-> 5. A function for cataloging the position of each step to a trail list.
+> 1. 名前。
+> 2. すべてのエージェントが共有するグローバル属性。
+> 3. 各エージェント固有のインスタンス属性。
+> 4. ステップを進むための関数。
+> 5. 各ステップの位置を基準線リストにカタログ化するための関数。
 
-Let's initialize the agents by defining their start location. This is a good opportunity to flex our script and make sure the agent class is working.
+ここで、エージェントの開始位置を指定して、エージェントを初期化しましょう。それに合わせて、スクリプトの調整を行い、エージェント クラスが正しく機能するかどうかを確認します。
 
-We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
+サーフェスを下降するすべてのエージェントをインスタンス化し、それらのエージェントの初期属性を定義する必要があります。
 
 ![](<./images/2/scripting strategies - exercise - 05.jpg>)
 
-> 1. A new empty trail list.
-> 2. Where they will start their journey on the surface.
-> 3. We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.
+> 1. 新しい空の基準線リスト。
+> 2. サーフェス上での下降の開始を指定するためのコード。
+> 3. エージェント リストを出力として割り当て、スクリプトから返される情報を確認するための Watch ノード。エージェントの正確な数が返されていますが、後でスクリプトをもう一度編集して、スクリプトから返されるジオメトリを確認します。
 
-Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
+ステップごとにそれぞれのエージェントを更新します。 次に、エージェントとステップごとに、ネストされたループ処理を記述し、エージェントとステップの位置を更新してそれぞれの基準線リストに記録します。また、各ステップで、エージェントがサーフェス上の最終的な位置(それ以上は下降できない位置)にまだ到達していないことを確認します。エージェントがサーフェス上の最終的な位置に到達したら、エージェントの移動を停止します。
 
 ![](<./images/2/scripting strategies - exercise - 06.jpg>)
 
-Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
+これで、各エージェントが完全に更新されました。次に、これらのエージェントを表すジオメトリを返してみましょう。 すべてのエージェントが、それ以上は下降できない位置にまで達したことを確認した後で(または、ステップの最大数に達したことを確認した後で)、各エージェントの基準線リスト内の点を通過するポリカーブを作成し、そのポリカーブの基準線を出力します。
 
 ![](<./images/2/scripting strategies - exercise - 07.jpg>)
 
-Our script for finding the steepest paths.
+最も急なパスを探すためのスクリプト。
 
 ![](<./images/2/scripting strategies - exercise - 08.jpg>)
 
-> 1. A preset that simulates rainfall on the underlying surface.
-> 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.
+> 1. ベースとなるサーフェス上の降雨をシミュレーションするためのプリセット。
+> 2. 最も急なパスを探す代わりに、エージェントを切り替えて、ベースとなるサーフェスを横断することもできます。
 
-The full Python text-script.
+最終的な Python のテキスト スクリプトはこのようになります。
 
 ```
 ### STEEPEST PATH ALGORITHM

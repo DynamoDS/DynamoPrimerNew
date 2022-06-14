@@ -1,45 +1,45 @@
-# Scripting Reference
+# スクリプト リファレンス
 
-This reference page extends the best practices covered in Scripting Strategies with greater detail on code libraries, labeling, and styling. We will be using Python to illustrate the concepts below, but the same principles would apply in Python and C#(Zerotouch) but in different syntax.
+このリファレンス ページでは、「スクリプト作成のガイドライン」のページで紹介したベスト プラクティスを、コード ライブラリ、ラベル付け、スタイル設定によってさらに拡張する方法について説明します。ここでは、Python を使用して次に示す概念を説明しますが、Python だけでなく C#(Zerotouch)についても、同じ概念が異なる構文で適用されます。
 
-## Which Libraries to Use
+## Dynamo ライブラリと標準ライブラリのどちらを使用するか
 
-Standard libraries are external to Dynamo and are present in the programming languages Python and C# (Zerotouch). Dynamo also has its own set of libraries that directly correspond to it's node hierarchy, enabling the user to build anything in code that could be made with nodes and wires. The following is a guide for what each Dynamo library gives access to and when to use a standard one.
+標準ライブラリは Dynamo の外部に存在し、プログラミング言語の Python や C# (Zerotouch)の内部で使用されます。Dynamo には、ノード階層に直接対応する専用のライブラリ セットも用意されています。これらの専用ライブラリにより、ノードとワイヤを使用して作成したコード内で、あらゆる処理を記述することができます。ここからは、各 Dynamo ライブラリの内容と、どのような場合に標準ライブラリを使用するかについて説明します。
 
 ![](./images/3/textual-programming.jpg)
 
-**Standard Libraries and Dynamo Libraries**
+**標準ライブラリと Dynamo ライブラリ**
 
-* Standard libraries from Python and C# can be used to build advanced data and flow structures in the Dynamo environment.
-* Dynamo libraries directly correspond to the node hierarchy for creating geometry and other Dynamo objects.
+* Dynamo 環境内で Python と C# の標準ライブラリを使用すると、高度なデータ構造とフロー構造を定義することができます。
+* Dynamo ライブラリは、ジオメトリなどの Dynamo オブジェクトを作成するためのノード階層に直接対応しています。
 
-**Dynamo Libraries**
+**Dynamo ライブラリ**
 
-1.  ProtoGeometry\*
+1. ProtoGeometry\*
 
-    * Functionality: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
-    * How to import: `import Autodesk.DesignScript.Geometry`
+   * 機能: 円弧、境界ボックス、円、円錐、座標系、立方体、曲線、円柱、エッジ、楕円、楕円弧、面、ジオメトリ、らせん、インデックス グループ、線分、メッシュ、NURBS 曲線、NURBS サーフェス、平面、点、ポリゴン、長方形、ソリッド、球体、サーフェス、トポロジ、T スプライン、UV、ベクトル、頂点。
+   * 読み込み方法: `import Autodesk.DesignScript.Geometry`
 
-    ``
+   ``
 2. DSCoreNodes
-   * Functionality: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
-   * How to import: `import DSCore`
-3. Tessellation
-   * Functionality: Convex Hull, Delaunay, Voronoi.
-   * How to import: `import Tessellation`
+   * 機能: 色、色範囲(2D)、日時、期間、I/O、式、ロジック、リスト、数式、クアッドツリー、文字列、スレッド。
+   * 読み込み方法: `import DSCore`
+3. モザイク模様
+   * 機能: 凸型ハル、ドローネー、ボロノイ図。
+   * 読み込み方法: `import Tessellation`
 4. DSOffice
-   * Functionality: Excel.
-   * How to import: `import DSOffice`
+   * 機能: Excel。
+   * 読み込み方法: `import DSOffice`
 
 {% hint style="warning" %}
-\*Note: When using **ProtoGeometry** through Python or C#, you are creating unmanaged objects, which need have their memory managed manually - please see section below: **Unmanaged Objects**, for more info.
+\*注: Python または C# で **ProtoGeometry** を使用すると、非管理オブジェクト(メモリを手動で管理する必要があるオブジェクト)が作成されることに注意してください。詳細については、「**非管理オブジェクト**」のセクションを参照してください。
 {% endhint %}
 
-## Label Carefully
+## 分かりやすい名前を付ける
 
-While scripting, we are constantly using identifiers to denote things like variables, types, functions, and other entities. Through this system of symbolic notation, while building algorithms we can conveniently refer to information by way of labels --usually made up of a sequence of characters. Naming things well plays a significant role in writing code that can be easily read and understood by others as well as your future self! Here are some tips to keep in mind while naming things in your script:
+スクリプトを作成する際には、頻繁に識別子を使用して、変数、タイプ、関数などのエンティティを区別する必要があります。アルゴリズムの作成時に、文字列から構成されるラベルを付けることにより、アルゴリズムの内容が分かりやすくなります。コードを記述する際に分かりやすい名前を付けると、他のメンバーがそのコードの内容を簡単に理解できるようになるだけでなく、後から自分でコードを読む場合にも役立ちます。スクリプト内でエンティティに名前を付ける場合のヒントをいくつか紹介します。
 
-**It´s OK to use abbreviations, but explain the abbreviation with a comment:**
+**略語を使用する場合は、その略語の意味をコメントで記述する:**
 
 ```
 ### BAD
@@ -56,7 +56,7 @@ csfY= 1.3
 csfZ = 1.0
 ```
 
-**Avoid redundant labeling:**
+**冗長な名前は付けない:**
 
 ```
 ### BAD
@@ -72,7 +72,7 @@ seat = car.Seat()
 tire = car.Tire()
 ```
 
-**Use positive logic for your variable names instead of negative logic:**
+**If 文で変数名を記述する場合は、If not 文を使用しない:**
 
 ```
 ### BAD
@@ -92,7 +92,7 @@ else:
     print 'not found'
 ```
 
-**Prefer “reverse notation”:**
+**単語を連結した変数を使用する場合は、「主語_形容詞」という順にする:**
 
 ```
 ### BAD
@@ -108,9 +108,9 @@ agents_active = …
 agents_dead = ...
 ```
 
-> It’s more sensible, in structural terms.
+> このように形式を統一すると、意味がさらに分かりやすくなります。
 
-**Aliases should be used to shorten overly long and often repeated chains:**
+**長い名前を繰り返し使用する場合は、エイリアスを使用する:**
 
 ```
 ### BAD
@@ -130,9 +130,9 @@ doc = DM.Instance.CurrentDBDocument
 uiapp = DM.Instance.CurrentUIApplication
 ```
 
-> Aliasing can quickly lead to very confusing and non-standard programs.
+> ただし、頻繁にエイリアスを使用すると、非常に混乱した分かりにくいプログラムになる場合があります。
 
-**Only use necessary words:**
+**必要な単語だけを使用する:**
 
 ```
 ### BAD
@@ -144,141 +144,141 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> “Everything should be made as simple as possible, but not simpler.” – Albert Einstein
+> 「ものごとはできるかぎりシンプルにすべきだ。しかし、シンプルすぎてもいけない」— アルベルト・アインシュタイン
 
-## Style Consistently
+## スタイルを統一する
 
-Generally speaking there is more than one way to program just about anything, therefore your “personal style” of scripting is the result of the countless small decisions you choose to make (or not make) along the way. That said, the readability and maintainability of your code is a direct result of its internal consistency as well as its adherence to general stylistic conventions. As a rule of thumb, code that looks the same in two places should work the same, too. Here are a few tips for writing clear and consistent code.
+プログラムを作成する方法は 1 つだけではないため、スクリプトを記述する場合は「個人的なスタイル」を基準として、さまざまなことを判断しながらスクリプトを記述していくことになります。そのため、コード内のスタイルが統一されているかどうか、一般的な形式のスタイルに準拠しているかどうかが、コードの読みやすさと保守作業の容易さに直接影響することになります。一般的に、同じコードが 2 箇所で記述されている場合、それらのコードは同じように機能すると考えられます。ここで、スタイルが統一された分かりやすいコードを記述するためのヒントをいくつか紹介します。
 
-**Naming conventions:** (Choose one of the conventions below for each type of entity in your code and stick to it!)
+**命名規則:** (次に示すいずれかの命名規則に従って、コード内の各種タイプのエンティティに名前を付けてください)
 
-* Variables, functions, methods, packages, modules:\
-  `lower_case_with_underscores`
-* Classes and Exceptions:\
-  `CapWords`
-* Protected methods and internal functions:\
-  `_single_leading_underscore(self, ...)`
-* Private methods:\
-  `__double_leading_underscore(self, ...)`
-* Constants:\
-  `ALL_CAPS_WITH_UNDERSCORES`
+* 変数、関数、メソッド、パッケージ、モジュール:\
+   `lower_case_with_underscores`
+* クラス、例外:\
+   `CapWords`
+* 保護されているメソッド、内部関数:\
+   `_single_leading_underscore(self, ...)`
+* プライベート メソッド:\
+   `__double_leading_underscore(self, ...)`
+* 定数:\
+   `ALL_CAPS_WITH_UNDERSCORES`
 
-> Tip: Avoid one-letter variables (esp. l, O, I) except in very short blocks, when the meaning is clearly visible from the immediate context.
+> ヒント: 非常に短いコード ブロック内で、明確な文脈で意味がはっきりと理解できる場合を除き、1 文字だけの変数は使用しないでください(特に、l、O、I の使用は避けてください)。
 
-**Use of blank lines:**
+**空白行を使用する:**
 
-* Surround top-level function and class definitions with two blank lines.
-  * Method definitions inside a class are surrounded by a single blank line.
-  * Extra blank lines may be used (sparingly) to separate groups of related functions.
+* 最上位関数とクラス定義の前後に、2 行の空白行を挿入してください。
+   * クラス内に記述されているメソッド定義の場合は、その前後に空白行を 1 行挿入します。
+   * 空白行を挿入して、関連する関数グループを区別してもかまいません(ただし、あまり多くの空白行を挿入しないようにしてください)。
 
-**Avoid extraneous whitespace:**
+**余分な空白を挿入しない:**
 
-*   Immediately inside parentheses, brackets or braces:
+* 丸括弧、角括弧、中括弧の内側に、空白を挿入しないでください。
 
-    ```
-    ### BAD
-    function( apples[ 1 ], { oranges: 2 } )
-    ```
+   ```
+   ### BAD
+   function( apples[ 1 ], { oranges: 2 } )
+   ```
 
-    ```
-    ### GOOD:
-    function(apples[1], {oranges: 2})
-    ```
-*   Immediately before a comma, semicolon, or colon:
+   ```
+   ### GOOD:
+   function(apples[1], {oranges: 2})
+   ```
+* カンマ、セミコロン、コロンの直前に、空白を挿入しないでください。
 
-    ```
-    ### BAD
-     if x == 2 : print x , y ; x , y = y , x
-    ```
+   ```
+   ### BAD
+    if x == 2 : print x , y ; x , y = y , x
+   ```
 
-    ```
-    ### GOOD
-      if x == 2: print x, y; x, y = y, x
-    ```
-*   Immediately before the open parenthesis that starts the argument list of a function call:
+   ```
+   ### GOOD
+     if x == 2: print x, y; x, y = y, x
+   ```
+* 関数呼び出しの引数リストが記述されている括弧の直前に、空白を挿入しないでください。
 
-    ```
-    ### BAD
-    function (1)
-    ```
+   ```
+   ### BAD
+   function (1)
+   ```
 
-    ```
-    ### GOOD
-    function(1)
-    ```
-*   Immediately before the open parenthesis that starts an indexing or slicing:
+   ```
+   ### GOOD
+   function(1)
+   ```
+* インデックスまたはスライシングが記述された括弧の直前に、空白を挿入しないでください。
 
-    ```
-    ### BAD
-    dict ['key'] = list [index]
-    ```
+   ```
+   ### BAD
+   dict ['key'] = list [index]
+   ```
 
-    ```
-    ### GOOD
-    dict['key'] = list[index]
-    ```
-*   Always surround these binary operators with a single space on either side:
+   ```
+   ### GOOD
+   dict['key'] = list[index]
+   ```
+* 次に示すバイナリ演算子については、必ず前後に空白を 1 つずつ挿入してください。
 
-    ```
-    assignment ( = )
-    augmented assignment ( += , -= etc.)
-    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-    Booleans ( and , or , not )
-    ```
+   ```
+   assignment ( = )
+   augmented assignment ( += , -= etc.)
+   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+   Booleans ( and , or , not )
+   ```
 
-**Watch line length:**
+**行の長さに注意する:**
 
-* Don't stress over it \~ 79 characters.
-* Limiting the required editor window width makes it possible to have several files open side-by-side, and works well when using code review tools that present the two versions in adjacent columns.
-* Long lines can be broken over multiple lines by wrapping expressions in parentheses:
+* 1 行の長さは\ 79 文字以内にしてください。
+* 使用するエディタ ウィンドウの幅を制限することにより、複数のファイルを並べて表示できるようになるため、2 つのバージョンを並べて表示するコード レビュー ツールを使用して作業を行う場合に便利です。
+* 複数の式が記述されている長い行の場合は、式を丸括弧で囲んで改行すると、1 行を複数の行に分割することができます。
 
-**Avoid obvious and redundant comments:**
+**余分なコメントや冗長なコメントを記述しない:**
 
-* Sometimes fewer comments makes for more readable code. Especially if it forces you to use meaningful symbol names instead.
-*   Adopting good coding habits reduces dependence on comments:
+* コメントを少なくした方が、コードが読みやすくなる場合があります。特に、コメントの代わりに分かりやすい名前を使用すると効果的です。
+* 適切な方法でコードを記述することにより、必要以上にコメントを入力することがなくなります。
 
-    ```
-    ### BAD
-      # get the country code
-      country_code = get_country_code(address)
+   ```
+   ### BAD
+     # get the country code
+     country_code = get_country_code(address)
 
-      # if country code is US
-      if (country_code == 'US'):
-        # display the form input for state
-        print form_input_state()
-    ```
+     # if country code is US
+     if (country_code == 'US'):
+       # display the form input for state
+       print form_input_state()
+   ```
 
-    ```
-    ### GOOD
-      # display state selection for US users
-      country_code = get_country_code(address)
-      if (country_code == 'US'):
-        print form_input_state()
-    ```
+   ```
+   ### GOOD
+     # display state selection for US users
+     country_code = get_country_code(address)
+     if (country_code == 'US'):
+       print form_input_state()
+   ```
 
-> Tip: Comments tell you why, Code tells you how.
+> ヒント: コードの内容が簡単に理解できるようなコメントを入力し、処理内容が明確に理解できるようなコードを記述することが重要です。
 
-**Check out open source code:**
+**オープン ソース コードを確認する:**
 
-* Open Source projects are built on the collaborative efforts of many developers. These projects need to maintain a high level of code readability so that the team can work together as efficiently as possible. Therefore, it is a good idea to browse through the source code of these projects to observe what these developers are doing.
-* Improve your conventions:
-  * Question whether or not each convention is working for the needs at hand.
-  * Is functionality/efficiency being compromised?
+* オープン ソース プロジェクトというプロジェクトがありますが、これは、多くの開発者が協力して立ち上げたプロジェクトです。これらのプロジェクトでは、チーム内で可能な限り効率的に作業を進めることができるように、読みやすいコードを記述することが求められます。そのため、これらのプロジェクトで使用されているソース コードを参照すると、開発者がどのようなコードを記述しているのかを確認することができます。
+* 次の項目を確認することにより、命名規則を改善することができます。
+   * ニーズに適した命名規則になっているかどうか。
+   * 命名規則が原因で、機能や効率性に影響していないかどうか。
 
-## C# (Zerotouch) Standards
+## C# (Zerotouch)の標準
 
-**Check out these wiki pages for guidance on writing C# for Zerotouch and contributing to Dynamo:**
+**次に示す各 Wiki ページで、Dynamo で C# (Zerotouch)を記述する場合のガイド情報を参照することができます。**
 
-* This wiki covers some general coding standards for documenting and testing your code: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
-* This wiki specifically covers naming standards for libraries, categories, node names, port names, and abbreviations: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
+* この Wiki ページには、コードのドキュメント化とテストを行う場合の一般的なコーディング標準が記載されています: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
+* この Wiki ページには、ライブラリ、カテゴリ、ノード、ポート、略称に関する命名規則の標準が記載されています: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
-**Unmanaged Objects:**
+**非管理オブジェクト:**
 
-When using Dynamo's Geometry library _(ProtoGeometry)_ from Python or C# geometry objects that you create will not be managed by the virtual machine, and the memory of many of these objects will need to be cleaned up manually. To cleanup native or unmanaged objects you can use the **Dispose** method or the **using** keyword. See this wiki entry for an overview: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
+Python または C# で Dynamo のジオメトリ ライブラリ_(ProtoGeometry)_を使用してジオメトリ オブジェクトを作成した場合、それらのオブジェクトは仮想マシンによって管理されないため、それらの多くのオブジェクトについて、メモリを手動でクリーンアップする必要があります。 ネイティブ オブジェクトと非管理オブジェクトは、いずれも、**Dispose** メソッドまたは **using** キーワードを使用してクリーンアップすることができます。 概要については、次の Wiki エントリを参照してください: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-You only need to dispose unmanaged resources that you don't return into the graph or store a reference to. For the rest of this section, we'll refer to these objects as _intermediate geometry_. You can see an example of this class of object in the code example below. This zero touch C# function **singleCube** returns a single cube, but creates 10000 extra cubes during its execution. We can pretend this other geometry was used as some intermediate construction geometry.
+破棄する必要があるのは、プログラム内に返されることがない非管理オブジェクト、または参照情報が格納されない非管理オブジェクトだけです。ここからは、こうしたオブジェクトのことを「_中間ジオメトリ_」と呼ぶことにします。 次のサンプル コードでは、例として、このようなオブジェクトのクラスが記述されています。このコードに記述されている Zero Touch の C# 関数である **singleCube** は、立方体を 1 つだけ返しますが、この関数の実行中に 10000 個の立方体が作成されます。 この処理は、他のジオメトリが一部の中間構築ジオメトリとして使用されたものと想定することができます。
 
-**This zero touch function will most likely crash Dynamo.** Since we created 10000 solids, but only stored one of them, and only returned that one. We should instead, dispose all of our intermediate cubes, except the one that we return. We don't want to dipose what we return, as it will be propogated into the graph and used by other nodes.
+**この Zero Touch 関数を実行すると、かなりの確率で Dynamo がクラッシュします。**このコードでは 10000 個の立方体が作成されますが、格納されてプログラムに返されるのは、そのうちの 1 つだけです。 代わりに、プログラムに返す 1 つだけを除いて、残りの中間立方体をすべて破棄する必要があります。プログラムに返す立方体は、プログラム内に伝播されて他のノードで使用されるため、ここでは破棄しません。
 
 ```
 public Cuboid singleCube(){
@@ -292,7 +292,7 @@ public Cuboid singleCube(){
 }
 ```
 
-The fixed code would look something like:
+修正後のコードは次のようになります。
 
 ```
  public Cuboid singleCube(){
@@ -312,4 +312,4 @@ The fixed code would look something like:
  }
 ```
 
-In general you only need to dispose geometry like `Surfaces`, `Curves`, and `Solids`. To be safe though, you can dispose all geometry types (`Vectors`, `Points`, `CoordinateSystems`).
+通常、破棄する必要があるジオメトリは、`Surfaces`、`Curves`、`Solids` のみです。ただし、念のため、すべてのタイプのジオメトリ(`Vectors`、`Points`、`CoordinateSystems`)を破棄することをお勧めします。

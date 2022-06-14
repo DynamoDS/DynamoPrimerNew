@@ -1,12 +1,12 @@
-# Geometric Primitives
+# ジオメトリ プリミティブ
 
 ### CoordinateSystem
 
-While Dynamo is capable of creating a variety of complex geometric forms, simple geometric primitives form the backbone of any computational design: either directly expressed in the final designed form, or used as scaffolding off of which more complex geometry is generated.
+Dynamo が多様で複雑なジオメトリ形状を作成できる一方で、単純なジオメトリ プリミティブは、任意の計算設計の中核となり、設計された最終形状で直接表現されるか、より複雑なジオメトリを生成するための足場として使用されます。
 
-While not strictly a piece of geometry, the CoordinateSystem is an important tool for constructing geometry. A CoordinateSystem object keeps track of both position and geometric transformations such as rotation, sheer, and scaling.
+厳密にはジオメトリの一部ではありませんが、CoordinateSystem はジオメトリを構築するための重要なツールです。CoordinateSystem オブジェクトは、位置および回転、せん断変形、スケーリングなどのジオメトリ変換の両方を把握します。
 
-Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with no rotations, scaling, or sheering transformations, simply requires calling the Identity constructor:
+x = 0、y = 0、z = 0 の点を中心とし、回転、スケーリング、せん断変形などの変換がない CoordinateSystem の作成に必要なのは、Identity コンストラクタを呼び出すことだけです。
 
 ![](../images/8-2/2/GeometricPrimitives\_01.png)
 
@@ -17,7 +17,7 @@ Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with n
 cs = CoordinateSystem.Identity();
 ```
 
-CoordinateSystems with geometric transformations are beyond the scope of this chapter, though another constructor allows you to create a coordinate system at a specific point, _CoordinateSystem.ByOriginVectors_:
+_CoordinateSystem.ByOriginVectors_ という別のコンストラクタを使用すると、次のように特定の点に座標系を作成できますが、ジオメトリ変換された CoordinateSystem については、この章で説明しません。
 
 ![](../images/8-2/2/GeometricPrimitives\_02.png)
 
@@ -35,11 +35,11 @@ cs = CoordinateSystem.ByOriginVectors(origin,
     identity.XAxis, identity.YAxis, identity.ZAxis);
 ```
 
-### Point
+### 点
 
-The simplest geometric primitive is a Point, representing a zero-dimensional location in three-dimensional space. As mentioned earlier there are several different ways to create a point in a particular coordinate system: _Point.ByCoordinates_ creates a point with specified x, y, and z coordinates; _Point.ByCartesianCoordinates_ creates a point with a specified x, y, and z coordinates in a specific coordinate system; _Point.ByCylindricalCoordinates_ creates a point lying on a cylinder with radius, rotation angle, and height; and _Point.BySphericalCoordinates_ creates a point lying on a sphere with radius and two rotation angle.
+最も単純なジオメトリ プリミティブは点であり、3 次元空間でゼロ次元の場所を表します。前に説明したように、特定の座標系での点の作成には、いくつかの異なる方法があります。_Point.ByCoordinates_ は X、Y、Z 座標を指定して点を作成し、_Point.ByCartesianCoordinates_ は特定の座標系で X、Y、Z 座標を指定して点を作成し、_Point.ByCylindricalCoordinates_ は半径、回転角度、および高さを使用して円柱上にある点を作成し、_Point.BySphericalCoordinates_ は半径と 2 つの回転角度を使用して球上にある点を作成します。
 
-This example shows points created at various coordinate systems:
+この例は、さまざまな座標系で作成された点を示しています。
 
 ![](../images/8-2/2/GeometricPrimitives\_03.png)
 
@@ -73,9 +73,9 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Line&#x20;
+### 線分&#x20;
 
-The next higher dimensional Dynamo primitive is a line segment, representing an infinite number of points between two end points. Lines can be created by explicitly stating the two boundary points with the constructor _Line.ByStartPointEndPoint_, or by specifying a start point, direction, and length in that direction, _Line.ByStartPointDirectionLength_.
+次に高い次元の Dynamo プリミティブは線分セグメントで、2 つの端点間にある無限の数の点を表します。_Line.ByStartPointEndPoint_ コンストラクタを使用して 2 つの境界点を明示的に指定するか、_Line.ByStartPointDirectionLength_ で開始点、方向、およびその方向の長さを指定することで、線分を作成できます。
 
 ![](../images/8-2/2/GeometricPrimitives\_04.png)
 
@@ -92,9 +92,9 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### 3D Primitives - Cuboid, Cone, Cylinder, Sphere, etc
+### 3D プリミティブ - 直方体、円錐、円柱、球など
 
-Dynamo has objects representing the most basic types of geometric primitives in three dimensions: Cuboids, created with _Cuboid.ByLengths_; Cones, created with _Cone.ByPointsRadius_ and _Cone.ByPointsRadii_; Cylinders, created with _Cylinder.ByRadiusHeight_; and Spheres, created with _Sphere.ByCenterPointRadius_.
+Dynamo には、最も基本的なタイプのジオメトリ プリミティブを 3 次元で表すオブジェクトがあります。_Cuboid.ByLengths_ で作成される直方体、_Cone.ByPointsRadius_ および _Cone.ByPointsRadii_ で作成される円錐、_Cylinder.ByRadiusHeight_ で作成される円柱、_Sphere.ByCenterPointRadius_ で作成される球です。
 
 ![](../images/8-2/2/GeometricPrimitives\_05.png)
 

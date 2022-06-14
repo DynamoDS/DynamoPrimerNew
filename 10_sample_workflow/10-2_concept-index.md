@@ -4,14 +4,14 @@ description: >-
   workflows.
 ---
 
-# Concept Index
+# 概念インデックス
 
-| Exercise list    | Key concepts introduced in exercise  | Link to further reading in later chapters                                                                  |
+| 演習リスト | 演習で紹介する主要な概念 | 後半の章の詳細な説明へのリンク |
 | ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Parametric Vase  | Searching nodes throught the library | [Library](../3\_user\_interface/2-library.md)                                                              |
-|                  | Using nodes and wires                | [Nodes and Wires](../4\_nodes\_and\_wires/)                                                                |
-|                  | Creating curves and surfaces         | [Geometry for Computational Design](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
-|                  | Using code blocks                    | [Code Blocks and DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)                |
-| Attractor Points | Create manage and edit lists         | [Designing with Lists](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/)                   |
-|                  | Changing preview modes               | [Preview Mode](../3\_user\_interface/1-workspace.md#preview-mode)                                          |
-|                  | Changing execution modes             | [Execution Bar](../3\_user\_interface/#execution-bar)                                                      |
+| パラメータを使用する花瓶 | ライブラリ内のノードを検索する | [ライブラリ](../3\_user\_interface/2-library.md) |
+|                  | ノードとワイヤを使用する | [ノードとワイヤ](../4\_nodes\_and\_wires/) |
+|                  | 曲線とサーフェスを作成する | [計算設計用のジオメトリ](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
+|                  | コード ブロックを使用する | [コード ブロックと DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) |
+| アトラクタ ポイント | リストを作成、管理、編集する | [リストを使用した設計](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/) |
+|                  | プレビュー モードを変更する | [プレビュー モード](../3\_user\_interface/1-workspace.md#preview-mode) |
+|                  | 実行モードを変更する | [実行バー](../3\_user\_interface/#execution-bar) |

@@ -1,80 +1,80 @@
-# User Interface
+# ユーザ インタフェース
 
-### User Interface Overview
+### ユーザ インタフェースの概要
 
-The User Interface (UI) for Dynamo is organized into five main regions. We will briefly cover the overview here and further explain the Workspace and Library in the following sections.
+Dynamo のユーザ インタフェース(UI)は、5 つの主要な領域に分かれています。ここでは、概要について簡単に説明し、次のセクションでワークスペースとライブラリについて詳しく説明します。
 
 ![](<images/user interface - ui.jpg>)
 
-> 1. Menus
-> 2. Toolbar
-> 3. Library
-> 4. Workspace
-> 5. Execution bar
+> 1. メニュー
+> 2. ツールバー
+> 3. ライブラリ
+> 4. ワークスペース
+> 5. 実行バー
 
-### Menus
+### メニュー
 
 ![](<images/user interface - menu.jpg>)
 
-Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
+これは Dynamo アプリケーションの基本機能を表示するメニューです。ほとんどの Windows ソフトウェアと同様に、最初の 2 つのメニューはファイルの管理、選択とコンテンツ編集の操作に関連しています。他のメニュー項目は、Dynamo 固有のメニュー項目です。
 
-#### Dynamo Menus
+#### Dynamo メニュー
 
-General info and settings can be found on the **Dynamo** drop down menu.
+一般的な情報と設定は、**Dynamo** ドロップ ダウン メニューにあります。
 
 ![](<images/user interface - dynamo menu.jpg>)
 
-> 1. About - Find out the Dynamo version installed on your machine.
-> 2. Agreement to Collect Usability Data - This allows you to opt-in or out for sharing your user data to improve Dynamo.
-> 3. Preferences - Includes settings such as define the application's decimal point precision and geometry render quality.
-> 4. Exit Dynamo
+> 1. [バージョン情報] - ご使用のコンピュータにインストールされている Dynamo のバージョンを確認できます。
+> 2. [操作性データ収集の承諾] - これにより、Dynamo を改善するためのユーザ データの共有を開始または終了することができます。
+> 3. [基本設定] - アプリケーションの小数点精度やジオメトリのレンダリング品質を定義するなどの設定が含まれます。
+> 4. Dynamo を終了する
 
-#### Help
+#### ヘルプ
 
-If you're stuck, check out the **Help** Menu. You may access one of the Dynamo reference websites through your internet browser.
+不明な点については、**[ヘルプ]**メニューを確認します。Dynamo の参照 Web サイトの 1 つにインターネット ブラウザからアクセスすることができます。
 
 ![](<images/user interface - help menu.jpg>)
 
-> 1. Getting Started - A brief introduction to using Dynamo.
-> 2. Interactive Guides -
-> 3. Samples - Reference example files.
-> 4. Dynamo Dictionary - Resource with documentation on all nodes.
-> 5. Dynamo Website - View the Dynamo Project on GitHub.
-> 6. Dynamo Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
-> 7. Display Start Page - Return to the Dynamo start page when within a document.
-> 8. Report A Bug - Open an Issue on GitHub.
+> 1. [スタートアップ ガイド] - Dynamo の使用方法を簡単に紹介しています。
+> 2. [インタラクティブ ガイド] -
+> 3. [サンプル] - 参照用のサンプル ファイルです。
+> 4. [Dynamo ディクショナリ] - すべてのノードについての設計図書作成で参照するリソースです。
+> 5. [Dynamo Web サイト] - GitHub で Dynamo プロジェクトを表示します。
+> 6. [Dynamo プロジェクト Wiki] - Wiki にアクセスして、Dynamo API を使用する開発方法やライブラリとツールのサポートに関する情報を表示します。
+> 7. [開始ページを表示] - ドキュメント内の Dynamo 開始ページに戻ります。
+> 8. [バグをレポート] - GitHub 上に指摘事項を作成します。
 
-### Toolbar
+### ツールバー
 
-Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
+Dynamo ツールバーには、[元に戻す]\[Ctrl + Z]コマンドと[やり直し]\[Ctrl + Y]コマンドの他に、ファイルに関する作業に役立つ一連のクイック アクセス ボタンが用意されています。右端にあるボタンを使用すると、ワークスペースのスナップショットを書き出すことができます。このボタンは、ドキュメントの作成や共有を行う場合に特に便利です。
 
-* ![](<images/user interface - new file.jpg>) New - Create a new .dyn file
-* ![](<images/user interface - open (1).jpg>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
-* ![](<images/user interface - save.jpg>) Save/Save As - Save your active .dyn or .dyf file
-* ![](<images/user interface - undo.jpg>) Undo - Undo your last action
-* ![](<images/user interface - redo.jpg>) Redo - Redo the next action
-* ![](<images/user interface - screenshot.jpg>) Export Workspace as Image - Export the visible workspace as a PNG file
+* ![](<images/user interface - new file.jpg>) 新規作成 - 新規 .dyn ファイルを作成します
+* ![](<images/user interface - open (1).jpg>) 開く - 既存の .dyn (ワークスペース)または .dyf (カスタム ノード)ファイルを開きます
+* ![](<images/user interface - save.jpg>) 保存/名前を付けて保存 - アクティブな .dyn または .dyf ファイルを保存します
+* ![](<images/user interface - undo.jpg>) 元に戻す - 最後に行った操作を元に戻します
+* ![](<images/user interface - redo.jpg>) やり直し - 次のアクションをやり直します
+* ![](<images/user interface - screenshot.jpg>) ワークスペースをイメージとして書き出し - 表示されているワークスペースを PNG ファイルとして書き出します
 
-### Library
+### ライブラリ
 
-The Dynamo Library is a collection of functional libraries, each Library containing Nodes grouped by Category. It consists basic libraries which are added during default installation of Dynamo, as we continue to introduce its usage, we will demonstrate how to extend the base functionality with Custom Nodes and additional Packages. The [2-library.md](2-library.md "mention") section will cover a more detailed guidance on using it.
+Dynamo ライブラリは、機能ライブラリのコレクションです。各ライブラリには、カテゴリ別にグループ化されたノードが含まれています。このライブラリは、Dynamo の既定のインストール時に追加される基本ライブラリで構成されています。引き続きこのライブラリの使用方法を紹介し、カスタム ノードと追加パッケージを使用して基本機能を拡張する方法について説明します。「[2-library.md](2-library.md "mention")」セクションでは、この使用方法を詳しく説明しています。
 
 ![](<images/user interface - library.jpg>)
 
-### Workspace
+### ワークスペース
 
-The Workspace is where we compose our visual programs, you may also change its Preview setting to view the 3D geometries from here. Refer [1-workspace.md](1-workspace.md "mention") for more details.
+ワークスペースは、ビジュアル プログラムを構成する場所です。プレビューの設定を変更して、ここから 3D ジオメトリを表示することもできます。詳細については、「[1-workspace.md](1-workspace.md "mention")」を参照してください。
 
 ![](<images/user interface - workspace.gif>)
 
-### Execution Bar
+### 実行バー
 
-Run your Dynamo script from here. Click the dropdown icon on the Execution button to change between the different modes.
+ここから Dynamo スクリプトを実行します。実行ボタンのドロップダウン アイコンをクリックして、モードを切り替えます。
 
 ![](<images/user interface - execution bar.gif>)
 
-* Automatic: Runs your script automatically. Changes is updated in realtime.
-* Manual: Script only runs when the 'Run' button is clicked. Useful for when making changes to complicated and 'heavy script'
-* Periodic: This option is grayed out by default. Only available when the DateTime.Now Node is used. You can set the graph to run automatically at a specified interval.
+* [自動]: スクリプトを自動的に実行します。変更はリアルタイムで更新されます。
+* [手動]: [実行]ボタンをクリックした場合のみスクリプトが実行されます。複雑で「重いスクリプト」に変更を加える場合に便利です。
+* [周期]: このオプションは既定でグレー表示されます。DateTime.Now ノードが使用されている場合にのみ使用できます。指定した間隔で自動的に実行されるようにグラフを設定できます。
 
 ![](<images/user interface - execution bar DateTime node.jpg>)

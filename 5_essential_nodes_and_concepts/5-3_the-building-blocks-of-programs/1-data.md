@@ -1,130 +1,130 @@
-# Data
+# データ
 
-Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+データは、各種プログラムの構成要素です。データはワイヤ経由でやり取りされ、そのデータを処理するノードに入力情報を提供します。処理されたデータは、新しい形式の出力データになります。ここでは、データの定義と構造について確認し、Dynamo で実際にデータを使用してみます。
 
-## What is Data?
+## データの概要
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
+データとは、定性的な変数や定量的な変数の集まりのことです。最も単純な形式のデータは、`0`、`3.14`、`17` などの数値です。この他にも、変化する数値を表す変数(`height`)、文字(`myName`)、ジオメトリ(`Circle`)、データ項目のリスト(`1,2,3,5,8,13,...`)など、さまざまな種類のデータがあります。
 
-In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+Dynamo のノードの入力ポートには、データを追加または送信する必要があります。アクションが設定されていないデータを使用することはできますが、ノードが表すアクションを処理する場合はデータが必要になります。ノードをワークスペースに追加する際に、そのノードに対して入力データを指定しなかった場合、結果として関数が返されます。アクション自体の結果は返されません。
 
 ![Data and Actions](<../images/5-3/1/data - what is data.jpg>)
 
-> 1. Simple Data
-> 2. Data and Action (A Node) successfully executes
-> 3. Action (A Node) without Data Inputs returns a generic function
+> 1. 単純なデータ
+> 2. データとアクション(ノード)が正常に実行される
+> 3. 入力データが指定されていないアクション(ノード)から一般的な関数が返される
 
-### Null - Absence of Data
+### Null - データが存在しない
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
+Null に注意しましょう。`'null'` タイプはデータが存在しないことを表します。これは抽象的な概念ですが、ビジュアル プログラミングを使用しているとよく登場します。たとえば、アクションを実行して正しい結果が生成されなかった場合に、ノードから NULL が返されます。
 
-Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+安定したプログラムを作成するには、NULL をテストし、データ構造から NULL を削除することが重要になります。
 
-| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| アイコン | 名前/構文 | 入力 | 出力 |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj | bool |
 
-### Data Structures
+### データ構造
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
+ビジュアル プログラミングを行うと、大量のデータを非常に短時間で生成できるため、データ階層を管理するための手段が必要になります。これを行うには、データ構造を使用します。データ構造とは、データを格納するための構造化されたスキームのことです。データ構造の仕様と使用方法は、プログラミング言語によって異なります。
 
-In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+Dynamo の場合、リストを使用してデータに階層を追加します。これについては、これ以降の章で詳しく説明します。ここでは、簡単な操作から始めてみましょう。
 
-A list represents a collection of items placed into one structure of data:
+リストは、1 つのデータ構造内に配置された項目の集合を表します。リストと項目の関係は次のようになります。
 
-* I have five fingers (_items_) on my hand (_list_).
-* There are ten houses (_items_) on my street (_list_).
+* 私の手(_リスト_)には 5 本の指(_項目_)がある。
+* 私の家の前の通り(_リスト_)には 10 軒の家(_項目_)が建っている。
 
 ![List Breakdown](<../images/5-3/1/data - data structures.jpg>)
 
-> 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 1. **Number Sequence** ノードは、_start_ 入力、_amount_ 入力、_step_ 入力を使用して数値のリストを定義します。 上の図の 2 つのノードを使用して、10 個の数値を格納する 2 つのリストを作成しました。一方のリストには _100 から 109_ までの数値が格納され、もう一方のリストには _0 から 9_ までの数値が格納されています。
+> 2. **List.GetItemAtIndex** ノードは、特定のインデックスを使用して、リスト内の特定の項目を選択します。 _0_ を選択すると、リスト内の最初の項目(この場合は _100_)が取得されます。
+> 3. もう一方のリストでも同じ手順を実行すると、リスト内の最初の項目である _0_ が取得されます。
+> 4. 次に、**List.Create** ノードを使用して、2 つのリストをマージして 1 つのリストを作成します。 このノードによって「_リストのリスト_」が作成されることに注意してください。これにより、データの構造が変化します。
+> 5. インデックスを _0_ に設定してもう一度 **List.GetItemAtIndex** ノードを使用すると、「リストのリスト」内の最初の項目が取得されます。 この場合、リストが項目として処理されます。この動作は、他のスクリプト言語とは多少異なっています。リストの操作とデータ構造については、これ以降の章でさらに詳しく説明します。
 
-The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
+Dynamo のデータ階層を理解するには、「**データ構造については、リストが項目として認識される**」という概念を理解する必要があります。つまり、Dynamo は、トップダウン プロセスを使用してデータ構造を認識するということです。 こうした考え方について、例を使用して詳しく説明します。
 
-## Exercise: Using Data to Make a Chain of Cylinders
+## 演習: データを使用して円柱の配列を作成する
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+この最初の例では、ジオメトリ階層全体にわたるシェル化された円柱を作成します。ジオメトリ階層については、このセクションで説明します。
 
-### Part I: Set up Graph for one cylinder with some changeable parameters.
+### パート I: いくつかの変更可能なパラメータを持つ 1 つの円柱に対してグラフを設定する。
 
-1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+1.**Point.ByCoordinates を追加する -** このノードをキャンバスに追加すると、Dynamo プレビュー グリッドの基準点に点が表示されます。_x,y_ 入力と _z_ 入力の既定値は _0.0_ です。この場合、Dynamo プレビュー グリッドの基準点に点が表示されます。
 
 ![](<../images/5-3/1/data - exercise step 1.jpg>)
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+2\. **Plane.ByOriginNormal -** ジオメトリ階層内の次の段階は、平面です。 平面を作成する方法はいくつかありますが、ここでは、基準点と法線を入力して作成します。ここで使用する基準点は、前の手順で作成した点ノードです。
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis -** このノードは、Z 方向の単位ベクトルです。 このノードには入力はなく、\[0,0,1]という値のベクトルしかないことに注意してください。このノードは、**Plane.ByOriginNormal** ノードの _normal_ の入力として使用します。これにより、Dynamo のプレビューに長方形の平面が表示されます。
 
 ![](<../images/5-3/1/data - exercise step 2.jpg>)
 
-3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+3\. **Circle.ByPlaneRadius -** 次に、前の手順で作成した平面から曲線を作成して階層を拡張します。このノードに接続すると、基準点に円が表示されます。このノードの半径の既定値は _1_ です。
 
 ![](<../images/5-3/1/data - exercise step 3.jpg>)
 
-4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+4\. **Curve.Extrude -** このノードに深さを設定することにより、基準点に表示されている円を立体的な 3 次元の円柱にします。 このノードは、曲線を押し出してサーフェスを作成します。このノードの距離の既定値は _1_ です。この場合、ビューポートに円柱が表示されます。
 
 ![](<../images/5-3/1/data - exercise step 4.jpg>)
 
-5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+5\. **Surface.Thicken -** このノードは、指定の距離でサーフェスをオフセットして形状を閉じることにより、閉じたソリッドを作成します。 厚さの既定値は _1_ です。この場合、その値に従って、シェル化された円柱がビューポートに表示されます。
 
 ![](<../images/5-3/1/data - exercise step 5.jpg>)
 
-6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+6\. **Number Slider -** ここでは、すべての入力に対して既定値を使用するのではなく、パラメータ制御をモデルに追加してみましょう。
 
-**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**範囲編集用キャレット -** 数値スライダをキャンバスに追加したら、左上のキャレットをクリックして範囲オプションを表示します。
 
-**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+**Min/Max/Step -** _Min_、_Max_、_Step_の値を、それぞれ _0_、_2_、_0.01_ に変更します。 これにより、ジオメトリ全体のサイズをコントロールします。
 
 ![](<../images/5-3/1/data - exercise step 6.gif>)
 
-7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+7\. **Number Slider -** すべての既定の入力で、この数値スライダのコピー アンド ペースト操作を繰り返します(Number Slider ノードを選択して[Ctrl]+[C]を押し、次に[Ctrl]+[V]を押す)。この操作は、既定値が設定されているすべての入力に Number Slider ノードが接続されるまで繰り返します。 定義を有効にするには、一部のスライダ値をゼロより大きな値に設定する必要があります。たとえば、サーフェスに厚みを付ける場合は、押し出しの深さをゼロより大きな値に指定する必要があります。
 
 ![](<../images/5-3/1/data - exercise step 7a.gif>)
 
 ![](<../images/5-3/1/data - exercise step 7b.gif>)
 
-8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+8\. これで、数値スライダを使用したパラメータ制御のシェル化された円柱が作成されました。いくつかのパラメータの値を変更して、Dynamo のビューポート内でジオメトリが動的に更新されることを確認してください。
 
 ![](<../images/5-3/1/data - exercise step 8a.gif>)
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**Number Slider -** これまでの手順で、多くのスライダをキャンバスに追加してきました。そのため、作成したツールのインタフェースをクリーンアップする必要があります。 各スライダを右クリックして[Rename...]を選択し、そのスライダのパラメータ(厚さ、半径、高さなど)に適した名前に変更します。
 
 ![](<../images/5-3/1/data - exercise step 8b step.jpg>)
 
-### Part II: Populate an array of cylinders from Part I
+### パート II: パート I の円柱の配列を入力する
 
-9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+9\. ここまでの手順で、厚みのある円柱が作成されました。この時点では、この円柱はまだ 1 つのオブジェクトにすぎません。ここからは、動的にリンクされた円柱の配列を作成していきます。そのためには、項目を 1 つずつ操作するのではなく、円柱のリストを作成します。
 
-**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+**追加用ノード (+) -** ここでの目的は、前の手順で作成した円柱の横に、一連の円柱を追加することです。 現在の円柱の横に別の円柱を追加するには、円柱の半径とシェルの厚さの両方を考慮する必要があります。ここでは、2 つのスライダの値を追加して、円柱の半径とシェルの厚さを設定します。
 
 ![](<../images/5-3/1/data - exercise step 9.jpg>)
 
-10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+10\. この操作は少し複雑であるため、手順を追って詳しく説明します。最終的な目標は、連続する各円柱の位置を定義する数値のリストを作成することです。
 
 ![](<../images/5-3/1/data - exercise step 10.jpg>)
 
-> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+> a. **乗算用ノード (*) -** 最初に、前の手順で指定した値を 2 倍にします。前の手順で指定した値は半径でしたが、ここでは円柱の直径を指定します。
 >
-> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+> b. **Sequence -** 次に、このノードを使用して、数値の配列を作成します。最初の入力は、前の手順の_乗算用ノード (*)_ の _step_ の値です。 _start_ の値は、_Number_ ノードを使用して _0.0_ に設定します。
 >
-> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+> c. **Integer Slider -** Integer Slider ノードを接続して _amount_ の値を設定します。これにより、作成される円柱の数が決まります。
 >
-> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+> d. **出力のリスト -** このリストには、配列内の各円柱の移動距離が表示されます。このリストは、元のスライダのパラメータによって制御されます。
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. この手順は簡単です。前の手順で指定したシーケンスを、元の **Point.ByCoordinates** ノードの _x_ 入力に接続するだけです。 この操作により、_pointX_ スライダが置き換えられます。このスライダは、削除してかまいません。 これで、ビューポートに円柱の配列が表示されます(Integer Slider ノードで 0 よりも大きな値を設定してください)。
 
 ![](<../images/5-3/1/data - exercise step 11.gif>)
 
-12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+12\. 円柱の配列は、すべてのスライダに動的にリンクされたままの状態になっています。各スライダの値を変更して、円柱の定義がどのように更新されるかを確認してください。
 
 ![](<../images/5-3/1/data - exercise step 12.gif>)

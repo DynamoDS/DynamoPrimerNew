@@ -1,5 +1,5 @@
-# Getting Started Workflows
+# スタートアップ ワークフロー
 
-This section has simple workflows to get you started using Dynamo.&#x20;
+このセクションでは、Dynamo の使用を開始するための簡単なワークフローについて説明します。&#x20;
 
 ![](../images/10-1/sampleWorkflows.gif)

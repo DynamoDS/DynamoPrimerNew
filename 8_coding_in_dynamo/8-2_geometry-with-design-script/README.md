@@ -1,6 +1,6 @@
-# Geometry with DesignScript
+# DesignScript を使用するジオメトリ
 
-In this section, you will find a series of lessons on the creation of geometry with DesignScript. Follow along by copying the example DesignScript into Dynamo Code Blocks.
+このセクションでは、DesignScript を使用するジオメトリの作成に関する一連の演習を紹介します。サンプルの DesignScript を Dynamo のコード ブロックにコピーしながら操作してください。
 
 ```js
 // copy this code into a Code Block

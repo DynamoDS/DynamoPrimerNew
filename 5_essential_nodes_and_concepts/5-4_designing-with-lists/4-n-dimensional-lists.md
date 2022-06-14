@@ -1,188 +1,188 @@
-# n-Dimensional Lists
+# N 次元のリスト
 
-Further down the rabbit-hole, let's add even more tiers to hierarchy. Data structure can expand far beyond a two-dimensional list of lists. Since lists are items in and of themselves in Dynamo, we can create data with as many dimensions as possible.
+ここでは、データ階層にさらに層を追加して、より高度なリストの操作方法について見ていきます。データ構造を拡張して、2 次元を超える多次元のリストのリストを作成することができます。Dynamo のリストは項目として処理されるため、必要な数の次元を持つデータを作成することができます。
 
-The analogy we'll work with here are Russian Nesting Dolls. Each list can be regarded as one container holding multiple items. Each list has its own properties and is also regarded as its own object.
+多次元のリストの構造は、ロシアのマトリョーシカ人形に似ています。各リストは、複数の項目を格納するコンテナとして考えることができます。各リストには独自のプロパティが存在し、それぞれのリストは独自のオブジェクトとして見なされます。
 
-![Dolls](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
+![人形](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
 
-> A set of Russian Nesting Dolls (Photo by [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) is an analogy for n-Dimensional lists. Each layer represents a list, and each list contains items within it. In Dynamo's case, each container can have multiple containers inside (representing the items of each list).
+> ロシアのマトリョーシカ人形(写真: [Zeta]( https://www.flickr.com/photos/beppezizzi/145493363))は、N 次元のリストの構造に似ています。それぞれの層が 1 つのリストを表し、各リスト内に項目が格納されています。Dynamo では、1 つのリストに複数のリストを格納することができます。この場合、格納されているそれぞれのリストが、格納元のリストの項目になります。
 
-n-Dimensional lists are difficult to explain visually, but we've set up a few exercises in this chapter which focus on working with lists which venture beyond two dimensions.
+N 次元のリストを視覚的に説明するのは難しいため、この章ではいくつかの演習を使用して、2 次元を超える多次元のリストを操作する方法について見ていきます。
 
-### Mapping and Combinations
+### マッピングと組み合わせ
 
-Mapping is arguably the most complex part of data management in Dynamo, and is especially relevant when working with complex hierarchies of lists. With the series of exercises below, we'll demonstrate when to use mapping and combinations as data becomes multi-dimensional.
+Dynamo のデータ管理において最も複雑な概念はマッピングですが、複雑なリスト階層を操作する場合は特に、マッピングが重要になります。この章の演習では、多次元のデータを操作する際に、どのようなケースでマッピングと組み合わせ機能を使用するかについて説明します。
 
-Preliminary introductions to **List.Map** and **List.Combine** can be found in the previous section. In the last exercise below, we'll use these nodes on a complex data structure.
+**List.Map** ノードと **List.Combine** ノードの概要については、前の章で説明しました。この章の最後の演習でこれらのノードを使用して、複雑なデータ構造の操作を行います。
 
-## Exercise - 2D Lists - Basic
+## 演習 - 2 次元のリスト - 基本的な操作
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-This exercise is the first in a series of three which focuses on articulating imported geometry. Each part in this series of exercises will increase in the complexity of data structure.
+この章では、読み込んだジオメトリを操作するための演習を 3 つ見ていきます。この演習はその最初の演習です。演習を進めていくにつれて、より複雑なデータ構造を扱います。
 
 ![Exercise](<../images/5-4/4/n-dimensional lists - 2d lists basic 01.jpg>)
 
-> 1. Let's begin with the .sat file in the exercise file folder. We can grab this file using the **File Path** node.
-> 2. With **Geometry.ImportFromSAT**, the geometry is imported into our Dynamo preview as two surfaces.
+> 1. 最初に、演習ファイル フォルダ内の .sat ファイルを使用します。このファイルを取得するには、**File Path** ノードを使用します。
+> 2. **Geometry.ImportFromSAT** ノードを使用すると、ジオメトリが 2 つのサーフェスとして Dynamo のプレビューに読み込まれます。
 
-For this exercise, we want to keep it simple and work with one of the surfaces.
+説明を簡単にするため、この演習では 1 つのサーフェスだけを使用します。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 02.jpg>)
 
-> 1. Let's select the index of 1 to grab the upper surface. We do this with **List.GetItemAtIndex** node.
-> 2. Switch off the geometry preview from **Geometry.ImportFromSAT** preview.
+> 1. インデックス値として 1 を選択して、上部のサーフェスをグラブします。これを行うには、**List.GetItemAtIndex** ノードを使用します。
+> 2. **Geometry.ImportFromSAT** プレビューのジオメトリ プレビューをオフにします。
 
-The next step is to divide the surface into a grid of points.
+次に、グラブしたサーフェスを点のグリッドに分割します。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 03.jpg>)
 
-> 1\. Using **Code Block**, insert these two lines of code: `0..1..#10;` `0..1..#5;`
+> 1\. **Code Block** ノードを使用して、次の 2 つのコード行を入力します。 `0..1..#10;` `0..1..#5;`
 >
-> 2\. With the **Surface.PointAtParameter**, connect the two code block values to u and _v_. Change the _lacing_ of this node to _"Cross Product"_.
+> 2\. 2 つの Code Block 値を、**Surface.PointAtParameter** ノードの u 入力と _v_ 入力に接続します。次に、このノードの_レーシング_を「_外積_」に変更します。
 >
-> 3\. The output reveals the data structure, which is also visible in the Dynamo preview.
+> 3\. 出力としてデータ構造が表示されます。このデータ構造は、Dynamo のプレビューで表示することもできます。
 
-Next, used the Points from last step to generate ten curves along the surface.
+次に、最後のステップの点を使用して、サーフェスに沿って 10 個のカーブを生成します。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 04.jpg>)
 
-> 1. To get a look at how the data structure is organized, let's connect a **NurbsCurve.ByPoints** to the output of **Surface.PointAtParameter**.
-> 2. You may switch off the preview from the **List.GetItemAtIndex** Node for now for a clearer result.
+> 1. **NurbsCurve.ByPoints** ノードを **Surface.PointAtParameter** ノードの出力に接続して、データ構造の内容を確認します。
+> 2. **List.GetItemAtIndex** ノードのプレビューをオフにすると、結果が明確になります。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 05.jpg>)
 
-> 1. A basic **List.Transpose** will flip the columns and rows of a list of lists.
-> 2. Connecting the output of **List.Transpose** to **NurbsCurve.ByPoints**, we now get five curves running horizontally across the surface.
-> 3. You may switch off the preview from the **NurbsCurve.ByPoints** Node in the previous step to achieve the same result in the image.
+> 1. 基本的な **List.Transpose** ノードにより、リストのリストの列と行が反転します。
+> 2. **List.Transpose** ノードの出力を **NurbsCurve.ByPoints** ノードに接続すると、サーフェスに沿って水平方向に 5 本の曲線が作成されます。
+> 3. 前のステップで **NurbsCurve.ByPoints** ノードのプレビューをオフにしていると、イメージで同じ結果が得られます。
 
-## Exercise - 2D Lists - Advanced
+## 演習 - 2 次元のリスト - 高度な操作
 
-Let's increase the complexity. Suppose we wanted to perform an operation on the curves created from the previous exercise. Perhaps we want to relate these curves to another surface and loft between them. This requires more attention to data structure, but the underlying logic is the same.
+この演習では、少し複雑な操作を実行してみましょう。ここでは、前の演習で作成した曲線に対して操作を実行します。具体的には、これらの曲線を別のサーフェスに関連付けて、2 つのサーフェス間で曲線をロフトします。この操作を実行する場合、データ構造の処理が少し複雑になりますが、基本的な考え方はこれまでと同じです。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 01.jpg>)
 
-> 1. Begin with a step from the previous exercise, isolating the upper surface of the imported geometry with the **List.GetItemAtIndex** node.
+> 1. 最初に、**List.GetItemAtIndex** ノードを使用して、前の演習で読み込んだジオメトリの上部サーフェスを分離します。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 02.jpg>)
 
-> 1. Using **Surface.Offset**, offset the surface by a value of _10_.
+> 1. **Surface.Offset** ノードで _10_ という値を指定して、サーフェスをオフセットします。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a _code block_ with these two lines of code: `0..1..#10;` `0..1..#5;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with _lacing_ set to _"Cross Product"_. One of these nodes is connected to the original surface, while the other is connected to the offset surface.
+> 1. 前の演習と同様に、_Code Block_ ノードで次の 2 つのコード行を入力します。 `0..1..#10;` `0..1..#5;`
+> 2. 上記のコード行を 2 つの **Surface.PointAtParameter** ノードに接続し、各ノードの_レーシング_を「_外積_」に設定します。 いずれか一方のノードが元のサーフェスに接続され、もう一方のノードがオフセットされたサーフェスに接続されます。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
 
-> 1. Switch off the preview of these Surfaces.
-> 2. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes. The result show curves corresponding to two surfaces.
+> 1. これらのサーフェスのプレビューをオフにします。
+> 2. 前の演習と同様に、Surface.PointAtParameter ノードの出力を 2 つの **NurbsCurve.ByPoints** ノードに接続します。 結果は、2 つのサーフェスに対応するカーブを示します。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 05.jpg>)
 
-> 1. By using **List.Create**, we can combine the two sets of curves into one list of lists.
-> 2. Notice from the output, we have two lists with ten items each, representing each connect set of Nurbs curves.
-> 3. By performing a **Surface.ByLoft**, we can visually make sense of this data structure. The node lofts all of the curves in each sublist.
+> 1. **List.Create** ノードを使用して、2 組の曲線を 1 つのリストのリストに結合します。
+> 2. 10 個の項目を持つ 2 つのリストが出力として表示されます。各リストが、NURBS 曲線の各接続セットを表しています。
+> 3. **Surface.ByLoft** ノードを実行すると、このデータ構造を視覚的に理解することができます。 このノードは、各サブリスト内のすべての曲線をロフトします。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 06.jpg>)
 
-> 1. Switch off the preview from **Surface.ByLoft** Node in previous step.
-> 2. By using **List.Transpose**, remember, we are flipping all of the columns and rows. This node will transfer two lists of ten curves into ten lists of two curves. We now have each nurbs curve related to the neighboring curve on the other surface.
-> 3. Using **Surface.ByLoft**, we arrive at a ribbed structure.
+> 1. 前のステップで **Surface.ByLoft** ノードのプレビューをオフにします。
+> 2. **List.Transpose** ノードを使用すると、リスト内のすべての列と行が反転します。このノードにより、10 本の曲線を持つ 2 つのリストが、2 本の曲線を持つ 10 個のリストに変換されます。また、各 NURBS 曲線が、もう一方のサーフェスの隣接する曲線に関連付けられます。
+> 3. **Surface.ByLoft** ノードを使用して、リブ形状の構造物を作成します。
 
-Next, we will demonstrate an alternative process to achieve this result
+次に、この結果を得るための別のプロセスを説明します。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
 
-> 1. Before we start, switch off the **Surface.ByLoft** preview in previous step to avoid confusion.
-> 2. An alternative to **List.Transpose** uses **List.Combine**. This will operate a _"combinator"_ on each sublist.
-> 3. In this case, we're using **List.Create** as the _"combinator"_, which will create a list of each item in the sublists.
-> 4. Using the **Surface.ByLoft** node, we get the same surfaces as in the previous step. Transpose is easier to use in this case, but when the data structure becomes even more complex, **List.Combine** is more reliable.
+> 1. 開始する前に、前のステップで **Surface.ByLoft** プレビューをオフにして、混乱を避けます。
+> 2. ここでは、**List.Transpose** ノードの代わりに **List.Combine** ノードを使用します。このノードは、各サブリスト上で「_コンビネータ_」を実行します。
+> 3. この演習では、**List.Create** ノードを「_コンビネータ_」として使用します。これにより、サブリスト内の各項目のリストが作成されます。
+> 4. **Surface.ByLoft** ノードを使用して、前の手順と同じサーフェスを取得します。この場合は List.Transpose ノードを使用した方が簡単ですが、さらに複雑なデータ構造を操作する場合は、**List.Combine** ノードを使用することをお勧めします。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
 
-> 1. Stepping back a few steps, if we want to switch the orientation of the curves in the ribbed structure, we want to use a **List.Transpose** before connect to **NurbsCurve.ByPoints**. This will flip the columns and rows, giving us 5 horizontal ribs.
+> 1. リブ形状の構造物内の曲線の方向を切り替える場合は、手順をいくつか戻り、**NurbsCurve.ByPoints** ノードに接続する前に **List.Transpose** ノードを使用します。これにより、リスト内の列と行が反転し、水平方向のリブ形状が 5 つ作成されます。
 
-## Exercise - 3D Lists
+## 演習 - 3 次元のリスト
 
-Now, we're going to go even one step further. In this exercise, we'll work with both imported surfaces, creating a complex data hierarchy. Still, our aim is to complete the same operation with the same underlying logic.
+ここからは、さらに高度な操作を実行してみましょう。この演習では、読み込んだ 2 つのサーフェスを両方とも使用して、複雑なデータ階層を作成します。ただし、基本的な考え方はこれまでと同じで、同じ操作を実行することになります。
 
-Begin with the imported file from previous exercise.
+最初に、前の演習で読み込んだファイルを使用します。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 01.jpg>)
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 02.jpg>)
 
-> 1. As in the previous exercise, use the **Surface.Offset** node to offset by a value of _10_.
-> 2. Notice from the output, that we've created two surfaces with the offset node.
+> 1. 前の演習と同様に **Surface.Offset** ノードを使用し、サーフェスをオフセットする値として _10_ を指定します。
+> 2. オフセットされたノードによって 2 つのサーフェスが作成されたことが出力として表示されます。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a **Code Block** with these two lines of code: `0..1..#20;` `0..1..#20;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with lacing set to _"Cross Product"_. One of these nodes is connected to the original surfaces, while the other is connected to the offset surfaces.
+> 1. 前の演習と同様に、**Code Block** ノードで次の 2 つのコード行を入力します。 `0..1..#20;` `0..1..#20;`
+> 2. 上記のコード行を 2 つの **Surface.PointAtParameter** ノードに接続し、各ノードのレーシングを「_外積_」に設定します。いずれか一方のノードが元のサーフェスに接続され、もう一方のノードがオフセットされたサーフェスに接続されます。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
 
-> 1. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes.
-> 2. Looking at the output of the **NurbsCurve.ByPoints,** notice that this is a list of two lists, which is more complex than the previous exercise. The data is categorized by the underlying surface, so we've added another tier to the data structured.
-> 3. Notice that things become more complex in the **Surface.PointAtParameter** node. In this case we have a list of lists of lists.
+> 1. 前の演習と同様に、Surface.PointAtParameter ノードの出力を 2 つの **NurbsCurve.ByPoints** ノードに接続します。
+> 2. **NurbsCurve.ByPoints** ノードの出力を確認すると、この出力が 2 つのリストを持つリストであることがわかります。これは、前の演習で扱ったリストよりも複雑なデータ構造です。データは基礎となるサーフェスによって分類されるため、構造化されたデータに別の層を追加します。
+> 3. **Surface.PointAtParameter** ノードでは、データ構造がさらに複雑になっていることがわかります。このノードでは、「リストのリストのリスト」が作成されます。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 05.jpg>)
 
-> 1. Before we proceed, switch off the preview from the existing surfaces.
-> 2. Using the **List.Create** node, we merge the Nurbs curves into one data structure, creating a list of lists of lists.
-> 3. By connecting a **Surface.ByLoft** node, we get a version of the original surfaces, as they each remain in their own list as created from the original data structure.
+> 1. 続行する前に、既存のサーフェスのプレビューをオフにします。
+> 2. **List.Create** ノードを使用して、NURBS 曲線を 1 つのデータ構造にマージします。これにより、「リストのリストのリスト」が作成されます。
+> 3. **Surface.ByLoft** ノードを接続すると、元のサーフェスが取得されます。これは、元のデータ構造から作成された独自のリスト内にサーフェスがそのまま残っているためです。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 06.jpg>)
 
-> 1. In the previous exercise, we were able to use a **List.Transpose** to create a ribbed structure. This won't work here. A transpose should be used on a two-dimensional list, and since we have a three-dimensional list, an operation of "flipping columns and rows" won't work as easily. Remember, lists are objects, so **List.Transpose** will flip our lists with out sublists, but won't flip the nurbs curves one list further down in the hierarchy.
+> 1. 前の演習では、**List.Transpose** ノードを使用してリブ形状の構造物を作成しましたが、ここでは同じ操作を行うことはできません。List.Transpose ノードを使用できるのは 2 次元のリストの場合ですが、ここでは 3 次元のリストを操作するため、リスト内の列と行を反転する操作を簡単に実行することはできません。これまでに説明したように、リストはオブジェクトとして処理されるため、サブリストが含まれていないリストを **List.Transpose** ノードを使用して反転することはできますが、階層内の 1 段階下の層でリストの NURBS 曲線を反転することはできません。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
-> 1. **List.Combine** will work better for us here. We want to use **List.Map** and **List.Combine** nodes when we get to more complex data structures.
-> 2. Using **List.Create** as the _"combinator"_, we create a data structure that will work better for us.
+> 1. ここでは、**List.Combine** ノードを使用します。さらに複雑なデータ構造を処理する場合は、**List.Map** ノードと **List.Combine** ノードを使用します。
+> 2. **List.Create** ノードを「_コンビネータ_」として使用して、この操作に適したデータ構造を作成します。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
-> 1. The data structure still needs to be transposed at one step down on the hierarchy. To do this we'll use **List.Map**. This is working like **List.Combine**, except with one input list, rather than two or more.
-> 2. The function we'll apply to **List.Map** is **List.Transpose**, which will flip the columns and rows of the sublists within our main list.
+> 1. 階層内の 1 段階下の層で、データ構造を転置する必要があります。これを行うには、**List.Map** ノードを使用します。このノードは **List.Combine** ノードに似ていますが、複数の入力リストではなく 1 つの入力リストだけを使用する点が異なっています。
+> 2. **List.Map** ノードに **List.Transpose** ノードを適用します。これにより、メイン リスト内のサブリストの列と行が反転します。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 09.jpg>)
 
-> 1. Finally, we can loft the Nurbs curves together with a proper data hierarchy, giving us a ribbed structure.
+> 1. これで、適切なデータ階層を持つ NURBS 曲線をまとめてロフトし、リブ形状の構造物を作成できるようになりました。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 10.jpg>)
 
-> 1. Let's add some depth to the geometry with a **Surface.Thicken** Node with the input settings as shown.
+> 1. 図に示されている入力設定を持つ **Surface.Thicken** ノードを使用して、ジオメトリに深さを追加します。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 11.jpg>)
 
-> 1. It'll be nice to add a surface backing two this structure, so add another **Surface.ByLoft** node and use the first output of **NurbsCurve.ByPoints** from an earlier step as input.
-> 2. As the preview is getting cluttered, switch off preview for these nodes by right clicking on each of them and uncheck 'preview' to see the result better.
+> 1. この構造にサーフェスを追加して補強してみましょう。別の **Surface.ByLoft** ノードを追加し、前のステップの **NurbsCurve.ByPoints** ノードの最初の出力を入力として使用します。
+> 2. プレビューが見にくくなってきたので、これらのノードのプレビューをオフにします。ノードを右クリックし、[プレビュー]のチェックを外して結果を見やすくします。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 12.jpg>)
 
-> 1. And thickening these selected surfaces, our articulation is complete.
+> 1. 選択したサーフェスに厚みをつければ、操作は完了です。
 
-Not the most comfortable rocking chair ever, but it's got a lot of data going on.
+これで、さまざまなデータを使用したロッキング チェアが完成しました。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 13.jpg>)
 
-Last step, let's reverse the direction of the striated members. As we used transpose in the previous exercise, we'll do something similar here.
+最後に、ロッキング チェアの溝の方向を変えてみましょう。前の演習では転置用のノードを使用しましたが、ここでも同じような方法で操作を行います。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 14.jpg>)
 
-> 1. Since we have one more tier to the hierarchy, so we need to use **List.Map** with a **List.Tranpose** function to change the direction of our Nurbs curves.
+> 1. データ階層にもう 1 つ深い層があるため、**List.Map** ノードと **List.Tranpose** 関数を使用して Nurbs の曲線方向を変更します。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 15.jpg>)
 
-> 1. We may want to increase the number of treads, so we can change the **Code Block** to `0..1..#20;` `0..1..#30;`
+> 1. **Code Block** ノードのコード行を次のように変更して、溝の数を増やします。`0..1..#20;``0..1..#30;`
 
-The first version of the rocking chair was sleek, so our second model offers an off-road, sport-utility version of recumbency.
+最初に作成したロッキング チェアは滑らかな形状でしたが、このロッキング チェアはまったく異なる形状になりました。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 16.jpg>)

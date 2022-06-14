@@ -1,60 +1,60 @@
-# Visual Programming and Dynamo
+# ビジュアル プログラミングと Dynamo
 
-#### What is Visual Programming? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
+#### ビジュアル プログラミングの概要 <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
-Designing frequently involves establishing visual, systemic, or geometric relationships between the parts of a design. More times than not, these relationships are developed by workflows that gets us from concept to result by way of rules. Perhaps without knowing it, we are working algorithmically - defining a step-by-step set of actions that follow a basic logic of input, processing, and output. Programming allows us to continue to work this way but by formalizing our algorithms.
+設計作業では、多くの場合、設計要素間の視覚的な関係、システム的な関係、幾何学的な関係を決定するという作業が発生します。通常、こうした関係は、ルールに従って概念から具体的な成果を生み出すワークフローによって構築されていきます。私たちは、アルゴリズムを意識することなく、アルゴリズムに従って毎日の業務を行っています。たとえば、入力、処理、出力という基本的なロジックに従い、段階的に業務を行っています。プログラミングでアルゴリズムを定式化することにより、こうした方法で業務を継続的に行うことができるようになります。
 
-#### Algorithms in Hand <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
+#### 折り鶴で確かめるアルゴリズム <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
-While offering some powerful opportunities, the term **Algorithm** can carry some misconceptions with it. Algorithms can generate unexpected, wild, or cool things, but they are not magic. In fact, they are pretty plain, in and of themselves. Let's use a tangible example like an origami crane. We start with a square piece of paper (input), follow a series of folding steps (processing actions), and result in a crane (output).
+**アルゴリズム**は非常に便利な手法ですが、誤って理解される場合もあります。 アルゴリズムは、予想もできない素晴らしいものを生み出す可能性を秘めていますが、決して魔法ではありません。実際に、アルゴリズム自体は非常に単純なものです。具体的な例として、折り鶴について考えてみましょう。最初に正方形の紙を用意します。これを一連の手順に従って折っていくと、折り鶴が出来上がります。この場合、紙が「入力」、折る手順が「処理」、出来上がった折り鶴が「出力」になります。
 
-![Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![折り鶴](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
 
-So where is the Algorithm? It is the abstract set of steps, which we can represent in a couple of ways - either textually or graphically.
+では、折り鶴のどこにアルゴリズムがあるのでしょうか。アルゴリズムは一連の抽象的な手順であり、テキストとグラフィックスのどちらでも表現することができます。
 
-**Textual Instructions:**
+**テキストによる手順の説明:**
 
-1. Start with a square piece of paper, colored side up. Fold in half and open. Then fold in half the other way.
-2. Turn the paper over to the white side. Fold the paper in half, crease well and open, and then fold again in the other direction.
-3. Using the creases you have made, Bring the top 3 corners of the model down to the bottom corner. Flatten model.
-4. Fold top triangular flaps into the center and unfold.
-5. Fold top of model downwards, crease well and unfold.
-6. Open the uppermost flap of the model, bringing it upwards and pressing the sides of the model inwards at the same time. Flatten down, creasing well.
-7. Turn model over and repeat Steps 4-6 on the other side.
-8. Fold top flaps into the center.
-9. Repeat on other side.
-10. Fold both ‘legs’ of model up, crease very well, then unfold.
-11. Inside Reverse Fold the “legs” along the creases you just made.
-12. Inside Reverse Fold one side to make a head, then fold down the wings.
-13. You now have a crane.
+1. 正方形の紙を用意し、色が付いている面を表にして置きます。対角線で 2 つ折りにしてから元に戻します。次に、もう一方の対角線で 2 つ折りにしてから元に戻します。
+2. 紙を裏返し、白い面を表にして置きます。正方形の両辺を 2 つ折りにして、折筋をつけてから元に戻します。次に、別の方向に 2 つ折りにしてから元に戻します。
+3. ここまでにつけた折筋を使って、紙の上部の 3 つの角を下の角に合わせ、正方形に折りつぶします。
+4. 手前の 2 つの三角形の両側下辺を中心線に合わせて折り、元に戻します。
+5. 上の角を中央に合わせて、折筋をつけてから元に戻します。
+6. 手前の袋の部分を開いて持ち上げながら、両端を中央へ向かって押しつぶし、折筋をつけます。
+7. 紙を裏返して、手順 4 ～ 6 を繰り返します。
+8. 上の頂点を中央に合わせて折ってから元に戻します。
+9. 反対側でも同じ手順を繰り返します。
+10. 左右の「脚」を上に向かって折り、折筋をつけてから元に戻します。
+11. 上の手順でつけた折筋に沿って、左右の「脚」を中割り折りします。
+12. 一方を中割り折りして鶴の頭を作り、羽の部分を引き下げて開きます。
+13. これで折り鶴が出来上がりました。
 
-**Graphical Instructions:**
+**グラフィックスによる手順の説明**
 
-![Needs Update- Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![更新が必要 - 折り鶴](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
-#### Programming Defined <a href="#programming-defined" id="programming-defined"></a>
+#### プログラミングとは <a href="#programming-defined" id="programming-defined"></a>
 
-Using either of these sets of instructions should result in a crane, and if you followed along yourself, you've applied an algorithm. The only difference is the way in which we read the formalization of that set of instructions and that leads us to **Programming**. Programming, frequently shortened from _Computer Programming_, is the act of formalizing the processing of a series of actions into an executable program. If we turned the above instructions for a creating crane into a format our computer can read and execute, we are Programming.
+どちらの手順に従って折っても、折り鶴が出来上がります。実際に折ってみると、アルゴリズムに従って折り鶴を作ったことになります。唯一異なるのは、定式化された一連の手順を読む方法です。これが、**プログラミング**を行う理由になります。 _コンピュータ プログラミング_(通常は、省略してプログラミングといいます)とは、一連の処理を実行可能なプログラムとして定式化する行為のことです。 上記の鶴の折り方をコンピュータで読み取って実行できる形式に変換した場合、プログラミングを行っていることになります。
 
-The key to and first hurdle we will find in Programming, is that we have to rely on some form of abstraction to communicate effectively with our computer. That takes the form of any number of Programming Languages, such as JavaScript, Python, or C. If we can write out a repeatable set of instructions, like for the origami crane, we only need to translate it for the computer. We are on our way to having the computer be able to make a crane or even a multitude of different cranes where each one varies slightly. This is the power of Programming - the computer will repeatedly execute whatever task, or set of tasks, we assign to it, without delay and without human error.
+プログラミングで最初に直面する重要な課題は、コンピュータと効率的なコミュニケーションを行うために、特定の抽象化形式を使用しなければならないということです。その抽象化の形式として、JavaScript、Python、C などのプログラミング言語が使用されています。先ほどの鶴の折り方のように反復可能な手順を作成できれば、後はそれをコンピュータ用に翻訳するだけで済みます。近いうちに、コンピュータで折り鶴を作るだけでなく、それぞれ微妙に異なる多数の折り鶴を作ることもできるようになるでしょう。これがプログラミングの能力です。どんなタスクをコンピュータに割り当てても、遅延やヒューマン エラーを発生させることなくタスクを繰り返し実行することができます。
 
-**Visual Programming Defined**
+**ビジュアル プログラミングとは**
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
 
-If you were tasked with writing instructions for folding an origami crane, how would you go about it? Would you make them with graphics, text, or some combination of the two?
+折り鶴の作り方を記述するタスクを割り当てられたとしたら、どのようにしてそのタスクを実行しますか。この場合、グラフィックスで手順を記述する方法、テキストで手順を記述する方法、グラフィックスとテキストを組み合わせて手順を記述する方法が考えられます。
 
-If your answer contained graphics, then **Visual Programming** is definitely for you. The process is essentially the same for both Programming and Visual Programming. They utilize the same framework of formalization; however, we define the instructions and relationships of our program through a graphical (or "Visual") user interface. Instead of typing text bound by syntax, we connect pre-packaged nodes together. Here's a comparison of the same algorithm - "draw a circle through a point" - programmed with nodes versus code:
+グラフィックスで手順を記述する場合、またはグラフィックスとテキストを組み合わせて手順を記述する場合、**ビジュアル プログラミング**が最適な方法です。 通常のプログラミングとビジュアル プログラミングのどちらの場合も、基本的なプロセスは同じです。どちらも同じ定式化の枠組みを使用しますが、ビジュアル プログラミングの場合は、視覚的なグラフィカル ユーザ インタフェースを使用して、プログラムの指示や関係を定義します。この場合、構文に従ってテキストを入力するのではなく、事前にパッケージ化されたノードを相互に接続します。ここで、同じアルゴリズムを使用して、ビジュアル プログラミングとテキストによるプログラミングを比較してみましょう。「指定された点を通過する円弧を描画する」という命令を、ノードを使用してプログラミングする場合の例と、コードを使用してプログラミングする場合の例を示します。
 
-**Visual Program:**
+**ビジュアル プログラミング:**
 
 ![](<./images/a-1/visualProgramming (2).png>)
 
-**Textual Program:**
+**テキストによるプログラミング:**
 
 ```
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
@@ -65,8 +65,8 @@ dist = myPoint.DistanceTo(attractorPoint);
 myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 ```
 
-The results of our algorithm:
+このアルゴリズムの結果は、次のようになります。
 
 ![](<./images/a-1/visualProgramming (1).png>)
 
-The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.
+このように、ビジュアル プログラミングには、視覚的に理解しやすいという特徴があります。そのため、最初から簡単にプログラミングを実行することができ、設計者にとっても便利な仕様になっています。Dynamo はビジュアル プログラミングの範疇に分類されますが、アプリケーション内でテキストを使用してプログラミングを行うこともできます。これについては、後で説明します。

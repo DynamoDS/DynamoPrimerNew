@@ -1,12 +1,12 @@
-# Python Nodes
+# Python Script ノード
 
-Why would you use textual programming in Dynamo's visual programming environment? [Visual programming](../../a\_appendix/visual-programming-and-dynamo.md) has many advantages. It allows you to create programs without learning special syntax in an intuitive visual interface. However, a visual program can become cluttered, and can at times fall short in functionality. For example, Python offers much more achieveable methods for writing conditional statements (if/then) and looping. Python is a powerful tool that can extend the capabilities of Dynamo and allow you to replace many nodes with a few concise lines of code.
+Dynamo のビジュアル プログラミング環境で、テキスト プログラミングを使用するのはなぜでしょうか。[ビジュアル プログラミング](../../a\_appendix/visual-programming-and-dynamo.md)には、多くの利点があります。直感的なビジュアル インタフェースにより、特別な構文を学習することなくプログラムを作成することができます。ただし、ビジュアル プログラムは、処理が煩雑になったり、機能が不足することがあります。Python には、「if/then」の条件ステートメントやループを簡単に記述するための方法が用意されています。Python は、Dynamo の機能を拡張し、多数のノードを数行の簡潔なコード行で置き換えることができる強力なツールです。
 
-**Visual Program:**
+**ビジュアル プログラミング:**
 
 ![](<../images/8-3/1/python node - visual vs textual programming.jpg>)
 
-**Textual Program:**
+**テキスト プログラム:**
 
 ```
 import clr
@@ -34,63 +34,63 @@ for i in xRange:
 OUT = solids
 ```
 
-### The Python Node
+### Python Script ノード
 
-Like code blocks, Python nodes are a scripting interface within a visual programming environment. The Python node can be found under Script>Editor>Python Script in the library.
+Code Block ノードと同様に、Python Script ノードはビジュアル プログラミング環境内のスクリプト インタフェースです。Python Script ノードは、ライブラリの[Script] > [Editor] > [Python Script]にあります。
 
 ![](<../images/8-3/1/python node - the python node 01.jpg>)
 
-Double clicking the node opens the python script editor (you can also right click on the node and select _Edit..._). You’ll notice some boilerplate text at the top, which is meant to help you reference the libraries you’ll need. Inputs are stored in the IN array. Values are returned to Dynamo by assigning them to the OUT variable
+このノードをダブルクリックすると、Python のスクリプト エディタが開きます。ノードを右クリックして[_編集..._]を選択することもできます。 エディタ上部の定型文は、必要なライブラリを参照する際に役立ちます。Python Script ノードの入力値は、IN 配列に格納されます。値は、OUT 変数に割り当てられて Dynamo に返されます。
 
 ![](<../images/8-3/1/python node - the python node 02.jpg>)
 
-The Autodesk.DesignScript.Geometry library allows you to use dot notation similar to Code Blocks. For more information on Dynamo syntax, refer to [7-2\_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention") as well as the [DesignScript Guide](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (To download this PDF doc, please right-click on link and choose "Save link as..."). Typing a geometry type such as 'Point.' will bring up a list of methods for creating and querying points.
+Autodesk.DesignScript.Geometry ライブラリにより、Code Block ノードと同様のドット表記を使用することができます。Dynamo 構文の詳細については、「[7-2\_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention")」および「[DesignScript ガイド](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)」を参照してください(この PDF 文書をダウンロードするには、リンクを右クリックし、[名前を付けてリンク先を保存...]をクリックしてください)。「Point.」などのジオメトリ タイプを入力すると、点の作成や点のクエリーを実行するためのメソッドのリストが表示されます。
 
 ![](<../images/8-3/1/python node - the python node 03.jpg>)
 
-> Methods include constructors such as _ByCoordinates_, actions like _Add_, and queries like _X_, _Y_ and _Z_ coordinates.
+> これらのメソッドには、_ByCoordinates_ などのコンストラクタ、_Add_ などのアクション、_X_、_Y_、_Z_ 座標などのクエリーがあります。
 
-## Exercise: Custom Node with Python Script for Creating Patterns from Solid Module
+## 演習: Python Script を使用してソリッド モジュールからパターンを作成するカスタム ノード
 
-### Part I: Setting Up Python Script
+### パート I: Python Script を設定する
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/8-2/1/Python_Custom-Node.dyn" %}
 
-In this example, we will write a python script that creates patterns from a solid module, and turn it into a custom node. First, let’s create our solid module using Dynamo nodes.
+この例では、Python Script ノードを記述してソリッド モジュールからパターンを作成し、カスタム ノードに変換します。最初に、Dynamo ノードを使用してソリッド モジュールを作成します。
 
 ![](<../images/8-3/1/python node - exercise pt I-01.jpg>)
 
-> 1. **Rectangle.ByWidthLength:** Create a rectangle that will be the base of our solid.
-> 2. **Surface.ByPatch:** Connect the rectangle to the ‘_closedCurve_’ input to create the bottom surface.
+> 1. **Rectangle.ByWidthLength** ノードを使用して、ソリッドのベースとなる長方形を作成します。
+> 2. **Surface.ByPatch** ノードの _closedCurve_ 入力に Rectangle 出力を接続し、下部サーフェスを作成します。
 
 ![](<../images/8-3/1/python node - exercise pt I-02.jpg>)
 
-> 1. **Geometry.Translate:** Connect the rectangle to the ‘_geometry_’ input to move it up, using a code block to specify the base thickness of our solid.
-> 2. **Polygon.Points:** Query the translated rectangle to extract the corner points.
-> 3. **Geometry.Translate:** Use a code block to create a list of four values corresponding to the four points, translating one corner of the solid up.
-> 4. **Polygon.ByPoints:** Use the translated points to reconstruct the top polygon.
-> 5. **Surface.ByPatch:** Connect the polygon to create the top surface.
+> 1. **Geometry.Translate** ノードの _geometry_ 入力に Rectangle 出力を接続し、長方形を上に移動します。次に、Code Block ノードを使用してソリッドの厚さを指定します。
+> 2. **Polygon.Points** ノードを使用して、変換された長方形に対してクエリーを実行し、頂点を抽出します。
+> 3. **Geometry.Translate** ノードを使用して、4 つの点に対応する 4 つの値のリストを作成します。この操作により、ソリッドの 1 つの頂点が上に移動します。
+> 4. 変換後の点を **Polygon.ByPoints** ノードで使用して、上部ポリゴンを再作成します。
+> 5. **Surface.ByPatch** ノードを使用してポリゴンを結合し、上部サーフェスを作成します。
 
-Now that we have our top and bottom surfaces, let’s loft between the two profiles to create the sides of the solid.
+これで、上部サーフェスと下部サーフェスが作成されました。次に、2 つのプロファイルの間をロフトしてソリッドの側面を作成しましょう。
 
 ![](<../images/8-3/1/python node - exercise pt I-03.jpg>)
 
-> 1. **List.Create:** Connect the bottom rectangle and the top polygon to the index inputs.
-> 2. **Surface.ByLoft:** Loft the two profiles to create the sides of the solid.
-> 3. **List.Create:** Connect the top, side, and bottom surfaces to the index inputs to create a list of surfaces.
-> 4. **Solid.ByJoinedSurfaces:** Join the surfaces to create the solid module.
+> 1. **List.Create** ノードの index 入力に、底面の長方形と上面のポリゴンを接続します。
+> 2. **Surface.ByLoft** ノードを使用して 2 つのプロファイルをロフトし、ソリッドの側面を作成します。
+> 3. **List.Create** ノードの index 入力に上部サーフェス、側面サーフェス、下部サーフェスを接続して、サーフェスのリストを作成します。
+> 4. **Solid.ByJoinedSurfaces** ノードを使用してサーフェスを結合し、ソリッド モジュールを作成します。
 
-Now that we have our solid, let’s drop a Python Script node onto the workspace.
+これで、ソリッドが作成されました。次に、ワークスペースに Python Script ノードをドロップします。
 
 ![](<../images/8-3/1/python node - exercise pt I-04.jpg>)
 
-> 1. To add additional inputs to the node, click the + icon on the node. The inputs are named IN\[0], IN\[1], etc. to indicate that they represent items in a list.
+> 1. ノード上の[+]アイコンをクリックし、ノードに入力を追加します。入力には、IN\[0]、IN\[1] などの名前が付いています。これらはリスト内の項目を表しています。
 
-Let’s start by defining our inputs and output. Double click the node to open the python editor. Follow the code below to modify the code in the editor.
+最初に、入力と出力を定義しましょう。ノードをダブルクリックして、Python エディタを開きます。 エディタ内のコードを修正するには、次のコードを実行します。
 
 ![](<../images/8-3/1/python node - exercise pt I-05.jpg>)
 
@@ -122,11 +122,11 @@ solids = []
 OUT = solids
 ```
 
-This code will make more sense as we progress in the exercise. Next we need to think about what information is required in order to array our solid module. First, we will need to know the dimensions of the solid to determine the translation distance. Due to a bounding box bug, we will have to use the edge curve geometry to create a bounding box.
+このコードの意味については、演習を進めながら説明していきます。ここで、ソリッド モジュールを配列化するためには、どのような情報が必要になるかを考慮する必要があります。最初に、移動距離を決定するために、ソリッドの寸法を知る必要があります。境界ボックスにはバグがあるため、境界ボックスを作成するにはエッジ曲線のジオメトリを使用する必要があります。
 
 ![](../images/8-3/1/python07.png)
 
-> Take a look at the Python node in Dynamo. Notice that we're using the same syntax as we see in the titles of the nodes in Dynamo. Check out the commented code below.
+> ここで、Dynamo の Python Script ノードを確認します。Dynamo のノードのタイトルと同じ構文が使用されていることがわかります。以下のコメント付きコードを確認してください。
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -167,7 +167,7 @@ xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 OUT = solids
 ```
 
-Since we will be both translating and rotating the solid modules, let’s use the Geometry.Transform operation. By looking at the Geometry.Transform node, we know that we will need a source coordinate system and a target coordinate system to transform the solid. The source is the context coordinate system of our solid, while the target will be a different coordinate system for each arrayed module. That means we will have to loop through the x and y values to transform the coordinate system differently each time.
+ここでは、ソリッドのモジュールの移動と回転を行うため、Geometry.Transform の操作を使用しましょう。Geometry.Transform ノードを確認すると、ソリッドを変換するにはソース座標系とターゲット座標系が必要になることがわかります。この場合、ソース座標系はソリッドのコンテキストの座標系で、ターゲット座標系は配列化された各モジュールの別の座標系になります。そのため、x 値と y 値をループして、座標系を毎回異なる距離と方向で変換する必要があります。
 
 ![](<../images/8-3/1/python node - exercise pt I-06.jpg>)
 
@@ -223,35 +223,35 @@ for i in range(xCount):
 OUT = solids
 ```
 
-Click Run then Save the code. Connect the Python node with our existing script as following.
+[実行]をクリックし、コードを保存します。次のように、Python Script ノードを既存のスクリプトに接続します。
 
 ![](<../images/8-3/1/python node - exercise pt I-07.jpg>)
 
-> 1. Connect the output from **Solid.ByJoinedSurfaces** as the first input for the Python Node and use a Code Block to define the other inputs.
-> 2. Create a **Topology.Edges** node and use the output from Python node as its input.
-> 3. Finally, create an **Edge.CurveGeometry** node and use the output from Topology.Edges as its input.
+> 1. **Solid.ByJoinedSurfaces** からの出力を、Python Script ノードの最初の入力として接続し、Code Block を使用してその他の入力を定義します。
+> 2. **Topology.Edges** ノードを作成し、Python Script ノードからの出力を入力として使用します。
+> 3. 最後に **Edge.CurveGeometry** ノードを作成し、Topology.Edges からの出力を入力として使用します。
 
-Try changing the seed value to create different patterns. You can also change the parameters of the solid module itself for different effects.
+シード値を変更すると、異なるパターンが作成されます。ソリッド モジュールのパラメータを変更して、異なるエフェクトを作成することもできます。
 
 ![](../images/8-3/1/python10.png)
 
-### Part II: Turn Your Python Script Node into Custom Node
+### パート II: Python Script ノードをカスタム ノードに変換する
 
-Now that we have created a useful python script, let’s save it as a custom node. Select the python script node, right-click on Workspace and select ‘Create Custom Node.’
+これで、便利な Python Script ノードが作成されました。このノードをカスタム ノードとして保存しましょう。Python Script ノードを選択し、ワークスペースを右クリックして、[カスタム ノードを作成]を選択します。
 
 ![](<../images/8-3/1/python node - exercise pt II-01.jpg>)
 
-Assign a name, description and category.
+名前、説明、カテゴリを設定します。
 
 ![](<../images/8-3/1/python node - exercise pt II-02.jpg>)
 
-This will open a new workspace in which to edit the custom node.
+この操作により、カスタム ノードを編集するための新しいワークスペースが開きます。
 
 ![](<../images/8-3/1/python node - exercise pt II-03.jpg>)
 
-> 1. **Inputs:** Change the input names to be more descriptive and add data types and default values.
-> 2. **Output:** Change the output name
+> 1. **Inputs:** 入力名をわかりやすい名前に変更し、データ タイプと既定値を追加します。
+> 2. **Output:** 出力名を変更します。
 
-Save the node as a .dyf file and you should see the custom node reflects the changes we just made.
+ノードを.dyf ファイルとして保存すると、先ほど行った変更がカスタム ノードに反映されます。
 
 ![](<../images/8-3/1/python node - exercise pt II-04.jpg>)

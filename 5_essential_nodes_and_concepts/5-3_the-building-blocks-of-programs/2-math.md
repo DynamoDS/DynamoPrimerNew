@@ -1,39 +1,39 @@
-# Math
+# 数学的方法
 
-If the simplest form of data is numbers, the easiest way to relate those numbers is through Mathematics. From simple operators like divide to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
+データの最も単純な形式が数値だとするならば、数値を関連づける最も簡単な方法は数学的方法を活用することです。割り算のような単純な演算子から、三角関数などの複雑な計算式まで、数学的方法は数値の関係とパターンを調べるための非常に便利な方法です。
 
-### Arithmetic Operators
+### 算術演算子
 
-Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
+演算子は、代数関数と 2 つの入力値を組み合わせて使用する一連のコンポーネントであり、1 つの出力値を生成します(加算、減産、乗算、除算など)。演算子は、[Operators] > [Actions]で使用できます。
 
-| Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
+| アイコン | 名前(構文) | 入力 | 出力 |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-3/2/addition.jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Subtraction.jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Multiplication.jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Division.jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/addition.jpg>) | 加算(**+**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Subtraction.jpg>) | 減算(**-**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Multiplication.jpg>) | 乗算(**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Division.jpg>) | 除算(**/**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
-## Exercise: The Golden Spiral Formula
+## 演習: 黄金螺旋式
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプル ファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-### Part I: Parametric Formula
+### パート I: パラメータ式
 
-Combine operators and variables to form a more complex relationship through **Formulas**. Use sliders to make a Formula that can be controlled with input parameters.
+演算子と変数を組み合わせて、**式**を使用してより複雑な関係を形成します。スライダを使用して、入力パラメータでコントロールできる式を作成します。
 
-1.Create Number sequence that represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
+1. この数列は、パラメータ式内の「t」を表しています。ここでは、サイズの大きなリストを使用して、らせん構造を定義します。
 
-**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.
+**Number Sequence** ノードで、_start、amount、__step_ という 3 つの入力に基づいて数列を定義します。
 
 ![](<../images/5-3/2/math - part I-01.jpg>)
 
-2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.
+2\. 上記の手順により、パラメータ領域を定義するための数値のリストが作成されます。次に、黄金螺旋式を表すノードのグループを作成します。
 
-The golden spiral is defined as the equation:
+黄金螺旋は、次の等式として定義されます。
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -43,76 +43,76 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-The image below represents the golden spiral in in visual programming form. When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
+次の図は、ビジュアル プログラミング形式の黄金螺旋を表しています。ここからは、順を追ってノード グループを確認していきます。ビジュアル プログラムと記述形式の等式との相違点に注意してください。
 
 ![](<../images/5-3/2/math - part I-02.jpg>)
 
-> a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
+> a. **Number Slider** ノードを使用して、キャンバスに 2 つの数値スライダを追加します。これらのスライダは、パラメータ式の変数である「_a_」と「_b_」を表します。これらの変数は、柔軟に変化する定数や、必要な結果に合わせて調整可能なパラメータを表します。
 >
-> b. **Multiplication (\*)** : The multiplication Node is represented by an asterisk. We'll use this repeatedly to connect multiplying variables
+> b. **Multiplication (\*)** ノードはアスタリスクで表されます。このノードを繰り返し使用して、乗算変数を接続します。
 >
-> c. **Math.RadiansToDegrees**: The '_t_' values need to be translated to degrees for their evaluation in the trigonometric functions. Remember, Dynamo defaults to degrees for evaluating these functions.
+> c. **Math.RadiansToDegrees** ノードで「_t_」の値を角度に変換して、三角関数内でその角度を評価します。Dynamo では、三角関数の評価には角度が既定で使用されます。
 >
-> d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
+> d. **Math.Pow** ノードは「_t_」および数値「_e_」の関数として動作し、フィボナッチ数列を作成します。
 >
-> e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
+> e. **Math.Cos と Math.Sin** ノードは三角関数です。パラメータ指定の各点の X 座標と Y 座標を識別します。
 >
-> f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
+> f. **Watch** ノードで、出力値として 2 つのリストが生成されたことを確認します。これらのリストが、らせんの生成に使用される点群の _x_ 座標と _y_ 座標になります。
 
-### Part II: From Formula to Geometry
+### パート II: 計算式からジオメトリへ
 
-Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
+上記の手順でも問題なく機能しますが、多数のノードを使用するため、手間がかかります。より効率的なワークフローを作成するには、[DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) を確認し、Dynamo 表現の文字列を 1 つのノード内に定義します。次の手順では、パラメータ式を使用してフィボナッチ曲線を描画する方法について確認します。
 
-**Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
+**Point.ByCoordinates** ノードの _x_ 入力に上部の乗算ノードを接続し、_y_ 入力に下部の乗算ノードを接続します。 この操作により、パラメータで制御された点群のらせん構造が画面上に表示されます。
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints:** Connect **Point.ByCoordinates** from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
+**Polycurve.ByPoints** ノードは、前のステップの **Point.ByCoordinates** を _points_ に接続します。ここでは閉曲線は作成しないため、_connectLastToFirst_ 入力には何も接続しなくてかまいません。この操作により、前の手順で定義した各点を通過するらせん構造が作成されます。
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
-We've now completed the Fibonacci Spiral! Let's take this further into two separate exercises from here, which we'll call the Nautilus and the Sunflower. These are abstractions of natural systems, but the two different applications of the Fibonacci spiral will be well represented.
+これで、フィボナッチ曲線が作成されました。ここからは、2 つの演習で「オウムガイ」と「ヒマワリ」を作成してみましょう。これらは自然界にみられる形状を抽象的に表しているばかりではなく、フィボナッチ曲線の 2 つの異なる適用例を的確に表現しています。
 
-### Part III: From Spiral to Nautilus
+### パート III: らせん構造からオウムガイへ
 
-**Circle.ByCenterPointRadius:** We'll use a circle Node here with the same inputs as the previous step. The radius value defaults to _1.0_, so we see an immediate output of circles. It becomes immediately legible how the points diverge further from the origin.
+円弧を作成するための **Circle.ByCenterPointRadius** ノードの入力ポートに、前の手順と同じ値を接続します。radius 入力の値は既定で _1.0_ に設定されているため、出力として円弧が即座に表示されます。点群が基準点から遠ざかっていく様子がよくわかります。
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
-**Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.
+**数列**のノード グループは「_t_」の元の配列です。これを **Circle.ByCenterPointRadius** の radius 入力に接続すると、円弧の中心は基準点から離れていきますが、円の半径は次第に長くなっていき、特長的な形状のらせん構造が作成されます。
 
-Bonus points if you make it 3D!
+余裕があれば、これを 3D に変換してみてください。
 
 ![](<../images/5-3/2/math - part III-02.gif>)
 
-### Part IV: From Nautilus to Phyllotaxis
+### パート IV: オウムガイから螺旋葉序へ
 
-Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
+ここまでの手順では、円弧を重ねたオウムガイのような形状を作成しました。次に、パラメータ制御のグリッドを使用してみましょう。ここでは、フィボナッチ曲線の基本的ならせんを使用して、フィボナッチ グリッドを作成していきます。結果として、[ヒマワリ](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/) のようならせん形状が作成されます。
 
-As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
+最初に、前の演習と同じ手順を実行します。**Point.ByCoordinates** ノードを使用して、点群をらせん状に並べた配列を作成します。
 
 ![](<../images/5-3/2/math - part IV-01.jpg>)
 
-Next, follow these mini steps to generate a series of spiral at various rotation.
+次に、これらの手順に従って、さまざまな回転の一連のらせんを生成します。
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
+> a. **Geometry.Rotate** ノードには **Geometry.Rotate** オプションが複数存在します。_geometry_、_basePlane_、_degrees_ という入力を持つノードを選択してください。geometry 入力に **Point.ByCoordinates** ノードを接続します。このノードを右クリックして、レーシングが「外積」に設定されていることを確認します。
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
-> b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
+> b. **Plane.XY** ノードを _basePlane_ 入力に接続します。これにより、基準点に向かって回り込んでいくように点が描画されます。基準点の位置は、らせんの基準の位置と同じです。
 >
-> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a **Number Range** component. Connect this into the _degrees_ input.
+> c. **Number Range** ノードで角度を入力することにより、複数の巻き筋を作成します。**Number Range** コンポーネントを使用すると、この操作をすばやく実行することができます。このコンポーネントを _degrees_ 入力に接続します。
 >
-> d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
+> d. **Number** ノードをキャンバスに 3 つ追加して縦に並べ、数値の範囲を定義します。上から下に、それぞれ _0.0、360.0、__120.0_ の値を割り当てます。これらの値により、らせんの巻き筋が制御されます。**Number Range** ノードに 3 つの Number ノードを接続すると、結果が出力されます。
 
-Our output is beginning to resemble a whirlpool. Let's adjust some of the **Number Range** parameters and see how the results change.
+出力結果が渦の流れのようになってきました。**Number Range** パラメータの一部を調整して、出力結果がどのように変わるか確認してみましょう。
 
-Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.
+**Number Range** ノードの step の入力値を _120.0_ から _36.0_ に変更します。この操作により、巻き筋の数が増え、グリッドの密度が上がります
 
 ![](<../images/5-3/2/math - part IV-04.jpg>)
 
-Change the step size of the **Number Range** node from _36.0_ to _3.6_. This now gives us a much denser grid, and the directionality of the spiral is unclear. Ladies and gentlemen, we've created a sunflower.
+**Range** ノードの step 入力の値を _36.0_ から _3.6_ に変更します。この操作により、グリッドの密度が大幅に上がり、螺旋の方向が不明瞭になります。これで、ヒマワリが完成しました。
 
 ![](<../images/5-3/2/math - part IV-05.jpg>)

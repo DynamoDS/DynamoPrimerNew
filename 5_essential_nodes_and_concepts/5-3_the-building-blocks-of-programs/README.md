@@ -1,5 +1,5 @@
-# The Building Blocks of Programs
+# プログラムの構成要素
 
-Once we are ready to dive deeper into developing Visual Programs, we will need a deeper understanding of the building blocks we will use. This chapter introduces fundamental concepts around data - the stuff that travels through the Wires of our Dynamo program.
+ここまでの説明で、ビジュアル プログラミングの基本的な仕組みについて確認しました。ここからは、ビジュアル プログラミングで使用する構成要素について詳しく見ていきましょう。この章では、Dynamo 内で受け渡されるデータの基本的な概念について説明します。
 
 ![](<../images/5-3/building blocks of program.png>)

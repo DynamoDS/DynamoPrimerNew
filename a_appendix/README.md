@@ -1,6 +1,6 @@
-# Appendix
+# 付録
 
-In this section, you can find additional resources for taking your Dynamo game one step further. We've also added an index of important nodes, a collection of useful packages, and a repository of the example files in this primer. Please feel free to add to this section...remember, the [Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) is open source!
+このセクションでは、Dynamo の理解をさらに深めるための追加のリソースを紹介します。さらに、重要なノードの索引、便利なパッケージのコレクション、この手引で使用しているサンプル ファイルのリポジトリも記載します。他にも必要なリソースがあれば、このセクションに追加してください。[Dynamo Primer](https://github.com/DynamoDS/DynamoPrimer) は、オープン ソース プロジェクトです。
 
 &#x20;
 

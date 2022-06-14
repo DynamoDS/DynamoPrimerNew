@@ -1,115 +1,115 @@
-# Developing a Package
+# パッケージを開発する
 
-Dynamo offers a variety of ways to create a package for your personal use or for sharing with the Dynamo community. In the case study below, we'll walk through how a package is set up by deconstructing an existing one. This case study builds on lessons from the previous chapter, providing a set of custom nodes for mapping geometry, by UV coordinates, from one Dynamo surface to another.
+Dynamo では、さまざまな方法でパッケージを作成することができます。作成したパッケージは、個人的に使用することも、Dynamo コミュニティで共有することもできます。ここで紹介するケース スタディでは、既存のパッケージの中身を確認しながら、パッケージの設定方法について説明します。このケース スタディは、前の章の演習に基づいて構成されており、UV 座標を使用して Dynamo の特定のサーフェスから別のサーフェスへジオメトリをマッピングする際に使用した一連のカスタム ノードを提供します。
 
-## MapToSurface Package
+## MapToSurface パッケージ
 
-We're going to work with a sample package which demonstrates the UV mapping of points from one surface to another. We've already built the fundamentals of the tool in the [Creating a Custom Node](../10\_custom-nodes/10-2\_creating.md) section of this primer. The files below demonstrate how we can take the concept of UV Mapping and develop a set of tools for a publishable library.
+ここでは、点群を特定のサーフェスから別のサーフェスに UV マッピングする演習で使用したサンプル パッケージを使用していきます。ツールの基本部分は、この手引の「[カスタム ノードを作成する](../10\_custom-nodes/10-2\_creating.md)」セクションで既に作成されています。 ここでは、UV マッピングの概念を理解する方法と、パブリッシュ可能なライブラリ用の一連のツールを開発する方法について確認します。
 
-In this image, we map a point from one surface to another using UV coordinates. The package is based on this concept, but with more complex geometry.
+このイメージは、UV 座標を使用して 1 つの点を特定のサーフェスから別のサーフェスにマッピングする場合の例を示しています。パッケージ構成はこの考え方に基づいていますが、パッケージには、より複雑なジオメトリが含まれます。
 
 ![](../images/6-2/3/uvMap.jpg)
 
-### Installing the Package
+### パッケージをインストールする
 
-In the previous chapter, we explored ways for panelizing a surface in Dynamo based on curves defined in the XY plane. This case study extends these concepts for more dimensions of geometry. We're going to install this package as built in order to demonstrate how it was developed. In the next section, we'll demonstrate how this package was published.
+前の章では、Dynamo 内の XY 平面上に定義された複数の曲線に基づいてサーフェスをパネル化する方法について確認しました。このケース スタディでは、この考え方を広げて、より高次元のジオメトリを処理します。ここでは、この構築済みパッケージをインストールし、このパッケージがどのように開発されたかを確認していきます。次のセクションでは、このパッケージのパブリッシュ方法を確認します。
 
-In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
+Dynamo で、\_[パッケージ] > [パッケージを検索]をクリックして、「MapToSurface」(区切りなしの 1 語)でパッケージを検索します。[インストール]をクリックしてダウンロードを開始し、パッケージをライブラリに追加します。
 
 ![](<../images/6-2/3/develop package - install package 01.jpg>)
 
-After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
+インストール後は、カスタム ノードを[アドオン] > [Dynamo Primer]セクションで使用できるようになります。
 
 ![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
-With the package now installed, let's walk through how it's set up.
+これでパッケージのインストールが完了しました。次に、パッケージの設定方法を確認しましょう。
 
-### Custom Nodes
+### カスタム ノード
 
-The package we're creating uses five custom nodes that we've built for reference. Let's walk through what each node does below. Some custom nodes build off of other custom nodes, and the graphs have a layout for other users to understand in a straightforward manner.
+ここで作成するパッケージでは、参照用として既に作成されている 5 つのカスタム ノードを使用します。ここで、各ノードの機能を確認しましょう。一部のカスタム ノードは、他のカスタム ノードを使用して作成されています。また、他のユーザが簡単に理解できるように、グラフにはレイアウトが用意されています。
 
-This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
+上の図は、5 つのカスタム ノードによって構成される単純なパッケージを示しています。次の手順で、各カスタム ノードの設定について簡単に説明します。
 
 ![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 #### **PointsToSurface**
 
-This is a basic custom node, and one from which all of the other mapping nodes are based. Simply put, the node maps a point from a source surface UV coordinate to the location of the target surface UV coordinate. And since points are the most primitive geometry, from which more complex geometry is built, we can use this logic to map 2D, and even 3D geometry from one surface to another.
+これは基本的なカスタム ノードで、他のすべてのマッピング ノードのベースになるノードです。このノードは、ソース サーフェスの UV 座標の点を、ターゲット サーフェスの UV 座標にマッピングします。点は、複雑なジオメトリを構築するための最も基本的なジオメトリであるため、このロジックを使用して、2D ジオメトリだけでなく 3D ジオメトリについても、特定のサーフェスから別のサーフェスにマッピングすることができます。
 
 ![](<../images/6-2/3/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
-The logic of extending mapped points from 1D geometry to 2D geometry is demonstrated simply with polygons here. Notice that we have nested the _"PointsToSurface"_ node into this custom node. This way we can map the points of each polygon to the surface, and then regenerate the polygon from those mapped points. By maintaining the proper data structure (a list of lists of points), we're able to keep the polygons separate after they're reduced to a set of points.
+このノードを使用すると、1D ジオメトリのマッピングされた点群を 2D ジオメトリに拡張するロジックを、ポリゴンによって簡単に確認することができます。図のように、_PointsToSurface_ ノードがこのカスタム ノード内にネストされていることがわかります。この方法で各ポリゴンの点群をサーフェスにマッピングし、その点群からポリゴンを再生成することができます。適切なデータ構造(点群のリストのリスト)を維持することにより、ポリゴンを一連の点群に変更した場合でも、それらのポリゴンを個別に保持することができます。
 
 ![](<../images/6-2/3/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
-The same logic applies here as in the _"PolygonsToSurface"_ node. But instead of mapping polygonal points, we're mapping control points of a nurbs curve.
+このノードでは、_PolygonsToSurface_ ノードと同じロジックが適用されます。ただし、ここでは、ポリゴンの点群をマッピングするのではなく、NURB 曲線の制御点をマッピングします。
 
 ![](<../images/6-2/3/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
-This node gets a little more complex, but the concept is simple: like the _"PointsToSurface"_ node, this node maps points from one surface to another. However, it also considers points which are not on the original source surface, gets their distance to the closest UV parameter, and maps this distance to the target surface normal at the corresponding UV coordinate. This will make more sense when looking at the example files.
+このノードの構成はやや複雑ですが、その概念は単純です。_PointsToSurface_ ノードと同じように、このノードは特定のサーフェスから別のサーフェスに点群をマッピングします。ただし、OffsetPointsToSurface ノードは、元のソース サーフェス上には存在しない点群を識別し、その点から最も近い UV パラメータまでの距離を取得して、対応する UV 座標上のターゲット サーフェスの法線にマッピングします。これは、サンプル ファイルを見るとよくわかります。
 
 ![](<../images/6-2/3/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
-This is a simple node which creates a parametric surface to map from the source grid to an undulating surface in the example files.
+このノードは、サンプル ファイル内のソース グリッドから波形のサーフェスにマッピングするためのパラメータ制御のサーフェスを作成する単純なノードです。
 
 ![](<../images/6-2/3/develop package -sampleSrf.jpg>)
 
-### Example Files
+### サンプル ファイル
 
-The example files can be found in the package's root folder. Click Dynamo > Preferences > Package Manager
+サンプル ファイルは、パッケージのルート フォルダにあります。[Dynamo] > [基本設定] > [Package Manager]をクリックします
 
-Next to MapToSurface, click verticle dots menu > Show Root Directory
+[MapToSurface]の横にある縦ドットのメニュー > [ルート フォルダを表示]をクリックします
 
 ![](<../images/6-2/3/develop package - example files 01.jpg>)
 
-Next, open the _"extra"_ folder, which houses all of the files in the package which are not custom nodes. This is where examples files (if they exist) are stored for Dynamo packages. The screenshots below discuss the concepts demonstrated in each example file.
+次に「_extra_」フォルダにナビゲートします。このフォルダには、パッケージ内のすべてのファイル(カスタム ノードを除く)が格納されています。Dynamo パッケージ用のサンプル ファイル(存在する場合)も、このフォルダに格納されています。これ以降のスクリーンショットは、各サンプル ファイルの概念を示しています。
 
 #### **01-PanelingWithPolygons**
 
-This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../10\_custom-nodes/10-2\_creating.md).
+このサンプル ファイルでは、_PointsToSurface_ ノードを使用して長方形のグリッドに基づくサーフェスをパネル化する方法を確認することができます。同様のワークフローについては、[前の章](../10\_custom-nodes/10-2\_creating.md)で確認しました。
 
 ![](<../images/6-2/3/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
-Using a similar workflow, this exercise file shows a setup for mapping circles (or polygons representing circles) from one surface to another. This uses the _"PolygonsToSurface"_ node.
+このサンプル ファイルでは、同様のワークフローを使用して、特定のサーフェスから別のサーフェスに円弧をマッピングする場合のセットアップ例を確認することができます。このファイルでは _PolygonsToSurface_ ノードを使用します。
 
 ![](<../images/6-2/3/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
-This example file adds some complexity by working with the "NurbsCrvToSurface" node. The target surface is offset a given distance and the nurbs curve is mapped to the original target surface and the offset surface. From there, the two mapped curves are lofted to create a surface, which is then thickened. This resulting solid has an undulation that is representative of the target surface normals.
+このサンプル ファイルは NurbsCrvToSurface ノードと連携するため、多少複雑な構成になっています。ターゲット サーフェスは指定した距離でオフセットされ、NURB 曲線が元のターゲット サーフェスとオフセット後のサーフェスにマッピングされます。その後、マッピングされた 2 本の曲線がロフトされて 1 つのサーフェスが作成され、そのサーフェスに厚みが加えられます。その結果として出力されるソリッドは、ターゲット サーフェスの法線を表す波形の形状になります。
 
 ![](<../images/6-2/3/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
-This example file demonstrates how to map a pleated polysurface from a source surface to a target surface. The source and target surface are a rectangular surface spanning the grid and a revolved surface, respectively.
+このサンプル ファイルでは、ひだがついたポリサーフェスをソース サーフェスからターゲット サーフェスにマッピングする方法について確認することができます。ソース サーフェスはグリッド上に広がる長方形のサーフェスで、ターゲット サーフェスは回転体のサーフェスです。
 
 ![](<../images/6-2/3/develop package -sample file 04a.jpg>)
 
-The source polysurface mapped from the source surface to the target surface.
+このサンプル ファイルでは、ソース サーフェスのソース ポリサーフェスをターゲット サーフェスにマッピングする方法について確認することができます。
 
 ![](<../images/6-2/3/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
-Since the custom nodes are able to map different types of curves, this last file references an SVG file exported from Illustrator and maps the imported curves to a target surface.
+カスタム ノードを使用すると、さまざまなタイプの曲線をマッピングすることができます。このサンプル ファイルでは、Illustrator から書き出した SVG ファイルを参照し、読み込んだ曲線をターゲット サーフェスにマッピングすることができます。
 
 ![](<../images/6-2/3/develop package -sample file 05a.jpg>)
 
-By parsing through the syntax of a .svg file, curves are translated from .xml format to Dynamo polycurves.
+.svg ファイルの構文を解析することにより、曲線が .xml 形式から Dynamo のポリカーブに変換されます。
 
 ![](<../images/6-2/3/develop package -sample file 05b.jpg>)
 
-The imported curves are mapped to a target surface. This allows us to explicitly (point-and-click) design a panelization in Illustrator, import into Dynamo, and apply to a target surface.
+読み込んだ曲線がターゲット サーフェスにマッピングされます。これにより、Illlustrator でパネルを明示的に(ポイント アンド クリック操作で)設計し、そのパネルを Dynamo で読み込んでターゲット サーフェスに適用することができます。
 
 ![](<../images/6-2/3/develop package -sample file 05c.jpg>)

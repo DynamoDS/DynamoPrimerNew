@@ -1,8 +1,8 @@
-# Download PDF
+# PDF をダウンロード
 
-To access the information on this primer offline, download the pdf:&#x20;
+この Primer の情報にオフラインでアクセスするには PDF ファイルをダウンロードしてください。&#x20;
 
-## Releases:
+## リリース:
 
 #### Dynamo Primer v2.13:
 

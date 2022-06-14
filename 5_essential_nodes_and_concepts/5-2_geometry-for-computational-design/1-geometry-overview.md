@@ -1,62 +1,62 @@
-# Geometry Overview
+# ジオメトリの概要
 
-## Geometry in Dynamo Sandbox
+## Dynamo Sandbox におけるジオメトリ
 
-**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
+**ジオメトリ**は、設計用の言語です。 プログラミング言語やプログラミング環境の核心部分でジオメトリ カーネルを使用している場合は、設計ルーチンを自動化し、アルゴリズムを使用して設計の繰り返し部分を生成することにより、正確で安定したモデルを設計することができます。
 
-Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
+ジオメトリのタイプとその[相互関係](1-geometry-overview.md#stepping-through-the-hierarchy)を理解すれば、ライブラリ内で使用できる**ジオメトリ ノード**のグループをナビゲートできるようになります。ジオメトリ ノードは、階層別ではなくアルファベット順に整理されています。Dynamo のユーザ インタフェース内のレイアウトに似たイメージで表示されます。
 
 ![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
 
-Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
+Dynamo でモデルを作成し、[背景プレビュー]でプレビュー表示される内容をグラフ内のデータ フローに接続する作業は、時間の経過に伴ってより直感的に行うことができるようになります。
 
 ![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
 
-> 1. Note the assumed coordinate system rendered by the grid and colored axes
-> 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
+> 1. 仮の座標系が色付きのグリッド ラインによってレンダリングされています。
+> 2. ノードを選択すると、そのノードによってジオメトリが作成される場合は、対応するジオメトリが背景内でハイライト表示されます。
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-## The Concept of Geometry
+## ジオメトリの概念
 
-Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.
+ジオメトリとは、古典的な定義によれば、形状の外形、サイズ、相対的な位置、空間上の特性に関する研究(幾何学)のことです。この分野には、数千年にもおよぶ豊かな歴史があります。コンピュータの出現と普及により、私たちは、ジオメトリの定義、研究、生成を行うための強力な手段を手に入れました。現在では、ジオメトリの複雑な相互作用の結果を簡単に計算できるようになりました。
 
 ![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
 
-> If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.
+> コンピュータを利用してどれほど多様で複雑なジオメトリを作成できるかということを確かめるには、「Stanford Bunny」という文字列で Web を検索してみてください。「Stanford Bunny」とは、アルゴリズムのテストで使用されている標準モデルのことです。
 
-Understanding geometry in the context of algorithms, computing, and complexity, may sound daunting; however, there are a few key, and relatively simple, principles that we can establish as fundamentals to start building towards more advanced applications:
+アルゴリズム、コンピューティング、複雑性という観点からジオメトリを理解するのは、難しそうだと感じるかもしれません。しかし、比較的単純ないくつかの重要な原則を理解すれば、それをベースとしてより高度なケースに適用することができます。
 
-1. Geometry is **Data** - to the computer and Dynamo, a Bunny not all that different from a number.
-2. Geometry relies on **Abstraction** - fundamentally, geometric elements are described by numbers, relationships, and formulas within a given spatial coordinate system
-3. Geometry has a **Hierarchy** - points come together to make lines, lines come together to make surfaces, and so on
-4. Geometry simultaneously describes both **the Part and the Whole** - when we have a curve, it is both the shape as well as all the possible points along it
+1. ジオメトリは**データ**です。コンピュータや Dynamo にとって、Stanford Bunny と数値に大きな違いはありません。
+2. ジオメトリは、**抽象化**に依存します。基本的に、ジオメトリの要素は、特定の空間座標系内で、数値、関係、計算式によって記述されます。
+3. ジオメトリには**階層**があります。点が集まって線が構成され、線が集まって面が構成されます。
+4. ジオメトリは、**細部と全体**の両方を同時に記述します。たとえば曲線が存在する場合、その曲線は曲線の形状を表すと同時に、その曲線を構成する点群も表します。
 
-In practice, these principles mean that we need to be aware of what we are working with (what type of geometry, how was it created, etc.) so that we can fluidly compose, decompose, and recompose different geometries as we develop more complex models.
+実際の作業では、複雑なモデルの開発においてさまざまなジオメトリの構成、解体、再構成を柔軟に実行できるように、作業の内容(ジオメトリのタイプやジオメトリの構成など)について理解しておく必要があります。
 
-## Stepping through the Hierarchy
+## 階層とは
 
-Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
+ここで、ジオメトリの抽象と階層との関係について簡単に説明します。これら 2 つの概念は相互に関係していますが、この関係を最初から明確に理解するのは必ずしも簡単なことではありません。そのため、複雑なワークフローやモデルの開発を開始すると、すぐに理解の壁に直面することがあります。ここでは、入門者向けに次元という概念を使用して、モデリングについて簡単に説明します。1 つの形状を記述するためにいくつの次元が必要になるかを考えると、ジオメトリの階層構成を理解する手がかりになります。
 
 ![Computational Geometry](../images/5-2/1/GeometryDimensionality.jpg)
 
-> 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
-> 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
-> 3. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
-> 4. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
+> 1. 座標によって定義される**点**には、次元は存在しません。点は、各座標を示す単なる数字に過ぎません。
+> 2. 2 つの点によって定義される**線**には、_1_ つの次元が存在します。線の上では、前方(正の方向)または後方(負の方向)に向かって移動することができます。
+> 3. 複数の線によって定義される**面**には、_2_ つの次元が存在します。面の上では、前後だけでなく左右に移動することもできます。
+> 4. 複数の面によって定義される**直方体**には 、_3_ つの次元が存在します。ボックスの中では、前後左右に加えて、高低の位置関係を定義することができます。
 
-Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
+ジオメトリを分類する場合、次元という概念は役に立ちますが、必ずしもそれが最適な概念というわけではありません。なぜなら、点、線、面、直方体だけを使用してモデルを作成することはほとんどないからです。曲線や曲面を使用する場合を考えてみれば、それは明らかです。また、方向、体積、パーツ間の関係などを定義する、完全に抽象的なジオメトリ タイプのまったく異なるカテゴリもあります。ベクトルを実際にこの手でつかむことはできません。では、空間内に見えているものに対してベクトルを定義するにはどうすればいいでしょうか。ジオメトリの階層をさらに細分化すると、抽象的なジオメトリ タイプを「補助的なジオメトリ タイプ」とみなすべきだということがわかります。各タイプは、その機能と、モデル要素の形状を記述するタイプを基準として、グループ化することができます。
 
-![Geometry Hierarchy](../images/5-2/1/GeometryHierarchy.jpg)
+![ジオメトリの階層](../images/5-2/1/GeometryHierarchy.jpg)
 
-## Going Further with Geometry
+## ジオメトリの詳細を確認する
 
-Creating models in Dynamo is not limited to what we can generate with Nodes. Here are some key ways to take your process to the next level with Geometry:
+Dynamo で作成するモデルは、ノードを使用して生成されるモデルだけではありません。ジオメトリでの作業を次のレベルに進めるには、キーとなる方法がいくつかあります。
 
-1. Dynamo allows you to import files - try using a CSV for point clouds or SAT for bringing in surfaces
-2. When working with Revit, we can reference Revit elements to use in Dynamo
-3. The Dynamo Package Manager offers additional functionality for extended geometry types and operations - check out the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package
+1. Dynamo では、CSV ファイルを使用して点群を読み込んだり、SAT ファイルを読み込んでサーフェスを作成するなど、ファイルを読み込んでさまざまな操作を行うことができます。
+2. Dynamo を Revit と組み合わせると、Revit の要素を参照して Dynamo で使用することができます。
+3. Dynamo Package Manager には、ジオメトリのタイプや操作を拡張するための追加の機能が用意されています。[Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) パッケージを確認してください。

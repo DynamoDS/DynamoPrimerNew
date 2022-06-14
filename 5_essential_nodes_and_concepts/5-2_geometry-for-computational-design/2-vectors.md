@@ -1,93 +1,93 @@
-# Vector, Plane & Coordinate System
+# ベクトル、平面、座標系
 
-## Vector, Plane & Coordinates System in Dynamo
+## Dynamo のベクトル、平面、座標系
 
-### Vector
+### ベクトル
 
-[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+[ベクトル](5-2\_vectors.md#vector-1)は大きさと方向を表すもので、特定の速度で特定の方向に向かって加速する矢印として描画できます。ベクトルは、Dynamo のモデルにおける主要なコンポーネントです。ベクトルは[Helper]という抽象的なカテゴリに分類されるため、ベクトルを作成しても背景プレビューには何も表示されないことに注意してください。
 
 ![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
 
-> 1. We can use a line as a stand in for a Vector preview.
+> 1. ベクトル プレビューの代わりに線分を使用することができます。
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-### Plane
+### 平面
 
-[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+[平面](5-2\_vectors.md#plane-1)は 2 次元サーフェスで、無限に広がる平坦なサーフェスとして描画できます。各平面には、原点、X 方向、Y 方向、Z (上)方向があります。
 
 ![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
 
-> 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
-> 2. In Dynamo, Planes are rendered in the Background Preview.
+> 1. 平面は抽象的な概念ですが、平面には基準点があるため、空間内で平面の場所を特定することができます。
+> 2. Dynamo では、平面は背景プレビューにレンダリングされます。
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-### Coordinate System
+### 座標系
 
-[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+[座標系](5-2\_vectors.md#coordinate-system-1)は、点やその他のジオメトリ要素の位置を決定します。次の画像は、Dynamo での外観と各カラーの意味について説明しています。
 
 ![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
 
-> 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
+> 1. 座標系は抽象的な概念ですが、座標系には基準点があるため、空間内で座標系の場所を特定することができます。
+> 2. Dynamo の座標系は、点(基準点)と 3 つの軸を定義する線分(X は赤、Y は緑、Z は青で表示)として背景プレビューにレンダリングされます。
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Deep Dive into...
+## 詳細を説明します。
 
-Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
+抽象的なジオメトリ タイプの主要なグループは、ベクトル、平面、座標系により構成されています。ベクトル、平面、座標系により、形状を表すその他のジオメトリの位置、方向、空間コンテキストを定義することができます。たとえば、ニューヨーク市 42 丁目のブロードウェイ(座標系)の路上(平面)に立って北(ベクトル)を向いている場合、ベクトル、平面、座標系という[Helper]カテゴリの情報を使用して自分の現在の居場所を定義していることになります。電話ケース製品や高層ビルについても、同じことが言えます。モデルを開発するには、このコンテキストが必要です。
 
-![Vectors, Planes, and Coordinates](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![ベクトル、平面、座標](../images/5-2/2/VectorsPlanesCoodinates.jpg)
 
-### Vector
+### ベクトル
 
-A vector is a geometric quantity describing Direction and Magnitude. Vectors are abstract; ie. they represent a quantity, not a geometrical element. Vectors can be easily confused with Points because they both are composed of a list of values. There is a key difference though: Points describe a position in a given coordinate system while Vectors describe a relative difference in position which is the same as saying "direction."
+ベクトルとは、方向と大きさを表すジオメトリの量です。ベクトルは、特定のジオメトリ要素ではなく量を表す抽象的な概念です。ベクトルは点と同様に値のリストで構成されているため、点とベクトルを混同しないようにする必要があります。ただし、点とベクトルには大きな違いがあります。点が特定の座標系における位置を表すのに対して、ベクトルは位置における相対的な差異を表します。これは、「方向」と言い換えることもできます。
 
-![Vector Details](../images/5-2/2/Vector-Detailed.jpg)
+![ベクトルの詳細](../images/5-2/2/Vector-Detailed.jpg)
 
-If the idea of relative difference is confusing, think of the Vector AB as "I'm standing at Point A, looking toward Point B." The direction, from here (A) to there (B), is our Vector.
+「相対的な差異」という概念がわかりにくい場合は、ベクトル AB を「点 A に立って点 B の方向を向いている」と考えてみてください。現在地 A から目的地 B に対する方向が、ベクトルです。
 
-Breaking down Vectors further into their parts using the same AB notation:
+ここでは、同じ AB 表記を使用して、ベクトルを構成する要素について説明します。
 
-![Vector](../images/5-2/2/Vector.jpg)
+![ベクトル](../images/5-2/2/Vector.jpg)
 
-> 1. The **Start Point** of the Vector is called the **Base**.
-> 2. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
-> 3. Vector AB is not the same as Vector BA - that would point in the opposite direction.
+> 1. ベクトルの**開始点**は、**起点**と呼ばれます。
+> 2. ベクトルの\*\*終了点\*\*は、**先端**または**向き**と呼ばれます。
+> 3. ベクトル AB とベクトル BA は違います。これらは、反対方向のベクトルです。
 
-If you're ever in need of comic relief regarding Vectors (and their abstract definition), watch the classic comedy Airplane and listen for the oft-quoted tongue-in cheek line:
+ベクトルとその定義に関するジョークとして、古典的なコメディである Airplane (邦題: フライングハイ)の有名なジョークがあります。
 
-> _Roger, Roger. What's our vector, Victor?_
+> _Roger, Roger. What's our vector, Victor? (訳注: ロジャー、了解だ(発音は「ロジャー」、ラジャー)。ビクター、機首の向き(発音は「ベクター」、ベクトル)は?_
 
-### Plane
+### 平面
 
-Planes are two-dimensional abstract "Helpers." More specifically, Planes are conceptually “flat,” extending infinitely in two directions. Usually they are rendered as a smaller rectangle near their origin.
+平面は、2 次元の抽象的な Helper です。より厳密に定義すると、平面とは 2 つの方向に無限に延びる概念的に「平らな」面のことです。平面は、通常、小さな長方形として基準点の近くにレンダリングされます。
 
-![Plane](../images/5-2/2/Plane.jpg)
+![平面](../images/5-2/2/Plane.jpg)
 
-You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
+ここで、「基準点とは、CAD ソフトウェアでモデルを作成する場合に使用する、座標系に関係ある用語ではないだろうか」と思いつく人がいるかもしれません。
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
+そのとおりです。多くのモデル作成ソフトウェアは、構築面(「レベル」)を使用してローカルな 2 次元のコンテキストを定義し、その面上に図面を作成します。XY 平面、XZ 平面、YZ 平面や、北、南東などの用語の方がなじみがあるかもしれません。これらはすべて、無限の平らなコンテキストを定義する平面です。平面には深さはありませんが、方向の記述に役立ちます。
 
-### Coordinate System
+### 座標系
 
-If we are comfortable with Planes, we are a small step away from understanding Coordinate Systems. A Plane has all the same parts as a Coordinate System, provided it is a standard "Euclidean" or "XYZ" Coordinate System.
+平面を理解できれば、座標系もすぐに理解することができます。平面のすべての要素は、標準的なユークリッド座標系または XYZ 座標系の要素と同じです。
 
-There are other, however, alternative Coordinate Systems such as Cylindrical or Spherical. As we will see in later sections, Coordinate Systems can also be applied to other Geometry types to define a position on that geometry.
+ただし、円柱や球体など、他の座標系もあります。平面の要素は、これらの座標系の要素とは異なります。他のジオメトリ タイプに座標系を適用し、そのジオメトリ上の位置を定義することもできます。これについては、これ以降のセクションで説明します。
 
-![Coordinate System](../images/5-2/2/CoordinateSystem.jpg)
+![座標系](../images/5-2/2/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical
+> 別の座標系(円柱、球体)に関する説明をここに追加

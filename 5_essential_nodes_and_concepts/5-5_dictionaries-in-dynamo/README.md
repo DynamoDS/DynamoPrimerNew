@@ -1,11 +1,11 @@
-# Dictionaries in Dynamo
+# Dynamo のディクショナリ
 
-Dictionaries represent a collection of data that is related to another piece of data known as a key. Dictionaries expose the ability to search for, delete and insert data into a collection.
+ディクショナリは、キーと呼ばれる別のデータと関連付けられているデータの集まりです。ディクショナリでは、データを検索、削除、および挿入する機能が公開されています。
 
-Essentially, we can think of a dictionary as a really smart way to look something up.
+基本的には、ディクショナリを非常にスマートな検索手段と考えることができます。
 
-_While dictionary functionality has been available in Dynamo for some time, Dynamo 2.0 introduces a new way of managing this data type._
+_ディクショナリの機能はこれまで Dynamo 内で利用可能でしたが、Dynamo 2.0 では、このデータ タイプを管理する新しい方法を導入しました。_
 
 ![](../images/5-5/wildDictionary.png)
 
-Original image courtesy of: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+オリジナル画像提供: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

@@ -1,259 +1,259 @@
-# Graph Strategies
+# 見やすいプログラムを作成するためのガイドライン
 
-Prior to this chapter, the Primer has covered how to implement the powerful visual-scripting capabilities of Dynamo. A good understanding of these capabilities is a solid foundation and the first step in building robust visual programs. When we use our visual programs in the field, share them with colleagues, troubleshoot errors, or test limits we have additional issues to deal with. If someone else will be using your program or you are expecting to open it six months from now, it needs to have an immediate graphic and logical clarity. Dynamo has many tools to manage the complexity of your program, and this chapter will give guidelines on when to use them.
+この章に入る前に、Dynamo の強力なビジュアル スクリプト機能の実装方法について説明しました。これらの機能を正しく理解することが、堅固なビジュアル プログラムを開発するための基礎となり、第一歩となります。実際の現場でビジュアル プログラムを使用する場合、チーム メンバーとビジュアル プログラムを共有する場合、エラーのトラブルシューティングを行う場合、制限値のテストを行う場合などは、新たな問題が発生します。自分が作成したプログラムを他のメンバーが使用する場合や、今から 6 ヵ月後にプログラムを起動するような場合は、外観的な面でも論理的な面でも、すぐに理解できるようなプログラムを作成する必要があります。Dynamo には、複雑なプログラムを管理するためのさまざまなツールが用意されています。この章では、そうしたツールを使用する場合のガイドラインについて説明します。
 
-![groups](images/1/cad-chart-visual.jpg)
+![グループ](images/1/cad-chart-visual.jpg)
 
-## Reduce Complexity
+## 複雑さを軽減する
 
-As you develop your Dynamo graph and test ideas, it can quickly grow in size and complexity. While it is important that you create a functioning program, it is equally important to make it as simple as possible. Not only will your graph run faster and more predictably, you along with other users will understand its logic later on. The following are several ways that will help you clarify the logic of your graph.
+Dynamo でプログラムを作成したり、アイデアをテストする場合、そのサイズと複雑さが急激に増大することがあります。正しく機能するプログラムを作成することはもちろん重要なことですが、可能な限り簡潔なプログラムを作成することも同様に重要です。簡潔なプログラムを作成することにより、プログラムの処理速度と精度が上がるだけでなく、後で他のメンバーとともにコードを解析する場合も、ロジックを簡単に追うことができるようになります。ここでは、プログラムのロジックを分かりやすく記述するための方法をいくつか紹介します。
 
-### **Modularize with Groups**
+### **グループを使用してプログラムをモジュール化する**
 
-* Groups allow you to **create functionally distinct parts** as you build a program
-* Groups allow you to **move large parts of the program** around while maintaining modularity and alignment
-* You can change the **color of the group to differentiate** what Groups are doing (inputs vs functions)
-* You can use groups to start **organizing your graph to streamline Custom Node creation**
+* プログラムの作成時にグループを使用して、**機能別に異なるパーツを作成**することができます。
+* グループを使用すると、各モジュールとその配置を維持しながら、**プログラム内の大きなパーツを移動**することができます。
+* **グループの色を変えて**、各グループの用途(入力や関数など)を区別することができます。
+* グループを使用して**プログラムを整理し、カスタム ノードの作成を簡素化**することができます。
 
 ![](images/1/graphstrategy2.png)
 
-> The colors in this program identify the purpose of each group. This strategy can be used to create hierarchy in any graphic standards or templates you develop.
+> このプログラムでは、各グループの用途を色で示しています。この方法により、開発するプログラムの標準やテンプレート内で階層を作成することができます。
 >
-> 1. Function group (blue)
-> 2. Input group (orange)
-> 3. Script group (green)
+> 1. 関数グループ(青)
+> 2. 入力グループ(オレンジ色)
+> 3. スクリプト グループ(緑)
 >
-> For how to use Groups, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> グループの使用方法については、「[プログラムを管理する](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)」を参照してください。
 
-### **Develop efficiently with Code Blocks**
+### **コード ブロックを使用して効率的に開発する**
 
-* At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
-* Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
+* 必要に応じてコード ブロックを使用すると、**検索するよりも速く、数値メソッドやノード メソッドを入力**することができます(Point.ByCoordinates、Number、String、Formula)。
+* **DesignScript でカスタム関数を定義してプログラム内のノードの数を減らす**場合は、コード ブロックを使用すると便利です。
 
 ![](<images/1/graphstrategy3 (1).png>)
 
-> Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
+> 1 と 2 は、どちらも同じ関数を実行します。各ノードを個別に検索して追加するよりも、コードを何行か入力する方が、ずっと速く作業を進めることができます。また、コード ブロックのサイズもずっと小さくなります。
 >
-> 1. Design Script written in Code Block
-> 2. Equivalent program in nodes
+> 1. コード ブロックを使用して記述した設計スクリプト
+> 2. ノードを使用して同じスクリプトを記述した場合
 >
-> For how to use Code Block, refer to [What's a Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> コード ブロックの使用方法については、「[コード ブロックとは](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md)」を参照してください。
 
-### **Condense with Node to Code**
+### **ノードをコードに変換する**
 
-* You can **reduce the complexity of a graph by using Node to Code** which will take a collection of simple nodes and write their corresponding DesignScript in a single Code Block
-* Node to Code can\*\* condense code without eliminating the program’s clarity\*\*
-* The following are the **pros** of using Node to Code:
-  * Easily condenses code into one component that is still editable
-  * Can simplify a significant portion of the graph
-  * Useful if the ‘mini-program’ will not often be edited
-  * Useful for incorporating other code block functionality, like functions
-* The following are the **cons** of using Node to Code:
-  * Generic naming makes it less legible
-  * More difficult to understand for other users
-  * No easy way to return to the visual programming version
+* **[ノードをコード化]機能を使用して、画面上の煩雑さを軽減**することができます。この機能では、複数の単純なノードを 1 つにまとめることにより、それらのノードに対応する DesignScript が 1 つのコード ブロック内で記述されます。
+* [ノードをコード化]機能を使用すると、\*\*プログラムの明確性を損なうことなく、コードをまとめることができます\*\*。
+* [ノードをコード化]機能を使用する**メリット**には、次のようなものがあります。
+   * コードを編集可能な 1 つのコンポーネントとして簡単に集約できる
+   * 画面上の大部分を簡素化できる
+   * 小さなプログラムを頻繁に編集する必要がない場合に便利である
+   * 関数など、他のコード ブロック機能を組み込む場合に便利である
+* [ノードをコード化]機能を使用する**デメリット**には、次のようなものがあります。
+   * 一般的な命名規則が使用されるため、コードの内容が多少わかりにくくなる
+   * 他のユーザにとって、コードの理解が難しくなる
+   * 元のビジュアル プログラムに簡単に戻すことができない
 
 ![](images/1/graphstrategy3\_1.png)
 
-> 1. Existing program
-> 2. Code Block created from Node to Code
+> 1. 既存のプログラム
+> 2. [ノードをコード化]機能によって作成されたコード ブロック
 >
-> For how to use Node to Code, refer to [Design Script Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> [ノードをコード化]機能の使用方法については、「[DesignScript 構文](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code)」を参照してください。
 
-### **Access data flexibly with List@Level**
+### **List@Level 機能を使用してデータに柔軟にアクセスする**
 
-* Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
-* List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
+* List.Map ノードと List.Combine ノードはキャンバス上で大きなスペースを占有する場合がありますが、List@Level 機能を使用してこれらの**ノードを置き換えることにより、画面上の煩雑さを軽減**することができます。
+* List@Level 機能を使用すると、ノードの入力ポートからリスト内の任意のレベルに直接アクセスできるため、\*\*List.Map ノードや List.Combine ノードを使用するよりも速く\*\*ノード ロジックを記述することができます。
 
 ![](<images/1/graphstrategy4 (1) (1).png>)
 
-> We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
+> CountTrue ノードの list 入力で List@Level 機能を有効にすると、BoundingBox.Contains ノードから返される True 値の数と、その True 値を返すリストを確認することができます。List@Level 機能により、入力データの取得元となるレベルを特定することができます。List.Map ノードと List.Combine ノードを使用する場合、List@Level 機能は、他の方法よりも柔軟で効率的な方法です。これらのノードで作業を行う場合は、List@Level 機能を使用することを強くお勧めします。
 >
-> 1. Counting true values at List Level 2
-> 2. Counting true values at List Level 3
+> 1. リスト レベル 2 で True 値の数をカウント
+> 2. リスト レベル 3 で True 値の数をカウント
 >
-> For how to use List@Level, refer to [Lists of Lists](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> List@Level の使用方法については、「[リストのリスト](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level)」を参照してください。
 
-## Maintain Readability
+## 見やすいプログラムにする
 
-In addition to making your graph as simple and efficient as possible, strive for graphic clarity. Despite your best efforts to make your graph intuitive with logical groupings, relationships might not be readily apparent. A simple Note inside of a Group or renaming a slider can save you or another user from unnecessary confusion or panning across the graph. The following are several ways that will help you apply graphic consistency within and across your graphs.
+可能な限り簡潔で効率的なプログラムを作成するには、見やすいプログラムを作成するということに重点を置く必要があります。論理的にグループ化された直感的なプログラムを作成した場合であっても、データ間の関係性が分かりにくくなることがあります。グループ内に簡単な注記を記載したり、スライダー名を分かりやすい名前に変更すると、自分だけでなく他のメンバーも、名前などで混乱したり、画面上を無駄に移動することがなくなります。ここでは、プログラム全体で一貫した外観を保つための方法をいくつか紹介します。
 
-### **Visual continuity with Node Alignment**
+### **ノードの配置を調整して視覚的な一貫性を保つ**
 
-* To reduce your work after you finished building your graph, you should try to ensure the node layout is legible by **aligning nodes often and as you go**
-* If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
-* To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
+* プログラム作成後の作業量を減らすには、**プログラムの作成時に頻繁にノードの配置を調整**して、ノードのレイアウトを見やすく整える必要があります。
+* 自分が作成したプログラムで他のメンバーが作業を行う場合は、**ワイヤが自然な方向に流れるように各ノードを配置**する必要があります。
+* ノードを配置するには、**[ノードのレイアウトをクリーンアップ]機能を使用してノードの配置を自動的に調整**します。ただし、手動で調整する場合と比べて、多少精度が下がることに注意してください。
 
 ![](<images/1/graphstrategy5 (2) (1).png>)
 
-> 1. Unorganized graph
-> 2. Aligned graph
+> 1. ノードが整理されていない画面
+> 2. ノードが整理されている画面
 >
-> For how to use Node Alignment, refer to [Managing Your Program](3-4\_best\_practices.md).
+> ノードの配置を調整する方法については、「[プログラムを管理する](3-4\_best\_practices.md)」を参照してください。
 
-### **Descriptive labeling by renaming**
+### **名前を変更してわかりやすいラベルを付ける**
 
-* Renaming inputs can help others easily understand your graph, **especially if what they plug into will be off the screen**
-* **Be wary of renaming nodes other than inputs.** An alternative to this is creating a custom node from a node cluster and renaming that; it will be understood that it contains something else
+* 入力の名前を変更することにより、自分が作成したプログラムを他のメンバーが使用する場合でも、内容を簡単に理解できるようになります。**特に、入力の接続先ノードが画面からはみ出してしまうような場合は、入力名からそのノードの内容を推測できるため、**分かりやすい名前を付けておくと便利です。
+* **入力以外のノード名を変更する場合は、注意が必要です。**その場合は、別の方法として、ノード クラスタからカスタム ノードを作成し、そのカスタム ノードの名前を変更します。こうすることにより、そのノードの内容は、他のノードとは異なっているということを示すことができます。
 
 ![](images/1/graphstrategy6.png)
 
-> 1. Inputs for surface manipulation
-> 2. Inputs for architectural parameters
-> 3. Inputs for drainage simulation script
+> 1. サーフェスを操作するための入力
+> 2. 建築設計パラメータ用の入力
+> 3. 排水シミュレーション スクリプト用の入力
 >
-> To rename a node, right click on its name and choose "Rename Node...".
+> ノード名を変更するには、変更するノード名を右クリックして[ノードの名前を変更...]を選択します。
 
-### **Explain with Notes**
+### **説明としてノートを追加する**
 
-* You should add a Note if something in the **graph requires a plain language explanation** that the nodes can not express
-* You should add a Note if a collection of **nodes or a Group is too large or complex and can’t be easily understood right away**
+* ノードでは表現できないような**分かりやすい説明をプログラムに挿入**する必要がある場合は、ノートと呼ばれる注記を追加します。
+* **ノードの集合やグループのサイズが大きすぎて(または複雑すぎて)簡単には理解できない場合**は、ノートを追加することをお勧めします。
 
 ![](images/1/graphstrategy7.png)
 
-> 1. A Note describing the portion of the program that returns raw translation distances
-> 2. A Note describing the code that maps those values to a Sine wave
+> 1. 行の移動距離を返すプログラムの特定の箇所を説明するためのノート
+> 2. 上記の移動距離の値を正弦波にマッピングするコードを説明するためのノート
 >
-> For how to add a Note, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> ノートを追加する方法については、「[プログラムを管理する](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)」を参照してください。
 
-## Flex Continuously
+## スクリプトを継続的にモニタリングする
 
-While building your visual-script, it is important to verify that what is being returned is what you expected. Not all errors or issues will cause the program to fail immediately, especially null or zero values that could affect something far downstream. This strategy is also discussed in the context of text-scripting in [Scripting Strategies](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). The following practice will help ensure that you are getting what you expected.
+ビジュアル スクリプトを作成する場合、正しい値がスクリプトから返されるかどうかを確認することが重要になります。すべてのエラーが、プログラムの即時停止につながるエラーというわけではありません。特に、Null 値やゼロの値に関するエラーは、プログラムの下流部分に影響する場合があるため、注意が必要です。この方法は、「[スクリプト作成のガイドライン](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html)」の章でも、テキスト スクリプトに関連する形で記載されています。次の演習では、正しい結果を得る方法について確認していきます。
 
-### **Monitor data with Watch and Preview Bubbles**
+### **ウォッチ バルーンとプレビュー バルーンを使用してデータをモニターする**
 
-* Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
+* プログラムの作成時にウォッチ バルーンまたはプレビュー バルーンを使用すると、\*\*重要な出力データが正しく返されるかどうかを確認\*\*することができます。
 
 ![](images/1/graphstrategy8.png)
 
-> The Watch nodes are being used to compare:
+> この例では、Watch ノードを使用して、次のデータを比較しています。
 >
-> 1. The raw translation distances
-> 2. The values passed through the Sine equation
+> 1. 行の移動距離
+> 2. 正弦式から渡された値
 >
-> For how to use Watch, refer to [Library](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Watch ノードの使用方法については、「[ライブラリ](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html)」を参照してください。
 
-## Ensure Reusability
+## 再利用しやすいプログラムを作成する
 
-It is highly likely that someone else will be opening your program at some point, even if you are working independently. They should be able to quickly understand what the program needs and produces from its inputs and outputs. This is especially important when developing a Custom Node to be shared with the Dynamo community and used in someone else’s program. These practices lead to robust, reusable programs and nodes.
+自分が他のメンバーとは別の作業を行っている場合であっても、自分が作成したプログラムを後で他のメンバーが使用するというのは非常によくあることです。そうした場合に備えて、入力データと出力データから、プログラムの内容と結果を短時間で把握できるようにしておく必要があります。これは特に、カスタム ノードを開発して Dynamo コミュニティで共有し、他のメンバーが作成したプログラム内でそのカスタム ノードを使用する場合に重要になります。こうすることにより、簡単に再利用できる堅固なプログラムとノードを作成することができます。
 
-### **Manage the I/O**
+### **入出力を管理する**
 
-* To ensure legibility and scalability, you should try and **minimize inputs and outputs as much as possible**
-* You should try to **strategize how you are going to build the logic by first creating a rough outline** of how the logic could work before you even add a single node to the canvas. As you develop the rough outline, you should keep track of which inputs and outputs will go into scripts
+* プログラムの読みやすさと拡張性を確保するため、**入力と出力は可能な限り少なくする**ことをお勧めします。
+* キャンバス上でノードを追加する前に、**ロジックの概要を組み立ててから、そのロジックをどのように作成していくかを検討**するようにしてください。 概要を組み立てる際に、スクリプト内で使用する入力と出力を検討する必要があります。
 
-### **Use Presets to embed input values**
+### **プリセットを使用して入力値を組み込む**
 
-* If there are **particular options or conditions that you want embedded in the graph**, you should use Presets for quick access
-* You can also use Presets to **reduce complexity by caching specific slider values** in a graph with long run times
+* **特定のオプションや条件をプログラム内に組み込む**場合は、プリセットを使用すると、迅速に作業を進めることができます。
+* また、長期間実行されるプログラム内でプリセットを使用して**特定のスライダ値をキャッシュすると、プログラムの複雑さを軽減**することができます。
 
-> For how to use Presets, refer to [Managing Your Data with Presets](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> プリセットの使用方法については、「[プリセットを使用してデータを管理する](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html)」を参照してください。
 
-### **Contain programs with Custom Nodes**
+### **プログラムを構成する各ノードをカスタム ノード内に収集する**
 
-* You should use a Custom Node if your **program can be collected into a single container**
-* You should use a a Custom Node **when a portion of the graph will be reused often** in other programs
-* You should use a Custom Node if you want to **share a functionality with the Dynamo Community**
+* **プログラムを構成する各ノードを 1 つのコンテナ内に収集できる**場合は、カスタム ノードを使用することをお勧めします。
+* 他のプログラム内で**一部のコードを頻繁に再利用する**場合は、カスタム ノードを使用することをお勧めします。
+* **Dynamo コミュニティ内で特定の機能を共有**する場合は、カスタム ノードを使用することをお勧めします。
 
 ![](images/1/graphstrategy9.png)
 
-> Collecting the point translation program into a Custom Node makes a robust, unique program portable and far easier to understand. Well named input ports will help other users understand how to use the node. Remember to add descriptions and required data types for each input.
+> 点の移動プログラムを構成する各ノードをカスタム ノード内に収集すると、移植可能で堅固な一意のプログラムを作成することができます。また、プログラムの内容も簡単に理解できるようになります。入力ポートに分かりやすい名前を付けると、他のメンバーがそのプログラムを使用する際に、ノードの使用方法を簡単に理解できるようになります。すべての入力について、説明と必要なデータ タイプを追加してください。
 >
-> 1. Existing attractor program
-> 2. Custom Node that collects this program, PointGrid
+> 1. 既存のアトラクタ プログラム
+> 2. 上記のプログラムを構成する各ノードを収集するためのカスタム ノード「PointGrid」
 >
-> For how to use Custom Nodes, refer to [Custom Node Introduction](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> カスタム ノードの使用方法については、「[カスタム ノードの概要](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html)」を参照してください。
 
-### **Build templates**
+### **テンプレートを作成する**
 
-* You can build templates to **establish graphic standards across your visual graphs to ensure collaborators have a standardized way of understanding graph**
-* When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
-* When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
+* テンプレートを作成して**ビジュアル プログラム全体の外観的な標準を定義することにより、すべてのチーム メンバーが標準化された方法でプログラムを理解**できるようになります。
+* テンプレートを作成する際に、**グループの色とフォント サイズ**を標準化して、ワークフローやデータ操作のタイプを分類することができます。
+* テンプレートを作成する際に、プログラム内の**ワークフローのフロントエンドとバックエンドとの差異について、ラベルを付けたり、色を付けたり、スタイルを設定**することもできます。
 
 ![](<images/1/graphstrategy10 (2).png>)
 
-> 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
-> 2. The back-end of the program.
-> 3. Group color categories (the general design, inputs, Python scripting, imported geometry).
+> 1. プログラムの UI (フロントエンド)。プロジェクト名、入力スライダ、読み込みジオメトリが表示されます。
+> 2. プログラムのバックエンド。
+> 3. グループ(一般的な設計、入力、Python スクリプト、読み込まれたジオメトリ)を区別するための色分け。
 
-## Exercise - Architectural Roof
+## 演習 - 建築設計で使用する屋根を作成する
 
-> Download the example file by clicking on the link below.
+> 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
-> A full list of example files can be found in the Appendix.
+> すべてのサンプルファイルの一覧については、付録を参照してください。
 
-Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
+この演習では、上で説明したベスト プラクティスを構造化されていないプログラムに適用してみましょう。このプログラムでは、屋根を正しく作成することができますが、計画的に作成されたものではないため、構造化されていない状態になっています。各ノードの配置は整理されておらず、ノードの用途を示す説明も入力されていません。このプログラムの作成者以外のユーザもこのプログラムの内容を理解できるように、ノード配置の整理、説明の追加、プログラムの解析について、ベスト プラクティスを適用する手順を順に見ていきましょう。
 
 ![](images/1/graphstrategy11.png)
 
-> The program is functioning, but the graph is disorganized.
+> このプログラムは正しく機能しますが、ノードが乱雑に配置されているため、見にくくなっています。
 
-Let's start by determining the data and geometry returned by the program.
+最初に、プログラムから返されるデータとジオメトリを確認しましょう。
 
 ![](images/1/graphstrategy12.png)
 
-> Understanding when major changes to the data occur is crucial to establishing logical divisions, or modularity. Try inspecting the rest of the program with Watch nodes to see if you can determine groups before moving on to the next step.
+> 論理的な単位であるモジュールを作成する場合、データが大きく変更されるタイミングを把握することが非常に重要になります。Watch ノードを使用してプログラムを検査し、ノードのグループ化を検討してから、次のステップに進むようにしてください。
 >
-> 1. This **Code Block** with a math equation looks like a crucial piece of the program. A **Watch** node displays that it is returning lists of translation distances.
-> 2. The purpose of this area isn't readily obvious. The arrangement of True values at list level L2 from **BoundingBox.Contains** and the presence of **List.FilterByBoolMask** suggests we are sampling a portion of the point grid.
+> 1. この**コード ブロック**には数式が記述されているため、プログラムの重要な部分を構成していると考えられます。**Watch** ノードを使用すると、プログラムから返される移動距離のリストを表示することができます。
+> 2. これらのノードの用途については、一見しただけではよくわかりません。**BoundingBox.Contains** ノードのリスト レベル L2 の True 値の配置と、**List.FilterByBoolMask** ノードが使用されていることから考えると、点構成グリッドの一部をサンプリングしていることが推測できます。
 
-Once we understand the elemental parts of the program, let's put them in Groups.
+プログラム内の各要素の内容が理解できたら、それらの要素をグループ化します。
 
 ![](images/1/graphstrategy13.png)
 
-> Groups allow the user to visually differentiate the parts of the program.
+> ノードをグループ化することにより、プログラムを構成するパーツを視覚的に区別できるようになります。
 >
-> 1. Import 3D site model
-> 2. Translate point grid based on Sine equation
-> 3. Sample portion of point grid
-> 4. Create architectural roof surface
-> 5. Create glass curtain wall
+> 1. 3D サイト モデルを読み込むグループ
+> 2. 正弦式に基づいて点構成グリッドを移動するグループ
+> 3. 点構成グリッドの一部をサンプリングするグループ
+> 4. 建築設計で使用する屋根のサーフェスを作成するグループ
+> 5. ガラス カーテン ウォールを作成するグループ
 
-With Groups established, align the nodes to create visual continuity across the graph.
+グループ化が完了したら、ノードの配置を調整して、プログラム全体の流れを見やすく整理します。
 
 ![](images/1/graphstrategy14.png)
 
-> Visual continuity helps the user to see the program flow and implicit relationships between nodes.
+> プログラムの流れを見やすく整理することにより、プログラムの構造と各ノード間の暗黙的な関係を把握できるようになります。
 
-Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
+プログラムをさらに見やすくするため、外観的な情報を追加してみましょう。ここでは、プログラムの特定の領域がどのように機能するかを示すためのノートを追加し、入力のカスタム名を設定し、グループのタイプを区別するための色を割り当てます。
 
 ![](<images/1/graphstrategy15 (1).png>)
 
-> These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
+> これらの外観的な情報を追加することにより、プログラムの内容がさらに分かりやすくなります。グループを色分けすると、関数から渡される入力を簡単に区別することができます。
 >
-> 1. Notes
-> 2. Inputs with descriptive names
+> 1. ノート
+> 2. 分かりやすい名前が設定された入力
 
-Before we start to condense the program, let's find a strategic location to introduce the Python script drainage simulator. Plug the output of the first scaled roof surface into the respective scripting input.
+プログラムの集約を開始する前に、プログラムのどの位置に Python スクリプトの排水シミュレータを組み込むかについて確認しましょう。スケーリングされた最初の屋根のサーフェスの出力を、それぞれのスクリプト入力に接続します。
 
 ![](images/1/graphstrategy16.png)
 
-> We've chosen to integrate scripting at this point in the program so the drainage simulation can be run on the original, single roof surface. That specific surface is not being previewed, but it saves us from having to choose the top surface of the chamfered Polysurface.
+> ここでは、上図の位置にスクリプトを組み込みます。これにより、元の屋根のサーフェス上で排水シミュレーションを実行できるようになります。このサーフェスはプレビュー表示されていませんが、このサーフェスにより、面取りされたポリサーフェスの上部サーフェスを選択する必要がなくなります。
 >
-> 1. Source geometry for script input
-> 2. Python node
-> 3. Input sliders
-> 4. On/off "switch"
+> 1. スクリプト入力のソース ジオメトリ
+> 2. Python ノード
+> 3. 入力スライダ
+> 4. オン/オフ スイッチ
 
-Let's simplify the graph now that everything is in place.
+これですべての準備が整ったので、プログラムを集約してみましょう。
 
 ![](images/1/graphstrategy17.png)
 
-> Condensing our program with Node to Code and Custom Node has greatly reduced the size of the graph. The groups that create the roof surface and walls have been converted to code since they are very specific to this program. The point translation group is contained in a Custom Node as it could be used in another program. In the example file, create your own custom node from the translate points group.
+> [ノードをコード化]機能とカスタム ノードを使用してプラグラムを集約すると、プログラムのサイズが大幅に削減されます。屋根のサーフェスと壁を作成するグループは、このプログラムにとって非常に重要な機能を実行するグループであるため、コードに変換されています。点を移動するグループは、他のプログラムでも使用できるように、カスタム ノード内に集約されています。このサンプル ファイルで、点を移動するグループを使用して、独自のカスタム ノードを作成してみてください。
 >
-> 1. Custom Node to contain the "translate point grid" group
-> 2. Node to Code to condense the "create architectural roof surface and curtain wall" groups
+> 1. 点構成グリッドを移動するグループを格納するためのカスタム ノード
+> 2. 建築設計で使用する屋根のサーフェスとカーテン ウォールを作成するグループを集約するための[ノードをコード化]機能
 
-As a final step, create presets for exemplary roof forms.
+最後に、サンプルの屋根形状用のプリセットを作成します。
 
 ![](images/1/graphstrategy18.png)
 
-> These inputs are the primary drivers of the roof form and will help users see the potential of the program.
+> 上図の各入力が、屋根形状の主要な駆動要素になります。これらの入力を確認することにより、プログラムの概要を把握することができます。
 
-Our program with views of two presets.
+2 つのプリセットは、次のようなビューとして表示されます。
 
 ![](images/1/graphstrategy19.png)
 
 ![](images/1/graphstrategy20.png)
 
-> The roof drainage patterns give the user an analytical view of the respective presets.
+> 屋根の排水パターンを指定することにより、それぞれのプリセットをさまざまな角度から解析することができます。

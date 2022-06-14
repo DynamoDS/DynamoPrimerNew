@@ -1,10 +1,10 @@
-# Geometric Booleans
+# ジオメトリのブール演算
 
-_Intersect_, _Trim_, and _SelectTrim_ are primarily used on lower-dimensional geometry such as Points, Curves, and Surfaces. Solid geometry on the other hand, has an additional set of methods for modifying form after their construction, both by subtracting material in a manner similar to _Trim_ and combining elements together to form a larger whole.
+_Intersect_、_Trim_、および _SelectTrim_ は、点、曲線、サーフェスなどの低い次元のジオメトリに主に使用されます。一方、ソリッド ジオメトリには、_Trim_ と同様の方法でマテリアルを取り除くことおよび要素を結合して全体を大きくすることの両方によって構築後に形状を修正するための、一連のメソッドが追加されています。
 
-### Union
+### 論理和
 
-The _Union_ method takes two solid objects and creates a single solid object out of the space covered by both objects. The overlapping space between objects is combined into the final form. This example combines a Sphere and a Cuboid into a single solid Sphere-Cube shape:
+_Union_ メソッドでは、2 つのソリッド オブジェクトが使用され、両方のオブジェクトによってカバーされる空間から単一のソリッド オブジェクトが作成されます。オブジェクト間で重複する空間は最終形状に結合されます。この例では、球と直方体が結合して単一のソリッドの球-立方体形状となります。
 
 ![](../images/8-2/9/GeometricBooleans\_01.png)
 
@@ -19,9 +19,9 @@ s2 = Sphere.ByCenterPointRadius(
 combined = s1.Union(s2);
 ```
 
-### Difference
+### 差の絶対値
 
-The _Difference_ method, like _Trim_, subtracts away the contents of the input tool solid from the base solid. In this example we carve out a small indentation out of a sphere:
+_Difference_ メソッドでは、_Trim_ のように、ベースとなるソリッドから入力されたツールとなるソリッドの内容が取り除かれます。この例では、球から小さなくぼみが削り出されています。
 
 ![](../images/8-2/9/GeometricBooleans\_02.png)
 
@@ -36,9 +36,9 @@ tool = Sphere.ByCenterPointRadius(
 result = s.Difference(tool);
 ```
 
-### Intersect
+### [交差]
 
-The _Intersect_ method returns the overlapping Solid between two solid Inputs. In the following example, _Difference_ has been changed to _Intersect_, and the resulting Solid is the missing void initially carved out:
+_Intersect_ メソッドでは、2 つのソリッド入力間の重複するソリッドが生成されます。次の例では、_Difference_ が _Intersect_ に変更され、結果として得られるソリッドは、最初に削り出されていた空間がなくなっています。
 
 ![](../images/8-2/9/GeometricBooleans\_03.png)
 

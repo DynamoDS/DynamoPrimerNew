@@ -1,75 +1,75 @@
-# About
+# バージョン情報
 
-## For Dynamo v2.13
+## Dynamo v2.13 の場合
 
-![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
+![Dynamo ロゴ](images/dynamo\_logo\_dark-trim.jpg)
 
-> Dynamo is an open source visual programming platform for designers.
+> Dynamo は、設計者向けのオープン ソースのビジュアル プログラミング プラットフォームです。
 
-### Welcome
+### ようこそ
 
-You have just opened the Dynamo Primer, a comprehensive guide to visual programming in Autodesk Dynamo. This primer is an on-going project to share the fundamentals of programming. Topics include working with computational geometry, best practices for rules-based design, cross-disciplinary programming applications, and more with the Dynamo Platform.
+この Dynamo Primer は、Autodesk Dynamo を使用したビジュアル プログラミングの総合ガイドです。この手引は、ビジュアル プログラミングの基本情報を共有することを目的としており、継続的に更新されています。この手引きには、ジオメトリの計算設計、規則に基づく設計のベストプラティクス、複数の専門分野をまたがるプログラミングの応用方法など、Dynamo プラットフォームに関するさまざまな情報が記載されています。
 
-The power of Dynamo can be found in a wide variety of design-related activities. Dynamo enables an expanding list of readily accessible ways for you to get started:
+Dynamo は、広範囲にわたる設計関連ワークフローにおいてその真価を発揮します。Dynamo は、さまざまな方法で使用することができます。
 
-* **Explore** visual programming for the first time
-* **Connect** workflows in various software
-* **Engage** an active community of users, contributors, and developers
-* **Develop** an open-source platform for continued improvement
+* ビジュアル プログラミングをはじめて**体験する**
+* さまざまなソフトウェアのワークフローを**接続する**
+* さまざまなユーザや開発者が積極的に意見を交換するコミュニティに**参加する**
+* 継続的な改善を目指してオープンソースのプラットフォームを**開発する**
 
-In the midst of this activity and exciting opportunity for working with Dynamo, we need a document of the same caliber, the Dynamo Primer.
+こうして Dynamo の開発を続けていくうちに、適切な資料が必要になりました。その過程で作成されたのが、この Dynamo Primer です。
 
-Refer to the [primer user guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) to find out what you can expect to learn from this primer.
+この Primer で知ることができる内容については、[Primer のユーザ ガイド](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)を参照してください。
 
-### Open Source
+### オープン ソース
 
-The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: https://github.com/DynamoDS/DynamoPrimer/issues
+Dynamo Primer は、オープン ソース プロジェクトです。高品質なコンテンツを提供するには、ユーザの皆様からのフィードバックが必要です。問題を発見した場合は、GitHub のバグ レポート ページ(https://github.com/DynamoDS/DynamoPrimer/issues)に投稿してください。
 
-If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: https://github.com/DynamoDS/DynamoPrimer.
+この Dynamo Primer に新しいセクションを追加する場合や、既存の内容を編集する場合は、GitHub のリポジトリ(https://github.com/DynamoDS/DynamoPrimer)にアクセスしてください。
 
-### The Dynamo Primer Project
+### Dynamo Primer プロジェクトの概要
 
-The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dynamo Development team at Autodesk.
+Dynamo Primer は、オートデスクの Matt Jezyk 氏と Dynamo 開発チームによって開始されたオープン ソース プロジェクトです。
 
-**Mode Lab** was commissioned to write the First Edition of the primer. We thank them for all of their efforts in establishing this valuable resource.
+Dynamo Primer の初版は、**Mode Lab** によって作成されました。 このような貴重なリソースの確立に取り組んでいただいたすべての方に感謝いたします。
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-**John Pierson of Parallax Team** was commissioned to update the primer to reflect the Dynamo 2.0. revisions.
+この手引きは、Dynamo 2.0 の改訂を反映するため、**Parallax Team の John Pierson 氏**によって更新されました。
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.
+**Matterlab** では依頼により、Dynamo 2.13 の改訂を反映するよう Primer を更新しました。
 
 ![](<images/matterlab\_final-07.jpg>)
 
-### Acknowledgments
+### 謝辞
 
-A special thanks to Ian Keough for initiating and guiding the Dynamo project.
+Dynamo プロジェクトの創立と指揮に携わった Ian Keough 氏に、深く感謝いたします。
 
-Thank you to Matt Jezyk, Ian Keough, Zach Kron, Racel Williams and Colin McCrone for enthusiastic collaboration and the opportunity to participate on a wide array of Dynamo projects.
+さまざまな Dynamo プロジェクトで積極的に協力していただいた Matt Jezyk 氏、Ian Keough 氏、Zach Kron 氏、Racel Williams 氏、Colin McCrone 氏にも感謝を申し上げます。
 
-### Software and Resources
+### ソフトウェアとリソース
 
-**Dynamo** The current stable\* release of Dynamo is Version 2.1.0
+**Dynamo**: 現在の公式\* リリースのバージョンは 2.1.0 です。
 
-http://dynamobim.com/download/ or http://dynamobuilds.com
+http://dynamobim.com/download/、または http://dynamobuilds.com (英語)
 
-\*Note: Starting with Revit 2020, Dynamo is bundled with Revit releases, resulting in manual installation not being required. More information is available at this [blog post](https://dynamobim.org/dynamo-core-2-1-release/).
+\*注: Revit 2020 以降、Dynamo は Revit リリースにバンドルされているため、手動でインストールする必要はありません。詳細については、この[ブログの投稿](https://dynamobim.org/dynamo-core-2-1-release/)をご覧ください。
 
-**DynamoBIM** The best source for additional information, learning content, and forums is the DynamoBIM website.
+**DynamoBIM**: 追加情報、ラーニング コンテンツ、フォーラムについては、DynamoBIM の Web サイトを参照してください。
 
-http://dynamobim.org
+http://dynamobim.org (英語)
 
-**Dynamo GitHub** Dynamo is an open-source development project on GitHub. To contribute, check out DynamoDS.
+**Dynamo GitHub**: Dynamo は、GitHub 上で開発されたオープン ソース プロジェクトです。DynamoDS を確認して、開発プロジェクトに参加してください。
 
-https://github.com/DynamoDS/Dynamo
+https://github.com/DynamoDS/Dynamo (英語)
 
-**Contact** Let us know about any issues with this document.
+**お問い合わせ先**: このドキュメントに関する問題については、次の窓口にご連絡ください。
 
 Dynamo@autodesk.com
 
@@ -77,8 +77,8 @@ Dynamo@autodesk.com
 
 Copyright 2022 Autodesk
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.

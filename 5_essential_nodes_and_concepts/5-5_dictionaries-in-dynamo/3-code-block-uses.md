@@ -1,13 +1,13 @@
-# Dictionaries in Code Blocks
+# コード ブロックにおけるディクショナリ
 
-Not only does Dynamo 2.0 introduce the nodes previously discussed for dictionaries, there is new functionality in code blocks for this as well!
+Dynamo 2.0 では、これまでに説明したディクショナリのノードだけでなく、コード ブロックにおけるディクショナリの新機能も導入されました。
 
-You can use syntax like below or DesignScript-based representations of the nodes.
+ノードについて次のような、または DesignScript ベースの表現のような構文を使用できます。
 
 ![](<../images/5-5/3/dictionaries in cb - syntax (1).jpg>)
 
-Since a dictionary is an object type in Dynamo we can commit the following actions upon it.
+ディクショナリは Dynamo のオブジェクト タイプであるため、次のアクションを実行できます。
 
 ![](<../images/5-5/3/dictionaries in cb - actions with code blocks.jpg>)
 
-Maintaining these sort of interactions becomes especially useful when relating Revit data to strings. Next, we will look at some Revit use-cases.
+このような操作は、Revit データを文字列に関連付ける場合に特に便利です。次に、Revit での使用例を見てみましょう。

@@ -1,8 +1,8 @@
-# Vector Math
+# ベクトル計算
 
-Objects in computational designs are rarely created explicitly in their final position and form, and are most often translated,rotated, and otherwise positioned based off of existing geometry. Vector math serves as a kind-of geometric scaffolding to give direction and orientation to geometry, as well as to conceptualize movements through 3D space without visual representation.
+計算設計ではオブジェクトが最終的な位置や形状で明示的に作成されることはほとんどなく、通常は既存のジオメトリに基づいて、移動、回転、およびその他の方法で配置されます。ベクトル計算は、幾何学的な足場の一種として機能することで方向およびジオメトリに対する向きを示し、視覚的に表示せずに 3D 空間での動きを概念化します。
 
-At its most basic, a vector represents a position in 3D space, and is often times thought of as the endpoint of an arrow from the position (0, 0, 0) to that position. Vectors can be created with the _ByCoordinates_ constructor, taking the x, y, and z position of the newly created Vector object. Note that Vector objects are not geometric objects, and don’t appear in the Dynamo window. However, information about a newly created or modified vector can be printed in the console window:
+最も基本的には、ベクトルは 3D 空間における位置を表し、通常は(0, 0, 0)の位置からその位置までの矢印の終了点と考えられます。ベクトルは _ByCoordinates_ コンストラクタで、新しく作成される Vector オブジェクトの X、Y、Z の位置を指定することで作成できます。Vector オブジェクトはジオメトリ オブジェクトではないため、Dynamo ウィンドウには表示されません。ただし、新しく作成または修正されたベクトルに関する情報は、コンソール ウィンドウに出力されます。
 
 ![](<../images/8-2/3/vector math 01.jpg>)
 
@@ -13,11 +13,11 @@ v = Vector.ByCoordinates(1, 2, 3);
 s = v.X + " " + v.Y + " " + v.Z;
 ```
 
-A set of mathematical operations are defined on Vector objects, allowing you to add, subtract, multiply, and otherwise move objects in 3D space as you would move real numbers in 1D space on a number line.
+一連の算術演算が Vector オブジェクトで定義されることによって数直線上の 1 次元空間で実数を移動するように、3 次元空間で加算、減算、乗算、およびその他の方法でオブジェクトを移動できます。
 
-### Vector Addition
+### ベクトル加算
 
-Vector addition is defined as the sum of the components of two vectors, and can be thought of as the resulting vector if the two component vector arrows are placed “tip to tail.” Vector addition is performed with the _Add_ method, and is represented by the diagram on the left.
+ベクトルの加算は、2 つのベクトルのコンポーネントの合計として定義され、2 つのコンポーネントのベクトルの矢印が「後端に先端が付く」形で配置された場合に結果として得られるベクトルと考えることができます。ベクトルの加算は _Add_ メソッドを使用して実行され、左側のダイアグラムで表示されます。
 
 ![](../images/8-2/3/VectorMath\_02.png)
 
@@ -29,9 +29,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Add(b);
 ```
 
-### Vector Subtraction
+### ベクトル減算
 
-Similarly, two Vector objects can be subtracted from each other with the _Subtract_ method. Vector subtraction can be thought of as the direction from first vector to the second vector.
+同様に、2 つの Vector オブジェクトは、_Subtract_ メソッドを使用して互いに減算できます。ベクトルの減算は 1 番目のベクトルから 2 番目のベクトルへの方向と考えることができます。
 
 ![](../images/8-2/3/VectorMath\_03.png)
 
@@ -43,9 +43,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Subtract(b);
 ```
 
-### Vector Multiplication
+### ベクトル乗算
 
-Vector multiplication can be thought of as moving the endpoint of a vector in its own direction by a given scale factor.
+ベクトルの乗算はベクトルの終了点がそのベクトル自身の方向に所定のスケール係数だけ移動すると考えることができます。
 
 ![](../images/8-2/3/VectorMath\_04.png)
 
@@ -56,9 +56,9 @@ a = Vector.ByCoordinates(4, 4, 0);
 c = a.Scale(5);
 ```
 
-### Normalize Vector Length
+### ベクトル長の正規化
 
-Often it’s desired when scaling a vector to have the resulting vector’s length exactly equal to the scaled amount. This is easily achieved by first normalizing a vector, in other words setting the vector’s length exactly equal to one.
+通常、ベクトルのスケールを変更する場合には、結果として得られるベクトルの長さをスケール変更された量と正確に同じにすることが求められます。これは、最初にベクトルを正規化する、つまり、ベクトルの長さが正確に 1 に等しくなるように設定することで、容易に実行できます。
 
 ![](<../images/8-2/3/vector math 05.jpg>)
 
@@ -74,11 +74,11 @@ c = b.Scale(5);
 len = c.Length;
 ```
 
-c still points in the same direction as a (1, 2, 3), though now it has length exactly equal to 5.
+c の長さは正確に 5 に等しいですが、a (1, 2, 3)と同じ方向を向いたままです。
 
-### Cross Product
+### 直積
 
-Two additional methods exist in vector math which don’t have clear parallels with 1D math, the cross product and dot product. The cross product is a means of generating a Vector which is orthogonal (at 90 degrees to) to two existing Vectors. For example, the cross product of the x and y axes is the z axis, though the two input Vectors don’t need to be orthogonal to each other. A cross product vector is calculated with the _Cross_ method.
+ベクトル計算には 1 次元の計算とは明確な類似点のないメソッドがさらに 2 つあります。外積と内積です。外積は、2 つの既存のベクトルに対して(90 度で)直交するベクトルを生成する手段です。たとえば、X 軸と Y 軸の外積は Z 軸です。ただし、2 つの入力ベクトルが互いに直交している必要はありません。外積ベクトルは _Cross_ メソッドを使用して計算されます。
 
 ![](../images/8-2/3/VectorMath\_06.png)
 
@@ -90,9 +90,9 @@ b = Vector.ByCoordinates(0, 1, 1);
 c = a.Cross(b);
 ```
 
-### Dot Product
+### 内積
 
-An additional, though somewhat more advanced function of vector math is the dot product. The dot product between two vectors is a real number (not a Vector object) that relates to, but is not exactly, the angle between two vectors. One useful properties of the dot product is that the dot product between two vectors will be 0 if and only if they are perpendicular. The dot product is calculated with the _Dot_ method.
+ベクトル計算のさらに少し高度な関数が内積です。2 つのベクトル間の内積は、2 つのベクトル間の角度に関係する実数(Vector オブジェクトではない)ですが、角度そのものではありません。内積の便利なプロパティの 1 つとして、2 つのベクトルが垂直の場合、かつ垂直の場合に限り、そのベクトル間の内積が 0 となります。内積は _Dot_ メソッドを使用して計算されます。
 
 ![](<../images/8-2/3/vector math 07.jpg>)
 

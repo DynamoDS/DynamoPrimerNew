@@ -1,55 +1,55 @@
-# Managing Your Program
+# プログラムを管理する
 
-Working within a Visual Programming process can be a powerful creative activity, but very quickly the Program Flow and key user inputs can be obscured by complexity and/or layout of the Workspace. Let's review some best practices for managing your program.
+ビジュアル プログラミングは非常にクリエイティブな作業ですが、ワークスペースの複雑性やレイアウトの関係で、プログラム フローや主要なユーザ入力がすぐにわかりにくくなる場合があります。ここでは、プログラムの管理に関するベスト プラクティスをいくつか確認してみましょう。
 
-### Alignment&#x20;
+### 位置合わせ&#x20;
 
-Once we have added more than a few Nodes to the Workspace, we may want to re-organize the layout of the Nodes for clarity's sake. By selecting more than one Node and right-clicking on the Workspace, the pop up window includes an **Align Selection** menu with justification and distribution options in X and Y.
+ワークスペースにある程度の数のノードを追加した場合は、画面を見やすくするためにノードのレイアウトを再編成することをお勧めします。複数のノードを選択してワークスペースを右クリックすると、X と Y で位置合わせオプションや分配オプションを指定するための**[選択を位置合わせ]**メニューがポップアップ ウィンドウに表示されます。
 
 ![](<./images/4/managing your program - alignment.jpg>)
 
-> 1. Select more than one Node
-> 2. Right-click on the Workspace
-> 3. Use the **Align Selection** options
+> 1. 複数のノードを選択します。
+> 2. ワークスペースを右クリックします。
+> 3. [**選択を位置合わせ**]オプションを使用します。
 
-### Notes&#x20;
+### ノート&#x20;
 
-With some experience, we may be able to "read" the Visual Program by reviewing the Node Names and following the Program Flow. For users of all experience levels, it is also good practice to include plain language labels and descriptions. Dynamo has a **Notes** Node with an editable text field to do so. We can add Notes to the Workspace in two ways:
+Dynamo の操作に慣れてくると、ノード名とプログラム フローを確認することにより、ビジュアル プログラムを「読む」ことができるようになります。経験のレベルを問わず、すべてのユーザにとって、わかりやすい名前と説明を入力することが重要になります。そのため、Dynamo には、編集可能なテキスト フィールドが含まれている**ノート**ノードが用意されています。 ノートをワークスペースに追加する方法は 2 つあります。
 
 ![](<./images/4/managing your program - notes.jpg>)
 
-> 1. Browse to the menu Edit > Create Note
-> 2. Use the keyboard shortcut Ctrl+W
+> 1. [編集] > [ノートを作成]メニューを参照します。
+> 2. キーボード ショートカット[Ctrl]+[W]を使用します。
 
-Once the Note is added to the Workspace a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
+ワークスペースにノートが追加されると、ノート内のテキストを編集するためのテキスト フィールドがポップアップ表示されます。ノートが作成されると、ノート ノードをダブルクリックするか右クリックしてノートを編集できるようになります。
 
 ![](<./images/4/managing your program - notes 02.jpg>)
 
-### Grouping&#x20;
+### グループ化&#x20;
 
-When our Visual Program gets big, it is helpful to identify the larger steps that will be executed. We can highlight larger collections of Nodes with a **Group** to label them with a colored rectangle in the background and a title. There are three ways to make a Group with more than one Node selected:
+ビジュアル プログラムのサイズが大きい場合、大まかな実行手順が特定できると便利です。**グループ**を使用してノードの集合をハイライト表示し、色付きの長方形にタイトルが表示されたラベルを付けることができます。 複数のノードを選択してグループを作成する方法は 3 つあります。
 
 ![](<./images/4/managing your program - grouping 01.jpg>)
 
-> 1. Browse to the menu Edit > Create Group
-> 2. Use the keyboard shortcut Ctrl+G
-> 3. Right-click on the Workspace and select "Create Group"
+> 1. [編集] > [グループを作成]メニューを参照します。
+> 2. キーボード ショートカット[Ctrl]+[G]を使用します。
+> 3. ワークスペースを右クリックし、[グループを作成]を選択します。
 
-Once a Group is created we can edit its settings, such as the title and color.&#x20;
+作成したグループについては、タイトルやカラーなどの設定を編集できます。&#x20;
 
 ![](<./images/4/managing your program - grouping 02.jpg>)
 
 {% hint style="info" %}
-Tip: Using both Notes and Groups is an effective way to annotate your file and increase readability.
+ヒント: ノードとグループの両方を使用すると、わかりやすい注釈をファイルに簡単に追加することができます。
 {% endhint %}
 
-Here's an example of program from with Notes and Groups added:
+ここで、ノートとグループを追加したプログラムの例を示します。
 
 ![](<./images/4/managing your program - grouping 03.jpg>)
 
-> 1. Note: "Grid Parameters"
-> 2. Note: "Grid Points"
-> 3. Group: "Create a Grid of Points"
-> 4. Group: "Create an Attractor Point"
-> 5. Note: "Calibrate Distance Values"
-> 6. Note: "Variable Grid of Circles"
+> 1. ノート: 「Grid Parameters」
+> 2. ノート: 「Grid Points」
+> 3. グループ:「Create a Grid of Points」
+> 4. グループ:「Create an Attractor Point」
+> 5. ノート: 「Calibrate Distance Values」
+> 6. ノート: 「Variable Grid of Circles」
