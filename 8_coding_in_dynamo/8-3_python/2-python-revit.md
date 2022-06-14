@@ -1,8 +1,8 @@
-# Python and Revit
+# Python e Revit
 
-### Python and Revit
+### Python e Revit
 
-Now that we've demonstrated how to use Python scripts in Dynamo, let's take a look at connecting Revit libraries into the scripting environment. Remember, we imported Python Standard and our Dynamo core nodes with the first four lines in the block of code below. To import the Revit nodes, Revit elements, and the Revit document manager, we only have to add a few more lines:
+Agora que demonstramos como usar scripts Python no Dynamo, vamos analisar como conectar as bibliotecas do Revit ao ambiente de scripts. Lembre-se, importamos os nós do núcleo padrão do Python e os nossos do Dynamo com as quatro primeiras linhas do bloco de código abaixo. Para importar os nós, os elementos e o gerenciador de documentos do Revit, só precisamos adicionar mais algumas linhas:
 
 ```
 import sys
@@ -25,35 +25,35 @@ from RevitServices.Persistence import DocumentManager
 import System
 ```
 
-This gives us access to the Revit API and offers custom scripting for any Revit task. By combining the process of visual programming with Revit API scripting, collaboration and tool development improve significantly. For example, a BIM manager and a schematic designer can work together on the same graph. In this collaboration, they can improve design and execution of the model.
+Isso nos fornece acesso à API do Revit e oferece scripts personalizados para qualquer tarefa do Revit. Ao combinar o processo de programação visual com scripts da API do Revit, a colaboração e o desenvolvimento de ferramentas melhoram significativamente. Por exemplo, um gerente do BIM e um projetista esquemático podem trabalhar juntos no mesmo gráfico. Nessa colaboração, eles podem aprimorar o projeto e a execução do modelo.
 
 ![](<../images/8-3/2/python & revit - 01.jpg>)
 
-### Platform Specific APIs
+### APIs específicas da plataforma
 
-The plan behind the Dynamo Project is to widen the scope of platform implementation. As Dynamo adds more programs to the docket, users will gain access to platform-specific APIs from the Python scripting environment. While Revit is the case study for this section, we can anticipate more chapters in the future which offer comprehensive tutorials on scripting in other platforms. Additionally, there are many [IronPython](http://ironpython.net) libraries accessible now which can be imported into Dynamo!
+O plano por trás do projeto do Dynamo é ampliar o escopo da implementação da plataforma. À medida que o Dynamo adiciona mais programas ao registro, os usuários obterão acesso a APIs específicas de plataforma do ambiente de scripts Python. Embora o Revit seja o estudo de caso desta seção, podemos prever mais capítulos que oferecem tutoriais abrangentes sobre scripts em outras plataformas. Além disso, há muitas bibliotecas [IronPython](http://ironpython.net) acessíveis agora que podem ser importadas para o Dynamo.
 
-The examples below demonstrate ways to implement Revit-specific operations from Dynamo using Python. For a more detailed review on Python's relationship to Dynamo and Revit, refer to the [Dynamo Wiki page](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration). Another useful resource for Python and Revit is the [Revit Python Shell ](https://github.com/architecture-building-systems/revitpythonshell)Project.
+Os exemplos abaixo demonstram as maneiras de implementar operações específicas do Revit no Dynamo usando o Python. Para obter uma análise mais detalhada sobre a relação do Python com o Dynamo e o Revit, consulte a [página Wiki do Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration). Outro recurso útil para o Python e o Revit é o projeto [Revit Python Shell](https://github.com/architecture-building-systems/revitpythonshell).
 
-## Exercise 1
+## Exercício 1
 
-> Create a new Revit Project.
+> Crie um novo projeto do Revit.
 >
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/8-2/2/Revit-Doc.dyn" %}
 
-In these exercises, we'll explore elementary Python scripts in Dynamo for Revit. The exercise will focus on dealing with Revit files and elements, as well as the communication between Revit and Dynamo.
+Nestes exercícios, vamos explorar os scripts Python elementares no Dynamo for Revit. O exercício se concentrará em lidar com os arquivos e elementos do Revit, bem como na comunicação entre o Revit e o Dynamo.
 
-This is a cut and dry method for retrieving the _doc_, _uiapp_, and _app_ of the Revit file linked to your Dynamo sesson. Programmers who have worked in the Revit API before may notice the items in the watch list. If these items do not look familiar, that's okay; we'll be using other examples in the exercises below.
+Este é um método preparado previamente para recuperar o _doc_, _uiapp_ e _app_ do arquivo do Revit vinculado à sua sessão do Dynamo. Os programadores que já trabalharam na API do Revit podem observar os itens na lista de inspeção. Se esses itens não parecerem familiares, não há problema, usaremos outros exemplos nos exercícios abaixo.
 
-Here is how we're importing Revit Services and retrieving the document data in Dynamo.
+Veja a seguir como importamos serviços do Revit e recuperamos os dados do documento no Dynamo.
 
 ![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
 
-Take a look at the Python node in Dynamo. You can also find the code from below:
+Veja o nó do Python no Dynamo. Você também pode encontrar o código abaixo:
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -74,43 +74,43 @@ app = uiapp.Application
 OUT = [doc,uiapp,app]
 ```
 
-## Exercise 2
+## Exercício 2
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/8-2/2/Revit-ReferenceCurve.dyn" %}
 
-In this exercise, we'll make a simple Model Curve in Revit using the Dynamo Python node.
+Neste exercício, vamos criar uma curva de modelo simples no Revit usando o nó do Python do Dynamo.
 
-Begin by creating a new Conceptual Mass family in Revit.
+Comece criando uma nova família de massa conceitual no Revit.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
 
-Open the _Conceptual Mass Folder_ and use the _Metric Mass.rft_ template file.
+Abra a _Pasta de massa conceitual_ e use o arquivo de modelo _Metric Mass.rft_.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
 
-In Revit, use the keyboard shortcut **`un`** to bring up the Project Unit settings, change the length unit to meters.
+No Revit, use o atalho de teclado **`un`** para abrir as configurações da unidade do projeto, altere a unidade de comprimento para metros.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
 
-Launch Dynamo and create the set of nodes in the image below. We'll first create two reference points in Revit from Dynamo nodes.
+Inicie o Dynamo e crie o conjunto de nós na imagem abaixo. Primeiro, criaremos dois pontos de referência no Revit com base nos nós do Dynamo.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
 
-> 1. Create a **Code Block** and give it a value of `"0;"`
-> 2. Plug this value into a **ReferencePoint.ByCoordinates** node for X,Y, and Z inputs.
-> 3. Create three sliders, ranging from -100 to 100 with a step size of 1.
-> 4. Connect each slider to a **ReferencePoint.ByCoordinates** node.
-> 5. Add a **Python** node to the workspace, click the "+" button on the node to add another input and plug the two references points into each input. Open the **Python** node.
+> 1. Crie um **bloco de código** e atribua o valor `"0;"`
+> 2. Conecte esse valor a um nó **ReferencePoint.ByCoordinates** para as entradas X,Y e Z.
+> 3. Crie três controles deslizantes, variando de -100 a 100 com um tamanho de etapa de 1.
+> 4. Conecte cada controle deslizante a um nó **ReferencePoint.ByCoordinates**.
+> 5. Adicione um nó do **Python** ao espaço de trabalho, clique no botão “+” no nó para adicionar outra entrada e conecte os dois pontos de referência em cada entrada. Abra o nó do **Python**.
 
-Take a look at the Python node in Dynamo. Find the full code at the below.
+Veja o nó do Python no Dynamo. Encontre o código completo abaixo.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
 
-> 1. **System.Array:** Revit needs a **System Array** as an input (rather than a Python list). This is just one more line of code, but paying attention to argument types will facilitate Python programming in Revit.
+> 1. **System.Array:** o Revit precisa de uma **matriz do sistema** como uma entrada (em vez de uma lista do Python). Isso é apenas mais uma linha de código, mas prestar atenção aos tipos de argumentos facilitará a programação em Python no Revit.
 
 ```
 import sys
@@ -134,34 +134,34 @@ refPtArray = System.Array[ReferencePoint]([startRefPt, endRefPt])
 OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ```
 
-In Dynamo, we've created two reference points with a line connecting them using Python. Let's take this a little further in the next exercise.
+No Dynamo, criamos dois pontos de referência com uma linha que os conecta usando o Python. Vamos aprofundar isso um pouco no próximo exercício.
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
 
-## Exercise 3
+## Exercício 3
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-This exercise keeps it simple, but drives home the topics of connecting data and geometry from Revit to Dynamo and back. Let's begin by opening Revit-StructuralFraming.rvt. Once opened, launch Dynamo and open the file Revit-StructuralFraming.dyn.
+Este exercício mantém a simplicidade, mas esclarece os tópicos de conexão de dados e a geometria do Revit para o Dynamo e vice-versa. Começaremos abrindo o Revit-StructuralFraming.rvt. Depois de aberto, inicie o Dynamo e abra o arquivo Revit-StructuralFraming.dyn.
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 01.jpg>)
 
-This Revit file is about as basic as it gets. Two reference curves: one drawn on Level 1 and the other drawn on Level 2. We want to get these curves into Dynamo and maintain a live link.
+Esse arquivo do Revit é o mais básico possível. Duas curvas de referência: uma desenhada no Nível 1 e outra desenhada no Nível 2. Queremos inserir essas curvas no Dynamo e manter um vínculo dinâmico.
 
-In this file we have a set of nodes plugging into five inputs of a Python node.
+Nesse arquivo, temos um conjunto de nós que se conectam a cinco entradas de um nó do Python.
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
-> 1. **Select Model Element Nodes:** Hit the select button for each and select a corresponding curve in Revit.
-> 2. **Code Block:** using the syntax `0..1..#x;`_,_ connect an integer slider ranging from 0 to 20 into the _x_ input. This designates the number of beams to draw between the two curves.
-> 3. **Structural Framing Types:** We'll choose the default W12x26 beam here from the dropdown menu.
-> 4. **Levels:** select "Level 1".
+> 1. **Nós Select Model Element** (Selecionar elemento de modelo): clique no botão de seleção para cada um e selecione uma curva correspondente no Revit.
+> 2. **Bloco de código**: usando a sintaxe `0..1..#x;`_,_ conecte um controle deslizante de número inteiro que varia entre 0 e 20 à entrada _x_. Isso especifica o número de vigas a serem desenhadas entre as duas curvas.
+> 3. **Structural Framing Types** (Tipos de framing estrutural): escolheremos a viga padrão W12x26 na opção do menu suspenso.
+> 4. **Levels** (Níveis): selecione “Level 1” (Nível 1).
 
-This code in Python is a little more dense, but the comments within the code describe what's happening in the process
+Esse código em Python é um pouco mais denso, mas os comentários no código descrevem o que está acontecendo no processo
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
 
@@ -200,23 +200,23 @@ for val in IN[2]:
 	OUT.append(beam.Faces)
 ```
 
-In Revit, we have an array of beams spanning the two curves as structural elements. Note: this isn't a realistic example...the structural elements are used as an example for native Revit instances created from Dynamo.
+No Revit, temos uma matriz de vigas que se estendem pelas duas curvas como elementos estruturais. Observação: Este exemplo não é realista... os elementos estruturais são usados como um exemplo para instâncias nativas do Revit criadas no Dynamo.
 
-In Dynamo, we can see the results as well. The beams in the **Watch3D** node refer to the geometry queried from the Revit elements.
+No Dynamo, também podemos ver os resultados. As vigas no nó **Watch3D** se referem à geometria consultada dos elementos do Revit.
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
 
-Notice that we have a continuous process of translating data from the Revit Environment to the Dynamo Environment. In summary, here's how the process plays out:
+Observe que temos um processo contínuo de conversão de dados do ambiente do Revit para o ambiente do Dynamo. Em resumo, veja como o processo é realizado:
 
-1. Select Revit element
-2. Convert Revit element to Dynamo Curve
-3. Divide Dynamo curve into a series of Dynamo points
-4. Use the Dynamo points between two curves to create Dynamo lines
-5. Create Revit beams by referencing Dynamo lines
-6. Output Dynamo surfaces by querying the geometry of Revit beams
+1. Selecionar o elemento do Revit
+2. Converter o elemento do Revit em curva do Dynamo
+3. Dividir a curva do Dynamo em uma série de pontos do Dynamo
+4. Usar os pontos do Dynamo entre duas curvas para criar linhas do Dynamo
+5. Criar vigas do Revit referenciando linhas do Dynamo
+6. Gerar saída de superfícies do Dynamo ao consultar a geometria de vigas do Revit
 
-This may sound a little heavy handed, but the script makes it as simple as editing the curve in Revit and re-running the solver (although you may have to delete the previous beams when doing so). _This is due to the fact that we are placing beams in python, thus breaking the association that OOTB nodes have._
+Isso pode parecer um pouco severo, mas o script torna isso tão simples quando editar a curva no Revit e executar novamente o solucionador (embora você possa precisar excluir as vigas anteriores ao fazer isso). _Isso se deve ao fato de que estamos colocando vigas no Python, portanto, quebrando a associação que os nós prontos para uso têm._
 
-With an update to the reference curves in Revit, we get a new array of beams.
+Com uma atualização das curvas de referência no Revit, obtemos uma nova matriz de vigas.
 
 ![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)

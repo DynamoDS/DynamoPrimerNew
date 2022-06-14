@@ -1,73 +1,73 @@
-# Revit Use-Cases
+# Casos de uso do Revit
 
-Have you ever wanted to look up something in Revit by a piece of data that it has?
+Alguma vez você já quis procurar algo no Revit por um dado que ele possui?
 
-Chances are if you have you've done something like the following example.
+É provável que você tenha feito algo como o seguinte exemplo.
 
-In the image below we are collecting all of the rooms in the Revit model, getting the index of the room we want (by room number), and finally grabbing the room at the index.
+Na imagem abaixo, estamos coletando todos os ambientes no modelo do Revit, obtendo o índice do ambiente desejado (por número do ambiente) e, por fim, selecionando o ambiente no índice.
 
 ![](<../images/5-5/4/dictionary - collect room in revit model.jpg>)
 
-> 1. Collect all rooms in the model.
-> 2. Room number to find.
-> 3. Get the room number and find what index it is at.
-> 4. Obtain the room at the index.
+> 1. Colete todos os ambientes no modelo.
+> 2. Número do ambiente a ser localizado.
+> 3. Obtenha o número do ambiente e encontre em que índice ele se encontra.
+> 4. Obtenha o ambiente no índice.
 
-## Exercise : Room Dictionary
+## Exercício: Dicionário de ambiente
 
-### Part I: Creating Room Dictionary
+### Parte I: Criar o dicionário de ambiente
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-5/4/roomDictionary.dyn" %}
 
-Now let's recreate this idea using dictionaries. First we need to collect all of the rooms in our Revit model.
+Agora, vamos recriar essa ideia usando dicionários. Primeiro, precisamos coletar todos os ambientes em nosso modelo do Revit.
 
 ![](<../images/5-5/4/dictionary - exercise I - 01.jpg>)
 
-> 1. We choose the Revit category we want to work with, (In this case, we are working with rooms).
-> 2. We tell Dynamo to collect all of those elements
+> 1. Escolhemos a categoria do Revit com a qual queremos trabalhar (neste caso, estamos trabalhando com ambientes).
+> 2. Dizemos ao Dynamo para coletar todos esses elementos.
 
-Next, we need to decide what keys we are going to use to look up this data by. (Information on keys can be found on the section, [What is a dictionary?](9-1\_what-is-a-dictionary.md)).
+Em seguida, precisamos decidir quais chaves usaremos para examinar esses dados. (Para obter informações sobre as chaves, consulte a seção [O que é um dicionário?](9-1\_what-is-a-dictionary.md)).
 
 ![](<../images/5-5/4/dictionary - exercise I - 02.jpg>)
 
-> 1. The data that we will use is the room number.
+> 1. Os dados que usaremos são o número do ambiente.
 
-Now we will create the dictionary with the given keys and elements.
+Agora, criaremos o dicionário com as chaves e os elementos indicados.
 
 ![](<../images/5-5/4/dictionary - exercise I - 03.jpg>)
 
-> 1. The node, **Dictionary.ByKeysValues** will create a dictionary given the appropriate inputs.
-> 2. `Keys` need to be a string, while `values` can be a variety of object types.
+> 1. O nó **Dictionary.ByKeysValues** criará um dicionário com as entradas apropriadas.
+> 2. `Keys` precisa ser uma sequência de caracteres, enquanto `values` pode ser uma variedade de tipos de objetos.
 
-Lastly, we can retrieve a room from the dictionary with its room number now.
+Por último, é possível recuperar um ambiente do dicionário com seu número de ambiente atual.
 
 ![](<../images/5-5/4/dictionary - exercise I - 04.jpg>)
 
-> 1. `String` will be the key that we are using to look up an object from the dictionary.
-> 2. **Dictionary.ValueAtKey** will obtain the object from the dictionary now.
+> 1. `String` será a chave que estamos usando para pesquisar um objeto no dicionário.
+> 2. **Dictionary.ValueAtKey** obterá o objeto do dicionário agora.
 
-### Part II: Values Look Up
+### Parte II: Pesquisa de valores
 
-Using this same dictionary logic, we can create dictionaries with grouped objects as well. If we wanted to look up all rooms at a given level we can modify the above graph as follows.
+Usando a mesma lógica de dicionário, também é possível criar dicionários com objetos agrupados. Se quiséssemos examinar todos os ambientes em um determinado nível, poderíamos modificar o gráfico acima, como segue.
 
 ![](<../images/5-5/4/dictionary - exercise II - 01.jpg>)
 
-> 1. Rather than using the room number as the key, we can now use a parameter value, (in this case we will use level).
+> 1. Em vez de usar o número do ambiente como a chave, agora podemos usar um valor de parâmetro (neste caso, usaremos o nível).
 
 ![](<../images/5-5/4/dictionary - exercise II - 02.jpg>)
 
-> 1. Now, we can group the rooms by the level that they reside on.
+> 1. Agora, é possível agrupar os ambientes pelo nível em que residem.
 
 ![](<../images/5-5/4/dictionary - exercise II - 03.jpg>)
 
-> 1. With the elements grouped by the level, we can now use the shared keys (unique keys) as our key for our dictionary, and the lists of rooms as the elements.
+> 1. Com os elementos agrupados pelo nível, agora podemos usar as chaves compartilhadas (chaves exclusivas) como a nossa chave para o dicionário e as listas de ambientes como os elementos.
 
 ![](<../images/5-5/4/dictionary - exercise II - 04.jpg>)
 
-> 1. Lastly, using the levels in the Revit model, we can look up which rooms reside on that level in the dictionary. `Dictionary.ValueAtKey` will take the level name and return the room objects at that level.
+> 1. Por último, usando os níveis no modelo do Revit, podemos procurar quais ambientes residem naquele nível no dicionário. `Dictionary.ValueAtKey` obterá o nome do nível e retornará os objetos do ambiente naquele nível.
 
-The opportunities for Dictionary use are really endless. The ability to relate your BIM data in Revit to the element itself poses a variety of use cases.
+As oportunidades de uso do dicionário são realmente infinitas. A capacidade de relacionar seus dados do BIM no Revit com o próprio elemento apresenta uma variedade de casos de uso.

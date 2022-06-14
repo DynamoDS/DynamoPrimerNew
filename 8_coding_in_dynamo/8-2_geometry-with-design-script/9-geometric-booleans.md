@@ -1,10 +1,10 @@
-# Geometric Booleans
+# Booleanos geométricos
 
-_Intersect_, _Trim_, and _SelectTrim_ are primarily used on lower-dimensional geometry such as Points, Curves, and Surfaces. Solid geometry on the other hand, has an additional set of methods for modifying form after their construction, both by subtracting material in a manner similar to _Trim_ and combining elements together to form a larger whole.
+_Intersect_, _Trim_ e _SelectTrim_ são principalmente usados na geometria bidimensional menor como Pontos, Curvas e Superfícies. A geometria sólida, por outro lado, tem um conjunto adicional de métodos para modificar a forma após sua construção, tanto subtraindo o material de uma forma similar a _Trim_ e combinando elementos para formar um todo maior.
 
-### Union
+### União
 
-The _Union_ method takes two solid objects and creates a single solid object out of the space covered by both objects. The overlapping space between objects is combined into the final form. This example combines a Sphere and a Cuboid into a single solid Sphere-Cube shape:
+O método _Union_ usa dois objetos sólidos e cria um único objeto sólido fora do espaço coberto por ambos os objetos. O espaço sobreposto entre os objetos é combinado na forma final. Este exemplo combina uma esfera e um cubóide em uma única forma sólida de cubo de esfera:
 
 ![](../images/8-2/9/GeometricBooleans\_01.png)
 
@@ -19,9 +19,9 @@ s2 = Sphere.ByCenterPointRadius(
 combined = s1.Union(s2);
 ```
 
-### Difference
+### Diferença
 
-The _Difference_ method, like _Trim_, subtracts away the contents of the input tool solid from the base solid. In this example we carve out a small indentation out of a sphere:
+O método _Difference_, como _Trim_, subtrai o conteúdo do sólido da ferramenta de entrada do sólido base. Neste exemplo, nós colocamos um pequeno recuo fora de uma esfera:
 
 ![](../images/8-2/9/GeometricBooleans\_02.png)
 
@@ -36,9 +36,9 @@ tool = Sphere.ByCenterPointRadius(
 result = s.Difference(tool);
 ```
 
-### Intersect
+### Intersecionar
 
-The _Intersect_ method returns the overlapping Solid between two solid Inputs. In the following example, _Difference_ has been changed to _Intersect_, and the resulting Solid is the missing void initially carved out:
+O método _Interesect_ retorna o sólido sobreposto entre duas entradas de sólidos. No exemplo a seguir, _Difference_ foi alterada para _Intersect_, e o sólido resultante é o vazio ausente inicialmente entalhado:
 
 ![](../images/8-2/9/GeometricBooleans\_03.png)
 

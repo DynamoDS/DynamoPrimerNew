@@ -1,6 +1,6 @@
-# Python Point Generators
+# Geradores de pontos do Python
 
-The following Python scripts generate point arrays for several examples. They should be pasted into a Python Script node as follows:
+Os seguintes scripts Python geram matrizes de pontos para diversos exemplos. Elas devem ser coladas em um nó Python Script como segue:
 
 ![](<../images/8-2/10/python points 01.jpg>)
 

@@ -1,13 +1,13 @@
-# Dictionaries in Code Blocks
+# Dicionários em blocos de código
 
-Not only does Dynamo 2.0 introduce the nodes previously discussed for dictionaries, there is new functionality in code blocks for this as well!
+O Dynamo 2.0 não só apresenta os nós anteriormente discutidos dos dicionários, como também existe uma nova funcionalidade nos blocos de código para isso.
 
-You can use syntax like below or DesignScript-based representations of the nodes.
+É possível usar a sintaxe como abaixo ou as representações com base em DesignScript dos nós.
 
 ![](<../images/5-5/3/dictionaries in cb - syntax (1).jpg>)
 
-Since a dictionary is an object type in Dynamo we can commit the following actions upon it.
+Como um dicionário é um tipo de objeto no Dynamo, podemos confirmar as seguintes ações sobre ele.
 
 ![](<../images/5-5/3/dictionaries in cb - actions with code blocks.jpg>)
 
-Maintaining these sort of interactions becomes especially useful when relating Revit data to strings. Next, we will look at some Revit use-cases.
+Manter este tipo de interações se torna especialmente útil ao relacionar dados do Revit com sequências de caracteres. A seguir, vamos examinar alguns casos de uso do Revit.

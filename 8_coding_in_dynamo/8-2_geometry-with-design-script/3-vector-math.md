@@ -1,8 +1,8 @@
-# Vector Math
+# Matemática de vetores
 
-Objects in computational designs are rarely created explicitly in their final position and form, and are most often translated,rotated, and otherwise positioned based off of existing geometry. Vector math serves as a kind-of geometric scaffolding to give direction and orientation to geometry, as well as to conceptualize movements through 3D space without visual representation.
+Os objetos em projetos de cálculo raramente são criados explicitamente em sua posição e forma finais e são, na maioria das vezes, convertidos, rotacionados e posicionados de outra forma, com base na geometria existente. A matemática de vetores serve como um tipo de andaime geométrico para dar direção e orientação à geometria, bem como para conceituar movimentos através do espaço 3D sem representação visual.
 
-At its most basic, a vector represents a position in 3D space, and is often times thought of as the endpoint of an arrow from the position (0, 0, 0) to that position. Vectors can be created with the _ByCoordinates_ constructor, taking the x, y, and z position of the newly created Vector object. Note that Vector objects are not geometric objects, and don’t appear in the Dynamo window. However, information about a newly created or modified vector can be printed in the console window:
+Em seu nível mais básico, um vetor representa uma posição no espaço 3D e, muitas vezes, é considerado como o ponto final de uma seta da posição (0, 0, 0) para essa posição. É possível criar os vetores com o construtor _ByCoordinates_, usando as posições x, y e z do objeto Vector recém-criado. Observe que os objetos Vector não são objetos geométricos e não aparecem na janela do Dynamo. No entanto, as informações sobre um vetor recém-criado ou modificado podem ser impressas na janela do console:
 
 ![](<../images/8-2/3/vector math 01.jpg>)
 
@@ -13,11 +13,11 @@ v = Vector.ByCoordinates(1, 2, 3);
 s = v.X + " " + v.Y + " " + v.Z;
 ```
 
-A set of mathematical operations are defined on Vector objects, allowing you to add, subtract, multiply, and otherwise move objects in 3D space as you would move real numbers in 1D space on a number line.
+Um conjunto de operações matemáticas é definido em objetos Vector, permitindo adicionar, subtrair, multiplicar e mover objetos no espaço 3D, como você moveria os números reais no espaço 1D em uma linha de número.
 
-### Vector Addition
+### Adição de vetor
 
-Vector addition is defined as the sum of the components of two vectors, and can be thought of as the resulting vector if the two component vector arrows are placed “tip to tail.” Vector addition is performed with the _Add_ method, and is represented by the diagram on the left.
+A adição de vetores é definida como a soma dos componentes de dois vetores e poderá ser considerada como o vetor resultante se as duas setas de vetor do componente forem inseridas “ponta a ponta”. A adição de vetores é realizada com o método _Add_ e é representada pelo diagrama à esquerda.
 
 ![](../images/8-2/3/VectorMath\_02.png)
 
@@ -29,9 +29,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Add(b);
 ```
 
-### Vector Subtraction
+### Subtração de vetor
 
-Similarly, two Vector objects can be subtracted from each other with the _Subtract_ method. Vector subtraction can be thought of as the direction from first vector to the second vector.
+De forma similar, dois objetos Vector podem ser subtraídos um do outro com o método _Subtract_. A subtração de vetores pode ser considerada como a direção do primeiro vetor para o segundo vetor.
 
 ![](../images/8-2/3/VectorMath\_03.png)
 
@@ -43,9 +43,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Subtract(b);
 ```
 
-### Vector Multiplication
+### Multiplicação de vetor
 
-Vector multiplication can be thought of as moving the endpoint of a vector in its own direction by a given scale factor.
+A multiplicação de vetores pode ser considerada como mover a extremidade de um vetor em sua própria direção por um determinado fator de escala.
 
 ![](../images/8-2/3/VectorMath\_04.png)
 
@@ -56,9 +56,9 @@ a = Vector.ByCoordinates(4, 4, 0);
 c = a.Scale(5);
 ```
 
-### Normalize Vector Length
+### Normalizar comprimento de vetor
 
-Often it’s desired when scaling a vector to have the resulting vector’s length exactly equal to the scaled amount. This is easily achieved by first normalizing a vector, in other words setting the vector’s length exactly equal to one.
+Muitas vezes, ao dimensionar um vetor, é desejável que o comprimento resultante seja exatamente igual à quantidade dimensionada. Isso é facilmente conseguido pela normalização de um vetor, ou seja, definindo o comprimento do vetor exatamente igual a um.
 
 ![](<../images/8-2/3/vector math 05.jpg>)
 
@@ -74,11 +74,11 @@ c = b.Scale(5);
 len = c.Length;
 ```
 
-c still points in the same direction as a (1, 2, 3), though now it has length exactly equal to 5.
+c ainda aponta na mesma direção que a (1, 2, 3), embora agora apresente comprimento exatamente igual a 5.
 
-### Cross Product
+### Produto transversal
 
-Two additional methods exist in vector math which don’t have clear parallels with 1D math, the cross product and dot product. The cross product is a means of generating a Vector which is orthogonal (at 90 degrees to) to two existing Vectors. For example, the cross product of the x and y axes is the z axis, though the two input Vectors don’t need to be orthogonal to each other. A cross product vector is calculated with the _Cross_ method.
+Existem dois métodos adicionais na matemática de vetores que não têm paralelos claros com a matemática 1D, o produto vetorial e o produto escalar. O produto vetorial é um meio de gerar um vetor ortogonal (a 90 graus) a dois vetores existentes. Por exemplo, o produto vetorial dos eixos x e y é o eixo z, embora os dois vetores de entrada não precisem ser ortogonais entre si. Um vetor de produto vetorial é calculado com o método _Cross_.
 
 ![](../images/8-2/3/VectorMath\_06.png)
 
@@ -90,9 +90,9 @@ b = Vector.ByCoordinates(0, 1, 1);
 c = a.Cross(b);
 ```
 
-### Dot Product
+### Produto escalar
 
-An additional, though somewhat more advanced function of vector math is the dot product. The dot product between two vectors is a real number (not a Vector object) that relates to, but is not exactly, the angle between two vectors. One useful properties of the dot product is that the dot product between two vectors will be 0 if and only if they are perpendicular. The dot product is calculated with the _Dot_ method.
+Uma função adicional, embora um pouco mais avançada da matemática vetorial, é o produto escalar. O produto escalar entre dois vetores é um número real (não um objeto Vector) que se relaciona, mas não é exatamente, o ângulo entre dois vetores. Uma propriedade útil do produto escalar é que o produto escalar entre dois vetores será 0 somente se for perpendicular. O produto escalar é calculado com o método _Dot_.
 
 ![](<../images/8-2/3/vector math 07.jpg>)
 

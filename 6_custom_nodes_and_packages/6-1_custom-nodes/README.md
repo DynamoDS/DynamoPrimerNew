@@ -1,6 +1,6 @@
-# Custom Nodes
+# Nós personalizados
 
-Dynamo offers many Core Nodes for a wide range of visual programming tasks. Sometimes a quicker, more elegant, or more easily shared solution is to build your own Nodes. These can be reused among different projects, they make your graphs clearer and cleaner, and they can be pushed to the package manager and shared with the global Dynamo community.
+O Dynamo oferece muitos nós principais para uma ampla gama de tarefas de programação visual. Às vezes, uma solução mais rápida, mais elegante ou compartilhada com mais facilidade consiste em construir seus próprios nós. Eles podem ser reusados em diferentes projetos e tornam os gráficos mais claros e limpos, além de poderem ser enviados para o gerenciador de pacotes e compartilhados com a comunidade global do Dynamo.
 
 ![](<../images/6-1/customNodes1 (1).png>)
 

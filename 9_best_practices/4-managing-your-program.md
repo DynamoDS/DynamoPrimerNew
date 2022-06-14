@@ -1,55 +1,55 @@
-# Managing Your Program
+# Gerenciar o programa
 
-Working within a Visual Programming process can be a powerful creative activity, but very quickly the Program Flow and key user inputs can be obscured by complexity and/or layout of the Workspace. Let's review some best practices for managing your program.
+Trabalhar dentro de um processo de programação visual pode ser uma poderosa atividade criativa, mas muito rapidamente o fluxo do programa e as principais entradas do usuário podem ser ofuscadas pela complexidade e/ou layout do espaço de trabalho. Vamos rever algumas práticas recomendadas para o gerenciamento do programa.
 
-### Alignment&#x20;
+### Alinhamento&#x20;
 
-Once we have added more than a few Nodes to the Workspace, we may want to re-organize the layout of the Nodes for clarity's sake. By selecting more than one Node and right-clicking on the Workspace, the pop up window includes an **Align Selection** menu with justification and distribution options in X and Y.
+Depois de adicionar alguns nós ao espaço de trabalho, convém reorganizar o layout dos nós por uma questão de clareza. Ao selecionar mais de um nó e clicar com o botão direito do mouse no espaço de trabalho, a janela pop up inclui um menu **Alinhar seleção** com opções de justificação e distribuição em X e Y.
 
 ![](<./images/4/managing your program - alignment.jpg>)
 
-> 1. Select more than one Node
-> 2. Right-click on the Workspace
-> 3. Use the **Align Selection** options
+> 1. Selecione mais de um nó
+> 2. Clique com o botão direito do mouse no espaço de trabalho
+> 3. Use as opções de **Alinhar seleção**
 
-### Notes&#x20;
+### Observações&#x20;
 
-With some experience, we may be able to "read" the Visual Program by reviewing the Node Names and following the Program Flow. For users of all experience levels, it is also good practice to include plain language labels and descriptions. Dynamo has a **Notes** Node with an editable text field to do so. We can add Notes to the Workspace in two ways:
+Com alguma experiência, podemos “ler” o programa visual, revisando os nomes dos nós e seguindo o fluxo do programa. Para usuários de todos os níveis de experiência, também é uma boa prática incluir descrições e rótulos em linguagem simples. O Dynamo tem um nó **Notes** com um campo de texto editável para fazer isso. É possível adicionar notas ao espaço de trabalho de duas maneiras:
 
 ![](<./images/4/managing your program - notes.jpg>)
 
-> 1. Browse to the menu Edit > Create Note
-> 2. Use the keyboard shortcut Ctrl+W
+> 1. Navegue até o menu Editar > Criar nota
+> 2. Use o atalho de teclado Ctrl+W
 
-Once the Note is added to the Workspace a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
+Após a nota ser adicionada ao espaço de trabalho, será exibido um campo de texto, permitindo editar o texto na nota. Após serem criadas, é possível editar as notas clicando duas vezes ou clicando com o botão direito do mouse no nó Note.
 
 ![](<./images/4/managing your program - notes 02.jpg>)
 
-### Grouping&#x20;
+### Agrupar&#x20;
 
-When our Visual Program gets big, it is helpful to identify the larger steps that will be executed. We can highlight larger collections of Nodes with a **Group** to label them with a colored rectangle in the background and a title. There are three ways to make a Group with more than one Node selected:
+Quando nosso programa visual cresce, é útil identificar as etapas maiores que serão executadas. Podemos destacar coleções maiores de nós com um **Grupo** para rotulá-los com um retângulo colorido em segundo plano e um título. Existem três maneiras de criar um grupo com mais de um nó selecionado:
 
 ![](<./images/4/managing your program - grouping 01.jpg>)
 
-> 1. Browse to the menu Edit > Create Group
-> 2. Use the keyboard shortcut Ctrl+G
-> 3. Right-click on the Workspace and select "Create Group"
+> 1. Navegue até o menu Editar > Criar grupo
+> 2. Use o atalho de teclado Ctrl+G
+> 3. Clique com o botão direito do mouse no espaço de trabalho e selecione “Criar grupo”
 
-Once a Group is created we can edit its settings, such as the title and color.&#x20;
+Uma vez criado um grupo, podemos editar suas configurações, como o título e a cor.&#x20;
 
 ![](<./images/4/managing your program - grouping 02.jpg>)
 
 {% hint style="info" %}
-Tip: Using both Notes and Groups is an effective way to annotate your file and increase readability.
+Dica: Usar notas e grupos é uma forma eficaz de anotar o arquivo e aumentar a legibilidade.
 {% endhint %}
 
-Here's an example of program from with Notes and Groups added:
+Veja um exemplo de programa com Notas e grupos adicionados:
 
 ![](<./images/4/managing your program - grouping 03.jpg>)
 
-> 1. Note: "Grid Parameters"
-> 2. Note: "Grid Points"
-> 3. Group: "Create a Grid of Points"
-> 4. Group: "Create an Attractor Point"
-> 5. Note: "Calibrate Distance Values"
-> 6. Note: "Variable Grid of Circles"
+> 1. Nota: “Parâmetros da grade”
+> 2. Nota: “Pontos da grade”
+> 3. Nota: “Criar uma grade de pontos”
+> 4. Grupo: “Criar um ponto atrativo”
+> 5. Nota: “Calibrar valores de distância”
+> 6. Nota: “Grade de círculos variável”

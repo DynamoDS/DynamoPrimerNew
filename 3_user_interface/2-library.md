@@ -1,62 +1,62 @@
-# Library
+# Biblioteca
 
-The Library contains all of the loaded Nodes, including the ten default categories Nodes that come with the installation as well as any additionally loaded Custom Nodes or Packages. The Nodes in the Library are organized hierarchically within libraries, categories, and, where appropriate, subcategories.
+A biblioteca contém todos os nós carregados, incluindo os dez nós de categorias padrão que vêm com a instalação, bem como quaisquer nós ou pacotes personalizados carregados adicionalmente. Os nós na biblioteca são organizados hierarquicamente dentro de bibliotecas, categorias e, quando apropriado, subcategorias.
 
 ![](<images/3-2/library - library UI.jpg>)
 
-* Basic Nodes: Comes with default installation.
-* Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
-* Nodes from the Package Manager: Collection of published Custom Nodes.
+* Nós básicos: vêm com a instalação padrão.
+* Nós personalizados: armazene as rotinas ou gráficos especiais usados com frequência como nós personalizados. Também é possível compartilhar os nós personalizados com a comunidade
+* Nós do Gerenciador de pacotes: conjunto de nós personalizados publicados.
 
-We will go through the [hierarchy of Nodes](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](3-3\_dynamo\_libraries.md#quick-search-in-library) and learn about some of the [frequently used Nodes](3-3\_dynamo\_libraries.md#frequently-used-nodes) among them.
+Vamos abordar as categorias da [hierarquia de nós](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories), mostrar como é possível [pesquisar rapidamente na biblioteca](3-3\_dynamo\_libraries.md#quick-search-in-library) e saber mais sobre alguns dos [nós usados com frequência](3-3\_dynamo\_libraries.md#frequently-used-nodes).
 
-### Library Hierarchy for Categories
+### Hierarquia da biblioteca para categorias
 
-Browsing through these categories is the fastest way to understand the hierarchy of what we can add to our Workspace and the best way to discover new Nodes you haven't used before.
+Navegar por essas categorias é a maneira mais rápida de entender a hierarquia do que podemos adicionar ao nosso espaço de trabalho e a melhor maneira de descobrir novos nós que você não usou antes.
 
-Browse the Library by clicking through the menus to expand each category and its subcategory
+Navegue na biblioteca clicando nos menus para expandir cada categoria e suas subcategorias
 
 {% hint style="info" %}
-Geometry are great menus to begin exploring as they contain the largest quantity of Nodes.
+Geometria oferece ótimos menus para começar a explorar, pois contêm a maior quantidade de nós.
 {% endhint %}
 
-![](<images/3-2/library  - modified and resize library categories.jpg>)
+![](<images/3-2/library - modified and resize library categories.jpg>)
 
-> 1. Library
-> 2. Category
-> 3. Subcategory
-> 4. Node
+> 1. Biblioteca
+> 2. Categoria
+> 3. Subcategoria
+> 4. Nó
 
-These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
+Estas opções categorizam os nós na mesma subcategoria com base na capacidade dos nós de **criar** dados, executar uma **ação** ou **consultar** dados.
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/3-2/user interface - create.jpg>) **Criar**: criar ou construir uma geometria do zero. Por exemplo, um círculo.
+* ![](<images/3-2/user interface - action.jpg>) **Ação**: executar uma ação em um objeto. Por exemplo, dimensionar um círculo.
+* ![](<images/3-2/user interface - query.jpg>) **Consulta**: obter uma propriedade de um objeto que já existe. Por exemplo, obter o raio de um círculo.
 
-Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
+Passe o cursor do mouse sobre um nó para obter informações mais detalhadas além do nome e do ícone. Isso nos oferece uma maneira rápida de entender o que o nó faz, o que ele exigirá para as entradas e o que ele fornecerá como resultado.
 
 ![](<images/3-2/user interface - node description.jpg>)
 
-> 1. Description - plain language description of the Node
-> 2. Icon - larger version of the icon in the Library Menu
-> 3. Input(s) - name, data type, and data structure
-> 4. Output(s) - data type and structure
+> 1. Descrição: descrição de texto simples do nó
+> 2. Ícone: versão maior do ícone no menu Biblioteca
+> 3. Entrada(s): nome, tipo de dados e estrutura de dados
+> 4. Saída(s): tipo de dados e estrutura
 
-### Quick search in Library
+### Pesquisa rápida na biblioteca
 
-If you know with relative specificity which Node you want to add to your Workspace, type in the **Search** field to look up all matching Nodes.
+Se você souber com algum grau de especificidade qual é o nó que deseja adicionar ao espaço de trabalho, digite no campo **Pesquisar** para procurar todos os nós correspondentes.
 
-Choose by clicking on the Node you wish to add or hit Enter to add highlighted nodes to the center of the Workspace.
+Clique no nó que deseja adicionar ou pressione Enter para adicionar nós realçados ao centro do espaço de trabalho.
 
 ![](<images/3-2/user interface - search.jpg>)
 
-#### Search by hierarchy
+#### Pesquisar por hierarquia
 
-Beyond using keywords to try to find Nodes, we can type the hierarchy separated with a period in the Search Field or with Code Blocks (which use the _Dynamo textual language_).
+Além de usar palavras-chave para tentar localizar nós, podemos digitar a hierarquia separada por um ponto no campo de pesquisa ou com blocos de código (que usam o _idioma textual do Dynamo_).
 
-The hierarchy of each library is reflected in the Name of Nodes added to the Workspace.
+A hierarquia de cada biblioteca é refletida no nome dos nós adicionados ao espaço de trabalho.
 
-Typing in different portions of the Node's place in the Library hierarchy in the `library.category.nodeName` format returns different results
+Se inserir diferentes partes do local do nó na hierarquia da biblioteca no formato `library.category.nodeName`, os resultados obtidos serão diferentes
 
 * `library.category.nodeName`
 
@@ -66,73 +66,73 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 ![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
 
-* `nodeName` or `keyword`
+* `nodeName` ou `keyword`
 
 ![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
 
-Typically the Name of the Node in the Workspace will be rendered in the `category.nodeName` format, with some notable exceptions particularly in the Input and View Categories.
+Normalmente, o nome do nó no espaço de trabalho será renderizado no formato `category.nodeName`, com algumas exceções notáveis, especialmente nas categorias de entrada e vista.
 
-Beware of similarly named Nodes and note the category difference:
+Tenha atenção aos nós de nome semelhante e observe a diferença de categoria:
 
-* Nodes from most libraries will include the category format
+* Os nós da maioria das bibliotecas incluirão o formato da categoria
 
 ![](<images/3-2/library - node category differences 1.jpg>)
 
-* `Point.ByCoordinates` and `UV.ByCoordinates` have the same Name but come from different categories
+* `Point.ByCoordinates` e `UV.ByCoordinates` têm o mesmo nome, mas são provenientes de diferentes categorias
 
 ![](<images/3-2/library - node category differences 2.jpg>)
 
-* Notable exceptions include Built-in Functions, Core.Input, Core.View, and Operators
+* Exceções notáveis incluem funções incorporadas, Core.Input, Core.View e Operators
 
 ![](<images/3-2/library - node category differences 3.jpg>)
 
-### Frequently Used Nodes
+### Nós utilizados com frequência
 
-With hundreds of Nodes included in the basic installation of Dynamo, which ones are essential for developing our Visual Programs? Let's focus on those that let us define our program's parameters (**Input**), see the results of a Node's action (**Watch**), and define inputs or functionality by way of a shortcut (**Code Block**).
+Com centenas de nós incluídos na instalação básica do Dynamo, quais são essenciais para o desenvolvimento de nossos programas visuais? Vamos nos concentrar naqueles que nos permitem definir os parâmetros do programa (**Entrada**), ver os resultados de uma ação do nó de (**Inspeção**) e definir entradas ou funcionalidades por meio de um atalho (**Code Block**).
 
-#### Input Nodes
+#### Nós de entrada
 
-Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
+Os nós de entrada são os principais meios para o usuário do nosso Programa visual, seja você mesmo ou outra pessoa, fazer a interface com os parâmetros mais importantes. Confira alguns exemplos disponíveis na biblioteca principal:
 
-| Node           |                                                | Node           |                                                |
+| Nó |                                                | Nó |                                                |
 | -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean        | ![](<images/3-2/library - boolean.jpg>)        | Number         | ![](<images/3-2/library - number.jpg>)         |
-| String         | ![](<images/3-2/library - string.jpg>)         | Number Slider  | ![](<images/3-2/library - number slider.jpg>)  |
-| Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path      | ![](<images/3-2/library - file path.jpg>)      |                |                                                |
+| Booleano | ![](<images/3-2/library - boolean.jpg>) | Number | ![](<images/3-2/library - number.jpg>) |
+| Sequência | ![](<images/3-2/library - string.jpg>) | Número do controle deslizante | ![](<images/3-2/library - number slider.jpg>) |
+| Caminho do diretório | ![](<images/3-2/library - diretory path.jpg>) | Controle deslizante de números inteiros | ![](<images/3-2/library - integer slider.jpg>) |
+| Caminho do arquivo | ![](<images/3-2/library - file path.jpg>) |                |                                                |
 
-#### Watch & Watch3D
+#### Inspeção e Watch3D
 
-The Watch Nodes are essential to managing the data that is flowing through your Visual Program. You can view the result of a Node through the **Node data preview** by hovering your mouse over the node.
+Os nós de inspeção de variáveis são essenciais para gerenciar os dados que fluem através do seu Programa visual. É possível visualizar o resultado de um nó através da **visualização dos dados do nó** passando o cursor do mouse sobre o nó.
 
 ![](<images/3-2/library - node preview.jpg>)
 
-It will be useful to keep it revealed in a **Watch** Node
+Será útil manter a exibição dessas informações em um nó de **Inspeção **
 
 ![](<images/3-2/library - watch node.jpg>)
 
-Or see the geometry results through a **Watch3D** Node.
+Ou consultar os resultados da geometria através de um nó **Watch3D**.
 
 ![](<images/3-2/library - watch3d node.gif>)
 
-Both of these are found in the View Category in the Core Library.
+Ambas são encontradas na categoria da vista na biblioteca principal.
 
 {% hint style="info" %}
-Tip: Occasionally the 3D Preview can be distracting when your Visual Program contains a lot of Nodes. Consider unchecking the Showing Background Preview option in the Settings Menu and using a Watch3D Node to preview your geometry.
+Dica: Às vezes, a visualização 3D pode causar distrações quando o Programa visual contém muitos nós. Considere desmarcar a opção Exibir visualização de plano de fundo no menu Configurações e usar um nó Watch3D para visualizar a geometria.
 {% endhint %}
 
 #### Code Block
 
-Code Block Nodes can be used to define a block of code with lines separated by semi-colons. This can be as simple as `X/Y`.
+Os nós Code Block podem ser utilizados para definir um Code Block com linhas separadas por ponto e vírgula. Isso pode ser tão simples quanto `X/Y`.
 
-We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+Também é possível usar os blocos de código como um atalho para definir uma entrada de número ou acionar outra funcionalidade do nó. A sintaxe para fazer isso segue a convenção de nomenclatura do idioma textual do Dynamo, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
 
-Here is a simple demonstration (with instructions) for using Code Block in your script.
+Confira aqui uma demonstração simples (com instruções) para usar o Bloco de código no script.
 
 ![](<images/3-2/library - code block demo.gif>)
 
-1. Double-click to create a Code Block Node
-2. Type `Circle.ByCenterPointRadius(x,y);`
-3. Click on Workspace to clear the selection should add `x` and `y` inputs automatically.
-4. Create a Point.ByCoordinates Node and a Number Slider then connect them to the inputs of the Code Block.
-5. The result of the executing the Visual Program is shown as the circle in the 3D Preview
+1. Clique duas vezes para criar um nó de bloco de código
+2. `Circle.ByCenterPointRadius(x,y);`Type
+3. Clique no espaço de trabalho para limpar a seleção e adicionar as entradas `x` e `y` automaticamente.
+4. Crie um nó Point.ByCoordinates e um controle deslizante de número e, em seguida, conecte-os às entradas do Bloco de código.
+5. O resultado da execução do Programa visual é mostrado como o círculo na visualização 3D

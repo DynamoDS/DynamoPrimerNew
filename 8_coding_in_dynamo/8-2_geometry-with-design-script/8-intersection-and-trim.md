@@ -1,19 +1,19 @@
-# Intersection and Trim
+# Interseção e aparar
 
-Many of the examples so far have focused on the construction of higher dimensional geometry from lower dimensional objects. Intersection methods allow this higher dimensional geometry to generate lower dimensional objects, while the trim and select trim commands allow script to heavily modify geometric forms after they’ve been created.
+Muitos dos exemplos até agora têm se concentrado na construção de geometria dimensional maior com base em objetos dimensionais menores. Os métodos de interseção permitem que essa geometria dimensional maior gere objetos dimensionais menores, enquanto os comandos Trim e Select Trim permitem que o script modifique fortemente as formas geométricas após a criação.
 
-The _Intersect_ method is defined on all pieces of geometry in Dynamo, meaning that in theory any piece of geometry can be intersected with any other piece of geometry. Naturally some intersections are meaningless, such as intersections involving Points, as the resulting object will always be the input Point itself. The other possible combinations of intersections between objects are outlined in the following chart. The following chart outlines the result of various intersection operations:
+O método _Intersect_ é definido em todas as partes da geometria no Dynamo, o que significa que, em teoria, qualquer parte da geometria pode fazer interseção com qualquer outra parte da geometria. Naturalmente, algumas interseções são sem sentido, como interseções envolvendo pontos, já que o objeto resultante será sempre o próprio ponto de entrada. As outras combinações possíveis de interseções entre objetos são descritas no gráfico a seguir. A tabela a seguir descreve o resultado de diversas operações de interseção:
 
-### **Intersect**
+### **Interseção**
 
-| _With:_     | Surface | Curve | Plane        | Solid   |
+| _Com:_ | Superfície | Curva | Plano | Sólido |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Surface** | Curve   | Point | Point, Curve | Surface |
-| **Curve**   | Point   | Point | Point        | Curve   |
-| **Plane**   | Curve   | Point | Curve        | Curve   |
-| **Solid**   | Surface | Curve | Curve        | Solid   |
+| **Superfície** | Curva | Ponto | Ponto, Curva | Superfície |
+| **Curva** | Ponto | Ponto | Ponto | Curva |
+| **Plano** | Curva | Ponto | Curva | Curva |
+| **Sólido** | Superfície | Curva | Curva | Sólido |
 
-The following very simple example demonstrates the intersection of a plane with a NurbsSurface. The intersection generates a NurbsCurve array, which can be used like any other NurbsCurve.
+O exemplo a seguir demonstra a interseção de um plano com uma NurbsSurface. A intersecção gera uma matriz NurbsCurve, que pode ser usada como qualquer outra NurbsCurve.
 
 ![](../images/8-2/8/IntersectionAndTrim\_01.png)
 
@@ -34,18 +34,18 @@ crvs = surf.Intersect(pl);
 crvs_moved = crvs.Translate(0, 0, 10);
 ```
 
-The _Trim_ method is very similar to the Intersect method, in that it is defined for almost every piece of geometry. However, there are far more limitations on _Trim_ than on _Intersect_.
+O método _Trim_ é muito similar ao método Intersect, pois ele é definido para quase todas as partes da geometria. No entanto, há muito mais limitações em _Trim_ do que em _Intersect_.
 
-### **Trim**
+### **Recortar**
 
-|             | _Using:_ Point | Curve | Plane | Surface | Solid |
+|             | _Usando:_ Ponto | Curva | Plano | Superfície | Sólido |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _On:_ Curve | Yes            | No    | No    | No      | No    |
-| Polygon     | -              | No    | Yes   | No      | No    |
-| Surface     | -              | Yes   | Yes   | Yes     | Yes   |
-| Solid       | -              | -     | Yes   | Yes     | Yes   |
+| _Em:_ curva | Sim | No | No | No | Não |
+| Polígono | - | Não | Sim | No | Não |
+| Superfície | - | Sim | Sim | Sim | Sim |
+| Sólido | - | - | Sim | Sim | Sim |
 
-Something to note about _Trim_ methods is the requirement of a “select” point, a point which determines which geometry to discard, and which pieces to keep. Dynamo finds and discards the trimmed geometry closest to the select point.
+Algo a ser observado sobre os métodos _Trim_ é o requisito de um ponto de “seleção”, um ponto que determina qual geometria será descartada e quais elementos devem ser mantidos. O Dynamo localiza e descarta a geometria recortada mais próxima do ponto selecionado.
 
 ![](../images/8-2/8/IntersectionAndTrim\_02.png)
 

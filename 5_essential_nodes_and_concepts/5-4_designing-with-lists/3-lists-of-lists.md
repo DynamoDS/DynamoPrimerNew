@@ -1,292 +1,292 @@
-# Lists of Lists
+# Listas de listas
 
-### Lists of Lists
+### Listas de listas
 
-Let's add one more tier to the hierarchy. If we take the deck of cards from the original example and create a box which contains multiple decks, the box now represents a list of decks, and each deck represents a list of cards. This is a list of lists. For the analogy in this section, the image below contains a list of coin rolls, and each roll contains a list of pennies.
+Vamos adicionar mais um nível à hierarquia. Se pegarmos o maço de cartas do exemplo original e criarmos uma caixa que contém vários maços, a caixa agora representará uma lista de maços e cada maço representará uma lista de cartas. Esta é uma lista de listas. Para a analogia nesta seção, a imagem abaixo contém uma lista de rolos de moeda e cada rolo contém uma lista de moedas de um centavo.
 
-![Coins](../images/5-4/3/coins-521245\_640.jpg)
+![Moedas](../images/5-4/3/coins-521245\_640.jpg)
 
-> Photo by [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
+> Foto de [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
 
-### Query
+### Consulta
 
-What **queries** can we make from the list of lists? This accesses existing properties.
+Que **consultas** podemos fazer na lista de listas? Isso acessa as propriedades existentes.
 
-* Number of coin types? 2.
-* Coin type values? $0.01 and $0.25.
-* Material of quarters? 75% copper and 25% nickel.
-* Material of pennies? 97.5% zinc and 2.5% copper.
+* Quantidade de tipos de moeda? 2.
+* Valores de tipos de moeda? $ 0,01 e $ 0,25.
+* Material de moedas de vinte e cinco centavos? 75% de cobre e 25% de níquel.
+* Material de moedas de um centavo? 97,5% de zinco e 2,5% de cobre.
 
-### Action
+### Ação
 
-What **actions** can we perform on the list of lists? This changes the list of lists based on a given operation.
+Que **ações** podemos executar na lista de listas? Isso altera a lista de listas com base em uma operação fornecida.
 
-* Select a specific stack of quarters or pennies.
-* Select a specific quarter or penny.
-* Rearrange the stacks of quarters and pennies.
-* Shuffle the stacks together.
+* Selecione uma pilha específica de moedas de vinte e cinco centavos ou de um centavo.
+* Selecione uma moeda específica de vinte e cinco centavos ou um centavo.
+* Reorganize as pilhas de moedas de vinte e cinco centavos e de um centavo.
+* Misture as pilhas.
 
-Again, Dynamo has an analagous node for each one of the operations above. Since we're working with abstract data and not physical objects, we need a set of rules to govern how we move up and down the data hierarchy.
+Novamente, o Dynamo tem um nó analógico para cada uma das operações acima. Como estamos trabalhando com dados abstratos e não com objetos físicos, precisamos de um conjunto de regras para controlar como movemos para cima e para baixo na hierarquia de dados.
 
-When dealing with lists of lists, the data is layered and complex, but this provides an opportunity to do some awesome parametric operations. Let's break down the fundamentals and discuss a few more operations in the lessons below.
+Ao lidar com listas de listas, os dados são complexos e dispostos em camadas, mas isso proporciona a oportunidade de executar algumas operações paramétricas incríveis. Vamos separar os conceitos básicos e discutir mais algumas operações nas lições abaixo.
 
-## Exercise
+## Exercício
 
-### Top-Down Hierarchy
+### Hierarquia de cima para baixo
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
-The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like **List.GetItemAtIndex**, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
+O conceito fundamental a ser aprendido nesta seção: **o Dynamo trata as listas intrinsecamente como objetos**. Essa hierarquia de cima para baixo é desenvolvida considerando a programação orientada a objetos. Em vez de selecionar subelementos com um comando como **List.GetItemAtIndex**, o Dynamo seleciona o índice da lista principal na estrutura de dados. E esse item pode ser outra lista. Vamos explicar em detalhes com uma imagem de exemplo:
 
 ![top-down](<../images/5-4/3/lists of lists - top down hierachy.jpg>)
 
-> 1. With **Code Block**, we've defined two ranges: `0..2; 0..3;`
-> 2. These ranges are connected to a **Point.ByCoordinates** node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
-> 3. Notice that the **Watch** node gives 3 lists with 4 items in each list.
-> 4. When using **List.GetItemAtIndex**, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
+> 1. Com o **Bloco de código**, definimos dois intervalos: `0..2; 0..3;`
+> 2. Esses intervalos são conectados a um nó **Point.ByCoordinates** com amarra definida como _“Produto transversal”_. Isso cria um eixo de pontos e também retorna uma lista de listas como uma saída.
+> 3. Observe que o nó de **Inspeção** fornece três listas com quatro itens cada.
+> 4. Ao usar **List.GetItemAtIndex**, com um índice de 0, o Dynamo seleciona a primeira lista e todo o seu conteúdo. Outros programas podem selecionar o primeiro item de cada lista na estrutura de dados, mas o Dynamo emprega uma hierarquia de cima para baixo ao lidar com os dados.
 
 ### List.Flatten
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/3/Flatten.dyn" %}
 
-Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.
+Mesclar remove todos os níveis de dados de uma estrutura de dados. Isso é útil quando as hierarquias de dados não são necessárias para sua operação, mas pode ser arriscado porque remove as informações. O exemplo abaixo mostra o resultado da mesclagem de uma lista de dados.
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 01.jpg>)
 
-> 1. Insert one line of code to define a range in **Code Block**: `-250..-150..#4;`
-> 2. Plugging the _code block_ into the _x_ and _y_ input of a **Point.ByCoordinates** node, we set the lacing to _"Cross Product"_ to get a grid of points.
-> 3. The **Watch** node shows that we have a list of lists.
-> 4. A **PolyCurve.ByPoints** node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four polycurves representing each row in the grid.
+> 1. Insira uma linha de código para definir um intervalo em **Bloco de código**: `-250..-150..#4;`
+> 2. Conectando o _bloco de código_ à entrada _x_ e _y_ de um nó **Point.ByCoordinates**, definimos a amarra como _“Produto transversal”_ para obter um eixo de pontos.
+> 3. O nó de **Inspeção** mostra que temos uma lista de listas.
+> 4. Um nó **PolyCurve.ByPoints** fará referência a cada lista e criará uma PolyCurve respectiva. Observe na visualização do Dynamo que temos quatro policurvas que representam cada linha no eixo.
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 02.jpg>)
 
-> 1. By inserting a _flatten_ before the polycurve node, we've created one single list for all of the points. The **PolyCurve.ByPoints** node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.
+> 1. Ao inserir uma _mesclagem_ antes do nó PolyCurve, criamos uma única lista para todos os pontos. O nó **PolyCurve.ByPoints** faz referência a uma lista para criar uma curva e, como todos os pontos estão em uma lista, obtemos uma policurva em zigue-zague que segue em toda a lista de pontos.
 
-There are also options for flattening isolated tiers of data. Using the **List.Flatten** node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in **List.Map**. We'll discuss more about **List.Map** below.
+Há também opções para mesclar níveis isolados de dados. Usando o nó **List.Flatten**, é possível definir um número definido de níveis de dados para mesclar do topo da hierarquia. Essa será uma ferramenta realmente útil se você estiver lidando com estruturas de dados complexas, que não são necessariamente relevantes para o fluxo de trabalho. Outra opção é usar o nó de mesclagem como uma função em ** List.Map**. Discutiremos mais sobre **List.Map** abaixo.
 
-### Chop
+### Cortar
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/3/Chop.dyn" %}
 
-When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
+Durante a modelagem paramétrica, também há ocasiões em que você desejará modificar a estrutura de dados para uma lista existente. Há muitos nós disponíveis para isso também, e o corte é a versão mais básica. Com o corte, é possível particionar uma lista em sublistas com um número definido de itens.
 
-The chop command divides lists based on a given list length. In some ways, chop is the opposite of flatten: rather than removing data structure, it adds new tiers to it. This is a helpful tool for geometric operations like the example below.
+O comando de corte divide as listas com base em um determinado comprimento de lista. De certa forma, o corte é o oposto da mesclagem: em vez de remover a estrutura de dados, ele adiciona novos níveis a ela. Essa é uma ferramenta útil para operações geométricas como o exemplo abaixo.
 
 ![Exercise](<../images/5-4/3/lists of lists - chop.jpg>)
 
 ### List.Map
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/3/Map.dyn" %}
 
-A **List.Map/Combine** applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
+**List.Map/Combine** aplica uma função definida a uma lista de entrada, mas uma etapa abaixo na hierarquia. As combinações são o mesmo que os mapas, exceto que as combinações podem ter várias entradas correspondentes à entrada de uma determinada função.
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the_ **List.Map** _functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de _**List.Map**_ foi resolvida com a adição do recurso _**List@Level**_. Para obter mais informações, consulte _ [_List@Level_](6-3\_lists-of-lists.md#listlevel)_, abaixo._
 
-As a quick introduction, let's review the **List.Count** node from a previous section.
+Como uma rápida introdução, vamos revisar o nó **List.Count** de uma seção anterior.
 
-The **List.Count** node counts all of the items in a list. We'll use this to demonstrate how **List.Map** works.
+O nó **List.Count** conta todos os itens em uma lista. Usaremos isso para demonstrar como **List.Map** funciona.
 
 ![](<../images/5-4/3/lists of lists - map 01.jpg>)
 
-> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
+> 1. Insira duas linhas de código no **Bloco de código**: `-50..50..#Nx; -50..50..#Ny;`
 >
->     After typing in this code, the code block will create two inputs for Nx and Ny.
-> 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the **Code Block**.
-> 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
-> 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
+>    Após digitar esse código, o bloco de código criará duas entradas para Nx e Ny.
+> 2. Com dois _controles deslizantes de número inteiro_, defina os valores _Nx_ e _Ny_ conectando-os ao **Bloco de código**.
+> 3. Conecte cada linha do bloco de código às respectivas entradas _X_ e _Y_ de um nó **Point.ByCoordinates**. Clique com o botão direito do mouse no nó, selecione “Amarra” e selecione _“Produto transversal”_. Isso cria um eixo de pontos. Como definimos o intervalo de -50 a 50, estamos expandindo o eixo padrão do Dynamo.
+> 4. Um nó de _**Inspeção**_ revela os pontos criados. Observe a estrutura de dados. Criamos uma lista de listas. Cada lista representa uma linha de pontos do eixo.
 
 ![Exercise](<../images/5-4/3/lists of lists - map 02 (1).jpg>)
 
-> 1. Attach a **List.Count** node to the output of the watch node from the previous step.
-> 2. Connect a **Watch** node to the **List.Count** output.
+> 1. Anexe um nó **List.Count** à saída do nó de inspeção da etapa anterior.
+> 2. Conecte um nó de **Inspeção** à saída** List.Count**.
 
-Notice that the List.Count node gives a value of 5. This is equal to the "Nx" variable as defined in the code block. Why is this?
+Observe que o nó List.Count fornece um valor igual a 5. Isso é igual à variável “Nx”, conforme definido no bloco de código. Por que isso ocorre?
 
-* First, the **Point.ByCoordinates** node uses the "x" input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.
-* Since Dynamo treats lists as objects in and of themselves, a **List.Count** node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.
+* Primeiro, o nó **Point.ByCoordinates** usa a entrada “x” como entrada principal para criar listas. Quando Nx é 5 e Ny é 3, obtemos uma lista de 5 listas, cada uma com 3 itens.
+* Como o Dynamo trata as listas intrinsecamente como objetos, um nó **List.Count** é aplicado à lista principal na hierarquia. O resultado é um valor igual a 5 ou o número de listas na lista principal.
 
 ![Exercise](<../images/5-4/3/lists of lists - map 03.jpg>)
 
-> 1. By using a **List.Map** node, we take a step down in the hierarchy and perform a _"function"_ at this level.
-> 2. Notice that the **List.Count** node has no input. It is being used as a function, so the **List.Count** node will be applied to every individual list one step down in the hierarchy. The blank input of **List.Count** corresponds to the list input of **List.Map**.
-> 3. The results of **List.Count** now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.
+> 1. Usando um nó **List.Map**, descemos um degrau na hierarquia e executamos uma _“função”_ neste nível.
+> 2. Observe que o nó **List.Count** não tem nenhuma entrada. Ele está sendo usado como uma função para que o nó **List.Count** seja aplicado a cada lista individual um degrau abaixo na hierarquia. A entrada em branco de **List.Count** corresponde à entrada de lista de **List.Map**.
+> 3. Os resultados de **List.Count** agora fornecem uma lista de 5 itens, cada um com valor de 3. Isso representa o tamanho de cada sublista.
 
 ### **List.Combine**
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de List.Combine foi resolvida com a adição do recurso _**List@Level**_. Para obter mais informações, consulte _ [_List@Level_](6-3\_lists-of-lists.md#listlevel)_, abaixo._
 
-In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
+Neste exercício, usaremos **List.Combine** para demonstrar como pode ser usado para aplicar uma função em listas separadas de objetos.
 
-Start by setting up two lists of points.
+Comece configurando duas listas de pontos.
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 01.jpg>)
 
-> 1. Use **Sequence** node to generate 10 values, each with a 10 step increment.
-> 2. Connect the result to the x input of a **Point.ByCoordinates** node. This will create a list of points in Dynamo.
-> 3. Add a second **Point.ByCoordinates** node to the workspace, use the same **Sequence** output as its x input, but use an **Interger Slider** as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.
+> 1. Use o nó **Sequência** para gerar 10 valores, cada um com um incremento de 10 etapas.
+> 2. Conecte o resultado à entrada x de um nó **Point.ByCoordinates**. Isso criará uma lista de pontos no Dynamo.
+> 3. Adicione um segundo nó **Point.ByCoordinates** ao espaço de trabalho, use a mesma saída de **Sequência** como sua entrada x, mas use um **Controle deslizante de número inteiro** como sua entrada y e defina seu valor como 31 (pode ser qualquer valor, desde que não se sobreponha ao primeiro conjunto de pontos) para que os dois conjuntos de pontos não se sobreponham um ao outro.
 
-Next, we will use **List.Combine** to apply a function on objects in 2 separate lists. In this case, it will be a simple draw line function.
+Em seguida, usaremos **List.Combine** para aplicar uma função em objetos em duas listas separadas. Neste caso, será uma função de linha de desenho simples.
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 02.jpg>)
 
-> 1. Add **List.Combine** to the workspace and connect the 2 set of points as its list0 & list1 input.
-> 2. Use a **Line.ByStartPointEndPoint** as the input function for **List.Combine**.
+> 1. Adicione **List.Combine** ao espaço de trabalho e conecte os dois conjuntos de pontos como suas entradas list0 e list1.
+> 2. Use **Line.ByStartPointEndPoint** como a função de entrada para **List.Combine**.
 
-Once completed, the 2 set of points are zipped/paired together through a **Line.ByStartPointEndPoint** function and returning 10 lines in Dynamo.
+Após a conclusão, os dois conjuntos de pontos são compactados/emparelhados por meio de uma função **Line.ByStartPointEndPoint** e retornam 10 linhas no Dynamo.
 
 {% hint style="info" %}
-Refer to exercise in n-Dimensional Lists to see another example of using List.Combine.
+Consulte o exercício em Listas n-dimensionais para ver outro exemplo de uso de List.Combine.
 {% endhint %}
 
 ### List@Level
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/3/Listatlevel.dyn" %}
 
-Preferred to **List.Map**, the **List@Level** feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
+Com preferência em relação ao **List.Map**, o recurso **List@Level** permite selecionar diretamente com qual nível de lista você deseja trabalhar diretamente na porta de entrada do nó. Esse recurso pode ser aplicado a qualquer entrada de nó e permitirá que você acesse os níveis de suas listas com mais rapidez e facilidade do que outros métodos. Basta informar ao nó qual nível da lista você deseja usar como entrada e deixar que o nó faça o restante.
 
-In this exercise, we will use the **List@Level** feature to isolate a specific level of data.
+Neste exercício, usaremos o recurso ** List@Level** para isolar um nível de dados específico.
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 01.jpg>)
 
-We will start with a simple 3D grid of points.
+Começaremos com um eixo de pontos 3D simples.
 
-> 1. The grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.
-> 2. These tiers exist at different **Levels**. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.
-> 3. The list levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
+> 1. Como o eixo é construído com um intervalo para X, Y e Z, sabemos que os dados estão estruturados com três níveis: uma lista X, uma lista Y e uma lista Z.
+> 2. Esses níveis existem em diferentes **Níveis**. Os níveis são indicados na parte inferior da bolha de visualização. As colunas de níveis da lista correspondem aos dados da lista acima para ajudar a identificar em qual nível se deve trabalhar.
+> 3. Os níveis da lista estão organizados em ordem inversa para que os dados de menor nível estejam sempre em “L1”. Isso ajudará a garantir que seus gráficos funcionarão conforme planejado, mesmo que algo seja alterado a montante.
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 02.jpg>)
 
-> 1. To use the **List@Level** function, click '>'. Inside this menu, you will see two checkboxes.
-> 2. **Use Levels** - This enables the **List@Level** functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.
-> 3. _Keep list structure_ – If enabled, you will have the option to keep that input’s level structure. Sometimes, you may have purposefully organized your data into sublists. By checking this option, you can keep your list organization intact and not lose any information.
+> 1. Para usar a função ** List@Level**, clique em “>”. Neste menu, você verá duas caixas de seleção.
+> 2. **Usar níveis** – Ativa a funcionalidade **List@Level**. Após clicar nessa opção, você poderá clicar e selecionar os níveis da lista de entrada que deseja que o nó use. Com esse menu, você pode experimentar rapidamente diferentes opções de nível clicando para cima ou para baixo.
+> 3. _Manter a estrutura da lista_ – se estiver ativada, você terá a opção de manter a estrutura do nível de entrada. Às vezes, você pode ter organizado intencionalmente seus dados em sublistas. Ao marcar essa opção, é possível manter a organização da lista intacta e não perder nenhuma informação.
 
-With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each list level and index combination will return a different set of points from our original 3D set.
+Com nosso eixo 3D simples, podemos acessar e visualizar a estrutura de lista alternando entre os níveis de lista. Cada combinação de nível de lista e índice retorna um conjunto de pontos diferente do nosso conjunto 3D original.
 
 ![](<../images/5-4/3/lists of lists - list at level 03.jpg>)
 
-> 1. “@L2” in DesignScript allows us to select only the List at Level 2. The List at Level 2 with the index 0 includes only the first set of Y points, returning only the XZ grid.
-> 2. If we change the Level filter to “L1”, we will be able to see everything in the first List Level. The List at Level 1 with the index 0 includes all of our 3D points in a flat list.
-> 3. If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.
-> 4. If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.
+> 1. “@L2” em DesignScript nos permite selecionar somente a lista no Nível 2. A lista no Nível 2 com o índice 0 inclui somente o primeiro conjunto de pontos Y, retornando somente o eixo XZ.
+> 2. Se alterarmos o filtro Nível para “L1”, poderemos ver tudo no primeiro nível da lista. A lista no Nível 1 com índice 0 inclui todos os nossos pontos 3D em uma lista plana.
+> 3. Se tentarmos fazer o mesmo para “L3”, veremos somente os pontos do terceiro nível da lista. A lista no Nível 3 com índice 0 inclui somente o primeiro conjunto de pontos Z, retornando somente um eixo XY.
+> 4. Se tentarmos o mesmo para “L4”, veremos somente os pontos do terceiro nível da lista. A lista no Nível 4 com índice 0 inclui somente o primeiro conjunto de pontos X, retornando somente um eixo YZ.
 
-Although this particular example can also be created with **List.Map**, **List@Level** greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a **List.Map** and **List@Level** methods:
+Embora este exemplo específico também possa ser criado com **List.Map**, o recurso **List@Level** simplifica muito a interação, facilitando o acesso aos dados do nó. Veja abaixo uma comparação entre os métodos**List.Map** e **List@Level**:
 
 ![](<../images/5-4/3/lists of lists - list at level 04.jpg>)
 
-> 1. Although both methods will give us access to the same points, the **List@Level** method allows us to easily toggle between layers of data within a single node.
-> 2. To access a point grid with **List.Map**, we will need a **List.GetItemAtIndex** node alongside the **List.Map**. For every list level that we are stepping down, we will need to use an additional **List.Map** node. Depending on the complexity of your lists, this could require you to add a significant amount of **List.Map** Nodes to your graph to access the right level of information.
-> 3. In this example, a **List.GetItemAtIndex** node with a **List.Map** node returns the same set of points with the same list structure as the **List.GetItemAtIndex** with '@L3' selected.
+> 1. Embora ambos os métodos ofereçam acesso aos mesmos pontos, o método **List@Level** permite alternar facilmente entre as camadas de dados em um único nó.
+> 2. Para acessar um eixo de pontos com **List.Map**, precisamos de um nó ** List.GetItemAtIndex** junto com **List.Map**. Para cada nível de lista que descermos, precisaremos usar um nó **List.Map** adicional. Dependendo da complexidade das listas, isso pode exigir a adição de uma quantidade significativa de nós **List.Map** ao gráfico para acessar o nível de informações correto.
+> 3. Neste exemplo, um nó ** List.GetItemAtIndex** com um nó **List.Map** retorna o mesmo conjunto de pontos com a mesma estrutura de lista que o **List.GetItemAtIndex** com “@L3” selecionado.
 
-### Transpose
+### Transpor
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/3/Transpose.dyn" %}
 
-Transpose is a fundamental function when dealing with lists of lists. Just as in spreadsheet programs, a transpose flips the columns and rows of a data structure. We'll demonstrate this with a basic matrix below, and in the following section, we'll demonstrate how a transpose can be use to create geometric relationships.
+Transpor é uma função fundamental ao lidar com listas de listas. Assim como nos programas de planilha, uma transposição inverte as colunas e linhas de uma estrutura de dados. Vamos demonstrar isso com uma matriz básica abaixo e, na seção a seguir, vamos demonstrar como uma transposição pode ser usada para criar relações geométricas.
 
-![Transpose](../images/5-4/3/transpose1.jpg)
+![Transpor](../images/5-4/3/transpose1.jpg)
 
-Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
+Vamos excluir os nós **List.Count** do exercício anterior e usar alguma geometria para ver como os dados se estruturaram.
 
 ![](<../images/5-4/3/lists of lists - transpose 01.jpg>)
 
-> 1. Connect a **PolyCurve.ByPoints** to the output of the watch node from **Point.ByCoordinates**.
-> 2. The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.
+> 1. Conecte um **PolyCurve.ByPoints** à saída do nó de inspeção de **Point.ByCoordinates**.
+> 2. A saída mostra 5 PolyCurves e podemos ver as curvas na visualização do Dynamo. O nó do Dynamo está procurando uma lista de pontos (ou uma lista de listas de pontos neste caso) e criando uma única PolyCurve com base neles. Essencialmente, cada lista foi convertida em uma curva na estrutura de dados.
 
 ![](<../images/5-4/3/lists of lists - transpose 02.jpg>)
 
-> 1. A **List.Transpose** node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.
-> 2. Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.
-> 3. Notice the geometric result: using **PolyCurve.ByPoints**, we get 3 polycurves in the perpendicular direction to the original curves.
+> 1. Um nó **List.Transpose** alternará todos os itens com todas as listas em uma lista de listas. Isso parece complicado, mas é a mesma lógica que Transpor no Microsoft Excel: alternar colunas com linhas em uma estrutura de dados.
+> 2. Observe o resultado abstrato: a transposição alterou a estrutura da lista de 5 listas com 3 itens cada uma para 3 listas com 5 itens cada uma.
+> 3. Observe o resultado geométrico: usando **PolyCurve.ByPoints**, obtemos 3 PolyCurves na direção perpendicular às curvas originais.
 
-## Code Block for List Creation
+## Bloco de código para criação de lista
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
+A abreviação do bloco de código usa “[]” para definir uma lista. Essa é uma maneira muito mais rápida e fluida de criar uma lista do que com o nó **List.Create**. O **Bloco de código** é discutido com mais detalhes em [Blocos de código e DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Consulte a imagem abaixo para observar como uma lista com várias expressões pode ser definida com o bloco de código.
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 01.jpg>)
 
-#### Code Block Query
+#### Consulta do bloco de código
 
-**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with code block.
+A abreviação do **Bloco de código** usa “[]” como uma forma rápida e fácil de selecionar itens específicos que você deseja de uma estrutura de dados complexa. Os **Blocos de código** são discutidos com mais detalhes no [capítulo Bloco de código e DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Consulte a imagem abaixo para observar como uma lista com vários tipos de dados pode ser consultada com o bloco de código.
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 02.jpg>)
 
-## Exercise - Querying and Inserting Data
+## Exercício – Consultar e inserir dados
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/3/ReplaceItems.dyn" %}
 
-This exercise uses some of the logic established in the previous one to edit a surface. Our goal here is intuitive, but the data structure navigation will be more involved. We want to articulate a surface by moving a control point.
+Este exercício usa uma lógica estabelecida no exercício anterior para editar uma superfície. Nosso objetivo aqui é intuitivo, mas a navegação na estrutura de dados estará mais envolvida. Desejamos articular uma superfície movendo um ponto de controle.
 
-Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.
+Comece com a cadeia de caracteres dos nós acima. Estamos criando uma superfície básica que abrange o eixo padrão do Dynamo.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 01.jpg>)
 
-> 1. Using **Code Block**, insert these two lines of code and connect to the _u_ and _v_ inputs of **Surface.PointAtParameter**, respectively: `-50..50..#3;` `-50..50..#5;`
-> 2. Be sure to set the Lacing of **Surface.PointAtParameter** to _"Cross Product"_.
-> 3. The **Watch** node show that we have a list of 3 lists, each with 5 items.
+> 1. Usando o **Bloco de código**, insira essas duas linhas de código e conecte-se às entradas _u_ e _v_ de **Surface.PointAtParameter**, respectivamente: `-50..50..#3;` `-50..50..#5;`
+> 2. Certifique-se de configurar a Amarra de **Surface.PointAtParameter** como _“Produto transversal”_.
+> 3. O nó de **Inspeção** mostra que temos uma lista de 3 listas, cada uma com 5 itens.
 
-In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
+Nesta etapa, queremos consultar o ponto central no eixo que criamos. Para fazer isso, vamos selecionar o ponto médio na lista do meio. Faz sentido, certo?
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 02.jpg>)
 
-> 1. To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.
-> 2. Using **Code Block**, we'll write a basic line of code for querying a list of lists:\
+> 1. Para confirmar que esse é o ponto correto, também podemos clicar nos itens do nó de inspeção para confirmar que estamos selecionando o item correto.
+> 2. Usando o **Bloco de código**, vamos escrever uma linha básica de código para consultar uma lista de listas:\
 >    `points[1][2];`
-> 3. Using **Geometry.Translate**, we'll move the selected point up in the _Z_ direction by _20_ units.
+> 3. Usando **Geometry.Translate**, moveremos o ponto selecionado para cima na direção _Z_ por _20_ unidades.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 03.jpg>)
 
-> 1. Let's also select the middle row of points with a **List.GetItemAtIndex** node. Note: Similar to a previous step, we can also query the list with **Code Block**, using a line of `points[1];`
+> 1. Vamos também selecionar a linha média de pontos com um nó **List.GetItemAtIndex**. Observação: De forma similar a uma etapa anterior, também é possível consultar a lista com o **Bloco de código**, usando uma linha de `points[1];`
 
-So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
+Até agora, consultamos com êxito o ponto central e o movemos para cima. Agora, queremos inserir esse ponto movido de volta para a estrutura de dados original.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 04.jpg>)
 
-> 1. First, we want to replace the item of the list we isolated in a previous step.
-> 2. Using **List.ReplaceItemAtIndex**, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (**Geometry.Translate**).
-> 3. The output shows that we've input the moved point into the middle item of the list.
+> 1. Primeiro, queremos substituir o item da lista que isolamos em uma etapa anterior.
+> 2. Usando **List.ReplaceItemAtIndex**, vamos substituir o item do meio e o índice de _“2”_ pelo item de substituição conectado ao ponto movido (**Geometry.Translate**).
+> 3. A saída mostra que inserimos o ponto movido no item do meio da lista.
 
-Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
+Agora que modificamos a lista, precisamos inseri-la de volta na estrutura de dados original: a lista de listas.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 05.jpg>)
 
-> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
-> 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
-> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
+> 1. Seguindo a mesma lógica, use **List.ReplaceItemAtIndex** para substituir a lista do centro pela nossa lista modificada.
+> 2. Observe que os **Blocos de código**__ que definem o índice para estes dois nós são 1 e 2, que coincidem com a consulta original do **Blocos de código** (_pontos[1][2]_).
+> 3. Ao selecionar a lista no _índice 1_, vemos a estrutura de dados realçada na visualização do Dynamo. Mesclamos com êxito o ponto movido para a estrutura de dados original.
 
-There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
+Existem várias maneiras de criar uma superfície com base nesse conjunto de pontos. Neste caso, vamos criar uma superfície por meio da elevação de curvas.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 06.jpg>)
 
-> 1. Create a **NurbsCurve.ByPoints** node and connect the new data structure to create three nurbs curves.
+> 1. Crie um nó **NurbsCurve.ByPoints** e conecte a nova estrutura de dados para criar três curvas NURBS.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 07.jpg>)
 
-> 1. Connect a **Surface.ByLoft** to the output from **NurbsCurve.ByPoints**. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!
+> 1. Conecte uma **Surface.ByLoft** à saída de **NurbsCurve.ByPoints**. Agora, temos uma superfície modificada. É possível alterar o valor _Z_ original da geometria. Converta e observe a atualização da geometria.

@@ -1,52 +1,52 @@
-# Points
+# Pontos
 
-## Points in Dynamo
+## Pontos no Dynamo
 
-### What is a Point?
+### O que é um ponto?
 
-A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
+Um [ponto](5-3\_points.md#point-as-coordinates) é definido por nada mais que um ou mais valores chamados coordenadas. Quantos valores de coordenadas precisamos para definir o ponto dependem do sistema de coordenadas ou do contexto em que ele reside.
 
-### 2D & 3D Point
+### Ponto 2D/3D
 
-The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates \[X,Y,Z] (3D Point in Dynamo).
+O tipo mais comum de ponto no Dynamo existe em nosso Sistema de coordenadas universais tridimensional e tem três coordenadas \[X,Y,Z] (Ponto 3D no Dynamo).
 
 ![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
 
-A 2D Point in Dynamo has two coordinates \[X,Y].
+Um ponto 2D no Dynamo tem duas coordenadas \[X,Y].
 
 ![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
 
-### Point on Curves and Surfaces
+### Ponto em curvas e superfícies
 
-Parameters for both Curves and Surfaces are continuous and extend beyond the edge of the given geometry. Since the shapes that define the Parameter Space reside in a three-dimensional World Coordinate System, we can always translate a Parametric Coordinate into a "World" Coordinate. The point \[0.2, 0.5] on the surface for example is the same as point \[1.8, 2.0, 4.1] in world coordinates.
+Os parâmetros para curvas e superfícies são contínuos e se estendem além da aresta da geometria fornecida. Como as formas que definem o Espaço de parâmetro residem em um Sistema de coordenadas universais tridimensional, sempre podemos converter uma coordenada paramétrica em uma coordenada "Universal". O ponto \[0,2; 0,5] na superfície, por exemplo, é o mesmo que o ponto \[1,8; 2,0; 4,1] nas coordenadas universais.
 
 ![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
 
-> 1. Point in assumed World XYZ Coordinates
-> 2. Point relative to a given Coordinate System (Cylindrical)
-> 3. Point as UV Coordinate on a Surface
+> 1. Ponto em coordenadas XYZ universais assumidas
+> 2. Ponto relativo a um determinado sistema de coordenadas (cilíndrico)
+> 3. Ponto como coordenada UV em uma superfície
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-## Deep Dive into...
+## Análise abrangente de...
 
-If Geometry is the language of a model, then Points are the alphabet. Points are the foundation upon which all other geometry is created - we need at least two Points to create a Curve, we need at least three Points to make a Polygon or a Mesh Face, and so on. Defining the position, order, and relationship among Points (try a Sine Function) allows us to define higher order geometry like things we recognize as Circles or Curves.
+Se a geometria é o idioma de um modelo, então os pontos são o alfabeto. Os pontos são a fundação na qual todas as outras geometrias são criadas: precisamos de ao menos dois pontos para criar uma curva, precisamos de ao menos três pontos para criar um polígono ou uma face de malha, e assim por diante. Definir a posição, a ordem e a relação entre os pontos (tente uma função de seno) nos permite definir uma geometria de ordem superior como as coisas que reconhecemos como círculos ou curvas.
 
-![Point to Curve](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![Ponto para curva](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
 
-> 1. A Circle using the functions `x=r*cos(t)` and `y=r*sin(t)`
-> 2. A Sine Curve using the functions `x=(t)` and `y=r*sin(t)`
+> 1. Um círculo que usa as funções `x=r*cos(t)` e `y=r*sin(t)`
+> 2. Uma curva senoidal que usa as funções `x=(t)` e `y=r*sin(t)`
 
-### Point as Coordinates
+### Ponto como Coordenadas
 
-Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using \[X,Y] on a Plane or \[U,V] if we are on a surface.
+Os pontos também podem existir em um sistema de coordenadas bidimensional. A convenção tem uma notação de letra diferente dependendo do tipo de espaço com que estamos trabalhando: podemos usar \[X,Y] em um plano ou \[U,V] se estivermos em uma superfície.
 
-![Point as Coordinates](../images/5-2/3/Coordinates.jpg)
+![Ponto como Coordenadas](../images/5-2/3/Coordinates.jpg)
 
-> 1. A Point in Euclidean Coordinate System: \[X,Y,Z]
-> 2. A Point in a Curve Parameter Coordinate System: \[t]
-> 3. A Point in a Surface Parameter Coordinate System: \[U,V]
+> 1. Um ponto no sistema de coordenadas “Euclidean”: \[X,Y,Z]
+> 2. Um ponto em um sistema de coordenadas de parâmetro de curva: \[t]
+> 3. Um ponto em um sistema de coordenadas de parâmetro de superfície: \[U,V]

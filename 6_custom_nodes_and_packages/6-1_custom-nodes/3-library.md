@@ -1,57 +1,57 @@
-# Publishing to Your Library
+# Publicar na biblioteca
 
-We've just created a custom node and applied it to a specific process in our Dynamo graph. And we like this node so much, we want to keep it in our Dynamo library to reference in other graphs. To do this, we'll publish the node locally. This is a similar process to publishing a package, which we'll walk through in more detail in the next chapter.
+Acabamos de criar um nó personalizado e aplicá-lo a um processo específico em nosso gráfico do Dynamo. Gostamos tanto desse nó, por isso queremos mantê-lo em nossa biblioteca do Dynamo para usar como referência em outros gráficos. Para fazer isso, vamos publicar o nó localmente. Este é um processo semelhante ao de publicar um pacote, que iremos mostrar em mais detalhes no próximo capítulo.
 
-By publishing a node locally, the node will be accessible in your Dynamo library when you open a new session. Without publishing a node, a Dynamo graph which references a custom node must also have that custom node in its folder (or the custom node must be imported into Dynamo using _File>Import Library_).
+Ao publicar um nó localmente, o nó estará acessível na biblioteca do Dynamo quando você abrir uma nova sessão. Se nenhum nó for publicado, o gráfico do Dynamo que faz referência a um nó personalizado também deverá ter aquele nó personalizado em sua pasta (ou o nó personalizado deverá ser importado para o Dynamo usando _Arquivo>Importar biblioteca_).
 
 {% hint style="warning" %}
-Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
+A publicação do nó personalizado está ativada somente no Dynamo for Revit e no Dynamo for Civil 3D. O Dynamo Sandbox não tem a funcionalidade de publicação.
 {% endhint %}
 
-## Exercise: Publishing a Custom Node Locally
+## Exercício: Publicar um nó personalizado localmente
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
 
-Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
+Vamos avançar com o nó personalizado que criamos na seção anterior. Quando o nó personalizado PointsToSurface é aberto, vemos o gráfico no Editor de nós personalizados do Dynamo. Também é possível abrir um nó personalizado clicando duas vezes nele no Editor de gráficos do Dynamo.
 
 ![](<../images/6-1/3/publish custom node locally 01.jpg>)
 
-To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
+Para publicar um nó personalizado localmente, basta clicar com o botão direito do mouse na tela e selecionar _“Publicar este nó personalizado...”_
 
 ![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
 
-Fill out the relevant information similar to the image above and select _"Publish Locally"._. Note that the Group field defines the main element accessible from the Dynamo menu.
+Preencha as informações relevantes de forma similar à imagem acima e selecione _“Publicar localmente”._. Observe que o campo Grupo define o elemento principal acessível no menu do Dynamo.
 
 ![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
 
-Choose a folder to house all of the custom nodes that you plan on publishing locally. Dynamo will check this folder each time it loads, so make sure the folder is in a permanent place. Navigate to this folder and choose _"Select Folder"._ Your Dynamo node is now published locally, and will remain in your Dynamo Toolbar each time you load the program!
+Escolha uma pasta para alojar todos os nós personalizados que você planeja publicar localmente. O Dynamo verificará essa pasta sempre que ela for carregada, portanto, certifique-se de que a pasta esteja em um local permanente. Navegue até essa pasta e escolha _“Selecionar pasta”._ O nó do Dynamo agora está publicado localmente e permanecerá na barra de ferramentas do Dynamo cada vez que o programa for carregado.
 
 ![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
 
-To check on the custom node folder location, go to _Dynamo > Preferences > Package Manager > Node and Package Paths_
+Para verificar o local da pasta do nó personalizado, vá para _Dynamo > Preferências> Gerenciador de pacotes > Caminhos de nó e pacote_
 
 ![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
 
-In this window we see a list of paths.
+Nessa janela, vemos uma lista de caminhos.
 
 ![](<../images/6-1/3/publish custom node exercise - 06.jpg>)
 
-> 1. _Documents\DynamoCustomNodes..._ refers to the location of custom nodes we've published locally.
-> 2. _AppData\Roaming\Dynamo..._ refers to the default location of Dynamo Packages installed online.
-> 3. You may want to move your local folder path down in the list order above (by selecting the folder path and clicking on the down arrow to the left of the path names). The top folder is the default path for package installs. So by keeping the default Dynamo package install path as the default folder, online packages will be separated from your locally published nodes.
+> 1. _Documents\DynamoCustomNodes..._ faz referência à localização dos nós personalizados que publicamos localmente.
+> 2. _AppData\Roaming\Dynamo..._ refere-se à localização padrão dos pacotes do Dynamo instalados on-line.
+> 3. Você pode desejar mover o caminho da pasta local para baixo na ordem da lista acima (selecionando o caminho da pasta e clicando na seta para baixo à esquerda dos nomes do caminho). A pasta superior é o caminho padrão para a instalação do pacote. Portanto, mantendo o caminho de instalação do pacote do Dynamo padrão como a pasta padrão, os pacotes on-line serão separados dos nós publicados localmente.
 
-We switched the order of the path names in order to have Dynamo's default path as the package install location.
+Alteramos a ordem dos nomes de caminho para que o caminho padrão do Dynamo seja o local de instalação do pacote.
 
 ![](<../images/6-1/3/publish custom node exercise - 07.jpg>)
 
-Navigating to this local folder, we can find the original custom node in the _".dyf"_ folder, which is the extension for a Dynamo Custom Node file. We can edit the file in this folder and the node will update in the UI. We can also add more nodes to the main _DynamoCustomNode_ folder and Dynamo will add them to your library at restart!
+Navegando para essa pasta local, podemos encontrar o nó personalizado original na pasta _“.dyf”_, que é a extensão de um arquivo de nó personalizado do Dynamo. Podemos editar o arquivo nessa pasta e o nó será atualizado na interface do usuário. Também é possível adicionar mais nós à pasta principal _DynamoCustomNode_ e o Dynamo os adicionará à sua biblioteca ao ser reiniciado.
 
 ![](<../images/6-1/3/publish custom node exercise - 08.jpg>)
 
-Dynamo will now load each time with "PointsToSurface" in the "DynamoPrimer" group of your Dynamo library.
+O Dynamo agora será carregado sempre com “PointsToSurface” no grupo “DynamoPrimer” de sua biblioteca do Dynamo.
 
 ![](<../images/6-1/3/publish custom node exercise - 09.jpg>)

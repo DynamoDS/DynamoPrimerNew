@@ -1,12 +1,12 @@
-# Python Nodes
+# Nós do Python
 
-Why would you use textual programming in Dynamo's visual programming environment? [Visual programming](../../a\_appendix/visual-programming-and-dynamo.md) has many advantages. It allows you to create programs without learning special syntax in an intuitive visual interface. However, a visual program can become cluttered, and can at times fall short in functionality. For example, Python offers much more achieveable methods for writing conditional statements (if/then) and looping. Python is a powerful tool that can extend the capabilities of Dynamo and allow you to replace many nodes with a few concise lines of code.
+Por que você usaria a programação textual no ambiente de programação visual do Dynamo? A [Programação visual](../../a\_appendix/visual-programming-and-dynamo.md) tem muitas vantagens. Ela permite que você crie programas sem aprender sintaxe especial em uma interface visual intuitiva. No entanto, um programa visual pode se tornar confuso e, às vezes, pode ter funcionalidade insatisfatória. Por exemplo, o Python oferece métodos muito mais simples de gravar declarações condicionais (if/then) e loops. O Python é uma ferramenta avançada que pode estender os recursos do Dynamo e permitir que você substitua muitos nós por algumas linhas concisas de código.
 
-**Visual Program:**
+**Programa visual:**
 
 ![](<../images/8-3/1/python node - visual vs textual programming.jpg>)
 
-**Textual Program:**
+**Programa textual:**
 
 ```
 import clr
@@ -34,63 +34,63 @@ for i in xRange:
 OUT = solids
 ```
 
-### The Python Node
+### O nó do Python
 
-Like code blocks, Python nodes are a scripting interface within a visual programming environment. The Python node can be found under Script>Editor>Python Script in the library.
+Como os blocos de código, os nós do Python são uma interface de scripts dentro de um ambiente de programação visual. O nó do Python pode ser encontrado em Script>Editor>Script Python na biblioteca.
 
 ![](<../images/8-3/1/python node - the python node 01.jpg>)
 
-Double clicking the node opens the python script editor (you can also right click on the node and select _Edit..._). You’ll notice some boilerplate text at the top, which is meant to help you reference the libraries you’ll need. Inputs are stored in the IN array. Values are returned to Dynamo by assigning them to the OUT variable
+Clicar duas vezes no nó abre o editor de scripts Python (também é possível clicar com o botão direito do mouse no nó e selecionar _Editar..._). Você observará algum texto padronizado na parte superior, que pretende ajudar você a fazer referência às bibliotecas necessárias. As entradas estão armazenadas na matriz IN. Os valores são retornados ao Dynamo quando são atribuídos à variável OUT
 
 ![](<../images/8-3/1/python node - the python node 02.jpg>)
 
-The Autodesk.DesignScript.Geometry library allows you to use dot notation similar to Code Blocks. For more information on Dynamo syntax, refer to [7-2\_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention") as well as the [DesignScript Guide](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (To download this PDF doc, please right-click on link and choose "Save link as..."). Typing a geometry type such as 'Point.' will bring up a list of methods for creating and querying points.
+A biblioteca Autodesk.DesignScript.Geometry permite usar a notação de pontos similar aos blocos de código. Para obter mais informações sobre a sintaxe do Dynamo, consulte [7-2\_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention"), bem como o [Guia do DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf) (Para fazer o download desse documento PDF, clique com o botão direito do mouse no link e escolha “Salvar link como...”). Digitar um tipo de geometria como “'Point.” gerará uma lista de métodos para criar e consultar pontos.
 
 ![](<../images/8-3/1/python node - the python node 03.jpg>)
 
-> Methods include constructors such as _ByCoordinates_, actions like _Add_, and queries like _X_, _Y_ and _Z_ coordinates.
+> Os métodos incluem construtores como _ByCoordinates_, ações como _Adicionar_ e consultas como as coordenadas _X_, _Y_ e _Z_.
 
-## Exercise: Custom Node with Python Script for Creating Patterns from Solid Module
+## Exercício: Nó personalizado com o script Python para criar padrões com base no módulo sólido
 
-### Part I: Setting Up Python Script
+### Parte I: Configurar o script do Python
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/8-2/1/Python_Custom-Node.dyn" %}
 
-In this example, we will write a python script that creates patterns from a solid module, and turn it into a custom node. First, let’s create our solid module using Dynamo nodes.
+Neste exemplo, escreveremos um script Python que cria padrões de um módulo sólido e o transforma em um nó personalizado. Primeiro, vamos criar nosso módulo sólido usando os nós do Dynamo.
 
 ![](<../images/8-3/1/python node - exercise pt I-01.jpg>)
 
-> 1. **Rectangle.ByWidthLength:** Create a rectangle that will be the base of our solid.
-> 2. **Surface.ByPatch:** Connect the rectangle to the ‘_closedCurve_’ input to create the bottom surface.
+> 1. **Rectangle.ByWidthLength:** crie um retângulo que será a base do nosso sólido.
+> 2. **Surface.ByPatch:** conecte o retângulo à entrada “_closedCurve_” para criar a superfície inferior.
 
 ![](<../images/8-3/1/python node - exercise pt I-02.jpg>)
 
-> 1. **Geometry.Translate:** Connect the rectangle to the ‘_geometry_’ input to move it up, using a code block to specify the base thickness of our solid.
-> 2. **Polygon.Points:** Query the translated rectangle to extract the corner points.
-> 3. **Geometry.Translate:** Use a code block to create a list of four values corresponding to the four points, translating one corner of the solid up.
-> 4. **Polygon.ByPoints:** Use the translated points to reconstruct the top polygon.
-> 5. **Surface.ByPatch:** Connect the polygon to create the top surface.
+> 1. **Geometry.Translate:** conecte o retângulo à entrada “_geometry_” para movê-lo para cima, usando um bloco de código para especificar a espessura base do nosso sólido.
+> 2. **Polygon.Points:** consulte o retângulo convertido para extrair os pontos de canto.
+> 3. **Geometry.Translate:** use um bloco de código para criar uma lista de quatro valores correspondentes aos quatro pontos, convertendo um canto do sólido para cima.
+> 4. **Polygon.ByPoints:** use os pontos convertidos para reconstruir o polígono superior.
+> 5. **Surface.ByPatch:** conecte o polígono para criar a superfície superior.
 
-Now that we have our top and bottom surfaces, let’s loft between the two profiles to create the sides of the solid.
+Agora que temos as superfícies superior e inferior, vamos elevar os dois perfis para criar os lados do sólido.
 
 ![](<../images/8-3/1/python node - exercise pt I-03.jpg>)
 
-> 1. **List.Create:** Connect the bottom rectangle and the top polygon to the index inputs.
-> 2. **Surface.ByLoft:** Loft the two profiles to create the sides of the solid.
-> 3. **List.Create:** Connect the top, side, and bottom surfaces to the index inputs to create a list of surfaces.
-> 4. **Solid.ByJoinedSurfaces:** Join the surfaces to create the solid module.
+> 1. **List.Create:** conecte o retângulo inferior e o polígono superior às entradas do índice.
+> 2. **Surface.ByLoft:** eleve os dois perfis para criar os lados do sólido.
+> 3. **List.Create:** conecte as superfícies superior, lateral e inferior às entradas de índice para criar uma lista de superfícies.
+> 4. **Solid.ByJoinedSurfaces:** una as superfícies para criar o módulo sólido.
 
-Now that we have our solid, let’s drop a Python Script node onto the workspace.
+Agora que temos nosso sólido, vamos colocar um nó do script Python no espaço de trabalho.
 
 ![](<../images/8-3/1/python node - exercise pt I-04.jpg>)
 
-> 1. To add additional inputs to the node, click the + icon on the node. The inputs are named IN\[0], IN\[1], etc. to indicate that they represent items in a list.
+> 1. Para adicionar mais entradas ao nó, clique no ícone + no nó. As entradas são nomeadas N\[0], IN\[1] etc. para indicar que representam itens em uma lista.
 
-Let’s start by defining our inputs and output. Double click the node to open the python editor. Follow the code below to modify the code in the editor.
+Vamos começar definindo nossas entradas e saídas. Clique duas vezes no nó para abrir o editor do Python. Siga o código abaixo para modificar o código no editor.
 
 ![](<../images/8-3/1/python node - exercise pt I-05.jpg>)
 
@@ -122,11 +122,11 @@ solids = []
 OUT = solids
 ```
 
-This code will make more sense as we progress in the exercise. Next we need to think about what information is required in order to array our solid module. First, we will need to know the dimensions of the solid to determine the translation distance. Due to a bounding box bug, we will have to use the edge curve geometry to create a bounding box.
+Esse código fará mais sentido à medida que progredirmos no exercício. Em seguida, precisaremos pensar sobre quais informações são necessárias para organizar o módulo de sólido. Primeiro, precisamos conhecer as dimensões do sólido para determinar a distância de conversão. Devido a uma falha da caixa delimitadora, será necessário usar a geometria de curva de aresta para criar uma caixa delimitadora.
 
 ![](../images/8-3/1/python07.png)
 
-> Take a look at the Python node in Dynamo. Notice that we're using the same syntax as we see in the titles of the nodes in Dynamo. Check out the commented code below.
+> Veja o nó do Python no Dynamo. Observe que estamos usando a mesma sintaxe que vemos nos títulos dos nós no Dynamo. Confira o código comentado abaixo.
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -167,7 +167,7 @@ xDist = bbox.MaxPoint.X-bbox.MinPoint.X
 OUT = solids
 ```
 
-Since we will be both translating and rotating the solid modules, let’s use the Geometry.Transform operation. By looking at the Geometry.Transform node, we know that we will need a source coordinate system and a target coordinate system to transform the solid. The source is the context coordinate system of our solid, while the target will be a different coordinate system for each arrayed module. That means we will have to loop through the x and y values to transform the coordinate system differently each time.
+Como vamos converter e girar os módulos de sólido, usaremos a operação Geometry.Transform. Observando o nó Geometry.Transform, sabemos que precisaremos de um sistema de coordenadas de origem e um sistema de coordenadas de destino para transformar o sólido. A origem é o sistema de coordenadas do contexto do nosso sólido, enquanto o destino será um sistema de coordenadas diferente para cada módulo com matriz. Isso significa que teremos que fazer um loop pelos valores x e y para transformar o sistema de coordenadas de forma diferente a cada vez.
 
 ![](<../images/8-3/1/python node - exercise pt I-06.jpg>)
 
@@ -223,35 +223,35 @@ for i in range(xCount):
 OUT = solids
 ```
 
-Click Run then Save the code. Connect the Python node with our existing script as following.
+Clique em Executar e, em seguida, salve o código. Conecte o nó do Python ao nosso script existente da seguinte maneira.
 
 ![](<../images/8-3/1/python node - exercise pt I-07.jpg>)
 
-> 1. Connect the output from **Solid.ByJoinedSurfaces** as the first input for the Python Node and use a Code Block to define the other inputs.
-> 2. Create a **Topology.Edges** node and use the output from Python node as its input.
-> 3. Finally, create an **Edge.CurveGeometry** node and use the output from Topology.Edges as its input.
+> 1. Conecte a saída de **Solid.ByJoinedSurfaces** como a primeira entrada para o nó do Python e use um bloco de código para definir as outras entradas.
+> 2. Crie um nó **Topology.Edges** e use a saída do nó do Python como entrada.
+> 3. Por fim, crie um nó **Edge.CurveGeometry** e use a saída de Topology.Edges como entrada.
 
-Try changing the seed value to create different patterns. You can also change the parameters of the solid module itself for different effects.
+Tente alterar o valor semente para criar diferentes padrões. Também é possível alterar os parâmetros do próprio módulo de sólido para diferentes efeitos.
 
 ![](../images/8-3/1/python10.png)
 
-### Part II: Turn Your Python Script Node into Custom Node
+### Parte II: Transformar o nó do script Python em nó personalizado
 
-Now that we have created a useful python script, let’s save it as a custom node. Select the python script node, right-click on Workspace and select ‘Create Custom Node.’
+Agora que criamos um script Python útil, vamos salvá-lo como um nó personalizado. Selecione o nó do script Python, clique com o botão direito do mouse no espaço de trabalho e selecione “Criar nó personalizado”.
 
 ![](<../images/8-3/1/python node - exercise pt II-01.jpg>)
 
-Assign a name, description and category.
+Atribua um nome, uma descrição e uma categoria.
 
 ![](<../images/8-3/1/python node - exercise pt II-02.jpg>)
 
-This will open a new workspace in which to edit the custom node.
+Isso abrirá um novo espaço de trabalho no qual o nó personalizado será editado.
 
 ![](<../images/8-3/1/python node - exercise pt II-03.jpg>)
 
-> 1. **Inputs:** Change the input names to be more descriptive and add data types and default values.
-> 2. **Output:** Change the output name
+> 1. **Inputs** (entradas): altere os nomes das entradas para que sejam mais descritivos e adicione tipos de dados e valores padrão.
+> 2. **Output** (saída): altere o nome da saída
 
-Save the node as a .dyf file and you should see the custom node reflects the changes we just made.
+Salve o nó como um arquivo .dyf. Em seguida, você deverá ver que o nó personalizado reflete as alterações que acabamos de fazer.
 
 ![](<../images/8-3/1/python node - exercise pt II-04.jpg>)

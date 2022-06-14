@@ -1,113 +1,113 @@
-# Strings
+# Sequências
 
-### What is a String
+### O que é uma sequência de caracteres?
 
-Formally, a **String** is a sequence of characters representing a literal constant or some type of variable. Informally, a string is programming lingo for text. We've worked with numbers, both integers and decimal numbers, to drive parameters and we can do the same with text.
+Formalmente, uma **String** é uma sequência de caracteres é que representa uma constante literal ou algum tipo de variável. De forma informal, uma sequência de caracteres é jargão de programação para texto. Trabalhamos com números, tanto números inteiros quanto decimais, para controlar os parâmetros e podemos fazer o mesmo com o texto.
 
-### Creating Strings
+### Criar sequências de caracteres
 
-Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
+É possível usar as sequências de caracteres para uma ampla gama de aplicativos, incluindo a definição de parâmetros personalizados, a anotação de conjuntos de documentação e a análise através de conjuntos de dados com base em texto. O nó String está localizado em Núcleo>Categoria de entrada.
 
-The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
+Os nós de amostra acima são sequências de caracteres. É possível representar um número como uma sequência de caracteres, assim como uma letra ou uma matriz de texto inteira.
 
 ![](<../images/5-3/4/strings - creating strings.jpg>)
 
-## Exercise
+## Exercício
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-### Querying Strings
+### Consultar as sequências de caracteres
 
-You can parse through large amounts of data quickly by querying strings. We'll talk about some basic operations which can speed up a workflow and help for software interoperability.
+É possível analisar rapidamente grandes quantidades de dados ao consultar sequências de caracteres. Falaremos sobre algumas operações básicas que podem acelerar um fluxo de trabalho e ajudar na interoperabilidade do software.
 
-The image below considers a string of data coming from an external spreadsheet. The string represents the vertices of a rectangle in the XY-Plane. Let's break down some string split operations in miniature exercise:
+A imagem abaixo considera uma sequência de caracteres de dados proveniente de uma planilha externa. A sequência de caracteres representa os vértices de um retângulo no plano XY. Vamos analisar algumas operações de divisão de sequências de caracteres no exercício em miniatura:
 
 ![](<../images/5-3/4/strings - querying strings 01.jpg>)
 
-> 1. The ";" separator splits each vertex of the rectangle. This creates a list with 3 items for each vertex.
+> 1. O separador “;” divide cada vértice do retângulo. Isso cria uma lista com três itens para cada vértice.
 
 ![](<../images/5-3/4/strings - querying strings 02.jpg>)
 
-> 1. By hitting the "_+_" in the middle of the Node, we create new separator.
-> 2. Add a "_,_" string to the canvas and plug in to the new separator input.
-> 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
+> 1. Ao pressionar “_+_” no meio do nó, criamos um novo separador.
+> 2. Adicione uma sequência de caracteres “_,_” à tela e conecte-se à nova entrada do separador.
+> 3. Nosso resultado é agora uma lista de dez itens. O nó primeiro divide com base em _separator0_ e, em seguida, com base em _separator1_.
 
-While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a number. This is done with the **String.ToNumber** Node
+Embora a lista de itens acima possa ter o mesmo aspecto que os números, eles ainda são considerados sequências de caracteres individuais no Dynamo. Para criar pontos, seu tipo de dados precisa ser convertido de uma sequência de caracteres em um número. Isso é feito com o nó **String.ToNumber**
 
 ![](<../images/5-3/4/strings - querying strings 03.jpg>)
 
-> 1. This Node is straightforward. Plug the **String.Split** results into the input. The output doesn't look different, but the data type is now a _number_ instead of a _string_.
+> 1. Esse nó é simples. Conecte os resultados de **String.Split** à entrada. A saída não parece diferente, mas o tipo de dados é agora um _número_ em vez de uma _sequência de caracteres_.
 
-With some basic additional operations, we now have a triangle drawn at the origin based on the original string input.
+Com algumas operações adicionais básicas, agora temos um triângulo desenhado na origem com base na entrada original da sequência de caracteres.
 
 ![](<../images/5-3/4/strings - querying strings 04.jpg>)
 
-### Manipulating Strings
+### Manipular sequências de caracteres
 
-Since a string is a generic text object, they host a wide range of applications. Let's take a look at some of the major actions in the Core>String Category in Dynamo:
+Como uma sequência de caracteres é um objeto de texto genérico, ela armazena uma ampla gama de aplicações. Vamos analisar algumas das principais ações em Núcleo>Categoria de sequência de caracteres no Dynamo:
 
-This is a method of merging two strings together in order. This takes each literal string in a list and creates one merged string.
+Este é um método que consiste em mesclar duas sequências de caracteres em ordem. Usa cada sequência de caracteres literais de uma lista e cria uma sequência de caracteres mesclada.
 
-The following represents the concatenation of three strings:
+Veja a seguir a representação da concatenação das três sequências de caracteres:
 
 ![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
 
-> 1. Add or subtract strings to the concatenation by clicking the +/- buttons in the center of the Node.
-> 2. The output gives one concatenated string, with spaces and punctuation included.
+> 1. Adicione ou subtraia sequências de caracteres da concatenação clicando nos botões +/- no centro do nó.
+> 2. A saída fornece uma sequência de caracteres concatenada, com espaços e sinais de pontuação incluídos.
 
-The join method is very similar to concatenate, except it has an added layer of punctuation.
+O método de união é muito similar a concatenar, exceto que tem uma camada de pontuação adicionada.
 
-If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the **String.Join** node in order to create a similar data structure.
+Se você já tiver trabalhado no Excel, poderá já ter visto um arquivo CSV. Isso significa valores separados por vírgulas. É possível usar uma vírgula (ou, neste caso, dois traços) como separador com o nó **String.Join** para criar uma estrutura de dados similar.
 
-The following image represents the joining of two strings:
+A imagem a seguir representa a união das duas sequências de caracteres:
 
 ![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
 
-> 1. The separator input allows one to create a string which divides the joined strings.
+> 1. A entrada do separador permite criar uma sequência de caracteres que divide as sequências de caracteres unidas.
 
-### Working with Strings
+### Trabalhar com sequências de caracteres
 
-In this exercise, we're going to use methods of querying and manipulating strings to deconstruct the final stanza of Robert Frost's [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Not the most practical application, but it will help us to grasp conceptual string actions as we apply them to legible lines of rhythm and rhyme.
+Neste exercício, vamos usar métodos de consulta e manipulação de sequências de caracteres para desconstruir a estrofe final de [Parando por Woods em uma noite de neve](http://www.poetryfoundation.org/poem/171621) de Robert Frost. Não é o aplicativo mais prático, mas isso nos ajudará a compreender as ações de sequências de caracteres conceituais conforme as aplicamos às linhas legíveis do ritmo e da rima.
 
-Let's begin with a basic string split of the stanza. We first notice that the writing is formatted based on commas. We'll use this format to separate each line into individual items.
+Vamos começar com uma divisão básica da sequência de caracteres da estrofe. Primeiro, percebemos que a escrita é formatada com base em vírgulas. Usaremos esse formato para separar cada linha em itens individuais.
 
 ![](<../images/5-3/4/strings - working with strings 01.jpg>)
 
-> 1. The base string is pasted into a **String** Node.
-> 2. Another **String** Node is used to denote the separator. In this case, we're using a comma.
-> 3. A **String.Split** Node is added to the canvas and connected to the two strings.
-> 4. The output shows that we've now separated the lines into individual elements.
+> 1. A sequência de caracteres base é colada em um nó de **String**.
+> 2. Outro nó **String** é usado para indicar o separador. Neste caso, usamos uma vírgula.
+> 3. Um nó **String.Split** é adicionado à tela e conectado às duas sequências de caracteres.
+> 4. A saída mostra que separamos as linhas em elementos individuais.
 
-Now, let's get to the good part of the poem: the last two lines. The original stanza was one item of data. We separated this data into individual items in the first step. Now we need to do a search for the text we're looking for. And while we _can_ do this by selecting the last two items of the list, if this were an entire book, we wouldn't want to read through everything and manually isolate the elements.
+Agora, vamos chegar à parte boa do poema: as duas últimas linhas. A estrofe original era um item de dados. Separamos esses dados em itens individuais na primeira etapa. Agora, precisamos pesquisar o texto que estamos procurando. Embora _possamos_ fazer isso selecionando os últimos dois itens da lista, se esse fosse um livro inteiro, não iríamos quer ler tudo e isolar manualmente os elementos.
 
 ![](<../images/5-3/4/strings - working with strings 02.jpg>)
 
-> 1. Instead of manually searching, we use a **String.Contains** Node to perform a search for a set of characters. This is the similar to doing the "Find" command in a word processor. In this case, we get a return of "true" or "false" if that substring is found within the item.
-> 2. In the _searchFor_ input, we define a substring that we're looking for within the stanza. Let's use a **String** Node with the text "And miles".
-> 3. The output gives us a list of falses and trues. We'll use this boolean logic to filter the elements in the next step.
+> 1. Em vez de pesquisar manualmente, usamos o nó **String.Contains** para executar uma pesquisa de um conjunto de caracteres. Isso é semelhante a usar o comando “Localizar” em um processador de texto. Neste caso, obteremos um retorno de “true” ou “false” se a subsequência de caracteres for encontrada no item.
+> 2. Na entrada _searchFor_, definimos uma subsequência de caracteres que estamos procurando na estrofe. Vamos usar um nó **String** com o texto “E milhas”.
+> 3. A saída nos fornece uma lista de valores false e true. Usaremos essa lógica booleana para filtrar os elementos na próxima etapa.
 
 ![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
 
-> 1. **List.FilterByBoolMask** is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
-> 2. Our output from the "in" is as expected, giving us the final two lines of the stanza.
+> 1. **List.FilterByBoolMask** é o nó que queremos usar para selecionar os valores false e true. A saída “in” retorna as declarações com uma entrada “mask” com valores “true”, enquanto a saída “out” retorna as que têm valores “false”.
+> 2. Nosso resultado de “in” é conforme esperado, e isso nos dá as duas linhas finais da estrofe.
 
-Now, we want to drive home the repetition of the stanza by merging the two lines together. When viewing the output of the previous step, we notice that there are two items in the list:
+Agora, queremos enfatizar a repetição da estrofe, mesclando as duas linhas. Ao visualizar a saída da etapa anterior, notamos que há dois itens na lista:
 
 ![](<../images/5-3/4/strings - working with strings 04.jpg>)
 
-> 1. Using two **List.GetItemAtIndex** Nodes, we can isolate the items using the values of 0 and 1 as the index input.
-> 2. The output for each node gives us, in order, the final two lines.
+> 1. Usando dois nós **List.GetItemAtIndex**, podemos isolar os itens usando os valores de 0 e 1 como entrada do índice.
+> 2. A saída de cada nó nos fornece, em ordem, as duas linhas finais.
 
-To merge these two items into one, we use the **String.Join** Node:
+Para mesclar esses dois itens em um único, usamos o nó **String.Join**:
 
 ![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
 
-> 1. After adding the **String.Join** Node, we notice that we need a separator.
-> 2. To create the separator, we add a **String** Node to the canvas and type in a comma.
-> 3. The final output has merged the last two items into one.
+> 1. Após adicionar o nó **String.Join**, notamos que precisamos de um separador.
+> 2. Para criar o separador, adicionamos um nó **String** à tela e digitamos uma vírgula.
+> 3. O resultado final mesclou os últimos dois itens em um.
 
-This may seem like a lot of work to isolate the last two lines; and it's true, string operations often require some up front work. But they are scalable, and they can be applied to large datasets with relative ease. If you are working parametrically with spreadsheets and interoperability, be sure to keep string operations in mind.
+Pode parecer muito trabalhoso isolar as duas últimas linhas; e é verdade, as operações de sequência de caracteres geralmente exigem algum trabalho inicial. Mas elas são escalonáveis e podem ser aplicadas a grandes conjuntos de dados com relativa facilidade. Se você estiver trabalhando parametricamente com planilhas e interoperabilidade, lembre-se de considerar as operações de sequência de caracteres.

@@ -1,20 +1,20 @@
-# Setup Your Own Python Template
+# Configurar seu próprio modelo Python
 
-With Dynamo 2.0 we have the ability to specify a default template `(.py extension)` to use when opening the python window for the first time. This has been a long-desired request as this expedites the usage of Python within Dynamo. Having the ability to use a template allows us to have default imports ready to go when we want to develop a custom Python script.
+Com o Dynamo 2.0, podemos especificar um modelo padrão `(.py extension)` para usar ao abrir a janela do Python pela primeira vez. Essa foi uma solicitação muito desejada, pois isso acelera o uso do Python no Dynamo. Ter a capacidade de usar um modelo nos permite ter as importações padrão prontas para serem usadas quando quisermos desenvolver um script Python personalizado.
 
-The location for this template is in the `APPDATA` location for your Dynamo install.
+A localização desse modelo está em `APPDATA` da instalação do Dynamo.
 
-This is typically as follows `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
+Normalmente, isso é da seguinte maneira `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
 ![](<../images/8-3/3/python templates - appdata folder location.jpg>)
 
-### Setting Up The Template
+### Configurar o modelo
 
-In order to utilize this functionality we need to add the following line in our `DynamoSettings.xml` file. _(Edit in notepad)_
+Para usar essa funcionalidade, é necessário adicionar a seguinte linha em nosso arquivo `DynamoSettings.xml`. _(Editar no bloco de notas)_
 
 ![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
 
-Where we see `<PythonTemplateFilePath />`, we can simply replace this with the following:
+Onde vemos `<PythonTemplateFilePath />`, basta substituir por:
 
 ```
 <PythonTemplateFilePath>
@@ -23,12 +23,12 @@ Where we see `<PythonTemplateFilePath />`, we can simply replace this with the f
 ```
 
 {% hint style="warning" %}
-_Note: replace CURRENTUSER with your username_
+_Observação: Substitua CURRENTUSER por seu nome de usuário_
 {% endhint %}
 
-Next we need to build a template with the functionality that we want to use built-in. In our case lets embed the Revit related imports and some of the other typical items when working with Revit.
+Em seguida, precisamos criar um modelo com a funcionalidade que desejamos usar incorporada. Em nosso caso, vamos incorporar as importações relacionadas ao Revit e alguns dos outros itens típicos ao trabalhar com o Revit.
 
-You can start a blank notepad document and paste the following code inside:
+É possível iniciar um documento do bloco de notas em branco e colar o seguinte código:
 
 ```
 import clr
@@ -67,16 +67,16 @@ TransactionManager.Instance.TransactionTaskDone()
 OUT = element
 ```
 
-Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` location.
+Uma vez feito isso, salve o arquivo como `PythonTemplate.py` na localização `APPDATA`.
 
-### Python Script Behavior After
+### Comportamento posterior do script Python
 
-A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
+Após o modelo do Python ser definido, o Dynamo procurará esses dados sempre que um nó do Python for inserido. Se não forem encontrados, será semelhante à janela do Python padrão.
 
 ![](<../images/8-3/3/python templates - before setup template.jpg>)
 
-If the Python template is found (like our Revit one for example) you will see all of the default items you built in.
+Se o modelo do Python for encontrado (como nosso modelo do Revit, por exemplo), será possível ver todos os itens padrão incorporados.
 
 ![](<../images/8-3/3/python templates - after setup template.jpg>)
 
-Additional information regarding this great addition (by Radu Gidei) can be found here. https://github.com/DynamoDS/Dynamo/pull/8122
+Pode obter mais informações sobre esta grande adição (desenvolvida por Radu Gidei) aqui. https://github.com/DynamoDS/Dynamo/pull/8122

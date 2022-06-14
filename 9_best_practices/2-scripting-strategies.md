@@ -1,79 +1,79 @@
-# Scripting Strategies
+# Estratégias de script
 
-Text-based scripting within the visual-scripting environment enables powerful and visual relationships using DesignScript, Python, and ZeroTouch (C#). The user can expose elements such as input sliders, condense large operations into DesignScript, and access powerful tools and libraries through Python or C# all within the same workspace. If managed effectively, combining these strategies can lend a great deal of customization, clarity, and efficiency to the overall program. The following are a set of guidelines to help you augment your visual-script with text-script.
+Os scripts baseados em texto no ambiente de scripts visuais permitem relacionamentos visuais avançados usando o DesignScript, o Python e o ZeroTouch (C#). O usuário pode expor elementos como os controles deslizantes de entrada, condensar grandes operações no DesignScript e acessar ferramentas e bibliotecas avançadas por meio do Python ou do C#, tudo isso no mesmo espaço de trabalho. Se gerenciada de forma eficaz, a combinação dessas estratégias pode fornecer uma grande quantidade de personalização, clareza e eficiência a todo o programa. A seguir, há um conjunto de diretrizes para ajudá-lo a ampliar o script visual com script de texto.
 
 ![](./images/2/cad-chart-textual.jpg)
 
-### Know When to Script
+### Saber quando criar scripts
 
-Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
+Os scripts de texto podem estabelecer relacionamentos de maior complexidade do que a programação visual, mas há uma quantidade significativa de sobreposição de recursos entre ambos. Isso faz sentido porque os nós são essencialmente um código pré-empacotado e é provável que possamos escrever um programa inteiro do Dynamo em DesignScript ou Python. No entanto, usamos scripts visuais porque a interface dos nós e dos fios cria um fluxo intuitivo de informações gráficas. O conhecimento de que os recursos de script de texto vão além do script visual oferece pistas importantes de quando ele deve ser usado sem sacrificar a natureza intuitiva dos nós e dos fios. A seguir estão as diretrizes para quando inserir um script e qual linguagem usar.
 
-**Use text-scripting for:**
+**Use os scripts de texto para:**
 
-* Looping
-* Recursion
-* Accessing external libraries
+* Loops
+* Recursão
+* Acessar bibliotecas externas
 
-**Choose a language:**
+**Escolha uma linguagem:**
 
 |                    |             |               |                    |                    |               |
 | ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
-|                    | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
-| **DesignScript**   | Yes         | Yes           | Yes                | No                 | Yes           |
-| **Python**         | Yes         | Yes           | Partially          | Yes                | No            |
-| **ZeroTouch (C#)** | No          | No            | No                 | Yes                | No            |
+|                    | **Loops** | **Recursão** | **Condensar nós** | **Ext. Bibliotecas** | **Abreviação** |
+| **DesignScript** | Sim | Sim | Sim | Não | Sim |
+| **Python** | Sim | Sim | Parcialmente | Sim | Não |
+| **ZeroTouch (C#)** | No | No | Não | Sim | Não |
 
 {% hint style="info" %}
-Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
+Consulte [Referência de scripts](13-3\_scripting-reference.md) para obter uma lista dos itens aos quais cada biblioteca do Dynamo fornece acesso.
 {% endhint %}
 
-### Think Parametrically
+### Pensar de forma paramétrica
 
-When scripting in Dynamo, an inevitably parametric environment, it is wise to structure your code relative to the framework of nodes and wires it will be living in. Consider the node containing your text-script as though it is any other node in the program with a few specific inputs, a function, and an expected output. This immediately gives your code inside the node a small set of variables from which to work, the key to a clean parametric system. Here are some guidelines for better integrating code into a visual program.
+Ao criar scripts no Dynamo, um ambiente inevitavelmente paramétrico, é aconselhável estruturar o código em relação à estrutura de nós e do fios na qual ele residirá. Considere o nó que contém o script de texto como se fosse qualquer outro nó no programa com algumas entradas específicas, uma função e uma saída esperada. Isso imediatamente fornece ao código no nó um pequeno conjunto de variáveis com o qual é possível trabalhar, a chave para um sistema paramétrico limpo. Aqui estão algumas diretrizes para melhor integração do código em um programa visual.
 
-**Identify the external variables:**
+**Identifique as variáveis externas:**
 
-* Try to determine the given parameters in your design problem so that you can construct a model that directly builds off that data.
-* Before writing code, identify the variables:
-  * A minimal set of inputs
-  * The intended output
-  * Constants
+* Tente determinar os parâmetros fornecidos no problema do projeto para que você possa construir diretamente um modelo com base nesses dados.
+* Antes de escrever o código, identifique as variáveis:
+   * Um conjunto mínimo de entradas
+   * A saída pretendida
+   * Constantes
 
 ![](<./images/2/think parametrically 01.jpg>)
 
-> Several variables have been established prior to writing code.
+> Diversas variáveis foram estabelecidas antes de escrever o código.
 >
-> 1. The surface we will simulate rainfall on.
-> 2. The number of rain drops (agents) we want.
-> 3. How far we want the rain drops to travel.
-> 4. Toggle between descending the steepest path versus traversing the surface.
-> 5. Python Node with the respective number of inputs.
-> 6. A Code Block to make the returned curves blue.
+> 1. A superfície na qual simularemos as águas pluviais.
+> 2. O número de gotas de chuva (agentes) que desejamos.
+> 3. A distância que desejamos que as gotas de chuva percorram.
+> 4. Alterne entre descer o caminho mais inclinado e percorrer a superfície.
+> 5. Nó do Python com o respectivo número de entradas.
+> 6. Um bloco de código para tornar azuis as curvas retornadas.
 
-**Design the internal relationships:**
+**Projete os relacionamentos internos:**
 
-* Parametricism allows for certain parameters or variables to be edited in order to manipulate or alter the end result of an equation or system.
-* Whenever entities in your script are logically related, aim to define them as functions of each other. This way when one is modified, the other can update proportionally.
-* Minimize number of inputs by only exposing key parameters:
-  * If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.
+* O parametricismo permite que determinados parâmetros ou variáveis sejam editados para manipular ou alterar o resultado final de uma equação ou de um sistema.
+* Sempre que as entidades do script estão logicamente relacionadas, é preciso defini-las como funções umas das outras. Dessa forma, quando uma é modificada, a outra pode ser atualizada proporcionalmente.
+* Minimize o número de entradas expondo somente os parâmetros chave:
+   * Se for possível derivar um conjunto de parâmetros de mais parâmetros principais, somente exponha os parâmetros principais como entradas de script. Isso aumenta a usabilidade reduzindo a complexidade da interface do script.
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> The code "modules" from the example in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Os “módulos” do código do exemplo no [Nó do Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
-> 1. Inputs.
-> 2. Variables internal to the script.
-> 3. A loop that uses these inputs and variables to perform its function.
+> 1. Entradas.
+> 2. Variáveis internas do script.
+> 3. Um loop que usa essas entradas e variáveis para executar sua função.
 
 {% hint style="info" %}
-Tip: Place as much emphasis on the process as you do on the solution.
+Dica: Dê ao processo a mesma ênfase que dá à solução.
 {% endhint %}
 
-### **Don't repeat yourself (the DRY principle):**
+### **Não se repita (o princípio DRY):**
 
-* When you have multiple ways to express the same thing in your script, at some point the duplicate representations will fall out of sync which can lead to maintenance nightmares, poor factoring, and internal contradictions.
-* The DRY principle is stated as "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system":
-  * When this principle is successfully applied, all the related elements in your script change predictably and uniformly and all the unrelated elements do not have logical consequences on each other.
+* Quando você tem várias maneiras de expressar o mesmo em seu script, em algum momento as representações duplicadas não estarão sincronizadas, o que pode levar a grande dificuldade de manutenção, má fatoração e contradições internas.
+* O princípio DRY é declarado como “Cada conhecimento deve ter uma representação única, inequívoca e confiável dentro de um sistema”:
+   * Quando esse princípio é aplicado com êxito, todos os elementos relacionados ao script mudam de forma previsível e uniforme, e todos os elementos não relacionados não têm consequências lógicas entre si.
 
 ```
 ### BAD
@@ -95,127 +95,127 @@ for i in range(count):
 ```
 
 {% hint style="info" %}
-Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
+Dica: Antes de duplicar entidades no script (como constante no exemplo acima), considere se é possível, em vez disso, vincular à origem.
 {% endhint %}
 
-### Structure Modularly
+### Estruturar de forma modular
 
-As your code gets longer and more complex the “big idea”, or overarching algorithm becomes increasingly illegible. It also becomes more difficult to keep track of what (and where) specific things happen, find bugs when things go wrong, integrate other code, and assign development tasks. To avoid these headaches it’s wise to write code in modules, an organizational strategy that breaks up code based on the task it executes. Here are some tips for making your scripts more manageable by way of modularization.
+Conforme seu código fica cada vez mais complexo, a “ideia geral”, ou o algoritmo abrangente, se torna cada vez mais ilegível. Também é mais difícil controlar o que (e onde) coisas específicas acontecem, encontrar falhas quando as coisas dão errado, integrar outro código e atribuir tarefas de desenvolvimento. Para evitar essas dores de cabeça, é preciso escrever código em módulos, uma estratégia organizacional que divide o código com base na tarefa que ele executa. Aqui estão algumas dicas para tornar seus scripts mais gerenciáveis por meio da modularização.
 
-**Write code in modules:**
+**Escreva código em módulos:**
 
-* A "module" is a group of code that performs a specific task, similar to a Dynamo Node in the workspace.
-* This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).
-* Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.
+* Um “módulo” é um grupo de códigos que executa uma tarefa específica, similar a um nó do Dynamo no espaço de trabalho.
+* Isso pode ser qualquer item que deva ser visualmente separada do código adjacente (uma função, uma classe, um grupo de entradas ou as bibliotecas que você esteja importando).
+* O desenvolvimento de código em módulos aproveita a característica visual e intuitiva dos nós, bem como as relações complexas que somente os scripts de texto podem obter.
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> These loops call a class named "agent" that we will develop in the exercise.
+> Esses loops chamam uma classe nomeada “agente” que desenvolveremos no exercício.
 >
-> 1. A code module that defines the start point of each agent.
-> 2. A code module that updates the agent.
-> 3. A code module that draws a trail for the agent's path.
+> 1. Um módulo de código que define o ponto inicial de cada agente.
+> 2. Um módulo de código que atualiza o agente.
+> 3. Um módulo de código que desenha um rastro para o caminho do agente.
 
-**Spotting code re-use:**
+**Identificação da reutilização de código:**
 
-* If you find that your code does the same (or very similar) thing in more than once place, find ways to cluster it into a function that can be called.
-* "Manager" functions control program flow and primarily contain calls to "Worker" functions that handle low-level details, like moving data between structures.
+* Se você achar que seu código faz a mesma coisa (ou algo muito similar) em mais de um lugar, encontre maneiras de agrupá-lo em uma função que possa ser chamada.
+* As funções de “gerenciador” controlam o fluxo do programa e contêm principalmente chamadas para funções de “trabalho” que lidam com detalhes de baixo nível, como mover dados entre estruturas.
 
-This example creates spheres with radii and color based on the Z value of the center points.
+Este exemplo cria esferas com raios e cores com base no valor Z dos pontos centrais.
 
 ![](<./images/2/spot code resuse.jpg>)
 
-> 1. Two "worker" parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.
-> 2. A "manager" parent function that combines the two worker functions. Calling this will call both functions inside it.
+> 1. Duas funções principais de “trabalho”: uma que cria esferas com raios e exibe cores com base no valor Z do ponto central.
+> 2. Uma função principal de “gerenciador” que combina as duas funções de trabalho. Chamar essa função chamará as duas funções no interior dela.
 
-**Only show what needs to be seen:**
+**Mostre somente o que precisa ser visto:**
 
-* A module interface expresses the elements that are provided and required by the module.
-* Once the interfaces between the units have been defined, the detailed design of each unit can proceed separately.
+* Uma interface de módulo expressa os elementos que são fornecidos e requeridos pelo módulo.
+* Quando as interfaces entre as unidades tiverem sido definidas, o projeto detalhado de cada unidade poderá prosseguir separadamente.
 
-**Separability/Replaceability:**
+**Capacidade de separação/substituição:**
 
-* Modules don’t know or care about each other.
+* Os módulos não sabem ou são indiferentes quanto à existência uns dos outros.
 
-**General forms of modularization:**
+**Formas gerais de modularização:**
 
-*   Code Grouping:
+* Agrupamento de código:
 
-    ```
-    # IMPORT LIBRARIES
-    import random
-    import math
-    import clr
-    clr.AddReference('ProtoGeometry')
-    from Autodesk.DesignScript.Geometry import *
+   ```
+   # IMPORT LIBRARIES
+   import random
+   import math
+   import clr
+   clr.AddReference('ProtoGeometry')
+   from Autodesk.DesignScript.Geometry import *
 
-    # DEFINE PARAMETER INPUTS
-    surfIn = IN[0]
-    maxSteps = IN[1]
-    ```
-*   Functions:
+   # DEFINE PARAMETER INPUTS
+   surfIn = IN[0]
+   maxSteps = IN[1]
+   ```
+* Funções:
 
-    ```
-    def get_step_size():
-      area = surfIn.Area
-      stepSize = math.sqrt(area)/100
-      return stepSize
+   ```
+   def get_step_size():
+     area = surfIn.Area
+     stepSize = math.sqrt(area)/100
+     return stepSize
 
-    stepSize = get_step_size()
-    ```
-*   Classes:
+   stepSize = get_step_size()
+   ```
+* Classes:
 
-    ```
-    class MyClass:
-      i = 12345
+   ```
+   class MyClass:
+     i = 12345
 
-      def f(self):
-        return 'hello world'
+     def f(self):
+       return 'hello world'
 
-    numbers = MyClass.i
-    greeting = MyClass.f
-    ```
+   numbers = MyClass.i
+   greeting = MyClass.f
+   ```
 
-### Flex Continuously
+### Flexionar de forma contínua
 
-While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
+Ao desenvolver scripts de texto no Dynamo, é recomendável garantir constantemente que o que está sendo realmente criado está de acordo com o que você está esperando. Isso garantirá que eventos imprevistos (erros de sintaxe, discrepâncias lógicas, imprecisões de valor, saídas anômalas etc.) sejam rapidamente detectados e tratados à medida que surgem em vez de todos de uma vez ao final. Como os scripts de texto residem nos nós internos da tela, eles já estão integrados no fluxo de dados do programa visual. Isso torna o monitoramento sucessivo do script tão simples quanto a atribuição dos dados a serem gerados, a execução do programa e a avaliação do que flui do script usando um nó de inspeção. Aqui estão algumas dicas para inspecionar continuamente os scripts ao construí-los.
 
-**Test as you go:**
+**Teste conforme o uso:**
 
-* Whenever you complete a cluster of functionality:
-  * Step back and inspect your code.
-  * Be critical. Could a collaborator understand what this is doing? Do I need to do this? Can this function be done more efficiently? Am I creating unnecessary duplicates or dependencies?
-  * Quickly test to make sure it is returning data that “makes sense”.
-* Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:
+* Sempre que você concluir um conjunto de funcionalidades:
+   * Volte e inspecione o código.
+   * Seja crítico. Um colaborador conseguiria entender o que ele está produzindo? Preciso fazer isso? Essa função pode ser feita de forma mais eficiente? Estou criando dependências ou duplicatas desnecessárias?
+   * Teste rapidamente para garantir que ele esteja retornando dados que “façam sentido”.
+* Atribua os dados mais recentes com os quais você está trabalhando em seu script como a saída de forma que o nó sempre produza dados relevantes quando o script for atualizado:
 
 ![](<./images/2/flex continuously.jpg>)
 
-> 1. Check that all edges of the solid are being returned as curves to create a bounding box around.
-> 2. Check that our Count inputs are successfully being converted to Ranges.
-> 3. Check that coordinate systems have been properly translated and rotated in this loop.
+> 1. Verifique se todas as arestas do sólido estão sendo retornadas como curvas para criar uma caixa delimitadora em torno dele.
+> 2. Verifique se nossas entradas de contagem estão sendo convertidas com êxito em intervalos.
+> 3. Verifique se os sistemas de coordenadas foram corretamente convertidos e rotacionados neste loop.
 
-**Anticipate “edge cases”:**
+**Antecipe “casos de aresta”:**
 
-* While scripting, crank your input parameters to the minimum and maximum values of their allotted domain to check if the program still functions under extreme conditions.
-* Even if the program is functioning at its extremes, check if it is returning unintended null/empty/zero values.
-* Sometimes bugs and errors that reveal some underlying problem with your script will only surface during these edge cases.
-  * Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.
+* Durante a criação dos scripts, coloque os parâmetros de entrada nos valores mínimo e máximo de seu domínio alocado para verificar se o programa ainda funciona em condições extremas.
+* Mesmo que o programa funcione em seus extremos, verifique se ele está retornando valores nulos/vazios/zero não pretendidos.
+* Às vezes, as falhas e os erros que revelam um problema subjacente com seu script só surgirão durante esses casos de aresta.
+   * Compreenda o que está causando o erro e, em seguida, decida se ele precisa ser corrigido internamente ou se um domínio de parâmetro precisa ser redefinido para evitar o problema.
 
 {% hint style="info" %}
-Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+Dica: Sempre presuma que o usuário usará cada combinação de cada valor de entrada que foi exposto a ele. Isso ajudará a eliminar surpresas indesejadas.
 {% endhint %}
 
-### Debug Efficiently
+### Depurar de forma eficiente
 
-Debugging is the process of eliminating "bugs" from your script. Bugs can be errors, inefficiencies, inaccuracies, or any unintended results. Addressing a bug can be as simple as correcting a misspelled variable name to more pervasive, structural problems with your script. Ideally, flexing your script as you build it will help to catch these potential issues early, though this is no guarantee of it being bug-free. The following is a review of several best practices from above to help you address bugs systematically.
+A depuração é o processo de eliminação de falhas do script. As falhas podem ser erros, ineficiências, imprecisões ou qualquer resultado não pretendido. A solução de uma falha pode ser tão simples quanto corrigir um nome de variável com erros de grafia ou problemas estruturais mais abrangentes no script. Idealmente, a flexibilização do script à medida que você o cria ajudará a detectar esses possíveis problemas no início, embora isso não seja uma garantia de que ele estará livre de falhas. A seguir, apresentamos uma revisão das várias práticas recomendadas acima para ajudar você a solucionar falhas de forma sistemática.
 
-**Use the watch bubble:**
+**Use a bolha de inspeção:**
 
-* Check the data returned at different places in the code by assigning it to the OUT variable, similar to the concept of flexing the program.
+* Verifique os dados retornados em diferentes locais no código ao atribuí-los à variável OUT, de forma semelhante ao conceito de flexibilização do programa.
 
-**Write meaningful comments:**
+**Insira comentários significativos:**
 
-* A module of code will be much easier to debug if its intended outcome is clearly described.
+* Será muito mais fácil depurar um módulo de código se seu resultado pretendido for claramente descrito.
 
 ```py
 # Loop through X and Y
@@ -231,94 +231,94 @@ for i in range(xCount):
     solids.append(solid.Transform(fromCoord,toCoord))
 ```
 
-> Normally this would be an excessive amount of commenting and blank lines, but when debugging it can be useful to break things down into manageable pieces.
+> Normalmente, isso seria uma quantidade excessiva de linhas de comentário e em branco, mas ao depurar, pode ser útil dividir os itens em partes gerenciáveis.
 
-**Leverage the code's modularity:**
+**Aproveite a modularidade do código:**
 
-* The source of an issue can be isolated to certain modules.
-* Once the faulty module has been identified, fixing the problem is considerably simpler.
-* When a program must be modified, code that has been developed in modules will be much easier to change:
-  * You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.
+* É possível isolar a origem de um problema a determinados módulos.
+* Quando o módulo com falha for identificado, a correção do problema será consideravelmente mais simples.
+* Quando um programa precisa ser modificado, é muito mais fácil alterar o código que foi desenvolvido nos módulos:
+   * É possível inserir módulos novos ou depurados em um programa existente com a segurança de que o restante do programa não será alterado.
 
 ![](<./images/2/leverage code's modularity.jpg>)
 
-> Debugging the example file from [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Depurando o arquivo de exemplo do [Nó do Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
-> 1. The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.
-> 2. The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.
-> 3. The code "module" we've inserted to address the xDist and yDist value issue.
+> 1. A geometria de entrada está retornando uma caixa delimitadora maior que ela mesma, como podemos ver ao atribuir xDist e yDist a OUT.
+> 2. As curvas de aresta da geometria de entrada retornam uma caixa delimitadora apropriada com as distâncias corretas para xDist e yDist.
+> 3. O “módulo” do código que inserimos para resolver o problema dos valores xDist e yDist.
 
-## Exercise: Steepest Path
+## Exercício: Caminho mais inclinado
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="./datasets/9/2/SteepestPath.dyn" %}
 
-With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
+Considerando as nossas melhores práticas para os scripts de texto, vamos escrever um script de simulação de chuva. Embora seja possível aplicar as práticas recomendadas a um programa visual desorganizado em Estratégias de gráfico, é muito mais difícil fazer isso com scripts de texto. As relações lógicas estabelecidas no script de texto são menos visíveis e pode ser quase impossível decifrá-las em um código confuso. O poder dos scripts de texto é acompanhado por uma responsabilidade maior na organização. Vamos detalhar cada etapa e aplicar as práticas recomendadas durante o percurso.
 
-Our script applied to an attractor-deformed surface.
+Nosso script aplicado a uma superfície deformada por atrativos.
 
 ![](<./images/2/scripting strategies - exercise - 01.jpg>)
 
-The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.
+A primeira coisa que precisamos fazer é importar as bibliotecas do Dynamo necessárias. Fazer isso fornecerá acesso global à funcionalidade do Dynamo no Python.
 
-All the libraries we intend on using need to be imported here.
+Todas as bibliotecas que pretendemos usar precisam ser importadas aqui.
 
 ![](<./images/2/scripting strategies - exercise - 02.jpg>)
 
-Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.
+Em seguida, precisamos definir as entradas e saídas do script, que serão exibidas como portas de entrada no nó. Essas entradas externas são a base do nosso script e a chave para estabelecer um ambiente paramétrico.
 
-We need to define inputs that correspond to variables in the Python script and determine a desired output:
+Precisamos definir entradas que correspondam a variáveis no script do Python e determinar a saída desejada:
 
 ![](<./images/2/scripting strategies - exercise - 03.jpg>)
 
-> 1. The surface we want to walk down.
-> 2. The number of agents we want to walk.
-> 3. The maximum number of steps the agents are allowed to take.
-> 4. An option to take the shortest path down the surface or traverse it.
-> 5. The Python Node with input identifiers that correspond to inputs in the script (IN\[0], IN\[1]).
-> 6. Output curves that can be displayed with a different color.
+> 1. A superfície que queremos percorrer.
+> 2. O número de agentes pelos quais queremos percorrer.
+> 3. O número máximo de etapas que os agentes podem assumir.
+> 4. Uma opção para obter o caminho mais curto pela superfície ou para percorrê-la.
+> 5. O nó do Python com identificadores de entrada que correspondem às entradas no script (IN\[0], IN\[1]).
+> 6. As curvas de saída que podem ser exibidas com uma cor diferente.
 
-Now let's employ the practice of modularity and create the body of our script. Simulating the shortest path down a surface for multiple start points is a significant task that will require several functions. Rather than call the different functions throughout the script, we can modularize our code by collecting them into a single class, our agent. The different functions of this class or "module" can be called with different variables or even reused in another script.
+Agora, vamos empregar a prática da modularidade e criar o corpo do nosso script. A simulação do caminho mais curto por uma superfície de vários pontos iniciais é uma tarefa significativa que exigirá diversas funções. Em vez de chamar as diferentes funções por todo o script, podemos modularizar nosso código coletando-as em uma única classe, nosso agente. As diferentes funções dessa classe ou “módulo” podem ser chamadas com diferentes variáveis ou até mesmo reutilizadas em outro script.
 
-We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
+Precisaremos definir uma classe ou blueprint, para um agente com a intenção de navegar por uma superfície escolhendo viajar na direção mais inclinada possível sempre que ele assume uma etapa:
 
 ![](<./images/2/scripting strategies - exercise - 04.jpg>)
 
-> 1. Name.
-> 2. Global attributes that all the agents share.
-> 3. Instance attributes that are unique to each agent.
-> 4. A function for taking a step.
-> 5. A function for cataloging the position of each step to a trail list.
+> 1. Nome.
+> 2. Atributos globais compartilhados por todos os agentes.
+> 3. Atributos de instância exclusivos para cada agente.
+> 4. Uma função para realizar uma etapa.
+> 5. Uma função para catalogar a posição de cada etapa em uma lista de rastros.
 
-Let's initialize the agents by defining their start location. This is a good opportunity to flex our script and make sure the agent class is working.
+Vamos inicializar os agentes definindo sua localização inicial. Esta é uma boa oportunidade para flexibilizar nosso script e garantir que a classe de agente esteja funcionando.
 
-We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
+Precisaremos instanciar todos os agentes que desejamos observar para navegar pela superfície e definir seus atributos iniciais:
 
 ![](<./images/2/scripting strategies - exercise - 05.jpg>)
 
-> 1. A new empty trail list.
-> 2. Where they will start their journey on the surface.
-> 3. We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.
+> 1. Uma nova lista de rastros vazia.
+> 2. Onde eles iniciarão sua jornada na superfície.
+> 3. Atribuímos a lista de agentes como saída para verificar o que o script está retornando aqui. O número correto de agentes está sendo retornado, mas precisamos flexionar o script novamente mais tarde para verificar a geometria que ele retorna.
 
-Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
+Atualize cada agente em cada etapa. Em seguida, precisaremos inserir um ciclo aninhado onde, para cada agente e para cada etapa, atualizamos e registramos sua posição na lista de rastros. Em cada etapa, também garantiremos que o agente não tenha alcançado um ponto na superfície em que ele não possa avançar mais uma etapa, o que lhe permitirá descer. Se essa condição for atendida, encerraremos o percurso do agente.
 
 ![](<./images/2/scripting strategies - exercise - 06.jpg>)
 
-Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
+Agora que nossos agentes foram totalmente atualizados, vamos retornar a geometria que os representa. Depois que todos os agentes tiverem atingido seu limite de descida ou o número máximo de etapas, criaremos uma PolyCurve pelos pontos da lista de rastros e geraremos os rastros da PolyCurve.
 
 ![](<./images/2/scripting strategies - exercise - 07.jpg>)
 
-Our script for finding the steepest paths.
+Nosso script para encontrar os caminhos mais inclinados.
 
 ![](<./images/2/scripting strategies - exercise - 08.jpg>)
 
-> 1. A preset that simulates rainfall on the underlying surface.
-> 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.
+> 1. Uma predefinição que simula as águas pluviais na superfície subjacente.
+> 2. Em vez de encontrar o caminho mais inclinado, é possível alternar os agentes para percorrer a superfície subjacente.
 
-The full Python text-script.
+O script de texto completo em Python.
 
 ```
 ### STEEPEST PATH ALGORITHM

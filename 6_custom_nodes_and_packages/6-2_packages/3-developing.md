@@ -1,115 +1,115 @@
-# Developing a Package
+# Desenvolver um pacote
 
-Dynamo offers a variety of ways to create a package for your personal use or for sharing with the Dynamo community. In the case study below, we'll walk through how a package is set up by deconstructing an existing one. This case study builds on lessons from the previous chapter, providing a set of custom nodes for mapping geometry, by UV coordinates, from one Dynamo surface to another.
+O Dynamo oferece diversas formas de criar um pacote para seu uso pessoal ou para compartilhar com a comunidade do Dynamo. No estudo de caso abaixo, vamos analisar como um pacote é configurado desconstruindo um existente. Este estudo de caso baseia-se nas lições do capítulo anterior, fornecendo um conjunto de nós personalizados para o mapeamento de geometria, por coordenadas UV, de uma superfície do Dynamo para outra.
 
-## MapToSurface Package
+## Pacote MapToSurface
 
-We're going to work with a sample package which demonstrates the UV mapping of points from one surface to another. We've already built the fundamentals of the tool in the [Creating a Custom Node](../10\_custom-nodes/10-2\_creating.md) section of this primer. The files below demonstrate how we can take the concept of UV Mapping and develop a set of tools for a publishable library.
+Vamos trabalhar com um pacote de amostra que demonstra o mapeamento UV de pontos de uma superfície para outra. Já construímos os conceitos básicos da ferramenta na seção [Criar um nó personalizado](../10\_custom-nodes/10-2\_creating.md) desta introdução. Os arquivos abaixo demonstram como podemos usar o conceito de mapeamento UV e desenvolver um conjunto de ferramentas para uma biblioteca publicável.
 
-In this image, we map a point from one surface to another using UV coordinates. The package is based on this concept, but with more complex geometry.
+Nessa imagem, mapeamos um ponto de uma superfície para outra usando as coordenadas UV. O pacote é baseado nesse conceito, mas com uma geometria mais complexa.
 
 ![](../images/6-2/3/uvMap.jpg)
 
-### Installing the Package
+### Instalar o pacote
 
-In the previous chapter, we explored ways for panelizing a surface in Dynamo based on curves defined in the XY plane. This case study extends these concepts for more dimensions of geometry. We're going to install this package as built in order to demonstrate how it was developed. In the next section, we'll demonstrate how this package was published.
+No capítulo anterior, exploramos formas de criar painéis em uma superfície no Dynamo com base nas curvas definidas no plano XY. Este estudo de caso estende esses conceitos para mais cotas de geometria. Vamos instalar esse pacote conforme construído para demonstrar como ele foi desenvolvido. Na próxima seção, demonstraremos como esse pacote foi publicado.
 
-In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
+No Dynamo, clique em \_Pacotes>Procurar um pacote... e p\_rocure o pacote “MapToSurface” (uma só palavra). Clique em Instalar para iniciar o download e adicionar o pacote à biblioteca.
 
 ![](<../images/6-2/3/develop package - install package 01.jpg>)
 
-After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
+Após a instalação, os nós personalizados devem estar disponíveis na seção Complementos > Dynamo Primer.
 
 ![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
-With the package now installed, let's walk through how it's set up.
+Com o pacote já instalado, vamos analisar como ele está configurado.
 
-### Custom Nodes
+### Nós personalizados
 
-The package we're creating uses five custom nodes that we've built for reference. Let's walk through what each node does below. Some custom nodes build off of other custom nodes, and the graphs have a layout for other users to understand in a straightforward manner.
+O pacote que estamos criando usa cinco nós personalizados que criamos para referência. Vamos examinar o que cada nó faz abaixo. Alguns nós personalizados são criados com base em outros nós personalizados, e os gráficos têm um layout para que outros usuários compreendam de forma simples.
 
-This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
+Esse é um pacote simples com cinco nós personalizados. Nas etapas abaixo, falaremos brevemente sobre a configuração de cada nó personalizado.
 
 ![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 #### **PointsToSurface**
 
-This is a basic custom node, and one from which all of the other mapping nodes are based. Simply put, the node maps a point from a source surface UV coordinate to the location of the target surface UV coordinate. And since points are the most primitive geometry, from which more complex geometry is built, we can use this logic to map 2D, and even 3D geometry from one surface to another.
+Esse é um nó personalizado básico e no qual todos os outros nós de mapeamento são baseados. Em termos simples, o nó mapeia um ponto de uma coordenada UV da superfície de origem para o local da coordenada UV a superfície de destino. E, como os pontos são a geometria mais primitiva, a partir da qual se constrói uma geometria mais complexa, podemos usar essa lógica para mapear a geometria 2D e até mesmo a geometria 3D de uma superfície para outra.
 
 ![](<../images/6-2/3/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
-The logic of extending mapped points from 1D geometry to 2D geometry is demonstrated simply with polygons here. Notice that we have nested the _"PointsToSurface"_ node into this custom node. This way we can map the points of each polygon to the surface, and then regenerate the polygon from those mapped points. By maintaining the proper data structure (a list of lists of points), we're able to keep the polygons separate after they're reduced to a set of points.
+A lógica de estender pontos mapeados da geometria 1D para a geometria 2D é demonstrado simplesmente com polígonos aqui. Observe que aninhamos o nó _“PointsToSurface”_ nesse nó personalizado. Desta forma, é possível mapear os pontos de cada polígono para a superfície e, em seguida, regenerar o polígono com base nesses pontos mapeados. Ao manter a estrutura de dados apropriada (uma lista de listas de pontos), podemos manter os polígonos separados após serem reduzidos a um conjunto de pontos.
 
 ![](<../images/6-2/3/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
-The same logic applies here as in the _"PolygonsToSurface"_ node. But instead of mapping polygonal points, we're mapping control points of a nurbs curve.
+A mesma lógica do nó _“PolygonsToSurface”_ se aplica aqui. Mas, em vez de mapear pontos poligonais, estamos mapeando pontos de controle de uma curva NURBS.
 
 ![](<../images/6-2/3/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
-This node gets a little more complex, but the concept is simple: like the _"PointsToSurface"_ node, this node maps points from one surface to another. However, it also considers points which are not on the original source surface, gets their distance to the closest UV parameter, and maps this distance to the target surface normal at the corresponding UV coordinate. This will make more sense when looking at the example files.
+Esse nó fica um pouco mais complexo, mas o conceito é simples: como o nó _“PointsToSurface”_, esse nó mapeia pontos de uma superfície para outra. No entanto, ele também considera os pontos que não estão na superfície de origem, obtém sua distância até o parâmetro UV mais próximo e mapeia essa distância até a superfície alvo normal na coordenada UV correspondente. Isso fará mais sentido ao analisar os arquivos de exemplo.
 
 ![](<../images/6-2/3/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
-This is a simple node which creates a parametric surface to map from the source grid to an undulating surface in the example files.
+Esse é um nó simples que cria uma superfície paramétrica para mapear da grade de origem para uma superfície ondulada nos arquivos de exemplo.
 
 ![](<../images/6-2/3/develop package -sampleSrf.jpg>)
 
-### Example Files
+### Arquivos de exemplo
 
-The example files can be found in the package's root folder. Click Dynamo > Preferences > Package Manager
+Os arquivos de exemplo podem ser encontrados na pasta raiz do pacote. Clique em Dynamo > Preferências > Gerenciador de pacotes
 
-Next to MapToSurface, click verticle dots menu > Show Root Directory
+Ao lado de MapToSurface, clique no menu de pontos de vértice > Mostrar diretório raiz
 
 ![](<../images/6-2/3/develop package - example files 01.jpg>)
 
-Next, open the _"extra"_ folder, which houses all of the files in the package which are not custom nodes. This is where examples files (if they exist) are stored for Dynamo packages. The screenshots below discuss the concepts demonstrated in each example file.
+Em seguida, abra a pasta _“extra”_, que contém todos os arquivos do pacote que não são nós personalizados. É nesse ponto que os arquivos de exemplos (se existirem) são armazenados para pacotes do Dynamo. As capturas de tela abaixo discutem os conceitos demonstrados em cada arquivo de exemplo.
 
 #### **01-PanelingWithPolygons**
 
-This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../10\_custom-nodes/10-2\_creating.md).
+Esse arquivo de exemplo demonstra como _“PointsToSurface”_ pode ser usado para criar um painel de uma superfície com base em uma grade de retângulos. Isso deve ser familiar, pois demonstramos um fluxo de trabalho similar no [capítulo anterior](../10\_custom-nodes/10-2\_creating.md).
 
 ![](<../images/6-2/3/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
-Using a similar workflow, this exercise file shows a setup for mapping circles (or polygons representing circles) from one surface to another. This uses the _"PolygonsToSurface"_ node.
+Usando um fluxo de trabalho semelhante, esse arquivo de exercício mostra uma configuração para o mapeamento de círculos (ou polígonos que representam círculos) de uma superfície para outra. Isso usa o nó _“PolygonsToSurface”_.
 
 ![](<../images/6-2/3/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
-This example file adds some complexity by working with the "NurbsCrvToSurface" node. The target surface is offset a given distance and the nurbs curve is mapped to the original target surface and the offset surface. From there, the two mapped curves are lofted to create a surface, which is then thickened. This resulting solid has an undulation that is representative of the target surface normals.
+Esse arquivo de exemplo adiciona alguma complexidade trabalhando com o nó “NurbsCrvToSurface”. A superfície alvo é deslocada uma determinada distância e a curva Nurbs é mapeada para a superfície alvo original e para a superfície de deslocamento. A partir daí, as duas curvas mapeadas são elevadas para criar uma superfície, que então se torna mais espessa. Esse sólido resultante apresenta uma ondulação representativa das normais da superfície alvo.
 
 ![](<../images/6-2/3/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
-This example file demonstrates how to map a pleated polysurface from a source surface to a target surface. The source and target surface are a rectangular surface spanning the grid and a revolved surface, respectively.
+Esse arquivo de exemplo demonstra como mapear uma PolySurface plissada de uma superfície de origem para uma superfície alvo. A superfície de origem e de destino são uma superfície retangular que se estende pela grade e uma superfície de revolução, respectivamente.
 
 ![](<../images/6-2/3/develop package -sample file 04a.jpg>)
 
-The source polysurface mapped from the source surface to the target surface.
+A PolySurface de origem mapeada da superfície de origem para a superfície de destino.
 
 ![](<../images/6-2/3/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
-Since the custom nodes are able to map different types of curves, this last file references an SVG file exported from Illustrator and maps the imported curves to a target surface.
+Como os nós personalizados são capazes de mapear diferentes tipos de curvas, esse último arquivo faz referência a um arquivo SVG exportado do Illustrator e mapeia as curvas importadas para uma superfície alvo.
 
 ![](<../images/6-2/3/develop package -sample file 05a.jpg>)
 
-By parsing through the syntax of a .svg file, curves are translated from .xml format to Dynamo polycurves.
+Durante a análise da sintaxe de um arquivo .svg, as curvas são convertidas do formato .xml em policurvas do Dynamo.
 
 ![](<../images/6-2/3/develop package -sample file 05b.jpg>)
 
-The imported curves are mapped to a target surface. This allows us to explicitly (point-and-click) design a panelization in Illustrator, import into Dynamo, and apply to a target surface.
+As curvas importadas são mapeadas para uma superfície alvo. Isso nos permite projetar explicitamente (apontar e clicar) uma panorâmica no Illustrator, importar no Dynamo e aplicar a uma superfície de destino.
 
 ![](<../images/6-2/3/develop package -sample file 05c.jpg>)

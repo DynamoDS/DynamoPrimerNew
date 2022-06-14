@@ -1,108 +1,108 @@
-# What's a List
+# O que é uma lista?
 
-### What's a List?
+### O que é uma lista?
 
-A list is a collection of elements, or items. Take a bunch of bananas, for example. Each banana is an item within the list (or bunch). It's easier to pick up a bunch of bananas rather than each banana individually, and the same holds for grouping elements by parametric relationships in a data structure.
+Uma lista é uma coleção de elementos ou de itens. Por exemplo, uma penca de bananas. Cada banana é um item na lista (ou penca). É mais fácil pegar uma penca de bananas em vez de cada banana individualmente, e o mesmo vale para agrupar elementos por relações paramétricas em uma estrutura de dados.
 
 ![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Foto de [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
-When we buy groceries, we put all of the purchased items into a bag. This bag is also a list. If we're making banana bread, we need 3 bunches of bananas (we're making a _lot_ of banana bread). The bag represents a list of banana bunches and each bunch represents a list of bananas. The bag is a list of lists (two-dimensional) and the banana bunch is a list (one-dimensional).
+Quando fazemos compras, colocamos todos os itens comprados em uma sacola. Essa sacola também é uma lista. Se estivermos fazendo pão de banana, precisaremos de três pencas de bananas (estamos fazendo _muito_ de pão de banana). O saco representa uma lista de pencas de bananas e cada penca representa uma lista de bananas. O saco é uma lista de listas (bidimensionais) e a penca de bananas é uma lista (unidimensional).
 
-In Dynamo, list data is ordered, and the first item in each list has an index "0". Below, we'll discuss how lists are defined in Dynamo and how multiple lists relate to one another.
+No Dynamo, os dados da lista são ordenados e o primeiro item em cada lista tem um índice “0”. Abaixo, vamos discutir como as listas são definidas no Dynamo e como várias listas se relacionam entre si.
 
-### Zero-Based Indices
+### Índices com base em zero
 
-One thing that might seem odd at first is that the first index of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index 0.
+Uma coisa que pode parecer estranha no início é que o primeiro índice de uma lista é sempre 0; não 1. Portanto, quando falamos sobre o primeiro item de uma lista, na verdade, queremos dizer o item que corresponde ao índice 0.
 
-For example, if you were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if you were to put your fingers in a list, Dynamo would have given them indices from 0 to 4. While this may seem a little strange to programming beginners, the zero-based index is standard practice in most computation systems.
+Por exemplo, se você contasse o número de dedos que temos na mão direita, as chances são de que você teria contado de 1 a 5. No entanto, se você colocar seus dedos em uma lista, o Dynamo teria dado índices de 0 a 4. Embora isso possa parecer um pouco estranho para programadores iniciantes, o índice com base em zero é uma prática padrão na maioria dos sistemas de cálculo.
 
-Note that we still have 5 items in the list; it’s just that the list is using a zero-based counting system. And the items being stored in the list don’t just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
+Observe que ainda temos cinco itens na lista; é apenas que a lista está usando um sistema de contagem baseado em zero. E os itens que estão sendo armazenados na lista não precisam ser apenas números. Eles podem ser qualquer tipo de dados que o Dynamo suporta, como pontos, curvas, superfícies, famílias etc.
 
 ![](<../images/5-4/1/what's a list - zero based indices.jpg>)
 
-> a. Index
+> a. Índice
 >
-> b. Point
+> b. Ponto
 >
 > c. Item
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a watch node to another node's output. By default, the watch node automatically shows all indices to the left side of the list and displays the data items on the right.
+Muitas vezes, a maneira mais fácil de analisar o tipo de dados armazenados em uma lista é conectar um nó de inspeção à saída de outro nó. Por padrão, o nó de inspeção exibe automaticamente todos os índices no lado esquerdo da lista e exibe os itens de dados na direita.
 
-These indices are a crucial element when working with lists.
+Esses índices são um elemento crucial ao trabalhar com listas.
 
-### Inputs and Outputs
+### Entradas e saídas
 
-Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius**:
+Nas listas, as entradas e as saídas variam de acordo com o nó do Dynamo que está sendo usado. Como exemplo, vamos usar uma lista de cinco pontos e conectar essa saída a dois nós diferentes do Dynamo: **PolyCurve.ByPoints** e **Circle.ByCenterPointRadius**:
 
 ![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
 
-> 1. The _points_ input for **PolyCurve.ByPoints** is looking for _"Point\[]"_. This represents a list of points
-> 2. The output for **PolyCurve.ByPoints** is a single polycurve created from a list of five point.
-> 3. The _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_.
-> 4. The output for **Circle.ByCenterPointRadius** is a list of five circles, whose centers correspond to the original list of points.
+> 1. A entrada _points_ para **PolyCurve.ByPoints** está procurando _“Point\[]”_. Isso representa uma lista de pontos
+> 2. A saída para **PolyCurve.ByPoints** é uma policurva única criada com base em uma lista de cinco pontos.
+> 3. A entrada _centerPoint_ para **Circle.ByCenterPointRadius** solicita _“Ponto”_.
+> 4. A saída para **Circle.ByCenterPointRadius** é uma lista de cinco círculos, cujos centros correspondem à lista original de pontos.
 
-The input data for **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius** are the same, however the **Polycurve.ByPoints** node gives us one polycurve while the **Circle.ByCenterPointRadius** node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
+Os dados de entrada para **PolyCurve.ByPoints** e **Circle.ByCenterPointRadius** são os mesmos. No entanto, o nó **Polycurve.ByPoints** nos fornece uma policurva enquanto o nó **Circle.ByCenterPointRadius** nos fornece cinco círculos com centros em cada ponto. Isso faz sentido intuitivamente: a policurva é desenhada como uma curva conectando os cinco, enquanto os círculos criam um círculo diferente em cada ponto. O que está acontecendo com os dados?
 
-Hovering over the _points_ input for **Polycurve.ByPoints**, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
+Passando o mouse sobre a entrada _points_ de **Polycurve.ByPoints**, vemos que a entrada está procurando _“Point\[]”_. Observe os colchetes no final. Isso representa uma lista de pontos e, para criar uma policurva, a entrada precisa ser uma lista para cada policurva. Esse nó, portanto, condensará cada lista em uma policurva.
 
-On the other hand, the _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
+Por outro lado, a entrada _centerPoint_ para **Circle.ByCenterPointRadius** solicita _“Ponto”_. Esse nó procura um ponto, como um item, para definir o ponto central do círculo. É por isso que obtemos cinco círculos com base nos dados de entrada. Reconhecer essa diferença com as entradas no Dynamo ajuda a compreender melhor como os nós funcionam ao gerenciar os dados.
 
-### Lacing
+### Amarra
 
-Data matching is a problem without a clean solution. It occurs when a node has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+A correspondência de dados é um problema sem uma solução fácil. Isso ocorre quando um nó tem acesso a entradas de tamanhos diferentes. Alterar o algoritmo de correspondência de dados pode levar a resultados muito diferentes.
 
-Imagine a node which creates line segments between points (**Line.ByStartPointEndPoint**). It will have two input parameters which both supply point coordinates:
+Imagine um nó que cria segmentos de linha entre pontos (**Line.ByStartPointEndPoint**). Ele terá dois parâmetros de entrada que fornecem as coordenadas do ponto:
 
-#### Shortest List
+#### Lista mais curta
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the “Shortest List” algorithm. This is the default behavior for Dynamo nodes:
+A maneira mais simples é conectar as entradas individualmente até que um dos fluxos se esgote. Isso é denominado algoritmo “Lista mais curta”. Este é o comportamento padrão dos nós do Dynamo:
 
 ![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
 
-#### Longest List
+#### Lista mais longa
 
-The “Longest List” algorithm keeps connecting inputs, reusing elements, until all streams run dry:
+O algoritmo “Lista mais longa” continua conectando entradas, reutilizando elementos, até que todos os fluxos se esgotem:
 
 ![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
 
-#### Cross Product
+#### Produto transversal
 
-Finally, the “Cross Product” method makes all possible connections:
+Por fim, o método “Produto transversal” torna todas as conexões possíveis:
 
 ![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
 
-As you can see there are different ways in which we can draw lines between these sets of points. Lacing options are found by right-clicking the center of a node and choosing the "Lacing" menu.
+Como você pode ver, há diferentes maneiras de desenhar linhas entre estes conjuntos de pontos. É possível encontrar as opções de amarra clicando com o botão direito do mouse no centro de um nó e selecionando o menu “Amarra”.
 
 ![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
 
-## Exercise
+## Exercício
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/1/Lacing.dyn" %}
 
-To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
+Para demonstrar as operações de amarra abaixo, vamos usar esse arquivo base para definir a lista mais curta, a lista mais longa e o produto transversal.
 
-We'll change the lacing on **Point.ByCoordinates**, but won't change anything else about the graph above.
+Vamos alterar a amarra em **Point.ByCoordinates**, mas não alteraremos mais nada no gráfico acima.
 
-### Shortest List
+### Lista mais curta
 
-Choosing _shortest list_ as the lacing option (also the default option), we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
+Escolhendo _lista mais curta_ como a opção de amarra (também a opção padrão), obtemos uma linha diagonal básica composta de cinco pontos. Cinco pontos são o comprimento da lista menor, portanto, a amarra da lista mais curta é interrompida após atingir o final de uma lista.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
 
-### **Longest List**
+### **Lista mais longa**
 
-By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
+Ao alterar a amarra para _lista mais longa_, obtemos uma linha diagonal que se estende verticalmente. Pelo mesmo método que o diagrama conceitual, o último item na lista de cinco itens será repetido para alcançar o comprimento da lista mais longa.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
 
-### **Cross Product**
+### **Produto transversal**
 
-By changing the lacing to _Cross Product_, we get every combination between each list, giving us a 5x10 grid of points. This is an equivalent data structure to the cross product as shown in the concept diagram above, except our data is now a list of lists. By connecting a polycurve, we can see that each list is defined by its X-Value, giving us a row of vertical lines.
+Ao alterar a amarra para _Produto transversal_, temos todas as combinações entre cada lista, dando-nos uma grade de pontos 5x10. Essa é uma estrutura de dados equivalente ao produto transversal, como mostrado no diagrama do conceito acima, exceto que nossos dados agora são uma lista de listas. Ao conectar uma policurva, podemos ver que cada lista é definida pelo seu valor X, dando-nos uma linha de linhas verticais.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)

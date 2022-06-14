@@ -1,90 +1,90 @@
-# Curves
+# Curvas
 
-## Curves in Dynamo
+## Curvas no Dynamo
 
-### What is Curve?
+### O que é uma curva?
 
-[Curves ](5-4\_curves.md#curve)are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvey or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
+As [curvas](5-4\_curves.md#curve) são o primeiro tipo de dados geométricos que abordamos que possui um conjunto mais familiar de propriedades descritivas de forma: quão curvas ou retas são? Longas ou curtas? E lembre-se de que os Pontos ainda são os nossos blocos de construção para definir qualquer coisa, de uma linha para uma spline e todos os tipos de curva entre eles.
 
-![Curve Types](../images/5-2/4/CurveTypes.jpg)
+![Tipos de curvas](../images/5-2/4/CurveTypes.jpg)
 
-> 1. Line
-> 2. Polyline
-> 3. Arc
+> 1. Linha
+> 2. Polilinha
+> 3. Arco
 > 4. Circle
-> 5. Ellipse
-> 6. NURBS Curve
-> 7. Polycurve
+> 5. Elipse
+> 6. Curva NURBS
+> 7. PolyCurve
 
-### Line
+### Linha
 
-[Line ](5-4\_curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>) to create a Line in Dynamo.
+[Linha](5-4\_curves.md#lines) é composta por um conjunto de pontos, cada linha tem pelo menos 2 pontos. Uma das formas mais comuns de criar linhas no Dynamo é usar `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>) para criar uma linha no Dynamo.
 
 ![](<./images/5-2/4/curves - line by start point end point.jpg>)
 
-### NURBS Curve
+### Curva NURBS
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) is a model used for representing curves and surfaces accurately. A sine curve in Dynamo using two different methods to create NURBS Curves to compare the results.
+[NURBS](5-4\_curves.md#nurbs-+-polycurves) é um modelo usado para representar curvas e superfícies com precisão. Uma curva senoidal no Dynamo usando dois métodos diferentes para criar curvas NURBS para comparar os resultados.
 
 ![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
 
-> 1. _NurbsCurve.ByControlPoints_ uses the List of Points as Control Points
-> 2. _NurbsCurve.ByPoints_ draws a Curve through the List of Points
+> 1. _NurbsCurve.ByControlPoints_ utiliza a lista de pontos como pontos de controle
+> 2. _NurbsCurve.ByPoints_ desenha uma curva através da lista de pontos
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-## Deep Dive into...
+## Análise abrangente de...
 
-### Curves
+### Curvas
 
-The term **Curve** is generally a catch-all for all different sort of curved (even if straight) shapes. Capital "C" Curve is the parent categorization for all of those shape types - Lines, Circles, Splines, etc. More technically, a Curve describes every possible Point that can be found by inputting "t" into a collection of functions, which may range from the simple (`x = -1.26*t, y = t`) to functions involving calculus. No matter what kind of Curve we are working with, this **Parameter** called "t" is a property we can evaluate. Furthermore, regardless of the look of the shape, all Curves also have a start point and end point, which coincidentally align with the minimum and maximum t values used to create the Curve. This also helps us understand its directionality.
+O termo **Curva** é um termo mais abrangente que engloba todas as diferentes formas curvas (mesmo se retas). A curva de capital "C" é a categorização principal para todos esses tipos de forma: linhas, círculos, splines, etc. Tecnicamente, uma curva descreve cada ponto possível que possa ser encontrado inserindo “t” em uma coleção de funções, que podem variar desde funções simples (`x = -1.26*t, y = t`) a funções que envolvam cálculos. Não importa com que tipo de curva estamos trabalhando, este **Parâmetro** chamado "t" é uma propriedade que podemos avaliar. Além disso, independentemente da aparência da forma, todas as curvas também têm um ponto inicial e um ponto final, que coincidem com os valores mínimo e máximo de "t" utilizados para criar a curva. Isso também nos ajuda a compreender sua direcionalidade.
 
-![Curve Parameter](../images/5-2/4/CurveParameter.jpg)
+![Parâmetro de curva](../images/5-2/4/CurveParameter.jpg)
 
-> It's important to note that Dynamo assumes that the domain of "t" values for a Curve is understood to be 0.0 to 1.0.
+> É importante observar que o Dynamo assume que o domínio dos valores "t" para uma curva é compreendido entre 0,0 e 1,0.
 
-All Curves also possess a number of properties or characteristics which can be used to describe or analyze them. When the distance between the start and end points is zero, the curve is "closed." Also, every curve has a number of control-points, if all these points are located in the same plane, the curve is "planar." Some properties apply to the curve as a whole, while others only apply to specific points along the curve. For example, planarity is a global property while a tangent vector at a given t value is a local property.
+Todas as curvas também possuem diversas propriedades ou características que podem ser usadas para descrever ou analisar. Quando a distância entre os pontos inicial e final for zero, a curva será "fechada". Além disso, cada curva tem vários pontos de controle, se todos esses pontos estão localizados no mesmo plano, a curva é "plana". Algumas propriedades se aplicam à curva como um todo, enquanto outras somente se aplicam a pontos específicos ao longo da curva. Por exemplo, a planaridade é uma propriedade global, enquanto um vetor tangente em um determinado valor "t" é uma propriedade local.
 
-### Lines
+### Linhas
 
-**Lines** are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions.
+**Linhas** são a forma mais simples de Curvas. Podem não parecer curvas, mas na verdade são: apenas sem qualquer curvatura. Existem algumas maneiras diferentes de criar Linhas, sendo a mais intuitiva do ponto A ao ponto B. A forma da linha AB será desenhada entre os pontos, mas matematicamente ela se estende infinitamente em ambas as direções.
 
-![Line](../images/5-2/4/Line.jpg)
+![Linha](../images/5-2/4/Line.jpg)
 
-When we connect two Lines together, we have a **Polyline**. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular.
+Quando nós conectamos duas linhas juntas, temos uma **Polilinha**. Aqui temos uma representação direta do que é um Ponto de controle. Editar qualquer uma dessas localizações de ponto irá alterar a forma da D. Se a polilinha estiver fechada, temos um polígono. Se os comprimentos de aresta do polígono são todos iguais, ele é descrito como normal.
 
-![Polyline + Polygon](../images/5-2/4/Polyline.jpg)
+![Polilinha + Polígono](../images/5-2/4/Polyline.jpg)
 
-### Arcs, Circles, Ellipse Arcs, and Ellipses
+### Arcos, círculos, arcos de elipse e elipses
 
-As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an **Arc**, **Circle**, **Ellipse Arc**, or **Ellipse** by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed.
+À medida que adicionamos mais complexidade às funções paramétricas que definem uma forma, podemos avançar mais um passo a partir de uma linha para criar um **Arco**, **Círculo**, **Arco da elipse** ou **Elipse** descrevendo um ou dois raios. As diferenças entre a versão do arco e o círculo ou elipse são apenas se a forma está fechada.
 
-![Arcs + Circles](../images/5-2/4/Arcs+Circles.jpg)
+![Arcos + Círculos](../images/5-2/4/Arcs+Circles.jpg)
 
-### NURBS + Polycurves
+### NURBS + Polilinhas
 
-**NURBS** (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing.
+**NURBS** (Splines base racional não uniforme) são representações matemáticas que podem modelar com precisão qualquer forma de uma linha simples bidimensional, círculo, arco ou retângulo para a curva orgânica tridimensional mais complexa. Devido à sua flexibilidade (relativamente poucos pontos de controle, mas interpolação suave com base nas configurações de grau) e a precisão (delimitado por uma matemática robusta), os modelos NURBS podem ser usados em qualquer processo, da ilustração e da animação à fabricação.
 
-![NURBS Curve](../images/5-2/4/NURBScurve.jpg)
+![Curva NURBS](../images/5-2/4/NURBScurve.jpg)
 
-**Degree**: The Degree of the Curve determines the range of influence the Control Points have on a Curve; where the higher the degree, the larger the range. The Degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any positive whole number. NURBS lines and polylines are usually Degree 1 and most free-form Curves are Degree 3 or 5.
+**Grau**: o grau da curva determina o intervalo de influência que os pontos de controle têm em uma curva; onde quanto maior for o grau, maior será o intervalo. O grau é um número inteiro positivo. Este número é normalmente 1, 2, 3 ou 5, mas pode ser qualquer número inteiro positivo. As linhas e polilinhas NURBS são normalmente o grau 1 e a maioria das curvas de forma livre são os graus 3 ou 5.
 
-**Control Points**: The Control Points are a list of at least Degree+1 Points. One of the easiest ways to change the shape of a NURBS Curve is to move its Control Points.
+**Pontos de controle**: os pontos de controle são uma lista de ao menos pontos de graus + 1. Uma das formas mais fáceis de alterar a forma de uma curva NURBS é mover seus Pontos de controle.
 
-**Weight**: Control Points have an associated number called a Weight. Weights are usually positive numbers. When a Curve’s Control Points all have the same weight (usually 1), the Curve is called non-rational, otherwise the Curve is called rational. Most NURBS curves are non-rational.
+**Peso**: os pontos de controle têm um número associado denominado Peso. Os pesos são normalmente números positivos. Quando os Pontos de controle de uma curva têm o mesmo peso (normalmente 1), a Curva é chamada não racional, caso contrário, a Curva é chamada racional. A maioria das curvas NURBS é não racional.
 
-**Knots**: Knots are a list of (Degree+N-1) numbers, where N is the number of Control Points. The Knots are used together with the weights to control the influence of the Control Points on the resulting Curve. One use for Knots is to create kinks at certain points in the curve.
+**Nós**: os nós são uma lista de números (graus+N-1), onde N é o número de pontos de controle. Os nós são utilizados junto com os pesos para controlar a influência dos Pontos de controle na curva resultante. Um uso para nós é criar pontos de inflexão em certos pontos da curva.
 
-![NURBS Curve Degree](../images/5-2/4/NURBScurve\_Degree.jpg)
+![Grau da curva NURBS](../images/5-2/4/NURBScurve\_Degree.jpg)
 
-> 1. Degree = 1
-> 2. Degree = 2
-> 3. Degree = 3
+> 1. Grau = 1
+> 2. Grau = 2
+> 3. Grau = 3
 
 {% hint style="info" %}
-Note that the higher the degree value, the more Control Points are used to interpolate the resulting Curve.
+Observe que quanto maior for o valor do grau, mais pontos de controle serão usados para interpolar a curva resultante.
 {% endhint %}

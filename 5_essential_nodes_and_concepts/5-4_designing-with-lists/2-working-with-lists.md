@@ -1,150 +1,150 @@
-# Working with Lists
+# Trabalhar com listas
 
-### Working with Lists
+### Trabalhar com listas
 
-Now that we've established what a list is, let's talk about operations we can perform on it. Imagine a list as a deck of playing cards. A deck is the list and each playing card represents an item.
+Agora que estabelecemos o que é uma lista, vamos falar sobre as operações que podemos realizar nela. Imagine uma lista como um baralho de cartas. O baralho é a lista e cada carta representa um item.
 
-![cards](../images/5-4/2/Playing\_cards\_modified.jpg)
+![cartas](../images/5-4/2/Playing\_cards\_modified.jpg)
 
-> Photo by [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Foto de [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
 
-### Query
+### Consulta
 
-What **queries** can we make from the list? This accesses existing properties.
+Quais **consultas** podemos fazer na lista? Isso acessa as propriedades existentes.
 
-* Number of cards in the deck? 52.
-* Number of suits? 4.
-* Material? Paper.
-* Length? 3.5" or 89mm.
-* Width? 2.5" or 64mm.
+* Número de cartas no baralho? 52.
+* Número de naipes? 4.
+* Material? Papel.
+* Comprimento? 3,5 pol. ou 89 mm.
+* Largura? 2,5 pol. ou 64 mm.
 
-### Action
+### Ação
 
-What **actions** can we perform on the list? This changes the list based on a given operation.
+Quais **ações** podemos executar na lista? Isso altera a lista com base em uma operação fornecida.
 
-* We can shuffle the deck.
-* We can sort the deck by value.
-* We can sort the deck by suit.
-* We can split the deck.
-* We can partition the deck by dealing out individual hands.
-* We can select a specific card in the deck.
+* Podemos embaralhar as cartas.
+* Podemos classificar as cartas por valor.
+* Podemos classificar as cartas por naipe.
+* Podemos dividir o baralho.
+* Podemos dividir o baralho, distribuindo cada uma das mãos da rodada.
+* É possível selecionar uma carta específica no baralho.
 
-All of the operations listed above have analogous Dynamo nodes for working with lists of generic data. The lessons below will demonstrate some of the fundamental operations we can perform on lists.
+Todas as operações listadas acima têm nós análogos do Dynamo para trabalhar com listas de dados genéricos. As lições abaixo demonstrarão algumas das operações fundamentais que podemos executar nas listas.
 
-## **Exercise**
+## **Exercício**
 
-### **List Operations**
+### **Operações de lista**
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/2/List-Operations.dyn" %}
 
-The image below is the base graph which we are drawing lines between two circles to represent basic list operations. We'll explore how to manage data within a list and demonstrate the visual results through the list actions below.
+A imagem abaixo é o gráfico de base no qual estamos desenhando linhas entre dois círculos para representar operações básicas de lista. Vamos explorar como gerenciar dados em uma lista e demonstrar os resultados visuais através das ações da lista abaixo.
 
 ![](<../images/5-4/2/working with list - list operation.jpg>)
 
-> 1. Begin with a **Code Block** with a value of `500;`
-> 2. Plug into the x input of a **Point.ByCoordinates** node.
-> 3. Plug the node from the previous step into the origin input of a **Plane.ByOriginNormal** node.
-> 4. Using a **Circle.ByPlaneRadius** node, plug the node from the previous step into the plane input.
-> 5. Using **Code Block**, designate a value of `50;` for the radius. This is the first circle we'll create.
-> 6. With a **Geometry.Translate** node, move the circle up 100 units in the Z direction.
-> 7. With a **Code Block** node, define a range of ten numbers between 0 and 1 with this line of code: `0..1..#10;`
-> 8. Plug the code block from the previous step into the _param_ input of two **Curve.PointAtParameter** nodes. Plug **Circle.ByPlaneRadius** into the curve input of the top node, and **Geometry.Translate** into the curve input of the node beneath it.
-> 9. Using a **Line.ByStartPointEndPoint**, connect the two **Curve.PointAtParamete**_r_ nodes.
+> 1. Comece com um **Bloco de código** com um valor de `500;`
+> 2. Conecte-se à entrada x de um nó **Point.ByCoordinates**.
+> 3. Conecte o nó da etapa anterior à entrada de origem de um nó **Plane.ByOriginNormal**.
+> 4. Usando um nó **Circle.ByPlaneRadius**, conecte o nó da etapa anterior à entrada do plano.
+> 5. Usando o **Bloco de código**, designe um valor de `50;` para o raio. Esse é o primeiro círculo que criaremos.
+> 6. Com um nó **Geometry.Translate**, movimente o círculo 100 unidades para cima na direção Z.
+> 7. Com um nó de **Bloco de código**, defina um intervalo de dez números entre 0 e 1 com esta linha de código: `0..1..#10;`
+> 8. Conecte o bloco de código da etapa anterior à entrada _param_ dos dois nós **Curve.PointAtParameter**. Conecte **Circle.ByPlaneRadius** à entrada de curva do nó superior e **Geometry.Translate** à entrada de curva do nó abaixo dele.
+> 9. Usando **Line.ByStartPointEndPoint**, conecte os dois nós **Curve.PointAtParamete**_r_.
 
 ### List.Count
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/2/List-Count.dyn" %}
 
-The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
+O nó _List.Count_ é simples: conta o número de valores em uma lista e retorna esse número. Esse nó ganha mais nuances à medida que trabalhamos com listas de listas, mas vamos demonstrar isso nas seções a seguir.
 
 ![Count](<../images/5-4/2/working with list - list operation - list count.jpg>)
 
-> 1. The **List.Count **_****_ node returns the number of lines in the **Line.ByStartPointEndPoint** node. The value is 10 in this case, which agrees with the number of points created from the original **Code Block** node.
+> 1. O nó **List.Count **_****_ retorna o número de linhas no nó **Line.ByStartPointEndPoint**. O valor é 10 nesse caso, que concorda com o número de pontos criados no nó original do **Bloco de código**.
 
 ### List.GetItemAtIndex
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
 
-**List.GetItemAtIndex** is a fundamental way to query an item in the list.
+**List.GetItemAtIndex** é uma forma fundamental de consultar um item na lista.
 
 ![Exercise](<../images/5-4/2/working with list - get item index 01.jpg>)
 
-> 1. First, Right click on **Line.ByStartPointEndPoint** node to switch off its preview.
-> 2. Using the **List.GetItemAtIndex** node, we are selecting index _"0"_, or the first item in the list of lines.
+> 1. Primeiro, clique com o botão direito do mouse no nó **Line.ByStartPointEndPoint** para desativar sua visualização.
+> 2. Usando o nó **List.GetItemAtIndex**, estamos selecionando o índice _“0”_ ou o primeiro item na lista de linhas.
 
-Change slider value between 0 and 9 to select different item using **List.GetItemAtIndex**.
+Altere o valor do controle deslizante entre 0 e 9 para selecionar outro item usando **List.GetItemAtIndex**.
 
 ![](<../images/5-4/2/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
-_List.Reverse_ reverses the order of all of the items in a list.
+_List.Reverse_ reverte a ordem de todos os itens em uma lista.
 
 ![Exercise](<../images/5-4/2/working with list - list reverse.jpg>)
 
-> 1. To properly visualize the reversed list of lines, create more lines by changing the **Code Block** to `0..1..#50;`
-> 2. Duplicate the **Line.ByStartPointEndPoint** node, insert a List.Reverse node in between **Curve.PointAtParameter** and the second **Line.ByStartPointEndPoint**
-> 3. Use **Watch3D** nodes to preview two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
+> 1. Para visualizar corretamente a lista invertida de linhas, crie mais linhas alterando o **Bloco de código** para `0..1..#50;`
+> 2. Duplique o nó **Line.ByStartPointEndPoint**, insira um nó List.Reverse entre **Curve.PointAtParameter** e o segundo **Line.ByStartPointEndPoint**
+> 3. Use os nós **Watch3D** para visualizar dois resultados diferentes. O primeiro mostra o resultado sem uma lista invertida. As linhas se conectam verticalmente aos pontos adjacentes. A lista invertida, no entanto, conectará todos os pontos à ordem oposta na outra lista.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
 
-**List.ShiftIndices** is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
+**List.ShiftIndices** é uma boa ferramenta para criar padrões de torções ou helicoidal ou qualquer outra manipulação de dados semelhante. Esse nó altera os itens em uma lista por um determinado número de índices.
 
 ![Exercise](<../images/5-4/2/working with list - shiftIndices 01.jpg>)
 
-> 1. In the same process as the reverse list, insert a **List.ShiftIndices** into the **Curve.PointAtParameter** and **Line.ByStartPointEndPoint**.
-> 2. Using a **Code Block**, designated a value of "1" to shift the list one index.
-> 3. Notice that the change is subtle, but all of the lines in the lower **Watch3D** node have shifted one index when connecting to the other set of points.
+> 1. No mesmo processo que a lista inversa, insira um **List.ShiftIndices** no **Curve.PointAtParameter** e **Line.ByStartPointEndPoint**.
+> 2. Usando um **Bloco de código**, foi designado o valor de “1” para mudar a lista um índice.
+> 3. Observe que a alteração é sutil, mas todas as linhas no nó inferior **Watch3D** mudaram um índice ao se conectar ao outro conjunto de pontos.
 
-By changing to **Code Block** to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
+Se o **Bloco de código** for alterado para um valor maior, _“30”_, por exemplo, perceberemos uma diferença significativa nas linhas diagonais. A mudança está funcionando como a íris da câmera nesse caso, criando uma torção na forma cilíndrica original.
 
 ![](<../images/5-4/2/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
 ![](../images/5-4/2/ListFilterBool.png)
 
-**List.FilterByBooleanMask** will remove certain items based on a list of booleans, or values reading "true" or "false".
+**List.FilterByBooleanMask** removerá determinados itens com base em uma lista de booleanos ou valores “true” ou “false”.
 
 ![Exercise](<../images/5-4/2/working with list - filter by bool mask.jpg>)
 
-In order to create a list of values reading "true" or "false", we need to a little more work...
+Para criar uma lista de valores “true” ou “false”, é necessário um pouco mais de trabalho...
 
-> 1. Using a **Code Block**, define an expression with the syntax: `0..List.Count(list);`. Connect the **Curve.PointAtParameter** node to the _list_ input. We'll walk through this setup more in the code block chapter, but the line of code in this case is giving us a list representing each index of the **Curve.PointAtParameter** node.
-> 2. Using a _**%**_** (modulus)** node, connect the output of the _code block_ into the _x_ input, and a value of _4_ into the _y_ input. This will give us the remainder when dividing the list of indices by 4. Modulus is a really helpful node for pattern creation. All values will read as the possible remainders of 4: 0, 1, 2, 3.
-> 3. From the  _**%**_** (modulus)** node, we know that a value of 0 means that the index is divisible by 4 (0,4,8,etc...). By using a **==** node, we can test for the divisibility by testing it against a value of _"0"_.
-> 4. The **Watch** node reveals just this: we have a true/false pattern which reads: _true,false,false,false..._.
-> 5. Using this true/false pattern, connect to the mask input of two **List.FilterByBooleanMask** nodes.
-> 6. Connect the **Curve.PointAtParameter** node into each list input for the **List.FilterByBooleanMask**.
-> 7. The output of **Filter.ByBooleanMask** reads _"in"_ and _"out"_. _"In"_ represents values which had a mask value of _"true"_ while _"out"_ represents values which had a value of _"false"_. By plugging the _"in"_ outputs into the _startPoint_ and _endPoint_ inputs of a **Line.ByStartPointEndPoint** node, we've created a filtered list of lines.
-> 8. The **Watch3D** node reveals that we have fewer lines than points. We've selected only 25% of the nodes by filtering only the true values!
+> 1. Usando um **Bloco de código**, defina uma expressão com a sintaxe: `0..List.Count(list);`. Conecte o nó **Curve.PointAtParameter** à entrada _list_. Vamos navegar por essa configuração mais no capítulo do bloco de código, mas a linha de código nesse caso está nos dando uma lista que representa cada índice do nó **Curve.PointAtParameter**.
+> 2. Usando um nó _**%**_** (módulo)**, conecte a saída do _bloco de código_ à entrada _x_ e um valor de _4_ à entrada _y_. Isso nos fornecerá o resto ao dividir a lista de índices por 4. O módulo é um nó muito útil para a criação do padrão. Todos os valores serão lidos como os possíveis restos de 4: 0, 1, 2, 3.
+> 3. No nó _**%**_** (módulo)**, sabemos que um valor de 0 significa que o índice é divisível por 4 (0, 4, 8 etc...). Usando um nó **==**, podemos testar a divisibilidade com um valor de _“0”_.
+> 4. O nó **Watch** revela apenas isso: temos um padrão true/false com a indicação: _true, false, false, false..._.
+> 5. Usando esse padrão true/false, conecte-se à entrada de máscara dos dois nós **List.FilterByBooleanMask**.
+> 6. Conecte o nó **Curve.PointAtParameter** a cada entrada da lista do **List.FilterByBooleanMask**.
+> 7. A saída **Filter.ByBooleanMask** é _“in”_ e _“out”_. _“in”_ representa valores que tinham um valor de máscara _“true”_, enquanto _“out”_ representa valores que tinham um valor _“false”_. Conectando as saídas _“in”_ às entradas _startPoint_ e _endPoint_ de um nó **Line.ByStartPointEndPoint**, criamos uma lista de linhas filtrada.
+> 8. O nó **Watch3D** revela que temos menos linhas que pontos. Selecionamos somente 25% dos nós filtrando somente os valores true.

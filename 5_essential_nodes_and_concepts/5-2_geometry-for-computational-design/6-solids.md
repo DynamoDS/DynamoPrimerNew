@@ -1,96 +1,96 @@
-# Solids
+# Sólidos
 
-## Solids in Dynamo
+## Sólidos no Dynamo
 
-### What is Solid?
+### O que é um sólido?
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+Se quisermos construir modelos mais complexos que não possam ser criados com base em uma única superfície ou se desejarmos definir um volume explícito, agora precisaremos nos aventurar no realismo dos [sólidos](5-6\_solids.md#solids) (e das Polysurfaces). Até mesmo um cubo simples é complexo o suficiente para precisar de seis superfícies, uma por face. Os sólidos dão acesso a dois conceitos-chave que as superfícies não têm: uma descrição topológica mais refinada (faces, arestas, vértices) e operações booleanas.
 
-### Boolean Operation to Create Spiky Ball Solid
+### Operação booleana para criar um sólido esférico espetado
 
-You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
+É possível usar [Operações booleanas](5-6\_solids.md#boolean-operations) para modificar os sólidos. Vamos usar algumas operações booleanas para criar uma bola espetada.
 
-![](<../images/5-2/6/solids  - spiky ball.jpg>)
+![](<../images/5-2/6/solids - spiky ball.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
-> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
-> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface.
-> 4. **Solid.UnionAll**: Union the Cones and the Sphere.
-> 5. **Topology.Edges**: Query the edges of the new Solid
-> 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
+> 1. **Sphere.ByCenterPointRadius**: crie o sólido base.
+> 2. **Topology.Faces**, **Face.SurfaceGeometry**: consulte as faces do sólido e converta-as em geometria de superfície. Neste caso, a esfera tem apenas uma face.
+> 3. **Cone.ByPointsRadii**: construa cones usando pontos na superfície.
+> 4. **Solid.UnionAll**: una os cones e a esfera.
+> 5. **Topology.Edges**: consulte as arestas do novo sólido
+> 6. **Solid.Fillet**: arredonde as arestas da esfera espetada
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### Freezing
+### Congelar
 
-Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
+As operações booleanas são complexas e seu cálculo pode ser lento. Use a funcionalidade Congelar para suspender a execução dos nós selecionados e dos nós a jusante afetados.
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1.Use the right-click contextual menu to Freeze the Solid Union operation
+> 1. Use o menu de contexto do botão direito do mouse para congelar a operação de União de sólidos
 >
-> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
+> 2\. O nó selecionado e todos os nós a jusante serão visualizados em um modo duplicado cinza claro, e os fios afetados serão exibidos como linhas tracejadas. A visualização da geometria afetada também será duplicada. Agora é possível alterar os valores anteriores sem calcular a união booleana.
 >
-> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
+> 3\. Para descongelar os nós, clique com o botão direito do mouse e desmarque Congelar.
 >
-> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 4\. Todos os nós afetados e as visualizações de geometria associadas serão atualizados e revertidos para o modo de visualização padrão.
 
-## Deep Dive into...
+## Análise abrangente de...
 
-### Solids
+### Sólidos
 
-Solids consist of one or more Surfaces that contain volume by way of a closed boundary that defines "in" or "out." Regardless of how many of these Surfaces there are, they must form a "watertight" volume to be considered a Solid. Solids can be created by joining Surfaces or Polysurfaces together or by using operations such as loft, sweep, and revolve. Sphere, Cube, Cone and Cylinder primitives are also Solids. A Cube with at least one face removed counts as a Polysurface, which has some similar properties, but it is not a Solid.
+Os sólidos consistem em uma ou mais superfícies que contêm volume por meio de um limite fechado que define a “entrada” ou a “saída”. Independentemente de quantas superfícies existem, elas devem formar um volume “hermético” para serem consideradas como um sólido. Os sólidos podem ser criados unindo superfícies ou Polysurfaces ou usando operações como elevação, varredura e revolução. As primitivas Esfera, Cubo, Cone e Cilindro também são sólidos. Um cubo com ao menos uma face removida conta como uma PolySurface, que tem algumas propriedades similares, mas não é um sólido.
 
-![Solids](../images/5-2/6/Primitives.jpg)
+![Sólidos](../images/5-2/6/Primitives.jpg)
 
-> 1. A Plane is made of a single Surface and is not a Solid.
-> 2. A Sphere is made of one Surface but _is_ a Solid.
-> 3. A Cone is made of two surfaces joined together to make a Solid.
-> 4. A Cylinder is made of three surfaces joined together to make a Solid.
-> 5. A Cube is made of six surfaces joined together to make a Solid.
+> 1. Um plano é composto de uma única superfície e não é um sólido.
+> 2. Uma esfera é composta de uma superfície, mas _é_ um sólido.
+> 3. Um cone é composto por duas superfícies unidas para criar um sólido.
+> 4. Um cilindro é composto por três superfícies unidas para criar um sólido.
+> 5. Um cubo é composto de seis superfícies unidas para criar um sólido.
 
-### Topology
+### Topologia
 
-Solids are made up of three types of elements: Vertices, Edges, and Faces. Faces are the surfaces that make up the Solid. Edges are the Curves that define the connection between adjacent faces, and vertices are the start and end points of those Curves. These elements can be queried using the Topology nodes.
+Os sólidos são compostos de três tipos de elementos: vértices, arestas e faces. As faces são as superfícies que compõem o sólido. As arestas são as curvas que definem a conexão entre as faces adjacentes e os vértices são os pontos inicial e final dessas curvas. É possível consultar esses elementos usando os nós Topology.
 
-![Topology](../images/5-2/6/Solid-topology.jpg)
+![Topologia](../images/5-2/6/Solid-topology.jpg)
 
 > 1. Faces
-> 2. Edges
-> 3. Vertices
+> 2. Arestas
+> 3. Vértices
 
-### Operations
+### Operações
 
-Solids can be modified by filleting or chamfering their edges to eliminate sharp corners and angles. The chamfer operation creates a ruled surface between two faces, while a fillet blends between faces to maintain tangency.
+É possível modificar os sólidos arredondando ou chanfrando suas bordas para eliminar os cantos e os ângulos agudos. A operação de chanfro cria uma superfície regular entre duas faces, enquanto o arredondamento é mesclado entre as faces para manter a tangência.
 
 ![](../images/5-2/6/SolidOperations.jpg)
 
-> 1. Solid Cube
-> 2. Chamfered Cube
-> 3. Filleted Cube
+> 1. Cubo Sólido
+> 2. Cubo chanfrado
+> 3. Cubo arredondado
 
-### Boolean Operations
+### Operações booleanas
 
-Solid Boolean operations are methods for combining two or more Solids. A single Boolean operation actually means performing four operations:
+As operações booleanas de sólidos são métodos para combinar dois ou mais sólidos. Uma única operação booleana significa realizar quatro operações:
 
-1. **Intersect** two or more objects.
-2. **Split** them at the intersections.
-3. **Delete** unwanted portions of the geometry.
-4. **Join** everything back together.
+1. **fazer interseção** de dois ou mais objetos.
+2. **Dividir** os objetos nas interseções.
+3. **Excluir** as partes indesejadas da geometria.
+4. **Unir** tudo de volta.
 
-This makes Solid Booleans a powerful time-saving process. There are three Solid Boolean operations that distinguish which parts of the geometry are kept. ![Solid Boolean](../images/5-2/6/SolidBooleans.jpg)
+Isso torna os booleanos de sólidos num poderoso processo de economia de tempo. Existem três operações booleanas de sólidos que distinguem quais partes da geometria são mantidas. ![Booleano de sólido](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Union:** Remove the overlapping portions of the Solids and join them into a single Solid.
-> 2. **Difference:** Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume.
-> 3. **Intersection:** Keep only the intersecting volume of the two Solids.
+> 1. **União:** remove as partes sobrepostas dos sólidos e una-as em um único sólido.
+> 2. **Diferença:** subtrai um sólido de outro. O sólido a ser subtraído é chamado de ferramenta. Observe que é possível alternar qual sólido é a ferramenta para manter o volume inverso.
+> 3. **Interseção:** mantém somente o volume de interseção dos dois sólidos.
 
-In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **Solid.UnionAll** nodes for performing difference and union operations with multiple Solids. ![](../images/5-2/6/BooleanAll.jpg)
+Além dessas três operações, o Dynamo tem os nós **Solid.DifferenceAll** e **Solid.UnionAll** para executar operações de diferença e união com vários sólidos. ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** Union operation with sphere and outward-facing cones
-> 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
+> 1. **UnionAll:** operação da união com esfera e cones virados para fora
+> 2. **DifferenceAll:** operação de diferença com esfera e cones virados para dentro
 
 ##

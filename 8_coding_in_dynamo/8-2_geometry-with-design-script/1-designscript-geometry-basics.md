@@ -1,8 +1,8 @@
-# DesignScript Geometry Basics
+# Conceitos básicos da geometria DesignScript
 
-### Point
+### Ponto
 
-The simplest geometrical object in the Dynamo standard geometry library is a point. All geometry is created using special functions called constructors, which each return a new instance of that particular geometry type. In Dynamo, constructors begin with the name of the object’s type, in this case Point, followed by the method of construction. To create a three dimensional point specified by x, y, and z Cartesian coordinates, use the _ByCoordinates_ constructor:
+O objeto geométrico mais simples da biblioteca de geometria padrão do Dynamo é um ponto. Toda a geometria é criada usando funções especiais chamadas construtores, cada uma delas retorna uma nova instância desse tipo de geometria específico. No Dynamo, os construtores começam com o nome do tipo do objeto, neste caso, Ponto, seguido pelo método de construção. Para criar um ponto tridimensional especificado pelas coordenadas cartesianas x, y e z, use o construtor _ByCoordinates_:
 
 ![](../images/8-2/1/GeometryBasics\_01.png)
 
@@ -16,9 +16,9 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Constructors in Dynamo are typically designated with the “_By_” prefix, and invoking these functions returns a newly created object of that type. This newly created object is stored in the variable named on the left side of the equal sign.
+Os construtores no Dynamo são normalmente designados com o prefixo “_By_” e a chamada dessas funções retorna um objeto recém-criado desse tipo. Esse objeto recém-criado é armazenado na variável nomeada no lado esquerdo do sinal de igual.
 
-Most objects have many different constructors, and we can use the _BySphericalCoordinates_ constructor to create a point lying on a sphere, specified by the sphere’s radius, a first rotation angle, and a second rotation angle (specified in degrees):
+A maioria dos objetos possui construtores diferentes, e podemos usar o construtor _BySphericalCoordinates_ para criar um ponto sobre uma esfera, especificado pelo raio da esfera, um primeiro ângulo de rotação, e um segundo ângulo de rotação (especificado em graus):
 
 ![](../images/8-2/1/GeometryBasics\_02.png)
 
@@ -34,9 +34,9 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
     phi);
 ```
 
-### From Point to Line
+### De ponto para linha
 
-Points can be used to construct higher dimensional geometry such as lines. We can use the _ByStartPointEndPoint_ constructor to create a Line object between two points:
+É possível usar os pontos para construir uma geometria dimensional maior, como linhas. Podemos usar o construtor _ByStartPointEndPoint_ para criar um objeto de linha entre dois pontos:
 
 ![](../images/8-2/1/GeometryBasics\_03.png)
 
@@ -49,9 +49,9 @@ p2 = Point.ByCoordinates(-15, 7, 0.5);
 l = Line.ByStartPointEndPoint(p1, p2);
 ```
 
-### From Line to Surface
+### De linha para superfície
 
-Similarly, lines can be used to create higher dimensional surface geometry, for instance using the _Loft_ constructor, which takes a series of lines or curves and interpolates a surface between them.
+De forma semelhante, é possível usar as linhas para criar uma geometria de superfície dimensional maior, por exemplo, usando o construtor _Loft_, que usa uma série de linhas ou curvas e interpola uma superfície entre elas.
 
 ![](../images/8-2/1/GeometryBasics\_04.png)
 
@@ -75,9 +75,9 @@ l3 = Line.ByStartPointEndPoint(p5, p6);
 surf = Surface.ByLoft([l1, l2, l3]);
 ```
 
-### From Surface to Solid
+### De superfície para sólido
 
-Surfaces too can be used to create higher dimensional solid geometry, for instance by thickening the surface by a specified distance. Many objects have functions attached to them, called methods, allowing the programmer to perform commands on that particular object. Methods common to all pieces of geometry include _Translate_ and _Rotate_, which respectively translate (move) and rotate the geometry by a specified amount. Surfaces have a _Thicken_ method, which take a single input, a number specifying the new thickness of the surface.
+Também é possível usar as superfícies para criar uma geometria sólida dimensional maior, por exemplo, espessando a superfície por uma distância especificada. Muitos objetos possuem funções associadas a eles, chamados métodos, permitindo que o programador execute comandos nesse objeto em particular. Os métodos comuns a todas as porções de geometria incluem _Translate_ e _Rotate_, que respectivamente convertem (movem) e rotacionam a geometria por um valor especificado. As superfícies apresentam um método _Thicken_, que recebe uma única entrada, um número que especifica a nova espessura da superfície.
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 
@@ -97,9 +97,9 @@ surf = Surface.ByLoft([l1, l2]);
 solid = surf.Thicken(4.75, true);
 ```
 
-### Intersect
+### Intersecionar
 
-_Intersection_ commands can extract lower dimensional geometry from higher dimensional objects. This extracted lower dimensional geometry can form the basis for higher dimensional geometry, in a cyclic process of geometrical creation, extraction, and recreation. In this example, we use the generated Solid to create a Surface, and use the Surface to create a Curve.
+Os comandos _Intersection_ podem extrair geometria dimensional menor de objetos dimensionais maiores. Essa geometria dimensional menor extraída pode formar a base para uma geometria dimensional maior, em um processo cíclico de criação, extração e recriação geométrica. Neste exemplo, usamos o sólido gerado para criar uma superfície e usamos a superfície para criar uma curva.
 
 ![](../images/8-2/1/GeometryBasics\_06.png)
 

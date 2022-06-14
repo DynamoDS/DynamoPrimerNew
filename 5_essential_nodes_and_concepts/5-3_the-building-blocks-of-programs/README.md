@@ -1,5 +1,5 @@
-# The Building Blocks of Programs
+# Os blocos de construção de programas
 
-Once we are ready to dive deeper into developing Visual Programs, we will need a deeper understanding of the building blocks we will use. This chapter introduces fundamental concepts around data - the stuff that travels through the Wires of our Dynamo program.
+Quando estivermos prontos para nos aprofundar no desenvolvimento de programas visuais, precisaremos de uma compreensão mais profunda dos blocos de construção que usaremos. Este capítulo apresentará os conceitos fundamentais em torno dos dados: o que percorre os fios do nosso programa Dynamo.
 
 ![](<../images/5-3/building blocks of program.png>)

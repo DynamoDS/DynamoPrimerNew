@@ -1,10 +1,10 @@
-# Translation, Rotation, and Other Transformations
+# Transformações de conversão, rotação e outras
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+Determinados objetos de geometria podem ser criados explicitamente especificando as coordenadas x, y e z no espaço tridimensional. Mais frequentemente, no entanto, a geometria é movida para sua posição final usando transformações geométricas no próprio objeto ou em seu CoordinateSystem subjacente.
 
-### Translation
+### Conversão
 
-The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
+A transformação geométrica mais simples é uma conversão, que move um objeto um número especificado de unidades nas direções x, y e z.
 
 ![](../images/8-2/5/Transformations\_01.png)
 
@@ -18,9 +18,9 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### Rotation
+### Rotação
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+Embora todos os objetos no Dynamo possam ser convertidos ao anexar o método _.Translate_ ao final do nome do objeto, as transformações mais complexas requerem a transformação do objeto de um CoordinateSystem subjacente em um novo CoordinateSystem. Por exemplo, para rotacionar um objeto 45 graus em torno do eixo x, nós iremos transformar o objeto de seu CoordinateSystem existente sem rotação em um CoordinateSystem que foi rotacionado 45 graus em torno do eixo x com o método _.Transform_:
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Scale
+### Escalar
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+Além de serem convertidos e rotacionados, também é possível criar os CoordinateSystems com escala ou cisalhamento. Um CoordinateSystem pode ser dimensionado com o método _.Scale_:
 
 ![](../images/8-2/5/Transformations\_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+Os CoordinateSystems de cisalhamento são criados ao inserir vetores não ortogonais no construtor CoordinateSystem.
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+A escala e o cisalhamento são, comparativamente, transformações geométricas mais complexas do que a rotação e a conversão, de modo que nem todos os objetos do Dynamo podem sofrer essas transformações. A tabela a seguir descreve quais objetos do Dynamo podem ter CoordinateSystems com escala não uniforme e CoordinateSystems com cisalhamento.
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| Classe | CoordinateSystem com escala não uniforme | CoordinateSystem com cisalhamento |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | No                                    | No                       |
-| NurbsCurve   | Yes                                   | Yes                      |
-| NurbsSurface | No                                    | No                       |
-| Circle       | No                                    | No                       |
-| Line         | Yes                                   | Yes                      |
-| Plane        | No                                    | No                       |
-| Point        | Yes                                   | Yes                      |
-| Polygon      | No                                    | No                       |
-| Solid        | No                                    | No                       |
-| Surface      | No                                    | No                       |
-| Text         | No                                    | No                       |
+| Arco | No | Não |
+| NurbsCurve | Sim | Sim |
+| NurbsSurface | No | Não |
+| Círculo | No | Não |
+| Linha | Sim | Sim |
+| Plano | No | Não |
+| Ponto | Sim | Sim |
+| Polígono | No | Não |
+| Sólido | No | Não |
+| Superfície | No | Não |
+| Texto | No | Não |

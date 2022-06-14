@@ -1,8 +1,8 @@
-# Essential Nodes & Concepts
+# Nós e conceitos essenciais
 
-In this section, we introduce the essential Nodes available in the Dynamo Library that will help you create your own visual program like a pro.
+Nesta seção, apresentamos os nós essenciais disponíveis na biblioteca do Dynamo que ajudarão você a criar seu próprio programa visual como um profissional.
 
-* [Geometry for Computational Design](5-2\_geometry-for-computational-design/): How do I work with geometric elements in Dynamo? Explore multiple ways to create simple or complex geometries from primitives.
-* [The Building Blocks of Programs:](5-3\_the-building-blocks-of-programs/) What is "Data" and what are some fundamental types I can start using in my programs? Also, learn more about incorporating math and logic operations in your design workflow.
-* [Designing with Lists: ](5-4\_designing-with-lists/)How do I manage and coordinate my data structures? Understand more about the concept of List and use it to manage your design data efficiently.
-* [Dictionaries in Dynamo: ](5-5\_dictionaries-in-dynamo/)What are Dictionaries? Find out how to use dictionaries to look up specific data and values from existing results.
+* [Geometria do projeto computacional](5-2\_geometry-for-computational-design/): Como posso trabalhar com elementos geométricos no Dynamo? Explore várias maneiras de criar geometrias simples ou complexas com base em primitivos.
+* [Blocos de construção de programas:](5-3\_the-building-blocks-of-programs/) O que são os “Dados” e quais são alguns tipos fundamentais que posso começar a usar em meus programas? Além disso, saiba mais sobre como incorporar operações de matemática e lógica no fluxo de trabalho do projeto.
+* [Projetar com listas](5-4\_designing-with-lists/): Como posso gerenciar e coordenar minhas estruturas de dados? Entenda mais sobre o conceito de lista e use-o para gerenciar os dados do projeto com eficiência.
+* [Dicionários no Dynamo: ](5-5\_dictionaries-in-dynamo/)O que são dicionários? Descubra como usar dicionários para procurar dados e valores específicos nos resultados existentes.

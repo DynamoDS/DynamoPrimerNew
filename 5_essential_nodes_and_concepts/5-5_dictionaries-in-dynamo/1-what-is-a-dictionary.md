@@ -1,40 +1,40 @@
-# What is a Dictionary
+# O que é um dicionário
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+O Dynamo 2.0 apresenta o conceito de separar o tipo de dados de dicionários do tipo de dados de listas. Essa alteração pode representar algumas alterações significativas na forma como você cria e trabalha com os dados em seus fluxos de trabalho. Antes da versão 2.0, os dicionários e as listas eram combinados como um tipo de dados. Em resumo, as listas eram na verdade dicionários com chaves inteiras.
 
-### **What is a dictionary?**
+### **O que é um dicionário?**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+Um dicionário é um tipo de dados formado por um conjunto de pares valor-chave onde cada chave é exclusiva em cada coleção. Um dicionário não tem ordem e, basicamente, é possível “procurar por coisas” usando uma chave em vez de um valor de índice como em uma lista. _No Dynamo 2.0, as chaves somente podem ser sequências de caracteres._
 
-### **What is a list?**
+### **O que é uma lista?**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+Uma lista é um tipo de dados formado por uma coleção de valores ordenados. No Dynamo, as listas usam números inteiros como valores de índice.
 
-### **Why was this change made and why should I care?**
+### **Por que essa mudança foi feita e por que é importante para mim?**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+A separação dos dicionários das listas apresenta os dicionários como um elemento de primeira classe que você pode usar para armazenar e pesquisar valores de maneira rápida e fácil, sem precisar lembrar um valor de índice ou manter uma estrutura de lista rigorosa em todo o fluxo de trabalho. Durante o teste dos usuários, vimos uma redução significativa no tamanho do gráfico quando os dicionários eram usados em vez de vários nós `GetItemAtIndex`.
 
-### **What are the changes?**
+### **Quais são as mudanças?**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* Ocorreram alterações na _sintaxe_ que alteram como você inicializará e trabalhará com dicionários e listas em blocos de código.
+   * Os dicionários usam a seguinte sintaxe `{key:value}`
+   * As listas usam a seguinte sintaxe `[value,value,value]`
+* _Novos nós_ foram introduzidos na biblioteca para ajudar você a criar, modificar e consultar dicionários.
+* As listas criadas em blocos de código v1.x migrarão automaticamente ao carregar o script para a nova sintaxe de lista que usa colchetes `[ ]` em vez de chaves `{ }` \\
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **Por que isso é importante para mim? Para que você usaria isso?**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+Na ciência da computação, os dicionários, como listas, são coleções de objetos. Embora as listas estejam em uma ordem específica, os dicionários são coleções _não ordenadas_. Em vez disso, eles não dependem de números sequenciais (índices); em vez disso, usam _chaves._
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+Na imagem abaixo, demonstramos um caso de uso potencial de um dicionário. Muitas vezes, os dicionários são usados para relacionar duas partes dos dados que podem não ter uma correlação direta. No nosso caso, estamos ligando a versão em espanhol de uma palavra à versão em inglês para uma pesquisa posterior.
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. Crie um dicionário para relacionar as duas partes dos dados.
+> 2. Obtenha o valor com a chave fornecida.

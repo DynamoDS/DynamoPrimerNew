@@ -1,10 +1,10 @@
-# Curves: Interpolated and Control Points
+# Curvas: interpoladas e pontos de controle
 
-There are two fundamental ways to create free-form curves in Dynamo: specifying a collection of Points and having Dynamo interpolate a smooth curve between them, or a more low-level method by specifying the underlying control points of a curve of a certain degree. Interpolated curves are useful when a designer knows exactly the form a line should take, or if the design has specific constraints for where the curve can and cannot pass through. Curves specified via control points are in essence a series of straight line segments which an algorithm smooths into a final curve form. Specifying a curve via control points can be useful for explorations of curve forms with varying degrees of smoothing, or when a smooth continuity between curve segments is required.
+Há duas maneiras fundamentais para criar curvas de forma livre no Dynamo: especificar uma coleção de pontos e fazer com que o Dynamo interpole uma curva suave entre eles ou um método de menor nível ao especificar os pontos de controle subjacentes de uma curva de determinado grau. As curvas interpoladas serão úteis quando um designer sabe exatamente a forma que uma linha deve ter ou se o projeto tiver restrições específicas por onde a curva pode e não pode passar. As curvas especificadas por meio de pontos de controle são, em essência, uma série de segmentos de linha reta que um algoritmo suaviza em uma forma de curva final. A especificação de uma curva por meio de pontos de controle pode ser útil para navegações de formas de curva com graus variados de suavização ou quando uma continuidade suave entre segmentos de curva é necessária.
 
-### Interpolated Curve
+### Curva interpolada
 
-To create an interpolated curve, simply pass in a collection of Points to the _NurbsCurve.ByPoints_ method.
+Para criar uma curva interpolada, basta passar uma coleção de pontos para o método _NurbsCurve.ByPoints_.
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -18,7 +18,7 @@ pts = Point.ByCoordinates(1..30..#num_pts, s, 0);
 int_curve = NurbsCurve.ByPoints(pts);
 ```
 
-The generated curve intersects each of the input points, beginning and ending at the first and last point in the collection, respectively. An optional periodic parameter can be used to create a periodic curve which is closed. Dynamo will automatically fill in the missing segment, so a duplicate end point (identical to the start point) isn’t needed.
+A curva gerada faz interseção com cada um dos pontos de entrada, começando e terminando no primeiro e último ponto da coleção, respectivamente. É possível usar um parâmetro periódico opcional para criar uma curva periódica que está fechada. O Dynamo automaticamente preencherá o segmento ausente, portanto, um ponto final duplicado (idêntico ao ponto inicial) não é necessário.
 
 ![](../images/8-2/4/Curves\_02.png)
 
@@ -34,9 +34,9 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
     false);
 ```
 
-### Control Points Curve
+### Curva de pontos de controle
 
-NurbsCurves are generated in much the same way, with input points represent the endpoints of a straight line segment, and a second parameter specifying the amount and type of smoothing the curve undergoes, called the degree.\* A curve with degree 1 has no smoothing; it is a polyline.
+As NurbsCurves são geradas da mesma forma, com os pontos de entrada que representam os pontos finais de um segmento de linha reta e um segundo parâmetro que especifica a quantidade e o tipo de suavização que a curva sofre, denominado grau.\* Uma curva com grau 1 não tem suavização; é uma polilinha.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-A curve with degree 2 is smoothed such that the curve intersects and is tangent to the midpoint of the polyline segments:
+Uma curva com grau 2 é suavizada de forma que a curva faça interseção e seja tangente ao ponto central dos segmentos de polilinha:
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dynamo supports NURBS (Non-uniform rational B-spline) curves up to degree 20, and the following script illustrates the effect increasing levels of smoothing has on the shape of a curve:
+O Dynamo suporta curvas NURBS (B-spline racional não uniforme) até o grau 20, e o seguinte script ilustra o efeito o aumento dos níveis de suavização tem na forma de uma curva:
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,9 +83,9 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-Note that you must have at least one more control point than the degree of the curve.
+Observe que você deve ter pelo menos mais um ponto de controle que o grau da curva.
 
-Another benefit of constructing curves by control vertices is the ability to maintain tangency between individual curve segments. This is done by extracting the direction between the last two control points, and continuing this direction with the first two control points of the following curve. The following example creates two separate NURBS curves which are nevertheless as smooth as one curve:
+Outro benefício de construir curvas por vértices de controle é a capacidade de manter a tangência entre segmentos de curva individuais. Isso é feito extraindo a direção entre os últimos dois pontos de controle e continuando esta direção com os dois primeiros pontos de controle da curva a seguir. O exemplo a seguir cria duas curvas NURBS separadas que, mesmo assim, são tão suaves como uma curva:
 
 ![](../images/8-2/4/Curves\_06.png)
 
@@ -116,5 +116,5 @@ crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
 {% hint style="info" %}
-\*This is a very simplified description of NURBS curve geometry, for a more accurate and detailed discussion see Pottmann, et al, 2007, in the references.
+\*Essa é uma descrição muito simplificada da geometria da curva NURBS, para uma discussão mais precisa e detalhada, consulte Pottmann, et al, 2007, nas referências.
 {% endhint %}

@@ -1,156 +1,156 @@
-# Selecting
+# Seleção
 
-### Select Revit Elements
+### Selecionar os elementos do Revit
 
-Revit is a data-rich environment. This gives us a range of selection abilities which expands far beyond "point-and-click". We can query the Revit database and dynamically link Revit elements to Dynamo geometry while performing parametric operations.
+O Revit é um ambiente com abundância de dados. Isso nos dá uma gama de capacidades de seleção que se expande muito além de “apontar e clicar”. Podemos consultar o banco de dados do Revit e vincular dinamicamente os elementos do Revit à geometria do Dynamo durante a execução de operações paramétricas.
 
-The Revit library in the UI offers a "Selection" category which enables multiple ways to select geometry.
+A biblioteca do Revit na interface do usuário oferece uma categoria “Seleção” que permite várias maneiras de selecionar a geometria.
 
 ![](<./images/2/select revit elements 01.jpg>)
 
-### Revit Hierarchy
+### Hierarquia do Revit
 
-To select Revit elements properly, it's important to have a full-understanding of the Revit element hierarchy. Want to select all the walls in a project? Select by category. Want to select every Eames chair in your mid-century modern lobby? Select by family.
+Para selecionar os elementos do Revit corretamente, é importante ter um entendimento completo da hierarquia de elementos do Revit. Deseja selecionar todas as paredes em um projeto? Selecione por categoria. Deseja selecionar todas as cadeiras Eames em seu lobby moderno de meados do século? Selecione por família.
 
-Let's do a quick review of the Revit hierarchy.
+Vamos fazer uma rápida revisão da hierarquia do Revit.
 
 ![](./images/2/hierarchy.png)
 
-Remember the taxonomy from Biology? Kingdom, Phylum, Class, Order, Family, Genus, Species? Revit elements are categorized in a similar manner. On a basic level, the Revit hierarchy can be broken down into Categories, Families, Types\*, and Instances. An instance is an individual model element (with a unique ID) while a category defines a generic group (like "walls" or "floors"). With the Revit database organized in this manner, we can select one element and choose all similar elements based on a specified level in the hierarchy.
+Lembra-se da taxonomia da biologia? Reino, Filo, Classe, Ordem, Família, Gênero, Espécie? Os elementos do Revit são categorizados de forma similar. Em um nível básico, é possível dividir a hierarquia do Revit em Categorias, Famílias, Tipos\* e Instâncias. Uma instância é um elemento de modelo individual (com uma ID exclusiva), enquanto uma categoria define um grupo genérico (como “paredes” ou “pisos”). Com o banco de dados do Revit organizado dessa forma, é possível selecionar um elemento e escolher todos os elementos similares com base em um nível especificado na hierarquia.
 
 {% hint style="warning" %}
-\*Types in Revit are defined differently from types in programming. In Revit, a type refers to a branch of the hierarchy, rather than a "data type".
+\*Os tipos no Revit são definidos de forma diferente dos tipos na programação. No Revit, um tipo se refere a uma ramificação da hierarquia, em vez de um “tipo de dados”.
 {% endhint %}
 
-### Database Navigation with Dynamo nodes
+### Navegação no banco de dados com os nós do Dynamo
 
-The three images below breakdown the main categories for Revit element selection in Dynamo. These are great tools to use in combination, and we'll explore some of these in the following exercises.
+As três imagens abaixo mostram as categorias principais para a seleção de elementos do Revit no Dynamo. Estas são ótimas ferramentas para usar em combinação, e exploraremos algumas delas nos exercícios seguintes.
 
-_Point-and-click_ is the easiest way to directly select a Revit element. You can select a full model element, or parts of its topology (like a face or an edge). This remains dynamically linked to that Revit object, so when the Revit file updates its location or parameters, the referenced Dynamo element will update in the graph.
+_Ponto e clique_ é a forma mais fácil de selecionar diretamente um elemento do Revit. É possível selecionar um elemento de modelo completo ou partes de sua topologia (como uma face ou uma aresta). Isso permanece vinculado dinamicamente ao objeto do Revit. Portanto, quando o arquivo do Revit atualizar sua localização ou parâmetros, o elemento do Dynamo referenciado será atualizado no gráfico.
 
 ![](<./images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
-_Dropdown menus_ create a list of all accessible elements in a Revit project. You can use this to reference Revit elements which are not necessarily visible in a view. This is a great tool for querying existing elements or creating new ones in a Revit project or family editor.
+Os _menus suspensos_ criam uma lista de todos os elementos acessíveis em um projeto do Revit. É possível usar essa opção para referenciar elementos do Revit que não são necessariamente visíveis em uma vista. Essa é uma ótima ferramenta para consultar elementos existentes ou criar novos em um projeto do Revit ou em um editor de família.
 
 ![](<./images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
-You can also select Revit element by specific tiers in the _Revit hierarchy_. This is a powerful option for customizing large arrays of data in preparation for documentation or generative instantiation and customization.
+Também é possível selecionar o elemento do Revit por camadas específicas na _hierarquia do Revit_. Essa é uma opção poderosa para personalizar grandes matrizes de dados na preparação da documentação ou da instanciação generativa e personalização.
 
-![UI](./images/2/allelements.jpg)
+![Interface do usuário](./images/2/allelements.jpg)
 
-With the three images above in mind, let's dive into an exercise which selects elements from a basic Revit project in preparation for the parametric applications we'll create in the remaining sections of this chapter.
+Com as três imagens acima em mente, vamos nos aprofundar em um exercício que seleciona elementos de um projeto básico do Revit na preparação para os aplicativos paramétricos que iremos criar nas seções restantes deste capítulo.
 
-## Exercise
+## Exercício
 
-> Download the example file by clicking on the link below.
+> Faça o download do arquivo de exemplo clicando no link abaixo.
 >
-> A full list of example files can be found in the Appendix.
+> É possível encontrar uma lista completa de arquivos de exemplo no Apêndice.
 
 {% file src="./datasets/2/Revit-Selecting.zip" %}
 
-In this example Revit file, we have three element types of a simple building. We're going to use this as an example for selecting Revit elements within the context of the Revit hierarchy.
+Neste arquivo do Revit de exemplo, temos três tipos de elementos de uma construção simples. Usaremos isso como exemplo para selecionar elementos do Revit no contexto da hierarquia do Revit.
 
 ![](<./images/2/selecting - exercise 01.jpg>)
 
-> 1. Building Mass
-> 2. Beams (Structural Framing)
-> 3. Trusses (Adaptive Components)
+> 1. Massa de construção
+> 2. Vigas (Framing estrutural)
+> 3. Treliças (componentes adaptativos)
 
-What conclusions can we draw from the elements currently in the Revit project view? And how far down the hierarchy do we need to go to select the appropriate elements? This will of course become a more complex task when working on a large project. There are a lot of options available: we can select elements by categories, levels, families, instances, etc.
+Quais conclusões podemos tirar dos elementos atualmente na vista do projeto do Revit? E a que distância da hierarquia precisamos ir para selecionar os elementos apropriados? Isso, é claro, se tornará uma tarefa mais complexa ao trabalhar em um projeto grande. Há muitas opções disponíveis: é possível selecionar elementos por categorias, níveis, famílias, instâncias etc.
 
-### Selecting Mass and Surfaces
+### Selecionar a massa e as superfícies
 
 ![](<./images/2/selecting - exercise 02.jpg>)
 
-> 1. Since we're working with a basic setup, let's select the building mass by choosing _"Mass"_ in the Categories dropdown node. This can be found in the Revit>Selection tab.
-> 2. The output of the Mass category is just the category itself. We need to select the elements. To do this, we use the _"All Elements of Category"_ node.
+> 1. Como estamos trabalhando com uma configuração básica, vamos selecionar a massa da construção escolhendo _“Massa”_ no nó suspenso Categorias. Isso pode ser encontrado na guia Seleção do Revit.
+> 2. A saída da categoria Massa é apenas a própria categoria. Precisamos selecionar os elementos. Para fazer isso, usamos o nó _“Todos os elementos da categoria”_.
 
-At this point, notice that we don't see any geometry in Dynamo. We've selected a Revit element, but have not converted the element into Dynamo geometry. This is an important separation. If you were to select a large number of elements, you don't want to preview all of them in Dynamo because this would slow everything down. Dynamo is a tool to manage a Revit project without necessarily performing geometry operations, and we'll look at that in the next section of this chapter.
+Neste ponto, observe que não vemos nenhuma geometria no Dynamo. Selecionamos um elemento do Revit, mas não convertemos o elemento na geometria do Dynamo. Essa é uma separação importante. Se você selecionasse um grande número de elementos, não seria uma boa ideia visualizá-los no Dynamo, pois isso deixaria o sistema inteiro lento. O Dynamo é uma ferramenta para gerenciar um projeto do Revit sem executar necessariamente operações de geometria, e vamos examinar isso na próxima seção deste capítulo.
 
-In this case, we're working with simple geometry, so we want to bring the geometry into the Dynamo preview. The "BldgMass" in the watch node above has a green number next to it. This represents the element's ID and tells us that we are dealing with a Revit element, not Dynamo geometry. The next step is to convert this Revit element into geometry in Dynamo.
+Neste caso, estamos trabalhando com geometria simples, por isso queremos trazer a geometria para a visualização do Dynamo. Há um número verde ao lado de “BldgMass” no nó de inspeção acima. Isso representa a ID do elemento e nos informa que estamos lidando com um elemento do Revit, não com a geometria do Dynamo. A próxima etapa é converter esse elemento do Revit em geometria no Dynamo.
 
 ![](<./images/2/selecting - exercise 03.jpg>)
 
-> 1. Using the _Element.Faces_ node, we get a list of surfaces representing each face of the Revit Mass. We can now see the geometry in the Dynamo viewport and start to reference the face for parametric operations.
+> 1. Usando o nó _Element.Faces_, obtemos uma lista de superfícies que representam cada face da massa do Revit. Agora, podemos ver a geometria na viewport do Dynamo e começar a referenciar a face para operações paramétricas.
 
-Here's an alternative method. In this case, we're stepping away from selecting via the Revit Hierarchy _("All Elements of Category")_ and electing to explicitly select geometry in Revit.
+Veja a seguir um método alternativo. Neste caso, estamos deixando de lado a seleção através da hierarquia do Revit _(“Todos os elementos de categoria”)_ e optando por selecionar explicitamente a geometria no Revit.
 
 ![](<./images/2/selecting - exercise 04.jpg>)
 
-> 1. Using the _"Select Model Element"_ node, click the \*"select" \*(or _"change"_) button. In the Revit viewport, select the desired element. In this case, we're selecting the building mass.
-> 2. Rather than _Element.Faces_, we can select the full mass as one solid geometry using _Element.Geometry_. This selects all of the geometry contained within that mass.
-> 3. Using _Geometry.Explode,_ we can get the list of surfaces again. These two nodes work the same as _Element.Faces_ but offer alternative options for delving into the geometry of a Revit element.
+> 1. Usando o nó _“Selecionar elemento do modelo”_, clique no botão \*“selecionar” \*(ou _“alterar”_). Na viewport do Revit, selecione o elemento desejado. Neste caso, estamos selecionando a massa da construção.
+> 2. Em vez de _Element.Faces_, é possível selecionar a massa completa como uma geometria sólida usando _Element.Geometry_. Isso seleciona toda a geometria contida naquela massa.
+> 3. Usando _Geometry.Explode_, podemos obter a lista de superfícies novamente. Esses dois nós funcionam da mesma forma que _Element.Faces_, mas oferecem opções alternativas para examinar a geometria de um elemento do Revit.
 
-Using some basic list operations, we can query a face of interest.
+Usando algumas operações básicas de lista, podemos consultar uma face de interesse.
 
 ![](<./images/2/selecting - exercise 05.jpg>)
 
-> 1. First, output the selected elements from earlier to Element.Faces node.
-> 2. Next, use the _List.Count_ node reveals that we're working with 23 surfaces in the mass.
-> 3. Referencing this number, we change the Maximum value of an \*integer slider \*to _"22"_.
-> 4. Using _List.GetItemAtIndex_, we input the lists and the \*integer slider \*for the _index_. Sliding through with the selected, we stop when we get to _index 9_ and have isolated the main facade hosts the trusses.
+> 1. Primeiro, gere os elementos selecionados anteriores para o nó Element.Faces.
+> 2. Em seguida, use o nó _List.Count_ que revela que estamos trabalhando com 23 superfícies na massa.
+> 3. Referenciando esse número, alteramos o Valor máximo de um \*controle deslizante inteiro \*para _“22”_.
+> 4. Usando _List.GetItemAtIndex_, inserimos as listas e o \*controle deslizante inteiro \*para o _índice_. Deslizando com a seleção, paramos quando chegamos ao _índice 9_ e isolamos a fachada principal que hospeda as treliças.
 
-The previous step was a little cumbersome. We can do this much faster with the _"Select Face"_ node. This allows us to isolate a face that is not an element itself in the Revit project. The same interaction applies as _"Select Model Element"_, except we select the surface rather than the full element.
+A etapa anterior era um pouco complicada. Podemos fazer isso muito mais rápido com o nó _“Selecionar face”_. Isso nos permite isolar uma face que não é um elemento em si no projeto do Revit. A mesma interação se aplica como _“Selecionar elemento do modelo”_, exceto que selecionamos a superfície em vez do elemento completo.
 
 ![](<./images/2/selecting - exercise 06.jpg>)
 
-Suppose we want to isolate the main facade walls of the building. We can use the _"Select Faces"_ node to do this. Click the "Select" button and then select the four main facades in Revit.
+Suponha que desejamos isolar as paredes da fachada principal do edifício. É possível usar o nó _“Selecionar faces”_ para fazer isso. Clique no botão “Selecionar” e, em seguida, selecione as quatro fachadas principais no Revit.
 
 ![](<./images/2/selecting - exercise 07.jpg>)
 
-After selecting the four walls, make sure you click the "Finish" button in Revit.
+Após selecionar as quatro paredes, certifique-se de clicar no botão “Concluir” no Revit.
 
 ![](<./images/2/selecting - exercise 08.jpg>)
 
-The faces are now imported into Dynamo as surfaces.
+As faces são agora importadas para o Dynamo como superfícies.
 
 ![](<./images/2/selecting - exercise 09.jpg>)
 
-### Selecting Beams
+### Selecionar vigas
 
-Now, let's take a look at the beams over the atrium.
+Agora, vamos analisar as vigas sobre o átrio.
 
 ![](<./images/2/selecting - exercise 10.jpg>)
 
-> 1. Use the _"Select Model Element"_ node, select one of the beams.
-> 2. Plug the beam element into the _Element.Geometry_ node and we now have the beam in the Dynamo viewport.
-> 3. We can zoom in on the geometry with a _Watch3D_ node (if you don't see the beam in Watch 3D, right click and hit "zoom to fit").
+> 1. Use o nó _“Selecionar o elemento do modelo”_ para selecionar uma das vigas.
+> 2. Conecte o elemento de viga ao nó _Element.Geometry_. Agora, temos a viga na viewport do Dynamo.
+> 3. É possível aumentar o zoom na geometria com um nó _Watch3D_ (se você não visualizar a viga em 	Observar em 3D, clique com o botão direito do mouse e pressione “zoom para ajustar”).
 
-A question that may come up often in Revit/Dynamo workflows: how do I select one element and get all similar elements? Since the selected Revit element contains all of its hierarchical information, we can query its family type and select all elements of that type.
+Uma pergunta que pode surgir frequentemente nos fluxos de trabalho do Revit/Dynamo: como posso selecionar um elemento e obter todos os elementos similares? Como o elemento do Revit selecionado contém todas as suas informações hierárquicas, podemos consultar seu tipo de família e selecionar todos os elementos daquele tipo.
 
 ![](<./images/2/selecting - exercise 11.jpg>)
 
-> 1. Plug the beam element into a _Element.ElementType_ node.
-> 2. The _Watch_ node reveals that the output is now a family symbol rather than a Revit element.
-> 3. _Element.ElementType_ is a simple query, so we can do this in the code block just as easily with `x.ElementType;` and get the same results.
+> 1. Conecte o elemento de viga a um nó _Element.ElementType_.
+> 2. O nó _Inspeção_ revela que a saída é agora um símbolo de família em vez de um elemento do Revit.
+> 3. _Element.ElementType_ é uma consulta simples; portanto, podemos fazer isso no bloco de código com a mesma facilidade com `x.ElementType;` e obter os mesmos resultados.
 
 ![](<./images/2/selecting - exercise 12.jpg>)
 
-> 1. To select the remaining beams, we use the _"All Elements of Family Type"_ node.
-> 2. The watch node shows that we've selected five Revit elements.
+> 1. Para selecionar as vigas restantes, usaremos o nó _“Todos os elementos do tipo de família”_.
+> 2. O nó de inspeção mostra que selecionamos cinco elementos do Revit.
 
 ![](<./images/2/selecting - exercise 13.jpg>)
 
-> 1. We can convert all of these five elements to Dynamo geometry too.
+> 1. Também podemos converter todos esses cinco elementos na geometria do Dynamo.
 
-What if we had 500 beams? Converting all of these elements into Dynamo geometry would be really slow. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
+E se tivéssemos 500 vigas? A conversão de todos esses elementos na geometria do Dynamo seria muito lenta. Se o Dynamo estiver demorando muito para calcular os nós, será recomendável usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto desenvolve o gráfico. Para obter mais informações sobre o congelamento de nós, consulte a seção “[Congelar](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)” no capítulo de sólidos.
 
-In any case, if we were to import 500 beams, do we need all of the surfaces to perform the intended parametric operation? Or can we extract basic information from the beams and perform generative tasks with fundamental geometry? This is a question that we'll keep in mind as we walk through this chapter. For example, let's take a look at the truss system next.
+Em qualquer caso, se precisarmos importar 500 vigas, precisaremos de todas as superfícies para executar a operação paramétrica prevista? Ou podemos extrair informações básicas das vigas e executar tarefas gerativas com a geometria fundamental? Essa é uma pergunta que vamos ter em mente, à medida que avançamos neste capítulo. Por exemplo, em seguida, vamos analisar o sistema de treliça.
 
-### Selecting Trusses
+### Selecionar as treliças
 
-Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the Element.Geometry from the previous step.
+Usando o mesmo gráfico de nós, selecione o elemento de treliça ao invés do elemento de viga. Antes de fazer isso, exclua Element.Geometry da etapa anterior.
 
 ![](<./images/2/selecting - exercise 14.jpg>)
 
-Next we are ready to extract some basic information from trusses family type.
+Em seguida, estamos prontos para extrair algumas informações básicas do tipo de família de treliças.
 
 ![](<./images/2/selecting - exercise 15.jpg>)
 
-> 1. In the _Watch_ node, we can see that we have a list of adaptive components selected from Revit. We want to extract the basic information, so we're start with the adaptive points.
-> 2. Plug the _"All Elements of Family Type"_ node into the _"AdaptiveComponent.Location"_ node. This gives us a list of lists, each with three points which represent the adaptive point locations.
-> 3. Connecting a _"Polygon.ByPoints"_ node returns a polycurve. We can see this in the Dynamo viewport. By this method, we've visualized the geometry of one element and abstracted the geometry of the remaining array of elements (which could be larger in number than this example).
+> 1. No nó _Inspeção_, podemos ver que temos uma lista de componentes adaptativos selecionados no Revit. Queremos extrair as informações básicas, por isso, começamos com os pontos adaptativos.
+> 2. Conecte o nó _“Todos os elementos do tipo de família”_ ao nó _“AdaptiveComponent.Location”_. Isso nos fornece uma lista de listas, cada uma com três pontos que representam as localizações dos pontos adaptativos.
+> 3. Conectar um nó _“Polygon.ByPoints”_ retorna uma policurva. Podemos ver isso na viewport do Dynamo. Com esse método, visualizamos a geometria de um elemento e abstraímos a geometria da matriz restante dos elementos (que pode ser maior em número do que este exemplo).
 
 {% hint style="info" %}
-Tip: if you click on the green number of a Revit element in Dynamo, the Revit viewport will zoom to that element.
+Dica: Se você clicar no número verde de um elemento do Revit no Dynamo, a viewport do Revit efetuará o zoom para aquele elemento.
 {% endhint %}
