@@ -1,69 +1,69 @@
-# Package Case Study - Mesh Toolkit
+# Caso real de paquete: Kit de herramientas de malla
 
-The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+El Kit de herramientas de malla de Dynamo proporciona herramientas para importar mallas desde formatos de archivo externos, crear una malla a partir de objetos de geometría de Dynamo y generar manualmente mallas mediante sus vértices e índices. La biblioteca también proporciona herramientas para modificar y reparar mallas, o extraer cortes horizontales para su uso en la fabricación.
 
 ![](<../images/6-2/2/meshToolkit case study 01.jpg>)
 
-The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
+El Kit de herramientas de malla de Dynamo forma parte de la investigación de mallas en curso de Autodesk y, como tal, seguirá creciendo a lo largo de los próximos años. Esperamos que aparezcan con frecuencia nuevos métodos en este kit y no dude en ponerse en contacto con el equipo de Dynamo para ofrecer comentarios, indicar errores y enviar sugerencias sobre las nuevas funciones.
 
-### Meshes vs. Solids
+### Mallas frente a sólidos
 
-The exercise below demonstrates some basic mesh operations using the Mesh Toolkit. In the exercise, we intersect a mesh with a series of planes, which can be computationally expensive using solids. Unlike a solid, a mesh has a set "resolution" and is not defined mathematically, but topologically, and we can define this resolution based on the task at hand. For more details on mesh to solid relationships, you can reference the[ Geometry For Computation Design](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) chapter in this primer. For a more thorough examination of Mesh Toolkit, you can reference the [Dynamo Wiki page.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Let's jump into the package in the exercise below.
+En el siguiente ejercicio, se muestran algunas operaciones básicas de malla que utiliza el Kit de herramientas de malla. En el ejercicio, intersecamos una malla con una serie de planos, lo que puede ser muy costoso desde una perspectiva computacional si se utilizan sólidos. A diferencia de los sólidos, las mallas tienen una "resolución" establecida y no se definen matemáticamente, sino topológicamente, y podemos definir esta resolución en función de la tarea que se está llevando a cabo. Para obtener más información sobre las relaciones entre mallas y sólidos, puede consultar el capítulo [Geometría para el diseño computacional](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) de este manual de introducción. Para examinar de forma más exhaustiva el Kit de herramientas de malla, consulte la [página wiki de Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Pasemos al paquete en el ejercicio siguiente.
 
-### Install Mesh Toolkit
+### Instalar el Kit de herramientas de malla
 
-In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
+En Dynamo, vaya a _Paquetes > Buscar paquetes..._ en la barra de menús superior. En el campo de búsqueda, escriba _MeshToolkit_ con una sola palabra, teniendo en cuenta mayúsculas y minúsculas. Haga clic en Instalar para iniciar la descarga. Así de fácil.
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
-## Exercise: Intersect Mesh
+## Ejercicio: intersección de malla
 
-> Download the example file by clicking on the link below.
+> Descargue el archivo de ejemplo. Para ello, haga clic en el vínculo siguiente.
 >
-> A full list of example files can be found in the Appendix.
+> En el Apéndice, se incluye una lista completa de los archivos de ejemplo.
 
 {% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
-In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
+En este ejemplo, examinaremos el nodo Intersect del Kit de herramientas de malla. Importaremos una malla y la intersecaremos con una serie de planos de entrada para crear cortes. Este es el punto inicial de la preparación del modelo para la fabricación en una herramienta de corte láser o por chorro de agua, o un dispositivo de fresado CNC.
 
-Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
+Abra primero _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 1. **File Path:** busque el archivo de malla que desea importar (_stanford\_bunny\_tri.obj_). Los tipos de archivo admitidos son .mix y .obj.
+> 2. **Mesh.ImportFile:** conecte la ruta de archivo para importar la malla.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
-> 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes. \_\_ The settings are as follow: \_\_ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates:** cree un punto; este será el centro de un arco.
+> 2. **Arc.ByCenterPointRadiusAngle:** cree un arco alrededor del punto. Esta curva se utilizará para colocar una serie de planos. \_\_ Estos son los parámetros: \_\_ `radius: 40, startAngle: -90, endAngle:0`
 
-Create a series of planes oriented along the arc.
+Cree una serie de planos orientados a lo largo del arco.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
-> 1. **Code Block**: Create 25 numbers between 0 and 1.
-> 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
-> 3. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
-> 4. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
+> 1. **Code Block**: cree 25 números entre 0 y 1.
+> 2. **Curve.PointAtParameter:** conecte el arco a la entrada _curve_ y la salida de bloque de código a la entrada _param_ para extraer una serie de puntos a lo largo de la curva.
+> 3. **Curve.TangentAtParameter:** conecte las mismas entradas que en el nodo anterior.
+> 4. **Plane.ByOriginNormal:** conecte los puntos a la entrada _origin_ y los vectores a la entrada _normal_ para crear una serie de planos en cada punto.
 
-Next, we will use these planes to intersect the mesh.
+A continuación, utilizaremos estos planos para intersecar la malla.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
-> 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
-> 3. **Curve.EndPoint:** Extract the end points of each curve.
-> 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
+> 1. **Mesh.Intersect:** interseque los planos con la malla importada, creando una serie de contornos de PolyCurve. Haga clic con el botón derecho en el nodo y defina el encaje como el más largo.
+> 2. **PolyCurve.Curves:** divida las PolyCurves en fragmentos de curva.
+> 3. **Curve.EndPoint:** extraiga los puntos finales de cada curva.
+> 4. **NurbsCurve.ByPoints:** utilice los puntos para crear una NurbsCurve. Utilice un nodo booleano establecido en _True_ (verdadero) para cerrar las curvas.
 
-Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
+Antes de continuar, desactive la vista preliminar de algunos de los nodos, como Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal y Arc.ByCenterPointRadiusAngle para ver mejor el resultado.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch:** Construct surface patches for each contour to create “slices” of the mesh.
+> 1. **Surface.ByPatch:** cree parches de superficie para cada contorno con el fin de crear "cortes" de la malla.
 
-Add a second set of slices for a waffle/egg-crate effect.
+Añada un segundo conjunto de cortes para obtener un efecto de gofre/cartón de huevos.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 06.jpg>)
 
-You may have noticed that the intersection operations calculate faster with a mesh vs. a comparable solid. Workflows such as the one demonstrated in this exercise lend themselves well to working with meshes.
+Es posible que se haya dado cuenta de que las operaciones de intersección se calculan de forma más rápida con una malla que con un sólido comparable. Los flujos de trabajo como el que se muestra en este ejercicio son excelentes para trabajar con mallas.

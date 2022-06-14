@@ -1,50 +1,50 @@
-# Custom Node Introduction
+# Introducción a los nodos personalizados
 
-Custom Nodes are constructed by nesting other nodes and custom nodes inside of a "Dynamo Custom Node," which we can think of conceptually as a container. When this container node is executed in your graph, everything inside it will be executed to allow you to reuse and share a useful combination of nodes.
+Los nodos personalizados se crean mediante la anidación de otros nodos y nodos personalizados dentro de un "nodo personalizado de Dynamo", que podemos considerar conceptualmente como un contenedor. Cuando se ejecuta este nodo contenedor en el gráfico, se ejecutará todo lo que contiene para permitirle reutilizar y compartir una combinación útil de nodos.
 
-### Adapting to Change
+### Adaptación a los cambios
 
-When you have multiple copies of a custom node in your graph, you can update all of them by editing the base custom node. This allows you to update your graph seamlessly by adapting to any changes that may occur in workflow or design.
+Cuando existen varias copias de un nodo personalizado en el gráfico, puede actualizarlas todas mediante la edición del nodo personalizado base. Esto permite actualizar el gráfico sin problemas adaptándolo a los cambios que puedan producirse en el flujo de trabajo o el diseño.
 
-### Work Sharing
+### Uso compartido
 
-Arguably the best feature of custom nodes is their work sharing capabilities. If a "power user" creates a complex Dynamo graph and hands it off to a designer who is new to Dynamo, he/she can condense the graph to the bare essentials for design interaction. The custom node can be opened to edit the internal graph, but the "container" can be kept simple. With this process, custom nodes allow Dynamo users to design a graph that is clean and intuitive.
+Podría decirse que la mejor función de los nodos personalizados es su capacidad para compartir el trabajo. Si un "usuario avanzado" crea un gráfico complejo de Dynamo y se lo entrega a un diseñador que no esté familiarizado con esta herramienta, este puede condensar el gráfico a sus aspectos básicos para interactuar con el diseño. El nodo personalizado se puede abrir para editar el gráfico interno, pero manteniendo la simplicidad del "contenedor". Con este proceso, los nodos personalizados permiten a los usuarios de Dynamo diseñar un gráfico limpio e intuitivo.
 
 ![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
 
-### Many Ways to Build a Node
+### Muchos métodos para crear un nodo
 
-There are a wide variety of ways to build custom nodes in Dynamo. In the examples in this chapter, we'll create custom nodes directly from the Dynamo UI. If you are a programmer and you are interested in C# or Zero-Touch formatting, you can reference [this page ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)on the Dynamo Wiki for a more in-depth review.
+Hay una gran variedad de métodos para crear nodos personalizados en Dynamo. En los ejemplos de este capítulo, crearemos nodos personalizados directamente desde la interfaz de usuario de Dynamo. Si es un programador y está interesado en el formato C# o Zero-Touch, puede consultar [está página ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)en la página wiki de Dynamo para obtener una revisión más detallada.
 
-### Custom Node Environment & Create Your First Custom Node
+### Entorno de nodos personalizados y creación del primer nodo personalizado
 
-Let's jump into the custom node environment and make a simple node to calculate a percentage. The custom node environment is different from the Dynamo graph environment, but the interaction is fundamentally the same. With that said, let's create our first custom node!
+Pasemos al entorno de nodos personalizados y creemos un nodo sencillo para calcular un porcentaje. El entorno de nodos personalizados es diferente al entorno de gráficos de Dynamo, pero la interacción es básicamente la misma. Una vez señalado esto, crearemos nuestro primer nodo personalizado.
 
-To create a Custom Node from scratch, Launch Dynamo and select Custom Node, or type Ctrl + Shift + N from the canvas.
+Para crear un nodo personalizado desde cero, inicie Dynamo y seleccione Nodo personalizado o pulse Ctrl + Mayús + N en el lienzo.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
 
-Assign a name, description, and category in the Custom Node Properties dialog.
+Asigne un nombre, una descripción y una categoría en el cuadro de diálogo Propiedades de nodo personalizado.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
 
-> 1. **Name:** Percentage
-> 2. **Description**: Calculate the percentage of one value in relation to another.
-> 3. **Category:** Math.Functions
+> 1. **Nombre:** porcentaje.
+> 2. **Descripción**: calcule el porcentaje de un valor en relación con otro.
+> 3. **Categoría:** Math.Functions.
 
-This will open a canvas with a yellow background, indicating that you are working inside a custom node. In this canvas you have access to all of the core Dynamo nodes, as well as the Input and Output nodes, which label the data flowing into and out of the custom node. They can be found in Input>Basic.
+Se abre un lienzo con un fondo de color amarillo, lo que indica que está trabajando en un nodo personalizado. En este lienzo, tiene acceso a todos los nodos principales de Dynamo, así como a los nodos Input y Output, que etiquetan los datos que entran en el nodo personalizado y salen de él. Se pueden encontrar en Entrada > Básico.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
 
 ![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
 
-> 1. **Inputs:** Input nodes create input ports on the custom node. The syntax for an input node is _input\_name : datatype = default\_value(optional)._
-> 2. **Outputs:** Similar to inputs, these will create and name output ports on the custom node. Consider adding a **Custom Comment** to your Input and Output ports to hint at the Input and Output types. This is discussed in more detail in the [Creating Custom Nodes section](2-creating.md).
+> 1. **Entradas:** los nodos de entrada crean puertos de entrada en el nodo personalizado. La sintaxis de un nodo de entrada es _nombre\_entrada : tipo de datos = valor\_por defecto(opcional)._
+> 2. **Salidas:** son similares a las entradas; estas crearán puertos en el nodo personalizado y les asignarán un nombre. Considere la posibilidad de añadir un **comentario personalizado** a los puertos de entrada y salida para que se muestren como sugerencia en los tipos de entrada y salida. Esto se explica con más detalle en la sección [Creación de nodos personalizados](2-creating.md).
 
-You can save this custom node as a .dyf (as opposed to the standard .dyn) file and it will automatically be added to your session and future sessions. You will find the custom node in your library from the Add-ons section.
+Puede guardar este nodo personalizado como un archivo .dyf (en lugar de como un archivo .dyn estándar); este se añadirá automáticamente a la sesión actual y futuras. Encontrará el nodo personalizado en la sección Complementos de la biblioteca.
 
 ![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
 
-### Moving Forward
+### Avancemos
 
-Now that we've created our first custom node, the next sections will dive deeper into custom node functionality and how to publish generic workflows. In the following section, we'll look at developing a custom node that transfers geometry from one surface to another.
+Ahora que hemos creado nuestro primer nodo personalizado, las secciones siguientes profundizarán en las funciones de los nodos personalizados y en la publicación de flujos de trabajo genéricos. En la siguiente sección, estudiaremos el desarrollo de un nodo personalizado que transfiere geometría de una superficie a otra.

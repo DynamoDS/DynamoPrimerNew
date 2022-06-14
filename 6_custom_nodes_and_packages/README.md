@@ -1,5 +1,5 @@
-# Custom Nodes & Packages
+# Nodos y paquetes personalizados
 
-Out of the box, Dynamo has a lot of functionality stored in its Library of Nodes. For those frequently used routines or that special graph you want to share with the community, Custom Nodes & Packages are a great way to extend Dynamo even further.
+De forma predefinida, Dynamo tiene muchas funciones almacenadas en su biblioteca de nodos. Para las rutinas de uso frecuente o ese gráfico especial que desea compartir con la comunidad, los nodos y los paquetes personalizados son un método excelente para ampliar Dynamo aún más.
 
 ![](./images/customNodes\_cover01.jpg)

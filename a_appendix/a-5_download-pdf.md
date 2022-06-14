@@ -1,8 +1,8 @@
-# Download PDF
+# Descargar PDF
 
-To access the information on this primer offline, download the pdf:&#x20;
+Para acceder a la información de este manual de introducción sin conexión, descargue el archivo PDF:
 
-## Releases:
+## Versiones
 
 #### Dynamo Primer v2.13:
 

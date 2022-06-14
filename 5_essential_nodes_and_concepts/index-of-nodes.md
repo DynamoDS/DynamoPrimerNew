@@ -1,283 +1,283 @@
-# Index of Nodes
+# Índice de nodos
 
-This index provides additional information on all the nodes used in this primer, as well as other components you might find useful. This is just an introduction to some of the 500 nodes available in Dynamo.
+Este índice proporciona información adicional sobre todos los nodos utilizados en este manual de introducción, así como sobre otros componentes que puede resultar útiles. Esto es solo una introducción a algunos de los 500 nodos disponibles en Dynamo.
 
-## Display
+## Mostrar
 
 ### Color
 
 |                                           |                                                                                                                       |                                                             |
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-|                                           | CREATE                                                                                                                |                                                             |
-| ![](<images/5-1/Color byARGB.jpg>)        | <p><strong>Color.ByARGB</strong><br>Construct a color by alpha, red, green, and blue components.</p>                  | ![](<images/5-1/index of nodes - color byargb (1).jpg>)     |
-| ![](<images/5-1/Color Range.jpg>)         | <p><strong>Color Range</strong><br>Get a color from a color gradient between a start color and an end color.</p>      | ![](<images/5-1/index of nodes - color range (1).jpg>)      |
-|                                           | ACTIONS                                                                                                               |                                                             |
-| ![](<images/5-1/Color Brightness.jpg>)    | <p><strong>Color.Brightness</strong><br>Gets the brightness value for this color.</p>                                 | ![](<images/5-1/index of nodes - color brightness (1).jpg>) |
-| ![](<images/5-1/Color Component.jpg>)     | <p><strong>Color.Components</strong><br>Lists the components for the color in the order: alpha, red, green, blue.</p> | ![](<images/5-1/index of nodes - color component.jpg>)      |
-| ![](<images/5-1/Color Saturation.jpg>)    | <p><strong>Color.Saturation</strong><br>Gets the saturation value for this color</p>                                  | ![](<images/5-1/index of nodes - color saturation.jpg>)     |
-| ![](<images/5-1/Color Hue.jpg>)           | <p><strong>Color.Hue</strong><br>Gets the hue value for this color.</p>                                               | ![](<images/5-1/index of nodes - color hue.jpg>)            |
-|                                           | QUERY                                                                                                                 |                                                             |
-| ![](<images/5-1/Color Alpha (1) (1).jpg>) | <p><strong>Color.Alpha</strong><br>Find the alpha component of a color, 0 to 255.</p>                                 | ![](<images/5-1/index of nodes - color alpha.jpg>)          |
-| ![](<images/5-1/Color Blue.jpg>)          | <p><strong>Color.Blue</strong><br>Find the blue component of a color, 0 to 255.</p>                                   | ![](<images/5-1/index of nodes - color blue.jpg>)           |
-| ![](<images/5-1/Color Green (1) (1).jpg>) | <p><strong>Color.Green</strong><br>Find the green component of a color, 0 to 255.</p>                                 | ![](<images/5-1/index of nodes - color green.jpg>)          |
-| ![](<images/5-1/Color Red.jpg>)           | <p><strong>Color.Red</strong><br>Find the red component of a color, 0 to 255.</p>                                     | ![](<images/5-1/index of nodes - color red.jpg>)            |
+|                                           | CREAR |                                                             |
+| ![](<images/5-1/Color byARGB.jpg>) | <p><strong>Color.ByARGB</strong><br>Genera un color mediante componentes alfa, rojo, verde y azul.</p> | ![](<images/5-1/index of nodes - color byargb (1).jpg>) |
+| ![](<images/5-1/Color Range.jpg>) | <p><strong>Color Range</strong><br>Obtiene un color de un degradado de color entre un color inicial y un color final.</p> | ![](<images/5-1/index of nodes - color range (1).jpg>) |
+|                                           | ACCIONES |                                                             |
+| ![](<images/5-1/Color Brightness.jpg>) | <p><strong>Color.Brightness</strong><br>Obtiene el valor de brillo de este color.</p> | ![](<images/5-1/index of nodes - color brightness (1).jpg>) |
+| ![](<images/5-1/Color Component.jpg>) | <p><strong>Color.Components</strong><br>Enumera los componentes del color en el orden siguiente: alfa, rojo, verde, azul.</p> | ![](<images/5-1/index of nodes - color component.jpg>) |
+| ![](<images/5-1/Color Saturation.jpg>) | <p><strong>Color.Saturation</strong><br>Obtiene el valor de saturación de este color.</p> | ![](<images/5-1/index of nodes - color saturation.jpg>) |
+| ![](<images/5-1/Color Hue.jpg>) | <p><strong>Color.Hue</strong><br>Obtiene el valor de matiz de este color.</p> | ![](<images/5-1/index of nodes - color hue.jpg>) |
+|                                           | CONSULTA |                                                             |
+| ![](<images/5-1/Color Alpha (1) (1).jpg>) | <p><strong>Color.Alpha</strong><br>Busca el componente alfa del color, de 0 a 255.</p> | ![](<images/5-1/index of nodes - color alpha.jpg>) |
+| ![](<images/5-1/Color Blue.jpg>) | <p><strong>Color.Blue</strong><br>Busca el componente azul del color, de 0 a 255.</p> | ![](<images/5-1/index of nodes - color blue.jpg>) |
+| ![](<images/5-1/Color Green (1) (1).jpg>) | <p><strong>Color.Green</strong><br>Busca el componente verde del color, de 0 a 255.</p> | ![](<images/5-1/index of nodes - color green.jpg>) |
+| ![](<images/5-1/Color Red.jpg>) | <p><strong>Color.Red</strong><br>Busca el componente rojo del color, de 0 a 255.</p> | ![](<images/5-1/index of nodes - color red.jpg>) |
 
 |                                                            |                                                                                           |                                                                         |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-|                                                            | CREATE                                                                                    |                                                                         |
-| ![](<images/5-1/Geometry Color By Geometry Color (1).jpg>) | <p><strong>GeometryColor.ByGeometryColor</strong><br>Displays geometry using a color.</p> | ![](<images/5-1/index of nodes - geometry color by geometry color.jpg>) |
+|                                                            | CREAR |                                                                         |
+| ![](<images/5-1/Geometry Color By Geometry Color (1).jpg>) | <p><strong>GeometryColor.ByGeometryColor</strong><br>Muestra geometría mediante un color.</p> | ![](<images/5-1/index of nodes - geometry color by geometry color.jpg>) |
 
-### Watch
+### Visualización
 
 |                                     |                                                                               |                                                         |
 | ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------- |
-|                                     | ACTIONS                                                                       |                                                         |
-| ![](<images/5-1/View watch.jpg>)    | <p><strong>View.Watch</strong><br>Visualize the output of node.</p>           | ![](<images/5-1/index of nodes - view watch.jpg>)       |
-| ![](<images/5-1/View watch 3d.jpg>) | <p><strong>View.Watch 3D</strong><br>Shows a dynamic preview of geometry.</p> | ![](<images/5-1/index of nodes - view watch.3Djpg.jpg>) |
+|                                     | ACCIONES |                                                         |
+| ![](<images/5-1/View watch.jpg>) | <p><strong>View.Watch</strong><br>Permite visualizar la salida del nodo.</p> | ![](<images/5-1/index of nodes - view watch.jpg>) |
+| ![](<images/5-1/View watch 3d.jpg>) | <p><strong>View.Watch 3D</strong><br>Muestra una vista preliminar dinámica de la geometría.</p> | ![](<images/5-1/index of nodes - view watch.3Djpg.jpg>) |
 
-## Input
+## Entrada
 
 |                                          |                                                                                                          |                                                       |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-|                                          | ACTIONS                                                                                                  |                                                       |
-| ![](images/5-1/Boolean.jpg)              | <p><strong>Boolean</strong><br>Selection between a true and false.</p>                                   | ![](<images/5-1/index of nodes - boolean.jpg>)        |
-| ![](<images/5-1/Code Block (1) (1).jpg>) | <p><strong>Code Block</strong><br>Allows for DesignScript code to be authored directly.</p>              | ![](<images/5-1/index of nodes - code block.jpg>)     |
-| ![](<images/5-1/Directory Path.jpg>)     | <p><strong>Directory Path</strong><br>Allows you to select a directory on the system to get its path</p> | ![](<images/5-1/index of nodes - directory path.jpg>) |
-| ![](<images/5-1/File Path.jpg>)          | <p><strong>File Path</strong><br>Allows you to select a file on the system to get its filenam</p>        | ![](<images/5-1/index of nodes - file path.jpg>)      |
-| ![](<images/5-1/Integer slider.jpg>)     | <p><strong>Integer Slider</strong><br>A slider that produces integer values.</p>                         | ![](<images/5-1/index of nodes - integer slider.jpg>) |
-| ![](images/5-1/Number.jpg)               | <p><strong>Number</strong><br>Creates a number.</p>                                                      | ![](<images/5-1/index of nodes - number (1).jpg>)     |
-| ![](<images/5-1/Number slider.jpg>)      | <p><strong>Number Slider</strong><br>A slider that produces numeric values.</p>                          | ![](<images/5-1/index of nodes - number slider.jpg>)  |
-| ![](images/5-1/String.jpg)               | <p><strong>String</strong><br>Creates a string.</p>                                                      | ![](<images/5-1/index of nodes - string.jpg>)         |
-| ![](<images/5-1/Object is Null.jpg>)     | <p><strong>Object.IsNull</strong><br>Determines if the given object is null.</p>                         | ![](<images/5-1/index of nodes - object is null.jpg>) |
+|                                          | ACCIONES |                                                       |
+| ![](images/5-1/Boolean.jpg) | <p><strong>Boolean</strong><br>Selección entre un valor "true" (verdadero) y "false" (falso).</p> | ![](<images/5-1/index of nodes - boolean.jpg>) |
+| ![](<images/5-1/Code Block (1) (1).jpg>) | <p><strong>Code Block</strong><br>Permite la creación directa de código de DesignScript.</p> | ![](<images/5-1/index of nodes - code block.jpg>) |
+| ![](<images/5-1/Directory Path.jpg>) | <p><strong>Directory Path</strong><br>Permite seleccionar un directorio del sistema para obtener su ruta.</p> | ![](<images/5-1/index of nodes - directory path.jpg>) |
+| ![](<images/5-1/File Path.jpg>) | <p><strong>File Path</strong><br>Permite seleccionar un archivo del sistema para obtener su nombre de archivo.</p> | ![](<images/5-1/index of nodes - file path.jpg>) |
+| ![](<images/5-1/Integer slider.jpg>) | <p><strong>Integer Slider</strong><br>Un control deslizante que genera valores de enteros.</p> | ![](<images/5-1/index of nodes - integer slider.jpg>) |
+| ![](images/5-1/Number.jpg) | <p><strong>Number</strong><br>Crea un número.</p> | ![](<images/5-1/index of nodes - number (1).jpg>) |
+| ![](<images/5-1/Number slider.jpg>) | <p><strong>Number Slider</strong><br>Un control deslizante que genera valores numéricos.</p> | ![](<images/5-1/index of nodes - number slider.jpg>) |
+| ![](images/5-1/String.jpg) | <p><strong>String</strong><br>Crea una cadena.</p> | ![](<images/5-1/index of nodes - string.jpg>) |
+| ![](<images/5-1/Object is Null.jpg>) | <p><strong>Object.IsNull</strong><br>Determina si el objeto especificado es nulo.</p> | ![](<images/5-1/index of nodes - object is null.jpg>) |
 
-## List
+## Lista
 
 |                                                  |                                                                                                                                                                                                                                               |                                                                 |
 | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-|                                                  | CREATE                                                                                                                                                                                                                                        |                                                                 |
-| ![](<images/5-1/List Create.jpg>)                | <p><strong>List.Create</strong><br>Makes a new list out of the given inputs.</p>                                                                                                                                                              | ![](<images/5-1/index of nodes - list create.jpg>)              |
-| ![](<images/5-1/List Combine.jpg>)               | <p><strong>List.Combine</strong><br>Applies a combinator to each element in two sequences</p>                                                                                                                                                 | ![](<images/5-1/index of nodes - list combine.jpg>)             |
-| ![](images/5-1/Range.jpg)                        | <p><strong>Number Range</strong><br>Creates a sequence of numbers in the specified range</p>                                                                                                                                                  | ![](<images/5-1/index of nodes - range (1).jpg>)                |
-| ![](images/5-1/Sequence.jpg)                     | <p><strong>Number Sequence</strong><br>Creates a sequence of numbers.</p>                                                                                                                                                                     | ![](<images/5-1/index of nodes - sequence.jpg>)                 |
-|                                                  | ACTIONS                                                                                                                                                                                                                                       |                                                                 |
-| ![](<images/5-1/List Chop.jpg>)                  | <p><strong>List.Chop</strong><br>Chop a list into a set of lists each containing the given amount of items.</p>                                                                                                                               | ![](<images/5-1/index of nodes - list chop.jpg>)                |
-| ![](<images/5-1/Count (1).jpg>)                  | <p><strong>List.Count</strong><br>Returns the number of items stored in the given list.</p>                                                                                                                                                   | ![](<images/5-1/index of nodes - list count.jpg>)               |
-| ![](<images/5-1/List Flatten.jpg>)               | <p><strong>List.Flatten</strong><br>Flattens a nested list of lists by a certain amount.</p>                                                                                                                                                  | ![](<images/5-1/index of nodes - list flatten.jpg>)             |
-| ![](<images/5-1/List Filter by Bool Mask.jpg>)   | <p><strong>List.FilterByBoolMask</strong><br>Filters a sequence by looking up corresponding indices in a separate list of booleans.</p>                                                                                                       | ![](<images/5-1/index of nodes - list filter by bool mask.jpg>) |
-| ![](<images/5-1/List Get Item At Index.jpg>)     | <p><strong>List.GetItemAtIndex</strong><br>Gets an item from the given list that's located at the specified index.</p>                                                                                                                        | ![](<images/5-1/index of nodes - list get item at index.jpg>)   |
-|                                                  | <p><strong>List.Map</strong><br>Applies a function over all elements of a list, generating a new list from the results</p>                                                                                                                    | ![](<images/5-1/index of nodes - list map.jpg>)                 |
-|                                                  | <p><strong>List.Reverse</strong><br>Creates a new list containing the items of the given list but in reverse order</p>                                                                                                                        | ![](<images/5-1/index of nodes - list reverse.jpg>)             |
-| ![](<images/5-1/List Replace Item At Index.jpg>) | <p><strong>List.ReplaceItemAtIndex</strong><br>Replace an item from the given list that's located at the specified index</p>                                                                                                                  | ![](<images/5-1/index of nodes - replace item at index.jpg>)    |
-| ![](<images/5-1/List Shift Indices.jpg>)         | <p><strong>List.ShiftIndices</strong><br>Shifts indices in the list to the right by the given amount</p>                                                                                                                                      | ![](<images/5-1/index of nodes - list shift indices.jpg>)       |
-| ![](<images/5-1/List Take Every Nth Item.jpg>)   | <p><strong>List.TakeEveryNthItem</strong><br>Fetches items from the given list at indices that are multiples of the given value, after the given offset.</p>                                                                                  | ![](<images/5-1/index of nodes - list take every nth item.jpg>) |
-| ![](<images/5-1/List Transpose.jpg>)             | <p><strong>List.Transpose</strong><br>Swaps rows and columns in a list of lists. If there are some rows that are shorter than others, null values are inserted as place holders in the resultant array such that it is always rectangular</p> | ![](<images/5-1/index of nodes - list transpose.jpg>)           |
+|                                                  | CREAR |                                                                 |
+| ![](<images/5-1/List Create.jpg>) | <p><strong>List.Create</strong><br>Crea una nueva lista a partir de las entradas especificadas.</p> | ![](<images/5-1/index of nodes - list create.jpg>) |
+| ![](<images/5-1/List Combine.jpg>) | <p><strong>List.Combine</strong><br>Aplica un combinador a cada elemento en dos secuencias.</p> | ![](<images/5-1/index of nodes - list combine.jpg>) |
+| ![](images/5-1/Range.jpg) | <p><strong>Number Range</strong><br>Crea una secuencia de números o letras en el intervalo especificado.</p> | ![](<images/5-1/index of nodes - range (1).jpg>) |
+| ![](images/5-1/Sequence.jpg) | <p><strong>Number Sequence</strong><br>Crea una secuencia de números.</p> | ![](<images/5-1/index of nodes - sequence.jpg>) |
+|                                                  | ACCIONES |                                                                 |
+| ![](<images/5-1/List Chop.jpg>) | <p><strong>List.Chop</strong><br>Divide una lista en un conjunto de listas en el que cada una contiene la cantidad especificada de elementos.</p> | ![](<images/5-1/index of nodes - list chop.jpg>) |
+| ![](<images/5-1/Count (1).jpg>) | <p><strong>List.Count</strong><br>Devuelve el número de elementos almacenados en la lista especificada.</p> | ![](<images/5-1/index of nodes - list count.jpg>) |
+| ![](<images/5-1/List Flatten.jpg>) | <p><strong>List.Flatten</strong><br>Aplana una lista anidada de listas en función de una determinada cantidad.</p> | ![](<images/5-1/index of nodes - list flatten.jpg>) |
+| ![](<images/5-1/List Filter by Bool Mask.jpg>) | <p><strong>List.FilterByBoolMask</strong><br>Filtra una secuencia mediante la búsqueda de los índices correspondientes en una lista independiente de valores booleanos.</p> | ![](<images/5-1/index of nodes - list filter by bool mask.jpg>) |
+| ![](<images/5-1/List Get Item At Index.jpg>) | <p><strong>List.GetItemAtIndex</strong><br>Devuelve un elemento de la lista especificada que se encuentra en el índice indicado.</p> | ![](<images/5-1/index of nodes - list get item at index.jpg>) |
+|                                                  | <p><strong>List.Map</strong><br>Aplica una función a todos los elementos de una lista y genera una lista nueva a partir de los resultados.</p> | ![](<images/5-1/index of nodes - list map.jpg>) |
+|                                                  | <p><strong>List.Reverse</strong><br>Crea una lista con los elementos de la lista especificada, pero en el orden inverso.</p> | ![](<images/5-1/index of nodes - list reverse.jpg>) |
+| ![](<images/5-1/List Replace Item At Index.jpg>) | <p><strong>List.ReplaceItemAtIndex</strong><br>Sustituye un elemento de la lista especificada que se encuentra en el índice indicado.</p> | ![](<images/5-1/index of nodes - replace item at index.jpg>) |
+| ![](<images/5-1/List Shift Indices.jpg>) | <p><strong>List.ShiftIndices</strong><br>Desplaza a la derecha los índices de la lista en función de la cantidad especificada.</p> | ![](<images/5-1/index of nodes - list shift indices.jpg>) |
+| ![](<images/5-1/List Take Every Nth Item.jpg>) | <p><strong>List.TakeEveryNthItem</strong><br>Recupera elementos de la lista especificada en los índices que son múltiplos del valor especificado y después del desfase indicado.</p> | ![](<images/5-1/index of nodes - list take every nth item.jpg>) |
+| ![](<images/5-1/List Transpose.jpg>) | <p><strong>List.Transpose</strong><br>Intercambia filas y columnas en una lista de listas. Si hay algunas filas más cortas que otras, los valores nulos se insertan como marcadores de posición en la matriz resultante de forma que siempre sean rectangulares.</p> | ![](<images/5-1/index of nodes - list transpose.jpg>) |
 
-## Logic
+## Lógica
 
 |                        |                                                                                                                                                                                                              |                                           |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
-|                        | ACTIONS                                                                                                                                                                                                      |                                           |
-| ![](images/5-1/If.jpg) | <p><strong>If</strong><br>Conditional statement. Checks the boolean value of the test input. If the test input is true, the result outputs the true input, otherwise the result outputs the false input.</p> | ![](<images/5-1/index of nodes - if.jpg>) |
+|                        | ACCIONES |                                           |
+| ![](images/5-1/If.jpg) | <p><strong>If</strong><br>Instrucción condicional. Comprueba el valor booleano de la entrada de prueba. Si la entrada de prueba es "true" (verdadera), el resultado genera la entrada "true"; de lo contrario, el resultado genera la entrada "false" (falsa).</p> | ![](<images/5-1/index of nodes - if.jpg>) |
 
-## Math
+## Matemáticas
 
 |                                               |                                                                                                                              |                                                                |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-|                                               | ACTIONS                                                                                                                      |                                                                |
-| ![](<images/5-1/Math cos.jpg>)                | <p><strong>Math.Cos</strong><br>Fines the cosine of an angle.</p>                                                            | ![](<images/5-1/index of nodes - math cos.jpg>)                |
-| ![](<images/5-1/Math degrees to radians.jpg>) | <p><strong>Math.DegreesToRadians</strong><br>Converts an angle in degrees to an angle in radians.</p>                        | ![](<images/5-1/index of nodes - math degrees to radians.jpg>) |
-| ![](<images/5-1/Math pow.jpg>)                | <p><strong>Math.Pow</strong><br>Raises a number to the specified power.</p>                                                  | ![](<images/5-1/index of nodes - math pow.jpg>)                |
-| ![](<images/5-1/Math radians to degrees.jpg>) | <p><strong>Math.RadiansToDegrees</strong><br>Converts an angle in radians to an angle in degrees.</p>                        | ![](<images/5-1/index of nodes - math radians to degrees.jpg>) |
-| ![](<images/5-1/Math remap range.jpg>)        | <p><strong>Math.RemapRange</strong><br>Adjusts the range of a list of numbers while preserving the distribution ratio.</p>   | ![](<images/5-1/index of nodes - math remap range.jpg>)        |
-| ![](<images/5-1/Math sin.jpg>)                | <p><strong>Math.Sin</strong><br>Finds the sine of an angle.</p>                                                              | ![](<images/5-1/index of nodes - math sin.jpg>)                |
-| ![](images/5-1/Formula.jpg)                   | <p><strong>Formula</strong><br>Evaluates mathematical formulas. Uses NCalc for evaluation. See http://ncalc.codeplex.com</p> | ![](<images/5-1/index of nodes - formula.jpg>)                 |
-| ![](<images/5-1/Map (1).jpg>)                 | <p><strong>Map</strong><br>Maps a value into an input range</p>                                                              | ![](<images/5-1/index of nodes - math map.jpg>)                |
+|                                               | ACCIONES |                                                                |
+| ![](<images/5-1/Math cos.jpg>) | <p><strong>Math.Cos</strong><br>Calcula el coseno de un ángulo.</p> | ![](<images/5-1/index of nodes - math cos.jpg>) |
+| ![](<images/5-1/Math degrees to radians.jpg>) | <p><strong>Math.DegreesToRadians</strong><br>Convierte un ángulo expresado en grados en un ángulo expresado en radianes.</p> | ![](<images/5-1/index of nodes - math degrees to radians.jpg>) |
+| ![](<images/5-1/Math pow.jpg>) | <p><strong>Math.Pow</strong><br>Eleva un número a la potencia especificada.</p> | ![](<images/5-1/index of nodes - math pow.jpg>) |
+| ![](<images/5-1/Math radians to degrees.jpg>) | <p><strong>Math.RadiansToDegrees</strong><br>Convierte un ángulo expresado en radianes en un ángulo expresado en grados.</p> | ![](<images/5-1/index of nodes - math radians to degrees.jpg>) |
+| ![](<images/5-1/Math remap range.jpg>) | <p><strong>Math.RemapRange</strong><br>Ajusta el intervalo de una lista de números conservando la relación de distribución.</p> | ![](<images/5-1/index of nodes - math remap range.jpg>) |
+| ![](<images/5-1/Math sin.jpg>) | <p><strong>Math.Sin</strong><br>Calcula el seno de un ángulo.</p> | ![](<images/5-1/index of nodes - math sin.jpg>) |
+| ![](images/5-1/Formula.jpg) | <p><strong>Formula</strong><br>Evalúa fórmulas matemáticas. Utiliza NCalc para la evaluación. Consulte http://ncalc.codeplex.com.</p> | ![](<images/5-1/index of nodes - formula.jpg>) |
+| ![](<images/5-1/Map (1).jpg>) | <p><strong>Map</strong><br>Asigna un valor a un rango de entrada.</p> | ![](<images/5-1/index of nodes - math map.jpg>) |
 
-## String
+## Cadena
 
 |                                        |                                                                                                                                                      |                                                         |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-|                                        | ACTIONS                                                                                                                                              |                                                         |
-| ![](<images/5-1/String concat.jpg>)    | <p><strong>String.Concat</strong><br>Concatenates multiple strings into a single string.</p>                                                         | ![](<images/5-1/index of nodes - string concat.jpg>)    |
-| ![](<images/5-1/String contains.jpg>)  | <p><strong>String.Contains</strong><br>Determines if the given string contains the given substring.</p>                                              | ![](<images/5-1/index of nodes - string contains.jpg>)  |
-| ![](<images/5-1/String join.jpg>)      | <p><strong>String.Join</strong><br>Concatenates multiple strings into a single string, inserting the given separator between each joined string.</p> | ![](<images/5-1/index of nodes - string join (1).jpg>)  |
-| ![](<images/5-1/String split.jpg>)     | <p><strong>String.Split</strong><br>Divides a single string into a list of strings, with divisions determined by the given separater strings.</p>    | ![](<images/5-1/index of nodes - string split.jpg>)     |
-| ![](<images/5-1/String to number.jpg>) | <p><strong>String.ToNumber</strong><br>Converts a string to an integer or a double.</p>                                                              | ![](<images/5-1/index of nodes - string to number.jpg>) |
+|                                        | ACCIONES |                                                         |
+| ![](<images/5-1/String concat.jpg>) | <p><strong>String.Concat</strong><br>Concatena varias cadenas en una sola.</p> | ![](<images/5-1/index of nodes - string concat.jpg>) |
+| ![](<images/5-1/String contains.jpg>) | <p><strong>String.Contains</strong><br>Determina si la cadena indicada contiene la subcadena especificada.</p> | ![](<images/5-1/index of nodes - string contains.jpg>) |
+| ![](<images/5-1/String join.jpg>) | <p><strong>String.Join</strong><br>Concatena varias cadenas en una sola e inserta el separador especificado entre cada una de las cadenas unidas.</p> | ![](<images/5-1/index of nodes - string join (1).jpg>) |
+| ![](<images/5-1/String split.jpg>) | <p><strong>String.Split</strong><br>Divide una cadena en una lista de cadenas. Las cadenas de separación especificadas determinan las divisiones.</p> | ![](<images/5-1/index of nodes - string split.jpg>) |
+| ![](<images/5-1/String to number.jpg>) | <p><strong>String.ToNumber</strong><br>Convierte una cadena en un número entero o doble.</p> | ![](<images/5-1/index of nodes - string to number.jpg>) |
 
-## Geometry
+## Geometría
 
-### Circle
+### Círculo
 
 |                                                     |                                                                                                                                                          |                                                                             |
 | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-|                                                     | CREATE                                                                                                                                                   |                                                                             |
-| ![](<images/5-1/Circle by center point radius.jpg>) | <p><strong>Circle.ByCenterPointRadius</strong><br>Creates a Circle with input center Point and radius in the world XY plane, with world Z as normal.</p> | ![](<images/5-1/index of nodes - circle by center point radius normal.jpg>) |
-| ![](<images/5-1/Circle by plane radius.jpg>)        | <p><strong>Circle.ByPlaneRadius</strong><br>Create a Circle centered at the input Plane origin (root), lying in the input Plane, with given radius.</p>  | ![](<images/5-1/index of nodes - circle by plane radius.jpg>)               |
+|                                                     | CREAR |                                                                             |
+| ![](<images/5-1/Circle by center point radius.jpg>) | <p><strong>Circle.ByCenterPointRadius</strong><br>Crea un círculo con punto central y radio en el plano XY universal, con el plano Z universal como normal.</p> | ![](<images/5-1/index of nodes - circle by center point radius normal.jpg>) |
+| ![](<images/5-1/Circle by plane radius.jpg>) | <p><strong>Circle.ByPlaneRadius</strong><br>Crea un círculo centrado en el origen de plano de entrada (raíz), que se encuentra en el plano de entrada, con el radio especificado.</p> | ![](<images/5-1/index of nodes - circle by plane radius.jpg>) |
 
 |                                                                        |                                                                                                                                                                                                    |                                                                                      |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-|                                                                        | CREATE                                                                                                                                                                                             |                                                                                      |
-| ![](<images/5-1/Coordinate system by origin.jpg>)                      | <p><strong>CoordinateSystem.ByOrigin</strong><br>Create a CoordinateSystem with origin at input Point, with X and Y Axes set as WCS X and Y axes</p>                                               | ![](<images/5-1/index of nodes - coordinates system by origin.jpg>)                  |
-| ![](<images/5-1/Coordinate system by cylindrical coordinates (1).jpg>) | <p><strong>CoordinateSystem.ByCyclindricalCoordinates</strong><br>Creates a CoordinateSystem at the specified cylindrical coordinate parameters with respet to the specified coordinate system</p> | ![](<images/5-1/index of nodes - coordinates system by cylindrical coordinates.jpg>) |
+|                                                                        | CREAR |                                                                                      |
+| ![](<images/5-1/Coordinate system by origin.jpg>) | <p><strong>CoordinateSystem.ByOrigin</strong><br>Crea un CoordinateSystem con origen en el punto de entrada con los ejes X e Y establecidos como los ejes X e Y de SCU.</p> | ![](<images/5-1/index of nodes - coordinates system by origin.jpg>) |
+| ![](<images/5-1/Coordinate system by cylindrical coordinates (1).jpg>) | <p><strong>CoordinateSystem.ByCyclindricalCoordinates</strong><br>Crea un CoordinateSystem en los parámetros de coordenadas cilíndricas especificados respecto al sistema de coordenadas especificado.</p> | ![](<images/5-1/index of nodes - coordinates system by cylindrical coordinates.jpg>) |
 
-### Cuboid
+### Ortoedro
 
 |                                                               |                                                                                                                                            |                                                                            |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-|                                                               | CREATE                                                                                                                                     |                                                                            |
-| ![](<images/5-1/Cuboid by length (1).jpg>)                    | <p><strong>Cuboid.ByLengths</strong><br>Create a Cuboid centered at WCS origin, with width, length, and height.</p>                        | ![](<images/5-1/index of nodes - cuboid by lengths.jpg>)                   |
-| ![](<images/5-1/Cuboid by length origin (1).jpg>)             | <p><strong>Cuboid.ByLengths</strong> (origin)</p><p>Create a Cuboid centered at input Point, with specified width, length, and height.</p> | ![](<images/5-1/index of nodes - cuboid by lengths origin.jpg>)            |
-| ![](<images/5-1/Cuboid by length coordinates system (1).jpg>) | <p><strong>Cuboid.ByLengths</strong> (coordinateSystem)</p><p>Create a Cuboid centered at WCS origin, with width, length, and height.</p>  | ![](<images/5-1/index of nodes - cuboid by lengths coordinate system.jpg>) |
-| ![](<images/5-1/Cuboid by corners (1).jpg>)                   | <p><strong>Cuboid.ByCorners</strong></p><p>Create a Cuboid spanning from low Point to high Point.</p>                                      | ![](<images/5-1/index of nodes - cuboid by corners.jpg>)                   |
-| ![](<images/5-1/Cuboid length (1).jpg>)                       | <p><strong>Cuboid.Length</strong></p><p>Return the input dimensions of the Cuboid, NOT the actual world space dimensions. **</p>           | ![](<images/5-1/index of nodes - cuboid length.jpg>)                       |
-| ![](<images/5-1/Cuboid width (1).jpg>)                        | <p><strong>Cuboid.Width</strong></p><p>Return the input dimensions of the Cuboid, NOT the actual world space dimensions. **</p>            | ![](<images/5-1/index of nodes - cuboid width.jpg>)                        |
-| ![](<images/5-1/Cuboid height (1).jpg>)                       | <p><strong>Cuboid.Height</strong></p><p>Return the input dimensions of the Cuboid, NOT the actual world space dimensions. **</p>           | ![](<images/5-1/index of nodes - cuboid height.jpg>)                       |
-| ![](<images/5-1/Bounding box to cuboid (1).jpg>)              | <p><strong>BoundingBox.ToCuboid</strong></p><p>Get the Bounding Box as a solid Cuboid</p>                                                  | ![](<images/5-1/index of nodes - bounding box to cuboid.jpg>)              |
+|                                                               | CREAR |                                                                            |
+| ![](<images/5-1/Cuboid by length (1).jpg>) | <p><strong>Cuboid.ByLengths</strong><br>Crea un ortoedro centrado en el origen de SCU con anchura, longitud y altura.</p> | ![](<images/5-1/index of nodes - cuboid by lengths.jpg>) |
+| ![](<images/5-1/Cuboid by length origin (1).jpg>) | <p><strong>Cuboid.ByLengths</strong> (origin)</p><p>Crea un cubo centrado en el punto de entrada con la anchura, la longitud y la altura especificadas.</p> | ![](<images/5-1/index of nodes - cuboid by lengths origin.jpg>) |
+| ![](<images/5-1/Cuboid by length coordinates system (1).jpg>) | <p><strong>Cuboid.ByLengths</strong> (coordinateSystem)</p><p>Crea un ortoedro centrado en el origen de SCU con anchura, longitud y altura.</p> | ![](<images/5-1/index of nodes - cuboid by lengths coordinate system.jpg>) |
+| ![](<images/5-1/Cuboid by corners (1).jpg>) | <p><strong>Cuboid.ByCorners</strong></p><p>Crea un ortoedro que abarca del punto inferior al punto superior.</p> | ![](<images/5-1/index of nodes - cuboid by corners.jpg>) |
+| ![](<images/5-1/Cuboid length (1).jpg>) | <p><strong>Cuboid.Length</strong></p><p>Devuelve las cotas de entrada del cubo, NO las cotas reales del espacio universal. **</p> | ![](<images/5-1/index of nodes - cuboid length.jpg>) |
+| ![](<images/5-1/Cuboid width (1).jpg>) | <p><strong>Cuboid.Width</strong></p><p>Devuelve las cotas de entrada del cubo, NO las cotas reales del espacio universal. **</p> | ![](<images/5-1/index of nodes - cuboid width.jpg>) |
+| ![](<images/5-1/Cuboid height (1).jpg>) | <p><strong>Cuboid.Height</strong></p><p>Devuelve las cotas de entrada del cubo, NO las cotas reales del espacio universal. **</p> | ![](<images/5-1/index of nodes - cuboid height.jpg>) |
+| ![](<images/5-1/Bounding box to cuboid (1).jpg>) | <p><strong>BoundingBox.ToCuboid</strong></p><p>Obtiene el cuadro delimitador como un ortoedro sólido.</p> | ![](<images/5-1/index of nodes - bounding box to cuboid.jpg>) |
 
 {% hint style="warning" %}
-\*\*In other words, if you create a Cuboid width (X-axis) length 10, and transform it to a CoordinateSystem with 2 times scaling in X, the width will still be 10. ASM does not allow you to extract the Vertices of a body in any predictable order, so it is impossible to determine the dimensions after a transform.
+\*\*En otras palabras, si crea una longitud de anchura de ortoedro (eje X) de 10 y la transforma en un CoordinateSystem con dos veces la escala en X, la anchura seguirá siendo 10. ASM no permite extraer los vértices de un cuerpo en ningún orden predecible, por lo que es imposible determinar las cotas después de una transformación.
 {% endhint %}
 
-### Curve
+### Curva
 
 |                                                |                                                                                                                                                  |                                                                 |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-|                                                | ACTIONS                                                                                                                                          |                                                                 |
-| ![](<images/5-1/Curve extrude.jpg>)            | <p><strong>Curve.Extrude</strong> (distance)<br>Extrudes a Curve in the normal Vector direction.</p>                                             | ![](<images/5-1/index of nodes - curve extrude.jpg>)            |
-| ![](<images/5-1/Curve point at parameter.jpg>) | <p><strong>Curve.PointAtParameter</strong><br>Get a Point on the Curve at a specified parameter between StartParameter() and EndParameter().</p> | ![](<images/5-1/index of nodes - curve point at parameter.jpg>) |
+|                                                | ACCIONES |                                                                 |
+| ![](<images/5-1/Curve extrude.jpg>) | <p><strong>Curve.Extrude</strong> (distance)<br>Extruye una curva en la dirección del vector normal.</p> | ![](<images/5-1/index of nodes - curve extrude.jpg>) |
+| ![](<images/5-1/Curve point at parameter.jpg>) | <p><strong>Curve.PointAtParameter</strong><br>Obtiene un punto en la curva en el parámetro especificado entre StartParameter() y EndParameter().</p> | ![](<images/5-1/index of nodes - curve point at parameter.jpg>) |
 
-### Geometry Modifiers
+### Modificadores de geometría
 
 |                                                |                                                                                                                                    |                                                                 |
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-|                                                | ACTIONS                                                                                                                            |                                                                 |
-| ![](<images/5-1/Geometry distance to.jpg>)     | <p><strong>Geometry.DistanceTo</strong><br>Obtain the distance from this Ge ometry to another.</p>                                 | ![](<images/5-1/index of nodes - geometry distance to.jpg>)     |
-| ![](<images/5-1/Geometry explode.jpg>)         | <p><strong>Geometry.Explode</strong><br>Separates compound or non-separated elements into their component parts</p>                | ![](<images/5-1/index of nodes - geometry explode.jpg>)         |
-| ![](<images/5-1/Geometry import from SAT.jpg>) | <p><strong>Geometry.ImportFromSAT</strong><br>List of imported geometries</p>                                                      | ![](<images/5-1/index of nodes - geometry import from sat.jpg>) |
-| ![](<images/5-1/Geometry rotate.jpg>)          | <p><strong>Geometry.Rotate</strong> (basePlane)<br>Rotates an object around the Plane origin and normal by a specified degree.</p> | ![](<images/5-1/index of nodes - geometry rotate.jpg>)          |
-| ![](<images/5-1/Geometry translate.jpg>)       | <p><strong>Geometry.Translate</strong><br>Translates any geometry type by the given distance in the given direction.</p>           | ![](<images/5-1/index of nodes - geometry translate.jpg>)       |
+|                                                | ACCIONES |                                                                 |
+| ![](<images/5-1/Geometry distance to.jpg>) | <p><strong>Geometry.DistanceTo</strong><br>Obtiene la distancia de esta geometría a otra.</p> | ![](<images/5-1/index of nodes - geometry distance to.jpg>) |
+| ![](<images/5-1/Geometry explode.jpg>) | <p><strong>Geometry.Explode</strong><br>Separa elementos compuestos o no separados en sus componentes.</p> | ![](<images/5-1/index of nodes - geometry explode.jpg>) |
+| ![](<images/5-1/Geometry import from SAT.jpg>) | <p><strong>Geometry.ImportFromSAT</strong><br>Lista de geometrías importadas.</p> | ![](<images/5-1/index of nodes - geometry import from sat.jpg>) |
+| ![](<images/5-1/Geometry rotate.jpg>) | <p><strong>Geometry.Rotate</strong> (basePlane)<br>Rota un objeto sobre la normal y el origen del plano el número de grados especificado.</p> | ![](<images/5-1/index of nodes - geometry rotate.jpg>) |
+| ![](<images/5-1/Geometry translate.jpg>) | <p><strong>Geometry.Translate</strong><br>Traslada cualquier tipo de geometría según la distancia especificada en la dirección indicada.</p> | ![](<images/5-1/index of nodes - geometry translate.jpg>) |
 
-### Line
+### Línea
 
 |                                                            |                                                                                                                                                          |                                                                             |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-|                                                            | CREATE                                                                                                                                                   |                                                                             |
-| ![](<images/5-1/Line by best fit through points.jpg>)      | <p><strong>Line.ByBestFitThroughPoints</strong><br>Creates a Line best approximating a scatter plot of Points.</p>                                       | ![](<images/5-1/index of nodes - line by best fit through points.jpg>)      |
-| ![](<images/5-1/Line by start point direction length.jpg>) | <p><strong>Line.ByStartPointDirectionLength</strong><br>Create a straight Line starting at Point, extending in Vector direction by specified length.</p> | ![](<images/5-1/index of nodes - line by start point direction length.jpg>) |
-| ![](<images/5-1/Line by start point end point.jpg>)        | <p><strong>Line.ByStartPointEndPoint</strong><br>Creates a straight Line between two input Points.</p>                                                   | ![](<images/5-1/index of nodes - line by start point end point.jpg>)        |
-| ![](<images/5-1/Line by tangency.jpg>)                     | <p><strong>Line.ByTangency</strong><br>Create a Line tangent to the input Curve, positioned at the parameter Point of the input Curve.</p>               | ![](<images/5-1/index of nodes - line by tangency.jpg>)                     |
-|                                                            | QUERY                                                                                                                                                    |                                                                             |
-| ![](<images/5-1/Line direction.jpg>)                       | <p><strong>Line.Direction</strong><br>The direction of the Curve.</p>                                                                                    | ![](<images/5-1/index of nodes - line direction.jpg>)                       |
+|                                                            | CREAR |                                                                             |
+| ![](<images/5-1/Line by best fit through points.jpg>) | <p><strong>Line.ByBestFitThroughPoints</strong><br>Crea una línea que aproxima al máximo un diagrama de dispersión de puntos.</p> | ![](<images/5-1/index of nodes - line by best fit through points.jpg>) |
+| ![](<images/5-1/Line by start point direction length.jpg>) | <p><strong>Line.ByStartPointDirectionLength</strong><br>Crea una línea recta desde el punto inicial y la extiende la longitud especificada en la dirección del vector.</p> | ![](<images/5-1/index of nodes - line by start point direction length.jpg>) |
+| ![](<images/5-1/Line by start point end point.jpg>) | <p><strong>Line.ByStartPointEndPoint</strong><br>Crea una línea recta entre dos puntos de entrada.</p> | ![](<images/5-1/index of nodes - line by start point end point.jpg>) |
+| ![](<images/5-1/Line by tangency.jpg>) | <p><strong>Line.ByTangency</strong><br>Crea una línea tangente a la curva de entrada, que se coloca en el parámetro de punto de la curva de entrada.</p> | ![](<images/5-1/index of nodes - line by tangency.jpg>) |
+|                                                            | CONSULTA |                                                                             |
+| ![](<images/5-1/Line direction.jpg>) | <p><strong>Line.Direction</strong><br>La dirección de la curva.</p> | ![](<images/5-1/index of nodes - line direction.jpg>) |
 
 ### NurbsCurve
 
 |                                                     |                                                                                                               |                                                                      |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-|                                                     | Create                                                                                                        |                                                                      |
-| ![](<images/5-1/Nurbs curve by control points.jpg>) | <p><strong>NurbsCurve.ByControlPoints</strong><br>Create a BSplineCurve by using explicit control points.</p> | ![](<images/5-1/index of nodes - nurbs curve by control points.jpg>) |
-| ![](<images/5-1/Nurbs curve by points.jpg>)         | <p><strong>NurbsCurve.ByPoints</strong><br>Create a BSplineCurve by interpolating between points</p>          | ![](<images/5-1/index of nodes - nurbs curve by points.jpg>)         |
+|                                                     | Crear |                                                                      |
+| ![](<images/5-1/Nurbs curve by control points.jpg>) | <p><strong>NurbsCurve.ByControlPoints</strong><br>Crea una BSplineCurve mediante puntos de control explícitos.</p> | ![](<images/5-1/index of nodes - nurbs curve by control points.jpg>) |
+| ![](<images/5-1/Nurbs curve by points.jpg>) | <p><strong>NurbsCurve.ByPoints</strong><br>Crea una BSplineCurve mediante la interpolación entre puntos.</p> | ![](<images/5-1/index of nodes - nurbs curve by points.jpg>) |
 
 ### NurbsSurface
 
 |                                                       |                                                                                                                                                                                            |                                                                        |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-|                                                       | Create                                                                                                                                                                                     |                                                                        |
-| ![](<images/5-1/Nurbs surface by control points.jpg>) | <p><strong>NurbsSurface.ByControlPoints</strong><br>Create a NurbsSurface by using explicit control Points with specified U and V degrees.</p>                                             | ![](<images/5-1/index of nodes - nurbs surface by control points.jpg>) |
-| ![](<images/5-1/Nurbs surface by points.jpg>)         | <p><strong>NurbsSurface.ByPoints</strong><br>Creates a NurbsSurface with specified interpolated points and U and V degrees. The resultant surface will pass through all of the points.</p> | ![](<images/5-1/index of nodes - nurbs surface by points.jpg>)         |
+|                                                       | Crear |                                                                        |
+| ![](<images/5-1/Nurbs surface by control points.jpg>) | <p><strong>NurbsSurface.ByControlPoints</strong><br>Crea una NurbsSurface mediante el uso de puntos de control explícitos y los grados especificados para U y V.</p> | ![](<images/5-1/index of nodes - nurbs surface by control points.jpg>) |
+| ![](<images/5-1/Nurbs surface by points.jpg>) | <p><strong>NurbsSurface.ByPoints</strong><br>Crea una NurbsSurface con los puntos interpolados y los grados especificados para U y V. La superficie resultante atravesará todos los puntos.</p> | ![](<images/5-1/index of nodes - nurbs surface by points.jpg>) |
 
-### Plane
+### Plano
 
 |                                              |                                                                                                                  |                                                               |
 | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-|                                              | CREATE                                                                                                           |                                                               |
-| ![](<images/5-1/Plane by origin normal.jpg>) | <p><strong>Plane.ByOriginNormal</strong><br>Create a Plane centered at root Point, with input normal Vector.</p> | ![](<images/5-1/index of nodes - plane by origin normal.jpg>) |
-| ![](<images/5-1/Plane XY.jpg>)               | <p><strong>Plane.XY</strong><br>Creates a plane in the world XY</p>                                              | ![](<images/5-1/index of nodes - plane xy.jpg>)               |
+|                                              | CREAR |                                                               |
+| ![](<images/5-1/Plane by origin normal.jpg>) | <p><strong>Plane.ByOriginNormal</strong><br>Crea un plano centrado en el punto raíz con el vector normal de entrada.</p> | ![](<images/5-1/index of nodes - plane by origin normal.jpg>) |
+| ![](<images/5-1/Plane XY.jpg>) | <p><strong>Plane.XY</strong><br>Crea un plano en el plano XY universal.</p> | ![](<images/5-1/index of nodes - plane xy.jpg>) |
 
-### Point
+### Punto
 
 |                                                      |                                                                                                                                           |                                                                       |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-|                                                      | CREATE                                                                                                                                    |                                                                       |
-| ![](<images/5-1/Point by cartesian coordinates.jpg>) | <p><strong>Point.ByCartesianCoordinates</strong><br>Form a Point in th egiven coordinate system with 3 cartesian coordinates</p>          | ![](<images/5-1/index of nodes - point by cartesian coordinates.jpg>) |
-| ![](<images/5-1/Point by coordinates 2D.jpg>)        | <p><strong>Point.ByCoordinates</strong> (2d)<br>Form a Point in the XY plane given two 2 Cartesian coordinates. The Z component is 0.</p> | ![](<images/5-1/index of nodes - point by coordinates 2D.jpg>)        |
-| ![](<images/5-1/Point by coordinates 3D.jpg>)        | <p><strong>Point.ByCoordinates</strong> (3d)<br>Form a Point given 3 Cartesian coordinates.</p>                                           | ![](<images/5-1/index of nodes - point by coordinates 3D.jpg>)        |
-| ![](<images/5-1/Point origin.jpg>)                   | <p><strong>Point.Origin</strong><br>Get the Origin point (0,0,0)</p>                                                                      | ![](<images/5-1/index of nodes - point origin.jpg>)                   |
-|                                                      | ACTIONS                                                                                                                                   |                                                                       |
-| ![](<images/5-1/Point add.jpg>)                      | <p><strong>Point.Add</strong><br>Add a vector to a point. The same as Translate (Vector).</p>                                             | ![](<images/5-1/index of nodes - point add.jpg>)                      |
-|                                                      | QUERY                                                                                                                                     |                                                                       |
-| ![](<images/5-1/Point x.jpg>)                        | <p><strong>Point.X</strong><br>Get the X component of a point</p>                                                                         | ![](<images/5-1/index of nodes - point x.jpg>)                        |
-| ![](<images/5-1/Point y.jpg>)                        | <p><strong>Point.Y</strong><br>Get the Y component of a point</p>                                                                         | ![](<images/5-1/index of nodes - point y.jpg>)                        |
-| ![](<images/5-1/Point z.jpg>)                        | <p><strong>Point.Z</strong><br>Get the Z component of a point</p>                                                                         | ![](<images/5-1/index of nodes - point z.jpg>)                        |
+|                                                      | CREAR |                                                                       |
+| ![](<images/5-1/Point by cartesian coordinates.jpg>) | <p><strong>Point.ByCartesianCoordinates</strong><br>Genera un punto en el sistema de coordenadas especificado con tres coordenadas cartesianas.</p> | ![](<images/5-1/index of nodes - point by cartesian coordinates.jpg>) |
+| ![](<images/5-1/Point by coordinates 2D.jpg>) | <p><strong>Point.ByCoordinates</strong> (2d)<br>Genera un punto en el plano XY con las dos coordenadas cartesianas especificadas. El componente Z es 0.</p> | ![](<images/5-1/index of nodes - point by coordinates 2D.jpg>) |
+| ![](<images/5-1/Point by coordinates 3D.jpg>) | <p><strong>Point.ByCoordinates</strong> (3d)<br>Forma un punto con tres coordenadas cartesianas especificadas.</p> | ![](<images/5-1/index of nodes - point by coordinates 3D.jpg>) |
+| ![](<images/5-1/Point origin.jpg>) | <p><strong>Point.Origin</strong><br>Obtiene el punto de origen (0,0,0).</p> | ![](<images/5-1/index of nodes - point origin.jpg>) |
+|                                                      | ACCIONES |                                                                       |
+| ![](<images/5-1/Point add.jpg>) | <p><strong>Point.Add</strong><br>Añade un vector a un punto. Equivale a Translate (Vector).</p> | ![](<images/5-1/index of nodes - point add.jpg>) |
+|                                                      | CONSULTA |                                                                       |
+| ![](<images/5-1/Point x.jpg>) | <p><strong>Point.X</strong><br>Obtiene el componente X de un punto.</p> | ![](<images/5-1/index of nodes - point x.jpg>) |
+| ![](<images/5-1/Point y.jpg>) | <p><strong>Point.Y</strong><br>Obtiene el componente Y de un punto.</p> | ![](<images/5-1/index of nodes - point y.jpg>) |
+| ![](<images/5-1/Point z.jpg>) | <p><strong>Point.Z</strong><br>Obtiene el componente Z de un punto.</p> | ![](<images/5-1/index of nodes - point z.jpg>) |
 
-### Polycurve
+### PolyCurve
 
 |                                           |                                                                                                                                                                                       |                                                            |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-|                                           | CREATE                                                                                                                                                                                |                                                            |
-| ![](<images/5-1/Polycurve by points.jpg>) | <p><strong>Polycurve.ByPoints</strong><br>Make PolyCurve from sequence of lines connecting points. For closed curve last point should be in the same location as the start point.</p> | ![](<images/5-1/index of nodes - polycurve by points.jpg>) |
+|                                           | CREAR |                                                            |
+| ![](<images/5-1/Polycurve by points.jpg>) | <p><strong>Polycurve.ByPoints</strong><br>Crea una PolyCurve a partir de una secuencia de líneas que conectan puntos. En una curva cerrada, el último punto debe estar en la misma ubicación que el punto inicial.</p> | ![](<images/5-1/index of nodes - polycurve by points.jpg>) |
 
-Rectangle
+Rectángulo
 
 |                                                 |                                                                                                                                                                               |                                                                  |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-|                                                 | CREATE                                                                                                                                                                        |                                                                  |
-| ![](<images/5-1/Rectangle by width length.jpg>) | <p><strong>Rectangle.ByWidthLength</strong> (Plane)<br>Create a Rectangle centered at input Plane root, with input width (Plane X axis length) and (Plane Y axis length).</p> | ![](<images/5-1/index of nodes - rectangle by width length.jpg>) |
+|                                                 | CREAR |                                                                  |
+| ![](<images/5-1/Rectangle by width length.jpg>) | <p><strong>Rectangle.ByWidthLength</strong> (Plane)<br>Crea un rectángulo centrado en la raíz del plano de entrada con la anchura (longitud del eje X del plano) y la longitud de entrada (longitud del eje Y del plano).</p> | ![](<images/5-1/index of nodes - rectangle by width length.jpg>) |
 
-### Sphere
+### Esfera
 
 |                                                     |                                                                                                                             |                                                                      |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-|                                                     | CREATE                                                                                                                      |                                                                      |
-| ![](<images/5-1/Sphere by center point radius.jpg>) | <p><strong>Sphere.ByCenterPointRadius</strong><br>Create a Solid Sphere centered at the input Point, with given radius.</p> | ![](<images/5-1/index of nodes - sphere by center point radius.jpg>) |
+|                                                     | CREAR |                                                                      |
+| ![](<images/5-1/Sphere by center point radius.jpg>) | <p><strong>Sphere.ByCenterPointRadius</strong><br>Crea una esfera sólida centrada en el punto de entrada con el radio especificado.</p> | ![](<images/5-1/index of nodes - sphere by center point radius.jpg>) |
 
-### Surface
+### Superficie
 
 |                                                      |                                                                                                                                                      |                                                                   |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-|                                                      | CREATE                                                                                                                                               |                                                                   |
-| ![](<images/5-1/Surface by loft (3).jpg>)            | <p><strong>Surface.ByLoft</strong><br>Create a Surface by lofting between input cross section Curves</p>                                             | ![](<images/5-1/index of nodes - surface by loft.jpg>)            |
-| ![](<images/5-1/Surface by patch.jpg>)               | <p><strong>Surface.ByPatch</strong><br>Create a Surface by filling in the interior of a closed boundary defined by input Curves.</p>                 | ![](<images/5-1/index of nodes - surface by patch (1).jpg>)       |
-|                                                      | ACTIONS                                                                                                                                              |                                                                   |
-| ![](<images/5-1/Surface offset (1).jpg>)             | <p><strong>Surface.Offset</strong><br>Offset Surface in direction of Surface normal by specified distance</p>                                        | ![](<images/5-1/index of nodes - surface offset.jpg>)             |
-| ![](<images/5-1/Surface point at parameter (1).jpg>) | <p><strong>Surface.PointAtParameter</strong><br>Return the Point at a specified U and V parameters.</p>                                              | ![](<images/5-1/index of nodes - surface point at parameter.jpg>) |
-| ![](<images/5-1/Surface thicken (1).jpg>)            | <p><strong>Surface.Thicken</strong><br>Thicken Surface into a Solid, extruding in the direction of Surface normals on both sides of the Surface.</p> | ![](<images/5-1/index of nodes - surface thicken.jpg>)            |
+|                                                      | CREAR |                                                                   |
+| ![](<images/5-1/Surface by loft (3).jpg>) | <p><strong>Surface.ByLoft</strong><br>Crea una superficie mediante la solevación entre curvas de sección transversal de entrada.</p> | ![](<images/5-1/index of nodes - surface by loft.jpg>) |
+| ![](<images/5-1/Surface by patch.jpg>) | <p><strong>Surface.ByPatch</strong><br>Crea una superficie mediante el relleno del interior de un contorno cerrado definido por curvas de entrada.</p> | ![](<images/5-1/index of nodes - surface by patch (1).jpg>) |
+|                                                      | ACCIONES |                                                                   |
+| ![](<images/5-1/Surface offset (1).jpg>) | <p><strong>Surface.Offset</strong><br>Desfasa la superficie en la dirección de la normal de superficie en función de la distancia especificada.</p> | ![](<images/5-1/index of nodes - surface offset.jpg>) |
+| ![](<images/5-1/Surface point at parameter (1).jpg>) | <p><strong>Surface.PointAtParameter</strong><br>Devuelve el punto en los parámetros U y V especificados.</p> | ![](<images/5-1/index of nodes - surface point at parameter.jpg>) |
+| ![](<images/5-1/Surface thicken (1).jpg>) | <p><strong>Surface.Thicken</strong><br>Engrosa la superficie hasta convertirla en un sólido y realiza la extrusión en la dirección de las normales de superficie en ambos lados de la superficie.</p> | ![](<images/5-1/index of nodes - surface thicken.jpg>) |
 
 ### UV
 
 |                                             |                                                                           |                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
-|                                             | CREATE                                                                    |                                                          |
-| ![](<images/5-1/UV by coordinates (1).jpg>) | <p><strong>UV.ByCoordinates</strong><br>Create a UV from two doubles.</p> | ![](<images/5-1/index of nodes - UV by coordinates.jpg>) |
+|                                             | CREAR |                                                          |
+| ![](<images/5-1/UV by coordinates (1).jpg>) | <p><strong>UV.ByCoordinates</strong><br>Crea un UV a partir de dos dobles.</p> | ![](<images/5-1/index of nodes - UV by coordinates.jpg>) |
 
 ### Vector
 
 |                                                 |                                                                                          |                                                              |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-|                                                 | CREATE                                                                                   |                                                              |
-| ![](<images/5-1/Vector by coordinates (1).jpg>) | <p><strong>Vector.ByCoordinates</strong><br>Form a Vector by 3 Euclidean coordinates</p> | ![](<images/5-1/index of nodes - vector by coordinates.jpg>) |
-| ![](<images/5-1/Vector x axis (1).jpg>)         | <p><strong>Vector.XAxis</strong><br>Gets the canonical X axis Vector (1,0,0)</p>         | ![](<images/5-1/index of nodes - vector x.jpg>)              |
-| ![](<images/5-1/Vector y axis (1).jpg>)         | <p><strong>Vector.YAxis</strong><br>Gets the canonical Y axis Vector (0,1,0)</p>         | ![](<images/5-1/index of nodes - vector y.jpg>)              |
-| ![](<images/5-1/Vector z axis (1).jpg>)         | <p><strong>Vector.ZAxis</strong><br>Gets the canonical Z axis Vector (0,0,1)</p>         | ![](<images/5-1/index of nodes - vector z.jpg>)              |
-|                                                 | ACTIONS                                                                                  |                                                              |
-| ![](<images/5-1/Vector normalized (1).jpg>)     | <p><strong>Vector.Normalized</strong><br>Get the normalized version of a vector</p>      | ![](<images/5-1/index of nodes - vector normalized.jpg>)     |
+|                                                 | CREAR |                                                              |
+| ![](<images/5-1/Vector by coordinates (1).jpg>) | <p><strong>Vector.ByCoordinates</strong><br>Genera un vector mediante tres coordenadas euclidianas.</p> | ![](<images/5-1/index of nodes - vector by coordinates.jpg>) |
+| ![](<images/5-1/Vector x axis (1).jpg>) | <p><strong>Vector.XAxis</strong><br>Obtiene el vector del eje X canónico (1,0,0).</p> | ![](<images/5-1/index of nodes - vector x.jpg>) |
+| ![](<images/5-1/Vector y axis (1).jpg>) | <p><strong>Vector.YAxis</strong><br>Obtiene el vector del eje Y canónico (0,1,0).</p> | ![](<images/5-1/index of nodes - vector y.jpg>) |
+| ![](<images/5-1/Vector z axis (1).jpg>) | <p><strong>Vector.ZAxis</strong><br>Obtiene el vector del eje Z canónico (0,0,1).</p> | ![](<images/5-1/index of nodes - vector z.jpg>) |
+|                                                 | ACCIONES |                                                              |
+| ![](<images/5-1/Vector normalized (1).jpg>) | <p><strong>Vector.Normalized</strong><br>Obtiene la versión normalizada de un vector.</p> | ![](<images/5-1/index of nodes - vector normalized.jpg>) |
 
 ## CoordinateSystem
 
 |                                                                        |                                                                                                                                                                                                    |                                                                                      |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-|                                                                        | CREATE                                                                                                                                                                                             |                                                                                      |
-| ![](<images/5-1/Coordinate system by origin.jpg>)                      | <p><strong>CoordinateSystem.ByOrigin</strong><br>Create a CoordinateSystem with origin at input Point, with X and Y Axes set as WCS X and Y axes</p>                                               | ![](<images/5-1/index of nodes - coordinates system by origin.jpg>)                  |
-| ![](<images/5-1/Coordinate system by cylindrical coordinates (1).jpg>) | <p><strong>CoordinateSystem.ByCyclindricalCoordinates</strong><br>Creates a CoordinateSystem at the specified cylindrical coordinate parameters with respet to the specified coordinate system</p> | ![](<images/5-1/index of nodes - coordinates system by cylindrical coordinates.jpg>) |
+|                                                                        | CREAR |                                                                                      |
+| ![](<images/5-1/Coordinate system by origin.jpg>) | <p><strong>CoordinateSystem.ByOrigin</strong><br>Crea un CoordinateSystem con origen en el punto de entrada con los ejes X e Y establecidos como los ejes X e Y de SCU.</p> | ![](<images/5-1/index of nodes - coordinates system by origin.jpg>) |
+| ![](<images/5-1/Coordinate system by cylindrical coordinates (1).jpg>) | <p><strong>CoordinateSystem.ByCyclindricalCoordinates</strong><br>Crea un CoordinateSystem en los parámetros de coordenadas cilíndricas especificados respecto al sistema de coordenadas especificado.</p> | ![](<images/5-1/index of nodes - coordinates system by cylindrical coordinates.jpg>) |
 
-## Operators
+## Operadores
 
 |                                              |                                                                                                                         |                                                       |
 | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| ![](<images/5-1/addition (1) (1).jpg>)       | <p><strong>+</strong><br>Addition</p>                                                                                   | ![](<images/5-1/index of nodes - addition.jpg>)       |
-| ![](<images/5-1/Subtraction (1) (1).jpg>)    | <p><strong>-</strong><br>Subtraction</p>                                                                                | ![](<images/5-1/index of nodes - subtraction.jpg>)    |
-| ![](<images/5-1/Multiplication (1) (1).jpg>) | <p><strong>*</strong><br>Multiplication</p>                                                                             | ![](<images/5-1/index of nodes - multiplication.jpg>) |
-| ![](<images/5-1/Division (1) (1).jpg>)       | <p><strong>/</strong><br>Division</p>                                                                                   | ![](<images/5-1/index of nodes - division.jpg>)       |
-| ![](<images/5-1/modular (1).jpg>)            | <p><strong>%</strong><br>Modular Division finds the remainder of the first input after dividing by the second input</p> | ![](<images/5-1/index of nodes - modular.jpg>)        |
-| ![](<images/5-1/Less than (1).jpg>)          | <p><strong>&#x3C;</strong><br>Less Than</p>                                                                             | ![](<images/5-1/index of nodes - less than.jpg>)      |
-| ![](<images/5-1/greater than (1).jpg>)       | <p><strong>></strong><br>Greater Than</p>                                                                               | ![](<images/5-1/index of nodes - greater than.jpg>)   |
-| ![](<images/5-1/== (1).jpg>)                 | <p><strong>==</strong><br>Equality tests for equality between two values.</p>                                           | ![](<images/5-1/index of nodes - ==.jpg>)             |
+| ![](<images/5-1/addition (1) (1).jpg>) | <p><strong>+</strong><br>Suma</p> | ![](<images/5-1/index of nodes - addition.jpg>) |
+| ![](<images/5-1/Subtraction (1) (1).jpg>) | <p><strong>-</strong><br>Resta</p> | ![](<images/5-1/index of nodes - subtraction.jpg>) |
+| ![](<images/5-1/Multiplication (1) (1).jpg>) | <p><strong>*</strong><br>Multiplicación</p> | ![](<images/5-1/index of nodes - multiplication.jpg>) |
+| ![](<images/5-1/Division (1) (1).jpg>) | <p><strong>/</strong><br>División</p> | ![](<images/5-1/index of nodes - division.jpg>) |
+| ![](<images/5-1/modular (1).jpg>) | <p><strong>%</strong><br>La división modular busca el resto de la primera entrada después la división por la segunda entrada.</p> | ![](<images/5-1/index of nodes - modular.jpg>) |
+| ![](<images/5-1/Less than (1).jpg>) | <p><strong>&#x3C;</strong><br>Menor que</p> | ![](<images/5-1/index of nodes - less than.jpg>) |
+| ![](<images/5-1/greater than (1).jpg>) | <p><strong>></strong><br>Mayor que</p> | ![](<images/5-1/index of nodes - greater than.jpg>) |
+| ![](<images/5-1/== (1).jpg>) | <p><strong>==</strong><br>Este operador comprueba la igualdad entre dos valores.</p> | ![](<images/5-1/index of nodes - ==.jpg>) |

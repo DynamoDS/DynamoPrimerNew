@@ -1,83 +1,83 @@
-# Resources
+# Recursos
 
 ## **Dynamo**
 
-### **Dynamo Wiki**
+### **Página wiki de Dynamo**
 
-"This wiki is for learning about development using the Dynamo API, supporting libraries and tools."
+Esta página wiki se ha diseñado para obtener información sobre el desarrollo mediante la API de Dynamo, e incluye bibliotecas y herramientas.
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
-### **Dynamo Blog**
+### **Blog de Dynamo**
 
-This blog is the most up-to-date collection of articles from the Dynamo team, discussing new features, workflows, and all things Dynamo.
+Este blog es la colección más actualizada de artículos del equipo de Dynamo, donde se explican las nuevas funciones, los flujos de trabajo y todos los aspectos relacionados con Dynamo.
 
 [http://dynamobim.com/blog/](http://dynamobim.com/blog/)
 
-### **DesignScript Guide**
+### **Guía de DesignScript**
 
-Programming languages are created to express ideas, usually involving logic and calculation. In addition to these objectives, the Dynamo textual language (formerly DesignScript) has been created to express design intentions. It is generally recognized that computational designing is exploratory, and Dynamo tries to support this: we hope you find the language flexible and fast enough to take a design from concept, through design iterations, to your final form. This manual is structured to give a user with no knowledge of either programming or architectural geometry full exposure to a variety of topics in these two intersecting disciplines.
+Se crean lenguajes de programación para expresar ideas, normalmente, con lógica y cálculo. Además de estos objetivos, el lenguaje textual de Dynamo (anteriormente, DesignScript) se ha creado para expresar las intenciones del diseño. Por lo general, se reconoce que el diseño computacional es exploratorio y Dynamo intenta apoyar esto: esperamos que el lenguaje le resulte flexible y lo suficientemente rápido como para desarrollar un diseño desde el concepto y las iteraciones de diseño hasta la forma final. Este manual se ha organizado para ofrecer a los usuarios sin conocimientos de programación o geometría arquitectónica información completa sobre diversos temas de estas dos disciplinas relacionadas.
 
 [http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf](http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)
 
-### **The Dynamo Primer Project**
+### **El proyecto Dynamo Primer**
 
-The Dynamo Primer is an open source project, initiated by Matt Jezyk and the Dynamo Development team at Autodesk. The first version of the primer was developed by Mode Lab. To contribute, fork the repo, add your content, and submit a pull request.
+Dynamo Primer es un proyecto de código abierto iniciado por Matt Jezyk y el equipo de desarrollo de Dynamo de Autodesk. La primera versión de este manual de introducción fue desarrollada por Mode Lab. Para colaborar, bifurque el repositorio, añada contenido y envíe una solicitud de extracción.
 
 [https://github.com/DynamoDS/DynamoPrimer](https://github.com/DynamoDS/DynamoPrimer)
 
-### **Zero Touch Plugin Development for Dynamo**
+### **Desarrollo del módulo de extensión Zero Touch para Dynamo**
 
-This page outlines the process of developing a custom Dynamo node in C# using the "Zero Touch" interface. In most cases, C# static methods and Classes can be imported without modification. If your library only needs to call functions, and not construct new objects, this can be achieved very easily with static methods. When Dynamo loads your DLL, it will strip off the namespace of your classes, and expose all static methods as nodes.
+En esta página se describe el proceso de desarrollo de un nodo de Dynamo personalizado en C# mediante la interfaz de "Zero Touch". En la mayoría de los casos, se pueden importar clases y métodos estáticos de C# sin modificaciones. Si la biblioteca solo necesita funciones de llamada y no crear nuevos objetos, esto se puede conseguir muy fácilmente con métodos estáticos. Cuando Dynamo carga el archivo DLL, eliminará el espacio de nombres de las clases y mostrará todos los métodos estáticos como nodos.
 
 [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development)
 
-## **External Resources**
+## **Recursos externos**
 
-### **Python for Beginners**
+### **Python For Beginners**
 
-Python is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes. Python combines remarkable power with very clear syntax. It has interfaces to many system calls and libraries, as well as to various window systems, and is extensible in C or C++. It is also usable as an extension language for applications that need a programmable interface. Finally, Python is portable: it runs on many Unix variants, on the Mac, and on Windows 2000 and later. The Beginner’s Guide to Python links to other introductory tutorials and resources for learning Python.
+Python es un lenguaje de programación interpretado, interactivo y orientado a objetos. Incorpora módulos, excepciones, escritura dinámica, tipos de datos dinámicos de alto nivel y clases. Python combina una potencia notable con una sintaxis muy clara. Incluye interfaces para muchas llamadas y bibliotecas del sistema, así como para diversos sistemas de ventanas, y es extensible en C o C++. También se puede utilizar como lenguaje de extensión para aplicaciones que necesitan una interfaz programable. Por último, Python es portátil: se ejecuta en muchas variantes de Unix, en Mac, y en Windows 2000 y versiones posteriores. La guía para principiantes de Python ofrece vínculos a otros aprendizajes y recursos de introducción para el aprendizaje de Python.
 
 [https://www.python.org/about/gettingstarted](https://www.python.org/about/gettingstarted)
 
 ### **AForge**
 
-AForge.NET is an open source C# framework designed for developers and researchers in the fields of Computer Vision and Artificial Intelligence - image processing, neural networks, genetic algorithms, fuzzy logic, machine learning, robotics, etc.
+AForge.NET es un marco de trabajo de C# de código abierto diseñado para desarrolladores e investigadores de los campos de la visión y la inteligencia artificiales: procesamiento de imágenes, redes neuronales, algoritmos genéticos, lógica indefinida, aprendizaje automático, robótica, etc.
 
 [http://www.aforgenet.com/framework/](http://www.aforgenet.com/framework/)
 
 ### **Wolfram MathWorld**
 
-MathWorld is an online mathematics resource, assembled by Eric W. Weisstein with assistance from thousands of contributors. Since its contents first appeared online in 1995, MathWorld has emerged as a nexus of mathematical information in both the mathematics and educational communities. Its entries are extensively referenced in journals and books spanning all educational levels.
+MathWorld es un recurso en línea de matemáticas recopilado por Eric W. Weisstein con ayuda de miles de colaboradores. Desde que su contenido apareció por primera vez en línea en 1995, MathWorld se ha convertido en un nexo de información matemática tanto en las comunidades matemáticas como en las educativas. Sus entradas hacen referencia ampliamente a diarios y libros que abarcan todos los niveles educativos.
 
 [http://mathworld.wolfram.com/](http://mathworld.wolfram.com)
 
-## Revit Resources
+## Recursos de Revit
 
 ### **buildz**
 
-"These posts are mainly about the Revit platform, with recommendations on how to enjoy it."
+Estas publicaciones tratan principalmente sobre la plataforma Revit, con recomendaciones sobre cómo disfrutarla.
 
 [http://buildz.blogspot.com/](http://buildz.blogspot.com)
 
 ### **Nathan's Revit API Notebook**
 
-"This notebook attempts to remedy a few 'resource deficiencies' in learning and applying the Revit API in the context of a design workflow"
+Este bloc de notas intenta solucionar algunas "deficiencias de recursos" en el aprendizaje y la aplicación de la API de Revit en el contexto de un flujo de trabajo de diseño.
 
 [http://wiki.theprovingground.org/revit-api](http://wiki.theprovingground.org/revit-api)
 
 ### **Revit Python Shell**
 
-"The RevitPythonShell adds an IronPython interpreter to Autodesk Revit and Vasari." This project pre-dates Dynamo and is a great reference for Python development. RPS Project:&#x20;
+RevitPythonShell añade un intérprete de IronPython a Autodesk Revit y Vasari. Este proyecto es anterior a Dynamo y es una excelente referencia para el desarrollo mediante Python. Proyecto RPS:
 
 https://github.com/architecture-building-systems/revitpythonshell&#x20;
 
-Developer's Blog:&#x20;
+Blog del desarrollador:
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
 ### **The Building Coder**
 
-A robust catalog of Revit API workflows from one of the leading experts in BIM.
+Un completo catálogo de flujos de trabajo de la API de Revit de uno de los expertos más importantes de BIM.
 
 [http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

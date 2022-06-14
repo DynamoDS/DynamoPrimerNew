@@ -1,11 +1,11 @@
-# Dictionaries in Dynamo
+# Diccionarios en Dynamo
 
-Dictionaries represent a collection of data that is related to another piece of data known as a key. Dictionaries expose the ability to search for, delete and insert data into a collection.
+Los diccionarios representan una recopilación de datos relacionados con otro elemento de datos conocido como clave. Los diccionarios muestran la capacidad de buscar, suprimir e insertar datos en una colección.
 
-Essentially, we can think of a dictionary as a really smart way to look something up.
+Básicamente, podemos considerar un diccionario como una manera realmente inteligente de buscar algo.
 
-_While dictionary functionality has been available in Dynamo for some time, Dynamo 2.0 introduces a new way of managing this data type._
+_Aunque la función de diccionario lleva disponible en Dynamo durante algún tiempo, Dynamo 2.0 presenta una nueva forma de administrar este tipo de datos._
 
 ![](../images/5-5/wildDictionary.png)
 
-Original image courtesy of: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+Imagen original cortesía de [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

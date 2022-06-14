@@ -4,14 +4,14 @@ description: >-
   workflows.
 ---
 
-# Concept Index
+# Índice de conceptos
 
-| Exercise list    | Key concepts introduced in exercise  | Link to further reading in later chapters                                                                  |
+| Lista de ejercicios | Conceptos clave introducidos en el ejercicio | Vínculo para obtener más información en capítulos posteriores |
 | ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| Parametric Vase  | Searching nodes throught the library | [Library](../3\_user\_interface/2-library.md)                                                              |
-|                  | Using nodes and wires                | [Nodes and Wires](../4\_nodes\_and\_wires/)                                                                |
-|                  | Creating curves and surfaces         | [Geometry for Computational Design](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
-|                  | Using code blocks                    | [Code Blocks and DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)                |
-| Attractor Points | Create manage and edit lists         | [Designing with Lists](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/)                   |
-|                  | Changing preview modes               | [Preview Mode](../3\_user\_interface/1-workspace.md#preview-mode)                                          |
-|                  | Changing execution modes             | [Execution Bar](../3\_user\_interface/#execution-bar)                                                      |
+| Jarrón paramétrico | Búsqueda de nodos en la biblioteca | [Biblioteca](../3\_user\_interface/2-library.md) |
+|                  | Uso de nodos y cables | [Nodos y cables](../4\_nodes\_and\_wires/) |
+|                  | Creación de curvas y superficies | [Geometría para el diseño computacional](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) |
+|                  | Uso de bloques de código | [Bloques de código y DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) |
+| Puntos de atractor | Crear, administrar y editar listas | [Diseño con listas](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/) |
+|                  | Cambio de los modos de vista preliminar | [Modo de vista preliminar](../3\_user\_interface/1-workspace.md#preview-mode) |
+|                  | Cambio de los modos de ejecución | [Barra de ejecución](../3\_user\_interface/#execution-bar) |

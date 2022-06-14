@@ -1,96 +1,96 @@
-# Meshes
+# Mallas
 
-## Mesh in Dynamo
+## Mallas en Dynamo
 
-### What is Mesh?
+### ¿Qué es una malla?
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+En el campo del modelado computacional, las [mallas](7-meshes.md#mesh) son una de las formas más generalizadas de representación de la geometría 3D. Por lo general, la geometría de malla se compone de una colección de cuadriláteros o triángulos, puede ser una alternativa ligera y flexible al trabajo con NURBS; las mallas se utilizan en todo, desde la renderización y las visualizaciones hasta la fabricación digital y la impresión en 3D.
 
-### Mesh Elements
+### Elementos de malla
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Dynamo define mallas mediante una estructura de datos de cara-vértice. En su nivel más básico, esta estructura es simplemente un conjunto de puntos que se agrupan en polígonos. Los puntos de una malla se denominan vértices, mientras que los polígonos similares a superficies se denominan caras.
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+Para crear una malla, se necesita una lista de vértices y un sistema de agrupación de esos vértices en caras denominado grupo de índice.
 
 ![](<../images/5-2/7/meshes - mesh elements.jpg>)
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. Lista de vértices
+> 2. Lista de grupos de índice para definir caras
 
-### Mesh Toolkit
+### Kit de herramientas de malla
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+Las funciones de malla de Dynamo se pueden ampliar mediante la instalación del paquete de [Kit de herramientas de malla](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). El Kit de herramientas de malla de Dynamo proporciona herramientas para importar mallas desde formatos de archivo externos, crear una malla a partir de objetos de geometría de Dynamo y generar manualmente mallas mediante sus vértices e índices.
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+La biblioteca también proporciona herramientas para modificar y reparar mallas, o extraer cortes horizontales para su uso en la fabricación.
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+Consulte los [casos reales del Kit de herramientas de malla](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) para obtener un ejemplo de cómo utilizar este paquete.
 
 ![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deep Dive into...
+## Información más detallada sobre...
 
-### Mesh
+### Malla
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+Una malla es un conjunto de cuadriláteros y triángulos que representa una superficie o una geometría sólida. Al igual que los sólidos, la estructura de un objeto de malla incluye vértices, aristas y caras. Existen propiedades adicionales que hacen que las mallas sean únicas como, por ejemplo, las normales.
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![Elementos de malla](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. Vértices de malla.
+> 2. Aristas de malla. \*Las aristas con una única cara adyacente se denominan "desnudas". El resto de aristas están "vestidas".
+> 3. Caras de malla.
 
-### Vertices + Vertex Normals
+### Vértices + normales de vértice
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+Los vértices de una malla son simplemente una lista de puntos. El índice de los vértices es muy importante al crear una malla u obtener información sobre la estructura de una malla. Para cada vértice, también existe una normal de vértice (vector) correspondiente que describe la dirección media de las caras enlazadas y ayuda a comprender la orientación de "entrada" y "salida" de la malla.
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![Vértices + normales](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. Vértices
+> 2. Normales de vértice
 
-### Faces
+### Caras
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+Una cara es una lista ordenada de tres o cuatro vértices. Por lo tanto, la representación de la "superficie" de una cara de malla se deduce en función de la posición de los vértices que se están indexando. Ya tenemos la lista de vértices que componen la malla, por lo que, en lugar de proporcionar puntos individuales para definir la malla, solo tenemos que usar el índice de los vértices. Esto también nos permite utilizar el mismo vértice en más de una cara.
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. Una cara cuadrática compuesta por los índices 0, 1, 2 y 3.
+> 2. Una cara triangular creada con los índices 1, 4 y 2. Tenga en cuenta que se puede cambiar el orden de los grupos de índice; siempre que la secuencia se ordene en el sentido contrario a las agujas del reloj, la cara se definirá correctamente.
 
-### Meshes versus NURBS Surfaces
+### Mallas frente a superficies NURBS
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+¿En qué se diferencia la geometría de malla de la geometría NURBS? ¿Cuándo es recomendable utilizar una en lugar de la otra?
 
-#### Parameterization
+#### Parametrización
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+En un capítulo anterior, vimos que las superficies NURBS se definen mediante una serie de curvas NURBS que se dirigen en dos direcciones. Estas direcciones se etiquetan como `U` y `V`, y permiten que una superficie NURB se parametrice de acuerdo con un dominio de superficie bidimensional. Las curvas propiamente dichas se almacenan como ecuaciones en el ordenador, lo que permite calcular las superficies resultantes con un grado de precisión arbitrariamente pequeño. Sin embargo, puede ser difícil combinar varias superficies NURBS. La unión de dos superficies NURBS genera una PolySurface, donde las distintas secciones de la geometría tendrán diferentes parámetros UV y definiciones de curva.
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Puntos de control](../images/5-2/7/NURBSvsMESH-01.jpg)
 
-> 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
-> 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 1. Superficie
+> 2. Curva isoparamétrica (línea isoparamétrica)
+> 3. Punto de control de superficie
+> 4. Polígono de control de superficie
+> 5. Punto isométrico
+> 6. Marco de superficie
+> 7. Malla
+> 8. Arista desnuda
+> 9. Red de malla
+> 10. Aristas de malla
+> 11. Normal de vértice
+> 12. Cara de malla/normal de cara de malla
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+Por otra parte, las mallas están formadas por un número específico de caras y vértices definidos exactamente. La red de vértices no se puede definir normalmente mediante coordenadas `UV` sencillas, y como las caras son independientes, la cantidad de precisión se incorpora en la malla y solo se puede cambiar mediante el ajuste preciso de la malla y la adición de más caras. La falta de descripciones matemáticas permite que las mallas gestionen con mayor flexibilidad geometrías complejas dentro de una única malla.
 
-### Local versus Global Influence
+### Influencia local frente a global
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+Otra diferencia importante es la extensión en la que un cambio local en la geometría de malla o NURBS afecta a toda la forma. El desplazamiento de un vértice de una malla solo afecta a las caras adyacentes a ese vértice. En las superficies NURBS, la extensión de la influencia es más complicada y depende del grado de la superficie, así como de los grosores y los nudos de los puntos de control. Sin embargo, por lo general, al desplazar un único punto de control en una superficie NURBS, se produce un cambio más suave y extensivo en la geometría.
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Edición](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. Superficie NURBS: el desplazamiento de un punto de control tiene una influencia que se extiende a lo largo de la forma.
+> 2. Geometría de malla: el desplazamiento de un vértice solo influye en los elementos adyacentes.
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+Una analogía que puede resultar útil es comparar una imagen vectorial (compuesta de líneas y curvas) con una imagen ráster (compuesta de píxeles individuales). Si amplia la vista de una imagen vectorial, las curvas permanecen nítidas y claras, mientras que si se amplía la vista de una imagen ráster, los píxeles individuales aumentan de tamaño. En esta analogía, las superficies NURBS se pueden comparar con una imagen vectorial porque existe una relación matemática fluida, mientras que una malla se comporta de forma similar a una imagen ráster con una resolución establecida.
 
 ##

@@ -1,5 +1,5 @@
-# Introduction
+# Introducción
 
-From its origins as an add-on for Building Information Modeling in Revit, Dynamo has matured to become many things. Above all else it is a platform, enabling designers to explore visual programming, solve problems, and make their own tools. Let's start our journey with Dynamo by setting some context - what is it and how do I approach using it?
+Dynamo ha evolucionado desde sus orígenes como un complemento para BIM (Building Information Modeling) en Revit para convertirse en algo mucho más diverso. Ante todo, se trata de una plataforma que permite a los diseñadores explorar la programación visual, resolver problemas y crear sus propias herramientas. Comencemos nuestro viaje con Dynamo proporcionando algo de contexto: ¿qué es y cómo puedo utilizarlo?
 
 ![Dynamo Ecosystem](<./images/intro dynamo cover.jpg>)

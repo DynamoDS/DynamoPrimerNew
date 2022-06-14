@@ -1,29 +1,29 @@
-# Dictionary Nodes
+# Nodos de diccionario
 
-Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
+Dynamo 2.0 presenta una gran variedad de nodos de diccionario para nuestro uso. Esto incluye los nodos de _creación, acción y consulta_.
 
 ![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
 
-#### Create
+#### Crear
 
-1.`Dictionary.ByKeysValues` will create a dictionary with the supplied values and keys. _(The number of entries will be whatever the shortest list input is)_
+1. `Dictionary.ByKeysValues` creará un diccionario con las claves y los valores proporcionados. _(El número de entradas será el de la entrada de lista más corta)_.
 
-#### Action
+#### Acción
 
-2\. `Dictionary.Components` will produce the components of the input dictionary. _(This is the reverse of the create node.)_
+2\. `Dictionary.Components` generará los componentes del diccionario de entrada. _(Es el proceso inverso al nodo creado)._
 
-3\. `Dictionary.RemoveKeys` will produce a new dictionary object with the input keys removed.
+3\. `Dictionary.RemoveKeys` generará un nuevo objeto de diccionario con las claves de entrada eliminadas.
 
-4\. `Dictionary.SetValueAtKeys` will produce a new dictionary based on the input keys and the values to replace the current value at the corresponding keys.
+4\. `Dictionary.SetValueAtKeys` creará un nuevo diccionario basado en las claves de entrada y los valores para reemplazar el valor actual en las claves correspondientes.
 
-5\. `Dictionary.ValueAtKey` will return the value at the input key.
+5\. `Dictionary.ValueAtKey` devolverá el valor en la clave de entrada.
 
-#### Count
+#### Recuento
 
-6\. `Dictionary.Count` will tell you how many key value pairs are in the dictionary.
+6\. `Dictionary.Count` le indicará cuántos pares de clave-valor hay en el diccionario.
 
-7\. `Dictionary.Keys` will return what keys are currently stored in the dictionary.
+7\. `Dictionary.Keys` devolverá las claves almacenadas actualmente en el diccionario.
 
-8\. `Dictionary.Values` will return what values are currently stored in the dictionary.
+8\. `Dictionary.Values` devolverá los valores almacenados actualmente en el diccionario.
 
-Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.
+Relacionar de forma general datos con diccionarios es una magnífica alternativa al antiguo método de trabajo con índices y listas.

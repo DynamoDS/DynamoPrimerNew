@@ -1,5 +1,5 @@
-# Geometry for Computational Design
+# Geometría para el diseño computacional
 
-As a Visual Programming environment, Dynamo enables you to craft the way that data is processed. Data is numbers or text, but so is Geometry. As understood by the Computer, Geometry - or sometimes called Computational Geometry - is the data we can use to create beautiful, intricate, or performance-driven models. To do so, we need to understand the ins and outs of the various types of Geometry we can use.
+Dynamo, un entorno de programación visual, le permite diseñar la forma en que se procesan los datos. Los datos son números o texto, pero también lo es la geometría. Tal y como lo entiende el equipo, la geometría (denominada a veces geometría computacional) son los datos que se pueden utilizar para crear modelos atractivos, complejos o basados en el rendimiento. Para ello, debemos conocer los pormenores de los diversos tipos de geometría que podemos utilizar.
 
 ![](<../images/5-2/Geometry for Computational Design-01.jpg>)

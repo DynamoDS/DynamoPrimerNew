@@ -1,126 +1,126 @@
-# Nodes and Wires
+# Nodos y cables
 
-## Nodes
+## Nodos
 
-In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each **Node** performs an operation - sometimes that may be as simple as storing a number or it may be a more complex action such as creating or querying geometry.
+En Dynamo, los **nodos** son los objetos que se conectan para formar un programa visual. Cada **nodo** realiza una operación: en ocasiones, es algo tan sencillo como almacenar un número, o puede ser una acción más compleja, como crear o consultar geometría.
 
-### Anatomy of a Node
+### Anatomía de un nodo
 
-Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
+La mayoría de los nodos de Dynamo están compuestos por cinco partes. Aunque existen excepciones, como los nodos de entrada, la anatomía de cada nodo se puede describir como se indica a continuación:
 
 ![](<images/nodes and wires - nodes anatomy.jpg>)
 
-> 1. Name - The Name of the Node with a `Category.Name` naming convention
-> 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
-> 3. Ports (In and Out) - The receptors for Wires that supply the input data to the Node as well as the results of the Node's action
-> 4. Default Value - Right-click on an input Port - some Nodes have default values that can be used or not used.
-> 5. Lacing Icon - Indicates the [Lacing option](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) specified for matching list inputs (more on that later)
+> 1. Nombre: nombre del nodo con la convención de nomenclatura `Category.Name`.
+> 2. Cuerpo principal: el cuerpo principal del nodo. Al hacer clic con el botón derecho, se presentan opciones en el nivel de todo el nodo.
+> 3. Puertos (entrada y salida): los receptores de los cables que proporcionan los datos de entrada al nodo, así como los resultados de la acción del nodo.
+> 4. Valor por defecto (haga clic con el botón derecho en un puerto de entrada): algunos nodos tienen valores por defecto que se pueden utilizar o no.
+> 5. Icono de encaje: indica la [opción de encaje](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) especificada para las entrada de lista coincidentes (se explicará detalladamente más adelante).
 
-### Nodes Input/Output Ports
+### Puerto de entrada/salida de los nodos
 
-The Inputs and Outputs for Nodes are called Ports and act as the receptors for Wires. Data comes into the Node through Ports on the left and flows out of the Node after it has executed its operation on the right.
+Las entradas y las salidas de los nodos se denominan puertos y actúan como receptores de cables. Los datos entran por la izquierda en el nodo a través de los puertos y salen del nodo por la derecha después de que se haya ejecutado su operación.
 
-Ports expect to receive data of a certain type. For instance, connecting a number such as _2.75_ to the Ports on a Point By Coordinates Node will successfully result in creating a Point; however, if we supply _"Red"_ to the same Port it will result in an error.
+Los puertos esperan recibir datos de un tipo determinado. Por ejemplo, al conectar un número como _2.75_ a los puertos de un nodo Point.ByCoordinates, se creará correctamente un punto. Sin embargo, si se proporciona _Red_ al mismo puerto, se producirá un error.
 
 {% hint style="info" %}
-Tip: Hover over a Port to see a tooltip containing the data type expected.
+Consejo: coloque el cursor sobre un puerto para ver la información de herramientas que contiene el tipo de datos esperado.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
-> 1. Port Label
-> 2. Tool Tip
-> 3. Data Type
-> 4. Default Value
+> 1. Etiqueta de puerto
+> 2. Información de herramientas
+> 3. Tipo de datos
+> 4. Valor por defecto
 
-### Node States
+### Estados de nodo
 
-Dynamo gives an indication of the state of the execution of your Visual Program by rendering Nodes with different color schemes based on each Node's status. The hierarchy of states follows this sequence: Error > Warning > Info > Preview.
+Dynamo proporciona una indicación del estado de ejecución del programa visual mediante la renderización de los nodos con diferentes esquemas de color en función del estado de cada nodo. La jerarquía de estados sigue esta secuencia: Error > Advertencia > Información > Vista preliminar.
 
-Hovering or right-clicking over the Name or Ports presents additional information and options.
+Al colocar el cursor sobre el nombre o los puertos, o al hacer clic con el botón derecho en ellos, se ofrecen información y opciones adicionales.
 
 ![](<images/nodes and wires - node states.jpg>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 1. Activo: los nodos con un fondo de nombre gris oscuro están conectados correctamente y todas sus entradas se han conectado de forma adecuada.
+> 2. Estado de error: la barra de estado roja debajo del nodo indica que el nodo presenta un estado de error.
+> 3. Bloquear: un nodo transparente tiene la opción Bloquear activada, por lo que se suspende la ejecución del nodo.
+> 4. Vista preliminar en segundo plano: la barra de estado gris debajo del nodo y el icono de ojo ![](<images/nodes and wires - preview off.jpg>) indican que la vista preliminar de la geometría está desactivada.
+> 5. Seleccionados: actualmente los nodos seleccionados se resaltan con un borde de color turquesa.
+> 6. Advertencia: la barra de estado amarilla debajo de los nodos indica un estado de advertencia, lo que significa que no tienen datos de entrada o que pueden tener tipos de datos incorrectos.
 
-#### Handling Error or Warning Nodes
+#### Administración de nodos de error o advertencia
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+Si el programa visual contiene advertencias o errores, Dynamo proporcionará información adicional sobre el problema. Todos los nodos en amarillo también presentarán una información de herramientas sobre el nombre. Coloque el cursor sobre el icono de información de herramientas de advertencia ![](<images/nodes and wires - node warning icon.png>) o error ![](<images/nodes and wires - node error icon.png>) para expandirlo.
 
 {% hint style="info" %}
-Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
+Consejo: con esta información de herramientas a mano, examine los nodos ascendentes para ver si el tipo de datos o la estructura de datos necesarios presentan errores.
 {% endhint %}
 
 ![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
-> 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 1. Información de herramientas de advertencia: el valor "null" (nulo) o la falta de datos no se pueden considerar como doble, por ejemplo, un número.
+> 2. Utilice el nodo Watch para examinar los datos de entrada.
+> 3. El nodo Number ascendente almacena "Red", no un número.
 
-## Wires
+## Cables
 
-Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.
+Los cables se conectan entre nodos para crear relaciones y establecer el flujo de nuestro programa visual. Podemos considerarlos literalmente como cables eléctricos que transportan pulsos de datos de un objeto al siguiente.
 
-### Program Flow <a href="#program-flow" id="program-flow"></a>
+### Flujo del programa <a href="#program-flow" id="program-flow"></a>
 
-Wires connect the output Port from one Node to the input Port of another Node. This directionality establishes the **Flow of Data** in the Visual Program.
+Los cables conectan el puerto de salida de un nodo al puerto de entrada de otro nodo. Esta dirección establece el **flujo de datos** en el programa visual.
 
-Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
+Los puertos de entrada se encuentran en el lado izquierdo de los nodos y los de salida se encuentran en el lado derecho, por lo que podemos afirmar que el flujo del programa se suele desplazar de izquierda a derecha.
 
 ![](<images/nodes and wires - flow of data.jpg>)
 
-### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
+### Creación de cables <a href="#creating-wires" id="creating-wires"></a>
 
-Create a Wire by left-click on a Port subsequently left-click on the port of another Node to create a connection. While we are in the process of making a connection, the Wire will appear dashed and will snap to become solid lines when successfully connected.
+Cree un cable. Para ello, haga clic con el botón izquierdo en un puerto y, a continuación, haga clic con el botón izquierdo en el puerto de otro nodo para crear una conexión. Durante el proceso de creación de una conexión, el cable se mostrará discontinuo y se ajustará para convertirse en líneas continuas cuando se establezca correctamente la conexión.
 
-The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
+Los datos siempre fluirán a través de este cable desde la salida hasta la entrada. No obstante, podemos crear el cable en cualquier dirección en cuanto a la secuencia en la que se hace clic en los puertos conectados.
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
-### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
+### Edición de cables <a href="#editing-wires" id="editing-wires"></a>
 
-Frequently we will want to adjust the Program Flow in our Visual Program by editing the connections represented by the Wires. To edit a Wire, left click on the input Port of the Node that is already connected. You now have two options:
+Con frecuencia, desearemos ajustar el flujo de programa de nuestro programa visual mediante la edición de las conexiones representadas por los cables. Para editar un cable, haga clic con el botón izquierdo en el puerto de entrada del nodo que ya está conectado. Ahora tiene dos opciones:
 
-* Change connection to an input Port, left-click on another input Port
+* Cambie la conexión a un puerto de entrada; haga clic con el botón izquierdo en otro puerto de entrada.
 
 ![](<images/nodes and wires - edit wire change port (2).gif>)
 
-* To remove the Wire, pull the Wire away and left-click on Workspace
+* Para eliminar el cable, retire el cable y haga clic con el botón izquierdo en el espacio de trabajo.
 
 ![](<images/nodes and wires - edit wires remove.gif>)
 
-* Reconnect multiple wires using Shift+left-click
+* Vuelva a conectar varios cables. Para ello, mantenga pulsada la tecla Mayús mientras hace clic con el botón izquierdo.
 
 ![](<images/nodes and wires - edit multi ports.gif>)
 
-* Duplicate a wire using Ctrl+left-click
+* Duplique un cable. Para ello, mantenga pulsada la tecla Ctrl mientras hace clic con el botón izquierdo.
 
 ![](<images/nodes and wires - duplicate wire.gif>)
 
-#### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
+#### Cables por defecto frente a resaltados <a href="#wire-previews" id="wire-previews"></a>
 
-By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
+Por defecto, nuestros cables se previsualizarán con un trazo gris. Cuando se selecciona un nodo, se renderizará cualquier cable de conexión con el mismo resaltado de color turquesa que el nodo.
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
-> 1. Highlighted Wire
-> 2. Default Wire
+> 1. Cable resaltado
+> 2. Cable por defecto
 
-**Hide Wires by Default**
+**Ocultar cables por defecto**
 
-In case you prefer to hide the Wires in your graph, you can find this option from View > Connectors > untick Show Connectors.
+Si prefiere ocultar los cables en el gráfico, vaya a Vista > Conectores > desmarque Mostrar conectores.
 
-With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
+Con este parámetro, solo los nodos seleccionados y sus cables de unión se mostrarán resaltados en turquesa claro.
 
 ![](<images/nodes and wires - hide wires setting (1).gif>)
 
-#### Hide Individual Wire Only
+#### Ocultar solo un cable individual
 
-You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
+También puede ocultar el conductor seleccionado. Para ello, haga clic con el botón derecho en la salida Nodos > seleccione Ocultar cables.
 
 ![](<images/nodes and wires - hide selected wire.gif>)

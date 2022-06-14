@@ -1,9 +1,9 @@
-# Coding in Dynamo
+# Codificación en Dynamo
 
-Dynamo is a great door to start coding for the AEC world. You may be interested in some of these sections to start your coding journey:
+Dynamo es un excelente punto de partida para empezar a codificar en el mundo AEC. Puede que le interesen algunas de estas secciones para iniciar su recorrido por la codificación:
 
-* [Code Blocks and DesignScript](8-1\_code-blocks-and-design-script/)
-* [Geometry with DesignScript](8-2\_geometry-with-design-script/)
+* [Bloques de código y DesignScript](8-1\_code-blocks-and-design-script/)
+* [Geometría con DesignScript](8-2\_geometry-with-design-script/)
 * [Python](8-3\_python/)
 
 ![](<./images/image (17).png>)

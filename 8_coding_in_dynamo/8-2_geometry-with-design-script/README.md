@@ -1,6 +1,6 @@
-# Geometry with DesignScript
+# Geometría con DesignScript
 
-In this section, you will find a series of lessons on the creation of geometry with DesignScript. Follow along by copying the example DesignScript into Dynamo Code Blocks.
+En esta sección, encontrará una serie de lecciones sobre la creación de geometría con DesignScript. Para continuar, copie el contenido de DesignScript de ejemplo en bloques de código de Dynamo.
 
 ```js
 // copy this code into a Code Block
