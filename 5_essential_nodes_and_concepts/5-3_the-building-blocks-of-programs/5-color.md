@@ -1,161 +1,161 @@
-# Color
+# Barva
 
-Color is a great data type for creating compelling visuals as well as for rendering difference in the output from your Visual Program. When working with abstract data and varying numbers, sometimes it's difficult to see what's changing and to what degree. This is a great application for colors.
+Barva je skvělý datový typ k tvorbě působivých vizuálních prvků a k rozlišení částí výstupu ve vizuálním programu. Při práci s abstraktními daty a proměnlivými čísly je někdy obtížné zjistit, co se do jaké míry mění. Toto je skvělé využití pro barvy.
 
-### Creating Colors
+### Tvorba barev
 
-Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Red, Green, and Blue channels. The alpha represents the _transparency_ of the color, while the other three are used as primary colors to generate the whole spectrum of color in concert.
+Barvy v aplikaci Dynamo jsou tvořeny pomocí vstupů ARGB. To odpovídá kanálům Alfa, Červená, Zelená a Modrá. Alfa představuje _průhlednost_ barvy, zatímco ostatní tři se používají jako primární barvy k tvorbě celého spektra barev.
 
-| Icon                                          | Name (Syntax)                 | Inputs  | Outputs |
+| Ikona | Název (Syntaxe) | Vstupy | Výstupy |
 | --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-3/5/Color byARGB.jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
+| ![](<../images/5-3/5/Color byARGB.jpg>) | Barva ARGB (**Color.ByARGB**) | A,R,G,B | barva |
 
-### Querying Color Values
+### Dotazování se na hodnoty barev
 
-The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
+Barvy v níže uvedené tabulce se dotazují na vlastnosti, které se používají k definování barvy: Alfa, Červená, Zelená a Modrá. Všimněte si, že uzel Color.Components nám předá všechny čtyři kanály v samostatných výstupech, což je lepší k dotazování vlastností barvy.
 
-| Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
+| Ikona | Název (Syntaxe) | Vstupy | Výstupy |
 | ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Alpha.jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-3/5/Color Red.jpg>)       | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-3/5/Color Green.jpg>) | Green (**Color.Green**)           | color  | G          |
-| ![](<../images/5-3/5/Color Blue.jpg>)      | Blue (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-3/5/Color Component.jpg>) | Components (**Color.Components**) | color  | A, R, G, B |
+| ![](<../images/5-3/5/Color Alpha.jpg>) | Alfa (**Colour.Alpha**) | barva | A |
+| ![](<../images/5-3/5/Color Red.jpg>) | Červená (**Colour.Red**) | barva | R |
+| ![](<../images/5-3/5/Color Green.jpg>) | Zelená (**Color.Green**) | barva | G |
+| ![](<../images/5-3/5/Color Blue.jpg>) | Modrá (**Color.Blue**) | barva | B |
+| ![](<../images/5-3/5/Color Component.jpg>) | Komponenty (**Colour.Components**) | barva | A,R,G,B |
 
-The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
+Barvy v tabulce níže odpovídají **barevnému prostoru HSB**. Rozdělení barvy na odstín, sytost a jas je pravděpodobně intuitivnější pro interpretaci barvy: Jaká barva by to měla být? Jak moc sytá má být? A jak moc světlá, či tmavá má být? Toto je rozbor odstínu, respektive sytosti, respektive jasu.
 
-| Icon                                              | Name (Syntax)                     | Inputs | Outputs    |
+| Ikona | Název (Syntaxe) | Vstupy | Výstupy |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-3/5/Color Hue.jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-3/5/Color Saturation.jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-3/5/Color Brightness.jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| ![](<../images/5-3/5/Color Hue.jpg>) | Odstín (**Colour.Hue**) | barva | Odstín |
+| ![](<../images/5-3/5/Color Saturation.jpg>) | Sytost (**Colour.Saturation**) | barva | Sytost |
+| ![](<../images/5-3/5/Color Brightness.jpg>) | Jas (**Colour.Brightness**) | barva | Jas |
 
-### Color Range
+### Rozsah barev
 
-The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+Rozsah barev je podobný uzlu **Remap Range** ve cvičení [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention"): Přemapuje seznam čísel do jiné domény. Místo mapování do _číselné_ domény však mapuje _barevný gradient_ podle vstupních čísel v rozsahu od 0 do 1.
 
-The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
+Aktuální uzel funguje dobře, pokud však všechno začne fungovat napoprvé, něco je zřejmě špatně. Nejlepší způsob, jak se s barevným gradientem seznámit, je provést interaktivní test. Nyní provedeme rychlé cvičení a probereme, jak nastavit gradient s výstupními barvami odpovídajícími číslům.
 
 ![](<../images/5-3/5/color - color range.jpg>)
 
-> 1. Define three colors: Using a **Code Block** node, define _red, green_, and _blue_ by plugging in the appropriate combinations of _0_ and _255_.
-> 2. **Create list:** Merge the three colors into one list.
-> 3. Define Indices: Create a list to define the grip positions of each color (ranging from 0 to 1). Notice the value of 0.75 for green. This places the green color 3/4 of the way across the horizontal gradient in the color range slider.
-> 4. **Code Block**: Input values (between 0 and 1) to translate to colors.
+> 1. Definujte tři barvy: Pomocí **bloku kódu** definujte _červenou, zelenou_ a _modrou_ zadáním příslušných kombinací hodnot _0_ a _255_.
+> 2. **Vytvořte seznam:** Slučte tři barvy do jednoho seznamu.
+> 3. Definujte indexy: Vytvořte seznam k definování umístění uzlů jednotlivých barev (v rozsahu od 0 do 1). Všimněte si, že u zelené barvy je hodnota 0.75. Tímto se zelená barva umístí do 3/4 přes vodorovný gradient na posuvníku rozsahu barev.
+> 4. **Blok kódu:** Zadejte hodnoty (mezi 0 a 1), které chcete převést na barvy.
 
-### Color Preview
+### Náhled barvy
 
-The **Display.ByGeometry** Node gives us the ability to color geometry in the Dynamo viewport. This is helpful for separating different types of geometry, demonstrating a parametric concept, or defining an analysis legend for simulation. The inputs are simple: geometry and color. To create a gradient like the image above, the color input is connected to the **Color** **Range** Node.
+Uzel **Display.ByGeometry** umožňuje vybarvit geometrii ve výřezu aplikace Dynamo. Toto je užitečné při oddělení různých typů geometrie, předvedení parametrické koncepce nebo definování legendy analýzy pro simulaci. Vstupy jsou jednoduché: geometrie a barva. Vstup color je za účelem vytvoření gradientu jako na obrázku výše připojen k uzlu **Color** **Range**.
 
 ![](<../images/5-3/5/color - color preview.jpg>)
 
-### Color On Surfaces
+### Barva na površích
 
-The **Display.BySurfaceColors** node gives us the ability to map data across a surface using color! This functionality introduces some exciting possibilities for visualizing data obtained through discrete analysis like solar, energy, and proximity. Applying color to a surface in Dynamo is similar to applying a texture to a material in other CAD environments. Let's demonstrate how to use this tool in the brief exercise below.
+Uzel **Display.BySurfaceColor** umožňuje mapovat data po celém povrchu pomocí barvy. Tato funkce nabízí určité zajímavé možnosti vizualizace dat obdržených přes diskrétní analýzu, jako je analýza slunečného světla, energetická analýza a analýza blízkosti. Použití barvy na povrch v aplikaci Dynamo je podobné jako použití textury na materiál v jiných prostředích CAD. Krátké cvičení níže znázorňuje použití tohoto nástroje.
 
 ![](<../images/5-3/5/12 (1).jpg>)
 
-## Exercise
+## Cvičení
 
-### Basic Helix with Colors
+### Základní šroubovice s barvami
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
-This exercise focuses on controlling color parametrically in parallel with geometry. The geometry is a basic helix, which we define below using the **Code Block**. This is a quick and easy way to create a parametric function; and since our focus is on color (rather than geometry), we use the code block to efficiently create the helix without cluttering the canvas. We will use the code block more frequently as the primer moves to more advanced material.
+Toto cvičení je zaměřeno na parametrické řízení barvy rovnoběžně s geometrií. Geometrie je základní šroubovice, kterou níže definujeme pomocí **bloku kódu**. Jedná se o rychlý a snadný způsob tvorby parametrické funkce; vzhledem k tomu, že se soustředíme na barvu (místo geometrie), můžeme efektivně vytvořit šroubovici pomocí bloku kódu, aniž by došlo k zaplnění kreslicí plochy. K čím složitějším materiálům se příručka Primer dostane, tím častěji se bude používat blok kódu.
 
 ![](<../images/5-3/5/color - basic helix with colors 01.jpg>)
 
-> 1. **Code Block:** Define the two code blocks with the formulas above. This is a quick parametric method for creating a spiral.
-> 2. **Point.ByCoordinates**: Plug the three outputs from the code block into the coordinates for the Node.
+> 1. **Blok kódu:** Definujte dva bloky kódu s výše uvedenými vzorci. Toto je rychlá parametrická metoda tvorby spirály.
+> 2. **Point.ByCoordinates:** Připojte tři výstupy z bloku kódu k souřadnicím uzlu.
 
-We now see an array of points creating a helix. The next step is to create a curve through the points so that we can visualize the helix.
+Nyní je vidět pole bodů tvořících šroubovici. Dalším krokem je tvorba křivky procházející body, aby bylo možné vizualizovat šroubovici.
 
 ![](<../images/5-3/5/color - basic helix with colors 02.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the **Point.ByCoordinates** output into the _points_ input for the Node. We get a helical curve.
-> 2. **Curve.PointAtParameter:** Connect the **PolyCurve.ByPoints** output into the _curve_ input. The purpose of this step is to create a parametric attractor point which slides along the curve. Since the curve is evaluating a point at parameter, we'll need to input a _param_ value between 0 and 1.
-> 3. **Number Slider:** After adding to the canvas, change the _min_ value to _0.0_, the _max_ value to _1.0_, and the _step_ value to _.01_. Plug the slider output into the _param_ input for **Curve.PointAtParameter**. We now see a point along the length of the helix, represented by a percentage of the slider (0 at the start point, 1 at the end point).
+> 1. **PolyCurve.ByPoints:** Připojte výstup **Point.ByCoordinates** ke vstupu _points_ u uzlu. Vznikne šroubovitá křivka.
+> 2. **Curve.PointAtParameter:** Připojte výstup **PolyCurve.ByPoints** ke vstupu _curve_. Účelem tohoto kroku je vytvořit parametrický bod atraktoru, který se posouvá podél křivky. Vzhledem k tomu, že křivka vyhodnocuje bod v parametru, bude nutné zadat hodnotu _param_ v rozmezí od 0 do 1.
+> 3. **Posuvník čísel:** Po přidání na kreslicí plochu změňte hodnotu _min_ na _0.0_, hodnotu _max_ na _1.0_ a hodnotu _step_ na _0.01_. Připojte výstup posuvníku ke vstupu _param_ u uzlu **Curve.PointAtParameter**. Nyní je vidět bod podél délky šroubovice, který je vyjádřen procentem posuvníku (0 v počátečním bodě, 1 v koncovém bodě).
 
-With the reference point created, we now compare the distance from the reference point to the original points defining the helix. This distance value will drive geometry as well as color.
+Po vytvoření referenčního bodu nyní porovnáme vzdálenost od referenčního bodu k původním bodům, čímž se definuje šroubovice. Tato hodnota vzdálenosti bude řídit geometrii i barvu.
 
 ![](<../images/5-3/5/color - basic helix with colors 03.jpg>)
 
-> 1. **Geometry.DistanceTo:** Connect **Curve.PointAtParameter** output into the _input_. Connect **Point.ByCoordinates** into the geometry input.
-> 2. **Watch:** The resultant output shows a list of distances from each helical point to the reference point along the curve.
+> 1. **Geometry.DistanceTo:** Připojte výstup **Curve.PointAtParameter** ke _vstupu_. Připojte položku **Point.ByCoordinates** ke vstupu geometrie.
+> 2. **Watch:** Výsledný výstup zobrazuje seznam vzdáleností od každého bodu šroubovice k referenčnímu bodu podél křivky.
 
-Our next step is to drive parameters with the list of distances from the helical points to the reference point. We use these distance values to define the radii of a series of spheres along the curve. In order to keep the spheres a suitable size, we need to _remap_ the values for distance.
+Dalším krokem je řízení parametrů pomocí seznamu vzdáleností od bodů šroubovice k referenčnímu bodu. Pomocí těchto hodnot vzdáleností se definují poloměry řady koulí podél křivky. Aby se koule udržely ve vhodné velikosti, je nutné _přemapovat_ hodnoty vzdálenosti.
 
 ![](<../images/5-3/5/color - basic helix with colors 04.jpg>)
 
-> 1. **Math.RemapRange:** Connect **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** connect a code block with a value of _0.01_ into the _newMin_ input and a code block with a value of _1_ into the _newMax_ input.
-> 3. **Watch:** connect the **Math.RemapRange** output into one node and the **Geometry.DistanceTo** output into another. Compare the results.
+> 1. **Math.RemapRange:** Připojte výstup **Geometry.DistanceTo** ke vstupu čísel.
+> 2. **Blok kódu:** připojte blok kódu s hodnotou _0.01_ ke vstupu _newMin_ a blok kódu s hodnotou _1_ ke vstupu _newMax_.
+> 3. **Watch:** Připojte výstup **Math.RemapRange** k jednomu uzlu a výstup **Geometry.DistanceTo** k jinému. Porovnejte výsledky.
 
-This step has remapped the list of distance to be a smaller range. We can edit the _newMin_ and _newMax_ values however we see fit. The values will remap and will have the same _distribution ratio_ across the domain.
+V tomto kroku došlo k přemapování seznamu vzdáleností do menšího rozsahu. Hodnoty _newMin_ a _newMax_ je možné upravit podle libosti. Hodnoty se přemapují a budou mít stejný _poměr rozložení_ v rámci celé domény.
 
 ![](<../images/5-3/5/color - basic helix with colors 05.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius:** connect the **Math.RemapRange** output into the _radius_ input and the original **Point.ByCoordinates** output into the _centerPoint_ input.
+> 1. **Sphere.ByCenterPointRadius:** Připojte výstup **Math.RemapRange** ke vstupu _radius_ a původní výstup **Point.ByCoordinates** připojte ke vstupu _centerPoint_.
 
-Change the value of the number slider and watch the size of the spheres update. We now have a parametric jig
+Změňte hodnotu posuvníku čísel a sledujte, jak se aktualizuje velikost koulí. Vytvořili jsme parametrický objekt.
 
 ![](<../images/5-3/5/color - basic helix with colors 06.gif>)
 
-The size of the spheres demonstrates the parametric array defined by a reference point along the curve. Let's use the same concept for the sphere radius to drive their color.
+Velikost koulí ukazuje parametrické pole definované referenčním bodem podél křivky. Použijeme stejnou koncepci u poloměru koule, abychom mohli řídit jejich barvu.
 
 ![](<../images/5-3/5/color - basic helix with colors 07.jpg>)
 
-> 1. **Color Range:** Add top the canvas. When hovering over the _value_ input, we notice that the numbers requested are between 0 and 1. We need to remap the numbers from the **Geometry.DistanceTo** output so that they are compatible with this domain.
-> 2. **Sphere.ByCenterPointRadius:** For the time being, let's disable the preview on this node (_Right Click > Preview_)
+> 1. **Color Range:** Přidejte horní část kreslicí plochy. Při přejetí kurzoru nad vstupem _value_ si všimněte, že požadovaná čísla jsou v rozsahu 0 až 1. Čísla z výstupu **Geometry.DistanceTo** je nutné přemapovat, aby byla kompatibilní s touto doménou.
+> 2. **Sphere.ByCenterPointRadius:** V tuto chvíli vypněte náhled u tohoto uzlu. (_Klikněte pravým tlačítkem myši > Náhled_.)
 
 ![](<../images/5-3/5/color - basic helix with colors 08.jpg>)
 
-> 1. **Math.RemapRange:** This process should look familiar. Connect the **Geometry.DistanceTo** output into the numbers input.
-> 2. **Code Block:** Similar to an earlier step, create a value of _0_ for the _newMin_ input and a value of _1_ for the _newMax_ input. Notice that we are able to define two outputs from one code block in this case.
-> 3. **Color Range:** Connect the **Math.RemapRange** output into the _value_ input.
+> 1. **Math.RemapRange:** Tento proces by vám měl být známý. Připojte výstup **Geometry.DistanceTo** ke vstupu čísel.
+> 2. **Blok kódu:** Podobně jako v předchozím kroku vytvořte hodnotu _0_ pro vstup _newMin_ a hodnotu _1_ pro zadání _newMax_. Všimněte si, že v tomto případě je možné definovat dva výstupy z jednoho bloku kódu.
+> 3. **Color Range:** Připojte výstup **Math.RemapRange** ke vstupu _value_.
 
 ![](<../images/5-3/5/color - basic helix with colors 09.jpg>)
 
-> 1. **Color.ByARGB:** This is what we'll do to create two colors. While this process may look awkward, it's the same as RGB colors in another software, we're just using visual programming to do it.
-> 2. **Code Block:** create two values of _0_ and _255_. Plug the two outputs into the two **Color.ByARGB** inputs in agreement with the image above (or create your favorite two colors).
-> 3. **Color Range:** The _colors_ input requests a list of colors. We need to create this list from the two colors created in the previous step.
-> 4. **List.Create:** merge the two colors into one list. Plug the output into the _colors_ input for **Color Range**.
+> 1. **Color.ByARGB:** Toto je akce, pomocí které se vytvoří dvě barvy. I přesto, že tento proces může vypadat neobvykle, je stejný jako u barev RGB v jiném softwaru, jen se přitom využije vizuální programování.
+> 2. **Blok kódu:** Vytvořte dvě hodnoty _0_ a _255_. Připojte dva výstupy ke dvěma vstupům **Color.ByARGB** podle výše uvedeného obrázku (případně vytvořte jakékoli dvě požadované barvy).
+> 3. **Color Range:** Vstup _colors_ vyžaduje seznam barev. Tento seznam je potřeba vytvořit ze dvou barev vytvořených v předchozím kroku.
+> 4. **List.Create:** Slučte dvě barvy do jednoho seznamu. Připojte výstup ke vstupu _colors_ u uzlu **Color Range**.
 
 ![](<../images/5-3/5/color - basic helix with colors 10.jpg>)
 
-> 1. **Display.ByGeometryColor:** Connect **Sphere.ByCenterPointRadius** into the _geometry_ input and the _Color Range_ into the _color_ input. We now have a smooth gradient across the domain of the curve.
+> 1. **Display.ByGeometryColor:** Připojte položku **Sphere.ByCenterPointRadius** ke vstupu _geometry_ a uzel _Color Range_ připojte ke vstupu _color_. Nyní máme hladký gradient v celé doméně křivky.
 
-If we change the value of the **Number Slider** from earlier in the definition, the colors and sizes update. Colors and radius size are directly related in this case: we now have a visual link between two parameters!
+Pokud změníme hodnotu **posuvníku čísel** z dřívější definice, barvy a velikosti se aktualizují. V tomto případě spolu barvy a velikost poloměru přímo souvisí: nyní existuje vizuální propojení mezi dvěma parametry.
 
 ![](<../images/5-3/5/color - basic helix with colors 11.gif>)
 
-### Color on Surfaces Exercise
+### Cvičení barev na površích
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 
-First, we need to create (or reference) a surface to use as an input for the **Display.BySurfaceColors** node. For this example we are lofting between a sine and cosine curve.
+Nejprve je třeba vytvořit (nebo odkázat) povrch, který se použije jako vstup pro uzel **Display.BySurfaceColor**. V tomto příkladu se šablonuje mezi křivkami sinu a kosinu.
 
 ![](<../images/5-3/5/color - color on surface 01.jpg>)
 
-> 1. This group of nodes is creating points along the Z-axis then displacing them based on sine and cosine functions. The two point lists are then used to generate NURBS curves.
-> 2. **Surface.ByLoft**: generate an interpolated surface between the list of NURBS curves.
+> 1. Tato skupina uzlů vytváří body podél osy Z a poté je posunuje podle sinových a kosinových funkcí. Pomocí dvou seznamů bodů se poté vygenerují křivky NURBS.
+> 2. **Surface.ByLoft**: Vygenerujte interpolovaný povrch mezi křivkami NURBS v seznamu.
 
 ![](<../images/5-3/5/color - color on surface 02.jpg>)
 
-> 1. **File Path**: select an image file to sample for pixel data downstream
-> 2. use **File.FromPath** to convert the file path to a file then pass into **Image.ReadFromFile** to output an image for sampling
-> 3. **Image.Pixels**: input an image and provide a sample value to use along the x and y dimensions of the image.
-> 4. **Slider**: provide sample values for **Image.Pixels**
-> 5. **Display.BySurfaceColors**: map array of color values across surface along X and Y respectively
+> 1. **Cesta k souboru**: Vyberte soubor obrázku, který se bude vzorkovat pro následná data pixelů.
+> 2. Pomocí uzlu **File.FromPath** převeďte cestu k souboru na soubor a poté jej předejte do uzlu **Image.ReadFromFile**. Tím vytvoříte obrázek pro vzorkování.
+> 3. **Image.Pixels**: Zadejte obrázek a zadejte hodnotu vzorku, která se má použít ve směru rozměrů X a Y obrázku.
+> 4. **Posuvník**: Zadejte hodnoty vzorků pro uzel **Image.Pixels**
+> 5. **Display.BySurfaceColor**: Namapujte pole hodnot barev přes celý povrch podél směru X, respektive Y.
 
-Close-up preview of the output surface with resolution of 400x300 samples
+Podrobný náhled výstupního povrchu s rozlišením 400x300 vzorků.
 
 ![](<../images/5-3/5/color - color on surface 03.jpg>)

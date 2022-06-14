@@ -1,259 +1,259 @@
-# Graph Strategies
+# Strategie grafů
 
-Prior to this chapter, the Primer has covered how to implement the powerful visual-scripting capabilities of Dynamo. A good understanding of these capabilities is a solid foundation and the first step in building robust visual programs. When we use our visual programs in the field, share them with colleagues, troubleshoot errors, or test limits we have additional issues to deal with. If someone else will be using your program or you are expecting to open it six months from now, it needs to have an immediate graphic and logical clarity. Dynamo has many tools to manage the complexity of your program, and this chapter will give guidelines on when to use them.
+Před touto kapitolou se příručka Primer zabývala implementací výkonných funkcí vizuálního skriptování v aplikaci Dynamo. Správné pochopení těchto možností je pevným základem a prvním krokem ve vytváření robustních vizuálních programů. Když vizuální programy používáme v ostrém provozu, sdílíme je s kolegy, řešíme chyby nebo zkoušíme meze, vyvstávají další problémy, které je třeba řešit. Pokud váš program bude používat někdo jiný nebo očekáváte, že jej otevřete až za šest měsíců, je v obou případech nutné, aby vše bylo ihned graficky a logicky přehledné. Aplikace Dynamo nabízí mnoho nástrojů ke správě složitosti programu a tato kapitola se zabývá pokyny k tomu, jak tyto nástroje použít.
 
-![groups](images/1/cad-chart-visual.jpg)
+![skupiny](images/1/cad-chart-visual.jpg)
 
-## Reduce Complexity
+## Snížení složitosti
 
-As you develop your Dynamo graph and test ideas, it can quickly grow in size and complexity. While it is important that you create a functioning program, it is equally important to make it as simple as possible. Not only will your graph run faster and more predictably, you along with other users will understand its logic later on. The following are several ways that will help you clarify the logic of your graph.
+Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít k nárůstu složitosti i velikosti grafu. I když je důležité vytvořit fungující program, je stejně důležité, aby byl co nejjednodušší. Nejenže graf bude fungovat rychleji a předvídatelněji, ale v případě otevření po nějakém čase vy i ostatní uživatelé rychleji porozumí logice grafu. Zde je několik způsobů, které vám pomohou vyjasnit logiku grafu.
 
-### **Modularize with Groups**
+### **Modularizace pomocí skupin**
 
-* Groups allow you to **create functionally distinct parts** as you build a program
-* Groups allow you to **move large parts of the program** around while maintaining modularity and alignment
-* You can change the **color of the group to differentiate** what Groups are doing (inputs vs functions)
-* You can use groups to start **organizing your graph to streamline Custom Node creation**
+* Skupiny vám při tvorbě programu umožní **vytvářet funkčně odlišné součásti**
+* Skupiny umožňují **přesouvat velké části programu** při zachování modularity a zarovnání
+* Můžete změnit **barvu skupiny k rozlišení** toho, co je účelem skupiny (vstupy vs. funkce)
+* Pomocí skupin můžete vytvořit **organizaci grafu ke zjednodušení tvorby uživatelských uzlů**
 
 ![](images/1/graphstrategy2.png)
 
-> The colors in this program identify the purpose of each group. This strategy can be used to create hierarchy in any graphic standards or templates you develop.
+> Barvy v tomto programu určují účel každé skupiny. Pomocí této strategie je možné vytvořit hierarchii v libovolných grafických normách nebo šablonách, které vyvíjíte.
 >
-> 1. Function group (blue)
-> 2. Input group (orange)
-> 3. Script group (green)
+> 1. Skupina funkcí (modrá)
+> 2. Skupina vstupů (oranžová)
+> 3. Skupina skriptů (zelená)
 >
-> For how to use Groups, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informace o používání skupin naleznete v části [Správa programu](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-### **Develop efficiently with Code Blocks**
+### **Efektivní vývoj pomocí bloků kódu**
 
-* At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
-* Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
+* Někdy můžete použít blok kódu k **rychlejšímu zadání čísla nebo uzlové metody než při vyhledávání** (Point.ByCoordinates, Number, String, Formula)
+* Bloky kódu jsou užitečné, **pokud chcete definovat vlastní funkce v aplikaci DesignScript, aby se snížil počet uzlů v grafu**
 
 ![](<images/1/graphstrategy3 (1).png>)
 
-> Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
+> Vzor 1 i 2 provádí stejnou funkci. Bylo však mnohem rychlejší napsat několik řádků kódu, než vyhledávat a přidávat jednotlivé uzly. Blok kódu je také mnohem výstižnější.
 >
-> 1. Design Script written in Code Block
-> 2. Equivalent program in nodes
+> 1. Kód jazyka DesignScript zapsaný v bloku kódu
+> 2. Ekvivalentní program v uzlech
 >
-> For how to use Code Block, refer to [What's a Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Informace o použití bloku kódu naleznete v části [Co je blok kódu](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
 
-### **Condense with Node to Code**
+### **Zhuštění pomocí možnosti Uzel na kód**
 
-* You can **reduce the complexity of a graph by using Node to Code** which will take a collection of simple nodes and write their corresponding DesignScript in a single Code Block
-* Node to Code can\*\* condense code without eliminating the program’s clarity\*\*
-* The following are the **pros** of using Node to Code:
-  * Easily condenses code into one component that is still editable
-  * Can simplify a significant portion of the graph
-  * Useful if the ‘mini-program’ will not often be edited
-  * Useful for incorporating other code block functionality, like functions
-* The following are the **cons** of using Node to Code:
-  * Generic naming makes it less legible
-  * More difficult to understand for other users
-  * No easy way to return to the visual programming version
+* Složitost grafu můžete **snížit pomocí možnosti Uzel na kód**, která vezme kolekci jednoduchých uzlů a zapíše odpovídající skript DesignScript do jednoho bloku kódu.
+* Možnost Uzel na kód\*\* může zhustit kód aniž by došlo k porušení přehlednosti programu\*\*.
+* Následují **klady** použití možnosti Uzel na kód:
+   * Snadno zhustí kód do jedné komponenty, kterou je stále možné upravit
+   * Může zjednodušit významnou část grafu
+   * Užitečná, pokud „miniprogram“ nebude často upravován
+   * Užitečná k zahrnutí dalších funkcí bloku kódu, například funkce
+* Následují **zápory** použití možnosti Uzel na kód:
+   * Obecné pojmenování snižuje čitelnost
+   * Pro některé uživatele je obtížnější na porozumění
+   * Neexistuje snadný způsob, jak se vrátit k verzi vizuálního programování
 
 ![](images/1/graphstrategy3\_1.png)
 
-> 1. Existing program
-> 2. Code Block created from Node to Code
+> 1. Existující program
+> 2. Blok kódu vytvořený pomocí možnosti Uzel na kód
 >
-> For how to use Node to Code, refer to [Design Script Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Informace o tom, jak používat možnost Uzel na kód, naleznete v části [Syntaxe jazyka DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
 
-### **Access data flexibly with List@Level**
+### **Flexibilní přístup k datům pomocí funkce List@Level**
 
-* Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
-* List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
+* Funkce List@Level usnadní **snížení složitosti grafu nahrazením uzlů List.Map a List.Combine**, které mohou zabírat značné množství místa na pracovní ploše.
+* Funkce List@Level nabízí\*\* rychlejší způsob, jak vytvořit logiku uzlu konstrukce, než u uzlů List.Map/List.Combine\*\*, umožněním přístupu k datům na libovolné úrovni v seznamu přímo ze vstupního portu uzlu.
 
 ![](<images/1/graphstrategy4 (1) (1).png>)
 
-> We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
+> Můžeme ověřit, kolik hodnot True vrátí metoda BoundingBox.Contains a ve kterých seznamech, a to aktivováním funkce List@Level u vstupu seznamu funkce CountTrue. List@Level umožňuje uživateli určit, ze které úrovně se bude přebírat vstup. Použití funkce List@Level je flexibilní, efektivní a vysoce podporované u jiných metod zahrnujících metody List.Map a List.Combine.
 >
-> 1. Counting true values at List Level 2
-> 2. Counting true values at List Level 3
+> 1. Počítání hodnot True na úrovni seznamu 2
+> 2. Počítání hodnot True na úrovni seznamu 3
 >
-> For how to use List@Level, refer to [Lists of Lists](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Informace o tom, jak používat funkci List@Level, naleznete v části [Seznamy seznamů](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
 
-## Maintain Readability
+## Zachovejte čitelnost
 
-In addition to making your graph as simple and efficient as possible, strive for graphic clarity. Despite your best efforts to make your graph intuitive with logical groupings, relationships might not be readily apparent. A simple Note inside of a Group or renaming a slider can save you or another user from unnecessary confusion or panning across the graph. The following are several ways that will help you apply graphic consistency within and across your graphs.
+Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažte se dbát i na grafickou přehlednost. Navzdory nejlepšímu úsilí o intuitivnost grafu s logickými seskupeními nemusí být vztahy zjevné. Jednoduchá poznámka uvnitř skupiny nebo přejmenování posuvníku vám nebo jinému uživateli může ušetřit zbytečné nejasnosti nebo procházení grafu. Následuje několik způsobů, jak uvnitř grafů i mezi nimi zavést grafickou konzistenci.
 
-### **Visual continuity with Node Alignment**
+### **Vizuální spojitost se zarovnáním uzlu**
 
-* To reduce your work after you finished building your graph, you should try to ensure the node layout is legible by **aligning nodes often and as you go**
-* If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
-* To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
+* Chcete-li si ušetřit práci po dokončení tvorby grafu, měli byste zkusit zajistit, aby rozvržení uzlů bylo čitelné, **častým zarovnáváním uzlů během práce**
+* Pokud s grafem budou pracovat i ostatní, měli byste **před odesláním zajistit, aby rozvržení drátů uzlů snadno proudilo**
+* Chcete-li si usnadnit zarovnání, **použijte funkci „Rozvržení uzlů vyčištění“ k automatickému zarovnání** grafu, zarovnání však bude méně přesné, než když je uděláte sami
 
 ![](<images/1/graphstrategy5 (2) (1).png>)
 
-> 1. Unorganized graph
-> 2. Aligned graph
+> 1. Neuspořádaný graf
+> 2. Zarovnaný graf
 >
-> For how to use Node Alignment, refer to [Managing Your Program](3-4\_best\_practices.md).
+> Informace o tom, jak používat zarovnání uzlů, naleznete v části [Správa programu](3-4\_best\_practices.md).
 
-### **Descriptive labeling by renaming**
+### **Označení přejmenováním**
 
-* Renaming inputs can help others easily understand your graph, **especially if what they plug into will be off the screen**
-* **Be wary of renaming nodes other than inputs.** An alternative to this is creating a custom node from a node cluster and renaming that; it will be understood that it contains something else
+* Přejmenování vstupů může ostatním usnadnit porozumění vašemu grafu, **zejména pokud jejich vstup nebude vidět na obrazovce**
+* **Buďte opatrní při přejmenovávání jiných uzlů než vstupů.** Alternativou je vytvoření vlastního uzlu ze shluku uzlů a jeho přejmenování; bude zřejmé, že obsahuje něco jiného
 
 ![](images/1/graphstrategy6.png)
 
-> 1. Inputs for surface manipulation
-> 2. Inputs for architectural parameters
-> 3. Inputs for drainage simulation script
+> 1. Vstupy pro manipulaci s povrchem
+> 2. Vstupy architektonických parametrů
+> 3. Vstupy pro skript simulace odvodnění
 >
-> To rename a node, right click on its name and choose "Rename Node...".
+> Chcete-li uzel přejmenovat, klikněte pravým tlačítkem na jeho název a vyberte příkaz „Přejmenovat uzel...“.
 
-### **Explain with Notes**
+### **Vysvětlení pomocí poznámek**
 
-* You should add a Note if something in the **graph requires a plain language explanation** that the nodes can not express
-* You should add a Note if a collection of **nodes or a Group is too large or complex and can’t be easily understood right away**
+* Poznámka by měla být přidána, pokud něco v **grafu vyžaduje vysvětlení prostým jazykem**, které není možné vyjádřit uzly.
+* Poznámka by měla být přidána, pokud je kolekce **uzlů nebo skupina příliš velká nebo složitá a není možné jí ihned porozumět**.
 
 ![](images/1/graphstrategy7.png)
 
-> 1. A Note describing the portion of the program that returns raw translation distances
-> 2. A Note describing the code that maps those values to a Sine wave
+> 1. Poznámka popisující část programu, která vrací nezpracované vzdálenosti posunu
+> 2. Poznámka popisující kód, který mapuje tyto hodnoty na sinusovou vlnu
 >
-> For how to add a Note, refer to [Managing Your Program](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Postup pro přidání poznámky naleznete v části [Správa programu](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-## Flex Continuously
+## Neustále kontrolujte data
 
-While building your visual-script, it is important to verify that what is being returned is what you expected. Not all errors or issues will cause the program to fail immediately, especially null or zero values that could affect something far downstream. This strategy is also discussed in the context of text-scripting in [Scripting Strategies](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). The following practice will help ensure that you are getting what you expected.
+Při tvorbě vizuálního skriptu je důležité ověřit, zda skript vrací očekávaný výstup. Ne všechny chyby nebo problémy způsobí chybu celého programu, zejména hodnoty null nebo nulové hodnoty, které by mohly ovlivnit něco dále v programu. Tato strategie je také popsána v kontextu textového skriptování v části [Strategie skriptování](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). Následující postup vám pomůže zajistit, že skript vrátí očekávaný výstup.
 
-### **Monitor data with Watch and Preview Bubbles**
+### **Monitorování dat pomocí uzlů Watch a bublin náhledů**
 
-* Use Watch or Preview Bubbles as you build the program to\*\* verify that key outputs are returning what you expected\*\*
+* Pomocí uzlů Watch a bublin náhledů můžete při sestavování programu\*\* ověřit, zda se na klíčových výstupech vrací očekávané hodnoty\*\*.
 
 ![](images/1/graphstrategy8.png)
 
-> The Watch nodes are being used to compare:
+> K porovnání se použijí uzly Watch:
 >
-> 1. The raw translation distances
-> 2. The values passed through the Sine equation
+> 1. Nezpracované vzdálenosti posunu
+> 2. Hodnoty, které prošly rovnicí sinu
 >
-> For how to use Watch, refer to [Library](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Informace o používání uzlů Watch naleznete v části [Knihovna](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
 
-## Ensure Reusability
+## Zajistěte opakovatelnost použití
 
-It is highly likely that someone else will be opening your program at some point, even if you are working independently. They should be able to quickly understand what the program needs and produces from its inputs and outputs. This is especially important when developing a Custom Node to be shared with the Dynamo community and used in someone else’s program. These practices lead to robust, reusable programs and nodes.
+Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v případě, že pracujete nezávisle. I tito lidé by měli být schopni rychle porozumět, co program potřebuje na svých vstupech a co vytváří na svých výstupech. Toto je důležité zejména při vývoji vlastního uzlu, který má být sdílen s komunitou aplikace Dynamo a používán v programu jiného uživatele. Tyto postupy vedou k robustním, opakovaně použitelným programům a uzlům.
 
-### **Manage the I/O**
+### **Správa vstupů a výstupů**
 
-* To ensure legibility and scalability, you should try and **minimize inputs and outputs as much as possible**
-* You should try to **strategize how you are going to build the logic by first creating a rough outline** of how the logic could work before you even add a single node to the canvas. As you develop the rough outline, you should keep track of which inputs and outputs will go into scripts
+* Aby byla zajištěna čitelnost a škálovatelnost, měli byste se pokusit **co nejvíce minimalizovat vstupy a výstupy**.
+* Měli byste zkusit **stanovit strategii tvorby logiky tím, že nejprve vytvoříte hrubý obrys** toho, jak logika může fungovat, než vůbec přidáte na pracovní plochu jakýkoli uzel. Při vývoji hrubého obrysu byste měli sledovat, které vstupy a výstupy budou vloženy do skriptů.
 
-### **Use Presets to embed input values**
+### **Vložení vstupních hodnot pomocí předvoleb**
 
-* If there are **particular options or conditions that you want embedded in the graph**, you should use Presets for quick access
-* You can also use Presets to **reduce complexity by caching specific slider values** in a graph with long run times
+* Pokud existují **konkrétní možnosti nebo podmínky, které chcete do grafu vložit**, měli byste použít předvolby, abyste k těmto položkám měli rychlý přístup.
+* Pomocí předvoleb můžete také **snížit složitost ukládáním specifických hodnot posuvníku do mezipaměti** u grafu s dlouhou dobou běhu.
 
-> For how to use Presets, refer to [Managing Your Data with Presets](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Informace o používání předvoleb naleznete v části [Správa dat pomocí předvoleb](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
-### **Contain programs with Custom Nodes**
+### **Izolace programů pomocí vlastních uzlů**
 
-* You should use a Custom Node if your **program can be collected into a single container**
-* You should use a a Custom Node **when a portion of the graph will be reused often** in other programs
-* You should use a Custom Node if you want to **share a functionality with the Dynamo Community**
+* Pokud je možné **program shromáždit do jednoho kontejneru**, měli byste použít vlastní uzel.
+* Vlastní uzel byste měli použít i v případě, **že se část grafu často znovu používá** v jiných aplikacích.
+* Pokud chcete **sdílet funkce s komunitou aplikace Dynamo**, měli byste použít vlastní uzel.
 
 ![](images/1/graphstrategy9.png)
 
-> Collecting the point translation program into a Custom Node makes a robust, unique program portable and far easier to understand. Well named input ports will help other users understand how to use the node. Remember to add descriptions and required data types for each input.
+> Shromáždění programu sloužícího k převodu bodů do vlastního uzlu učiní robustní, jedinečný program přenositelným a mnohem snadnějším na pochopení. Dobře pojmenované vstupní porty pomohou ostatním uživatelům porozumět tomu, jak tento uzel používat. Nezapomeňte přidávat popisy a požadované typy dat pro každý vstup.
 >
-> 1. Existing attractor program
-> 2. Custom Node that collects this program, PointGrid
+> 1. Existující program atraktoru
+> 2. Vlastní uzel, který tento program shromažďuje, PointGrid
 >
-> For how to use Custom Nodes, refer to [Custom Node Introduction](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Informace o používání vlastních uzlů naleznete v části [Úvod do práce s vlastními uzly](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
 
-### **Build templates**
+### **Tvorba šablon**
 
-* You can build templates to **establish graphic standards across your visual graphs to ensure collaborators have a standardized way of understanding graph**
-* When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
-* When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
+* Můžete vytvořit šablony, které **určí grafické normy ve vizuálních grafech, aby spolupracovníci měli standardizovaný způsob, jak grafům porozumět**.
+* Při tvorbě šablony můžete standardizovat **barvy skupin a velikosti písem** a kategorizovat tak typy pracovních postupů nebo akcí s daty.
+* Při tvorbě šablony můžete dokonce standardizovat způsob, jakým chcete v grafu **opatřit popisky, obarvit nebo nastavit styl u rozdílu mezi pracovními postupy front-end a back-end **.
 
 ![](<images/1/graphstrategy10 (2).png>)
 
-> 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
-> 2. The back-end of the program.
-> 3. Group color categories (the general design, inputs, Python scripting, imported geometry).
+> 1. Uživatelské rozhraní nebo front-end programu obsahuje název projektu, posuvníky vstupu a importovanou geometrii.
+> 2. Back-end programu.
+> 3. Seskupení kategorií podle barev (obecný návrh, vstupy, skriptování v jazyce Python, importovaná geometrie).
 
-## Exercise - Architectural Roof
+## Cvičení – Architektonická střecha
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
-Now that we have established several best practices, let’s apply them to a program that was put together quickly. Though the program succeeds in generating the roof, the state of the graph is a "mind-map" of the author. It lacks any organization or description of its use. We will walk through our best practices to organize, describe, and analyze the program so other users can understand how to use it.
+Nyní, když bylo stanoveno několik osvědčených postupů, použijeme tyto postupy na rychle sestavený program. I když program při generování střechy uspěje, stav grafu je „mapou mysli“ autora. Chybí jakákoli organizace a popis použití. Projdeme si nejlepší postupy organizace, popisu a analýzy programu, aby ostatní uživatelé mohli porozumět tomu, jak se tento program používá.
 
 ![](images/1/graphstrategy11.png)
 
-> The program is functioning, but the graph is disorganized.
+> Program funguje, ale graf není uspořádán.
 
-Let's start by determining the data and geometry returned by the program.
+Začneme určením dat a geometrie vrácené programem.
 
 ![](images/1/graphstrategy12.png)
 
-> Understanding when major changes to the data occur is crucial to establishing logical divisions, or modularity. Try inspecting the rest of the program with Watch nodes to see if you can determine groups before moving on to the next step.
+> Porozumění tomu, kdy dochází k velkým změnám dat, je velmi důležité ke stanovení logického dělení nebo modularity. Zkuste zkontrolovat zbytek programu pomocí uzlů Watch, čímž zjistíte, zda můžete před přechodem na další krok určit skupiny.
 >
-> 1. This **Code Block** with a math equation looks like a crucial piece of the program. A **Watch** node displays that it is returning lists of translation distances.
-> 2. The purpose of this area isn't readily obvious. The arrangement of True values at list level L2 from **BoundingBox.Contains** and the presence of **List.FilterByBoolMask** suggests we are sampling a portion of the point grid.
+> 1. Tento **blok kódu** s matematickou rovnicí vypadá jako klíčový prvek programu. Uzel **Watch** zobrazuje, že vrací seznamy vzdáleností posunu.
+> 2. Účel této oblasti není zcela zřejmý. Uspořádání hodnot True na úrovni seznamu L2 z výstupu uzlu **BoundingBox.Contains** a přítomnost položky **List.FilterByBoolMask** naznačuje, že jsme vzorkovali část osnovy bodů.
 
-Once we understand the elemental parts of the program, let's put them in Groups.
+Když teď rozumíte základním prvkům programu, můžeme je umístit do skupin.
 
 ![](images/1/graphstrategy13.png)
 
-> Groups allow the user to visually differentiate the parts of the program.
+> Skupiny umožňují uživateli vizuální rozlišení částí programu.
 >
-> 1. Import 3D site model
-> 2. Translate point grid based on Sine equation
-> 3. Sample portion of point grid
-> 4. Create architectural roof surface
-> 5. Create glass curtain wall
+> 1. Import 3D modelu pozemku
+> 2. Osnova převodu bodů založená na rovnici sinu
+> 3. Ukázková část bodové osnovy
+> 4. Tvorba povrchu architektonické střechy
+> 5. Tvorba skleněného obvodového pláště
 
-With Groups established, align the nodes to create visual continuity across the graph.
+Jakmile budou skupiny stanoveny, zarovnejte uzly, tak aby vznikla vizuální spojitost přes celý graf.
 
 ![](images/1/graphstrategy14.png)
 
-> Visual continuity helps the user to see the program flow and implicit relationships between nodes.
+> Vizuální spojitost zlepšuje pro uživatele viditelnost toku programu a implicitních vztahů mezi uzly.
 
-Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
+Zlepšete přístup k programu přidáním další hladiny grafických vylepšení. Přidáním poznámek popisujete, jak určitá oblast programu funguje, zadejte u vstupů vlastní názvy a přiřaďte k různým typům skupin barvy.
 
 ![](<images/1/graphstrategy15 (1).png>)
 
-> These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
+> Tato grafická vylepšení sdělují uživateli více o tom, co program dělá. Různé barvy skupin pomáhají rozlišit vstupy od funkcí.
 >
-> 1. Notes
-> 2. Inputs with descriptive names
+> 1. Poznámky
+> 2. Vstupy s popisnými názvy
 
-Before we start to condense the program, let's find a strategic location to introduce the Python script drainage simulator. Plug the output of the first scaled roof surface into the respective scripting input.
+Před zhuštěním programu, je třeba najít strategické umístění, kde představíme simulátor odvodnění ve skriptu jazyka Python. Výstup prvního povrchu střechy s měřítkem připojte k odpovídajícímu vstupu skriptování.
 
 ![](images/1/graphstrategy16.png)
 
-> We've chosen to integrate scripting at this point in the program so the drainage simulation can be run on the original, single roof surface. That specific surface is not being previewed, but it saves us from having to choose the top surface of the chamfered Polysurface.
+> V této části programu jsme se rozhodli integrovat skriptování, aby simulace odvodnění mohla být spuštěna na původním, jediném povrchu střechy. Tento konkrétní povrch není zobrazen v náhledu, ale ušetří krok výběru horního povrchu u zkoseného objektu Polysurface.
 >
-> 1. Source geometry for script input
-> 2. Python node
-> 3. Input sliders
-> 4. On/off "switch"
+> 1. Zdrojová geometrie pro vstup skriptu
+> 2. Uzel jazyka Python
+> 3. Posuvníky vstupů
+> 4. „Přepínač“ zapnutí/vypnutí
 
-Let's simplify the graph now that everything is in place.
+Nyní, když je vše připraveno, zjednodušíme graf.
 
 ![](images/1/graphstrategy17.png)
 
-> Condensing our program with Node to Code and Custom Node has greatly reduced the size of the graph. The groups that create the roof surface and walls have been converted to code since they are very specific to this program. The point translation group is contained in a Custom Node as it could be used in another program. In the example file, create your own custom node from the translate points group.
+> Berte v potaz, že program s využitím možnosti Uzel na kód a vlastního uzlu značně zmenšil velikost grafu. Skupiny, které tvoří povrch střechy a stěny, byly převedeny na kód, protože jsou pro tento program velmi specifické. Skupina převodu bodů je obsažena ve vlastním uzlu, protože by mohla být využita i v jiném programu. Ve vzorovém souboru vytvořte vlastní uzel ze skupiny převodu bodů.
 >
-> 1. Custom Node to contain the "translate point grid" group
-> 2. Node to Code to condense the "create architectural roof surface and curtain wall" groups
+> 1. Vlastní uzel, který má obsahovat skupinu „osnovy převodu bodů“
+> 2. Možnost Uzel na kód ke zhuštění skupin „tvorby povrchu architektonické střechy a obvodového pláště“
 
-As a final step, create presets for exemplary roof forms.
+Jako poslední krok vytvořte předvolby pro ukázkové tvary střechy.
 
 ![](images/1/graphstrategy18.png)
 
-> These inputs are the primary drivers of the roof form and will help users see the potential of the program.
+> Tyto vstupy jsou primárními ovladači tvaru střechy a díky nim uživatel snadněji pochopí potenciál programu.
 
-Our program with views of two presets.
+Program s pohledy dvou předvoleb.
 
 ![](images/1/graphstrategy19.png)
 
 ![](images/1/graphstrategy20.png)
 
-> The roof drainage patterns give the user an analytical view of the respective presets.
+> Vzory odvodnění střechy nabízí uživateli analytický pohled příslušných předvoleb.

@@ -1,8 +1,8 @@
-# DesignScript Geometry Basics
+# Základy geometrií v jazyku DesignScript
 
-### Point
+### Bod
 
-The simplest geometrical object in the Dynamo standard geometry library is a point. All geometry is created using special functions called constructors, which each return a new instance of that particular geometry type. In Dynamo, constructors begin with the name of the object’s type, in this case Point, followed by the method of construction. To create a three dimensional point specified by x, y, and z Cartesian coordinates, use the _ByCoordinates_ constructor:
+Nejjednodušším geometrickým objektem v knihovně standardních geometrií aplikace Dynamo je bod. Všechny geometrie se vytvářejí pomocí speciálních funkcí nazvaných konstruktory, které vrací nové instance geometrií daného typu. V aplikaci Dynamo konstruktory začínají názvem typu objektu, v tomto případě Point, a dále obsahují metodu jejich tvorby. Chcete-li vytvořit trojrozměrný bod určený kartézskými souřadnicemi X, Y a Z, použijte konstruktor _ByCoordinates_:
 
 ![](../images/8-2/1/GeometryBasics\_01.png)
 
@@ -16,9 +16,9 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Constructors in Dynamo are typically designated with the “_By_” prefix, and invoking these functions returns a newly created object of that type. This newly created object is stored in the variable named on the left side of the equal sign.
+Konstruktory aplikace Dynamo obvykle obsahují předponu „_By_“ a po spuštění vrací nově vytvořený objekt daného typu. Tento nově vytvořený objekt se uloží do proměnné, jejíž název se nachází na levé straně rovnítka.
 
-Most objects have many different constructors, and we can use the _BySphericalCoordinates_ constructor to create a point lying on a sphere, specified by the sphere’s radius, a first rotation angle, and a second rotation angle (specified in degrees):
+Většina objektů má mnoho různých konstruktorů, pomocí konstruktoru _BySphericalCoordinates_ je možné vytvořit bod ležící na kouli, je nutné zadat poloměr koule, první úhel otáčení a druhý úhel otáčení (ve stupních):
 
 ![](../images/8-2/1/GeometryBasics\_02.png)
 
@@ -34,9 +34,9 @@ p = Point.BySphericalCoordinates(cs, radius, theta,
     phi);
 ```
 
-### From Point to Line
+### Od bodu k čáře
 
-Points can be used to construct higher dimensional geometry such as lines. We can use the _ByStartPointEndPoint_ constructor to create a Line object between two points:
+Body je možné použít k vytvoření geometrie vyššího rozměru, například čáry. Pomocí konstruktoru _ByStartPointEndPoint_ je možné vytvořit mezi dvěma body objekt čáry:
 
 ![](../images/8-2/1/GeometryBasics\_03.png)
 
@@ -49,9 +49,9 @@ p2 = Point.ByCoordinates(-15, 7, 0.5);
 l = Line.ByStartPointEndPoint(p1, p2);
 ```
 
-### From Line to Surface
+### Od čáry k ploše
 
-Similarly, lines can be used to create higher dimensional surface geometry, for instance using the _Loft_ constructor, which takes a series of lines or curves and interpolates a surface between them.
+Podobně lze čáry použít k tvorbě geometrie vyššího rozměru (plocha), například pomocí konstruktoru _Loft_, který jako vstup přijímá řadu čar nebo křivek a interpoluje mezi nimi plochu.
 
 ![](../images/8-2/1/GeometryBasics\_04.png)
 
@@ -75,9 +75,9 @@ l3 = Line.ByStartPointEndPoint(p5, p6);
 surf = Surface.ByLoft([l1, l2, l3]);
 ```
 
-### From Surface to Solid
+### Od plochy k tělesu
 
-Surfaces too can be used to create higher dimensional solid geometry, for instance by thickening the surface by a specified distance. Many objects have functions attached to them, called methods, allowing the programmer to perform commands on that particular object. Methods common to all pieces of geometry include _Translate_ and _Rotate_, which respectively translate (move) and rotate the geometry by a specified amount. Surfaces have a _Thicken_ method, which take a single input, a number specifying the new thickness of the surface.
+Plochy lze použít k vytvoření geometrie vyššího rozměru (těleso), například zesílením plochy o určitou vzdálenost. Ke spoustě objektů jsou připojeny funkcí, kterým se říká metody, a které umožňují nad daným objektem spouštět příkazy. Všechny geometrie mají společné metody _Translate_ a _Rotate_, které posunou respektive otočí geometrii o zadanou hodnotu. Plochy mají metodu _Thicken_, která jako vstup přijímá novou tloušťku plochy.
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 
@@ -97,9 +97,9 @@ surf = Surface.ByLoft([l1, l2]);
 solid = surf.Thicken(4.75, true);
 ```
 
-### Intersect
+### Průnik
 
-_Intersection_ commands can extract lower dimensional geometry from higher dimensional objects. This extracted lower dimensional geometry can form the basis for higher dimensional geometry, in a cyclic process of geometrical creation, extraction, and recreation. In this example, we use the generated Solid to create a Surface, and use the Surface to create a Curve.
+Příkazy pro _průsečík_ umožňují získat geometrii nižšího rozměru z objektů vyššího rozměru. Extrahované geometrie nižšího rozměru lze použít jako základ geometrií vyššího rozměru, čímž vzniká cyklický pracovní postup tvorby, extrahování a opakované tvorby geometrií. V tomto příkladu pomocí vygenerovaného tělesa vytvoříme plochu a plochu použijeme k vytvoření křivky.
 
 ![](../images/8-2/1/GeometryBasics\_06.png)
 

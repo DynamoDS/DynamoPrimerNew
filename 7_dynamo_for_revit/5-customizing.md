@@ -1,117 +1,117 @@
-# Customizing
+# Přizpůsobení
 
-While we previously looked at editing a basic building mass, we want to dive deeper into the Dynamo/Revit link by editing a large number of elements in one go. Customizing on a large scale becomes more complex as data structures require more advanced list operations. However, the underlying principles behind their execution is fundamentally the same. Let's study some opportunities for analysis from a set of adaptive components.
+Zatímco v předchozích částech byl kladen důraz na úpravu základního objemu budovy, tato část se zabývá více propojením aplikací Dynamo a Revit, konkrétně úpravou velkého počtu prvků najednou. Přizpůsobení ve velkém měřítku je čím dál složitější tím, jak datové struktury vyžadují čím dál pokročilejší operace seznamů. Základní principy za jejich prováděním však zůstávají v podstatě stejné. Následuje popis několika příležitostí k analýze v sadě adaptivních komponent.
 
-### Point Location
+### Umístění bodu
 
-Suppose we've created a range of adaptive components and want to edit parameters based on their point locations. The points, for example, could drive a thickness parameter which is related to the area of the element. Or, they could drive an opacity parameter related to solar exposure throughout the year. Dynamo allows the connection of analysis to parameters in a few easy steps, and we'll explore a basic version in the exercise below.
+Řekněme, že byl vytvořen určitý počet adaptivních komponent a vy chcete upravit parametry podle jejich umístění bodů. Body by mohly například řídit parametr tloušťky, který souvisí s plochou prvku. Nebo by mohly řídit parametr průhlednosti, který souvisí s vystavením slunečnímu záření po celý rok. Aplikace Dynamo umožňuje analýzu parametrů v několika snadných krocích, přičemž základní verze analýzy je popsána ve cvičení níže.
 
 ![](<./images/5/customizing - point location.jpg>)
 
-> Query the adaptive points of a selected adaptive component by using the **AdaptiveComponent.Locations** node. This allows us to work with an abstracted version of a Revit element for analysis.
+> Zadejte dotaz na adaptivní body vybrané adaptivní komponenty pomocí uzlu **AdaptiveComponent.Locations**. Toto vám umožní pracovat během analýzy s abstrahovanou verzí prvku aplikace Revit.
 
-By extracting the point location of adaptive components, we can run a range of analysis for that element. A four-point adaptive component will allow you to study the deviation from plane for a given panel for example.
+Extrahování umístění bodu adaptivních komponent vám umožní spustit celou řadu analýz pro daný prvek. Například čtyřbodová adaptivní komponenta umožní studovat odchylku od roviny u daného panelu.
 
-### Solar Orientation Analysis
+### Analýza orientace slunečního záření
 
 ![](<./images/5/customizing - solar orientation analysis.jpg>)
 
-> Use remapping to map a set of a data into a parameter range. This is fundamental tool used in a parametric model, and we'll demonstrate it in the exercise below.
+> Pomocí přemapování můžete namapovat sadu dat na rozsah parametru. Jedná se o základní nástroj používaný v parametrických modelech a je znázorněn v níže uvedeném cvičení.
 
-Using Dynamo, the point locations of adaptive components can be used to create a best-fit plane each element. We can also query the sun position in the Revit file and study the plane's relative orientation to the sun in comparison to other adaptive components. Let's set that up in the exercise below by creating an algorithmic roofscape.
+V aplikaci Dynamo je možné pomocí umístění bodů adaptivních komponent vytvořit nejlépe přizpůsobenou rovinu pro každý prvek. Také můžete zadat dotaz na pozici slunce v souboru aplikace Revit a studovat orientaci roviny vzhledem ke slunci v porovnání s jinými adaptivními komponentami. V níže uvedeném cvičení toto nastavíme vytvořením algoritmických střech.
 
-## Exercise
+## Cvičení
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="./datasets/5/Revit-Customizing.zip" %}
 
-This exercise will expand on the techniques demonstrated in the previous section. In this case, we are defining a parametric surface from Revit elements, instantiating four-point adaptive components and then editing them based on orientation to the sun.
+Toto cvičení rozšiřuje techniky znázorněné v předchozí části. V tomto případě definujeme parametrický povrch z prvků aplikace Revit, dále vytvoříme instance čtyřbodových adaptivních komponent a poté je upravíme podle orientace vzhledem ke slunci.
 
 ![](<./images/5/customizing - exercise 01.jpg>)
 
-> 1. Beginning by selecting two edges with the _"Select Edge"_ node. The two edges are the long spans of the atrium.
-> 2. Combine the two edges into one list with the _List.Create_ node.
-> 3. Create a surface between the two edges with a _Surface.ByLoft_.
+> 1. Začněte výběrem dvou hran pomocí uzlu _„Select Edge“_. Tyto dvě hrany jsou dvě dlouhá rozpětí atria.
+> 2. Spojte dvě hrany do jednoho seznamu pomocí uzlu _List.Create_.
+> 3. Vytvořte mezi dvěma hranami povrch pomocí uzlu _Surface.ByLoft_.
 
 ![](<./images/5/customizing - exercise 02.jpg>)
 
-> 1. Using _code block_, define a range from 0 to 1 with 10 evenly spaced values: `0..1..#10;`
-> 2. Plug the _code block_ into the \*u \*and _v_ inputs of a _Surface.PointAtParameter_ node, and plug the _Surface.ByLoft_ node into the _surface_ input. Right click the node and change the _lacing_ to _Cross Product_. This will give a grid of points on the surface.
+> 1. Pomocí _bloku kódu_ definujte rozsah od 0 do 1 s 10 rovnoměrně rozmístěnými hodnotami: `0..1..#10;`.
+> 2. Připojte _blok kódu_ ke vstupům \*u \*a _v_ uzlu _Surface.PointAtParameter_ a připojte uzel _Surface.ByLoft _ke vstupu _surface_. Klikněte pravým tlačítkem na uzel a změňte _vázání_ na _Kartézský součin_. Tím se vytvoří osnova bodů na povrchu.
 
-This grid of points serves as the control points for a parametrically defined surface. We want to extract the u and v positions of each one of these points so that we can plug them into a parametric formula and keep the same data structure. We can do this by querying the parameter locations of the points we just created.
+Tato osnova bodů slouží jako řídicí body parametricky definovaného povrchu. Je třeba extrahovat pozice u a v každého z těchto bodů, aby bylo možné je připojit k parametrickému vzorci a zachovat stejnou datovou strukturu. Toho dosáhnete zadáním dotazu na umístění parametrů bodů, které jste právě vytvořili.
 
 ![](<./images/5/customizing - exercise 03.jpg>)
 
-> 1. Add a _Surface.ParameterAtPoint_ node to the canvas, connect the inputs as shown above.
-> 2. Query the _u_ values of these parameters with the UV.U node.
-> 3. Query the _v_ values of these parameters with the UV.V node.
-> 4. The outputs show the corresponding _u_ and _v_ values for every point of the surface. We now have a range from _0_ to _1_ for each value, in the proper data structure, so we're ready to apply a parametric algorithm.
+> 1. Přidejte na kreslicí plochu uzel _Surface.ParameterAtPoint_ a připojte vstupy, jak je znázorněno výše.
+> 2. Zadejte dotaz na hodnoty _u_ těchto parametrů pomocí uzlu UV.U.
+> 3. Zadejte dotaz na hodnoty _v_ těchto parametrů pomocí uzlu UV.V.
+> 4. Výstup zobrazuje odpovídající hodnoty _u_ a _v_ pro každý bod povrchu. Nyní existuje rozsah od _0_ do _1_ pro každou hodnotu ve správné datové struktuře, čili je vše připraveno k použití parametrického algoritmu.
 
 ![](<./images/5/customizing - exercise 04.jpg>)
 
-> 1. Add a _code block_ to the canvas and enter the code: `Math.Sin(u*180)*Math.Sin(v*180)*w;` This is a parametric function which creates a sine mound from a flat surface.
-> 2. Connects the _UV.U_ to the _u_ input and the UV.V to the _v_ input.
-> 3. The _w_ input represents the _amplitude_ of the shape, so we attach a _number slider_ to it.
+> 1. Přidejte na kreslicí plochu _blok kódu_ a zadejte tento kód: `Math.Sin(u*180)*Math.Sin(v*180)*w;`. Jedná se o parametrickou funkci, která z plochého povrchu vytvoří sinusový oblouk.
+> 2. Připojte uzel _UV.U_ ke vstupu _u_ a UV.V ke vstupu _v_.
+> 3. Vstup _w_ představuje _amplitudu_ tvaru, takže k němu připojíme _posuvník čísel_.
 
 ![](<./images/5/customizing - exercise 05.jpg>)
 
-> 1. Now, we have a list of values as defined by the algorithm. Let's use this list of values to move the points up in the _+Z_ direction. Using _Geometry.Translate_, plug the \*code block \*into _zTranslation_ and the _Surface.PointAtParameter_ into the _geometry_ input. You should see the new points displayed in the Dynamo preview.
-> 2. Finally, we create a surface with the _NurbsSurface.ByPoints_ node, plugging the node from the previous step into the points input. We have ourselves a parametric surface. Feel free to drag the slider to watch the mound shrink and grow.
+> 1. Nyní máme seznam hodnot definovaných algoritmem. Pomocí tohoto seznamu hodnot přesuňte body nahoru ve směru _+Z_. Pomocí uzlu _Geometry.Translate_ připojte \*blok kódu\* ke vstupu _zTranslation_ a uzel _Surface.PointAtParameter_ připojte ke vstupu _geometry_. Nyní by se v náhledu aplikace Dynamo měly zobrazit nové body.
+> 2. Nakonec vytvořte povrch pomocí uzlu _NurbsSurface.ByPoints_ tím, že ke vstupu bodů připojíte uzel z předchozího kroku. Nyní máme parametrický povrch. Můžete volně přetahovat posuvník a pozorovat, jak se oblouk zmenšuje a zvětšuje.
 
-With the parametric surface, we want to define a way to panelize it in order to array four-point adaptive components. Dynamo does not have out-of-the-box functionality for surface panelization, so we can look to the community for helpful Dynamo packages.
+U parametrického povrchu nyní chceme definovat způsob, jak z něj vytvořit panely a umístit tak čtyřbodové adaptivní komponenty do pole. Aplikace Dynamo nemá ve výchozím stavu funkci k vytvoření panelů z povrchu, čili je třeba prozkoumat komunitu a najít užitečné balíčky pro aplikaci Dynamo.
 
 ![](<./images/5/customizing - exercise 06.jpg>)
 
-> 1. Go to _Packages>Search for a Package..._
-> 2. Search for _"LunchBox"_ and install _"LunchBox for Dynamo"_. This is a really helpful set of tools for geometry operations such as this.
+> 1. Přejděte do nabídky _Balíčky > Vyhledat balíček_.
+> 2. Vyhledejte řetězec _„LunchBox“_ a nainstalujte si balíček _„LunchBox for Dynamo“_. Jedná se o skutečně užitečnou sadu nástrojů pro operace geometrií, jako je právě tato.
 
-> 1. After downloading, you now have full access to the LunchBox suite. Search for _"Quad Grid"_ and select _"LunchBox Quad Grid By Face"_. Plug the parametric surface into the _surface_ input and set the _U_ and _V_ divisions to _15_. You should see a quad-paneled surface in your Dynamo preview.
+> 1. Po stažení máte nyní plný přístup k sadě LunchBox. Vyhledejte řetězec _„Quad Grid“_ a vyberte položku _„LunchBox Quad Grid By Face“_. Připojte parametrický povrch ke vstupu _surface_ a nastavte podíly _U_ a _V_ na hodnotu _15_. Nyní byste v náhledu aplikace Dynamo měli vidět povrch se čtyřmi panely.
 
-> If you're curious about its setup, you can double click on the _Lunch Box_ node and see how it's made.
+> Pokud vás zajímá nastavení tohoto balíčku, klikněte dvakrát na uzel _Lunch Box_ a zjistěte, jak funguje.
 
-> Back in Revit, let's take a quick look at the adaptive component we're using here. No need to follow along, but this is the roof panel we're going to instantiate. It is a four-point adaptive component which is a crude representation of an ETFE system. The aperture of the center void is on a parameter called _"ApertureRatio"_.
+> Opět v aplikaci Revit se v rychlosti podíváme na adaptivní komponentu, kterou používáme. Není třeba ji stále sledovat, ale toto je o panel střechy, od kterého vytvoříme instanci. Jedná se o čtyřbodovou adaptivní komponentu, která je jednoduchou reprezentací systému ETFE. Otvor středového vybrání je u parametru s názvem _„ApertureRatio“_.
 
-> 1. We're about to instantiate a lot of geometry in Revit, so make sure to turn the Dynamo solver to _"Manual"_.
-> 2. Add a _Family Types_ node to the canvas and select _"ROOF-PANEL-4PT"_.
-> 3. Add an _AdaptiveComponent.ByPoints_ node to the canvas, connect _Panel Pts_ from the _"LunchBox Quad Grid by Face"_ output into the _points_ input. Connect the _Family Types_ node to the _familySymbol_ input.
-> 4. Hit _Run_. Revit will have to _think_ for a bit while the geometry is being created. If it takes too long, reduce the _code block's '15'_ to a lower number. This will reduce the number of panels on the roof.
+> 1. Chystáte se vytvořit instanci geometrie v aplikaci Revit, proto se ujistěte, že je řešič aplikace Dynamo nastaven na možnost _„Ruční“_.
+> 2. Přidejte na kreslicí plochu uzel _Family Types_ a vyberte položku _„ROOF-PANEL-4PT“_.
+> 3. Přidejte na kreslicí plochu uzel _AdaptiveComponent.ByPoints_ a připojte _body panelů_ z výstupu balíčku _„LunchBox Quad Grid by Face“_ ke vstupu _points_. Připojte uzel _Family Types_ ke vstupu _familySymbol_.
+> 4. Klikněte na možnost _Spustit_. Během tvorby geometrie bude aplikace Revit chvíli _přemýšlet_. Pokud to trvá příliš dlouho, snižte hodnotu _bloku kódu '15'_ na nižší hodnotu. Tím se sníží počet panelů na střeše.
 
-_Note: If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "Freezing" section in the solids chapter._
+_Poznámka: Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná užitečné využít funkce uzlu „freeze“, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf. Další informace o zmrazení uzlů najdete v části „Zmrazení“ v kapitole Tělesa._
 
-> Back in Revit, we have the array of panels on the roof.
+> Zpátky v aplikaci Revit máme pole panelů na střeše.
 
-> Zooming in, we can get a closer look at their surface qualities.
+> Po přiblížení se můžete blíže podívat na kvality jejich povrchů.
 
-### Analysis
+### Analýza
 
-> 1. Continuing from the previous step, let's go further and drive the aperture of each panel based on its exposure to the sun. Zooming into Revit and select one panel, we see in the properties bar that there is a parameter called _"Aperture Ratio"_. The family is setup so that the aperture ranges, roughly, from _0.05_ to _0.45_.
+> 1. V rámci pokračování z předchozího kroku nastavte otvor každého panelu podle jeho vystavení slunci. Pokud přiblížíte pohled v aplikaci Revit a vyberete jeden panel, uvidíte na panelu vlastností, že je zde parametr s názvem _Aperture Ratio_. Rodina je nastavena, tak aby měl otvor rozsah zhruba od _0.05_ do _0.45_.
 
-> 1. If we turn on the solar path, we can see the current sun location in Revit.
+> 1. Pokud zapnete dráhu slunce, uvidíte v aplikaci Revit aktuální polohu slunce.
 
-> 1. We can reference this sun location using the _SunSettings.Current_ node.
+> 1. Na tuto polohu slunce se můžete odkázat pomocí uzlu _SunSettings.Current_.
 
-1. Plug the Sun settings into _Sunsetting.SunDirection_ to get the solar vector.
-2. From the _Panel Pts_ used to create the adaptive components, use _Plane.ByBestFitThroughPoints_ to approximate a plane for the component.
-3. Query the _normal_ of this plane.
-4. Use the _dot product_ to calculate solar orientation. The dot product is a formula which determines how parallel or anti-parallel two vectors may be. So we're taking the plane normal of each adaptive component and comparing it to the solar vector to roughly simulate solar orientation.
-5. Take the _absolute value_ of the result. This ensures that the dot product is accurate if the plane normal is facing the reverse direction.
-6. Hit _Run_.
+1. Připojením nastavení slunce k uzlu _Sunsetting.SunDirection_ získejte vektor slunečního záření.
+2. U _bodů panelů_ použitých k vytvoření adaptivních komponent aproximujte rovinu pro komponentu pomocí uzlu _Plane.ByBestFitThroughPoints_.
+3. Zadejte dotaz na _normálu_ této roviny.
+4. K výpočtu orientace slunečního záření použijte _skalární součin_. Skalární součin je vzorec, který určuje, jak mohou dva vektory být rovnoběžné nebo nerovnoběžné. Čili vezmete normálu roviny každé adaptivní komponenty a porovnáte ji s vektorem slunečního záření, čímž zhruba nasimulujete orientaci slunečního záření.
+5. Použijte _absolutní hodnotu_ výsledku. Tím zajistíte, že bude skalární součin přesný, pokud je normála roviny otočena opačným směrem.
+6. Klikněte na možnost _Spustit_.
 
-> 1. Looking at the _dot product_, we have a wide range of numbers. We want to use their relative distribution, but we need to condense the numbers into the appropriate range of the _"Aperture Ratio"_ parameter we plan to edit.
+> 1. Při pohledu na _skalární součin_ je vidět, že máme k dispozici velký rozsah čísel. Chceme použít jejich relativní rozložení, ale je potřeba zhustit čísla do vhodného rozsahu parametru _„Aperture Ratio“_, který chceme upravit.
 
-1. The _Math.RemapRange_ is a great tool for this. It takes an input list and remaps its bounds into two target values.
-2. Define the target values as _0.15_ and _0.45_ in a _code block_.
-3. Hit _Run_.
+1. K tomuto účelu se skvěle hodí uzel _Math.RemapRange_. Ten vezme vstupní seznam a přemapuje jeho hranice na dvě cílové hodnoty.
+2. Definujte cílové hodnoty _0.15_ a _0.45_ v _bloku kódu_.
+3. Klikněte na možnost _Spustit_.
 
-> 1. Connect the remapped values into a _Element.SetParameterByName_ node.
+> 1. Připojte přemapované hodnoty k uzlu _Element.SetParameterByName_.
 
-1. Connect the string _"Aperture Ratio"_ into the _parameterName_ input.
-2. Connect the _adaptive components_ into the _element_ input.
-3. Hit _Run_.
+1. Připojte řetězec _„Poměr otvoru“_ ke vstupu _parameterName_.
+2. Připojte _adaptivní komponenty_ ke vstupu _prvku_.
+3. Klikněte na možnost _Spustit_.
 
-> Back in Revit, from a distance we can make out the affect of the solar orientation on the aperture of the ETFE panels.
+> Zpět v aplikaci Revit je možné ze vzdálenosti dát dohromady účinek orientace slunečního záření na otvor v panelech ETFE.
 
-> Zooming in, we see that the ETFE panels are more closed as the face the sun. Our target here is to reduce overheating from solar exposure. If we wanted to let in more light based on solar exposure, we just have to switch the domain on _Math.RemapRange_.
+> Pokud přiblížíte pohled, zjistíte, že panely ETFE jsou více uzavřené, pokud směřují ke slunci. Cílem je snížit míru přehřátí při vystavení slunečnímu záření. Pokud chcete vpustit dovnitř více světla podle vystavení slunečnímu záření, prostě jen přepněte doménu v uzlu _Math.RemapRange_.

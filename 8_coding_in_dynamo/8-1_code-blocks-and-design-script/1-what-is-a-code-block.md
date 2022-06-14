@@ -1,37 +1,37 @@
-# What's a Code Block
+# Co je blok kódu
 
-Code blocks are a window deep into DesignScript, the programming language at the heart of Dynamo. Built from scratch to support exploratory design workflows, DesignScript is a readable and concise language that offers both immediate feedback to small bits of code and also scales to large and complex interactions. DesignScript also forms the backbone of the engine that drives most aspects of Dynamo “under the hood”. Because nearly all of the functionality found in Dynamo nodes and interactions have a one-to-one relationship with the scripting language, there are unique opportunities to move between node-based interactions and scripting in a fluid way. &#x20;
+Bloky kódu umožňují pracovat v jazyce DesignScript, což je programovací jazyk používaný v aplikaci Dynamo. Jazyk DesignScript je čitelný a stručný jazyk, který nabízí okamžitou zpětnou vazbu k malým úsekům kódu, ale je v něm možné vytvářet také velké a složité programy. DesignScript také tvoří základ systému, který aplikace Dynamo používá „pod pokličkou“. Protože většina funkcí uzlů aplikace Dynamo je s tímto skriptovacím jazykem v rovnocenném vztahu, znamená to, že se lze plynule přesunout od uzlů ke skriptování. &#x20;
 
 ![](../images/8-1/1/codeblock.jpg)
 
-For beginners, nodes can be automatically converted to text syntax to aid in learning DesignScript or simply to reduce the size of larger sections of graphs. This is done using a process called "Node to Code", which is outlined in more detail in the [DesignScript Syntax section](7-2\_design-script-syntax.md). More experienced users can use Code Blocks to create customized mashups of existing functionality and user authored relationships using many standard coding paradigms. In between the beginner and advanced user, there are a huge number of shortcuts and code snippets that will accelerate your designs. While the term 'code block' may be a little intimidating to non-programmers, it is both easy to use and robust. A beginner can use the code block efficiently with minimal coding, and an advanced user can define scripted definitions to be recalled elsewhere in a Dynamo definition.
+Pro začátečníky lze uzly převést automaticky na text, což jim usnadní proces učení jazyka DesignScript, případně tím lze zpřehlednit velké části grafu. K tomu slouží proces „Uzel na kód“, který je podrobněji popsán v [části Syntaxe jazyka DesignScript](7-2\_design-script-syntax.md). Pokročilejší uživatelé si mohou pomocí bloků kódu přizpůsobovat existující funkce a vytvářet standardní programátorské konstrukce. Pro všechny uživatele nezávisle na zkušenostech je k dispozici velké množství útržků s kódem, které jim pomohou při práci na návrzích. Ačkoliv výraz „blok kódu“ může být pro neprogramátory poněkud zastrašující, ve skutečnosti se jedná o snadno použitelnou funkci. Začátečník dokáže používat blok kódu efektivně i s minimem programování, zatímco pokročilý uživatel může vytvořit skriptované definice, které bude možné vyvolat na jiném místě definice Dynamo.
 
-### Code Block: A Brief Overview&#x20;
+### Blok kódu: stručný přehled&#x20;
 
-In short, code blocks are a text-scripting interface within a visual-scripting environment. They can be used as numbers, strings, formulas, and other data types. The code block is designed for Dynamo, so one can define arbitrary variables in the code block, and those variables are automatically added to the inputs of the node:
+Stručně řečeno, bloky kódu představují rozhraní pro textové skriptování v rámci prostředí vizuálního programování. Lze je používat jako čísla, řetězce, vzorce a další datové typy. Blok kódu je navržen přímo pro aplikaci Dynamo – uživatel může v bloku kódu definovat proměnné a ty budou následně automaticky přidány k uzlu jako vstupy:
 
-With code blocks, a user has the flexibility to decide how to specify inputs. Here are several different ways to make a basic point with coordinates _(10, 5, 0)_:&#x20;
+Bloky kódu umožňují uživatelům flexibilně určit, které vstupy bude uzel obsahovat. Zde je několik způsobů, jak vytvořit základní bod se souřadnicemi _(10, 5, 0)_:&#x20;
 
 ![](<../images/8-1/1/codeblock brief overview.jpg>)
 
-As you learn more of the available functions in the library, you might even find that typing “Point.ByCoordinates” is faster than searching in the library and finding the proper node. When you type in _"Point."_ for example, Dynamo will display a list of possible functions to apply to a Point. This makes the scripting more intuitive and will help with learning how to apply functions in Dynamo.
+Jakmile se seznámíte s pokročilejšími funkcemi v knihovně, zjistíte, že ruční zadání textu „Point.ByCoordinates“ je rychlejší, než hledání správného uzlu v knihovně. Pokud například zadáte _„Point.“_, aplikace Dynamo zobrazí seznam možných funkcí, které lze použít pro bod. Díky tomu je skriptování intuitivnější a usnadní vám používání funkcí v aplikaci Dynamo.
 
-### Creating Code Block Nodes
+### Tvorba uzlů pro bloky kódu
 
-The code block can be found in _Core>Input>Actions>Code Block_. But even faster, just double click on the canvas and the code block appears. This node is used so often, it's given full double-click privileges.
+Blok kódu se nachází v části _Core>Input>Actions>Code Block_. Stačí však dvakrát kliknout na pracovní plochu a blok kódu se ihned zobrazí. Tento uzel se používá tak často, že jej lze vytvořit i dvojím kliknutím.
 
 ![](<../images/8-1/1/creating codeblock nodes.jpg>)
 
-### Numbers, Strings and Formulas
+### Čísla, řetězce a vzorce
 
-Code blocks are also flexible towards data types. The user can quickly define numbers, strings, and formulas and the code block will deliver the desired output.
+Bloky kódu umožňují flexibilní práci s datovými typy. Uživatel může rychle definovat čísla, řetězce a vzorce a blok kódu nastaví požadovaný výstup.
 
-In the image below, you can see the "old school" way of doing things is a little long-winded: the user searches for the intended node in the interface, adds the node to the canvas, and then inputs the data. With code block, the user can double-click on the canvas to pull up the node, and type in the correct data type with basic syntax.
+Na obrázku níže vidíte starý způsob práce, který je poněkud zdlouhavý: uživatel musí vyhledat požadovaný uzel v rozhraní, přidat uzel na pracovní plochu a poté zadat data. S blokem kódu uživateli stačí, když dvakrát klikne na pracovní plochu, čímž vytvoří uzel, a poté zadá požadovaná data splňující základní syntaxi.
 
-The number, string, and formula nodes are three examples of Dynamo nodes which are arguably obsolete in comparison to the code block.
+Uzly number, string a formula představují příklady uzlů aplikace Dynamo, které jsou v porovnání s blokem kódu poněkud zastaralé.
 
 ![](<../images/8-1/1/old school vs code blocks nodes.jpg>)
 
-> 1. "Old-school"
-> 2. Code Blocks
+> 1. „Stará škola“
+> 2. Bloky kódu
 

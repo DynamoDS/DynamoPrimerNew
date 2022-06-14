@@ -1,6 +1,6 @@
-# Python Point Generators
+# Generátory bodů v jazyce Python
 
-The following Python scripts generate point arrays for several examples. They should be pasted into a Python Script node as follows:
+Následující skripty jazyka Python vytvářejí pole bodů pro několik příkladů. Vložte je do uzlu skriptu jazyka Python následovně:
 
 ![](<../images/8-2/10/python points 01.jpg>)
 

@@ -1,5 +1,5 @@
-# Getting Started Workflows
+# Pracovní postupy Začínáme
 
-This section has simple workflows to get you started using Dynamo.&#x20;
+Tato část obsahuje jednoduché pracovní postupy, které vám pomohou začít používat aplikaci Dynamo.&#x20;
 
 ![](../images/10-1/sampleWorkflows.gif)

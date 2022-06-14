@@ -1,115 +1,115 @@
-# Developing a Package
+# Vývoj balíčku
 
-Dynamo offers a variety of ways to create a package for your personal use or for sharing with the Dynamo community. In the case study below, we'll walk through how a package is set up by deconstructing an existing one. This case study builds on lessons from the previous chapter, providing a set of custom nodes for mapping geometry, by UV coordinates, from one Dynamo surface to another.
+Aplikace Dynamo nabízí řadu způsobů, jak vytvořit balíček pro vaše osobní použití nebo sdílení s komunitou aplikace Dynamo. V níže uvedené případové studii si rozebráním existujícího balíčku projdeme, jak je balíček vytvořen. Tato případová studie vychází ze zkušeností z předchozí kapitoly a poskytuje sadu vlastních uzlů pro mapování geometrie podle souřadnic UV, z jednoho povrchu aplikace Dynamo do jiného.
 
-## MapToSurface Package
+## Balíček MapToSurface
 
-We're going to work with a sample package which demonstrates the UV mapping of points from one surface to another. We've already built the fundamentals of the tool in the [Creating a Custom Node](../10\_custom-nodes/10-2\_creating.md) section of this primer. The files below demonstrate how we can take the concept of UV Mapping and develop a set of tools for a publishable library.
+Budeme pracovat se vzorovým balíčkem, který demonstruje mapování UV bodů z jednoho povrchu do druhého. Základy nástroje jsme již vytvořili v části [Vytvoření vlastního uzlu](../10\_custom-nodes/10-2\_creating.md) tohoto cvičení. Níže uvedené soubory ukazují, jak můžeme využít koncepci mapování UV a vytvořit sadu nástrojů pro publikovatelnou knihovnu.
 
-In this image, we map a point from one surface to another using UV coordinates. The package is based on this concept, but with more complex geometry.
+Na tomto obrázku namapujeme bod z jednoho povrchu na jiný pomocí souřadnic UV. Balíček je založen na tomto konceptu, ale se složitější geometrií.
 
 ![](../images/6-2/3/uvMap.jpg)
 
-### Installing the Package
+### Instalace balíčku
 
-In the previous chapter, we explored ways for panelizing a surface in Dynamo based on curves defined in the XY plane. This case study extends these concepts for more dimensions of geometry. We're going to install this package as built in order to demonstrate how it was developed. In the next section, we'll demonstrate how this package was published.
+V předchozí kapitole jsme prozkoumali způsoby panelizace povrchu v aplikaci Dynamo podle křivek definovaných v rovině XY. Tato případová studie tyto koncepty rozšiřuje o další kóty geometrie. Tento balíček nainstalujeme, tak jak byl vytvořen, abychom ukázali, jak byl vyvinut. V další části ukážeme, jak byl tento balíček publikován.
 
-In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
+V aplikaci Dynamo klikněte na nabídku \_Balíčky >Vyhledat balíček a \_vyhledejte balíček „MapToSurface“ (jedno slovo). Kliknutím na tlačítko Instalovat zahájíte stahování a přidáte balíček do své knihovny.
 
 ![](<../images/6-2/3/develop package - install package 01.jpg>)
 
-After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
+Po instalaci by měly být vlastní uzly dostupné v části Doplňky > Dynamo Primer.
 
 ![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
-With the package now installed, let's walk through how it's set up.
+S instalovaným balíčkem projdeme to, jak ho nastavit.
 
-### Custom Nodes
+### Uživatelské uzly
 
-The package we're creating uses five custom nodes that we've built for reference. Let's walk through what each node does below. Some custom nodes build off of other custom nodes, and the graphs have a layout for other users to understand in a straightforward manner.
+Balíček, který vytváříme, používá pět uživatelských uzlů, které jsme vytvořili pro referenci. Projdeme si, co každý uzel dělá níže. Některé vlastní uzly jsou sestaveny z jiných uživatelských uzlů a grafy mají rozvržení, které je pro ostatní uživatele snadno pochopitelné.
 
-This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
+Toto je jednoduchý balíček s pěti vlastními uzly. V níže uvedených krocích si stručně promluvíme o nastavení jednotlivých uživatelských uzlů.
 
 ![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 #### **PointsToSurface**
 
-This is a basic custom node, and one from which all of the other mapping nodes are based. Simply put, the node maps a point from a source surface UV coordinate to the location of the target surface UV coordinate. And since points are the most primitive geometry, from which more complex geometry is built, we can use this logic to map 2D, and even 3D geometry from one surface to another.
+Toto je základní vlastní uzel, ze kterého vychází všechny ostatní uzly mapování. Jednoduše řečeno, uzel mapuje bod ze zdrojového povrchu souřadnice UV do umístění souřadnic cílového povrchu UV. Protože jsou body nejprimitivnější geometrií, ze které je vytvořena složitější geometrie, můžeme tuto logiku použít k mapování 2D a dokonce 3D geometrie z jednoho povrchu do druhého.
 
 ![](<../images/6-2/3/develop package -pointToSurface.jpg>)
 
 #### **PolygonsToSurface**
 
-The logic of extending mapped points from 1D geometry to 2D geometry is demonstrated simply with polygons here. Notice that we have nested the _"PointsToSurface"_ node into this custom node. This way we can map the points of each polygon to the surface, and then regenerate the polygon from those mapped points. By maintaining the proper data structure (a list of lists of points), we're able to keep the polygons separate after they're reduced to a set of points.
+Logika rozšíření mapovaných bodů z 1D geometrie na 2D geometrii je zde jednoduše znázorněna pomocí polygonů. Všimněte si, že jsme do tohoto vlastního uzlu vnořili uzel _PointsToSurface_. Tímto způsobem lze namapovat body každého polygonu na povrch a poté polygon z těchto namapovaných bodů znovu vygenerovat. Zachováním správné datové struktury (seznam seznamů bodů) můžeme polygony ponechat oddělené, poté co jsou redukovány na sadu bodů.
 
 ![](<../images/6-2/3/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
-The same logic applies here as in the _"PolygonsToSurface"_ node. But instead of mapping polygonal points, we're mapping control points of a nurbs curve.
+Používá se zde stejná logika jako v uzlu _PolygonToSurface_. Místo mapování polygonálních bodů však mapujeme řídicí body křivky nurbs.
 
 ![](<../images/6-2/3/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
-This node gets a little more complex, but the concept is simple: like the _"PointsToSurface"_ node, this node maps points from one surface to another. However, it also considers points which are not on the original source surface, gets their distance to the closest UV parameter, and maps this distance to the target surface normal at the corresponding UV coordinate. This will make more sense when looking at the example files.
+Tento uzel je trochu složitější, ale koncept je jednoduchý: Podobně jako uzel _PointsToSurface_ tento uzel mapuje body z jednoho povrchu na druhý. Bere však v úvahu také body, které nejsou na původním zdrojovém povrchu, jejich vzdálenost k nejbližšímu parametru UV a mapuje tuto vzdálenost na normálu cílového povrchu v odpovídající souřadnici UV. To dává větší smysl při prohlížení vzorových souborů.
 
 ![](<../images/6-2/3/develop package -OffsetPointsToSurface.jpg>)
 
 #### **SampleSrf**
 
-This is a simple node which creates a parametric surface to map from the source grid to an undulating surface in the example files.
+Toto je jednoduchý uzel, který vytvoří parametrický povrch k mapování ze zdrojové osnovy na vlnitý povrch v souborech příkladů.
 
 ![](<../images/6-2/3/develop package -sampleSrf.jpg>)
 
-### Example Files
+### Vzorové soubory
 
-The example files can be found in the package's root folder. Click Dynamo > Preferences > Package Manager
+Vzorové soubory naleznete v kořenové složce balíčku. Klikněte na nabídku Dynamo > Předvolby > Package Manager.
 
-Next to MapToSurface, click verticle dots menu > Show Root Directory
+Vedle položky MapToSurface klikněte na nabídku se svislými tečkami > Zobrazit kořenový adresář.
 
 ![](<../images/6-2/3/develop package - example files 01.jpg>)
 
-Next, open the _"extra"_ folder, which houses all of the files in the package which are not custom nodes. This is where examples files (if they exist) are stored for Dynamo packages. The screenshots below discuss the concepts demonstrated in each example file.
+Nyní otevřete složku _extra_, která obsahuje všechny soubory v balíčku, které nejsou uživatelskými uzly. Zde jsou uloženy vzorové soubory (pokud existují) pro balíčky aplikace Dynamo. Níže uvedené snímky obrazovky popisují koncepty demonstrované v jednotlivých vzorových souborech.
 
 #### **01-PanelingWithPolygons**
 
-This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../10\_custom-nodes/10-2\_creating.md).
+Tento vzorový soubor ukazuje, jak lze pomocí uzlu _PointsToSurface_ panelizovat povrch na základě osnovy obdélníků. To by mělo vypadat povědomě, protože jsme viděli podobný pracovní postup v [předchozí kapitole](../10\_custom-nodes/10-2\_creating.md).
 
 ![](<../images/6-2/3/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
-Using a similar workflow, this exercise file shows a setup for mapping circles (or polygons representing circles) from one surface to another. This uses the _"PolygonsToSurface"_ node.
+Pomocí podobného pracovního postupu se v tomto souboru cvičení zobrazí nastavení pro mapování kružnic (nebo polygonů reprezentujících kružnice) z jednoho povrchu na druhý. Používá se uzel _PolygonsToSurface_.
 
 ![](<../images/6-2/3/develop package -sample file 02.jpg>)
 
 #### **03-NurbsCrvsAndSurface**
 
-This example file adds some complexity by working with the "NurbsCrvToSurface" node. The target surface is offset a given distance and the nurbs curve is mapped to the original target surface and the offset surface. From there, the two mapped curves are lofted to create a surface, which is then thickened. This resulting solid has an undulation that is representative of the target surface normals.
+Tento vzorový soubor přidává určitou složitost při práci s uzlem NurbsCrvToSurface. Cílový povrch je odsazen o danou vzdálenost a křivka nurbs je mapována na původní cílový povrch a odsazený povrch. Od této chvíle jsou obě mapované křivky šablonovány, aby vytvořily povrch, který bude poté zesílen. Výsledné těleso má zaoblení, které je reprezentativní pro normály cílového povrchu.
 
 ![](<../images/6-2/3/develop package -sample file 03.jpg>)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
-This example file demonstrates how to map a pleated polysurface from a source surface to a target surface. The source and target surface are a rectangular surface spanning the grid and a revolved surface, respectively.
+Tento vzorový soubor ukazuje, jak mapovat skládaný objekt polysurface ze zdrojového povrchu na cílový povrch. Zdrojový a cílový povrch je pravoúhlý povrch pokrývající rastr a orotovaný povrch.
 
 ![](<../images/6-2/3/develop package -sample file 04a.jpg>)
 
-The source polysurface mapped from the source surface to the target surface.
+Zdrojový objekt polysurface mapovaný ze zdrojového povrchu na cílový povrch.
 
 ![](<../images/6-2/3/develop package -sample file 04b.jpg>)
 
 #### **05-SVG-Import**
 
-Since the custom nodes are able to map different types of curves, this last file references an SVG file exported from Illustrator and maps the imported curves to a target surface.
+Protože vlastní uzly mohou mapovat různé typy křivek, odkazuje tento poslední soubor na soubor SVG exportovaný z aplikace Illustrator a mapuje importované křivky na cílový povrch.
 
 ![](<../images/6-2/3/develop package -sample file 05a.jpg>)
 
-By parsing through the syntax of a .svg file, curves are translated from .xml format to Dynamo polycurves.
+Analýzou syntaxe souboru .svg se oblouky převedou z formátu .xml na objekty polycurve aplikace Dynamo.
 
 ![](<../images/6-2/3/develop package -sample file 05b.jpg>)
 
-The imported curves are mapped to a target surface. This allows us to explicitly (point-and-click) design a panelization in Illustrator, import into Dynamo, and apply to a target surface.
+Importované křivky jsou mapovány na cílový povrch. To nám umožňuje přímo navrhnout panelizaci (klikáním) v aplikaci Illustrator, importovat do aplikace Dynamo a použít na cílový povrch.
 
 ![](<../images/6-2/3/develop package -sample file 05c.jpg>)

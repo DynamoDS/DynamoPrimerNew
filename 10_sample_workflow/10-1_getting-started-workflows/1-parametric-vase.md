@@ -2,103 +2,103 @@
 description: suggested exercise
 ---
 
-# Parametric Vase
+# Parametrická váza
 
-Creating a parametric vase is a great way to start learning Dynamo.
+Vytvoření parametrické vázy je skvělý způsob, jak se začít seznamovat s aplikací Dynamo.
 
-This workflow will teach you how to:
+Tento pracovní postup vás naučí, jak:
 
-* Use number sliders to control variables in your design.
-* Create and modify geometric elements using nodes.
-* Visualize design results in real-time.
+* Řídit proměnné v návrhu pomocí posuvníků čísel.
+* Vytvářet a upravovat geometrické prvky pomocí uzlů.
+* Vizualizovat výsledky návrhu v reálném čase.
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 
-## Defining Our Objectives
+## Definování cílů
 
-Before jumping into dynamo let's conceptually design our vase.
+Než začneme pracovat v aplikaci Dynamo, navrhněme koncepčně naši vázu.
 
-Let's say we are going to design a clay vase that takes into account manufacturing practices used by ceramists. Ceramists normally use a pottery wheel to fabricate cylindrical vases. Then, by applying pressure on various heights of the vase they can alter the shape of the vase and create varied designs.
+Řekněme, že chceme navrhnout hliněnou vázu, která zohledňuje postupy používané při výrobě keramiky. Keramici obvykle pomocí hrnčířského kruhu vyrobí válcovou vázu. Tlakem na vázu v různé výšce pak mohou měnit její tvar a vytvářet různé vzory.
 
-We would use a similar methodology to define our vase. We will create 4 circles at different heights and radii and we will then create a surface by lofting those circles.
+Podobnou metodiku použijeme k definování naší vázy. Vytvoříme 4 kružnice o různých poloměrech v různých výškách a poté vytvoříme povrch šablonováním těchto kružnic.
 
 ![](../images/10-1/1/vase2.png)
 
-## Getting Started
+## Začínáme
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-We need the nodes that will represent the sequence of actions Dynamo will execute. Since we know we are trying to create a circle, let's start by locating a node that does so. Use the **Search field** or browse through the **Library** to find the **Circle.ByCenterPointRadius** node and add it to the Workspace
+Potřebujeme uzly, které představují posloupnost akcí, které budou aplikací Dynamo provedeny. Protože víme, že se pokoušíme vytvořit kružnici, začneme vyhledáním uzlu, který to dělá. Pomocí **vyhledávacího pole** nebo procházením **knihovny** vyhledejte uzel **Circle.ByCenterPointRadius** a přidejte jej do pracovního prostoru.
 
 ![](../images/10-1/1/vase8.png)
 
-> 1. Search > "Circle..."
-> 2. Select > "ByCenterPointRadius"
-> 3. Node will appear in workspace
+> 1. Vyhledejte > Circle.
+> 2. Vyberte > ByCenterPointRadius.
+> 3. V pracovním prostoru se zobrazí uzel.
 
-Let's take a closer look at this node. On the left side, you have the node's inputs (_centerPoint_ and _radius_) and on the right side, you have the node's output (Circle). Notice that the outputs have a light blue line. This means that the input has a default value. To get more information about the input hover over its name. The _radius_ input needs a double input and has a default value of 1.
+Podívejme se na tento uzel blíže. Na levé straně jsou vstupy uzlu (_centerPoint_ a _radius_) a na pravé straně je výstup uzlu (circle). Všimněte si, že vstupy jsou označeny světle modrou čárou. To znamená, že vstup má výchozí hodnotu. Chcete-li získat další informace o vstupu, přesuňte ukazatel myši nad jeho název. Vstup _radius_ vyžaduje dvojitý vstup a jeho výchozí hodnota je 1.
 
 ![](../images/10-1/1/vase10.png)
 
-We will leave the default value of _centerPoint_ but add a **Number Slider** to control the radius. As we did with the **Circle.ByCenterPointRadius** node, use the library to search for **Number Slider** and add it to your graph.
+Ponecháme výchozí hodnotu _centerPoint_, ale přidáme uzel **Number Slider**, který nám umožní nastavit poloměr. Stejně jako u uzlu **Circle.ByCenterPointRadius** použijte knihovnu k vyhledání uzlu **Number Slider** a přidejte jej do grafu.
 
-This node is a bit different than our previous node as it contains a slider. You can use the interface to change the output value of the slider.
+Tento uzel se trochu liší od předchozího uzlu, protože obsahuje posuvník. Pomocí rozhraní můžete změnit výstupní hodnotu posuvníku.
 
 ![](<../images/10-1/1/vase13 (1).gif>)
 
-The slider can be configured using the dropdown button at the left of the node. Let's limit the slider to a maximum value of 15.
+Posuvník lze konfigurovat pomocí rozevíracího tlačítka v levé části uzlu. Omezme posuvník na maximální hodnotu 15.
 
 ![](../images/10-1/1/vase11.png)
 
-Let's place it on the left of our **Circle.ByCenterPointRadius** node and connect both nodes by selecting the **Number Slider** output and connecting it to the Radius input.
+Nyní posuvník umístíme nalevo od uzlu **Circle.ByCenterPointRadius** a propojíme oba uzly výběrem výstupu **Number Slider** a jeho připojením ke vstupu Radius.
 
 ![](../images/10-1/1/vase12.png)
 
-Let's also change the Number Slider name to "Top Radius" by double-clicking on the node's name.
+Dále změňte název posuvníku čísla: dvakrát klikněte na název uzlu a zadejte Top Radius (Horní poloměr).
 
 ![](../images/10-1/1/vase14.png)
 
-## Next steps
+## Další postup
 
-Let's continue adding some nodes and connections to our logic to define our vase.
+Pokračujte v přidávání uzlů a jejich připojením k naší logice, abychom definovali vázu.
 
-### Creating Circles of Different Radii
+### Vytváření kružnic s různými poloměry
 
-Let's copy these nodes 4 times so that these circles define our surface, change the Number Slider's names as shown below.
+Zkopírujte tyto uzly 4krát, aby kružnice definovaly povrch, a změňte názvy posuvníku čísel, jak je znázorněno níže.
 
 ![](<../images/10-1/1/vase4 (1) (1).png>)
 
-> 1. Circles are created by a center point and a radius
+> 1. Kružnice jsou vytvořeny pomocí středu a poloměru.
 
-### Moving Circles Through the Vase Height
+### Přesun kružnic do různých výšek vázy
 
-We are missing a key parameter to our vase, its height. In order to control the vase's height, we create another number slider. We also add a **Code Block** node. Code blocks can help as add personalized code snippets to our workflow. We will use the code block to multiply the height slider by different factors so that we can position our circles along the vase's height.
+Chybí nám klíčový parametr naší vázy: její výška. Abychom mohli ovládat výšku vázy, vytvoříme další posuvník čísel. Přidáme také uzel **Code Block**. Bloky kódu umožňují do pracovního postupu přidat vlastní fragmenty kódu. Pomocí bloku kódu vynásobíme posuvník výšky různými koeficienty, abychom mohli umístit kružnice podél výšky vázy.
 
 ![](<../images/10-1/1/vase15 (1).png>)
 
-We then use a **Geometry.Translate** node to place circles at the desired height. Since we want to distribute our circles through the vase we use code blocks to multiply the height parameter by a factor.
+Poté pomocí uzlu **Geometry.Translate** umístíme kružnice do požadované výšky. Protože chceme kružnice distribuovat podél výšky vázy, použijeme bloky kódu k vynásobení parametru výšky koeficientem.
 
 ![](../images/10-1/1/vase5.png)
 
-> 2\. Circles are translated (moved) by a variable in the z axis.
+> 2\. Kružnice jsou převedeny (posunuty) pomocí proměnné v ose Z.
 
-### Creating the Surface
+### Vytvoření povrchu
 
-In order to create a surface using the **Surface.ByLoft** node we need to combine all of our translated circles into a list. We use the **List.Create** to combine all of our circles into a single list, and then finally output this list to the **Surface.ByLoft** node to view results.
+Abychom vytvořili povrch pomocí uzlu **Surface.ByLoft**, je nutné spojit všechny převedené kružnice do seznamu. Pomocí uzlu **List.Create** spojíme všechny kružnice do jednoho seznamu a nakonec tento seznam odešleme do uzlu **Surface.ByLoft**, aby se zobrazily výsledky.
 
-Let's also turn off the preview in other nodes to only display the Surface.ByLoft display.
+Vypněte také náhled v ostatních uzlech, aby se zobrazilo pouze zobrazení uzlu Surface.ByLoft.
 
 ![](<../images/10-1/1/vase6 (1) (1).png>)
 
-> 3\. A surface is created by lofting the translated circles.
+> 3\. Povrch je vytvořen šablonováním převedených kružnic.
 
-## Results
+## Výsledky
 
-Our workflow is ready! We can now use the **Number Sliders** we defined in our script to create different vase designs.
+Náš pracovní postup je připraven! Nyní můžete pomocí **posuvníků čísel** definovaných ve skriptu vytvářet různé návrhy váz.
 
 ![](<../images/10-1/1/vase1 (3).gif>)
 

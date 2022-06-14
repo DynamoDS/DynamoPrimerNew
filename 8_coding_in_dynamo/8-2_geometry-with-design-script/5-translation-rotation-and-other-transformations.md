@@ -1,10 +1,10 @@
-# Translation, Rotation, and Other Transformations
+# Posunutí, otočení a další transformace
 
-Certain geometry objects can be created by explicitly stating x, y, and z coordinates in three-dimensional space. More often, however, geometry is moved into its final position using geometric transformations on the object itself or on its underlying CoordinateSystem.
+Určité geometrické objekty je možné vytvářet přímým zadáním souřadnic X, Y a Z v trojrozměrném prostoru. Geometrie se však častěji do konečné pozice přesunují pomocí geometrických transformací samotného objektu nebo souvisejícího objektu CoordinateSystem.
 
-### Translation
+### Posunutí
 
-The simplest geometric transformation is a translation, which moves an object a specified number of units in the x, y, and z directions.
+Nejjednodušší geometrickou transformací je posunutí, čímž se objekt posune o zadaný počet jednotek ve směru X, Y a Z.
 
 ![](../images/8-2/5/Transformations\_01.png)
 
@@ -18,9 +18,9 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### Rotation
+### Otočení
 
-While all objects in Dynamo can be translated by appending the _.Translate_ method to the end of the object’s name, more complex transformations require transforming the object from one underlying CoordinateSystem to a new CoordinateSystem. For instance, to rotate an object 45 degrees around the x axis, we would transform the object from its existing CoordinateSystem with no rotation, to a CoordinateSystem which had been rotated 45 degrees around the x axis with the _.Transform_ method:
+Ačkoliv lze všechny objekty v aplikaci Dynamo posunout připojením metody _.Translate_ na konec názvu objektu, pro složitější transformace je nutné provést transformaci souvisejícího objektu CoordinateSystem na nový. Například pro otočení objektu o 45 stupňů okolo osy Z je nutné pomocí metody _.Transform_ provést transformaci existujícího objektu CoordinateSystem bez otočení na objekt CoordinateSystem s otočením 45 stupňů kolem osy X:
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,9 +38,9 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Scale
+### Měřítko
 
-In addition to being translated and rotated, CoordinateSystems can also be created scaled or sheared. A CoordinateSystem can be scaled with the _.Scale_ method:
+Kromě posunutí a otočení lze u objektů CoordinateSystem také měnit měřítko nebo provádět kolmý posun. Měřítko objektu CoordinateSystem lze změnit metodou _.Scale_:
 
 ![](../images/8-2/5/Transformations\_03.png)
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Sheared CoordinateSystems are created by inputting non-orthogonal vectors into the CoordinateSystem constructor.
+Objekty CoordinateSystem s kolmým posunem lze vytvořit zadáním neortogonálních vektorů jako vstup konstruktoru CoordinateSystem.
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -74,18 +74,18 @@ cube = Cuboid.ByLengths(CoordinateSystem.Identity(),
 new_curves = cube.Transform(old_cs, new_cs);
 ```
 
-Scaling and shearing are comparatively more complex geometric transformations than rotation and translation, so not every Dynamo object can undergo these transformations. The following table outlines which Dynamo objects can have non-uniformly scaled CoordinateSystems, and sheared CoordinateSystems.
+Změny měřítka a kolmý posun jsou mnohem složitější geometrické transformace než otočení nebo posunutí, proto je na některé objekty aplikace Dynamo nemusí být možné použít. Následující tabulka uvádí, u kterých objektů aplikace Dynamo lze provést nerovnoměrnou změnu měřítka nebo kolmý posun u jejich objektů CoordinateSystem.
 
-| Class        | Non-Uniformly Scaled CoordinateSystem | Sheared CoordinateSystem |
+| Třída | CoordinateSystem s nerovnoměrně změněným měřítkem | CoordinateSystem s kolmým posunem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc          | No                                    | No                       |
-| NurbsCurve   | Yes                                   | Yes                      |
-| NurbsSurface | No                                    | No                       |
-| Circle       | No                                    | No                       |
-| Line         | Yes                                   | Yes                      |
-| Plane        | No                                    | No                       |
-| Point        | Yes                                   | Yes                      |
-| Polygon      | No                                    | No                       |
-| Solid        | No                                    | No                       |
-| Surface      | No                                    | No                       |
-| Text         | No                                    | No                       |
+| Oblouk | Ne | Ne |
+| NurbsCurve | Ano | Ano |
+| NurbsSurface | Ne | Ne |
+| Kružnice | Ne | Ne |
+| Úsečka | Ano | Ano |
+| Rovina | Ne | Ne |
+| Bod | Ano | Ano |
+| Polygon | Ne | Ne |
+| Těleso | Ne | Ne |
+| Plocha | Ne | Ne |
+| Text | Ne | Ne |

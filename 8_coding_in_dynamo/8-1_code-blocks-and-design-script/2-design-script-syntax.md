@@ -1,142 +1,142 @@
-# DesignScript Syntax
+# Syntaxe DesignScript
 
-You may have noticed a common theme in the names of nodes in Dynamo: each node uses a _"."_ syntax without spaces. This is because the text at the top of each node represents the actual syntax for scripting, and the _"."_ (or _dot notation_) separates an element from the possible methods we can call. This creates an easy translation from visual scripting to text-based scripting.
+Možná jste si všimli běžného tématu v názvech uzlů v aplikaci Dynamo: Každý uzel používá syntax se znakem _"."_ bez mezer. Je tomu tak proto, že text v horní části každého uzlu představuje skutečnou syntaxi pro skriptování a znak _„.“_ (neboli _tečková notace_) oddělí prvek od možných metod, které je možné volat. Toto umožňuje snadný přesun od vizuálního skriptování k textovému.
 
 ![NodeNames](../images/8-1/2/apple.jpg)
 
-As a general analogy for the dot notation, how can we deal with a parametric apple in Dynamo? Below are a few methods we'll run on the apple before deciding to eat it. (Note: these are not actual Dynamo methods):
+Jak v rámci obecné analogie tečkové notace postupovat u parametrického jablka v aplikaci Dynamo? Níže je uvedeno několik metod, které použijeme na jablko než se rozhodneme, zda je sníst. (Poznámka: Nejedná se o skutečné metody aplikace Dynamo):
 
-| Human Readible                 | Dot Notation              | Output |
+| Čitelné pro člověka | Tečková notace | Výstup |
 | ------------------------------ | ------------------------- | ------ |
-| What color is the apple?       | Apple.color               | red    |
-| Is the apple ripe?             | Apple.isRipe              | true   |
-| How much does the apple weigh? | Apple.weight              | 6 oz.  |
-| Where did the apple come from? | Apple.parent              | tree   |
-| What does the apple create?    | Apple.children            | seeds  |
-| Is this apple locally grown?   | Apple.distanceFromOrchard | 60 mi. |
+| Jakou barvu má jablko? | Jablko.barva | červená |
+| Je jablko zralé? | Jablko.jeZrale | ano |
+| Kolik jablko váží? | Jablko.vaha | 6 oz. |
+| Z čeho jablko pochází? | Jablko.rodic | strom |
+| Co to jablko vytváří? | Jablko.produkty | semena |
+| Bylo toto jablko vypěstováno zde? | Jablko.vzdalenostOdSadu | 60 mi. |
 
-I don't know about you, but judging by the outputs in the table above, this looks like one tasty apple. I think I'll _Apple.eat()_ it.
+Nevím, jak ty, ale soudě podle výstupů v tabulce výše, to vypadá, že jablko je chutné. Myslím, že provedu operaci _Jablko.snist()_.
 
-### Dot Notation in Code Block
+### Tečková notace v bloku kódu
 
-With the apple analogy in mind, let's look at _Point.ByCoordinates_ and show how we can create a point using the code block.
+S ohledem na analogii jablka se podívejte na uzel _Point.ByCoordinates_ a určete, jak můžeme vytvořit bod pomocí bloku kódu.
 
-The _code block_ syntax `Point.ByCoordinates(0,10);` gives the same result as a _Point.ByCoordinates_ node in Dynamo, except we're able to create a point using one node. This is more efficient than the connecting a separate node into _"X"_ and _"Y"_.
+Syntaxe _bloku kódu_ `Point.ByCoordinates(0,10);` předává stejný výsledek jako uzel _Point.ByCoordinates_ v aplikaci Dynamo, s výjimkou toho, že je možné vytvořit bod pomocí jednoho uzlu. Je to mnohem efektivnější než připojení dvou samostatných uzlů k hodnotám _„X“_ a _„Y“_.
 
 ![](<../images/8-1/2/codeblock dot notation.jpg>)
 
-> 1. By using _Point.ByCoordinates_ in the code block, we are specifying the inputs in the same order as the out-of-the-box node _(X,Y)_.
+> 1. Pokud použijete uzel _Point.ByCoordinates_ v bloku kódu, určíte vstupy ve stejném pořadí jako uzel ve výchozím natavení _(X,Y)_.
 
-### Calling Nodes - Create, Actions, Query
+### Volání uzlů – Tvorba, Akce, Dotaz
 
-You can call any regular node in the library through a Code Block as long as the node isn’t a special _“UI” node_: those with a special user interface feature. For instance, you can call _Circle.ByCenterPointRadius_, but it wouldn’t make much sense to call a _Watch 3D_ node.
+Jakýkoliv běžný uzel v knihovně je možné volat prostřednictvím bloku kódu, pokud uzel není speciálním _„uzlem uživatelského rozhraní“_: uzly se speciální funkcí uživatelského rozhraní. Můžete například volat uzel _Circle.ByCenterPointRadius_, ale nemělo by smysl volat uzel _Watch 3D_.
 
-Regular nodes (most of your library), generally come in three types. You’ll find that the library is organized with these categories in mind. Methods, or nodes, of these three types are treated differently when invoked within a Code Block.
+Běžné uzly (většina knihovny) jsou obvykle tří typů. Můžete vidět, že knihovna je organizována s ohledem na tyto kategorie. Metody nebo uzly těchto tří typů jsou při volání v bloku kódu zpracovávány odlišně.
 
 ![](<../images/8-1/2/action create query category.jpg>)
 
-> 1. **Create** - Create (or construct) something
-> 2. **Action** - Perform an action on something
-> 3. **Query** - Get a property of something that already exists
+> 1. **Tvorba** – něco se vytvoří (nebo zkonstruuje)
+> 2. **Akce** – provede u položky nějakou akci
+> 3. **Dotaz** – získá vlastnost položky, která již existuje
 
-#### Create
+#### Tvorba
 
-The "Create" category will construct geometry from scratch. We input values in the code block from left-to-right. These inputs are in the same order as the inputs on the node from top-to-bottom.
+Kategorie „Tvorba“ vytvoří geometrii od začátku. V bloku kódu se zadají vstupní hodnoty zleva doprava. Tyto vstupy jsou ve stejném pořadí jako vstupy uzlu shora dolů.
 
-Comparing the _Line.ByStartPointEndPoint_ node and the corresponding syntax in the code block, we get the same results.
+Pokud použijete uzel _Line.ByStartPointEndPoint_ a porovnáte výsledek s odpovídající syntaxí v bloku kódu, zjistíte, že výsledky jsou stejné.
 
 ![](../images/8-1/2/create.jpg)
 
-#### Action
+#### Akce
 
-An action is something you do to an object of that type. Dynamo uses _dot notation_, common to many coding languages, to apply an action to a thing. Once you have the thing, type a dot then the name of the action. The action-type method’s input is placed in parentheses just like create-type methods, only you don’t have to specify the first input you see on the corresponding node. Instead, we specify the element upon which we are performing the action:
+Akce je něco, co se provede u objektu daného typu. Aplikace Dynamo používá k provedení akce u určité položky _tečkovou notaci_, která je běžná v mnoha jazycích kódů. Jakmile zadáte název položky, zadejte tečku a poté název akce. Vstup metody typu Akce je umístěn v závorkách stejně jako u metody typu Tvorba, jen není třeba určovat první vstup, který uvidíte na odpovídajícím uzlu. Místo toho určíte, u kterého prvku se akce provede:
 
 ![](<../images/8-1/2/DesignScript - action.jpg>)
 
-> 1. The **Point.Add** node is an action-type node, so the syntax works a little differently.
-> 2. The inputs are (1) the _point_, and (2) the _vector_ to add to it. In a **Code Block**, we've named the point (the thing) _“pt”_. To add a vector named \*“vec” \*to _“pt”_, we would write _pt.Add(vec)_, or: thing, dot, action. The Add action only has one input, or all the inputs from the **Point.Add** node minus the first one. The first input for the **Point.Add** node is the point itself.
+> 1. Uzel **Point.Add** je uzel typu Akce, takže syntaxe funguje trochu jinak.
+> 2. Vstupy jsou (1) _bod_ a (2) _vektor_, které se mají přidat. V **bloku kódu** jsme bod (položku) pojmenovali výrazem _„pt“_. Chcete-li přidat vektor s názvem \*„vec“ \*k bodu _„pt“_, zadejte výraz _pt.Add(vec)_ neboli položka, tečka, akce. Akce Add má pouze jeden vstup nebo všechny vstupy z uzlu **Point.Add **kromě prvního. První vstup uzlu **Point.Add **je samotný bod.
 
-#### Query
+#### Dotaz
 
-Query-type methods get a property of an object. Since the object itself is the input, you don’t have to specify any inputs. No parentheses required.
+Metody typu Dotaz získají vlastnost objektu. Vzhledem k tomu, že objekt samotný je vstupem, není třeba určovat žádné vstupy. Nejsou třeba žádné závorky.
 
 ![](../images/8-1/2/query.jpg)
 
-### How About Lacing?
+### Jak je to s vázáním?
 
-Lacing with nodes is somewhat different from lacing with code block. With nodes, the user right clicks on the node and selects the lacing option to perform. With code block, the user has much more control as to how the data is structured. The code block shorthand method uses _replication guides_ to set how several one-dimensional lists should be paired. Numbers in angled brackets "<>" define the hierarchy of the resulting nested list: <1>,<2>,<3>, etc.
+Vázání na uzly se poněkud liší od vázání na blok kódu. U uzlů klikne uživatel pravým tlačítkem na uzel a vybere možnost vázání, kterou chce provést. Díky bloku kódu má uživatel mnohem větší kontrolu nad tím, jak jsou data strukturována. Metoda zkratky bloku kódu používá _vodítka replikací_ k nastavení způsobu, jakým by mělo být párováno několik jednorozměrných seznamů. Čísla v šikných závorkách „<>“ definují hierarchii výsledného vnořeného seznamu: <1>,<2>,<3> atd.
 
 ![](<../images/8-1/2/DesignScript - lacing.jpg>)
 
-> 1. In this example, we use a shorthand to define two ranges (more on shorthand in the following section of this chapter). In short, `0..1;` is equivalent to `{0,1}` and `-3..-7`is equivalent to `{-3,-4,-5,-6,-7}`. The result gives us lists of 2 x-values and 5 y-values. If we don’t use replication guides with these mismatched lists, we get a list of two points, which is the length of the shortest list. Using replication guides, we can find all of the possible combinations of 2 and 5 coordinates (or, a Cross Product).
-> 2. Using the syntax **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` we get _two_ lists with _five_ items in each list.
-> 3. Using the syntax **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` we get _five_ lists with _two_ items in each list.
+> 1. V tomto příkladu definujeme dva rozsahy pomocí zkratky (více o zkratkách naleznete v následující části této kapitoly). Stručně řečeno, `0..1;` je ekvivalentní `{0,1}` a `-3..-7` je ekvivalentní `{-3,-4,-5,-6,-7}`. Výsledkem je seznam 2 hodnot X a 5 hodnot Y. Pokud se nepoužijí vodítka replikací společně s těmito neshodujícími se seznamy, vznikne seznam dvou bodů, který má délku nejkratšího seznamu. Pomocí vodítek replikací je možné najít všechny možné kombinace 2 a 5 souřadnic (neboli kartézský součin).
+> 2. Pomocí syntaxe **Point.ByCoordinates**`(x_vals<1>,y_vals<2>);` získáte _dva_ seznamy s _pěti_ položkami v každém seznamu.
+> 3. Pomocí syntaxe **Point.ByCoordinates**`(x_vals<2>,y_vals<1>);` získáte _pět_ seznamů s _dvěma_ položkami v každém seznamu.
 
-With this notation, we can also specify which list will be dominant: 2 lists of 5 things or 5 lists of 2 things. In the example, changing the order of the replication guides makes the result a list of rows of points or a list of columns of points in a grid.
+Pomocí této notace můžeme také určit, který seznam bude dominantní: 2 seznamy 5 položek nebo 5 seznamů 2 položek. V tomto příkladu změna pořadí vodítek replikací vytvoří seznam řádků bodů v osnově nebo seznam sloupců bodů v osnově.
 
-### Node to Code
+### Uzel na kód
 
-While the code block methods above may take some getting used to, there is a feature in Dynamo called "Node to Code" which will make the process easier. To use this feature, select an array of nodes in your Dynamo graph, right-click on the canvas and select "Node to Code". Dynamo condenses these nodes into a code block, with all of the inputs and outputs! Not only is this a great tool for learning code block, but it also allows you to work with a more efficient and parametric Dynamo graph. We'll conclude the exercise below by using "Node to Code", so don't miss it.
+Zatímco na výše uvedené metody bloku kódu si možná budete chvíli zvykat, v aplikace Dynamo existuje i funkce s názvem „Uzel na blok“ která celý proces usnadní. Chcete-li tuto funkci použít, vyberte pole uzlů v grafu aplikace Dynamo, klikněte pravým tlačítkem na kreslicí plochu a vyberte položku „Uzel na kód“. Aplikace Dynamo tyto uzly zhustí do bloku kódu včetně všech vstupů a výstupů. Nejenže se jedná o skvělý nástroj k výuce práce s blokem kódu, ale tato funkce také umožňuje práci s efektivnějším a parametrickým grafem aplikace Dynamo. Cvičení je zakončeno využitím funkce „Uzel na kód“, nepropásněte tuto část.
 
 ![](<../images/8-1/2/DesignScript - node to code.jpg>)
 
-## Exercise: Surface Attractor
+## Cvičení: Atraktor povrchu
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/8-1/2/Dynamo-Syntax_Attractor-Surface.dyn" %}
 
-To show the power of code block, we are going to translate an existing attractor field definition into code block form. Working with an existing definition demonstrates how code block relates to visual scripting, and is helpful for learning DesignScript syntax.
+Nyní demonstrujeme sílu bloku kódu převedením existující definice pole atraktoru do tvaru bloku kódu. Práce s existující definicí ukazuje, jak blok kódu souvisí s vizuálním skriptem, a je užitečná k seznámení se se syntaxí jazyka DesignScript.
 
-Begin by recreating the definition in the image above (or by opening the sample file).
+Začněte znovuvytvořením definice na obrázku výše (nebo otevřením vzorového souboru).
 
 ![](<../images/8-1/2/DesignScript - exercise - 01.jpg>)
 
-> 1. Notice that the lacing on **Point.ByCoordinates** has been set to _Cross Product_.
-> 2. Each point in a grid is moved up in the Z direction based on its distance to the reference point.
-> 3. A surface is recreated and thickened, creating a bulge in the geometry relative to the distance to the reference point.
+> 1. Všimněte si, že vázání uzlu **Point.ByCoordinates** bylo nastaveno na hodnotu _Kartézský součin_.
+> 2. Každý bod v osnově se posune nahoru ve směru Z podle jeho vzdálenosti od referenčního bodu.
+> 3. Povrch je znovu vytvořen a zesílen, čímž se vytvoří vyboulení v geometrii relativně ke vzdálenosti od referenčního bodu.
 
 ![](<../images/8-1/2/DesignScript - exercise - 02.jpg>)
 
-> 1. Starting from the beginning, let's define the reference point first: **Point.ByCoordinates**`(x,y,0);` We use the same **Point.ByCoordinates** syntax as is specified on the top of the reference point node.
-> 2. The variables _x_ and _y_ are inserted into the **Code Block** so that we may update these dynamically with sliders.
-> 3. Add some _sliders_ to the **Code Block** inputs which range from -50 to 50. This way, we can span across the default Dynamo grid.
+> 1. Na začátku nejprve definujeme referenční bod: **Point.ByCoordinates**`(x,y,0);`. Použijeme stejnou syntaxi **Point.ByCoordinates**, jaká je zadána v horní části uzlu referenčního bodu.
+> 2. Proměnné _x_ a _y_ se vloží do **bloku kódu**, aby bylo možné je dynamicky aktualizovat pomocí posuvníků.
+> 3. Přidejte _posuvníky_ ke vstupům **bloku kódu**, které se pohybují v rozsahu od -50 do 50. Tímto zajistíme dosah přes celou výchozí osnovu aplikace Dynamo.
 
 ![](<../images/8-1/2/DesignScript - exercise - 03.jpg>)
 
-> 1. In the second line of the **Code Block**, we define a shorthand to replace the number sequence node: `coordsXY = (-50..50..#11);`We'll discuss this more in the next section. For now, notice that this shorthand is equivalent to the **Number Sequence** node in the visual script.
+> 1. Ve druhém řádku **bloku kódu** definujeme zkratku, která nahradí uzel posloupnosti čísel: `coordsXY = (-50..50..#11);`. Tímto se budeme dále zabývat v další části. V tuto chvíli si všimněte, že tato zkratka odpovídá uzlu **Number Sequence** ve vizuálním skriptu.
 
 ![](<../images/8-1/2/DesignScript - exercise - 04.jpg>)
 
-> 1. Now, we want to create a grid of points from the _coordsXY_ sequence. To do this, we want to use the **Point.ByCoordinates** syntax, but also need to initiate a _Cross Product_ of the list in the same manner that we did in the visual script. To do this, we type the line: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);` The angled brackets denote the cross product reference.
-> 2. Notice in the **Watch3D** node that we have a grid of points across the Dynamo grid.
+> 1. Nyní chceme vytvořit osnovu z bodů v posloupnosti položek _coordsXY_. Za tímto účelem je vhodné použít syntaxi **Point.ByCoordinates**, ale také je nutné spustit _Kartézský součin_ seznamu stejným způsobem, jako to bylo provedeno ve vizuálním skriptu. Zadejte následující řádek: `gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);`. Šikmé závorky označují odkaz na kartézský součin.
+> 2. Všimněte si, že v uzlu **Watch3D** se nachází osnova bodů přes celou osnovu aplikace Dynamo.
 
 ![](<../images/8-1/2/DesignScript - exercise - 05.jpg>)
 
-> 1. Now for the tricky part: We want to move the grid of points up based on their distance to the reference point. First, let's call this new set of points _transPts_. And since a translation is an action on an existing element, rather than using `Geometry.Translate...` , we use `gridPts.Translate`
-> 2. Reading from the actual node on the canvas, we see that there are three inputs. The geometry to translate is already declared because we are performing the action on that element (with _gridPts.Translate_). The remaining two inputs will be inserted into the parentheses of the function: direction and _distance_.
-> 3. The direction is simple enough, we use a `Vector.ZAxis()` to move vertically.
-> 4. The distance between the reference point and each grid point still needs to be calculated, so we do this as an action to the reference point in the same manner: `refPt.DistanceTo(gridPts)`
-> 5. The final line of code gives us the translated points: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
+> 1. Nyní nastává ta náročná část: Je třeba přesunout osnovu bodů nahoru podle vzdáleností bodů od referenčního bodu. Nejprve pojmenujte tuto novou sadu bodů _transPts_. A vzhledem k tomu, že převod je akce na existujícím prvku, použijte místo výrazu `Geometry.Translate...` výraz `gridPts.Translate`.
+> 2. Při čtení ze skutečného uzlu na kreslicí ploše je vidět, že obsahuje tři vstupy. Geometrie, kterou chcete převést, je již deklarována, protože na tomto prvku provádíme akci (pomocí metody _gridPts.Translate_). Zbývající dva vstupy budou vloženy do závorek funkce: směr a _vzdálenost_.
+> 3. Směr je jednoduchý vstup, k jeho vertikálnímu posunutí se použije výraz `Vector.ZAxis()`.
+> 4. Dále je třeba vypočítat vzdálenost mezi referenčním bodem a každým bodem osnovy. Toto provedeme stejným způsobem jako akci u referenčního bodu: `refPt.DistanceTo(gridPts)`.
+> 5. Poslední řádek kódu nám poskytuje převedené body: `transPts=gridPts.Translate(Vector.ZAxis(),refPt.DistanceTo(gridPts));`
 
 ![](<../images/8-1/2/DesignScript - exercise - 06.jpg>)
 
-> 1. We now have a grid of points with the appropriate data structure to create a Nurbs Surface. We construct the surface using `srf = NurbsSurface.ByControlPoints(transPts);`
+> 1. Nyní máme osnovu bodů s vhodnou datovou strukturou k vytvoření povrchu Nurbs. Vytvoříme povrch pomocí `srf = NurbsSurface.ByControlPoints(transPts);`.
 
 ![](<../images/8-1/2/DesignScript - exercise - 07.jpg>)
 
-> 1. And finally, to add some depth to the surface, we construct a solid using `solid = srf.Thicken(5);` In this case we thickened the surface by 5 units in the code, but we could always declare this as a variable (calling it thickness for example) and then control that value with a slider.
+> 1. A nakonec, abychom povrchu dodali trochu hloubky, vytvoříme těleso pomocí výrazu `solid = srf.Thicken(5);`. V tomto případě jsme v kódu zesílili povrch o 5 jednotek, tuto hodnotu bychom však mohli deklarovat jako proměnnou (kterou můžete nazvat například tloušťka) a poté řídit její hodnotu pomocí posuvníku.
 
-#### Simplify the Graph with "Node to Code"
+#### Zjednodušení grafu pomocí možnosti „Uzel na kód“
 
-The "Node to Code" feature automates the entire exercise that we just completed with the click of a button. Not only is this powerful for creating custom definitions and reusable code blocks, but it is also a really helpful tool to learn how to script in Dynamo:
+Funkce „Uzel na kód“ automatizuje celé toto právě dokončené cvičení pomocí kliknutí na tlačítko. Nejenže se jedná o výkonné řešení tvorby vlastních definic a opakovaně použitelných bloků kódu, ale také je to velmi užitečný nástroj k výuce skriptování v aplikaci Dynamo:
 
 ![](<../images/8-1/2/DesignScript - exercise - 08.jpg>)
 
-> 1. Start with the existing visual script from step 1 of the exercise. Select all of the nodes, right click on the canvas, and select _"Node to Code"_. Simple as that.
+> 1. Začněte existujícím vizuálním skriptem z kroku 1 tohoto cvičení. Vyberte všechny uzly, klikněte pravým tlačítkem na kreslicí plochu a vyberte možnost _„Uzle na kód“_. Až tak jednoduché to je.
 
-Dynamo has automated a text based version of the visual graph, lacing and all. Test this out on your visual scripts and release the power of the code block!
+Aplikace Dynamo má automatizovanou textovou verzi vizuálního grafu, vázání a dalších. Vyzkoušejte si tuto funkci u vašich vizuálních skriptů a využijte výkon bloku kódu.
 
 ![](<../images/8-1/2/DesignScript - exercise - 09.jpg>)

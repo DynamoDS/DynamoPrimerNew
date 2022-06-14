@@ -1,8 +1,8 @@
-# Essential Nodes & Concepts
+# Základní uzly a koncepce
 
-In this section, we introduce the essential Nodes available in the Dynamo Library that will help you create your own visual program like a pro.
+V této části představujeme základní uzly dostupné v knihovně aplikace Dynamo, které vám pomohou vytvořit váš vlastní vizuální program v profesionální kvalitě.
 
-* [Geometry for Computational Design](5-2\_geometry-for-computational-design/): How do I work with geometric elements in Dynamo? Explore multiple ways to create simple or complex geometries from primitives.
-* [The Building Blocks of Programs:](5-3\_the-building-blocks-of-programs/) What is "Data" and what are some fundamental types I can start using in my programs? Also, learn more about incorporating math and logic operations in your design workflow.
-* [Designing with Lists: ](5-4\_designing-with-lists/)How do I manage and coordinate my data structures? Understand more about the concept of List and use it to manage your design data efficiently.
-* [Dictionaries in Dynamo: ](5-5\_dictionaries-in-dynamo/)What are Dictionaries? Find out how to use dictionaries to look up specific data and values from existing results.
+* [Geometrie pro výpočetní návrh:](5-2\_geometry-for-computational-design/) Jak se v aplikaci Dynamo pracuje s geometrickými prvky? Prozkoumejte více způsobů vytváření jednoduchých nebo složitých geometrií ze základních těles.
+* [Stavební bloky programů:](5-3\_the-building-blocks-of-programs/) Co jsou „data“ a jaké základní typy se používají v programech? Dozvíte se také další informace o začlenění matematických a logických operací do pracovního postupu návrhu
+* [Práce se seznamy:](5-4\_designing-with-lists/) Jak spravovat a uspořádat datové struktury? Získejte další informace o konceptu seznamu a použijte jej k efektivní správě dat návrhu.
+* [Slovníky v aplikaci Dynamo:](5-5\_dictionaries-in-dynamo/) Co jsou slovníky? Zjistěte, jak používat slovníky k vyhledávání specifických dat a hodnot z existujících výsledků.

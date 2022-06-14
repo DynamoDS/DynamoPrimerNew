@@ -1,52 +1,52 @@
-# Points
+# Body
 
-## Points in Dynamo
+## Body v aplikaci Dynamo
 
-### What is a Point?
+### Co je to bod?
 
-A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
+[Bod](5-3\_points.md#point-as-coordinates) není definován ničím jiným než jednou nebo více hodnotami, které se nazývají souřadnice. Počet hodnot souřadnic, které je potřeba definovat, závisí na souřadnicovém systému nebo kontextu, ve kterém se bod nachází.
 
-### 2D & 3D Point
+### 2D a 3D bod
 
-The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates \[X,Y,Z] (3D Point in Dynamo).
+Nejběžnější typ bodu v aplikaci Dynamo existuje v našem trojrozměrném globálním souřadnicovém systému a má tři souřadnice \[X,Y,Z] (3D bod v aplikaci Dynamo).
 
 ![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
 
-A 2D Point in Dynamo has two coordinates \[X,Y].
+2D bod v aplikaci Dynamo má dvě souřadnice \[X,Y].
 
 ![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
 
-### Point on Curves and Surfaces
+### Bod na křivkách a površích
 
-Parameters for both Curves and Surfaces are continuous and extend beyond the edge of the given geometry. Since the shapes that define the Parameter Space reside in a three-dimensional World Coordinate System, we can always translate a Parametric Coordinate into a "World" Coordinate. The point \[0.2, 0.5] on the surface for example is the same as point \[1.8, 2.0, 4.1] in world coordinates.
+Parametry křivek i povrchů jsou spojité a přesahují hranu dané geometrie. Protože tvary, které definují parametrický prostor, se nacházejí v trojrozměrném globálním souřadnicovém systému, můžeme vždy převést parametrickou souřadnici do „Globální“ souřadnice. Například bod \[0.2, 0.5] na povrchu je stejný jako bod \[1.8, 2.0, 4.1] v globálních souřadnicích.
 
 ![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
 
-> 1. Point in assumed World XYZ Coordinates
-> 2. Point relative to a given Coordinate System (Cylindrical)
-> 3. Point as UV Coordinate on a Surface
+> 1. Bod v předpokládaných globálních souřadnicích XYZ
+> 2. Bod relativní k danému souřadnicovému systému (válcový)
+> 3. Bod jako souřadnice UV na povrchu
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 
-## Deep Dive into...
+## Podrobné informace...
 
-If Geometry is the language of a model, then Points are the alphabet. Points are the foundation upon which all other geometry is created - we need at least two Points to create a Curve, we need at least three Points to make a Polygon or a Mesh Face, and so on. Defining the position, order, and relationship among Points (try a Sine Function) allows us to define higher order geometry like things we recognize as Circles or Curves.
+Pokud je geometrie jazykem modelu, pak body jsou abecedou. Body jsou základem, na kterém je vytvořena veškerá další geometrie – k vytvoření křivky potřebujeme alespoň dva body, k vytvoření polygonu nebo plochy sítě potřebujeme alespoň tři body, a tak dále. Definování polohy, pořadí a vztahu mezi body (zkuste funkci sinus) umožňuje definovat geometrii vyššího řádu, například věci, které známe jako kružnice nebo křivky.
 
-![Point to Curve](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
+![Od bodu ke křivce](../images/5-2/3/PointsAsBuildingBlocks-1.jpg)
 
-> 1. A Circle using the functions `x=r*cos(t)` and `y=r*sin(t)`
-> 2. A Sine Curve using the functions `x=(t)` and `y=r*sin(t)`
+> 1. Kružnice vytvořená pomocí funkcí `x=r*cos(t)` a `y=r*sin(t)`.
+> 2. Sinusoida vytvořená pomocí funkcí `x=(t)` a `y=r*sin(t)`.
 
-### Point as Coordinates
+### Bod jako souřadnice
 
-Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using \[X,Y] on a Plane or \[U,V] if we are on a surface.
+Body mohou existovat také v dvojrozměrném souřadnicovém systému. Konvence má různý zápis písmen v závislosti na tom, s jakým prostorem pracujeme – můžeme použít \[X,Y] na rovině nebo \[U,V] na povrchu.
 
-![Point as Coordinates](../images/5-2/3/Coordinates.jpg)
+![Bod jako souřadnice](../images/5-2/3/Coordinates.jpg)
 
-> 1. A Point in Euclidean Coordinate System: \[X,Y,Z]
-> 2. A Point in a Curve Parameter Coordinate System: \[t]
-> 3. A Point in a Surface Parameter Coordinate System: \[U,V]
+> 1. Bod v euklidovském souřadnicovém systému: \[X,Y,Z]
+> 2. Bod v souřadnicovém systému parametru křivky: \[t]
+> 3. Bod v souřadnicovém systému parametru povrchu: \[U,V]

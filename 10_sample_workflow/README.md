@@ -1,12 +1,12 @@
-# Sample Workflows
+# Vzorové pracovní postupy
 
-This section will explore a series of workflows that will guide you through using Dynamo.
+V této části se seznámíte s řadou pracovních postupů, které vás provedou používáním Dynama.
 
-The following sample workflows are available:
+K dispozici jsou následující vzorové pracovní postupy:
 
-**Getting Started Workflows**
+**Pracovní postupy Začínáme**
 
-* [Parametric Vase](10-1\_getting-started-workflows/1-parametric-vase.md)
-* [Attractor Points](10-1\_getting-started-workflows/2-attractor-points.md)
+* [Parametrická váza](10-1\_getting-started-workflows/1-parametric-vase.md)
+* [Body atraktoru](10-1\_getting-started-workflows/2-attractor-points.md)
 
-You can also locate concepts introduced in workflows using the [concept index](table-of-summary-for-some-concept-used-in-previous-exercises.md)
+Koncepty zavedené v pracovních postupech můžete také vyhledat pomocí [rejstříků konceptů](table-of-summary-for-some-concept-used-in-previous-exercises.md).

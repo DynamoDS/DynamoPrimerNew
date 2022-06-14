@@ -1,5 +1,5 @@
-# Introduction
+# Úvod
 
-From its origins as an add-on for Building Information Modeling in Revit, Dynamo has matured to become many things. Above all else it is a platform, enabling designers to explore visual programming, solve problems, and make their own tools. Let's start our journey with Dynamo by setting some context - what is it and how do I approach using it?
+Aplikace Dynamo začínala jako doplněk pro informační modely budov v aplikaci Revit. Od té doby však urazila dlouhou cestu. Jedná se zejména o platformu, která konstruktérům umožňuje zkoumat vizuální programování, řešit problémy a vytvářet vlastní nástroje. Začněme tím, že si řekneme, k čemu aplikace Dynamo slouží a jak ji používat.
 
 ![Dynamo Ecosystem](<./images/intro dynamo cover.jpg>)

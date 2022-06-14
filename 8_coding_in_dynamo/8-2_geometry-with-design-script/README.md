@@ -1,6 +1,6 @@
-# Geometry with DesignScript
+# Geometrie pomocí jazyka DesignScript
 
-In this section, you will find a series of lessons on the creation of geometry with DesignScript. Follow along by copying the example DesignScript into Dynamo Code Blocks.
+V této části naleznete několik cvičení zabývajících se tvorbou geometrie pomocí jazyka DesignScript. Pokračujte tím, že zkopírujete ukázkový kód v jazyce DesignScript do bloků kódů aplikace Dynamo.
 
 ```js
 // copy this code into a Code Block

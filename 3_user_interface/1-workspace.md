@@ -1,88 +1,88 @@
-# Workspace
+# Pracovní prostor
 
-### Main Workspace
+### Hlavní pracovní prostor
 
-The Dynamo Workspace consists of four main elements.
+Pracovní prostor aplikace Dynamo se skládá ze čtyř hlavních prvků.
 
 ![](<./images/3-1/workspace - ui.jpg>)
 
-> 1. All Active Tabs.
-> 2. Preview Mode
-> 3. Zoom/Pan Controls
-> 4. Node in Workspace
+> 1. Všechny aktivní karty
+> 2. Režim náhledu
+> 3. Ovládací prvky pro přiblížení / posun pohledu
+> 4. Uzel v pracovním prostoru
 
-### All Active Tabs
+### Všechny aktivní karty
 
-When you open a new file, a new Home Workspace will be opened by default.
+Při otevření nového souboru se ve výchozím nastavení otevře nový domovský pracovní prostor.
 
 ![](<./images/3-1/workspace - home tab.jpg>)
 
-You may create a Custom Node and open it in a Custom Node Workspace.
+Můžete vytvořit vlastní uzel a otevřít jej v pracovním prostoru vlastního uzlu.
 
 ![](<./images/3-1/workspace - custom node tab.jpg>)
 
 {% hint style="info" %}
-Only one Home Workspace is allowed in each Dynamo window but you may have multiple Custom Node Workspaces opened in tabs.
+V každém okně aplikace Dynamo je povolen pouze jeden domovský pracovní prostor, ale na kartách můžete mít otevřeno více více pracovních prostorů vlastních uzlů.
 {% endhint %}
 
-### Preview Mode
+### Režim náhledu
 
-There are 3 methods to switch between different previews:
+Existují 3 metody přepínání mezi různými náhledy:
 
-a. Using the top right icons
+a. Pomocí ikon v pravém horním rohu
 
-* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Graph Preview
-* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)3D Preview
+* ![](<./images/3-1/3-1-04 Graph preview icon.jpg>)Náhled grafu
+* ![](<./images/3-1/3-1-05 3D preview icon.jpg>)3D náhled
 
-b. Right-click in Workspace
+b. Kliknutím pravým tlačítkem myši na pracovní prostor
 
-* Switch from 3D Preview to Graph Preview
+* Přepnutí z 3D náhledu na náhled grafu
 
 ![](<./images/3-1/3-1-06 right click switch to graph preview.jpg>)
 
-* Switch from Graph Preview to 3D Preview
+* Přepnutí z náhledu grafu na 3D náhled
 
 ![](<./images/3-1/workspace - right click switch to geometry.jpg>)
 
-c. Using keyboard shortcut (Ctrl+B)
+c. Pomocí klávesové zkratky (Ctrl+B)
 
-### Zoom/Pan Controls
+### Ovládací prvky pro přiblížení / posun pohledu
 
-You may use icons or a mouse to navigate in either workspace.
+K navigaci v obou pracovních prostorech můžete využivat ikony nebo myš.
 
-a. In **Graph Preview** Mode
+a. V režimu **Náhled grafu**
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-* Using mouse:
-  * Left-click - Select
-  * Left-click and drag - Selection box to select multiple nodes
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click anywhere on canvas - Open In-Canvas Search
+* Pomocí ikon:
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Přizpůsobit oknu
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Přiblížit
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Oddálit
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Posun pohledu
+* Pomocí myši:
+   * Kliknutí levým tlačítkem – Výběr
+   * Kliknutí levým tlačítkem a přetažení – Pole výběru umožňující výběr více uzlů
+   * Otáčení prostředním kolečkem nahoru/dolů – Přiblížení/oddálení
+   * Kliknutí prostředním kolečkem a přetažení – Posun pohledu
+   * Kliknutí pravým tlačítkem kdekoli na kreslicí ploše – Otevření hledání na kreslicí ploše
 
 ![](<./images/3-1/workspace - in canvas search.gif>)
 
-b. In **3D Preview** Mode
+b. V režimu **3D náhledu**
 
-* Using icons:
-  * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Zoom to fit
-  * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Zoom in
-  * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Zoom out
-  * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Pan
-  * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbit
-* Using mouse:
-  * Middle scroll up/down - Zoom in/out
-  * Middle-click and drag - Pan
-  * Right-click and drag - Orbit
+* Pomocí ikon:
+   * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)Přizpůsobit oknu
+   * ![](<./images/3-1/3-1-09 graph preview zoom in.jpg>)Přiblížit
+   * ![](<./images/3-1/3-1-10 graph preview zoom out.jpg>)Oddálit
+   * ![](<./images/3-1/3-1-11 graph preview pan.jpg>)Posun pohledu
+   * ![](<./images/3-1/3-1-13 3D preview orbit.jpg>)Orbit
+* Pomocí myši:
+   * Otáčení prostředním kolečkem nahoru/dolů – Přiblížení/oddálení
+   * Kliknutí prostředním kolečkem a přetažení – Posun pohledu
+   * Kliknutí pravým tlačítkem a přetažení – Orbit
 
-### Node in Workspace
+### Uzel v pracovním prostoru
 
-Left-click to select any Node.
+Kliknutím levým tlačítkem myši vyberte libovolný uzel.
 
-To select multiple Nodes, Click and drag to create a selection box.
+Chcete-li vybrat více uzlů, kliknutím a přetažením vytvořte pole výběru.
 
 ![](<./images/3-1/workspace - selection box.gif>)

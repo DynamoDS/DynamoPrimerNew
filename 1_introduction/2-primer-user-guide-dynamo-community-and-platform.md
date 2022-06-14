@@ -1,46 +1,46 @@
-# Primer User Guide, Dynamo Community & Platform
+# Uživatelská příručka Primer, komunita a platforma aplikace Dynamo
 
-This Primer includes chapters developed with Mode Lab. These chapters focus on the essentials you will need to get up and running developing your own visual programs with Dynamo and key insights on how to take Dynamo further.&#x20;
+Tato příručka Primer obsahuje kapitoly od společnosti Mode Lab. Tyto kapitoly se zaměřují na základy práce s vizuálními programy v aplikaci Dynamo a obsahují i některá pokročilá témata.&#x20;
 
-### Primer User Guide
+### Uživatelská příručka Primer
 
-This guide is designed to cater to readers from different backgrounds and skill levels. General introduction about Dynamo setup, user interface and key concepts can be found in the following sections, we recommend new users to cover the following topics:
+Tato příručka je určena pro čtenáře s různými úrovněmi zkušeností a dovedností. V následujících částech naleznete obecný úvod k nastavení aplikace Dynamo, informace o uživatelském rozhraní a klíčové koncepty. Doporučujeme novým uživatelům, aby si tato témata prostudovali:
 
-* [What is Dynamo & How Does It Work?](1-what-is-dynamo.md)
-* [Setup for Dynamo](../2\_setup\_for\_dynamo/)
-* [User Interface](../3\_user\_interface/)
-* [Nodes and Wires](../4\_nodes\_and\_wires/)
+* [Co je aplikace Dynamo a jak funguje?](1-what-is-dynamo.md)
+* [Nastavení aplikace Dynamo](../2\_setup\_for\_dynamo/)
+* [Uživatelské rozhraní](../3\_user\_interface/)
+* [Uzly a dráty](../4\_nodes\_and\_wires/)
 
-For users who would like to develop a more in-depth understanding of each element such as a specific Nodes and the concept behind it, we cover the fundamentals in its own chapter.
+Uživatelé, kteří by chtěli hlouběji porozumět jednotlivým prvkům, například konkrétním uzlům a jejich koncepci, se mohou seznámit se základy v samostatné kapitole.
 
-* [Essential Nodes & Concepts](../5\_essential\_nodes\_and\_concepts/)
+* [Základní uzly a koncepce](../5\_essential\_nodes\_and\_concepts/)
 
-If you would like to see the demonstration of Dynamo workflows, we have included some graphs in the Sample Workflows section. Follow the attached instructions to create your own Dynamo graphs.
+Pro uživatele, kteří si chtějí prohlédnout ukázku pracovních postupů aplikace Dynamo, jsme zahrnuli některé grafy do části Vzorové pracovní postupy. Postupujte podle připojených pokynů a vytvořte vlastní grafy aplikace Dynamo.
 
-* [Parametric Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
+* [Parametrická váza](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
 ![](<./images/1-2/vase1.gif>)
 
-* [Attractor points](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
+* [Body atraktoru](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](<./images/1-2/attractor1.gif>)
 
 {% hint style="info" %}
-There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each page.
+Další tematická cvičení najdete v dalších kapitolách týkajích se různých aspektů aplikace Dynamo. **Cvičení** se obvykle nacházejí v poslední části každé stránky.
 {% endhint %}
 
-### The Community
+### Komunita
 
-Dynamo wouldn't be what it is without a strong group of avid users and active contributors. Engage the community by following the [Blog](http://dynamobim.org/blog/), adding your work to the Gallery, or discussing Dynamo in the [Forum](https://forum.dynamobim.com).
+Aplikace Dynamo by nemohla být taková, jaká je bez široké komunity uživatelů a přispěvatelů. Zapojte se do komunity tím, že budete sledovat [blog](http://dynamobim.org/blog/), přidáte svou práci do galerie nebo budete diskutovat na [fóru](https://forum.dynamobim.com).
 
-![The Forum](./images/1-2/02-Community.png)
+![Fórum](./images/1-2/02-Community.png)
 
-### The Platform
+### Platforma
 
-Dynamo is envisioned as a visual programming tool for designers, allowing us to make tools that make use of external libraries or any Autodesk product that has an API. With Dynamo Sandbox we can develop programs in a "Sandbox" style application - but the Dynamo ecosystem continues to grow.
+Aplikace Dynamo je navržena jako nástroj vizuálního programování pro konstruktéry, který umožňuje vytvářet nástroje využívající externí knihovny nebo rozhraní API jakéhokoliv produktu společnosti Autodesk. V aplikaci Dynamo Sandbox lze vyvíjet programy v režimu „Sandbox“ – zde však ekosystém aplikace Dynamo ani zdaleka nekončí.
 
-The source code for the project is open-source, enabling us to extend its functionality to our hearts content. Check out the project on GitHub and browse the Works in Progress of users customizing Dynamo.
+Projekt má otevřený zdrojový kód, takže jej lze rozšiřovat o požadované funkce. Navštivte projekt na GitHubu a podívejte se na probíhající práce na aplikaci Dynamo.
 
-![The Repo](./images/1-2/03-TheRepo.png)
+![Repozitář](./images/1-2/03-TheRepo.png)
 
-> Browse, Fork, and start extending Dynamo for your needs
+> Prohlédněte si a forkněte repozitář a začněte jej rozšiřovat o nové funkce

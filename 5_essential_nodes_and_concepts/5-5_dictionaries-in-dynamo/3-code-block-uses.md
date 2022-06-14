@@ -1,13 +1,13 @@
-# Dictionaries in Code Blocks
+# Slovníky v blocích kódu
 
-Not only does Dynamo 2.0 introduce the nodes previously discussed for dictionaries, there is new functionality in code blocks for this as well!
+Kromě uzlů pro slovníky zavádí aplikace Dynamo 2.0 také nové funkce pro slovníky v blocích kódu.
 
-You can use syntax like below or DesignScript-based representations of the nodes.
+Je možné použít syntaxi podle obrázku níže nebo reprezentaci uzlů v jazyce DesignScript.
 
 ![](<../images/5-5/3/dictionaries in cb - syntax (1).jpg>)
 
-Since a dictionary is an object type in Dynamo we can commit the following actions upon it.
+Protože je slovník typem objektu, je možné s ním v aplikaci Dynamo provádět následující akce.
 
 ![](<../images/5-5/3/dictionaries in cb - actions with code blocks.jpg>)
 
-Maintaining these sort of interactions becomes especially useful when relating Revit data to strings. Next, we will look at some Revit use-cases.
+Tyto interakce jsou užitečné zejména při spojování dat aplikace Revit s řetězci. Pojďme se podívat na případy užití v aplikaci Revit.

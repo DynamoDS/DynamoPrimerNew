@@ -1,10 +1,10 @@
-# Surfaces: Interpolated, Control Points, Loft, Revolve
+# Plochy: Interpolace, řídicí body, spojení profilů, rotace
 
-The two-dimensional analog to a NurbsCurve is the NurbsSurface, and like the freeform NurbsCurve, NurbsSurfaces can be constructed with two basic methods: inputting a set of base points and having Dynamo interpolate between them, and explicitly specifying the control points of the surface. Also like freeform curves, interpolated surfaces are useful when a designer knows precisely the shape a surface needs to take, or if a design requires the surface to pass through constraint points. On the other hand, Surfaces created by control points can be more useful for exploratory designs across various smoothing levels.
+Dvourozměrná varianta objektu NurbsCurve je objekt NurbsSurface, který lze stejně jako křivku Nurbs volného tvaru vytvořit dvěma základními způsoby: zadáním sady základních bodů a interpolací mezi nimi, nebo explicitním zadáním řídicích bodů plochy. Interpolované plochy jsou užitečné jako křivky volného tvaru v případě, kdy konstruktér zná přesný tvar potřebné plochy, nebo pokud musí plocha procházet určitými body. Na druhou stranu, plochy vytvořené pomocí řídicích bodů mohou být užitečnější pro průzkum různých návrhových možností a úrovní vyhlazování.
 
-### Interpolated Surface
+### Interpolovaná plocha
 
-To create an interpolated surface, simply generate a two-dimensional collection of points approximating the shape of a surface. The collection must be rectangular, that is, not jagged. The method _NurbsSurface.ByPoints_ constructs a surface from these points.
+Chcete-li vytvořit interpolovanou plochu, jednoduše vygenerujte dvourozměrnou kolekci bodů s přibližným tvarem plochy. Kolekce musí mít rovné, nezubaté hrany. Plochu z těchto bodů lze vytvořit metodou _NurbsSurface.ByPoints_.
 
 ![](../images/8-2/6/Surfaces\_01.png)
 
@@ -15,9 +15,9 @@ To create an interpolated surface, simply generate a two-dimensional collection 
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### Control Points Surface
+### Plocha vytvořená pomocí řídicích bodů
 
-Freeform NurbsSurfaces can also be created by specifying underlying control points of a surface. Like NurbsCurves, the control points can be thought of as representing a quadrilateral mesh with straight segments, which, depending on the degree of the surface, is smoothed into the final surface form. To create a NurbsSurface by control points, include two additional parameters to _NurbsSurface.ByPoints_, indicating the degrees of the underlying curves in both directions of the surface.
+Plochu Nurbs volného tvaru lze vytvořit také určením řídicích bodů plochy. Podobně jako u křivek Nurbs, řídicí body si lze představit jako reprezentaci čtyřúhelníkové sítě s rovnými segmenty, která bude v závislosti na stupni plochy vyhlazena do konečné podoby. Chcete-li vytvořit plochu Nurbs pomocí řídicích bodů, zadejte do metody _NurbsSurface.ByPoints_ další dva parametry, které budou naznačovat stupně podřazených křivek v obou směrech plochy.
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
@@ -29,7 +29,7 @@ Freeform NurbsSurfaces can also be created by specifying underlying control poin
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-We can increase the degree of the NurbsSurface to change the resulting surface geometry:
+Stupeň objektu NurbsSurface lze zvýšit a změnit tím výslednou geometrii plochy:
 
 ![](../images/8-2/6/Surfaces\_03.png)
 
@@ -41,9 +41,9 @@ We can increase the degree of the NurbsSurface to change the resulting surface g
 surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 ```
 
-### Loft Surface
+### Šablonovaná plocha
 
-Just as Surfaces can be created by interpolating between a set of input points, they can be created by interpolating between a set of base curves. This is called lofting. A lofted curve is created using the _Surface.ByLoft_ constructor, with a collection of input curves as the only parameter.
+Podobně jako lze plochy vytvářet interpolací mezi sadou vstupních bodů, lze je vytvářet také interpolací mezi sadou základních křivek. Tomu se říká spojení profilů. Křivku spojením profilů lze vytvořit pomocí konstruktoru _Surface.ByLoft_, jediným jeho parametrem je kolekce vstupních křivek.
 
 ![](../images/8-2/6/Surfaces\_04.png)
 
@@ -58,11 +58,11 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### Revolve Surface
+### Rotace plochy
 
-Surfaces of revolution are an additional type of surface created by sweeping a base curve around a central axis. If interpolated surfaces are the two-dimensional analog to interpolated curves, then surfaces of revolution are the two-dimensional analog to circles and arcs.
+Plochy rotace jsou dalším typem ploch vytvořených tažením základní křivky kolem střední osy. Pokud jsou interpolované plochy dvourozměrnou analogií interpolovaných křivek, pak rotační plochy jsou dvourozměrnou analogií kružnic a oblouků.
 
-Surfaces of revolution are specified by a base curve, representing the “edge” of the surface; an axis origin, the base point of the surface; an axis direction, the central “core” direction; a sweep start angle; and a sweep end angle. These are used as the input to the _Surface.Revolve_ constructor.
+Plochy rotace se určují pomocí základní křivky, která reprezentuje „hranu“ plochy, dále pomocí počátku osy, základního bodu plochy, směru osy, středního „hlavního“ směru a počátečního a koncového úhlu tažení. Tyto parametry se zadávají jako vstup do konstruktoru _Surface.Revolve_.
 
 ![](../images/8-2/6/Surfaces\_05.png)
 

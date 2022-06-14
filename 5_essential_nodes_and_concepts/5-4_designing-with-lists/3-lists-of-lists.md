@@ -1,292 +1,292 @@
-# Lists of Lists
+# Seznamy seznamů
 
-### Lists of Lists
+### Seznamy seznamů
 
-Let's add one more tier to the hierarchy. If we take the deck of cards from the original example and create a box which contains multiple decks, the box now represents a list of decks, and each deck represents a list of cards. This is a list of lists. For the analogy in this section, the image below contains a list of coin rolls, and each roll contains a list of pennies.
+Do hierarchie bude nyní přidána další vrstva. Pokud vezmeme sadu karet z původního příkladu a vytvoříme krabici, která obsahuje více sad, krabice nyní představuje seznam sad a každá sada představuje seznam karet. Tomuto se říká seznam seznamů. Podívejte se na obrázek níže, představující analogii pro tuto část: na obrázku vidíme seznam sloupečků mincí a každý sloupeček obsahuje seznam mincí.
 
-![Coins](../images/5-4/3/coins-521245\_640.jpg)
+![Mince](../images/5-4/3/coins-521245\_640.jpg)
 
-> Photo by [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
+> Autor fotografie: [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
 
-### Query
+### Dotaz
 
-What **queries** can we make from the list of lists? This accesses existing properties.
+Jaké **dotazy** můžeme u seznamu seznamů provádět? Díky tomuto bude možný přístup k existujícím vlastnostem.
 
-* Number of coin types? 2.
-* Coin type values? $0.01 and $0.25.
-* Material of quarters? 75% copper and 25% nickel.
-* Material of pennies? 97.5% zinc and 2.5% copper.
+* Počet typů mincí? 2.
+* Hodnoty typů mincí? 0,01 $ a 0,25 $.
+* Materiál čtvrťáků? 75 % měď a 25 % nikl.
+* Materiál centů? 97,5 % zinek a 2,5 % měď.
 
-### Action
+### Akce
 
-What **actions** can we perform on the list of lists? This changes the list of lists based on a given operation.
+Jaké **akce** můžeme provést u seznamu seznamů? Tímto se změní seznam seznamů podle dané operace.
 
-* Select a specific stack of quarters or pennies.
-* Select a specific quarter or penny.
-* Rearrange the stacks of quarters and pennies.
-* Shuffle the stacks together.
+* Výběr konkrétního sloupku čtvrťáků nebo centů.
+* Výběr konkrétního čtvrťáku nebo centu.
+* Přeuspořádání sloupků čtvrťáků a centů
+* Sloučení sloupků dohromady.
 
-Again, Dynamo has an analagous node for each one of the operations above. Since we're working with abstract data and not physical objects, we need a set of rules to govern how we move up and down the data hierarchy.
+I zde aplikace Dynamo obsahuje analogický uzel pro každou z výše uvedených operací. Vzhledem k tomu, že pracujeme s abstraktními daty a ne s fyzickými objekty, potřebujeme sadu pravidel, která řídí pohyb nahoru a dolů v hierarchii dat.
 
-When dealing with lists of lists, the data is layered and complex, but this provides an opportunity to do some awesome parametric operations. Let's break down the fundamentals and discuss a few more operations in the lessons below.
+Při práci se seznamy seznamů jsou data vrstvená a složitá, díky tomu však nastává příležitost provést skvělé parametrické operace. Níže uvedené lekce podrobně rozebírají základy a popisují několik dalších operací.
 
-## Exercise
+## Cvičení
 
-### Top-Down Hierarchy
+### Hierarchie shora dolů
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
-The fundamental concept to learn from this section: **Dynamo treats lists as objects in and of themselves**. This top-down hierarchy is developed with object-oriented programming in mind. Rather than selecting sub-elements with a command like **List.GetItemAtIndex**, Dynamo will select that index of the main list in the data structure. And that item can be another list. Let's break it down with an example image:
+Základní koncepce této části: **Aplikace Dynamo zpracovává seznamy jako objekty samy o sobě**. Tato hierarchie shora dolů se vyvíjí s ohledem na objektově orientované programování. Místo výběru dílčích prvků pomocí příkazu, jako je **List.GetItemAtIndex**, vybere aplikace Dynamo tento index v hlavním seznamu v datové struktuře. A tato položka může být i dalším seznamem. Následuje rozbor pomocí vzorového obrázku:
 
 ![top-down](<../images/5-4/3/lists of lists - top down hierachy.jpg>)
 
-> 1. With **Code Block**, we've defined two ranges: `0..2; 0..3;`
-> 2. These ranges are connected to a **Point.ByCoordinates** node with lacing set to _"Cross Product"_. This creates a grid of points, and also returns a list of lists as an output.
-> 3. Notice that the **Watch** node gives 3 lists with 4 items in each list.
-> 4. When using **List.GetItemAtIndex**, with an index of 0, Dynamo selects the first list and all of its contents. Other programs may select the first item of every list in the data structure, but Dynamo employs a top-down hierarchy when dealing with data.
+> 1. Pomocí **bloku kódu** jsme definovali dva rozsahy: `0..2; 0..3;`.
+> 2. Tyto rozsahy jsou připojeny k uzlu **Point.ByCoordinates** s vázáním nastaveným na hodnotu _„Vektorový součin“_. Tím se vytvoří osnova bodů a také se na výstupu vrátí seznam seznamů.
+> 3. Všimněte si, že uzel **Watch** předává 3 seznamy se 4 položkami v každém seznamu.
+> 4. Při použití funkce **List.GetItemAtIndex** s indexem 0 aplikace Dynamo vybere první seznam a veškerý jeho obsah. Jiné programy mohou vybrat první položku každého seznamu v datové struktuře, aplikace Dynamo však při práci s daty využívá hierarchii shora dolů.
 
 ### List.Flatten
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/3/Flatten.dyn" %}
 
-Flatten removes all tiers of data from a data structure. This is helpful when the data hierarchies are not necessary for your operation, but it can be risky because it removes information. The example below shows the result of flattening a list of data.
+Metoda Flatten odebere všechny vrstvy dat z datové struktury. Toto je užitečné, pokud hierarchie dat nejsou pro vaši operaci podstatné, může to však představovat riziko, protože dojde k odebrání informací. Následující příklad znázorňuje výsledek vyrovnání seznamu dat.
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 01.jpg>)
 
-> 1. Insert one line of code to define a range in **Code Block**: `-250..-150..#4;`
-> 2. Plugging the _code block_ into the _x_ and _y_ input of a **Point.ByCoordinates** node, we set the lacing to _"Cross Product"_ to get a grid of points.
-> 3. The **Watch** node shows that we have a list of lists.
-> 4. A **PolyCurve.ByPoints** node will reference each list and create a respective polycurve. Notice in the Dynamo preview that we have four polycurves representing each row in the grid.
+> 1. Zadáním jednoho řádku kódu definujte rozsah v **bloku kódu**: `-250..-150..#4;`
+> 2. Připojením _bloku kódu_ ke vstupu _x_ a _y_ uzlu **Point.ByCoordinates** nastavíme vázání na hodnotu _„Vektorový součin“_, abychom získali osnovu bodů.
+> 3. Uzel **Watch** zobrazuje, že je k dispozici seznam seznamů.
+> 4. Uzel **PolyCurve.ByPoints** bude odkazovat na každý seznam a vytvoří příslušný objekt polycurve. Všimněte si, že v náhledu aplikace Dynamo se v osnově nachází čtyři objekty polycurve představující jednotlivé řádky.
 
 ![Exercise](<../images/5-4/3/lists of lists - flatten 02.jpg>)
 
-> 1. By inserting a _flatten_ before the polycurve node, we've created one single list for all of the points. The **PolyCurve.ByPoints** node references a list to create one curve, and since all of the points are on one list, we get one zig-zag polycurve which runs throughout the entire list of points.
+> 1. Vložením _vyrovnání_ před uzel objektu polycurve byl vytvořen jeden seznam pro všechny body. Uzel **PolyCurve.ByPoints** odkazuje na seznam k vytvoření jedné křivky a vzhledem k tomu, že všechny body jsou v jednom seznamu, vznikne jeden klikatý objekt polycurve, který prochází celým seznamem bodů.
 
-There are also options for flattening isolated tiers of data. Using the **List.Flatten** node, you can define a set number of data tiers to flatten from the top of the hierarchy. This is a really helpful tool if you're struggling with complex data structures which are not necessarily relevant to your workflow. And another option is to use the flatten node as a function in **List.Map**. We'll discuss more about **List.Map** below.
+K dispozici jsou také možnosti k vyrovnání izolovaných vrstev dat. Pomocí uzlu **List.Flatten** můžete definovat nastavený počet vrstev dat, které mají být vyrovnány z horní části hierarchie. Jedná se o skutečně užitečný nástroj, pokud máte potíže se složitými datovými strukturami, které nejsou nezbytně důležité pro váš pracovní postup. Další možností je použít uzel vyrovnání jako funkci v uzlu **List.Map**. Další informace o uzlu **List.Map** naleznete níže.
 
-### Chop
+### Uzel Chop
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/3/Chop.dyn" %}
 
-When parametric modeling, there are also times where you'll want to modify the data structure to an existing list. There are many nodes available for this as well, and chop is the most basic version. With chop, we can partition a list into sublists with a set number of items.
+Při parametrickém modelování se také někdy stane, že budete chtít upravit datovou strukturu existujícího seznamu. K tomuto účelu existuje také mnoho uzlů a Chop je tou nejzákladnější verzí. Pomocí uzlu Chop je možné rozdělit seznam na podseznamy s nastaveným počtem položek.
 
-The chop command divides lists based on a given list length. In some ways, chop is the opposite of flatten: rather than removing data structure, it adds new tiers to it. This is a helpful tool for geometric operations like the example below.
+Příkaz Rozdělit rozdělí seznamy podle dané délky seznamu. V některých případech je příkaz Rozdělit opak příkazu Vyrovnat: místo odebrání datové struktury se přidají nové vrstvy. Toto je užitečný nástroj u geometrických operací, viz příklad níže.
 
 ![Exercise](<../images/5-4/3/lists of lists - chop.jpg>)
 
 ### List.Map
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/3/Map.dyn" %}
 
-A **List.Map/Combine** applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
+Metoda **List.Map/Combine** použije funkci sady na vstupní seznam, ale o jeden krok níže v hierarchii. Kombinace jsou stejné jako u map, kromě toho, že mohou mít více vstupů odpovídajících zadání dané funkce.
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the_ **List.Map** _functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Poznámka: Toto cvičení bylo vytvořeno pomocí předchozí verze aplikace Dynamo. Většina funkčnosti metody _ **List.Map** _byla vyřešena přidáním funkce_ **List@Level**_. Další informace naleznete v části_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _níže._
 
-As a quick introduction, let's review the **List.Count** node from a previous section.
+V rámci rychlého úvodu si zopakujme uzel **List.Count** z předchozí části.
 
-The **List.Count** node counts all of the items in a list. We'll use this to demonstrate how **List.Map** works.
+Uzel **List.Count** spočítá všechny položky v seznamu. Pomocí tohoto nástroje znázorníme, jak funguje metoda **List.Map**.
 
 ![](<../images/5-4/3/lists of lists - map 01.jpg>)
 
-> 1.  Insert two lines of code into the **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
+> 1. Vložte dva řádky kódu do **bloku kódu**: `-50..50..#Nx; -50..50..#Ny;`
 >
->     After typing in this code, the code block will create two inputs for Nx and Ny.
-> 2. With two _integer sliders_, define the _Nx_ and _Ny_ values by connecting them to the **Code Block**.
-> 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
-> 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
+>    Blok kódu vytvoří po provedení zadání do tohoto kódu dva vstupy pro proměnné Nx a Ny.
+> 2. Pomocí dvou _celočíselných posuvníků_ definujte hodnoty _Nx_ a _Ny_ jejich připojením k **bloku kódu**.
+> 3. Připojte každý řádek bloku kódu do příslušných vstupů _X_ a _Y_ uzlu **Point.ByCoordinates**. Klikněte pravým tlačítkem na uzel, vyberte položku „Vázání“ a vyberte položku _„Vektorový součin“_. Tím se vytvoří osnova bodů. Vzhledem k tomu, že jsme definovali rozsah od -50 do 50, bude se rozsah pohybovat ve výchozí osnově aplikace Dynamo.
+> 4. Uzel _**Watch**_ zobrazí vytvořené body. Všimněte si datové struktury. Vytvořili jsme seznam seznamů. Každý seznam představuje řádek bodů v osnově.
 
 ![Exercise](<../images/5-4/3/lists of lists - map 02 (1).jpg>)
 
-> 1. Attach a **List.Count** node to the output of the watch node from the previous step.
-> 2. Connect a **Watch** node to the **List.Count** output.
+> 1. Připojte uzel **List.Count** k výstupu uzlu Watch z předchozího kroku.
+> 2. Připojte uzel **Watch** k výstupu uzlu **List.Count**.
 
-Notice that the List.Count node gives a value of 5. This is equal to the "Nx" variable as defined in the code block. Why is this?
+Všimněte si, že uzel List.Count vrací hodnotu 5. Jedná se o hodnotu rovnou proměnné "Nx", jak je definována v bloku kódu. Jak je to možné?
 
-* First, the **Point.ByCoordinates** node uses the "x" input as the primary input for creating lists. When Nx is 5 and Ny is 3, we get a list of 5 lists, each with 3 items.
-* Since Dynamo treats lists as objects in and of themselves, a **List.Count** node is applied to the main list in the hierarchy. The result is a value of 5, or, the number of lists in the main list.
+* Nejprve uzel **Point.ByCoordinates** použije jako primární vstup pro tvorbu seznamů vstup „x“. Pokud má proměnná Nx hodnotu 5 a proměnná Ny hodnotu 3, vznikne seznam 5 seznamů a každý z těch seznamů bude mít 3 položky.
+* Vzhledem k tomu, že aplikace Dynamo zpracovává seznamy jako objekty samy o sobě, na hlavní seznam v hierarchii se použije uzel **List.Count**. Výsledkem je hodnota 5, nebo počet seznamů v hlavním seznamu.
 
 ![Exercise](<../images/5-4/3/lists of lists - map 03.jpg>)
 
-> 1. By using a **List.Map** node, we take a step down in the hierarchy and perform a _"function"_ at this level.
-> 2. Notice that the **List.Count** node has no input. It is being used as a function, so the **List.Count** node will be applied to every individual list one step down in the hierarchy. The blank input of **List.Count** corresponds to the list input of **List.Map**.
-> 3. The results of **List.Count** now gives a list of 5 items, each with a value of 3. This represents the length of each sublist.
+> 1. Pomocí uzlu **List.Map** bude proveden krok dolů v hierarchii a na této úrovni se provede _„funkce“_.
+> 2. Všimněte si, že uzel **List.Count** nemá žádný vstup. Používá se jako funkce, takže uzel **List.Count** se použije na každý jednotlivý seznam, o jeden krok níže v hierarchii. Prázdný vstup uzlu **List.Count** odpovídá zadání seznamu uzlu **List.Map**.
+> 3. Výsledky metody **List.Count** nyní obsahují 5 položek, z nichž každá má hodnotu 3. Toto představuje délku každého dílčího seznamu.
 
 ### **List.Combine**
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the List.Combine functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Poznámka: Toto cvičení bylo vytvořeno pomocí předchozí verze aplikace Dynamo. Většina funkčnosti metody List.Combine byla vyřešena přidáním funkce_ **List@Level**_. Další informace naleznete v části_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _níže._
 
-In this exercise, we will use **List.Combine** to demonstrate how it can be used to apply a function across separate lists of objects.
+V tomto cvičení použijeme funkci **List.Combine** a ukážeme si, jak ji lze použít k aplikaci funkce na samostatné seznamy objektů.
 
-Start by setting up two lists of points.
+Začněte nastavením dvou seznamů bodů.
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 01.jpg>)
 
-> 1. Use **Sequence** node to generate 10 values, each with a 10 step increment.
-> 2. Connect the result to the x input of a **Point.ByCoordinates** node. This will create a list of points in Dynamo.
-> 3. Add a second **Point.ByCoordinates** node to the workspace, use the same **Sequence** output as its x input, but use an **Interger Slider** as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.
+> 1. Pomocí uzlu **Sequence** vygenerujte 10 hodnot, každou s přírůstkem 10 kroků.
+> 2. Výsledek připojte ke vstupu x uzlu **Point.ByCoordinates**. Tím se v aplikaci Dynamo vytvoří seznam bodů.
+> 3. Přidejte do pracovního prostoru druhý uzel **Point.ByCoordinates**, použijte stejný výstup **Sequence** jako jeho vstup x, ale jako vstup y použijte uzel **Integer Slider**, který nastavte na hodnotu 31 (může to být libovolná hodnota, pokud se nepřekrývá s první sadou bodů), aby se obě sady bodů navzájem nepřekrývaly.
 
-Next, we will use **List.Combine** to apply a function on objects in 2 separate lists. In this case, it will be a simple draw line function.
+Dále pomocí uzlu **List.Combine** použijeme funkci na objekty ve 2 samostatných seznamech. V tomto případě se bude jednat o jednoduchou funkci kreslení čar.
 
 ![Exercise](<../images/5-4/3/lists of lists - combined 02.jpg>)
 
-> 1. Add **List.Combine** to the workspace and connect the 2 set of points as its list0 & list1 input.
-> 2. Use a **Line.ByStartPointEndPoint** as the input function for **List.Combine**.
+> 1. Přidejte do pracovního prostoru uzel **List.Combine** a připojte 2 sady bodů jako jeho vstupy list0 a list1.
+> 2. Jako vstupní funkci uzlu **List.Combine** použijte uzel **Line.ByStartPointEndPoint**.
 
-Once completed, the 2 set of points are zipped/paired together through a **Line.ByStartPointEndPoint** function and returning 10 lines in Dynamo.
+Po dokončení jsou 2 sady bodů komprimovány/spárovány dohromady pomocí funkce **Line.ByStartPointEndPoint** a vrátí 10 řádků v aplikaci Dynamo.
 
 {% hint style="info" %}
-Refer to exercise in n-Dimensional Lists to see another example of using List.Combine.
+Další příklad použití uzlu List.Combine naleznete ve cvičení v části N-rozměrné seznamy.
 {% endhint %}
 
-### List@Level
+### Funkce List@Level
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/3/Listatlevel.dyn" %}
 
-Preferred to **List.Map**, the **List@Level** feature allows you to directly select which level of list you want to work with right at the input port of the node. This feature can be applied to any incoming input of a node and will allow you access the levels of your lists quicker and easier than other methods. Just tell the node what level of the list you want to use as the input and let the node do the rest.
+Funkce **List@Level**, která má přednost před funkcí **List.Map**, umožňuje přímo na vstupním portu uzlu vybrat úroveň seznamu, se kterou chcete pracovat. Tuto funkci je možné použít na libovolný příchozí vstup uzlu a umožní přístup k úrovním seznamů rychleji a snadněji než jiné metody. Stačí jen uzlu určit úroveň seznamu, kterou chcete použít jako vstup, a uzel pak provede vše ostatní.
 
-In this exercise, we will use the **List@Level** feature to isolate a specific level of data.
+V tomto cvičení použijeme funkci **List@Level** k vyčlenění určité úrovně dat.
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 01.jpg>)
 
-We will start with a simple 3D grid of points.
+Začneme jednoduchou 3D osnovou bodů.
 
-> 1. The grid is constructed with a Range for X, Y and Z, we know that the data is structured with 3 tiers: an X List, Y List and Z List.
-> 2. These tiers exist at different **Levels**. The Levels are indicated at the bottom of the Preview Bubble. The list Levels columns correspond to the list data above to help identify which level to work within.
-> 3. The list levels are organized in reverse order so that the lowest level data is always in “L1”. This will help ensure that your graphs will work as planned, even if anything is changed upstream.
+> 1. Vzhledem k tomu, že je osnova vytvořena pomocí rozsahu hodnot X, Y a Z, víme, že data jsou strukturována do tří vrstev: seznam X, seznam Y a seznam Z.
+> 2. Tyto vrstvy existují v různých **úrovních**. Úrovně jsou značeny v dolní části bubliny náhledu. Sloupce úrovní seznamu odpovídají výše uvedeným datům seznamu, aby se snadněji rozpoznalo, na které úrovni se pracuje.
+> 3. Úrovně seznamu jsou uspořádány v obráceném pořadí, čili data nejnižší úrovně jsou vždy v úrovni „L1“. Toto vám pomůže zajistit, aby grafy fungovaly podle plánu, i když se něco v předcházejícím dění změní.
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 02.jpg>)
 
-> 1. To use the **List@Level** function, click '>'. Inside this menu, you will see two checkboxes.
-> 2. **Use Levels** - This enables the **List@Level** functionality. After clicking on this option, you will be able to click through and select the input list levels you want the node to use. With this menu, you can quickly try out different level options by clicking up or down.
-> 3. _Keep list structure_ – If enabled, you will have the option to keep that input’s level structure. Sometimes, you may have purposefully organized your data into sublists. By checking this option, you can keep your list organization intact and not lose any information.
+> 1. Chcete-li použít funkci **List@Level**, klikněte na tlačítko „>“. V této nabídce se zobrazí dvě zaškrtávací políčka.
+> 2. **Použít úrovně** – Povolí funkci **List@Level**. Po kliknutí na tuto možnost budete moci kliknout na požadovanou úroveň seznamu a vybrat vstupní úrovně seznamu, které má uzel použít. Pomocí této nabídky můžete rychle vyzkoušet různé možnosti úrovně kliknutím nahoru nebo dolů.
+> 3. _Zachovat strukturu seznamu_ – pokud je tato možnost povolena, bude možné zachovat strukturu úrovně tohoto vstupu. Někdy můžete mít data záměrně uspořádaná do dílčích seznamů. Zaškrtnutím této možnosti můžete organizaci seznamu ponechat nedotčenou a neztratit žádné informace.
 
-With our simple 3D grid, we can access and visualize the list structure by toggling through the List Levels. Each list level and index combination will return a different set of points from our original 3D set.
+Pomocí naší jednoduché 3D osnovy je možné získat přístup a vizualizovat strukturu seznamu přepnutím mezi úrovněmi seznamu. Každá kombinace úrovně seznamu a indexu vrátí jinou sadu bodů z naší původní 3D sady.
 
 ![](<../images/5-4/3/lists of lists - list at level 03.jpg>)
 
-> 1. “@L2” in DesignScript allows us to select only the List at Level 2. The List at Level 2 with the index 0 includes only the first set of Y points, returning only the XZ grid.
-> 2. If we change the Level filter to “L1”, we will be able to see everything in the first List Level. The List at Level 1 with the index 0 includes all of our 3D points in a flat list.
-> 3. If we try the same for “L3” we will see only the third List Level points. The List at Level 3 with the index 0 includes only the first set of Z points, returning only an XY grid.
-> 4. If we try the same for “L4” we will see only the third List Level points. The List at Level 4 with the index 0 includes only the first set of X points, returning only an YZ grid.
+> 1. Možnost „@L2“ v aplikaci DesignScript umožňuje vybrat pouze seznam na úrovni 2. Seznam na úrovni 2 s indexem 0 obsahuje pouze první sadu bodů Y, které vracejí pouze osnovu XZ.
+> 2. Pokud se filtr úrovně změní na možnost „L1“, je možné zobrazit vše v první úrovni seznamu. Seznam na úrovni 1 s indexem 0 obsahuje všechny 3D body ve vyrovnaném seznamu.
+> 3. Pokud se pokusíte o totéž u možnosti „L3“, zobrazí se pouze body třetí úrovně seznamu. Seznam na úrovni 2 s indexem 0 obsahuje pouze první sadu bodů Z, které vracejí pouze osnovu XY.
+> 4. Pokud se pokusíte o totéž u možnosti „L4“, zobrazí se pouze body třetí úrovně seznamu. Seznam na úrovni 4 s indexem 0 obsahuje pouze první sadu bodů X, které vracejí pouze osnovu YZ.
 
-Although this particular example can also be created with **List.Map**, **List@Level** greatly simplifies the interaction, making it easy to access the node data. Take a look below at a comparison between a **List.Map** and **List@Level** methods:
+Ačkoliv tento konkrétní příklad je také možné vytvořit pomocí metody **List.Map**, metoda **List@Level** výrazně zjednodušuje interakci a usnadňuje přístup k datům uzlu. Níže naleznete porovnání metod **List.Map** a **List@Level**:
 
 ![](<../images/5-4/3/lists of lists - list at level 04.jpg>)
 
-> 1. Although both methods will give us access to the same points, the **List@Level** method allows us to easily toggle between layers of data within a single node.
-> 2. To access a point grid with **List.Map**, we will need a **List.GetItemAtIndex** node alongside the **List.Map**. For every list level that we are stepping down, we will need to use an additional **List.Map** node. Depending on the complexity of your lists, this could require you to add a significant amount of **List.Map** Nodes to your graph to access the right level of information.
-> 3. In this example, a **List.GetItemAtIndex** node with a **List.Map** node returns the same set of points with the same list structure as the **List.GetItemAtIndex** with '@L3' selected.
+> 1. Ačkoliv obě metody nabízí přístup ke stejným bodům, metoda **List@Level** umožňuje snadné přepínání mezi hladinami dat v rámci jednoho uzlu.
+> 2. K získání přístupu k osnově bodů pomocí metody **List.Map** je kromě uzlu **List.Map** potřeba i uzel **List.GetItemAtIndex**. Pro každou úroveň seznamu, u které pokročíme na nižší úroveň, je třeba použít další uzel **List.Map**. Podle složitosti seznamů může být vyžadováno přidání značného množství uzlů **List.Map** do grafu, abyste získali přístup ke správné úrovni informací.
+> 3. V tomto příkladu uzel **List.GetItemAtIndex** s uzlem **List.Map** vrátí stejnou sadu bodů se stejnou strukturou seznamu, jako když je v uzlu **List.GetItemAtIndex** vybrána možnost „@L3“.
 
-### Transpose
+### Transpozice
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/3/Transpose.dyn" %}
 
-Transpose is a fundamental function when dealing with lists of lists. Just as in spreadsheet programs, a transpose flips the columns and rows of a data structure. We'll demonstrate this with a basic matrix below, and in the following section, we'll demonstrate how a transpose can be use to create geometric relationships.
+Transpozice je základní funkcí při práci se seznamy seznamů. Stejně jako v tabulkových programech i zde transpozice převrátí sloupce a řádky datové struktury. Níže je znázorněn příklad se základní maticí a v následující části je znázorněno, jak je možné pomocí transpozice tvořit geometrické vztahy.
 
-![Transpose](../images/5-4/3/transpose1.jpg)
+![Transpozice](../images/5-4/3/transpose1.jpg)
 
-Let's delete the **List.Count** nodes from the previous exercise and move on to some geometry to see how the data structured.
+Nyní odstraňte uzly **List.Count** z předchozího cvičení, přesuňte se ke geometrii a prohlédněte si, jak jsou data strukturována.
 
 ![](<../images/5-4/3/lists of lists - transpose 01.jpg>)
 
-> 1. Connect a **PolyCurve.ByPoints** to the output of the watch node from **Point.ByCoordinates**.
-> 2. The output shows 5 polycurves, and we can see the curves in our Dynamo preview. The Dynamo node is looking for a list of points (or a list of lists of points in this case) and creating a single polycurve from them. Essentially, each list has converted to a curve in the data structure.
+> 1. Připojte uzel **PolyCurve.ByPoints** k výstupu uzlu Watch z uzlu **Point.ByCoordinates**.
+> 2. Výstup zobrazí 5 objektů polycurve a v náhledu aplikace Dynamo se zobrazí tyto objekty křivek. Uzel aplikace Dynamo hledá seznam bodů (nebo seznam seznamů bodů v tomto případě) a vytvoří z nich jeden objekt PolyCurve. Každý seznam byl v podstatě převeden na křivku v datové struktuře.
 
 ![](<../images/5-4/3/lists of lists - transpose 02.jpg>)
 
-> 1. A **List.Transpose** node will switch all of the items with all of the lists in a list of lists. This sounds complicated, but it's the same logic as transpose in Microsoft Excel: switching columns with rows in a data structure.
-> 2. Notice the abstract result: the transpose changed the list structure from a 5 lists with 3 items each to 3 lists with 5 items each.
-> 3. Notice the geometric result: using **PolyCurve.ByPoints**, we get 3 polycurves in the perpendicular direction to the original curves.
+> 1. Uzel **List.Transpose** zamění všechny položky se všemi seznamy v seznamu seznamů. Zní to složitě, ale je to stejná logika jako transpozice v aplikaci Microsoft Excel: záměna sloupců a řádků v datové struktuře.
+> 2. Všimněte si abstraktního výsledku: transpozice změnila strukturu seznamu z 5 seznamů o 3 položkách na 3 seznamy o 5 položkách.
+> 3. Všimněte si geometrického výsledku: pomocí uzlu **PolyCurve.ByPoints** získáte 3 objekty polycurve v kolmém směru od původních křivek.
 
-## Code Block for List Creation
+## Blok kódu k vytvoření seznamu
 
-Code block shorthand uses "\[]" to define a list. This is a much faster and more fluid way to create list than the **List.Create** node. **Code block** is discussed in more detail in [Code Blocks and DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple expressions can be defined with code block.
+Blok kódu využívá znaky „\[]“ jako zkratku k definování seznamu. Jedná se o mnohem rychlejší a plynulejší způsob tvorby seznamů než uzel **List.Create**. **Blok kódu** je podrobněji popsán v části [Bloky kódů a jazyk DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). V níže uvedeném obrázku můžete vidět, jak je možné definovat seznam s více výrazy pomocí bloku kódu.
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 01.jpg>)
 
-#### Code Block Query
+#### Dotaz bloku kódu
 
-**Code block** shorthand uses "\[]" as a quick and easy way to select specific items that you want from a complex data structure. **Code blocks** are discussed in more detail in [Code Block and DesignScript chapter](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Reference the image below to note how a list with multiple data types can be queried with code block.
+**Blok kódu** používá znaky „\[]“ jako rychlý a snadný způsob výběru konkrétních položek ze složité datové struktury. **Bloky kódu** jsou podrobněji popsány v části [Bloky kódu a jazyk DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). V níže uvedeném obrázku můžete vidět, jak je možné dotazovat seznam s více datovými typy pomocí bloku kódu.
 
 ![](<../images/5-4/3/lists of lists - codeblock for list creation 02.jpg>)
 
-## Exercise - Querying and Inserting Data
+## Cvičení – Dotazování a vkládání dat
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/3/ReplaceItems.dyn" %}
 
-This exercise uses some of the logic established in the previous one to edit a surface. Our goal here is intuitive, but the data structure navigation will be more involved. We want to articulate a surface by moving a control point.
+Toto cvičení využívá část logiky stanovené v předchozím cvičení k úpravě povrchu. Cíl je intuitivní, nyní se však více zapojí navigace v datové struktuře. Chceme rozdělit povrch přesunem řídicího bodu.
 
-Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.
+Začněte s výše uvedeným řetězcem uzlů. Vytváříme základní povrch, který pokrývá výchozí osnovu aplikace Dynamo.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 01.jpg>)
 
-> 1. Using **Code Block**, insert these two lines of code and connect to the _u_ and _v_ inputs of **Surface.PointAtParameter**, respectively: `-50..50..#3;` `-50..50..#5;`
-> 2. Be sure to set the Lacing of **Surface.PointAtParameter** to _"Cross Product"_.
-> 3. The **Watch** node show that we have a list of 3 lists, each with 5 items.
+> 1. Pomocí **bloku kódu** vložte tyto dva řádky kódu a připojte je ke vstupům _u_ a _v_ uzlu **Surface.PointAtParameter**: `-50..50..#3;` `-50..50..#5;`
+> 2. Zkontrolujte, zda je vázání uzlu **Surface.PointAtParameter** nastaveno na možnost _„Vektorový součin“_.
+> 3. Uzel **Watch** zobrazuje, že byl vrácen seznam 3 seznamů, z nichž každý obsahuje 5 položek.
 
-In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
+V tomto kroku je třeba dotazovat středový bod v osnově, kterou jste vytvořili. Chcete-li to provést, vyberte prostřední bod prostředního seznamu. To dává smysl, že?
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 02.jpg>)
 
-> 1. To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.
-> 2. Using **Code Block**, we'll write a basic line of code for querying a list of lists:\
+> 1. Chcete-li potvrdit, že se jedná o správný bod, můžete toho dosáhnout kliknutím na položky uzlu Watch.
+> 2. Pomocí **bloku kódu** zapište základní řádek kódu k dotazování se na seznam seznamů:\
 >    `points[1][2];`
-> 3. Using **Geometry.Translate**, we'll move the selected point up in the _Z_ direction by _20_ units.
+> 3. Pomocí funkce **Geometry.Translate** přesuňte vybraný bod nahoru ve směru osy _Z_ o _20_ jednotek.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 03.jpg>)
 
-> 1. Let's also select the middle row of points with a **List.GetItemAtIndex** node. Note: Similar to a previous step, we can also query the list with **Code Block**, using a line of `points[1];`
+> 1. Nyní vybereme také prostřední řádek bodů u uzlu **List.GetItemAtIndex**. Poznámka: Podobně jako v předchozím kroku můžete také zadat dotaz na seznam pomocí **bloku kódu** s řádkem `points[1];`.
 
-So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
+Zatím jsme se úspěšně dotázali na střed a posunuli jej nahoru. Nyní je potřeba vložit tento přesunutý bod zpět do původní datové struktury.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 04.jpg>)
 
-> 1. First, we want to replace the item of the list we isolated in a previous step.
-> 2. Using **List.ReplaceItemAtIndex**, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (**Geometry.Translate**).
-> 3. The output shows that we've input the moved point into the middle item of the list.
+> 1. Nejprve je třeba nahradit položku seznamu, kterou jsme izolovali v předchozím kroku.
+> 2. Pomocí metody **List.ReplaceItemAtIndex** nahraďte prostřední položku a použijte index _"2"_ s náhradní položkou připojenou k přesunutému bodu (**Geometry.Translate**).
+> 3. Výstup zobrazí, že přesunutý bod byl vložen přes vstup do prostřední položky seznamu.
 
-Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
+Nyní, když byl seznam upraven, je třeba vložit tento seznam zpět do původní datové struktury: seznamu seznamů.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 05.jpg>)
 
-> 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
-> 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
-> 3. By selecting the list at _index 1_, we see the data structure highlighted in the Dynamo preview. We successfully merged the moved point into the original data structure.
+> 1. Podle stejné logiky nahraďte pomocí metody **List.ReplaceItemAtIndex** prostřední seznam upraveným seznamem.
+> 2. Všimněte si, že **bloky kódu**__ definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points\[1]\[2]_).
+> 3. Po výběru seznamu na _indexu 1_ se v náhledu aplikace Dynamo zvýrazní datová struktura. Přesunutý bod tak byl úspěšně sloučen s původní datovou strukturou.
 
-There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
+Z této sady bodů je možné vytvořit povrch mnoha způsoby. V tomto případě se vytvoří povrch šablonováním křivek dohromady.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 06.jpg>)
 
-> 1. Create a **NurbsCurve.ByPoints** node and connect the new data structure to create three nurbs curves.
+> 1. Vytvořte uzel **NurbsCurve.ByPoints** a připojením nové datové struktury vytvořte tři křivky nurbs.
 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 07.jpg>)
 
-> 1. Connect a **Surface.ByLoft** to the output from **NurbsCurve.ByPoints**. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!
+> 1. Připojte uzel **Surface.ByLoft** k výstupu uzlu **NurbsCurve.ByPoints**. Nyní máme upravený povrch. Je možné změnit původní hodnotu _Z_ geometrie. Proveďte posun a sledujte, jak se geometrie aktualizuje!

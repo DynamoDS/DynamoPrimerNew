@@ -1,45 +1,45 @@
-# Scripting Reference
+# Skriptování – reference
 
-This reference page extends the best practices covered in Scripting Strategies with greater detail on code libraries, labeling, and styling. We will be using Python to illustrate the concepts below, but the same principles would apply in Python and C#(Zerotouch) but in different syntax.
+Tato referenční stránka rozšiřuje doporučené postupy popsané ve skriptovacích strategiích, které obsahují podrobnější informace o knihovnách kódů, opatřování popisky a stylech. Budeme používat jazyk Python k ilustraci níže uvedených koncepcí, ale stejné zásady by platily v jazyce C#(Zerotouch), ale s jinou syntaxí.
 
-## Which Libraries to Use
+## Které knihovny se mají použít
 
-Standard libraries are external to Dynamo and are present in the programming languages Python and C# (Zerotouch). Dynamo also has its own set of libraries that directly correspond to it's node hierarchy, enabling the user to build anything in code that could be made with nodes and wires. The following is a guide for what each Dynamo library gives access to and when to use a standard one.
+Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v programovacích jazycích Python a C# (Zerotouch). Aplikace Dynamo má také vlastní sadu knihoven, které přímo odpovídají hierarchii uzlu aplikace Dynamo, což uživateli umožňuje vytvořit v kódu cokoliv, co by mohlo být vytvořeno pomocí uzlů a drátů. Následuje příručka, která popisuje, jak jednotlivé knihovny aplikace Dynamo poskytují přístup a kdy mají používat standardní knihovnu.
 
 ![](./images/3/textual-programming.jpg)
 
-**Standard Libraries and Dynamo Libraries**
+**Standardní knihovny a knihovny aplikace Dynamo**
 
-* Standard libraries from Python and C# can be used to build advanced data and flow structures in the Dynamo environment.
-* Dynamo libraries directly correspond to the node hierarchy for creating geometry and other Dynamo objects.
+* K vytvoření pokročilých dat a toků struktur v prostředí aplikace Dynamo lze použít i standardní knihovny jazyků Python a C#.
+* Knihovny aplikace Dynamo přímo odpovídají hierarchii uzlů k vytváření geometrie a dalších objektů aplikace Dynamo.
 
-**Dynamo Libraries**
+**Knihovny aplikace Dynamo**
 
-1.  ProtoGeometry\*
+1. ProtoGeometry\*
 
-    * Functionality: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
-    * How to import: `import Autodesk.DesignScript.Geometry`
+   * Funkce: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
+   * Způsob importu: `import Autodesk.DesignScript.Geometry`
 
-    ``
+   ``
 2. DSCoreNodes
-   * Functionality: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
-   * How to import: `import DSCore`
-3. Tessellation
-   * Functionality: Convex Hull, Delaunay, Voronoi.
-   * How to import: `import Tessellation`
+   * Funkce: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
+   * Způsob importu: `import DSCore`
+3. Mozaikování
+   * Funkce: Convex Hull, Delaunay, Voronoi.
+   * Způsob importu: `import Tessellation`
 4. DSOffice
-   * Functionality: Excel.
-   * How to import: `import DSOffice`
+   * Funkce: Excel.
+   * Způsob importu: `import DSOffice`
 
 {% hint style="warning" %}
-\*Note: When using **ProtoGeometry** through Python or C#, you are creating unmanaged objects, which need have their memory managed manually - please see section below: **Unmanaged Objects**, for more info.
+\*Poznámka: Při použití knihovny **protoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete níže v části **Nespravované objekty**.
 {% endhint %}
 
-## Label Carefully
+## Pečlivé použití popisků
 
-While scripting, we are constantly using identifiers to denote things like variables, types, functions, and other entities. Through this system of symbolic notation, while building algorithms we can conveniently refer to information by way of labels --usually made up of a sequence of characters. Naming things well plays a significant role in writing code that can be easily read and understood by others as well as your future self! Here are some tips to keep in mind while naming things in your script:
+Během skriptování používáme identifikátory k označení různých položek, jako jsou proměnné, typy, funkce a další entity. Pomocí tohoto systému symbolické notace, můžeme při vytváření algoritmů využít informace pomocí popisků – obvykle tvořených posloupností znaků. Názorné pojmenování věcí hraje důležitou roli v psaní kódu, který mohou snadno číst a chápat i ostatní uživatelé, stejně jako vaše budoucí já. Zde jsou tipy, které vám pomohou při pojmenování položek ve skriptu:
 
-**It´s OK to use abbreviations, but explain the abbreviation with a comment:**
+**Zkratky jsou v pořádku, ale vysvětlete je pomocí komentáře:**
 
 ```
 ### BAD
@@ -56,7 +56,7 @@ csfY= 1.3
 csfZ = 1.0
 ```
 
-**Avoid redundant labeling:**
+**Vyhněte se nadbytečnému označování popisky:**
 
 ```
 ### BAD
@@ -72,7 +72,7 @@ seat = car.Seat()
 tire = car.Tire()
 ```
 
-**Use positive logic for your variable names instead of negative logic:**
+**Místo záporné logiky použijte pro názvy proměnných kladnou logiku:**
 
 ```
 ### BAD
@@ -92,7 +92,7 @@ else:
     print 'not found'
 ```
 
-**Prefer “reverse notation”:**
+**Upřednostňujte „obrácenou poznámku“:**
 
 ```
 ### BAD
@@ -108,9 +108,9 @@ agents_active = …
 agents_dead = ...
 ```
 
-> It’s more sensible, in structural terms.
+> Je to rozumnější, ze strukturálního hlediska.
 
-**Aliases should be used to shorten overly long and often repeated chains:**
+**Zkratky by se měly používat ke zkrácení příliš dlouhých a často opakovaných řetězců:**
 
 ```
 ### BAD
@@ -130,9 +130,9 @@ doc = DM.Instance.CurrentDBDocument
 uiapp = DM.Instance.CurrentUIApplication
 ```
 
-> Aliasing can quickly lead to very confusing and non-standard programs.
+> Aliasing může rychle vést k velmi matoucím a nestandardním programům.
 
-**Only use necessary words:**
+**Používejte pouze nezbytná slova:**
 
 ```
 ### BAD
@@ -144,141 +144,141 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> “Everything should be made as simple as possible, but not simpler.” – Albert Einstein
+> „Všechno by mělo být co nejjednodušší, ale ne jednodušší.“ – Albert Einstein
 
-## Style Consistently
+## Konzistentní styl
 
-Generally speaking there is more than one way to program just about anything, therefore your “personal style” of scripting is the result of the countless small decisions you choose to make (or not make) along the way. That said, the readability and maintainability of your code is a direct result of its internal consistency as well as its adherence to general stylistic conventions. As a rule of thumb, code that looks the same in two places should work the same, too. Here are a few tips for writing clear and consistent code.
+Obecně řečeno, existuje více než jeden způsob, jak něco programovat, proto je váš „osobní styl“ skriptování výsledkem nespočtu malých rozhodnutí, která se rozhodnete udělat (nebo nedělat) v průběhu práce. To znamená, že čitelnost a udržitelnost kódu jsou přímým výsledkem jeho vnitřní konzistence a dodržování všeobecných stylistických konvencí. Jako orientační pravidlo by měl kód, který vypadá stejně na dvou místech, fungovat stejně. Zde je několik tipů pro zápis jasného a konzistentního kódu.
 
-**Naming conventions:** (Choose one of the conventions below for each type of entity in your code and stick to it!)
+**Konvence pojmenování:** (Vyberte jednu z níže uvedených konvencí pro každý typ entity v kódu a držte se jí.)
 
-* Variables, functions, methods, packages, modules:\
-  `lower_case_with_underscores`
-* Classes and Exceptions:\
-  `CapWords`
-* Protected methods and internal functions:\
-  `_single_leading_underscore(self, ...)`
-* Private methods:\
-  `__double_leading_underscore(self, ...)`
-* Constants:\
-  `ALL_CAPS_WITH_UNDERSCORES`
+* Proměnné, funkce, metody, balíčky, moduly:\
+   `lower_case_with_underscores`
+* Třídy a výjimky:\
+   `CapWords`
+* Chráněné metody a vnitřní funkce:\
+   `_single_leading_underscore(self, ...)`
+* Soukromé metody:\
+   `__double_leading_underscore(self, ...)`
+* Konstanty:\
+   `ALL_CAPS_WITH_UNDERSCORES`
 
-> Tip: Avoid one-letter variables (esp. l, O, I) except in very short blocks, when the meaning is clearly visible from the immediate context.
+> Tip: Vyhněte se jednopísmenným proměnným (zvláště l, O, I) kromě velmi krátkých bloků, pokud je význam zřetelně viditelný z bezprostředního kontextu.
 
-**Use of blank lines:**
+**Použití prázdných řádků:**
 
-* Surround top-level function and class definitions with two blank lines.
-  * Method definitions inside a class are surrounded by a single blank line.
-  * Extra blank lines may be used (sparingly) to separate groups of related functions.
+* Obklopujte funkce a definice tříd dvěma prázdnými řádky.
+   * Definice metody uvnitř třídy jsou obklopeny jedním prázdným řádkem.
+   * Pro oddělení skupin souvisejících funkcí lze použít (střídmě) další prázdné řádky.
 
-**Avoid extraneous whitespace:**
+**Vyhněte se nadbytečnému bílému prostoru:**
 
-*   Immediately inside parentheses, brackets or braces:
+* Bezprostředně uvnitř závorek:
 
-    ```
-    ### BAD
-    function( apples[ 1 ], { oranges: 2 } )
-    ```
+   ```
+   ### BAD
+   function( apples[ 1 ], { oranges: 2 } )
+   ```
 
-    ```
-    ### GOOD:
-    function(apples[1], {oranges: 2})
-    ```
-*   Immediately before a comma, semicolon, or colon:
+   ```
+   ### GOOD:
+   function(apples[1], {oranges: 2})
+   ```
+* Bezprostředně před čárkou, středníkem nebo dvojtečkou:
 
-    ```
-    ### BAD
-     if x == 2 : print x , y ; x , y = y , x
-    ```
+   ```
+   ### BAD
+    if x == 2 : print x , y ; x , y = y , x
+   ```
 
-    ```
-    ### GOOD
-      if x == 2: print x, y; x, y = y, x
-    ```
-*   Immediately before the open parenthesis that starts the argument list of a function call:
+   ```
+   ### GOOD
+     if x == 2: print x, y; x, y = y, x
+   ```
+* Bezprostředně před otevřenou závorkou, která začíná seznam argumentů volání funkce:
 
-    ```
-    ### BAD
-    function (1)
-    ```
+   ```
+   ### BAD
+   function (1)
+   ```
 
-    ```
-    ### GOOD
-    function(1)
-    ```
-*   Immediately before the open parenthesis that starts an indexing or slicing:
+   ```
+   ### GOOD
+   function(1)
+   ```
+* Bezprostředně před otvírací závorkou, která začíná indexování nebo řezy:
 
-    ```
-    ### BAD
-    dict ['key'] = list [index]
-    ```
+   ```
+   ### BAD
+   dict ['key'] = list [index]
+   ```
 
-    ```
-    ### GOOD
-    dict['key'] = list[index]
-    ```
-*   Always surround these binary operators with a single space on either side:
+   ```
+   ### GOOD
+   dict['key'] = list[index]
+   ```
+* Vždy obklopte tyto binární operátory jednou mezerou na obou stranách:
 
-    ```
-    assignment ( = )
-    augmented assignment ( += , -= etc.)
-    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-    Booleans ( and , or , not )
-    ```
+   ```
+   assignment ( = )
+   augmented assignment ( += , -= etc.)
+   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+   Booleans ( and , or , not )
+   ```
 
-**Watch line length:**
+**Dávejte pozor na délku řádků:**
 
-* Don't stress over it \~ 79 characters.
-* Limiting the required editor window width makes it possible to have several files open side-by-side, and works well when using code review tools that present the two versions in adjacent columns.
-* Long lines can be broken over multiple lines by wrapping expressions in parentheses:
+* Nepřekračujte cca 79 znaků.
+* Omezení požadované šířky okna editoru umožňuje, aby bylo více souborů otevřeno vedle sebe, a funguje správně při použití nástrojů pro kontrolu kódu, které představují dvě verze v sousedních sloupcích.
+* Dlouhé řádky lze rozdělit na více řádků zalomením výrazů v závorkách:
 
-**Avoid obvious and redundant comments:**
+**Vyhněte se zjevným a nadbytečným komentářům:**
 
-* Sometimes fewer comments makes for more readable code. Especially if it forces you to use meaningful symbol names instead.
-*   Adopting good coding habits reduces dependence on comments:
+* Někdy méně komentářů znamená čitelnější kód. Zvláště pokud vás nutí místo toho použít smysluplné názvy symbolů.
+* Přijetí kvalitních kódovacích návyků snižuje závislost na komentářích:
 
-    ```
-    ### BAD
-      # get the country code
-      country_code = get_country_code(address)
+   ```
+   ### BAD
+     # get the country code
+     country_code = get_country_code(address)
 
-      # if country code is US
-      if (country_code == 'US'):
-        # display the form input for state
-        print form_input_state()
-    ```
+     # if country code is US
+     if (country_code == 'US'):
+       # display the form input for state
+       print form_input_state()
+   ```
 
-    ```
-    ### GOOD
-      # display state selection for US users
-      country_code = get_country_code(address)
-      if (country_code == 'US'):
-        print form_input_state()
-    ```
+   ```
+   ### GOOD
+     # display state selection for US users
+     country_code = get_country_code(address)
+     if (country_code == 'US'):
+       print form_input_state()
+   ```
 
-> Tip: Comments tell you why, Code tells you how.
+> Tip: Komentáře vám vysvětlují proč, kód vám říká jak.
 
-**Check out open source code:**
+**Podívejte se na otevřený zdrojový kód:**
 
-* Open Source projects are built on the collaborative efforts of many developers. These projects need to maintain a high level of code readability so that the team can work together as efficiently as possible. Therefore, it is a good idea to browse through the source code of these projects to observe what these developers are doing.
-* Improve your conventions:
-  * Question whether or not each convention is working for the needs at hand.
-  * Is functionality/efficiency being compromised?
+* Projekty s otevřeným zdrojovým kódem jsou založeny na spolupráci mnoha vývojářů. Tyto projekty musí udržovat vysokou úroveň čitelnosti kódu, aby tým mohl pracovat co nejúčinněji. Proto je vhodné procházet zdrojový kód těchto projektů a sledovat, co tito vývojáři provádějí.
+* Vylepšete své konvence:
+   * Je třeba se ptát, zda každá konvence funguje pro současné potřeby.
+   * Je ohrožena funkčnost/účinnost?
 
-## C# (Zerotouch) Standards
+## Standardy C# (Zerotouch)
 
-**Check out these wiki pages for guidance on writing C# for Zerotouch and contributing to Dynamo:**
+**Na těchto stránkách Wiki naleznete rady pro psaní C# pro Zerotouch a přispívání do aplikace Dynamo:**
 
-* This wiki covers some general coding standards for documenting and testing your code: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
-* This wiki specifically covers naming standards for libraries, categories, node names, port names, and abbreviations: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
+* Tato nápověda Wiki se zabývá některými obecnými standardy kódování pro dokumentaci a testování vašeho kódu: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards).
+* Tato nápověda Wiki se zabývá zejména standardy pojmenování knihoven, kategorií, názvů uzlů, názvů portů a zkratek: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards).
 
-**Unmanaged Objects:**
+**Nespravované objekty:**
 
-When using Dynamo's Geometry library _(ProtoGeometry)_ from Python or C# geometry objects that you create will not be managed by the virtual machine, and the memory of many of these objects will need to be cleaned up manually. To cleanup native or unmanaged objects you can use the **Dispose** method or the **using** keyword. See this wiki entry for an overview: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
+Při používání knihovny geometrie aplikace Dynamo _(ProtoGeometry)_ z geometrických objektů v jazyce Python nebo C# nebudou vytvářené objekty spravovány virtuálním počítačem a paměť po mnoha těchto objektech bude nutné vyčistit ručně. Chcete-li vyčistit nativní nebo nespravované objekty, můžete použít metodu **Dispose** nebo klíčové slovo **using**. Přehled najdete v této nápovědě Wiki: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-You only need to dispose unmanaged resources that you don't return into the graph or store a reference to. For the rest of this section, we'll refer to these objects as _intermediate geometry_. You can see an example of this class of object in the code example below. This zero touch C# function **singleCube** returns a single cube, but creates 10000 extra cubes during its execution. We can pretend this other geometry was used as some intermediate construction geometry.
+Je nutné pouze zpracovat nespravované zdroje, které se nevrací do grafu, nebo se na ně neukládá odkaz. Ve zbytku této části odkazujeme na tyto objekty jako _mezilehlou geometrii_. Příklad této třídy objektu je uveden v příkladu kódu níže. Tato funkce **singleCube** s nulovým dotykem C# vrací jednu krychli, ale během provádění vytvoří 10000 dalších krychlí. Můžeme předstírat, že tato jiná geometrie byla použita jako mezilehlá konstrukční geometrie.
 
-**This zero touch function will most likely crash Dynamo.** Since we created 10000 solids, but only stored one of them, and only returned that one. We should instead, dispose all of our intermediate cubes, except the one that we return. We don't want to dipose what we return, as it will be propogated into the graph and used by other nodes.
+**Tato funkce nulového dotyku pravděpodobně způsobí selhání aplikace Dynamo.** Protože jsme vytvořili 10000 těles, ale pouze jedno z nich bylo uloženo a pouze toto bylo vráceno. Místo toho bychom měli odstranit všechny naše mezilehlé kostky, kromě té, kterou vrátíme. Nechceme odstranit tu, kterou vrátíme, protože bude propagována do grafu a použita jinými uzly.
 
 ```
 public Cuboid singleCube(){
@@ -292,7 +292,7 @@ public Cuboid singleCube(){
 }
 ```
 
-The fixed code would look something like:
+Opravený kód by vypadal jako:
 
 ```
  public Cuboid singleCube(){
@@ -312,4 +312,4 @@ The fixed code would look something like:
  }
 ```
 
-In general you only need to dispose geometry like `Surfaces`, `Curves`, and `Solids`. To be safe though, you can dispose all geometry types (`Vectors`, `Points`, `CoordinateSystems`).
+Obecně platí, že je nutné pouze odstranit geometrii, jako je `Surfaces`, `Curves` a `Solids`. Pro jistotu však můžete odstranit všechny typy geometrie (`Vectors`, `Points`, `CoordinateSystems`).

@@ -1,188 +1,188 @@
-# n-Dimensional Lists
+# N-rozměrné seznamy
 
-Further down the rabbit-hole, let's add even more tiers to hierarchy. Data structure can expand far beyond a two-dimensional list of lists. Since lists are items in and of themselves in Dynamo, we can create data with as many dimensions as possible.
+Postoupíme dále ve složitosti a přidáme do hierarchie ještě více vrstev. Datovou strukturu je možné rozšířit daleko za hranice dvourozměrného seznamu seznamů. Vzhledem k tomu, že seznamy jsou v aplikaci Dynamo položky v nich samotných a jich samotných, je možné vytvořit data s tolika rozměry kolik je jen možné.
 
-The analogy we'll work with here are Russian Nesting Dolls. Each list can be regarded as one container holding multiple items. Each list has its own properties and is also regarded as its own object.
+Analogie, se kterou budeme pracovat, je založena na ruských matrjoškách. Každý seznam je možné chápat jako kontejner obsahující více položek. Každý seznam má své vlastnosti a také je chápán jako svůj vlastní objekt.
 
-![Dolls](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
+![Matrjošky](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
 
-> A set of Russian Nesting Dolls (Photo by [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) is an analogy for n-Dimensional lists. Each layer represents a list, and each list contains items within it. In Dynamo's case, each container can have multiple containers inside (representing the items of each list).
+> Sada ruských matrjošek (autor fotografie: [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) je analogií pro n-rozměrné seznamy. Každá vrstva představuje seznam a každý seznam obsahuje položky. V případě aplikace Dynamo může mít každý kontejner uvnitř více kontejnerů (představujících položky každého seznamu).
 
-n-Dimensional lists are difficult to explain visually, but we've set up a few exercises in this chapter which focus on working with lists which venture beyond two dimensions.
+N-rozměrné seznamy se těžko vysvětlují vizuálně, v této kapitole jsme však připravili několik cvičení, která se zaměřují na práci se seznamy přesahujícími dva rozměry.
 
-### Mapping and Combinations
+### Mapování a kombinace
 
-Mapping is arguably the most complex part of data management in Dynamo, and is especially relevant when working with complex hierarchies of lists. With the series of exercises below, we'll demonstrate when to use mapping and combinations as data becomes multi-dimensional.
+Mapování je pravděpodobně nejsložitější součástí správy dat v aplikaci Dynamo a je obzvláště důležité při práci se složitými hierarchiemi seznamů. Pomocí řady cvičení níže si ukážeme, kdy je třeba použít mapování a kombinace, když se data stanou vícerozměrnými.
 
-Preliminary introductions to **List.Map** and **List.Combine** can be found in the previous section. In the last exercise below, we'll use these nodes on a complex data structure.
+Předběžná představení uzlů **List.Map** a **List.Combine** najdete v předchozí části. V posledním cvičení níže použijeme tyto uzly na složitou datovou strukturu.
 
-## Exercise - 2D Lists - Basic
+## Cvičení – 2D seznamy – základní
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/4/n-Dimensional-Lists.zip" %}
 
-This exercise is the first in a series of three which focuses on articulating imported geometry. Each part in this series of exercises will increase in the complexity of data structure.
+Toto cvičení je první v řadě tří, které se zaměřuje na členění importované geometrie. Každá část této řady cvičení zvýší složitost datové struktury.
 
 ![Exercise](<../images/5-4/4/n-dimensional lists - 2d lists basic 01.jpg>)
 
-> 1. Let's begin with the .sat file in the exercise file folder. We can grab this file using the **File Path** node.
-> 2. With **Geometry.ImportFromSAT**, the geometry is imported into our Dynamo preview as two surfaces.
+> 1. Začněte souborem .sat ve složce souborů cvičení. Tento soubor můžete načíst pomocí uzlu **File Path**.
+> 2. Pomocí uzlu **Geometry.ImportFromSAT** se geometrie importuje do náhledu aplikace Dynamo jako dva povrchy.
 
-For this exercise, we want to keep it simple and work with one of the surfaces.
+V tomto cvičení se pracuje z důvodu zjednodušení pouze s jedním povrchem.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 02.jpg>)
 
-> 1. Let's select the index of 1 to grab the upper surface. We do this with **List.GetItemAtIndex** node.
-> 2. Switch off the geometry preview from **Geometry.ImportFromSAT** preview.
+> 1. Výběrem indexu 1 uchopte povrch. Index vyberete pomocí uzlu **List.GetItemAtIndex**.
+> 2. Vypněte náhled geometrie v náhledu uzlu **Geometry.ImportFromSAT**.
 
-The next step is to divide the surface into a grid of points.
+Dalším krokem je rozdělení povrchu na osnovu bodů.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 03.jpg>)
 
-> 1\. Using **Code Block**, insert these two lines of code: `0..1..#10;` `0..1..#5;`
+> 1\. Pomocí **bloku kódu** vložte tyto dva řádky kódu: `0..1..#10;` `0..1..#5;`.
 >
-> 2\. With the **Surface.PointAtParameter**, connect the two code block values to u and _v_. Change the _lacing_ of this node to _"Cross Product"_.
+> 2\. Připojte dvě hodnoty bloku kódu ke vstupům u a _v_ uzlu **Surface.PointAtParameter**. Změňte _vázání_ tohoto uzlu na _„Vektorový součin“_.
 >
-> 3\. The output reveals the data structure, which is also visible in the Dynamo preview.
+> 3\. Výstup odhalí datovou strukturu, která je viditelná také v náhledu aplikace Dynamo.
 
-Next, used the Points from last step to generate ten curves along the surface.
+Dále pomocí bodů z posledního kroku vygenerujte deset křivek podél povrchu.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 04.jpg>)
 
-> 1. To get a look at how the data structure is organized, let's connect a **NurbsCurve.ByPoints** to the output of **Surface.PointAtParameter**.
-> 2. You may switch off the preview from the **List.GetItemAtIndex** Node for now for a clearer result.
+> 1. Chcete-li se podívat, jak je datová struktura uspořádána, připojte objekt **NurbsCurve.ByPoints** k výstupu uzlu **Surface.PointAtParameter**.
+> 2. Nyní můžete vypnout náhled z uzlu **List.GetItemAtIndex**, abyste získali jasnější výsledek.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 05.jpg>)
 
-> 1. A basic **List.Transpose** will flip the columns and rows of a list of lists.
-> 2. Connecting the output of **List.Transpose** to **NurbsCurve.ByPoints**, we now get five curves running horizontally across the surface.
-> 3. You may switch off the preview from the **NurbsCurve.ByPoints** Node in the previous step to achieve the same result in the image.
+> 1. Základní uzel **List.Transpose** převrátí sloupce a řádky seznamu seznamů.
+> 2. Pokud se výstup uzlu **List.Transpose** připojí k uzlu **NurbsCurve.ByPoints**, přes povrch bude nyní horizontálně umístěno pět křivek.
+> 3. Chcete-li dosáhnout stejného výsledku jako na obrázku, můžete v předchozím kroku vypnout náhled z uzlu **NurbsCurve.ByPoints**.
 
-## Exercise - 2D Lists - Advanced
+## Cvičení – 2D seznamy – rozšířené
 
-Let's increase the complexity. Suppose we wanted to perform an operation on the curves created from the previous exercise. Perhaps we want to relate these curves to another surface and loft between them. This requires more attention to data structure, but the underlying logic is the same.
+Zvýšíme složitost. Řekněme, že chcete provést operaci s křivkami vytvořenými v předchozím cvičení. Možná bude užitečné tyto křivky spojit s jiným povrchem a šablonovat mezi nimi. Toto vyžaduje věnování větší pozornosti datové struktuře, ale příslušná logika je stejná.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 01.jpg>)
 
-> 1. Begin with a step from the previous exercise, isolating the upper surface of the imported geometry with the **List.GetItemAtIndex** node.
+> 1. Začněte krokem z předchozího cvičení, který izoluje horní povrch importované geometrie pomocí uzlu **List.GetItemAtIndex**.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 02.jpg>)
 
-> 1. Using **Surface.Offset**, offset the surface by a value of _10_.
+> 1. Pomocí uzlu **Surface.Offset** odsaďte povrch o hodnotu _10_.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a _code block_ with these two lines of code: `0..1..#10;` `0..1..#5;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with _lacing_ set to _"Cross Product"_. One of these nodes is connected to the original surface, while the other is connected to the offset surface.
+> 1. Stejným způsobem jako v předchozím cvičení definujte _blok kódu_ s těmito dvěma řádky kódu: `0..1..#10;` `0..1..#5;`.
+> 2. Tyto výstupy připojte ke dvěma uzlům **Surface.PointAtParameter**, z nichž každý má _vázání_ nastaveno na _„Vektorový součin“_. Jeden z těchto uzlů je připojen k původnímu povrchu, zatímco druhý je připojen k odsazenému povrchu.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
 
-> 1. Switch off the preview of these Surfaces.
-> 2. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes. The result show curves corresponding to two surfaces.
+> 1. Vypněte náhled těchto povrchů.
+> 2. Stejně jako v předchozím cvičení připojte výstupy ke dvěma uzlům **NurbsCurve.ByPoints**. Ve výsledku se zobrazí křivky odpovídající dvěma povrchům.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 05.jpg>)
 
-> 1. By using **List.Create**, we can combine the two sets of curves into one list of lists.
-> 2. Notice from the output, we have two lists with ten items each, representing each connect set of Nurbs curves.
-> 3. By performing a **Surface.ByLoft**, we can visually make sense of this data structure. The node lofts all of the curves in each sublist.
+> 1. Pomocí uzlu **List.Create** je možné kombinovat dvě sady křivek do jednoho seznamu seznamů.
+> 2. Všimněte si, že z výstupu máme dva seznamy každý po deseti položkách, přičemž každý z nich představuje připojenou sadu křivek nurbs.
+> 3. Provedením operace uzlu **Surface.ByLoft** je možné vizuálně pochopit tuto datovou strukturu. Uzel šablonuje všechny křivky v každém dílčím seznamu.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 06.jpg>)
 
-> 1. Switch off the preview from **Surface.ByLoft** Node in previous step.
-> 2. By using **List.Transpose**, remember, we are flipping all of the columns and rows. This node will transfer two lists of ten curves into ten lists of two curves. We now have each nurbs curve related to the neighboring curve on the other surface.
-> 3. Using **Surface.ByLoft**, we arrive at a ribbed structure.
+> 1. Vypněte náhled z uzlu **Surface.ByLoft** v předchozím kroku.
+> 2. Pokud použijete uzel **List.Transpose**, nezapomeňte, že se překlopí všechny sloupce a řádky. Tento uzel převede dva seznamy deseti křivek do deseti seznamů dvou křivek. Nyní je každá křivka nurbs vztažena k sousedící křivce na druhém povrchu.
+> 3. Pomocí uzlu **Surface.ByLoft** jste vytvořili žebrovanou konstrukci.
 
-Next, we will demonstrate an alternative process to achieve this result
+Dále si ukážeme alternativní postup k dosažení tohoto výsledku.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
 
-> 1. Before we start, switch off the **Surface.ByLoft** preview in previous step to avoid confusion.
-> 2. An alternative to **List.Transpose** uses **List.Combine**. This will operate a _"combinator"_ on each sublist.
-> 3. In this case, we're using **List.Create** as the _"combinator"_, which will create a list of each item in the sublists.
-> 4. Using the **Surface.ByLoft** node, we get the same surfaces as in the previous step. Transpose is easier to use in this case, but when the data structure becomes even more complex, **List.Combine** is more reliable.
+> 1. Než začneme, vypněte náhled uzlu **Surface.ByLoft** v předchozím kroku, abyste se vyhnuli nejasnostem.
+> 2. Alternativou uzlu **List.Transpose** je **List.Combine**. Tento uzel ovládá _„kombinátor“_ v každém dílčím seznamu.
+> 3. V tomto případě uzel **List.Create **použije jako _„kombinátor“_, který vytvoří seznam jednotlivých položek v dílčích seznamech.
+> 4. Pomocí uzlu **Surface.ByLoft** získáte stejné povrchy jako v předchozím kroku. Transpozice je v tomto případě jednodušší, pokud však bude datová struktura ještě složitější, uzel **List.Combine** je spolehlivější.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
 
-> 1. Stepping back a few steps, if we want to switch the orientation of the curves in the ribbed structure, we want to use a **List.Transpose** before connect to **NurbsCurve.ByPoints**. This will flip the columns and rows, giving us 5 horizontal ribs.
+> 1. Pokud bychom v jednom z předchozích kroků chtěli přepnout orientaci křivek žebrované konstrukce, před připojením k uzlu **NurbsCurve.ByPoints** bychom použili uzel **List.Transpose**. Ten převrátí sloupce a řádky a vytvoří 5 vodorovných žeber.
 
-## Exercise - 3D Lists
+## Cvičení – 3D seznamy
 
-Now, we're going to go even one step further. In this exercise, we'll work with both imported surfaces, creating a complex data hierarchy. Still, our aim is to complete the same operation with the same underlying logic.
+Je čas postoupit o krok dál. V tomto cvičení budete pracovat s oběma importovanými povrchy a vytvoříte složitou datovou hierarchii. Stále je však naším cílem dokončení této operace pomocí stejné příslušné logiky.
 
-Begin with the imported file from previous exercise.
+Začněte u importovaného souboru z předchozího cvičení.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 01.jpg>)
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 02.jpg>)
 
-> 1. As in the previous exercise, use the **Surface.Offset** node to offset by a value of _10_.
-> 2. Notice from the output, that we've created two surfaces with the offset node.
+> 1. Stejně jako v předchozím cvičení přidejte pomocí uzlu **Surface.Offset** odsazení o hodnotu _10_.
+> 2. Všimněte si, že na výstupu se vytvořily dva povrchy s odsazeným uzlem.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
 
-> 1. In the same manner as the previous exercise, define a **Code Block** with these two lines of code: `0..1..#20;` `0..1..#20;`
-> 2. Connect these outputs to two **Surface.PointAtParameter** nodes, each with lacing set to _"Cross Product"_. One of these nodes is connected to the original surfaces, while the other is connected to the offset surfaces.
+> 1. Stejným způsobem jako v předchozím cvičení definujte **blok kódu** s těmito dvěma řádky kódu: `0..1..#20;` `0..1..#20;`.
+> 2. Tyto výstupy připojte ke dvěma uzlům **Surface.PointAtParameter**, z nichž každý má vázání nastaveno na _„Vektorový součin“_. Jeden z těchto uzlů je připojen k původním povrchům, zatímco druhý je připojen k odsazeným povrchům.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
 
-> 1. As in the previous exercise, connect the outputs to two **NurbsCurve.ByPoints** nodes.
-> 2. Looking at the output of the **NurbsCurve.ByPoints,** notice that this is a list of two lists, which is more complex than the previous exercise. The data is categorized by the underlying surface, so we've added another tier to the data structured.
-> 3. Notice that things become more complex in the **Surface.PointAtParameter** node. In this case we have a list of lists of lists.
+> 1. Stejně jako v předchozím cvičení připojte výstupy ke dvěma uzlům **NurbsCurve.ByPoints**.
+> 2. Při pohledu na výstup uzlu **NurbsCurve.ByPoints** si všimněte, že se jedná o seznam dvou seznamů, což je složitější struktura než v předchozím cvičení. Data jsou kategorizována podle základních povrchů, čili do strukturovaných dat byla přidána další vrstva.
+> 3. Všimněte si, že v uzlu **Surface.PointAtParameter** se již situace stane složitější. V tomto případě máme seznam seznamů seznamů.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 05.jpg>)
 
-> 1. Before we proceed, switch off the preview from the existing surfaces.
-> 2. Using the **List.Create** node, we merge the Nurbs curves into one data structure, creating a list of lists of lists.
-> 3. By connecting a **Surface.ByLoft** node, we get a version of the original surfaces, as they each remain in their own list as created from the original data structure.
+> 1. Než budeme pokračovat, vypněte náhled existujících povrchů.
+> 2. Pomocí uzlu **List.Create** sloučíme křivky nurbs do jedné datové struktury, čímž vytvoříte seznam seznamů seznamů.
+> 3. Připojením uzlu **Surface.ByLoft** získáte verzi původních povrchů, protože každý zůstane ve svém vlastním seznamu vytvořeném z původní datové struktury.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 06.jpg>)
 
-> 1. In the previous exercise, we were able to use a **List.Transpose** to create a ribbed structure. This won't work here. A transpose should be used on a two-dimensional list, and since we have a three-dimensional list, an operation of "flipping columns and rows" won't work as easily. Remember, lists are objects, so **List.Transpose** will flip our lists with out sublists, but won't flip the nurbs curves one list further down in the hierarchy.
+> 1. V předchozím cvičení bylo možné vytvořit žebrovanou konstrukci pomocí uzlu **List.Transpose**. Toto zde nebude fungovat. Transpozice by měla být použita na dvourozměrný seznam a vzhledem k tomu, že máme trojrozměrný seznam, operace „převrácení sloupců a řádků“ nebude fungovat tak snadno. Nezapomeňte, že seznamy jsou objekty, čili uzel **List.Transpose** převrátí naše seznamy bez dílčích seznamů, ale nepřevrátí křivky nurbs o jeden seznam níže v hierarchii.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
-> 1. **List.Combine** will work better for us here. We want to use **List.Map** and **List.Combine** nodes when we get to more complex data structures.
-> 2. Using **List.Create** as the _"combinator"_, we create a data structure that will work better for us.
+> 1. Zde bude lépe fungovat uzel **List.Combine**. Když se dojde na složitější datové struktury, chceme použít uzly **List.Map** a **List.Combine**.
+> 2. Pokud použijeme uzel **List.Create **jako _„kombinátor“_, vytvoříme datovou strukturu, která nám bude lépe fungovat.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
-> 1. The data structure still needs to be transposed at one step down on the hierarchy. To do this we'll use **List.Map**. This is working like **List.Combine**, except with one input list, rather than two or more.
-> 2. The function we'll apply to **List.Map** is **List.Transpose**, which will flip the columns and rows of the sublists within our main list.
+> 1. Datovou strukturu o jeden krok níže v hierarchii je stále třeba transponovat. Toto provedete pomocí uzlu **List.Map**. Funguje jako uzel **List.Combine**, jen má jeden vstupní seznam místo dvou a více.
+> 2. Funkce použitá na uzel **List.Map** je **List.Transpose**, která převrátí sloupce a řádky dílčích seznamů v hlavním seznamu.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 09.jpg>)
 
-> 1. Finally, we can loft the Nurbs curves together with a proper data hierarchy, giving us a ribbed structure.
+> 1. Nakonec můžete šablonovat křivky nurbs společně s vhodnou hierarchií dat. Tím vznikne žebrovaná konstrukce.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 10.jpg>)
 
-> 1. Let's add some depth to the geometry with a **Surface.Thicken** Node with the input settings as shown.
+> 1. Nyní přidáme do geometrie hloubku pomocí uzlu **Surface.Thicken** se vstupním nastavením, jak je znázorněno na obrázku.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 11.jpg>)
 
-> 1. It'll be nice to add a surface backing two this structure, so add another **Surface.ByLoft** node and use the first output of **NurbsCurve.ByPoints** from an earlier step as input.
-> 2. As the preview is getting cluttered, switch off preview for these nodes by right clicking on each of them and uncheck 'preview' to see the result better.
+> 1. Bylo by vhodné přidat do této struktury podkladový povrch. Přidejte tedy další uzel **Surface.ByLoft** a jako vstup použijte první výstup uzlu **NurbsCurve.ByPoints** ze staršího kroku.
+> 2. Protože se náhled stává nepřehledným, vypněte náhled pro tyto uzly kliknutím pravým tlačítkem na každý z nich a zrušením zaškrtnutí políčka Náhled, abyste lépe viděli výsledek.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 12.jpg>)
 
-> 1. And thickening these selected surfaces, our articulation is complete.
+> 1. A zesílením těchto vybraných povrchů je dokončeno i členění.
 
-Not the most comfortable rocking chair ever, but it's got a lot of data going on.
+Nejedná se zrovna o nejpohodlnější houpací křeslo, ale pracuje se u něj s mnoha daty.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 13.jpg>)
 
-Last step, let's reverse the direction of the striated members. As we used transpose in the previous exercise, we'll do something similar here.
+V posledním kroku obrátíme směr žlábkovaných členů. V předchozím kroku jsme použili transpozici, tady uděláme něco podobného.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 14.jpg>)
 
-> 1. Since we have one more tier to the hierarchy, so we need to use **List.Map** with a **List.Tranpose** function to change the direction of our Nurbs curves.
+> 1. Vzhledem k tomu, že hierarchie má ještě další vrstvu, je třeba pomocí uzlu **List.Map** a funkce **List.Tranpose** změnit směr křivek nurbs.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 15.jpg>)
 
-> 1. We may want to increase the number of treads, so we can change the **Code Block** to `0..1..#20;` `0..1..#30;`
+> 1. Mohli bychom chtít zvýšit počet vzorků běhounu, což provedeme změnou **bloku kódu** na `0..1..#20;` `0..1..#30;`.
 
-The first version of the rocking chair was sleek, so our second model offers an off-road, sport-utility version of recumbency.
+První verze houpacího křesla byla štíhlá, čili druhý model nabízí robustní off-roadovou verzi usazení.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 16.jpg>)

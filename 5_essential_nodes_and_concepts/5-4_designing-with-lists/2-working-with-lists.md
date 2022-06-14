@@ -1,150 +1,150 @@
-# Working with Lists
+# Práce se seznamy
 
-### Working with Lists
+### Práce se seznamy
 
-Now that we've established what a list is, let's talk about operations we can perform on it. Imagine a list as a deck of playing cards. A deck is the list and each playing card represents an item.
+Teď, když jsme stanovili, co je to seznam, pojďme si promluvit o operacích, které s ním můžeme provádět. Představte si seznam jako balíček karet. Seznam je balíček a každá karta představuje položku.
 
-![cards](../images/5-4/2/Playing\_cards\_modified.jpg)
+![karty](../images/5-4/2/Playing\_cards\_modified.jpg)
 
-> Photo by [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Autor fotografie: [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
 
-### Query
+### Dotaz
 
-What **queries** can we make from the list? This accesses existing properties.
+Jaké **dotazy** ze seznamu vytvoříme? Tím získáte přístup k existujícím vlastnostem.
 
-* Number of cards in the deck? 52.
-* Number of suits? 4.
-* Material? Paper.
-* Length? 3.5" or 89mm.
-* Width? 2.5" or 64mm.
+* Počet karet v balíčku? 52.
+* Počet barev? 4.
+* Materiál? Papír.
+* Délka? 3.5" nebo 89 mm.
+* Šířka? 2.5" nebo 64 mm.
 
-### Action
+### Akce
 
-What **actions** can we perform on the list? This changes the list based on a given operation.
+Jaké **akce** můžeme se seznamem provést? Tím se změní seznam podle dané operace.
 
-* We can shuffle the deck.
-* We can sort the deck by value.
-* We can sort the deck by suit.
-* We can split the deck.
-* We can partition the deck by dealing out individual hands.
-* We can select a specific card in the deck.
+* Můžeme zamíchat balíček.
+* Můžeme ho seřadit podle hodnot.
+* Můžeme ho seřadit podle barev.
+* Můžeme balíček rozdělit.
+* Můžeme balíček rozdělit rozdáním karet.
+* Můžeme z balíčku vybrat konkrétní kartu.
 
-All of the operations listed above have analogous Dynamo nodes for working with lists of generic data. The lessons below will demonstrate some of the fundamental operations we can perform on lists.
+Všechny výše uvedené operace mají analogické uzly aplikace Dynamo pro práci se seznamy obecných dat. Níže uvedené lekce ukážou některé základní operace, které můžeme provádět na seznamech.
 
-## **Exercise**
+## **Cvičení**
 
-### **List Operations**
+### **Operace se seznamem**
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/2/List-Operations.dyn" %}
 
-The image below is the base graph which we are drawing lines between two circles to represent basic list operations. We'll explore how to manage data within a list and demonstrate the visual results through the list actions below.
+Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kružnicemi, které představují základní operace se seznamy. Prozkoumáme, jak spravovat data v seznamu a jak prezentovat vizuální výsledky pomocí akcí v seznamu níže.
 
 ![](<../images/5-4/2/working with list - list operation.jpg>)
 
-> 1. Begin with a **Code Block** with a value of `500;`
-> 2. Plug into the x input of a **Point.ByCoordinates** node.
-> 3. Plug the node from the previous step into the origin input of a **Plane.ByOriginNormal** node.
-> 4. Using a **Circle.ByPlaneRadius** node, plug the node from the previous step into the plane input.
-> 5. Using **Code Block**, designate a value of `50;` for the radius. This is the first circle we'll create.
-> 6. With a **Geometry.Translate** node, move the circle up 100 units in the Z direction.
-> 7. With a **Code Block** node, define a range of ten numbers between 0 and 1 with this line of code: `0..1..#10;`
-> 8. Plug the code block from the previous step into the _param_ input of two **Curve.PointAtParameter** nodes. Plug **Circle.ByPlaneRadius** into the curve input of the top node, and **Geometry.Translate** into the curve input of the node beneath it.
-> 9. Using a **Line.ByStartPointEndPoint**, connect the two **Curve.PointAtParamete**_r_ nodes.
+> 1. Začněte uzlem **Code Block** s hodnotou `500;`.
+> 2. Propojte jej se vstupem x uzlu **Point.ByCoordinates**.
+> 3. Uzel z předchozího kroku spojte se vstupem origin uzlu **Plane.ByOriginNormal**.
+> 4. Pomocí uzlu **Circle.ByPlaneRadius** spojte uzel z předchozího kroku se vstupem plane.
+> 5. Pomocí uzlu **Code Block** určete hodnotu `50;` pro vstup radius. Toto je první kruh, který vytvoříme.
+> 6. Pomocí uzlu **Geometry.Translate** posuňte kružnici o 100 jednotek ve směru osy Z.
+> 7. Pomocí uzlu **Code Block** definujte rozsah deseti čísel mezi 0 a 1 s tímto řádkem kódu: `0..1..#10;`
+> 8. Blok kódu z předchozího kroku propojte se vstupem _param_ dvou uzlů **Curve.PointAtParameter**. Propojte uzel **Circle.ByPlaneRadius** se vstupem curve horního uzlu a uzel **Geometry.Translate** se vstupem curve dolního uzlu.
+> 9. Pomocí uzlu **Line.ByStartPointEndPoint** spojte dva uzly **Curve.PointAtParamete**_r_.
 
 ### List.Count
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/2/List-Count.dyn" %}
 
-The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
+Uzel _List.Count_ je jednoduchý: spočítá počet hodnot v seznamu a vrátí výsledné číslo. Tento uzel je při práci se seznamy seznamů složitější, ale to si předvedeme v následujících částech.
 
 ![Count](<../images/5-4/2/working with list - list operation - list count.jpg>)
 
-> 1. The **List.Count **_****_ node returns the number of lines in the **Line.ByStartPointEndPoint** node. The value is 10 in this case, which agrees with the number of points created from the original **Code Block** node.
+> 1. Uzel **List.Count **_****_ vrací počet řádků v uzlu **Line.ByStartPointEndPoint**. V tomto případě je to hodnota 10, která souhlasí s počtem bodů vytvořených z původního uzlu **Code Block**.
 
 ### List.GetItemAtIndex
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/2/List-GetItemAtIndex.dyn" %}
 
-**List.GetItemAtIndex** is a fundamental way to query an item in the list.
+**List.GetItemAtIndex** je základní způsob, jak dotazovat položku v seznamu.
 
 ![Exercise](<../images/5-4/2/working with list - get item index 01.jpg>)
 
-> 1. First, Right click on **Line.ByStartPointEndPoint** node to switch off its preview.
-> 2. Using the **List.GetItemAtIndex** node, we are selecting index _"0"_, or the first item in the list of lines.
+> 1. Nejprve kliknutím pravým tlačítkem myši na uzel **Line.ByStartPointEndPoint** vypněte jeho náhled.
+> 2. Pomocí uzlu **List.GetItemAtIndex** vybereme index _0_ nebo první položku v seznamu řádků.
 
-Change slider value between 0 and 9 to select different item using **List.GetItemAtIndex**.
+Chcete-li pomocí uzlu **List.GetItemAtIndex** vybrat jinou položku, změňte hodnotu posuvníku v rozmezí od 0 do 9.
 
 ![](<../images/5-4/2/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
-_List.Reverse_ reverses the order of all of the items in a list.
+Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 
 ![Exercise](<../images/5-4/2/working with list - list reverse.jpg>)
 
-> 1. To properly visualize the reversed list of lines, create more lines by changing the **Code Block** to `0..1..#50;`
-> 2. Duplicate the **Line.ByStartPointEndPoint** node, insert a List.Reverse node in between **Curve.PointAtParameter** and the second **Line.ByStartPointEndPoint**
-> 3. Use **Watch3D** nodes to preview two different results. The first one shows the result without a reversed list. The lines connect vertically to neighboring points. The reversed list, however, will connect all of the points to the opposing order in the other list.
+> 1. Chcete-li správně zobrazit obrácený seznam čar, vytvořte více čar změnou uzlu **Code Block** na `0..1..#50;`.
+> 2. Duplikujte uzel **Line.ByStartPointEndPoint**, vložte uzel List.Reverse mezi uzel **Curve.PointAtParameter** a druhý uzel **Line.ByStartPointEndPoint**.
+> 3. Pomocí uzlů **Watch3D** zobrazte náhled dvou různých výsledků. První zobrazí výsledek bez obráceného seznamu. Čáry se připojují vertikálně k sousedním bodům. Obrácený seznam však spojí všechny body v opačném pořadí v druhém seznamu.
 
 ### List.ShiftIndices <a href="#listshiftindices" id="listshiftindices"></a>
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/2/List-ShiftIndices.dyn" %}
 
-**List.ShiftIndices** is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
+**List.ShiftIndices** je dobrý nástroj ke tvorbě zkroucení, šroubovicových vzorů nebo jiných podobných manipulací s daty. Tento uzel přemístí položky v seznamu do daného počtu indexů.
 
 ![Exercise](<../images/5-4/2/working with list - shiftIndices 01.jpg>)
 
-> 1. In the same process as the reverse list, insert a **List.ShiftIndices** into the **Curve.PointAtParameter** and **Line.ByStartPointEndPoint**.
-> 2. Using a **Code Block**, designated a value of "1" to shift the list one index.
-> 3. Notice that the change is subtle, but all of the lines in the lower **Watch3D** node have shifted one index when connecting to the other set of points.
+> 1. Stejným postupem jako při otáčení seznamu vložte **List.ShiftIndices** do polí **Curve.PointAtParameter** a **Line.ByStartPointEndPoint**.
+> 2. Pomocí uzlu **Code Block** s hodnotou 1 posuňte seznam o jeden index.
+> 3. Všimněte si, že změna je jemná, ale všechny čáry v dolním uzlu **Watch3D** se posunuly o jeden index při připojení k druhé sadě bodů.
 
-By changing to **Code Block** to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
+Pokud například změníme uzel **Code Block** na větší hodnotu, například _30_, všimneme si významného rozdílu mezi příčnými čarami. V tomto případě funguje posun jako čočka kamery, což vytváří v původní válcové formě otočení.
 
 ![](<../images/5-4/2/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/2/List-FilterByBooleanMask.dyn" %}
 
 ![](../images/5-4/2/ListFilterBool.png)
 
-**List.FilterByBooleanMask** will remove certain items based on a list of booleans, or values reading "true" or "false".
+Položka **List.FilterByBooleanMask** odebere určité položky podle seznamu logických hodnot nebo podle hodnot true nebo false.
 
 ![Exercise](<../images/5-4/2/working with list - filter by bool mask.jpg>)
 
-In order to create a list of values reading "true" or "false", we need to a little more work...
+Aby bylo možné vytvořit seznam hodnot true nebo false, je třeba ještě trochu pracovat...
 
-> 1. Using a **Code Block**, define an expression with the syntax: `0..List.Count(list);`. Connect the **Curve.PointAtParameter** node to the _list_ input. We'll walk through this setup more in the code block chapter, but the line of code in this case is giving us a list representing each index of the **Curve.PointAtParameter** node.
-> 2. Using a _**%**_** (modulus)** node, connect the output of the _code block_ into the _x_ input, and a value of _4_ into the _y_ input. This will give us the remainder when dividing the list of indices by 4. Modulus is a really helpful node for pattern creation. All values will read as the possible remainders of 4: 0, 1, 2, 3.
-> 3. From the  _**%**_** (modulus)** node, we know that a value of 0 means that the index is divisible by 4 (0,4,8,etc...). By using a **==** node, we can test for the divisibility by testing it against a value of _"0"_.
-> 4. The **Watch** node reveals just this: we have a true/false pattern which reads: _true,false,false,false..._.
-> 5. Using this true/false pattern, connect to the mask input of two **List.FilterByBooleanMask** nodes.
-> 6. Connect the **Curve.PointAtParameter** node into each list input for the **List.FilterByBooleanMask**.
-> 7. The output of **Filter.ByBooleanMask** reads _"in"_ and _"out"_. _"In"_ represents values which had a mask value of _"true"_ while _"out"_ represents values which had a value of _"false"_. By plugging the _"in"_ outputs into the _startPoint_ and _endPoint_ inputs of a **Line.ByStartPointEndPoint** node, we've created a filtered list of lines.
-> 8. The **Watch3D** node reveals that we have fewer lines than points. We've selected only 25% of the nodes by filtering only the true values!
+> 1. Pomocí uzlu **Code Block** definujte výraz pomocí syntaxe: `0..List.Count(list);`. Připojte uzel **Curve.PointAtParameter** ke vstupu _list_. Toto nastavení projdeme více v kapitole bloku kódu, ale v tomto případě nám řádek kódu poskytuje seznam reprezentující každý index uzlu **Curve.PointAtParameter**.
+> 2. Pomocí uzlu _**%**_** (modulo)** spojte výstup uzlu _Code Block_se vstupem _x_ a hodnotu _4_ se vstupem _y_. Tak získáme zbytek po dělení seznamu indexů 4. Modulo je velmi užitečné pro vytváření vzorů. Všechny hodnoty budou možné zbytky po dělení 4: 0, 1, 2, 3.
+> 3. Z uzlu _**%**_** (modulo)** víme, že hodnota 0 znamená, že index je dělitelný 4 (0, 4, 8 atd.). Pomocí uzlu **==** můžeme testovat dělitelnost porovnáním s hodnotou _0_.
+> 4. Uzel **Watch** zobrazuje pouze toto: máme vzor s hodnotou true / false, který zní: _true, false, false, false..._.
+> 5. Pomocí tohoto vzoru true/false připojte vstupní hodnotu masky dvou uzlů **List.FilterByBooleanMask**.
+> 6. Spojte uzel **Curve.PointAtParameter** s každým vstupem seznamu pro **List.FilterByBooleanMask**.
+> 7. Výstup **Filter.ByBooleanMask** čte hodnoty _in_ a _out_. _In_ představuje hodnoty, které měly hodnotu masky _true_, zatímco _out_ představuje hodnoty, které měly hodnotu _false_. Zadáním výstupů _in_ do vstupů _startPoint_ a _endPoint_ uzlu **Line.ByStartPointEndPoint** jsme vytvořili filtrovaný seznam čar.
+> 8. Uzel **Watch3D** ukazuje, že máme méně čar než bodů. Vybrali jsme pouze 25 % uzlů filtrováním pouze hodnot true.

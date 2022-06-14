@@ -1,90 +1,90 @@
-# Curves
+# Křivky
 
-## Curves in Dynamo
+## Křivky v aplikaci Dynamo
 
-### What is Curve?
+### Co je křivka?
 
-[Curves ](5-4\_curves.md#curve)are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvey or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
+[Křivky](5-4\_curves.md#curve) jsou první geometrický datový typ, kterému jsme se věnovali a který má známé sady vlastností popisujících tvar: Jak křivé nebo rovné? Jak dlouhé nebo krátké? Nezapomeňte, že Body jsou stále stavební bloky pro definování všeho od úsečky k spline a všechny typy křivek mezi nimi.
 
-![Curve Types](../images/5-2/4/CurveTypes.jpg)
+![Typy křivek](../images/5-2/4/CurveTypes.jpg)
 
-> 1. Line
-> 2. Polyline
-> 3. Arc
-> 4. Circle
-> 5. Ellipse
-> 6. NURBS Curve
+> 1. Čára
+> 2. Křivka
+> 3. Oblouk
+> 4. Kružnice
+> 5. Elipsa
+> 6. Křivka NURBS
 > 7. Polycurve
 
-### Line
+### Čára
 
-[Line ](5-4\_curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>) to create a Line in Dynamo.
+[Čára](5-4\_curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>).
 
 ![](<./images/5-2/4/curves - line by start point end point.jpg>)
 
-### NURBS Curve
+### Křivka NURBS
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) is a model used for representing curves and surfaces accurately. A sine curve in Dynamo using two different methods to create NURBS Curves to compare the results.
+[NURBS](5-4\_curves.md#nurbs-+-polycurves) je model používaný k přesnému znázornění křivek a povrchů. Pojďme v aplikaci Dynamo pomocí dvou různých metod vytvořit křivku NURBS ve tvaru sinusoidy a porovnat výsledky.
 
 ![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
 
-> 1. _NurbsCurve.ByControlPoints_ uses the List of Points as Control Points
-> 2. _NurbsCurve.ByPoints_ draws a Curve through the List of Points
+> 1. _NurbsCurve.ByControlPoints_ používá seznam bodů jako řídicí body
+> 2. _NurbsCurve.ByPoints_ nakreslí křivku procházející seznamem bodů
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
-## Deep Dive into...
+## Podrobné informace...
 
-### Curves
+### Křivky
 
-The term **Curve** is generally a catch-all for all different sort of curved (even if straight) shapes. Capital "C" Curve is the parent categorization for all of those shape types - Lines, Circles, Splines, etc. More technically, a Curve describes every possible Point that can be found by inputting "t" into a collection of functions, which may range from the simple (`x = -1.26*t, y = t`) to functions involving calculus. No matter what kind of Curve we are working with, this **Parameter** called "t" is a property we can evaluate. Furthermore, regardless of the look of the shape, all Curves also have a start point and end point, which coincidentally align with the minimum and maximum t values used to create the Curve. This also helps us understand its directionality.
+Termín **křivka** obvykle označuje všechny různé křivé (i rovné) tvary. Křivka s velkým K je nadřazená kategorizace všech těchto typů tvarů – úseček, kružnic, spline atd. Přesněji řečeno, Křivka popisuje každý možný Bod, který lze najít vložením „t“ do kolekce funkcí, která může být v rozsahu od jednoduchých (`x = -1.26*t, y = t`) až po funkce zahrnující infinitezimální počet. Bez ohledu na to, s jakým typem Křivky pracujeme, je tento **parametr** s názvem „t“ vlastnost, kterou můžeme vyhodnotit. Kromě toho, bez ohledu na vzhled tvaru, mají všechny Křivky také počáteční a koncový bod, který je shodný s minimálními a maximálními hodnotami t použitými k vytvoření Křivky. To nám také pomůže pochopit její směr.
 
-![Curve Parameter](../images/5-2/4/CurveParameter.jpg)
+![Parametr křivky](../images/5-2/4/CurveParameter.jpg)
 
-> It's important to note that Dynamo assumes that the domain of "t" values for a Curve is understood to be 0.0 to 1.0.
+> Je důležité poznamenat, že aplikace Dynamo předpokládá, že doména hodnot „t“ pro křivku je chápána jako 0.0 až 1.0.
 
-All Curves also possess a number of properties or characteristics which can be used to describe or analyze them. When the distance between the start and end points is zero, the curve is "closed." Also, every curve has a number of control-points, if all these points are located in the same plane, the curve is "planar." Some properties apply to the curve as a whole, while others only apply to specific points along the curve. For example, planarity is a global property while a tangent vector at a given t value is a local property.
+Všechny křivky také mají řadu vlastností, které lze použít k jejich popisu nebo analýze. Pokud je vzdálenost mezi počátečním a koncovým bodem nula, křivka je „uzavřená“. Každá křivka má také řadu řídicích bodů, pokud jsou všechny tyto body umístěny ve stejné rovině, křivka je „rovinná“. Některé vlastnosti se vztahují na křivku jako celek, zatímco jiné se vztahují pouze na určité body podél křivky. Například rovinnost je globální vlastnost, zatímco tečný vektor v dané hodnotě t je místní vlastnost.
 
-### Lines
+### Čáry
 
-**Lines** are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions.
+**Úsečky** jsou nejjednodušší formou křivek. Nemusí vypadat zaobleně, ale ve skutečnosti jsou Křivky – jen bez zakřivení. Existuje několik různých způsobů vytvoření čar, nejintuitivnější je od bodu A do bodu B. Tvar čáry AB bude nakreslen mezi body, ale matematicky se prodlouží do nekonečna oběma směry.
 
-![Line](../images/5-2/4/Line.jpg)
+![Čára](../images/5-2/4/Line.jpg)
 
-When we connect two Lines together, we have a **Polyline**. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular.
+Když propojíme obě úsečky dohromady, máme **křivku**. Zde máme přímočaré znázornění toho, co je řídicí bod. Úprava umístění těchto bodů změní tvar křivky. Pokud je křivka uzavřená, máme polygon. Pokud jsou všechny délky hran polygonu shodné, je popisován jako normální.
 
-![Polyline + Polygon](../images/5-2/4/Polyline.jpg)
+![Křivka + polygon](../images/5-2/4/Polyline.jpg)
 
-### Arcs, Circles, Ellipse Arcs, and Ellipses
+### Oblouky, kružnice, oblouky elips a elipsy
 
-As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an **Arc**, **Circle**, **Ellipse Arc**, or **Ellipse** by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed.
+Když přidáváme více složitosti k parametrickým funkcím, které definují tvar, můžeme o jeden krok dále od čáry vytvořit **oblouk**, **kružnici**, **oblouk elipsy** nebo **elipsu** popisem jednoho nebo dvou poloměrů. Rozdíly mezi verzí oblouku a kružnice nebo elipsy jsou pouze tehdy, pokud je tvar uzavřen.
 
-![Arcs + Circles](../images/5-2/4/Arcs+Circles.jpg)
+![Oblouky + kružnice](../images/5-2/4/Arcs+Circles.jpg)
 
-### NURBS + Polycurves
+### NURBS + PolyCurve
 
-**NURBS** (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing.
+**NURBS** (Nerovnoměrné racionální křivky spline) jsou matematická znázornění, která mohou přesně modelovat libovolný tvar z jednoduché dvojrozměrné úsečky, kružnice, oblouku nebo obdélníku na nejsložitější trojrozměrnou volnou organickou křivku. Díky své pružnosti (relativně málo řídicích bodů, přesto hladká interpolace podle nastavení stupňů) a přesnosti (vázané robustní matematikou) lze modely NURBS použít v jakémkoli procesu od ilustrace a animace až po výrobu.
 
-![NURBS Curve](../images/5-2/4/NURBScurve.jpg)
+![Křivka NURBS](../images/5-2/4/NURBScurve.jpg)
 
-**Degree**: The Degree of the Curve determines the range of influence the Control Points have on a Curve; where the higher the degree, the larger the range. The Degree is a positive whole number. This number is usually 1, 2, 3 or 5, but can be any positive whole number. NURBS lines and polylines are usually Degree 1 and most free-form Curves are Degree 3 or 5.
+**Stupeň**: Způsob definice křivky určuje rozsah vlivu řídicích bodů na křivku, kde čím vyšší je stupeň, tím větší je rozsah. Stupeň je kladné celé číslo. Toto číslo je obvykle 1, 2, 3 nebo 5, ale může to být libovolné kladné celé číslo. Úsečky a křivky NURBS jsou obvykle stupně 1 a většina křivek volného tvaru je Stupeň 3 nebo 5.
 
-**Control Points**: The Control Points are a list of at least Degree+1 Points. One of the easiest ways to change the shape of a NURBS Curve is to move its Control Points.
+**Řídicí body**: Řídicí body jsou seznamem alespoň Stupeň+1 bodů. Jedním z nejsnadnějších způsobů, jak změnit tvar křivky NURBS, je posunout její řídicí body.
 
-**Weight**: Control Points have an associated number called a Weight. Weights are usually positive numbers. When a Curve’s Control Points all have the same weight (usually 1), the Curve is called non-rational, otherwise the Curve is called rational. Most NURBS curves are non-rational.
+**Váha**: Řídicí body mají přiřazené číslo nazývané Váha. Váhy jsou obvykle kladná čísla. Pokud mají všechny řídicí body křivky stejnou váhu (obvykle 1), křivka se nazývá neracionální, jinak se křivka nazývá racionální. Většina křivek NURBS není racionální.
 
-**Knots**: Knots are a list of (Degree+N-1) numbers, where N is the number of Control Points. The Knots are used together with the weights to control the influence of the Control Points on the resulting Curve. One use for Knots is to create kinks at certain points in the curve.
+**Uzly**: Uzly jsou seznamy čísel (Stupeň+N-1), kde N je počet řídicích bodů. Uzly se používají spolu s váhami k ovládání vlivu řídicích bodů na výslednou křivku. Jedno použití pro uzly je vytvoření zalomení v určitých bodech křivky.
 
-![NURBS Curve Degree](../images/5-2/4/NURBScurve\_Degree.jpg)
+![Stupeň křivky NURBS](../images/5-2/4/NURBScurve\_Degree.jpg)
 
-> 1. Degree = 1
-> 2. Degree = 2
-> 3. Degree = 3
+> 1. Stupeň = 1
+> 2. Stupeň = 2
+> 3. Stupeň = 3
 
 {% hint style="info" %}
-Note that the higher the degree value, the more Control Points are used to interpolate the resulting Curve.
+Všimněte si, že čím vyšší je hodnota stupně, tím více řídících bodů se používá k interpolaci výsledné křivky.
 {% endhint %}

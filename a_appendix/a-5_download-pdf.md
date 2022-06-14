@@ -1,8 +1,8 @@
-# Download PDF
+# Stažení souboru PDF
 
-To access the information on this primer offline, download the pdf:&#x20;
+Chcete-li získat přístup k informacím v této příručce offline, stáhněte si soubor PDF:&#x20;
 
-## Releases:
+## Verze:
 
 #### Dynamo Primer v2.13:
 

@@ -1,55 +1,55 @@
-# Managing Your Program
+# Správa programu
 
-Working within a Visual Programming process can be a powerful creative activity, but very quickly the Program Flow and key user inputs can be obscured by complexity and/or layout of the Workspace. Let's review some best practices for managing your program.
+Vizuální programování může být kreativní činnost, tok programu a uživatelské vstupy se však můžou velmi rychle stát složitými a na pracovní ploše nepřehlednými. Podívejme se na některé osvědčené postupy pro správu programu.
 
-### Alignment&#x20;
+### Zarovnání&#x20;
 
-Once we have added more than a few Nodes to the Workspace, we may want to re-organize the layout of the Nodes for clarity's sake. By selecting more than one Node and right-clicking on the Workspace, the pop up window includes an **Align Selection** menu with justification and distribution options in X and Y.
+Jakmile na pracovní plochu přidáte několik uzlů, můžete je chtít přeuspořádat, aby byly přehledné. Výběrem více než jednoho uzlu a kliknutím pravým tlačítkem na pracovní plochu se ve vyskakovacím okně zobrazí nabídka **Zarovnat výběr** s možnostmi pro zarovnání a rozmístění po osách X a Y.
 
 ![](<./images/4/managing your program - alignment.jpg>)
 
-> 1. Select more than one Node
-> 2. Right-click on the Workspace
-> 3. Use the **Align Selection** options
+> 1. Vyberte více než jeden uzel
+> 2. Klikněte pravým tlačítkem myši na pracovní plochu
+> 3. Použijte možnosti **Zarovnat výběr**
 
-### Notes&#x20;
+### Poznámky&#x20;
 
-With some experience, we may be able to "read" the Visual Program by reviewing the Node Names and following the Program Flow. For users of all experience levels, it is also good practice to include plain language labels and descriptions. Dynamo has a **Notes** Node with an editable text field to do so. We can add Notes to the Workspace in two ways:
+S trochou zkušeností můžeme vizuální program „číst“ tak, že se podíváme na názvy uzlů a budeme sledovat tok programu. Dobrým zvykem je vkládat na pracovní plochu popisy. Aplikace Dynamo obsahuje uzel **Note** s upravitelným textovým polem. Poznámky lze na pracovní plochu přidávat dvěma způsoby:
 
 ![](<./images/4/managing your program - notes.jpg>)
 
-> 1. Browse to the menu Edit > Create Note
-> 2. Use the keyboard shortcut Ctrl+W
+> 1. Přejděte do nabídky Upravit > Vytvořit poznámku
+> 2. Použijte kombinaci kláves Ctrl+W
 
-Once the Note is added to the Workspace a text field will pop up allowing us to edit the text in the Note. After they are created, we can edit the Note by double-clicking or right-clicking the Note Node.
+Po přidání poznámky na pracovní plochu se zobrazí textové pole pro úpravu textu. Po vytvoření lze poznámku upravit dvojitým kliknutím nebo kliknutím pravým tlačítkem na uzel Note.
 
 ![](<./images/4/managing your program - notes 02.jpg>)
 
-### Grouping&#x20;
+### Seskupení&#x20;
 
-When our Visual Program gets big, it is helpful to identify the larger steps that will be executed. We can highlight larger collections of Nodes with a **Group** to label them with a colored rectangle in the background and a title. There are three ways to make a Group with more than one Node selected:
+S tím, jak se vizuální program zvětšuje, může být užitečné označit větší kroky jako celky. Větší počty uzlů je možné označit jako **skupinu**, což kolem nich na pozadí vytvoří barevný rámeček a název. Pokud je vybrán více než jeden uzel, skupinu lze vytvořit třemi způsoby:
 
 ![](<./images/4/managing your program - grouping 01.jpg>)
 
-> 1. Browse to the menu Edit > Create Group
-> 2. Use the keyboard shortcut Ctrl+G
-> 3. Right-click on the Workspace and select "Create Group"
+> 1. Přejděte do nabídky Upravit > Vytvořit skupinu
+> 2. Použijte kombinaci kláves Ctrl+G
+> 3. Klikněte pravým tlačítkem myši na pracovní plochu a vyberte možnost „Vytvořit skupinu“
 
-Once a Group is created we can edit its settings, such as the title and color.&#x20;
+Po vytvoření skupiny je možné upravit její nastavení, například název a barvu.&#x20;
 
 ![](<./images/4/managing your program - grouping 02.jpg>)
 
 {% hint style="info" %}
-Tip: Using both Notes and Groups is an effective way to annotate your file and increase readability.
+Tip: Použití poznámek a skupin je účinný způsob, jak zvýšit přehlednost a srozumitelnost v souboru.
 {% endhint %}
 
-Here's an example of program from with Notes and Groups added:
+Zde je příklad programu s přidanými poznámkami a skupinami:
 
 ![](<./images/4/managing your program - grouping 03.jpg>)
 
-> 1. Note: "Grid Parameters"
-> 2. Note: "Grid Points"
-> 3. Group: "Create a Grid of Points"
-> 4. Group: "Create an Attractor Point"
-> 5. Note: "Calibrate Distance Values"
-> 6. Note: "Variable Grid of Circles"
+> 1. Poznámka: „Parametry mřížky“
+> 2. Poznámka: „Body mřížky“
+> 3. Skupina: „Tvorba mřížky z bodů“
+> 4. Skupina: „Tvorba bodu atraktoru“
+> 5. Poznámka: „Kalibrace hodnot vzdálenosti“
+> 6. Poznámka: „Proměnná mřížka kružnic“

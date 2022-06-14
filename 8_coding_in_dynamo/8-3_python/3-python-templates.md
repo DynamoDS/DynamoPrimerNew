@@ -1,20 +1,20 @@
-# Setup Your Own Python Template
+# Nastavení vlastní šablony jazyka Python
 
-With Dynamo 2.0 we have the ability to specify a default template `(.py extension)` to use when opening the python window for the first time. This has been a long-desired request as this expedites the usage of Python within Dynamo. Having the ability to use a template allows us to have default imports ready to go when we want to develop a custom Python script.
+V aplikaci Dynamo 2.0 je možné určit výchozí šablonu `(.py extension)`, která se použije při prvním otevření okna jazyka Python. Tato funkce byla dlouho požadována, protože urychluje používání jazyka Python v aplikaci Dynamo. Díky šabloně je možné při vývoji vlastního skriptu v jazyce Python mít připraveny veškeré importy.
 
-The location for this template is in the `APPDATA` location for your Dynamo install.
+Šablona se nachází v umístění `APPDATA` instalace aplikace Dynamo.
 
-This is typically as follows `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
+Obvykle je to následující umístění: `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
 ![](<../images/8-3/3/python templates - appdata folder location.jpg>)
 
-### Setting Up The Template
+### Nastavení šablony
 
-In order to utilize this functionality we need to add the following line in our `DynamoSettings.xml` file. _(Edit in notepad)_
+Aby bylo možné tuto funkci používat, je nutné přidat do souboru `DynamoSettings.xml` následující řádek. _(Upravte v poznámkovém bloku)_
 
 ![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
 
-Where we see `<PythonTemplateFilePath />`, we can simply replace this with the following:
+Řetězec `<PythonTemplateFilePath />` je možné jednoduše nahradit následujícím řetězcem:
 
 ```
 <PythonTemplateFilePath>
@@ -23,12 +23,12 @@ Where we see `<PythonTemplateFilePath />`, we can simply replace this with the f
 ```
 
 {% hint style="warning" %}
-_Note: replace CURRENTUSER with your username_
+_Poznámka: Nahraďte proměnnou CURRENTUSER svým uživatelským jménem._
 {% endhint %}
 
-Next we need to build a template with the functionality that we want to use built-in. In our case lets embed the Revit related imports and some of the other typical items when working with Revit.
+Dále je nutné vytvořit šablonu s funkcemi, které má obsahovat. V tomto případě do ní zahrneme importy související s aplikací Revit a další položky, které se s aplikací Revit obvykle používají.
 
-You can start a blank notepad document and paste the following code inside:
+Otevřete prázdný dokument v poznámkovém bloku a vložte do něj následující kód:
 
 ```
 import clr
@@ -67,16 +67,16 @@ TransactionManager.Instance.TransactionTaskDone()
 OUT = element
 ```
 
-Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` location.
+Poté tento soubor uložte pod názvem `PythonTemplate.py` do umístění `APPDATA`.
 
-### Python Script Behavior After
+### Chování skriptu jazyka Python
 
-A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
+Po\_ definování\_ šablony jazyka Python aplikace Dynamo tuto šablonu vyhledá při každém vložení uzlu jazyka Python. Pokud ji nenajde, okno jazyka Python bude vypadat jako ve výchozím nastavení.
 
 ![](<../images/8-3/3/python templates - before setup template.jpg>)
 
-If the Python template is found (like our Revit one for example) you will see all of the default items you built in.
+Pokud se podaří šablonu jazyka Python nalézt (například náš skript pro aplikaci Revit), zobrazí se všechny položky, které obsahuje.
 
 ![](<../images/8-3/3/python templates - after setup template.jpg>)
 
-Additional information regarding this great addition (by Radu Gidei) can be found here. https://github.com/DynamoDS/Dynamo/pull/8122
+Další informace o této nové funkci (autor: Radu Gidei) naleznete zde. https://github.com/DynamoDS/Dynamo/pull/8122

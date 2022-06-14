@@ -1,103 +1,103 @@
-# Creating a Custom Node
+# Vytvoření vlastního uzlu
 
-Dynamo offers several different methods for creating custom nodes. You can build custom nodes from scratch, from an existing graph, or explicitly in C#. In this section we will cover building a custom node in the Dynamo UI from an existing graph. This method is ideal for cleaning up the workspace, as well as packaging a sequence of nodes to reuse elsewhere.
+Aplikace Dynamo nabízí několik různých metod vytváření vlastních uzlů. Vlastní uzly můžete vytvořit zcela od začátku, z existujícího grafu nebo explicitně v jazyce C#. V této části se budeme zabývat vytvořením vlastního uzlu v uživatelském rozhraní aplikace Dynamo z existujícího grafu. Tato metoda je ideální k začištění pracovního prostoru a zabalení sekvence uzlů k opakovanému použití na jiném místě.
 
-## Exercise: Custom Nodes for UV Mapping
+## Cvičení: Vlastní uzly pro mapování UV
 
-### Part I: Start with a Graph
+### Část I: Začátek s grafem
 
-In the image below, we map a point from one surface to another using UV coordinates. We'll use this concept to create a panelized surface which references curves in the XY plane. We'll create quad panels for our panelization here, but using the same logic, we can create a wide variety of panels with UV mapping. This is a great opportunity for custom node development because we will be able to repeat a similar process more easily in this graph or in other Dynamo workflows.
+Na obrázku níže namapujeme bod z jednoho povrchu na jiný pomocí souřadnic UV. Pomocí tohoto konceptu vytvoříme panelizovaný povrch, který odkazuje na křivky v rovině XY. Zde vytvoříme čtyřhranné panely pro naši panelizaci, ale pomocí stejné logiky můžeme vytvořit širokou řadu panelů s mapováním UV. Jedná se o skvělou příležitost k vývoji vlastního uzlu, protože v tomto grafu nebo v jiných pracovních postupech aplikace Dynamo budeme moci snadněji opakovat podobný proces.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 01.jpg>)
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-Let’s start by creating a graph that we want to nest into a custom node. In this example, we will create a graph that maps polygons from a base surface to a target surface, using UV coordinates. This UV mapping process is something we use frequently, making it a good candidate for a custom node. For more information on surfaces and UV space, refer to the [Surface ](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)page. The complete graph is _UVmapping\_Custom-Node.dyn_ from the .zip file downloaded above.
+Začneme vytvořením grafu, který chceme vnořit do vlastního uzlu. V tomto příkladu vytvoříme graf, který mapuje polygony ze základního povrchu na cílový povrch pomocí souřadnic UV. Tento proces mapování UV často používáme, proto je vhodným kandidátem pro vlastní uzel. Další informace o površích a prostoru UV naleznete na stránce [Povrch](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). Úplný graf je _UVmapping\_Custom-Node.dyn_ ze souboru ZIP staženého výše.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
 
-> 1. **Code Block:** Use this line to create a range of 10 numbers between -45 and 45 `45..45..#10;`
-> 2. **Point.ByCoordinates:** Connect the output of the **Code Block** to the ‘x’ and ‘y’ inputs and set the lacing to cross-reference. You should now have a grid of points.
-> 3. **Plane.ByOriginNormal:** Connect the _‘Point’_ output to the _‘origin’_ input to create a plane at each of the points. The default normal vector of (0,0,1) will be used.
-> 4. **Rectangle.ByWidthLength:** Connect the planes from the previous step into the _‘plane’_ input, and use a **Code Block** with a value of _10_ to specify the width and length.
+> 1. **Code Block:** Pomocí tohoto řádku vytvořte rozsah 10 čísel v rozmezí -45 až 45: `45..45..#10;`.
+> 2. **Point.ByCoordinates:** Připojte výstup uzlu **Code Block** ke vstupům „x“ a „y“ a nastavte vázání na kartézský součin. Nyní byste měli mít osnovu bodů.
+> 3. **Plane.ByOriginNormal:** Spojením výstupu _Point_ se vstupem _origin_ vytvořte rovinu v každém z bodů. Bude použit výchozí normálový vektor (0,0,1).
+> 4. **Rectangle.ByWidthLength:** Spojte roviny z předchozího kroku do vstupu _plane_ a pomocí uzlu **Code Block** s hodnotou _10_ určete šířku a délku.
 
-You should now see a grid of rectangles. Let’s map these rectangles to a target surface using UV coordinates.
+Nyní byste měli vidět osnovu obdélníků. Tyto obdélníky namapujeme na cílový povrch pomocí souřadnic UV.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
 
-> 1. **Polygon.Points:** Connect the **Rectangle.ByWidthLength** output from the previous step to the _‘polygon’_ input to extract the corner points of each rectangle. These are the points that we will map to the target surface.
-> 2. **Rectangle.ByWidthLength:** Use a **Code Block** with a value of _100_ to specify the width and length of a rectangle. This will be the boundary of our base surface.
-> 3. **Surface.ByPatch:** Connect the **Rectangle.ByWidthLength** from the previous step to the _‘closedCurve’_ input to create a base surface.
-> 4. **Surface.UVParameterAtPoint:** Connect the _‘Point’_ output of the **Polygon.Points** node and the _‘Surface’_ output of the **Surface.ByPatch** node to return the UV parameter at each point.
+> 1. **Polygon.Points:** Spojením výstupu uzlu **Rectangle.ByWidthLength** z předchozího kroku se vstupem _polygon_ extrahujte rohové body každého obdélníku. Jedná se o body, které namapujeme na cílový povrch.
+> 2. **Rectangle.ByWidthLength:** Pomocí uzlu **Code Block** s hodnotou _100_ určete šířku a délku obdélníku. Toto bude hranice našeho základního povrchu.
+> 3. **Surface.ByPatch:** Připojte uzel **Rectangle.ByWidthLength** z předchozího kroku ke vstupu _closedCurve_ a vytvořte tak základní povrch.
+> 4. **Surface.UVParameterAtPoint:** Připojte výstup _Point_ uzlu **Polygon.Points** a výstup _Surface_ uzlu **Surface.ByPatch** k vrácení parametru UV v každém bodu.
 
-Now that we have a base surface and a set of UV coordinates, we can import a target surface and map the points between surfaces.
+Nyní, když máme základní povrch a sadu souřadnic UV, můžete importovat cílový povrch a mapovat body mezi povrchy.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 04.jpg>)
 
-> 1. **File Path:** Select the file path of the surface you want to import. The file type should be .SAT. Click the _"Browse..."_ button and navigate to the _UVmapping\_srf.sat_ file from the .zip file downloaded above.
-> 2. **Geometry.ImportFromSAT:** Connect the file path to import the surface. You should see the imported surface in the geometry preview.
-> 3. **UV:** Connect the UV parameter output to a _UV.U_ and a _UV.V_ node.
-> 4. **Surface.PointAtParameter:** Connect the imported surface as well as the u and v coordinates. You should now see a grid of 3D points on the target surface.
+> 1. **Cesta k souboru:** Vyberte cestu k souboru povrchu, který chcete importovat. Typ souboru by měl být .SAT. Klikněte na tlačítko _Procházet..._ a přejděte k souboru _UVmapping\_srf.sat_ ze souboru .zip staženého výše.
+> 2. **Geometry.ImportFromSAT:** Připojte cestu k souboru a importujte povrch. Importovaný povrch uvidíte v náhledu geometrie.
+> 3. **UV:** Připojte výstup parametru UV k uzlu _UV.U_ a _UV.V_.
+> 4. **Surface.PointAtParameter:** Připojte importovaný povrch a také souřadnice U a V. Nyní byste měli na cílovém povrchu vidět rastr 3D bodů.
 
-The final step is to use the 3D points to construct rectangular surface patches.
+Posledním krokem je použití 3D bodů k vytvoření pravoúhlých záplat povrchů.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 05.jpg>)
 
-> 1. **PolyCurve.ByPoints:** Connect the points on the surface to construct a polycurve through the points.
-> 2. **Boolean:** Add a **Boolean** to the workspace and connect it to the _‘connectLastToFirst’_ input and toggle to True to close the polycurves. You should now see rectangles mapped to the surface.
-> 3. **Surface.ByPatch:** Connect the polycurves to the _‘closedCurve’_ input to construct surface patches.
+> 1. **PolyCurve.ByPoints:** Spojením bodů na povrchu se vytvoří objekt polycurve procházející body.
+> 2. **Boolean:** Do pracovního prostoru přidejte uzel **Boolean**, připojte jej ke vstupu _connectLastToFirst_ a přepnutím na hodnotu True uzavřete objekt polycurve. Nyní byste měli vidět obdélníky namapované na povrch.
+> 3. **Surface.ByPatch:** Propojte objekty polycurve se vstupem _closedCurve_ a vytvořte tak záplaty povrchů.
 
-### Part II: From Graph to Custom Node
+### Část II: Od grafu k vlastního uzlu
 
-Now let’s select the nodes that we want to nest into a Custom Node, thinking about what we want to be the inputs and outputs of our node. We want our Custom Node to be as flexible as possible, so it should be able to map any polygons, not just rectangles.
+Nyní vybereme uzly, které chceme vnořit do vlastního uzlu, a zvážíme, co chceme použít jako vstupy a výstupy našeho uzlu. Chceme, aby byl vlastní uzel co nejflexibilnější, a proto by měl být schopen mapovat libovolné polygony, nikoli pouze obdélníky.
 
-Select the following Nodes (beginning with Polygon.Points), right click on the workspace and select ‘Create Custom Node’.
+Vyberte následující uzly (počínaje uzlem Polygon.Points), klikněte pravým tlačítkem na pracovní prostor a vyberte možnost Vytvořit vlastní uzel.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 01.jpg>)
 
-In the Custom Node Properties dialog, assign a name, description, and category to the Custom Node.
+V dialogu Vlastnosti vlastního uzlu přiřaďte k vlastnímu uzlu název, popis a kategorii.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 02.jpg>)
 
-> 1. Name: MapPolygonsToSurface
-> 2. Description: Map polygon(s) from a base to target surface
-> 3. Add-ons Category: Geometry.Curve
+> 1. Název: MapPolygonsToSurface
+> 2. Popis: Mapuje polygony ze základního na cílový povrch.
+> 3. Kategorie doplňků: Geometry.Curve
 
-The Custom Node has considerably cleaned up the workspace. Notice that the inputs and outputs have been named based on the original nodes. Let’s edit the Custom Node to make the names more descriptive.
+Vlastní uzel výrazně začistil pracovní prostor. Vstupy a výstupy byly pojmenovány na základě původních uzlů. Upravte vlastní uzel, aby byly názvy popisnější.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 03.jpg>)
 
-Double click the Custom Node to edit it. This will open a workspace with a yellow background representing the inside of the node.
+Dvakrát klikněte na vlastní uzel, který chcete upravit. Tím se otevře pracovní prostor se žlutým pozadím, které představuje vnitřek uzlu.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
 
-> 1. **Inputs:** Change the input names to _baseSurface_ and _targetSurface_.
-> 2. **Outputs:** Add an additional output for the mapped polygons.
+> 1. **Vstupy:** Změňte názvy vstupů na _baseSurface_ a _targetSurface_.
+> 2. **Výstupy:** Přidejte další výstup pro mapované polygony.
 
-Save the custom node and return to the home workspace. Notice the **MapPolygonsToSurface** node reflects the changes we just made.
+Uložte vlastní uzel a vraťte se do domovského pracovního prostoru. Všimněte si, že uzel **MapPolygonsToSurface** odráží změny, které jsme právě provedli.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 05.jpg>)
 
-We can also add to the robustness of the Custom Node by adding in **Custom Comments**. Comments can help to hint at the input and output types or explain the functionality of the node. Comments will appear when the user hovers over an input or output of a Custom Node.
+Robustnost vlastního uzlu lze také zvýšit přidáním hodnot **Vlastní komentáře**. Komentáře mohou pomoci u typů vstupů a výstupů nebo vysvětlovat funkci uzlu. Komentáře se zobrazí, když uživatel umístí kurzor nad vstup, nebo výstup vlastního uzlu.
 
-Double click the Custom Node to edit it. This will re-open the yellow background workspace.
+Dvakrát klikněte na vlastní uzel, který chcete upravit. Tím se znovu otevře pracovní prostor se žlutým pozadím.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 06.jpg>)
 
-> 1. Begin editing the Input **Code Block**. To start a Comment, type "//" followed by the comment text. Type anything that may help to clarify the Node - Here we will describe the _targetSurface_.
-> 2. Let's also set the default value for the _inputSurface_ by setting the input type equal to a value. Here, we will set the default value to the original **Surface.ByPatch** set.
+> 1. Začněte upravovat vstupní **kód bloku**. Chcete-li vytvořit komentář, zadejte výraz "//" následovaný textem komentáře. Zadejte vše, co může pomoci objasnit uzel – zde budeme popisovat položku _targetSurface_.
+> 2. Také nastavíme výchozí hodnotu _inputSurface_ nastavením typu vstupu rovnajícího se hodnotě. Zde nastavíme výchozí hodnotu na původní nastavení **Surface.ByPatch**.
 
-Comments can also be applied to the Outputs.
+Komentáře lze použít také na výstupy.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 07.jpg>)
 
-> Edit the text in the Output Code Block. Type "//" followed by the comment text. Here we will clarify the _Polygons_ and the _surfacePatches_ Outputs by adding a more in-depth description.
+> Začněte upravovat text ve výstupním bloku kódu. Zadejte „//“ a za ním text komentáře. Zde vyjasníme výstupy _Polygons_ a _surfacePatches_ přidáním podrobnějšího popisu.
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 08.jpg>)
 
-> 1. Hover over the Custom Node Inputs to see the Comments.
-> 2. With the default value set on our _inputSurface_, we can also run the definition without a surface input.
+> 1. Přesunutím kurzoru nad vstupy uživatelského uzlu zobrazíte komentáře.
+> 2. S výchozí hodnotou nastavenou pro položku _inputSurface_ můžeme také spustit definici bez zadání povrchu.

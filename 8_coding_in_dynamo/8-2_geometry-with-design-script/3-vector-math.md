@@ -1,8 +1,8 @@
-# Vector Math
+# Vektorová matematika
 
-Objects in computational designs are rarely created explicitly in their final position and form, and are most often translated,rotated, and otherwise positioned based off of existing geometry. Vector math serves as a kind-of geometric scaffolding to give direction and orientation to geometry, as well as to conceptualize movements through 3D space without visual representation.
+Objekty ve výpočetních návrzích se výjimečně vytvářejí přímo v jejich konečných pozicích a tvarech, většinou jsou přesouvány, otáčeny a jinak transformovány. Vektorová matematika slouží jako geometrická pomůcka, která dává geometrii směr a orientaci, a také slouží ke konceptualizaci pohybů ve 3D prostoru bez vizuální reprezentace.
 
-At its most basic, a vector represents a position in 3D space, and is often times thought of as the endpoint of an arrow from the position (0, 0, 0) to that position. Vectors can be created with the _ByCoordinates_ constructor, taking the x, y, and z position of the newly created Vector object. Note that Vector objects are not geometric objects, and don’t appear in the Dynamo window. However, information about a newly created or modified vector can be printed in the console window:
+Na nejzákladnější úrovni představuje vektor pozici ve 3D prostoru a často je reprezentován jako bod s šipkou od pozice (0, 0, 0) do jiné pozice. Vektory je možné vytvořit pomocí konstruktoru _ByCoordinates_, který jako vstup přijímá souřadnice X, Y a Z nově vytvořeného vektoru. Vektory nejsou geometrickými objekty a nezobrazují se v okně aplikace Dynamo. Informace o nově vytvořeném nebo upraveném vektoru je možné vypsat do konzolového okna:
 
 ![](<../images/8-2/3/vector math 01.jpg>)
 
@@ -13,11 +13,11 @@ v = Vector.ByCoordinates(1, 2, 3);
 s = v.X + " " + v.Y + " " + v.Z;
 ```
 
-A set of mathematical operations are defined on Vector objects, allowing you to add, subtract, multiply, and otherwise move objects in 3D space as you would move real numbers in 1D space on a number line.
+U vektorových objektů je definována sada matematických operací, které umožňují přičítat, odečítat, násobit a jinak přesouvat objekty ve 3D prostoru, podobně jako lze tyto operace provádět v 1D prostoru na číselné ose.
 
-### Vector Addition
+### Součet vektorů
 
-Vector addition is defined as the sum of the components of two vectors, and can be thought of as the resulting vector if the two component vector arrows are placed “tip to tail.” Vector addition is performed with the _Add_ method, and is represented by the diagram on the left.
+Součet vektorů je definován jako součet komponent dvou vektorů a lze si jej představit tak, že na špičku jednoho vektoru umístíme druhý vektor. Součet vektorů lze provést metodou _Add_ a je znázorněn na diagramu vlevo.
 
 ![](../images/8-2/3/VectorMath\_02.png)
 
@@ -29,9 +29,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Add(b);
 ```
 
-### Vector Subtraction
+### Odčítání vektorů
 
-Similarly, two Vector objects can be subtracted from each other with the _Subtract_ method. Vector subtraction can be thought of as the direction from first vector to the second vector.
+Podobně lze metodou _Subtract_ od sebe dva vektorové objekty odečíst. Odečtení vektoru si lze představit tak, že se jedná o vektor směřující od prvního vektoru k druhému vektoru.
 
 ![](../images/8-2/3/VectorMath\_03.png)
 
@@ -43,9 +43,9 @@ b = Vector.ByCoordinates(4, 1, 0);
 c = a.Subtract(b);
 ```
 
-### Vector Multiplication
+### Násobení vektorů
 
-Vector multiplication can be thought of as moving the endpoint of a vector in its own direction by a given scale factor.
+Násobení vektorů si lze představit jako přesun koncového bodu vektoru v jeho směru o určený faktor měřítka.
 
 ![](../images/8-2/3/VectorMath\_04.png)
 
@@ -56,9 +56,9 @@ a = Vector.ByCoordinates(4, 4, 0);
 c = a.Scale(5);
 ```
 
-### Normalize Vector Length
+### Normalizace délky vektorů
 
-Often it’s desired when scaling a vector to have the resulting vector’s length exactly equal to the scaled amount. This is easily achieved by first normalizing a vector, in other words setting the vector’s length exactly equal to one.
+Při změně měřítka vektoru je často potřeba, aby výsledná délka odpovídala hodnotě měřítka. Toho lze snadno dosáhnout normalizací vektoru, jinými slovy nastavením jeho délky na 1.
 
 ![](<../images/8-2/3/vector math 05.jpg>)
 
@@ -74,11 +74,11 @@ c = b.Scale(5);
 len = c.Length;
 ```
 
-c still points in the same direction as a (1, 2, 3), though now it has length exactly equal to 5.
+Vektor c má stejný směr jako vektor a (1, 2, 3), ale jeho délka je nyní přesně 5.
 
-### Cross Product
+### Kartézský součin
 
-Two additional methods exist in vector math which don’t have clear parallels with 1D math, the cross product and dot product. The cross product is a means of generating a Vector which is orthogonal (at 90 degrees to) to two existing Vectors. For example, the cross product of the x and y axes is the z axis, though the two input Vectors don’t need to be orthogonal to each other. A cross product vector is calculated with the _Cross_ method.
+Ve vektorové matematice existují dvě další metody, pro které v 1D matematice neexistují podobné operace, jedná se o vektorový a skalární součin. Vektorový součin vytváří vektor, který je kolmý (90 stupňů) ke dvěma existujícím vektorům. Například vektorový součin os X a Y je osa Z, ale vstupní vektory na sebe nemusí být nutně kolmé. Vektorový součin lze vypočítat metodou _Cross_.
 
 ![](../images/8-2/3/VectorMath\_06.png)
 
@@ -90,9 +90,9 @@ b = Vector.ByCoordinates(0, 1, 1);
 c = a.Cross(b);
 ```
 
-### Dot Product
+### Skalární součin
 
-An additional, though somewhat more advanced function of vector math is the dot product. The dot product between two vectors is a real number (not a Vector object) that relates to, but is not exactly, the angle between two vectors. One useful properties of the dot product is that the dot product between two vectors will be 0 if and only if they are perpendicular. The dot product is calculated with the _Dot_ method.
+Další pokročilejší funkcí vektorové matematiky je skalární součin. Skalární součin mezi dvěma vektory je reálné číslo (a nikoliv vektor), které souvisí s úhlem mezi dvěma vektory (ale nejedná se přímo o úhel). Jednou z užitečných vlastností skalárního součinu je, že skalární součin je nulový pouze v případě, kdy jsou na sebe vektory kolmé. Skalární součin lze vypočítat metodou _Dot_.
 
 ![](<../images/8-2/3/vector math 07.jpg>)
 

@@ -1,79 +1,79 @@
-# Scripting Strategies
+# Strategie skriptování
 
-Text-based scripting within the visual-scripting environment enables powerful and visual relationships using DesignScript, Python, and ZeroTouch (C#). The user can expose elements such as input sliders, condense large operations into DesignScript, and access powerful tools and libraries through Python or C# all within the same workspace. If managed effectively, combining these strategies can lend a great deal of customization, clarity, and efficiency to the overall program. The following are a set of guidelines to help you augment your visual-script with text-script.
+Textové skriptování v prostředí vizuálního skriptování umožňuje tvorbu výkonných a vizuálních vztahů pomocí jazyků DesignScript, Python a ZeroTouch (C#). Uživatel může odhalovat prvky, například posuvníky vstupů, zhustit rozsáhlé operace do aplikace DesignScript a umožnit přístup k výkonným nástrojům a knihovnám prostřednictvím jazyka Python nebo C#, a to ve stejném pracovním prostoru. Pokud jsou strategie efektivně spravovány, mohou díky jejich kombinaci do celého programu zavést značné množství možností, přizpůsobení, ale také přehlednosti a efektivity. Následuje sada pokynů, které vám pomohou vylepšit vizuální skript pomocí textového skriptu.
 
 ![](./images/2/cad-chart-textual.jpg)
 
-### Know When to Script
+### Kdy používat skripty
 
-Text-scripting can establish relationships of a higher complexity than visual programming, yet their capabilities also overlap significantly. This makes sense because nodes are effectively pre-packaged code, and we could probably write an entire Dynamo program in DesignScript or Python. However, we use visual-scripting because the interface of nodes and wires creates an intuitive flow of graphic information. Knowing where text-scripting's capabilities go beyond visual-scripting will give you major clues to when it should be used without foregoing the intuitive nature of nodes and wires. The following are guidelines on when to script and which language to use.
+Textové skriptování může vytvořit vztahy vyšší složitosti než vizuální programování, ale jejich možnosti se také značně překrývají. Toto dává smysl, protože uzly jsou efektivně předem zabalený kód a pravděpodobně bychom mohli napsat celý program aplikace Dynamo v aplikaci DesignScript nebo v jazyce Python. Vizuální skriptování však používáme kvůli tomu, že rozhraní uzlů a drátů vytváří intuitivní tok grafických informací. Pokud víte, kde možnosti textového skriptování jdou nad rámec vizuálního skriptování, budete mít k dispozici hlavní vodítka pro případy, kdy by se mělo textové skriptování použít, aniž by bylo nutné předvídat intuitivní povahu uzlů a drátů. Níže jsou uvedeny pokyny, kdy se má skriptovat a jaký jazyk k tomu použít.
 
-**Use text-scripting for:**
+**Použití textového skriptování pro:**
 
-* Looping
-* Recursion
-* Accessing external libraries
+* Smyčky
+* Rekurze
+* Přístup k externím knihovnám
 
-**Choose a language:**
+**Vyberte jazyk:**
 
 |                    |             |               |                    |                    |               |
 | ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
-|                    | **Looping** | **Recursion** | **Condense Nodes** | **Ext. Libraries** | **Shorthand** |
-| **DesignScript**   | Yes         | Yes           | Yes                | No                 | Yes           |
-| **Python**         | Yes         | Yes           | Partially          | Yes                | No            |
-| **ZeroTouch (C#)** | No          | No            | No                 | Yes                | No            |
+|                    | **Smyčky** | **Rekurze** | **Zhuštění uzlů** | **Ext. Knihovny** | **Zkratka** |
+| **DesignScript** | Ano | Ano | Ano | No | Ano |
+| **Python** | Ano | Ano | Částečně | Ano | No |
+| **ZeroTouch (C#)** | Ne | Ne | Ne | Ano | No |
 
 {% hint style="info" %}
-Refer to [Scripting Reference](13-3\_scripting-reference.md) for a list of what each Dynamo library gives you access to.
+Seznam, ke kterému vám každá knihovna aplikace Dynamo poskytuje přístup, naleznete v části [Reference skriptování](13-3\_scripting-reference.md).
 {% endhint %}
 
-### Think Parametrically
+### Uvažujte parametricky
 
-When scripting in Dynamo, an inevitably parametric environment, it is wise to structure your code relative to the framework of nodes and wires it will be living in. Consider the node containing your text-script as though it is any other node in the program with a few specific inputs, a function, and an expected output. This immediately gives your code inside the node a small set of variables from which to work, the key to a clean parametric system. Here are some guidelines for better integrating code into a visual program.
+Při skriptování v aplikaci Dynamo, což je nezbytně parametrické prostředí, je rozumné strukturovat kód podle systému uzlů a drátů, ve kterých bude kód existovat. Uzel obsahující textový skript je třeba považovat za uzel jako každý jiný v programu s několika specifickými vstupy, funkcí a předpokládaným výstupem. Kód uvnitř uzlu díky tomu ihned obdrží malou sadu proměnných, se kterými se bude pracovat, což je klíč k čistě parametrickému systému. Zde jsou některé pokyny pro lepší integraci kódu do vizuálního programu.
 
-**Identify the external variables:**
+**Určení externích proměnných:**
 
-* Try to determine the given parameters in your design problem so that you can construct a model that directly builds off that data.
-* Before writing code, identify the variables:
-  * A minimal set of inputs
-  * The intended output
-  * Constants
+* Zkuste určit dané parametry v problému návrhu, tak aby bylo možné vytvořit model, který je přímo sestaven mimo tato data.
+* Před psaním kódu identifikujte proměnné:
+   * Minimální sadu vstupů
+   * Zamýšlený výstup
+   * Konstanty
 
 ![](<./images/2/think parametrically 01.jpg>)
 
-> Several variables have been established prior to writing code.
+> Před zapsáním kódu bylo vytvořeno několik proměnných.
 >
-> 1. The surface we will simulate rainfall on.
-> 2. The number of rain drops (agents) we want.
-> 3. How far we want the rain drops to travel.
-> 4. Toggle between descending the steepest path versus traversing the surface.
-> 5. Python Node with the respective number of inputs.
-> 6. A Code Block to make the returned curves blue.
+> 1. Povrch, na kterém bude probíhat simulace dešťové srážky.
+> 2. Požadovaný počet dešťových kapek (agentů).
+> 3. Jak velkou vzdálenost mají dešťové kapky urazit.
+> 4. Přepínač mezi sestupem po nejstrmější cestě a přechodem po povrchu.
+> 5. Uzel jazyka Python s příslušným počtem vstupů.
+> 6. Blok kódu pro nastavení vrácených oblouků na modrou barvu.
 
-**Design the internal relationships:**
+**Návrh vnitřních vztahů:**
 
-* Parametricism allows for certain parameters or variables to be edited in order to manipulate or alter the end result of an equation or system.
-* Whenever entities in your script are logically related, aim to define them as functions of each other. This way when one is modified, the other can update proportionally.
-* Minimize number of inputs by only exposing key parameters:
-  * If a set of parameters can be derived from more parent parameters, only expose the parent parameters as script inputs. This increases the usability of your script by reducing the complexity of its interface.
+* Parametrismus umožňuje úpravu určitých parametrů nebo proměnných, aby bylo možné manipulovat s koncovým výsledkem rovnice nebo systému, případně tento výsledek změnit.
+* Kdykoli spolu entity ve skriptu logicky souvisí, je třeba je definovat jako vzájemné funkce. Tímto způsobem se při úpravě jedné funkce může proporcionálně aktualizovat druhá funkce.
+* Minimalizujte počet vstupů tím, že zobrazíte pouze klíčové parametry:
+   * Pokud je možné sadu parametrů odvodit z více nadřazených parametrů, zobrazte pouze nadřazené parametry jako vstupy skriptu. Tím se zvýší použitelnost skriptu, protože se sníží složitost jeho rozhraní.
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> The code "modules" from the example in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> „Moduly“ kódu z příkladu v uzlu [Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
-> 1. Inputs.
-> 2. Variables internal to the script.
-> 3. A loop that uses these inputs and variables to perform its function.
+> 1. Vstupy.
+> 2. Interní proměnné skriptu.
+> 3. Smyčka, která pomocí těchto vstupů a proměnných provádí svou funkci.
 
 {% hint style="info" %}
-Tip: Place as much emphasis on the process as you do on the solution.
+Tip: Na proces klaďte tak velký důraz, jaký kladete na řešení.
 {% endhint %}
 
-### **Don't repeat yourself (the DRY principle):**
+### **Neopakujte se (princip DRY):**
 
-* When you have multiple ways to express the same thing in your script, at some point the duplicate representations will fall out of sync which can lead to maintenance nightmares, poor factoring, and internal contradictions.
-* The DRY principle is stated as "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system":
-  * When this principle is successfully applied, all the related elements in your script change predictably and uniformly and all the unrelated elements do not have logical consequences on each other.
+* Pokud máte ve skriptu více způsobů vyjádření stejné věci, duplicitní reprezentace v určitém bodě vypadnou ze synchronizace, což může vést k velkým potížím s údržbou, slabému faktorování a vnitřním rozporům.
+* Princip DRY zní takto: „Veškeré vědomosti musí mít v systému jedinou jednoznačnou, autoritativní reprezentaci“:
+   * Pokud je tento princip úspěšně použit, všechny související prvky ve skriptu se mění předvídatelně a jednotně a nesouvisející prvky nezpůsobí u sebe navzájem logické následky.
 
 ```
 ### BAD
@@ -95,127 +95,127 @@ for i in range(count):
 ```
 
 {% hint style="info" %}
-Tip: Before duplicating entities in your script (such as constant in the example above), ask yourself if you can link to the source instead.
+Tip: Před duplikováním entit ve skriptu (například konstanty ve výše uvedeném příkladu) si můžete položit dotaz, zda se místo toho můžete připojit ke zdroji.
 {% endhint %}
 
-### Structure Modularly
+### Strukturu tvořte modulárně
 
-As your code gets longer and more complex the “big idea”, or overarching algorithm becomes increasingly illegible. It also becomes more difficult to keep track of what (and where) specific things happen, find bugs when things go wrong, integrate other code, and assign development tasks. To avoid these headaches it’s wise to write code in modules, an organizational strategy that breaks up code based on the task it executes. Here are some tips for making your scripts more manageable by way of modularization.
+Během toho, jak se kód rozrůstá a zesložiťuje, „hlavní myšlenka“ neboli zastřešující algoritmus se postupně stává méně čitelným. Je také obtížnější sledovat, co (a kde) se konkrétně děje, hledat chyby v případě, že skript funguje chybně, integrovat jiný kód a přiřadit vývojové úkoly. Aby se těmto problémům zabránilo, je moudré psát kód v modulech, což je organizační strategie rozdělující kód na části podle úlohy jakou jednotlivé části vykonávají. Zde je několik tipů, které vám usnadní správu skriptů pomocí modularizace.
 
-**Write code in modules:**
+**Zápis kódu v modulech:**
 
-* A "module" is a group of code that performs a specific task, similar to a Dynamo Node in the workspace.
-* This can be anything that should be visually separated from adjacent code (a function, a class, a group of inputs, or the libraries you are importing).
-* Developing code in modules harnesses the visual, intuitive quality of Nodes as well as the complex relationships that only text-scripting can achieve.
+* „module“ je skupina kódu, která provádí určitou úlohu, podobně jako uzel aplikace Dynamo v pracovním prostoru.
+* Může to být cokoli, co by mělo být vizuálně odděleno od přilehlého kódu (funkce, třída, skupina vstupů nebo importované knihovny).
+* Vývoj kódu v modulech prováže vizuální, intuitivní kvalitu uzlů a také složité vztahy, kterých je možné dosáhnout pouze pomocí textového skriptování.
 
 ![](<./images/2/think parametrically 02.jpg>)
 
-> These loops call a class named "agent" that we will develop in the exercise.
+> Tyto smyčky volají třídu s názvem „agent“, která bude vytvořena v tomto cvičení.
 >
-> 1. A code module that defines the start point of each agent.
-> 2. A code module that updates the agent.
-> 3. A code module that draws a trail for the agent's path.
+> 1. Modul kódu, který definuje počáteční bod každého agenta.
+> 2. Modul kódu, který aktualizuje agenta.
+> 3. Modul kódu, který kreslí stopu pro cestu agenta.
 
-**Spotting code re-use:**
+**Využití opakovaného použití kódu:**
 
-* If you find that your code does the same (or very similar) thing in more than once place, find ways to cluster it into a function that can be called.
-* "Manager" functions control program flow and primarily contain calls to "Worker" functions that handle low-level details, like moving data between structures.
+* Pokud zjistíte, že kód dělá stejnou (nebo velmi podobnou) věc více než jednou, najděte způsoby, jak tuto věc sloučit do jedné funkce, kterou je možné volat.
+* „Správcovské“ funkce řídí tok programu a primárně obsahují volání „pracovních“ funkcí, které zpracovávají detaily na nízké úrovni, například přesouvání dat mezi strukturami.
 
-This example creates spheres with radii and color based on the Z value of the center points.
+Tento příklad vytvoří koule s poloměry a barvou podle hodnoty Z středů.
 
 ![](<./images/2/spot code resuse.jpg>)
 
-> 1. Two "worker" parent functions: one that creates spheres with radii and display colors based the centerpoint's Z value.
-> 2. A "manager" parent function that combines the two worker functions. Calling this will call both functions inside it.
+> 1. Dvě „pracovní“ nadřazené funkce: jedna, která vytváří koule s poloměry, a jedna, která zobrazí barvy, obojí podle hodnoty Z středu.
+> 2. „Správcovská“ nadřazená funkce, která kombinuje dvě pracovní funkce. Zavoláním této funkce zavoláte i funkce uvnitř ní.
 
-**Only show what needs to be seen:**
+**Zobrazujte pouze to, co je potřeba vidět:**
 
-* A module interface expresses the elements that are provided and required by the module.
-* Once the interfaces between the units have been defined, the detailed design of each unit can proceed separately.
+* Rozhraní modulu vyjadřuje prvky, které jsou nabízené a vyžadované modulem.
+* Jakmile jsou definována rozhraní mezi jednotkami, podrobný návrh každé jednotky může probíhat samostatně.
 
-**Separability/Replaceability:**
+**Oddělitelnost/Nahraditelnost:**
 
-* Modules don’t know or care about each other.
+* Moduly o sobě vzájemně neví a vzájemně se o sebe nestarají.
 
-**General forms of modularization:**
+**Obecné formy modularizace:**
 
-*   Code Grouping:
+* Seskupení kódů:
 
-    ```
-    # IMPORT LIBRARIES
-    import random
-    import math
-    import clr
-    clr.AddReference('ProtoGeometry')
-    from Autodesk.DesignScript.Geometry import *
+   ```
+   # IMPORT LIBRARIES
+   import random
+   import math
+   import clr
+   clr.AddReference('ProtoGeometry')
+   from Autodesk.DesignScript.Geometry import *
 
-    # DEFINE PARAMETER INPUTS
-    surfIn = IN[0]
-    maxSteps = IN[1]
-    ```
-*   Functions:
+   # DEFINE PARAMETER INPUTS
+   surfIn = IN[0]
+   maxSteps = IN[1]
+   ```
+* Funkce:
 
-    ```
-    def get_step_size():
-      area = surfIn.Area
-      stepSize = math.sqrt(area)/100
-      return stepSize
+   ```
+   def get_step_size():
+     area = surfIn.Area
+     stepSize = math.sqrt(area)/100
+     return stepSize
 
-    stepSize = get_step_size()
-    ```
-*   Classes:
+   stepSize = get_step_size()
+   ```
+* Třídy:
 
-    ```
-    class MyClass:
-      i = 12345
+   ```
+   class MyClass:
+     i = 12345
 
-      def f(self):
-        return 'hello world'
+     def f(self):
+       return 'hello world'
 
-    numbers = MyClass.i
-    greeting = MyClass.f
-    ```
+   numbers = MyClass.i
+   greeting = MyClass.f
+   ```
 
-### Flex Continuously
+### Neustále kontrolujte data
 
-While developing text-scripts in Dynamo, it is wise to constantly make sure that what is actually being created is in line with what you are expecting. This will ensure that unforeseen events-- syntax errors, logical discrepancies, value inaccuracies, anomalous outputs etc.-- are quickly discovered and dealt with as they surface rather than all at once at the end. Because text-scripts live inside nodes on the canvas, they are already integrated into the data flow of your visual program. This makes the successive monitoring of your script as simple as assigning data to be outputted, running the program, and evaluating what flows out of the script using a Watch Node. Here are some tips for continuously inspecting your scripts as you construct them.
+Při vývoji textových skriptů v aplikaci Dynamo je moudré neustále kontrolovat, že to, co se vytváří, je v souladu s tím, co očekáváte. Tím se zajistí, že nepředvídané události – syntaktické chyby, logické nesrovnalosti, nepřesnosti hodnot, nepředvídané výstupy atd.– jsou rychle objeveny a řeší se ihned, jak vyjdou najevo, nikoli všechny najednou na konci. Vzhledem k tomu, že jsou textové skripty uloženy uvnitř uzlů na pracovní ploše, jsou již integrovány do datového toku vašeho vizuálního programu. Díky tomu můžete snadno sledovat skript, přičemž budete přiřazovat data, která budou na výstupu, spouštět program a vyhodnocovat vytvořený výstup skriptu pomocí uzlu Watch. Následují několik tipů pro průběžnou kontrolu skriptů při jejich tvorbě.
 
-**Test as you go:**
+**Během tvorby provádějte testy:**
 
-* Whenever you complete a cluster of functionality:
-  * Step back and inspect your code.
-  * Be critical. Could a collaborator understand what this is doing? Do I need to do this? Can this function be done more efficiently? Am I creating unnecessary duplicates or dependencies?
-  * Quickly test to make sure it is returning data that “makes sense”.
-* Assign the most recent data you are working with in your script as the output so that the node is always outputting relevant data when the script updates:
+* Kdykoli dokončíte určitý celek funkcionality:
+   * Vracejte se zpět a přitom kontrolujte kód.
+   * Buďte kritičtí. Mohl by spolupracovník pochopit, co tento kód dělá? Je třeba toto dělat? Je možné tuto funkci provést efektivněji? Vytvářím nepotřebné duplicitní položky nebo závislosti?
+   * Rychle proveďte test, abyste se ujistili, že skript vrací data, která „dávají smysl“.
+* Přiřaďte jako výstup nejaktuálnější data, se kterými budete ve skriptu pracovat, aby uzel při aktualizaci skriptu vždy prováděl výstup relevantních dat:
 
 ![](<./images/2/flex continuously.jpg>)
 
-> 1. Check that all edges of the solid are being returned as curves to create a bounding box around.
-> 2. Check that our Count inputs are successfully being converted to Ranges.
-> 3. Check that coordinate systems have been properly translated and rotated in this loop.
+> 1. Zkontrolujte, zda jsou všechny hrany tělesa, kolem kterého se má vytvořit hraniční kvádr, vráceny jako křivky.
+> 2. Zkontrolujte, zda jsou vstupní hodnoty počtu úspěšně převedeny na rozsahy.
+> 3. Zkontrolujte, zda byly souřadnicové systémy v této smyčce správně převedeny a otočeny.
 
-**Anticipate “edge cases”:**
+**Předvídání „případů hran“:**
 
-* While scripting, crank your input parameters to the minimum and maximum values of their allotted domain to check if the program still functions under extreme conditions.
-* Even if the program is functioning at its extremes, check if it is returning unintended null/empty/zero values.
-* Sometimes bugs and errors that reveal some underlying problem with your script will only surface during these edge cases.
-  * Understand what is causing the error and then decide if it needs to be fixed internally or if a parameter domain needs to be redefined to avoid the problem.
+* Při skriptování změňte vstupní parametry na minimální a maximální hodnoty jejich přidělené domény, aby bylo možné zkontrolovat, zda program stále funguje i za extrémních podmínek.
+* I v případě, že program pracuje v krajních hodnotách, zkontrolujte, zda vrací neúmyslné hodnoty null, prázdné hodnoty nebo nulové hodnoty.
+* Chyby, které odhalí některé základní problémy se skriptem, se někdy projeví pouze v těchto okrajových případech.
+   * Zjistěte, co způsobuje chybu, a poté se rozhodněte, zda je nutné ji opravit interně nebo zda je nutné doménu parametrů předefinovat, aby se tomuto problému zabránilo.
 
 {% hint style="info" %}
-Tip: Always assume the that the user will use every combination of every input value that has been exposed to him/her. This will help eliminate unwanted surprises.
+Tip: Vždy předpokládejte, že uživatel použije všechny kombinace všech možných vstupních hodnot, které mu zpřístupníte. Tímto můžete zabránit nežádoucím překvapením.
 {% endhint %}
 
-### Debug Efficiently
+### Laďte efektivně
 
-Debugging is the process of eliminating "bugs" from your script. Bugs can be errors, inefficiencies, inaccuracies, or any unintended results. Addressing a bug can be as simple as correcting a misspelled variable name to more pervasive, structural problems with your script. Ideally, flexing your script as you build it will help to catch these potential issues early, though this is no guarantee of it being bug-free. The following is a review of several best practices from above to help you address bugs systematically.
+Ladění je proces, při kterém se ze skriptu odstraňují chyby. Mezi chyby patří chybová hlášení, neefektivity, nepřesnosti nebo neočekávané výsledky. Řešení chyby může být velmi jednoduché, protože může spočívat třeba jen v nesprávně napsaném názvu proměnné, který při opravě může vyřešit rozšířené, konstrukční problémy skriptu. V ideálním případě může kontrola skriptu během jeho tvorby pomoci ke včasnému zachycení potenciálních problémů, nezaručí však absolutní bezchybnost. Následuje přehled několika osvědčených postupů, které vám pomohou řešit chyby systematicky.
 
-**Use the watch bubble:**
+**Využijte sledovací bublinu:**
 
-* Check the data returned at different places in the code by assigning it to the OUT variable, similar to the concept of flexing the program.
+* Kontrolujte data vrácená na různých místech kódu přiřazením do proměnné OUT, podobně jako při kontrole dat programu.
 
-**Write meaningful comments:**
+**Pište smysluplné komentáře:**
 
-* A module of code will be much easier to debug if its intended outcome is clearly described.
+* Pokud je požadovaný výstup jasně popsán, modul kódu tohoto výstupu bude možné ladit o dost snadněji.
 
 ```py
 # Loop through X and Y
@@ -231,94 +231,94 @@ for i in range(xCount):
     solids.append(solid.Transform(fromCoord,toCoord))
 ```
 
-> Normally this would be an excessive amount of commenting and blank lines, but when debugging it can be useful to break things down into manageable pieces.
+> Normálně by se jednalo o příliš rozsáhlé komentování a mnoho prázdných řádků, u ladění však tento postup může být užitečný k rozebrání problému na spravovatelné celky.
 
-**Leverage the code's modularity:**
+**Využijte modularitu kódu:**
 
-* The source of an issue can be isolated to certain modules.
-* Once the faulty module has been identified, fixing the problem is considerably simpler.
-* When a program must be modified, code that has been developed in modules will be much easier to change:
-  * You can insert new or debugged modules into an existing program with the confidence that the rest of the program will not change.
+* Zdroj problému může být izolován v určitých modulech.
+* Po zjištění, který modul je chybný, je řešení problému značně jednodušší.
+* Pokud je nutné program upravit, kód, který byl vyvinut v modulech, bude mnohem snadnější změnit:
+   * Do existujícího programu můžete vložit nové nebo vyladěné moduly a přitom se spolehnout na to, že se zbytek programu nezmění.
 
 ![](<./images/2/leverage code's modularity.jpg>)
 
-> Debugging the example file from [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Ladění vzorového souboru z uzlu [Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
-> 1. The input geometry is returning a bounding box larger that itself, as we can see from assigning xDist and yDist to OUT.
-> 2. The edge curves of the input geometry return an appropriate bounding box with correct distances for xDist and yDist.
-> 3. The code "module" we've inserted to address the xDist and yDist value issue.
+> 1. Vstupní geometrie vrací hraniční obdélník, který je větší než její vlastní velikost, což je vidět po přiřazení proměnných xDist a yDist do proměnné OUT.
+> 2. Křivky hran vstupní geometrie vrátí odpovídající hraniční obdélník se správnými vzdálenostmi v proměnných xDist a yDist.
+> 3. Byl vložen „modul“ kódu, abychom vyřešili problém s hodnotou xDist a yDist.
 
-## Exercise: Steepest Path
+## Cvičení: Nejstrmější cesta
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="./datasets/9/2/SteepestPath.dyn" %}
 
-With our best practices for text-scripting in mind, let's write a rain simulation script. While we were able to apply best practices to a disorganized visual program in Graph Strategies, it is far more difficult to do that with text-scripting. Logical relationships established in text-scripting are less visible and can be almost impossible to untangle in messy code. With the power of text-scripting comes a larger responsibility in organization. We will walk through each step and apply best practices along the way.
+Pojďme napsat skript simulace deště a přitom se budeme řídit našimi nejlepšími postupy textového skriptování. I když bylo možné použít nejlepší metody na neorganizovaný vizuální program ve strategiích grafů, je mnohem obtížnější to provést pomocí textového skriptování. Logické vztahy zavedené v textovém skriptování jsou méně viditelné a v neuspořádaném kódu může být téměř nemožné je rozluštit. S textovým skriptováním přichází i větší zodpovědnost v organizaci. Projdeme si nyní každý krok a během toho budeme používat ty nejlepší postupy.
 
-Our script applied to an attractor-deformed surface.
+Skript byl použit na povrch deformovaný atraktorem.
 
 ![](<./images/2/scripting strategies - exercise - 01.jpg>)
 
-The first thing we need to do is import the necessary Dynamo libraries. Doing this first will give global access to Dynamo functionality in Python.
+Nejprve je nutné importovat nezbytné knihovny aplikace Dynamo. Pokud na začátku provedete tento krok, získáte globální přístup k funkcím aplikace Dynamo v jazyce Python.
 
-All the libraries we intend on using need to be imported here.
+Všechny knihovny, které chceme použít, je nutné importovat zde.
 
 ![](<./images/2/scripting strategies - exercise - 02.jpg>)
 
-Next we need to define the script's inputs and output, which will display as input ports on the node. These external inputs are the foundation for our script and the key to establishing a parametric environment.
+Dále je potřeba definovat vstupy a výstup skriptu, které se zobrazí jako porty u uzlu. Tyto externí vstupy jsou základem pro náš skript a klíčem k vytvoření parametrického prostředí.
 
-We need to define inputs that correspond to variables in the Python script and determine a desired output:
+Je třeba definovat vstupy, které odpovídají proměnným ve skriptu jazyka Python, a určit požadovaný výstup:
 
 ![](<./images/2/scripting strategies - exercise - 03.jpg>)
 
-> 1. The surface we want to walk down.
-> 2. The number of agents we want to walk.
-> 3. The maximum number of steps the agents are allowed to take.
-> 4. An option to take the shortest path down the surface or traverse it.
-> 5. The Python Node with input identifiers that correspond to inputs in the script (IN\[0], IN\[1]).
-> 6. Output curves that can be displayed with a different color.
+> 1. Povrch, který chceme projít.
+> 2. Počet agentů, které chceme projít.
+> 3. Maximální počet kroků, které mohou agenti provést.
+> 4. Možnost jít nejkratší cestou po povrchu, nebo jej přejít.
+> 5. Uzel jazyka Python se vstupními identifikátory, které odpovídají vstupům ve skriptu (IN\[0], IN\[1]).
+> 6. Výstupní křivky, které je možné zobrazit jinou barvou.
 
-Now let's employ the practice of modularity and create the body of our script. Simulating the shortest path down a surface for multiple start points is a significant task that will require several functions. Rather than call the different functions throughout the script, we can modularize our code by collecting them into a single class, our agent. The different functions of this class or "module" can be called with different variables or even reused in another script.
+Nyní pomocí praktiky modularity vytvoříme tělo skriptu. Simulace nejkratší cesty dolů po povrchu pro více počátečních bodů je důležitým úkolem, který bude vyžadovat několik funkcí. Místo toho, abychom volali různé funkce v celém skriptu, můžeme upravit kód shromážděním funkcí do jedné třídy, což bude agent. Různé funkce této třídy nebo „modulu“ je možné volat s různými proměnnými nebo je dokonce znovu použít v jiném skriptu.
 
-We will need to define a class, or blueprint, for an agent with the intention of walking down a surface by choosing to travel in the steepest possible direction each time it takes a step:
+Je potřeba definovat pro agenta třídu (neboli plán činnosti) s úmyslem pohybu dolů po povrchu, a to výběrem varianty pohybu směrem s největší strmostí při každém kroku:
 
 ![](<./images/2/scripting strategies - exercise - 04.jpg>)
 
-> 1. Name.
-> 2. Global attributes that all the agents share.
-> 3. Instance attributes that are unique to each agent.
-> 4. A function for taking a step.
-> 5. A function for cataloging the position of each step to a trail list.
+> 1. Název.
+> 2. Globální atributy, které sdílejí všichni agenti.
+> 3. Atributy instance, které jsou jedinečné pro každého agenta.
+> 4. Funkce pro vykonání kroku.
+> 5. Funkce pro katalogizaci pozice každého kroku do seznamu trajektorií.
 
-Let's initialize the agents by defining their start location. This is a good opportunity to flex our script and make sure the agent class is working.
+Inicializujeme agenty definováním jejich počátečního umístění. Toto je dobrá příležitost pro kontrolu skriptu a ujištění se, že třída agentů funguje.
 
-We will need to instantiate all the agents we want to observe walk down the surface and define their initial attributes:
+Bude nutné vytvořit instance všech agentů, u kterých chceme sledovat jejich průchod po povrchu, a definovat jejich počáteční atributy:
 
 ![](<./images/2/scripting strategies - exercise - 05.jpg>)
 
-> 1. A new empty trail list.
-> 2. Where they will start their journey on the surface.
-> 3. We've assigned the agents list as the output to check what the script is returning here. The correct number of agents is being returned, but we'll need to flex the script again later on to verify the geometry it returns.
+> 1. Nový prázdný seznam trajektorií.
+> 2. Kde začnou svou cestu po povrchu.
+> 3. Jako výstup jsme přiřadili seznam agentů, abychom zkontrolovali, co zde skript vrací. Vrací se správný počet agentů, později však bude potřeba zkontrolovat data skriptu znovu, aby se ověřila geometrie, kterou vrátí.
 
-Update each agent at each step. We will then need to enter a nested loop where for each agent and for each step, we update and record their position into their trail list. At each step we will also make sure the agent hasn’t reached a point on the surface where it cannot take another step which will allow it to descend. If that condition is met, we will end that agent's trip.
+V každém kroku aktualizujte každého agenta. Poté bude nutné u každého agenta v každém kroku vstoupit do vnořené smyčky, ve které se aktualizuje a zaznamená pozice do jejich seznamu trajektorií. V každém kroku se také ujistíme, že agent nedosáhl bodu na povrchu, kde nemůže provést další krok, který by mu umožnil sestup. Pokud bude tato podmínka splněna, cesta tohoto agenta bude ukončena.
 
 ![](<./images/2/scripting strategies - exercise - 06.jpg>)
 
-Now that our agents have been fully updated, let's return geometry that represents them. After all the agents have either reached their limit of descent or their maximum number of steps we will create a polycurve through the points in their trail list and output the polycurve trails.
+Nyní, když jsou agenti plně aktualizováni, vrátíme geometrii, která je reprezentuje. Jakmile všichni agenti dosáhnou svého meze sestupu nebo maximálního počtu kroků, vytvoříme křivku PolyCurve pomocí bodů v jejich seznamu trajektorií a vypíšeme trajektorie PolyCurve.
 
 ![](<./images/2/scripting strategies - exercise - 07.jpg>)
 
-Our script for finding the steepest paths.
+Náš skript sloužící k nalezení nejstrmějších cest.
 
 ![](<./images/2/scripting strategies - exercise - 08.jpg>)
 
-> 1. A preset that simulates rainfall on the underlying surface.
-> 2. Rather than finding the steepest path, the agents can be toggled to traverse the underlying surface.
+> 1. Předvolba, která simuluje déšť na základním povrchu.
+> 2. Místo hledání nejstrmější cesty mohou být agenti přepnuti, tak aby mohli procházet přes základní povrch.
 
-The full Python text-script.
+Úplný skript v jazyce Python.
 
 ```
 ### STEEPEST PATH ALGORITHM

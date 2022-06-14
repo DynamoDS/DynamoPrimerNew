@@ -1,83 +1,83 @@
-# Resources
+# Zdroje
 
 ## **Dynamo**
 
-### **Dynamo Wiki**
+### **Wiki aplikace Dynamo**
 
-"This wiki is for learning about development using the Dynamo API, supporting libraries and tools."
+„Tato wiki slouží pro seznámení s vývojem pomocí API aplikace Dynamo, která podporuje knihovny a nástroje.“
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
-### **Dynamo Blog**
+### **Blog aplikace Dynamo**
 
-This blog is the most up-to-date collection of articles from the Dynamo team, discussing new features, workflows, and all things Dynamo.
+Tento blog je nejaktuálnější sbírkou článků od týmu aplikace Dynamo, obsahuje informace o nových funkcích, pracovních postupech a dalších tématech.
 
 [http://dynamobim.com/blog/](http://dynamobim.com/blog/)
 
-### **DesignScript Guide**
+### **Příručka k jazyku DesignScript**
 
-Programming languages are created to express ideas, usually involving logic and calculation. In addition to these objectives, the Dynamo textual language (formerly DesignScript) has been created to express design intentions. It is generally recognized that computational designing is exploratory, and Dynamo tries to support this: we hope you find the language flexible and fast enough to take a design from concept, through design iterations, to your final form. This manual is structured to give a user with no knowledge of either programming or architectural geometry full exposure to a variety of topics in these two intersecting disciplines.
+Programovací jazyky slouží k vyjádření nápadů, které zahrnují logiku a výpočty. K vyjádření záměru návrhu byl vyvinut textový jazyk aplikace Dynamo (dříve nazýván DesignScript). Výpočetní návrhy jsou většinou spojeny se zkoumáním a aplikace Dynamo se snaží tento proces podpořit: doufáme, že pro vás bude jazyk flexibilní a rychlý a umožní vám návrh převést z konceptu ve skutečnost. Tato příručka je strukturována tak, aby uživatele bez znalosti programování nebo architektonické geometrie seznámila s různými tématy z těchto dvou protínajících se oborů.
 
 [http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf](http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)
 
-### **The Dynamo Primer Project**
+### **Projekt Dynamo Primer**
 
-The Dynamo Primer is an open source project, initiated by Matt Jezyk and the Dynamo Development team at Autodesk. The first version of the primer was developed by Mode Lab. To contribute, fork the repo, add your content, and submit a pull request.
+Dynamo Primer je projekt s otevřeným zdrojovým kódem, který vytvořil Matt Jezyk a tým vývojářů Dynamo společnosti Autodesk. První verze příručky Primer byla vyvinuta společností Mode Lab. Chcete-li k projektu přispět, forkněte repozitář, přidejte obsah a odešlete pull request.
 
 [https://github.com/DynamoDS/DynamoPrimer](https://github.com/DynamoDS/DynamoPrimer)
 
-### **Zero Touch Plugin Development for Dynamo**
+### **Vývoj doplňku Zero Touch pro aplikaci Dynamo**
 
-This page outlines the process of developing a custom Dynamo node in C# using the "Zero Touch" interface. In most cases, C# static methods and Classes can be imported without modification. If your library only needs to call functions, and not construct new objects, this can be achieved very easily with static methods. When Dynamo loads your DLL, it will strip off the namespace of your classes, and expose all static methods as nodes.
+Tato stránka popisuje vývoj vlastního uzlu aplikace Dynamo v jazyku C# pomocí rozhraní „Zero Touch“. Ve většině případů lze statické metody a třídy jazyka C# importovat bez úprav. Pokud vaše knihovna potřebuje pouze volat funkce a nikoliv vytvářet nové objekty, toho lze dosáhnout velmi snadno pomocí statických metod. Když aplikace Dynamo načte vaši knihovnu DLL, odstraní jmenný prostor vašich tříd a zpřístupní všechny statické metody jako uzly.
 
 [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development)
 
-## **External Resources**
+## **Externí zdroje**
 
-### **Python for Beginners**
+### **Python pro začátečníky**
 
-Python is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes. Python combines remarkable power with very clear syntax. It has interfaces to many system calls and libraries, as well as to various window systems, and is extensible in C or C++. It is also usable as an extension language for applications that need a programmable interface. Finally, Python is portable: it runs on many Unix variants, on the Mac, and on Windows 2000 and later. The Beginner’s Guide to Python links to other introductory tutorials and resources for learning Python.
+Python je interpretovaný, interaktivní, objektově orientovaný programovací jazyk. Obsahuje moduly, výjimky, dynamické přetypování, vysokoúrovňové dynamické datové typy a třídy. Python spojuje pozoruhodné funkce s velmi jasnou syntaxí. Obsahuje rozhraní pro mnoho systémových volání a knihoven, různých okenních systémů a lze jej rozšířit pomocí kódu v jazyce C nebo C++. Navíc jej lze použít jako rozšiřující jazyk pro aplikace, které vyžadují programovatelné rozhraní. Jazyk Python je navíc přenositelný: lze jej spustit na různých Unixových distribucích, na Macu a ve Windows 2000 a novějších. Příručka pro začátečníky v jazyce Python obsahuje odkazy na další začátečnické návody a výukové zdroje.
 
 [https://www.python.org/about/gettingstarted](https://www.python.org/about/gettingstarted)
 
 ### **AForge**
 
-AForge.NET is an open source C# framework designed for developers and researchers in the fields of Computer Vision and Artificial Intelligence - image processing, neural networks, genetic algorithms, fuzzy logic, machine learning, robotics, etc.
+AForge.NET je systém s otevřeným zdrojovým kódem v jazyce C# vyvinutý pro vývojáře a výzkumníky z oboru počítačového vidění a umělé inteligence – zpracování obrazových dat, neuronové sítě, genetické algoritmy, fuzzy logika, strojové učení, robotika atd.
 
 [http://www.aforgenet.com/framework/](http://www.aforgenet.com/framework/)
 
 ### **Wolfram MathWorld**
 
-MathWorld is an online mathematics resource, assembled by Eric W. Weisstein with assistance from thousands of contributors. Since its contents first appeared online in 1995, MathWorld has emerged as a nexus of mathematical information in both the mathematics and educational communities. Its entries are extensively referenced in journals and books spanning all educational levels.
+MathWorld je online matematický zdroj, který vytvořil Eric W. Weisstein spolu s tisíci dalších přispěvatelů. Protože se jeho obsah poprvé objevil v roce 1995, MathWorld se stal zdrojem matematických informací v matematických i učitelských komunitách. Na jeho články se odkazuje celá řada publikací a knih na různých vzdělávacích úrovních.
 
 [http://mathworld.wolfram.com/](http://mathworld.wolfram.com)
 
-## Revit Resources
+## Zdroje k aplikaci Revit
 
 ### **buildz**
 
-"These posts are mainly about the Revit platform, with recommendations on how to enjoy it."
+„Tyto příspěvky se týkají zejména platformy Revit a doporučených pracovních postupů.“
 
 [http://buildz.blogspot.com/](http://buildz.blogspot.com)
 
-### **Nathan's Revit API Notebook**
+### **Nathanův zápisník pro API aplikace Revit**
 
-"This notebook attempts to remedy a few 'resource deficiencies' in learning and applying the Revit API in the context of a design workflow"
+„Tento zápisník se pokouší odstranit některé nedostatky studijních materiálů a zařadit API aplikace Revit do kontextu práce s návrhy.“
 
 [http://wiki.theprovingground.org/revit-api](http://wiki.theprovingground.org/revit-api)
 
 ### **Revit Python Shell**
 
-"The RevitPythonShell adds an IronPython interpreter to Autodesk Revit and Vasari." This project pre-dates Dynamo and is a great reference for Python development. RPS Project:&#x20;
+„RevitPythonShell přidává do aplikací Autodesk Revit a Vasari interpret IronPython.“ Tento projekt se starší než aplikace Dynamo a je skvělou předlohou pro vývoj v jazyce Python. Projekt RPS:&#x20;
 
 https://github.com/architecture-building-systems/revitpythonshell&#x20;
 
-Developer's Blog:&#x20;
+Blog pro vývojáře:&#x20;
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
 ### **The Building Coder**
 
-A robust catalog of Revit API workflows from one of the leading experts in BIM.
+Robustní katalog pracovních postupů pro API aplikace Revit od jednoho z předních odborníků na BIM.
 
 [http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

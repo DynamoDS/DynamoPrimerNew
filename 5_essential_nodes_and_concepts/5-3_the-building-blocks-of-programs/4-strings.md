@@ -1,113 +1,113 @@
-# Strings
+# Řetězce
 
-### What is a String
+### Co je to řetězec?
 
-Formally, a **String** is a sequence of characters representing a literal constant or some type of variable. Informally, a string is programming lingo for text. We've worked with numbers, both integers and decimal numbers, to drive parameters and we can do the same with text.
+Formálně je **řetězec** posloupnost znaků představujících písmennou konstantu nebo určitý typ proměnné. Neformálně je řetězec označení pro text. Pracovali jsme s celými i desetinnými čísly, abychom mohli řídit parametry, a stejně můžeme pracovat s textem.
 
-### Creating Strings
+### Vytváření řetězců
 
-Strings can be used for a wide range of applications, including defining custom parameters, annotating documentation sets, and parsing through text-based data sets. The string Node is located in the Core>Input Category.
+Řetězce lze použít pro širokou řadu aplikací, včetně definování uživatelských parametrů, opatření sady dokumentace poznámkami a analýzy textových datasetů. Uzel řetězce se nachází v kategorii Core>Input.
 
-The sample Nodes above are strings. A number can be represented as a string, as can a letter, or an entire array of text.
+Výše uvedené vzorové uzly jsou řetězce. Číslo může být reprezentováno jako řetězec, jako písmeno nebo celé pole textu.
 
 ![](<../images/5-3/4/strings - creating strings.jpg>)
 
-## Exercise
+## Cvičení
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-3/4/Building Blocks of Programs - Strings.dyn" %}
 
-### Querying Strings
+### Dotazování řetězců
 
-You can parse through large amounts of data quickly by querying strings. We'll talk about some basic operations which can speed up a workflow and help for software interoperability.
+Pomocí dotazů na řetězce můžete rychle analyzovat velké množství dat. O některých základních operacích, které mohou urychlit pracovní postup a pomoci při interoperabilitě softwaru, se budeme bavit.
 
-The image below considers a string of data coming from an external spreadsheet. The string represents the vertices of a rectangle in the XY-Plane. Let's break down some string split operations in miniature exercise:
+Následující obrázek vychází z řetězce dat pocházejících z externí tabulky. Řetězec představuje vrcholy obdélníku v rovině XY. V miniaturním cvičení projdeme některé operace rozdělení řetězce:
 
 ![](<../images/5-3/4/strings - querying strings 01.jpg>)
 
-> 1. The ";" separator splits each vertex of the rectangle. This creates a list with 3 items for each vertex.
+> 1. Oddělovač „;“ rozdělí každý vrchol obdélníku. Tím se vytvoří seznam se třemi položkami pro každý vrchol.
 
 ![](<../images/5-3/4/strings - querying strings 02.jpg>)
 
-> 1. By hitting the "_+_" in the middle of the Node, we create new separator.
-> 2. Add a "_,_" string to the canvas and plug in to the new separator input.
-> 3. Our result is now a list of ten items. The Node first splits based on _separator0_, then based on _separator1_.
+> 1. Kliknutím na tlačítko _+_ uprostřed uzlu vytvoříte nový oddělovač.
+> 2. Na kreslicí plochu přidejte řetězec „_,_“ a zadejte jej do nového vstupu oddělovače.
+> 3. Výsledkem je nyní seznam deseti položek. Uzel se nejprve rozdělí podle položky _separator0_ a potom podle položky _separator1_.
 
-While the list of items above may look like numbers, they are still regarded as individual strings in Dynamo. In order to create points, their data type needs to be converted from a string to a number. This is done with the **String.ToNumber** Node
+Zatímco výše uvedený seznam položek může vypadat jako čísla, jsou stále považovány za samostatné řetězce v aplikaci Dynamo. Aby bylo možné vytvořit body, je nutné jejich datový typ převést z řetězce na číslo. To se provádí pomocí uzlu **String.ToNumber**.
 
 ![](<../images/5-3/4/strings - querying strings 03.jpg>)
 
-> 1. This Node is straightforward. Plug the **String.Split** results into the input. The output doesn't look different, but the data type is now a _number_ instead of a _string_.
+> 1. Tento uzel je přímočarý. Připojte výsledky uzlu **String.Split** ke vstupu. Výstup nevypadá jinak, ale datový typ je nyní _number_ místo _string_.
 
-With some basic additional operations, we now have a triangle drawn at the origin based on the original string input.
+Po několika základních doplňkových operacích je nyní v počátku nakreslen trojúhelník na základě původního vstupu řetězce.
 
 ![](<../images/5-3/4/strings - querying strings 04.jpg>)
 
-### Manipulating Strings
+### Manipulace s řetězci
 
-Since a string is a generic text object, they host a wide range of applications. Let's take a look at some of the major actions in the Core>String Category in Dynamo:
+Protože řetězec je obecným textovým objektem, jsou použity v široké škále aplikací. Podívejme se na některé hlavní akce v aplikaci Dynamo v části Core>String Category:
 
-This is a method of merging two strings together in order. This takes each literal string in a list and creates one merged string.
+Tato metoda spojí dva řetězce v zadaném pořadí. Vezme všechny řetězcové literály v seznamu a vytvoří z nich jeden sloučený řetězec.
 
-The following represents the concatenation of three strings:
+Následující obrázek představuje zřetězení tří řetězců:
 
 ![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
 
-> 1. Add or subtract strings to the concatenation by clicking the +/- buttons in the center of the Node.
-> 2. The output gives one concatenated string, with spaces and punctuation included.
+> 1. Řetězce přidejte nebo odeberte ze zřetězení kliknutím na tlačítka +/- uprostřed uzlu.
+> 2. Výstup obsahuje jeden zřetězený řetězec, včetně mezer a interpunkcí.
 
-The join method is very similar to concatenate, except it has an added layer of punctuation.
+Metoda spojení je velmi podobný zřetězení, s výjimkou toho, že má přidanou hladinu interpunkcí.
 
-If you've worked in Excel, you may have come across a CSV file. This stands for comma-separated values. One could use a comma (or in this case, two dashes) as the separator with the **String.Join** node in order to create a similar data structure.
+Pokud jste pracovali v aplikaci Excel, mohli jste potkat soubor CSV. To znamená hodnoty oddělené čárkou. K vytvoření podobné datové struktury lze jako oddělovač s uzlem **String.Join** použít čárku (nebo v tomto případě dvě pomlčky).
 
-The following image represents the joining of two strings:
+Následující obrázek představuje spojení dvou řetězců:
 
 ![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
 
-> 1. The separator input allows one to create a string which divides the joined strings.
+> 1. Vstup oddělovače umožňuje vytvořit řetězec, který rozdělí spojené řetězce.
 
-### Working with Strings
+### Práce s řetězci
 
-In this exercise, we're going to use methods of querying and manipulating strings to deconstruct the final stanza of Robert Frost's [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Not the most practical application, but it will help us to grasp conceptual string actions as we apply them to legible lines of rhythm and rhyme.
+V tomto cvičení použijeme metody dotazování a manipulace s řetězci, abychom dekonstruovali poslední sloku básně Roberta Frosta [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621). Není to právě použití z praxe, ale pomůže nám to pochopit koncept akcí řetězců, když je použijeme na čitelné řádky básně.
 
-Let's begin with a basic string split of the stanza. We first notice that the writing is formatted based on commas. We'll use this format to separate each line into individual items.
+Začneme základním rozdělením řetězce sloky. Nejprve si všimneme, že zápis je formátován na základě čárek. Tento formát použijeme k rozdělení každého řádku do jednotlivých položek.
 
 ![](<../images/5-3/4/strings - working with strings 01.jpg>)
 
-> 1. The base string is pasted into a **String** Node.
-> 2. Another **String** Node is used to denote the separator. In this case, we're using a comma.
-> 3. A **String.Split** Node is added to the canvas and connected to the two strings.
-> 4. The output shows that we've now separated the lines into individual elements.
+> 1. Základní řetězec je vložen do uzlu **String**.
+> 2. K označení oddělovače se používá další uzel **String**. V tomto případě používáme čárku.
+> 3. Na kreslicí plochu je přidán uzel **String.Split** a je připojen ke dvěma řetězcům.
+> 4. Výstup ukazuje, že jsme nyní rozdělili čáry do jednotlivých prvků.
 
-Now, let's get to the good part of the poem: the last two lines. The original stanza was one item of data. We separated this data into individual items in the first step. Now we need to do a search for the text we're looking for. And while we _can_ do this by selecting the last two items of the list, if this were an entire book, we wouldn't want to read through everything and manually isolate the elements.
+Teď se pojďme dostat k dobré části básně: poslední dva řádky. Původní sloka byla jedna datová položka. Tato data jsme rozdělili na jednotlivé položky v prvním kroku. Teď musíme najít text, který hledáme. I když to _můžeme_ provést výběrem posledních dvou položek seznamu, pokud se jednalo o celou knihu, nechceme si vše přečíst a ručně izolovat prvky.
 
 ![](<../images/5-3/4/strings - working with strings 02.jpg>)
 
-> 1. Instead of manually searching, we use a **String.Contains** Node to perform a search for a set of characters. This is the similar to doing the "Find" command in a word processor. In this case, we get a return of "true" or "false" if that substring is found within the item.
-> 2. In the _searchFor_ input, we define a substring that we're looking for within the stanza. Let's use a **String** Node with the text "And miles".
-> 3. The output gives us a list of falses and trues. We'll use this boolean logic to filter the elements in the next step.
+> 1. Místo ručního vyhledávání použijeme uzel **String.Contains** k vyhledání sady znaků. To je podobné jako příkaz Najít v textovém procesoru. V tomto případě získáme výsledek true nebo false, pokud je tento podřetězec nalezen v položce.
+> 2. Ve vstupu _searchFor_ definujeme podřetězec, který hledáme v rámci sloky. Použijeme uzel **String** s textem „And miles“.
+> 3. Výstup nám dává seznam hodnot false a true. Pomocí této booleovské logiky filtrujeme prvky v dalším kroku.
 
 ![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
 
-> 1. **List.FilterByBoolMask** is the Node we want to use to cull out the falses and trues. The "in" output return the statements with a "mask" input of "true, while the "out" output return those which are "false".
-> 2. Our output from the "in" is as expected, giving us the final two lines of the stanza.
+> 1. **List.FilterByBoolMask** je uzel, který chceme použít k procházení hodnot false a true. Výstup „in“ vrátí výrazy s hodnotou „mask“ vstupu true, zatímco výstup „out“ vrací příkazy, které jsou false.
+> 2. Náš výstup z „in“ je podle očekávání a dává nám poslední dva řádky sloky.
 
-Now, we want to drive home the repetition of the stanza by merging the two lines together. When viewing the output of the previous step, we notice that there are two items in the list:
+Teď chceme tyto dva řádky sloučit dohromady. Při zobrazení výstupu předchozího kroku si všimneme, že jsou v seznamu dvě položky:
 
 ![](<../images/5-3/4/strings - working with strings 04.jpg>)
 
-> 1. Using two **List.GetItemAtIndex** Nodes, we can isolate the items using the values of 0 and 1 as the index input.
-> 2. The output for each node gives us, in order, the final two lines.
+> 1. Pomocí dvou uzlů **List.GetItemAtIndex** lze izolovat položky pomocí hodnot 0 a 1 jako vstupu index.
+> 2. Výstup každého uzlu nám poskytne v pořadí poslední dva řádky.
 
-To merge these two items into one, we use the **String.Join** Node:
+Ke sloučení těchto dvou položek do jedné použijte uzel **String.Join**:
 
 ![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
 
-> 1. After adding the **String.Join** Node, we notice that we need a separator.
-> 2. To create the separator, we add a **String** Node to the canvas and type in a comma.
-> 3. The final output has merged the last two items into one.
+> 1. Po přidání uzlu **String.Join** si všimneme, že potřebujeme oddělovač.
+> 2. K vytvoření oddělovače přidáme na kreslicí plochu uzel **String** a zadáme do něj čárku.
+> 3. Poslední výstup sloučil poslední dvě položky do jedné.
 
-This may seem like a lot of work to isolate the last two lines; and it's true, string operations often require some up front work. But they are scalable, and they can be applied to large datasets with relative ease. If you are working parametrically with spreadsheets and interoperability, be sure to keep string operations in mind.
+Může se zdát, že je to hodně práce pro izolování posledních dvou řádků, a je to pravda, řetězcové operace často vyžadují nějakou přípravnou práci. Jsou však škálovatelné a lze je relativně snadno použít u velkých datasetů. Pokud parametricky pracujete s tabulkami a interoperabilitou, nezapomeňte na řetězcové operace.

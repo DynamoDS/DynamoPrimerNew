@@ -1,5 +1,5 @@
-# The Building Blocks of Programs
+# Stavební bloky programů
 
-Once we are ready to dive deeper into developing Visual Programs, we will need a deeper understanding of the building blocks we will use. This chapter introduces fundamental concepts around data - the stuff that travels through the Wires of our Dynamo program.
+Pro hlubší ponoření do vývoje vizuálních programů je potřeba lépe pochopit stavební bloky programu. Tato kapitola pokrývá základní koncepty týkající se dat, která jsou přenášena dráty v programu aplikace Dynamo.
 
 ![](<../images/5-3/building blocks of program.png>)

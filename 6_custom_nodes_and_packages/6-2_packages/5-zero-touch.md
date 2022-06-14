@@ -1,120 +1,120 @@
-# Zero-Touch Importing
+# Importování Zero-Touch
 
-### What is Zero-Touch?
+### Co je funkce Zero-Touch?
 
-Zero-Touch Importing refers to a simple point-and-click method for importing C# libraries. Dynamo will read the public methods of a _.dll_ file and convert them to Dynamo nodes. You can use Zero-Touch to develop your own custom nodes and packages, and to import external libraries into the Dynamo environment.
+Import pomocí funkce Zero-Touch odkazuje na metodu jednoduchého importu knihoven C# pomocí najetí kurzoru a kliknutí. Aplikace Dynamo přečte veřejné metody souboru _.dll_ a převede je na uzly aplikace Dynamo. Pomocí funkce Zero-Touch můžete vyvinout vlastní uzly a balíčky a importovat externí knihovny do prostředí aplikace Dynamo.
 
 ![](<../images/6-2/5/zero-touch importing 01.jpg>)
 
-> 1. .dll files
-> 2. Dynamo Nodes
+> 1. Soubory .dll
+> 2. Uzly aplikace Dynamo
 
-With Zero-Touch, you can actually import a library which was not necessarily developed for Dynamo and create a suite of new nodes. The current Zero-Touch functionality demonstrates the cross-platform mentality of the Dynamo Project.
+Pomocí funkce Zero-Touch můžete skutečně importovat knihovnu, která nebyla nezbytně vyvinuta pro aplikaci Dynamo, a vytvořit sady nových uzlů. Aktuální funkce Zero-Touch znázorňuje multiplatformní povahu projektu aplikace Dynamo.
 
-This section demonstrates how to use Zero-Touch to import a third party library. For information on developing your own Zero-Touch Library, reference the [Dynamo wiki page](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development).
+Tato část předvádí, jak pomocí funkce Zero-Touch importovat knihovnu třetích stran. Informace o vývoji vlastní knihovny funkce Zero-Touch naleznete na stránce [Wiki k aplikaci Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development).
 
-### Zero-Touch Packages
+### Balíčky funkce Zero-Touch
 
-Zero-touch packages are a good complement to user-defined custom nodes. A few packages which use C# libraries are listed in the table below. For more detailed information on packages, visit the [Packages section ](../../a\_appendix/a-3\_packages.md)in the Appendix.
+Balíčky funkce Zero-Touch jsou dobrým doplňkem k uživatelským vlastním uzlům. V tabulce níže je uvedeno několik balíčků, které používají knihovny C#. Podrobnější informace o balíčcích naleznete v [části Balíčky ](../../a\_appendix/a-3\_packages.md)v dodatku.
 
-| **Logo/Image**                                                                       | **Name**                                                                    |
+| **Logo/obrázek** | **Název** |
 | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| ![](<../images/6-2/5/meshToolkit case study 01.jpg>)                           | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](<../images/6-2/5/package introduction - installing package folder 07.jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                               | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                                | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| ![](<../images/6-2/5/meshToolkit case study 01.jpg>) | [Sada nástrojů pro sítě](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](<../images/6-2/5/package introduction - installing package folder 07.jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/) |
+| ![](../images/6-2/5/rhynamo.jpg) | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo) |
+| ![](../images/6-2/5/optimo.jpg) | [Optimo](https://github.com/BPOpt/Optimo) |
 
-## Case Study - Importing AForge
+## Případová studie – import položek AForge
 
-In this case study, we'll show how to import the [AForge](http://www.aforgenet.com) external _.dll_ library. AForge is a robust library which offers a range of functionality from image processing to artificial intelligence. We'll reference the imaging class in AForge to do a few image processing exercises below.
+Tato případová studie popisuje, jak importovat externí knihovnu _.dll_ [AForge](http://www.aforgenet.com). AForge je robustní knihovna, která nabízí celou řadu funkcí od zpracování obrázků po umělou inteligenci. Níže rozebereme několik cvičení týkající se zpracování obrázků, a přitom se budeme odkazovat na třídu k práci s obrázky v knihovně AForge.
 
-Let's begin by downloading AForge. On the [AForge download page](http://www.aforgenet.com/framework/downloads.html), select _\[Download Installer]_ and install after download has completed.
+Začněte stažením knihovny AForge. Na [stránce stažení knihovny AForge](http://www.aforgenet.com/framework/downloads.html) vyberte položku _[\Download Installer]_ a po dokončení stahování nainstalujte knihovnu.
 
-In Dynamo, create a new file and select _File > Import Library..._
+V aplikaci Dynamo vytvořte nový soubor a vyberte možnost _Soubor > Importovat knihovnu_.
 
 ![](<../images/6-2/5/case study aforge 01.jpg>)
 
-Next, locate the dll file.
+Dále vyhledejte soubor knihovny DLL.
 
 ![](<../images/6-2/5/case study aforge 02.jpg>)
 
-> 1. In the pop-up window, navigate to the release folder in your AForge install. This will likely be in a folder similar to this one: _C:\Program Files (x86)\AForge.NET\Framework\Release_.
-> 2. **AForge.Imaging.dll:** We only want to use this one file from the AForge library for this case study. Select this _.dll_ and hit _"Open"._
+> 1. V místním okně přejděte do složky Release instalačního programu AForge. Pravděpodobně se bude jednat o složku podobnou této: _C:\Program Files (x86)\AForge.NET\Framework\Release_.
+> 2. **AForge.Imaging.dll:** Pro tuto případovou studii chceme použít pouze tento soubor z knihovny AForge. Vyberte tento soubor _.dll_ a klikněte na _Otevřít_.
 
-Back in Dynamo, you should see an **AForge** group of nodes added to your Library. We now have access to the AForge imaging library from our visual program!
+V aplikaci Dynamo byste měli vidět skupinu uzlů **AForge** přidanou do knihovny. Nyní máme přístup ke knihovně práce s obrázky AForge z našeho vizuálního programu.
 
 ![](<../images/6-2/5/case study aforge 03.jpg>)
 
-### Exercise 1 - Edge Detection
+### Cvičení 1 – Detekce hran
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/6-2/5/ZeroTouchImages.zip" %}
 
-Now that the library is imported, we'll start off simple with this first exercise (_01-EdgeDetection.dyn_). We'll do some basic image processing on a sample image to show how AForge image filters. We'll use the _"Watch Image"_ node to show our results and apply filters in Dynamo similar to those in Photoshop
+Jakmile bude knihovna importována, začněte jednoduše tímto prvním cvičením (_01-EdgeDetection.dyn_). V něm provedeme základní zpracování obrázků s ukázkovým obrázkem a ukážeme si, jak fungují filtry obrázků AForge. Pomocí uzlu _„Watch Image“_ zobrazíme výsledky a v aplikaci Dynamo použijeme filtry podobné těm, které jsou v aplikaci Photoshop.
 
-To import an image, add a **File Path** node to the canvas and select "soapbubbles.jpg" from the exercise folder (photo cred: [flickr](https://www.flickr.com/photos/wwworks/667298782)).
+Chcete-li importovat obrázek, přidejte na kreslicí plochu uzel **File Path** a ve složce cvičení vyberte soubor soapbubble.jpg (fotografie: [flickr](https://www.flickr.com/photos/wwworks/667298782)).
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 01.jpg>)
 
-The File Path node simply provides a String of the path to the image we've selected. Next, we need to convert it into a usable image file in Dynamo.
+Uzel File Path jednoduše předá řetězec s cestou k vybranému obrázku. Dále je potřeba jej převést na použitelný soubor obrázku v aplikaci Dynamo.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 02.jpg>)
 
-> 1. Use **File From Path** to convert the file path item into an image in the Dynamo environment.
-> 2. Connect the **File Path** node to the **File.FromPath** node.
-> 3. To convert this File into an Image, we'll use the **Image.ReadFromFile** node.
-> 4. Last, let's see the result! Drop a **Watch Image** node onto the canvas and connect to **Image.ReadFromFile**. We haven't used AForge yet, but we've successfully imported an image into Dynamo.
+> 1. Pomocí uzlu **File From Path** převeďte položku cesty k souboru na obrázek v prostředí aplikace Dynamo.
+> 2. Připojte uzel **File Path** k uzlu **File.FromPath**.
+> 3. K převodu tohoto souboru na obrázek použijte uzel **Image.ReadFromFile**.
+> 4. Nakonec zobrazte výsledek. Přetáhněte uzel **Watch Image** na kreslicí plochu a připojte jej k uzlu **Image.ReadFromFile**. Ještě jsme nepoužili AForge, ale úspěšně jsme importovali obrázek do aplikace Dynamo.
 
-Under AForge.Imaging.AForge.Imaging.Filters (in the navigation menu), you'll notice that there is a wide array of filters available. We're going to use one of these filters now to desaturate an image based on threshold values.
+Pod uzlem AForge.Imaging.AForge.Imaging.Filters (v navigační nabídce) si všimněte, že je k dispozici celá řada filtrů. Nyní pomocí jednoho z těchto filtrů odbarvíme obrázek podle hodnot prahů.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 03.jpg>)
 
-> 1. Drop three sliders onto the canvas, change their ranges to be from 0 to 1 and their step values to be 0.01.
-> 2. Add the **Grayscale.Grayscale** node to the canvas. This is an AForge filter which applies a grayscale filter to an image. Connect the three sliders from step 1 into cr, cg, and cb. Change the top and bottom sliders to have a value of 1 and the middle slider to have a value of 0.
-> 3. In order to apply the Grayscale filter, we need an action to perform on our image. For this, we use **BaseFilter.Apply**. Connect the image into the image input and **Grayscale.Grayscale** into the baseFilter input.
-> 4. Plugging into a **Watch Image** node, we get a desaturated image.
+> 1. Umístěte tři posuvníky na kreslicí plochu, změňte jejich rozsahy na 0 až 1 a jejich hodnoty kroku na 0.01.
+> 2. Přidejte na kreslicí plochu uzel **Grayscale.Grayscale**. Jedná se o filtr AForge, který na obrázek použije filtr odstínů šedé. Spojte tři posuvníky z kroku 1 ke vstupům cr, cg a cb. Změňte horní a dolní posuvník, tak aby měly hodnotu 1, a střední posuvník, tak aby měl hodnotu 0.
+> 3. Aby bylo možné použít filtr odstínů šedi, je nutné provést s obrázkem určitou akci. K tomu používáme uzel **BaseFilter.Apply**. Připojte obrázek ke vstupu image a uzel **Grayscale.Grayscale** ke vstupu baseFilter.
+> 4. Připojením k uzlu **Watch Image** získáte odbarvený obrázek.
 
-We can have control over how to desaturate this image based on threshold values for red, green, and blue. These are defined by the inputs to the **Grayscale.Grayscale** node. Notice that the image looks pretty dim - this is because the green value is set to 0 from our slider.
+Kontrola nad odbarvením obrázku se odvíjí od hodnot prahů pro červenou, zelenou a modrou. Tyto hodnoty jsou definovány vstupy uzlu **Grayscale.Grayscale**. Všimněte si, že obrázek vypadá značně ztlumeně – je to kvůli tomu, že hodnota zelené barvy je posuvníkem nastavena na 0.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 04.jpg>)
 
-> 1. Change the top and bottom sliders to have a value of 0 and the middle slider to have a value of 1. This way we get a more legible desaturated image.
+> 1. Změňte horní a dolní posuvník, tak aby měly hodnotu 0, a střední posuvník, tak aby měl hodnotu 1. Tímto získáte čitelnější odbarvený obrázek.
 
-Let's use the desaturated image, and apply another filter on top of it. The desaturated image has some contrast, so we we're going to test some edge detection.
+Nyní na odbarvený obrázek použijeme další filtr. Odbarvený obrázek má určitý kontrast, čili nyní otestujeme detekci hran.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 05.jpg>)
 
-> 1. Add a **SobelEdgeDetector.SobelEdgeDetector** node to the canvas.
-> 2. Connect this to a **BaseUsingCopyPartialFilter.Apply** and connect the desaturated image to the image input of this node.
-> 3. The Sobel Edge Detector has highlighted the edges in a new image.
+> 1. Přidejte na kreslicí plochu uzel **SobelEdgeDetector.SobelEdgeDetector**.
+> 2. Připojte jej k uzlu **BaseUsingCopyPartialFilter.Apply** a připojte odbarvený obrázek ke vstupu image tohoto uzlu.
+> 3. Detektor hran Sobel zvýraznil hrany v novém obrázku.
 
-Zooming in, the edge detector has called out the outlines of the bubbles with pixels. The AForge library has tools to take results like this and create Dynamo geometry. We'll explore that in the next exercise.
+Při přiblížení detektor hran zvýraznil obrysy bublin pomocí pixelů. Knihovna AForge obsahuje nástroje, které umožňují vytvořit pomocí těchto výsledků geometrii aplikace Dynamo. Tato funkce je rozebrána v následujícím cvičení.
 
 ![](<../images/6-2/5/case study aforge exercise 1 - 06.jpg>)
 
-### Exercise 2 - Rectangle Creation
+### Cvičení 2 – Tvorba obdélníku
 
-Now that we're introduced to some basic image processing, let's use an image to drive Dynamo geometry! On an elementary level, in this exercise we're aiming to do a _"Live Trace"_ of an image using AForge and Dynamo. We're going to keep it simple and extract rectangles from a reference image, but there are tools available in AForge for more complex operations. We'll be working with _02-RectangleCreation.dyn_ from the downloaded exercise files.
+Nyní, když jste se seznámili s určitým základním zpracováním obrázků, můžete pomocí obrázku řídit geometrii aplikace Dynamo. Na základní úrovni se v tomto cvičení snažíme provést _„Aktivní trasování“_ obrázku pomocí příkazů AForge a Dynamo. Budeme se držet jednoduchého postupu a extrahujeme obdélníky z referenčního obrázku, v knihovně AForge jsou však k dispozici i nástroje pro složitější operace. Budeme pracovat se souborem _02-RectangleCreation.dyn_ ze stažených souborů cvičení.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 01.jpg>)
 
-> 1. With the File Path node, navigate to grid.jpg in the exercise folder.
-> 2. Connect the remaining series of nodes above to reveal a course parametric grid.
+> 1. Pomocí uzlu File Path přejděte do složky cvičení a k souboru grid.jpg.
+> 2. Propojte zbývající řadu uzlů výše, tak abyste odhalili parametrickou osnovu.
 
-In this next step, we want to reference the white squares in the image and convert them to actual Dynamo geometry. AForge has a lot of powerful Computer Vision tools, and here we're going to use a particularly important one for the library called [BlobCounter](http://www.aforgenet.com/framework/docs/html/d7d5c028-7a23-e27d-ffd0-5df57cbd31a6.htm).
+V následujícím kroku je potřeba se odkázat na bílé čtverce v obrázku, které se poté převedou ve skutečnou geometrii aplikace Dynamo. Knihovna AForge má mnoho výkonných nástrojů počítačového vidění, přičemž zde se použije zvlášť důležitý nástroj pro knihovnu zvaný [BlobCounter](http://www.aforgenet.com/framework/docs/html/d7d5c028-7a23-e27d-ffd0-5df57cbd31a6.htm).
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 02.jpg>)
 
-> 1. Add a BlobCounter to the canvas, then we need a way to process the image (similar to the **BaseFilter.Apply** tool in the previous exercise).
+> 1. Po přidání objektu BlobCounter na kreslicí plochu je třeba zpracovat obrázek (podobně jako u nástroje **BaseFilter.Apply** v předchozím cvičení).
 
-Unfortunately the "Process Image" node is not immediately visible in the Dynamo library. This is because the function may not be visible in the AForge source code. In order to fix this, we'll need to find a work-around.
+Uzel „Process Image“ však bohužel není ihned viditelný v knihovně aplikace Dynamo. Je tomu tak proto, že funkce nemusí být ve zdrojovém kódu AForge viditelná. Tento problém vyřešíte prostřednictvím náhradního řešení.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 03.jpg>)
 
-> 1. Add a Python node to the canvas and add the following code to the Python node. This code imports the AForge library and then processes the imported image.
+> 1. Přidejte na kreslicí plochu uzel jazyka Python a přidejte do něj následující kód. Tento kód importuje knihovnu AForge a poté zpracuje importovaný obrázek.
 
 ```
 import sys
@@ -127,19 +127,19 @@ bc.ProcessImage(IN[0])
 OUT=bc
 ```
 
-Connecting the image output to the Python node input, we get an AForge.Imaging.BlobCounter result from the Python node.
+Pokud připojíte výstup obrázku ke vstupu uzlu Python, získáte z uzlu Python výsledek AForge.Imaging.BlobCounter.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 04.jpg>)
 
-The next steps will do some tricks that demonstrate familiarity with the [AForge Imaging API](http://www.aforgenet.com/framework/docs/html/d087503e-77da-dc47-0e33-788275035a90.htm). It's not necessary to learn all of this for Dynamo work. This is more of a demonstration of working with external libraries within the flexibility of the Dynamo environment.
+V dalších krocích provedeme několik triků, které zobrazují provázanost s [rozhraním API AForge Imaging](http://www.aforgenet.com/framework/docs/html/d087503e-77da-dc47-0e33-788275035a90.htm). K práci v aplikaci Dynamo není nutné se naučit úplně vše. Jedná se spíše o demonstraci práce s externími knihovnami v rámci flexibility prostředí aplikace Dynamo.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 05.jpg>)
 
-> 1. Connect the output of the Python script to BlobCounterBase.GetObjectRectangles. This reads objects in an image, based on a threshold value, and extracts quantified rectangles from the pixel space.
+> 1. Připojte výstup skriptu v jazyce Python k uzlu BlobCounterBase.GetObjectRectangles. Tímto se načtou objekty v obrázku podle prahové hodnoty a extrahují se kvantifikované obdélníky z pixelového prostoru.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 06.jpg>)
 
-> 1. Adding another Python node to the canvas, connect to the GetObjectRectangles, and input the code below. This will create an organized list of Dynamo objects.
+> 1. Přidáním dalšího uzlu Python připojte objekt GetObjectRectangles a zadejte níže uvedený kód. Tím se vytvoří uspořádaný seznam objektů Dynamo.
 
 ```
 OUT = []
@@ -154,8 +154,8 @@ for rec in IN[0]:
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 07.jpg>)
 
-> 1. Transpose the output of the Python node from the previous step. This creates 4 lists, each representing X,Y, Width, and Height for each rectangle.
-> 2. Using Code Block, we organize the data into a structure that accommodates the Rectangle.ByCornerPoints node (code below).
+> 1. Transponujte výstup uzlu Python z předchozího kroku. Tím vzniknou 4 seznamy, přičemž každý z nich představuje hodnoty X, Y, šířky a výšky každého obdélníku.
+> 2. Pomocí bloku kódu uspořádejte data do struktury, která odpovídá uzlu Rectangle.ByCornerPoints (kód níže).
 
 ```
 recData;
@@ -170,17 +170,17 @@ p2=Autodesk.Point.ByCoordinates(x1,y1);
 p3=Autodesk.Point.ByCoordinates(x1,y0);
 ```
 
-We have an array of rectangles representing the white squares in the image. Through programming, we've done something (roughly) similar to a live trace in Illustrator!
+Nyní je vidět pole obdélníků představujících bílé čtverce v obrázku. Pomocí programování jsme právě provedli (zhruba) podobnou věc jako aktivní sledování v aplikaci Illustrator.
 
-We still need some cleanup, however. Zooming in, we can see that we have a bunch of small, unwanted rectangles.
+Stále však je potřeba provést začištění. Po přiblížení je vidět určité množství malých nežádoucích obdélníků.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 08.jpg>)
 
-Next, we are going to write codes to get rid of unwanted rectangles.
+Dále napíšeme kódy, abychom se zbavili nežádoucích obdélníků.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 09.jpg>)
 
-> 1. Insert a Python node in between the GetObjectRectangles node and another Python node. The node's code is below, and removes all rectangles which are below a given size.
+> 1. Vložte uzel jazyka Python mezi uzel GetObjectRectangles a jiný uzel jazyka Python. Kód uzlu je uveden níže a odstraní všechny obdélníky, které jsou menší než daná velikost.
 
 ```
 rectangles=IN[0]
@@ -190,12 +190,12 @@ for rec in rectangles:
   OUT.append(rec)
 ```
 
-With the superfluous rectangles gone, just for kicks, let's create a surface from these rectangles and extrude them by a distance based on their areas.
+Jakmile budou přebytečné obdélníky pryč, zkusíme jen tak pro radost vytvořit z těchto obdélníků jeden povrch a vysunout je o určitou vzdálenost podle jejich ploch.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 10.jpg>)
 
-Last, change the both\_sides input to false and we get an extrusion in one direction. Dip this baby in resin and you've got yourself one super nerdy table.
+Nakonec změňte vstup both\_sides na hodnotu false. Tím získáte vysunutí v jednom směru. Použijte trochu pryskyřice a máte perfektní stůl.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 11.jpg>)
 
-These are basic examples, but the concepts outlined here are transferable to exciting real-world applications. Computer vision can be used for a whole host of processes. To name a few: barcode readers, perspective matching, [projection mapping](https://www.youtube.com/watch?v=XSR0Xady02o), and [augmented reality](http://aforgenet.com/aforge/articles/gratf\_ar/). For more advanced topics with AForge related to this exercise, have a read through [this article](http://aforgenet.com/articles/shape\_checker/).
+Toto jsou základní příklady, zde popsané koncepty však je možné přetvořit ve skvělé reálné projekty. Počítačové vidění je možné použít v celé řadě procesů. Mezi ně patří například: čtečky čárových kódů, spojování perspektivy, [mapování promítání](https://www.youtube.com/watch?v=XSR0Xady02o) a [rozšířená realita](http://aforgenet.com/aforge/articles/gratf\_ar/). Další rozšířená témata s funkcí AForge související s tímto cvičením naleznete v [tomto článku](http://aforgenet.com/articles/shape\_checker/).

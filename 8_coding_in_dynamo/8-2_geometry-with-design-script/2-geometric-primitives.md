@@ -1,12 +1,12 @@
-# Geometric Primitives
+# Geometrická primitiva
 
-### CoordinateSystem
+### Souřadnicový systém
 
-While Dynamo is capable of creating a variety of complex geometric forms, simple geometric primitives form the backbone of any computational design: either directly expressed in the final designed form, or used as scaffolding off of which more complex geometry is generated.
+Aplikace Dynamo sice umožňuje vytvářet mnoho složitých geometrických útvarů, ale jednoduchá geometrická primitiva tvoří základ jakéhokoliv výpočetního návrhu: mohou být použita přímo v konečném návrhu nebo mohou sloužit jako základ pro generování složitějších geometrií.
 
-While not strictly a piece of geometry, the CoordinateSystem is an important tool for constructing geometry. A CoordinateSystem object keeps track of both position and geometric transformations such as rotation, sheer, and scaling.
+Ačkoliv se nejedná o geometrii, objekt CoordinateSystem je důležitým nástrojem pro jejich tvorbu. V objektu CoordinateSystem je uložena pozice a geometrické transformace, například otočení, kolmý posun a změna měřítka.
 
-Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with no rotations, scaling, or sheering transformations, simply requires calling the Identity constructor:
+Chcete-li vytvořit objekt CoordinateSystem na souřadnicích X = 0, Y = 0, Z = 0 bez otočení, změny měřítka nebo kolmého posunu, jednoduše zavolejte konstruktor Identity:
 
 ![](../images/8-2/2/GeometricPrimitives\_01.png)
 
@@ -17,7 +17,7 @@ Creating a CoordinateSystem centered at a point with x = 0, y = 0, z = 0, with n
 cs = CoordinateSystem.Identity();
 ```
 
-CoordinateSystems with geometric transformations are beyond the scope of this chapter, though another constructor allows you to create a coordinate system at a specific point, _CoordinateSystem.ByOriginVectors_:
+Objekty CoordinateSystems s geometrickými transformacemi jsou mimo rozsah této kapitoly, nicméně souřadnicový systém v zadaném bodě je možné vytvořit pomocí konstruktoru _CoordinateSystem.ByOriginVectors_:
 
 ![](../images/8-2/2/GeometricPrimitives\_02.png)
 
@@ -35,11 +35,11 @@ cs = CoordinateSystem.ByOriginVectors(origin,
     identity.XAxis, identity.YAxis, identity.ZAxis);
 ```
 
-### Point
+### Bod
 
-The simplest geometric primitive is a Point, representing a zero-dimensional location in three-dimensional space. As mentioned earlier there are several different ways to create a point in a particular coordinate system: _Point.ByCoordinates_ creates a point with specified x, y, and z coordinates; _Point.ByCartesianCoordinates_ creates a point with a specified x, y, and z coordinates in a specific coordinate system; _Point.ByCylindricalCoordinates_ creates a point lying on a cylinder with radius, rotation angle, and height; and _Point.BySphericalCoordinates_ creates a point lying on a sphere with radius and two rotation angle.
+Nejjednodušším geometrickým primitivem je bod, který představuje bezrozměrné místo v trojrozměrném prostoru. Jak již bylo zmíněno, bod v určitém souřadnicovém systému lze vytvořit několika způsoby: Konstruktor _Point.ByCoordinates_ vytvoří bod se zadanými souřadnicemi X, Y a Z, konstruktor _Point.ByCartesianCoordinates_ vytvoří bod se zadanými souřadnicemi X, Y a Z v určitém souřadnicovém systému, konstruktor _Point.ByCylindricalCoordinates_ vytvoří bod ležící na válci s poloměrem, úhlem otočení a výškou a konstruktor _Point.BySphericalCoordinates_ vytvoří bod ležící na kouli s poloměrem a dvěma úhly otočení.
 
-This example shows points created at various coordinate systems:
+Tento příklad ukazuje body vytvořené v různých souřadnicových systémech:
 
 ![](../images/8-2/2/GeometricPrimitives\_03.png)
 
@@ -73,9 +73,9 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Line&#x20;
+### Přímka&#x20;
 
-The next higher dimensional Dynamo primitive is a line segment, representing an infinite number of points between two end points. Lines can be created by explicitly stating the two boundary points with the constructor _Line.ByStartPointEndPoint_, or by specifying a start point, direction, and length in that direction, _Line.ByStartPointDirectionLength_.
+Primitivum s vyšším rozměrem v aplikaci Dynamo je úsečka, která představuje nekonečné množství bodů mezi dvěma koncovými body. Čáry lze vytvořit explicitním zadáním dvou okrajových bodů do konstruktoru _Line.ByStartPointEndPoint_ nebo zadáním počátečního bodu, směru a délky v tomto směru do konstruktoru _Line.ByStartPointDirectionLength_.
 
 ![](../images/8-2/2/GeometricPrimitives\_04.png)
 
@@ -92,9 +92,9 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### 3D Primitives - Cuboid, Cone, Cylinder, Sphere, etc
+### 3D primitiva – kvádr, kužel, válec, koule atd.
 
-Dynamo has objects representing the most basic types of geometric primitives in three dimensions: Cuboids, created with _Cuboid.ByLengths_; Cones, created with _Cone.ByPointsRadius_ and _Cone.ByPointsRadii_; Cylinders, created with _Cylinder.ByRadiusHeight_; and Spheres, created with _Sphere.ByCenterPointRadius_.
+Aplikace Dynamo nabízí objekty reprezentující nejzákladnější trojrozměrná geometrická primitiva: kvádry vytvářené konstruktorem _Cuboid.ByLengths_, kužely vytvářené konstruktory _Cone.ByPointsRadius_ a _Cone.ByPointsRadii_, válce vytvářené konstruktorem _Cylinder.ByRadiusHeight_ a koule vytvářené konstruktorem _Sphere.ByCenterPointRadius_.
 
 ![](../images/8-2/2/GeometricPrimitives\_05.png)
 

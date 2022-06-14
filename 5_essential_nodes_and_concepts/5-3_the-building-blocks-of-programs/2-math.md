@@ -1,39 +1,39 @@
-# Math
+# Matematika
 
-If the simplest form of data is numbers, the easiest way to relate those numbers is through Mathematics. From simple operators like divide to trigonometric functions, to more complex formulas, Math is a great way to start exploring numeric relationships and patterns.
+Pokud jsou nejjednodušší formou dat čísla, nejjednodušším způsobem, jak se tato čísla mohou odlišit, je použití funkce Mathematics. Od jednoduchých operátorů, jako je dělení, až k trigonometrickým funkcím, možnost Math je skvělým způsobem, jak začít zkoumat číselné vztahy a vzory.
 
-### Arithmetic Operators
+### Aritmetické operátory
 
-Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
+Operátory jsou sada komponent, které používají algebraické funkce se dvěma číselnými vstupními hodnotami, které vrací jednu výstupní hodnotu (součet, rozdíl, násobení, dělení atd.). Najdete je pod položkou Operátory > Akce.
 
-| Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
+| Ikona | Název (Syntaxe) | Vstupy | Výstupy |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-3/2/addition.jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Subtraction.jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Multiplication.jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Division.jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/addition.jpg>) | Součet (**+**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Subtraction.jpg>) | Rozdíl (**-**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Multiplication.jpg>) | Násobení (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Division.jpg>) | Dělení (**/**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
-## Exercise: The Golden Spiral Formula
+## Cvičení: Vzorec zlaté spirály
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-### Part I: Parametric Formula
+### Část I: Parametrický vzorec
 
-Combine operators and variables to form a more complex relationship through **Formulas**. Use sliders to make a Formula that can be controlled with input parameters.
+Kombinací operátorů a proměnných vytvořte složitější vztah prostřednictvím **vzorců**. Pomocí posuvníků vytvořte vzorec, který lze řídit pomocí vstupních parametrů.
 
-1.Create Number sequence that represents the 't' in the parametric equation, so we want to use a list that's large enough to define a spiral.
+1. Vytvořte posloupnost čísel, která představuje „t“ v parametrické rovnici. Chceme tedy použít seznam, který je dostatečně velký k definici spirály.
 
-**Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.
+**Number Sequence:** Definuje posloupnost čísel na základě tří vstupů: _start, amount_ a _step_.
 
 ![](<../images/5-3/2/math - part I-01.jpg>)
 
-2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.
+2\. Výše uvedený krok vytvořil seznam čísel definujících parametrickou doménu. Dále vytvořte skupinu uzlů představující rovnici zlaté spirály.
 
-The golden spiral is defined as the equation:
+Zlatá spirála je definována jako následující rovnice:
 
 $$
 x = r cos θ = a cos θ e^{bθ}
@@ -43,76 +43,76 @@ $$
 y = r sin θ = a sin θe^{bθ}
 $$
 
-The image below represents the golden spiral in in visual programming form. When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
+Obrázek níže znázorňuje zlatou spirálu ve vizuální programové podobě. Při procházení skupiny uzlů se snažte věnovat pozornost souvislosti mezi vizuálním programem a psanou rovnicí.
 
 ![](<../images/5-3/2/math - part I-02.jpg>)
 
-> a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
+> a. **Number Slider:** Přidejte na kreslicí plochu dva posuvníky. Tyto posuvníky budou představovat proměnné _a_ a _b_ parametrické rovnice. Představují konstantu, která je flexibilní, nebo parametry, které lze upravit podle požadovaného výsledku.
 >
-> b. **Multiplication (\*)** : The multiplication Node is represented by an asterisk. We'll use this repeatedly to connect multiplying variables
+> b. **Násobení (\*)**: Uzel násobení je reprezentován hvězdičkou. Toto použijeme opakovaně k připojení násobných proměnných
 >
-> c. **Math.RadiansToDegrees**: The '_t_' values need to be translated to degrees for their evaluation in the trigonometric functions. Remember, Dynamo defaults to degrees for evaluating these functions.
+> c. **Math.RadiansToDegree:** Hodnoty _t_ je nutné převést na stupně pro jejich vyhodnocení v trigonometrických funkcích. Nezapomeňte, že aplikace Dynamo pro vyhodnocení těchto funkcí ve výchozím stavu používá stupně.
 >
-> d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
+> d. **Math.Pow:** Jako funkce _t_ a čísla _e_ vytvoří Finobacciho posloupnost.
 >
-> e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
+> e. **Math.Cos a Math.Sin:** Tyto dvě trigonometrické funkce budou rozlišovat souřadnice X a souřadnice Y každého parametrického bodu.
 >
-> f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
+> f. **Watch:** Nyní vidíte, že náš výstup jsou dva seznamy, které budou tvořit souřadnice _x_ a _y_ bodů použitých k vytvoření spirály.
 
-### Part II: From Formula to Geometry
+### Část II: Od vzorce ke geometrii
 
-Now, the bulk of Nodes from the previous step will work fine, but it is a lot of work. To create a more efficient workflow, have a look at [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)to define a string of Dynamo expressions into one node. In this next series of steps, we'll look at using the parametric equation to draw the Fibonacci spiral.
+Většina uzlů z předchozího kroku bude fungovat dobře, ale jedná se o pracný postup. Chcete-li vytvořit efektivnější pracovní postup, přečtěte si v části [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) jak definovat řetězec výrazů aplikace Dynamo do jednoho uzlu. V následující řadě kroků se podíváme, jak použít parametrickou rovnici k nakreslení Fibonacciho spirály.
 
-**Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
+**Point.ByCoordinates:** Spojte horní uzel násobení se vstupem _x_ a dolní část se vstupem _y_. Nyní vidíte parametrickou spirálu bodů na obrazovce.
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints:** Connect **Point.ByCoordinates** from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
+**Polycurve.ByPoints:** Spojte uzel **Point.ByCoordinates** z předchozího kroku se vstupem _points_. Možnost _connectLastToFirst_ můžeme nechat bez vstupu, protože neděláme uzavřený oblouk. Tím se vytvoří spirála, která prochází každým bodem definovaným v předchozím kroku.
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
-We've now completed the Fibonacci Spiral! Let's take this further into two separate exercises from here, which we'll call the Nautilus and the Sunflower. These are abstractions of natural systems, but the two different applications of the Fibonacci spiral will be well represented.
+Nyní jsme dokončili Fibonacciho spirálu. Pokračujme dvěma různými cvičeními, které pojmenujeme Loděnka a Slunečnice. Jedná se o abstrakce přírodních systémů, ale dvě různá použití Fibonacciho spirály budou dobře zastoupena.
 
-### Part III: From Spiral to Nautilus
+### Část III: Od spirály k loděnce
 
-**Circle.ByCenterPointRadius:** We'll use a circle Node here with the same inputs as the previous step. The radius value defaults to _1.0_, so we see an immediate output of circles. It becomes immediately legible how the points diverge further from the origin.
+**Circle.ByCenterPointRadius:** Zde použijeme kruhový uzel se stejnými vstupy jako v předchozím kroku. Výchozí hodnota poloměru je _1.0_, takže je vidět okamžitý výstup kružnic. Je okamžitě vidět, jak se body dále vzdalují od počátku.
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
-**Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.
+**Number Sequence:** Toto je původní pole '_t_'. Jeho připojením k hodnotě poloměru v uzlu **Circle.ByCenterPointRadius** se středy kružnic stále vzdalují od počátku, ale poloměry kružnic se zvětšují, což vytváří zábavný Fibonacciho kruhový graf.
 
-Bonus points if you make it 3D!
+Bonusové body, pokud to vytvoříte ve 3D.
 
 ![](<../images/5-3/2/math - part III-02.gif>)
 
-### Part IV: From Nautilus to Phyllotaxis
+### Část IV: Od loděnky k fylotaxii
 
-Pattern Now that we've made a circular Nautilus shell, let's jump into parametric grids. We're going to use a basic rotate on the Fibonacci Spiral to create a Fibonacci grid, and the result is modeled after the [growth of sunflower seeds](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
+Nyní, když jsme vytvořili kruhovou ulitu loděnky, přejděme k parametrickým osnovám. Použijeme základní otočení Fibonacciho spirály k vytvoření Fibonacciho osnovy, výsledek bude modelován podle [růstu slunečnicových semen](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
 
-As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
+Jako výchozí bod použijeme stejný krok z předchozího cvičení: Vytvoření spirálového pole bodů pomocí uzlu **Point.ByCoordinates**.
 
 ![](<../images/5-3/2/math - part IV-01.jpg>)
 
-Next, follow these mini steps to generate a series of spiral at various rotation.
+Dále postupujte podle těchto krátkých kroků a vygenerujte řadu spirál s různým natočením.
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
+> a. **Geometry.Rotate:** Existuje několik možností **Geometry.Rotate**. Ujistěte se, že jste vybrali uzel se vstupy _geometry_, _basePlane_ a _degrees_. Připojte uzel **Point.ByCoordinates** ke vstupu geometry. Klikněte pravým tlačítkem na tento uzel a ujistěte se, že je vázání nastaveno na možnost Kartézský součin.
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
-> b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
+> b. **Plane.XY:** Připojte tento uzel ke vstupu _basePlane_. Budeme se otáčet kolem počátku, což je stejné umístění jako základna spirály.
 >
-> c. **Number Range:** For our degree input, we want to create multiple rotations. We can do this quickly with a **Number Range** component. Connect this into the _degrees_ input.
+> **Number Range:** Pro náš vstup degrees chceme vytvořit více otočení. To můžeme rychle provést pomocí komponenty **Number Range**. Připojte jej ke vstupu _degrees_.
 >
-> d. **Number:** And to define the range of numbers, add three number nodes to the canvas in vertical order. From top to bottom, assign values of _0.0,360.0,_ and _120.0_ respectively. These are driving the rotation of the spiral. Notice the output results from the **Number Range** node after connecting the three number nodes to the Node.
+> d. **Number:** K definování rozsahu čísel přidejte na kreslicí plochu svisle pod sebou tři uzly čísel. Shora dolů přiřaďte hodnoty _0.0,360.0_ a _120.0_ v uvedeném pořadí. Tato čísla řídí otáčení spirály. Po připojení tří uzlů čísel k uzlu si všimněte výstupních výsledků z uzlu **Number Range**.
 
-Our output is beginning to resemble a whirlpool. Let's adjust some of the **Number Range** parameters and see how the results change.
+Náš výstup se začíná podobat víru. Upravíme některé parametry položky **Number Range** a podíváme se, jak se změní výsledky.
 
-Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.
+Změňte velikost kroku uzlu **Number Range** z _120.0_ na _36.0_. Všimněte si, že tím vznikají další otáčení, a proto získáváme hustší osnovu.
 
 ![](<../images/5-3/2/math - part IV-04.jpg>)
 
-Change the step size of the **Number Range** node from _36.0_ to _3.6_. This now gives us a much denser grid, and the directionality of the spiral is unclear. Ladies and gentlemen, we've created a sunflower.
+Změňte velikost kroku uzlu **Number Range** z _36.0_ na _3.6_. Tím získáme mnohem hustší osnovu a směr spirály je nejasný. Dámy a pánové, vytvořili jsme slunečnici.
 
 ![](<../images/5-3/2/math - part IV-05.jpg>)

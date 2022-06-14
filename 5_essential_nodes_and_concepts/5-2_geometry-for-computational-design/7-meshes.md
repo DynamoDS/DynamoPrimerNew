@@ -1,96 +1,96 @@
-# Meshes
+# Sítě
 
-## Mesh in Dynamo
+## Síť v aplikaci Dynamo
 
-### What is Mesh?
+### Co je síť?
 
-In the field of computational modeling, [Meshes ](7-meshes.md#mesh)are one of the most pervasive forms of representing 3D geometry. Mesh geometry is generally made of a collection of quadrilaterals or triangles, it can be a light-weight and flexible alternative to working with NURBS, and Meshes are used in everything from rendering and visualizations to digital fabrication and 3D printing.
+V oblasti výpočetního modelování jsou [sítě](7-meshes.md#mesh) jednou z nejrozšířenějších forem reprezentace 3D geometrie. Geometrie sítě je obvykle tvořena skupinou čtyřúhelníků nebo trojúhelníků. Může se jednat o lehkou a flexibilní alternativu k práci s NURBS. Sítě se používají ve všech ohledech od rendrování a vizualizací až po digitální výrobu a 3D tisk.
 
-### Mesh Elements
+### Prvky sítě
 
-Dynamo defines Meshes using a Face-Vertex data structure. At its most basic level, this structure is simply a collection of points which are grouped into polygons. The points of a Mesh are called vertices, while the surface-like polygons are called faces.
+Aplikace Dynamo definuje sítě pomocí datové struktury vrcholu plochy. Na základní úrovni je tato struktura jednoduchou kolekcí bodů, které jsou seskupeny do polygonů. Body sítě se nazývají vrcholy, zatímco polygony podobné povrchu se nazývají plochy.
 
-To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
+K vytvoření sítě je potřeba seznam vrcholů a systém seskupení těchto vrcholů do plochy nazývané skupina indexů.
 
 ![](<../images/5-2/7/meshes - mesh elements.jpg>)
 
-> 1. List of vertices
-> 2. List of index groups to define faces
+> 1. Seznam vrcholů
+> 2. Seznam indexových skupin pro definování ploch
 
-### Mesh Toolkit
+### Sada nástrojů pro sítě
 
-Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package. The Dynamo Mesh Toolkit provides tools to import Meshes from external file formats, create a Mesh from Dynamo geometry objects, and manually build Meshes by their vertices and indices.
+Možnosti sítě aplikace Dynamo lze rozšířit instalací balíčku [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). Balíček Dynamo Mesh Toolkit aplikace Dynamo poskytuje nástroje k importu sítí z externích formátů souborů, vytvoření sítě z objektů geometrie aplikace Dynamo a ručnímu vytvoření sítí pomocí jejich vrcholů a indexů.
 
-The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
+Knihovna také poskytuje nástroje k úpravám sítí, opravě sítí nebo extrahování horizontálních řezů pro použití ve výrobě.
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+Příklad použití tohoto balíčku naleznete v [případových studiích balíčku Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md).
 
 ![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
 
-## Deep Dive into...
+## Podrobné informace...
 
-### Mesh
+### Síť
 
-A Mesh is a collection of quadrilaterals and triangles that represents a surface or solid geometry. Like Solids, the structure of a Mesh object includes vertices, edges, and faces. There are additional properties that make Meshes unique as well, such as normals.
+Síť je kolekce čtyřúhelníků a trojúhelníků, které představují geometrii povrchu nebo tělesa. Podobně jako u těles zahrnuje struktura objektu sítě vrcholy, hrany a plochy. Další vlastnosti, které činí sítě jedinečnými, například normály, jsou také jedinečné.
 
-![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
+![Prvky sítě](../images/5-2/7/MeshElements2.jpg)
 
-> 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
-> 3. Mesh faces
+> 1. Vrcholy sítě
+> 2. Hrany sítě *\Hrany pouze s jednou sousední plochou se nazývají „Nahé“. Všechny ostatní hrany jsou „Oblečené“.
+> 3. Plochy sítě
 
-### Vertices + Vertex Normals
+### Vrcholy + normály vrcholů
 
-The vertices of a Mesh are simply a list of points. The index of the vertices is very important when constructing a Mesh, or getting information about the structure of a Mesh. For each vertex, there is also a corresponding vertex normal (vector) which describes the average direction of the attached faces and helps us understand the "in" and "out" orientation of the Mesh.
+Vrcholy sítě jsou jednoduše seznam bodů. Index vrcholů je velmi důležitý při vytváření sítě nebo při získávání informací o struktuře sítě. Pro každý vrchol existuje také odpovídající normála vrcholu (vektor), která popisuje průměrný směr připojených ploch, a pomáhá nám pochopit „vnitřní“ a „vnější“ orientaci sítě.
 
-![Vertices + Normals](../images/5-2/7/vertexNormals.jpg)
+![Vrcholy + normály](../images/5-2/7/vertexNormals.jpg)
 
-> 1. Vertices
-> 2. Vertex Normals
+> 1. Vrcholy
+> 2. Normály vrcholu
 
-### Faces
+### Plochy
 
-A face is an ordered list of three or four vertices. The “surface” representation of a Mesh face is therefore implied according to the position of the vertices being indexed. We already have the list of vertices that make up the Mesh, so instead of providing individual points to define a face, we simply use the index of the vertices. This also allows us to use the same vertex in more than one face.
+Plocha je uspořádaný seznam tří nebo čtyř vrcholů. Reprezentace „povrchu“ plochy sítě je proto implikována podle polohy indexovaných vrcholů. Seznam vrcholů, které tvoří síť, již máme. Místo toho, aby jednotlivé body definovaly plochu, jednoduše použijeme index vrcholů. To nám také umožňuje použít stejný vrchol ve více než jedné ploše.
 
 ![](../images/5-2/7/meshFaces.jpg)
 
-> 1. A quad face made with indices 0, 1, 2, and 3
-> 2. A triangle face made with indices 1, 4, and 2 Note that the index groups can be shifted in their order - as long as the sequence is ordered in a counter-clockwise manner, the face will be defined correctly
+> 1. Čtyřhranná plocha vytvořená pomocí indexů 0, 1, 2 a 3
+> 2. Trojúhelníková plocha vytvořená pomocí indexů 1, 4 a 2 Všimněte si, že indexové skupiny lze posunout v jejich pořadí – pokud je posloupnost seřazena proti směru hodinových ručiček, bude plocha správně definována
 
-### Meshes versus NURBS Surfaces
+### Sítě versus povrchy NURBS
 
-How is Mesh geometry different from NURBS geometry? When might you want to use one instead of the other?
+Jak se liší geometrie sítě od geometrie NURBS? Kdy můžete chtít použít jedno místo druhého?
 
-#### Parameterization
+#### Parametrizace
 
-In a previous chapter, we saw that NURBS surfaces are defined by a series of NURBS curves going in two directions. These directions are labeled `U` and `V`, and allow a NURBs surface to be parameterized according to a two-dimensional surface domain. The curves themselves are stored as equations in the computer, allowing the resulting surfaces to be calculated to an arbitrarily small degree of precision. It can be difficult, however, to combine multiple NURBS surfaces together. Joining two NURBS surfaces will result in a polysurface, where different sections of the geometry will have different UV parameters and curve definitions.
+V předchozí kapitole jsme viděli, že povrchy NURBS jsou definovány řadou křivek NURBS, které se pohybují ve dvou směrech. Tyto směry jsou označeny `U` a `V` a umožňují parametrizaci povrchu NURB podle dvourozměrné povrchové domény. Samotné křivky jsou uloženy jako rovnice v počítači, takže výsledné povrchy lze vypočítat na libovolně velkou přesnost. Může být však obtížné spojit několik povrchů NURBS dohromady. Spojením dvou povrchů NURBS vznikne polypovrch, kde různé části geometrie budou mít různé parametry UV a definice křivek.
 
-![Control Points](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Řídicí body](../images/5-2/7/NURBSvsMESH-01.jpg)
 
-> 1. Surface
-> 2. Isoparametric (Isoparm) Curve
-> 3. Surface Control Point
-> 4. Surface Control Polygon
-> 5. Isoparametric Point
-> 6. Surface Frame
-> 7. Mesh
-> 8. Naked Edge
-> 9. Mesh Network
-> 10. Mesh Edges
-> 11. Vertex Normal
-> 12. Mesh Face / Mesh Face Normal
+> 1. Povrch
+> 2. Křivka Isoparametric (Isoparm)
+> 3. Řídicí bod povrchu
+> 4. Řídicí polygon povrchu
+> 5. Izoparametrický bod
+> 6. Povrch rámu
+> 7. Síť
+> 8. Nahá hrana
+> 9. Síť sítě
+> 10. Hrany sítě
+> 11. Normála vrcholu
+> 12. Plocha sítě / Normála plochy sítě
 
-Meshes, on the other hand, are comprised of a discrete number of exactly defined vertices and faces. The network of vertices generally cannot be defined by simple `UV` coordinates, and because the faces are discrete the amount of precision is built into the Mesh and can only be changed by refining the Mesh and adding more faces. The lack of mathematical descriptions allows Meshes to more flexibly handle complex geometry within a single Mesh.
+Sítě se naopak skládají z diskrétního počtu přesně definovaných vrcholů a ploch. Síť vrcholů obecně nelze definovat pomocí jednoduchých souřadnic `UV` a protože jsou plochy diskrétní, je míra přesnosti zabudována do sítě a lze ji změnit pouze zpřesněním sítě a přidáním dalších ploch. Díky nedostatku matematických popisů mohou sítě pružněji reprezentovat složité geometrie v rámci jediné sítě.
 
-### Local versus Global Influence
+### Místní versus globální vliv
 
-Another important difference is the extent to which a local change in Mesh or NURBS geometry affects the entire form. Moving one vertex of a Mesh only affects the faces that are adjacent to that vertex. In NURBS surfaces, the extent of the influence is more complicated and depends on the degree of the surface as well as the weights and knots of the control points. In general, however, moving a single control point in a NURBS surface creates a smoother, more extensive change in geometry.
+Dalším důležitým rozdílem je rozsah, ve kterém místní změna v geometrii sítě nebo NURBS ovlivňuje celý tvar. Přesun jednoho vrcholu sítě ovlivní pouze plochy, které sousedí s daným vrcholem. V površích NURBS je rozsah vlivu složitější a závisí na stupni povrchu a také na váhách a uzlech řídicích bodů. Obecně platí, že přesunutím jednoho řídicího bodu v povrchu NURBS dojde k hladší a rozsáhlejší změně geometrie.
 
-![Editing](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Úpravy](../images/5-2/7/NURBSvsMESH-02.jpg)
 
-> 1. NURBS Surface - moving a control point has influence that extends across the shape
-> 2. Mesh geometry - moving a vertex has influence only on adjacent elements
+> 1. Povrch NURBS – přesun řídicího bodu má vliv napříč celým tvarem
+> 2. Geometrie sítě – přesun vrcholu má vliv pouze na přilehlé prvky
 
-One analogy that can be helpful is to compare a vector image (composed of lines and curves) with a raster image (composed of individual pixels). If you zoom into a vector image, the curves remain crisp and clear, while zooming into a raster image results in seeing individual pixels become larger. In this analogy, NURBS surfaces can be compared to a vector image because there is a smooth mathematical relationship, while a Mesh behaves similarly to a raster image with a set resolution.
+Jedna podoba, která může být užitečná, je porovnání vektorového obrázku (složeného z úseček a křivek) s rastrovým obrázkem (složeným z jednotlivých pixelů). Při přiblížení vektorového obrázku zůstanou křivky ostré a jasné, zatímco přiblížení rastrového obrázku má za následek zvětšení jednotlivých pixelů. V této analogii lze povrchy NURBS porovnat s vektorovým obrázkem, protože existuje hladký matematický vztah, zatímco síť se chová podobně jako rastrový obrázek s nastaveným rozlišením.
 
 ##

@@ -1,62 +1,62 @@
-# Geometry Overview
+# Přehled geometrie
 
-## Geometry in Dynamo Sandbox
+## Geometrie v aplikaci Dynamo Sandbox
 
-**Geometry** is the language for design. When a programming language or environment has a geometry kernel at its core, we can unlock the possibilities for designing precise and robust models, automating design routines, and generating design iterations with algorithms.
+**Geometrie** je jazyk designu. Pokud má programovací jazyk nebo prostředí geometrické jádro, můžeme odemknout možnosti navrhování přesných a robustních modelů, automatizaci návrhových procedur a vytváření iterací návrhů pomocí algoritmů.
 
-Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
+Porozumění typům geometrie a [jejich vzájemným vztahům](1-geometry-overview.md#stepping-through-the-hierarchy) nám umožní orientovat se v kolekci **uzlů geometrie**, která je pro nás k dispozici v knihovně. Uzly geometrie jsou uspořádány abecedně a ne hierarchicky – zde jsou zobrazeny podobně jako jejich rozvržení v rozhraní aplikace Dynamo.
 
 ![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
 
-Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
+Navíc by se vytváření modelů v aplikaci Dynamo a připojení náhledu toho, co vidíme v náhledu pozadí, k toku dat v grafu mělo časem stát více intuitivní.
 
 ![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
 
-> 1. Note the assumed coordinate system rendered by the grid and colored axes
-> 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
+> 1. Všimněte si předpokládaného souřadnicového systému vykresleného pomocí rastru a barevných os
+> 2. Vybrané uzly rendrují odpovídající geometrii (pokud uzel vytvoří geometrii) na pozadí, přičemž barva zvýraznění je stejná
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-2/1/Geometry for Computational Design - Geometry Overview.dyn" %}
 
-## The Concept of Geometry
+## Koncept geometrie
 
-Geometry, traditionally defined, is the study of shape, size, relative position of figures, and the properties of space. This field has a rich history going back thousands of years. With the advent and popularization of the computer, we gained a powerful tool in defining, exploring, and generating geometry. It is now so easy to calculate the result of complex geometric interactions, the fact that we are doing so is almost transparent.
+Geometrie je tradičně definována jako studium tvaru, velikosti, relativní polohy tvarů a vlastností prostoru. Toto pole má bohatou historii sahající tisíce let. S příchodem a popularizací počítače jsme získali mocný nástroj pro definování, zkoumání a generování geometrie. Nyní je tak snadné vypočítat výsledek složitých geometrických interakcí, že téměř nevnímáme, že to děláme.
 
 ![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
 
-> If you're curious to see how diverse and complex geometry can get using the power of your computer, do a quick web search for the Stanford Bunny - a canonical model used to test algorithms.
+> Pokud chcete zjistit, jak může být diverzní a složitá geometrie využívána silou vašeho počítače, proveďte rychlé webové vyhledávání Stanford Bunny – kanonického modelu použitého k testování algoritmů.
 
-Understanding geometry in the context of algorithms, computing, and complexity, may sound daunting; however, there are a few key, and relatively simple, principles that we can establish as fundamentals to start building towards more advanced applications:
+Pochopení geometrie v kontextu algoritmů, výpočtů a složitosti může znít náročně. Existuje však několik klíčových a poměrně jednoduchých zásad, které můžeme stanovit jako základ pro zahájení tvorby pokročilejších aplikací:
 
-1. Geometry is **Data** - to the computer and Dynamo, a Bunny not all that different from a number.
-2. Geometry relies on **Abstraction** - fundamentally, geometric elements are described by numbers, relationships, and formulas within a given spatial coordinate system
-3. Geometry has a **Hierarchy** - points come together to make lines, lines come together to make surfaces, and so on
-4. Geometry simultaneously describes both **the Part and the Whole** - when we have a curve, it is both the shape as well as all the possible points along it
+1. Geometrie jsou **data** – pro počítač a aplikaci Dynamo se zajíček neliší od čísla.
+2. Geometrie je založena na **abstrakci** – v zásadě jsou geometrické prvky popsány čísly, vztahy a vzorci v daném prostorovém souřadnicovém systému
+3. Geometrie má **hierarchii** – body se spojí, aby se vytvořily úsečky, úsečky se spojí, aby se vytvořily povrchy, a tak dále
+4. Geometrie současně popisuje **součást i celek** – když máme křivku, je to jak tvar i všechny možné body podél ní
 
-In practice, these principles mean that we need to be aware of what we are working with (what type of geometry, how was it created, etc.) so that we can fluidly compose, decompose, and recompose different geometries as we develop more complex models.
+V praxi tyto zásady znamenají, že je nutné vědět, s čím pracujeme (jaký typ geometrie, jak byla vytvořena, atd.) abychom mohli plynule sestavovat, rozebírat a znovu seskupovat různé geometrie při vývoji složitějších modelů.
 
-## Stepping through the Hierarchy
+## Procházení hierarchií
 
-Let's take a moment to look at the relationship between the Abstract and Hierarchical descriptions of Geometry. Because these two concepts are related, but not always obvious at first, we can quickly arrive at a conceptual roadblock once we start developing deeper workflows or models. For starters, let's use dimensionality as an easy descriptor of the "stuff" we model. The number of dimensions required to describe a shape gives us a window into how Geometry is organized hierarchically.
+Věnujme chvíli času sledování vztahu mezi abstraktním a hierarchickým popisem geometrie. Protože tyto dva koncepty spolu souvisí, ale ne vždy zjevně, můžeme se rychle dostat do koncepčních problémů, jakmile začneme vyvíjet hlubší pracovní postupy nebo modely. Pro začátek používáme dimenzionalitu jako jednoduchý popis toho, co vytváříme. Počet kót potřebných k popisu tvaru nám dává vědět, jak je Geometrie uspořádána hierarchicky.
 
-![Computational Geometry](../images/5-2/1/GeometryDimensionality.jpg)
+![Výpočetní geometrie](../images/5-2/1/GeometryDimensionality.jpg)
 
-> 1. A **Point** (defined by coordinates) doesn't have any dimensions to it - it's just numbers describing each coordinate
-> 2. A **Line** (defined by two points) now has _one_ dimension - we can "walk" the line either forward (positive direction) or backward (negative direction)
-> 3. A **Plane** (defined by two lines) has _two_ dimensions - walking more left or more right is now possible
-> 4. A **Box** (defined by two planes) has _three_ dimensions - we can define a position relative to up or down
+> 1. **Bod** (definovaný souřadnicemi) nemá žádné kóty – jsou to jen čísla popisující jednotlivé souřadnice
+> 2. **Úsečka** (definovaná dvěma body) má nyní _jednu_ kótu – úsečku lze „procházet“ dopředu (kladný směr), nebo dozadu (záporný směr)
+> 3. **Rovina** (definovaná dvěma úsečkami) má _dvě_ kóty – nyní je možné procházet i vlevo a vpravo
+> 4. **Kvádr** (definovaný dvěma rovinami) má _tři_ kóty – můžeme definovat polohu vzhledem ke směru nahoru nebo dolů
 
-Dimensionality is a convenient way to start categorizing Geometry but it's not necessarily the best. After all, we don't model with only Points, Lines, Planes, and Boxes - what if I want something curvy? Furthermore, there is a whole other category of Geometric types that are completely abstract ie. they define properties like orientation, volume, or relationships between parts. We can't really grab a hold of a Vector so how do we define it relative to what we see in space? A more detailed categorization of the geometric hierarchy should accommodate the difference between Abstract Types or "Helpers," each of which we can group by what they help do and types that help describe the shape of model elements.
+Dimenzionalita je pohodlný způsob, jak začít kategorizovat geometrii, ale nemusí být nutně nejlepší. Nakonec, nemodelujeme jen body, čáry, roviny a kvádry – co když chci něco s křivkami? Dále existuje celá další kategorie geometrických typů, které jsou zcela abstraktní a definují vlastnosti, například orientaci, objem nebo vztahy mezi součástmi. Nemůžeme uchopit vektor, tak jak ho definujeme vzhledem k tomu, co vidíme v prostoru? Podrobnější kategorizace geometrické hierarchie by měla rozlišovat rozdíl mezi abstraktními typy nebo „pomocnými objekty“, z nichž každý můžeme seskupovat podle toho, s čím pomáhají, a typy, které pomáhají popisovat tvar prvků modelu.
 
-![Geometry Hierarchy](../images/5-2/1/GeometryHierarchy.jpg)
+![Hierarchie geometrie](../images/5-2/1/GeometryHierarchy.jpg)
 
-## Going Further with Geometry
+## Další práce s geometrií
 
-Creating models in Dynamo is not limited to what we can generate with Nodes. Here are some key ways to take your process to the next level with Geometry:
+Vytváření modelů v aplikaci Dynamo není omezeno na to, co lze vytvořit pomocí uzlů. Zde jsou některé klíčové způsoby, jak posunout práci s geometrií na vyšší úroveň:
 
-1. Dynamo allows you to import files - try using a CSV for point clouds or SAT for bringing in surfaces
-2. When working with Revit, we can reference Revit elements to use in Dynamo
-3. The Dynamo Package Manager offers additional functionality for extended geometry types and operations - check out the [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) package
+1. Aplikace Dynamo umožňuje importovat soubory – zkuste použít soubor CSV pro mračna bodů nebo soubor SAT pro načtení povrchů
+2. Při práci s aplikací Revit můžeme odkazovat na prvky aplikace Revit, které se mají použít v aplikaci Dynamo
+3. Nástroj Dynamo Package Manager nabízí další funkce pro rozšířené typy geometrie a operace – podívejte se do balíčku [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit).

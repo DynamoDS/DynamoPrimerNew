@@ -1,29 +1,29 @@
-# Dictionary Nodes
+# Uzly slovníku
 
-Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
+Aplikace Dynamo 2.0 nabízí několik uzlů pro slovníky. Mezi ně patří uzly pro _tvorbu, akci a dotazování_.
 
 ![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
 
-#### Create
+#### Tvorba
 
-1.`Dictionary.ByKeysValues` will create a dictionary with the supplied values and keys. _(The number of entries will be whatever the shortest list input is)_
+1. Uzel `Dictionary.ByKeysValues` vytvoří slovník ze zadaných hodnot a klíčů. _(Počet položek bude odpovídat počtu položek nejkratšího seznamu.)_
 
-#### Action
+#### Akce
 
-2\. `Dictionary.Components` will produce the components of the input dictionary. _(This is the reverse of the create node.)_
+2\. Uzel `Dictionary.Components` vytvoří komponenty ze vstupního slovníku. _(Operace opačná k vytvoření slovníku.)_
 
-3\. `Dictionary.RemoveKeys` will produce a new dictionary object with the input keys removed.
+3\. Uzel `Dictionary.RemoveKeys` vytvoří nový objekt slovníku bez vstupních klíčů.
 
-4\. `Dictionary.SetValueAtKeys` will produce a new dictionary based on the input keys and the values to replace the current value at the corresponding keys.
+4\. Uzel `Dictionary.SetValueAtKeys` vytvoří nový slovník na základě vstupních klíčů a hodnot, které nahradí aktuální hodnotu u příslušných klíčů.
 
-5\. `Dictionary.ValueAtKey` will return the value at the input key.
+5\. Uzel `Dictionary.ValueAtKey` vrátí hodnotu na pozici vstupního klíče.
 
-#### Count
+#### Počet
 
-6\. `Dictionary.Count` will tell you how many key value pairs are in the dictionary.
+6\. Uzel `Dictionary.Count` vrátí počet dvojic hodnot a klíčů ve slovníku.
 
-7\. `Dictionary.Keys` will return what keys are currently stored in the dictionary.
+7\. Uzel `Dictionary.Keys` vrátí klíče aktuálně uložené ve slovníku.
 
-8\. `Dictionary.Values` will return what values are currently stored in the dictionary.
+8\. Uzel `Dictionary.Values` vrátí hodnoty aktuálně uložené ve slovníku.
 
-Overall relating data with dictionaries is a magnificent alternative to the old method of working with indices and lists.
+Spojování dat ve slovnících může být užitečnou alternativou pro starý způsob práce s indexy a seznamy.

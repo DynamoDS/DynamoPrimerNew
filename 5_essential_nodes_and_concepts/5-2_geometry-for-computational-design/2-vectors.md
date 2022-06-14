@@ -1,93 +1,93 @@
-# Vector, Plane & Coordinate System
+# Vektor, rovina a souřadnicový systém
 
-## Vector, Plane & Coordinates System in Dynamo
+## Vektor, rovina a souřadnicový systém v aplikaci Dynamo
 
-### Vector
+### Vektor
 
-[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+[Vektor](5-2\_vectors.md#vector-1) je vyjádřením velikosti a směru. Můžete si jej představit jako šipku zrychlující danou rychlostí do určitého směru. Jedná se o klíčovou komponentou pro naše modely v aplikaci Dynamo. Všimněte si, že protože jsou v abstraktní kategorii „Pomocníci“, když vytvoříme vektor, v náhledu pozadí nic neuvidíme.
 
 ![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
 
-> 1. We can use a line as a stand in for a Vector preview.
+> 1. Úsečku můžeme použít jako náhradu pro náhled vektoru.
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
-### Plane
+### Rovina
 
-[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+[Rovina](5-2\_vectors.md#plane-1) je dvourozměrný povrch. Můžete si jej představit jako plochý povrch, která se neomezeně rozprostírá. Každá rovina má počátek, směr X, směr Y a směr Z (nahoru).
 
 ![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
 
-> 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
-> 2. In Dynamo, Planes are rendered in the Background Preview.
+> 1. I když jsou abstraktní, roviny mají polohu počátku, aby je bylo možné umístit do prostoru.
+> 2. V aplikaci Dynamo se roviny rendrují v náhledu pozadí.
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
-### Coordinate System
+### Souřadnicový systém
 
-[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+[Souřadnicový systém](5-2\_vectors.md#coordinate-system-1) je systém, který slouží k určení umístění bodů nebo jiných geometrických prvků. Obrázek níže vysvětluje, jak vypadá v aplikaci Dynamo a co představují jednotlivé barvy.
 
 ![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
 
-> 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
-> 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
+> 1. I když jsou abstraktní, souřadnicové systémy mají také počáteční polohu, takže je můžeme umístit do prostoru.
+> 2. V aplikaci Dynamo jsou souřadnicové systémy vykreslovány v náhledu na pozadí jako bod (počátek) a úsečky definující osy (podle konvence je osa X červená, osa Y zelená a osa Z modrá).
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 
-## Deep Dive into...
+## Podrobné informace...
 
-Vectors, Planes, and Coordinate Systems make up the primary group of Abstract Geometry Types. They help us define location, orientation, and the spatial context for other geometry that describe shapes. If I say that I'm in New York City at 42nd Street and Broadway (Coordinate System), standing on the street level (Plane), looking North (Vector), I've just used these "Helpers" to define where I am. The same goes for a phone case product or a skyscraper - we need this context to develop our model.
+Vektory, roviny a souřadnicové systémy tvoří primární skupinu abstraktních typů geometrie. Pomáhají definovat umístění, orientaci a prostorový kontext pro jinou geometrii, která popisuje tvary. Pokud řeknu, že jsem v New Yorku na 42. ulici a Broadway (souřadnicový systém), stojím na úrovni ulice (Rovina), dívám se na sever (Vektor), použil jsem tyto „Pomoci“, abych definoval, kde jsem. Totéž platí pro produkt krytu telefonu nebo mrakodrap – potřebujeme tento kontext k vývoji modelu.
 
-![Vectors, Planes, and Coordinates](../images/5-2/2/VectorsPlanesCoodinates.jpg)
+![Vektory, roviny a souřadnice](../images/5-2/2/VectorsPlanesCoodinates.jpg)
 
-### Vector
+### Vektor
 
-A vector is a geometric quantity describing Direction and Magnitude. Vectors are abstract; ie. they represent a quantity, not a geometrical element. Vectors can be easily confused with Points because they both are composed of a list of values. There is a key difference though: Points describe a position in a given coordinate system while Vectors describe a relative difference in position which is the same as saying "direction."
+Vektor je geometrické množství popisující směr a velikost. Vektory jsou abstraktní, představují množství, ne geometrický prvek. Vektory lze snadno zaměnit s body, protože oba jsou tvořeny seznamem hodnot. Klíčový rozdíl je: Body popisují pozici v daném souřadnicovém systému, zatímco vektory popisují relativní rozdíl v pozici, který je stejný jako označení „směr“.
 
-![Vector Details](../images/5-2/2/Vector-Detailed.jpg)
+![Detaily vektoru](../images/5-2/2/Vector-Detailed.jpg)
 
-If the idea of relative difference is confusing, think of the Vector AB as "I'm standing at Point A, looking toward Point B." The direction, from here (A) to there (B), is our Vector.
+Pokud je představa relativního rozdílu matoucí, představte si vektor AB jako „stojím v bodě A, dívám se směrem k bodu B.“, směr odtud (A) tam (B), je náš vektor.
 
-Breaking down Vectors further into their parts using the same AB notation:
+Vektory dále rozdělíme na jejich složky pomocí stejné AB notace:
 
-![Vector](../images/5-2/2/Vector.jpg)
+![Vektor](../images/5-2/2/Vector.jpg)
 
-> 1. The **Start Point** of the Vector is called the **Base**.
-> 2. The \*\*End Point \*\*of the Vector is called the **Tip** or the **Sense**.
-> 3. Vector AB is not the same as Vector BA - that would point in the opposite direction.
+> 1. **Počáteční bod** vektoru se nazývá **Základna**.
+> 2. \*\*Koncový bod\*\* vektoru se nazývá **Špička** nebo **Směr**.
+> 3. Vektor AB není stejný jako Vektor BA – ten by mířil v opačném směru.
 
-If you're ever in need of comic relief regarding Vectors (and their abstract definition), watch the classic comedy Airplane and listen for the oft-quoted tongue-in cheek line:
+Pokud někdy budete potřebovat zábavné odlehčení na téma vektorů (a jejich abstraktní definice), podívejte se na klasickou komedii Připoutejte se, prosím! a poslechněte si často citovanou hlášku:
 
-> _Roger, Roger. What's our vector, Victor?_
+> _Roger, Roger. Jaký je náš vektor, Viktore?_
 
-### Plane
+### Rovina
 
-Planes are two-dimensional abstract "Helpers." More specifically, Planes are conceptually “flat,” extending infinitely in two directions. Usually they are rendered as a smaller rectangle near their origin.
+Roviny jsou dvojrozměrné abstraktní „Pomůcky“. Konkrétně, roviny jsou koncepčně „ploché“, a nekonečně se roztahují ve dvou směrech. Obvykle se znázorňují jako menší obdélník poblíž jejich počátku.
 
-![Plane](../images/5-2/2/Plane.jpg)
+![Rovina](../images/5-2/2/Plane.jpg)
 
-You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
+Možná si myslíte, „Počkat! Počátek? To zní jako souřadnicový systém... jako ten, který používám k modelování v softwaru CAD.“
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
+A máte pravdu. Většina modelovacích aplikací využívá stavební roviny nebo „hladiny“ k definování místního dvourozměrného kontextu, ve kterém lze tvořit výkresy. XY, XZ, YZ – nebo – rovina sever, jihovýchod může znít povědomě. Toto jsou všechny roviny, které definují nekonečný „plochý“ kontext. Roviny nemají hloubku, ale pomáhají nám také popsat směr.
 
-### Coordinate System
+### Souřadnicový systém
 
-If we are comfortable with Planes, we are a small step away from understanding Coordinate Systems. A Plane has all the same parts as a Coordinate System, provided it is a standard "Euclidean" or "XYZ" Coordinate System.
+Pokud chápeme roviny, jsme malý krok od pochopení souřadnicových systémů. Rovina má všechny stejné součásti jako souřadnicový systém za předpokladu, že se jedná o standardní souřadnicový systém „Euclidean“ nebo „XYZ“.
 
-There are other, however, alternative Coordinate Systems such as Cylindrical or Spherical. As we will see in later sections, Coordinate Systems can also be applied to other Geometry types to define a position on that geometry.
+Existují však jiné alternativní souřadnicové systémy, například válcový nebo sférický. Jak uvidíme v pozdějších částech, souřadnicové systémy lze použít také na jiné typy geometrie k definování umístění na dané geometrii.
 
-![Coordinate System](../images/5-2/2/CoordinateSystem.jpg)
+![Souřadnicový systém](../images/5-2/2/CoordinateSystem.jpg)
 
-> Add alternative coordinate systems - cylindrical, spherical
+> Přidání alternativních souřadnicových systémů – válcových, kulových

@@ -1,69 +1,69 @@
-# Setup for Dynamo
+# Nastavení aplikace Dynamo
 
-### Dynamo as Extension vs Dynamo Sandbox
+### Dynamo jako rozšíření vs. Dynamo Sandbox
 
-Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
+Aplikace Dynamo je aktivní vývojový projekt s otevřeným zdrojovým kódem. Prohlédněte si seznam [softwaru, který podporuje aplikaci Dynamo](http://dynamobim.org/download/).
 
 ![](<images/setup for dynamo - dynamo revit.png>) ![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>)
 
-### Launch Dynamo as Extension
+### Spuštění aplikace Dynamo jako rozšíření
 
-Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civil3D** and etc.
+Aplikace Dynamo je dodávána předinstalována s různým softwarem, jako je **Revit3D**, **FormIt**, **Civil3D** a podobně.
 
-To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](images/dynamoCore-halfSize.png) to launch it.
+Chcete-li ji začít používat, spusťte ji z panelu nástrojů. Ikona spuštění se obvykle nachází v nabídce na kartě **Správa** (podle toho, který software používáte). Spusťte aplikaci Dynamo kliknutím na její ikonu ![](images/dynamoCore-halfSize.png).
 
 ![](<images/launch dynamo from revit.jpg>)
 
-For more guidance on using Dynamo with a specific software, we recommend referring to the following sections:
+Další pokyny k používání aplikace Dynamo s konkrétním softwarem naleznete v následujících částech:
 
-* [Dynamo for Revit](../7\_dynamo\_for\_revit/)
+* [Modul Dynamo pro aplikaci Revit](../7\_dynamo\_for\_revit/)
 
-If you would like to use Dynamo as a standalone application. Continue reading for guidance on downloading the Sandbox.
+Pokud chcete aplikaci Dynamo používat jako samostatnou aplikaci, přečtěte si níže pokyny ke stažení aplikace Dynamo Sandbox.
 
-### Get Dynamo Sandbox
+### Získání aplikace Dynamo Sandbox
 
-#### Download
+#### Stažení
 
-The Dynamo application is available from the [Dynamo website](http://dynamobim.com). Both official, past or pre-released versions are available from the download page. Visit [Get Dynamo](http://dynamobim.org/download/) page and Click **Download** for the official released version.
+Aplikace Dynamo je k dispozici na [webových stránkách aplikace Dynamo](http://dynamobim.com). Na stránce ke stažení jsou k dispozici oficiální, starší a předběžné verze. Přejděte na stránku [Get Dynamo](http://dynamobim.org/download/) a kliknutím na tlačítko **Download** stáhněte oficiální vydanou verzi.
 
 ![](<images/dynamo-sandbox (1).png>)
 
-If you are looking for previous or 'bleeding edge' development releases, all versions can be found in the lower section from the same page.
+Pokud hledáte předchozí nebo testovací vývojové verze, přejděte do dolní části této stránky, kde najdete všechny verze.
 
 ![](<images/Dynamo Sandbox All builds.jpg>)
 
 {% hint style="info" %}
-'Bleeding edge' development may include some new and experimental features that are yet to be fully tested, hence may be unstable. By using this, you may discover bugs or issues, help us improve the application by reporting issues to our team.
+Testovací vývojové verze mohou obsahovat některé nové a experimentální funkce, které ještě nejsou plně testovány, a proto mohu být nestabilní. Jejich používáním můžete odhalit chyby nebo problémy a pomoci nám vylepšit aplikaci tím, že nahlásíte problémy našemu týmu.
 
-Beginners are advised to download the official stable release.
+Začátečníkům doporučujeme stáhnout oficiální stabilní verzi.
 {% endhint %}
 
-#### Unzip
+#### Rozbalení
 
-Before launching any version you have downloaded, you are required to unzip the content to your chosen folder.
+Před spuštěním jakékoli verze, kterou jste stáhli, je nutné rozbalit obsah do vybrané složky.
 
-Download and install [7zip](https://www.7-zip.org/download.html) to your computer for this step.
+Pro tento krok si do počítače stáhněte a nainstalujte aplikaci [7zip](https://www.7-zip.org/download.html).
 
-Right-click on the zip file and select **Extract All**...
+Klikněte pravým tlačítkem na soubor ZIP a vyberte příkaz **Extrahovat vše**.
 
 ![](<images/02-03 Extract zip file.jpg>)
 
-Choose a destination to unzip all the files.
+Vyberte cíl, do kterého chcete rozbalit všechny soubory.
 
 ![](<images/02-04 Extract destination folder.jpg>)
 
-#### Launching
+#### Spouštění
 
-In your destination folder, double-click on **DynamoSandbox.exe** to launch it
+V cílové složce dvakrát klikněte na soubor **DynamoSandbox.exe**, abyste jej spustili.
 
 ![](<images/02-05 Dynamo exe.jpg>)
 
-You will see the DynamoSandbox startup screen as follow.
+Zobrazí se následující úvodní obrazovka aplikace Dynamo Sandbox.
 
 ![](<images/02-06 Dynamo startup screen.jpg>)
 
-Congratulations, you have now finished the setup for using DynamoSandbox!
+Blahopřejeme! Dokončili jste instalaci aplikace Dynamo Sandbox a můžete ji začít používat.
 
 {% hint style="info" %}
-**Geometry** is an additional functionality in Dynamo Sandbox that is only available to users who have a current subscription or license to the following Autodesk software: Revit, Robot Structural Analysis, FormIt, and Civil 3D.  **Geometry** allows users too import, create, edit and export geometry from Dynamo Sandbox.
+**Geometrie** je dodatečná funkce aplikace Dynamo Sandbox, která je dostupná pouze uživatelům, kteří mají aktuální předplatné nebo licenci k následujícímu softwaru Autodesk: Revit, Robot Structural Analysis, FormIt a Civil 3D.  **Geometrie** umožňuje uživatelům importovat, vytvářet, upravovat a exportovat geometrii z aplikace Dynamo Sandbox.
 {% endhint %}

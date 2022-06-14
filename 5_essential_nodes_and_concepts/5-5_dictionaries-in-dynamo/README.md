@@ -1,11 +1,11 @@
-# Dictionaries in Dynamo
+# Slovníky v aplikaci Dynamo
 
-Dictionaries represent a collection of data that is related to another piece of data known as a key. Dictionaries expose the ability to search for, delete and insert data into a collection.
+Slovníky představují kolekci dat, která jsou svázána s klíči. Slovníky umožňují vyhledávat, odstraňovat a vkládat data do kolekce.
 
-Essentially, we can think of a dictionary as a really smart way to look something up.
+Slovník si lze představit jako chytrý způsob, jak vyhledávat data.
 
-_While dictionary functionality has been available in Dynamo for some time, Dynamo 2.0 introduces a new way of managing this data type._
+_Funkce pro slovníky byly v aplikaci Dynamo dostupné již delší dobu, verze Dynamo 2.0 však změnila způsob, jakým se s tímto datovým typem pracuje._
 
 ![](../images/5-5/wildDictionary.png)
 
-Original image courtesy of: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+Původní obrázek poskytla společnost: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

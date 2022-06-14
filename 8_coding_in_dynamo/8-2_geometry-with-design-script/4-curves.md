@@ -1,10 +1,10 @@
-# Curves: Interpolated and Control Points
+# Křivky: Interpolované a řídicí body
 
-There are two fundamental ways to create free-form curves in Dynamo: specifying a collection of Points and having Dynamo interpolate a smooth curve between them, or a more low-level method by specifying the underlying control points of a curve of a certain degree. Interpolated curves are useful when a designer knows exactly the form a line should take, or if the design has specific constraints for where the curve can and cannot pass through. Curves specified via control points are in essence a series of straight line segments which an algorithm smooths into a final curve form. Specifying a curve via control points can be useful for explorations of curve forms with varying degrees of smoothing, or when a smooth continuity between curve segments is required.
+V aplikaci Dynamo existují dva základní způsoby, jak vytvořit křivky volného tvaru: určením kolekce bodů a interpolací vyhlazené křivky mezi nimi, nebo určením řídicích bodů křivky. Interpolované křivky jsou užitečné, když konstruktér přesně ví, jaký tvar má linie mít, nebo pokud návrh obsahuje konkrétní omezení, kudy křivka může a nemůže procházet. Křivky určené řídicími body jsou vlastně úsečky, které algoritmus vyhladí do podoby konečné křivky. Určení křivky pomocí řídicích bodů je užitečné pro zkoušení různých tvarů s různou mírou vyhlazení, nebo pokud je potřeba dosáhnout plynulého přechodu mezi úsečkami.
 
-### Interpolated Curve
+### Interpolovaná křivka
 
-To create an interpolated curve, simply pass in a collection of Points to the _NurbsCurve.ByPoints_ method.
+Chcete-li vytvořit interpolovanou křivku, jednoduše zadejte kolekci bodů do metody _NurbsCurve.ByPoints_.
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -18,7 +18,7 @@ pts = Point.ByCoordinates(1..30..#num_pts, s, 0);
 int_curve = NurbsCurve.ByPoints(pts);
 ```
 
-The generated curve intersects each of the input points, beginning and ending at the first and last point in the collection, respectively. An optional periodic parameter can be used to create a periodic curve which is closed. Dynamo will automatically fill in the missing segment, so a duplicate end point (identical to the start point) isn’t needed.
+Vygenerovaná křivka protne všechny vstupní body, počínaje prvním bodem a konče posledním bodem v kolekci. Pomocí volitelného parametru lze vytvořit periodickou uzavřenou křivku. Aplikace Dynamo chybějící segment automaticky vytvoří, proto není potřeba zadávat koncový bod stejný jako počáteční bod.
 
 ![](../images/8-2/4/Curves\_02.png)
 
@@ -34,9 +34,9 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
     false);
 ```
 
-### Control Points Curve
+### Křivka řídicích bodů
 
-NurbsCurves are generated in much the same way, with input points represent the endpoints of a straight line segment, and a second parameter specifying the amount and type of smoothing the curve undergoes, called the degree.\* A curve with degree 1 has no smoothing; it is a polyline.
+Křivky Nurbs lze vygenerovat stejným způsobem, vstupní body reprezentují koncové body úsečky a druhý parametr určuje sílu a typ vyhlazení, kterému se říká stupeň.\* Křivka se stupněm 1 nemá žádné vyhlazení, jedná se o lomenou čáru.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-A curve with degree 2 is smoothed such that the curve intersects and is tangent to the midpoint of the polyline segments:
+Křivka se stupněm 2 je vyhlazená, tak že prochází středy lomených čar a v průsečíku je k nim tečná:
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dynamo supports NURBS (Non-uniform rational B-spline) curves up to degree 20, and the following script illustrates the effect increasing levels of smoothing has on the shape of a curve:
+Aplikace Dynamo podporuje křivky NURBS (Non-Uniform Rational B-Spline) až do stupně 20 a následující skript demonstruje účinek vyšších stupňů vyhlazení na tvar křivky:
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,9 +83,9 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-Note that you must have at least one more control point than the degree of the curve.
+Poznámka: křivka musí mít alespoň o jeden řídicí bod více, než je její stupeň.
 
-Another benefit of constructing curves by control vertices is the ability to maintain tangency between individual curve segments. This is done by extracting the direction between the last two control points, and continuing this direction with the first two control points of the following curve. The following example creates two separate NURBS curves which are nevertheless as smooth as one curve:
+Další výhodou tvorby křivek pomocí řídicích bodů je možnost zachování tečnosti mezi jednotlivými segmenty. To lze provést tak, že se získá směr mezi posledními dvěma řídicími body a v tomto směru se bude pokračovat u prvních dvou řídicích bodů následující křivky. V následujícím příkladu jsou vytvořeny dvě samostatné křivky NURBS, které jsou vyhlazené jako jedna křivka:
 
 ![](../images/8-2/4/Curves\_06.png)
 
@@ -116,5 +116,5 @@ crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
 {% hint style="info" %}
-\*This is a very simplified description of NURBS curve geometry, for a more accurate and detailed discussion see Pottmann, et al, 2007, in the references.
+\*Jedná se o velmi zjednodušený popis geometrie křivky NURBS, přesnější a podrobnější popis naleznete v literatuře (Pottmann, et al, 2007).
 {% endhint %}

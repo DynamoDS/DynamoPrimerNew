@@ -1,69 +1,69 @@
-# Package Case Study - Mesh Toolkit
+# Příklad balíčku – sada nástrojů pro sítě
 
-The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
+Sada nástrojů pro sítě obsahuje nástroje pro import sítí ze souborů různých formátů, tvorbu sítě z objektů geometrií aplikace Dynamo a ruční tvorbu sítí z bodů a indexů. Knihovna také obsahuje nástroje pro úpravy sítí a extrahování vodorovných řezů pro použití ve výrobě.
 
 ![](<../images/6-2/2/meshToolkit case study 01.jpg>)
 
-The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
+Sada nástrojů pro sítě aplikace Dynamo je součástí výzkumu společnosti Autodesk a v budoucnu budou její funkce přibývat. Do sady budou často přidávány nové metody, tým aplikace Dynamo ocení jakékoliv komentáře, hlášení chyb nebo nápady na nové funkce.
 
-### Meshes vs. Solids
+### Sítě vs. tělesa
 
-The exercise below demonstrates some basic mesh operations using the Mesh Toolkit. In the exercise, we intersect a mesh with a series of planes, which can be computationally expensive using solids. Unlike a solid, a mesh has a set "resolution" and is not defined mathematically, but topologically, and we can define this resolution based on the task at hand. For more details on mesh to solid relationships, you can reference the[ Geometry For Computation Design](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) chapter in this primer. For a more thorough examination of Mesh Toolkit, you can reference the [Dynamo Wiki page.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Let's jump into the package in the exercise below.
+V následujícím cvičení budou demonstrovány základní operace pomocí sady nástrojů pro sítě. V tomto cvičení protneme síť řadou rovin, což by u těles bylo výpočetně náročné. Na rozdíl od tělesa má síť „rozlišení“, které není definováno matematicky, ale topologicky, a je možné ho definovat podle aktuální úlohy. Další podrobnosti o vztahu mezi sítí a tělesem naleznete v kapitole [Geometrie pro návrh výpočtu](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) v této příručce Primer. Další informace o sadě nástrojů pro sítě naleznete na [wiki stránce aplikace Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Cvičení níže demonstruje práci s tímto balíčkem.
 
-### Install Mesh Toolkit
+### Instalace sady nástrojů pro sítě
 
-In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
+V horní nabídce aplikace Dynamo vyberte možnost _Balíčky > Hledat balíčky..._. Do pole pro hledání zadejte slovo _„MeshToolkit“_, dbejte na velikost písmen. Kliknutím na tlačítko Instalovat zahájíte stahování. Je to tak jednoduché.
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
-## Exercise: Intersect Mesh
+## Cvičení: Průnik sítě
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/6-2/2/MeshToolkit.zip" %}
 
-In this example, we will look at the Intersect node in the mesh toolkit. We will import a mesh and intersect it with a series of input planes to create slices. This is the starting point for preparing the model for fabrication on a laser cutter, waterjet cutter, or CNC mill.
+V tomto příkladu se podíváme na uzel průniku v sadě nástrojů pro sítě. Provedeme import sítě a protneme ji řadou vstupních rovin, čímž vytvoříme řezy. Tím začne příprava modelu na výrobu, řezání laserovým nebo vodním paprskem či CNC frézování.
 
-Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
+Začněte otevřením souboru _Mesh-Toolkit\_Intersect-Mesh.dyn v aplikaci Dynamo._
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
-> 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
-> 2. **Mesh.ImportFile:** Connect the file path to import the mesh
+> 1. **File Path:** Vyhledejte soubor sítě, který chcete importovat (_stanford\_bunny\_tri.obj_). Podporované typy souborů jsou .mix a .obj
+> 2. **Mesh.ImportFile:** Připojte cestu k souboru, aby došlo k importu sítě
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
-> 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes. \_\_ The settings are as follow: \_\_ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates:** Vytvořte bod, ten bude středem oblouku.
+> 2. **Arc.ByCenterPointRadiusAngle:** Vytvořte oblouk kolem bodu. Tato křivka se použije k umístění řady rovin. \_\_ Nastavení jsou následující: \_\_ `radius: 40, startAngle: -90, endAngle:0`
 
-Create a series of planes oriented along the arc.
+Vytvořte řadu rovin orientovaných podél oblouku.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
-> 1. **Code Block**: Create 25 numbers between 0 and 1.
-> 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
-> 3. **Curve.TangentAtParameter:** Connect the same inputs as the previous node.
-> 4. **Plane.ByOriginNormal:** Connect the points to the _‘origin’_ input and the vectors to the _‘normal’_ input to create a series of planes at each point.
+> 1. **Code Block**: Vytvořte 25 čísel v rozmezí od 0 do 1.
+> 2. **Curve.PointAtParameter:** Připojte oblouk na vstup _„curve“_ a výstup bloku s kódem na vstup _„param“_, čímž získáte řadu bodů na křivce.
+> 3. **Curve.TangentAtParameter:** Připojte stejné vstupy jako u předchozího uzlu.
+> 4. **Plane.ByOriginNormal:** Připojte body na vstup _„origin“_ a vektory na vstup _„normal“_, čímž v jednotlivých bodech vytvoříte řadu rovin.
 
-Next, we will use these planes to intersect the mesh.
+Nyní tyto roviny použijeme k protnutí sítě.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
-> 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
-> 3. **Curve.EndPoint:** Extract the end points of each curve.
-> 4. **NurbsCurve.ByPoints:** Use the points to construct a nurbs curve. Use a Boolean node set to _True_ to close the curves.
+> 1. **Mesh.Intersect:** Vytvořte průnik rovin s importovanou sítí, čímž vznikne řada polykřivkových kontur. Klikněte pravým tlačítkem myši na uzel a nastavte vázání na nejdelší.
+> 2. **PolyCurve.Curves:** Rozdělte polykřivky na jejich křivkové fragmenty.
+> 3. **Curve.EndPoint:** Extrahujte koncové body jednotlivých křivek.
+> 4. **NurbsCurve.ByPoints:** Pomocí bodů vytvořte křivku nurbs. K uzavření křivek použijte uzel Boolean nastavený na _True_.
 
-Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
+Než budete pokračovat, vypněte náhled některých uzlů, například Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal a Arc.ByCenterPointRadiusAngle, abyste lépe viděli výsledek.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch:** Construct surface patches for each contour to create “slices” of the mesh.
+> 1. **Surface.ByPatch:** Vytvořte záplaty ploch pro každou konturu, čímž vytvoříte „řezy“ sítě.
 
-Add a second set of slices for a waffle/egg-crate effect.
+Přidejte druhou řadu řezů, čímž vznikne efekt podobný vaflím.
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 06.jpg>)
 
-You may have noticed that the intersection operations calculate faster with a mesh vs. a comparable solid. Workflows such as the one demonstrated in this exercise lend themselves well to working with meshes.
+Možná jste si všimli, že operace průniku se u sítí počítají rychleji než u těles. Pracovní postupy podobné těm jako v tomto cvičení fungují se sítěmi velmi dobře.

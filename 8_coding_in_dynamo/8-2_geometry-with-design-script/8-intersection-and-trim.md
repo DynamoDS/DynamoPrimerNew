@@ -1,19 +1,19 @@
-# Intersection and Trim
+# Průnik a oříznutí
 
-Many of the examples so far have focused on the construction of higher dimensional geometry from lower dimensional objects. Intersection methods allow this higher dimensional geometry to generate lower dimensional objects, while the trim and select trim commands allow script to heavily modify geometric forms after they’ve been created.
+Mnoho příkladů se dosud soustředilo na tvorbu vícerozměrných geometrií z méněrozměrných geometrií. Pomocí metod průsečíků je možné z vícerozměrných geometrií vygenerovat méněrozměrné objekty a po vytvoření geometrií lze jejich tvar dále upravit pomocí příkazů oříznutí.
 
-The _Intersect_ method is defined on all pieces of geometry in Dynamo, meaning that in theory any piece of geometry can be intersected with any other piece of geometry. Naturally some intersections are meaningless, such as intersections involving Points, as the resulting object will always be the input Point itself. The other possible combinations of intersections between objects are outlined in the following chart. The following chart outlines the result of various intersection operations:
+Metoda _Intersect_ je definována u všech geometrií aplikace Dynamo, teoreticky lze tedy provést průnik libovolných dvou geometrií. Některé průniky nedávají smysl, například průnik s body, protože výsledným objektem bude vždy daný vstupní bod. Další možné kombinace průniků mezi objekty jsou uvedeny v následujícím diagramu. Následující tabulka uvádí výsledky různých operací průniku:
 
-### **Intersect**
+### **Průnik**
 
-| _With:_     | Surface | Curve | Plane        | Solid   |
+| _Objektů:_ | Plocha | Křivka | Rovina | Těleso |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Surface** | Curve   | Point | Point, Curve | Surface |
-| **Curve**   | Point   | Point | Point        | Curve   |
-| **Plane**   | Curve   | Point | Curve        | Curve   |
-| **Solid**   | Surface | Curve | Curve        | Solid   |
+| **Plocha** | Křivka | Bod | Bod, křivka | Plocha |
+| **Křivka** | Bod | Bod | Bod | Křivka |
+| **Rovina** | Křivka | Bod | Křivka | Křivka |
+| **Těleso** | Plocha | Křivka | Křivka | Těleso |
 
-The following very simple example demonstrates the intersection of a plane with a NurbsSurface. The intersection generates a NurbsCurve array, which can be used like any other NurbsCurve.
+Následující velmi jednoduchý příklad ukazuje průnik roviny s plochou Nurbs. Průnik vygeneruje pole objektů NurbsCurve, které lze používat jako kterékoliv jiné křivky Nurbs.
 
 ![](../images/8-2/8/IntersectionAndTrim\_01.png)
 
@@ -34,18 +34,18 @@ crvs = surf.Intersect(pl);
 crvs_moved = crvs.Translate(0, 0, 10);
 ```
 
-The _Trim_ method is very similar to the Intersect method, in that it is defined for almost every piece of geometry. However, there are far more limitations on _Trim_ than on _Intersect_.
+Metoda _Trim_ je velmi podobná metodě Intersect v tom, že je definována u téměř všech geometrií. Metoda _Trim_ je však omezenější než metoda _Intersect_.
 
-### **Trim**
+### **Oříznutí**
 
-|             | _Using:_ Point | Curve | Plane | Surface | Solid |
+|             | _Používá:_ Bod | Křivka | Rovina | Plocha | Těleso |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _On:_ Curve | Yes            | No    | No    | No      | No    |
-| Polygon     | -              | No    | Yes   | No      | No    |
-| Surface     | -              | Yes   | Yes   | Yes     | Yes   |
-| Solid       | -              | -     | Yes   | Yes     | Yes   |
+| _Na:_ Křivka | Ano | Ne | Ne | Ne | Ne |
+| Polygon | - | Ne | Ano | Ne | Ne |
+| Plocha | - | Ano | Ano | Ano | Ano |
+| Těleso | - | - | Ano | Ano | Ano |
 
-Something to note about _Trim_ methods is the requirement of a “select” point, a point which determines which geometry to discard, and which pieces to keep. Dynamo finds and discards the trimmed geometry closest to the select point.
+U metody _Trim_ je nutné zadat výběrový bod, který určuje, která geometrie má být zahozena a která má být zachována. Aplikace vyhledá a zahodí oříznutou geometrii, která bude výběrovému bodu nejblíže.
 
 ![](../images/8-2/8/IntersectionAndTrim\_02.png)
 

@@ -1,130 +1,130 @@
 # Data
 
-Data is the stuff of our programs. It travels through Wires, supplying inputs for Nodes where it gets processed into a new form of output data. Let's review the definition of data, how it's structured, and begin using it in Dynamo.
+Data jsou součástí našich programů. Prochází dráty a zadávají vstupy pro uzly, kde se zpracují do nové formy výstupních dat. Pojďme si prohlédnout definici dat, jak jsou strukturována a začít je používat v aplikaci Dynamo.
 
-## What is Data?
+## Co jsou data?
 
-Data is a set of values of qualitative or quantitative variables. The simplest form of data is numbers such as `0`, `3.14`, or `17`. But data can also be of a number of different types: a variable representing changing numbers (`height`); characters (`myName`); geometry (`Circle`); or a list of data items (`1,2,3,5,8,13,...`).
+Data jsou souborem hodnot kvalitativních nebo kvantitativních proměnných. Nejjednodušší forma dat jsou například čísla jako `0`, `3.14` nebo `17`. Data však mohou být také různých typů: proměnná představující měnící se čísla (`height`), znaky (`myName`); geometrii (`Circle`) nebo seznam datových položek (`1,2,3,5,8,13,...`).
 
-In Dynamo, we add/feed data to the input Ports of Nodes - we can have data without actions but we need data to process the actions that our Nodes represent. When we've added a Node to the Workspace, if it doesn't have any inputs supplied, the result will be a function, not the result of the action itself.
+V aplikaci Dynamo přidáváme data do vstupních portů uzlů – můžeme mít data bez akcí, ale potřebujeme data ke zpracování akcí, které reprezentují uzly. Pokud do pracovního prostoru přidáme uzel, pokud nebude mít k dispozici žádný vstup, bude výsledkem funkce, nikoli výsledek akce.
 
 ![Data and Actions](<../images/5-3/1/data - what is data.jpg>)
 
-> 1. Simple Data
-> 2. Data and Action (A Node) successfully executes
-> 3. Action (A Node) without Data Inputs returns a generic function
+> 1. Jednoduchá data
+> 2. Data a akce (Uzel A) se úspěšně spustí
+> 3. Akce (Uzel A) bez zadání dat vrátí obecnou funkci
 
-### Null - Absence of Data
+### Null – Nedostatek dat
 
-Beware of Nulls The `'null'` type represents the absence of data. While this is an abstract concept, you will likely come across this while working with Visual Programming. If an action doesn't create a valid result, the Node will return a null.
+Dávejte pozor na nulové hodnoty. Typ `'null'` představuje nedostatek dat. I když je to abstraktní koncept, pravděpodobně se k němu dostanete při práci s vizuálním programováním. Pokud akce nevytvoří platný výsledek, uzel vrátí hodnotu null.
 
-Testing for nulls and removing nulls from data structure is a crucial part to creating robust programs.
+Testování nulových hodnot a odstraňování nulových hodnot z datové struktury je klíčovou součástí vytváření robustních programů.
 
-| Icon                                                  | Name/Syntax   | Inputs | Outputs |
+| Ikona | Název/Syntaxe | Vstupy | Výstupy |
 | ----------------------------------------------------- | ------------- | ------ | ------- |
-| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj    | bool    |
+| ![](<../images/5-3/1/data - object IsNull.jpg>) | Object.IsNull | obj | booleovský |
 
-### Data Structures
+### Datové struktury
 
-When we are Visual Programming, we can very quickly generate a lot of data and require a means of managing its hierarchy. This is the role of Data Structures, the organizational schemes in which we store data. The specifics of Data Structures and how to use them vary from programming language to programming language.
+Při vizuálním programování můžeme velmi rychle vygenerovat velké množství dat a vyžadovat způsob správy jejich hierarchie. Jedná se o úlohu datových struktur, organizačních schémat, ve kterých ukládáme data. Specifika datových struktur a způsob jejich použití se liší mezi jednotlivými programovacími jazyky.
 
-In Dynamo, we add hierarchy to our data through Lists. We will explore this in depth in later chapters, but let's start simply:
+V aplikaci Dynamo přidáme hierarchii k datům prostřednictvím seznamů. To prozkoumáme v pozdějších kapitolách, ale začneme jednoduše:
 
-A list represents a collection of items placed into one structure of data:
+Seznam představuje kolekci položek umístěných do jedné struktury dat:
 
-* I have five fingers (_items_) on my hand (_list_).
-* There are ten houses (_items_) on my street (_list_).
+* Mám pět prstů (_položek_) na ruce (_seznam_).
+* Deset domů (_položek_) je na mojí ulici (_seznam_).
 
 ![List Breakdown](<../images/5-3/1/data - data structures.jpg>)
 
-> 1. A **Number Sequence** node defines a list of numbers by using a _start_, _amount_, and _step_ input. With these nodes, we've created two separate lists of ten numbers, one which ranges from _100-109_ and another which ranges from _0-9_.
-> 2. The **List.GetItemAtIndex** node selects an item in a list at a specific index. When choosing _0_, we get the first item in the list (_100_ in this case).
-> 3. Applying the same process to the second list, we get a value of _0_, the first item in the list.
-> 4. Now we merge the two lists into one by using the **List.Create** node. Notice that the node creates a _list of lists._ This changes the structure of the data.
-> 5. When using **List.GetItemAtIndex** again, with index set to _0_, we get the first list in the list of lists. This is what it means to treat a list as an item, which is somewhat different from other scripting languages. We will get more advanced with list manipulation and data structure in later chapters.
+> 1. Uzel **Number Sequence** definuje seznam čísel pomocí vstupů _start_, _množství_ a _krok_. Pomocí těchto uzlů jsme vytvořili dva samostatné seznamy deseti čísel, z nichž jeden se pohybuje od _100–109_ a druhý se pohybuje od _0–9_.
+> 2. Uzel **List.GetItemAtIndex** slouží k výběru položky v seznamu na určitém indexu. Při výběru hodnoty _0_ se první položka zobrazí v seznamu (v tomto případě _100_).
+> 3. Pokud použijeme stejný postup na druhý seznam, získáme hodnotu _0_, první položku v seznamu.
+> 4. Nyní sloučíme dva seznamy do jednoho pomocí uzlu **List.Create**. Uzel vytvoří _seznam seznamů._ Tím se změní struktura dat.
+> 5. Pokud použijete znovu parametr **List.GetItemAtIndex**, s indexem nastaveným na hodnotu _0_, získáme první řádek seznamu seznamů. To znamená, že se seznam považuje za položku, což se poněkud liší od ostatních skriptovacích jazyků. V pozdějších kapitolách se dostaneme k pokročilejší manipulaci se seznamy a datovými strukturami.
 
-The key concept to understand about data hierarchy in Dynamo: **with respect to data structure, lists are regarded as items.** In other words, Dynamo functions with a top-down process for understanding data structures. What does this mean? Let's walk through it with an example.
+Základní koncept pro pochopení hierarchie dat v aplikaci Dynamo: **S ohledem na datovou strukturu jsou seznamy považovány za položky.** Jinými slovy, aplikace Dynamo funguje s postupem shora dolů pro pochopení datových struktur. Co to znamená? Pojďme to projít s příkladem.
 
-## Exercise: Using Data to Make a Chain of Cylinders
+## Cvičení: Použití dat k vytvoření řetězu válců
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 
-In this first example, we assemble a shelled cylinder which walks through the geometry hierarchy discussed in this section.
+V tomto prvním příkladu sestavíme válec se skořepinou, který prochází hierarchií geometrie, o níž se v této části pojednává.
 
-### Part I: Set up Graph for one cylinder with some changeable parameters.
+### Část I: Nastavení grafu pro jeden válec s některými měnitelnými parametry.
 
-1.Add **Point.ByCoordinates -** after adding the node to canvas, we see a point at the origin of the Dynamo preview grid. The default values of the _x,y_, and _z_ inputs are _0.0_, giving us a point at this location.
+1. Přidejte uzel **Point.ByCoordinates** – po přidání uzlu na pracovní plochu vidíme bod v počátku osnovy náhledu aplikace Dynamo. Výchozí hodnoty vstupů _x,y_ a _z_ jsou _0.0_, což nám dává bod v tomto umístění.
 
 ![](<../images/5-3/1/data - exercise step 1.jpg>)
 
-2\. **Plane.ByOriginNormal -** The next step in the geometry hierarchy is a plane. There are several ways to construct a plane, and we are using an origin and normal for the input. The origin is the point node created in the previous step.
+2\. **Plane.ByOriginNormal** – Dalším krokem v hierarchii geometrie je rovina. Existuje několik způsobů, jak vytvořit rovinu, my pro vstup použijeme počátek a normálu. Počátek je uzel bodu vytvořený v předchozím kroku.
 
-**Vector.ZAxis -** this is a unitized vector in the z direction. Notice there are not inputs, only a vector of \[0,0,1] value. We use this as the _normal_ input for the **Plane.ByOriginNormal** node. This gives us a rectangular plane in the Dynamo preview.
+**Vector.ZAxis –** toto je sjednocený vektor ve směru Z. Všimněte si, že nejsou k dispozici vstupy, pouze vektor o hodnotě \[0,0,1]. Toto je vstupní hodnota _normal_ pro uzel **Plane.ByOriginNormal**. Tím se v náhledu aplikace Dynamo zobrazí obdélníková rovina.
 
 ![](<../images/5-3/1/data - exercise step 2.jpg>)
 
-3\. **Circle.ByPlaneRadius -** Stepping up the hierarchy, we now create a curve from the plane in our previous step. After plugging into the node, we get a circle at the origin. The default radius on the node is value of _1_.
+3\. **Circle.ByPlaneRadius –** Rozšiřujeme hierarchii. Nyní vytvoříme oblouk z roviny v předchozím kroku. Po zapojení do uzlu se v počátku zobrazí kružnice. Výchozí poloměr v uzlu je hodnota _1_.
 
 ![](<../images/5-3/1/data - exercise step 3.jpg>)
 
-4\. **Curve.Extrude -** Now we make this thing pop by giving it some depth and going in the third dimension. This node creates a surface from a curve by extruding it. The default distance on the node is _1_, and we should see a cylinder in the viewport.
+4\. **Curve.Extrude –** Teď provedeme vylepšení přidáním hloubky a přechodem do třetího rozměru. Tento uzel vytvoří povrch z křivky jejím vysunutím. Výchozí vzdálenost v uzlu je _1_ a měli bychom ve výřezu vidět válec.
 
 ![](<../images/5-3/1/data - exercise step 4.jpg>)
 
-5\. **Surface.Thicken -** This node gives us a closed solid by offsetting the surface a given distance and closing the form. The default thickness value is _1_, and we see a shelled cylinder in the viewport in line with these values.
+5\. **Surface.Thicken –** Tento uzel nám umožňuje vytvořit uzavřené těleso odsazením povrchu o danou vzdálenost a uzavřením tvaru. Výchozí hodnota tloušťky je _1_ a válec se skořepinou je ve výřezu zobrazen v souladu s těmito hodnotami.
 
 ![](<../images/5-3/1/data - exercise step 5.jpg>)
 
-6\. **Number Slider -** Rather than using the default values for all of these inputs, let's add some parametric control to the model.
+6\. **Number Slider –** Místo použití výchozích hodnot pro všechny tyto vstupy přidejte do modelu parametrický ovládací prvek.
 
-**Domain Edit -** after adding the number slider to the canvas, click the caret in the top left to reveal the domain options.
+**Domain Edit – **po přidání posuvníku čísla na pracovní plochu klikněte na stříšku v levé horní části a zobrazte možnosti domény.
 
-**Min/Max/Step -** change the _min_, _max_, and _step_ values to _0_,_2_, and _0.01_ respectively. We are doing this to control the size of the overall geometry.
+**Min/Max/Krok –** změňte hodnoty _min_, _max_ a _step_ na _0_,_2_ a _0.01_. Toto provedeme, abychom mohli řídit velikost celkové geometrie.
 
 ![](<../images/5-3/1/data - exercise step 6.gif>)
 
-7\. **Number Sliders -** In all of the default inputs, let's copy and paste this number slider (select the slider, hit Ctrl+C, then Ctrl+V) several times, until all of the inputs with defaults have a slider instead. Some of the slider values will have to be larger than zero to get the definition to work (ie: you need an extrusion depth in order to have a surface to thicken).
+7\. **Number Sliders –** Ve všech výchozích vstupech zkopírujte a vložte tento posuvník čísla (vyberte posuvník, stiskněte Ctrl+C a pak Ctrl+V) několikrát, dokud nebudou mít všechny vstupy s výchozími hodnotami posuvník. Aby definice fungovala, některé hodnoty posuvníku musí být větší než nula (například k zesílení plochy je potřeba hloubka vysunutí).
 
 ![](<../images/5-3/1/data - exercise step 7a.gif>)
 
 ![](<../images/5-3/1/data - exercise step 7b.gif>)
 
-8\. We've now created a parametric shelled cylinder with these sliders. Try to flex some of these parameters and see the geometry update dynamically in the Dynamo viewport.
+8\. Nyní jsme vytvořili parametrický válec se skořepinou s těmito posuvníky. Zkuste některé z těchto parametrů změnit a sledujte, jak se geometrie dynamicky aktualizuje ve výřezu aplikace Dynamo.
 
 ![](<../images/5-3/1/data - exercise step 8a.gif>)
 
-**Number Sliders -** taking this a step further, we've added a lot of sliders to the canvas, and need to clean up the interface of the tool we just created. Right click on one slider, select "Rename..." and change each slider to the appropriate name for its parameter (thickness, Radius, Height, etc).
+**Number Sliders – ** přidali jsme na plochu hodně posuvníků a je potřeba vyčistit rozhraní nástroje, který jsme právě vytvořili. Klikněte pravým tlačítkem na jeden posuvník, vyberte položku Přejmenovat a změňte název každého posuvníku na název odpovídající jeho parametru (Thickness (Tloušťka), Radius (Poloměr), Height (Výška) atd.).
 
 ![](<../images/5-3/1/data - exercise step 8b step.jpg>)
 
-### Part II: Populate an array of cylinders from Part I
+### Část II: Vyplnění pole válců z části I
 
-9\. At this point, we've created an awesome thickening cylinder thing. This is one object currently, let's look at how to create an array of cylinders that remains dynamically linked. To do this, we're going to create a list of cylinders, rather than working with a single item.
+9\. V tomto okamžiku jsme vytvořili úžasnou věc s rozšiřujícím se válcem. Toto je aktuálně jeden objekt, podívejme se, jak vytvořit pole válců, které zůstávají dynamicky propojeny. Za tímto účelem vytvoříme seznam válců, místo práce s jednou položkou.
 
-**Addition (+) -** Our goal is to add a row of cylinders next to the cylinder we've created. If we want to add one cylinder adjacent to the current one, we need to consider both radius of the cylinder and the thickness of its shell. We get this number by adding the two values of the sliders.
+**Addition (+) –** naším cílem je přidat řadu válců vedle válce, který jsme vytvořili. Pokud chceme přidat jeden válec vedle aktuálního válce, je nutné zvážit poloměr válce a tloušťku jeho skořepiny. Toto číslo získáme sečtením dvou hodnot posuvníků.
 
 ![](<../images/5-3/1/data - exercise step 9.jpg>)
 
-10\. This step is more involved so let's walk through it slowly: the end goal is to create a list of numbers which define the locations of each cylinder in a row.
+10\. Tento krok je mnohem náročnější, takže ho projdeme pomalu: cílem je vytvořit seznam čísel, která definují umístění každého válce v řadě.
 
 ![](<../images/5-3/1/data - exercise step 10.jpg>)
 
-> a. **Multiplication -** First, we want to multiply the value from the previous step by 2. The value from the previous step represents a radius, and we want to move the cylinder the full diameter.
+> a. **Multiplication – ** Nejprve chceme vynásobit hodnotu z předchozího kroku hodnotou 2. Hodnota z předchozího kroku představuje poloměr a chceme válec posunout o plný průměr.
 >
-> b. **Number Sequence -** we create an array of numbers with this node. The first input is the _multiplication_ node from the previous step into the _step_ value. The _start_ value can be set to _0.0_ using a _number_ node.
+> b. **Number Sequence – ** Pomocí tohoto uzlu vytvoříme pole čísel. První vstup je uzel _multiplication_ z předchozího kroku do hodnoty _step_. Hodnotu _start_ lze nastavit na _0.0_ pomocí uzlu _number_.
 >
-> c. **Integer Slider** - For the _amount_ value, we connect an integer slider. This will define how many cylinders are created.
+> c. **Integer Slider – ** Pro hodnotu _amount_ připojíme posuvník celého čísla. Tím se definuje počet vytvořených válců.
 >
-> d. **Output** - This list shows us the distance moved for each cylinder in the array, and is parametrically driven by the original sliders.
+> d. **Output – ** Tento seznam zobrazuje vzdálenost přesunutou pro každý válec v poli a je parametricky řízen původními posuvníky.
 
-11\. This step is simple enough - plug the sequence defined in the previous step into the _x_ input of the original **Point.ByCoordinates**. This will replace the slider _pointX_ which we can delete. We now see an array of cylinders in the viewport (make sure the integer slider is larger than 0).
+11\. Tento krok je dostatečně jednoduchý – zadejte posloupnost definovanou v předchozím kroku do vstupu _x_ původního uzlu **Point.ByCoordinates**. Tím nahradíte posuvník _pointX_, který lze odstranit. Nyní se ve výřezu zobrazuje pole válců (zkontrolujte, zda je číslo posuvníku větší než 0).
 
 ![](<../images/5-3/1/data - exercise step 11.gif>)
 
-12\. The chain of cylinders is still dynamically linked to all of the sliders. Flex each slider to watch the definition update!
+12\. Řetěz válců je stále dynamicky spojen se všemi posuvníky. Upravte každý posuvník, abyste viděli aktualizaci definice.
 
 ![](<../images/5-3/1/data - exercise step 12.gif>)

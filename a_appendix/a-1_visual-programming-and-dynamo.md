@@ -1,60 +1,60 @@
-# Visual Programming and Dynamo
+# Vizuální programování a aplikace Dynamo
 
-#### What is Visual Programming? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
+#### Co je vizuální programování? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
-Designing frequently involves establishing visual, systemic, or geometric relationships between the parts of a design. More times than not, these relationships are developed by workflows that gets us from concept to result by way of rules. Perhaps without knowing it, we are working algorithmically - defining a step-by-step set of actions that follow a basic logic of input, processing, and output. Programming allows us to continue to work this way but by formalizing our algorithms.
+Návrh často zahrnuje vytváření vizuálních, systémových nebo geometrických vztahů mezi jednotlivými součástmi. Mnohdy jsou tyto vztahy vytvářeny pracovními postupy, které nás prostřednictvím pravidel provedou od konceptu až k výsledku. Možná, aniž bychom to věděli, pracujeme algoritmicky – definujeme krok za krokem sadu akcí, které se řídí základní logikou vstupu, zpracování a výstupu. Programování nám umožňuje pokračovat v práci tímto způsobem, ale formalizací našich algoritmů.
 
-#### Algorithms in Hand <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
+#### Dostupné algoritmy <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
-While offering some powerful opportunities, the term **Algorithm** can carry some misconceptions with it. Algorithms can generate unexpected, wild, or cool things, but they are not magic. In fact, they are pretty plain, in and of themselves. Let's use a tangible example like an origami crane. We start with a square piece of paper (input), follow a series of folding steps (processing actions), and result in a crane (output).
+Pojem **Algoritmus** sice nabízí některé silné příležitosti, ale může s ním být spojeno několik nejasností. Algoritmy mohou vytvářet neočekávané, divoké nebo působivé věci, ale nejsou kouzelné. Ve skutečnosti jsou docela jasné. Použijeme konkrétní příklad – origami jeřáb. Začneme čtvercovým kusem papíru (vstup), budeme postupovat podle posloupnosti kroků skládání (akce zpracování) a výsledkem je jeřáb (výstup).
 
-![Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![Origami jeřáb](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
 
-So where is the Algorithm? It is the abstract set of steps, which we can represent in a couple of ways - either textually or graphically.
+Tak kde je algoritmus? Je to abstraktní posloupnost kroků, kterou můžeme vyjádřit několika způsoby – textově nebo graficky.
 
-**Textual Instructions:**
+**Textové pokyny:**
 
-1. Start with a square piece of paper, colored side up. Fold in half and open. Then fold in half the other way.
-2. Turn the paper over to the white side. Fold the paper in half, crease well and open, and then fold again in the other direction.
-3. Using the creases you have made, Bring the top 3 corners of the model down to the bottom corner. Flatten model.
-4. Fold top triangular flaps into the center and unfold.
-5. Fold top of model downwards, crease well and unfold.
-6. Open the uppermost flap of the model, bringing it upwards and pressing the sides of the model inwards at the same time. Flatten down, creasing well.
-7. Turn model over and repeat Steps 4-6 on the other side.
-8. Fold top flaps into the center.
-9. Repeat on other side.
-10. Fold both ‘legs’ of model up, crease very well, then unfold.
-11. Inside Reverse Fold the “legs” along the creases you just made.
-12. Inside Reverse Fold one side to make a head, then fold down the wings.
-13. You now have a crane.
+1. Začněte se čtvercovým kusem papíru, barevnou stranou nahoru. Přeložte papír v polovině a rozložte. Potom přeložte v polovině na druhou stranu.
+2. Otočte papír na bílou stranu. Přeložte papír v polovině, rozložte a pak znovu přeložte ve druhém směru.
+3. Pomocí vytvořených záhybů přesuňte horní tři rohy modelu dolů do dolního rohu. Zploštěte model.
+4. Složte horní trojúhelníkové klapky do středu a rozložte je.
+5. Složte horní část modelu dolů a rozložte.
+6. Otevřete nejhornější klapku modelu, zvedněte ji a současně stiskněte strany modelu směrem dovnitř. Zploštěte.
+7. Obraťte model a opakujte kroky 4–6 na druhé straně.
+8. Ohněte horní klapky do středu.
+9. Opakujte na druhé straně.
+10. Složte obě „nohy“ modelu, a potom je rozložte.
+11. Uvnitř obraťte složené „nohy“ podél záhybu, které jste právě vytvořili.
+12. Na jedné straně proveďte vnitřní převrácený sklad a vytvořte hlavu, pak ohněte dolů křídla.
+13. Jeřáb je dokončen.
 
-**Graphical Instructions:**
+**Grafické pokyny:**
 
-![Needs Update- Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Vyžaduje aktualizaci – Origami jeřáb](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
-#### Programming Defined <a href="#programming-defined" id="programming-defined"></a>
+#### Programování definováno <a href="#programming-defined" id="programming-defined"></a>
 
-Using either of these sets of instructions should result in a crane, and if you followed along yourself, you've applied an algorithm. The only difference is the way in which we read the formalization of that set of instructions and that leads us to **Programming**. Programming, frequently shortened from _Computer Programming_, is the act of formalizing the processing of a series of actions into an executable program. If we turned the above instructions for a creating crane into a format our computer can read and execute, we are Programming.
+Použitím jedné z těchto posloupnosti pokynů by mělo vést ke složení jeřába, a pokud jste je následovali, použili jste algoritmus. Jediným rozdílem je způsob, jakým jsme si přečetli formulaci posloupnosti pokynů, a to nás vede k části **programování**. Programování, často zkrácené z _počítačového programování_, je úkon formalizace zpracování posloupnosti akcí do spustitelného programu. Pokud změníme výše uvedené pokyny pro složení jeřába na formát, který může náš počítač číst a spustit, programujeme.
 
-The key to and first hurdle we will find in Programming, is that we have to rely on some form of abstraction to communicate effectively with our computer. That takes the form of any number of Programming Languages, such as JavaScript, Python, or C. If we can write out a repeatable set of instructions, like for the origami crane, we only need to translate it for the computer. We are on our way to having the computer be able to make a crane or even a multitude of different cranes where each one varies slightly. This is the power of Programming - the computer will repeatedly execute whatever task, or set of tasks, we assign to it, without delay and without human error.
+Klíčem k programování a současně první velkou překážkou je, že se musíme spolehnout na určitou formu abstrakce, abychom mohli s počítačem efektivně komunikovat. To má podobu množství programovacích jazyků, například JavaScript, Python nebo C. Pokud můžeme napsat opakovatelnou posloupnost instrukcí, například pro origami jeřába, stačí ji pouze přeložit pro počítač. Jsme na cestě k tomu, aby mohl počítač složit jeřába nebo dokonce i řadu různých jeřábů, kde se každý z nich mírně liší. Toto je síla programování – počítač opakovaně vykoná jakoukoli úlohu nebo sadu úloh, které mu předáme, bez prodlení a bez lidské chyby.
 
-**Visual Programming Defined**
+**Vizuální programování definováno**
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../.gitbook/assets/Visual Programming - Circle Through Point.dyn" %}
 
-If you were tasked with writing instructions for folding an origami crane, how would you go about it? Would you make them with graphics, text, or some combination of the two?
+Kdybyste dostali za úkol psát instrukce pro skládání origami jeřába, jak byste postupovali? Chcete je vytvořit grafikou, textem nebo kombinací těchto dvou?
 
-If your answer contained graphics, then **Visual Programming** is definitely for you. The process is essentially the same for both Programming and Visual Programming. They utilize the same framework of formalization; however, we define the instructions and relationships of our program through a graphical (or "Visual") user interface. Instead of typing text bound by syntax, we connect pre-packaged nodes together. Here's a comparison of the same algorithm - "draw a circle through a point" - programmed with nodes versus code:
+Pokud vaše odpověď obsahovala grafiku, **vizuální programování** je rozhodně pro vás. Postup je v zásadě stejný pro programování, i pro vizuální programování. Používají stejný rámec formalizace, ale pokyny a vztahy našeho programu definujeme prostřednictvím grafického (nebo vizuálního) uživatelského rozhraní. Místo psaní textu vázaného syntaxí propojujeme předpřipravené uzly. Zde je porovnání stejného algoritmu – „nakreslit kružnici bodem“- naprogramováno pomocí uzlů, a pak pomocí kódu:
 
-**Visual Program:**
+**Vizuální program:**
 
 ![](<./images/a-1/visualProgramming (2).png>)
 
-**Textual Program:**
+**Textový program:**
 
 ```
 myPoint = Point.ByCoordinates(0.0,0.0,0.0);
@@ -65,8 +65,8 @@ dist = myPoint.DistanceTo(attractorPoint);
 myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 ```
 
-The results of our algorithm:
+Výsledky našeho algoritmu:
 
 ![](<./images/a-1/visualProgramming (1).png>)
 
-The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.
+Vizuální charakteristika programování tak, že snižuje obtížnost pro začátečníky a lépe oslovuje návrháře. Aplikace Dynamo spadá do paradigmatu vizuálního programování, ale jak uvidíme později, stále můžeme používat také textové programování v aplikaci.

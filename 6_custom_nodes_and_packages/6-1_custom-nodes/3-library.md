@@ -1,57 +1,57 @@
-# Publishing to Your Library
+# Publikování do knihovny
 
-We've just created a custom node and applied it to a specific process in our Dynamo graph. And we like this node so much, we want to keep it in our Dynamo library to reference in other graphs. To do this, we'll publish the node locally. This is a similar process to publishing a package, which we'll walk through in more detail in the next chapter.
+Vytvořili jsme vlastní uzel a použili jej na proces v grafu aplikace Dynamo. Nyní tento uzel chceme zachovat v knihovně aplikace Dynamo pro později použití v dalších grafech. Z tohoto důvodu provedeme místní publikování uzlu. Tento postup je podobný jako publikování balíčku, další informace budou uvedeny v další kapitole.
 
-By publishing a node locally, the node will be accessible in your Dynamo library when you open a new session. Without publishing a node, a Dynamo graph which references a custom node must also have that custom node in its folder (or the custom node must be imported into Dynamo using _File>Import Library_).
+Po místním publikování uzlu bude uzel dostupný v knihovně aplikace Dynamo po otevřené nové relace. Pokud by uzel publikován nebyl, graf aplikace Dynamo odkazující na vlastní uzel by musel tento uzel obsahovat ve své složce (další možností je uzel importovat do aplikace Dynamo pomocí možnosti _Soubor > Importovat knihovnu_).
 
 {% hint style="warning" %}
-Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
+Publikování vlastního uzlu je povoleno pouze v aplikacích Dynamo pro aplikaci Revit a Dynamo pro aplikaci Civil 3D. Aplikace Dynamo Sandbox nemá funkce pro publikování.
 {% endhint %}
 
-## Exercise: Publishing a Custom Node Locally
+## Cvičení: Místní publikování vlastního uzlu
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/6-1/3/PointsToSurface.dyf" %}
 
-Let's move forward with the custom node that we created in the previous section. Once the PointsToSurface custom node is opened, we see the graph in the Dynamo Custom Node Editor. You can also open up a custom node by double clicking on it in the Dynamo Graph Editor.
+V této části budeme pokračovat v práci s vlastním uzlem vytvořeným dříve. Po otevření vlastního uzlu PointsToSurface se graf zobrazí v Editoru uživatelských uzlů aplikace Dynamo. Vlastní uzel je možné otevřít také dvojitým kliknutím v Editoru grafu aplikace Dynamo.
 
 ![](<../images/6-1/3/publish custom node locally 01.jpg>)
 
-To Publish a custom node locally, simply right click on the canvas and select _"Publish This Custom Node..."_
+Chcete-li provést místní publikování vlastního uzlu, klikněte pravým tlačítkem myši na pracovní plochu a vyberte možnost _Publikovat tento vlastní uzel_.
 
 ![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
 
-Fill out the relevant information similar to the image above and select _"Publish Locally"._. Note that the Group field defines the main element accessible from the Dynamo menu.
+Vyplňte informace podle obrázku výše a stiskněte tlačítko _Publikovat místně._. Všimněte si, že pole Skupina určuje místo v nabídce aplikace Dynamo, kde bude uzel dostupný.
 
 ![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
 
-Choose a folder to house all of the custom nodes that you plan on publishing locally. Dynamo will check this folder each time it loads, so make sure the folder is in a permanent place. Navigate to this folder and choose _"Select Folder"._ Your Dynamo node is now published locally, and will remain in your Dynamo Toolbar each time you load the program!
+Vyberte složku, ve které se budou nacházet všechny místně publikované vlastní uzly. Aplikace Dynamo bude tuto složku kontrolovat při každém spuštění, proto by se mělo jednat o trvalé umístění. Přejděte do této složky a stiskněte tlačítko _„Vybrat složku“._ Uzel aplikace Dynamo je nyní místně publikován a bude k dispozici na panelu nástrojů po každém spuštění aplikace.
 
 ![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
 
-To check on the custom node folder location, go to _Dynamo > Preferences > Package Manager > Node and Package Paths_
+Chcete-li zjistit umístění složky vlastních uzlů, klikněte na nabídku _Dynamo > Předvolby > Package Manager > Cesty uzlů a balíčků_.
 
 ![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
 
-In this window we see a list of paths.
+V tomto okně se zobrazí seznam cest.
 
 ![](<../images/6-1/3/publish custom node exercise - 06.jpg>)
 
-> 1. _Documents\DynamoCustomNodes..._ refers to the location of custom nodes we've published locally.
-> 2. _AppData\Roaming\Dynamo..._ refers to the default location of Dynamo Packages installed online.
-> 3. You may want to move your local folder path down in the list order above (by selecting the folder path and clicking on the down arrow to the left of the path names). The top folder is the default path for package installs. So by keeping the default Dynamo package install path as the default folder, online packages will be separated from your locally published nodes.
+> 1. _Dokumenty\DynamoCustomNodes..._ odkazuje na umístění místně publikovaných vlastních uzlů.
+> 2. _AppData\Roaming\Dynamo..._ odkazuje na výchozí umístění balíčků aplikace Dynamo nainstalovaných online.
+> 3. Cestu k vaší místní složce v seznamu výše je užitečné přesunout dolů (výběrem cesty ke složce a kliknutím na šipku dolů). Složka uvedená nejvýše se používá jako výchozí složka pro instalace balíčků. Pokud jako výchozí složku nastavíte výchozí cestu pro instalaci balíčků aplikace Dynamo, online balíčky budou odděleny od místně publikovaných uzlů.
 
-We switched the order of the path names in order to have Dynamo's default path as the package install location.
+Změnili jsme pořadí cest, aby se pro instalaci balíčků použila výchozí cesta aplikace Dynamo.
 
 ![](<../images/6-1/3/publish custom node exercise - 07.jpg>)
 
-Navigating to this local folder, we can find the original custom node in the _".dyf"_ folder, which is the extension for a Dynamo Custom Node file. We can edit the file in this folder and the node will update in the UI. We can also add more nodes to the main _DynamoCustomNode_ folder and Dynamo will add them to your library at restart!
+Pokud přejdete do této místní složky, ve složce _„.dyf“_ (což je přípona pro soubor vlastního uzlu aplikace Dynamo) naleznete původní vlastní uzel. Po úpravě souborů v této složce se uzly aktualizují v uživatelském rozhraní. Do složky _DynamoCustomNode_ je možné přidat další uzly a aplikace Dynamo je přidá do knihovny po restartování.
 
 ![](<../images/6-1/3/publish custom node exercise - 08.jpg>)
 
-Dynamo will now load each time with "PointsToSurface" in the "DynamoPrimer" group of your Dynamo library.
+Aplikace Dynamo se nyní pokaždé načte s uzlem PointsToSurface ve skupině DynamoPrimer v knihovně.
 
 ![](<../images/6-1/3/publish custom node exercise - 09.jpg>)

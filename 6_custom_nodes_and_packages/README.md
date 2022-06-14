@@ -1,5 +1,5 @@
-# Custom Nodes & Packages
+# Vlastní uzly a balíčky
 
-Out of the box, Dynamo has a lot of functionality stored in its Library of Nodes. For those frequently used routines or that special graph you want to share with the community, Custom Nodes & Packages are a great way to extend Dynamo even further.
+Knihovna uzlů aplikace Dynamo obsahuje již ve výchozím nastavení spoustu funkci. Pokud však provádíte některé časté úkony nebo chcete s komunitou sdílet speciální graf, pomocí vlastních uzlů můžete funkce aplikace Dynamo rozšířit ještě více.
 
 ![](./images/customNodes\_cover01.jpg)

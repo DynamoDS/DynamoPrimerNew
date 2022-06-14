@@ -1,10 +1,10 @@
-# Functions
+# Funkce
 
-Functions can be created in a code block and recalled elsewhere in a Dynamo definition. This creates another layer of control in a parametric file, and can be viewed as a text-based version of a custom node. In this case, the "parent" code block is readily accessible and can be located anywhere on the graph. No wires needed!
+Funkce lze vytvořit v bloku kódu a lze je znovu načíst jinde v definici aplikace Dynamo. Tím se vytvoří další hladina ovládacího prvku v parametrickém souboru a lze ji zobrazit jako textovou verzi vlastního uzlu. V tomto případě je „nadřazený“ blok kódu snadno dostupný a může být umístěn kdekoli na grafu. Nepotřebuje žádné dráty!
 
-### Parent
+### Parent (Nadřazená jednotka)
 
-The first line has the key word “def”, then the function name, then the names of inputs in parentheses. Braces define the body of the function. Return a value with “return =”. Code Blocks that define a function do not have input or output ports because they are called from other Code Blocks.
+První řádek obsahuje klíčové slovo „def“, pak název funkce a názvy vstupů v závorkách. Závorky definují tělo funkce. Vrátí hodnotu s „return =“. Uzly bloku kódu, které definují funkci, nemají vstupní nebo výstupní porty, protože se volají z jiných uzlů bloku kódu.
 
 ![](<../images/8-1/4/functions parent def.jpg>)
 
@@ -20,9 +20,9 @@ return sum;
 };
 ```
 
-### Children
+### Podřazené položky
 
-Call the function with another Code Block in the same file by giving the name and the same number of arguments. It works just like the out-of-the-box nodes in your library.
+Volejte funkci s jiným uzlem bloku kódu ve stejném souboru, a to poskytnutím stejného názvu a stejného počtu argumentů. Funguje stejně uzly v knihovně.
 
 ![](<../images/8-1/4/functions children call def.jpg>)
 
@@ -30,38 +30,38 @@ Call the function with another Code Block in the same file by giving the name an
 FunctionName(in1,in2);
 ```
 
-## Exercise: Sphere By Z
+## Cvičení: Koule podle Z
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/8-1/4/Functions_SphereByZ.dyn" %}
 
-In this exercise, we will make a generic definition that will create spheres from an input list of points. The radius of these spheres are driven by the Z property of each point.
+V tomto cvičení vytvoříme obecnou definici, která vytvoří koule ze vstupního seznamu bodů. Poloměr těchto koulí je řízen vlastností Z každého bodu.
 
-Let's begin with a number range of ten values spanning from 0 to 100. Plug these into a **Point.ByCoordinates** nodes to create a diagonal line.
+Začneme řadou deseti hodnot v rozsahu od 0 do 100. Tyto položky můžete vložit do uzlů **Point.ByCoordinates** za účelem vytvoření diagonální úsečky.
 
 ![](<../images/8-1/4/functions - exercise - 01.jpg>)
 
-Create a **Code Block** and introduce our definition.
+Vytvořte **blok kódu** a vložte naši definici.
 
 ![](<../images/8-1/4/functions - exercise - 02.jpg>)
 
-> 1.  Use these lines of code:
+> 1. Použijte tyto řádky kódu:
 >
->     ```
->     def sphereByZ(inputPt)
->     {
+>    ```
+>    def sphereByZ(inputPt)
+>    {
+>    
+>    };
+>    ```
 >
->     };
->     ```
->
-> The _inputPt_ is the name we've given to represent the points that will drive the function. As of now, the function isn't doing anything, but we'll build up this function in the steps to come.
+> _InputPt_ je název, který jsme zadali k reprezentaci bodů, které budou řídit funkci. Zatím funkce nic nedělá, ale v následujících krocích ji rozšíříme.
 
 ![](<../images/8-1/4/functions - exercise - 03.jpg>)
 
-> 1. Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parenetheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
+> 1. Přidáme-li funkci **bloku kódu**, umístíme komentář a proměnnou _sphereRadius_, která dotazuje pozici _Z_ každého bodu. Nezapomeňte, že metoda _inputPt.Z_ nevyžaduje jako metoda závorky. Toto je _dotaz_ vlastností existujícího prvku, takže nejsou nutné žádné vstupy:
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -73,61 +73,61 @@ Create a **Code Block** and introduce our definition.
 
 ![](<../images/8-1/4/functions - exercise - 04.jpg>)
 
-> 1. Now, let's recall the function we've created in another **Code Block**. If we double-click on the canvas to create a new _code block_, and type in _sphereB_, we notice that Dynamo suggest the _sphereByZ_ function that we've defined. Your function has been added to the intellisense library! Pretty cool.
+> 1. Nyní si připomeňme funkci, kterou jsme vytvořili v jiném **bloku kódu**. Pokud dvakrát klikneme na kreslicí plochu a vytvoříme nový _blok kódu_ a zadáme jej do položky _sphereB_, všimneme si, že aplikace Dynamo navrhne funkci _sphereByZ_, kterou jsme definovali. Vaše funkce byla přidána do knihovny intellisense. Působivé.
 
 ![](<../images/8-1/4/functions - exercise - 05.jpg>)
 
-> 1.  Now we call the function and create a variable called _Pt_ to plug in the points created in the earlier steps:
+> 1. Nyní zavoláme funkci a vytvoříme proměnnou s názvem _Pt_, která bude zahrnovat body vytvořené v dřívějších krocích:
 >
->     ```
->     sphereByZ(Pt)
->     ```
-> 2. We notice from the output that we have all null values. Why is this? When we defined the function, we are calculating the _sphereRadius_ variable, but we did not define what the function should _return_ as an _output_. We can fix this in the next step.
+>    ```
+>    sphereByZ(Pt)
+>    ```
+> 2. Ve výstupu si všimneme, že máme všechny hodnoty null. Jak je to možné? Když jsme definovali funkci, vypočítali jsme proměnnou _sphereRadius_, ale nedefinovali jsme, co by měla funkce _vrátit_ jako _výstup_. To můžeme opravit v dalším kroku.
 
 ![](<../images/8-1/4/functions - exercise - 06.jpg>)
 
-> 1. An important step, we need to define the output of the function by adding the line `return = sphereRadius;` to the _sphereByZ_ function.
-> 2. Now we see that the output of the Code Block gives us the Z coordinates of each point.
+> 1. Důležitý krok je, abychom definovali výstup funkce přidáním řádku `return = sphereRadius;` do funkce _sphereByZ_.
+> 2. Nyní vidíme, že výstupem bloku kódu jsou souřadnice Z každého bodu.
 
-Let's create actual spheres now by editing the _Parent_ function.
+Nyní vytvoříme skutečné koule úpravou _nadřazené_ funkce.
 
 ![](<../images/8-1/4/functions - exercise - 07.jpg>)
 
-> 1. We first define a sphere with the line of code: `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
-> 2. Next, we change the return value to be the _sphere_ instead of the _sphereRadius_: `return = sphere;` This gives us some giant spheres in our Dynamo preview!
+> 1. Nejprve definujeme kouli pomocí řádku kódu: `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
+> 2. Dále změníme návratovou hodnotu na _sphere_ místo _sphereRadius_: `return = sphere;`. Díky tomu uvidíme v náhledu aplikace Dynamo obří koule!
 
 ![](<../images/8-1/4/functions - exercise - 08.jpg>)
 
-> 1\. To temper the size of these spheres, let's update the sphereRadius value by adding a divider: `sphereRadius = inputPt.Z/20;` Now we can see the separate spheres and start to make sense of the relationship between radius and Z value.
+> 1\. Chcete-li zmírnit velikost těchto koulí, aktualizujte hodnotu sphereRadius přidáním oddělovače: `sphereRadius = inputPt.Z/20;`. Nyní můžeme vidět jednotlivé koule a začít chápat vztah mezi poloměrem a hodnotou Z.
 
 ![](<../images/8-1/4/functions - exercise - 09.jpg>)
 
-> 1. On the **Point.ByCoordinates** node, by changing the lacing from Shortest List to Cross Product, we create a grid of points. The _sphereByZ_ function is still in full effect, so the points all create spheres with radii based on Z values.
+> 1. V uzlu **Point.ByCoordinates** změnou vázání z možnosti Nejkratší seznam na Kartézský součin vytvoříme osnovu bodů. Funkce _sphereByZ_ je stále plně funkční, takže všechny body vytvářejí koule s poloměry na základě hodnot Z.
 
 ![](<../images/8-1/4/functions - exercise - 10.jpg>)
 
-> 1. And just to test the waters, we plug the original list of numbers into the X input for **Point.ByCoordinates**. We now have a cube of spheres.
-> 2. Note: if this takes a long time to calculate on your computer, try to change _#10_ to something like _#5_.
+> 1. A jen tak na zkoušku připojíme původní seznam čísel do vstupu X uzlu **Point.ByCoordinates**. Teď máme krychli koulí.
+> 2. Poznámka: Pokud výpočet trvá na vašem počítači dlouhou dobu, zkuste změnit číslo _#10_ na hodnotu _#5_.
 
-Remember, the _sphereByZ_ function we've created is a generic function, so we can recall the helix from an earlier lesson and apply the function to it.
+Pamatujte, že funkce _sphereByZ_, kterou jsme vytvořili, je obecná funkce, takže můžeme vyvolat šroubovici z předchozí lekce a použít na ni tuto funkci.
 
 ![](<../images/8-1/4/functions - exercise - 11.jpg>)
 
-One final step: let's drive the radius ratio with a user defined parameter. To do this, we need to create a new input for the function and also replace the _20_ divider with a parameter.
+Jeden poslední krok: Pojďme řídit poměr poloměru s uživatelem definovaným parametrem. Chcete-li to udělat, je nutné vytvořit nový vstup pro funkci a také nahradit rozdělovač _20_ parametrem.
 
 ![](<../images/8-1/4/functions - exercise - 12.jpg>)
 
-> 1.  Update the _sphereByZ_ definition to:
+> 1. Aktualizujte definici _sphereByZ_ na:
 >
->     ```
->     def sphereByZ(inputPt,radiusRatio)
->     {
->     //get Z Value, use it to drive radius of sphere
->     sphereRadius=inputPt.Z/radiusRatio;
->     //Define Sphere Geometry
->     sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
->     //Define output for function
->     return sphere;
->     };
->     ```
-> 2. Update the children **Code Block** by adding a ratio variable to the input: `sphereByZ(Pt,ratio);` Plug a slider into the newly created **Code Block** input and vary the size of the radii based on the radius ratio.
+>    ```
+>    def sphereByZ(inputPt,radiusRatio)
+>    {
+>    //get Z Value, use it to drive radius of sphere
+>    sphereRadius=inputPt.Z/radiusRatio;
+>    //Define Sphere Geometry
+>    sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);
+>    //Define output for function
+>    return sphere;
+>    };
+>    ```
+> 2. Aktualizujte podřazené **bloky kódu** přidáním proměnné ratio ke vstupu: `sphereByZ(Pt,ratio);`. Připojte posuvník k nově vytvořenému vstupu **bloku kódu** a změňte velikost poloměrů podle poměru poloměrů.

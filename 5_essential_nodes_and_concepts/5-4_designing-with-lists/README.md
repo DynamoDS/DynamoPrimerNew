@@ -1,5 +1,5 @@
-# Designing with Lists
+# Práce se seznamy
 
-Lists are the way we organize data. On your computer's operating system, you have files and folders. In Dynamo, we can regard these as items and lists, respectively. Like your operating system, there are many ways to create, modify, and query data. In this chapter, we'll break down how lists are managed in Dynamo.
+V seznamech lze uspořádat data. V operačním systému počítače existují soubory a složky. V aplikaci Dynamo se jim říká položky a seznamy. Podobně jako v operačním systému, data je možné vytvářet, upravovat a dotazovat mnoha způsoby. Tato kapitola popisuje správu seznamů v aplikaci Dynamo.
 
 ![](<../images/5-4/designing with lists.jpg>)

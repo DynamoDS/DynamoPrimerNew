@@ -1,40 +1,40 @@
-# What is a Dictionary
+# Co je to slovník
 
-Dynamo 2.0 introduces the concept of separating the dictionary data type from the list data type. This change can pose some significant changes to how you create and work with data in your workflows. Prior to 2.0, dictionaries and lists were combined as a data type. In short, lists were actually dictionaries with integer keys.
+Aplikace Dynamo 2.0 oddělila datový typ slovník od datového typu seznam. Tato změna může výrazně změnit způsob, jakým pracujete s daty. Před verzí 2.0 byly slovníky a seznamy spojeny v jediný datový typ. Stručně řečeno, seznamy byly ve skutečnosti slovníky s celočíselnými klíči.
 
-### **What is a dictionary?**
+### **Co je to slovník?**
 
-A dictionary is a data type composed of a collection of key-value pairs where each key is unique in each collection. A dictionary has no order and basically you can “look things up” using a key instead of an index value like in a list. _In Dynamo 2.0, keys can only be strings._
+Slovník je datový typ, který se skládá z kolekce dvojic klíč-hodnota, kde klíč je v rámci kolekce jedinečný. Slovník nemá žádné pořadí a umožňuje vyhledávat hodnoty pomocí klíčů (a nikoliv pomocí hodnot indexů jako u seznamů). _V aplikaci Dynamo 2.0 mohou být jako klíče použity pouze řetězce._
 
-### **What is a list?**
+### **Co je to seznam?**
 
-A list is a data type composed of a collection of ordered values. In Dynamo, lists use integers as index values.
+Seznam je datový list, který se skládá z kolekce hodnot v určitém pořadí. V aplikaci Dynamo seznamy používají celočíselné hodnoty indexů.
 
-### **Why was this change made and why should I care?**
+### **Proč k této změně došlo a proč je důležitá?**
 
-The separation of dictionaries from lists introduces dictionaries as a first-class citizen that you can use to quickly and easily store and lookup values without needing to remember an index value or maintain a strict list structure throughout your workflow. During user testing, we saw a significant reduction in graph size when dictionaries were utilized instead of several `GetItemAtIndex` nodes.
+Díky oddělení slovníků od seznamů můžete slovníky používat k rychlému a snadnému ukládání a vyhledávání hodnot, aniž by bylo nutné pamatovat si hodnoty indexů nebo uchovávat data ve striktní struktuře seznamu. Během uživatelského testování jsme zjistili, že nahrazením uzlů `GetItemAtIndex` slovníky došlo k výraznému zmenšení velikosti grafu.
 
-### **What are the changes?**
+### **K jakým změnám došlo?**
 
-* _Syntax_ changes have occurred that change how you will initialize and work with dictionaries and lists in code blocks.
-  * Dictionaries use the following syntax `{key:value}`
-  * Lists use the following syntax `[value,value,value]`
-* _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
-*   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
+* Došlo ke změnám _syntaxe_, která souvisí s inicializací a prací se slovníky a seznamy v blocích kódu.
+   * Slovníky používají následující syntaxi: `{key:value}`
+   * Seznamy používají následující syntaxi: `[value,value,value]`
+* Do knihovny byly přidány _nové uzly_, které vám pomohou vytvářet, upravovat a dotazovat slovníky.
+* Seznamy vytvořené v blocích kódu verze 1.x budou po načtení skriptu automaticky převedeny do nové syntaxe seznamu, která používá hranaté závorky `[ ]` místo složených závorek `{ }`.
 
-    ***
+   ***
 
 ![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
 
 ***
 
-### **Why should I care? What would you use these for?**
+### **Proč je to důležité? K čemu se to používá?**
 
-In computer science, Dictionaries - like lists- are collections of objects. While lists are in a specific order, dictionaries are _unordered_ collections. They are not reliant on sequential numbers (indices), instead, they utilize _keys._
+V počítačových vědách jsou slovníky, podobně jako seznamy, kolekcemi objektů. Zatímco seznamy mají položky v určitém pořadí, slovníky jsou _neuspořádané_ kolekce. Nejsou závislé na pořadových číslech (indexech), používají místo nich _klíče._
 
-In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
+Na obrázku níže je znázorněno potenciální využití slovníků. Slovníky se často používají ke spojení dvou různých položek, které spolu nemusí souviset. V našem případě propojujeme španělské slovo s anglickým pro později vyhledání.
 
 ![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
 
-> 1. Build a dictionary to relate the two pieces of data.
-> 2. Get the value with the given key.
+> 1. Vytvoří slovník, který propojí obě části dat.
+> 2. Získá hodnotu s daným klíčem.

@@ -1,25 +1,25 @@
-# What is Dynamo & How Does It Work?
+# Co je aplikace Dynamo a jak funguje?
 
-Dynamo is a [visual programming ](broken-reference/)application that can be downloaded and run in either stand-alone "Sandbox" mode or as a plug-in for other software like Revit, FormIt or Civil 3D.
+Dynamo je aplikace pro [vizuální programování](broken-reference/), kterou lze stáhnout a spustit v samostatném režimu „Sandbox“ nebo jako modul plug-in pro jiný software, například Revit, FormIt nebo Civil 3D.
 
 {% hint style="info" %}
-Learn more about the [difference between **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
+Přečtěte si další informace o [rozdílu mezi verzemi **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
 {% endhint %}
 
-### The Process
+### Proces
 
-Dynamo enables us to work within a Visual Programming process wherein we connect elements together to define the relationships and the sequences of actions that compose custom algorithms. We can use our algorithms for a wide array of applications, from processing data to generating geometry, all in real-time and without writing a lick of `code`.
+Aplikace Dynamo umožňuje vizuální programování, tedy propojovat prvky, určovat mezi nimi vazby a vytvářet tak algoritmy složené z posloupnosti akcí. Tyto algoritmy lze použít pro širokou škálu aplikací, od zpracování dat po generování geometrií, to vše v reálném čase a bez jediného řádku kódu (`code`).
 
 ![](<./images/1-1/nodes and wires - flow of data.jpg>)
 
-### Connecting Nodes and Wires
+### Propojení uzlů pomocí drátů
 
-Nodes and Wires are the key components in Dynamo to support a [visual programming](../a\_appendix/a-1\_visual-programming-and-dynamo.md) process. It help establish strong visual and systemic relationships between the parts of a design. Using simple mouse-click to connect the Nodes easily while developing and optimizing your design workflow.
+Uzly a dráty jsou v aplikaci Dynamo klíčovými komponentami, které podporují proces [vizuálního programování](../a\_appendix/a-1\_visual-programming-and-dynamo.md). Pomáhají vytvořit silné vizuální a systémové vztahy mezi součástmi návrhu. Jednoduchým kliknutím myši snadno propojíte uzly při vývoji a optimalizaci pracovního postupu návrhu.
 
 ![](<./images/1-1/what is dynamo - connecting nodes with wires.gif>)
 
-## What can Dynamo Achieve?
+## K čemu lze aplikaci Dynamo používat?
 
-From using Visual Programming for project workflows to developing customized tools, Dynamo is an integral aspect of a wide variety of exciting applications.
+Dynamo je nedílnou součástí nejrůznějších zajímavých aplikací, od používání vizuálního programování pro pracovní postupy projektů až po vývoj vlastních nástrojů.
 
-[Follow the Dynamo in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)
+[Sledujte aplikaci Dynamo na Pinterestu.](http://www.pinterest.com/modelabnyc/dynamo-in-action/)

@@ -1,5 +1,5 @@
-# Best Practices
+# Osvědčené postupy
 
-This part of the primer is organized in the spirit of a journal of “best practices”. It sheds light on several strategies that we have learned, through experience and research, to be most conducive to quality parametric workflows. As designers and programmers, our metric for quality is primarily concerned with the maintainability, dependability, usability, and efficiency of our tools. While these best practices have specific examples for either visual or text-based scripting, the principles are applicable to all programming environments and can inform many computational workflows.
+V této části příručky Primer jsou uvedeny některé osvědčené postupy. Obsahuje několik zkušenostmi a výzkumem prověřených strategií, které pomohou dosáhnout kvalitních pracovních postupů. Jako konstruktéři a programátoři měříme kvalitu zejména z hlediska udržitelnosti, použitelnosti a efektivity našich nástrojů. Ačkoliv se v následujících příkladech probírají osvědčené postupy pro vizuální nebo textové programování, lze je uplatnit ve všech programovacích prostředích a pracovních postupech.
 
 ![](./images/bestPractices.png)

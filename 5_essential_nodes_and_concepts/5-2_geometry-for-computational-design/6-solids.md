@@ -1,96 +1,96 @@
-# Solids
+# Tělesa
 
-## Solids in Dynamo
+## Tělesa v aplikaci Dynamo
 
-### What is Solid?
+### Co je těleso?
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+Pokud chcete vytvářet složitější modely, které nelze vytvořit z jedné plochy, nebo pokud chcete explicitně definovat objem, je nutné využít tělesa [](5-6\_solids.md#solids) (a polyplochy). I obyčejná krychle je dost složitá na to, aby potřebovala šest ploch (pro každou stěnu jednu). Tělesa na rozdíl od ploch nabízejí dva klíčové koncepty – přesnější topologický popis (stěny, hrany, vrcholy) a booleovské operace.
 
-### Boolean Operation to Create Spiky Ball Solid
+### Booleovská operace k vytvoření ostnatého kulového tělesa
 
-You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
+K úpravě těles můžete použít [booleovské operace](5-6\_solids.md#boolean-operations). Pojďme vytvořit ostnatou kouli pomocí několika booleovských operací.
 
 ![](<../images/5-2/6/solids  - spiky ball.jpg>)
 
-> 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
-> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
-> 3. **Cone.ByPointsRadii**: Construct cones using points on the surface.
-> 4. **Solid.UnionAll**: Union the Cones and the Sphere.
-> 5. **Topology.Edges**: Query the edges of the new Solid
-> 6. **Solid.Fillet**: Fillet the Edges of the spiky ball
+> 1. **Sphere.ByCenterPointRadius**: Vytvořte základní těleso.
+> 2. **Topology.Faces**, **Face.SurfaceGeometry**: Vytvořte dotaz na stěny tělesa a převeďte je na geometrie ploch – v tomto případě pracujeme s koulí, která má pouze jednu stěnu.
+> 3. **Cone.ByPointsRadii**: Pomocí bodů na ploše vytvořte kužely.
+> 4. **Solid.UnionAll**: Sjednoťte kužely a kouli.
+> 5. **Topology.Edges**: Vytvořte dotaz na hrany nového tělesa
+> 6. **Solid.Fillet**: Zaoblete hrany ostnaté koule
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-2/6/Geometry for Computational Design - Solids.dyn" %}
 
-### Freezing
+### Zmrazení
 
-Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
+Booleovské operace jsou složité a jejich výpočet může být pomalý. Pomocí funkce zmrazení je možné vypnout výpočet vybraných uzlů a všech následných uzlů.
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1.Use the right-click contextual menu to Freeze the Solid Union operation
+> 1. Zmrazte operaci sjednocení těles tím, že kliknete pravým tlačítkem myši a vyberete možnost Zmrazit
 >
-> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
+> 2\. Vybraný uzel a všechny následné uzly se zobrazí světle šedou průhlednou barvou a související dráty budou zobrazeny přerušovaně. Náhled ovlivněné geometrie bude také zobrazen světle šedou průhlednou barvou. Nyní můžete měnit předcházející hodnoty, aniž by došlo k výpočtu booleovského sjednocení.
 >
-> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
+> 3\. Chcete-li zmrazení zrušit, klikněte pravým tlačítkem a zrušte výběr možnosti Zmrazit.
 >
-> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 4\. Všechny ovlivněné uzly a geometrie se aktualizují a zobrazí se běžným způsobem.
 
-## Deep Dive into...
+## Podrobné informace...
 
-### Solids
+### Tělesa
 
-Solids consist of one or more Surfaces that contain volume by way of a closed boundary that defines "in" or "out." Regardless of how many of these Surfaces there are, they must form a "watertight" volume to be considered a Solid. Solids can be created by joining Surfaces or Polysurfaces together or by using operations such as loft, sweep, and revolve. Sphere, Cube, Cone and Cylinder primitives are also Solids. A Cube with at least one face removed counts as a Polysurface, which has some similar properties, but it is not a Solid.
+Tělesa se skládají z jedné nebo více ploch, které tvoří objem tím, že definují hranici, která rozděluje prostor na vnitřní a vnější. Aby byl objem považován za těleso, musí být neprodyšně uzavřen, nezávisle na počtu ploch. Tělesa lze vytvářet spojováním ploch nebo polyploch nebo pomocí operací, například spojením profilů, tažením nebo rotací. Koule, krychle, kužel a válec jsou také tělesy. Krychle s odebranou stěnou se považuje za polyplochu s podobnými vlastnostmi, ale nejedná se přímo o těleso.
 
-![Solids](../images/5-2/6/Primitives.jpg)
+![Tělesa](../images/5-2/6/Primitives.jpg)
 
-> 1. A Plane is made of a single Surface and is not a Solid.
-> 2. A Sphere is made of one Surface but _is_ a Solid.
-> 3. A Cone is made of two surfaces joined together to make a Solid.
-> 4. A Cylinder is made of three surfaces joined together to make a Solid.
-> 5. A Cube is made of six surfaces joined together to make a Solid.
+> 1. Rovina se skládá z jedné plochy a nejedná se o těleso.
+> 2. Koule je tvořena jednou plochou a _je_ tělesem.
+> 3. Kužel je tvořen dvěma spojenými plochami utvářejícími těleso.
+> 4. Válec je tvořen třemi spojenými plochami utvářejícími těleso.
+> 5. Krychle je tvořena šesti spojenými plochami utvářejícími těleso.
 
-### Topology
+### Topologie
 
-Solids are made up of three types of elements: Vertices, Edges, and Faces. Faces are the surfaces that make up the Solid. Edges are the Curves that define the connection between adjacent faces, and vertices are the start and end points of those Curves. These elements can be queried using the Topology nodes.
+Tělesa se skládají z prvků třech typů: vrcholů, hran a stěn. Stěny jsou plochy, které těleso tvoří. Hrany jsou křivky, které definují propojení sousedních hran a vrcholy jsou počáteční a koncové body těchto křivek. Tyto prvky je možné dotazovat prostřednictvím uzlů topologie.
 
-![Topology](../images/5-2/6/Solid-topology.jpg)
+![Topologie](../images/5-2/6/Solid-topology.jpg)
 
-> 1. Faces
-> 2. Edges
-> 3. Vertices
+> 1. Stěny
+> 2. Hrany
+> 3. Vrcholy
 
-### Operations
+### Operace
 
-Solids can be modified by filleting or chamfering their edges to eliminate sharp corners and angles. The chamfer operation creates a ruled surface between two faces, while a fillet blends between faces to maintain tangency.
+Tělesa lze upravit zaoblením nebo zkosením jejich hran, aby se odstranily ostré rohy a úhly. Operace zkosení vytvoří šikmou plochu mezi dvěma stěnami, zatímco zaoblení mezi nimi vytvoří plynulý přechod se zachováním tečnosti.
 
 ![](../images/5-2/6/SolidOperations.jpg)
 
-> 1. Solid Cube
-> 2. Chamfered Cube
-> 3. Filleted Cube
+> 1. Krychlové těleso
+> 2. Zkosená krychle
+> 3. Zaoblená krychle
 
-### Boolean Operations
+### Booleovské operace
 
-Solid Boolean operations are methods for combining two or more Solids. A single Boolean operation actually means performing four operations:
+Booleovské operace s tělesy kombinují dvě nebo více těles. Jedna booleovská operace ve skutečnosti provádí čtyři operace:
 
-1. **Intersect** two or more objects.
-2. **Split** them at the intersections.
-3. **Delete** unwanted portions of the geometry.
-4. **Join** everything back together.
+1. **Průnik** dvou nebo více objektů.
+2. **Rozdělení** těchto objektů v průsečících.
+3. **Odstranění** nežádoucích částí geometrie.
+4. **Spojení** celé geometrie dohromady.
 
-This makes Solid Booleans a powerful time-saving process. There are three Solid Boolean operations that distinguish which parts of the geometry are kept. ![Solid Boolean](../images/5-2/6/SolidBooleans.jpg)
+Díky tomu booleovské operace šetří velké množství času. Existují tři booleovské operace pro tělesa, které určují, která část geometrie zůstane zachována. ![Booleovská operace pro tělesa](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Union:** Remove the overlapping portions of the Solids and join them into a single Solid.
-> 2. **Difference:** Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume.
-> 3. **Intersection:** Keep only the intersecting volume of the two Solids.
+> 1. **Union:** Odebere překrývající se části těles a spojí je do jednoho tělesa.
+> 2. **Difference:** Odečte jedno těleso od druhého. Odečítané těleso se nazývá nástroj. Je možné určit, které těleso bude použito jako nástroj.
+> 3. **Intersection:** Zachová pouze společný objem obou těles.
 
-In addition to these three operations, Dynamo has **Solid.DifferenceAll** and **Solid.UnionAll** nodes for performing difference and union operations with multiple Solids. ![](../images/5-2/6/BooleanAll.jpg)
+Aplikace Dynamo kromě těchto tří operací obsahuje také uzly**Solid.DifferenceAll** a **Solid.UnionAll**, které provádějí rozdíl a sjednocení s více tělesy. ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** Union operation with sphere and outward-facing cones
-> 2. **DifferenceAll:** Difference operation with sphere and inward-facing cones
+> 1. **UnionAll:** operace sjednocení s koulí a kužely směřujícími ven
+> 2. **DifferenceAll:** operace rozdílu s koulí a kužely směřujícími dovnitř
 
 ##

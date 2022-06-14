@@ -1,108 +1,108 @@
-# What's a List
+# Co je to seznam
 
-### What's a List?
+### Co je to seznam?
 
-A list is a collection of elements, or items. Take a bunch of bananas, for example. Each banana is an item within the list (or bunch). It's easier to pick up a bunch of bananas rather than each banana individually, and the same holds for grouping elements by parametric relationships in a data structure.
+Seznam je kolekce prvků nebo položek. Vezměte si například trs banánů. Každý banán je položka v seznamu (nebo v trsu). Je jednodušší sebrat celý trs banánů, než brát každý banán jednotlivě, a to samé platí pro seskupení prvků podle parametrických vztahů v datové struktuře.
 
-![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Banány](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Autor fotografie: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
-When we buy groceries, we put all of the purchased items into a bag. This bag is also a list. If we're making banana bread, we need 3 bunches of bananas (we're making a _lot_ of banana bread). The bag represents a list of banana bunches and each bunch represents a list of bananas. The bag is a list of lists (two-dimensional) and the banana bunch is a list (one-dimensional).
+Při nákupu potravin naskládáme všechny zakoupené položky do tašky. Tato taška je také seznamem. Pokud chceme vyrobit banánový chléb, potřebujeme 3 trsy banánů (chceme vyrobit _hodně_ banánového chleba). Taška představuje seznam trsů banánů a každý trs představuje seznam banánů. Taška je seznam seznamů (dvourozměrný) a trs banánů je seznam (jednorozměrný).
 
-In Dynamo, list data is ordered, and the first item in each list has an index "0". Below, we'll discuss how lists are defined in Dynamo and how multiple lists relate to one another.
+V aplikaci Dynamo jsou data seznamu seřazena a první položka v každém seznamu má index „0“. Níže rozebereme způsob, jak v aplikaci Dynamo definovat seznamy a jak spolu více seznamů vzájemně souvisí.
 
-### Zero-Based Indices
+### Nulové indexy
 
-One thing that might seem odd at first is that the first index of a list is always 0; not 1. So, when we talk about the first item of a list, we actually mean the item that corresponds to index 0.
+Jedna věc, která se může zdát podivnou, je, že první index seznamu je vždy 0, nikoli 1. Čili pokud je řeč o první položce seznamu, ve skutečnosti máme na mysli položku s indexem 0.
 
-For example, if you were to count the number of fingers we have on our right hand, chances are that you would have counted from 1 to 5. However, if you were to put your fingers in a list, Dynamo would have given them indices from 0 to 4. While this may seem a little strange to programming beginners, the zero-based index is standard practice in most computation systems.
+Pokud byste například měli spočítat prsty na pravé ruce, existuje šance, že byste napočítali od 1 do 5. Pokud byste však vložili prsty do seznamu, aplikace Dynamo by jim přiřadila index 0 až 4. Ačkoli se toto může zdát začátečníkům v programování velmi zvláštní, nulové indexy jsou ve většině výpočetních systémů běžnou praxí.
 
-Note that we still have 5 items in the list; it’s just that the list is using a zero-based counting system. And the items being stored in the list don’t just have to be numbers. They can be any data type that Dynamo supports, such as points, curves, surfaces, families, etc.
+Všimněte si, že v seznamu stále máme 5 položek; je to proto, že seznam používá systém počítání od nuly. A položky uložené v seznamu nemusí být jen čísla. Mohou to být položky jakéhokoli datového typu, který aplikace Dynamo podporuje, například body, křivky, povrchy, rodiny atd.
 
 ![](<../images/5-4/1/what's a list - zero based indices.jpg>)
 
 > a. Index
 >
-> b. Point
+> b. Bod
 >
-> c. Item
+> c. Položka
 
-Often times the easiest way to take a look at the type of data stored in a list is to connect a watch node to another node's output. By default, the watch node automatically shows all indices to the left side of the list and displays the data items on the right.
+Nejjednodušším způsobem, jak se je možné se dívat na datový typ uložený v seznamu je nejčastěji propojení uzlu Watch s výstupem jiného uzlu. Ve výchozím nastavení uzel Watch automaticky zobrazí všechny indexy na levé straně seznamu a data zobrazí vpravo.
 
-These indices are a crucial element when working with lists.
+Tyto indexy jsou velice důležitým prvkem při práci se seznamy.
 
-### Inputs and Outputs
+### Vstupy a výstupy
 
-Pertaining to lists, inputs and outputs vary depending on the Dynamo node being used. As an example, let's use a list of 5 points and connect this output to two different Dynamo nodes: **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius**:
+Vstupy a výstupy náležející k seznamům se liší podle toho, jaký uzel aplikace Dynamo se použije. Jako příklad použijte seznam bodů a připojte tento výstup ke dvěma různým uzlům aplikace Dynamo: **PolyCurve.ByPoints** a **Circle.ByCenterPointRadius**:
 
 ![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
 
-> 1. The _points_ input for **PolyCurve.ByPoints** is looking for _"Point\[]"_. This represents a list of points
-> 2. The output for **PolyCurve.ByPoints** is a single polycurve created from a list of five point.
-> 3. The _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_.
-> 4. The output for **Circle.ByCenterPointRadius** is a list of five circles, whose centers correspond to the original list of points.
+> 1. Vstup _points_ uzlu **PolyCurve.ByPoints** hledá strukturu _„Point[]“_. Tato struktura představuje seznam bodů.
+> 2. Výstup uzlu **PolyCurve.ByPoints** je samostatný objekt PolyCurve vytvořený ze seznamu pěti bodů.
+> 3. Vstup _centerPoint_ uzlu **Circle.ByCenterPointRadius** žádá o objekt _„Point“_.
+> 4. Výstup uzlu **Circle.ByCenterPointRadius** je seznam pěti kružnic, jejichž středy odpovídají původnímu seznamu bodů.
 
-The input data for **PolyCurve.ByPoints** and **Circle.ByCenterPointRadius** are the same, however the **Polycurve.ByPoints** node gives us one polycurve while the **Circle.ByCenterPointRadius** node gives us 5 circles with centers at each point. Intuitively this makes sense: the polycurve is drawn as a curve connecting the 5 points, while the circles create a different circle at each point. So what's happening with the data?
+Vstupní data pro uzly **PolyCurve.ByPoints** a **Circle.ByCenterPointRadius** jsou stejná, uzel **PolyCurve.ByPoints** však předává jeden objekt PolyCurve, zatímco uzel **Circle.ByCenterPointRadius** předává 5 kružnic se středy v každém bodu. Je to intuitivní: Objekt PolyCurve je vykreslen jako křivka spojující 5 bodů, zatímco kružnice v každém bodu vytvářejí jinou kružnici. Co se tedy děje s daty?
 
-Hovering over the _points_ input for **Polycurve.ByPoints**, we see that the input is looking for _"Point\[]"_. Notice the brackets at the end. This represents a list of points, and to create a polycurve, the input needs to be a list for each polycurve. This node will therefore condense each list into one polycurve.
+Po přejetí umístění kurzoru nad vstupem _points_ uzlu **Polycurve.ByPoints** zjistíte, že vstup hledá strukturu _„Point[]“_. Všimněte si závorek na konci. To představuje seznam bodů a k vytvoření objektu PolyCurve je třeba na vstupu seznam pro každý objekt PolyCurve. Tento uzel proto zhušťuje každý seznam do jednoho objektu PolyCurve.
 
-On the other hand, the _centerPoint_ input for **Circle.ByCenterPointRadius** asks for _"Point"_. This node looks for one point, as an item, to define the center point of the circle. This is why we get five circles from the input data. Recognizing these difference with inputs in Dynamo helps to better understand how the nodes are operating when managing data.
+Na druhou stranu vstup _centerPoint_ uzlu **Circle.ByCenterPointRadius** žádá objekt _„Point“_. Tento uzel hledá jeden bod jako položku k definování středu kružnice. Proto ze vstupních dat vznikne pět kružnic. Rozlišování těchto vstupů v aplikaci Dynamo vám pomůže pochopit, jak uzly při zpracování dat fungují.
 
-### Lacing
+### Vázání
 
-Data matching is a problem without a clean solution. It occurs when a node has access to differently sized inputs. Changing the data matching algorithm can lead to vastly different results.
+Porovnávání dat je problém bez čistého řešení. Dochází k němu, pokud má uzel přístup různě velkým vstupům. Změna algoritmu porovnávání dat může vést k naprosto odlišným výsledkům.
 
-Imagine a node which creates line segments between points (**Line.ByStartPointEndPoint**). It will have two input parameters which both supply point coordinates:
+Představte si uzel, který tvoří segmenty úseček mezi body (**Line.ByStartPointEndPoint**). Bude mít dva vstupní parametry, které oba předávají souřadnice bodů:
 
-#### Shortest List
+#### Nejkratší seznam
 
-The simplest way is to connect the inputs one-on-one until one of the streams runs dry. This is called the “Shortest List” algorithm. This is the default behavior for Dynamo nodes:
+Nejjednodušším způsobem je spojovat vstupy jedna ku jedné, dokud jeden z datových proudů nedojde na konec. Tomuto se říká algoritmus „Nejkratší seznam“. Jedná se o výchozí chování uzlů aplikace Dynamo:
 
 ![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
 
-#### Longest List
+#### Nejdelší seznam
 
-The “Longest List” algorithm keeps connecting inputs, reusing elements, until all streams run dry:
+Algoritmus „Nejdelší seznam“ připojuje vstupy a opakovaně využívá prvky tak dlouho, dokud všechny datové proudy nedojdou na konec:
 
 ![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
 
-#### Cross Product
+#### Kartézský součin
 
-Finally, the “Cross Product” method makes all possible connections:
+Metoda „Kartézský součin“ provede všechna možná připojení:
 
 ![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
 
-As you can see there are different ways in which we can draw lines between these sets of points. Lacing options are found by right-clicking the center of a node and choosing the "Lacing" menu.
+Jak vidíte, existují různé způsoby kreslení čar mezi těmito množinami bodů. Možnosti vázání naleznete po kliknutí pravým tlačítkem na střed uzlu a výběru nabídky „Vázání“.
 
 ![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
 
-## Exercise
+## Cvičení
 
-> Download the example file by clicking on the link below.
+> Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
-> A full list of example files can be found in the Appendix.
+> Úplný seznam vzorových souborů najdete v dodatku.
 
 {% file src="../datasets/5-4/1/Lacing.dyn" %}
 
-To demonstrate the lacing operations below, we'll use this base file to define shortest list, longest list, and cross product.
+Pomocí tohoto základního souboru znázorníme níže operace vázání tím, že definujeme nejkratší seznam, nejdelší seznam a kartézský součin.
 
-We'll change the lacing on **Point.ByCoordinates**, but won't change anything else about the graph above.
+U uzlu **Point.ByCoordinates** se změní vázání, ale nic jiného se u grafu výše nezmění.
 
-### Shortest List
+### Nejkratší seznam
 
-Choosing _shortest list_ as the lacing option (also the default option), we get a basic diagonal line composed of five points. Five points is the length of the lesser list, so the shortest list lacing stops after it reaches the end of one list.
+Pokud jako možnost vázání vyberete _nejkratší seznam_ (což je také výchozí možnost), získáte základní diagonální čáru složenou z pěti bodů. Pět bodů je délka kratšího seznamu, takže vázání nejkratšího seznamu se zastaví, jakmile dorazí na konec jednoho ze seznamů.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
 
-### **Longest List**
+### **Nejdelší seznam**
 
-By changing the lacing to _longest list_, we get a diagonal line which extends vertically. By the same method as the concept diagram, the last item in the list of 5 items will be repeated to reach the length of the longer list.
+Změnou vázání na _nejdelší seznam_ získáte diagonální čáru, která se vertikálně rozšíří. Poslední položka v seznamu 5 položek bude opakována tak dlouho, dokud nebude dosaženo délky delšího seznamu, což je stejné chování jako metoda koncepčního diagramu.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
 
-### **Cross Product**
+### **Kartézský součin**
 
-By changing the lacing to _Cross Product_, we get every combination between each list, giving us a 5x10 grid of points. This is an equivalent data structure to the cross product as shown in the concept diagram above, except our data is now a list of lists. By connecting a polycurve, we can see that each list is defined by its X-Value, giving us a row of vertical lines.
+Změnou vázání na _Kartézský součin_ získáte všechny kombinace mezi všemi seznamy, což vytvoří osnovu bodů o rozměrech 5x10. Jedná se o datovou strukturu ekvivalentní ke kartézskému součinu, jak je ukázáno v koncepčním diagramu výše, až na to, že data jsou nyní seznamy seznamů. Pokud připojíme objekt PolyCurve, uvidíme, že každý seznam je definovaný hodnotou X, což znamená, že máme řadu vertikálních čar.
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
