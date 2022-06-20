@@ -65,7 +65,7 @@ a. 在**“图形预览”**模式下
 
 ![](<./images/3-1/workspace - in canvas search.gif>)
 
-b. 在**“三维预览”**模式下
+b. 在 **“三维预览”** 模式下
 
 * 使用图标：
    * ![](<./images/3-1/3-1-08 graph preview zoom to fitpsd.jpg>)缩放以适配
