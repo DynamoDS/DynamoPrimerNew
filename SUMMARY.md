@@ -22,7 +22,7 @@
    * [程序的构建块](5\_essential\_nodes\_and\_concepts/5-3\_the-building-blocks-of-programs/README.md)
       * [数据](5\_essential\_nodes\_and\_concepts/5-3\_the-building-blocks-of-programs/1-data.md)
       * [数学](5\_essential\_nodes\_and\_concepts/5-3\_the-building-blocks-of-programs/2-math.md)
-      * 逻辑[](5\_essential\_nodes\_and\_concepts/5-3\_the-building-blocks-of-programs/3-logic.md)
+      * [逻辑](5\_essential\_nodes\_and\_concepts/5-3\_the-building-blocks-of-programs/3-logic.md)
       * [字符串](5\_essential\_nodes\_and\_concepts/5-3\_the-building-blocks-of-programs/4-strings.md)
       * [颜色](5\_essential\_nodes\_and\_concepts/5-3\_the-building-blocks-of-programs/5-color.md)
    * [使用列表进行设计](5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/README.md)
