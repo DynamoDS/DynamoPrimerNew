@@ -43,7 +43,7 @@ Dynamo 应用程序可从[Dynamo 网站](http://dynamobim.com)获得。正式版
 
 在此步骤中，请下载 [7zip](https://www.7-zip.org/download.html) 并将其安装到计算机。
 
-在压缩文件上单击鼠标右键，然后选择**“全部提取”**...
+在压缩文件上单击鼠标右键，然后选择 **“全部提取”** ...
 
 ![](<images/02-03 Extract zip file.jpg>)
 
@@ -53,7 +53,7 @@ Dynamo 应用程序可从[Dynamo 网站](http://dynamobim.com)获得。正式版
 
 #### 启动
 
-在目标文件夹中，双击**“DynamoSandbox.exe”**以启动它
+在目标文件夹中，双击 **“DynamoSandbox.exe”** 以启动它
 
 ![](<images/02-05 Dynamo exe.jpg>)
 
@@ -64,4 +64,4 @@ Dynamo 应用程序可从[Dynamo 网站](http://dynamobim.com)获得。正式版
 恭喜您，现在已完成使用 DynamoSandbox 的设置！
 
 {% hint style="info" %}
-**“几何图形”**是 Dynamo Sandbox 中的一项附加功能，仅适用于拥有以下 Autodesk 软件的当前固定期限的许可或许可的用户：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**“几何图形”**允许用户从 Dynamo Sandbox 输入、创建、编辑和输出几何图形。{% endhint %}
+**“几何图形”** 是 Dynamo Sandbox 中的一项附加功能，仅适用于拥有以下 Autodesk 软件的当前固定期限的许可或许可的用户：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**“几何图形”** 允许用户从 Dynamo Sandbox 输入、创建、编辑和输出几何图形。{% endhint %}
