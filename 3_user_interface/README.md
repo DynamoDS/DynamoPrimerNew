@@ -20,7 +20,7 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 
 #### Dynamo 菜单
 
-常规信息和设置位于**“Dynamo”**下拉菜单中。
+常规信息和设置位于 **“Dynamo”** 下拉菜单中。
 
 ![](<images/user interface - dynamo menu.jpg>)
 
@@ -31,7 +31,7 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 
 #### 帮助
 
-如果遇到问题，请查看**“帮助”**菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
+如果遇到问题，请查看 **“帮助”** 菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
 
 ![](<images/user interface - help menu.jpg>)
 
@@ -63,7 +63,7 @@ Dynamo 库是功能库的集合，每个库都包含按类别分组的节点。�
 
 ### 工作空间
 
-在工作空间中，我们可以编写可视化程序，您还可以更改其“预览”设置以从此处查看三维几何图形。有关更多详细信息，请参见 [1-workspace.md](1-workspace.md "提及")。
+在工作空间中，我们可以编写可视化程序，您还可以更改其“预览”设置以从此处查看三维几何图形。有关更多详细信息，请参见 [1-workspace.md](1-workspace.md "提及") 。
 
 ![](<images/user interface - workspace.gif>)
 
