@@ -67,7 +67,7 @@ $$
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints：**将上一步的 **Point.ByCoordinates** 连接到 _points_。我们可以不输入而保留 _connectLastToFirst_，因为我们不会绘制闭合曲线。这将创建穿过上一步中定义的每个点的螺旋。
+**Polycurve.ByPoints：** 将上一步的 **Point.ByCoordinates** 连接到 _points_。我们可以不输入而保留 _connectLastToFirst_，因为我们不会绘制闭合曲线。这将创建穿过上一步中定义的每个点的螺旋。
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
@@ -79,7 +79,7 @@ $$
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
-**Number Sequence**：这是“_t_”的原始数组。通过将其连接到**“Circle.ByCenterPointRadius”**的半径值，圆心仍会与原点进一步偏离，但圆的半径不断增大，从而创建一个时髦的 Fibonacci 圆图。
+**Number Sequence**：这是“_t_”的原始数组。通过将其连接到 **“Circle.ByCenterPointRadius”** 的半径值，圆心仍会与原点进一步偏离，但圆的半径不断增大，从而创建一个时髦的 Fibonacci 圆图。
 
 如果使其成为三维形式，即可获得奖励积分！
 
