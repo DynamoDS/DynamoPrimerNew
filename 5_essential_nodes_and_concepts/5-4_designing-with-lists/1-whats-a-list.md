@@ -38,16 +38,16 @@
 
 ![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
 
-> 1. **“PolyCurve.ByPoints”**的_“points”_输入正在查找_“Point\[]”_。这表示一列点
-> 2. **“PolyCurve.ByPoints”**的输出是基于一列五个点所创建的一条复合线。
-> 3. **Circle.ByCenterPointRadius** 的 _centerPoint_ 输入要求提供_“点”_。
+> 1. **“PolyCurve.ByPoints”** 的 _“points”_ 输入正在查找 _“Point\[]”_。这表示一列点
+> 2. **“PolyCurve.ByPoints”** 的输出是基于一列五个点所创建的一条复合线。
+> 3. **Circle.ByCenterPointRadius** 的 _centerPoint_ 输入要求提供 _“点”_。
 > 4. **Circle.ByCenterPointRadius** 的输出是一列五个圆，其中心与点的原始列表相对应。
 
-**“PolyCurve.ByPoints”**和**“Circle.ByCenterPointRadius”**的输入数据相同，但**“Polycurve.ByPoints”**节点会提供一条复合线，而**“Circle.ByCenterPointRadius”**节点会提供 5 个圆（中心位于每个点处）。直观地讲，这很有意义：将复合线绘制为连接 5 个点的曲线，而圆在每个点处创建不同的圆。数据发生了什么变化？
+**“PolyCurve.ByPoints”** 和 **“Circle.ByCenterPointRadius”** 的输入数据相同，但 **“Polycurve.ByPoints”** 节点会提供一条复合线，而 **“Circle.ByCenterPointRadius”** 节点会提供 5 个圆（中心位于每个点处）。直观地讲，这很有意义：将复合线绘制为连接 5 个点的曲线，而圆在每个点处创建不同的圆。数据发生了什么变化？
 
-通过将光标悬停在**“Polycurve.ByPoints”**的_“points”_输入上，我们会看到该输入正在查找_“Point\[]”_。请注意末端的括号。这表示一列点，并且要创建复合线，输入需要每个复合线是一个列表。因此，该节点会将每个列表压缩为一个复合线。
+通过将光标悬停在 **“Polycurve.ByPoints”** 的 _“points”_ 输入上，我们会看到该输入正在查找 _“Point\[]”_。请注意末端的括号。这表示一列点，并且要创建复合线，输入需要每个复合线是一个列表。因此，该节点会将每个列表压缩为一个复合线。
 
-另一方面，**Circle.ByCenterPointRadius** 的 _centerPoint_ 输入要求提供_“点”_。此节点会查找一个点作为项目，以定义圆的圆心。这就是我们基于输入数据获得五个圆的原因。在 Dynamo 中识别输入的这些差异有助于在管理数据时更好地了解节点的运行方式。
+另一方面，**Circle.ByCenterPointRadius** 的 _centerPoint_ 输入要求提供 _“点”_。此节点会查找一个点作为项目，以定义圆的圆心。这就是我们基于输入数据获得五个圆的原因。在 Dynamo 中识别输入的这些差异有助于在管理数据时更好地了解节点的运行方式。
 
 ### 连缀
 
@@ -91,18 +91,18 @@
 
 ### 最短列表
 
-通过选择_“最短列表”_作为连缀选项（也是默认选项），我们会得到一条由五个点组成的基本对角线。五个点是较小列表的长度，因此最短列表连缀在到达一个列表的末尾后即停止。
+通过选择 _“最短列表”_ 作为连缀选项（也是默认选项），我们会得到一条由五个点组成的基本对角线。五个点是较小列表的长度，因此最短列表连缀在到达一个列表的末尾后即停止。
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
 
 ### **最长列表**
 
-通过将连缀更改为_“最长列表”_，我们得到一条垂直延伸的对角线。采用与概念图相同的方法，将重复该列表的 5 个项目中的最后一项，以达到较长列表的长度。
+通过将连缀更改为 _“最长列表”_，我们得到一条垂直延伸的对角线。采用与概念图相同的方法，将重复该列表的 5 个项目中的最后一项，以达到较长列表的长度。
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
 
 ### **笛卡尔积**
 
-通过将连缀更改为_“笛卡尔积”_，我们得到每个列表之间的每个组合，从而获得 5x10 点栅格。这是与上述概念图中所示的笛卡尔积等效的数据结构，但数据现在是一列列表。通过连接复合线，我们可以看到每个列表均由其 X 值定义，从而得到一行垂直线。
+通过将连缀更改为 _“笛卡尔积”_，我们得到每个列表之间的每个组合，从而获得 5x10 点栅格。这是与上述概念图中所示的笛卡尔积等效的数据结构，但数据现在是一列列表。通过连接复合线，我们可以看到每个列表均由其 X 值定义，从而得到一行垂直线。
 
 ![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
