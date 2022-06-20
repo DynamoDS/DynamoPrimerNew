@@ -14,7 +14,7 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 
 映射无疑是 Dynamo 中数据管理最复杂的部分，并且在处理列表的复杂层次结构时尤其重要。在下面的一系列练习中，我们将演示在数据变为多维时何时使用映射和组合。
 
-在上一节中，可以找到**“List.Map”**和**“List.Combine”**的初步介绍。在下面的最后一个练习中，我们将对复杂数据结构使用这些节点。
+在上一节中，可以找到 **“List.Map”** 和 **“List.Combine”** 的初步介绍。在下面的最后一个练习中，我们将对复杂数据结构使用这些节点。
 
 ## 练习 - 二维列表 - 基本
 
@@ -36,15 +36,15 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 02.jpg>)
 
 > 1. 让我们选择索引 1 以抓取上方曲面。 我们使用 **List.GetItemAtIndex** 节点来执行此操作。
-> 2. 关闭**“Geometry.ImportFromSAT”**预览中的几何图形预览。
+> 2. 关闭 **“Geometry.ImportFromSAT”** 预览中的几何图形预览。
 
 下一步是将曲面分割为点栅格。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 03.jpg>)
 
-> 1\.使用**“代码块”**，插入以下两行代码：`0..1..#10;` `0..1..#5;`
+> 1\.使用 **“代码块”**，插入以下两行代码：`0..1..#10;` `0..1..#5;`
 >
-> 2\.使用**“Surface.PointAtParameter”**，将两个代码块值连接到 u 和 _v_。将此节点的_连缀_更改为_“叉积”_。
+> 2\.使用 **“Surface.PointAtParameter”**，将两个代码块值连接到 u 和 _v_。将此节点的 _连缀_ 更改为 _“叉积”_。
 >
 > 3\.输出显示数据结构，这在 Dynamo 预览中也可见。
 
@@ -53,13 +53,13 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 04.jpg>)
 
 > 1. 要了解数据结构的组织方式，我们将 **NurbsCurve.ByPoints** 连接到 **Surface.PointAtParameter** 的输出。
-> 2. 现在，可以关闭**“List.GetItemAtIndex”**节点的预览，以获得更清晰的结果。
+> 2. 现在，可以关闭 **“List.GetItemAtIndex”** 节点的预览，以获得更清晰的结果。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists basic 05.jpg>)
 
 > 1. 基本 **List.Transpose** 将翻转一列列表的列和行。
 > 2. 通过将 **List.Transpose** 的输出连接到 **NurbsCurve.ByPoints**，我们现在得到五条曲线在整个曲面上水平延伸。
-> 3. 可以在上一步中关闭**“NurbsCurve.ByPoints”**节点的预览，以在图像中获得相同的结果。
+> 3. 可以在上一步中关闭 **“NurbsCurve.ByPoints”** 节点的预览，以在图像中获得相同的结果。
 
 ## 练习 - 二维列表 - 高级
 
@@ -76,7 +76,7 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
 
 > 1. 按照与上一练习相同的方式，使用以下两行代码定义_代码块_：`0..1..#10;` `0..1..#5;`
-> 2. 将这些输出连接到两个 **Surface.PointAtParameter** 节点，每个节点的_连缀_设置为_“叉积”_。 其中一个节点连接到原始曲面，而另一个节点连接到偏移曲面。
+> 2. 将这些输出连接到两个 **Surface.PointAtParameter** 节点，每个节点的 _连缀_ 设置为 _“叉积”_。 其中一个节点连接到原始曲面，而另一个节点连接到偏移曲面。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
 
@@ -91,7 +91,7 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 06.jpg>)
 
-> 1. 在上一步中，关闭**“Surface.ByLoft”**节点的预览。
+> 1. 在上一步中，关闭 **“Surface.ByLoft”** 节点的预览。
 > 2. 通过使用 **List.Transpose**，请记住，我们将翻转所有列和行。此节点会将两列（每个列表十条曲线）转换为十列（每个列表两条曲线）。现在，我们得到与另一个曲面上的相邻曲线相关的每条 NURBS 曲线。
 > 3. 使用 **Surface.ByLoft**，我们得到一个带肋的结构。
 
@@ -99,14 +99,14 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
 
-> 1. 在开始之前，请在上一步中关闭**“Surface.ByLoft”**预览以避免混淆。
-> 2. 除 **List.Transpose** 之外，还可以使用 **List.Combine**。这将对每个子列表运算_“连结符”_。
-> 3. 在本例中，我们使用 **List.Create** 作为_“连结符”_，这将在子列表中创建每个项目的列表。
+> 1. 在开始之前，请在上一步中关闭 **“Surface.ByLoft”** 预览以避免混淆。
+> 2. 除 **List.Transpose** 之外，还可以使用 **List.Combine**。这将对每个子列表运算 _“连结符”_。
+> 3. 在本例中，我们使用 **List.Create** 作为 _“连结符”_，这将在子列表中创建每个项目的列表。
 > 4. 使用 **Surface.ByLoft** 节点，我们得到与上一步中相同的曲面。在这种情况下，转置更容易使用，但当数据结构变得更加复杂时，**List.Combine** 更加可靠。
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
 
-> 1. 如果要切换带肋结构中曲线的方向，请后退几步，我们需要先使用**“List.Transpose”**，然后再连接到**“NurbsCurve.ByPoints”**。这将翻转列和行，从而得到 5 个水平加强筋。
+> 1. 如果要切换带肋结构中曲线的方向，请后退几步，我们需要先使用 **“List.Transpose”**，然后再连接到 **“NurbsCurve.ByPoints”**。这将翻转列和行，从而得到 5 个水平加强筋。
 
 ## 练习 - 三维列表
 
@@ -123,19 +123,19 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
 
-> 1. 按照与上一练习相同的方式，使用以下两行代码定义**“代码块”**：`0..1..#20;` `0..1..#20;`
-> 2. 将这些输出连接到两个 **Surface.PointAtParameter** 节点，每个节点的连缀设置为_“叉积”_。其中一个节点连接到原始曲面，而另一个节点连接到偏移曲面。
+> 1. 按照与上一练习相同的方式，使用以下两行代码定义 **“代码块”**：`0..1..#20;` `0..1..#20;`
+> 2. 将这些输出连接到两个 **Surface.PointAtParameter** 节点，每个节点的连缀设置为 _“叉积”_。其中一个节点连接到原始曲面，而另一个节点连接到偏移曲面。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
 
 > 1. 与上一练习中一样，将输出连接到两个 **NurbsCurve.ByPoints** 节点。
-> 2. 查看**“NurbsCurve.ByPoints”**的输出，注意到这是一列两个列表，比上一练习更复杂。数据按基础曲面分类，因此我们为结构化数据添加了另一个层级。
+> 2. 查看 **“NurbsCurve.ByPoints”** 的输出，注意到这是一列两个列表，比上一练习更复杂。数据按基础曲面分类，因此我们为结构化数据添加了另一个层级。
 > 3. 请注意，**Surface.PointAtParameter** 节点中的对象变得更加复杂。在本例中，我们会看到一列列表。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 05.jpg>)
 
 > 1. 在继续操作之前，请关闭现有曲面的预览。
-> 2. 使用**“List.Create”**节点，我们将 NURBS 曲线合并为一个数据结构，从而创建一列列表（其中每个元素也是一个列表）。
+> 2. 使用 **“List.Create”** 节点，我们将 NURBS 曲线合并为一个数据结构，从而创建一列列表（其中每个元素也是一个列表）。
 > 3. 通过连接 **Surface.ByLoft** 节点，我们得到原始曲面的版本，因为它们各自保留在由原始数据结构创建的自己列表中。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 06.jpg>)
@@ -145,7 +145,7 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
 > 1. **List.Combine** 在此处将更加适用。当访问更复杂的数据结构时，我们要使用 **List.Map** 和 **List.Combine** 节点。
-> 2. 使用 **List.Create** 作为_“连结符”_，我们可以创建一个数据结构，使其更加适用。
+> 2. 使用 **List.Create** 作为 _“连结符”_，我们可以创建一个数据结构，使其更加适用。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
@@ -158,11 +158,11 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 10.jpg>)
 
-> 1. 我们使用**“Surface.Thicken”**节点和输入设置为几何图形添加一些深度，如图所示。
+> 1. 我们使用 **“Surface.Thicken”** 节点和输入设置为几何图形添加一些深度，如图所示。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 11.jpg>)
 
-> 1. 最好添加一个曲面来支撑这两个结构，因此请添加另一个**“Surface.ByLoft”**节点，并使用上一步中**“NurbsCurve.ByPoints”**的第一个输出作为输入。
+> 1. 最好添加一个曲面来支撑这两个结构，因此请添加另一个 **“Surface.ByLoft”** 节点，并使用上一步中 **“NurbsCurve.ByPoints”** 的第一个输出作为输入。
 > 2. 随着预览变得混乱，请通过在每个节点上单击鼠标右键并取消选中“预览”以关闭这些节点的预览，以便更好地查看结果。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 12.jpg>)
@@ -177,11 +177,11 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 14.jpg>)
 
-> 1. 由于我们的层次结构中还有一层级，因此我们需要将**“List.Map”**与**“List.Tranpose”**函数一起使用来更改 NURBS 曲线的方向。
+> 1. 由于我们的层次结构中还有一层级，因此我们需要将 **“List.Map”** 与 **“List.Tranpose”** 函数一起使用来更改 NURBS 曲线的方向。
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 15.jpg>)
 
-> 1. 我们可能希望增加踏板数，因此可以将**“代码块”**更改为 `0..1..#20;` `0..1..#30;`
+> 1. 我们可能希望增加踏板数，因此可以将 **“代码块”** 更改为 `0..1..#20;` `0..1..#30;`
 
 摇椅的第一个版本很流畅，因此我们的第二个模型提供了越野、运动多功能版本的靠背。
 
