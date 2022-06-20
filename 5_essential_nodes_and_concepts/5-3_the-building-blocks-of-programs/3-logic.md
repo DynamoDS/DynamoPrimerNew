@@ -18,7 +18,7 @@
 
 接下来，我们来看一个简短示例，分别介绍这三个节点在使用“If”条件语句时的行为。
 
-在此图中，_boolean_ 设置为 _true_，这意味着结果是字符串读取：_“如果为 true，这是结果”。_在此处，创建 _If_ 语句的三个节点的工作方式相同。
+在此图中，_boolean_ 设置为 _true_，这意味着结果是字符串读取：_“如果为 true，这是结果”。_ 在此处，创建  _If_ 语句的三个节点的工作方式相同。
 
 ![](<../images/5-3/3/logic - conditional statements 01 false.jpg>)
 
@@ -64,17 +64,17 @@
 
 ![](<../images/5-3/3/logic - exercise part II-01.jpg>)
 
-> a. 使用具有这些输入值的**“Sequence”**节点。
+> a. 使用具有这些输入值的 **“Sequence”** 节点。
 >
-> b. 我们已取消将该列表输入连接到**“List.FilterByBoolMask”**。现在，我们将这些节点放在旁边，但稍后在练习中，它们会派上用场。
+> b. 我们已取消将该列表输入连接到 **“List.FilterByBoolMask”**。现在，我们将这些节点放在旁边，但稍后在练习中，它们会派上用场。
 
 3\.首先，我们创建一组单独的图形，如上图所示。该组节点表示参数方程，用于定义曲线。几点注意事项：
 
 ![](<../images/5-3/3/logic - exercise part II-02.jpg>)
 
-> a. 第一个**“数字滑块”**表示波浪的频率，其最小值应为 1，最大值应为 4，步长应为 0.01。
+> a. 第一个 **“数字滑块”** 表示波浪的频率，其最小值应为 1，最大值应为 4，步长应为 0.01。
 >
-> b. 第二个**“数字滑块”**表示波浪的振幅，其最小值应为 0，最大值应为 1，步长应为 0.01。
+> b. 第二个 **“数字滑块”** 表示波浪的振幅，其最小值应为 0，最大值应为 1，步长应为 0.01。
 >
 > c. **PolyCurve.ByPoints** - 如果复制上述节点图表，则在 Dynamo 预览视口中结果为正弦曲线。
 
@@ -88,21 +88,21 @@
 
 > a. **Math.RemapRange** - 使用在步骤 02 中创建的数字序列，我们通过重新映射范围来创建一系列新数字。原始数字来自步骤 01，范围为 0-100。这些数字介于 0 到 1，分别通过 _newMin_ 和 _newMax_ 输入。
 
-5\.创建**“Curve.PointAtParameter”**节点，然后将步骤 04 中的**“Math.RemapRange”**输出连接为其 _param_ 输入。
+5\.创建 **“Curve.PointAtParameter”** 节点，然后将步骤 04 中的 **“Math.RemapRange”** 输出连接为其 _param_ 输入。
 
 ![](<../images/5-3/3/logic - exercise part II-05.jpg>)
 
 此步骤将沿曲线创建点。我们将数字重新映射为 0 到 1，因为 _param_ 的输入将查找此范围中的值。值 _0_ 表示开始点，值 _1_ 表示结束点。介于两者之间的所有数字均在 _\[0,1]_ 范围内求值。
 
-6\.将**“Curve.PointAtParameter”**的输出连接到**“List.FilterByBoolMask”**，以分隔奇数和偶数索引列表。
+6\.将 **“Curve.PointAtParameter”** 的输出连接到 **“List.FilterByBoolMask”**，以分隔奇数和偶数索引列表。
 
 ![](<../images/5-3/3/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask** - 将上一步的**“Curve.PointAtParameter”**连接到 _list_ 输入。
+> a. **List.FilterByBoolMask** - 将上一步的 **“Curve.PointAtParameter”** 连接到 _list_ 输入。
 >
 > b. **Watch** - _in_ 的观察节点和 _out_ 的观察节点表明，我们有表示偶数索引和奇数索引的两个列表。这些点在曲线上的排序方式相同，我们将在下一步中进行演示。
 
-7\.接下来，我们将在步骤 05 中使用**“List.FilterByBoolMask”**的输出结果，以根据其索引生成具有大小的几何体。
+7\.接下来，我们将在步骤 05 中使用 **“List.FilterByBoolMask”** 的输出结果，以根据其索引生成具有大小的几何体。
 
 **Cuboid.ByLengths** - 重新创建在上图中所见到的连接，以沿正弦曲线获得拉链。立方体在此处就是一个框，我们将基于框中心的曲线点定义其大小。现在，偶数/奇数分割的逻辑在模型中应该一清二楚。
 
