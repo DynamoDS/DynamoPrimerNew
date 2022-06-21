@@ -46,13 +46,13 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 #### **NurbsCrvtoSurface**
 
-此处应用的逻辑与_“PolygonsToSurface”_节点中的逻辑相同。但是，我们不是映射多边形点，而是映射 NURBS 曲线的控制点。
+此处应用的逻辑与 _“PolygonsToSurface”_ 节点中的逻辑相同。但是，我们不是映射多边形点，而是映射 NURBS 曲线的控制点。
 
 ![](<../images/6-2/3/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
-此节点变得更加复杂，但概念非常简单：与_“PointsToSurface”_节点类似，此节点会将点从一个曲面映射到另一个曲面。但是，它还会考虑不在原始源曲面上的点，获取其与最近 UV 参数的距离，并将此距离映射到相应 UV 坐标处的目标曲面法线。在查看示例文件时，这会更有意义。
+此节点变得更加复杂，但概念非常简单：与 _“PointsToSurface”_ 节点类似，此节点会将点从一个曲面映射到另一个曲面。但是，它还会考虑不在原始源曲面上的点，获取其与最近 UV 参数的距离，并将此距离映射到相应 UV 坐标处的目标曲面法线。在查看示例文件时，这会更有意义。
 
 ![](<../images/6-2/3/develop package -OffsetPointsToSurface.jpg>)
 
@@ -70,17 +70,17 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 ![](<../images/6-2/3/develop package - example files 01.jpg>)
 
-接着，打开_“extra”_文件夹，该文件夹中存储软件包中所有非自定义节点的文件。这是存储 Dynamo 软件包示例文件（如果存在）的位置。下面的屏幕截图介绍每个示例文件中演示的概念。
+接着，打开 _“extra”_ 文件夹，该文件夹中存储软件包中所有非自定义节点的文件。这是存储 Dynamo 软件包示例文件（如果存在）的位置。下面的屏幕截图介绍每个示例文件中演示的概念。
 
 #### **01-PanelingWithPolygons**
 
-此示例文件演示了如何使用_“PointsToSurface”_来根据矩形栅格为曲面镶板。这应该看起来很熟悉，如我们在[上一章](../10\_custom-nodes/10-2\_creating.md)中演示的类似工作流。
+此示例文件演示了如何使用 _“PointsToSurface”_ 来根据矩形栅格为曲面镶板。这应该看起来很熟悉，如我们在[上一章](../10\_custom-nodes/10-2\_creating.md)中演示的类似工作流。
 
 ![](<../images/6-2/3/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
-使用类似的工作流，本练习文件显示用于将圆（或表示圆的多边形）从一个曲面映射到另一个曲面的设置。这将使用_“PolygonsToSurface”_节点。
+使用类似的工作流，本练习文件显示用于将圆（或表示圆的多边形）从一个曲面映射到另一个曲面的设置。这将使用 _“PolygonsToSurface”_ 节点。
 
 ![](<../images/6-2/3/develop package -sample file 02.jpg>)
 
