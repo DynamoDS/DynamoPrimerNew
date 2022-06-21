@@ -168,7 +168,7 @@ Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v př
 
 * Můžete vytvořit šablony, které **určí grafické normy ve vizuálních grafech, aby spolupracovníci měli standardizovaný způsob, jak grafům porozumět**.
 * Při tvorbě šablony můžete standardizovat **barvy skupin a velikosti písem** a kategorizovat tak typy pracovních postupů nebo akcí s daty.
-* Při tvorbě šablony můžete dokonce standardizovat způsob, jakým chcete v grafu **opatřit popisky, obarvit nebo nastavit styl u rozdílu mezi pracovními postupy front-end a back-end **.
+* Při tvorbě šablony můžete dokonce standardizovat způsob, jakým chcete v grafu **opatřit popisky, obarvit nebo nastavit styl u rozdílu mezi pracovními postupy front-end a back-end**.
 
 ![](<images/1/graphstrategy10 (2).png>)
 
