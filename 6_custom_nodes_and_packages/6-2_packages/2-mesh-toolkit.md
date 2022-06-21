@@ -12,7 +12,7 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 ### 安装 Mesh Toolkit
 
-在 Dynamo 中，转到顶部菜单栏中的_“软件包”>“搜索软件包...”_。在搜索字段中，键入_“MeshToolkit”_，全部写为一个单词并注意大小写。单击“安装”以开始下载。就这么简单！
+在 Dynamo 中，转到顶部菜单栏中的 _“软件包”>“搜索软件包...”_。在搜索字段中，键入 _“MeshToolkit”_，全部写为一个单词并注意大小写。单击“安装”以开始下载。就这么简单！
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
@@ -31,36 +31,36 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 ![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **File Path**：找到要输入的网格文件 (_stanford\_bunny\_tri.obj_)。支持的文件类型包括 .mix 和 .obj
-> 2. **Mesh.ImportFile：**连接文件路径以导入网格
+> 2. **Mesh.ImportFile：** 连接文件路径以导入网格
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
-> 1. **Point.ByCoordinates：**构造点 - 这将是圆弧的中心。
-> 2. **Arc.ByCenterPointRadiusAngle：**围绕点构造圆弧。此曲线将用于定位一系列平面。 \_\_ 设置如下所示：\_\_ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates：** 构造点 - 这将是圆弧的中心。
+> 2. **Arc.ByCenterPointRadiusAngle：** 围绕点构造圆弧。此曲线将用于定位一系列平面。 \_\_ 设置如下所示：\_\_ `radius: 40, startAngle: -90, endAngle:0`
 
 创建一系列沿圆弧定向的平面。
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **代码块**：创建 25 个介于 0 和 1 之间的数字。
-> 2. **Curve.PointAtParameter：**将圆弧连接到_“curve”_输入，将代码块输出连接到_“param”_输入以沿曲线提取一系列点。
-> 3. **Curve.TangentAtParameter：**连接与上一个节点相同的输入。
-> 4. **Plane.ByOriginNormal：**将点连接到_“origin”_输入并将向量连接到_“normal”_输入，以在每个点处创建一系列平面。
+> 2. **Curve.PointAtParameter：** 将圆弧连接到 _“curve”_ 输入，将代码块输出连接到 _“param”_ 输入以沿曲线提取一系列点。
+> 3. **Curve.TangentAtParameter：** 连接与上一个节点相同的输入。
+> 4. **Plane.ByOriginNormal：** 将点连接到 _“origin”_ 输入并将向量连接到 _“normal”_ 输入，以在每个点处创建一系列平面。
 
 接下来，我们将使用这些平面来与网格相交。
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
-> 1. **Mesh.Intersect：**使平面与导入的网格相交，从而创建一系列复合线轮廓。 在节点上单击鼠标右键并将连缀设置为最长
-> 2. **PolyCurve.Curves：**将复合线断为其曲线片段。
-> 3. **Curve.EndPoint：**提取每条曲线的端点。
-> 4. **NurbsCurve.ByPoints：**使用点来构建 NURBS 曲线。使用设定为 _True_ 的布尔节点闭合曲线。
+> 1. **Mesh.Intersect：** 使平面与导入的网格相交，从而创建一系列复合线轮廓。 在节点上单击鼠标右键并将连缀设置为最长
+> 2. **PolyCurve.Curves：** 将复合线断为其曲线片段。
+> 3. **Curve.EndPoint：** 提取每条曲线的端点。
+> 4. **NurbsCurve.ByPoints：** 使用点来构建 NURBS 曲线。使用设定为 _True_ 的布尔节点闭合曲线。
 
 在继续操作之前，请关闭某些节点（例如：Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal 和 Arc.ByCenterPointRadiusAngle）的预览，以便更好地查看结果。
 
 ![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
-> 1. **Surface.ByPatch：**为每个轮廓构造曲面面片以创建网格的“切片”。
+> 1. **Surface.ByPatch：** 为每个轮廓构造曲面面片以创建网格的“切片”。
 
 为一个格子/卵形木箱效果添加第二组切片。
 
