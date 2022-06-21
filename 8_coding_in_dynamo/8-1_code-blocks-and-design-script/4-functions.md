@@ -44,7 +44,7 @@ FunctionName(in1,in2);
 
 ![](<../images/8-1/4/functions - exercise - 01.jpg>)
 
-创建**“代码块”**，然后引入我们的定义。
+创建 **“代码块”**，然后引入我们的定义。
 
 ![](<../images/8-1/4/functions - exercise - 02.jpg>)
 
@@ -57,11 +57,11 @@ FunctionName(in1,in2);
 >    };
 >    ```
 >
-> _“inputPt”_是我们提供的名称，该名称用于表示将驱动函数的点。目前，该函数不会执行任何操作，但我们会在即将到来的步骤中构建此函数。
+> _“inputPt”_ 是我们提供的名称，该名称用于表示将驱动函数的点。目前，该函数不会执行任何操作，但我们会在即将到来的步骤中构建此函数。
 
 ![](<../images/8-1/4/functions - exercise - 03.jpg>)
 
-> 1. 通过添加到**“代码块”**函数，我们放置注释和_“sphereRadius”_变量（该变量用于查询每个点的_“Z”_位置）。请记住，_“inputPt.Z”_不需要圆括号以用作方法。这是对现有图元特性的_查询_，因此不需要输入：
+> 1. 通过添加到 **“代码块”** 函数，我们放置注释和 _“sphereRadius”_ 变量（该变量用于查询每个点的 _“Z”_ 位置）。请记住，_“inputPt.Z”_ 不需要圆括号以用作方法。这是对现有图元特性的 _查询_，因此不需要输入：
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -73,11 +73,11 @@ FunctionName(in1,in2);
 
 ![](<../images/8-1/4/functions - exercise - 04.jpg>)
 
-> 1. 现在，我们再次调用在另一个**“代码块”**中创建的函数。如果双击画布以创建新的_代码块_，然后键入_“sphereB”_，我们会注意到 Dynamo 建议使用已定义的_“sphereByZ”_函数。您的函数已添加到智能库！非常棒。
+> 1. 现在，我们再次调用在另一个 **“代码块”** 中创建的函数。如果双击画布以创建新的 _代码块_，然后键入 _“sphereB”_，我们会注意到 Dynamo 建议使用已定义的 _“sphereByZ”_ 函数。您的函数已添加到智能库！非常棒。
 
 ![](<../images/8-1/4/functions - exercise - 05.jpg>)
 
-> 1. 现在，我们调用相应函数并创建一个名为_“Pt”_的变量，以连接在之前步骤中创建的点：
+> 1. 现在，我们调用相应函数并创建一个名为 _“Pt”_ 的变量，以连接在之前步骤中创建的点：
 >
 >    ```
 >    sphereByZ(Pt)
@@ -86,15 +86,15 @@ FunctionName(in1,in2);
 
 ![](<../images/8-1/4/functions - exercise - 06.jpg>)
 
-> 1. 一个重要步骤是，我们需要定义函数的输出，方法是将一行代码 `return = sphereRadius;` 添加到_“sphereByZ”_函数。
+> 1. 一个重要步骤是，我们需要定义函数的输出，方法是将一行代码 `return = sphereRadius;` 添加到 _“sphereByZ”_ 函数。
 > 2. 现在，我们看到“代码块”的输出为我们提供了每个点的 Z 坐标。
 
-现在，让我们通过编辑_父_函数，来创建实际球体。
+现在，让我们通过编辑 _父_ 函数，来创建实际球体。
 
 ![](<../images/8-1/4/functions - exercise - 07.jpg>)
 
 > 1. 首先，我们使用代码行定义一个球体：`sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
-> 2. 接下来，我们将返回值更改为_“sphere”_，而不是_“sphereRadius”_：`return = sphere;`。这会在 Dynamo 预览中为我们提供一些巨大的球体！
+> 2. 接下来，我们将返回值更改为 _“sphere”_，而不是 _“sphereRadius”_：`return = sphere;`。这会在 Dynamo 预览中为我们提供一些巨大的球体！
 
 ![](<../images/8-1/4/functions - exercise - 08.jpg>)
 
@@ -102,7 +102,7 @@ FunctionName(in1,in2);
 
 ![](<../images/8-1/4/functions - exercise - 09.jpg>)
 
-> 1. 在**“Point.ByCoordinates”**节点上，通过将连缀从“最短列表”更改为“叉积”，我们将创建点栅格。_sphereByZ_ 函数仍然完全有效，因此所有点都会使用基于 Z 值的半径创建球体。
+> 1. 在 **“Point.ByCoordinates”** 节点上，通过将连缀从“最短列表”更改为“叉积”，我们将创建点栅格。_sphereByZ_ 函数仍然完全有效，因此所有点都会使用基于 Z 值的半径创建球体。
 
 ![](<../images/8-1/4/functions - exercise - 10.jpg>)
 
@@ -130,4 +130,4 @@ FunctionName(in1,in2);
 >    return sphere;
 >    };
 >    ```
-> 2. 通过向输入中添加“ratio”变量来更新子**“代码块”**：`sphereByZ(Pt,ratio);`。将滑块插入新创建的**“代码块”**输入中，并根据半径比改变半径大小。
+> 2. 通过向输入中添加“ratio”变量来更新子 **“代码块”**：`sphereByZ(Pt,ratio);`。将滑块插入新创建的 **“代码块”** 输入中，并根据半径比改变半径大小。
