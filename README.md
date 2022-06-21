@@ -77,7 +77,7 @@ Dynamo@autodesk.com
 
 Copyright 2022 Autodesk
 
-	Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. Sie erhalten die Lizenz unter:
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. Sie erhalten die Lizenz unter:
 
 http://www.apache.org/licenses/LICENSE-2.0
 
