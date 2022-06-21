@@ -144,7 +144,7 @@ Zde je vidět podrobné přiblížení parametrů tohoto grafu. Tyto parametry j
 
 ![](<./images/4/creating - exercise II - 05.jpg>)
 
-> 1. Jakmile přetáhnete uzel _DirectShape.ByGeometry_ na kreslicí plochu, uvidíte, že obsahuje čtyři vstupy: _geometry_**, ** _category_**, ** _material_ a _name_.
+> 1. Jakmile přetáhnete uzel _DirectShape.ByGeometry_ na kreslicí plochu, uvidíte, že obsahuje čtyři vstupy: _geometry_**,**_category_**,** _material_ a _name_.
 > 2. Vstup geometry bude těleso vytvořené v části tvorby geometrie grafu.
 > 3. Vstup category je možné vybrat pomocí rozevíracího seznamu _Kategorie_. V tomto případě se použije možnost „Rámová konstrukce“.
 > 4. Vstup material se vybere pomocí výše uvedeného pole uzlů – v tomto případě je však možné jej snadno definovat jako „Výchozí“.
