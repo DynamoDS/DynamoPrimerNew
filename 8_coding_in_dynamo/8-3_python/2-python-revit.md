@@ -88,7 +88,7 @@ OUT = [doc,uiapp,app]
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
 
-打开_“概念体量文件夹”_，然后使用_“Metric Mass.rft”_模板文件。
+打开 _“概念体量文件夹”_，然后使用 _“Metric Mass.rft”_ 模板文件。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
 
@@ -100,17 +100,17 @@ OUT = [doc,uiapp,app]
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
 
-> 1. 创建**“代码块”**，并为其赋予值 `"0;"`
-> 2. 将该值插入 X、Y 和 Z 输入的**“ReferencePoint.ByCoordinates”**节点。
+> 1. 创建 **“代码块”**，并为其赋予值 `"0;"`
+> 2. 将该值插入 X、Y 和 Z 输入的 **“ReferencePoint.ByCoordinates”** 节点。
 > 3. 创建三个滑块，范围从 -100 到 100，步长为 1。
-> 4. 将每个滑块都连接到**“ReferencePoint.ByCoordinates”**节点。
-> 5. 将**“Python”**节点添加到工作空间，单击节点上的“+”按钮以添加另一个输入并将两个参照点插入每个输入。打开**“Python”**节点。
+> 4. 将每个滑块都连接到 **“ReferencePoint.ByCoordinates”** 节点。
+> 5. 将 **“Python”** 节点添加到工作空间，单击节点上的“+”按钮以添加另一个输入并将两个参照点插入每个输入。打开 **“Python”** 节点。
 
 在 Dynamo 中查看 Python 节点。在下面查找完整代码。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
 
-> 1. **System.Array**：Revit 需要**“系统数组”**作为输入（而不是 Python 列表）。这只是一行代码，但注意参数类型将有助于在 Revit 中进行 Python 编程。
+> 1. **System.Array**：Revit 需要 **“系统数组”** 作为输入（而不是 Python 列表）。这只是一行代码，但注意参数类型将有助于在 Revit 中进行 Python 编程。
 
 ```
 import sys
@@ -157,7 +157,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **选择模型图元节点**：点击每个节点对应的选择按钮，然后在 Revit 中选择相应曲线。
-> 2. **代码块**：使用语法 `0..1..#x;`_，_将介于 0 到 20 之间的整数滑块连接到_“x”_输入。这会指定要在两条曲线之间绘制的梁数。
+> 2. **代码块**：使用语法 `0..1..#x;` _，_ 将介于 0 到 20 之间的整数滑块连接到 _“x”_ 输入。这会指定要在两条曲线之间绘制的梁数。
 > 3. **结构框架类型**：此处，我们将从下拉菜单中选择默认的 W12x26 梁。
 > 4. **标高**：选择“标高 1”。
 
@@ -202,7 +202,7 @@ for val in IN[2]:
 
 在 Revit 中，我们有一组梁，它们跨两条曲线作为结构图元。注意：这不是一个真实示例...结构图元用作从 Dynamo 创建的原生 Revit 实例的示例。
 
-在 Dynamo 中，我们也可以看到结果。 **“Watch3D”**节点中的梁引用从 Revit 图元查询所得的几何图形。
+在 Dynamo 中，我们也可以看到结果。 **“Watch3D”** 节点中的梁引用从 Revit 图元查询所得的几何图形。
 
 ![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
 
