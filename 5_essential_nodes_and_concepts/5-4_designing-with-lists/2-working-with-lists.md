@@ -53,7 +53,7 @@ Die folgende Abbildung zeigt das Basisdiagramm, in dem Linien zwischen zwei Krei
 > 6. Verschieben Sie mithilfe eines **Geometry.Translate**-Blocks den Kreis um 100 Einheiten nach oben in z-Richtung.
 > 7. Definieren Sie mithilfe eines **Code Block**-Blocks einen Bereich von 10 Zahlen zwischen 0 und 1, wobei Sie die folgende Zeile verwenden: `0..1..#10;`
 > 8. Verbinden Sie den Codeblock aus dem vorigen Schritt mit der _param_-Eingabe zweier **Curve.PointAtParameter**-Blöcke. Verbinden Sie **Circle.ByPlaneRadius** mit der curve-Eingabe des oberen Blocks und **Geometry.Translate** mit der curve-Eingabe des Blocks darunter.
-> 9. Verbinden Sie in einem **Line.ByStartPointEndPoint**-Block die beiden **Curve.PointAtParameter**__-Blöcke.
+> 9. Verbinden Sie in einem **Line.ByStartPointEndPoint**-Block die beiden **Curve.PointAtParameter** -Blöcke.
 
 ### List.Count
 
