@@ -31,7 +31,7 @@ Booleovské operace jsou složité a jejich výpočet může být pomalý. Pomoc
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1. Zmrazte operaci sjednocení těles tím, že kliknete pravým tlačítkem myši a vyberete možnost Zmrazit
+> 1\. Zmrazte operaci sjednocení těles tím, že kliknete pravým tlačítkem myši a vyberete možnost Zmrazit
 >
 > 2\. Vybraný uzel a všechny následné uzly se zobrazí světle šedou průhlednou barvou a související dráty budou zobrazeny přerušovaně. Náhled ovlivněné geometrie bude také zobrazen světle šedou průhlednou barvou. Nyní můžete měnit předcházející hodnoty, aniž by došlo k výpočtu booleovského sjednocení.
 >
