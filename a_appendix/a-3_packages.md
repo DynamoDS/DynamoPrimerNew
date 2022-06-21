@@ -28,7 +28,7 @@ Im Folgenden sind einige der häufiger in der Dynamo-Community verwendeten Paket
 
 
 
-| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [Data|Shapes auf GitHub besuchen](https://github.com/MostafaElAyoubi/Data-shapes) |
+| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [Data\Shapes auf GitHub besuchen](https://github.com/MostafaElAyoubi/Data-shapes) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | DataShapes ist ein Paket zur Erweiterung der Benutzerfunktionen von Dynamo-Skripts. Der Schwerpunkt liegt dabei auf der Bereitstellung zusätzlicher Funktionen in Dynamo Player. Weitere Informationen finden Sie auf https://data-shapes.net/. Sie möchten beeindruckende Arbeitsabläufe für Dynamo Player erstellen? Verwenden Sie dieses Paket. | ![](./images/a-3/DataShapes\_Image.png) |
 
