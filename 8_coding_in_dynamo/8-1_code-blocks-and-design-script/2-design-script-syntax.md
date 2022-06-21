@@ -1,6 +1,6 @@
 # DesignScript-Syntax
 
-Die Namen von Blöcken in Dynamo weisen ein gemeinsames Merkmal auf: Sie verwenden eine Syntax mit Punkt _"."_ ohne Leerzeichen. Dies ist der Fall, da der Text ganz oben im jeweiligen Block die eigentliche Skript-Syntax und _ "." repräsentiert._ (bzw. die _Punktnotation_) dient dazu, ein Element von den möglichen Methoden abzugrenzen, die aufgerufen werden können. Dies vermittelt auf einfache Weise zwischen visueller und textbasierter Skripterstellung.
+Die Namen von Blöcken in Dynamo weisen ein gemeinsames Merkmal auf: Sie verwenden eine Syntax mit Punkt _"."_ ohne Leerzeichen. Dies ist der Fall, da der Text ganz oben im jeweiligen Block die eigentliche Skript-Syntax und _"."_ repräsentiert. (bzw. die _Punktnotation_) dient dazu, ein Element von den möglichen Methoden abzugrenzen, die aufgerufen werden können. Dies vermittelt auf einfache Weise zwischen visueller und textbasierter Skripterstellung.
 
 ![NodeNames](../images/8-1/2/apple.jpg)
 
