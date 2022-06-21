@@ -74,7 +74,7 @@ In diesem Schritt wenden Sie die in der ersten Übung erstellte Logik auf einen 
 
 > a. Der erste **Number Slider**-Block repräsentiert die Frequenz der Welle. Er sollte einen Mindestwert von 1, einen Höchstwert von 4 und eine Schrittweite von 0.01 haben.
 >
-> a. Der erste **Number Slider**-Block repräsentiert die Amplitude der Welle. Er sollte einen Mindestwert von 0, einen Höchstwert von 1 und eine Schrittweite von 0.01 haben.
+> b. Der erste **Number Slider**-Block repräsentiert die Amplitude der Welle. Er sollte einen Mindestwert von 0, einen Höchstwert von 1 und eine Schrittweite von 0.01 haben.
 >
 > c. **PolyCurve.ByPoints**: Indem Sie das oben gezeigte Blockdiagramm kopieren, erhalten im Ansichtsfenster der Dynamo-Vorschau eine Sinuskurve.
 
