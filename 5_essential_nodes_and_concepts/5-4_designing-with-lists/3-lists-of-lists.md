@@ -278,7 +278,7 @@ Jetzt müssen Sie die geänderte Liste in die ursprüngliche Datenstruktur, d. 
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 05.jpg>)
 
 > 1. Ersetzen Sie nach demselben Prinzip die mittlere Liste mithilfe von **List.ReplaceItemAtIndex** durch die geänderte Liste.
-> 2. Beachten Sie, dass in den **Codeblöcken**__, die die Indizes für diese beiden Blöcke definieren, die Werte 1 und 2 angegeben wurde, was der ursprünglichen Abfrage aus dem **Codeblock** (_points\[1]\[2]_) entspricht.
+> 2. Beachten Sie, dass in den **Codeblöcken**, die die Indizes für diese beiden Blöcke definieren, die Werte 1 und 2 angegeben wurde, was der ursprünglichen Abfrage aus dem **Codeblock** (_points\[1]\[2]_) entspricht.
 > 3. Wenn Sie die Liste mit _index 1_ auswählen, wird die Datenstruktur in der Dynamo-Vorschau hervorgehoben. Damit haben Sie den verschobenen Punkt in die ursprüngliche Datenstruktur aufgenommen.
 
 Es gibt viele Möglichkeiten zum Erstellen einer Oberfläche aus dieser Punktgruppe. In diesem Fall erstellen Sie die Oberfläche durch Erheben und Verbinden von Kurven.
