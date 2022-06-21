@@ -157,7 +157,7 @@ V tomto souboru máme sadu uzlů zapojených do pěti vstupů uzlu Python.
 ![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
 > 1. Uzly **Select Model Element**: Klikněte na tlačítko Vybrat pro každý prvek a vyberte odpovídající křivku v aplikaci Revit.
-> 2. Uzel **Code Block**: Pomocí syntaxe `0..1..#x;`__ připojte posuvník celého čísla v rozsahu od 0 do 20 ke vstupu _x_. Označuje počet nosníků, které se mají kreslit mezi dvěma křivkami.
+> 2. Uzel **Code Block**: Pomocí syntaxe `0..1..#x;` připojte posuvník celého čísla v rozsahu od 0 do 20 ke vstupu _x_. Označuje počet nosníků, které se mají kreslit mezi dvěma křivkami.
 > 3. Uzel **Structural Framing Types**: Zde vybereme v rozevírací nabídce výchozí nosník W12x26.
 > 4. Uzel **Levels**: Vyberte možnost Podlaží 1.
 
