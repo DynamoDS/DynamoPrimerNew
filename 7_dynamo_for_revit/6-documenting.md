@@ -24,8 +24,8 @@
 
 ![](<./images/6/documenting - exercise I - 01.jpg>)
 
-> 1. 向画布添加_“族类型”_节点，然后选择_“ROOF-PANEL-4PT”_。
-> 2. 将此节点连接到“选择_族类型的所有图元_”节点，以将所有图元从 Revit 输入到 Dynamo。
+> 1. 向画布添加 _“族类型”_ 节点，然后选择 _“ROOF-PANEL-4PT”_。
+> 2. 将此节点连接到“选择 _族类型的所有图元_” 节点，以将所有图元从 Revit 输入到 Dynamo。
 
 ![](<./images/6/documenting - exercise I - 02.jpg>)
 
@@ -37,12 +37,12 @@
 
 ![](<./images/6/documenting - exercise I - 03.jpg>)
 
-> 1. 将 _Element.SetParameterByName_ 节点添加到画布，然后将自适应构件连接到 _element_ 输入。将读取_“Aperture Ratio”_的_“代码块”_连接到_“parameterName”_输入。
+> 1. 将 _Element.SetParameterByName_ 节点添加到画布，然后将自适应构件连接到 _element_ 输入。将读取 _“Aperture Ratio”_ 的 _“代码块”_ 连接到 _“parameterName”_ 输入。
 > 2. 我们无法直接将偏差结果连接到值输入，因为我们需要将这些值重新映射到参数范围。
 
 ![](<./images/6/documenting - exercise I - 04.jpg>)
 
-> 1. 使用_“Math.RemapRange”_，将偏差值重新映射到介于 .15 和 .45 之间的域，方法是在_“代码块”_中输入 `0.15; 0.45;`。
+> 1. 使用 _“Math.RemapRange”_，将偏差值重新映射到介于 .15 和 .45 之间的域，方法是在 _“代码块”_ 中输入 `0.15; 0.45;`。
 > 2. 将这些结果连接到 _Element.SetParameterByName_ 的值输入。
 
 返回 Revit，我们可以_稍微_了解表面上孔径的变化。
@@ -59,16 +59,16 @@
 
 ![](<./images/6/documenting - exercise II - 01.jpg>)
 
-> 1. 删除_“Element.SetParameterByName”_及其输入节点，然后添加_“Element.OverrideColorInView”_。
+> 1. 删除 _“Element.SetParameterByName”_ 及其输入节点，然后添加 _“Element.OverrideColorInView”_。
 > 2. 将 _Color Range_ 节点添加到画布，然后连接到 _Element.OverrideColorInView_ 的颜色输入。为了创建渐变，我们仍需将偏差值连接到颜色范围。
 > 3. 将光标悬停在 _value_ 输入上，我们可以看到输入值必须介于 _0_ 和 _1_ 之间，以便将颜色映射到每个值。我们需要将偏差值重新映射到此范围。
 
 ![](<./images/6/documenting - exercise II - 02.jpg>)
 
-> 1. 使用_“Math.RemapRange”_，将平面偏差值重新映射到介于 \*0\* 和 _1_ 之间的范围（注意：也可以使用_“MapTo”_节点定义源域）。
+> 1. 使用 _“Math.RemapRange”_，将平面偏差值重新映射到介于 \*0\* 和 _1_ 之间的范围（注意：也可以使用 _“MapTo”_ 节点定义源域）。
 > 2. 将结果连接到 _Color Range_ 节点。
 > 3. 请注意，我们的输出是颜色范围，而不是数字范围。
-> 4. 如果设置为“手动”，请单击_“运行”_。此时，应该能够无需再设置为“自动”。
+> 4. 如果设置为“手动”，请单击 _“运行”_。此时，应该能够无需再设置为“自动”。
 
 返回 Revit，我们看到了更清晰的渐变，它代表了基于我们颜色范围的平面偏差。如果我们要自定义颜色，该怎么办？请注意，最小偏差值以红色表示，这似乎与我们的预期相反。我们希望最大偏差以红色表示，最小偏差以较柔和的颜色表示。我们返回 Dynamo，然后修复此问题。
 
@@ -76,7 +76,7 @@
 
 ![](<./images/6/documenting - exercise II - 04.jpg>)
 
-> 1. 使用_“代码块”_，在两个不同代码行上添加两个数字：`0;` 和 `255;`。
+> 1. 使用 _“代码块”_，在两个不同代码行上添加两个数字：`0;` 和 `255;`。
 > 2. 通过将相应值连接到两个 _Color.ByARGB_ 节点，即可创建红色和蓝色。
 > 3. 以这两种颜色创建列表。
 > 4. 将此列表连接到 _Color Range_ 的 _colors_ 输入，然后观察自定义颜色范围更新。
@@ -108,9 +108,9 @@
 > 3. 将这些点转换为字符串。请记住，参数基于文字，因此我们需要输入正确的数据类型。
 > 4. 创建四个字符串列表，该列表定义要更改的参数：_XYZ1、XYZ2、XYZ3_ 和 _XYZ4_。
 > 5. 将此列表连接到 _Element.SetParameterByName_ 的 _parameterName_ 输入。
-> 6. 将 _Element.SetParameterByName_ 连接到 _List.Combine 的 _combinator_ 输入。_ 将_自适应构件_连接到_“list1”_。将 Object 的 _String_ 连接到 _list2_。
+> 6. 将 _Element.SetParameterByName_ 连接到 _List.Combine 的 _combinator_ 输入。_ 将 _自适应构件_ 连接到 _“list1”_。将 Object 的 _String_ 连接到 _list2_。
 
-我们在此处进行列表映射，因为我们要为每个元素编写四个值，从而创建一个复杂的数据结构。_List.Combine_ 节点在数据层次结构中定义一个向下步骤的操作。这就是_“Element.SetParameterByName”_的图元和值输入保留为空的原因。根据_“Element.SetParameterByName”_的空输入的连接顺序，_“List.Combine”_将其输入的子列表连接到这些空输入。
+我们在此处进行列表映射，因为我们要为每个元素编写四个值，从而创建一个复杂的数据结构。_List.Combine_ 节点在数据层次结构中定义一个向下步骤的操作。这就是 _“Element.SetParameterByName”_ 的图元和值输入保留为空的原因。根据 _“Element.SetParameterByName”_ 的空输入的连接顺序，_“List.Combine”_ 将其输入的子列表连接到这些空输入。
 
 在 Revit 中选择一个嵌板后，现在会看到每个参数都有字符串值。实际上，我们将创建更简单的格式来写入点 (X,Y,Z)。这可以在 Dynamo 中使用字符串操作完成，但是我们会绕过此处以停留在本章的范围内。
 
