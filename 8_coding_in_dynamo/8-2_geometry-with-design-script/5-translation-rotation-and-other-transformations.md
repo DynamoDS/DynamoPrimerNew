@@ -78,14 +78,14 @@ Skalieren und Scheren sind erheblich komplexere geometrische Transformationen al
 
 | Klasse | Ungleichmäßig skaliertes Koordinatensystem | Geschertes Koordinatensystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Bogen | Nein | No |
+| Bogen | Nein | Nein |
 | NurbsCurve | Ja | Ja |
-| NurbsSurface | Nein | No |
-| Kreis | Nein | No |
+| NurbsSurface | Nein | Nein |
+| Kreis | Nein | Nein |
 | Linie | Ja | Ja |
-| Ebene | Nein | No |
+| Ebene | Nein | Nein |
 | Punkt | Ja | Ja |
-| Polygon | Nein | No |
-| Volumenkörper | Nein | No |
-| Oberfläche | Nein | No |
-| Text | Nein | No |
+| Polygon | Nein | Nein |
+| Volumenkörper | Nein | Nein |
+| Oberfläche | Nein | Nein |
+| Text | Nein | Nein |
