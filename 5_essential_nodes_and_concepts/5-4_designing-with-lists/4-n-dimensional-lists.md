@@ -145,7 +145,7 @@ Beginnen Sie mit der Datei aus der vorherigen Übungslektion.
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
 > 1. In diesem Fall ist **List.Combine** besser geeignet. Für komplexere Datenstrukturen sollten **List.Map**- und **List.Combine**-Blöcke zum Einsatz kommen.
-> 2. Mit **List.Create ** als _"Kombinator"_ erhalten Sie eine Datenstruktur, die in diesem Fall besser verwendbar ist.
+> 2. Mit **List.Create** als _"Kombinator"_ erhalten Sie eine Datenstruktur, die in diesem Fall besser verwendbar ist.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
