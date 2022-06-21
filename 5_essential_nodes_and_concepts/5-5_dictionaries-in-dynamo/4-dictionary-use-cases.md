@@ -30,7 +30,7 @@ Pojďme udělat totéž pomocí slovníků. Nejdříve je nutné získat všechn
 > 1. Vybereme kategorii aplikace Revit, se kterou chceme pracovat (v tomto případě místnosti).
 > 2. Přikážeme aplikaci Dynamo, aby získala všechny prvky
 
-Dále je nutné rozhodnout, podle jakých klíčů se budou data vyhledávat. (Informace o klíčích naleznete v části [9-1 Co je slovník?)](9-1\_what-is-a-dictionary.md)).
+Dále je nutné rozhodnout, podle jakých klíčů se budou data vyhledávat. (Informace o klíčích naleznete v části [9-1 Co je slovník?)](9-1\_what-is-a-dictionary.md).
 
 ![](<../images/5-5/4/dictionary - exercise I - 02.jpg>)
 
