@@ -101,7 +101,7 @@ Dále si ukážeme alternativní postup k dosažení tohoto výsledku.
 
 > 1. Než začneme, vypněte náhled uzlu **Surface.ByLoft** v předchozím kroku, abyste se vyhnuli nejasnostem.
 > 2. Alternativou uzlu **List.Transpose** je **List.Combine**. Tento uzel ovládá _„kombinátor“_ v každém dílčím seznamu.
-> 3. V tomto případě uzel **List.Create **použije jako _„kombinátor“_, který vytvoří seznam jednotlivých položek v dílčích seznamech.
+> 3. V tomto případě uzel **List.Create** použije jako _„kombinátor“_, který vytvoří seznam jednotlivých položek v dílčích seznamech.
 > 4. Pomocí uzlu **Surface.ByLoft** získáte stejné povrchy jako v předchozím kroku. Transpozice je v tomto případě jednodušší, pokud však bude datová struktura ještě složitější, uzel **List.Combine** je spolehlivější.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
@@ -145,7 +145,7 @@ Začněte u importovaného souboru z předchozího cvičení.
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
 > 1. Zde bude lépe fungovat uzel **List.Combine**. Když se dojde na složitější datové struktury, chceme použít uzly **List.Map** a **List.Combine**.
-> 2. Pokud použijeme uzel **List.Create **jako _„kombinátor“_, vytvoříme datovou strukturu, která nám bude lépe fungovat.
+> 2. Pokud použijeme uzel **List.Create** jako _„kombinátor“_, vytvoříme datovou strukturu, která nám bude lépe fungovat.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
