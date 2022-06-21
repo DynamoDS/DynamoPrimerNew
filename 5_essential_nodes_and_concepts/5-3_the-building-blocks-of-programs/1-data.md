@@ -81,7 +81,7 @@ V tomto prvním příkladu sestavíme válec se skořepinou, který prochází 
 
 6\. **Number Slider –** Místo použití výchozích hodnot pro všechny tyto vstupy přidejte do modelu parametrický ovládací prvek.
 
-**Domain Edit – **po přidání posuvníku čísla na pracovní plochu klikněte na stříšku v levé horní části a zobrazte možnosti domény.
+**Domain Edit –** po přidání posuvníku čísla na pracovní plochu klikněte na stříšku v levé horní části a zobrazte možnosti domény.
 
 **Min/Max/Krok –** změňte hodnoty _min_, _max_ a _step_ na _0_,_2_ a _0.01_. Toto provedeme, abychom mohli řídit velikost celkové geometrie.
 
@@ -97,7 +97,7 @@ V tomto prvním příkladu sestavíme válec se skořepinou, který prochází 
 
 ![](<../images/5-3/1/data - exercise step 8a.gif>)
 
-**Number Sliders – ** přidali jsme na plochu hodně posuvníků a je potřeba vyčistit rozhraní nástroje, který jsme právě vytvořili. Klikněte pravým tlačítkem na jeden posuvník, vyberte položku Přejmenovat a změňte název každého posuvníku na název odpovídající jeho parametru (Thickness (Tloušťka), Radius (Poloměr), Height (Výška) atd.).
+**Number Sliders –** přidali jsme na plochu hodně posuvníků a je potřeba vyčistit rozhraní nástroje, který jsme právě vytvořili. Klikněte pravým tlačítkem na jeden posuvník, vyberte položku Přejmenovat a změňte název každého posuvníku na název odpovídající jeho parametru (Thickness (Tloušťka), Radius (Poloměr), Height (Výška) atd.).
 
 ![](<../images/5-3/1/data - exercise step 8b step.jpg>)
 
@@ -113,13 +113,13 @@ V tomto prvním příkladu sestavíme válec se skořepinou, který prochází 
 
 ![](<../images/5-3/1/data - exercise step 10.jpg>)
 
-> a. **Multiplication – ** Nejprve chceme vynásobit hodnotu z předchozího kroku hodnotou 2. Hodnota z předchozího kroku představuje poloměr a chceme válec posunout o plný průměr.
+> a. **Multiplication –** Nejprve chceme vynásobit hodnotu z předchozího kroku hodnotou 2. Hodnota z předchozího kroku představuje poloměr a chceme válec posunout o plný průměr.
 >
-> b. **Number Sequence – ** Pomocí tohoto uzlu vytvoříme pole čísel. První vstup je uzel _multiplication_ z předchozího kroku do hodnoty _step_. Hodnotu _start_ lze nastavit na _0.0_ pomocí uzlu _number_.
+> b. **Number Sequence –** Pomocí tohoto uzlu vytvoříme pole čísel. První vstup je uzel _multiplication_ z předchozího kroku do hodnoty _step_. Hodnotu _start_ lze nastavit na _0.0_ pomocí uzlu _number_.
 >
-> c. **Integer Slider – ** Pro hodnotu _amount_ připojíme posuvník celého čísla. Tím se definuje počet vytvořených válců.
+> c. **Integer Slider –** Pro hodnotu _amount_ připojíme posuvník celého čísla. Tím se definuje počet vytvořených válců.
 >
-> d. **Output – ** Tento seznam zobrazuje vzdálenost přesunutou pro každý válec v poli a je parametricky řízen původními posuvníky.
+> d. **Output –** Tento seznam zobrazuje vzdálenost přesunutou pro každý válec v poli a je parametricky řízen původními posuvníky.
 
 11\. Tento krok je dostatečně jednoduchý – zadejte posloupnost definovanou v předchozím kroku do vstupu _x_ původního uzlu **Point.ByCoordinates**. Tím nahradíte posuvník _pointX_, který lze odstranit. Nyní se ve výřezu zobrazuje pole válců (zkontrolujte, zda je číslo posuvníku větší než 0).
 
