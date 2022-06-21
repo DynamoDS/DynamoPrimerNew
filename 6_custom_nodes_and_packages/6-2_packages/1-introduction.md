@@ -46,7 +46,7 @@ Nyní se podíváme na strukturu souborů balíčku. Nejprve vyberte nabídku Dy
 
 ![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
 
-V místním okně Předvolby klikněte na možnost Package Manager, vedle položky DynamoUnfold vyberte nabídku se svislými tečkami ![](<../images/6-2/1/package - vertical dopoints menu.jpg>) a kliknutím na možnost Zobrazit kořenový adresář otevřete kořenovou složku tohoto balíčku.
+V místním okně Předvolby klikněte na možnost Package Manager, vedle položky DynamoUnfold vyberte nabídku se svislými tečkami ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>)  a kliknutím na možnost Zobrazit kořenový adresář otevřete kořenovou složku tohoto balíčku.
 
 ![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
 
