@@ -37,7 +37,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 ### Punkt
 
-Der einfachste geometrische Grundkörper ist ein Punkt, der eine nulldimensionale Position im dreidimensionalen Raum darstellt. Wie bereits erwähnt gibt es verschiedene Möglichkeiten zum Erstellen eines Punkts in einem bestimmten Koordinatensystem: _Point.ByCoordinates_ erstellt einen Punkt mithilfe der gegebenen Koordinaten x, y und z, _Point.ByCartesianCoordinates_ erstellt einen Punkt mithilfe der gegebenen Koordinaten x, y und z in einem bestimmten Koordinatensystem, _Point.ByCylindricalCoordinates_ erstellt einen Punkt, der auf einem Zylinder mit gegebenen Werten für Radius, Drehwinkel und Höhe liegt und _ Point.BySphericalCoordinates_ erstellt einen Punkt auf einer Kugel mit einem gegebenen Radius und zwei Drehwinkeln.
+Der einfachste geometrische Grundkörper ist ein Punkt, der eine nulldimensionale Position im dreidimensionalen Raum darstellt. Wie bereits erwähnt gibt es verschiedene Möglichkeiten zum Erstellen eines Punkts in einem bestimmten Koordinatensystem: _Point.ByCoordinates_ erstellt einen Punkt mithilfe der gegebenen Koordinaten x, y und z, _Point.ByCartesianCoordinates_ erstellt einen Punkt mithilfe der gegebenen Koordinaten x, y und z in einem bestimmten Koordinatensystem, _Point.ByCylindricalCoordinates_ erstellt einen Punkt, der auf einem Zylinder mit gegebenen Werten für Radius, Drehwinkel und Höhe liegt und _Point.BySphericalCoordinates_ erstellt einen Punkt auf einer Kugel mit einem gegebenen Radius und zwei Drehwinkeln.
 
 Dieses Beispiel zeigt Punkte, die in unterschiedlichen Koordinatensystemen erstellt wurden:
 
