@@ -157,7 +157,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
 > 1. 各 **Select Model Element** ノードの[選択]ボタンをクリックし、Revit 内の対応する曲線を選択します。
-> 2. **Code Block** ノードで「`0..1..#x;`_」という構文を使用して、_0 ～ 20 までの範囲を持つ Integer Slider ノードを _x_ 入力に接続します。この操作により、2 本の曲線の間に作成する梁の数を指定します。
+> 2. **Code Block** ノードで「`0..1..#x;`_」という構文を使用して、_ 0 ～ 20 までの範囲を持つ Integer Slider ノードを _x_ 入力に接続します。この操作により、2 本の曲線の間に作成する梁の数を指定します。
 > 3. **Structural Framing Types** ノードのドロップダウン メニューで、既定の W12x26 梁を選択します。
 > 4. **Levels** ノードで、「Level 1」を選択します。
 
