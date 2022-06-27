@@ -108,7 +108,7 @@ Revit で ETFE パネルを選択すると、XYZ1、XYZ2、XYZ3、XYZ4 という
 > 3. これらの点群を文字列に変換します。なお、パラメータはテキストベースですから、正しいデータ タイプを入力する必要があることに注意してください。
 > 4. 変更するパラメータを定義する 4 つの文字列 _XYZ1、XYZ2、XYZ3、__XYZ4_ から、1 つのリストを作成します。
 > 5. このリストを _Element.SetParameterByName_ ノードの _parameterName_ 入力に接続します。
-> 6. _Element.SetParameterByName_ ノードを _List.Combine ノードの _combinator_ 入力に接続します。__アダプティブ コンポーネントを_ _list1_ 入力に接続します。_String from Object_ ノードを _list2_ 入力に接続します。
+> 6. _Element.SetParameterByName_ ノードを _List.Combine_ ノードの _combinator_ 入力に接続します。 _アダプティブ コンポーネントを_ _list1_ 入力に接続します。_String from Object_ ノードを _list2_ 入力に接続します。
 
 ここでリスト マッピングを行います。各要素につき 4 つのパラメータに値を入力することで、複雑なデータ構造を作成するためです。_List.Combine_ ノードはデータ階層内の 1 段階下の層で操作を定義します。 _Element.SetParameterByName_ の element 入力と value の入力が空のままになっているのはこのためです。_List.Combine_ ノードは、入力のサブリストを、接続された順番に基づいて _Element.SetParameterByName_ ノードの空の入力に接続します。
 
