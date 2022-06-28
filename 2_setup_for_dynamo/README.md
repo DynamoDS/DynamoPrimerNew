@@ -10,7 +10,7 @@ Dynamo 是一個進行中的開放原始碼開發專案。了解[支援 Dynamo �
 
 Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安裝。
 
-若要開始使用，請從工具列面板啟動它。視您使用的軟體而定，通常可從「功能表」>**「管理」**頁籤找到啟動圖示。按一下 Dynamo 圖示 ![](images/dynamoCore-halfSize.png) 以啟動它。
+若要開始使用，請從工具列面板啟動它。視您使用的軟體而定，通常可從「功能表」> **「管理」** 頁籤找到啟動圖示。按一下 Dynamo 圖示 ![](images/dynamoCore-halfSize.png) 以啟動它。
 
 ![](<images/launch dynamo from revit.jpg>)
 
@@ -24,7 +24,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 #### 下載
 
-您可以從 [Dynamo 網站](http://dynamobim.com)取得 Dynamo 應用程式。從下載頁面可取得正式版、舊版或預先發行版。請造訪[取得 Dynamo](http://dynamobim.org/download/) 頁面，然後按一下**「Download」**以取得官方發行的版本。
+您可以從 [Dynamo 網站](http://dynamobim.com)取得 Dynamo 應用程式。從下載頁面可取得正式版、舊版或預先發行版。請造訪[取得 Dynamo](http://dynamobim.org/download/) 頁面，然後按一下 **「Download」** 以取得官方發行的版本。
 
 ![](<images/dynamo-sandbox (1).png>)
 
@@ -43,7 +43,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 請為此步驟，下載並安裝 [7zip](https://www.7-zip.org/download.html) 到您的電腦。
 
-在壓縮檔案上按一下右鍵，然後選取**「Extract All」**...
+在壓縮檔案上按一下右鍵，然後選取 **「Extract All」**...
 
 ![](<images/02-03 Extract zip file.jpg>)
 
