@@ -26,7 +26,7 @@ Les packages Zero Touch sont un complément utile aux nœuds personnalisés dé
 
 ## Étude de cas - Importation AForge
 
-Dans cette étude de cas, vous découvrirez comment importer la bibliothèque [.dll]( externe )AForge_http://www.aforgenet.com_. AForge est une bibliothèque robuste qui offre une gamme de fonctionnalités allant du traitement d'images à l'intelligence artificielle. Vous allez utiliser la classe d'images dans AForge pour effectuer quelques exercices de traitement d'images ci-dessous.
+Dans cette étude de cas, vous découvrirez comment importer la bibliothèque _.dll_ externe [AForge](http://www.aforgenet.com). AForge est une bibliothèque robuste qui offre une gamme de fonctionnalités allant du traitement d'images à l'intelligence artificielle. Vous allez utiliser la classe d'images dans AForge pour effectuer quelques exercices de traitement d'images ci-dessous.
 
 Tout d’abord, téléchargez AForge. Sur la [page de téléchargement AForge](http://www.aforgenet.com/framework/downloads.html), sélectionnez _\[Download Installer]_(Télécharger le programme d’installation). À l’issue du téléchargement, effectuez l’installation.
 
