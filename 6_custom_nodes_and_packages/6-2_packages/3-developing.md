@@ -40,19 +40,19 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 #### **PolygonsToSurface**
 
-只需使用這裡的多邊形，即可示範將對映點從 1D 幾何圖形延伸至 2D 幾何圖形的邏輯。請注意，我們已將_「PointsToSurface」_節點巢狀插入此自訂節點中。使用此方式，我們可以將每個多邊形的點對映至曲面，然後從這些對映的點重新產生多邊形。透過保持正確的資料結構 (點的清單的清單)，我們可以在多邊形精簡為一組點後保持多邊形的獨立性。
+只需使用這裡的多邊形，即可示範將對映點從 1D 幾何圖形延伸至 2D 幾何圖形的邏輯。請注意，我們已將 _「PointsToSurface」_ 節點巢狀插入此自訂節點中。使用此方式，我們可以將每個多邊形的點對映至曲面，然後從這些對映的點重新產生多邊形。透過保持正確的資料結構 (點的清單的清單)，我們可以在多邊形精簡為一組點後保持多邊形的獨立性。
 
 ![](<../images/6-2/3/develop package -polygonsToSurface.jpg>)
 
 #### **NurbsCrvtoSurface**
 
-這裡套用的邏輯與_「PolygonsToSurface」_節點中相同。但不是對映多邊形點，而是對映 NURBS 曲線的控制點。
+這裡套用的邏輯與 _「PolygonsToSurface」_ 節點中相同。但不是對映多邊形點，而是對映 NURBS 曲線的控制點。
 
 ![](<../images/6-2/3/develop package -nurbsCrvtoSurface.jpg>)
 
 **OffsetPointsToSurface**
 
-此節點稍微複雜一些，但概念很簡單：此節點與_「PointsToSurface」_節點類似，可在曲面之間對映點。但是，它也會考慮到不在原始來源曲面上的點，會取得這些點距最近 UV 參數的距離，並將此距離對映至對應 UV 座標處的目標曲面法線。在查看範例檔案時，這會更有意義。
+此節點稍微複雜一些，但概念很簡單：此節點與 _「PointsToSurface」_ 節點類似，可在曲面之間對映點。但是，它也會考慮到不在原始來源曲面上的點，會取得這些點距最近 UV 參數的距離，並將此距離對映至對應 UV 座標處的目標曲面法線。在查看範例檔案時，這會更有意義。
 
 ![](<../images/6-2/3/develop package -OffsetPointsToSurface.jpg>)
 
@@ -70,17 +70,17 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 ![](<../images/6-2/3/develop package - example files 01.jpg>)
 
-接著開啟_「extra」_資料夾，此資料夾包含套件中不是自訂節點的所有檔案。這是 Dynamo 套件的範例檔案 (若存在) 的儲存位置。以下螢幕擷取畫面將討論每個範例檔案中演示的概念。
+接著開啟 _「extra」_ 資料夾，此資料夾包含套件中不是自訂節點的所有檔案。這是 Dynamo 套件的範例檔案 (若存在) 的儲存位置。以下螢幕擷取畫面將討論每個範例檔案中演示的概念。
 
 #### **01-PanelingWithPolygons**
 
-此範例檔案示範如何根據矩形的格線使用_「PointsToSurface」_將曲面面板化。這看上去應該很熟悉，因為我們在[上一章](../10\_custom-nodes/10-2\_creating.md)示範了類似的工作流程。
+此範例檔案示範如何根據矩形的格線使用 _「PointsToSurface」_ 將曲面面板化。這看上去應該很熟悉，因為我們在[上一章](../10\_custom-nodes/10-2\_creating.md)示範了類似的工作流程。
 
 ![](<../images/6-2/3/develop package -sample file 01.jpg>)
 
 #### **02-PanelingWithPolygons-II**
 
-此練習檔案使用類似的工作流程，展示在從一個曲面將圓 (或表示圓的多邊形) 對映到另一個曲面的設置。此練習檔案使用_「PolygonsToSurface」_節點。
+此練習檔案使用類似的工作流程，展示在從一個曲面將圓 (或表示圓的多邊形) 對映到另一個曲面的設置。此練習檔案使用 _「PolygonsToSurface」_ 節點。
 
 ![](<../images/6-2/3/develop package -sample file 02.jpg>)
 
