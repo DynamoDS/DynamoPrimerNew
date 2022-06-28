@@ -101,7 +101,7 @@ Następnie zademonstrujemy alternatywny proces pozwalający osiągnąć ten wyni
 
 > 1. Przed rozpoczęciem należy wyłączyć podgląd węzła **Surface.ByLoft** w poprzednim kroku, aby uniknąć pomyłek.
 > 2. Alternatywą dla węzła **List.Transpose** jest użycie węzła **List.Combine**. Spowoduje to zastosowanie _„kombinatora”_ do każdej podlisty.
-> 3. W tym przypadku używamy węzła **List.Create **jako _„kombinatora”_ w celu utworzenia listy dla każdego elementu na podlistach.
+> 3. W tym przypadku używamy węzła **List.Create** jako _„kombinatora”_ w celu utworzenia listy dla każdego elementu na podlistach.
 > 4. Po użyciu węzła **Surface.ByLoft** otrzymujemy takie same powierzchnie, jak w poprzednim kroku. W tym przypadku łatwiej jest użyć węzła Transpose, ale jeśli struktura danych jest jeszcze bardziej złożona, węzeł **List.Combine** będzie bardziej niezawodny.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
@@ -145,7 +145,7 @@ Rozpocznij od zaimportowanego pliku z poprzedniego ćwiczenia.
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
 > 1. W tym przypadku lepiej będzie działać węzeł **List.Combine**. Przechodząc do bardziej złożonych struktur danych, używamy węzłów **List.Map** i **List.Combine**.
-> 2. Używając węzła **List.Create **jako _„kombinatora”_, tworzymy strukturę danych, która będzie lepiej przystosowana do naszego celu.
+> 2. Używając węzła **List.Create** jako _„kombinatora”_, tworzymy strukturę danych, która będzie lepiej przystosowana do naszego celu.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
