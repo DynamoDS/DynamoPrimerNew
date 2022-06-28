@@ -53,7 +53,7 @@
 > 6. 使用 **Geometry.Translate** 節點，在 Z 方向將圓上移 100 個單位。
 > 7. 使用 **Code Block** 節點，透過以下程式碼定義 10 個 0 和 1 之間的數字：`0..1..#10;`
 > 8. 將上一步驟的 Code Block 插入兩個 **Curve.PointAtParameter** 節點的 _param_ 輸入。將 **Circle.ByPlaneRadius** 插入頂部節點的 curve 輸入，將 **Geometry.Translate** 插入下方節點的 curve 輸入。
-> 9. 使用 **Line.ByStartPointEndPoint**，連接兩個 **Curve.PointAtParameter**__ 節點。
+> 9. 使用 **Line.ByStartPointEndPoint**，連接兩個 **Curve.PointAtParamete**_r_ 節點。
 
 ### List.Count
 
