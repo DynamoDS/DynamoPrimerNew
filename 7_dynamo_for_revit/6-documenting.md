@@ -24,7 +24,7 @@
 
 ![](<./images/6/documenting - exercise I - 01.jpg>)
 
-> 1. 캔버스에 _Family Types_ 노드를 추가하고 _"ROOF-PANEL-4PT"_를 선택합니다.
+> 1. 캔버스에 _Family Types_ 노드를 추가하고 _"ROOF-PANEL-4PT"_ 를 선택합니다.
 > 2. 이 노드를 _All Elements of Family Type_ 노드에 연결하여 Revit에서 Dynamo로 모든 요소를 가져옵니다.
 
 ![](<./images/6/documenting - exercise I - 02.jpg>)
@@ -37,13 +37,13 @@
 
 ![](<./images/6/documenting - exercise I - 03.jpg>)
 
-> 1. 캔버스에 _Element.SetParameterByName_ 노드를 추가하고 가변 구성요소를 _element_ 입력에 연결합니다. _"Aperture Ratio"_를 읽는 _Code Block_을 _parameterName_ 입력에 연결합니다.
+> 1. 캔버스에 _Element.SetParameterByName_ 노드를 추가하고 가변 구성요소를 _element_ 입력에 연결합니다. _"Aperture Ratio"_ 를 읽는 _Code Block_ 을 _parameterName_ 입력에 연결합니다.
 > 2. 값을 매개변수 범위에 다시 매핑해야 하기 때문에 편차 결과를 값 입력에 직접 연결할 수 없습니다.
 
 ![](<./images/6/documenting - exercise I - 04.jpg>)
 
-> 1. _Math.RemapRange_를 사용하고_Code Block_에 `0.15; 0.45;`를 입력하여 0.15와 0.45 간의 편차 값을 도메인에 다시 매핑합니다.
-> 2. 이러한 결과를 _Element.SetParameterByName_의 값 입력에 연결합니다.
+> 1. _Math.RemapRange_ 를 사용하고 _Code Block_ 에 `0.15; 0.45;`를 입력하여 0.15와 0.45 간의 편차 값을 도메인에 다시 매핑합니다.
+> 2. 이러한 결과를 _Element.SetParameterByName_ 의 값 입력에 연결합니다.
 
 다시 Revit으로 돌아오면 표면의 조리개 변경을 _이해할 수 있습니다_.
 
@@ -59,13 +59,13 @@
 
 ![](<./images/6/documenting - exercise II - 01.jpg>)
 
-> 1. _Element.SetParameterByName_과 해당 입력 노드를 제거하고 _Element.OverrideColorInView_를 추가합니다.
-> 2. 캔버스에 _Color Range_ 노드를 추가하고 _Element.OverrideColorInView_의 색상 입력에 연결합니다. 그라데이션을 작성하려면 여전히 편차 값을 색상 범위에 연결해야 합니다.
-> 3. _value_ 입력 위에 커서를 놓으면 각 값에 색상을 매핑하기 위해 입력 값이 _0_에서 _1_ 사이여야 함을 알 수 있습니다. 편차 값을 이 범위로 다시 매핑해야 합니다.
+> 1. _Element.SetParameterByName_ 과 해당 입력 노드를 제거하고 _Element.OverrideColorInView_ 를 추가합니다.
+> 2. 캔버스에 _Color Range_ 노드를 추가하고 _Element.OverrideColorInView_ 의 색상 입력에 연결합니다. 그라데이션을 작성하려면 여전히 편차 값을 색상 범위에 연결해야 합니다.
+> 3. _value_ 입력 위에 커서를 놓으면 각 값에 색상을 매핑하기 위해 입력 값이 _0_ 에서 _1_ 사이여야 함을 알 수 있습니다. 편차 값을 이 범위로 다시 매핑해야 합니다.
 
 ![](<./images/6/documenting - exercise II - 02.jpg>)
 
-> 1. _Math.RemapRange_를 사용하여 평면 편차 값을 \*0\*에서 _1_ 사이의 범위로 다시 매핑합니다. (주: _"MapTo"_ 노드를 사용하여 소스 도메인도 정의할 수 있습니다.)
+> 1. _Math.RemapRange_ 를 사용하여 평면 편차 값을 \*0\*에서 _1_ 사이의 범위로 다시 매핑합니다. (주: _"MapTo"_ 노드를 사용하여 소스 도메인도 정의할 수 있습니다.)
 > 2. 결과를 _Color Range_ 노드에 연결합니다.
 > 3. 출력은 숫자 범위가 아니라 색상 범위입니다.
 > 4. 수동으로 설정한 경우 _실행_을 누릅니다. 이 시점부터는 계속 수동으로 설정해서 작업하는 것이 좋습니다.
@@ -76,10 +76,10 @@
 
 ![](<./images/6/documenting - exercise II - 04.jpg>)
 
-> 1. _Code Block_을 사용하여 두 개의 다른 줄에 `0;` 및 `255;`의 두 숫자를 추가합니다.
+> 1. _Code Block_ 을 사용하여 두 개의 다른 줄에 `0;` 및 `255;`의 두 숫자를 추가합니다.
 > 2. 해당 값을 두 개의 _Color.ByARGB_ 노드에 연결하여 빨간색과 파란색을 작성합니다.
 > 3. 이 두 가지 색상에서 리스트를 작성합니다.
-> 4. 이 리스트를 _Color Range_의 _colors_ 입력에 연결하고 사용자 색상 범위 업데이트를 확인합니다.
+> 4. 이 리스트를 _Color Range_ 의 _colors_ 입력에 연결하고 사용자 색상 범위 업데이트를 확인합니다.
 
 Revit으로 돌아가면 이제 코너의 최대 편차 영역이 더 잘 구분됩니다. 이 노드는 뷰의 색상을 재지정하기 위한 것이므로, 도면 세트에 특정 유형의 해석에 중점을 둔 특정 시트가 있는 경우에 정말 유용할 수 있습니다.
 
@@ -104,13 +104,13 @@ Revit에서 하나의 ETFE 패널을 선택하면 XYZ1, XYZ2, XYZ3 및 XYZ4의 4
 ![](<./images/6/documenting - exercise III - 04.jpg>)
 
 > 1. 두 개의 노드가 있는 모든 가변 구성요소를 선택합니다.
-> 2. _AdaptiveComponent.Locations_를 사용하여 각 점의 위치를 추출합니다.
+> 2. _AdaptiveComponent.Locations_ 를 사용하여 각 점의 위치를 추출합니다.
 > 3. 이러한 점을 문자열로 변환합니다. 매개변수는 텍스트 기반이므로 올바른 데이터 유형을 입력해야 합니다.
-> 4. 변경할 매개변수를 정의하는 4개의 문자열(_XYZ1, XYZ2, XYZ3, _ 및 _XYZ4_) 리스트를 작성합니다.
-> 5. 이 리스트를 _Element.SetParameterByName_의 _parameterName_ 입력에 연결합니다.
-> 6. _Element.SetParameterByName_을 _List.Combine의 _combinator_ 입력에 연결합니다.__ 가변 구성요소_를 _list1_에 연결합니다. _String_ from Object를 _list2_에 연결합니다.
+> 4. 변경할 매개변수를 정의하는 4개의 문자열(_XYZ1, XYZ2, XYZ3,_ 및 _XYZ4_) 리스트를 작성합니다.
+> 5. 이 리스트를 _Element.SetParameterByName_ 의 _parameterName_ 입력에 연결합니다.
+> 6. _Element.SetParameterByName_ 을 _List.Combine_ 의 _combinator_ 입력에 연결합니다.가변 구성요소_를 _list1_ 에 연결합니다. _String_ from Object를 _list2_ 에 연결합니다.
 
-여기서는 각 요소에 대해 4개의 값을 작성하여 복잡한 데이터 구조를 작성하게 되므로 리스트 매핑이 진행됩니다. _List.Combine_ 노드에서는 데이터 계층에서 한 단계 아래에 작업을 정의합니다. 이것이 바로 _Element.SetParameterByName_의 요소 및 값 입력이 비어 있는 이유입니다. _List.Combine_은 해당 입력의 하위 리스트를 연결된 순서에 따라 _Element.SetParameterByName_의 빈 입력에 연결합니다.
+여기서는 각 요소에 대해 4개의 값을 작성하여 복잡한 데이터 구조를 작성하게 되므로 리스트 매핑이 진행됩니다. _List.Combine_ 노드에서는 데이터 계층에서 한 단계 아래에 작업을 정의합니다. 이것이 바로 _Element.SetParameterByName_ 의 요소 및 값 입력이 비어 있는 이유입니다. _List.Combine_ 은 해당 입력의 하위 리스트를 연결된 순서에 따라 _Element.SetParameterByName_ 의 빈 입력에 연결합니다.
 
 Revit에서 패널을 선택하면 각 매개변수에 대해 문자열 값이 표시되는 것을 볼 수 있습니다. 실제로는 점(X,Y,Z)을 작성하기 위한 보다 간단한 형식을 작성할 수 있습니다. 이 작업은 Dynamo에서 문자열 연산으로 수행할 수 있지만 여기서는 이 장의 범위를 벗어나지 않기 위해 해당 내용은 다루지 않습니다.
 
