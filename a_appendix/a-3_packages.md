@@ -28,7 +28,7 @@ Di seguito è riportato un elenco di alcuni dei pacchetti più popolari nella co
 
 
 
-| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [Visitare la pagina di Data|Shapes su GitHub](https://github.com/MostafaElAyoubi/Data-shapes) |
+| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [Visitare la pagina di Data\|Shapes su GitHub](https://github.com/MostafaElAyoubi/Data-shapes) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | Data|Shapes è un pacchetto che ha lo scopo di estendere la funzionalità utente degli script Dynamo. Ha un'attenzione particolare all'aggiunta di maggiori funzionalità al Lettore Dynamo. Per ulteriori informazioni, visitare il sito Web https://data-shapes.net/. Si desidera creare fantastici workflow del Lettore Dynamo? Utilizzare questo pacchetto. | ![](./images/a-3/DataShapes\_Image.png) |
 
