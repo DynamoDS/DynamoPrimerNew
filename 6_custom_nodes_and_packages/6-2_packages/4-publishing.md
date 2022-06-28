@@ -77,4 +77,4 @@ Remarque : ne suivez pas cette étape, sauf si vous publiez réellement un pack
 
 ### Version de publication...
 
-Lorsque vous mettez à jour les fichiers dans le dossier racine de votre package publié, vous pouvez publier une nouvelle version du package en sélectionnant _"Publier la version..."_ dans la fenêtre _Gérer les packages_. Cette méthode vous permet d'apporter les mises à jour nécessaires à votre contenu et de le partager en toute transparence avec la communauté. La _ version de publication_ fonctionne uniquement si vous êtes le gestionnaire du package.
+Lorsque vous mettez à jour les fichiers dans le dossier racine de votre package publié, vous pouvez publier une nouvelle version du package en sélectionnant _"Publier la version..."_ dans la fenêtre _Gérer les packages_. Cette méthode vous permet d'apporter les mises à jour nécessaires à votre contenu et de le partager en toute transparence avec la communauté. La _version de publication_ fonctionne uniquement si vous êtes le gestionnaire du package.
