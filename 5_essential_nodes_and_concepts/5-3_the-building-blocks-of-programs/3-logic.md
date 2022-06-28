@@ -44,7 +44,7 @@ Anche in questo caso, i nodi funzionano in modo identico. Se _Boolean_ viene mod
 >
 > b. **Number:** aggiungere tre nodi di numeri all'area di disegno. Il valore per ogni nodo Number deve essere: _0.000_ per _start_, _10.000_ per _end_ e _1.000_ per _step_.
 >
-> c. **Output: **l'output è un elenco di 11 numeri da 0 a 10.
+> c. **Output:** l'output è un elenco di 11 numeri da 0 a 10.
 >
 > d. **% (modulo):** collegare **Range** a _x_ e _2.0_ a _y_. In questo modo viene calcolato il resto per ogni numero dell'elenco diviso per 2. L'output di questo elenco fornisce un elenco di valori alternati tra 0 e 1.
 >
