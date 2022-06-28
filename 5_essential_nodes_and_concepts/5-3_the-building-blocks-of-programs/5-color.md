@@ -41,7 +41,7 @@ L'attuale nodo funziona bene, ma può essere un po' complicato fare in modo che 
 > 1. Definire tre colori: utilizzando un nodo **Code Block**, definire _rosso, verde_ e _blu_ collegando le combinazioni appropriate di _0_ e _255_.
 > 2. **Creare l'elenco:** unire i tre colori in un elenco.
 > 3. Definire gli indici: creare un elenco per definire le posizioni dei grip di ciascun colore (comprese tra 0 e 1). Notare il valore di 0.75 per il verde. In questo modo il colore verde viene posizionato per 3/4 nella sfumatura orizzontale sul dispositivo di scorrimento Color Range.
-> 4. **Code Block: ** immettere i valori (compresi tra 0 e 1) da convertire in colori.
+> 4. **Code Block:** immettere i valori (compresi tra 0 e 1) da convertire in colori.
 
 ### Anteprima colori
 
