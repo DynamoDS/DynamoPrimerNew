@@ -12,7 +12,7 @@ Dynamo Mesh Toolkit은 Autodesk의 지속적인 메쉬 연구의 한 부분으�
 
 ### Mesh Toolkit 설치
 
-Dynamo의 맨 위 메뉴 막대에서 _패키지 > 패키지 검색..._으로 이동합니다. 검색 필드에 _"MeshToolkit"_을 한 글자씩 입력합니다. 이때 대/소문자를 지켜야 합니다. 설치를 클릭하여 다운로드를 시작합니다. 아주 간단합니다.
+Dynamo의 맨 위 메뉴 막대에서 _패키지 > 패키지 검색..._ 으로 이동합니다. 검색 필드에 _"MeshToolkit"_ 을 한 글자씩 입력합니다. 이때 대/소문자를 지켜야 합니다. 설치를 클릭하여 다운로드를 시작합니다. 아주 간단합니다.
 
 ![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
@@ -54,7 +54,7 @@ Dynamo의 맨 위 메뉴 막대에서 _패키지 > 패키지 검색..._으로 �
 > 1. **Mesh.Intersect:** 평면을 가져온 메쉬와 교차시켜 일련의 PolyCurve 윤곽을 작성합니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 Lacing을 Longest로 설정합니다.
 > 2. **PolyCurve.Curves:** PolyCurve를 해당 곡선 조각으로 나눕니다.
 > 3. **Curve.EndPoint:** 각 곡선의 끝점을 추출합니다.
-> 4. **NurbsCurve.ByPoints:** 점을 사용하여 NURBS 곡선을 구성합니다. 부울 노드를 _True_로 설정하여 곡선을 닫습니다.
+> 4. **NurbsCurve.ByPoints:** 점을 사용하여 NURBS 곡선을 구성합니다. 부울 노드를 _True_ 로 설정하여 곡선을 닫습니다.
 
 계속하기 전에 결과를 더 잘 볼 수 있도록 Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal 및 Arc.ByCenterPointRadiusAngle 등의 일부 노드의 미리보기를 끕니다.
 
