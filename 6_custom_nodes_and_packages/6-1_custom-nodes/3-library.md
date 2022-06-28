@@ -20,7 +20,7 @@
 
 ![](<../images/6-1/3/publish custom node locally 01.jpg>)
 
-사용자 노드를 로컬로 게시하려면 캔버스를 마우스 오른쪽 버튼으로 클릭하고 _"이 사용자 노드 게시..."_를 선택합니다.
+사용자 노드를 로컬로 게시하려면 캔버스를 마우스 오른쪽 버튼으로 클릭하고 _"이 사용자 노드 게시..."_ 를 선택합니다.
 
 ![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
 
@@ -28,11 +28,11 @@
 
 ![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
 
-로컬로 게시하려는 모든 사용자 노드를 보관할 폴더를 선택합니다. 로드할 때마다 Dynamo에서 이 폴더를 확인하므로 폴더가 영구적인 위치에 있어야 합니다. 이 폴더로 이동한 후 _"폴더 선택"_을 선택합니다. Dynamo 노드가 이제 로컬로 게시되므로 프로그램을 로드할 때마다 Dynamo 도구막대에 표시됩니다.
+로컬로 게시하려는 모든 사용자 노드를 보관할 폴더를 선택합니다. 로드할 때마다 Dynamo에서 이 폴더를 확인하므로 폴더가 영구적인 위치에 있어야 합니다. 이 폴더로 이동한 후 _"폴더 선택"_ 을 선택합니다. Dynamo 노드가 이제 로컬로 게시되므로 프로그램을 로드할 때마다 Dynamo 도구막대에 표시됩니다.
 
 ![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
 
-사용자 노드 폴더 위치를 확인하려면 _Dynamo > 기본 설정 > Package Manager > 노드 및 패키지 경로_로 이동합니다.
+사용자 노드 폴더 위치를 확인하려면 _Dynamo > 기본 설정 > Package Manager > 노드 및 패키지 경로_ 로 이동합니다.
 
 ![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
 
@@ -40,8 +40,8 @@
 
 ![](<../images/6-1/3/publish custom node exercise - 06.jpg>)
 
-> 1. _Documents₩DynamoCustomNodes..._는 로컬로 게시한 사용자 노드의 위치를 나타냅니다.
-> 2. _AppData\Roaming\Dynamo..._는 온라인으로 설치된 Dynamo 패키지의 기본 위치를 나타냅니다.
+> 1. _Documents₩DynamoCustomNodes..._ 는 로컬로 게시한 사용자 노드의 위치를 나타냅니다.
+> 2. _AppData\Roaming\Dynamo..._ 는 온라인으로 설치된 Dynamo 패키지의 기본 위치를 나타냅니다.
 > 3. 폴더 경로를 선택하고 경로 이름 왼쪽에 있는 아래쪽 화살표를 클릭하여 리스트 순서에서 위에 있는 로컬 폴더 경로를 아래로 이동할 수도 있습니다. 맨 위 폴더는 패키지 설치의 기본 경로입니다. 따라서 기본 Dynamo 패키지 설치 경로를 기본 폴더로 유지하면 온라인 패키지가 로컬로 게시된 노드와 분리됩니다.
 
 Dynamo의 기본 경로를 패키지 설치 위치로 설정하기 위해 경로 이름의 순서를 전환했습니다.
