@@ -24,7 +24,7 @@
 
 ![](<./images/6/documenting - exercise I - 01.jpg>)
 
-> 1. 加入 _Family Types_ 節點至圖元區，然後選擇_「ROOF-PANEL-4PT」_。
+> 1. 加入 _Family Types_ 節點至圖元區，然後選擇 _「ROOF-PANEL-4PT」_。
 > 2. 將此節點插入特定 _All Elements of Family Type_ 節點，以便將 Revit 的所有元素匯入 Dynamo。
 
 ![](<./images/6/documenting - exercise I - 02.jpg>)
@@ -45,7 +45,7 @@
 > 1. 使用 _Math.RemapRange_，在 _Code Block_ 中輸入 `0.15; 0.45;`，將偏差值重新對映至 0.15 到 0.45 的範圍。
 > 2. 將這些結果重新插入 _Element.SetParameterByName_ 的 value 輸入。
 
-回到 Revit，我們會_稍微_理解曲面上鎖點框的變更。
+回到 Revit，我們會 _稍微_ 理解曲面上鎖點框的變更。
 
 ![練習](./images/6/13.jpg)
 
@@ -65,10 +65,10 @@
 
 ![](<./images/6/documenting - exercise II - 02.jpg>)
 
-> 1. 使用 _Math.RemapRange_，將平面偏差值重新對映至介於 \*0\* 與 _1_ 之間的範圍 (注意：您也可以使用_「MapTo」_節點來定義來源範圍)。
+> 1. 使用 _Math.RemapRange_，將平面偏差值重新對映至介於 \*0\* 與 _1_ 之間的範圍 (注意：您也可以使用 _「MapTo」_ 節點來定義來源範圍)。
 > 2. 將結果插入 _Color Range_ 節點。
 > 3. 請注意，我們的輸出是一系列顏色，而不是一系列數字。
-> 4. 如果您要設定為「手動」，請按一下_「執行」_。從現在起，您應該能設定為「自動」。
+> 4. 如果您要設定為「手動」，請按一下 _「執行」_。從現在起，您應該能設定為「自動」。
 
 返回 Revit，我們可以看到更清晰的漸層，該漸層根據顏色範圍表示平面偏差。如果我們希望自訂顏色會怎樣呢？請注意，最小偏差值以紅色表示，這似乎與我們的預期相反。我們希望以紅色表示最大偏差，以更冷的顏色表示最小偏差。接下來回到 Dynamo 並修正此問題。
 
@@ -104,7 +104,7 @@
 ![](<./images/6/documenting - exercise III - 04.jpg>)
 
 > 1. 使用兩個節點選取所有自適應元件。
-> 2. 使用 _AdaptiveComponent.Locations_萃取每個點的位置。
+> 2. 使用 _AdaptiveComponent.Locations_ 萃取每個點的位置。
 > 3. 將這些點轉換為字串。請記住，該參數是文字參數，因此我們需要輸入正確的資料類型。
 > 4. 建立包含四個字串的清單，這四個字串可定義要變更的參數：_XYZ1、XYZ2、XYZ3_ 與 _XYZ4_。
 > 5. 將此清單插入至 _Element.SetParameterByName_ 的 _parameterName_ 輸入。
