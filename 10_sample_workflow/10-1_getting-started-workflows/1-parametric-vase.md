@@ -32,7 +32,7 @@ description: suggested exercise
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-我們需要一些節點來展示 Dynamo 將執行的動作序列。我們知道要嘗試建立圓形，所以先找出執行該作業的節點。使用**搜尋欄位**或瀏覽**「資源庫」**以尋找 **Circle.ByCenterPointRadius** 節點，並將其加入工作區
+我們需要一些節點來展示 Dynamo 將執行的動作序列。我們知道要嘗試建立圓形，所以先找出執行該作業的節點。使用**搜尋欄位**或瀏覽 **「資源庫」** 以尋找 **Circle.ByCenterPointRadius** 節點，並將其加入工作區
 
 ![](../images/10-1/1/vase8.png)
 
