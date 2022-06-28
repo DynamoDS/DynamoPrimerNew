@@ -40,7 +40,7 @@ OUT = solids
 
 ![](<../images/8-3/1/python node - the python node 01.jpg>)
 
-按兩下節點將開啟 Python 指令碼編輯器 (您也可以在節點上按一下右鍵，然後選取_「編輯...」_)。您會注意到頂部有一些重複使用文字，其目的是協助您參考將需要的資源庫。輸入儲存於 IN 陣列中。透過為 OUT 變數指定值，會將這些值傳回至 Dynamo
+按兩下節點將開啟 Python 指令碼編輯器 (您也可以在節點上按一下右鍵，然後選取 _「編輯...」_)。您會注意到頂部有一些重複使用文字，其目的是協助您參考將需要的資源庫。輸入儲存於 IN 陣列中。透過為 OUT 變數指定值，會將這些值傳回至 Dynamo
 
 ![](<../images/8-3/1/python node - the python node 02.jpg>)
 
@@ -64,25 +64,25 @@ OUT = solids
 
 ![](<../images/8-3/1/python node - exercise pt I-01.jpg>)
 
-> 1. **Rectangle.ByWidthLength：**建立將做為實體基準的矩形。
-> 2. **Surface.ByPatch：**將矩形連接至「_closedCurve_」輸入以建立底部曲面。
+> 1. **Rectangle.ByWidthLength：** 建立將做為實體基準的矩形。
+> 2. **Surface.ByPatch：** 將矩形連接至「_closedCurve_」輸入以建立底部曲面。
 
 ![](<../images/8-3/1/python node - exercise pt I-02.jpg>)
 
-> 1. **Geometry.Translate：**將矩形連接至「_geometry_」輸入以將其上移，使用程式碼塊指定實體的基準厚度。
-> 2. **Polygon.Points：**查詢平移的矩形以萃取角點。
-> 3. **Geometry.Translate：**使用程式碼塊建立包含四個值 (對應於四個點) 的清單，同時將實體的一個角點上移。
-> 4. **Polygon.ByPoints：**使用平移的點重新建構頂部多邊形。
-> 5. **Surface.ByPatch：**連接多邊形以建立頂部曲面。
+> 1. **Geometry.Translate：** 將矩形連接至「_geometry_」輸入以將其上移，使用程式碼塊指定實體的基準厚度。
+> 2. **Polygon.Points：** 查詢平移的矩形以萃取角點。
+> 3. **Geometry.Translate：** 使用程式碼塊建立包含四個值 (對應於四個點) 的清單，同時將實體的一個角點上移。
+> 4. **Polygon.ByPoints：** 使用平移的點重新建構頂部多邊形。
+> 5. **Surface.ByPatch：** 連接多邊形以建立頂部曲面。
 
 現在我們已建立頂部與底部曲面，接下來在兩個縱斷面之間進行斷面混成，以建立實體的側面。
 
 ![](<../images/8-3/1/python node - exercise pt I-03.jpg>)
 
-> 1. **List.Create：**將底部矩形與頂部多邊形連接至索引輸入。
-> 2. **Surface.ByLoft：**對兩個縱斷面進行斷面混成，以建立實體的側面。
-> 3. **List.Create：**將頂部、側面與底部的曲面連接至索引輸入，以建立曲面清單。
-> 4. **Solid.ByJoinedSurfaces：**接合曲面以建立實體模組。
+> 1. **List.Create：** 將底部矩形與頂部多邊形連接至索引輸入。
+> 2. **Surface.ByLoft：** 對兩個縱斷面進行斷面混成，以建立實體的側面。
+> 3. **List.Create：** 將頂部、側面與底部的曲面連接至索引輸入，以建立曲面清單。
+> 4. **Solid.ByJoinedSurfaces：** 接合曲面以建立實體模組。
 
 現在我們已建立實體，接下來將 Python Script節點放至工作區。
 
@@ -249,8 +249,8 @@ OUT = solids
 
 ![](<../images/8-3/1/python node - exercise pt II-03.jpg>)
 
-> 1. **Input：**變更輸入名稱以更具描述性，然後加入資料類型及預設值。
-> 2. **Output：**變更輸出名稱
+> 1. **Input：** 變更輸入名稱以更具描述性，然後加入資料類型及預設值。
+> 2. **Output：** 變更輸出名稱
 
 將節點儲存為 .dyf 檔案，您應該會看到自訂節點反映我們剛才所做的變更。
 
