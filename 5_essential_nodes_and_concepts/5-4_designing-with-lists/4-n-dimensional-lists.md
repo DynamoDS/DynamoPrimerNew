@@ -44,7 +44,7 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 > 1\. **Code Block**을 사용하여 다음 두 코드 줄을 삽입합니다. `0..1..#10;` `0..1..#5;`
 >
-> 2\. **Surface.PointAtParameter**에서 두 Code Block 값을 u 및 _v_에 연결합니다. 이 노드의 _레이싱_을 _"외적"_으로 변경합니다.
+> 2\. **Surface.PointAtParameter**에서 두 Code Block 값을 u 및 _v_ 에 연결합니다. 이 노드의 _레이싱_ 을 _"외적"_ 으로 변경합니다.
 >
 > 3\. 출력에는 데이터 구조가 표시되며 Dynamo 미리보기에서도 이 구조를 볼 수 있습니다.
 
@@ -71,12 +71,12 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 02.jpg>)
 
-> 1. **Surface.Offset**을 사용하여 표면을 _10_씩 간격을 띄웁니다.
+> 1. **Surface.Offset**을 사용하여 표면을 _10_ 씩 간격을 띄웁니다.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
 
-> 1. 이전 연습과 같은 방법으로 다음과 같은 코드 두 줄을 사용하여 _Code Block_을 정의합니다. `0..1..#10;` `0..1..#5;`
-> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter ** 노드에 연결하고 각 _레이싱_을 _"외적"_으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
+> 1. 이전 연습과 같은 방법으로 다음과 같은 코드 두 줄을 사용하여 _Code Block_ 을 정의합니다. `0..1..#10;` `0..1..#5;`
+> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter** 노드에 연결하고 각 _레이싱_ 을 _"외적"_ 으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
 
@@ -100,8 +100,8 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
 
 > 1. 시작하기 전에 혼동을 피하기 위해 이전 단계의 **Surface.ByLoft** 미리보기를 끕니다.
-> 2. **List.Transpose** 대신 **List.Combine**을 사용할 수 있습니다. 이는 각 하위 리스트에서 _"연결자"_로 작동합니다.
-> 3. 이 경우에는 **List.Create**를 _"연결자"_로 사용하여 하위 리스트에서 각 항목의 리스트를 작성합니다.
+> 2. **List.Transpose** 대신 **List.Combine**을 사용할 수 있습니다. 이는 각 하위 리스트에서 _"연결자"_ 로 작동합니다.
+> 3. 이 경우에는 **List.Create**를 _"연결자"_ 로 사용하여 하위 리스트에서 각 항목의 리스트를 작성합니다.
 > 4. **Surface.ByLoft** 노드를 사용하여 이전 단계와 동일한 표면을 표시합니다. 이 경우 행과 열을 더 쉽게 바꿀 수 있지만 데이터 구조가 훨씬 복잡해지면 **List.Combine**을 사용하는 것이 더 안정적입니다.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
@@ -118,13 +118,13 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 02.jpg>)
 
-> 1. 이전 연습에서와 같이 **Surface.Offset** 노드를 사용하여 _10_만큼 간격을 띄웁니다.
+> 1. 이전 연습에서와 같이 **Surface.Offset** 노드를 사용하여 _10_ 만큼 간격을 띄웁니다.
 > 2. 출력에서 오프셋 노드를 사용해서 두 개의 표면을 생성했습니다.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
 
 > 1. 이전 연습과 같은 방법으로 다음과 같은 코드 두 줄을 사용하여 **Code Block**을 정의합니다. `0..1..#20;` `0..1..#20;`
-> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter ** 노드에 연결하고 각 레이싱을 _"외적"_으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
+> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter** 노드에 연결하고 각 레이싱을 _"외적"_ 으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
 
@@ -145,7 +145,7 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
 > 1. 여기서는 **List.Combine**이 더 적합합니다. 보다 복잡한 데이터 구조로 이동하는 경우에는 **List.Map** 및 **List.Combine** 노드를 사용할 수 있습니다.
-> 2. **List.Create**를 _"연결자"_로 사용하면 더 잘 작동하는 데이터 구조가 작성됩니다.
+> 2. **List.Create**를 _"연결자"_ 로 사용하면 더 잘 작동하는 데이터 구조가 작성됩니다.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
