@@ -26,7 +26,7 @@ Los paquetes de Zero-Touch son un buen complemento para los nodos personalizados
 
 ## Caso real: importación de AForge
 
-En este caso real, mostraremos cómo importar la biblioteca externa de archivos .dll de [AForge](http://www.aforgenet.com)__. AForge es una biblioteca sólida que ofrece una gama de funciones que van desde el procesamiento de imágenes hasta la inteligencia artificial. Haremos referencia a la clase de imágenes en AForge para realizar algunos ejercicios de procesamiento de imágenes a continuación.
+En este caso real, mostraremos cómo importar la biblioteca externa de archivos _.dll_ de [AForge](http://www.aforgenet.com). AForge es una biblioteca sólida que ofrece una gama de funciones que van desde el procesamiento de imágenes hasta la inteligencia artificial. Haremos referencia a la clase de imágenes en AForge para realizar algunos ejercicios de procesamiento de imágenes a continuación.
 
 Descarguemos primero AForge. En la [página de descarga de AForge](http://www.aforgenet.com/framework/downloads.html), seleccione _\[Download Installer]_ e instálelo en una vez que haya finalizado la descarga.
 
