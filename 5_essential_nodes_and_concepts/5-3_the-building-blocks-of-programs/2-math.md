@@ -97,7 +97,7 @@ Em seguida, siga estas minietapas para gerar uma série de espirais em várias r
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** há diversas opções de ** Geometry.Rotate**; assegure-se de que você selecionou o nó com_geometria_, _basePlane_ e _graus_ como entradas. Conecte **Point.ByCoordinates** à entrada da geometria. Clique com o botão direito do mouse nesse nó e verifique se a amarra está definida como “Produto transversal”
+> a. **Geometry.Rotate:** há diversas opções de **Geometry.Rotate**; assegure-se de que você selecionou o nó com _geometria_, _basePlane_ e _graus_ como entradas. Conecte **Point.ByCoordinates** à entrada da geometria. Clique com o botão direito do mouse nesse nó e verifique se a amarra está definida como “Produto transversal”
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
