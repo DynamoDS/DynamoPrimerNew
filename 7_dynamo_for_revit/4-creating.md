@@ -47,7 +47,7 @@ Dynamo 형상을 DirectShape로 Revit 프로젝트에 가져오는 [두 번째 �
 > 1. 이것은 파일을 열었을 때의 상태입니다.
 > 2. 이것은 Revit 매스에 지능형으로 링크된 Dynamo를 사용하여 작성한 트러스 시스템입니다.
 
-우리는 _"Select Model Element"_ 및 _"Select Face"_ 노드를 사용했으며, 이제 형상 계층에서 한 단계 더 아래로 이동하여 _"Select Edge"_를 사용해 보겠습니다. Dynamo 솔버가 _"자동"_을 실행하도록 설정되어 있으면 그래프가 Revit 파일의 변경 사항에 따라 지속적으로 업데이트됩니다. 선택하는 모서리는 Revit 요소 토폴로지에 동적으로 연결됩니다. 토폴로지\*가 변경되지 않는 한, 연결은 Revit과 Dynamo 사이에 링크된 상태로 유지됩니다.
+우리는 _"Select Model Element"_ 및 _"Select Face"_ 노드를 사용했으며, 이제 형상 계층에서 한 단계 더 아래로 이동하여 _"Select Edge"_ 를 사용해 보겠습니다. Dynamo 솔버가 _"자동"_ 을 실행하도록 설정되어 있으면 그래프가 Revit 파일의 변경 사항에 따라 지속적으로 업데이트됩니다. 선택하는 모서리는 Revit 요소 토폴로지에 동적으로 연결됩니다. 토폴로지\*가 변경되지 않는 한, 연결은 Revit과 Dynamo 사이에 링크된 상태로 유지됩니다.
 
 ![](<./images/4/creating - exercise 02.jpg>)
 
@@ -60,7 +60,7 @@ Dynamo 형상을 DirectShape로 Revit 프로젝트에 가져오는 [두 번째 �
 \*위상을 일관되게 유지하기 위해 추가된 면이나 모서리가 없는 모델을 지칭합니다. 매개변수는 모양을 변경할 수 있지만, 작성 방식은 그대로 유지됩니다.
 {% endhint %}
 
-먼저 곡선을 결합하여 하나의 리스트로 병합해야 합니다. 이러한 방식으로 곡선을 _"그룹화"_하여 형상 작업을 수행할 수 있습니다.
+먼저 곡선을 결합하여 하나의 리스트로 병합해야 합니다. 이러한 방식으로 곡선을 _"그룹화"_ 하여 형상 작업을 수행할 수 있습니다.
 
 ![](<./images/4/creating - exercise 03.jpg>)
 
@@ -74,24 +74,24 @@ Dynamo 형상을 DirectShape로 Revit 프로젝트에 가져오는 [두 번째 �
 
 ![](<./images/4/creating - exercise 04.jpg>)
 
-> 1. _code block_에서 `0..1..#numberOfTrusses;` 구문을 사용하여 범위를 정의합니다.
-> 2. code block의 입력에 \*integer slider\*를 플러깅합니다. 추측한 바와 같이, 이를 통해 트러스의 수를 나타낼 것입니다. 슬라이더가 \*0\*에서 _1_로 정의된 범위의 항목 수를 제어합니다.
-> 3. _code block_을 _"Curve.PlaneAtParameter"_ 노드의 _param_ 입력에 플러깅하고 맨 위 모서리를 _곡선_ 입력에 플러깅합니다. 이렇게 하면 10개의 평면이 생기고 정면 전체에 균등하게 분산됩니다.
+> 1. _code block_ 에서 `0..1..#numberOfTrusses;` 구문을 사용하여 범위를 정의합니다.
+> 2. code block의 입력에 \*integer slider\*를 플러깅합니다. 추측한 바와 같이, 이를 통해 트러스의 수를 나타낼 것입니다. 슬라이더가 \*0\*에서 _1_ 로 정의된 범위의 항목 수를 제어합니다.
+> 3. _code block_ 을 _"Curve.PlaneAtParameter"_ 노드의 _param_ 입력에 플러깅하고 맨 위 모서리를 _곡선_ 입력에 플러깅합니다. 이렇게 하면 10개의 평면이 생기고 정면 전체에 균등하게 분산됩니다.
 
 평면은 무한한 2차원 공간을 나타내는 추상적인 형상 조각입니다. 또한 이 단계에서 설정한 것처럼 등고선을 작성하고 교차할 때 적합합니다.
 
 ![](<./images/4/creating - exercise 05.jpg>)
 
-> 1. _Geometry.Intersect_ 노드(레이싱 옵션을 외적으로 설정)를 사용하여 _Curve.PlaneAtParameter_를 _Geometry.Intersect_ 노드의 _entity_ 입력에 플러깅합니다. 주 _List.Create_ 노드를 _geometry_ 입력에 플러깅합니다. 이제 Dynamo 뷰포트에 정의된 평면과 함께 각 곡선의 교차를 나타내는 점이 표시됩니다.
+> 1. _Geometry.Intersect_ 노드(레이싱 옵션을 외적으로 설정)를 사용하여 _Curve.PlaneAtParameter_ 를 _Geometry.Intersect_ 노드의 _entity_ 입력에 플러깅합니다. 주 _List.Create_ 노드를 _geometry_ 입력에 플러깅합니다. 이제 Dynamo 뷰포트에 정의된 평면과 함께 각 곡선의 교차를 나타내는 점이 표시됩니다.
 
 출력은 리스트의 리스트입니다. 목적을 위해 너무 많은 리스트가 있습니다. 여기서 부분 단순화를 수행하려고 합니다. 리스트에서 한 단계 내려가 결과를 단순화해야 합니다. 이를 위해 Primer의 리스트 장에 설명된 대로 _List.Map_ 작업을 사용합니다.
 
 ![](<./images/4/creating - exercise 06.jpg>)
 
-> 1. _Geometry.Intersect_ 노드를 _List.Map_의 리스트 입력에 플러깅합니다.
-> 2. _Flatten_ 노드를 _List.Map_의 f(x) 입력에 플러깅합니다. 결과에서 3개의 리스트를 제공하며 각 리스트에는 트러스 수와 동일한 개수가 포함됩니다.
+> 1. _Geometry.Intersect_ 노드를 _List.Map_ 의 리스트 입력에 플러깅합니다.
+> 2. _Flatten_ 노드를 _List.Map_ 의 f(x) 입력에 플러깅합니다. 결과에서 3개의 리스트를 제공하며 각 리스트에는 트러스 수와 동일한 개수가 포함됩니다.
 > 3. 이 데이터를 변경해야 합니다. 트러스를 인스턴스화하려면 패밀리에 정의된 것과 동일한 수의 가변 점을 사용해야 합니다. 이는 세 점 가변 구성요소이므로 각각 10개의 항목(numberOfTrusses)이 있는 리스트 3개 대신, 각각 3개의 항목이 있는 리스트 10개가 필요합니다. 이 방식으로 10개의 가변 구성요소를 작성할 수 있습니다.
-> 4. _List.Map_을 _List.Transpose_ 노드에 플러깅합니다. 이제 원하는 데이터 출력이 만들어졌습니다.
+> 4. _List.Map_ 을 _List.Transpose_ 노드에 플러깅합니다. 이제 원하는 데이터 출력이 만들어졌습니다.
 > 5. 데이터가 올바른지 확인하려면 캔버스에 _Polygon.ByPoints_ 노드를 추가하고 Dynamo 미리보기에서 다시 확인합니다.
 
 다각형을 작성한 방법과 같은 방법으로 가변 구성요소를 배열합니다.
@@ -129,13 +129,13 @@ Revit에서 이제 정면 전체에 걸쳐 10개의 트러스가 균일하게 �
 
 ![](<./images/4/creating - exercise II - 02.jpg>)
 
-> 1. Dynamo에서 형상을 참조하기 위해 Revit에서 각 부재에 대해 _Select Model Element_를 사용하겠습니다. Revit에서 매스를 선택하고 _Element.Faces_를 사용하여 이 형상을 Dynamo로 가져옵니다. 이제 Dynamo 미리보기에 매스가 표시됩니다.
-> 2. _Select Model Element_ 및 _CurveElement.Curve_를 사용하여 하나의 참조 곡선을 Dynamo로 가져옵니다.
-> 3. _Select Model Element_ 및 _CurveElement.Curve_를 사용하여 다른 참조 곡선을 Dynamo로 가져옵니다.
+> 1. Dynamo에서 형상을 참조하기 위해 Revit에서 각 부재에 대해 _Select Model Element_ 를 사용하겠습니다. Revit에서 매스를 선택하고 _Element.Faces_ 를 사용하여 이 형상을 Dynamo로 가져옵니다. 이제 Dynamo 미리보기에 매스가 표시됩니다.
+> 2. _Select Model Element_ 및 _CurveElement.Curve_ 를 사용하여 하나의 참조 곡선을 Dynamo로 가져옵니다.
+> 3. _Select Model Element_ 및 _CurveElement.Curve_ 를 사용하여 다른 참조 곡선을 Dynamo로 가져옵니다.
 
 ![](<./images/4/creating - exercise II - 03.jpg>)
 
-> 1. 샘플 그래프에서 오른쪽으로 줌을 축소하고 초점이동하면 큰 노드 그룹이 표시됩니다. 이러한 노드 그룹은 Dynamo 미리보기에 표시된 격자 지붕 구조를 생성하는 형상 작업입니다. 이러한 노드는 Primer의 _code block 섹션_에서 설명한 대로 [Node to Code](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) 기능을 사용하여 생성됩니다.
+> 1. 샘플 그래프에서 오른쪽으로 줌을 축소하고 초점이동하면 큰 노드 그룹이 표시됩니다. 이러한 노드 그룹은 Dynamo 미리보기에 표시된 격자 지붕 구조를 생성하는 형상 작업입니다. 이러한 노드는 Primer의 [code block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) 섹션_에서 설명한 대로 _Node to Code_ 기능을 사용하여 생성됩니다.
 > 2. 이 구조는 대각선 이동, 캠버 및 반지름이라는 세 가지 주요 매개변수에 의해 구동됩니다.
 
 이 그래프에 대한 매개변수의 근접 모양을 줌합니다. 이를 조정하여 다른 형상 출력을 얻을 수 있습니다.
