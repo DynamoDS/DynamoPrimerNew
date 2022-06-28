@@ -53,8 +53,8 @@ Określa operację wykonywaną na obiekcie danego typu. W dodatku Dynamo do wyko
 
 ![](<../images/8-1/2/DesignScript - action.jpg>)
 
-> 1. Węzeł **Point.Add **stanowi węzeł typu Action, dlatego składnia nieco się różni.
-> 2. Dane wejściowe to (1) _punkt_ i (2) _wektor_, który ma być do niego dodany. W węźle **Code Block** nazwaliśmy ten punkt (obiekt) _„pt”_. Aby dodać wektor o nazwie \*„vec”\* do punktu _„pt”_, należy napisać _pt.Add(vec)_, czyli: obiekt, kropka, operacja. Operacja Add ma tylko jeden element wejściowy, czyli wszystkie elementy wejściowe węzła **Point.Add** z wyjątkiem pierwszego. Pierwszym elementem wejściowym węzła **Point.Add **jest sam punkt.
+> 1. Węzeł **Point.Add** stanowi węzeł typu Action, dlatego składnia nieco się różni.
+> 2. Dane wejściowe to (1) _punkt_ i (2) _wektor_, który ma być do niego dodany. W węźle **Code Block** nazwaliśmy ten punkt (obiekt) _„pt”_. Aby dodać wektor o nazwie \*„vec”\* do punktu _„pt”_, należy napisać _pt.Add(vec)_, czyli: obiekt, kropka, operacja. Operacja Add ma tylko jeden element wejściowy, czyli wszystkie elementy wejściowe węzła **Point.Add** z wyjątkiem pierwszego. Pierwszym elementem wejściowym węzła **Point.Add** jest sam punkt.
 
 #### Query
 
