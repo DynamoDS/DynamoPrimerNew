@@ -26,15 +26,15 @@ Revit 是資料豐富的環境。它能為我們提供許多選取功能，而�
 
 以下三個影像分別展示了 Dynamo 中 Revit 元素選取的主要品類。這些是搭配使用的強大工具，我們將在後續練習中探究其中一些工具。
 
-_點選_是直接選取 Revit 元素最簡單的方式。您可以選取完整的模型元素，也可以選取其拓樸的一部分 (例如一個面或一條邊)。這會與該 Revit 物件保持動態連結，因此在 Revit 檔案更新其位置或參數時，參考的 Dynamo 元素在圖表中也將更新。
+_點選_ 是直接選取 Revit 元素最簡單的方式。您可以選取完整的模型元素，也可以選取其拓樸的一部分 (例如一個面或一條邊)。這會與該 Revit 物件保持動態連結，因此在 Revit 檔案更新其位置或參數時，參考的 Dynamo 元素在圖表中也將更新。
 
 ![](<./images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
-_下拉式功能表_會建立 Revit 專案中所有可存取元素的清單。您可以使用下拉式功能表參考視圖中不一定可見的 Revit 元素。這是非常強大的工具，可用於在 Revit 專案或族群編輯器中查詢既有元素或建立新元素。
+_下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。您可以使用下拉式功能表參考視圖中不一定可見的 Revit 元素。這是非常強大的工具，可用於在 Revit 專案或族群編輯器中查詢既有元素或建立新元素。
 
 ![](<./images/2/selecting - database navigation with dynamo nodes 02.jpg>)
 
-您也可以依 _Revit 階層_中的特定層選取 Revit 元素。這是功能強大的選項，可用於自訂大型資料陣列，以便為記錄或生產實體化及自訂做好準備。
+您也可以依 _Revit 階層_ 中的特定層選取 Revit 元素。這是功能強大的選項，可用於自訂大型資料陣列，以便為記錄或生產實體化及自訂做好準備。
 
 ![使用者介面](./images/2/allelements.jpg)
 
@@ -63,7 +63,7 @@ _下拉式功能表_會建立 Revit 專案中所有可存取元素的清單。�
 ![](<./images/2/selecting - exercise 02.jpg>)
 
 > 1. 由於我們使用基本設置，因此接下來選擇「Categories」下拉式節點中的「_Mass_」以選取建築量體。該選項位於 Revit > Selection 頁籤中。
-> 2. 「Mass」品類的輸出是品類自身。我們需要選取元素。為了執行此作業，我們使用 _All Elements of Category_節點。
+> 2. 「Mass」品類的輸出是品類自身。我們需要選取元素。為了執行此作業，我們使用 _All Elements of Category_ 節點。
 
 此時請注意，我們在 Dynamo 中看不到任何幾何圖形。我們已選取 Revit 元素，但尚未將該元素轉換為 Dynamo 幾何圖形。這是重要的區分。若您選取大量元素，不會希望在 Dynamo 中預覽所有這些元素，因為這會拖慢所有作業的速度。Dynamo 是無需執行幾何圖形作業即可對 Revit 專案進行管理的工具，我們將在本章的下一節瞭解該功能。
 
@@ -77,7 +77,7 @@ _下拉式功能表_會建立 Revit 專案中所有可存取元素的清單。�
 
 ![](<./images/2/selecting - exercise 04.jpg>)
 
-> 1. 使用_「Select Model Element」_節點，按一下\*「選取」\* (或_「變更」_) 按鈕。在 Revit 視埠中，選取所需的元素。在此案例中，我們將選取建築量體，
+> 1. 使用 _「Select Model Element」_ 節點，按一下\*「選取」\* (或 _「變更」_) 按鈕。在 Revit 視埠中，選取所需的元素。在此案例中，我們將選取建築量體，
 > 2. 我們可以使用 _Element.Geometry_ 選取完整量體作為一個實體幾何圖形，而非 _Element.Faces_。這會選取量體內包含的所有幾何圖形。
 > 3. 我們可以使用 _Geometry.Explode_ 得到曲面清單。這兩個節點的工作方式與 _Element.Faces_ 相同，但是提供其他選項用於探究 Revit 元素的幾何圖形。
 
@@ -87,14 +87,14 @@ _下拉式功能表_會建立 Revit 專案中所有可存取元素的清單。�
 
 > 1. 首先，將前面選取的元素輸出至 Element.Faces 節點。
 > 2. 接著，使用 _List.Count_ 節點顯示出我們正在處理量體中的 23 個表面。
-> 3. 參考此數量，我們將 \*Integer Slider\* 的最大值變更為_「22」_。
+> 3. 參考此數量，我們將 \*Integer Slider\* 的最大值變更為 _「22」_。
 > 4. 使用 _List.GetItemAtIndex_，我們輸入清單和 \*Integer Slider\* 作為 _index_。採用所選值進行滑動時，若到達 _index 9_ 並已隔離對桁架提供支撐的主要正面，作業就會停止。
 
-上一個步驟稍顯繁瑣。使用_「Select Face」_節點可以更快執行此作業。藉此可以隔離 Revit 專案中並非元素本身的面。套用與_「Select Model Element」_相同的互動，只是我們選取曲面，而不是完整的元素。
+上一個步驟稍顯繁瑣。使用 _「Select Face」_ 節點可以更快執行此作業。藉此可以隔離 Revit 專案中並非元素本身的面。套用與 _「Select Model Element」_ 相同的互動，只是我們選取曲面，而不是完整的元素。
 
 ![](<./images/2/selecting - exercise 06.jpg>)
 
-假設我們要隔離建築的主要正面牆。我們可以使用_「Select Faces」_節點執行此作業。按一下「Select」按鈕，然後在 Revit 中選取四個主要正面。
+假設我們要隔離建築的主要正面牆。我們可以使用 _「Select Faces」_ 節點執行此作業。按一下「Select」按鈕，然後在 Revit 中選取四個主要正面。
 
 ![](<./images/2/selecting - exercise 07.jpg>)
 
@@ -112,7 +112,7 @@ _下拉式功能表_會建立 Revit 專案中所有可存取元素的清單。�
 
 ![](<./images/2/selecting - exercise 10.jpg>)
 
-> 1. 使用_「Select Model Element」_節點，選取其中一根樑。
+> 1. 使用 _「Select Model Element」_ 節點，選取其中一根樑。
 > 2. 將樑元素插入 _Element.Geometry_ 節點，現在可在 Dynamo 視埠中看到樑。
 > 3. 可以使用 _Watch3D_ 節點拉近幾何圖形 (若未在 Watch3D 中看到樑，請按一下右鍵，然後按一下「縮放至佈滿」)。
 
@@ -126,7 +126,7 @@ Revit/Dynamo 工作流程中可能經常會遇到以下問題：如何選取一�
 
 ![](<./images/2/selecting - exercise 12.jpg>)
 
-> 1. 為了選取其餘的樑，我們使用_「All Elements of Family Type」_節點。
+> 1. 為了選取其餘的樑，我們使用 _「All Elements of Family Type」_ 節點。
 > 2. Watch 節點顯示我們已選取五個 Revit 元素。
 
 ![](<./images/2/selecting - exercise 13.jpg>)
@@ -148,8 +148,8 @@ Revit/Dynamo 工作流程中可能經常會遇到以下問題：如何選取一�
 ![](<./images/2/selecting - exercise 15.jpg>)
 
 > 1. 在 _Watch_ 節點中，可以看到我們從 Revit 中所選自適應元件的清單。我們希望擷取基本資訊，因此從自適應點開始。
-> 2. 將_「All Elements of Family Type」_節點插入_「AdaptiveComponent.Location」_節點。這將產生清單的清單，其中每個清單都包含三點，表示自適應點的位置。
-> 3. 連接_「Polygon.ByPoints」_節點將傳回 polycurve。我們可以在 Dynamo 視埠中看到它。透過此方法，我們已視覺化一個元素的幾何圖形，並提取了其餘一系列元素 (數量可能多於此範例) 的幾何圖形。
+> 2. 將 _「All Elements of Family Type」_ 節點插入 _「AdaptiveComponent.Location」_ 節點。這將產生清單的清單，其中每個清單都包含三點，表示自適應點的位置。
+> 3. 連接 _「Polygon.ByPoints」_ 節點將傳回 polycurve。我們可以在 Dynamo 視埠中看到它。透過此方法，我們已視覺化一個元素的幾何圖形，並提取了其餘一系列元素 (數量可能多於此範例) 的幾何圖形。
 
 {% hint style="info" %}
 秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。
