@@ -6,7 +6,7 @@ A analogia com a qual vamos trabalhar aqui são as bonecas russas. Cada lista po
 
 ![Bonecas](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
 
-> Um conjunto de bonecas russas (Foto de [Zeta]() https://www.flickr.com/photos/beppezizzi/145493363) é uma analogia para listas n-dimensionais. Cada camada representa uma lista e cada lista contém itens. No caso do Dynamo, cada contêiner pode ter vários contêineres dentro (representando os itens de cada lista).
+> Um conjunto de bonecas russas (Foto de [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) é uma analogia para listas n-dimensionais. Cada camada representa uma lista e cada lista contém itens. No caso do Dynamo, cada contêiner pode ter vários contêineres dentro (representando os itens de cada lista).
 
 As listas n-dimensionais são difíceis de explicar visualmente, mas criamos alguns exercícios neste capítulo, focados no trabalho com listas que vão além de duas dimensões.
 
