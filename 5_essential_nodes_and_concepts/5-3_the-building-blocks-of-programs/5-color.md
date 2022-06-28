@@ -45,7 +45,7 @@ O nó atual funciona bem, mas pode ser um pouco estranho fazer com que tudo func
 
 ### Visualização da cor
 
-O nó **Display.ByGeometry** nos fornece a capacidade de colorir a geometria na viewport do Dynamo. Isso é útil para separar diferentes tipos de geometria, demonstrando um conceito paramétrico ou definindo uma legenda de análise para simulação. As entradas são simples: geometria e cor. Para criar um gradiente como a imagem acima, a entrada de cor é conectada ao nó **Intervalo ** **de cores**.
+O nó **Display.ByGeometry** nos fornece a capacidade de colorir a geometria na viewport do Dynamo. Isso é útil para separar diferentes tipos de geometria, demonstrando um conceito paramétrico ou definindo uma legenda de análise para simulação. As entradas são simples: geometria e cor. Para criar um gradiente como a imagem acima, a entrada de cor é conectada ao nó **Intervalo** **de cores**.
 
 ![](<../images/5-3/5/color - color preview.jpg>)
 
