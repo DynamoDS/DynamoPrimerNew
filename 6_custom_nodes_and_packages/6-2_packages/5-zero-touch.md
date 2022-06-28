@@ -39,7 +39,7 @@ Zero-touch 套件是使用者定義之自訂節點的良好補充。以下表格
 ![](<../images/6-2/5/case study aforge 02.jpg>)
 
 > 1. 在快顯視窗中，導覽至 AForge 安裝的 Release 資料夾。該資料夾可能位於類似如下所示的資料夾中：_C:\Program Files (x86)\AForge.NET\Framework\Release_。
-> 2. **AForge.Imaging.dll：**在此案例研究中，我們只希望使用 AForge 資源庫中的該檔案。選取此 _.dll_ 檔案，然後按一下_「開啟」。_
+> 2. **AForge.Imaging.dll：** 在此案例研究中，我們只希望使用 AForge 資源庫中的該檔案。選取此 _.dll_ 檔案，然後按一下 _「開啟」。_
 
 回到 Dynamo，您應該會看到資源庫中已加入 **AForge** 節點群組。現在，可以從我們的視覺程式存取 AForge 影像資源庫！
 
@@ -53,7 +53,7 @@ Zero-touch 套件是使用者定義之自訂節點的良好補充。以下表格
 
 {% file src="../datasets/6-2/5/ZeroTouchImages.zip" %}
 
-現在已匯入資源庫，我們將從這第一個簡易練習 (_01-EdgeDetection.dyn_) 開始。我們將對範例影像執行某些基本影像處理，以展示 AForge 影像如何進行篩選。我們將使用_「觀看影像」_節點以展示結果，並在 Dynamo 中套用與 Photoshop 中的篩選類似的篩選。
+現在已匯入資源庫，我們將從這第一個簡易練習 (_01-EdgeDetection.dyn_) 開始。我們將對範例影像執行某些基本影像處理，以展示 AForge 影像如何進行篩選。我們將使用 _「觀看影像」_ 節點以展示結果，並在 Dynamo 中套用與 Photoshop 中的篩選類似的篩選。
 
 若要匯入影像，請在圖元區中加入 **File Path** 節點，然後從練習資料夾中選取「soapbubbles.jpg」(相片來源：[flickr](https://www.flickr.com/photos/wwworks/667298782))。
 
@@ -97,7 +97,7 @@ File Path 節點僅提供我們所選影像的路徑字串。接下來，我們�
 
 ### 練習 2 - 矩形建立
 
-現在我們已介紹了一些基本影像處理，接下來使用影像來驅動 Dynamo 幾何圖形！在本練習中，基本上我們的目的是使用 AForge 與 Dynamo 執行影像的_「即時追蹤」_。我們將使用簡易的作業從參考影像中萃取矩形，不過 AForge 中提供了執行更複雜作業的工具。我們將使用所下載練習檔案中的 _02-RectangleCreation.dyn_。
+現在我們已介紹了一些基本影像處理，接下來使用影像來驅動 Dynamo 幾何圖形！在本練習中，基本上我們的目的是使用 AForge 與 Dynamo 執行影像的 _「即時追蹤」_。我們將使用簡易的作業從參考影像中萃取矩形，不過 AForge 中提供了執行更複雜作業的工具。我們將使用所下載練習檔案中的 _02-RectangleCreation.dyn_。
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 01.jpg>)
 
