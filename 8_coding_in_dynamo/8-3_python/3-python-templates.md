@@ -23,7 +23,7 @@ Vous pouvez simplement remplacer `<PythonTemplateFilePath />` par ce qui suit :
 ```
 
 {% hint style="warning" %}
-_Remarque : remplacez CURRENTUSER par votre nom d’utilisateur _
+_Remarque : remplacez CURRENTUSER par votre nom d’utilisateur_
 {% endhint %}
 
 Ensuite, vous devez créer un gabarit en intégrant la fonctionnalité que vous voulez utiliser. Dans cet exemple, vous allez incorporer les importations liées à Revit et d'autres éléments que vous utilisez généralement lorsque vous travaillez avec Revit.
