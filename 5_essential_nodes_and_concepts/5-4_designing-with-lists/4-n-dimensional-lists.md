@@ -14,7 +14,7 @@ As listas n-dimensionais são difíceis de explicar visualmente, mas criamos alg
 
 O mapeamento é, sem dúvida, a parte mais complexa do gerenciamento de dados no Dynamo e é especialmente relevante ao trabalhar com hierarquias complexas de listas. Com a série de exercícios abaixo, vamos demonstrar quando usar o mapeamento e as combinações, à medida que os dados se tornam multidimensionais.
 
-A introdução inicial a ** List.Map** e **List.Combine** pode ser encontrada na seção anterior. No último exercício abaixo, vamos usar esses nós em uma estrutura de dados complexa.
+A introdução inicial a **List.Map** e **List.Combine** pode ser encontrada na seção anterior. No último exercício abaixo, vamos usar esses nós em uma estrutura de dados complexa.
 
 ## Exercício – Listas 2D – Básico
 
