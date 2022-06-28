@@ -31,7 +31,7 @@ Le operazioni booleane sono complesse e possono essere lente da calcolare. Utili
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1. Utilizzare il menu contestuale accessibile con il pulsante destro del mouse per congelare l'operazione di unione dei solidi.
+> 1\. Utilizzare il menu contestuale accessibile con il pulsante destro del mouse per congelare l'operazione di unione dei solidi.
 >
 > 2\. Il nodo selezionato e tutti i nodi a valle verranno visualizzati in anteprima in modalità semitrasparente di colore grigio chiaro e i fili interessati verranno visualizzati come linee tratteggiate. Anche l'anteprima della geometria interessata sarà semitrasparente. È ora possibile modificare i valori a monte senza calcolare l'unione booleana.
 >
