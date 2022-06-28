@@ -66,7 +66,7 @@ En Dynamo, podemos recuperar los parámetros mediante la selección del elemento
 ![](<./images/3/editing - exercise 04.jpg>)
 
 > 1. También vamos a designar valores para cada parámetro. Añada seis _"controles deslizantes de enteros"_ al lienzo y cambie el nombre de estos al parámetro correspondiente de la lista. Asimismo, defina los valores de cada control deslizante a los que se pueden ver en la imagen anterior. Por orden de arriba a abajo: 62,92,25,22,8,12.
-> 2. Defina otro _bloque de código_ con una lista de la misma longitud que los nombres de parámetro. En este caso, se asignan nombres a las variables (sin comillas) que crean entradas para el _bloque de código._Conecte los _controles deslizantes_ a cada entrada respectiva: `{bw,bl,bh,ao,io,lu};`
+> 2. Defina otro _bloque de código_ con una lista de la misma longitud que los nombres de parámetro. En este caso, se asignan nombres a las variables (sin comillas) que crean entradas para el _bloque de código._ Conecte los _controles deslizantes_ a cada entrada respectiva: `{bw,bl,bh,ao,io,lu};`
 > 3. Conecte el bloque de código _a la entrada de valor "Element.SetParameterByName"\*_. Con opción Ejecutar automáticamente seleccionada, veremos los resultados automáticamente.
 
 {% hint style="warning" %}
