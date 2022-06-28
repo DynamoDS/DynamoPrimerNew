@@ -46,7 +46,7 @@ Węzły działają identycznie. Jeśli _wartość logiczna_ zostanie zmieniona n
 >
 > c. **Wyjście —** wynik wyjściowy to lista 11 liczb w zakresie od 0 do 10.
 >
-> d. **Modulo (%) — ** węzeł **Number Range** do _x_ i _2,0_ do _y_. Spowoduje to obliczenie reszty z dzielenia przez 2 dla każdej liczby na liście. Wynik z tej listy to lista wartości 0 i 1.
+> d. **Modulo (%) —** węzeł **Number Range** do _x_ i _2,0_ do _y_. Spowoduje to obliczenie reszty z dzielenia przez 2 dla każdej liczby na liście. Wynik z tej listy to lista wartości 0 i 1.
 >
 > e. **Test równości (==) —** dodaj test równości do obszaru rysunku. Podłącz wyjście _modulo_ do wejścia _x_ i wartość _0,0_ do wejścia _y_.
 >
@@ -98,7 +98,7 @@ W tym kroku tworzone są punkty wzdłuż krzywej. Ponownie odwzorowaliśmy liczb
 
 ![](<../images/5-3/3/logic - exercise part II-06.jpg>)
 
-> a. **List.FilterByBoolMask — **połącz węzeł **Curve.PointAtParameter** z poprzedniego kroku z wejściem _list_.
+> a. **List.FilterByBoolMask —** połącz węzeł **Curve.PointAtParameter** z poprzedniego kroku z wejściem _list_.
 >
 > b. **Watch —** węzeł obserwacyjny dla _in_ i węzeł obserwacyjny dla _out_ pokazują, że mamy dwie listy reprezentujące indeksy parzyste i nieparzyste. Punkty te są uporządkowane w ten sam sposób na krzywej, co przedstawimy w następnym kroku.
 
