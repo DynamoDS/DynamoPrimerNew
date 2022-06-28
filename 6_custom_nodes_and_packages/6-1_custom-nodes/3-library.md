@@ -20,19 +20,19 @@
 
 ![](<../images/6-1/3/publish custom node locally 01.jpg>)
 
-若要在本端發佈自訂節點，只需在圖元區上按一下右鍵，然後選取_「發佈此自訂節點...」_
+若要在本端發佈自訂節點，只需在圖元區上按一下右鍵，然後選取 _「發佈此自訂節點...」_
 
 ![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
 
-參照上圖填寫相關資訊，並選取_「本端發佈」_。請注意，「群組」欄位定義可從 Dynamo 功能表存取的主要元素。
+參照上圖填寫相關資訊，並選取 _「本端發佈」_。請注意，「群組」欄位定義可從 Dynamo 功能表存取的主要元素。
 
 ![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
 
-選取資料夾，以容納所有計劃在本端發佈的自訂節點。Dynamo 會在每次載入時檢查此資料夾，以便確認該資料夾位於固定位置。導覽至此資料夾，然後選擇 _「選取資料夾」。_Dynamo 節點現已在本端發佈，並將在每次載入程式時保留在 Dynamo 工具列中！
+選取資料夾，以容納所有計劃在本端發佈的自訂節點。Dynamo 會在每次載入時檢查此資料夾，以便確認該資料夾位於固定位置。導覽至此資料夾，然後選擇 _「選取資料夾」。_ Dynamo 節點現已在本端發佈，並將在每次載入程式時保留在 Dynamo 工具列中！
 
 ![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
 
-若要查看自訂節點的資料夾位置，請移至_「Dynamo」>「偏好」>「Package Manager」>「節點和套件路徑」_
+若要查看自訂節點的資料夾位置，請移至 _「Dynamo」>「偏好」>「Package Manager」>「節點和套件路徑」_
 
 ![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
 
@@ -48,7 +48,7 @@
 
 ![](<../images/6-1/3/publish custom node exercise - 07.jpg>)
 
-導覽至此本端資料夾，我們可以在_「.dyf」_資料夾中找到原始自訂節點，.dyf 是 Dynamo 自訂節點檔案的副檔名。我們可以編輯此資料夾中的檔案，節點將在使用者介面中更新。我們還可以新增更多節點至主 _DynamoCustomNode_ 資料夾，Dynamo 會在重新啟動時將其新增到您的資源庫！
+導覽至此本端資料夾，我們可以在 _「.dyf」_ 資料夾中找到原始自訂節點，.dyf 是 Dynamo 自訂節點檔案的副檔名。我們可以編輯此資料夾中的檔案，節點將在使用者介面中更新。我們還可以新增更多節點至主 _DynamoCustomNode_ 資料夾，Dynamo 會在重新啟動時將其新增到您的資源庫！
 
 ![](<../images/6-1/3/publish custom node exercise - 08.jpg>)
 
