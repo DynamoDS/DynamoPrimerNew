@@ -4,7 +4,7 @@ En las secciones anteriores, examinamos cómo se configura el paquete de _MapToS
 
 ![](<../images/6-2/4/publish a package - custom nodes 01.jpg>)
 
-Hay muchas formas de publicar un paquete. A continuación, se indica el proceso recomendado:** publique localmente, desarrolle localmente y, a continuación, publique en línea**. Comenzaremos con una carpeta que contiene todos los archivos del paquete.
+Hay muchas formas de publicar un paquete. A continuación, se indica el proceso recomendado: **publique localmente, desarrolle localmente y, a continuación, publique en línea**. Comenzaremos con una carpeta que contiene todos los archivos del paquete.
 
 ### Desinstalación de un paquete
 
