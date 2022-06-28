@@ -23,7 +23,7 @@
 
 自 0.8 版起，Dynamo 基本上不使用單位。Dynamo 藉此可保持抽象的視覺程式設計環境。與 Revit 標註互動的 Dynamo 節點將參考 Revit 專案的單位。例如，若您在 Dynamo 中設定 Revit 中的長度參數，則在 Dynamo 中該值的數字將對應於 Revit 專案中的預設單位。以下的練習以公尺為單位。
 
-為了快速轉換單位，使用_「Convert Between Units」_節點。此工具使用方便，可即時轉換長度、面積與體積單位。
+為了快速轉換單位，使用 _「Convert Between Units」_ 節點。此工具使用方便，可即時轉換長度、面積與體積單位。
 
 ![](<./images/3/editing - units.jpg>)
 
@@ -52,20 +52,20 @@
 
 ![](<./images/3/editing - exercise 02.jpg>)
 
-> 1. 使用_「Select Model Element」_節點選取建築量體。
-> 2. 使用_「Element.Parameters」_節點，我們可以查詢此量體的所有參數。這包括類型參數與實體參數。
+> 1. 使用 _「Select Model Element」_ 節點選取建築量體。
+> 2. 使用 _「Element.Parameters」_ 節點，我們可以查詢此量體的所有參數。這包括類型參數與實體參數。
 
 ![](<./images/3/editing - exercise 03.jpg>)
 
 > 1. 參考 _Element.Parameters_ 節點，以尋找目標參數。或者，我們可以檢視上一步的性質面板，以選擇希望編輯的的參數名稱。在此案例中，我們將尋找對建築量體上的大型幾何移動有影響的參數。
 > 2. 我們將使用 _Element.SetParameterByName_ 節點變更 Revit 元素
-> 3. 使用 Code Block 定義參數清單，每個項目周圍加上引號以表示是一個字串。我們也可以使用 List.Create 節點，搭配一系列_「字串」_節點連接至多個輸入，但 Code Block 更快、更輕鬆。請確保字串與 Revit 中的名稱完全相符 (包含大小寫)：`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
+> 3. 使用 Code Block 定義參數清單，每個項目周圍加上引號以表示是一個字串。我們也可以使用 List.Create 節點，搭配一系列 _「字串」_ 節點連接至多個輸入，但 Code Block 更快、更輕鬆。請確保字串與 Revit 中的名稱完全相符 (包含大小寫)：`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
 ![](<./images/3/editing - exercise 04.jpg>)
 
-> 1. 我們還希望指定每個參數的值。加入六個_「Integer Slider」_至圖元區，並將其更名為清單中的對應參數。此外，按照以上影像設定每個滑棒的值。採用從上到下的順序：62、92、25、22、8、12
-> 2. 使用與參數名稱具有相同長度的清單定義另一個 _Code Block_。在此案例中，我們命名的變數 (沒有引號) 會建立 _Code Block_ 的輸入。將_滑棒_插入每個各自的輸入：`{bw,bl,bh,ao,io,lu};`
-> 3. 將 Code Block 連接至_「Element.SetParameterByName」_值輸入。勾選「自動執行」後，我們會自動看到結果。
+> 1. 我們還希望指定每個參數的值。加入六個 _「Integer Slider」_ 至圖元區，並將其更名為清單中的對應參數。此外，按照以上影像設定每個滑棒的值。採用從上到下的順序：62、92、25、22、8、12
+> 2. 使用與參數名稱具有相同長度的清單定義另一個 _Code Block_。在此案例中，我們命名的變數 (沒有引號) 會建立 _Code Block_ 的輸入。將 _滑棒_ 插入每個各自的輸入：`{bw,bl,bh,ao,io,lu};`
+> 3. 將 Code Block 連接至 _「Element.SetParameterByName」_ 值輸入。勾選「自動執行」後，我們會自動看到結果。
 
 {% hint style="warning" %}
 \*此示範使用實體參數，而不是類型參數。
@@ -84,9 +84,9 @@
 ![](<./images/3/editing - exercise 06.jpg>)
 
 > 1. 複製圖表，然後著重瞭解容納桁架系統的正面釉面玻璃。在此範例中，我們隔離四個參數：`{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
-> 2. 此外，我們將建立 _Number Slider_，並將其更名為適當的參數。前三個滑棒從上到下應重新對映至範圍 \[0,10]，而最後一個滑棒_「Facade Bend Location」_應重新對映至範圍 \[0,1]。這些值從上到下在開始時應採用以下值 (雖然這些是隨機值)：2.68、2.64、2.29、0.5
+> 2. 此外，我們將建立 _Number Slider_，並將其更名為適當的參數。前三個滑棒從上到下應重新對映至範圍 \[0,10]，而最後一個滑棒 _「Facade Bend Location」_ 應重新對映至範圍 \[0,1]。這些值從上到下在開始時應採用以下值 (雖然這些是隨機值)：2.68、2.64、2.29、0.5
 > 3. 定義新的 Code Block 並連接滑棒：`{so,mo,no,fbl};`
 
 ![](<./images/3/editing - exercise 07.jpg>)
 
-> 1. 透過變更此部分圖表中的_滑棒_，我們可以大幅提升正面釉面玻璃的重要性：9.98、10.0、9.71、0.31
+> 1. 透過變更此部分圖表中的 _滑棒_，我們可以大幅提升正面釉面玻璃的重要性：9.98、10.0、9.71、0.31
