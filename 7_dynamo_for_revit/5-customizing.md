@@ -32,14 +32,14 @@
 
 ![](<./images/5/customizing - exercise 01.jpg>)
 
-> 1. 先選取兩條邊與_「Select Edge」_節點。兩條邊是中庭的長跨距。
+> 1. 先選取兩條邊與 _「Select Edge」_ 節點。兩條邊是中庭的長跨距。
 > 2. 使用 _List.Create_ 節點將兩條邊合併到一個清單中。
 > 3. 使用 _Surface.ByLoft_ 在兩條邊之間建立曲面。
 
 ![](<./images/5/customizing - exercise 02.jpg>)
 
 > 1. 使用 _Code Block_，定義從 0 至 1 的範圍 (包含均勻分佈的 10 個值)：`0..1..#10;`
-> 2. 將 _Code Block_ 插入 _Surface.PointAtParameter_ 節點的 \*u\* 與 _v_ 輸入，並將 _Surface.ByLoft_ 節點插入 _surface_ 輸入。在節點上按一下右鍵，將_交織_變更為_笛卡兒積_。這將在曲面上產生點的網格。
+> 2. 將 _Code Block_ 插入 _Surface.PointAtParameter_ 節點的 \*u\* 與 _v_ 輸入，並將 _Surface.ByLoft_ 節點插入 _surface_ 輸入。在節點上按一下右鍵，將 _交織_ 變更為 _笛卡兒積_。這將在曲面上產生點的網格。
 
 此點網格可作為以參數式方式定義之曲面的控制點。我們希望萃取其中每個點的 u 與 v 位置，以便能將其插入至參數式公式，並保留相同的資料結構。我們可以查詢剛剛所建立點的參數位置，以執行此作業。
 
@@ -54,7 +54,7 @@
 
 > 1. 加入 _Code Block_ 至圖元區，然後輸入以下程式碼：`Math.Sin(u*180)*Math.Sin(v*180)*w;`。這是參數式函數，可從平曲面建立正弦凸塊。
 > 2. 將 _UV.U_ 連接至 _u_ 輸入，將 UV.V 連接至 _v_ 輸入。
-> 3. _w_ 輸入表示造型的_幅度_，因此我們為其連接 _Number Slider_。
+> 3. _w_ 輸入表示造型的 _幅度_，因此我們為其連接 _Number Slider_。
 
 ![](<./images/5/customizing - exercise 05.jpg>)
 
@@ -65,19 +65,19 @@
 
 ![](<./images/5/customizing - exercise 06.jpg>)
 
-> 1. 移至_「套件」>「搜尋套件...」_
-> 2. 搜尋_「LunchBox」_，並安裝_「LunchBox for Dynamo」_。對於諸如此類的幾何圖形作業，這是非常有用的一組工具。
+> 1. 移至 _「套件」>「搜尋套件...」_
+> 2. 搜尋 _「LunchBox」_，並安裝 _「LunchBox for Dynamo」_。對於諸如此類的幾何圖形作業，這是非常有用的一組工具。
 
-> 1. 下載之後，您具有 LunchBox 套件的完整存取權。搜尋_「Quad Grid」_，然後選取_「LunchBox Quad Grid By Face」_。將參數式曲面插入至 _surface_ 輸入，並將 _U_ 與 _V_ 分割份數設定為 _15_。您在 Dynamo 預覽中應該會看到四邊面板化的曲面。
+> 1. 下載之後，您具有 LunchBox 套件的完整存取權。搜尋 _「Quad Grid」_，然後選取 _「LunchBox Quad Grid By Face」_。將參數式曲面插入至 _surface_ 輸入，並將 _U_ 與 _V_ 分割份數設定為 _15_。您在 Dynamo 預覽中應該會看到四邊面板化的曲面。
 
 > 如果您對其設置感到好奇，可以按兩下 _Lunch Box_ 節點，並查看其內容。
 
 > 返回 Revit，接下來快速查看我們將在這裡使用的自適應元件。無需沿其作業，但這是我們將要實體化的屋頂面板。它是四點自適應元件，是 ETFE 系統的粗略表示。中心空心的鎖點框與稱為_「ApertureRatio」_的參數有關。
 
-> 1. 我們將在 Revit 中實體化大量幾何圖形，因此請確保將 Dynamo 求解器調整為_「手動」_。
-> 2. 加入 _Family Types_ 節點至圖元區，然後選取_「ROOF-PANEL-4PT」_。
-> 3. 加入 _AdaptiveComponent.ByPoints_ 節點至圖元區，將 _Panel Pts_ 從_「LunchBox Quad Grid by Face」_輸出連接至 _points_ 輸入。將 _Family Types_ 節點連接至 _familySymbol_ 輸入。
-> 4. 按一下_「執行」_。建立幾何圖形時，Revit 需要_考慮_一段時間。若該時間太長，請將 _code block 的「15」_降低至更小的數字。這將減少屋頂上面板的數量。
+> 1. 我們將在 Revit 中實體化大量幾何圖形，因此請確保將 Dynamo 求解器調整為 _「手動」_。
+> 2. 加入 _Family Types_ 節點至圖元區，然後選取 _「ROOF-PANEL-4PT」_。
+> 3. 加入 _AdaptiveComponent.ByPoints_ 節點至圖元區，將 _Panel Pts_ 從 _「LunchBox Quad Grid by Face」_ 輸出連接至 _points_ 輸入。將 _Family Types_ 節點連接至 _familySymbol_ 輸入。
+> 4. 按一下 _「執行」_。建立幾何圖形時，Revit 需要 _考慮_ 一段時間。若該時間太長，請將 _code block 的「15」_ 降低至更小的數字。這將減少屋頂上面板的數量。
 
 _注意：若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停所執行的 Revit 作業。若要取得有關凍結節點的更多資訊，請參閱「實體」一章中的「凍結」一節。_
 
@@ -87,30 +87,30 @@ _注意：若 Dynamo 花費很長時間來計算節點，您可能要在開發�
 
 ### 分析
 
-> 1. 從上一步繼續執行，接下來更進一步，根據其日曬時間驅動每個面板的鎖點框。拉近至 Revit，選取一個面板，可以看到在性質列中，存在名為_「Aperture Ratio」_的參數。設置族群，以便鎖點框的範圍大致介於 _0.05_ 至 _0.45_ 之間。
+> 1. 從上一步繼續執行，接下來更進一步，根據其日曬時間驅動每個面板的鎖點框。拉近至 Revit，選取一個面板，可以看到在性質列中，存在名為 _「Aperture Ratio」_ 的參數。設置族群，以便鎖點框的範圍大致介於 _0.05_ 至 _0.45_ 之間。
 
 > 1. 如果打開日光路徑，可以在 Revit 中看到目前的日光位置。
 
 > 1. 我們可以使用 _SunSettings.Current_ 節點參考此日光位置。
 
 1. 將日光設定插入至 _Sunsetting.SunDirection_ 以取得日光向量。
-2. 從用於建立自適應元件的_「Panel Pts」_中，使用 _Plane.ByBestFitThroughPoints_ 以近似元件的平面。
-3. 查詢此平面的_法線_。
-4. 使用_內積_計算日光方位。內積是公式，可用於確定兩個向量的平行程度或不平行程度。我們將取得每個自適應元件的平面法向，並對其與日光向量進行比較，以粗略模擬日光方位。
-5. 利用結果的_絕對值_。這可確保在平面法向指向相反方向時，點積準確無誤。
-6. 按一下_「執行」_。
+2. 從用於建立自適應元件的 _「Panel Pts」_ 中，使用 _Plane.ByBestFitThroughPoints_ 以近似元件的平面。
+3. 查詢此平面的 _法線_。
+4. 使用 _內積_ 計算日光方位。內積是公式，可用於確定兩個向量的平行程度或不平行程度。我們將取得每個自適應元件的平面法向，並對其與日光向量進行比較，以粗略模擬日光方位。
+5. 利用結果的 _絕對值_。這可確保在平面法向指向相反方向時，點積準確無誤。
+6. 按一下 _「執行」_。
 
-> 1. 查看 _內積_，我們產生了許多數字。我們希望使用其相對分佈，但需要將這些數字縮攏到我們計劃編輯的適當的_「Aperture Ratio」_參數範圍內。
+> 1. 查看 _內積_，我們產生了許多數字。我們希望使用其相對分佈，但需要將這些數字縮攏到我們計劃編輯的適當的 _「Aperture Ratio」_ 參數範圍內。
 
 1. _Math.RemapRange_ 是執行此作業的強大工具。它採用輸入清單，並將邊界重新對映至兩個目標值。
 2. 在 _code block_ 中，將目標值定義為 _0.15_ 與 _0.45_。
-3. 按一下_「執行」_。
+3. 按一下 _「執行」_。
 
 > 1. 將重新對映的值連接至 _Element.SetParameterByName_ 節點。
 
-1. 將字串_「Aperture Ratio」_連接至 _parameterName_ 輸入。
+1. 將字串 _「Aperture Ratio」_ 連接至 _parameterName_ 輸入。
 2. 將 _adaptive components_ 連接至 _element_ 輸入。
-3. 按一下_「執行」_。
+3. 按一下 _「執行」_。
 
 > 返回 Revit，透過距離，我們可以瞭解日光方位對 ETFE 面板的鎖點框產生的影響。
 
