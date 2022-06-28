@@ -101,7 +101,7 @@ A continuación, mostraremos un proceso alternativo para lograr este resultado.
 
 > 1. Antes de empezar, desactive la vista preliminar de **Surface.ByLoft** en el paso anterior para evitar confusiones.
 > 2. Una alternativa a **List.Transpose** es utilizar **List.Combine**. Esta acción pondrá en funcionamiento _"combinador"_ en cada sublista.
-> 3. En este caso, utilizaremos **List.Create **como _"combinador"_, que creará una lista de cada elemento de las sublistas.
+> 3. En este caso, utilizaremos **List.Create** como _"combinador"_, que creará una lista de cada elemento de las sublistas.
 > 4. Con el nodo **Surface.ByLoft**, se obtienen las mismas superficies que en el paso anterior. La transposición es más fácil de utilizar en este caso, pero cuando la estructura de datos se vuelve más compleja, **List.Combine** es más fiable.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
@@ -145,7 +145,7 @@ Comience con el archivo importado del ejercicio anterior.
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
 > 1. **List.Combine** funcionará mejor aquí. Debemos usar los nodos **List.Map** y **List.Combine** cuando trabajamos con estructuras de datos más complejas.
-> 2. Al utilizar **List.Create **como _"combinador"_, creamos una estructura de datos que funcionará mejor para nosotros.
+> 2. Al utilizar **List.Create** como _"combinador"_, creamos una estructura de datos que funcionará mejor para nosotros.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
