@@ -228,7 +228,7 @@ In generale, esistono più modi per programmare qualsiasi cosa, quindi lo "stile
 
 **Controllare la lunghezza della riga:**
 
-* Non superare \circa i 79 caratteri.
+* Non superare circa i 79 caratteri.
 * Limitare la larghezza richiesta per la finestra dell'editor consente di mostrare diversi file aperti affiancati e funziona bene quando si utilizzano gli strumenti di verifica del codice che presentano le due versioni in colonne adiacenti.
 * Le righe lunghe possono essere suddivise su più righe con il ritorno a capo delle espressioni tra parentesi:
 
