@@ -27,7 +27,7 @@
 
 1. 建立表示參數式方程式中「t」的數字序列，因此，我們希望使用大到足以定義螺旋線的清單。
 
-**Number Sequence：**根據以下三項輸入定義數字序列：_start、amount_ 與 _step_。
+**Number Sequence：** 根據以下三項輸入定義數字序列：_start、amount_ 與 _step_。
 
 ![](<../images/5-3/2/math - part I-01.jpg>)
 
@@ -47,7 +47,7 @@ $$
 
 ![](<../images/5-3/2/math - part I-02.jpg>)
 
-> a. **Number Slider：**在圖元區加入兩個數字滑棒。這些滑棒代表參數式方程式中的 _a_ 與 _b_ 變數。這些表示彈性的常數，或表示我們可以針對所需結果進行調整的參數。
+> a. **Number Slider：** 在圖元區加入兩個數字滑棒。這些滑棒代表參數式方程式中的 _a_ 與 _b_ 變數。這些表示彈性的常數，或表示我們可以針對所需結果進行調整的參數。
 >
 > b. **相乘 (\*)**：相乘節點由星號表示。我們會重複使用此符號連接相乘的變數
 >
@@ -63,11 +63,11 @@ $$
 
 現在，上一步的眾多節點都沒問題，但工作量很大。若要建立更有效率的工作流程，請參閱 [DesignScript ](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) 將 Dynamo 表示式的字串定義為一個節點。在接下來的一系列步驟中，我們將瞭解使用參數式方程式來繪製 Fibonacci 螺旋線。
 
-**Point.ByCoordinates：**將上方的相乘節點連接到「_x_」輸入，將下方的節點連接到「_y_」輸入。我們現在可以在螢幕上看到點的參數式螺旋線。
+**Point.ByCoordinates：** 將上方的相乘節點連接到「_x_」輸入，將下方的節點連接到「_y_」輸入。我們現在可以在螢幕上看到點的參數式螺旋線。
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints：**將上一步的 **Point.ByCoordinates** 連接到_點_。我們可以保留 _connectLastToFirst_ 無輸入，因為不打算繪製封閉曲線。這會建立一條穿過上一步定義的每個點的螺旋線。
+**Polycurve.ByPoints：** 將上一步的 **Point.ByCoordinates** 連接到 _點_。我們可以保留 _connectLastToFirst_ 無輸入，因為不打算繪製封閉曲線。這會建立一條穿過上一步定義的每個點的螺旋線。
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
@@ -75,11 +75,11 @@ $$
 
 ### 第 III 部分：從螺旋線到鸚鵡螺
 
-**Circle.ByCenterPointRadius：**我們在此處將使用圓節點，採用與上一步相同的輸入。半徑的預設值為 _1.0_，所以我們可以立即看到輸出的圓。它會立即清晰展示點如何進一步偏離原點。
+**Circle.ByCenterPointRadius：** 我們在此處將使用圓節點，採用與上一步相同的輸入。半徑的預設值為 _1.0_，所以我們可以立即看到輸出的圓。它會立即清晰展示點如何進一步偏離原點。
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
-**Number Sequence：**這是「_t_」的原始陣列。將此序列插入 **Circle.ByCenterPointRadius** 的半徑值後，圓心仍會離原點越來越遠，但半徑會增加，因而產生很酷的 Fibonacci 圓形。
+**Number Sequence：** 這是「_t_」的原始陣列。將此序列插入 **Circle.ByCenterPointRadius** 的半徑值後，圓心仍會離原點越來越遠，但半徑會增加，因而產生很酷的 Fibonacci 圓形。
 
 如果您使用 3D 製作會更酷！
 
@@ -97,15 +97,15 @@ $$
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate：**有幾個 **Geometry.Rotate** 選項，請確保選擇以 _geometry_、_basePlane_ 及 _degrees_ 為輸入的節點。將 **Point.ByCoordinates** 連接至 geometry 輸入。在此節點上按一下右鍵，並確保將交織設定為「笛卡兒積」
+> a. **Geometry.Rotate：** 有幾個 **Geometry.Rotate** 選項，請確保選擇以 _geometry_、_basePlane_ 及 _degrees_ 為輸入的節點。將 **Point.ByCoordinates** 連接至 geometry 輸入。在此節點上按一下右鍵，並確保將交織設定為「笛卡兒積」
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
-> b. **Plane.XY：**連接至 _basePlane_ 輸入。我們將繞原點旋轉，此原點的位置與螺旋線的基準位置相同。
+> b. **Plane.XY：** 連接至 _basePlane_ 輸入。我們將繞原點旋轉，此原點的位置與螺旋線的基準位置相同。
 >
-> c. **Number Range：**對於角度輸入，我們希望建立多個旋轉。使用 **Number Range** 元件可以快速達成。將其連接至 _degrees_ 輸入。
+> c. **Number Range：** 對於角度輸入，我們希望建立多個旋轉。使用 **Number Range** 元件可以快速達成。將其連接至 _degrees_ 輸入。
 >
-> d. **Number：**為了定義數字範圍，在圖元區中以垂直順序加入三個數字節點。從上到下分別指定值為 _0.0、360.0_ 與 _120.0_。這些值將驅動螺旋線旋轉。請注意將三個數字節點連接至 **Number Range** 節點後的輸出結果。
+> d. **Number：** 為了定義數字範圍，在圖元區中以垂直順序加入三個數字節點。從上到下分別指定值為 _0.0、360.0_ 與 _120.0_。這些值將驅動螺旋線旋轉。請注意將三個數字節點連接至 **Number Range** 節點後的輸出結果。
 
 輸出開始形成一個漩渦。接下來調整某些 **Number Range** 參數，並查看結果的變化。
 
