@@ -16,23 +16,23 @@ Dynamo에서는 사용자 노드를 작성하는 여러 가지 다른 방법을 
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-먼저 사용자 노드에 중첩할 그래프를 작성해 보겠습니다. 이 예에서는 UV 좌표를 사용하여 기준 표면에서 대상 표면으로 다각형을 매핑하는 그래프를 작성합니다. 이 UV 매핑 프로세스는 자주 사용하는 방법이므로 사용자 노드에 적합합니다. 표면 및 UV 공간에 대한 자세한 내용은 [표면](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md) 페이지를 참조하십시오. 전체 그래프는 위의 다운로드한 .zip 파일에 포함된 _UVmapping\_Custom-Node.dyn_입니다.
+먼저 사용자 노드에 중첩할 그래프를 작성해 보겠습니다. 이 예에서는 UV 좌표를 사용하여 기준 표면에서 대상 표면으로 다각형을 매핑하는 그래프를 작성합니다. 이 UV 매핑 프로세스는 자주 사용하는 방법이므로 사용자 노드에 적합합니다. 표면 및 UV 공간에 대한 자세한 내용은 [표면](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md) 페이지를 참조하십시오. 전체 그래프는 위의 다운로드한 .zip 파일에 포함된 _UVmapping\_Custom-Node.dyn_ 입니다.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
 
 > 1. **Code Block:** 이 줄을 사용하여 -45와 45 사이의 숫자 10개 범위를 작성합니다. `45..45..#10;`
 > 2. **Point.ByCoordinates:** **Code Block**의 출력을 'x' 및 'y' 입력에 연결하고 레이싱을 상호 참조로 설정합니다. 이제 점 그리드가 표시됩니다.
 > 3. **Plane.ByOriginNormal:** _'Point'_ 출력을 _'origin'_ 입력에 연결하여 각 점에서 평면을 작성합니다. 기본 법선 벡터인 (0,0,1)이 사용됩니다.
-> 4. **Rectangle.ByWidthLength:** 이전 단계의 평면을 _‘plane’_ 입력에 연결하고 값이 **10**인 _Code Block_을 사용하여 폭과 길이를 지정합니다.
+> 4. **Rectangle.ByWidthLength:** 이전 단계의 평면을 _‘plane’_ 입력에 연결하고 값이 _10_ 인 **Code Block** 을 사용하여 폭과 길이를 지정합니다.
 
 이제 직사각형 그리드가 표시됩니다. UV 좌표를 사용하여 이러한 직사각형을 대상 표면에 매핑해 보겠습니다.
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
 
 > 1. **Polygon.Points:** 이전 단계의 **Rectangle.ByWidthLength** 출력을 _‘polygon’_ 입력에 연결하여 각 직사각형의 코너 점을 추출합니다. 이러한 점은 대상 표면에 매핑할 점입니다.
-> 2. **Rectangle.ByWidthLength:** 값이 _100_인 **Code Block**을 사용하여 직사각형의 폭과 길이를 지정합니다. 이는 기준 표면의 경계가 됩니다.
+> 2. **Rectangle.ByWidthLength:** 값이 _100_ 인 **Code Block**을 사용하여 직사각형의 폭과 길이를 지정합니다. 이는 기준 표면의 경계가 됩니다.
 > 3. **Surface.ByPatch:** 이전 단계의 **Rectangle.ByWidthLength**를 _‘closedCurve’_ 입력에 연결하여 기준 표면을 작성합니다.
-> 4. **Surface.UVParameterAtPoint:** _Polygon.Points_ 노드의 **‘Point’** 출력과 **Surface.ByPatch** 노드의 _‘Surface’_ 출력을 연결하여 각 점에서 UV 매개변수를 반환합니다.
+> 4. **Surface.UVParameterAtPoint:** **Polygon.Points** 노드의 _‘Point’_ 출력과 **Surface.ByPatch** 노드의 _‘Surface’_ 출력을 연결하여 각 점에서 UV 매개변수를 반환합니다.
 
 기준 표면과 UV 좌표 세트가 있으므로 대상 표면을 가져와 표면 사이의 점을 매핑할 수 있습니다.
 
@@ -75,7 +75,7 @@ Dynamo에서는 사용자 노드를 작성하는 여러 가지 다른 방법을 
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
 
-> 1. **Input:** 입력 이름을 _baseSurface_ 및 _targetSurface_로 변경합니다.
+> 1. **Input:** 입력 이름을 _baseSurface_ 및 _targetSurface_ 로 변경합니다.
 > 2. **Output:** 매핑된 다각형에 출력을 추가합니다.
 
 사용자 노드를 저장하고 홈 작업공간으로 돌아갑니다. **MapPolygonsToSurface** 노드에 방금 변경한 사항이 반영됩니다.
@@ -88,8 +88,8 @@ Dynamo에서는 사용자 노드를 작성하는 여러 가지 다른 방법을 
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 06.jpg>)
 
-> 1. Input **Code Block** 편집을 시작합니다. 해설을 시작하려면 "//" 다음에 해설 문자를 입력합니다. 노드를 명확히 하는 데 도움이 될 수 있는 모든 항목을 입력합니다. 여기서는 _targetSurface_에 대해 설명합니다.
-> 2. 또한 입력 유형을 값과 같게 설정하여 _inputSurface_의 기본값을 설정해 보겠습니다. 여기서는 기본값을 원래 **Surface.ByPatch** 세트로 설정합니다.
+> 1. Input **Code Block** 편집을 시작합니다. 해설을 시작하려면 "//" 다음에 해설 문자를 입력합니다. 노드를 명확히 하는 데 도움이 될 수 있는 모든 항목을 입력합니다. 여기서는 _targetSurface_ 에 대해 설명합니다.
+> 2. 또한 입력 유형을 값과 같게 설정하여 _inputSurface_ 의 기본값을 설정해 보겠습니다. 여기서는 기본값을 원래 **Surface.ByPatch** 세트로 설정합니다.
 
 해설을 출력에 적용할 수도 있습니다.
 
@@ -100,4 +100,4 @@ Dynamo에서는 사용자 노드를 작성하는 여러 가지 다른 방법을 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 08.jpg>)
 
 > 1. 사용자 노드 입력 위에 커서를 놓으면 해설이 표시됩니다.
-> 2. _inputSurface_에 기본값을 설정한 상태로, 표면 입력 없이 정의를 실행할 수도 있습니다.
+> 2. _inputSurface_ 에 기본값을 설정한 상태로, 표면 입력 없이 정의를 실행할 수도 있습니다.
