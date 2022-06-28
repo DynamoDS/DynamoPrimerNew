@@ -44,7 +44,7 @@ Il passaggio successivo consiste nel dividere la superficie in una griglia di pu
 
 > 1\. Utilizzando **Code Block**, inserire queste due righe di codice: `0..1..#10;` `0..1..#5;`.
 >
-> 2\. Con **Surface.PointAtParameter**, collegare i due valori di Code Block a _u _e v. Modificare il _collegamento_ di questo nodo in _Globale_.
+> 2\. Con **Surface.PointAtParameter**, collegare i due valori di Code Block a u e _v_. Modificare il _collegamento_ di questo nodo in _Globale_.
 >
 > 3\. L'output mostra la struttura di dati, visibile anche nell'anteprima di Dynamo.
 
@@ -101,7 +101,7 @@ Successivamente, verrà illustrato un processo alternativo per ottenere questo r
 
 > 1. Prima di iniziare, disattivare l'anteprima di **Surface.ByLoft** nel passaggio precedente per evitare confusione.
 > 2. In alternativa a **List.Transpose** utilizzare **List.Combine**. In questo modo verrà eseguito un _"combinatore"_ in ogni sottoelenco.
-> 3. In questo caso, si utilizza **List.Create **come _"combinatore"_, che crea un elenco di ogni voce nei sottoelenchi.
+> 3. In questo caso, si utilizza **List.Create** come _"combinatore"_, che crea un elenco di ogni voce nei sottoelenchi.
 > 4. Utilizzando il nodo **Surface.ByLoft**, si ottengono le stesse superfici del passaggio precedente. La trasposizione è più semplice da utilizzare in questo caso, ma quando la struttura di dati diventa ancora più complessa, **List.Combine** è più affidabile.
 
 ![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
@@ -145,7 +145,7 @@ Iniziare con il file importato dell'esercizio precedente.
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
 
 > 1. **List.Combine** funzionerà meglio in questo caso. Per ottenere strutture di dati più complesse, si desidera utilizzare i nodi **List.Map** e **List.Combine**.
-> 2. Utilizzando **List.Create **come _"combinatore"_, verrà creata una struttura di dati che funzionerà meglio.
+> 2. Utilizzando **List.Create** come _"combinatore"_, verrà creata una struttura di dati che funzionerà meglio.
 
 ![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
 
