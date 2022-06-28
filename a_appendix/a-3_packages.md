@@ -84,7 +84,7 @@ Voici la liste de certains des packages les plus populaires de la communauté Dy
 
 | ?? **MONOCLE** | [Consulter l’outil Monocle sur GitHub](https://github.com/johnpierson/MonocleForDynamo) |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Monocle est un outil d’agrandissement de l’affichage pour Dynamo 2.0.x. Il contient un ensemble d’outils utiles pour l’identification des packages, le nettoyage des graphiques, etc. Monocle vise à étendre les fonctionnalités de l’interface utilisateur Dynamo en toute transparence, comme si elles étaient intégrées à Dynamo.__. Monocle est disponible dans le gestionnaire de packages. | ![](./images/a-3/monocleImage.png) |
+| Monocle est un outil d’agrandissement de l’affichage pour Dynamo 2.0.x. Il contient un ensemble d’outils utiles pour l’identification des packages, le nettoyage des graphiques, etc. Monocle vise à étendre les fonctionnalités de l’interface utilisateur Dynamo en toute transparence, _comme si elles étaient intégrées à Dynamo_. Monocle est disponible dans le gestionnaire de packages. | ![](./images/a-3/monocleImage.png) |
 
 
 
