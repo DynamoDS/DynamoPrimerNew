@@ -274,11 +274,11 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 **不受管理的物件：**
 
-當從 Python 或 C# 使用 Dynamo 的幾何圖形資源庫_(ProtoGeometry)_，您建立的幾何圖形物件將不會受虛擬機器管理，而且許多物件的記憶體都將需要手動進行清理。以清理原生或不受管理的物件，您可以使用 **Dispose** 方法或**使用**關鍵字。請參閱此 Wiki 項目的概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
+當從 Python 或 C# 使用 Dynamo 的幾何圖形資源庫 _(ProtoGeometry)_，您建立的幾何圖形物件將不會受虛擬機器管理，而且許多物件的記憶體都將需要手動進行清理。以清理原生或不受管理的物件，您可以使用 **Dispose** 方法或**使用**關鍵字。請參閱此 Wiki 項目的概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
 
-您僅需要處置不必傳回至圖表或儲存參考的不受管理的資源。在本節餘下部分，我們會將這些物件稱為_中間幾何圖形_。您可以在以下的程式碼範例中查看有關此類別的物件的範例。此 zero touch C# 函數 **singleCube** 會傳回一個立方塊，但在執行期間建立 10000 個額外的立方塊。我們可以假設此其他的幾何圖形用作為一些中間建構幾何圖形。
+您僅需要處置不必傳回至圖表或儲存參考的不受管理的資源。在本節餘下部分，我們會將這些物件稱為 _中間幾何圖形_。您可以在以下的程式碼範例中查看有關此類別的物件的範例。此 zero touch C# 函數 **singleCube** 會傳回一個立方塊，但在執行期間建立 10000 個額外的立方塊。我們可以假設此其他的幾何圖形用作為一些中間建構幾何圖形。
 
-**此 zero touch 功能很大可能會令 Dynamo 當機。**由於我們建立了 10000 個實體，但僅儲存並傳回其中一個。我們應而處置所有的中間立方塊，除了我們傳回的那一個。我們不希望處置我們傳回的內容，因為它將擴展至圖表和被其他節點使用。
+**此 zero touch 功能很大可能會令 Dynamo 當機。** 由於我們建立了 10000 個實體，但僅儲存並傳回其中一個。我們應而處置所有的中間立方塊，除了我們傳回的那一個。我們不希望處置我們傳回的內容，因為它將擴展至圖表和被其他節點使用。
 
 ```
 public Cuboid singleCube(){
