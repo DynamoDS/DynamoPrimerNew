@@ -70,7 +70,7 @@ Mesclar remove todos os níveis de dados de uma estrutura de dados. Isso é úti
 
 > 1. Ao inserir uma _mesclagem_ antes do nó PolyCurve, criamos uma única lista para todos os pontos. O nó **PolyCurve.ByPoints** faz referência a uma lista para criar uma curva e, como todos os pontos estão em uma lista, obtemos uma policurva em zigue-zague que segue em toda a lista de pontos.
 
-Há também opções para mesclar níveis isolados de dados. Usando o nó **List.Flatten**, é possível definir um número definido de níveis de dados para mesclar do topo da hierarquia. Essa será uma ferramenta realmente útil se você estiver lidando com estruturas de dados complexas, que não são necessariamente relevantes para o fluxo de trabalho. Outra opção é usar o nó de mesclagem como uma função em ** List.Map**. Discutiremos mais sobre **List.Map** abaixo.
+Há também opções para mesclar níveis isolados de dados. Usando o nó **List.Flatten**, é possível definir um número definido de níveis de dados para mesclar do topo da hierarquia. Essa será uma ferramenta realmente útil se você estiver lidando com estruturas de dados complexas, que não são necessariamente relevantes para o fluxo de trabalho. Outra opção é usar o nó de mesclagem como uma função em **List.Map**. Discutiremos mais sobre **List.Map** abaixo.
 
 ### Cortar
 
@@ -96,7 +96,7 @@ O comando de corte divide as listas com base em um determinado comprimento de li
 
 **List.Map/Combine** aplica uma função definida a uma lista de entrada, mas uma etapa abaixo na hierarquia. As combinações são o mesmo que os mapas, exceto que as combinações podem ter várias entradas correspondentes à entrada de uma determinada função.
 
-_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de _**List.Map**_ foi resolvida com a adição do recurso _**List@Level**_. Para obter mais informações, consulte _ [_List@Level_](6-3\_lists-of-lists.md#listlevel)_, abaixo._
+_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de_ **List.Map** _foi resolvida com a adição do recurso_ **List@Level** _. Para obter mais informações, consulte_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _, abaixo._
 
 Como uma rápida introdução, vamos revisar o nó **List.Count** de uma seção anterior.
 
@@ -129,7 +129,7 @@ Observe que o nó List.Count fornece um valor igual a 5. Isso é igual à variá
 
 ### **List.Combine**
 
-_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de List.Combine foi resolvida com a adição do recurso _**List@Level**_. Para obter mais informações, consulte _ [_List@Level_](6-3\_lists-of-lists.md#listlevel)_, abaixo._
+_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de List.Combine foi resolvida com a adição do recurso_ **List@Level** _. Para obter mais informações, consulte_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _, abaixo._
 
 Neste exercício, usaremos **List.Combine** para demonstrar como pode ser usado para aplicar uma função em listas separadas de objetos.
 
@@ -164,7 +164,7 @@ Consulte o exercício em Listas n-dimensionais para ver outro exemplo de uso de 
 
 Com preferência em relação ao **List.Map**, o recurso **List@Level** permite selecionar diretamente com qual nível de lista você deseja trabalhar diretamente na porta de entrada do nó. Esse recurso pode ser aplicado a qualquer entrada de nó e permitirá que você acesse os níveis de suas listas com mais rapidez e facilidade do que outros métodos. Basta informar ao nó qual nível da lista você deseja usar como entrada e deixar que o nó faça o restante.
 
-Neste exercício, usaremos o recurso ** List@Level** para isolar um nível de dados específico.
+Neste exercício, usaremos o recurso **List@Level** para isolar um nível de dados específico.
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 01.jpg>)
 
@@ -176,7 +176,7 @@ Começaremos com um eixo de pontos 3D simples.
 
 ![List@Level](<../images/5-4/3/lists of lists - list at level 02.jpg>)
 
-> 1. Para usar a função ** List@Level**, clique em “>”. Neste menu, você verá duas caixas de seleção.
+> 1. Para usar a função **List@Level**, clique em “>”. Neste menu, você verá duas caixas de seleção.
 > 2. **Usar níveis** – Ativa a funcionalidade **List@Level**. Após clicar nessa opção, você poderá clicar e selecionar os níveis da lista de entrada que deseja que o nó use. Com esse menu, você pode experimentar rapidamente diferentes opções de nível clicando para cima ou para baixo.
 > 3. _Manter a estrutura da lista_ – se estiver ativada, você terá a opção de manter a estrutura do nível de entrada. Às vezes, você pode ter organizado intencionalmente seus dados em sublistas. Ao marcar essa opção, é possível manter a organização da lista intacta e não perder nenhuma informação.
 
@@ -194,8 +194,8 @@ Embora este exemplo específico também possa ser criado com **List.Map**, o rec
 ![](<../images/5-4/3/lists of lists - list at level 04.jpg>)
 
 > 1. Embora ambos os métodos ofereçam acesso aos mesmos pontos, o método **List@Level** permite alternar facilmente entre as camadas de dados em um único nó.
-> 2. Para acessar um eixo de pontos com **List.Map**, precisamos de um nó ** List.GetItemAtIndex** junto com **List.Map**. Para cada nível de lista que descermos, precisaremos usar um nó **List.Map** adicional. Dependendo da complexidade das listas, isso pode exigir a adição de uma quantidade significativa de nós **List.Map** ao gráfico para acessar o nível de informações correto.
-> 3. Neste exemplo, um nó ** List.GetItemAtIndex** com um nó **List.Map** retorna o mesmo conjunto de pontos com a mesma estrutura de lista que o **List.GetItemAtIndex** com “@L3” selecionado.
+> 2. Para acessar um eixo de pontos com **List.Map**, precisamos de um nó **List.GetItemAtIndex** junto com **List.Map**. Para cada nível de lista que descermos, precisaremos usar um nó **List.Map** adicional. Dependendo da complexidade das listas, isso pode exigir a adição de uma quantidade significativa de nós **List.Map** ao gráfico para acessar o nível de informações correto.
+> 3. Neste exemplo, um nó **List.GetItemAtIndex** com um nó **List.Map** retorna o mesmo conjunto de pontos com a mesma estrutura de lista que o **List.GetItemAtIndex** com “@L3” selecionado.
 
 ### Transpor
 
