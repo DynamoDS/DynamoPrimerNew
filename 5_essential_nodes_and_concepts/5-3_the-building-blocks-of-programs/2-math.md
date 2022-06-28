@@ -27,7 +27,7 @@
 
 1. 파라메트릭 방정식에서 't'를 나타내는 Number 시퀀스를 작성합니다. 따라서 나선을 정의할 수 있을 만큼 충분히 큰 리스트를 사용합니다.
 
-**Number Sequence:** _start, amount_ 및 _step_의 세 가지 입력에 따라 숫자 시퀀스를 정의합니다.
+**Number Sequence:** _start, amount_ 및 _step_ 의 세 가지 입력에 따라 숫자 시퀀스를 정의합니다.
 
 ![](<../images/5-3/2/math - part I-01.jpg>)
 
@@ -67,7 +67,7 @@ $$
 
 ![](<../images/5-3/2/math - part II-01.gif>)
 
-**Polycurve.ByPoints:** 이전 단계의 **Point.ByCoordinates**를 _points_에 연결합니다. 닫힌 곡선을 만드는 것이 아니므로 입력 없이 _connectLastToFirst_를 그대로 두면 됩니다. 그러면 이전 단계에서 정의한 각 점을 통과하는 나선이 작성됩니다.
+**Polycurve.ByPoints:** 이전 단계의 **Point.ByCoordinates** 를 _points_ 에 연결합니다. 닫힌 곡선을 만드는 것이 아니므로 입력 없이 _connectLastToFirst_ 를 그대로 두면 됩니다. 그러면 이전 단계에서 정의한 각 점을 통과하는 나선이 작성됩니다.
 
 ![](<../images/5-3/2/math - part II-02.jpg>)
 
@@ -75,7 +75,7 @@ $$
 
 ### 파트 3: 나선에서 Nautilus로
 
-**Circle.ByCenterPointRadius:** 여기서는 이전 단계와 동일한 입력으로 원 노드를 사용하겠습니다. 반지름 값의 기본값은 _1.0_이므로 원의 출력이 바로 표시됩니다. 따라서 점이 원점에서 얼마나 멀리 떨어져 있는지를 바로 확인할 수 있게 됩니다.
+**Circle.ByCenterPointRadius:** 여기서는 이전 단계와 동일한 입력으로 원 노드를 사용하겠습니다. 반지름 값의 기본값은 _1.0_ 이므로 원의 출력이 바로 표시됩니다. 따라서 점이 원점에서 얼마나 멀리 떨어져 있는지를 바로 확인할 수 있게 됩니다.
 
 ![](<../images/5-3/2/math - part III-01.jpg>)
 
@@ -97,7 +97,7 @@ $$
 
 ![](<../images/5-3/2/math - part IV-02.jpg>)
 
-> a. **Geometry.Rotate:** _Geometry.Rotate_ 옵션에는 여러 가지가 있습니다. **geometry**, _basePlane_ 및 _degrees_를 입력으로 사용하여 노드를 선택했는지 확인하십시오. **Point.ByCoordinates**를 형상 입력에 연결합니다. 이 노드를 마우스 오른쪽 버튼으로 클릭하고 레이싱이 '외적'으로 설정되어 있는지 확인합니다.
+> a. **Geometry.Rotate:** _Geometry.Rotate_ 옵션에는 여러 가지가 있습니다. **geometry**, _basePlane_ 및 _degrees_ 를 입력으로 사용하여 노드를 선택했는지 확인하십시오. **Point.ByCoordinates**를 형상 입력에 연결합니다. 이 노드를 마우스 오른쪽 버튼으로 클릭하고 레이싱이 '외적'으로 설정되어 있는지 확인합니다.
 >
 > ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
@@ -109,10 +109,10 @@ $$
 
 처음에는 출력이 소용돌이와 비슷합니다. **Number Range** 매개변수 중 일부를 조정하고 결과가 어떻게 달라지는지 확인해 보겠습니다.
 
-**Number Range** 노드의 단계 크기를 _120.0_에서 _36.0_으로 변경합니다. 이렇게 하면 더 많은 회전이 작성되므로 그리드가 더 조밀해집니다.
+**Number Range** 노드의 단계 크기를 _120.0_ 에서 _36.0_ 으로 변경합니다. 이렇게 하면 더 많은 회전이 작성되므로 그리드가 더 조밀해집니다.
 
 ![](<../images/5-3/2/math - part IV-04.jpg>)
 
-**Number Range** 노드의 단계 크기를 _36.0_에서 _3.6_으로 변경합니다. 그러면 훨씬 더 조밀한 그리드가 표시되고 나선의 방향은 불명확해집니다. 해바라기가 작성된 것입니다.
+**Number Range** 노드의 단계 크기를 _36.0_ 에서 _3.6_ 으로 변경합니다. 그러면 훨씬 더 조밀한 그리드가 표시되고 나선의 방향은 불명확해집니다. 해바라기가 작성된 것입니다.
 
 ![](<../images/5-3/2/math - part IV-05.jpg>)
