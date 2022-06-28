@@ -40,7 +40,7 @@ El nodo actual funciona bien, pero puede resultar un poco incómodo para que tod
 ![](<../images/5-3/5/color - color range.jpg>)
 
 > 1. Definir tres colores: con un nodo **Code Block**, defina _rojo, verde_ y _azul_ mediante la conexión de las combinaciones adecuadas de _0_ y _255_.
-> 2. **Crear lista:**fusione los tres colores en una lista.
+> 2. **Crear lista:** fusione los tres colores en una lista.
 > 3. Definir índices: cree una lista para definir las posiciones de pinzamiento de cada color (de 0 a 1). Observe el valor de 0,75 para el verde. De este modo, se coloca el color verde a tres cuartos de camino en el degradado horizontal del control deslizante de rango de colores.
 > 4. **Code Block**: valores de entrada (entre 0 y 1) para convertir en colores.
 
