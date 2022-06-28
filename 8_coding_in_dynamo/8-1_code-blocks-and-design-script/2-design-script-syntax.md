@@ -53,7 +53,7 @@ Une action est une opération effectuée sur un objet de ce type. Pour appliquer
 
 ![](<../images/8-1/2/DesignScript - action.jpg>)
 
-> 1. Étant donné que le nœud **Point.Add **est un nœud de type action, la syntaxe fonctionne un peu différemment.
+> 1. Étant donné que le nœud **Point.Add** est un nœud de type action, la syntaxe fonctionne un peu différemment.
 > 2. Les entrées sont (1) le _point_ et (2) le _vecteur_ à ajouter. Dans un nœud **Code Block**, le point (l’élément) est nommé _"pt"_. Pour ajouter un vecteur nommé \*“vec” \*to _“pt”_, écrivez _pt.Add(vec)_ ou : élément, point, action. L’action Ajouter ne possède qu’une seule entrée, ou toutes les entrées du nœud **Point.Add** sauf la première. La première entrée du nœud **Point.Add** est le point lui-même.
 
 #### Query
