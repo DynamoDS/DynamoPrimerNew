@@ -31,7 +31,7 @@ Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Ut
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1. Utilice el menú contextual para bloquear la operación de unión de sólidos.
+> 1\. Utilice el menú contextual para bloquear la operación de unión de sólidos.
 >
 > 2\. El nodo seleccionado y todos los nodos descendentes se previsualizan en modo atenuado con un color gris claro y los cables afectados se muestran como líneas continuas. La vista preliminar de la geometría afectada también se mostrará atenuada. Ahora puede cambiar los valores ascendentes sin calcular la unión booleana.
 >
