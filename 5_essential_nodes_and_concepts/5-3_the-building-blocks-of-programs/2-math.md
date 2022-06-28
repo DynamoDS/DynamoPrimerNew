@@ -103,7 +103,7 @@ Ensuite, suivez ces courtes étapes pour générer une série de clothoïdes à 
 >
 > b. **Plane.XY :** connexion à l’entrée _basePlane_. Vous allez effectuer une rotation autour de l'origine, servant également de base pour la clothoïde.
 >
-> c. **Intervalle de nombres :** pour la saisie des degrés, vous devez créer plusieurs rotations. Pour ce faire, il suffit d’utiliser un composant **Number Range**. Connectez-le à l'entrée _degrees_.
+> c. **Number Range:** pour la saisie des degrés, vous devez créer plusieurs rotations. Pour ce faire, il suffit d’utiliser un composant **Number Range**. Connectez-le à l'entrée _degrees_.
 >
 > d. **Number :** pour définir l’intervalle de nombres, ajoutez trois nœuds Number à la zone de dessin dans l’ordre vertical. De haut en bas, affectez respectivement les valeurs _0.0,360.0,_ et _120.0_. Elles pilotent la rotation de la clothoïde. Après avoir connecté les trois nœuds Number au nœud Range, observez les sorties du nœud **Number Range**.
 
