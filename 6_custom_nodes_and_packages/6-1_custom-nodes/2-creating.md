@@ -20,36 +20,36 @@ Dynamo 提供自訂節點的多種不同建立方法。您可以從頭開始建�
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
 
-> 1. **Code Block：**使用此行可建立範圍介於 -45 到 45 之間的 10 個數字 `45..45..#10;`
-> 2. **Point.ByCoordinates：**將 **Code Block** 的輸出連接至「x」與「y」輸入，並將交織設定為交互參考。現在應該已建立點的格線。
-> 3. **Plane.ByOriginNormal：**將_「Point」_輸出連接至_「origin」_輸入，以便在每個點處建立平面。將使用預設的法線向量 (0,0,1)。
-> 4. **Rectangle.ByWidthLength：**將上一步中的平面連接至_「plane」_輸入，並使用 **Code Block** 以值 _10_ 指定寬度與長度。
+> 1. **Code Block：** 使用此行可建立範圍介於 -45 到 45 之間的 10 個數字 `45..45..#10;`
+> 2. **Point.ByCoordinates：** 將 **Code Block** 的輸出連接至「x」與「y」輸入，並將交織設定為交互參考。現在應該已建立點的格線。
+> 3. **Plane.ByOriginNormal：** 將 _「Point」_ 輸出連接至 _「origin」_ 輸入，以便在每個點處建立平面。將使用預設的法線向量 (0,0,1)。
+> 4. **Rectangle.ByWidthLength：** 將上一步中的平面連接至 _「plane」_ 輸入，並使用 **Code Block** 以值 _10_ 指定寬度與長度。
 
 現在應該能看到矩形的格線。接下來使用 UV 座標將這些矩形對映至目標曲面。
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
 
-> 1. **Polygon.Points：**將上一步中的 **Rectangle.ByWidthLength** 輸出連接至_「polygon」_輸入，以萃取每個矩形的角點。這些是將要對映至目標曲面的點。
-> 2. **Rectangle.ByWidthLength：**使用 **Code Block** 以值 _100_ 指定矩形的長度與寬度。這將是基準曲面的邊界。
-> 3. **Surface.ByPatch：**將上一步中的 **Rectangle.ByWidthLength** 連接至_「closedCurve」_輸入，以建立基準曲面。
-> 4. **Surface.UVParameterAtPoint：**連接 **Polygon.Points** 節點的_「Point」_輸出與 **Surface.ByPatch** 節點的_「Surface」_輸出，以傳回每個點處的 UV 參數。
+> 1. **Polygon.Points：** 將上一步中的 **Rectangle.ByWidthLength** 輸出連接至 _「polygon」_ 輸入，以萃取每個矩形的角點。這些是將要對映至目標曲面的點。
+> 2. **Rectangle.ByWidthLength：** 使用 **Code Block** 以值 _100_ 指定矩形的長度與寬度。這將是基準曲面的邊界。
+> 3. **Surface.ByPatch：** 將上一步中的 **Rectangle.ByWidthLength** 連接至 _「closedCurve」_ 輸入，以建立基準曲面。
+> 4. **Surface.UVParameterAtPoint：** 連接 **Polygon.Points** 節點的 _「Point」_ 輸出與 **Surface.ByPatch** 節點的 _「Surface」_ 輸出，以傳回每個點處的 UV 參數。
 
 現在，我們已建立基準曲面與一組 UV 座標，可以匯入目標曲面並在曲面之間對映點。
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 04.jpg>)
 
-> 1. **File Path：**選取要匯入的曲面的檔案路徑。檔案類型應是 .SAT。按一下_「瀏覽...」_按鈕，導覽至上面所下載 .zip 檔案中的 _UVmapping\_srf.sat_ 檔案。
-> 2. **Geometry.ImportFromSAT：**連接檔案路徑以匯入曲面。您在幾何圖形預覽中應該能看到匯入的曲面。
-> 3. **UV：**將 UV 參數輸出連接至 _UV.U_ 與 _UV.V_ 節點。
-> 4. **Surface.PointAtParameter：**連接匯入的曲面以及 u 與 v 座標。現在，您應該能看到目標曲面上 3D 點的格線。
+> 1. **File Path：** 選取要匯入的曲面的檔案路徑。檔案類型應是 .SAT。按一下 _「瀏覽...」_ 按鈕，導覽至上面所下載 .zip 檔案中的 _UVmapping\_srf.sat_ 檔案。
+> 2. **Geometry.ImportFromSAT：** 連接檔案路徑以匯入曲面。您在幾何圖形預覽中應該能看到匯入的曲面。
+> 3. **UV：** 將 UV 參數輸出連接至 _UV.U_ 與 _UV.V_ 節點。
+> 4. **Surface.PointAtParameter：** 連接匯入的曲面以及 u 與 v 座標。現在，您應該能看到目標曲面上 3D 點的格線。
 
 最後一步是使用 3D 點來建構矩形曲面修補。
 
 ![](<../images/6-1/2/custom node for uv mapping pt I - 05.jpg>)
 
-> 1. **PolyCurve.ByPoints：**連接曲面上的點以建構通過點的 PolyCurve。
-> 2. **Boolean：**在工作區中加入 **Boolean**，將其連接至_「connectLastToFirst」_輸入，並切換至「True」以封閉 polycurve。現在，您應該能看到對映至曲面的矩形。
-> 3. **Surface.ByPatch：**將 polycurve 連接至_「closedCurve」_輸入，以建構曲面修補。
+> 1. **PolyCurve.ByPoints：** 連接曲面上的點以建構通過點的 PolyCurve。
+> 2. **Boolean：** 在工作區中加入 **Boolean**，將其連接至 _「connectLastToFirst」_ 輸入，並切換至「True」以封閉 polycurve。現在，您應該能看到對映至曲面的矩形。
+> 3. **Surface.ByPatch：** 將 polycurve 連接至 _「closedCurve」_ 輸入，以建構曲面修補。
 
 ### 第 II 部分：從圖表到自訂節點
 
@@ -75,8 +75,8 @@ Dynamo 提供自訂節點的多種不同建立方法。您可以從頭開始建�
 
 ![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
 
-> 1. **Input：**將輸入名稱變更為 _baseSurface_ 與 _targetSurface_。
-> 2. **Output：**為對映的多邊形加入其他輸出。
+> 1. **Input：** 將輸入名稱變更為 _baseSurface_ 與 _targetSurface_。
+> 2. **Output：** 為對映的多邊形加入其他輸出。
 
 儲存自訂節點，然後返回首頁工作區。請注意 **MapPolygonsToSurface** 節點反映我們剛剛所做的變更。
 
