@@ -28,9 +28,9 @@ Zero-Touch 패키지는 사용자 정의 사용자 노드를 보완하는 데 �
 
 이 성공 사례에서는 [AForge](http://www.aforgenet.com) 외부 _.dll_ 라이브러리를 가져오는 방법을 보여 드리겠습니다. AForge는 이미지 처리에서 인공 지능에 이르는 다양한 기능을 제공하는 강력한 라이브러리입니다. AForge의 이미징 클래스를 참조하여 아래의 이미지 처리 연습 몇 가지를 수행해 보겠습니다.
 
-먼저 AForge를 다운로드합니다. [AForge 다운로드 페이지](http://www.aforgenet.com/framework/downloads.html)에서 _\[설치 프로그램 다운로드]_를 선택하고 다운로드가 완료되면 설치합니다.
+먼저 AForge를 다운로드합니다. [AForge 다운로드 페이지](http://www.aforgenet.com/framework/downloads.html)에서 _\[설치 프로그램 다운로드]_ 를 선택하고 다운로드가 완료되면 설치합니다.
 
-Dynamo에서 새 파일을 작성하고 _파일 > 라이브러리 가져오기..._를 선택합니다.
+Dynamo에서 새 파일을 작성하고 _파일 > 라이브러리 가져오기..._ 를 선택합니다.
 
 ![](<../images/6-2/5/case study aforge 01.jpg>)
 
@@ -38,8 +38,8 @@ Dynamo에서 새 파일을 작성하고 _파일 > 라이브러리 가져오기..
 
 ![](<../images/6-2/5/case study aforge 02.jpg>)
 
-> 1. 팝업 창에서 AForge 설치의 릴리즈 폴더로 이동합니다. 이는 _C:\Program Files (x86)\AForge.NET\Framework\Release_와 유사한 폴더에 있을 수 있습니다.
-> 2. **AForge.Imaging.dll:** 이 성공 사례에서는 AForge 라이브러리의 이 파일 하나만 사용하겠습니다. 이 _.dll_을 선택하고 _"열기"를 누릅니다._
+> 1. 팝업 창에서 AForge 설치의 릴리즈 폴더로 이동합니다. 이는 _C:\Program Files (x86)\AForge.NET\Framework\Release_ 와 유사한 폴더에 있을 수 있습니다.
+> 2. **AForge.Imaging.dll:** 이 성공 사례에서는 AForge 라이브러리의 이 파일 하나만 사용하겠습니다. 이 _.dll_ 을 선택하고 _"열기"를 누릅니다._
 
 Dynamo로 돌아가면 라이브러리에 **AForge** 노드 그룹이 추가된 것을 볼 수 있습니다. 이제 비주얼 프로그램에서 AForge 이미징 라이브러리에 액세스할 수 있습니다.
 
@@ -97,7 +97,7 @@ File Path 노드에서는 선택한 이미지에 대한 경로 문자열을 간�
 
 ### 연습 2 - 직사각형 작성
 
-이제 몇 가지 기본적인 이미지 처리를 소개했으므로 이미지를 사용하여 Dynamo 형상을 구동해 보겠습니다. 기초 레벨에서는 이 연습을 통해 AForge 및 Dynamo를 사용하여 이미지의 _"라이브 추적"_을 수행하는 것이 목표입니다. 여기서는 작업을 간단하게 유지하면서 참조 이미지에서 직사각형을 추출할 예정이지만, AForge에서는 좀 더 복잡한 작업에 필요한 도구도 제공됩니다. 다운로드한 연습 파일에서 _02-RectangleCreation.dyn_을 사용해 보겠습니다.
+이제 몇 가지 기본적인 이미지 처리를 소개했으므로 이미지를 사용하여 Dynamo 형상을 구동해 보겠습니다. 기초 레벨에서는 이 연습을 통해 AForge 및 Dynamo를 사용하여 이미지의 _"라이브 추적"_ 을 수행하는 것이 목표입니다. 여기서는 작업을 간단하게 유지하면서 참조 이미지에서 직사각형을 추출할 예정이지만, AForge에서는 좀 더 복잡한 작업에 필요한 도구도 제공됩니다. 다운로드한 연습 파일에서 _02-RectangleCreation.dyn_ 을 사용해 보겠습니다.
 
 ![](<../images/6-2/5/case study aforge exercise 2 - 01.jpg>)
 
