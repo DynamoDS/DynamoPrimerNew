@@ -31,7 +31,7 @@ As operações booleanas são complexas e seu cálculo pode ser lento. Use a fun
 
 ![](<../images/5-2/6/solids - freeze node.jpg>)
 
-> 1. Use o menu de contexto do botão direito do mouse para congelar a operação de União de sólidos
+> 1\. Use o menu de contexto do botão direito do mouse para congelar a operação de União de sólidos
 >
 > 2\. O nó selecionado e todos os nós a jusante serão visualizados em um modo duplicado cinza claro, e os fios afetados serão exibidos como linhas tracejadas. A visualização da geometria afetada também será duplicada. Agora é possível alterar os valores anteriores sem calcular a união booleana.
 >
