@@ -28,7 +28,7 @@ Voici la liste de certains des packages les plus populaires de la communauté Dy
 
 
 
-| ![](./images/a-3/DataShapes\_L.png) **DATA|SHAPES** | [Consulter l’outil Data|Shapes sur GitHub](https://github.com/MostafaElAyoubi/Data-shapes) |
+| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [Consulter l’outil Data\|Shapes sur GitHub](https://github.com/MostafaElAyoubi/Data-shapes) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | DataShapes est un package qui vise à étendre les fonctionnalités utilisateur des scripts Dynamo. Son objectif est d'ajouter des fonctionnalités supplémentaires au lecteur Dynamo. Pour en savoir plus, consultez le site https://data-shapes.net/. Vous souhaitez créer de fantastiques workflows de lecteur Dynamo ? Utilisez ce module. | ![](./images/a-3/DataShapes\_Image.png) |
 
