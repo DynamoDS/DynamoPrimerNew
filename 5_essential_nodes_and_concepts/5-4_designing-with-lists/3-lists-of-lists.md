@@ -96,7 +96,7 @@ La commande Chop divise les listes en fonction d'une longueur de liste donnée. 
 
 La commande **List.Map/Combine** applique une fonction définie à une liste d’entrées, mais à un niveau plus bas dans la hiérarchie. Les combinaisons correspondent aux mappages, à l'exception près que les combinaisons peuvent avoir plusieurs entrées correspondant à l'entrée d'une fonction donnée.
 
-_Remarque : cet exercice a été créé avec une version précédente de Dynamo. La plupart des fonctionnalités_ **List.Map** _ ont été résolues par l’ajout de la fonctionnalité_ **List@Level**. _ Pour plus d’informations, reportez-vous à la rubrique_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ci-dessous._
+_Remarque : cet exercice a été créé avec une version précédente de Dynamo. La plupart des fonctionnalités_ **List.Map** _ont été résolues par l’ajout de la fonctionnalité_ **List@Level** _. Pour plus d’informations, reportez-vous à la rubrique_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ci-dessous._
 
 En guise d’introduction, examinons le nœud **List.Count** d’une section précédente.
 
@@ -129,7 +129,7 @@ Le nœud List.Count donne une valeur de 5. Il s'agit de la variable "Nx" telle q
 
 ### **List.Combine**
 
-_Remarque : cet exercice a été créé avec une version précédente de Dynamo. La plupart des fonctionnalités List.Combine ont été résolues avec l’ajout de la fonction_ **List@Level**. _ Pour plus d’informations, reportez-vous à la rubrique_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ci-dessous._
+_Remarque : cet exercice a été créé avec une version précédente de Dynamo. La plupart des fonctionnalités List.Combine ont été résolues avec l’ajout de la fonction_ **List@Level** _. Pour plus d’informations, reportez-vous à la rubrique_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ci-dessous._
 
 Dans cet exercice, vous allez utiliser le nœud **List.Combine** pour montrer comment il peut être utilisé pour appliquer une fonction à des listes d’objets distinctes.
 
@@ -278,7 +278,7 @@ Maintenant que vous avez modifié la liste, vous devez la réinsérer dans la st
 ![](<../images/5-4/3/list of lists - exercise cb insert & query 05.jpg>)
 
 > 1. En suivant la même logique, utilisez **List.ReplaceItemAtIndex** pour remplacer la liste centrale par la liste modifiée.
-> 2. Les nœuds **Code Block**__ définissant l’index de ces deux nœuds sont 1 et 2, ce qui correspond à la requête d’origine du nœud **Code Block** (_points\[1]\[2]_).
+> 2. Les nœuds **Code Block** définissant l’index de ces deux nœuds sont 1 et 2, ce qui correspond à la requête d’origine du nœud **Code Block** (_points\[1]\[2]_).
 > 3. En sélectionnant la liste à l'_index 1_, la structure de données s'affiche en surbrillance dans l'aperçu Dynamo. Vous avez fusionné le point déplacé dans la structure de données d'origine.
 
 Il existe plusieurs façons de créer une surface à partir de cet ensemble de points. Dans ce cas, vous allez créer une surface en lissant des courbes.
