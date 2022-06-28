@@ -81,7 +81,7 @@ En este primer ejemplo, vamos a ensamblar un cilindro vaciado que recorre la jer
 
 6\. **Number Slider**: en lugar de utilizar los valores por defecto para todas estas entradas, vamos a añadir algún control paramétrico al modelo.
 
-**Edición del dominio: **después de añadir el control deslizante de número al lienzo, haga clic en el signo de intercalación situado en la parte superior izquierda para ver las opciones de dominio.
+**Edición del dominio:** después de añadir el control deslizante de número al lienzo, haga clic en el signo de intercalación situado en la parte superior izquierda para ver las opciones de dominio.
 
 **Min/Max/Step**: cambie los valores _min_, _max_ y _step_ a _0_, _2_ y _0,01_ respectivamente. Esto lo hacemos para controlar el tamaño de la geometría global.
 
