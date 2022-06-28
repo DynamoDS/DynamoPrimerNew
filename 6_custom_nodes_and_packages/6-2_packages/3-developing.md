@@ -74,7 +74,7 @@ MapToSurface 옆의 세로 점 메뉴 > 루트 디렉토리 표시를 클릭합�
 
 #### **01-PanelingWithPolygons**
 
-이 예시 파일에서는 직사각형 그리드를 기준으로 표면을 패널화하는 데 _"PointsToSurface"_를 사용하는 방법을 보여 줍니다. [이전 장](../10\_custom-nodes/10-2\_creating.md)에서 비슷한 워크플로우를 설명했기 때문에 이 과정은 익숙하게 느껴질 것입니다.
+이 예시 파일에서는 직사각형 그리드를 기준으로 표면을 패널화하는 데 _"PointsToSurface"_ 를 사용하는 방법을 보여 줍니다. [이전 장](../10\_custom-nodes/10-2\_creating.md)에서 비슷한 워크플로우를 설명했기 때문에 이 과정은 익숙하게 느껴질 것입니다.
 
 ![](<../images/6-2/3/develop package -sample file 01.jpg>)
 
