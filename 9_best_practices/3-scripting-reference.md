@@ -228,7 +228,7 @@ En règle générale, il existe plusieurs méthodes pour programmer à peu près
 
 **Faites attention à la longueur des lignes :**
 
-* Ne dépassez pas les \79 caractères.
+* Ne dépassez pas les 79 caractères.
 * Limiter la largeur de la fenêtre de l'éditeur requise permet d'ouvrir plusieurs fichiers côte à côte et facilite l'utilisation d'outils de révision de code qui présentent les deux versions dans des colonnes adjacentes.
 * Vous pouvez couper les longues lignes sur plusieurs lignes en mettant les expressions entre parenthèses :
 
