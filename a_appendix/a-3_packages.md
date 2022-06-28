@@ -28,7 +28,7 @@
 
 
 
-| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [造訪 Github 上的 Data|Shapes](https://github.com/MostafaElAyoubi/Data-shapes) |
+| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [造訪 Github 上的 Data\|Shapes](https://github.com/MostafaElAyoubi/Data-shapes) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | DataShapes 是一套件，旨在延伸 Dynamo 腳本的使用者功能。其聚焦在為 Dynamo 播放器加入更強大的功能。若要取得更多資訊，請造訪 https://data-shapes.net/。要建立精彩 Dynamo 播放器工作流程？使用此套件。 | ![](./images/a-3/DataShapes\_Image.png) |
 
