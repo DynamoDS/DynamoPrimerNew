@@ -101,7 +101,7 @@ Rozpocznij od odtworzenia definicji z powyższego rysunku (lub otwarcia pliku pr
 ![](<../images/8-1/2/DesignScript - exercise - 02.jpg>)
 
 > 1. Najpierw zdefiniujmy punkt odniesienia: **Point.ByCoordinates**`(x,y,0);`. Użyjemy tej samej składni **Point.ByCoordinates** jak ta widoczna w górnej części węzła tworzącego punkt odniesienia.
-> 2. Zmienne _x_ i _y_**** są wstawione do bloku kodu, dzięki czemu można je dynamicznie aktualizować za pomocą suwaków.
+> 2. Zmienne _x_ i _y_ są wstawione do **bloku kodu**, dzięki czemu można je dynamicznie aktualizować za pomocą suwaków.
 > 3. Dodaj _suwaki_ do wejść węzła **Code Block** mające zakres od –50 do 50. W ten sposób można objąć cały obszar domyślnej siatki dodatku Dynamo.
 
 ![](<../images/8-1/2/DesignScript - exercise - 03.jpg>)
