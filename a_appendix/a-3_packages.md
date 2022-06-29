@@ -28,7 +28,7 @@ Zde je seznam některých oblíbenějších balíčků v komunitě Dynamo. Výv
 
 
 
-| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [Navštivte Github softwaru Data\Shapes](https://github.com/MostafaElAyoubi/Data-shapes) |
+| ![](./images/a-3/DataShapes\_L.png) **DATA\|SHAPES** | [Navštivte Github softwaru Data\|Shapes](https://github.com/MostafaElAyoubi/Data-shapes) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | DataShapes je balíček, který má za cíl rozšířit funkčnost vlastních skriptů aplikace Dynamo. Klade velký důraz na přidání větších funkcí do přehrávače skriptů Dynamo. Další informace najdete na adrese https://data-shapes.net/. Chcete vytvořit úžasné pracovní postupy aplikace Dynamo Player? Použijte tento balíček. | ![](./images/a-3/DataShapes\_Image.png) |
 
