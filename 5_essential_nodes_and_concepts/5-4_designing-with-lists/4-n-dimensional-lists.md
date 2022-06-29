@@ -28,7 +28,7 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 
 ![Exercise](<../images/5-4/4/n-dimensional lists - 2d lists basic 01.jpg>)
 
-> 1. 让我们从练习文件文件夹中的 .sat 文件开始。我们可以使用**“文件路径”(File Path)** 节点抓取此文件。
+> 1. 让我们从练习文件文件夹中的 .sat 文件开始。我们可以使用 **“文件路径”(File Path)** 节点抓取此文件。
 > 2. 使用 **Geometry.ImportFromSAT**，该几何图形将作为两个曲面输入到 Dynamo 预览中。
 
 在本练习中，我们希望保持简单并处理其中一个曲面。
