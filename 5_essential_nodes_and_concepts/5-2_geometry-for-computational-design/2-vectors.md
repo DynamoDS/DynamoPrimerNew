@@ -6,7 +6,7 @@
 
 [向量](5-2\_vectors.md#vector-1)是一種大小和方向的表現法，您可以將其視為以指定速度向特定方向加速的箭頭。在 Dynamo 中，向量是模型的關鍵元件。請注意，由於向量屬於「協助工具」抽象品類，因為我們建立向量時，不會在背景預覽中看到任何項目。
 
-![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design - vectors.jpg>)
+![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
 
 > 1. 進行向量預覽時，我們可以使用直線代替向量。
 
@@ -20,7 +20,7 @@
 
 [平面](5-2\_vectors.md#plane-1)是一個二維表面，您可以將其視為無限延伸的平面。每個平面都有原點、X 方向、Y 方向和 Z (向上) 方向。
 
-![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design - plane.jpg>)
+![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
 
 > 1. 雖然平面是抽象的，但是具有原點位置，因此我們可以在空間中對其定位。
 > 2. 在 Dynamo 中，會在背景預覽中彩現平面。
