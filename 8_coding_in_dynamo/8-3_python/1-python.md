@@ -40,7 +40,7 @@ code block과 마찬가지로 Python 노드는 시각적 프로그래밍 환경 
 
 ![](<../images/8-3/1/python node - the python node 01.jpg>)
 
-노드를 두 번 클릭하면 Python 스크립트 편집기가 열립니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 _편집..._을 선택할 수도 있습니다. 상단에 상용구가 몇 가지 있습니다. 이 텍스트는 필요한 라이브러리를 참조하는 데 유용합니다. 입력 내용은 IN 배열에 저장됩니다. 값을 OUT 변수에 지정하면 Dynamo로 반환됩니다.
+노드를 두 번 클릭하면 Python 스크립트 편집기가 열립니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 _편집..._ 을 선택할 수도 있습니다. 상단에 상용구가 몇 가지 있습니다. 이 텍스트는 필요한 라이브러리를 참조하는 데 유용합니다. 입력 내용은 IN 배열에 저장됩니다. 값을 OUT 변수에 지정하면 Dynamo로 반환됩니다.
 
 ![](<../images/8-3/1/python node - the python node 02.jpg>)
 
@@ -48,7 +48,7 @@ Autodesk.DesignScript.Geometry 라이브러리를 사용하면 Code Block과 유
 
 ![](<../images/8-3/1/python node - the python node 03.jpg>)
 
-> 메서드로는 _ByCoordinates_과 같은 구성자, _Add_와 같은 동작, _X_, _Y_ 및 _Z_ 좌표와 같은 조회 등이 있습니다.
+> 메서드로는 _ByCoordinates_ 과 같은 구성자, _Add_ 와 같은 동작, _X_, _Y_ 및 _Z_ 좌표와 같은 조회 등이 있습니다.
 
 ## 연습: 솔리드 모듈에서 패턴을 작성하기 위한 Python 스크립트가 있는 사용자 노드
 
