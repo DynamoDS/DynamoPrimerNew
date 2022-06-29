@@ -10,7 +10,7 @@ Dynamo 是一个活动的开源开发项目。了解[支持 Dynamo 的软件列�
 
 Dynamo 会随 **“Revit3D”**、**“FormIt”**、**“Civil3D”** 等软件预安装。
 
-要开始使用，请从工具栏面板启动它。根据您使用的软件，通常可以从“菜单”>**“管理”**选项卡找到启动图标。单击 Dynamo 图标 ![](images/dynamoCore-halfSize.png) 以启动它。
+要开始使用，请从工具栏面板启动它。根据您使用的软件，通常可以从“菜单”>**“管理”** 选项卡找到启动图标。单击 Dynamo 图标 ![](images/dynamoCore-halfSize.png) 以启动它。
 
 ![](<images/launch dynamo from revit.jpg>)
 
