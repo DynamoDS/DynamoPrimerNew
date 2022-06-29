@@ -56,7 +56,7 @@ Si votre programme visuel contient des avertissements ou des erreurs, Dynamo fou
 Conseil : examinez les nœuds en amont à la lumière de ces informations d’info-bulle pour voir si le type ou la structure de données requis est erroné.
 {% endhint %}
 
-![] (<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Info-bulle d'avertissement : une valeur "Null" ou l'absence de donnée ne peut être comprise comme un double, c'est-à-dire un nombre
 > 2. Utilisez le nœud Watch pour examiner les données d'entrée
@@ -72,7 +72,7 @@ Les fils connectent le port de sortie d'un nœud au port d'entrée d'un autre n�
 
 Les ports d’entrée se trouvent sur le côté gauche et les ports de sortie sur le côté droit des nœuds. Par conséquent, vous pouvez généralement dire que le flux du programme se déplace de gauche à droite.
 
-![] (<images/nœuds et fils - flux de données.jpg>)
+![](<images/nœuds et fils - flux de données.jpg>)
 
 ### Création de fils <a href="#creating-wires" id="creating-wires"></a>
 
