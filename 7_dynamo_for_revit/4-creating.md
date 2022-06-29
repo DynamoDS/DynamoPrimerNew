@@ -82,7 +82,7 @@
 
 ![](<./images/4/creating - exercise 05.jpg>)
 
-> 1. 使用_“Geometry.Intersect”_节点（将连缀选项设置为叉积），将_“Curve.PlaneAtParameter”_连接到_“Geometry.Intersect”_节点的_“entity”_输入。将主 _List.Create_ 节点插入到_几何图形_输入。现在，我们在 Dynamo 视口中会看到代表每个曲线与定义平面相交的点。
+> 1. 使用 _“Geometry.Intersect”_ 节点（将连缀选项设置为叉积），将 _“Curve.PlaneAtParameter”_ 连接到 _“Geometry.Intersect”_ 节点的 _“entity”_ 输入。将主 _List.Create_ 节点插入到 _几何图形_ 输入。现在，我们在 Dynamo 视口中会看到代表每个曲线与定义平面相交的点。
 
 请注意，输出是一列列表的列表。对于我们的目的而言，列表过多。我们想在这里进行部分展平。我们需要在列表中向下一步，然后展平结果。为此，我们使用 _List.Map_ 操作，如入门手册的列表章节中所述。
 
