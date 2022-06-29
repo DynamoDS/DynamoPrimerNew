@@ -71,7 +71,7 @@ L’espace de travail est l’endroit où vous composez vos programmes visuels, 
 
 Exécutez votre script Dynamo à partir d’ici. Cliquez sur l’icône déroulante du bouton Exécution pour passer d’un mode à l’autre.
 
-![]<images/user interface - execution bar.gif>)
+![](images/user interface - execution bar.gif>)
 
 * Automatique : exécute votre script automatiquement. Les modifications sont mises à jour en temps réel.
 * Manuel : le script s’exécute uniquement lorsque vous cliquez sur le bouton « Exécuter ». Utile pour modifier des scripts complexes.
