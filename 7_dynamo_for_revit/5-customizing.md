@@ -32,7 +32,7 @@
 
 ![](<./images/5/customizing - exercise 01.jpg>)
 
-> 1. 首先，使用_“选择边”_节点选择两条边。这两条边是中庭的长跨度。
+> 1. 首先，使用 _“选择边”_ 节点选择两条边。这两条边是中庭的长跨度。
 > 2. 使用 _List.Create_ 节点将两条边合并为一个列表。
 > 3. 使用 _Surface.ByLoft_ 在两条边之间创建曲面。
 
@@ -58,7 +58,7 @@
 
 ![](<./images/5/customizing - exercise 05.jpg>)
 
-> 1. 现在，我们得到了算法定义的一列值。让我们使用该列值在 _+Z_ 方向上上移点。使用 _“Geometry.Translate”_，将\*“代码块”\*连接到 _“zTranslation”_，并将_“Surface.PointAtParameter”_ 连接到 _“geometry”_ 输入。您应该会看到新点显示在 Dynamo 预览中。
+> 1. 现在，我们得到了算法定义的一列值。让我们使用该列值在 _+Z_ 方向上上移点。使用 _“Geometry.Translate”_，将\*“代码块”\*连接到 _“zTranslation”_，并将 _“Surface.PointAtParameter”_ 连接到 _“geometry”_ 输入。您应该会看到新点显示在 Dynamo 预览中。
 > 2. 最后，我们使用 _NurbsSurface.ByPoints_ 节点创建曲面，从而将上一步中的节点连接到点输入。我们自己有一个参数化曲面。可以随意拖动滑块来观察多边形收缩和扩展。
 
 使用参数化曲面，我们需要定义一种方法来进行镶板，以便布置四点自适应构件。Dynamo 没有现成的功能来进行曲面镶板，因此我们可以向社区寻求有用的 Dynamo 软件包。
