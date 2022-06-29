@@ -10,7 +10,7 @@
 
 您可以使用[布林運算](5-6\_solids.md#boolean-operations)來修改實體。讓我們使用幾個布林運算建立一個尖刺球。
 
-![](<../images/5-2/6/solids - spiky ball.jpg>)
+![](<../images/5-2/6/solids  - spiky ball.jpg>)
 
 > 1. **Sphere.ByCenterPointRadius**：建立基礎實體。
 > 2. **Topology.Faces**、**Face.SurfaceGeometry**：查詢實體的面並將其轉換為平面幾何圖像 - 在此情況下，該圓球僅有一個面。
