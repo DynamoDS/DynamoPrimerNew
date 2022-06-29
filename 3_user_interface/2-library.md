@@ -110,7 +110,7 @@ Dynamo 的基本安装中包含数百个节点，哪些节点对于开发可视�
 
 ![](<images/3-2/library - watch node.jpg>)
 
-或者，通过**“Watch3D”**节点查看几何图形结果。
+或者，通过 **“Watch3D”** 节点查看几何图形结果。
 
 ![](<images/3-2/library - watch3d node.gif>)
 
