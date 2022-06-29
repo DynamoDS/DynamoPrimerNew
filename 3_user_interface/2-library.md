@@ -2,7 +2,7 @@
 
 La bibliothèque contient tous les nœuds chargés, y compris les nœuds de catégorie par défaut fournis avec l’installation, ainsi que tous les autres nœuds ou packages personnalisés chargés. Les nœuds de la bibliothèque sont organisés de manière hiérarchique dans les bibliothèques, les catégories et, le cas échéant, les sous-catégories.
 
-![] (<images/3-2/library - library UI.jpg>)
+![](<images/3-2/library - library UI.jpg>)
 
 * Nœuds de base : fournis avec l’installation par défaut.
 * Nœuds personnalisés : stockez vos routines fréquemment utilisées ou votre graphique spécial en tant que nœuds personnalisés. Vous pouvez également partager vos nœuds personnalisés avec la communauté.
