@@ -133,10 +133,10 @@ Commencez par recréer la définition dans l’image ci-dessus (ou en ouvrant le
 
 La fonctionnalité "Nœud vers code" permet d'automatiser d'un simple clic l'ensemble de l'exercice que vous venez de réaliser. Non seulement cette fonctionnalité est très utile pour créer des définitions personnalisées et des blocs de code réutilisables, mais elle est également un outil très pratique pour apprendre à utiliser des scripts dans Dynamo :
 
-![](<../images/8-1/2/DesignScript - exercice - 08.jpg>)
+![](<../images/8-1/2/DesignScript - exercise - 08.jpg>)
 
 > 1. Commencez par le script visuel existant de l'étape 1 de l'exercice. Sélectionnez tous les nœuds, cliquez avec le bouton droit de la souris sur la zone de dessin et sélectionnez _"Nœud vers code"_. C'est aussi simple que ça.
 
 Dynamo a automatisé une version texte du graphique visuel, de la combinaison, etc. Testez cette opération sur vos scripts visuels et libérez la puissance du bloc de code !
 
-![](<../images/8-1/2/DesignScript - exercice - 09.jpg>)
+![](<../images/8-1/2/DesignScript - exercise - 09.jpg>)
