@@ -82,7 +82,7 @@ Zde je seznam některých oblíbenějších balíčků v komunitě Dynamo. Výv
 
 
 
-| ?? **MONOCLE** | [Navštivte GitHub balíčku Monocle](https://github.com/johnpierson/MonocleForDynamo) |
+| 🧐 **MONOCLE** | [Navštivte GitHub balíčku Monocle](https://github.com/johnpierson/MonocleForDynamo) |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Monocle je rozšíření pohledu pro aplikaci Dynamo 2.0.x. Monocle obsahuje sadu užitečných nástrojů pro identifikaci balíčku, čištění grafů a mnoho dalšího. Cílem rozšíření Monocle je přidat do uživatelského rozhraní aplikace Dynamo funkce takovým způsobem, abyste si říkali: _„Je tohle zabudované v aplikaci Dynamo?“_. Balíček Monocle je k dispozici v nástroji Package Manager. | ![](./images/a-3/monocleImage.png) |
 
