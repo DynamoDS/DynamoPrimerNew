@@ -42,9 +42,9 @@ Uzly opět fungují identicky. Pokud je hodnota _boolean_ změněna na _false_, 
 
 > a. **Number Range –** Přidejte na kreslicí plochu číselný rozsah.
 >
-> b. **Numbers – ** Přidejte na kreslicí plochu tři uzly čísel. Hodnota pro každý uzel čísla by měla být: _0.0_ pro _start_, _10.0_ pro _end_ a _1.0_ pro _step_.
+> b. **Numbers –** Přidejte na kreslicí plochu tři uzly čísel. Hodnota pro každý uzel čísla by měla být: _0.0_ pro _start_, _10.0_ pro _end_ a _1.0_ pro _step_.
 >
-> c. **Output – ** Náš výstup je seznam 11 čísel v rozsahu od 0 do 10.
+> c. **Output –** Náš výstup je seznam 11 čísel v rozsahu od 0 do 10.
 >
 > d. **Modulo (%)–** **Number Range** do vstupu _x_ a _2.0_ do vstupu _y_. Tím se vypočítá zbytek po dělení 2 pro každé číslo v seznamu. Výstup z tohoto seznamu nám poskytne seznam hodnot, které se mění v rozmezí 0 až 1.
 >
@@ -54,7 +54,7 @@ Uzly opět fungují identicky. Pokud je hodnota _boolean_ změněna na _false_, 
 >
 > g. **List.FilterByBoolMask –** Tento uzel filtruje hodnoty do dvou různých seznamů na základě vstupní booleovské hodnoty. Původní položku _number range_ zadejte do vstupu _list_ a výstup položky _equality test_ do vstupu _mask_. Výstup _in_ představuje hodnoty true, zatímco výstup _out_ představuje hodnoty false.
 >
-> h. **Watch – ** Výsledkem je seznam sudých čísel a seznam lichých čísel. Použili jsme logické operátory k oddělení seznamů do vzorů.
+> h. **Watch –** Výsledkem je seznam sudých čísel a seznam lichých čísel. Použili jsme logické operátory k oddělení seznamů do vzorů.
 
 ### Část II: Od logiky ke geometrii
 
