@@ -72,7 +72,7 @@ Les fils connectent le port de sortie d'un nœud au port d'entrée d'un autre n�
 
 Les ports d’entrée se trouvent sur le côté gauche et les ports de sortie sur le côté droit des nœuds. Par conséquent, vous pouvez généralement dire que le flux du programme se déplace de gauche à droite.
 
-![](<images/nœuds et fils - flux de données.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Création de fils <a href="#creating-wires" id="creating-wires"></a>
 
