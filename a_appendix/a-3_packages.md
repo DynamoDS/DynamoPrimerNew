@@ -82,7 +82,7 @@ Veja a seguir uma lista de alguns dos pacotes mais populares da comunidade do Dy
 
 
 
-| ?? **MONOCLE** | [Visite o Monocle no GitHub](https://github.com/johnpierson/MonocleForDynamo) |
+| 🧐 **MONOCLE** | [Visite o Monocle no GitHub](https://github.com/johnpierson/MonocleForDynamo) |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | O Monocle é uma Extensão de visualização para o Dynamo 2.0.x. O Monocle contém um conjunto de ferramentas úteis para identificação de pacotes, limpeza de gráficos e muito mais. O objetivo do Monocle é adicionar funcionalidade à interface do usuário do Dynamo de uma forma aparentemente ininterrupta, o que deixa você pensando: _“isso está integrado no dynamo?”_. O Monocle está disponível no gerenciador de pacotes. | ![](./images/a-3/monocleImage.png) |
 
