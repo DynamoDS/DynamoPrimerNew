@@ -89,7 +89,7 @@
 ![](<./images/4/creating - exercise 06.jpg>)
 
 > 1. 将 _Geometry.Intersect_ 节点插入到 _List.Map_ 的列表输入。
-> 2. 将_“展平”_节点插入到 _List.Map_ 的 f(x) 输入。结果给出 3 个列表，每个列表的计数等于桁架数。
+> 2. 将_“展平”_ 节点插入到 _List.Map_ 的 f(x) 输入。结果给出 3 个列表，每个列表的计数等于桁架数。
 > 3. 我们需要更改此数据。如果要实例化桁架，我们需要使用在族中定义的相同数量的自适应点。这是一个三点自适应构件，因此我们想要的不是三个列表（每个列表 10 个项目 (numberOfTrusses)），而是 10 个列表（每个列表三个项目）。这样，我们就可以创建 10 个自适应构件。
 > 4. 将 _List.Map_ 插入到 _List.Transpose_ 节点。现在，我们得到了所需的数据输出。
 > 5. 要确认数据正确无误，请将 _Polygon.ByPoints_ 节点添加到画布，然后使用 Dynamo 预览仔细检查。
@@ -130,8 +130,8 @@
 ![](<./images/4/creating - exercise II - 02.jpg>)
 
 > 1. 为了在 Dynamo 中参照我们的几何图形，我们将为 Revit 中的每个构件使用 _“选择模型图元”_。在 Revit 中选择体量，然后使用 _Element.Faces_ 将几何图形输入 Dynamo - 体量现在应该在 Dynamo 预览中可见。
-> 2. 使用_选择模型图元_和 _CurveElement.Curve_ 将一条参照曲线输入 Dynamo。
-> 3. 使用_选择模型图元_和 _CurveElement.Curve_ 将其他参照曲线输入 Dynamo。
+> 2. 使用 _选择模型图元_ 和 _CurveElement.Curve_ 将一条参照曲线输入 Dynamo。
+> 3. 使用 _选择模型图元_ 和 _CurveElement.Curve_ 将其他参照曲线输入 Dynamo。
 
 ![](<./images/4/creating - exercise II - 03.jpg>)
 
