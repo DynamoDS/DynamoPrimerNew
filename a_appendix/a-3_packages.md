@@ -82,7 +82,7 @@ Oto lista niektórych pakietów popularnych w społeczności Dynamo. Zachęcamy 
 
 
 
-| ?? **MONOCLE** | [Odwiedź witrynę Monocle w serwisie GitHub](https://github.com/johnpierson/MonocleForDynamo) |
+| 🧐 **MONOCLE** | [Odwiedź witrynę Monocle w serwisie GitHub](https://github.com/johnpierson/MonocleForDynamo) |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | Monocle to rozszerzenie View Extension for Dynamo 2.0.x. Rozszerzenie Monocle zawiera zestaw przydatnych narzędzi do identyfikacji pakietów, czyszczenia wykresów i innych zastosowań. Celem zespołu Monocle jest dodawanie funkcji do interfejsu użytkownika dodatku Dynamo w tak płynny sposób, aby wywołać wrażenie, że _są one wbudowane w dodatek Dynamo._. Składnik Monocle jest dostępny w Menedżerze pakietów. | ![](./images/a-3/monocleImage.png) |
 
