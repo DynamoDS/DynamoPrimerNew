@@ -26,7 +26,7 @@ Lorsque vous découvrez l’application complète de paramètres de modification
 
 Pour une conversion rapide des unités, utilisez le nœud _"Convert Between Units"_. Cet outil est pratique pour convertir des unités de longueur, de surface et de volume à la volée.
 
-![](<./images/3/edition - units.jpg>)
+![](<./images/3/editing - units.jpg>)
 
 ## Exercice
 
