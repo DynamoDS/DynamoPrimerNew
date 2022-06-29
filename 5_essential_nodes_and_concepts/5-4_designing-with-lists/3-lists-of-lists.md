@@ -96,7 +96,7 @@ Příkaz Rozdělit rozdělí seznamy podle dané délky seznamu. V některých 
 
 Metoda **List.Map/Combine** použije funkci sady na vstupní seznam, ale o jeden krok níže v hierarchii. Kombinace jsou stejné jako u map, kromě toho, že mohou mít více vstupů odpovídajících zadání dané funkce.
 
-_Poznámka: Toto cvičení bylo vytvořeno pomocí předchozí verze aplikace Dynamo. Většina funkčnosti metody _ **List.Map** _byla vyřešena přidáním funkce_ **List@Level**_. Další informace naleznete v části _ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _níže._
+_Poznámka: Toto cvičení bylo vytvořeno pomocí předchozí verze aplikace Dynamo. Většina funkčnosti metody_ **List.Map** _byla vyřešena přidáním funkce_ **List@Level**_. Další informace naleznete v části_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _níže._
 
 V rámci rychlého úvodu si zopakujme uzel **List.Count** z předchozí části.
 
