@@ -227,7 +227,7 @@ OUT = solids
 
 ![](<../images/8-3/1/python node - exercise pt I-07.jpg>)
 
-> 1. 将**“Solid.ByJoinedSurfaces”** 的输出连接为 Python 节点的第一个输入，然后使用“代码块”定义其他输入。
+> 1. 将 **“Solid.ByJoinedSurfaces”** 的输出连接为 Python 节点的第一个输入，然后使用“代码块”定义其他输入。
 > 2. 创建 **“Topology.Edges”** 节点，并使用 Python 节点的输出作为其输入。
 > 3. 最后，创建 **“Edge.CurveGeometry”** 节点，并使用“Topology.Edges”的输出作为其输入。
 
