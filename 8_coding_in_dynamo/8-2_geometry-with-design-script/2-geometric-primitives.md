@@ -17,7 +17,7 @@ CoordinateSystem은 반드시 형상의 일부는 아니지만 형상을 생성�
 cs = CoordinateSystem.Identity();
 ```
 
-형상 변환이 있는 CoordinateSystem은 이 장의 범위를 벗어나지만 다른 생성자를 사용하여 특정 지점에서 _CoordinateSystem.ByOriginVectors_라는 좌표계를 작성할 수 있습니다.
+형상 변환이 있는 CoordinateSystem은 이 장의 범위를 벗어나지만 다른 생성자를 사용하여 특정 지점에서 _CoordinateSystem.ByOriginVectors_ 라는 좌표계를 작성할 수 있습니다.
 
 ![](../images/8-2/2/GeometricPrimitives\_02.png)
 
@@ -37,7 +37,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 ### 점
 
-가장 간단한 기하학적 원형은 3D 공간에서 0차원 위치를 나타내는 점입니다. 앞에서 설명한 것처럼 특정 좌표계에서 점을 작성하는 여러 가지 방법이 있습니다. _Point.ByCoordinates_는 지정된 X, Y 및 Z 좌표를 사용하여 점을 작성하고 _Point.ByCartesianCoordinates_는 특정 좌표계에서 지정된 X, Y 및 Z 좌표를 사용하여 점을 작성합니다. _Point.ByCylindricalCoordinates_는 반지름, 회전 각도 및 높이를 갖는 원통에 놓여 있는 점을 작성하고, _Point.BySphericalCoordinates_는 반지름 및 2개의 회전 각도가 있는 구에 놓여 있는 점을 작성합니다.
+가장 간단한 기하학적 원형은 3D 공간에서 0차원 위치를 나타내는 점입니다. 앞에서 설명한 것처럼 특정 좌표계에서 점을 작성하는 여러 가지 방법이 있습니다. _Point.ByCoordinates_ 는 지정된 X, Y 및 Z 좌표를 사용하여 점을 작성하고 _Point.ByCartesianCoordinates_ 는 특정 좌표계에서 지정된 X, Y 및 Z 좌표를 사용하여 점을 작성합니다. _Point.ByCylindricalCoordinates_ 는 반지름, 회전 각도 및 높이를 갖는 원통에 놓여 있는 점을 작성하고, _Point.BySphericalCoordinates_ 는 반지름 및 2개의 회전 각도가 있는 구에 놓여 있는 점을 작성합니다.
 
 이 예는 다양한 좌표계에서 작성된 점을 보여줍니다.
 
@@ -75,7 +75,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
 
 ### 선&#x20;
 
-그 다음으로 높은 차원의 Dynamo 원형은 두 끝점 사이의 무한한 수의 점을 나타내는 선 세그먼트입니다. 생성자 _Line.ByStartPointEndPoint_로 두 개의 경계점을 명시적으로 지정하거나 해당 방향에서 시작점, 방향 및 길이(_Line.ByStartPointDirectionLength_)를 지정하여 선을 작성할 수 있습니다.
+그 다음으로 높은 차원의 Dynamo 원형은 두 끝점 사이의 무한한 수의 점을 나타내는 선 세그먼트입니다. 생성자 _Line.ByStartPointEndPoint_ 로 두 개의 경계점을 명시적으로 지정하거나 해당 방향에서 시작점, 방향 및 길이(_Line.ByStartPointDirectionLength_)를 지정하여 선을 작성할 수 있습니다.
 
 ![](../images/8-2/2/GeometricPrimitives\_04.png)
 
@@ -94,7 +94,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 ### 3D 기본체 - 직육면체, 원추, 원통, 구 등
 
-Dynamo에는 3D로 만든 기하학적 원형의 가장 기본적인 유형을 나타내는 객체가 있습니다. 예를 들어 직육면체는 _Cuboid.ByLength_로 작성되고, 원추는 _Cone.ByPointsRadius_ 및 _Cone.ByPointsRadii_로 작성됩니다. 원통은 _Cylinder.ByRadiusHeight_로 작성되고, 구는 _Sphere.ByCenterPointRadius_로 작성됩니다.
+Dynamo에는 3D로 만든 기하학적 원형의 가장 기본적인 유형을 나타내는 객체가 있습니다. 예를 들어 직육면체는 _Cuboid.ByLength_ 로 작성되고, 원추는 _Cone.ByPointsRadius_ 및 _Cone.ByPointsRadii_ 로 작성됩니다. 원통은 _Cylinder.ByRadiusHeight_ 로 작성되고, 구는 _Sphere.ByCenterPointRadius_ 로 작성됩니다.
 
 ![](../images/8-2/2/GeometricPrimitives\_05.png)
 
