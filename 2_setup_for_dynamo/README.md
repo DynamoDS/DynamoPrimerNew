@@ -1,12 +1,12 @@
 # Dynamo のセットアップ
 
-### Dynamo as Extension と Dynamo Sandbox
+### 拡張機能としての Dynamo と Dynamo Sandbox
 
-Dynamo は、アクティブなオープンソース開発プロジェクトです。[Dynamo をサポートするソフトウェアのリスト](http://dynamobim.org/download/)をご確認ください。
+Dynamo は、アクティブなオープンソース開発プロジェクトです。Dynamo を利用できるソフトウェアの一覧は[こちら](http://dynamobim.org/download/)でご確認いただけます。
 
 ![](<images/setup for dynamo - dynamo revit.png>) ![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>)
 
-### Dynamo as Extension を起動する
+### 拡張機能としての Dynamo を起動する
 
 Dynamo は、**Revit3D**、**FormIt**、**Civil3D** などのソフトウェアに事前にインストールされています。
 
@@ -18,13 +18,13 @@ Dynamo は、**Revit3D**、**FormIt**、**Civil3D** などのソフトウェア�
 
 * [Revit で Dynamo を使用する](../7\_dynamo\_for\_revit/)
 
-Dynamo をスタンドアロン アプリケーションとして使用する場合。Sandbox のダウンロードに関するガイダンスについて、引き続きお読みください。
+スタンドアロン アプリケーションとしての Dynamo をご希望の場合は、Sandbox のダウンロードに関するガイダンスについて、引き続きお読みください。
 
 ### Dynamo Sandbox を取得する
 
 #### ダウンロード
 
-Dynamo アプリケーションは、[Dynamo の Web サイト](http://dynamobim.com) から入手できます。公式の過去またはプレリリース版のバージョンは、両方ともダウンロード ページから入手できます。「[Dynamo を取得](http://dynamobim.org/download/)」ページにアクセスし、公式リリース バージョンの場合は[**ダウンロード**]をクリックします。
+Dynamo アプリケーションは、[Dynamo の Web サイト](http://dynamobim.com) から入手できます。公式の過去またはプレリリース版のバージョンは、両方ともダウンロード ページから入手できます。「[Dynamo を取得](http://dynamobim.org/download/)」ページにアクセスし、[**ダウンロード**]をクリックして公式リリース バージョンをダウンロードしてください。
 
 ![](<images/dynamo-sandbox (1).png>)
 
