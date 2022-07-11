@@ -12,10 +12,10 @@ Você acabou de abrir o Dynamo Primer, um guia abrangente para a programação v
 
 O poder do Dynamo pode ser encontrado em uma ampla variedade de atividades relacionadas ao projeto. O Dynamo permite uma lista ampliada de maneiras prontamente acessíveis para você começar:
 
-* **Explore** a programação visual pela primeira vez
-* **Conecte** fluxos de trabalho em vários softwares
-* **Envolva** uma comunidade ativa de usuários, colaboradores e desenvolvedores
-* **Desenvolva** uma plataforma de código aberto para aprimoramento contínuo
+* **Explorar** a programação visual pela primeira vez
+* **Conectar** fluxos de trabalho em vários softwares
+* **Envolver** uma comunidade ativa de usuários, colaboradores e desenvolvedores
+* **Desenvolver** uma plataforma de código aberto para aprimoramento contínuo
 
 No meio dessa atividade e da empolgante oportunidade de trabalhar com o Dynamo, precisamos de um documento do mesmo calibre, o Dynamo Primer.
 

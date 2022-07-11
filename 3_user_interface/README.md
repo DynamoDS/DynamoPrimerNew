@@ -35,18 +35,18 @@ Se você tiver dúvidas, confira o menu **Ajuda**. Você pode acessar um dos sit
 
 ![](<images/user interface - help menu.jpg>)
 
-> 1. Introdução: uma breve introdução sobre a utilização do Dynamo.
+> 1. Introdução – Uma breve introdução sobre o uso do Dynamo.
 > 2. Guias interativos –
-> 3. Amostras: arquivos de exemplo de referência.
+> 3. Amostras – Arquivos de exemplo de referência.
 > 4. Dicionário do Dynamo – Recurso com a documentação sobre todos os nós.
 > 5. Site do Dynamo – Visualizar o projeto do Dynamo no GitHub.
 > 6. Wiki do projeto do Dynamo – Visite a wiki para saber como desenvolver usando a API do Dynamo, com suporte a bibliotecas e ferramentas.
-> 7. Exibir a página inicial: retorna para a página inicial do Dynamo quando dentro de um documento.
-> 8. Relatório de um bug: abre um problema no GitHub.
+> 7. Exibir a página inicial – Retorna para a página inicial do Dynamo quando dentro de um documento.
+> 8. Relatório de um bug – Abre um problema no GitHub.
 
 ### Barra de ferramentas
 
-A barra de ferramentas do Dynamo contém uma série de botões para acesso rápido ao trabalho com arquivos, bem como os comandos Desfazer [Ctrl + Z] e Refazer [Ctrl + Y]. Na parte mais à direita há outro botão que exportará um instantâneo do espaço de trabalho, o que é extremamente útil para a documentação e o compartilhamento.
+A barra de ferramentas do Dynamo contém uma série de botões para acesso rápido ao trabalho com arquivos, bem como os comandos Desfazer [Ctrl + Z] e Refazer [Ctrl + Y]. Na parte mais à direita, há outro botão que exportará um instantâneo do espaço de trabalho, o que é extremamente útil para a documentação e o compartilhamento.
 
 * ![](<images/user interface - new file.jpg>) Novo – Cria um novo arquivo .dyn
 * ![](<images/user interface - open (1).jpg>) Abrir – Abre um arquivo .dyn (espaço de trabalho) ou .dyf (nó personalizado) existente
@@ -63,7 +63,7 @@ A biblioteca do Dynamo é um conjunto de bibliotecas funcionais e cada bibliotec
 
 ### Área de trabalho
 
-O espaço de trabalho é onde desenvolvemos nossos programas visuais. Também é possível alterar aqui a configuração de visualização para visualizar as geometrias 3D. Consulte a [1-workspace.md](1-workspace.md "menção") para obter mais detalhes.
+O espaço de trabalho é onde desenvolvemos nossos programas visuais. Também é possível alterar aqui a configuração de visualização para visualizar as geometrias 3D. Consulte [1-workspace.md](1-workspace.md "menção") para obter mais detalhes.
 
 ![](<images/user interface - workspace.gif>)
 

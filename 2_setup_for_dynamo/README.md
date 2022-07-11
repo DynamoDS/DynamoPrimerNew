@@ -18,11 +18,11 @@ Para obter mais orientações sobre o uso do Dynamo com um software específico,
 
 * [Dynamo for Revit](../7\_dynamo\_for\_revit/)
 
-Se você deseja usar o Dynamo como um aplicativo independente. Continue lendo para obter orientações sobre como fazer o download do Sandbox.
+Se você desejar usar o Dynamo como um aplicativo independente, continue lendo para obter orientações sobre como fazer o download do Sandbox.
 
 ### Obter o Dynamo Sandbox
 
-#### Descarregar
+#### Fazer o download
 
 O aplicativo Dynamo está disponível no [site do Dynamo](http://dynamobim.com). As versões oficiais, anteriores ou de pré-lançamento, estão disponíveis na página de download. Visite a página [Obter o Dynamo](http://dynamobim.org/download/) e clique em **Download** para obter a versão oficial liberada.
 

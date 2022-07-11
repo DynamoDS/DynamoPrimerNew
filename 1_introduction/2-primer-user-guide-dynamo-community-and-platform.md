@@ -1,6 +1,6 @@
 # Guia do Usuário do Primer, Comunidade e plataforma do Dynamo
 
-Este manual inclui capítulos desenvolvidos com o Mode Lab. Esses capítulos concentram-se nos elementos essenciais que você precisará para começar a trabalhar desenvolvendo seus próprios programas visuais com o Dynamo e informações importantes sobre como tirar o máximo proveito do Dynamo.&#x20;
+Este manual inclui capítulos desenvolvidos com a Mode Lab. Esses capítulos concentram-se nos elementos essenciais que você precisará para começar a trabalhar desenvolvendo seus próprios programas visuais com o Dynamo e informações importantes sobre como tirar o máximo proveito do Dynamo.&#x20;
 
 ### Guia do Usuário do Primer
 
