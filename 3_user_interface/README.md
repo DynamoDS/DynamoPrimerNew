@@ -40,7 +40,7 @@ Si no sabe cómo continuar, consulte el menú de **Ayuda**. Puede acceder a uno 
 > 3. Muestras: archivos de ejemplo de referencia.
 > 4. Diccionario de Dynamo: recurso con documentación sobre todos los nodos.
 > 5. Sitio web de Dynamo: vea el proyecto de Dynamo en GitHub.
-> 6. Ir a wiki del proyecto de Dynamo: visite la página wiki para obtener información sobre el desarrollo mediante la API de Dynamo con bibliotecas y herramientas.
+> 6. Wiki del proyecto Dynamo: visite la página wiki para obtener información sobre el desarrollo mediante la API de Dynamo con bibliotecas y herramientas.
 > 7. Mostrar página de inicio: regrese a la página de inicio de Dynamo cuando se encuentre en un documento.
 > 8. Informar de un error: abra una incidencia en GitHub.
 

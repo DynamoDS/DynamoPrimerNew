@@ -153,5 +153,5 @@ A continuación, ya estamos listos para extraer información básica del tipo de
 > 3. Al conectar un nodo _"Polygon.ByPoints"_, se obtiene una PolyCurve. Se puede ver en la ventana gráfica de Dynamo. Con este método, hemos visualizado la geometría de un elemento y hemos abstraído la geometría de la matriz de elementos restantes (que podría ser mayor en número que este ejemplo).
 
 {% hint style="info" %}
-Sugerencia: Si hace clic en el número verde de un elemento de Revit en Dynamo, la ventana gráfica de Revit ampliará ese elemento.
+Consejo: Si hace clic en el número verde de un elemento de Revit en Dynamo, la ventana gráfica de Revit ampliará ese elemento.
 {% endhint %}

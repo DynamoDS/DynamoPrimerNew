@@ -66,7 +66,7 @@ Al crear secuencias de comandos en Dynamo, un entorno inevitablemente paramétri
 > 3. Un bucle que utiliza estas entradas y variables para realizar su función.
 
 {% hint style="info" %}
-Sugerencia: Céntrese tanto en el proceso como lo hace en la solución.
+Consejo: Céntrese tanto en el proceso como lo hace en la solución.
 {% endhint %}
 
 ### **No se repita (principio de no repetición):**
@@ -95,7 +95,7 @@ for i in range(count):
 ```
 
 {% hint style="info" %}
-Sugerencia: Antes de duplicar entidades en la secuencia de comandos (como la constante en el ejemplo anterior), pregúntese si puede establecer un vínculo con el origen en su lugar.
+Consejo: Antes de duplicar entidades en la secuencia de comandos (como la constante en el ejemplo anterior), pregúntese si puede establecer un vínculo con el origen en su lugar.
 {% endhint %}
 
 ### Estructuración modular
@@ -202,7 +202,7 @@ Al desarrollar secuencias de comandos de texto en Dynamo, es recomendable asegur
    * Conozca las causas del error y decida posteriormente si se debe corregir internamente o si se debe volver a definir un dominio de parámetro para evitar el problema.
 
 {% hint style="info" %}
-Sugerencia: Siempre presuponga que el usuario utilizará todas las combinaciones de cada uno de los valores de entrada que se le hayan presentado. Esto ayudará a eliminar sorpresas no deseadas.
+Consejo: Siempre presuponga que el usuario utilizará todas las combinaciones de cada uno de los valores de entrada que se le hayan presentado. Esto ayudará a eliminar sorpresas no deseadas.
 {% endhint %}
 
 ### Depuración eficaz
