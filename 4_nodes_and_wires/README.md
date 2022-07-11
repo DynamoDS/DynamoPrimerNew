@@ -12,8 +12,8 @@ Většina uzlů v aplikaci Dynamo se skládá z pěti částí. Ačkoliv exist
 
 > 1. Název – Název uzlu. Konvence pojmenování je `Category.Name`.
 > 2. Hlavní tělo – Hlavní tělo uzlu. Po kliknutí pravým tlačítkem myši se zde zobrazí možnosti na úrovni celého uzlu.
-> 3. Porty (vstupní a výstupní) – slouží jako zásuvky pro dráty, zleva dochází ke vstupu dat do uzlu, vpravo je výstup výsledků po provedení akce uzlu
-> 4. Výchozí hodnota – klikněte pravým tlačítkem myši na vstupní port – některé uzly mají k dispozici výchozí hodnoty, které mohou nebo nemusí být použity.
+> 3. Porty (vstupní a výstupní) – Slouží jako zásuvky pro dráty, zleva dochází ke vstupu dat do uzlu, vpravo je výstup výsledků po provedení akce uzlu.
+> 4. Výchozí hodnota – Klikněte pravým tlačítkem myši na vstupní port – některé uzly mají k dispozici výchozí hodnoty, které mohou nebo nemusí být použity.
 > 5. Ikona vázání – Označuje [možnost vázání](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) zadanou pro odpovídající vstupy seznamu (více informací později).
 
 ### Vstupní/výstupní porty uzlů
@@ -104,7 +104,7 @@ Data tímto drátem budou protékat od vstupu do výstupu, na porty je však mo�
 
 #### Výchozí a zvýrazněné dráty <a href="#wire-previews" id="wire-previews"></a>
 
-Ve výchozím nastavení se dráty zobrazují šedě. Po výběru uzlu se k němu připojené dráty zvýrazní světle modrou stejně jako uzel samotný.
+Ve výchozím nastavení se dráty zobrazují šedě. Po výběru uzlu se k němu připojené dráty zvýrazní světle modrou barvou stejně jako uzel samotný.
 
 ![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
@@ -113,7 +113,7 @@ Ve výchozím nastavení se dráty zobrazují šedě. Po výběru uzlu se k ně
 
 **Skrytí drátů ve výchozím nastavení**
 
-Pokud chcete dráty v grafu skrýt, přejděte do nabídky Zobrazit > Konektory a zrušte zaškrtnutí položky Zobrazit spojky.
+Pokud chcete dráty v grafu skrýt, přejděte do nabídky Zobrazit > Konektory a zrušte zaškrtnutí položky Zobrazit konektory.
 
 Při tomto nastavení se bledě modrou barvou zvýrazní pouze vybrané uzly a jejich spojovací dráty.
 

@@ -33,7 +33,7 @@ Pokud hledáte předchozí nebo testovací vývojové verze, přejděte do doln�
 ![](<images/Dynamo Sandbox All builds.jpg>)
 
 {% hint style="info" %}
-Testovací vývojové verze mohou obsahovat některé nové a experimentální funkce, které ještě nejsou plně testovány, a proto mohu být nestabilní. Jejich používáním můžete odhalit chyby nebo problémy a pomoci nám vylepšit aplikaci tím, že nahlásíte problémy našemu týmu.
+Testovací vývojové verze mohou obsahovat některé nové a experimentální funkce, které ještě nejsou plně testovány, a proto mohou být nestabilní. Jejich používáním můžete odhalit chyby nebo problémy a pomoci nám vylepšit aplikaci tím, že nahlásíte problémy našemu týmu.
 
 Začátečníkům doporučujeme stáhnout oficiální stabilní verzi.
 {% endhint %}
