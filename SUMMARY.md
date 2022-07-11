@@ -4,7 +4,7 @@
 * [簡介](1\_introduction/README.md)
    * [什麼是 Dynamo？它如何運作？](1\_introduction/1-what-is-dynamo.md)
    * [手冊使用者指南、Dynamo 社群與平台](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)
-* [為 Dynamo 設定](2\_setup\_for\_dynamo/README.md)
+* [安裝 Dynamo](2\_setup\_for\_dynamo/README.md)
 * [使用者介面](3\_user\_interface/README.md)
    * [工作區](3\_user\_interface/1-workspace.md)
    * [資源庫](3\_user\_interface/2-library.md)

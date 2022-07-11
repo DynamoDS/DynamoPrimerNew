@@ -1,4 +1,4 @@
-# 為 Dynamo 設定
+# 安裝 Dynamo
 
 ### 以延伸模組方式使用 Dynamo 與 Dynamo Sandbox
 
@@ -18,7 +18,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 * [Dynamo for Revit](../7\_dynamo\_for\_revit/)
 
-如果您想要以獨立應用程式使用 Dynamo。繼續閱讀下載 Sandbox 的指導。
+如果您想要以獨立應用程式使用 Dynamo，請繼續閱讀下載 Sandbox 的指導。
 
 ### 取得 Dynamo Sandbox
 
@@ -43,7 +43,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 請為此步驟，下載並安裝 [7zip](https://www.7-zip.org/download.html) 到您的電腦。
 
-在壓縮檔案上按一下右鍵，然後選取 **「Extract All」**...
+在壓縮檔案上按一下右鍵，然後選取**「解壓縮全部...」**
 
 ![](<images/02-03 Extract zip file.jpg>)
 
