@@ -43,7 +43,7 @@ Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开
 
 ***
 
-**Matterlab** 受委托更新 Primer，以反映 Dynamo 2.13. 修订版。
+**Matterlab** 受委托更新本入门，以反映 Dynamo 2.13 修订版。
 
 ![](<images/matterlab\_final-07.jpg>)
 

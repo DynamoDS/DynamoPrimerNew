@@ -20,7 +20,7 @@ Dynamo 中的大多数节点由五个部分组成。虽然存在例外（如输�
 
 节点的输入和输出称为端口，并充当导线的接受器。数据通过左侧的端口进入节点，并在节点执行右侧的操作后流出节点。
 
-端口希望接收特定类型的数据。例如，将数字（如 _2.75_）连接到坐标点节点上的端口将成功创建点；但是，如果我们向同一端口提供 “Red”，则会导致错误。
+端口希望接收特定类型的数据。例如，将数字（如 _2.75_）连接到坐标点节点上的端口将成功创建点；但是，如果我们向同一端口提供_“Red”_，则会导致错误。
 
 {% hint style="info" %}
 提示：将光标悬停在端口上，可查看包含预期数据类型的工具提示。
@@ -65,7 +65,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 导线连接节点以创建关系并建立可视化程序的流。我们可以按照字面意思将其视为电线，用于将数据脉冲从一个对象传送到下一个对象。
 
-### Program Flow <a href="#program-flow" id="program-flow"></a>
+### 程序流<a href="#program-flow" id="program-flow"></a>
 
 导线将一个节点的输出端口连接到另一个节点的输入端口。此方向性将在可视化程序中建立**数据流**。
 
@@ -73,7 +73,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 ![](<images/nodes and wires - flow of data.jpg>)
 
-### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
+### 创建导线<a href="#creating-wires" id="creating-wires"></a>
 
 通过在一个端口上单击鼠标左键以创建导线，然后在另一个节点的端口上单击鼠标左键以创建连接。在建立连接的过程中，导线将显示为虚线，并在成功连接后进行捕捉以成为实线。
 
@@ -81,7 +81,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 ![](<images/nodes and wires - creating a wire.gif>)
 
-### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
+### 编辑导线<a href="#editing-wires" id="editing-wires"></a>
 
 通常，我们要通过编辑导线表示的连接来调整可视化程序中的程序流。要编辑导线，请在已连接节点的输入端口上单击。现在有两种选择：
 

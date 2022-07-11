@@ -20,7 +20,7 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 
 #### Dynamo 菜单
 
-常规信息和设置位于 **“Dynamo”** 下拉菜单中。
+常规信息和设置位于**“Dynamo”**下拉菜单中。
 
 ![](<images/user interface - dynamo menu.jpg>)
 
@@ -31,7 +31,7 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 
 #### 帮助
 
-如果遇到问题，请查看 **“帮助”** 菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
+如果遇到问题，请查看**“帮助”**菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
 
 ![](<images/user interface - help menu.jpg>)
 
@@ -40,13 +40,13 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 > 3. 示例 - 参考示例文件。
 > 4. Dynamo 词典 - 包含所有节点文档的资源。
 > 5. Dynamo 网站 - 在 GitHub 上查看 Dynamo 项目。
-> 6. Dynamo 项目 Wiki - 访问 Wiki 以了解如何使用 Dynamo API、支持库和工具进行开发。
-> 7. 显示“开始”页面 - 在文档内时返回 Dynamo 开始页面。
+> 6. Dynamo Project Wiki - 访问 Wiki 以了解如何使用 Dynamo API、支持库和工具进行开发。
+> 7. 显示开始页面 - 在文档内时返回 Dynamo 开始页面。
 > 8. 报告错误 - 在 GitHub 上打开问题。
 
 ### 工具栏
 
-Dynamo 工具栏包含一系列快速访问的按钮，可用于处理文件以及执行“撤消 \[Ctrl + Z]”和“重做 \[Ctrl + Y]”命令。最右侧是另一个按钮，它将导出工作空间快照，这对于文档编制和共享非常重要。
+Dynamo 工具栏包含一系列快速访问的按钮，可用于处理文件以及执行“撤消 \[Ctrl + Z]”和“重做 \[Ctrl + Y]”命令。最右侧是另一个按钮，它将输出工作空间快照，这对于文档编制和共享非常重要。
 
 * ![](<images/user interface - new file.jpg>) 新建 - 创建一个新的 .dyn 文件
 * ![](<images/user interface - open (1).jpg>) 打开 - 打开现有的 .dyn（工作空间）或 .dyf（自定义节点）文件
@@ -63,7 +63,7 @@ Dynamo 库是功能库的集合，每个库都包含按类别分组的节点。�
 
 ### 工作空间
 
-在工作空间中，我们可以编写可视化程序，您还可以更改其“预览”设置以从此处查看三维几何图形。有关更多详细信息，请参见 [1-workspace.md](1-workspace.md "提及") 。
+在工作空间中，我们可以编写可视化程序，您还可以更改其“预览”设置以从此处查看三维几何图形。有关更多详细信息，请参见 [1-workspace.md](1-workspace.md "提及")。
 
 ![](<images/user interface - workspace.gif>)
 
