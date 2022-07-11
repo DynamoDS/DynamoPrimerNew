@@ -44,7 +44,7 @@ Prima di avviare qualsiasi versione scaricata, è necessario decomprimere il con
 
 Scaricare e installare [7zip](https://www.7-zip.org/download.html) nel computer in uso per questo passaggio.
 
-Fare clic con il pulsante destro del mouse sul file .zip e selezionare **Extract All**.
+Fare clic con il pulsante destro del mouse sul file .zip e selezionare **Estrai tutto**.
 
 ![](<images/02-03 Extract zip file.jpg>)
 

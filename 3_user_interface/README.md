@@ -27,7 +27,7 @@ Informazioni generali e impostazioni sono disponibili nel menu a discesa di **Dy
 > 1. Informazioni su: indica la versione di Dynamo installata nel computer in uso.
 > 2. Contratto per raccogliere dati di usabilità: consente di aderire o meno alla condivisione dei dati utente per migliorare Dynamo.
 > 3. Preferenze: include impostazioni quali la definizione della precisione decimale e della qualità di rendering della geometria dell'applicazione.
-> 4. Esci da Dynamo.
+> 4. Chiudi Dynamo.
 
 #### Guida
 
@@ -35,10 +35,10 @@ Se si è bloccati, consultare il menu **?**. È possibile accedere ad uno dei si
 
 ![](<images/user interface - help menu.jpg>)
 
-> 1. Per iniziare: mostra una breve introduzione all'utilizzo di Dynamo.
+> 1. Introduzione: mostra una breve introduzione all'utilizzo di Dynamo.
 > 2. Guide interattive -
 > 3. Esempi: fornisce file di esempio di riferimento.
-> 4. Dizionario Dynamo: rappresenta una risorsa con documentazione su tutti i nodi.
+> 4. Dizionario di Dynamo: rappresenta una risorsa con documentazione su tutti i nodi.
 > 5. Sito Web di Dynamo: consente di visualizzare il progetto di Dynamo su GitHub.
 > 6. Wiki progetto di Dynamo: consente di visitare la pagina Wiki per informazioni sullo sviluppo mediante l'API di Dynamo, gli strumenti e le librerie di supporto.
 > 7. Visualizza pagina iniziale: consente di tornare alla pagina iniziale di Dynamo quando ci si trova all'interno di un documento.

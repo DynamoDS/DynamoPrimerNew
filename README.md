@@ -21,7 +21,7 @@ Nell'ambito di questa attività e per l'interessante opportunità di lavorare co
 
 Fare riferimento alla [Guida introduttiva](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) per scoprire cosa ci si può aspettare di imparare da questo documento.
 
-### Apri origine
+### Open source
 
 Il progetto Dynamo Primer è open source. Siamo dedicati a fornire contenuto di qualità e apprezziamo qualsiasi eventuale feedback fornito. Se si desidera segnalare un problema su qualsiasi aspetto, pubblicare il messaggio nella pagina dei problemi su GitHub: https://github.com/DynamoDS/DynamoPrimer/issues
 
@@ -77,7 +77,7 @@ Dynamo@autodesk.com
 
 Copyright 2022 Autodesk
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. È possibile ottenere una copia della licenza all'indirizzo:
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
