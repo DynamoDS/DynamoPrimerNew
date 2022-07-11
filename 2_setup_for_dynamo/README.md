@@ -24,7 +24,7 @@ Dynamo를 독립 실행형 응용프로그램으로 사용하려는 경우, Sand
 
 #### 다운로드
 
-Dynamo 응용프로그램은 [Dynamo 웹 사이트](http://dynamobim.com)에서 다운로드할 수 있습니다. 공식 버전, 이전 버전 또는 시험판 버전 모두 다운로드 페이지에서 받을 수 있습니다. 공식 출시 버전을 보려면 [Dynamo 다운로드](http://dynamobim.org/download/) 페이지를 방문하고 **다운로드**를 클릭합니다.
+Dynamo 응용프로그램은 [Dynamo 웹사이트](http://dynamobim.com)에서 다운로드할 수 있습니다. 공식 버전, 이전 버전 또는 시험판 버전 모두 다운로드 페이지에서 다운로드할 수 있습니다. 공식 출시 버전을 보려면 [Dynamo 다운로드](http://dynamobim.org/download/) 페이지를 방문하고 **다운로드**를 클릭합니다.
 
 ![](<images/dynamo-sandbox (1).png>)
 
@@ -42,7 +42,7 @@ Dynamo 응용프로그램은 [Dynamo 웹 사이트](http://dynamobim.com)에서 
 
 다운로드한 버전을 시작하기 전에 선택한 폴더로 컨텐츠의 압축을 풀어야 합니다.
 
-이 단계를 수행하려면 컴퓨터에 [7zip](https://www.7-zip.org/download.html)를 다운로드하여 설치하십시오.
+이 단계를 수행하려면 컴퓨터에 [7zip](https://www.7-zip.org/download.html)을 다운로드하여 설치하십시오.
 
 zip 파일을 마우스 오른쪽 버튼으로 클릭하고 **모두 압축 풀기**를 선택합니다.
 

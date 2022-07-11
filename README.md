@@ -21,7 +21,7 @@ Dynamo의 강력한 기능은 다양한 설계 관련 활동에서 확인할 수
 
 이 Primer에서 무엇을 배울 수 있는지 알아보려면 [기본 사용자 안내서](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)를 참조하십시오.
 
-### 원본 열기
+### 오픈 소스
 
 Dynamo Primer 프로젝트는 오픈 소스입니다. Autodesk는 고품질 컨텐츠를 제공하기 위해 노력하고 있으며 여러분이 제공하는 피드백을 소중하게 생각하고 있습니다. 문제를 보고하려는 경우 GitHub 문제 페이지(https://github.com/DynamoDS/DynamoPrimer/issues)에 게시해 주십시오.
 
