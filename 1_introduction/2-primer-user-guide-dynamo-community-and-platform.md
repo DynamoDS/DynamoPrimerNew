@@ -1,6 +1,6 @@
 # Manuel d’utilisation du guide, communauté et plate-forme Dynamo
 
-Il comprend des chapitres développés avec Mode Lab. Ces chapitres portent sur les bases essentielles pour développer vos propres programmes visuels avec Dynamo et les principales connaissances sur la façon d'améliorer Dynamo.&#x20;
+Ce guide comprend des chapitres développés avec Mode Lab. Ces chapitres portent sur les bases essentielles pour développer vos propres programmes visuels avec Dynamo et les principales connaissances sur la façon d'améliorer Dynamo.&#x20;
 
 ### Manuel d’utilisation du guide
 
@@ -31,7 +31,7 @@ Pour découvrir la démonstration des workflows Dynamo, consultez les graphiques
 
 ### Communauté
 
-Dynamo ne serait pas ce qu'il est sans un groupe d'utilisateurs passionnés et de contributeurs actifs. Interagissez avec la communauté en suivant le [blog](http://dynamobim.org/blog/), en ajoutant votre travail à la galerie ou en discutant de Dynamo sur le [forum](https://forum.dynamobim.com).
+Dynamo ne serait pas ce qu'il est sans un groupe d'utilisateurs passionnés et de contributeurs actifs. Interagissez avec la communauté en suivant le [blog](http://dynamobim.org/blog/), en ajoutant votre travail à la galerie ou en discutant de Dynamo sur le forum[](https://forum.dynamobim.com).
 
 ![Forum](./images/1-2/02-Community.png)
 

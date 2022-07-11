@@ -37,7 +37,7 @@ Si vous êtes bloqué, consultez le menu **Aide**. Vous pouvez accéder à l’u
 
 > 1. Mise en route : brève introduction à l'utilisation de Dynamo.
 > 2. Guides interactifs.
-> 3. Exemples : fichiers d'exemple de référence.
+> 3. Échantillons : fichiers d'exemple de référence.
 > 4. Dictionnaire Dynamo : ressource avec documentation sur tous les nœuds.
 > 5. Site Web de Dynamo : affichez le projet Dynamo sur GitHub.
 > 6. Wiki du projet Dynamo : permet de consulter le wiki pour en savoir plus sur le développement à l’aide de l’API Dynamo, qui prend en charge les bibliothèques et les outils.

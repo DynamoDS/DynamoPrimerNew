@@ -38,7 +38,7 @@ Les dernières nouveautés du développement peuvent inclure des fonctionnalité
 Les débutants sont invités à télécharger la version stable officielle.
 {% endhint %}
 
-#### Décompressez
+#### Décompresser
 
 Avant de lancer une version que vous avez téléchargée, vous devez décompresser le contenu dans le dossier de votre choix.
 
