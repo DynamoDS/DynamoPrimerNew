@@ -40,7 +40,7 @@ Wenn Sie nicht weiterkommen, verwenden Sie das Menü **Hilfe**. Sie können übe
 > 3. Beispiele: Beispieldateien als Referenz.
 > 4. Dynamo-Wörterbuch: Ressource mit Dokumentation für alle Blöcke.
 > 5. Dynamo-Website: Anzeigen des Dynamo-Projekts auf GitHub.
-> 6. Dynamo Projekt-Wiki: Im Wiki erhalten Sie Entwicklungsinformationen mithilfe der Dynamo-API, unterstützenden Bibliotheken und Tools.
+> 6. Dynamo-Projekt-Wiki: Im Wiki erhalten Sie Entwicklungsinformationen mithilfe der Dynamo-API, unterstützenden Bibliotheken und Tools.
 > 7. Startseite anzeigen: Kehren Sie von einem Dokument aus zur Dynamo-Startseite zurück.
 > 8. Fehler melden: Melden Sie ein Problem auf GitHub.
 

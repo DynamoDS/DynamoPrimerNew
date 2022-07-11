@@ -45,7 +45,7 @@ Durch Bewegen des Cursors auf den Namen bzw. die Anschlüsse oder durch Klicken 
 > 2. Fehlerstatus: Die rote Statusleiste unter dem Block gibt an, dass der Block einen Fehlerstatus aufweist.
 > 3. Anhalten: Bei transparent dargestellten Blöcken ist Anhalten aktiviert, d. h., ihre Ausführung wurde unterbrochen.
 > 4. Hintergrundvorschau: Die graue Statusleiste unter dem Block und das Augensymbol ![](<images/nodes and wires - preview off.jpg>) geben an, dass die Geometrievorschau deaktiviert ist.
-> 5. Ausgewählt: Aktuell ausgewählte Blöcke weisen eine aquamarinblau hervorgehobenen Rand auf.
+> 5. Ausgewählt: Aktuell ausgewählte Blöcke weisen einen aquamarinblau hervorgehobenen Rand auf.
 > 6. Warnung: Die gelbe Statusleiste unter dem Block zeigt einen Warnstatus an, d. h., es fehlen Eingabedaten oder es sind möglicherweise falsche Datentypen vorhanden.
 
 #### Umgang mit Fehler- oder Warnungsblöcken
