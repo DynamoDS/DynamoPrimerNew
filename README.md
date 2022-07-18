@@ -21,6 +21,8 @@ In the midst of this activity and exciting opportunity for working with Dynamo, 
 
 Refer to the [primer user guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) to find out what you can expect to learn from this primer.
 
+We are continuously improving Dynamo, so some features may look different from what is represented in this Primer. However, all functionality changes will be correctly represented.
+
 ### Open Source
 
 The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: https://github.com/DynamoDS/DynamoPrimer/issues
@@ -45,7 +47,7 @@ The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dyn
 
 **Matterlab** was commissioned to update the primer to reflect the Dynamo 2.13. revisions.
 
-![](<images/matterlab\_final-07.jpg>)
+![](images/matterlab\_final-07.jpg)
 
 ### Acknowledgments
 
