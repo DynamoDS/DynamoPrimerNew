@@ -39,14 +39,15 @@ Dynamo gives an indication of the state of the execution of your Visual Program 
 
 Hovering or right-clicking over the Name or Ports presents additional information and options.
 
-![](<images/nodes and wires - node states.jpg>)
+![](<../.gitbook/assets/nodes and wires - node states.png>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node
-> 4. Background Preview - Grey status bar underneath the Node and eye icon ![](<images/nodes and wires - preview off.jpg>) indicates that the geometry preview is switched off.
+> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected.
+> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State.
+> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node.
+> 4. Background Preview - Grey status bar underneath the Node and eye icon <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> indicates that the geometry preview is switched off.
 > 5. Selected - Currently selected Nodes have an Aqua highlight on their border
 > 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
+> 7. Info - Blue status bar underneath the Node indicates Info state, which flags useful information about nodes. This state can be triggered when approaching a maximum value supported by the node, using a node in a way that has potential performance impacts, etc.
 
 #### Handling Error or Warning Nodes
 
@@ -58,9 +59,9 @@ Tip: With this tooltip information in hand, examine the upstream Nodes to see if
 
 ![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
-> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double ie. a number
+> 1. Warning Tooltip - "Null" or no data cannot be understood as a Double, i.e., a number
 > 2. Use the Watch Node to examine the input data
-> 3. Upstream the Number Node is storing "Red" not a number
+> 3. Upstream the Number Node is storing "Red," not a number
 
 ## Wires
 
