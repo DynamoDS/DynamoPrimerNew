@@ -41,13 +41,15 @@ Hovering or right-clicking over the Name or Ports presents additional informatio
 
 ![](<../.gitbook/assets/nodes and wires - node states.png>)
 
-> 1. Active - Nodes with a Dark Grey Name background are well-connected and have all of their inputs successfully connected.
-> 2. Error State - Red status bar underneath the Node indicates that the Node is in an Error State.
-> 3. Freeze - A Transparent node has Freeze turned on, suspending the execution of the node.
-> 4. Background Preview - Grey status bar underneath the Node and eye icon <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> indicates that the geometry preview is switched off.
-> 5. Selected - Currently selected Nodes have an Aqua highlight on their border
-> 6. Warning - Yellow status bar underneath the Node indicates Warning state, meaning they either lack input data or may have incorrect data types.
-> 7. Info - Blue status bar underneath the Node indicates Info state, which flags useful information about nodes. This state can be triggered when approaching a maximum value supported by the node, using a node in a way that has potential performance impacts, etc.
+> 1. Satisfied inputs - A node with blue vertical bars over its input ports is well-connected and has all of its inputs successfully connected.
+> 2. Unsatisfied inputs – A node with a red vertical bar over one or more input ports needs to have those inputs connected.
+> 3. Function – A node that outputs a function and has a gray vertical bar over an output port is a function node.
+> 4. Selected - Currently selected nodes have an aqua highlight around their border.
+> 5. Frozen - A translucent blue node is frozen, suspending the execution of the node.
+> 6. Preview off - A gray status bar underneath the node and an eye icon <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> indicate that geometry preview for the node is switched off.
+> 7. Warning - A yellow status bar underneath the node indicates Warning state, meaning the node either lacks input data or may have incorrect data types.
+> 8. Error - A red status bar underneath the node indicates that the node is in an Error state.
+> 9. Info - Blue status bar underneath the node indicates Info state, which flags useful information about nodes. This state can be triggered when approaching a maximum value supported by the node, using a node in a way that has potential performance impacts, etc.
 
 #### Handling Error or Warning Nodes
 
