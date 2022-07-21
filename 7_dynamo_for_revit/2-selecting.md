@@ -32,7 +32,7 @@ _Point-and-click_ is the easiest way to directly select a Revit element. You can
 
 _Dropdown menus_ create a list of all accessible elements in a Revit project. You can use this to reference Revit elements which are not necessarily visible in a view. This is a great tool for querying existing elements or creating new ones in a Revit project or family editor.
 
-![](<images/2/selecting - database navigation with dynamo nodes 02.jpg>)
+![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
 
 You can also select Revit element by specific tiers in the _Revit hierarchy_. This is a powerful option for customizing large arrays of data in preparation for documentation or generative instantiation and customization.
 
