@@ -1,5 +1,7 @@
 # About
 
+![Dynamo Hype Video](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
+
 ## For Dynamo v2.13
 
 ![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
