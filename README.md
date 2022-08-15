@@ -1,8 +1,10 @@
 # バージョン情報
 
-## Dynamo v2.13
+![Dynamo Hype Video](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
 
-![Dynamo ロゴ](images/dynamo\_logo\_dark-trim.jpg)
+## For Dynamo v2.13
+
+![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
 
 > Dynamo は、設計者向けのオープン ソースのビジュアル プログラミング プラットフォームです。
 
@@ -10,7 +12,7 @@
 
 この Dynamo Primer は、Autodesk Dynamo を使用したビジュアル プログラミングの総合ガイドです。この手引は、ビジュアル プログラミングの基本情報を共有することを目的としており、継続的に更新されています。この手引きには、ジオメトリの計算設計、規則に基づく設計のベストプラティクス、分野横断的なプログラミングの応用方法など、Dynamo プラットフォームに関するさまざまな情報が記載されています。
 
-Dynamo は、広範囲にわたる設計関連ワークフローにおいてその真価を発揮します。Dynamo は、さまざまな方法で使用することができます。
+Dynamo は、広範囲にわたる設計関連ワークフローにおいてその真価を発揮します。Dynamo は、さまざまな方法で使用できます。
 
 * ビジュアル プログラミングをはじめて**体験する**
 * さまざまなソフトウェアのワークフローを**接続する**
@@ -20,6 +22,8 @@ Dynamo は、広範囲にわたる設計関連ワークフローにおいてそ�
 こうして Dynamo の開発を続けていくうちに、適切な資料が必要になりました。その過程で作成されたのが、この Dynamo Primer です。
 
 この Primer で知ることができる内容については、[Primer のユーザ ガイド](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)を参照してください。
+
+Dynamo は継続的に改善されているため、機能によってはこの Primer での表示とは外観が異なる場合があります。ただし、機能に関するすべての変更は正しく反映されます。
 
 ### オープン ソース
 
@@ -31,13 +35,13 @@ Dynamo Primer は、オープン ソース プロジェクトです。高品質�
 
 Dynamo Primer は、オートデスクの Matt Jezyk 氏と Dynamo 開発チームによって開始されたオープン ソース プロジェクトです。
 
-Dynamo Primer の初版は、**Mode Lab** によって作成されました。 このような貴重なリソースの確立に取り組んでいただいたすべての方に感謝いたします。
+Dynamo Primer の初版は、**Mode Lab** によって作成されました。このような貴重なリソースの確立に取り組んでいただいたすべての方に感謝いたします。
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-この手引きは、Dynamo 2.0 の改訂を反映するため、**Parallax Team の John Pierson 氏**によって更新されました。
+**Parallax Team の John Pierson** 氏は依頼により、Dynamo 2.0 の改訂を反映するよう Primer を更新しました。
 
 ![](images/PRLX\_Logo.jpg)
 
@@ -45,7 +49,7 @@ Dynamo Primer の初版は、**Mode Lab** によって作成されました。 �
 
 **Matterlab** では依頼により、Dynamo 2.13 の改訂を反映するよう Primer を更新しました。
 
-![](<images/matterlab\_final-07.jpg>)
+![](images/matterlab\_final-07.jpg)
 
 ### 謝辞
 
@@ -55,19 +59,19 @@ Dynamo プロジェクトの創立と指揮に携わった Ian Keough 氏に、�
 
 ### ソフトウェアとリソース
 
-**Dynamo**: 現在の公式\* リリースのバージョンは 2.1.0 です。
+**Dynamo**: 現在の公式* リリースのバージョンは 2.1.0 です。
 
-http://dynamobim.com/download/、または http://dynamobuilds.com (英語)
+http://dynamobim.com/download/ または http://dynamobuilds.com
 
-\*注: Revit 2020 以降、Dynamo は Revit リリースにバンドルされているため、手動でインストールする必要はありません。詳細については、この[ブログの投稿](https://dynamobim.org/dynamo-core-2-1-release/)をご覧ください。
+*注: Revit 2020 以降、Dynamo は Revit リリースにバンドルされているため、手動でインストールする必要はありません。詳細については、この[ブログの投稿](https://dynamobim.org/dynamo-core-2-1-release/)をご覧ください。
 
 **DynamoBIM**: 追加情報、ラーニング コンテンツ、フォーラムについては、DynamoBIM の Web サイトを参照してください。
 
-http://dynamobim.org (英語)
+http://dynamobim.org
 
 **Dynamo GitHub**: Dynamo は、GitHub 上で開発されたオープン ソース プロジェクトです。DynamoDS を確認して、開発プロジェクトに参加してください。
 
-https://github.com/DynamoDS/Dynamo (英語)
+https://github.com/DynamoDS/Dynamo
 
 **お問い合わせ先**: このドキュメントに関する問題については、次の窓口にご連絡ください。
 
