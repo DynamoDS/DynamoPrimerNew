@@ -1,5 +1,7 @@
 # Na Temat
 
+![Dynamo Hype — nagranie wideo](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
+
 ## Dla dodatku Dynamo 2.13
 
 ![Logo dodatku Dynamo](images/dynamo\_logo\_dark-trim.jpg)
@@ -19,7 +21,9 @@ Olbrzymie możliwości dodatku Dynamo ujawniają się w wielu różnych działan
 
 W obliczu tych wspaniałych działań i możliwości dotyczących pracy z dodatkiem Dynamo potrzebny jest tego samego kalibru dokument — przewodnik Dynamo Primer.
 
-Zapoznaj się z [podręcznikiem użytkownika Primer](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md), aby dowiedzieć się, czego można się nauczyć z tego przewodnika Primer.
+Zapoznaj się z [podręcznikiem użytkownika przewodnika Primer](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md), aby dowiedzieć się, czego można się nauczyć z tego przewodnika Primer.
+
+Nieustannie ulepszamy dodatek Dynamo, więc niektóre funkcje mogą wyglądać inaczej, niż pokazano w tym przewodniku Primer. Jednak wszystkie zmiany funkcjonalności zostaną poprawnie przedstawione.
 
 ### Otwórz źródło
 
@@ -37,7 +41,7 @@ Napisanie pierwszej wersji tego przewodnika zlecono **Mode Lab**. Dziękujemy im
 
 ***
 
-Aktualizację tego przewodnika w celu odzwierciedlenia zmian w dodatku Dynamo 2.0 zlecono**Johnowi Piersonowi z Parallax Team**.
+Aktualizację tego przewodnika w celu odzwierciedlenia zmian w dodatku Dynamo 2.0 zlecono **Johnowi Piersonowi z Parallax Team**.
 
 ![](images/PRLX\_Logo.jpg)
 
@@ -45,7 +49,7 @@ Aktualizację tego przewodnika w celu odzwierciedlenia zmian w dodatku Dynamo 2.
 
 Aktualizację tego przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.13 zlecono **Matterlab**.
 
-![](<images/matterlab\_final-07.jpg>)
+![](images/matterlab\_final-07.jpg)
 
 ### Podziękowania
 
@@ -55,11 +59,11 @@ Dziękujemy Mattowi Jezykowi, Ianowi Keoughowi, Zachowi Kronowi, Racel Williams 
 
 ### Oprogramowanie i zasoby
 
-**Dynamo** — bieżąca stabilna\* wersja dodatku Dynamo to wersja 2.1.0
+**Dynamo** — bieżąca stabilna* wersja dodatku Dynamo to wersja 2.1.0
 
 http://dynamobim.com/download/ lub http://dynamobuilds.com
 
-\*Uwaga: począwszy od programu Revit 2020 dodatek Dynamo jest dostarczany z wersjami programu Revit, dzięki czemu ręczna instalacja nie jest wymagana. Więcej informacji można znaleźć w tym [wpisie na blogu](https://dynamobim.org/dynamo-core-2-1-release/).
+*Uwaga: od programu Revit 2020 dodatek Dynamo jest dostarczany z wersjami programu Revit, dzięki czemu ręczna instalacja nie jest wymagana. Więcej informacji można znaleźć w tym [wpisie na blogu](https://dynamobim.org/dynamo-core-2-1-release/).
 
 **DynamoBIM** — najlepsze źródło dodatkowych informacji, treści edukacyjnych oraz forów to witryna DynamoBIM.
 
