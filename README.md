@@ -1,4 +1,6 @@
-# informazioni
+# Informazioni su
+
+![Video di Dynamo Hype](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
 
 ## Per Dynamo v2.13
 
@@ -20,6 +22,8 @@ La potenza di Dynamo si trova in un'ampia gamma di attività correlate alla prog
 Nell'ambito di questa attività e per l'interessante opportunità di lavorare con Dynamo, occorre un documento dello stesso calibro, Dynamo Primer.
 
 Fare riferimento alla [Guida introduttiva](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) per scoprire cosa ci si può aspettare di imparare da questo documento.
+
+Stiamo migliorando costantemente Dynamo, pertanto alcune funzionalità potrebbero avere un aspetto diverso da quello rappresentato in questa guida introduttiva. Tuttavia, tutte le modifiche alle funzionalità verranno rappresentate correttamente.
 
 ### Open source
 
@@ -45,7 +49,7 @@ Dynamo Primer è un progetto open source avviato da Matt Jezyk e dal team di svi
 
 **Matterlab** è stato incaricato di aggiornare la guida introduttiva in modo che rifletta le revisioni di Dynamo 2.13.
 
-![](<images/matterlab\_final-07.jpg>)
+![](images/matterlab\_final-07.jpg)
 
 ### Riconoscimenti
 
@@ -55,11 +59,11 @@ Grazie a Matt Jezyk, Ian Keough, Zach Kron, Racel Williams e Colin McCrone per l
 
 ### Software e risorse
 
-**Dynamo**: la release stabile\* corrente di Dynamo è la versione 2.1.0.
+**Dynamo**: la release stabile* corrente di Dynamo è la versione 2.1.0.
 
 http://dynamobim.com/download/ o http://dynamobuilds.com
 
-\*Nota A partire da Revit 2020, Dynamo è incluso con le release di Revit e pertanto non è necessaria l'installazione manuale. Ulteriori informazioni sono disponibili in questo [post del blog](https://dynamobim.org/dynamo-core-2-1-release/).
+*Nota: a partire da Revit 2020, Dynamo è incluso con le release di Revit e pertanto non è necessaria l'installazione manuale. Ulteriori informazioni sono disponibili in questo [post del blog](https://dynamobim.org/dynamo-core-2-1-release/).
 
 **DynamoBIM** La migliore fonte per ulteriori informazioni, contenuto di formazione e forum è il sito Web di DynamoBIM.
 
