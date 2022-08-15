@@ -8,7 +8,7 @@ En Dynamo, los **nodos** son los objetos que se conectan para formar un programa
 
 La mayoría de los nodos de Dynamo están compuestos por cinco partes. Aunque existen excepciones, como los nodos de entrada, la anatomía de cada nodo se puede describir como se indica a continuación:
 
-![](<images/nodes and wires - nodes anatomy.jpg>)
+\![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Nombre: nombre del nodo con la convención de nomenclatura `Category.Name`.
 > 2. Cuerpo principal: el cuerpo principal del nodo. Al hacer clic con el botón derecho, se presentan opciones en el nivel de todo el nodo.
@@ -22,11 +22,9 @@ Las entradas y las salidas de los nodos se denominan puertos y actúan como rece
 
 Los puertos esperan recibir datos de un tipo determinado. Por ejemplo, al conectar un número como _2.75_ a los puertos de un nodo Point.ByCoordinates, se creará correctamente un punto. Sin embargo, si se proporciona _Red_ al mismo puerto, se producirá un error.
 
-{% hint style="info" %}
-Consejo: coloque el cursor sobre un puerto para ver la información de herramientas que contiene el tipo de datos esperado.
-{% endhint %}
+{% hint style="info" %}Consejo: Coloque el cursor sobre un puerto para ver la información de herramientas que contiene el tipo de datos esperado. {% endhint %}
 
-![](<images/nodes and wires - nodes input and tooltip.jpg>)
+\![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Etiqueta de puerto
 > 2. Información de herramientas
@@ -39,24 +37,25 @@ Dynamo proporciona una indicación del estado de ejecución del programa visual 
 
 Al colocar el cursor sobre el nombre o los puertos, o al hacer clic con el botón derecho en ellos, se ofrecen información y opciones adicionales.
 
-![](<images/nodes and wires - node states.jpg>)
+\![](<../.gitbook/assets/nodes and wires - node states.png>)
 
-> 1. Activo: los nodos con un fondo de nombre gris oscuro están conectados correctamente y todas sus entradas se han conectado de forma adecuada.
-> 2. Estado de error: la barra de estado roja debajo del nodo indica que el nodo presenta un estado de error.
-> 3. Bloquear: un nodo transparente tiene la opción Bloquear activada, por lo que se suspende la ejecución del nodo.
-> 4. Vista preliminar en segundo plano: la barra de estado gris debajo del nodo y el icono de ojo ![](<images/nodes and wires - preview off.jpg>) indican que la vista preliminar de la geometría está desactivada.
-> 5. Seleccionados: actualmente los nodos seleccionados se resaltan con un borde de color turquesa.
-> 6. Advertencia: la barra de estado amarilla debajo de los nodos indica un estado de advertencia, lo que significa que no tienen datos de entrada o que pueden tener tipos de datos incorrectos.
+> 1. Entradas satisfactorias: un nodo con barras verticales azules sobre sus puertos de entrada está bien conectado y todas sus entradas se han conectado correctamente.
+> 2. Entradas insatisfactorias: un nodo con una barra vertical roja sobre uno o más puertos de entrada debe tener esas entradas conectadas.
+> 3. Función: un nodo que genera una función y tiene una barra vertical gris sobre un puerto de salida es un nodo de función.
+> 4. Seleccionados: los nodos seleccionados actualmente se resaltan con un borde de color turquesa.
+> 5. Inutilizados: un nodo azul translúcido está inutilizado, por lo que se suspende su ejecución.
+> 6. Vista preliminar desactivada: una barra de estado gris debajo del nodo y un icono de ojo <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> indican que la vista preliminar de geometría del nodo está desactivada.
+> 7. Advertencia: Una barra de estado amarilla debajo de los nodos indica un estado de advertencia, lo que significa que no tienen datos de entrada o que pueden tener tipos de datos incorrectos.
+> 8. Error: una barra de estado roja debajo del nodo indica que este presenta un estado de error.
+> 9. Información: la barra de estado azul debajo del nodo indica el estado de información, que ofrece detalles útiles sobre los nodos. Este estado se puede activar al aproximarse a un valor máximo admitido por el nodo, usar un nodo de forma que pueda afectar al rendimiento, etc.
 
 #### Administración de nodos de error o advertencia
 
-Si el programa visual contiene advertencias o errores, Dynamo proporcionará información adicional sobre el problema. Todos los nodos en amarillo también presentarán una información de herramientas sobre el nombre. Coloque el cursor sobre el icono de información de herramientas de advertencia ![](<images/nodes and wires - node warning icon.png>) o error ![](<images/nodes and wires - node error icon.png>) para expandirlo.
+Si el programa visual contiene advertencias o errores, Dynamo proporcionará información adicional sobre el problema. Todos los nodos en amarillo también presentarán una información de herramientas sobre el nombre. Coloque el cursor sobre el icono de información de herramientas de advertencia \![](<images/nodes and wires - node warning icon.png>) o error \![](<images/nodes and wires - node error icon.png>) para expandirlo.
 
-{% hint style="info" %}
-Consejo: con esta información de herramientas a mano, examine los nodos ascendentes para ver si el tipo de datos o la estructura de datos necesarios presentan errores.
-{% endhint %}
+{% hint style="info" %} Consejo: Con esta información de herramientas a mano, examine los nodos ascendentes para ver si el tipo de datos o la estructura de datos necesarios presentan errores. {% endhint %}
 
-![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Información de herramientas de advertencia: el valor "null" (nulo) o la falta de datos no se pueden considerar como doble, por ejemplo, un número.
 > 2. Utilice el nodo Watch para examinar los datos de entrada.
@@ -72,7 +71,7 @@ Los cables conectan el puerto de salida de un nodo al puerto de entrada de otro 
 
 Los puertos de entrada se encuentran en el lado izquierdo de los nodos y los de salida se encuentran en el lado derecho, por lo que podemos afirmar que el flujo del programa se suele desplazar de izquierda a derecha.
 
-![](<images/nodes and wires - flow of data.jpg>)
+\![](<images/nodes and wires - flow of data.jpg>)
 
 ### Creación de cables <a href="#creating-wires" id="creating-wires"></a>
 
@@ -80,7 +79,7 @@ Cree un cable. Para ello, haga clic con el botón izquierdo en un puerto y, a co
 
 Los datos siempre fluirán a través de este cable desde la salida hasta la entrada. No obstante, podemos crear el cable en cualquier dirección en cuanto a la secuencia en la que se hace clic en los puertos conectados.
 
-![](<images/nodes and wires - creating a wire.gif>)
+\![](<images/nodes and wires - creating a wire.gif>)
 
 ### Edición de cables <a href="#editing-wires" id="editing-wires"></a>
 
@@ -88,25 +87,25 @@ Con frecuencia, desearemos ajustar el flujo de programa de nuestro programa visu
 
 * Cambie la conexión a un puerto de entrada; haga clic con el botón izquierdo en otro puerto de entrada.
 
-![](<images/nodes and wires - edit wire change port (2).gif>)
+\![](<images/nodes and wires - edit wire change port (2).gif>)
 
 * Para eliminar el cable, retire el cable y haga clic con el botón izquierdo en el espacio de trabajo.
 
-![](<images/nodes and wires - edit wires remove.gif>)
+\![](<images/nodes and wires - edit wires remove.gif>)
 
 * Vuelva a conectar varios cables. Para ello, mantenga pulsada la tecla Mayús mientras hace clic con el botón izquierdo.
 
-![](<images/nodes and wires - edit multi ports.gif>)
+\![](<images/nodes and wires - edit multi ports.gif>)
 
 * Duplique un cable. Para ello, mantenga pulsada la tecla Ctrl mientras hace clic con el botón izquierdo.
 
-![](<images/nodes and wires - duplicate wire.gif>)
+\![](<images/nodes and wires - duplicate wire.gif>)
 
 #### Cables por defecto frente a resaltados <a href="#wire-previews" id="wire-previews"></a>
 
 Por defecto, nuestros cables se previsualizarán con un trazo gris. Cuando se selecciona un nodo, se renderizará cualquier cable de conexión con el mismo resaltado de color turquesa que el nodo.
 
-![](<images/nodes and wires - default vs highlighted wires.jpg>)
+\![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Cable resaltado
 > 2. Cable por defecto
@@ -117,10 +116,10 @@ Si prefiere ocultar los cables en el gráfico, vaya a Vista > Conectores > desma
 
 Con este parámetro, solo los nodos seleccionados y sus cables de unión se mostrarán resaltados en turquesa claro.
 
-![](<images/nodes and wires - hide wires setting (1).gif>)
+\![](<images/nodes and wires - hide wires setting (1).gif>)
 
 #### Ocultar solo un cable individual
 
 También puede ocultar el conductor seleccionado. Para ello, haga clic con el botón derecho en la salida Nodos > seleccione Ocultar cables.
 
-![](<images/nodes and wires - hide selected wire.gif>)
+\![](<images/nodes and wires - hide selected wire.gif>)

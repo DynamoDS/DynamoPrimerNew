@@ -1,5 +1,7 @@
 # Acerca de
 
+![Dynamo Hype Video](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
+
 ## Para Dynamo v2.13
 
 ![Logotipo de Dynamo](images/dynamo\_logo\_dark-trim.jpg)
@@ -20,6 +22,8 @@ La potencia de Dynamo se puede encontrar en una amplia variedad de actividades r
 En medio de esta actividad y magnífica oportunidad para trabajar con Dynamo, necesitamos un documento del mismo calibre, Dynamo Primer.
 
 Consulte el [manual de introducción](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) para obtener información sobre lo que puede aprender en esta guía.
+
+Estamos mejorando continuamente Dynamo, por lo que algunas funciones pueden tener un aspecto diferente al que se representa en este manual de introducción. Sin embargo, todos los cambios de funcionalidades se representarán correctamente.
 
 ### Código abierto
 
@@ -45,7 +49,7 @@ A **John Pierson de Parallax Team** se le encargó actualizar el manual de intro
 
 A **Matterlab** se le encargó actualizar el manual de introducción para incluir las revisiones de Dynamo 2.13.
 
-![](<images/matterlab\_final-07.jpg>)
+![](images/matterlab\_final-07.jpg)
 
 ### Agradecimientos
 
@@ -55,17 +59,17 @@ Deseamos agradecer a Matt Jezyk, Ian Keough, Zach Kron, Racel Williams y Colin M
 
 ### Software y recursos
 
-**Dynamo** La versión estable\* actual de Dynamo es la 2.1.0.
+**Dynamo** La versión estable* actual de Dynamo es la 2.1.0.
 
 http://dynamobim.com/download/ o http://dynamobuilds.com
 
-\* Nota: A partir de Revit 2020, Dynamo se incluye en las versiones de Revit, por lo que no es necesaria la instalación manual. Hay más información disponible en esta [entrada del blog](https://dynamobim.org/dynamo-core-2-1-release/).
+* Nota: A partir de Revit 2020, Dynamo se incluye en las versiones de Revit, por lo que no es necesaria la instalación manual. Hay más información disponible en esta [publicación del blog](https://dynamobim.org/dynamo-core-2-1-release/).
 
 **DynamoBIM** La mejor fuente de información adicional, contenido de aprendizaje y foros es el sitio web de DynamoBIM.
 
 http://dynamobim.org
 
-**Dynamo en GitHub** Dynamo es un proyecto de desarrollo de código abierto en GitHub. Para colaborar, consulte DynamoDS.
+Dynamo en **GitHub Dynamo** es un proyecto de desarrollo de código abierto en GitHub. Para colaborar, consulte DynamoDS.
 
 https://github.com/DynamoDS/Dynamo
 
