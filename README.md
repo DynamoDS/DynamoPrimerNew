@@ -1,8 +1,10 @@
-# à propos de
+# A propos de
+
+![Dynamo Hype Video](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
 
 ## Pour Dynamo v2.13
 
-![Logo Dynamo](images/dynamo\_logo\_dark-trim.jpg)
+![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
 
 > Dynamo est une plate-forme de programmation visuelle open source pour les concepteurs.
 
@@ -19,7 +21,9 @@ La puissance de Dynamo est offerte par une large gamme d'activités liées à la
 
 Dans le cadre de cette activité et de l'opportunité passionnante de travailler avec Dynamo, nous avons besoin d'un document du même calibre, le guide Dynamo.
 
-Consultez le [manuel d’utilisation du guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) pour découvrir en quoi consiste le guide Dynamo.
+Consultez le [manuel d'utilisation du guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) pour découvrir en quoi consiste le guide Dynamo.
+
+Nous améliorons constamment Dynamo, c'est pourquoi certaines fonctionnalités peuvent sembler différentes de celles représentées dans ce guide. Toutefois, toutes les modifications apportées aux fonctionnalités seront correctement représentées.
 
 ### Open Source
 
@@ -29,7 +33,7 @@ Si vous souhaitez contribuer à une nouvelle section, à des modifications ou à
 
 ### Le projet Dynamo Primer
 
-Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équipe de développement Dynamo chez Autodesk.
+Le guide Dynamo est un projet open source, initié par Matt Jezyk et l'équipe de développement Dynamo chez Autodesk.
 
 **Mode Lab** a été chargé d'écrire la première édition du guide. Nous remercions l'équipe pour tous ses efforts afin d'établir cette précieuse ressource.
 
@@ -45,7 +49,7 @@ Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équip
 
 **Matterlab** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.13.
 
-![](<images/matterlab\_final-07.jpg>)
+![](images/matterlab\_final-07.jpg)
 
 ### Remerciements
 
@@ -55,13 +59,13 @@ Merci à Matt Jezyk, Ian Keough, Zach Kron, Racel Williams et Colin McCrone pour
 
 ### Logiciels et ressources
 
-**Dynamo** La version stable\* actuelle de Dynamo est la version 2.1.0
+**Dynamo** La version stable* actuelle de Dynamo est la version 2.1.0
 
 http://dynamobim.com/download/ ou http://dynamobuilds.com
 
-\*Remarque : à partir de Revit 2020, Dynamo est fourni avec les versions de Revit, ce qui fait que l’installation manuelle n’est pas requise. Pour plus d’informations, consultez ce [billet de blog](https://dynamobim.org/dynamo-core-2-1-release/).
+*Remarque : à partir de Revit 2020, Dynamo est fourni avec les versions de Revit, ce qui fait que l'installation manuelle n'est pas requise. Pour plus d'informations, consultez ce [billet de blog](https://dynamobim.org/dynamo-core-2-1-release/).
 
-**DynamoBIM** La meilleure source d’informations supplémentaires, de contenu de formation et de forums est le site Web DynamoBIM.
+**DynamoBIM** La meilleure source d'informations supplémentaires, de contenu de formation et de forums est le site Web DynamoBIM.
 
 http://dynamobim.org
 
