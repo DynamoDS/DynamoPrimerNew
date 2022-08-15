@@ -1,5 +1,7 @@
 # 정보
 
+![Dynamo Hyper 비디오](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
+
 ## Dynamo v2.13의 경우
 
 ![Dynamo 로고](images/dynamo\_logo\_dark-trim.jpg)
@@ -13,7 +15,7 @@ Autodesk Dynamo의 시각적 프로그래밍을 위한 포괄적인 안내서인
 Dynamo의 강력한 기능은 다양한 설계 관련 활동에서 확인할 수 있습니다. Dynamo를 사용하면 쉽게 활용 가능한 방법의 광범위한 목록을 바탕으로 다음을 시작할 수 있습니다.
 
 * **탐색**: 시각적 프로그래밍을 처음으로 탐색
-* **연결**: 다양한 소프트웨어의 워크플로우를 연결
+* **연결**: 다양한 소프트웨어의 워크플로우 연결
 * **참여**: 사용자, 기여자, 개발자로 구성된 활발한 커뮤니티에 참여
 * **개발**: 지속적인 향상을 위해 오픈 소스 플랫폼 개발
 
@@ -21,11 +23,13 @@ Dynamo의 강력한 기능은 다양한 설계 관련 활동에서 확인할 수
 
 이 Primer에서 무엇을 배울 수 있는지 알아보려면 [기본 사용자 안내서](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)를 참조하십시오.
 
+Autodesk에서는 Dynamo를 지속적으로 개선하고 있으므로 일부 기능은 이 Primer에 표시된 기능과 다르게 보일 수 있습니다. 하지만 기능 변경 사항은 모두 올바르게 표시되어 있습니다.
+
 ### 오픈 소스
 
 Dynamo Primer 프로젝트는 오픈 소스입니다. Autodesk는 고품질 컨텐츠를 제공하기 위해 노력하고 있으며 여러분이 제공하는 피드백을 소중하게 생각하고 있습니다. 문제를 보고하려는 경우 GitHub 문제 페이지(https://github.com/DynamoDS/DynamoPrimer/issues)에 게시해 주십시오.
 
-새 섹션, 편집 또는 이 프로젝트의 다른 내용에 기여하고 싶은 경우 GitHub 리포지토리를 확인해 보십시오(https://github.com/DynamoDS/DynamoPrimer).
+새 섹션, 편집 또는 이 프로젝트의 다른 내용에 기여하고 싶은 경우 GitHub 리포지토리(https://github.com/DynamoDS/DynamoPrimer)를 확인해 보십시오.
 
 ### Dynamo Primer 프로젝트
 
@@ -43,9 +47,9 @@ Dynamo Primer는 Matt Jezyk 및 Autodesk의 Dynamo 개발 팀에서 시작한 �
 
 ***
 
-**Materlab**은 Dynamo 2.13 리비전을 반영하도록 Primer를 업데이트하는 업무를 맡았습니다.
+**Matterlab**은 Dynamo 2.13 개정 내용을 반영하도록 Primer를 업데이트하는 업무를 맡았습니다.
 
-![](<images/matterlab\_final-07.jpg>)
+![](images/matterlab\_final-07.jpg)
 
 ### 감사의 인사
 
@@ -55,11 +59,11 @@ Dynamo 프로젝트를 시작하도록 도와주시고 지침을 주신 Ian Keou
 
 ### 소프트웨어 및 리소스
 
-**Dynamo** 현재 안정적인\* Dynamo 릴리즈 버전은 2.1.0입니다.
+**Dynamo** 현재 안정적인\\* Dynamo 릴리즈 버전은 2.1.0입니다.
 
 http://dynamobim.com/download/ 또는 http://dynamobuilds.com
 
-\*참고: Revit 2020부터 Dynamo는 Revit 릴리스와 함께 번들로 제공되므로 수동 설치가 필요하지 않습니다. 자세한 내용은 이 [블로그 게시물](https://dynamobim.org/dynamo-core-2-1-release/)에서 확인할 수 있습니다.
+*참고: Revit 2020부터 Dynamo는 Revit 릴리스와 함께 번들로 제공되므로 수동 설치가 필요하지 않습니다. 자세한 내용은 이 [블로그 게시물](https://dynamobim.org/dynamo-core-2-1-release/)에서 확인할 수 있습니다.
 
 **DynamoBIM** 추가 정보, 학습 컨텐츠 및 포럼을 확인할 수 있는 최고의 출처는 DynamoBIM 웹 사이트입니다.
 
