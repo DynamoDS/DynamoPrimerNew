@@ -1,5 +1,7 @@
 # O aplikaci
 
+![Propagační videofilm o aplikaci Dynamo](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
+
 ## Pro aplikaci Dynamo verze 2.13
 
 ![Logo aplikace Dynamo](images/dynamo\_logo\_dark-trim.jpg)
@@ -12,20 +14,22 @@ Právě jste otevřeli Dynamo Primer, kompletní příručku pro vizuální prog
 
 Aplikace Dynamo obsahuje výkonné funkce pro širokou škálu navrhovacích postupů. Svou práci v této aplikaci můžete začít mnoha způsoby:
 
-* **Prozkoumejte** a seznamte se s vizuálním programováním
-* **Propojujte** pracovní postupy v různých aplikacích
-* **Zapojte se** do aktivní komunity uživatelů, přispěvatelů a vývojářů
-* **Vyvíjejte** a vylepšujte platformu s otevřeným zdrojovým kódem
+* **Prozkoumejte** a seznamte se s vizuálním programováním.
+* **Propojujte** pracovní postupy v různých aplikacích.
+* **Zapojte se** do aktivní komunity uživatelů, přispěvatelů a vývojářů.
+* **Vyvíjejte** a vylepšujte platformu s otevřeným zdrojovým kódem.
 
 Pro kvalitní funkce, které nabízí aplikace Dynamo, je potřeba stejně kvalitní dokumentace, Dynamo Primer.
 
 Informace o tématech dostupných v této dokumentaci naleznete v [uživatelské příručce Primer](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md).
 
+Aplikaci Dynamo neustále vylepšujeme, takže některé funkce mohou vypadat jinak, než je znázorněno v této příručce Primer. Všechny změny funkcí však budou správně reprezentovány.
+
 ### Otevřený zdrojový kód
 
-Projekt Dynamo Primer má otevřený zdrojový kód. Naším cílem je nabídnout uživatelům kvalitní obsah a oceníme jakoukoliv zpětnou vazbu. Pokud chcete ohlásit problém nebo připomínku, vložte ji na stránku s problémy na GitHubu: https://github.com/DynamoDS/DynamoPrimer/issues
+Projekt Dynamo Primer má otevřený zdrojový kód. Naším cílem je nabídnout uživatelům kvalitní obsah a oceníme jakoukoliv zpětnou vazbu. Pokud chcete ohlásit problém nebo připomínku, vložte ji na stránku s problémy na GitHubu: https://github.com/DynamoDS/DynamoPrimer/issues.
 
-Pokud do projektu chcete přidat novou část, úpravy nebo něco jiného, začněte u našeho repozitáře na GitHubu: https://github.com/DynamoDS/DynamoPrimer.
+Pokud do projektu chcete přidat novou část, úpravy nebo něco jiného, začněte u našeho repozitáře na GitHubu: https://github.com/DynamoDS/DynamoPrimer
 
 ### Projekt Dynamo Primer
 
@@ -45,7 +49,7 @@ Společnost **Mode Lab** sepsala první edici příručky Primer. Děkujeme jim 
 
 Společnost **Matterlab** byla pověřena aktualizací příručky Primer tak, aby odrážela revize aplikace Dynamo 2.13.
 
-![](<images/matterlab\_final-07.jpg>)
+![](images/matterlab\_final-07.jpg)
 
 ### Poděkování
 
@@ -55,11 +59,11 @@ Děkujeme Mattu Jezykovi, Ianu Keoughovi, Zachu Kronovi, Racel Williamsové and 
 
 ### Software a zdroje
 
-**Dynamo** Aktuální stabilní\* verze aplikace Dynamo je 2.1.0
+**Dynamo** Aktuální stabilní* verze aplikace Dynamo je 2.1.0
 
 http://dynamobim.com/download/ nebo http://dynamobuilds.com
 
-\*Poznámka: Počínaje aplikací Revit 2020 je aplikace Dynamo součástí vydání aplikace Revit a nemusí být ručně instalována. Další informace naleznete v tomto [příspěvku na blogu](https://dynamobim.org/dynamo-core-2-1-release/).
+*Poznámka: Počínaje aplikací Revit 2020 je aplikace Dynamo součástí vydání aplikace Revit a nemusí být ručně instalována. Další informace jsou k dispozici na tomto ,příspěvku na [blogu](https://dynamobim.org/dynamo-core-2-1-release/).
 
 **DynamoBIM** Nejlepší zdroj dalších informací, výukových materiálů a komunitních diskuzí je webová stránka DynamoBIM.
 
@@ -69,7 +73,7 @@ http://dynamobim.org
 
 https://github.com/DynamoDS/Dynamo
 
-**Kontakt** Pokud najdete v tomto dokumentu chyby, neváhejte a kontaktujte nás.
+**Kontakt** Pokud v tomto dokumentu najdete chyby, neváhejte a kontaktujte nás.
 
 Dynamo@autodesk.com
 

@@ -2,7 +2,7 @@
 
 V aplikaci Dynamo můžete pomocí plně parametrického ovládání vytvořit pole prvků aplikace Revit. Uzly aplikace Revit v aplikaci Dynamo nabízí možnost importovat prvky z obecných geometrií do určitých typů kategorií (například stěny a podlaží). V této části se zaměříme na import parametricky flexibilních prvků s adaptivními komponentami.
 
-![](<./images/4/creating - dynamo nodes.jpg>)
+\![](<images/4/creating - dynamo nodes.jpg>)
 
 ### Adaptivní komponenty
 
@@ -10,7 +10,7 @@ Adaptivní komponenta je flexibilní kategorie rodiny, která se dobře hodí ke
 
 Níže je uveden příklad tříbodové adaptivní komponenty v Editoru rodin. Tím se vytvoří příhradový nosník, který je definován pozicí každého adaptivního bodu. V níže uvedeném cvičení vygenerujeme pomocí této komponenty sérii příhradových nosníků přes celé průčelí.
 
-![](./images/4/ac.jpg)
+![](../.gitbook/assets/ac.jpg)
 
 ### Principy interoperability
 
@@ -24,7 +24,7 @@ Pracovní postup použitý v níže uvedeném cvičení umožňuje přístup ke
 
 [První cvičení](8-4\_creating.md#exercise) níže znázorňuje, jak aplikace Dynamo odkazuje na data pro tvorbu prvků aplikace Revit. Chcete-li vytvořit více adaptivních komponent, definujte seznam seznamů, kde každý seznam obsahuje tři body představující každý bod adaptivní komponenty. Toto mějte na paměti při správě datových struktur v aplikaci Dynamo.
 
-![](<./images/4/creating - multiple elements and lists 01.jpg>)
+\![](<images/4/creating - multiple elements and lists 01.jpg>)
 
 ### Prvky přímých tvarů
 
@@ -38,31 +38,29 @@ Nyní následuje rozbor a [druhé cvičení](8-4\_creating.md#exercise-directsha
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="./datasets/4/Revit-Creating.zip" %}
+{% file src="datasets/4/Revit-Creating.zip" %}
 
 Počínaje tímto souborem příkladu z této části (případně pokračováním v práci se souborem aplikace Revit v předchozí relaci) se zobrazuje stejný objem aplikace Revit.
 
-![](<./images/4/creating - exercise 01.jpg>)
+\![](<images/4/creating - exercise 01.jpg>)
 
 > 1. Takto soubor vypadá po otevření.
 > 2. Toto je systém příhradových nosníků vytvořený pomocí aplikace Dynamo, který je inteligentně propojen s objemem aplikace Revit.
 
-Byly použity uzly _„Vybrat prvek modelu“_ a _„Vybrat plochu“_ a nyní pokračujeme o jeden krok v hierarchii geometrie níže a použijeme příkaz _„Vybrat hranu“_. Pokud je spouštění výpočetního modulu aplikace Dynamo nastaveno na hodnotu _Automaticky_, graf se bude průběžně aktualizovat podle změn v souboru aplikace Revit. Vybraná hrana je dynamicky svázána s topologií prvků aplikace Revit. Dokud se topologie\* nezmění, připojení mezi aplikacemi Revit a Dynamo zůstane aktivní.
+Byly použity uzly _Select Model Element_ a _Select Face_ a nyní pokračujeme o jeden krok v hierarchii geometrie níže a použijeme příkaz _Select Edge_. Pokud je spouštění výpočetního modulu aplikace Dynamo nastaveno na hodnotu _Automaticky_, graf se bude průběžně aktualizovat podle změn v souboru aplikace Revit. Vybraná hrana je dynamicky svázána s topologií prvků aplikace Revit. Dokud se topologie* nezmění, připojení mezi aplikacemi Revit a Dynamo zůstane aktivní.
 
-![](<./images/4/creating - exercise 02.jpg>)
+\![](<images/4/creating - exercise 02.jpg>)
 
-> 1. Vyberte nejhornější křivku proskleného průčelí. Tato křivka se táhne přes celou délku budovy. Pokud máte s výběrem hrany potíže, nezapomeňte, že můžete vybrat výběr v aplikaci Revit přesunutím kurzoru nad hranu a opakovaným stisknutím klávesy _„Tab“_, dokud se nezvýrazní požadovaná hrana.
-> 2. Pomocí dvou uzlů _„Vybrat hranu“_ vyberte každou hranu představující náklon uprostřed průčelí.
+> 1. Vyberte horní křivku proskleného průčelí. Tato křivka se táhne přes celou délku budovy. Pokud máte s výběrem hrany potíže, nezapomeňte, že můžete vybrat výběr v aplikaci Revit přesunutím kurzoru nad hranu a opakovaným stisknutím klávesy _Tab_, dokud se nezvýrazní požadovaná hrana.
+> 2. Pomocí dvou uzlů _Select Edge_ vyberte každou hranu představující náklon uprostřed průčelí.
 > 3. Totéž proveďte u dolních hran průčelí v aplikaci Revit.
 > 4. Uzly _Watch_ zobrazují, že se nyní v aplikaci Dynamo nacházejí čáry. Toto se automaticky převede na geometrii aplikace Dynamo, protože hrany samy nejsou prvky aplikace Revit. Tyto křivky jsou reference, pomocí kterých se vytvoří instance adaptivních příhradových nosníků na průčelí.
 
-{% hint style="info" %}
-\*Abychom zachovali konzistentní topologii, odkazujeme se na model, který nemy přidány další plochy ani hrany. Zatímco parametry mohou změnit její tvar, způsob, jakým je vytvořena, zůstává konzistentní.
-{% endhint %}
+{% hint style="info" %} *Abychom zachovali konzistentní topologii, odkazujeme se na model, který nemá přidány další plochy ani hrany. Zatímco parametry mohou změnit její tvar, způsob, jakým je vytvořena, zůstává konzistentní. {% endhint %}
 
 Nejprve je potřeba spojit křivky a sloučit je do jednoho seznamu. Tímto způsobem je možné _„seskupit“_ křivky za účelem provedení operací geometrie.
 
-![](<./images/4/creating - exercise 03.jpg>)
+\![](<images/4/creating - exercise 03.jpg>)
 
 > 1. Vytvořte seznam pro dvě křivky uprostřed průčelí.
 > 2. Spojte tyto dvě křivky do objektu Polycurve připojením komponenty _List.Create_ do uzlu _Polycurve.ByJoinedCurves_.
@@ -72,21 +70,21 @@ Nejprve je potřeba spojit křivky a sloučit je do jednoho seznamu. Tímto způ
 
 Chceme využít horní křivku, což je čára představující plný rozsah průčelí. Vytvoříme roviny podél této čáry protínající se se sadou křivek, které byly seskupeny v seznam.
 
-![](<./images/4/creating - exercise 04.jpg>)
+\![](<images/4/creating - exercise 04.jpg>)
 
 > 1. V _bloku kódu_ definujte rozsah pomocí následující syntaxe: `0..1..#numberOfTrusses;`
-> 2. Do vstupu bloku kódu přidejte \*celočíselný posuvník\*. Jak jste už možná uhodli, toto bude představovat počet příhradových nosníků. Všimněte si, že posuvník ovládá počet položek v rozsahu definovaném od \*0 \*do _1_.
-> 3. Připojte _blok kódu_ zapište ke vstupu _param_ uzlu _„Curve.PlaneAtParameter“_ a připojte horní hranu ke vstupu _curve_. Tímto získáte deset rovin rovnoměrně rozložených po celém rozsahu průčelí.
+> 2. Do vstupu bloku kódu přidejte *celočíselný posuvník*. Jak jste už možná uhodli, toto bude představovat počet příhradových nosníků. Všimněte si, že posuvník ovládá počet položek v rozsahu definovaném od *0 *do _1_.
+> 3. Připojte _blok kódu_ ke vstupu _param_ uzlu _Curve.PlaneAtParameter_ a připojte horní hranu ke vstupu _curve_. Tímto získáte deset rovin rovnoměrně rozložených po celém rozsahu průčelí.
 
 Rovina je abstraktní část geometrie, která představuje dvourozměrný prostor, který je nekonečný. Roviny jsou skvělé k tvorbě obrysů a protínání, což provedeme i v tomto kroku.
 
-![](<./images/4/creating - exercise 05.jpg>)
+\![](<images/4/creating - exercise 05.jpg>)
 
 > 1. Pomocí uzlu _Geometry.Intersect_ (nastavte vázání na kartézský součin) připojte uzel _Curve.PlaneAtParameter_ ke vstupu _entity_ uzlu _Geometry.Intersect_. Připojte hlavní uzel _List.Create_ ke vstupu _geometry_. Nyní jsou ve výřezu aplikace Dynamo zobrazeny body, které představují průsečík každé křivky s definovanými rovinami.
 
 Všimněte si, že výstup je seznam seznamů. Příliš mnoho seznamů pro tento účel. Je třeba zde provést částečné vyrovnání. Je také třeba postoupit o krok níže v seznamu a vyrovnat výsledek. K tomuto účelu použijte operaci _List.Map_, jak je popsáno v kapitole o seznamech.
 
-![](<./images/4/creating - exercise 06.jpg>)
+\![](<images/4/creating - exercise 06.jpg>)
 
 > 1. Připojte uzel _Geometry.Intersect_ ke vstupu seznamu uzlu _List.Map_.
 > 2. Připojte uzel _Flatten_ ke vstupu f(x) uzlu _List.Map_. Výsledkem jsou 3 seznamy a každý z nich obsahuje stejný počet příhradových nosníků.
@@ -96,7 +94,7 @@ Všimněte si, že výstup je seznam seznamů. Příliš mnoho seznamů pro tent
 
 Stejným způsobem jako jste vytvořili polygony, uspořádejte do pole i adaptivní komponenty.
 
-![](<./images/4/creating - exercise 07.jpg>)
+\![](<images/4/creating - exercise 07.jpg>)
 
 > 1. Přidejte na kreslicí plochu uzel _AdaptiveComponent.ByPoints_ a připojte uzel _List.Transpose_ ke vstupu _points_.
 > 2. Pomocí uzlu _Family Types_ vyberte rodinu _AdaptiveTruss_ a připojte ji ke vstupu _FamilyType_ uzlu _AdaptiveComponent.ByPoints_.
@@ -105,11 +103,11 @@ V aplikaci Revit nyní máme deset příhradových nosníků rovnoměrně rozlo
 
 Při kontrole grafu zvyšte hodnotu numberOfTrusses na 30 pomocí posuvníku. Mnohé příhradové nosníky nejsou příliš realistické, ale parametrické propojení funguje. Po ověření nastavte hodnotu numberOfTrusses na 15.
 
-![](<./images/4/creating - exercise 08.gif>)
+\![](<images/4/creating - exercise 08.gif>)
 
 A v rámci posledního testu můžeme výběrem objemu v aplikaci Revit a úpravou parametrů instance změnit tvar budovy a sledovat chování příhradových nosníků. Nezapomeňte, že abyste tyto aktualizace mohli vidět, graf aplikace Dynamo musí být otevřený, a propojení bude přerušeno ihned, jakmile bude graf zavřen.
 
-![](<./images/4/creating - exercise 09.jpg>)
+\![](<images/4/creating - exercise 09.jpg>)
 
 ## Cvičení: Prvky DirectShape
 
@@ -117,38 +115,38 @@ A v rámci posledního testu můžeme výběrem objemu v aplikaci Revit a úp
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="./datasets/4/Revit-Creating-DirectShape.zip" %}
+{% file src="datasets/4/Revit-Creating-DirectShape.zip" %}
 
 Začněte otevřením vzorového souboru této lekce – ARCH-DirectShape-BaseFile.rvt.
 
-![](<./images/4/creating - exercise II - 01.jpg>)
+\![](<images/4/creating - exercise II - 01.jpg>)
 
 > 1. Ve 3D pohledu uvidíte objem budovy z předchozí lekce.
 > 2. Podél hrany atria vede jedna referenční křivka, na kterou se poté v aplikaci Dynamo odkážeme.
 > 3. Podél protilehlé hrany atria je další referenční křivka, na kterou se v aplikaci Dynamo odkážeme také.
 
-![](<./images/4/creating - exercise II - 02.jpg>)
+\![](<images/4/creating - exercise II - 02.jpg>)
 
-> 1. Pokud se chcete odkázat na geometrii, použijte možnost _Vybrat prvek modelu_ v aplikaci Revit u každého členu. Vyberte objem v aplikaci Revit a importujte geometrii do aplikace Dynamo pomocí metody _Element.Faces_ – objem by měl být nyní viditelný v náhledu aplikace Dynamo.
-> 2. Pomocí možnosti _Vybrat prvek modelu_ a uzlu _CurveElement.Curve_ importujte do aplikace Dynamo jednu referenční křivku.
-> 3. Pomocí možnosti _Vybrat prvek modelu_ a uzlu _CurveElement.Curve_ importujte do aplikace Dynamo tu druhou referenční křivku.
+> 1. Pokud se chcete odkázat na geometrii, použijte uzel _Select Model Element_ pro každého člena v aplikaci Revit. Vyberte objem v aplikaci Revit a importujte geometrii do aplikace Dynamo pomocí uzlu _Element.Faces_ – objem by měl být nyní viditelný v náhledu aplikace Dynamo.
+> 2. Pomocí uzlů _Select Model Element_ a _CurveElement.Curve_ importujte do aplikace Dynamo první referenční křivku.
+> 3. Pomocí uzlů _Select Model Element_ a _CurveElement.Curve_ importujte do aplikace Dynamo druhou referenční křivku.
 
-![](<./images/4/creating - exercise II - 03.jpg>)
+\![](<images/4/creating - exercise II - 03.jpg>)
 
 > 1. Po oddálení a posunu pohledu doprava ve vzorovém grafu je vidět velká skupina uzlů – jedná se o geometrické operace, které generují konstrukci mřížkované střechy viditelnou v náhledu aplikace Dynamo. Tyto uzly se generují pomocí funkce _Uzel na kód_, jak je popsáno v [části bloku kódu](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) této příručky.
-> 2. Konstrukce je řízena třemi hlavními parametry – diagonální posun, nadvýšení a poloměr.
+> 2. Konstrukce je řízena třemi hlavními parametry – Diagonal Shift (Diagonální posun), Camber (Nadvýšení) a Radius (Poloměr).
 
 Zde je vidět podrobné přiblížení parametrů tohoto grafu. Tyto parametry je možné upravit, tak aby bylo možné dosáhnout jiných výstupních geometrií.
 
-![](<./images/4/creating - exercise II - 04.jpg>)
+\![](<images/4/creating - exercise II - 04.jpg>)
 
-![](<./images/4/creating - exercise II - 05.jpg>)
+\![](<images/4/creating - exercise II - 05.jpg>)
 
 > 1. Jakmile přetáhnete uzel _DirectShape.ByGeometry_ na kreslicí plochu, uvidíte, že obsahuje čtyři vstupy: _geometry_**,** _category_**,** _material_ a _name_.
 > 2. Vstup geometry bude těleso vytvořené v části tvorby geometrie grafu.
-> 3. Vstup category je možné vybrat pomocí rozevíracího seznamu _Kategorie_. V tomto případě se použije možnost „Rámová konstrukce“.
+> 3. Vstup category je možné vybrat pomocí rozevíracího uzlu _Category_. V tomto případě použijeme možnost Structural Framing (Rámová konstrukce).
 > 4. Vstup material se vybere pomocí výše uvedeného pole uzlů – v tomto případě je však možné jej snadno definovat jako „Výchozí“.
 
 Po spuštění aplikace Dynamo se bude v aplikaci Revit uvnitř projektu na střeše nacházet importovaná geometrie. Jedná se spíš o prvek rámové konstrukce než o obecný model. Parametrické propojení s aplikací Dynamo zůstane neporušené.
 
-![](<./images/4/creating - exercise II - 06.jpg>)
+\![](<images/4/creating - exercise II - 06.jpg>)
