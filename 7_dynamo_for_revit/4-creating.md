@@ -2,7 +2,7 @@
 
 Puede crear una matriz de elementos de Revit en Dynamo con control paramétrico completo. Los nodos de Revit en Dynamo permiten importar elementos de geometrías genéricas a tipos de categorías específicos (como muros y suelos). En esta sección, nos centraremos en la importación paramétrica de elementos flexibles con componentes adaptativos.
 
-\![](<images/4/creating - dynamo nodes.jpg>)
+![](<images/4/creating - dynamo nodes.jpg>)
 
 ### Componentes adaptativos
 
@@ -24,7 +24,7 @@ El flujo de trabajo que configuraremos en el siguiente ejercicio nos permite acc
 
 En el [primer ejercicio](8-4\_creating.md#exercise), se describe cómo Dynamo consulta los datos para la creación de elementos de Revit. Para generar varios componentes adaptativos, definimos una lista de listas en la que cada lista tiene tres puntos que representan cada punto del componente adaptativo. Tendremos esto en cuenta a medida que gestionamos las estructuras de datos en Dynamo.
 
-\![](<images/4/creating - multiple elements and lists 01.jpg>)
+![](<images/4/creating - multiple elements and lists 01.jpg>)
 
 ### Elementos DirectShape
 
@@ -42,14 +42,14 @@ Repasemos el [segundo ejercicio](8-4\_creating.md#exercise-directshape-elements)
 
 Comenzando con el archivo de ejemplo de esta sección (o continuando con el archivo de Revit de la sesión anterior), veremos la misma masa de Revit.
 
-\![](<images/4/creating - exercise 01.jpg>)
+![](<images/4/creating - exercise 01.jpg>)
 
 > 1. Este es el archivo, tal y como se ha abierto.
 > 2. Este es el sistema de vigas de celosía que hemos creado con Dynamo, vinculado de forma inteligente a la masa de Revit.
 
 Hemos utilizado los nodos _"Select Model Element"_ y _"Select Face"_, bajamos un nivel más en la jerarquía y utilizamos _"Select Edge"_. Con el solucionador de Dynamo establecido en _"Automático"_, el gráfico se actualizará continuamente con los cambios realizados en el archivo de Revit. El borde que seleccionamos se asocia dinámicamente a la topología del elemento de Revit. Mientras la topología* no cambie, la conexión permanecerá vinculada entre Revit y Dynamo.
 
-\![](<images/4/creating - exercise 02.jpg>)
+![](<images/4/creating - exercise 02.jpg>)
 
 > 1. Seleccione la curva superior de la fachada de la cristalera. Esto abarca toda la longitud del edificio. Si tiene problemas para seleccionar el borde, recuerde realizar la selección en Revit. Para ello, coloque el cursor sobre el borde y pulse _"Tab"_ hasta que se resalte el borde seleccionado.
 > 2. Mediante dos nodos _"Select Edge"_, seleccione cada borde que represente la inclinación en el centro de la fachada.
@@ -60,7 +60,7 @@ Hemos utilizado los nodos _"Select Model Element"_ y _"Select Face"_, bajamos un
 
 Debemos unir primero las curvas y fusionarlas en una lista. De esta forma, podemos _"agrupar"_ las curvas para realizar operaciones geométricas.
 
-\![](<images/4/creating - exercise 03.jpg>)
+![](<images/4/creating - exercise 03.jpg>)
 
 > 1. Cree una lista para las dos curvas del centro de la fachada.
 > 2. Una las dos curvas en una PolyCurve. Para ello, conecte el componente _List.Create_ a un nodo _Polycurve.ByJoinedCurves_.
@@ -70,7 +70,7 @@ Debemos unir primero las curvas y fusionarlas en una lista. De esta forma, podem
 
 Deseamos aprovechar la curva superior, que es una línea, y representa toda la extensión de la fachada. Crearemos planos a lo largo de esta línea para que se intersequen con el conjunto de curvas que hemos agrupado en una lista.
 
-\![](<images/4/creating - exercise 04.jpg>)
+![](<images/4/creating - exercise 04.jpg>)
 
 > 1. Con un _bloque de código_, defina un intervalo mediante la sintaxis: `0..1..#numberOfTrusses;`.
 > 2. Conecte un *control deslizante de enteros *a la entrada del bloque de código. Como podrá haber adivinado, esto representará el número de vigas de celosía. Observe que el control deslizante determina el número de elementos del intervalo definido de *0 *a _1_.
@@ -78,13 +78,13 @@ Deseamos aprovechar la curva superior, que es una línea, y representa toda la e
 
 Un plano es una unidad abstracta de geometría que representa un espacio bidimensional infinito. Los planos son ideales para la creación de contornos y la intersección, tal y como los vamos a configurar en este paso.
 
-\![](<images/4/creating - exercise 05.jpg>)
+![](<images/4/creating - exercise 05.jpg>)
 
 > 1. Con el nodo _Geometry.Intersect_ (establezca el encaje en producto vectorial), conecte _Curve.PlaneAtParameter_ a la entrada _entity_ del nodo _Geometry.Intersect_. Conecte el nodo _List.Create_ principal a la entrada _geometry_. Ahora aparecen puntos en la ventana gráfica de Dynamo que representan la intersección de cada curva con los planos definidos.
 
 Observe que la salida es una lista de listas de listas. Hay demasiadas listas para nuestros fines. Vamos a realizar un aplanamiento parcial aquí. Debemos bajar un nivel en la lista y aplanar el resultado. Para ello, utilizaremos la operación _List.Map_, tal y como se explica en el capítulo sobre las listas del manual de introducción.
 
-\![](<images/4/creating - exercise 06.jpg>)
+![](<images/4/creating - exercise 06.jpg>)
 
 > 1. Conecte el nodo _Geometry.Intersect_ a la entrada de lista de _List.Map_.
 > 2. Conecte un nodo _Flatten_ a la entrada f(x) de _List.Map_. Los resultados proporcionan tres listas, cada uno con un número igual a la cantidad de vigas de celosía.
@@ -94,7 +94,7 @@ Observe que la salida es una lista de listas de listas. Hay demasiadas listas pa
 
 Del mismo modo que hemos creado los polígonos, disponemos en una matriz los componentes adaptativos.
 
-\![](<images/4/creating - exercise 07.jpg>)
+![](<images/4/creating - exercise 07.jpg>)
 
 > 1. Añada un nodo _AdaptiveComponent.ByPoints_ al lienzo y conecte el nodo _List.Transpose_ a la entrada _points_.
 > 2. Mediante un nodo _Family Types_, seleccione la familia _"AdaptiveTruss"_ y conecte esta a la entrada _FamilyType_ del nodo _AdaptiveComponent.ByPoints_.
@@ -103,11 +103,11 @@ En Revit, ahora las 10 vigas de celosía se han espaciado uniformemente a lo la
 
 Al ajustar el gráfico, hemos aumentado el valor de numberOfTrusses a 30 cambiando el control deslizante. Muchas vigas de celosía no son muy realistas, pero el vínculo paramétrico funciona. Una vez verificado, establezca el número de vigas de celosía en 15.
 
-\![](<images/4/creating - exercise 08.gif>)
+![](<images/4/creating - exercise 08.gif>)
 
 Y, como prueba final, al seleccionar la masa en Revit y editar los parámetros de ejemplar, podemos cambiar la forma del edificio y comprobar cómo cambia también la viga de celosía. Recuerde que este gráfico de Dynamo debe estar abierto para ver esta actualización y que el vínculo se romperá en cuanto se cierre.
 
-\![](<images/4/creating - exercise 09.jpg>)
+![](<images/4/creating - exercise 09.jpg>)
 
 ## Ejercicio: elementos de DirectShape
 
@@ -119,28 +119,28 @@ Y, como prueba final, al seleccionar la masa en Revit y editar los parámetros d
 
 Abra primero el archivo de ejemplo para esta lección: ARCH-DirectShape-BaseFile.rvt.
 
-\![](<images/4/creating - exercise II - 01.jpg>)
+![](<images/4/creating - exercise II - 01.jpg>)
 
 > 1. En la vista 3D, vemos la masa de construcción de la lección anterior.
 > 2. A lo largo del borde del atrio se encuentra una curva de referencia, la utilizaremos como una curva a la que haremos referencia en Dynamo.
 > 3. A lo largo del borde opuesto del atrio se encuentra otra curva de referencia a la que también haremos referencia en Dynamo.
 
-\![](<images/4/creating - exercise II - 02.jpg>)
+![](<images/4/creating - exercise II - 02.jpg>)
 
 > 1. Para hacer referencia a la geometría en Dynamo, utilizaremos _Select Model Element_ para cada miembro en Revit. Seleccione la masa en Revit e importe la geometría en Dynamo mediante _Element.Faces_: la masa debería estar visible en la vista preliminar de Dynamo.
 > 2. Importe una curva de referencia en Dynamo mediante _Select Model Element_ y _CurveElement.Curve_.
 > 3. Importe la otra curva de referencia en Dynamo mediante _Select Model Element_ y _CurveElement.Curve_.
 
-\![](<images/4/creating - exercise II - 03.jpg>)
+![](<images/4/creating - exercise II - 03.jpg>)
 
 > 1. Al alejar la vista y encuadrar a la derecha en el gráfico de ejemplo, vemos un gran grupo de nodos, que son operaciones geométricas que generan la estructura de cubierta de enrejado visible en la vista preliminar de Dynamo. Estos nodos se generan mediante la función _de nodo a código_, tal como se describe en la [sección de bloque de código](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) del manual de introducción.
 > 2. La estructura se rige por tres parámetros principales: Desplazamiento diagonal, Contraflecha y Radio.
 
 Al aplicar zoom, se obtiene una vista en primer plano de los parámetros de este gráfico. Podemos ajustarlos para obtener diferentes salidas de geometría.
 
-\![](<images/4/creating - exercise II - 04.jpg>)
+![](<images/4/creating - exercise II - 04.jpg>)
 
-\![](<images/4/creating - exercise II - 05.jpg>)
+![](<images/4/creating - exercise II - 05.jpg>)
 
 > 1. Al soltar el nodo _DirectShape.ByGeometry_ en el lienzo, vemos que tiene cuatro entradas: _geometría_**,** _categoría_**,** _material_ y _nombre_.
 > 2. La geometría será el sólido creado a partir de la parte de creación de geometría del gráfico
@@ -149,4 +149,4 @@ Al aplicar zoom, se obtiene una vista en primer plano de los parámetros de este
 
 Después de ejecutar Dynamo, al volver a Revit, tenemos la geometría importada en la cubierta del proyecto. Se trata de un elemento de armazón estructural en lugar de un modelo genérico. El vínculo paramétrico a Dynamo permanece intacto.
 
-\![](<images/4/creating - exercise II - 06.jpg>)
+![](<images/4/creating - exercise II - 06.jpg>)
