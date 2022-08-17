@@ -127,7 +127,7 @@
 
 ![](<images/4/creating - exercise II - 02.jpg>)
 
-> 1. 为了在 Dynamo 中参照我们的几何图形，我们将为 Revit 中的每个构件使用_“选择模型图元”_。在 Revit 中选择体量，然后使用 _“Element.Faces”_ 将几何图形输入到 Dynamo - 体量现在应该在 Dynamo 预览中可见。
+> 1. 为了在 Dynamo 中参照我们的几何图形，我们将为 Revit 中的每个构件使用 _“选择模型图元”_。在 Revit 中选择体量，然后使用 _“Element.Faces”_ 将几何图形输入到 Dynamo - 体量现在应该在 Dynamo 预览中可见。
 > 2. 使用 _“选择模型图元”_ 和 _“CurveElement.Curve”_ 将一条参照曲线输入到 Dynamo。
 > 3. 使用 _“选择模型图元”_ 和 _“CurveElement.Curve”_ 将其他参照曲线输入到 Dynamo。
 

@@ -107,10 +107,10 @@
 > 2. 使用 _“AdaptiveComponent.Locations”_ 提取每个点的位置。
 > 3. 将这些点转换为字符串。请记住，参数基于文字，因此我们需要输入正确的数据类型。
 > 4. 创建包含四个字符串的列表，该列表定义要更改的参数：_XYZ1、XYZ2、XYZ3_ 和 _XYZ4_。
-> 5. 将此列表连接到_“Element.SetParameterByName”_的_“parameterName”_输入。
+> 5. 将此列表连接到 _“Element.SetParameterByName”_ 的 _“parameterName”_ 输入。
 > 6. 将 _“Element.SetParameterByName”_ 连接到 _“List.Combine”_ 的 _“combinator”_ 输入。将 _自适应构件_ 连接到 _“list1”_。将 Object 的 _“String”_ 连接到 _“list2”_。
 
-我们在此处进行列表映射，因为我们要为每个图元编写四个值，从而创建一个复杂的数据结构。_“List.Combine”_ 节点在数据层次结构中定义一个向下步骤的操作。这就是_“Element.SetParameterByName”_的图元和值输入保留为空的原因。根据_“Element.SetParameterByName”_的空输入的连接顺序，_“List.Combine”_ 会将其输入的子列表连接到这些空输入。
+我们在此处进行列表映射，因为我们要为每个图元编写四个值，从而创建一个复杂的数据结构。_“List.Combine”_ 节点在数据层次结构中定义一个向下步骤的操作。这就是 _“Element.SetParameterByName”_ 的图元和值输入保留为空的原因。根据 _“Element.SetParameterByName”_ 的空输入的连接顺序， _“List.Combine”_ 会将其输入的子列表连接到这些空输入。
 
 在 Revit 中选择一个嵌板后，现在会看到每个参数都有字符串值。实际上，我们将创建更简单的格式来写入点 (X,Y,Z)。这可以在 Dynamo 中使用字符串操作完成，但我们会绕过此处以停留在本章的范围内。
 

@@ -55,7 +55,7 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 
 ![](<images/3/editing - exercise 03.jpg>)
 
-> 1. 参照 _“Element.Parameters”_节点以查找目标参数。或者，我们可以查看上一步中的“特性”面板，以选择要编辑的参数名称。在本例中，我们将查找影响建筑体量上较大几何移动的参数。
+> 1. 参照 _“Element.Parameters”_ 节点以查找目标参数。或者，我们可以查看上一步中的“特性”面板，以选择要编辑的参数名称。在本例中，我们将查找影响建筑体量上较大几何移动的参数。
 > 2. 我们将使用 _“Element.SetParameterByName”_ 节点对 Revit 图元进行更改
 > 3. 使用“代码块”定义参数列表，其中用引号括起来每个项目以表示字符串。我们还可以将“List.Create”节点与一系列连接到多个输入的 _“string”_ 节点一起使用，但代码块更便捷。在 Revit 中，确保字符串与精确名称匹配，具体情况如下：`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 

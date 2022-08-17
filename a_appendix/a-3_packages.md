@@ -44,7 +44,7 @@
 
 | ![](<images/a-3/genius loci logo.png>) **GENIUS LOCI**                                                                                                                                                                    | [访问 Genius Loci GitHub](https://github.com/albandechasteigner/GeniusLociForDynamo) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Genius Loci 是适用于 Dynamo 的节点的汇编。它包含有益于 Revit 用户的有用节点。安装该软件包以探索某些功能，例如轻松与链接文件和 Revit 文档交互。 | \![](<../.gitbook/assets/genius loci package sample nodes.png>)                            |
+| Genius Loci 是适用于 Dynamo 的节点的汇编。它包含有益于 Revit 用户的有用节点。安装该软件包以探索某些功能，例如轻松与链接文件和 Revit 文档交互。 | ![](<../.gitbook/assets/genius loci package sample nodes.png>)                            |
 
 | ![](images/a-3/mantisshrimpLogo.png) **Mantis Shrimp**                                                                       | [访问官方 Mantis Shrimp 网站。](http://archi-lab.net/mantis-shrimp-getting-started/) |
 | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
