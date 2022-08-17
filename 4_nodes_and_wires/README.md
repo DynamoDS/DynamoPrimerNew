@@ -8,7 +8,7 @@ V aplikaci Dynamo jsou **uzly** objekty, jejichž propojováním vzniká vizuá
 
 Většina uzlů v aplikaci Dynamo se skládá z pěti částí. Ačkoliv existují výjimky, například vstupní uzly, anatomii každého uzlu lze popsat následovně:
 
-\![](<images/nodes and wires - nodes anatomy.jpg>)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Název – Název uzlu. Konvence pojmenování je `Category.Name`.
 > 2. Hlavní tělo – Hlavní tělo uzlu. Po kliknutí pravým tlačítkem myši se zde zobrazí možnosti na úrovni celého uzlu.
@@ -24,7 +24,7 @@ Porty očekávají, že obdrží data určitého typu. Například připojením 
 
 {% hint style="info" %} Přesunutím kurzoru nad port zobrazíte popisek s očekávaným datovým typem. {% endhint %}
 
-\![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Popisek portu
 > 2. Popisek
@@ -37,7 +37,7 @@ Aplikace Dynamo naznačuje stav běhu vizuálního programu, tím že jednotliv�
 
 Najetím myší nebo kliknutím pravým tlačítkem myši na název nebo porty se zobrazí další informace a možnosti.
 
-\![](<../.gitbook/assets/nodes and wires - node states.png>)
+![](<../.gitbook/assets/nodes and wires - node states.png>)
 
 > 1. Připojené vstupy – Uzel s modrými svislými pruhy na vstupních portech je dobře připojen a má úspěšně připojeny všechny vstupy.
 > 2. Nepřipojené vstupy – Pokud má uzel na jednom nebo více vstupních portech červené svislé pruhy, je nutné tyto vstupy připojit.
@@ -51,11 +51,11 @@ Najetím myší nebo kliknutím pravým tlačítkem myši na název nebo porty s
 
 #### Zpracování uzlů s chybou nebo upozorněním
 
-Pokud jsou ve vizuálním programu upozornění nebo chyby, aplikace Dynamo zobrazí další informace o problému. Nad názvy žlutých uzlů se navíc zobrazí popisky. Přesunutím ukazatele myši nad ikonu popisku s upozorněním \![](<images/nodes and wires - node warning icon.png>) nebo chybou \![](<images/nodes and wires - node error icon.png>) ji rozbalte.
+Pokud jsou ve vizuálním programu upozornění nebo chyby, aplikace Dynamo zobrazí další informace o problému. Nad názvy žlutých uzlů se navíc zobrazí popisky. Přesunutím ukazatele myši nad ikonu popisku s upozorněním ![](<images/nodes and wires - node warning icon.png>) nebo chybou ![](<images/nodes and wires - node error icon.png>) ji rozbalte.
 
 {% hint style="info" %}Pomocí informací uvedených v popisku můžete zjistit, kde došlo k problému (například chybný datový typ nebo datová struktura u předchozích uzlů). {% endhint %}
 
-\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Popisek k upozornění – Hodnotu „Null“ nebo prázdná data nelze interpretovat jako typ Double, tj.číslo.
 > 2. Pomocí uzlu Watch můžete prozkoumat vstupní data uzlu.
@@ -71,7 +71,7 @@ Dráty propojují výstupní port jednoho uzlu se vstupním portem jiného uzlu.
 
 Vstupní porty jsou na levé straně a výstupní porty jsou umístěny na pravé straně uzlů, proto lze obecně říci, že tok programu se pohybuje zleva doprava.
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Tvorba drátů <a href="#creating-wires" id="creating-wires"></a>
 
@@ -79,7 +79,7 @@ Vytvořte drát kliknutím levým tlačítkem myši na požadovaný port a násl
 
 Data tímto drátem budou protékat od vstupu do výstupu, na porty je však možné klikat v libovolném pořadí.
 
-\![](<images/nodes and wires - creating a wire.gif>)
+![](<images/nodes and wires - creating a wire.gif>)
 
 ### Úprava drátů<a href="#editing-wires" id="editing-wires"></a>
 
@@ -87,25 +87,25 @@ Data tímto drátem budou protékat od vstupu do výstupu, na porty je však mo�
 
 * Chcete-li změnit propojení ke vstupnímu portu, klikněte levým tlačítkem myši na jiný vstupní port.
 
-\![](<images/nodes and wires - edit wire change port (2).gif>)
+![](<images/nodes and wires - edit wire change port (2).gif>)
 
 * Chcete-li drát odebrat, odsuňte jej pryč a klikněte levým tlačítkem myši na pracovní prostor.
 
-\![](<images/nodes and wires - edit wires remove.gif>)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * Stisknutím klávesy Shift a kliknutím levým tlačítkem myši můžete změnit propojení několik drátů.
 
-\![](<images/nodes and wires - edit multi ports.gif>)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * Stisknutím klávesy Ctrl a kliknutím levým tlačítkem myši můžete drát duplikovat.
 
-\![](<images/nodes and wires - duplicate wire.gif>)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### Výchozí a zvýrazněné dráty <a href="#wire-previews" id="wire-previews"></a>
 
 Ve výchozím nastavení se dráty zobrazují šedě. Po výběru uzlu se k němu připojené dráty zvýrazní světle modrou barvou stejně jako uzel samotný.
 
-\![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Zvýrazněný drát
 > 2. Výchozí drát
@@ -116,10 +116,10 @@ Pokud chcete dráty v grafu skrýt, přejděte do nabídky Zobrazit > Konektory
 
 Při tomto nastavení se bledě modrou barvou zvýrazní pouze vybrané uzly a jejich spojovací dráty.
 
-\![](<images/nodes and wires - hide wires setting (1).gif>)
+![](<images/nodes and wires - hide wires setting (1).gif>)
 
 #### Skrytí pouze jednotlivých drátů
 
 Můžete skrýt také pouze vybraný drát a to kliknutím pravým tlačítkem na výstup uzlů a výběrem položky Skrýt dráty.
 
-\![](<images/nodes and wires - hide selected wire.gif>)
+![](<images/nodes and wires - hide selected wire.gif>)
