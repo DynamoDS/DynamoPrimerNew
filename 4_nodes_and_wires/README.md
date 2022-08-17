@@ -8,7 +8,7 @@ Dynamo の**ノード**は、ビジュアル プログラムを形成するた�
 
 Dynamo のほとんどのノードは、5 つのパーツで構成されています。入力ノードなどの例外はありますが、各ノードの構造は次のようになります。
 
-\![](<images/nodes and wires - nodes anatomy.jpg>)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. 名前 - `Category.Name` の命名規則に準拠したノードの名前。
 > 2. メイン - ノードの本体。ここを右クリックすると、ノード全体レベルのオプションが表示されます。
@@ -20,11 +20,11 @@ Dynamo のほとんどのノードは、5 つのパーツで構成されてい�
 
 ノードの入力と出力はポートと呼ばれ、ワイヤの出入り口として機能します。データは左側のポートを経由して入力され、操作が実行されるとノードの右側から出力されます。
 
-ポートは、特定のタイプのデータを受け取るように設定されています。たとえば、__2.75 という数値を Point.ByCoordinates ノードのポートに接続すると、点が正常に作成されます。ただし、同じポートに対して__「Red」を指定すると、エラーが発生します。
+ポートは、特定のタイプのデータを受け取るように設定されています。たとえば、 _2.75_ という数値を Point.ByCoordinates ノードのポートに接続すると、点が正常に作成されます。ただし、同じポートに対して _「Red」_ を指定すると、エラーが発生します。
 
 {% hint style="info" %} ヒント: ポートにカーソルを合わせると、そのポートの正しいデータ タイプを含むツールチップが表示されます。{% endhint %}
 
-\![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. ポートのラベル
 > 2. ツールチップ
@@ -37,7 +37,7 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 名前やポートにカーソルを合わせるか右クリックすると、追加の情報やオプションが表示されます。
 
-\![](<../.gitbook/assets/nodes and wires - node states.png>)
+![](<../.gitbook/assets/nodes and wires - node states.png>)
 
 > 1. 入力が十分 - 入力ポートに青色の垂直バーがあるノードは、適切に接続され、すべての入力が正常に接続されています。
 > 2. 入力が不十分 – 1 つ以上の入力ポートに赤色の垂直バーがあるノードでは、そのポートの入力を接続する必要があります。
@@ -51,11 +51,11 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 #### エラー ノードまたは警告ノードを処理する
 
-ビジュアル プログラムに警告やエラーが含まれている場合、その問題に関する追加情報が表示されます。また、黄色のノードでも、ノード名の上にツールチップが表示されます。警告 \![](<images/nodes and wires - node warning icon.png>) またはエラー \![](<images/nodes and wires - node error icon.png>) ツールチップ アイコンにマウス カーソルを合わせて展開します。
+ビジュアル プログラムに警告やエラーが含まれている場合、その問題に関する追加情報が表示されます。また、黄色のノードでも、ノード名の上にツールチップが表示されます。警告 ![](<images/nodes and wires - node warning icon.png>) またはエラー ![](<images/nodes and wires - node error icon.png>) ツールチップ アイコンにマウス カーソルを合わせて展開します。
 
 {% hint style="info" % } ヒント: このツールチップ情報を使用して上流のノードを検査することにより、必要なデータ タイプまたはデータ構造にエラーがないか確認できます。{% endhint %}
 
-\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. 警告のツールチップ - 「Null」またはデータがない場合は、倍精度浮動小数点数つまり数値として認識されません。
 > 2. Watch ノードを使用して入力データを検査します。
@@ -71,7 +71,7 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 入力ポートは左側にあり、出力ポートはノードの右側にあります。そのため、通常、プログラム フローは左から右に移動します。
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### ワイヤを作成する <a href="#creating-wires" id="creating-wires"></a>
 
@@ -79,7 +79,7 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 データは常にこのワイヤを経由して出力から入力へと移動します。ただし、接続されているポートをクリックする順序によって、どちらの方向にもワイヤを作成できます。
 
-\![](<images/nodes and wires - creating a wire.gif>)
+![](<images/nodes and wires - creating a wire.gif>)
 
 ### ワイヤを編集する <a href="#editing-wires" id="editing-wires"></a>
 
@@ -87,25 +87,25 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 * 入力ポートへの接続を変更するには、別の入力ポートを左クリックします。
 
-\![](<images/nodes and wires - edit wire change port (2).gif>)
+![](<images/nodes and wires - edit wire change port (2).gif>)
 
 * ワイヤを削除するには、ワイヤを入力ポートから離してワークスペースを左クリックします。
 
-\![](<images/nodes and wires - edit wires remove.gif>)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * 複数のワイヤを再接続するには、Shift+ 左クリックを使用します。
 
-\![](<images/nodes and wires - edit multi ports.gif>)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * ワイヤを複製するには、Ctrl+ 左クリックを使用します。
 
-\![](<images/nodes and wires - duplicate wire.gif>)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### 既定のワイヤとハイライト表示されたワイヤ <a href="#wire-previews" id="wire-previews"></a>
 
 既定では、ワイヤは灰色のストロークでプレビュー表示されます。ノードを選択すると、接続されているワイヤがそのノードと同じ水色でハイライト表示されます。
 
-\![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. ハイライト表示されたワイヤ
 > 2. 既定のワイヤ
@@ -116,10 +116,10 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 このように設定すると、選択したノードとその連結ワイヤのみが薄い水色でハイライト表示されます。
 
-\![](<images/nodes and wires - hide wires setting (1).gif>)
+![](<images/nodes and wires - hide wires setting (1).gif>)
 
 #### 個別のワイヤのみを非表示
 
 また、ノードの出力を右クリックして[ワイヤを非表示]を選択すると、選択したワイヤのみを非表示にすることができます。
 
-\![](<images/nodes and wires - hide selected wire.gif>)
+![](<images/nodes and wires - hide selected wire.gif>)
