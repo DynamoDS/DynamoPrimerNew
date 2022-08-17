@@ -8,7 +8,7 @@ Dynamo에서 **노드**는 시각적 프로그램을 형성하기 위해 연결�
 
 Dynamo의 노드 대부분은 5개 부분으로 구성되어 있습니다. 입력 노드와 같은 예외도 있지만, 각 노드의 분석을 다음과 같이 설명할 수 있습니다.
 
-\![](<images/nodes and wires - nodes anatomy.jpg>)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. 이름 - `Category.Name` 명명 규칙을 사용하는 노드의 이름입니다.
 > 2. 주 본체 - 노드의 주 본체 - 여기를 마우스 오른쪽 버튼으로 클릭하면 전체 노드 수준의 옵션이 표시됩니다.
@@ -20,11 +20,11 @@ Dynamo의 노드 대부분은 5개 부분으로 구성되어 있습니다. 입�
 
 노드의 입력 및 출력을 포트라고 하며, 와이어에 대한 수용기로 작동합니다. 데이터는 왼쪽에 있는 포트를 통해 노드에 들어오고, 해당 작업을 실행한 후에는 오른쪽 노드 밖으로 나갑니다.
 
-포트는 특정 유형의 데이터를 수신해야 합니다. 예를 들어 _2.75_와 같은 숫자를 좌표로 정의된 점 노드의 포트에 연결하면 점이 성공적으로 작성됩니다. 그러나 동일한 포트에 _"Red"_를 제공하면 오류가 발생합니다.
+포트는 특정 유형의 데이터를 수신해야 합니다. 예를 들어 _2.75_와 같은 숫자를 좌표로 정의된 점 노드의 포트에 연결하면 점이 성공적으로 작성됩니다. 그러나 동일한 포트에 _"Red"_ 를 제공하면 오류가 발생합니다.
 
 {% hint style="info" %}팁: 포트 위에 마우스 커서를 놓으면 예상 데이터 유형이 포함된 툴팁이 표시됩니다. {% endhint %}
 
-\![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. 포트 레이블
 > 2. 툴팁
@@ -37,7 +37,7 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 이름 또는 포트를 마우스 오른쪽 버튼으로 클릭하거나 그 위에 커서를 놓으면 추가 정보 및 옵션이 표시됩니다.
 
-\![](<../.gitbook/assets/nodes and wires - node states.png>)
+![](<../.gitbook/assets/nodes and wires - node states.png>)
 
 > 1. 충족된 입력 - 입력 포트 위에 파란색 수직 막대가 있는 노드는 제대로 연결된 것이며 모든 입력이 성공적으로 연결된 것입니다.
 > 2. 충족되지 않은 입력 - 하나 이상의 입력 포트 위에빨간색 수직 막대가 있는 노드는 입력을 연결해야 합니다.
@@ -51,11 +51,11 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 #### 오류 또는 경고 노드 처리
 
-시각적 프로그램에 경고 또는 오류가 포함된 경우 Dynamo는 해당 문제에 대한 추가 정보를 제공합니다. 노란색인 모든 노드는 이름 위에 툴팁도 표시됩니다. 경고 \![](<images/nodes and wires - node warning icon.png>) 또는 오류 \![](<images/nodes and wires - node error icon.png>) 툴팁 아이콘 위에 마우스 커서를 놓고 확장합니다.
+시각적 프로그램에 경고 또는 오류가 포함된 경우 Dynamo는 해당 문제에 대한 추가 정보를 제공합니다. 노란색인 모든 노드는 이름 위에 툴팁도 표시됩니다. 경고 ![](<images/nodes and wires - node warning icon.png>) 또는 오류 ![](<images/nodes and wires - node error icon.png>) 툴팁 아이콘 위에 마우스 커서를 놓고 확장합니다.
 
 {% hint style="info" %}팁: 이 툴팁 정보를 통해 업스트림 노드를 검사하여 필수 데이터 유형이나 데이터 구조에 오류가 있는지 확인합니다. {% endhint %}
 
-\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. 경고 툴팁 - "Null" 또는 데이터 없음은 Double(예: 숫자)로 인식될 수 없습니다.
 > 2. Watch 노드를 사용하여 입력 데이터를 검사합니다.
@@ -71,7 +71,7 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 입력 포트는 노드의 왼쪽에 있고 출력 포트는 오른쪽에 있습니다. 따라서 일반적으로 프로그램 흐름이 왼쪽에서 오른쪽으로 이동한다고 말할 수 있습니다.
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### 와이어 작성 <a href="#creating-wires" id="creating-wires"></a>
 
@@ -79,7 +79,7 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 데이터는 항상 출력에서 입력으로 이 와이어를 따라 흐르지만, 연결된 포트를 클릭하는 순서에 따라 어떤 방향으로도 와이어를 만들 수 있습니다.
 
-\![](<images/nodes and wires - creating a wire.gif>)
+![](<images/nodes and wires - creating a wire.gif>)
 
 ### 와이어 편집 <a href="#editing-wires" id="editing-wires"></a>
 
@@ -87,25 +87,25 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 * 입력 포트로의 연결을 변경하려면 다른 입력 포트를 마우스 왼쪽 버튼으로 클릭합니다.
 
-\![](<images/nodes and wires - edit wire change port (2).gif>)
+![](<images/nodes and wires - edit wire change port (2).gif>)
 
 * 와이어를 제거하려면 와이어를 바깥쪽으로 당긴 다음, 작업공간을 마우스 왼쪽 버튼으로 클릭합니다.
 
-\![](<images/nodes and wires - edit wires remove.gif>)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * Shift 키를 누른 채 마우스 왼쪽 버튼을 클릭하여 여러 와이어를 다시 연결합니다.
 
-\![](<images/nodes and wires - edit multi ports.gif>)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * Ctrl 키를 누른 채 마우스 왼쪽 버튼을 클릭하여 와이어를 복제합니다.
 
-\![](<images/nodes and wires - duplicate wire.gif>)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### 기본 와이어 및 강조 표시된 와이어 <a href="#wire-previews" id="wire-previews"></a>
 
 기본적으로 와이어는 회색 스트로크로 미리 표시됩니다. 노드가 선택되면 연결 와이어는 노드와 동일한 청록색으로 강조 표시됩니다.
 
-\![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. 강조 표시된 와이어
 > 2. 기본 와이어
@@ -116,10 +116,10 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 이 설정을 사용하면 선택한 노드 및 해당 결합 와이어만 연한 청록색으로 강조 표시됩니다.
 
-\![](<images/nodes and wires - hide wires setting (1).gif>)
+![](<images/nodes and wires - hide wires setting (1).gif>)
 
 #### 개별 와이어만 숨기기
 
 노드 출력을 마우스 오른쪽 버튼으로 클릭하고 와이어 숨기기를 선택하여 선택한 와이어를 숨길 수도 있습니다.
 
-\![](<images/nodes and wires - hide selected wire.gif>)
+![](<images/nodes and wires - hide selected wire.gif>)
