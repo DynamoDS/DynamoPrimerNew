@@ -2,7 +2,7 @@
 
 Vous pouvez créer un réseau d'éléments Revit dans Dynamo avec un contrôle paramétrique complet. Les nœuds Revit dans Dynamo permettent d'importer des éléments à partir de géométries génériques vers des types de catégorie spécifiques (tels que des murs et des sols). Dans cette section, nous allons nous concentrer sur l'importation d'éléments paramétriquement flexibles avec des composants adaptatifs.
 
-\![](<images/4/creating - dynamo nodes.jpg>)
+![](<images/4/creating - dynamo nodes.jpg>)
 
 ### Composants adaptatifs
 
@@ -24,7 +24,7 @@ Le workflow que vous allez configurer dans l'exercice ci-dessous vous permet d'a
 
 Le [premier exercice](8-4\_creating.md#exercise) ci-dessous vous expliquera comment Dynamo référence les données pour la création d'éléments Revit. Pour générer plusieurs composants adaptatifs, définissez une liste de listes dans laquelle chaque liste comporte trois points représentant chaque point du composant adaptatif. Gardez cela à l'esprit lorsque vous gérez les structures de données dans Dynamo.
 
-\![](<images/4/creating - multiple elements and lists 01.jpg>)
+![](<images/4/creating - multiple elements and lists 01.jpg>)
 
 ### Éléments DirectShape
 
@@ -42,14 +42,14 @@ Vous allez examiner et réaliser le [deuxième exercice](8-4\_creating.md#exerci
 
 À partir du fichier d'exemple de cette section (ou en continuant avec le fichier Revit de la session précédente), vous obtenez le même volume Revit.
 
-\![](<images/4/creating - exercise 01.jpg>)
+![](<images/4/creating - exercise 01.jpg>)
 
 > 1. Il s'agit du fichier ouvert.
 > 2. Il s'agit du système de ferme créé avec Dynamo et relié intelligemment au volume Revit.
 
 Après avoir utilisé les nœuds _"Select Model Element"_ et _"Select Face"_, vous allez maintenant avancer plus loin dans la hiérarchie de la géométrie et utiliser _"Select Edge"_. Lorsque le solveur Dynamo est défini pour exécuter la commande _"Automatic"_, le graphique est constamment mis à jour en fonction des modifications apportées au fichier Revit. L'arête sélectionné est liée dynamiquement à la topologie des éléments Revit. Tant que la topologie* ne change pas, la connexion reste liée entre Revit et Dynamo.
 
-\![](<images/4/creating - exercise 02.jpg>)
+![](<images/4/creating - exercise 02.jpg>)
 
 > 1. Sélectionnez la courbe la plus haute de la façade du vitrage. Elle s'étend sur toute la longueur du bâtiment. Si vous ne parvenez pas à sélectionner l'arête, n'oubliez pas de choisir la sélection dans Revit en plaçant le curseur sur l'arête et en appuyant sur la touche _"Tabulation"_ jusqu'à ce que l'arête souhaitée soit mise en surbrillance.
 > 2. À l'aide de deux nœuds _"Select Edge"_, sélectionnez chaque arête représentant le dévers de rail au milieu de la façade.
@@ -60,7 +60,7 @@ Après avoir utilisé les nœuds _"Select Model Element"_ et _"Select Face"_, vo
 
 Vous devez d'abord joindre les courbes et les fusionner en une liste. De cette manière, vous pouvez _"regrouper"_ les courbes pour effectuer des opérations de géométrie.
 
-\![](<images/4/creating - exercise 03.jpg>)
+![](<images/4/creating - exercise 03.jpg>)
 
 > 1. Créez une liste pour les deux courbes au centre de la façade.
 > 2. Joignez les deux courbes dans une polycourbe en connectant le composant _List.Create_ à un nœud _Polycurve.ByJoiningCurves_.
@@ -70,7 +70,7 @@ Vous devez d'abord joindre les courbes et les fusionner en une liste. De cette m
 
 Vous voulez tirer parti de la courbe supérieure, qui est une ligne, et représente la portée complète de la façade. Pour ce faire, créez des plans le long de cette ligne pour couper le jeu de courbes regroupées dans une liste.
 
-\![](<images/4/creating - exercise 04.jpg>)
+![](<images/4/creating - exercise 04.jpg>)
 
 > 1. Avec un nœud _Code Block_, définissez un intervalle en utilisant la syntaxe : `0..1..#numberOfTrusses;`
 > 2. Connectez un *curseur d'entier *à l'entrée du nœud Code Block. Vous l'aurez deviné, cette valeur représente le nombre de fermes. Le curseur contrôle le nombre d'éléments dans l'intervalle défini de *0 *à _1_.
@@ -78,13 +78,13 @@ Vous voulez tirer parti de la courbe supérieure, qui est une ligne, et représe
 
 Un plan est un élément abstrait de la géométrie, représentant un espace 2D infini. Les plans sont idéaux pour le contour et l'intersection, à mesure que vous effectuez la configuration dans cette étape.
 
-\![](<images/4/creating - exercise 05.jpg>)
+![](<images/4/creating - exercise 05.jpg>)
 
 > 1. À l'aide du nœud _Geometry.Intersect_ (définissez la liaison sur Produit cartésien), connectez le nœud _Curve.PlaneAtParameter_ à l'entrée _entity_ du nœud _Geometry.Intersect_. Connectez le nœud principal _List.Create_ à l'entrée _geometry_. Les points sont maintenant affichés dans la fenêtre Dynamo. Ils représentent l'intersection de chaque courbe avec les plans définis.
 
 Le résultat est une liste de listes. Trop de listes par rapport à vos besoins. Il convient ici d'effectuer un aplatissement partiel. Vous devez descendre d'un niveau dans la liste et aplanir le résultat. Pour ce faire, utilisez l'opération _List.Map_, comme indiqué dans le chapitre relatif aux listes du guide.
 
-\![](<images/4/creating - exercise 06.jpg>)
+![](<images/4/creating - exercise 06.jpg>)
 
 > 1. Connectez le nœud _Geometry.Intersect_ à l'entrée de liste de _List.Map_.
 > 2. Connectez un nœud _Flatten_ à l'entrée f(x) de _List.Map_. Les résultats donnent 3 listes, chacune contenant un nombre égal au nombre de fermes.
@@ -94,7 +94,7 @@ Le résultat est une liste de listes. Trop de listes par rapport à vos besoins.
 
 Mettez en réseau les composants adaptatifs de la même façon que vous avez créé les polygones.
 
-\![](<images/4/creating - exercise 07.jpg>)
+![](<images/4/creating - exercise 07.jpg>)
 
 > 1. Ajoutez un nœud _AdaptiveComponent.ByPoints_ à la zone de dessin et connectez le nœud _List.Transpose_ à l'entrée _points_.
 > 2. À l'aide d'un nœud _Family Types_, sélectionnez la famille _"AdaptiveTruss"_ et connectez-la à l'entrée _FamilyType_ du nœud _AdaptiveComponent.ByPoints_.
@@ -103,11 +103,11 @@ Dans Revit, les dix fermes sont à présent espacées régulièrement sur la fa�
 
 En ajustant le graphique, augmentez la valeur de numberOfTrusses de 30 en déplaçant le curseur. Beaucoup de fermes, peu réalistes, mais le lien paramétrique fonctionne. Une fois la vérification terminée, définissez la valeur de numberOfTrusses sur 15.
 
-\![](<images/4/creating - exercise 08.gif>)
+![](<images/4/creating - exercise 08.gif>)
 
 Pour le dernier test, en sélectionnant le volume dans Revit et en modifiant les paramètres d'occurrence, vous pouvez modifier la forme du bâtiment et observer la ferme. Souvenez-vous que ce graphique Dynamo doit être ouvert pour que cette mise à jour s'affiche, et que le lien sera supprimé dès sa fermeture.
 
-\![](<images/4/creating - exercise 09.jpg>)
+![](<images/4/creating - exercise 09.jpg>)
 
 ## Exercice : Éléments DirectShape
 
@@ -119,28 +119,28 @@ Pour le dernier test, en sélectionnant le volume dans Revit et en modifiant les
 
 Ouvrez tout d'abord le fichier d'exemple de cette leçon : ARCH-DirectShape-BaseFile.rvt.
 
-\![](<images/4/creating - exercise II - 01.jpg>)
+![](<images/4/creating - exercise II - 01.jpg>)
 
 > 1. Dans la vue 3D, vous pouvez voir le volume de votre bâtiment de la leçon précédente.
 > 2. Le long de l'arête de l'atrium se trouve une courbe de référence, que vous allez utiliser comme courbe à référencer dans Dynamo.
 > 3. Le long de l'arête opposée de l'atrium se trouve une autre courbe de référence que vous allez également référencer dans Dynamo.
 
-\![](<images/4/creating - exercise II - 02.jpg>)
+![](<images/4/creating - exercise II - 02.jpg>)
 
 > 1. Pour référencer la géométrie dans Dynamo, utilisez _Select Model Element_ pour chaque membre dans Revit. Sélectionnez le volume dans Revit et importez la géométrie dans Dynamo à l'aide de _Element.Faces_. Le volume doit maintenant être visible dans l'aperçu Dynamo.
 > 2. Importez une courbe de référence dans Dynamo à l'aide de _Select Model Element_ et _CurveElement.Curve_.
 > 3. Importez l'autre courbe de référence dans Dynamo à l'aide de _Select Model Element_ et _CurveElement.Curve_.
 
-\![](<images/4/creating - exercise II - 03.jpg>)
+![](<images/4/creating - exercise II - 03.jpg>)
 
 > 1. En zoomant et en vous déplaçant vers la droite dans l'exemple de graphique, vous apercevez un grand groupe de nœuds : il s'agit d'opérations géométriques qui génèrent la structure de toiture de treille visible dans l'aperçu Dynamo. Ces nœuds sont générés à l'aide de la fonctionnalité _Nœud vers code_, comme décrit dans la [section dédiée au nœud Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) du guide.
 > 2. La structure est contrôlée par trois paramètres principaux : Décalage diagonale, Contre-flèche et Rayon.
 
 Effectuez un zoom avant sur les paramètres de ce graphique. Vous pouvez les ajuster pour obtenir différentes sorties de géométrie.
 
-\![](<images/4/creating - exercise II - 04.jpg>)
+![](<images/4/creating - exercise II - 04.jpg>)
 
-\![](<images/4/creating - exercise II - 05.jpg>)
+![](<images/4/creating - exercise II - 05.jpg>)
 
 > 1. Lorsque vous déposez le nœud _DirectShape.ByGeometry_ sur la zone de dessin, vous voyez qu'il comporte quatre entrées : _geometry_**,** _category_**,** _material_ et _name_.
 > 2. La géométrie sera le solide créé à partir de la partie de création de géométrie du graphique
@@ -149,4 +149,4 @@ Effectuez un zoom avant sur les paramètres de ce graphique. Vous pouvez les aju
 
 Après avoir exécuté Dynamo, vous avez la géométrie importée sur le toit dans votre projet dans Revit. Il s'agit d'un élément d'ossature, et non d'un modèle générique. Le lien paramétrique vers Dynamo reste intact.
 
-\![](<images/4/creating - exercise II - 06.jpg>)
+![](<images/4/creating - exercise II - 06.jpg>)

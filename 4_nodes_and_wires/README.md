@@ -8,7 +8,7 @@ Dans Dynamo, les **nœuds** sont les objets que vous connectez pour former un pr
 
 La plupart des nœuds de Dynamo sont composés de cinq éléments. Bien qu'il existe des exceptions, telles que les nœuds Input, l'anatomie de chaque nœud peut être décrite comme suit :
 
-\![](<images/nodes and wires - nodes anatomy.jpg>)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Nom : nom du nœud conforme à la convention d'appellation `Category.Name`.
 > 2. Corps principal : corps principal du nœud. Cliquez ici avec le bouton droit de la souris pour afficher les options au niveau du nœud entier
@@ -24,7 +24,7 @@ Les ports doivent recevoir des données d'un certain type. Par exemple, la conne
 
 {% hint style="info" %} Conseil : placez le curseur sur un port pour afficher une info-bulle contenant le type de données attendu. {% endhint %}
 
-\![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Libellé de port
 > 2. Info-bulle
@@ -37,7 +37,7 @@ Dynamo donne une indication de l'état d'exécution de votre programme visuel en
 
 Lorsque vous placez le curseur ou cliquez avec le bouton droit de la souris sur le nom ou les ports, vous affichez des informations et des options supplémentaires.
 
-\![](<../.gitbook/assets/nodes and wires - node states.png>)
+![](<../.gitbook/assets/nodes and wires - node states.png>)
 
 > 1. Entrées satisfaites : un nœud avec des barres verticales bleues sur ses ports d'entrée est bien connecté et toutes ses entrées sont connectées.
 > 2. Entrées non satisfaites : ces entrées doivent être connectées à un nœud avec une barre verticale rouge sur un ou plusieurs ports d'entrée.
@@ -51,11 +51,11 @@ Lorsque vous placez le curseur ou cliquez avec le bouton droit de la souris sur 
 
 #### Gestion des nœuds d'erreur ou d'avertissement
 
-Si votre programme visuel contient des avertissements ou des erreurs, Dynamo fournit des informations supplémentaires sur le problème. Tout nœud jaune comporte également une info-bulle au-dessus de son nom. Placez le curseur de la souris sur l'icône d'info-bulle d'avertissement \![](<images/nodes and wires - node warning icon.png>) ou d'erreur \![](<images/nodes and wires - node error icon.png>) pour la développer.
+Si votre programme visuel contient des avertissements ou des erreurs, Dynamo fournit des informations supplémentaires sur le problème. Tout nœud jaune comporte également une info-bulle au-dessus de son nom. Placez le curseur de la souris sur l'icône d'info-bulle d'avertissement ![](<images/nodes and wires - node warning icon.png>) ou d'erreur ![](<images/nodes and wires - node error icon.png>) pour la développer.
 
 {% hint style="info" %} Conseil : examinez les nœuds en amont à la lumière de ces informations d'info-bulle pour voir si le type ou la structure de données requis est erroné. {% endhint %}
 
-\![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Info-bulle d'avertissement : une valeur "Null" ou l'absence de donnée ne peut être comprise comme un double, c'est-à-dire un nombre
 > 2. Utilisez le nœud Watch pour examiner les données d'entrée
@@ -71,7 +71,7 @@ Les fils connectent le port de sortie d'un nœud au port d'entrée d'un autre n�
 
 Les ports d'entrée se trouvent sur le côté gauche et les ports de sortie sur le côté droit des nœuds. Par conséquent, vous pouvez généralement dire que le flux du programme se déplace de gauche à droite.
 
-\![](<images/nodes and wires - flow of data.jpg>)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Création de fils <a href="#creating-wires" id="creating-wires"></a>
 
@@ -79,7 +79,7 @@ Cliquez avec le bouton gauche de la souris sur un port pour créer un fil, puis 
 
 Les données passent toujours par ce fil d'une sortie à une entrée. Toutefois, vous pouvez créer le fil dans les deux directions en termes d'ordre de clic sur les ports connectés.
 
-\![](<images/nodes and wires - creating a wire.gif>)
+![](<images/nodes and wires - creating a wire.gif>)
 
 ### Modification des fils <a href="#editing-wires" id="editing-wires"></a>
 
@@ -87,25 +87,25 @@ Souvent, vous souhaitez ajuster le flux du programme dans votre programme visuel
 
 * Pour définir la connexion sur un port d'entrée, cliquez avec le bouton gauche de la souris sur un autre port d'entrée.
 
-\![](<images/nodes and wires - edit wire change port (2).gif>)
+![](<images/nodes and wires - edit wire change port (2).gif>)
 
 * Pour supprimer le fil, retirez-le et cliquez avec le bouton gauche de la souris sur l'espace de travail.
 
-\![](<images/nodes and wires - edit wires remove.gif>)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * Reconnectez plusieurs fils à l'aide de la combinaison Maj+clic gauche.
 
-\![](<images/nodes and wires - edit multi ports.gif>)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * Dupliquez un fil à l'aide de la combinaison Ctrl+clic gauche.
 
-\![](<images/nodes and wires - duplicate wire.gif>)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### Fils par défaut et fils en surbrillance <a href="#wire-previews" id="wire-previews"></a>
 
 Par défaut, l'aperçu des fils s'affiche avec un trait gris. Lorsqu'un nœud est sélectionné, il effectue le rendu de tous les fils connectés avec la même bordure bleue que le nœud.
 
-\![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Fil en surbrillance
 > 2. Fil par défaut
@@ -116,10 +116,10 @@ Si vous préférez masquer les fils dans le graphique, vous pouvez accéder à c
 
 Avec ce paramètre, seuls les nœuds sélectionnés et les fils qui les rejoignent présentent une bordure bleu clair.
 
-\![](<images/nodes and wires - hide wires setting (1).gif>)
+![](<images/nodes and wires - hide wires setting (1).gif>)
 
 #### Masquage des fils individuels uniquement
 
 Vous pouvez également masquer le fil sélectionné uniquement. Pour ce faire, cliquez avec le bouton droit de la souris sur la sortie Nœuds > Masquer les fils.
 
-\![](<images/nodes and wires - hide selected wire.gif>)
+![](<images/nodes and wires - hide selected wire.gif>)
