@@ -6,7 +6,7 @@ Revit ist eine datenintensive Umgebung. Dadurch steht ein ganzes Spektrum von Au
 
 Die in der Benutzeroberfläche enthaltene Revit-Bibliothek enthält die Kategorie "Selection" mit mehreren Möglichkeiten zur Auswahl von Geometrie.
 
-\![](<images/2/select revit elements 01.jpg>)
+![](<images/2/select revit elements 01.jpg>)
 
 ### Revit-Hierarchie
 
@@ -26,11 +26,11 @@ Die drei Abbildungen unten zeigen die wichtigsten Kategorien für die Auswahl vo
 
 _Zeigen und Klicken:_ Dies ist das einfachste Verfahren zur direkten Auswahl von Revit-Elementen. Sie können dabei ein vollständiges Modellelement oder nur Teile seiner Topologie (z. B. eine Fläche oder Kante) auswählen. Diese bleiben dynamisch mit dem Revit-Objekt verknüpft, d. h., wenn in der Revit-Datei die Position oder Parameter geändert werden, wird das referenzierte Dynamo-Element im Diagramm aktualisiert.
 
-\![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
+![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
 _Dropdown-Menüs:_ In diesen Menüs wird eine Liste aller Elemente im Revit-Projekt erstellt, auf die Sie zugreifen können. Über diese können Sie Revit-Elemente referenzieren, die eventuell in der jeweiligen Ansicht nicht sichtbar sind. Dieses Werkzeug eignet sich hervorragend zum Abfragen bestehender und zum Erstellen neuer Elemente in einem Revit-Projekt oder im Familieneditor.
 
-\![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
+![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
 
 Sie können darüber hinaus Revit-Elemente anhand ihrer Ebene in der _Revit-Hierarchie_ auswählen. Diese Option erweist sich als hocheffizient, wenn große Datenmengen zur Vorbereitung der Dokumentation oder für die generative Instanziierung und Anpassung verarbeitet werden müssen.
 
@@ -48,7 +48,7 @@ Die drei oben stehenden Abbildungen bilden die Grundlage für die folgende Übun
 
 Diese Revit-Beispieldatei enthält drei Elementtypen eines einfachen Gebäudes. Diese dient als Beispiel für die Auswahl von Revit-Elementen innerhalb der Revit-Hierarchie.
 
-\![](<images/2/selecting - exercise 01.jpg>)
+![](<images/2/selecting - exercise 01.jpg>)
 
 > 1. Gebäudekörper
 > 2. Träger (Tragwerkselemente)
@@ -58,7 +58,7 @@ Welche Schlussfolgerungen erlauben die momentan in der Revit-Projektansicht ange
 
 ### Auswählen von Körpern und Oberflächen
 
-\![](<images/2/selecting - exercise 02.jpg>)
+![](<images/2/selecting - exercise 02.jpg>)
 
 > 1. In diesem Fall liegt eine einfache Struktur vor. Wählen Sie daher den Gebäudekörper, indem Sie im Menüblock Categories die Option _Mass_ wählen. Sie finden dies über Revit > Selection.
 > 2. Die Ausgabe der Kategorie Mass ist die Kategorie selbst. Wir müssen jedoch Elemente auswählen. Verwenden Sie hierfür den Block _All Elements of Category_.
@@ -67,13 +67,13 @@ Bis jetzt wird noch keine Geometrie in Dynamo angezeigt. Sie haben ein Revit-Ele
 
 In diesem Fall arbeiten Sie jedoch mit einfacher Geometrie, die in der Dynamo-Vorschau angezeigt werden kann. Neben dem Eintrag "BldgMass" im oben gezeigten Watch-Block steht eine grün unterlegte Nummer. Dies ist die ID des Elements. Sie weist außerdem darauf hin, dass wir es mit einem Revit-Element zu tun haben, und nicht mit Dynamo-Geometrie. Im nächsten Schritt konvertieren Sie dieses Revit-Element in Dynamo-Geometrie.
 
-\![](<images/2/selecting - exercise 03.jpg>)
+![](<images/2/selecting - exercise 03.jpg>)
 
 > 1. Mithilfe des _Element.Faces_-Blocks erhalten Sie eine Liste von Oberflächen, die die einzelnen Flächen des Revit-Körpers repräsentieren. Die Geometrie wird jetzt im Dynamo-Ansichtsfenster angezeigt und Sie können damit beginnen, Flächen für parametrische Operationen zu referenzieren.
 
 Eine Alternative dazu wird im Folgenden beschrieben. In diesem Fall nehmen Sie die Auswahl nicht über die Revit-Hierarchie _(All Elements of Category)_ vor, sondern wählen Geometrie explizit in Revit aus.
 
-\![](<images/2/selecting - exercise 04.jpg>)
+![](<images/2/selecting - exercise 04.jpg>)
 
 > 1. Klicken Sie im _Select Model Element_-Block auf die Schaltfläche *"select" *(oder _"change"_). Wählen Sie im Revit-Ansichtsfenster das gewünschte Element aus. In diesem Fall ist dies der Gebäudekörper.
 > 2. Anstelle von _Element.Faces_ können Sie mithilfe von _Element.Geometry_ den gesamten Körper als Volumengeometrie auswählen. Dadurch wird die gesamte in diesem Körper enthaltene Geometrie ausgewählt.
@@ -81,7 +81,7 @@ Eine Alternative dazu wird im Folgenden beschrieben. In diesem Fall nehmen Sie d
 
 Mithilfe einiger einfacher Listenoperationen können Sie eine bestimmte Fläche abrufen, die für Ihre Zwecke von Interesse ist.
 
-\![](<images/2/selecting - exercise 05.jpg>)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. Geben Sie zunächst die ausgewählten Elemente von zuvor an den Element.Faces-Block aus.
 > 2. Der _List.Count_-Block zeigt dann, dass 23 Oberflächen im Körper enthalten sind.
@@ -90,25 +90,25 @@ Mithilfe einiger einfacher Listenoperationen können Sie eine bestimmte Fläche 
 
 Der letzte Schritt war etwas umständlich. Dasselbe Ergebnis erzielen Sie schneller mit dem _Select Face_-Block. Damit können Sie Flächen auswählen, die keine eigenständigen Elemente im Revit-Projekt sind. Dabei verwenden Sie dieselbe Interaktion wie bei _Select Model Element_, wobei Sie allerdings nicht das ganze Element, sondern nur die Oberfläche auswählen.
 
-\![](<images/2/selecting - exercise 06.jpg>)
+![](<images/2/selecting - exercise 06.jpg>)
 
 Angenommen, Sie möchten nur die Hauptfassaden des Gebäudes auswählen. Dies ist mithilfe des _Select Faces_-Blocks möglich. Klicken Sie auf die Schaltfläche Select, und wählen Sie dann die vier Hauptfassaden in Revit aus.
 
-\![](<images/2/selecting - exercise 07.jpg>)
+![](<images/2/selecting - exercise 07.jpg>)
 
 Achten Sie darauf, nach der Auswahl der vier Wände in Revit auf Fertig stellen zu klicken.
 
-\![](<../.gitbook/assets/selecting - exercise 08.jpg>)
+![](<../.gitbook/assets/selecting - exercise 08.jpg>)
 
 Damit werden die Flächen als Oberflächen in Dynamo importiert.
 
-\![](<images/2/selecting - exercise 09.jpg>)
+![](<images/2/selecting - exercise 09.jpg>)
 
 ### Auswählen von Trägern
 
 Als nächstes arbeiten Sie mit den Trägern über dem Foyer.
 
-\![](<images/2/selecting - exercise 10.jpg>)
+![](<images/2/selecting - exercise 10.jpg>)
 
 > 1. Wählen Sie mithilfe des _Select Model Element_-Blocks einen der Träger aus.
 > 2. Verbinden Sie das Trägerelement mit dem _Element.Geometry_-Block. Damit wird der Träger ins Dynamo-Ansichtsfenster übernommen.
@@ -116,18 +116,18 @@ Als nächstes arbeiten Sie mit den Trägern über dem Foyer.
 
 In Arbeitsabläufen mit Revit/Dynamo stellt sich häufig die Frage: Wie kann ich ein Element auswählen und alle weiteren ähnlichen Elemente abrufen? Da im ausgewählten Revit-Element sämtliche Informationen seiner Hierarchie enthalten sind, können Sie seinen Familientyp abrufen und dadurch alle Elemente dieses Typs auswählen.
 
-\![](<images/2/selecting - exercise 11.jpg>)
+![](<images/2/selecting - exercise 11.jpg>)
 
 > 1. Verbinden Sie das Trägerelement mit einem _Element.ElementType_-Block.
 > 2. Im _Watch_-Block ist zu erkennen, dass anstelle eines Revit-Elements jetzt ein Familiensymbol ausgegeben wird.
 > 3. _Element.ElementType_ ist eine einfache Abfrage, d. h., Sie erzielen mithilfe eines Codeblocks mit der Eingabe `x.ElementType;` ebenso leicht dasselbe Ergebnis.
 
-\![](<images/2/selecting - exercise 12.jpg>)
+![](<images/2/selecting - exercise 12.jpg>)
 
 > 1. Verwenden Sie zum Auswählen der übrigen Träger den _All Elements of Family Type_-Block.
 > 2. Im Watch-Block wird angezeigt, dass fünf Revit-Elemente ausgewählt sind.
 
-\![](<images/2/selecting - exercise 13.jpg>)
+![](<images/2/selecting - exercise 13.jpg>)
 
 > 1. Alle diese fünf Elemente können ebenfalls in Dynamo-Geometrie umgewandelt werden.
 
@@ -139,11 +139,11 @@ Angenommen, Sie möchten 500 Träger importieren: Benötigen Sie in diesem Fall 
 
 Wählen Sie mithilfe desselben Diagramms aus Blöcken nicht das Träger-, sondern das Fachwerkelement aus. Löschen Sie jedoch zuvor den Element.Geometry-Block aus dem vorigen Schritt.
 
-\![](<images/2/selecting - exercise 14.jpg>)
+![](<images/2/selecting - exercise 14.jpg>)
 
 Als Nächstes extrahieren Sie grundlegende Informationen aus dem Fachwerkbinder-Familientyp.
 
-\![](<images/2/selecting - exercise 15.jpg>)
+![](<images/2/selecting - exercise 15.jpg>)
 
 > 1. Im _Watch_-Block wird eine Liste der in Revit ausgewählten adaptiven Bauteile angezeigt. Da grundlegende Informationen extrahiert werden sollen, beginnen Sie mit den adaptiven Punkten.
 > 2. Verbinden Sie den _All Elements of Family Type_-Block mit dem _AdaptiveComponent.Location_-Block. Dadurch erhalten Sie eine Liste von Listen mit je drei Punkten für die Positionen der adaptiven Punkte.

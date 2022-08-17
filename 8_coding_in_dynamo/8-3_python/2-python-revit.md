@@ -27,7 +27,7 @@ import System
 
 Dadurch erhalten Sie Zugriff auf die Revit-API und können benutzerdefinierte Skripte für beliebige Revit-Aufgaben erstellen. Die Kombination der visuellen Programmierung mit der Skripterstellung in der Revit-API bringt erhebliche Verbesserungen für die Zusammenarbeit und die Entwicklung von Werkzeugen mit sich. So könnten beispielsweise ein BIM-Manager und ein Schemaplanentwickler gemeinsam am selben Diagramm arbeiten. Bei dieser Zusammenarbeit können sie sowohl den Entwurf als auch die Realisierung des Modells verbessern.
 
-\![](<../../.gitbook/assets/python & revit - 01.jpg>)
+![](<../../.gitbook/assets/python & revit - 01.jpg>)
 
 ### Plattformspezifische APIs
 
@@ -51,7 +51,7 @@ Dies ist eine einfache Methode zum Abrufen von _doc_, _uiapp_ und _app_ für die
 
 Der folgende Code zeigt, wie Sie die Revit-Dienste importieren und die Dokumentdaten in Dynamo abrufen können.
 
-\![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
+![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
 
 Werfen Sie einen Blick auf den Python-Block in Dynamo. Sie finden den Code auch unten:
 
@@ -86,19 +86,19 @@ In dieser Übung erstellen Sie mithilfe des Python-Blocks von Dynamo eine einfac
 
 Beginnen Sie, indem Sie in Revit eine neue Entwurfskörperfamilie erstellen.
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
 
 Öffnen Sie den Ordner _Conceptual Mass_, und verwenden Sie die Vorlagendatei _Metric Mass.rft_.
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
 
 Verwenden Sie in Revit den Tastaturbefehl **`un`**, um die Einstellungen für Projekteinheiten aufzurufen, und ändern Sie die Längeneinheit in Meter.
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
 
 Starten Sie Dynamo und erstellen Sie die Gruppe von Blöcken in der Abbildung unten. Sie erstellen zunächst mithilfe von Dynamo-Blöcken zwei Referenzpunkte in Revit.
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
 
 > 1. Erstellen Sie einen **Codeblock** mit dem Wert `"0;"`.
 > 2. Verbinden Sie diesen Wert mit den x-, y- und z-Eingaben eines **ReferencePoint.ByCoordinates**-Blocks.
@@ -108,7 +108,7 @@ Starten Sie Dynamo und erstellen Sie die Gruppe von Blöcken in der Abbildung un
 
 Werfen Sie einen Blick auf den Python-Block in Dynamo. Den vollständigen Code finden Sie unten.
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array:** Für Revit wird eine **Systemreihe** (anstelle einer Python-Liste) benötigt. Hierfür genügt eine weitere Codezeile. Indem Sie sorgfältig auf die Argumenttypen achten, erleichtern Sie jedoch die Python-Programmierung in Revit.
 
@@ -136,7 +136,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 Sie haben in Dynamo zwei Referenzpunkte erstellt und diese mithilfe von Python mit einer Linie verbunden. In der nächsten Übung führen Sie dies weiter.
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
 
 ## Übung 3
 
@@ -148,13 +148,13 @@ Sie haben in Dynamo zwei Referenzpunkte erstellt und diese mithilfe von Python m
 
 Diese Übung ist relativ einfach, macht jedoch die Verbindung von Daten und Geometrie zwischen Revit und Dynamo – in beiden Richtungen – deutlich. Öffnen Sie zuerst Revit-StructuralFraming.rvt. Starten Sie anschließend Dynamo und öffnen Sie die Datei Revit-StructuralFraming.dyn.
 
-\![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
+![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
 
 Diese Datei ist denkbar einfach. Sie umfasst zwei auf Ebene 1 und Ebene 2 gezeichnete Referenzkurven. Diese Kurven sollen in Dynamo übernommen werden, wobei eine Direktverknüpfung bestehen bleibt.
 
 Diese Datei enthält eine Gruppe von Blöcken, die mit den fünf Eingaben eines Python-Blocks verbunden sind.
 
-\![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Select Model Element**-Blöcke: Klicken Sie jeweils auf die Schaltfläche Auswählen und wählen Sie die zugehörige Kurv in Revit aus.
 > 2. **Code Block:** Geben Sie die Syntax `0..1..#x;`_,_ ein und verbinden Sie einen Integer Slider mit Werten zwischen 0 und 20 mit der _x_-Eingabe. Dadurch wird die Anzahl der Träger gesteuert, die zwischen den beiden Kurven gezeichnet werden sollen.
@@ -163,7 +163,7 @@ Diese Datei enthält eine Gruppe von Blöcken, die mit den fünf Eingaben eines 
 
 Dieser Code in Python ist etwas komplexer, aus den darin enthaltenen Kommentaren geht jedoch hervor, wie der Prozess abläuft.
 
-\![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
 
 ```
 import clr
@@ -204,7 +204,7 @@ In Revit wird eine Reihe von Trägern zwischen den beiden Kurven als Tragwerksel
 
 In Dynamo werden die Ergebnisse ebenfalls angezeigt. Die Träger im **Watch3D**-Block verweisen auf die aus den Revit-Elementen abgefragte Geometrie.
 
-\![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
 
 Dabei werden Daten aus der Revit-Umgebung für die Dynamo-Umgebung konvertiert. Zusammenfassung: Der Prozess läuft wie folgt ab:
 
@@ -219,4 +219,4 @@ Dies mag etwas umständlich erscheinen. Das Skript erleichtert den Vorgang jedoc
 
 Werden die Referenzkurven in Revit aktualisiert, erhalten Sie eine neue Reihe von Trägern.
 
-\![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
+![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
