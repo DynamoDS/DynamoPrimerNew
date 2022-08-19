@@ -16,7 +16,9 @@ Zaawansowaną funkcją dodatku Dynamo jest możliwość edycji parametrów na po
 
 Jeśli chodzi o parametry w programie Revit, występują w nim parametry typu i parametry wystąpienia. Oba typy można edytować z poziomu dodatku Dynamo, ale w ćwiczeniu poniżej będziemy pracować z parametrami wystąpienia.
 
-{% hint style="info" %} Po zapoznaniu się z szeroką gamą zastosowań edycji parametrów można edytować dużą liczbę elementów w programie Revit za pomocą dodatku Dynamo. Może to być _kosztowna pod względem obliczeń_ operacja, co oznacza, że może być powolna. W przypadku edytowania dużej liczby elementów można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu. Aby uzyskać więcej informacji na temat blokowania węzłów, zobacz sekcję „[Blokowanie](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)” w rozdziale poświęconym bryłom. {% endhint %}
+{% hint style="info" %}
+Po zapoznaniu się z szeroką gamą zastosowań edycji parametrów można edytować dużą liczbę elementów w programie Revit za pomocą dodatku Dynamo. Może to być _kosztowna pod względem obliczeń_ operacja, co oznacza, że może być powolna. W przypadku edytowania dużej liczby elementów można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu. Aby uzyskać więcej informacji na temat blokowania węzłów, zobacz sekcję „[Blokowanie](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)” w rozdziale poświęconym bryłom. 
+{% endhint %}
 
 ### Jednostki
 
