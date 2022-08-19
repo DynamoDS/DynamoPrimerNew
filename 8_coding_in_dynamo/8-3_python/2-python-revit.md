@@ -110,7 +110,7 @@ OUT = [doc,uiapp,app]
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
 
-> 1. **System.Array：**Revit 需要一個**系統陣列**做為輸入 (而非 Python 清單)。這只是又一行程式碼，但注意引數類型將有助於在 Revit 中進行 Python 程式設計。
+> 1. **System.Array：** Revit 需要一個 **系統陣列** 做為輸入 (而非 Python 清單)。這只是又一行程式碼，但注意引數類型將有助於在 Revit 中進行 Python 程式設計。
 
 ```
 import sys
