@@ -17,7 +17,7 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 在 Revit 中快速查看参数时，我们要记得有类型参数和实例参数。这两个参数在 Dynamo 中都可以进行编辑，但我们在下面的练习中使用的是实例参数。
 
 {% hint style="info" %}
-在发现了编辑参数的广泛应用后，您可能想要在 Revit 中使用 Dynamo 编辑大量图元。这可能是_计算成本高昂_的操作，这意味着它的速度可能会很慢。如果要编辑大量图元，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看“实体”章节中的“[冻结](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)”部分。
+在发现了编辑参数的广泛应用后，您可能想要在 Revit 中使用 Dynamo 编辑大量图元。这可能是 _计算成本高昂_ 的操作，这意味着它的速度可能会很慢。如果要编辑大量图元，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看“实体”章节中的“[冻结](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)”部分。
 {% endhint %}
 
 ### 单位
