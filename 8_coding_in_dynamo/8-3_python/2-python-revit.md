@@ -27,7 +27,7 @@ import System
 
 这样，我们便可以访问 Revit API，并为任何 Revit 任务提供自定义脚本编写。通过将可视化编程流程与 Revit API 脚本编写相结合，协作和工具开发得到显着改进。例如，BIM 经理和方案设计人员可以协同处理同一图形。在此协作中，他们可以改进模型的设计和执行。
 
-\![](<../../.gitbook/assets/python & revit - 01.jpg>)
+![](<../../.gitbook/assets/python & revit - 01.jpg>)
 
 ### 平台特定的 API
 
@@ -51,7 +51,7 @@ Dynamo 项目背后的计划是拓宽平台实施范围。随着 Dynamo 向 Dock
 
 下面介绍如何在 Dynamo 中输入 Revit 服务和检索文档数据。
 
-\![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
+![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
 
 在 Dynamo 中查看 Python 节点。还可以在下面找到代码：
 
@@ -86,11 +86,11 @@ OUT = [doc,uiapp,app]
 
 先在 Revit 中创建新的概念体量族。
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
 
 打开 _“概念体量文件夹”_ ，然后使用 _“Metric Mass.rft”_ 模板文件。
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
 
 在 Revit 中，使用键盘快捷键 **`un`** 显示“项目单位”设置，将长度单位更改为“米”。
 
@@ -98,7 +98,7 @@ OUT = [doc,uiapp,app]
 
 启动 Dynamo，然后创建下图中的节点集。首先，我们将在 Revit 中基于 Dynamo 节点创建两个参照点。
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
 
 > 1. 创建 **“代码块”** ，并为其赋予值 `"0;"`
 > 2. 将该值插入 X、Y 和 Z 输入的 **“ReferencePoint.ByCoordinates”** 节点。
@@ -108,7 +108,7 @@ OUT = [doc,uiapp,app]
 
 在 Dynamo 中查看 Python 节点。在下面查找完整代码。
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
 
 > 1. **System.Array**：Revit 需要 **“系统数组”** 作为输入（而不是 Python 列表）。这只是多一行代码，但注意参数类型将有助于在 Revit 中进行 Python 编程。
 
@@ -136,7 +136,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 在 Dynamo 中，我们使用 Python 创建了两个参照点以及一条连接它们的线。在下一练习中，我们将进一步介绍。
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
 
 ## 练习 3
 
@@ -148,13 +148,13 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 本练习尽可能简单，但主要介绍将数据和几何图形从 Revit 连接到 Dynamo 和反向操作的主题。首先，打开 Revit-StructuralFraming.rvt。打开后，启动 Dynamo 并打开文件“Revit-StructuralFraming.dyn”。
 
-\![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
+![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
 
 此 Revit 文件实现的是基本功能。两条参照曲线：一条在标高 1 上绘制，另一条在标高 2 上绘制。我们希望将这些曲线输入 Dynamo，并保持实时链接。
 
 在此文件中，我们有一组节点，用于插入到 Python 节点的五个输入中。
 
-\![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **选择模型图元节点**：点击每个节点对应的选择按钮，然后在 Revit 中选择相应曲线。
 > 2. **代码块：** 使用语法 `0..1..#x;`_，_ 将介于 0 到 20 之间的整数滑块连接到 _“x”_ 输入。这会指定要在两条曲线之间绘制的梁数。
@@ -163,7 +163,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 Python 中的这段代码更加密集，但代码中的注释描述了该过程中出现的情况
 
-\![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
 
 ```
 import clr
@@ -204,7 +204,7 @@ for val in IN[2]:
 
 在 Dynamo 中，我们也可以看到结果。**“Watch3D”** 节点中的梁引用从 Revit 图元查询所得的几何图形。
 
-\![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
+![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
 
 请注意，我们有一个连续过程将数据从 Revit 环境转换到 Dynamo 环境。总之，下面介绍了该过程的具体流程：
 
@@ -219,4 +219,4 @@ for val in IN[2]:
 
 在 Revit 中更新参照曲线后，我们会得到新的梁阵列。
 
-\![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
+![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
