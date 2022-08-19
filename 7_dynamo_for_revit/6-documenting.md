@@ -37,7 +37,7 @@
 
 ![](<images/6/documenting - exercise I - 03.jpg>)
 
-> 1. 캔버스에 _Element.SetParameterByName_ 노드를 추가하고 가변 구성요소를 _element_ 입력에 연결합니다. _"Aperture Ratio"_ 를 읽는 _Code Block_을 _parameterName_ 입력에 연결합니다.
+> 1. 캔버스에 _Element.SetParameterByName_ 노드를 추가하고 가변 구성요소를 _element_ 입력에 연결합니다. _"Aperture Ratio"_ 를 읽는 _Code Block_ 을 _parameterName_ 입력에 연결합니다.
 > 2. 값을 매개변수 범위에 다시 매핑해야 하기 때문에 편차 결과를 값 입력에 직접 연결할 수 없습니다.
 
 ![](<images/6/documenting - exercise I - 04.jpg>)
