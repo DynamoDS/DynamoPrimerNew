@@ -94,7 +94,7 @@ OUT = [doc,uiapp,app]
 
 在 Revit 中，使用键盘快捷键 **`un`** 显示“项目单位”设置，将长度单位更改为“米”。
 
-\![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
+![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
 
 启动 Dynamo，然后创建下图中的节点集。首先，我们将在 Revit 中基于 Dynamo 节点创建两个参照点。
 
