@@ -59,7 +59,7 @@ Dynamo 프로젝트를 시작하도록 도와주시고 지침을 주신 Ian Keou
 
 ### 소프트웨어 및 리소스
 
-**Dynamo** 현재 안정적인\\* Dynamo 릴리즈 버전은 2.1.0입니다.
+**Dynamo** 현재 안정적인* Dynamo 릴리즈 버전은 2.1.0입니다.
 
 http://dynamobim.com/download/ 또는 http://dynamobuilds.com
 
