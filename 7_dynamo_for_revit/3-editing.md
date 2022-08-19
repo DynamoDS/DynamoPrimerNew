@@ -16,7 +16,9 @@ Zu den leistungsstarken Funktionen von Dynamo gehört die Möglichkeit zum Bearb
 
 Rufen Sie sich zunächst ins Gedächtnis zurück, dass in Revit Typen- und Exemplarparameter verwendet werden. Beide können in Dynamo bearbeitet werden. In der folgenden Übung verwenden Sie jedoch Exemplarparameter.
 
-{% hint style="info" %} Während Sie das breite Spektrum der Verwendungsmöglichkeiten für die Parameterbearbeitung kennenlernen, müssen Sie in manchen Fällen eventuell sehr zahlreiche Revit-Elemente mit Dynamo bearbeiten. Solche Vorgänge können sehr _rechenintensiv_ sein und laufen deshalb eventuell nur langsam ab. Bei der Bearbeitung zahlreicher Elemente kann es daher sinnvoll sein, die Ausführung von Revit-Vorgängen mithilfe der Funktion Anhalten vorübergehend zu unterbrechen, während Sie das Diagramm entwickeln. Weitere Informationen zum Anhalten von Blöcken finden Sie im [entsprechenden Abschnitt](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) im Kapitel Körper. {% endhint %}
+{% hint style="info" %}
+Während Sie das breite Spektrum der Verwendungsmöglichkeiten für die Parameterbearbeitung kennenlernen, müssen Sie in manchen Fällen eventuell sehr zahlreiche Revit-Elemente mit Dynamo bearbeiten. Solche Vorgänge können sehr _rechenintensiv_ sein und laufen deshalb eventuell nur langsam ab. Bei der Bearbeitung zahlreicher Elemente kann es daher sinnvoll sein, die Ausführung von Revit-Vorgängen mithilfe der Funktion Anhalten vorübergehend zu unterbrechen, während Sie das Diagramm entwickeln. Weitere Informationen zum Anhalten von Blöcken finden Sie im [entsprechenden Abschnitt](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) im Kapitel Körper. 
+{% endhint %}
 
 ### Einheiten
 
