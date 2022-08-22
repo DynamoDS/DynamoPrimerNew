@@ -6,7 +6,7 @@ Revit is a data-rich environment. This gives us a range of selection abilities w
 
 The Revit library in the UI offers a "Selection" category which enables multiple ways to select geometry.
 
-![](<images/2/select revit elements 01.jpg>)
+![](../.gitbook/assets/select\_revit\_elements\_01.jpg)
 
 ### Revit Hierarchy
 
@@ -28,11 +28,11 @@ The three images below breakdown the main categories for Revit element selection
 
 _Point-and-click_ is the easiest way to directly select a Revit element. You can select a full model element, or parts of its topology (like a face or an edge). This remains dynamically linked to that Revit object, so when the Revit file updates its location or parameters, the referenced Dynamo element will update in the graph.
 
-![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
+![](../.gitbook/assets/selecting\_database\_navigation\_with\_dynamo\_nodes\_01.jpg)
 
 _Dropdown menus_ create a list of all accessible elements in a Revit project. You can use this to reference Revit elements which are not necessarily visible in a view. This is a great tool for querying existing elements or creating new ones in a Revit project or family editor.
 
-![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
+![](<../.gitbook/assets/selecting \_database\_navigation\_with\_dynamo\_nodes\_02.png>)
 
 You can also select Revit element by specific tiers in the _Revit hierarchy_. This is a powerful option for customizing large arrays of data in preparation for documentation or generative instantiation and customization.
 
@@ -50,7 +50,7 @@ With the three images above in mind, let's dive into an exercise which selects e
 
 In this example Revit file, we have three element types of a simple building. We're going to use this as an example for selecting Revit elements within the context of the Revit hierarchy.
 
-![](<images/2/selecting - exercise 01.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_01.jpg)
 
 > 1. Building Mass
 > 2. Beams (Structural Framing)
@@ -60,7 +60,7 @@ What conclusions can we draw from the elements currently in the Revit project vi
 
 ### Selecting Mass and Surfaces
 
-![](<images/2/selecting - exercise 02.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_02.jpg)
 
 > 1. Since we're working with a basic setup, let's select the building mass by choosing _"Mass"_ in the Categories dropdown node. This can be found in the Revit>Selection tab.
 > 2. The output of the Mass category is just the category itself. We need to select the elements. To do this, we use the _"All Elements of Category"_ node.
@@ -69,13 +69,13 @@ At this point, notice that we don't see any geometry in Dynamo. We've selected a
 
 In this case, we're working with simple geometry, so we want to bring the geometry into the Dynamo preview. The "BldgMass" in the watch node above has a green number next to it. This represents the element's ID and tells us that we are dealing with a Revit element, not Dynamo geometry. The next step is to convert this Revit element into geometry in Dynamo.
 
-![](<images/2/selecting - exercise 03.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_03.jpg)
 
 > 1. Using the _Element.Faces_ node, we get a list of surfaces representing each face of the Revit Mass. We can now see the geometry in the Dynamo viewport and start to reference the face for parametric operations.
 
 Here's an alternative method. In this case, we're stepping away from selecting via the Revit Hierarchy _("All Elements of Category")_ and electing to explicitly select geometry in Revit.
 
-![](<images/2/selecting - exercise 04.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_04.jpg)
 
 > 1. Using the _"Select Model Element"_ node, click the \*"select" \*(or _"change"_) button. In the Revit viewport, select the desired element. In this case, we're selecting the building mass.
 > 2. Rather than _Element.Faces_, we can select the full mass as one solid geometry using _Element.Geometry_. This selects all of the geometry contained within that mass.
@@ -92,25 +92,25 @@ Using some basic list operations, we can query a face of interest.
 
 The previous step was a little cumbersome. We can do this much faster with the _"Select Face"_ node. This allows us to isolate a face that is not an element itself in the Revit project. The same interaction applies as _"Select Model Element"_, except we select the surface rather than the full element.
 
-![](<images/2/selecting - exercise 06.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_06.jpg)
 
 Suppose we want to isolate the main facade walls of the building. We can use the _"Select Faces"_ node to do this. Click the "Select" button and then select the four main facades in Revit.
 
-![](<images/2/selecting - exercise 07.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_07.jpg)
 
 After selecting the four walls, make sure you click the "Finish" button in Revit.
 
-![](<../.gitbook/assets/selecting - exercise 08.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_08.jpg)
 
 The faces are now imported into Dynamo as surfaces.
 
-![](<images/2/selecting - exercise 09.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_09.jpg)
 
 ### Selecting Beams
 
 Now, let's take a look at the beams over the atrium.
 
-![](<images/2/selecting - exercise 10.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_10.jpg)
 
 > 1. Use the _"Select Model Element"_ node, select one of the beams.
 > 2. Plug the beam element into the _Element.Geometry_ node and we now have the beam in the Dynamo viewport.
@@ -118,18 +118,18 @@ Now, let's take a look at the beams over the atrium.
 
 A question that may come up often in Revit/Dynamo workflows: how do I select one element and get all similar elements? Since the selected Revit element contains all of its hierarchical information, we can query its family type and select all elements of that type.
 
-![](<images/2/selecting - exercise 11.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_11.jpg)
 
 > 1. Plug the beam element into a _Element.ElementType_ node.
 > 2. The _Watch_ node reveals that the output is now a family symbol rather than a Revit element.
 > 3. _Element.ElementType_ is a simple query, so we can do this in the code block just as easily with `x.ElementType;` and get the same results.
 
-![](<images/2/selecting - exercise 12.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_12.jpg)
 
 > 1. To select the remaining beams, we use the _"All Elements of Family Type"_ node.
 > 2. The watch node shows that we've selected five Revit elements.
 
-![](<images/2/selecting - exercise 13.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_13.jpg)
 
 > 1. We can convert all of these five elements to Dynamo geometry too.
 
@@ -141,11 +141,11 @@ In any case, if we were to import 500 beams, do we need all of the surfaces to p
 
 Using the same graph of nodes, select the truss element rather than the beam element. Before doing this, delete the Element.Geometry from the previous step.
 
-![](<images/2/selecting - exercise 14.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_14.jpg)
 
 Next we are ready to extract some basic information from trusses family type.
 
-![](<images/2/selecting - exercise 15.jpg>)
+![](../.gitbook/assets/selecting\_exercise\_15.jpg)
 
 > 1. In the _Watch_ node, we can see that we have a list of adaptive components selected from Revit. We want to extract the basic information, so we're start with the adaptive points.
 > 2. Plug the _"All Elements of Family Type"_ node into the _"AdaptiveComponent.Location"_ node. This gives us a list of lists, each with three points which represent the adaptive point locations.
