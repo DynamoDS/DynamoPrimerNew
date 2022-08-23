@@ -1,6 +1,8 @@
 # Informazioni su
 
-![Video di Dynamo Hype](https://res.cloudinary.com/marcomontalbano/image/upload/v1658769459/video\_to\_markdown/images/youtube--9vafneOBgYs-c05b58ac6eb4c4700831b2b3070cd403.jpg)
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
+Video di Dynamo Hype
+{% endembed %}
 
 ## Per Dynamo v2.13
 
