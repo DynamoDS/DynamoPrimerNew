@@ -32,7 +32,7 @@ _Point-and-click_ is the easiest way to directly select a Revit element. You can
 
 _Dropdown menus_ create a list of all accessible elements in a Revit project. You can use this to reference Revit elements which are not necessarily visible in a view. This is a great tool for querying existing elements or creating new ones in a Revit project or family editor.
 
-![](<../.gitbook/assets/selecting \_database\_navigation\_with\_dynamo\_nodes\_02.png>)
+![](../.gitbook/assets/selecting \_database\_navigation\_with\_dynamo\_nodes\_02.png)
 
 You can also select Revit element by specific tiers in the _Revit hierarchy_. This is a powerful option for customizing large arrays of data in preparation for documentation or generative instantiation and customization.
 
@@ -83,7 +83,7 @@ Here's an alternative method. In this case, we're stepping away from selecting v
 
 Using some basic list operations, we can query a face of interest.
 
-![](<images/2/selecting - exercise 05.jpg>)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. First, output the selected elements from earlier to Element.Faces node.
 > 2. Next, use the _List.Count_ node reveals that we're working with 23 surfaces in the mass.
