@@ -10,7 +10,7 @@ We use [Surface](5-surfaces.md#surface) in model to represent objects we see in 
 
 Import and evaluate a Surface at a Parameter in Dynamo to see what kind of information we can extract.
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![](../images/5-2/5/surfaces - surface in dynamo.jpg)
 
 > 1. _Surface.PointAtParameter_ returns the Point at a given UV Coordinate
 > 2. _Surface.NormalAtParameter_ returns the Normal Vector at a given UV Coordinate

@@ -6,13 +6,13 @@ The location for this template is in the `APPDATA` location for your Dynamo inst
 
 This is typically as follows `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-![](<../images/8-3/3/python templates - appdata folder location.jpg>)
+![](../images/8-3/3/python templates - appdata folder location.jpg)
 
 ### Setting Up The Template
 
 In order to utilize this functionality we need to add the following line in our `DynamoSettings.xml` file. _(Edit in notepad)_
 
-![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
+![](../images/8-3/3/python templates -dynamo settings xml file.png)
 
 Where we see `<PythonTemplateFilePath />`, we can simply replace this with the following:
 
@@ -73,10 +73,10 @@ Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` locati
 
 A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
 
-![](<../images/8-3/3/python templates - before setup template.jpg>)
+![](../images/8-3/3/python templates - before setup template.jpg)
 
 If the Python template is found (like our Revit one for example) you will see all of the default items you built in.
 
-![](<../images/8-3/3/python templates - after setup template.jpg>)
+![](../images/8-3/3/python templates - after setup template.jpg)
 
 Additional information regarding this great addition (by Radu Gidei) can be found here. https://github.com/DynamoDS/Dynamo/pull/8122

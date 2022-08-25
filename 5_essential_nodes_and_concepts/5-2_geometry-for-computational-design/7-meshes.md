@@ -12,7 +12,7 @@ Dynamo defines Meshes using a Face-Vertex data structure. At its most basic leve
 
 To create a Mesh we need a list of vertices and a system of grouping those vertices into faces called an index group.
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes - mesh elements.jpg)
 
 > 1. List of vertices
 > 2. List of index groups to define faces
@@ -25,7 +25,7 @@ The library also provides tools to modify Meshes, repair Meshes, or extract hori
 
 Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Mesh Toolkit](../images/5-2/7/meshes - mesh toolkit standford bunny.jpg)
 
 ## Deep Dive into...
 
