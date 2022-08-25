@@ -6,7 +6,7 @@
 
 [Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
 
-![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
+![Vectors in Dynamo](../images/5-2/2/Geometry for Computational Design  - vectors.jpg)
 
 > 1. We can use a line as a stand in for a Vector preview.
 
@@ -20,7 +20,7 @@
 
 [Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
 
-![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
+![Planes in Dynamo](../images/5-2/2/Geometry for Computational Design  - plane.jpg)
 
 > 1. Although they are abstract, Planes do have an origin position so we can locate them in space.
 > 2. In Dynamo, Planes are rendered in the Background Preview.
@@ -35,7 +35,7 @@
 
 [Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
 
-![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
+![Coordinate System in Dynamo](../images/5-2/2/Geometry for Computational Design - Coordinate.jpg)
 
 > 1. Although they are abstract, Coordinate Systems also have an origin position so we can locate them in space.
 > 2. In Dynamo, Coordinate Systems are rendered in the Background Preview as a point (origin) and lines defining the axes (X is red, Y is green, and Z is blue following convention).
