@@ -8,7 +8,7 @@ In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each 
 
 Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
 
-![](images/nodes and wires - nodes anatomy.jpg)
+![](<images/nodes and wires - nodes anatomy.jpg>)
 
 > 1. Name - The Name of the Node with a `Category.Name` naming convention
 > 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
@@ -26,7 +26,7 @@ Ports expect to receive data of a certain type. For instance, connecting a numbe
 Tip: Hover over a Port to see a tooltip containing the data type expected.
 {% endhint %}
 
-![](images/nodes and wires - nodes input and tooltip.jpg)
+![](<images/nodes and wires - nodes input and tooltip.jpg>)
 
 > 1. Port Label
 > 2. Tool Tip
@@ -39,7 +39,7 @@ Dynamo gives an indication of the state of the execution of your Visual Program 
 
 Hovering or right-clicking over the Name or Ports presents additional information and options.
 
-![](../.gitbook/assets/nodes and wires - node states.png)
+![](<../.gitbook/assets/nodes and wires - node states.png>)
 
 > 1. Satisfied inputs - A node with blue vertical bars over its input ports is well-connected and has all of its inputs successfully connected.
 > 2. Unsatisfied inputs – A node with a red vertical bar over one or more input ports needs to have those inputs connected.
@@ -53,13 +53,13 @@ Hovering or right-clicking over the Name or Ports presents additional informatio
 
 #### Handling Error or Warning Nodes
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](images/nodes and wires - node warning icon.png) or error ![](images/nodes and wires - node error icon.png) tooltip icon to expand it.
+If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
 
 {% hint style="info" %}
 Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
 {% endhint %}
 
-![](images/nodes and wires - nodes with warning tooltip.jpg)
+![](<images/nodes and wires - nodes with warning tooltip.jpg>)
 
 > 1. Warning Tooltip - "Null" or no data cannot be understood as a Double, i.e., a number
 > 2. Use the Watch Node to examine the input data
@@ -75,7 +75,7 @@ Wires connect the output Port from one Node to the input Port of another Node. T
 
 Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
 
-![](images/nodes and wires - flow of data.jpg)
+![](<images/nodes and wires - flow of data.jpg>)
 
 ### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
 
@@ -91,25 +91,25 @@ Frequently we will want to adjust the Program Flow in our Visual Program by edit
 
 * Change connection to an input Port, left-click on another input Port
 
-![](images/nodes and wires - edit wire change port (2).gif)
+![](<images/nodes and wires - edit wire change port (2).gif>)
 
 * To remove the Wire, pull the Wire away and left-click on Workspace
 
-![](images/nodes and wires - edit wires remove.gif)
+![](<images/nodes and wires - edit wires remove.gif>)
 
 * Reconnect multiple wires using Shift+left-click
 
-![](images/nodes and wires - edit multi ports.gif)
+![](<images/nodes and wires - edit multi ports.gif>)
 
 * Duplicate a wire using Ctrl+left-click
 
-![](images/nodes and wires - duplicate wire.gif)
+![](<images/nodes and wires - duplicate wire.gif>)
 
 #### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
 
 By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
 
-![](images/nodes and wires - default vs highlighted wires.jpg)
+![](<images/nodes and wires - default vs highlighted wires.jpg>)
 
 > 1. Highlighted Wire
 > 2. Default Wire
@@ -120,10 +120,10 @@ In case you prefer to hide the Wires in your graph, you can find this option fro
 
 With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
 
-![](images/nodes and wires - hide wires setting (1).gif)
+![](<images/nodes and wires - hide wires setting (1).gif>)
 
 #### Hide Individual Wire Only
 
 You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
 
-![](images/nodes and wires - hide selected wire.gif)
+![](<images/nodes and wires - hide selected wire.gif>)

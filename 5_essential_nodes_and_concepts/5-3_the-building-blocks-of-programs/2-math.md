@@ -8,10 +8,10 @@ Operators are a set of components that use algebraic functions with two numeric 
 
 | Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](../images/5-3/2/Division.jpg)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/addition.jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Subtraction.jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Multiplication.jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-3/2/Division.jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
 ## Exercise: The Golden Spiral Formula
 
@@ -29,7 +29,7 @@ Combine operators and variables to form a more complex relationship through **Fo
 
 **Number Sequence:** define a number sequence based on three inputs: _start, amount_ and _step_.
 
-![](../images/5-3/2/math - part I-01.jpg)
+![](<../images/5-3/2/math - part I-01.jpg>)
 
 2\. The step above has created a list of numbers to define the parametric domain. Next, create group of Nodes represent the golden spiral equation.
 
@@ -45,7 +45,7 @@ $$
 
 The image below represents the golden spiral in in visual programming form. When stepping through the group of Nodes, try to pay attention to the parallel between the visual program and written equation.
 
-![](../images/5-3/2/math - part I-02.jpg)
+![](<../images/5-3/2/math - part I-02.jpg>)
 
 > a. **Number Slider**: Add two number sliders to the canvas. These sliders will represent the _a_ and the _b_ variables of the parametric equation. These represent a constant which is flexible, or parameters which we can adjust towards a desired outcome.
 >
@@ -65,11 +65,11 @@ Now, the bulk of Nodes from the previous step will work fine, but it is a lot of
 
 **Point.ByCoordinates:** Connect the upper multiplication node into the '_x_' input and the lower into the '_y_' input. We now see a parametric spiral of points on the screen.
 
-![](../images/5-3/2/math - part II-01.gif)
+![](<../images/5-3/2/math - part II-01.gif>)
 
 **Polycurve.ByPoints:** Connect **Point.ByCoordinates** from the previous step into _points_. We can leave _connectLastToFirst_ without an input because we aren't making a closed curve. This creates a spiral which passes through each point defined in the previous step.
 
-![](../images/5-3/2/math - part II-02.jpg)
+![](<../images/5-3/2/math - part II-02.jpg>)
 
 We've now completed the Fibonacci Spiral! Let's take this further into two separate exercises from here, which we'll call the Nautilus and the Sunflower. These are abstractions of natural systems, but the two different applications of the Fibonacci spiral will be well represented.
 
@@ -77,13 +77,13 @@ We've now completed the Fibonacci Spiral! Let's take this further into two separ
 
 **Circle.ByCenterPointRadius:** We'll use a circle Node here with the same inputs as the previous step. The radius value defaults to _1.0_, so we see an immediate output of circles. It becomes immediately legible how the points diverge further from the origin.
 
-![](../images/5-3/2/math - part III-01.jpg)
+![](<../images/5-3/2/math - part III-01.jpg>)
 
 **Number Sequence:** This is the original array of '_t_'. By plugging this into the radius value of **Circle.ByCenterPointRadius**, the circle centers are still diverging further from the origin, but the radius of the circles is increasing, creating a funky Fibonacci circle graph.
 
 Bonus points if you make it 3D!
 
-![](../images/5-3/2/math - part III-02.gif)
+![](<../images/5-3/2/math - part III-02.gif>)
 
 ### Part IV: From Nautilus to Phyllotaxis
 
@@ -91,15 +91,15 @@ Pattern Now that we've made a circular Nautilus shell, let's jump into parametri
 
 As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
 
-![](../images/5-3/2/math - part IV-01.jpg)
+![](<../images/5-3/2/math - part IV-01.jpg>)
 
 Next, follow these mini steps to generate a series of spiral at various rotation.
 
-![](../images/5-3/2/math - part IV-02.jpg)
+![](<../images/5-3/2/math - part IV-02.jpg>)
 
 > a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
 >
-> ![](../images/5-3/2/math - part IV-03 cross product.jpg)
+> ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
 >
 > b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
 >
@@ -111,8 +111,8 @@ Our output is beginning to resemble a whirlpool. Let's adjust some of the **Numb
 
 Change the step size of the **Number Range** node from _120.0_ to _36.0_. Notice that this is creating more rotations and is therefore giving us a denser grid.
 
-![](../images/5-3/2/math - part IV-04.jpg)
+![](<../images/5-3/2/math - part IV-04.jpg>)
 
 Change the step size of the **Number Range** node from _36.0_ to _3.6_. This now gives us a much denser grid, and the directionality of the spiral is unclear. Ladies and gentlemen, we've created a sunflower.
 
-![](../images/5-3/2/math - part IV-05.jpg)
+![](<../images/5-3/2/math - part IV-05.jpg>)

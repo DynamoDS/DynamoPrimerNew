@@ -18,15 +18,15 @@
 
 ### Line
 
-[Line ](5-4\_curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](./images/5-2/4/Line by start point end point.jpg) to create a Line in Dynamo.
+[Line ](5-4\_curves.md#lines)is made of a set of points, each line has at least 2 points. One of the most common way to create line in Dynamo is using `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>) to create a Line in Dynamo.
 
-![](./images/5-2/4/curves - line by start point end point.jpg)
+![](<./images/5-2/4/curves - line by start point end point.jpg>)
 
 ### NURBS Curve
 
 [NURBS](5-4\_curves.md#nurbs-+-polycurves) is a model used for representing curves and surfaces accurately. A sine curve in Dynamo using two different methods to create NURBS Curves to compare the results.
 
-![](../images/5-2/4/curves - Nurbs Curves.jpg)
+![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
 
 > 1. _NurbsCurve.ByControlPoints_ uses the List of Points as Control Points
 > 2. _NurbsCurve.ByPoints_ draws a Curve through the List of Points

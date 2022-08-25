@@ -12,19 +12,19 @@ The "If" statement is a key concept in programming: "If _this_ is true, then _th
 
 | Icon                                            | Name (Syntax)             | Inputs            | Outputs |
 | ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../images/5-3/3/If.jpg)         | If (**If**)               | test, true, false | result  |
+| ![](<../images/5-3/3/If.jpg>)         | If (**If**)               | test, true, false | result  |
 | ![](../images/5-3/3/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | result  |
-| ![](../images/5-3/3/Code Block.jpg) | Code Block (**(x?y:z);**) | x? y, z           | result  |
+| ![](<../images/5-3/3/Code Block.jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
 
 Let's go over a brief example on each of these three nodes in action using the conditional "If" statement.
 
 In this image, the _boolean_ is set to _true_, which means that the result is a string reading: _"this is the result if true"._ The three Nodes creating the _If_ statement are working identically here.
 
-![](../images/5-3/3/logic - conditional statements 01 false.jpg)
+![](<../images/5-3/3/logic - conditional statements 01 false.jpg>)
 
 Again, the Nodes are working identically. If the _boolean_ is changed to _false_, our result is the number _Pi_, as defined in the original _If_ statement.
 
-![x](../images/5-3/3/logic - conditional statements 02 true.jpg)
+![x](<../images/5-3/3/logic - conditional statements 02 true.jpg>)
 
 ## Exercise: Logic and Geometry
 
@@ -38,7 +38,7 @@ Again, the Nodes are working identically. If the _boolean_ is changed to _false_
 
 1. Let's use logic to separate a list of numbers into a list of even numbers and a list of odd numbers.
 
-![](../images/5-3/3/logic - exercise part I-01.jpg)
+![](<../images/5-3/3/logic - exercise part I-01.jpg>)
 
 > a. **Number Range -** add a number range to the canvas.
 >
@@ -62,7 +62,7 @@ Building off of the logic established in the first exercise, let's apply this se
 
 2\. We'll jump off from the previous exercise with the same Nodes. The only exceptions (in addition to changing the format are):
 
-![](../images/5-3/3/logic - exercise part II-01.jpg)
+![](<../images/5-3/3/logic - exercise part II-01.jpg>)
 
 > a. Use a **Sequence** Node with these input values.
 >
@@ -70,7 +70,7 @@ Building off of the logic established in the first exercise, let's apply this se
 
 3\. Let's begin by creating a separate group of Graph as shown in the image above. This group of Nodes represents a parametric equation to define a line curve. A few notes:
 
-![](../images/5-3/3/logic - exercise part II-02.jpg)
+![](<../images/5-3/3/logic - exercise part II-02.jpg>)
 
 > a. The first **Number Slider** represents the frequency of the wave, it should have a min of 1, a max of 4, and a step of 0.01.
 >
@@ -80,23 +80,23 @@ Building off of the logic established in the first exercise, let's apply this se
 
 The method here for the inputs: use number nodes for more static properties and number sliders on the more flexible ones. We want to keep the original number range that we're defining in the beginning of this step. However, the sine curve that we create here should have some flexibility. We can move these sliders to watch the curve update its frequency and amplitude.
 
-![](../images/5-3/3/logic - exercise part II-03.gif)
+![](<../images/5-3/3/logic - exercise part II-03.gif>)
 
 4\. We're going to jump around a bit in the definition, so let's look at the end result so that we can reference what we're getting at. The first two steps are made separately, we now want to connect the two. We'll use the base sine curve to drive the location of the zipper components, and we'll use the true/false logic to alternate between little boxes and larger boxes.
 
-![](../images/5-3/3/logic - exercise part II-04.jpg)
+![](<../images/5-3/3/logic - exercise part II-04.jpg>)
 
 > a. **Math.RemapRange** - Using the number sequence created in step 02, let's create a new series of numbers by remapping the range. The original numbers from step 01 range from 0-100. These numbers range from 0 to 1 by the _newMin_ and _newMax_ inputs respectively.
 
 5\. Create a **Curve.PointAtParameter** Node, then connect the **Math.RemapRange** output from step 04 as its _param_ input.
 
-![](../images/5-3/3/logic - exercise part II-05.jpg)
+![](<../images/5-3/3/logic - exercise part II-05.jpg>)
 
 This step creates points along the curve. We remapped the numbers to 0 to 1 because the input of _param_ is looking for values in this range. A value of _0_ represents the start point, a value of _1_ represents the end points. All numbers in between evaluate within the _\[0,1]_ range.
 
 6\. Connect the output from **Curve.PointAtParameter** to the **List.FilterByBoolMask** to separate the list of odd and even indices.
 
-![](../images/5-3/3/logic - exercise part II-06.jpg)
+![](<../images/5-3/3/logic - exercise part II-06.jpg>)
 
 > a. **List.FilterByBoolMask** - Plug **Curve.PointAtParameter** from the previous step into the _list_ input.
 >
@@ -106,7 +106,7 @@ This step creates points along the curve. We remapped the numbers to 0 to 1 beca
 
 **Cuboid.ByLengths -** recreate the connections seen in the image above to get a zipper along the sine curve. A cuboid is just a box here, and we're defining its size based on the curve point in the center of the box. The logic of the even/odd divide should now be clear in the model.
 
-![](../images/5-3/3/logic - exercise part II-07.jpg)
+![](<../images/5-3/3/logic - exercise part II-07.jpg>)
 
 > a. List of cuboids at even indices.
 >
