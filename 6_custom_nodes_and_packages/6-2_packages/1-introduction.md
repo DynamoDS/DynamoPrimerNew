@@ -12,21 +12,21 @@ The easiest way to install a package is by using the Packages toolbar in your Dy
 
 In Dynamo, go to _Packages>Search For a Package..._
 
-![](../images/6-2/1/package introduction - installing a package 01.jpg)
+![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
 
 In the search bar, let's search for "quads from rectangular grid". After a few moments, you should see all of the packages which match this search query. We want to select the first package with the matching name.
 
 Click on Ínstall to add this package to your library. Done!
 
-![](../images/6-2/1/package introduction - installing a package 02.jpg)
+![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
 
 Notice that we now have another group in our Dynamo library called "buildz". This name refers to the developer of the package, and the custom node is placed in this group. We can begin to use this right away.
 
-![](../images/6-2/1/package introduction - installing a package 03.jpg)
+![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
 
 Use **Code Block** to quickly define a rectangular grid, output the result to a **Polygon.ByPoints** Node, subsequently a **Surface.ByPatch** Node to view the list of rectangular panels you have just created.
 
-![](../images/6-2/1/package introduction - installing a package 04.jpg)
+![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
 
 ### Installing Package Folder - DynamoUnfold
 
@@ -36,23 +36,23 @@ As in the example above, begin by selecting _Packages>Search for a Package..._.
 
 This time, we'll search for _"DynamoUnfold"_, one word, minding the caps. When we see the packages, download by clicking on Install to add Dynamo Unfold to your Dynamo Library.
 
-![](../images/6-2/1/package introduction - installing package folder 01.jpg)
+![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
 
 In the Dynamo Library, we have a _DynamoUnfold_ Group with multiple categories and custom nodes.
 
-![](../images/6-2/1/package introduction - installing package folder 02.jpg)
+![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
 
 Now, let's take a look at the package's file structure. First, select Dynamo > Preferences
 
-![](../images/6-2/1/package introduction - installing package folder 03.jpg)
+![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
 
-From the Preferences pop-up, open Package Manager > next to DynamoUnfold, select the vertical dots menu ![](../images/6-2/1/package introduction - vertical dots menu.jpg) > Show Root Directory to open root folder for this package.
+From the Preferences pop-up, open Package Manager > next to DynamoUnfold, select the vertical dots menu ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) > Show Root Directory to open root folder for this package.
 
-![](../images/6-2/1/package introduction - installing package folder 04.jpg)
+![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
 
 This will take us to the package's root directory. Notice that we have 3 folders and a file.
 
-![](../images/6-2/1/package introduction - installing package folder 05.jpg)
+![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
 
 > 1. The _bin_ folder houses .dll files. This Dynamo package was developed using Zero-Touch, so the custom nodes are held in this folder.
 > 2. The _dyf_ folder houses the custom nodes. This package was not developed using Dynamo custom nodes, so this folder is empty for this package.
@@ -67,7 +67,7 @@ Let's open up "SphereUnfold".
 
 After opening the file and hitting "Run" on the solver, we have an unfolded sphere! Example files like these are helpful for learning how to work with a new Dynamo package.
 
-![](../images/6-2/1/package introduction - installing package folder 07.jpg)
+![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
 
 ### Dynamo Package Manager
 
@@ -83,7 +83,7 @@ You can also download the package files from the Dynamo Package Manager, but doi
 
 If you do download files from the Dynamo package manager, or if you would like to see where all of your package files are kept, click on Dynamo > Package Manager > Node and Package Paths, you can find your current root folder directory from here.
 
-![](../images/6-2/1/package introduction - installing package folder 08.jpg)
+![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
 
 By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
 

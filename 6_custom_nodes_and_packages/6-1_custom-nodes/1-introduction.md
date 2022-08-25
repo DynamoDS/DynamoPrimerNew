@@ -10,7 +10,7 @@ When you have multiple copies of a custom node in your graph, you can update all
 
 Arguably the best feature of custom nodes is their work sharing capabilities. If a "power user" creates a complex Dynamo graph and hands it off to a designer who is new to Dynamo, he/she can condense the graph to the bare essentials for design interaction. The custom node can be opened to edit the internal graph, but the "container" can be kept simple. With this process, custom nodes allow Dynamo users to design a graph that is clean and intuitive.
 
-![](../images/6-1/1/custom node intro - work sharing 01.jpg)
+![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
 
 ### Many Ways to Build a Node
 
@@ -22,11 +22,11 @@ Let's jump into the custom node environment and make a simple node to calculate 
 
 To create a Custom Node from scratch, Launch Dynamo and select Custom Node, or type Ctrl + Shift + N from the canvas.
 
-![](../images/6-1/1/custom node intro - custom node environment 01.jpg)
+![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
 
 Assign a name, description, and category in the Custom Node Properties dialog.
 
-![](../images/6-1/1/custom node intro - custom node environment 02.jpg)
+![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
 
 > 1. **Name:** Percentage
 > 2. **Description**: Calculate the percentage of one value in relation to another.
@@ -34,16 +34,16 @@ Assign a name, description, and category in the Custom Node Properties dialog.
 
 This will open a canvas with a yellow background, indicating that you are working inside a custom node. In this canvas you have access to all of the core Dynamo nodes, as well as the Input and Output nodes, which label the data flowing into and out of the custom node. They can be found in Input>Basic.
 
-![](../images/6-1/1/custom node intro - custom node environment 03.jpg)
+![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
 
-![](../images/6-1/1/custom node intro - custom node environment 04.jpg)
+![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
 
 > 1. **Inputs:** Input nodes create input ports on the custom node. The syntax for an input node is _input\_name : datatype = default\_value(optional)._
 > 2. **Outputs:** Similar to inputs, these will create and name output ports on the custom node. Consider adding a **Custom Comment** to your Input and Output ports to hint at the Input and Output types. This is discussed in more detail in the [Creating Custom Nodes section](2-creating.md).
 
 You can save this custom node as a .dyf (as opposed to the standard .dyn) file and it will automatically be added to your session and future sessions. You will find the custom node in your library from the Add-ons section.
 
-![](../images/6-1/1/custom node intro - custom node environment 05.jpg)
+![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
 
 ### Moving Forward
 

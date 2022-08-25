@@ -30,7 +30,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 * At times, you can use a Code Block to **type a number or node method faster than searching** (Point.ByCoordinates, Number, String, Formula)
 * Code Blocks are useful **when you want to define custom functions in DesignScript to reduce the number of nodes in a graph**
 
-![](images/1/graphstrategy3 (1).png)
+![](<images/1/graphstrategy3 (1).png>)
 
 > Both 1 and 2 perform the same function. It was much faster to write a few lines of code than it was to search for and add each node individually. The code block is also far more concise.
 >
@@ -65,7 +65,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 * Using List@Level can help you **reduce the complexity of your graph by replacing List.Map and List.Combine nodes** which might occupy a considerable amount of canvas space
 * List@Level provides you with a\*\* quicker way than List.Map/List.Combine to construct node logic\*\* by allowing you to access data at any level in a list right from the input port of a node
 
-![](images/1/graphstrategy4 (1) (1).png)
+![](<images/1/graphstrategy4 (1) (1).png>)
 
 > We can verify how many True values BoundingBox.Contains is returning and in which lists by activating List@Level for CountTrue's "list" input. List@Level allows the user to determine at which level the input will take data from. Using List@Level is flexible, efficient, and highly encouraged over other methods involving List.Map and List.Combine.
 >
@@ -84,7 +84,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 * If others are going to be working with your graph, you should **ensure that your node-wire layout flows easily before shipping**
 * To help you with alignment, **use the "Cleanup Node Layout" feature to automatically align** your graph, though less precisely than doing it yourself
 
-![](images/1/graphstrategy5 (2) (1).png)
+![](<images/1/graphstrategy5 (2) (1).png>)
 
 > 1. Unorganized graph
 > 2. Aligned graph
@@ -170,7 +170,7 @@ It is highly likely that someone else will be opening your program at some point
 * When building a template, you can standardize **group colors and font sizes** to categorize types of workflows or data actions.
 * When building a template, you can even standardize how you want to **label, color, or style the difference between front-end and back-end workflows** in your graph.
 
-![](images/1/graphstrategy10 (2).png)
+![](<images/1/graphstrategy10 (2).png>)
 
 > 1. The UI, or front-end, of the program includes a project name, input sliders, and import geometry.
 > 2. The back-end of the program.
@@ -217,7 +217,7 @@ With Groups established, align the nodes to create visual continuity across the 
 
 Make the program more accessible by adding another layer of graphic improvements. Add notes to describe how a specific area of the program works, give inputs custom names, and assign colors to different types of groups.
 
-![](images/1/graphstrategy15 (1).png)
+![](<images/1/graphstrategy15 (1).png>)
 
 > These graphic improvements tell the user more about what the program is doing. The different group colors help to distinguish inputs from functions.
 >

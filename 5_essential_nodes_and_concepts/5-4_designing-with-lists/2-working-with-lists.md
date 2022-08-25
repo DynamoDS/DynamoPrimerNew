@@ -43,7 +43,7 @@ All of the operations listed above have analogous Dynamo nodes for working with 
 
 The image below is the base graph which we are drawing lines between two circles to represent basic list operations. We'll explore how to manage data within a list and demonstrate the visual results through the list actions below.
 
-![](../images/5-4/2/working with list - list operation.jpg)
+![](<../images/5-4/2/working with list - list operation.jpg>)
 
 > 1. Begin with a **Code Block** with a value of `500;`
 > 2. Plug into the x input of a **Point.ByCoordinates** node.
@@ -65,7 +65,7 @@ The image below is the base graph which we are drawing lines between two circles
 
 The _List.Count_ node is straightforward: it counts the number of values in a list and returns that number. This node gets more nuanced as we work with lists of lists, but we'll demonstrate that in the coming sections.
 
-![Count](../images/5-4/2/working with list - list operation - list count.jpg)
+![Count](<../images/5-4/2/working with list - list operation - list count.jpg>)
 
 > 1. The **List.Count **_****_ node returns the number of lines in the **Line.ByStartPointEndPoint** node. The value is 10 in this case, which agrees with the number of points created from the original **Code Block** node.
 
@@ -79,14 +79,14 @@ The _List.Count_ node is straightforward: it counts the number of values in a li
 
 **List.GetItemAtIndex** is a fundamental way to query an item in the list.
 
-![Exercise](../images/5-4/2/working with list - get item index 01.jpg)
+![Exercise](<../images/5-4/2/working with list - get item index 01.jpg>)
 
 > 1. First, Right click on **Line.ByStartPointEndPoint** node to switch off its preview.
 > 2. Using the **List.GetItemAtIndex** node, we are selecting index _"0"_, or the first item in the list of lines.
 
 Change slider value between 0 and 9 to select different item using **List.GetItemAtIndex**.
 
-![](../images/5-4/2/working with list - get item index 02.gif)
+![](<../images/5-4/2/working with list - get item index 02.gif>)
 
 ### List.Reverse
 
@@ -98,7 +98,7 @@ Change slider value between 0 and 9 to select different item using **List.GetIte
 
 _List.Reverse_ reverses the order of all of the items in a list.
 
-![Exercise](../images/5-4/2/working with list - list reverse.jpg)
+![Exercise](<../images/5-4/2/working with list - list reverse.jpg>)
 
 > 1. To properly visualize the reversed list of lines, create more lines by changing the **Code Block** to `0..1..#50;`
 > 2. Duplicate the **Line.ByStartPointEndPoint** node, insert a List.Reverse node in between **Curve.PointAtParameter** and the second **Line.ByStartPointEndPoint**
@@ -114,7 +114,7 @@ _List.Reverse_ reverses the order of all of the items in a list.
 
 **List.ShiftIndices** is a good tool for creating twists or helical patterns, or any other similar data manipulation. This node shifts the items in a list a given number of indices.
 
-![Exercise](../images/5-4/2/working with list - shiftIndices 01.jpg)
+![Exercise](<../images/5-4/2/working with list - shiftIndices 01.jpg>)
 
 > 1. In the same process as the reverse list, insert a **List.ShiftIndices** into the **Curve.PointAtParameter** and **Line.ByStartPointEndPoint**.
 > 2. Using a **Code Block**, designated a value of "1" to shift the list one index.
@@ -122,7 +122,7 @@ _List.Reverse_ reverses the order of all of the items in a list.
 
 By changing to **Code Block** to a larger value, _"30"_ for example, we notice a significant difference in the diagonal lines. The shift is working like a camera's iris in this case, creating a twist in the original cylindrical form.
 
-![](../images/5-4/2/working with list - shiftIndices 02.jpg)
+![](<../images/5-4/2/working with list - shiftIndices 02.jpg>)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -136,7 +136,7 @@ By changing to **Code Block** to a larger value, _"30"_ for example, we notice a
 
 **List.FilterByBooleanMask** will remove certain items based on a list of booleans, or values reading "true" or "false".
 
-![Exercise](../images/5-4/2/working with list - filter by bool mask.jpg)
+![Exercise](<../images/5-4/2/working with list - filter by bool mask.jpg>)
 
 In order to create a list of values reading "true" or "false", we need to a little more work...
 

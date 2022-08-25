@@ -4,7 +4,7 @@ Objects in computational designs are rarely created explicitly in their final po
 
 At its most basic, a vector represents a position in 3D space, and is often times thought of as the endpoint of an arrow from the position (0, 0, 0) to that position. Vectors can be created with the _ByCoordinates_ constructor, taking the x, y, and z position of the newly created Vector object. Note that Vector objects are not geometric objects, and don’t appear in the Dynamo window. However, information about a newly created or modified vector can be printed in the console window:
 
-![](../images/8-2/3/vector math 01.jpg)
+![](<../images/8-2/3/vector math 01.jpg>)
 
 ```js
 // construct a Vector object
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Often it’s desired when scaling a vector to have the resulting vector’s length exactly equal to the scaled amount. This is easily achieved by first normalizing a vector, in other words setting the vector’s length exactly equal to one.
 
-![](../images/8-2/3/vector math 05.jpg)
+![](<../images/8-2/3/vector math 05.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 An additional, though somewhat more advanced function of vector math is the dot product. The dot product between two vectors is a real number (not a Vector object) that relates to, but is not exactly, the angle between two vectors. One useful properties of the dot product is that the dot product between two vectors will be 0 if and only if they are perpendicular. The dot product is calculated with the _Dot_ method.
 
-![](../images/8-2/3/vector math 07.jpg)
+![](<../images/8-2/3/vector math 07.jpg>)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);

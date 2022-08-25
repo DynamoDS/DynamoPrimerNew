@@ -2,7 +2,7 @@
 
 The Dynamo Mesh Toolkit provides tools to import meshes from external file formats, create a mesh from Dynamo geometry objects, and manually build meshes by their vertices and indices. The library also provides tools to modify meshes, repair meshes, or extract horizontal slices for use in fabrication.
 
-![](../images/6-2/2/meshToolkit case study 01.jpg)
+![](<../images/6-2/2/meshToolkit case study 01.jpg>)
 
 The Dynamo Mesh Toolkit is part of Autodesk's ongoing mesh research, and as such will continue to grow over the coming years. Expect new methods to appear on the toolkit frequently, and feel free to reach out to the Dynamo team with comments, bugs, and suggestions for new features.
 
@@ -14,7 +14,7 @@ The exercise below demonstrates some basic mesh operations using the Mesh Toolki
 
 In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
 
-![](../images/6-2/2/meshToolkit case study - install package.jpg)
+![](<../images/6-2/2/meshToolkit case study - install package.jpg>)
 
 ## Exercise: Intersect Mesh
 
@@ -28,19 +28,19 @@ In this example, we will look at the Intersect node in the mesh toolkit. We will
 
 Begin by opening _Mesh-Toolkit\_Intersect-Mesh.dyn in Dynamo._
 
-![](../images/6-2/2/meshToolkit case study - exercise 01.jpg)
+![](<../images/6-2/2/meshToolkit case study - exercise 01.jpg>)
 
 > 1. **File Path:** Locate the mesh file to import (_stanford\_bunny\_tri.obj_). Supported file types are .mix and .obj
 > 2. **Mesh.ImportFile:** Connect the file path to import the mesh
 
-![](../images/6-2/2/meshToolkit case study - exercise 02.jpg)
+![](<../images/6-2/2/meshToolkit case study - exercise 02.jpg>)
 
 > 1. **Point.ByCoordinates:** Construct a point – this will be the center of an arc.
 > 2. **Arc.ByCenterPointRadiusAngle:** Construct an arc around the point. This curve will be used to position a series of planes. \_\_ The settings are as follow: \_\_ `radius: 40, startAngle: -90, endAngle:0`
 
 Create a series of planes oriented along the arc.
 
-![](../images/6-2/2/meshToolkit case study - exercise 03.jpg)
+![](<../images/6-2/2/meshToolkit case study - exercise 03.jpg>)
 
 > 1. **Code Block**: Create 25 numbers between 0 and 1.
 > 2. **Curve.PointAtParameter:** Connect the arc to the _‘curve’_ input and the code block output to the _‘param’_ input to extract a series of points along the curve.
@@ -49,7 +49,7 @@ Create a series of planes oriented along the arc.
 
 Next, we will use these planes to intersect the mesh.
 
-![](../images/6-2/2/meshToolkit case study - exercise 04.jpg)
+![](<../images/6-2/2/meshToolkit case study - exercise 04.jpg>)
 
 > 1. **Mesh.Intersect:** Intersect the planes with the imported mesh, creating a series of polycurve contours. Right click on Node and set the lacing to longest
 > 2. **PolyCurve.Curves:** Break the polycurves into their curve fragments.
@@ -58,12 +58,12 @@ Next, we will use these planes to intersect the mesh.
 
 Before we continue, switch off the preview for some of the Nodes such as: Mesh.ImportFile, Curve.EndPoint, Plane.ByOriginNormal & Arc.ByCenterPointRadiusAngle to see the result better.
 
-![](../images/6-2/2/meshToolkit case study - exercise 05.jpg)
+![](<../images/6-2/2/meshToolkit case study - exercise 05.jpg>)
 
 > 1. **Surface.ByPatch:** Construct surface patches for each contour to create “slices” of the mesh.
 
 Add a second set of slices for a waffle/egg-crate effect.
 
-![](../images/6-2/2/meshToolkit case study - exercise 06.jpg)
+![](<../images/6-2/2/meshToolkit case study - exercise 06.jpg>)
 
 You may have noticed that the intersection operations calculate faster with a mesh vs. a comparable solid. Workflows such as the one demonstrated in this exercise lend themselves well to working with meshes.
