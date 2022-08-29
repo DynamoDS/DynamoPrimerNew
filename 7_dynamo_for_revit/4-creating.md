@@ -18,7 +18,7 @@
 
 假定外墙顾问想要知道桁架图元的位置，而无需通过完全铰接的几何图形进行解析。在准备制造时，顾问可以参照自适应点的位置，以在类似 Inventor 的程序中重新生成几何图形。
 
-我们将在下面练习中设置的工作流允许我们在创建 Revit 图元创建定义的同时访问所有这些数据。通过此流程，我们可以将概念化、文档编制和制造合并为一个无缝工作流。这将为互操作性创造更智能、更高效的流程。
+我们将在下面练习中设置的工作流允许我们在创建 Revit 图元时创建定义的同时访问所有这些数据。通过此流程，我们可以将概念化、文档编制和制造合并为一个无缝工作流。这将为互操作性创造更智能、更高效的流程。
 
 ### 多个图元和列表
 
@@ -82,7 +82,7 @@
 
 > 1. 使用 _“Geometry.Intersect”_ 节点（将连缀选项设置为叉积），将 _“Curve.PlaneAtParameter”_ 连接到 _“Geometry.Intersect”_ 节点的 _“entity”_ 输入。将主 _“List.Create”_ 节点插入到 _“geometry”_ 输入。现在，我们在 Dynamo 视口中会看到代表每个曲线与定义平面相交的点。
 
-请注意，输出是一列列表的列表。对于我们的目的而言，列表过多。我们想在这里进行部分展平。我们需要在列表中向下一步，然后展平结果。为此，我们使用 _“List.Map”_ 操作，如 Primer 的列表章节中所述。
+请注意，输出是一列包含列表的列表。对于我们的目的而言，列表过多。我们想在这里进行部分展平。我们需要在列表中向下一步，然后展平结果。为此，我们使用 _“List.Map”_ 操作，如 Primer 的列表章节中所述。
 
 ![](<images/4/creating - exercise 06.jpg>)
 
@@ -127,9 +127,9 @@
 
 ![](<images/4/creating - exercise II - 02.jpg>)
 
-> 1. 为了在 Dynamo 中参照我们的几何图形，我们将为 Revit 中的每个构件使用 _“选择模型图元”_。在 Revit 中选择体量，然后使用 _“Element.Faces”_ 将几何图形输入到 Dynamo - 体量现在应该在 Dynamo 预览中可见。
-> 2. 使用 _“选择模型图元”_ 和 _“CurveElement.Curve”_ 将一条参照曲线输入到 Dynamo。
-> 3. 使用 _“选择模型图元”_ 和 _“CurveElement.Curve”_ 将其他参照曲线输入到 Dynamo。
+> 1. 为了在 Dynamo 中参照我们的几何图形，我们将为 Revit 中的每个构件使用 _“Select Model Element”_。在 Revit 中选择体量，然后使用 _“Element.Faces”_ 将几何图形输入到 Dynamo - 体量现在应该在 Dynamo 预览中可见。
+> 2. 使用 _“Select Model Element”_ 和 _“CurveElement.Curve”_ 将一条参照曲线输入到 Dynamo。
+> 3. 使用 _“Select Model Element”_ 和 _“CurveElement.Curve”_ 将其他参照曲线输入到 Dynamo。
 
 ![](<images/4/creating - exercise II - 03.jpg>)
 
@@ -144,7 +144,7 @@
 
 > 1. 将 _“DirectShape.ByGeometry”_ 节点拖放到画布上，我们会看到它有四个输入： _“geometry”_ **、** _“category”_ **、** _“material”_ 和 _“name”_。
 > 2. 几何图形将是从图形的几何图形创建部分创建的实体
-> 3. 使用下拉 _“Categories”_ （类别）节点选择类别输入。在本例中，我们将使用“结构框架”。
+> 3. 使用下拉 _“Categories”_ （类别）节点选择类别输入。在本例中，我们将使用“Structural Framing”（结构框架）。
 > 4. 通过上述节点阵列选择材质输入 - 尽管在这种情况下，可以更加简单地将其定义为“默认”。
 
 运行 Dynamo 后，返回 Revit，我们将输入的几何图形放置在项目的屋顶上。这是结构框架图元，而不是常规模型。指向 Dynamo 的参数化链接保持不变。
