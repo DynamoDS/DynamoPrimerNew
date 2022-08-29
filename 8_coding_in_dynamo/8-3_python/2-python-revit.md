@@ -215,7 +215,7 @@ Il existe un processus continu de conversion des données de l'environnement Rev
 5. Créez des poutres Revit en référençant les lignes Dynamo.
 6. Générez des surfaces Dynamo en interrogeant la géométrie des poutres Revit.
 
-Ce processus peut sembler compliqué, mais grâce au script, il est aussi simple que modifier la courbe dans Revit et exécuter à nouveau le solveur (pour ce faire, vous devrez peut-être supprimer les poutres précédentes). _Cela est dû au placement des poutres dans Python, ce qui rompt l'association des nœuds OOTB._
+Ce processus peut sembler compliqué, mais grâce au script, il est aussi simple de modifier la courbe dans Revit et exécuter à nouveau le solveur (pour ce faire, vous devrez peut-être supprimer les poutres précédentes). _Cela est dû au placement des poutres dans Python, ce qui rompt l'association des nœuds OOTB._
 
 Avec une mise à jour des courbes de référence dans Revit, vous obtenez un nouveau réseau de poutres.
 
