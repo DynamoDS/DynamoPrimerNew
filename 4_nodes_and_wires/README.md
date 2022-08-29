@@ -45,7 +45,7 @@ Al colocar el cursor sobre el nombre o los puertos, o al hacer clic con el botó
 > 4. Seleccionados: los nodos seleccionados actualmente se resaltan con un borde de color turquesa.
 > 5. Inutilizados: un nodo azul translúcido está inutilizado, por lo que se suspende su ejecución.
 > 6. Vista preliminar desactivada: una barra de estado gris debajo del nodo y un icono de ojo <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> indican que la vista preliminar de geometría del nodo está desactivada.
-> 7. Advertencia: Una barra de estado amarilla debajo de los nodos indica un estado de advertencia, lo que significa que no tienen datos de entrada o que pueden tener tipos de datos incorrectos.
+> 7. Advertencia: una barra de estado amarilla debajo de los nodos indica un estado de advertencia, lo que significa que no tienen datos de entrada o que pueden tener tipos de datos incorrectos.
 > 8. Error: una barra de estado roja debajo del nodo indica que este presenta un estado de error.
 > 9. Información: la barra de estado azul debajo del nodo indica el estado de información, que ofrece detalles útiles sobre los nodos. Este estado se puede activar al aproximarse a un valor máximo admitido por el nodo, usar un nodo de forma que pueda afectar al rendimiento, etc.
 
