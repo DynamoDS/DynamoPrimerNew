@@ -6,9 +6,9 @@ W dodatku Dynamo można utworzyć tablicę elementów programu Revit z zachowani
 
 ### Komponenty adaptacyjne
 
-Komponent adaptacyjny to elastyczna kategoria rodzin, która jest przydatna do generowania elementów. Podczas utworzeniu wystąpienia można utworzyć element złożony geometrycznie, który zależy od podstawowej lokalizacji punktów adaptacyjnych.
+Komponent adaptacyjny to elastyczna kategoria rodzin, która jest przydatna do generowania elementów. Podczas tworzenia wystąpienia można utworzyć element złożony geometrycznie, który zależy od podstawowej lokalizacji punktów adaptacyjnych.
 
-Poniżej przedstawiono przykład komponentu adaptacyjnego o trzech punktach w edytorze rodzin. Zostanie wygenerowana kratownica zależąca od położenia poszczególnych punktów adaptacyjnych. W poniższym ćwiczeniu użyjemy tego komponentu, aby wygenerować serię kratownic wzdłuż fasady.
+Poniżej przedstawiono przykład komponentu adaptacyjnego o trzech punktach w edytorze rodzin. Zostanie wygenerowana kratownica zależna od położenia poszczególnych punktów adaptacyjnych. W poniższym ćwiczeniu użyjemy tego komponentu, aby wygenerować serię kratownic wzdłuż fasady.
 
 ![](../.gitbook/assets/ac.jpg)
 
@@ -88,7 +88,7 @@ Dane wyjściowe stanowią listę list list. To zbyt wiele list na nasze potrzeby
 
 > 1. Połącz węzeł _Geometry.Intersect_ z wejściem listy węzła _List.Map_.
 > 2. Połącz węzeł _Flatten_ z wejściem f(x) węzła _List.Map_. W wyniku otrzymamy trzy listy, z których każda zawiera tyle elementów, ile jest kratownic.
-> 3. Musimy zmienić te dane. Aby utworzyć wystąpienie kratownicy, potrzebna jest taka sama liczba punktów adaptacyjnych, jaką zdefiniowano w rodzinie. To jest komponent adaptacyjny o trzech punktach, dlatego zamiast trzech list po 10 elementów (liczba kratownic), potrzebujemy 10 list po trzy elementy. W ten sposób możemy utworzyć 10 komponentów adaptacyjnych.
+> 3. Musimy zmienić te dane. Aby utworzyć wystąpienie kratownicy, potrzebna jest taka sama liczba punktów adaptacyjnych, jaką zdefiniowano w rodzinie. To jest komponent adaptacyjny o trzech punktach, dlatego zamiast trzech list po 10 elementów (liczba kratownic) potrzebujemy 10 list po trzy elementy. W ten sposób możemy utworzyć 10 komponentów adaptacyjnych.
 > 4. Połącz węzeł _List.Map_ z węzłem _List.Transpose_. Teraz otrzymaliśmy oczekiwane dane wyjściowe.
 > 5. Aby sprawdzić, czy dane są prawidłowe, dodaj węzeł _Polygon.ByPoints_ do obszaru projektowania i porównaj wartości z podglądem dodatku Dynamo.
 
