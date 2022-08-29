@@ -12,7 +12,7 @@ Dynamo Hype 视频
 
 ### 欢迎
 
-您刚打开了 Dynamo Primer，它是 Autodesk Dynamo 中可视化编程的全面指南。本入门是一个持续的项目，旨在分享编程基础知识。主题包括使用计算几何体、基于规则的设计最佳实践、跨领域编程应用程序以及与 Dynamo 平台相关的更多信息。
+您刚打开了 Dynamo Primer，它是 Autodesk Dynamo 中可视化编程的全面指南。本 Primer 是一个持续的项目，旨在分享编程基础知识。主题包括使用计算几何体、基于规则的设计最佳实践、跨领域编程应用程序以及与 Dynamo 平台相关的更多信息。
 
 Dynamo 的强大功能可在多种与设计相关的活动中找到。Dynamo 带有可立即访问的扩展列表，可供您快速开始：
 
@@ -23,7 +23,7 @@ Dynamo 的强大功能可在多种与设计相关的活动中找到。Dynamo 带
 
 在此活动中以及使用 Dynamo 的令人兴奋的机会中，我们需要一个具有相同水准的文档 - Dynamo Primer。
 
-请参见 [Primer 用户手册](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)，以了解您可通过本 Primer 学到的内容。
+请参见 [《Primer 用户手册》](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)，以了解您可通过本 Primer 学到的内容。
 
 我们不断地改进 Dynamo，因此某些功能看起来可能与本 Primer 中所介绍的功能不同。但是，所有功能更改都会正确介绍。
 
@@ -57,7 +57,7 @@ Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开
 
 尤其感谢 Ian Keough 启动和引导 Dynamo 项目。
 
-感谢 Matt Jezyk、Ian Keough、Zach Kron、Racel Williams 和 Colin McCrone 进行热情协作，并让大家有机会参与各种 Dynamo 项目。
+感谢 Matt Jezyk、Ian Keough、Zach Kron、Racel Williams 和 Colin McCrone 的热情协作，让大家有机会参与各种 Dynamo 项目。
 
 ### 软件和资源
 
