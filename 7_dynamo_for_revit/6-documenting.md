@@ -25,7 +25,7 @@
 ![](<images/6/documenting - exercise I - 01.jpg>)
 
 > 1. 向画布添加 _“Family Types”_ （族类型）节点，然后选择 _“ROOF-PANEL-4PT”_ 。
-> 2. 将此节点连接到“选择 _All Elements of Family Type_” 族类型的所有图元）节点，以将所有图元从 Revit 输入到 Dynamo。
+> 2. 将此节点连接到“选择 _All Elements of Family Type_” （族类型的所有图元）节点，以将所有图元从 Revit 输入到 Dynamo。
 
 ![](<images/6/documenting - exercise I - 02.jpg>)
 
