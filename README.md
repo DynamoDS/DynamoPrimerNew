@@ -21,7 +21,7 @@ Dynamo의 강력한 기능은 다양한 설계 관련 활동에서 확인할 수
 * **참여**: 사용자, 기여자, 개발자로 구성된 활발한 커뮤니티에 참여
 * **개발**: 지속적인 향상을 위해 오픈 소스 플랫폼 개발
 
-이러한 활동을 진행하고 Dynamo를 사용할 수 있는 흥미로운 기회를 제공하는 과정에서 Dynamo Primer가 필요합니다.
+이러한 활동을 진행하고 Dynamo를 사용할 수 있는 흥미로운 기회를 제공하려면 Dynamo Primer가 필요합니다.
 
 이 Primer에서 무엇을 배울 수 있는지 알아보려면 [기본 사용자 안내서](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)를 참조하십시오.
 
