@@ -4,7 +4,7 @@
 
 Aplikace Revit je prostředí obsahující velké množství dat. Díky tomu máte k dispozici celou řadu možností, které obnášejí více než jen najetí kurzorem a kliknutí. Při provádění parametrických operací můžete zadat dotaz do databáze aplikace Revit a dynamicky propojit prvky aplikace Revit s geometrií aplikace Dynamo.
 
-Knihovna aplikace Revit v uživatelském rozhraní nabízí kategorii „Výběr“, která umožňuje výběr geometrie několika způsoby.
+Knihovna aplikace Revit v uživatelském rozhraní nabízí kategorii Seleczion (Výběr), která umožňuje výběr geometrie několika způsoby.
 
 ![](<images/2/select revit elements 01.jpg>)
 
