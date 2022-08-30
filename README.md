@@ -65,7 +65,7 @@ Děkujeme Mattu Jezykovi, Ianu Keoughovi, Zachu Kronovi, Racel Williamsové and 
 
 http://dynamobim.com/download/ nebo http://dynamobuilds.com
 
-*Poznámka: Počínaje aplikací Revit 2020 je aplikace Dynamo součástí vydání aplikace Revit a nemusí být ručně instalována. Další informace jsou k dispozici na tomto ,příspěvku na [blogu](https://dynamobim.org/dynamo-core-2-1-release/).
+*Poznámka: Počínaje aplikací Revit 2020 je aplikace Dynamo součástí vydání aplikace Revit a nemusí být ručně instalována. Další informace jsou k dispozici na tomto příspěvku na [blogu](https://dynamobim.org/dynamo-core-2-1-release/).
 
 **DynamoBIM** Nejlepší zdroj dalších informací, výukových materiálů a komunitních diskuzí je webová stránka DynamoBIM.
 
