@@ -8,7 +8,7 @@ In Dynamo, **Nodes** are the objects you connect to form a Visual Program. Each 
 
 Most Nodes in Dynamo are composed of five parts. While there are exceptions, such as Input Nodes, the anatomy of each Node can be described as follows:
 
-![](<images/nodes and wires - nodes anatomy.jpg>)
+![](images/nodesandwires-nodesanatomy.jpg)
 
 > 1. Name - The Name of the Node with a `Category.Name` naming convention
 > 2. Main body - The main body of the Node - Right-clicking here presents options at the level of the whole Node
@@ -26,7 +26,7 @@ Ports expect to receive data of a certain type. For instance, connecting a numbe
 Tip: Hover over a Port to see a tooltip containing the data type expected.
 {% endhint %}
 
-![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](images/nodesandwires-nodesinputandtooltip.jpg)
 
 > 1. Port Label
 > 2. Tool Tip
@@ -39,27 +39,27 @@ Dynamo gives an indication of the state of the execution of your Visual Program 
 
 Hovering or right-clicking over the Name or Ports presents additional information and options.
 
-![](<../.gitbook/assets/nodes and wires - node states.png>)
+![](../.gitbook/assets/nodesandwires-nodestates.png)
 
 > 1. Satisfied inputs - A node with blue vertical bars over its input ports is well-connected and has all of its inputs successfully connected.
 > 2. Unsatisfied inputs – A node with a red vertical bar over one or more input ports needs to have those inputs connected.
 > 3. Function – A node that outputs a function and has a gray vertical bar over an output port is a function node.
 > 4. Selected - Currently selected nodes have an aqua highlight around their border.
 > 5. Frozen - A translucent blue node is frozen, suspending the execution of the node.
-> 6. Preview off - A gray status bar underneath the node and an eye icon <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> indicate that geometry preview for the node is switched off.
+> 6. Preview off - A gray status bar underneath the node and an eye icon <img src="images/nodesandwires-previewoff.jpg" alt="" data-size="line"> indicate that geometry preview for the node is switched off.
 > 7. Warning - A yellow status bar underneath the node indicates Warning state, meaning the node either lacks input data or may have incorrect data types.
 > 8. Error - A red status bar underneath the node indicates that the node is in an Error state.
 > 9. Info - Blue status bar underneath the node indicates Info state, which flags useful information about nodes. This state can be triggered when approaching a maximum value supported by the node, using a node in a way that has potential performance impacts, etc.
 
 #### Handling Error or Warning Nodes
 
-If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](<images/nodes and wires - node warning icon.png>) or error ![](<images/nodes and wires - node error icon.png>) tooltip icon to expand it.
+If your Visual Program contains warning or errors, Dynamo will provide additional information about the problem. Any Node that is Yellow will also have a tooltip above the Name. Hover your mouse over the warning ![](images/nodesandwires-nodewarningicon.png) or error ![](images/nodesandwires-nodeerroricon.png) tooltip icon to expand it.
 
 {% hint style="info" %}
 Tip: With this tooltip information in hand, examine the upstream Nodes to see if the data type or data structure required is in error.
 {% endhint %}
 
-![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. Warning Tooltip - "Null" or no data cannot be understood as a Double, i.e., a number
 > 2. Use the Watch Node to examine the input data
@@ -75,7 +75,7 @@ Wires connect the output Port from one Node to the input Port of another Node. T
 
 Input Ports are on the left side and the Output Ports are located on the right side of Nodes, hence, we can generally say that the Program Flow moves from left to right.
 
-![](<images/nodes and wires - flow of data.jpg>)
+![](images/nodesandwires-flowofdata.jpg)
 
 ### Creating Wires <a href="#creating-wires" id="creating-wires"></a>
 
@@ -83,7 +83,7 @@ Create a Wire by left-click on a Port subsequently left-click on the port of ano
 
 The data will always flow through this Wire from output to input; however, we may create the wire in either direction in terms of the sequence of clicking on the connected Ports.
 
-![](<images/nodes and wires - creating a wire.gif>)
+![](images/nodesandwires-creatingawire.gif)
 
 ### Editing Wires <a href="#editing-wires" id="editing-wires"></a>
 
@@ -91,25 +91,25 @@ Frequently we will want to adjust the Program Flow in our Visual Program by edit
 
 * Change connection to an input Port, left-click on another input Port
 
-![](<images/nodes and wires - edit wire change port (2).gif>)
+![](images/nodesandwires-editwirechangeport(2).gif)
 
 * To remove the Wire, pull the Wire away and left-click on Workspace
 
-![](<images/nodes and wires - edit wires remove.gif>)
+![](images/nodesandwires-editwiresremove.gif)
 
 * Reconnect multiple wires using Shift+left-click
 
-![](<images/nodes and wires - edit multi ports.gif>)
+![](images/nodesandwires-editmultiports.gif)
 
 * Duplicate a wire using Ctrl+left-click
 
-![](<images/nodes and wires - duplicate wire.gif>)
+![](images/nodesandwires-duplicatewire.gif)
 
 #### Default vs Highlighted Wires <a href="#wire-previews" id="wire-previews"></a>
 
 By default, our Wires will be previewed with a gray stroke. When a Node is selected, it will render any connecting Wire with the same aqua highlight as the Node.
 
-![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](images/nodesandwires-defaultvshighlightedwires.jpg)
 
 > 1. Highlighted Wire
 > 2. Default Wire
@@ -120,10 +120,10 @@ In case you prefer to hide the Wires in your graph, you can find this option fro
 
 With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
 
-![](<images/nodes and wires - hide wires setting (1).gif>)
+![](images/nodesandwires-hidewiressetting(1).gif)
 
 #### Hide Individual Wire Only
 
 You can also hide selected wire only by Right-clicking on the Nodes output > select Hide Wires
 
-![](<images/nodes and wires - hide selected wire.gif>)
+![](images/nodesandwires-hideselectedwire.gif)

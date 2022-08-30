@@ -30,7 +30,7 @@ So where is the Algorithm? It is the abstract set of steps, which we can represe
 
 **Graphical Instructions:**
 
-![Needs Update- Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Origami Crane instructions](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Programming Defined <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ If your answer contained graphics, then **Visual Programming** is definitely for
 
 **Visual Program:**
 
-![](<./images/a-1/visualProgramming (2).png>)
+![](./images/a-1/visualProgramming(2).png)
 
 **Textual Program:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 The results of our algorithm:
 
-![](<./images/a-1/visualProgramming (1).png>)
+![](./images/a-1/visualProgramming(1).png)
 
 The visual characteristic to programming in such a way lowers the barrier to entry and frequently speaks to designers. Dynamo falls in the Visual Programming paradigm, but as we will see later, we can still use textual programming in the application as well.

@@ -4,7 +4,7 @@
 
 Dynamo is an active open-source development project. Find out the [list of software that supports Dynamo](http://dynamobim.org/download/).
 
-![](<images/setup for dynamo - dynamo revit.png>) ![](<images/setup for dynamo - dynamo civil 3D.png>) ![](<images/setup for dynamo - dynamo alias design.png>) ![](<images/setup for dynamo - dynamo formit.png>) ![](<images/setup for dynamo - dynamo advance steel.png>) ![](<images/setup for dynamo - dynamo robot structural analysis.png>)
+![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) ![](images/setupfordynamo-dynamoadvancesteel.png) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
 
 ### Launch Dynamo as Extension
 
@@ -12,7 +12,7 @@ Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civi
 
 To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](images/dynamoCore-halfSize.png) to launch it.
 
-![](<images/launch dynamo from revit.jpg>)
+![](images/launchdynamofromrevit.jpg)
 
 For more guidance on using Dynamo with a specific software, we recommend referring to the following sections:
 
@@ -26,11 +26,11 @@ If you would like to use Dynamo as a standalone application. Continue reading fo
 
 The Dynamo application is available from the [Dynamo website](http://dynamobim.com). Both official, past or pre-released versions are available from the download page. Visit [Get Dynamo](http://dynamobim.org/download/) page and Click **Download** for the official released version.
 
-![](<images/dynamo-sandbox (1).png>)
+![](images/dynamo-sandbox(1).png)
 
 If you are looking for previous or 'bleeding edge' development releases, all versions can be found in the lower section from the same page.
 
-![](<images/Dynamo Sandbox All builds.jpg>)
+![](images/DynamoSandboxAllbuilds.jpg)
 
 {% hint style="info" %}
 'Bleeding edge' development may include some new and experimental features that are yet to be fully tested, hence may be unstable. By using this, you may discover bugs or issues, help us improve the application by reporting issues to our team.
@@ -46,21 +46,21 @@ Download and install [7zip](https://www.7-zip.org/download.html) to your compute
 
 Right-click on the zip file and select **Extract All**...
 
-![](<images/02-03 Extract zip file.jpg>)
+![](images/02-03Extractzipfile.jpg)
 
 Choose a destination to unzip all the files.
 
-![](<images/02-04 Extract destination folder.jpg>)
+![](images/02-04Extractdestinationfolder.jpg)
 
 #### Launching
 
 In your destination folder, double-click on **DynamoSandbox.exe** to launch it
 
-![](<images/02-05 Dynamo exe.jpg>)
+![](images/02-05Dynamoexe.jpg)
 
 You will see the DynamoSandbox startup screen as follow.
 
-![](<images/02-06 Dynamo startup screen.jpg>)
+![](images/02-06Dynamostartupscreen.jpg)
 
 Congratulations, you have now finished the setup for using DynamoSandbox!
 
