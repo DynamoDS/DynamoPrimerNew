@@ -20,7 +20,7 @@ Většina uzlů v aplikaci Dynamo se skládá z pěti částí. Ačkoliv exist
 
 Vstupům a výstupům uzlů se říká porty, které se chovají jako zásuvky pro dráty. Data vstupují do uzlu skrz porty vlevo a po jeho spuštění proudí z uzlu ven skrz porty vpravo.
 
-Porty očekávají, že obdrží data určitého typu. Například připojením čísla _2.75_ na porty uzlu bodu podle souřadnic dojde k úspěšné tvorbě bodu, pokud však na stejný port zadáme hodnotu _Červená_, dojde k chybě.
+Porty očekávají, že obdrží data určitého typu. Například připojením čísla _2.75_ na porty uzlu Point.ByCoordinates dojde k úspěšné tvorbě bodu, pokud však na stejný port zadáme hodnotu _Červená_, dojde k chybě.
 
 {% hint style="info" %} Přesunutím kurzoru nad port zobrazíte popisek s očekávaným datovým typem. {% endhint %}
 
@@ -112,7 +112,7 @@ Ve výchozím nastavení se dráty zobrazují šedě. Po výběru uzlu se k ně
 
 **Skrytí drátů ve výchozím nastavení**
 
-Pokud chcete dráty v grafu skrýt, přejděte do nabídky Zobrazit > Konektory a zrušte zaškrtnutí položky Zobrazit konektory.
+Pokud chcete dráty v grafu skrýt, přejděte do nabídky Zobrazit > Konektory a zrušte zaškrtnutí položky Zobrazit spojky.
 
 Při tomto nastavení se bledě modrou barvou zvýrazní pouze vybrané uzly a jejich spojovací dráty.
 
