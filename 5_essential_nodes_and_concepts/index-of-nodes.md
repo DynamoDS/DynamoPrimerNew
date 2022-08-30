@@ -14,7 +14,7 @@ This index provides additional information on all the nodes used in this primer,
 |                                           | ACTIONS                                                                                                               |                                                             |
 | ![](images/5-1/ColorBrightness.jpg)    | <p><strong>Color.Brightness</strong><br>Gets the brightness value for this color.</p>                                 | ![](images/5-1/indexofnodes-colorbrightness(1).jpg) |
 | ![](images/5-1/ColorComponent.jpg)     | <p><strong>Color.Components</strong><br>Lists the components for the color in the order: alpha, red, green, blue.</p> | ![](images/5-1/indexofnodes-colorcomponent.jpg)      |
-| ![](images/5-1/ColorSaturation.jpg)    | <p><strong>Color.Saturation</strong><br>Gets the saturation value for this color</p>                                  | ![](<images/5-1/index of nodes - color saturation.jpg>)     |
+| ![](images/5-1/ColorSaturation.jpg)    | <p><strong>Color.Saturation</strong><br>Gets the saturation value for this color</p>                                  | ![](images/5-1/indexofnodes-colorsaturation.jpg)     |
 | ![](images/5-1/ColorHue.jpg)           | <p><strong>Color.Hue</strong><br>Gets the hue value for this color.</p>                                               | ![](images/5-1/indexofnodes-colorhue.jpg)            |
 |                                           | QUERY                                                                                                                 |                                                             |
 | ![](images/5-1/ColorAlpha(1)(1).jpg) | <p><strong>Color.Alpha</strong><br>Find the alpha component of a color, 0 to 255.</p>                                 | ![](images/5-1/indexofnodes-coloralpha.jpg)          |
@@ -45,9 +45,9 @@ This index provides additional information on all the nodes used in this primer,
 | ![](images/5-1/DirectoryPath.jpg)     | <p><strong>Directory Path</strong><br>Allows you to select a directory on the system to get its path</p> | ![](images/5-1/indexofnodes-directorypath.jpg) |
 | ![](images/5-1/FilePath.jpg)          | <p><strong>File Path</strong><br>Allows you to select a file on the system to get its filenam</p>        | ![](images/5-1/indexofnodes-filepath.jpg)      |
 | ![](images/5-1/Integerslider.jpg)     | <p><strong>Integer Slider</strong><br>A slider that produces integer values.</p>                         | ![](images/5-1/indexofnodes-integerslider.jpg) |
-| ![](images/5-1/Number.jpg)               | <p><strong>Number</strong><br>Creates a number.</p>                                                      | ![](images/5-1/indexofnodes-number(1).jpg)     |
+| ![](images/5-1/number.jpg)               | <p><strong>Number</strong><br>Creates a number.</p>                                                      | ![](images/5-1/indexofnodes-number(1).jpg)     |
 | ![](images/5-1/Numberslider.jpg)      | <p><strong>Number Slider</strong><br>A slider that produces numeric values.</p>                          | ![](images/5-1/indexofnodes-numberslider.jpg)  |
-| ![](images/5-1/String.jpg)               | <p><strong>String</strong><br>Creates a string.</p>                                                      | ![](images/5-1/indexofnodes-string.jpg)         |
+| ![](images/5-1/string.jpg)               | <p><strong>String</strong><br>Creates a string.</p>                                                      | ![](images/5-1/indexofnodes-string.jpg)         |
 | ![](images/5-1/ObjectisNull.jpg)     | <p><strong>Object.IsNull</strong><br>Determines if the given object is null.</p>                         | ![](images/5-1/indexofnodes-objectisnull.jpg) |
 
 ## List
@@ -216,7 +216,7 @@ This index provides additional information on all the nodes used in this primer,
 |                                           | CREATE                                                                                                                                                                                |                                                            |
 | ![](images/5-1/Polycurvebypoints.jpg) | <p><strong>Polycurve.ByPoints</strong><br>Make PolyCurve from sequence of lines connecting points. For closed curve last point should be in the same location as the start point.</p> | ![](images/5-1/indexofnodes-polycurvebypoints.jpg) |
 
-Rectangle
+### Rectangle
 
 |                                                 |                                                                                                                                                                               |                                                                  |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -235,11 +235,11 @@ Rectangle
 |                                                      |                                                                                                                                                      |                                                                   |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 |                                                      | CREATE                                                                                                                                               |                                                                   |
-| ![](images/5-1/Surfacebyloft(3).jpg)            | <p><strong>Surface.ByLoft</strong><br>Create a Surface by lofting between input cross section Curves</p>                                             | ![](<images/5-1/index of nodes - surface by loft.jpg>)            |
+| ![](images/5-1/Surfacebyloft(3).jpg)            | <p><strong>Surface.ByLoft</strong><br>Create a Surface by lofting between input cross section Curves</p>                                             | ![](images/5-1/indexofnodes-surfacebyloft.jpg)            |
 | ![](images/5-1/Surfacebypatch.jpg)               | <p><strong>Surface.ByPatch</strong><br>Create a Surface by filling in the interior of a closed boundary defined by input Curves.</p>                 | ![](images/5-1/indexofnodes-surfacebypatch(1).jpg)       |
 |                                                      | ACTIONS                                                                                                                                              |                                                                   |
 | ![](images/5-1/Surfaceoffset(1).jpg)             | <p><strong>Surface.Offset</strong><br>Offset Surface in direction of Surface normal by specified distance</p>                                        | ![](images/5-1/indexofnodes-surfaceoffset.jpg)             |
-| ![](images/5-1/Surfacepointatparameter(1).jpg) | <p><strong>Surface.PointAtParameter</strong><br>Return the Point at a specified U and V parameters.</p>                                              | ![](<images/5-1/index of nodes - surface point at parameter.jpg>) |
+| ![](images/5-1/Surfacepointatparameter(1).jpg) | <p><strong>Surface.PointAtParameter</strong><br>Return the Point at a specified U and V parameters.</p>                                              | ![](images/5-1/indexofnodes-surfacepointatparameter.jpg) |
 | ![](images/5-1/Surfacethicken(1).jpg)            | <p><strong>Surface.Thicken</strong><br>Thicken Surface into a Solid, extruding in the direction of Surface normals on both sides of the Surface.</p> | ![](images/5-1/indexofnodes-surfacethicken.jpg)            |
 
 ### UV

@@ -120,7 +120,7 @@ Last, let's query isolated parts of the data with the Code Block. To regenerate 
 
 ![](../images/8-1/3/shorthand-exercise09.jpg)
 
-![](../images/8-1/3/shorthand-exercise10.jpg>)
+![](../images/8-1/3/shorthand-exercise10.jpg)
 
 > 1. In the final step, to make this **Code Block** more parametric, we drive the query by using a slider ranging from 0 to 1. We do this with this line of code: `sineStrips[0..((List.Count(sineStrips)-1)*u)];`. This may seem confusing, but the line of code gives us a quick way to scale the length of the list into a multiplier between 0 and 1.
 
