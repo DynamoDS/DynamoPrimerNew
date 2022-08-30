@@ -42,7 +42,7 @@
 
 ![](<images/6/documenting - exercise I - 04.jpg>)
 
-> 1. 使用 _Math.RemapRange_，透過在 _Code Block_ 中輸入 `0.15; 0.45;`，將偏差值重新對映至從 0.15 到 0_._45 之間的範圍。
+> 1. 使用 _Math.RemapRange_，透過在 _Code Block_ 中輸入 `0.15; 0.45;`，將偏差值重新對映至從 0.15 到 0.45 之間的範圍。
 > 2. 將這些結果重新插入 _Element.SetParameterByName_ 的 value 輸入。
 
 回到 Revit，我們會 _稍微_ 理解曲面上孔徑的變更。
