@@ -106,7 +106,7 @@ Damit werden die Flächen als Oberflächen in Dynamo importiert.
 
 ### Auswählen von Trägern
 
-Als nächstes arbeiten Sie mit den Trägern über dem Foyer.
+Als Nächstes arbeiten Sie mit den Trägern über dem Foyer.
 
 ![](<images/2/selecting - exercise 10.jpg>)
 
