@@ -82,7 +82,7 @@ Dynamo 형상을 DirectShape로 Revit 프로젝트에 가져오는 [두 번째 �
 
 > 1. _Geometry.Intersect_ 노드(레이싱 옵션을 외적으로 설정)를 사용하여 _Curve.PlaneAtParameter_ 를 _Geometry.Intersect_ 노드의 _entity_ 입력에 연결합니다. 주 _List.Create_ 노드를 _geometry_ 입력에 연결합니다. 이제 Dynamo 뷰포트에 정의된 평면과 함께 각 곡선의 교차를 나타내는 점이 표시됩니다.
 
-출력은 리스트의 리스트입니다. 목적을 위해 너무 많은 리스트가 있습니다. 여기서 부분 단순화를 수행하려고 합니다. 리스트에서 한 단계 내려가 결과를 단순화해야 합니다. 이를 위해 Primer의 리스트 장에 설명된 대로 _List.Map_ 작업을 사용합니다.
+출력은 리스트의 리스트입니다. 우리가 하려고 하는 것을 위한 리스트가 너무 많습니다. 여기서 부분 단순화를 수행하려고 합니다. 리스트에서 한 단계 내려가 결과를 단순화해야 합니다. 이를 위해 Primer의 리스트 장에 설명된 대로 _List.Map_ 작업을 사용합니다.
 
 ![](<images/4/creating - exercise 06.jpg>)
 
