@@ -2,9 +2,9 @@
 
 
 
-![](<./images/1/revit connection link.jpg>)
+![](./images/1/revitconnectionlink.jpg)
 
-Dynamo for Revit extends buildin g information modeling with the data and logic environment of a graphical algorithm editor. Its flexibility, coupled with a robust Revit database, offers a new perspective for BIM.
+Dynamo for Revit extends building information modeling with the data and logic environment of a graphical algorithm editor. Its flexibility, coupled with a robust Revit database, offers a new perspective for BIM.
 
 This chapter focuses on the Dynamo workflows for BIM. Sections are primarily exercise-based, since jumping right into a project is the best way to get familiar with a graphical algorithm editor for BIM. But first, let's talk about the beginnings of the program.
 
@@ -41,7 +41,7 @@ In a Revit project or family editor, navigate to Addins and click Dynamo.\*
 \*Dynamo will run only in the file in which it was opened.
 {% endhint %}
 
-![](<./images/1/launch dynamo from revit.jpg>)
+![](./images/1/launchdynamofromrevit.jpg)
 
 When opening Dynamo in Revit, there is a new category called "Revit". This is a comprehensive addition to the UI which offers nodes specifically catering to Revit workflows.\*
 
@@ -49,7 +49,7 @@ When opening Dynamo in Revit, there is a new category called "Revit". This is a 
 \*By using the Revit-specific family of nodes, the Dynamo graph will only work when opening in Dynamo for Revit. If a Dynamo for Revit graph is opened in Dynamo Sandbox for example, the Revit nodes will be missing.
 {% endhint %}
 
-![](<./images/1/revit connection - running dynamo in revit 02.jpg>)
+![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Freezing Nodes
 

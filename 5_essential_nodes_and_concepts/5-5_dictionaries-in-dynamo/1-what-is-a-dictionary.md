@@ -24,7 +24,7 @@ The separation of dictionaries from lists introduces dictionaries as a first-cla
 
     ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
+![](../images/5-5/1/whatisadictionary-whatarethechanges(1).jpg)
 
 ***
 
@@ -34,7 +34,7 @@ In computer science, Dictionaries - like lists- are collections of objects. Whil
 
 In the image below we demonstrate a potential use case of a dictionary. Often times dictionaries are used to relate two pieces of data that might not have a direct correlation. In our case, we are connecting the Spanish version of a word to the English version for later lookup.
 
-![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
+![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
 
 > 1. Build a dictionary to relate the two pieces of data.
 > 2. Get the value with the given key.

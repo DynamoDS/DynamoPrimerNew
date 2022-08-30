@@ -2,7 +2,7 @@
 
 Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _create, action, and query_ nodes.
 
-![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
+![](../images/5-5/2/dictionarynodes-nodes.jpg)
 
 #### Create
 

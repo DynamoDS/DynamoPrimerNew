@@ -10,7 +10,7 @@ If we want to construct more complex models that cannot be created from a single
 
 You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
 
-![](<../images/5-2/6/solids  - spiky ball.jpg>)
+![](../images/5-2/6/solids-spikyball.jpg)
 
 > 1. **Sphere.ByCenterPointRadius**: Create the base Solid.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: Query the faces of the Solid and convert to surface geometry—in this case, the Sphere has only one Face.
@@ -29,7 +29,7 @@ You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify so
 
 Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
 
-![](<../images/5-2/6/solids - freeze node.jpg>)
+![](../images/5-2/6/solids-freezenode.jpg)
 
 > 1.Use the right-click contextual menu to Freeze the Solid Union operation
 >

@@ -12,7 +12,7 @@ In short, code blocks are a text-scripting interface within a visual-scripting e
 
 With code blocks, a user has the flexibility to decide how to specify inputs. Here are several different ways to make a basic point with coordinates _(10, 5, 0)_:&#x20;
 
-![](<../images/8-1/1/codeblock brief overview.jpg>)
+![](../images/8-1/1/codeblockbriefoverview.jpg)
 
 As you learn more of the available functions in the library, you might even find that typing “Point.ByCoordinates” is faster than searching in the library and finding the proper node. When you type in _"Point."_ for example, Dynamo will display a list of possible functions to apply to a Point. This makes the scripting more intuitive and will help with learning how to apply functions in Dynamo.
 
@@ -20,7 +20,7 @@ As you learn more of the available functions in the library, you might even find
 
 The code block can be found in _Core>Input>Actions>Code Block_. But even faster, just double click on the canvas and the code block appears. This node is used so often, it's given full double-click privileges.
 
-![](<../images/8-1/1/creating codeblock nodes.jpg>)
+![](../images/8-1/1/creatingcodeblocknodes.jpg)
 
 ### Numbers, Strings and Formulas
 
@@ -30,7 +30,7 @@ In the image below, you can see the "old school" way of doing things is a little
 
 The number, string, and formula nodes are three examples of Dynamo nodes which are arguably obsolete in comparison to the code block.
 
-![](<../images/8-1/1/old school vs code blocks nodes.jpg>)
+![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 
 > 1. "Old-school"
 > 2. Code Blocks

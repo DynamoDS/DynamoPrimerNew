@@ -6,11 +6,11 @@
 
 Understanding the Geometry types and [how they are related](1-geometry-overview.md#stepping-through-the-hierarchy) will allow us to navigate the collection of **Geometry Nodes** available to us in the Library. The Geometry Nodes are organized alphabetically as opposed to hierarchically - here they are displayed similar to their layout in the Dynamo interface.
 
-![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
+![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
 
 Additionally, making models in Dynamo and connecting the preview of what we see in the Background Preview to the flow of data in our graph should become more intuitive over time.
 
-![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
+![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
 
 > 1. Note the assumed coordinate system rendered by the grid and colored axes
 > 2. Selected Nodes will render the corresponding geometry (if the Node creates geometry) in the background the highlight color
