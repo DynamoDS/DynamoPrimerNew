@@ -38,7 +38,7 @@ K rychlému převodu jednotek použijte uzel _Convert Between Units_. Jedná se
 
 {% hint style="warning" %}V níže uvedeném cvičení jsou použity metry. {% endhint %}
 
-Toto cvičení je zaměřeno na úpravy prvků aplikace Revit bez provedení geometrické operace v aplikaci Dynamo. Zde neimportujeme geometrii aplikace Dynamo, pouze upravujeme parametry v projektu aplikace Revit. Toto cvičení je základní, pokročilejší uživatelé aplikace Revit si mohou všimnout, že se jedná o parametry instance objemu, ale stejnou logiku lze použít na pole prvků, které chcete přizpůsobit ve velkém měřítku. To je vše s uzlem Element.SetParameterByName.
+Toto cvičení je zaměřeno na úpravy prvků aplikace Revit bez provedení geometrické operace v aplikaci Dynamo. Zde neimportujeme geometrii aplikace Dynamo, pouze upravujeme parametry v projektu aplikace Revit. Toto cvičení je základní, pokročilejší uživatelé aplikace Revit si mohou všimnout, že se jedná o parametry instance objemu, ale stejnou logiku lze použít na pole prvků, které chcete přizpůsobit ve velkém měřítku. To vše provedeme s uzlem Element.SetParameterByName.
 
 ### Úprava parametrů objemu budovy
 
