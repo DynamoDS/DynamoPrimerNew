@@ -211,7 +211,7 @@ Všimněte si, že máme nepřetržitý proces převodu dat z prostředí aplik
 1. Vybrat prvek aplikace Revit
 2. Převést prvek aplikace Revit na křivku aplikace Dynamo
 3. Rozdělit křivku aplikace Dynamo na řadu bodů aplikace Dynamo
-4. Vytvoření čar aplikace Dynamo pomocí bodů aplikace Dynamo mezi dvěma křivkami
+4. Vytvořit čáry aplikace Dynamo pomocí bodů aplikace Dynamo mezi dvěma křivkami
 5. Vytvořit nosníky aplikace Revit pomocí odkazů na čáry aplikace Dynamo
 6. Vytvořit výstup povrchů aplikace Dynamo pomocí dotazů na geometrii nosníků aplikace Revit
 
