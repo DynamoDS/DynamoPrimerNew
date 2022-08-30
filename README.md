@@ -16,12 +16,12 @@ Sie haben gerade Dynamo Primer geöffnet, die umfassende Einführung in die visu
 
 Der Leistungsumfang von Dynamo spiegelt sich in einer breiten Palette von konstruktionsbezogenen Aktivitäten wider. Dynamo bietet eine umfassende Reihe an leicht zugänglichen Möglichkeiten für den ersten Einstieg, die ständig erweitert wird:
 
-* **Erste Schritte** mit der visuellen Programmierung
+* **Erste Schritte** mit der visuellen Programmierung erkunden
 * Arbeitsabläufe in verschiedenen Softwareanwendungen **verbinden**
 * Eine aktive Community an Benutzern, Beitragenden und Entwicklern **einbeziehen**
 * Eine Open-Source-Plattform für die fortlaufende Optimierung **entwickeln**
 
-Vor dem Hintergrund dieser Aktivitäten und den aufregenden Möglichkeiten, die uns die Arbeit mit Dynamo bietet, benötigen wir ein Dokument desselben Kalibers: die Dynamo-Einführung.
+Vor dem Hintergrund dieser Aktivitäten und den aufregenden Möglichkeiten, die uns die Arbeit mit Dynamo bietet, benötigen wir ein Dokument desselben Kalibers: Dynamo Primer.
 
 Im [Dynamo Primer-Benutzerhandbuch](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) finden Sie Informationen zu den in dieser Einführung enthaltenen Themen.
 
@@ -61,7 +61,7 @@ Vielen Dank auch an Matt Jezyk, Ian Keough, Zach Kron, Racel Williams und Colin 
 
 ### Software und Ressourcen
 
-**Dynamo:** Die aktuelle stabile* Version von Dynamo ist Version 2.1.0.
+**Dynamo** Die aktuelle stabile* Version von Dynamo ist Version 2.1.0.
 
 http://dynamobim.com/download/ oder http://dynamobuilds.com
 
