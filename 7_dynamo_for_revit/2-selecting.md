@@ -28,7 +28,7 @@ _포인트 앤 클릭_ 은 Revit 요소를 직접 선택하는 가장 쉬운 방
 
 ![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
-_드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는 모든 요소 리스트를 작성합니다. 이 메뉴를 사용하여 뷰에서 반드시 보이지 않을 수 있는 Revit 요소를 참조할 수 있습니다. 이 도구는 Revit 프로젝트 또는 패밀리 편집기에서 기존 요소를 조회하거나 새 요소를 작성하는 데 유용합니다.
+_드롭다운 메뉴에서는_ Revit 프로젝트에서 액세스할 수 있는 모든 요소 리스트를 작성합니다. 이 메뉴를 사용하여 뷰에서 반드시 보이지 않을 수 있는 Revit 요소를 참조할 수 있습니다. 이 도구는 Revit 프로젝트 또는 패밀리 편집기에서 기존 요소를 조회하거나 새 요소를 작성하는 데 유용합니다.
 
 ![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
 
