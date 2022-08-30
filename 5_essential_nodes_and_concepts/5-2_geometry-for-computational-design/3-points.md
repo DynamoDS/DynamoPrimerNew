@@ -20,7 +20,7 @@ A 2D Point in Dynamo has two coordinates \[X,Y].
 
 Parameters for both Curves and Surfaces are continuous and extend beyond the edge of the given geometry. Since the shapes that define the Parameter Space reside in a three-dimensional World Coordinate System, we can always translate a Parametric Coordinate into a "World" Coordinate. The point \[0.2, 0.5] on the surface for example is the same as point \[1.8, 2.0, 4.1] in world coordinates.
 
-![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg>)
+![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg)
 
 > 1. Point in assumed World XYZ Coordinates
 > 2. Point relative to a given Coordinate System (Cylindrical)

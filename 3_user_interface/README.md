@@ -71,7 +71,7 @@ The Workspace is where we compose our visual programs, you may also change its P
 
 Run your Dynamo script from here. Click the dropdown icon on the Execution button to change between the different modes.
 
-![](images/user interface-executionbar.gif)
+![](images/userinterface-executionbar.gif)
 
 * Automatic: Runs your script automatically. Changes is updated in realtime.
 * Manual: Script only runs when the 'Run' button is clicked. Useful for when making changes to complicated and 'heavy script'
