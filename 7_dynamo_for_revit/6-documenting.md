@@ -4,7 +4,7 @@
 
 ### Odchylka
 
-V níže uvedeném cvičení použijeme základní odchylku od uzlu roviny k vytvoření výkresu aplikace Revit pro dokumentaci. Každý panel na parametricky definované střešní konstrukci má jinou hodnotu odchylky, Chceme vyřadit rozsah hodnot pomocí barvy a naplánováním adaptivních bodů, které předáme konzultantovi fasád, inženýrovi nebo dodavateli.
+V níže uvedeném cvičení použijeme základní odchylku od uzlu roviny k vytvoření výkresu aplikace Revit pro dokumentaci. Každý panel na parametricky definované střešní konstrukci má jinou hodnotu odchylky. Chceme vyřadit rozsah hodnot pomocí barvy a naplánováním adaptivních bodů, které předáme konzultantovi fasád, inženýrovi nebo dodavateli.
 
 ![odchylka](images/6/deviation.jpg)
 
