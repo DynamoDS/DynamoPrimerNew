@@ -33,7 +33,7 @@ import System
 
 Dynamo 專案的潛在宗旨是拓寬平台的實作範圍。隨著 Dynamo 加入更多程式至事項表，使用者可以從 Python 指令碼撰寫環境存取平台特定 API。雖然在本節中只是對 Revit 進行案例研究，但我們可以預期在將來的更多章節中，會針對在其他平台撰寫指令碼提供全面的自學課程。此外，現在還可以存取許多 [IronPython](http://ironpython.net) 資源庫，您可以將這些資源庫匯入 Dynamo！
 
-以下範例示範使用 Python 從 Dynamo 實作 Revit 特定作業的方式。若要更詳細地檢閱 Python 與 Dynamo 及 Revit 之間的關係，請參閱[Dynamo Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration)。Python 與 Revit 的另一項有用資源是 [Revit Python Shell](https://github.com/architecture-building-systems/revitpythonshell) 專案。
+以下範例示範使用 Python 從 Dynamo 實作 Revit 特定作業的方式。若要更詳細地檢閱 Python 與 Dynamo 及 Revit 之間的關係，請參閱 [Dynamo Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Python-0.6.3-to-0.7.x-Migration)。Python 與 Revit 的另一項有用資源是 [Revit Python Shell](https://github.com/architecture-building-systems/revitpythonshell) 專案。
 
 ## 練習 1
 
@@ -88,7 +88,7 @@ OUT = [doc,uiapp,app]
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
 
-開啟 _「Conceptual Mass」資料夾_ ，然後使用 _Metric Mass.rft_ 樣板檔。
+開啟 _「概念量體」資料夾_ ，然後使用 _Metric Mass.rft_ 樣板檔。
 
 ![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
 
@@ -157,7 +157,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 ![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
 
 > 1. **Select Model Element Nodes：** 按一下每個輸入的選取按鈕，然後選取 Revit 中的對應曲線。
-> 2. **Code Block：** 使用語法 `0..1..#x;`_，_將介於 0 與 20 之間的整數滑棒連接至 _x_ 輸入。此作業會指定在兩條曲線之間繪製的樑數量。
+> 2. **Code Block：** 使用語法 `0..1..#x;`，將介於 0 與 20 之間的整數滑棒連接至 _x_ 輸入。此作業會指定在兩條曲線之間繪製的樑數量。
 > 3. **Structural Framing Types：** 在此我們將從下拉式功能表中選擇預設的 W12x26 樑。
 > 4. **Levels：** 選取「Level 1」。
 
