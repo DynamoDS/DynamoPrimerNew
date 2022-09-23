@@ -14,7 +14,7 @@ The User Interface (UI) for Dynamo is organized into five main regions. We will 
 
 ### Menus
 
-![](../.gitbook/assets/userinterface-menu(1).jpg)
+![](../.gitbook/assets/userinterface-menu\(1\).jpg)
 
 Here are Menus for basic functionality of the Dynamo application. Like most Windows software, the first two menus related to managing files, operations for selection and content editing. The remaining menus are more specific to Dynamo.
 
@@ -49,7 +49,7 @@ If you're stuck, check out the **Help** Menu. You may access one of the Dynamo r
 Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
 
 * ![](images/userinterface-newfile.jpg) New - Create a new .dyn file
-* ![](images/userinterface-open(1).jpg) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
+* ![](images/userinterface-open.jpg) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
 * ![](images/userinterface-save.jpg) Save/Save As - Save your active .dyn or .dyf file
 * ![](images/userinterface-undo.jpg) Undo - Undo your last action
 * ![](images/userinterface-redo.jpg) Redo - Redo the next action

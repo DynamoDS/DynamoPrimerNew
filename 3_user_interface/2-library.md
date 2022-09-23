@@ -60,7 +60,7 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 * `library.category.nodeName`
 
-![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1).jpg)
+![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
 
 * `category.nodeName`
 
@@ -94,12 +94,12 @@ With hundreds of Nodes included in the basic installation of Dynamo, which ones 
 
 Input Nodes are the primary means for the User of our Visual Program - be that yourself or someone else - to interface with the key parameters. Here are some available from the Core Library:
 
-| Node           |                                                | Node           |                                                |
-| -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean        | ![](images/3-2/library-boolean.jpg)        | Number         | ![](images/3-2/library-number.jpg)         |
-| String         | ![](images/3-2/library-string.jpg)         | Number Slider  | ![](images/3-2/library-numberslider.jpg)  |
+| Node           |                                           | Node           |                                           |
+| -------------- | ----------------------------------------- | -------------- | ----------------------------------------- |
+| Boolean        | ![](images/3-2/library-boolean.jpg)       | Number         | ![](images/3-2/library-number.jpg)        |
+| String         | ![](images/3-2/library-string.jpg)        | Number Slider  | ![](images/3-2/library-numberslider.jpg)  |
 | Directory Path | ![](images/3-2/library-directorypath.jpg) | Integer Slider | ![](images/3-2/library-integerslider.jpg) |
-| File Path      | ![](images/3-2/library-filepath.jpg)      |                |                                                |
+| File Path      | ![](images/3-2/library-filepath.jpg)      |                |                                           |
 
 #### Watch & Watch3D
 

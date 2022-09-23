@@ -61,7 +61,7 @@ Thank you to Matt Jezyk, Ian Keough, Zach Kron, Racel Williams and Colin McCrone
 
 ### Software and Resources
 
-**Dynamo** The current stable\* release of Dynamo is Version 2.1.0
+**Dynamo** Please refer to the following sites for the most current **stable** release of Dynamo.
 
 http://dynamobim.com/download/ or http://dynamobuilds.com
 

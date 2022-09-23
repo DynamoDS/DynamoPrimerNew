@@ -1,6 +1,6 @@
 # Primer User Guide, Dynamo Community & Platform
 
-This Primer includes chapters developed with Mode Lab. These chapters focus on the essentials you will need to get up and running developing your own visual programs with Dynamo and key insights on how to take Dynamo further.&#x20;
+This Primer includes chapters developed with Mode Lab. These chapters focus on the essentials you will need to get up and running developing your own visual programs with Dynamo and key insights on how to take Dynamo further.
 
 ### Primer User Guide
 
@@ -19,11 +19,11 @@ If you would like to see the demonstration of Dynamo workflows, we have included
 
 * [Parametric Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](./images/1-2/vase1.gif)
+![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
 
 * [Attractor points](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
-![](./images/1-2/attractor1.gif)
+![](images/1-2/attractor1.gif)
 
 {% hint style="info" %}
 There are more topic specific exercises can be found in later chapters as we cover different topics about Dynamo. **Exercises** can usually be found in the last section of each page.
@@ -33,7 +33,7 @@ There are more topic specific exercises can be found in later chapters as we cov
 
 Dynamo wouldn't be what it is without a strong group of avid users and active contributors. Engage the community by following the [Blog](http://dynamobim.org/blog/), adding your work to the Gallery, or discussing Dynamo in the [Forum](https://forum.dynamobim.com).
 
-![The Forum](./images/1-2/02-Community.png)
+![The Forum](images/1-2/02-Community.png)
 
 ### The Platform
 
@@ -41,6 +41,6 @@ Dynamo is envisioned as a visual programming tool for designers, allowing us to 
 
 The source code for the project is open-source, enabling us to extend its functionality to our hearts content. Check out the project on GitHub and browse the Works in Progress of users customizing Dynamo.
 
-![The Repo](./images/1-2/03-TheRepo.png)
+![The Repo](images/1-2/03-TheRepo.png)
 
 > Browse, Fork, and start extending Dynamo for your needs
