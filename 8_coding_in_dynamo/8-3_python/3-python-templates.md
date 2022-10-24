@@ -30,7 +30,7 @@ Next we need to build a template with the functionality that we want to use buil
 
 You can start a blank notepad document and paste the following code inside:
 
-```
+``` py
 import clr
 
 clr.AddReference('RevitAPI')

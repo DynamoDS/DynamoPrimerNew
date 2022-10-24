@@ -8,7 +8,7 @@ Why would you use textual programming in Dynamo's visual programming environment
 
 **Textual Program:**
 
-```
+```py
 import clr
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
@@ -94,7 +94,7 @@ Let’s start by defining our inputs and output. Double click the node to open t
 
 ![](../images/8-3/1/pythonnode-exerciseptI-05.jpg)
 
-```
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -128,7 +128,7 @@ This code will make more sense as we progress in the exercise. Next we need to t
 
 > Take a look at the Python node in Dynamo. Notice that we're using the same syntax as we see in the titles of the nodes in Dynamo. Check out the commented code below.
 
-```
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -171,7 +171,7 @@ Since we will be both translating and rotating the solid modules, let’s use th
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-```
+``` py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

@@ -4,7 +4,7 @@
 
 Now that we've demonstrated how to use Python scripts in Dynamo, let's take a look at connecting Revit libraries into the scripting environment. Remember, we imported Python Standard and our Dynamo core nodes with the first four lines in the block of code below. To import the Revit nodes, Revit elements, and the Revit document manager, we only have to add a few more lines:
 
-```
+``` py
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -55,7 +55,7 @@ Here is how we're importing Revit Services and retrieving the document data in D
 
 Take a look at the Python node in Dynamo. You can also find the code from below:
 
-```
+``` py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -112,7 +112,7 @@ Take a look at the Python node in Dynamo. Find the full code at the below.
 
 > 1. **System.Array:** Revit needs a **System Array** as an input (rather than a Python list). This is just one more line of code, but paying attention to argument types will facilitate Python programming in Revit.
 
-```
+``` py
 import sys
 import clr
 
@@ -165,7 +165,7 @@ This code in Python is a little more dense, but the comments within the code des
 
 ![](../images/8-3/2/python&revit-exercise03-03.jpg)
 
-```
+``` py
 import clr
 #import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
