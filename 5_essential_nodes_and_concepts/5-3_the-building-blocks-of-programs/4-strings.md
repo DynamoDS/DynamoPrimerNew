@@ -8,9 +8,9 @@
 
 字串可以用於多種應用，包括定義自訂參數、註解文件集，以及剖析文字式資料集。字串節點位於 Core > Input 。
 
-以上範例節點是字串。可將數字表示為字串、字母或文字陣列。
+以上範例節點是字串。數字可以表示為字串、字母或文字陣列。
 
-![](<../images/5-3/4/strings - creating strings.jpg>)
+![](../images/5-3/4/strings-creatingstrings.jpg)
 
 ## 練習
 
@@ -26,25 +26,25 @@
 
 以下影像將考慮來自外部工作表的資料字串。該字串表示 XY 平面內某矩形的頂點。接下來在小練習中詳細瞭解某些字串分割作業：
 
-![](<../images/5-3/4/strings - querying strings 01.jpg>)
+![](../images/5-3/4/strings-queryingstrings01.jpg)
 
 > 1. 「;」分隔符號分隔矩形的每個頂點。這會建立清單，每個頂點有 3 個項目。
 
-![](<../images/5-3/4/strings - querying strings 02.jpg>)
+![](../images/5-3/4/strings-queryingstrings02.jpg)
 
 > 1. 透過按一下節點中部的「_+_」，可以建立新分隔符號。
-> 2. 加入「_,_」字串至圖元區，並插入至新的分隔符號輸入。
+> 2. 在圖元區加入「_,_」字串，並插入新的分隔符號輸入。
 > 3. 現在結果將產生含十個項目的清單。節點會先根據 _separator0_ 進行分割，然後根據 _separator1_ 進行分割。
 
 雖然以上項目清單可能看起來像數字，但是在 Dynamo 中，仍將其視為單獨的字串。若要建立點，需要將其資料類型從字串轉換為數字。我們使用 **String.ToNumber** 節點來達成
 
-![](<../images/5-3/4/strings - querying strings 03.jpg>)
+![](../images/5-3/4/strings-queryingstrings03.jpg)
 
-> 1. 本節點非常簡單。將 **String.Split** 結果插入輸入。輸出看上去似乎相同，但現在資料類型是 _number_ 而不是 _string_。
+> 1. 本節點非常簡單。將 **String.Split** 的結果插入輸入。輸出看上去似乎相同，但現在資料類型是 _number_ 而不是 _string_。
 
 透過其他某些基本作業，我們現在已根據原始字串輸入，在原點繪製了三角形。
 
-![](<../images/5-3/4/strings - querying strings 04.jpg>)
+![](../images/5-3/4/strings-queryingstrings04.jpg)
 
 ### 操控字串
 
@@ -54,7 +54,7 @@
 
 以下表示連接三個字串：
 
-![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
+![連接](../images/5-3/4/strings-manipulatingstrings01.jpg)
 
 > 1. 按一下節點中心的「+/-」按鈕，可以加上或減去連接的字串。
 > 2. 輸出是一個連接後的字串，其中包括空格與標點。
@@ -65,7 +65,7 @@
 
 以下影像表示接合兩個字串：
 
-![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
+![](../images/5-3/4/strings-manipulatingstrings02.jpg)
 
 > 1. 藉由分隔符號輸入，可以建立對接合後的字串進行分割的字串。
 
@@ -75,36 +75,36 @@
 
 接下來從這一節的基本字串分割開始。首先，我們注意到書寫格式的依據是逗號。我們將使用此格式將每行分隔為個別項目。
 
-![](<../images/5-3/4/strings - working with strings 01.jpg>)
+![](../images/5-3/4/strings-workingwithstrings01.jpg)
 
 > 1. 將基準字串貼至 **String** 節點。
 > 2. 另一個 **String** 節點用來表示分隔符號。在此案例中，我們將使用逗號。
 > 3. 將 **String.Split** 節點加入圖元區，並連接至兩個字串。
 > 4. 輸出顯示我們現在已將各行分隔為個別元素。
 
-現在，我們來到詩詞美妙的部分：最後兩行。原始的一節是一個資料項目。在第一步，我們已將此資料分隔為個別項目。現在，我們需要搜尋要尋找的文字。雖然我們 _可以_ 透過選取清單中的最後兩個項目來實現這一點，但是如果是整本書，我們不希望通讀所有內容然後手動隔離元素。
+現在，我們來到詩詞美妙的部分：最後兩行。原始的一節是一個資料項目。在第一步，我們已將此資料分隔為個別項目。現在，我們需要搜尋要尋找的文字。雖然我們_可以_透過選取清單中的最後兩個項目來實現這一點，但是如果是整本書，我們不希望通讀所有內容然後手動隔離元素。
 
-![](<../images/5-3/4/strings - working with strings 02.jpg>)
+![](../images/5-3/4/strings-workingwithstrings02.jpg)
 
 > 1. 我們不是手動搜尋，而是使用 **String.Contains** 節點對一組字元執行搜尋。這類似於文字處理器中的「尋找」指令。在此案例中，會傳回「true」，若項目中找到該子字串，會傳回「false」。
 > 2. 在 _searchFor_ 輸入中，我們會定義將在該節中尋找的子字串。接下來使用 **String** 節點搭配文字「And miles」。
 > 3. 輸出是 false 與 true 的清單。在下一步中，我們使用此布林邏輯對元素進行篩選。
 
-![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
+![分割](../images/5-3/4/strings-workingwithstrings03.jpg)
 
 > 1. 我們將使用 **List.FilterByBoolMask** 節點篩選出 false 與 true。「in」輸出會傳回「遮罩」輸入為「true」的陳述式，而「out」輸出會傳回「遮罩」輸入為「false」的陳述式。
 > 2. 「in」的輸出與預期相同，是該節詩句的最後兩行。
 
 現在，我們希望合併這兩行，以重複這節詩句。檢視上一步的輸出時，我們注意有清單中有兩個項目：
 
-![](<../images/5-3/4/strings - working with strings 04.jpg>)
+![](../images/5-3/4/strings-workingwithstrings04.jpg)
 
 > 1. 透過兩個 **List.GetItemAtIndex** 節點，我們可以使用值 0 與 1 做為索引輸入以隔離項目。
 > 2. 每個節點的輸出依序提供最後兩行。
 
 為了將這兩個項目合併為一個，我們使用 **String.Join** 節點：
 
-![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
+![分割字串](../images/5-3/4/strings-workingwithstrings05.jpg)
 
 > 1. 加入 **String.Join** 節點後，我們注意到需要分隔符號。
 > 2. 為了建立分隔符號，我們在圖元區加入 **String** 節點，然後鍵入逗號。

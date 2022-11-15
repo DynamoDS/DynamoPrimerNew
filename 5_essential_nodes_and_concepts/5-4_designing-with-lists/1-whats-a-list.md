@@ -6,9 +6,9 @@
 
 ![香蕉](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> 相片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 提供。
+> 相片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 拍攝。
 
-購買雜貨時，我們會將購買的所有商品放入袋中。這個袋子也是清單。如果要製作香蕉麵包，我們需要 3 束香蕉 (我們將製作 _大量_ 香蕉麵包)。袋子表示香蕉束的清單，而每束香蕉表示香蕉的清單。袋子是清單的清單 (二維)，而香蕉束是清單 (一維)。
+購買雜貨時，我們會將購買的所有商品放入袋中。這個袋子也是清單。如果要製作香蕉麵包，我們需要 3 束香蕉 (我們將製作_大量_香蕉麵包)。袋子表示香蕉束的清單，而每束香蕉表示香蕉的清單。袋子是清單的清單 (二維)，而香蕉束是清單 (一維)。
 
 在 Dynamo 中，清單資料具有順序，每個清單中第一個項目的索引都是「0」。以下我們將討論在 Dynamo 中如何定義清單，以及多個清單如何彼此相關。
 
@@ -20,13 +20,13 @@
 
 請注意，我們的清單中仍有 5 個項目，清單恰好使用從零開始的計數系統。清單中正在儲存的項目不一定是數字。它們可以是 Dynamo 支援的任何資料類型，例如點、曲線、曲面、族群等。
 
-![](<../images/5-4/1/what's a list - zero based indices.jpg>)
+![](../images/5-4/1/what'salist-zerobasedindices.jpg)
 
-> a. 索引
+> a.索引
 >
-> b. 點
+> b.點
 >
-> c. 項目
+> c.項目
 
 通常，查看清單中所儲存資料類型的最簡單方法，是將觀看節點連接至另一個節點的輸出。依預設，觀看節點會在清單的左側自動展示所有索引，並在右側展示資料項目。
 
@@ -36,18 +36,18 @@
 
 對清單而言，輸入與輸出視使用的 Dynamo 節點而有所不同。例如，接下來我們使用包含 5 個點的清單，並將此輸出連接至兩個不同的 Dynamo 節點：**PolyCurve.ByPoints** 與 **Circle.ByCenterPointRadius**：
 
-![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
+![輸入範例](../images/5-4/1/what'salist-inputsandoutputs.jpg)
 
-> 1. **PolyCurve.ByPoints** 的 _points_ 輸入是尋找 _「Point\[]」_。這表示點清單
+> 1. **PolyCurve.ByPoints** 的 _points_ 輸入是尋找_「Point[]」_。這表示點清單
 > 2. **PolyCurve.ByPoints** 的輸出是從一個包含五個點的清單建立的一條 PolyCurve。
-> 3. **Circle.ByCenterPointRadius** 的 _centerPoint_ 輸入要求 _「Point」_。
+> 3. **Circle.ByCenterPointRadius** 的 _centerPoint_ 輸入要求_「Point」_。
 > 4. **Circle.ByCenterPointRadius** 的輸出是一個包含五個圓的清單，其中圓的中心對應於點的原始清單。
 
 **PolyCurve.ByPoints** 與 **Circle.ByCenterPointRadius** 的輸入資料相同，但是 **Polycurve.ByPoints** 節點的結果是一條 PolyCurve，而 **Circle.ByCenterPointRadius** 節點的結果是中心位於每個點的 5 個圓。以直觀方式很容易理解這一點：polycurve 繪製為連接 5 個點的曲線，而圓會在每個點建立不同的圓。資料出現什麼情況？
 
-將游標懸停在 **Polycurve.ByPoints** 的 _points_ 輸入上方，可以看到輸入在尋找 _「Point\[]」_。注意末尾的中括號。這表示點的清單，若要建立 polycurve，輸入需要是每個 polycurve 的清單。因此，此節點會將每個清單濃縮到一條 polycurve 中。
+將游標懸停在 **Polycurve.ByPoints** 的 _points_ 輸入上方，可以看到輸入在尋找_「Point[]」_。注意末尾的中括號。這表示點的清單，若要建立 polycurve，輸入需要是每個 polycurve 的清單。因此，此節點會將每個清單濃縮到一條 polycurve 中。
 
-另一方面，**Circle.ByCenterPointRadius** 的 _centerPoint_ 輸入要求 _「Point」_。此節點會尋找一個點，做為項目以定義圓的中心點。因此輸入資料會產生五個圓。辨識 Dynamo 中這些輸入的差異可協助您更好地瞭解在管理資料時節點的作業方式。
+另一方面，**Circle.ByCenterPointRadius** 的 _centerPoint_ 輸入要求_「Point」_。此節點會尋找一個點，做為項目以定義圓的中心點。因此輸入資料會產生五個圓。辨識 Dynamo 中這些輸入的差異可協助您更好地瞭解在管理資料時節點的作業方式。
 
 ### 交織
 
@@ -59,23 +59,23 @@
 
 最簡單的方式是逐一連接輸入，直到其中一個串流結束為止。這稱為「最短清單」演算法。這是 Dynamo 節點的預設行為：
 
-![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
+![](../images/5-4/1/what'salist-lacing-shortest.jpg)
 
 #### 最長清單
 
 「最長清單」演算法會保持連接輸入，重複使用元素，直到所有串流結束為止：
 
-![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
+![](../images/5-4/1/what'salist-lacing-longest.jpg)
 
 #### 笛卡兒積
 
 最後，「笛卡兒積」方法會產生所有可能的連接：
 
-![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
+![](../images/5-4/1/what'salist-lacing-cross.jpg)
 
 您可以看到，可以採用不同方法在這組點之間繪製直線。在節點的中心按一下右鍵，然後選擇「交織」功能表，可以找到「交織」選項。
 
-![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
+![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
 ## 練習
 
@@ -91,18 +91,18 @@
 
 ### 最短清單
 
-選擇 _最短清單_ 做為交織選項 (也是預設選項)，我們會得到一條由五個點組成的基本對角線。五個點是較短清單的長度，因此最短清單交織會在到達一個清單的結尾後停止。
+選擇_最短清單_做為交織選項 (也是預設選項)，我們會得到一條由五個點組成的基本對角線。五個點是較短清單的長度，因此最短清單交織會在到達一個清單的結尾後停止。
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
+![輸入範例](../images/5-4/1/what'salist-lacingexercise01.jpg)
 
 ### **最長清單**
 
-如果將交織變更為 _最長清單_，我們會得到一條垂直延伸的對角線。運用與概念圖相同的方法，含 5 個項目的清單中的最後一個項目將重複，以達到較長清單的長度。
+如果將交織變更為_最長清單_，我們會得到一條垂直延伸的對角線。運用與概念圖相同的方法，含 5 個項目的清單中的最後一個項目將重複，以達到較長清單的長度。
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
+![輸入範例](../images/5-4/1/what'salist-lacingexercise02.jpg)
 
 ### **笛卡兒積**
 
-如果將交織變更為 _笛卡兒積_，我們會得到各個清單之間的每種組合，產生一個 5x10 的點格線。這個資料結構等同於上面的概念圖顯示的笛卡兒積，只是現在資料是一個清單的清單。如果連接 polycurve，我們可以看到每個清單都由其 X 值定義，因此產生一列垂直線。
+如果將交織變更為_笛卡兒積_，我們會得到各個清單之間的每種組合，產生一個 5x10 的點格線。這個資料結構等同於上面的概念圖顯示的笛卡兒積，只是現在資料是一個清單的清單。如果連接 polycurve，我們可以看到每個清單都由其 X 值定義，因此產生一列垂直線。
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
+![輸入範例](../images/5-4/1/what'salist-lacingexercise03.jpg)

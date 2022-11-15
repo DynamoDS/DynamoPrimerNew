@@ -1,6 +1,6 @@
 # 套件簡介
 
-簡言之，套件是自訂節點的集合。Dynamo Package Manager 是供社群對已經線上發佈的套件進行下載的入口網站。這些工具集由協力廠商為了延伸 Dynamo 的核心功能而開發，任何人都能存取，按一下按鈕即可隨時下載。
+簡言之，套件是自訂節點的集合。Dynamo Package Manager 是供社群對已經線上發佈的套件進行下載的入口網站。這些工具集由協力廠商為了延伸 Dynamo 的核心功能而開發，任何人都能存取，按一下按鈕即可下載。
 
 ![Package Manager 網站](../images/6-2/1/dpm.jpg)
 
@@ -8,54 +8,54 @@
 
 ### 安裝套件
 
-最簡易的套件安裝方式是使用 Dynamo 介面中的套件工具列。現在我們使用該工具列並安裝一個套件。在此簡單範例中，我們將安裝某常見套件，以便在格線上建立四邊形面板。
+最簡易的套件安裝方式是使用 Dynamo 介面中的套件工具列。現在我們使用該工具列並安裝一個套件。在此簡單範例中，我們將安裝某個常見套件，在格線上建立四邊形板。
 
-在 Dynamo 中，移至 _「套件」>「搜尋套件...」_
+在 Dynamo 中，移至_「套件」>「搜尋套件...」_
 
-![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
 
 在搜尋列中，我們搜尋「quads from rectangular grid」。片刻之後，您應該會看到符合此搜尋查詢的所有套件。我們要選取具有相符名稱的第一個套件。
 
 按一下「安裝」，將此套件加入您的資源庫。完成！
 
-![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
 
-請注意，Dynamo 資源庫中現在存在另一個群組，稱為「buildz」。此名稱是指套件的開發人員，此群組中已放置自訂節點。我們可以立即開始使用此群組。
+請注意，Dynamo 資源庫中現在有另一個群組稱為「buildz」。此名稱是指套件的開發人員，此群組中已放置自訂節點。我們可以立即開始使用。
 
-![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage03.jpg)
 
 使用 **Code Block** 可快速定義矩形格線，將結果輸出至 **Polygon.ByPoints** 節點，然後輸出至 **Surface.ByPatch** 節點，以檢視您剛剛建立的矩形板清單。
 
-![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage04.jpg)
 
 ### 安裝套件資料夾 - DynamoUnfold
 
-上述範例著重針對具有一個自訂節點的套件，不過您可以使用相同程序下載具有多個自訂節點的套件並支援資料檔案。現在使用更全面的套件 (Dynamo Unfold) 演示這一點。
+上述範例著重針對具有一個自訂節點的套件，不過您可以使用相同程序下載具有多個自訂節點的套件並支援資料檔案。現在使用更全面的套件 DynamoUnfold 示範。
 
-在上述範例中，首先選取 _「套件」>「搜尋套件...」_。
+在上述範例中，首先選取_「套件」>「搜尋套件...」_。
 
-這一次我們將搜尋 _「DynamoUnfold」_，這是一個單字，請注意大寫。當我們看到套件時，按一下「安裝」來下載，將 Dynamo Unfold 加入您的 Dynamo 資源庫。
+這一次我們搜尋 _DynamoUnfold_，這是一個字，請注意大小寫。當我們看到套件時，按一下「安裝」下載，將 DynamoUnfold 加入您的 Dynamo 資源庫。
 
-![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
 
-在 Dynamo 資源庫中，我們的 _DynamoUnfold_ 群組具有多個品類和自訂節點。
+在 Dynamo 資源庫中，我們有一個 _DynamoUnfold_ 群組，當中有多個品類和自訂節點。
 
-![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
 現在，我們看一下套件的檔案結構。首先，選取「Dynamo」>「偏好」
 
-![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
 
-從「偏好」快顯中，開啟「Package Manager」>「DynamoUnfold」旁邊，選取垂直圓點功能表 ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) >「展示根目錄」以開啟此套件的根資料夾。
+從「偏好」快顯中，開啟「Package Manager」> 在 DynamoUnfold 旁邊選取垂直圓點功能表 ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) >「展示根目錄」，以開啟此套件的根資料夾。
 
-![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
 
-這會將我們移至套件的根目錄。請注意，我們有 3 個資料夾和 1 個檔案。
+這會將我們帶到套件的根目錄。請注意，我們有 3 個資料夾和 1 個檔案。
 
-![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder05.jpg)
 
 > 1. _bin_ 資料夾包含 .dll 檔案。此 Dynamo 套件使用 Zero-Touch 進行開發，因此自訂節點保留在此資料夾中。
-> 2. _dyf_ 資料夾包含自訂節點。此套件未使用 Dynamo 自訂節點進行開發，所以此資料夾不包含此套件的內容。
+> 2. _dyf_ 資料夾包含自訂節點。此套件不是使用 Dynamo 自訂節點進行開發，所以此套件的此資料夾是空的。
 > 3. extra 資料夾包含所有其他檔案 (包括範例檔案)。
 > 4. pkg 檔案是定義套件設定的基本文字檔案。現在我們可以忽略該檔案。
 
@@ -65,27 +65,27 @@
 
 ![](../images/6-2/1/rd2.jpg)
 
-開啟檔案並按一下解析器上的「執行」後，即可展開圓球！ 諸如此類的範例檔案有助於學習如何使用新 Dynamo 套件。
+開啟檔案並按一下求解器上的「執行」後，就會看到一個展開的圓球！諸如此類的範例檔案有助於學習如何使用新的 Dynamo 套件。
 
-![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg)
 
 ### Dynamo Package Manager
 
-探索 Dynamo 套件的另一種方式是線上探究 [Dynamo Package Manager](http://dynamopackages.com)。這是瀏覽套件的良好方式，因為儲存庫會根據下載計數與受歡迎程度的順序對套件排序。此外，使用該方式可以輕鬆收集套件最近更新的相關資訊，因為某些 Dynamo 套件受 Dynamo 版次的版本與相依性限制。
+探索 Dynamo 套件的另一種方式是線上探索 [Dynamo Package Manager](http://dynamopackages.com)。這是瀏覽套件的好方式，因為儲存庫會根據下載計數與受歡迎程度的順序對套件排序。此外，也是一個可以輕鬆收集套件最近更新相關資訊的方式，因為某些 Dynamo 套件受 Dynamo 版次的版本控制與相依性限制。
 
-在 Dynamo Package Manager 中按一下 _「Quads from Rectangular Grid」_，您可以查看其描述、版本、開發人員及可能的相依性。
+在 Dynamo Package Manager 中按一下_「Quads from Rectangular Grid」_，您可以查看其描述、版本、開發人員及可能的相依性。
 
 ![](../images/6-2/1/dpm2.jpg)
 
-您也可以從 Dynamo Package Manager 下載套件檔案，但是從 Dynamo 直接執行此作業會更順暢。
+您也可以從 Dynamo Package Manager 下載套件檔案，但是從 Dynamo 直接執行會更順暢。
 
 ### 套件儲存在本端的什麼位置？
 
 如果您從 Dynamo Package Manager 下載檔案，或想要查看所有套件檔案的儲存位置，請按一下「Dynamo」>「Package Manager」>「節點和套件路徑」，就可以從此處找到您目前的根資料夾目錄。
 
-![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
-套件預設會安裝在與以下資料夾路徑類似的位置：_C:/Users/\[使用者名稱]/AppData/Roaming/Dynamo/\[Dynamo 版本]_。
+套件預設安裝在與以下資料夾路徑類似的位置：_C:/Users/[使用者名稱]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
 
 ### 進一步使用套件
 

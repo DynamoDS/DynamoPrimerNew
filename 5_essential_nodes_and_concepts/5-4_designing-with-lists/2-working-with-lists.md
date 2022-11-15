@@ -43,7 +43,7 @@
 
 以下影像是基礎圖表，我們在兩個圓之間繪製線以表示基本清單作業。我們將探究如何管理清單內的資料，並透過以下清單動作示範視覺結果。
 
-![](<../images/5-4/2/working with list - list operation.jpg>)
+![](../images/5-4/2/workingwithlist-listoperation.jpg)
 
 > 1. 首先使用一個 **Code Block**，值為 `500;`
 > 2. 插入 **Point.ByCoordinates** 節點的 x 輸入。
@@ -65,9 +65,9 @@
 
 _List.Count_ 節點很簡單：它會對清單中的值進行計數，並傳回該數量。使用清單的清單時，此節點將更為精細，不過我們將在後續章節示範該內容。
 
-![Count](<../images/5-4/2/working with list - list operation - list count.jpg>)
+![計數](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. **List.Count**_****_ 節點會傳回 **Line.ByStartPointEndPoint** 節點中的線數量。在此案例中，該值為 10，這與從原始 **Code Block** 節點建立的點數一致。
+> 1. **List.Count **_****_ 節點會傳回 **Line.ByStartPointEndPoint** 節點中的線數。在此案例中，該值為 10，這與從原始 **Code Block** 節點建立的點數一致。
 
 ### List.GetItemAtIndex
 
@@ -79,14 +79,14 @@ _List.Count_ 節點很簡單：它會對清單中的值進行計數，並傳回�
 
 **List.GetItemAtIndex** 是對清單中的項目進行查詢的基本方式。
 
-![Exercise](<../images/5-4/2/working with list - get item index 01.jpg>)
+![練習](../images/5-4/2/workingwithlist-getitemindex01.jpg)
 
 > 1. 首先，在 **Line.ByStartPointEndPoint** 節點上按一下右鍵以關閉其預覽。
 > 2. 使用 **List.GetItemAtIndex** 節點，我們將選取索引 _0_ 或線清單中的第一個項目。
 
 變更介於 0 到 9 之間的滑棒值，以使用 **List.GetItemAtIndex** 選取其他項目。
 
-![](<../images/5-4/2/working with list - get item index 02.gif>)
+![](../images/5-4/2/workingwithlist-getitemindex02.gif)
 
 ### List.Reverse
 
@@ -98,7 +98,7 @@ _List.Count_ 節點很簡單：它會對清單中的值進行計數，並傳回�
 
 _List.Reverse_ 會反轉清單中所有項目的順序。
 
-![Exercise](<../images/5-4/2/working with list - list reverse.jpg>)
+![練習](../images/5-4/2/workingwithlist-listreverse.jpg)
 
 > 1. 若要正確顯示反轉的線清單，請將 **Code Block** 變更為 `0..1..#50;` 以建立更多條線
 > 2. 複製 **Line.ByStartPointEndPoint** 節點，在 **Curve.PointAtParameter** 與第二個 **Line.ByStartPointEndPoint** 之間插入 List.Reverse 節點
@@ -114,7 +114,7 @@ _List.Reverse_ 會反轉清單中所有項目的順序。
 
 **List.ShiftIndices** 是建立扭轉或螺旋樣式或任何其他類似資料處理的良好工具。此節點會將清單中的項目移位指定數量的索引。
 
-![Exercise](<../images/5-4/2/working with list - shiftIndices 01.jpg>)
+![練習](../images/5-4/2/workingwithlist-shiftIndices01.jpg)
 
 > 1. 採用對反轉清單的相同程序，將 **List.ShiftIndices** 插入 **Curve.PointAtParameter** 與 **Line.ByStartPointEndPoint**。
 > 2. 使用 **Code Block**，指定值「1」將清單移位一個索引。
@@ -122,7 +122,7 @@ _List.Reverse_ 會反轉清單中所有項目的順序。
 
 將 **Code Block** 變更為較大的值 (例如 _30_)，我們發現對角線有顯著不同。在此範例中，此移位的作用類似於相機的光圈，對原始圓柱形產生了扭轉。
 
-![](<../images/5-4/2/working with list - shiftIndices 02.jpg>)
+![](../images/5-4/2/workingwithlist-shiftIndices02.jpg)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -136,12 +136,12 @@ _List.Reverse_ 會反轉清單中所有項目的順序。
 
 **List.FilterByBooleanMask** 將根據一系列布林值或者「True」或「False」值移除某些項目。
 
-![Exercise](<../images/5-4/2/working with list - filter by bool mask.jpg>)
+![練習](../images/5-4/2/workingwithlist-filterbyboolmask.jpg)
 
 為了建立一系列「True」或「False」值，我們需要多做一些工作...
 
 > 1. 使用 **Code Block**，採用以下語法定義表示式：`0..List.Count(list);`。將 **Curve.PointAtParameter** 節點連接至 _list_ 輸入。我們將在程式碼區塊一章中更詳細地講解此設置，但此案例中的程式碼行將產生代表 **Curve.PointAtParameter** 節點每個索引的清單。
-> 2. 使用_**%**_** (模數) ** 節點，將 _code block_ 的輸出連接至 _x_ 輸入，將值 _4_ 連接至 _y_ 輸入。這會產生索引清單除以 4 時的餘數。模數在建立樣式時是非常有用的節點。4 的所有可能餘數包括：0、1、2、3。
+> 2. 使用_**%**_** (模數)** 節點，將 _Code Block_ 的輸出連接至 _x_ 輸入，將值 _4_ 連接至 _y_ 輸入。這會產生索引清單除以 4 時的餘數。模數在建立樣式時是非常有用的節點。4 的所有可能餘數包括：0、1、2、3。
 > 3. 從 _**%**_** (模數)** 節點，我們知道值 0 表示索引可由 4 整除 (0、4、8 等)。使用 **==** 節點，我們可以測試餘數的值是否為 _0_，以測試是否能整除。
 > 4. **Watch** 節點顯示此狀況：True/False 樣式為：_true,false,false,false..._。
 > 5. 使用此 True/False 樣式，連接至兩個 **List.FilterByBooleanMask** 節點的 mask 輸入。

@@ -12,7 +12,7 @@ description: suggested exercise
 * 使用節點建立和修改幾何元素。
 * 即時視覺化設計結果。
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ## 定義我們的目標
 
@@ -32,7 +32,7 @@ description: suggested exercise
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-我們需要一些節點來展示 Dynamo 將執行的動作序列。我們知道要嘗試建立圓形，所以先找出執行該作業的節點。使用**搜尋欄位**或瀏覽 **「資源庫」** 以尋找 **Circle.ByCenterPointRadius** 節點，並將其加入工作區
+我們需要一些節點來展示 Dynamo 將執行的動作序列。我們知道要嘗試建立圓形，所以先找出執行該作業的節點。使用**搜尋欄位**或瀏覽 **Library** 以尋找 **Circle.ByCenterPointRadius** 節點，並將其加入工作區
 
 ![](../images/10-1/1/vase8.png)
 
@@ -40,7 +40,7 @@ description: suggested exercise
 > 2. 選取 >「ByCenterPointRadius」
 > 3. 節點將顯示在工作區中
 
-我們來詳細瞭解這個節點。在左側，您有節點的輸入 (_centerPoint_ 和 _radius_)，在右側，您有節點的輸出 (Circle)。請注意，輸出有一條淺藍線。這表示輸入有預設值。如需取得有關輸入的更多資訊，請將游標懸停在輸入名稱上。_radius_ 輸入需要一個 double (雙精確度) 輸入，且預設值為 1。
+我們來詳細瞭解這個節點。在左側，您有節點的輸入 (_centerPoint_ 和 _radius_)，在右側，您有節點的輸出 (Circle)。請注意，輸出有一條淺藍線。這表示輸入有預設值。若要取得有關輸入的更多資訊，請將游標懸停在輸入名稱上。_radius_ 輸入需要一個 double (雙精確度) 輸入，且預設值為 1。
 
 ![](../images/10-1/1/vase10.png)
 
@@ -48,7 +48,7 @@ description: suggested exercise
 
 此節點與我們先前的節點稍有不同，因為它包含滑棒。您可以使用介面變更滑棒的輸出值。
 
-![](<../images/10-1/1/vase13 (1).gif>)
+![](../images/10-1/1/vase13(1).gif)
 
 您可以使用節點左側的下拉式按鈕規劃滑棒。我們將滑棒限制最大值為 15。
 
@@ -70,7 +70,7 @@ description: suggested exercise
 
 我們複製這些節點 4 次，讓這些圓定義曲面，變更 Number Slider 的名稱，如下圖所示。
 
-![](<../images/10-1/1/vase4 (1) (1).png>)
+![](../images/10-1/1/vase4(1)(1).png)
 
 > 1. 圓是由一個中心點和一個半徑產生
 
@@ -78,13 +78,13 @@ description: suggested exercise
 
 我們缺少花瓶的關鍵參數，也就是花瓶的高度。為了控制花瓶的高度，我們要建立另一個數字滑棒。我們也加入一個 **Code Block** 節點。程式碼區塊可協助將個人化的程式碼片段加入我們的工作流程。我們將使用程式碼區塊讓高度滑棒乘以不同係數，以便我們可以沿花瓶高度放置圓。
 
-![](<../images/10-1/1/vase15 (1).png>)
+![](../images/10-1/1/vase15(1).png)
 
 然後，我們使用 **Geometry.Translate** 節點，將圓放在所需的高度。由於我們要將圓分佈到花瓶中，因此我們使用程式碼區塊將高度參數乘以一個係數。
 
 ![](../images/10-1/1/vase5.png)
 
-> 2\. 圓在 Z 軸中會依變數平移 (移動)。
+> 2\.圓在 Z 軸中會依變數平移 (移動)。
 
 ### 建立曲面
 
@@ -92,14 +92,14 @@ description: suggested exercise
 
 我們也關閉其他節點中的預覽，只顯示 Surface.ByLoft 的畫面。
 
-![](<../images/10-1/1/vase6 (1) (1).png>)
+![](../images/10-1/1/vase6(1)(1).png)
 
-> 3\. 曲面是透過斷面混成平移的圓建立而成。
+> 3\.曲面是透過斷面混成平移的圓建立而成。
 
 ## 結果
 
 我們的工作流程已經準備好！我們現在可以使用指令碼中定義的**數字滑棒**產生不同的花瓶設計。
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ![](../images/10-1/1/vase7.png)

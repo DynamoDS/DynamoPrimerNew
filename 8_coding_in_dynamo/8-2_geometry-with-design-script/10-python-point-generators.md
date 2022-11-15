@@ -1,10 +1,10 @@
 # Python 點產生器
 
-以下 Python 指令碼會為多個範例產生點陣列。請將這些指令碼貼至 Python 指令碼節點，如下所示：
+以下 Python 指令碼會為多個範例產生點陣列。請將這些指令碼貼至 Python Script 節點，如下所示：
 
-![](<../images/8-2/10/python points 01.jpg>)
+![](../images/8-2/10/pythonpoints01.jpg)
 
-**python\_points\_1**
+**python_points_1**
 
 ```python
 out_points = []
@@ -23,7 +23,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_2**
+**python_points_2**
 
 ```python
 out_points = []
@@ -37,7 +37,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_3**
+**python_points_3**
 
 ```python
 out_points = []
@@ -51,7 +51,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_4**
+**python_points_4**
 
 ```python
 out_points = []
@@ -65,7 +65,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_5**
+**python_points_5**
 
 ```python
 out_points = []

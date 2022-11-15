@@ -1,8 +1,6 @@
 # 關於
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
-Dynamo 宣傳影片
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
 ## 適用於 Dynamo 2.13 版
 
@@ -61,7 +59,7 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 ### 軟體和資源
 
-**Dynamo** Dynamo 目前的穩定* 版本為 2.1.0。
+**Dynamo** 請參閱以下網站，以取得 Dynamo 最新的**穩定**版本。
 
 http://dynamobim.com/download/ 或 http://dynamobuilds.com
 
