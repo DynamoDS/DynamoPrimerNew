@@ -2,18 +2,18 @@
 
 ## Superfícies no Dynamo
 
-### O que é a superfície
+### O que é a superfície?
 
-Usamos [Superfície](5-surfaces.md#surface) no modelo para representar objetos que vemos em nosso mundo tridimensional. Enquanto as curvas nem sempre são planas, ou seja, elas são tridimensionais, o espaço que elas definem é sempre vinculado a uma dimensão. As superfícies nos dão outra dimensão e um conjunto de propriedades adicionais que podemos usar em outras operações de modelagem.
+Usamos [Superfície](5-surfaces.md#surface) no modelo para representar objetos que vemos em nosso mundo tridimensional. Embora as curvas nem sempre sejam planas, ou seja, sejam tridimensionais, o espaço que elas definem estará sempre vinculado a uma cota. As superfícies proporcionam outra dimensão e um conjunto de propriedades adicionais que podemos usar em outras operações de modelagem.
 
 ### Superfície no parâmetro
 
-Importe e avalie uma superfície em um parâmetro no Dynamo para ver que tipo de informações podemos extrair.
+Importe e avalie uma superfície em um parâmetro no Dynamo para ver o tipo de informações que podemos extrair.
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
 
-> 1. _Surface.PointAtParameter_ retorna o ponto em uma determinada coordenada UV
-> 2. _Surface.NormalAtParameter_ retorna o vetor normal em uma dada coordenada UV
+> 1. _Surface.PointAtParameter_ retorna o ponto em uma determinada coordenada UV
+> 2. _Surface.NormalAtParameter_ retorna o vetor normal em uma determinada coordenada UV
 > 3. _Surface.GetIsoline_ retorna a curva isoparamétrica em uma coordenada U ou V: observe a entrada isoDirection.
 
 > Faça o download dos arquivos de exemplo clicando no link abaixo.
@@ -26,7 +26,7 @@ Importe e avalie uma superfície em um parâmetro no Dynamo para ver que tipo de
 
 ### Superfície
 
-Uma superfície é uma forma matemática definida por uma função e dois parâmetros. Em vez de `t` para curvas, usamos `U` e `V` para descrever o espaço de parâmetro correspondente. Isso significa que temos mais dados geométricos para desenhar ao trabalhar com este tipo de geometria. Por exemplo, as curvas apresentam vetores tangentes e planos normais (que podem ser rotacionados ou girados ao longo do comprimento da curva), enquanto superfícies apresentam vetores normais e planos tangentes que serão consistentes na sua orientação.
+Uma superfície é uma forma matemática definida por uma função e dois parâmetros. Em vez de `t` para curvas, usamos `U` e `V` para descrever o espaço de parâmetro correspondente. Isso significa que temos mais dados geométricos para desenhar ao trabalhar com este tipo de geometria. Por exemplo, as curvas apresentam vetores tangentes e planos normais (que podem ser rotacionados ou girados ao longo do comprimento da curva), enquanto as superfícies apresentam vetores normais e planos tangentes que são consistentes na sua orientação.
 
 ![Superfície](../images/5-2/5/Surface.jpg)
 
@@ -37,19 +37,19 @@ Uma superfície é uma forma matemática definida por uma função e dois parâm
 > 5. Plano perpendicular
 > 6. Vetor normal
 
-**Domínio de superfície**: um domínio de superfície é definido como o intervalo de parâmetros (U,V) que são avaliados em um ponto tridimensional naquela superfície. O domínio em cada cota (U ou V) normalmente é descrito como dois números (U mín para U máx) e (V mín para V máx).
+**Surface Domain**: um domínio de superfície é definido como o intervalo de parâmetros (U,V) que são avaliados em um ponto tridimensional naquela superfície. O domínio em cada cota (U ou V) normalmente é descrito como dois números (U mín a U máx) e (V mín a V máx).
 
 ![Superfície](../images/5-2/5/SurfaceParameter.jpg)
 
-Embora a forma da superfície não pareça “retangular” e localmente possa ter um conjunto de isocurves mais rígido ou mais solto, o “espaço” definido por seu domínio é sempre bidimensional. No Dynamo, as superfícies sempre são consideradas como tendo um domínio definido por um mínimo de 0,0 e um máximo de 1,0 nas direções U e V. As superfícies planas ou aparadas podem apresentar diferentes domínios.
+Embora a forma da superfície não pareça “retangular” e localmente possa haver um conjunto de isocurvas mais rígido ou mais solto, o “espaço” definido por seu domínio é sempre bidimensional. No Dynamo, as superfícies sempre são consideradas como tendo um domínio definido por um mínimo de 0,0 e um máximo de 1,0 nas direções U e V. As superfícies planas ou aparadas podem apresentar diferentes domínios.
 
-**Isocurve** (ou curva isoparamétrica): uma curva definida por um valor U ou V constante na superfície e um domínio de valores para a outra direção U ou V correspondente.
+**Isocurva** (ou curva isoparamétrica): uma curva definida por um valor U ou V constante na superfície e um domínio de valores para a outra direção U ou V correspondente.
 
-**Coordenada UV**: o ponto no espaço de parâmetro UV definido por U, V e, às vezes, W.
+**Coordenada UV**: o ponto no espaço de parâmetro UV definido por U, V e, às vezes, W.
 
 ![Coordenada de superfície](../images/5-2/5/SurfaceCoordinate.jpg)
 
-**Plano perpendicular**: um plano que é perpendicular às Isocurves U e V em uma determinada coordenada UV.
+**Plano perpendicular**: um plano que é perpendicular às Isocurvas U e V em uma determinada coordenada UV.
 
 **Vetor normal**: um vetor que define a direção “para cima” em relação ao plano perpendicular.
 
@@ -70,10 +70,10 @@ No caso de superfícies NURBS, há duas direções implícitas pela geometria, p
 
 ### Polysurfaces
 
-As **Polysurfaces** são compostas de superfícies que são unidas através de uma aresta. As Polysurfaces oferecem mais de uma definição UV bidimensional, pois agora podemos percorrer as formas conectadas por meio de sua topologia.
+As **Polysurfaces** são compostas por superfícies que são unidas através de uma aresta. As Polysurfaces oferecem muito mais do que uma definição UV bidimensional, pois agora podemos percorrer as formas conectadas por meio de sua topologia.
 
 Embora “Topologia” geralmente descreva um conceito sobre como as peças são conectadas e/ou relacionadas, a topologia no Dynamo também é um tipo de geometria. Especificamente, é uma categoria principal para Superfícies, Polysurfaces e Sólidos.
 
 ![PolySurface](../images/5-2/5/PolySurface.jpg)
 
-Às vezes chamada de patches, a junção de superfícies dessa maneira nos permite criar formas mais complexas, além de definir detalhes na junção. Convenientemente, podemos aplicar uma operação de arredondamento ou chanfro às arestas de uma PolySurface.
+Às vezes chamada de patches, a união de superfícies dessa maneira permite criar formas mais complexas, além de definir detalhes na junção. Convenientemente, podemos aplicar uma operação de arredondamento ou chanfro às arestas de uma PolySurface.

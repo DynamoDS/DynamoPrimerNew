@@ -10,11 +10,11 @@ Quando você tem várias cópias de um nó personalizado no gráfico, é possív
 
 O melhor recurso dos nós personalizados é a forma de compartilhamento de trabalho. Se um “usuário avançado” criar um gráfico do Dynamo complexo e o entregar a um designer iniciante no Dynamo, ele poderá condensar o gráfico para exibir o essencial para a interação do projeto. Será possível abrir o nó personalizado para editar o gráfico interno, mas o “contêiner” poderá ser mantido simples. Com esse processo, os nós personalizados permitem que os usuários do Dynamo projetem um gráfico limpo e intuitivo.
 
-![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
+![](../images/6-1/1/customnodeintro-worksharing01.jpg)
 
 ### Muitas maneiras de criar um nó
 
-Há uma ampla variedade de maneiras de criar nós personalizados no Dynamo. Nos exemplos neste capítulo, vamos criar nós personalizados diretamente na IU do Dynamo. Se for um programador e estiver interessado na formatação C# ou Zero-Touch, será possível consultar [esta página](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes) no Wiki do Dynamo para obter uma revisão mais aprofundada.
+Há uma ampla variedade de maneiras de criar nós personalizados no Dynamo. Nos exemplos neste capítulo, vamos criar nós personalizados diretamente na interface do usuário do Dynamo. Se você for um programador e tiver interesse na formatação C# ou Sem toque, poderá consultar [esta página](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes) na Wiki do Dynamo para obter uma revisão mais aprofundada.
 
 ### Ambiente de nó personalizado e criar o primeiro nó personalizado
 
@@ -22,28 +22,28 @@ Vamos para o ambiente de nó personalizado e criar um nó simples para calcular 
 
 Para criar um nó personalizado do zero, inicie o Dynamo e selecione Nó personalizado ou digite Ctrl + Shift + N na tela.
 
-![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment01.jpg)
 
 Atribua um nome, uma descrição e uma categoria na caixa de diálogo Propriedades de nó personalizado.
 
-![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment02.jpg)
 
-> 1. **Nome:** Porcentagem
+> 1. **Nome**: porcentagem
 > 2. **Descrição**: calcula a porcentagem de um valor em relação a outro.
-> 3. **Categoria:** Math.Functions
+> 3. **Categoria**: Math.Functions
 
-Isso abrirá uma tela com um fundo amarelo, indicando que você está trabalhando dentro de um nó personalizado. Nessa tela, você tem acesso a todos os nós principais do Dynamo, bem como aos nós Input e Output, que rotulam os dados que fluem para dentro e para fora do nó personalizado. Eles podem ser encontrados em Input>Basic.
+Isso abrirá uma tela com um fundo amarelo, indicando que você está trabalhando dentro de um nó personalizado. Nessa tela, você tem acesso a todos os nós principais do Dynamo, bem como aos nós Input e Output, que rotulam os dados que fluem para dentro e para fora do nó personalizado. Eles podem ser encontrados em Entrada>Básico.
 
-![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment03.jpg)
 
-![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
 
-> 1. **Inputs:** os nós de entrada criam portas de entrada no nó personalizado. A sintaxe para um nó de entrada é _input\_name : datatype = default\_value(opcional)._
-> 2. **Outputs:** semelhante às entradas, os nós de saída vão criar e nomear as portas de saída no nó personalizado. Considere a possibilidade de adicionar um **Comentário personalizado** às portas de entrada e saída para indicar os tipos de entrada e saída. Isso é discutido em mais detalhes na [seção Criar nós personalizados](2-creating.md).
+> 1. **Entradas**: os nós de entrada criam portas de entrada no nó personalizado. A sintaxe para um nó de entrada é _input_name : datatype = default_value(optional)._
+> 2. **Saídas**: de forma semelhante às entradas, os nós de saída criam e nomeiam as portas de saída no nó personalizado. Considere a possibilidade de adicionar um **Comentário personalizado** às portas de entrada e saída para indicar os tipos de entrada e saída. Isso é discutido em mais detalhes na seção [Criar nós personalizados](2-creating.md).
 
 É possível salvar esse nó personalizado como um arquivo .dyf (em oposição ao arquivo .dyn padrão) e ele será automaticamente adicionado à sua sessão e a sessões futuras. Você encontrará o nó personalizado na biblioteca na seção Complementos.
 
-![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment05.jpg)
 
 ### Seguindo em frente
 

@@ -6,11 +6,11 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 
 ## Reduzir a complexidade
 
-À medida que você desenvolve o gráfico do Dynamo e testa ideias, ele pode aumentar rapidamente em tamanho e complexidade. Embora seja importante criar um programa funcional, é igualmente importante o tornar o mais simples possível. Assim, além de o gráfico ser executado de forma mais rápida e previsível, você e outros usuários compreenderão a lógica posteriormente. A seguir, estão diversas formas que ajudarão a esclarecer a lógica do gráfico.
+À medida que você desenvolve o gráfico do Dynamo e testa ideias, ele pode aumentar rapidamente em tamanho e complexidade. Embora seja importante criar um programa funcional, é igualmente importante o tornar o mais simples possível. Assim, além de o gráfico ser executado de forma mais rápida e previsível, você e outros usuários compreenderão a lógica posteriormente. Confira a seguir diversas formas que ajudarão você a esclarecer a lógica do gráfico.
 
 ### **Modularizar com grupos**
 
-* Os grupos permitem **criar peças funcionalmente distintas** enquanto você cria um programa
+* Os grupos permitem **criar partes funcionalmente distintas** enquanto você cria um programa
 * Os grupos permitem **mover grandes partes do programa** enquanto a modularidade e o alinhamento são mantidos
 * É possível alterar a **cor do grupo para diferenciar** o que os grupos estão fazendo (entradas versus funções)
 * É possível usar grupos para iniciar a **organização do gráfico para simplificar a criação do nó personalizado**
@@ -23,35 +23,35 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 > 2. Grupo de entradas (laranja)
 > 3. Grupo de scripts (verde)
 >
-> Para saber como usar os grupos, consulte [Gerenciar o programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Para saber como usar Grupos, consulte [Como gerenciar o programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
 ### **Desenvolver com eficiência usando blocos de código**
 
-* Às vezes, é possível usar um bloco de código para **digitar um método de número ou nó mais rápido do que pesquisar** (Point.ByCoordinates, Number, String, Formula)
+* Às vezes, é possível usar um bloco de código para **digitar um método de nó ou número mais rapidamente do que pesquisando** (Point.ByCoordinates, Number, String, Formula)
 * Os blocos de código são úteis **quando você deseja definir funções personalizadas no DesignScript para reduzir o número de nós em um gráfico**
 
-![](<images/1/graphstrategy3 (1).png>)
+![](images/1/graphstrategy3(1).png)
 
 > Tanto 1 quanto 2 executam a mesma função. Era muito mais rápido escrever algumas linhas de código do que procurar e adicionar cada nó individualmente. O bloco de código também é muito mais conciso.
 >
 > 1. DesignScript escrito no bloco de código
-> 2. Programa equivalente em nós
+> 2. Programa equivalente nos nós
 >
 > Para saber como usar o bloco de código, consulte [O que é um bloco de código](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
 
 ### **Condensar com Nó para código**
 
-* É possível **reduzir a complexidade de um gráfico usando Nó para código** que usará uma coleção de nós simples e gravará seu DesignScript correspondente em um único bloco de código
-* O Nó para código pode\*\* condensar o código sem eliminar a clareza do programa\*\*
+* É possível **reduzir a complexidade de um gráfico com a opção Nó para código**, que usa um conjunto de nós simples e grava o DesignScript correspondente em um único bloco de código
+* O Nó para código pode** condensar o código sem eliminar a clareza do programa**
 * **Vantagens** do uso de Nó para código:
-   * Condensa facilmente o código em um componente que ainda é editável
-   * Pode simplificar uma parte significativa do gráfico
-   * Será útil se o “miniprograma” não for editado com frequência
-   * É útil para incorporar outras funcionalidades de bloco de código, como funções
+  * Condensa facilmente o código em um componente que ainda é editável
+  * Pode simplificar uma parte significativa do gráfico
+  * Será útil se o “miniprograma” não for editado com frequência
+  * É útil para incorporar outras funcionalidades de bloco de código, como funções
 * **Desvantagens** do uso de Nó para código:
-   * A nomenclatura genérica o torna menos legível
-   * É mais difícil de entender para outros usuários
-   * Não há uma forma fácil de retornar à versão de programação visual
+  * A nomenclatura genérica o torna menos legível
+  * É mais difícil de entender para outros usuários
+  * Não há uma forma fácil de retornar à versão de programação visual
 
 ![](images/1/graphstrategy3\_1.png)
 
@@ -62,12 +62,12 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 
 ### **Acessar os dados de forma flexível com List@Level**
 
-* O uso do recurso List@Level pode ajudar você a **reduzir a complexidade do gráfico substituindo os nós List.Map e List.Combine**, que podem ocupar uma quantidade considerável de espaço da tela
-* O recurso List@Level oferece uma\*\* forma mais rápida do que List.Map/List.Combine para criar a lógica do nó ao permitir acessar dados em qualquer nível em uma lista diretamente da porta de entrada de um nó
+* O uso do recurso List@Level pode ajudar a **reduzir a complexidade do gráfico substituindo os nós List.Map e List.Combine**, que podem ocupar um volume considerável de espaço da tela
+* O recurso List@Level oferece uma** forma mais rápida do que List.Map/List.Combine para criar a lógica do nó** permitindo acessar dados em qualquer nível de uma lista diretamente da porta de entrada de um nó
 
-![](<images/1/graphstrategy4 (1) (1).png>)
+![](images/1/graphstrategy4(1)(1).png)
 
-> É possível verificar quantos valores verdadeiros BoundingBox.Contains retorna e em que listas ativando List@Level para entrada de “lista” de CountTrue. O recurso List@Level permite que o usuário determine de qual nível a entrada extrairá os dados. O uso de List@Level é flexível, eficiente e altamente recomendável em relação a outros métodos que envolvem List.Map e List.Combine.
+> É possível verificar quantos valores verdadeiros BoundingBox.Contains retorna e em quais listas, ativando List@Level para a entrada de “lista” de CountTrue. O recurso List@Level permite que o usuário determine de qual nível a entrada extrairá os dados. O uso de List@Level é flexível, eficiente e altamente recomendável em relação a outros métodos que envolvem List.Map e List.Combine.
 >
 > 1. Contagem de valores verdadeiros no Nível de lista 2
 > 2. Contagem de valores verdadeiros no Nível de lista 3
@@ -76,25 +76,25 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 
 ## Manter a legibilidade
 
-Além de tornar o gráfico o mais simples e eficiente possível, tente obter maior clareza gráfica. Apesar de seus melhores esforços para tornar o gráfico intuitivo com agrupamentos lógicos, os relacionamentos podem não ser evidentes. Uma Nota simples dentro de um grupo ou a renomeação de um controle deslizante pode poupar confusão desnecessária ou a aplicação de pan pelo gráfico para você ou outro usuário. Veja a seguir diversas formas que ajudarão você a aplicar a consistência gráfica nos gráficos e entre eles.
+Além de tornar o gráfico o mais simples e eficiente possível, tente obter maior clareza gráfica. Apesar de seus melhores esforços para tornar o gráfico intuitivo com agrupamentos lógicos, os relacionamentos podem não ser evidentes. Uma Nota simples dentro de um grupo ou a renomeação de um controle deslizante pode poupar confusão desnecessária ou a aplicação de pan pelo gráfico para você ou outro usuário. Confira a seguir diversas formas que ajudarão você a aplicar consistência gráfica nos gráficos e entre eles.
 
 ### **Continuidade visual com o alinhamento de nós**
 
-* Para reduzir o trabalho após terminar de construir o gráfico, você deve tentar garantir que o layout dos nós seja legível **alinhando os nós com frequência e conforme você avança**
+* Para reduzir o trabalho após terminar de criar o gráfico, você deve tentar garantir que o layout dos nós seja legível **alinhando os nós com frequência e conforme você avança**
 * Se outras pessoas estiverem trabalhando com o gráfico, você deverá **garantir que o layout fio/nó flua com facilidade antes do envio**
-* Para ajudar você com o alinhamento, **use o recurso “Limpeza do layout do nó” para alinhar automaticamente** o gráfico, porém menos precisamente do que fazer isso pessoalmente
+* Para ajudar com o alinhamento, **use o recurso “Limpeza do layout do nó” para alinhar automaticamente** o gráfico, porém de forma menos precisa do que se você fizesse isso manualmente
 
-![](<images/1/graphstrategy5 (2) (1).png>)
+![](images/1/graphstrategy5(2)(1).png)
 
 > 1. Gráfico não organizado
 > 2. Gráfico alinhado
 >
 > Para saber como usar o Alinhamento de nós, consulte [Como gerenciar o programa](3-4\_best\_practices.md).
 
-### **Rotulagem descritiva por meio da renomeação**
+### **Legendagem descritiva por meio de renomeação**
 
-* A renomeação de entradas poderá ajudar outras pessoas a entender facilmente o gráfico **principalmente se o item a que elas se conectam estiver fora da tela**
-* **Tenha cuidado ao renomear nós que não sejam entradas.** Uma alternativa para isso é criar um nó personalizado de um cluster de nós e renomeá-lo; ficará subentendido que ele contém outra coisa
+* A renomeação de entradas poderá ajudar outras pessoas a entender facilmente o gráfico, **principalmente se o item a que elas se conectam estiver fora da tela**
+* **Tenha cuidado ao renomear nós que não sejam entradas.** Uma alternativa para isso é criar um nó personalizado de um cluster de nós e renomeá-lo; assim, ficará subentendido que ele contém outra coisa
 
 ![](images/1/graphstrategy6.png)
 
@@ -107,31 +107,31 @@ Além de tornar o gráfico o mais simples e eficiente possível, tente obter mai
 ### **Explicar com notas**
 
 * Adicione uma nota se algo no **gráfico necessitar de uma explicação em linguagem simples** que os nós não podem expressar
-* Você deverá adicionar uma nota se uma coleção de **nós ou um grupo for muito grande ou complexo e não puder ser facilmente compreendido imediatamente**
+* Você deverá adicionar uma nota se um conjunto de **nós ou um grupo for muito grande ou complexo e não puder ser facilmente compreendido de imediato**
 
 ![](images/1/graphstrategy7.png)
 
 > 1. Uma nota que descreve a parte do programa que retorna as distâncias brutas de conversão
 > 2. Uma nota que descreve o código que mapeia esses valores para uma onda sinusoidal
 >
-> Para saber como adicionar uma nota, consulte [Gerenciar o programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Para saber como adicionar uma nota, consulte [Como gerenciar o programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
 ## Flexionar de forma contínua
 
-Ao criar o script visual, é importante verificar se o que está sendo retornado é o que você esperava. Nem todos os erros ou problemas causarão a falha imediata do programa, principalmente valores nulos ou zero que possam afetar algo distante a jusante. Essa estratégia também é discutida no contexto dos scripts de texto em [Estratégias de script](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). A prática a seguir ajudará a garantir que você esteja obtendo o que esperava.
+Ao criar o script visual, é importante verificar se o que está sendo retornado é o que você esperava. Nem todos os erros ou problemas causarão a falha imediata do programa, principalmente valores nulos ou zero que possam afetar algo distante a jusante. Essa estratégia também é discutida no contexto de scripts de texto em [Estratégias de script](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). A prática a seguir ajudará a garantir que você obtenha o que esperava.
 
 ### **Monitorar os dados com balões de visualização e inspeção**
 
-* Use balões de visualização ou inspeção ao criar o programa para\*\* verificar se as saídas principais estão retornando o que você esperava\*\*
+* Use balões de visualização ou inspeção durante a criação do programa para** verificar se as saídas principais estão retornando o que você esperava**
 
 ![](images/1/graphstrategy8.png)
 
-> Os nós de inspeção estão sendo usados para comparar:
+> Os nós de inspeção são usados para comparar:
 >
 > 1. As distâncias de conversão brutas
 > 2. Os valores passados pela equação de seno
 >
-> Para saber como usar a inspeção, consulte [Biblioteca](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Para saber como usar a Inspeção, consulte [Biblioteca](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
 
 ## Garantir a reutilização
 
@@ -140,14 +140,14 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 ### **Gerenciar as E/S**
 
 * Para garantir a legibilidade e a escalabilidade, tente **minimizar as entradas e saídas o máximo possível**
-* Você deve tentar **imaginar uma estratégia de como você criará a lógica elaborando um contorno aproximado** de como a lógica poderia funcionar antes mesmo de adicionar um único nó à tela. À medida que desenvolve o contorno aproximado, você deve acompanhar quais entradas e saídas farão parte de scripts
+* Você deve tentar **estabelecer uma estratégia de como criará a lógica elaborando um esboço** de como a lógica poderia funcionar antes mesmo de adicionar um único nó à tela. À medida que desenvolve o esboço, você deve monitorar quais entradas e saídas farão parte de scripts
 
 ### **Usar predefinições para incorporar valores de entrada**
 
-* Se houver **opções ou condições específicas que você deseje incorporar ao gráfico**, use as predefinições para acesso rápido
-* Também é possível usar as predefinições para **reduzir a complexidade ao armazenar em cache os valores de controle deslizante específicos** em um gráfico com longos tempos de execução
+* Se houver **opções ou condições específicas que você queira incorporar ao gráfico**, use as predefinições para obter acesso rápido
+* Também é possível usar as predefinições para **reduzir a complexidade armazenando em cache os valores específicos de controle deslizante** em um gráfico com tempos de execução longos
 
-> Para saber como usar as predefinições, consulte [Gerenciamento de dados com predefinições](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Para saber como usar as predefinições, consulte [Gerenciar os dados com as predefinições](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
 ### **Conter programas com nós personalizados**
 
@@ -162,15 +162,15 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 > 1. Programa atrativo existente
 > 2. Nó personalizado que coleta este programa, PointGrid
 >
-> Para saber como usar os nós personalizados, consulte [Introdução aos nós personalizados](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Para saber como usar nós personalizados, consulte [Introdução ao nó personalizado](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
 
 ### **Modelos de construção**
 
-* É possível criar modelos para **estabelecer padrões gráficos em seus gráficos visuais para garantir que os colaboradores tenham um modo padronizado de entender o gráfico**
-* Ao construir um modelo, é possível padronizar **as cores de grupo e os tamanhos de fonte** para categorizar os tipos de fluxos de trabalho ou as ações de dados.
-* Ao criar um modelo, você pode até padronizar como deseja **rotular, colorir ou estilizar a diferença entre os fluxos de trabalho de front-end e back-end** em seu gráfico.
+* É possível criar modelos para **estabelecer padrões gráficos nos gráficos visuais para garantir que os colaboradores tenham um modo padronizado de entender o gráfico**
+* Durante a criação de um modelo, é possível padronizar **as cores de grupo e os tamanhos de fonte** para categorizar os tipos de fluxos de trabalho ou as ações de dados.
+* Durante a criação de um modelo, é possível até mesmo padronizar como você quer **definir legendas, cores ou estilos para diferenciar entre os fluxos de trabalho de front-end e back-end** no gráfico.
 
-![](<images/1/graphstrategy10 (2).png>)
+![](images/1/graphstrategy10(2).png)
 
 > 1. A interface do usuário, ou o front-end, do programa inclui um nome de projeto, controles deslizantes de entrada e geometria de importação.
 > 2. O back-end do programa.
@@ -192,10 +192,10 @@ Vamos começar determinando os dados e a geometria retornados pelo programa.
 
 ![](images/1/graphstrategy12.png)
 
-> A compreensão de quando as principais alterações dos dados ocorrem é crucial para estabelecer divisões lógicas ou modularidade. Tente inspecionar o restante do programa com os nós de inspeção para ver se é possível determinar os grupos antes de seguir para a próxima etapa.
+> A compreensão de quando ocorrem as principais alterações nos dados é crucial para estabelecer divisões lógicas ou modularidade. Tente inspecionar o restante do programa com os nós de inspeção para ver se é possível determinar grupos antes de passar para a próxima etapa.
 >
 > 1. Esse **bloco de código** com uma equação matemática se parece com uma parte crucial do programa. Um nó de **inspeção** mostra que ele está retornando listas de distâncias de conversão.
-> 2. O objetivo dessa área não é evidente. A disposição dos valores verdadeiros no nível de lista L2 de **BoundingBox.Contains** e a presença de **List.FilterByBoolMask** sugere que estamos fazendo uma amostragem de uma parte da grade de pontos.
+> 2. O objetivo dessa área não é evidente. A disposição dos valores True no nível de lista L2 de **BoundingBox.Contains** e a presença de **List.FilterByBoolMask** sugerem que estamos fazendo uma amostragem de uma parte da grade de pontos.
 
 Quando entendermos as partes elementares do programa, vamos colocá-las em grupos.
 
@@ -217,14 +217,14 @@ Com os grupos estabelecidos, alinhe os nós para criar a continuidade visual no 
 
 Torne o programa mais acessível adicionando mais uma camada de melhorias gráficas. Adicione notas para descrever como funciona uma área específica do programa, atribua nomes personalizados às entradas e atribua cores a diferentes tipos de grupos.
 
-![](<images/1/graphstrategy15 (1).png>)
+![](images/1/graphstrategy15(1).png)
 
-> Essas melhorias gráficas informam ao usuário mais sobre o que o programa está fazendo. As diferentes cores de grupo ajudam a diferenciar as entradas das funções.
+> Essas melhorias gráficas dão mais informações ao usuário sobre o que o programa está fazendo. As diferentes cores de grupo ajudam a diferenciar as entradas das funções.
 >
 > 1. Notas
 > 2. Entradas com nomes descritivos
 
-Antes de começarmos a condensar o programa, vamos encontrar uma localização estratégica para introduzir o simulador de drenagem do script do Python. Conecte a saída da primeira superfície de telhado dimensionada à respectiva entrada de script.
+Antes de começarmos a condensar o programa, vamos encontrar uma localização estratégica para introduzir o simulador de drenagem do script do Python. Conecte a saída da primeira superfície de telhado dimensionado à respectiva entrada de script.
 
 ![](images/1/graphstrategy16.png)
 
@@ -248,7 +248,7 @@ Como etapa final, crie predefinições de formas de telhado exemplares.
 
 ![](images/1/graphstrategy18.png)
 
-> Essas entradas são os principais acionadores de forma do telhado e ajudarão os usuários a ver o potencial do programa.
+> Essas entradas são os principais acionadores da forma do telhado e ajudarão os usuários a ver o potencial do programa.
 
 Nosso programa com vistas de duas predefinições.
 

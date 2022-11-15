@@ -4,44 +4,44 @@
 
 ### O que é a malha?
 
-No campo de modelagem de cálculo, as [malhas](7-meshes.md#mesh) são uma das formas mais difundidas de representar a geometria 3D. A geometria de malha é geralmente feita de uma coleção de quadriláteros ou triângulos, pode ser uma alternativa leve e flexível para trabalhar com NURBS. As malhas são usadas em tudo, desde renderização e visualizações até fabricação digital e impressão 3D.
+No campo da modelagem de cálculo, as [malhas](7-meshes.md#mesh) são uma das formas mais difundidas de representar a geometria 3D. A geometria de malha é geralmente feita com um conjunto de quadriláteros ou triângulos, pode ser uma alternativa leve e flexível para trabalhar com NURBS. As malhas são usadas em tudo, desde renderização e visualizações até fabricação digital e impressão 3D.
 
 ### Elementos de malha
 
 O Dynamo define malhas usando uma estrutura de dados Face-Vértice. Em seu nível mais básico, esta estrutura é simplesmente uma coleção de pontos que são agrupados em polígonos. Os pontos de uma malha são chamados de vértices, enquanto os polígonos como a superfície são chamados de faces.
 
-Para criar uma malha, precisamos de uma lista de vértices e um sistema de agrupamento desses vértices em faces denominadas de grupo de índice.
+Para criar uma malha, precisamos de uma lista de vértices e um sistema de agrupamento desses vértices em faces, o que é denominado grupo de índice.
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes-meshelements.jpg)
 
 > 1. Lista de vértices
 > 2. Lista de grupos de índice para definir faces
 
 ### Kit de ferramentas de malha
 
-Os recursos de malha do Dynamo podem ser estendidos instalando o pacote de [Kit de ferramentas de malha](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). O Kit de ferramentas de malha do Dynamo fornece ferramentas para importar malhas de formatos de arquivo externo, criar uma malha de objetos de geometria do Dynamo e criar manualmente malhas de acordo com seus vértices e índices.
+Os recursos de malha do Dynamo podem ser estendidos instalando o pacote [Kit de ferramentas de malha](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). O Kit de ferramentas de malha do Dynamo fornece ferramentas para importar malhas de formatos de arquivo externo, criar uma malha de objetos de geometria do Dynamo e criar manualmente malhas de acordo com seus vértices e índices.
 
 A biblioteca também fornece ferramentas para modificar malhas, reparar malhas ou extrair fatias horizontais para uso na fabricação.
 
-Visite [Estudos de caso do Kit de ferramentas de malha](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md), por exemplo, para saber como usar este pacote.
+Acesse [Estudos de caso do Kit de ferramentas de malha](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md), por exemplo, para saber como usar esse pacote.
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Kit de ferramentas de malha](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
 ## Análise abrangente de...
 
 ### Malha
 
-Uma Malha é uma coleção de quadriláteros e triângulos que representam uma geometria de superfície ou sólido. Como os sólidos, a estrutura de um objeto de malha inclui vértices, arestas e faces. Há propriedades adicionais que tornam as Malhas também exclusivas, como normais.
+Uma Malha é uma coleção de quadriláteros e triângulos que representam uma geometria de superfície ou sólido. Como os sólidos, a estrutura de um objeto de malha inclui vértices, arestas e faces. Há propriedades adicionais que também tornam as Malhas exclusivas, como as normais.
 
 ![Elementos de malha](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Vértices de malha
-> 2. Arestas de malha \*Arestas com apenas uma face adjacente são chamadas “consolidadas”. Todas as outras arestas são "Clothed"
+> 2. Arestas de malha *Arestas com apenas uma face adjacente são chamadas "Naked". Todas as outras arestas são "Clothed"
 > 3. Faces de malha
 
 ### Vértices + normais de vértice
 
-Os vértices de uma malha são simplesmente uma lista de pontos. O índice dos vértices é muito importante ao construir uma malha ou obter informações sobre a estrutura de uma malha. Para cada vértice, há também um normal de vértice correspondente (vetor) que descreve a direção média das faces anexadas e nos ajuda a compreender a orientação "dentro" e "fora" da malha.
+Os vértices de uma malha são simplesmente uma lista de pontos. O índice dos vértices é muito importante ao construir uma malha ou obter informações sobre a estrutura de uma malha. Para cada vértice, há também uma normal de vértice correspondente (vetor) que descreve a direção média das faces anexadas e nos ajuda a compreender a orientação “dentro” e “fora” da malha.
 
 ![Vértices + Normais](../images/5-2/7/vertexNormals.jpg)
 
@@ -55,7 +55,7 @@ Uma face é uma lista ordenada de três ou quatro vértices. A representação "
 ![](../images/5-2/7/meshFaces.jpg)
 
 > 1. Uma face de quadrados feita com índices 0, 1, 2 e 3
-> 2. Uma face de triângulo feita com índices 1, 4 e 2. Observe que os grupos de índice podem ser deslocados em sua ordem, desde que a sequência seja ordenada de forma anti-horária, a face será definida corretamente
+> 2. Uma face de triângulo feita com índices 1, 4 e 2\. Observe que os grupos de índice podem ser deslocados em sua ordem, desde que a sequência seja ordenada de forma anti-horária, a face será definida corretamente
 
 ### Malhas versus superfícies NURBS
 
@@ -63,7 +63,7 @@ Como a geometria de malha é diferente da geometria NURBS? Em que casos é recom
 
 #### Parametrização
 
-Em um capítulo anterior, vimos que as superfícies NURBS são definidas por uma série de curvas NURBS seguindo em duas direções. Essas direções são legendadas como `U` e`V`, e permitem que uma superfície NURBs seja parametrizada de acordo com um domínio de superfície bidimensional. As curvas em si são armazenadas como equações no computador, permitindo que as superfícies resultantes sejam calculadas para um grau arbitrariamente pequeno de precisão. No entanto, pode ser difícil combinar várias superfícies NURBS juntas. A união de duas superfícies NURBS irá resultar em uma polysurface, onde diferentes seções da geometria terão diferentes parâmetros UV e definições de curva.
+Em um capítulo anterior, vimos que as superfícies NURBS são definidas por uma série de curvas NURBS seguindo em duas direções. Essas direções são legendadas como `U` e`V`, e permitem que uma superfície NURBs seja parametrizada de acordo com um domínio de superfície bidimensional. As curvas em si são armazenadas como equações no computador, permitindo que as superfícies resultantes sejam calculadas para um grau arbitrariamente pequeno de precisão. No entanto, pode ser difícil combinar várias superfícies NURBS juntas. A união de duas superfícies NURBS resultará em uma polysurface, onde diferentes seções da geometria terão diferentes parâmetros UV e definições de curva.
 
 ![Pontos de controle](../images/5-2/7/NURBSvsMESH-01.jpg)
 
@@ -86,7 +86,7 @@ As malhas, por outro lado, são compostas de um número discreto de vértices e 
 
 Outra diferença importante é a extensão para a qual uma alteração local na geometria de Malha ou NURBS afeta toda a forma. Mover um vértice de uma malha somente afeta as faces que são adjacentes a esse vértice. Em superfícies NURBS, a extensão da influência é mais complicada e depende do grau da superfície, bem como dos pesos e nós dos pontos de controle. Em geral, no entanto, mover um único ponto de controle em uma superfície NURBS cria uma alteração mais suave e mais extensa na geometria.
 
-![Editando](../images/5-2/7/NURBSvsMESH-02.jpg)
+![Editar](../images/5-2/7/NURBSvsMESH-02.jpg)
 
 > 1. Superfície NURBS: mover um ponto de controle tem influência que se estende através da forma
 > 2. Geometria de malha: mover um vértice tem influência somente em elementos adjacentes

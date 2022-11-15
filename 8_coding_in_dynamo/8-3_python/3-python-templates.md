@@ -4,15 +4,15 @@ Com o Dynamo 2.0, podemos especificar um modelo padrão `(.py extension)` para 
 
 A localização desse modelo está em `APPDATA` da instalação do Dynamo.
 
-Normalmente, isso é da seguinte maneira `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
+Normalmente, é `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-![](<../images/8-3/3/python templates - appdata folder location.jpg>)
+![](../images/8-3/3/pythontemplates-appdatafolderlocation.jpg)
 
 ### Configurar o modelo
 
 Para usar essa funcionalidade, é necessário adicionar a seguinte linha em nosso arquivo `DynamoSettings.xml`. _(Editar no bloco de notas)_
 
-![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
+![](../images/8-3/3/pythontemplates-dynamosettingsxmlfile.png)
 
 Onde vemos `<PythonTemplateFilePath />`, basta substituir por:
 
@@ -22,15 +22,13 @@ Onde vemos `<PythonTemplateFilePath />`, basta substituir por:
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Observação: Substitua CURRENTUSER por seu nome de usuário_
-{% endhint %}
+{% hint style="warning" %} _Observação: Substitua CURRENTUSER por seu nome de usuário_ {% endhint %}
 
 Em seguida, precisamos criar um modelo com a funcionalidade que desejamos usar incorporada. Em nosso caso, vamos incorporar as importações relacionadas ao Revit e alguns dos outros itens típicos ao trabalhar com o Revit.
 
 É possível iniciar um documento do bloco de notas em branco e colar o seguinte código:
 
-```
+``` py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -71,12 +69,12 @@ Uma vez feito isso, salve o arquivo como `PythonTemplate.py` na localização `A
 
 ### Comportamento posterior do script Python
 
-Após o modelo do Python ser definido, o Dynamo procurará esses dados sempre que um nó do Python for inserido. Se não forem encontrados, será semelhante à janela do Python padrão.
+Após o modelo do Python ser definido, o Dynamo procurará esses dados sempre que um nó do Python for inserido. Se não forem encontrados, será semelhante à janela padrão do Python.
 
-![](<../images/8-3/3/python templates - before setup template.jpg>)
+![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
 Se o modelo do Python for encontrado (como nosso modelo do Revit, por exemplo), será possível ver todos os itens padrão incorporados.
 
-![](<../images/8-3/3/python templates - after setup template.jpg>)
+![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
-Pode obter mais informações sobre esta grande adição (desenvolvida por Radu Gidei) aqui. https://github.com/DynamoDS/Dynamo/pull/8122
+Você pode obter mais informações sobre esta grande inclusão (desenvolvida por Radu Gidei) aqui. https://github.com/DynamoDS/Dynamo/pull/8122

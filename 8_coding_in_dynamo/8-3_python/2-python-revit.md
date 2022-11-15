@@ -4,7 +4,7 @@
 
 Agora que demonstramos como usar scripts Python no Dynamo, vamos analisar como conectar as bibliotecas do Revit ao ambiente de scripts. Lembre-se, importamos os nós do núcleo padrão do Python e os nossos do Dynamo com as quatro primeiras linhas do bloco de código abaixo. Para importar os nós, os elementos e o gerenciador de documentos do Revit, só precisamos adicionar mais algumas linhas:
 
-```
+``` py
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -27,7 +27,7 @@ import System
 
 Isso nos fornece acesso à API do Revit e oferece scripts personalizados para qualquer tarefa do Revit. Ao combinar o processo de programação visual com scripts da API do Revit, a colaboração e o desenvolvimento de ferramentas melhoram significativamente. Por exemplo, um gerente do BIM e um projetista esquemático podem trabalhar juntos no mesmo gráfico. Nessa colaboração, eles podem aprimorar o projeto e a execução do modelo.
 
-![](<../../.gitbook/assets/python & revit - 01.jpg>)
+![](../images/8-3/2/python&revit-01.jpg)
 
 ### APIs específicas da plataforma
 
@@ -49,13 +49,13 @@ Nestes exercícios, vamos explorar os scripts Python elementares no Dynamo for R
 
 Esse é um método preparado previamente para recuperar o _doc_, _uiapp_ e _app_ do arquivo do Revit vinculado à sessão do Dynamo. Os programadores que já trabalharam na API do Revit podem observar os itens na lista de inspeção. Se esses itens não parecerem familiares, não há problema, usaremos outros exemplos nos exercícios abaixo.
 
-Veja a seguir como importamos serviços do Revit e recuperamos os dados do documento no Dynamo.
+Confira a seguir como importamos serviços do Revit e recuperamos os dados do documento no Dynamo.
 
-![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise01-01.jpg)
 
 Veja o nó do Python no Dynamo. Você também pode encontrar o código abaixo:
 
-```
+``` py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -86,19 +86,19 @@ Neste exercício, vamos criar uma curva de modelo simples no Revit usando o nó 
 
 Comece criando uma nova família de massa conceitual no Revit.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise02-01.jpg)
 
 Abra a _Pasta de massa conceitual_ e use o arquivo de modelo _Metric Mass.rft_.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise02-02.jpg)
 
-No Revit, use o atalho de teclado **`un`** para abrir as configurações da unidade do projeto, altere a unidade de comprimento para metros.
+No Revit, use o atalho de teclado **`un`** para abrir as configurações da unidade do projeto e altere a unidade de comprimento para metros.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise02-03.jpg)
 
 Inicie o Dynamo e crie o conjunto de nós na imagem abaixo. Primeiro, criaremos dois pontos de referência no Revit com base nos nós do Dynamo.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
+![](../images/8-3/2/python&revit-exercise02-04.jpg)
 
 > 1. Crie um **bloco de código** e atribua o valor `"0;"`
 > 2. Conecte esse valor a um nó **ReferencePoint.ByCoordinates** para as entradas X, Y e Z.
@@ -108,11 +108,11 @@ Inicie o Dynamo e crie o conjunto de nós na imagem abaixo. Primeiro, criaremos 
 
 Veja o nó do Python no Dynamo. Encontre o código completo abaixo.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise02-05.jpg)
 
 > 1. **System.Array:** o Revit precisa de uma **matriz do sistema** como uma entrada (em vez de uma lista do Python). Isso é apenas mais uma linha de código, mas prestar atenção aos tipos de argumentos facilitará a programação em Python no Revit.
 
-```
+``` py
 import sys
 import clr
 
@@ -136,7 +136,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 No Dynamo, criamos dois pontos de referência com uma linha que os conecta usando o Python. Vamos aprofundar isso um pouco no próximo exercício.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
+![](../images/8-3/2/python&revit-exercise02-06.jpg)
 
 ## Exercício 3
 
@@ -148,24 +148,24 @@ No Dynamo, criamos dois pontos de referência com uma linha que os conecta usand
 
 Este exercício mantém a simplicidade, mas esclarece os tópicos de conexão de dados e a geometria do Revit para o Dynamo e vice-versa. Começaremos abrindo o Revit-StructuralFraming.rvt. Depois de aberto, inicie o Dynamo e abra o arquivo Revit-StructuralFraming.dyn.
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
+![](../../.gitbook/assets/python&revit-exercise03-01.jpg)
 
 Esse arquivo do Revit é o mais básico possível. Duas curvas de referência: uma desenhada no Nível 1 e outra desenhada no Nível 2. Queremos inserir essas curvas no Dynamo e manter um vínculo dinâmico.
 
 Nesse arquivo, temos um conjunto de nós que se conectam a cinco entradas de um nó do Python.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise03-02.jpg)
 
-> 1. **Nós Selecionar os elementos no modelo**: clique no botão de seleção para cada um e selecione uma curva correspondente no Revit.
+> 1. **Nós Selecionar elemento do modelo**: clique no botão de seleção para cada um e selecione uma curva correspondente no Revit.
 > 2. **Bloco de código:**: usando a sintaxe `0..1..#x;`_,_ conecte um controle deslizante de número inteiro que varia entre 0 e 20 à entrada _x_. Isso especifica o número de vigas a serem desenhadas entre as duas curvas.
 > 3. **Tipos de framing estrutural:** escolheremos a viga padrão W12x26 na opção do menu suspenso.
 > 4. **Níveis:** selecione “Nível 1”.
 
-Esse código em Python é um pouco mais denso, mas os comentários no código descrevem o que está acontecendo no processo
+Esse código no Python é um pouco mais denso, mas os comentários no código descrevem o que está acontecendo no processo
 
-![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise03-03.jpg)
 
-```
+``` py
 import clr
 #import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
@@ -204,7 +204,7 @@ No Revit, temos uma matriz de vigas que se estendem pelas duas curvas como eleme
 
 No Dynamo, também podemos ver os resultados. As vigas no nó **Watch3D** se referem à geometria consultada dos elementos do Revit.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise03-05.jpg)
 
 Observe que temos um processo contínuo de conversão de dados do ambiente do Revit para o ambiente do Dynamo. Em resumo, veja como o processo é realizado:
 
@@ -219,4 +219,4 @@ Isso pode parecer um pouco severo, mas o script torna isso tão simples quando e
 
 Com uma atualização das curvas de referência no Revit, obtemos uma nova matriz de vigas.
 
-![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
+![](../images/8-3/2/python&revit-ex03-06.gif)

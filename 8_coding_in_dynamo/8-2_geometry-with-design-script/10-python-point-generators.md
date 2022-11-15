@@ -1,10 +1,10 @@
 # Geradores de pontos do Python
 
-Os seguintes scripts Python geram matrizes de pontos para diversos exemplos. Elas devem ser coladas em um nó Python Script como segue:
+Os seguintes scripts Python geram matrizes de pontos para diversos exemplos. Elas devem ser coladas em um nó de script do Python da seguinte forma:
 
-![](<../images/8-2/10/python points 01.jpg>)
+![](../images/8-2/10/pythonpoints01.jpg)
 
-**python\_points\_1**
+**python_points_1**
 
 ```python
 out_points = []
@@ -23,7 +23,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_2**
+**python_points_2**
 
 ```python
 out_points = []
@@ -37,7 +37,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_3**
+**python_points_3**
 
 ```python
 out_points = []
@@ -51,7 +51,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_4**
+**python_points_4**
 
 ```python
 out_points = []
@@ -65,7 +65,7 @@ for i in range(11):
 OUT = out_points
 ```
 
-**python\_points\_5**
+**python_points_5**
 
 ```python
 out_points = []
