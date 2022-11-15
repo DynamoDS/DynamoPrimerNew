@@ -2,7 +2,7 @@
 
 ### ¿Qué es una lista?
 
-Una lista es un conjunto de elementos o ítems. Pensemos en un racimo de plátanos, por ejemplo. Cada plátano es un elemento de la lista (o racimo). Es más fácil coger un racimo de plátanos que cada plátano individualmente, y lo mismo se aplica a la agrupación de elementos por relaciones paramétricas en una estructura de datos.
+Una lista es un conjunto de elementos o ítems. Pensemos en un racimo de plátanos, por ejemplo. Cada plátano es un elemento de la lista (o racimo). Es más fácil coger un racimo de plátanos que cada plátano individualmente y lo mismo se aplica a la agrupación de elementos por relaciones paramétricas en una estructura de datos.
 
 ![Plátanos](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
@@ -20,7 +20,7 @@ Por ejemplo, si tuviéramos que contar el número de dedos que tenemos en la man
 
 Tenga en cuenta que sigue habiendo cinco elementos en la lista; solo que la lista utiliza un sistema de recuento basado en cero. Y los elementos que se almacenan en la lista no solo pueden ser números. Pueden ser cualquier tipo de datos compatible con Dynamo, como puntos, curvas, superficies, familias, etc.
 
-![](<../images/5-4/1/what's a list - zero based indices.jpg>)
+![](../images/5-4/1/what'salist-zerobasedindices.jpg)
 
 > a. Índice
 >
@@ -36,17 +36,16 @@ Estos índices son elementos decisivos cuando se trabaja con listas.
 
 Las entradas y las salidas, que pertenecen a las listas, varían en función del nodo de Dynamo que se utilice. Como ejemplo, vamos a utilizar una lista de cinco puntos y a conectar esta salida a dos nodos de Dynamo diferentes: **PolyCurve.ByPoints** y **Circle.ByCenterPointRadius**:
 
+![Ejemplos de entrada](../images/5-4/1/what'salist-inputsandoutputs.jpg)
 
-![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
-
-> 1. La entrada _points_ de **PolyCurve.ByPoints** busca _"Point\[]"_. Esto representa una lista de puntos.
+> 1. La entrada _points_ de **PolyCurve.ByPoints** busca _"Point[]"_. Esto representa una lista de puntos.
 > 2. La salida de **PolyCurve.ByPoints** es una PolyCurve única creada a partir de una lista de cinco puntos.
 > 3. La entrada _centerPoint_ de **Circle.ByCenterPointRadius** solicita _"Point"_.
 > 4. La salida de **Circle.ByCenterPointRadius** es una lista de cinco círculos cuyos centros corresponden a la lista original de puntos.
 
-Los datos de entrada de **PolyCurve.ByPoints** y **Circle.ByCenterPointRadius** son los mismos. Sin embargo, el nodo **Polycurve.ByPoints** nos proporciona una PolyCurve, mientras que el nodo **Circle.ByCenterPointRadius** nos proporciona cinco círculos con centros en cada punto. Esto resulta intuitivo: la PolyCurve se dibuja como una curva que conecta los 5 puntos, mientras que los círculos crean un círculo distinto en cada punto. Entonces, ¿qué ocurre con los datos?
+Los datos de entrada de **PolyCurve.ByPoints** y **Circle.ByCenterPointRadius** son los mismos. Sin embargo, el nodo **Polycurve.ByPoints** nos proporciona una PolyCurve, mientras que el nodo **Circle.ByCenterPointRadius** nos proporciona cinco círculos con centros en cada punto. Esto resulta intuitivo: la PolyCurve se dibuja como una curva que conecta los cinco puntos, mientras que los círculos crean un círculo distinto en cada punto. Entonces, ¿qué ocurre con los datos?
 
-Al pasar el cursor sobre la entrada _points_ de **Polycurve.ByPoints**, vemos que la entrada busca _"Point\[]"_. Observe los corchetes que aparecen al final. Este elemento representa una lista de puntos y, para crear una PolyCurve, la entrada debe ser una lista para cada PolyCurve. Por tanto, este nodo condensará cada lista en una PolyCurve.
+Al colocar el cursor sobre la entrada _points_ de **Polycurve.ByPoints**, vemos que la entrada busca _"Point[]"_. Observe los corchetes que aparecen al final. Este elemento representa una lista de puntos y, para crear una PolyCurve, la entrada debe ser una lista para cada PolyCurve. Por lo tanto, este nodo condensará cada lista en una PolyCurve.
 
 Por otra parte, la entrada _centerPoint_ de **Circle.ByCenterPointRadius** solicita _"Point"_. Este nodo busca un punto, como elemento, para definir el centro del círculo. Por este motivo, se obtienen cinco círculos a partir de los datos de entrada. Reconocer esta diferencia en las entradas de Dynamo ayuda a comprender mejor cómo funcionan los nodos al administrar los datos.
 
@@ -60,25 +59,25 @@ Imagine un nodo que crea segmentos de línea entre puntos (**Line.ByStartPointEn
 
 La forma más sencilla es conectar las entradas una a una hasta que uno de los flujos se acabe. Esto se denomina algoritmo "Lista más corta". Este es el comportamiento por defecto de los nodos de Dynamo:
 
-![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
+![](../images/5-4/1/what'salist-lacing-shortest.jpg)
 
 #### Lista más larga
 
 El algoritmo "Lista más larga" sigue conectando entradas, reutilizando elementos, hasta que todos los flujos se acaben:
 
-![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
+![](../images/5-4/1/what'salist-lacing-longest.jpg)
 
 #### Producto vectorial
 
 Por último, el método "Producto vectorial" hace todas las conexiones posibles:
 
-![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
+![](../images/5-4/1/what'salist-lacing-cross.jpg)
 
 Como puede ver, existen diferentes métodos para dibujar líneas entre estos conjuntos de puntos. Las opciones de encaje se encuentran haciendo clic con el botón derecho en el centro de un nodo y eligiendo el menú "Encaje".
 
-![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
+![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
-## Ejercicio:
+## Ejercicio
 
 > Descargue el archivo de ejemplo. Para ello, haga clic en el vínculo siguiente.
 >
@@ -94,16 +93,16 @@ Cambiaremos el encaje en **Point.ByCoordinates**, pero no cambiaremos nada más 
 
 Si se selecciona _Lista más corta_ como opción de encaje (también la opción por defecto), se obtiene una línea diagonal básica compuesta por cinco puntos. Cinco puntos es la longitud de la lista menor, de modo que el encaje de la lista más corta se detiene cuando alcanza el final de una lista.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
+![Ejemplos de entrada](../images/5-4/1/what'salist-lacingexercise01.jpg)
 
 ### **Lista más larga**
 
-Al cambiar el encaje a la _lista más larga_, obtenemos una línea diagonal que se extiende verticalmente. Con el mismo método que el diagrama conceptual, el último elemento de la lista de 5 elementos se repetirá para alcanzar la longitud de la lista más larga.
+Al cambiar el encaje a la _lista más larga_, obtenemos una línea diagonal que se extiende verticalmente. Con el mismo método que el diagrama conceptual, el último elemento de la lista de cinco elementos se repetirá para alcanzar la longitud de la lista más larga.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
+![Ejemplos de entrada](../images/5-4/1/what'salist-lacingexercise02.jpg)
 
 ### **Producto vectorial**
 
-Al cambiar el encaje a _Producto vectorial_, obtenemos todas las combinaciones entre cada lista, lo que nos proporciona una rejilla de puntos de 5 x 10. Esta es una estructura de datos equivalente al producto vectorial que se muestra en el diagrama de conceptos anterior, excepto que nuestros datos son ahora una lista de listas. Al conectar una PolyCurve, podemos ver que cada lista está definida por su valor X, lo que nos da una fila de líneas verticales.
+Al cambiar el encaje a _Producto vectorial_, obtenemos todas las combinaciones entre cada lista, lo que nos proporciona una rejilla de puntos de 5 x 10. Esta es una estructura de datos equivalente al producto vectorial que se muestra en el diagrama de conceptos anterior, excepto que nuestros datos son ahora una lista de listas. Al conectar una PolyCurve, podemos ver que cada lista se ha definido por su valor X, lo que nos da una fila de líneas verticales.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
+![Ejemplos de entrada](../images/5-4/1/what'salist-lacingexercise03.jpg)

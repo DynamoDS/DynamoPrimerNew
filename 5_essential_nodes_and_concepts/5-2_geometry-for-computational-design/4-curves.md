@@ -18,15 +18,15 @@ Las [curvas](5-4\_curves.md#curve) son el primer tipo de datos geométricos abor
 
 ### Línea
 
-Una [línea](5-4\_curves.md#lines) está formada por un conjunto de puntos; cada línea tiene al menos dos puntos. Una de las formas más habituales de crear líneas en Dynamo es utilizar `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>).
+Una [línea](5-4\_curves.md#lines) está formada por un conjunto de puntos; cada línea tiene al menos dos puntos. Una de las formas más habituales de crear líneas en Dynamo es utilizar `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg).
 
-![](<./images/5-2/4/curves - line by start point end point.jpg>)
+![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
 
 ### Curva NURBS
 
 [NURBS](5-4\_curves.md#nurbs-+-polycurves) es un modelo que se utiliza para representar curvas y superficies con precisión. Una curva de seno en Dynamo mediante dos métodos diferentes para crear curvas NURBS a fin de comparar los resultados.
 
-![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
+![](../images/5-2/4/curves-NurbsCurves.jpg)
 
 > 1. _NurbsCurve.ByControlPoints_ utiliza la lista de puntos como puntos de control.
 > 2. _NurbsCurve.ByPoints_ dibuja una curva a través de la lista de puntos.
@@ -41,7 +41,7 @@ Una [línea](5-4\_curves.md#lines) está formada por un conjunto de puntos; cada
 
 ### Curvas
 
-El término **curva** suele ser un comodín parta todo tipo de formas curvas (incluso aunque adopten un aspecto recto). La curva en su sentido primordial es la categorización principal de todos estos tipos de forma: líneas, círculos, splines, etc. Desde una perspectiva más técnica, una curva describe cada punto posible que se puede encontrar introduciendo "t" en un conjunto de funciones, que pueden ir desde la sencilla función (`x = -1.26*t, y = t`) hasta funciones que implican cálculo. Independientemente del tipo de curva con el que trabajemos, este **parámetro** denominado "t" es una propiedad que se puede evaluar. Además, independientemente del aspecto de la forma, todas las curvas tienen también un punto inicial y un punto final, que se alinean de forma coincidente con los valores t mínimo y máximo utilizados para crear la curva. Esto también nos ayuda a comprender su direccionalidad.
+El término **curva** suele ser un comodín para todo tipo de formas curvas (incluso aunque adopten un aspecto recto). La curva en su sentido primordial es la categorización principal de todos estos tipos de forma: líneas, círculos, splines, etc. Desde una perspectiva más técnica, una curva describe cada punto posible que se puede encontrar introduciendo "t" en un conjunto de funciones, que pueden ir desde la sencilla función (`x = -1.26*t, y = t`) hasta funciones que implican cálculo. Independientemente del tipo de curva con el que trabajemos, este **parámetro** denominado "t" es una propiedad que se puede evaluar. Además, independientemente del aspecto de la forma, todas las curvas tienen también un punto inicial y un punto final, que se alinean de forma coincidente con los valores t mínimo y máximo utilizados para crear la curva. Esto también nos ayuda a comprender su direccionalidad.
 
 ![Parámetro de curva](../images/5-2/4/CurveParameter.jpg)
 
@@ -85,6 +85,4 @@ A medida que se añade más complejidad a las funciones paramétricas que define
 > 2. Grado = 2
 > 3. Grado = 3
 
-{% hint style="info" %}
-Tenga en cuenta que cuanto mayor sea el valor de grado, más puntos de control se utilizarán para interpolar la curva resultante.
-{% endhint %}
+{% hint style="info" %} Tenga en cuenta que cuanto mayor sea el valor de grado, más puntos de control se utilizarán para interpolar la curva resultante. {% endhint %}

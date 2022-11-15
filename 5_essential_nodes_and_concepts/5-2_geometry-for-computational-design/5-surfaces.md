@@ -4,13 +4,13 @@
 
 ### ¿Qué es una superficie?
 
-Utilizamos una [superficie](5-surfaces.md#surface) en el modelo para representar los objetos que vemos en nuestro mundo tridimensional. Aunque las curvas no son siempre planas, es decir, son tridimensionales, el espacio que definen siempre está vinculado a una dimensión. Las superficies nos ofrecen otra dimensión y un conjunto de propiedades adicionales que se pueden utilizar en otras operaciones de modelado.
+Utilizamos una [superficie](5-surfaces.md#surface) en el modelo para representar los objetos que vemos en nuestro mundo tridimensional. Aunque las curvas no siempre son planas, es decir, tridimensionales, el espacio que definen siempre está vinculado a una dimensión. Las superficies nos ofrecen otra dimensión y un conjunto de propiedades adicionales que se pueden utilizar en otras operaciones de modelado.
 
 ### Superficie en parámetro
 
 Importe y evalúe una superficie en un parámetro de Dynamo para ver qué tipo de información se puede extraer.
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
 
 > 1. _Surface.PointAtParameter_ devuelve el punto en una coordenada UV especificada.
 > 2. _Surface.NormalAtParameter_ devuelve el vector normal en una coordenada UV especificada.

@@ -1,6 +1,6 @@
 # Programación visual y Dynamo
 
-#### ¿Qué es la programación visual? <a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
+#### ¿Qué es la programación visual?<a href="#what-is-visual-programming" id="what-is-visual-programming"></a>
 
 El diseño suele implicar establecer relaciones visuales, sistémicas o geométricas entre las partes de un diseño. Por lo general, estas relaciones se desarrollan mediante flujos de trabajo que nos llevan del concepto al resultado mediante el uso de reglas. Quizás sin saberlo, estamos trabajando de forma algorítmica, definiendo un conjunto de acciones paso a paso que siga una lógica básica de entrada, procesamiento y salida. La programación nos permite seguir trabajando de esta forma, pero formalizando nuestros algoritmos.
 
@@ -8,9 +8,9 @@ El diseño suele implicar establecer relaciones visuales, sistémicas o geométr
 
 Aunque ofrece algunas oportunidades interesantes, el término **algoritmo** puede dar lugar a algunas ideas erróneas. Los algoritmos pueden generar elementos inesperados, salvajes o increíbles, pero no son mágicos. De hecho, en realidad, son componentes bastantes básicos. Usemos un ejemplo tangible como una grulla de papiroflexia. Comenzaremos con un trozo de papel cuadrado (entrada), seguiremos con una serie de pasos de plegado (acciones de procesamiento) y obtendremos una grulla (salida).
 
-![Grulla de origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![Grulla de papiroflexia](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
 
-Por lo tanto, ¿dónde está el algoritmo? Es el conjunto abstracto de pasos, que podemos representar de dos maneras: textualmente o gráficamente.
+Por lo tanto, ¿dónde está el algoritmo? Es el conjunto abstracto de pasos, que podemos representar de estas dos maneras: textualmente o gráficamente.
 
 **Instrucciones textuales:**
 
@@ -30,7 +30,7 @@ Por lo tanto, ¿dónde está el algoritmo? Es el conjunto abstracto de pasos, qu
 
 **Instrucciones gráficas:**
 
-![Debe actualizarse: grulla de origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Instrucciones de la grulla de papiroflexia](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Definición de programación <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ Si su respuesta es con gráficos, la **programación visual** es definitivamente
 
 **Programa visual:**
 
-![](<./images/a-1/visualProgramming (2).png>)
+![](./images/a-1/visualProgramming(2).png)
 
 **Programa textual:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Los resultados del algoritmo:
 
-![](<./images/a-1/visualProgramming (1).png>)
+![](./images/a-1/visualProgramming(1).png)
 
 El aspecto visual de la programación permite reducir la barrera en relación con la entrada y, con frecuencia, ofrece mayor claridad a los diseñadores. Dynamo se incluye en el paradigma de la programación visual, pero, como veremos más adelante, podemos seguir utilizando también la programación textual en la aplicación.

@@ -17,24 +17,24 @@ La separación de los diccionarios y las listas convierte a los diccionarios en 
 ### **¿Cuáles son los cambios?**
 
 * Se han producido cambios en la _sintaxis_ que modifican el modo en que se inicializarán y se utilizarán los diccionarios y las listas en los bloques de código.
-   * Los diccionarios utilizan la siguiente sintaxis: `{key:value}`.
-   * Las listas utilizan la siguiente sintaxis: `[value,value,value]`.
+  * Los diccionarios utilizan la siguiente sintaxis: `{key:value}`.
+  * Las listas utilizan la siguiente sintaxis: `[value,value,value]`.
 * Se han introducido _nuevos nodos_ en la biblioteca para ayudarle a crear, modificar y consultar diccionarios.
-* Las listas creadas con bloques de código v1.x se migrarán automáticamente al cargar la secuencia de comandos a la nueva sintaxis de lista que utiliza corchetes `[ ]` en lugar de llaves `{ }`. \\
+*   Las listas creadas con bloques de código v1.x se migrarán automáticamente al cargar la secuencia de comandos a la nueva sintaxis de lista que utiliza corchetes `[ ]` en lugar de llaves `{ }`.
 
-   ***
+    ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
+![](../images/5-5/1/whatisadictionary-whatarethechanges(1).jpg)
 
 ***
 
 ### **¿En qué me afecta? ¿Para qué se utilizan?**
 
-En las ciencias informáticas, los diccionarios, al igual que las listas, son colecciones de objetos. Mientras que las listas se encuentran en un orden específico, los diccionarios son colecciones _sin ordenar_. No dependen de números secuenciales (índices), sino de _claves._
+En las ciencias informáticas, los diccionarios, al igual que las listas, son colecciones de objetos. Mientras que las listas se encuentran en un orden específico, los diccionarios son colecciones _sin ordenar_. No dependen de números secuenciales (índices), sino de _claves_.
 
 En la imagen siguiente, se muestra un posible caso de uso de un diccionario. A menudo, los diccionarios se utilizan para relacionar dos segmentos de datos que podrían no tener una correlación directa. En este caso, conectamos la versión en español de una palabra a la versión en inglés para su posterior búsqueda.
 
-![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
+![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
 
 > 1. Cree un diccionario para relacionar los dos datos.
 > 2. Obtenga el valor con la clave especificada.

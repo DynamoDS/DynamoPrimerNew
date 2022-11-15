@@ -2,4 +2,4 @@
 
 Dynamo ha evolucionado desde sus orígenes como un complemento para BIM (Building Information Modeling) en Revit para convertirse en algo mucho más diverso. Ante todo, se trata de una plataforma que permite a los diseñadores explorar la programación visual, resolver problemas y crear sus propias herramientas. Comencemos nuestro viaje con Dynamo proporcionando algo de contexto: ¿qué es y cómo puedo utilizarlo?
 
-![Dynamo Ecosystem](<./images/intro dynamo cover.jpg>)
+![Ecosistema de Dynamo](./images/introdynamocover.jpg)

@@ -4,7 +4,7 @@
 
 ### ¿Qué es una malla?
 
-En el campo del modelado computacional, las [mallas](7-meshes.md#mesh) son una de las formas más generalizadas de representación de la geometría 3D. Por lo general, la geometría de malla se compone de una colección de cuadriláteros o triángulos, puede ser una alternativa ligera y flexible al trabajo con NURBS; las mallas se utilizan en todo, desde la renderización y las visualizaciones hasta la fabricación digital y la impresión en 3D.
+En el campo del modelado computacional, las [mallas](7-meshes.md#mesh) son una de las formas más generalizadas de representación de la geometría 3D. Por lo general, la geometría de malla se compone de una colección de cuadriláteros o triángulos; puede ser una alternativa ligera y flexible al trabajo con NURBS. Las mallas se utilizan en todo, desde la renderización y las visualizaciones hasta la fabricación digital y la impresión en 3D.
 
 ### Elementos de malla
 
@@ -12,7 +12,7 @@ Dynamo define mallas mediante una estructura de datos de cara-vértice. En su ni
 
 Para crear una malla, se necesita una lista de vértices y un sistema de agrupación de esos vértices en caras denominado grupo de índice.
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes-meshelements.jpg)
 
 > 1. Lista de vértices
 > 2. Lista de grupos de índice para definir caras
@@ -25,7 +25,7 @@ La biblioteca también proporciona herramientas para modificar y reparar mallas,
 
 Consulte los [casos reales del Kit de herramientas de malla](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) para obtener un ejemplo de cómo utilizar este paquete.
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Kit de herramientas de malla](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
 ## Información más detallada sobre...
 
@@ -36,7 +36,7 @@ Una malla es un conjunto de cuadriláteros y triángulos que representa una supe
 ![Elementos de malla](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Vértices de malla.
-> 2. Aristas de malla. \*Las aristas con una única cara adyacente se denominan "desnudas". El resto de aristas están "vestidas".
+> 2. Aristas de malla. * Las aristas con una única cara adyacente se denominan "desnudas". El resto de aristas están "vestidas".
 > 3. Caras de malla.
 
 ### Vértices + normales de vértice
@@ -55,7 +55,7 @@ Una cara es una lista ordenada de tres o cuatro vértices. Por lo tanto, la repr
 ![](../images/5-2/7/meshFaces.jpg)
 
 > 1. Una cara cuadrática compuesta por los índices 0, 1, 2 y 3.
-> 2. Una cara triangular creada con los índices 1, 4 y 2. Tenga en cuenta que se puede cambiar el orden de los grupos de índice; siempre que la secuencia se ordene en el sentido contrario a las agujas del reloj, la cara se definirá correctamente.
+> 2. Una cara triangular creada con los índices 1, 4 y 2\. Tenga en cuenta que se puede cambiar el orden de los grupos de índice; siempre que la secuencia se ordene en el sentido contrario a las agujas del reloj, la cara se definirá correctamente.
 
 ### Mallas frente a superficies NURBS
 

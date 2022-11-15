@@ -6,11 +6,11 @@ La **geometría** es el idioma del diseño. Cuando un lenguaje o un entorno de p
 
 Conocer los tipos de geometría y [cómo se relacionan](1-geometry-overview.md#stepping-through-the-hierarchy) nos permitirá desplazarnos por la colección de **nodos de geometría** disponibles en la biblioteca. Los nodos de geometría se organizan alfabéticamente en lugar de jerárquicamente; aquí se muestran de forma similar a su presentación en la interfaz de Dynamo.
 
-![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
+![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
 
 Además, la creación de modelos en Dynamo y la conexión de la vista preliminar de lo que aparece en la vista preliminar en segundo plano al flujo de datos del gráfico deberían ser procesos más intuitivos con el tiempo.
 
-![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
+![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
 
 > 1. Observe el supuesto sistema de coordenadas renderizado por la rejilla y los ejes coloreados.
 > 2. Los nodos seleccionados renderizarán la geometría correspondiente (si el nodo crea la geometría) en segundo plano con el color resaltado.
@@ -27,7 +27,7 @@ La geometría se define tradicionalmente como el estudio de la forma, el tamaño
 
 ![Conejito de Stanford](../images/5-2/1/StanfordBunny.jpg)
 
-> Si tiene curiosidad por comprobar lo diversa y compleja que puede ser la geometría mediante la potencia de su ordenador, realice una búsqueda rápida en la Web del conejito de Stanford (o "Stanford Bunny"), un modelo canónico que se utiliza para probar algoritmos.
+> Si tiene curiosidad por comprobar lo diversa y compleja que puede ser la geometría mediante la potencia de su ordenador, realice una búsqueda rápida en la web del conejito de Stanford (o "Stanford Bunny"), un modelo canónico que se utiliza para probar algoritmos.
 
 Comprender la geometría en el contexto de los algoritmos, la informática y la complejidad puede parecer una tarea abrumadora. Sin embargo, existen algunos principios clave y relativamente sencillos que podemos establecer como base para empezar a crear aplicaciones más avanzadas:
 

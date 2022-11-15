@@ -6,7 +6,7 @@
 
 El [vector](5-2\_vectors.md#vector-1) es una representación de magnitud y dirección, que se puede mostrar como una flecha que se acelera hacia una dirección concreta a una velocidad determinada. Este es un componente clave de los modelos de Dynamo. Tenga en cuenta que, como se encuentran en la categoría abstracta de "ayudas", cuando creamos un vector, no aparecerá nada en la vista preliminar en segundo plano.
 
-![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
+![Vectores en Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
 > 1. Podemos utilizar una línea como sustituto de una vista preliminar del vector.
 
@@ -20,7 +20,7 @@ El [vector](5-2\_vectors.md#vector-1) es una representación de magnitud y direc
 
 Un [plano](5-2\_vectors.md#plane-1) es una superficie bidimensional que puede tener el aspecto de una superficie plana que se extiende de forma indefinida. Cada plano tiene un origen y una dirección X, Y y Z (arriba).
 
-![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
+![Planos en Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
 > 1. Aunque son abstractos, los planos tienen una posición de origen, por lo que podemos localizarlos en el espacio.
 > 2. En Dynamo, los planos se renderizan en la vista preliminar en segundo plano.
@@ -35,7 +35,7 @@ Un [plano](5-2\_vectors.md#plane-1) es una superficie bidimensional que puede te
 
 Un [sistema de coordenadas](5-2\_vectors.md#coordinate-system-1) permite determinar la ubicación de puntos u otros elementos geométricos. En la imagen siguiente, se explica el aspecto que tiene en Dynamo y lo que representa cada color.
 
-![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
+![Sistema de coordenadas en Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 
 > 1. Aunque son abstractos, los sistemas de coordenadas también tienen una posición de origen para poder localizarlos en el espacio.
 > 2. En Dynamo, los sistemas de coordenadas se renderizan en la vista preliminar en segundo plano como un punto (origen) y líneas que definen los ejes (X es rojo, Y es verde y Z es azul según la convención).
@@ -65,7 +65,7 @@ Este es un desglose de los vectores en sus diferentes partes mediante la misma n
 ![Vector](../images/5-2/2/Vector.jpg)
 
 > 1. El **punto inicial** del vector se denomina **base**.
-> 2. El \*\*punto final \*\*del vector se denomina **punta** o **sentido**.
+> 2. El **punto final **del vector se denomina **punta** o **sentido**.
 > 3. El vector AB no es igual al vector BA, que señalaría la dirección opuesta.
 
 Si desea ver un momento cómico en relación con los vectores (y su definición abstracta), eche un vistazo al clásico de la comedia "Aterriza como puedas" y escuche la siguiente línea de diálogo burlona bastante citada:

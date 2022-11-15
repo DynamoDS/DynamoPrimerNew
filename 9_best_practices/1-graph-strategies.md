@@ -2,7 +2,7 @@
 
 Antes de este capítulo, en el manual de introducción, se describe cómo implementar las eficaces funciones de creación de secuencias de comandos visuales de Dynamo. Un conocimiento exhaustivo de estas funciones constituye una base sólida y el primer paso para la creación de programas visuales potentes. Cuando utilizamos los programas visuales sobre el terreno, los compartimos con compañeros, solucionamos errores o probamos los límites, nos encontraremos con problemas adicionales que deberemos afrontar. Si otra persona va a utilizar el programa o espera abrirlo dentro de seis meses, este debe tener una claridad gráfica y lógica inmediata. Dynamo dispone de numerosas herramientas para gestionar la complejidad del programa y, en este capítulo, se proporcionan las directrices para utilizarlas.
 
-![groups](images/1/cad-chart-visual.jpg)
+![grupos](images/1/cad-chart-visual.jpg)
 
 ## Reducción de la complejidad
 
@@ -30,7 +30,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 * En ocasiones, se puede utilizar un bloque de código para **escribir un método de nodo o número de forma más rápida que con la búsqueda** (Point.ByCoordinates, Number, String y Formula).
 * Los bloques de código son útiles **cuando se desean definir funciones personalizadas en DesignScript para reducir el número de nodos de un gráfico**.
 
-![](<images/1/graphstrategy3 (1).png>)
+![](images/1/graphstrategy3(1).png)
 
 > Los ejemplos 1 y 2 realizan la misma función. Se tardó mucho menos en escribir unas pocas líneas de código que en buscar y añadir cada nodo individualmente. El bloque de código también es mucho más conciso.
 >
@@ -42,16 +42,16 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 ### **Condensación con de nodo a código**
 
 * Puede **reducir la complejidad de un gráfico mediante el método de nodo a código**, que utilizará una colección de nodos sencillos y escribirá la secuencia DesignScript correspondiente en un único bloque de código.
-* El método de nodo a código\*\* permite condensar código sin que el programa pierda claridad\*\*.
+* El método de nodo a código** permite condensar código sin que el programa pierda claridad**.
 * A continuación, se indican las **ventajas** de utilizar el método de nodo a código:
-   * Condensa el código fácilmente en un componente que aún puede editarse.
-   * Puede simplificar una parte significativa del gráfico.
-   * Es útil si no se modifica con frecuencia el "miniprograma".
-   * Permite incorporar otras características de bloque de código, como las funciones.
+  * Condensa el código fácilmente en un componente que aún puede editarse.
+  * Puede simplificar una parte significativa del gráfico.
+  * Es útil si no se modifica con frecuencia el "miniprograma".
+  * Permite incorporar otras características de bloque de código, como las funciones.
 * A continuación, se indican las **desventajas** de utilizar el método de nodo a código:
-   * La asignación de nombres genéricos reduce su facilidad de lectura.
-   * Es más difícil de comprender para otros usuarios.
-   * No hay una forma sencilla de volver a la versión de programación visual.
+  * La asignación de nombres genéricos reduce su facilidad de lectura.
+  * Es más difícil de comprender para otros usuarios.
+  * No hay una forma sencilla de volver a la versión de programación visual.
 
 ![](images/1/graphstrategy3\_1.png)
 
@@ -63,9 +63,9 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 ### **Acceso a los datos de forma flexible con List@Level**
 
 * El uso de List@Level puede ayudarle a **reducir la complejidad del gráfico mediante la sustitución de los nodos List.Map y List.Combine**, que pueden ocupar una cantidad considerable de espacio en el lienzo.
-* List@Level proporciona un\*\* método más rápido que List.Map/List.Combine para crear una lógica de nodo\*\*, lo que permite acceder a los datos de cualquier nivel de una lista directamente desde el puerto de entrada de un nodo
+* List@Level proporciona un** método más rápido que List.Map/List.Combine para crear una lógica de nodo**, lo que permite acceder a los datos de cualquier nivel de una lista directamente desde el puerto de entrada de un nodo
 
-![](<images/1/graphstrategy4 (1) (1).png>)
+![](images/1/graphstrategy4(1)(1).png)
 
 > Podemos comprobar cuántos valores devuelve True BoundingBox.Contains y en qué listas mediante la activación de List@Level para la entrada "list" de CountTrue. List@Level permite al usuario determinar de qué nivel se obtendrán los datos. El uso de List@Level es flexible, eficaz y muy recomendado frente a otros métodos en los que se utilizan List.Map y List.Combine.
 >
@@ -84,17 +84,17 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 * Si otros van a trabajar con el gráfico, **asegúrese de que el diseño de cables y nodos fluya con facilidad antes de enviarlo**.
 * Para facilitar la alineación, **utilice la función "Presentación de nodo de limpieza" para alinear automáticamente** el gráfico, aunque de forma menos precisa que manualmente.
 
-![](<images/1/graphstrategy5 (2) (1).png>)
+![](images/1/graphstrategy5(2)(1).png)
 
 > 1. Gráfico desorganizado
 > 2. Gráfico alineado
 >
-> Para obtener información sobre cómo utilizar la alineación de nodos, consulte [Administración del programa](3-4\_best\_practices.md).
+> Para obtener información sobre cómo utilizar la alineación de nodos, consulte [Administración del programa.](3-4\_best\_practices.md)
 
 ### **Etiquetado descriptivo mediante cambio de nombre**
 
 * El cambio de nombre de las entradas puede ayudar a otros a comprender más fácilmente el gráfico, **sobre todo, si los elementos a los que se van a conectar no aparecen en la pantalla**.
-* **Tenga cuidado de no cambiar el nombre de los nodos que no sean entradas.** Una alternativa a esto es crear un nodo personalizado a partir de un clúster de nodos y cambiarle el nombre; se comprenderá que contiene otro elemento.
+* **Tenga cuidado de no cambiar el nombre de los nodos que no sean entradas**. Una alternativa a esto es crear un nodo personalizado a partir de un clúster de nodos y cambiarle el nombre; se comprenderá que contiene otro elemento.
 
 ![](images/1/graphstrategy6.png)
 
@@ -102,7 +102,7 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 > 2. Entradas para los parámetros arquitectónicos
 > 3. Entradas para la secuencia de comandos de simulación de drenaje
 >
-> Para cambiar el nombre de un nodo, haga clic con el botón derecho en su nombre y seleccione "Cambiar nombre de nodo...".
+> Para cambiar el nombre de un nodo, haga clic con el botón derecho en su nombre y seleccione "Cambiar nombre de nodo".
 
 ### **Explicación con notas**
 
@@ -112,17 +112,17 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 ![](images/1/graphstrategy7.png)
 
 > 1. Una nota que describe la parte del programa que devuelve distancias de traslado sin procesar.
-> 2. Una nota que describe el código que asigna dichos valores a una onda sinusoidal.
+> 2. Una nota que describe el código que asigna esos valores a una onda sinusoidal.
 >
 > Para obtener información sobre cómo añadir una nota, consulte [Administración del programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
 ## Ajuste continuo
 
-Al crear la secuencia de comandos visual, es importante comprobar que se devuelve lo que se esperaba. No todos los errores o los problemas provocarán que el programa falle inmediatamente, sobre todo, los valores nulos o cero que podrían afectar a niveles inferiores. Esta estrategia también se aborda en el contexto de la creación de secuencias de comando de texto en [Estrategias de creación de secuencias de comandos](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). El siguiente procedimiento le ayudará a asegurarse de que obtiene lo que esperaba.
+Al crear la secuencia de comandos visual, es importante comprobar que se devuelve lo que se esperaba. No todos los errores o los problemas provocarán que el programa falle inmediatamente, sobre todo, los valores nulos o cero que podrían afectar a niveles inferiores. Esta estrategia también se aborda en el contexto de la creación de secuencias de comandos de texto en las [Estrategias de creación de secuencias de comandos](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). El siguiente procedimiento le ayudará a asegurarse de que obtiene lo que esperaba.
 
 ### **Supervisión de datos con burbujas de visualización y vista preliminar**
 
-* Utilice las burbujas de visualización y vista preliminar al crear el programa para\*\* comprobar que las salidas clave devuelvan lo que esperaba\*\*.
+* Utilice las burbujas de visualización y vista preliminar al crear el programa para** comprobar que las salidas clave devuelvan lo que esperaba**.
 
 ![](images/1/graphstrategy8.png)
 
@@ -131,7 +131,7 @@ Al crear la secuencia de comandos visual, es importante comprobar que se devuelv
 > 1. Las distancias de traslado sin procesar.
 > 2. Los valores que se transfieren a través de la ecuación de seno.
 >
-> Para obtener información sobre cómo utilizar los nodos Watch, consulte [Biblioteca](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Para obtener información sobre cómo utilizar la visualización, consulte [Biblioteca](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
 
 ## Garantizar la reutilización
 
@@ -144,10 +144,10 @@ Es muy probable que otro usuario abra el programa en algún momento, incluso aun
 
 ### **Uso de valores predefinidos para insertar valores de entrada**
 
-* Si desea insertar en el gráfico **condiciones u opciones específicas**, debe utilizar valores predefinidos para acceder a ellos rápidamente.
+* Si **desea insertar en el gráfico condiciones u opciones específicas**, debe utilizar valores predefinidos para acceder a ellos rápidamente.
 * También puede utilizar valores predefinidos para **reducir la complejidad mediante el almacenamiento en caché de los valores de controles deslizantes** de un gráfico con tiempos de ejecución prolongados.
 
-> Para obtener información sobre cómo utilizar valores predefinidos, consulte [Administración de datos con valores predefinidos](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Para obtener información sobre cómo utilizar los valores predefinidos, consulte [Administración de datos con valores predefinidos](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
 ### **Inclusión de programas con nodos personalizados**
 
@@ -167,10 +167,10 @@ Es muy probable que otro usuario abra el programa en algún momento, incluso aun
 ### **Creación de plantillas**
 
 * Puede crear plantillas para **establecer normas gráficas en todos los gráficos visuales a fin de garantizar que los colaboradores dispongan de una forma normalizada de comprender el gráfico**.
-* Al crear una plantilla, puede normalizar **los colores de grupo y los tamaños de tipo de letra** para organizar en categorías los flujos de trabajo o las acciones de datos.
-* Al crear una plantilla, puede incluso normalizar el modo en que desea **utilizar una etiqueta, un color o un estilo para indicar la diferencia entre los flujos de trabajo front-end y back-end** del gráfico.
+* Al crear una plantilla, puede normalizar los **colores de grupo y los tamaños de tipo de letra** para organizar en categorías los flujos de trabajo o las acciones de datos.
+* Al crear una plantilla, puede incluso normalizar el modo en que desea utilizar una **etiqueta, un color o un estilo para indicar la diferencia entre los flujos de trabajo front-end y back-end** del gráfico.
 
-![](<images/1/graphstrategy10 (2).png>)
+![](images/1/graphstrategy10(2).png)
 
 > 1. La interfaz de usuario, o front-end, del programa incluye un nombre de proyecto, controles deslizantes de entrada y geometría de importación.
 > 2. El back-end del programa.
@@ -217,7 +217,7 @@ Con los grupos establecidos, alinee los nodos para crear continuidad visual en e
 
 Consiga que el programa sea más accesible mediante la adición de otra capa de mejoras gráficas. Añada notas para describir cómo funciona un área específica del programa, proporcione nombres personalizados a las entradas y asigne colores a los distintos tipos de grupos.
 
-![](<images/1/graphstrategy15 (1).png>)
+![](images/1/graphstrategy15(1).png)
 
 > Estas mejoras gráficas permiten al usuario obtener más información sobre lo que realiza el programa. Los diferentes colores de grupo ayudan a distinguir las entradas de las funciones.
 >

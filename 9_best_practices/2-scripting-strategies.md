@@ -19,13 +19,11 @@ La creación de secuencias de comandos de texto puede establecer relaciones de u
 |                    |             |               |                    |                    |               |
 | ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
 |                    | **Creación de bucles** | **Repetición** | **Condensar nodos** | **Bibliotecas ext.** | **Abreviatura** |
-| **DesignScript** | Sí | Sí | Sí | No | Sí |
-| **Python** | Sí | Sí | Parcialmente | Sí | No |
-| **ZeroTouch (C#)** | No | No | No | Sí | No |
+| **DesignScript**   | Sí         | Sí           | Sí                | No                 | Sí           |
+| **Python**         | Sí         | Sí           | Parcialmente          | Sí                | No            |
+| **ZeroTouch (C#)** | No          | No            | No                 | Sí                | No            |
 
-{% hint style="info" %}
-Consulte [Referencia de secuencias de comandos](13-3\_scripting-reference.md) para obtener una lista de los elementos a los que cada biblioteca de Dynamo proporciona acceso.
-{% endhint %}
+{% hint style="info" %} Consulte [Referencia de secuencias de comandos](13-3\_scripting-reference.md) para obtener una lista de los elementos a los que cada biblioteca de Dynamo proporciona acceso. {% endhint %}
 
 ### Pensamiento paramétrico
 
@@ -35,11 +33,11 @@ Al crear secuencias de comandos en Dynamo, un entorno inevitablemente paramétri
 
 * Intente determinar los parámetros especificados en el problema de diseño para que pueda construir un modelo que se base directamente en esos datos.
 * Antes de escribir el código, identifique las variables:
-   * Un conjunto mínimo de entradas
-   * La salida deseada
-   * Constantes
+  * Un conjunto mínimo de entradas
+  * La salida deseada
+  * Constantes
 
-![](<./images/2/think parametrically 01.jpg>)
+![](./images/2/thinkparametrically01.jpg)
 
 > Se han establecido varias variables antes de escribir el código.
 >
@@ -55,25 +53,23 @@ Al crear secuencias de comandos en Dynamo, un entorno inevitablemente paramétri
 * El uso de parámetros permite editar determinados parámetros o variables para manipular o modificar el resultado final de una ecuación o un sistema.
 * Siempre que las entidades de la secuencia de comandos estén relacionadas lógicamente, el objetivo es definirlas como funciones entre sí. De este modo, al modificar una, la otra se puede actualizar de forma proporcional.
 * Minimice el número de entradas visualizando solo los parámetros clave:
-   * Si un conjunto de parámetros se puede derivar de más parámetros principales, solo se mostrarán los parámetros principales como entradas de la secuencia de comandos. Esto aumenta la facilidad de uso de la secuencia de comandos al reducir la complejidad de su interfaz.
+  * Si un conjunto de parámetros se puede derivar de más parámetros principales, solo se mostrarán los parámetros principales como entradas de la secuencia de comandos. Esto aumenta la facilidad de uso de la secuencia de comandos al reducir la complejidad de su interfaz.
 
-![](<./images/2/think parametrically 02.jpg>)
+![](./images/2/thinkparametrically02.jpg)
 
-> Los "módulos" de código del ejemplo en [Nodos de Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> El código "modules" del ejemplo de [Nodo de Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
 > 1. Entradas.
 > 2. Variables internas de la secuencia de comandos.
 > 3. Un bucle que utiliza estas entradas y variables para realizar su función.
 
-{% hint style="info" %}
-Consejo: Céntrese tanto en el proceso como lo hace en la solución.
-{% endhint %}
+{% hint style="info" %} Consejo: Céntrese tanto en el proceso como lo hace en la solución. {% endhint %}
 
 ### **No se repita (principio de no repetición):**
 
 * Cuando hay varias formas de expresar lo mismo en la secuencia de comandos, en algún momento, las representaciones duplicadas quedarán fuera de la sincronización, lo que puede llevar a problemas de mantenimiento, factorización incorrecta y contradicciones internas.
 * El principio de no repetición (DRY, Don't Repeat Yourself) se define como "Cada parte del conocimiento debe tener una representación única, sin ambigüedades y autorizada dentro de un sistema":
-   * Si se aplica correctamente este principio, todos los elementos relacionados de la secuencia de comandos cambiarán de forma predecible y uniforme, y todos los elementos no relacionados no presentarán consecuencias lógicas entre sí.
+  * Si se aplica correctamente este principio, todos los elementos relacionados de la secuencia de comandos cambiarán de forma predecible y uniforme, y todos los elementos no relacionados no presentarán consecuencias lógicas entre sí.
 
 ```
 ### BAD
@@ -94,9 +90,7 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}
-Consejo: Antes de duplicar entidades en la secuencia de comandos (como la constante en el ejemplo anterior), pregúntese si puede establecer un vínculo con el origen en su lugar.
-{% endhint %}
+{% hint style="info" %} Consejo: Antes de duplicar entidades en la secuencia de comandos (como la constante en el ejemplo anterior), pregúntese si puede establecer un vínculo con el origen en su lugar. {% endhint %}
 
 ### Estructuración modular
 
@@ -108,7 +102,7 @@ A medida que aumenta la longitud y la complejidad del código, la "gran idea" (o
 * Puede tratarse de cualquier elemento que se deba separar visualmente del código adyacente (una función, una clase, un grupo de entradas o las bibliotecas que se van a importar).
 * El desarrollo de código en módulos aprovecha la calidad visual e intuitiva de los nodos, así como las relaciones complejas que solo pueden obtenerse mediante secuencias de comandos de texto.
 
-![](<./images/2/think parametrically 02.jpg>)
+![](./images/2/thinkparametrically02.jpg)
 
 > Estos bucles llaman a una clase denominada "agente" que desarrollaremos más detalladamente en el ejercicio.
 >
@@ -123,7 +117,7 @@ A medida que aumenta la longitud y la complejidad del código, la "gran idea" (o
 
 En este ejemplo, se crean esferas con radios y colores basados en el valor Z de los centros.
 
-![](<./images/2/spot code resuse.jpg>)
+![](./images/2/spotcoderesuse.jpg)
 
 > 1. Dos funciones principales de "trabajo": una que crea esferas con radios y colores de visualización en función del valor Z del centro.
 > 2. Una función principal de "administrador" que combina las dos funciones de trabajo. Al llamar a esta, se llamará a las dos funciones incluidas en ella.
@@ -139,42 +133,42 @@ En este ejemplo, se crean esferas con radios y colores basados en el valor Z de 
 
 **Formas generales de modularización:**
 
-* Agrupación de código:
+*   Agrupación de código:
 
-   ```
-   # IMPORT LIBRARIES
-   import random
-   import math
-   import clr
-   clr.AddReference('ProtoGeometry')
-   from Autodesk.DesignScript.Geometry import *
+    ```
+    # IMPORT LIBRARIES
+    import random
+    import math
+    import clr
+    clr.AddReference('ProtoGeometry')
+    from Autodesk.DesignScript.Geometry import *
 
-   # DEFINE PARAMETER INPUTS
-   surfIn = IN[0]
-   maxSteps = IN[1]
-   ```
-* Funciones:
+    # DEFINE PARAMETER INPUTS
+    surfIn = IN[0]
+    maxSteps = IN[1]
+    ```
+*   Funciones:
 
-   ```
-   def get_step_size():
-     area = surfIn.Area
-     stepSize = math.sqrt(area)/100
-     return stepSize
+    ```
+    def get_step_size():
+      area = surfIn.Area
+      stepSize = math.sqrt(area)/100
+      return stepSize
 
-   stepSize = get_step_size()
-   ```
-* Clases:
+    stepSize = get_step_size()
+    ```
+*   Clases:
 
-   ```
-   class MyClass:
-     i = 12345
+    ```
+    class MyClass:
+      i = 12345
 
-     def f(self):
-       return 'hello world'
+      def f(self):
+        return 'hello world'
 
-   numbers = MyClass.i
-   greeting = MyClass.f
-   ```
+    numbers = MyClass.i
+    greeting = MyClass.f
+    ```
 
 ### Ajuste continuo
 
@@ -182,13 +176,13 @@ Al desarrollar secuencias de comandos de texto en Dynamo, es recomendable asegur
 
 **Realice pruebas durante el proceso:**
 
-* Cuando complete un grupo de funciones:
-   * Retroceda y revise el código.
-   * Sea crítico. ¿Un colaborador puede entender la finalidad del código? ¿Es necesario que haga esto? ¿Esta función se puede realizar de forma más eficaz? ¿Estoy creando dependencias o duplicados innecesarios?
-   * Realice pruebas rápidas para asegurarse de que se devuelven datos que "tienen sentido".
+* Cuando complete un grupo de funciones, realice lo siguiente:
+  * Retroceda y revise el código.
+  * Sea crítico. ¿Un colaborador puede entender la finalidad del código? ¿Es necesario que haga esto? ¿Esta función se puede realizar de forma más eficaz? ¿Estoy creando dependencias o duplicados innecesarios?
+  * Realice pruebas rápidas para asegurarse de que se devuelven datos que "tienen sentido".
 * Asigne los datos más recientes con los que está trabajando en la secuencia de comandos como salida para que el nodo siempre presente datos pertinentes cuando se actualice la secuencia de comandos:
 
-![](<./images/2/flex continuously.jpg>)
+![](./images/2/flexcontinuously.jpg)
 
 > 1. Compruebe que todos los bordes del sólido se devuelvan como curvas para crear un cuadro delimitador alrededor.
 > 2. Compruebe que las entradas de recuento se hayan convertido correctamente en intervalos.
@@ -199,11 +193,9 @@ Al desarrollar secuencias de comandos de texto en Dynamo, es recomendable asegur
 * Durante la creación de secuencias de comandos, establezca los parámetros de entrada en los valores mínimo y máximo del dominio asignado para comprobar si el programa sigue funcionando en condiciones extremas.
 * Aunque el programa funcione en los extremos, compruebe si devuelve valores nulos, vacíos o cero no deseados.
 * En algunos casos, los errores y las incidencias que revelan algún problema subyacente en la secuencia de comandos solo se detectarán durante estos casos extremos.
-   * Conozca las causas del error y decida posteriormente si se debe corregir internamente o si se debe volver a definir un dominio de parámetro para evitar el problema.
+  * Conozca las causas del error y decida posteriormente si se debe corregir internamente o si se debe volver a definir un dominio de parámetro para evitar el problema.
 
-{% hint style="info" %}
-Consejo: Siempre presuponga que el usuario utilizará todas las combinaciones de cada uno de los valores de entrada que se le hayan presentado. Esto ayudará a eliminar sorpresas no deseadas.
-{% endhint %}
+{% hint style="info" %} Consejo: Siempre presuponga que el usuario utilizará todas las combinaciones de cada uno de los valores de entrada que se le hayan presentado. Esto ayudará a eliminar sorpresas no deseadas. {% endhint %}
 
 ### Depuración eficaz
 
@@ -238,11 +230,11 @@ for i in range(xCount):
 * El origen de un problema se puede aislar en determinados módulos.
 * Una vez identificado el módulo defectuoso, se puede corregir de forma mucho más fácil el problema.
 * Cuando se debe modificar un programa, el código desarrollado en los módulos será mucho más fácil de cambiar:
-   * Puede insertar módulos nuevos o depurados en un programa existente con la seguridad de que el resto del programa no cambiará.
+  * Puede insertar módulos nuevos o depurados en un programa existente con la seguridad de que el resto del programa no cambiará.
 
-![](<./images/2/leverage code's modularity.jpg>)
+![](./images/2/leveragecode'smodularity.jpg)
 
-> Depuración del archivo de ejemplo desde [Nodos de Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Depuración del archivo de ejemplo del [nodo de Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
 > 1. La geometría de entrada devuelve un cuadro delimitador de mayor tamaño, como podemos ver si se asigna xDist e yDist a OUT.
 > 2. Las curvas de borde de la geometría de entrada devuelven un cuadro delimitador adecuado con las distancias correctas para xDist e yDist.
@@ -260,32 +252,32 @@ Teniendo en cuenta los procedimientos recomendados de creación de secuencias de
 
 La secuencia de comandos se aplica a una superficie deformada por un atractor.
 
-![](<./images/2/scripting strategies - exercise - 01.jpg>)
+![](./images/2/scriptingstrategies-exercise-01.jpg)
 
 Lo primero que debemos hacer es importar las bibliotecas de Dynamo necesarias. Esto proporcionará acceso global a las funciones de Dynamo en Python.
 
 Todas las bibliotecas que tenemos intención de utilizar deben importarse aquí.
 
-![](<./images/2/scripting strategies - exercise - 02.jpg>)
+![](./images/2/scriptingstrategies-exercise-02.jpg)
 
 A continuación, debemos definir las entradas y las salidas de la secuencia de comandos, que se mostrarán como puertos de entrada en el nodo. Estas entradas externas son la base de nuestra secuencia de comandos y la clave para establecer un entorno paramétrico.
 
 Se deben definir entradas que se correspondan con variables en la secuencia de comandos de Python y determinar la salida deseada:
 
-![](<./images/2/scripting strategies - exercise - 03.jpg>)
+![](./images/2/scriptingstrategies-exercise-03.jpg)
 
 > 1. La superficie que deseamos descender.
 > 2. El número de agentes que deseamos que realicen el recorrido.
 > 3. El número máximo de pasos que pueden dar los agentes.
 > 4. Una opción para tomar la ruta descendente más corta por la superficie o para atravesarla.
-> 5. El nodo de Python con identificadores de entrada que corresponden a entradas de la secuencia de comandos (IN\[0], IN\[1]).
+> 5. El nodo de Python con identificadores de entrada que corresponden a entradas de la secuencia de comandos (IN[0], IN[1]).
 > 6. Las curvas de salida que se pueden mostrar con un color diferente.
 
 Ahora utilicemos el procedimiento de modularidad y creemos el cuerpo de nuestra secuencia de comandos. La simulación de la ruta descendente más corta por una superficie para varios puntos iniciales es una tarea importante que requerirá varias funciones. En lugar de llamar a las diferentes funciones a lo largo de la secuencia de comandos, podemos modularizar el código recopilándolas en una sola clase, nuestro agente. Se puede llamar a las diferentes funciones de esta clase o "módulo" con distintas variables, o incluso volver a utilizarlas en otra secuencia de comandos.
 
 Necesitaremos definir una clase o un plan de acción para un agente con la intención de descender la superficie optando por el desplazamiento en la dirección más escarpada posible cada vez que este dé un paso:
 
-![](<./images/2/scripting strategies - exercise - 04.jpg>)
+![](./images/2/scriptingstrategies-exercise-04.jpg)
 
 > 1. Nombre.
 > 2. Atributos globales que comparten todos los agentes.
@@ -297,7 +289,7 @@ Inicializaremos los agentes mediante la definición de su ubicación inicial. Es
 
 Tendremos que crear una instancia de todos los agentes cuyo descenso por la superficie deseamos observar y definir sus atributos iniciales:
 
-![](<./images/2/scripting strategies - exercise - 05.jpg>)
+![](./images/2/scriptingstrategies-exercise-05.jpg)
 
 > 1. Una nueva lista de trayectorias vacía.
 > 2. La ubicación en la que se iniciará el paseo por la superficie.
@@ -305,15 +297,15 @@ Tendremos que crear una instancia de todos los agentes cuyo descenso por la supe
 
 Actualice cada agente en cada paso. A continuación, deberemos introducir un bucle anidado en el que, para cada agente y paso, actualizaremos y registraremos la posición en la lista de trayectorias. En cada paso, también nos aseguraremos de que el agente no haya alcanzado un punto de la superficie donde no pueda dar otro paso, lo que le permitirá descender. Si se cumple esa condición, finalizaremos el desplazamiento del agente.
 
-![](<./images/2/scripting strategies - exercise - 06.jpg>)
+![](./images/2/scriptingstrategies-exercise-06.jpg)
 
 Ahora que se han actualizado por completo los agentes, volvamos a la geometría que los representa. Una vez que todos los agentes hayan alcanzado su límite de descenso o su número máximo de pasos, crearemos una PolyCurve a través de los puntos de la lista de trayectorias y generaremos las trayectorias de PolyCurve.
 
-![](<./images/2/scripting strategies - exercise - 07.jpg>)
+![](./images/2/scriptingstrategies-exercise-07.jpg)
 
 Nuestra secuencia de comandos para buscar las rutas más escarpadas.
 
-![](<./images/2/scripting strategies - exercise - 08.jpg>)
+![](./images/2/scriptingstrategies-exercise-08.jpg)
 
 > 1. Un valor predefinido que simula la lluvia en la superficie subyacente.
 > 2. En lugar de buscar la ruta más escarpada, se pueden activar o desactivar los agentes para que atraviesen la superficie subyacente.

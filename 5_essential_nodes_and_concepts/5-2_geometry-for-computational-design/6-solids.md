@@ -10,7 +10,7 @@ Si deseamos crear modelos más complejos que no se puedan crear a partir de una 
 
 Puede utilizar [operaciones booleanas](5-6\_solids.md#boolean-operations) para modificar sólidos. Vamos a utilizar algunas operaciones booleanas para crear una bola llena de puntas.
 
-![](<../images/5-2/6/solids  - spiky ball.jpg>)
+![](../images/5-2/6/solids-spikyball.jpg)
 
 > 1. **Sphere.ByCenterPointRadius**: cree el sólido base.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: consulte las caras del sólido y conviértalas en geometría de superficie; en este caso, la esfera solo tiene una cara.
@@ -29,7 +29,7 @@ Puede utilizar [operaciones booleanas](5-6\_solids.md#boolean-operations) para m
 
 Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Utilice la función Bloquear para suspender la ejecución de nodos seleccionados y nodos descendentes afectados.
 
-![](<../images/5-2/6/solids - freeze node.jpg>)
+![](../images/5-2/6/solids-freezenode.jpg)
 
 > 1\. Utilice el menú contextual para bloquear la operación de unión de sólidos.
 >
@@ -84,13 +84,13 @@ Las operaciones booleanas de sólidos son métodos para combinar dos o más sól
 
 De este modo, las operaciones booleanas de sólidos permiten ahorrar mucho tiempo. Existen tres operaciones booleanas de sólidos que distinguen las partes de la geometría que se conservan. ![Operación booleana de sólido](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Unión:** elimine las partes que se solapan de los sólidos y únalas en un único sólido.
-> 2. **Diferencia:** reste un sólido a otro. El sólido que se va a restar se conoce como herramienta. Tenga en cuenta que puede cambiar el sólido que será la herramienta para conservar el volumen inverso.
-> 3. **Intersección:** conserve solo el volumen de intersección de los dos sólidos.
+> 1. **Unión**: elimine las partes que se solapan de los sólidos y únalas en un único sólido.
+> 2. **Diferencia**: reste un sólido a otro. El sólido que se va a restar se conoce como herramienta. Tenga en cuenta que puede cambiar el sólido que será la herramienta para conservar el volumen inverso.
+> 3. **Intersección**: conserve solo el volumen de intersección de los dos sólidos.
 
-Además de estas tres operaciones, Dynamo incluye los nodos **Solid.DifferenceAll** y **Solid.UnionAll** para realizar operaciones de diferencia y unión con varios sólidos. ![](../images/5-2/6/BooleanAll.jpg)
+Además de estas tres operaciones, Dynamo incluye los nodos **Solid.DifferenceAll** y **Solid.UnionAll** para realizar operaciones de diferencia y unión con varios sólidos.![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** operación de unión con esfera y conos orientados hacia fuera.
-> 2. **DifferenceAll:** operación de diferencia con esfera y conos orientados hacia dentro.
+> 1. **UnionAll**: operación de unión con esfera y conos orientados hacia fuera.
+> 2. **DifferenceAll**: operación de diferencia con esfera y conos orientados hacia dentro.
 
 ##

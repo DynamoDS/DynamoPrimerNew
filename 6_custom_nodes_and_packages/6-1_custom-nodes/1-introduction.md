@@ -10,11 +10,11 @@ Cuando existen varias copias de un nodo personalizado en el gráfico, puede actu
 
 Podría decirse que la mejor función de los nodos personalizados es su capacidad para compartir el trabajo. Si un "usuario avanzado" crea un gráfico complejo de Dynamo y se lo entrega a un diseñador que no esté familiarizado con esta herramienta, este puede condensar el gráfico a sus aspectos básicos para interactuar con el diseño. El nodo personalizado se puede abrir para editar el gráfico interno, pero manteniendo la simplicidad del "contenedor". Con este proceso, los nodos personalizados permiten a los usuarios de Dynamo diseñar un gráfico limpio e intuitivo.
 
-![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
+![](../images/6-1/1/customnodeintro-worksharing01.jpg)
 
 ### Muchos métodos para crear un nodo
 
-Hay una gran variedad de métodos para crear nodos personalizados en Dynamo. En los ejemplos de este capítulo, crearemos nodos personalizados directamente desde la interfaz de usuario de Dynamo. Si es un programador y está interesado en el formato C# o Zero-Touch, puede consultar [está página ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)en la página wiki de Dynamo para obtener una revisión más detallada.
+Hay una gran variedad de métodos para crear nodos personalizados en Dynamo. En los ejemplos de este capítulo, crearemos nodos personalizados directamente desde la interfaz de usuario de Dynamo. Si es un programador y está interesado en el formato C# o Zero-Touch, puede consultar [esta página](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes) en la página wiki de Dynamo para obtener una revisión más detallada.
 
 ### Entorno de nodos personalizados y creación del primer nodo personalizado
 
@@ -22,28 +22,28 @@ Pasemos al entorno de nodos personalizados y creemos un nodo sencillo para calcu
 
 Para crear un nodo personalizado desde cero, inicie Dynamo y seleccione Nodo personalizado o pulse Ctrl + Mayús + N en el lienzo.
 
-![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment01.jpg)
 
 Asigne un nombre, una descripción y una categoría en el cuadro de diálogo Propiedades de nodo personalizado.
 
-![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment02.jpg)
 
-> 1. **Nombre:** porcentaje.
+> 1. **Nombre**: porcentaje.
 > 2. **Descripción**: calcule el porcentaje de un valor en relación con otro.
-> 3. **Categoría:** Math.Functions.
+> 3. **Categoría**: Math.Functions.
 
 Se abre un lienzo con un fondo de color amarillo, lo que indica que está trabajando en un nodo personalizado. En este lienzo, tiene acceso a todos los nodos principales de Dynamo, así como a los nodos Input y Output, que etiquetan los datos que entran en el nodo personalizado y salen de él. Se pueden encontrar en Entrada > Básico.
 
-![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment03.jpg)
 
-![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
 
-> 1. **Entradas:** los nodos de entrada crean puertos de entrada en el nodo personalizado. La sintaxis de un nodo de entrada es _nombre\_entrada : tipo de datos = valor\_por defecto(opcional)._
-> 2. **Salidas:** son similares a las entradas; estas crearán puertos en el nodo personalizado y les asignarán un nombre. Considere la posibilidad de añadir un **comentario personalizado** a los puertos de entrada y salida para que se muestren como sugerencia en los tipos de entrada y salida. Esto se explica con más detalle en la sección [Creación de nodos personalizados](2-creating.md).
+> 1. **Entradas**: los nodos de entrada crean puertos de entrada en el nodo personalizado. La sintaxis de un nodo de entrada es _nombre\\_entrada : tipo de datos = valor\\_por defecto(opcional)._
+> 2. **Salidas**: son similares a las entradas; estas crearán puertos en el nodo personalizado y les asignarán un nombre. Considere la posibilidad de añadir un **comentario personalizado** a los puertos de entrada y salida para que se muestren como sugerencia en los tipos de entrada y salida. Esto se explica con más detalle en la sección [Creación de nodos personalizados](2-creating.md).
 
 Puede guardar este nodo personalizado como un archivo .dyf (en lugar de como un archivo .dyn estándar); este se añadirá automáticamente a la sesión actual y futuras. Encontrará el nodo personalizado en la sección Complementos de la biblioteca.
 
-![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment05.jpg)
 
 ### Avancemos
 
