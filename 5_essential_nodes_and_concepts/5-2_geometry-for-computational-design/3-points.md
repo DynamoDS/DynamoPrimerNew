@@ -8,19 +8,19 @@
 
 ### 2D a 3D bod
 
-Nejběžnější typ bodu v aplikaci Dynamo existuje v našem trojrozměrném globálním souřadnicovém systému a má tři souřadnice \[X,Y,Z] (3D bod v aplikaci Dynamo).
+Nejběžnější typ bodu v aplikaci Dynamo existuje v našem trojrozměrném globálním souřadnicovém systému a má tři souřadnice [X,Y,Z] (3D bod v aplikaci Dynamo).
 
-![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
+![](../images/5-2/3/points-3dpointindynamo.jpg)
 
-2D bod v aplikaci Dynamo má dvě souřadnice \[X,Y].
+2D bod v aplikaci Dynamo má dvě souřadnice [X,Y].
 
-![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
+![](../images/5-2/3/points-2dpointindynamo.jpg)
 
 ### Bod na křivkách a površích
 
-Parametry křivek i povrchů jsou spojité a přesahují hranu dané geometrie. Protože tvary, které definují parametrický prostor, se nacházejí v trojrozměrném globálním souřadnicovém systému, můžeme vždy převést parametrickou souřadnici do „Globální“ souřadnice. Například bod \[0.2, 0.5] na povrchu je stejný jako bod \[1.8, 2.0, 4.1] v globálních souřadnicích.
+Parametry křivek i povrchů jsou spojité a přesahují hranu dané geometrie. Protože tvary, které definují parametrický prostor, se nacházejí v trojrozměrném globálním souřadnicovém systému, můžeme vždy převést parametrickou souřadnici do „Globální“ souřadnice. Například bod [0.2, 0.5] na povrchu je stejný jako bod [1.8, 2.0, 4.1] v globálních souřadnicích.
 
-![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
+![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg)
 
 > 1. Bod v předpokládaných globálních souřadnicích XYZ
 > 2. Bod relativní k danému souřadnicovému systému (válcový)
@@ -43,10 +43,10 @@ Pokud je geometrie jazykem modelu, pak body jsou abecedou. Body jsou základem, 
 
 ### Bod jako souřadnice
 
-Body mohou existovat také v dvojrozměrném souřadnicovém systému. Konvence má různý zápis písmen v závislosti na tom, s jakým prostorem pracujeme – můžeme použít \[X,Y] na rovině nebo \[U,V] na povrchu.
+Body mohou existovat také v dvojrozměrném souřadnicovém systému. Konvence má různé písmeno označující prostor, se kterým pracujete – můžeme použít [X,Y] na rovině nebo [U,V], na ploše.
 
 ![Bod jako souřadnice](../images/5-2/3/Coordinates.jpg)
 
-> 1. Bod v euklidovském souřadnicovém systému: \[X,Y,Z]
-> 2. Bod v souřadnicovém systému parametru křivky: \[t]
-> 3. Bod v souřadnicovém systému parametru povrchu: \[U,V]
+> 1. Bod v euklidovském souřadnicovém systému: [X,Y,Z]
+> 2. Bod v souřadnicovém systému parametru křivky: [t]
+> 3. Bod v souřadnicovém systému parametru povrchu: [U,V]

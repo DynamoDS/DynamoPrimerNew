@@ -12,20 +12,20 @@ Aplikace Dynamo definuje sítě pomocí datové struktury vrcholu plochy. Na zá
 
 K vytvoření sítě je potřeba seznam vrcholů a systém seskupení těchto vrcholů do plochy nazývané skupina indexů.
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes-meshelements.jpg)
 
 > 1. Seznam vrcholů
 > 2. Seznam indexových skupin pro definování ploch
 
-### Sada nástrojů pro sítě
+### Balíček Mesh Toolkit
 
-Možnosti sítě aplikace Dynamo lze rozšířit instalací balíčku [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). Balíček Dynamo Mesh Toolkit aplikace Dynamo poskytuje nástroje k importu sítí z externích formátů souborů, vytvoření sítě z objektů geometrie aplikace Dynamo a ručnímu vytvoření sítí pomocí jejich vrcholů a indexů.
+Možnosti sítě aplikace Dynamo lze rozšířit instalací balíčku [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). Balíček Dynamo Mesh Toolkit poskytuje nástroje k importu sítí z externích formátů souborů, vytvoření sítě z objektů geometrie aplikace Dynamo a ručnímu vytvoření sítí pomocí jejich vrcholů a indexů.
 
 Knihovna také poskytuje nástroje k úpravám sítí, opravě sítí nebo extrahování horizontálních řezů pro použití ve výrobě.
 
 Příklad použití tohoto balíčku naleznete v [případových studiích balíčku Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md).
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Balíček Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
 ## Podrobné informace...
 

@@ -1,6 +1,6 @@
 # Uživatelská příručka Primer, komunita a platforma aplikace Dynamo
 
-Tato příručka Primer obsahuje kapitoly od společnosti Mode Lab. Tyto kapitoly se zaměřují na základy práce s vizuálními programy v aplikaci Dynamo a obsahují i některá pokročilá témata.&#x20;
+Tato příručka Primer obsahuje kapitoly od společnosti Mode Lab. Tyto kapitoly se zaměřují na základy práce s vizuálními programy v aplikaci Dynamo a obsahují i některá pokročilá témata.
 
 ### Uživatelská příručka Primer
 
@@ -19,21 +19,19 @@ Pro uživatele, kteří si chtějí prohlédnout ukázku pracovních postupů ap
 
 * [Parametrická váza](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](<./images/1-2/vase1.gif>)
+![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
 
 * [Body atraktoru](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
-![](<./images/1-2/attractor1.gif>)
+![](images/1-2/attractor1.gif)
 
-{% hint style="info" %}
-Další tematická cvičení najdete v dalších kapitolách týkajích se různých aspektů aplikace Dynamo. **Cvičení** se obvykle nacházejí v poslední části každé stránky.
-{% endhint %}
+{% hint style="info" %} Další tematická cvičení najdete v dalších kapitolách týkajících se různých aspektů aplikace Dynamo. **Cvičení** se obvykle nacházejí v poslední části každé stránky. {% endhint %}
 
 ### Komunita
 
 Aplikace Dynamo by nemohla být taková, jaká je bez široké komunity uživatelů a přispěvatelů. Zapojte se do komunity tím, že budete sledovat [blog](http://dynamobim.org/blog/), přidáte svou práci do galerie nebo budete diskutovat na [fóru](https://forum.dynamobim.com).
 
-![Fórum](./images/1-2/02-Community.png)
+![Fórum](images/1-2/02-Community.png)
 
 ### Platforma
 
@@ -41,6 +39,6 @@ Aplikace Dynamo je navržena jako nástroj vizuálního programování pro konst
 
 Projekt má otevřený zdrojový kód, takže jej lze rozšiřovat o požadované funkce. Navštivte projekt na GitHubu a podívejte se na probíhající práce na aplikaci Dynamo.
 
-![Repozitář](./images/1-2/03-TheRepo.png)
+![Repozitář](images/1-2/03-TheRepo.png)
 
 > Prohlédněte si a forkněte repozitář a začněte jej rozšiřovat o nové funkce

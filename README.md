@@ -1,8 +1,6 @@
 # O aplikaci
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
-Propagační videofilm o aplikaci Dynamo
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Propagační videofilm o aplikaci Dynamo {% endembed %}
 
 ## Pro aplikaci Dynamo verze 2.13
 
@@ -61,7 +59,7 @@ Děkujeme Mattu Jezykovi, Ianu Keoughovi, Zachu Kronovi, Racel Williamsové and 
 
 ### Software a zdroje
 
-**Dynamo** Aktuální stabilní* verze aplikace Dynamo je 2.1.0
+**Dynamo** Nejnovější **stabilní** verzi aplikace Dynamo naleznete na následujících webových stránkách.
 
 http://dynamobim.com/download/ nebo http://dynamobuilds.com
 

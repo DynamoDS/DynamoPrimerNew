@@ -6,7 +6,7 @@ Pokud ano, je pravděpodobné, že jste udělali něco podobného jako v násle
 
 Na obrázku níže získáme všechny místnosti v modelu aplikace Revit, zjistíme index požadované místnosti (podle čísla místnosti) a nakonec získáme místnost s tímto indexem.
 
-![](<../images/5-5/4/dictionary - collect room in revit model.jpg>)
+![](../images/5-5/4/dictionary-collectroominrevitmodel.jpg)
 
 > 1. Získejte všechny místnosti v modelu.
 > 2. Číslo místnosti, kterou chcete najít.
@@ -25,27 +25,27 @@ Na obrázku níže získáme všechny místnosti v modelu aplikace Revit, zjist
 
 Pojďme udělat totéž pomocí slovníků. Nejdříve je nutné získat všechny místnosti v modelu aplikace Revit.
 
-![](<../images/5-5/4/dictionary - exercise I - 01.jpg>)
+![](../images/5-5/4/dictionary-exerciseI-01.jpg)
 
 > 1. Vybereme kategorii aplikace Revit, se kterou chceme pracovat (v tomto případě místnosti).
 > 2. Přikážeme aplikaci Dynamo, aby získala všechny prvky
 
-Dále je nutné rozhodnout, podle jakých klíčů se budou data vyhledávat. (Informace o klíčích naleznete v části [9-1 Co je slovník?)](9-1\_what-is-a-dictionary.md).
+Dále je nutné rozhodnout, podle jakých klíčů se budou data vyhledávat. (Informace o klíčích naleznete v části [Co je slovník?](9-1\_what-is-a-dictionary.md))
 
-![](<../images/5-5/4/dictionary - exercise I - 02.jpg>)
+![](../images/5-5/4/dictionary-exerciseI-02.jpg)
 
 > 1. Data, která použijeme, jsou čísla místností.
 
 Nyní vytvoříme slovník s danými klíči a prvky.
 
-![](<../images/5-5/4/dictionary - exercise I - 03.jpg>)
+![](../images/5-5/4/dictionary-exerciseI-03.jpg)
 
 > 1. Uzel **Dictionary.ByKeysValues** vytvoří slovník podle odpovídajících vstupů.
 > 2. `Keys` musí být řetězce, zatímco `values` mohou být různé typy objektů.
 
 Nyní můžeme načíst místnost ze slovníku pomocí čísla místnosti.
 
-![](<../images/5-5/4/dictionary - exercise I - 04.jpg>)
+![](../images/5-5/4/dictionary-exerciseI-04.jpg)
 
 > 1. Uzel `String` bude klíč, který použijeme k vyhledání objektu ze slovníku.
 > 2. Uzel **Dictionary.ValueAtKey** načte objekt ze slovníku.
@@ -54,19 +54,19 @@ Nyní můžeme načíst místnost ze slovníku pomocí čísla místnosti.
 
 Stejným způsobem lze vytvářet slovníky seskupených objektů. Pokud bychom chtěli vyhledat všechny místnosti na daném podlaží, můžeme upravit graf následovně.
 
-![](<../images/5-5/4/dictionary - exercise II - 01.jpg>)
+![](../images/5-5/4/dictionary-exerciseII-01.jpg)
 
 > 1. Místo čísla místnosti použijeme jako klíč hodnotu parametru (v tomto případě podlaží).
 
-![](<../images/5-5/4/dictionary - exercise II - 02.jpg>)
+![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
 > 1. Nyní můžete místnosti seskupit podle podlaží, na kterém se nacházejí.
 
-![](<../images/5-5/4/dictionary - exercise II - 03.jpg>)
+![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
 > 1. Po seskupení místností podle podlaží, můžeme použít sdílené (jedinečné) klíče jako klíče pro slovník a seznamy místností jako prvky.
 
-![](<../images/5-5/4/dictionary - exercise II - 04.jpg>)
+![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
 > 1. Nakonec můžeme pomocí podlaží v modelu aplikace Revit a pomocí slovníku vyhledat, které místnosti se na daném podlaží nacházejí. Uzel `Dictionary.ValueAtKey` načte jako vstup název podlaží a vrátí objekty místností na daném podlaží.
 

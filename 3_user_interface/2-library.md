@@ -2,7 +2,7 @@
 
 Knihovna obsahuje všechny načtené uzly, včetně výchozích kategorií uzlů, které jsou dodávány s instalací, a všech dalších načtených vlastních uzlů nebo balíčků. Uzly v knihovně jsou hierarchicky uspořádány v rámci knihoven, kategorií a případně podkategorií.
 
-![](<images/3-2/library - library UI.jpg>)
+![](images/3-2/library-libraryUI.jpg)
 
 * Základní uzly: Dodávány s výchozí instalací.
 * Vlastní uzly: Často používané postupy nebo speciální graf si můžete uložit jako vlastní uzly. Vlastní uzly můžete také sdílet s komunitou.
@@ -16,11 +16,9 @@ Procházení těchto kategorií je nejrychlejší způsob, jak pochopit hierarch
 
 Procházejte knihovnu kliknutím na nabídky a rozbalte jednotlivé kategorie a jejich podkategorie.
 
-{% hint style="info" %}
-K počátečnímu zkoumání je vhodná nabídka Geometrie, protože obsahuje největší množství uzlů.
-{% endhint %}
+{% hint style="info" %} K počátečnímu zkoumání je vhodná nabídka Geometry, protože obsahuje největší množství uzlů. {% endhint %}
 
-![](<images/3-2/library  - modified and resize library categories.jpg>)
+![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
 > 1. Knihovna
 > 2. Kategorie
@@ -29,13 +27,13 @@ K počátečnímu zkoumání je vhodná nabídka Geometrie, protože obsahuje n
 
 Uzly jsou dále kategorizovány do stejné podkategorie na základě toho, zda uzly **vytvářejí** data, provádějí **akce** nebo **dotazují** data.
 
-* ![](<images/3-2/user interface - create.jpg>) **Tvorba**: Vytvořte nebo sestavte geometrii od začátku. Vytvořte například kružnici.
-* ![](<images/3-2/user interface - action.jpg>) **Akce**: Proveďte akci s objektem. Změňte například velikost kružnice.
-* ![](<images/3-2/user interface - query.jpg>) **Dotaz**: Získejte vlastnost objektu, který již existuje. Zjistěte například poloměr kružnice.
+* ![](images/3-2/userinterface-create.jpg) **Tvorba**: Vytvořte nebo sestavte zcela novou geometrii. Vytvořte například kružnici.
+* ![](images/3-2/userinterface-action.jpg) **Akce**: Proveďte s  objektem nějakou akci. Změňte například velikost kružnice.
+* ![](images/3-2/userinterface-query.jpg) **Dotaz**: Získejte vlastnost objektu, který již existuje. Zjistěte například poloměr kružnice.
 
 Přesunutím ukazatele myši nad uzel zobrazíte podrobnější informace kromě jeho názvu a ikony. To nám umožňuje rychle pochopit, co uzel dělá, jaké bude vyžadovat vstupy a jaký bude poskytovat výstup.
 
-![](<images/3-2/user interface - node description.jpg>)
+![](images/3-2/userinterface-nodedescription.jpg)
 
 > 1. Popis – prostý jazyk popisující uzel
 > 2. Ikona – větší verze ikony v nabídce knihovny
@@ -48,7 +46,7 @@ Pokud přibližně víte, který uzel chcete přidat do pracovního prostoru, za
 
 Kliknutím na uzel, který chcete přidat, nebo stisknutím klávesy Enter přidáte zvýrazněné uzly do středu pracovního prostoru.
 
-![](<images/3-2/user interface - search.jpg>)
+![](images/3-2/userinterface-search.jpg)
 
 #### Hledání podle hierarchie
 
@@ -60,15 +58,15 @@ Zadáním různých částí místa uzlu v hierarchii knihovny ve formátu `lib
 
 * `library.category.nodeName`
 
-![](<images/3-2/library - search by hierarchy geometry point by coordinates (1).jpg>)
+\![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
 
 * `category.nodeName`
 
-![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
+![](images/3-2/library-searchbyhierarchy2pointbycoordinates.jpg)
 
 * `nodeName` nebo `keyword`
 
-![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
+![](images/3-2/library-searchbyhierarchy3bycoordinates.jpg)
 
 Název uzlu v pracovním prostoru se obvykle vykresluje ve formátu `category.nodeName`, s důležitými výjimkami zejména v kategoriích Input a View.
 
@@ -76,50 +74,48 @@ Dávejte pozor na podobně pojmenované uzly a všimněte si rozdílu kategorií
 
 * Uzly z většiny knihoven budou obsahovat formát kategorie
 
-![](<images/3-2/library - node category differences 1.jpg>)
+![](images/3-2/library-nodecategorydifferences1.jpg)
 
 * Uzly `Point.ByCoordinates` a `UV.ByCoordinates` mají stejný název, ale pocházejí z různých kategorií
 
-![](<images/3-2/library - node category differences 2.jpg>)
+![](images/3-2/library-nodecategorydifferences2.jpg)
 
 * Mezi povinné výjimky patří funkce Built-in, Core.Input, Core.View a Operators
 
-![](<images/3-2/library - node category differences 3.jpg>)
+![](images/3-2/library-nodecategorydifferences3.jpg)
 
 ### Často používané uzly
 
-Se stovkami uzlů zahrnutých v základní instalaci aplikace Dynamo, které jsou nezbytné pro vývoj našich vizuálních programů? Zaměřme se na ty, které nám umožňují definovat parametry programu (**Input**), zobrazíme výsledky akce uzlu (**Watch**) a definujeme vstupy nebo funkce pomocí zástupce (**Code Block**).
+Základní instalace aplikace Dynamo zahrnuje stovky uzlů. Které z nich jsou nezbytné pro vývoj našich vizuálních programů? Zaměřme se na ty, které nám umožňují definovat parametry programu (**Input**), zobrazit výsledky akce uzlu (**Watch**) a definovat vstupy nebo funkce pomocí zástupce (**Code Block**).
 
 #### Vstupní uzly
 
 Vstupní uzly jsou primárním prostředkem pro uživatele našeho vizuálního programu – ať jste to vy nebo někdo jiný – pro propojení s klíčovými parametry. Níže jsou uvedeny některé uzly dostupné v základní knihovně:
 
-| Uzel |                                                | Uzel |                                                |
-| -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean | ![](<images/3-2/library - boolean.jpg>) | Number | ![](<images/3-2/library - number.jpg>) |
-| String | ![](<images/3-2/library - string.jpg>) | Number Slider | ![](<images/3-2/library - number slider.jpg>) |
-| Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path | ![](<images/3-2/library - file path.jpg>) |                |                                                |
+| Uzel           |                                           | Uzel           |                                           |
+| -------------- | ----------------------------------------- | -------------- | ----------------------------------------- |
+| Logická hodnota        | ![](images/3-2/library-boolean.jpg)       | Number         | ![](images/3-2/library-number.jpg)        |
+| String         | ![](images/3-2/library-string.jpg)        | Number Slider  | ![](images/3-2/library-numberslider.jpg)  |
+| Directory Path | ![](images/3-2/library-directorypath.jpg) | Integer Slider | ![](images/3-2/library-integerslider.jpg) |
+| File Path      | ![](images/3-2/library-filepath.jpg)      |                |                                           |
 
 #### Uzly Watch a Watch3D
 
 Uzly Watch jsou nezbytné ke správě dat, která prochází vaším vizuálním programem. Výsledek uzlu si můžete zobrazit prostřednictvím **náhledu dat uzlu**, když nad uzel umístíte ukazatel myši.
 
-![](<images/3-2/library - node preview.jpg>)
+![](images/3-2/library-nodepreview.jpg)
 
 V uzlu **Watch** je vhodné zachovat náhled zobrazený.
 
-![](<images/3-2/library - watch node.jpg>)
+![](images/3-2/library-watchnode.jpg)
 
 Pomocí uzlu **Watch3D** si můžete zobrazit výsledky geometrie.
 
-![](<images/3-2/library - watch3d node.gif>)
+![](images/3-2/library-watch3dnode.gif)
 
 Oba tyto uzly jsou dostupné v základní knihovně v kategorii View.
 
-{% hint style="info" %}
-Tip: Pokud vizuální program obsahuje mnoho uzlů, může být někdy 3D náhled rozptylující. Zvažte zrušení zaškrtnutí možnosti Zobrazovat náhled pozadí v nabídce Nastavení a použití uzlu Watch3D k zobrazení náhledu geometrie.
-{% endhint %}
+{% hint style="info" %} Tip: Pokud vizuální program obsahuje mnoho uzlů, může být někdy 3D náhled rozptylující. Zvažte zrušení zaškrtnutí možnosti Zobrazovat náhled pozadí v nabídce Nastavení a použití uzlu Watch3D k zobrazení náhledu geometrie. {% endhint %}
 
 #### Code Block
 
@@ -129,7 +125,7 @@ Bloky kódu také můžete použít jako zkratku k definování položky Number
 
 Níže je uvedena jednoduchá ukázka (s pokyny) použití bloku kódu ve skriptu.
 
-![](<images/3-2/library - code block demo.gif>)
+![](images/3-2/library-codeblockdemo.gif)
 
 1. Dvojitým kliknutím vytvořte uzel Code Block.
 2. Zadejte `Circle.ByCenterPointRadius(x,y);`.

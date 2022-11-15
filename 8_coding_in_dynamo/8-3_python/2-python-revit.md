@@ -4,7 +4,7 @@
 
 Nyní, když jsme ukázali, jak používat skripty jazyka Python v aplikaci Dynamo, podívejme se na připojení knihoven aplikace Revit do prostředí skriptování. Pamatujte, importovali jsme standardní knihovny jazyka Python a hlavní uzly aplikace Dynamo pomocí prvních čtyř řádků v níže uvedeném bloku kódu. Chcete-li importovat uzly aplikace Revit, prvky aplikace Revit a správce dokumentů aplikace Revit, stačí přidat pouze několik dalších řádků:
 
-```
+``` py
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -27,7 +27,7 @@ import System
 
 To nám poskytuje přístup k rozhraní API aplikace Revit a nabízí vlastní skriptování pro libovolnou úlohu aplikace Revit. Díky kombinaci procesu vizuálního programování se skriptováním rozhraní API aplikace Revit se spolupráce a vývoj nástrojů výrazně zlepšují. Například správce BIM i konstruktér schémat mohou spolupracovat na stejném grafu. Při této spolupráci mohou zlepšit návrh a provedení modelu.
 
-![](<../../.gitbook/assets/python & revit - 01.jpg>)
+![](../images/8-3/2/python&revit-01.jpg)
 
 ### Rozhraní API pro konkrétní platformu
 
@@ -51,11 +51,11 @@ Jedná se o jednoduchou metodu získávání souborů _doc_, _uiapp_ a _app_ ap
 
 Zde je způsob importu služeb aplikace Revit a získání dat dokumentu v aplikaci Dynamo.
 
-![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise01-01.jpg)
 
 Podívejte se na uzel Python v aplikaci Dynamo. Kód můžete také najít níže:
 
-```
+``` py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -86,19 +86,19 @@ V tomto cvičení vytvoříme pomocí uzlu Python aplikace Dynamo jednoduchou k
 
 Začněte vytvořením nové rodiny Koncepční objem v aplikaci Revit.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise02-01.jpg)
 
 Otevřete _složku rodiny Koncepční objem_ a použijte soubor šablony _Metric Mass.rft_.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise02-02.jpg)
 
 V aplikaci Revit pomocí klávesové zkratky **`un`** vyvolejte nastavení jednotek projektu a změňte jednotku délky na metry.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise02-03.jpg)
 
 Spusťte aplikaci Dynamo a vytvořte sadu uzlů jako na obrázku níže. Nejprve vytvoříme dva referenční body v aplikaci Revit z uzlů aplikace Dynamo.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
+![](../images/8-3/2/python&revit-exercise02-04.jpg)
 
 > 1. Vytvořte **blok kódu** a zadejte hodnotu `"0;"`.
 > 2. Tuto hodnotu připojte ke vstupům X, Y a Z uzlu **ReferencePoint.ByCoordinates**.
@@ -108,11 +108,11 @@ Spusťte aplikaci Dynamo a vytvořte sadu uzlů jako na obrázku níže. Nejprve
 
 Podívejte se na uzel Python v aplikaci Dynamo. Celý kód najdete níže.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise02-05.jpg)
 
 > 1. **System.Array**: Aplikace Revit vyžaduje jako vstup **systémové pole** (místo seznamu jazyka Python). Jedná se pouze o jeden další řádek kódu, ale zohlednění typů argumentů usnadní programování v aplikaci Revit v jazyce Python.
 
-```
+``` py
 import sys
 import clr
 
@@ -136,7 +136,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 V aplikaci Dynamo jsme pomocí jazyka Python vytvořili dva referenční body a čáru, která je spojuje. V dalším cvičení zkusíme něco složitějšího.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
+![](../images/8-3/2/python&revit-exercise02-06.jpg)
 
 ## Cvičení 3
 
@@ -148,13 +148,13 @@ V aplikaci Dynamo jsme pomocí jazyka Python vytvořili dva referenční body a
 
 Toto cvičení vysvětluje témata připojení dat a geometrie z aplikace Revit do aplikace Dynamo a zpět. Začneme otevřením souboru Revit-StructuralFraming.rvt. Po otevření spusťte aplikaci Dynamo a otevřete soubor Revit-StructuralFraming.dyn.
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
+![](../../.gitbook/assets/python&revit-exercise03-01.jpg)
 
 Tento soubor aplikace Revit je jeden z nejzákladnějších. Dvě referenční křivky: jedna nakreslená na Podlaží 1 a druhá na Podlaží 2. Chceme tyto křivky dostat do aplikace Dynamo a zachovat živé propojení.
 
 V tomto souboru máme sadu uzlů zapojených do pěti vstupů uzlu Python.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise03-02.jpg)
 
 > 1. Uzly **Select Model Element**: Klikněte na tlačítko Vybrat pro každý prvek a vyberte odpovídající křivku v aplikaci Revit.
 > 2. Uzel **Code Block**: Pomocí syntaxe `0..1..#x;`_,_ připojte posuvník celého čísla v rozsahu od 0 do 20 ke vstupu _x_. Označuje počet nosníků, které se mají kreslit mezi dvěma křivkami.
@@ -163,9 +163,9 @@ V tomto souboru máme sadu uzlů zapojených do pěti vstupů uzlu Python.
 
 Tento kód v jazyce Python je trochu hustší, ale komentáře v kódu popisují, co se v procesu děje.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise03-03.jpg)
 
-```
+``` py
 import clr
 #import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
@@ -204,7 +204,7 @@ V aplikaci Revit je k dispozici pole nosníků, které pokrývají dvě křivk
 
 Výsledky jsou v aplikaci Dynamo zobrazeny také. Nosníky v uzlu **Watch3D** odkazují na geometrii dotazovanou z prvků aplikace Revit.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise03-05.jpg)
 
 Všimněte si, že máme nepřetržitý proces převodu dat z prostředí aplikace Revit do prostředí aplikace Dynamo. Toto je souhrn průběhu procesu:
 
@@ -219,4 +219,4 @@ Může to znít složitě, ale díky skriptu je to stejně jednoduché jako úpr
 
 Pomocí aktualizace referenčních křivek v aplikaci Revit získáte nové pole nosníků.
 
-![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
+![](../images/8-3/2/python&revit-ex03-06.gif)

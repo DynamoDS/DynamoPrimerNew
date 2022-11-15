@@ -12,8 +12,8 @@ Teď, když jsme stanovili, co je to seznam, pojďme si promluvit o operacích,
 
 Jaké **dotazy** ze seznamu vytvoříme? Tím získáte přístup k existujícím vlastnostem.
 
-* Počet karet v balíčku? 52.
-* Počet barev? 4.
+* Počet karet v balíčku? 52\.
+* Počet barev? 4\.
 * Materiál? Papír.
 * Délka? 3.5" nebo 89 mm.
 * Šířka? 2.5" nebo 64 mm.
@@ -43,7 +43,7 @@ Všechny výše uvedené operace mají analogické uzly aplikace Dynamo pro prá
 
 Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kružnicemi, které představují základní operace se seznamy. Prozkoumáme, jak spravovat data v seznamu a jak prezentovat vizuální výsledky pomocí akcí v seznamu níže.
 
-![](<../images/5-4/2/working with list - list operation.jpg>)
+![](../images/5-4/2/workingwithlist-listoperation.jpg)
 
 > 1. Začněte uzlem **Code Block** s hodnotou `500;`.
 > 2. Propojte jej se vstupem x uzlu **Point.ByCoordinates**.
@@ -65,7 +65,7 @@ Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kr
 
 Uzel _List.Count_ je jednoduchý: spočítá počet hodnot v seznamu a vrátí výsledné číslo. Tento uzel je při práci se seznamy seznamů složitější, ale to si předvedeme v následujících částech.
 
-![Count](<../images/5-4/2/working with list - list operation - list count.jpg>)
+![Počet](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
 > 1. Uzel **List.Count **_****_ vrací počet řádků v uzlu **Line.ByStartPointEndPoint**. V tomto případě je to hodnota 10, která souhlasí s počtem bodů vytvořených z původního uzlu **Code Block**.
 
@@ -79,14 +79,14 @@ Uzel _List.Count_ je jednoduchý: spočítá počet hodnot v seznamu a vrátí 
 
 **List.GetItemAtIndex** je základní způsob, jak dotazovat položku v seznamu.
 
-![Exercise](<../images/5-4/2/working with list - get item index 01.jpg>)
+![Cvičení](../images/5-4/2/workingwithlist-getitemindex01.jpg)
 
 > 1. Nejprve kliknutím pravým tlačítkem myši na uzel **Line.ByStartPointEndPoint** vypněte jeho náhled.
 > 2. Pomocí uzlu **List.GetItemAtIndex** vybereme index _0_ nebo první položku v seznamu řádků.
 
 Chcete-li pomocí uzlu **List.GetItemAtIndex** vybrat jinou položku, změňte hodnotu posuvníku v rozmezí od 0 do 9.
 
-![](<../images/5-4/2/working with list - get item index 02.gif>)
+![](../images/5-4/2/workingwithlist-getitemindex02.gif)
 
 ### List.Reverse
 
@@ -98,7 +98,7 @@ Chcete-li pomocí uzlu **List.GetItemAtIndex** vybrat jinou položku, změňte h
 
 Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 
-![Exercise](<../images/5-4/2/working with list - list reverse.jpg>)
+![Cvičení](../images/5-4/2/workingwithlist-listreverse.jpg)
 
 > 1. Chcete-li správně zobrazit obrácený seznam čar, vytvořte více čar změnou uzlu **Code Block** na `0..1..#50;`.
 > 2. Duplikujte uzel **Line.ByStartPointEndPoint**, vložte uzel List.Reverse mezi uzel **Curve.PointAtParameter** a druhý uzel **Line.ByStartPointEndPoint**.
@@ -114,15 +114,15 @@ Možnost _List.Reverse_ obrátí pořadí všech položek v seznamu.
 
 **List.ShiftIndices** je dobrý nástroj ke tvorbě zkroucení, šroubovicových vzorů nebo jiných podobných manipulací s daty. Tento uzel přemístí položky v seznamu do daného počtu indexů.
 
-![Exercise](<../images/5-4/2/working with list - shiftIndices 01.jpg>)
+![Cvičení](../images/5-4/2/workingwithlist-shiftIndices01.jpg)
 
-> 1. Stejným postupem jako při otáčení seznamu vložte **List.ShiftIndices** do polí **Curve.PointAtParameter** a **Line.ByStartPointEndPoint**.
+> 1. Stejným postupem jako při otáčení seznamu připojte uzel **List.ShiftIndices** k uzlu **Curve.PointAtParameter** a **Line.ByStartPointEndPoint**.
 > 2. Pomocí uzlu **Code Block** s hodnotou 1 posuňte seznam o jeden index.
 > 3. Všimněte si, že změna je jemná, ale všechny čáry v dolním uzlu **Watch3D** se posunuly o jeden index při připojení k druhé sadě bodů.
 
 Pokud například změníme uzel **Code Block** na větší hodnotu, například _30_, všimneme si významného rozdílu mezi příčnými čarami. V tomto případě funguje posun jako čočka kamery, což vytváří v původní válcové formě otočení.
 
-![](<../images/5-4/2/working with list - shiftIndices 02.jpg>)
+![](../images/5-4/2/workingwithlist-shiftIndices02.jpg)
 
 ### List.FilterByBooleanMask <a href="#listfilterbybooleanmask" id="listfilterbybooleanmask"></a>
 
@@ -134,16 +134,16 @@ Pokud například změníme uzel **Code Block** na větší hodnotu, například
 
 ![](../images/5-4/2/ListFilterBool.png)
 
-Položka **List.FilterByBooleanMask** odebere určité položky podle seznamu logických hodnot nebo podle hodnot true nebo false.
+Uzel **List.FilterByBooleanMask** odebere určité položky podle seznamu logických hodnot nebo podle hodnot true nebo false.
 
-![Exercise](<../images/5-4/2/working with list - filter by bool mask.jpg>)
+![Cvičení](../images/5-4/2/workingwithlist-filterbyboolmask.jpg)
 
 Aby bylo možné vytvořit seznam hodnot true nebo false, je třeba ještě trochu pracovat...
 
-> 1. Pomocí uzlu **Code Block** definujte výraz pomocí syntaxe: `0..List.Count(list);`. Připojte uzel **Curve.PointAtParameter** ke vstupu _list_. Toto nastavení projdeme více v kapitole bloku kódu, ale v tomto případě nám řádek kódu poskytuje seznam reprezentující každý index uzlu **Curve.PointAtParameter**.
+> 1. Pomocí uzlu **Code Block** definujte výraz pomocí této syntaxe: `0..List.Count(list);`. Připojte uzel **Curve.PointAtParameter** ke vstupu _list_. Toto nastavení projdeme více v kapitole bloku kódu, ale v tomto případě nám řádek kódu poskytuje seznam reprezentující každý index uzlu **Curve.PointAtParameter**.
 > 2. Pomocí uzlu _**%**_** (modulo)** spojte výstup uzlu _Code Block_se vstupem _x_ a hodnotu _4_ se vstupem _y_. Tak získáme zbytek po dělení seznamu indexů 4. Modulo je velmi užitečné pro vytváření vzorů. Všechny hodnoty budou možné zbytky po dělení 4: 0, 1, 2, 3.
 > 3. Z uzlu _**%**_** (modulo)** víme, že hodnota 0 znamená, že index je dělitelný 4 (0, 4, 8 atd.). Pomocí uzlu **==** můžeme testovat dělitelnost porovnáním s hodnotou _0_.
-> 4. Uzel **Watch** zobrazuje pouze toto: máme vzor s hodnotou true / false, který zní: _true, false, false, false..._.
+> 4. Uzel **Watch** zobrazuje pouze toto: máme vzor s hodnotou true/false, který je následující: _true, false, false, false..._.
 > 5. Pomocí tohoto vzoru true/false připojte vstupní hodnotu masky dvou uzlů **List.FilterByBooleanMask**.
 > 6. Spojte uzel **Curve.PointAtParameter** s každým vstupem seznamu pro **List.FilterByBooleanMask**.
 > 7. Výstup **Filter.ByBooleanMask** čte hodnoty _in_ a _out_. _In_ představuje hodnoty, které měly hodnotu masky _true_, zatímco _out_ představuje hodnoty, které měly hodnotu _false_. Zadáním výstupů _in_ do vstupů _startPoint_ a _endPoint_ uzlu **Line.ByStartPointEndPoint** jsme vytvořili filtrovaný seznam čar.

@@ -2,11 +2,11 @@
 
 Aplikace Dynamo 2.0 nabízí několik uzlů pro slovníky. Mezi ně patří uzly pro _tvorbu, akci a dotazování_.
 
-![](<../images/5-5/2/dictionary nodes - nodes.jpg>)
+![](../images/5-5/2/dictionarynodes-nodes.jpg)
 
 #### Tvorba
 
-1. Uzel `Dictionary.ByKeysValues` vytvoří slovník ze zadaných hodnot a klíčů. _(Počet položek bude odpovídat počtu položek nejkratšího seznamu.)_
+1\. Uzel `Dictionary.ByKeysValues` vytvoří slovník ze zadaných hodnot a klíčů. _(Počet položek bude odpovídat počtu položek nejkratšího seznamu.)_
 
 #### Akce
 

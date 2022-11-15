@@ -4,13 +4,13 @@
 
 ### Co je plocha.
 
-Pomocí [plochy](5-surfaces.md#surface) v modelu reprezentujeme objekty, které vidíme v	našem trojrozměrném světě. Křivky nejsou rovinnými objekty a ačkoliv jsou trojrozměrné, prostor, který definují, je vždy svázán s jediným rozměrem. Plochy nabízejí o jeden prostor navíc a sadu dalších vlastností, které lze používat v dalších operacích modelování.
+Pomocí [plochy](5-surfaces.md#surface) v modelu reprezentujeme objekty, které vidíme v našem trojrozměrném světě. I když křivky nejsou vždy rovinnými objekty, tj. jsou trojrozměrné, prostor, který definují, je vždy svázán s jedním rozměrem. Plochy nabízejí o jeden prostor navíc a sadu dalších vlastností, které lze používat v dalších operacích modelování.
 
 ### Plocha v parametru
 
 Importujme plochu do aplikace Dynamo a vyhodnoťme ji v daných parametrech, abychom zjistili, jaká data můžeme získat.
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
 
 > 1. _Surface.PointAtParameter_ vrací bod na zadané souřadnici UV
 > 2. _Surface.NormalAtParameter_ vrací normálový vektor v zadané souřadnici UV
@@ -28,9 +28,9 @@ Importujme plochu do aplikace Dynamo a vyhodnoťme ji v daných parametrech, ab
 
 Plocha je matematický útvar definovaný funkcí a dvěma parametry. Místo parametru `t` u křivek se k popisu parametrického prostoru u ploch používají parametry `U` a `V`. To znamená, že při práci s tímto typem geometrie můžeme odvodit více geometrických dat. Křivky například nabízejí tečné vektory a normálové roviny (které lze otáčet nebo kroutit po délce křivky), zatímco plochy nabízejí normálové vektory a tečné roviny, které jsou konzistentní s jejich orientací.
 
-![Plocha](../images/5-2/5/Surface.jpg)
+![Povrch](../images/5-2/5/Surface.jpg)
 
-> 1. Plocha
+> 1. Povrch
 > 2. Izokřivka U
 > 3. Izokřivka V
 > 4. Souřadnice UV
@@ -39,11 +39,11 @@ Plocha je matematický útvar definovaný funkcí a dvěma parametry. Místo par
 
 **Doména plochy**: Doména plochy je definována jako rozsah parametrů (U,V), pro které lze vypočítat trojrozměrnou polohu bodu ležícího v této ploše. Doména v každém rozměru (U nebo V) je obvykle popisována dvěma čísly (od U Min do U Max) a (od V Min do V Max).
 
-![Plocha](../images/5-2/5/SurfaceParameter.jpg)
+![Povrch](../images/5-2/5/SurfaceParameter.jpg)
 
 Ačkoliv tvar plochy nemusí vždy připomínat obdélník a některé její izokřivky mohou být utaženější nebo uvolněnější než jiné, prostor definovaný její doménou je vždy dvourozměrný. Doména ploch je v aplikaci Dynamo definována minimem 0.0 a maximem 1.0 ve směrech U i V. Rovinné nebo oříznuté plochy mohou mít různé domény.
 
-**Izokřivka**  (nebo izoparametrická křivka): Křivka definovaná konstantní hodnotou U nebo V na ploše a doménou hodnot pro odpovídající druhý směr U nebo V.
+**Izokřivka** (nebo izoparametrická křivka): Křivka definovaná konstantní hodnotou U nebo V na ploše a doménou hodnot pro odpovídající druhý směr U nebo V.
 
 **Souřadnice UV**: Bod v parametrickém prostoru UV, definovaný souřadnicemi U, V a někdy W.
 

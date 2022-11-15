@@ -4,7 +4,7 @@ Objekty ve výpočetních návrzích se výjimečně vytvářejí přímo v jej
 
 Na nejzákladnější úrovni představuje vektor pozici ve 3D prostoru a často je reprezentován jako bod s šipkou od pozice (0, 0, 0) do jiné pozice. Vektory je možné vytvořit pomocí konstruktoru _ByCoordinates_, který jako vstup přijímá souřadnice X, Y a Z nově vytvořeného vektoru. Vektory nejsou geometrickými objekty a nezobrazují se v okně aplikace Dynamo. Informace o nově vytvořeném nebo upraveném vektoru je možné vypsat do konzolového okna:
 
-![](<../images/8-2/3/vector math 01.jpg>)
+![](../images/8-2/3/vectormath01.jpg)
 
 ```js
 // construct a Vector object
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Při změně měřítka vektoru je často potřeba, aby výsledná délka odpovídala hodnotě měřítka. Toho lze snadno dosáhnout normalizací vektoru, jinými slovy nastavením jeho délky na 1.
 
-![](<../images/8-2/3/vector math 05.jpg>)
+![](../images/8-2/3/vectormath05.jpg)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Další pokročilejší funkcí vektorové matematiky je skalární součin. Skalární součin mezi dvěma vektory je reálné číslo (a nikoliv vektor), které souvisí s úhlem mezi dvěma vektory (ale nejedná se přímo o úhel). Jednou z užitečných vlastností skalárního součinu je, že skalární součin je nulový pouze v případě, kdy jsou na sebe vektory kolmé. Skalární součin lze vypočítat metodou _Dot_.
 
-![](<../images/8-2/3/vector math 07.jpg>)
+![](../images/8-2/3/vectormath07.jpg)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);

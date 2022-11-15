@@ -10,52 +10,52 @@ Projektu s otevřeným zdrojovým kódem, jako je Dynamo, tento druh zapojení 
 
 Nejjednodušším způsobem instalace balíčku je použití panelu nástrojů Balíčky v rozhraní aplikace Dynamo. Pojďme se do toho hned pustit a nainstalovat ho. V tomto rychlém příkladu nainstalujeme oblíbený balíček k vytvoření čtyřúhelníkových panelů v osnově.
 
-V aplikaci Dynamo přejděte na kartu _Balíčky > Vyhledat balíček..._
+V aplikaci Dynamo přejděte na kartu _Balíčky > Vyhledat balíček_.
 
-![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
 
 Na panelu hledání vyhledejte „quads from rectangular grid“. Za chvíli by se měly zobrazit všechny balíčky, které odpovídají tomuto vyhledávacímu dotazu. Chceme vybrat první balíček s odpovídajícím názvem.
 
 Kliknutím na tlačítko Instalovat přidáte tento balíček do knihovny. Hotovo!
 
-![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
 
 Všimněte si, že v knihovně aplikace Dynamo je nyní k dispozici další skupina s názvem „buildz“. Tento název odkazuje na vývojáře balíčku a uživatelský uzel je umístěn do této skupiny. Můžete ji začít ihned používat.
 
-![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage03.jpg)
 
 Pomocí uzlu **Code Block** rychle definujte pravoúhlou osnovu, výsledek odešlete do uzlu **Polygon.ByPoints** a následně do uzlu **Surface.ByPatch**, čímž zobrazíte seznam právě vytvořených obdélníkových panelů.
 
-![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage04.jpg)
 
 ### Instalace složky balíčku – DynamoUnfold
 
 Výše uvedený příklad se zaměřuje na balíček s jedním uživatelským uzlem, ale stejný postup se používá ke stahování balíčků s několika uživatelskými uzly a podpůrnými datovými soubory. Nyní si předvedeme složitější balíček: Dynamo Unfold.
 
-Stejně jako ve výše uvedeném příkladu začněte výběrem položek _Balíčky>Vyhledat balíček..._.
+Stejně jako ve výše uvedeném příkladu začněte výběrem položek _Balíčky > Vyhledat balíček_.
 
-Tentokrát vyhledáme výraz _„DynamoUnfold“_, jedno slovo, pozor na velikost písmen. Když se balíčky zobrazí, stáhněte je kliknutím na tlačítko Instalovat a přidejte balíček Dynamo Unfold do své knihovny aplikace Dynamo.
+Tentokrát vyhledáme výraz _DynamoUnfold_. Jedná se o jedno slovo, dbejte na velikost písmen. Když se balíčky zobrazí, stáhněte je kliknutím na tlačítko Instalovat a přidejte balíček Dynamo Unfold do své knihovny aplikace Dynamo.
 
-![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
 
 V knihovně aplikace Dynamo je k dispozici skupina aplikace _DynamoUnfold_ s více kategoriemi a s vlastními uzly.
 
-![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
 Nyní se podíváme na strukturu souborů balíčku. Nejprve vyberte nabídku Dynamo > Předvolby.
 
-![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
 
-V místním okně Předvolby klikněte na možnost Package Manager, vedle položky DynamoUnfold vyberte nabídku se svislými tečkami ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>)  a kliknutím na možnost Zobrazit kořenový adresář otevřete kořenovou složku tohoto balíčku.
+V rozbalovacím okně Předvolby otevřete Package Manager > vedle položky DynamoUnfold a výběrem vertikální nabídky bodů ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > Zobrazit kořenový adresář otevřete kořenovou složku pro tento balíček.
 
-![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
 
 Tak se dostaneme do kořenového adresáře balíčku. Všimněte si, že máme tři složky a soubor.
 
-![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder05.jpg)
 
-> 1. Složka _bin_ slouží k ukládání souborů .dll. Tento balíček Dynamo byl vyvinut pomocí možnosti Zero-Touch, proto jsou uživatelské uzly uloženy v této složce.
-> 2. Složka _dyf_ slouží k umístění uživatelských uzlů. Tento balíček nebyl vytvořen pomocí vlastních uzlů aplikace Dynamo, proto je tato složka pro tento balíček prázdná.
+> 1. Složka _bin_ slouží k ukládání souborů .dll. Tento balíček Dynamo byl vyvinut pomocí možnosti Zero-Touch, proto jsou vlastní uzly uloženy v této složce.
+> 2. Složka _dyf_ slouží k umístění vlastních uzlů. Tento balíček nebyl vytvořen pomocí vlastních uzlů aplikace Dynamo, proto je tato složka pro tento balíček prázdná.
 > 3. Složka extra obsahuje všechny další soubory včetně vzorových souborů.
 > 4. Soubor pkg je základní textový soubor, který definuje nastavení balíčku. Můžeme ho zatím ignorovat.
 
@@ -67,7 +67,7 @@ Otevřeme položku SphereUnfold.
 
 Po otevření souboru a stisknutí tlačítka Spustit na řešiči máme rozvinutou kouli. Ukázkové soubory, jako jsou tyto, jsou užitečné při studiu práce s novým balíčkem Dynamo.
 
-![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg)
 
 ### Nástroj Dynamo Package Manager
 
@@ -83,7 +83,7 @@ Soubory balíčku můžete také stáhnout z aplikace Dynamo Package Manager, a
 
 Pokud stahujete soubory z nástroje Dynamo Package Manager nebo pokud chcete zjistit, kde jsou uloženy všechny soubory balíčků, klikněte na nabídku Dynamo > Package Manager > Cesty uzlů a balíčků. Zde najdete aktuální adresář kořenové složky.
 
-![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 Ve výchozím nastavení jsou balíčky nainstalovány do umístění podobného této cestě: _C:/Users/[uživatelské jméno]/AppData/Roaming/Dynamo/[verze aplikace Dynamo]_.
 

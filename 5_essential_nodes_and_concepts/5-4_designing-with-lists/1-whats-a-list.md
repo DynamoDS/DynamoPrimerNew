@@ -20,7 +20,7 @@ Pokud byste například měli spočítat prsty na pravé ruce, existuje šance, 
 
 Všimněte si, že v seznamu stále máme 5 položek; je to proto, že seznam používá systém počítání od nuly. A položky uložené v seznamu nemusí být jen čísla. Mohou to být položky jakéhokoli datového typu, který aplikace Dynamo podporuje, například body, křivky, povrchy, rodiny atd.
 
-![](<../images/5-4/1/what's a list - zero based indices.jpg>)
+![](../images/5-4/1/what'salist-zerobasedindices.jpg)
 
 > a. Index
 >
@@ -34,9 +34,9 @@ Tyto indexy jsou velice důležitým prvkem při práci se seznamy.
 
 ### Vstupy a výstupy
 
-Vstupy a výstupy náležející k seznamům se liší podle toho, jaký uzel aplikace Dynamo se použije. Jako příklad použijte seznam bodů a připojte tento výstup ke dvěma různým uzlům aplikace Dynamo: **PolyCurve.ByPoints** a **Circle.ByCenterPointRadius**:
+Vstupy a výstupy náležející k seznamům se liší podle toho, jaký uzel aplikace Dynamo se použije. Jako příklad použijte seznam 5 bodů a připojte tento výstup ke dvěma různým uzlům aplikace Dynamo: **PolyCurve.ByPoints** a **Circle.ByCenterPointRadius**:
 
-![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
+![Příklady vstupů](../images/5-4/1/what'salist-inputsandoutputs.jpg)
 
 > 1. Vstup _points_ uzlu **PolyCurve.ByPoints** hledá strukturu _„Point[]“_. Tato struktura představuje seznam bodů.
 > 2. Výstup uzlu **PolyCurve.ByPoints** je samostatný objekt PolyCurve vytvořený ze seznamu pěti bodů.
@@ -59,23 +59,23 @@ Představte si uzel, který tvoří segmenty úseček mezi body (**Line.ByStartP
 
 Nejjednodušším způsobem je spojovat vstupy jedna ku jedné, dokud jeden z datových proudů nedojde na konec. Tomuto se říká algoritmus „Nejkratší seznam“. Jedná se o výchozí chování uzlů aplikace Dynamo:
 
-![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
+![](../images/5-4/1/what'salist-lacing-shortest.jpg)
 
 #### Nejdelší seznam
 
 Algoritmus „Nejdelší seznam“ připojuje vstupy a opakovaně využívá prvky tak dlouho, dokud všechny datové proudy nedojdou na konec:
 
-![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
+![](../images/5-4/1/what'salist-lacing-longest.jpg)
 
 #### Kartézský součin
 
 Metoda „Kartézský součin“ provede všechna možná připojení:
 
-![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
+![](../images/5-4/1/what'salist-lacing-cross.jpg)
 
 Jak vidíte, existují různé způsoby kreslení čar mezi těmito množinami bodů. Možnosti vázání naleznete po kliknutí pravým tlačítkem na střed uzlu a výběru nabídky „Vázání“.
 
-![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
+![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
 ## Cvičení
 
@@ -93,16 +93,16 @@ U uzlu **Point.ByCoordinates** se změní vázání, ale nic jiného se u graf
 
 Pokud jako možnost vázání vyberete _nejkratší seznam_ (což je také výchozí možnost), získáte základní diagonální čáru složenou z pěti bodů. Pět bodů je délka kratšího seznamu, takže vázání nejkratšího seznamu se zastaví, jakmile dorazí na konec jednoho ze seznamů.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
+![Příklady vstupů](../images/5-4/1/what'salist-lacingexercise01.jpg)
 
 ### **Nejdelší seznam**
 
 Změnou vázání na _nejdelší seznam_ získáte diagonální čáru, která se vertikálně rozšíří. Poslední položka v seznamu 5 položek bude opakována tak dlouho, dokud nebude dosaženo délky delšího seznamu, což je stejné chování jako metoda koncepčního diagramu.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
+![Příklady vstupů](../images/5-4/1/what'salist-lacingexercise02.jpg)
 
 ### **Kartézský součin**
 
-Změnou vázání na _Kartézský součin_ získáte všechny kombinace mezi všemi seznamy, což vytvoří osnovu bodů o rozměrech 5x10. Jedná se o datovou strukturu ekvivalentní ke kartézskému součinu, jak je ukázáno v koncepčním diagramu výše, až na to, že data jsou nyní seznamy seznamů. Pokud připojíme objekt PolyCurve, uvidíme, že každý seznam je definovaný hodnotou X, což znamená, že máme řadu vertikálních čar.
+Změnou vázání na _Kartézský součin_ získáte všechny kombinace mezi všemi seznamy, což vytvoří osnovu bodů o rozměrech 5x10. Jedná se o datovou strukturu ekvivalentní ke kartézskému součinu, jak je ukázáno v koncepčním diagramu výše, až na to, že data jsou nyní seznamy seznamů. Pokud připojíme objekt PolyCurve, uvidíme, že každý seznam je definovaný hodnotou X, což znamená, že máme řadu vertikálních čar.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
+![Příklady vstupů](../images/5-4/1/what'salist-lacingexercise03.jpg)

@@ -10,10 +10,10 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 
 ### **Modularizace pomocí skupin**
 
-* Skupiny vám při tvorbě programu umožní **vytvářet funkčně odlišné součásti**
-* Skupiny umožňují **přesouvat velké části programu** při zachování modularity a zarovnání
-* Můžete změnit **barvu skupiny k rozlišení** toho, co je účelem skupiny (vstupy vs. funkce)
-* Pomocí skupin můžete vytvořit **organizaci grafu ke zjednodušení tvorby uživatelských uzlů**
+* Skupiny vám při tvorbě programu umožní **vytvářet funkčně odlišné součásti**.
+* Skupiny umožňují **přesouvat velké části programu** při zachování modularity a zarovnání.
+* Můžete změnit **barvu skupiny k rozlišení** toho, co je účelem skupiny (vstupy vs. funkce).
+* Pomocí skupin můžete vytvořit **organizaci grafu ke zjednodušení tvorby uživatelských uzlů**.
 
 ![](images/1/graphstrategy2.png)
 
@@ -23,14 +23,14 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 > 2. Skupina vstupů (oranžová)
 > 3. Skupina skriptů (zelená)
 >
-> Informace o používání skupin naleznete v části [Správa programu](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informace o tom, jak používat skupiny, naleznete v části [Správa programu](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
 ### **Efektivní vývoj pomocí bloků kódu**
 
-* Někdy můžete použít blok kódu k **rychlejšímu zadání čísla nebo uzlové metody než při vyhledávání** (Point.ByCoordinates, Number, String, Formula)
-* Bloky kódu jsou užitečné, **pokud chcete definovat vlastní funkce v aplikaci DesignScript, aby se snížil počet uzlů v grafu**
+* Někdy můžete použít blok kódu k **rychlejšímu zadání čísla nebo metody uzlu než při vyhledávání** (Point.ByCoordinates, Number, String, Formula).
+* Bloky kódu jsou užitečné, **pokud chcete definovat vlastní funkce v jazyce DesignScript, aby se snížil počet uzlů v grafu**.
 
-![](<images/1/graphstrategy3 (1).png>)
+![](images/1/graphstrategy3(1).png)
 
 > Vzor 1 i 2 provádí stejnou funkci. Bylo však mnohem rychlejší napsat několik řádků kódu, než vyhledávat a přidávat jednotlivé uzly. Blok kódu je také mnohem výstižnější.
 >
@@ -42,16 +42,16 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 ### **Zhuštění pomocí možnosti Uzel na kód**
 
 * Složitost grafu můžete **snížit pomocí možnosti Uzel na kód**, která vezme kolekci jednoduchých uzlů a zapíše odpovídající skript DesignScript do jednoho bloku kódu.
-* Možnost Uzel na kód\*\* může zhustit kód aniž by došlo k porušení přehlednosti programu\*\*.
+* Možnost Uzel na kód** může zhustit kód, aniž by došlo k porušení přehlednosti programu**.
 * Následují **klady** použití možnosti Uzel na kód:
-   * Snadno zhustí kód do jedné komponenty, kterou je stále možné upravit
-   * Může zjednodušit významnou část grafu
-   * Užitečná, pokud „miniprogram“ nebude často upravován
-   * Užitečná k zahrnutí dalších funkcí bloku kódu, například funkce
+  * Snadno zhustí kód do jedné komponenty, kterou je stále možné upravit
+  * Může zjednodušit významnou část grafu
+  * Užitečná, pokud „miniprogram“ nebude často upravován
+  * Užitečná k zahrnutí dalších funkcí bloku kódu, například funkce
 * Následují **zápory** použití možnosti Uzel na kód:
-   * Obecné pojmenování snižuje čitelnost
-   * Pro některé uživatele je obtížnější na porozumění
-   * Neexistuje snadný způsob, jak se vrátit k verzi vizuálního programování
+  * Obecné pojmenování snižuje čitelnost
+  * Pro některé uživatele je obtížnější na porozumění
+  * Neexistuje snadný způsob, jak se vrátit k verzi vizuálního programování
 
 ![](images/1/graphstrategy3\_1.png)
 
@@ -62,10 +62,10 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 
 ### **Flexibilní přístup k datům pomocí funkce List@Level**
 
-* Funkce List@Level usnadní **snížení složitosti grafu nahrazením uzlů List.Map a List.Combine**, které mohou zabírat značné množství místa na pracovní ploše.
-* Funkce List@Level nabízí\*\* rychlejší způsob, jak vytvořit logiku uzlu konstrukce, než u uzlů List.Map/List.Combine\*\*, umožněním přístupu k datům na libovolné úrovni v seznamu přímo ze vstupního portu uzlu.
+* Funkce List@Level pomáhá **snížit složitost grafu nahrazením uzlů List.Map a List.Combine**, které mohou zabírat značné množství místa na pracovní ploše.
+* Funkce List@Level nabízí** rychlejší způsob, jak vytvořit logiku uzlu konstrukce, než u uzlů List.Map a List.Combine**, umožněním přístupu k datům na libovolné úrovni v seznamu přímo ze vstupního portu uzlu.
 
-![](<images/1/graphstrategy4 (1) (1).png>)
+![](images/1/graphstrategy4(1)(1).png)
 
 > Můžeme ověřit, kolik hodnot True vrátí metoda BoundingBox.Contains a ve kterých seznamech, a to aktivováním funkce List@Level u vstupu seznamu funkce CountTrue. List@Level umožňuje uživateli určit, ze které úrovně se bude přebírat vstup. Použití funkce List@Level je flexibilní, efektivní a vysoce podporované u jiných metod zahrnujících metody List.Map a List.Combine.
 >
@@ -80,11 +80,11 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 
 ### **Vizuální spojitost se zarovnáním uzlu**
 
-* Chcete-li si ušetřit práci po dokončení tvorby grafu, měli byste zkusit zajistit, aby rozvržení uzlů bylo čitelné, **častým zarovnáváním uzlů během práce**
-* Pokud s grafem budou pracovat i ostatní, měli byste **před odesláním zajistit, aby rozvržení drátů uzlů snadno proudilo**
-* Chcete-li si usnadnit zarovnání, **použijte funkci „Rozvržení uzlů vyčištění“ k automatickému zarovnání** grafu, zarovnání však bude méně přesné, než když je uděláte sami
+* Chcete-li si ušetřit práci po dokončení tvorby grafu, měli byste se snažit zajistit čitelnost rozvržení uzlů **častým zarovnáváním uzlů během práce**.
+* Pokud s grafem budou pracovat i ostatní, měli byste se **před jeho odesláním ujistit, že rozvržení drátů a uzlů je přehledné**.
+* Chcete-li si usnadnit zarovnání, **použijte funkci Rozvržení uzlů vyčištění k automatickému zarovnání** grafu, zarovnání však bude méně přesné, než když je uděláte sami.
 
-![](<images/1/graphstrategy5 (2) (1).png>)
+![](images/1/graphstrategy5(2)(1).png)
 
 > 1. Neuspořádaný graf
 > 2. Zarovnaný graf
@@ -93,8 +93,8 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 
 ### **Označení přejmenováním**
 
-* Přejmenování vstupů může ostatním usnadnit porozumění vašemu grafu, **zejména pokud jejich vstup nebude vidět na obrazovce**
-* **Buďte opatrní při přejmenovávání jiných uzlů než vstupů.** Alternativou je vytvoření vlastního uzlu ze shluku uzlů a jeho přejmenování; bude zřejmé, že obsahuje něco jiného
+* Přejmenování vstupů může ostatním usnadnit porozumění vašemu grafu, **zejména pokud jejich vstup nebude vidět na obrazovce**.
+* **Buďte opatrní při přejmenovávání jiných uzlů než vstupů.** Alternativou je vytvoření vlastního uzlu ze shluku uzlů a jeho přejmenování; bude zřejmé, že obsahuje něco jiného.
 
 ![](images/1/graphstrategy6.png)
 
@@ -106,7 +106,7 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 
 ### **Vysvětlení pomocí poznámek**
 
-* Poznámka by měla být přidána, pokud něco v **grafu vyžaduje vysvětlení prostým jazykem**, které není možné vyjádřit uzly.
+* Pokud něco v **grafu vyžaduje vysvětlení v jednoduchém jazyce**, které není možné vyjádřit uzly, měli byste přidat poznámku.
 * Poznámka by měla být přidána, pokud je kolekce **uzlů nebo skupina příliš velká nebo složitá a není možné jí ihned porozumět**.
 
 ![](images/1/graphstrategy7.png)
@@ -114,7 +114,7 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 > 1. Poznámka popisující část programu, která vrací nezpracované vzdálenosti posunu
 > 2. Poznámka popisující kód, který mapuje tyto hodnoty na sinusovou vlnu
 >
-> Postup pro přidání poznámky naleznete v části [Správa programu](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Postup přidání poznámky naleznete v části [Správa programu](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
 ## Neustále kontrolujte data
 
@@ -122,7 +122,7 @@ Při tvorbě vizuálního skriptu je důležité ověřit, zda skript vrací oč
 
 ### **Monitorování dat pomocí uzlů Watch a bublin náhledů**
 
-* Pomocí uzlů Watch a bublin náhledů můžete při sestavování programu\*\* ověřit, zda se na klíčových výstupech vrací očekávané hodnoty\*\*.
+* Pomocí uzlů Watch a bublin náhledů můžete při sestavování programu** ověřit, zda se na klíčových výstupech vrací očekávané hodnoty**.
 
 ![](images/1/graphstrategy8.png)
 
@@ -131,7 +131,7 @@ Při tvorbě vizuálního skriptu je důležité ověřit, zda skript vrací oč
 > 1. Nezpracované vzdálenosti posunu
 > 2. Hodnoty, které prošly rovnicí sinu
 >
-> Informace o používání uzlů Watch naleznete v části [Knihovna](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Postup použití sledování naleznete v části [Knihovna](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
 
 ## Zajistěte opakovatelnost použití
 
@@ -140,14 +140,14 @@ Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v př
 ### **Správa vstupů a výstupů**
 
 * Aby byla zajištěna čitelnost a škálovatelnost, měli byste se pokusit **co nejvíce minimalizovat vstupy a výstupy**.
-* Měli byste zkusit **stanovit strategii tvorby logiky tím, že nejprve vytvoříte hrubý obrys** toho, jak logika může fungovat, než vůbec přidáte na pracovní plochu jakýkoli uzel. Při vývoji hrubého obrysu byste měli sledovat, které vstupy a výstupy budou vloženy do skriptů.
+* Ještě před přidáním jakéhokoli uzlu na plátno byste se měli pokusit **stanovit strategii, jak budete logiku vytvářet, a to tak, že nejprve vytvoříte hrubý náčrt** toho, jak by logika mohla fungovat. Při vývoji hrubého obrysu byste měli sledovat, které vstupy a výstupy budou vloženy do skriptů.
 
 ### **Vložení vstupních hodnot pomocí předvoleb**
 
 * Pokud existují **konkrétní možnosti nebo podmínky, které chcete do grafu vložit**, měli byste použít předvolby, abyste k těmto položkám měli rychlý přístup.
 * Pomocí předvoleb můžete také **snížit složitost ukládáním specifických hodnot posuvníku do mezipaměti** u grafu s dlouhou dobou běhu.
 
-> Informace o používání předvoleb naleznete v části [Správa dat pomocí předvoleb](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Postup použití předvoleb naleznete v části [Správa dat s předvolbami](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
 ### **Izolace programů pomocí vlastních uzlů**
 
@@ -162,15 +162,15 @@ Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v př
 > 1. Existující program atraktoru
 > 2. Vlastní uzel, který tento program shromažďuje, PointGrid
 >
-> Informace o používání vlastních uzlů naleznete v části [Úvod do práce s vlastními uzly](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Informace o použití vlastních uzlů naleznete v části [Úvod do vlastních uzlů](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
 
 ### **Tvorba šablon**
 
-* Můžete vytvořit šablony, které **určí grafické normy ve vizuálních grafech, aby spolupracovníci měli standardizovaný způsob, jak grafům porozumět**.
+* Můžete vytvořit šablony pro **stanovení grafických standardů ve vizuálních grafech, aby spolupracovníci měli standardizovaný způsob, jak grafům porozumět**.
 * Při tvorbě šablony můžete standardizovat **barvy skupin a velikosti písem** a kategorizovat tak typy pracovních postupů nebo akcí s daty.
-* Při tvorbě šablony můžete dokonce standardizovat způsob, jakým chcete v grafu **opatřit popisky, obarvit nebo nastavit styl u rozdílu mezi pracovními postupy front-end a back-end**.
+* Při tvorbě šablony můžete dokonce standardizovat, jakým způsobem chcete v grafu **označovat, barvit nebo stylizovat rozdíly mezi front-end a back-end pracovními postupy**.
 
-![](<images/1/graphstrategy10 (2).png>)
+![](images/1/graphstrategy10(2).png)
 
 > 1. Uživatelské rozhraní nebo front-end programu obsahuje název projektu, posuvníky vstupu a importovanou geometrii.
 > 2. Back-end programu.
@@ -217,7 +217,7 @@ Jakmile budou skupiny stanoveny, zarovnejte uzly, tak aby vznikla vizuální spo
 
 Zlepšete přístup k programu přidáním další hladiny grafických vylepšení. Přidáním poznámek popisujete, jak určitá oblast programu funguje, zadejte u vstupů vlastní názvy a přiřaďte k různým typům skupin barvy.
 
-![](<images/1/graphstrategy15 (1).png>)
+![](images/1/graphstrategy15(1).png)
 
 > Tato grafická vylepšení sdělují uživateli více o tom, co program dělá. Různé barvy skupin pomáhají rozlišit vstupy od funkcí.
 >

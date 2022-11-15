@@ -4,9 +4,9 @@
 
 ### Co je křivka?
 
-[Křivky](5-4\_curves.md#curve) jsou první geometrický datový typ, kterému jsme se věnovali a který má známé sady vlastností popisujících tvar: Jak křivé nebo rovné? Jak dlouhé nebo krátké? Nezapomeňte, že Body jsou stále stavební bloky pro definování všeho od úsečky k spline a všechny typy křivek mezi nimi.
+[Křivky](5-4\_curves.md#curve) jsou první geometrický datový typ, kterému jsme se věnovali a který má známé sady vlastností popisujících tvar: Jak křivé nebo rovné? Jak dlouhé nebo krátké? Nezapomeňte, že body jsou stále stavební bloky pro definování všeho od úsečky k spline a všechny typy křivek mezi nimi.
 
-![Typy křivek](../images/5-2/4/CurveTypes.jpg)
+![Typy oblouků](../images/5-2/4/CurveTypes.jpg)
 
 > 1. Čára
 > 2. Křivka
@@ -18,15 +18,15 @@
 
 ### Čára
 
-[Čára](5-4\_curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>).
+[Čára](5-4\_curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg).
 
-![](<./images/5-2/4/curves - line by start point end point.jpg>)
+![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
 
 ### Křivka NURBS
 
 [NURBS](5-4\_curves.md#nurbs-+-polycurves) je model používaný k přesnému znázornění křivek a povrchů. Pojďme v aplikaci Dynamo pomocí dvou různých metod vytvořit křivku NURBS ve tvaru sinusoidy a porovnat výsledky.
 
-![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
+![](../images/5-2/4/curves-NurbsCurves.jpg)
 
 > 1. _NurbsCurve.ByControlPoints_ používá seznam bodů jako řídicí body
 > 2. _NurbsCurve.ByPoints_ nakreslí křivku procházející seznamem bodů
@@ -61,7 +61,7 @@ Když propojíme obě úsečky dohromady, máme **křivku**. Zde máme přímoč
 
 ### Oblouky, kružnice, oblouky elips a elipsy
 
-Když přidáváme více složitosti k parametrickým funkcím, které definují tvar, můžeme o jeden krok dále od čáry vytvořit **oblouk**, **kružnici**, **oblouk elipsy** nebo **elipsu** popisem jednoho nebo dvou poloměrů. Rozdíly mezi verzí oblouku a kružnice nebo elipsy jsou pouze tehdy, pokud je tvar uzavřen.
+Když přidáváme více složitosti k parametrickým funkcím, které definují tvar, můžeme o jeden krok dále od čáry vytvořit **oblouk**, **kružnici**, **oblouk elipsy** nebo **elipsu** popisem jednoho nebo dvou poloměrů. Rozdíly mezi verzí oblouku a kružnice nebo elipsy spočívají pouze v tom, zda je tvar uzavřený, nebo ne.
 
 ![Oblouky + kružnice](../images/5-2/4/Arcs+Circles.jpg)
 
@@ -71,7 +71,7 @@ Když přidáváme více složitosti k parametrickým funkcím, které definuj�
 
 ![Křivka NURBS](../images/5-2/4/NURBScurve.jpg)
 
-**Stupeň**: Způsob definice křivky určuje rozsah vlivu řídicích bodů na křivku, kde čím vyšší je stupeň, tím větší je rozsah. Stupeň je kladné celé číslo. Toto číslo je obvykle 1, 2, 3 nebo 5, ale může to být libovolné kladné celé číslo. Úsečky a křivky NURBS jsou obvykle stupně 1 a většina křivek volného tvaru je Stupeň 3 nebo 5.
+**Stupeň**: Způsob definice křivky určuje rozsah vlivu řídicích bodů na křivku, kde čím vyšší je stupeň, tím větší je rozsah. Stupeň je kladné celé číslo. Toto číslo je obvykle 1, 2, 3 nebo 5, ale může to být libovolné kladné celé číslo. Úsečky a křivky NURBS jsou obvykle stupně 1 a většina křivek volného tvaru je stupeň 3 nebo 5.
 
 **Řídicí body**: Řídicí body jsou seznamem alespoň Stupeň+1 bodů. Jedním z nejsnadnějších způsobů, jak změnit tvar křivky NURBS, je posunout její řídicí body.
 
@@ -85,6 +85,4 @@ Když přidáváme více složitosti k parametrickým funkcím, které definuj�
 > 2. Stupeň = 2
 > 3. Stupeň = 3
 
-{% hint style="info" %}
-Všimněte si, že čím vyšší je hodnota stupně, tím více řídících bodů se používá k interpolaci výsledné křivky.
-{% endhint %}
+{% hint style="info" %} Všimněte si, že čím vyšší je hodnota stupně, tím více řídících bodů se používá k interpolaci výsledné křivky. {% endhint %}

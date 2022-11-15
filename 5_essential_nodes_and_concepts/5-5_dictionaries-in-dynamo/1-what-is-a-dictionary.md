@@ -17,24 +17,24 @@ Díky oddělení slovníků od seznamů můžete slovníky používat k rychlé
 ### **K jakým změnám došlo?**
 
 * Došlo ke změnám _syntaxe_, která souvisí s inicializací a prací se slovníky a seznamy v blocích kódu.
-   * Slovníky používají následující syntaxi: `{key:value}`
-   * Seznamy používají následující syntaxi: `[value,value,value]`
+  * Slovníky používají následující syntaxi: `{key:value}`
+  * Seznamy používají následující syntaxi: `[value,value,value]`
 * Do knihovny byly přidány _nové uzly_, které vám pomohou vytvářet, upravovat a dotazovat slovníky.
-* Seznamy vytvořené v blocích kódu verze 1.x budou po načtení skriptu automaticky převedeny do nové syntaxe seznamu, která používá hranaté závorky `[ ]` místo složených závorek `{ }`.
+*   Seznamy vytvořené v blocích kódu verze 1.x budou po načtení skriptu automaticky převedeny do nové syntaxe seznamu, která používá hranaté závorky `[ ]` místo složených závorek `{ }` \\.
 
-   ***
+    ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
+![](../images/5-5/1/whatisadictionary-whatarethechanges(1).jpg)
 
 ***
 
 ### **Proč je to důležité? K čemu se to používá?**
 
-V počítačových vědách jsou slovníky, podobně jako seznamy, kolekcemi objektů. Zatímco seznamy mají položky v určitém pořadí, slovníky jsou _neuspořádané_ kolekce. Nejsou závislé na pořadových číslech (indexech), používají místo nich _klíče._
+V počítačových vědách jsou slovníky, podobně jako seznamy, kolekcemi objektů. Zatímco seznamy mají položky v určitém pořadí, slovníky jsou _neuspořádané_ kolekce. Nejsou závislé na pořadových číslech (indexech), používají místo nich _klíče_.
 
 Na obrázku níže je znázorněno potenciální využití slovníků. Slovníky se často používají ke spojení dvou různých položek, které spolu nemusí souviset. V našem případě propojujeme španělské slovo s anglickým pro později vyhledání.
 
-![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
+![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
 
 > 1. Vytvoří slovník, který propojí obě části dat.
 > 2. Získá hodnotu s daným klíčem.

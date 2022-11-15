@@ -6,11 +6,11 @@
 
 Porozumění typům geometrie a [jejich vzájemným vztahům](1-geometry-overview.md#stepping-through-the-hierarchy) nám umožní orientovat se v kolekci **uzlů geometrie**, která je pro nás k dispozici v knihovně. Uzly geometrie jsou uspořádány abecedně a ne hierarchicky – zde jsou zobrazeny podobně jako jejich rozvržení v rozhraní aplikace Dynamo.
 
-![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
+![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
 
 Navíc by se vytváření modelů v aplikaci Dynamo a připojení náhledu toho, co vidíme v náhledu pozadí, k toku dat v grafu mělo časem stát více intuitivní.
 
-![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
+![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
 
 > 1. Všimněte si předpokládaného souřadnicového systému vykresleného pomocí rastru a barevných os
 > 2. Vybrané uzly rendrují odpovídající geometrii (pokud uzel vytvoří geometrii) na pozadí, přičemž barva zvýraznění je stejná
@@ -25,9 +25,9 @@ Navíc by se vytváření modelů v aplikaci Dynamo a připojení náhledu toho
 
 Geometrie je tradičně definována jako studium tvaru, velikosti, relativní polohy tvarů a vlastností prostoru. Toto pole má bohatou historii sahající tisíce let. S příchodem a popularizací počítače jsme získali mocný nástroj pro definování, zkoumání a generování geometrie. Nyní je tak snadné vypočítat výsledek složitých geometrických interakcí, že téměř nevnímáme, že to děláme.
 
-![Stanford Bunny](../images/5-2/1/StanfordBunny.jpg)
+![Stanfordský zajíček](../images/5-2/1/StanfordBunny.jpg)
 
-> Pokud chcete zjistit, jak může být diverzní a složitá geometrie využívána silou vašeho počítače, proveďte rychlé webové vyhledávání Stanford Bunny – kanonického modelu použitého k testování algoritmů.
+> Pokud chcete zjistit, jak může být diverzní a složitá geometrie využívána silou vašeho počítače, proveďte rychlé webové vyhledávání Stanford Bunny (Stanfordský zajíček) – kanonického modelu použitého k testování algoritmů.
 
 Pochopení geometrie v kontextu algoritmů, výpočtů a složitosti může znít náročně. Existuje však několik klíčových a poměrně jednoduchých zásad, které můžeme stanovit jako základ pro zahájení tvorby pokročilejších aplikací:
 
@@ -36,11 +36,11 @@ Pochopení geometrie v kontextu algoritmů, výpočtů a složitosti může zn�
 3. Geometrie má **hierarchii** – body se spojí, aby se vytvořily úsečky, úsečky se spojí, aby se vytvořily povrchy, a tak dále
 4. Geometrie současně popisuje **součást i celek** – když máme křivku, je to jak tvar i všechny možné body podél ní
 
-V praxi tyto zásady znamenají, že je nutné vědět, s čím pracujeme (jaký typ geometrie, jak byla vytvořena, atd.) abychom mohli plynule sestavovat, rozebírat a znovu seskupovat různé geometrie při vývoji složitějších modelů.
+V praxi tyto zásady znamenají, že je nutné vědět, s čím pracujeme (jaký typ geometrie, jak byla vytvořena atd.), abychom mohli plynule sestavovat, rozebírat a znovu seskupovat různé geometrie při vývoji složitějších modelů.
 
 ## Procházení hierarchií
 
-Věnujme chvíli času sledování vztahu mezi abstraktním a hierarchickým popisem geometrie. Protože tyto dva koncepty spolu souvisí, ale ne vždy zjevně, můžeme se rychle dostat do koncepčních problémů, jakmile začneme vyvíjet hlubší pracovní postupy nebo modely. Pro začátek používáme dimenzionalitu jako jednoduchý popis toho, co vytváříme. Počet kót potřebných k popisu tvaru nám dává vědět, jak je Geometrie uspořádána hierarchicky.
+Věnujme chvíli času sledování vztahu mezi abstraktním a hierarchickým popisem geometrie. Protože tyto dva koncepty spolu souvisí, ale ne vždy zjevně, můžeme se rychle dostat do koncepčních problémů, jakmile začneme vyvíjet hlubší pracovní postupy nebo modely. Pro začátek používáme dimenzionalitu jako jednoduchý popis toho, co vytváříme. Počet kót potřebných k popisu tvaru nám dává vědět, jak je geometrie uspořádána hierarchicky.
 
 ![Výpočetní geometrie](../images/5-2/1/GeometryDimensionality.jpg)
 
@@ -49,7 +49,7 @@ Věnujme chvíli času sledování vztahu mezi abstraktním a hierarchickým pop
 > 3. **Rovina** (definovaná dvěma úsečkami) má _dvě_ kóty – nyní je možné procházet i vlevo a vpravo
 > 4. **Kvádr** (definovaný dvěma rovinami) má _tři_ kóty – můžeme definovat polohu vzhledem ke směru nahoru nebo dolů
 
-Dimenzionalita je pohodlný způsob, jak začít kategorizovat geometrii, ale nemusí být nutně nejlepší. Nakonec, nemodelujeme jen body, čáry, roviny a kvádry – co když chci něco s křivkami? Dále existuje celá další kategorie geometrických typů, které jsou zcela abstraktní a definují vlastnosti, například orientaci, objem nebo vztahy mezi součástmi. Nemůžeme uchopit vektor, tak jak ho definujeme vzhledem k tomu, co vidíme v prostoru? Podrobnější kategorizace geometrické hierarchie by měla rozlišovat rozdíl mezi abstraktními typy nebo „pomocnými objekty“, z nichž každý můžeme seskupovat podle toho, s čím pomáhají, a typy, které pomáhají popisovat tvar prvků modelu.
+Dimenzionalita je pohodlný způsob, jak začít kategorizovat geometrii, ale nemusí být nutně nejlepší. Nakonec, nemodelujeme jen body, čáry, roviny a kvádry – co když chceme provést něco s křivkami? Dále existuje celá další kategorie geometrických typů, které jsou zcela abstraktní a definují vlastnosti, například orientaci, objem nebo vztahy mezi součástmi. Nemůžeme uchopit vektor, tak jak ho definujeme vzhledem k tomu, co vidíme v prostoru? Podrobnější kategorizace geometrické hierarchie by měla rozlišovat rozdíl mezi abstraktními typy nebo „pomocnými objekty“, z nichž každý můžeme seskupovat podle toho, s čím pomáhají, a typy, které pomáhají popisovat tvar prvků modelu.
 
 ![Hierarchie geometrie](../images/5-2/1/GeometryHierarchy.jpg)
 
