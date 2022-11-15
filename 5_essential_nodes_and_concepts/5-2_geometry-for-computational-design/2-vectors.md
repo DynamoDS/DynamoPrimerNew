@@ -4,9 +4,9 @@
 
 ### Vecteur
 
-Un [vecteur](5-2\_vectors.md#vector-1) est une représentation de magnitude et de direction. Imaginez-vous une flèche accélérant vers une direction spécifique à une vitesse donnée. C’est·un composant clé des modèles dans Dynamo. Dans la mesure où ils se trouvent dans la catégorie Abstract des "assistants", lorsque vous créez un vecteur, vous ne verrez rien dans l'aperçu en arrière-plan.
+Un [vecteur](5-2\_vectors.md#vector-1) est une représentation de magnitude et de direction. Imaginez-vous une flèche accélérant vers une direction spécifique à une vitesse donnée. C’est un composant clé des modèles dans Dynamo. Dans la mesure où ils se trouvent dans la catégorie Abstract des « assistants », lorsque vous créez un vecteur, vous ne verrez rien dans l’aperçu en arrière-plan.
 
-![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
+![Vecteurs dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
 > 1. Vous pouvez utiliser une ligne comme support pour un aperçu vectoriel.
 
@@ -20,9 +20,9 @@ Un [vecteur](5-2\_vectors.md#vector-1) est une représentation de magnitude et d
 
 Un [plan](5-2\_vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vous une surface plane qui s’étend indéfiniment. Chaque plan possède une origine, une direction X, une direction Y et une direction Z (vers le haut).
 
-![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
+![Plans dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
-> 1. Bien qu'ils soient abstraits, les plans possèdent une position d'origine qui permet de les placer dans l'espace.
+> 1. Bien qu’ils soient abstraits, les plans possèdent une position d’origine qui permet de les placer dans l’espace.
 > 2. Dans Dynamo, les plans sont rendus dans l'aperçu en arrière-plan.
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
@@ -35,9 +35,9 @@ Un [plan](5-2\_vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vo
 
 Le [système de coordonnées](5-2\_vectors.md#coordinate-system-1) est un système permettant de déterminer l’emplacement des points ou d’autres éléments géométriques. L’image ci-dessous explique à quoi il ressemble dans Dynamo et à quoi correspond chaque couleur.
 
-![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
+![Système de coordonnées dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 
-> 1. Bien qu'ils soient abstraits, les systèmes de coordonnées possèdent également une position d'origine qui permet de les placer dans l'espace.
+> 1. Bien qu’ils soient abstraits, les systèmes de coordonnées possèdent également une position d’origine qui permet de les placer dans l’espace.
 > 2. Dans Dynamo, les systèmes de coordonnées sont rendus dans l'aperçu en arrière-plan en tant que point (origine) et lignes définissant les axes (X est rouge, Y est vert et Z est bleu suivant la convention).
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
@@ -54,18 +54,18 @@ Les vecteurs, les plans et les systèmes de coordonnées constituent le groupe p
 
 ### Vecteur
 
-Un vecteur est une quantité géométrique décrivant la direction et la magnitude. Les vecteurs sont abstraits, c'est-à-dire qu'ils représentent une quantité et non un élément géométrique. Les vecteurs peuvent être facilement confondus avec les points, car ils sont tous les deux composés d'une liste de valeurs. Il existe cependant une différence essentielle : les points décrivent une position dans un système de coordonnées donné, tandis que les vecteurs décrivent une différence par rapport à la position qui est la même que la "direction".
+Un vecteur est une quantité géométrique décrivant la direction et la magnitude. Les vecteurs sont abstraits, c’est-à-dire qu’ils représentent une quantité et non un élément géométrique. Les vecteurs peuvent être facilement confondus avec les points, car ils sont tous les deux composés d’une liste de valeurs. Il existe cependant une différence essentielle : les points décrivent une position dans un système de coordonnées donné, tandis que les vecteurs décrivent une différence par rapport à la position qui est la même que la « direction ».
 
 ![Détails du vecteur](../images/5-2/2/Vector-Detailed.jpg)
 
-Si l'idée d'une différence relative est source de confusion, considérez le vecteur AB comme "Je suis debout au point A, et je regarde vers le point B." La direction, d'ici (A) vers là-bas (B), est le vecteur.
+Si l’idée de différence relative est déroutante, envisagez le vecteur AB sous cet angle : « Je suis au point A, et je regarde vers le point B. » La direction, d’ici (A) à là (B), est notre vecteur.
 
 Décomposez davantage les vecteurs en parties en utilisant la même notation AB :
 
 ![Vecteur](../images/5-2/2/Vector.jpg)
 
 > 1. Le **point de départ** du vecteur est appelé **base**.
-> 2. Le \*\*point d’arrivée\*\* du vecteur est appelé **pointe** ou **sens**.
+> 2. Le **point d’arrivée** du vecteur est appelé **pointe** ou **sens**.
 > 3. Le vecteur AB est différent du vecteur BA, qui pointe dans la direction opposée.
 
 Pour ajouter une touche de légèreté en ce qui concerne les vecteurs (et leur définition abstraite), impossible de ne pas mentionner la fameuse réplique de la comédie "Y a-t-il un pilote dans l'avion" :
@@ -74,7 +74,7 @@ Pour ajouter une touche de légèreté en ce qui concerne les vecteurs (et leur 
 
 ### Plan
 
-Les plans sont des "assistants" abstraits 2D. Plus spécifiquement, les plans sont conceptuellement "plats", s'étendant de manière infinie dans deux directions. En général, ils sont rendus sous la forme d'un rectangle plus petit près de leur origine.
+Les plans sont des "assistants" abstraits 2D. Plus spécifiquement, les plans sont conceptuellement "plats", s'étendant de manière infinie dans deux directions. En général, ils sont rendus sous la forme d’un rectangle plus petit près de leur origine.
 
 ![Plan](../images/5-2/2/Plane.jpg)
 
@@ -86,7 +86,7 @@ Et vous avez raison ! La plupart des logiciels de modélisation tirent parti de
 
 Si vous maîtrisez parfaitement les plans, les systèmes de coordonnées ne vous poseront pas de difficultés. Un plan possède les mêmes composants qu'un système de coordonnées, à condition qu'il s'agisse d'un système de coordonnées "euclidiennes" ou "XYZ" standard.
 
-Cependant, il existe d'autres systèmes de coordonnées, tels que les systèmes cylindriques ou sphériques. Comme vous le verrez dans les sections suivantes, les systèmes de coordonnées peuvent également être appliqués à d'autres types de géométrie afin de définir une position sur la géométrie en question.
+Cependant, il existe d'autres systèmes de coordonnées, tels que les systèmes cylindriques ou sphériques. Comme vous le verrez dans les sections suivantes, les systèmes de coordonnées peuvent également être appliqués à d’autres types de géométrie afin de définir une position sur la géométrie en question.
 
 ![Système de coordonnées](../images/5-2/2/CoordinateSystem.jpg)
 
