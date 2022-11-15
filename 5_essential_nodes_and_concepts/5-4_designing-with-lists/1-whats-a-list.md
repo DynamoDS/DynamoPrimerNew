@@ -6,7 +6,7 @@
 
 ![바나나](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
-> 사진 제공: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> 사진 출처: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list)
 
 식료품을 구입할 때는 구입한 모든 항목을 바구니에 넣습니다. 이 바구니 또한 리스트입니다. 바나나 빵을 만들려면 3묶음의 바나나가 필요합니다(바나나 빵을 _많이_ 만드는 경우). 이 바구니는 바나나 묶음 리스트를 나타내고 각 묶음은 바나나 리스트를 나타냅니다. 바구니는 리스트의 리스트(2차원)이고 바나나 묶음은 리스트(1차원)입니다.
 
@@ -20,7 +20,7 @@ Dynamo에서는 리스트 데이터가 정렬되고, 각 리스트의 첫 번째
 
 리스트에는 항목이 5개 있으며, 해당 리스트에서는 0부터 시작하는 계산 시스템을 사용합니다. 리스트에 저장되는 항목은 숫자일 필요가 없습니다. 점, 곡선, 표면, 패밀리 등 Dynamo에서 지원하는 어떤 데이터 유형도 될 수 있습니다.
 
-![](<../images/5-4/1/what's a list - zero based indices.jpg>)
+![](../images/5-4/1/what'salist-zerobasedindices.jpg)
 
 > a. 색인
 >
@@ -36,18 +36,18 @@ Dynamo에서는 리스트 데이터가 정렬되고, 각 리스트의 첫 번째
 
 리스트와 관련해서, 입력 및 출력은 사용 중인 Dynamo 노드에 따라 달라집니다. 예를 들어 5개의 점 리스트를 사용하며, 이 출력을 두 개의 다른 Dynamo 노드인 **PolyCurve.ByPoints** 및 **Circle.ByCenterPointRadius**에 연결해 보겠습니다.
 
-![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
+![입력 예시](../images/5-4/1/what'salist-inputsandoutputs.jpg)
 
-> 1. **PolyCurve.ByPoints** 의 _points_ 입력의 경우 _"Point\[]"_ 를 찾습니다. 이것은 점 리스트를 나타냅니다.
+> 1. **PolyCurve.ByPoints**의 _points_ 입력의 경우 _"Point[]"_를 찾습니다. 이것은 점 리스트를 나타냅니다.
 > 2. **PolyCurve.ByPoints**의 출력은 점 5개의 리스트에서 작성된 단일 PolyCurve입니다.
-> 3. **Circle.ByCenterPointRadius** 의 _centerPoint_ 입력의 경우 _"Point"_ 를 요청합니다.
+> 3. **Circle.ByCenterPointRadius**의 _centerPoint_ 입력의 경우 _"Point"_를 요청합니다.
 > 4. **Circle.ByCenterPointRadius**의 출력은 중심이 점의 원래 리스트에 해당하는 원 5개의 리스트입니다.
 
 **PolyCurve.ByPoints** 및 **Circle.ByCenterPointRadius**의 입력 데이터는 동일하지만, **Polycurve.ByPoints** 노드에서는 하나의 polycurve를 제공하며, **Circle.ByCenterPointRadius** 노드에서는 각 점에 중심이 있는 5개의 원을 제공합니다. 즉, polycurve는 5개의 점을 연결하는 곡선으로 그려지고, 원은 각 점에 서로 다른 원을 작성합니다. 그렇다면 데이터는 어떻게 될까요?
 
-**Polycurve.ByPoints** 의 _points_ 입력 위에 커서를 놓으면 해당 입력이 _"Point\[]"_ 를 찾는 것을 확인할 수 있습니다. 끝에 각괄호가 있다는 점에 유의하십시오. 이는 점 리스트를 나타내며, polycurve를 작성하려는 경우 입력은 각 polycurve에 대한 리스트여야 합니다. 따라서 이 노드에서는 각 리스트를 하나의 polycurve로 압축합니다.
+**Polycurve.ByPoints**의 _points_ 입력 위에 커서를 놓으면 해당 입력이 _"Point[]"_를 찾는 것을 확인할 수 있습니다. 끝에 각괄호가 있다는 점에 유의하십시오. 이는 점 리스트를 나타내며, polycurve를 작성하려는 경우 입력은 각 polycurve에 대한 리스트여야 합니다. 따라서 이 노드에서는 각 리스트를 하나의 polycurve로 압축합니다.
 
-반면, **Circle.ByCenterPointRadius** 의 _centerPoint_ 입력에서는 _"Point"_ 를 요청합니다. 이 노드에서는 원의 중심점을 정의하기 위한 항목으로 하나의 점을 찾습니다. 바로 이 때문에 입력 데이터에서 5개의 원을 얻게 되는 것입니다. 이렇게 Dynamo에서 입력과 다른 점을 인식하면 데이터 관리 시 노드가 작동하는 방식을 보다 잘 이해할 수 있습니다.
+반면, **Circle.ByCenterPointRadius**의 _centerPoint_ 입력에서는 _"Point"_를 요청합니다. 이 노드에서는 원의 중심점을 정의하기 위한 항목으로 하나의 점을 찾습니다. 바로 이 때문에 입력 데이터에서 5개의 원을 얻게 되는 것입니다. 이렇게 Dynamo에서 입력과 다른 점을 인식하면 데이터 관리 시 노드가 작동하는 방식을 보다 잘 이해할 수 있습니다.
 
 ### 레이싱
 
@@ -59,23 +59,23 @@ Dynamo에서는 리스트 데이터가 정렬되고, 각 리스트의 첫 번째
 
 가장 간단한 방법은 더 이상 짝을 지을 수 없을 때까지 입력을 일대일로 연결하는 것입니다. 이를 "최단 리스트" 알고리즘이라고 합니다. 다음은 Dynamo 노드의 기본 동작입니다.
 
-![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
+![](../images/5-4/1/what'salist-lacing-shortest.jpg)
 
 #### 최장 리스트
 
 "최장 리스트" 알고리즘은 더 이상 짝을 지을 수 없을 때까지 입력을 계속 연결하고 요소를 재사용합니다.
 
-![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
+![](../images/5-4/1/what'salist-lacing-longest.jpg)
 
-#### Cross Product
+#### 외적
 
 마지막으로 “외적” 메서드는 가능한 모든 연결을 설정합니다.
 
-![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
+![](../images/5-4/1/what'salist-lacing-cross.jpg)
 
-보시다시피 이러한 점 세트 사이에 선을 그리는 여러 가지가 있습니다. 레이싱 옵션은 노드의 중심을 마우스 오른쪽 버튼으로 클릭하고 "레이싱" 메뉴를 선택하여 찾을 수 있습니다.
+보시다시피 이러한 점 세트 사이에 선을 그릴 수 있는 방법은 여러 가지가 있습니다. 레이싱 옵션은 노드의 중심을 마우스 오른쪽 버튼으로 클릭하고 "레이싱" 메뉴를 선택하여 찾을 수 있습니다.
 
-![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
+![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
 ## 연습
 
@@ -91,18 +91,18 @@ Dynamo에서는 리스트 데이터가 정렬되고, 각 리스트의 첫 번째
 
 ### 최단 리스트
 
-_최단 리스트_ 를 레이싱 옵션(기본 옵션)으로 선택하면 5개의 점으로 구성된 기본 대각선이 표시됩니다. 5개의 점은 더 짧은 리스트의 길이이므로 최단 리스트 레이싱은 한 리스트의 끝에 도달하면 중지됩니다.
+_최단 리스트_를 레이싱 옵션(기본 옵션)으로 선택하면 5개의 점으로 구성된 기본 대각선이 표시됩니다. 5개의 점은 더 짧은 리스트의 길이이므로 최단 리스트 레이싱은 한 리스트의 끝에 도달하면 중지됩니다.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
+![입력 예시](../images/5-4/1/what'salist-lacingexercise01.jpg)
 
 ### **최장 리스트**
 
-레이싱을 _최장 리스트_ 로 변경하면 수직으로 확장되는 대각선이 표시됩니다. 개념 다이어그램과 동일한 방법으로, 5개 항목 리스트의 마지막 항목이 반복되면서 더 긴 리스트의 길이에 도달합니다.
+레이싱을 _최장 리스트_로 변경하면 수직으로 확장되는 대각선이 표시됩니다. 개념 다이어그램과 동일한 방법으로, 5개 항목 리스트의 마지막 항목이 반복되면서 더 긴 리스트의 길이에 도달합니다.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
+![입력 예시](../images/5-4/1/what'salist-lacingexercise02.jpg)
 
-### **Cross Product**
+### **외적**
 
-레이싱을 _외적_ 으로 변경하면 각 리스트 간에 모든 조합이 모여 5x10개의 점 그리드가 제공됩니다. 이는 현재 데이터가 리스트의 리스트라는 점을 제외하고, 위 개념 다이어그램에 표시된 것처럼 외적에 대한 동일한 데이터 구조입니다. polycurve를 연결하면 각 리스트가 X 값으로 정의되어 수직선의 행이 표시되는 것을 볼 수 있습니다.
+레이싱을 _외적_으로 변경하면 각 리스트 간에 모든 조합이 모여 5x10개의 점 그리드가 제공됩니다. 이는 현재 데이터가 리스트의 리스트라는 점을 제외하고, 위 개념 다이어그램에 표시된 것처럼 외적에 대한 동일한 데이터 구조입니다. polycurve를 연결하면 각 리스트가 X 값으로 정의되어 수직선의 행이 표시되는 것을 볼 수 있습니다.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
+![입력 예시](../images/5-4/1/what'salist-lacingexercise03.jpg)

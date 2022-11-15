@@ -6,9 +6,9 @@
 
 #### 관련 알고리즘 <a href="#algorithms-in-hand" id="algorithms-in-hand"></a>
 
-강력한 기회를 제공하기도 하지만, **알고리즘**이라는 용어는 잘못된 개념을 제공할 수도 있습니다. 알고리즘이 예상치 못했거나 자연 그대로의 또는 멋진 결과를 생성할 수 있지만 마술은 아닙니다. 실제로 알고리즘 자체는 상당히 평범합니다. 종이학과 같은 실제적인 예를 사용해 보겠습니다. 먼저 정사각형 종이(입력)로 시작해서 일련의 접기 단계(처리 작업)를 거치면 학(출력)이 만들어집니다.
+강력한 기회를 제공하기도 하지만, **알고리즘**이라는 용어는 잘못된 개념을 제공할 수도 있습니다. 알고리즘이 예상하지 못했거나 자연 그대로의 결과나 멋진 결과를 생성할 수 있지만 마술은 아닙니다. 실제로 알고리즘 자체는 상당히 평범합니다. 종이학과 같은 실제적인 예를 사용해 보겠습니다. 먼저 정사각형 종이(입력)로 시작해서 일련의 접기 단계(처리 작업)를 거치면 학(출력)이 만들어집니다.
 
-![Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![종이학](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
 
 그렇다면 알고리즘은 어디에 있을까요? 알고리즘은 텍스트 또는 그래픽 방식으로 나타낼 수 있는 추상적 단계 세트입니다.
 
@@ -30,7 +30,7 @@
 
 **그래픽 지침:**
 
-![업데이트 필요 - Origami Crane](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![종이학 지침](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### 정의된 프로그래밍 <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@
 
 **시각적 프로그램:**
 
-![](<./images/a-1/visualProgramming (2).png>)
+![](./images/a-1/visualProgramming(2).png)
 
 **텍스트 프로그램:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 이 알고리즘의 결과는 다음과 같습니다.
 
-![](<./images/a-1/visualProgramming (1).png>)
+![](./images/a-1/visualProgramming(1).png)
 
 진입 장벽을 낮추고 설계자에게 자주 정보를 제공할 수 있는 프로그래밍의 시각적 특성입니다. Dynamo는 시각적 프로그래밍 패러다임에 속하지만, 응용프로그램에서 텍스트 프로그래밍도 계속 사용할 수 있습니다. 이 내용은 나중에 살펴보겠습니다.

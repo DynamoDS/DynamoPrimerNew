@@ -1,8 +1,6 @@
 # 정보
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
-Dynamo Hyper 비디오]
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype 비디오{% endembed %}
 
 ## Dynamo v2.13의 경우
 
@@ -61,7 +59,7 @@ Dynamo 프로젝트를 시작하도록 도와주시고 지침을 주신 Ian Keou
 
 ### 소프트웨어 및 리소스
 
-**Dynamo** 현재 안정적인* Dynamo 릴리즈 버전은 2.1.0입니다.
+**Dynamo** Dynamo의 최신 **안정적인** 릴리즈는 다음 사이트를 참조하십시오.
 
 http://dynamobim.com/download/ 또는 http://dynamobuilds.com
 

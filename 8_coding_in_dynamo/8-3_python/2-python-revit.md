@@ -4,7 +4,7 @@
 
 Dynamo에서 Python 스크립트를 사용하는 방법에 대해 설명했으므로 이제 Revit 라이브러리를 스크립팅 환경에 연결하는 방법을 살펴보겠습니다. 아래의 code block에서 처음 네 줄을 포함하는 Python Standard 및 Dynamo 코어 노드를 가져왔습니다. Revit 노드, Revit 요소 및 Revit 문서 관리자를 가져오려는 경우 다음과 같은 일부 코드 줄만 추가하면 됩니다.
 
-```
+``` py
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -27,7 +27,7 @@ import System
 
 이렇게 하면 Revit API에 액세스할 수 있으며 모든 Revit 작업에 대한 사용자 스크립트가 제공됩니다. 시각적 프로그래밍 프로세스와 Revit API 스크립팅을 결합하면 공동 작업 및 도구 개발이 크게 개선됩니다. 예를 들어 BIM 관리자와 구조도 설계자는 동일한 그래프에서 함께 작업할 수 있습니다. 이러한 공동 작업을 통해 모델의 설계 및 실행을 개선할 수 있습니다.
 
-![](<../../.gitbook/assets/python & revit - 01.jpg>)
+![](../images/8-3/2/python&revit-01.jpg)
 
 ### 플랫폼별 API
 
@@ -47,15 +47,15 @@ Dynamo Project 이면의 계획은 플랫폼 구현 범위를 넓히는 것입�
 
 이 연습에서는 Dynamo for Revit의 기본적인 Python 스크립트를 살펴볼 것입니다. 이 연습은 Revit 파일 및 요소 처리, Revit과 Dynamo 간의 커뮤니케이션 등에 중점을 둡니다.
 
-이는 Dynamo 세션에 링크된 Revit 파일의 _doc_, _uiapp_ 및 _app_ 을 검색하기 위해 미리 마련된 메서드입니다. 이전에 Revit API에서 작업해본 적이 있는 프로그래머는 감시 리스트의 항목을 알아차릴 수도 있습니다. 이러한 항목이 익숙하지 않더라도 아래의 연습에서 다른 예시를 사용하므로 괜찮습니다.
+이는 Dynamo 세션에 링크된 Revit 파일의 _doc_, _uiapp_ 및 _app_을 검색하기 위해 미리 마련된 메서드입니다. 이전에 Revit API에서 작업해본 적이 있는 프로그래머는 조사 리스트의 항목을 알아차릴 수도 있습니다. 이러한 항목이 익숙하지 않더라도 아래의 연습에서 다른 예시를 사용하므로 괜찮습니다.
 
 Dynamo에서 Revit 서비스를 가져오고 문서 데이터를 검색하는 방법은 다음과 같습니다.
 
-![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise01-01.jpg)
 
 Dynamo의 Python 노드를 살펴봅니다. 아래에서 코드를 찾을 수도 있습니다.
 
-```
+``` py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -86,21 +86,21 @@ OUT = [doc,uiapp,app]
 
 Revit에서 새로운 개념 매스 패밀리를 작성하여 시작합니다.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise02-01.jpg)
 
 _개념 매스 폴더_ 를 열고 _Metric Mass.rft_ 템플릿 파일을 사용합니다.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise02-02.jpg)
 
 Revit에서 키보드 단축키 **`un`** 을 사용하여 프로젝트 단위 설정을 표시하고 길이 단위를 미터로 변경합니다.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise02-03.jpg)
 
 Dynamo를 시작하고 아래 이미지의 노드 세트를 작성합니다. 먼저 Dynamo 노드에서 Revit에 두 개의 참조점을 작성합니다.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
+![](../images/8-3/2/python&revit-exercise02-04.jpg)
 
-> 1. **Code Block** 을 작성하고 값을 `"0;"`으로 지정합니다.
+> 1. **Code Block**을 작성하고 값을 `"0;"`으로 지정합니다.
 > 2. 이 값을 X, Y 및 Z 입력에 대한 **ReferencePoint.ByCoordinates** 노드에 연결합니다.
 > 3. 단계 크기가 1인 -100에서 100 사이의 슬라이더를 3개 작성합니다.
 > 4. 각 슬라이더를 **ReferencePoint.ByCoordinates** 노드에 연결합니다.
@@ -108,11 +108,11 @@ Dynamo를 시작하고 아래 이미지의 노드 세트를 작성합니다. 먼
 
 Dynamo의 Python 노드를 살펴봅니다. 아래에서 전체 코드를 찾습니다.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise02-05.jpg)
 
 > 1. **System.Array:** Revit에는 입력으로 Python 리스트가 아닌 **시스템 배열**이 필요합니다. 이 경우 코드 줄이 1개 더 추가될 뿐이지만 인수 유형에 신경 쓰면 Revit에서 Python 프로그래밍을 쉽게 처리할 수 있습니다.
 
-```
+``` py
 import sys
 import clr
 
@@ -136,7 +136,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 Dynamo에서 Python을 사용하여 하나의 선으로 연결된 참조점 두 개를 작성했습니다. 다음 연습에서 좀 더 자세히 살펴보겠습니다.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
+![](../images/8-3/2/python&revit-exercise02-06.jpg)
 
 ## 연습 3
 
@@ -148,13 +148,13 @@ Dynamo에서 Python을 사용하여 하나의 선으로 연결된 참조점 두 
 
 이 연습은 간단하지만, Revit에서 Dynamo로, 그리고 그 반대로 데이터와 형상을 연결하는 항목을 이해하는 데 도움이 됩니다. 먼저 Revit-StructuralFraming.rvt를 열어 보겠습니다. 이 파일이 열리면 Dynamo를 시작하고 Revit-StructuralFraming.dyn 파일을 엽니다.
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
+![](../../.gitbook/assets/python&revit-exercise03-01.jpg)
 
 이 Revit 파일에는 기본적인 내용이 포함됩니다. 2개의 참조 곡선(레벨 1에 1개, 레벨 2에 1개)이 그려집니다. 이러한 곡선을 Dynamo로 가져와 라이브 링크를 유지하려고 합니다.
 
 이 파일에는 Python 노드의 5개 입력에 연결된 노드 세트가 있습니다.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise03-02.jpg)
 
 > 1. **Select Model Element Nodes:** 각각에 대해 선택 버튼을 누르고 Revit에서 해당 곡선을 선택합니다.
 > 2. **Code Block:** `0..1..#x;`_,_ 구문을 사용하여 0에서 20 사이의 정수 슬라이더를 _x_ 입력에 연결합니다. 이렇게 하면 두 곡선 사이에 그릴 빔 수가 지정됩니다.
@@ -163,9 +163,9 @@ Dynamo에서 Python을 사용하여 하나의 선으로 연결된 참조점 두 
 
 Python의 이 코드는 약간 더 조밀하지만, 코드 내의 해설에 프로세스에서 발생하는 상황이 설명되어 있습니다.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise03-03.jpg)
 
-```
+``` py
 import clr
 #import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
@@ -204,7 +204,7 @@ Revit에는 두 곡선을 구조적 요소로 스패닝하는 빔 배열이 있�
 
 Dynamo에서는 결과도 볼 수 있습니다. **Watch3D** 노드의 빔은 Revit 요소에서 조회된 형상을 나타냅니다.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise03-05.jpg)
 
 Revit 환경에서 Dynamo 환경으로 데이터를 변환하는 프로세스가 지속됩니다. 요약하면 프로세스가 진행되는 방식은 다음과 같습니다.
 
@@ -219,4 +219,4 @@ Revit 환경에서 Dynamo 환경으로 데이터를 변환하는 프로세스가
 
 Revit에서 참조 곡선을 업데이트하여 새로운 빔 배열을 얻게 됩니다.
 
-![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
+![](../images/8-3/2/python&revit-ex03-06.gif)

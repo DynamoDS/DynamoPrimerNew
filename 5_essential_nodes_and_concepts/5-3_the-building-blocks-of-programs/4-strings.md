@@ -10,7 +10,7 @@
 
 위의 샘플 노드는 문자열입니다. 숫자는 문자열로 나타내거나 문자 또는 전체 텍스트 배열로 나타낼 수 있습니다.
 
-![](<../images/5-3/4/strings - creating strings.jpg>)
+![](../images/5-3/4/strings-creatingstrings.jpg)
 
 ## 연습
 
@@ -26,25 +26,25 @@
 
 아래 이미지에서는 외부 스프레드시트에서 가져온 데이터 문자열을 고려합니다. 해당 문자열은 XY 평면에서 직사각형의 정점을 나타냅니다. 일부 문자열 분할 작업을 소규모 연습으로 나눠보겠습니다.
 
-![](<../images/5-3/4/strings - querying strings 01.jpg>)
+![](../images/5-3/4/strings-queryingstrings01.jpg)
 
 > 1. ";" 구분 기호는 직사각형의 각 정점을 분할합니다. 그러면 각 정점에 해당하는 3개의 항목이 포함된 리스트가 작성됩니다.
 
-![](<../images/5-3/4/strings - querying strings 02.jpg>)
+![](../images/5-3/4/strings-queryingstrings02.jpg)
 
 > 1. 노드의 중간에 있는 "_+_"를 눌러 새 구분 기호를 작성합니다.
 > 2. "_,_" 문자열을 캔버스에 추가하고 새 구분 기호 입력에 연결합니다.
-> 3. 이제 결과는 항목 10개로 구성된 리스트가 됩니다. 노드는 먼저 _separator0_ 을 기준으로 분할된 후 _separator1_ 을 기준으로 분할됩니다.
+> 3. 이제 결과는 항목 10개로 구성된 리스트가 됩니다. 노드는 먼저 _separator0_을 기준으로 분할된 후 _separator1_을 기준으로 분할됩니다.
 
 위의 항목 리스트는 숫자처럼 보일 수 있지만 Dynamo에서는 여전히 개별 문자열로 간주됩니다. 점을 작성하려면 해당 데이터 유형을 문자열에서 숫자로 변환해야 합니다. 이 작업은 **String.ToNumber** 노드를 사용하여 수행합니다.
 
-![](<../images/5-3/4/strings - querying strings 03.jpg>)
+![](../images/5-3/4/strings-queryingstrings03.jpg)
 
-> 1. 이 노드는 간단합니다. **String.Split** 결과를 입력에 연결합니다. 출력이 다르게 보이지는 않지만 데이터 유형은 이제 _문자열_ 이 아닌 _숫자_ 입니다.
+> 1. 이 노드는 간단합니다. **String.Split** 결과를 입력에 연결합니다. 출력이 다르게 보이지는 않지만 데이터 유형은 이제 _문자열_이 아닌 _숫자_입니다.
 
 기본적인 추가 작업을 통해 원래 문자열 입력을 기준으로 원점에 삼각형이 그려집니다.
 
-![](<../images/5-3/4/strings - querying strings 04.jpg>)
+![](../images/5-3/4/strings-queryingstrings04.jpg)
 
 ### 문자열 조작
 
@@ -52,9 +52,9 @@
 
 다음은 두 문자열을 순서대로 병합하는 방법입니다. 이 방법에서는 리스트의 각 리터럴 문자열을 가져와 병합된 하나의 문자열을 작성합니다.
 
-다음 이미지는 다음 세 개의 문자열을 연결하는 과정이 나와 있습니다.
+다음 이미지에는 다음 세 개의 문자열을 연결하는 과정이 나와 있습니다.
 
-![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
+![연결](../images/5-3/4/strings-manipulatingstrings01.jpg)
 
 > 1. 노드 중심에서 +/- 버튼을 클릭하여 연결 항목에 문자열을 추가하거나 연결 항목에서 문자열을 뺍니다.
 > 2. 출력에서는 공백과 문장 부호가 포함된 연결된 1개의 문자열이 제공됩니다.
@@ -65,7 +65,7 @@ Excel에서 작업한 경우 CSV 파일을 보았을 수 있습니다. CSV는 �
 
 다음 이미지에는 두 개의 문자열의 결합하는 과정이 나와 있습니다.
 
-![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
+![](../images/5-3/4/strings-manipulatingstrings02.jpg)
 
 > 1. 구분 기호 입력을 통해 결합된 문자열을 분할하는 하나의 문자열을 작성할 수 있습니다.
 
@@ -75,7 +75,7 @@ Excel에서 작업한 경우 CSV 파일을 보았을 수 있습니다. CSV는 �
 
 먼저 절의 기본적인 문자열 분할부터 살펴보겠습니다. 작성된 시가 쉼표를 기준으로 형식이 지정된다는 것을 알 수 있습니다. 이 형식을 사용하여 각 줄을 개별 항목으로 구분할 것입니다.
 
-![](<../images/5-3/4/strings - working with strings 01.jpg>)
+![](../images/5-3/4/strings-workingwithstrings01.jpg)
 
 > 1. 기본 문자열이 **String** 노드에 붙여넣어집니다.
 > 2. 다른 **String** 노드는 구분 기호를 나타내는 데 사용됩니다. 이 경우에는 쉼표를 사용합니다.
@@ -84,27 +84,27 @@ Excel에서 작업한 경우 CSV 파일을 보았을 수 있습니다. CSV는 �
 
 이제 이 시에서 좋은 부분인 마지막 두 줄로 가보겠습니다. 원래 절은 하나의 데이터 항목이었습니다. 첫 번째 단계에서 이 데이터를 개별 항목으로 구분했습니다. 이제 찾으려는 텍스트를 검색해야 합니다. 또한 리스트의 마지막 두 항목을 선택하여 이 작업을 _수행할 수 있긴 하지만_, 이것이 한 권의 책이라면 모든 내용을 읽고 요소를 수동으로 분리하려고 하지는 않을 것입니다.
 
-![](<../images/5-3/4/strings - working with strings 02.jpg>)
+![](../images/5-3/4/strings-workingwithstrings02.jpg)
 
 > 1. 수동으로 검색하는 대신 **String.Contains** 노드를 사용하여 문자 세트를 검색합니다. 이는 워드 프로세서에서 "찾기" 명령을 수행하는 것과 유사합니다. 이 경우 항목 내에서 해당 하위 문자열을 찾은 경우 "true" 또는 "false"가 반환됩니다.
 > 2. _searchFor_ 입력에서는 절 내에서 찾으려는 하위 문자열을 정의합니다. 텍스트가 "And miles"인 **String** 노드를 사용해 보겠습니다.
 > 3. 출력에서는 false 및 true 리스트가 제공됩니다. 다음 단계에서는 이 부울 논리를 사용하여 요소를 필터링해 보겠습니다.
 
-![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
+![분할](../images/5-3/4/strings-workingwithstrings03.jpg)
 
 > 1. **List.FilterByBoolMask**는 false 및 true를 필터링하는 데 사용하려는 노드입니다. "in" 출력은 "mask" 입력이 "true"인 문을 반환하지만, "out" 출력은 "false"인 문을 반환합니다.
 > 2. "in"의 결과는 예상한 것처럼 절의 마지막 두 줄입니다.
 
 이제 두 줄을 병합하여 절의 반복을 이해하기 쉽게 하려고 합니다. 이전 단계의 출력을 보면 리스트에 다음과 같은 두 개의 항목이 있는 것을 알 수 있습니다.
 
-![](<../images/5-3/4/strings - working with strings 04.jpg>)
+![](../images/5-3/4/strings-workingwithstrings04.jpg)
 
 > 1. 두 개의 **List.GetItemAtIndex** 노드를 사용하고, 0과 1 값을 색인 입력으로 사용하여 항목을 분리할 수 있습니다.
 > 2. 각 노드의 출력에는 마지막 두 줄이 순서대로 표시됩니다.
 
 이러한 두 항목을 하나로 병합하려면 다음과 같이 **String.Join** 노드를 사용합니다.
 
-![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
+![문자열 분할](../images/5-3/4/strings-workingwithstrings05.jpg)
 
 > 1. **String.Join** 노드를 추가하고 나면 구분 기호가 필요하다는 사실을 알게 됩니다.
 > 2. 구분 기호를 작성하려면 캔버스에 **String** 노드를 추가하고 쉼표를 입력합니다.

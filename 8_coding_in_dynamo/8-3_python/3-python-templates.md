@@ -6,13 +6,13 @@ Dynamo 2.0을 사용하면 Python 창을 처음 열 때 사용할 기본 템플�
 
 이는 일반적으로 `( %appdata%\Dynamo\Dynamo Core\{version}\ )`과 같습니다.
 
-![](<../images/8-3/3/python templates - appdata folder location.jpg>)
+![](../images/8-3/3/pythontemplates-appdatafolderlocation.jpg)
 
 ### 템플릿 설정
 
 이 기능을 사용하려면 `DynamoSettings.xml` 파일에 다음 행을 추가해야 합니다. _(메모장에서 편집)_
 
-![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
+![](../images/8-3/3/pythontemplates-dynamosettingsxmlfile.png)
 
 여기에서 `<PythonTemplateFilePath />`를 간단히 다음으로 대치할 수 있습니다.
 
@@ -22,15 +22,13 @@ Dynamo 2.0을 사용하면 Python 창을 처음 열 때 사용할 기본 템플�
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_주: CURRENTUSER를 사용자 이름으로 대치하십시오._
-{% endhint %}
+{% hint style="warning" %} _참고: CURRENTUSER를 사용자 이름으로 대치하십시오._ {% endhint %}
 
 다음으로, 내장 항목으로 사용하려는 기능이 포함된 템플릿을 작성해야 합니다. 이 예에서는 Revit 관련 가져오기와 Revit으로 작업할 때의 다른 일반적인 항목을 포함할 수 있습니다.
 
 빈 메모장 문서를 시작하고 다음 코드를 그 안에 붙여 넣습니다.
 
-```
+``` py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -73,10 +71,10 @@ OUT = element
 
 Python 템플릿을 정의했으므로 Dynamo는 Python 노드가 배치될 때마다 이 템플릿을 찾습니다. 이 템플릿을 찾을 수 없는 경우 기본 Python 창과 유사한 항목이 표시됩니다.
 
-![](<../images/8-3/3/python templates - before setup template.jpg>)
+![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
 Python 템플릿을 찾은 경우(이 예의 Revit 템플릿처럼) 작성한 기본 항목을 볼 수 있습니다.
 
-![](<../images/8-3/3/python templates - after setup template.jpg>)
+![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 이러한 유용한 추가 기능에 대한 자세한 정보(Radu Gidei 작성)를 다음에서 확인할 수 있습니다. https://github.com/DynamoDS/Dynamo/pull/8122

@@ -6,7 +6,7 @@
 
 ![인형](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
 
-> 러시아 마트료시카(사진 제공: [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) 세트는 n차원 리스트와 비슷합니다. 각 도면층은 리스트를 나타내고 각 리스트 안에는 항목이 포함되어 있습니다. Dynamo의 경우 각 컨테이너 안에는 여러 개의 컨테이너가 포함될 수 있습니다(각 리스트의 항목을 나타냄).
+> 러시아 마트료시카(사진 출처: [Zeta](https://www.flickr.com/photos/beppezizzi/145493363)) 세트는 n차원 리스트와 비슷합니다. 각 도면층은 리스트를 나타내고 각 리스트 안에는 항목이 포함되어 있습니다. Dynamo의 경우 각 컨테이너 안에는 여러 개의 컨테이너가 포함될 수 있습니다(각 리스트의 항목을 나타냄).
 
 n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는 3차원 이상의 리스트를 중점적으로 다루는 몇 가지 연습을 진행해보겠습니다.
 
@@ -14,7 +14,7 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 매핑은 Dynamo의 데이터 관리에서 가장 복잡한 부분이며, 특히 리스트의 복잡한 계층 작업을 수행할 때와 관련이 있습니다. 아래에 제공되는 일련의 연습을 진행하면서 데이터가 다차원이 될 때 매핑 및 조합을 사용해야 하는 경우를 살펴보겠습니다.
 
-**List.Map** 및 **List.Combine**은 이전 섹션에 미리 설명되어 있습니다. 아래의 마지막 연습에서는 복잡한 데이터 구조에서 이러한 노드를 사용해 보겠습니다.
+**List.Map** 및 **List.Combine**은 이전 섹션에서 이미 설명했습니다. 아래의 마지막 연습에서는 복잡한 데이터 구조에서 이러한 노드를 사용해 보겠습니다.
 
 ## 연습 - 2D 리스트 - 기본
 
@@ -26,36 +26,36 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 이 연습은 가져온 형상을 연결하는 3개의 연습 시리즈 중 첫 번째입니다. 이 연습 시리즈의 각 부분에서는 점점 더 복잡한 데이터 구조를 다룹니다.
 
-![Exercise](<../images/5-4/4/n-dimensional lists - 2d lists basic 01.jpg>)
+![연습](../images/5-4/4/n-dimensionallists-2dlistsbasic01.jpg)
 
 > 1. 연습 파일 폴더에 있는 .sat 파일로 시작하겠습니다. **File Path** 노드를 사용하여 이 파일을 선택할 수 있습니다.
 > 2. **Geometry.ImportFromSAT**를 사용하여 형상을 Dynamo 미리보기에 두 개의 표면으로 가져옵니다.
 
 이 연습에서는 간단한 작업을 위해 표면 중 하나로 진행합니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists basic 02.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsbasic02.jpg)
 
-> 1. 색인 1을 선택하여 위쪽 표면을 선택합니다. 이 작업은 **List.GetItemAtIndex** 노드에서 수행합니다.
+> 1. 색인 1을 선택하여 위쪽 표면을 선택합니다. 이 작업은 **List.GetItemAtIndex** 노드를 사용하여 수행합니다.
 > 2. **Geometry.ImportFromSAT** 미리보기에서 형상 미리보기를 끕니다.
 
 다음 단계에서는 표면을 점 그리드로 분할합니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists basic 03.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsbasic03.jpg)
 
 > 1\. **Code Block**을 사용하여 다음 두 코드 줄을 삽입합니다. `0..1..#10;` `0..1..#5;`
 >
-> 2\. **Surface.PointAtParameter**에서 두 Code Block 값을 u 및 _v_ 에 연결합니다. 이 노드의 _레이싱_ 을 _"외적"_ 으로 변경합니다.
+> 2\. **Surface.PointAtParameter**에서 두 Code Block 값을 u 및 _v_에 연결합니다. 이 노드의 _레이싱_을 _"외적"_으로 변경합니다.
 >
 > 3\. 출력에는 데이터 구조가 표시되며 Dynamo 미리보기에서도 이 구조를 볼 수 있습니다.
 
 다음으로, 마지막 단계의 점을 사용하여 표면을 따라 10개의 곡선을 생성했습니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists basic 04.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsbasic04.jpg)
 
 > 1. 데이터 구조가 구성되는 방식을 확인하기 위해 **NurbsCurve.ByPoints**를 **Surface.PointAtParameter**의 출력에 연결합니다.
 > 2. 더 명확한 결과를 얻기 위해 지금은 **List.GetItemAtIndex** 노드의 미리보기를 끌 수 있습니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists basic 05.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsbasic05.jpg)
 
 > 1. 기본 **List.Transpose**를 사용하면 리스트의 리스트를 구성하는 열과 행이 반전됩니다.
 > 2. **List.Transpose**의 출력을 **NurbsCurve.ByPoints**에 연결하면 이제 5개의 곡선이 표면을 가로질러 가로로 표시됩니다.
@@ -65,31 +65,31 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 좀 더 복잡한 작업을 수행해 보겠습니다. 이전 연습에서 작성한 곡선에 대해 작업을 수행하려고 한다고 가정해 보겠습니다. 이러한 곡선을 다른 표면과 연관 짓고 그 사이에서 로프트를 수행하고자 할 수도 있습니다. 이렇게 하려면 데이터 구조에 더 많은 신경을 써야 하지만 기본 논리는 동일합니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 01.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance01.jpg)
 
 > 1. 이전 연습의 단계로 시작하고 **List.GetItemAtIndex** 노드를 사용하여 가져온 형상의 상단 표면을 구분합니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 02.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance02.jpg)
 
-> 1. **Surface.Offset**을 사용하여 표면을 _10_ 씩 간격을 띄웁니다.
+> 1. **Surface.Offset**을 사용하여 표면을 _10_씩 간격을 띄웁니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance03.jpg)
 
-> 1. 이전 연습과 같은 방법으로 다음과 같은 코드 두 줄을 사용하여 _Code Block_ 을 정의합니다. `0..1..#10;` `0..1..#5;`
-> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter** 노드에 연결하고 각 _레이싱_ 을 _"외적"_ 으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
+> 1. 이전 연습과 같은 방법으로 다음과 같은 코드 두 줄을 사용하여 _code block_을 정의합니다. `0..1..#10;` `0..1..#5;`
+> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter** 노드에 연결하고 각 _레이싱_을 _"외적"_으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance04.jpg)
 
 > 1. 이러한 표면의 미리보기를 끕니다.
 > 2. 이전 연습에서와 같이 출력을 두 개의 **NurbsCurve.ByPoints** 노드에 연결합니다. 결과에는 두 표면에 해당하는 곡선이 표시됩니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 05.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance05.jpg)
 
 > 1. **List.Create**를 사용하면 두 곡선 세트를 한 리스트의 리스트로 결합할 수 있습니다.
 > 2. 출력에서 각 NURBS 곡선 연결 세트를 나타내는 10개 항목을 각각 포함하는 리스트가 2개 생성됩니다.
 > 3. **Surface.ByLoft**를 수행하면 이 데이터 구조를 시각적으로 이해할 수 있습니다. 이 노드에서는 각 하위 리스트의 모든 곡선을 로프트합니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 06.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance06.jpg)
 
 > 1. 이전 단계에서 사용한 **Surface.ByLoft** 노드의 미리보기를 끕니다.
 > 2. **List.Transpose**를 사용하여 모든 열과 행을 반전합니다. 이 노드는 10개의 곡선으로 이루어진 2개의 리스트를 2개의 곡선으로 이루어진 10개의 리스트로 전송합니다. 이제 각 NURBS 곡선이 다른 표면의 이웃 곡선과 연관됩니다.
@@ -97,14 +97,14 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 다음으로, 이 결과를 얻기 위한 대체 프로세스를 살펴보겠습니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance07.jpg)
 
-> 1. 시작하기 전에 혼동을 피하기 위해 이전 단계의 **Surface.ByLoft** 미리보기를 끕니다.
-> 2. **List.Transpose** 대신 **List.Combine**을 사용할 수 있습니다. 이는 각 하위 리스트에서 _"연결자"_ 로 작동합니다.
-> 3. 이 경우에는 **List.Create**를 _"연결자"_ 로 사용하여 하위 리스트에서 각 항목의 리스트를 작성합니다.
+> 1. 혼동을 피하기 위해, 시작하기 전에 이전 단계의 **Surface.ByLoft** 미리보기를 끕니다.
+> 2. **List.Transpose** 대신 **List.Combine**을 사용할 수 있습니다. 이는 각 하위 리스트에서 _"연결자"_로 작동합니다.
+> 3. 이 경우에는 **List.Create**를 _"연결자"_로 사용하여 하위 리스트에서 각 항목의 리스트를 작성합니다.
 > 4. **Surface.ByLoft** 노드를 사용하여 이전 단계와 동일한 표면을 표시합니다. 이 경우 행과 열을 더 쉽게 바꿀 수 있지만 데이터 구조가 훨씬 복잡해지면 **List.Combine**을 사용하는 것이 더 안정적입니다.
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance08.jpg)
 
 > 1. 몇 단계 이전으로 되돌아가서 리브 구조의 곡선 방향을 전환하려면 **NurbsCurve.ByPoints**에 연결하기 전에 **List.Transpose**를 사용할 수 있습니다. 그러면 열과 행이 반전되어 5개의 수평 리브가 생성됩니다.
 
@@ -114,75 +114,75 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 이전 연습에서 가져온 파일로 시작합니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 01.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist01.jpg)
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 02.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist02.jpg)
 
-> 1. 이전 연습에서와 같이 **Surface.Offset** 노드를 사용하여 _10_ 만큼 간격을 띄웁니다.
-> 2. 출력에서 오프셋 노드를 사용해서 두 개의 표면을 생성했습니다.
+> 1. 이전 연습에서와 같이 **Surface.Offset** 노드를 사용하여 _10_만큼 간격을 띄웁니다.
+> 2. 출력에서 오프셋 노드를 사용하여 두 개의 표면을 생성했습니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist03.jpg)
 
 > 1. 이전 연습과 같은 방법으로 다음과 같은 코드 두 줄을 사용하여 **Code Block**을 정의합니다. `0..1..#20;` `0..1..#20;`
-> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter** 노드에 연결하고 각 레이싱을 _"외적"_ 으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
+> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter** 노드에 연결하고 각 레이싱을 _"외적"_으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist04.jpg)
 
 > 1. 이전 연습에서와 같이 출력을 두 개의 **NurbsCurve.ByPoints** 노드에 연결합니다.
 > 2. **NurbsCurve.ByPoints**의 출력을 보면 이전 연습보다 더 복잡한 두 리스트의 리스트가 생성된 것을 알 수 있습니다. 데이터는 기본 표면을 기준으로 분류되므로 데이터 구조에 다른 계층을 추가했습니다.
 > 3. 또한 **Surface.PointAtParameter** 노드가 좀 더 복잡해졌습니다. 이 경우에는 리스트의 리스트의 리스트를 얻게 됩니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 05.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist05.jpg)
 
 > 1. 계속 진행하기 전에 기존 표면의 미리보기를 끕니다.
 > 2. **List.Create** 노드를 사용하여 NURBS 곡선을 하나의 데이터 구조로 병합함으로써 리스트의 리스트의 리스트를 작성합니다.
 > 3. **Surface.ByLoft** 노드를 연결하면 각각 원래 데이터 구조에서 작성된 대로 자체 리스트에 남기 때문에 원래 표면의 버전을 얻게 됩니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 06.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist06.jpg)
 
 > 1. 이전 연습에서는 **List.Transpose**를 사용하여 리브 구조를 작성할 수 있었지만, 여기서는 이 기능이 작동하지 않습니다. 바꾸기는 2차원 리스트에서 사용해야 하는데, 현재 리스트는 3차원 리스트이므로 "열 및 행 반전" 작업이 쉽게 작동하지 않습니다. 리스트는 객체이므로 **List.Transpose**를 사용하면 하위 리스트가 있는 리스트가 반전되지만, 계층에서 한 리스트 아래에 있는 NURBS 곡선의 행과 열이 반전되지는 않습니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist07.jpg)
 
 > 1. 여기서는 **List.Combine**이 더 적합합니다. 보다 복잡한 데이터 구조로 이동하는 경우에는 **List.Map** 및 **List.Combine** 노드를 사용할 수 있습니다.
-> 2. **List.Create**를 _"연결자"_ 로 사용하면 더 잘 작동하는 데이터 구조가 작성됩니다.
+> 2. **List.Create**를 _"연결자"_로 사용하면 더 잘 작동하는 데이터 구조가 작성됩니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist08.jpg)
 
 > 1. 데이터 구조는 여전히 계층 구조 중 한 단계 아래에서 행과 열이 바뀌어야 합니다. 이렇게 하려면 **List.Map**을 사용합니다. 이 방법은 입력 리스트가 두 개 이상이 아닌 1개가 있는 경우를 제외하고, **List.Combine**과 유사하게 작동합니다.
 > 2. **List.Map**에 적용할 함수는 **List.Transpose**로, 이를 사용하면 기본 리스트 내의 하위 리스트에 포함된 열과 행이 반전됩니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 09.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist09.jpg)
 
-> 1. 마지막으로 적절한 데이터 계층을 사용해서 NURBS 곡선을 로프트하여 리브 구조를 얻을 수 있습니다.
+> 1. 마지막으로 적절한 데이터 계층을 사용해 NURBS 곡선을 로프트하여 리브 구조를 얻을 수 있습니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 10.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist10.jpg)
 
 > 1. 다음과 같이 입력 설정이 지정된 **Surface.Thicken** 노드를 사용하여 형상에 깊이를 추가해 보겠습니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 11.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist11.jpg)
 
 > 1. 이 두 구조를 지지하는 표면을 추가하는 것이 좋으므로, 다른 **Surface.ByLoft** 노드를 추가하고 이전 단계의 **NurbsCurve.ByPoints**에 대한 첫 번째 출력을 입력으로 사용합니다.
 > 2. 미리보기가 복잡해지므로 각 노드를 마우스 오른쪽 버튼으로 클릭하고 '미리보기'를 선택취소하여 이러한 노드의 미리보기를 끄면 더 나은 결과를 확인할 수 있습니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 12.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist12.jpg)
 
 > 1. 선택한 이러한 표면을 두껍게 하면 연결이 완료됩니다.
 
 가장 편안한 흔들의자는 아니지만 많은 데이터가 사용되었습니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 13.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist13.jpg)
 
 마지막 단계로 줄무늬 멤버의 방향을 반대로 바꿉니다. 이전 연습에서 행과 열을 바꾸는 작업을 사용했으므로 여기에도 비슷한 작업을 수행합니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 14.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
 > 1. 계층 구조에 계층이 1개 더 있으므로 **List.Tranpose** 함수와 함께 **List.Map**을 사용하여 NURBS 곡선의 방향을 변경해야 합니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 15.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 
 > 1. 디딤판 수를 늘리려는 경우 **Code Block**을 `0..1..#20;` `0..1..#30;`으로 변경할 수 있습니다.
 
 흔들의자의 첫 번째 버전은 날렵한 모습이었으므로, 두 번째 모델은 오프로드에서 휴식을 취하기 적절한 스포츠 유틸리티 버전으로 만들었습니다.
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 16.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist16.jpg)

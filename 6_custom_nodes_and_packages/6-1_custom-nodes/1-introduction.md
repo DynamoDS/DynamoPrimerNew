@@ -10,7 +10,7 @@
 
 사용자 노드의 가장 좋은 기능은 작업 공유 기능입니다. "파워 유저"가 복잡한 Dynamo 그래프를 만들고 Dynamo를 처음 접하는 설계자에게 전달하는 경우 그래프를 설계 상호작용을 위한 필수 요소로 압축할 수 있습니다. 사용자 노드를 열어 내부 그래프를 편집할 수 있지만 "컨테이너"는 단순하게 유지할 수 있습니다. 이 프로세스에서 사용자 노드를 사용하면 Dynamo 사용자가 깔끔하고 직관적인 그래프를 설계할 수 있습니다.
 
-![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
+![](../images/6-1/1/customnodeintro-worksharing01.jpg)
 
 ### 노드를 작성하는 여러 가지 방법
 
@@ -22,11 +22,11 @@ Dynamo에서 사용자 노드를 작성하는 방법에는 여러 가지가 있�
 
 사용자 노드를 처음부터 새로 작성하려면 Dynamo를 시작하고 사용자 노드를 선택하거나 캔버스에서 Ctrl+Shift+N을 누릅니다.
 
-![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment01.jpg)
 
 사용자 노드 특성 대화상자에서 이름, 설명 및 카테고리를 지정합니다.
 
-![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment02.jpg)
 
 > 1. **이름:** Percentage
 > 2. **설명**: 값 하나의 다른 값 대비 백분율을 계산합니다.
@@ -34,16 +34,16 @@ Dynamo에서 사용자 노드를 작성하는 방법에는 여러 가지가 있�
 
 지정하면 노란색 배경의 캔버스가 열립니다. 이는 사용자 노드 내에서 작업하고 있음을 나타냅니다. 이 캔버스에서는 모든 코어 Dynamo 노드와 함께 사용자 노드에서 들어오고 나가는 데이터에 레이블을 지정하는 입력 및 출력 노드에 액세스할 수 있습니다. 입력>기본에서 찾을 수 있습니다.
 
-![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment03.jpg)
 
-![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
 
-> 1. **입력:** 입력 노드는 사용자 노드에 입력 포트를 작성합니다. 입력 노드의 구문은 _input\_name : datatype = default\_value(선택 사항)_ 입니다.
+> 1. ** 입력:** 입력 노드는 사용자 노드에 입력 포트를 작성합니다. 입력 노드의 구문은 _input_name : datatype = default_value(선택 사항)_입니다.
 > 2. **출력:** 입력과 유사하지만, 이러한 노드는 사용자 노드에서 출력 포트를 만들고 이름을 지정합니다. 입력 및 출력 유형에 힌트를 제공하는 **사용자 주석**을 입력 및 출력 포트에 추가해 보십시오. 이는 [사용자 노드 작성 섹션](2-creating.md)에 자세히 설명되어 있습니다.
 
 이 사용자 노드를 .dyf(표준 .dyn와는 다름) 파일로 저장할 수 있으며, 이 노드는 사용자 세션 및 후속 세션에 자동으로 추가됩니다. 라이브러리의 사용자 노드는 애드온 섹션에서 찾을 수 있습니다.
 
-![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment05.jpg)
 
 ### 다음에 알아볼 내용
 

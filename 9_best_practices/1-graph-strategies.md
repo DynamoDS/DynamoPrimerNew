@@ -23,14 +23,14 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 2. 입력 그룹(주황색)
 > 3. 스크립트 그룹(초록색)
 >
-> 그룹을 사용하는 방법에 대한 자세한 내용은 [프로그램 관리](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)를 참조하십시오.
+> 그룹을 사용하는 방법은 [프로그램 관리하기](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)를 참조하십시오.
 
 ### **Code Block을 사용하여 효율적으로 개발하기**
 
 * 경우에 따라 Code Block을 사용하여 **검색보다 빠르게 숫자 또는 노드 메서드를 입력**할 수 있습니다(Point.ByCoordinates, Number, String, Formula).
 * Code Block은 **DesignScript에서 사용자 함수를 정의하여 그래프의 노드 수를 줄이려는 경우**에 유용합니다.
 
-![](<images/1/graphstrategy3 (1).png>)
+![](images/1/graphstrategy3(1).png)
 
 > 1과 2는 모두 동일한 기능을 수행합니다. 각 노드를 개별적으로 검색하고 추가하는 것보다 코드 몇 줄을 작성하는 것이 훨씬 더 빨랐습니다. code block은 훨씬 간결하기도 합니다.
 >
@@ -42,16 +42,16 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 ### **Node to Code를 사용하여 압축하기**
 
 * 간단한 노드 모음을 가져와 단일 Code Block에 해당 DesignScript를 쓰는 **Node to Code를 사용하여 그래프의 복잡성을 줄일** 수 있습니다.
-* Node to Code를\*\* 사용하면 프로그램의 명확성을 유지하면서 코드를 압축할 수 있습니다.\*\*
+* Node to Code를** 사용하면 프로그램의 명확성을 유지하면서 코드를 압축할 수 있습니다.**
 * Node to Code를 사용할 경우의 **장점**은 다음과 같습니다.
-   * 계속 편집 가능한 하나의 구성요소로 쉽게 코드 압축
-   * 그래프의 대부분을 단순화할 수 있음
-   * '미니 프로그램'을 자주 편집하지 않는 경우에 유용
-   * 함수와 같은 기타 code block 기능을 통합하는 데 유용
+  * 계속 편집 가능한 하나의 구성요소로 쉽게 코드 압축
+  * 그래프의 대부분을 단순화할 수 있음
+  * '미니 프로그램'을 자주 편집하지 않는 경우에 유용
+  * 함수와 같은 기타 code block 기능을 통합하는 데 유용
 * Node to Code를 사용할 경우의 **단점**은 다음과 같습니다.
-   * 일반 이름을 지정할 경우 읽기가 어려워짐
-   * 다른 사용자가 이해하기가 더 어려움
-   * 시각적 프로그래밍 버전으로 쉽게 돌아갈 수 있는 방법 없음
+  * 일반 이름을 지정할 경우 읽기가 어려워짐
+  * 다른 사용자가 이해하기가 더 어려움
+  * 시각적 프로그래밍 버전으로 쉽게 돌아갈 수 있는 방법 없음
 
 ![](images/1/graphstrategy3\_1.png)
 
@@ -62,17 +62,17 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 
 ### **List@Level을 통해 데이터에 유연하게 액세스하기**
 
-* List@Level을 사용하면 상당한 크기의 캔버스 공간을 차지할 수 있는 List.Map 및 List.Combine 노드**를 대체하여 그래프의 복잡성을 줄일** 수 있습니다.
-* List@Level에서는 노드의 입력 포트에서 바로 리스트의 임의 레벨에 있는 데이터에 액세스할 수 있게 해주어\*\* List.Map/List.Combine보다 더 빨리 노드 논리를 구성하는 방법\*\*을 제공합니다.
+* List@Level을 사용하면 상당한 크기의 캔버스 공간을 차지할 수 있는 **List.Map 및 List.Combine 노드를 대체하여 그래프의 복잡성을 줄일** 수 있습니다.
+* List@Level에서는 노드의 입력 포트에서 바로 리스트의 임의 레벨에 있는 데이터에 액세스할 수 있게 해주어** List.Map/List.Combine보다 더 빨리 노드 논리를 구성하는 방법**을 제공합니다.
 
-![](<images/1/graphstrategy4 (1) (1).png>)
+![](images/1/graphstrategy4(1)(1).png)
 
 > 우리는 CountTrue의 "list" 입력에 대해 List@Level을 활성화하여 BoundingBox.Contains에서 반환하는 True 값이 어떤 리스트에 몇 개인지 확인할 수 있습니다. 사용자는 List@Level을 통해 입력으로 데이터를 가져올 레벨을 결정할 수 있습니다. List@Level을 사용하면 유연하고 효율적이므로 List.Map 및 List.Combine과 관련된 다른 방법에 비해 적극 권장됩니다.
 >
 > 1. 리스트 레벨 2에서 true 값 계산
 > 2. 리스트 레벨 3에서 true 값 계산
 >
-> List@Level를 사용하는 방법에 대한 자세한 내용은 [리스트의 리스트](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level)를 참조하십시오.
+> List@Level을 사용하는 방법은 [리스트의 리스트](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level)를 참조하십시오.
 
 ## 가독성 유지하기
 
@@ -84,7 +84,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 * 다른 사용자가 사용자의 그래프를 사용해 작업하려는 경우 **보내기 전에 노드-와이어 배치가 쉽게 유동되는지 확인**해야 합니다.
 * 정렬에 활용하려면 **"노드 배치 정리" 기능을 사용하여 그래프를 자동으로 정렬**합니다. 그러나 이렇게 하는 것이 직접 정렬하는 것보다 정확하지는 않습니다.
 
-![](<images/1/graphstrategy5 (2) (1).png>)
+![](images/1/graphstrategy5(2)(1).png)
 
 > 1. 구성되지 않은 그래프
 > 2. 정렬된 그래프
@@ -104,7 +104,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 >
 > 노드의 이름을 바꾸려면 해당 이름을 마우스 오른쪽 버튼으로 클릭하고 "노드 이름 바꾸기..."를 선택합니다.
 
-### **메모를 사용하여 설명하기**
+### **노드로 설명하기**
 
 * **그래프의 일부에 노드로 표현할 수 없는 일반 언어 설명이 필요**하다면 메모를 추가해야 합니다.
 * **노드 또는 그룹 모음이 너무 크거나 복잡해서 즉시 쉽게 이해할 수 없는 경우** 메모를 추가해야 합니다.
@@ -114,15 +114,15 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 1. 원시 변환 거리를 반환하는 프로그램 부분을 설명하는 메모
 > 2. 해당 값을 사인파에 매핑하는 코드를 설명하는 메모
 >
-> 메모를 추가하는 방법에 대한 자세한 내용은 [프로그램 관리](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)를 참조하십시오.
+> 메모를 추가하는 방법은 [프로그램 관리하기](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)를 참조하십시오.
 
 ## 지속적으로 조정하기
 
-시각적 스크립트를 작성하는 동안 반환되는 결과가 예상되는 결과와 같은지 확인하는 것이 중요합니다. 모든 오류나 문제로 인해 즉시 프로그램이 실패하는 것은 아닙니다. 특히, 먼 다운스트림에 영향을 줄 수 있는 null 또는 0 값이 그렇습니다. 이 전략은 [스크립팅 전략](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html)의 텍스트 스크립팅 컨텍스트에서도 설명되어 있습니다. 다음 방법은 예상한 결과를 얻을 수 있도록 도와줍니다.
+시각적 스크립트를 작성하는 동안 반환되는 결과가 예상되는 결과와 같은지 확인하는 것이 중요합니다. 모든 오류나 문제가 프로그램의 즉각적인 실패를 초래하는 것은 아닙니다. 특히, 먼 다운스트림에 영향을 줄 수 있는 null 또는 0 값이 그렇습니다. 이 전략은 [스크립팅 전략](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html)의 텍스트 스크립팅 컨텍스트에도 설명되어 있습니다. 다음 방법은 예상한 결과를 얻을 수 있도록 도와줍니다.
 
 ### **Watch 및 미리보기 풍선으로 데이터 모니터링하기**
 
-* 프로그램을 구축할 때 Watch 또는 미리보기 풍선을 사용하여\*\* 키 출력에서 예상한 결과를 반환하는지 확인합니다.\*\*
+* 프로그램을 구축할 때 Watch 또는 미리보기 풍선을 사용하여** 키 출력에서 예상한 결과를 반환하는지 확인합니다.**
 
 ![](images/1/graphstrategy8.png)
 
@@ -131,7 +131,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 1. 원시 변환 거리
 > 2. 사인 방정식을 통해 전달되는 값
 >
-> Watch를 사용하는 방법은 [라이브러리](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html)를 참조하십시오.
+> Watch를 사용하는 방법에 대해서는 [라이브러리](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html)를 참조하십시오.
 
 ## 재사용 가능성 확인하기
 
@@ -147,7 +147,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 * **그래프에 포함할 특정 옵션 또는 조건**이 있는 경우 사전 설정을 사용하여 신속하게 액세스해야 합니다.
 * 사전 설정을 사용하면 실행 시간이 긴 그래프에서 **특정 슬라이더 값을 캐싱하여 복잡성을 줄일** 수도 있습니다.
 
-> 사전 설정을 사용하는 방법은 [사전 설정을 사용하여 데이터 관리](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html)를 참조하십시오.
+> 사전 설정을 사용하는 방법에 대해서는 [사전 설정을 사용하여 데이터 관리하기](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html)를 참조하십시오.
 
 ### **사용자 노드를 사용하여 프로그램 포함하기**
 
@@ -162,7 +162,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 1. 기존 어트랙터 프로그램
 > 2. 이 프로그램(PointGrid)을 수집하는 사용자 노드
 >
-> 사용자 노드를 사용하는 방법은 [사용자 노드 소개](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html)를 참조하십시오.
+> 사용자 노드를 사용하는 방법에 대해서는 [사용자 노드 소개](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html)를 참조하십시오.
 
 ### **템플릿 작성하기**
 
@@ -170,7 +170,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 * 템플릿을 작성할 때 **그룹 색상 및 글꼴 크기**를 표준화하여 워크플로우 또는 데이터 작업의 유형을 분류할 수 있습니다.
 * 템플릿을 작성할 때 그래프에서 **프런트엔드 워크플로우와 백엔드 워크플로우 간의 차이를 레이블, 색상 또는 스타일로 지정하는 방법을 표준화**할 수도 있습니다.
 
-![](<images/1/graphstrategy10 (2).png>)
+![](images/1/graphstrategy10(2).png)
 
 > 1. 프로그램의 UI 또는 프런트엔드에는 프로젝트 이름, 입력 슬라이더 및 형상 가져오기 등이 있습니다.
 > 2. 프로그램의 백엔드
@@ -217,7 +217,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 
 그래픽 개선 사항을 한층 더 추가하여 프로그램에 더 쉽게 액세스할 수 있도록 합니다. 메모를 추가하여 프로그램의 특정 영역이 작동하는 방식을 설명하고, 입력에 사용자 이름을 지정하고, 서로 다른 유형의 그룹에 색상을 지정합니다.
 
-![](<images/1/graphstrategy15 (1).png>)
+![](images/1/graphstrategy15(1).png)
 
 > 이러한 그래픽 개선 사항을 통해 사용자는 프로그램에서 수행하는 작업에 대해 자세히 알 수 있습니다. 서로 다른 그룹 색상을 사용하면 입력을 함수와 구분할 수 있습니다.
 >

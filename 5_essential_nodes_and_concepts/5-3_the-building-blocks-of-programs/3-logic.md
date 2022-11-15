@@ -8,23 +8,23 @@
 
 ### 조건문
 
-"If" 문은 프로그래밍의 기본 개념입니다. "_이것_ 이 true이면 _저것_ 이 발생하고, 그렇지 않으면 _다른 작업_ 이 발생합니다. 문의 결과 동작은 부울 값에 의해 구동됩니다. 다음과 같은 여러 가지 방법으로 Dynamo에서 "If" 문을 정의할 수 있습니다.
+"If" 문은 프로그래밍의 기본 개념입니다. "_이것_이 true이면 _저것_이 발생하고, 그렇지 않으면 _다른 작업_이 발생합니다. 문의 결과 동작은 부울 값에 의해 구동됩니다. 다음과 같은 여러 가지 방법으로 Dynamo에서 "If" 문을 정의할 수 있습니다.
 
-| 아이콘 | 이름(구문) | 입력 | 출력 |
+| 아이콘                                            | 이름(구문)             | 입력            | 출력 |
 | ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](<../images/5-3/3/If.jpg>) | If (**If**) | test, true, false | 결과 |
-| ![](../images/5-3/3/Formula.jpg) | Formula (**IF(x,y,z)**) | x, y, z | 결과 |
-| ![](<../images/5-3/3/Code Block.jpg>) | Code Block(**(x?y:z);**) | x? y, z | 결과 |
+| ![](../images/5-3/3/If.jpg)         | If(**If**)               | test, true, false | 결과  |
+| ![](../images/5-3/3/Formula.jpg)          | Formula(**IF(x,y,z)**)   | x, y, z           | 결과  |
+| ![](../images/5-3/3/CodeBlock.jpg) | Code Block(**(x?y:z);**) | x? y, z           | 결과  |
 
 조건문 "If"를 사용하여 이러한 세 가지 노드 각각의 동작에 대한 간단한 예를 살펴보겠습니다.
 
-이 이미지에서 _boolean_ 은 _true_ 로 설정되어 있습니다. 따라서 결과는 _"this is the result if true"_ 문자열이 됩니다. 여기서 _If_ 문을 작성하는 3개의 노드는 동일하게 작동합니다.
+이 이미지에서 _boolean_은 _true_로 설정되어 있습니다. 따라서 결과는 _"this is the result if true"_ 문자열이 됩니다. 여기서 _If_ 문을 작성하는 3개의 노드는 동일하게 작동합니다.
 
-![](<../images/5-3/3/logic - conditional statements 01 false.jpg>)
+![](../images/5-3/3/logic-conditionalstatements01false.jpg)
 
-다시 한번 말씀드리지만 노드는 동일하게 작동합니다. _boolean_ 이 _false_ 로 변경되면 결과는 원래 _If_ 문에 정의된 대로 숫자 _Pi_ 가 됩니다.
+다시 한번 말씀드리지만 노드는 동일하게 작동합니다. _boolean_이 _false_로 변경되면 결과는 원래 _If_ 문에 정의된 대로 숫자 _Pi_가 됩니다.
 
-![x](<../images/5-3/3/logic - conditional statements 02 true.jpg>)
+![](../images/5-3/3/logic-conditionalstatements02true.jpg)
 
 ## 연습: 논리 및 형상
 
@@ -38,23 +38,23 @@
 
 1. 논리를 사용하여 숫자 리스트를 짝수 리스트와 홀수 리스트로 구분해보겠습니다.
 
-![](<../images/5-3/3/logic - exercise part I-01.jpg>)
+![](../images/5-3/3/logic-exercisepartI-01.jpg)
 
 > a. **Number Range -** 캔버스에 숫자 범위를 추가합니다.
 >
-> b. **Numbers -** 캔버스에 3개의 숫자 노드를 추가합니다. 각 숫자 노드의 값은 _start_ 의 경우 _0.0_, _end_ 의 경우 _10.0_, _step_ 의 경우 _1.0_ 이어야 합니다.
+> b. **Numbers -** 캔버스에 3개의 숫자 노드를 추가합니다. 각 숫자 노드의 값은 _start_의 경우 _0.0_, _end_의 경우 _10.0_, _step_의 경우 _1.0_이어야 합니다.
 >
-> c. **Output** - 출력은 0~10 범위의 11개 숫자로 이루어진 리스트입니다.
+> c. **Output** \- 출력은 0-10 범위의 11개 숫자로 이루어진 리스트입니다.
 >
-> d. **Modulo(%)-** **Number Range**를 _x_ 로, _2.0_ 을 _y_ 로 지정합니다. 그러면 리스트에 포함된 각 숫자를 2로 나눈 나머지가 계산됩니다. 이 리스트의 출력에서는 0과 1이 번갈아 나오는 값 리스트가 제공됩니다.
+> d. **Modulo(%)-** **Number Range**를 _x_로, _2.0_을 _y_로 지정합니다. 그러면 리스트에 포함된 각 숫자를 2로 나눈 나머지가 계산됩니다. 이 리스트의 출력에서는 0과 1이 번갈아 나오는 값 리스트가 제공됩니다.
 >
-> e. **Equality Test(==) -** 캔버스에 동일성 테스트를 추가합니다. _modulo_ 출력을 _x_ 입력에, _0.0_ 을 _y_ 입력에 연결합니다.
+> e. **Equality Test(==) -** 캔버스에 동일성 테스트를 추가합니다. _modulo_ 출력을 _x_ 입력에, _0.0_을 _y_ 입력에 연결합니다.
 >
 > f. **Watch -** 동일성 테스트의 출력은 true와 false가 번갈아 나오는 값의 리스트입니다. 이러한 값은 리스트의 항목을 구분하는 데 사용됩니다. _0_(또는 _true_)은 짝수를 나타내고, _1_(또는 _false_)은 홀수를 나타냅니다.
 >
-> g. **List.FilterByBoolMask -** 이 노드에서는 입력 부울을 기준으로 2개의 다른 리스트로 값을 필터링합니다. 원래 _number range_ 를 _list_ 입력에 연결하고 _equality test_ 출력을 _mask_ 입력에 연결합니다. _in_ 출력은 true 값을 나타내고 _out_ 출력은 false 값을 나타냅니다.
+> g. **List.FilterByBoolMask -** 이 노드에서는 입력 부울을 기준으로 2개의 다른 리스트로 값을 필터링합니다. 원래 _number range_를 _list_ 입력에 연결하고 _equality test_ 출력을 _mask_ 입력에 연결합니다. _in_ 출력은 true 값을 나타내고 _out_ 출력은 false 값을 나타냅니다.
 >
-> h. **Watch** - 결과적으로 이제 짝수 리스트와 홀수 리스트가 표시됩니다. 논리 연산자를 사용하여 리스트를 패턴으로 구분했습니다.
+> h. **Watch** \- 결과적으로 이제 짝수 리스트와 홀수 리스트가 표시됩니다. 논리 연산자를 사용하여 리스트를 패턴으로 구분했습니다.
 
 ### 파트 2: 논리에서 형상으로
 
@@ -62,51 +62,51 @@
 
 2\. 동일한 노드를 사용하여 이전 연습에서 시작합니다. 유일한 예외는 다음과 같습니다(형식 변경 이외).
 
-![](<../images/5-3/3/logic - exercise part II-01.jpg>)
+![](../images/5-3/3/logic-exercisepartII-01.jpg)
 
 > a. 이러한 입력 값과 함께 **Sequence** 노드를 사용합니다.
 >
-> b. **List.FilterByBoolMask**에 대한 list 입력의 연결을 끊었습니다. 지금은 이러한 노드를 그대로 두지만 이는 연습 후반부에서 도움이 될 것입니다.
+> b. **List.FilterByBoolMask**에 대한 리스트 내 입력의 연결을 끊었습니다. 지금은 이러한 노드를 그대로 두지만 이는 연습 후반부에서 도움이 될 것입니다.
 
 3\. 먼저 위의 이미지에 표시된 것처럼 별도의 그래프 그룹을 만들어 보겠습니다. 이 노드 그룹은 선 곡선을 정의하는 파라메트릭 방정식을 나타냅니다. 몇 가지 참고 사항은 다음과 같습니다.
 
-![](<../images/5-3/3/logic - exercise part II-02.jpg>)
+![](../images/5-3/3/logic-exercisepartII-02.jpg)
 
-> a. 첫 번째 **Number Slider**는 파형의 주파수를 나타내며, Min은 1이고, Max는 4이고, step은 0.01입니다.
+> a. 첫 번째 **Number Slider**는 파형의 주파수를 나타내며, Min은 1이고, Max는 4이고, Step은 0.01입니다.
 >
-> a. 두 번째 **Number Slider**는 파형의 진폭을 나타내며, Min은 0이고, Max는 1이고, step은 0.01입니다.
+> b. 두 번째 **Number Slider**는 파형의 진폭을 나타내며, Min은 0이고, Max는 1이고, Step은 0.01입니다.
 >
-> c. **PolyCurve.ByPoints -** 위의 노드 다이어그램이 복사된 경우 결과는 Dynamo 미리보기 뷰포트에서 사인 곡선으로 나타납니다.
+> c. **PolyCurve.ByPoints -** 위의 노드 다이어그램이 복사된 경우 결과는 Dynamo 미리보기 뷰포트에서 사인 곡선이 됩니다.
 
 입력 방법: 보다 정적인 특성에 대해서는 숫자 노드를 사용하고 보다 유동적인 특성에는 숫자 슬라이더를 사용합니다. 이 단계를 시작할 때 정의하는 원래 숫자 범위를 유지하겠습니다. 그러나 여기에서 작성하는 사인 곡선은 유동적이어야 합니다. 이러한 슬라이더를 이동하면서 곡선의 진동수와 진폭이 업데이트되는 것을 볼 수 있습니다.
 
-![](<../images/5-3/3/logic - exercise part II-03.gif>)
+![](../images/5-3/3/logic-exercisepartII-03.gif)
 
 4\. 잠시 정의를 확인하기 위해 다음 작업 상황을 참조할 수 있도록 최종 결과를 살펴보겠습니다. 처음에 따로 생성된 두 단계를 이제 연결합니다. 기본 사인 곡선을 사용하여 지퍼 구성요소의 위치를 움직이고, true/false 논리를 사용하여 작은 상자와 큰 상자를 번갈아 표시합니다.
 
-![](<../images/5-3/3/logic - exercise part II-04.jpg>)
+![](../images/5-3/3/logic-exercisepartII-04.jpg)
 
-> a. **Math.RemapRange** - 02단계에서 작성한 숫자 시퀀스를 사용합니다. 범위를 다시 매핑하여 새로운 일련의 숫자를 작성해 보겠습니다. 01단계의 원래 숫자 범위는 0~100입니다. 이러한 숫자의 범위는 각각 _newMin_ 및 _newMax_ 입력을 기준으로 0에서 1까지입니다.
+> a. **Math.RemapRange** \- 02단계에서 작성한 숫자 시퀀스를 사용하여 범위를 다시 매핑함으로써 새로운 숫자 시리즈를 작성해 보겠습니다. 01단계의 원래 숫자 범위는 0~100입니다. 이러한 숫자의 범위는 각각 _newMin_ 및 _newMax_ 입력을 기준으로 0에서 1까지입니다.
 
 5\. **Curve.PointAtParameter** 노드를 작성한 다음, _param_ 입력으로 04단계의 **Math.RemapRange** 출력을 연결합니다.
 
-![](<../images/5-3/3/logic - exercise part II-05.jpg>)
+![](../images/5-3/3/logic-exercisepartII-05.jpg)
 
-이 단계에서는 곡선을 따라 점을 작성합니다. _param_ 의 입력에서는 이 범위의 값을 찾으므로 숫자를 0에서 1로 다시 매핑했습니다. 값 _0_ 은 시작점을 나타내고 값 _1_ 은 끝점을 나타냅니다. 그 사이의 모든 숫자는 _\[0,1]_ 범위 내에서 계산됩니다.
+이 단계에서는 곡선을 따라 점을 작성합니다. _param_의 입력에서는 이 범위의 값을 찾으므로 숫자를 0에서 1로 다시 매핑했습니다. 값 _0_은 시작점을 나타내고 값 _1_은 끝점을 나타냅니다. 그 사이의 모든 숫자는 _[0,1]_ 범위 내에서 계산됩니다.
 
 6\. **Curve.PointAtParameter**의 출력을 **List.FilterByBoolMask**에 연결하여 홀수 및 짝수 색인 리스트를 구분합니다.
 
-![](<../images/5-3/3/logic - exercise part II-06.jpg>)
+![](../images/5-3/3/logic-exercisepartII-06.jpg)
 
-> a. **List.FilterByBoolMask** - 이전 단계의 **Curve.PointAtParameter**를 _list_ 입력에 연결합니다.
+> a. **List.FilterByBoolMask** \- 이전 단계의 **Curve.PointAtParameter**를 _list_ 입력에 연결합니다.
 >
-> b. **Watch -** _in_ 에 대한 Watch 노드와 _out_ 에 대한 Watch 노드에서는 짝수 색인과 홀수 색인을 나타내는 두 개의 리스트가 있음을 보여 줍니다. 이러한 점은 다음 단계에 나와 있는 곡선에서 동일한 방법으로 정렬됩니다.
+> b. **Watch -** _in_에 대한 감시 노드와 _out_에 대한 감시 노드는 짝수 색인과 홀수 색인을 나타내는 두 개의 리스트가 있음을 보여 줍니다. 이러한 점은 다음 단계에 나와 있는 곡선에서 동일한 방법으로 정렬됩니다.
 
 7\. 다음으로 05단계에서 살펴본 **List.FilterByBoolMask**의 출력 결과를 사용하여 색인에 따른 크기를 가진 형상을 생성합니다.
 
 **Cuboid.ByLengths -** 위의 이미지에 나와 있는 연결을 다시 작성하여 사인 곡선을 따라 지퍼를 가져옵니다. 여기서 직육면체는 상자에 불과하며, 상자 중심의 곡선 점을 기준으로 해당 크기를 정의합니다. 이제 짝수/홀수 분할 논리가 모델에서 명확히 드러나야 합니다.
 
-![](<../images/5-3/3/logic - exercise part II-07.jpg>)
+![](../images/5-3/3/logic-exercisepartII-07.jpg)
 
 > a. 짝수 색인의 직육면체 리스트.
 >

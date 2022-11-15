@@ -6,12 +6,12 @@
 
 연산자는 두 개의 숫자 입력 값과 대수 함수를 사용하는 구성요소의 집합으로, 하나의 출력 값을 생성합니다(추가, 빼기, 곱하기, 나누기 등). 이러한 항목은 연산자>작업에서 찾을 수 있습니다.
 
-| 아이콘 | 이름(구문) | 입력 | 출력 |
+| 아이콘                                                | 이름(구문)     | 입력                     | 출력      |
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-3/2/addition.jpg>) | 더하기(**+**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Subtraction.jpg>) | 빼기(**-**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Multiplication.jpg>) | 곱하기(**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](<../images/5-3/2/Division.jpg>) | 나누기(**/**) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](../images/5-3/2/addition.jpg)       | 더하기(**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Subtraction.jpg)    | 빼기(**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Multiplication.jpg) | 곱하기(*****) | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Division.jpg)       | 나누기(**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## 연습: 황금 나선 수식
 
@@ -21,85 +21,81 @@
 
 {% file src="../datasets/5-3/2/Building Blocks of Programs - Math.dyn" %}
 
-### 파트 I: 파라메트릭 수식
+### I부: 파라메트릭 수식
 
 **수식**을 통해 연산자와 변수를 결합하여 보다 복잡한 관계를 형성합니다. 슬라이더를 사용하여 입력 매개변수로 제어할 수 있는 수식을 만듭니다.
 
-1. 파라메트릭 방정식에서 't'를 나타내는 Number 시퀀스를 작성합니다. 따라서 나선을 정의할 수 있을 만큼 충분히 큰 리스트를 사용합니다.
+1\. 파라메트릭 방정식에서 't'를 나타내는 Number 시퀀스를 작성합니다. 따라서 나선을 정의할 수 있을 만큼 충분히 큰 리스트를 사용하려고 합니다.
 
-**Number Sequence:** _start, amount_ 및 _step_ 의 세 가지 입력에 따라 숫자 시퀀스를 정의합니다.
+**Number Sequence:** _start, amount_ 및 _step_의 세 가지 입력에 따라 숫자 시퀀스를 정의합니다.
 
-![](<../images/5-3/2/math - part I-01.jpg>)
+![](../images/5-3/2/math-partI-01.jpg)
 
 2\. 위의 단계에서는 파라메트릭 도메인을 정의하는 숫자 리스트를 작성했습니다. 다음으로, 황금 나선 방정식을 나타내는 노드 그룹을 작성합니다.
 
 황금 나선은 다음 방정식으로 정의됩니다.
 
-$$
-x = r cos θ = a cos θ e^{bθ}
-$$
+$$ x = r cos θ = a cos θ e^{bθ} $$
 
-$$
-y = r sin θ = a sin θe^{bθ}
-$$
+$$ y = r sin θ = a sin θe^{bθ} $$
 
 아래 이미지는 시각적 프로그래밍 양식의 황금 나선을 나타냅니다. 노드 그룹을 단계별로 진행하면서 시각적 프로그램과 작성된 방정식 간의 평행에 주의를 기울이십시오.
 
-![](<../images/5-3/2/math - part I-02.jpg>)
+![](../images/5-3/2/math-partI-02.jpg)
 
-> a. **Number Slider:** 캔버스에 2개의 숫자 슬라이더를 추가합니다. 이러한 슬라이더는 파라메트릭 방정식의 _a_ 및 _b_ 변수를 나타냅니다. 이러한 슬라이더는 유동적인 상수 또는 원하는 결과를 얻기 위해 조정할 수 있는 매개변수를 나타냅니다.
+> a. **Number Slider**: 캔버스에 2개의 숫자 슬라이더를 추가합니다. 이러한 슬라이더는 파라메트릭 방정식의 _a_ 및 _b_ 변수를 나타냅니다. 이러한 슬라이더는 유동적인 상수 또는 원하는 결과를 얻기 위해 조정할 수 있는 매개변수를 나타냅니다.
 >
-> b. **Multiplication(\*)** : 곱하기 노드는 별표로 표시됩니다. 이를 반복적으로 사용하여 곱하기 변수를 연결하겠습니다.
+> b. **Multiplication(*)**: 곱하기 노드는 별표로 표시됩니다. 이를 반복적으로 사용하여 곱하기 변수를 연결하겠습니다.
 >
-> c. **Math.RadiansToDegrees**: 삼각 함수에서 계산하기 위해 '_t_' 값을 각도로 변환해야 합니다. Dynamo에서는 이러한 함수를 계산하기 위해 기본적으로 각도로 설정됩니다.
+> c. **Math.RadiansToDegrees**: 삼각 함수에서 평가하기 위해 '_t_' 값을 각도로 변환해야 합니다. Dynamo에서는 이러한 함수를 계산하기 위해 기본적으로 각도로 설정됩니다.
 >
 > d. **Math.Pow**: '_t_' 및 숫자 '_e_'의 함수로, Fibonacci 시퀀스를 작성합니다.
 >
-> e. **Math.Cos 및 Math.Sin**: 이러한 두 삼각 함수는 각 파라메트릭 점의 x 좌표와 y 좌표를 각각 구분합니다.
+> e. **Math.Cos and Math.Sin**: 이러한 두 삼각 함수는 각 파라메트릭 점의 x 좌표와 y 좌표를 각각 구분합니다.
 >
 > f. **Watch**: 이제 출력이 두 개의 리스트로 표시됩니다. 이러한 출력은 나선을 생성하는 데 사용되는 점의 _x_ 및 _y_ 좌표가 됩니다.
 
-### 파트 2: 수식을 형상으로
+### 2부: 수식에서 형상으로
 
 이제 이전 단계의 대량 노드는 제대로 작동하지만 여기에는 상당히 많은 작업이 필요합니다. 보다 효율적인 워크플로우를 작성하려면 [DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)를 살펴보고 Dynamo 표현식의 문자열을 하나의 노드로 정의하십시오. 이 다음 단계 시리즈에서는 파라메트릭 방정식을 사용하여 Fibonacci 나선을 그리는 방법을 살펴보겠습니다.
 
 **Point.ByCoordinates:** 상단의 곱하기 노드를 '_x_' 입력에 연결하고 하단의 노드를 '_y_' 입력에 연결합니다. 이제 화면에 파라메트릭 나선형 점이 표시됩니다.
 
-![](<../images/5-3/2/math - part II-01.gif>)
+![](../images/5-3/2/math-partII-01.gif)
 
-**Polycurve.ByPoints:** 이전 단계의 **Point.ByCoordinates** 를 _points_ 에 연결합니다. 닫힌 곡선을 만드는 것이 아니므로 입력 없이 _connectLastToFirst_ 를 그대로 두면 됩니다. 그러면 이전 단계에서 정의한 각 점을 통과하는 나선이 작성됩니다.
+**Polycurve.ByPoints:** 이전 단계의 **Point.ByCoordinates**를 _points_에 연결합니다. 닫힌 곡선을 만드는 것이 아니므로 입력 없이 _connectLastToFirst_를 그대로 두면 됩니다. 그러면 이전 단계에서 정의한 각 점을 통과하는 나선이 작성됩니다.
 
-![](<../images/5-3/2/math - part II-02.jpg>)
+![](../images/5-3/2/math-partII-02.jpg)
 
 이제 Fibonacci 나선을 완료했습니다. 여기에서 두 가지 개별 연습을 추가로 진행하여 Nautilus와 Sunflower를 호출해 보겠습니다. 이 둘은 자연 시스템을 추상적으로 나타낸 것이지만, Fibonacci 나선의 두 가지 다른 응용을 잘 보여 줍니다.
 
-### 파트 3: 나선에서 Nautilus로
+### 3부: 나선에서 Nautilus로
 
-**Circle.ByCenterPointRadius:** 여기서는 이전 단계와 동일한 입력으로 원 노드를 사용하겠습니다. 반지름 값의 기본값은 _1.0_ 이므로 원의 출력이 바로 표시됩니다. 따라서 점이 원점에서 얼마나 멀리 떨어져 있는지를 바로 확인할 수 있게 됩니다.
+**Circle.ByCenterPointRadius:** 여기서는 이전 단계와 동일한 입력으로 원 노드를 사용하겠습니다. 반지름 값의 기본값은 _1.0_이므로 원의 출력이 바로 표시됩니다. 따라서 점이 원점에서 얼마나 멀리 떨어져 있는지를 바로 확인할 수 있게 됩니다.
 
-![](<../images/5-3/2/math - part III-01.jpg>)
+![](../images/5-3/2/math-partIII-01.jpg)
 
 **Number Sequence:** '_t_'의 원래 배열입니다. 이를 **Circle.ByCenterPointRadius**의 반지름 값에 연결하면, 원 중심이 원점에서 계속 멀어지지만 원의 반지름은 증가하여 독특한 Fibonacci 원그래프가 작성됩니다.
 
 이 그래프를 3D로 만들면 보너스 점수를 드리겠습니다.
 
-![](<../images/5-3/2/math - part III-02.gif>)
+![](../images/5-3/2/math-partIII-02.gif)
 
-### IV부: Nautilus에서 Phyllotaxis로
+### 4부: Nautilus에서 Phyllotaxis로
 
 원형 Nautilus 쉘의 패턴이 만들어졌으므로, 이제 파라메트릭 그리드를 살펴보겠습니다. Fibonacci 나선에서 기본 회전을 사용하여 Fibonacci 그리드를 작성하면 [해바라기 씨의 성장](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/)을 본뜬 결과가 모델링됩니다.
 
 이전 연습의 동일한 단계인 **Point.ByCoordinates** 노드로 나선형 점 배열 작성하기부터 시작해 보겠습니다.
 
-![](<../images/5-3/2/math - part IV-01.jpg>)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 다음으로, 이러한 간단한 단계를 수행하여 다양하게 회전하는 일련의 나선형을 생성합니다.
 
-![](<../images/5-3/2/math - part IV-02.jpg>)
+![](../images/5-3/2/math-partIV-02.jpg)
 
-> a. **Geometry.Rotate:** _Geometry.Rotate_ 옵션에는 여러 가지가 있습니다. **geometry**, _basePlane_ 및 _degrees_ 를 입력으로 사용하여 노드를 선택했는지 확인하십시오. **Point.ByCoordinates**를 형상 입력에 연결합니다. 이 노드를 마우스 오른쪽 버튼으로 클릭하고 레이싱이 '외적'으로 설정되어 있는지 확인합니다.
+> a. **Geometry.Rotate:** **Geometry.Rotate** 옵션에는 여러 가지가 있습니다. _geometry_, _basePlane_ 및 _degrees_를 입력으로 사용하여 노드를 선택했는지 확인합니다. **Point.ByCoordinates**를 형상 입력에 연결합니다. 이 노드를 마우스 오른쪽 버튼으로 클릭하고 레이싱이 '외적'으로 설정되어 있는지 확인합니다.
 >
-> ![](<../images/5-3/2/math - part IV-03 cross product.jpg>)
+> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
 >
 > b. **Plane.XY:** _basePlane_ 입력에 연결합니다. 나선의 기준과 동일한 위치에 있는 원점을 중심으로 회전합니다.
 >
@@ -109,10 +105,10 @@ $$
 
 처음에는 출력이 소용돌이와 비슷합니다. **Number Range** 매개변수 중 일부를 조정하고 결과가 어떻게 달라지는지 확인해 보겠습니다.
 
-**Number Range** 노드의 단계 크기를 _120.0_ 에서 _36.0_ 으로 변경합니다. 이렇게 하면 더 많은 회전이 작성되므로 그리드가 더 조밀해집니다.
+**Number Range** 노드의 단계 크기를 _120.0_에서 _36.0_으로 변경합니다. 이렇게 하면 더 많은 회전이 작성되므로 그리드가 더 조밀해집니다.
 
-![](<../images/5-3/2/math - part IV-04.jpg>)
+![](../images/5-3/2/math-partIV-04.jpg)
 
-**Number Range** 노드의 단계 크기를 _36.0_ 에서 _3.6_ 으로 변경합니다. 그러면 훨씬 더 조밀한 그리드가 표시되고 나선의 방향은 불명확해집니다. 해바라기가 작성된 것입니다.
+**Number Range** 노드의 단계 크기를 _36.0_에서 _3.6_으로 변경합니다. 그러면 훨씬 더 조밀한 그리드가 표시되고 나선의 방향은 불명확해집니다. 이제, 해바라기가 작성되었습니다.
 
-![](<../images/5-3/2/math - part IV-05.jpg>)
+![](../images/5-3/2/math-partIV-05.jpg)

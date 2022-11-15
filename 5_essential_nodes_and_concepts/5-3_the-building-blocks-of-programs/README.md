@@ -2,4 +2,4 @@
 
 시각적 프로그램 개발에 대해 더 자세히 알아보려는 경우 사용하게 될 빌딩 블록을 더 깊이 있게 이해해야 합니다. 이 장에서는 Dynamo 프로그램의 와이어를 통과하는 데이터와 관련된 기본적인 개념을 소개합니다.
 
-![](<../images/5-3/building blocks of program.png>)
+![](../images/5-3/buildingblocksofprogram.png)
