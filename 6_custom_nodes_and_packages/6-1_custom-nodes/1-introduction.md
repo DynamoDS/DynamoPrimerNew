@@ -10,40 +10,40 @@
 
 可以说，自定义节点的最佳功能是其工作共享功能。如果“超级用户”创建复杂的 Dynamo 图形，并将其交给 Dynamo 的新手设计师，则他/她可以将图形压缩为用于设计交互的基本要素。可以打开自定义节点来编辑内部图形，但“容器”可以保持简单。借助此过程，自定义节点可让 Dynamo 用户设计清晰且直观的图形。
 
-![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
+![](../images/6-1/1/customnodeintro-worksharing01.jpg)
 
 ### 构建节点的多种方法
 
-在 Dynamo 中，有多种方法可构建自定义节点。在本章的示例中，我们将直接从 Dynamo 用户界面创建自定义节点。如果您是程序员并对 C# 或 Zero-Touch 格式感兴趣，可以访问 Dynamo Wiki 上的[此页面](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)以进行更深入的了解。
+在 Dynamo 中，有多种方法可构建自定义节点。在本章的示例中，我们将直接从 Dynamo 用户界面创建自定义节点。如果您是程序员并且对 C# 或 Zero-Touch 格式感兴趣，可以参见 Dynamo Wiki 上的[此页面](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)进行更深入的了解。
 
 ### 自定义节点环境和创建第一个自定义节点
 
 我们跳到自定义节点环境，并创建一个简单节点来计算百分比。自定义节点环境与 Dynamo 图形环境不同，但交互基本相同。说到这里，让我们创建第一个自定义节点！
 
-若要从头开始创建自定义节点，请启动 Dynamo 并选择“自定义节点”,或者从画布键入 Ctrl + Shift + N。
+要从头开始创建自定义节点，请启动 Dynamo 并选择“自定义节点”,或者从画布键入 Ctrl + Shift + N。
 
-![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment01.jpg)
 
-在“自定义节点属性”对话框中指定名称、说明和类别。
+在“自定义节点特性”对话框中指定名称、说明和类别。
 
-![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment02.jpg)
 
-> 1. **名称：** 百分比
-> 2. **说明：** 计算一个值相对于另一个值的百分比。
-> 3. **类别：** Math.Functions
+> 1. **名称**：百分比
+> 2. **说明**：计算一个值相对于另一个值的百分比。
+> 3. **类别**：Math.Functions
 
-这将打开一个带黄色背景的画布，表示您正在自定义节点内部工作。在此画布中，您可以访问所有核心 Dynamo 节点，以及“输入”和“输出”节点，这些节点标记自定义节点的数据流入和流出。 它们位于“输入”>“基本”中。
+这将打开一个带黄色背景的画布，表示您正在自定义节点内部工作。在此画布中，您可以访问所有核心 Dynamo 节点，以及“输入”和“输出”节点，这些节点标记自定义节点的数据流入和流出。它们位于“输入”>“基本”中。
 
-![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment03.jpg)
 
-![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
 
-> 1. **输入：** 输入节点在自定义节点上创建输入端口。输入节点的语法为 _input\_name : datatype = default\_value(optional)。_
-> 2. **输出：** 与输入类似，这些输出将在自定义节点上创建和命名输出端口。考虑将 **“自定义注释”** 添加到输入和输出端口，以提示输入和输出类型。这将在[“创建自定义节点”部分](2-creating.md)中详细介绍。
+> 1. **输入**：输入节点在自定义节点上创建输入端口。输入节点的语法为_“input_name : datatype = default_value(optional)”_。
+> 2. **输出**：与输入类似，这些输出将在自定义节点上创建和命名输出端口。考虑将**“自定义注释”**添加到输入和输出端口，以提示输入和输出类型。这将在[“创建自定义节点”](2-creating.md)部分中详细介绍。
 
-您可以将此自定义节点另存为 .dyf（与标准 .dyn 相反）文件，并且该文件将自动添加到您的会话和将来的会话中。您会在库的“附加模块”部分中找到自定义节点。
+可以将此自定义节点另存为“.dyf”（与标准“.dyn”相反）文件，并且该文件将自动添加到您的会话和将来的会话中。您会在库的“附加模块”部分中找到自定义节点。
 
-![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment05.jpg)
 
 ### 前进
 

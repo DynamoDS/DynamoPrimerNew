@@ -8,7 +8,7 @@ Dynamo 提供了几种不同方法来创建自定义节点。可以从头开始�
 
 在下图中，我们使用 UV 坐标将某个点从一个曲面映射到另一个曲面。我们将利用此概念创建镶板曲面，该曲面参照 XY 平面中的曲线。我们将在此处创建四边形嵌板以进行镶板，但是使用相同的逻辑，我们可以使用 UV 映射创建各种嵌板。这是开发自定义节点的绝佳机会，因为我们将能够在此图形或其他 Dynamo 工作流中更轻松地重复类似过程。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 01.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-01.jpg)
 
 > 单击下面的链接下载示例文件。
 >
@@ -16,52 +16,52 @@ Dynamo 提供了几种不同方法来创建自定义节点。可以从头开始�
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-首先，我们创建一个要嵌套到自定义节点的图形。在本示例中，我们将使用 UV 坐标创建一个图形，该图形会将多边形从基础曲面映射到目标曲面。我们经常使用此 UV 映射过程，使其成为用于自定义节点的理想候选过程。有关曲面和 UV 空间的详细信息，请参见[曲面](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)页面。完整图形是来自上面下载的 .zip 文件中的 _“UVmapping\_Custom-Node.dyn”_。
+首先，我们创建一个要嵌套到自定义节点的图形。在本示例中，我们将使用 UV 坐标创建一个图形，该图形会将多边形从基础曲面映射到目标曲面。我们经常使用此 UV 映射过程，使其成为用于自定义节点的理想候选过程。有关曲面和 UV 空间的详细信息，请参见[曲面](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)页面。完整图形是来自上面下载的 .zip 文件中的_“UVmapping_Custom-Node.dyn”_。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-02.jpg)
 
-> 1. **代码块**：使用此行可创建一系列介于 -45 和 45 之间的 10 个数字 `45..45..#10;`
-> 2. **Point.ByCoordinates**：将 **“代码块”** 的输出连接到“x”和“y”输入，并将连缀设置为“交互参照”。现在，您应该有了点栅格。
-> 3. **Plane.ByOriginNormal**：将 _“Point”_ 输出连接到 _“origin”_ 输入，以在每个点处创建一个平面。将使用默认法向矢量 (0,0,1)。
-> 4. **Rectangle.ByWidthLength**：将上一步中的平面连接到 _“plane”_ 输入，并使用值为 _“10”_ 的 **“代码块”** 指定宽度和长度。
+> 1. **代码块**：使用以下代码行可创建一系列介于 -45 和 45 之间的 10 个数字：`45..45..#10;`
+> 2. **Point.ByCoordinates**：将**“代码块”**的输出连接到“x”和“y”输入，并将连缀设置为“交互参照”。现在，您应该有了点栅格。
+> 3. **Plane.ByOriginNormal**：将_“Point”_输出连接到_“origin”_输入，以在每个点处创建一个平面。将使用默认法向向量 (0,0,1)。
+> 4. **Rectangle.ByWidthLength**：将上一步中的平面连接到_“plane”_输入，并使用值为_“10”_的**“代码块”**指定宽度和长度。
 
-现在，您应该看到矩形栅格。让我们使用 UV 坐标将这些矩形映射到目标曲面。
+现在，您应该会看到矩形栅格。让我们使用 UV 坐标将这些矩形映射到目标曲面。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-03.jpg)
 
-> 1. **Polygon.Points**：将上一步中的 **“Rectangle.ByWidthLength”** 输出连接到 _“polygon”_ 输入以提取每个矩形的角点。这些点是我们要映射到目标曲面的点。
-> 2. **Rectangle.ByWidthLength**：使用值为 _“100”_ 的 **“代码块”** 指定矩形的宽度和长度。这将是基础曲面的边界。
-> 3. **Surface.ByPatch**：将上一步中的 **“Rectangle.ByWidthLength”** 连接到 _“closedCurve”_ 输入以创建基础曲面。
-> 4. **Surface.UVParameterAtPoint**：连接 **Polygon.Points** 节点的 _“Point”_ 输出和 **Surface.ByPatch** 节点的 _“Surface”_ 输出，以返回每个点处的 UV 参数。
+> 1. **Polygon.Points**：将上一步中的**“Rectangle.ByWidthLength”**输出连接到_“polygon”_输入以提取每个矩形的角点。这些点是我们要映射到目标曲面的点。
+> 2. **Rectangle.ByWidthLength**：使用值为_“100”_的**“代码块”**指定矩形的宽度和长度。这将是基础曲面的边界。
+> 3. **Surface.ByPatch**：将上一步中的**“Rectangle.ByWidthLength”**连接到_“closedCurve”_输入以创建基础曲面。
+> 4. **Surface.UVParameterAtPoint**：连接**“Polygon.Points”**节点的_“Point”_输出和**“Surface.ByPatch”**节点的_“Surface”_输出，以返回每个点处的 UV 参数。
 
 现在，我们已拥有一个基础曲面和一组 UV 坐标，可以输入目标曲面并在曲面之间映射点。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 04.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-04.jpg)
 
-> 1. **文件路径**：选择要输入的曲面的文件路径。文件类型应为 .SAT。单击 _“浏览...”_ 按钮，然后导航到来自上面下载的 .zip 文件中的 _“UVmapping\_srf.sat”_ 文件。
-> 2. **Geometry.ImportFromSAT**：连接文件路径以输入曲面。您应该在几何图形预览中看到输入的曲面。
-> 3. **UV**：将 UV 参数输出连接到 _UV.U_ 和 _UV.V_ 节点。
-> 4. **Surface.PointAtParameter**：连接输入的曲面以及 U 和 V 坐标。现在，您应该会在目标曲面上看到三维点栅格。
+> 1. **文件路径**：选择要输入的曲面的文件路径。文件类型应为“.SAT”。单击_“浏览...”_按钮，然后导航到来自上面下载的 .zip 文件中的_“UVmapping_srf.sat”_文件。
+> 2. **Geometry.ImportFromSAT**：连接文件路径以输入曲面。您应该会在几何图形预览中看到输入的曲面。
+> 3. **UV**：将 UV 参数输出连接到_“UV.U”_和_“UV.V”_节点。
+> 4. **Surface.PointAtParameter**：连接输入的曲面以及 u 和 v 坐标。现在，您应该会在目标曲面上看到三维点栅格。
 
 最后一步是使用三维点来构造矩形曲面修补。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 05.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-05.jpg)
 
 > 1. **PolyCurve.ByPoints**：连接曲面上的点，以通过这些点构造复合线。
-> 2. **Boolean**：将 **“Boolean”** 添加到工作空间，然后将其连接到 _“connectLastToFirst”_ 输入并切换到 True 以关闭复合线。现在，您应该看到映射到曲面的矩形。
-> 3. **Surface.ByPatch**：将复合线连接到 _“closedCurve”_ 输入以构建曲面修补。
+> 2. **Boolean**：将**“Boolean”**添加到工作空间，然后将其连接到_“connectLastToFirst”_输入并切换到 True 以关闭复合线。现在，您应该会看到映射到曲面的矩形。
+> 3. **Surface.ByPatch**：将复合线连接到_“closedCurve”_输入以构建曲面修补。
 
 ### 第 II 部分：从图形到自定义节点
 
 现在，我们选择要嵌套到自定义节点中的节点，以考虑我们希望哪些内容作为节点的输入和输出。我们希望自定义节点尽可能灵活，以便它应该能够映射任何多边形，而不仅仅是矩形。
 
-选择以下节点（从 Polygon.Points 开始），在工作空间上单击鼠标右键，然后选择“创建自定义节点”。
+选择以下节点（从“Polygon.Points”开始），在工作空间上单击鼠标右键，然后选择“创建自定义节点”。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 01.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-01.jpg)
 
 在“自定义节点特性”对话框中，为“自定义节点”指定名称、描述和类别。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 02.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-02.jpg)
 
 > 1. 名称：MapPolygonsToSurface
 > 2. 描述：将多边形从基础曲面映射到目标曲面
@@ -69,35 +69,35 @@ Dynamo 提供了几种不同方法来创建自定义节点。可以从头开始�
 
 “自定义节点”已显着清理工作空间。请注意，已基于原始节点命名输入和输出。让我们编辑“自定义节点”，以使名称更具描述性。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 03.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-03.jpg)
 
-双击“自定义节点”以对其进行编辑。这将打开一个工作空间，该工作空间具有表示节点内部的黄色背景。
+双击“自定义节点”以对其进行编辑。这将打开一个工作空间，该工作空间有表示节点内部的黄色背景。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-04.jpg)
 
-> 1. **输入**：将输入名称更改为 _baseSurface_ 和 _targetSurface_。
+> 1. **输入**：将输入名称更改为_“baseSurface”_和_“targetSurface”_。
 > 2. **输出**：为映射的多边形添加附加输出。
 
-保存自定义节点，然后返回到主工作空间。 请注意，**“MapPolygonsToSurface”** 节点反映了我们刚才所做的更改。
+保存自定义节点，然后返回到主工作空间。请注意，**“MapPolygonsToSurface”**节点反映了我们刚才所做的更改。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 05.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-05.jpg)
 
-我们还可以通过添加**自定义注释**来增加“自定义节点”的稳定性。注释有助于提示输入和输出类型或解释节点的功能。用户将光标悬停在“自定义节点”的输入或输出上时，将显示注释。
+我们还可以通过添加**“自定义注释”**来增加“自定义节点”的稳定性。注释有助于提示输入和输出类型或解释节点的功能。用户将光标悬停在“自定义节点”的输入或输出上时，将显示注释。
 
 双击“自定义节点”以对其进行编辑。这将重新打开黄色背景的工作空间。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 06.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-06.jpg)
 
-> 1. 开始编辑输入 **“代码块”**。要开始注释，请键入“//”，后跟注释文字。键入可能有助于阐明节点的任何内容 - 在此处，我们将介绍 _targetSurface_。
-> 2. 我们还将通过设置输入类型等于某个值，来设置 _inputSurface_ 的默认值。在此处，我们会将默认值设置为原始 **“Surface.ByPatch”** 集。
+> 1. 开始编辑输入**“代码块”**。要开始注释，请键入“//”，后跟注释文字。键入可能有助于阐明节点的任何内容 - 在此处，我们将介绍_“targetSurface”_。
+> 2. 我们还将通过设置输入类型等于某个值，来设置_“inputSurface”_的默认值。在此处，我们会将默认值设置为原始**“Surface.ByPatch”**集。
 
 注释也可以应用于输出。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 07.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-07.jpg)
 
-> 编辑“输出代码块”中的文字。键入“//”，后跟注释文字。在此处，我们将通过添加更深入的描述来阐明 _“Polygons”_ 和 _“surfacePatches”_ 输出。
+> 编辑输出“代码块”中的文字。键入“//”，后跟注释文字。在此处，我们将通过添加更深入的描述来阐明_“Polygons”_和_“surfacePatches”_输出。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 08.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-08.jpg)
 
-> 1. 将光标悬停在“自定义节点输入”上即可查看注释。
-> 2. 在对 _inputSurface_ 设置默认值后，我们还可以运行定义，无需输入曲面。
+> 1. 将光标悬停在“自定义节点输入”上可查看注释。
+> 2. 在对_“inputSurface”_设置默认值后，我们还可以运行定义，无需输入曲面。

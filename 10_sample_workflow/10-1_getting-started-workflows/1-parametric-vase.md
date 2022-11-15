@@ -12,7 +12,7 @@ description: suggested exercise
 * 使用节点创建和修改几何图元。
 * 实时显示设计结果。
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ## 定义目标
 
@@ -32,7 +32,7 @@ description: suggested exercise
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-我们需要节点来表示 Dynamo 将执行的操作序列。由于我们知道要创建一个圆，因此我们先找到一个执行该操作的节点。使用 **“搜索”字段** 或浏览 **“库”**，以找到 **“Circle.ByCenterPointRadius”** 节点并将其添加到工作空间
+我们需要节点来表示 Dynamo 将执行的操作序列。由于我们知道要创建一个圆，因此我们先找到一个执行该操作的节点。使用**“搜索”字段**或浏览**“库”**，以找到**“Circle.ByCenterPointRadius”**节点并将其添加到工作空间
 
 ![](../images/10-1/1/vase8.png)
 
@@ -40,21 +40,21 @@ description: suggested exercise
 > 2. 选择 >“ByCenterPointRadius”
 > 3. 节点将显示在工作空间中
 
-让我们进一步了解一下此节点。在左侧，有节点的输入（_centerPoint_ 和 _radius_）；在右侧，有节点的输出（圆）。请注意，输出有浅蓝色线。这意味着输入有默认值。要获取有关输入的详细信息，请将光标悬停在输入名称上。_radius_ 输入需要双精度输入，默认值为 1。
+让我们进一步了解一下此节点。在左侧，有节点的输入（_“centerPoint”_和_“radius”_）；在右侧，有节点的输出（圆）。请注意，输出有浅蓝色线。这意味着输入有默认值。要获取有关输入的详细信息，请将光标悬停在输入名称上。_“radius”_输入需要双精度输入，默认值为“1”。
 
 ![](../images/10-1/1/vase10.png)
 
-我们将保留 _centerPoint_ 的默认值，但会添加 **“Number Slider”** 以控制半径。正如我们使用 **“Circle.ByCenterPointRadius”** 节点所做的那样，使用库搜索 **“Number Slider”** 并将其添加到图形中。
+我们将保留_“centerPoint”_的默认值，但会添加**“Number Slider”**以控制半径。正如我们使用**“Circle.ByCenterPointRadius”**节点所做的那样，使用库搜索**“Number Slider”**并将其添加到图形中。
 
 该节点与我们之前的节点稍有不同，因为它包含一个滑块。可以使用该界面更改滑块的输出值。
 
-![](<../images/10-1/1/vase13 (1).gif>)
+![](../images/10-1/1/vase13(1).gif)
 
-可以使用节点左侧的下拉按钮配置滑块。我们将滑块限制为最大值 15。
+可以使用节点左侧的下拉按钮配置滑块。我们将滑块限制为最大值“15”。
 
 ![](../images/10-1/1/vase11.png)
 
-我们将它放置在 **“Circle.ByCenterPointRadius”** 节点的左侧，然后通过选择 **“Number Slider”** 输出并将其连接到“Radius”输入来连接两个节点。
+我们将它放置在**“Circle.ByCenterPointRadius”**节点的左侧，然后通过选择**“Number Slider”**输出并将其连接到“Radius”输入来连接两个节点。
 
 ![](../images/10-1/1/vase12.png)
 
@@ -70,17 +70,17 @@ description: suggested exercise
 
 我们将这些节点复制 4 次，以便这些圆定义曲面，更改“Number Slider”的名称，如下所示。
 
-![](<../images/10-1/1/vase4 (1) (1).png>)
+![](../images/10-1/1/vase4(1)(1).png)
 
 > 1. 圆由圆心和半径创建
 
 ### 沿花瓶高度移动圆
 
-我们的花瓶缺少一个关键参数，即花瓶的高度。为了控制花瓶的高度，我们创建了另一个数字滑块。我们还添加了 **“Code Block”** 节点。代码块有助于将个性化代码段添加到我们的工作流中。我们将使用代码块将高度滑块乘以不同的因子，以便可以沿花瓶高度放置圆。
+我们的花瓶缺少一个关键参数，即花瓶的高度。为了控制花瓶的高度，我们创建了另一个数字滑块。我们还添加了**“Code Block”**节点。代码块有助于将个性化代码段添加到我们的工作流中。我们将使用代码块将高度滑块乘以不同的因子，以便可以沿花瓶高度放置圆。
 
-![](<../images/10-1/1/vase15 (1).png>)
+![](../images/10-1/1/vase15(1).png)
 
-然后，我们使用 **“Geometry.Translate”** 节点在所需高度放置圆。由于我们要沿花瓶分布圆，因此我们使用代码块将高度参数乘以一个因子。
+然后，我们使用**“Geometry.Translate”**节点在所需高度放置圆。由于我们要沿花瓶分布圆，因此我们使用代码块将高度参数乘以一个因子。
 
 ![](../images/10-1/1/vase5.png)
 
@@ -88,18 +88,18 @@ description: suggested exercise
 
 ### 创建曲面
 
-为了使用 **“Surface.ByLoft”** 节点创建曲面，我们需要将所有平移的圆合并到一个列表中。我们使用 **“List.Create”** 将所有圆合并到一个列表中，最后将此列表输出到 **“Surface.ByLoft”** 节点以查看结果。
+为了使用**“Surface.ByLoft”**节点创建曲面，我们需要将所有平移的圆合并到一个列表中。我们使用**“List.Create”**将所有圆合并到一个列表中，最后将此列表输出到**“Surface.ByLoft”**节点以查看结果。
 
 我们还要关闭其他节点中的预览，以仅显示“Surface.ByLoft”显示。
 
-![](<../images/10-1/1/vase6 (1) (1).png>)
+![](../images/10-1/1/vase6(1)(1).png)
 
 > 3\.通过放样平移的圆来创建曲面。
 
 ## 结果
 
-我们的工作流已准备就绪！现在，我们可以使用在脚本中定义的 **“数字滑块”** 创建不同的花瓶设计。
+我们的工作流已准备就绪！现在，我们可以使用在脚本中定义的**“数字滑块”**创建不同的花瓶设计。
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ![](../images/10-1/1/vase7.png)

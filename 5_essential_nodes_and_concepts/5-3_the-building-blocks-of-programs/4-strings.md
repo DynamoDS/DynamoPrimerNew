@@ -10,7 +10,7 @@
 
 上面的示例节点都是字符串。数字可以表示为字符串、字母或整个文本数组。
 
-![](<../images/5-3/4/strings - creating strings.jpg>)
+![](../images/5-3/4/strings-creatingstrings.jpg)
 
 ## 练习
 
@@ -26,25 +26,25 @@
 
 下图考虑了来自外部电子表格的数据字符串。该字符串表示矩形在 XY 平面中的顶点。让我们在微型练习中分解一些字符串拆分操作：
 
-![](<../images/5-3/4/strings - querying strings 01.jpg>)
+![](../images/5-3/4/strings-queryingstrings01.jpg)
 
 > 1. “;”分隔符分割矩形的每个顶点。这将为每个顶点创建一个包含 3 个项目的列表。
 
-![](<../images/5-3/4/strings - querying strings 02.jpg>)
+![](../images/5-3/4/strings-queryingstrings02.jpg)
 
-> 1. 点击节点中间的“_+_”，即可创建新的分隔符。
+> 1. 点击节点中间的“_+_”，可创建新的分隔符。
 > 2. 向画布添加“_,_”字符串，然后连接到新的分隔符输入。
-> 3. 现在，我们得到了包含十个项目的列表。节点先基于 _separator0_ 进行分割，然后基于 _separator1_ 进行分割。
+> 3. 现在，我们得到了包含十个项目的列表。节点先基于_“separator0”_进行分割，然后基于_“separator1”_进行分割。
 
-虽然上述项目列表看起来像数字，但在 Dynamo 中仍将它们视为单独的字符串。要创建点，需要将点的数据类型从“字符串”转换为“数字”。使用 **“String.ToNumber”** 节点即可执行此操作
+虽然上述项目列表看起来像数字，但在 Dynamo 中仍将它们视为单独的字符串。要创建点，需要将点的数据类型从“字符串”转换为“数字”。使用**“String.ToNumber”**节点可执行此操作
 
-![](<../images/5-3/4/strings - querying strings 03.jpg>)
+![](../images/5-3/4/strings-queryingstrings03.jpg)
 
-> 1. 此节点简单明了。将 **“String.Split”** 结果连接到输入。输出看起来没有什么不同，但数据类型现在是 _number_，而不是 _string_。
+> 1. 此节点简单明了。将**“String.Split”**结果连接到输入。输出看起来没有什么不同，但数据类型现在是_“number”_，而不是_“string”_。
 
 使用其他一些基本操作，我们现在在原点处基于原始字符串输入绘制了一个三角形。
 
-![](<../images/5-3/4/strings - querying strings 04.jpg>)
+![](../images/5-3/4/strings-queryingstrings04.jpg)
 
 ### 处理字符串
 
@@ -54,9 +54,9 @@
 
 以下内容表示三个字符串的串联：
 
-![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
+![连接](../images/5-3/4/strings-manipulatingstrings01.jpg)
 
-> 1. 通过单击节点中心的“+/-”按钮，即可在串联中添加或减少字符串。
+> 1. 通过单击节点中心的“+/-”按钮，可在串联中添加或减少字符串。
 > 2. 输出会提供一个串联的字符串，其中包含空格和标点符号。
 
 合并方法与连接方法非常相似，只是它增加了标点图层。
@@ -65,49 +65,49 @@
 
 下图表示两个字符串的合并：
 
-![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
+![](../images/5-3/4/strings-manipulatingstrings02.jpg)
 
 > 1. 分隔符输入允许一个分隔符创建一个字符串，该字符串会分割已合并的字符串。
 
 ### 使用字符串
 
-在本练习中，我们将使用查询和操作字符串的方法来解构 Robert Frost 的 [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621) 诗的最后一小节。这并非最实用的应用，但在我们将概念性的字符串操作应用于节奏和韵律的清晰各行时，它将有助于我们掌握此类操作。
+在本练习中，我们将使用查询和操作字符串的方法来解构 Robert Frost 的[“Stopping By Woods on a Snowy Evening”](http://www.poetryfoundation.org/poem/171621)诗的最后一小节。这并非最实用的应用，但在我们将概念性的字符串操作应用于节奏和韵律的清晰各行时，它将有助于我们掌握此类操作。
 
 我们先从该诗小节的基本字符串拆分开始。首先，我们注意到书写格式基于逗号设置。我们将使用此格式来将每行分隔为单独的项目。
 
-![](<../images/5-3/4/strings - working with strings 01.jpg>)
+![](../images/5-3/4/strings-workingwithstrings01.jpg)
 
-> 1. 基础字符串将粘贴到 **“String”** 节点中。
-> 2. 另一个 **“String”** 节点用于表示分隔符。在本例中，我们使用的是逗号。
-> 3. **“String.Split”** 节点将添加到画布并连接到两个字符串。
+> 1. 基础字符串将粘贴到**“String”**节点中。
+> 2. 另一个**“String”**节点用于表示分隔符。在本例中，我们使用的是逗号。
+> 3. **“String.Split”**节点将添加到画布并连接到两个字符串。
 > 4. 输出表明，我们现在已将各行分成各个元素。
 
-现在，让我们了解这首诗的优美部分：最后两行。原始诗小节是一项数据。在第一步中，我们已将该数据分为各个项目。现在，我们需要搜索所需的文字。尽管我们_可以_通过选择列表的最后两项来完成此操作，但如果这是一本书，则我们不希望通读所有内容并手动隔离各元素。
+现在，让我们了解这首诗的优美部分：最后两行。原始诗小节是一项数据。在第一步中，我们已将该数据分为各个项目。现在，我们需要搜索所需的文字。尽管我们_可以_通过选择列表的最后两项来完成此操作，但如果这是一本书，我们不希望通读所有内容并手动隔离各元素。
 
-![](<../images/5-3/4/strings - working with strings 02.jpg>)
+![](../images/5-3/4/strings-workingwithstrings02.jpg)
 
-> 1. 我们使用 **“String.Contains”** 节点来搜索一组字符，而不是手动搜索。这类似于在文字处理器中执行“查找”命令。在本例中，如果在项目中找到相应子字符串，则返回“true”或“false”。
-> 2. 在_“searchFor”_输入中，我们定义了要在诗小节中查找的子字符串。我们使用一个带有文字“And miles”的 **“String”** 节点。
+> 1. 我们使用**“String.Contains”**节点来搜索一组字符，而不是手动搜索。这类似于在文字处理器中执行“查找”命令。在本例中，如果在项目中找到相应子字符串，则返回“true”或“false”。
+> 2. 在_“searchFor”_输入中，我们定义了要在诗小节中查找的子字符串。我们使用一个带有文字“And miles”的**“String”**节点。
 > 3. 输出结果为一列 false 或 true。我们将在下一步中使用此布尔逻辑过滤各元素。
 
-![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
+![分割](../images/5-3/4/strings-workingwithstrings03.jpg)
 
-> 1. **“List.FilterByBoolMask”** 是我们要用来剔除 false 和 true 的节点。“in”输出返回“mask”输入为“true”的语句，而“out”输出返回“mask”输入为“false”的语句。
+> 1. **“List.FilterByBoolMask”**是我们要用来剔除 false 和 true 的节点。“in”输出返回“mask”输入为“true”的语句，而“out”输出返回“mask”输入为“false”的语句。
 > 2. “in”的输出与预期一样，为我们提供了诗小节的最后两行。
 
 现在，我们要通过合并这两行，来再现该诗小节。查看上一步的输出时，我们注意到列表中有两个项目：
 
-![](<../images/5-3/4/strings - working with strings 04.jpg>)
+![](../images/5-3/4/strings-workingwithstrings04.jpg)
 
-> 1. 使用两个 **“List.GetItemAtIndex”** 节点，我们可以使用值 0 和 1 作为索引输入来隔离项目。
+> 1. 使用两个**“List.GetItemAtIndex”**节点，我们可以使用值 0 和 1 作为索引输入来隔离项目。
 > 2. 每个节点的输出按顺序为我们提供最后两行。
 
-要将这两个项目合并为一个项目，我们将使用 **“String.Join”** 节点：
+要将这两个项目合并为一个项目，我们将使用**“String.Join”**节点：
 
-![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
+![拆分字符串](../images/5-3/4/strings-workingwithstrings05.jpg)
 
-> 1. 在添加 **“String.Join”** 节点后，我们注意到需要分隔符。
-> 2. 要创建分隔符，我们向画布中添加一个 **“String”** 节点，然后键入逗号。
+> 1. 在添加**“String.Join”**节点后，我们注意到需要分隔符。
+> 2. 要创建分隔符，我们向画布中添加一个**“String”**节点，然后键入逗号。
 > 3. 最终输出已将最后两个项目合并为一个项目。
 
 隔离最后两行看起来可能需要大量工作；确实，字符串操作通常需要一些前期工作。但它们具有可伸缩性，可以相对轻松地应用于大型数据集。如果您以参数方式使用电子表格和互操作性，请务必记住字符串操作。

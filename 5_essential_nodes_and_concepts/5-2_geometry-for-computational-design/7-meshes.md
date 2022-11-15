@@ -12,20 +12,20 @@ Dynamo 使用“面-顶点”数据结构定义网格。在最基本的层次上
 
 要创建网格，我们需要一列顶点和将这些顶点分组为面的系统（称为“索引组”）。
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes-meshelements.jpg)
 
 > 1. 顶点列表
 > 2. 用于定义面的索引组列表
 
 ### Mesh Toolkit
 
-Dynamo 的网格功能可通过安装 [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) 软件包进行扩展。Dynamo Mesh Toolkit 包提供了多种工具，可从外部文件格式输入网格、从 Dynamo 几何图形对象创建网格，以及按顶点和索引手动构建网格。
+Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)软件包进行扩展。Dynamo Mesh Toolkit 包提供了多种工具，可从外部文件格式输入网格、从 Dynamo 几何图形对象创建网格，以及按顶点和索引手动构建网格。
 
 该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。
 
 例如，有关使用此软件包的信息，请访问 [Mesh Toolkit 案例研究](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)。
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
 ## 深入探讨...
 
@@ -33,10 +33,10 @@ Dynamo 的网格功能可通过安装 [Mesh Toolkit](https://github.com/DynamoDS
 
 网格是表示曲面或实体几何图形的四边形和三角形的集合。像实体一样，网格对象的结构包括顶点、边和面。还有一些使网络独一无二的特性，例如法线。
 
-![网格元素](../images/5-2/7/MeshElements2.jpg)
+![网格图元](../images/5-2/7/MeshElements2.jpg)
 
 > 1. 网格顶点
-> 2. 网格边 \*仅具有一个邻接面的边称为“裸边”。所有其他边均为“装饰边”
+> 2. 网格边 *仅具有一个邻接面的边称为“裸边”。 所有其他边均为“装饰边”
 > 3. 网格面
 
 ### 顶点 + 顶点法线
@@ -65,7 +65,7 @@ Dynamo 的网格功能可通过安装 [Mesh Toolkit](https://github.com/DynamoDS
 
 在前一章中，我们看到 NURBS 曲面由一系列沿两个方向的 NURBS 曲线进行定义。这些方向标有 `U` 和 `V`，并允许根据二维曲面域对 NURBS 曲面进行参数化。曲线本身作为方程存储在计算机中，从而允许将生成的曲面计算为任意小的精度。但是，将多个 NURBS 曲面组合在一起可能会非常困难。连接两个 NURBS 曲面将生成多重曲面，其中几何图形的不同部分将具有不同的 UV 参数和曲线定义。
 
-![控制点(Control Points)](../images/5-2/7/NURBSvsMESH-01.jpg)
+![控制点](../images/5-2/7/NURBSvsMESH-01.jpg)
 
 > 1. 曲面
 > 2. 等参（等参线）曲线
