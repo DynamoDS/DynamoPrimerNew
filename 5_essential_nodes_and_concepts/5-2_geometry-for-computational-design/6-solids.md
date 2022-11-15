@@ -4,13 +4,13 @@
 
 ### Was ist ein Volumenkörper?
 
-Wenn wir komplexere Modelle erstellen möchten, die nicht aus einer einzelnen Fläche erstellt werden können, oder wenn wir ein explizites Volumen definieren möchten, müssen wir uns in den Bereich der [Volumenkörper](5-6\_solids.md#solids) (und Polysurfaces) vorwagen. Selbst ein einfacher Würfel ist so komplex, dass er sechs Oberflächen erfordert, eine pro Seite. Volumenkörper ermöglichen den Zugriff auf zwei wichtige Konzepte, den Oberflächen nicht bieten – eine verfeinerte topologische Beschreibung (Flächen, Kanten, Scheitelpunkte) und boolesche Operationen.
+Wenn wir komplexere Modelle erstellen möchten, die nicht aus einer einzelnen Fläche erstellt werden können, oder wenn wir ein explizites Volumen definieren möchten, müssen wir uns in den Bereich der [Volumenkörper](5-6\_solids.md#solids) (und PolySurfaces) vorwagen. Selbst ein einfacher Würfel ist so komplex, dass er sechs Oberflächen erfordert, eine pro Seite. Volumenkörper ermöglichen den Zugriff auf zwei wichtige Konzepte, den Oberflächen nicht bieten – eine verfeinerte topologische Beschreibung (Flächen, Kanten, Scheitelpunkte) und boolesche Operationen.
 
 ### Boolesche Operation zur Erstellung eines stacheligen Kugelvolumens
 
 Sie können [Boolesche Operationen](5-6\_solids.md#boolean-operations) verwenden, um Volumenmodelle zu ändern. Führen Sie mehrere boolesche Operationen aus, um einen Noppenball zu erstellen.
 
-![](<../images/5-2/6/solids  - spiky ball.jpg>)
+![](../images/5-2/6/solids-spikyball.jpg)
 
 > 1. **Sphere.ByCenterPointRadius**: Der Basisvolumenkörper wird erstellt.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: Die Flächen des Volumenkörpers werden abgefragt und die Oberflächengeometrie wird konvertiert – in diesem Fall weist die Kugel nur eine Fläche auf.
@@ -27,17 +27,17 @@ Sie können [Boolesche Operationen](5-6\_solids.md#boolean-operations) verwenden
 
 ### Anhalten
 
-Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise viel Zeit in Anspruch nehmen. Verwenden Sie die Anhaltfunktion, um die Ausführung der ausgewählten Knoten und der betroffenen untergeordneten Knoten zu unterbrechen.
+Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise viel Zeit in Anspruch nehmen. Verwenden Sie die Anhaltfunktion, um die Ausführung der ausgewählten Blöcke und der betroffenen untergeordneten Blöcke zu unterbrechen.
 
-![](<../images/5-2/6/solids - freeze node.jpg>)
+![](../images/5-2/6/solids-freezenode.jpg)
 
 > 1. Verwenden Sie das Kontextmenü, um den Vorgang Vereinigung für einen Volumenkörper anzuhalten.
 >
-> 2\. Der ausgewählte Knoten und alle untergeordneten Knoten werden in einem hellgrauen halbtransparenten Modus in einer Vorschau angezeigt und die betroffenen Drähte werden als gestrichelte Linien angezeigt. Die betroffene Geometrievorschau wird ebenfalls halbtransparent angezeigt. Sie können jetzt vorgelagerte Werte ändern, ohne die boolesche Vereinigung zu berechnen.
+> 2\. Der ausgewählte Block und alle untergeordneten Blöcke werden in einem hellgrauen halbtransparenten Modus in einer Vorschau angezeigt und die betroffenen Drähte werden als gestrichelte Linien angezeigt. Die betroffene Geometrievorschau wird ebenfalls halbtransparent angezeigt. Sie können jetzt vorgelagerte Werte ändern, ohne die boolesche Vereinigung zu berechnen.
 >
-> 3\. Um die Ausführung der Knoten fortzusetzen, klicken Sie mit der rechten Maustaste und deaktivieren "Anhalten".
+> 3\. Um die Ausführung der Blöcke fortzusetzen, klicken Sie mit der rechten Maustaste und deaktivieren "Anhalten".
 >
-> 4\. Alle betroffenen Knoten und die zugehörigen Geometrievorschauen werden aktualisiert und wieder im standardmäßigen Vorschaumodus angezeigt.
+> 4\. Alle betroffenen Blöcke und die zugehörigen Geometrievorschauen werden aktualisiert und wieder im standardmäßigen Vorschaumodus angezeigt.
 
 ## Vertiefung...
 
@@ -48,14 +48,14 @@ Volumenkörper bestehen aus einer oder mehreren Oberflächen, die ein Volumen du
 ![Volumenkörper](../images/5-2/6/Primitives.jpg)
 
 > 1. Eine Ebene besteht aus einer einzelnen Oberfläche und ist kein Volumenkörper.
-> 2. Eine Kugel besteht aus einer einzelnen Oberfläche, aber _ist_ ein Volumenkörper.
+> 2. Eine Kugel besteht aus einer einzelnen Oberfläche, _ist_ aber ein Volumenkörper.
 > 3. Ein Kegel besteht aus zwei Oberflächen, die miteinander verbunden sind, um einen Volumenkörper zu bilden.
 > 4. Ein Zylinder besteht aus drei Oberflächen, die miteinander verbunden sind, um einen Volumenkörper zu bilden.
 > 5. Ein Würfel besteht aus sechs Oberflächen, die miteinander verbunden sind, um einen Volumenkörper zu bilden.
 
 ### Topologie
 
-Volumenkörper bestehen aus drei Typen von Elementen: Scheitelpunkten, Kanten und Flächen. Flächen sind die Oberflächen, die einen Volumenkörper bilden. Kanten sind die Kurven, die die Verbindung zwischen angrenzenden Flächen definieren, und Scheitelpunkte sind die Start- und Endpunkte der Kurven. Diese Elemente können mit den Topologieknoten abgefragt werden.
+Volumenkörper bestehen aus drei Typen von Elementen: Scheitelpunkten, Kanten und Flächen. Flächen sind die Oberflächen, die einen Volumenkörper bilden. Kanten sind die Kurven, die die Verbindung zwischen angrenzenden Flächen definieren, und Scheitelpunkte sind die Start- und Endpunkte der Kurven. Diese Elemente können mit den Topologieblöcken abgefragt werden.
 
 ![Topologie](../images/5-2/6/Solid-topology.jpg)
 
@@ -85,12 +85,12 @@ Boolesche Operationen für Volumenkörper sind Methoden zum Kombinieren von zwei
 Dadurch werden boolesche Operationen für Volumenkörper zu einem leistungsstarken und zeitsparenden Prozess. Es gibt drei boolesche Operationen für Volumenkörper, die unterscheiden, welche Teile der Geometrie beibehalten werden. ![Boolesche Operationen für Volumenkörper](../images/5-2/6/SolidBooleans.jpg)
 
 > 1. **Vereinigung:** Die überlappenden Teile der Volumenkörper werden entfernt und sie werden zu einem einzelnen Volumenkörper verbunden.
-> 2. **Differenz**: Ein Volumenkörper wird von einem anderen abgezogen. Der abzuziehende Volumenkörper wird als Werkzeug bezeichnet. Beachten Sie, dass Sie umschalten können, bei welchem Volumenkörper es sich um das Werkzeug handelt, um das inverse Volumen beizubehalten.
+> 2. **Differenz:** Ein Volumenkörper wird von einem anderen abgezogen. Der abzuziehende Volumenkörper wird als Werkzeug bezeichnet. Beachten Sie, dass Sie umschalten können, bei welchem Volumenkörper es sich um das Werkzeug handelt, um das inverse Volumen beizubehalten.
 > 3. **Schnitt:** Nur das überschneidende Volumen der beiden Volumenkörper wird beibehalten.
 
-Zusätzlich zu diesen drei Vorgänge sind in Dynamo die Knoten **Solid.DifferenceAll** und **Solid.UnionAll** verfügbar, mit denen Differenz- und Schnittvorgänge mit mehreren Volumenkörpern ausgeführt werden können. ![](../images/5-2/6/BooleanAll.jpg)
+Zusätzlich zu diesen drei Vorgänge sind in Dynamo die Blöcke **Solid.DifferenceAll** und **Solid.UnionAll** verfügbar, mit denen Differenz- und Schnittvorgänge mit mehreren Volumenkörpern ausgeführt werden können. ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll :** Vereinigungsvorgang mit Kugel und nach außen gerichteten Kegeln
-> 2. **DifferenceAll :** Differenzvorgang mit Kugel und nach innen gerichteten Kegeln
+> 1. **UnionAll:** Vereinigungsvorgang mit Kugel und nach außen gerichteten Kegeln
+> 2. **DifferenceAll:** Differenzvorgang mit Kugel und nach innen gerichteten Kegeln
 
 ##

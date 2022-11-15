@@ -1,6 +1,6 @@
 # Primer-Leitfaden, Dynamo-Community und -Plattform
 
-Dieser Leitfaden enthält Kapitel, die mit Mode Lab entwickelt wurden. In diesen Kapiteln liegt der Schwerpunkt auf den Grundlagen, die Sie zum Entwickeln Ihrer eigenen visuellen Programme mit Dynamo benötigen, und auf wichtigen Einblicken in die weiteren Schritte mit Dynamo.&#x20;
+Dieser Leitfaden enthält Kapitel, die mit Mode Lab entwickelt wurden. In diesen Kapiteln liegt der Schwerpunkt auf den Grundlagen, die Sie zum Entwickeln Ihrer eigenen visuellen Programme mit Dynamo benötigen, und auf wichtigen Einblicken in die weiteren Schritte mit Dynamo.
 
 ### Primer-Leitfaden
 
@@ -19,21 +19,19 @@ Wenn Sie eine Demonstration der Dynamo-Arbeitsabläufe sehen möchten, finden Si
 
 * [Parametrische Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](<./images/1-2/vase1.gif>)
+![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
 
 * [Attraktorpunkte](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
-![](<./images/1-2/attractor1.gif>)
+![](images/1-2/attractor1.gif)
 
-{% hint style="info" %}
-In den folgenden Kapiteln finden Sie themenspezifische Übungen, die sich mit unterschiedlichen Themen zu Dynamo befassen. **Übungen** finden Sie normalerweise im letzten Abschnitt jeder Seite.
-{% endhint %}
+{% hint style="info" %} In den folgenden Kapiteln finden Sie themenspezifische Übungen, die sich mit unterschiedlichen Themen zu Dynamo befassen. **Übungen** finden Sie normalerweise im letzten Abschnitt jeder Seite. {% endhint %}
 
 ### Community
 
-Ohne seine starke Community engagierter Benutzer und aktiver Beitragender hätte sich Dynamo nie so weit entwickelt. Engagieren auch Sie sich in der Community, indem Sie den [Blog](http://dynamobim.org/blog/) lesen, Ihre Arbeiten der Galerie hinzufügen oder an [Forumsdiskussionen](https://forum.dynamobim.com) zu Dynamo teilnehmen.
+Ohne seine starke Community engagierter Benutzer und aktiver Beitragender hätte sich Dynamo nie so weit entwickelt. Engagieren auch Sie sich in der Community, indem Sie den [Blog](http://dynamobim.org/blog/) lesen, Ihre Arbeiten zur Galerie hinzufügen oder an [Forumsdiskussionen](https://forum.dynamobim.com) zu Dynamo teilnehmen.
 
-![Das Forum](./images/1-2/02-Community.png)
+![Das Forum](images/1-2/02-Community.png)
 
 ### Die Plattform
 
@@ -41,6 +39,6 @@ Dynamo ist als visuelles Programmierwerkzeug für Designer konzipiert. Dies erm�
 
 Da der Quellcode für dieses Projekt als Open Source zur Verfügung steht, können Sie seine Funktionen ganz nach Ihren Vorstellungen erweitern. Besuchen Sie das Projekt auf GitHub und sehen Sie sich die laufenden Beiträge der Benutzer an, die Dynamo anpassen.
 
-![The Repo](./images/1-2/03-TheRepo.png)
+![Das Repo](images/1-2/03-TheRepo.png)
 
 > Durchsuchen, Verzweigen und Erweitern von Dynamo für Ihre Anforderungen

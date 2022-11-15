@@ -4,13 +4,13 @@
 
 ### Was ist eine Oberfläche?
 
-Wir verwenden [Oberfläche](5-surfaces.md#surface) im Modell, um Objekte darzustellen, die wir in unserer dreidimensionalen Welt sehen. Kurven sind nicht immer planar (d. h., sie sind dreidimensional), der durch sie definierte Raum ist jedoch immer an eine Dimension gebunden. Mit Oberflächen kommen eine weitere Dimension und damit eine Reihe weiterer Eigenschaften hinzu, die Sie in anderen Modellierungsvorgängen nutzen können.
+Wir verwenden [Oberfläche](5-surfaces.md#surface) im Modell, um Objekte darzustellen, die wir in unserer dreidimensionalen Welt sehen. Kurven sind zwar nicht immer planar, d. h. sie können dreidimensional verlaufen. Der durch sie definierte Raum ist jedoch immer an nur eine Dimension gebunden. Mit Oberflächen kommen eine weitere Dimension und damit eine Reihe weiterer Eigenschaften hinzu, die Sie in anderen Modellierungsvorgängen nutzen können.
 
 ### Oberfläche an Parameter
 
 Importieren Sie eine Oberfläche in Dynamo und werten Sie sie an einer Parameterposition aus, um zu sehen, welche Informationen Sie extrahieren können.
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
 
 > 1. _Surface.PointAtParameter_ gibt den Punkt an der angegebenen UV-Koordinatenposition zurück.
 > 2. _Surface.NormalAtParameter_ gibt den Normalenvektor an der angegebenen UV-Koordinatenposition zurück.
@@ -28,7 +28,7 @@ Importieren Sie eine Oberfläche in Dynamo und werten Sie sie an einer Parameter
 
 Eine Oberfläche ist eine durch eine Funktion und zwei Parameter definierte mathematische Form. Der entsprechende Parameterraum wird nicht wie bei Kurven durch `t`, sondern durch `U` und `V` beschrieben. Das bedeutet, dass bei der Arbeit mit dieser Art von Geometrie mehr geometrische Daten genutzt werden können. So sind z. B. bei Kurven Tangentenvektoren und Normalenebenen (die über die Länge der Kurve hinweg gedreht werden können), bei Oberflächen hingegen Normalenvektoren und Tangentialebenen vorhanden, deren Ausrichtung unverändert bleibt.
 
-![Surface](../images/5-2/5/Surface.jpg)
+![Oberfläche](../images/5-2/5/Surface.jpg)
 
 > 1. Oberfläche
 > 2. U-Isokurve
@@ -39,7 +39,7 @@ Eine Oberfläche ist eine durch eine Funktion und zwei Parameter definierte math
 
 **Oberflächendomäne**: Die Domäne einer Oberfläche ist als der Bereich von UV-Parametern definiert, die als dreidimensionale Punkte auf der Oberfläche ausgewertet werden können. Die Domäne für jede der Dimensionen (U oder V) wird normalerweise in Form zweier Zahlen (U Min bis U Max) und (V Min bis V Max) beschrieben.
 
-![Surface](../images/5-2/5/SurfaceParameter.jpg)
+![Oberfläche](../images/5-2/5/SurfaceParameter.jpg)
 
 Die Kontur der Oberfläche ist dem Augenschein nach nicht unbedingt "rechteckig" und das Netz der Isokurven kann lokal eng- oder weitmaschiger sein; der durch die Domäne definierte "Raum" ist jedoch immer zweidimensional. In Dynamo wird immer angenommen, dass die Domäne einer Oberfläche durch den Mindestwert 0.0 und den Höchstwert 1.0 sowohl in U- als auch in V-Richtung definiert ist. Bei planaren oder gestutzten Oberflächen sind andere Domänen möglich.
 
@@ -55,13 +55,13 @@ Die Kontur der Oberfläche ist dem Augenschein nach nicht unbedingt "rechteckig"
 
 ### NURBS-Oberflächen
 
-**NURBS-Oberflächen** sind NURBS-Kurven sehr ähnlich. NURBS-Oberflächen sind vorstellbar als  aus NURBS-Kurven gebildete Rastermit zwei Richtungen. Die Form einer NURBS-Oberfläche wird durch eine Reihe von Steuerpunkten und den Grad der Oberfläche in U- und V-Richtung definiert. Dieselben Algorithmen zur Berechnung von Form, Normalen, Tangenten, Krümmungen und anderer Eigenschaften mithilfe von Steuerpunkten, Gewichtungen und Grad kommen auch hier zum Einsatz.
+**NURBS-Oberflächen** sind NURBS-Kurven sehr ähnlich. NURBS-Oberflächen sind vorstellbar als aus NURBS-Kurven gebildete Raster mit zwei Richtungen. Die Form einer NURBS-Oberfläche wird durch eine Reihe von Steuerpunkten und den Grad der Oberfläche in U- und V-Richtung definiert. Dieselben Algorithmen zur Berechnung von Form, Normalen, Tangenten, Krümmungen und anderer Eigenschaften mithilfe von Steuerpunkten, Gewichtungen und Grad kommen auch hier zum Einsatz.
 
-![NURBS Surface](../images/5-2/5/NURBSsurface.jpg)
+![NURBS-Oberfläche](../images/5-2/5/NURBSsurface.jpg)
 
 Bei NURBS-Oberflächen werden zwei Richtungen für die Geometrie angenommen, da diese Oberflächen ungeachtet der sichtbaren Form rechtwinklige Raster von Steuerpunkten sind. Diese Richtungen liegen relativ zum Weltkoordinatensystem oft beliebig. Sie werden dennoch häufig zur Analyse von Modellen oder zum Generieren weiterer Geometrie auf Basis der Oberfläche verwendet.
 
-![NURBS Surface](../images/5-2/5/NURBSsurface-Degree.jpg)
+![NURBS-Oberfläche](../images/5-2/5/NURBSsurface-Degree.jpg)
 
 > 1. Grad (U,V) = (3,3)
 > 2. Grad (U,V) = (3,1)

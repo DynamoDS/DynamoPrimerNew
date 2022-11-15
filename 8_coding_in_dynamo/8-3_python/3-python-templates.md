@@ -6,13 +6,13 @@ Die Vorlage befindet sich im Ordner `APPDATA` Ihrer Dynamo-Installation.
 
 Dies ist in der Regel wie folgt `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-![](<../images/8-3/3/python templates - appdata folder location.jpg>)
+![](../images/8-3/3/pythontemplates-appdatafolderlocation.jpg)
 
 ### Einrichten der Vorlage
 
 Um diese Funktion nutzen zu können, müssen wir unserer Datei `DynamoSettings.xml` die folgende Zeile hinzufügen. _(in Editor bearbeiten)_
 
-![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
+![](../images/8-3/3/pythontemplates-dynamosettingsxmlfile.png)
 
 Ersetzen Sie alle Vorkommen von `<PythonTemplateFilePath />` durch das Folgende:
 
@@ -22,15 +22,13 @@ Ersetzen Sie alle Vorkommen von `<PythonTemplateFilePath />` durch das Folgende:
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Anmerkung: Ersetzen Sie CURRENTUSER durch Ihren Benutzernamen_
-{% endhint %}
+{% hint style="warning" %} _Anmerkung: Ersetzen Sie CURRENTUSER durch Ihren Benutzernamen_ {% endhint %}
 
 Als Nächstes müssen wir eine Vorlage mit den Funktionen erstellen, die wir integrieren möchten. In diesem Fall können wir die Revit-bezogenen Importe und einige andere typische Elemente einbetten, die wir bei der Arbeit mit Revit verwenden.
 
 Sie können mit einem leeren Editor-Dokument beginnen und den folgenden Code einfügen:
 
-```
+``` py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -73,10 +71,10 @@ Anschließend speichern Sie diese Datei als `PythonTemplate.py` am Speicherort `
 
 Nach dem Erstellen der Python-Vorlage sucht Dynamo jedes Mal danach, wenn Sie einen Python-Block einfügen. Wenn sie nicht gefunden wird, wird das vorgabemäßige Python-Fenster angezeigt.
 
-![](<../images/8-3/3/python templates - before setup template.jpg>)
+![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
 Wenn die Python-Vorlage gefunden wird (beispielsweise für Revit), werden alle vorgegebenen Elemente angezeigt, die Sie integriert haben.
 
-![](<../images/8-3/3/python templates - after setup template.jpg>)
+![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 Weitere Informationen zu dieser großartigen Ergänzung (von Radu Gidei) finden Sie hier. https://github.com/DynamoDS/Dynamo/pull/8122

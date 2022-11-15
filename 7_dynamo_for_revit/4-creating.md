@@ -2,7 +2,7 @@
 
 Sie können in Dynamo Arrays von Revit-Elementen mit uneingeschränkter parametrischer Steuerung erstellen. Die Revit-Blöcke in Dynamo ermöglichen das Importieren von Elementen aus allgemeiner Geometrie in spezifische Kategorietypen (z. B. Wände und Geschossdecken). In diesem Abschnitt importieren Sie Elemente mit flexiblen Parametern für adaptive Bauteile.
 
-![](<images/4/creating - dynamo nodes.jpg>)
+![](images/4/creating-dynamonodes.jpg)
 
 ### Adaptive Bauteile
 
@@ -10,7 +10,7 @@ Ein adaptives Bauteil ist eine flexible Familienkategorie, die sich für generat
 
 Das Beispiel unten zeigt ein adaptives Bauteil mit drei Punkten im Familieneditor. Es dient zum Erstellen eines durch die Positionen der einzelnen adaptiven Punkte gesteuerten Fachwerkbinders. In der folgenden Übung erstellen Sie mithilfe dieses Bauteils eine Reihe von Fachwerkbindern an einer Fassade.
 
-![](../.gitbook/assets/ac.jpg)
+![](images/4/ac.jpg)
 
 ### Prinzipien der Interoperabilität
 
@@ -24,7 +24,7 @@ In der folgenden Übung richten Sie einen Arbeitsablauf ein, der Ihnen Zugriff a
 
 In der [ersten Übung](8-4\_creating.md#exercise) unten wird gezeigt, wie Dynamo Daten für die Erstellung von Revit-Elementen referenziert. Um mehrere adaptive Bauteile zu generieren, definieren Sie eine Liste von Listen, wobei jede Liste drei Punkte enthält, die für die Punkte im adaptiven Bauteil stehen. Beachten Sie dies, während die Datenstrukturen in Dynamo verwaltet werden.
 
-![](<images/4/creating - multiple elements and lists 01.jpg>)
+![](images/4/creating-multipleelementsandlists01.jpg)
 
 ### DirectShape-Elemente
 
@@ -42,14 +42,14 @@ Die [zweite Übung](8-4\_creating.md#exercise-directshape-elements) zeigt den Ab
 
 Beginnen Sie mit der Beispieldatei für diesen Abschnitt (oder verwenden Sie weiterhin die Revit-Datei aus dem vorigen Abschnitt). Derselbe Revit-Körper wird angezeigt.
 
-![](<images/4/creating - exercise 01.jpg>)
+![](images/4/creating-exercise01.jpg)
 
 > 1. Dies ist der Zustand beim Öffnen der Datei.
 > 2. Dies ist das Fachwerksystem, das Sie mit Dynamo erstellt haben, wobei eine intelligente Verknüpfung mit dem Revit-Körper genutzt wird.
 
 Sie haben bereits mit den Blöcken _Select Model Element_ und _Select Face_ gearbeitet. Hier verwenden Sie _Select Edge_ und arbeiten damit eine Ebene tiefer in der Geometriehierarchie. Stellen Sie für die Ausführung des Dynamo-Solver die Option _Automatisch_ ein, damit das Diagramm laufend gemäß den Änderungen in der Revit-Datei aktualisiert wird. Die Kante, die Sie auswählen, ist dynamisch mit der Topologie des Revit-Elements verbunden. Solange die Topologie* unverändert bleibt, bleibt die Verknüpfung zwischen Revit und Dynamo erhalten.
 
-![](<images/4/creating - exercise 02.jpg>)
+![](images/4/creating-exercise02.jpg)
 
 > 1. Wählen Sie die oberste Kurve der verglasten Fassade aus. Diese erstreckt sich über die gesamte Länge des Gebäudes. Falls Sie bei der Auswahl der Kante Schwierigkeiten haben, können Sie in Revit den Mauszeiger auf die Kante setzen und die _Tabulatortaste_ drücken, bis die gewünschte Kante hervorgehoben wird.
 > 2. Wählen Sie über zwei _Select Edge_-Blöcke die beiden Kanten für den Vorsprung in der Mitte der Fassade aus.
@@ -60,7 +60,7 @@ Sie haben bereits mit den Blöcken _Select Model Element_ und _Select Face_ gear
 
 Als Erstes müssen Sie die Kurven verbinden und zu einer Liste zusammenführen. Dadurch _gruppieren_ Sie die Kurven, um geometrische Operationen durchführen zu können.
 
-![](<images/4/creating - exercise 03.jpg>)
+![](images/4/creating-exercise03.jpg)
 
 > 1. Erstellen Sie eine Liste für die beiden Kurven in der Mitte der Fassade.
 > 2. Verbinden Sie die beiden Kurven zu einer Polykurve, indem Sie die _List.Create_-Komponente mit einem _Polycurve.ByJoinedCurves_-Block verbinden.
@@ -70,7 +70,7 @@ Als Erstes müssen Sie die Kurven verbinden und zu einer Liste zusammenführen. 
 
 Danach verwenden Sie die oberste der Kurven, die eine über die gesamte Länge der Fassade verlaufende Linie ist. Sie erstellen entlang dieser Linie Ebenen, die die in der Liste zusammengefassten Kurven schneiden.
 
-![](<images/4/creating - exercise 04.jpg>)
+![](images/4/creating-exercise04.jpg)
 
 > 1. Definieren Sie in einem _Code Block_ einen Bereich mit der Syntax: `0..1..#numberOfTrusses;`
 > 2. Verbinden Sie einen *Integer Slider *mit der Eingabe des Codeblocks. Dessen Werte geben naheliegenderweise die Anzahl der Fachwerkbinder an. Beachten Sie, dass der Schieberegler die Anzahl der Einträge in einem von *0 *bis _1_ definierten Bereich steuert.
@@ -78,13 +78,13 @@ Danach verwenden Sie die oberste der Kurven, die eine über die gesamte Länge d
 
 Eine Ebene ist ein abstraktes Geometrieelement, das für einen unendlichen zweidimensionalen Raum steht. Ebenen eignen sich ausgezeichnet zum Erstellen von Konturen und Schnitten wie in diesem Schritt gezeigt.
 
-![](<images/4/creating - exercise 05.jpg>)
+![](images/4/creating-exercise05.jpg)
 
 > 1. Verwenden Sie als Nächstes den _Geometry.Intersect_-Block (legen Sie die Vergitterungsoption auf Kreuzprodukt fest): Verbinden Sie den _Curve.PlaneAtParameter_-Block mit der _entity_-Eingabe des _Geometry.Intersect_-Blocks. Verbinden Sie den _List.Create_-Block mit der _geometry_-Eingabe. Im Dynamo-Ansichtsfenster werden daraufhin die Schnittpunkte der einzelnen Kurven mit den definierten Ebenen angezeigt.
 
 Die Ausgabe ist eine Liste aus Listen von Listen. Sie enthält zu viele Listen für diesen Verwendungszweck. Sie müssen die Liste teilweise vereinfachen. Dazu müssen Sie die zweithöchste Ebene der Liste ansteuern und das Ergebnis vereinfachen. Verwenden Sie dazu die _List.Map_-Operation, die im Kapitel zu Listen in dieser Einführung beschrieben wird.
 
-![](<images/4/creating - exercise 06.jpg>)
+![](images/4/creating-exercise06.jpg)
 
 > 1. Verbinden Sie den _Geometry.Intersect_-Block mit der list-Eingabe von _List.Map_.
 > 2. Verbinden Sie einen _Flatten_-Block mit der f(x)-Eingabe von _List.Map_. Als Ergebnis erhalten Sie drei Listen, jeweils mit so vielen Einträgen, wie Fachwerkbinder erstellt werden sollen.
@@ -94,7 +94,7 @@ Die Ausgabe ist eine Liste aus Listen von Listen. Sie enthält zu viele Listen f
 
 Ordnen Sie jetzt die adaptiven Bauteile in einem Array an, wobei Sie dasselbe Verfahren verwenden wie beim Erstellen der Polygone.
 
-![](<images/4/creating - exercise 07.jpg>)
+![](images/4/creating-exercise07.jpg)
 
 > 1. Fügen Sie im Ansichtsbereich einen _AdaptiveComponent.ByPoints_-Block hinzu und verbinden Sie den _List.Transpose_-Block mit der _points_-Eingabe.
 > 2. Wählen Sie in einem _Family Types_-Block die _AdaptiveTruss_-Familie und verbinden Sie den Block mit der _FamilyType_-Eingabe des _AdaptiveComponent.ByPoints_-Blocks.
@@ -103,11 +103,11 @@ In Revit sind jetzt die zehn Fachwerkbinder gleichmäßig über die Länge der F
 
 Testen Sie das Diagramm: Erhöhen Sie den Wert für numberOfTrusses auf 30, indem Sie den Wert im Integer Slider ändern. Sie erhalten zahlreiche Fachwerkbinder: Dies mag nicht sonderlich realistisch wirken, es zeigt jedoch, dass die parametrische Verknüpfung funktionstüchtig ist. Legen Sie nach der Überprüfung numberOfTrusses auf 15 fest.
 
-![](<images/4/creating - exercise 08.gif>)
+![](images/4/creating-exercise08.gif)
 
 Führen Sie abschließend einen weiteren Test durch: Indem Sie in Revit den Körper auswählen und seine Exemplarparameter bearbeiten, können Sie die Form des Gebäudes ändern und beobachten, wie die Fachwerkbinder angepasst werden. Denken Sie daran, dass dieses Dynamo-Diagramm geöffnet sein muss, damit die Aktualisierung sichtbar ist. Sobald das Diagramm geschlossen wird, geht die Verknüpfung verloren.
 
-![](<images/4/creating - exercise 09.jpg>)
+![](images/4/creating-exercise09.jpg)
 
 ## Übung: DirectShape-Elemente
 
@@ -119,28 +119,28 @@ Führen Sie abschließend einen weiteren Test durch: Indem Sie in Revit den Kör
 
 Öffnen Sie als Erstes die Beispieldatei für diese Lektion: ARCH-DirectShape-BaseFile.rvt.
 
-![](<images/4/creating - exercise II - 01.jpg>)
+![](images/4/creating-exerciseII-01.jpg)
 
 > 1. Die 3D-Ansicht zeigt den Gebäudekörper aus der letzten Lektion.
 > 2. Entlang der Kante des Foyers verläuft eine Referenzkurve, die Sie in Dynamo referenzieren werden.
 > 3. Entlang der gegenüberliegenden Kante des Foyers verläuft eine zweite Referenzkurve, die ebenfalls in Dynamo referenziert werden soll.
 
-![](<images/4/creating - exercise II - 02.jpg>)
+![](images/4/creating-exerciseII-02.jpg)
 
 > 1. Zum Referenzieren der Geometrie in Dynamo verwenden Sie _Select Model Element_ für die einzelnen Elemente in Revit. Wählen Sie den Körper in Revit aus und importieren Sie die Geometrie mithilfe von _Element.Faces_ in Dynamo. Dadurch wird der Körper in der Dynamo-Vorschau angezeigt.
 > 2. Importieren Sie eine der Referenzkurven mithilfe von _Select Model Element_ und _CurveElement.Curve_ in Dynamo.
 > 3. Importieren Sie die andere Referenzkurve mithilfe von _Select Model Element_ und _CurveElement.Curve_ in Dynamo.
 
-![](<images/4/creating - exercise II - 03.jpg>)
+![](images/4/creating-exerciseII-03.jpg)
 
 > 1. Wenn Sie das Beispieldiagramm verkleinern und nach rechts schwenken, sehen Sie eine große Gruppe von Blöcken. Diese stehen für die geometrischen Operationen, mit denen die in der Dynamo-Vorschau gezeigte Gitterkonstruktion für das Dach generiert wird. Diese Blöcke wurden mithilfe der Funktion _Block zu Code_ erstellt, die im [Abschnitt zu Codeblöcken](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) dieser Einführung beschrieben wird.
 > 2. Diese Konstruktion wird im Wesentlichen durch drei Parameter gesteuert: Diagonal Shift, Camber und Radius.
 
 Vergrößern Sie die Darstellung der Parameter für dieses Diagramm. Indem Sie mit diesen experimentieren, erhalten Sie unterschiedliche Geometrie.
 
-![](<images/4/creating - exercise II - 04.jpg>)
+![](images/4/creating-exerciseII-04.jpg)
 
-![](<images/4/creating - exercise II - 05.jpg>)
+![](images/4/creating-exerciseII-05.jpg)
 
 > 1. Fügen Sie im Ansichtsbereich einen _DirectShape.ByGeometry_-Block hinzu. Dieser Block weist die vier Eingaben _geometry_**,** _category_**,** _material_ und _name_ auf.
 > 2. Die Geometrie ist der Körper, der mithilfe des Diagrammteils für die Geometrieerstellung erstellt wird.
@@ -149,4 +149,4 @@ Vergrößern Sie die Darstellung der Parameter für dieses Diagramm. Indem Sie m
 
 Nachdem Sie Dynamo ausgeführt haben, befindet sich die importierte Geometrie im Revit-Projekt auf dem Dach. Dabei handelt es sich nicht um ein allgemeines Modell, sondern ein Tragwerkselement. Die parametrische Verknüpfung mit Dynamo bleibt erhalten.
 
-![](<images/4/creating - exercise II - 06.jpg>)
+![](images/4/creating-exerciseII-06.jpg)

@@ -2,15 +2,15 @@
 
 ## Geometrie in Dynamo Sandbox
 
-**Geometrie** ist die Sprache der Konstruktion. Wenn eine Programmiersprache oder Programmierungsumgebung in seinem Kern einen geometrischen Kernel aufweist, können Sie die Möglichkeiten für das Konstruktion präziser und robuster Modelle, die Automatisierung von Konstruktionsroutinen und die Generierung von Konstruktionsiterationen mit Algorithmen erschließen.
+**Geometrie** ist die Sprache der Konstruktion. Wenn eine Programmiersprache oder Programmierungsumgebung in seinem Kern einen geometrischen Kernel aufweist, können Sie die Möglichkeiten für die Konstruktion präziser und robuster Modelle, die Automatisierung von Konstruktionsroutinen und die Generierung von Konstruktionsiterationen mit Algorithmen erschließen.
 
-Durch das Verstehen der Geometrietypen und der [Beziehungen, die sie zueinander aufweisen](1-geometry-overview.md#stepping-through-the-hierarchy), können Sie leichter durch die Sammlung der **Geometry-Blöcke** navigieren, die in der Bibliothek für Sie verfügbar sind. Die Geometrieknoten sind in alphabetischer Reihenfolge im Gegensatz zu hierarchischen angeordnet. Sie werden hier also ähnlich wie in ihrem Layout in der Dynamo Benutzeroberfläche angezeigt.
+Durch das Verstehen der Geometrietypen und der [Beziehungen, die sie zueinander aufweisen](1-geometry-overview.md#stepping-through-the-hierarchy), können Sie leichter durch die Sammlung der **Geometry-Blöcke** navigieren, die in der Bibliothek für Sie verfügbar sind. Die Geometrieblöcke sind in alphabetischer Reihenfolge im Gegensatz zu hierarchischen angeordnet. Sie werden hier also ähnlich wie in ihrem Layout in der Dynamo Benutzeroberfläche angezeigt.
 
-![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
+![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
 
 Darüber hinaus sollte das Erstellen von Modellen in Dynamo und das Verbindung der Vorschau in der Hintergrundvorschau mit dem Datenstrom in unserem Diagramm im Laufe der Zeit intuitiver werden.
 
-![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
+![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
 
 > 1. Beachten Sie das angenommene Koordinatensystem, das durch das Raster und die farbigen Achsen dargestellt wird.
 > 2. Die ausgewählten Knoten rendern die entsprechende Geometrie (wenn der Knoten Geometrie erstellt) im Hintergrund in der Hervorhebungsfarbe.
@@ -40,7 +40,7 @@ In der Praxis bedeutet dies, dass uns bewusst sein muss, womit wir arbeiten (wel
 
 ## Durchlaufen der Hierarchie
 
-Nehmen Sie sich etwas Zeit, um die Beziehung zwischen der abstrakten und hierarchischen Beschreibung von Geometrie näher zu betrachten. Da diese beiden Konzepte miteinander verbunden, aber nicht immer auf den ersten Blick ersichtlich sind, können Sie schnell in eine konzeptuelle Sackgasse gelangen, sobald Sie damit beginnen, tiefergehende Arbeitsabläufe oder Modelle zu entwickeln. Verwenden Sie zunächst Dimensionalität als eine einfache Beschreibung des "Zeugs", das Sie modellieren. Die Anzahl der Bemaßungen, die erforderlich sind, um eine Form zu beschreiben, verdeutlich, wie Geometrie hierarchisch aufgebaut ist.
+Nehmen Sie sich etwas Zeit, um die Beziehung zwischen der abstrakten und hierarchischen Beschreibung von Geometrie näher zu betrachten. Da diese beiden Konzepte miteinander verbunden, aber nicht immer auf den ersten Blick ersichtlich sind, können Sie schnell in eine konzeptuelle Sackgasse gelangen, sobald Sie damit beginnen, tiefergehende Arbeitsabläufe oder Modelle zu entwickeln. Verwenden Sie zunächst Dimensionalität als eine einfache Beschreibung des "Zeugs", das Sie modellieren. Die Anzahl der Bemaßungen, die erforderlich sind, um eine Form zu beschreiben, verdeutlicht, wie Geometrie hierarchisch aufgebaut ist.
 
 ![Rechnerische Geometrie](../images/5-2/1/GeometryDimensionality.jpg)
 
@@ -49,7 +49,7 @@ Nehmen Sie sich etwas Zeit, um die Beziehung zwischen der abstrakten und hierarc
 > 3. Eine **Ebene** (definiert durch zwei Linien) verfügt über _zwei_ Bemaßungen – Sie können sich jetzt weiter nach links oder nach rechts bewegen.
 > 4. Ein **Quader** (definiert durch zwei Ebenen) verfügt über _drei_ Bemaßungen – Sie können eine Position relativ zu oben oder unten definieren.
 
-Dimensionalität stellt eine praktische Möglichkeit zum Kategorisieren von Geometrie dar, jedoch nicht unbedingt die beste. Schließlich verwenden wir zum Modellieren nicht nur Punkte, Linien, Ebenen und Quader, sondern auch mal etwas Gekrümmtes? Darüber hinaus gibt es eine vollkommen andere Kategorie der geometrischen Typen, die vollständig abstrakt sind, d. h. die Eigenschaften wie Ausrichtung, Volumen und Beziehungen zwischen Bauteilen definieren. Ein Vektor ist nicht wirklich greifbar. Wie kann er also relativ zu dem definiert werden, was im Raum angezeigt wird? Eine detailliertere Kategorisierung der geometrischen Hierarchie sollte den Unterschied zwischen abstrakten Typen und "Helfern" berücksichtigen, die jeweils danach gruppiert werden können, welche Schritte sie unterstützen, und nach den Typen, die die Beschreibung der Form von Modellelementen unterstützen.
+Dimensionalität stellt eine praktische Möglichkeit zum Kategorisieren von Geometrie dar, jedoch nicht unbedingt die beste. Schließlich verwenden wir zum Modellieren nicht nur Punkte, Linien, Ebenen und Quader, sondern auch mal etwas Gekrümmtes? Darüber hinaus gibt es eine vollkommen andere Kategorie der geometrischen Typen, die vollständig abstrakt sind, d. h. die Eigenschaften wie Ausrichtung, Volumen und Beziehungen zwischen Bauteilen definieren. Ein Vektor ist nicht wirklich greifbar. Wie kann er also relativ zu dem definiert werden, was im Raum angezeigt wird? Eine detailliertere Kategorisierung der geometrischen Hierarchie sollte den Unterschied zwischen abstrakten Typen und "Helfern" berücksichtigen, die jeweils danach gruppiert werden können, welche Schritte sie unterstützen, und nach den Typen, die die Beschreibung der Form von Modellelementen unterstützen.
 
 ![Geometriehierarchie](../images/5-2/1/GeometryHierarchy.jpg)
 
@@ -59,4 +59,4 @@ Das Erstellen von Modellen in Dynamo ist nicht darauf beschränkt, was mit Knote
 
 1. Dynamo ermöglicht das Importieren von Dateien. Versuchen Sie, CSV-Dateien für Punktewolken zu verwenden, oder SAT-Dateien für das Einbeziehen von Flächen.
 2. Bei Verwendung von Revit können Revit-Elemente für die Verwendung in Dynamo referenziert werden.
-3. Der Dynamo Package Manager bietet zusätzliche Funktionen für erweiterte Geometrietypen und Vorgänge. Sehen Sie sich doch das [Mesh Toolkit]((https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit))-Paket mal an.
+3. Der Dynamo Package Manager bietet zusätzliche Funktionen wie das [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) für erweiterte Geometrietypen und Vorgänge.

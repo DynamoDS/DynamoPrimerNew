@@ -2,7 +2,7 @@
 
 In den vorigen Abschnitten wurde gezeigt, wie das _MapToSurface_-Paket sich aus benutzerdefinierten Blöcken und Beispieldateien zusammensetzt. Aber wie veröffentlichen Sie ein Paket, das lokal entwickelt wurde? Diese Fallstudie zeigt, wie Sie ein Paket aus einer Gruppe Dateien in einem lokalen Ordner veröffentlichen können.
 
-![](<../images/6-2/4/publish a package - custom nodes 01.jpg>)
+![](../images/6-2/4/publishapackage-customnodes01.jpg)
 
 Es gibt mehrere Möglichkeiten zum Veröffentlichen von Paketen. Im Folgenden wird der von uns empfohlene Prozess beschrieben: **Sie veröffentlichen lokal, entwickeln lokal und veröffentlichen schließlich online**. Sie beginnen mit einem Ordner, der sämtliche Dateien im Paket enthält.
 
@@ -12,15 +12,13 @@ Bevor Sie mit der Veröffentlichung des MapToSurface-Pakets beginnen, deinstalli
 
 Wechseln Sie zunächst zu Dynamo > Einstellungen > Package Manager, und klicken Sie neben MapToSurface auf das Menü mit den Punkten > Löschen.
 
-![](<../images/6-2/4/publish a package - delete package.jpg>)
+![](../images/6-2/4/publishapackage-deletepackage.jpg)
 
 Starten Sie dann Dynamo erneut. Wenn Sie beim erneuten Öffnen das Fenster _Pakete verwalten_ überprüfen, darf _MapToSurface_ dort nicht mehr vorhanden sein. Jetzt können Sie den Vorgang von Anfang an durchführen.
 
 ### Lokale Veröffentlichung von Paketen
 
-{% hint style="warning" %}
-Das Publizieren von Dynamo-Paketen ist nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert. Dynamo Sandbox verfügte nicht über Veröffentlichungsfunktionen.
-{% endhint %}
+{% hint style="warning" %} Das Publizieren von Dynamo-Paketen ist nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert. Dynamo Sandbox verfügt nicht über Veröffentlichungsfunktionen. {% endhint %}
 
 > Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
@@ -30,34 +28,34 @@ Das Publizieren von Dynamo-Paketen ist nur in Dynamo for Revit und Dynamo for Ci
 
 Sie übermitteln Ihr Paket zum ersten Mal und alle Beispieldateien und benutzerdefinierten Blöcke befinden sich im selben Ordner. Nachdem dieser Ordner vorbereitet ist, können Sie jetzt auf Dynamo Package Manager hochladen.
 
-![](<../images/6-2/4/publish a package - publish locally 01.jpg>)
+![](../images/6-2/4/publishapackage-publishlocally01.jpg)
 
 > 1. Der Ordner enthält fünf benutzerdefinierte Blöcke (.dyf).
 > 2. Er enthält außerdem fünf Beispieldateien (.dyn) und eine importierte Vektordatei (.svg). Diese Dateien dienen als einführende Übungen, die dem Benutzer die Arbeit mit den benutzerdefinierten Blöcken erläutern sollen.
 
 Klicken Sie in Dynamo zunächst auf _Pakete > Neues Paket veröffentlichen_.
 
-![](<../images/6-2/4/publish a package - publish locally 02.jpg>)
+![](../images/6-2/4/publishapackage-publishlocally02.jpg)
 
 In Fenster _Dynamo-Paket veröffentlichen_ ist das relevante Formular im linken Bereich bereits ausgefüllt.
 
-![](<../images/6-2/4/publish a package - publish locally 03.jpg>)
+![](../images/6-2/4/publishapackage-publishlocally03.jpg)
 
-> 1. Durch Klicken auf _Datei hinzufügen_ wurden außerdem die Dateien aus der Ordnerstruktur rechts auf dem Bildschirm hinzugefügt. (Um andere Dateien als DYF-Dateien hinzuzufügen, müssen Sie den Dateityp im Browserfenster in **Alle Dateien (**_**.**_**) ändern**. Beachten Sie, dass sämtliche Dateien ohne Unterscheidung zwischen benutzerdefinierten Blöcken (.dyf) und Beispieldateien (.dyn) hinzugefügt wurden. Dynamo ordnet diese Objekte beim Veröffentlichen des Pakets in Kategorien ein.
+> 1. Durch Klicken auf _Datei hinzufügen_ wurden außerdem die Dateien aus der Ordnerstruktur rechts auf dem Bildschirm hinzugefügt. (Um andere Dateien als DYF-Dateien hinzuzufügen, müssen Sie den Dateityp im Browserfenster in **Alle Dateien (**_**.**_**)** ändern. Beachten Sie, dass sämtliche Dateien ohne Unterscheidung zwischen benutzerdefinierten Blöcken (.dyf) und Beispieldateien (.dyn) hinzugefügt wurden. Dynamo ordnet diese Objekte beim Veröffentlichen des Pakets in Kategorien ein.
 > 2. Im Feld Gruppe wird definiert, in welcher Gruppe die benutzerdefinierten Blöcke in der Benutzeroberfläche von Dynamo abgelegt werden.
 > 3. Veröffentlichen Sie das Paket, indem Sie auf Lokal publizieren klicken. Achten Sie darauf, auf _Lokal publizieren_ und **nicht** auf _Online publizieren_ zu klicken: Es sollen keine Duplikate im Package Manager erstellt werden.
 
 Nach der Veröffentlichung werden die benutzerdefinierten Blöcke in der Gruppe DynamoPrimer oder in Ihrer Dynamo-Bibliothek angezeigt.
 
-![](<../images/6-2/4/publish a package - publish locally 04.jpg>)
+![](../images/6-2/4/publishapackage-publishlocally04.jpg)
 
 Sehen Sie jetzt im Stammverzeichnis nach, wie Dynamo das eben erstellte Paket formatiert hat. Klicken Sie dazu auf Dynamo > Einstellungen > Package Manager, und klicken Sie neben MapToSurface das Menü mit den Punkten > Stammverzeichnis anzeigen.
 
-![](<../images/6-2/4/publish a package - publish locally 05.jpg>)
+![](../images/6-2/4/publishapackage-publishlocally05.jpg)
 
 Das Stammverzeichnis befindet sich am lokalen Speicherort des Pakets (da Sie es lokal veröffentlicht haben). Dynamo greift derzeit zum Lesen benutzerdefinierter Blöcke auf diesen Ordner zu. Aus diesem Grund müssen Sie das Verzeichnis lokal an einem dauerhaften Speicherort ablegen (d. h. nicht auf Ihrem Desktop). Der Ordner mit dem Dynamo-Paket ist wie folgt gegliedert.
 
-![](<../images/6-2/4/publish a package - publish locally 06.jpg>)
+![](../images/6-2/4/publishapackage-publishlocally06.jpg)
 
 > 1. Im Ordner _bin_ befinden sich DLL-Dateien, die mit C#- oder Zero Touch-Bibliotheken erstellt wurden. Dieses Paket enthält keine solchen Dateien; dieser Ordner ist also in diesem Beispiel leer.
 > 2. Im Ordner _dyf_ befinden sich die benutzerdefinierten Blöcke. Wenn Sie ihn öffnen, werden alle benutzerdefinierten Blöcke (DYF-Dateien) für das Paket angezeigt.
@@ -66,11 +64,9 @@ Das Stammverzeichnis befindet sich am lokalen Speicherort des Pakets (da Sie es 
 
 ### Online-Veröffentlichung von Paketen
 
-{% hint style="warning" %}
-Anmerkung: Führen Sie diesen Schritt bitte nicht aus, es sei denn, Sie möchten tatsächlich ein eigenes Paket veröffentlichen.
-{% endhint %}
+{% hint style="warning" %} Anmerkung: Führen Sie diesen Schritt bitte nicht aus, es sei denn, Sie möchten tatsächlich ein eigenes Paket veröffentlichen. {% endhint %}
 
-![](<../images/6-2/4/publish a package - publish online 01.jpg>)
+![](../images/6-2/4/publishapackage-publishonline01.jpg)
 
 > 1. Wenn das Paket zur Veröffentlichung bereit ist, wählen Sie unter Einstellungen > Package Manager die Schaltfläche rechts von MapToSurface und wählen _Veröffentlichen_.
 > 2. Um ein bereits veröffentlichtes Paket zu aktualisieren, wählen Sie Version veröffentlichen. Dynamo aktualisiert dann Ihr Paket online mit den neuen Dateien im Stammverzeichnis des Pakets. Dieser einfache Schritt genügt.

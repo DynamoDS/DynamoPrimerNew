@@ -2,11 +2,11 @@
 
 ## Vektor, Ebene und Koordinatensystem in Dynamo
 
-### Vector
+### Vektor
 
 Ein [Vektor](5-2\_vectors.md#vector-1) ist eine Darstellung der Größe und Richtung. Sie können sich diesen als einen Pfeil vorstellen, der mit einer bestimmten Geschwindigkeit in eine bestimmte Richtung beschleunigt. Vektoren stellen eine wichtige Komponente für Modelle in Dynamo dar. Beachten Sie, dass Sie zur abstrakten Kategorie der "Helfer" gehören. Wenn Sie also einen Vektor erstellen, wird nichts in der Hintergrundvorschau angezeigt.
 
-![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
+![Vektoren in Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
 > 1. Sie können eine Linie zur Darstellung einer Vektorvorschau verwenden.
 
@@ -20,7 +20,7 @@ Ein [Vektor](5-2\_vectors.md#vector-1) ist eine Darstellung der Größe und Rich
 
 Eine [Ebene](5-2\_vectors.md#plane-1) ist eine zweidimensionale Fläche. Sie können sich diese als eine flache Oberfläche vorstellen, die sich unendlich ausdehnt. Jede Ebene verfügt über einen Ursprung, eine X-Richtung, eine Y-Richtung und eine Z-Richtung (nach oben).
 
-![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
+![Ebenen in Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
 > 1. Ebenen sind zwar abstrakt, verfügen aber über eine Ursprungsposition, damit sie im Raum lokalisiert werden können.
 > 2. In Dynamo werden Ebenen in der Hintergrundvorschau gerendert.
@@ -35,7 +35,7 @@ Eine [Ebene](5-2\_vectors.md#plane-1) ist eine zweidimensionale Fläche. Sie kö
 
 Ein [Koordinatensystem](5-2\_vectors.md#coordinate-system-1) ist ein System zur Bestimmung der Position von Punkten oder anderen geometrischen Elementen. In der folgenden Abbildung wird erläutert, wie die Darstellung in Dynamo aussieht und welche Bedeutung die einzelnen Farben haben.
 
-![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
+![Koordinatensystem in Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 
 > 1. Koordinatensysteme sind zwar abstrakt, verfügen aber über eine Ursprungsposition, damit sie im Raum lokalisiert werden können.
 > 2. In Dynamo werden Koordinatensysteme in der Hintergrundvorschau als Punkt (Ursprung) und Linien gerendert, die die Achsen definieren (gemäß folgender Konvention: X ist rot, Y ist grün und Z ist blau).
@@ -52,9 +52,9 @@ Vektoren, Ebenen und Koordinatensysteme bilden die primäre Gruppe der abstrakte
 
 ![Vektoren, Ebenen und Koordinaten](../images/5-2/2/VectorsPlanesCoodinates.jpg)
 
-### Vector
+### Vektor
 
-Ein Vektor ist eine geometrische Größe, die die Richtung und den Betrag beschreibt. Vektoren sind abstrakt, d. h., dass Sie eine Größe darstellen, kein geometrisches Element. Vektoren können leicht mit Punkten verwechselt werden, da beide aus Wertelisten bestehen. Es gibt jedoch einen wesentlichen Unterschied: Punkte beschreiben eine Position in einem bestimmten Koordinatensystem, während Vektoren einen relativen Positionsunterschied beschreiben, also die "Richtung".
+Ein Vektor ist eine geometrische Größe, die die Richtung und den Betrag beschreibt. Vektoren sind abstrakt, d. h. sie stellen eine Größe dar, kein geometrisches Element. Vektoren können leicht mit Punkten verwechselt werden, da beide aus Wertelisten bestehen. Es gibt jedoch einen wesentlichen Unterschied: Punkte beschreiben eine Position in einem bestimmten Koordinatensystem, während Vektoren einen relativen Positionsunterschied beschreiben, also die "Richtung".
 
 ![Vektordetails](../images/5-2/2/Vector-Detailed.jpg)
 
@@ -65,7 +65,7 @@ Aufgliedern von Vektoren in Ihre Bestandteile mit derselben AB-Notation:
 ![Vektor](../images/5-2/2/Vector.jpg)
 
 > 1. Der **Startpunkt** von Vektoren wird als **Basis** bezeichnet.
-> 2. Der Endpunkt von \*\*Vektoren \*\*wird als **Spitze** oder **Ausrichtung** bezeichnet.
+> 2. Der **Endpunkt** von Vektoren wird als **Spitze** oder **Ausrichtung** bezeichnet.
 > 3. Vektor AB entspricht nicht Vektor BA, der in die entgegengesetzte Richtung weist.
 
 Wenn Sie in Bezug auf Vektoren (und ihrer abstrakten Definition) jemals einer komischen Entlastung bedürfen, sehen Sie sich die klassische Komödie "Die unglaubliche Reise in einem verrückten Flugzeug" an und hören auf die häufig zitierte, humorvolle Aussage:

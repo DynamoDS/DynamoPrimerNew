@@ -12,7 +12,7 @@ Dynamo definiert Netze mit einer Flächen-Scheitelpunkt-Datenstruktur. Auf eleme
 
 Um ein Netz zu erstellen, benötigen Sie eine Liste von Scheitelpunkten und ein System für die Gruppierung dieser Scheitelpunkte in Flächen. Dies wird auch als Indexgruppe bezeichnet.
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes-meshelements.jpg)
 
 > 1. Liste von Scheitelpunkten
 > 2. Liste von Indexgruppen zum Definieren von Flächen
@@ -25,7 +25,7 @@ Die Bibliothek enthält auch Werkzeuge zum Ändern und Reparieren von Netzen sow
 
 Ein Beispiel zur Verwendung dieses Pakets finden Sie in den [Fallstudien zu Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md).
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
 ## Vertiefung...
 
@@ -36,7 +36,7 @@ Ein Netz ist eine Sammlung von Vierecken und Dreiecken, die eine Oberfläche ode
 ![Netzelemente](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Netzscheitelpunkte
-> 2. Netzkanten: \*Kanten mit nur einer angrenzenden Fläche werden als "nackt" bezeichnet. Alle anderen Kanten sind "angezogen".
+> 2. Netzkanten *Kanten mit nur einer angrenzenden Fläche werden als "nackt" bezeichnet. Alle anderen Kanten sind "angezogen".
 > 3. Netzflächen
 
 ### Scheitelpunkte + Scheitelpunktnormalen
@@ -65,7 +65,7 @@ Welche Unterschiede bestehen zwischen Netz- und NURBS-Geometrie? Wann möchten S
 
 In einem früheren Kapitel haben wir gesehen, dass NURBS-Oberflächen durch eine Reihe von NURBS-Kurven in zwei Richtungen definiert werden. Diese Richtungen werden als `U` und `V` bezeichnet und ermöglichen, dass eine NURBS-Oberfläche gemäß einer zweidimensionalen Oberflächendomäne parametrisiert wird. Die Kurven selbst werden als Gleichungen im Computer gespeichert, sodass die resultierenden Oberflächen auf einen beliebigen, verhältnismäßig kleinen Genauigkeitsbereich berechnet werden können. Es kann jedoch schwierig sein, mehrere NURBS-Oberflächen miteinander zu kombinieren. Das Verbinden von zwei NURBS-Oberflächen führt zu einem Flächenverband, in dem verschiedene Bereiche der Geometrie unterschiedliche UV-Parameter und Kurvendefinitionen aufweisen.
 
-![Steuerpunkte](../images/5-2/7/NURBSvsMESH-01.jpg)
+![Kontrollpunkte](../images/5-2/7/NURBSvsMESH-01.jpg)
 
 > 1. Oberfläche
 > 2. Isoparametrische (Isoparm) Kurve

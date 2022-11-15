@@ -4,11 +4,11 @@
 
 Eine Liste ist eine Sammlung von Elementen oder Einträgen. Ein Beispiel kann z. B. ein Bündel Bananen sein. Jede Banane ist ein Eintrag in der Liste (bzw. im Bündel). Ein Bündel Bananen ist leichter aufzuheben als die einzelnen Bananen. Dasselbe gilt für die Gruppierung von Elementen durch parametrische Beziehungen in einer Datenstruktur.
 
-![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Bananen](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
 
 > Foto von [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
-Beim Einkaufen packen Sie alle gekauften Artikel in eine Tasche. Auch diese Tasche ist eine Liste. Angenommen, Sie benötigen drei Bündel Bananen, um (eine _große Menge_)Bananenbrot zu backen. Damit stellt die Tasche eine Liste mit Bananenbündeln und jedes Bündel eine Liste mit Bananen dar. Die Tasche ist eine Liste von Listen (zweidimensional) und jedes Bananenbündel ist eine Liste (eindimensional).
+Beim Einkaufen packen Sie alle gekauften Artikel in eine Tasche. Auch diese Tasche ist eine Liste. Angenommen, Sie benötigen drei Bündel Bananen, um (eine _große Menge_) Bananenbrot zu backen. Damit stellt die Tasche eine Liste mit Bananenbündeln und jedes Bündel eine Liste mit Bananen dar. Die Tasche ist eine Liste von Listen (zweidimensional) und jedes Bananenbündel ist eine Liste (eindimensional).
 
 In Dynamo sind Listendaten geordnet und der erste Eintrag in einer Liste hat immer den Index "0". Weiter unten wird beschrieben, wie Listen in Dynamo definiert werden und welche Beziehungen zwischen mehreren Listen möglich sind.
 
@@ -20,7 +20,7 @@ Wenn Sie etwa die Finger an Ihrer rechten zählen, würden Sie von 1 bis 5 zähl
 
 Beachten Sie, dass die Liste nach wie vor 5 Einträge enthält, sie werden nur beginnend mit 0 gezählt. Die Einträge in Listen müssen nicht unbedingt Zahlen sein. Vielmehr können alle in Dynamo unterstützten Datentypen verwendet werden: Punkte, Kurven, Oberflächen, Familien usw.
 
-![](<../images/5-4/1/what's a list - zero based indices.jpg>)
+![](../images/5-4/1/what'salist-zerobasedindices.jpg)
 
 > a. Index
 >
@@ -36,16 +36,16 @@ Diese Indizes sind ein entscheidendes Element bei der Arbeit mit Listen.
 
 Ein- und Ausgaben behandeln Listen abhängig vom verwendeten Block unterschiedlich. In diesem Beispiel wird die ausgegebene Liste mit fünf Punkten mit zwei verschiedenen Dynamo-Blöcken verbunden: **PolyCurve.ByPoints** und **Circle.ByCenterPointRadius**:
 
-![Input Examples](<../images/5-4/1/what's a list - inputs and outputs.jpg>)
+![Eingabebeispiele](../images/5-4/1/what'salist-inputsandoutputs.jpg)
 
-> 1. Die _points_-Eingabe von **PolyCurve.ByPoints** sucht nach _"Point\[]"_. Dies entspricht einer Liste von Punkten.
+> 1. Die _points_-Eingabe von **PolyCurve.ByPoints** sucht nach _"Point[]"_. Dies entspricht einer Liste von Punkten.
 > 2. Die Ausgabe von **PolyCurve.ByPoints** ist eine einzelne Polykurve, die aus den fünf Punkten aus der Liste erstellt wird.
 > 3. Die _centerPoint_-Eingabe für **Circle.ByCenterPointRadius** verlangt _"Point"_.
 > 4. Die Ausgabe für **Circle.ByCenterPointRadius** ist eine Liste mit fünf Kreisen, deren Mittelpunkte den Punkten aus der ursprünglichen Liste entsprechen.
 
 In **PolyCurve.ByPoints** und in **Circle.ByCenterPointRadius** wurden dieselben Daten eingegeben; mit dem **PolyCurve.ByPoints**-Block erhalten Sie jedoch nur eine Polykurve, während der **Circle.ByCenterPointRadius**-Block fünf Kreise um die einzelnen Punkte ausgibt. Intuitiv ist dies einleuchtend: Die Polykurve wird als Kurve gezeichnet, die die fünf Punkte verbindet, bei den Kreisen hingegen wird um jeden Punkt ein eigener Kreis erstellt. Was geschieht dabei mit den Daten?
 
-Wenn Sie den Mauszeiger auf die _points_-Eingabe von **Polycurve.ByPoints** setzen, sehen Sie, dass _"Point\[]"_ als Eingabe verlangt wird. Beachten Sie die Klammern am Ende. Dies steht für eine Liste von Punkten. Um eine einzelne Polykurve zu erstellen, wird eine Liste benötigt. Das bedeutet, dass dieser Block jede eingegebene Liste zu einer PolyCurve zusammenfasst.
+Wenn Sie den Mauszeiger auf die _points_-Eingabe von **Polycurve.ByPoints** setzen, sehen Sie, dass _"Point[]"_ als Eingabe verlangt wird. Beachten Sie die Klammern am Ende. Dies steht für eine Liste von Punkten. Um eine einzelne Polykurve zu erstellen, wird eine Liste benötigt. Das bedeutet, dass dieser Block jede eingegebene Liste zu einer PolyCurve zusammenfasst.
 
 Im Gegensatz dazu verlangt die _centerPoint_-Eingabe für **Circle.ByCenterPointRadius** den Typ _"Point"_. Dieser Block sucht nach einem einzelnen Punkt als einem eigenständigen Eintrag, um den Mittelpunkt des Kreises zu definieren. Aus diesem Grund erhalten Sie fünf Kreise aus den Eingabedaten. Die Kenntnis dieser Unterschiede bei den Eingaben in Dynamo erleichtert das Verständnis der Funktionsweise der Blöcke bei der Verarbeitung von Daten.
 
@@ -59,25 +59,25 @@ Angenommen, ein Block erstellt Liniensegmente zwischen Punkten (**Line.ByStartPo
 
 Die einfachste Möglichkeit besteht darin, jedem Wert genau einen Wert aus der anderen Eingabe zuzuordnen, bis das Ende einer der Folgen erreicht ist. Dieser Algorithmus wird als "Kürzeste Liste" bezeichnet. Dies ist das vorgegebene Verhalten in Dynamo-Blöcken:
 
-![](<../images/5-4/1/what's a list - lacing - shortest.jpg>)
+![](../images/5-4/1/what'salist-lacing-shortest.jpg)
 
 #### Längste Liste
 
 Der Algorithmus "Längste Liste" verbindet weiterhin Eingaben und verwendet gegebenenfalls Elemente mehrfach, bis alle Folgen aufgebraucht sind.
 
-![](<../images/5-4/1/what's a list - lacing - longest.jpg>)
+![](../images/5-4/1/what'salist-lacing-longest.jpg)
 
 #### Kreuzprodukt
 
 Mit der Methode "Kreuzprodukt" werden sämtliche möglichen Verbindungen hergestellt.
 
-![](<../images/5-4/1/what's a list - lacing - cross.jpg>)
+![](../images/5-4/1/what'salist-lacing-cross.jpg)
 
 Es ist leicht zu erkennen, dass es mehrere Möglichkeiten gibt, Linien zwischen diesen Punktgruppen zu zeichnen. Um die Vergitterungsoptionen aufzurufen, klicken Sie mit der rechten Maustaste in die Mitte eines Blocks und wählen das Menü Vergitterung.
 
-![](<../images/5-4/1/what's a list - right click lacing opt.jpg>)
+![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
-## Übungslektion
+## Übung
 
 > Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
@@ -93,16 +93,16 @@ Dabei ändern Sie die Vergitterung für **Point.ByCoordinates**, nehmen jedoch k
 
 Wenn Sie _Kürzeste Liste_ als Vergitterungsoption (entspricht der Vorgabeoption) wählen, erhalten Sie eine einfache diagonale Linie, die aus fünf Punkten besteht. Die kürzere Liste umfasst fünf Einträge. Aus diesem Grund endet die Vergitterung Kürzeste Liste, sobald das Ende dieser Liste erreicht ist.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 01.jpg>)
+![Eingabebeispiele](../images/5-4/1/what'salist-lacingexercise01.jpg)
 
 ### **Längste Liste**
 
 Mit der Vergitterung _Längste Liste_ erhalten Sie eine diagonale Linie, die vertikal endet. Der letzte Eintrag in der 5 Einträge langen Liste wird genau wie im Übersichtsdiagramm so lange wiederholt, bis auch das Ende der längeren Liste erreicht ist.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 02.jpg>)
+![Eingabebeispiele](../images/5-4/1/what'salist-lacingexercise02.jpg)
 
 ### **Kreuzprodukt**
 
 Bei der Vergitterung _Kreuzprodukt_ erhalten Sie jede mögliche Kombination der beiden Listen. Dadurch entsteht ein Raster aus 5 x 10 Punkten. Diese Datenstruktur entspricht der Darstellung des Kreuzprodukts im Übersichtsdiagramm oben, allerdings wurden die Daten dabei in eine Liste von Listen umgewandelt. Durch Verbinden einer PolyCurve wird sichtbar, dass jede Liste durch ihren x-Wert definiert ist. Damit entsteht eine Reihe mit fünf vertikalen Linien.
 
-![Input Examples](<../images/5-4/1/what's a list - lacing exercise 03.jpg>)
+![Eingabebeispiele](../images/5-4/1/what'salist-lacingexercise03.jpg)

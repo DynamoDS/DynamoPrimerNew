@@ -19,13 +19,11 @@ Mit Textskripts können Sie komplexere Beziehungen erstellen als durch visuelle 
 |                    |             |               |                    |                    |               |
 | ------------------ | ----------- | ------------- | ------------------ | ------------------ | ------------- |
 |                    | **Schleifen** | **Rekursionen** | **Zusammenfassen von Blöcken** | **Ext. Bibliotheken** | **Kurzschreibweisen** |
-| **DesignScript** | Ja | Ja | Ja | Nein | Ja |
-| **Python** | Ja | Ja | Teilweise | Ja | Nein |
-| **ZeroTouch (C#)** | Nein | Nein | Nein | Ja | Nein |
+| **DesignScript**   | Ja         | Ja           | Ja                | Nein                 | Ja           |
+| **Python**         | Ja         | Ja           | Teilweise          | Ja                | Nein            |
+| **ZeroTouch (C#)** | Nein          | Nein            | Nein                 | Ja                | Nein            |
 
-{% hint style="info" %}
-Unter [Referenz für die Skripterstellung](13-3\_scripting-reference.md) ist aufgelistet, worauf Sie mit welcher Dynamo-Bibliothek zugreifen können.
-{% endhint %}
+{% hint style="info" %} Unter [Referenz für die Skripterstellung](13-3\_scripting-reference.md) ist aufgelistet, worauf Sie mit welcher Dynamo-Bibliothek zugreifen können. {% endhint %}
 
 ### Parametrischer Denkansatz
 
@@ -35,11 +33,11 @@ Bei der Skripterstellung in Dynamo, einer zwangsläufig parametrischen Umgebung,
 
 * Versuchen Sie, die gegebenen Parameter in der Designaufgabe so festzulegen, dass Sie ein Modell direkt auf Basis dieser Daten konstruieren können.
 * Identifizieren Sie die Variablen, bevor Sie mit dem Erstellen von Code beginnen:
-   * Eine auf das absolut Notwendige beschränkte Gruppe von Eingaben
-   * Die beabsichtigte Ausgabe
-   * Konstanten
+  * Eine auf das absolut Notwendige beschränkte Gruppe von Eingaben
+  * Die beabsichtigte Ausgabe
+  * Konstanten
 
-![](<./images/2/think parametrically 01.jpg>)
+![](./images/2/thinkparametrically01.jpg)
 
 > Vor dem Schreiben des Codes wurden mehrere Variablen festgelegt.
 >
@@ -55,25 +53,23 @@ Bei der Skripterstellung in Dynamo, einer zwangsläufig parametrischen Umgebung,
 * Das parametrische Prinzip ermöglicht die Bearbeitung bestimmter Parameter oder Variablen, um das Endergebnis einer Gleichung zu ändern oder zu beeinflussen.
 * Versuchen Sie stets, Objekte in Ihrem Skript, die logisch miteinander verbunden sind, als Funktionen voneinander zu definieren. Auf diese Weise wird bei einer Änderung eines der Objekte auch das andere proportional dazu aktualisiert.
 * Beschränken Sie die Anzahl der Eingaben, indem Sie nur die wichtigsten Parameter bereitstellen:
-   * Wenn eine Gruppe von Parametern aus Parametern auf einer höheren Hierarchieebene abgeleitet werden kann, stellen Sie nur die übergeordneten Parameter als Skripteingaben bereit. Auf diese Weise vereinfachen Sie die Benutzeroberfläche des Skripts und machen dieses dadurch benutzerfreundlicher.
+  * Wenn eine Gruppe von Parametern aus Parametern auf einer höheren Hierarchieebene abgeleitet werden kann, stellen Sie nur die übergeordneten Parameter als Skripteingaben bereit. Auf diese Weise vereinfachen Sie die Benutzeroberfläche des Skripts und machen dieses dadurch benutzerfreundlicher.
 
-![](<./images/2/think parametrically 02.jpg>)
+![](./images/2/thinkparametrically02.jpg)
 
-> Der Code "modules" aus dem Beispiel in [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Die Codemodule aus dem Beispiel unter [Python-Block](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
 > 1. Eingaben.
 > 2. Interne Variablen für das Skript.
 > 3. Eine Schleife, die diese Eingaben und Variablen für ihre Funktion nutzt.
 
-{% hint style="info" %}
-Tipp: Wenden Sie für den Prozess dieselbe Sorgfalt an wie für die Lösung.
-{% endhint %}
+{% hint style="info" %} Tipp: Wenden Sie für den Prozess dieselbe Sorgfalt an wie für die Lösung. {% endhint %}
 
 ### **Vermeiden von Wiederholungen (das DRY-Prinzip – Don't repeat yourself):**
 
 * Falls es mehrere Möglichkeiten für denselben Vorgang in Ihrem Skript gibt, werden die doppelt vorhandenen Darstellungen schließlich asynchron, was die Wartung extrem schwierig macht, die Faktorisierung verschlechtert und interne Widersprüche verursacht.
 * Das DRY-Prinzip besagt, dass jede für jede Information genau eine eindeutige und maßgebliche Darstellung im System vorhanden sein muss.
-   * Wird dieses Prinzip erfolgreich angewendet, erfolgen Änderungen an allen verbundenen Elementen in Ihrem Skript in vorhersehbarer und einheitlicher Weise und Elemente, die nicht miteinander verbunden sind, haben keine logischen Auswirkungen aufeinander.
+  * Wird dieses Prinzip erfolgreich angewendet, erfolgen Änderungen an allen verbundenen Elementen in Ihrem Skript in vorhersehbarer und einheitlicher Weise und Elemente, die nicht miteinander verbunden sind, haben keine logischen Auswirkungen aufeinander.
 
 ```
 ### BAD
@@ -94,9 +90,7 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}
-Tipp: Bevor Sie Objekte in Ihrem Skript duplizieren (wie die Konstante im obigen Beispiel), überlegen Sie, ob Sie stattdessen eine Verknüpfung zur Quelle erstellen können.
-{% endhint %}
+{% hint style="info" %} Tipp: Bevor Sie Objekte in Ihrem Skript duplizieren (wie die Konstante im obigen Beispiel), überlegen Sie, ob Sie stattdessen eine Verknüpfung zur Quelle erstellen können. {% endhint %}
 
 ### Modulares Strukturieren
 
@@ -108,7 +102,7 @@ Mit zunehmender Länge und Komplexität des Codes ist das Grundkonzept bzw. der 
 * Dabei kann es sich um beliebigen Code handeln, der visuell von angrenzendem Code abgetrennt sollte (eine Funktion, eine Klasse, eine Gruppe von Eingaben oder die von Ihnen importierten Bibliotheken).
 * Durch die Entwicklung von Code in Form von Modulen können Sie sowohl die visuellen, intuitiven Eigenschaften von Blöcken als auch die komplexen Beziehungen nutzen, die nur mit Textskripts zu erreichen sind.
 
-![](<./images/2/think parametrically 02.jpg>)
+![](./images/2/thinkparametrically02.jpg)
 
 > Diese Schleifen rufen eine Klasse namens „agent“ auf, die in dieser Übung entwickelt wird.
 >
@@ -123,7 +117,7 @@ Mit zunehmender Länge und Komplexität des Codes ist das Grundkonzept bzw. der 
 
 In diesem Beispiel werden Kugeln erstellt, deren Radien und Farben vom Z-Wert ihrer Mittelpunkte abhängig sind.
 
-![](<./images/2/spot code resuse.jpg>)
+![](./images/2/spotcoderesuse.jpg)
 
 > 1. Zwei übergeordnete „Worker“-Funktionen zum Erstellen von Kugeln mit Radien und mit Anzeigefarben anhand des Z-Werts des Mittelpunkts.
 > 2. Eine übergeordnete „Manager“-Funktion, die die beiden „Worker“-Funktionen kombiniert. Durch Aufrufen dieser Funktion werden beide darin enthaltenen Funktionen aufgerufen.
@@ -139,56 +133,56 @@ In diesem Beispiel werden Kugeln erstellt, deren Radien und Farben vom Z-Wert ih
 
 **Allgemeine Formen der Modularisierung :**
 
-* Codegruppierung:
+*   Codegruppierung:
 
-   ```
-   # IMPORT LIBRARIES
-   import random
-   import math
-   import clr
-   clr.AddReference('ProtoGeometry')
-   from Autodesk.DesignScript.Geometry import *
+    ```
+    # IMPORT LIBRARIES
+    import random
+    import math
+    import clr
+    clr.AddReference('ProtoGeometry')
+    from Autodesk.DesignScript.Geometry import *
 
-   # DEFINE PARAMETER INPUTS
-   surfIn = IN[0]
-   maxSteps = IN[1]
-   ```
-* Funktionen:
+    # DEFINE PARAMETER INPUTS
+    surfIn = IN[0]
+    maxSteps = IN[1]
+    ```
+*   Funktionen:
 
-   ```
-   def get_step_size():
-     area = surfIn.Area
-     stepSize = math.sqrt(area)/100
-     return stepSize
+    ```
+    def get_step_size():
+      area = surfIn.Area
+      stepSize = math.sqrt(area)/100
+      return stepSize
 
-   stepSize = get_step_size()
-   ```
-* Klassen:
+    stepSize = get_step_size()
+    ```
+*   Klassen:
 
-   ```
-   class MyClass:
-     i = 12345
+    ```
+    class MyClass:
+      i = 12345
 
-     def f(self):
-       return 'hello world'
+      def f(self):
+        return 'hello world'
 
-   numbers = MyClass.i
-   greeting = MyClass.f
-   ```
+    numbers = MyClass.i
+    greeting = MyClass.f
+    ```
 
 ### Laufendes Testen
 
-Es ist sinnvoll, während der Entwicklung von Textskripts in Dynamo laufend zu überprüfen, ob die tatsächlich erstellten Funktionen Ihren Erwartungen entsprechen. Dadurch stellen Sie sicher, dass unvorhergesehene Ereignisse wie Syntaxfehler, logische Diskrepanzen, falsche Werte, regelwidrige Ausgaben usw.nicht erst zum Schluss alle zusammen, sondern direkt bei ihrem Auftreten schnell erkannt und korrigiert werden. Da die Textskripts sich innerhalb der Blöcke im Ansichtsbereich befinden, sind sie bereits in den Datenfluss des visuellen Programms integriert. Die laufende Überwachung des Skripts gestaltet sich dadurch so einfach wie das Zuweisen von Daten für die Ausgabe, die Ausführung des Programms und die Auswertung des Skriptergebnisses über einen Beobachtungsblock. Im Folgenden finden Sie einige Tipps für die laufende Überwachung Ihrer Skripts, während Sie sie konstruieren.
+Es ist sinnvoll, während der Entwicklung von Textskripts in Dynamo laufend zu überprüfen, ob die tatsächlich erstellten Funktionen Ihren Erwartungen entsprechen. Dadurch stellen Sie sicher, dass unvorhergesehene Ereignisse wie Syntaxfehler, logische Diskrepanzen, falsche Werte, regelwidrige Ausgaben usw. nicht erst zum Schluss alle zusammen, sondern direkt bei ihrem Auftreten schnell erkannt und korrigiert werden. Da die Textskripts sich innerhalb der Blöcke im Ansichtsbereich befinden, sind sie bereits in den Datenfluss des visuellen Programms integriert. Die laufende Überwachung des Skripts gestaltet sich dadurch so einfach wie das Zuweisen von Daten für die Ausgabe, die Ausführung des Programms und die Auswertung des Skriptergebnisses über einen Beobachtungsblock. Im Folgenden finden Sie einige Tipps für die laufende Überwachung Ihrer Skripts, während Sie sie konstruieren.
 
 **Testen Sie während der Entwicklung:**
 
 * Wenn Sie eine Gruppe von Funktionen erstellt haben:
-   * Überprüfen Sie Ihren Code aus distanzierter Sicht.
-   * Seien Sie dabei kritisch. Ist die Funktionsweise für einen Teamkollegen verständlich? Brauche ich das wirklich? Kann diese Funktion effizienter durchgeführt werden? Werden unnötige Duplikate oder Abhängigkeiten erstellt?
-   * Führen Sie rasch Tests durch, um sich zu überzeugen, dass plausible Daten zurückgegebenen werden.
+  * Überprüfen Sie Ihren Code aus distanzierter Sicht.
+  * Seien Sie dabei kritisch. Ist die Funktionsweise für einen Teamkollegen verständlich? Brauche ich das wirklich? Kann diese Funktion effizienter durchgeführt werden? Werden unnötige Duplikate oder Abhängigkeiten erstellt?
+  * Führen Sie rasch Tests durch, um sich zu überzeugen, dass plausible Daten zurückgegebenen werden.
 * Weisen Sie die aktuellsten Daten, mit denen Sie arbeiten, in Ihrem Skript als Ausgabedaten zu, damit der Block bei einer Aktualisierung des Skripts immer relevante Daten ausgibt:
 
-![](<./images/2/flex continuously.jpg>)
+![](./images/2/flexcontinuously.jpg)
 
 > 1. Überprüfen Sie, ob alle Kanten des Volumenkörpers als Kurven zurückgegeben werden, damit ein Begrenzungsrahmen darum erstellt wird.
 > 2. Überprüfen Sie, ob die Count-Eingaben in Ranges konvertiert werden.
@@ -199,11 +193,9 @@ Es ist sinnvoll, während der Entwicklung von Textskripts in Dynamo laufend zu �
 * Geben Sie während der Skripterstellung die Mindest- und Höchstwerte der Eingabeparameter innerhalb ihrer zugewiesenen Domäne an, um zu testen, ob das Programm auch unter extremen Bedingungen funktioniert.
 * Überprüfen Sie auch dann, wenn das Programm mit seinen Extremwerten funktioniert, ob es unbeabsichtigte Nullwerte oder leere Werte zurückgibt.
 * Bugs und Fehler, die auf grundlegende Probleme mit dem Skript hinweisen, werden zuweilen nur in solchen Grenzfällen erkennbar.
-   * Ermitteln Sie die Fehlerursache, und entscheiden Sie, ob sie intern behoben werden muss oder ob zur Vermeidung des Problems eine Parameterdomäne neu definiert werden muss.
+  * Ermitteln Sie die Fehlerursache, und entscheiden Sie, ob sie intern behoben werden muss oder ob zur Vermeidung des Problems eine Parameterdomäne neu definiert werden muss.
 
-{% hint style="info" %}
-Tipp: Gehen Sie stets davon aus, dass die Benutzer jede mögliche Kombination sämtlicher für sie bereitgestellten Eingabewerte verwenden werden. Auf diese Weise vermeiden Sie unangenehme Überraschungen.
-{% endhint %}
+{% hint style="info" %} Tipp: Gehen Sie stets davon aus, dass die Benutzer jede mögliche Kombination sämtlicher für sie bereitgestellten Eingabewerte verwenden werden. Auf diese Weise vermeiden Sie unangenehme Überraschungen. {% endhint %}
 
 ### Effiziente Fehlersuche
 
@@ -238,11 +230,11 @@ for i in range(xCount):
 * Die Ursache eines Problems kann gezielt auf bestimmte Module zurückgeführt werden.
 * Nachdem Sie das fehlerhafte Modul identifiziert haben, lässt sich das Problem wesentlich leichter beheben.
 * Wenn ein Programm geändert werden muss, ist Code, der in Form von Modulen entwickelt wurde, erheblich leichter zu ändern.
-   * Sie können neue oder korrigierte Module in ein bestehendes Programm einfügen und sich dabei darauf verlassen, dass der Rest des Programms unverändert bleibt.
+  * Sie können neue oder korrigierte Module in ein bestehendes Programm einfügen und sich dabei darauf verlassen, dass der Rest des Programms unverändert bleibt.
 
-![](<./images/2/leverage code's modularity.jpg>)
+![](./images/2/leveragecode'smodularity.jpg)
 
-> Debuggen der Beispieldatei aus [Python Node](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Debuggen der Beispieldatei aus dem [Python-Block](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
 >
 > 1. Die Eingabegeometrie gibt einen Begrenzungsrahmen zurück, der größer ist als sie selbst, wie durch Zuweisen von xDist und yDist zu OUT zu erkennen ist.
 > 2. Die Kantenkurven der Eingabegeometrie geben einen passenden Begrenzungsrahmen mit den richtigen Entfernungen für xDist und yDist zurück.
@@ -260,32 +252,32 @@ In dieser Übung schreiben Sie unter Beachtung der optimalen Verfahren für Text
 
 Das auf eine durch einen Attraktor verformte Oberfläche angewendete Skript.
 
-![](<./images/2/scripting strategies - exercise - 01.jpg>)
+![](./images/2/scriptingstrategies-exercise-01.jpg)
 
 Als Erstes müssen Sie die benötigten Dynamo-Bibliotheken importieren. Indem Sie dies zu Anfang durchführen, erhalten Sie globalen Zugriff auf Dynamo-Funktionen in Python.
 
 Sie müssen hier sämtliche Bibliotheken importieren, die Sie verwenden möchten.
 
-![](<./images/2/scripting strategies - exercise - 02.jpg>)
+![](./images/2/scriptingstrategies-exercise-02.jpg)
 
 Anschließend müssen Sie die Eingaben und die Ausgabe definieren, die als Eingabeanschlüsse am Block angezeigt werden. Diese externen Eingaben sind die Grundlage für das Skript und der Schlüssel zum Erstellen einer parametrischen Umgebung.
 
 Sie müssen Eingaben definieren, die Variablen im Python-Skript entsprechen, und die gewünschte Ausgabe bestimmen:
 
-![](<./images/2/scripting strategies - exercise - 03.jpg>)
+![](./images/2/scriptingstrategies-exercise-03.jpg)
 
 > 1. Die Oberfläche, über die die Bewegung nach unten erfolgen soll.
 > 2. Die Anzahl der Agents, die sich bewegen sollen.
 > 3. Die maximale Anzahl an Schritten, die die Agents ausführen dürfen.
 > 4. Eine Option, mit der entweder der kürzeste Weg abwärts auf der Oberfläche oder eine seitliche Bewegung gewählt werden kann.
-> 5. Der Python-Block mit Eingabe-IDs, die den Eingaben im Skript (IN\[0], IN\[1]) entsprechen.
+> 5. Der Python-Block mit Eingabe-IDs, die den Eingaben im Skript (IN[0], IN[1]) entsprechen.
 > 6. Ausgabekurven, die in einer anderen Farbe angezeigt werden können.
 
 Erstellen Sie jetzt unter Beachtung des Modularitätsprinzips den Hauptteil des Skripts. Die Simulation des kürzesten Wegs abwärts auf einer Oberfläche ausgehend von unterschiedlichen Startpunkten ist eine größere Aufgabe, die mehrere Funktionen erfordert. Anstatt die verschiedenen Funktionen im Verlauf des ganzen Skripts aufzurufen, können Sie den Code modularisieren, indem Sie sie in einer einzigen Klasse, dem Agent, sammeln. Die verschiedenen Funktionen dieser Klasse – des „Moduls“ – können über unterschiedliche Variablen aufgerufen oder sogar in einem anderen Skripts wiederverwendet werden.
 
 Sie müssen eine Klasse bzw. eine Vorlage für einen Agent definieren, der eine Abwärtsbewegung über eine Oberfläche darstellt, wobei bei jedem Schritt der Bewegung jeweils die Richtung mit der maximalen Neigung gewählt wird:
 
-![](<./images/2/scripting strategies - exercise - 04.jpg>)
+![](./images/2/scriptingstrategies-exercise-04.jpg)
 
 > 1. Name.
 > 2. Globale, allen Agents gemeinsame Attribute.
@@ -297,7 +289,7 @@ Initialisieren Sie die Agents, indem Sie ihre Startpositionen definieren. Dies i
 
 Sie müssen alle Agents, deren Abwärtsbewegung über die Oberfläche Sie beobachten möchten, instanziieren und ihre Anfangsattribute definieren.
 
-![](<./images/2/scripting strategies - exercise - 05.jpg>)
+![](./images/2/scriptingstrategies-exercise-05.jpg)
 
 > 1. Eine neue, leere Pfadliste.
 > 2. Ausgangspunkt der Bewegung über die Oberfläche.
@@ -305,15 +297,15 @@ Sie müssen alle Agents, deren Abwärtsbewegung über die Oberfläche Sie beobac
 
 Aktualisieren Sie die einzelnen Agents bei jedem Schritt. Anschließend müssen Sie eine verschachtelte Schleife starten, wobei die Position für jeden Agent und jeden Schritt aktualisiert und in der jeweiligen Pfadliste aufgezeichnet wird. Bei jedem Schritt wird außerdem geprüft, ob der Agent einen Punkt auf der Oberfläche erreicht hat, von dem aus keine weiteren Abwärtsschritte mehr möglich sind. Ist diese Bedingung erfüllt, wird die Bewegung des Agent beendet.
 
-![](<./images/2/scripting strategies - exercise - 06.jpg>)
+![](./images/2/scriptingstrategies-exercise-06.jpg)
 
 Nachdem die Agents vollständig aktualisiert sind, können Sie Geometrie ausgeben, durch die sie dargestellt werden. Nachdem alle Agents entweder den Endpunkt ihrer Abwärtsbewegung erreicht oder die maximale Anzahl Schritte ausgeführt haben, erstellen Sie eine Polykurve durch die Punkte in ihrem Pfad und geben die Polykurvenpfade aus.
 
-![](<./images/2/scripting strategies - exercise - 07.jpg>)
+![](./images/2/scriptingstrategies-exercise-07.jpg)
 
 Das Skript zur Ermittlung der steilstmöglichen Pfade.
 
-![](<./images/2/scripting strategies - exercise - 08.jpg>)
+![](./images/2/scriptingstrategies-exercise-08.jpg)
 
 > 1. Voreinstellung zur Simulation von Regen auf der zugrunde liegenden Oberfläche.
 > 2. Die Agents können umgeschaltet werden, sodass sie nicht die steilstmöglichen Pfade suchen, sondern die Oberfläche überqueren.

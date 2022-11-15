@@ -12,21 +12,21 @@ Die einfachste Methode zum Installieren eines Pakets ist die Verwendung des Werk
 
 Wechseln Sie in Dynamo zu _Pakete > Suchen nach Paket_.
 
-![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
 
 Suchen Sie mithilfe der Suchleiste nach "quads from rectangular grid". Nach kurzer Zeit sollten alle Pakete, die dieser Suchabfrage entsprechen, angezeigt werden. Sie müssen in diesem Fall das erste Paket mit passendem Namen auswählen.
 
 Klicken Sie auf Installieren, um dieses Paket zu Ihrer Bibliothek hinzuzufügen. Fertig!
 
-![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
 
 In der Dynamo-Bibliothek wird jetzt eine weitere Gruppe namens buildz angezeigt. Dieser Name bezieht sich auf den Entwickler des Pakets und der benutzerdefinierte Block wird in dieser Gruppe abgelegt. Sie können ihn sofort verwenden.
 
-![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage03.jpg)
 
 Verwenden Sie den **Codeblock**, um schnell ein rechteckiges Raster zu definieren, und geben Sie das Ergebnis als **Polygon.ByPoints**-Block und anschließend als **Surface.ByPatch**-Block aus, um die Liste der rechteckigen Elemente anzuzeigen, die Sie gerade erstellt haben.
 
-![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage04.jpg)
 
 ### Paketordner wird installiert - DynamoUnfold
 
@@ -36,23 +36,23 @@ Beginnen Sie wie im Beispiel oben, indem Sie _Pakete > Suchen nach Paket_ wähle
 
 Suchen Sie in diesem Fall nach _DynamoUnfold_ – in einem Wort geschrieben und unter Berücksichtigung der Groß- und Kleinschreibung. Wenn die Pakete angezeigt werden, laden Sie sie herunter, indem Sie auf Installieren klicken, um Dynamo Unfold Ihrer Dynamo-Bibliothek hinzuzufügen.
 
-![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
 
 Die Dynamo-Bibliothek enthält jetzt die Gruppe _DynamoUnfold_ mit mehreren Kategorien und benutzerdefinierten Blöcken.
 
-![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
 Als Nächstes betrachten Sie die Dateistruktur des Pakets genauer. Wählen Sie zunächst Dynamo > Einstellungen.
 
-![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
 
-Öffnen Sie über das Popup-Menü Voreinstellungen den Package Manager, und wählen Sie neben DynamoUnfold das vertikale Punktemenü ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) und dann Stammverzeichnis anzeigen aus, um den Stammordner für dieses Paket zu öffnen.
+Öffnen Sie über das Popup-Menü Voreinstellungen den Package Manager, und wählen Sie neben DynamoUnfold das vertikale Punktemenü ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) und dann Stammverzeichnis anzeigen aus, um den Stammordner für dieses Paket zu öffnen.
 
-![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
 
 Dadurch gelangen Sie zum Stammverzeichnis des Pakets. Hier sind drei Ordner und eine Datei vorhanden.
 
-![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder05.jpg)
 
 > 1. Im Ordner _bin_ werden DLL-Dateien gespeichert. Dieses Dynamo-Paket wurde mit Zero-Touch entwickelt, d. h., die benutzerdefinierten Blöcke wurden in diesem Ordner abgelegt.
 > 2. Im Ordner _dyf_ befinden sich die benutzerdefinierten Blöcke. Da dieses Paket nicht mithilfe benutzerdefinierter Dynamo-Blöcke entwickelt wurde, ist dieser Ordner in diesem Paket leer.
@@ -67,7 +67,7 @@ Wenn Sie den Ordner extra öffnen, sehen Sie eine Reihe von Beispieldateien, die
 
 Nachdem Sie die Datei geöffnet und im Solver auf Ausführen geklickt haben, erhalten Sie das Netz einer Kugel! Beispieldateien wie diese erleichtern den Einstieg in die Arbeit mit einem neuen Dynamo-Paket.
 
-![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg)
 
 ### Dynamo Package Manager
 
@@ -83,7 +83,7 @@ Sie können die Paketdateien auch über den Dynamo Package Manager herunterladen
 
 Wenn Sie Dateien aus dem Dynamo Package Manager herunterladen oder sehen möchten, wo alle Paketdateien gespeichert sind, klicken Sie auf Dynamo > Package Manager > Pfade für Blöcke und Pakete. Hier finden Sie das aktuelle Stammordnerverzeichnis.
 
-![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 Pakete werden vorgabemäßig unter einem Speicherort ähnlich dem folgenden installiert: _C:/Benutzer/[Benutzername]/AppData/Roaming/Dynamo/[Dynamo-Version]_.
 

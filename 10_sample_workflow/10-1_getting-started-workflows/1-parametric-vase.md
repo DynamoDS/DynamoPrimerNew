@@ -12,7 +12,7 @@ In diesem Arbeitsablauf lernen Sie Folgendes:
 * Erstellen und ändern von geometrischen Elementen mithilfe von Blöcken.
 * Visualisieren der Ergebnisse in Echtzeit.
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ## Definieren der Ziele
 
@@ -32,7 +32,7 @@ Wir verwenden eine ähnliche Methode, um unsere Vase zu definieren. Wir erstelle
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-Wir benötigen die Blöcke, die die Reihenfolge der Aktionen darstellen, die von Dynamo ausgeführt werden. Da wir einen Kreis erstellen möchten, suchen Sie nach einem Block, der diese Aktion ausführt. Verwenden Sie das **Suchfeld**, oder durchsuchen Sie die **Bibliothek**, um den **Circle.ByCenterPointRadius**-Block zu suchen und ihn dem Arbeitsbereich hinzuzufügen.
+Wir benötigen die Blöcke, die die Reihenfolge der Aktionen darstellen, die von Dynamo ausgeführt werden. Da wir einen Kreis erstellen möchten, suchen Sie nach einem Block, der diese Aktion ausführt. Verwenden Sie das **Suchfeld**, oder durchsuchen Sie die **Bibliothek**, um den **Circle.ByCenterPointRadius**-Block zu suchen und ihn zum Arbeitsbereich hinzuzufügen.
 
 ![](../images/10-1/1/vase8.png)
 
@@ -44,11 +44,11 @@ Sehen wir uns diesen Block genauer an. Auf der linken Seite befinden sich die Ei
 
 ![](../images/10-1/1/vase10.png)
 
-Wir behalten den Vorgabewert für _centerPoint_ bei, fügen jedoch einen **Number Slider** hinzu, um den Radius zu steuern. Verwenden Sie wie beim **Circle.ByCenterPointRadius**-Block die Bibliothek, um nach dem **Number Slider** zu suchen und ihn Ihrem Diagramm hinzuzufügen.
+Wir behalten den Vorgabewert für _centerPoint_ bei, fügen jedoch einen **Number Slider** hinzu, um den Radius zu steuern. Verwenden Sie wie beim **Circle.ByCenterPointRadius**-Block die Bibliothek, um nach dem **Number Slider** zu suchen und ihn zu Ihrem Diagramm hinzuzufügen.
 
 Dieser Block unterscheidet sich etwas von dem vorherigen Block, da er einen Schieberegler enthält. Mit der Benutzeroberfläche können Sie den Ausgabewert des Schiebereglers ändern.
 
-![](<../images/10-1/1/vase13 (1).gif>)
+![](../images/10-1/1/vase13(1).gif)
 
 Der Schieberegler kann über die Dropdown-Schaltfläche auf der linken Seite des Blocks konfiguriert werden. Wir beschränken den Schieberegler auf einen Höchstwert von 15.
 
@@ -70,7 +70,7 @@ Wir fahren fort, indem wir der Logik einige Blöcke und Verbindungen hinzufügen
 
 Wir kopieren diese Blöcke 4 Mal, sodass diese Kreise unsere Oberfläche definieren. Ändern Sie die Namen der Number Slider wie unten gezeigt.
 
-![](<../images/10-1/1/vase4 (1) (1).png>)
+![](../images/10-1/1/vase4(1)(1).png)
 
 > 1. Kreise werden durch einen Mittelpunkt und einen Radius erstellt.
 
@@ -78,7 +78,7 @@ Wir kopieren diese Blöcke 4 Mal, sodass diese Kreise unsere Oberfläche defini
 
 Es fehlt noch ein Schlüsselparameter für die Vase, nämlich ihre Höhe. Um die Höhe der Vase zu steuern, erstellen wir einen weiteren Number Slider. Außerdem fügen wir einen **Code Block**-Block hinzu. Codeblöcke können hilfreich sein, wenn Sie personalisierte Code-Snippets zu Ihrem Arbeitsablauf hinzufügen möchten. Der Codeblock wird verwendet, um den Schieberegler für die Höhe mit verschiedenen Faktoren zu multiplizieren, sodass die Kreise entlang der Höhe der Vase positioniert werden können.
 
-![](<../images/10-1/1/vase15 (1).png>)
+![](../images/10-1/1/vase15(1).png)
 
 Verwenden Sie dann einen **Geometry.Translate**-Block, um Kreise in der gewünschten Höhe zu platzieren. Da die Kreise über die Vase verteilt werden sollen, verwenden wir Codeblöcke, um den Höhenparameter mit einem Faktor zu multiplizieren.
 
@@ -92,7 +92,7 @@ Um eine Oberfläche mithilfe des **Surface.ByLoft**-Blocks zu erstellen, müssen
 
 Wir deaktivieren außerdem die Vorschau in anderen Blöcken, um nur die Surface.ByLoft-Anzeige darzustellen.
 
-![](<../images/10-1/1/vase6 (1) (1).png>)
+![](../images/10-1/1/vase6(1)(1).png)
 
 > 3\. Eine Oberfläche wird durch Erhebung der verschobenen Kreise erstellt.
 
@@ -100,6 +100,6 @@ Wir deaktivieren außerdem die Vorschau in anderen Blöcken, um nur die Surface.
 
 Unser Arbeitsablauf ist bereit. Wir können jetzt die **Number Slider** verwenden, die wir in unserem Skript definiert haben, um verschiedene Vasendesigns zu erstellen.
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ![](../images/10-1/1/vase7.png)

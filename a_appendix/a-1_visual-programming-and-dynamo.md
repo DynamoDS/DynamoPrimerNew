@@ -8,7 +8,7 @@ Beim Entwurfsprozess müssen häufig visuelle, systemrelevante oder geometrische
 
 Algorithmen sind hocheffizient und bieten vielfältige Möglichkeiten; der Begriff **Algorithmus** kann jedoch missverstanden werden. Algorithmen generieren eventuell unerwartete, verrückte oder coole Ergebnisse, mit Zauberei haben sie jedoch nichts zu tun. Sie sind im Gegenteil an sich recht einfach. Dies wird hier an einem konkreten Beispiel erläutert: einem Origami-Kranich. Dabei beginnen Sie mit einem quadratischen Blatt Papier (Eingabe), führen eine Folge von Faltvorgängen aus (Verarbeitungsaktionen) und erhalten einen Kranich (Ausgabe).
 
-![Origamikranich](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
+![Origami-Kranich](https://primer.dynamobim.org/01\_Introduction/images/1-1/00-OrigamiCrane.png)
 
 Worin besteht hier der Algorithmus? Er ist die abstrakte Abfolge von Schritten, die Sie auf unterschiedliche Weise darstellen können: in Textform oder grafisch.
 
@@ -30,7 +30,7 @@ Worin besteht hier der Algorithmus? Er ist die abstrakte Abfolge von Schritten, 
 
 **Grafische Anleitung:**
 
-![Update erforderlich – Origamikranich](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Origami Kranich-Anleitung](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Programmierung – Definition <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ Wenn Sie in Ihrer Antwort Abbildungen nennen, ist die **visuelle Programmierung*
 
 **Visuelles Programm:**
 
-![](<./images/a-1/visualProgramming (2).png>)
+![](./images/a-1/visualProgramming(2).png)
 
 **Textprogramm:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Die Ergebnisse des Algorithmus:
 
-![](<./images/a-1/visualProgramming (1).png>)
+![](./images/a-1/visualProgramming(1).png)
 
 Das Visuelle an dieser Art der Programmierung erleichtert den Einstieg, und Designer fühlen sich häufig davon angesprochen. Dynamo folgt dem Muster der visuellen Programmierung. Sie können jedoch, wie später gezeigt wird, nach wie vor auch die Textprogrammierung in dieser Anwendung verwenden.

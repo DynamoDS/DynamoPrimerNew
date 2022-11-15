@@ -4,7 +4,7 @@ Zu den leistungsstarken Funktionen von Dynamo gehört die Möglichkeit zum Bearb
 
 ### Typen- und Exemplarparameter
 
-![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Übung](images/3/32(2).jpg)
 
 > 1. Exemplarparameter definieren die Öffnung der Elemente in der Dachoberfläche mit einem Öffnungsanteil zwischen 0.1 und 0.4.
 > 2. Typenparameter werden auf sämtliche Elemente der Oberfläche angewendet, da diese zum selben Familientyp gehören. So kann beispielsweise das Material der einzelnen Elemente durch einen Typenparameter gesteuert werden.
@@ -16,9 +16,7 @@ Zu den leistungsstarken Funktionen von Dynamo gehört die Möglichkeit zum Bearb
 
 Rufen Sie sich zunächst ins Gedächtnis zurück, dass in Revit Typen- und Exemplarparameter verwendet werden. Beide können in Dynamo bearbeitet werden. In der folgenden Übung verwenden Sie jedoch Exemplarparameter.
 
-{% hint style="info" %}
-Während Sie das breite Spektrum der Verwendungsmöglichkeiten für die Parameterbearbeitung kennenlernen, müssen Sie in manchen Fällen eventuell sehr zahlreiche Revit-Elemente mit Dynamo bearbeiten. Solche Vorgänge können sehr _rechenintensiv_ sein und laufen deshalb eventuell nur langsam ab. Bei der Bearbeitung zahlreicher Elemente kann es daher sinnvoll sein, die Ausführung von Revit-Vorgängen mithilfe der Funktion Anhalten vorübergehend zu unterbrechen, während Sie das Diagramm entwickeln. Weitere Informationen zum Anhalten von Blöcken finden Sie im [entsprechenden Abschnitt](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) im Kapitel Körper. 
-{% endhint %}
+{% hint style="info" %} Während Sie das breite Spektrum der Verwendungsmöglichkeiten für die Parameterbearbeitung kennenlernen, müssen Sie in manchen Fällen eventuell sehr zahlreiche Revit-Elemente mit Dynamo bearbeiten. Solche Vorgänge können sehr _rechenintensiv_ sein und laufen deshalb eventuell nur langsam ab. Bei der Bearbeitung zahlreicher Elemente kann es daher sinnvoll sein, die Ausführung von Revit-Vorgängen mithilfe der Funktion Anhalten vorübergehend zu unterbrechen, während Sie das Diagramm entwickeln. Weitere Informationen zum Anhalten von Blöcken finden Sie im [entsprechenden Abschnitt](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) im Kapitel Körper. {% endhint %}
 
 ### Einheiten
 
@@ -26,7 +24,7 @@ In Dynamo werden ab Version 0.8 grundsätzlich keine Einheiten verwendet. Dadurc
 
 Verwenden Sie zur schnellen Konvertierung von Einheiten den Block _Convert Between Units_. Dies ist ein sehr hilfreiches Werkzeug zum Konvertieren von Längen-, Flächen- und Volumeneinheiten nach Bedarf.
 
-![](<images/3/editing - units.jpg>)
+![](images/3/editing-units.jpg)
 
 ## Übung
 
@@ -46,22 +44,22 @@ Beginnen Sie mit der Revit-Beispieldatei für diesen Abschnitt. Die Trägereleme
 
 Wenn Sie das Gebäude in Revit unter Körper auswählen, wird in der Eigenschaftenpalette eine Reihe von Exemplarparametern angezeigt.
 
-![](<../.gitbook/assets/editing - exercise 01.jpg>)
+![](images/3/editing-exercise01.jpg)
 
 In Dynamo können Sie die Parameter abrufen, indem Sie das Zielelement auswählen.
 
-![](<images/3/editing - exercise 02.jpg>)
+![](images/3/editing-exercise02.jpg)
 
 > 1. Wählen Sie den Gebäudekörper mithilfe des _Select Model Element_-Blocks aus.
 > 2. Sie können sämtliche Parameter dieses Körpers mithilfe des _Element.Paramaters_-Blocks abrufen. Dazu gehören Typen- und Exemplarparameter.
 
-![](<images/3/editing - exercise 03.jpg>)
+![](images/3/editing-exercise03.jpg)
 
 > 1. Referenzieren Sie den _Element. Parameter_-Block, um Zielparameter zu finden. Sie können stattdessen auch die Eigenschaftenpalette aus dem vorigen Schritt anzeigen, um die Namen der zu bearbeitenden Parameter zu wählen. In diesem Fall suchen Sie nach den Parametern, die sich auf die großräumigen geometrischen Veränderungen des Gebäudekörpers auswirken.
 > 2. Wir nehmen mithilfe des _Element.SetParameterByName_-Blocks Änderungen am Revit-Element vor.
 > 3. Verwenden Sie einen _Code Block_, um eine Liste von Parametern mit Anführungszeichen um jedes Element zu definieren, um eine Zeichenfolge zu kennzeichnen. Sie können auch den List.Create-Block mit einer Reihe von _string_-Blöcken verwenden, die mit mehreren Eingaben verbunden sind, aber der Codeblock ist schneller und einfacher. Stellen Sie sicher, dass die Zeichenfolge dem exakten Namen in Revit entspricht, in diesem Fall: `{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
-![](<images/3/editing - exercise 04.jpg>)
+![](images/3/editing-exercise04.jpg)
 
 > 1. Darüber hinaus müssen Sie Werte für die einzelnen Parameter festlegen. Fügen Sie sechs _Integer Slider_-Blöcke in den Ansichtsbereich ein und weisen Sie ihnen die Namen der entsprechenden Parameter in der Liste zu. Legen Sie außerdem in den einzelnen Schiebereglern die in der Abbildung oben gezeigten Werte fest. Dies sind die folgenden Werte (von oben nach unten: 62, 92, 25, 22, 8, 12.
 > 2. Definieren Sie einen weiteren _Code Block_ mit einer Liste von derselben Länge wie die Liste der Parameternamen. In diesem Fall geben Sie dabei Variablennamen (ohne Anführungszeichen) an und erhalten dadurch Eingaben für den _Code Block_. Verbinden Sie die _Schieberegler_ mit den entsprechenden Eingaben: `{bw,bl,bh,ao,io,lu};`
@@ -71,7 +69,7 @@ In Dynamo können Sie die Parameter abrufen, indem Sie das Zielelement auswähle
 
 Viele dieser Parameter sind genau wie in Revit voneinander abhängig. Dabei können manche Kombinationen selbstverständlich zu ungültiger Geometrie führen. Dieses Problem können Sie mithilfe definierter Formeln in den Parametereigenschaften beheben. Sie können stattdessen auch eine ähnliche Logik mit mathematischen Operationen in Dynamo einrichten. (Sie könnten dies als Zusatzübung ausprobieren.)
 
-![](<images/3/editing - exercise 05.jpg>)
+![](images/3/editing-exercise05.jpg)
 
 > 1. Mit der folgenden Kombination erhalten Sie ein recht originelles Design für den Gebäudekörper: 100, 92, 100, 25, 13, 51.
 
@@ -79,12 +77,12 @@ Viele dieser Parameter sind genau wie in Revit voneinander abhängig. Dabei kön
 
 Als Nächstes sehen wir uns an, wie die Fassade mit einem ähnlichen Prozess bearbeitet werden kann.
 
-![](<images/3/editing - exercise 06.jpg>)
+![](images/3/editing-exercise06.jpg)
 
 > 1. Kopieren Sie für diese Aufgabe das Diagramm, um mit der Fassadenverglasung zu arbeiten, an der das Fachwerksystem angebracht werden soll. In diesem Fall isolieren Sie vier Parameter: `{"DblSkin_SouthOffset","DblSkin_MidOffset","DblSkin_NorthOffset","Facade Bend Location"};`
 > 2. Erstellen Sie darüber hinaus _Number Slider_-Blöcke und ändern Sie ihre Namen in die der entsprechenden Parameter. Weisen Sie den ersten drei Schiebereglern (von oben nach unten) die Domäne [0,10], dem letzten Schieberegler _Facade Bend Location_ hingegen die Domäne [0,1] zu. Diese Werte sollten von oben nach unten, mit den folgenden Angaben beginnen (wobei diese hier beliebig gewählt wurden): 2.68, 2.64, 2.29, 0.5.
 > 3. Definieren Sie einen neuen Codeblock, und verbinden Sie die Schieberegler: `{so,mo,no,fbl};`
 
-![](<images/3/editing - exercise 07.jpg>)
+![](images/3/editing-exercise07.jpg)
 
 > 1. Indem Sie die Werte der _Schieberegler_ für diesen Teil des Diagramms ändern, können Sie die Fassadenverglasung erheblich verstärken: 9.98, 10.0, 9.71, 0.31.

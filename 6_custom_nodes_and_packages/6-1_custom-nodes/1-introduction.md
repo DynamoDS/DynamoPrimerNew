@@ -10,7 +10,7 @@ Wenn mehrere Kopien eines benutzerdefinierten Blocks im Diagramm vorhanden sind,
 
 Zu den größten Vorteilen benutzerdefinierter Blöcke gehören wohl ihre Möglichkeiten zur Arbeitsteilung. Wenn ein "Power-User" ein komplexes Dynamo-Diagramm erstellt und dies an einen Designer weitergibt, der noch nicht mit Dynamo gearbeitet hat, kann er das Diagramm auf die wesentlichen, für die Interaktion erforderlichen Angaben komprimieren. Der benutzerdefinierte Block kann geöffnet werden, um das Diagramm in seinem Inneren zu bearbeiten, wobei der Container jedoch einfach bleibt. Benutzerdefinierte Blöcke ermöglichen auf diese Weise den Dynamo-Benutzern die Entwicklung klarer und intuitiver Diagramme.
 
-![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
+![](../images/6-1/1/customnodeintro-worksharing01.jpg)
 
 ### Zahlreiche Methoden zur Blockentwicklung
 
@@ -22,28 +22,28 @@ Im Folgenden erstellen Sie in der Umgebung für benutzerdefinierte Blöcke einen
 
 Um einen neuen benutzerdefinierten Block zu erstellen, starten Sie Dynamo und wählen Sie Benutzerdefinierter Block oder geben Sie Strg + Umschalt + N im Ansichtsbereich ein.
 
-![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment01.jpg)
 
 Weisen Sie im Dialogfeld Eigenschaften für benutzerdefinierten Block einen Namen, eine Beschreibung und eine Kategorie zu.
 
-![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment02.jpg)
 
 > 1. **Name**: Prozentsatz
 > 2. **Beschreibung**: Berechnung des Prozentsatzes eines Werts relativ zu einem anderen.
-> 3. **Kategorie:** Math.Functions
+> 3. **Kategorie**: Mathematikfunktionen
 
 Dadurch wird ein Ansichtsbereich mit gelbem Hintergrund geöffnet, der darauf hinweist, dass Sie in einem benutzerdefinierten Block arbeiten. In diesem Ansichtsbereich haben Sie Zugriff auf alle Core-Blöcke von Dynamo sowie die Blöcke Input und Output, die zum Benennen der in den benutzerdefinierten Block und aus ihm heraus fließenden Daten dienen. Sie finden sie unter Eingabe > Einfach.
 
-![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment03.jpg)
 
-![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
 
-> 1. **Eingaben**: Input-Blöcke erstellen die Eingaben des benutzerdefinierten Blocks. Die Syntax für einen Input-Block lautet _input\_name : datatype = default\_value(optional)._
+> 1. **Eingaben**: Input-Blöcke erstellen die Eingaben des benutzerdefinierten Blocks. Die Syntax für einen Input-Block lautet _input_name : datatype = default_value(optional)._
 > 2. **Ausgaben**: Diese Blöcke funktionieren ähnlich wie Input-Blöcke, dienen jedoch zum Erstellen und Benennen der Ausgaben des benutzerdefinierten Blocks. Es ist sinnvoll, den Ein- und Ausgaben **benutzerdefinierte Kommentare** hinzuzufügen, um den Typ der Ein- bzw. Ausgabe zu verdeutlichen. Dies wird im Abschnitt [Erstellen eines benutzerdefinierten Blocks](2-creating.md) genauer beschrieben.
 
 Sie können diesen benutzerdefinierten Block als DYF-Datei (im Gegensatz den Standard-DYN-Dateien) speichern. Er wird dann automatisch der laufenden und zukünftigen Sitzungen hinzugefügt. Sie finden den benutzerdefinierten Block in Ihrer Bibliothek im Abschnitt Zusatzmodule.
 
-![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment05.jpg)
 
 ### Weitere Schritte
 

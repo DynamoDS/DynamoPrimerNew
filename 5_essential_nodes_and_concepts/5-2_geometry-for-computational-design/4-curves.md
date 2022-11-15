@@ -6,7 +6,7 @@
 
 [Kurven](5-4\_curves.md#curve) sind der erste geometrische Datentyp, den wir abgedeckt haben, die einen vertrauteren Satz an beschreibenden Eigenschaften für die Form aufweisen: Wie kurvig oder gerade? Wie lange oder kurz? Und denken Sie daran, dass Punkte weiterhin unsere Bausteine für die Definition von allem darstellen, von einer Linie zu einem Spline und zu allen Kurvenarten dazwischen.
 
-![Kurvenarten](../images/5-2/4/CurveTypes.jpg)
+![Kurventypen](../images/5-2/4/CurveTypes.jpg)
 
 > 1. Linie
 > 2. Polylinie
@@ -18,15 +18,15 @@
 
 ### Linie
 
-Eine [Linie](5-4\_curves.md#lines) besteht aus einer Reihe von Punkten, jede Linie verfügt über mindestens 2 Punkte. Eine der häufigsten Methoden zum Erstellen von Linien in Dynamo ist die Verwendung von `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>), um in Dynamo eine Linie zu erstellen.
+Eine [Linie](5-4\_curves.md#lines) besteht aus einer Reihe von Punkten, jede Linie verfügt über mindestens 2 Punkte. Eine der häufigsten Methoden zum Erstellen von Linien in Dynamo ist die Verwendung von `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg), um eine Linie in Dynamo zu erstellen.
 
-![](<./images/5-2/4/curves - line by start point end point.jpg>)
+![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
 
 ### NURBS-Kurve
 
 [NURBS](5-4\_curves.md#nurbs-+-polycurves) ist ein Modell, das zur exakten Darstellung von Kurven und Oberflächen verwendet wird. Eine Sinuskurve in Dynamo mit zwei unterschiedlichen Methoden, um NURBS-Kurven zu erstellen und die Ergebnisse zu vergleichen.
 
-![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
+![](../images/5-2/4/curves-NurbsCurves.jpg)
 
 > 1. _NurbsCurve.ByControlPoints_ verwendet die Liste der Punkte als Steuerpunkte.
 > 2. _NurbsCurve.ByPoints_ zeichnet eine Kurve durch die Liste der Punkte.
@@ -41,7 +41,7 @@ Eine [Linie](5-4\_curves.md#lines) besteht aus einer Reihe von Punkten, jede Lin
 
 ### Kurven
 
-Der Begriff **Kurve** ist im Allgemeinen ein Oberbegriff für all die unterschiedlichen Typen von gekrümmten (auch geraden) Formen. "C"-Kapitalkurve ist die übergeordnete Kategorisierung für all diese Formen – Linien, Kreise, Splines usw. Technisch betrachtet beschreibt eine Kurve jeden möglichen Punkt, der durch die Eingabe von "t" in eine Sammlung von Funktionen gefunden werden kann, von einfachen Funktionen wie `x = -1.26*t, y = t` bis hin zu Funktionen mit Calculi. Unabhängig davon, mit welcher Art von Kurve Sie arbeiten, handelt es sich bei dem **Parameter** mit dem Namen "t" um eine Eigenschaft, die bewertet werden kann. Darüber hinaus haben alle Kurven unabhängig vom Aussehen der Form einen Startpunkt und einen Endpunkt, die zufälligerweise mit dem Mindest- und dem Höchstwert von t zusammenfallen, die zum Erzeugen der Kurve verwendet wurden. Dies hilft Ihnen auch dabei, ihre Direktionalität zu verstehen.
+Der Begriff **Kurve** ist im Allgemeinen ein Oberbegriff für all die unterschiedlichen Typen von gekrümmten (auch geraden) Formen. Kurve heißt deshalb auch die übergeordnete Kategorisierung für all diese Formen – Linien, Kreise, Splines usw. Technisch betrachtet beschreibt eine Kurve jeden möglichen Punkt, der durch die Eingabe von "t" in eine Sammlung von Funktionen gefunden werden kann, von einfachen Funktionen wie `x = -1.26*t, y = t` bis hin zu Funktionen mit Calculi. Unabhängig davon, mit welcher Art von Kurve Sie arbeiten, handelt es sich bei dem **Parameter** mit dem Namen "t" um eine Eigenschaft, die bewertet werden kann. Darüber hinaus haben alle Kurven unabhängig vom Aussehen der Form einen Startpunkt und einen Endpunkt, die zufälligerweise mit dem Mindest- und dem Höchstwert von t zusammenfallen, die zum Erzeugen der Kurve verwendet wurden. Dies hilft Ihnen auch dabei, ihre Direktionalität zu verstehen.
 
 ![Kurvenparameter](../images/5-2/4/CurveParameter.jpg)
 
@@ -77,7 +77,7 @@ Um mehr Komplexität zu den parametrischen Funktionen hinzuzufügen, die eine Fo
 
 **Gewichtung**: Steuerpunkten ist eine Zahl zugewiesen, die als Gewichtung bezeichnet wird. Gewichtungen werden in der Regel als positive Zahlen angegeben. Wenn die Steuerpunkte einer Kurve alle dieselbe Gewichtung aufweisen (normalerweise 1), wird die Kurve als nichtrational, andernfalls als rational bezeichnet. Die meisten NURBS-Kurven sind nichtrational.
 
-**Knoten**: Knoten sind eine Liste mit (Grad+N-1) Zahlen, wobei N der Anzahl an Steuerpunkten entspricht. Die Knoten werden zusammen mit den Gewichtungen verwendet, um den Einfluss der Steuerpunkte auf die resultierende Kurve zu steuern. Eine Verwendung von Knoten besteht darin, Knicke an bestimmten Punkten in der Kurve zu erzeugen.
+**Blöcke**: Blöcke sind eine Liste mit (Grad+N-1) Zahlen, wobei N der Anzahl an Steuerpunkten entspricht. Die Blöcke werden zusammen mit den Gewichtungen verwendet, um den Einfluss der Steuerpunkte auf die resultierende Kurve zu steuern. Eine Verwendung von Blöcken besteht darin, Knicke an bestimmten Punkten in der Kurve zu erzeugen.
 
 ![NURBS-Kurvengrad](../images/5-2/4/NURBScurve\_Degree.jpg)
 
@@ -85,6 +85,4 @@ Um mehr Komplexität zu den parametrischen Funktionen hinzuzufügen, die eine Fo
 > 2. Grad = 2
 > 3. Grad = 3
 
-{% hint style="info" %}
-Beachten Sie, dass je höher der Gradwert ist, desto mehr Steuerpunkte werden verwendet, um die resultierende Kurve zu interpolieren.
-{% endhint %}
+{% hint style="info" %} Beachten Sie, dass je höher der Gradwert ist, desto mehr Steuerpunkte werden verwendet, um die resultierende Kurve zu interpolieren. {% endhint %}

@@ -6,4 +6,4 @@ Dynamo ist eine hervorragende Möglichkeit, um mit der Programmierung für den A
 * [Geometrie mit DesignScript](8-2\_geometry-with-design-script/)
 * [Python](8-3\_python/)
 
-![](<./images/image (17).png>)
+![](./images/image(17).png)

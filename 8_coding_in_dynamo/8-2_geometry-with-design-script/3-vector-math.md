@@ -4,7 +4,7 @@ Objekte in computergestützten Entwürfen werden selten explizit in ihrer endgü
 
 In seiner einfachsten Form stellt ein Vektor eine Position im dreidimensionalen Raum dar. Man stellt sich ihn oft als Endpunkt eines Pfeils zwischen der Position (0, 0, 0) und der gegebenen Position vor. Vektoren können unter Verwendung des Konstruktors _ByCoordinates_ erstellt werden, wobei die x-, y- und z-Position des neu erstellten Vektorobjekts angegeben wird. Beachten Sie, dass Vektoren keine geometrischen Objekte sind und nicht im Dynamo-Fenster angezeigt werden. Informationen zu einem neu erstellten oder geänderten Vektor können jedoch im Konsolenfenster gedruckt werden:
 
-![](<../images/8-2/3/vector math 01.jpg>)
+![](../images/8-2/3/vectormath01.jpg)
 
 ```js
 // construct a Vector object
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Häufig ist beim Skalieren eines Vektors erwünscht, dass die Länge des resultierenden Vektors genau gleich dem skalierten Betrag ist. Dies wird einfach erreicht, indem zuerst ein Vektor normalisiert wird, also die Länge des Vektors auf genau eins festgelegt wird.
 
-![](<../images/8-2/3/vector math 05.jpg>)
+![](../images/8-2/3/vectormath05.jpg)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Eine weitere, wenn auch fortgeschrittenere Funktion der Vektormathematik ist das Skalarprodukt. Das Skalarprodukt zwischen zwei Vektoren ist eine reelle Zahl (kein Vektorobjekt), die mit dem Winkel zwischen zwei Vektoren zusammenhängt, jedoch nicht exakt diesem Winkel entspricht. Ein hilfreiche Eigenschaft des Skalarprodukts besteht darin, dass das Skalarprodukt zweier Vektoren nur genau dann 0 ist, wenn sie lotrecht zueinander stehen. Das Skalarprodukt wird mit der Methode _Dot_ berechnet.
 
-![](<../images/8-2/3/vector math 07.jpg>)
+![](../images/8-2/3/vectormath07.jpg)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);
