@@ -4,7 +4,7 @@
 
 Zaprezentowaliśmy, jak używać skryptów w języku Python w dodatku Dynamo. Przyjrzyjmy się teraz połączeniu bibliotek programu Revit w środowisku skryptowym. Za pomocą czterech pierwszych wierszy bloku kodu poniżej zaimportowaliśmy węzły podstawowe dodatku Dynamo i standardowe elementy języka Python. Aby zaimportować węzły programu Revit, elementy programu Revit oraz menedżera dokumentów programu Revit, wystarczy tylko dodać kilka innych wierszy:
 
-```
+``` py
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -27,7 +27,7 @@ import System
 
 Zapewnia to dostęp do interfejsu API programu Revit i obsługę skryptów niestandardowych dla dowolnego zadania programu Revit. Połączenie programowania wizualnego z obsługą skryptów z użyciem interfejsu API programu Revit znacznie usprawnia współpracę i opracowywanie narzędzi. Na przykład menedżer BIM i projektant schematów mogą współpracować na tym samym wykresem. W ramach tej współpracy mogą poprawić projekt i realizację modelu.
 
-![](<../../.gitbook/assets/python & revit - 01.jpg>)
+![](../images/8-3/2/python&revit-01.jpg)
 
 ### Interfejsy API dla konkretnych platform
 
@@ -51,11 +51,11 @@ Jest to oczywista metoda pobierania pozycji _doc_, _uiapp_ i _app_ pliku program
 
 W ten sposób importujemy usługi programu Revit i pobieramy dane dokumentów w dodatku Dynamo.
 
-![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise01-01.jpg)
 
 Przyjrzyj się węzłowi Python w dodatku Dynamo. Można również skorzystać z kodu z poniższego materiału:
 
-```
+``` py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -86,19 +86,19 @@ W tym ćwiczeniu utworzymy prostą krzywą modelu w programie Revit za pomocą w
 
 Rozpocznij od utworzenia nowej rodziny brył koncepcyjnych w programie Revit.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise02-01.jpg)
 
 Otwórz _folder Conceptual Mass_ i użyj pliku szablonu _Metric Mass.rft_.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise02-02.jpg)
 
 W programie Revit użyj skrótu klawiaturowego **`un`**, aby wywołać ustawienia jednostki projektu, a następnie zmień jednostkę długości na metry.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise02-03.jpg)
 
 Uruchom dodatek Dynamo i utwórz zestaw węzłów na ilustracji poniżej. Najpierw utworzymy dwa punkty odniesienia w programie Revit z węzłów Dynamo.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
+![](../images/8-3/2/python&revit-exercise02-04.jpg)
 
 > 1. Utwórz węzeł **Code Block** i nadaj mu wartość `"0;"`
 > 2. Podłącz tę wartość do węzła **ReferencePoint.ByCoordinates** dla wejść X, Y i Z.
@@ -108,11 +108,11 @@ Uruchom dodatek Dynamo i utwórz zestaw węzłów na ilustracji poniżej. Najpie
 
 Przyjrzyj się węzłowi Python w dodatku Dynamo. Pełny kod podano poniżej.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise02-05.jpg)
 
 > 1. **System.Array**: program Revit wymaga jako wejścia **szyku systemowego** (a nie listy języka Python). To jeden więcej wiersz kodu, ale zwracanie uwagi na typy argumentów ułatwia programowanie w języku Python w programie Revit.
 
-```
+``` py
 import sys
 import clr
 
@@ -136,7 +136,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 W dodatku Dynamo utworzyliśmy za pomocą języka Python dwa punkty odniesienia z łączącą je linią. W następnym ćwiczeniu rozwiniemy to.
 
-![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
+![](../images/8-3/2/python&revit-exercise02-06.jpg)
 
 ## Ćwiczenie 3
 
@@ -148,13 +148,13 @@ W dodatku Dynamo utworzyliśmy za pomocą języka Python dwa punkty odniesienia 
 
 To ćwiczenie jest proste, ale pozwala wyjaśnić tematy łączenia danych i geometrii z programu Revit do dodatku Dynamo i odwrotnie. Zacznijmy od otwarcia pliku Revit-StructuralFraming.rvt. Po jego otwarciu uruchom dodatek Dynamo i otwórz plik Revit-StructuralFraming.dyn.
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
+![](../../.gitbook/assets/python&revit-exercise03-01.jpg)
 
 Ten plik programu Revit jest tak prosty, jak to tylko możliwe. Dwie krzywe odniesienia: jedna narysowana na poziomie 1, a druga na poziomie 2. Chcemy umieścić te krzywe w dodatku Dynamo i utrzymać aktywne połączenie.
 
 W tym pliku znajduje się zestaw węzłów podłączonych do pięciu wejść węzła w języku Python.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise03-02.jpg)
 
 > 1. **Wybierz węzły elementów modelu**: naciśnij przycisk wyboru dla każdego z nich i wybierz odpowiednią krzywą w programie Revit.
 > 2. **Code Block**: za pomocą składni `0..1..#x;`_,_ połącz suwak liczby całkowitej o zakresie od 0 do 20 z wejściem _x_. Ta opcja określa liczbę belek do narysowania między dwiema krzywymi.
@@ -163,9 +163,9 @@ W tym pliku znajduje się zestaw węzłów podłączonych do pięciu wejść wę
 
 Ten kod Python jest nieco gęściejszy, ale komentarze znajdujące się w kodzie oddają to, co się dzieje w tym procesie
 
-![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise03-03.jpg)
 
-```
+``` py
 import clr
 #import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
@@ -204,7 +204,7 @@ W programie Revit mamy szyk belek obejmujący dwie krzywe jako elementy konstruk
 
 Również w dodatku Dynamo można wyświetlić wyniki. Belki w węźle **Watch3D** odnoszą się do geometrii przywołanej z elementów programu Revit.
 
-![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise03-05.jpg)
 
 Warto zauważyć, że mamy ciągły proces przekształcania danych ze środowiska programu Revit do środowiska dodatku Dynamo. Podsumowując: oto przebieg tego procesu:
 
@@ -219,4 +219,4 @@ Może to wydawać się nieco skomplikowane, ale skrypt sprawia, że wystarczy ed
 
 Po zaktualizowaniu krzywych odniesienia w programie Revit uzyskuje się nowy szyk belek.
 
-![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
+![](../images/8-3/2/python&revit-ex03-06.gif)

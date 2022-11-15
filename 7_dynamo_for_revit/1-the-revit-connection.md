@@ -2,7 +2,7 @@
 
 
 
-![](<./images/1/revit connection link.jpg>)
+![](./images/1/revitconnectionlink.jpg)
 
 Dodatek Dynamo dla programu Revit rozszerza możliwości modelowania informacji o budynku (BIM) za pomocą środowiska danych i logiki graficznego edytora algorytmów. Jego elastyczność w połączeniu z solidną bazą danych programu Revit zapewnia nową perspektywę dla modelowania BIM.
 
@@ -12,16 +12,16 @@ W tym rozdziale omówiono procesy robocze dodatku Dynamo dla modelowania BIM. Po
 
 Ponieważ zarówno program Revit, jak i dodatek Dynamo wciąż ewoluują, może się okazać, że używana wersja programu Revit nie jest zgodna z zainstalowaną na komputerze wersją dodatku Dynamo dla programu Revit. Poniżej opisano, które wersje dodatku Dynamo dla programu Revit są zgodne z programem Revit.
 
-| Wersja programu Revit | Pierwsza stabilna wersja dodatku Dynamo | Ostatnia obsługiwana wersja dodatku Dynamo dla programu Revit |
+| Wersja programu Revit | Pierwsza stabilna wersja dodatku Dynamo                                                       | Ostatnia obsługiwana wersja dodatku Dynamo dla programu Revit                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013 | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe) |
-| 2014 | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe) |
-| 2015 | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe) |
-| 2016 | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe) |
-| 2017 | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2018 | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2019 | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
-| 2020+ | 2.1.0 — program Revit od wersji 2020 zawiera teraz dodatek Dynamo, który jest aktualizowany razem z programem Revit. | Nie dotyczy |
+| 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
+| 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
+| 2015          | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe)                                                                                      |
+| 2016          | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe)                                                                                      |
+| 2017          | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
+| 2018          | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
+| 2019          | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
+| 2020+         | 2.1.0 — program Revit od wersji 2020 zawiera teraz dodatek Dynamo, który jest aktualizowany razem z programem Revit.      | Nie dotyczy                                                                                                                                                                    |
 
 ### Historia dodatku Dynamo
 
@@ -35,27 +35,23 @@ Używając podstawowych węzłów Dynamo wraz z węzłami niestandardowymi progr
 
 ### Uruchamianie dodatku Dynamo w programie Revit
 
-W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kliknij opcję Dynamo.\*
+W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kliknij opcję Dynamo*.
 
-{% hint style="warning" %}
-\*Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty.
-{% endhint %}
+{% hint style="warning" %} *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. {% endhint %}
 
-![](<./images/1/launch dynamo from revit.jpg>)
+![](./images/1/launchdynamofromrevit.jpg)
 
-W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie dla procesów roboczych programu Revit.\*
+W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie do procesów roboczych programu Revit*.
 
-{% hint style="warning" %}
-\*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit.
-{% endhint %}
+{% hint style="warning" %}*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. {% endhint %}
 
-![](<./images/1/revit connection - running dynamo in revit 02.jpg>)
+![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Blokowanie węzłów
 
 Ponieważ program Revit jest platformą zapewniającą zaawansowane zarządzanie projektem, operacje parametryczne w dodatku Dynamo mogą być skomplikowane, a ich obliczanie — powolne. Jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu. Aby uzyskać więcej informacji na temat blokowania węzłów, zobacz sekcję „[Blokowanie](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)” w rozdziale poświęconym bryłom.
 
-### Społeczność i blog poświęcony dodatkowi Dynamo
+### Społeczność i blog poświęcone dodatkowi Dynamo
 
 Ponieważ dodatek Dynamo został pierwotnie utworzony dla dziedzin architektury, inżynierii i budownictwa (AEC), jego duża i stale rosnąca społeczność stanowi doskonałe źródło do nauki i zapewnia możliwości kontaktu z ekspertami w branży. Społeczność dodatku Dynamo składa się z architektów, inżynierów, programistów i projektantów pełnych pasji tworzenia i dzielenia się wynikami pracy.
 

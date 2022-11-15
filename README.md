@@ -1,8 +1,6 @@
-# Na Temat
+# Informacje
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
-Dynamo Hype — nagranie wideo
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype — nagranie wideo {% endembed %}
 
 ## Dla dodatku Dynamo 2.13
 
@@ -61,7 +59,7 @@ Dziękujemy Mattowi Jezykowi, Ianowi Keoughowi, Zachowi Kronowi, Racel Williams 
 
 ### Oprogramowanie i zasoby
 
-**Dynamo** — bieżąca stabilna* wersja dodatku Dynamo to wersja 2.1.0
+**Dynamo** Najbardziej aktualną **stabilną** wersję dodatku Dynamo można znaleźć w witrynach przedstawionych poniżej.
 
 http://dynamobim.com/download/ lub http://dynamobuilds.com
 

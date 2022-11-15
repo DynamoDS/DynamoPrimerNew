@@ -6,18 +6,18 @@ Dodajmy jeszcze jeden poziom do hierarchii. Jeśli weźmiemy talię kart z pierw
 
 ![Monety](../images/5-4/3/coins-521245\_640.jpg)
 
-> Zdjęcie autorstwa: [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
+> Zdjęcie autorstwa [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
 
-### Query
+### Zapytanie
 
-Jakie **zapytania** możemy utworzyć względem listy list? Mamy dostęp do istniejących właściwości.
+Jakie **zapytania** możemy utworzyć względem listy list? Umożliwia to dostęp do istniejących właściwości.
 
-* Ile jest typów monet? 2.
+* Ile jest typów monet? 2\.
 * Jakie są wartości typów monet? 0,01 USD i 0,25 USD.
 * Z czego składają się monety 0,25 USD? 75% miedzi i 25% niklu.
 * Z czego składają się monety 0,01 USD? 97,5% cynku i 2,5% miedzi.
 
-### Action
+### Działanie
 
 Jakie **działania** możemy wykonać na liście list? Lista list ulegnie zmianie zależnie od zadanej operacji.
 
@@ -40,9 +40,9 @@ W przypadku list list dane są złożone i znajdują się na wielu warstwach. Ta
 
 {% file src="../datasets/5-4/3/Top-Down-Hierarchy.dyn" %}
 
-Najważniejsze założenie wynikające z tej sekcji jest takie, że dodatek **Dynamo** traktuje każdą listę jako obiekt. Taka hierarchia jest przydatna w przypadku programowania obiektowego. Zamiast wybierać elementy podrzędne przy użyciu poleceń takich jak **List.GetItemAtIndex**, dodatek Dynamo wybierze ten indeks na głównej liście struktury danych. Pod tym indeksem znajduje się kolejna lista. Przeanalizujemy ten mechanizm na przykładowej ilustracji:
+Najważniejsze założenie wynikające z tej sekcji jest takie, że **dodatek Dynamo traktuje każdą listę jako obiekt**. Taka hierarchia jest przydatna w przypadku programowania obiektowego. Zamiast wybierać elementy podrzędne przy użyciu poleceń takich jak **List.GetItemAtIndex**, dodatek Dynamo wybierze ten indeks na głównej liście struktury danych. Pod tym indeksem znajduje się kolejna lista. Przeanalizujemy ten mechanizm na przykładowej ilustracji:
 
-![top-down](<../images/5-4/3/lists of lists - top down hierachy.jpg>)
+![Projektowanie w oparciu o hierarchię](../images/5-4/3/listsoflists-topdownhierachy.jpg)
 
 > 1. W węźle **Code Block** zdefiniowaliśmy dwa zakresy: `0..2; 0..3;`
 > 2. Te zakresy są połączone z węzłem **Point.ByCoordinates**, gdzie skratowanie ustawiono na _Iloczyn wektorowy_. Powstaje w ten sposób siatka punktów, a na wyjściu jest generowana lista list.
@@ -59,14 +59,14 @@ Najważniejsze założenie wynikające z tej sekcji jest takie, że dodatek **Dy
 
 Węzeł Flatten usuwa wszystkie poziomy ze struktury danych. Jest to przydatne, gdy hierarchia danych nie jest potrzebna w danej operacji, ale też ryzykowne, gdyż powoduje usunięcie informacji. Poniższy przykład ilustruje skutek spłaszczenia listy danych.
 
-![Exercise](<../images/5-4/3/lists of lists - flatten 01.jpg>)
+![Ćwiczenie](../images/5-4/3/listsoflists-flatten01.jpg)
 
 > 1. Wstaw wiersz kodu, aby zdefiniować zakres w węźle **Code Block**: `-250..-150..#4;`
-> 2. Połączymy _blok kodu_ z danymi wejściowymi _x_ i _y_ węzła **Point.ByCoordinates** i ustawimy skratowanie na _Iloczyn wektorowy_, aby usunąć siatkę punktów.
+> 2. Połączymy węzeł _Code Block_ z danymi wejściowymi _x_ i _y_ węzła **Point.ByCoordinates** i ustawimy skratowanie na _Iloczyn wektorowy_, aby usunąć siatkę punktów.
 > 3. Węzeł **Watch** wskazuje, że powstała lista list.
 > 4. Węzeł **PolyCurve.ByPoints** będzie odnosił się do każdej z listy i utworzy odpowiadające im krzywe złożone. W podglądzie dodatku Dynamo widać, że istnieją cztery krzywe złożone (polycurve) reprezentujące poszczególne wiersze siatki.
 
-![Exercise](<../images/5-4/3/lists of lists - flatten 02.jpg>)
+![Ćwiczenie](../images/5-4/3/listsoflists-flatten02.jpg)
 
 > 1. Wstawiając funkcję _Flatten_ (spłaszczenia) przed węzłem krzywej złożonej, utworzyliśmy pojedynczą listę zawierającą wszystkie punkty. Węzeł **PolyCurve.ByPoints** odnosi się do listy, aby utworzyć jedną krzywą. Ponieważ wszystkie punkty są na liście, uzyskujemy jedną, skomplikowaną krzywą złożoną zawierającą te punkty.
 
@@ -84,7 +84,7 @@ Gdy model jest oparty na parametrach, czasami trzeba zmodyfikować strukturę da
 
 Polecenie Chop dzieli listy zależnie od długości listy wejściowej. W pewnym sensie dzielenie jest operacją odwrotną do spłaszczania: zamiast redukować strukturę danych, generuje nowe poziomy. Jest to przydatne narzędzie podczas pracy nad geometrią, tak jak na poniższym przykładzie.
 
-![Exercise](<../images/5-4/3/lists of lists - chop.jpg>)
+![Ćwiczenie](../images/5-4/3/listsoflists-chop.jpg)
 
 ### List.Map
 
@@ -96,22 +96,22 @@ Polecenie Chop dzieli listy zależnie od długości listy wejściowej. W pewnym 
 
 Węzeł **List.Map/Combine** stosuje zadaną funkcję do listy wejściowej, ale o jeden poziom niżej w hierarchii. Kombinacje działają analogicznie do map, ale mają wiele wejść odpowiadających wejściu zadanej funkcji.
 
-_Uwaga: To ćwiczenie utworzono we wcześniejszej wersji dodatku Dynamo. Wiele funkcji węzła_ **List.Map** _przestało być potrzebnych po wprowadzeniu funkcji_ **List@Level**_. Więcej informacji można znaleźć w sekcji_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _poniżej._
+_Uwaga: to ćwiczenie utworzono we wcześniejszej wersji dodatku Dynamo. Wiele funkcji węzła_ **List.Map** _przestało być potrzebnych po wprowadzeniu funkcji_ **List@Level**_. Więcej informacji można znaleźć w sekcji_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _poniżej._
 
 Na wstępie przyjrzymy się węzłowi **List.Count** z poprzedniej sekcji.
 
 Węzeł **List.Count** liczy wszystkie elementy na liście. Użyjemy go, aby zademonstrować działanie węzła **List.Map**.
 
-![](<../images/5-4/3/lists of lists - map 01.jpg>)
+![](../images/5-4/3/listsoflists-map01.jpg)
 
-> 1. Wstaw dwa wiersze kodu do węzła **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
+> 1.  Wstaw dwa wiersze kodu do węzła **Code Block**: `-50..50..#Nx; -50..50..#Ny;`
 >
->    Po wpisaniu tego kodu blok będzie tworzył dwie dane wejściowe: Nx i Ny.
-> 2. Korzystając z dwóch _suwaków liczb całkowitych_, zdefiniuj wartości _Nx_ i _Ny_ przez połączenie ich z węzłem **Code Block**.
-> 3. Połącz poszczególne wiersze bloku kodu odpowiednio z danymi wejściowymi _X_ i _Y_ węzła **Point.ByCoordinates**. Kliknij węzeł prawym przyciskiem myszy, wybierz opcję Skratowanie i wybierz pozycję _Iloczyn wektorowy_. Zostanie utworzona siatka punktów. Ustawiliśmy zakres od –50 do 50, dlatego odpowiada to domyślnej siatce dodatku Dynamo.
+>     Po wpisaniu tego kodu blok będzie tworzył dwie dane wejściowe: Nx i Ny.
+> 2. Korzystając z dwóch suwaków _Integer Slider_, zdefiniuj wartości _Nx_ i _Ny_ przez połączenie ich z węzłem **Code Block**.
+> 3. Połącz poszczególne wiersze węzła Code Block odpowiednio z danymi wejściowymi _X_ i _Y_ węzła **Point.ByCoordinates**. Kliknij węzeł prawym przyciskiem myszy, wybierz opcję Skratowanie i wybierz pozycję _Iloczyn wektorowy_. Zostanie utworzona siatka punktów. Ustawiliśmy zakres od –50 do 50, dlatego odpowiada to domyślnej siatce dodatku Dynamo.
 > 4. Węzeł _**Watch**_ ujawnia utworzone punkty. Przyjrzyjmy się strukturze danych. Powstała lista list. Każda lista odpowiada wierszowi punktów siatki.
 
-![Exercise](<../images/5-4/3/lists of lists - map 02 (1).jpg>)
+![Ćwiczenie](../images/5-4/3/listsoflists-map02(1).jpg)
 
 > 1. Połącz węzeł **List.Count** z wyjściem węzła obserwacyjnego z poprzedniego kroku.
 > 2. Połącz węzeł **Watch** z wyjściem węzła **List.Count**.
@@ -121,7 +121,7 @@ Węzeł List.Count generuje wartość 5. Jest to równe zmiennej Nx zdefiniowane
 * Najpierw węzeł **Point.ByCoordinates** używa wejścia „x” jako głównej wartości wejściowej podczas tworzenia list. Gdy wartość Nx wynosi 5, a Ny wynosi 3, powstaje lista 5 list po 3 elementy.
 * Dodatek Dynamo traktuje listy jako obiekty, dlatego węzeł **List.Count** jest stosowany do listy głównej w hierarchii. Daje to wynik 5, czyli liczbę list na liście głównej.
 
-![Exercise](<../images/5-4/3/lists of lists - map 03.jpg>)
+![Ćwiczenie](../images/5-4/3/listsoflists-map03.jpg)
 
 > 1. Przy użyciu węzła **List.Map** przejdziemy niżej w hierarchii i wykonamy pewną _funkcję_ na tym poziomie.
 > 2. Węzeł **List.Count** nie ma żadnych wejść. Jest używany jako funkcja. Oznacza to, że węzeł **List.Count** jest stosowany do każdej z listy na niższym poziomie w hierarchii. Puste wejście węzła **List.Count** odpowiada liście wyjściowej węzła **List.Map**.
@@ -129,13 +129,13 @@ Węzeł List.Count generuje wartość 5. Jest to równe zmiennej Nx zdefiniowane
 
 ### **List.Combine**
 
-_Uwaga: To ćwiczenie utworzono we wcześniejszej wersji dodatku Dynamo. Wiele funkcji węzła List.Combine przestało być potrzebnych po wprowadzeniu funkcji_ **List@Level**_. Więcej informacji można znaleźć w sekcji_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _poniżej._
+_Uwaga: to ćwiczenie utworzono we wcześniejszej wersji dodatku Dynamo. Wiele funkcji węzła List.Combine przestało być potrzebnych po wprowadzeniu funkcji_ **List@Level**_. Więcej informacji można znaleźć w sekcji_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _poniżej._
 
 W tym ćwiczeniu użyjemy węzła **List.Combine**, aby zademonstrować, jak można użyć go do zastosowania funkcji w oddzielnych listach obiektów.
 
 Zacznij od przygotowania dwóch list punktów.
 
-![Exercise](<../images/5-4/3/lists of lists - combined 01.jpg>)
+![Ćwiczenie](../images/5-4/3/listsoflists-combined01.jpg)
 
 > 1. Użyj węzła **Sequence**, aby wygenerować 10 wartości, z których każda będzie miała przyrost 10-krokowy.
 > 2. Połącz wynik z wejściem x węzła **Point.ByCoordinates**. Spowoduje to utworzenie listy punktów w dodatku Dynamo.
@@ -143,16 +143,14 @@ Zacznij od przygotowania dwóch list punktów.
 
 Następnie użyjemy węzła **List.Combine**, aby zastosować funkcję do obiektów na 2 osobnych listach. W tym przypadku będzie to prosta funkcja rysowania linii.
 
-![Exercise](<../images/5-4/3/lists of lists - combined 02.jpg>)
+![Ćwiczenie](../images/5-4/3/listsoflists-combined02.jpg)
 
 > 1. Dodaj węzeł **List.Combine** do obszaru roboczego i połącz 2 zestawy punktów jako wejścia list0 i list1.
 > 2. Użyj **Line.ByStartPointEndPoint** jako funkcji wejściowej dla węzła **List.Combine**.
 
 Po zakończeniu te 2 zestawy punktów są spakowane/sparowane za pomocą funkcji **Line.ByStartPointEndPoint** i powodują zwrócenie 10 linii w dodatku Dynamo.
 
-{% hint style="info" %}
-Zapoznaj się z ćwiczeniem w części dotyczącej list n-wymiarowych, aby zobaczyć inny przykład użycia węzła List.Combine.
-{% endhint %}
+{% hint style="info" %} Zapoznaj się z ćwiczeniem w części dotyczącej list n-wymiarowych, aby zobaczyć inny przykład użycia węzła List.Combine. {% endhint %}
 
 ### List@Level
 
@@ -166,7 +164,7 @@ Funkcja **List@Level** jest preferowana względem węzła **List.Map**. Umożliw
 
 W tym ćwiczeniu użyjemy funkcji **List@Level**, aby odizolować określony poziom danych.
 
-![List@Level](<../images/5-4/3/lists of lists - list at level 01.jpg>)
+![List@Level](../images/5-4/3/listsoflists-listatlevel01.jpg)
 
 Zaczniemy od prostej trójwymiarowej siatki punktów.
 
@@ -174,15 +172,15 @@ Zaczniemy od prostej trójwymiarowej siatki punktów.
 > 2. Dane istnieją na różnych **poziomach**. Poziomy są wskazywane u dołu podglądu. Kolumny poziomów list odpowiadają danym na powyższych listach, co ułatwia identyfikację poziomu, który ma być przetwarzany.
 > 3. Lista poziomów jest uporządkowana w odwrotnej kolejności — najniższy poziom danych na niej to zawsze poziom L1. Gwarantuje to odpowiednie działanie wykresów, nawet jeśli zostaną zmienione w przyszłości.
 
-![List@Level](<../images/5-4/3/lists of lists - list at level 02.jpg>)
+![List@Level](../images/5-4/3/listsoflists-listatlevel02.jpg)
 
 > 1. Aby użyć funkcji **List@Level**, kliknij przycisk >. W tym menu znajdują się dwa pola wyboru.
 > 2. **Użyj poziomów** — powoduje to włączenie funkcji **List@Level**. Po kliknięciu tej opcji można klikać, aby wybierać poziomy list wejściowych, których ma używać węzeł. To menu pozwala szybko wypróbować różne opcje dotyczące poziomów, klikając strzałki w górę lub w dół.
-> 3. _Zachowaj strukturę listy_ — gdy ta opcja jest włączona, można zachować strukturę poziomów danych wejściowych. Czasami dane są celowo uporządkowane w podlistach. Zaznaczenie tej opcji pozwala zachować porządek list i uniknąć utraty informacji.
+> 3. _Zachowaj strukturę listy_ — gdy ta opcja jest włączona, można zachować strukturę poziomów danych wejściowych. Czasami dane są celowo uporządkowane na podlistach. Zaznaczenie tej opcji pozwala zachować porządek list i uniknąć utraty informacji.
 
 Dzięki prostej siatce 3D można otwierać i wizualizować strukturę list, przełączając różne poziomy list. Każda kombinacja poziomu list i indeksu zwraca inny zestaw punktów z oryginalnego zestawu 3D.
 
-![](<../images/5-4/3/lists of lists - list at level 03.jpg>)
+![](../images/5-4/3/listsoflists-listatlevel03.jpg)
 
 > 1. Filtr „@L2” w kodzie DesignScript umożliwia wybranie samej listy na poziomie 2. Lista na poziomie 2 z indeksem 0 zawiera tylko pierwszy zestaw punktów Y — zwracana jest siatka na płaszczyźnie XZ.
 > 2. Jeśli zmienimy filtr poziomów na „L1”, uzyskamy dostęp do wszystkich danych na pierwszym poziomie list. Lista na poziomie 1 z indeksem 0 jest płaską listą z wszystkimi punktami 3D.
@@ -191,7 +189,7 @@ Dzięki prostej siatce 3D można otwierać i wizualizować strukturę list, prze
 
 Choć dane z tego przykładu można uzyskać przy użyciu węzła **List.Map**, funkcja **List@Level** zdecydowanie upraszcza te interakcje, przez co ułatwia dostęp do danych węzła. Poniżej przedstawiono porównanie metod **List.Map** i **List@Level**:
 
-![](<../images/5-4/3/lists of lists - list at level 04.jpg>)
+![](../images/5-4/3/listsoflists-listatlevel04.jpg)
 
 > 1. Choć obie metody pozwalają uzyskać dostęp do tych samych punktów, funkcja **List@Level** ułatwia wybranie odpowiednich warstw danych w jednym węźle.
 > 2. Aby użyć siatki punktów za pomocą węzła **List.Map**, trzeba użyć węzła **List.GetItemAtIndex** w połączeniu z węzłem **List.Map**. Każde przejście na niższy poziom listy wymaga użycia dodatkowego węzła **List.Map**. Zależnie od złożoności używanych list uzyskanie dostępu do odpowiednich informacji może wymagać dodania wielu węzłów **List.Map** do wykresu.
@@ -211,12 +209,12 @@ Transpozycja jest podstawową funkcją obsługi list zawierających listy. Podob
 
 Usuniemy węzły **List.Count** z poprzednich ćwiczeń i przeniesiemy je do geometrii, aby sprawdzić strukturę danych.
 
-![](<../images/5-4/3/lists of lists - transpose 01.jpg>)
+![](../images/5-4/3/listsoflists-transpose01.jpg)
 
 > 1. Połącz węzeł **PolyCurve.ByPoints** z wyjściem węzła obserwacyjnego węzła **Point.ByCoordinates**.
 > 2. Wyjście wskazuje 5 krzywych złożonych i widzimy te krzywe w podglądzie dodatku Dynamo. Węzeł Dynamo wyszukuje listę punktów (w tym przypadku jest to lista list punktów) i tworzy z nich pojedynczą krzywą złożoną. Każda z tych list jest konwertowana na krzywą w strukturze danych.
 
-![](<../images/5-4/3/lists of lists - transpose 02.jpg>)
+![](../images/5-4/3/listsoflists-transpose02.jpg)
 
 > 1. Węzeł **List.Transpose** zamieni wszystkie elementy z wszystkimi listami na liście list. Choć brzmi to jak złożona operacja, działa tak samo jak transpozycja w programie Microsoft Excel: zamienia kolumny z wierszami w strukturze danych.
 > 2. Wynik abstrakcyjny: Transpozycja zmieniła strukturę listy. Zamiast 5 list po 3 elementy otrzymujemy 3 listy po 5 elementów.
@@ -224,15 +222,15 @@ Usuniemy węzły **List.Count** z poprzednich ćwiczeń i przeniesiemy je do geo
 
 ## Węzeł Code Block do tworzenia listy
 
-W węźle Code Block można użyć zapisu „[]”, aby utworzyć listę. Jest to szybsze i wygodniejsze niż użycie węzła **List.Create**. Węzeł **Code Block** jest bardziej szczegółowo opisany w rozdziale [Węzły Code Block i DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Na poniższej ilustracji przedstawiono, jak zdefiniować w bloku kodu listę zawierającą wiele wyrażeń.
+W kodzie bloku można użyć zapisu „[]”, aby utworzyć listę. Jest to szybsze i wygodniejsze niż użycie węzła **List.Create**. Węzeł **Code Block** jest bardziej szczegółowo opisany w rozdziale [Węzły Code Block i DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Na poniższej ilustracji przedstawiono, jak zdefiniować w bloku kodu listę zawierającą wiele wyrażeń.
 
-![](<../images/5-4/3/lists of lists - codeblock for list creation 01.jpg>)
+![](../images/5-4/3/listsoflists-codeblockforlistcreation01.jpg)
 
 #### Zapytanie w bloku kodu
 
-W węźle **Code block** można użyć zapisu „\[]”, aby szybko wybrać określone elementy ze złożonej struktury danych. Węzły **Code Block** są bardziej szczegółowo opisane w rozdziale [Węzły Code Block i DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Na poniższej ilustracji przedstawiono, jak w bloku kodu uzyskać dostęp do listy zawierającej wiele typów danych.
+W węźle **Code Block** można użyć zapisu „[]”, aby szybko wybrać określone elementy ze złożonej struktury danych. Węzły **Code Block** są bardziej szczegółowo opisane w rozdziale [Węzły Code Block i DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Na poniższej ilustracji przedstawiono, jak w bloku kodu uzyskać dostęp do listy zawierającej wiele typów danych.
 
-![](<../images/5-4/3/lists of lists - codeblock for list creation 02.jpg>)
+![](../images/5-4/3/listsoflists-codeblockforlistcreation02.jpg)
 
 ## Ćwiczenie — pobieranie i wstawianie danych
 
@@ -246,7 +244,7 @@ W tym ćwiczeniu zmienimy powierzchnię przy użyciu logiki zdefiniowanej w popr
 
 Zacznij od powyższego ciągu węzłów. Tworzymy prostą powierzchnię obejmującą domyślą siatkę dodatku Dynamo.
 
-![](<../images/5-4/3/list of lists - exercise cb insert & query 01.jpg>)
+![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
 
 > 1. Przy użyciu węzła **Code Block** wstaw te dwa wiersze kodu i połącz blok z wejściami _u_ i _v_ węzła **Surface.PointAtParameter**: `-50..50..#3;` `-50..50..#5;`
 > 2. Pamiętaj, aby ustawić skratowanie węzła **Surface.PointAtParameter** na _Iloczyn wektorowy_.
@@ -254,20 +252,20 @@ Zacznij od powyższego ciągu węzłów. Tworzymy prostą powierzchnię obejmuj�
 
 W tym kroku chcemy pobrać punkt środkowy utworzonej siatki. Aby to zrobić, wybierzemy środkowy punkt środkowej listy. To naprawdę proste.
 
-![](<../images/5-4/3/list of lists - exercise cb insert & query 02.jpg>)
+![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
 
 > 1. Aby upewnić się, że to właściwy punkt, można też klikać w węźle Watch, aby sprawdzić, czy używamy odpowiedniego elementu.
 > 2. Przy użyciu węzła **Code Block** napiszemy prosty kod pobierający listę list:\
->    `points[1][2];`
+ `points[1][2];`
 > 3. Przy użyciu węzła **Geometry.Translate** przesuniemy wybrany punkt w kierunku _Z_ o _20_ jednostek.
 
-![](<../images/5-4/3/list of lists - exercise cb insert & query 03.jpg>)
+![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
 
 > 1. Wybierzmy też środkowy wiersz punktów, używając węzła **List.GetItemAtIndex**. Uwaga: podobnie jak w poprzednim kroku, możemy pobrać elementy listy przy użyciu węzła **Code Block** zawierającego wiersz `points[1];`
 
 Pobraliśmy punkt środkowy i przesunęliśmy go w górę. Teraz chcemy wstawić przesunięty punkt z powrotem do struktury danych.
 
-![](<../images/5-4/3/list of lists - exercise cb insert & query 04.jpg>)
+![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
 
 > 1. Najpierw chcemy zastąpić odizolowany w poprzednim kroku element listy.
 > 2. Zastąpimy środkowy element przy użyciu węzła **List.ReplaceItemAtIndex**. Użyjemy indeksu _2_, a zastępujący go element będzie połączony z przesuniętym punktem (**Geometry.Translate**).
@@ -275,18 +273,18 @@ Pobraliśmy punkt środkowy i przesunęliśmy go w górę. Teraz chcemy wstawić
 
 Mając zmodyfikowaną listę, musimy wstawić ją z powrotem do oryginalnej struktury danych: listy list.
 
-![](<../images/5-4/3/list of lists - exercise cb insert & query 05.jpg>)
+![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
 
 > 1. W analogiczny sposób użyjemy węzła **List.ReplaceItemAtIndex**, aby wstawić naszą listę w miejsce środkowej listy.
-> 2. Węzły **Code Block** definiujące indeks tych dwóch węzłów mają numery 1 i 2, co odpowiada oryginalnemu zapytaniu w węźle **Code Block** (_points\[1]\[2]_).
+> 2. Węzły **Code Block**__ definiujące indeks tych dwóch węzłów mają numery 1 i 2, co odpowiada oryginalnemu zapytaniu w węźle **Code Block** (_points[1][2]_).
 > 3. Po wybraniu listy o _indeksie 1_ zobaczymy tę strukturę danych podświetloną w podglądzie dodatku Dynamo. Pomyślnie scaliliśmy przesunięty punkt z oryginalną strukturą danych.
 
 Istnieją różne sposoby uzyskania powierzchni z tego zestawu punktów. W tym przypadku utworzymy ją przez wyciągnięcie połączonych krzywych.
 
-![](<../images/5-4/3/list of lists - exercise cb insert & query 06.jpg>)
+![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
 
 > 1. Utwórz węzeł **NurbsCurve.ByPoints** i połącz z nim nową strukturę danych, aby utworzyć trzy krzywe NURBS.
 
-![](<../images/5-4/3/list of lists - exercise cb insert & query 07.jpg>)
+![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
 
 > 1. Połącz węzeł **Surface.ByLoft** z wyjściem węzła **NurbsCurve.ByPoints**. Otrzymaliśmy zmodyfikowaną powierzchnię. Możemy zmienić oryginalną wartość _Z_ geometrii. Użyj translacji i zobacz, jak zostanie zaktualizowana geometria.

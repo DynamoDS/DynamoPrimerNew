@@ -12,7 +12,7 @@ Ten proces roboczy ilustruje:
 * Tworzenie i modyfikowanie elementów geometrycznych za pomocą węzłów.
 * Wizualizowanie wyników projektu w czasie rzeczywistym.
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ## Definiowanie celów
 
@@ -48,7 +48,7 @@ Zostawimy wartość domyślną _centerPoint_, ale dodamy suwak liczb, **Number S
 
 Ten węzeł jest nieco inny niż poprzedni węzeł, ponieważ zawiera suwak. Interfejs umożliwia zmianę wartości wyjściowej suwaka.
 
-![](<../images/10-1/1/vase13 (1).gif>)
+![](../images/10-1/1/vase13(1).gif)
 
 Suwak można skonfigurować za pomocą przycisku listy rozwijanej po lewej stronie węzła. Ograniczmy suwak do maksymalnej wartości 15.
 
@@ -70,7 +70,7 @@ Kontynuujmy dodawanie węzłów i połączeń do logiki w celu zdefiniowania waz
 
 Skopiujmy te węzły 4 razy, aby uzyskać okręgi definiujące powierzchnię. Zmień nazwy suwaków Number Slider, jak pokazano poniżej.
 
-![](<../images/10-1/1/vase4 (1) (1).png>)
+![](../images/10-1/1/vase4(1)(1).png)
 
 > 1. Okręgi są tworzone za pomocą punktu środkowego i promienia
 
@@ -78,7 +78,7 @@ Skopiujmy te węzły 4 razy, aby uzyskać okręgi definiujące powierzchnię. Zm
 
 Brakuje nam kluczowego parametru wazonu: jego wysokości. Aby sterować wysokością wazonu, należy utworzyć kolejny suwak liczb. Dodamy również węzeł bloku kodu: **Code Block**. Bloki kodu ułatwiają dodawanie do procesu roboczego spersonalizowanych fragmentów kodu. Użyjemy bloku kodu do pomnożenia suwaka wysokości przez różne współczynniki, co pozwoli nam rozmieścić okręgi wzdłuż wysokości wazonu.
 
-![](<../images/10-1/1/vase15 (1).png>)
+![](../images/10-1/1/vase15(1).png)
 
 Następnie za pomocą węzła **Geometry.Translate** umieścimy okręgi na żądanej wysokości. Ponieważ chcemy rozmieścić okręgi w wazonie, użyjemy bloków kodu do pomnożenia parametru wysokości przez współczynnik.
 
@@ -92,7 +92,7 @@ Aby utworzyć powierzchnię za pomocą węzła **Surface.ByLoft**, należy poł�
 
 Wyłączmy również podgląd w innych węzłach, aby wyświetlić tylko wyświetlanie Surface.ByLoft.
 
-![](<../images/10-1/1/vase6 (1) (1).png>)
+![](../images/10-1/1/vase6(1)(1).png)
 
 > 3\. Przez wyciągnięcie przekształconych okręgów zostanie utworzona powierzchnia.
 
@@ -100,6 +100,6 @@ Wyłączmy również podgląd w innych węzłach, aby wyświetlić tylko wyświe
 
 Nasz proces roboczy jest gotowy. Teraz możemy użyć węzła **Number Slider** zdefiniowanego w skrypcie, aby utworzyć różne projekty wazonów.
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ![](../images/10-1/1/vase7.png)

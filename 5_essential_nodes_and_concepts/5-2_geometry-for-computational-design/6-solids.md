@@ -10,7 +10,7 @@ Jeśli chcemy tworzyć bardziej złożone modele, których nie można utworzyć 
 
 Do modyfikowania brył można używać [operacji logicznych](5-6\_solids.md#boolean-operations). Użyjmy kilku operacji logicznych, by utworzyć kolczastą kulę.
 
-![](<../images/5-2/6/solids  - spiky ball.jpg>)
+![](../images/5-2/6/solids-spikyball.jpg)
 
 > 1. **Sphere.ByCenterPointRadius**: utwórz bryłę bazową.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: wykonaj zapytanie dotyczące powierzchni bryły i przekształć w geometrię powierzchni — w tym przypadku sfera ma tylko jedną powierzchnię.
@@ -29,7 +29,7 @@ Do modyfikowania brył można używać [operacji logicznych](5-6\_solids.md#bool
 
 Operacje logiczne są złożone i ich obliczanie może być powolne. Funkcja blokowania pozwala wstrzymać wykonywanie wybranych węzłów i zależnych od nich węzłów na dalszym etapie przepływu.
 
-![](<../images/5-2/6/solids - freeze node.jpg>)
+![](../images/5-2/6/solids-freezenode.jpg)
 
 > 1\. Użyj menu kontekstowego wyświetlanego po kliknięciu prawym przyciskiem myszy, aby zablokować operację sumowania brył
 >
@@ -69,7 +69,7 @@ Bryły można modyfikować przez zaokrąglenie lub fazowanie ich krawędzi w cel
 
 ![](../images/5-2/6/SolidOperations.jpg)
 
-> 1. Przygotówka
+> 1. Sześcian bryłowy
 > 2. Sześcian z fazowaniem
 > 3. Sześcian z zaokrągleniami
 
@@ -84,13 +84,13 @@ Operacje logiczne na bryłach są metodami łączenia dwóch lub większej liczb
 
 Dzięki temu operacje logiczne na bryłach są zaawansowanym i oszczędzającym czas procesem. Istnieją trzy operacje logiczne na bryłach rozróżniające, które części geometrii zostają zachowane. ![Operacja logiczna na bryle](../images/5-2/6/SolidBooleans.jpg)
 
-> 1. **Union (suma):** usuń nakładające się części brył i połącz je w jedną bryłę.
-> 2. **Difference (różnica):** odejmij jedną bryłę od drugiej. Bryła odejmowana jest określana jako narzędzie. Warto zauważyć, że można zamienić bryłę wskazaną jako narzędzie, aby zachować odwrotną objętość.
-> 3. **Intersection (przecięcie):** zachowaj tylko przecinającą się objętość dwóch brył.
+> 1. **Union (suma)**: usuń nakładające się części brył i połącz je w jedną bryłę.
+> 2. **Difference (różnica)**: odejmij jedną bryłę od drugiej. Bryła odejmowana jest określana jako narzędzie. Warto zauważyć, że można zamienić bryłę wskazaną jako narzędzie, aby zachować odwrotną objętość.
+> 3. **Intersection (przecięcie)**: zachowaj tylko przecinającą się objętość dwóch brył.
 
 Oprócz tych trzech operacji dodatek Dynamo udostępnia też węzły **Solid.DifferenceAll** i **Solid.UnionAll**, które umożliwiają wykonywanie operacji różnicy i sumy dla wielu brył. ![](../images/5-2/6/BooleanAll.jpg)
 
-> 1. **UnionAll:** operacja sumy ze sferą i stożkami skierowanymi na zewnątrz
-> 2. **DifferenceAll:** operacja różnicy ze sferą i stożkami skierowanymi do wewnątrz
+> 1. **UnionAll**: operacja sumy ze sferą i stożkami skierowanymi na zewnątrz
+> 2. **DifferenceAll**: operacja różnicy ze sferą i stożkami skierowanymi do wewnątrz
 
 ##

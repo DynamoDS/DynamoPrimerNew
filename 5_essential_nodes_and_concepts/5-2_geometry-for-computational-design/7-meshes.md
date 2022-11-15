@@ -12,7 +12,7 @@ Dodatek Dynamo definiuje siatki za pomocą struktury danych wierzchołek-powierz
 
 Aby utworzyć siatkę, potrzebna jest lista wierzchołków i system grupowania tych wierzchołków w powierzchnie zwany grupą indeksów.
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes-meshelements.jpg)
 
 > 1. Lista wierzchołków
 > 2. Lista grup indeksów do zdefiniowania powierzchni
@@ -25,7 +25,7 @@ Ta biblioteka zawiera również narzędzia do modyfikowania siatek, naprawiania 
 
 Odwiedź [stronę analiz przypadków pakietu Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md), aby zapoznać się z przykładem korzystania z tego pakietu.
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Zestaw Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
 ## Bliższe spojrzenie na...
 
@@ -36,7 +36,7 @@ Siatka jest zbiorem czworokątów i trójkątów reprezentujących geometrię po
 ![Elementy siatki](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Wierzchołki siatki
-> 2. Krawędzie siatki \*Krawędzie z tylko jedną przylegającą powierzchnią są nazywane „nagimi”. Pozostałe krawędzie są „obleczone”
+> 2. Krawędzie siatki *Krawędzie z tylko jedną przylegającą powierzchnią są nazywane „nagimi”. Pozostałe krawędzie są „obleczone”
 > 3. Powierzchnie siatki
 
 ### Wierzchołki i normalne wierzchołków

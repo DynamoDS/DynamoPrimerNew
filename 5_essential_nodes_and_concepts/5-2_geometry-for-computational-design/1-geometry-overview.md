@@ -6,11 +6,11 @@
 
 Zrozumienie typów geometrii i [ich zależności](1-geometry-overview.md#stepping-through-the-hierarchy) pozwala na nawigację w kolekcji **Węzły geometrii** dostępnej w bibliotece. Węzły geometrii są uporządkowane alfabetycznie (nie hierarchicznie) — tutaj są one wyświetlane podobnie do ich układu w interfejsie dodatku Dynamo.
 
-![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
+![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
 
 Ponadto tworzenie modeli w dodatku Dynamo i łączenie podglądu elementów widocznych w podglądzie tła z przepływem danych na wykresie powinno stawać się w miarę upływu czasu bardziej intuicyjne.
 
-![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
+![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
 
 > 1. Zwróć uwagę na zakładany układ współrzędnych renderowany przez siatkę i kolorowe osie
 > 2. Wybrane węzły spowodują renderowanie odpowiedniej geometrii (jeśli dany węzeł tworzy geometrię) w tle w kolorze wyróżnienia
@@ -59,4 +59,4 @@ Tworzenie modeli w dodatku Dynamo nie ogranicza się do tego, co można wygenero
 
 1. Dodatek Dynamo umożliwia importowanie plików — spróbuj użyć pliku CSV dla chmur punktów lub pliku SAT w celu dołączenia powierzchni
 2. W przypadku pracy z programem Revit można odwoływać się do elementów programu Revit, aby używać ich w dodatku Dynamo
-3. Menedżer pakietów Dynamo udostępnia dodatkowe funkcje dotyczące rozszerzonych operacji i typów geometrii. Zapoznaj się z pakietem [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit).
+3. Menedżer pakietów Dynamo udostępnia dodatkowe funkcje dla rozszerzonych operacji i typów geometrii — sprawdź pakiet [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)

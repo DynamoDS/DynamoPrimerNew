@@ -6,7 +6,7 @@
 
 [Krzywe](5-4\_curves.md#curve) są pierwszym z opisanych typów danych geometrycznych, które mają bardziej znany zestaw właściwości opisujących kształt: jak bardzo są zakrzywione lub proste? Jak są długie lub krótkie? Należy też pamiętać, że punkty są nadal blokami konstrukcyjnymi służącymi do definiowania dowolnego elementu — od linii do splajnu oraz wszystkich typów krzywych.
 
-![Typy łuków](../images/5-2/4/CurveTypes.jpg)
+![Typy krzywych](../images/5-2/4/CurveTypes.jpg)
 
 > 1. Linia
 > 2. Polilinia
@@ -18,15 +18,15 @@
 
 ### Linia
 
-[Linia](5-4\_curves.md#lines) składa się z zestawu punktów; każda linia ma co najmniej 2 punkty. Jednym z najpopularniejszych sposobów tworzenia linii w dodatku Dynamo jest użycie `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>) w celu utworzenia linii w dodatku Dynamo.
+[Linia](5-4\_curves.md#lines) składa się z zestawu punktów; każda linia ma co najmniej 2 punkty. Jednym z najpopularniejszych sposobów tworzenia linii w dodatku Dynamo jest użycie `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg) w celu utworzenia linii w dodatku Dynamo.
 
-![](<./images/5-2/4/curves - line by start point end point.jpg>)
+![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
 
 ### Krzywa NURBS
 
 [NURBS](5-4\_curves.md#nurbs-+-polycurves) to model używany do dokładnego przedstawiania krzywych i powierzchni. Krzywa sinusoidalna w dodatku Dynamo utworzona za pomocą dwóch różnych metod tworzenia krzywych NURBS w celu porównania wyników.
 
-![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
+![](../images/5-2/4/curves-NurbsCurves.jpg)
 
 > 1. Węzeł _NurbsCurve.ByControlPoints_ używa listy punktów jako punktów kontrolnych
 > 2. Węzeł _NurbsCurve.ByPoints_ rysuje krzywą przechodzącą przez listę punktów
@@ -85,6 +85,4 @@ Wraz ze wzrostem złożoności funkcji parametrycznych definiujących kształt m
 > 2. Stopień = 2
 > 3. Stopień = 3
 
-{% hint style="info" %}
-Należy zauważyć, że im większa wartość stopnia, tym więcej punktów kontrolnych jest używanych do interpolacji wynikowej krzywej.
-{% endhint %}
+{% hint style="info" %} Należy zauważyć, że im większa wartość stopnia, tym więcej punktów kontrolnych jest używanych do interpolacji wynikowej krzywej. {% endhint %}

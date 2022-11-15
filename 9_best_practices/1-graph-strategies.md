@@ -2,7 +2,7 @@
 
 Przed tym rozdziałem w tym elementarzu omówiono sposób korzystania z zaawansowanych funkcji skryptów wizualnych dostępnych w dodatku Dynamo. Zrozumienie tego systemu jest ważnym wstępem do pracy nad niezawodnymi programami wizualnymi. Kiedy programy wizualne są używane w środowisku produkcyjnym, udostępniane współpracownikom oraz badane w celu usunięcia błędów lub zbadania ich ograniczeń, powstają dodatkowe problemy wymagające rozwiązania. Jeśli opracowany program będzie używany przez inne osoby lub zamierzasz go otworzyć za kilka miesięcy, jego układ graficzny i logika muszą być od razu czytelne. Dodatek Dynamo zawiera szereg narzędzi ułatwiających obsługę złożonych programów. W tym rozdziale wyjaśniono, kiedy należy ich używać.
 
-![Grupy](images/1/cad-chart-visual.jpg)
+![grupy](images/1/cad-chart-visual.jpg)
 
 ## Ograniczanie złożoności
 
@@ -12,7 +12,7 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 
 * Grupy umożliwiają **tworzenie części o oddzielnych funkcjach** podczas pracy nad programem.
 * Grupy umożliwiają **przenoszenie dużych części programów** z zachowaniem podziału na moduły i rozkładu.
-* Można **zmienić kolor grupy, aby wyróżnić** grupy realizujące różne działania (obsługujące dane wejściowe lub funkcje).
+* Można zmienić **kolor grupy, aby wyróżnić** grupy realizujące różne działania (obsługujące dane wejściowe lub funkcje).
 * Grupy pozwalają rozpocząć **porządkowanie wykresu w celu usprawnienia pracy nad węzłami niestandardowymi**.
 
 ![](images/1/graphstrategy2.png)
@@ -23,35 +23,35 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 > 2. Grupa danych wejściowych (pomarańczowe)
 > 3. Grupa skryptów (zielone)
 >
-> Informacje o korzystaniu z grup można znaleźć w temacie [Zarządzanie programem](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informacje o korzystaniu z grup można znaleźć w artykule [Zarządzanie programem](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
-### **Efektywne programowanie przy użyciu bloków kodu**
+### **Efektywne programowanie przy użyciu węzłów Code Block**
 
-* Czasami przy użyciu bloku kodu można **szybko wpisać numer lub metodę węzła, zamiast wyszukiwać tę informację ** (Point.ByCoordinates, Number, String, Formula).
-* Bloki kodu są przydatne, **gdy trzeba zdefiniować funkcje niestandardowe w skrypcie DesignScript w celu ograniczenia liczby węzłów wykresu**.
+* Czasami przy użyciu węzła Code Block można **szybko wpisać numer lub metodę węzła, zamiast wyszukiwać tę informację** (Point.ByCoordinates, Number, String, Formula).
+* Węzły Code Block są przydatne, **gdy trzeba zdefiniować funkcje niestandardowe w skrypcie DesignScript w celu ograniczenia liczby węzłów wykresu**.
 
-![](<images/1/graphstrategy3 (1).png>)
+![](images/1/graphstrategy3(1).png)
 
 > Bloki 1 i 2 realizują tę samą funkcję. Szybciej jest napisać kilka wierszy kodu niż wyszukiwać i dodawać poszczególne węzły. Blok kodu jest też krótszy.
 >
 > 1. Kod DesignScript w bloku kodu
 > 2. Równoważny program w węzłach
 >
-> Informacje o korzystaniu z bloków kodu można znaleźć w artykule [Co to jest blok kodu](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Informacje o korzystaniu z węzłów Code Block można znaleźć w artykule [Co to jest węzeł Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
 
 ### **Kondensowanie przez konwersję węzłów na kod**
 
-* Aby **zmniejszyć złożoność wykresu, można przekonwertować węzły na kod**. Kolekcja prostych węzłów zostanie przekształcona w jeden blok kodu z odpowiadającym im kodem DesignScript.
-* Konwersja węzłów na kod pozwala\*\* skondensować kod z zachowaniem czytelności programu\*\*
+* Aby **zmniejszyć złożoność wykresu, można przekonwertować węzły na kod**. Kolekcja prostych węzłów zostanie przekształcona w jeden węzeł Code Block z odpowiadającym im kodem DesignScript.
+* Konwersja węzłów na kod pozwala** skondensować kod z zachowaniem czytelności programu**
 * Poniżej wymieniono **zalety** konwersji węzłów na kod:
-   * Kod można łatwo skondensować w jeden komponent, który nadal jest dostępny do edycji.
-   * Pozwala uprościć znaczną część wykresu.
-   * Jest przydatna, gdy powstający miniprogram nie będzie często edytowany.
-   * Ułatwia integrowanie elementów innych bloków kodu, na przykład funkcji.
+  * Kod można łatwo skondensować w jeden komponent, który nadal jest dostępny do edycji.
+  * Pozwala uprościć znaczną część wykresu.
+  * Jest przydatna, gdy powstający miniprogram nie będzie często edytowany.
+  * Ułatwia integrowanie elementów innych bloków kodu, na przykład funkcji.
 * Poniżej wymieniono **wady** konwersji węzłów na kod:
-   * Nazwy ogólne pogarszają czytelność wykresu.
-   * Utrudnia innym użytkownikom zrozumienie wykresu.
-   * Nie można łatwo przywrócić wersji wizualnej programu.
+  * Nazwy ogólne pogarszają czytelność wykresu.
+  * Utrudnia innym użytkownikom zrozumienie wykresu.
+  * Nie można łatwo przywrócić wersji wizualnej programu.
 
 ![](images/1/graphstrategy3\_1.png)
 
@@ -63,16 +63,16 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 ### **Elastyczny dostęp do danych przy użyciu funkcji List@Level**
 
 * Funkcja List@Level umożliwia **ograniczenie złożoności wykresu przez zastąpienie węzłów List.Map i List.Combine**, które mogą zajmować dużo miejsca na obszarze projektowania.
-* Funkcja List@Level oferuje\*\* szybszą metodę tworzenia logiki węzłów niż węzły List.Map/List.Combine\*\*. Umożliwia ona uzyskiwanie dostępu do danych na każdym poziomie listy wprost z poziomu portu wejściowego węzła.
+* Funkcja List@Level oferuje** szybszą metodę tworzenia logiki węzłów niż węzły List.Map/List.Combine**. Umożliwia ona uzyskiwanie dostępu do danych na każdym poziomie listy wprost z poziomu portu wejściowego węzła.
 
-![](<images/1/graphstrategy4 (1) (1).png>)
+![](images/1/graphstrategy4(1)(1).png)
 
 > Można zweryfikować, ile wartości True z których list zwraca funkcja BoundingBox.Contains, aktywując funkcję List@Level dla wejścia „list” (lista) modułu CountTrue. Funkcja List@Level pozwala użytkownikowi określić, z jakiego poziomu danych wejściowych są pobierane dane. Korzystanie z funkcji List@Level jest elastyczne, efektywne i zalecane jako metoda skuteczniejsza niż stosowanie węzłów List.Map i List.Combine.
 >
 > 1. Liczenie wartości True na poziomie 2 listy
 > 2. Liczenie wartości True na poziomie 3 listy
 >
-> Informacje o korzystaniu z funkcji List@Level można znaleźć w temacie [Listy list](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Sposób korzystania z funkcji List@Level omówiono w artykule [Listy list](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
 
 ## Zachowywanie czytelności
 
@@ -80,11 +80,11 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 
 ### **Ciągłość wizualna — wyrównywanie węzłów**
 
-* Aby ograniczyć nakłady pracy po zakończeniu tworzenia wykresu, warto zadbać o czytelność układu węzłów przez **ich częste wyrównywanie podczas tworzenia wykresu**.
+* Aby ograniczyć nakłady pracy po zakończeniu tworzenia wykresu, warto zadbać o czytelność układu węzłów przez ich **częste wyrównywanie podczas tworzenia wykresu**.
 * Jeśli inne osoby będą pracowały nad tym samym wykresem, należy **zagwarantować płynny przepływ połączeń między węzłami przed dostarczeniem wykresu**.
 * Aby w prosty sposób wyrównać wykres, **można użyć funkcji Wyczyść układ węzłów, która robi to automatycznie** (choć mniej dokładnie niż człowiek).
 
-![](<images/1/graphstrategy5 (2) (1).png>)
+![](images/1/graphstrategy5(2)(1).png)
 
 > 1. Nieuporządkowany wykres
 > 2. Wyrównany wykres
@@ -114,7 +114,7 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 > 1. Notatka opisująca część programu, która zwraca pierwotne odległości przekształcenia
 > 2. Notatka opisująca kod odwzorowujący te wartości na falę sinusoidalną
 >
-> Informacje o dodawaniu notatki można znaleźć w temacie [Zarządzanie programem](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informacje o sposobie dodawania notatek można znaleźć w artykule [Zarządzanie programem](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
 
 ## Ciągłe sprawdzanie
 
@@ -122,7 +122,7 @@ Podczas tworzenia skryptu wizualnego ważne jest weryfikowanie, że zwracane dan
 
 ### **Monitorowanie danych przy użyciu węzłów obserwacyjnych i podglądów**
 
-* Węzły obserwacyjne (Watch) i podglądy pozwalają podczas tworzenia programu\*\* weryfikować, że ważne dane wyjściowe są zwracane zgodnie z oczekiwaniami\*\*
+* Węzły obserwacyjne (Watch) i podglądy pozwalają podczas tworzenia programu** weryfikować, że ważne dane wyjściowe są zwracane zgodnie z oczekiwaniami**
 
 ![](images/1/graphstrategy8.png)
 
@@ -131,7 +131,7 @@ Podczas tworzenia skryptu wizualnego ważne jest weryfikowanie, że zwracane dan
 > 1. pierwotnych odległości przekształcenia,
 > 2. wartości przekazywanych przez równanie sinusoidy.
 >
-> Informacje na temat korzystania z węzła Watch można znaleźć w temacie [Biblioteka](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Informacje o korzystaniu z mechanizmu obserwacji można znaleźć w [Bibliotece](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
 
 ## Gwarantowanie możliwości wielokrotnego użycia
 
@@ -140,19 +140,19 @@ Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet je
 ### **Zarządzanie wejściem i wyjściem**
 
 * Aby zagwarantować czytelność i skalowalność programu, należy **używać jak najmniejszej liczby wejść i wyjść**.
-* O ile to możliwe, należy **rozważyć strukturę logiczną i opracować ogólny algorytm algorytmu** przed dodaniem jakichkolwiek węzłów w obszarze projektowania. Podczas opracowywania ogólnego algorytmu należy sprawdzić, które wejścia i wyjścia będą stosowane w skryptach.
+* O ile to możliwe, należy **rozważyć strukturę logiczną i opracować ogólną logikę algorytmu** przed dodaniem jakichkolwiek węzłów w obszarze projektowania. Podczas opracowywania ogólnego algorytmu należy sprawdzić, które wejścia i wyjścia będą stosowane w skryptach.
 
 ### **Osadzanie wartości wejściowych za pomocą ustawień wstępnych**
 
 * Jeśli **wykres powinien zawierać pewne opcje lub warunki**, szybki dostęp do nich zapewniają ustawienia wstępne.
 * Ustawienia wstępne pozwalają też **ograniczyć złożoność wykresu przez buforowanie określonych wartości suwaków**, gdy czas działania wykresu jest długi.
 
-> Informacje na temat korzystania z ustawień wstępnych można znaleźć w artykule [Zarządzanie danymi przy użyciu ustawień wstępnych](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Informacje o korzystaniu z wykresów można znaleźć w artykule [Zarządzanie danymi przy użyciu ustawień wstępnych](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
 ### **Umieszczanie programów w węzłach niestandardowych**
 
 * Użyj węzła niestandardowego, jeśli **program można umieścić w pojedynczym kontenerze**.
-* Użyj węzła niestandardowego, jeśli **część wykresu będzie często używana ponownie** w innych programach.
+* Użyj węzła niestandardowego, **jeśli część wykresu będzie często używana ponownie** w innych programach.
 * Użyj węzła niestandardowego, jeśli **pewne funkcje mają być udostępniane w społeczności Dynamo**.
 
 ![](images/1/graphstrategy9.png)
@@ -162,15 +162,15 @@ Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet je
 > 1. Istniejący program punktu przyciągania
 > 2. Węzeł niestandardowy zawierający ten program — PointGrid
 >
-> Informacje na temat korzystania z węzłów niestandardowych można znaleźć w artykule [Wstęp do węzłów niestandardowych](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Informacje o korzystaniu z węzłów niestandardowych można znaleźć w artykule Wstęp[ do węzłów niestandardowych](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
 
 ### **Tworzenie szablonów**
 
 * Tworząc szablony, można **budować standardy graficzne obejmujące wszystkie wykresy. Spójność wizualna ułatwia współpracownikom zrozumienie wykresu**.
-* W ramach szablonu można ustalić **standardowe kolory i rozmiary czcionek grup**, które ułatwiają klasyfikację typów procesów roboczych i działań na danych.
+* W ramach szablonu można ustalić **standardowe kolory i rozmiary czcionek grup, które ułatwiają klasyfikację typów procesów roboczych i działań na danych**.
 * Tworząc szablon, można nawet określić standardowe **etykiety, kolory lub różnice stylów między procesami roboczymi (dostępnymi dla użytkownika) a wewnętrznymi** na wykresie.
 
-![](<images/1/graphstrategy10 (2).png>)
+![](images/1/graphstrategy10(2).png)
 
 > 1. Interfejs programu (elementy dostępne dla użytkownika) — nazwa projektu, suwaki danych wejściowych i importowana geometria.
 > 2. Elementy wewnętrzne programu.
@@ -217,7 +217,7 @@ Po ustaleniu grup rozmieścimy węzły tak, aby wykres zawierał ciągły przep�
 
 Program będzie czytelniejszy, gdy dodamy kolejną warstwę ulepszeń graficznych. Dodaj notatki, aby opisać działanie danej części programu. Nadaj niestandardowe nazwy danym wejściowym. Przypisz kolory różnym typom grup.
 
-![](<images/1/graphstrategy15 (1).png>)
+![](images/1/graphstrategy15(1).png)
 
 > Te ulepszenia graficzne powiedzą użytkownikom więcej o działaniu programu. Różne kolory grup ułatwiają odróżnianie danych wejściowych od funkcji.
 >

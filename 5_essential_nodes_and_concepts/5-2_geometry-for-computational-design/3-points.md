@@ -8,19 +8,19 @@
 
 ### Punkt 2D/3D
 
-Najczęściej używany typ punktu w dodatku Dynamo istnieje w trójwymiarowym globalnym układzie współrzędnych i ma trzy współrzędne \[X,Y,Z] (w dodatku Dynamo jest to punkt 3D).
+Najczęściej używany typ punktu w dodatku Dynamo istnieje w trójwymiarowym globalnym układzie współrzędnych i ma trzy współrzędne [X,Y,Z] (w dodatku Dynamo jest to punkt 3D).
 
-![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
+![](../images/5-2/3/points-3dpointindynamo.jpg)
 
-Punkt 2D w dodatku Dynamo ma dwie współrzędne \[X,Y].
+Punkt 2D w dodatku Dynamo ma dwie współrzędne [X,Y].
 
-![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
+![](../images/5-2/3/points-2dpointindynamo.jpg)
 
 ### Punkt na krzywych i powierzchniach
 
-Parametry dla krzywych i powierzchni są ciągłe i rozciągają się poza krawędź danej geometrii. Ponieważ kształty definiujące przestrzeń parametryczną znajdują się w trójwymiarowym globalnym układzie współrzędnych, zawsze można przekształcić współrzędną parametryczną we współrzędną „globalną”. Na przykład punkt \[0,2, 0,5] na powierzchni jest taki sam jak punkt \[1,8, 2,0, 4,1] we współrzędnych globalnych.
+Parametry dla krzywych i powierzchni są ciągłe i rozciągają się poza krawędź danej geometrii. Ponieważ kształty definiujące przestrzeń parametryczną znajdują się w trójwymiarowym globalnym układzie współrzędnych, zawsze można przekształcić współrzędną parametryczną we współrzędną „globalną”. Na przykład punkt [0,2, 0,5] na powierzchni jest taki sam jak punkt [1,8, 2,0, 4,1] we współrzędnych globalnych.
 
-![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
+![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg)
 
 > 1. Punkt w zakładanych współrzędnych globalnych XYZ
 > 2. Punkt względem danego układu współrzędnych (walcowego)
@@ -43,10 +43,10 @@ Jeśli geometria jest językiem modelu, punkty są alfabetem. Punkty są podstaw
 
 ### Punkt jako współrzędne
 
-Punkty mogą również występować w dwuwymiarowym układzie współrzędnych. Konwencja wskazuje różne notacje literowe w zależności od tego, z którym typem przestrzeni pracujemy — możemy używać \[X,Y] na płaszczyźnie lub \[U,V] na powierzchni.
+Punkty mogą również występować w dwuwymiarowym układzie współrzędnych. Konwencja wskazuje różne notacje literowe w zależności od tego, z którym typem przestrzeni pracujemy — możemy używać [X,Y] na płaszczyźnie lub [U,V] na powierzchni.
 
 ![Punkt jako współrzędne](../images/5-2/3/Coordinates.jpg)
 
-> 1. Punkt w euklidesowym układzie współrzędnych: \[X,Y,Z]
-> 2. Punkt w układzie współrzędnych z parametrem krzywej: \[t]
-> 3. Punkt w układzie współrzędnych z parametrami powierzchni: \[U,V]
+> 1. Punkt w euklidesowym układzie współrzędnych: [X,Y,Z]
+> 2. Punkt w układzie współrzędnych z parametrem krzywej: [t]
+> 3. Punkt w układzie współrzędnych z parametrami powierzchni: [U,V]

@@ -16,25 +16,25 @@ Rozdzielenie słowników od list sprawia, że słowniki stają się pierwszoligo
 
 ### **Na czym polegają różnice?**
 
-* Wprowadzono zmiany w _składni_ w zakresie inicjalizacji słowników i list w blokach kodu oraz pracy z nimi.
-   * W przypadku słowników używana jest następująca składnia: `{key:value}`
-   * Listy mają następującą składnię `[value,value,value]`
+* Wprowadzono zmiany w _składni_ w zakresie inicjalizacji słowników i list w węzłach Code Block oraz pracy z nimi.
+  * W przypadku słowników używana jest następująca składnia: `{key:value}`
+  * Listy mają następującą składnię `[value,value,value]`
 * W bibliotece wprowadzono _nowe węzły_, aby ułatwić tworzenie i modyfikowanie słowników oraz stosowanie do nich zapytań.
-* Listy tworzone w blokach kodu w wersji 1.x będą automatycznie migrowane po wczytaniu skryptu do nowej składni listy, w której są używane nawiasy kwadratowe `[ ]` zamiast nawiasów klamrowych `{ }` \\
+*   Listy tworzone w węzłach Code Block w wersji 1.x będą automatycznie migrowane po wczytaniu skryptu do nowej składni listy, w której są używane nawiasy kwadratowe `[ ]` zamiast nawiasów klamrowych `{ }` \\
 
-   ***
+    ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1).jpg>)
+![](../images/5-5/1/whatisadictionary-whatarethechanges(1).jpg)
 
 ***
 
 ### **Dlaczego należy się tym przejmować? Do czego służą te elementy?**
 
-W informatyce słowniki — tak jak listy — to kolekcje obiektów. Listy mają określony porządek, natomiast słowniki są kolekcjami _nieuporządkowanymi_. Nie są one zależne od sekwencji liczby (indeksów). Wykorzystuje się w nich _klucze._
+W informatyce słowniki — tak jak listy — to kolekcje obiektów. Listy mają określony porządek, natomiast słowniki są kolekcjami _nieuporządkowanymi_. Nie są one zależne od sekwencji liczby (indeksów). Wykorzystuje się w nich _klucze_.
 
 Na poniższej ilustracji pokazano potencjalny przypadek zastosowania słownika. Często słowniki są używane do powiązania dwóch fragmentów danych, które mogą nie mieć bezpośredniej korelacji. W naszym przypadku połączymy hiszpańską wersję słowa z angielską do późniejszego wyszukania.
 
-![](<../images/5-5/1/what is a dictionary - what would you use these for.jpg>)
+![](../images/5-5/1/whatisadictionary-whatwouldyouusethesefor.jpg)
 
 > 1. Utwórz słownik, aby powiązać te dwa elementy danych.
 > 2. Pobierz wartość związaną z podanym kluczem.

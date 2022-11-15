@@ -1,6 +1,6 @@
 # Podręcznik użytkownika Primer, społeczność i platforma dodatku Dynamo
 
-Niniejszy przewodnik zawiera rozdziały opracowane na platformie Mode Lab. Te rozdziały są poświęcone podstawom, które należy opanować, aby szybko rozpocząć tworzenie własnych programów wizualnych za pomocą dodatku Dynamo. Zawarto w nich też sugestie dotyczące dalszego doskonalenia umiejętności związanych z dodatkiem Dynamo.&#x20;
+Niniejszy przewodnik zawiera rozdziały opracowane na platformie Mode Lab. Te rozdziały są poświęcone podstawom, które należy opanować, aby szybko rozpocząć tworzenie własnych programów wizualnych za pomocą dodatku Dynamo. Zawarto w nich też sugestie dotyczące dalszego doskonalenia umiejętności związanych z dodatkiem Dynamo.
 
 ### Podręcznik użytkownika Primer
 
@@ -19,21 +19,19 @@ Z myślą o użytkownikach chcących zobaczyć prezentację procesów roboczych 
 
 * [Wazon parametryczny](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](<./images/1-2/vase1.gif>)
+![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
 
 * [Punkty przyciągania](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
-![](<./images/1-2/attractor1.gif>)
+![](images/1-2/attractor1.gif)
 
-{% hint style="info" %}
-W kolejnych rozdziałach znajduje się więcej ćwiczeń dotyczących różnych omawianych tematów związanych z dodatkiem Dynamo. **Ćwiczenia** można zazwyczaj znaleźć w ostatniej sekcji każdej strony.
-{% endhint %}
+{% hint style="info" %} W kolejnych rozdziałach znajduje się więcej ćwiczeń dotyczących różnych omawianych tematów związanych z dodatkiem Dynamo. **Ćwiczenia** można zazwyczaj znaleźć w ostatniej sekcji każdej strony. {% endhint %}
 
 ### Społeczność
 
 Dodatek Dynamo nie byłby tak przydatny bez silnej grupy aktywnych użytkowników i współtwórców. Przyłącz się do społeczności, obserwując [blog](http://dynamobim.org/blog/), dodając swoje prace do galerii lub dyskutując na temat dodatku Dynamo na [forum](https://forum.dynamobim.com).
 
-![Forum](./images/1-2/02-Community.png)
+![Forum](images/1-2/02-Community.png)
 
 ### Platforma
 
@@ -41,6 +39,6 @@ Dodatek Dynamo ma być narzędziem do programowania wizualnego dla projektantów
 
 Kod źródłowy projektu jest typu open source, co pozwala rozszerzać jego funkcjonalność bez ograniczeń. Zajrzyj na stronę tego projektu w serwisie GitHub — przejdź do części „Works in Progress”, aby przekonać się, jak użytkownicy dostosowują dodatek Dynamo.
 
-![Repozytorium](./images/1-2/03-TheRepo.png)
+![Repozytorium](images/1-2/03-TheRepo.png)
 
 > Przeglądaj, twórz odgałęzienia i rozpocznij rozszerzanie dodatku Dynamo stosownie do własnych potrzeb

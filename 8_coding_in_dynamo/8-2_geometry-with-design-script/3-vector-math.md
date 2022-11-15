@@ -4,7 +4,7 @@ Obiekty w projektach obliczeniowych rzadko są tworzone jawnie w końcowym poło
 
 Podstawowy wektor reprezentuje położenie w przestrzeni 3D i zwykle jest uważany za punkt końcowy strzałki od położenia (0, 0, 0) do położenia grotu. Wektory mogą być tworzone za pomocą konstruktora _ByCoordinates_ po podaniu położenia x, y i z nowo utworzonego obiektu wektora. Należy zauważyć, że obiekty wektorów nie są obiektami geometrycznymi i nie pojawiają się w oknie dodatku Dynamo. Jednak w oknie konsoli można wyświetlić informacje o nowo utworzonym lub zmodyfikowanym wektorze:
 
-![](<../images/8-2/3/vector math 01.jpg>)
+![](../images/8-2/3/vectormath01.jpg)
 
 ```js
 // construct a Vector object
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Często podczas skalowania wektora wymagane jest uzyskanie długości wynikowego wektora dokładnie równej wielkości skalowanej. Można to łatwo osiągnąć przez najpierw znormalizowanie wektora, czyli ustawienie długości wektora równej dokładnie jeden.
 
-![](<../images/8-2/3/vector math 05.jpg>)
+![](../images/8-2/3/vectormath05.jpg)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Dodatkowa, choć nieco bardziej zaawansowana funkcja matematyki wektorowej, to iloczyn skalarny. Iloczyn skalarny dwóch wektorów jest liczbą rzeczywistą (nie obiektem wektora), która odnosi się do, ale nie jest dokładnie kątem między dwoma wektorami. Jedną z przydatnych właściwości iloczynu skalarnego jest to, że ma on wartość 0 wtedy i tylko wtedy, gdy mnożone wektory są prostopadłe. Iloczyn skalarny jest obliczany za pomocą metody _Dot_.
 
-![](<../images/8-2/3/vector math 07.jpg>)
+![](../images/8-2/3/vectormath07.jpg)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);

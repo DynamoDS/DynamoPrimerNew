@@ -12,21 +12,21 @@ Najprostszym sposobem instalacji pakietu jest użycie paska narzędzi Pakiety w 
 
 W dodatku Dynamo przejdź do obszaru _Pakiety > Wyszukaj pakiet_.
 
-![](<../images/6-2/1/package introduction - installing a package 01.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
 
 Na pasku wyszukiwania wyszukaj frazę „quads from rectangular grid”. Po kilku chwilach powinny pojawić się wszystkie pakiety zgodne z tym zapytaniem. Wybierzmy pierwszy pakiet z pasującą nazwą.
 
 Kliknij przycisk Zainstaluj, aby dodać ten pakiet do biblioteki. Gotowe.
 
-![](<../images/6-2/1/package introduction - installing a package 02.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
 
 Zwróć uwagę, że w bibliotece Dynamo pojawiła się kolejna grupa o nazwie „buildz”. Ta nazwa odnosi się do programisty pakietu, a węzeł niestandardowy zostaje umieszczony w tej grupie. Możemy od razu zacząć z niego korzystać.
 
-![](<../images/6-2/1/package introduction - installing a package 03.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage03.jpg)
 
 Użyj węzła **Code Block**, aby szybko zdefiniować prostokątną siatkę, zapisać wynik w węźle **Polygon.ByPoints**, a następnie użyj węzła **Surface.ByPatch**, aby wyświetlić listę właśnie utworzonych prostokątnych paneli.
 
-![](<../images/6-2/1/package introduction - installing a package 04.jpg>)
+![](../images/6-2/1/packageintroduction-installingapackage04.jpg)
 
 ### Instalowanie folderu pakietu — DynamoUnfold
 
@@ -36,23 +36,23 @@ Tak jak w przykładzie powyżej, rozpocznij od wybrania opcji _Pakiety > Wyszuka
 
 Tym razem poszukamy jednego słowa, _„DynamoUnfold”_, zwracając uwagę na wielkość liter. Po wyświetleniu pakietów pobierz je, klikając przycisk Zainstaluj, aby dodać składniki Dynamo Unfold do biblioteki Dynamo.
 
-![](<../images/6-2/1/package introduction - installing package folder 01.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
 
 W bibliotece Dynamo dostępna jest grupa _DynamoUnfold_ z wieloma kategoriami i węzłami niestandardowymi.
 
-![](<../images/6-2/1/package introduction - installing package folder 02.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
 Spójrzmy teraz na strukturę plików pakietu. Najpierw wybierz opcję Dynamo > Preferencje
 
-![](<../images/6-2/1/package introduction - installing package folder 03.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
 
-W oknie podręcznym Preferencje otwórz Menedżera pakietów > obok opcji DynamoUnfold wybierz menu w postaci pionowych kropek ![](<../images/6-2/1/package introduction - vertical dots menu.jpg>) > Pokaż katalog główny, aby otworzyć folder główny dla tego pakietu.
+W oknie podręcznym Preferencje otwórz Menedżera pakietów > obok opcji DynamoUnfold wybierz menu w postaci pionowych kropek ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > Pokaż katalog główny, aby otworzyć folder główny dla tego pakietu.
 
-![](<../images/6-2/1/package introduction - installing package folder 04.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
 
 Spowoduje to przejście do katalogu głównego pakietu. Zwróć uwagę, że mamy 3 foldery i plik.
 
-![](<../images/6-2/1/package introduction - installing package folder 05.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder05.jpg)
 
 > 1. Folder _bin_ zawiera pliki .dll. Ten pakiet Dynamo został opracowany przy użyciu narzędzia Zero-Touch, więc węzły niestandardowe są przechowywane w tym folderze.
 > 2. Folder _dyf_ zawiera węzły niestandardowe. Ten pakiet nie został opracowany przy użyciu węzłów niestandardowych Dynamo, dlatego ten folder jest w przypadku tego pakietu pusty.
@@ -67,7 +67,7 @@ Otwórzmy plik „SphereUnfold”.
 
 Po otwarciu pliku i naciśnięciu przycisku „Uruchom” w solwerze dostępna jest rozwinięta sfera. Pliki przykładowe są przydatne do nauki pracy z nowym pakietem Dynamo.
 
-![](<../images/6-2/1/package introduction - installing package folder 07.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg)
 
 ### Menedżer pakietów Dynamo
 
@@ -83,9 +83,9 @@ Pliki pakietu można również pobrać z Menedżera pakietów Dynamo, ale robien
 
 Jeśli pobierasz pliki z Menedżera pakietów Dynamo lub chcesz sprawdzić, gdzie są przechowywane wszystkie pliki pakietu, kliknij opcje Dynamo > Menedżer pakietów > Ścieżki do węzłów i pakietów, a następnie odszukaj bieżący katalog główny folderu.
 
-![](<../images/6-2/1/package introduction - installing package folder 08.jpg>)
+![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
-Domyślnie pakiety są instalowane w położeniu podobnym do tej ścieżki folderu: _C:/Users/\[nazwa_użytkownika]/AppData/Roaming/Dynamo/\[wersja dodatku Dynamo]_.
+Domyślnie pakiety są instalowane w położeniu podobnym do tej ścieżki folderu: _C:/Users/[nazwa_użytkownika]/AppData/Roaming/Dynamo/[wersja dodatku Dynamo]_.
 
 ### Dalsze kroki z pakietami
 

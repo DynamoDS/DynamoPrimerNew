@@ -4,11 +4,11 @@ Dlaczego w środowisku programowania wizualnego Dynamo warto używać programowa
 
 **Program wizualny:**
 
-![](<../images/8-3/1/python node - visual vs textual programming.jpg>)
+![](../images/8-3/1/pythonnode-visualvstextualprogramming.jpg)
 
 **Program tekstowy:**
 
-```
+```py
 import clr
 clr.AddReference('ProtoGeometry')
 from Autodesk.DesignScript.Geometry import *
@@ -38,15 +38,15 @@ OUT = solids
 
 Podobnie jak bloki kodu węzły języka Python są interfejsem skryptowym w środowisku programowania wizualnego. Węzeł Python można znaleźć w bibliotece w obszarze Skrypt>Edytor>Skrypt w języku Python.
 
-![](<../images/8-3/1/python node - the python node 01.jpg>)
+![](../images/8-3/1/pythonnode-thepythonnode01.jpg)
 
 Dwukrotne kliknięcie węzła powoduje otwarcie edytora skryptów języka Python (można również kliknąć prawym przyciskiem myszy węzeł i wybrać polecenie _Edytuj_). Na górze jest wyświetlany tekst wstępny, który ma ułatwić odnoszenie się do potrzebnych bibliotek. Dane wejściowe są przechowywane w szyku IN. Wartości są zwracane do dodatku Dynamo przez przypisanie ich do zmiennej OUT
 
-![](<../images/8-3/1/python node - the python node 02.jpg>)
+![](../images/8-3/1/pythonnode-thepythonnode02.jpg)
 
-Biblioteka Autodesk.DesignScript.Geometry umożliwia używanie zapisu kropkowego podobnego do bloków kodu (Code Block). Aby uzyskać więcej informacji na temat składni dodatku Dynamo, zapoznaj się z materiałem [7-2\_design-script-scritax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention") oraz [Przewodnikiem języka DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf). (Aby pobrać ten dokument PDF, kliknij prawym przyciskiem myszy łącze i wybierz opcję „Zapisz łącze jako...”). Wpisanie typu geometrii, takiego jak „Point.”, spowoduje pojawienie się listy metod tworzenia punktów i stosowania do nich zapytań.
+Biblioteka Autodesk.DesignScript.Geometry umożliwia używanie zapisu kropkowego podobnego do bloków kodu (Code Block). Aby uzyskać więcej informacji na temat składni dodatku Dynamo, zapoznaj się z materiałem [7-2_design-script-scritax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention") oraz [Przewodnikiem języka DesignScript](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf). (Aby pobrać ten dokument PDF, kliknij prawym przyciskiem myszy łącze i wybierz opcję „Zapisz łącze jako...”). Wpisanie typu geometrii, takiego jak „Point.”, spowoduje pojawienie się listy metod tworzenia punktów i stosowania do nich zapytań.
 
-![](<../images/8-3/1/python node - the python node 03.jpg>)
+![](../images/8-3/1/pythonnode-thepythonnode03.jpg)
 
 > Metody obejmują konstruktory, takie jak _ByCoordinates_, akcje, takie jak _Add_, oraz zapytania, takie jak współrzędne _X_, _Y_ i _Z_.
 
@@ -62,22 +62,22 @@ Biblioteka Autodesk.DesignScript.Geometry umożliwia używanie zapisu kropkowego
 
 W tym przykładzie napiszemy skrypt w języku Python, który tworzy wzorce z modułu bryłowego, i zmienimy go w węzeł niestandardowy. Najpierw utworzymy moduł bryłowy za pomocą węzłów Dynamo.
 
-![](<../images/8-3/1/python node - exercise pt I-01.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptI-01.jpg)
 
 > 1. **Rectangle.ByWidthLength:** utwórz prostokąt, który będzie podstawą bryły.
-> 2. **Surface.ByPatch:** połącz prostokąt z wejściem „_closedCurve_”, aby utworzyć dolną powierzchnię.
+> 2. **Surface.ByPatch:** połącz prostokąt z wejściem _„closedCurve”_, aby utworzyć dolną powierzchnię.
 
-![](<../images/8-3/1/python node - exercise pt I-02.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptI-02.jpg)
 
-> 1. **Geometry.Translate:** połącz prostokąt z wejściem „_geometry_”, aby przesunąć go w górę, używając bloku kodu do określenia grubości bazowej bryły.
+> 1. **Geometry.Translate:** połącz prostokąt z wejściem _„geometry”_, aby przesunąć go w górę, używając węzła Code Block do określenia grubości bazowej bryły.
 > 2. **Polygon.Points:** zastosuj zapytanie do przekształconego prostokąta w celu wyodrębnienia punktów narożnych.
-> 3. **Geometry.Translate:** użyj bloku kodu, aby utworzyć listę czterech wartości odpowiadających czterem punktom, przekształcając jeden narożnik bryły w górę.
+> 3. **Geometry.Translate:** użyj węzła Code Block, aby utworzyć listę czterech wartości odpowiadających czterem punktom, przekształcając jeden narożnik bryły w górę.
 > 4. **Polygon.ByPoints:** użyj przekształconych punktów, aby odtworzyć górny wielobok.
 > 5. **Surface.ByPatch:** połącz wielobok, aby utworzyć górną powierzchnię.
 
 Teraz gdy mamy górną i dolną powierzchnię, wyciągnijmy między dwoma profilami, aby utworzyć boki bryły.
 
-![](<../images/8-3/1/python node - exercise pt I-03.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptI-03.jpg)
 
 > 1. **List.Create:** połącz dolny prostokąt i górny wielobok z wejściami indeksu.
 > 2. **Surface.ByLoft:** wyciągnij dwa profile w celu utworzenia boków bryły.
@@ -86,15 +86,15 @@ Teraz gdy mamy górną i dolną powierzchnię, wyciągnijmy między dwoma profil
 
 Po uzyskaniu bryły upuść węzeł skryptu w języku Python w obszarze roboczym.
 
-![](<../images/8-3/1/python node - exercise pt I-04.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptI-04.jpg)
 
-> 1. Aby dodać kolejne wejścia do węzła, kliknij ikonę „+” na węźle. Nazwy wejść to IN\[0], IN\[1] itd., aby wskazać, że reprezentują one elementy na liście.
+> 1. Aby dodać kolejne wejścia do węzła, kliknij ikonę „+” na węźle. Nazwy wejść to IN[0], IN[1] itd., aby wskazać, że reprezentują one elementy na liście.
 
 Zacznijmy od zdefiniowania wejść i wyjść. Kliknij dwukrotnie węzeł, aby otworzyć edytor języka Python. Zmodyfikuj kod w edytorze na podstawie poniższego kodu.
 
-![](<../images/8-3/1/python node - exercise pt I-05.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptI-05.jpg)
 
-```
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -128,7 +128,7 @@ Ten kod będzie bardziej przejrzysty w trakcie dalszej analizy tego ćwiczenia. 
 
 > Przyjrzyj się węzłowi Python w dodatku Dynamo. Zauważ, że używamy tej samej składni, która jest używana w węzłach w dodatku Dynamo. Zapoznaj się z poniższym skomentowanym kodem.
 
-```
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -169,9 +169,9 @@ OUT = solids
 
 Ponieważ będziemy zarówno przekształcać, jak i obracać moduły brył, użyjmy operacji Geometry.Transform. Z węzła Geometry.Transform wynika, że będziemy potrzebować źródłowego układu współrzędnych i docelowego układu współrzędnych do przekształcenia bryły. Źródłem jest kontekstowy układ współrzędnych bryły, natomiast elementem docelowym będzie inny układ współrzędnych dla każdego modułu ustawionego w szyku. Oznacza to, że należy utworzyć pętlę przez wartości x i y, aby przekształcić układ współrzędnych za każdym razem w inny sposób.
 
-![](<../images/8-3/1/python node - exercise pt I-06.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-```
+``` py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -225,7 +225,7 @@ OUT = solids
 
 Kliknij przycisk Uruchom, a następnie Zapisz kod. Połącz węzeł w języku Python z istniejącym skryptem w następujący sposób.
 
-![](<../images/8-3/1/python node - exercise pt I-07.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptI-07.jpg)
 
 > 1. Połącz dane wyjściowe z węzła **Solid.ByJoinedSurfaces** z pierwszym wejściem węzła Python i użyj węzła Code Block, aby zdefiniować pozostałe wejścia.
 > 2. Utwórz węzeł **Topology.Edges** i użyj danych wyjściowych z węzła Python jako jego danych wejściowych.
@@ -239,19 +239,19 @@ Spróbuj zmienić wartość źródłową, aby utworzyć różne wzorce. Można r
 
 Teraz po utworzeniu przydatnego skryptu w języku Python zapiszemy go jako węzeł niestandardowy. Wybierz węzeł skryptu w języku Python, kliknij prawym przyciskiem myszy obszar roboczy i wybierz opcję „Utwórz węzeł niestandardowy”.
 
-![](<../images/8-3/1/python node - exercise pt II-01.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptII-01.jpg)
 
 Przypisz nazwę, opis i kategorię.
 
-![](<../images/8-3/1/python node - exercise pt II-02.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptII-02.jpg)
 
 Spowoduje to otwarcie nowego obszaru roboczego, w którym będzie edytowany węzeł niestandardowy.
 
-![](<../images/8-3/1/python node - exercise pt II-03.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptII-03.jpg)
 
 > 1. **Wejścia Input:** zmień nazwy wejść na bardziej opisowe i dodaj typy danych oraz wartości domyślne.
-> 2. **Output:** zmień nazwę węzła danych wyjściowych
+> 2. **Wyjście Output:** zmień nazwę węzła danych wyjściowych
 
 Zapisz węzeł jako plik .dyf. Węzeł niestandardowy powinien odzwierciedlać wprowadzone zmiany.
 
-![](<../images/8-3/1/python node - exercise pt II-04.jpg>)
+![](../images/8-3/1/pythonnode-exerciseptII-04.jpg)

@@ -6,7 +6,7 @@
 
 [Wektor](5-2\_vectors.md#vector-1) jest reprezentacją wielkości i kierunku. Można go interpretować jako strzałkę zmierzającą w określonym kierunku z daną prędkością. Jest to kluczowy element modeli w dodatku Dynamo. Ponieważ należą one do kategorii abstrakcyjnych „elementów pomocniczych”, gdy utworzymy wektor, nie zobaczymy niczego w podglądzie tła.
 
-![Vectors in Dynamo](<../images/5-2/2/Geometry for Computational Design  - vectors.jpg>)
+![Wektory w dodatku Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
 > 1. Można użyć linii jako symbolu zastępczego dla podglądu wektora.
 
@@ -20,7 +20,7 @@
 
 [Płaszczyzna](5-2\_vectors.md#plane-1) jest powierzchnią dwuwymiarową. Można ją interpretować jako płaską powierzchnię, która rozciąga się w nieskończoność. Każda płaszczyzna ma początek, kierunek X, kierunek Y i kierunek Z (w górę).
 
-![Planes in Dynamo](<../images/5-2/2/Geometry for Computational Design  - plane.jpg>)
+![Płaszczyzny w dodatku Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
 > 1. Chociaż płaszczyzny są abstrakcyjne, mają początek, więc można je umieścić w przestrzeni.
 > 2. W dodatku Dynamo płaszczyzny są renderowane w podglądzie tła.
@@ -35,7 +35,7 @@
 
 [Układ współrzędnych](5-2\_vectors.md#coordinate-system-1) jest układem określającym położenie punktów lub innych elementów geometrycznych. Na poniższym rysunku wyjaśniono, jak to wygląda w dodatku Dynamo i co reprezentuje każdy kolor.
 
-![Coordinate System in Dynamo](<../images/5-2/2/Geometry for Computational Design - Coordinate.jpg>)
+![Układ współrzędnych w dodatku Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 
 > 1. Chociaż układy współrzędnych są abstrakcyjne, mają początek, więc można je umieścić w przestrzeni.
 > 2. W dodatku Dynamo układy współrzędnych są renderowane w podglądzie tła jako punkt (początek) oraz linie definiujące osie (oś X jest czerwona, oś Y — zielona, a oś Z — niebieska, zgodnie z konwencją).
@@ -65,7 +65,7 @@ Dalsze rozbicie wektorów na ich części przy użyciu tej samej notacji AB:
 ![Wektor](../images/5-2/2/Vector.jpg)
 
 > 1. **Punkt początkowy** wektora nosi nazwę **punktu zaczepienia**.
-> 2. \*\*Punkt końcowy \*\*wektora nosi nazwę **wierzchołka** lub **zwrotu**.
+> 2. **Punkt końcowy **wektora nazywamy **wierzchołkiem** lub **zwrotem**.
 > 3. Wektor AB nie jest taki sam jak wektor BA, który wskazuje w przeciwnym kierunku.
 
 Z wektorów i ich abstrakcyjnej definicji można się pośmiać, oglądając klasyczną komedię „Czy leci z nami pilot?”:

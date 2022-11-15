@@ -6,13 +6,13 @@ Położenie tego szablonu to `APPDATA` dla instalacji dodatku Dynamo.
 
 Zwykle jest to ścieżka `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-![](<../images/8-3/3/python templates - appdata folder location.jpg>)
+![](../images/8-3/3/pythontemplates-appdatafolderlocation.jpg)
 
 ### Konfigurowanie szablonu
 
 Aby korzystać z tej funkcji, należy dodać następujący wiersz w pliku `DynamoSettings.xml`. _(Edytuj w Notatniku)_
 
-![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
+![](../images/8-3/3/pythontemplates-dynamosettingsxmlfile.png)
 
 Część `<PythonTemplateFilePath />` można po prostu zastąpić następującą treścią:
 
@@ -22,15 +22,13 @@ Część `<PythonTemplateFilePath />` można po prostu zastąpić następującą
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Uwaga: zastąp element CURRENTUSER nazwą użytkownika_
-{% endhint %}
+{% hint style="warning" %} _Uwaga: zastąp element CURRENTUSER nazwą użytkownika_ {% endhint %}
 
 Następnie musimy utworzyć szablon z funkcjami, które mają być wbudowane. W tym przypadku osadźmy powiązane z programem Revit importy i niektóre inne typowe elementy podczas pracy z programem Revit.
 
 Można rozpocząć od pustego dokumentu Notatnika i wkleić do niego następujący kod:
 
-```
+``` py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -71,12 +69,12 @@ Po zakończeniu zapisz ten plik jako `PythonTemplate.py` w lokalizacji `APPDATA`
 
 ### Późniejsze zachowanie skryptu w języku Python
 
-\_P\_o zdefiniowaniu szablonu w języku Python dodatek Dynamo będzie go szukać po każdym umieszczeniu węzła w języku Python. Jeśli go nie znajdzie, okno będzie wyglądać jak domyślne okno języka Python.
+_P_o zdefiniowaniu szablonu w języku Python dodatek Dynamo będzie go szukać po każdym umieszczeniu węzła w języku Python. Jeśli go nie znajdzie, okno będzie wyglądać jak domyślne okno języka Python.
 
-![](<../images/8-3/3/python templates - before setup template.jpg>)
+![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
 Jeśli szablon w języku Python zostanie znaleziony (np. nasz szablon dotyczący programu Revit), zostaną wyświetlone wszystkie domyślne wbudowane elementy.
 
-![](<../images/8-3/3/python templates - after setup template.jpg>)
+![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
 Dodatkowe informacje dotyczące tego wspaniałego dodatku (którego autorem jest Radu Gidei) można znaleźć tutaj. https://github.com/DynamoDS/Dynamo/pull/8122

@@ -30,7 +30,7 @@ Gdzie tu jest algorytm? Stanowi on abstrakcyjny zestaw kroków, które możemy p
 
 **Instrukcje graficzne:**
 
-![Wymaga aktualizacji — żuraw origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Żuraw origami — instrukcje](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Definicja programowania <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ Jeśli Twoja odpowiedź obejmowała zastosowanie grafiki, **programowanie wizual
 
 **Program wizualny:**
 
-![](<./images/a-1/visualProgramming (2).png>)
+![](./images/a-1/visualProgramming(2).png)
 
 **Program tekstowy:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 Wyniki algorytmu:
 
-![](<./images/a-1/visualProgramming (1).png>)
+![](./images/a-1/visualProgramming(1).png)
 
 Wizualność programowania w taki sposób ułatwia rozpoczęcie korzystania z niego i często przemawia do projektantów. Dodatek Dynamo służy do programowania wizualnego, ale jak przekonamy się później, nadal umożliwia programowanie tekstowe w aplikacji.

@@ -10,7 +10,7 @@
 
 Zaimportuj i oszacuj powierzchnię przy danym parametrze w dodatku Dynamo, aby zobaczyć, jakie informacje możemy wyodrębnić.
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
 
 > 1. _Surface.PointAtParameter_ — zwraca punkt przy danej współrzędnej UV
 > 2. _Surface.NormalAtParameter_ — zwraca wektor normalny przy danej współrzędnej UV
@@ -70,10 +70,10 @@ W przypadku powierzchni NURBS istnieją dwa kierunki oznaczone geometrią, ponie
 
 ### Polipowierzchnie
 
-**Polipowierzchnie** składają się z powierzchni połączonych wzdłuż krawędzi. Polipowierzchnie zapewniają więcej możliwości niż dwuwymiarowa definicja UV, ponieważ teraz można poruszać się po połączonych kształtach za pomocą ich topologii.
+**Polipowierzchnie** (PolySurface) składają się z powierzchni połączonych wzdłuż krawędzi. Polipowierzchnie zapewniają więcej możliwości niż dwuwymiarowa definicja UV, ponieważ teraz można poruszać się po połączonych kształtach za pomocą ich topologii.
 
 Chociaż „topologia” zazwyczaj opisuje to, w jaki sposób części są połączone i/lub powiązane, topologia w dodatku Dynamo jest także typem geometrii. Konkretnie jest to kategoria nadrzędna dla powierzchni, polipowierzchni i brył.
 
-![Polipowierzchnia — PolySurface](../images/5-2/5/PolySurface.jpg)
+![Powierzchnia PolySurface](../images/5-2/5/PolySurface.jpg)
 
 Łączenie powierzchni w ten sposób (czasem jest to nazywane płatami) pozwala tworzyć bardziej złożone kształty, jak również definiować szczegóły wzdłuż spoiny. W ten sposób można zastosować zaokrąglenie lub fazowanie do krawędzi polipowierzchni.
