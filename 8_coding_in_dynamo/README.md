@@ -6,4 +6,4 @@ Dynamo — это отличная возможность начать разр
 * [Создание геометрии с помощью DesignScript](8-2\_geometry-with-design-script/)
 * [Python](8-3\_python/)
 
-![](<./images/image (17).png>)
+![](./images/image(17).png)

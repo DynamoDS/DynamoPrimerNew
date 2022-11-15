@@ -2,7 +2,7 @@
 
 
 
-![](<./images/1/revit connection link.jpg>)
+![](./images/1/revitconnectionlink.jpg)
 
 Надстройка Dynamo для Revit расширяет возможности информационного моделирования зданий за счет среды логики и данных, предоставляемой графическим редактором алгоритмов. Ее гибкие возможности в сочетании с обширной базой данных Revit позволяют перевести BIM на новый уровень.
 
@@ -12,20 +12,20 @@
 
 Поскольку Revit и Dynamo постоянно обновляются, в какой-то момент используемая версия Revit может оказаться несовместимой с установленной на компьютере версией Dynamo для Revit. Ниже приведены сведения о том, какие версии надстройки Dynamo для Revit совместимы с программой Revit.
 
-| Версия Revit | Первая стабильная версия Dynamo | Последняя поддерживаемая версия Dynamo для Revit |
+| Версия Revit | Первая стабильная версия Dynamo                                                       | Последняя поддерживаемая версия Dynamo для Revit                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013 | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe) |
-| 2014 | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe) |
-| 2015 | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe) |
-| 2016 | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe) |
-| 2017 | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2018 | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2019 | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
-| 2020 или более поздняя | 2.1.0 (Revit 2020 или более поздней версии теперь включает Dynamo и обновляется в соответствии с графиком обновлений Revit.) | Отсутствует |
+| 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
+| 2014 г.          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
+| 2015          | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe)                                                                                      |
+| 2016          | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe)                                                                                      |
+| 2017          | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
+| 2018          | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
+| 2019          | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
+| 2020+         | 2.1.0 (Revit 2020 или более поздней версии теперь включает Dynamo и обновляется в соответствии с графиком обновлений Revit.)      | Отсутствует                                                                                                                                                                    |
 
 ### История Dynamo
 
-![Журнал](./images/1/earlyScreenshot.jpg)
+![История](./images/1/earlyScreenshot.jpg)
 
 Благодаря упорству разработчиков и активному вкладу сообщества пользователей этот проект прошел большой путь от скромной надстройки до того, чем он является сейчас.
 
@@ -35,31 +35,27 @@
 
 ### Работа с Dynamo в Revit
 
-В редакторе проектов или семейств Revit перейдите в раздел «Надстройки» и выберите Dynamo\*.
+В редакторе проектов или семейств Revit перейдите в раздел «Надстройки» и выберите Dynamo.*
 
-{% hint style="warning" %}
-\* Программа Dynamo будет работать только в том файле, в котором была открыта.
-{% endhint %}
+{% hint style="warning" %}* Программа Dynamo будет работать только в том файле, в котором была открыта. {% endhint %}
 
-![](<./images/1/launch dynamo from revit.jpg>)
+![](./images/1/launchdynamofromrevit.jpg)
 
-При открытии Dynamo в Revit отображается новая категория с именем Revit. Это мощное дополнение к пользовательскому интерфейсу, включающее узлы, специально предназначенные для использования в рабочих процессах Revit\*.
+При открытии Dynamo в Revit отображается новая категория с именем Revit. Это мощное дополнение к пользовательскому интерфейсу, включающее узлы, специально предназначенные для использования в рабочих процессах Revit*.
 
-{% hint style="warning" %}
-\* При использовании семейства узлов, предназначенного для Revit, график Dynamo будет работать только при открытии в Dynamo для Revit. Если график, предназначенный для работы в Dynamo для Revit, открыть в однопользовательской версии Dynamo, то все узлы Revit из него пропадут.
-{% endhint %}
+{% hint style="warning" %}* При использовании семейства узлов, предназначенного для Revit, график Dynamo будет работать только при открытии в Dynamo для Revit. Если график, предназначенный для работы в Dynamo для Revit, открыть в однопользовательской версии Dynamo, то все узлы Revit из него пропадут. {% endhint %}
 
-![](<./images/1/revit connection - running dynamo in revit 02.jpg>)
+![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Замораживание узлов
 
-Поскольку Revit является платформой, которая обеспечивает широкие возможности по управлению проектами, параметрические операции в Dynamo могут быть сложными, а их расчет может занимать много времени. Если Dynamo требуется много времени для расчета узлов, можно воспользоваться функцией заморозки, чтобы приостановить выполнение операций Revit во время создания графика. Для получения дополнительных сведений о замораживании узлов см. раздел [Замораживание](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) в главе «Тела».
+Поскольку Revit является платформой, которая обеспечивает широкие возможности по управлению проектами, параметрические операции в Dynamo могут быть сложными, а их расчет может занимать много времени. Если Dynamo требуется много времени для расчета узлов, возможно, следует воспользоваться функцией заморозки, чтобы приостановить выполнение операций Revit во время создания графика. Дополнительные сведения о замораживании узлов см. в разделе [Замораживание](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) в главе «Тела».
 
 ### Блог и сообщество Dynamo
 
 Приложение Dynamo изначально разрабатывалось для использования в сфере архитектуры и строительства, и наше постоянно растущее сообщество пользователей — это отличный ресурс для обучения и общения с отраслевыми экспертами. В сообщество пользователей Dynamo входят архитекторы, инженеры, программисты и проектировщики, которые любят изобретать и делиться своими изобретениями.
 
-Dynamo — это проект с открытым исходным кодом, который постоянно развивается, и многие нововведения касаются Revit. Если вы пока что новичок, переходите на форум и начинайте [задавать вопросы](http://dynamobim.org/forums/forum/dyn/). Если вы программист и хотите принять участие в разработке Dynamo, посмотрите страницу проекта на [сайте GitHub](https://github.com/DynamoDS/Dynamo). Кроме того, если вас интересуют библиотеки сторонних разработчиков, рекомендуем ознакомиться с [Dynamo Package Manager](http://dynamopackages.com). Многие из этих пакетов предназначены для сферы архитектуры и строительства. В этой главе рассматривается использование пакетов сторонних разработчиков для создания дополнительных панелей.
+Dynamo — это проект с открытым исходным кодом, который постоянно развивается, и многие нововведения касаются Revit. Если вы пока что новичок, переходите на форум и начинайте [задавать вопросы](http://dynamobim.org/forums/forum/dyn/). Если вы программист и хотите принять участие в разработке Dynamo, посетите страницу проекта на [сайте GitHub](https://github.com/DynamoDS/Dynamo). Кроме того, если вас интересуют библиотеки сторонних разработчиков, рекомендуем ознакомиться с [Dynamo Package Manager](http://dynamopackages.com). Многие из этих пакетов предназначены для сферы архитектуры и строительства. В этой главе рассматривается использование пакетов сторонних разработчиков для создания дополнительных панелей.
 
 Разработчики Dynamo также ведут активный блог. Ознакомьтесь с последними публикациями, чтобы быть в курсе всех новостей.
 

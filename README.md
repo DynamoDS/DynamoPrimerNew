@@ -1,8 +1,6 @@
 # Об этом руководстве
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
-Трейлер к Dynamo
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Трейлер к Dynamo {% endembed %}
 
 ## Для версии Dynamo 2.13
 
@@ -61,7 +59,7 @@ Dynamo Primer — это проект с открытым исходным ко
 
 ### Программное обеспечение и ресурсы
 
-**Dynamo**. Текущая стабильная* версия Dynamo — 2.1.0.
+**Dynamo** Последнюю **стабильную** версию Dynamo можно найти на следующих веб-сайтах.
 
 http://dynamobim.com/download/ или http://dynamobuilds.com
 

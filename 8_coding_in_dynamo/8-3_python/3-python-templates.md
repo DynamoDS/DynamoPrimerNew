@@ -6,13 +6,13 @@
 
 Обычно используется следующий путь: `( %appdata%\Dynamo\Dynamo Core\{version}\ )`.
 
-![](<../images/8-3/3/python templates - appdata folder location.jpg>)
+![](../images/8-3/3/pythontemplates-appdatafolderlocation.jpg)
 
 ### Настройка шаблона
 
 Для использования этой функции необходимо добавить в файл `DynamoSettings.xml` следующую строку _(правки вносятся в Блокноте)_.
 
-![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
+![](../images/8-3/3/pythontemplates-dynamosettingsxmlfile.png)
 
 Найдите строку `<PythonTemplateFilePath />` и замените ее следующим кодом:
 
@@ -22,15 +22,13 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_Примечание. Замените CURRENTUSER на имя пользователя._
-{% endhint %}
+{% hint style="warning" %}_Примечание. Замените CURRENTUSER на имя пользователя._{% endhint %}
 
 Теперь нужно создать шаблон, включающий функции для встраивания. В данном случае требуется встроить функции импорта определенных данных из Revit, а также некоторые другие функции, обычно используемые при работе с Revit.
 
 Создайте документ в Блокноте и вставьте в него следующий код:
 
-```
+``` py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -73,10 +71,10 @@ OUT = element
 
 После того как шаблон Python задан в приложении Dynamo, каждый раз при размещении узла Python будет выполняться поиск этого шаблона. Если шаблон не найден, отображается стандартное окно Python.
 
-![](<../images/8-3/3/python templates - before setup template.jpg>)
+![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
 Если шаблон Python найден (как в случае с созданным шаблоном для работы с Revit), отображаются встроенные в него функции по умолчанию.
 
-![](<../images/8-3/3/python templates - after setup template.jpg>)
+![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
-Подробные сведения об этом дополнении см. в следующем материале (автор: Раду Гидей [Radu Gidei]): https://github.com/DynamoDS/Dynamo/pull/8122.
+Подробные сведения об этом дополнении см. в следующем материале (автор: Раду Гидей [Radu Gidei]): https://github.com/DynamoDS/Dynamo/pull/8122
