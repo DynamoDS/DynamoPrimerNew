@@ -10,7 +10,7 @@ Si utilizza una [superficie](5-surfaces.md#surface) nel modello per rappresentar
 
 Importare e valutare una superficie in corrispondenza di un parametro in Dynamo per vedere il tipo di informazioni che è possibile estrarre.
 
-![](<../images/5-2/5/surfaces - surface in dynamo.jpg>)
+![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
 
 > 1. _Surface.PointAtParameter_ restituisce il punto in corrispondenza di una coordinata UV specificata.
 > 2. _Surface.NormalAtParameter_ restituisce il vettore normale in corrispondenza di una determinata coordinata UV.
@@ -51,7 +51,7 @@ Sebbene la forma della superficie non sembri "rettangolare" e localmente potrebb
 
 **Piano perpendicolare**: un piano perpendicolare ad entrambe le isocurve U e V in corrispondenza di una determinata coordinata UV.
 
-**Vettore perpendicolare**: un vettore che definisce la direzione di "alto" rispetto al piano perpendicolare.
+**Vettore normale**: un vettore che definisce la direzione di "alto" rispetto al piano perpendicolare.
 
 ### Superfici NURBS
 

@@ -12,7 +12,7 @@ Questo workflow illustra come:
 * Creare e modificare elementi geometrici mediante nodi.
 * Visualizzare i risultati di progettazione in tempo reale.
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ## Definizione degli obiettivi
 
@@ -24,7 +24,7 @@ Verrà utilizzata una metodologia simile per definire il nostro vaso. Si creeran
 
 ![](../images/10-1/1/vase2.png)
 
-## Per iniziare
+## Introduzione
 
 > Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
@@ -48,7 +48,7 @@ Lasciare il valore di default di _centerPoint_ ma aggiungere un **Number Slider*
 
 Questo nodo è un po' diverso dal nodo precedente poiché contiene un dispositivo di scorrimento. È possibile utilizzare l'interfaccia per modificare il valore di output del dispositivo di scorrimento.
 
-![](<../images/10-1/1/vase13 (1).gif>)
+![](../images/10-1/1/vase13(1).gif)
 
 Il dispositivo di scorrimento può essere configurato utilizzando il pulsante a discesa a sinistra del nodo. Limitare il dispositivo di scorrimento ad un valore massimo di 15.
 
@@ -70,7 +70,7 @@ Continuare ad aggiungere alcuni nodi e collegamenti alla logica per definire il 
 
 Copiare questi nodi 4 volte in modo che i cerchi definiscano la nostra superficie, quindi modificare i nomi di Number Slider come mostrato qui sotto.
 
-![](<../images/10-1/1/vase4 (1) (1).png>)
+![](../images/10-1/1/vase4(1)(1).png)
 
 > 1. I cerchi vengono creati da un punto centrale e da un raggio.
 
@@ -78,7 +78,7 @@ Copiare questi nodi 4 volte in modo che i cerchi definiscano la nostra superfici
 
 Un parametro chiave del nostro vaso risulta mancante, ossia la sua altezza. Per controllare l'altezza del vaso, creare un altro dispositivo di scorrimento numerico. È inoltre possibile aggiungere un nodo **Code Block**. I Code Block possono essere utili come aggiunta di frammenti di codice personalizzati al nostro workflow. Si utilizzerà il Code Block per moltiplicare il dispositivo di scorrimento dell'altezza in base a fattori diversi, in modo da poter posizionare i nostri cerchi lungo l'altezza del vaso.
 
-![](<../images/10-1/1/vase15 (1).png>)
+![](../images/10-1/1/vase15(1).png)
 
 Quindi, utilizzare un nodo **Geometry.Translate** per posizionare i cerchi all'altezza desiderata. Poiché si desidera distribuire i cerchi nel vaso, utilizzare i Code Block per moltiplicare il parametro dell'altezza in base ad un fattore.
 
@@ -92,7 +92,7 @@ Per creare una superficie utilizzando il nodo **Surface.ByLoft**, si devono comb
 
 Disattivare anche l'anteprima in altri nodi per visualizzare solo Surface.ByLoft.
 
-![](<../images/10-1/1/vase6 (1) (1).png>)
+![](../images/10-1/1/vase6(1)(1).png)
 
 > 3\. Una superficie viene creata tramite il loft dei cerchi traslati.
 
@@ -100,6 +100,6 @@ Disattivare anche l'anteprima in altri nodi per visualizzare solo Surface.ByLoft
 
 Il nostro workflow è pronto. Ora è possibile utilizzare i **Number Slider** definiti nello script per creare diversi progetti di vasi.
 
-![](<../images/10-1/1/vase1 (3).gif>)
+![](../images/10-1/1/vase1(3).gif)
 
 ![](../images/10-1/1/vase7.png)

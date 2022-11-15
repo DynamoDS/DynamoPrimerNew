@@ -6,11 +6,11 @@ La **geometria** è il linguaggio per la progettazione. Quando un ambiente o un 
 
 La comprensione dei tipi di geometria e della [relativa correlazione](1-geometry-overview.md#stepping-through-the-hierarchy) consente di spostarsi all'interno della raccolta di **nodi della geometria** disponibili nella libreria. I nodi della geometria sono organizzati in ordine alfabetico, anziché gerarchico. Qui vengono visualizzati in modo simile al loro layout nell'interfaccia di Dynamo.
 
-![](<../images/5-2/1/geometry overview - geometry in dynamo.jpg>)
+![](../images/5-2/1/geometryoverview-geometryindynamo.jpg)
 
 Inoltre, la realizzazione di modelli in Dynamo e la connessione dell'anteprima di ciò che viene visualizzato nell'anteprima sfondo al flusso di dati nel grafico dovrebbero diventare più intuitive nel tempo.
 
-![](<../images/5-2/1/Geometry for Computational Design - Overview.jpg>)
+![](../images/5-2/1/GeometryforComputationalDesign-Overview.jpg)
 
 > 1. Si noti il sistema di coordinate presunto sottoposto a rendering mediante griglia e assi colorati.
 > 2. I nodi selezionati eseguiranno il rendering della geometria corrispondente (se il nodo crea la geometria) nel colore di evidenziazione dello sfondo.
@@ -47,7 +47,7 @@ Sarà esaminata la relazione tra le descrizioni astratte e gerarchiche della geo
 > 1. Un **punto** (definito dalle coordinate) non ha dimensioni; sono solo numeri che descrivono ogni coordinata.
 > 2. Una **linea** (definita da due punti) ora presenta _una_ dimensione: è possibile "percorrere" la linea in avanti (direzione positiva) o all'indietro (direzione negativa).
 > 3. Un **piano** (definito da due linee) presenta _due_ dimensioni: ora è possibile passeggiare più a sinistra o più a destra.
-> 4. Un **parallelepipedo** (definito da due piani) ha _tre_ dimensioni: è possibile definire una posizione rispetto all'alto o all basso.
+> 4. Un **parallelepipedo** (definito da due piani) ha _tre_ dimensioni: è possibile definire una posizione rispetto all'alto o al basso.
 
 La dimensionalità è un metodo comodo per iniziare a classificare la geometria, ma non è necessariamente il migliore. Dopotutto, non si modellano solo con punti, linee, piani e parallelepipedi. E se si desidera qualcosa di curvo? Inoltre, esiste un'altra categoria di tipi geometrici che sono completamente astratti, ossia definiscono proprietà quali l'orientamento, il volume o le relazioni tra le parti. Non è possibile afferrare un vettore in modo da definirlo rispetto a ciò che viene visualizzato nello spazio? Una categorizzazione più dettagliata della gerarchia geometrica dovrebbe riflettere la differenza tra tipi astratti o "helper", ognuno dei quali può essere raggruppato in base alle operazioni che essi consentono di fare e ai tipi che consentono di descrivere la forma degli elementi del modello.
 

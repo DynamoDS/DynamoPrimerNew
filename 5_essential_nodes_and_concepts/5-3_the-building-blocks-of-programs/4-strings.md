@@ -10,7 +10,7 @@ Le stringhe possono essere utilizzate per una vasta gamma di applicazioni, tra c
 
 I nodi di esempio riportati sopra sono stringhe. Un numero può essere rappresentato come una stringa, una lettera o un'intera matrice di testo.
 
-![](<../images/5-3/4/strings - creating strings.jpg>)
+![](../images/5-3/4/strings-creatingstrings.jpg)
 
 ## Esercizio
 
@@ -26,11 +26,11 @@ I nodi di esempio riportati sopra sono stringhe. Un numero può essere rappresen
 
 Nell'immagine riportata di seguito è mostrata una stringa di dati proveniente da un foglio di calcolo esterno. La stringa rappresenta i vertici di un rettangolo nel piano XY. Si eseguiranno alcune operazioni di divisione delle stringhe nel mini-esercizio:
 
-![](<../images/5-3/4/strings - querying strings 01.jpg>)
+![](../images/5-3/4/strings-queryingstrings01.jpg)
 
 > 1. Il separatore ";" divide ogni vertice del rettangolo. In questo modo viene creato un elenco con 3 voci per ogni vertice.
 
-![](<../images/5-3/4/strings - querying strings 02.jpg>)
+![](../images/5-3/4/strings-queryingstrings02.jpg)
 
 > 1. Premendo il pulsante "_+_" al centro del nodo, si crea un nuovo separatore.
 > 2. Aggiungere una stringa "_,_" all'area di disegno e collegarla all'input del nuovo separatore.
@@ -38,13 +38,13 @@ Nell'immagine riportata di seguito è mostrata una stringa di dati proveniente d
 
 Sebbene possa sembrare che l'elenco di voci riportato sopra contenga numeri, tali elementi vengono comunque considerati come singole stringhe in Dynamo. Per creare punti, è necessario convertire il tipo di dati da una stringa in un numero. Questa operazione viene eseguita con il nodo **String.ToNumber**.
 
-![](<../images/5-3/4/strings - querying strings 03.jpg>)
+![](../images/5-3/4/strings-queryingstrings03.jpg)
 
 > 1. Questo nodo è semplice. Collegare i risultati di **String.Split** all'input. L'output non risulta diverso, ma il tipo di dati è ora un _numero_ anziché una _stringa_.
 
 Con alcune operazioni aggiuntive di base, ora si dispone di un triangolo disegnato in corrispondenza dell'origine in base all'input di stringa originale.
 
-![](<../images/5-3/4/strings - querying strings 04.jpg>)
+![](../images/5-3/4/strings-queryingstrings04.jpg)
 
 ### Manipolazione di stringhe
 
@@ -54,7 +54,7 @@ Questo metodo consente di unire insieme due stringhe in ordine. In questo modo, 
 
 Nell'immagine seguente è rappresentata la concatenazione di tre stringhe:
 
-![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
+![Concatenazione](../images/5-3/4/strings-manipulatingstrings01.jpg)
 
 > 1. Aggiungere o sottrarre stringhe alla concatenazione facendo clic sui pulsanti +/- al centro del nodo.
 > 2. L'output fornisce una stringa concatenata, con spazi e segni di punteggiatura inclusi.
@@ -65,7 +65,7 @@ Se è stato utilizzato Excel, è possibile che sia stato notato un file CSV. Que
 
 Nell'immagine seguente è rappresentata l'unione di due stringhe:
 
-![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
+![](../images/5-3/4/strings-manipulatingstrings02.jpg)
 
 > 1. L'input separator consente di creare una stringa che divide le stringhe unite.
 
@@ -75,7 +75,7 @@ In questo esercizio, si utilizzeranno i metodi di esecuzione delle query e manip
 
 Iniziare con una stringa di base divisa della strofa. Si noti innanzitutto che la scrittura è formattata in base alle virgole. Questo formato verrà utilizzato per separare ogni riga in singoli elementi.
 
-![](<../images/5-3/4/strings - working with strings 01.jpg>)
+![](../images/5-3/4/strings-workingwithstrings01.jpg)
 
 > 1. La stringa di base viene incollata in un nodo **String**.
 > 2. Un altro nodo **String** viene utilizzato per indicare il separatore. In questo caso, si utilizza una virgola.
@@ -84,27 +84,27 @@ Iniziare con una stringa di base divisa della strofa. Si noti innanzitutto che l
 
 Ora, viene la parte interessante della poesia: le ultime due righe. La strofa originale era un elemento di dati. Questi dati sono stati separati in singoli elementi nel primo passaggio. Ora occorre cercare il testo in questione. E sebbene sia _possibile_ farlo selezionando le ultime due voci dell'elenco, se si trattasse di un intero libro, non si vorrebbe leggere tutto e isolare manualmente gli elementi.
 
-![](<../images/5-3/4/strings - working with strings 02.jpg>)
+![](../images/5-3/4/strings-workingwithstrings02.jpg)
 
 > 1. Invece di cercare manualmente, utilizzare un nodo **String.Contains** per eseguire una ricerca di un set di caratteri. Questa operazione è simile all'esecuzione del comando "Trova" in un elaboratore di testi. In questo caso, se all'interno della voce viene trovata una sottostringa, viene restituito "true" o "false".
 > 2. Nell'input _searchFor_, definire una sottostringa che si sta cercando all'interno della strofa. Utilizzare un nodo **String** con il testo "And miles".
 > 3. L'output fornisce un elenco di false e true. Questa logica booleana verrà utilizzata per filtrare gli elementi nel passaggio successivo.
 
-![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
+![Dividi](../images/5-3/4/strings-workingwithstrings03.jpg)
 
 > 1. **List.FilterByBoolMask** è il nodo che si desidera utilizzare per escludere false e true. L'output "in" restituisce le istruzioni con un input "mask" di "true", mentre l'output "out" restituisce quelle che sono "false".
 > 2. L'output di "in" è come previsto e fornisce le due righe finali della strofa.
 
 Ora, si desidera enfatizzare la ripetizione della strofa unendo insieme le due righe. Quando si visualizza l'output del passaggio precedente, si noterà che nell'elenco sono presenti due voci:
 
-![](<../images/5-3/4/strings - working with strings 04.jpg>)
+![](../images/5-3/4/strings-workingwithstrings04.jpg)
 
 > 1. Utilizzando due nodi **List.GetItemAtIndex**, è possibile isolare le voci utilizzando i valori di 0 e 1 come l'input index.
 > 2. L'output per ogni nodo fornisce, in ordine, le due righe finali.
 
 Per unire questi due voci in una, utilizzare il nodo **String.Join**:
 
-![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
+![Divisione di una stringa](../images/5-3/4/strings-workingwithstrings05.jpg)
 
 > 1. Dopo aver aggiunto il nodo **String.Join**, si noterà che è necessario un separatore.
 > 2. Per creare il separatore, aggiungere un nodo **String** all'area di disegno e digitare una virgola.

@@ -12,7 +12,7 @@ Dynamo definisce le mesh utilizzando una struttura di dati di faccia-vertice. Al
 
 Per creare una mesh, è necessario un elenco di vertici e un sistema per raggruppare tali vertici in facce denominate gruppo di indici.
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes-meshelements.jpg)
 
 > 1. Elenco dei vertici
 > 2. Elenco dei gruppi di indici per definire le facce
@@ -25,7 +25,7 @@ La libreria fornisce inoltre strumenti per modificare e correggere la mesh o est
 
 Visitare i [case study di Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md), ad esempio sull'utilizzo di questo pacchetto.
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
 ## Approfondimento su...
 
@@ -36,7 +36,7 @@ Una mesh è una raccolta di quadrilateri e triangoli che rappresenta una geometr
 ![Elementi della mesh](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Vertici della mesh
-> 2. Bordi della mesh \*I bordi con una sola faccia adiacente vengono denominati "nudi". Tutti gli altri bordi sono "vestiti"
+> 2. Bordi della mesh *I bordi con una sola faccia adiacente vengono denominati "nudi". Tutti gli altri bordi sono "vestiti"
 > 3. Facce della mesh
 
 ### Vertici + normali dei vertici

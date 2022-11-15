@@ -18,15 +18,15 @@ Le [curve ](5-4\_curves.md#curve)sono il primo tipo di dati geometrici descritto
 
 ### Linea
 
-La [linea](5-4\_curves.md#lines) è costituita da un gruppo di punti; ogni linea ha almeno 2 punti. Uno dei metodi più comuni per creare una linea in Dynamo consiste nell'utilizzare `Line.ByStartPointEndPoint` ![](<./images/5-2/4/Line by start point end point.jpg>).
+La [linea](5-4\_curves.md#lines) è costituita da un gruppo di punti; ogni linea ha almeno 2 punti. Uno dei metodi più comuni per creare una linea in Dynamo consiste nell'utilizzare `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg) per creare una linea in Dynamo.
 
-![](<./images/5-2/4/curves - line by start point end point.jpg>)
+![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
 
 ### Curva NURBS
 
 [NURBS](5-4\_curves.md#nurbs-+-polycurves) è un modello utilizzato per rappresentare in modo accurato curve e superfici. Si procederà con la creazione di una curva seno in Dynamo utilizzando due diversi metodi per creare curve NURBS e confrontare i risultati.
 
-![](<../images/5-2/4/curves - Nurbs Curves.jpg>)
+![](../images/5-2/4/curves-NurbsCurves.jpg)
 
 > 1. _NurbsCurve.ByControlPoints_ utilizza l'elenco di punti come punti di controllo.
 > 2. _NurbsCurve.ByPoints_ disegna una curva attraverso l'elenco di punti.
@@ -85,6 +85,4 @@ Man mano che si aggiunge maggiore complessità alle funzioni parametriche che de
 > 2. Grado = 2
 > 3. Grado = 3
 
-{% hint style="info" %}
-Notare che più alto è il valore del grado, maggiore sarà il numero di punti di controllo utilizzati per interpolare la curva risultante.
-{% endhint %}
+{% hint style="info" %} Notare che più alto è il valore del grado, maggiore sarà il numero di punti di controllo utilizzati per interpolare la curva risultante. {% endhint %}

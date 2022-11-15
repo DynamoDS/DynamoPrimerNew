@@ -4,23 +4,23 @@
 
 ### Che cos'è un punto?
 
-Un [punto](5-3\_points.md#point-as-coordinates) è definito da niente di più che uno o più valori denominati coordinate. Il numero di valori delle coordinate necessari per definire il punto dipende dal sistema di coordinate o dal contesto in cui si trova.
+[Un punto](5-3\_points.md#point-as-coordinates) è definito da niente di più che uno o più valori denominati coordinate. Il numero di valori delle coordinate necessari per definire il punto dipende dal sistema di coordinate o dal contesto in cui si trova.
 
 ### Punto 2D e 3D
 
-Il tipo di punto più comune in Dynamo è presente nel sistema di coordinate globali tridimensionale e dispone di tre coordinate \[X,Y,Z] (punto 3D in Dynamo).
+Il tipo di punto più comune in Dynamo è presente nel sistema di coordinate globali tridimensionale e dispone di tre coordinate [X,Y,Z] (punto 3D in Dynamo).
 
-![](<../images/5-2/3/points - 3d point in dynamo.jpg>)
+![](../images/5-2/3/points-3dpointindynamo.jpg)
 
-Un punto 2D in Dynamo ha due coordinate \[X,Y].
+Un punto 2D in Dynamo ha due coordinate [X,Y].
 
-![](<../images/5-2/3/points - 2d point in dynamo.jpg>)
+![](../images/5-2/3/points-2dpointindynamo.jpg)
 
 ### Punto su curve e superfici
 
-I parametri per le curve e le superfici sono continui e si estendono oltre il bordo della geometria specificata. Poiché le forme che definiscono lo spazio del parametro risiedono in un sistema di coordinate globali tridimensionale, è sempre possibile convertire una coordinata parametrica in una coordinata "globale". Il punto \[0.2, 0.5] sulla superficie, ad esempio, è uguale al punto \[1.8, 2.0, 4.1] nelle coordinate globali.
+I parametri per le curve e le superfici sono continui e si estendono oltre il bordo della geometria specificata. Poiché le forme che definiscono lo spazio del parametro risiedono in un sistema di coordinate globali tridimensionale, è sempre possibile convertire una coordinata parametrica in una coordinata "globale". Il punto [0.2, 0.5] sulla superficie, ad esempio, è uguale al punto [1.8, 2.0, 4.1] nelle coordinate globali.
 
-![](<../images/5-2/3/points - xyz vs coord sys vs uv.jpg>)
+![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg)
 
 > 1. Punto nelle coordinate XYZ globali supposte
 > 2. Punto rispetto ad un determinato sistema di coordinate (cilindrico)
@@ -43,10 +43,10 @@ Se la geometria è il linguaggio di un modello, i punti sono l'alfabeto. I punti
 
 ### Punto come coordinate
 
-I punti possono esistere anche in un sistema di coordinate bidimensionale. La convenzione ha una notazione di lettere diversa a seconda del tipo di spazio impiegato. È possibile che si stia utilizzando \[X,Y] su un piano o \[U,V] se si è su una superficie.
+I punti possono esistere anche in un sistema di coordinate bidimensionale. La convenzione ha una notazione di lettere diversa a seconda del tipo di spazio impiegato. È possibile che si stia utilizzando [X,Y] su un piano o [U,V] se si è su una superficie.
 
 ![Punto come coordinate](../images/5-2/3/Coordinates.jpg)
 
-> 1. Un punto nel sistema di coordinate euclideo: \[X,Y,Z]
-> 2. Un punto in un sistema di coordinate di parametri delle curve: \[t]
-> 3. Un punto in un sistema di coordinate di parametri delle superfici: \[U,V]
+> 1. Un punto nel sistema di coordinate euclideo: [X,Y,Z]
+> 2. Un punto in un sistema di coordinate di parametri delle curve: [t]
+> 3. Un punto in un sistema di coordinate di parametri delle superfici: [U,V]

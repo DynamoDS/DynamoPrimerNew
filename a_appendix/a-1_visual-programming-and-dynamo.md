@@ -30,7 +30,7 @@ Quindi dov'è l'algoritmo? Si tratta di una serie di passaggi astratti, che poss
 
 **Istruzioni grafiche:**
 
-![Aggiornamento necessario - Gru origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
+![Istruzioni per la gru origami](https://primer.dynamobim.org/01\_Introduction/images/1-1/01-OrigamiCraneInstructions.png)
 
 #### Programmazione definita <a href="#programming-defined" id="programming-defined"></a>
 
@@ -52,7 +52,7 @@ Se la risposta è la grafica, allora la **programmazione visiva** è sicuramente
 
 **Programma visivo:**
 
-![](<./images/a-1/visualProgramming (2).png>)
+![](./images/a-1/visualProgramming(2).png)
 
 **Programma testuale:**
 
@@ -67,6 +67,6 @@ myCircle = Circle.ByCenterPointRadius(myPoint,dist);
 
 I risultati del nostro algoritmo:
 
-![](<./images/a-1/visualProgramming (1).png>)
+![](./images/a-1/visualProgramming(1).png)
 
 La caratteristica visiva della programmazione in questo modo abbatte la barriera iniziale e di frequente parla con i progettisti. Dynamo rientra nel paradigma della programmazione visiva, ma, come si vedrà più avanti, è possibile comunque utilizzare anche la programmazione testuale nell'applicazione.

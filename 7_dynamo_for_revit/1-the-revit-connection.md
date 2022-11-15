@@ -2,7 +2,7 @@
 
 
 
-![](<./images/1/revit connection link.jpg>)
+![](./images/1/revitconnectionlink.jpg)
 
 Dynamo for Revit estende il Building Information Modeling (BIM) con l'ambiente di dati e logica di un editor di algoritmi grafici. La sua flessibilità, abbinata ad un solido database di Revit, offre una nuova prospettiva per il BIM.
 
@@ -12,16 +12,16 @@ Questo capitolo si concentra sui workflow di Dynamo per il BIM. Le sezioni sono 
 
 Poiché sia Revit che Dynamo continuano ad evolvere, è possibile che la versione di Revit utilizzata non sia compatibile con la versione di Dynamo for Revit installata nel computer in uso. Di seguito sono descritte le versioni di Dynamo for Revit compatibili con Revit.
 
-| Versione di Revit | Prima versione di Dynamo stabile | Ultima versione di Dynamo for Revit supportata |
+| Versione di Revit | Prima versione di Dynamo stabile                                                       | Ultima versione di Dynamo for Revit supportata                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013 | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe) |
-| 2014 | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe) |
-| 2015 | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe) |
-| 2016 | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe) |
-| 2017 | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2018 | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2019 | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
-| 2020 e versioni successive | 2.1.0 - Revit 2020 e versioni successive include ora Dynamo e riceve gli aggiornamenti come Revit. | N/A |
+| 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
+| 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
+| 2015          | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe)                                                                                      |
+| 2016          | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe)                                                                                      |
+| 2017          | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
+| 2018          | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
+| 2019          | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
+| 2020         | 2.1.0 - Revit 2020 e versioni successive include ora Dynamo e riceve gli aggiornamenti come Revit.      | N/A                                                                                                                                                                    |
 
 ### Storia di Dynamo
 
@@ -35,25 +35,21 @@ Utilizzando i nodi di Dynamo principali in combinazione con quelli di Revit pers
 
 ### Esecuzione di Dynamo in Revit
 
-In un progetto o un editor di famiglie di Revit, individuare i moduli aggiuntivi e fare clic su Dynamo.\*
+In un progetto o un editor di famiglie di Revit, individuare i moduli aggiuntivi e fare clic su Dynamo.*
 
-{% hint style="warning" %}
-\*Dynamo verrà eseguito solo nel file in cui è stato aperto.
-{% endhint %}
+{% hint style="warning" %} *Dynamo verrà eseguito solo nel file in cui è stato aperto. {% endhint %}
 
-![](<./images/1/launch dynamo from revit.jpg>)
+![](./images/1/launchdynamofromrevit.jpg)
 
-Quando si apre Dynamo in Revit, è presente una nuova categoria denominata Revit. Questa è un'aggiunta completa all'interfaccia utente che offre nodi specifici per i workflow di Revit.\*
+Quando si apre Dynamo in Revit, è presente una nuova categoria denominata Revit. Questa è un'aggiunta completa all'interfaccia utente che offre nodi specifici per i workflow di Revit.*
 
-{% hint style="warning" %}
-\*Utilizzando la famiglia di nodi specifica di Revit, il grafico di Dynamo funzionerà solo durante l'apertura in Dynamo for Revit. Se, ad esempio, viene aperto un grafico di Dynamo for Revit in Dynamo Sandbox, i nodi di Revit risulteranno mancanti.
-{% endhint %}
+{% hint style="warning" %} *Utilizzando la famiglia di nodi specifica di Revit, il grafico di Dynamo funzionerà solo durante l'apertura in Dynamo for Revit. Se, ad esempio, viene aperto un grafico di Dynamo for Revit in Dynamo Sandbox, i nodi di Revit risulteranno mancanti. {% endhint %}
 
-![](<./images/1/revit connection - running dynamo in revit 02.jpg>)
+![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Congelamento di nodi
 
-Poiché Revit è una piattaforma che offre una gestione affidabile dei progetti, le operazioni parametriche in Dynamo possono essere complesse e lente da calcolare. Se Dynamo richiede molto tempo per il calcolo dei nodi, è possibile utilizzare la funzionalità del nodo "Congela" per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) nel capitolo sui solidi.
+Poiché Revit è una piattaforma che offre una gestione affidabile dei progetti, le operazioni parametriche in Dynamo possono essere complesse e lente da calcolare. Se Dynamo richiede molto tempo per il calcolo dei nodi, è possibile utilizzare la funzionalità del nodo Congela per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) nel capitolo sui solidi.
 
 ### Comunità e blog di Dynamo
 

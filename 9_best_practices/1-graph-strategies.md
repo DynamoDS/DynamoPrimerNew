@@ -30,7 +30,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 * A volte, è possibile utilizzare un blocco di codice per **digitare un metodo di nodo o numero più rapidamente della ricerca** (Point.ByCoordinates, Number, String, Formula).
 * I blocchi di codice sono utili **quando si desidera definire funzioni personalizzate in DesignScript per ridurre il numero di nodi in un grafico**.
 
-![](<images/1/graphstrategy3 (1).png>)
+![](images/1/graphstrategy3(1).png)
 
 > Entrambi i valori 1 e 2 svolgono la stessa funzione. La scrittura di alcune righe di codice è molto più rapida rispetto alla ricerca e all'aggiunta di ogni nodo singolarmente. Anche il blocco di codice è molto più conciso.
 >
@@ -42,16 +42,16 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 ### **Compressione con Nodo da aggiungere al codice**
 
 * È possibile **ridurre la complessità di un grafico utilizzando Nodo da aggiungere al codice**, che consente di acquisire una raccolta di nodi semplici e di scrivere il linguaggio DesignScript corrispondente in un unico blocco di codice.
-* Nodo da aggiungere al codice può\*\* comprimere il codice senza eliminare la chiarezza del programma.\*\*
+* Nodo da aggiungere al codice può** comprimere il codice senza eliminare la chiarezza del programma.**
 * Di seguito sono riportati i **vantaggi** dell'utilizzo di Nodo da aggiungere al codice:
-   * Comprime facilmente il codice in un componente che è ancora modificabile.
-   * Può semplificare una parte significativa del grafico.
-   * È utile se il "mini-programma" non verrà spesso modificato.
-   * È utile per incorporare altre funzionalità del blocco di codice, come le funzioni.
+  * Comprime facilmente il codice in un componente che è ancora modificabile.
+  * Può semplificare una parte significativa del grafico.
+  * È utile se il "mini-programma" non verrà spesso modificato.
+  * È utile per incorporare altre funzionalità del blocco di codice, come le funzioni.
 * Di seguito sono riportati gli **svantaggi** dell'utilizzo di Nodo da aggiungere al codice:
-   * La denominazione generica lo rende meno leggibile.
-   * È più difficile da comprendere per altri utenti.
-   * Non è possibile tornare facilmente alla versione di programmazione visiva.
+  * La denominazione generica lo rende meno leggibile.
+  * È più difficile da comprendere per altri utenti.
+  * Non è possibile tornare facilmente alla versione di programmazione visiva.
 
 ![](images/1/graphstrategy3\_1.png)
 
@@ -63,16 +63,16 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 ### **Accesso flessibile ai dati con List@Level**
 
 * L'utilizzo di List@Level può aiutare a **ridurre la complessità del grafico sostituendo i nodi List.Map e List.Combine** che potrebbero occupare una notevole quantità di spazio nell'area di disegno.
-* List@Level offre un\*\* modo più rapido rispetto a List.Map/List.Combine per costruire la logica dei nodi\*\*, consentendo di accedere ai dati a qualsiasi livello in un elenco direttamente dalla porta di input di un nodo.
+* List@Level offre un** modo più rapido rispetto a List.Map/List.Combine per costruire la logica dei nodi**, consentendo di accedere ai dati a qualsiasi livello in un elenco direttamente dalla porta di input di un nodo.
 
-![](<images/1/graphstrategy4 (1) (1).png>)
+![](images/1/graphstrategy4(1)(1).png)
 
 > Si può verificare quanti valori True BoundingBox.Contains restituisce e in quali elenchi attivando List@Level per l'input "list" di CountTrue. List@Level consente all'utente di determinare da quale livello l'input acquisirà i dati. L'utilizzo di List@Level è flessibile, efficiente e altamente incoraggiato rispetto ad altri metodi che coinvolgono List.Map e List.Combine.
 >
 > 1. Conteggio dei valori true al livello di elenco 2
 > 2. Conteggio dei valori true al livello di elenco 3
 >
-> Per informazioni su come utilizzare List@Level, fare riferimento ad [Elenchi di elenchi](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Per informazioni su come utilizzare List@Level, fare riferimento a [Elenchi di elenchi](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
 
 ## Mantenimento della leggibilità
 
@@ -84,7 +84,7 @@ Oltre a rendere il grafico il più semplice ed efficiente possibile, è necessar
 * Se altri utenti lavoreranno con il grafico, è necessario **verificare che il layout nodo-collegamento fluisca facilmente prima del rilascio**.
 * Per semplificare l'allineamento, **utilizzare la funzionalità "Semplifica layout nodi" per allineare automaticamente** il grafico, anche se in modo meno preciso rispetto a quello eseguito manualmente.
 
-![](<images/1/graphstrategy5 (2) (1).png>)
+![](images/1/graphstrategy5(2)(1).png)
 
 > 1. Grafico non organizzato
 > 2. Grafico allineato
@@ -118,11 +118,11 @@ Oltre a rendere il grafico il più semplice ed efficiente possibile, è necessar
 
 ## Flessibilità continua
 
-Durante la compilazione dello script visivo, è importante verificare che ciò che viene restituito sia quello previsto. Non tutti gli errori o i problemi causano immediatamente la mancata esecuzione del programma, in particolare valori nulli o pari a zero che potrebbero influire più a valle. Questa strategia viene discussa anche nel contesto dello scripting di testo in [Strategie di scripting](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). La seguente procedura consentirà di assicurarsi di ottenere quanto previsto.
+Durante la compilazione dello script visivo, è importante verificare che ciò che viene restituito sia quello previsto. Non tutti gli errori o i problemi causano immediatamente la mancata esecuzione del programma, in particolare valori nulli o pari a zero che potrebbero influire più a valle. Questa strategia viene inoltre discussa nel contesto dello scripting di testo in [Strategie di scripting](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). La seguente procedura consentirà di assicurarsi di ottenere quanto previsto.
 
 ### **Monitoraggio dei dati con i simboli circolari di anteprima e controllo**
 
-* Durante la compilazione del programma, utilizzare i simboli circolari di anteprima o controllo per\*\* verificare che gli output chiave restituiscano ciò che è previsto.\*\*
+* Durante la compilazione del programma, utilizzare i simboli circolari di anteprima o controllo per** verificare che gli output chiave restituiscano ciò che è previsto.**
 
 ![](images/1/graphstrategy8.png)
 
@@ -147,7 +147,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 * Se nel grafico sono presenti **determinate opzioni o condizioni che si desidera incorporare**, è necessario utilizzare le preimpostazioni per l'accesso rapido.
 * È inoltre possibile utilizzare le preimpostazioni per **ridurre la complessità memorizzando nella cache valori specifici del dispositivo di scorrimento** in un grafico con tempi di esecuzione lunghi.
 
-> Per informazioni sull'utilizzo delle preimpostazioni, fare riferimento a [Managing Your Data with Presets](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Per informazioni sull'uso delle preimpostazioni, fare riferimento a [Gestione dei dati con le preimpostazioni](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
 
 ### **Contenimento di programmi con nodi personalizzati**
 
@@ -162,7 +162,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 > 1. Programma dell'attrattore esistente
 > 2. Nodo personalizzato che raccoglie questo programma, PointGrid
 >
-> Per informazioni sull'utilizzo dei nodi personalizzati, fare riferimento a [Introduzione ai nodi personalizzati](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Per informazioni sull'utilizzo dei nodi personalizzati, vedere [Introduzione ai nodi personalizzati](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
 
 ### **Creazione di modelli**
 
@@ -170,7 +170,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 * Durante la creazione di un modello, è possibile standardizzare **i colori dei gruppi e le dimensioni dei font** per suddividere in categorie i tipi di workflow o le azioni di dati.
 * Durante la creazione di un modello, è anche possibile standardizzare il modo in cui si desidera **etichettare, colorare o applicare stili alla differenza tra i workflow front-end e back-end** nel grafico.
 
-![](<images/1/graphstrategy10 (2).png>)
+![](images/1/graphstrategy10(2).png)
 
 > 1. L'interfaccia utente, o front-end, del programma include un nome di progetto, dispositivi di scorrimento di input e geometria di importazione.
 > 2. Il back-end del programma.
@@ -217,7 +217,7 @@ Con i gruppi stabiliti, allineare i nodi per creare una continuità visiva nel g
 
 Rendere il programma più accessibile aggiungendo un altro livello di miglioramenti grafici. Aggiungere note per descrivere il funzionamento di una specifica area del programma, assegnare nomi personalizzati agli input e assegnare colori a diversi tipi di gruppi.
 
-![](<images/1/graphstrategy15 (1).png>)
+![](images/1/graphstrategy15(1).png)
 
 > Questi miglioramenti grafici consentono all'utente di conoscere meglio le attività del programma. I diversi colori dei gruppi consentono di distinguere gli input dalle funzioni.
 >

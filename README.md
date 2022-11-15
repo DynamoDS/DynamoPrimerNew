@@ -1,8 +1,6 @@
 # Informazioni su
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
-Video di Dynamo Hype
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
 ## Per Dynamo v2.13
 
@@ -61,7 +59,7 @@ Grazie a Matt Jezyk, Ian Keough, Zach Kron, Racel Williams e Colin McCrone per l
 
 ### Software e risorse
 
-**Dynamo**: la release stabile* corrente di Dynamo è la versione 2.1.0.
+**Dynamo** Consultare i seguenti siti per la release **stabile** più recente di Dynamo.
 
 http://dynamobim.com/download/ o http://dynamobuilds.com
 

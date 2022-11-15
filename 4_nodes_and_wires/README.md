@@ -8,7 +8,7 @@ In Dynamo, i **nodi** sono gli oggetti collegati per formare un programma visivo
 
 La maggior parte dei nodi in Dynamo è composta da cinque parti. Sebbene vi siano eccezioni, ad esempio i nodi di input, la struttura di ogni nodo può essere descritta come segue:
 
-![](<images/nodes and wires - nodes anatomy.jpg>)
+![](images/nodesandwires-nodesanatomy.jpg)
 
 > 1. Nome: il nome del nodo con una convenzione di denominazione `Category.Name`.
 > 2. Corpo principale: il corpo principale del nodo. Facendo clic con il pulsante destro del mouse qui vengono visualizzate le opzioni a livello dell'intero nodo.
@@ -24,7 +24,7 @@ Si prevede che le porte ricevano dati di un certo tipo. Ad esempio, se si colleg
 
 {% hint style="info" %} Suggerimento Posizionare il cursore su una porta per visualizzare una descrizione comando contenente il tipo di dati previsto. {% endhint %}
 
-![](<images/nodes and wires - nodes input and tooltip.jpg>)
+![](images/nodesandwires-nodesinputandtooltip.jpg)
 
 > 1. Etichetta della porta
 > 2. Descrizione comando
@@ -37,25 +37,25 @@ In Dynamo viene fornita un'indicazione dello stato di esecuzione del programma v
 
 Se si posiziona il cursore o si fa clic con il pulsante destro del mouse sul nome o sulle porte, vengono visualizzate informazioni e opzioni aggiuntive.
 
-![](<../.gitbook/assets/nodes and wires - node states.png>)
+![](../.gitbook/assets/nodesandwires-nodestates.png)
 
 > 1. Input soddisfatti: un nodo con barre verticali blu sulle relative porte di input è collegato correttamente e tutti i relativi input sono connessi correttamente.
 > 2. Input non soddisfatti: è necessario che tali input siano collegati ad un nodo con una barra verticale rossa su una o più porte di input.
 > 3. Funzione: un nodo che genera una funzione e presenta una barra verticale grigia su una porta di output è un nodo di funzione.
 > 4. Selezionato: i nodi attualmente selezionati hanno un'evidenziazione verde acqua sul bordo.
 > 5. Congelato: un nodo blu traslucido viene congelato, sospendendo l'esecuzione del nodo.
-> 6. Anteprima disattivata: una barra di stato grigia sotto il nodo e un'icona a forma di occhio <img src="images/nodes and wires - preview off.jpg" alt="" data-size="line"> indicano che l'anteprima della geometria per il nodo è disattivata.
+> 6. Anteprima disattivata: una barra di stato grigia sotto il nodo e un'icona a forma di occhio <img src="images/nodesandwires-previewoff.jpg" alt="" data-size="line"> indicano che l'anteprima della geometria per il nodo è disattivata.
 > 7. Avviso: una barra di stato gialla sotto il nodo indica lo stato di avviso, ovvero nel nodo se risultano mancanti dati di input o se sono presenti tipi di dati errati.
 > 8. Errore: una barra di stato rossa sotto il nodo indica che il nodo si trova in uno stato di errore.
 > 9. Informazioni: una barra di stato blu al di sotto del nodo indica lo stato Informazioni, che contrassegna le informazioni utili sui nodi. Questo stato può essere attivato quando si avvicina ad un valore massimo supportato dal nodo, utilizzando un nodo in un modo che ha potenziali impatti sulle prestazioni e così via.
 
 #### Gestione dei nodi di errore o di avviso
 
-Se il programma visivo contiene avvertimenti o errori, in Dynamo verranno fornite ulteriori informazioni sul problema. Qualsiasi nodo giallo avrà anche una descrizione comando sopra il nome. Posizionare il cursore del mouse sull'icona della descrizione comando dell'avviso ![](<images/nodes and wires - node warning icon.png>) o dell'errore ![](<images/nodes and wires - node error icon.png>) per espanderla.
+Se il programma visivo contiene avvertimenti o errori, in Dynamo verranno fornite ulteriori informazioni sul problema. Qualsiasi nodo giallo avrà anche una descrizione comando sopra il nome. Posizionare il cursore del mouse sull'icona della descrizione comando relativo all’avviso ![](images/nodesandwires-nodewarningicon.png) o all’errore ![](images/nodesandwires-nodeerroricon.png) per espanderla.
 
 {% hint style="info" %} Suggerimento Con queste informazioni sulla descrizione comando, esaminare i nodi a monte per verificare se la struttura di dati o il tipo di dati richiesto è errato. {% endhint %}
 
-![](<images/nodes and wires - nodes with warning tooltip.jpg>)
+![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. Descrizione comando di avviso: impossibile interpretare un valore "null" o i dati come Double, ossia un numero.
 > 2. Utilizzare il nodo Watch per esaminare i dati di input.
@@ -71,7 +71,7 @@ I fili collegano la porta di output di un nodo alla porta di input di un altro n
 
 Le porte di input sono sul lato sinistro e le porte di output si trovano sul lato destro dei nodi, pertanto, è possibile generalmente affermare che il flusso del programma si sposta da sinistra a destra.
 
-![](<images/nodes and wires - flow of data.jpg>)
+![](images/nodesandwires-flowofdata.jpg)
 
 ### Creazione di fili <a href="#creating-wires" id="creating-wires"></a>
 
@@ -79,7 +79,7 @@ Creare un filo facendo clic con il pulsante sinistro del mouse su una porta, qui
 
 I dati fluiscono sempre attraverso questo filo dall'output all'input. È tuttavia possibile creare il filo in entrambe le direzioni in termini di una sequenza di clic sulle porte collegate.
 
-![](<images/nodes and wires - creating a wire.gif>)
+![](images/nodesandwires-creatingawire.gif)
 
 ### Modifica di fili <a href="#editing-wires" id="editing-wires"></a>
 
@@ -87,25 +87,25 @@ Spesso è necessario regolare il flusso di programma nel programma visivo modifi
 
 * Per modificare il collegamento in una porta di input, fare clic con il pulsante sinistro del mouse su un'altra porta di input.
 
-![](<images/nodes and wires - edit wire change port (2).gif>)
+![](images/nodesandwires-editwirechangeport(2).gif)
 
 * Per rimuovere il filo, trascinarlo e fare clic con il pulsante sinistro del mouse sull'area di lavoro.
 
-![](<images/nodes and wires - edit wires remove.gif>)
+![](images/nodesandwires-editwiresremove.gif)
 
 * Ricollegare più fili utilizzando MAIUSC+clic con pulsante sinistro del mouse.
 
-![](<images/nodes and wires - edit multi ports.gif>)
+![](images/nodesandwires-editmultiports.gif)
 
 * Duplicare un filo mediante CTRL+clic con il pulsante sinistro del mouse.
 
-![](<images/nodes and wires - duplicate wire.gif>)
+![](images/nodesandwires-duplicatewire.gif)
 
 #### Fili di default ed evidenziati <a href="#wire-previews" id="wire-previews"></a>
 
 Per default, i fili verranno visualizzati in anteprima con un tratto di colore grigio. Quando si seleziona un nodo, verrà eseguito il rendering di qualsiasi filo collegato con la stessa evidenziazione di color azzurro del nodo.
 
-![](<images/nodes and wires - default vs highlighted wires.jpg>)
+![](images/nodesandwires-defaultvshighlightedwires.jpg)
 
 > 1. Filo evidenziato
 > 2. Filo di default
@@ -116,10 +116,10 @@ Se si preferisce nascondere i fili nel grafico, è possibile trovare questa opzi
 
 Con questa impostazione, solo i nodi selezionati e i relativi fili di unione verranno mostrati con una leggera evidenziazione verde acqua.
 
-![](<images/nodes and wires - hide wires setting (1).gif>)
+![](images/nodesandwires-hidewiressetting(1).gif)
 
 #### Occultamento solo del singolo filo
 
 È anche possibile nascondere solo il filo selezionato facendo clic con il pulsante destro del mouse sull'output Nodi > selezionare Nascondi fili.
 
-![](<images/nodes and wires - hide selected wire.gif>)
+![](images/nodesandwires-hideselectedwire.gif)

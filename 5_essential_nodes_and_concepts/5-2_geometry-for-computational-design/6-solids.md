@@ -10,7 +10,7 @@ Se si desidera costruire modelli più complessi che non possono essere creati da
 
 Si possono utilizzare le [operazioni booleane](5-6\_solids.md#boolean-operations) per modificare i solidi. Si utilizzeranno alcune operazioni booleane per creare una palla riccio.
 
-![](<../images/5-2/6/solids  - spiky ball.jpg>)
+![](../images/5-2/6/solids-spikyball.jpg)
 
 > 1. **Sphere.ByCenterPointRadius**: creare il solido di base.
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: eseguire una query sulle facce del solido e convertirle in geometria di superficie. In questo caso, la sfera presenta un'unica faccia.
@@ -29,7 +29,7 @@ Si possono utilizzare le [operazioni booleane](5-6\_solids.md#boolean-operations
 
 Le operazioni booleane sono complesse e possono essere lente da calcolare. Utilizzare la funzionalità Congela per sospendere l'esecuzione dei nodi selezionati e dei nodi a valle interessati.
 
-![](<../images/5-2/6/solids - freeze node.jpg>)
+![](../images/5-2/6/solids-freezenode.jpg)
 
 > 1\. Utilizzare il menu contestuale accessibile con il pulsante destro del mouse per congelare l'operazione di unione dei solidi.
 >

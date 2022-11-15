@@ -4,7 +4,7 @@ Gli oggetti nelle progettazioni computazionali raramente vengono creati esplicit
 
 Fondamentalmente, un vettore rappresenta una posizione nello spazio 3D e spesso viene considerato come il punto finale di una freccia dalla posizione (0, 0, 0) a quella posizione. I vettori possono essere creati con il costruttore _ByCoordinates_, utilizzando la posizione x, y e z dell'oggetto vettoriale appena creato. Notare che gli oggetti vettoriali non sono oggetti geometrici e non compaiono nella finestra di Dynamo. Tuttavia, le informazioni relative ad un vettore appena creato o modificato possono essere stampate nella finestra della console:
 
-![](<../images/8-2/3/vector math 01.jpg>)
+![](../images/8-2/3/vectormath01.jpg)
 
 ```js
 // construct a Vector object
@@ -60,7 +60,7 @@ c = a.Scale(5);
 
 Spesso è necessario durante la messa in scala di un vettore avere la lunghezza del vettore risultante esattamente uguale al valore in scala. Ciò si ottiene facilmente normalizzando prima un vettore, in altre parole impostando la lunghezza del vettore esattamente uguale ad uno.
 
-![](<../images/8-2/3/vector math 05.jpg>)
+![](../images/8-2/3/vectormath05.jpg)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 3);
@@ -94,7 +94,7 @@ c = a.Cross(b);
 
 Un'ulteriore funzione, sebbene più avanzata di matematica vettoriale, è il prodotto punto. Il prodotto punto tra due vettori è un numero reale (non un oggetto Vector) che è correlato, ma non è esattamente, all'angolo tra due vettori. Una delle proprietà utili del prodotto punto è che il prodotto punto tra due vettori sarà 0 se e solo se sono perpendicolari. Il prodotto punto viene calcolato con il metodo _Dot_.
 
-![](<../images/8-2/3/vector math 07.jpg>)
+![](../images/8-2/3/vectormath07.jpg)
 
 ```js
 a = Vector.ByCoordinates(1, 2, 1);
