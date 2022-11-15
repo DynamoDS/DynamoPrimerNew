@@ -22,12 +22,12 @@
 
 このセクション用の Revit ファイルを使用して(または前のセクションからの続きとして)演習を開始しましょう。このファイルには、屋根上の ETFE パネルの配列が収録されています。以降の演習でこれらのパネルを参照します。
 
-![](<images/6/documenting - exercise I - 01.jpg>)
+![](images/6/documenting-exerciseI-01.jpg)
 
 > 1. _Family Types_ ノードをキャンバスに追加し、_ROOF-PANEL-4PT_ を選択します。
 > 2. このノードを _All Elements of Family Type_ ノードに接続することで、すべての要素を Revit から Dynamo に取得します。
 
-![](<images/6/documenting - exercise I - 02.jpg>)
+![](images/6/documenting-exerciseI-02.jpg)
 
 > 1. _AdaptiveComponent.Locations_ ノードにより、各要素のアダプティブ点の位置をクエリーします。
 > 2. _Polygon.ByPoints_ ノードを使用して、これら 4 点から 1 つのポリゴンを作成します。これにより、Revit 要素のジオメトリをすべて読み込むことなく、パネル システムの抽象化されたバージョンを Dynamo で取得できます。
@@ -35,35 +35,35 @@
 
 前の演習と同様に、各パネルの開口率を水平面からの偏差に基づいて設定してみましょう。
 
-![](<images/6/documenting - exercise I - 03.jpg>)
+![](images/6/documenting-exerciseI-03.jpg)
 
 > 1. _Element.SetParameterByName_ ノードをキャンバスに追加して、その _element_ 入力にアダプティブ コンポーネントを接続します。_開口率(Aperture Ratio)_ を読み取っている _Code Block_ ノードを、_parameterName_ 入力に接続します。
 > 2. 偏差の出力を直接 value 入力に接続することはできません。なぜなら、複数の値をパラメータ範囲にマッピングし直す必要があるからです。
 
-![](<images/6/documenting - exercise I - 04.jpg>)
+![](images/6/documenting-exerciseI-04.jpg)
 
 > 1. _Math.RemapRange_ ノードを使用して、_Code Block_ ノードに `0.15; 0.45;` を入力することで偏差の値を 0.15 から 0.45 までの範囲にマッピングし直します。
 > 2. そのノードの出力を _Element.SetParameterByName_ の value 入力に接続します。
 
 Revit に戻ると、サーフェス全体の開口率が_多少_ 変化したことがわかります。
 
-![演習](../.gitbook/assets/13.jpg)
+![演習](images/6/13.jpg)
 
 拡大表示するとはっきりわかるように、サーフェスの四隅に近付くほどパネルが閉じていく傾向にあり、また隆起の頂点へ近付くほどパネルが開いていく傾向にあります。これは、四隅のあたりでは水平面からの偏差が大きく、ふくらみの部分では水平に近くになっているためです。
 
-![演習](../.gitbook/assets/13a.jpg)
+![演習](images/6/13a.jpg)
 
 ### パート II: 色分けと設計図書作成
 
 [開口率]の設定では、屋根上のパネルの偏差があまりよくわかりません。また、実際の要素のジオメトリが変更されてしまいます。単に製造性の観点から偏差を検討するだけであれば、設計図書作成の際に、偏差の範囲に基づいてパネルを色分けするとよいでしょう。下記の一連の手順によってそのような色分けを行うことができます。これは上記の手順にとてもよく似ています。
 
-![](<images/6/documenting - exercise II - 01.jpg>)
+![](images/6/documenting-exerciseII-01.jpg)
 
 > 1. _Element.SetParameterByName_ ノードとその入力ノードを削除し、_Element.OverrideColorInView_ ノードを追加します。
 > 2. _Color Range_ ノードをキャンバスに追加して、そのノードを _Element.OverrideColorInView_ の color 入力に接続します。さらに、グラデーションを作成するために偏差の値を Color Range ノードに接続する必要があります。
 > 3. _value_ 入力にカーソルを合わせると、その入力の値が _0_ から _1_ までの範囲で表示されます。この値は、値ごとに色をマッピングするのに使用されます。偏差の値をこの範囲にマッピングし直す必要があります。
 
-![](<images/6/documenting - exercise II - 02.jpg>)
+![](images/6/documenting-exerciseII-02.jpg)
 
 > 1. _Math.RemapRange_ を使用して、水平面からの偏差を 0 から _1_ までの範囲にマッピングし直します(注: _MapTo_ ノードを使用してソースの範囲を設定することもできます)。
 > 2. その出力結果を _Color Range_ ノードに接続します。
@@ -72,9 +72,9 @@ Revit に戻ると、サーフェス全体の開口率が_多少_ 変化した�
 
 Revit に戻ると、かなり見やすいグラデーションが表示されます。これは、ユーザが指定した色の範囲に基づいて、水平面からの偏差を表しています。色分けをカスタマイズするには、どうすればよいでしょうか。いま偏差の最小値は赤色で表示されていますが、これとは逆の色分けに変更してみましょう。つまり、偏差の最大値を赤色に、偏差の最小値をもっと落ちついた色に設定することにします。Dynamo に戻ってこの修正を行ってみましょう。
 
-![](../.gitbook/assets/09.jpg)
+![](images/6/09.jpg)
 
-![](<images/6/documenting - exercise II - 04.jpg>)
+![](images/6/documenting-exerciseII-04.jpg)
 
 > 1. _Code Block_ ノードを使用して、`0;` と `255;` という 2 つの数値を、2 行に分けて追加します。
 > 2. 2 つ の _Color.ByARGB_ ノードに適切な値を接続することで、赤色と青色を作成します。
@@ -83,25 +83,25 @@ Revit に戻ると、かなり見やすいグラデーションが表示され�
 
 Revit に戻ると、水平面からの偏差が四隅の領域で最大になっていることがよりはっきり確認できます。なお、このノードはビュー内の色の優先設定に使用されます。したがって、一連の図面のなかで特定のシートが特定のタイプの解析を目的としている場合に、とても役に立ちます。
 
-![演習](<../.gitbook/assets/07 (6).jpg>)
+![演習](images/6/07(6).jpg)
 
 ### パート III: 集計表
 
 Revit で ETFE パネルを選択すると、XYZ1、XYZ2、XYZ3、XYZ4 という 4 つのインスタンス パラメータが表示されます。作成後、これらのパラメータはすべて空になっています。これらは文字ベースのパラメータであり、値を必要とします。Dynamo を使用して、各パラメータにアダプティブ点の位置を入力します。この機能は、ジオメトリをファサード設計の監修者に送信する必要がある場合に、相互運用性の確保に役立ちます。
 
-![](<images/6/documenting - exercise III - 01.jpg>)
+![](images/6/documenting-exerciseIII-01.jpg)
 
 サンプルのシートには大規模な空の集計表が含まれています。XYZ パラメータは Revit ファイルでも使用される共有パラメータであり、このファイルによってパラメータを集計表に追加することができます。
 
-![演習](<../.gitbook/assets/03 (8).jpg>)
+![演習](images/6/03(8).jpg)
 
 拡大表示すると、XYZ パラメータはまだ入力されていません。左側 2 つのパラメータは Revit によって処理されています。
 
-![演習](<../.gitbook/assets/02 (9).jpg>)
+![演習](images/6/02(9).jpg)
 
 これらのパラメータに値を入力するために、これから複雑なリスト操作を行います。グラフ自体は単純ですが、考え方はリストの章で紹介したリストのマッピングを大いに活用しています。
 
-![](<images/6/documenting - exercise III - 04.jpg>)
+![](images/6/documenting-exerciseIII-04.jpg)
 
 > 1. 2 つのノードを使用してアダプティブ コンポーネントをすべて選択します。
 > 2. _AdaptiveComponent.Locations_ ノードを使用して、各点の位置を抽出します。
@@ -114,12 +114,12 @@ Revit で ETFE パネルを選択すると、XYZ1、XYZ2、XYZ3、XYZ4 という
 
 Revit でパネルを選択すると、各パラメータに文字列値が入力された状態で表示されます。実際のプログラミングでは、(X,Y,Z)のようにより単純な形式で 1 つの点を作成するものです。これは Dynamo の文字列操作で可能ですが、この章で取り扱う範囲から逸脱しないようにするために、その方法はここでは紹介しません。
 
-![](<../.gitbook/assets/04 (5).jpg>)
+![](../.gitbook/assets/04(5).jpg)
 
 パラメータへの入力が完了しているサンプル集計表のビューです。
 
-![](<../.gitbook/assets/01 (9).jpg>)
+![](../.gitbook/assets/01(9).jpg)
 
 各 ETFE パネルを構成するすべてのアダプティブ点について XYZ 座標が記入されています。これらが製造用の各パネルの四隅を表します。
 
-![演習](<../.gitbook/assets/00 (8).jpg>)
+![演習](../.gitbook/assets/00(8).jpg)

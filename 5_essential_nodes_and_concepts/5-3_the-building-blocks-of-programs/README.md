@@ -2,4 +2,4 @@
 
 ここまでの説明で、ビジュアル プログラミングの基本的な仕組みについて確認しました。ここからは、ビジュアル プログラミングで使用する構成要素について詳しく見ていきましょう。この章では、Dynamo 内で受け渡されるデータの基本的な概念について説明します。
 
-![](<../images/5-3/building blocks of program.png>)
+![](../images/5-3/buildingblocksofprogram.png)

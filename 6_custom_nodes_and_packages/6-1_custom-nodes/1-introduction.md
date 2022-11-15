@@ -10,11 +10,11 @@
 
 カスタム ノードの最も便利な機能は、ワーク シェアリング機能です。たとえば、Dynamo の上級ユーザが複雑な Dynamo グラフを作成し、そのグラフを Dynamo を初めて使用する設計者に渡したとします。この場合、グラフを渡されたユーザはそのグラフを簡素化し、設計についてのやり取りに必要な最小限の要素だけに絞り込むことができます。カスタム ノードを開いて内部のグラフを編集することができますが、「コンテナ」はシンプルな状態に保たれます。このプロセスにより、カスタム ノードを使用する Dynamo ユーザは、直感的で見やすいグラフを設計することができます。
 
-![](<../images/6-1/1/custom node intro - work sharing 01.jpg>)
+![](../images/6-1/1/customnodeintro-worksharing01.jpg)
 
 ### ノードを作成するさまざまな方法
 
-Dynamo では、さまざまな方法でカスタム ノードを作成することができます。この章の例では、Dynamo UI からカスタム ノードを直接作成します。C# や Zero-Touch の構文の詳細については、Dynamo Wiki の[こちらのページ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)を参照してください。
+Dynamo では、さまざまな方法でカスタム ノードを作成することができます。この章の例では、Dynamo UI からカスタム ノードを直接作成します。C# や Zero-Touch の構文の詳細については、Dynamo Wiki の[このページ](https://github.com/DynamoDS/Dynamo/wiki/How-To-Create-Your-Own-Nodes)を参照してください。
 
 ### カスタム ノード環境を作成して最初のカスタム ノードを作成する
 
@@ -22,28 +22,28 @@ Dynamo では、さまざまな方法でカスタム ノードを作成するこ
 
 カスタム ノードを一から作成するには、Dynamo を起動して[カスタム ノード]を選択するか、キャンバスで[Ctrl]+[Shift]+[N]を押します。
 
-![](<../images/6-1/1/custom node intro - custom node environment 01.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment01.jpg)
 
-[カスタム ノード プロパティ]ダイアログボックスで、カスタム ノードの名前、説明、カテゴリを入力します。
+[カスタム ノード プロパティ]ダイアログ ボックスで、カスタム ノードの名前、説明、カテゴリを入力します。
 
-![](<../images/6-1/1/custom node intro - custom node environment 02.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment02.jpg)
 
 > 1. **名前:** Percentage
 > 2. **説明**: Calculate the percentage of one value in relation to another (一方の値に対するもう一方の値のパーセンテージを計算)
 > 3. **カテゴリ:** Math.Functions
 
-キャンバスの背景色が黄色で表示されます。これは、カスタム ノードの内部を表しています。このキャンバス内では、Input ノードや Output ノードなど、Dynamo の核となるすべてのノードを使用することができます。この 2 つのノードにより、カスタム ノードでやり取りされるデータにラベルが付けられます。 これらは[Input] > [Basic]にあります。
+キャンバスの背景色が黄色で表示されます。これは、カスタム ノードの内部を表しています。このキャンバス内では、Input ノードや Output ノードなど、Dynamo の核となるすべてのノードを使用することができます。この 2 つのノードにより、カスタム ノードでやり取りされるデータにラベルが付けられます。これらは[Input] > [Basic]にあります。
 
-![](<../images/6-1/1/custom node intro - custom node environment 03.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment03.jpg)
 
-![](<../images/6-1/1/custom node intro - custom node environment 04.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
 
-> 1. **Input** ノードは、カスタム ノード上に入力ポートを作成します。入力ノードの構文は、_input_name : datatype = default\_value(オプション)_ です。
-> 2. **Output** ノードは、Input ノードと同様に、カスタム ノード上に出力ポートを作成して名前を付けます。**カスタム コメント**を入力ポートと出力ポートに追加して、入力タイプと出力タイプがわかるようにすることをお勧めします。 詳細については、「[カスタム ノードを作成する](2-creating.md)」セクションを参照してください。
+> 1. **Input** ノードは、カスタム ノード上に入力ポートを作成します。入力ノードの構文は、_input\\_name : datatype = default\\_value(オプション)_です。
+> 2. **Output** ノードは、Input ノードと同様に、カスタム ノード上に出力ポートを作成して名前を付けます。**カスタム コメント**を入力ポートと出力ポートに追加して、入力タイプと出力タイプがわかるようにすることをお勧めします。詳細については、「[カスタム ノードを作成する](2-creating.md)」セクションを参照してください。
 
 作成したカスタム ノードは、.dyf ファイルとして保存することができます(標準ノードの場合は .dyn ファイルとして保存されます)。保存したファイルは、現在のセッションと将来のセッションに自動的に追加されます。カスタム ノードは、ライブラリの[Add-ons]セクションにあります。
 
-![](<../images/6-1/1/custom node intro - custom node environment 05.jpg>)
+![](../images/6-1/1/customnodeintro-customnodeenvironment05.jpg)
 
 ### 今後の予定
 

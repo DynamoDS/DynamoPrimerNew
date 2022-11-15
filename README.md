@@ -1,10 +1,8 @@
 # バージョン情報
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
-Dynamo Hype Video
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
-## For Dynamo v2.13
+## Dynamo v2.13
 
 ![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
 
@@ -61,7 +59,7 @@ Dynamo プロジェクトの創立と指揮に携わった Ian Keough 氏に、�
 
 ### ソフトウェアとリソース
 
-**Dynamo**: 現在の公式* リリースのバージョンは 2.1.0 です。
+**Dynamo** Dynamo の最新の**安定した**リリースについては、次のサイトを参照してください。
 
 http://dynamobim.com/download/ または http://dynamobuilds.com
 

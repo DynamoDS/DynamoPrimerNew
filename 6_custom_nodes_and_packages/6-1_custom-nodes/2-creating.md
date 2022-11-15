@@ -8,7 +8,7 @@ Dynamo では、いくつかの方法でカスタム ノードを作成するこ
 
 次の図は、UV 座標を使用して、1 つのサーフェスから別のサーフェスに点をマッピングする場合の例を示しています。この概念を適用して、XY 平面上の曲線を参照する、複数の小さなパネルから構成されるサーフェスを作成してみましょう。ここでは、パネル化用の四角形のパネルを作成しますが、同じ概念を適用して、UV マッピングを使用する多様なパネルを作成することもできます。この演習を行うと、このグラフや Dynamo の別のワークフローで同様のプロセスを簡単に繰り返すことができるようになるため、カスタム ノード開発のよい練習になります。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 01.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-01.jpg)
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
@@ -16,18 +16,18 @@ Dynamo では、いくつかの方法でカスタム ノードを作成するこ
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-最初に、カスタム ノード内にネストするグラフを作成します。この例では、UV 座標を使用して、基準となるサーフェスから目的のサーフェスにポリゴンをマッピングするグラフを作成します。この UV マッピング プロセスは頻繁に使用するプロセスであるため、カスタム ノードの演習素材として適しています。サーフェスと UV 空間の詳細については、「[サーフェス](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)」ページを参照してください。完全なグラフは、上記でダウンロードした .zip ファイルの _UVmapping\_Custom-Node.dyn_ になります。
+最初に、カスタム ノード内にネストするグラフを作成します。この例では、UV 座標を使用して、基準となるサーフェスから目的のサーフェスにポリゴンをマッピングするグラフを作成します。この UV マッピング プロセスは頻繁に使用するプロセスであるため、カスタム ノードの演習素材として適しています。サーフェスと UV 空間の詳細については、「[サーフェス](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)」ページを参照してください。完全なグラフは、上記でダウンロードした .zip ファイルの _UVmapping\\_Custom-Node.dyn_ になります。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 02.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-02.jpg)
 
 > 1. **Code Block:** この行を使用して、-45 ～ 45 `45..45..#10;`の範囲の 10 個の数値を作成します。
 > 2. **Point.ByCoordinates:** **Code Block** ノードの出力を x 入力と y 入力に接続し、[レーシング]を[外積]に設定します。これで、点のグリッドが作成されます。
-> 3. **Plane.ByOriginNormal:** _Point_ 出力を _origin_ 入力に接続して、各点に平面を作成します。 この操作では、既定の法線ベクトル(0,0,1)が使用されます。
+> 3. **Plane.ByOriginNormal:** _Point_ 出力を _origin_ 入力に接続して、各点に平面を作成します。この操作では、既定の法線ベクトル(0,0,1)が使用されます。
 > 4. **Rectangle.ByWidthLength:** 前の手順で作成した平面を _plane_ 入力に接続し、値 _10_ の **Code Block** ノードを使用して幅と長さを指定します。
 
 これで、長方形のグリッドが作成されます。UV 座標を使用して、これらの長方形を目的のサーフェスにマッピングします。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 03.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-03.jpg)
 
 > 1. **Polygon.Points:** 前の手順の **Rectangle.ByWidthLength** 出力を _polygon_ 入力に接続し、各長方形の頂点を抽出します。これらの点を、目的のサーフェスにマッピングします。
 > 2. **Rectangle.ByWidthLength:** 値 _100_ で **Code Block** ノードを使用して、長方形の幅と長さを指定します。これが、基準サーフェスの境界線になります。
@@ -36,16 +36,16 @@ Dynamo では、いくつかの方法でカスタム ノードを作成するこ
 
 これで、基準となるサーフェスと UV 座標のセットが作成されました。次に、目的のサーフェスを読み込み、2 つのサーフェス間で点をマッピングします。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 04.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-04.jpg)
 
-> 1. **File Path:** 読み込むサーフェスのファイル パスを選択します。 ファイル タイプは .sat にしてください。[_参照..._]ボタンをクリックして、上でダウンロードした .zip ファイルの _UVmapping\_srf.sat_ にナビゲートします。
-> 2. **Geometry.ImportFromSAT:** ファイル パスを接続して、サーフェスを読み込みます。 読み込んだサーフェスがジオメトリのプレビューに表示されます。
+> 1. **File Path:** 読み込むサーフェスのファイル パスを選択します。ファイル タイプは .sat にしてください。[_参照..._]ボタンをクリックして、上でダウンロードした .zip ファイルの _UVmapping_srf.sat_ にナビゲートします。
+> 2. **Geometry.ImportFromSAT:** ファイル パスを接続して、サーフェスを読み込みます。読み込んだサーフェスがジオメトリのプレビューに表示されます。
 > 3. **UV:** UV パラメータ出力を _UV.U_ ノードと _UV.V_ ノードに接続します。
-> 4. **Surface.PointAtParameter:** 読み込んだサーフェス、U 座標、V 座標を接続します。 これで、目的のサーフェス上に 3D の点のグリッドが表示されます。
+> 4. **Surface.PointAtParameter:** 読み込んだサーフェス、U 座標、V 座標を接続します。これで、目的のサーフェス上に 3D の点のグリッドが表示されます。
 
 最後に、3D の点を使用して長方形のサーフェス パッチを作成します。
 
-![](<../images/6-1/2/custom node for uv mapping pt I - 05.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptI-05.jpg)
 
 > 1. **PolyCurve.ByPoints:** サーフェス上の点群を接続し、その点群からポリカーブを作成します。
 > 2. **Boolean:** **Boolean** ノードをワークスペースに追加して _connectLastToFirst_ 入力に接続し、値を True に切り替えてポリカーブを閉じます。これで、サーフェスに長方形がマッピングされて表示されます。
@@ -57,11 +57,11 @@ Dynamo では、いくつかの方法でカスタム ノードを作成するこ
 
 次のノード(Polygon.Points から始まる)を選択し、ワークスペースを右クリックして[カスタム ノードを作成]を選択します。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 01.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-01.jpg)
 
 [カスタム ノード プロパティ]ダイアログボックスで、カスタム ノードに名前、説明、カテゴリを割り当てます。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 02.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-02.jpg)
 
 > 1. 名前: MapPolygonsToSurface
 > 2. 説明: 基準点からターゲット サーフェスにポリゴンをマッピングします
@@ -69,35 +69,35 @@ Dynamo では、いくつかの方法でカスタム ノードを作成するこ
 
 カスタム ノードにより、ワークスペースが見やすくなりました。入力と出力には、元のノードに基づいて名前が付いています。カスタム ノードを編集して、これらの名前をもっとわかりやすい名前に変更しましょう。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 03.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-03.jpg)
 
 編集するカスタム ノードをダブルクリックします。ワークスペースの背景色が黄色で表示されます。これは、カスタム ノードの内部を表しています。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 04.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-04.jpg)
 
 > 1. 各 **Input** ノードの入力名を _baseSurface_ と _targetSurface_ に変更します。
 > 2. マッピングするポリゴン用に **Output** ノードを追加します。
 
-カスタム ノードを保存し、ホーム ワークスペースに戻ります。 **MapPolygonsToSurface** ノードに変更内容が反映されます。
+カスタム ノードを保存し、ホーム ワークスペースに戻ります。**MapPolygonsToSurface** ノードに変更内容が反映されます。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 05.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-05.jpg)
 
-**カスタム コメント**を追加して、カスタム ノードの内容をさらにわかりやすくすることもできます。 コメントを入力すると、入力タイプと出力タイプの内容だけでなく、ノードの機能を説明することができます。カスタム ノードの入力や出力にカーソルを置くと、コメントが表示されます。
+**カスタム コメント**を追加して、カスタム ノードの内容をさらにわかりやすくすることもできます。コメントを入力すると、入力タイプと出力タイプの内容だけでなく、ノードの機能を説明することができます。カスタム ノードの入力や出力にカーソルを置くと、コメントが表示されます。
 
 編集するカスタム ノードをダブルクリックします。背景が黄色のワークスペースがもう一度表示されます。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 06.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-06.jpg)
 
 > 1. Input の **Code Block** ノードの編集を開始します。コメントを入力する場合は、最初に「//」を入力してから、コメント テキストを入力します。ノードの内容を説明するためのコメントを入力してください。ここでは、_targetSurface_ ノードの説明を入力します。
-> 2. 特定の値に一致する入力タイプを設定して、_inputSurface_ ノードの既定値を設定します。 ここでは、既定値を元の **Surface.ByPatch** のセットに設定します。
+> 2. 特定の値に一致する入力タイプを設定して、_inputSurface_ ノードの既定値を設定します。ここでは、既定値を元の **Surface.ByPatch** のセットに設定します。
 
 コメントは、Output に適用することもできます。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 07.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-07.jpg)
 
 > Output の Code Block ノードのテキストを編集します。「//」の後ろにコメント テキストを入力します。ここでは、_Polygons_ と _surfacePatches_ の Output の詳細な説明を追加します。
 
-![](<../images/6-1/2/custom node for uv mapping pt II - 08.jpg>)
+![](../images/6-1/2/customnodeforuvmappingptII-08.jpg)
 
 > 1. カスタム ノード入力にカーソルを置いてコメントを表示します。
 > 2. _inputSurface_ ノードの既定値が設定されているため、Surface 入力を使用することなく定義を実行することができます。

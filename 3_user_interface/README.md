@@ -4,7 +4,7 @@
 
 Dynamo のユーザ インタフェース(UI)は、5 つの主要な領域に分かれています。ここでは、概要について簡単に説明し、次のセクションでワークスペースとライブラリについて詳しく説明します。
 
-![](<images/user interface - ui.jpg>)
+![](images/userinterface-ui.jpg)
 
 > 1. メニュー
 > 2. ツールバー
@@ -14,7 +14,7 @@ Dynamo のユーザ インタフェース(UI)は、5 つの主要な領域に分
 
 ### メニュー
 
-![](<images/user interface - menu.jpg>)
+![](../.gitbook/assets/userinterface-menu\(1\).jpg)
 
 これは Dynamo アプリケーションの基本機能を表示するメニューです。ほとんどの Windows ソフトウェアと同様に、最初の 2 つのメニューはファイルの管理、選択とコンテンツ編集の操作に関連しています。他のメニュー項目は、Dynamo 固有のメニュー項目です。
 
@@ -22,7 +22,7 @@ Dynamo のユーザ インタフェース(UI)は、5 つの主要な領域に分
 
 一般的な情報と設定は、**Dynamo** ドロップ ダウン メニューにあります。
 
-![](<images/user interface - dynamo menu.jpg>)
+![](images/userinterface-dynamomenu.jpg)
 
 > 1. [バージョン情報] - ご使用のコンピュータにインストールされている Dynamo のバージョンを確認できます。
 > 2. [操作性データ収集の承諾] - これにより、Dynamo を改善するためのユーザ データの共有を開始または終了することができます。
@@ -31,9 +31,9 @@ Dynamo のユーザ インタフェース(UI)は、5 つの主要な領域に分
 
 #### ヘルプ
 
-不明な点については、**[ヘルプ]** メニューを確認します。Dynamo の参照 Web サイトの 1 つにインターネット ブラウザからアクセスすることができます。
+不明な点については、**[ヘルプ]**メニューを確認します。Dynamo の参照 Web サイトの 1 つにインターネット ブラウザからアクセスすることができます。
 
-![](<images/user interface - help menu.jpg>)
+![](images/userinterface-helpmenu.jpg)
 
 > 1. [スタートアップ] - Dynamo の使用方法を簡単に紹介しています。
 > 2. [インタラクティブ ガイド] -
@@ -46,35 +46,35 @@ Dynamo のユーザ インタフェース(UI)は、5 つの主要な領域に分
 
 ### ツールバー
 
-Dynamo ツールバーには、[元に戻す]コマンド(Ctrl + Z)と[やり直し]コマンド(Ctrl + Y)の他に、ファイルに関する作業に役立つ一連のクイック アクセス ボタンが用意されています。右端にあるボタンを使用すると、ワークスペースのスナップショットを書き出すことができます。このボタンは、ドキュメントの作成や共有を行う場合に特に便利です。
+Dynamo ツールバーには、[元に戻す][Ctrl + Z]コマンドと[やり直し][Ctrl + Y]コマンドの他に、ファイルに関する作業に役立つ一連のクイック アクセス ボタンが用意されています。右端にあるボタンを使用すると、ワークスペースのスナップショットを書き出すことができます。このボタンは、ドキュメントの作成や共有を行う場合に特に便利です。
 
-* ![](<images/user interface - new file.jpg>) 新規作成 - 新規 .dyn ファイルを作成します
-* ![](<images/user interface - open (1).jpg>) 開く - 既存の .dyn (ワークスペース)または .dyf (カスタム ノード)ファイルを開きます
-* ![](<images/user interface - save.jpg>) 保存/名前を付けて保存 - アクティブな .dyn または .dyf ファイルを保存します
-* ![](<images/user interface - undo.jpg>) 元に戻す - 最後に行った操作を元に戻します
-* ![](<images/user interface - redo.jpg>) やり直し - 次のアクションをやり直します
-* ![](<images/user interface - screenshot.jpg>) ワークスペースをイメージとして書き出し - 表示されているワークスペースを PNG ファイルとして書き出します
+* ![](images/userinterface-newfile.jpg)[新規] - 新しい .dyn ファイルを作成する場合に使用します。
+* ![](images/userinterface-open.jpg)[開く] - 既存の .dyn ファイル(ワークスペース)または .dyf ファイル(カスタム ノード)を開く場合に使用します。
+* ![](images/userinterface-save.jpg)[保存]/[名前を付けて保存] - アクティブな .dyn ファイルや .dyf ファイルを保存する場合に使用します。
+* ![](images/userinterface-undo.jpg)[元に戻す] - 最後の操作を元に戻す場合に使用します。
+* ![](images/userinterface-redo.jpg)[やり直し] - 次の操作をやり直す場合に使用します。
+* ![](images/userinterface-screenshot.jpg)[ワークスペースをイメージとして書き出す] - 表示されているワークスペースを PNG ファイルに書き出す場合に使用します。
 
 ### ライブラリ
 
 Dynamo ライブラリは、機能ライブラリのコレクションです。各ライブラリには、カテゴリ別にグループ化されたノードが含まれています。このライブラリは、Dynamo の既定のインストール時に追加される基本ライブラリで構成されています。引き続きこのライブラリの使用方法を紹介し、カスタム ノードと追加パッケージを使用して基本機能を拡張する方法について説明します。「[2-library.md](2-library.md "mention")」セクションでは、この使用方法を詳しく説明しています。
 
-![](<images/user interface - library.jpg>)
+![](images/userinterface-library.jpg)
 
 ### ワークスペース
 
 ワークスペースは、ビジュアル プログラムを構成する場所です。プレビューの設定を変更して、ここから 3D ジオメトリを表示することもできます。詳細については、「[1-workspace.md](1-workspace.md "mention")」を参照してください。
 
-![](<images/user interface - workspace.gif>)
+![](images/userinterface-workspace.gif)
 
 ### 実行バー
 
 ここから Dynamo スクリプトを実行します。実行ボタンのドロップダウン アイコンをクリックして、モードを切り替えます。
 
-![](<images/user interface - execution bar.gif>)
+![](images/userinterface-executionbar.gif)
 
 * [自動]: スクリプトを自動的に実行します。変更はリアルタイムで更新されます。
 * [手動]: [実行]ボタンをクリックした場合のみスクリプトが実行されます。複雑で「重いスクリプト」に変更を加える場合に便利です。
 * [周期]: このオプションは既定でグレー表示されます。DateTime.Now ノードが使用されている場合にのみ使用できます。指定した間隔で自動的に実行されるようにグラフを設定できます。
 
-![](<images/user interface - execution bar DateTime node.jpg>)
+![](images/userinterface-executionbarDateTimenode.jpg)

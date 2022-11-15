@@ -6,7 +6,7 @@
 
 ![人形](../images/5-4/4/145493363\_fc9ff5164f\_o.jpg)
 
-> ロシアのマトリョーシカ人形(写真: [Zeta]( https://www.flickr.com/photos/beppezizzi/145493363))は、N 次元のリストの構造に似ています。それぞれの層が 1 つのリストを表し、各リスト内に項目が格納されています。Dynamo では、1 つのリストに複数のリストを格納することができます。この場合、格納されているそれぞれのリストが、格納元のリストの項目になります。
+> ロシアのマトリョーシカ人形(写真: [Zeta](https://www.flickr.com/photos/beppezizzi/145493363))は、N 次元のリストの構造に似ています。それぞれの層が 1 つのリストを表し、各リスト内に項目が格納されています。Dynamo では、1 つのリストに複数のリストを格納することができます。この場合、格納されているそれぞれのリストが、格納元のリストの項目になります。
 
 N 次元のリストを視覚的に説明するのは難しいため、この章ではいくつかの演習を使用して、2 次元を超える多次元のリストを操作する方法について見ていきます。
 
@@ -26,36 +26,36 @@ Dynamo のデータ管理において最も複雑な概念はマッピングで�
 
 この章では、読み込んだジオメトリを操作するための演習を 3 つ見ていきます。この演習はその最初の演習です。演習を進めていくにつれて、より複雑なデータ構造を扱います。
 
-![Exercise](<../images/5-4/4/n-dimensional lists - 2d lists basic 01.jpg>)
+![演習](../images/5-4/4/n-dimensionallists-2dlistsbasic01.jpg)
 
 > 1. 最初に、演習ファイル フォルダ内の .sat ファイルを使用します。このファイルを取得するには、**File Path** ノードを使用します。
 > 2. **Geometry.ImportFromSAT** ノードを使用すると、ジオメトリが 2 つのサーフェスとして Dynamo のプレビューに読み込まれます。
 
 説明を簡単にするため、この演習では 1 つのサーフェスだけを使用します。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists basic 02.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsbasic02.jpg)
 
 > 1. インデックス値として 1 を選択して、上部のサーフェスをグラブします。これを行うには、**List.GetItemAtIndex** ノードを使用します。
 > 2. **Geometry.ImportFromSAT** プレビューのジオメトリ プレビューをオフにします。
 
 次に、グラブしたサーフェスを点のグリッドに分割します。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists basic 03.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsbasic03.jpg)
 
-> 1\. **Code Block** ノードを使用して、次の 2 つのコード行を入力します。 `0..1..#10;` `0..1..#5;`
+> 1\.**Code Block** ノードを使用して、次の 2 つのコード行を入力します。 `0..1..#10;` `0..1..#5;`
 >
-> 2\. 2 つの Code Block 値を、**Surface.PointAtParameter** ノードの u 入力と _v_ 入力に接続します。次に、このノードの_レーシング_を「_外積_」に変更します。
+> 2\.2 つの Code Block 値を、**Surface.PointAtParameter** ノードの u 入力と _v_ 入力に接続します。次に、このノードの_レーシング_を「_外積_」に変更します。
 >
-> 3\. 出力としてデータ構造が表示されます。このデータ構造は、Dynamo のプレビューで表示することもできます。
+> 3\.出力としてデータ構造が表示されます。このデータ構造は、Dynamo のプレビューで表示することもできます。
 
 次に、最後のステップの点を使用して、サーフェスに沿って 10 個のカーブを生成します。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists basic 04.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsbasic04.jpg)
 
 > 1. **NurbsCurve.ByPoints** ノードを **Surface.PointAtParameter** ノードの出力に接続して、データ構造の内容を確認します。
 > 2. **List.GetItemAtIndex** ノードのプレビューをオフにすると、結果が明確になります。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists basic 05.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsbasic05.jpg)
 
 > 1. 基本的な **List.Transpose** ノードにより、リストのリストの列と行が反転します。
 > 2. **List.Transpose** ノードの出力を **NurbsCurve.ByPoints** ノードに接続すると、サーフェスに沿って水平方向に 5 本の曲線が作成されます。
@@ -65,31 +65,31 @@ Dynamo のデータ管理において最も複雑な概念はマッピングで�
 
 この演習では、少し複雑な操作を実行してみましょう。ここでは、前の演習で作成した曲線に対して操作を実行します。具体的には、これらの曲線を別のサーフェスに関連付けて、2 つのサーフェス間で曲線をロフトします。この操作を実行する場合、データ構造の処理が少し複雑になりますが、基本的な考え方はこれまでと同じです。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 01.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance01.jpg)
 
 > 1. 最初に、**List.GetItemAtIndex** ノードを使用して、前の演習で読み込んだジオメトリの上部サーフェスを分離します。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 02.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance02.jpg)
 
 > 1. **Surface.Offset** ノードで _10_ という値を指定して、サーフェスをオフセットします。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 03.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance03.jpg)
 
 > 1. 前の演習と同様に、_Code Block_ ノードで次の 2 つのコード行を入力します。 `0..1..#10;` `0..1..#5;`
-> 2. 上記のコード行を 2 つの **Surface.PointAtParameter** ノードに接続し、各ノードの_レーシング_を「_外積_」に設定します。 いずれか一方のノードが元のサーフェスに接続され、もう一方のノードがオフセットされたサーフェスに接続されます。
+> 2. 上記のコード行を 2 つの **Surface.PointAtParameter** ノードに接続し、各ノードの_レーシング_を「_外積_」に設定します。いずれか一方のノードが元のサーフェスに接続され、もう一方のノードがオフセットされたサーフェスに接続されます。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 04.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance04.jpg)
 
 > 1. これらのサーフェスのプレビューをオフにします。
-> 2. 前の演習と同様に、Surface.PointAtParameter ノードの出力を 2 つの **NurbsCurve.ByPoints** ノードに接続します。 結果は、2 つのサーフェスに対応するカーブを示します。
+> 2. 前の演習と同様に、Surface.PointAtParameter ノードの出力を 2 つの **NurbsCurve.ByPoints** ノードに接続します。結果は、2 つのサーフェスに対応するカーブを示します。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 05.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance05.jpg)
 
 > 1. **List.Create** ノードを使用して、2 組の曲線を 1 つのリストのリストに結合します。
 > 2. 10 個の項目を持つ 2 つのリストが出力として表示されます。各リストが、NURBS 曲線の各接続セットを表しています。
-> 3. **Surface.ByLoft** ノードを実行すると、このデータ構造を視覚的に理解することができます。 このノードは、各サブリスト内のすべての曲線をロフトします。
+> 3. **Surface.ByLoft** ノードを実行すると、このデータ構造を視覚的に理解することができます。このノードは、各サブリスト内のすべての曲線をロフトします。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 06.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance06.jpg)
 
 > 1. 前のステップで **Surface.ByLoft** ノードのプレビューをオフにします。
 > 2. **List.Transpose** ノードを使用すると、リスト内のすべての列と行が反転します。このノードにより、10 本の曲線を持つ 2 つのリストが、2 本の曲線を持つ 10 個のリストに変換されます。また、各 NURBS 曲線が、もう一方のサーフェスの隣接する曲線に関連付けられます。
@@ -97,14 +97,14 @@ Dynamo のデータ管理において最も複雑な概念はマッピングで�
 
 次に、この結果を得るための別のプロセスを説明します。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 07.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance07.jpg)
 
 > 1. 開始する前に、前のステップで **Surface.ByLoft** プレビューをオフにして、混乱を避けます。
 > 2. ここでは、**List.Transpose** ノードの代わりに **List.Combine** ノードを使用します。このノードは、各サブリスト上で「_コンビネータ_」を実行します。
 > 3. この演習では、**List.Create** ノードを「_コンビネータ_」として使用します。これにより、サブリスト内の各項目のリストが作成されます。
 > 4. **Surface.ByLoft** ノードを使用して、前の手順と同じサーフェスを取得します。この場合は List.Transpose ノードを使用した方が簡単ですが、さらに複雑なデータ構造を操作する場合は、**List.Combine** ノードを使用することをお勧めします。
 
-![](<../images/5-4/4/n-dimensional lists - 2d lists advance 08.jpg>)
+![](../images/5-4/4/n-dimensionallists-2dlistsadvance08.jpg)
 
 > 1. リブ形状の構造物内の曲線の方向を切り替える場合は、手順をいくつか戻り、**NurbsCurve.ByPoints** ノードに接続する前に **List.Transpose** ノードを使用します。これにより、リスト内の列と行が反転し、水平方向のリブ形状が 5 つ作成されます。
 
@@ -114,75 +114,75 @@ Dynamo のデータ管理において最も複雑な概念はマッピングで�
 
 最初に、前の演習で読み込んだファイルを使用します。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 01.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist01.jpg)
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 02.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist02.jpg)
 
 > 1. 前の演習と同様に **Surface.Offset** ノードを使用し、サーフェスをオフセットする値として _10_ を指定します。
 > 2. オフセットされたノードによって 2 つのサーフェスが作成されたことが出力として表示されます。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 03.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist03.jpg)
 
 > 1. 前の演習と同様に、**Code Block** ノードで次の 2 つのコード行を入力します。 `0..1..#20;` `0..1..#20;`
 > 2. 上記のコード行を 2 つの **Surface.PointAtParameter** ノードに接続し、各ノードのレーシングを「_外積_」に設定します。いずれか一方のノードが元のサーフェスに接続され、もう一方のノードがオフセットされたサーフェスに接続されます。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 04.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist04.jpg)
 
 > 1. 前の演習と同様に、Surface.PointAtParameter ノードの出力を 2 つの **NurbsCurve.ByPoints** ノードに接続します。
 > 2. **NurbsCurve.ByPoints** ノードの出力を確認すると、この出力が 2 つのリストを持つリストであることがわかります。これは、前の演習で扱ったリストよりも複雑なデータ構造です。データは基礎となるサーフェスによって分類されるため、構造化されたデータに別の層を追加します。
 > 3. **Surface.PointAtParameter** ノードでは、データ構造がさらに複雑になっていることがわかります。このノードでは、「リストのリストのリスト」が作成されます。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 05.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist05.jpg)
 
 > 1. 続行する前に、既存のサーフェスのプレビューをオフにします。
 > 2. **List.Create** ノードを使用して、NURBS 曲線を 1 つのデータ構造にマージします。これにより、「リストのリストのリスト」が作成されます。
 > 3. **Surface.ByLoft** ノードを接続すると、元のサーフェスが取得されます。これは、元のデータ構造から作成された独自のリスト内にサーフェスがそのまま残っているためです。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 06.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist06.jpg)
 
 > 1. 前の演習では、**List.Transpose** ノードを使用してリブ形状の構造物を作成しましたが、ここでは同じ操作を行うことはできません。List.Transpose ノードを使用できるのは 2 次元のリストの場合ですが、ここでは 3 次元のリストを操作するため、リスト内の列と行を反転する操作を簡単に実行することはできません。これまでに説明したように、リストはオブジェクトとして処理されるため、サブリストが含まれていないリストを **List.Transpose** ノードを使用して反転することはできますが、階層内の 1 段階下の層でリストの NURBS 曲線を反転することはできません。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 07.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist07.jpg)
 
 > 1. ここでは、**List.Combine** ノードを使用します。さらに複雑なデータ構造を処理する場合は、**List.Map** ノードと **List.Combine** ノードを使用します。
 > 2. **List.Create** ノードを「_コンビネータ_」として使用して、この操作に適したデータ構造を作成します。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 08.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist08.jpg)
 
 > 1. 階層内の 1 段階下の層で、データ構造を転置する必要があります。これを行うには、**List.Map** ノードを使用します。このノードは **List.Combine** ノードに似ていますが、複数の入力リストではなく 1 つの入力リストだけを使用する点が異なっています。
 > 2. **List.Map** ノードに **List.Transpose** ノードを適用します。これにより、メイン リスト内のサブリストの列と行が反転します。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 09.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist09.jpg)
 
 > 1. これで、適切なデータ階層を持つ NURBS 曲線をまとめてロフトし、リブ形状の構造物を作成できるようになりました。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 10.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist10.jpg)
 
 > 1. 図に示されている入力設定を持つ **Surface.Thicken** ノードを使用して、ジオメトリに深さを追加します。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 11.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist11.jpg)
 
 > 1. この構造にサーフェスを追加して補強してみましょう。別の **Surface.ByLoft** ノードを追加し、前のステップの **NurbsCurve.ByPoints** ノードの最初の出力を入力として使用します。
 > 2. プレビューが見にくくなってきたので、これらのノードのプレビューをオフにします。ノードを右クリックし、[プレビュー]のチェックを外して結果を見やすくします。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 12.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist12.jpg)
 
 > 1. 選択したサーフェスに厚みをつければ、操作は完了です。
 
 これで、さまざまなデータを使用したロッキング チェアが完成しました。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 13.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist13.jpg)
 
 最後に、ロッキング チェアの溝の方向を変えてみましょう。前の演習では転置用のノードを使用しましたが、ここでも同じような方法で操作を行います。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 14.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
 > 1. データ階層にもう 1 つ深い層があるため、**List.Map** ノードと **List.Tranpose** 関数を使用して Nurbs の曲線方向を変更します。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 15.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 
 > 1. **Code Block** ノードのコード行を次のように変更して、溝の数を増やします。`0..1..#20;``0..1..#30;`
 
 最初に作成したロッキング チェアは滑らかな形状でしたが、このロッキング チェアはまったく異なる形状になりました。
 
-![](<../images/5-4/4/n-Dimensional-Lists - 3d list 16.jpg>)
+![](../images/5-4/4/n-Dimensional-Lists-3dlist16.jpg)

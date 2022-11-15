@@ -6,13 +6,13 @@ Dynamo 2.0 では、初めて Python ウィンドウを開く際に、既定で�
 
 通常は次のように計算されます。`( %appdata%\Dynamo\Dynamo Core\{version}\ )`
 
-![](<../images/8-3/3/python templates - appdata folder location.jpg>)
+![](../images/8-3/3/pythontemplates-appdatafolderlocation.jpg)
 
 ### テンプレートを設定する
 
-この機能を使用するには、`DynamoSettings.xml` ファイルで次の行を追加する必要があります _(メモ帳で編集します)_。
+この機能を使用するには、`DynamoSettings.xml` ファイルで次の行を追加する必要があります_(メモ帳で編集します)_。
 
-![](<../images/8-3/3/python templates -dynamo settings xml file.png>)
+![](../images/8-3/3/pythontemplates-dynamosettingsxmlfile.png)
 
 `<PythonTemplateFilePath />` を見つけて、これを次のように置き換えるだけです。
 
@@ -22,15 +22,13 @@ Dynamo 2.0 では、初めて Python ウィンドウを開く際に、既定で�
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_注: CURRENTUSER を自分のユーザ名と置き換えてください_
-{% endhint %}
+{% hint style="warning" %}_注: CURRENTUSER を自分のユーザ名に置き換えてください_{% endhint %}
 
 次に、使用する機能を組み込んだテンプレートを作成する必要があります。ここでは、Revit に関連するインポートおよび Revit で作業する際の他の一般的な項目の一部を組み込みます。
 
 空のメモ帳を起動して、次のコードを貼り付けることができます。
 
-```
+``` py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -73,10 +71,10 @@ OUT = element
 
 Python テンプレートが定義されると、Python Script ノードが配置されるたびに、Dynamo はこのテンプレートを検索します。見つからない場合、既定の Python ウィンドウのように表示されます。
 
-![](<../images/8-3/3/python templates - before setup template.jpg>)
+![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
 Python テンプレート(たとえばここで作成した Revit でのテンプレート)が見つかった場合、組み込んだ既定の項目がすべて表示されます。
 
-![](<../images/8-3/3/python templates - after setup template.jpg>)
+![](../images/8-3/3/pythontemplates-aftersetuptemplate.jpg)
 
-この優れた追加機能(Radu Gidei 氏による)に関する詳細は、https://github.com/DynamoDS/Dynamo/pull/8122 を参照してください。
+この優れた追加機能(Radu Gidei 氏による)に関する詳細は、こちらを参照してください。https://github.com/DynamoDS/Dynamo/pull/8122

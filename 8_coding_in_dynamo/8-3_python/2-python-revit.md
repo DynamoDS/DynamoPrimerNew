@@ -4,7 +4,7 @@
 
 前のセクションでは、Dynamo で Python スクリプトを使用する方法について説明しました。このセクションでは、スクリプティング環境に Revit ライブラリを接続する方法を見てみましょう。ここまでの手順で、次のコード ブロックの最初の 4 行を使用して、Python 標準ライブラリと Dynamo の Core ノードが既に読み込まれています。数行のコードを追加するだけで、Revit の各種のノード、要素、ドキュメント マネージャを読み込むことができます。
 
-```
+``` py
 import sys
 import clr
 clr.AddReference('ProtoGeometry')
@@ -27,7 +27,7 @@ import System
 
 これにより、Revit API にアクセスし、任意の Revit タスクでカスタム スクリプトを使用できるようになります。ビジュアル プログラミングのプロセスと Revit API スクリプトを組み合わせることにより、コラボレーションやツールの開発が容易になります。たとえば、BIM マネージャと回路設計者が、同じグラフを使用して同時に作業することができます。こうしたコラボレーションにより、モデルの設計と施工を改善できます。
 
-![](<../../.gitbook/assets/python & revit - 01.jpg>)
+![](../images/8-3/2/python&revit-01.jpg)
 
 ### プラットフォーム固有の API
 
@@ -51,11 +51,11 @@ Dynamo プロジェクトの背景には、プラットフォーム実装のス�
 
 RevitServices を読み込み、Dynamo のドキュメント データを取得するには、次のようなスクリプトを記述します。
 
-![](<../images/8-3/2/python & revit - exercise 01 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise01-01.jpg)
 
 ここで、Dynamo の Python Script ノードを確認します。次のコードを参照することもできます。
 
-```
+``` py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr
@@ -86,19 +86,19 @@ OUT = [doc,uiapp,app]
 
 最初に、Revit 内に新しいコンセプト マス ファミリを作成します。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 01.jpg>)
+![](../images/8-3/2/python&revit-exercise02-01.jpg)
 
 _コンセプト マス フォルダ_ を開き、_Metric Mass.rft_ テンプレート ファイルを使用します。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise02-02.jpg)
 
 Revit で、キーボード ショートカット **`un`** を使用してプロジェクトの単位の設定を表示し、長さの単位をメートルに変更します。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise02-03.jpg)
 
 Dynamo を起動し、下図に示す一連のノードを作成します。次に、Dynamo のノードを使用して、Revit 内に 2 つの参照点を作成します。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 04.jpg>)
+![](../images/8-3/2/python&revit-exercise02-04.jpg)
 
 > 1. **Code Block** ノードを作成し、`"0;"` の値を設定します。
 > 2. この値を、**ReferencePoint.ByCoordinates** ノードの X、Y、Z 入力に接続します。
@@ -108,11 +108,11 @@ Dynamo を起動し、下図に示す一連のノードを作成します。次�
 
 ここで、Dynamo の Python Script ノードを確認します。下の完全なコードを見つけます。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise02-05.jpg)
 
 > 1. **System Array:** Revit の入力には、Python リストではなく **System.Array** が必要です。これは 1 行のコードに過ぎませんが、引数のタイプに注意すると、Revit での Python プログラミングが容易になります。
 
-```
+``` py
 import sys
 import clr
 
@@ -136,7 +136,7 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 ここまでの手順では、Dynamo で Python を使用して、線分で接続された 2 つの参照点を作成しました。次の演習で、さらに操作を進めてみましょう。
 
-![](<../images/8-3/2/python & revit - exercise 02 - 06.jpg>)
+![](../images/8-3/2/python&revit-exercise02-06.jpg)
 
 ## 演習 3
 
@@ -148,13 +148,13 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 この演習では、簡単な操作を実行することにより、Revit と Dynamo 間で相互にデータやジオメトリを接続する場合の要点について説明します。最初に Revit-StructuralFraming.rvt を開き、次に Dynamo を起動して、Revit-StructuralFraming.dyn ファイルを開きます。
 
-![](<../../.gitbook/assets/python & revit - exercise 03 - 01.jpg>)
+![](../../.gitbook/assets/python&revit-exercise03-01.jpg)
 
 この Revit ファイルは、基本的なファイルです。レベル 1 とレベル 2 にそれぞれ 1 本ずつ、2 本の異なる参照曲線が描画されています。これらの曲線を Dynamo に読み込み、ライブ リンクを作成します。
 
 このファイルでは、Python Script ノードの 5 つの入力に一連のノードが接続されています。
 
-![](<../images/8-3/2/python & revit - exercise 03 - 02.jpg>)
+![](../images/8-3/2/python&revit-exercise03-02.jpg)
 
 > 1. 各 **Select Model Element** ノードの[選択]ボタンをクリックし、Revit 内の対応する曲線を選択します。
 > 2. **Code Block** ノードで「`0..1..#x;`」_という構文を使用して、_ 0 ～ 20 までの範囲を持つ Integer Slider ノードを _x_ 入力に接続します。この操作により、2 本の曲線の間に作成する梁の数を指定します。
@@ -163,9 +163,9 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 この Python コードは、これまでのコードよりも行数が多くなっていますが、コード行の前後のコメントを参照すると、プロセス内の処理内容を確認できます。
 
-![](<../images/8-3/2/python & revit - exercise 03 - 03.jpg>)
+![](../images/8-3/2/python&revit-exercise03-03.jpg)
 
-```
+``` py
 import clr
 #import Dynamo Geometry
 clr.AddReference('ProtoGeometry')
@@ -204,7 +204,7 @@ Revit で、2 つの曲線にわたる梁の配列が構造要素として作成
 
 Dynamo でも、結果を確認できます。**Watch3D** ノードの梁は、Revit 要素からクエリーされたジオメトリを参照します。
 
-![](<../images/8-3/2/python & revit - exercise 03 - 05.jpg>)
+![](../images/8-3/2/python&revit-exercise03-05.jpg)
 
 このセクションでは、Revit 環境から Dynamo 環境にデータを変換する一連のプロセスを作成しました。このプロセスをまとめると、次のようになります。
 
@@ -219,4 +219,4 @@ Dynamo でも、結果を確認できます。**Watch3D** ノードの梁は、R
 
 Revit で参照曲線を更新すると、梁の新しい配列が作成されます。
 
-![](<../images/8-3/2/python & revit - ex 03 - 06.gif>)
+![](../images/8-3/2/python&revit-ex03-06.gif)

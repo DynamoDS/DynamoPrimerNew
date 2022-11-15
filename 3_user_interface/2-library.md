@@ -2,7 +2,7 @@
 
 ライブラリには、付属の 10 の既定カテゴリ ノード、追加でロードされるカスタム ノードやパッケージなど、ロードされたすべてのノードが格納されます。ライブラリ内のノードは、ライブラリ、カテゴリ、サブカテゴリ(該当する場合)内で階層で整理されます。
 
-![](<images/3-2/library - library UI.jpg>)
+![](images/3-2/library-libraryUI.jpg)
 
 * 基本ノード: 既定のインストールに付属します。
 * カスタム ノード: 頻繁に使用するルーチンまたは特殊なグラフをカスタム ノードとして格納します。また、カスタム ノードをコミュニティに共有することもできます。
@@ -16,11 +16,9 @@
 
 メニューをクリックしてライブラリを参照し、各カテゴリとそのサブカテゴリを展開します。
 
-{% hint style="info" %}
-[Geometry]には最も多くのノードが含まれているため、ノードを探す場合は最初にこれらのカテゴリを使用することをお勧めします。
-{% endhint %}
+{% hint style="info" %}[Geometry]には最も多くのノードが含まれているため、ノードを探す場合は最初にこれらのカテゴリを使用することをお勧めします。{% endhint %}
 
-![](<images/3-2/library  - modified and resize library categories.jpg>)
+![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
 > 1. ライブラリ
 > 2. カテゴリ
@@ -29,13 +27,13 @@
 
 これらにより、**Create** データ、**Action** の実行、または **Query** データのいずれかのノードに基づいて、同じサブカテゴリ内のノードがさらに分類されます。
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: 最初からジオメトリを作成または構築します。円など。
-* ![](<images/3-2/user interface - action.jpg>) **Action**: オブジェクトに対してアクションを実行します。たとえば、円をスケーリングします。
-* ![](<images/3-2/user interface - query.jpg>) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
+* ![](images/3-2/userinterface-create.jpg) **Create**: ジオメトリを最初から作成または構築します。円など。
+* ![](images/3-2/userinterface-action.jpg) **Action**: オブジェクトに対してアクションを実行します。たとえば、円をスケーリングします。
+* ![](images/3-2/userinterface-query.jpg) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
 
 ノードの名前とアイコン以外の詳細情報を表示するには、ノードにマウスを合わせます。これにより、そのノードの機能、必要な入力、生成される出力について、すばやく確認することができます。
 
-![](<images/3-2/user interface - node description.jpg>)
+![](images/3-2/userinterface-nodedescription.jpg)
 
 > 1. ノードに関する簡単な説明
 > 2. [ライブラリ]メニューの大きなアイコン
@@ -48,11 +46,11 @@
 
 追加するノードをクリックして選択するか、Enter キーを押してハイライト表示されたノードをワークスペースの中心に追加します。
 
-![](<images/3-2/user interface - search.jpg>)
+![](images/3-2/userinterface-search.jpg)
 
 #### 階層ごとの検索
 
-キーワードを使用してノードを検索するだけでなく、検索フィールドまたは Code Block (_Dynamo テキスト言語_ を使用)でピリオドで区切って階層を入力することもできます。
+キーワードを使用してノードを検索するだけでなく、検索フィールドまたは Code Block (_Dynamo テキスト言語_を使用)でピリオドで区切って階層を入力することもできます。
 
 各ライブラリの階層は、ワークスペースに追加されたノードの名前に反映されます。
 
@@ -60,15 +58,15 @@
 
 * `library.category.nodeName`
 
-![](<images/3-2/library - search by hierarchy geometry point by coordinates (1).jpg>)
+\![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
 
 * `category.nodeName`
 
-![](<images/3-2/library - search by hierarchy 2 point by coordinates.jpg>)
+![](images/3-2/library-searchbyhierarchy2pointbycoordinates.jpg)
 
 * `nodeName`または`keyword`
 
-![](<images/3-2/library - search by hierarchy 3 by coordinates.jpg>)
+![](images/3-2/library-searchbyhierarchy3bycoordinates.jpg)
 
 通常、ワークスペース内のノードの名前は `category.nodeName` という形式で表示されますが、いくつかの例外があります。特に注意が必要な例外は、Input カテゴリと View カテゴリです。
 
@@ -76,59 +74,58 @@
 
 * ほとんどのライブラリのノードには、カテゴリ形式が含まれています。
 
-![](<images/3-2/library - node category differences 1.jpg>)
+![](images/3-2/library-nodecategorydifferences1.jpg)
 
 * `Point.ByCoordinates` ノードと `UV.ByCoordinates` ノードは、名前は同じですがカテゴリが異なっています。
 
-![](<images/3-2/library - node category differences 2.jpg>)
+![](images/3-2/library-nodecategorydifferences2.jpg)
 
 * 注意する例外としては、Built-in Functions、Core.Input、Core.View、Operators などがあります。
 
-![](<images/3-2/library - node category differences 3.jpg>)
+![](images/3-2/library-nodecategorydifferences3.jpg)
 
 ### 頻繁に使用されるノード
 
 Dynamo の既定のインストールには、数百個のノードが付属しています。では、ビジュアル プログラムを作成するために必要なノードはどれでしょうか。ここでは、プログラムのパラメータを定義するノード(**Input**)に注目し、ノードのアクション(**Watch**)の結果を確認して、ショートカット(**Code Block**)を使用して入力や機能を定義してみましょう。
 
-#### 入力ノード
+#### Input ノード
 
 Input ノードは、ビジュアル プログラムのユーザが重要なパラメータを使用する場合の主要な手段です。Core ライブラリから以下のものを利用できます。
 
-| ノード |                                                | ノード |                                                |
-| -------------- | ---------------------------------------------- | -------------- | ---------------------------------------------- |
-| Boolean | ![](<images/3-2/library - boolean.jpg>) | Number | ![](<images/3-2/library - number.jpg>) |
-| String ノード | ![](<images/3-2/library - string.jpg>) | Number Slider | ![](<images/3-2/library - number slider.jpg>) |
-| Directory Path | ![](<images/3-2/library - directory path.jpg>) | Integer Slider | ![](<images/3-2/library - integer slider.jpg>) |
-| File Path | ![](<images/3-2/library - file path.jpg>) |                |                                                |
+| ノード           |                                           | ノード           |                                           |
+| -------------- | ----------------------------------------- | -------------- | ----------------------------------------- |
+| Boolean        | ![](images/3-2/library-boolean.jpg)       | 数         | ![](images/3-2/library-number.jpg)        |
+| String         | ![](images/3-2/library-string.jpg)        | Number Slider  | ![](images/3-2/library-numberslider.jpg)  |
+| Directory Path | ![](images/3-2/library-directorypath.jpg) | Integer Slider | ![](images/3-2/library-integerslider.jpg) |
+| File Path      | ![](images/3-2/library-filepath.jpg)      |                |                                           |
 
 #### Watch と Watch3D
 
 Watch ノードは、ビジュアル プログラムを経由してやり取りされるデータを管理するために必要なノードです。ノードの上にマウス カーソルを合わせると、**ノード データのプレビュー**でノードの結果を表示できます。
 
-![](<images/3-2/library - node preview.jpg>)
+![](images/3-2/library-nodepreview.jpg)
 
 **Watch** ノードで表示したままにしておくと便利です。
 
-![](<images/3-2/library - watch node.jpg>)
+![](images/3-2/library-watchnode.jpg)
 
 または、**Watch3D** ノードを使用してジオメトリの結果を確認します。
 
-![](<images/3-2/library - watch3d node.gif>)
+![](images/3-2/library-watch3dnode.gif)
 
 これらのノードは、どちらも Core ライブラリの View カテゴリに含まれています。
 
-{% hint style="info" %}
-ヒント: ビジュアル プログラムに多数のノードが含まれている場合、3D プレビューの表示が見にくくなることがあります。その場合は、[設定]メニューの[背景 3D プレビューの表示]オプションを選択解除し、Watch3D ノードを使用してジオメトリをプレビューすることをお勧めします。{% endhint %}
+{% hint style="info" %}ヒント: ビジュアル プログラムに多数のノードが含まれている場合、3D プレビューの表示が見にくくなることがあります。その場合は、[設定]メニューの[背景 3D プレビューの表示]オプションを選択解除し、Watch3D ノードを使用してジオメトリをプレビューすることをお勧めします。{% endhint %}
 
 #### Code Block
 
-Code Block ノードでセミコロン区切りの行を使用して、Code Block を定義することができます。 これは、`X/Y` のように単純な場合もあります。
+Code Block ノードでセミコロン区切りの行を使用して、Code Block を定義することができます。これは、`X/Y` のように単純な場合もあります。
 
 また、Code Block ノードをショートカットとして使用して Number Input ノードを定義したり、別のノードの機能を呼び出すこともできます。構文は、Dynamo テキスト言語である [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md) の命名規則に従って作成されます。
 
 次に、スクリプトで Code Block を使用するための簡単なデモンストレーションを示します(手順を含む)。
 
-![](<images/3-2/library - code block demo.gif>)
+![](images/3-2/library-codeblockdemo.gif)
 
 1. ダブルクリックして Code Block ノードを作成します。
 2. `Circle.ByCenterPointRadius(x,y);` と入力します。

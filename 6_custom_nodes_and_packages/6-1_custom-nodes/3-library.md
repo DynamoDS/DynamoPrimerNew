@@ -2,11 +2,9 @@
 
 ここまでの手順で、カスタム ノードを作成して Dynamo グラフ内の特定のプロセスに適用しました。このセクションでは、このノードを他の Dynamo グラフでも参照できるように、このノードをライブラリに保存します。これを実行するには、目的のノードをローカルにパブリッシュします。これは、パッケージをパブリッシュする場合と同様の手順です。パッケージのパブリッシュについては、次の章で詳しく説明します。
 
-ノードをローカルにパブリッシュすると、新しいセッションを開いたときに、Dynamo ライブラリからそのノードにアクセスできるようになります。ノードをパブリッシュせずに Dynamo グラフからカスタム ノードを参照する場合、グラフのフォルダ内に、そのカスタム ノードを含めておく必要があります。または、_[File] > [Import Library]_ を使用してカスタム ノードを Dynamo に読み込む必要があります。
+ノードをローカルにパブリッシュすると、新しいセッションを開いたときに、Dynamo ライブラリからそのノードにアクセスできるようになります。ノードをパブリッシュせずに Dynamo グラフからカスタム ノードを参照する場合、グラフのフォルダ内に、そのカスタム ノードを含めておく必要があります。または、_[File] > [Import Library]_を使用してカスタム ノードを Dynamo に読み込む必要があります。
 
-{% hint style="warning" %}
-カスタム ノードのパブリッシュは、Dynamo for Revit および Dynamo for Civil 3D でのみ有効です。Dynamo Sandbox には、パブリッシュ機能は用意されていません。
-{% endhint %}
+{% hint style="warning" %}カスタム ノードのパブリッシュは、Dynamo for Revit および Dynamo for Civil 3D でのみ有効です。Dynamo Sandbox には、パブリッシュ機能は用意されていません。{% endhint %}
 
 ## 演習: カスタム ノードをローカルにパブリッシュする
 
@@ -18,40 +16,40 @@
 
 前のセクションで作成したカスタム ノードを使用して、次の手順に進みましょう。PointsToSurface カスタム ノードを開くと、Dynamo のカスタム ノード エディタにグラフが表示されます。または、Dynamo グラフ エディタ内でカスタム ノードをダブルクリックしてカスタム ノードを開くこともできます。
 
-![](<../images/6-1/3/publish custom node locally 01.jpg>)
+![](../images/6-1/3/publishcustomnodelocally01.jpg)
 
 カスタム ノードをローカルにパブリッシュするには、キャンバス上で右クリックして、[_このカスタム ノードをパブリッシュ..._]を選択します。
 
-![](<../images/6-1/3/publish custom node exercise - 02.jpg>)
+![](../images/6-1/3/publishcustomnodeexercise-02.jpg)
 
-上図のように、関連情報を入力して[_ローカルにパブリッシュ_]を選択します。 [グループ]フィールドで、Dynamo メニューからアクセスできる主要な要素を定義します。
+上図のように、関連情報を入力して[_ローカルにパブリッシュ_]を選択します。[グループ]フィールドで、Dynamo メニューからアクセスできる主要な要素を定義します。
 
-![](<../images/6-1/3/publish custom node exercise - 03.jpg>)
+![](../images/6-1/3/publishcustomnodeexercise-03.jpg)
 
 ローカルにパブリッシュするすべてのカスタム ノードを格納するフォルダを 1 つ選択します。Dynamo を読み込むたびにこのフォルダが確認されるため、このフォルダの場所は変更しないでください。このフォルダにナビゲートし、[_フォルダを選択_]を選択します。これで、Dynamo ノードがローカルにパブリッシュされ、プログラムを読み込むたびに、このフォルダが Dynamo ツールバーに表示されるようになります。
 
-![](<../images/6-1/3/publish custom node exercise - 04.jpg>)
+![](../images/6-1/3/publishcustomnodeexercise-04.jpg)
 
-カスタム ノードのフォルダの場所を確認するには、_[Dynamo] > [基本設定] > [Package Manager] > [ノードとパッケージのパス]_ に移動します。
+カスタム ノードのフォルダの場所を確認するには、_[Dynamo] > [基本設定] > [Package Manager] > [ノードとパッケージのパス]_に移動します。
 
-![](<../images/6-1/3/publish custom node exercise - 05.jpg>)
+![](../images/6-1/3/publishcustomnodeexercise-05.jpg)
 
 このウィンドウには、パスのリストが表示されます。
 
-![](<../images/6-1/3/publish custom node exercise - 06.jpg>)
+![](../images/6-1/3/publishcustomnodeexercise-06.jpg)
 
-> 1. _Documents\DynamoCustomNodes..._ は、ローカルにパブリッシュされたカスタム ノードの場所を参照します。
-> 2. _AppData\Roaming\Dynamo..._ は、オンラインでインストールされる Dynamo パッケージの既定の場所を示しています。
+> 1. _Documents\\DynamoCustomNodes..._ は、ローカルにパブリッシュされたカスタム ノードの場所を参照します。
+> 2. _AppData\\Roaming\\Dynamo..._ は、オンラインでインストールされる Dynamo パッケージの既定の場所を示しています。
 > 3. 上図のリスト内で、ローカル フォルダのパスを下に移動するには、フォルダ パスを選択して、パス名の左に表示されている下向き矢印をクリックします。一番上に表示されているフォルダが、パッケージがインストールされる既定のパスになります。そのため、Dynamo パッケージの既定のインストール パスを既定のフォルダのままにすると、オンライン パッケージをローカルにパブリッシュしたノードと区別することができます。
 
 Dynamo の既定のパスをパッケージのインストール場所に設定するため、パス名の順序を変更しました。
 
-![](<../images/6-1/3/publish custom node exercise - 07.jpg>)
+![](../images/6-1/3/publishcustomnodeexercise-07.jpg)
 
-このローカル フォルダにナビゲートすると、Dynamo のカスタム ノード ファイルの拡張である元のカスタム ノードが _.dyf_ フォルダに表示されます。 このフォルダ内のファイルを編集すると、UI 上でノードが更新されます。また、メインの _DynamoCustomNode_ フォルダにノードを追加すると、Dynamo の再起動時に、それらのノードがライブラリに追加されます。
+このローカル フォルダにナビゲートすると、Dynamo のカスタム ノード ファイルの拡張である元のカスタム ノードが _.dyf_ フォルダに表示されます。このフォルダ内のファイルを編集すると、UI 上でノードが更新されます。また、メインの _DynamoCustomNode_ フォルダにノードを追加すると、Dynamo の再起動時に、それらのノードがライブラリに追加されます。
 
-![](<../images/6-1/3/publish custom node exercise - 08.jpg>)
+![](../images/6-1/3/publishcustomnodeexercise-08.jpg)
 
 これで、Dynamo を読み込むたびに、PointsToSurface ノードが Dynamo ライブラリの[DynamoPrimer]グループに表示されるようになります。
 
-![](<../images/6-1/3/publish custom node exercise - 09.jpg>)
+![](../images/6-1/3/publishcustomnodeexercise-09.jpg)

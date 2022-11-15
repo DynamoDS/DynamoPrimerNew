@@ -10,7 +10,7 @@
 
 上記のサンプル ノードは、すべて文字列用のノードです。数値は文字と同様に、文字列として表すことも、テキスト配列全体として表すこともできます。
 
-![](<../images/5-3/4/strings - creating strings.jpg>)
+![](../images/5-3/4/strings-creatingstrings.jpg)
 
 ## 演習
 
@@ -26,11 +26,11 @@
 
 次の図は、外部のスプレッドシートから取得したデータの文字列を示しています。この文字列は、XY 面上の長方形の頂点を表しています。簡単な演習として、文字列の分割操作を確認してみましょう。
 
-![](<../images/5-3/4/strings - querying strings 01.jpg>)
+![](../images/5-3/4/strings-queryingstrings01.jpg)
 
 > 1. 「;」セパレータは、長方形の各頂点を分割します。これにより、各頂点の 3 つの項目が含まれているリストが作成されます。
 
-![](<../images/5-3/4/strings - querying strings 02.jpg>)
+![](../images/5-3/4/strings-queryingstrings02.jpg)
 
 > 1. String.Split ノードの中央にある[_+_]をクリックして、新しいセパレータを作成します。
 > 2. 「_,_」という文字をキャンバスに追加し、separator1 入力に接続します。
@@ -38,13 +38,13 @@
 
 上記のリストの項目は数値に見えますが、Dynamo 内では個別の文字列として認識されます。点群を作成するには、データ タイプを文字列から数値に変換する必要があります。これを行うには **String.ToNumber** ノードを使用します。
 
-![](<../images/5-3/4/strings - querying strings 03.jpg>)
+![](../images/5-3/4/strings-queryingstrings03.jpg)
 
-> 1. String.ToNumber ノードは、単純なノードです。**String.Split** ノードの出力を String.ToNumber ノードの入力に接続します。出力の表示は変わりませんが、データ タイプは _文字列_ から_数値_に変換されています。
+> 1. String.ToNumber ノードは、単純なノードです。**String.Split** ノードの出力を String.ToNumber ノードの入力に接続します。出力の表示は変わりませんが、データ タイプは_文字列_から_数値_に変換されています。
 
 いくつかの基本的な操作を実行すると、元の文字列の入力に基づいて基準点に三角形が描画されます。
 
-![](<../images/5-3/4/strings - querying strings 04.jpg>)
+![](../images/5-3/4/strings-queryingstrings04.jpg)
 
 ### 文字列を操作する
 
@@ -54,7 +54,7 @@
 
 以下は、3 つの文字列を連結する方法を示しています。
 
-![Concatenate](<../images/5-3/4/strings - manipulating strings 01.jpg>)
+![連結](../images/5-3/4/strings-manipulatingstrings01.jpg)
 
 > 1. String.Concat ノード中央の[+]/[-]ボタンをクリックして、連結する文字列の追加と除外を行います。
 > 2. 出力として、スペースと句読点を含む 1 つの連結された文字列が生成されます。
@@ -65,46 +65,46 @@ Excel を使用したことがあれば、CSV ファイルについても知っ�
 
 次の図は、2 つの文字列を結合する方法を示しています。
 
-![](<../images/5-3/4/strings - manipulating strings 02.jpg>)
+![](../images/5-3/4/strings-manipulatingstrings02.jpg)
 
 > 1. separator 入力を使用して、結合された文字列の区切り文字を指定することができます。
 
-### 文字列を操作する
+### 文字列を使用する
 
-この演習では、文字列のクエリーと文字列の操作を実行して、Robert Frost の [Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621) という詩の最後の節を分解してみましょう。実際の開発作業で詩の文字列を操作することはありませんが、文字列に対する操作を理解するのに役立ちます。
+この演習では、文字列のクエリーと文字列の操作を実行して、Robert Frost の「[Stopping By Woods on a Snowy Evening](http://www.poetryfoundation.org/poem/171621)」という詩の最後の節を分解してみましょう。実際の開発作業で詩の文字列を操作することはありませんが、文字列に対する操作を理解するのに役立ちます。
 
 最初に、節の文字列を分解する基本的な操作を実行します。文字はカンマに基づいて書式設定されていることがわかります。この書式を使用して、各行を個々の項目に分割します。
 
-![](<../images/5-3/4/strings - working with strings 01.jpg>)
+![](../images/5-3/4/strings-workingwithstrings01.jpg)
 
 > 1. ベースとなる文字列を **String** ノードに貼り付けます。
 > 2. 別の **String** ノードを使用して、セパレータを指定します。ここでは、カンマをセパレータとして使用します。
 > 3. **String.Split** ノードをキャンバスに追加し、2 つの String ノードに接続します。
 > 4. 出力として、各行が個別の要素に分割されます。
 
-次に、詩のサビとなる最後の 2 行を処理しましょう。元の節は 1 つのデータ項目でした。最初の手順で、このデータを個別の項目に分割しました。そのため、必要な文字列を検索する必要があります。この例では、リストの最後にある 2 つの項目を選択することは難しくありませんが__、書籍全体が処理対象になるような場合、内容をすべて読んでから各要素を手作業で区別するのは大変な作業になります。
+次に、詩のサビとなる最後の 2 行を処理しましょう。元の節は 1 つのデータ項目でした。最初の手順で、このデータを個別の項目に分割しました。そのため、必要な文字列を検索する必要があります。この例では、リストの最後にある 2 つの項目を選択することは難しくありません__が、書籍全体が処理対象になるような場合、内容をすべて読んでから各要素を手作業で区別するのは大変な作業になります。
 
-![](<../images/5-3/4/strings - working with strings 02.jpg>)
+![](../images/5-3/4/strings-workingwithstrings02.jpg)
 
 > 1. **String.Contains** ノードを使用して文字セットを検索すれば、こうした手作業を行う必要はありません。これは、文書ファイルで「検索」コマンドを実行するのと似ています。この場合、対象のサブストリングが項目内で見つかったかどうかに応じて、「true」または「false」が返されます。
 > 2. String.Contains ノードの _searchFor_ 入力で、節内で検索するサブストリングを定義します。ここでは、**String** ノードで「And miles」と指定します。
 > 3. 出力として、false と true のリストが表示されます。次の手順では、このブール値ロジックを使用して各要素をフィルタします。
 
-![Split](<../images/5-3/4/strings - working with strings 03.jpg>)
+![分割](../images/5-3/4/strings-workingwithstrings03.jpg)
 
 > 1. **List.FilterByBoolMask** ノードを使用して false と true を抽出します。in 出力は、mask 入力が true になっているステートメントを返し、out 出力は、mask 入力が false になっているステートメントを返します。
 > 2. in 出力により、節の最後の 2 行が返されます。この 2 行には、「And miles」という文字列が含まれています。
 
 次に、最後の 2 行を結合して節の繰り返しを強調します。前の手順の出力を確認すると、リスト内に 2 つの項目が含まれていることがわかります。
 
-![](<../images/5-3/4/strings - working with strings 04.jpg>)
+![](../images/5-3/4/strings-workingwithstrings04.jpg)
 
 > 1. 2 つの **List.GetItemAtIndex** ノードを使用し、0 と 1 を index 入力の値として指定することにより、2 つの項目を分離することができます。
 > 2. 各ノードの出力として、最後の 2 行が順に表示されます。
 
 これらの 2 つの項目を 1 つに結合するには、**String.Join** ノードを使用します。
 
-![Split String](<../images/5-3/4/strings - working with strings 05.jpg>)
+![文字列の分割](../images/5-3/4/strings-workingwithstrings05.jpg)
 
 > 1. **String.Join** ノードを追加したら、セパレータを指定する必要があります。
 > 2. セパレータを指定するには、キャンバスに **String** ノードを追加してカンマを入力します。

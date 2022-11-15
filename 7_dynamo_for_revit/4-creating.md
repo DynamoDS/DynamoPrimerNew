@@ -2,7 +2,7 @@
 
 Dynamo では、完全なパラメトリック コントロールを使用して Revit 要素の配列を作成できます。Dynamo の Revit ノードは、一般的なジオメトリから特定のカテゴリ タイプ(壁、床など)まで、さまざまな要素を読み込む機能を提供します。このセクションでは、パラメータを使用してアダプティブ コンポーネントを含む柔軟性が高い要素を読み込みます。
 
-![](<images/4/creating - dynamo nodes.jpg>)
+![](images/4/creating-dynamonodes.jpg)
 
 ### アダプティブ コンポーネント
 
@@ -10,7 +10,7 @@ Dynamo では、完全なパラメトリック コントロールを使用して
 
 以下は、ファミリ エディタ上で 3 つのアダプティブ点により構成されているアダプティブ コンポーネントです。これにより生成されるトラスは、各アダプティブ点の位置によって設定されます。次の演習では、このコンポーネントを使用して、ファサード全体に一連のトラスを生成します。
 
-![](../.gitbook/assets/ac.jpg)
+![](images/4/ac.jpg)
 
 ### 相互運用性の原則
 
@@ -24,7 +24,7 @@ Dynamo では、完全なパラメトリック コントロールを使用して
 
 [最初の演習](8-4\_creating.md#exercise)では、Revit 要素を作成するためのデータを Dynamo が参照する仕組みについて学習します。複数のアダプティブ コンポーネントを生成するには、リストのリストを設定します。各リストには、アダプティブ コンポーネントの各点を表す 3 つの点が含まれています。Dynamo でデータ構造を管理する際は、このことを考慮します。
 
-![](<images/4/creating - multiple elements and lists 01.jpg>)
+![](images/4/creating-multipleelementsandlists01.jpg)
 
 ### DirectShape の要素
 
@@ -42,14 +42,14 @@ Dynamo のパラメトリック ジオメトリを Revit に読み込む別の�
 
 このセクションでサンプル ファイルの使用を開始した場合(または、前のセッションの Revit ファイルを継続して使用した場合)は、同じ Revit のマスが表示されます。
 
-![](<images/4/creating - exercise 01.jpg>)
+![](images/4/creating-exercise01.jpg)
 
 > 1. これはファイルを開いた状態です。
 > 2. これは、Dynamo で作成したトラス システムです。高度な方法で Revit のマスにリンクされています。
 
 これまで _Select Model Element_ ノードと _Select Face_ ノードを使用しました。ここでは、ジオメトリ階層の 1 段階下の層で _Select Edge_ ノードを使用します。Dynamo ソルバを _自動_ で実行するように設定すると、グラフは Revit ファイルの変更に応じて継続的に更新されます。選択したエッジは Revit 要素トポロジに動的に関連付けられます。トポロジ* が変更されない限り、Revit と Dynamo 間の接続はリンクされ続けます。
 
-![](<images/4/creating - exercise 02.jpg>)
+![](images/4/creating-exercise02.jpg)
 
 > 1. グレージング ファサードの最上部の曲線を選択します。これは建物の全体の長さに及びます。Revit でエッジを選択するには、エッジにカーソルを置いて、目的のエッジがハイライト表示されるまで _[Tab]_ を押し続けます。
 > 2. 2 つの _Select Edge_ ノードを使用して、ファサード中央の傾斜を示す各エッジを選択します。
@@ -60,7 +60,7 @@ Dynamo のパラメトリック ジオメトリを Revit に読み込む別の�
 
 まず曲線を結合して 1 つのリストに統合する必要があります。これにより、曲線を「_グループ化_」して、ジオメトリ操作を実行できます。
 
-![](<images/4/creating - exercise 03.jpg>)
+![](images/4/creating-exercise03.jpg)
 
 > 1. ファサードの中央にある 2 つの曲線のリストを作成します。
 > 2. _List.Create_ コンポーネントを _Polycurve.ByJoinedCurves_ ノードに接続して、2 つの曲線を 1 つのポリカーブに結合します。
@@ -70,7 +70,7 @@ Dynamo のパラメトリック ジオメトリを Revit に読み込む別の�
 
 直線になっている最上部の線を使用して、ファサードのスパン全体を表します。この線に沿って平面を作成し、リストでグループ化した曲線のセットと交差させます。
 
-![](<images/4/creating - exercise 04.jpg>)
+![](images/4/creating-exercise04.jpg)
 
 > 1. _Code Block_ ノードで、構文 `0..1..#numberOfTrusses;` を使用して範囲を設定します。
 > 2. Integer Slider ノードを Code Block ノードの入力に接続します。お分かりのとおり、これはトラスの数を表します。スライダは項目の数を 0 から _1_ の範囲でコントロールします。
@@ -78,13 +78,13 @@ Dynamo のパラメトリック ジオメトリを Revit に読み込む別の�
 
 平面はジオメトリの抽象的なピースであり、無限の 2 次元空間を表します。平面は輪郭や交差の作成に適しています。実際に行ってみましょう。
 
-![](<images/4/creating - exercise 05.jpg>)
+![](images/4/creating-exercise05.jpg)
 
 > 1. _Geometry.Intersect_ ノード(レーシングのオプションを直積に設定)を使用して、_Curve.PlaneAtParameter_ を _Geometry.Intersect_ ノードの _entity_ 入力に接続します。メインの _List.Create_ ノードを _geometry_ 入力に接続します。Dynamo のビューポートには、設定した平面と各曲線の交点が表示されます。
 
 出力にはリストのリストのリストが表示されます。操作目的に対してリストの数が多すぎます。リストの一部をフラットにしましょう。リストの 1 段階下の層で結果をフラットにします。これを行うには、Dynamo Primer のリストに関する章で説明したように、_List.Map_ 操作を使用します。
 
-![](<images/4/creating - exercise 06.jpg>)
+![](images/4/creating-exercise06.jpg)
 
 > 1. _Geometry.Intersect_ ノードを _List.Map_ の list 入力に接続します。
 > 2. _Flatten_ ノードを _List.Map_ ノードの f(x) 入力に接続します。この結果、リストは 3 個になり、各リストにはトラスと同じ数の項目が含まれます。
@@ -94,7 +94,7 @@ Dynamo のパラメトリック ジオメトリを Revit に読み込む別の�
 
 ポリゴンを作成するのと同じ方法で、アダプティブ コンポーネントを配列します。
 
-![](<images/4/creating - exercise 07.jpg>)
+![](images/4/creating-exercise07.jpg)
 
 > 1. _AdaptiveComponent.ByPoints_ ノードをキャンバスに追加し、_List.Transpose_ ノードを _points_ 入力に接続します。
 > 2. _Family Types_ ノードを使用して、_AdaptiveTruss_ ファミリを選択し、これを _AdaptiveComponent.ByPoints_ ノードの _FamilyType_ 入力に接続します。
@@ -103,11 +103,11 @@ Revit では、10 個のトラスがファサード全体にわたって均等�
 
 グラフを柔軟に調整することができます。Integer Slider ノードを変更して numberOfTrusses を「30」にします。トラスの数が尋常でなく増えますが、パラメトリック リンクは機能しています。確認したら、numberOfTrusses を 15 に設定します。
 
-![](<images/4/creating - exercise 08.gif>)
+![](images/4/creating-exercise08.gif)
 
 最後の確認として、Revit でマスを選択してインスタンス パラメータを編集することにより建物の形状を変更して、トラスがこれに従って変更されるかを確認します。この更新を確認するには、この Dynamo グラフを開いておく必要があります。閉じた場合、リンクはすぐに切断されます。
 
-![](<images/4/creating - exercise 09.jpg>)
+![](images/4/creating-exercise09.jpg)
 
 ## 演習: DirectShape の要素
 
@@ -119,34 +119,34 @@ Revit では、10 個のトラスがファサード全体にわたって均等�
 
 このレッスンのサンプル ファイル ARCH-DirectShape-BaseFile.rvt を開きます。
 
-![](<images/4/creating - exercise II - 01.jpg>)
+![](images/4/creating-exerciseII-01.jpg)
 
 > 1. 3D ビューには、前の演習で使用した建物のマスが表示されます。
 > 2. アトリウムのエッジに沿って見えるのは 1 つの参照曲線です。これは Dynamo で参照する曲線として使用します。
 > 3. アトリウムの反対側のエッジに見えるのは別の参照曲線です。これも Dynamo で参照します。
 
-![](<images/4/creating - exercise II - 02.jpg>)
+![](images/4/creating-exerciseII-02.jpg)
 
 > 1. Dynamo でジオメトリを参照するには、Revit の各要素に対して _Select Model Element_ ノードを使用します。Revit でマスを選択し、_Element.Faces_ ノードを使用して Dynamo にジオメトリを読み込みます。これで、マスが Dynamo プレビューに表示されるようになります。
 > 2. _Select Model Element_ ノードと _CurveElement.Curve_ ノードを使用して、一方の参照曲線を Dynamo に読み込みます。
 > 3. _Select Model Element_ ノードと _CurveElement.Curve_ ノードを使用して、もう一方の参照曲線を Dynamo に読み込みます。
 
-![](<images/4/creating - exercise II - 03.jpg>)
+![](images/4/creating-exerciseII-03.jpg)
 
 > 1. 縮小して画面をサンプル グラフの右に移動すると、大きなノードのグループが見えます。これらはジオメトリを操作し、Dynamo プレビューで表示される格子状の屋根構造を生成します。これらのノードは、Dynamo Primer の [コード ブロックに関するセクション](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node) で説明されている[ _ノードをコード化_ ]機能を使用して生成されます。
 > 2. この構造は、Diagonal Shift、Camber、Radius という 3 つの主要なパラメータでコントロールされます。
 
 このグラフのパラメータをクローズアップします。これらを調整して、さまざまなジオメトリを出力できます。
 
-![](<images/4/creating - exercise II - 04.jpg>)
+![](images/4/creating-exerciseII-04.jpg)
 
-![](<images/4/creating - exercise II - 05.jpg>)
+![](images/4/creating-exerciseII-05.jpg)
 
-> 1. _DirectShape.ByGeometry_ ノードをキャンバス上にドロップすると、_geometry_**、** _category_**、** _material_、 _name_ という 4 つの入力が表示されます。
+> 1. _DirectShape.ByGeometry_ ノードをキャンバス上にドロップすると、_geometry_**、**_category_**、**_material_、_name_ という 4 つの入力が表示されます。
 > 2. ジオメトリは、グラフのジオメトリ作成部分から作成されるソリッドになります。
 > 3. category 入力は、ドロップダウン _Categories_ ノードを使用して選択されます。ここでは、[Structural Framing]を使用します。
 > 4. 上記のノードの配列から material 入力が選択されます。この場合は、より単純に「既定値」として設定できます。
 
 Dynamo を実行した後に Revit に戻ると、プロジェクト内の屋根に読み込まれたジオメトリが表示されます。これは生成モデルではなく構造フレーム要素です。Dynamo へのパラメトリック リンクは維持されます。
 
-![](<images/4/creating - exercise II - 06.jpg>)
+![](images/4/creating-exerciseII-06.jpg)

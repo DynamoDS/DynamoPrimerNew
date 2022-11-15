@@ -12,20 +12,20 @@ Dynamo では、面と頂点のデータ構造を使用してメッシュを定�
 
 メッシュを作成するには、頂点のリストと、それらの頂点をインデックス グループと呼ばれる面にグループ化するための仕組みが必要です。
 
-![](<../images/5-2/7/meshes - mesh elements.jpg>)
+![](../images/5-2/7/meshes-meshelements.jpg)
 
 > 1. 頂点のリスト
 > 2. 面を定義するためのインデックス グループのリスト
 
 ### Mesh Toolkit
 
-Dynamo のメッシュ機能は、[Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) パッケージをインストールして拡張することができます。Dynamo Mesh Toolkit は、外部ファイル形式からメッシュを読み込む機能、Dynamo のジオメトリ オブジェクトからメッシュを作成する機能、頂点とインデックスからメッシュを手動で作成する機能を提供するライブラリです。
+Dynamo のメッシュ機能は、[Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) パッケージをインストールすることによって拡張することができます。Dynamo Mesh Toolkit は、外部ファイル形式からメッシュを読み込む機能、Dynamo のジオメトリ オブジェクトからメッシュを作成する機能、頂点とインデックスからメッシュを手動で作成する機能を提供するライブラリです。
 
 このライブラリには、メッシュの変更や修復を行うためのツールや、製造処理で使用する水平方向のスライスを抽出するためのツールも用意されています。
 
 このパッケージの使用例については、「[Mesh Toolkit のケース スタディ](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)」を参照してください。
 
-![Mesh Toolkit](<../images/5-2/7/meshes - mesh toolkit standford bunny.jpg>)
+![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
 ## 詳細を説明します。
 
@@ -36,7 +36,7 @@ Dynamo のメッシュ機能は、[Mesh Toolkit](https://github.com/DynamoDS/Dyn
 ![メッシュの要素](../images/5-2/7/MeshElements2.jpg)
 
 > 1. メッシュの頂点
-> 2. メッシュの辺: \*隣接する面が 1 つだけの辺を「裸の辺」と呼びます。それ以外のすべての辺を、「おおわれた辺」と呼びます。
+> 2. メッシュの辺: 隣接する面が 1 つだけの辺を「裸の辺」と呼びます。 それ以外のすべての辺を、「おおわれた辺」と呼びます。
 > 3. メッシュの面
 
 ### 頂点と頂点法線
@@ -65,7 +65,7 @@ Dynamo のメッシュ機能は、[Mesh Toolkit](https://github.com/DynamoDS/Dyn
 
 前の章で、NURBS サーフェスは 2 つの方向に向かう一連の NURBS 曲線によって定義されるということを説明しました。これらの方向には、`U` と `V` というラベルが付けられます。これにより、2 次元サーフェスの範囲に応じて、NURBS サーフェスをパラメータ化することができます。曲線自体は、計算式としてコンピュータに格納されます。これにより、生成されるサーフェスを任意の精度で計算することができます。ただし、複数の NURBS サーフェスを結合するのは難しい場合があります。2 つの NURBS サーフェスを結合すると、ポリサーフェスが作成されます。ジオメトリの異なる部分には、異なる UV パラメータと曲線がそれぞれ定義されます。
 
-![制御点](../images/5-2/7/NURBSvsMESH-01.jpg)
+![コントロール ポイント](../images/5-2/7/NURBSvsMESH-01.jpg)
 
 > 1. サーフェス
 > 2. アイソパラメトリック(Isoparm)曲線

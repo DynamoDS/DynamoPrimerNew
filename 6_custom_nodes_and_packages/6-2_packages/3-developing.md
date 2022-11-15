@@ -4,7 +4,7 @@ Dynamo では、さまざまな方法でパッケージを作成することが�
 
 ## MapToSurface パッケージ
 
-ここでは、点群を特定のサーフェスから別のサーフェスに UV マッピングする演習で使用したサンプル パッケージを使用していきます。ツールの基本部分は、この手引の「[カスタム ノードを作成する](../10\_custom-nodes/10-2\_creating.md)」セクションで既に作成されています。 ここでは、UV マッピングの概念を理解する方法と、パブリッシュ可能なライブラリ用の一連のツールを開発する方法について確認します。
+ここでは、点群を特定のサーフェスから別のサーフェスに UV マッピングする演習で使用したサンプル パッケージを使用していきます。ツールの基本部分は、この手引の「[カスタム ノードを作成する](../10\_custom-nodes/10-2\_creating.md)」セクションで既に作成されています。ここでは、UV マッピングの概念を理解する方法と、パブリッシュ可能なライブラリ用の一連のツールを開発する方法について確認します。
 
 このイメージは、UV 座標を使用して 1 つの点を特定のサーフェスから別のサーフェスにマッピングする場合の例を示しています。パッケージ構成はこの考え方に基づいていますが、パッケージには、より複雑なジオメトリが含まれます。
 
@@ -14,13 +14,13 @@ Dynamo では、さまざまな方法でパッケージを作成することが�
 
 前の章では、Dynamo 内の XY 平面上に定義された複数の曲線に基づいてサーフェスをパネル化する方法について確認しました。このケース スタディでは、この考え方を広げて、より高次元のジオメトリを処理します。ここでは、この構築済みパッケージをインストールし、このパッケージがどのように開発されたかを確認していきます。次のセクションでは、このパッケージのパブリッシュ方法を確認します。
 
-Dynamo で、\_[パッケージ] > [パッケージを検索]をクリックして、「MapToSurface」(区切りなしの 1 語)でパッケージを検索します。[インストール]をクリックしてダウンロードを開始し、パッケージをライブラリに追加します。
+Dynamo で、_[パッケージ] > [パッケージを検索]をクリックして、「MapToSurface」(区切りなしの 1 語)でパッケージを検索します。[インストール]をクリックしてダウンロードを開始し、パッケージをライブラリに追加します。
 
-![](<../images/6-2/3/develop package - install package 01.jpg>)
+![](../images/6-2/3/developpackage-installpackage01.jpg)
 
 インストール後は、カスタム ノードを[アドオン] > [Dynamo Primer]セクションで使用できるようになります。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](../images/6-2/3/developpackage-installpackage02(1)(1).jpg)
 
 これでパッケージのインストールが完了しました。次に、パッケージの設定方法を確認しましょう。
 
@@ -30,37 +30,37 @@ Dynamo で、\_[パッケージ] > [パッケージを検索]をクリックし�
 
 上の図は、5 つのカスタム ノードによって構成される単純なパッケージを示しています。次の手順で、各カスタム ノードの設定について簡単に説明します。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![](../images/6-2/3/developpackage-customnodes01(1)(1).jpg)
 
 #### **PointsToSurface**
 
 これは基本的なカスタム ノードで、他のすべてのマッピング ノードのベースになるノードです。このノードは、ソース サーフェスの UV 座標の点を、ターゲット サーフェスの UV 座標にマッピングします。点は、複雑なジオメトリを構築するための最も基本的なジオメトリであるため、このロジックを使用して、2D ジオメトリだけでなく 3D ジオメトリについても、特定のサーフェスから別のサーフェスにマッピングすることができます。
 
-![](<../images/6-2/3/develop package -pointToSurface.jpg>)
+![](../images/6-2/3/developpackage-pointToSurface.jpg)
 
 #### **PolygonsToSurface**
 
 このノードを使用すると、1D ジオメトリのマッピングされた点群を 2D ジオメトリに拡張するロジックを、ポリゴンによって簡単に確認することができます。図のように、_PointsToSurface_ ノードがこのカスタム ノード内にネストされていることがわかります。この方法で各ポリゴンの点群をサーフェスにマッピングし、その点群からポリゴンを再生成することができます。適切なデータ構造(点群のリストのリスト)を維持することにより、ポリゴンを一連の点群に変更した場合でも、それらのポリゴンを個別に保持することができます。
 
-![](<../images/6-2/3/develop package -polygonsToSurface.jpg>)
+![](../images/6-2/3/developpackage-polygonsToSurface.jpg)
 
 #### **NurbsCrvtoSurface**
 
 このノードでは、_PolygonsToSurface_ ノードと同じロジックが適用されます。ただし、ここでは、ポリゴンの点群をマッピングするのではなく、NURB 曲線の制御点をマッピングします。
 
-![](<../images/6-2/3/develop package -nurbsCrvtoSurface.jpg>)
+![](../images/6-2/3/developpackage-nurbsCrvtoSurface.jpg)
 
 **OffsetPointsToSurface**
 
 このノードの構成はやや複雑ですが、その概念は単純です。_PointsToSurface_ ノードと同じように、このノードは特定のサーフェスから別のサーフェスに点群をマッピングします。ただし、OffsetPointsToSurface ノードは、元のソース サーフェス上には存在しない点群を識別し、その点から最も近い UV パラメータまでの距離を取得して、対応する UV 座標上のターゲット サーフェスの法線にマッピングします。これは、サンプル ファイルを見るとよくわかります。
 
-![](<../images/6-2/3/develop package -OffsetPointsToSurface.jpg>)
+![](../images/6-2/3/developpackage-OffsetPointsToSurface.jpg)
 
 #### **SampleSrf**
 
 このノードは、サンプル ファイル内のソース グリッドから波形のサーフェスにマッピングするためのパラメータ制御のサーフェスを作成する単純なノードです。
 
-![](<../images/6-2/3/develop package -sampleSrf.jpg>)
+![](../images/6-2/3/developpackage-sampleSrf.jpg)
 
 ### サンプル ファイル
 
@@ -68,7 +68,7 @@ Dynamo で、\_[パッケージ] > [パッケージを検索]をクリックし�
 
 [MapToSurface]の横にある縦ドットのメニュー > [ルート フォルダを表示]をクリックします
 
-![](<../images/6-2/3/develop package - example files 01.jpg>)
+![](../images/6-2/3/developpackage-examplefiles01.jpg)
 
 次に「_extra_」フォルダにナビゲートします。このフォルダには、パッケージ内のすべてのファイル(カスタム ノードを除く)が格納されています。Dynamo パッケージ用のサンプル ファイル(存在する場合)も、このフォルダに格納されています。これ以降のスクリーンショットは、各サンプル ファイルの概念を示しています。
 
@@ -76,40 +76,40 @@ Dynamo で、\_[パッケージ] > [パッケージを検索]をクリックし�
 
 このサンプル ファイルでは、_PointsToSurface_ ノードを使用して長方形のグリッドに基づくサーフェスをパネル化する方法を確認することができます。同様のワークフローについては、[前の章](../10\_custom-nodes/10-2\_creating.md)で確認しました。
 
-![](<../images/6-2/3/develop package -sample file 01.jpg>)
+![](../images/6-2/3/developpackage-samplefile01.jpg)
 
 #### **02-PanelingWithPolygons-II**
 
 このサンプル ファイルでは、同様のワークフローを使用して、特定のサーフェスから別のサーフェスに円弧をマッピングする場合のセットアップ例を確認することができます。このファイルでは _PolygonsToSurface_ ノードを使用します。
 
-![](<../images/6-2/3/develop package -sample file 02.jpg>)
+![](../images/6-2/3/developpackage-samplefile02.jpg)
 
 #### **03-NurbsCrvsAndSurface**
 
 このサンプル ファイルは NurbsCrvToSurface ノードと連携するため、多少複雑な構成になっています。ターゲット サーフェスは指定した距離でオフセットされ、NURB 曲線が元のターゲット サーフェスとオフセット後のサーフェスにマッピングされます。その後、マッピングされた 2 本の曲線がロフトされて 1 つのサーフェスが作成され、そのサーフェスに厚みが加えられます。その結果として出力されるソリッドは、ターゲット サーフェスの法線を表す波形の形状になります。
 
-![](<../images/6-2/3/develop package -sample file 03.jpg>)
+![](../images/6-2/3/developpackage-samplefile03.jpg)
 
 #### **04-PleatedPolysurface-OffsetPoints**
 
 このサンプル ファイルでは、ひだがついたポリサーフェスをソース サーフェスからターゲット サーフェスにマッピングする方法について確認することができます。ソース サーフェスはグリッド上に広がる長方形のサーフェスで、ターゲット サーフェスは回転体のサーフェスです。
 
-![](<../images/6-2/3/develop package -sample file 04a.jpg>)
+![](../images/6-2/3/developpackage-samplefile04a.jpg)
 
 このサンプル ファイルでは、ソース サーフェスのソース ポリサーフェスをターゲット サーフェスにマッピングする方法について確認することができます。
 
-![](<../images/6-2/3/develop package -sample file 04b.jpg>)
+![](../images/6-2/3/developpackage-samplefile04b.jpg)
 
 #### **05-SVG-Import**
 
 カスタム ノードを使用すると、さまざまなタイプの曲線をマッピングすることができます。このサンプル ファイルでは、Illustrator から書き出した SVG ファイルを参照し、読み込んだ曲線をターゲット サーフェスにマッピングすることができます。
 
-![](<../images/6-2/3/develop package -sample file 05a.jpg>)
+![](../images/6-2/3/developpackage-samplefile05a.jpg)
 
 .svg ファイルの構文を解析することにより、曲線が .xml 形式から Dynamo のポリカーブに変換されます。
 
-![](<../images/6-2/3/develop package -sample file 05b.jpg>)
+![](../images/6-2/3/developpackage-samplefile05b.jpg)
 
 読み込んだ曲線がターゲット サーフェスにマッピングされます。これにより、Illlustrator でパネルを明示的に(ポイント アンド クリック操作で)設計し、そのパネルを Dynamo で読み込んでターゲット サーフェスに適用することができます。
 
-![](<../images/6-2/3/develop package -sample file 05c.jpg>)
+![](../images/6-2/3/developpackage-samplefile05c.jpg)
