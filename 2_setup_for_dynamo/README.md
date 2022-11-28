@@ -62,4 +62,6 @@ Aparecerá la pantalla de inicio de Dynamo Sandbox, como se muestra a continuaci
 
 Enhorabuena, ya ha finalizado la configuración para utilizar Dynamo Sandbox.
 
-{% hint style="info" %} La función **Geometría** es una característica adicional de Dynamo Sandbox disponible únicamente para los usuarios que tengan una licencia o una suscripción actuales a las siguientes soluciones de software de Autodesk: Revit, Robot Structural Analysis, FormIt y Civil 3D. La función **Geometría** permite a los usuarios importar, crear, editar y exportar geometría desde Dynamo Sandbox.
+{% hint style="info" %} 
+La función **Geometría** es una característica adicional de Dynamo Sandbox disponible únicamente para los usuarios que tengan una licencia o una suscripción actuales a las siguientes soluciones de software de Autodesk: Revit, Robot Structural Analysis, FormIt y Civil 3D. La función **Geometría** permite a los usuarios importar, crear, editar y exportar geometría desde Dynamo Sandbox.
+{% endhint %}
