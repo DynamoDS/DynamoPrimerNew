@@ -276,7 +276,7 @@ Ahora que hemos modificado la lista, debemos volver a insertarla en la estructur
 ![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
 
 > 1. Siguiendo la misma lógica, utilice **List.ReplaceItemAtIndex** para reemplazar la lista central por la lista modificada.
-> 2. Observe que los **bloques de código**__ que definen el índice de estos dos nodos son 1 y 2, que coinciden con la consulta original del **bloque de código** (_points[1][2]_).
+> 2. Observe que los **bloques de código** que definen el índice de estos dos nodos son 1 y 2, que coinciden con la consulta original del **bloque de código** (_points[1][2]_).
 > 3. Al seleccionar la lista en el _índice 1_, veremos la estructura de datos resaltada en la vista preliminar de Dynamo. Hemos fusionado correctamente el punto desplazado con la estructura de datos original.
 
 Hay muchas formas de crear una superficie a partir de este conjunto de puntos. En este caso, vamos a crear una superficie mediante la solevación conjunta de curvas.
