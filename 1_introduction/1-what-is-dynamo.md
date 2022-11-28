@@ -2,7 +2,9 @@
 
 Dynamo 是一款[可视化编程](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo)应用程序，可以下载并在单独的“沙盒”模式下运行，也可以下载并作为 Revit、FormIt 或 Civil 3D 等其他软件的插件运行。
 
-{% hint style="info" %}详细了解 [**Dynamo 核心**/**Revit**/**沙盒**之间的差异。](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/){% endhint %}
+{% hint style="info" %}
+详细了解 [**Dynamo 核心**/**Revit**/**沙盒**之间的差异。](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)
+{% endhint %}
 
 ### 过程
 
