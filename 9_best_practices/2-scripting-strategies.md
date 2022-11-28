@@ -23,7 +23,9 @@ Textové skriptování může vytvořit vztahy vyšší složitosti než vizuál
 | **Python**         | Ano         | Ano           | Částečně          | Ano                | Ne            |
 | **ZeroTouch (C#)** | Ne          | Ne            | Ne                 | Ano                | Ne            |
 
-{% hint style="info" %} Seznam toho, k čemu vám jednotlivé knihovny aplikace Dynamo poskytují přístup, naleznete v části [Reference skriptování](13-3\_scripting-reference.md). {% endhint %}
+{% hint style="info" %} 
+Seznam toho, k čemu vám jednotlivé knihovny aplikace Dynamo poskytují přístup, naleznete v části [Reference skriptování](13-3\_scripting-reference.md). 
+{% endhint %}
 
 ### Uvažujte parametricky
 
