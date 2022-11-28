@@ -62,4 +62,6 @@ Zobrazí se následující úvodní obrazovka aplikace Dynamo Sandbox.
 
 Blahopřejeme! Dokončili jste instalaci aplikace Dynamo Sandbox a můžete ji začít používat.
 
-{% hint style="info" %} **Geometrie** je dodatečná funkce aplikace Dynamo Sandbox, která je dostupná pouze uživatelům, kteří mají aktuální předplatné nebo licenci k následujícímu softwaru Autodesk: Revit, Robot Structural Analysis, FormIt a Civil 3D. **Geometrie** umožňuje uživatelům importovat, vytvářet, upravovat a exportovat geometrii z aplikace Dynamo Sandbox. {% endhint %}
+{% hint style="info" %} 
+**Geometrie** je dodatečná funkce aplikace Dynamo Sandbox, která je dostupná pouze uživatelům, kteří mají aktuální předplatné nebo licenci k následujícímu softwaru Autodesk: Revit, Robot Structural Analysis, FormIt a Civil 3D. **Geometrie** umožňuje uživatelům importovat, vytvářet, upravovat a exportovat geometrii z aplikace Dynamo Sandbox. 
+{% endhint %}
