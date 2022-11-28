@@ -45,7 +45,7 @@ L’image ci-dessous représente la spirale dorée sous forme de programmation v
 
 > a. **Number Slider :** ajoutez deux curseurs de numérotation dans la zone de dessin. Ces curseurs représentent les variables _a_ et _b_ de l’équation paramétrique. Elles représentent une constante flexible, ou des paramètres que vous pouvez ajuster afin d’obtenir le résultat souhaité.
 >
-> b. **Multiplication (*)** : le nœud de multiplication est représenté par un astérisque. Vous utiliserez ce nœud à plusieurs reprises pour connecter des variables de multiplication.
+> b. **Multiplication (\*)** : le nœud de multiplication est représenté par un astérisque. Vous utiliserez ce nœud à plusieurs reprises pour connecter des variables de multiplication.
 >
 > c. **Math.RadiansToDegrees :** les valeurs « _t_ » doivent être converties en degrés pour être évaluées dans les fonctions trigonométriques. N’oubliez pas que Dynamo utilise par défaut les degrés pour évaluer ces fonctions.
 >
