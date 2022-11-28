@@ -10,7 +10,7 @@ Gli operatori sono un insieme di componenti che utilizzano funzioni algebriche c
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiply (*****) | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Multiplication.jpg) | Multiply (**\***) | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Division.jpg)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Esercizio: Formula della spirale aurea
