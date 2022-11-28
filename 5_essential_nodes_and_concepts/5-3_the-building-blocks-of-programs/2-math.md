@@ -45,7 +45,7 @@ Obrázek níže znázorňuje zlatou spirálu ve vizuální programové podobě. 
 
 > a. **Number Slider:** Přidejte na kreslicí plochu dva posuvníky. Tyto posuvníky budou představovat proměnné _a_ a _b_ parametrické rovnice. Představují konstantu, která je flexibilní, nebo parametry, které lze upravit podle požadovaného výsledku.
 >
-> b. b. **Násobení (*)**: Uzel násobení je reprezentován hvězdičkou. Toto použijeme opakovaně k připojení násobných proměnných
+> b. b. **Násobení (\*)**: Uzel násobení je reprezentován hvězdičkou. Toto použijeme opakovaně k připojení násobných proměnných
 >
 > c. **Math.RadiansToDegree:** Hodnoty '_t_' je nutné převést na stupně pro jejich vyhodnocení v trigonometrických funkcích. Nezapomeňte, že aplikace Dynamo pro vyhodnocení těchto funkcí ve výchozím stavu používá stupně.
 >
