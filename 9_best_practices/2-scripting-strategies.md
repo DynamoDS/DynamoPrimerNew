@@ -23,7 +23,9 @@
 | **Python**         | 是         | 是           | 局部          | 是                | 否            |
 | **ZeroTouch (C#)** | 否          | 否            | 否                 | 是                | 否            |
 
-{% hint style="info" %} 請參閱[指令碼撰寫參考](13-3\_scripting-reference.md)以瞭解每個 Dynamo 資源庫可讓您存取的功能清單。{% endhint %}
+{% hint style="info" %} 
+請參閱[指令碼撰寫參考](13-3\_scripting-reference.md)以瞭解每個 Dynamo 資源庫可讓您存取的功能清單。
+{% endhint %}
 
 ### 以參數方式思考
 
