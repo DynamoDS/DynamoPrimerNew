@@ -64,7 +64,7 @@ a.在**“图形预览”**模式下
 
 ![](./images/3-1/workspace-incanvassearch.gif)
 
-b.在**“三维预览”**模式下
+b.在 **“三维预览”** 模式下
 
 * 使用图标：
   * ![](./images/3-1/3-1-08graphpreviewzoomtofitpsd.jpg)缩放匹配

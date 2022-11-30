@@ -24,12 +24,12 @@
 
 ![](images/6/documenting-exerciseI-01.jpg)
 
-> 1. 向画布添加_“Family Types”_节点，然后选择_“ROOF-PANEL-4PT”_。
+> 1. 向画布添加 _“Family Types”_ 节点，然后选择 _“ROOF-PANEL-4PT”_。
 > 2. 将此节点连接到“Select _All Elements of Family Type_”节点，以将所有图元从 Revit 输入到 Dynamo。
 
 ![](images/6/documenting-exerciseI-02.jpg)
 
-> 1. 使用_“AdaptiveComponent.Locations”_节点查询每个图元的自适应点位置。
+> 1. 使用 _“AdaptiveComponent.Locations”_ 节点查询每个图元的自适应点位置。
 > 2. 使用 _“Polygon.ByPoints”_ 节点基于这四个点创建多边形。请注意，我们现在在 Dynamo 中拥有镶板系统的抽象版本，无需输入 Revit 图元的完整几何图形。
 > 3. 使用 _“Polygon.PlaneDeviation”_ 节点计算平面偏差。
 
@@ -37,12 +37,12 @@
 
 ![](images/6/documenting-exerciseI-03.jpg)
 
-> 1. 将_“Element.SetParameterByName”_节点添加到画布，然后将自适应构件连接到_“element”_输入。将读取 _“Aperture Ratio”_ 的 _“代码块”_ 连接到 _“parameterName”_ 输入。
+> 1. 将 _“Element.SetParameterByName”_ 节点添加到画布，然后将自适应构件连接到 _“element”_ 输入。将读取 _“Aperture Ratio”_ 的 _“代码块”_ 连接到 _“parameterName”_ 输入。
 > 2. 我们无法直接将偏差结果连接到值输入，因为我们需要将这些值重新映射到参数范围。
 
 ![](images/6/documenting-exerciseI-04.jpg)
 
-> 1. 使用_“Math.RemapRange”_，通过在_“代码块”_中输入 `0.15; 0.45;`，将偏差值重新映射到介于 0.15 和 0.45 之间的域。
+> 1. 使用 _“Math.RemapRange”_，通过在 _“代码块”_ 中输入 `0.15; 0.45;`，将偏差值重新映射到介于 0.15 和 0.45 之间的域。
 > 2. 将这些结果连接到 _“Element.SetParameterByName”_ 的值输入。
 
 返回 Revit，我们可以 _稍微_ 了解曲面上孔径的变化。
@@ -59,13 +59,13 @@
 
 ![](images/6/documenting-exerciseII-01.jpg)
 
-> 1. 删除_“Element.SetParameterByName”_及其输入节点，然后添加_“Element.OverrideColorInView”_。
+> 1. 删除 _“Element.SetParameterByName”_ 及其输入节点，然后添加 _“Element.OverrideColorInView”_。
 > 2. 将 _“Color Range”_ 节点添加到画布，然后连接到 _“Element.OverrideColorInView”_ 的颜色输入。为了创建渐变，我们仍需将偏差值连接到颜色范围。
 > 3. 将光标悬停在 _“value”_ 输入上时，我们可以看到输入值必须介于 _0_ 和 _1_ 之间，以便将颜色映射到每个值。我们需要将偏差值重新映射到此范围。
 
 ![](images/6/documenting-exerciseII-02.jpg)
 
-> 1. 使用_“Math.RemapRange”_，将平面偏差值重新映射到介于 *0* 和 _1_ 之间的范围（注意：也可以使用_“MapTo”_节点定义源域）。
+> 1. 使用 _“Math.RemapRange”_，将平面偏差值重新映射到介于 *0* 和 _1_ 之间的范围（注意：也可以使用 _“MapTo”_ 节点定义源域）。
 > 2. 将结果连接到 _“Color Range”_ 节点。
 > 3. 请注意，我们的输出是颜色范围，而不是数字范围。
 > 4. 如果设置为“手动”，请点击 _“运行”_ 。此时，应该能够无需再设置为“自动”。
@@ -76,7 +76,7 @@
 
 ![](images/6/documenting-exerciseII-04.jpg)
 
-> 1. 使用_“代码块”_，在两个不同代码行上添加两个数字：`0;` 和 `255;`。
+> 1. 使用 _“代码块”_，在两个不同代码行上添加两个数字：`0;` 和 `255;`。
 > 2. 通过将相应值连接到两个 _“Color.ByARGB”_ 节点，即可创建红色和蓝色。
 > 3. 以这两种颜色创建列表。
 > 4. 将此列表连接到 _“Color Range”_ 的 _“colors”_ 输入，然后观察自定义颜色范围更新。

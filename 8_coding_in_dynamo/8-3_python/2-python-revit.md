@@ -88,7 +88,7 @@ OUT = [doc,uiapp,app]
 
 ![](../images/8-3/2/python&revit-exercise02-01.jpg)
 
-打开_“概念体量文件夹”_，然后使用_“Metric Mass.rft”_模板文件。
+打开 _“概念体量文件夹”_，然后使用 _“Metric Mass.rft”_ 模板文件。
 
 ![](../images/8-3/2/python&revit-exercise02-02.jpg)
 
@@ -100,7 +100,7 @@ OUT = [doc,uiapp,app]
 
 ![](../images/8-3/2/python&revit-exercise02-04.jpg)
 
-> 1. 创建**“代码块”**，并为其赋值 `"0;"`
+> 1. 创建 **“代码块”**，并为其赋值 `"0;"`
 > 2. 将该值插入 X、Y 和 Z 输入的 **“ReferencePoint.ByCoordinates”** 节点。
 > 3. 创建三个滑块，范围从 -100 到 100，步长为 1。
 > 4. 将每个滑块都连接到 **“ReferencePoint.ByCoordinates”** 节点。
@@ -110,7 +110,7 @@ OUT = [doc,uiapp,app]
 
 ![](../images/8-3/2/python&revit-exercise02-05.jpg)
 
-> 1. **System.Array**：Revit 需要**“系统数组”**作为输入（而不是 Python 列表）。这只是多一行代码，但注意参数类型将有助于在 Revit 中进行 Python 编程。
+> 1. **System.Array**：Revit 需要 **“系统数组”** 作为输入（而不是 Python 列表）。这只是多一行代码，但注意参数类型将有助于在 Revit 中进行 Python 编程。
 
 ``` py
 import sys
@@ -202,7 +202,7 @@ for val in IN[2]:
 
 在 Revit 中，我们有一组横跨两条曲线的梁作为结构图元。注意：这不是一个真实示例...结构图元用作从 Dynamo 创建的原生 Revit 实例的示例。
 
-在 Dynamo 中，我们也可以看到结果。**“Watch3D”**节点中的梁引用从 Revit 图元查询所得的几何图形。
+在 Dynamo 中，我们也可以看到结果。**“Watch3D”** 节点中的梁引用从 Revit 图元查询所得的几何图形。
 
 ![](../images/8-3/2/python&revit-exercise03-05.jpg)
 

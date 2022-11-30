@@ -10,7 +10,7 @@
 
 安装软件包的最简单方法是使用 Dynamo 界面中的“软件包”工具栏。让我们直接跳转到该工具栏，然后立即安装一个软件包。在本快速示例中，我们将安装一个常用软件包，用于在栅格上创建四边形嵌板。
 
-在 Dynamo 中，转到_“软件包”>“搜索软件包...”_
+在 Dynamo 中，转到 _“软件包”>“搜索软件包...”_
 
 ![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
 
@@ -24,7 +24,7 @@
 
 ![](../images/6-2/1/packageintroduction-installingapackage03.jpg)
 
-使用**“代码块”**以快速定义矩形栅格、将结果输出到**“Polygon.ByPoints”**节点，然后输出到**“Surface.ByPatch”**节点以查看刚创建的矩形嵌板列表。
+使用 **“代码块”** 以快速定义矩形栅格、将结果输出到 **“Polygon.ByPoints”** 节点，然后输出到 **“Surface.ByPatch”** 节点以查看刚创建的矩形嵌板列表。
 
 ![](../images/6-2/1/packageintroduction-installingapackage04.jpg)
 
@@ -32,13 +32,13 @@
 
 上述示例重点介绍内含一个自定义节点的软件包，但相同过程可用于下载内含多个自定义节点的软件包以及支持数据文件。现在，我们通过一个更全面的软件包来进行演示：Dynamo Unfold。
 
-如上例中所示，首先选择_“软件包”>“搜索软件包...”_。
+如上例中所示，首先选择 _“软件包”>“搜索软件包...”_。
 
-这次，我们将搜索_“DynamoUnfold”_（一个字词，注意大写）。当我们看到该软件包时，请通过单击“安装”下载，以将“Dynamo Unfold”添加到 Dynamo 库中。
+这次，我们将搜索 _“DynamoUnfold”_ （一个字词，注意大写）。当我们看到该软件包时，请通过单击“安装”下载，以将“Dynamo Unfold”添加到 Dynamo 库中。
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
 
-在 Dynamo 库中，我们有一个_“DynamoUnfold”_组，其中包含多个类别和自定义节点。
+在 Dynamo 库中，我们有一个 _“DynamoUnfold”_ 组，其中包含多个类别和自定义节点。
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
@@ -54,8 +54,8 @@
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder05.jpg)
 
-> 1. _“bin”_文件夹中存储了 .dll 文件。此 Dynamo 软件包使用 Zero-Touch 开发，因此自定义节点保存在此文件夹中。
-> 2. _“dyf”_文件夹中存储了自定义节点。此软件包不是使用 Dynamo 自定义节点开发的，因此此软件包的该文件夹为空。
+> 1. _“bin”_ 文件夹中存储了 .dll 文件。此 Dynamo 软件包使用 Zero-Touch 开发，因此自定义节点保存在此文件夹中。
+> 2. _“dyf”_ 文件夹中存储了自定义节点。此软件包不是使用 Dynamo 自定义节点开发的，因此此软件包的该文件夹为空。
 > 3. “extra”文件夹中存储了所有附加文件，包括我们的示例文件。
 > 4. pkg 文件是一个基本文本文件，用于定义软件包设置。我们现在可以忽略该文件。
 
@@ -73,7 +73,7 @@
 
 了解 Dynamo 软件包的另一种方法是在线浏览[“Dynamo Package Manager”](http://dynamopackages.com)。这是一种浏览软件包的好方法，因为存储库会按照下载数量和受欢迎程度对软件包进行排序。此外，它也是一种用于收集有关最新软件包更新信息的简便方法，因为某些 Dynamo 软件包受 Dynamo 各内部版本的版本控制和依存关系的制约。
 
-通过在 Dynamo Package Manager 中单击_“Quads from Rectangular Grid”_，可查看其描述、版本、开发人员以及可能的依存关系。
+通过在 Dynamo Package Manager 中单击 _“Quads from Rectangular Grid”_，可查看其描述、版本、开发人员以及可能的依存关系。
 
 ![](../images/6-2/1/dpm2.jpg)
 

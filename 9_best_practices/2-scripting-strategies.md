@@ -23,9 +23,7 @@
 | **Python**         | 是         | 是           | 部分          | 是                | 否            |
 | **ZeroTouch (C#)** | 否          | 否            | 否                 | 是                | 否            |
 
-{% hint style="info" %}
-有关每个 Dynamo 库所提供访问内容的列表，请参见[脚本编写参考](13-3\_scripting-reference.md)。
-{% endhint %}
+{% hint style="info" %}有关每个 Dynamo 库所提供访问内容的列表，请参见[脚本编写参考](13-3\_scripting-reference.md)。{% endhint %}
 
 ### 以参数化方式考虑
 

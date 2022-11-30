@@ -40,7 +40,7 @@
 
 ![](../images/5-5/4/dictionary-exerciseI-03.jpg)
 
-> 1. 节点**“Dictionary.ByKeysValues”**将根据相应的输入创建词典。
+> 1. 节点 **“Dictionary.ByKeysValues”** 将根据相应的输入创建词典。
 > 2. `Keys` 需要是字符串，而 `values` 可以是多种对象类型。
 
 最后，我们现在可以使用房间编号从词典中检索房间。
@@ -48,7 +48,7 @@
 ![](../images/5-5/4/dictionary-exerciseI-04.jpg)
 
 > 1. `String` 将是用于从词典中查找对象的键。
-> 2. 现在，**“Dictionary.ValueAtKey”**将从词典中获取对象。
+> 2. 现在，**“Dictionary.ValueAtKey”** 将从词典中获取对象。
 
 ### 第 II 部分：值查找
 

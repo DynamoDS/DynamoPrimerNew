@@ -28,7 +28,7 @@ _“点击”_ 是直接选择 Revit 图元的最简单方法。可以选择完�
 
 ![](../.gitbook/assets/selecting\_database\_navigation\_with\_dynamo\_nodes\_01.jpg)
 
-_“下拉”菜单_在 Revit 项目中创建所有可访问图元的列表。可以使用此选项来参照在视图中不一定可见的 Revit 图元。这是一款优秀的工具，可用于查询现有图元或者在 Revit 项目或族编辑器中创建新图元。
+_“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。可以使用此选项来参照在视图中不一定可见的 Revit 图元。这是一款优秀的工具，可用于查询现有图元或者在 Revit 项目或族编辑器中创建新图元。
 
 \![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
@@ -60,7 +60,7 @@ _“下拉”菜单_在 Revit 项目中创建所有可访问图元的列表。�
 
 ![](../.gitbook/assets/selecting\_exercise\_02.jpg)
 
-> 1. 由于我们使用的是基本设置，因此我们选择“Categories”下拉节点中的_“Mass”_来选择建筑体量。这可在“Revit”>“选择”选项卡中找到。
+> 1. 由于我们使用的是基本设置，因此我们选择“Categories”下拉节点中的 _“Mass”_ 来选择建筑体量。这可在“Revit”>“选择”选项卡中找到。
 > 2. “Mass”类别的输出只是类别本身。我们需要选择相应图元。为此，我们使用 _“All Elements of Category”_ 节点。
 
 请注意，此时我们在 Dynamo 中看不到任何几何图形。我们已选择 Revit 图元，但尚未将该图元转换为 Dynamo 几何图形。这是非常重要的差异。如果要选择大量图元，您不会希望在 Dynamo 中预览所有这些图元，因为这会降低所有操作的速度。Dynamo 是一款用于管理 Revit 项目的工具（无需执行几何图形操作），我们将在本章的下一部分中进行介绍。
@@ -69,13 +69,13 @@ _“下拉”菜单_在 Revit 项目中创建所有可访问图元的列表。�
 
 ![](../.gitbook/assets/selecting\_exercise\_03.jpg)
 
-> 1. 使用_“Element.Faces”_节点，我们会得到一个包含曲面的列表，表示 Revit 体量的每个面。现在，我们可以在 Dynamo 视口中看到几何图形，然后开始参照相应面进行参数化操作。
+> 1. 使用 _“Element.Faces”_ 节点，我们会得到一个包含曲面的列表，表示 Revit 体量的每个面。现在，我们可以在 Dynamo 视口中看到几何图形，然后开始参照相应面进行参数化操作。
 
 以下是另一种方法。在这种情况下，我们将不会通过 Revit 层次结构_（“All Elements of Category”）_进行选择，而是改为在 Revit 中明确选择几何图形。
 
 ![](../.gitbook/assets/selecting\_exercise\_04.jpg)
 
-> 1. 使用_“Select Model Element”_节点，单击*“select”*（或_“change”_）按钮。在 Revit 视口中，选择所需的图元。在本例中，我们选择的是建筑体量。
+> 1. 使用 _“Select Model Element”_ 节点，单击*“select”*（或 _“change”_ ）按钮。在 Revit 视口中，选择所需的图元。在本例中，我们选择的是建筑体量。
 > 2. 我们可以使用 _“Element.Geometry”_ 将完整体量作为一个实体几何图形进行选择，而不是使用 _“Element.Faces”_。这将选择该体量中包含的所有几何图形。
 > 3. 使用 _“Geometry.Explode”_ ，我们可以再次获得包含曲面的列表。这两个节点的工作方式与 _“Element.Faces”_ 相同，但提供了用于深入到 Revit 图元的几何图形的替代选项。
 
@@ -88,7 +88,7 @@ _“下拉”菜单_在 Revit 项目中创建所有可访问图元的列表。�
 > 3. 参照此数字，我们将*整数滑块*的最大值更改为 _“22”_。
 > 4. 使用 _“List.GetItemAtIndex”_，我们为 _“index”_ 输入列表和*整数滑块*。在选定内容之间滑动，当到达 _“索引 9”_ 并隔离将桁架用作主要外立面时，便会停止。
 
-上一步有点麻烦。我们可以使用 _“Select Face”_ 节点更快地完成此操作。这样，我们便可以隔离 Revit 项目中本身不是图元的面。除了我们选择曲面而非完整图元之外，与_“Select Model Element”_相同的交互也适用。
+上一步有点麻烦。我们可以使用 _“Select Face”_ 节点更快地完成此操作。这样，我们便可以隔离 Revit 项目中本身不是图元的面。除了我们选择曲面而非完整图元之外，与 _“Select Model Element”_ 相同的交互也适用。
 
 ![](../.gitbook/assets/selecting\_exercise\_06.jpg)
 
@@ -110,7 +110,7 @@ _“下拉”菜单_在 Revit 项目中创建所有可访问图元的列表。�
 
 ![](../.gitbook/assets/selecting\_exercise\_10.jpg)
 
-> 1. 使用_“Select Model Element”_节点，选择其中一个梁。
+> 1. 使用 _“Select Model Element”_ 节点，选择其中一个梁。
 > 2. 将梁图元连接到 _“Element.Geometry”_ 节点，现在在 Dynamo 视口中便有了梁。
 > 3. 我们可以使用 _“Watch3D”_ 节点放大几何图形（如果在“Watch 3D”中看不到梁，请单击鼠标右键，然后点击“zoom to fit”）。
 
@@ -118,13 +118,13 @@ Revit/Dynamo 工作流中可能经常遇到的问题：如何选择一个图元�
 
 ![](../.gitbook/assets/selecting\_exercise\_11.jpg)
 
-> 1. 将梁图元连接到_“Element.ElementType”_节点。
+> 1. 将梁图元连接到 _“Element.ElementType”_ 节点。
 > 2. _“Watch”_ 节点显示，输出现在是族符号，而不是 Revit 图元。
-> 3. _“Element.ElementType”_是一个简单查询，因此我们可以在代码块中执行此操作（就像使用 `x.ElementType;` 一样简单）并获得相同的结果。
+> 3. _“Element.ElementType”_ 是一个简单查询，因此我们可以在代码块中执行此操作（就像使用 `x.ElementType;` 一样简单）并获得相同的结果。
 
 ![](../.gitbook/assets/selecting\_exercise\_12.jpg)
 
-> 1. 要选择其余梁，我们使用_“All Elements of Family Type”_（所有族类型的图元）节点。
+> 1. 要选择其余梁，我们使用 _“All Elements of Family Type”_ （所有族类型的图元）节点。
 > 2. “Watch”节点显示我们已选择了五个 Revit 图元。
 
 ![](../.gitbook/assets/selecting\_exercise\_13.jpg)
@@ -145,7 +145,7 @@ Revit/Dynamo 工作流中可能经常遇到的问题：如何选择一个图元�
 
 ![](../.gitbook/assets/selecting\_exercise\_15.jpg)
 
-> 1. 在_“Watch”_节点中，我们可以看到从 Revit 中选择的自适应构件列表。我们要提取基本信息，因此我们从自适应点开始操作。
+> 1. 在 _“Watch”_ 节点中，我们可以看到从 Revit 中选择的自适应构件列表。我们要提取基本信息，因此我们从自适应点开始操作。
 > 2. 将 _“All Elements of Family Type”_ （所有族类型的图元）节点连接到 _“AdaptiveComponent.Location”_ 节点。这样，我们就得到了一个包含列表的列表，每个列表都有三个点，这三个点代表自适应点的位置。
 > 3. 连接 _“Polygon.ByPoints”_ 节点会返回一条复合线。我们可以在 Dynamo 视口中看到这一结果。通过此方法，我们已可视化了一个图元的几何图形，并对其余图元阵列的几何图形进行了抽象处理（其数量可能大于本示例）。
 

@@ -88,7 +88,7 @@
 > 2. **差集**：从一个实体中减去另一个实体。要减去的实体称为工具。请注意，可以切换哪个实体是保留反向体积的工具。
 > 3. **交集**：仅保留两个实体的相交体积。
 
-除了这三项操作，Dynamo 还具有**“Solid.DifferenceAll”**和**“Solid.UnionAll”**节点，用于对多个实体执行差集和并集操作。![](../images/5-2/6/BooleanAll.jpg)
+除了这三项操作，Dynamo 还具有 **“Solid.DifferenceAll”** 和 **“Solid.UnionAll”** 节点，用于对多个实体执行差集和并集操作。![](../images/5-2/6/BooleanAll.jpg)
 
 > 1. **UnionAll**：使用球体和朝外的圆锥体进行并集操作
 > 2. **DifferenceAll**：使用球体和朝内圆锥体时的差集运算

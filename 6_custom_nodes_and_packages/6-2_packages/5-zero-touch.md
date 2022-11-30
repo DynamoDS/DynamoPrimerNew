@@ -28,9 +28,9 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 在本案例研究中，我们将介绍如何输入 [AForge](http://www.aforgenet.com) 外部 _.dll_ 库。AForge 是一个功能强大的库，提供了从图像处理到人工智能的一系列功能。我们将引用 AForge 中的图像处理类，以在下面进行一些图像处理练习。
 
-首先，我们下载 AForge。在 [AForge 下载页面](http://www.aforgenet.com/framework/downloads.html)上，选择_“[下载安装程序]”_，然后在下载完成后进行安装。
+首先，我们下载 AForge。在 [AForge 下载页面](http://www.aforgenet.com/framework/downloads.html)上，选择 _“[下载安装程序]”_，然后在下载完成后进行安装。
 
-在 Dynamo 中，创建一个新文件，然后依次选择_“文件”>“输入库...”_
+在 Dynamo 中，创建一个新文件，然后依次选择 _“文件”>“输入库...”_
 
 ![](../images/6-2/5/casestudyaforge01.jpg)
 
@@ -39,9 +39,9 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 ![](../images/6-2/5/casestudyaforge02.jpg)
 
 > 1. 在弹出窗口中，导航到安装有 AForge 的相应版本文件夹。该文件夹可能类似于以下文件夹：_C:\\Program Files (x86)\\AForge.NET\\Framework\\Release_。
-> 2. **AForge.Imaging.dll**：我们只想要将 AForge 库中的此文件用于本案例研究。选择此 _.dll_，然后点击_“打开”_。
+> 2. **AForge.Imaging.dll**：我们只想要将 AForge 库中的此文件用于本案例研究。选择此 _.dll_，然后点击 _“打开”_。
 
-返回 Dynamo，您应该会看到已添加到库的**“AForge”**节点组。现在，我们可从可视化程序访问 AForge 图像处理库！
+返回 Dynamo，您应该会看到已添加到库的 **“AForge”** 节点组。现在，我们可从可视化程序访问 AForge 图像处理库！
 
 ![](../images/6-2/5/casestudyaforge03.jpg)
 
@@ -53,9 +53,9 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 {% file src="../datasets/6-2/5/ZeroTouchImages.zip" %}
 
-现在，库已输入，我们将开始此第一个简单练习 (_01-EdgeDetection.dyn_)。我们将对样例图像进行一些基本图像处理，以显示 AForge 图像如何过滤。我们将使用_“Watch Image”_节点来显示结果，并在 Dynamo 中应用过滤器（与 Photoshop 中的过滤器类似）
+现在，库已输入，我们将开始此第一个简单练习 (_01-EdgeDetection.dyn_)。我们将对样例图像进行一些基本图像处理，以显示 AForge 图像如何过滤。我们将使用 _“Watch Image”_ 节点来显示结果，并在 Dynamo 中应用过滤器（与 Photoshop 中的过滤器类似）
 
-要输入图像，请将**“File Path”**节点添加到画布，然后从练习文件夹中选择“soapbubbles.jpg”（照片来源：[Flickr](https://www.flickr.com/photos/wwworks/667298782)）。
+要输入图像，请将 **“File Path”** 节点添加到画布，然后从练习文件夹中选择“soapbubbles.jpg”（照片来源：[Flickr](https://www.flickr.com/photos/wwworks/667298782)）。
 
 ![](../images/6-2/5/casestudyaforgeexercise1-01.jpg)
 
@@ -63,21 +63,21 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 ![](../images/6-2/5/casestudyaforgeexercise1-02.jpg)
 
-> 1. 使用**“File From Path”**将文件路径项目转换为 Dynamo 环境中的图像。
-> 2. 将**“File Path”**节点连接到**“File.FromPath”**节点。
-> 3. 要将此文件转换为图像，我们将使用**“Image.ReadFromFile”**节点。
-> 4. 最后，我们来看一看结果！将**“Watch Image”**节点拖动到画布上，然后连接到**“Image.ReadFromFile”**。我们尚未使用 AForge，但我们已成功将图像输入 Dynamo。
+> 1. 使用 **“File From Path”** 将文件路径项目转换为 Dynamo 环境中的图像。
+> 2. 将 **“File Path”** 节点连接到 **“File.FromPath”** 节点。
+> 3. 要将此文件转换为图像，我们将使用 **“Image.ReadFromFile”**节点。
+> 4. 最后，我们来看一看结果！将 **“Watch Image”** 节点拖动到画布上，然后连接到 **“Image.ReadFromFile”**。我们尚未使用 AForge，但我们已成功将图像输入 Dynamo。
 
 在“AForge.Imaging.AForge.Imaging.Filters”（导航菜单中）下，您会注意到有许多可用过滤器。现在，我们将使用其中一个过滤器来基于阈值降低图像饱和度。
 
 ![](../images/6-2/5/casestudyaforgeexercise1-03.jpg)
 
 > 1. 将这三个滑块拖动到画布上，将它们的范围更改为 0 到 1，将其步长值更改为 0.01。
-> 2. 将**“Grayscale.Grayscale”**节点添加到画布。这是一个“AForge”过滤器，可将“灰度”过滤器应用于图像。将步骤 1 中的三个滑块连接到 cr、cg 和 cb。将顶部和底部滑块的值更改为 1，将中间滑块的值更改为 0。
-> 3. 为了应用“灰度”过滤器，我们需要对图像执行一个操作。为此，我们使用**“BaseFilter.Apply”**。将图像连接到图像输入，然后将**“Grayscale.Grayscale”**连接到“baseFilter”输入。
-> 4. 通过连接到**“Watch Image”**节点，我们会得到饱和度降低的图像。
+> 2. 将 **“Grayscale.Grayscale”** 节点添加到画布。这是一个“AForge”过滤器，可将“灰度”过滤器应用于图像。将步骤 1 中的三个滑块连接到 cr、cg 和 cb。将顶部和底部滑块的值更改为 1，将中间滑块的值更改为 0。
+> 3. 为了应用“灰度”过滤器，我们需要对图像执行一个操作。为此，我们使用 **“BaseFilter.Apply”**。将图像连接到图像输入，然后将 **“Grayscale.Grayscale”** 连接到“baseFilter”输入。
+> 4. 通过连接到 **“Watch Image”** 节点，我们会得到饱和度降低的图像。
 
-我们可以控制如何根据红、绿和蓝的阈值来降低该图像的饱和度。这些值由**“Grayscale.Grayscale”**节点的输入定义。请注意，图像看起来很暗，这是因为滑块中的绿色值设置为 0。
+我们可以控制如何根据红、绿和蓝的阈值来降低该图像的饱和度。这些值由 **“Grayscale.Grayscale”** 节点的输入定义。请注意，图像看起来很暗，这是因为滑块中的绿色值设置为 0。
 
 ![](../images/6-2/5/casestudyaforgeexercise1-04.jpg)
 
@@ -87,8 +87,8 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 ![](../images/6-2/5/casestudyaforgeexercise1-05.jpg)
 
-> 1. 将**“SobelEdgeDetector.SobelEdgeDetector”**节点添加到画布。
-> 2. 将其连接到**“BaseUsingCopyPartialFilter.Apply”**，然后将饱和度降低的图像连接到此节点的图像输入。
+> 1. 将 **“SobelEdgeDetector.SobelEdgeDetector”** 节点添加到画布。
+> 2. 将其连接到 **“BaseUsingCopyPartialFilter.Apply”**，然后将饱和度降低的图像连接到此节点的图像输入。
 > 3. “Sobel Edge Detector”已在新图像中亮显边缘。
 
 放大时，边缘检测器使用像素标注出气泡的轮廓。AForge 库提供的工具可用于获取类似结果以及创建 Dynamo 几何图形。我们将在下一练习中进行探索。
@@ -97,7 +97,7 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 ### 练习 2 - 创建矩形
 
-现在，我们已经介绍了一些基本图像处理，让我们使用图像来驱动 Dynamo 几何图形！从根本上讲，在本练习中我们旨在使用 AForge 和 Dynamo 对图像进行_“实时跟踪”_。我们将遵循简单原则，从参照图像中提取矩形，但在 AForge 中提供一些工具来执行更复杂的操作。我们将从下载的练习文件中使用_“02-RectangleCreation.dyn”_。
+现在，我们已经介绍了一些基本图像处理，让我们使用图像来驱动 Dynamo 几何图形！从根本上讲，在本练习中我们旨在使用 AForge 和 Dynamo 对图像进行 _“实时跟踪”_。我们将遵循简单原则，从参照图像中提取矩形，但在 AForge 中提供一些工具来执行更复杂的操作。我们将从下载的练习文件中使用 _“02-RectangleCreation.dyn”_。
 
 ![](../images/6-2/5/casestudyaforgeexercise2-01.jpg)
 
@@ -108,7 +108,7 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 ![](../images/6-2/5/casestudyaforgeexercise2-02.jpg)
 
-> 1. 将“BlobCounter”添加到画布，然后我们需要一种方法来处理图像（类似于上一个练习中的**“BaseFilter.Apply”**工具）。
+> 1. 将“BlobCounter”添加到画布，然后我们需要一种方法来处理图像（类似于上一个练习中的**“BaseFilter.Apply”** 工具）。
 
 遗憾的是，“Process Image”节点在 Dynamo 库中不会立即显示。这是因为该函数在 AForge 源代码中可能不可见。为了解决此问题，我们需要找到解决方法。
 

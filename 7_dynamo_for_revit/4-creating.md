@@ -72,7 +72,7 @@
 
 ![](images/4/creating-exercise04.jpg)
 
-> 1. 借助_“代码块”_，使用以下语法定义一个范围：`0..1..#numberOfTrusses;`
+> 1. 借助 _“代码块”_，使用以下语法定义一个范围：`0..1..#numberOfTrusses;`
 > 2. 将*整数滑块*连接到代码块的输入。如您所料，这将表示桁架数。请注意，滑块控制在 *0* 至 _1_ 所定义范围内的项目数。
 > 3. 将 _“代码块”_ 插入到 _“Curve.PlaneAtParameter”_ 节点的 _“param”_ 输入，并将顶边插入到 _“curve”_ 输入。这样，我们将获得十个平面，这些平面均匀分布在外墙的跨度上。
 
@@ -80,13 +80,13 @@
 
 ![](images/4/creating-exercise05.jpg)
 
-> 1. 使用_“Geometry.Intersect”_节点（将连缀选项设置为叉积），将_“Curve.PlaneAtParameter”_连接到_“Geometry.Intersect”_节点的_“entity”_输入。将主 _“List.Create”_ 节点插入到 _“geometry”_ 输入。现在，我们在 Dynamo 视口中会看到代表每个曲线与定义平面相交的点。
+> 1. 使用 _“Geometry.Intersect”_ 节点（将连缀选项设置为叉积），将 _“Curve.PlaneAtParameter”_ 连接到 _“Geometry.Intersect”_ 节点的 _“entity”_ 输入。将主 _“List.Create”_ 节点插入到 _“geometry”_ 输入。现在，我们在 Dynamo 视口中会看到代表每个曲线与定义平面相交的点。
 
-请注意，输出是一列包含列表的列表。对于我们的目的而言，列表过多。我们想在这里进行部分展平。我们需要在列表中向下一步，然后展平结果。为此，我们使用_“List.Map”_操作，如 Primer 的列表章节中所述。
+请注意，输出是一列包含列表的列表。对于我们的目的而言，列表过多。我们想在这里进行部分展平。我们需要在列表中向下一步，然后展平结果。为此，我们使用 _“List.Map”_ 操作，如 Primer 的列表章节中所述。
 
 ![](images/4/creating-exercise06.jpg)
 
-> 1. 将_“Geometry.Intersect”_节点插入到_“List.Map”_的列表输入。
+> 1. 将 _“Geometry.Intersect”_ 节点插入到 _“List.Map”_ 的列表输入。
 > 2. 将 _“Flatten”_ （展平）节点插入到 _“List.Map”_ 的 f(x) 输入。结果给出 3 个列表，每个列表的计数等于桁架数。
 > 3. 我们需要更改此数据。如果要实例化桁架，我们需要使用在族中定义的相同数量的自适应点。这是一个三点自适应构件，因此我们想要的不是三个列表（每个列表 10 个项目 (numberOfTrusses)），而是 10 个列表（每个列表三个项目）。这样，我们就可以创建 10 个自适应构件。
 > 4. 将 _“List.Map”_ 插入到 _“List.Transpose”_ 节点。现在，我们得到了所需的数据输出。
@@ -96,7 +96,7 @@
 
 ![](images/4/creating-exercise07.jpg)
 
-> 1. 将_“AdaptiveComponent.ByPoints”_节点添加到画布，将_“List.Transpose”_节点插入到_“points”_输入。
+> 1. 将 _“AdaptiveComponent.ByPoints”_ 节点添加到画布，将 _“List.Transpose”_ 节点插入到 _“points”_ 输入。
 > 2. 使用 _“Family Types”_ 节点，选择 _“自适应桁架”_ 族，然后将其连接到 _“AdaptiveComponent.ByPoints”_ 节点的 _“FamilyType”_ 输入。
 
 在 Revit 中，我们现在有十个桁架均匀分布在外立面上！
@@ -127,9 +127,9 @@
 
 ![](images/4/creating-exerciseII-02.jpg)
 
-> 1. 为了在 Dynamo 中参照我们的几何图形，我们将为 Revit 中的每个构件使用_“Select Model Element”_。在 Revit 中选择体量，然后使用 _“Element.Faces”_ 将几何图形输入到 Dynamo - 体量现在应该在 Dynamo 预览中可见。
+> 1. 为了在 Dynamo 中参照我们的几何图形，我们将为 Revit 中的每个构件使用 _“Select Model Element”_。在 Revit 中选择体量，然后使用 _“Element.Faces”_ 将几何图形输入到 Dynamo - 体量现在应该在 Dynamo 预览中可见。
 > 2. 使用 _“Select Model Element”_ 和 _“CurveElement.Curve”_ 将一条参照曲线输入到 Dynamo。
-> 3. 使用_“Select Model Element”_和_“CurveElement.Curve”_将其他参照曲线输入到 Dynamo。
+> 3. 使用 _“Select Model Element”_ 和 _“CurveElement.Curve”_ 将其他参照曲线输入到 Dynamo。
 
 ![](images/4/creating-exerciseII-03.jpg)
 
@@ -142,7 +142,7 @@
 
 ![](images/4/creating-exerciseII-05.jpg)
 
-> 1. 将_“DirectShape.ByGeometry”_节点拖放到画布上，我们会看到它有四个输入：_“geometry”_**、**_“category”_**、**_“material”_和_“name”_。
+> 1. 将 _“DirectShape.ByGeometry”_ 节点拖放到画布上，我们会看到它有四个输入：_“geometry”_**、**_“category”_**、**_“material”_ 和 _“name”_。
 > 2. 几何图形将是从图形的几何图形创建部分创建的实体
 > 3. 使用下拉 _“Categories”_ （类别）节点选择类别输入。在本例中，我们将使用“Structural Framing”（结构框架）。
 > 4. 通过上述节点阵列选择材质输入 - 尽管在这种情况下，可以更加简单地将其定义为“默认”。

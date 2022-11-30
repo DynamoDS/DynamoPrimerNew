@@ -40,7 +40,7 @@ OUT = solids
 
 ![](../images/8-3/1/pythonnode-thepythonnode01.jpg)
 
-双击节点会打开 Python 脚本编辑器（也可以在节点上单击鼠标右键，然后选择_“编辑...”_）。您会注意到顶部的一些样本文字，旨在帮助您引用所需的库。输入存储在 IN 数组中。通过将值指定给 OUT 变量，可将这些值返回给 Dynamo
+双击节点会打开 Python 脚本编辑器（也可以在节点上单击鼠标右键，然后选择 _“编辑...”_ ）。您会注意到顶部的一些样本文字，旨在帮助您引用所需的库。输入存储在 IN 数组中。通过将值指定给 OUT 变量，可将这些值返回给 Dynamo
 
 ![](../images/8-3/1/pythonnode-thepythonnode02.jpg)
 
@@ -227,9 +227,9 @@ OUT = solids
 
 ![](../images/8-3/1/pythonnode-exerciseptI-07.jpg)
 
-> 1. 将**“Solid.ByJoinedSurfaces”**的输出连接为 Python 节点的第一个输入，然后使用“代码块”定义其他输入。
-> 2. 创建**“Topology.Edges”**节点，并使用 Python 节点的输出作为其输入。
-> 3. 最后，创建**“Edge.CurveGeometry”**节点，并使用“Topology.Edges”的输出作为其输入。
+> 1. 将 **“Solid.ByJoinedSurfaces”** 的输出连接为 Python 节点的第一个输入，然后使用“代码块”定义其他输入。
+> 2. 创建 **“Topology.Edges”** 节点，并使用 Python 节点的输出作为其输入。
+> 3. 最后，创建 **“Edge.CurveGeometry”** 节点，并使用“Topology.Edges”的输出作为其输入。
 
 尝试更改种子值以创建不同的图案。还可以更改实体模块本身的参数以实现不同的效果。
 

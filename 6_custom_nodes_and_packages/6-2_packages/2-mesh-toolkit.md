@@ -12,7 +12,7 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 ### 安装 Mesh Toolkit
 
-在 Dynamo 中，转到顶部菜单栏中的_“软件包”>“搜索软件包...”_。在搜索字段中，键入_“MeshToolkit”_，全部写为一个单词并注意大小写。单击“安装”以开始下载。就这么简单！
+在 Dynamo 中，转到顶部菜单栏中的 _“软件包”>“搜索软件包...”_。在搜索字段中，键入 _“MeshToolkit”_，全部写为一个单词并注意大小写。单击“安装”以开始下载。就这么简单！
 
 ![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
 
@@ -26,7 +26,7 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 在此示例中，我们将查看网格工具包中的“相交”节点。我们将导入网格并与一系列输入平面相交以创建切片。这是准备模型以在激光刀具、水射流刀具或 CNC 铣削上进行加工的起点。
 
-首先，在 Dynamo 中打开_“Mesh-Toolkit_Intersect-Mesh.dyn”_。
+首先，在 Dynamo 中打开 _“Mesh-Toolkit_Intersect-Mesh.dyn”_。
 
 ![](../images/6-2/2/meshToolkitcasestudy-exercise01.jpg)
 
@@ -43,9 +43,9 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 ![](../images/6-2/2/meshToolkitcasestudy-exercise03.jpg)
 
 > 1. **代码块**：创建 25 个介于 0 和 1 之间的数字。
-> 2. **Curve.PointAtParameter**：将圆弧连接到_“curve”_输入，将代码块输出连接到_“param”_输入以沿曲线提取一系列点。
+> 2. **Curve.PointAtParameter**：将圆弧连接到 _“curve”_ 输入，将代码块输出连接到 _“param”_ 输入以沿曲线提取一系列点。
 > 3. **Curve.TangentAtParameter**：连接与上一个节点相同的输入。
-> 4. **Plane.ByOriginNormal**：将点连接到_“origin”_输入并将向量连接到_“normal”_输入，以在每个点处创建一系列平面。
+> 4. **Plane.ByOriginNormal**：将点连接到 _“origin”_ 输入并将向量连接到 _“normal”_ 输入，以在每个点处创建一系列平面。
 
 接下来，我们将使用这些平面来与网格相交。
 

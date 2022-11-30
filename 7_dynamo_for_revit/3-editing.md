@@ -16,9 +16,7 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 
 在 Revit 中快速查看参数时，我们要记得有类型参数和实例参数。这两个参数在 Dynamo 中都可以进行编辑，但我们在下面的练习中使用的是实例参数。
 
-{% hint style="info" %}
-在发现了编辑参数的广泛应用后，您可能想要在 Revit 中使用 Dynamo 编辑大量图元。这可能是 _计算成本高昂_ 的操作，这意味着它的速度可能会很慢。如果要编辑大量图元，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看“实体”章节中的“[冻结](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)”部分。
-{% endhint %}
+{% hint style="info" %}在发现了编辑参数的广泛应用后，您可能想要在 Revit 中使用 Dynamo 编辑大量图元。这可能是_计算成本高昂_的操作，这意味着它的速度可能会很慢。如果要编辑大量图元，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看“实体”章节中的“[冻结](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)”部分。{% endhint %}
 
 ### 单位
 
@@ -52,12 +50,12 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 
 ![](images/3/editing-exercise02.jpg)
 
-> 1. 使用_“Select Model Element”_节点选择建筑体量。
+> 1. 使用 _“Select Model Element”_ 节点选择建筑体量。
 > 2. 我们可以使用 _“Element.Parameters”_ 节点查询此体量的所有参数。这包括类型和实例参数。
 
 ![](images/3/editing-exercise03.jpg)
 
-> 1. 参照_“Element.Parameters”_ 节点以查找目标参数。或者，我们可以查看上一步中的“特性”面板，以选择要编辑的参数名称。在本例中，我们将查找影响建筑体量上较大几何移动的参数。
+> 1. 参照 _“Element.Parameters”_ 节点以查找目标参数。或者，我们可以查看上一步中的“特性”面板，以选择要编辑的参数名称。在本例中，我们将查找影响建筑体量上较大几何移动的参数。
 > 2. 我们将使用 _“Element.SetParameterByName”_ 节点对 Revit 图元进行更改
 > 3. 使用“代码块”定义参数列表，其中用引号括起来每个项目以表示字符串。我们还可以将“List.Create”节点与一系列连接到多个输入的 _“string”_ 节点一起使用，但代码块更便捷。在 Revit 中，确保字符串与精确名称匹配，具体情况如下：`{"BldgWidth","BldgLength","BldgHeight", "AtriumOffset", "InsideOffset","LiftUp"};`
 
@@ -87,4 +85,4 @@ Dynamo 的一个强大功能是，可以在参数化级别上编辑参数。例�
 
 ![](images/3/editing-exercise07.jpg)
 
-> 1. 通过更改图形此部分中的_“滑块”_，我们可以使外立面玻璃更加实质：9.98、10.0、9.71、0.31
+> 1. 通过更改图形此部分中的 _“滑块”_，我们可以使外立面玻璃更加实质：9.98、10.0、9.71、0.31

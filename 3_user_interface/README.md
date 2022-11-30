@@ -20,7 +20,7 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 
 #### Dynamo 菜单
 
-常规信息和设置位于**“Dynamo”**下拉菜单中。
+常规信息和设置位于 **“Dynamo”** 下拉菜单中。
 
 ![](images/userinterface-dynamomenu.jpg)
 
@@ -31,7 +31,7 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 
 #### 帮助
 
-如果遇到问题，请查看**“帮助”**菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
+如果遇到问题，请查看 **“帮助”** 菜单。可以通过 Internet 浏览器访问其中一个 Dynamo 参考网站。
 
 ![](images/userinterface-helpmenu.jpg)
 

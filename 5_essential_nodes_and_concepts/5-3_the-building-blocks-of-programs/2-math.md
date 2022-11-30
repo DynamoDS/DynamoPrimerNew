@@ -10,7 +10,7 @@
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | 添加 (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | 相减 (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | 相乘 (**\***) | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Multiplication.jpg) | 相乘 ( ***** ) | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Division.jpg)       | 相除 (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## 练习：黄金螺旋公式
@@ -43,9 +43,9 @@ $$ y = r sin θ = a sin θe^{bθ} $$
 
 ![](../images/5-3/2/math-partI-02.jpg)
 
-> a.**Number Slider**：向画布添加两个数字滑块。这些滑块将表示参数方程的_“a”_和_“b”_变量。这些表示灵活的常量，或我们可以根据所需结果调整的参数。
+> a.**Number Slider**：向画布添加两个数字滑块。这些滑块将表示参数方程的 _“a”_ 和 _“b”_ 变量。这些表示灵活的常量，或我们可以根据所需结果调整的参数。
 >
-> b.**相乘 (\*)**：乘法节点由星号表示。我们将反复使用它来连接乘法变量
+> b.**相乘 (*)**：乘法节点由星号表示。我们将反复使用它来连接乘法变量
 >
 > c.**Math.RadiansToDegrees**：“_t_”值需要转换为度数，以便在三角函数中进行求值。请记住，Dynamo 默认使用度数来对这些函数求值。
 >
@@ -59,11 +59,11 @@ $$ y = r sin θ = a sin θe^{bθ} $$
 
 现在，上一步中的大部分节点都可以正常工作，但这种工作量很大。要创建更高效的工作流，请查看[“DesignScript”](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)，以将 Dynamo 表达式的字符串定义到一个节点中。在接下来的一系列步骤中，我们将了解如何使用参数方程绘制 Fibonacci 螺旋。
 
-**Point.ByCoordinates**：将上乘法节点连接到_“x”_输入，将下乘法节点连接到_“y”_输入。现在，我们在屏幕上会看到点的参数化螺旋。
+**Point.ByCoordinates**：将上乘法节点连接到 _“x”_ 输入，将下乘法节点连接到 _“y”_ 输入。现在，我们在屏幕上会看到点的参数化螺旋。
 
 ![](../images/5-3/2/math-partII-01.gif)
 
-**Polycurve.ByPoints**：将上一步的**“Point.ByCoordinates”**连接到_“points”_。我们可以不输入而保留_“connectLastToFirst”_，因为我们不会绘制闭合曲线。这将创建穿过上一步中定义的每个点的螺旋。
+**Polycurve.ByPoints**：将上一步的 **“Point.ByCoordinates”** 连接到 _“points”_。我们可以不输入而保留 _“connectLastToFirst”_，因为我们不会绘制闭合曲线。这将创建穿过上一步中定义的每个点的螺旋。
 
 ![](../images/5-3/2/math-partII-02.jpg)
 
@@ -71,11 +71,11 @@ $$ y = r sin θ = a sin θe^{bθ} $$
 
 ### 第 III 部分：从螺旋到 Nautilus
 
-**Circle.ByCenterPointRadius**：我们将在此处使用“Circle”节点，其输入与上一步相同。半径值默认为_“1.0”_，因此可以看到圆即时输出。这些点与原点之间的分离程度立即清晰可辩。
+**Circle.ByCenterPointRadius**：我们将在此处使用“Circle”节点，其输入与上一步相同。半径值默认为 _“1.0”_，因此可以看到圆即时输出。这些点与原点之间的分离程度立即清晰可辩。
 
 ![](../images/5-3/2/math-partIII-01.jpg)
 
-**Number Sequence**：这是_“t”_的原始数组。通过将其连接到**“Circle.ByCenterPointRadius”**的半径值，圆心仍会与原点进一步偏离，但圆的半径不断增大，从而创建一个时髦的 Fibonacci 圆图形。
+**Number Sequence**：这是 _“t”_ 的原始数组。通过将其连接到 **“Circle.ByCenterPointRadius”** 的半径值，圆心仍会与原点进一步偏离，但圆的半径不断增大，从而创建一个时髦的 Fibonacci 圆图形。
 
 如果使其成为三维形式，可获得奖励积分！
 
@@ -85,7 +85,7 @@ $$ y = r sin θ = a sin θe^{bθ} $$
 
 现在的情况是，我们已创建一个圆形 Nautilus 壳，接下来我们转到参数化栅格。我们将在 Fibonacci 螺旋上使用基本旋转来创建 Fibonacci 栅格，然后在[向日葵种子生长](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/)后对结果进行建模。
 
-作为一个跳跃点，我们从上一练习的相同步骤开始：使用**“Point.ByCoordinates”**节点创建点的螺旋阵列。
+作为一个跳跃点，我们从上一练习的相同步骤开始：使用 **“Point.ByCoordinates”** 节点创建点的螺旋阵列。
 
 \![](../images/5-3/2/math-part IV-01.jpg)
 
@@ -93,22 +93,22 @@ $$ y = r sin θ = a sin θe^{bθ} $$
 
 ![](../images/5-3/2/math-partIV-02.jpg)
 
-> a.**Geometry.Rotate**：有多个**“Geometry.Rotate”**选项；请务必选择将_“geometry”_、_“basePlane”_和_“degrees”_作为其输入的节点。将**“Point.ByCoordinates”**连接到几何图形输入。在该节点上单击鼠标右键，并确保将连缀设置为“叉积”
+> a.**Geometry.Rotate**：有多个 **“Geometry.Rotate”** 选项；请务必选择将 _“geometry”_ 、 _“basePlane”_ 和 _“degrees”_ 作为其输入的节点。将 **“Point.ByCoordinates”** 连接到几何图形输入。在该节点上单击鼠标右键，并确保将连缀设置为“叉积”
 >
 > ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
 >
-> b.**Plane.XY**：连接到_“basePlane”_输入。我们将绕原点旋转，该原点与螺旋的底部位置相同。
+> b.**Plane.XY**：连接到 _“basePlane”_ 输入。我们将绕原点旋转，该原点与螺旋的底部位置相同。
 >
-> c.**Number Range**：对于度数输入，我们要创建多个旋转。我们可以使用**“Number Range”**组件快速完成此操作。将其连接到_“degrees”_输入。
+> c.**Number Range**：对于度数输入，我们要创建多个旋转。我们可以使用 **“Number Range”** 组件快速完成此操作。将其连接到 _“degrees”_ 输入。
 >
-> d.**Number**：要定义数字范围，请按垂直顺序将三个数字节点添加到画布。从上到下，分别指定值_“0.0,360.0,”_和_“120.0”_。这些驱动螺旋的旋转。将三个数字节点连接到相应节点后，请注意**“Number Range”**节点的输出结果。
+> d.**Number**：要定义数字范围，请按垂直顺序将三个数字节点添加到画布。从上到下，分别指定值 _“0.0,360.0,”_ 和 _“120.0”_。这些驱动螺旋的旋转。将三个数字节点连接到相应节点后，请注意 **“Number Range”** 节点的输出结果。
 
-我们的输出开始类似于旋涡。我们调整一些**“Number Range”**参数，看一看结果如何变化。
+我们的输出开始类似于旋涡。我们调整一些 **“Number Range”** 参数，看一看结果如何变化。
 
-将**“Number Range”**节点的步长从_“120.0”_更改为_“36.0”_。请注意，这将创建更多旋转，因此会为我们提供更密集的栅格。
+将 **“Number Range”** 节点的步长从 _“120.0”_ 更改为 _“36.0”_。请注意，这将创建更多旋转，因此会为我们提供更密集的栅格。
 
 ![](../images/5-3/2/math-partIV-04.jpg)
 
-将**“Number Range”**节点的步长从_“36.0”_更改为_“3.6”_。现在，我们得到更密集的栅格，但螺旋的方向性尚不清楚。女士们，先生们：我们创建了一颗向日葵。
+将 **“Number Range”** 节点的步长从 _“36.0”_ 更改为 _“3.6”_。现在，我们得到更密集的栅格，但螺旋的方向性尚不清楚。女士们，先生们：我们创建了一颗向日葵。
 
 ![](../images/5-3/2/math-partIV-05.jpg)

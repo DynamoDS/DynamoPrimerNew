@@ -8,9 +8,9 @@ Dynamo 是一个活动的开源开发项目。查看[支持 Dynamo 的软件列�
 
 ### 启动 Dynamo 作为扩展
 
-Dynamo 会随 **“Revit3D”** 、**“FormIt”** 、**“Civil3D”** 等软件一起预安装。
+Dynamo 会随**“Revit3D”**、**“FormIt”**、**“Civil3D”**等软件一起预安装。
 
-要开始使用，请从工具栏面板启动它。根据您使用的软件，通常可以从“菜单”>**“管理”**选项卡找到启动图标。单击 Dynamo 图标 ![](images/dynamoCore-halfSize.png) 以启动它。
+要开始使用，请从工具栏面板启动它。根据您使用的软件，通常可以从“菜单”> **“管理”** 选项卡找到启动图标。单击 Dynamo 图标 ![](images/dynamoCore-halfSize.png) 以启动它。
 
 ![](images/launchdynamofromrevit.jpg)
 
@@ -42,7 +42,7 @@ Dynamo 应用程序可从 [Dynamo 网站](http://dynamobim.com)获得。正式�
 
 要执行此步骤，请下载[“7zip”](https://www.7-zip.org/download.html)并将其安装到您的计算机上。
 
-在压缩文件上单击鼠标右键，然后选择**“全部提取”**...
+在压缩文件上单击鼠标右键，然后选择 **“全部提取”**...
 
 ![](images/02-03Extractzipfile.jpg)
 
@@ -52,7 +52,7 @@ Dynamo 应用程序可从 [Dynamo 网站](http://dynamobim.com)获得。正式�
 
 #### 启动
 
-在目标文件夹中，双击**“DynamoSandbox.exe”**可启动它
+在目标文件夹中，双击 **“DynamoSandbox.exe”** 可启动它
 
 ![](images/02-05Dynamoexe.jpg)
 
@@ -62,6 +62,4 @@ Dynamo 应用程序可从 [Dynamo 网站](http://dynamobim.com)获得。正式�
 
 恭喜您，现在已完成设置 DynamoSandbox，可立即使用！
 
-{% hint style="info" %}
-**“几何图形”** 是 Dynamo Sandbox 中的一项附加功能，仅适用于拥有以下 Autodesk 软件的当前固定期限的许可或许可的用户：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**“几何图形”** 允许用户从 Dynamo Sandbox 输入、创建、编辑和输出几何图形。
-{% endhint %}
+{% hint style="info" %}**“几何图形”** 是 Dynamo Sandbox 中的一项附加功能，仅适用于拥有以下 Autodesk 软件的当前固定期限的许可或许可的用户：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**“几何图形”** 允许用户从 Dynamo Sandbox 输入、创建、编辑和输出几何图形。{% endhint %}

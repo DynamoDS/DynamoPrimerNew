@@ -12,9 +12,9 @@
 
 ![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
 
-> 1. _“Surface.PointAtParameter”_返回给定 UV 坐标处的点
-> 2. _“Surface.NormalAtParameter”_返回给定 UV 坐标处的法线向量
-> 3. _“Surface.GetIsoline”_返回 U 或 V 坐标处的等参曲线 - 请注意“isoDirection”输入。
+> 1. _“Surface.PointAtParameter”_ 返回给定 UV 坐标处的点
+> 2. _“Surface.NormalAtParameter”_ 返回给定 UV 坐标处的法线向量
+> 3. _“Surface.GetIsoline”_ 返回 U 或 V 坐标处的等参曲线 - 请注意“isoDirection”输入。
 
 > 单击下面的链接下载示例文件。
 >
