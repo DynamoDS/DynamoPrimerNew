@@ -96,7 +96,7 @@ Der Befehl Chop teilt Listen gemäß der angegebenen Listenlänge. In gewisser W
 
 Mit **List.Map/Combine** wird eine angegebene Funktion auf die eingegebene Liste angewendet, allerdings geschieht dies eine Ebene tiefer in der Hierarchie. Kombinationen fungieren genau wie Maps. Allerdings sind für Kombinationen mehrere Eingaben entsprechend der Eingabe einer gegebenen Funktion möglich.
 
-_Anmerkung: Diese Übung wurde mit einer früheren Version von Dynamo erstellt. Die Funktion _**List.Map**_ lässt sich großenteils durch die neu hinzugefügte Funktion_ **List@Level** _ersetzen. Weitere Informationen finden Sie weiter _unten_ unter_ [_List@Level_](6-3\_lists-of-lists.md#listlevel).
+_Anmerkung: Diese Übung wurde mit einer früheren Version von Dynamo erstellt. Die Funktion_ **List.Map** _lässt sich großenteils durch die neu hinzugefügte Funktion_ **List@Level** _ersetzen. Weitere Informationen finden Sie weiter _unten_ unter_ [_List@Level_](6-3\_lists-of-lists.md#listlevel).
 
 Ziehen Sie als kurze Einführung den **List.Count**-Block aus dem vorigen Abschnitt heran.
 
