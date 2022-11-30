@@ -10,7 +10,7 @@
 
 最簡易的套件安裝方式是使用 Dynamo 介面中的套件工具列。現在我們使用該工具列並安裝一個套件。在此簡單範例中，我們將安裝某個常見套件，在格線上建立四邊形板。
 
-在 Dynamo 中，移至_「套件」>「搜尋套件...」_
+在 Dynamo 中，移至 _「套件」>「搜尋套件...」_
 
 ![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
 
@@ -32,7 +32,7 @@
 
 上述範例著重針對具有一個自訂節點的套件，不過您可以使用相同程序下載具有多個自訂節點的套件並支援資料檔案。現在使用更全面的套件 DynamoUnfold 示範。
 
-在上述範例中，首先選取_「套件」>「搜尋套件...」_。
+在上述範例中，首先選取 _「套件」>「搜尋套件...」_。
 
 這一次我們搜尋 _DynamoUnfold_，這是一個字，請注意大小寫。當我們看到套件時，按一下「安裝」下載，將 DynamoUnfold 加入您的 Dynamo 資源庫。
 
@@ -73,7 +73,7 @@
 
 探索 Dynamo 套件的另一種方式是線上探索 [Dynamo Package Manager](http://dynamopackages.com)。這是瀏覽套件的好方式，因為儲存庫會根據下載計數與受歡迎程度的順序對套件排序。此外，也是一個可以輕鬆收集套件最近更新相關資訊的方式，因為某些 Dynamo 套件受 Dynamo 版次的版本控制與相依性限制。
 
-在 Dynamo Package Manager 中按一下_「Quads from Rectangular Grid」_，您可以查看其描述、版本、開發人員及可能的相依性。
+在 Dynamo Package Manager 中按一下 _「Quads from Rectangular Grid」_，您可以查看其描述、版本、開發人員及可能的相依性。
 
 ![](../images/6-2/1/dpm2.jpg)
 

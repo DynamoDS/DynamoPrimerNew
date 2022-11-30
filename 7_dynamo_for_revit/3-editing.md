@@ -16,9 +16,7 @@
 
 做為在 Revit 中對參數的快速檢閱，我們還記得存在類型參數與實體參數。兩者都可以在 Dynamo 中進行編輯，但我們在以下練習中將使用實體參數。
 
-{% hint style="info" %} 
-在探索編輯參數的廣泛應用時，您可能希望在 Revit 中使用 Dynamo 編輯大量元素。這是 _運算量極大的_ 作業，即作業可能很慢。若您要編輯大量元素，可能需要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)一節。
-{% endhint %}
+{% hint style="info" %} 在探索編輯參數的廣泛應用時，您可能希望在 Revit 中使用 Dynamo 編輯大量元素。這是_運算量極大的_作業，即作業可能很慢。若您要編輯大量元素，可能需要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)一節。{% endhint %}
 
 ### 單位
 
@@ -52,7 +50,7 @@
 
 ![](images/3/editing-exercise02.jpg)
 
-> 1. 使用_「Select Model Element」_節點選取建築量體。
+> 1. 使用 _「Select Model Element」_ 節點選取建築量體。
 > 2. 使用 _「Element.Parameters」_ 節點，我們可以查詢此量體的所有參數。這包括類型參數與實體參數。
 
 ![](images/3/editing-exercise03.jpg)
@@ -87,4 +85,4 @@
 
 ![](images/3/editing-exercise07.jpg)
 
-> 1. 透過變更此部分圖表中的_滑棒_，我們可以大幅提升正面釉面玻璃的重要性：9.98、10.0、9.71、0.31
+> 1. 透過變更此部分圖表中的 _滑棒_，我們可以大幅提升正面釉面玻璃的重要性：9.98、10.0、9.71、0.31

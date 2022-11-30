@@ -44,7 +44,7 @@
 
 > 1\.使用 **Code Block**，插入以下兩行程式碼：`0..1..#10;` `0..1..#5;`
 >
-> 2\.使用 **Surface.PointAtParameter**，將兩個 Code Block 的值連接至 u 與 _v_。將此節點的_交織_變更為_「笛卡兒積」_。
+> 2\.使用 **Surface.PointAtParameter**，將兩個 Code Block 的值連接至 u 與 _v_。將此節點的 _交織_ 變更為 _「笛卡兒積」_。
 >
 > 3\.輸出顯示了資料結構，在 Dynamo 預覽中也可以看到資料結構。
 
@@ -76,7 +76,7 @@
 ![](../images/5-4/4/n-dimensionallists-2dlistsadvance03.jpg)
 
 > 1. 使用上一個練習中的相同方式，定義包含以下兩行程式碼的 _Code Block_：`0..1..#10;` `0..1..#5;`
-> 2. 將這些輸出連接至兩個 **Surface.PointAtParameter** 節點 (每個節點的_交織_設定為_「笛卡兒積」_)。其中一個節點連接至原始曲面，而另一個連接至偏移曲面。
+> 2. 將這些輸出連接至兩個 **Surface.PointAtParameter** 節點 (每個節點的 _交織_ 設定為 _「笛卡兒積」_ )。其中一個節點連接至原始曲面，而另一個連接至偏移曲面。
 
 ![](../images/5-4/4/n-dimensionallists-2dlistsadvance04.jpg)
 
@@ -100,8 +100,8 @@
 ![](../images/5-4/4/n-dimensionallists-2dlistsadvance07.jpg)
 
 > 1. 在開始之前，請關閉上一步的 **Surface.ByLoft** 預覽，以避免混淆。
-> 2. **List.Transpose** 的替代方法是 **List.Combine**。此作業會對每個子清單使用_「結合器」_。
-> 3. 在此案例中，我們將 **List.Create** 用作_「結合器」_，它將建立包含子清單中所有項目的清單。
+> 2. **List.Transpose** 的替代方法是 **List.Combine**。此作業會對每個子清單使用 _「結合器」_。
+> 3. 在此案例中，我們將 **List.Create** 用作 _「結合器」_，它將建立包含子清單中所有項目的清單。
 > 4. 使用 **Surface.ByLoft** 節點，我們將取得與上一步驟中相同的曲面。在此案例中，轉置更易於使用，但是在資料結構變得更複雜時，**List.Combine** 更可靠。
 
 ![](../images/5-4/4/n-dimensionallists-2dlistsadvance08.jpg)
@@ -124,7 +124,7 @@
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist03.jpg)
 
 > 1. 使用上一個練習中的相同方式，定義包含以下兩行程式碼的 **Code Block**：`0..1..#20;` `0..1..#20;`
-> 2. 將這些輸出連接至兩個 **Surface.PointAtParameter** 節點 (每個節點的交織設定為_「笛卡兒積」_)。其中一個節點連接至原始曲面，而另一個連接至偏移曲面。
+> 2. 將這些輸出連接至兩個 **Surface.PointAtParameter** 節點 (每個節點的交織設定為 _「笛卡兒積」_ )。其中一個節點連接至原始曲面，而另一個連接至偏移曲面。
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist04.jpg)
 
@@ -145,7 +145,7 @@
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist07.jpg)
 
 > 1. **List.Combine** 在本練習中更有效。面對更複雜的資料結構時，我們會使用 **List.Map** 與 **List.Combine** 節點。
-> 2. 將 **List.Create** 用作_「結合器」_會建立更有效的資料結構。
+> 2. 將 **List.Create** 用作 _「結合器」_ 會建立更有效的資料結構。
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist08.jpg)
 

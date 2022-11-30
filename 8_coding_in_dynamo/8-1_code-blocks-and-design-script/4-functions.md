@@ -61,7 +61,7 @@ FunctionName(in1,in2);
 
 ![](../images/8-1/4/functions-exercise-03.jpg)
 
-> 1. 加入 **Code Block** 函數後，我們加上註解和 _sphereRadius_ 變數，它會查詢每個點的 _Z_ 位置。請記住，_inputPt.Z_ 是一個方法，不需要括號。這是_查詢_既有元素的性質，因此不需要任何輸入：
+> 1. 加入 **Code Block** 函數後，我們加上註解和 _sphereRadius_ 變數，它會查詢每個點的 _Z_ 位置。請記住，_inputPt.Z_ 是一個方法，不需要括號。這是 _查詢_ 既有元素的性質，因此不需要任何輸入：
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -82,14 +82,14 @@ FunctionName(in1,in2);
 >     ```
 >     sphereByZ(Pt)
 >     ```
-> 2. 我們看到輸出全部都是空值。為何會發生這種情況？定義函數時，我們會計算 _sphereRadius_ 變數，但沒有定義函數應_傳回_哪些項目做為_輸出_。我們可以在下一步修正此問題。
+> 2. 我們看到輸出全部都是空值。為何會發生這種情況？定義函數時，我們會計算 _sphereRadius_ 變數，但沒有定義函數應 _傳回_ 哪些項目做為 _輸出_。我們可以在下一步修正此問題。
 
 ![](../images/8-1/4/functions-exercise-06.jpg)
 
 > 1. 我們需要在 _sphereByZ_ 函數中加入 `return = sphereRadius;` 行定義函數的輸出，這是重要的步驟。
 > 2. 現在，我們可以看到程式碼區塊的輸出提供每個點的 Z 座標。
 
-現在，我們要編輯_父系_函數以建立實際的圓球。
+現在，我們要編輯 _父系_ 函數以建立實際的圓球。
 
 ![](../images/8-1/4/functions-exercise-07.jpg)
 

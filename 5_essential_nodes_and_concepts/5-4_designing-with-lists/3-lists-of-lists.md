@@ -45,7 +45,7 @@
 ![由上而下](../images/5-4/3/listsoflists-topdownhierachy.jpg)
 
 > 1. 我們使用 **Code Block** 定義了兩個範圍：`0..2; 0..3;`
-> 2. 這些範圍連接至 **Point.ByCoordinates** 節點，交織設定為_「笛卡兒積」_。這會建立點的格線，也會傳回清單的清單作為輸出。
+> 2. 這些範圍連接至 **Point.ByCoordinates** 節點，交織設定為 _「笛卡兒積」_。這會建立點的格線，也會傳回清單的清單作為輸出。
 > 3. 請注意，**Watch** 節點可產生 3 個清單，每個清單中包含 4 個項目。
 > 4. 使用 **List.GetItemAtIndex** 時，透過索引 0，Dynamo 會選取第一個清單及其所有內容。其他程式可能會在資料結構中選取每個清單的第一個項目，但 Dynamo 在處理資料時，採用由上而下的階層。
 
@@ -62,13 +62,13 @@
 ![練習](../images/5-4/3/listsoflists-flatten01.jpg)
 
 > 1. 在 **Code Block** 中插入一行程式碼以定義範圍：`-250..-150..#4;`
-> 2. 透過將 _Code Block_ 插入 **Point.ByCoordinates** 節點的 _x_ 與 _y_ 輸入，我們將交織設定為_「笛卡兒積」_以取得點的格線。
+> 2. 透過將 _Code Block_ 插入 **Point.ByCoordinates** 節點的 _x_ 與 _y_ 輸入，我們將交織設定為 _「笛卡兒積」_ 以取得點的格線。
 > 3. **Watch** 節點顯示我們有一個清單的清單。
 > 4. **PolyCurve.ByPoints** 節點將參考每個清單，並建立各自的 polycurve。請注意，在 Dynamo 預覽中有四個 polycurve，分別代表格線的每一列。
 
 ![練習](../images/5-4/3/listsoflists-flatten02.jpg)
 
-> 1. 透過在 polycurve 節點前插入_平坦化_，我們建立了一個所有點的清單。**PolyCurve.ByPoints** 節點會參考清單來建立一條曲線，由於所有點都在一個清單上，因此我們將得到通過整個清單中所有點的一條曲折 polycurve。
+> 1. 透過在 polycurve 節點前插入 _平坦化_，我們建立了一個所有點的清單。**PolyCurve.ByPoints** 節點會參考清單來建立一條曲線，由於所有點都在一個清單上，因此我們將得到通過整個清單中所有點的一條曲折 polycurve。
 
 此外，還提供對隔離層的資料進行平坦化的選項。使用 **List.Flatten** 節點，您可以定義從階層頂部進行平坦化的資料層數量。如果您對運用複雜的資料結構感到吃力，而這些資料結構不一定與您的工作流程相關，則該工具確實非常有用。其他選項會將平坦化節點用作 **List.Map** 中的函數。我們將在下面詳細討論 **List.Map**。
 
@@ -108,7 +108,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 _**List.Map**_ �
 >
 >     輸入此程式碼後，Code Block 會建立 Nx 與 Ny 兩個輸入。
 > 2. 使用兩個 _Integer Slider_ 連接至 **Code Block** 以定義 _Nx_ 與 _Ny_ 值。
-> 3. 將 Code Block 每一行分別連接至 **Point.ByCoordinates** 節點的 _X_ 與 _Y_ 輸入。在節點上按一下右鍵，選取「交織」，然後選擇_「笛卡兒積」_。這會建立點的格線。由於我們定義的範圍是從 -50 到 50，因此將跨越預設的 Dynamo 格線。
+> 3. 將 Code Block 每一行分別連接至 **Point.ByCoordinates** 節點的 _X_ 與 _Y_ 輸入。在節點上按一下右鍵，選取「交織」，然後選擇 _「笛卡兒積」_。這會建立點的格線。由於我們定義的範圍是從 -50 到 50，因此將跨越預設的 Dynamo 格線。
 > 4. _**Watch**_ 節點會顯示已建立的點。請注意資料結構。我們已建立一個清單的清單。每個清單都代表格線的一列點。
 
 ![練習](../images/5-4/3/listsoflists-map02(1).jpg)
@@ -247,7 +247,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 ![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
 
 > 1. 使用 **Code Block**，插入這兩行程式碼，然後分別連接到 **Surface.PointAtParameter** 的 _u_ 與 _v_ 輸入：`-50..50..#3;` `-50..50..#5;`
-> 2. 請確保將 **Surface.PointAtParameter** 的「交織」設定為_「笛卡兒積」_。
+> 2. 請確保將 **Surface.PointAtParameter** 的「交織」設定為 _「笛卡兒積」_。
 > 3. **Watch** 節點顯示我們有一個 3 個清單的清單，每個清單有 5 個項目。
 
 在這一步，我們要查詢所建立格線內的中心點。為了執行此作業，我們將選取中間清單內的中間點。很合理，對嗎？
@@ -276,8 +276,8 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 ![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
 
 > 1. 採用相同的邏輯，使用 **List.ReplaceItemAtIndex** 將中間清單更換為我們修改後的清單。
-> 2. 請注意，對這兩個節點定義索引的 **Code Block** 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
-> 3. 透過選取位於_索引 1_ 的清單，我們可以在 Dynamo 預覽中看到亮顯的資料結構。我們已成功將移動點合併至原始資料結構中。
+> 2. 請注意，對這兩個節點定義索引的 **Code Block** __ 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
+> 3. 透過選取位於 _索引 1_ 的清單，我們可以在 Dynamo 預覽中看到亮顯的資料結構。我們已成功將移動點合併至原始資料結構中。
 
 有許多方式可以使用這組點建立曲面。在此案例中，我們將對曲線進行斷面混成，以建立曲面。
 

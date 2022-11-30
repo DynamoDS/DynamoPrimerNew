@@ -12,7 +12,7 @@ Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此�
 
 ### 安裝 Mesh Toolkit
 
-在 Dynamo 中，移至頂部功能表列的_「套件」>「搜尋套件...」_。在搜尋欄位中，鍵入 _MeshToolkit_ (一個字，注意大小寫)。按一下「安裝」以開始下載。非常簡單！
+在 Dynamo 中，移至頂部功能表列的 _「套件」>「搜尋套件...」_。在搜尋欄位中，鍵入 _MeshToolkit_ (一個字，注意大小寫)。按一下「安裝」以開始下載。非常簡單！
 
 ![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
 
@@ -30,37 +30,37 @@ Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此�
 
 ![](../images/6-2/2/meshToolkitcasestudy-exercise01.jpg)
 
-> 1. **檔案路徑：**找到要匯入的網格檔案 (_stanford_bunny_tri.obj_)。支援的檔案類型為 .mix 和 .obj
-> 2. **Mesh.ImportFile：**連接檔案路徑以匯入網格
+> 1. **檔案路徑：** 找到要匯入的網格檔案 (_stanford_bunny_tri.obj_)。支援的檔案類型為 .mix 和 .obj
+> 2. **Mesh.ImportFile：** 連接檔案路徑以匯入網格
 
 ![](../images/6-2/2/meshToolkitcasestudy-exercise02.jpg)
 
-> 1. **Point.ByCoordinates：**建構一個點 - 這將是弧的中心。
-> 2. **Arc.ByCenterPointRadiusAngle：**在該點週圍建構一個弧。這條曲線將用來定位一系列平面。 __設定如下： __ `radius: 40, startAngle: -90, endAngle:0`
+> 1. **Point.ByCoordinates：** 建構一個點 - 這將是弧的中心。
+> 2. **Arc.ByCenterPointRadiusAngle：** 在該點週圍建構一個弧。這條曲線將用來定位一系列平面。 __設定如下： __ `radius: 40, startAngle: -90, endAngle:0`
 
 建立一系列沿著弧轉向的平面。
 
 ![](../images/6-2/2/meshToolkitcasestudy-exercise03.jpg)
 
 > 1. **Code Block**：建立 25 個介於 0 和 1 之間的數字。
-> 2. **Curve.PointAtParameter：**將弧連接到 _curve_ 輸入並將 Code Block 輸出連接至 _param_ 輸入以擷取出一系列沿著曲線的點。
-> 3. **Curve.TangentAtParameter：**連接與前一個節點相同的輸入。
-> 4. **Plane.ByOriginNormal：**將點連接至 _origin_ 輸入並將 vector 連接至 _normal_ 輸入，在每個點建立一系列平面。
+> 2. **Curve.PointAtParameter：** 將弧連接到 _curve_ 輸入並將 Code Block 輸出連接至 _param_ 輸入以擷取出一系列沿著曲線的點。
+> 3. **Curve.TangentAtParameter：** 連接與前一個節點相同的輸入。
+> 4. **Plane.ByOriginNormal：** 將點連接至 _origin_ 輸入並將 vector 連接至 _normal_ 輸入，在每個點建立一系列平面。
 
 接下來，我們將使用這些平面與網格相交。
 
 ![](../images/6-2/2/meshToolkitcasestudy-exercise04.jpg)
 
-> 1. **Mesh.Intersect：**將這些平面與匯入的網格相交，建立一系列 PolyCurve 輪廓線。在節點上按一下右鍵，並將交織設定為最長
-> 2. **PolyCurve.Curves：**將 PolyCurve 切斷為曲線段。
-> 3. **Curve.EndPoint：**擷取每條曲線的端點。
-> 4. **NurbsCurve.ByPoints：**使用點來建構 NURBS 曲線。使用設定為 _True_ 的 Boolean 節點，以封閉曲線。
+> 1. **Mesh.Intersect：** 將這些平面與匯入的網格相交，建立一系列 PolyCurve 輪廓線。在節點上按一下右鍵，並將交織設定為最長
+> 2. **PolyCurve.Curves：** 將 PolyCurve 切斷為曲線段。
+> 3. **Curve.EndPoint：** 擷取每條曲線的端點。
+> 4. **NurbsCurve.ByPoints：** 使用點來建構 NURBS 曲線。使用設定為 _True_ 的 Boolean 節點，以封閉曲線。
 
 在繼續之前，請關閉某些節點 (例如：Mesh.ImportFile、Curve.EndPoint、Plane.ByOriginNormal 以及 Arc.ByCenterPointRadiusAngle) 的預覽，以更清楚地查看結果。
 
 ![](../images/6-2/2/meshToolkitcasestudy-exercise05.jpg)
 
-> 1. **Surface.ByPatch：**為每條輪廓線建構曲面修補，以便建立網格的「切片」。
+> 1. **Surface.ByPatch：** 為每條輪廓線建構曲面修補，以便建立網格的「切片」。
 
 新增第二組切片，產生格子/蛋盒的效果。
 

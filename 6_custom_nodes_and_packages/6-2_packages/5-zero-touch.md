@@ -30,7 +30,7 @@ Zero-touch 套件是使用者定義之自訂節點的良好補充。下表列出
 
 我們從下載 AForge 開始。在 [AForge 下載頁面](http://www.aforgenet.com/framework/downloads.html)上，選取 _[Download Installer (下載安裝程式)]_，並在下載完成後進行安裝。
 
-在 Dynamo 中，建立新檔案，然後選取_「檔案」>「匯入資源庫...」_
+在 Dynamo 中，建立新檔案，然後選取 _「檔案」>「匯入資源庫...」_
 
 ![](../images/6-2/5/casestudyaforge01.jpg)
 
@@ -39,7 +39,7 @@ Zero-touch 套件是使用者定義之自訂節點的良好補充。下表列出
 ![](../images/6-2/5/casestudyaforge02.jpg)
 
 > 1. 在快顯視窗中，導覽至 AForge 安裝的「Release」資料夾。該資料夾可能位於類似如下的資料夾中：_C:\\Program Files (x86)\\AForge.NET\\Framework\\Release_。
-> 2. **AForge.Imaging.dll：**在此案例研究中，我們只希望使用 AForge 資源庫中的這個檔案。選取此 _.dll_，然後按一下_「開啟」_。
+> 2. **AForge.Imaging.dll：** 在此案例研究中，我們只希望使用 AForge 資源庫中的這個檔案。選取此 _.dll_，然後按一下 _「開啟」_。
 
 回到 Dynamo，您應該會看到資源庫中已加入 **AForge** 節點群組。現在，可以從我們的視覺程式存取 AForge 影像資源庫！
 
@@ -97,7 +97,7 @@ File Path 節點僅提供我們所選影像的路徑字串。接下來，我們�
 
 ### 練習 2 - 建立矩形
 
-現在我們已介紹了一些基本影像處理，接下來使用影像來驅動 Dynamo 幾何圖形！在本練習中，基本上我們的目的是使用 AForge 與 Dynamo 執行影像的_「即時追蹤」_。我們將使用簡易的作業從參考影像中擷取矩形，不過 AForge 中提供了執行更複雜作業的工具。我們將使用下載練習檔案中的 _02-RectangleCreation.dyn_。
+現在我們已介紹了一些基本影像處理，接下來使用影像來驅動 Dynamo 幾何圖形！在本練習中，基本上我們的目的是使用 AForge 與 Dynamo 執行影像的 _「即時追蹤」_。我們將使用簡易的作業從參考影像中擷取矩形，不過 AForge 中提供了執行更複雜作業的工具。我們將使用下載練習檔案中的 _02-RectangleCreation.dyn_。
 
 ![](../images/6-2/5/casestudyaforgeexercise2-01.jpg)
 

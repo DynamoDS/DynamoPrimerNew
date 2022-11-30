@@ -28,9 +28,9 @@
 
 ![](../images/6-1/1/customnodeintro-customnodeenvironment02.jpg)
 
-> 1. **名稱：**Percentage
+> 1. **名稱：** Percentage
 > 2. **描述**：計算一個值相對於另一個值的百分比。
-> 3. **品類：**Math.Functions
+> 3. **品類：** Math.Functions
 
 這將開啟一個具有黃色背景的圖元區，表示您正在自訂節點內工作。在此畫布上，您可以存取所有核心 Dynamo 節點，以及 Input 和 Output 節點，其標示資料流進和流出自訂節點。您可以在「Input」>「Basic」中找到它們。
 
@@ -38,8 +38,8 @@
 
 ![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
 
-> 1. **Input：**Input 節點在自訂節點上建立輸入埠。Input 節點的語法為 _input_name : datatype = default_value(選擇性)_。
-> 2. **Output：**類似於 Input，將在自訂節點上建立和命名輸出埠。請考慮對輸入埠和輸出埠新增**自訂註解**，以提示輸入和輸出類型。在[建立自訂節點一節](2-creating.md)將會更詳細討論此問題。
+> 1. **Input：** Input 節點在自訂節點上建立輸入埠。Input 節點的語法為 _input_name : datatype = default_value(選擇性)_。
+> 2. **Output：** 類似於 Input，將在自訂節點上建立和命名輸出埠。請考慮對輸入埠和輸出埠新增**自訂註解**，以提示輸入和輸出類型。在[建立自訂節點一節](2-creating.md)將會更詳細討論此問題。
 
 您可以將此自訂節點儲存為 .dyf (而非標準 .dyn) 檔案，它將會自動新增至您的階段作業和將來的階段作業中。您將在資源庫的「Add-ons」區段中找到自訂節點。
 

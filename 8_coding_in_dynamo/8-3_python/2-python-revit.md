@@ -88,7 +88,7 @@ OUT = [doc,uiapp,app]
 
 ![](../images/8-3/2/python&revit-exercise02-01.jpg)
 
-開啟_「概念量體」資料夾_，然後使用_公制量體.rft_ 樣板檔。
+開啟 _「概念量體」資料夾_，然後使用 _公制量體.rft_ 樣板檔。
 
 ![](../images/8-3/2/python&revit-exercise02-02.jpg)
 
@@ -156,8 +156,8 @@ OUT = CurveByPoints.ByReferencePoints(refPtArray)
 
 ![](../images/8-3/2/python&revit-exercise03-02.jpg)
 
-> 1. **Select Model Element 節點：**按一下每個節點的選取按鈕，然後選取 Revit 中的對應曲線。
-> 2. **Code Block：** 使用語法 `0..1..#x;`_，_將介於 0 與 20 之間的整數滑棒連接至 _x_ 輸入。此作業會指定在兩條曲線之間繪製的樑數量。
+> 1. **Select Model Element 節點：** 按一下每個節點的選取按鈕，然後選取 Revit 中的對應曲線。
+> 2. **Code Block：** 使用語法 `0..1..#x;` _，_ 將介於 0 與 20 之間的整數滑棒連接至 _x_ 輸入。此作業會指定在兩條曲線之間繪製的樑數量。
 > 3. **Structural Framing Types：** 在此我們將從下拉式功能表中選擇預設的 W12x26 樑。
 > 4. **Levels：** 選取「Level 1」。
 
