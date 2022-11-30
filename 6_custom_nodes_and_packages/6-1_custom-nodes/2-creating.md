@@ -38,7 +38,7 @@ Ahora que tenemos una superficie base y un conjunto de coordenadas UV, podemos i
 
 ![](../images/6-1/2/customnodeforuvmappingptI-04.jpg)
 
-> 1. **File Path**: seleccione la ruta de archivo de la superficie que desea importar. El tipo de archivo debe ser .SAT. Haga clic en el botón _"Examinar"_ y desplácese hasta el archivo _UVmapping\\_srf.sat_ del archivo .zip que hemos descargado anteriormente.
+> 1. **File Path**: seleccione la ruta de archivo de la superficie que desea importar. El tipo de archivo debe ser .SAT. Haga clic en el botón _"Examinar"_ y desplácese hasta el archivo _UVmapping_srf.sat_ del archivo .zip que hemos descargado anteriormente.
 > 2. **Geometry.ImportFromSAT**: conecte la ruta de archivo para importar la superficie. La superficie importada se muestra en la vista preliminar de la geometría.
 > 3. **UV**: conecte la salida del parámetro UV a un nodo _UV.U_ y un nodo _UV.V_.
 > 4. **Surface.PointAtParameter**: conecte la superficie importada, así como las coordenadas u y v. Ahora debería ver una rejilla de puntos 3D en la superficie de destino.

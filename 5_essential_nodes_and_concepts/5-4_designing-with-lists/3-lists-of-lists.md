@@ -96,7 +96,7 @@ El comando "Chop" divide listas en función de una longitud de lista determinada
 
 **List.Map/Combine** aplica una función establecida a una lista de entradas, pero un nivel hacia abajo en la jerarquía. Las combinaciones son iguales a las asignaciones, excepto que las combinaciones pueden tener varias entradas correspondientes a la entrada de una determinada función.
 
-_Nota: Este ejercicio se ha creado con una versión anterior de Dynamo. Gran parte de la funcionalidad de_ **List.Map** _se ha resuelto con la adición de la función_ **List@Level**_. Para obtener más información, consulte_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _a continuación._
+_Nota: Este ejercicio se ha creado con una versión anterior de Dynamo. Gran parte de la funcionalidad de_ **List.Map** _se ha resuelto con la adición de la función_ **List@Level** _. Para obtener más información, consulte_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _a continuación._
 
 Como introducción rápida, examinemos el nodo **List.Count** de una sección anterior.
 
@@ -276,7 +276,7 @@ Ahora que hemos modificado la lista, debemos volver a insertarla en la estructur
 ![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
 
 > 1. Siguiendo la misma lógica, utilice **List.ReplaceItemAtIndex** para reemplazar la lista central por la lista modificada.
-> 2. Observe que los **bloques de código** que definen el índice de estos dos nodos son 1 y 2, que coinciden con la consulta original del **bloque de código** (_points[1][2]_).
+> 2. Observe que los **bloques de código**__ que definen el índice de estos dos nodos son 1 y 2, que coinciden con la consulta original del **bloque de código** (_points[1][2]_).
 > 3. Al seleccionar la lista en el _índice 1_, veremos la estructura de datos resaltada en la vista preliminar de Dynamo. Hemos fusionado correctamente el punto desplazado con la estructura de datos original.
 
 Hay muchas formas de crear una superficie a partir de este conjunto de puntos. En este caso, vamos a crear una superficie mediante la solevación conjunta de curvas.

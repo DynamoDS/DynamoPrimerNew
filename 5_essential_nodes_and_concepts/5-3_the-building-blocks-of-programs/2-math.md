@@ -10,7 +10,7 @@ Los operadores son un conjunto de componentes que utilizan funciones algebraicas
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiplicar (**\***) | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Multiplication.jpg) | Multiplicar ( ***** ) | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Division.jpg)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ejercicio: la fórmula de la espiral dorada
@@ -27,7 +27,7 @@ Combine operadores y variables para formar una relación más compleja mediante 
 
 1\. Cree la secuencia numérica que representa la "t" de la ecuación paramétrica, por lo que debemos utilizar una lista lo suficientemente grande como para definir una espiral.
 
-**Number Sequence**: defina una secuencia de números basada en tres entradas: _start, amount_ y_ step_.
+**Number Sequence**: defina una secuencia de números basada en tres entradas: _start, amount_ y _step_.
 
 ![](../images/5-3/2/math-partI-01.jpg)
 

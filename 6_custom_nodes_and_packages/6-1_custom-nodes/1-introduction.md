@@ -38,7 +38,7 @@ Se abre un lienzo con un fondo de color amarillo, lo que indica que está trabaj
 
 ![](../images/6-1/1/customnodeintro-customnodeenvironment04.jpg)
 
-> 1. **Entradas**: los nodos de entrada crean puertos de entrada en el nodo personalizado. La sintaxis de un nodo de entrada es _nombre\\_entrada : tipo de datos = valor\\_por defecto(opcional)._
+> 1. **Entradas**: los nodos de entrada crean puertos de entrada en el nodo personalizado. La sintaxis de un nodo de entrada es _nombre_entrada : tipo de datos = valor_por defecto(opcional)._
 > 2. **Salidas**: son similares a las entradas; estas crearán puertos en el nodo personalizado y les asignarán un nombre. Considere la posibilidad de añadir un **comentario personalizado** a los puertos de entrada y salida para que se muestren como sugerencia en los tipos de entrada y salida. Esto se explica con más detalle en la sección [Creación de nodos personalizados](2-creating.md).
 
 Puede guardar este nodo personalizado como un archivo .dyf (en lugar de como un archivo .dyn estándar); este se añadirá automáticamente a la sesión actual y futuras. Encontrará el nodo personalizado en la sección Complementos de la biblioteca.

@@ -2,9 +2,7 @@
 
 Dynamo es una aplicación de [programación visual](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo) que se puede descargar y ejecutar en modo "Sandbox" independiente o como un módulo de extensión para otro software como Revit, FormIt o Civil 3D.
 
-{% hint style="info" %} 
-Obtenga más información sobre la [diferencia entre **Dynamo Core**, **Revit** y **Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) 
-{% endhint %}
+{% hint style="info" %} Obtenga más información sobre la [diferencia entre **Dynamo Core**, **Revit** y **Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) {% endhint %}
 
 ### El proceso
 

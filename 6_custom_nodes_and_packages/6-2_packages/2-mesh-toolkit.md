@@ -26,11 +26,11 @@ En Dynamo, vaya a _Paquetes > Buscar paquetes_ en la barra de menús superior. E
 
 En este ejemplo, examinaremos el nodo Intersect del Kit de herramientas de malla. Importaremos una malla y la intersecaremos con una serie de planos de entrada para crear cortes. Este es el punto inicial de la preparación del modelo para la fabricación en una herramienta de corte láser o por chorro de agua, o un dispositivo de fresado CNC.
 
-Abra primero _Mesh-Toolkit\\_Intersect-Mesh.dyn in Dynamo._
+Abra primero _Mesh-Toolkit_Intersect-Mesh.dyn in Dynamo._
 
 ![](../images/6-2/2/meshToolkitcasestudy-exercise01.jpg)
 
-> 1. **File Path**: busque el archivo de malla que desea importar (_stanford\\_bunny\\_tri.obj_). Los tipos de archivo admitidos son .mix y .obj.
+> 1. **File Path**: busque el archivo de malla que desea importar (_stanford_bunny_tri.obj_). Los tipos de archivo admitidos son .mix y .obj.
 > 2. **Mesh.ImportFile**: conecte la ruta de archivo para importar la malla.
 
 ![](../images/6-2/2/meshToolkitcasestudy-exercise02.jpg)
