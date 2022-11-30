@@ -28,8 +28,8 @@
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 
-> 1. _“NurbsCurve.ByControlPoints”_使用一列点作为控制点
-> 2. _“NurbsCurve.ByPoints”_通过一列点绘制曲线
+> 1. _“NurbsCurve.ByControlPoints”_ 使用一列点作为控制点
+> 2. _“NurbsCurve.ByPoints”_ 通过一列点绘制曲线
 
 > 单击下面的链接下载示例文件。
 >
