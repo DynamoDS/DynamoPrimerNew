@@ -108,7 +108,7 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 ![](../images/6-2/5/casestudyaforgeexercise2-02.jpg)
 
-> 1. 将“BlobCounter”添加到画布，然后我们需要一种方法来处理图像（类似于上一个练习中的**“BaseFilter.Apply”** 工具）。
+> 1. 将“BlobCounter”添加到画布，然后我们需要一种方法来处理图像（类似于上一个练习中的 **“BaseFilter.Apply”** 工具）。
 
 遗憾的是，“Process Image”节点在 Dynamo 库中不会立即显示。这是因为该函数在 AForge 源代码中可能不可见。为了解决此问题，我们需要找到解决方法。
 
