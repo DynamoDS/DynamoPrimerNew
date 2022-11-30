@@ -28,9 +28,9 @@ Zero-touch パッケージは、ユーザが定義するカスタム ノード�
 
 このケース スタディでは、[AForge](http://www.aforgenet.com) の外部 _.dll_ ライブラリをインポートする方法について説明します。AForge は、イメージ処理機能から人工知能まで、さまざまな機能を提供する堅固なライブラリです。ここでは、AForge のイメージ クラスを使用して、いくつかのイメージ処理を行う方法について説明します。
 
-最初に、AForge をダウンロードします。[AForge のダウンロード ページ](http://www.aforgenet.com/framework/downloads.html)で_[Download Installer]_を選択し、ダウンロードが完了したらインストールを実行します。
+最初に、AForge をダウンロードします。[AForge のダウンロード ページ](http://www.aforgenet.com/framework/downloads.html)で _[Download Installer]_ を選択し、ダウンロードが完了したらインストールを実行します。
 
-Dynamo で、新しいファイルを作成して_[ファイル] > [ライブラリを読み込む...]_を選択します。
+Dynamo で、新しいファイルを作成して _[ファイル] > [ライブラリを読み込む...]_ を選択します。
 
 ![](../images/6-2/5/casestudyaforge01.jpg)
 
@@ -39,9 +39,9 @@ Dynamo で、新しいファイルを作成して_[ファイル] > [ライブラ
 ![](../images/6-2/5/casestudyaforge02.jpg)
 
 > 1. ポップアップ ウィンドウで、AForge のインストール環境のリリース フォルダにナビゲートします。通常は、_C:¥Program Files (x86)¥AForge.NET¥Framework¥Release_ などのフォルダになります。
-> 2. このケース スタディでは、**AForge.Imaging.dll** だけを使用します。この _.dll_ ファイルを選択して_[開く]_をクリックします。
+> 2. このケース スタディでは、**AForge.Imaging.dll** だけを使用します。この _.dll_ ファイルを選択して _[開く]_ をクリックします。
 
-Dynamo に戻ると、ノードの**[AForge]**グループがライブラリに新しく表示されます。これで、ビジュアル プログラミングから AForge のイメージ ライブラリにアクセスできるようになりました。
+Dynamo に戻ると、ノードの **[AForge]** グループがライブラリに新しく表示されます。これで、ビジュアル プログラミングから AForge のイメージ ライブラリにアクセスできるようになりました。
 
 ![](../images/6-2/5/casestudyaforge03.jpg)
 

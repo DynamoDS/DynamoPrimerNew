@@ -129,7 +129,7 @@ List.Count ノードによって 5 という値が生成されていることに
 
 ### **List.Combine**
 
-_注: この演習は前バージョンの Dynamo を使用して作成されました。List.Combine の機能に関する問題の大半は、_**List@Level**_ 機能の追加によって解決されました。詳細については、後述の_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _を参照してください。_
+_注: この演習は前バージョンの Dynamo を使用して作成されました。List.Combine の機能に関する問題の大半は、_ **List@Level** _機能の追加によって解決されました。詳細については、後述の _ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _を参照してください。_
 
 この演習では、**List.Combine** ノードを使用して、個別のオブジェクト リストに関数を適用する方法を説明します。
 

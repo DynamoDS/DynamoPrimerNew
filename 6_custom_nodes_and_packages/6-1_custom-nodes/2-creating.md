@@ -16,7 +16,7 @@ Dynamo では、いくつかの方法でカスタム ノードを作成するこ
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-最初に、カスタム ノード内にネストするグラフを作成します。この例では、UV 座標を使用して、基準となるサーフェスから目的のサーフェスにポリゴンをマッピングするグラフを作成します。この UV マッピング プロセスは頻繁に使用するプロセスであるため、カスタム ノードの演習素材として適しています。サーフェスと UV 空間の詳細については、「[サーフェス](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)」ページを参照してください。完全なグラフは、上記でダウンロードした .zip ファイルの _UVmapping\\_Custom-Node.dyn_ になります。
+最初に、カスタム ノード内にネストするグラフを作成します。この例では、UV 座標を使用して、基準となるサーフェスから目的のサーフェスにポリゴンをマッピングするグラフを作成します。この UV マッピング プロセスは頻繁に使用するプロセスであるため、カスタム ノードの演習素材として適しています。サーフェスと UV 空間の詳細については、「[サーフェス](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md)」ページを参照してください。完全なグラフは、上記でダウンロードした .zip ファイルの _UVmapping_Custom-Node.dyn_ になります。
 
 ![](../images/6-1/2/customnodeforuvmappingptI-02.jpg)
 

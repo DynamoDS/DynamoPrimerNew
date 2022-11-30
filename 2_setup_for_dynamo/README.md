@@ -62,6 +62,4 @@ ZIP ファイルを右クリックして、[**すべて展開**]を選択しま�
 
 これで、DynamoSandbox を使用するための設定が完了しました。
 
-{% hint style="info" %} 
-**Geometry** は、Dynamo Sandbox の追加機能です。この機能は、現在 Revit、Robot Structural Analysis、FormIt、Civil 3D の Autodesk ソフトウェアのサブスクリプションまたはライセンスを所有しているユーザのみが使用できます。**Geometry** を使用すると、Dynamo Sandbox からジオメトリを読み込み、作成、編集、書き出すことができます。
-{% endhint %}
+{% hint style="info" %} **Geometry** は、Dynamo Sandbox の追加機能です。この機能は、現在 Revit、Robot Structural Analysis、FormIt、Civil 3D の Autodesk ソフトウェアのサブスクリプションまたはライセンスを所有しているユーザのみが使用できます。**Geometry** を使用すると、Dynamo Sandbox からジオメトリを読み込み、作成、編集、書き出すことができます。{% endhint %}

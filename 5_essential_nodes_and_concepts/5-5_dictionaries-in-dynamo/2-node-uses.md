@@ -1,12 +1,12 @@
 # [Dictionary]カテゴリのノード
 
-Dynamo 2.0 では[Dictionary]カテゴリのさまざまなノードが公開されており、使用することができます。_作成、アクション、クエリー_のノードがあります。
+Dynamo 2.0 では[Dictionary]カテゴリのさまざまなノードが公開されており、使用することができます。_作成、アクション、クエリー_ のノードがあります。
 
 ![](../images/5-5/2/dictionarynodes-nodes.jpg)
 
 #### Create
 
-1. `Dictionary.ByKeysValues` は、指定した値とキーでディクショナリを作成します_(項目数は、最短のリストの入力によります)_。
+1. `Dictionary.ByKeysValues` は、指定した値とキーでディクショナリを作成します。_(項目数は、最短のリストの入力によります)_
 
 #### Action
 

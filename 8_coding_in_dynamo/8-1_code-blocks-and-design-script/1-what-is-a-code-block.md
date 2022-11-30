@@ -18,7 +18,7 @@
 
 ### Code Block ノードを作成する
 
-Code Block ノードは、_[Core] > [Input] > [Actions] > [Code Block]_で使用することができます。または、キャンバス上でダブルクリックするだけで Code Block ノードが表示されます。この方が簡単です。Code Block ノードは頻繁に使用されるため、キャンバス上でダブルクリックするだけで Code Block ノードが表示されるようになっています。
+Code Block ノードは、_[Core] > [Input] > [Actions] > [Code Block]_ で使用することができます。または、キャンバス上でダブルクリックするだけで Code Block ノードが表示されます。この方が簡単です。Code Block ノードは頻繁に使用されるため、キャンバス上でダブルクリックするだけで Code Block ノードが表示されるようになっています。
 
 ![](../images/8-1/1/creatingcodeblocknodes.jpg)
 
