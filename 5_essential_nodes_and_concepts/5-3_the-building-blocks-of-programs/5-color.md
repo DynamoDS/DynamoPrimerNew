@@ -32,7 +32,7 @@ Les couleurs du tableau ci-dessous correspondent à l’**espace de couleurs HSB
 
 ### Intervalles de couleurs
 
-L’intervalle de couleurs est semblable au nœud **Remap Range** de l’exercice [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention"): il remappe une liste de nombres dans un autre domaine. Au lieu d’effectuer le mappage vers un domaine _nombre_, il mappe vers un _dégradé de couleurs_ basé sur des numéros d’entrée allant de 0 à 1.
+L’intervalle de couleurs est semblable au nœud **Remap Range** de l’exercice [\#part-ii-from-logic-to-geometry : il remappe une liste de nombres dans un autre domaine. Au lieu d’effectuer le mappage vers un domaine _nombre_, il mappe vers un _dégradé de couleurs_ basé sur des numéros d’entrée allant de 0 à 1.
 
 Le nœud actuel fonctionne bien, mais il peut être un peu délicat de tout faire fonctionner la première fois. La meilleure façon de se familiariser avec le dégradé de couleurs est de le tester de manière interactive. Vous allez faire un exercice rapide pour découvrir comment configurer un dégradé avec des couleurs de sortie correspondant aux nombres.
 

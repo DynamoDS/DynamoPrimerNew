@@ -26,7 +26,7 @@ Les packages Zero Touch sont un complément utile aux nœuds personnalisés dé
 
 ## Étude de cas - Importation AForge
 
-Dans cette étude de cas, vous découvrirez comment importer la bibliothèque [.dll](http://www.aforgenet.com) externe _AForge_. AForge est une bibliothèque robuste qui offre une gamme de fonctionnalités allant du traitement d’images à l’intelligence artificielle. Vous allez utiliser la classe d'images dans AForge pour effectuer quelques exercices de traitement d'images ci-dessous.
+Dans cette étude de cas, vous découvrirez comment importer la bibliothèque _.dll_ externe [AForge](http://www.aforgenet.com). AForge est une bibliothèque robuste qui offre une gamme de fonctionnalités allant du traitement d’images à l’intelligence artificielle. Vous allez utiliser la classe d'images dans AForge pour effectuer quelques exercices de traitement d'images ci-dessous.
 
 Tout d’abord, téléchargez AForge. Sur la [page de téléchargement AForge](http://www.aforgenet.com/framework/downloads.html), sélectionnez _[Download Installer]_ (Télécharger le programme d’installation). À l’issue du téléchargement, effectuez l’installation.
 
@@ -55,7 +55,7 @@ De retour dans Dynamo, un groupe de nœuds **AForge** doit apparaître dans la b
 
 Maintenant que la bibliothèque a été importée, commencez simplement par le premier exercice (_01-EdgeDetection.dyn_). Vous effectuerez quelques traitements d’images de base sur une image d’exemple pour découvrir comment les filtres d’images AForge sont appliqués. Vous allez utiliser le nœud _« Watch Image »_ pour afficher les résultats et appliquer dans Dynamo des filtres semblables à ceux de Photoshop.
 
-Pour importer une image, ajoutez un nœud [File Path](https://www.flickr.com/photos/wwworks/667298782) dans la zone de dessin et sélectionnez « soapbubbles.jpg » dans le dossier des exercices (crédit photo : **flickr**).
+Pour importer une image, ajoutez un nœud **File Path** dans la zone de dessin et sélectionnez « soapbubbles.jpg » dans le dossier des exercices (crédit photo : [flickr](https://www.flickr.com/photos/wwworks/667298782)).
 
 ![](../images/6-2/5/casestudyaforgeexercise1-01.jpg)
 

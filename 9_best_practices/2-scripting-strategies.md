@@ -23,9 +23,7 @@ Les scripts de texte peuvent établir des relations plus complexes que la progra
 | **Python**         | Oui         | Oui           | Partiellement          | Oui                | Non            |
 | **ZeroTouch (C#)** | Non          | Non            | Non                 | Oui                | Non            |
 
-{% hint style="info" %} 
-Reportez-vous à la rubrique [Références concernant la création et la gestion des scripts](13-3\_scripting-reference.md) pour obtenir une liste des éléments auxquels chaque bibliothèque Dynamo vous donne accès. 
-{% endhint %}
+{% hint style="info" %} Reportez-vous à la rubrique [Références concernant la création et la gestion des scripts](13-3\_scripting-reference.md) pour obtenir une liste des éléments auxquels chaque bibliothèque Dynamo vous donne accès. {% endhint %}
 
 ### Penser de manière paramétrique
 

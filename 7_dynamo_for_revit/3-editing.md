@@ -16,9 +16,7 @@ Une puissante fonction de Dynamo est la possibilité de modifier les paramètres
 
 Pour rappel, Revit comprend des paramètres de type et des paramètres d'occurrence. Les deux peuvent être modifiés à partir de Dynamo, mais vous allez utiliser les paramètres d'occurrence dans l'exercice ci-dessous.
 
-{% hint style="info" %} 
-Lorsque vous découvrez l'application complète de paramètres de modification, vous pouvez modifier un grand nombre d'éléments dans Revit avec Dynamo. Il peut s'agir d'une opération _coûteuse en ressources informatiques_ , ce qui signifie qu'elle peut être lente. Si vous modifiez un grand nombre d'éléments, vous pouvez utiliser la fonctionnalité de nœud "Geler" pour interrompre l'exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d'informations sur le gel des nœuds, consultez la section ["Gel"](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) du chapitre Solides. 
-{% endhint %}
+{% hint style="info" %} Lorsque vous découvrez l'application complète de paramètres de modification, vous pouvez modifier un grand nombre d'éléments dans Revit avec Dynamo. Il peut s'agir d'une opération _coûteuse en ressources informatiques_ , ce qui signifie qu'elle peut être lente. Si vous modifiez un grand nombre d'éléments, vous pouvez utiliser la fonctionnalité de nœud "Geler" pour interrompre l'exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d'informations sur le gel des nœuds, consultez la section ["Gel"](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) du chapitre Solides. {% endhint %}
 
 ### Unités
 

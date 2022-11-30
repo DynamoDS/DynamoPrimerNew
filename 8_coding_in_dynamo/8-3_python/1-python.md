@@ -79,7 +79,7 @@ Maintenant que vous avez les surfaces supérieures et inférieures, effectuez un
 
 ![](../images/8-3/1/pythonnode-exerciseptI-03.jpg)
 
-> 1. **List.Create **: connectez le rectangle inférieur et le polygone supérieur aux entrées d’index.
+> 1. **List.Create:** connectez le rectangle inférieur et le polygone supérieur aux entrées d’index.
 > 2. **Surface.ByLoft :** lissez les deux contours pour créer les côtés du solide.
 > 3. **List.Create :** connectez les surfaces supérieures, inférieures et latérales aux entrées d’index pour créer une liste de surfaces.
 > 4. **Solid.ByJoiningSurfaces :** joignez les surfaces pour créer le module solide.

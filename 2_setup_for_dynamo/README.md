@@ -62,6 +62,4 @@ L’écran de démarrage de Dynamo Sandbox s’affiche comme suit.
 
 Félicitations, vous avez terminé la configuration de Dynamo Sandbox !
 
-{% hint style="info" %} 
-La fonction **Géométrie** est une fonctionnalité supplémentaire de Dynamo Sandbox qui est uniquement disponible pour les utilisateurs disposant d’un abonnement ou d’une licence valide pour les logiciels Autodesk suivants : Revit, Robot Structural Analysis, FormIt et Civil 3D. La fonction **Géometrie** permet aux utilisateurs d’importer, de créer, de modifier et d’exporter une géométrie à partir de Dynamo Sandbox. 
-{% endhint %}
+{% hint style="info" %} La fonction **Géométrie** est une fonctionnalité supplémentaire de Dynamo Sandbox qui est uniquement disponible pour les utilisateurs disposant d’un abonnement ou d’une licence valide pour les logiciels Autodesk suivants : Revit, Robot Structural Analysis, FormIt et Civil 3D. La fonction **Géometrie** permet aux utilisateurs d’importer, de créer, de modifier et d’exporter une géométrie à partir de Dynamo Sandbox. {% endhint %}

@@ -10,7 +10,7 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiplier (**\***) | var[]…[], var[]…[] | var[]…[] |
+| ![](../images/5-3/2/Multiplication.jpg) | Multiplier ( ***** ) | var[]…[], var[]…[] | var[]…[] |
 | ![](../images/5-3/2/Division.jpg)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
@@ -45,13 +45,13 @@ L’image ci-dessous représente la spirale dorée sous forme de programmation v
 
 > a. **Number Slider :** ajoutez deux curseurs de numérotation dans la zone de dessin. Ces curseurs représentent les variables _a_ et _b_ de l’équation paramétrique. Elles représentent une constante flexible, ou des paramètres que vous pouvez ajuster afin d’obtenir le résultat souhaité.
 >
-> b. **Multiplication (\*)** : le nœud de multiplication est représenté par un astérisque. Vous utiliserez ce nœud à plusieurs reprises pour connecter des variables de multiplication.
+> b. **Multiplication (*)** : le nœud de multiplication est représenté par un astérisque. Vous utiliserez ce nœud à plusieurs reprises pour connecter des variables de multiplication.
 >
 > c. **Math.RadiansToDegrees :** les valeurs « _t_ » doivent être converties en degrés pour être évaluées dans les fonctions trigonométriques. N’oubliez pas que Dynamo utilise par défaut les degrés pour évaluer ces fonctions.
 >
 > d. **Math.Pow :** la fonction de « _t_ » et le numéro « _e_ » permettent de créer la séquence Fibonacci.
 >
-> e. **Math.Cos et Math.Sin :** ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
+> . **Math.Cos et Math.Sin :** ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
 >
 > f. **Watch** : le résultat obtenu se compose de deux listes. Elles représentent les coordonnées _x_ et _y_ des points utilisés pour générer la clothoïde.
 
