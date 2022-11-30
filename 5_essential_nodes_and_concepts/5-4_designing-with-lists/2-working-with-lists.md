@@ -96,7 +96,7 @@ _List.Count_ 노드는 간단합니다. 리스트의 값 개수를 계산하고 
 
 {% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
-_List.Reverse_는 리스트의 모든 항목 순서를 반대로 합니다.
+_List.Reverse_ 는 리스트의 모든 항목 순서를 반대로 합니다.
 
 ![연습](../images/5-4/2/workingwithlist-listreverse.jpg)
 
@@ -120,7 +120,7 @@ _List.Reverse_는 리스트의 모든 항목 순서를 반대로 합니다.
 > 2. **Code Block**을 사용하여 리스트를 1개 색인만큼 이동하기 위해 값 "1"을 지정했습니다.
 > 3. 변경된 정도는 미세하지만 다른 점 세트에 연결할 때 하단 **Watch3D** 노드의 모든 줄이 1개 색인만큼 이동되었습니다.
 
-예를 들어 **Code Block**을 더 큰 값인 _"30"_으로 변경하면 대각선이 크게 달라진다는 것을 알 수 있습니다. 이 경우 이동은 카메라의 홍채처럼 작동하여 원래의 원통형 형식에서 틀기가 작성됩니다.
+예를 들어 **Code Block**을 더 큰 값인 _"30"_ 으로 변경하면 대각선이 크게 달라진다는 것을 알 수 있습니다. 이 경우 이동은 카메라의 홍채처럼 작동하여 원래의 원통형 형식에서 틀기가 작성됩니다.
 
 ![](../images/5-4/2/workingwithlist-shiftIndices02.jpg)
 
@@ -141,10 +141,10 @@ _List.Reverse_는 리스트의 모든 항목 순서를 반대로 합니다.
 "true" 또는 "false" 값 리스트를 작성하려면 좀 더 많은 작업이 필요합니다.
 
 > 1. **Code Block**을 사용하여 `0..List.Count(list);` 구문으로 표현식을 정의합니다. **Curve.PointAtParameter** 노드를 _list_ 입력에 연결합니다. code block록 장에서 이 설정에 대해 좀 더 자세히 설명하겠지만, 이 경우에는 코드 줄에서 **Curve.PointAtParameter** 노드의 각 색인을 나타내는 리스트를 제공합니다.
-> 2. _**%**_** (modulus)** 노드를 사용하여 _code block_의 출력을 _x_ 입력에 연결하고 _4_ 값을 _y_ 입력에 연결합니다. 이렇게 하면 색인 리스트를 4로 나눈 나머지가 표시됩니다. Modulus는 패턴 작성에 매우 유용한 노드입니다. 모든 값은 가능한 나머지 4개(0, 1, 2, 3)로 표시됩니다.
+> 2. _**%**_** (modulus)** 노드를 사용하여 _code block_ 의 출력을 _x_ 입력에 연결하고 _4_ 값을 _y_ 입력에 연결합니다. 이렇게 하면 색인 리스트를 4로 나눈 나머지가 표시됩니다. Modulus는 패턴 작성에 매우 유용한 노드입니다. 모든 값은 가능한 나머지 4개(0, 1, 2, 3)로 표시됩니다.
 > 3. _**%**_** (modulus)** 노드에서 0 값은 색인이 4로 나누어떨어짐을 의미합니다(0, 4, 8 등). **==** 노드를 사용하면 _"0"_ 값을 기준으로 테스트하여 나누어떨어지는지 테스트할 수 있습니다.
 > 4. **Watch** 노드에서는 _true,false,false,false..._로 표시되는 true/false 패턴이 있음을 나타냅니다.
 > 5. 이 true/false 패턴을 사용하여 두 **List.FilterByBooleanMask** 노드의 마스크 입력에 연결합니다.
 > 6. **Curve.PointAtParameter** 노드를 **List.FilterByBooleanMask**의 각 리스트 입력에 연결합니다.
-> 7. **Filter.ByBooleanMask**의 출력은 _"in"_ 및 _"out"_으로 표시됩니다. _"In"_은 마스크 값이 _"true"_인 값을 나타내고 _"out"_은 마스크 값이 _"false"_인 값을 나타냅니다. **Line.ByStartPointEndPoint** 노드의 _"in"_ 출력을 _startPoint_ 및 _endPoint_ 입력에 연결하여 필터링된 선 리스트를 작성했습니다.
+> 7. **Filter.ByBooleanMask**의 출력은 _"in"_ 및 _"out"_으로 표시됩니다. _"In"_ 은 마스크 값이 _"true"_ 인 값을 나타내고 _"out"_ 은 마스크 값이 _"false"_ 인 값을 나타냅니다. **Line.ByStartPointEndPoint** 노드의 _"in"_ 출력을 _startPoint_ 및 _endPoint_ 입력에 연결하여 필터링된 선 리스트를 작성했습니다.
 > 8. **Watch3D** 노드에서는 점보다 선 수가 더 적은 것을 나타냅니다. true 값만 필터링하여 노드의 25%만 선택했습니다.

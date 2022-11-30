@@ -44,7 +44,7 @@ Dynamo에서 실행할 작업의 순서를 나타내는 노드가 필요합니�
 
 ![](../images/10-1/1/vase10.png)
 
-기본값인 _centerPoint_를 그대로 두고 **Number Slider**를 추가하여 반지름을 제어합니다. **Circle.ByCenterPointRadius** 노드에서와 마찬가지로 라이브러리를 사용하여 **Number Slider**를 검색하고 그래프에 추가합니다.
+기본값인 _centerPoint_ 를 그대로 두고 **Number Slider** 를 추가하여 반지름을 제어합니다. **Circle.ByCenterPointRadius** 노드에서와 마찬가지로 라이브러리를 사용하여 **Number Slider** 를 검색하고 그래프에 추가합니다.
 
 이 노드에는 슬라이더가 포함되어 있으므로 이전 노드와는 약간 다릅니다. 인터페이스를 사용하여 슬라이더의 출력 값을 변경할 수 있습니다.
 

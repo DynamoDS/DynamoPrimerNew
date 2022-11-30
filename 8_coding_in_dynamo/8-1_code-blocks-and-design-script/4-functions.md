@@ -57,11 +57,11 @@ FunctionName(in1,in2);
 >     };
 >     ```
 >
-> _inputPt_는 함수를 구동할 점을 나타내기 위해 지정한 이름입니다. 현재, 이 함수는 아무 기능도 하지 않지만 이후 단계에서 구축할 것입니다.
+> _inputPt_ 는 함수를 구동할 점을 나타내기 위해 지정한 이름입니다. 현재, 이 함수는 아무 기능도 하지 않지만 이후 단계에서 구축할 것입니다.
 
 ![](../images/8-1/4/functions-exercise-03.jpg)
 
-> 1. **Code Block** 함수에 추가하여 주석과 각 점의 _Z_ 위치를 조회하는 _sphereRadius_ 변수를 배치합니다. _inputPt.Z_에는 괄호가 메서드로 필요하지 않습니다. 기존 요소 특성의 _조회_이므로 입력이 필요하지 않습니다.
+> 1. **Code Block** 함수에 추가하여 주석과 각 점의 _Z_ 위치를 조회하는 _sphereRadius_ 변수를 배치합니다. _inputPt.Z_ 에는 괄호가 메서드로 필요하지 않습니다. 기존 요소 특성의 _조회_ 이므로 입력이 필요하지 않습니다.
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -77,12 +77,12 @@ FunctionName(in1,in2);
 
 ![](../images/8-1/4/functions-exercise-05.jpg)
 
-> 1.  이제 함수를 호출하고, 이전 단계에서 생성한 점에 연결할 _Pt_라는 변수를 작성합니다.
+> 1.  이제 함수를 호출하고, 이전 단계에서 생성한 점에 연결할 _Pt_ 라는 변수를 작성합니다.
 >
 >     ```
 >     sphereByZ(Pt)
 >     ```
-> 2. 출력에서 모든 값이 null이라는 것을 확인할 수 있습니다. 그 이유는 무엇일까요? 함수를 정의했을 때 _sphereRadius_ 변수를 계산하지만 함수가 _출력_으로 _반환_해야 하는 결과를 정의하지 않았습니다. 이 문제는 다음 단계에서 해결할 수 있습니다.
+> 2. 출력에서 모든 값이 null이라는 것을 확인할 수 있습니다. 그 이유는 무엇일까요? 함수를 정의했을 때 _sphereRadius_ 변수를 계산하지만 함수가 _출력_ 으로 _반환_ 해야 하는 결과를 정의하지 않았습니다. 이 문제는 다음 단계에서 해결할 수 있습니다.
 
 ![](../images/8-1/4/functions-exercise-06.jpg)
 
@@ -94,7 +94,7 @@ FunctionName(in1,in2);
 ![](../images/8-1/4/functions-exercise-07.jpg)
 
 > 1. 먼저 다음 코드 줄로 구를 정의합니다. `sphere=Sphere.ByCenterPointRadius(inputPt,sphereRadius);`
-> 2. 다음으로, 반환 값을 _sphereRadius_ 대신 _sphere_로 변경합니다. `return = sphere;` 이렇게 하면 Dynamo 미리보기에 몇 개의 큰 구가 표시됩니다.
+> 2. 다음으로, 반환 값을 _sphereRadius_ 대신 _sphere_ 로 변경합니다. `return = sphere;` 이렇게 하면 Dynamo 미리보기에 몇 개의 큰 구가 표시됩니다.
 
 ![](../images/8-1/4/functions-exercise-08.jpg)
 
@@ -107,7 +107,7 @@ FunctionName(in1,in2);
 ![](../images/8-1/4/functions-exercise-10.jpg)
 
 > 1. 물을 테스트하기 위해 숫자의 원래 리스트를 **Point.ByCoordinates**에 대한 X 입력에 연결합니다. 이제 정육면체 및 구가 구현되었습니다.
-> 2. 참고: 컴퓨터에서 계산하는 데 시간이 오래 걸리는 경우 _\#10_을 _\#5_와 같은 값으로 변경해 보십시오.
+> 2. 참고: 컴퓨터에서 계산하는 데 시간이 오래 걸리는 경우 _\#10_ 을 _\#5_ 와 같은 값으로 변경해 보십시오.
 
 작성한 _sphereByZ_ 함수는 일반 함수이므로 이전 단원에서 사용한 나선을 다시 불러와 이 함수를 적용할 수 있습니다.
 

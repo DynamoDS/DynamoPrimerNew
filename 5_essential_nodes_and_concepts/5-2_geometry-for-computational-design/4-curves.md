@@ -28,8 +28,8 @@
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 
-> 1. _NurbsCurve.ByControlPoints_는 점 리스트를 제어점으로 사용합니다.
-> 2. _NurbsCurve.ByPoints_는 점 리스트를 통해 곡선을 그립니다.
+> 1. _NurbsCurve.ByControlPoints_ 는 점 리스트를 제어점으로 사용합니다.
+> 2. _NurbsCurve.ByPoints_ 는 점 리스트를 통해 곡선을 그립니다.
 
 > 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >

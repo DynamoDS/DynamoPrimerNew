@@ -12,9 +12,9 @@ Dynamo의 매개변수에서 표면을 가져와 평가하여 추출할 수 있�
 
 ![](../images/5-2/5/surfaces-surfaceindynamo.jpg)
 
-> 1. _Surface.PointAtParameter_는 지정된 UV 좌표의 점을 반환합니다.
-> 2. _Surface.NormalAtParameter_는 지정된 UV 좌표의 법선 벡터를 반환합니다.
-> 3. _Surface.GetIsoline_은 U 또는 V 좌표에서 Isoparametric 곡선을 반환합니다. IsoDirection 입력을 확인해 주십시오.
+> 1. _Surface.PointAtParameter_ 는 지정된 UV 좌표의 점을 반환합니다.
+> 2. _Surface.NormalAtParameter_ 는 지정된 UV 좌표의 법선 벡터를 반환합니다.
+> 3. _Surface.GetIsoline_ 은 U 또는 V 좌표에서 Isoparametric 곡선을 반환합니다. IsoDirection 입력을 확인해 주십시오.
 
 > 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >

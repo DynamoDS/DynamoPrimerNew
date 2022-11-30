@@ -24,7 +24,7 @@
 
 ![](images/6/documenting-exerciseI-01.jpg)
 
-> 1. 캔버스에 _Family Types_ 노드를 추가하고 _"ROOF-PANEL-4PT"_를 선택합니다.
+> 1. 캔버스에 _Family Types_ 노드를 추가하고 _"ROOF-PANEL-4PT"_ 를 선택합니다.
 > 2. 이 노드를 _All Elements of Family Type_ 노드에 연결하여 Revit에서 Dynamo로 모든 요소를 가져옵니다.
 
 ![](images/6/documenting-exerciseI-02.jpg)
@@ -42,7 +42,7 @@
 
 ![](images/6/documenting-exerciseI-04.jpg)
 
-> 1. _Math.RemapRange_를 사용하고 _Code Block_에 `0.15; 0.45;`를 입력하여 편차 값을 0.15~ 0_._45 사이의 도메인에 다시 매핑합니다.
+> 1. _Math.RemapRange_ 를 사용하고 _Code Block_ 에 `0.15; 0.45;`를 입력하여 편차 값을 0.15~ 0_._45 사이의 도메인에 다시 매핑합니다.
 > 2. 이러한 결과를 _Element.SetParameterByName_ 의 값 입력에 연결합니다.
 
 다시 Revit으로 돌아오면 표면의 조리개 변경을 _이해할 수 있습니다_.
@@ -59,13 +59,13 @@
 
 ![](images/6/documenting-exerciseII-01.jpg)
 
-> 1. _Element.SetParameterByName_과 해당 입력 노드를 제거하고 _Element.OverrideColorInView_를 추가합니다.
+> 1. _Element.SetParameterByName_ 과 해당 입력 노드를 제거하고 _Element.OverrideColorInView_ 를 추가합니다.
 > 2. 캔버스에 _Color Range_ 노드를 추가하고 _Element.OverrideColorInView_ 의 색상 입력에 연결합니다. 그라데이션을 작성하려면 여전히 편차 값을 색상 범위에 연결해야 합니다.
 > 3. _value_ 입력 위에 커서를 놓으면 각 값에 색상을 매핑하기 위해 입력 값이 _0_ 에서 _1_ 사이여야 함을 알 수 있습니다. 편차 값을 이 범위로 다시 매핑해야 합니다.
 
 ![](images/6/documenting-exerciseII-02.jpg)
 
-> 1. _Math.RemapRange_를 사용하여 평면 편차 값을 *0*에서 _1_ 사이의 범위로 다시 매핑합니다. (참고: _"MapTo"_ 노드를 사용하여 소스 도메인도 정의할 수 있습니다.)
+> 1. _Math.RemapRange_ 를 사용하여 평면 편차 값을 *0*에서 _1_ 사이의 범위로 다시 매핑합니다. (참고: _"MapTo"_ 노드를 사용하여 소스 도메인도 정의할 수 있습니다.)
 > 2. 결과를 _Color Range_ 노드에 연결합니다.
 > 3. 출력은 숫자 범위가 아니라 색상 범위입니다.
 > 4. 수동으로 설정한 경우 _실행_ 을 누릅니다. 이 시점부터는 계속 수동으로 설정해서 작업하는 것이 좋습니다.
@@ -76,7 +76,7 @@
 
 ![](images/6/documenting-exerciseII-04.jpg)
 
-> 1. _code block_을 사용하여 두 개의 다른 줄에 `0;` 및 `255;`의 두 숫자를 추가합니다.
+> 1. _code block_ 을 사용하여 두 개의 다른 줄에 `0;` 및 `255;`의 두 숫자를 추가합니다.
 > 2. 해당 값을 두 개의 _Color.ByARGB_ 노드에 연결하여 빨간색과 파란색을 작성합니다.
 > 3. 이 두 가지 색상에서 리스트를 작성합니다.
 > 4. 이 리스트를 _Color Range_ 의 _colors_ 입력에 연결하고 사용자 색상 범위 업데이트를 확인합니다.
