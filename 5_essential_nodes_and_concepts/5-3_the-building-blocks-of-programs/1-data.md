@@ -81,13 +81,13 @@ V tomto prvním příkladu sestavíme válec se skořepinou, který prochází 
 
 6\. **Number Slider –** Místo použití výchozích hodnot pro všechny tyto vstupy přidejte do modelu parametrický ovládací prvek.
 
-**Domain Edit – **po přidání posuvníku čísla na pracovní plochu klikněte na stříšku v levé horní části a zobrazte možnosti domény.
+**Domain Edit –** po přidání posuvníku čísla na pracovní plochu klikněte na stříšku v levé horní části a zobrazte možnosti domény.
 
 **Min/Max/Step -** Změňte hodnoty _min_, _max_ a _step_ na _0_,_2_ a _0.01_. Toto provedeme, abychom mohli řídit velikost celkové geometrie.
 
 ![](../images/5-3/1/data-exercisestep6.gif)
 
-7\. **Number Sliders –**Ve všech výchozích vstupech zkopírujte a vložte tento posuvník čísla (vyberte posuvník, stiskněte Ctrl+C a pak Ctrl+V) několikrát, dokud nebudou mít všechny vstupy s výchozími hodnotami posuvník. Aby definice fungovala, některé hodnoty posuvníku musí být větší než nula (například k zesílení plochy je potřeba hloubka vysunutí).
+7\. **Number Sliders –** Ve všech výchozích vstupech zkopírujte a vložte tento posuvník čísla (vyberte posuvník, stiskněte Ctrl+C a pak Ctrl+V) několikrát, dokud nebudou mít všechny vstupy s výchozími hodnotami posuvník. Aby definice fungovala, některé hodnoty posuvníku musí být větší než nula (například k zesílení plochy je potřeba hloubka vysunutí).
 
 ![](../images/5-3/1/data-exercisestep7a.gif)
 
@@ -97,7 +97,7 @@ V tomto prvním příkladu sestavíme válec se skořepinou, který prochází 
 
 ![](../images/5-3/1/data-exercisestep8a.gif)
 
-**Number Sliders – ** Přidali jsme na plochu hodně posuvníků a je potřeba vyčistit rozhraní nástroje, který jsme právě vytvořili. Klikněte pravým tlačítkem na jeden posuvník, vyberte položku Přejmenovat a změňte název každého posuvníku na název odpovídající jeho parametru (Thickness (Tloušťka), Radius (Poloměr), Height (Výška) atd.).
+**Number Sliders –** Přidali jsme na plochu hodně posuvníků a je potřeba vyčistit rozhraní nástroje, který jsme právě vytvořili. Klikněte pravým tlačítkem na jeden posuvník, vyberte položku Přejmenovat a změňte název každého posuvníku na název odpovídající jeho parametru (Thickness (Tloušťka), Radius (Poloměr), Height (Výška) atd.).
 
 ![](../images/5-3/1/data-exercisestep8bstep.jpg)
 

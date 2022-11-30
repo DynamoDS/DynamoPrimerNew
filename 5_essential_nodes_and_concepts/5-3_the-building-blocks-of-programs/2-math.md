@@ -10,7 +10,7 @@ Operátory jsou sada komponent, které používají algebraické funkce se dvěm
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Násobení (**\***) | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Multiplication.jpg) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Division.jpg)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Cvičení: Vzorec zlaté spirály
@@ -45,7 +45,7 @@ Obrázek níže znázorňuje zlatou spirálu ve vizuální programové podobě. 
 
 > a. **Number Slider:** Přidejte na kreslicí plochu dva posuvníky. Tyto posuvníky budou představovat proměnné _a_ a _b_ parametrické rovnice. Představují konstantu, která je flexibilní, nebo parametry, které lze upravit podle požadovaného výsledku.
 >
-> b. b. **Násobení (\*)**: Uzel násobení je reprezentován hvězdičkou. Toto použijeme opakovaně k připojení násobných proměnných
+> b. b. **Násobení (*)**: Uzel násobení je reprezentován hvězdičkou. Toto použijeme opakovaně k připojení násobných proměnných
 >
 > c. **Math.RadiansToDegree:** Hodnoty '_t_' je nutné převést na stupně pro jejich vyhodnocení v trigonometrických funkcích. Nezapomeňte, že aplikace Dynamo pro vyhodnocení těchto funkcí ve výchozím stavu používá stupně.
 >
@@ -53,7 +53,7 @@ Obrázek níže znázorňuje zlatou spirálu ve vizuální programové podobě. 
 >
 > e. **Math.Cos a Math.Sin:** Tyto dvě trigonometrické funkce odliší souřadnice X a souřadnice Y každého parametrického bodu.
 >
-> f. **Watch: **Nyní vidíte, že náš výstup jsou dva seznamy, které budou tvořit souřadnice _x_ a _y_ bodů použitých k vytvoření spirály.
+> f. **Watch**: Nyní vidíte, že náš výstup jsou dva seznamy, které budou tvořit souřadnice _x_ a _y_ bodů použitých k vytvoření spirály.
 
 ### Část II: Od vzorce ke geometrii
 

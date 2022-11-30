@@ -25,9 +25,7 @@ Pro uživatele, kteří si chtějí prohlédnout ukázku pracovních postupů ap
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} 
-Další tematická cvičení najdete v dalších kapitolách týkajících se různých aspektů aplikace Dynamo. **Cvičení** se obvykle nacházejí v poslední části každé stránky. 
-{% endhint %}
+{% hint style="info" %} Další tematická cvičení najdete v dalších kapitolách týkajících se různých aspektů aplikace Dynamo. **Cvičení** se obvykle nacházejí v poslední části každé stránky. {% endhint %}
 
 ### Komunita
 

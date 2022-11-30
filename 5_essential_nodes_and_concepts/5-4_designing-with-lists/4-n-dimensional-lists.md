@@ -44,7 +44,7 @@ Dalším krokem je rozdělení povrchu na osnovu bodů.
 
 > 1\. Pomocí **bloku kódu** vložte tyto dva řádky kódu: `0..1..#10;` `0..1..#5;`.
 >
-> 2\. Připojte dvě hodnoty bloku kódu ke vstupům u a **v** uzlu _Surface.PointAtParameter_. Změňte _vázání_ tohoto uzlu na _„Vektorový součin“_.
+> 2\. Připojte dvě hodnoty bloku kódu ke vstupům u a _v_ uzlu **Surface.PointAtParameter**. Změňte _vázání_ tohoto uzlu na _„Vektorový součin“_.
 >
 > 3\. Výstup odhalí datovou strukturu, která je viditelná také v náhledu aplikace Dynamo.
 

@@ -16,7 +16,7 @@ Na obrázku níže namapujeme bod z jednoho povrchu na jiný pomocí souřadnic
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-Začneme vytvořením grafu, který chceme vnořit do vlastního uzlu. V tomto příkladu vytvoříme graf, který mapuje polygony ze základního povrchu na cílový povrch pomocí souřadnic UV. Tento proces mapování UV často používáme, proto je vhodným kandidátem pro vlastní uzel. Další informace o površích a prostoru UV naleznete na stránce [Povrch](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). Úplný graf je _UVmapping\\_Custom-Node.dyn_ ze souboru ZIP staženého výše.
+Začneme vytvořením grafu, který chceme vnořit do vlastního uzlu. V tomto příkladu vytvoříme graf, který mapuje polygony ze základního povrchu na cílový povrch pomocí souřadnic UV. Tento proces mapování UV často používáme, proto je vhodným kandidátem pro vlastní uzel. Další informace o površích a prostoru UV naleznete na stránce [Povrch](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). Úplný graf je _UVmapping_Custom-Node.dyn_ ze souboru ZIP staženého výše.
 
 ![](../images/6-1/2/customnodeforuvmappingptI-02.jpg)
 
