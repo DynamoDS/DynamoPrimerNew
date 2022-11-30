@@ -19,8 +19,8 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 | **徽标/图像**                                                               | **名称**                                                                    |
 | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| \![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| \![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
 | ![](../images/6-2/5/rhynamo.jpg)                                             | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
 | ![](../images/6-2/5/optimo.jpg)                                              | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
@@ -65,7 +65,7 @@ Zero-Touch 软件包是对用户定义的自定义节点的良好补充。下表
 
 > 1. 使用 **“File From Path”** 将文件路径项目转换为 Dynamo 环境中的图像。
 > 2. 将 **“File Path”** 节点连接到 **“File.FromPath”** 节点。
-> 3. 要将此文件转换为图像，我们将使用 **“Image.ReadFromFile”**节点。
+> 3. 要将此文件转换为图像，我们将使用 **“Image.ReadFromFile”** 节点。
 > 4. 最后，我们来看一看结果！将 **“Watch Image”** 节点拖动到画布上，然后连接到 **“Image.ReadFromFile”**。我们尚未使用 AForge，但我们已成功将图像输入 Dynamo。
 
 在“AForge.Imaging.AForge.Imaging.Filters”（导航菜单中）下，您会注意到有许多可用过滤器。现在，我们将使用其中一个过滤器来基于阈值降低图像饱和度。
