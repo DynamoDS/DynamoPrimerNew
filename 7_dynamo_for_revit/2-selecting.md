@@ -71,7 +71,7 @@ _“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。�
 
 > 1. 使用 _“Element.Faces”_ 节点，我们会得到一个包含曲面的列表，表示 Revit 体量的每个面。现在，我们可以在 Dynamo 视口中看到几何图形，然后开始参照相应面进行参数化操作。
 
-以下是另一种方法。在这种情况下，我们将不会通过 Revit 层次结构_（“All Elements of Category”）_进行选择，而是改为在 Revit 中明确选择几何图形。
+以下是另一种方法。在这种情况下，我们将不会通过 Revit 层次结构 _（“All Elements of Category”）_ 进行选择，而是改为在 Revit 中明确选择几何图形。
 
 ![](../.gitbook/assets/selecting\_exercise\_04.jpg)
 
