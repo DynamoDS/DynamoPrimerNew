@@ -96,7 +96,7 @@ Altere o valor do controle deslizante entre 0 e 9 para selecionar outro item usa
 
 {% file src="../datasets/5-4/2/List-Reverse.dyn" %}
 
-_List.Reverse_inverte a ordem de todos os itens em uma lista.
+_List.Reverse_ inverte a ordem de todos os itens em uma lista.
 
 ![Exercício](../images/5-4/2/workingwithlist-listreverse.jpg)
 

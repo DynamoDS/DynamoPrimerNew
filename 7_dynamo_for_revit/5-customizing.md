@@ -45,7 +45,7 @@ Essa grade de pontos serve como os pontos de controle para uma superfície defin
 
 ![](./images/5/customizing-exercise03.jpg)
 
-> 1. Adicione um nó_Surface.ParameterAtPoint_ à tela e conecte as entradas como mostrado acima.
+> 1. Adicione um nó _Surface.ParameterAtPoint_ à tela e conecte as entradas como mostrado acima.
 > 2. Consulte os valores _u_ desses parâmetros com o nó UV.U.
 > 3. Consulte os valores _v_ desses parâmetros com o nó UV.V.
 > 4. Os resultados mostram os valores _u_ e _v_ correspondentes a cada ponto da superfície. Agora, temos um intervalo de _0_ a _1_ para cada valor, na estrutura de dados apropriada; portanto, estamos prontos para aplicar um algoritmo paramétrico.

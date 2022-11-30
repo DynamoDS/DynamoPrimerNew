@@ -96,7 +96,7 @@ O comando de corte divide as listas com base em um determinado comprimento de li
 
 **List.Map/Combine** aplica uma função definida a uma lista de entrada, mas um degrau abaixo na hierarquia. As combinações são o mesmo que os mapas, exceto pelo fato de que as combinações podem ter várias entradas correspondentes à entrada de uma determinada função.
 
-_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de _ **List.Map** _ foi resolvida com a adição do recurso _ **List@Level** _. Para obter mais informações, consulte _ [_List@Level,_](6-3\_lists-of-lists.md#listlevel) _abaixo._
+_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de_ **List.Map** _foi resolvida com a adição do recurso_ **List@Level** _. Para obter mais informações, consulte_ [_List@Level,_](6-3\_lists-of-lists.md#listlevel) _abaixo._
 
 Como uma rápida introdução, vamos revisar o nó **List.Count** de uma seção anterior.
 
@@ -129,7 +129,7 @@ Observe que o nó List.Count fornece um valor igual a 5. Isso é igual à variá
 
 ### **List.Combine**
 
-_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de List.Combine foi resolvida com a adição do recurso _ **List@Level** _. Para obter mais informações, consulte _ [_List@Level,_](6-3\_lists-of-lists.md#listlevel) _abaixo._
+_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de List.Combine foi resolvida com a adição do recurso_ **List@Level** _. Para obter mais informações, consulte_ [_List@Level,_](6-3\_lists-of-lists.md#listlevel) _abaixo._
 
 Neste exercício, usaremos **List.Combine** para demonstrar como pode ser usado para aplicar uma função em listas separadas de objetos.
 
