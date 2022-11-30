@@ -29,7 +29,7 @@ Składnia `Point.ByCoordinates(0,10);` w węźle _Code Block_ daje taki sam wyni
 
 ### Wywoływanie węzłów — tworzenie, operacje, zapytanie
 
-Można wywołać dowolny zwykły węzeł w bibliotece za pomocą węzła Code Block, o ile nie jest to specjalny _węzeł interfejsu użytkownika_, pełniący szczególną funkcję w interfejsie użytkownika. Można na przykład wywołać węzeł_ Circle.ByCenterPointRadius_, ale wywołanie węzła _Watch 3D_ nie miałoby sensu.
+Można wywołać dowolny zwykły węzeł w bibliotece za pomocą węzła Code Block, o ile nie jest to specjalny _węzeł interfejsu użytkownika_, pełniący szczególną funkcję w interfejsie użytkownika. Można na przykład wywołać węzeł _Circle.ByCenterPointRadius_, ale wywołanie węzła _Watch 3D_ nie miałoby sensu.
 
 Zwykłe węzły (stanowiące większość biblioteki) należą do trzech ogólnych typów. Warto zauważyć, że biblioteka jest uporządkowana zgodnie z tymi kategoriami. Metody, czyli węzły, tych trzech typów są traktowane inaczej po wywołaniu w bloku kodu.
 
