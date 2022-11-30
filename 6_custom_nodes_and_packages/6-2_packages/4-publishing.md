@@ -33,11 +33,11 @@
 > 1. 此文件夹中包含五个自定义节点 (.dyf)。
 > 2. 此文件夹中还包含五个示例文件 (.dyn) 和一个输入的矢量文件 (.svg)。这些文件将用作介绍性练习，以向用户介绍如何使用自定义节点。
 
-在 Dynamo 中，先依次单击_“软件包”>“发布新软件包...”_
+在 Dynamo 中，先依次单击 _“软件包”>“发布新软件包...”_
 
 ![](../images/6-2/4/publishapackage-publishlocally02.jpg)
 
-在_“发布 Dynamo 软件包”_窗口中，已填写了窗口左侧的相关表单。
+在 _“发布 Dynamo 软件包”_ 窗口中，已填写了窗口左侧的相关表单。
 
 ![](../images/6-2/4/publishapackage-publishlocally03.jpg)
 
