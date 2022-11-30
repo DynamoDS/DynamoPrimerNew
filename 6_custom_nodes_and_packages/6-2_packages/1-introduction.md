@@ -85,7 +85,7 @@ Se si scaricano i file da Package Manager di Dynamo o si desidera vedere dove so
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
-Per default, i pacchetti vengono installati in una posizione simile a questo percorso delle cartelle: _C:/Utenti/\\[nome utente]/AppData/Roaming/Dynamo/\\[versione di Dynamo]_.
+Per default, i pacchetti vengono installati in una posizione simile a questo percorso delle cartelle: _C:/Utenti/[nome utente]/AppData/Roaming/Dynamo/[versione di Dynamo]_.
 
 ### Ulteriori informazioni sui pacchetti
 

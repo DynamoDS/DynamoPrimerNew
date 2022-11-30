@@ -44,7 +44,7 @@ Anche in questo caso, i nodi funzionano in modo identico. Se _Boolean_ viene mod
 >
 > b. **Number:** aggiungere tre nodi di numeri all'area di disegno. Il valore per ogni nodo Number deve essere: _0.000_ per _start_, _10.000_ per _end_ e _1.000_ per _step_.
 >
-> c. **Output: **l'output è un elenco di 11 numeri da 0 a 10.
+> c. **Output:** l'output è un elenco di 11 numeri da 0 a 10.
 >
 > d. **% (modulo):** collegare **Range** a _x_ e _2.000_ a _y_. In questo modo viene calcolato il resto per ogni numero dell'elenco diviso per 2. L'output di questo elenco fornisce un elenco di valori alternati tra 0 e 1.
 >
@@ -64,7 +64,7 @@ Partendo dalla logica stabilita nel primo esercizio, si applicherà questa confi
 
 ![](../images/5-3/3/logic-exercisepartII-01.jpg)
 
-> a. a. Utilizzare un nodo **Sequence** con questi valori di input.
+> a. Utilizzare un nodo **Sequence** con questi valori di input.
 >
 > b. È stato scollegato l'input list da **List.FilterByBoolMask**. Questi nodi verranno messi da parte per ora, ma saranno presto utili più avanti nell'esercizio.
 
@@ -72,9 +72,9 @@ Partendo dalla logica stabilita nel primo esercizio, si applicherà questa confi
 
 ![](../images/5-3/3/logic-exercisepartII-02.jpg)
 
-> a. a. Il primo **Number Slider** rappresenta la frequenza dell'onda, deve avere un minimo di 1, un massimo di 4 e un passo di 0.01.
+> a. Il primo **Number Slider** rappresenta la frequenza dell'onda, deve avere un minimo di 1, un massimo di 4 e un passo di 0.01.
 >
-> b. b. Il secondo **Number Slider** rappresenta l'ampiezza dell'onda, deve avere un minimo di 0, un massimo di 1 e un passo di 0.01.
+> b. Il secondo **Number Slider** rappresenta l'ampiezza dell'onda, deve avere un minimo di 0, un massimo di 1 e un passo di 0.01.
 >
 > c. **PolyCurve.ByPoints:** se il diagramma dei nodi riportato sopra viene copiato, il risultato è una curva seno nella finestra di anteprima di Dynamo.
 

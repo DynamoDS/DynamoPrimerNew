@@ -10,7 +10,7 @@ Gli operatori sono un insieme di componenti che utilizzano funzioni algebriche c
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiply (**\***) | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Multiplication.jpg) | Multiply ( ***** ) | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Division.jpg)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Esercizio: Formula della spirale aurea
@@ -45,7 +45,7 @@ L'immagine seguente rappresenta la spirale aurea sotto forma di programmazione v
 
 > a. **Number Slider:** aggiungere due dispositivi di scorrimento numerici all'area di disegno. Questi dispositivi di scorrimento rappresenteranno le variabili _a_ e _b_ dell'equazione parametrica. Rappresentano una costante flessibile o parametri che è possibile regolare per ottenere il risultato desiderato.
 >
-> b. **Multiplication (\\*)**: il nodo della moltiplicazione è rappresentato da un asterisco. Questa opzione verrà utilizzata ripetutamente per collegare le variabili della moltiplicazione.
+> b. **Multiplication (*)**: il nodo della moltiplicazione è rappresentato da un asterisco. Questa opzione verrà utilizzata ripetutamente per collegare le variabili della moltiplicazione.
 >
 > c. **Math.RadiansToDegrees:** i valori "_t_" devono essere convertiti in gradi per la loro valutazione nelle funzioni trigonometriche. Tenere presente che, in Dynamo, per default vengono utilizzati i gradi per valutare queste funzioni.
 >
@@ -53,7 +53,7 @@ L'immagine seguente rappresenta la spirale aurea sotto forma di programmazione v
 >
 > e. **Math.Cos e Math.Sin:** queste due funzioni trigonometriche differenziano rispettivamente la coordinata x e la coordinata y di ogni punto parametrico.
 >
-> f. **Watch: **ora è possibile vedere che l'output comprende due elenchi, che saranno le coordinate _x_ e _y_ dei punti utilizzati per generare la spirale.
+> f. **Watch:** ora è possibile vedere che l'output comprende due elenchi, che saranno le coordinate _x_ e _y_ dei punti utilizzati per generare la spirale.
 
 ### Parte II: Dalla formula alla geometria
 

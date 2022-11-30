@@ -18,7 +18,7 @@ Quindi riavviare Dynamo. Alla riapertura, quando si seleziona la finestra _Gesti
 
 ### Pubblicazione locale di un pacchetto
 
-{% hint style="warning" %} La pubblicazione del pacchetto di Dynamo è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D. Dynamo Sandbox non dispone di funzionalità di pubblicazione.
+{% hint style="warning" %} La pubblicazione del pacchetto di Dynamo è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D. Dynamo Sandbox non dispone di funzionalità di pubblicazione.{% endhint %}
 
 > Scaricare il file di esempio facendo clic sul collegamento seguente.
 >

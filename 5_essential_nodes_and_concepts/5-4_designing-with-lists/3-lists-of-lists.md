@@ -19,7 +19,7 @@ Quali **query** è possibile eseguire dall'elenco di elenchi? Consente di accede
 
 ### Azione
 
-Quali ** azioni** è possibile eseguire nell'elenco di elenchi? In questo modo si modifica l'elenco di elenchi in base ad una determinata operazione.
+Quali **azioni** è possibile eseguire nell'elenco di elenchi? In questo modo si modifica l'elenco di elenchi in base ad una determinata operazione.
 
 * Selezionare una pila specifica di quarti o penny.
 * Selezionare un quarto o un penny specifico.
@@ -228,7 +228,7 @@ La sintassi abbreviata del blocco di codice utilizza "[]" per definire un elenco
 
 #### Query sul blocco codice
 
-La sintassi abbreviata di **Code Block** utilizza "\\[]" come metodo rapido e semplice per selezionare gli elementi specifici desiderati da una struttura di dati complessa. I **Code Block** vengono descritti in modo più dettagliato nel [capitolo Code Block e DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Fare riferimento all'immagine seguente per osservare come è possibile eseguire query su un elenco con più tipi di dati con un blocco di codice.
+La sintassi abbreviata di **Code Block** utilizza "[]" come metodo rapido e semplice per selezionare gli elementi specifici desiderati da una struttura di dati complessa. I **Code Block** vengono descritti in modo più dettagliato nel [capitolo Code Block e DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/). Fare riferimento all'immagine seguente per osservare come è possibile eseguire query su un elenco con più tipi di dati con un blocco di codice.
 
 ![](../images/5-4/3/listsoflists-codeblockforlistcreation02.jpg)
 
@@ -276,7 +276,7 @@ Dopo aver modificato l'elenco, è necessario reinserire l'elenco nella struttura
 ![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
 
 > 1. Seguendo la stessa logica, utilizzare **List.ReplaceItemAtIndex** per sostituire l'elenco centrale con l'elenco modificato.
-> 2. Notare che i **Code Block** che definiscono l'indice per questi due nodi sono 1 e 2, che corrisponde alla query originale di **Code Block** (_points\\[1]\\[2]_).
+> 2. Notare che i **Code Block**__ che definiscono l'indice per questi due nodi sono 1 e 2, che corrisponde alla query originale di **Code Block** (_points[1][2]_).
 > 3. Selezionando l'elenco in corrispondenza dell'_index 1_, viene visualizzata la struttura di dati evidenziata nell'anteprima di Dynamo. Il punto spostato è stato unito correttamente nella struttura di dati originale.
 
 Esistono molti modi per creare una superficie da questo gruppo di punti. In questo caso, si creerà una superficie eseguendo il loft delle curve insieme.

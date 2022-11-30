@@ -76,8 +76,8 @@ Con la superficie parametrica, si vuole definire un modo per suddividerla in pan
 
 > 1. Verrà creata un'istanza di molti elementi della geometria in Revit. Assicurarsi quindi di impostare il risolutore Dynamo su _Manuale_.
 > 2. Aggiungere un nodo _Family Types_ all'area di disegno e selezionare _ROOF-PANEL-4PT_.
-> 3. Aggiungere un nodo _AdaptiveComponent.ByPoints_ all'area di disegno, collegare _Panel Pts_ dall'output _LunchBox Quad Grid by Face_ all'input _points_. Collegare il nodo _Family Types_ all'input _familySymbol.
-> 4. Fare clic su _Esegui_. La creazione della geometria in Revit richiederà__ un po' di tempo. Se richiede troppo tempo, ridurre il valore 15 di _Code Block_ ad un numero inferiore. In questo modo si riduce il numero di pannelli sul tetto.
+> 3. Aggiungere un nodo _AdaptiveComponent.ByPoints_ all'area di disegno, collegare _Panel Pts_ dall'output _LunchBox Quad Grid by Face_ all'input _points_. Collegare il nodo _Family Types_ all'input _familySymbol._
+> 4. Fare clic su _Esegui_. La creazione della geometria in Revit _richiederà_ un po' di tempo. Se richiede troppo tempo, ridurre il valore 15 di _Code Block_ ad un numero inferiore. In questo modo si riduce il numero di pannelli sul tetto.
 
 _Nota: se Dynamo richiede molto tempo per il calcolo dei nodi, potrebbe essere necessario utilizzare la funzionalità del nodo Congela per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione Congelamento nel capitolo sui solidi._
 
