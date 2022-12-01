@@ -16,7 +16,7 @@ En la imagen siguiente, se asigna un punto de una superficie a otra mediante coo
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-Comenzaremos con la creación de un gráfico que deseamos anidar en un nodo personalizado. En este ejemplo, crearemos un gráfico que asigna polígonos de una superficie base a una superficie de destino mediante coordenadas UV. Este proceso de asignación de UV es algo que se utiliza con frecuencia, lo que lo convierte en un buen candidato para un nodo personalizado. Para obtener más información sobre superficies y el espacio UV, consulte la página [Superficie](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). El gráfico completo es _UVmapping\\_Custom-Node.dyn_ del archivo .zip descargado anteriormente.
+Comenzaremos con la creación de un gráfico que deseamos anidar en un nodo personalizado. En este ejemplo, crearemos un gráfico que asigna polígonos de una superficie base a una superficie de destino mediante coordenadas UV. Este proceso de asignación de UV es algo que se utiliza con frecuencia, lo que lo convierte en un buen candidato para un nodo personalizado. Para obtener más información sobre superficies y el espacio UV, consulte la página [Superficie](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). El gráfico completo es _UVmapping\_Custom-Node.dyn_ del archivo .zip descargado anteriormente.
 
 ![](../images/6-1/2/customnodeforuvmappingptI-02.jpg)
 
