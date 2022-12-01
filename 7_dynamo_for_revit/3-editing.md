@@ -16,7 +16,9 @@ Una característica útil de Dynamo es la posibilidad de editar parámetros en u
 
 Como revisión rápida de los parámetros en Revit, recordemos que existen parámetros de tipo y parámetros de ejemplar. Ambos se pueden editar en Dynamo, pero trabajaremos con parámetros de ejemplar en el ejercicio siguiente.
 
-{% hint style="info" %} A medida que descubra la amplia aplicación de la edición de parámetros, puede que desee editar una gran cantidad de elementos en Revit con Dynamo. Esta puede ser una operación _computacionalmente exigente_, lo que significa que puede ser lenta. Si va a editar un gran número de elementos, puede usar la función de nodo "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico. Para obtener más información sobre el bloqueo de nodos, consulte la sección ["Bloqueo"](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) del capítulo sobre sólidos. {% endhint %}
+{% hint style="info" %} 
+A medida que descubra la amplia aplicación de la edición de parámetros, puede que desee editar una gran cantidad de elementos en Revit con Dynamo. Esta puede ser una operación _computacionalmente exigente_, lo que significa que puede ser lenta. Si va a editar un gran número de elementos, puede usar la función de nodo "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico. Para obtener más información sobre el bloqueo de nodos, consulte la sección ["Bloqueo"](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) del capítulo sobre sólidos. 
+{% endhint %}
 
 ### Unidades
 
