@@ -23,7 +23,9 @@ Os scripts de texto podem estabelecer relacionamentos de maior complexidade do q
 | **Python**         | Sim         | Sim           | Parcialmente          | Sim                | Não            |
 | **ZeroTouch (C#))** | Não          | No            | Não                 | Sim                | Não            |
 
-{% hint style="info" %} Consulte [Referência de scripts](13-3\_scripting-reference.md) para obter uma lista dos itens aos quais cada biblioteca do Dynamo fornece acesso. {% endhint %}
+{% hint style="info" %} 
+Consulte [Referência de scripts](13-3\_scripting-reference.md) para obter uma lista dos itens aos quais cada biblioteca do Dynamo fornece acesso. 
+{% endhint %}
 
 ### Pensar de forma paramétrica
 
