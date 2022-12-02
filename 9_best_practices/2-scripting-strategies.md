@@ -23,7 +23,9 @@ Mit Textskripts können Sie komplexere Beziehungen erstellen als durch visuelle 
 | **Python**         | Ja         | Ja           | Teilweise          | Ja                | Nein            |
 | **ZeroTouch (C#)** | Nein          | Nein            | Nein                 | Ja                | Nein            |
 
-{% hint style="info" %} Unter [Referenz für die Skripterstellung](13-3\_scripting-reference.md) ist aufgelistet, worauf Sie mit welcher Dynamo-Bibliothek zugreifen können. {% endhint %}
+{% hint style="info" %} 
+Unter [Referenz für die Skripterstellung](13-3\_scripting-reference.md) ist aufgelistet, worauf Sie mit welcher Dynamo-Bibliothek zugreifen können. 
+{% endhint %}
 
 ### Parametrischer Denkansatz
 
