@@ -30,7 +30,7 @@ _Najetí kurzorem a kliknutí_ je nejjednodušší způsob, jak přímo vybrat p
 
 _Rozevírací nabídky_ slouží k tvorbě seznamu všech dostupných prvků v projektu aplikace Revit. Pomocí tohoto nástroje můžete odkazovat na prvky aplikace Revit, které nemusí být v pohledu viditelné. Jedná se o skvělý nástroj k dotazování existujících prvků nebo tvorbě nových v projektu aplikace Revit nebo v editoru rodin.
 
-\![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
+![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
 
 Prvek aplikace Revit můžete také vybrat podle konkrétních vrstev v _hierarchii aplikace Revit_. Toto je účinná možnost přizpůsobení velkých polí dat při přípravě dokumentace nebo generativních instancí a přizpůsobení.
 
@@ -81,7 +81,7 @@ Zde je alternativní metoda. Tentokrát se vyhneme výběru přes hierarchii apl
 
 Pomocí některých základních operací se seznamem se můžete dotazovat na určitou plochu.
 
-\![](<images/2/selecting - exercise 05.jpg>)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. Nejprve odešlete dříve vybrané prvky do uzlu Element.Faces.
 > 2. Uzel _List.Count_ následně zobrazí, že pracujete s 23 povrchy v objemu.
