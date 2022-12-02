@@ -25,7 +25,8 @@ Se si desidera visualizzare la dimostrazione dei workflow di Dynamo, sono stati 
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} Nei capitoli successivi sono disponibili altri esercizi specifici per gli argomenti, poiché vengono trattati argomenti diversi su Dynamo. Gli **esercizi** sono in genere disponibili nell'ultima sezione di ogni pagina.{% endhint %}
+{% hint style="info" %} Nei capitoli successivi sono disponibili altri esercizi specifici per gli argomenti, poiché vengono trattati argomenti diversi su Dynamo. Gli **esercizi** sono in genere disponibili nell'ultima sezione di ogni pagina.
+{% endhint %}
 
 ### Comunità
 
