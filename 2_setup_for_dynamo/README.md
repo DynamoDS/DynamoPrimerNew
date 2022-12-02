@@ -26,7 +26,7 @@ Wenn Sie Dynamo als eigenständige Anwendung verwenden möchten. Lesen Sie weite
 
 Die Dynamo-Anwendung ist auf der [Dynamo-Website](http://dynamobim.com) verfügbar. Sowohl offizielle als auch frühere oder vorab veröffentlichte Versionen sind auf der Download-Seite verfügbar. Besuchen Sie die Seite [Dynamo herunterladen](http://dynamobim.org/download/), und klicken Sie auf **Herunterladen**, um die offizielle veröffentlichte Version herunterzuladen.
 
-\![](<images/dynamo-sandbox(1) (1).png>)
+![](<images/dynamo-sandbox(1) (1).png>)
 
 Wenn Sie nach früheren oder aktuellen Entwicklungsversionen suchen, finden Sie alle Versionen im unteren Bereich derselben Seite.
 
