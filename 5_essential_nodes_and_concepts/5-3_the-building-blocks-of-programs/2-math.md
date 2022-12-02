@@ -10,7 +10,7 @@ Os operadores são um conjunto de componentes que usam funções algébricas com
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiplicar ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Multiplication.jpg) | Multiplicar (**\***) | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Division.jpg)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Exercício: Fórmula da espiral dourada
