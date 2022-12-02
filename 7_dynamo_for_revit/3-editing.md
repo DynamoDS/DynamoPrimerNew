@@ -16,7 +16,9 @@ O Dynamo possui um recurso avançado para permitir editar os parâmetros em um n
 
 Como uma revisão rápida dos parâmetros no Revit, lembramos que existem parâmetros de tipo e parâmetros de instância. Ambos podem ser editados no Dynamo, mas trabalharemos com parâmetros de instância no exercício abaixo.
 
-{% hint style="info" %} Depois de descobrir a aplicação abrangente de edição de parâmetros, você poderá editar uma grande quantidade de elementos no Revit com o Dynamo. Essa operação pode _exigir muitos cálculos computacionais_ , o que significa que pode ser lenta. Se estiver editando um grande número de elementos, poderá ser conveniente usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto você desenvolve o gráfico. Para obter mais informações sobre o congelamento de nós, consulte a seção “[Congelar](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)” no capítulo de sólidos. {% endhint %}
+{% hint style="info" %} 
+Depois de descobrir a aplicação abrangente de edição de parâmetros, você poderá editar uma grande quantidade de elementos no Revit com o Dynamo. Essa operação pode _exigir muitos cálculos computacionais_ , o que significa que pode ser lenta. Se estiver editando um grande número de elementos, poderá ser conveniente usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto você desenvolve o gráfico. Para obter mais informações sobre o congelamento de nós, consulte a seção “[Congelar](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)” no capítulo de sólidos. 
+{% endhint %}
 
 ### Unidades
 
