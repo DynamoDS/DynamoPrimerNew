@@ -26,7 +26,7 @@ Pokud chcete aplikaci Dynamo používat jako samostatnou aplikaci, přečtěte s
 
 Aplikace Dynamo je k dispozici na [webových stránkách aplikace Dynamo](http://dynamobim.com). Na stránce ke stažení jsou k dispozici oficiální, starší a předběžné verze. Přejděte na stránku [Get Dynamo](http://dynamobim.org/download/) a kliknutím na tlačítko **Download** stáhněte oficiální vydanou verzi.
 
-\![](<images/dynamo-sandbox(1) (1).png>)
+![](<images/dynamo-sandbox(1) (1).png>)
 
 Pokud hledáte předchozí nebo testovací vývojové verze, přejděte do dolní části této stránky, kde najdete všechny verze.
 
@@ -62,4 +62,6 @@ Zobrazí se následující úvodní obrazovka aplikace Dynamo Sandbox.
 
 Blahopřejeme! Dokončili jste instalaci aplikace Dynamo Sandbox a můžete ji začít používat.
 
-{% hint style="info" %} **Geometrie** je dodatečná funkce aplikace Dynamo Sandbox, která je dostupná pouze uživatelům, kteří mají aktuální předplatné nebo licenci k následujícímu softwaru Autodesk: Revit, Robot Structural Analysis, FormIt a Civil 3D. **Geometrie** umožňuje uživatelům importovat, vytvářet, upravovat a exportovat geometrii z aplikace Dynamo Sandbox. {% endhint %}
+{% hint style="info" %} 
+**Geometrie** je dodatečná funkce aplikace Dynamo Sandbox, která je dostupná pouze uživatelům, kteří mají aktuální předplatné nebo licenci k následujícímu softwaru Autodesk: Revit, Robot Structural Analysis, FormIt a Civil 3D. **Geometrie** umožňuje uživatelům importovat, vytvářet, upravovat a exportovat geometrii z aplikace Dynamo Sandbox. 
+{% endhint %}
