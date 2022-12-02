@@ -58,7 +58,7 @@ La saisie de différentes parties de la position du nœud dans la hiérarchie de
 
 * `library.category.nodeName`
 
-\![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
 
 * `category.nodeName`
 
