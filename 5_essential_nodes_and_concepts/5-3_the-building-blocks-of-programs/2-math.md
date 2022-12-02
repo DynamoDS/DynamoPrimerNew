@@ -10,7 +10,7 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiplier ( ***** ) | var[]…[], var[]…[] | var[]…[] |
+| ![](../images/5-3/2/Multiplication.jpg) | Multiplier (**\***) | var[]…[], var[]…[] | var[]…[] |
 | ![](../images/5-3/2/Division.jpg)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
