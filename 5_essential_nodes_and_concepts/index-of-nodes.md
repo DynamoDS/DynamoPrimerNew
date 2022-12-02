@@ -19,7 +19,7 @@ Dieser Index enthält weitere Informationen zu allen in dieser Einführung verwe
 |                                            | ABFRAGE                                                                                                                 |                                                           |
 | ![](images/5-1/ColorAlpha\(1\)\(1\).jpg)   | <p><strong>Color.Alpha</strong><br>Alpha-Komponente der Farbe ermitteln: 0 bis 255.</p>                                 | ![](images/5-1/indexofnodes-coloralpha.jpg)               |
 | ![](<images/5-1/ColorBlue (1).jpg>)        | <p><strong>Color.Blue</strong><br>Blaue Komponente der Farbe ermitteln: 0 bis 255.</p>                                   | ![](images/5-1/indexofnodes-colorblue.jpg)                |
-| \![](<images/5-1/ColorGreen(1)(1) (3).jpg>) | <p><strong>Color.Green</strong><br>Grüne Komponente der Farbe ermitteln: 0 bis 255.</p>                                 | ![](images/5-1/indexofnodes-colorgreen.jpg)               |
+| ![](<images/5-1/ColorGreen(1)(1) (3).jpg>) | <p><strong>Color.Green</strong><br>Grüne Komponente der Farbe ermitteln: 0 bis 255.</p>                                 | ![](images/5-1/indexofnodes-colorgreen.jpg)               |
 | ![](images/5-1/ColorRed.jpg)               | <p><strong>Color.Red</strong><br>Rote Komponente der Farbe ermitteln: 0 bis 255.</p>                                     | ![](images/5-1/indexofnodes-colorred.jpg)                 |
 
 |                                                       |                                                                                           |                                                               |
