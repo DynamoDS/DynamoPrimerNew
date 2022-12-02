@@ -10,7 +10,7 @@ Operátory jsou sada komponent, které používají algebraické funkce se dvěm
 | --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](../images/5-3/2/addition.jpg)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Subtraction.jpg)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| ![](../images/5-3/2/Multiplication.jpg) | Násobení (**\***) | var[]...[], var[]...[] | var[]...[] |
 | ![](../images/5-3/2/Division.jpg)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Cvičení: Vzorec zlaté spirály
