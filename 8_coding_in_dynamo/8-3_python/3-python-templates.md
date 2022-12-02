@@ -22,7 +22,9 @@ Onde vemos `<PythonTemplateFilePath />`, basta substituir por:
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Observação: Substitua CURRENTUSER por seu nome de usuário_ {% endhint %}
+{% hint style="warning" %} 
+_Observação: Substitua CURRENTUSER por seu nome de usuário_ 
+{% endhint %}
 
 Em seguida, precisamos criar um modelo com a funcionalidade que desejamos usar incorporada. Em nosso caso, vamos incorporar as importações relacionadas ao Revit e alguns dos outros itens típicos ao trabalhar com o Revit.
 
