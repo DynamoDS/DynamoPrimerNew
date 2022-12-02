@@ -26,7 +26,7 @@ Si vous souhaitez utiliser Dynamo en tant qu’application autonome. Continuez �
 
 L’application Dynamo est disponible sur le [site Web de Dynamo](http://dynamobim.com). Les versions officielles, antérieures ou pré-publiées sont disponibles sur la page de téléchargement. Visitez la page [Obtenir Dynamo](http://dynamobim.org/download/) et cliquez sur **Télécharger** pour obtenir la version officielle.
 
-\![](<images/dynamo-sandbox(1) (1).png>)
+![](<images/dynamo-sandbox(1) (1).png>)
 
 Si vous recherchez des versions de développement précédentes ou les toutes dernières versions de développement, toutes les versions sont disponibles dans la section inférieure de la même page.
 
@@ -62,4 +62,6 @@ L’écran de démarrage de Dynamo Sandbox s’affiche comme suit.
 
 Félicitations, vous avez terminé la configuration de Dynamo Sandbox !
 
-{% hint style="info" %} La fonction **Géométrie** est une fonctionnalité supplémentaire de Dynamo Sandbox qui est uniquement disponible pour les utilisateurs disposant d’un abonnement ou d’une licence valide pour les logiciels Autodesk suivants : Revit, Robot Structural Analysis, FormIt et Civil 3D. La fonction **Géometrie** permet aux utilisateurs d’importer, de créer, de modifier et d’exporter une géométrie à partir de Dynamo Sandbox. {% endhint %}
+{% hint style="info" %} 
+La fonction **Géométrie** est une fonctionnalité supplémentaire de Dynamo Sandbox qui est uniquement disponible pour les utilisateurs disposant d’un abonnement ou d’une licence valide pour les logiciels Autodesk suivants : Revit, Robot Structural Analysis, FormIt et Civil 3D. La fonction **Géometrie** permet aux utilisateurs d’importer, de créer, de modifier et d’exporter une géométrie à partir de Dynamo Sandbox. 
+{% endhint %}
