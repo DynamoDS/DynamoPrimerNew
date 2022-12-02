@@ -25,7 +25,9 @@ Se você quiser ver a demonstração dos fluxos de trabalho do Dynamo, incluímo
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} Há mais exercícios específicos de tópicos que podem ser encontrados em capítulos posteriores, pois abordamos diferentes tópicos sobre o Dynamo. Os **exercícios** podem ser encontrados normalmente na última seção de cada página.
+{% hint style="info" %} 
+Há mais exercícios específicos de tópicos que podem ser encontrados em capítulos posteriores, pois abordamos diferentes tópicos sobre o Dynamo. Os **exercícios** podem ser encontrados normalmente na última seção de cada página.
+{% endhint %}
 
 ### A Comunidade
 
