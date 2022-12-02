@@ -32,7 +32,7 @@
 
 ![](./images/5/customizing-exercise01.jpg)
 
-> 1. 先選取兩條邊與_「Select Edge」_節點。兩條邊是中庭的長跨距。
+> 1. 先選取兩條邊與 _「Select Edge」_ 節點。兩條邊是中庭的長跨距。
 > 2. 使用 _List.Create_ 節點將兩條邊合併到一個清單中。
 > 3. 使用 _Surface.ByLoft_ 在兩條邊之間建立曲面。
 
@@ -77,7 +77,7 @@
 > 1. 我們將在 Revit 中實體化大量幾何圖形，因此請確保將 Dynamo 求解器調整為 _「手動」_。
 > 2. 在圖元區加入 _Family Types_ 節點，然後選取 _「ROOF-PANEL-4PT」_。
 > 3. 在圖元區加入 _AdaptiveComponent.ByPoints_ 節點，將 _Panel Pts_ 從 _LunchBox Quad Grid by Face_ 輸出連接至 _points_ 輸入。將 _Family Types_ 節點連接至 _familySymbol_ 輸入。
-> 4. 按一下 _「執行」_。建立幾何圖形時，Revit 需要_考慮_一段時間。若花費太長時間，請將 _Code Block 的「15」_ 減少為較小的數字。這將減少屋頂上面板的數量。
+> 4. 按一下 _「執行」_。建立幾何圖形時，Revit 需要 _考慮_ 一段時間。若花費太長時間，請將 _Code Block 的「15」_ 減少為較小的數字。這將減少屋頂上面板的數量。
 
 _注意：若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停所執行的 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的〈凍結〉一節。_
 
