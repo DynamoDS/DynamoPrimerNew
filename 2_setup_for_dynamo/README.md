@@ -26,7 +26,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 您可以從 [Dynamo 網站](http://dynamobim.com)取得 Dynamo 應用程式。從下載頁面可取得正式版、舊版或預先發行版。請造訪[取得 Dynamo](http://dynamobim.org/download/) 頁面，然後按一下 **「Download」** 以取得官方發行的版本。
 
-\![](<images/dynamo-sandbox(1) (1).png>)
+![](<images/dynamo-sandbox(1) (1).png>)
 
 如果您要尋找舊版或「超前沿」的開發版本，在同一頁的下半部分可以找到所有版本。
 
@@ -62,4 +62,6 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 恭喜您，您現在已經完成使用 DynamoSandbox 的設定！
 
-{% hint style="info" %} **Geometry** 是 Dynamo Sandbox 中的一個額外功能，僅提供給目前擁有下列 Autodesk 軟體之固定期限使用授權或授權的使用者：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**Geometry** 可讓使用者從 Dynamo Sandbox 匯入、建立、編輯和匯出幾何圖形。{% endhint %}
+{% hint style="info" %} 
+**Geometry** 是 Dynamo Sandbox 中的一個額外功能，僅提供給目前擁有下列 Autodesk 軟體之固定期限使用授權或授權的使用者：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**Geometry** 可讓使用者從 Dynamo Sandbox 匯入、建立、編輯和匯出幾何圖形。
+{% endhint %}
