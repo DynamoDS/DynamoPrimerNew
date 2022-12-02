@@ -51,7 +51,7 @@ L’image ci-dessous représente la spirale dorée sous forme de programmation v
 >
 > d. **Math.Pow :** la fonction de « _t_ » et le numéro « _e_ » permettent de créer la séquence Fibonacci.
 >
-> . **Math.Cos et Math.Sin :** ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
+> e. **Math.Cos et Math.Sin :** ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
 >
 > f. **Watch** : le résultat obtenu se compose de deux listes. Elles représentent les coordonnées _x_ et _y_ des points utilisés pour générer la clothoïde.
 
