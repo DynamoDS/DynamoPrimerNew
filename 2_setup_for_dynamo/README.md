@@ -26,7 +26,7 @@ Dynamo は、**Revit3D**、**FormIt**、**Civil3D** などのソフトウェア�
 
 Dynamo アプリケーションは、[Dynamo の Web サイト](http://dynamobim.com)から入手できます。公式の過去またはプレリリース版のバージョンは、両方ともダウンロード ページから入手できます。「[Dynamo を取得](http://dynamobim.org/download/)」ページにアクセスし、[**ダウンロード**]をクリックして公式リリース バージョンをダウンロードしてください。
 
-\![](<images/dynamo-sandbox(1) (1).png>)
+![](<images/dynamo-sandbox(1) (1).png>)
 
 過去のリリースまたは「ブリーディング エッジ」開発リリースをお探しの場合は、同じページの下部セクションにすべてのバージョンがあります。
 
@@ -62,4 +62,6 @@ ZIP ファイルを右クリックして、[**すべて展開**]を選択しま�
 
 これで、DynamoSandbox を使用するための設定が完了しました。
 
-{% hint style="info" %} **Geometry** は、Dynamo Sandbox の追加機能です。この機能は、現在 Revit、Robot Structural Analysis、FormIt、Civil 3D の Autodesk ソフトウェアのサブスクリプションまたはライセンスを所有しているユーザのみが使用できます。**Geometry** を使用すると、Dynamo Sandbox からジオメトリを読み込み、作成、編集、書き出すことができます。{% endhint %}
+{% hint style="info" %}
+**Geometry** は、Dynamo Sandbox の追加機能です。この機能は、現在 Revit、Robot Structural Analysis、FormIt、Civil 3D の Autodesk ソフトウェアのサブスクリプションまたはライセンスを所有しているユーザのみが使用できます。**Geometry** を使用すると、Dynamo Sandbox からジオメトリを読み込み、作成、編集、書き出すことができます。
+{% endhint %}
