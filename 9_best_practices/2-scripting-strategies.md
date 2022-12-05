@@ -23,7 +23,9 @@
 | **Python**         | 예         | 예           | 부분적          | 예                | 아니요            |
 | **ZeroTouch (C#)** | 아니요          | 아니오            | 아니오                 | 예                | 아니요            |
 
-{% hint style="info" %} 각 Dynamo 라이브러리에서 액세스 가능한 리스트를 보려면 [스크립팅 참조](13-3\_scripting-reference.md)를 참조하십시오.
+{% hint style="info" %} 
+각 Dynamo 라이브러리에서 액세스 가능한 리스트를 보려면 [스크립팅 참조](13-3\_scripting-reference.md)를 참조하십시오.
+{% endhint %}
 
 ### 파라메트릭 방식으로 생각하기
 
