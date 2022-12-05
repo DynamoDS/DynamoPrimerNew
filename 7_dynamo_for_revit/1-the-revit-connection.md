@@ -4,7 +4,7 @@
 
 ![](./images/1/revitconnectionlink.jpg)
 
-Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑信息模型。它的灵活性与强大的 Revit 数据库相结合，可以提供全新的 BIM 视角。
+Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑信息模型。它的灵活性与强大的 Revit 数据库相结合，可以提供全新的 BIM 视角。 
 
 本章着重介绍适用于 BIM 的 Dynamo 工作流。各部分主要基于练习，因为直接进入项目是熟悉 BIM 图形算法编辑器的最佳方式。首先，我们来谈谈程序的开头部分。
 
