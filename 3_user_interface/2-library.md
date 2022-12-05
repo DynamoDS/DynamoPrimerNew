@@ -8,9 +8,7 @@
 * 사용자 노드: 자주 사용하는 루틴 또는 특수 그래프를 사용자 노드로 저장합니다. 또한 커뮤니티와 사용자 노드를 공유할 수도 있습니다.
 * 패키지 관리자의 노드: 게시된 사용자 노드의 모음입니다.
 
-{% hint style="info" %}
 이제 [노드 카테고리의 계층](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories)을 살펴보고, [라이브러리에서 빠르게 검색](3-3\_dynamo\_libraries.md#quick-search-in-library)할 수 있는 방법과 그중에서 [자주 사용하는 노드](3-3\_dynamo\_libraries.md#frequently-used-nodes)에 대해 알아보겠습니다.
-{% endhint %}
 
 ### 카테고리의 라이브러리 계층
 
