@@ -2,7 +2,9 @@
 
 Dynamo는 독립 실행형 "Sandbox" 모드에서 다운로드하여 실행하거나 Revit, FormIt 또는 Civil 3D와 같은 다른 소프트웨어에 대한 플러그인으로 실행할 수 있는 [시각적 프로그래밍](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo) 응용프로그램입니다.
 
-{% hint style="info" %} [**Dynamo Core**/**Revit**/**Sandbox** 간의 차이점에 대해 자세히 알아보십시오.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) {% endhint %}
+{% hint style="info" %} 
+[**Dynamo Core**/**Revit**/**Sandbox** 간의 차이점에 대해 자세히 알아보십시오.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) 
+{% endhint %}
 
 ### 프로세스
 
