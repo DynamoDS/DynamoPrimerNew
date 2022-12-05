@@ -8,7 +8,7 @@
 
 ### 二维/三维点
 
-Dynamo 中最常用的点类型存在于三维世界坐标系中，具有三个坐标 [X,Y,Z]（Dynamo 中的三维点）。
+Dynamo 中最常用的点类型存在于三维世界坐标系中，具有三个坐标 [X,Y,Z]（Dynamo 中的三维点）。 
 
 ![](../images/5-2/3/points-3dpointindynamo.jpg)
 
