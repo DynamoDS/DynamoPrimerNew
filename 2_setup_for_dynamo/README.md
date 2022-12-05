@@ -26,7 +26,7 @@ Dynamo를 독립 실행형 응용프로그램으로 사용하려는 경우, Sand
 
 Dynamo 응용프로그램은 [Dynamo 웹사이트](http://dynamobim.com)에서 다운로드할 수 있습니다. 공식 버전, 이전 버전 또는 시험판 버전 모두 다운로드 페이지에서 다운로드할 수 있습니다. 공식 출시 버전을 사용하려면 [Dynamo 다운로드](http://dynamobim.org/download/) 페이지를 방문하고 **다운로드**를 클릭합니다.
 
-\![](<images/dynamo-sandbox(1) (1).png>)
+![](<images/dynamo-sandbox(1) (1).png>)
 
 이전 또는 '최신' 개발 버전을 찾으려는 경우 모든 버전을 동일한 페이지의 아래쪽 섹션에서 찾을 수 있습니다.
 
@@ -62,4 +62,6 @@ DynamoSandbox 시작 화면이 다음과 같이 표시됩니다.
 
 축하합니다. DynamoSandbox 사용을 위한 설정이 완료되었습니다.
 
-{% hint style="info" %} **형상**은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다. **형상**을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다.
+{% hint style="info" %} 
+**형상**은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다. **형상**을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다.
+{% endhint %}
