@@ -1,7 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
-  workflows.
+  É possível usar a lista seguinte para localizar os conceitos introduzidos nos fluxos de trabalho de amostra.
 ---
 
 # Índice conceitual
