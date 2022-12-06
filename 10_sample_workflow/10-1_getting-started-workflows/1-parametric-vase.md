@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: 추천 연습
 ---
 
 # 파라메트릭 꽃병
