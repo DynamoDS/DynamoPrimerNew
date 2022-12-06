@@ -1,7 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
-  workflows.
+  Následující seznam slouží k vyhledávání konceptů představených ve vzorových pracovních postupech.
 ---
 
 # Rejstřík konceptů
