@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: рекомендуемое упражнение
 ---
 
 # Параметрическая ваза
