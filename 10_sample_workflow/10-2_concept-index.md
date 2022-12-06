@@ -1,7 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
-  workflows.
+  Poniższa lista umożliwia odszukanie pojęć wprowadzonych w przykładowych procesach roboczych.
 ---
 
 # Indeks pojęć
