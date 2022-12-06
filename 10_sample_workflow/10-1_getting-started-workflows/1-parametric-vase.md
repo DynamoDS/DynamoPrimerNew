@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: ejercicio sugerido
 ---
 
 # Jarrón paramétrico
