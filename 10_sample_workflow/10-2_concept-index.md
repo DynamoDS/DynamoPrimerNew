@@ -1,7 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
-  workflows.
+  次の一覧を使用すると、サンプル ワークフローで紹介された概念を見つけることができます。
 ---
 
 # 概念インデックス
