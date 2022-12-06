@@ -1,7 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
-  workflows.
+  С помощью следующего списка можно найти понятия, представленные в примерах рабочих процессов.
 ---
 
 # Индекс понятий
