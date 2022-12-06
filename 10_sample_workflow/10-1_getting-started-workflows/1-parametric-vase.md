@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: 推奨演習
 ---
 
 # パラメータを使用する花瓶
