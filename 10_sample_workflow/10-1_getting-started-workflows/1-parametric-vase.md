@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: doporučené cvičení
 ---
 
 # Parametrická váza
