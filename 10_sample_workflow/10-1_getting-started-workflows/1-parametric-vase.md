@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: 建議的練習
 ---
 
 # 參數式花瓶
