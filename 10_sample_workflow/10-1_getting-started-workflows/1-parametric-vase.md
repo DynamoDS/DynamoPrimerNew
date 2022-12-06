@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: sugerowane ćwiczenie
 ---
 
 # Wazon parametryczny
