@@ -1,6 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
+  您可以使用下列清單找出範例工作流程介紹的概念。
   workflows.
 ---
 
