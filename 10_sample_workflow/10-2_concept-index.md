@@ -1,7 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
-  workflows.
+  La liste suivante peut être utilisée pour localiser des concepts introduits dans les exemples de flux de travail.
 ---
 
 # Index de concept
