@@ -1,7 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
-  workflows.
+  다음 목록을 사용하여 샘플 워크플로우에 소개된 개념을 찾을 수 있습니다.
 ---
 
 # 개념 색인
