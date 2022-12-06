@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: esercizio suggerito
 ---
 
 # Vaso parametrico
