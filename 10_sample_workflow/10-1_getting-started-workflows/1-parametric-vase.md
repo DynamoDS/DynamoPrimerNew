@@ -1,5 +1,5 @@
 ---
-description: suggested exercise
+description: empfohlene Übung
 ---
 
 # Parametrische Vase
