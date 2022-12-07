@@ -1,7 +1,6 @@
 ---
 description: >-
-  The following list can be used to locate concepts introduced in the sample
-  workflows.
+  Mit der folgenden Liste können Sie Konzepte auffinden, die in Beispiel-Arbeitsabläufen eingeführt wurden.
 ---
 
 # Konzeptindex
