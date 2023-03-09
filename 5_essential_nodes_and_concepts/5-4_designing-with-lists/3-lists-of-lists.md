@@ -111,7 +111,7 @@ The **List.Count** node counts all of the items in a list. We'll use this to dem
 > 3. Connect each line of the code block into the respective _X_ and _Y_ inputs of a **Point.ByCoordinates** node. Right click the node, select "Lacing", and choose _"Cross Product"_. This creates a grid of points. Because we defined the range from -50 to 50, we are spanning the default Dynamo grid.
 > 4. A _**Watch**_ node reveals the points created. Notice the data structure. We've created a list of lists. Each list represents a row of points of the grid.
 
-![Exercise](../images/5-4/3/listsoflists-map02(1).jpg)
+![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Attach a **List.Count** node to the output of the watch node from the previous step.
 > 2. Connect a **Watch** node to the **List.Count** output.
@@ -246,7 +246,7 @@ This exercise uses some of the logic established in the previous one to edit a s
 
 Begin with the string of nodes above. We are creating a basic surface which spans the default Dynamo grid.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. Using **Code Block**, insert these two lines of code and connect to the _u_ and _v_ inputs of **Surface.PointAtParameter**, respectively: `-50..50..#3;` `-50..50..#5;`
 > 2. Be sure to set the Lacing of **Surface.PointAtParameter** to _"Cross Product"_.
@@ -254,20 +254,20 @@ Begin with the string of nodes above. We are creating a basic surface which span
 
 In this step, we want to query the central point in the grid we've created. To do this we'll select the middle point in the middle list. Makes sense, right?
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. To confirm that this is the correct point, we can also click through the watch node items to confirm that we're targeting the correct one.
 > 2. Using **Code Block**, we'll write a basic line of code for querying a list of lists:\
 >    `points[1][2];`
 > 3. Using **Geometry.Translate**, we'll move the selected point up in the _Z_ direction by _20_ units.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. Let's also select the middle row of points with a **List.GetItemAtIndex** node. Note: Similar to a previous step, we can also query the list with **Code Block**, using a line of `points[1];`
 
 So far we've successfully queried the center point and moved it upward. Now we want need to insert this moved point back into the original data structure.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. First, we want to replace the item of the list we isolated in a previous step.
 > 2. Using **List.ReplaceItemAtIndex**, we'll replace the middle item by using and index of _"2"_, with the replacement item connected to the moved point (**Geometry.Translate**).
@@ -275,7 +275,7 @@ So far we've successfully queried the center point and moved it upward. Now we w
 
 Now that we've modified the list, we need to insert this list back into the original data structure: the list of lists.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Following the same logic, use **List.ReplaceItemAtIndex** to replace the middle list with the our modified list.
 > 2. Notice that the **Code Block**_s_ defining the index for these two nodes are 1 and 2, which matches the original query from the **Code Block** (_points\[1]\[2]_).
@@ -283,10 +283,10 @@ Now that we've modified the list, we need to insert this list back into the orig
 
 There are many ways to make a surface from this set of points. In this case, we're going to create a surface by lofting curves together.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. Create a **NurbsCurve.ByPoints** node and connect the new data structure to create three nurbs curves.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. Connect a **Surface.ByLoft** to the output from **NurbsCurve.ByPoints**. We now have a modified surface. We can change the original _Z_ value of Geometry. Translate and watch the geometry update!

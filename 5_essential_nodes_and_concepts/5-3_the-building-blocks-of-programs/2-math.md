@@ -6,12 +6,12 @@ If the simplest form of data is numbers, the easiest way to relate those numbers
 
 Operators are a set of components that use algebraic functions with two numeric input values, which result in one output value (addition, subtraction, multiplication, division, etc.). These can be found under Operators>Actions.
 
-| Icon                                                | Name (Syntax)     | Inputs                     | Outputs      |
-| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
-| ![](../images/5-3/2/Division.jpg)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| Icon                                              | Name (Syntax)     | Inputs                     | Outputs      |
+| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| ![](<../images/5-1/addition(1)(1) (1).jpg>)       | Add (**+**)       | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Subtract (**-**)  | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiply (**\***) | var\[]...\[], var\[]...\[] | var\[]...\[] |
+| ![](<../images/5-1/Division(1)(1) (1).jpg>)       | Divide (**/**)    | var\[]...\[], var\[]...\[] | var\[]...\[] |
 
 ## Exercise: The Golden Spiral Formula
 
@@ -91,7 +91,7 @@ Pattern Now that we've made a circular Nautilus shell, let's jump into parametri
 
 As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
 
-![](../images/5-3/2/math-part IV-01.jpg)
+!\[]\(../images/5-3/2/math-part IV-01.jpg)
 
 Next, follow these mini steps to generate a series of spiral at various rotation.
 
@@ -99,7 +99,7 @@ Next, follow these mini steps to generate a series of spiral at various rotation
 
 > a. **Geometry.Rotate:** There are several **Geometry.Rotate** options; be certain you've chosen the Node with _geometry_,_basePlane_, and _degrees_ as its inputs. Connect **Point.ByCoordinates** into the geometry input. Right click on this Node and make sure the lacing is set to 'Cross Product'
 >
-> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
+> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY:** Connect to the _basePlane_ input. We will rotate around the origin, which is the same location as the base of the spiral.
 >

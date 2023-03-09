@@ -1,8 +1,6 @@
 # The Revit Connection
 
-
-
-![](./images/1/revitconnectionlink.jpg)
+![](images/1/revitconnectionlink.jpg)
 
 Dynamo for Revit extends building information modeling with the data and logic environment of a graphical algorithm editor. Its flexibility, coupled with a robust Revit database, offers a new perspective for BIM.
 
@@ -25,7 +23,7 @@ As both Revit and Dynamo continue to evolve, you may notice that the Revit versi
 
 ### History of Dynamo
 
-![History](./images/1/earlyScreenshot.jpg)
+![History](images/1/earlyScreenshot.jpg)
 
 With a dedicated team of developers and a passionate community, the project has come a long way from its humble beginnings.
 
@@ -41,7 +39,7 @@ In a Revit project or family editor, navigate to Addins and click Dynamo.\*
 \*Dynamo will run only in the file in which it was opened.
 {% endhint %}
 
-![](./images/1/launchdynamofromrevit.jpg)
+![](<../2\_setup\_for\_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 When opening Dynamo in Revit, there is a new category called "Revit". This is a comprehensive addition to the UI which offers nodes specifically catering to Revit workflows.\*
 
@@ -49,7 +47,7 @@ When opening Dynamo in Revit, there is a new category called "Revit". This is a 
 \*By using the Revit-specific family of nodes, the Dynamo graph will only work when opening in Dynamo for Revit. If a Dynamo for Revit graph is opened in Dynamo Sandbox for example, the Revit nodes will be missing.
 {% endhint %}
 
-![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
+![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Freezing Nodes
 
@@ -63,4 +61,4 @@ Dynamo is an open-source project that is constantly evolving, and a lot of devel
 
 Dynamo also maintains an active blog. Read up on recent posts to learn about the latest developments!
 
-![Blog](./images/1/blog.png)
+![Blog](images/1/blog.png)

@@ -29,13 +29,13 @@ Geometry are great menus to begin exploring as they contain the largest quantity
 
 These further categorize the Nodes among same subcategory based on whether the Nodes **Create** data, execute an **Action**, or **Query** data.
 
-* ![](images/3-2/userinterface-create.jpg) **Create**: Create or construct a geometry from scratch. E.g a circle.
-* ![](images/3-2/userinterface-action.jpg) **Action**: Perform an action on an object. E.g scaling a circle.
-* ![](images/3-2/userinterface-query.jpg) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
+* ![](<images/3-2/user interface - create.jpg>) **Create**: Create or construct a geometry from scratch. E.g a circle.
+* ![](<images/3-2/user interface - action.jpg>) **Action**: Perform an action on an object. E.g scaling a circle.
+* ![](<images/3-2/user interface - query.jpg>) **Query**: Get a property of an object that already exists. E.g get the radius of a circle.
 
 Hover your mouse over a Node to reveal more detailed information beyond its name and icon. This offers us a quick way to understand what the Node does, what it will require for inputs, and what it will give as an output.
 
-![](images/3-2/userinterface-nodedescription.jpg)
+![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Description - plain language description of the Node
 > 2. Icon - larger version of the icon in the Library Menu
@@ -48,7 +48,7 @@ If you know with relative specificity which Node you want to add to your Workspa
 
 Choose by clicking on the Node you wish to add or hit Enter to add highlighted nodes to the center of the Workspace.
 
-![](images/3-2/userinterface-search.jpg)
+![](<images/3-2/user interface - search.jpg>)
 
 #### Search by hierarchy
 
@@ -60,7 +60,7 @@ Typing in different portions of the Node's place in the Library hierarchy in the
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
 
 * `category.nodeName`
 
@@ -129,7 +129,7 @@ We can also use Code Blocks as a shortcut to defining a Number Input or call to 
 
 Here is a simple demonstration (with instructions) for using Code Block in your script.
 
-![](images/3-2/library-codeblockdemo.gif)
+![](<images/3-2/library-code block demo.gif>)
 
 1. Double-click to create a Code Block Node
 2. Type `Circle.ByCenterPointRadius(x,y);`

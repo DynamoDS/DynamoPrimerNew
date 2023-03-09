@@ -19,7 +19,7 @@ If you would like to see the demonstration of Dynamo workflows, we have included
 
 * [Parametric Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
+![](images/1-2/vase1.gif)
 
 * [Attractor points](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
