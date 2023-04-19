@@ -49,7 +49,7 @@ If you're stuck, check out the **Help** Menu. You may access one of the Dynamo r
 Dynamo's Toolbar contains a series of buttons for quick access to working with files as well as Undo \[Ctrl + Z] and Redo \[Ctrl + Y] commands. On the far right is another button that will export a snapshot of the workspace, which is extremely useful for documentation and sharing.
 
 * ![](images/userinterface-newfile.jpg) New - Create a new .dyn file
-* ![](<images/userinterface-open(1) (1).jpg>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
+* ![](<images/userinterface-open(1) (1) (2).jpg>) Open - Open an existing .dyn (workspace) or .dyf (custom node) file
 * ![](images/userinterface-save.jpg) Save/Save As - Save your active .dyn or .dyf file
 * ![](images/userinterface-undo.jpg) Undo - Undo your last action
 * ![](images/userinterface-redo.jpg) Redo - Redo the next action

@@ -91,7 +91,7 @@ Frequently we will want to adjust the Program Flow in our Visual Program by edit
 
 * Change connection to an input Port, left-click on another input Port
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2) (1).gif>)
 
 * To remove the Wire, pull the Wire away and left-click on Workspace
 

@@ -24,11 +24,11 @@ The colors in the table below query the properties used to define the color: Alp
 
 The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
 
-| Icon                                         | Name (Syntax)                     | Inputs | Outputs    |
-| -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorHue (1).jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-1/ColorSaturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-1/ColorBrightness (1).jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| Icon                                             | Name (Syntax)                     | Inputs | Outputs    |
+| ------------------------------------------------ | --------------------------------- | ------ | ---------- |
+| ![](<../images/5-1/ColorHue (1) (1).jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
+| ![](<../images/5-1/ColorSaturation (1).jpg>)     | Saturation (**Color.Saturation**) | color  | Saturation |
+| ![](<../images/5-1/ColorBrightness (1) (1).jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
 
 ### Color Range
 

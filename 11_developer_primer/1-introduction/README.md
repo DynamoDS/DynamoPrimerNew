@@ -1,33 +1,18 @@
-# Introduction
-
-Dynamo is a visual programming platform that enables designers to define the relationships and the sequences of actions that compose custom algorithms. Dynamo is an open-source project on Github, giving everyone an opportunity to contribute to its development.
-
-![A visual program in Dynamo](images/01-ProgramFlow.jpg)
+# Developer Primer
 
 #### What is the purpose of this guide? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
 The purpose of this guide is to help you navigate the range of C# development possibilities for Dynamo from how to create zero-touch nodes to building extensions.
 
 ![The Dynamo source on Github](images/dynamogithub.jpg)
+
 > The Dynamo source on GitHub
 
-The strength of Dynamo as an ever-growing platform is a product of the incredible community of users contributing to its development. Become an active part of this conversation by following [the Blog](https://dynamobim.org/blog/), providing original content to [the Gallery](https://dynamobim.org/gallery/), or engaging others in [the Forum](https://forum.dynamobim.com).
-
-![The Dynamo forum](images/forum.jpg)
-> The Dynamo Forum
-
-#### Looking for an introduction to Dynamo? <a href="#looking-for-an-introduction-to-dynamo" id="looking-for-an-introduction-to-dynamo"></a>
-
-If you are looking for a guide to visual programming in Dynamo, please visit the [Dynamo Primer](http://dynamoprimer.com/en/). This invaluable resource covers the foundational concepts of visual programming in Dynamo and development options in the Dynamo workspace such as DesignScript, Python, and Zero-Touch.
-
-![The Dynamo Primer](images/primer.jpg)
-> The Dynamo Primer
-
-#### What additional online resources do we provide? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>
+#### What additional Developer resources do we provide? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>
 
 **Dynamo**: Download the latest stable and daily builds of Dynamo
 
-[https://dynamobim.com/download/](https://dynamobim.com/download/)
+[https://dynamobuilds.com/](https://dynamobuilds.com/)
 
 **Dynamo GitHub**: Dynamo is an open-source development project on Github.
 
