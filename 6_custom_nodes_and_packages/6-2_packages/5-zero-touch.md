@@ -17,12 +17,12 @@ This section demonstrates how to use Zero-Touch to import a third party library.
 
 Zero-touch packages are a good complement to user-defined custom nodes. A few packages which use C# libraries are listed in the table below. For more detailed information on packages, visit the [Packages section ](../../a\_appendix/a-3\_packages.md)in the Appendix.
 
-| **Logo/Image**                                                               | **Name**                                                                    |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](<../images/6-2/5/meshToolkitcasestudy01 (1) (2).jpg>)                    | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (2).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                             | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                              | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| **Logo/Image**                                                         | **Name**                                                                    |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| ![](../images/6-2/2/meshToolkitcasestudy01.jpg)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](../images/6-2/5/rhynamo.jpg)                                       | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../images/6-2/5/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## Case Study - Importing AForge
 
