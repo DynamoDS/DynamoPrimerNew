@@ -50,7 +50,7 @@ With the three images above in mind, let's dive into an exercise which selects e
 
 In this example Revit file, we have three element types of a simple building. We're going to use this as an example for selecting Revit elements within the context of the Revit hierarchy.
 
-![](<images/2/selecting - exercise 01 (1) (3).jpg>)
+![](<../.gitbook/assets/selecting\_exercise\_01 (1) (2).jpg>)
 
 > 1. Building Mass
 > 2. Beams (Structural Framing)

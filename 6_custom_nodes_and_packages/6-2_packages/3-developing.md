@@ -30,7 +30,7 @@ The package we're creating uses five custom nodes that we've built for reference
 
 This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (2) (3).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
 
 #### **PointsToSurface**
 
