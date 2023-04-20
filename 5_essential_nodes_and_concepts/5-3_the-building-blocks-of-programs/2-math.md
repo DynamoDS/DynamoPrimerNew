@@ -6,12 +6,12 @@ Si la forma más sencilla de datos es el número, la forma más sencilla de rela
 
 Los operadores son un conjunto de componentes que utilizan funciones algebraicas con dos valores numéricos de entrada que dan como resultado un valor de salida (suma, resta, multiplicación, división, etc.). Estos se pueden encontrar en Operators > Actions.
 
-| Icono                                                | Nombre (sintaxis)     | Entradas                     | Salidas      |
-| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiplicar (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Division.jpg)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| Icono                                              | Nombre (sintaxis)     | Entradas                     | Salidas      |
+| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiplicar ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ejercicio: la fórmula de la espiral dorada
 
@@ -85,7 +85,7 @@ Un premio para quién consiga convertirlo a 3D.
 
 Ahora que hemos hecho una concha de caracol circular, vamos a pasar a las rejillas paramétricas. Vamos a usar una rotación básica en la espiral Fibonacci para crear una rejilla Fibonacci y modelar el resultado según el [crecimiento de las semillas de girasol](https://blogs.unimelb.edu.au/sciencecommunication/2018/09/02/this-flower-uses-maths-to-reproduce/).
 
-Como punto de partida, vamos a realizar el mismo paso del ejercicio anterior: crear de una matriz de puntos de espiral con el nodo **Point.ByCoordinates**.
+Como punto de partida, vamos a realizar el mismo paso del ejercicio anterior: crear una matriz de puntos de espiral con el nodo **Point.ByCoordinates**.
 
 \![](../images/5-3/2/math-part IV-01.jpg)
 
@@ -95,7 +95,7 @@ A continuación, siga estos pequeños pasos para generar una serie de espirales 
 
 > a. **Geometry.Rotate**: existen varias opciones de **Geometry.Rotate**; asegúrese de que ha elegido el nodo que contiene las entradas _geometry_, _basePlane_ y _degrees_. Conecte **Point.ByCoordinates** en la entrada geometry. Haga clic con el botón derecho en este nodo y asegúrese de que el encaje se haya establecido en "Producto vectorial".
 >
-> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
+> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plano.XY**: conéctelo a la entrada _basePlane_. Rotaremos alrededor del origen, que es la misma ubicación que la base de la espiral.
 >

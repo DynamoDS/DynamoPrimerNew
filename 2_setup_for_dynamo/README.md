@@ -4,7 +4,7 @@
 
 Dynamo es un proyecto activo de desarrollo de código abierto. Obtenga la [lista de software compatible con Dynamo](http://dynamobim.org/download/).
 
-![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) ![](images/setupfordynamo-dynamoadvancesteel.png) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
+![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) \![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
 
 ### Iniciar Dynamo como extensión
 
@@ -12,7 +12,7 @@ Dynamo viene preinstalado en software como **Revit3D**, **FormIt**, **Civil3D**,
 
 Para empezar a utilizarlo, inícielo desde el panel de la barra de herramientas. Aunque su posición varía en función del software utilizado, el icono de inicio se suele encontrar en el menú > ficha **Administrar**. Haga clic en el icono de Dynamo ![](images/dynamoCore-halfSize.png) para iniciarlo.
 
-![](images/launchdynamofromrevit.jpg)
+\![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
 
 Para obtener más información sobre el uso de Dynamo con un software específico, es recomendable consultar las siguientes secciones:
 
@@ -26,7 +26,7 @@ Si desea utilizar Dynamo como una aplicación independiente, siga leyendo para o
 
 La aplicación Dynamo está disponible en el [sitio web de Dynamo](http://dynamobim.com). Tanto las versiones oficiales como las preliminares o las anteriores están disponibles en la página de descarga. Visite la página [Get Dynamo](http://dynamobim.org/download/) y haga clic en **Download** para obtener la versión oficial publicada.
 
-![](<images/dynamo-sandbox(1) (1).png>)
+![](images/dynamo-sandbox\(1\).png)
 
 Si busca versiones anteriores o de desarrollo de "vanguardia", todas las versiones se pueden encontrar en la sección inferior de la misma página.
 
@@ -62,6 +62,4 @@ Aparecerá la pantalla de inicio de Dynamo Sandbox, como se muestra a continuaci
 
 Enhorabuena, ya ha finalizado la configuración para utilizar Dynamo Sandbox.
 
-{% hint style="info" %} 
-La función **Geometría** es una característica adicional de Dynamo Sandbox disponible únicamente para los usuarios que tengan una licencia o una suscripción actuales a las siguientes soluciones de software de Autodesk: Revit, Robot Structural Analysis, FormIt y Civil 3D. La función **Geometría** permite a los usuarios importar, crear, editar y exportar geometría desde Dynamo Sandbox.
-{% endhint %}
+{% hint style="info" %} La función **Geometría** es una característica adicional de Dynamo Sandbox disponible únicamente para los usuarios que tengan una licencia o una suscripción actuales a las siguientes soluciones de software de Autodesk: Revit, Robot Structural Analysis, FormIt y Civil 3D. La función **Geometría** permite a los usuarios importar, crear, editar y exportar geometría desde Dynamo Sandbox.

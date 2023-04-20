@@ -111,7 +111,7 @@ El nodo **List.Count** realiza un recuento de todos los elementos de una lista. 
 > 3. Conecte cada línea del bloque de código a las entradas _X_ e _Y_ respectivas de un nodo **Point.ByCoordinates**. Haga clic con el botón derecho en el nodo, seleccione "Encaje" y, a continuación, elija _"Producto vectorial"_. Esta acción crea una rejilla de puntos. Como hemos definido el intervalo de -50 a 50, se extiende la rejilla de Dynamo por defecto.
 > 4. En el nodo _**Watch**_, se muestran los puntos creados. Observe la estructura de datos. Hemos creado una lista de listas. Cada lista representa una fila de puntos de la rejilla.
 
-![Ejercicio](../images/5-4/3/listsoflists-map02(1).jpg)
+\![Ejercicio](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Enlace un nodo **List.Count** a la salida del nodo de visualización del paso anterior.
 > 2. Conecte un nodo **Watch** a la salida de **List.Count**.
@@ -244,7 +244,7 @@ En este ejercicio, se utiliza parte de la lógica establecida en el ejercicio an
 
 Comience con la cadena de nodos anterior. Vamos a crear una superficie básica que abarque la rejilla de Dynamo por defecto.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. Mediante el **bloque de código**, inserte estas dos líneas de código y conéctelas a las entradas _u_ y _v_ de **Surface.PointAtParameter** respectivamente: `-50..50..#3;` `-50..50..#5;`.
 > 2. Asegúrese de establecer el encaje de **Surface.PointAtParameter** en _"Producto vectorial"_.
@@ -252,20 +252,20 @@ Comience con la cadena de nodos anterior. Vamos a crear una superficie básica q
 
 En este paso, deseamos consultar el punto central de la rejilla que hemos creado. Para ello, seleccionaremos el punto medio de la lista central. Tiene sentido, ¿verdad?
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. Para confirmar que este es el punto adecuado, también podemos hacer clic por los elementos del nodo de visualización para confirmar que se trata del objetivo correcto.
 > 2. Mediante el **bloque de código**, escribiremos una línea de código básica para consultar una lista de listas, como se indica a continuación:\
  `points[1][2];`.
 > 3. Con **Geometry.Translate**, desplazaremos el punto seleccionado hacia arriba en la dirección _Z_ en _20_ unidades.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. Vamos a seleccionar la fila central de puntos con un nodo **List.GetItemAtIndex**. Nota: Al igual que en un paso anterior, también podemos consultar la lista con un **bloque de código** mediante una línea de `points[1];`.
 
 Hasta ahora, hemos consultado correctamente el punto central y lo hemos desplazado hacia arriba. Ahora deseamos insertar de nuevo este punto desplazado en la estructura de datos original.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. Deseamos reemplazar primero el elemento de la lista que hemos aislado en un paso anterior.
 > 2. Con **List.ReplaceItemAtIndex**, sustituiremos el elemento central mediante el uso de un índice _"2"_ con el elemento de reemplazo conectado al punto desplazado (**Geometry.Translate**).
@@ -273,7 +273,7 @@ Hasta ahora, hemos consultado correctamente el punto central y lo hemos desplaza
 
 Ahora que hemos modificado la lista, debemos volver a insertarla en la estructura de datos original: la lista de listas.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Siguiendo la misma lógica, utilice **List.ReplaceItemAtIndex** para reemplazar la lista central por la lista modificada.
 > 2. Observe que los **bloques de código**__ que definen el índice de estos dos nodos son 1 y 2, que coinciden con la consulta original del **bloque de código** (_points[1][2]_).
@@ -281,10 +281,10 @@ Ahora que hemos modificado la lista, debemos volver a insertarla en la estructur
 
 Hay muchas formas de crear una superficie a partir de este conjunto de puntos. En este caso, vamos a crear una superficie mediante la solevación conjunta de curvas.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. Cree un nodo **NurbsCurve.ByPoints** y conecte la nueva estructura de datos para crear tres curvas NURBS.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. Conecte **Surface.ByLoft** a la salida desde **NurbsCurve.ByPoints**. Ahora tenemos una superficie modificada. Podemos cambiar el valor _Z_ original de la geometría. Realice el traslado y vea cómo se actualiza la geometría.

@@ -1,6 +1,6 @@
 # Descargar PDF
 
-Para acceder a la información de este manual de introducción sin conexión, descargue el archivo PDF:
+Para acceder a la información de este manual de introducción sin conexión, descargue el archivo PDF: 
 
 ## Versiones
 

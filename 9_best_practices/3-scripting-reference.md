@@ -4,7 +4,7 @@ Esta página de referencia amplía las prácticas recomendadas incluidas en las 
 
 ## Qué bibliotecas utilizar
 
-Las bibliotecas estándar son externas a Dynamo y están presentes en los lenguajes de programación Python y C# (Zerotouch). Dynamo también tiene su propio conjunto de bibliotecas que corresponden directamente con su jerarquía de nodos, lo que permite al usuario crear mediante código cualquier elemento que se pueda crear con nodos y líneas. A continuación se muestra una guía sobre los elementos a los que cada biblioteca de Dynamo proporciona acceso y cuándo utilizar una biblioteca estándar.
+Las bibliotecas estándar son externas a Dynamo y están presentes en los lenguajes de programación Python y C# (Zerotouch). Dynamo también tiene su propio conjunto de bibliotecas que corresponden directamente con su jerarquía de nodos, lo que permite al usuario crear mediante código cualquier elemento que se pueda crear con nodos y líneas. A continuación, se muestra una guía sobre los elementos a los que cada biblioteca de Dynamo proporciona acceso y cuándo utilizar una biblioteca estándar.
 
 ![](./images/3/textual-programming.jpg)
 
@@ -15,12 +15,12 @@ Las bibliotecas estándar son externas a Dynamo y están presentes en los lengua
 
 **Bibliotecas de Dynamo**
 
-1. ProtoGeometry\*
+1.  ProtoGeometry*
 
-   * Funciones: Arco, Cuadro delimitador, Círculo, Cono, Sistema de coordenadas, Cubo, Curva, Cilindro, Borde, Elipse, Arco de elipse, Cara, Geometría, Hélice, Grupo de índice, Línea, Malla, Curva Nurbs, Superficie Nurbs, Plano, Punto, Polígono, Rectángulo, Sólido, Esfera, Superficie, Topología, T-Spline, UV, Vector, Vértice.
-   * Cómo importar: `import Autodesk.DesignScript.Geometry`
+    * Funciones: Arco, Cuadro delimitador, Círculo, Cono, Sistema de coordenadas, Cubo, Curva, Cilindro, Borde, Elipse, Arco de elipse, Cara, Geometría, Hélice, Grupo de índice, Línea, Malla, Curva Nurbs, Superficie Nurbs, Plano, Punto, Polígono, Rectángulo, Sólido, Esfera, Superficie, Topología, T-Spline, UV, Vector, Vértice.
+    * Cómo importar: `import Autodesk.DesignScript.Geometry`
 
-   ``
+    \`\`
 2. DSCoreNodes
    * Funciones: Color, Rango de colores 2D, Fecha y hora, Intervalo de tiempo, IO, Fórmula, Lógica, Lista, Matemáticas, Árbol cuádruple, Cadena, Rosca.
    * Cómo importar: `import DSCore`
@@ -31,9 +31,7 @@ Las bibliotecas estándar son externas a Dynamo y están presentes en los lengua
    * Función: Excel.
    * Cómo importar: `import DSOffice`
 
-{% hint style="warning" %}
-\* Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información.
-{% endhint %}
+{% hint style="warning" %}* Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información. {% endhint %}
 
 ## Atención en el uso de etiquetas
 
@@ -144,126 +142,126 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> "Todo debe hacerse tan simple como sea posible, pero no más". - Albert Einstein
+> "Todo debe hacerse tan simple como sea posible, pero no más". – Albert Einstein
 
 ## Estilo coherente
 
-Por lo general, hay más de una manera de programar prácticamente cualquier cosa, por lo que su "estilo personal" de crear secuencias de comandos es el resultado de las innumerables pequeñas decisiones que usted toma (o no toma) a lo largo del camino. Dicho esto, la legibilidad y las posibilidades de mantenimiento del código son resultado directo de su coherencia interna, así como del cumplimiento de las convenciones estilísticas generales. Como regla general, el código que tiene el mismo aspecto en dos lugares diferentes, también debería funcionar de la misma manera. A continuación se ofrecen algunos consejos para escribir código claro y coherente.
+Por lo general, hay más de una manera de programar prácticamente cualquier cosa, por lo que su "estilo personal" de crear secuencias de comandos es el resultado de las innumerables pequeñas decisiones que usted toma (o no toma) a lo largo del camino. Dicho esto, la legibilidad y las posibilidades de mantenimiento del código son resultado directo de su coherencia interna, así como del cumplimiento de las convenciones estilísticas generales. Como regla general, el código que tiene el mismo aspecto en dos lugares diferentes, también debería funcionar de la misma manera. A continuación, se ofrecen algunos consejos para escribir código claro y coherente.
 
 **Convenciones para los nombres:** (elija una de las convenciones siguientes para cada tipo de entidad del código y úsela siempre)
 
-* Variables, funciones, métodos, paquetes, módulos:\
-   `lower_case_with_underscores`
+* Variables, funciones, métodos, paquetes y módulos:\
+ `lower_case_with_underscores`
 * Clases y excepciones:\
-   `CapWords`
+ `CapWords`
 * Métodos protegidos y funciones internas:\
-   `_single_leading_underscore(self, ...)`
+ `_single_leading_underscore(self, ...)`
 * Métodos privados:\
-   `__double_leading_underscore(self, ...)`
+ `__double_leading_underscore(self, ...)`
 * Constantes:\
-   `ALL_CAPS_WITH_UNDERSCORES`
+ `ALL_CAPS_WITH_UNDERSCORES`
 
-> Sugerencia: evite las variables de una sola letra (especialmente l, O, I) excepto en bloques muy cortos, cuando el significado es claramente visible desde el contexto inmediato.
+> Consejo: Evite las variables de una sola letra (especialmente, l, O, I) excepto en bloques muy cortos, cuando el significado es claramente visible desde el contexto inmediato.
 
 **Uso de líneas en blanco:**
 
 * Rodee las definiciones de clase y función de nivel superior con dos líneas en blanco.
-   * Las definiciones de método dentro de una clase se rodean con una sola línea en blanco.
-   * Se pueden utilizar líneas en blanco adicionales (con moderación) para separar grupos de funciones relacionadas.
+  * Las definiciones de método dentro de una clase se rodean con una sola línea en blanco.
+  * Se pueden utilizar líneas en blanco adicionales (con moderación) para separar grupos de funciones relacionadas.
 
 **Evite los espacios innecesarios:**
 
-* Inmediatamente después de paréntesis, corchetes o llaves:
+*   Inmediatamente después de paréntesis, corchetes o llaves:
 
-   ```
-   ### BAD
-   function( apples[ 1 ], { oranges: 2 } )
-   ```
+    ```
+    ### BAD
+    function( apples[ 1 ], { oranges: 2 } )
+    ```
 
-   ```
-   ### GOOD:
-   function(apples[1], {oranges: 2})
-   ```
-* Inmediatamente antes de coma, punto y coma o dos puntos:
+    ```
+    ### GOOD:
+    function(apples[1], {oranges: 2})
+    ```
+*   Inmediatamente antes de coma, punto y coma o dos puntos:
 
-   ```
-   ### BAD
-    if x == 2 : print x , y ; x , y = y , x
-   ```
+    ```
+    ### BAD
+     if x == 2 : print x , y ; x , y = y , x
+    ```
 
-   ```
-   ### GOOD
-     if x == 2: print x, y; x, y = y, x
-   ```
-* Inmediatamente antes del paréntesis de apertura que inicia la lista de argumentos de una llamada de función:
+    ```
+    ### GOOD
+      if x == 2: print x, y; x, y = y, x
+    ```
+*   Inmediatamente antes del paréntesis de apertura que inicia la lista de argumentos de una llamada de función:
 
-   ```
-   ### BAD
-   function (1)
-   ```
+    ```
+    ### BAD
+    function (1)
+    ```
 
-   ```
-   ### GOOD
-   function(1)
-   ```
-* Inmediatamente antes del paréntesis de apertura que inicia una indexación o un fragmento:
+    ```
+    ### GOOD
+    function(1)
+    ```
+*   Inmediatamente antes del paréntesis de apertura que inicia una indexación o un fragmento:
 
-   ```
-   ### BAD
-   dict ['key'] = list [index]
-   ```
+    ```
+    ### BAD
+    dict ['key'] = list [index]
+    ```
 
-   ```
-   ### GOOD
-   dict['key'] = list[index]
-   ```
-* Rodee siempre estos operadores binarios con un solo espacio a cada lado:
+    ```
+    ### GOOD
+    dict['key'] = list[index]
+    ```
+*   Rodee siempre estos operadores binarios con un solo espacio a cada lado:
 
-   ```
-   assignment ( = )
-   augmented assignment ( += , -= etc.)
-   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-   Booleans ( and , or , not )
-   ```
+    ```
+    assignment ( = )
+    augmented assignment ( += , -= etc.)
+    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+    Booleans ( and , or , not )
+    ```
 
 **Vigile la longitud de las líneas:**
 
-* La longitud máxima aproximada es de 79 caracteres.
+* No las alargue más allá de aproximadamente 79 caracteres.
 * La limitación de la anchura necesaria en la ventana del editor permite tener varios archivos abiertos en paralelo y posibilita el correcto funcionamiento de las herramientas de revisión de código que presentan las dos versiones en columnas adyacentes.
 * Las líneas largas se pueden dividir en varias líneas encerrando las expresiones entre paréntesis:
 
 **Evite los comentarios obvios y redundantes:**
 
 * En algunos casos, se requieren menos comentarios para obtener un código más legible. Especialmente si ello le obliga a utilizar nombres de símbolo significativos en lugar de descripciones.
-* La adopción de buenos hábitos de codificación reduce la dependencia de los comentarios:
+*   La adopción de buenos hábitos de codificación reduce la dependencia de los comentarios:
 
-   ```
-   ### BAD
-     # get the country code
-     country_code = get_country_code(address)
+    ```
+    ### BAD
+      # get the country code
+      country_code = get_country_code(address)
 
-     # if country code is US
-     if (country_code == 'US'):
-       # display the form input for state
-       print form_input_state()
-   ```
+      # if country code is US
+      if (country_code == 'US'):
+        # display the form input for state
+        print form_input_state()
+    ```
 
-   ```
-   ### GOOD
-     # display state selection for US users
-     country_code = get_country_code(address)
-     if (country_code == 'US'):
-       print form_input_state()
-   ```
+    ```
+    ### GOOD
+      # display state selection for US users
+      country_code = get_country_code(address)
+      if (country_code == 'US'):
+        print form_input_state()
+    ```
 
-> Sugerencia: los comentarios indican por qué, el código indica cómo.
+> Consejo: Los comentarios indican por qué y el código indica cómo.
 
 **Tenga en cuenta el código abierto:**
 
 * Los proyectos de código abierto se basan en los esfuerzos colaborativos de muchos desarrolladores. Estos proyectos necesitan mantener un alto nivel de legibilidad del código para que el equipo pueda trabajar en conjunto de la forma más eficiente posible. Por lo tanto, es recomendable examinar el código fuente de estos proyectos para observar lo que hacen estos desarrolladores.
 * Mejore las convenciones:
-   * Pregúntese si cada una de las convenciones funciona o no para las necesidades en cuestión.
-   * ¿Se está poniendo en peligro la funcionalidad/eficiencia?
+  * Pregúntese si cada una de las convenciones funciona o no para las necesidades en cuestión.
+  * ¿Se está poniendo en peligro la funcionalidad/eficiencia?
 
 ## Normas de C# (Zerotouch)
 
@@ -274,11 +272,11 @@ Por lo general, hay más de una manera de programar prácticamente cualquier cos
 
 **Objetos no administrados:**
 
-Cuando se utiliza la biblioteca de geometría de Dynamo _(ProtoGeometry)_desde Python o C#, los objetos de geometría que se creen no se gestionarán mediante la máquina virtual, y la memoria de muchos de estos objetos deberá limpiarse manualmente. Para limpiar objetos nativos o no administrados, puede utilizar el método **Dispose** o la palabra clave **using**. Consulte esta entrada wiki para obtener una descripción general: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
+Cuando se utiliza la biblioteca de geometría de Dynamo _(ProtoGeometry)_ desde Python o C#, los objetos de geometría que se creen no se gestionarán mediante la máquina virtual, y la memoria de muchos de estos objetos deberá limpiarse manualmente. Para limpiar objetos nativos o no administrados, puede utilizar el método **Dispose** o la palabra clave **using**. Consulte esta entrada wiki para obtener una descripción general: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose—using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-Solo es necesario eliminar los recursos no administrados que no se devuelvan al gráfico y los que no almacenan una referencia. En el resto de esta sección, nos referiremos a estos objetos como _geometría intermedia_. Puede ver un ejemplo de esta clase de objeto en el ejemplo de código siguiente. La función de Zero Touch C# **singleCube** devuelve un único cubo, pero crea 10000 cubos adicionales durante su ejecución. Podemos fingir que esta otra geometría se ha utilizado como geometría de construcción intermedia.
+Solo es necesario eliminar los recursos no administrados que no se devuelvan al gráfico y los que no almacenan una referencia. En el resto de esta sección, nos referiremos a estos objetos como _geometría intermedia_. Puede ver un ejemplo de esta clase de objeto en el código siguiente. La función de Zero Touch C# **singleCube** devuelve un único cubo, pero crea 10 000 cubos adicionales durante su ejecución. Podemos fingir que esta otra geometría se ha utilizado como geometría de construcción intermedia.
 
-**Es muy probable que esta función de Zero Touch bloquee Dynamo.** Esto se debe a que hemos creado 10000 sólidos, pero solo hemos almacenado uno de ellos y solo hemos devuelto ese mismo. Deberíamos desechar todos los cubos intermedios, excepto el que devolvemos. No debemos desechar lo que devolvemos, ya que se propaga en el gráfico y lo utilizan otros nodos.
+**Es muy probable que esta función de Zero Touch bloquee Dynamo.** Esto se debe a que hemos creado 10 000 sólidos, pero solo hemos almacenado uno de ellos y solo hemos devuelto ese mismo. Deberíamos desechar todos los cubos intermedios, excepto el que devolvemos. No debemos desechar lo que devolvemos, ya que se propaga en el gráfico y lo utilizan otros nodos.
 
 ```
 public Cuboid singleCube(){

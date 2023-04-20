@@ -28,7 +28,7 @@ Dynamo Primer es un proyecto de código abierto iniciado por Matt Jezyk y el equ
 
 ### **Desarrollo del módulo de extensión Zero Touch para Dynamo**
 
-En esta página se describe el proceso de desarrollo de un nodo de Dynamo personalizado en C# mediante la interfaz de "Zero Touch". En la mayoría de los casos, se pueden importar clases y métodos estáticos de C# sin modificaciones. Si la biblioteca solo necesita funciones de llamada y no crear nuevos objetos, esto se puede conseguir muy fácilmente con métodos estáticos. Cuando Dynamo carga el archivo DLL, eliminará el espacio de nombres de las clases y mostrará todos los métodos estáticos como nodos.
+En esta página, se describe el proceso de desarrollo de un nodo de Dynamo personalizado en C# mediante la interfaz de "Zero Touch". En la mayoría de los casos, se pueden importar clases y métodos estáticos de C# sin modificaciones. Si la biblioteca solo necesita funciones de llamada y no crear nuevos objetos, esto se puede conseguir muy fácilmente con métodos estáticos. Cuando Dynamo carga el archivo DLL, eliminará el espacio de nombres de las clases y mostrará todos los métodos estáticos como nodos.
 
 [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development)
 
@@ -68,11 +68,11 @@ Este bloc de notas intenta solucionar algunas "deficiencias de recursos" en el a
 
 ### **Revit Python Shell**
 
-RevitPythonShell añade un intérprete de IronPython a Autodesk Revit y Vasari. Este proyecto es anterior a Dynamo y es una excelente referencia para el desarrollo mediante Python. Proyecto RPS:
+RevitPythonShell añade un intérprete de IronPython a Autodesk Revit y Vasari. Este proyecto es anterior a Dynamo y es una excelente referencia para el desarrollo mediante Python. Proyecto RPS: 
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell 
 
-Blog del desarrollador:
+Blog del desarrollador: 
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 

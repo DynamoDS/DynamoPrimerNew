@@ -38,7 +38,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Factor de escala
+### Escala
 
 Además de trasladarse y rotarse, los objetos CoordinateSystem también se pueden crear cortados o con su escala ajustada. Se puede ajustar la escala de un CoordinateSystem con el método _.Scale_:
 
@@ -76,16 +76,16 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 La escala y el corte son transformaciones geométricas más complejas que la rotación y la traslación, por lo que no todos los objetos de Dynamo pueden someterse a ellas. En la siguiente tabla, se describen los objetos de Dynamo que pueden tener objetos CoordinateSystem con escala no uniforme y cortados.
 
-| Clase | CoordinateSystem con escala no uniforme | CoordinateSystem cortado |
+| Clase        | CoordinateSystem con escala no uniforme | CoordinateSystem cortado |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arco | No | No |
-| NurbsCurve | Sí | Sí |
-| NurbsSurface | No | No |
-| Círculo | No | No |
-| Línea | Sí | Sí |
-| Plano | No | No |
-| Punto | Sí | Sí |
-| Polígono | No | No |
-| Sólido | No | No |
-| Superficie | No | No |
-| Texto | No | No |
+| Arco          | No                                    | No                       |
+| NurbsCurve   | Sí                                   | Sí                      |
+| NurbsSurface | No                                    | No                       |
+| Círculo       | No                                    | No                       |
+| Línea         | Sí                                   | Sí                      |
+| Plano        | No                                    | No                       |
+| Punto        | Sí                                   | Sí                      |
+| Polígono      | No                                    | No                       |
+| Sólido        | No                                    | No                       |
+| Superficie      | No                                    | No                       |
+| Texto         | No                                    | No                       |

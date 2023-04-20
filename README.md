@@ -55,7 +55,7 @@ A **Matterlab** se le encargó actualizar el manual de introducción para inclui
 
 Un agradecimiento especial a Ian Keough por iniciar y guiar el proyecto de Dynamo.
 
-Deseamos agradecer a Matt Jezyk, Ian Keough, Zach Kron, Racel Williams y Colin McCrone su colaboración entusiasta y la oportunidad de participar en una amplia gama de proyectos de Dynamo.
+Deseamos agradecer a Matt Jezyk, Ian Keough, Zach Kron, Racel Amour y Colin McCrone su colaboración entusiasta y la oportunidad de participar en una amplia gama de proyectos de Dynamo.
 
 ### Software y recursos
 

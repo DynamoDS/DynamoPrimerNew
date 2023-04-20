@@ -14,7 +14,7 @@ La mayoría de los nodos de Dynamo están compuestos por cinco partes. Aunque ex
 > 2. Cuerpo principal: el cuerpo principal del nodo. Al hacer clic con el botón derecho, se presentan opciones en el nivel de todo el nodo.
 > 3. Puertos (entrada y salida): los receptores de los cables que proporcionan los datos de entrada al nodo, así como los resultados de la acción del nodo.
 > 4. Valor por defecto (haga clic con el botón derecho en un puerto de entrada): algunos nodos tienen valores por defecto que se pueden utilizar o no.
-> 5. Icono de encaje: indica la [opción de encaje](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) especificada para las entrada de lista coincidentes (se explicará detalladamente más adelante).
+> 5. Icono de encaje: indica la [opción de encaje](../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md#lacing) especificada para las entradas de lista coincidentes (se explicará detalladamente más adelante).
 
 ### Puerto de entrada/salida de los nodos
 
@@ -87,7 +87,7 @@ Con frecuencia, desearemos ajustar el flujo de programa de nuestro programa visu
 
 * Cambie la conexión a un puerto de entrada; haga clic con el botón izquierdo en otro puerto de entrada.
 
-![](images/nodesandwires-editwirechangeport(2).gif)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * Para eliminar el cable, retire el cable y haga clic con el botón izquierdo en el espacio de trabajo.
 
@@ -116,7 +116,7 @@ Si prefiere ocultar los cables en el gráfico, vaya a Vista > Conectores > desma
 
 Con este parámetro, solo los nodos seleccionados y sus cables de unión se mostrarán resaltados en turquesa claro.
 
-![](images/nodesandwires-hidewiressetting(1).gif)
+\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### Ocultar solo un cable individual
 

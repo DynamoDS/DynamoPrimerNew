@@ -67,7 +67,7 @@ Abriremos "SphereUnfold".
 
 Después de abrir el archivo y pulsar "Ejecutar" en el solucionador, tenemos una esfera desplegada. Estos archivos de ejemplo son útiles para aprender a trabajar con un nuevo paquete de Dynamo.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg)
+\![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### Dynamo Package Manager
 

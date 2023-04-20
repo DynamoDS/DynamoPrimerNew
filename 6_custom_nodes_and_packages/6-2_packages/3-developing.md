@@ -20,7 +20,7 @@ En Dynamo, haga clic en Paquetes > Buscar un paquete y busque el paquete "MapToS
 
 Después de la instalación, los nodos personalizados deben estar disponibles en la sección Complementos > Dynamo Primer.
 
-![](../images/6-2/3/developpackage-installpackage02(1)(1).jpg)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Con el paquete instalado, veamos cómo se configura.
 
@@ -30,7 +30,7 @@ El paquete que estamos creando utiliza cinco nodos personalizados que hemos crea
 
 Este es un paquete sencillo con cinco nodos personalizados. En los pasos siguientes, hablaremos brevemente de la configuración de cada nodo personalizado.
 
-![](../images/6-2/3/developpackage-customnodes01(1)(1).jpg)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
 
 #### **PointsToSurface**
 

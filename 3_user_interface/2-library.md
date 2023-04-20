@@ -27,13 +27,13 @@ Examine la biblioteca. Para ello, haga clic en los menús para expandir cada cat
 
 Estos clasifican aún más los nodos en la misma subcategoría en función si los nodos **crean** datos, ejecutan una **acción** o **consultan** datos.
 
-* ![](images/3-2/userinterface-create.jpg) **Crear**: cree o genere una geometría desde cero. Por ejemplo, un círculo.
-* ![](images/3-2/userinterface-action.jpg) **Acción**: realice una acción en un objeto. Por ejemplo, ajuste la escala de un círculo.
-* ![](images/3-2/userinterface-query.jpg) **Consulta**: obtenga una propiedad de un objeto existente. Por ejemplo, obtenga el radio de un círculo.
+* \![](<images/3-2/user interface - create.jpg>) **Crear**: cree o construya una geometría desde cero. Por ejemplo, un círculo.
+* \![](<images/3-2/user interface - action.jpg>) **Acción**: realice una acción en un objeto. Por ejemplo, ajuste la escala de un círculo.
+* \![](<images/3-2/user interface - query.jpg>) **Consulta**: obtenga una propiedad de un objeto existente. Por ejemplo, obtenga el radio de un círculo.
 
 Coloque el puntero en un nodo para visualizar información más detallada, además de su nombre e icono. Esto nos permite conocer rápidamente lo que realiza el nodo, lo que necesitará para las entradas y lo que proporcionará como salida.
 
-![](images/3-2/userinterface-nodedescription.jpg)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Descripción: descripción del nodo en lenguaje normal.
 > 2. Icono: versión más grande del icono en el menú Biblioteca.
@@ -46,7 +46,7 @@ Si sabe con precisión relativa qué nodo desea añadir al espacio de trabajo, e
 
 Haga clic en el nodo que desea añadir o pulse Intro para añadir los nodos resaltados al centro del espacio de trabajo.
 
-![](images/3-2/userinterface-search.jpg)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Buscar por jerarquía
 
@@ -58,7 +58,7 @@ Al escribir distintas partes de la ubicación del nodo en la jerarquía de bibli
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
 
 * `category.nodeName`
 
@@ -125,7 +125,7 @@ También podemos utilizar bloques de código como un acceso directo para definir
 
 A continuación, se muestra una sencilla demostración (con instrucciones) de uso del bloque de código en la secuencia de comandos.
 
-![](images/3-2/library-codeblockdemo.gif)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Haga doble clic para crear un nodo de bloque de código.
 2. `Circle.ByCenterPointRadius(x,y);`Tipo

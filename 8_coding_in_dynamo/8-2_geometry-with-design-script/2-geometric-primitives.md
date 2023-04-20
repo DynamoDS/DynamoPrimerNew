@@ -73,7 +73,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Línea
+### Línea 
 
 La siguiente primitiva de Dynamo dimensional superior es un segmento de línea, que representa un número infinito de puntos entre dos puntos finales. Las líneas se pueden crear indicando explícitamente los dos puntos de contorno con el constructor _Line.ByStartPointEndPoint_ o especificando un punto inicial, una dirección y una longitud en esa dirección, _Line.ByStartPointDirectionLength_.
 
