@@ -18,9 +18,9 @@ Les [courbes ](5-4\_curves.md#curve)sont le premier type de données géométriq
 
 ### Ligne
 
-La [ligne](5-4\_curves.md#lines) est un ensemble de points. Chaque ligne contient au moins 2 points. L’une des méthodes les plus courantes pour créer une ligne dans Dynamo consiste à utiliser `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg).
+La [ligne](5-4\_curves.md#lines) est un ensemble de points. Chaque ligne contient au moins 2 points. L’une des méthodes les plus courantes pour créer une ligne dans Dynamo consiste à utiliser `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg).
 
-![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Courbe NURBS
 

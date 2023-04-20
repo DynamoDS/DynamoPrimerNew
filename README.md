@@ -55,7 +55,7 @@ Le guide Dynamo est un projet open source, initié par Matt Jezyk et l'équipe 
 
 Un grand merci à Ian Keough pour avoir lancé et dirigé le projet Dynamo.
 
-Merci à Matt Jezyk, Ian Keough, Zach Kron, Racel Williams et Colin McCrone pour leur collaboration enthousiaste et pour l'opportunité de participer à un large éventail de projets Dynamo.
+Merci à Matt Jezyk, Ian Keough, Zach Kron, Racel Amour et Colin McCrone pour leur collaboration enthousiaste et pour l’opportunité de participer à un large éventail de projets Dynamo.
 
 ### Logiciels et ressources
 

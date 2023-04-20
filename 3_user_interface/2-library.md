@@ -27,13 +27,13 @@ Parcourez la bibliothèque en cliquant sur les menus pour développer chaque cat
 
 Ces menus permettent de classer les nœuds dans la même sous-catégorie selon que les nœuds **créent** des données, exécutent une **action** ou **interrogent** des données.
 
-* ![](images/3-2/userinterface-create.jpg) **Créer** : permet de créer ou de construire une géométrie de toutes pièces. par exemple, un cercle.
-* ![](images/3-2/userinterface-action.jpg) **Action** : permet d’effectuer une action sur un objet. par exemple, mettre un cercle à l’échelle.
-* ![](images/3-2/userinterface-query.jpg) **Requête** : permet d’obtenir la propriété d’un objet qui existe déjà. par exemple, obtenir le rayon d’un cercle.
+* \![](<images/3-2/user interface - create.jpg>) **Créer** : créez ou construisez une géométrie à partir de zéro, par exemple, un cercle.
+* \![](<images/3-2/user interface - action.jpg>) **Action** : effectuez une action sur un objet, par exemple, mettre un cercle à l’échelle.
+* \![](<images/3-2/user interface - query.jpg>) **Requête** : permet d’obtenir une propriété d’un objet qui existe déjà, par exemple, obtenir le rayon d’un cercle.
 
 Placez le curseur de la souris sur un nœud pour afficher des informations plus détaillées que son nom et son icône. Ces informations permettent de comprendre ce que fait le nœud, ce qu’il requiert pour les entrées et ce qu’il va donner en sortie.
 
-![](images/3-2/userinterface-nodedescription.jpg)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Description : description du nœud en langage simple
 > 2. Icône : version plus grande de l'icône dans le menu de la bibliothèque
@@ -46,7 +46,7 @@ Si vous avez une idée du nœud que vous souhaitez ajouter à votre espace de tr
 
 Cliquez sur le nœud que vous souhaitez ajouter ou appuyez sur la touche Entrée pour ajouter les nœuds mis en surbrillance au centre de l’espace de travail.
 
-![](images/3-2/userinterface-search.jpg)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Recherche par hiérarchie
 
@@ -58,7 +58,7 @@ La saisie de différentes parties de la position du nœud dans la hiérarchie de
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
 
 * `category.nodeName`
 
@@ -125,7 +125,7 @@ Vous pouvez également utiliser les nœuds Code Block comme raccourci pour défi
 
 Voici une démonstration simple (avec des instructions) de l’utilisation du nœud Code Block dans votre script.
 
-![](images/3-2/library-codeblockdemo.gif)
+\![](<images/3-2/library - code block demo.gif>)
 
 1. Double-cliquez pour créer un nœud Code Block.
 2. `Circle.ByCenterPointRadius(x,y);`Type

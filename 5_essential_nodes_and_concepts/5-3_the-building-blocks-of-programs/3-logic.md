@@ -10,11 +10,11 @@ Les variables numériques peuvent stocker un intervalle entier de nombres diffé
 
 L’instruction « If » est un concept clé de la programmation : « If » cet _élément_ a la valeur True, voici le _résultat_, sinon _autre chose_ se produit. L’action résultant de l’instruction est déterminée par une valeur booléenne. Il existe plusieurs méthodes pour définir une instruction "If" dans Dynamo :
 
-| Icône                                            | Nom (Syntaxe)             | Entrées            | Sorties |
-| ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../images/5-3/3/If.jpg)         | If (**If**)               | test, true, false | résultat  |
-| ![](../images/5-3/3/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | résultat  |
-| ![](../images/5-3/3/CodeBlock.jpg) | Code Block (**(x?y:z);**) | x ? y, z           | résultat  |
+| Icône                                         | Nom (Syntaxe)             | Entrées            | Sorties |
+| -------------------------------------------- | ------------------------- | ----------------- | ------- |
+| ![](../images/5-1/If.jpg)                    | If (**If**)               | test, true, false | résultat  |
+| ![](../images/5-1/Formula.jpg)               | Formula (**IF(x,y,z)**)   | x, y, z           | résultat  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Code Block (**(x?y:z);**) | x ? y, z           | résultat  |
 
 Voici un bref exemple de chacun de ces trois nœuds en action à l’aide de l’instruction conditionnelle « If ».
 
@@ -48,7 +48,7 @@ Là encore, les nœuds fonctionnent de la même façon. Si la _valeur booléenne
 >
 > d. **Module (%) :** **Number Range** en _x_ et _2.0_ en _y_. Cela permet de calculer le reste pour chaque nombre de la liste divisé par 2. La sortie de cette liste vous donne une liste de valeurs alternant entre 0 et 1.
 >
-> e. **Test d’égalité (==) :** permet d’ajouter un test d’égalité à la zone de dessin. Connectez la sortie du _module_ à l’entrée _x_ et _0.0_ à l’entrée _y_.
+> . **Test d’égalité (==) :** permet d’ajouter un test d’égalité à la zone de dessin. Connectez la sortie du _module_ à l’entrée _x_ et _0.0_ à l’entrée _y_.
 >
 > f. **Watch :** la sortie du test d’égalité est une liste de valeurs alternant entre true et false. Il s’agit des valeurs utilisées pour séparer les éléments de la liste. _0_ (ou _true_) représente des nombres pairs et _1_ (ou _false_) des nombres impairs.
 >

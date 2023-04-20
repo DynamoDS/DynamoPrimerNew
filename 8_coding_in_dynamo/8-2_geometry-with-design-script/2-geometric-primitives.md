@@ -6,7 +6,7 @@ Bien que Dynamo soit capable de créer diverses formes géométriques complexes,
 
 Bien qu'il ne s'agisse pas d'une partie de la géométrie à strictement parler, le CoordinateSystem est un outil important pour la construction d'une géométrie. Un objet CoordinateSystem conserve une trace des transformations de position et géométriques, telles que la rotation, la transvection et la mise à l'échelle.
 
-La création d'un CoordinateSystem centré sur un point avec x = 0, y = 0, z = 0, sans rotation ni transformation de transvection ni de mise à l'échelle, requiert simplement l'appel du constructeur Identity :
+La création d’un CoordinateSystem centré sur un point avec x = 0, y = 0, z = 0, sans rotation ni transformation de transvection ni de mise à l’échelle, requiert simplement l’appel du constructeur Identity :
 
 ![](../images/8-2/2/GeometricPrimitives\_01.png)
 
@@ -17,7 +17,7 @@ La création d'un CoordinateSystem centré sur un point avec x = 0, y = 0, z
 cs = CoordinateSystem.Identity();
 ```
 
-Les CoordinateSystems avec transformations géométriques dépassent la portée de ce chapitre, bien qu'un autre constructeur vous permette de créer un système de coordonnées à un point spécifique, à savoir _CoordinateSystem.ByOriginVectors_ :
+Les CoordinateSystems avec transformations géométriques dépassent la portée de ce chapitre, bien qu’un autre constructeur vous permette de créer un système de coordonnées à un point spécifique, à savoir _CoordinateSystem.ByOriginVectors_ :
 
 ![](../images/8-2/2/GeometricPrimitives\_02.png)
 
@@ -73,7 +73,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Ligne&#x20;
+### Ligne 
 
 La primitive Dynamo dimensionnelle supérieure suivante est un segment de ligne, représentant un nombre infini de points entre deux extrémités. Les lignes peuvent être créées en spécifiant explicitement les deux points de limite avec le constructeur _Line.ByStartPointEndPoint_, ou en spécifiant un point de départ, une direction et une longueur dans cette direction, _Line.ByStartPointDirectionLength_.
 
@@ -94,7 +94,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
 
 ### Primitives 3D : cuboïde, cône, cylindre, sphère, etc.
 
-Dynamo comporte des objets représentant les principaux types de primitives géométriques de base en trois dimensions : des cuboïdes créés avec _Cuboid.ByLengths_ ; des cônes créés avec _Cone.ByPointsRadius_ et _Cone.ByPointsRadii_ ; des cylindres créés avec _Cylindre.ByRadiusHeight_ ; et des sphères créées avec _Sphere.ByCenterPointRadius_.
+Dynamo comporte des objets représentant les principaux types de primitives géométriques de base en trois dimensions : des cuboïdes créés avec _Cuboid.ByLengths_ ; des cônes créés avec _Cone.ByPointsRadius_ et _Cone.ByPointsRadii_ ; des cylindres créés avec _Cylinder.ByRadiusHeight_ ; et des sphères créées avec _Sphere.ByCenterPointRadius_.
 
 ![](../images/8-2/2/GeometricPrimitives\_05.png)
 

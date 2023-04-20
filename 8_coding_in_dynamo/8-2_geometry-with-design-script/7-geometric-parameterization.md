@@ -2,7 +2,7 @@
 
 Dans les conceptions informatiques, les courbes et les surfaces sont souvent utilisées comme une armature sous-jacente à des constructions géométriques ultérieures. Pour que cette première géométrie puisse être utilisée comme base pour une géométrie ultérieure, le script doit pouvoir extraire des qualités telles que la position et l'orientation sur toute la zone de l'objet. Les courbes et les surfaces prennent en charge cette extraction, appelée définition des paramètres.
 
-Tous les points d'une courbe peuvent être considérés comme ayant un paramètre unique compris entre 0 et 1. Si nous devions créer une NurbsCurve basée sur plusieurs points de contrôle ou interpolés, le premier point aurait le paramètre 0 et le dernier point le paramètre 1. Il est impossible de savoir à l'avance quel est le paramètre exact d'un point intermédiaire, ce qui peut sembler être une limitation importante, bien qu'atténuée par une série de fonctions utilitaires. Les surfaces ont une définition des paramètres similaire en tant que courbes, mais avec deux paramètres au lieu d'un, appelés u et v. Si nous voulons créer une surface avec les points suivants :
+Tous les points d'une courbe peuvent être considérés comme ayant un paramètre unique compris entre 0 et 1. Si nous devions créer une NurbsCurve basée sur plusieurs points de contrôle ou interpolés, le premier point aurait le paramètre 0 et le dernier point le paramètre 1. Il est impossible de savoir à l’avance quel est le paramètre exact d’un point intermédiaire, ce qui peut sembler être une limitation importante, bien qu’atténuée par une série de fonctions utilitaires. Les surfaces ont une définition des paramètres similaire en tant que courbes, mais avec deux paramètres au lieu d’un, appelés u et v. Si nous voulons créer une surface avec les points suivants :
 
 ```js
 pts = [ [p1, p2, p3],
@@ -12,9 +12,9 @@ pts = [ [p1, p2, p3],
 
 p1 aurait le paramètre u = 0 v = 0, tandis que p9 aurait les paramètres u = 1 v = 1.
 
-La définition des paramètres n'est pas particulièrement utile lors de la détermination des points utilisés pour générer des courbes. Elle permet principalement de déterminer les emplacements si des points intermédiaires sont générés par les constructeurs NurbsCurve et NurbsSurface.
+La définition des paramètres n’est pas particulièrement utile lors de la détermination des points utilisés pour générer des courbes. Elle permet principalement de déterminer les emplacements si des points intermédiaires sont générés par les constructeurs NurbsCurve et NurbsSurface.
 
-Les courbes ont une méthode _PointAtParameter_, qui prend un double argument entre 0 et 1, et renvoie l'objet Point à ce paramètre. Par exemple, ce script recherche les points aux paramètres 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 et 1 :
+Les courbes ont une méthode _PointAtParameter_, qui prend un double argument entre 0 et 1, et renvoie l’objet Point à ce paramètre. Par exemple, ce script recherche les points aux paramètres 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 et 1 :
 
 ![](../images/8-2/7/GeometricParameterization\_01.png)
 
@@ -37,9 +37,9 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
     Point.ByCoordinates(4, 6, 0));
 ```
 
-De même, les surfaces ont une méthode _PointAtParameter_ qui prend deux arguments, le paramètre u et v du point généré.
+De même, les surfaces ont une méthode _PointAtParameter_ qui prend deux arguments, le paramètre u et v du point généré.
 
-Alors que l'extraction de points individuels sur une courbe et une surface peut être utile, les scripts requièrent souvent la connaissance des caractéristiques géométriques spécifiques d'un paramètre, telles que la direction dans laquelle la courbe ou la surface est orientée. La méthode _CoordinateSystemAtParameter_ trouve non seulement la position, mais également un CoordinateSystem orienté au niveau du paramètre d'une courbe ou d'une surface. Par exemple, le script suivant extrait des CoordinateSystems orientés le long d'une surface de révolution et utilise leur orientation pour générer des lignes qui dépassent normalement par rapport à la surface :
+Alors que l’extraction de points individuels sur une courbe et une surface peut être utile, les scripts requièrent souvent la connaissance des caractéristiques géométriques spécifiques d’un paramètre, telles que la direction dans laquelle la courbe ou la surface est orientée. La méthode _CoordinateSystemAtParameter_ trouve non seulement la position, mais également un CoordinateSystem orienté au niveau du paramètre d’une courbe ou d’une surface. Par exemple, le script suivant extrait des CoordinateSystems orientés le long d’une surface de révolution et utilise leur orientation pour générer des lignes qui dépassent normalement par rapport à la surface :
 
 ![](../images/8-2/7/GeometricParameterization\_02.png)
 
@@ -76,4 +76,4 @@ def make_line(cs : CoordinateSystem) {
 lines = make_line(Flatten(cs_array));
 ```
 
-Comme mentionné précédemment, la définition des paramètres n'est pas toujours uniforme sur toute la longueur d'une courbe ou d'une surface, ce qui signifie que le paramètre 0.5 ne correspond pas toujours au milieu et 0.25 ne correspond pas toujours au premier quart d'une courbe ou d'une surface. Pour contourner cette limitation, les courbes possèdent un jeu supplémentaire de commandes de définition de paramètres qui vous permettent de trouver un point à des longueurs spécifiques le long d'une courbe.
+Comme mentionné précédemment, la définition des paramètres n’est pas toujours uniforme sur toute la longueur d’une courbe ou d’une surface, ce qui signifie que le paramètre 0.5 ne correspond pas toujours au milieu et 0.25 ne correspond pas toujours au premier quart d’une courbe ou d’une surface. Pour contourner cette limitation, les courbes possèdent un jeu supplémentaire de commandes de définition de paramètres qui vous permettent de trouver un point à des longueurs spécifiques le long d'une courbe.

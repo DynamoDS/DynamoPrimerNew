@@ -6,12 +6,12 @@ Si la forme de données la plus simple est le nombre, la méthode la plus simple
 
 Les opérateurs sont un ensemble de composants qui utilisent des fonctions algébriques avec deux valeurs numériques d'entrée, ce qui génère une valeur de sortie unique (addition, soustraction, multiplication, division, etc.). Ces commandes sont disponibles sous Opérateurs > Actions.
 
-| Icône                                                | Nom (Syntaxe)     | Entrées                     | Sorties      |
-| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiplier (**\***) | var[]…[], var[]…[] | var[]…[] |
-| ![](../images/5-3/2/Division.jpg)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
+| Icône                                              | Nom (Syntaxe)     | Entrées                     | Sorties      |
+| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiplier ( ***** ) | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
 
@@ -51,7 +51,7 @@ L’image ci-dessous représente la spirale dorée sous forme de programmation v
 >
 > d. **Math.Pow :** la fonction de « _t_ » et le numéro « _e_ » permettent de créer la séquence Fibonacci.
 >
-> e. **Math.Cos et Math.Sin :** ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
+> . **Math.Cos et Math.Sin :** ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
 >
 > f. **Watch** : le résultat obtenu se compose de deux listes. Elles représentent les coordonnées _x_ et _y_ des points utilisés pour générer la clothoïde.
 
@@ -95,7 +95,7 @@ Ensuite, suivez ces courtes étapes pour générer une série de clothoïdes à 
 
 > a. **Géométrie.Rotation :** il existe plusieurs options **Geometry.Rotate**. Assurez-vous d’avoir choisi le nœud avec les entrées _geometry_, _basePlane_ et _degrees_. Connectez **Point.ByCoordinates** à l’entrée geometry. Cliquez avec le bouton droit de la souris sur ce nœud et assurez-vous que la combinaison est définie sur « Produit vectoriel ».
 >
-> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
+> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY :** connexion à l’entrée _basePlane_. Vous allez effectuer une rotation autour de l’origine, servant également de base pour la clothoïde.
 >

@@ -2,7 +2,7 @@
 
 Dans les sections précédentes, vous avez découvert en détail comment configurer le package _MapToSurface_ avec des nœuds personnalisés et des fichiers d’exemple. Mais comment publier un package développé localement ? Cette étude de cas montre comment publier un package à partir d’un ensemble de fichiers dans un dossier local.
 
-![](../images/6-2/4/publishapackage-customnodes01.jpg)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (6).jpg>)
 
 Il existe plusieurs façons de publier un package. Voici le processus recommandé :**publier localement, développer localement, puis publier en ligne**. Vous allez commencer par un dossier contenant tous les fichiers du package.
 
@@ -47,7 +47,7 @@ Dans la fenêtre _« Publier un package Dynamo »_, remplissez les formulaires
 
 Une fois la publication terminée, les nœuds personnalisés doivent être disponibles sous le groupe « DynamoPrimer » ou votre bibliothèque Dynamo.
 
-![](../images/6-2/4/publishapackage-publishlocally04.jpg)
+\![](<../images/6-2/3/develop package - install package 02 (1) (4).jpg>)
 
 Examinez maintenant le répertoire racine pour découvrir comment Dynamo a mis en forme le package créé. Pour ce faire, cliquez sur Dynamo > Préférences > Gestionnaire de package > en regard de MapToSurface, cliquez sur le menu des points verticaux, puis sélectionnez Afficher le répertoire racine
 

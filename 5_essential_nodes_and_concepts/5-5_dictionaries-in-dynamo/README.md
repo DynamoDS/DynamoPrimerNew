@@ -8,4 +8,4 @@ _Bien que la fonctionnalité de dictionnaire soit disponible dans Dynamo depuis 
 
 ![](../images/5-5/wildDictionary.png)
 
-Image publiée avec l’autorisation de [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+Image originale avec l’autorisation de : [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

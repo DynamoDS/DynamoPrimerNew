@@ -1,6 +1,6 @@
 # Télécharger le PDF
 
-Pour accéder aux informations de ce guide hors ligne, téléchargez le fichier PDF :&#x20;
+Pour accéder aux informations de ce guide hors ligne, téléchargez le fichier PDF : 
 
 ## Versions :
 

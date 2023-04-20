@@ -48,9 +48,9 @@ Si vous êtes bloqué, consultez le menu **Aide**. Vous pouvez accéder à l’u
 
 La barre d'outils de Dynamo contient une série de boutons permettant d'accéder rapidement aux fichiers et aux commandes Annuler [Ctrl + Z] et Rétablir [Ctrl + Y]. À l’extrémité droite se trouve un autre bouton qui permet d’exporter un cliché de l’espace de travail, ce qui est extrêmement utile pour la documentation et le partage.
 
-* ![](images/userinterface-newfile.jpg) Nouveau : permet de créer un fichier .dyn
-* ![](images/userinterface-open.jpg) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé) existant
-* ![](images/userinterface-save.jpg) Enregistrer/Enregistrer sous : permet d’enregistrer votre fichier .dyn ou .dyf actif
+* ![](images/userinterface-newfile.jpg) Nouveau : permet de créer un fichier .dyn
+* \![](<images/userinterface-open(1) (1).jpg>) Ouvrir : permet d’ouvrir un fichier .dyn (espace de travail) ou .dyf (nœud personnalisé).
+* ![](images/userinterface-save.jpg) Enregistrer/Enregistrer sous : permet d’enregistrer votre fichier .dyn ou .dyf actif
 * ![](images/userinterface-undo.jpg) Annuler : permet d’annuler la dernière action
 * ![](images/userinterface-redo.jpg) Rétablir : permet de rétablir la prochaine action
 * ![](images/userinterface-screenshot.jpg) Exporter l’espace de travail en tant qu’image : permet d’exporter l’espace de travail visible en tant que fichier PNG.

@@ -2,7 +2,7 @@
 
 ### Point
 
-L'objet géométrique le plus simple de la bibliothèque de géométries standard Dynamo est un point. L'ensemble de la géométrie est créé à l'aide de fonctions spéciales appelées constructeurs, qui renvoient chacune une nouvelle occurrence de ce type de géométrie particulier. Dans Dynamo, les constructeurs commencent par le nom du type d'objet, ici Point, suivi de la méthode de construction. Pour créer un point tridimensionnel spécifié par les coordonnées cartésiennes X, Y et Z, utilisez le constructeur _ByCoordinates_ :
+L'objet géométrique le plus simple de la bibliothèque de géométries standard Dynamo est un point. L'ensemble de la géométrie est créé à l'aide de fonctions spéciales appelées constructeurs, qui renvoient chacune une nouvelle occurrence de ce type de géométrie particulier. Dans Dynamo, les constructeurs commencent par le nom du type d’objet, ici Point, suivi de la méthode de construction. Pour créer un point tridimensionnel spécifié par les coordonnées cartésiennes X, Y et Z, utilisez le constructeur _ByCoordinates_ :
 
 ![](../images/8-2/1/GeometryBasics\_01.png)
 
@@ -16,7 +16,7 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Les constructeurs dans Dynamo sont généralement désignés par le préfixe "_By_" et l'appel de ces fonctions renvoie un nouvel objet de ce type. L'objet créé est stocké dans la variable nommée, à gauche du signe égal.
+Les constructeurs dans Dynamo sont généralement désignés par le préfixe « _By_ » et l’appel de ces fonctions renvoie un nouvel objet de ce type. L’objet créé est stocké dans la variable nommée, à gauche du signe égal.
 
 La plupart des objets possèdent plusieurs constructeurs différents. Vous pouvez utiliser le constructeur _BySphericalCoordinates_ pour créer un point se trouvant sur une sphère, spécifié par le rayon de la sphère, un premier angle de rotation et un second angle de rotation (spécifié en degrés) :
 
@@ -51,7 +51,7 @@ l = Line.ByStartPointEndPoint(p1, p2);
 
 ### De la ligne à la surface
 
-De même, les lignes peuvent être utilisées pour créer une géométrie de surface dimensionnelle plus importante, par exemple à l'aide du constructeur _Loft_, qui prend une série de lignes ou de courbes et interpole une surface entre elles.
+De même, les lignes peuvent être utilisées pour créer une géométrie de surface dimensionnelle plus importante, par exemple à l’aide du constructeur _Loft_, qui prend une série de lignes ou de courbes et interpole une surface entre elles.
 
 ![](../images/8-2/1/GeometryBasics\_04.png)
 
@@ -77,7 +77,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 ### De la surface au solide
 
-Les surfaces peuvent également être utilisées pour créer une géométrie de solide dimensionnelle plus importante, par exemple en épaississant la surface d'une distance spécifiée. De nombreux objets possèdent des fonctions associées, appelées méthodes, permettant au programmeur d'exécuter des commandes sur cet objet particulier. Les méthodes communes à tous les éléments de géométrie incluent _Translate_ et _Rotate_, qui, respectivement, convertissent (déplacent) et font pivoter la géométrie d'une valeur spécifiée. Les surfaces ont une méthode _Thicken_, qui requiert une entrée unique, un nombre spécifiant la nouvelle épaisseur de la surface.
+Les surfaces peuvent également être utilisées pour créer une géométrie de solide dimensionnelle plus importante, par exemple en épaississant la surface d'une distance spécifiée. De nombreux objets possèdent des fonctions associées, appelées méthodes, permettant au programmeur d’exécuter des commandes sur cet objet particulier. Les méthodes communes à tous les éléments de géométrie incluent _Translate_ et _Rotate_, qui, respectivement, convertissent (déplacent) et font pivoter la géométrie d’une valeur spécifiée. Les surfaces ont une méthode _Thicken_, qui requiert une entrée unique, un nombre spécifiant la nouvelle épaisseur de la surface.
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 
@@ -99,7 +99,7 @@ solid = surf.Thicken(4.75, true);
 
 ### Intersecter
 
-Les commandes _Intersection_ permettent d'extraire une géométrie dimensionnelle inférieure à partir d'objets dimensionnels plus élevés. La géométrie dimensionnelle inférieure extraite peut constituer la base d'une géométrie dimensionnelle plus élevée, dans un processus cyclique de création, d'extraction et de recréation géométriques. Dans cet exemple, vous utilisez le solide généré pour créer une surface et la surface pour créer une courbe.
+Les commandes _Intersection_ permettent d’extraire une géométrie dimensionnelle inférieure à partir d’objets dimensionnels plus élevés. La géométrie dimensionnelle inférieure extraite peut constituer la base d’une géométrie dimensionnelle plus élevée, dans un processus cyclique de création, d’extraction et de recréation géométriques. Dans cet exemple, vous utilisez le solide généré pour créer une surface et la surface pour créer une courbe.
 
 ![](../images/8-2/1/GeometryBasics\_06.png)
 

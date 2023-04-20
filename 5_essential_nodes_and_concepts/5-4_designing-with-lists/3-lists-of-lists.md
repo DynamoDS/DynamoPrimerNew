@@ -111,7 +111,7 @@ Le nœud **List.Count** compte tous les éléments d’une liste. Vous allez l�
 > 3. Connectez chaque ligne du bloc de code aux entrées _X_ et _Y_ respectives d’un nœud **Point.ByCoordinates**. Cliquez avec le bouton droit de la souris sur le nœud, sélectionnez « Combinaison », puis _« Produit vectoriel »_. Cela crée une grille de points. Étant donné que vous avez défini l’intervalle de -50 à 50, élargissez la grille Dynamo par défaut.
 > 4. Un nœud _**Watch**_ révèle les points créés. Observez la structure des données. Vous avez créé une liste de listes. Chaque liste représente une ligne de points de la grille.
 
-![Exercice](../images/5-4/3/listsoflists-map02(1).jpg)
+\![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Attachez un nœud **List.Count** à la sortie du nœud Watch de l’étape précédente.
 > 2. Connectez un nœud **Watch** à la sortie **List.Count**.
@@ -244,7 +244,7 @@ Cet exercice utilise une partie de la logique établie dans l'exercice précéde
 
 Commencez par la chaîne de nœuds ci-dessus. Vous allez créer une surface de base qui s’étend sur la grille Dynamo par défaut.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. À l’aide du nœud **Code Block**, insérez ces deux lignes de code et connectez-les aux entrées _u_ et _v_ de **Surface.PointAtParameter**, respectivement : `-50..50..#3;` `-50..50..#5;`
 > 2. Veillez à définir la combinaison de **Surface.PointAtParameter** sur _« Produit vectoriel »_.
@@ -252,20 +252,20 @@ Commencez par la chaîne de nœuds ci-dessus. Vous allez créer une surface de b
 
 Dans cette étape, vous allez interroger le point central de la grille créée. Pour ce faire, sélectionnez le point central dans la liste centrale. Logique, non ?
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. Pour confirmer qu’il s’agit du bon point, vous pouvez également cliquer sur les éléments du nœud Watch pour confirmer que vous ciblez le bon point.
 > 2. À l’aide du nœud **Code Block**, écrivez une ligne de code de base afin d’interroger une liste de listes :\
  `points[1][2];`
 > 3. À l’aide de **Geometry.Translate**, vous allez déplacer le point sélectionné vers le haut dans la direction _Z_ de _20_ unités.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. Sélectionnez également la ligne centrale des points avec un nœud **List.GetItemAtIndex**. Remarque : comme lors de l’étape précédente, vous pouvez également interroger la liste avec le nœud **Code Block**, à l’aide d’une ligne de `points[1];`.
 
 Jusqu’à présent, vous avez interrogé le point central et l’avez déplacé vers le haut. Vous devez à présent insérer ce point déplacé dans la structure de données d’origine.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. Vous devez d’abord remplacer l’élément de la liste isolé à l’étape précédente.
 > 2. À l’aide de **List.ReplaceItemAtIndex**, remplacez l’élément central à l’aide d’un index de _« 2 »_ par l’élément de remplacement connecté au point déplacé (**Geometry.Translate**).
@@ -273,7 +273,7 @@ Jusqu’à présent, vous avez interrogé le point central et l’avez déplacé
 
 Maintenant que vous avez modifié la liste, vous devez la réinsérer dans la structure de données d’origine : la liste de listes.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. En suivant la même logique, utilisez **List.ReplaceItemAtIndex** pour remplacer la liste centrale par la liste modifiée.
 > 2. Les nœuds **Code Block**_s_ définissant l’index de ces deux nœuds sont 1 et 2, ce qui correspond à la requête d’origine du nœud **Code Block** (_points[1][2]_).
@@ -281,10 +281,10 @@ Maintenant que vous avez modifié la liste, vous devez la réinsérer dans la st
 
 Il existe plusieurs façons de créer une surface à partir de cet ensemble de points. Dans ce cas, vous allez créer une surface en lissant des courbes.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. Créez un nœud **NurbsCurve.ByPoints** et connectez la nouvelle structure de données pour créer trois courbes NURBS.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. Connectez une surface **Surface.ByLoft** à la sortie de **NurbsCurve.ByPoints**. Vous avez maintenant une surface modifiée. Vous pouvez modifier la valeur _Z_ d’origine de la géométrie. Effectuez la conversion et observez la mise à jour de la géométrie.

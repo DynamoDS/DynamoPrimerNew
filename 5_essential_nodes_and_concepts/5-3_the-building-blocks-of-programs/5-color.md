@@ -6,33 +6,33 @@ La couleur est un excellent type de donnée permettant de créer des visuels con
 
 Dans Dynamo, les couleurs sont créées à l’aide des entrées ARVB. Cet acronyme correspond aux canaux Alpha, Rouge, Vert et Bleu. L’alpha représente la _transparence_ de la couleur, tandis que les trois autres couleurs sont utilisées comme couleurs primaires pour générer de concert l’ensemble du spectre de couleurs.
 
-| Icône                                          | Nom (Syntaxe)                 | Entrées  | Sorties |
-| --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](../images/5-3/5/ColorbyARGB.jpg) | Couleur ARVB (**Color.ByARGB**) | A,R,G,B | color   |
+| Icône                                     | Nom (Syntaxe)                 | Entrées  | Sorties |
+| ---------------------------------------- | ----------------------------- | ------- | ------- |
+| \![](<../images/5-1/ColorbyARGB (1).jpg>) | Couleur ARVB (**Color.ByARGB**) | A,R,G,B | color   |
 
 ### Interrogation des valeurs de couleur
 
 Les couleurs du tableau ci-dessous recherchent les propriétés utilisées pour définir la couleur : Alpha, Rouge, Vert et Bleu. Étant donné que le nœud Color.Components donne les quatre sorties différentes, ce nœud est préférable pour l'interrogation des propriétés d'une couleur.
 
-| Icône                                             | Nom (Syntaxe)                     | Entrées | Sorties    |
-| ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorAlpha.jpg) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](../images/5-3/5/ColorRed.jpg)       | Rouge (**Color.Red**)               | color  | R          |
-| ![](../images/5-3/5/ColorGreen.jpg) | Vert (**Color.Green**)           | color  | G          |
-| ![](../images/5-3/5/ColorBlue.jpg)      | Bleu (**Color.Blue**)             | color  | B          |
-| ![](../images/5-3/5/ColorComponent.jpg) | Composants (**Color.Components**) | color  | A,R,G,B |
+| Icône                                          | Nom (Syntaxe)                     | Entrées | Sorties    |
+| --------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| \![](<../images/5-1/ColorRed (1).jpg>)         | Rouge (**Color.Red**)               | color  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Vert (**Color.Green**)           | color  | G          |
+| \![](<../images/5-1/ColorBlue (1).jpg>)        | Bleu (**Color.Blue**)             | color  | B          |
+| \![](<../images/5-1/ColorComponent (1).jpg>)   | Composants (**Color.Components**) | color  | A,R,G,B |
 
 Les couleurs du tableau ci-dessous correspondent à l’**espace de couleurs HSB**. Diviser la couleur en teinte, en saturation et en luminosité permet probablement de l’interpréter de façon plus intuitive : quelle couleur choisir ? Quel niveau de saturation de la couleur choisir ? Et quel niveau d'intensité de la couleur choisir ? Il s'agit respectivement de la répartition de la teinte, de la saturation et de la luminosité.
 
-| Icône                                              | Nom (Syntaxe)                     | Entrées | Sorties    |
-| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorHue.jpg)        | Teinte (**Color.Hue**)               | color  | Teinte        |
-| ![](../images/5-3/5/ColorSaturation.jpg) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](../images/5-3/5/ColorBrightness.jpg) | Luminosité (**Color.Brightness**) | color  | Luminosité |
+| Icône                                         | Nom (Syntaxe)                     | Entrées | Sorties    |
+| -------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorHue (1).jpg>)        | Teinte (**Color.Hue**)               | color  | Teinte        |
+| \![](<../images/5-1/ColorSaturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
+| \![](<../images/5-1/ColorBrightness (1).jpg>) | Luminosité (**Color.Brightness**) | color  | Luminosité |
 
 ### Intervalles de couleurs
 
-L’intervalle de couleurs est semblable au nœud **Remap Range** de l’exercice [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention"): il remappe une liste de nombres dans un autre domaine. Au lieu d’effectuer le mappage vers un domaine _nombre_, il mappe vers un _dégradé de couleurs_ basé sur des numéros d’entrée allant de 0 à 1.
+L’intervalle de couleurs est semblable au nœud **Remap Range** de l’exercice [\#part-ii-from-logic-to-geometry : il remappe une liste de nombres dans un autre domaine. Au lieu d’effectuer le mappage vers un domaine _nombre_, il mappe vers un _dégradé de couleurs_ basé sur des numéros d’entrée allant de 0 à 1.
 
 Le nœud actuel fonctionne bien, mais il peut être un peu délicat de tout faire fonctionner la première fois. La meilleure façon de se familiariser avec le dégradé de couleurs est de le tester de manière interactive. Vous allez faire un exercice rapide pour découvrir comment configurer un dégradé avec des couleurs de sortie correspondant aux nombres.
 
@@ -53,7 +53,7 @@ Le nœud **Display.ByGeometry** permet de colorer la géométrie dans la fenêtr
 
 Le nœud **Display.BySurfaceColors** permet de mapper des données sur une surface grâce à la couleur. Cette fonctionnalité présente de nombreuses possibilités pour visualiser des données obtenues par analyse discrète, comme le soleil, l’énergie et la proximité. Dans Dynamo, l'application d'une couleur à une surface revient à appliquer une texture à un matériau dans d'autres environnements de CAO. Dans le court exercice ci-dessous, vous allez découvrir comment utiliser cet outil.
 
-![](../images/5-3/5/12(1).jpg)
+![](../images/5-3/5/12\(1\).jpg)
 
 ## Exercice
 

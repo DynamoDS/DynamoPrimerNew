@@ -4,9 +4,9 @@
 
 Revit est un environnement riche en données. Cet environnement vous offre de nombreuses possibilités de sélection allant bien au-delà du "pointer-cliquer". Vous pouvez interroger la base de données Revit et lier dynamiquement des éléments Revit à la géométrie Dynamo tout en effectuant des opérations paramétriques.
 
-La bibliothèque Revit de l’interface utilisateur propose une catégorie « Selection » qui permet d’explorer plusieurs méthodes de sélection de géométrie.
+La bibliothèque Revit de l'interface utilisateur propose une catégorie "Selection" qui permet d'explorer plusieurs méthodes de sélection de géométrie.
 
-![](../.gitbook/assets/select\_revit\_elements\_01.jpg)
+\![](<images/2/select revit elements 01.jpg>)
 
 ### Hiérarchie Revit
 
@@ -24,9 +24,9 @@ Vous vous souvenez de la taxinomie en biologie ? Règne, Embranchement, Classe,
 
 Les trois images ci-dessous décrivent les principales catégories pour la sélection d'éléments Revit dans Dynamo. Ces outils sont très utiles en association. Vous allez en découvrir certains dans les exercices suivants.
 
-_Pointer-cliquer_ est la méthode la plus simple pour sélectionner directement un élément Revit. Vous pouvez sélectionner un élément de modèle complet ou des parties de sa topologie (une face ou une arête, par exemple). Il reste lié dynamiquement à cet objet Revit, de sorte que lorsque l’emplacement ou les paramètres du fichier Revit sont mis à jour, l’élément Dynamo référencé est mis à jour dans le graphique.
+_Pointer-cliquer_ est la méthode la plus simple pour sélectionner directement un élément Revit. Vous pouvez sélectionner un élément de modèle complet ou des parties de sa topologie (une face ou une arête, par exemple). Il reste lié dynamiquement à cet objet Revit, de sorte que lorsque l'emplacement ou les paramètres du fichier Revit sont mis à jour, l'élément Dynamo référencé est mis à jour dans le graphique.
 
-![](../.gitbook/assets/selecting\_database\_navigation\_with\_dynamo\_nodes\_01.jpg)
+\![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
 Les _menus déroulants_ permettent de créer une liste de tous les éléments accessibles dans un projet Revit. Vous pouvez utiliser cette option pour référencer des éléments Revit qui ne sont pas nécessairement visibles dans une vue. C’est un outil formidable pour rechercher des éléments existants ou en créer d’autres dans un projet Revit ou l’Éditeur de familles.
 
@@ -48,7 +48,7 @@ Tout en gardant les trois images ci-dessus, vous allez étudier un exercice qui 
 
 Ce fichier d'exemple Revit contient trois types d'éléments d'un bâtiment simple. Utilisez ce fichier comme exemple pour sélectionner des éléments Revit dans le contexte de la hiérarchie Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_01.jpg)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (2).jpg>)
 
 > 1. Volume de bâtiment
 > 2. Poutres (ossature)
@@ -58,22 +58,22 @@ Quelles conclusions pouvez-vous tirer des éléments affichés actuellement dans
 
 ### Sélection de volumes et de surfaces
 
-![](../.gitbook/assets/selecting\_exercise\_02.jpg)
+\![](<images/2/selecting - exercise 02.jpg>)
 
-> 1. Puisque vous travaillez avec une configuration de base, sélectionnez le volume du bâtiment en choisissant _« Mass »_ dans le nœud déroulant Categories. Vous le trouverez dans l'onglet Revit > Selection.
+> 1. Puisque vous travaillez avec une configuration de base, sélectionnez le volume du bâtiment en choisissant _"Mass"_ dans le nœud déroulant Categories. Vous le trouverez dans l'onglet Revit > Selection.
 > 2. La sortie de la catégorie Mass est uniquement la catégorie elle-même. Vous devez sélectionner les éléments. Pour ce faire, utilisez le nœud _"All Elements of Category"_.
 
 À ce stade, aucune géométrie n'est visible dans Dynamo. Un élément Revit a été sélectionné, mais il n'a pas encore été converti en géométrie Dynamo. Il s'agit d'une distinction importante. Si vous sélectionnez un grand nombre d'éléments, vous ne souhaitez pas afficher un aperçu de tous ces éléments dans Dynamo, sous peine de ralentir le programme. Dynamo est un outil permettant de gérer un projet Revit sans avoir à effectuer des opérations de géométrie. Vous allez le découvrir dans la section suivante de ce chapitre.
 
-Dans ce cas, vous travaillez avec une géométrie simple. Vous devez donc importer la géométrie dans l'aperçu Dynamo. Le nœud Watch ci-dessus affiche un numéro vert en regard de l’élément "BldgMass". Il représente l'ID de l'élément et vous indique que vous travaillez avec un élément Revit et non avec une géométrie Dynamo. L’étape suivante consiste à convertir cet élément Revit en géométrie dans Dynamo.
+Dans ce cas, vous travaillez avec une géométrie simple. Vous devez donc importer la géométrie dans l'aperçu Dynamo. Le nœud Watch ci-dessus affiche un numéro vert en regard de l’élément "BldgMass". Il représente l'ID de l'élément et vous indique que vous travaillez avec un élément Revit et non avec une géométrie Dynamo. L'étape suivante consiste à convertir cet élément Revit en géométrie dans Dynamo.
 
-![](../.gitbook/assets/selecting\_exercise\_03.jpg)
+\![](<images/2/selecting - exercise 03.jpg>)
 
-> 1. Le nœud _Element.Faces_ vous permet d’obtenir une liste de surfaces représentant chaque face du volume Revit. Vous pouvez désormais voir la géométrie dans la fenêtre Dynamo et commencer à référencer la face pour les opérations paramétriques.
+> 1. Le nœud _Element.Faces_ vous permet d'obtenir une liste de surfaces représentant chaque face du volume Revit. Vous pouvez désormais voir la géométrie dans la fenêtre Dynamo et commencer à référencer la face pour les opérations paramétriques.
 
-Voici une autre méthode : dans ce cas, vous ne pouvez pas effectuer de sélection via la hiérarchie Revit _(« All Elements of Category »)_ et choisissez de sélectionner explicitement la géométrie dans Revit.
+Voici une autre méthode : dans ce cas, vous ne pouvez pas effectuer de sélection via la hiérarchie Revit _("All Elements of Category")_ et choisissez de sélectionner explicitement la géométrie dans Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_04.jpg)
+\![](<images/2/selecting - exercise 04.jpg>)
 
 > 1. Utilisez le nœud _"Select Model Element"_ et cliquez sur le bouton *"Select" *(ou _"Change"_). Dans la fenêtre Revit, sélectionnez l'élément souhaité. Dans ce cas, l'élément sélectionné est le volume du bâtiment.
 > 2. Au lieu d'utiliser le nœud _Element.Faces_, vous pouvez sélectionner le volume complet comme géométrie solide à l'aide du nœud _Element.Geometry_. Cette opération permet de sélectionner toute la géométrie contenue dans ce volume.
@@ -88,46 +88,46 @@ Certaines des opérations de liste de base vous permettent d’interroger la fac
 > 3. En faisant référence à ce nombre, définissez la valeur maximale d'un *curseur de type entier *sur _"22"_.
 > 4. À l'aide de _List.GetItemAtIndex_, entrez les listes et le *curseur d'entier *pour l'_index_. Faites glisser le curseur avec la sélection et arrêtez lorsque vous atteignez l'_index 9_ et que vous avez isolé la façade principale qui héberge les fermes.
 
-L'étape précédente était un peu compliquée. Grâce au nœud _"Select Face"_, cette opération est beaucoup plus rapide. Cela vous permet d'isoler une face qui n'est pas un élément en soi dans le projet Revit. La même interaction s’applique à _« Select Model Element »_, sauf que vous sélectionnez la surface plutôt que l’élément entier.
+L'étape précédente était un peu compliquée. Grâce au nœud _"Select Face"_, cette opération est beaucoup plus rapide. Cela vous permet d'isoler une face qui n'est pas un élément en soi dans le projet Revit. La même interaction s'applique à _"Select Model Element"_, sauf que vous sélectionnez la surface plutôt que l'élément entier.
 
-![](../.gitbook/assets/selecting\_exercise\_06.jpg)
+\![](<images/2/selecting - exercise 06.jpg>)
 
-Imaginez que vous souhaitiez isoler les murs de la façade principale du bâtiment. Pour ce faire, vous pouvez utiliser le nœud _"Select Faces"_. Cliquez sur le bouton « Select », puis sélectionnez les quatre façades principales dans Revit.
+Imaginez que vous souhaitiez isoler les murs de la façade principale du bâtiment. Pour ce faire, vous pouvez utiliser le nœud _"Select Faces"_. Cliquez sur le bouton "Select", puis sélectionnez les quatre façades principales dans Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_07.jpg)
+\![](<images/2/selecting - exercise 07.jpg>)
 
-Après avoir sélectionné les quatre murs, assurez-vous que vous cliquez sur le bouton « Terminer » dans Revit.
+Après avoir sélectionné les quatre murs, assurez-vous que vous cliquez sur le bouton "Terminer" dans Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_08.jpg)
+\![](<../.gitbook/assets/selecting - exercise 08.jpg>)
 
 Les faces sont désormais importées dans Dynamo en tant que surfaces.
 
-![](../.gitbook/assets/selecting\_exercise\_09.jpg)
+\![](<images/2/selecting - exercise 09.jpg>)
 
 ### Sélection de poutres
 
-Examinez désormais les poutres sur l’atrium.
+Examinez désormais les poutres sur l'atrium.
 
-![](../.gitbook/assets/selecting\_exercise\_10.jpg)
+\![](<images/2/selecting - exercise 10.jpg>)
 
-> 1. À l’aide du nœud _« Select Model Element »_, sélectionnez l’une des poutres.
+> 1. À l'aide du nœud _"Select Model Element"_, sélectionnez l'une des poutres.
 > 2. Connectez l'élément poutre au nœud _Element.Geometry_. La poutre apparaît dans la fenêtre Dynamo.
 > 3. Vous pouvez effectuer un zoom avant sur la géométrie à l'aide d'un nœud _Watch3D_ (si vous ne voyez pas la poutre dans Watch 3D, cliquez avec le bouton droit de la souris et sélectionnez "Zoom tout").
 
-Question fréquente pendant les workflows Revit/Dynamo : comment sélectionner un élément et obtenir tous les éléments similaires ? Étant donné que l’élément Revit sélectionné contient toutes ses informations hiérarchiques, vous pouvez interroger son type de famille et sélectionner tous les éléments de ce type.
+Question fréquente pendant les workflows Revit/Dynamo : comment sélectionner un élément et obtenir tous les éléments similaires ? Étant donné que l'élément Revit sélectionné contient toutes ses informations hiérarchiques, vous pouvez interroger son type de famille et sélectionner tous les éléments de ce type.
 
-![](../.gitbook/assets/selecting\_exercise\_11.jpg)
+\![](<images/2/selecting - exercise 11.jpg>)
 
-> 1. Connectez l’élément poutre à un nœud _Element.ElementType_.
+> 1. Connectez l'élément poutre à un nœud _Element.ElementType_.
 > 2. Le nœud _Watch_ indique que la sortie est désormais un symbole de famille plutôt qu'un élément Revit.
 > 3. _Element.ElementType_ est une simple requête, vous pouvez le faire dans le nœud Code Block aussi facilement avec `x.ElementType;` et obtenir les mêmes résultats.
 
-![](../.gitbook/assets/selecting\_exercise\_12.jpg)
+\![](<images/2/selecting - exercise 12.jpg>)
 
-> 1. Pour sélectionner les autres poutres, utilisez le nœud _« All Elements of Family Type »_.
+> 1. Pour sélectionner les autres poutres, utilisez le nœud _"All Elements of Family Type"_.
 > 2. Le nœud Watch indique que cinq éléments Revit ont été sélectionnés.
 
-![](../.gitbook/assets/selecting\_exercise\_13.jpg)
+\![](<images/2/selecting - exercise 13.jpg>)
 
 > 1. Vous pouvez également convertir ces cinq éléments en géométrie Dynamo.
 
@@ -137,13 +137,13 @@ Dans tous les cas, si vous importiez 500 poutres, auriez-vous besoin de toutes 
 
 ### Sélection de fermes
 
-À l'aide du même graphique de nœuds, sélectionnez l'élément ferme plutôt que l'élément poutre. Avant de procéder ainsi, supprimez Element.Geometry de l’étape précédente.
+À l'aide du même graphique de nœuds, sélectionnez l'élément ferme plutôt que l'élément poutre. Avant de procéder ainsi, supprimez Element.Geometry de l'étape précédente.
 
-![](../.gitbook/assets/selecting\_exercise\_14.jpg)
+\![](<images/2/selecting - exercise 14.jpg>)
 
 Ensuite, extrayez des informations de base à partir du type de famille de fermes.
 
-![](../.gitbook/assets/selecting\_exercise\_15.jpg)
+\![](<images/2/selecting - exercise 15.jpg>)
 
 > 1. Le nœud _Watch_ contient une liste de composants adaptatifs sélectionnés dans Revit. Étant donné que vous voulez extraire les informations de base, commencez par les points adaptatifs.
 > 2. Connectez le nœud _"All Elements of Family Type"_ au nœud _"AdaptiveComponent.Location"_. Vous obtenez une liste de listes, chacune avec trois points qui représentent les emplacements des points adaptatifs.

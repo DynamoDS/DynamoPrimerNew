@@ -30,7 +30,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 * Vous pouvez parfois utiliser un bloc de code pour **saisir un nombre ou une méthode de nœud plus rapidement qu’en effectuant une recherche** (Point.ByCoordinates, Number, String, Formula)
 * Les blocs de code sont utiles **lorsque vous souhaitez définir des fonctions personnalisées dans DesignScript afin de réduire le nombre de nœuds dans un graphique**
 
-![](images/1/graphstrategy3(1).png)
+![](images/1/graphstrategy3\(1\).png)
 
 > Les deux encadrés exécutent la même fonction. Il était beaucoup plus rapide d'écrire quelques lignes de code que de rechercher et d'ajouter chaque nœud individuellement. Le bloc de code est également beaucoup plus concis.
 >
@@ -65,7 +65,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 * L’utilisation de List@Level vous permet de **réduire la complexité de votre graphique en remplaçant les nœuds List.Map et List.Combine** qui peuvent occuper une grande partie de la zone de dessin
 * List@Level fournit une méthode plus** rapide que List.Map/List.Combine pour établir la logique de nœud** en vous permettant d’accéder aux données à n’importe quel niveau d’une liste, directement à partir du port d’entrée d’un nœud
 
-![](images/1/graphstrategy4(1)(1).png)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Vous pouvez vérifier le nombre de valeurs True renvoyées par BoundingBox.Contains et dans quelles listes ces valeurs sont renvoyées en activant List@Level pour l’entrée « list » de CountTrue. La fonction List@Level permet à l'utilisateur de déterminer à quel niveau l'entrée va extraire des données. La fonction List@Level est flexible, efficace et vivement recommandée par rapport à d'autres méthodes impliquant List.Map et List.Combine.
 >
@@ -84,7 +84,7 @@ En plus de rendre le graphique aussi simple et efficace que possible, essayez d'
 * Si d’autres utilisateurs vont travailler avec votre graphique, **assurez-vous que la disposition des liaisons de nœud s’enchaîne facilement avant la livraison**
 * Pour vous aider avec la tâche d’alignement, **utilisez la fonction « Arranger l’affichage des nœuds » pour aligner automatiquement** votre graphique, même si elle est moins précise que vous-même
 
-![](images/1/graphstrategy5(2)(1).png)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Graphique non organisé
 > 2. Graphe aligné
@@ -170,7 +170,7 @@ Il est fort probable qu'une autre personne ouvre votre programme à un moment do
 * Lors de la création d’un gabarit, vous pouvez normaliser **les tailles de police et les couleurs de groupe** afin de classer les types de workflow ou d’actions de données.
 * Lors de la création d’un gabarit, vous pouvez même normaliser la façon dont vous souhaitez **étiqueter, colorer ou styliser la différence entre les workflows front-end et back-end** dans votre graphique.
 
-![](images/1/graphstrategy10(2).png)
+![](images/1/graphstrategy10\(2\).png)
 
 > 1. L’interface utilisateur, ou la partie frontale, du programme inclut un nom de projet, des curseurs d’entrée et une géométrie d’importation.
 > 2. La partie back-end du programme.
@@ -217,7 +217,7 @@ Lorsque les groupes sont établis, alignez les nœuds pour créer une continuit�
 
 Rendez le programme plus accessible en ajoutant un autre calque d'améliorations graphiques. Ajoutez des notes pour décrire le fonctionnement d’une zone spécifique du programme, donnez des noms personnalisés aux entrées et affectez des couleurs à différents types de groupes.
 
-![](images/1/graphstrategy15(1).png)
+![](images/1/graphstrategy15\(1\).png)
 
 > Ces améliorations graphiques permettent à l’utilisateur de mieux connaître les activités du programme. Les différentes couleurs de groupe permettent de distinguer les entrées des fonctions.
 >

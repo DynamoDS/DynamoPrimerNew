@@ -1,8 +1,6 @@
 # La connexion Revit
 
-
-
-![](./images/1/revitconnectionlink.jpg)
+![](images/1/revitconnectionlink.jpg)
 
 Dynamo for Revit étend la modélisation des données du bâtiment à l’environnement de données et de logique d’un éditeur d’algorithmes graphiques. Sa flexibilité, associée à une base de données Revit robuste, offre une nouvelle perspective pour le BIM.
 
@@ -25,7 +23,7 @@ Comme Revit et Dynamo évoluent encore, il se peut que vous constatiez que la ve
 
 ### Historique de Dynamo
 
-![Historique](./images/1/earlyScreenshot.jpg)
+![Historique](images/1/earlyScreenshot.jpg)
 
 Avec une équipe de développeurs dédiée et une communauté passionnée, le projet est loin de ses débuts timides.
 
@@ -39,13 +37,13 @@ Dans un projet Revit ou un éditeur de familles, accédez à Compléments et cli
 
 {% hint style="warning" %} *Dynamo s’exécute uniquement dans le fichier dans lequel il a été ouvert. {% endhint %}
 
-![](./images/1/launchdynamofromrevit.jpg)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 Lors de l’ouverture de Dynamo dans Revit, une nouvelle catégorie appelée Revit apparaît. Il s’agit d’un ajout complet à l’interface utilisateur qui offre des nœuds spécifiquement conçus pour les workflows Revit.*
 
 {% hint style="warning" %} *En utilisant la famille de nœuds propre à Revit, le graphique Dynamo fonctionne uniquement lorsqu’il est ouvert dans Dynamo for Revit. Si un graphique Dynamo for Revit est ouvert dans Dynamo Sandbox par exemple, les nœuds Revit sont manquants. {% endhint %}
 
-![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
+![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Gel des nœuds
 
@@ -59,4 +57,4 @@ Dynamo est un projet open source en constante évolution et un grand nombre de d
 
 Dynamo maintient également un blog actif. Lisez les articles récents pour en savoir plus sur les derniers développements.
 
-![Blog](./images/1/blog.png)
+![Blog](images/1/blog.png)
