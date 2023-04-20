@@ -25,15 +25,15 @@
 > 3. サブカテゴリ
 > 4. ノード
 
-これらにより、**Create** データ、**Action** の実行、または **Query** データのいずれかのノードに基づいて、同じサブカテゴリ内のノードがさらに分類されます。
+この階層によってノードは細かく分類され、データを **Create** するノードか、**Action** を実行するノードか、データを **Query** するノードかに基づいて、同じサブカテゴリに分類されます。
 
-* ![](images/3-2/userinterface-create.jpg) **Create**: ジオメトリを最初から作成または構築します。円など。
-* ![](images/3-2/userinterface-action.jpg) **Action**: オブジェクトに対してアクションを実行します。たとえば、円をスケーリングします。
-* ![](images/3-2/userinterface-query.jpg) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
+* \![](<images/3-2/user interface - create.jpg>) **Create**: 最初からジオメトリを作成または構築します。たとえば、円を作成します。
+* \![](<images/3-2/user interface - action.jpg>) **Action**: オブジェクトに対してアクションを実行します。たとえば、円のスケールを変更します。
+* \![](<images/3-2/user interface - query.jpg>) **Query**: 既に存在するオブジェクトのプロパティを取得します。たとえば、円の半径を取得します。
 
-ノードの名前とアイコン以外の詳細情報を表示するには、ノードにマウスを合わせます。これにより、そのノードの機能、必要な入力、生成される出力について、すばやく確認することができます。
+ノードの名前とアイコン以外の詳細情報を表示するには、ノードにマウスを合わせます。これにより、そのノードの機能、必要な入力、生成される出力について、すぐに確認できます。
 
-![](images/3-2/userinterface-nodedescription.jpg)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. ノードに関する簡単な説明
 > 2. [ライブラリ]メニューの大きなアイコン
@@ -44,9 +44,9 @@
 
 ワークスペースに追加するノードが相対的に特定できるか分かっている場合は、[**検索**]フィールドに入力して、一致するすべてのノードを検索します。
 
-追加するノードをクリックして選択するか、Enter キーを押してハイライト表示されたノードをワークスペースの中心に追加します。
+追加するノードをクリックして選択するか、[Enter]を押してハイライト表示されたノードをワークスペースの中心に追加します。
 
-![](images/3-2/userinterface-search.jpg)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### 階層ごとの検索
 
@@ -58,7 +58,7 @@
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
 
 * `category.nodeName`
 
@@ -94,7 +94,7 @@ Input ノードは、ビジュアル プログラムのユーザが重要なパ�
 
 | ノード           |                                           | ノード           |                                           |
 | -------------- | ----------------------------------------- | -------------- | ----------------------------------------- |
-| Boolean        | ![](images/3-2/library-boolean.jpg)       | 数         | ![](images/3-2/library-number.jpg)        |
+| Boolean        | ![](images/3-2/library-boolean.jpg)       | Number         | ![](images/3-2/library-number.jpg)        |
 | String         | ![](images/3-2/library-string.jpg)        | Number Slider  | ![](images/3-2/library-numberslider.jpg)  |
 | Directory Path | ![](images/3-2/library-directorypath.jpg) | Integer Slider | ![](images/3-2/library-integerslider.jpg) |
 | File Path      | ![](images/3-2/library-filepath.jpg)      |                |                                           |
@@ -125,7 +125,7 @@ Code Block ノードでセミコロン区切りの行を使用して、Code Bloc
 
 次に、スクリプトで Code Block を使用するための簡単なデモンストレーションを示します(手順を含む)。
 
-![](images/3-2/library-codeblockdemo.gif)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. ダブルクリックして Code Block ノードを作成します。
 2. `Circle.ByCenterPointRadius(x,y);` と入力します。

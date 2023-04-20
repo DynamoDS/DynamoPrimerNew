@@ -96,7 +96,7 @@ Chop コマンドを実行すると、指定されたリストの長さに従っ
 
 **List.Map ノードと List.Combine ノード**は、階層内の 1 段階下の層で、設定された関数を入力リストに適用します。リストの組み合わせとリストのマップはほとんど同じ操作ですが、組み合わせの場合は、特定の関数の入力に対応する複数の入力を使用できる点が、マップとは異なっています。
 
-_注: この演習は前バージョンの Dynamo を使用して作成されました。_**List.Map**_の機能に関する問題の大半は、_**List@Level**_機能の追加によって解決されました。詳細については、後述の_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _を参照してください。_
+_注: この演習は前バージョンの Dynamo を使用して作成されました。_**List.Map** _の機能に関する問題の大半は、_**List@Level** _機能の追加によって解決されました。詳細については、後述の_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _を参照してください。_
 
 簡単な例として、前のセクションで説明した **List.Count** ノードをもう一度確認してみましょう。
 
@@ -111,7 +111,7 @@ _注: この演習は前バージョンの Dynamo を使用して作成されま
 > 3. 次に、Code Block ノードの各行を **Point.ByCoordinates** ノードの _x_ 入力と _y_ 入力に接続します。このノードを右クリックして「レーシング」と「_外積_」を続けて選択します。この操作により、点のグリッドが作成されます。-50 から 50 までの範囲が定義されているため、ここでは既定の Dynamo グリッド全体を使用しています。
 > 4. _**Watch**_ ノードに、作成された点が表示されます。データ構造を確認すると、リストのリストが作成されていることがわかります。それぞれのリストが、グリッドの点の 1 行を表しています。
 
-![演習](../images/5-4/3/listsoflists-map02(1).jpg)
+\![演習](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. 前の手順の Watch ノードの出力に **List.Count** ノードを接続します。
 > 2. **Watch** ノードを **List.Count** ノードの出力に接続します。
@@ -129,7 +129,7 @@ List.Count ノードによって 5 という値が生成されていることに
 
 ### **List.Combine**
 
-_注: この演習は前バージョンの Dynamo を使用して作成されました。List.Combine の機能に関する問題の大半は、_**List@Level**_機能の追加によって解決されました。詳細については、後述の_[_List@Level_](6-3\_lists-of-lists.md#listlevel) _を参照してください。_
+_注: この演習は前バージョンの Dynamo を使用して作成されました。List.Combine の機能に関する問題の大半は、_ **List@Level** _機能の追加によって解決されました。詳細については、後述の _ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _を参照してください。_
 
 この演習では、**List.Combine** ノードを使用して、個別のオブジェクト リストに関数を適用する方法を説明します。
 
@@ -244,7 +244,7 @@ Code Block では、「[]」という省略表記を使用してリストを定�
 
 最初に、上図の各ノードの文字列を操作します。既定の Dynamo グリッド全体にわたる基本的なサーフェスを作成します。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. **Code Block** ノードを使用して次の 2 つのコード行を入力し、**Surface.PointAtParameter** ノードの _u_ 入力と _v_ 入力にそれぞれのコード行を接続します(`-50..50..#3;` と `-50..50..#5;`)。
 > 2. **Surface.PointAtParameter** ノードのレーシングを「_外積_」に設定します。
@@ -252,20 +252,20 @@ Code Block では、「[]」という省略表記を使用してリストを定�
 
 この演習では、作成したグリッドの中心点のクエリーを実行します。これを行うには、中央のリストの中心点を選択します。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. 正しい点を選択するには、Watch ノードの各項目をクリックして、正しい点が選択されているかどうかを確認します。
 > 2. **Code Block** ノードを使用して、リストのリストをクエリーするための基礎となるコード行を次の形式で指定します。\
 `points[1][2];`
 > 3. **Geometry.Translate** ノードを使用して、選択した点を _Z_ の正の向きに _20_ 単位移動します。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. **List.GetItemAtIndex** ノードを使用して、点の中央の行を選択します。前の手順と同様に、**Code Block** ノードで `points[1];` というコード行を指定してクエリーを実行することもできます。
 
 ここまでの手順で、中心点のクエリーを実行し、中心点を上方向に移動しました。ここでは、この中心点を元のデータ構造に戻します。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. 最初に、前の手順で分離したリストの項目を置き換えます。
 > 2. **List.ReplaceItemAtIndex** ノードで「_2_」というインデックス値を使用し、置き換える項目を対象となる点(**Geometry.Translate** ノードの Geometry 出力)に接続して、中心点を置き換えます。
@@ -273,18 +273,18 @@ Code Block では、「[]」という省略表記を使用してリストを定�
 
 ここでは、前の演習で変更したリストを、元のデータ構造であるリストのリストに戻します。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. 前の演習と同様に、**List.ReplaceItemAtIndex** ノードを使用して、中央のリストを変更したリストで置き換えます。
-> 2. これら 2 つのノードのインデックスを定義する **Code Block** ノードの値は、それぞれ 1 と 2 であることに注意してください。これらの値は、**Code Block** ノードで指定した元のクエリー(_points[1][2]_)に対応しています。
+> 2. これら 2 つのノードのインデックスを定義する **Code Block**_ _ノードの値は、それぞれ 1 と 2 であることに注意してください。これらの値は、**Code Block** ノードで指定した元のクエリー(_points[1][2]_)に対応しています。
 > 3. _インデックス 1_ の位置でリストを選択すると、Dynamo のプレビューでデータ構造がハイライト表示されます。これで、対象の点が元のデータ構造に正しく移動されたことになります。
 
 上図の点のセットからサーフェスを作成する方法はいくつかあります。ここでは、複数の曲線をまとめてロフトしてサーフェスを作成してみましょう。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. **NurbsCurve.ByPoints** ノードを作成し、新しいデータ構造を接続して、3 つの NURBS 曲線を作成します。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. **Surface.ByLoft** ノードを **NurbsCurve.ByPoints** ノードの出力に接続します。これで、サーフェスが変更されました。ジオメトリの元の _Z_ 値を変更することができます。この値を変更して、ジオメトリがどのように変化するかを確認してください。

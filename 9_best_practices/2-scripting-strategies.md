@@ -23,9 +23,7 @@
 | **Python**         | 可         | 可           | 一部可          | 可                | 不可            |
 | **ZeroTouch (C#)** | 不可          | 不可            | 不可                 | 可                | 不可            |
 
-{% hint style="info" %}
-各 Dynamo ライブラリでアクセスできるコンテンツのリストについては、「[スクリプトの参照情報](13-3\_scripting-reference.md)」を参照してください。
-{% endhint %}
+{% hint style="info" %}各 Dynamo ライブラリでアクセスできるコンテンツのリストについては、「[スクリプトの参照情報](13-3\_scripting-reference.md)」を参照してください。{% endhint %}
 
 ### パラメトリックに考える
 

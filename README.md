@@ -1,4 +1,4 @@
-# バージョン情報
+# この Web サイトについて
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
@@ -55,7 +55,7 @@ Dynamo Primer の初版は、**Mode Lab** によって作成されました。�
 
 Dynamo プロジェクトの創立と指揮に携わった Ian Keough 氏に、深く感謝いたします。
 
-さまざまな Dynamo プロジェクトで積極的に協力していただいた Matt Jezyk 氏、Ian Keough 氏、Zach Kron 氏、Racel Williams 氏、Colin McCrone 氏にも感謝を申し上げます。
+さまざまな Dynamo プロジェクトで積極的に協力していただいた Matt Jezyk 氏、Ian Keough 氏、Zach Kron 氏、Racel Amour 氏、Colin McCrone 氏にも感謝を申し上げます。
 
 ### ソフトウェアとリソース
 

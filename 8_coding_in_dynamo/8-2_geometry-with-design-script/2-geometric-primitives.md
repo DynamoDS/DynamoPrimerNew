@@ -6,7 +6,7 @@ Dynamo が多様で複雑なジオメトリ形状を作成できる一方で、�
 
 厳密にはジオメトリの一部ではありませんが、CoordinateSystem はジオメトリを構築するための重要なツールです。CoordinateSystem オブジェクトは、位置および回転、せん断変形、スケーリングなどのジオメトリ変換の両方を把握します。
 
-x = 0、y = 0、z = 0 の点を中心とし、回転、スケーリング、せん断変形などの変換がない CoordinateSystem の作成に必要なのは、Identity コンストラクタを呼び出すことだけです。
+x = 0、y = 0、z = 0 の点を中心とし、回転、スケーリング、せん断変形などの変換がない CoordinateSystem の作成に必要なのは、Identity コンストラクタを呼び出すことのみです。
 
 ![](../images/8-2/2/GeometricPrimitives\_01.png)
 
@@ -73,7 +73,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### 線分&#x20;
+### 線分 
 
 次に高い次元の Dynamo プリミティブは線分セグメントで、2 つの端点間にある無限の数の点を表します。_Line.ByStartPointEndPoint_ コンストラクタを使用して 2 つの境界点を明示的に指定するか、_Line.ByStartPointDirectionLength_ で開始点、方向、およびその方向の長さを指定することで、線分を作成できます。
 

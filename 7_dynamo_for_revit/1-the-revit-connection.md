@@ -1,8 +1,6 @@
 # Revit との連携
 
-
-
-![](./images/1/revitconnectionlink.jpg)
+![](images/1/revitconnectionlink.jpg)
 
 Dynamo を Revit に組み込んで使用すると、Revit のビルディング インフォメーション モデリング(BIM)機能を、データとロジックに基づく Dynamo の視覚的なアルゴリズム編集環境によって拡張することができます。Dynamo の柔軟性を Revit の堅牢なデータベース機能と組み合わせることにより、BIM の新しい可能性が広がります。
 
@@ -25,7 +23,7 @@ Revit と Dynamo はどちらも進化し続けているため、作業中の Re
 
 ### Dynamo の歴史
 
-![履歴](./images/1/earlyScreenshot.jpg)
+![履歴](images/1/earlyScreenshot.jpg)
 
 Dynamo プロジェクトは、開発チームとコミュニティの積極的なサポートによってここまで発展しましたが、最初の目標は小さなものでした。
 
@@ -39,13 +37,13 @@ Revit プロジェクトやファミリ エディタで、[アドイン]タブ�
 
 {% hint style="warning" %} *Dynamo は、Dynamo を起動したファイル内でのみ実行されることに注意してください。 {% endhint %}
 
-![](./images/1/launchdynamofromrevit.jpg)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 Revit で Dynamo を起動すると、Dynamo のライブラリ内に[Revit]という新しいカテゴリが表示されます。この新しいカテゴリから、Revit ワークフロー専用のノードにアクセスすることができます。
 
 {% hint style="warning" %} *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit で稼働している Dynamo から開いたときにのみ正常に動作します。たとえば、Revit で稼働している Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。 {% endhint %}
 
-![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
+![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### ノードのフリーズ
 
@@ -59,4 +57,4 @@ Dynamo は、継続的に進化していくオープンソース プロジェク
 
 Dynamo 開発チームは、ブログを頻繁に更新しています。最近の記事を確認し、最新の開発情報を入手してください。
 
-![ブログ](./images/1/blog.png)
+![ブログ](images/1/blog.png)

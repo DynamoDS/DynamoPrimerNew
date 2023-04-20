@@ -2,9 +2,9 @@
 
 Dynamo 2.0 では、これまでに説明したディクショナリのノードだけでなく、コード ブロックにおけるディクショナリの新機能も導入されました。
 
-ノードについて次のような、または DesignScript ベースの表現のような構文を使用できます。
+次のような構文、つまりノードの DesignScript ベースの表現を使用できます。
 
-![](../images/5-5/3/dictionariesincb-syntax(1).jpg)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (2).jpg>)
 
 ディクショナリは Dynamo のオブジェクト タイプであるため、次のアクションを実行できます。
 

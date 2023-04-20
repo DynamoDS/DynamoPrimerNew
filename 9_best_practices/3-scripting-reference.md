@@ -10,17 +10,17 @@
 
 **標準ライブラリと Dynamo ライブラリ**
 
-* Dynamo 環境内で Python と C# の標準ライブラリを使用すると、高度なデータ構造とフロー構造を定義することができます。
+* Dynamo 環境内で Python と C# の標準ライブラリを使用すると、高度なデータ構造とフロー構造を定義できます。
 * Dynamo ライブラリは、ジオメトリなどの Dynamo オブジェクトを作成するためのノード階層に直接対応しています。
 
 **Dynamo ライブラリ**
 
-1. ProtoGeometry\*
+1.  ProtoGeometry*
 
-   * 機能: 円弧、境界ボックス、円、円錐、座標系、立方体、曲線、円柱、エッジ、楕円、楕円弧、面、ジオメトリ、らせん、インデックス グループ、線分、メッシュ、NURBS 曲線、NURBS サーフェス、平面、点、ポリゴン、長方形、ソリッド、球体、サーフェス、トポロジ、T スプライン、UV、ベクトル、頂点。
-   * 読み込み方法: `import Autodesk.DesignScript.Geometry`
+    * 機能: 円弧、境界ボックス、円、円錐、座標系、立方体、曲線、円柱、エッジ、楕円、楕円弧、面、ジオメトリ、らせん、インデックス グループ、線分、メッシュ、NURBS 曲線、NURBS サーフェス、平面、点、ポリゴン、長方形、ソリッド、球体、サーフェス、トポロジ、T スプライン、UV、ベクトル、頂点。
+    * 読み込み方法: `import Autodesk.DesignScript.Geometry`
 
-   ``
+    \`\`
 2. DSCoreNodes
    * 機能: 色、色範囲(2D)、日時、期間、I/O、式、ロジック、リスト、数式、クアッドツリー、文字列、スレッド。
    * 読み込み方法: `import DSCore`
@@ -31,9 +31,7 @@
    * 機能: Excel。
    * 読み込み方法: `import DSOffice`
 
-{% hint style="warning" %}
-\*注: Python または C# で **ProtoGeometry** を使用すると、非管理オブジェクト(メモリを手動で管理する必要があるオブジェクト)が作成されることに注意してください。詳細については、「**非管理オブジェクト**」のセクションを参照してください。
-{% endhint %}
+{% hint style="warning" %} *注: Python または C# で **ProtoGeometry** を使用すると、非管理オブジェクト(メモリを手動で管理する必要があるオブジェクト)が作成されることに注意してください。詳細については、「**非管理オブジェクト**」のセクションを参照してください。{% endhint %}
 
 ## 分かりやすい名前を付ける
 
@@ -92,7 +90,7 @@ else:
     print 'not found'
 ```
 
-**単語を連結した変数を使用する場合は、「主語 形容詞」という順にする:**
+**単語を連結した変数を使用する場合は、「主語_形容詞」という順にする:**
 
 ```
 ### BAD
@@ -144,7 +142,7 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> 「ものごとはできるかぎりシンプルにすべきだ。しかし、シンプルすぎてもいけない」— アルベルト・アインシュタイン
+> 「ものごとはできるかぎりシンプルにすべきだ。しかし、シンプルすぎてもいけない」 - アルバート・アインシュタイン
 
 ## スタイルを統一する
 
@@ -153,108 +151,108 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 **命名規則:** (次に示すいずれかの命名規則に従って、コード内の各種タイプのエンティティに名前を付けてください)
 
 * 変数、関数、メソッド、パッケージ、モジュール:\
-   `lower_case_with_underscores`
+ `lower_case_with_underscores`
 * クラス、例外:\
-   `CapWords`
+ `CapWords`
 * 保護されているメソッド、内部関数:\
-   `_single_leading_underscore(self, ...)`
+ `_single_leading_underscore(self, ...)`
 * プライベート メソッド:\
-   `__double_leading_underscore(self, ...)`
+ `__double_leading_underscore(self, ...)`
 * 定数:\
-   `ALL_CAPS_WITH_UNDERSCORES`
+ `ALL_CAPS_WITH_UNDERSCORES`
 
 > ヒント: 非常に短いコード ブロック内で、明確な文脈で意味がはっきりと理解できる場合を除き、1 文字だけの変数は使用しないでください(特に、l、O、I の使用は避けてください)。
 
 **空白行を使用する:**
 
 * 最上位関数とクラス定義の前後に、2 行の空白行を挿入してください。
-   * クラス内に記述されているメソッド定義の場合は、その前後に空白行を 1 行挿入します。
-   * 空白行を挿入して、関連する関数グループを区別してもかまいません(ただし、あまり多くの空白行を挿入しないようにしてください)。
+  * クラス内に記述されているメソッド定義の場合は、その前後に空白行を 1 行挿入します。
+  * 空白行を挿入して、関連する関数グループを区別してもかまいません(ただし、あまり多くの空白行を挿入しないようにしてください)。
 
 **余分な空白を挿入しない:**
 
-* 丸括弧、角括弧、中括弧の内側に、空白を挿入しないでください。
+*   丸括弧、角括弧、中括弧の内側に、空白を挿入しないでください。
 
-   ```
-   ### BAD
-   function( apples[ 1 ], { oranges: 2 } )
-   ```
+    ```
+    ### BAD
+    function( apples[ 1 ], { oranges: 2 } )
+    ```
 
-   ```
-   ### GOOD:
-   function(apples[1], {oranges: 2})
-   ```
-* カンマ、セミコロン、コロンの直前に、空白を挿入しないでください。
+    ```
+    ### GOOD:
+    function(apples[1], {oranges: 2})
+    ```
+*   カンマ、セミコロン、コロンの直前に、空白を挿入しないでください。
 
-   ```
-   ### BAD
-    if x == 2 : print x , y ; x , y = y , x
-   ```
+    ```
+    ### BAD
+     if x == 2 : print x , y ; x , y = y , x
+    ```
 
-   ```
-   ### GOOD
-     if x == 2: print x, y; x, y = y, x
-   ```
-* 関数呼び出しの引数リストが記述されている括弧の直前に、空白を挿入しないでください。
+    ```
+    ### GOOD
+      if x == 2: print x, y; x, y = y, x
+    ```
+*   関数呼び出しの引数リストが記述されている括弧の直前に、空白を挿入しないでください。
 
-   ```
-   ### BAD
-   function (1)
-   ```
+    ```
+    ### BAD
+    function (1)
+    ```
 
-   ```
-   ### GOOD
-   function(1)
-   ```
-* インデックスまたはスライシングが記述された括弧の直前に、空白を挿入しないでください。
+    ```
+    ### GOOD
+    function(1)
+    ```
+*   インデックスまたはスライシングが記述された括弧の直前に、空白を挿入しないでください。
 
-   ```
-   ### BAD
-   dict ['key'] = list [index]
-   ```
+    ```
+    ### BAD
+    dict ['key'] = list [index]
+    ```
 
-   ```
-   ### GOOD
-   dict['key'] = list[index]
-   ```
-* 次に示すバイナリ演算子については、必ず前後に空白を 1 つずつ挿入してください。
+    ```
+    ### GOOD
+    dict['key'] = list[index]
+    ```
+*   次に示すバイナリ演算子については、必ず前後に空白を 1 つずつ挿入してください。
 
-   ```
-   assignment ( = )
-   augmented assignment ( += , -= etc.)
-   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-   Booleans ( and , or , not )
-   ```
+    ```
+    assignment ( = )
+    augmented assignment ( += , -= etc.)
+    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+    Booleans ( and , or , not )
+    ```
 
 **行の長さに注意する:**
 
-* 1 行の長さは\ 79 文字以内にしてください。
+* 1 行の長さは 79 文字以内にしてください。
 * 使用するエディタ ウィンドウの幅を制限することにより、複数のファイルを並べて表示できるようになるため、2 つのバージョンを並べて表示するコード レビュー ツールを使用して作業を行う場合に便利です。
 * 複数の式が記述されている長い行の場合は、式を丸括弧で囲んで改行すると、1 行を複数の行に分割することができます。
 
 **余分なコメントや冗長なコメントを記述しない:**
 
 * コメントを少なくした方が、コードが読みやすくなる場合があります。特に、コメントの代わりに分かりやすい名前を使用すると効果的です。
-* 適切な方法でコードを記述することにより、必要以上にコメントを入力することがなくなります。
+*   適切な方法でコードを記述することにより、必要以上にコメントを入力することがなくなります。
 
-   ```
-   ### BAD
-     # get the country code
-     country_code = get_country_code(address)
+    ```
+    ### BAD
+      # get the country code
+      country_code = get_country_code(address)
 
-     # if country code is US
-     if (country_code == 'US'):
-       # display the form input for state
-       print form_input_state()
-   ```
+      # if country code is US
+      if (country_code == 'US'):
+        # display the form input for state
+        print form_input_state()
+    ```
 
-   ```
-   ### GOOD
-     # display state selection for US users
-     country_code = get_country_code(address)
-     if (country_code == 'US'):
-       print form_input_state()
-   ```
+    ```
+    ### GOOD
+      # display state selection for US users
+      country_code = get_country_code(address)
+      if (country_code == 'US'):
+        print form_input_state()
+    ```
 
 > ヒント: コードの内容が簡単に理解できるようなコメントを入力し、処理内容が明確に理解できるようなコードを記述することが重要です。
 
@@ -262,23 +260,23 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 * オープン ソース プロジェクトというプロジェクトがありますが、これは、多くの開発者が協力して立ち上げたプロジェクトです。これらのプロジェクトでは、チーム内で可能な限り効率的に作業を進めることができるように、読みやすいコードを記述することが求められます。そのため、これらのプロジェクトで使用されているソース コードを参照すると、開発者がどのようなコードを記述しているのかを確認することができます。
 * 次の項目を確認することにより、命名規則を改善することができます。
-   * ニーズに適した命名規則になっているかどうか。
-   * 命名規則が原因で、機能や効率性に影響していないかどうか。
+  * ニーズに適した命名規則になっているかどうか。
+  * 命名規則が原因で、機能や効率性に影響していないかどうか。
 
 ## C# (Zerotouch)の標準
 
-**次に示す各 Wiki ページで、Dynamo で C# (Zerotouch)を記述する場合のガイド情報を参照することができます。**
+**次に示す各 Wiki ページで、Dynamo で C# (Zerotouch)を記述する場合のガイド情報を参照できます。**
 
 * この Wiki ページには、コードのドキュメント化とテストを行う場合の一般的なコーディング標準が記載されています: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
 * この Wiki ページには、ライブラリ、カテゴリ、ノード、ポート、略称に関する命名規則の標準が記載されています: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
 **非管理オブジェクト:**
 
-Python または C# で Dynamo のジオメトリ ライブラリ_(ProtoGeometry)_を使用してジオメトリ オブジェクトを作成した場合、それらのオブジェクトは仮想マシンによって管理されないため、それらの多くのオブジェクトについて、メモリを手動でクリーンアップする必要があります。 ネイティブ オブジェクトと非管理オブジェクトは、いずれも、**Dispose** メソッドまたは **using** キーワードを使用してクリーンアップすることができます。 概要については、次の Wiki エントリを参照してください: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
+Python または C# で Dynamo のジオメトリ ライブラリ_(ProtoGeometry)_を使用してジオメトリ オブジェクトを作成した場合、それらのオブジェクトは仮想マシンによって管理されないため、それらの多くのオブジェクトについて、メモリを手動でクリーンアップする必要があります。ネイティブ オブジェクトと非管理オブジェクトは、いずれも、**Dispose** メソッドまたは **using** キーワードを使用してクリーンアップできます。概要については、次の Wiki エントリを参照してください: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)
 
-破棄する必要があるのは、プログラム内に返されることがない非管理オブジェクト、または参照情報が格納されない非管理オブジェクトだけです。ここからは、こうしたオブジェクトのことを「_中間ジオメトリ_」と呼ぶことにします。 次のサンプル コードでは、例として、このようなオブジェクトのクラスが記述されています。このコードに記述されている Zero Touch の C# 関数である **singleCube** は、立方体を 1 つだけ返しますが、この関数の実行中に 10000 個の立方体が作成されます。 この処理は、他のジオメトリが一部の中間構築ジオメトリとして使用されたものと想定することができます。
+破棄する必要があるのは、プログラム内に返されることがない非管理オブジェクト、または参照情報が格納されない非管理オブジェクトだけです。ここからは、こうしたオブジェクトのことを「中間ジオメトリ__」と呼ぶことにします。次のサンプル コードでは、例として、このようなオブジェクトのクラスが記述されています。このコードに記述されている Zero Touch の C# 関数である **singleCube** は、立方体を 1 つだけ返しますが、この関数の実行中に 10000 個の立方体が作成されます。この処理は、他のジオメトリが一部の中間構築ジオメトリとして使用されたものと想定することができます。
 
-**この Zero Touch 関数を実行すると、かなりの確率で Dynamo がクラッシュします。** このコードでは 10000 個の立方体が作成されますが、格納されてプログラムに返されるのは、そのうちの 1 つだけです。 代わりに、プログラムに返す 1 つだけを除いて、残りの中間立方体をすべて破棄する必要があります。プログラムに返す立方体は、プログラム内に伝播されて他のノードで使用されるため、ここでは破棄しません。
+**この Zero Touch 関数を実行すると、かなりの確率で Dynamo がクラッシュします。**このコードでは 10000 個の立方体が作成されますが、格納されてプログラムに返されるのは、そのうちの 1 つのみです。代わりに、プログラムに返す 1 つを除いて、残りの中間立方体をすべて破棄する必要があります。プログラムに返す立方体は、プログラム内に伝播されて他のノードで使用されるため、ここでは破棄しません。
 
 ```
 public Cuboid singleCube(){

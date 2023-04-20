@@ -4,13 +4,13 @@
 
 ### **Dynamo Wiki**
 
-この Wiki では、Dynamo API を使用して開発を行う方法や、各種のライブラリやツールに関する情報を参照することができます。
+この Wiki では、Dynamo API を使用して開発を行う方法や、各種のライブラリやツールに関する情報を参照できます。
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
 ### **Dynamo Blog**
 
-このブログでは、Dynamo の新機能や新しいワークフローなど、Dynamo 開発チームによるさまざまな最新情報を参照することができます。
+このブログでは、Dynamo の新機能や新しいワークフローなど、Dynamo 開発チームによるさまざまな最新情報を参照できます。
 
 [http://dynamobim.com/blog/](http://dynamobim.com/blog/)
 
@@ -20,7 +20,7 @@
 
 [http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf](http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)
 
-### **Dynamo Primer Project**
+### **Dynamo Primer プロジェクトの概要**
 
 Dynamo Primer は、オートデスクの Matt Jezyk 氏と Dynamo 開発チームによって開始されたオープン ソース プロジェクトです。Dynamo Primer の初版は、Mode Lab によって開発されました。リポジトリをフォークし、コンテンツを追加し、プル リクエストを送信して、開発プロジェクトに参加してください。
 
@@ -68,11 +68,11 @@ MathWorld は、Eric W. Weisstein 氏監修のもと、多数の寄稿者の協�
 
 ### **Revit Python Shell**
 
-RevitPythonShell を使用すると、IronPython インタプリタを Autodesk Revit と Autodesk Vasari に追加することができます。このプロジェクトは Dynamo よりも前に開始されており、Python 開発に関する参考資料として活用することができます。RPS プロジェクト:&#x20;
+RevitPythonShell を使用すると、IronPython インタプリタを Autodesk Revit と Autodesk Vasari に追加できます。 このプロジェクトは Dynamo よりも前に開始されており、Python 開発に関する参考資料として活用できます。RPS プロジェクト:
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell
 
-開発者のブログ:&#x20;
+開発者のブログ:
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
