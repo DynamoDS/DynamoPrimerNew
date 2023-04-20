@@ -68,11 +68,11 @@ MathWorld는 수천 명의 참가자들로부터 지원을 받아 Eric W. Weisst
 
 ### **Revit Python Shell**
 
-"RevitPythonShell은 IronPython 인터프리터를 Autodesk Revit 및 Vasari에 추가합니다." 이 프로젝트는 Dynamo보다 먼저 시작되었으며 Python 개발에서 유용하게 참조되고 있습니다. RPS 프로젝트:&#x20;
+"RevitPythonShell은 IronPython 인터프리터를 Autodesk Revit 및 Vasari에 추가합니다." 이 프로젝트는 Dynamo보다 먼저 시작되었으며 Python 개발에서 유용하게 참조되고 있습니다. RPS Project: 
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell 
 
-개발자 블로그:&#x20;
+개발자 블로그: 
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 

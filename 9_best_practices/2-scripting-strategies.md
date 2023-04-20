@@ -23,9 +23,7 @@
 | **Python**         | 예         | 예           | 부분적          | 예                | 아니요            |
 | **ZeroTouch (C#)** | 아니요          | 아니오            | 아니오                 | 예                | 아니요            |
 
-{% hint style="info" %} 
-각 Dynamo 라이브러리에서 액세스 가능한 리스트를 보려면 [스크립팅 참조](13-3\_scripting-reference.md)를 참조하십시오.
-{% endhint %}
+{% hint style="info" %} 각 Dynamo 라이브러리에서 액세스 가능한 리스트를 보려면 [스크립팅 참조](13-3\_scripting-reference.md)를 참조하십시오.
 
 ### 파라메트릭 방식으로 생각하기
 
@@ -246,7 +244,7 @@ for i in range(xCount):
 
 > 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
-> 전체 예제 파일 리스트는 부록에서 확인할 수 있습니다.
+> 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
 {% file src="./datasets/9/2/SteepestPath.dyn" %}
 

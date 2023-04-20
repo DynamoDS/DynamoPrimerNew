@@ -8,4 +8,4 @@ _그동안 Dynamo에서 사전 기능을 사용할 수 있었지만, Dynamo 2.0�
 
 ![](../images/5-5/wildDictionary.png)
 
-원본 이미지 제공: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+원본 이미지 출처: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

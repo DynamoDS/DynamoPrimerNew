@@ -15,12 +15,12 @@
 
 **Dynamo 라이브러리**
 
-1. ProtoGeometry\*
+1.  ProtoGeometry*
 
-   * 기능: 호, 경계 상자, 원, 원추, 좌표계, 직육면체, 곡선, 원통, 모서리, 타원, 타원 호, 면, 형상, 나선, 색인 그룹, 선, 메쉬, NURBS 곡선, NURBS 표면, 평면, 점, 다각형, 직사각형, 솔리드, 구, 표면, 위상, TSpline, UV, 벡터, 정점
-   * 가져오는 방법: `import Autodesk.DesignScript.Geometry`
+    * 기능: 호, 경계 상자, 원, 원추, 좌표계, 직육면체, 곡선, 원통, 모서리, 타원, 타원 호, 면, 형상, 나선, 색인 그룹, 선, 메쉬, NURBS 곡선, NURBS 표면, 평면, 점, 다각형, 직사각형, 솔리드, 구, 표면, 위상, TSpline, UV, 벡터, 정점
+    * 가져오는 방법: `import Autodesk.DesignScript.Geometry`
 
-   ``
+    \`\`
 2. DSCoreNodes
    * 기능: 색상, 색상 범위 2D, 날짜 시간, 시간 간격, IO, 수식, 논리, 리스트, 수학, 쿼드 트리, 문자열, 스레드
    * 가져오는 방법: `import DSCore`
@@ -31,9 +31,7 @@
    * 기능: Excel
    * 가져오는 방법: `import DSOffice`
 
-{% hint style="warning" %}
-\*주: Python 또는 C#을 통해 **ProtoGeometry**를 사용할 때 비관리형 객체를 작성하는 경우에는 해당 메모리를 수동으로 관리해야 합니다. 자세한 내용은 아래의 **비관리형 객체**를 참고하십시오.
-{% endhint %}
+{% hint style="warning" %} *주: Python 또는 C#을 통해 **ProtoGeometry**를 사용할 때 비관리형 객체를 작성하는 경우에는 해당 메모리를 수동으로 관리해야 합니다. 자세한 내용은 아래의 **비관리형 객체** 섹션을 참고하십시오. {% endhint %}
 
 ## 신중하게 레이블 지정하기
 
@@ -144,7 +142,7 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> “모든 것은 가능한 한 간단하게 만들어야 하지만, 너무 간단해서는 안 된다.” - Albert Einstein
+> “모든 것은 가능한 한 간단하게 만들어야 하지만, 너무 간단해서는 안 된다.” - 알버트 아인슈타인
 
 ## 일관된 스타일 지정하기
 
@@ -153,108 +151,108 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 **명명 규칙:** 코드의 각 엔티티 유형에 대해 아래의 규칙 중 하나를 선택하고 선택한 규칙을 준수하십시오.
 
 * 변수, 함수, 메서드, 패키지, 모듈:\
-   `lower_case_with_underscores`
+ `lower_case_with_underscores`
 * 클래스 및 예외:\
-   `CapWords`
+ `CapWords`
 * 보호된 메서드 및 내부 함수:\
-   `_single_leading_underscore(self, ...)`
+ `_single_leading_underscore(self, ...)`
 * 전용 메서드:\
-   `__double_leading_underscore(self, ...)`
+ `__double_leading_underscore(self, ...)`
 * 상수:\
-   `ALL_CAPS_WITH_UNDERSCORES`
+ `ALL_CAPS_WITH_UNDERSCORES`
 
-> 팁: 아주 짧은 블록에서 해당 컨텍스트를 통해 의미를 명확히 알 수 있는 경우를 제외하고는 단일 문자 변수(특히 l, O, I)를 사용하지 마십시오.
+> 팁: 단일 문자 변수(예: l, O, I)는 바로 앞의 컨텍스트에서 의미가 명확하게 드러나는 아주 짧은 블록을 제외하고는 사용하지 마십시오.
 
 **빈 줄 사용:**
 
 * 최상위 함수와 클래스 정의를 두 개의 빈 줄로 묶습니다.
-   * 클래스 내부의 메서드 정의는 1개의 빈 줄로 묶습니다.
-   * 드문 경우지만 빈 줄을 추가로 사용하여 관련 함수의 그룹을 구분할 수 있습니다.
+  * 클래스 내부의 메서드 정의는 1개의 빈 줄로 묶습니다.
+  * 드문 경우지만 빈 줄을 추가로 사용하여 관련 함수의 그룹을 구분할 수 있습니다.
 
 **불필요한 공백 방지:**
 
-* 괄호, 대괄호 또는 중괄호의 안:
+*   괄호, 대괄호 또는 중괄호의 안:
 
-   ```
-   ### BAD
-   function( apples[ 1 ], { oranges: 2 } )
-   ```
+    ```
+    ### BAD
+    function( apples[ 1 ], { oranges: 2 } )
+    ```
 
-   ```
-   ### GOOD:
-   function(apples[1], {oranges: 2})
-   ```
-* 쉼표, 세미콜론 또는 콜론의 바로 앞:
+    ```
+    ### GOOD:
+    function(apples[1], {oranges: 2})
+    ```
+*   쉼표, 세미콜론 또는 콜론의 바로 앞:
 
-   ```
-   ### BAD
-    if x == 2 : print x , y ; x , y = y , x
-   ```
+    ```
+    ### BAD
+     if x == 2 : print x , y ; x , y = y , x
+    ```
 
-   ```
-   ### GOOD
-     if x == 2: print x, y; x, y = y, x
-   ```
-* 함수 호출의 인수 리스트가 시작되는 여는 괄호의 바로 앞:
+    ```
+    ### GOOD
+      if x == 2: print x, y; x, y = y, x
+    ```
+*   함수 호출의 인수 리스트가 시작되는 여는 괄호의 바로 앞:
 
-   ```
-   ### BAD
-   function (1)
-   ```
+    ```
+    ### BAD
+    function (1)
+    ```
 
-   ```
-   ### GOOD
-   function(1)
-   ```
-* 색인화 또는 분할이 시작되는 여는 괄호의 바로 앞:
+    ```
+    ### GOOD
+    function(1)
+    ```
+*   색인화 또는 분할이 시작되는 여는 괄호의 바로 앞:
 
-   ```
-   ### BAD
-   dict ['key'] = list [index]
-   ```
+    ```
+    ### BAD
+    dict ['key'] = list [index]
+    ```
 
-   ```
-   ### GOOD
-   dict['key'] = list[index]
-   ```
-* 항상 이러한 바이너리 연산자 한쪽에 1개의 공백을 둡니다.
+    ```
+    ### GOOD
+    dict['key'] = list[index]
+    ```
+*   항상 이러한 바이너리 연산자 한쪽에 1개의 공백을 둡니다.
 
-   ```
-   assignment ( = )
-   augmented assignment ( += , -= etc.)
-   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-   Booleans ( and , or , not )
-   ```
+    ```
+    assignment ( = )
+    augmented assignment ( += , -= etc.)
+    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+    Booleans ( and , or , not )
+    ```
 
 **줄 길이 감시:**
 
-* 79자만 넘지 않으면 문제가 없습니다.
+* 79자만 넘지 않으면 됩니다.
 * 필요한 편집기 창의 폭을 제한하면 여러 파일을 나란히 열어 둘 수 있으며, 이 방법은 인접한 열에 두 버전이 있는 코드 검토 도구를 사용할 때 유용합니다.
 * 긴 줄의 경우 표현식을 괄호로 묶어 여러 줄로 나눌 수 있습니다.
 
 **명백한 내용으로 중복되는 해설 방지:**
 
 * 해설이 적어야 코드를 읽기 쉬운 경우도 있습니다. 특히 의미 있는 기호 이름을 대신 사용해야 하는 경우 더욱 그렇습니다.
-* 좋은 코딩 습관을 들이면 해설에 대한 의존도가 줄어듭니다.
+*   좋은 코딩 습관을 들이면 해설에 대한 의존도가 줄어듭니다.
 
-   ```
-   ### BAD
-     # get the country code
-     country_code = get_country_code(address)
+    ```
+    ### BAD
+      # get the country code
+      country_code = get_country_code(address)
 
-     # if country code is US
-     if (country_code == 'US'):
-       # display the form input for state
-       print form_input_state()
-   ```
+      # if country code is US
+      if (country_code == 'US'):
+        # display the form input for state
+        print form_input_state()
+    ```
 
-   ```
-   ### GOOD
-     # display state selection for US users
-     country_code = get_country_code(address)
-     if (country_code == 'US'):
-       print form_input_state()
-   ```
+    ```
+    ### GOOD
+      # display state selection for US users
+      country_code = get_country_code(address)
+      if (country_code == 'US'):
+        print form_input_state()
+    ```
 
 > 팁: 해설에서는 이유를 알려주고 코드에서는 방법을 알려줍니다.
 
@@ -262,8 +260,8 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 * 오픈 소스 프로젝트는 많은 개발자가 함께 만드는 것입니다. 이러한 프로젝트는 팀이 가능한 한 효율적으로 함께 작업할 수 있도록 높은 수준의 코드 가독성을 유지해야 합니다. 따라서 해당 프로젝트의 소스 코드를 살펴보면서 이러한 개발자들이 어떤 작업을 하고 있는지 관찰하는 것이 좋습니다.
 * 규칙 개선:
-   * 각 규칙이 현재의 필요에 맞게 작동하고 있는지를 질문합니다.
-   * 기능/효율성이 저하되고 있습니까?
+  * 각 규칙이 현재의 필요에 맞게 작동하고 있는지를 질문합니다.
+  * 기능/효율성이 저하되고 있습니까?
 
 ## C#(Zerotouch) 표준
 

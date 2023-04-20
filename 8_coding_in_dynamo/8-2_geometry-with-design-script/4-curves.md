@@ -36,7 +36,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 ### 제어점 곡선
 
-NurbsCurve는 많은 부분 동일한 방식으로 생성됩니다. 입력 점이 직선 세그먼트의 끝점을 나타내고, 두 번째 매개변수가 곡선에 적용되는 다듬기의 정도와 유형을 지정합니다.\* 차수가 1인 곡선은 매끄러움이 없는 폴리선입니다.
+NurbsCurve는 많은 부분 동일한 방식으로 생성됩니다. 입력 점이 직선 세그먼트의 끝점을 나타내고, 두 번째 매개변수가 차수*라고 하는 곡선에 적용되는 다듬기의 정도와 유형을 지정합니다. 차수가 1인 곡선은 다듬기가 없고 폴리선이 됩니다.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -115,6 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}
-\*위 내용은 NURBS 곡선 형상에 대한 매우 간단한 설명입니다. 더 정확하고 자세한 내용은 Potmann, et al, 2007을 참고하십시오.
-{% endhint %}
+{% hint style="info" %} *위 내용은 NURBS 곡선 형상에 대한 매우 간단한 설명입니다. 더 정확하고 자세한 내용은 참고 문헌에서 Potmann, et al, 2007을 참고하십시오. {% endhint %}

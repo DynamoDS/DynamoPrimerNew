@@ -1,8 +1,6 @@
 # Revit 연결
 
-
-
-![](./images/1/revitconnectionlink.jpg)
+![](images/1/revitconnectionlink.jpg)
 
 Dynamo for Revit은 그래픽 알고리즘 편집기의 데이터 및 논리 환경으로 건물 정보 모델링을 확장했습니다. 이 제품은 대단히 유연하고 강력한 Revit 데이터베이스를 제공하므로 BIM을 새로운 차원에서 활용할 수 있게 됩니다.
 
@@ -25,7 +23,7 @@ Revit과 Dynamo가 계속해서 발전함에 따라, 현재 사용 중인 Revit 
 
 ### Dynamo의 사용내역
 
-![사용 내역](./images/1/earlyScreenshot.jpg)
+![사용 내역](images/1/earlyScreenshot.jpg)
 
 이 프로젝트는 시작은 미미했지만 개발자 팀과 열정적인 커뮤니티의 전폭적인 지원을 받으면서 오랫동안 발전해 왔습니다.
 
@@ -39,13 +37,13 @@ Revit 프로젝트 또는 패밀리 편집기에서 애드인을 찾은 다음, 
 
 {% hint style="warning" %} *Dynamo는 열려 있는 파일에서만 실행됩니다. {% endhint %}
 
-![](./images/1/launchdynamofromrevit.jpg)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 Revit에서 Dynamo를 열면 "Revit"이라는 새 카테고리가 나타납니다. 이 카테고리는 Revit 워크플로우에 특히 적합한 노드를 제공하는 UI에 포괄적으로 추가되었습니다.*
 
 {% hint style="warning" %} *Revit 전용 노드 패밀리를 사용하면 Dynamo 그래프가 Dynamo for Revit에서 열 때만 작동합니다. 예를 들어 Dynamo for Revit 그래프를 Dynamo 샌드박스에서 여는 경우 Revit 노드가 누락됩니다. {% endhint %}
 
-![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
+![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### 노드 동결
 
@@ -59,4 +57,4 @@ Dynamo는 지속적으로 진화하는 오픈 소스 프로젝트로, 많은 개
 
 Dynamo는 활성 블로그도 운영하고 있습니다. 최신 게시물을 읽어 보고 최신 개발 소식을 알아보십시오!
 
-![블로그](./images/1/blog.png)
+![블로그](images/1/blog.png)

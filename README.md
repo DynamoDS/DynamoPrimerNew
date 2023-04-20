@@ -55,7 +55,7 @@ Dynamo Primer는 Matt Jezyk 및 Autodesk의 Dynamo 개발 팀에서 시작한 �
 
 Dynamo 프로젝트를 시작하도록 도와주시고 지침을 주신 Ian Keough 님께 감사드립니다.
 
-적극적인 협력과 광범위한 Dynamo 프로젝트에 참여할 수 있는 기회를 주신 Matt Jezyk, Ian Keough, Zach Kron, Kerel Williams 및 Colin McCrone 님께도 감사드립니다.
+적극적인 협력과 광범위한 Dynamo 프로젝트에 참여할 수 있는 기회를 주신 Matt Jezyk, Ian Keough, Zach Kron, Racel Amour 및 Colin McCrone 님께도 감사드립니다.
 
 ### 소프트웨어 및 리소스
 
