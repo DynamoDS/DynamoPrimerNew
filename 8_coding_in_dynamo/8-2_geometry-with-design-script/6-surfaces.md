@@ -62,7 +62,7 @@ loft = Surface.ByLoft([c1, c2, c3]);
 
 As superfícies de revolução são um tipo adicional de superfície criada arrastando uma curva base em torno de um eixo central. Se as superfícies interpoladas são o análogo bidimensional das curvas interpoladas, as superfícies de revolução são o análogo bidimensional dos círculos e arcos.
 
-As superfícies de revolução são especificadas por uma curva base, representando a “aresta” da superfície; uma origem de eixo, o ponto base da superfície; uma direção de eixo, a direção “principal” central; um ângulo inicial de varredura; e um ângulo final de varredura. São usadas como a entrada para o construtor _Surface.Revolve_.
+As superfícies de revolução são especificadas por uma curva base, representando a “aresta” da superfície; uma origem de eixo, o ponto base da superfície; uma direção de eixo, a direção “principal” central; um ângulo inicial de varredura; e um ângulo final de varredura. Elas são usadas como a entrada para o construtor _Surface.Revolve_.
 
 ![](../images/8-2/6/Surfaces\_05.png)
 

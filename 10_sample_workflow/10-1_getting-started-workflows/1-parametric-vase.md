@@ -1,5 +1,5 @@
 ---
-description: exercício sugerido
+description: suggested exercise
 ---
 
 # Vaso paramétrico
@@ -12,7 +12,7 @@ Este fluxo de trabalho ensinará o seguinte:
 * Criar e modificar elementos geométricos usando nós.
 * Visualizar os resultados do projeto em tempo real.
 
-![](../images/10-1/1/vase1(3).gif)
+![](../../1\_introduction/images/1-2/vase1.gif)
 
 ## Definição dos nossos objetivos
 
@@ -48,7 +48,7 @@ Vamos manter o valor padrão de _centerPoint_, mas adicionaremos um **Controle d
 
 Esse nó é um pouco diferente do nó anterior, pois contém um controle deslizante. É possível usar a interface para alterar o valor de saída do controle deslizante.
 
-![](../images/10-1/1/vase13(1).gif)
+![](../images/10-1/1/vase13\(1\).gif)
 
 É possível configurar o controle deslizante usando o botão do menu suspenso à esquerda do nó. Vamos limitar o controle deslizante a um valor máximo de 15.
 
@@ -70,7 +70,7 @@ Vamos continuar adicionando alguns nós e conexões à nossa lógica para defini
 
 Vamos copiar esses nós quatro vezes para que os círculos definam nossa superfície. Altere os nomes do Controle deslizante de número, como mostrado abaixo.
 
-![](../images/10-1/1/vase4(1)(1).png)
+\![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Os círculos são criados por um ponto central e um raio
 
@@ -78,7 +78,7 @@ Vamos copiar esses nós quatro vezes para que os círculos definam nossa superf�
 
 Falta um parâmetro-chave para o nosso vaso: a altura. Para controlar a altura do vaso, criamos outro controle deslizante de número. Também adicionamos um nó **Bloco de código**. Os blocos de código podem ajudar durante a adição de fragmentos de código personalizados ao nosso fluxo de trabalho. Usaremos o bloco de código para multiplicar o controle deslizante de altura por diferentes fatores, para que possamos posicionar nossos círculos ao longo da altura do vaso.
 
-![](../images/10-1/1/vase15(1).png)
+![](../images/10-1/1/vase15\(1\).png)
 
 Em seguida, usamos um nó **Geometry.Translate** para inserir círculos na altura desejada. Como queremos distribuir nossos círculos ao longo do vaso, usamos blocos de código para multiplicar o parâmetro de altura por um fator.
 
@@ -92,7 +92,7 @@ Para criar uma superfície usando o nó **Surface.ByLoft**, precisamos combinar 
 
 Também vamos desativar a visualização em outros nós para exibir somente a exibição Surface.ByLoft.
 
-![](../images/10-1/1/vase6(1)(1).png)
+\![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Uma superfície é criada elevando os círculos convertidos.
 
@@ -100,6 +100,6 @@ Também vamos desativar a visualização em outros nós para exibir somente a ex
 
 Nosso fluxo de trabalho está pronto. Agora podemos usar os **Controles deslizantes de número** que definimos em nosso script para criar diferentes projetos de vasos.
 
-![](../images/10-1/1/vase1(3).gif)
+![](../../1\_introduction/images/1-2/vase1.gif)
 
 ![](../images/10-1/1/vase7.png)

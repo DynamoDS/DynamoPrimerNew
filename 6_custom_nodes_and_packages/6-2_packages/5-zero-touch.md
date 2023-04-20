@@ -17,12 +17,12 @@ Esta seção demonstra como usar a funcionalidade Sem toque para importar uma bi
 
 Os pacotes sem toque são um bom complemento aos nós personalizados definidos pelo usuário. Alguns pacotes que usam bibliotecas C# são listados na tabela abaixo. Para obter informações mais detalhadas sobre os pacotes, consulte a seção [Pacotes ](../../a\_appendix/a-3\_packages.md)no Apêndice.
 
-| **Logotipo/Imagem**                                                               | **Nome**                                                                    |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)                        | [Kit de ferramentas de malha](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                             | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                              | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| **Logotipo/Imagem**                                                         | **Nome**                                                                    |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| ![](../images/6-2/2/meshToolkitcasestudy01.jpg)                        | [Kit de ferramentas de malha](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](../images/6-2/5/rhynamo.jpg)                                       | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../images/6-2/5/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## Estudo de caso – Importar o AForge
 

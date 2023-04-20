@@ -6,29 +6,29 @@ A cor é um excelente tipo de dados para criar imagens atraentes, bem como para 
 
 As cores no Dynamo são criadas usando entradas ARGB. Isso corresponde aos canais alfa, vermelho, verde e azul. O alfa representa a _transparência_ da cor, enquanto os outros três canais são usados como cores primárias para gerar todo o espectro de cores em conjunto.
 
-| Ícone                                          | Nome (Sintaxe)                 | Entradas  | Saídas |
-| --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](../images/5-3/5/ColorbyARGB.jpg) | Cor ARGB (**Color.ByARGB**) | A,R,G,B | cor   |
+| Ícone                                     | Nome (Sintaxe)                 | Entradas  | Saídas |
+| ---------------------------------------- | ----------------------------- | ------- | ------- |
+| \![](<../images/5-1/ColorbyARGB (1).jpg>) | Cor ARGB (**Color.ByARGB**) | A,R,G,B | cor   |
 
 ### Consultar os valores de cor
 
 As cores na tabela abaixo consultam as propriedades usadas para definir a cor: Alfa, Vermelho, Verde e Azul. Observe que o nó Color.Components nos fornece as quatro como resultados diferentes, o que torna este nó preferível para consultar as propriedades de uma cor.
 
-| Ícone                                             | Nome (Sintaxe)                     | Entradas | Saídas    |
-| ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorAlpha.jpg) | Alfa (**Color.Alpha**)           | cor  | A          |
-| ![](../images/5-3/5/ColorRed.jpg)       | Vermelho (**Color.Red**)               | cor  | R          |
-| ![](../images/5-3/5/ColorGreen.jpg) | Verde (**Color.Green**)           | cor  | G          |
-| ![](../images/5-3/5/ColorBlue.jpg)      | Azul (**Color.Blue**)             | cor  | B          |
-| ![](../images/5-3/5/ColorComponent.jpg) | Componentes (**Color.Components**) | cor  | A, R, G, B |
+| Ícone                                          | Nome (Sintaxe)                     | Entradas | Saídas    |
+| --------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alfa (**Color.Alpha**)           | cor  | A          |
+| \![](<../images/5-1/ColorRed (1).jpg>)         | Vermelho (**Color.Red**)               | cor  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Verde (**Color.Green**)           | cor  | G          |
+| \![](<../images/5-1/ColorBlue (1).jpg>)        | Azul (**Color.Blue**)             | cor  | B          |
+| \![](<../images/5-1/ColorComponent (1).jpg>)   | Componentes (**Color.Components**) | cor  | A, R, G, B |
 
 As cores na tabela abaixo correspondem ao **espaço de cores HSB**. A divisão das cores em matiz, saturação e brilho é, sem dúvida, algo mais intuitivo para a maneira como interpretamos as cores: qual deve ser a cor? Quão colorido deve ser? E quão clara ou escura deve ser a cor? Este é o detalhamento de matiz, saturação e brilho, respectivamente.
 
-| Ícone                                              | Nome (Sintaxe)                     | Entradas | Saídas    |
-| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorHue.jpg)        | Matiz (**Color.Hue**)               | cor  | Matiz        |
-| ![](../images/5-3/5/ColorSaturation.jpg) | Saturação (**Color.Saturation**) | cor  | Saturação |
-| ![](../images/5-3/5/ColorBrightness.jpg) | Brilho (**Color.Brightness**) | cor  | Brilho |
+| Ícone                                         | Nome (Sintaxe)                     | Entradas | Saídas    |
+| -------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorHue (1).jpg>)        | Matiz (**Color.Hue**)               | cor  | Matiz        |
+| \![](<../images/5-1/ColorSaturation (1).jpg>) | Saturação (**Color.Saturation**) | cor  | Saturação |
+| \![](<../images/5-1/ColorBrightness (1).jpg>) | Brilho (**Color.Brightness**) | cor  | Brilho |
 
 ### Faixa de cores
 
@@ -53,7 +53,7 @@ O nó **Display.ByGeometry** fornece a capacidade de colorir a geometria na view
 
 O nó **Display.BySurfaceColors** fornece a capacidade de mapear dados em uma superfície usando a cor. Essa funcionalidade apresenta algumas possibilidades interessantes para visualizar os dados obtidos por meio de análise discreta, como solar, energia e proximidade. A aplicação de cor a uma superfície no Dynamo é semelhante à aplicação de uma textura a um material em outros ambientes CAD. Vamos demonstrar como usar essa ferramenta no breve exercício abaixo.
 
-![](../images/5-3/5/12(1).jpg)
+![](../images/5-3/5/12\(1\).jpg)
 
 ## Exercício
 

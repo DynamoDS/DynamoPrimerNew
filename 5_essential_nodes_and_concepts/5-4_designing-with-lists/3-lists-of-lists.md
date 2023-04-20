@@ -111,7 +111,7 @@ O nó **List.Count** conta todos os itens em uma lista. Usaremos isso para demon
 > 3. Conecte cada linha do bloco de código às respectivas entradas _X_ e _Y_ de um nó **Point.ByCoordinates**. Clique com o botão direito do mouse no nó, selecione “Amarra” e selecione _“Produto transversal”_. Isso cria um eixo de pontos. Como definimos o intervalo de -50 a 50, estamos expandindo o eixo padrão do Dynamo.
 > 4. Um nó _**Inspeção**_ revela os pontos criados. Observe a estrutura de dados. Criamos uma lista de listas. Cada lista representa uma linha de pontos do eixo.
 
-![Exercício](../images/5-4/3/listsoflists-map02(1).jpg)
+\![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Anexe um nó **List.Count** à saída do nó de inspeção da etapa anterior.
 > 2. Conecte um nó **Inspeção** à saída **List.Count**.
@@ -244,7 +244,7 @@ Este exercício usa uma lógica estabelecida no exercício anterior para editar 
 
 Comece com a cadeia de caracteres dos nós acima. Estamos criando uma superfície básica que abrange o eixo padrão do Dynamo.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. Usando o **Bloco de código**, insira essas duas linhas de código e conecte-se às entradas _u_ e _v_ de **Surface.PointAtParameter**, respectivamente: `-50..50..#3;` `-50..50..#5;`
 > 2. Certifique-se de configurar a Amarra de **Surface.PointAtParameter** como _“Produto transversal”_.
@@ -252,20 +252,20 @@ Comece com a cadeia de caracteres dos nós acima. Estamos criando uma superfíci
 
 Nesta etapa, queremos consultar o ponto central no eixo que criamos. Para fazer isso, vamos selecionar o ponto médio na lista do meio. Faz sentido, certo?
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. Para confirmar que esse é o ponto correto, também podemos clicar nos itens do nó de inspeção para confirmar que estamos selecionando o item correto.
 > 2. Usando o **Bloco de código**, vamos escrever uma linha básica de código para consultar uma lista de listas:\
  `points[1][2];`
 > 3. Usando **Geometry.Translate**, vamos mover o ponto selecionado para cima na direção _Z_ por _20_ unidades.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. Vamos também selecionar a linha média de pontos com um nó **List.GetItemAtIndex**. Observação: De forma similar a uma etapa anterior, também é possível consultar a lista com o **Bloco de código**, usando uma linha de `points[1];`
 
 Até agora, consultamos com êxito o ponto central e o movemos para cima. Agora, queremos inserir esse ponto movido de volta na estrutura de dados original.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. Primeiro, queremos substituir o item da lista que isolamos em uma etapa anterior.
 > 2. Usando **List.ReplaceItemAtIndex**, vamos substituir o item do meio e o índice de _“2”_ pelo item de substituição conectado ao ponto movido (**Geometry.Translate**).
@@ -273,18 +273,18 @@ Até agora, consultamos com êxito o ponto central e o movemos para cima. Agora,
 
 Agora que modificamos a lista, precisamos inseri-la de volta na estrutura de dados original: a lista de listas.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Seguindo a mesma lógica, use **List.ReplaceItemAtIndex** para substituir a lista do centro pela nossa lista modificada.
-> 2. Observe que os **Blocos de código** que definem o índice para esses dois nós são 1 e 2, que coincidem com a consulta original do **Bloco de código** (_pontos[1][2]_).
+> 2. Observe que os **Blocos de código**__ que definem o índice para esses dois nós são 1 e 2, que coincidem com a consulta original do **Bloco de código** (_pontos[1][2]_).
 > 3. Se selecionarmos a lista no _índice 1_, veremos a estrutura de dados realçada na visualização do Dynamo. Mesclamos com êxito o ponto movido para a estrutura de dados original.
 
 Existem várias maneiras de criar uma superfície com base nesse conjunto de pontos. Neste caso, vamos criar uma superfície por meio da elevação de curvas.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. Crie um nó **NurbsCurve.ByPoints** e conecte a nova estrutura de dados para criar três curvas NURBS.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. Conecte **Surface.ByLoft** à saída de **NurbsCurve.ByPoints**. Agora, temos uma superfície modificada. É possível alterar o valor _Z_ original da geometria. Converta e observe a atualização da geometria.

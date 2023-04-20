@@ -2,7 +2,7 @@
 
 Em projetos de cálculo, as curvas e as superfícies são usadas com frequência como o esboço subjacente para construir a geometria subsequente. Para que esta geometria inicial seja usada como uma fundação para a geometria posterior, o script deve ser capaz de extrair qualidades como a posição e a orientação através de toda a área do objeto. As curvas e as superfícies suportam essa extração, que é chamada de parametrização.
 
-Todos os pontos em uma curva podem ser considerados como tendo um parâmetro único variando de 0 a 1. Se fôssemos criar uma NurbsCurve com base em diversos pontos de controle ou interpolados, o primeiro ponto teria o parâmetro 0 e o último ponto teria o parâmetro 1. É impossível saber antecipadamente qual é o parâmetro exato que qualquer ponto intermediário representa, o que pode parecer uma limitação severa, embora seja atenuada por uma série de funções de utilitários. As superfícies apresentam uma parametrização semelhante às curvas, porém com dois parâmetros em vez de um, chamados u e v. Se quiséssemos criar uma superfície com os seguintes pontos:
+Todos os pontos em uma curva podem ser considerados como tendo um parâmetro único variando de 0 a 1. Se fôssemos criar uma NurbsCurve com base em diversos pontos de controle ou interpolados, o primeiro ponto teria o parâmetro 0 e o último ponto teria o parâmetro 1. É impossível saber antecipadamente qual é o parâmetro exato que qualquer ponto intermediário representa, o que pode parecer uma limitação severa, embora seja atenuada por uma série de funções de utilitários. As superfícies têm uma parametrização semelhante às curvas, mas com dois parâmetros em vez de um, chamados u e v. Se criássemos uma superfície com os seguintes pontos:
 
 ```js
 pts = [ [p1, p2, p3],
@@ -14,7 +14,7 @@ p1 teria o parâmetro u = 0 v = 0, enquanto p9 teria os parâmetros u = 1 
 
 A parametrização não é particularmente útil ao determinar os pontos usados para gerar curvas, seu principal uso será determinar as localizações se os pontos intermediários forem gerados pelos construtores NurbsCurve e NurbsSurface.
 
-As curvas têm um método _PointAtParameter_, que assume um único argumento duplo entre 0 e 1, e retorna o objeto de ponto naquele parâmetro. Por exemplo, este script localiza os pontos nos parâmetros 0, .1, .2, .3, .4, .5, .6, .7, .8, .9 e 1:
+As curvas têm um método _PointAtParameter_, que assume um único argumento duplo entre 0 e 1, e retorna o objeto de ponto naquele parâmetro. Por exemplo, esse script localiza os pontos nos parâmetros 0, .1, .2, .3, .4, .5, .6, .7, .8, .9 e 1:
 
 ![](../images/8-2/7/GeometricParameterization\_01.png)
 
@@ -37,7 +37,7 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
     Point.ByCoordinates(4, 6, 0));
 ```
 
-De forma similar, as superfícies têm um método _PointAtParameter_ que tem dois argumentos, o parâmetro u e v do ponto gerado.
+De forma similar, as superfícies têm um método _PointAtParameter_ que assume dois argumentos, os parâmetros u e v do ponto gerado.
 
 Embora a extração de pontos individuais em uma curva e superfície possa ser útil, os scripts geralmente exigem o conhecimento das características geométricas específicas de um parâmetro, como a direção da curva ou da superfície. O método _CoordinateSystemAtParameter_ localiza não somente a posição como também um CoordinateSystem orientado no parâmetro de uma curva ou superfície. Por exemplo, o script a seguir extrai o CoordinateSystems orientado ao longo de uma superfície de revolução e usa a orientação do CoordinateSystems para gerar linhas que se destacam normalmente na superfície:
 

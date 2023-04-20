@@ -4,8 +4,8 @@ Os dicionários representam uma coleção de dados relacionados com outros dados
 
 Essencialmente, podemos pensar em um dicionário como uma forma realmente inteligente de buscar algo.
 
-_Embora a funcionalidade de dicionário esteja disponível no Dynamo por algum tempo, o Dynamo 2.0 apresenta uma nova forma de gerenciar este tipo de dados._
+_Embora a funcionalidade de dicionário já esteja disponível no Dynamo há algum tempo, o Dynamo 2.0 apresenta uma nova forma de gerenciar esse tipo de dados._
 
 ![](../images/5-5/wildDictionary.png)
 
-Imagem original cedida em cortesia por: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+Cortesia de imagem original de: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

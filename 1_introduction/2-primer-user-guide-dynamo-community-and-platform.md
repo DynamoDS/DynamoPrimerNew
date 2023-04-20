@@ -19,15 +19,13 @@ Se você quiser ver a demonstração dos fluxos de trabalho do Dynamo, incluímo
 
 * [Vaso paramétrico](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
+![](images/1-2/vase1.gif)
 
 * [Pontos de atração](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} 
-Há mais exercícios específicos de tópicos que podem ser encontrados em capítulos posteriores, pois abordamos diferentes tópicos sobre o Dynamo. Os **exercícios** podem ser encontrados normalmente na última seção de cada página.
-{% endhint %}
+{% hint style="info" %} Há mais exercícios específicos de tópicos que podem ser encontrados em capítulos posteriores, pois abordamos diferentes tópicos sobre o Dynamo. Os **exercícios** podem ser encontrados normalmente na última seção de cada página.
 
 ### A Comunidade
 

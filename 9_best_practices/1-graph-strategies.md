@@ -30,7 +30,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 * Às vezes, é possível usar um bloco de código para **digitar um método de nó ou número mais rapidamente do que pesquisando** (Point.ByCoordinates, Number, String, Formula)
 * Os blocos de código são úteis **quando você deseja definir funções personalizadas no DesignScript para reduzir o número de nós em um gráfico**
 
-![](images/1/graphstrategy3(1).png)
+![](images/1/graphstrategy3\(1\).png)
 
 > Tanto 1 quanto 2 executam a mesma função. Era muito mais rápido escrever algumas linhas de código do que procurar e adicionar cada nó individualmente. O bloco de código também é muito mais conciso.
 >
@@ -65,7 +65,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 * O uso do recurso List@Level pode ajudar a **reduzir a complexidade do gráfico substituindo os nós List.Map e List.Combine**, que podem ocupar um volume considerável de espaço da tela
 * O recurso List@Level oferece uma** forma mais rápida do que List.Map/List.Combine para criar a lógica do nó** permitindo acessar dados em qualquer nível de uma lista diretamente da porta de entrada de um nó
 
-![](images/1/graphstrategy4(1)(1).png)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > É possível verificar quantos valores verdadeiros BoundingBox.Contains retorna e em quais listas, ativando List@Level para a entrada de “lista” de CountTrue. O recurso List@Level permite que o usuário determine de qual nível a entrada extrairá os dados. O uso de List@Level é flexível, eficiente e altamente recomendável em relação a outros métodos que envolvem List.Map e List.Combine.
 >
@@ -84,7 +84,7 @@ Além de tornar o gráfico o mais simples e eficiente possível, tente obter mai
 * Se outras pessoas estiverem trabalhando com o gráfico, você deverá **garantir que o layout fio/nó flua com facilidade antes do envio**
 * Para ajudar com o alinhamento, **use o recurso “Limpeza do layout do nó” para alinhar automaticamente** o gráfico, porém de forma menos precisa do que se você fizesse isso manualmente
 
-![](images/1/graphstrategy5(2)(1).png)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Gráfico não organizado
 > 2. Gráfico alinhado
@@ -170,7 +170,7 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 * Durante a criação de um modelo, é possível padronizar **as cores de grupo e os tamanhos de fonte** para categorizar os tipos de fluxos de trabalho ou as ações de dados.
 * Durante a criação de um modelo, é possível até mesmo padronizar como você quer **definir legendas, cores ou estilos para diferenciar entre os fluxos de trabalho de front-end e back-end** no gráfico.
 
-![](images/1/graphstrategy10(2).png)
+![](images/1/graphstrategy10\(2\).png)
 
 > 1. A interface do usuário, ou o front-end, do programa inclui um nome de projeto, controles deslizantes de entrada e geometria de importação.
 > 2. O back-end do programa.
@@ -217,7 +217,7 @@ Com os grupos estabelecidos, alinhe os nós para criar a continuidade visual no 
 
 Torne o programa mais acessível adicionando mais uma camada de melhorias gráficas. Adicione notas para descrever como funciona uma área específica do programa, atribua nomes personalizados às entradas e atribua cores a diferentes tipos de grupos.
 
-![](images/1/graphstrategy15(1).png)
+![](images/1/graphstrategy15\(1\).png)
 
 > Essas melhorias gráficas dão mais informações ao usuário sobre o que o programa está fazendo. As diferentes cores de grupo ajudam a diferenciar as entradas das funções.
 >

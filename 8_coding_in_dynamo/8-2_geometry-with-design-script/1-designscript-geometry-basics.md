@@ -16,9 +16,9 @@ z = -6;
 p = Point.ByCoordinates(x, y, z);
 ```
 
-Os construtores no Dynamo são normalmente designados com o prefixo “_By_” e a chamada dessas funções retorna um objeto recém-criado desse tipo. Esse objeto recém-criado é armazenado na variável nomeada no lado esquerdo do sinal de igual.
+Os construtores no Dynamo normalmente são designados com o prefixo “_By_” e a chamada dessas funções retorna um objeto recém-criado desse tipo. Esse objeto recém-criado é armazenado na variável nomeada no lado esquerdo do sinal de igual.
 
-A maioria dos objetos possui construtores diferentes, e podemos usar o construtor _BySphericalCoordinates_ para criar um ponto sobre uma esfera, especificado pelo raio da esfera, um primeiro ângulo de rotação, e um segundo ângulo de rotação (especificado em graus):
+A maioria dos objetos tem muitos construtores diferentes, e podemos usar o construtor _BySphericalCoordinates_ para criar um ponto sobre uma esfera, especificado pelo raio da esfera, um primeiro ângulo de rotação e um segundo ângulo de rotação (especificado em graus):
 
 ![](../images/8-2/1/GeometryBasics\_02.png)
 
@@ -51,7 +51,7 @@ l = Line.ByStartPointEndPoint(p1, p2);
 
 ### De linha para superfície
 
-De forma semelhante, é possível usar as linhas para criar uma geometria de superfície dimensional maior, por exemplo, usando o construtor _Loft_, que usa uma série de linhas ou curvas e interpola uma superfície entre elas.
+De forma semelhante, é possível usar as linhas para criar uma geometria de superfície dimensional maior; por exemplo, usando o construtor _Loft_, que assume uma série de linhas ou curvas e interpola uma superfície entre elas.
 
 ![](../images/8-2/1/GeometryBasics\_04.png)
 
@@ -77,7 +77,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 ### De superfície para sólido
 
-Também é possível usar as superfícies para criar uma geometria sólida dimensional maior, por exemplo, espessando a superfície por uma distância especificada. Muitos objetos possuem funções associadas a eles, chamados métodos, permitindo que o programador execute comandos nesse objeto em particular. Os métodos comuns a todas as porções de geometria incluem _Translate_ e _Rotate_, que respectivamente convertem (movem) e rotacionam a geometria por um valor especificado. As superfícies apresentam um método _Thicken_, que recebe uma única entrada, um número que especifica a nova espessura da superfície.
+Também é possível usar as superfícies para criar uma geometria sólida dimensional maior, por exemplo, espessando a superfície por uma distância especificada. Muitos objetos possuem funções associadas a eles, chamados métodos, permitindo que o programador execute comandos nesse objeto em particular. Os métodos comuns a todas as porções de geometria incluem _Translate_ e _Rotate_, que, respectivamente, convertem (movem) e rotacionam a geometria por um valor especificado. As superfícies apresentam um método _Thicken_, que recebe uma única entrada, um número que especifica a nova espessura da superfície.
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 

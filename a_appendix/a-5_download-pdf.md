@@ -1,6 +1,6 @@
 # Fazer o download do PDF
 
-Para acessar as informações deste manual off-line, faça o download do pdf:&#x20;
+Para acessar as informações deste manual off-line, faça o download do pdf: 
 
 ## Versões:
 

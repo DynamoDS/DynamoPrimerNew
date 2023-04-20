@@ -6,12 +6,12 @@ Se a forma mais simples de dados forem os números, a forma mais fácil de relac
 
 Os operadores são um conjunto de componentes que usam funções algébricas com dois valores de entrada numéricos, o que resulta em um valor de saída (adição, subtração, multiplicação, divisão etc.). Eles podem ser encontrados em Operadores>Ações.
 
-| Ícone                                                | Nome (Sintaxe)     | Entradas                     | Saídas      |
-| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiplicar (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Division.jpg)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| Ícone                                              | Nome (Sintaxe)     | Entradas                     | Saídas      |
+| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiplicar ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Exercício: Fórmula da espiral dourada
 
@@ -95,7 +95,7 @@ Em seguida, siga estas minietapas para gerar uma série de espirais em várias r
 
 > a. **Geometry.Rotate:** há diversas opções de **Geometry.Rotate**; assegure-se de que você selecionou o nó com _geometry_,_basePlane_ e _degrees_ como entradas. Conecte **Point.ByCoordinates** à entrada da geometria. Clique com o botão direito do mouse nesse nó e verifique se a amarra está definida como “Produto transversal”
 >
-> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
+> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY:** conecte à entrada _basePlane_. Vamos rotacionar em torno da origem, que é a mesma localização da base da espiral.
 >

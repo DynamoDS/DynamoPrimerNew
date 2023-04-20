@@ -4,7 +4,7 @@ Há duas maneiras fundamentais para criar curvas de forma livre no Dynamo: espec
 
 ### Curva interpolada
 
-Para criar uma curva interpolada, basta passar uma coleção de pontos para o método _NurbsCurve.ByPoints_.
+Para criar uma curva interpolada, basta passar um conjunto de pontos para o método _NurbsCurve.ByPoints_.
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -36,7 +36,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 ### Curva de pontos de controle
 
-As NurbsCurves são geradas da mesma forma, com os pontos de entrada que representam os pontos finais de um segmento de linha reta e um segundo parâmetro que especifica a quantidade e o tipo de suavização que a curva sofre, denominado grau.\* Uma curva com grau 1 não tem suavização; é uma polilinha.
+As NurbsCurves são geradas da mesma forma, com os pontos de entrada que representam os pontos finais de um segmento de linha reta e um segundo parâmetro que especifica a quantidade e o tipo de suavização que a curva sofre, denominado grau.* Uma curva com grau 1 não tem suavização; é uma polilinha.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-O Dynamo suporta curvas NURBS (B-spline racional não uniforme) até o grau 20, e o seguinte script ilustra o efeito o aumento dos níveis de suavização tem na forma de uma curva:
+O Dynamo suporta curvas NURBS (B-spline racional não uniforme) até o grau 20, e o seguinte script ilustra o efeito que o aumento dos níveis de suavização tem na forma de uma curva:
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -115,6 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}
-\*Essa é uma descrição muito simplificada da geometria da curva NURBS, para uma discussão mais precisa e detalhada, consulte Pottmann, et al, 2007, nas referências.
-{% endhint %}
+{% hint style="info" %}\\*Essa é uma descrição muito simplificada da geometria da curva NURBS; para uma discussão mais precisa e detalhada, consulte Pottmann, et al, 2007, nas referências. {% endhint %}

@@ -20,7 +20,7 @@ p2 = p.Translate(10, -20, 50);
 
 ### Rotação
 
-Embora todos os objetos no Dynamo possam ser convertidos ao anexar o método _.Translate_ ao final do nome do objeto, as transformações mais complexas requerem a transformação do objeto de um CoordinateSystem subjacente em um novo CoordinateSystem. Por exemplo, para rotacionar um objeto 45 graus em torno do eixo x, nós iremos transformar o objeto de seu CoordinateSystem existente sem rotação em um CoordinateSystem que foi rotacionado 45 graus em torno do eixo x com o método _.Transform_:
+Embora todos os objetos no Dynamo possam ser convertidos anexando o método _.Translate_ ao final do nome do objeto, as transformações mais complexas exigem a transformação do objeto de um CoordinateSystem subjacente em um novo CoordinateSystem. Por exemplo, para rotacionar um objeto 45° em torno do eixo x, vamos transformar o objeto de seu CoordinateSystem existente sem rotação em um CoordinateSystem que foi rotacionado 45° em torno do eixo x com o método _.Transform_:
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -38,7 +38,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### Escalar
+### Dimensionar
 
 Além de serem convertidos e rotacionados, também é possível criar os CoordinateSystems com escala ou cisalhamento. Um CoordinateSystem pode ser dimensionado com o método _.Scale_:
 
@@ -56,7 +56,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-Os CoordinateSystems de cisalhamento são criados ao inserir vetores não ortogonais no construtor CoordinateSystem.
+Os CoordinateSystems de cisalhamento são criados inserindo vetores não ortogonais no construtor CoordinateSystem.
 
 ![](../images/8-2/5/Transformations\_04.png)
 
@@ -76,16 +76,16 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 A escala e o cisalhamento são, comparativamente, transformações geométricas mais complexas do que a rotação e a conversão, de modo que nem todos os objetos do Dynamo podem sofrer essas transformações. A tabela a seguir descreve quais objetos do Dynamo podem ter CoordinateSystems com escala não uniforme e CoordinateSystems com cisalhamento.
 
-| Classe | CoordinateSystem com escala não uniforme | CoordinateSystem com cisalhamento |
+| Classe        | CoordinateSystem com escala não uniforme | CoordinateSystem com cisalhamento |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arco | No | Não |
-| NurbsCurve | Sim | Sim |
-| NurbsSurface | No | Não |
-| Círculo | No | Não |
-| Linha | Sim | Sim |
-| Plano | No | Não |
-| Ponto | Sim | Sim |
-| Polígono | No | Não |
-| Sólido | No | Não |
-| Superfície | No | Não |
-| Texto | No | Não |
+| Arco          | No                                    | Não                       |
+| NurbsCurve   | Sim                                   | Sim                      |
+| NurbsSurface | No                                    | Não                       |
+| Círculo       | No                                    | Não                       |
+| Linha         | Sim                                   | Sim                      |
+| Plano        | No                                    | Não                       |
+| Ponto        | Sim                                   | Sim                      |
+| Polígono      | No                                    | Não                       |
+| Sólido        | No                                    | Não                       |
+| Superfície      | No                                    | Não                       |
+| Texto         | No                                    | Não                       |

@@ -15,12 +15,12 @@ As bibliotecas padrão são externas ao Dynamo e estão presentes nas linguagens
 
 **Bibliotecas do Dynamo**
 
-1. ProtoGeometry\*
+1.  ProtoGeometry*
 
-   * Funcionalidade: Arco, Caixa delimitadora, Círculo, Cone, Sistema de coordenadas, Cuboide, Curva, Cilindro, Aresta, Elipse, Arco de elipse, Face, Geometria, Hélice, Grupo de índices, Linha, Malha, Curva Nurbs, Superfície Nurbs, Plano, Ponto, Polígono, Retângulo, Sólido, Esfera, Superfície, Topologia, TSpline, UV, Vetor, Vértice.
-   * Como importar: `import Autodesk.DesignScript.Geometry`
+    * Funcionalidade: Arco de elipse, Arco, Aresta, Caixa delimitadora, Cilindro, Círculo, Cone, Cuboide, Curva Nurbs, Curva, Elipse, Esfera, Face, Geometria, Grupo de índices, Hélice, Linha, Malha, Plano, Polígono, Ponto, Retângulo, Sistema de coordenadas, Sólido, Superfície Nurbs, Superfície, Topologia, TSpline, UV, Vértice, Vetor.
+    * Como importar: `import Autodesk.DesignScript.Geometry`
 
-   ``
+    \`\`
 2. DSCoreNodes
    * Funcionalidade: Cor, Intervalo de Cores 2D, Data e hora, Tempo, E/S, Fórmula, Lógica, Lista, Matemática, Quadtree, Sequência de caracteres, Rosca.
    * Como importar: `import DSCore`
@@ -31,10 +31,7 @@ As bibliotecas padrão são externas ao Dynamo e estão presentes nas linguagens
    * Funcionalidade: Excel.
    * Como importar: `import DSOffice`
 
-{% hint style="warning" %}
-\*Observação: Durante o uso de **ProtoGeometry** com o Python ou C#, você está criando objetos não gerenciados, que precisam ter memória gerenciada manualmente. Consulte a seção abaixo: **Objetos não gerenciados** para obter mais informações.
-
-{% endhint %}
+{% hint style="warning" %} *Observação: Durante o uso de **ProtoGeometry** com o Python ou C#, você está criando objetos não gerenciados, que precisam ter memória gerenciada manualmente. Consulte a seção abaixo: **Objetos não gerenciados** para obter mais informações. {% endhint %}
 
 ## Rotular cuidadosamente
 
@@ -73,7 +70,7 @@ seat = car.Seat()
 tire = car.Tire()
 ```
 
-**Use lógica positiva para seus nomes de variáveis em vez de lógica negativa:**
+**Use lógica positiva para os nomes de variáveis em vez de lógica negativa:**
 
 ```
 ### BAD
@@ -131,7 +128,7 @@ doc = DM.Instance.CurrentDBDocument
 uiapp = DM.Instance.CurrentUIApplication
 ```
 
-> A suavização de serrilhado pode levar rapidamente a programas muito confusos e não padrão.
+> O uso de alias pode gerar rapidamente programas muito confusos e não padrão.
 
 **Use somente as palavras necessárias:**
 
@@ -151,135 +148,135 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 Em termos gerais, há mais de uma maneira de programar qualquer coisa; portanto, seu “estilo pessoal” de scripts é o resultado das inúmeras decisões pequenas que você tomar (ou não tomar) durante o processo. Mesmo assim, a legibilidade e a manutenção do código são um resultado direto de sua consistência interna, bem como sua adesão às convenções estilizadas gerais. Como regra geral, o código com a mesma aparência em dois lugares deve funcionar da mesma maneira também. Aqui estão algumas dicas para escrever código claro e consistente.
 
-**Convenções de nomenclatura:** (selecione uma das convenções abaixo para cada tipo de entidade em seu código e a mantenha.)
+**Convenções de nomenclatura:** (selecione uma das convenções abaixo para cada tipo de entidade no código e a mantenha.)
 
 * Variáveis, funções, métodos, pacotes, módulos:\
-   `lower_case_with_underscores`
+ `lower_case_with_underscores`
 * Classes e exceções:\
-   `CapWords`
+ `CapWords`
 * Funções internas e métodos protegidos:\
-   `_single_leading_underscore(self, ...)`
+ `_single_leading_underscore(self, ...)`
 * Métodos privados:\
-   `__double_leading_underscore(self, ...)`
+ `__double_leading_underscore(self, ...)`
 * Constantes:\
-   `ALL_CAPS_WITH_UNDERSCORES`
+ `ALL_CAPS_WITH_UNDERSCORES`
 
-> Dica: Evite variáveis com uma letra (esp. l, O, I), exceto em blocos muito curtos, quando o significado é claramente visível no contexto imediato.
+> Dica: Evite variáveis de uma só letra (especialmente l, O, I), exceto em blocos muito curtos, quando o significado estiver claramente visível no contexto imediato.
 
 **Use linhas em branco:**
 
 * Defina a função de nível superior e as definições de classe com duas linhas em branco.
-   * As definições de método dentro de uma classe são cercadas por uma única linha em branco.
-   * É possível usar linhas em branco adicionais (com moderação) para separar grupos de funções relacionadas.
+  * As definições de método dentro de uma classe são cercadas por uma única linha em branco.
+  * É possível usar linhas em branco adicionais (com moderação) para separar grupos de funções relacionadas.
 
 **Evite espaços em branco desnecessários:**
 
-* Imediatamente dentro dos parênteses, colchetes ou chaves:
+*   Imediatamente dentro dos parênteses, colchetes ou chaves:
 
-   ```
-   ### BAD
-   function( apples[ 1 ], { oranges: 2 } )
-   ```
+    ```
+    ### BAD
+    function( apples[ 1 ], { oranges: 2 } )
+    ```
 
-   ```
-   ### GOOD:
-   function(apples[1], {oranges: 2})
-   ```
-* Imediatamente antes de uma vírgula, ponto e vírgula ou dois pontos:
+    ```
+    ### GOOD:
+    function(apples[1], {oranges: 2})
+    ```
+*   Imediatamente antes de uma vírgula, ponto e vírgula ou dois pontos:
 
-   ```
-   ### BAD
-    if x == 2 : print x , y ; x , y = y , x
-   ```
+    ```
+    ### BAD
+     if x == 2 : print x , y ; x , y = y , x
+    ```
 
-   ```
-   ### GOOD
-     if x == 2: print x, y; x, y = y, x
-   ```
-* Imediatamente antes do parêntese de abertura que inicia a lista de argumentos de uma chamada de função:
+    ```
+    ### GOOD
+      if x == 2: print x, y; x, y = y, x
+    ```
+*   Imediatamente antes do parêntese de abertura que inicia a lista de argumentos de uma chamada de função:
 
-   ```
-   ### BAD
-   function (1)
-   ```
+    ```
+    ### BAD
+    function (1)
+    ```
 
-   ```
-   ### GOOD
-   function(1)
-   ```
-* Imediatamente antes do parêntese de abertura que inicia uma indexação ou fatiamento:
+    ```
+    ### GOOD
+    function(1)
+    ```
+*   Imediatamente antes do parêntese de abertura que inicia uma indexação ou fatiamento:
 
-   ```
-   ### BAD
-   dict ['key'] = list [index]
-   ```
+    ```
+    ### BAD
+    dict ['key'] = list [index]
+    ```
 
-   ```
-   ### GOOD
-   dict['key'] = list[index]
-   ```
-* Sempre coloque esses operadores binários com um único espaço em cada lado:
+    ```
+    ### GOOD
+    dict['key'] = list[index]
+    ```
+*   Sempre coloque esses operadores binários com um único espaço em cada lado:
 
-   ```
-   assignment ( = )
-   augmented assignment ( += , -= etc.)
-   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-   Booleans ( and , or , not )
-   ```
+    ```
+    assignment ( = )
+    augmented assignment ( += , -= etc.)
+    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+    Booleans ( and , or , not )
+    ```
 
 **Comprimento da linha de inspeção:**
 
 * Não se estresse com isso, aproximadamente 79 caracteres.
 * Limitar a largura da janela do editor necessária possibilita ter vários arquivos abertos lado a lado e funciona bem ao usar as ferramentas de revisão de código que apresentam as duas versões em colunas adjacentes.
-* Linhas longas podem ser divididas em várias linhas ao colocar expressões entre parênteses:
+* Linhas longas podem ser divididas em várias linhas colocando expressões entre parênteses:
 
 **Evite comentários óbvios e redundantes:**
 
 * Às vezes, menos comentários resultam em um código mais legível. Especialmente se isso forçar o uso de nomes de símbolos significativos.
-* Adotar bons hábitos de codificação reduz a dependência de comentários:
+*   Adotar bons hábitos de codificação reduz a dependência de comentários:
 
-   ```
-   ### BAD
-     # get the country code
-     country_code = get_country_code(address)
+    ```
+    ### BAD
+      # get the country code
+      country_code = get_country_code(address)
 
-     # if country code is US
-     if (country_code == 'US'):
-       # display the form input for state
-       print form_input_state()
-   ```
+      # if country code is US
+      if (country_code == 'US'):
+        # display the form input for state
+        print form_input_state()
+    ```
 
-   ```
-   ### GOOD
-     # display state selection for US users
-     country_code = get_country_code(address)
-     if (country_code == 'US'):
-       print form_input_state()
-   ```
+    ```
+    ### GOOD
+      # display state selection for US users
+      country_code = get_country_code(address)
+      if (country_code == 'US'):
+        print form_input_state()
+    ```
 
 > Dica: Os comentários informam o porquê, o código informa como.
 
-**Confira o código fonte aberto:**
+**Confira o código-fonte aberto:**
 
 * Os projetos em código aberto foram desenvolvidos com base nos esforços de colaboração de muitos desenvolvedores. Esses projetos precisam manter um alto nível de legibilidade de código para que a equipe possa trabalhar em conjunto da maneira mais eficiente possível. Portanto, é aconselhável procurar o código fonte desses projetos para observar o que esses desenvolvedores estão fazendo.
 * Melhore as convenções:
-   * Questione se cada convenção está ou não funcionando para as necessidades em questão.
-   * A funcionalidade/eficiência está sendo comprometida?
+  * Questione se cada convenção está ou não funcionando para as necessidades em questão.
+  * A funcionalidade/eficiência está sendo comprometida?
 
 ## Padrões C# (Zerotouch)
 
 **Confira estas páginas wiki para obter ajuda sobre como escrever em C# para Zerotouch e contribuir para o Dynamo:**
 
 * Este wiki aborda alguns padrões gerais de codificação para documentar e testar o código: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
-* Este wiki aborda especificamente os padrões de nomenclatura para bibliotecas, categorias, nomes de nós, nomes de porta e abreviaturas: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
+* Este wiki aborda especificamente os padrões de nomenclatura para bibliotecas, categorias, nomes de nós, nomes de porta e abreviações: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
 **Objetos não gerenciados:**
 
-Ao usar a biblioteca de geometria do Dynamo_(ProtoGeometry)_ do Python ou C#, os objetos de geometria que você criar não serão gerenciados pela máquina virtual, e a memória de muitos desses objetos precisará ser limpa manualmente. Para limpar objetos nativos ou não gerenciados, é possível usar o método **Dispose** ou a palavra-chave **using**. Consulte esta entrada do wiki para obter uma visão geral: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
+Ao usar a biblioteca de geometria do Dynamo _(ProtoGeometry)_ do Python ou C#, os objetos de geometria que você criar não serão gerenciados pela máquina virtual, e a memória de muitos desses objetos precisará ser limpa manualmente. Para limpar objetos nativos ou não gerenciados, é possível usar o método **Descartar** ou **usar** a palavra-chave. Consulte esta entrada do wiki para obter uma visão geral: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-Você só precisa descartar os recursos não gerenciados aos quais não retorne no gráfico ou para os quais não armazene uma referência. Para o restante desta seção, chamaremos esses objetos _geometria intermediária_. É possível ver um exemplo dessa classe de objeto no exemplo de código abaixo. Essa função C# zerotouch **singleCube** retorna um único cubo, mas cria 10.000 cubos extras durante sua execução. É possível simular que usamos esta outra geometria como alguma geometria de construção intermediária.
+Você só precisa descartar os recursos não gerenciados aos quais não retorne no gráfico ou para os quais não armazene uma referência. Para o restante desta seção, chamaremos esses objetos _geometria intermediária_. É possível ver um exemplo dessa classe de objeto no exemplo de código abaixo. Essa função C# zerotouch **singleCube** retorna um único cubo, mas cria 10.000 cubos extras durante sua execução. É possível simular que usamos essa outra geometria como alguma geometria de construção intermediária.
 
-**Essa função zerotouch provavelmente travará o Dynamo.** Como criamos 10.000 sólidos, mas somente um deles foi armazenado, só esse será devolvido. Devemos, em vez disso, descartar todos os nossos cubos intermediários, exceto o que retornamos. Não queremos descartar o que retornamos, pois será propagado no gráfico e usado por outros nós.
+**Essa função zerotouch provavelmente causará um erro fatal no Dynamo.** Como criamos 10.000 sólidos, mas somente um deles foi armazenado, só esse será devolvido. Devemos, em vez disso, descartar todos os nossos cubos intermediários, exceto o que retornamos. Não queremos descartar o que retornamos, pois será propagado no gráfico e usado por outros nós.
 
 ```
 public Cuboid singleCube(){

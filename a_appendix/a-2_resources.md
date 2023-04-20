@@ -4,13 +4,13 @@
 
 ### **Wiki do Dynamo**
 
-“Este wiki serve para aprender sobre o desenvolvimento usando a API do Dynamo, suportando bibliotecas e ferramentas.”
+“Esse wiki serve para aprender sobre o desenvolvimento usando a API do Dynamo, suportando bibliotecas e ferramentas.”
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
 ### **Blog do Dynamo**
 
-Este blog é a coleção mais atualizada de artigos da equipe do Dynamo, discutindo novos recursos, fluxos de trabalho e tudo o que o Dynamo tem.
+Esse blog é a coleção mais atualizada de artigos da equipe do Dynamo, discutindo novos recursos, fluxos de trabalho e tudo o que o Dynamo tem.
 
 [http://dynamobim.com/blog/](http://dynamobim.com/blog/)
 
@@ -20,7 +20,7 @@ As linguagens de programação são criadas para expressar ideias, envolvendo l�
 
 [http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf](http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)
 
-### **O projeto Dynamo Primer**
+### **Projeto Dynamo Primer**
 
 O Dynamo Primer é um projeto de código aberto, iniciado por Matt Jezyk e a equipe de desenvolvimento do Dynamo na Autodesk. A primeira versão do manual foi desenvolvida pela Mode Lab. Para contribuir, verifique o repositório, adicione seu conteúdo e envie uma solicitação.
 
@@ -28,7 +28,7 @@ O Dynamo Primer é um projeto de código aberto, iniciado por Matt Jezyk e a equ
 
 ### **Desenvolvimento do plug-in Zero Touch para o Dynamo**
 
-Esta página descreve o processo de desenvolvimento de um nó do Dynamo personalizado no C# usando a interface “Zero Touch”. Na maioria dos casos, é possível importar as classes e os métodos estáticos em C# sem modificações. Se sua biblioteca só precisar chamar funções e não construir novos objetos, isso poderá ser facilmente obtido com métodos estáticos. Quando o Dynamo carrega seu DLL, ele removerá o espaço de nome de suas classes e exporá todos os métodos estáticos como nós.
+Essa página descreve o processo de desenvolvimento de um nó do Dynamo personalizado no C# usando a interface “Zero Touch”. Na maioria dos casos, é possível importar as classes e os métodos estáticos em C# sem modificações. Se sua biblioteca só precisar chamar funções e não construir novos objetos, isso poderá ser facilmente obtido com métodos estáticos. Quando o Dynamo carrega o DLL, ele removerá o espaço de nome das classes e exporá todos os métodos estáticos como nós.
 
 [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development)
 
@@ -68,15 +68,15 @@ MathWorld é um recurso de matemática on-line, desenvolvido por Eric W. Weisste
 
 ### **Shell do Python do Revit**
 
-“O RevitPythonShell adiciona um interpretador IronPython ao Autodesk Revit e Vasari.” Esse projeto é anterior ao Dynamo e é uma ótima referência para o desenvolvimento do Python. Projeto RPS:&#x20;
+“O RevitPythonShell adiciona um interpretador IronPython ao Autodesk Revit e Vasari.” Esse projeto é anterior ao Dynamo e é uma ótima referência para o desenvolvimento do Python. Projeto RPS: 
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell 
 
-Blog do desenvolvedor:&#x20;
+Blog do desenvolvedor: 
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **O Codificador de Construção**
+### **Codificador de construção**
 
 Um catálogo robusto de fluxos de trabalho da API do Revit de um dos principais especialistas em BIM.
 

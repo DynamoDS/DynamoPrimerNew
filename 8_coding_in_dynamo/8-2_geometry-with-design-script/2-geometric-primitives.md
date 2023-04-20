@@ -73,7 +73,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Linha&#x20;
+### Linha 
 
 A próxima primitiva dimensional superior do Dynamo é um segmento de linha, representando um número infinito de pontos entre dois pontos finais. É possível criar as linhas explicitamente especificando os dois pontos de limite com o construtor _Line.ByStartPointEndPoint_ ou especificando um ponto inicial, uma direção e um comprimento nessa direção, _Line.ByStartPointDirectionLength_.
 
@@ -92,9 +92,9 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### Primitivos 3D – cuboide, cone, cilindro, esfera etc.
+### Primitivos 3D – cuboide, cone, cilindro, esfera etc.
 
-O Dynamo tem objetos que representam os tipos mais básicos de primitivas geométricas em três dimensões: cubóides, criados com _Cuboid.ByLength_; cones, criados com _Cone.ByPointsRadius_ e _Cone.ByPointsRadii_; cilindros, criados com _Cylinder.ByRadiusHeight_; e esferas, criadas com _Sphere.ByCenterPointRadius_.
+O Dynamo tem objetos que representam os tipos mais básicos de primitivas geométricas em três dimensões: cuboides, criados com _Cuboid.ByLengths_; cones, criados com _Cone.ByPointsRadius_ e _Cone.ByPointsRadii_; cilindros, criados com _Cylinder.ByRadiusHeight_; e esferas, criadas com _Sphere.ByCenterPointRadius_.
 
 ![](../images/8-2/2/GeometricPrimitives\_05.png)
 
