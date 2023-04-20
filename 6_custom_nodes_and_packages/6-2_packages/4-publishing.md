@@ -1,10 +1,10 @@
 # Veröffentlichen von Paketen
 
-In den vorigen Abschnitten wurde gezeigt, wie das _MapToSurface_-Paket sich aus benutzerdefinierten Blöcken und Beispieldateien zusammensetzt. Aber wie veröffentlichen Sie ein Paket, das lokal entwickelt wurde? Diese Fallstudie zeigt, wie Sie ein Paket aus einer Gruppe Dateien in einem lokalen Ordner veröffentlichen können.
+In den vorigen Abschnitten wurde gezeigt, wie das _MapToSurface_-Paket sich aus benutzerdefinierten Blöcken und Beispieldateien zusammensetzt. Aber wie veröffentlichen Sie ein Paket, das lokal entwickelt wurde? Diese Fallstudie zeigt, wie Sie ein Paket aus einer Gruppe von Dateien in einem lokalen Ordner publizieren können.
 
-![](../images/6-2/4/publishapackage-customnodes01.jpg)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (6).jpg>)
 
-Es gibt mehrere Möglichkeiten zum Veröffentlichen von Paketen. Im Folgenden wird der von uns empfohlene Prozess beschrieben: **Sie veröffentlichen lokal, entwickeln lokal und veröffentlichen schließlich online**. Sie beginnen mit einem Ordner, der sämtliche Dateien im Paket enthält.
+Es gibt mehrere Möglichkeiten zum Publizieren von Paketen. Im Folgenden wird der von uns empfohlene Prozess beschrieben: **Sie veröffentlichen lokal, entwickeln lokal und veröffentlichen schließlich online**. Sie beginnen mit einem Ordner, der sämtliche Dateien im Paket enthält.
 
 ### Deinstallieren eines Pakets
 
@@ -45,11 +45,11 @@ In Fenster _Dynamo-Paket veröffentlichen_ ist das relevante Formular im linken 
 > 2. Im Feld Gruppe wird definiert, in welcher Gruppe die benutzerdefinierten Blöcke in der Benutzeroberfläche von Dynamo abgelegt werden.
 > 3. Veröffentlichen Sie das Paket, indem Sie auf Lokal publizieren klicken. Achten Sie darauf, auf _Lokal publizieren_ und **nicht** auf _Online publizieren_ zu klicken: Es sollen keine Duplikate im Package Manager erstellt werden.
 
-Nach der Veröffentlichung werden die benutzerdefinierten Blöcke in der Gruppe DynamoPrimer oder in Ihrer Dynamo-Bibliothek angezeigt.
+Nach dem Publizieren werden die benutzerdefinierten Blöcke in der Gruppe DynamoPrimer oder in Ihrer Dynamo-Bibliothek angezeigt.
 
-![](../images/6-2/4/publishapackage-publishlocally04.jpg)
+\![](<../images/6-2/3/develop package - install package 02 (1) (4).jpg>)
 
-Sehen Sie jetzt im Stammverzeichnis nach, wie Dynamo das eben erstellte Paket formatiert hat. Klicken Sie dazu auf Dynamo > Einstellungen > Package Manager, und klicken Sie neben MapToSurface das Menü mit den Punkten > Stammverzeichnis anzeigen.
+Sehen wir jetzt im Stammverzeichnis nach, wie Dynamo das eben erstellte Paket formatiert hat. Klicken Sie dazu auf Dynamo > Einstellungen > Package Manager, und klicken Sie neben MapToSurface das Menü mit den Punkten > Stammverzeichnis anzeigen.
 
 ![](../images/6-2/4/publishapackage-publishlocally05.jpg)
 

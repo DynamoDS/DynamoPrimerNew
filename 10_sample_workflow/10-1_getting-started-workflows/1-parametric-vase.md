@@ -1,5 +1,5 @@
 ---
-description: empfohlene Übung
+description: suggested exercise
 ---
 
 # Parametrische Vase
@@ -12,7 +12,7 @@ In diesem Arbeitsablauf lernen Sie Folgendes:
 * Erstellen und ändern von geometrischen Elementen mithilfe von Blöcken.
 * Visualisieren der Ergebnisse in Echtzeit.
 
-![](../images/10-1/1/vase1(3).gif)
+![](../../1\_introduction/images/1-2/vase1.gif)
 
 ## Definieren der Ziele
 
@@ -48,7 +48,7 @@ Wir behalten den Vorgabewert für _centerPoint_ bei, fügen jedoch einen **Numbe
 
 Dieser Block unterscheidet sich etwas von dem vorherigen Block, da er einen Schieberegler enthält. Mit der Benutzeroberfläche können Sie den Ausgabewert des Schiebereglers ändern.
 
-![](../images/10-1/1/vase13(1).gif)
+![](../images/10-1/1/vase13\(1\).gif)
 
 Der Schieberegler kann über die Dropdown-Schaltfläche auf der linken Seite des Blocks konfiguriert werden. Wir beschränken den Schieberegler auf einen Höchstwert von 15.
 
@@ -70,7 +70,7 @@ Wir fahren fort, indem wir der Logik einige Blöcke und Verbindungen hinzufügen
 
 Wir kopieren diese Blöcke 4 Mal, sodass diese Kreise unsere Oberfläche definieren. Ändern Sie die Namen der Number Slider wie unten gezeigt.
 
-![](../images/10-1/1/vase4(1)(1).png)
+\![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Kreise werden durch einen Mittelpunkt und einen Radius erstellt.
 
@@ -78,7 +78,7 @@ Wir kopieren diese Blöcke 4 Mal, sodass diese Kreise unsere Oberfläche defini
 
 Es fehlt noch ein Schlüsselparameter für die Vase, nämlich ihre Höhe. Um die Höhe der Vase zu steuern, erstellen wir einen weiteren Number Slider. Außerdem fügen wir einen **Code Block**-Block hinzu. Codeblöcke können hilfreich sein, wenn Sie personalisierte Code-Snippets zu Ihrem Arbeitsablauf hinzufügen möchten. Der Codeblock wird verwendet, um den Schieberegler für die Höhe mit verschiedenen Faktoren zu multiplizieren, sodass die Kreise entlang der Höhe der Vase positioniert werden können.
 
-![](../images/10-1/1/vase15(1).png)
+![](../images/10-1/1/vase15\(1\).png)
 
 Verwenden Sie dann einen **Geometry.Translate**-Block, um Kreise in der gewünschten Höhe zu platzieren. Da die Kreise über die Vase verteilt werden sollen, verwenden wir Codeblöcke, um den Höhenparameter mit einem Faktor zu multiplizieren.
 
@@ -92,7 +92,7 @@ Um eine Oberfläche mithilfe des **Surface.ByLoft**-Blocks zu erstellen, müssen
 
 Wir deaktivieren außerdem die Vorschau in anderen Blöcken, um nur die Surface.ByLoft-Anzeige darzustellen.
 
-![](../images/10-1/1/vase6(1)(1).png)
+\![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Eine Oberfläche wird durch Erhebung der verschobenen Kreise erstellt.
 
@@ -100,6 +100,6 @@ Wir deaktivieren außerdem die Vorschau in anderen Blöcken, um nur die Surface.
 
 Unser Arbeitsablauf ist bereit. Wir können jetzt die **Number Slider** verwenden, die wir in unserem Skript definiert haben, um verschiedene Vasendesigns zu erstellen.
 
-![](../images/10-1/1/vase1(3).gif)
+![](../../1\_introduction/images/1-2/vase1.gif)
 
 ![](../images/10-1/1/vase7.png)

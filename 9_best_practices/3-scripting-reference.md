@@ -10,17 +10,17 @@ Standardbibliotheken sind außerhalb von Dynamo verfügbar und liegen in den Pro
 
 **Standardbibliotheken und Dynamo-Bibliotheken**
 
-* Standardbibliotheken in Python und C# können zum Erstellen erweiterter Daten- und Ablaufsstrukturen in der Dynamo-Umgebung genutzt werden.
+* Standardbibliotheken in Python und C# können zum Erstellen erweiterter Daten- und Ablaufstrukturen in der Dynamo-Umgebung genutzt werden.
 * Dynamo-Bibliotheken entsprechen direkt der Blockhierarchie zum Erstellen von Geometrie und anderer Dynamo-Objekte.
 
 **Dynamo-Bibliotheken**
 
-1. ProtoGeometry\*
+1.  ProtoGeometry*
 
-   * Funktionen: Bogen, Begrenzungsrahmen, Kreis, Kegel, Koordinatensystem, Quader, Kurve, Zylinder, Kante, Ellipse, elliptischer Bogen, Fläche, Geometrie, Spirale, Indexgruppe, Linie, Netz, NURBS-Kurve, NURBS-Oberfläche, Ebene, Punkt, Polygon, Rechteck, Volumenkörper, Kugel, Oberfläche, Topologie, TSpline, UV, Vektor, Scheitelpunkt.
-   * Importverfahren: `import Autodesk.DesignScript.Geometry`
+    * Funktionen: Bogen, Begrenzungsrahmen, Kreis, Kegel, Koordinatensystem, Quader, Kurve, Zylinder, Kante, Ellipse, elliptischer Bogen, Fläche, Geometrie, Spirale, Indexgruppe, Linie, Netz, NURBS-Kurve, NURBS-Oberfläche, Ebene, Punkt, Polygon, Rechteck, Volumenkörper, Kugel, Oberfläche, Topologie, TSpline, UV, Vektor, Scheitelpunkt.
+    * Importverfahren: `import Autodesk.DesignScript.Geometry`
 
-   ``
+    \`\`
 2. DSCoreNodes
    * Funktionen: Farbe, Farbbereich 2D, Datum und Uhrzeit, Zeitraum, IO, Formel, Logik, Liste, mathematische Funktionen, Quadtree, Zeichenfolge, Thread.
    * Importverfahren: `import DSCore`
@@ -31,9 +31,7 @@ Standardbibliotheken sind außerhalb von Dynamo verfügbar und liegen in den Pro
    * Funktion: Excel.
    * Importverfahren: `import DSOffice`
 
-{% hint style="warning" %}
-\*Anmerkung: Beachten Sie bei der Verwendung von **ProtoGeometry** in Python oder C#, dass Sie hierbei nicht verwaltete Objekte erstellen, deren Speicher manuell verwaltet werden muss, wie weiter unten im Abschnitt **Nicht verwaltete Objekte** genauer beschrieben.
-{% endhint %}
+{% hint style="warning" %} *Anmerkung: Beachten Sie bei der Verwendung von **ProtoGeometry** in Python oder C#, dass Sie hierbei nicht verwaltete Objekte erstellen, deren Speicher manuell verwaltet werden muss, wie weiter unten im Abschnitt **Nicht verwaltete Objekte** genauer beschrieben. {% endhint %}
 
 ## Sorgfältige Kennzeichnung
 
@@ -72,7 +70,7 @@ seat = car.Seat()
 tire = car.Tire()
 ```
 
-**Verwenden Sie für Variablennamen positive anstatt negativer Logik :**
+**Verwenden Sie für Variablennamen positive anstatt negativer Logik:**
 
 ```
 ### BAD
@@ -92,7 +90,7 @@ else:
     print 'not found'
 ```
 
-**Geben Sie der „Rückwärtsschreibweise“ den Vorzug:**
+**Geben Sie der Rückwärtsschreibweise den Vorzug:**
 
 ```
 ### BAD
@@ -110,7 +108,7 @@ agents_dead = ...
 
 > Dies ist unter dem Aspekt der Struktur sinnvoller.
 
-**Verwenden Sie Aliases zur Verkürzung überlanger und häufig wiederholter Ketten:**
+**Verwenden Sie Aliasse zur Verkürzung überlanger und häufig wiederholter Ketten:**
 
 ```
 ### BAD
@@ -130,7 +128,7 @@ doc = DM.Instance.CurrentDBDocument
 uiapp = DM.Instance.CurrentUIApplication
 ```
 
-> Aliases führen rasch zu verwirrenden und nicht standardmäßigen Programmen.
+> Aliasse führen rasch zu verwirrenden und nicht standardmäßigen Programmen.
 
 **Verwenden Sie nur die erforderlichen Wörter:**
 
@@ -144,141 +142,141 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> „Man muss die Dinge so einfach wie möglich machen. Aber nicht einfacher.“ – Albert Einstein
+> Man muss die Dinge so einfach wie möglich machen. Aber nicht einfacher. - Albert Einstein
 
 ## Einheitlicher Stil
 
 Im Allgemeinen gibt es beim Programmieren von Anwendungen jeder Art mehrere Möglichkeiten. Ihr „persönlicher Stil“ beim Schreiben von Skripts ist daher das Ergebnis zahlloser Detailentscheidungen für oder gegen einzelne Schritte während der Arbeit. Wie leserlich und leicht zu warten Ihr Code ist, ist dennoch gleichermaßen das direkte Ergebnis seiner internen Kohärenz und der Einhaltung allgemeiner Stilkonventionen. Als Faustregel gilt, dass Code, der an zwei unterschiedlichen Stellen gleich aussieht, auch dieselbe Funktion ausführen muss. Die folgenden Tipps sollen beim Schreiben von verständlichem und einheitlichem Code helfen.
 
-**Namenskonventionen:** (Wählen Sie eine der folgenden Konventionen für jede Art von Element in Ihrem Code und behalten Sie sie konsequent bei.)
+**Namenskonventionen**: (Wählen Sie eine der folgenden Konventionen für jede Art von Element in Ihrem Code und behalten Sie sie konsequent bei.)
 
 * Variablen, Funktionen, Methoden, Pakete, Module:\
-   `lower_case_with_underscores`
+ `lower_case_with_underscores`
 * Objektklassen und Ausnahmen:\
-   `CapWords`
+ `CapWords`
 * Geschützte Methoden und interne Funktionen:\
-   `_single_leading_underscore(self, ...)`
+ `_single_leading_underscore(self, ...)`
 * Private Methoden:\
-   `__double_leading_underscore(self, ...)`
+ `__double_leading_underscore(self, ...)`
 * Konstanten:\
-   `ALL_CAPS_WITH_UNDERSCORES`
+ `ALL_CAPS_WITH_UNDERSCORES`
 
 > Tipp: Vermeiden Sie Variablen, die aus nur einem Buchstaben bestehen (insbesondere L, O, I), ausgenommen in sehr kurzen Blöcken, wenn die Bedeutung unmissverständlich aus dem unmittelbaren Kontext hervorgeht.
 
 **Verwendung leerer Zeilen:**
 
-* Fügen Sie vor und nach Definitionen von Funktionen auf oberster Ebene und von Klassen je zwei leere Zeilen ein.
-   * Schließen Sie Methodendefinitionen innerhalb einer Klasse in einfache leere Zeilen ein.
-   * Zusätzliche leere Zeilen können (in Maßen) dazu verwendet werden, Gruppen zusammengehöriger Funktionen voneinander zu trennen.
+* Fügen Sie vor und nach Definitionen von Funktionen auf oberster Ebene und von Klassen je zwei Leerzeilen ein.
+  * Schließen Sie Methodendefinitionen innerhalb einer Klasse in einfache leere Zeilen ein.
+  * Zusätzliche Leerzeilen können (in Maßen) dazu verwendet werden, um Gruppen zusammengehöriger Funktionen voneinander zu trennen.
 
 **Vermeiden Sie überflüssigen Leerraum an den folgenden Stellen:**
 
-* direkt in runden, geschweiften oder eckigen Klammern:
+*   direkt in runden, geschweiften oder eckigen Klammern:
 
-   ```
-   ### BAD
-   function( apples[ 1 ], { oranges: 2 } )
-   ```
+    ```
+    ### BAD
+    function( apples[ 1 ], { oranges: 2 } )
+    ```
 
-   ```
-   ### GOOD:
-   function(apples[1], {oranges: 2})
-   ```
-* unmittelbar vor einem Komma, Semikolon oder Doppelpunkt:
+    ```
+    ### GOOD:
+    function(apples[1], {oranges: 2})
+    ```
+*   unmittelbar vor einem Komma, Semikolon oder Doppelpunkt:
 
-   ```
-   ### BAD
-    if x == 2 : print x , y ; x , y = y , x
-   ```
+    ```
+    ### BAD
+     if x == 2 : print x , y ; x , y = y , x
+    ```
 
-   ```
-   ### GOOD
-     if x == 2: print x, y; x, y = y, x
-   ```
-* unmittelbar vor der öffnenden Klammer am Anfang der Liste der Argumente für einen Funktionsaufruf:
+    ```
+    ### GOOD
+      if x == 2: print x, y; x, y = y, x
+    ```
+*   unmittelbar vor der öffnenden Klammer am Anfang der Liste der Argumente für einen Funktionsaufruf:
 
-   ```
-   ### BAD
-   function (1)
-   ```
+    ```
+    ### BAD
+    function (1)
+    ```
 
-   ```
-   ### GOOD
-   function(1)
-   ```
-* unmittelbar vor der öffnenden Klammer am Anfang von Indizierungen und Teilbereichen:
+    ```
+    ### GOOD
+    function(1)
+    ```
+*   unmittelbar vor der öffnenden Klammer am Anfang von Indizierungen und Teilbereichen:
 
-   ```
-   ### BAD
-   dict ['key'] = list [index]
-   ```
+    ```
+    ### BAD
+    dict ['key'] = list [index]
+    ```
 
-   ```
-   ### GOOD
-   dict['key'] = list[index]
-   ```
-* Fügen Sie vor und nach diesen Binäroperatoren immer jeweils ein Leerzeichen ein:
+    ```
+    ### GOOD
+    dict['key'] = list[index]
+    ```
+*   Fügen Sie vor und nach diesen Binäroperatoren immer jeweils ein Leerzeichen ein:
 
-   ```
-   assignment ( = )
-   augmented assignment ( += , -= etc.)
-   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-   Booleans ( and , or , not )
-   ```
+    ```
+    assignment ( = )
+    augmented assignment ( += , -= etc.)
+    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+    Booleans ( and , or , not )
+    ```
 
 **Beachten Sie die Länge:**
 
-* Sie sollte ca. 79 Zeichen möglichst nicht überschreiten.
+* Sie sollte 79 Zeichen möglichst nicht überschreiten.
 * Indem Sie die Breite der benötigten Editor-Fenster beschränken, können Sie mehrere Dateien nebeneinander anzeigen. Dies ist besonders bei der Verwendung von Codeprüfungs-Tools hilfreich, die die beiden Versionen in benachbarten Spalten zeigen.
 * Lange Zeilen können umbrochen und auf mehrere Zeilen verteilt werden, indem Sie Ausdrücke in Klammern setzen:
 
 **Vermeiden Sie allzu offensichtliche und überflüssige Kommentare:**
 
 * Durch weniger Kommentare erhalten Sie zuweilen leichter lesbaren Code. Dies gilt insbesondere, wenn Sie infolgedessen auf aussagekräftige Symbolnamen achten müssen.
-* Durch sinnvolle Arbeitsgewohnheiten beim Schreiben von Code benötigen Sie weniger Kommentare:
+*   Durch sinnvolle Arbeitsgewohnheiten beim Schreiben von Code benötigen Sie weniger Kommentare:
 
-   ```
-   ### BAD
-     # get the country code
-     country_code = get_country_code(address)
+    ```
+    ### BAD
+      # get the country code
+      country_code = get_country_code(address)
 
-     # if country code is US
-     if (country_code == 'US'):
-       # display the form input for state
-       print form_input_state()
-   ```
+      # if country code is US
+      if (country_code == 'US'):
+        # display the form input for state
+        print form_input_state()
+    ```
 
-   ```
-   ### GOOD
-     # display state selection for US users
-     country_code = get_country_code(address)
-     if (country_code == 'US'):
-       print form_input_state()
-   ```
+    ```
+    ### GOOD
+      # display state selection for US users
+      country_code = get_country_code(address)
+      if (country_code == 'US'):
+        print form_input_state()
+    ```
 
 > Tipp: Kommentare beantworten die Frage nach dem Warum, Code nach dem Wie.
 
-**Checken Sie Open Source-Code aus:**
+**Orientieren Sie sich an Open-Source-Code:**
 
-* Open Source-Projekte werden durch die Zusammenarbeit vieler Entwickler vorangetrieben. In diesen Projekten ist die leichte Verständlichkeit des Codes unverzichtbar, damit das Team so effizient wie möglich zusammenarbeiten kann. Aus diesem Grund empfiehlt es sich, den Quellcode dieser Projekte durchzusehen und aus der Arbeitsweise dieser Entwickler Anregungen zu schöpfen.
+* Open-Source-Projekte werden durch die Zusammenarbeit vieler Entwickler vorangetrieben. In diesen Projekten ist die leichte Verständlichkeit des Codes unverzichtbar, damit das Team so effizient wie möglich zusammenarbeiten kann. Aus diesem Grund empfiehlt es sich, den Quellcode dieser Projekte durchzusehen und aus der Arbeitsweise dieser Entwickler Anregungen zu schöpfen.
 * Verbessern Sie Ihre Konventionen:
-   * Überprüfen Sie für jede einzelne Konvention. ob sie für den aktuellen Verwendungszweck geeignet ist.
-   * Kommt es zu Beeinträchtigungen der Funktionsfähigkeit/Effizienz?
+  * Überprüfen Sie für jede einzelne Konvention. ob sie für den aktuellen Verwendungszweck geeignet ist.
+  * Kommt es zu Beeinträchtigungen der Funktionsfähigkeit/Effizienz?
 
 ## Standards für C# (Zerotouch)
 
 **Auf den folgenden Wiki-Seiten finden Sie Anweisungen zum Schreiben von C# für Zerotouch und wie Sie zu Dynamo beitragen können:**
 
-* Im folgenden Wiki werden allgemeine Coding-Standards zum Dokumentieren und Testen des Codes beschrieben: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
+* Im folgenden Wiki werden allgemeine Kodierungsstandards zum Dokumentieren und Testen Ihres Codes beschrieben: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
 * Im folgenden Wiki wird speziell auf Namenskonventionen für Bibliotheken, Kategorien, Blocknamen, Anschlussnamen und Abkürzungen eingegangen: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
 **Nicht verwaltete Objekte:**
 
-Wenn Sie die Geometriebibliothek von Dynamo _(ProtoGeometry)_ in Python oder C# verwenden, werden von Ihnen erstellte Geometrieobjekte nicht durch die virtuelle Maschine verwaltet, und der Speicher für viele dieser Objekte muss manuell bereinigt werden. Zum Bereinigen nativer oder nicht verwalteter Objekte können Sie die **Dispose**-Methode oder das **using**-Schlüsselwort verwenden. Einen Überblick hierzu finden Sie in diesem Wiki-Eintrag: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)
+Wenn Sie die Geometriebibliothek von Dynamo _(ProtoGeometry)_ in Python oder C# verwenden, werden von Ihnen erstellte Geometrieobjekte nicht durch die virtuelle Maschine verwaltet, und der Speicher für viele dieser Objekte muss manuell bereinigt werden. Zum Bereinigen nativer oder nicht verwalteter Objekte können Sie die **Dispose**-Methode oder das **using**-Schlüsselwort verwenden. Einen Überblick hierzu finden Sie in diesem Wiki-Eintrag: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-Sie müssen nur diejenigen nicht verwalteten Ressourcen beseitigen, die Sie nicht in das Diagramm ausgeben und auf die keine Verweise gespeichert werden. Für den Rest dieses Abschnitts werden diese Objekte als _temporäre Geometrie_ bezeichnet. Das Codebeispiel unten zeigt ein Beispiel für diese Klasse von Objekten. Diese Zerotouch C#-Funktion namens **singleCube** gibt einen einzelnen Würfel zurück, erstellt jedoch während ihrer Ausführung 10.000 zusätzliche Würfel. Nehmen Sie an, dass diese zusätzliche Geometrie als temporäre Geometrie zur Konstruktion verwendet wurde.
+Sie müssen nur diejenigen nicht verwalteten Ressourcen beseitigen, die Sie nicht in das Diagramm ausgeben und auf die keine Verweise gespeichert werden. Für den Rest dieses Abschnitts werden diese Objekte als _temporäre Geometrie_ bezeichnet. Das Codebeispiel unten zeigt ein Beispiel für diese Klasse von Objekten. Diese Zerotouch C#-Funktion namens **singleCube** gibt einen einzelnen Würfel zurück, erstellt jedoch während ihrer Ausführung 10000 zusätzliche Würfel. Nehmen wir an, dass diese zusätzliche Geometrie als temporäre Geometrie zur Konstruktion verwendet wurde.
 
-**Diese Zerotouch-Funktion bringt Dynamo mit großer Wahrscheinlichkeit zum Absturz.** Es wurden 10.000 Volumenkörper erstellt, jedoch nur einer davon gespeichert, und nur dieser wurde zurückgegeben. Stattdessen sollten alle temporären Würfel ausgenommen derjenige, der zurückgegeben werden soll, beseitigt werden. Der zurückzugebende Würfel darf nicht beseitigt werden, da er an das Diagramm weitergeleitet und von anderen Blöcken verwendet werden soll.
+**Diese Zerotouch-Funktion bringt Dynamo mit großer Wahrscheinlichkeit zum Absturz.** Es wurden 10000 Volumenkörper erstellt, jedoch nur einer davon gespeichert, und nur dieser wurde zurückgegeben. Stattdessen sollten alle temporären Würfel, ausgenommen derjenige, der zurückgegeben werden soll, beseitigt werden. Der zurückzugebende Würfel darf nicht beseitigt werden, da er an das Diagramm weitergeleitet und von anderen Blöcken verwendet werden soll.
 
 ```
 public Cuboid singleCube(){

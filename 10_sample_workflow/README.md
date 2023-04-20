@@ -4,7 +4,7 @@ In diesem Abschnitt werden eine Reihe von Arbeitsabläufen vorgestellt, die Sie 
 
 Folgende Beispielarbeitsabläufe stehen zur Verfügung:
 
-**Erste Schritte – Arbeitsabläufe**
+**Erste Schritte - Arbeitsabläufe**
 
 * [Parametrische Vase](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [Attraktorpunkte](10-1\_getting-started-workflows/2-attractor-points.md)

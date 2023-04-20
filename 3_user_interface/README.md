@@ -48,9 +48,9 @@ Wenn Sie nicht weiterkommen, verwenden Sie das Menü **Hilfe**. Sie können übe
 
 Der Werkzeugkasten von Dynamo enthält eine Reihe von Schaltflächen für den Schnellzugriff zum Arbeiten mit Dateien sowie die Befehle Rückgängig [Ctrl + Z] und Wiederholen [Ctrl + Y]. Ganz rechts befindet sich eine weitere Schaltfläche, über die Sie einen Snapshot des Arbeitsbereichs exportieren können. Dies ist für die Dokumentation und die gemeinsame Bearbeitung mit anderen äußerst nützlich.
 
-* ![](images/userinterface-newfile.jpg) Neu: Neue .dyn-Datei erstellen
-* ![](images/userinterface-open.jpg) Öffnen: Vorhandene .dyn-Datei (Arbeitsbereich) oder .dyf-Datei (benutzerdefinierter Block) öffnen
-* ![](images/userinterface-save.jpg) Speichern/Speichern unter: Aktive .dyn- oder .dyf-Datei speichern
+* ![](images/userinterface-newfile.jpg) Neu: Neue DYN-Datei erstellen
+* \![](<images/userinterface-open(1) (1).jpg>) Öffnen: Öffnet eine vorhandene DYN-Datei (Arbeitsbereich) oder DYF-Datei (benutzerdefinierter Block).
+* ![](images/userinterface-save.jpg) Speichern/Speichern unter: Aktive DYN- oder DYF-Datei speichern
 * ![](images/userinterface-undo.jpg) Rückgängig: Die letzte Aktion rückgängig machen
 * ![](images/userinterface-redo.jpg) Wiederholen: Die nächste Aktion wiederherstellen
 * ![](images/userinterface-screenshot.jpg) Arbeitsbereich als Bild exportieren: Den angezeigten Arbeitsbereich als PNG-Datei exportieren

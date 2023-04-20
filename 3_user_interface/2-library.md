@@ -25,15 +25,15 @@ Durchsuchen Sie die Bibliothek, indem Sie durch die Menüs klicken, um die einze
 > 3. Unterkategorie
 > 4. Block
 
-Mit diesen werden die Blöcke weiter in derselben Unterkategorie eingeteilt, je nachdem, ob die Blöcke Daten **erstellen**, eine **Aktion** ausführen oder Daten **abfragen**.
+Mit diesen werden die Blöcke weiter in derselben Unterkategorie kategorisiert, je nachdem, ob die Blöcke Daten **erstellen**, eine **Aktion** ausführen oder Daten **abfragen**.
 
-* ![](images/3-2/userinterface-create.jpg) **Erstellen**: Erstellt oder konstruiert eine neue Geometrie. Beispiel: Kreis.
-* ![](images/3-2/userinterface-action.jpg) **Aktion**: Führt einen Vorgang für ein Objekt aus. Beispiel: Skalieren eines Kreises.
-* ![](images/3-2/userinterface-query.jpg) **Abfrage**: Ruft eine Eigenschaft eines bestehenden Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
+* \![](<images/3-2/user interface - create.jpg>) **Erstellen**: Erstellt oder konstruiert eine Geometrie von Grund auf neu. Beispiel: Kreis.
+* \![](<images/3-2/user interface - action.jpg>) **Aktion**: Führt eine Aktion für ein Objekt aus. Beispiel: Skalieren eines Kreises.
+* \![](<images/3-2/user interface - query.jpg>) **Abfrage**: Ruft eine Eigenschaft eines bereits vorhandenen Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
 
 Bewegen Sie den Mauszeiger über einen Block, um weitere Informationen über seinen Namen und sein Symbol hinaus anzuzeigen. Dadurch können Sie schnell nachvollziehen, welche Aktion der Block ausführt, welche Eingaben erforderlich sind und was von dem Block ausgegeben wird.
 
-![](images/3-2/userinterface-nodedescription.jpg)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Beschreibung: Kurze Beschreibung des Blocks
 > 2. Symbol: Größere Version des Symbols im Menü Bibliothek
@@ -46,9 +46,9 @@ Wenn Sie relativ genau wissen, welchen Block Sie zu Ihrem Arbeitsbereich hinzuf�
 
 Treffen Sie Ihre Auswahl, indem Sie auf den hinzuzufügenden Block klicken, oder drücken Sie die EINGABETASTE, um die markierten Blöcke in der Mitte des Arbeitsbereichs hinzuzufügen.
 
-![](images/3-2/userinterface-search.jpg)
+\![](<images/3-2/user interface - search.jpg>)
 
-#### Nach Hierarchie suchen
+#### Suchen nach Hierarchie
 
 Neben der Verwendung von Schlüsselwörtern zum Suchen von Blöcken können Sie auch die Hierarchie getrennt durch einen Punkt im Suchfeld oder mithilfe von Codeblöcken (in denen die _Textsprache von Dynamo_ verwendet wird) eingeben.
 
@@ -58,7 +58,7 @@ Durch die Eingabe verschiedener Teile der Position des Blocks in der Bibliotheks
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
 
 * `category.nodeName`
 
@@ -125,7 +125,7 @@ Wir können auch Codeblöcke als Abkürzung verwenden, um einen Number Input-Blo
 
 Hier sehen Sie eine einfache Demonstration (mit Anweisungen) zur Verwendung von Codeblöcken in Ihrem Skript.
 
-![](images/3-2/library-codeblockdemo.gif)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Doppelklicken Sie, um einen Code Block-Block zu erstellen.
 2. `Circle.ByCenterPointRadius(x,y);`Typ

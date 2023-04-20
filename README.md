@@ -55,7 +55,7 @@ Dynamo Primer ist ein Open-Source-Projekt, das von Matt Jezyk und dem Dynamo-Ent
 
 Ein besonderer Dank geht an Ian Keough für die Initiierung und Begleitung des Dynamo-Projekts.
 
-Vielen Dank auch an Matt Jezyk, Ian Keough, Zach Kron, Racel Williams und Colin McCrone für die tolle Zusammenarbeit und die Möglichkeit zur Teilnahme an einer breiten Palette von Dynamo-Projekten.
+Vielen Dank auch an Matt Jezyk, Ian Keough, Zach Kron, Racel Amour und Colin McCrone für die tolle Zusammenarbeit und die Möglichkeit zur Teilnahme an einer breiten Palette von Dynamo-Projekten.
 
 ### Software und Ressourcen
 

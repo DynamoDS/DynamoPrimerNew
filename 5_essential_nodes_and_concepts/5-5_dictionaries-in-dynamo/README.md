@@ -4,7 +4,7 @@ Wörterbücher stehen für eine Sammlung von Daten, die in Bezug zu einem andere
 
 Im Prinzip ist ein Wörterbuch eine wirklich clevere Methode, etwas nachzuschlagen.
 
-_Die Wörterbuch-Funktionalität ist schon seit einiger Zeit in Dynamo verfügbar, aber in Dynamo 2.0 haben Sie neue Möglichkeiten, diesen Datentyp zu verwalten._
+_Die Wörterbuch-Funktionalität ist schon seit einiger Zeit in Dynamo verfügbar, aber in Dynamo 2.0 haben Sie neue Möglichkeiten, diesen Datentyp zu verwalten._
 
 ![](../images/5-5/wildDictionary.png)
 

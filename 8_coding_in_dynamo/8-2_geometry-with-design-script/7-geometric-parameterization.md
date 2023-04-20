@@ -39,7 +39,7 @@ lines = Line.ByStartPointEndPoint(pts_at_param,
 
 Analog dazu haben Oberflächen eine Methode _PointAtParameter_, die zwei Argumente annimmt, nämlich die u- und v-Parameter des generierten Punkts.
 
-Das Extrahieren einzelner Punkte auf einer Kurve und Oberfläche kann nützlich sein, Skripte erfordern jedoch häufig die genauen geometrischen Merkmale an einem Parameter, z. B. in welche Richtung die Kurve bzw. Oberfläche gewandt ist. Die Methode _CoordinateSystemAtParameter_ findet nicht nur die Position, sondern ein ausgerichtetes Koordinatensystem am Parameter einer Kurve oder Oberfläche. Beispielsweise extrahiert das folgende Skript ausgerichtete Koordinatensysteme entlang einer Rotationsfläche und verwendet die Ausrichtung der Koordinatensysteme, um Linien zu generieren, die senkrecht zur Oberfläche stehen:
+Das Extrahieren einzelner Punkte auf einer Kurve und Oberfläche kann nützlich sein, Skripte erfordern jedoch häufig die genauen geometrischen Merkmale an einem Parameter, z. B., in welche Richtung die Kurve bzw. Oberfläche gewandt ist. Die Methode _CoordinateSystemAtParameter_ findet nicht nur die Position, sondern ein ausgerichtetes Koordinatensystem am Parameter einer Kurve oder Oberfläche. Beispielsweise extrahiert das folgende Skript ausgerichtete Koordinatensysteme entlang einer Rotationsfläche und verwendet die Ausrichtung der Koordinatensysteme, um Linien zu generieren, die senkrecht zur Oberfläche stehen:
 
 ![](../images/8-2/7/GeometricParameterization\_02.png)
 
@@ -76,4 +76,4 @@ def make_line(cs : CoordinateSystem) {
 lines = make_line(Flatten(cs_array));
 ```
 
-Wie bereits erwähnt, ist die Parametrisierung nicht immer gleichmäßig über die Länge einer Kurve oder Oberfläche hinweg, was bedeutet, dass der Parameter 0.5 nicht immer dem Mittelpunkt und 0.25 nicht immer einem Viertel der Länge entlang einer Kurve oder Oberfläche entspricht. Um diese Einschränkung zu umgehen, verfügen Kurven über einen zusätzlichen Satz von Parametrisierungsbefehlen, mit denen Sie einen Punkt mit einer bestimmten Länge entlang einer Kurve finden können.
+Wie bereits erwähnt, erfolgt die Parametrisierung nicht immer gleichmäßig über die Länge einer Kurve oder Oberfläche hinweg, was bedeutet, dass der Parameter 0.5 nicht immer dem Mittelpunkt und 0.25 nicht immer einem Viertel der Länge entlang einer Kurve oder Oberfläche entspricht. Um diese Einschränkung zu umgehen, verfügen Kurven über einen zusätzlichen Satz von Parametrisierungsbefehlen, mit denen Sie einen Punkt mit einer bestimmten Länge entlang einer Kurve finden können.

@@ -10,11 +10,11 @@ Numerische Variablen können für eine Vielzahl unterschiedlicher Zahlen stehen.
 
 Die "If"-Anweisung ist ein wichtiges Konzept in der Programmierung: "Wenn _dies_ zutrifft (True), dann geschieht _das_, andernfalls geschieht _etwas anderes_. Die aus der Anweisung resultierende Aktion wird durch einen booleschen Wert gesteuert. In Dynamo stehen mehrere Möglichkeiten zum Definieren von If-Anweisungen zur Verfügung:
 
-| Symbol                                            | Name (Syntax)             | Eingaben            | Ausgaben |
-| ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../images/5-3/3/If.jpg)         | Wenn (**If**)               | test, true, false | result  |
-| ![](../images/5-3/3/Formula.jpg)          | Formel (**IF(x,y,z)**)   | x, y, z           | result  |
-| ![](../images/5-3/3/CodeBlock.jpg) | Codeblock (**(x?y:z);**) | x? y, z           | result  |
+| Symbol                                         | Name (Syntax)             | Eingaben            | Ausgaben |
+| -------------------------------------------- | ------------------------- | ----------------- | ------- |
+| ![](../images/5-1/If.jpg)                    | Wenn (**If**)               | test, true, false | result  |
+| ![](../images/5-1/Formula.jpg)               | Formel (**IF(x,y,z)**)   | x, y, z           | result  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Codeblock (**(x?y:z);**) | x? y, z           | result  |
 
 Die folgenden kurzen Beispiele zeigen die Funktionsweise dieser drei Blöcke in der If-Bedingungsanweisung.
 

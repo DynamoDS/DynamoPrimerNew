@@ -2,7 +2,7 @@
 
 _Intersect_, _Trim_ und _SelectTrim_ werden hauptsächlich für niedrigerdimensionale Geometrien wie Punkte, Kurven und Oberflächen genutzt. Volumenkörper-Geometrie verfügt über einen zusätzlichen Satz von Methoden zum Ändern der Form nach ihrer Erstellung, sowohl durch Subtraktion von Material, ähnlich wie _Trim_, als auch durch Kombination von Elementen zu einem größeren Ganzen.
 
-### Union (Vereinigung)
+### Union
 
 Die Methode _Union_ nimmt zwei Volumenkörper-Objekte und erstellt ein einzelnes Volumenkörper-Objekt aus dem Raum, der von beiden Objekten abgedeckt wird. Der Überlappungsbereich zwischen den einzelnen Objekten wird zur endgültigen Form kombiniert. In diesem Beispiel werden eine Kugel und ein Quader in einer einzigen Volumenkörper-Kugel-Quader-Form kombiniert:
 
@@ -19,7 +19,7 @@ s2 = Sphere.ByCenterPointRadius(
 combined = s1.Union(s2);
 ```
 
-### Unterschied
+### Difference
 
 Die Methode _Difference_ subtrahiert ähnlich wie _Trim_ die Inhalte des eingegebenen Werkzeug-Volumenkörpers vom Basis-Volumenkörper. In diesem Beispiel kerben wir eine Kugel leicht ein:
 
@@ -36,9 +36,9 @@ tool = Sphere.ByCenterPointRadius(
 result = s.Difference(tool);
 ```
 
-### Schneiden
+### Intersect
 
-Die Methode _Intersect_ gibt den überlappenden Volumenkörper zwischen zwei Eingabe-Volumenkörpern zurück. Im folgenden Beispiel wurde _Difference_ zu _Intersect_ geändert, und der resultierende Volumenkörper entspricht dem ursprünglich eingekerbten Leerraum:
+Die Methode _Intersect_ gibt den überlappenden Volumenkörper zwischen zwei Eingabe-Volumenkörpern zurück. Im folgenden Beispiel wurde _Difference_ in _Intersect_ geändert, und der resultierende Volumenkörper entspricht dem ursprünglich eingekerbten Leerraum:
 
 ![](../images/8-2/9/GeometricBooleans\_03.png)
 

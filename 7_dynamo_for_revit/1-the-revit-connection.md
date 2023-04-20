@@ -1,8 +1,6 @@
 # Verbindung zu Revit
 
-
-
-![](./images/1/revitconnectionlink.jpg)
+![](images/1/revitconnectionlink.jpg)
 
 Dynamo for Revit ergänzt die Gebäudemodellierung (Building Information Modelling) um die Daten- und Logikumgebung eines grafischen Algorithmeneditors. Die Flexibilität dieser Umgebung eröffnet zusammen mit einer robusten Revit-Datenbank neue Perspektiven für BIM.
 
@@ -25,7 +23,7 @@ Da sich sowohl Revit als auch Dynamo laufend weiterentwickeln, bemerken Sie mög
 
 ### Entwicklung von Dynamo
 
-![Verlauf](./images/1/earlyScreenshot.jpg)
+![Verlauf](images/1/earlyScreenshot.jpg)
 
 Ein spezialisiertes Entwicklerteam und eine engagierte Community haben dafür gesorgt, dass das Projekt seit seinen Anfängen kaum wiederzuerkennen ist.
 
@@ -37,15 +35,15 @@ Die Core-Dynamo-Blöcke ermöglichen es dem Benutzer in Verbindung mit benutzerd
 
 Navigieren Sie in einem Revit-Projekt oder im Familieneditor zu Zusatzmodule und klicken Sie auf Dynamo.*
 
-{% hint style="warning" %} *Dynamo wird nur in der Datei ausgeführt, in der es geöffnet wurde. {% endhint %}
+{% hint style="warning" %} *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. {% endhint %}
 
-![](./images/1/launchdynamofromrevit.jpg)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
-Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens "Revit" angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
+Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
 
 {% hint style="warning" %} *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo for Revit öffnen. Wenn Sie ein Diagramm aus Dynamo for Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. {% endhint %}
 
-![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
+![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Anhalten von Blöcken
 
@@ -59,4 +57,4 @@ Dynamo ist ein Open Source-Projekt und entwickelt sich daher ständig weiter. Ei
 
 Für Dynamo steht auch ein aktives Blog zur Verfügung. Lesen Sie die neuesten Posts, um sich über neue Entwicklungen auf dem Laufenden zu halten.
 
-![Blog](./images/1/blog.png)
+![Blog](images/1/blog.png)

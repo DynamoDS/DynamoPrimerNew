@@ -18,9 +18,9 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### Drehen
+### Drehung
 
-Zwar können alle Objekte in Dynamo durch Anhängen der Methode _.Translate_ ans Ende des Objektnamens verschoben werden, jedoch erfordern komplexere Transformationen, dass das Objekt von einem zugrunde liegenden Koordinatensystem in ein neues Koordinatensystem überführt wird. Um beispielsweise ein Objekt um 45 Grad um die x-Achse zu drehen, können wir das Objekt aus seinem bisherigen Koordinatensystem ohne Drehung in ein Koordinatensystem überführen, das mit der Methode _.Transform_ um 45 Grad um die x-Achse gedreht wurde:
+Zwar können alle Objekte in Dynamo durch Anhängen der Methode _.Translate_ ans Ende des Objektnamens verschoben werden, jedoch erfordern komplexere Transformationen, dass das Objekt von einem zugrunde liegenden Koordinatensystem in ein neues Koordinatensystem überführt wird. Um beispielsweise ein Objekt um 45 Grad um die X-Achse zu drehen, können wir das Objekt aus seinem bisherigen Koordinatensystem ohne Drehung in ein Koordinatensystem überführen, das mit der Methode _.Transform_ um 45 Grad um die X-Achse gedreht wurde:
 
 ![](../images/8-2/5/Transformations\_02.png)
 
@@ -76,16 +76,16 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 Skalieren und Scheren sind erheblich komplexere geometrische Transformationen als Drehen und Verschieben, daher können sie nicht auf alle Dynamo-Objekte angewendet werden. Die folgende Tabelle gibt Aufschluss darüber, welche Dynamo-Objekte ungleichmäßig skalierte sowie gescherte Koordinatensysteme aufweisen können.
 
-| Klasse | Ungleichmäßig skaliertes Koordinatensystem | Geschertes Koordinatensystem |
+| Klasse        | Ungleichmäßig skaliertes Koordinatensystem | Geschertes Koordinatensystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Bogen | Nein | Nein |
-| NurbsCurve | Ja | Ja |
-| NurbsSurface | Nein | Nein |
-| Kreis | Nein | Nein |
-| Linie | Ja | Ja |
-| Ebene | Nein | Nein |
-| Punkt | Ja | Ja |
-| Polygon | Nein | Nein |
-| Volumenkörper | Nein | Nein |
-| Oberfläche | Nein | Nein |
-| Text | Nein | Nein |
+| Bogen          | Nein                                    | No                       |
+| NurbsCurve   | Ja                                   | Ja                      |
+| NurbsSurface | Nein                                    | No                       |
+| Kreis       | Nein                                    | No                       |
+| Linie         | Ja                                   | Ja                      |
+| Ebene        | Nein                                    | No                       |
+| Punkt        | Ja                                   | Ja                      |
+| Polygon      | Nein                                    | No                       |
+| Volumenkörper        | Nein                                    | No                       |
+| Oberfläche      | Nein                                    | No                       |
+| Text         | Nein                                    | No                       |

@@ -30,7 +30,7 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
 * In manchen Fällen können Sie in einem Codeblock **eine Methode für eine Zahl oder einen Block schneller eingeben, als Sie nach ihr suchen könnten** (Point.ByCoordinates, Number, String, Formula).
 * Codeblöcke sind nützlich zum **Definieren benutzerdefinierter Funktionen in DesignScript, damit weniger Blöcke im Diagramm benötigt werden**.
 
-![](images/1/graphstrategy3(1).png)
+![](images/1/graphstrategy3\(1\).png)
 
 > 1 und 2 führen dieselbe Funktion aus. Dabei nahm das Schreiben einiger Codezeilen wesentlich weniger Zeit in Anspruch als das Suchen und Hinzufügen jedes einzelnen Blocks. Die Angaben im Codeblock sind darüber hinaus wesentlich prägnanter.
 >
@@ -63,9 +63,9 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
 ### **Flexibler Zugriff auf Daten mit List@Level**
 
 * List@Level kann es Ihnen erleichtern, **Ihr Diagramm durch Ersetzen der Blöcke List.Map und List.Combine zu vereinfachen**, die viel Platz im Ansichtsbereich beanspruchen können.
-* List@Level bietet ein** schnelleres Verfahren zum Konstruieren von Blocklogik als List.Map/List.Combine**, indem es den Zugriff auf Daten auf einer beliebigen Ebene einer Liste direkt über den Eingabeanschluss eines Blocks ermöglicht.
+* List@Level bietet ein **schnelleres Verfahren zum Konstruieren von Blocklogik als List.Map/List.Combine**, indem es den Zugriff auf Daten auf einer beliebigen Ebene einer Liste direkt über den Eingabeanschluss eines Blocks ermöglicht.
 
-![](images/1/graphstrategy4(1)(1).png)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Sie können überprüfen, wie viele True-Werte BoundingBox.Contains zurückgibt und in welchen Listen diese enthalten sind, indem Sie List@Level für den list-Eingang von CountTrue aktivieren. List@Level ermöglicht es, die Ebene festzulegen, auf der die Eingabe Daten übernimmt. List@Level ist flexibel und effizient und wird gegenüber anderen Verfahren, die List.Map und List.Combine nutzen, dringend empfohlen.
 >
@@ -84,7 +84,7 @@ Gestalten Sie Ihr Diagramm nicht nur so einfach und effizient wie möglich, sond
 * Wenn andere Benutzer mit Ihrem Diagramm arbeiten sollen, **sorgen Sie vor der Bereitstellung für ein Layout mit einem leicht verständlichen Ablauf aus Blöcken und Drähten**.
 * Um die Ausrichtung zu erleichtern, **verwenden Sie die Funktion Blocklayout bereinigen zur automatischen Ausrichtung** des Diagramms. Durch manuelles Ausrichten erzielen Sie allerdings präzisere Ergebnisse.
 
-![](images/1/graphstrategy5(2)(1).png)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Ungeordnetes Diagramm
 > 2. Ausgerichtetes Diagramm
@@ -170,7 +170,7 @@ Ihr Programm wird sehr wahrscheinlich irgendwann auch von anderen Benutzern geö
 * Beim Erstellen einer Vorlage können Sie **Gruppenfarben und Schriftgrößen** standardisieren, um Typen von Arbeitsabläufen oder Datenaktionen zu kategorisieren.
 * Sie können beim Erstellen einer Vorlage sogar **Beschriftung, Farbe oder Stil für die Unterscheidung zwischen Frontend- und Backend-Arbeitsabläufen** in Ihrem Diagramm standardisieren.
 
-![](images/1/graphstrategy10(2).png)
+![](images/1/graphstrategy10\(2\).png)
 
 > 1. Die Benutzeroberfläche (das Frontend) des Programms umfasst den Projektnamen, die Eingabe-Schieberegler und die Importgeometrie.
 > 2. Backend des Programms.
@@ -217,7 +217,7 @@ Nachdem Sie die Gruppen eingerichtet haben, richten Sie die Blöcke innerhalb de
 
 Machen Sie das Programm noch leichter verständlich, indem Sie eine weitere Ebene grafischer Verbesserungen hinzufügen. Fügen Sie Anmerkungen hinzu, mit denen Sie die Funktionsweise eines bestimmten Programmteils beschreiben, geben Sie den Eingaben benutzerdefinierte Namen, und weisen Sie verschiedenen Typen von Gruppen Farben zu.
 
-![](images/1/graphstrategy15(1).png)
+![](images/1/graphstrategy15\(1\).png)
 
 > Diese grafischen Verbesserungen geben dem Benutzer genaueren Aufschluss über den Verwendungszweck des Programms. Die unterschiedlichen Farben der Gruppen helfen bei der Unterscheidung von Eingaben und Funktionen.
 >

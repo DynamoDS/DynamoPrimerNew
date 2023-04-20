@@ -4,13 +4,13 @@
 
 ### **Dynamo Wiki**
 
-"Dieses Wiki vermittelt Informationen zur Entwicklung mit der Dynamo-API sowie zu unterstützenden Bibliotheken und Werkzeugen."
+Dieses Wiki vermittelt Informationen zur Entwicklung mit der Dynamo-API sowie zu unterstützenden Bibliotheken und Werkzeugen.
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
 ### **Dynamo Blog**
 
-Dieser Blog stellt die aktuellste Sammlung an Artikeln des Dynamo-Teams dar, das neue Funktionen, Arbeitsabläufe und andere Dinge in Bezug auf Dynamo diskutiert.
+Dieser Blog stellt die jeweils aktuelle Sammlung an Artikeln des Dynamo-Teams dar, das neue Funktionen, Arbeitsabläufe und andere Dinge in Bezug auf Dynamo diskutiert.
 
 [http://dynamobim.com/blog/](http://dynamobim.com/blog/)
 
@@ -20,15 +20,15 @@ Programmiersprachen werden entwickelt, um Ideen auszudrücken, die normalerweise
 
 [http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf](http://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)
 
-### **Das Dynamo Primer-Projekt**
+### **Dynamo Primer-Projekt**
 
 Dynamo Primer ist ein Open-Source-Projekt, das von Matt Jezyk und dem Dynamo-Entwicklungsteam bei Autodesk initiiert wurde. Die erste Version des Primers wurde von Mode Lab entwickelt. Um zu diesem Projekt beizutragen, spalten Sie das Repository ab, fügen eigene Inhalte hinzu und reichen eine Pull-Anforderung ein.
 
 [https://github.com/DynamoDS/DynamoPrimer](https://github.com/DynamoDS/DynamoPrimer)
 
-### **Entwicklung von Zero-Touch-Plugins für Dynamo**
+### **Entwicklung von Zerotouch-Plugins für Dynamo**
 
-Auf dieser Seite wird die Entwicklung eines benutzerdefinierten Dynamo-Blocks in C# mithilfe der "Zero Touch"-Oberfläche erläutert. In den meisten Fällen können statische C#-Methoden und -Klassen ohne Änderung importiert werden. Wenn die Bibliothek nur Funktionen aufrufen und keine neuen Objekte konstruieren muss, kann dies sehr einfach mit statischen Methoden erreicht werden. Wenn Dynamo Ihre DLL lädt, wird der Namensraum Ihrer Klassen entfernt und werden alle statischen Methoden als Blöcke bereitgestellt.
+Auf dieser Seite wird die Entwicklung eines benutzerdefinierten Dynamo-Blocks in C# mithilfe der Zerotouch-Oberfläche erläutert. In den meisten Fällen können statische C#-Methoden und -Klassen ohne Änderung importiert werden. Wenn die Bibliothek nur Funktionen aufrufen und keine neuen Objekte konstruieren muss, kann dies sehr einfach mit statischen Methoden erreicht werden. Wenn Dynamo Ihre DLL lädt, wird der Namensraum Ihrer Klassen entfernt, und es werden alle statischen Methoden als Blöcke bereitgestellt.
 
 [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development)
 
@@ -36,13 +36,13 @@ Auf dieser Seite wird die Entwicklung eines benutzerdefinierten Dynamo-Blocks in
 
 ### **Python für Einsteiger**
 
-Python ist eine interpretierte, interaktive, objektorientierte Programmiersprache. Sie enthält Module, Exceptions, dynamische Typisierung, sehr hohe dynamische Datentypen und Klassen. Python kombiniert bemerkenswerte Stärke mit einer sehr klaren Syntax. Sie bietet Schnittstellen zu vielen Systemen und Bibliotheken sowie zu zahlreichen Windows-Systemen und ist auf C und C++ erweiterbar. Sie kann auch als Erweiterungssprache für Anwendungen verwendet werden, die eine programmierbare Benutzeroberfläche erfordern. Schließlich ist Python portierbar: Sie kann auf vielen UNIX-Varianten sowie auf Mac-Systemen und unter Windows 2000 und späteren Versionen ausgeführt werden. Das Einsteigerhandbuch zu Python bietet Verknüpfungen zu anderen einführenden Übungslektionen und Ressourcen zum Erlernen von Python.
+Python ist eine interpretierte, interaktive, objektorientierte Programmiersprache. Sie enthält Module, Exceptions, dynamische Typisierung, sehr hohe dynamische Datentypen und Klassen. Python kombiniert bemerkenswerte Stärke mit einer sehr klaren Syntax. Sie bietet Schnittstellen zu vielen Systemen und Bibliotheken sowie zu zahlreichen Windows-Systemen und ist auf C und C++ erweiterbar. Sie kann auch als Erweiterungssprache für Anwendungen verwendet werden, die eine programmierbare Benutzeroberfläche erfordern. Schließlich ist Python portierbar: Sie kann auf vielen UNIX-Varianten sowie auf Mac-Systemen und unter Windows 2000 und späteren Versionen ausgeführt werden. Das Einsteigerhandbuch zu Python bietet Links zu anderen einführenden Übungslektionen und Ressourcen zum Erlernen von Python.
 
 [https://www.python.org/about/gettingstarted](https://www.python.org/about/gettingstarted)
 
 ### **AForge**
 
-AForge.NET ist ein C#-Open-Source-Framework, das für Entwickler und Forscher in den Bereichen Computer Vision und Künstliche Intelligenz – Bildverarbeitung, neuronale Netze, genetische Algorithmen, Fuzzy-Logik, maschinelles Lernen, Robotik usw. – konzipiert ist.
+AForge.NET ist ein C#-Open-Source-Framework, das für Entwickler und Forscher in den Bereichen Computer Vision und künstliche Intelligenz - Bildverarbeitung, neuronale Netze, genetische Algorithmen, Fuzzy-Logik, maschinelles Lernen, Robotik usw. - konzipiert ist.
 
 [http://www.aforgenet.com/framework/](http://www.aforgenet.com/framework/)
 
@@ -56,28 +56,28 @@ MathWorld ist eine Online-Ressource zur Mathematik, die von Eric W. Weisstein mi
 
 ### **buildz**
 
-"Diese Beiträge, in denen es in erster Linie um die Revit-Plattform geht, enthalten Empfehlungen zur optimalen Nutzung."
+Diese Beiträge, in denen es in erster Linie um die Revit-Plattform geht, enthalten Empfehlungen zur optimalen Nutzung.
 
 [http://buildz.blogspot.com/](http://buildz.blogspot.com)
 
 ### **Nathan's Revit API Notebook**
 
-"Mit diesem Notebook wird versucht, ein paar 'Ressourcenmängel' beim Erlernen und Anwenden der Revit-API im Kontext eines Konstruktionsablaufs zu beheben."
+Mit diesem Tagebuch wird versucht, das Problem einiger fehlender Ressourcen beim Erlernen und Anwenden der Revit-API im Kontext eines Konstruktionsablaufs zu beheben.
 
 [http://wiki.theprovingground.org/revit-api](http://wiki.theprovingground.org/revit-api)
 
 ### **Revit Python Shell**
 
-"Die RevitPythonShell fügt einen IronPython-Interpreter zu Autodesk Revit und Vasari hinzu." Dieses Projekt wurde schon vor Dynamo gestartet und ist eine hervorragende Referenz für die Python-Entwicklung. RPS-Projekt:&#x20;
+Die RevitPythonShell fügt einen IronPython-Interpreter zu Autodesk Revit und Vasari hinzu. Dieses Projekt wurde schon vor Dynamo gestartet und ist eine hervorragende Referenz für die Python-Entwicklung. RPS-Projekt: 
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell 
 
-Entwickler-Blog:&#x20;
+Entwickler-Blog: 
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
 ### **The Building Coder**
 
-Ein solider Katalog mit Revit API-Arbeitsabläufen von einem der führenden BIM-Experten.
+Ein solider Katalog mit Revit-API-Arbeitsabläufen von einem der führenden BIM-Experten.
 
 [http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

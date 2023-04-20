@@ -15,7 +15,7 @@ Zum Erstellen einer interpolierten Oberfläche generieren Sie einfach eine zweid
 surf = NurbsSurface.ByPoints(python_points_1);
 ```
 
-### Kontrollpunktoberfläche
+### Steuerpunktoberfläche
 
 Freiform-NurbsSurfaces können auch erstellt werden, indem die zugrunde liegenden Steuerpunkte einer Oberfläche angegeben werden. Wie bei NurbsCurves kann man sich die Steuerpunkte als Darstellung eines vierseitigen Netzes mit geraden Segmenten vorstellen, das je nach dem Grad der Oberfläche zur endgültigen Oberflächenform geglättet wird. Um eine NurbsSurface aus Steuerpunkten zu erstellen, schließen Sie zwei zusätzliche Parameter in _NurbsSurface.ByPoints_ ein, die den Grad der zugrunde liegenden Kurven in beide Richtungen der Oberfläche angeben.
 
@@ -58,11 +58,11 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### Fläche drehen
+### Drehen von Flächen
 
 Rotationsflächen sind ein weiterer Typ von Oberflächen, die durch Sweeping einer Basiskurve um eine Mittelachse erstellt werden. Wenn interpolierte Oberflächen zweidimensional analog zu interpolierten Kurven sind, dann sind Rotationsflächen zweidimensional analog zu Kreisen und Bogen.
 
-Rotationsflächen werden definiert durch eine Basiskurve, die die „Kante“ der Oberfläche darstellt, einen Achsenursprung, der den Basispunkt der Oberfläche bildet, eine Achsenrichtung, die die Kernrichtung vorgibt, einen Sweeping-Startwinkel sowie einen Sweeping-Endwinkel. Diese Parameter werden als Eingabe für den Konstruktor _Surface.Revolve_ verwendet.
+Rotationsflächen werden definiert durch eine Basiskurve, die die Kante der Oberfläche darstellt, einen Achsenursprung, der den Basispunkt der Oberfläche bildet, eine Achsenrichtung, die die Kernrichtung vorgibt, einen Sweeping-Startwinkel sowie einen Sweeping-Endwinkel. Diese Parameter werden als Eingabe für den Konstruktor _Surface.Revolve_ verwendet.
 
 ![](../images/8-2/6/Surfaces\_05.png)
 

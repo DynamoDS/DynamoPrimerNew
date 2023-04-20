@@ -19,15 +19,13 @@ Wenn Sie eine Demonstration der Dynamo-Arbeitsabläufe sehen möchten, finden Si
 
 * [Parametrische Vase](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
+![](images/1-2/vase1.gif)
 
 * [Attraktorpunkte](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} 
-In den folgenden Kapiteln finden Sie themenspezifische Übungen, die sich mit unterschiedlichen Themen zu Dynamo befassen. **Übungen** finden Sie normalerweise im letzten Abschnitt jeder Seite. 
-{% endhint %}
+{% hint style="info" %} In den folgenden Kapiteln finden Sie themenspezifische Übungen, die sich mit unterschiedlichen Themen zu Dynamo befassen. **Übungen** finden Sie normalerweise im letzten Abschnitt jeder Seite. {% endhint %}
 
 ### Community
 

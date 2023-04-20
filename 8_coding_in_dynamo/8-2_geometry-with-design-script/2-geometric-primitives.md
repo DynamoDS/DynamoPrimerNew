@@ -37,7 +37,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 ### Punkt
 
-Der einfachste geometrische Grundkörper ist ein Punkt, der eine nulldimensionale Position im dreidimensionalen Raum darstellt. Wie bereits erwähnt gibt es verschiedene Möglichkeiten zum Erstellen eines Punkts in einem bestimmten Koordinatensystem: _Point.ByCoordinates_ erstellt einen Punkt mithilfe der gegebenen Koordinaten x, y und z, _Point.ByCartesianCoordinates_ erstellt einen Punkt mithilfe der gegebenen Koordinaten x, y und z in einem bestimmten Koordinatensystem, _Point.ByCylindricalCoordinates_ erstellt einen Punkt, der auf einem Zylinder mit gegebenen Werten für Radius, Drehwinkel und Höhe liegt und _Point.BySphericalCoordinates_ erstellt einen Punkt auf einer Kugel mit einem gegebenen Radius und zwei Drehwinkeln.
+Der einfachste geometrische Grundkörper ist ein Punkt, der eine nulldimensionale Position im dreidimensionalen Raum darstellt. Wie bereits erwähnt gibt es verschiedene Möglichkeiten zum Erstellen eines Punkts in einem bestimmten Koordinatensystem: _Point.ByCoordinates_ erstellt einen Punkt mithilfe der angegebenen Koordinaten x, y und z, _Point.ByCartesianCoordinates_ erstellt einen Punkt mithilfe der angegebenen Koordinaten x, y und z in einem bestimmten Koordinatensystem, _Point.ByCylindricalCoordinates_ erstellt einen Punkt, der auf einem Zylinder mit angegebenen Werten für Radius, Drehwinkel und Höhe liegt, und _Point.BySphericalCoordinates_ erstellt einen Punkt auf einer Kugel mit einem angegebenen Radius und zwei Drehwinkeln.
 
 Dieses Beispiel zeigt Punkte, die in unterschiedlichen Koordinatensystemen erstellt wurden:
 
@@ -73,9 +73,9 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Linie&#x20;
+### Linie 
 
-Der nächsthöherdimensionale Dynamo-Grundkörper ist ein Liniensegment, das eine unendliche Anzahl von Punkten zwischen zwei Endpunkten darstellt. Linien können explizit erstellt werden, indem Sie die beiden Grenzpunkte mit dem Konstruktor _Line.ByStartPointEndPoint_ angeben, oder durch Angabe eines Startpunkts, einer Richtung und Länge in dieser Richtung mittels _Line.ByStartPointDirectionLength_.
+Der nächsthöherdimensionale Dynamo-Grundkörper ist ein Liniensegment, das eine unendliche Anzahl von Punkten zwischen zwei Endpunkten darstellt. Linien können erstellt werden, indem Sie die beiden Grenzpunkte mit dem Konstruktor _Line.ByStartPointEndPoint_ explizit angeben, oder durch Angabe eines Startpunkts, einer Richtung und Länge in dieser Richtung mittels _Line.ByStartPointDirectionLength_.
 
 ![](../images/8-2/2/GeometricPrimitives\_04.png)
 
@@ -92,7 +92,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### 3D-Grundkörper – Quader, Kegel, Zylinder, Kugel usw.
+### 3D-Grundkörper - Quader, Kegel, Zylinder, Kugel usw.
 
 Dynamo verfügt über Objekte, die grundlegende Typen geometrischer Grundkörper in drei Dimensionen darstellen: Quader, erstellt mit _Cuboid.ByLengths_; Kegel, erstellt mit _Cone.ByPointsRadius_ und _Cone.ByPointsRadii_; Zylinder, erstellt mit _Cylinder.ByRadiusHeight_ sowie Kugeln, erstellt mit _Sphere.ByCenterPointRadius_.
 

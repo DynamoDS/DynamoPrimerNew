@@ -2,16 +2,16 @@
 
 Viele der bisherigen Beispiele bezogen sich auf die Konstruktion einer höherdimensionalen Geometrie aus niedrigerdimensionalen Objekten. Mit Intersection-Methoden können diese höherdimensionalen Geometrien Objekte mit niedrigerer Dimension generieren, während die Befehle Trim und SelectTrim es ermöglichen, geometrische Formen mit Skripts stark zu ändern, nachdem sie erstellt wurden.
 
-Die Methode _Intersect_ ist für alle Geometrieobjekte in Dynamo definiert. Das bedeutet, dass theoretisch jedes Geometrieobjekt mit einem beliebigen anderen geschnitten werden kann. Natürlich sind einige Überschneidungen nicht von Bedeutung, wie z. B. Schnittpunkte von Punkten, da das resultierende Objekt immer der Eingabepunkt selbst sein wird. Andere mögliche Kombinationen von Überschneidungen zwischen Objekten sind in der folgenden Tabelle beschrieben. Die folgende Tabelle zeigt die Ergebnisse verschiedener Überschneidungsoperationen:
+Die Methode _Intersect_ ist für alle Geometrieobjekte in Dynamo definiert. Das bedeutet, dass theoretisch jedes Geometrieobjekt mit einem beliebigen anderen geschnitten werden kann. Natürlich sind einige Überschneidungen nicht von Bedeutung, wie z. B. Schnittpunkte von Punkten, da das resultierende Objekt immer der Eingabepunkt selbst ist. Andere mögliche Kombinationen von Überschneidungen zwischen Objekten sind in der folgenden Tabelle beschrieben. Die folgende Tabelle zeigt die Ergebnisse verschiedener Überschneidungsoperationen:
 
 ### **Intersect**
 
-| _Mit:_ | Oberfläche | Kurve | Ebene | Volumenkörper |
+| _Mit:_     | Oberfläche | Kurve | Ebene        | Volumenkörper   |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Oberfläche** | Kurve | Punkt | Punkt, Kurve | Oberfläche |
-| **Kurve** | Punkt | Punkt | Punkt | Kurve |
-| **Ebene** | Kurve | Punkt | Kurve | Kurve |
-| **Volumenkörper** | Oberfläche | Kurve | Kurve | Volumenkörper |
+| **Oberfläche** | Kurve   | Punkt | Punkt, Kurve | Oberfläche |
+| **Kurve**   | Punkt   | Punkt | Punkt        | Kurve   |
+| **Ebene**   | Kurve   | Punkt | Kurve        | Kurve   |
+| **Volumenkörper**   | Oberfläche | Kurve | Kurve        | Volumenkörper   |
 
 Das folgende sehr einfache Beispiel zeigt die Überschneidung einer Ebene mit einer NurbsSurface. Die Überschneidung erzeugt ein NurbsCurve-Array, das wie jede andere NurbsCurve verwendet werden kann.
 
@@ -38,12 +38,12 @@ Die Methode _Trim_ ähnelt der Methode Intersect insofern, dass sie ebenfalls f�
 
 ### **Trim**
 
-|             | _Verwendet:_ Punkt | Kurve | Ebene | Oberfläche | Volumenkörper |
+|             | _Verwendung_: Punkt | Kurve | Ebene | Oberfläche | Volumenkörper |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _Auf:_ Kurve | Ja | Nein | Nein | Nein | No |
-| Polygon | - | Nein | Ja | Nein | No |
-| Oberfläche | - | Ja | Ja | Ja | Ja |
-| Volumenkörper | - | - | Ja | Ja | Ja |
+| _Auf_: Kurve | Ja            | Nein    | Nein    | Nein      | No    |
+| Polygon     | -              | Nein    | Ja   | Nein      | No    |
+| Oberfläche     | -              | Ja   | Ja   | Ja     | Ja   |
+| Volumenkörper       | -              | -     | Ja   | Ja     | Ja   |
 
 Erwähnenswert bei den _Trim_-Methoden ist die Anforderung eines Select-Punkts, der bestimmt, welche Geometrie verworfen und welche Teile beibehalten werden sollen. Dynamo sucht und verwirft die gestutzte Geometrie, die dem ausgewählten Punkt am nächsten liegt.
 

@@ -20,11 +20,11 @@ Durch die Trennung von Wörterbüchern und Listen werden Wörterbücher zu wicht
   * Wörterbücher verwenden die folgende Syntax: `{key:value}`
   * Listen verwenden die folgende Syntax: `[value,value,value]`
 * Es wurden _neue Blöcke_ in der Bibliothek eingeführt, mit denen Sie einfacher Wörterbücher erstellen, ändern und abfragen können.
-*   Listen, die in v1.x-Codeblöcken erstellt wurden, werden automatisch beim Laden des Skripts zur neuen Syntax migriert, die eckige `[ ]` anstelle von geschweiften Klammern `{ }` verwendet. \\
+*   Listen, die in v1.x-Codeblöcken erstellt wurden, werden automatisch beim Laden des Skripts zur neuen Listensyntax migriert, die eckige `[ ]` anstelle von geschweiften Klammern `{ }` verwendet. \\
 
     ***
 
-![](../images/5-5/1/whatisadictionary-whatarethechanges(1).jpg)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 

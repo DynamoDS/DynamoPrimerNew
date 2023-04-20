@@ -111,7 +111,7 @@ Der **List.Count**-Block zählt alle Elemente in einer Liste. An diesem Beispiel
 > 3. Verbinden Sie jede Zeile des Codeblocks mit der entsprechenden _X_\- bzw. _Y_-Eingabe eines **Point.ByCoordinates**-Blocks. Klicken Sie mit der rechten Maustaste auf den Block und wählen Sie zuerst Vergitterung und dann _"Kreuzprodukt"_. Dadurch wird ein Raster aus Punkten erstellt. Da der Bereich zwischen -50 und 50 definiert wurde, umfasst er das vorgabemäßige Raster von Dynamo.
 > 4. In einem _**Watch**_-Block werden die erstellten Punkte angezeigt. Beachten Sie die Datenstruktur. Es wurde eine Liste von Listen erstellt. Jede Liste entspricht einer Reihe von Punkten im Raster.
 
-![Übung](../images/5-4/3/listsoflists-map02(1).jpg)
+\![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Verbinden Sie einen **List.Count**-Block mit der Ausgabe des Watch-Blocks aus dem vorigen Schritt.
 > 2. Verbinden Sie einen **Watch**-Block mit der Ausgabe des **List.Count**-Blocks.
@@ -244,7 +244,7 @@ In dieser Übungslektion wird ein Teil der in der vorigen Lektion erstellten Log
 
 Beginnen Sie mit der oben gezeigten Folge von Blöcken. Dadurch wird eine einfache, das vorgegebene Dynamo-Raster umfassende Oberfläche erstellt.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. Fügen Sie mithilfe eines **Codeblocks** diese beiden Codezeilen ein und verbinden Sie sie mit den _u_\- und _v_-Eingaben von **Surface.PointAtParameter**: `-50..50..#3;` `-50..50..#5;`
 > 2. Achten Sie darauf, als Vergitterung von **Surface.PointAtParameter** die Option _Kreuzprodukt_ zu wählen.
@@ -252,20 +252,20 @@ Beginnen Sie mit der oben gezeigten Folge von Blöcken. Dadurch wird eine einfac
 
 In diesem Schritt fragen Sie den Mittelpunkt des eben erstellten Rasters ab. Dazu wird die mittlere Zeile der mittleren Liste ausgewählt, was irgendwie Sinn ergibt, nicht wahr?
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. Sie können auch nacheinander auf die Elemente im Beobachtungsblock klicken, um sicherzustellen, dass dies der richtige Punkt ist.
 > 2. Schreiben Sie im **Codeblock** eine einfache Codezeile zum Abfragen einer Liste von Listen:\
  `points[1][2];`
 > 3. Verschieben Sie mithilfe von **Geometry.Translate** den ausgewählten Punkt in _Z_-Richtung um _20_ Einheiten nach oben.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. Wählen Sie mithilfe eines **List.GetItemAtIndex**-Blocks auch die mittlere Reihe von Punkten aus. Anmerkung: Ähnlich wie im vorigen Schritt können Sie die Liste auch mithilfe eines **Codeblocks** abfragen, wobei Sie die Zeile `points[1];` eingeben.
 
 Damit haben Sie den Mittelpunkt abgefragt und ihn nach oben verschoben. Als Nächstes müssen Sie den verschobenen Punkt in die ursprüngliche Datenstruktur einfügen.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. Dazu ersetzen Sie zuerst das Listenelement, das Sie zuvor isoliert haben.
 > 2. Mit **List.ReplaceItemAtIndex** ersetzen Sie das mittlere Element mit dem Index _"2"_ durch das Ersatzelement, das mit dem verschobenen Punkt (**Geometry.Translate**) verbunden ist.
@@ -273,7 +273,7 @@ Damit haben Sie den Mittelpunkt abgefragt und ihn nach oben verschoben. Als Näc
 
 Jetzt müssen Sie die geänderte Liste in die ursprüngliche Datenstruktur, d. h. die Liste von Listen, einfügen.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Ersetzen Sie nach demselben Prinzip die mittlere Liste mithilfe von **List.ReplaceItemAtIndex** durch die geänderte Liste.
 > 2. Beachten Sie, dass in den **Codeblöck**_en_, die die Indizes für diese beiden Blöcke definieren, die Werte 1 und 2 angegeben wurde, was der ursprünglichen Abfrage aus dem **Codeblock** (_points[1][2]_) entspricht.
@@ -281,10 +281,10 @@ Jetzt müssen Sie die geänderte Liste in die ursprüngliche Datenstruktur, d. 
 
 Es gibt viele Möglichkeiten zum Erstellen einer Oberfläche aus dieser Punktgruppe. In diesem Fall erstellen Sie die Oberfläche durch Erheben und Verbinden von Kurven.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. Erstellen Sie einen **NurbsCurve.ByPoints**-Block und verbinden Sie ihn mit der neuen Datenstruktur, um drei Nurbs-Kurven zu erstellen.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. Verbinden Sie einen **Surface.ByLoft**-Block mit der Ausgabe von **NurbsCurve.ByPoints**. Damit haben Sie eine geänderte Oberfläche erstellt. Sie können den ursprünglichen _Z_-Wert der Geometrie ändern. Beobachten Sie, wie die Geometrie durch diese Verschiebung aktualisiert wird.

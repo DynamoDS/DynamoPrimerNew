@@ -77,7 +77,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 ### Von Oberfläche zu Volumenkörper
 
-Auch Oberflächen können zum Erstellen höherdimensionaler Volumenkörper-Geometrien genutzt werden, zum Beispiel durch Verdicken der Oberfläche um einen gegebenen Abstand. Vielen Objekten sind Funktionen zugewiesen, die Methoden genannt werden, und mit denen Programmierer Befehle auf das jeweilige Objekt ausführen können. Methoden, die allen Geometrien gemein sind, sind z. B. _Translate_ und _Rotate_, die die Geometrie um einen gegebenen Wert verschieben oder drehen. Oberflächen haben eine Methode namens _Thicken_, die einen einzelnen Eingabewert akzeptiert, der die neue Dicke der Oberfläche angibt.
+Auch Oberflächen können zum Erstellen höherdimensionaler Volumenkörper-Geometrien genutzt werden, zum Beispiel durch Verdicken der Oberfläche um einen gegebenen Abstand. Vielen Objekten sind Funktionen zugewiesen, die Methoden genannt werden, und mit denen Programmierer Befehle für das jeweilige Objekt ausführen können. Methoden, die allen Geometrien gemein sind, sind z. B. _Translate_ und _Rotate_, die die Geometrie um einen bestimmten Wert verschieben oder drehen. Oberflächen haben eine Methode namens _Thicken_, die einen einzelnen Eingabewert (Nummer) akzeptiert, der die neue Dicke der Oberfläche angibt.
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 

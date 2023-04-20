@@ -6,12 +6,12 @@ Zahlen stellen die einfachste Form von Daten dar und sind am einfachsten durch m
 
 Operatoren sind Komponenten für algebraische Funktionen, die zwei Eingabewerte benötigen, um einen Ausgabewert zu erhalten (etwa bei der Addition, Subtraktion, Multiplikation, Division usw.). Sie finden die Operatoren unter Operators > Actions.
 
-| Symbol                                                | Name (Syntax)     | Eingaben                     | Ausgaben      |
-| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiplizieren (*****) | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Division.jpg)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| Symbol                                              | Name (Syntax)     | Eingaben                     | Ausgaben      |
+| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiplizieren (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Übung: Die Goldene Spirale-Formel
 
@@ -93,9 +93,9 @@ Als Nächstes führen Sie diese kleinen Schritte aus, um eine Reihe von Spiralen
 
 ![](../images/5-3/2/math-partIV-02.jpg)
 
-> a. **Geometry.Rotate**: Es stehen mehrere Optionen für **Geometry.Rotate** zur Verfügung. Achten Sie darauf, den Block mit den Eingaben _geometry_,_basePlane_ und _degrees_ zu wählen. Verbinden Sie **Point.ByCoordinates** mit der geometry-Eingabe. Klicken Sie mit der rechten Maustaste auf diesen Block, und vergewissern Sie sich, dass die Vergitterung auf Kreuzprodukt festgelegt ist.
+> a. **Geometry.Rotate**: Es stehen mehrere Optionen für **Geometry.Rotate** zur Verfügung. Achten Sie darauf, den Block mit den Eingaben _geometry_,_basePlane_ und _degrees_ zu wählen. Verbinden Sie **Point.ByCoordinates** mit der geometry-Eingabe. Klicken Sie mit der rechten Maustaste auf diesen Block, und vergewissern Sie sich, dass die Vergitterung auf Kartesisches Produkt festgelegt ist.
 >
-> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
+> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY**: Verbinden Sie dies mit der _basePlane_-Eingabe. Das Zentrum der Drehung ist der Ursprung, d. h. derselbe Punkt wie die Basis der Spirale.
 >

@@ -34,9 +34,9 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
     false);
 ```
 
-### Kontrollpunktekurve
+### Steuerpunktekurve
 
-NurbsCurves werden in ähnlicher Weise erstellt, wobei die Eingabepunkte die Endpunkte eines geraden Liniensegments darstellen und ein zweiter Parameter den Betrag und die Art der Glättung der Kurve angibt, was als Grad bezeichnet wird.\* Eine Kurve mit dem Grad 1 ist nicht geglättet, sondern eine Polylinie.
+NurbsCurves werden in ähnlicher Weise erstellt, wobei die Eingabepunkte die Endpunkte eines geraden Liniensegments darstellen und ein zweiter Parameter den Betrag und die Art der Glättung der Kurve angibt, was als Grad bezeichnet wird.* Eine Kurve mit dem Grad 1 ist nicht geglättet, sondern eine Polylinie.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -115,6 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}
-\*Dies ist eine sehr einfache Beschreibung der NURBS-Kurvengeometrie. Eine präzisere und detailliertere Erläuterung finden Sie bei Pottmann et al. 2007 (siehe Referenzen).
-{% endhint %}
+{% hint style="info" %} *Dies ist eine sehr einfache Beschreibung der NURBS-Kurvengeometrie. Eine präzisere und detailliertere Erläuterung finden Sie bei Pottmann et al. 2007 (siehe Referenzen). {% endhint %}

@@ -4,7 +4,7 @@ Dynamo 2.0 stellt nicht nur die oben erwähnten Blöcke für Wörterbücher zur 
 
 Sie können die im Folgenden beschriebene Syntax für Blöcke verwenden, oder sie auf DesignScript-Basis darstellen.
 
-![](../images/5-5/3/dictionariesincb-syntax(1).jpg)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (2).jpg>)
 
 Da ein Wörterbuch in Dynamo ein Objekttyp ist, können wir die folgenden Aktionen damit ausführen.
 

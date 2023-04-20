@@ -6,29 +6,29 @@ Der Datentyp Farbe eignet sich ausgezeichnet zum Erstellen beeindruckender Präs
 
 Farben werden in Dynamo mithilfe von ARGB-Eingaben erstellt. Dies entspricht den Angaben Alpha, Rot, Grün und Blau. Der Alpha-Kanal gibt die _Transparenz_ der Farbe an, während die drei anderen Angaben als Primärfarben zur Darstellung des gesamten Farbspektrums verwendet werden.
 
-| Symbol                                          | Name (Syntax)                 | Eingaben  | Ausgaben |
-| --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](../images/5-3/5/ColorbyARGB.jpg) | ARGB-Farbe (**Color.ByARGB**) | A, R, G, B | color   |
+| Symbol                                     | Name (Syntax)                 | Eingaben  | Ausgaben |
+| ---------------------------------------- | ----------------------------- | ------- | ------- |
+| \![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB-Farbe (**Color.ByARGB**) | A, R, G, B | color   |
 
 ### Abfragen von Farbwerten
 
 Mithilfe der Farben in der Tabelle unten werden die Eigenschaften zum Definieren von Farben abgefragt: Alpha, Rot, Grün und Blau. Beachten Sie, dass der Block Color.Components alle vier unterschiedlichen Ausgaben bereitstellt. Diesem Block ist daher für die Abfrage der Eigenschaften einer Farbe der Vorzug zu geben.
 
-| Symbol                                             | Name (Syntax)                     | Eingaben | Ausgaben    |
-| ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorAlpha.jpg) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](../images/5-3/5/ColorRed.jpg)       | Rot (**Color.Red**)               | color  | R          |
-| ![](../images/5-3/5/ColorGreen.jpg) | Grün (**Color.Green**)           | color  | G          |
-| ![](../images/5-3/5/ColorBlue.jpg)      | Blau (**Color.Blue**)             | color  | B          |
-| ![](../images/5-3/5/ColorComponent.jpg) | Komponenten (**Color.Components**) | color  | A, R, G, B |
+| Symbol                                          | Name (Syntax)                     | Eingaben | Ausgaben    |
+| --------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| \![](<../images/5-1/ColorRed (1).jpg>)         | Rot (**Color.Red**)               | color  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Grün (**Color.Green**)           | color  | G          |
+| \![](<../images/5-1/ColorBlue (1).jpg>)        | Blau (**Color.Blue**)             | color  | B          |
+| \![](<../images/5-1/ColorComponent (1).jpg>)   | Komponenten (**Color.Components**) | color  | A, R, G, B |
 
 Die Farben in der Tabelle unten entsprechen dem **HSB-Farbraum**. Die Interpretation einer anhand von Farbton, Sättigung und Helligkeit definierten Farbe mag intuitiver scheinen: Welche Farbe ist gemeint? Wie intensiv soll sie sein? Wie hell oder dunkel soll die Farbe sein? Dies ist die Differenzierung nach Farbton, Sättigung und Helligkeit.
 
-| Symbol                                              | Name (Syntax)                     | Eingaben | Ausgaben    |
-| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorHue.jpg)        | Farbton (**Color.Hue**)               | color  | Hue        |
-| ![](../images/5-3/5/ColorSaturation.jpg) | Sättigung (**Color.Saturation**) | color  | Saturation |
-| ![](../images/5-3/5/ColorBrightness.jpg) | Helligkeit (**Color.Brightness**) | color  | Brightness |
+| Symbol                                         | Name (Syntax)                     | Eingaben | Ausgaben    |
+| -------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorHue (1).jpg>)        | Farbton (**Color.Hue**)               | color  | Hue        |
+| \![](<../images/5-1/ColorSaturation (1).jpg>) | Sättigung (**Color.Saturation**) | color  | Saturation |
+| \![](<../images/5-1/ColorBrightness (1).jpg>) | Helligkeit (**Color.Brightness**) | color  | Brightness |
 
 ### Farbbereich
 
@@ -53,7 +53,7 @@ Der **Display.ByGeometry**-Block ermöglicht die farbige Darstellung von Geometr
 
 Der **Display.BySurfaceColors**-Block ermöglicht die Zuordnung von Daten auf einer Oberfläche mithilfe von Farben. Mithilfe dieser Funktion können Sie durch diskrete Auswertung gewonnene Daten, etwa zu Sonneneinstrahlung, Energie und Entfernung, überzeugend veranschaulichen. Die Anwendung von Farben auf eine Oberfläche in Dynamo ist der Anwendung von Texturen auf Materialien in anderen CAD-Umgebungen ähnlich. Die folgende kurze Übung demonstriert die Verwendung dieses Werkzeugs.
 
-![](../images/5-3/5/12(1).jpg)
+![](../images/5-3/5/12\(1\).jpg)
 
 ## Übung
 
