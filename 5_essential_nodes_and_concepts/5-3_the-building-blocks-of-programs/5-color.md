@@ -6,29 +6,29 @@
 
 在 Dynamo 中使用 ARGB 輸入建立顏色。這對應於 Alpha、紅色、綠色與藍色通道。Alpha 代表顏色的 _透明度_，而其他三項用作主要顏色以協同產生顏色的整個光譜。
 
-| 圖示                                          | 名稱 (語法)                 | 輸入  | 輸出 |
-| --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](../images/5-3/5/ColorbyARGB.jpg) | ARGB 顏色 (**Color.ByARGB**) | A、R、G、B | color   |
+| 圖示                                     | 名稱 (語法)                 | 輸入  | 輸出 |
+| ---------------------------------------- | ----------------------------- | ------- | ------- |
+| \![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB 顏色 (**Color.ByARGB**) | A、R、G、B | color   |
 
 ### 查詢顏色值
 
 以下表格中的顏色會查詢用於定義顏色的性質：Alpha、紅色、綠色與藍色。請注意，Color.Components 節點會提供所有四項作為不同輸出，因此該節點更適合查詢顏色的性質。
 
-| 圖示                                             | 名稱 (語法)                     | 輸入 | 輸出    |
-| ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorAlpha.jpg) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](../images/5-3/5/ColorRed.jpg)       | 紅色 (**Color.Red**)               | color  | R          |
-| ![](../images/5-3/5/ColorGreen.jpg) | 綠色 (**Color.Green**)           | color  | G          |
-| ![](../images/5-3/5/ColorBlue.jpg)      | 藍色 (**Color.Blue**)             | color  | B          |
-| ![](../images/5-3/5/ColorComponent.jpg) | 組成 (**Color.Components**) | color  | A、R、G、B |
+| 圖示                                          | 名稱 (語法)                     | 輸入 | 輸出    |
+| --------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| \![](<../images/5-1/ColorRed (1).jpg>)         | 紅色 (**Color.Red**)               | color  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | 綠色 (**Color.Green**)           | color  | G          |
+| \![](<../images/5-1/ColorBlue (1).jpg>)        | 藍色 (**Color.Blue**)             | color  | B          |
+| \![](<../images/5-1/ColorComponent (1).jpg>)   | 組成 (**Color.Components**) | color  | A、R、G、B |
 
 以下表格中的顏色對應於 **HSB 顏色空間**。將顏色分為色相、飽和度與亮度可以更直觀地解譯顏色：顏色應該是怎樣的？顏色是什麼色彩？顏色的明暗程度應該是怎樣的？這是分別劃分的色相、飽和度與亮度。
 
-| 圖示                                              | 名稱 (語法)                     | 輸入 | 輸出    |
-| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorHue.jpg)        | 色相 (**Color.Hue**)               | color  | 色相        |
-| ![](../images/5-3/5/ColorSaturation.jpg) | 飽和度 (**Color.Saturation**) | color  | 飽和度 |
-| ![](../images/5-3/5/ColorBrightness.jpg) | 亮度 (**Color.Brightness**) | color  | 亮度 |
+| 圖示                                         | 名稱 (語法)                     | 輸入 | 輸出    |
+| -------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorHue (1).jpg>)        | 色相 (**Color.Hue**)               | color  | 色相        |
+| \![](<../images/5-1/ColorSaturation (1).jpg>) | 飽和度 (**Color.Saturation**) | color  | 飽和度 |
+| \![](<../images/5-1/ColorBrightness (1).jpg>) | 亮度 (**Color.Brightness**) | color  | 亮度 |
 
 ### 顏色範圍
 
@@ -53,7 +53,7 @@
 
 透過 **Display.BySurfaceColors** 節點，我們可以使用顏色對映整個曲面上的資料！此功能帶來某些振奮人心的可能性，可以對透過離散分析 (例如日光、能源及鄰近) 取得的資料進行視覺化。在 Dynamo 中將顏色套用至曲面類似於在其他 CAD 環境中將材質套用至材料。接下來在以下簡短練習中示範如何使用此工具。
 
-![](../images/5-3/5/12(1).jpg)
+![](../images/5-3/5/12\(1\).jpg)
 
 ## 練習
 
@@ -61,7 +61,7 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-3/5/Building Blocks of Programs - Color.dyn" %}
 
@@ -137,7 +137,7 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-3/5/BuildingBlocks of Programs - ColorOnSurface.zip" %}
 

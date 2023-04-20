@@ -87,7 +87,7 @@ Dynamo 會透過根據每個節點的狀態為節點呈現不同顏色外觀來�
 
 * 變更輸入埠的連接，在另一個輸入埠上按一下左鍵
 
-![](images/nodesandwires-editwirechangeport(2).gif)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * 若要移除線路，請將線路移開，然後在工作區上按一下左鍵
 
@@ -116,7 +116,7 @@ Dynamo 會透過根據每個節點的狀態為節點呈現不同顏色外觀來�
 
 使用此設定時，只有選取的節點及其接合線路會以水藍色亮顯展示。
 
-![](images/nodesandwires-hidewiressetting(1).gif)
+\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### 只隱藏個別線路
 

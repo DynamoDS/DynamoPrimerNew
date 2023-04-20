@@ -17,7 +17,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 ### 控制點曲面
 
-指定曲面的基本控制點，也可以建立自由形式的 NurbsSurface。就像 NurbsCurve 一樣，控制點可以視為是代表一個有直線段的四邊形網格，這會根據曲面的程度，平滑化成最終的曲面形狀。若要使用控制點來建立 NurbsSurface，請在 _NurbsSurface.ByPoints_ 中包含另外兩個參數，指出基本曲線在曲面兩個方向的程度。
+指定曲面的基本控制點，也可以建立自由形式的 NurbsSurface。就像 NurbsCurve 一樣，控制點可以視為是代表一個有直線段的四邊形網格，這會根據曲面的次數，平滑化成最終的曲面形狀。若要使用控制點來建立 NurbsSurface，請在 _NurbsSurface.ByPoints_ 中包含另外兩個參數，指出基本曲線在曲面兩個方向的次數。
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
@@ -29,7 +29,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-我們可以增加 NurbsSurface 的程度，來變更產生的曲面幾何圖形：
+我們可以增加 NurbsSurface 的次數，來變更產生的曲面幾何圖形：
 
 ![](../images/8-2/6/Surfaces\_03.png)
 

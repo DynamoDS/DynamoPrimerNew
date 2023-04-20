@@ -17,12 +17,12 @@
 
 Zero-touch 套件是使用者定義之自訂節點的良好補充。下表列出使用 C# 資源庫的一些套件。如需有關套件的更多詳細資訊，請造訪附錄中的[「套件」一節](../../a\_appendix/a-3\_packages.md)。
 
-| **標誌/影像**                                                               | **名稱**                                                                    |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                             | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                              | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| **標誌/影像**                                                         | **名稱**                                                                    |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| ![](../images/6-2/2/meshToolkitcasestudy01.jpg)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](../images/6-2/5/rhynamo.jpg)                                       | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../images/6-2/5/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## 案例研究 - 匯入 AForge
 

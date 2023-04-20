@@ -18,9 +18,9 @@
 
 ### 直線
 
-[直線](5-4\_curves.md#lines)由一組點組成，每條直線至少有 2 個點。在 Dynamo 中建立直線最常使用的其中一個方法是使用 `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg)。
+[直線](5-4\_curves.md#lines)由一組點組成，每條直線至少有 2 個點。在 Dynamo 中建立直線最常使用的其中一個方法是使用 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg)。
 
-![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS 曲線
 
@@ -33,7 +33,7 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-2/4/Geometry for Computational Design - Curves.dyn" %}
 
@@ -82,7 +82,7 @@
 ![NURBS 曲線的次數](../images/5-2/4/NURBScurve\_Degree.jpg)
 
 > 1. 次數 = 1
-> 2. 階數 = 2
+> 2. 次數 = 2
 > 3. 次數 = 3
 
 {% hint style="info" %} 請注意，次數值越高，內插產生的曲線所用的控制點就越多。{% endhint %}

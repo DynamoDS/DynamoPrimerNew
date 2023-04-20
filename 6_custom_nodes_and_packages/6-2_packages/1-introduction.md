@@ -67,7 +67,7 @@
 
 開啟檔案並按一下求解器上的「執行」後，就會看到一個展開的圓球！諸如此類的範例檔案有助於學習如何使用新的 Dynamo 套件。
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg)
+\![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### Dynamo Package Manager
 

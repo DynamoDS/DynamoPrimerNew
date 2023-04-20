@@ -2,9 +2,9 @@
 
 本節將探索一系列工作流程，引導您使用 Dynamo。
 
-可以使用以下範例：
+可以使用以下範例工作流程：
 
-**開始使用工作流程**
+**入門工作流程**
 
 * [參數式花瓶](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [牽引點](10-1\_getting-started-workflows/2-attractor-points.md)

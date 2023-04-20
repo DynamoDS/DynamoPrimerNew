@@ -29,7 +29,7 @@
 
 Dynamo Primer 專案是開放原始碼專案！我們專注於提供高品質的內容，也感謝您提出的任何意見。如果您想要回報有關任何內容的問題，請發佈到我們的 GitHub 問題頁面：https://github.com/DynamoDS/DynamoPrimer/issues
 
-如果您想要對此專案提供新的章節、進行編輯或新增任何其他內容，請查看 GitHub 存放庫來開始：https://github.com/DynamoDS/DynamoPrimer。
+如果您想要對此專案提供新的章節、進行編輯或新增任何其他內容，請查看 GitHub 儲存庫來開始：https://github.com/DynamoDS/DynamoPrimer。
 
 ### Dynamo Primer 專案
 
@@ -55,7 +55,7 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 特別感謝 Ian Keough 啟動和指導 Dynamo 專案。
 
-感謝 Matt Jezyk、Ian Keough、Zach Kron、Racel Williams 和 Colin McCrone 充滿熱情地協同合作和參與 Dynamo 專案的一系列活動。
+感謝 Matt Jezyk、Ian Keough、Zach Kron、Racel Amour 和 Colin McCrone 充滿熱情地協同合作和參與 Dynamo 專案的一系列活動。
 
 ### 軟體和資源
 

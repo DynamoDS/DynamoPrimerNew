@@ -27,13 +27,13 @@
 
 這些項目會根據節點是**建立**資料、執行**動作**或**查詢**資料，進一步分類成有相同子品類的節點。
 
-* ![](images/3-2/userinterface-create.jpg) **建立**：從頭開始建立或建構幾何圖形。例如圓。
-* ![](images/3-2/userinterface-action.jpg) **動作**：對物件執行動作。例如，調整圓的比例。
-* ![](images/3-2/userinterface-query.jpg) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
+* \![](<images/3-2/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
+* \![](<images/3-2/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
+* \![](<images/3-2/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
 
 將滑鼠懸停在節點上，可顯示名稱和圖示之外更詳細的資訊。我們由此可以快速了解節點的功能、所需的輸入及其提供的輸出。
 
-![](images/3-2/userinterface-nodedescription.jpg)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. 描述 - 節點的普通語言描述
 > 2. 圖示 -「資源庫」功能表中更大版本的圖示
@@ -46,7 +46,7 @@
 
 選擇按一下要加入的節點，或按 Enter 將亮顯的節點加入工作區的中心。
 
-![](images/3-2/userinterface-search.jpg)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### 依階層搜尋
 
@@ -58,7 +58,7 @@
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
 
 * `category.nodeName`
 
@@ -123,9 +123,9 @@ Code Block 節點可以用於定義一塊程式碼 (以分號分隔各行)。這
 
 我們也可以使用 Code Block 做為捷徑定義數字輸入或呼叫其他節點的功能。執行此作業的語法遵循 Dynamo 文字語言 [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md) 的命名慣例。
 
-以下是在指令碼中使用 Code Block 的簡單示範 (含指示)。
+以下是在腳本中使用 Code Block 的簡單示範 (含指示)。
 
-![](images/3-2/library-codeblockdemo.gif)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. 按兩下以建立 Code Block 節點
 2. 鍵入 `Circle.ByCenterPointRadius(x,y);`

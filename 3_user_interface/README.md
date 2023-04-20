@@ -24,7 +24,7 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 
 ![](images/userinterface-dynamomenu.jpg)
 
-> 1. 關於 - 了解您電腦上安裝的 Dynamo 版本。
+> 1. 關於 - 瞭解您電腦上安裝的 Dynamo 版本。
 > 2. 收集使用狀況資料的合約 - 這可讓您選擇是否分享您的使用者資料來改善 Dynamo。
 > 3. 偏好 - 包括各項設定，例如定義應用程式的小數點精確度和幾何圖形彩現品質。
 > 4. 結束 Dynamo
@@ -42,14 +42,14 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 > 5. Dynamo 網站 - 在 GitHub 上檢視 Dynamo 專案。
 > 6. Dynamo 專案 Wiki - 造訪 Wiki，以學習使用 Dynamo API 進行開發，支援資源庫與工具。
 > 7. 顯示開始頁面 - 返回至文件中的 Dynamo 開始頁面。
-> 8. 報告錯誤 - 在 Github 開啟問題。
+> 8. 回報錯誤 - 在 Github 開啟問題。
 
 ### 工具列
 
 Dynamo 的工具列包含一系列按鈕，可快速存取以使用檔案及退回 [Ctrl + Z] 與重做 [Ctrl + Y] 指令。最右側是另一個按鈕，可以匯出工作區的快照，這對於製作文件及分享非常有用。
 
 * ![](images/userinterface-newfile.jpg) 新建 - 建立新的 .dyn 檔案
-* ![](images/userinterface-open.jpg) 開啟 - 開啟既有 .dyn (工作區) 或 .dyf (自訂節點) 檔案
+* \![](<images/userinterface-open(1) (1).jpg>) 開啟 - 開啟既有的 .dyn (工作區) 或 .dyf (自訂節點) 檔案
 * ![](images/userinterface-save.jpg) 儲存/另存新檔 - 儲存使用中的 .dyn 或 .dyf 檔案
 * ![](images/userinterface-undo.jpg) 退回 - 退回上一個動作
 * ![](images/userinterface-redo.jpg) 重做 - 重做下一個動作
@@ -69,12 +69,12 @@ Dynamo 資源庫是一個功能資源庫的集合，每個資源庫都包含依�
 
 ### 執行列
 
-從此處執行 Dynamo 指令碼。按一下「執行」按鈕上的下拉式圖示，可在不同模式之間進行變更。
+從此處執行 Dynamo 腳本。按一下「執行」按鈕上的下拉式圖示，可在不同模式之間進行變更。
 
 ![](images/userinterface-executionbar.gif)
 
-* 自動：自動執行指令碼。變更會即時更新。
-* 手動：只在按一下「執行」按鈕時才執行指令碼。在變更複雜和繁重的指令碼時，此功能非常有用
+* 自動：自動執行腳本。變更會即時更新。
+* 手動：只在按一下「執行」按鈕時才執行腳本。在變更複雜和繁重的腳本時，此功能非常有用
 * 週期性：此選項預設會灰顯。只有在使用 DateTime.Now 節點時才能使用。您可以將圖表設定為以指定間隔自動執行。
 
 ![](images/userinterface-executionbarDateTimenode.jpg)

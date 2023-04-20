@@ -1,8 +1,6 @@
 # Revit 連接
 
-
-
-![](./images/1/revitconnectionlink.jpg)
+![](images/1/revitconnectionlink.jpg)
 
 Dynamo for Revit 使用圖形演算法編輯器的資料和邏輯環境來延伸建築資訊建模。其靈活性以及功能強大的 Revit 資料庫，為 BIM 提供了新視角。
 
@@ -25,11 +23,11 @@ Dynamo for Revit 使用圖形演算法編輯器的資料和邏輯環境來延伸
 
 ### Dynamo 的歷史
 
-![歷史](./images/1/earlyScreenshot.jpg)
+![歷史](images/1/earlyScreenshot.jpg)
 
 在專注投入的開發人員團隊和充滿熱情的社群的努力下，專案從一開始的微不足道獲得了長足的發展。
 
-Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖然 Revit 為每個專案建立了功能強大的資料庫，但對於普通使用者來說，在介面約束外存取此資訊可能很困難。Revit 提供了全面的 API (應用程式介面)，讓協力廠商開發人員可建立自訂工具。雖然程式設計人員已使用此 API 多年，但並非所有人都能使用文字撰寫指令碼。Dynamo 的目標是透過可訪問的圖形算法編輯器使 Revit 資料可供所有人存取。
+Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖然 Revit 為每個專案建立了功能強大的資料庫，但對於普通使用者來說，在介面約束外存取此資訊可能很困難。Revit 提供了全面的 API (應用程式介面)，讓協力廠商開發人員可建立自訂工具。雖然程式設計人員已使用此 API 多年，但並非所有人都能使用文字撰寫腳本。Dynamo 的目標是透過可訪問的圖形算法編輯器使 Revit 資料可供所有人存取。
 
 將核心 Dynamo 節點與自訂 Revit 節點搭配使用，使用者可以大大展開參數式工作流程以進行交互、記錄、分析和產生。使用 Dynamo，繁瑣的工作流程可以自動化，設計探索領域可蓬勃發展。
 
@@ -39,13 +37,13 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 {% hint style="warning" %} *Dynamo 只會在開啟它的檔案中執行。{% endhint %}
 
-![](./images/1/launchdynamofromrevit.jpg)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 在 Revit 中開啟 Dynamo 時，會有一個稱為「Revit」的新品類。這是使用者介面的全面新增組件，其中提供了專用於 Revit 工作流程的節點。*
 
 {% hint style="warning" %} *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於 Dynamo for Revit 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟 Dynamo for Revit 圖表，則 Revit 節點將會遺失。{% endhint %}
 
-![](./images/1/revitconnection-runningdynamoinrevit02.jpg)
+![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### 凍結節點
 
@@ -59,4 +57,4 @@ Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作�
 
 Dynamo 也會積極更新部落格。請閱讀最新的貼文以瞭解最新的開發工作！
 
-![部落格](./images/1/blog.png)
+![部落格](images/1/blog.png)

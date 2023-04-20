@@ -38,7 +38,7 @@ old_cs = CoordinateSystem.Identity();
 cube2 = cube.Transform(old_cs, new_cs2);
 ```
 
-### 比例
+### 調整比例
 
 除了平移和旋轉，也可以用調整比例或切變方式建立 CoordinateSystem。CoordinateSystem 可以使用 _.Scale_ 方法調整比例：
 
@@ -76,16 +76,16 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 比起旋轉和平移，調整比例和切變是相對比較複雜的幾何轉換，所以並非每個 Dynamo 物件都能經過這些轉換。下表概述哪些 Dynamo 物件可以有非等比例調整的 CoordinateSystem，以及切變的 CoordinateSystem。
 
-| 類別 | 非等比例調整的 CoordinateSystem | 切變的 CoordinateSystem |
+| 類別        | 非等比例調整的 CoordinateSystem | 切變的 CoordinateSystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arc | 否 | 否 |
-| NurbsCurve | 是 | 是 |
-| NurbsSurface | 否 | 否 |
-| Circle | 否 | 否 |
-| Line | 是 | 是 |
-| Plane | 否 | 否 |
-| Point | 是 | 是 |
-| Polygon | 否 | 否 |
-| Solid | 否 | 否 |
-| Surface | 否 | 否 |
-| Text | 否 | 否 |
+| Arc          | 否                                    | 否                       |
+| NurbsCurve   | 是                                   | 是                      |
+| NurbsSurface | 否                                    | 否                       |
+| Circle       | 否                                    | 否                       |
+| Line         | 是                                   | 是                      |
+| Plane        | 否                                    | 否                       |
+| Point        | 是                                   | 是                      |
+| Polygon      | 否                                    | 否                       |
+| Solid        | 否                                    | 否                       |
+| Surface      | 否                                    | 否                       |
+| Text         | 否                                    | 否                       |

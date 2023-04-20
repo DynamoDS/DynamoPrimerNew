@@ -22,13 +22,13 @@
 
 ### **Dynamo Primer 專案**
 
-Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 Dynamo 開發團隊所發起。第一個版本的手冊由 Mode Lab 開發。若要為報告做出貢獻或提出分支，請新增您的內容並提交「拉取」請求。
+Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 Dynamo 開發團隊所發起。第一個版本的手冊由 Mode Lab 開發。若要做出貢獻，請對儲存庫建立分支、新增您的內容，然後提出推送要求。
 
 [https://github.com/DynamoDS/DynamoPrimer](https://github.com/DynamoDS/DynamoPrimer)
 
 ### **Dynamo 的 Zero Touch 外掛程式開發**
 
-此頁面概述了使用「Zero Touch」介面在 C# 中開發自訂 Dynamo 節點的程序。在大多數情況下，可以匯入 C# 靜態方法和類別，而不進行修改。如果您的資源庫僅需要呼叫函數，而不需要建構新物件，使用靜態方法可以很輕鬆地實現此目的。當 Dynamo 載入 DLL 時，它將除去您類別的名稱空間，並將所有靜態方法顯示為節點。
+此頁面概述使用「Zero Touch」介面在 C# 中開發自訂 Dynamo 節點的程序。在大多數情況下，可以匯入 C# 靜態方法和類別，而不進行修改。如果您的資源庫僅需要呼叫函數，而不需要建構新物件，使用靜態方法可以很輕鬆地實現此目的。當 Dynamo 載入您的 DLL 時，會除去您類別的名稱空間，並將所有靜態方法顯示為節點。
 
 [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development)
 
@@ -36,13 +36,13 @@ Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 D
 
 ### **適用於初學者的 Python**
 
-Python 是具有解譯性、互動性及物件導向的程式設計語言。它包含模組、例外、動態輸入、非常高級的動態資料類型和類別。Python 兼具功能強大且語法清晰的優點。它具有針對許多系統呼叫和資源庫以及各種窗系統的介面，並可在 C 或 C++ 進行延伸。它也可用作需要可程式化介面之應用程式的延伸語言。最後，Python 是可攜式程式設計語言：可在許多 UNIX 變式、Mac 及 Windows 2000 和更高版本上執行。Python 初學者指南鏈結至其他介紹性課程和資源以用於學習 Python。
+Python 是具有解譯性、互動性及物件導向的程式設計語言。它包含模組、例外、動態輸入、非常高級的動態資料類型和類別。Python 兼具功能強大且語法清晰的優點。它具有針對許多系統呼叫和資源庫以及各種窗系統的介面，並可在 C 或 C++ 進行延伸。它也可用作需要可程式化介面之應用程式的延伸語言。最後，Python 是可攜式程式設計語言：可在許多 UNIX 變式、Mac 及 Windows 2000 和更高版本上執行。Python 初學者指南連結至其他介紹自學課程和資源以用於學習 Python。
 
 [https://www.python.org/about/gettingstarted](https://www.python.org/about/gettingstarted)
 
 ### **AForge**
 
-AForge.NET 是開放程式碼的 C# 架構，由開發人員和研究人員用於電腦視覺和人工智慧領域 - 圖像處理、神經網路、遺傳算法、模糊邏輯、機器學習、機器人科學等。
+AForge.NET 是一個開放原始碼的 C# 架構，專門針對電腦視覺和人工智慧 (影像處理、神經網路、遺傳演算法、模糊邏輯、機器學習、機器人科學等) 領域的開發人員和研究人員而設計。
 
 [http://www.aforgenet.com/framework/](http://www.aforgenet.com/framework/)
 
@@ -62,22 +62,22 @@ MathWorld 是一種線上數學資源，由 Eric W. Weisstein 在數以千計貢
 
 ### **Nathan 的 Revit API 筆記本**
 
-「此筆記本嘗試修復一些有關在設計工作流程環境定義中學習和套用 Revit API 的『資源缺陷』」
+「此筆記本嘗試在設計工作流程環境中學習和應用 Revit API 時補救一些『資源不足』的問題」
 
 [http://wiki.theprovingground.org/revit-api](http://wiki.theprovingground.org/revit-api)
 
 ### **Revit Python Shell**
 
-「RevitPythonShell 新增 IronPython 解釋器至 Autodesk Revit 和 Vasari。」此專案的建立日期在 Dynamo 之前，是 Python 開發的重要參考。RPS 專案：&#x20;
+「RevitPythonShell 在 Autodesk Revit 和 Vasari 中新增 IronPython 解釋器。」 此專案的建立日期在 Dynamo 之前，是 Python 開發的重要參考。RPS 專案：
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell
 
-開發人員部落格：&#x20;
+開發人員的部落格：
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
-### **建置編碼器**
+### **The Building Coder**
 
-由 BIM 其中一個領先專家開發且功能強大的 Revit API 工作流程。
+由 BIM 其中一位頂尖專家開發、功能強大的 Revit API 工作流程。
 
 [http://thebuildingcoder.typepad.com/](http://thebuildingcoder.typepad.com)

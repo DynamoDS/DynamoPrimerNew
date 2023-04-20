@@ -20,11 +20,11 @@ Dynamo 2.0 引入將字典資料類型與清單資料類型分開的概念。此
   * 字典使用以下語法 `{key:value}`
   * 清單使用以下語法 `[value,value,value]`
 * 資源庫引入了 _新節點_，以協助您建立、修改和查詢字典。
-*   在 1.x 版的程式碼區塊中建立的清單，在載入指令碼時會自動移轉成使用方括號 `[ ]` 而不是大括號 `{ }` 的新清單語法 \\
+*   在 1.x 版的程式碼區塊中建立的清單，在載入腳本時會自動移轉成使用方括號 `[ ]` 而不是大括號 `{ }` 的新清單語法 \\
 
     ***
 
-![](../images/5-5/1/whatisadictionary-whatarethechanges(1).jpg)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 

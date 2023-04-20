@@ -17,7 +17,7 @@
 cs = CoordinateSystem.Identity();
 ```
 
-具有幾何轉換的 CoordinateSystems 超出本章節的範圍，不過有另一個建構函式 _CoordinateSystem.ByOriginVectors_ 可以讓您在特定的點建立座標系統：
+具有幾何轉換的 CoordinateSystem 超出本章節的範圍，不過有另一個建構函式 _CoordinateSystem.ByOriginVectors_ 可以讓您在特定的點建立座標系統：
 
 ![](../images/8-2/2/GeometricPrimitives\_02.png)
 
@@ -37,7 +37,7 @@ cs = CoordinateSystem.ByOriginVectors(origin,
 
 ### 點 (Point)
 
-最簡單的幾何基本型是一個點 (Point)，代表三維空間中的一個零維位置。如先前所述，在特定座標系統中建立一個點有幾種不同的方式：_ByCoordinates_ 以指定的 x、y、z 座標建立一個點；_Point.ByCartesianCoordinates_ 在特定座標系統中以指定的 x、y、z 座標建立一個點；_Point.ByCylindricalCoordinates_ 在有半徑、旋轉角度和高度的圓柱上建立一個點；_Point.BySphericalCoordinates_ 在有半徑和兩個旋轉角度的圓球上建立一個點。
+最簡單的幾何基本型是一個點 (Point)，代表三維空間中的一個零維位置。如先前所述，在特定座標系統中建立一個點有幾種不同的方式：_Point.ByCoordinates_ 以指定的 x、y、z 座標建立一個點；_Point.ByCartesianCoordinates_ 在特定座標系統中以指定的 x、y、z 座標建立一個點；_Point.ByCylindricalCoordinates_ 在有半徑、旋轉角度和高度的圓柱上建立一個點；_Point.BySphericalCoordinates_ 在有半徑和兩個旋轉角度的圓球上建立一個點。
 
 本範例會顯示在各種座標系統建立的點：
 
@@ -73,7 +73,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### 線&#x20;
+### 直線 (Line) 
 
 下一個較高維度的 Dynamo 基本型是線段，代表兩個端點之間有無限個點。使用 _Line.ByStartPointEndPoint_ 建構函式明確指出兩個邊界點，或使用 _Line.ByStartPointDirectionLength_ 建構函式指定起點、方向和沿著該方向的長度，可以建立直線。
 
@@ -92,7 +92,7 @@ lDir = Line.ByStartPointDirectionLength(p1,
     Vector.ByCoordinates(1, 1, 1), 10);
 ```
 
-### 3D 基本型 - 立方體、圓錐體、圓柱體、圓球體等
+### 3D 基本型 - 立方體、圓錐、圓柱、圓球等
 
 Dynamo 有幾個物件，代表三維的幾何基本型的最基本類型：使用 _Cuboid.ByLengths_ 建立的立方體 (Cuboid)；使用 _Cone.ByPointsRadius_ 和 _Cone.ByPointsRadii_ 建立的圓錐 (Cone)；使用 _Cylinder.ByRadiusHeight_ 建立的圓柱 (Cylinder)；以及使用 _Sphere.ByCenterPointRadius_ 建立的圓球 (Sphere)。
 

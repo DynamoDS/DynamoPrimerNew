@@ -111,7 +111,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 _**List.Map**_ �
 > 3. 將 Code Block 每一行分別連接至 **Point.ByCoordinates** 節點的 _X_ 與 _Y_ 輸入。在節點上按一下右鍵，選取「交織」，然後選擇 _「笛卡兒積」_。這會建立點的格線。由於我們定義的範圍是從 -50 到 50，因此將跨越預設的 Dynamo 格線。
 > 4. _**Watch**_ 節點會顯示已建立的點。請注意資料結構。我們已建立一個清單的清單。每個清單都代表格線的一列點。
 
-![練習](../images/5-4/3/listsoflists-map02(1).jpg)
+\![練習](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. 將 **List.Count** 節點連接至上一步驟中 Watch 節點的輸出。
 > 2. 將 **Watch** 節點連接至 **List.Count** 輸出。
@@ -244,7 +244,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 
 先從上述節點的字串開始。我們將建立跨越預設 Dynamo 格線的基本曲面。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. 使用 **Code Block**，插入這兩行程式碼，然後分別連接到 **Surface.PointAtParameter** 的 _u_ 與 _v_ 輸入：`-50..50..#3;` `-50..50..#5;`
 > 2. 請確保將 **Surface.PointAtParameter** 的「交織」設定為 _「笛卡兒積」_。
@@ -252,20 +252,20 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 
 在這一步，我們要查詢所建立格線內的中心點。為了執行此作業，我們將選取中間清單內的中間點。很合理，對嗎？
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. 為了確認這是否為正確的點，也可以在 Watch 節點項目中到處按一下，以確認我們針對的是正確的點。
 > 2. 使用 **Code Block**，我們將編寫一行基本程式碼來查詢清單的清單：\
  `points[1][2];`
 > 3. 使用 **Geometry.Translate**，我們將選取的點沿 _Z_ 方向上移 _20_ 個單位。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. 我們也使用 **List.GetItemAtIndex** 節點選取中間列的點。注意：與上一個步驟類似，我們也可以透過 **Code Block**，使用 `points[1];` 這一行查詢清單
 
 到目前為止，我們已成功查詢到中心點，並將其上移。現在，我們需要將移動的該點重新插入原始資料結構。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. 首先，我們要更換上一步驟中所隔離清單的項目。
 > 2. 使用 **List.ReplaceItemAtIndex**，我們將運用索引 _2_，將中間項目更換為連接至移動點的更換項目 (**Geometry.Translate**)。
@@ -273,18 +273,18 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 
 現在，我們已修改清單，需要將此清單重新插入原始資料結構：清單的清單。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. 採用相同的邏輯，使用 **List.ReplaceItemAtIndex** 將中間清單更換為我們修改後的清單。
-> 2. 請注意，對這兩個節點定義索引的 **Code Block** 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
+> 2. 請注意，對這兩個節點定義索引的 **Code Block** __ 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
 > 3. 透過選取位於 _索引 1_ 的清單，我們可以在 Dynamo 預覽中看到亮顯的資料結構。我們已成功將移動點合併至原始資料結構中。
 
 有許多方式可以使用這組點建立曲面。在此案例中，我們將對曲線進行斷面混成，以建立曲面。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. 建立 **NurbsCurve.ByPoints** 節點，並連接新資料結構以建立三條 nurbs 曲線。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. 將 **Surface.ByLoft** 連接至 **NurbsCurve.ByPoints** 的輸出。現在我們已修改曲面。我們可以變更幾何圖形的原始 _Z_ 值。平移並查看幾何圖形更新！

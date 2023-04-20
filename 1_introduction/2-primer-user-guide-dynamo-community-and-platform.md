@@ -19,15 +19,13 @@
 
 * [參數式花瓶](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
+![](images/1-2/vase1.gif)
 
 * [牽引點](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} 
-在稍後的章節中，我們會介紹有關 Dynamo 的不同主題，您可以找到更多主題特定的練習。**練習**通常可在每頁的最後一節看到。
-{% endhint %}
+{% hint style="info" %} 在稍後的章節中，我們會介紹有關 Dynamo 的不同主題，您可以找到更多主題特定的練習。**練習**通常可在每頁的最後一節看到。{% endhint %}
 
 ### 社群
 
