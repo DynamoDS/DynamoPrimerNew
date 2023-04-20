@@ -55,7 +55,7 @@ Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开
 
 尤其感谢 Ian Keough 启动和引导 Dynamo 项目。
 
-感谢 Matt Jezyk、Ian Keough、Zach Kron、Racel Williams 和 Colin McCrone 的热情协作，让大家有机会参与各种 Dynamo 项目。
+感谢 Matt Jezyk、Ian Keough、Zach Kron、Racel Amour 和 Colin McCrone 的热情协作，让大家有机会参与各种 Dynamo 项目。
 
 ### 软件和资源
 

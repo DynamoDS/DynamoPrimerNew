@@ -1,6 +1,6 @@
 # Python 点生成器
 
-以下 Python 脚本为几个示例生成点数组。应将它们粘贴到 Python 脚本节点，如下所示： 
+以下 Python 脚本为几个示例生成点数组。应将它们粘贴到 Python 脚本节点，如下所示：
 
 ![](../images/8-2/10/pythonpoints01.jpg)
 

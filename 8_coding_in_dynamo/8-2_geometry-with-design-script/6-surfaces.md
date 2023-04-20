@@ -4,7 +4,7 @@
 
 ### 插值曲面
 
-要创建插值曲面，只需生成与曲面形状近似的点的二维集合即可。集合必须是矩形，即，不能出现锯齿。_NurbsSurface.ByPoints_ 方法通过这些点构造曲面。
+要创建插值曲面，只需生成与曲面形状近似的点的二维集合即可。集合必须是矩形，即不能出现锯齿。_NurbsSurface.ByPoints_ 方法通过这些点构造曲面。
 
 ![](../images/8-2/6/Surfaces\_01.png)
 
@@ -17,7 +17,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 ### 控制点曲面
 
-也可以通过指定曲面的基本控制点来创建自由形式的 NurbsSurfaces。与 NurbsCurves 一样，控制点可以看作是表示具有直线段的四边形网格，这可以平滑到最终的曲面形式（取决于曲面的阶数）。要按控制点创建 NurbsSurface，请为 _NurbsSurface.ByPoints_ 添加两个附加参数，指示基本曲线在曲面两个方向上的角度。
+也可以通过指定曲面的基本控制点来创建自由形式的 NurbsSurfaces。与 NurbsCurves 一样，控制点可以看作是表示具有直线段的四边形网格，这可以平滑到最终的曲面形式（取决于曲面的阶数）。要通过控制点创建 NurbsSurface，请为 _NurbsSurface.ByPoints_ 添加两个附加参数，以指示基本曲线在曲面两个方向上的角度。
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
@@ -29,7 +29,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 surf = NurbsSurface.ByPoints(python_points_1, 2, 2);
 ```
 
-我们可以增加 NurbsSurface 的阶数来更改生成的曲面几何体：
+我们可以增加 NurbsSurface 的阶数，来更改生成的曲面几何图形：
 
 ![](../images/8-2/6/Surfaces\_03.png)
 
@@ -43,7 +43,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 ### 放样曲面
 
-就像可以通过在一组输入点之间内插来创建曲面一样，可以通过在一组基础曲线之间内插来创建曲面。这称为放样。放样曲线是使用 _Surface.ByLoft_ 构造函数创建的，其中输入曲线集合作为唯一参数。
+就像可以通过在一组输入点之间内插来创建曲面一样，可以通过在一组基础曲线之间内插来创建曲面。这称为“放样”。放样曲线是使用 _Surface.ByLoft_ 构造函数创建的，其中输入曲线集合作为唯一参数。
 
 ![](../images/8-2/6/Surfaces\_04.png)
 

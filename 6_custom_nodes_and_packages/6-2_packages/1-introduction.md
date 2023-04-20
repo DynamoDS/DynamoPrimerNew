@@ -67,7 +67,7 @@
 
 在打开该文件并点击求解器上的“运行”后，我们会得到一个展开的球体！此类示例文件有助于了解如何使用新的 Dynamo 软件包。
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg)
+\![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### Dynamo Package Manager
 

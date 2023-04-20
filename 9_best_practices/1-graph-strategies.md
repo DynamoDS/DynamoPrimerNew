@@ -30,7 +30,7 @@
 * 有时，可以使用代码块**键入数字或节点方法，速度比搜索快**（Point.ByCoordinates、Number、String、Formula）
 * 代码块在**您要在 DesignScript 中定义自定义函数以减少图形中的节点数量**时非常有用
 
-![](images/1/graphstrategy3(1).png)
+![](images/1/graphstrategy3\(1\).png)
 
 > 1 和 2 执行相同的函数。与分别搜索并添加每个节点相比，编写几行代码要快得多。代码块也更加简洁。
 >
@@ -63,9 +63,9 @@
 ### **使用 List@Level 灵活访问数据**
 
 * 使用 List@Level，可以**通过替换 List.Map 和 List.Combine 节点降低图形的复杂性**，这可能会占用大量画布空间
-* List@Level 通过允许您从节点的输入端口访问列表中任何级别的数据，从而为您提供了一种**快于 List.Map/List.Combine 的方法来构建节点逻辑**
+* List@Level 通过允许从节点的输入端口访问列表中任何级别的数据，从而为您提供了一种**快于 List.Map/List.Combine 的方法来构建节点逻辑**
 
-![](images/1/graphstrategy4(1)(1).png)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > 我们可以通过为 CountTrue 的“列表”输入激活 List@Level，来验证 BoundingBox.Contains 返回的 True 值数以及具体列表。List@Level 允许用户确定输入从哪个级别获取数据。与其他涉及 List.Map 和 List.Combine 的方法相比，使用 List@Level 灵活、高效并且强烈建议采用。
 >
@@ -84,7 +84,7 @@
 * 如果其他人将要使用您的图形，则应**确保“节点-线”布局在发布之前轻松流动**
 * 为了帮助您进行对齐，请**使用“清理节点布局”功能自动对齐**您的图形，尽管不如您自己做的精确
 
-![](images/1/graphstrategy5(2)(1).png)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. 未组织的图形
 > 2. 对齐的图形
@@ -170,7 +170,7 @@
 * 构建模板时，可以标准化**组颜色和字体大小**，以对工作流或数据操作的类型进行分类。
 * 构建模板时，甚至可以标准化您希望如何对图形中**前端和后端工作流之间的差异进行标注、上色或设计样式**。
 
-![](images/1/graphstrategy10(2).png)
+![](images/1/graphstrategy10\(2\).png)
 
 > 1. 程序的 UI 或前端包括项目名称、输入滑块和输入几何图形。
 > 2. 程序的后端。
@@ -217,7 +217,7 @@
 
 通过添加另一图形改进层，使程序更易于访问。添加注释以描述程序的特定区域如何工作、为输入提供自定义名称以及为不同类型的组指定颜色。
 
-![](images/1/graphstrategy15(1).png)
+![](images/1/graphstrategy15\(1\).png)
 
 > 这些图形改进会告诉用户有关程序正在执行的操作的更多信息。不同的组颜色有助于区分输入和函数。
 >

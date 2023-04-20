@@ -111,9 +111,9 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 > 3. 将代码块的每行连接到 **“Point.ByCoordinates”** 节点的相应 _“X”_ 和 _“Y”_ 输入。在节点上单击鼠标右键，选择“连缀”，然后选择 _“叉积”_。这将创建点栅格。因为我们定义的范围是 -50 到 50，所以我们跨越了默认的 Dynamo 栅格。
 > 4. _**“Watch”**_ 节点显示所创建的点。请注意数据结构。我们已创建一列列表。每个列表都表示栅格的一行点。
 
-![练习](../images/5-4/3/listsoflists-map02(1).jpg)
+\![练习](<../images/5-4/3/lists of lists - map 02.jpg>)
 
-> 1. 将上一步中的 **“List.Count”** 节点附加到“Watch”节点的输出。
+> 1. 将上一步中的**“List.Count”**节点附加到“Watch”节点的输出。
 > 2. 将 **“Watch”** 节点连接到 **“List.Count”** 输出。
 
 请注意，“List.Count”节点提供的值为“5”。这等于代码块中所定义的“Nx”变量。这是为什么呢？
@@ -244,7 +244,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 从上述节点字符串开始。我们将创建一个跨越默认 Dynamo 栅格的基本曲面。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. 使用 **“代码块”**，插入以下两行代码并分别连接到 **“Surface.PointAtParameter”** 的 _“u”_ 和 _“v”_ 输入：`-50..50..#3;` `-50..50..#5;`
 > 2. 确保将 **“Surface.PointAtParameter”** 的“连缀”设置为 _“叉积”_。
@@ -252,20 +252,20 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 在此步骤中，我们要在已创建的栅格中查询中心点。为此，我们将选择中间列表中的中间点。有道理，对吧？
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. 要确认这一点是正确的，我们还可以单击“Watch”节点项目来确认我们面向的目标是正确的。
 > 2. 使用 **“代码块”**，我们将编写一行基本代码，用于查询一列列表：\
  `points[1][2];`
 > 3. 使用 **“Geometry.Translate”**，我们会将选定点在 _Z_ 方向上上移 _20_ 个单位。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. 我们还要使用 **“List.GetItemAtIndex”** 节点选择中间行的点。注意：与上一步类似，我们还可以使用 **“代码块”**，通过一行代码 `points[1];` 查询列表
 
 到目前为止，我们已成功查询中心点并将其向上移动。现在，我们需要将此移动的点插回原始数据结构。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. 首先，我们要替换在上一步中隔离的列表项。
 > 2. 使用 **“List.ReplaceItemAtIndex”**，我们会将使用且索引为 _“2”_ 的中间项替换为与移动的点（ **“Geometry.Translate”** ）相连的替换项。
@@ -273,7 +273,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 现在，我们已经修改了列表，我们需要将此列表插回原始数据结构：列表的列表。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. 遵循相同的逻辑，使用 **“List.ReplaceItemAtIndex”** 将中间列表替换为我们修改的列表。
 > 2. 请注意，为这两个节点定义索引的 “**代码块**_”_ 为 1 和 2，这与 **“代码块”** (_points[1][2]_) 中的原始查询匹配。
@@ -281,10 +281,10 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 基于这组点生成曲面的方法有多种。在本例中，我们将通过一起放样曲线来创建曲面。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. 创建 **“NurbsCurve.ByPoints”** 节点并连接新的数据结构，来创建三条 NURBS 曲线。
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. 将 **“Surface.ByLoft”** 连接到 **“NurbsCurve.ByPoints”** 的输出。现在，我们得到了一个修改的曲面。我们可以更改几何图形的原始 _Z_ 值。平移并观察几何图形更新！

@@ -18,7 +18,7 @@ p = Point.ByCoordinates(1, 2, 3);
 p2 = p.Translate(10, -20, 50);
 ```
 
-### Rotation
+### 旋转
 
 虽然 Dynamo 中的所有对象均可通过在对象名称末尾附加 _.Translate_ 方法进行转换，但更复杂的变换需要将对象从一个基础坐标系变换到新坐标系。例如，要绕 x 轴将对象旋转 45 度，我们将对象从其现有 CoordinateSystem（不旋转）变换为 CoordinateSystem（已使用 _.Transform_ 方法绕 x 轴旋转 45 度）：
 
@@ -76,16 +76,16 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 缩放和剪切是比旋转和平移更复杂的几何变换，因此并非每个 Dynamo 对象都能进行这些变换。下表概述了 Dynamo 对象可以具有非统一比例缩放的 CoordinateSystems 和剪切的 CoordinateSystems。
 
-| 类 | 非统一比例缩放的 CoordinateSystem | 剪切的 CoordinateSystem |
+| 类        | 非统一比例缩放的 CoordinateSystem | 剪切的 CoordinateSystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| 弧 | 否 | 否 |
-| NurbsCurve | 是 | 是 |
-| Nurbs 曲面 | 否 | 否 |
-| 圆 | 否 | 否 |
-| 直线 | 是 | 是 |
-| 平面 | 否 | 否 |
-| 点 | 是 | 是 |
-| 多边形 | 否 | 否 |
-| 实体 | 否 | 否 |
-| 曲面 | 否 | 否 |
-| 文本 | 否 | 否 |
+| 弧          | 否                                    | 否                       |
+| NurbsCurve   | 是                                   | 是                      |
+| Nurbs 曲面 | 否                                    | 否                       |
+| 圆       | 否                                    | 否                       |
+| 直线         | 是                                   | 是                      |
+| 平面        | 否                                    | 否                       |
+| 点        | 是                                   | 是                      |
+| 多边形      | 否                                    | 否                       |
+| 实体        | 否                                    | 否                       |
+| 曲面      | 否                                    | 否                       |
+| 文本         | 否                                    | 否                       |

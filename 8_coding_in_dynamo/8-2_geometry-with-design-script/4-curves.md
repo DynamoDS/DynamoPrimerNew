@@ -4,7 +4,7 @@
 
 ### 插值曲线
 
-若要创建插值曲线，只需将点集合传递到 _NurbsCurve.ByPoints_ 方法即可。
+要创建插值曲线，只需将点集合传递到 _NurbsCurve.ByPoints_ 方法。
 
 ![](../images/8-2/4/Curves\_01.png)
 
@@ -36,7 +36,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 ### 控制点曲线
 
-NurbsCurves 的生成方式几乎相同，输入点表示直线段的端点，第二个参数用于指定曲线经历的平滑量和类型（称为阶数）。\* 阶数为 1 的曲线不平滑；它是多段线。
+NurbsCurves 的生成方式几乎相同，输入点表示直线段的端点，第二个参数用于指定曲线经历的平滑量和类型（称为阶数）。* 阶数为 1 的曲线没有平滑；它是多段线。
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -115,5 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}
-\*这是对 NURBS 曲线几何图形的简单描述；有关更准确、更详细的讨论，请参见参考文献中的“Pottmann, et al, 2007”。{% endhint %}
+{% hint style="info" %} *这是对 NURBS 曲线几何图形的简单描述；有关更准确、更详细的讨论，请参见参考文献中的“Pottmann, et al, 2007”。{% endhint %}

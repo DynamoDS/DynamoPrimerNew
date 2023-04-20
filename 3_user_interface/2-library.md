@@ -25,15 +25,15 @@
 > 3. 子类别
 > 4. 节点
 
-这些选项会根据节点是 **“创建”** 数据、执行 **“操作”** 还是 **“查询”** 数据，来对同一子类别中的节点进一步分类。
+这些选项会根据节点是**“创建”**数据、执行**“操作”**还是**“查询”**数据，来对同一子类别中的节点进一步分类。
 
-* ![](images/3-2/userinterface-create.jpg) **创建**：从头开始创建或构造几何图形。例如，圆。
-* ![](images/3-2/userinterface-action.jpg) **操作**：对某个对象执行操作。例如，缩放圆。
-* ![](images/3-2/userinterface-query.jpg) **查询**：获取已存在对象的特性。例如，获取圆的半径。
+* \![](<images/3-2/user interface - create.jpg>) **创建**：从头开始创建或构建几何图形。例如，圆。
+* \![](<images/3-2/user interface - action.jpg>) **操作**：对对象执行操作。例如，缩放圆。
+* \![](<images/3-2/user interface - query.jpg>) **查询**：获取已存在对象的特性。例如，获取圆的半径。
 
 将鼠标光标悬停在节点上，即可显示除其名称和图标以外的更多详细信息。这使我们可以快速了解节点的作用、所需输入内容以及输出内容。
 
-![](images/3-2/userinterface-nodedescription.jpg)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. 描述 - 节点的纯语言描述
 > 2. 图标 - 库菜单中图标的较大版本
@@ -46,7 +46,7 @@
 
 通过单击要添加的节点进行选择，或按 Enter 键将亮显的节点添加到工作空间的中心。
 
-![](images/3-2/userinterface-search.jpg)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### 按层次结构搜索
 
@@ -58,7 +58,7 @@
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
 
 * `category.nodeName`
 
@@ -123,9 +123,9 @@ Code Block 节点可用于定义代码块，其中各行用分号隔开。这可
 
 我们还可以将“代码块”用作定义“数字输入”或调用另一个节点功能的快捷方式。执行此类操作的语法遵循 Dynamo 文本语言（即 [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md)）的命名约定。
 
-下面是有关在脚本中使用“Code Block”的简单演示（带有说明）。
+下面是有关在脚本中使用“代码块”的简单演示（带有说明）。
 
-![](images/3-2/library-codeblockdemo.gif)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. 双击以创建“Code Block”节点
 2. `Circle.ByCenterPointRadius(x,y);`Type

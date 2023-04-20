@@ -22,9 +22,7 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %}
-_注意：将 CURRENTUSER 替换为您的用户名_
-{% endhint %}
+{% hint style="warning" %}_注意：将 CURRENTUSER 替换为您的用户名_{% endhint %}
 
 接下来，我们需要使用要内置的功能构建模板。在本例中，我们在使用 Revit 时嵌入 Revit 相关的导入和一些其他典型项目。
 
