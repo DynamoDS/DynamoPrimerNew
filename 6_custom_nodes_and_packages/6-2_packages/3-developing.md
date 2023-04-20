@@ -20,7 +20,7 @@ Dynamo поддерживает различные способы создани
 
 После установки пользовательские узлы должны быть доступны в разделе «Надстройки» > Dynamo Primer.
 
-![](../images/6-2/3/developpackage-installpackage02(1)(1).jpg)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Теперь рассмотрим структуру пакета.
 
@@ -30,7 +30,7 @@ Dynamo поддерживает различные способы создани
 
 Перед нами простой пакет с пятью пользовательскими узлами. Ниже кратко рассматривается структура каждого из них.
 
-![](../images/6-2/3/developpackage-customnodes01(1)(1).jpg)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
 
 #### **PointsToSurface**
 

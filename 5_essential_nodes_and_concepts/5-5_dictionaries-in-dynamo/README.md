@@ -4,8 +4,8 @@
 
 По сути, словарь является эффективным механизмом поиска данных.
 
-_Функции работы со словарями присутствовали во многих версиях Dynamo. В приложении Dynamo 2.0 представлен новый способ управления данными этого типа._
+_Функции работы со словарями присутствовали во многих версиях Dynamo. В приложении Dynamo 2.0 представлен новый способ управления данными этого типа_.
 
 ![](../images/5-5/wildDictionary.png)
 
-Исходное изображение предоставлено [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+Изображение предоставлено [sixtysecondrevit.com](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

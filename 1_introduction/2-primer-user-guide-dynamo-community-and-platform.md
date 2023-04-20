@@ -19,15 +19,13 @@
 
 * [Параметрическая ваза](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
+![](images/1-2/vase1.gif)
 
 * [Точки притяжения](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} 
-В последующих главах, посвященных Dynamo, рассматриваются более специализированные упражнения. **Упражнения** обычно приводятся в последнем разделе на каждой странице.
-{% endhint %}
+{% hint style="info" %} В последующих главах, посвященных Dynamo, рассматриваются более специализированные упражнения. **Упражнения** обычно приводятся в последнем разделе на каждой странице. {% endhint %}
 
 ### Сообщество
 

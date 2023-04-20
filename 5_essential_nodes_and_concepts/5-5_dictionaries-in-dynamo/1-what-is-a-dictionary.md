@@ -24,7 +24,7 @@ Dynamo 2.0 включает новый тип данных — список, �
 
     ***
 
-![](../images/5-5/1/whatisadictionary-whatarethechanges(1).jpg)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 

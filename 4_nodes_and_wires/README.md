@@ -87,7 +87,7 @@
 
 * Чтобы изменить соединение с портом ввода, щелкните другой порт ввода.
 
-![](images/nodesandwires-editwirechangeport(2).gif)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * Чтобы удалить провод, перетащите его в сторону, а затем щелкните в рабочем пространстве.
 
@@ -116,7 +116,7 @@
 
 В данном случае бледно-голубым цветом будут отображаться только выбранные узлы и соединенные с ними провода.
 
-![](images/nodesandwires-hidewiressetting(1).gif)
+\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### Скрытие отдельных проводов
 

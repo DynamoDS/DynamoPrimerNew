@@ -182,7 +182,7 @@
 
 {% file src="../8_coding_in_dynamo/datasets/8-2/2/Revit-StructuralFraming.zip" %}
 
-## Практические рекомендации
+## Практические советы
 
 ### Методы создания графиков
 

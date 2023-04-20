@@ -22,7 +22,7 @@
 
 ### **Проект Dynamo Primer**
 
-Dynamo Primer — проект с открытым исходным кодом, который был инициирован Мэттом Ензыком (Matt Jezyk) и рабочей группой по разработке Dynamo в компании Autodesk. Первая версия этого руководства была разработана в Mode Lab. Если вы хотите внести свой вклад в разработку этого проекта, создайте Fork-копию репозитория, добавьте в нее содержимое и отправьте запрос на внесение изменений.
+Dynamo Primer — проект с открытым исходным кодом, который был инициирован Мэттом Йежиком (Matt Jezyk) и рабочей группой по разработке Dynamo в компании Autodesk. Первая версия этого руководства была разработана в Mode Lab. Если вы хотите внести свой вклад в разработку этого проекта, создайте Fork-копию репозитория, добавьте в нее содержимое и отправьте запрос на внесение изменений.
 
 [https://github.com/DynamoDS/DynamoPrimer](https://github.com/DynamoDS/DynamoPrimer)
 
@@ -68,11 +68,11 @@ MathWorld — это математический онлайн-ресурс, с
 
 ### **Оболочка Python в Revit**
 
-«RevitPythonShell добавляет в Autodesk Revit и Vasari модуль IronPython, интерпретирующий данные». Этот проект возник до появления Dynamo и является отличным источником информации по разработке на Python. Проект RPS:&#x20;
+«RevitPythonShell добавляет в Autodesk Revit и Vasari модуль IronPython, интерпретирующий данные». Этот проект возник до появления Dynamo и является отличным источником информации по разработке на Python. Проект RPS: 
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell 
 
-Блог разработчика:&#x20;
+Блог разработчика: 
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
