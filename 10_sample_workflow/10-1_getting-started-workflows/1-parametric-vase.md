@@ -1,5 +1,5 @@
 ---
-description: doporučené cvičení
+description: suggested exercise
 ---
 
 # Parametrická váza
@@ -12,7 +12,7 @@ Tento pracovní postup vás naučí, jak:
 * Vytvářet a upravovat geometrické prvky pomocí uzlů.
 * Vizualizovat výsledky návrhu v reálném čase.
 
-![](../images/10-1/1/vase1(3).gif)
+![](../../1\_introduction/images/1-2/vase1.gif)
 
 ## Definování cílů
 
@@ -48,7 +48,7 @@ Ponecháme výchozí hodnotu _centerPoint_, ale přidáme uzel **Number Slider**
 
 Tento uzel se trochu liší od předchozího uzlu, protože obsahuje posuvník. Pomocí rozhraní můžete změnit výstupní hodnotu posuvníku.
 
-![](../images/10-1/1/vase13(1).gif)
+![](../images/10-1/1/vase13\(1\).gif)
 
 Posuvník lze konfigurovat pomocí rozevíracího tlačítka v levé části uzlu. Omezme posuvník na maximální hodnotu 15.
 
@@ -70,7 +70,7 @@ Pokračujte v přidávání uzlů a jejich připojením k naší logice, abych
 
 Zkopírujte tyto uzly čtyřikrát, aby kružnice definovaly povrch, a změňte názvy posuvníku čísel, jak je znázorněno níže.
 
-![](../images/10-1/1/vase4(1)(1).png)
+\![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Kružnice jsou vytvořeny pomocí středu a poloměru.
 
@@ -78,7 +78,7 @@ Zkopírujte tyto uzly čtyřikrát, aby kružnice definovaly povrch, a změňte 
 
 Chybí nám klíčový parametr naší vázy: její výška. Abychom mohli ovládat výšku vázy, vytvoříme další posuvník čísel. Přidáme také uzel **Code Block**. Bloky kódu umožňují do pracovního postupu přidat vlastní fragmenty kódu. Pomocí bloku kódu vynásobíme posuvník výšky různými koeficienty, abychom mohli umístit kružnice podél výšky vázy.
 
-![](../images/10-1/1/vase15(1).png)
+![](../images/10-1/1/vase15\(1\).png)
 
 Poté pomocí uzlu **Geometry.Translate** umístíme kružnice do požadované výšky. Protože chceme kružnice distribuovat podél výšky vázy, použijeme bloky kódu k vynásobení parametru výšky koeficientem.
 
@@ -92,7 +92,7 @@ Abychom vytvořili povrch pomocí uzlu **Surface.ByLoft**, je nutné spojit vše
 
 Vypněte také náhled v ostatních uzlech, aby se zobrazilo pouze zobrazení uzlu Surface.ByLoft.
 
-![](../images/10-1/1/vase6(1)(1).png)
+\![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Povrch je vytvořen šablonováním převedených kružnic.
 
@@ -100,6 +100,6 @@ Vypněte také náhled v ostatních uzlech, aby se zobrazilo pouze zobrazení u
 
 Náš pracovní postup je připraven! Nyní můžete pomocí **posuvníků čísel** definovaných ve skriptu vytvářet různé návrhy váz.
 
-![](../images/10-1/1/vase1(3).gif)
+![](../../1\_introduction/images/1-2/vase1.gif)
 
 ![](../images/10-1/1/vase7.png)

@@ -18,9 +18,9 @@
 
 ### Čára
 
-[Čára](5-4\_curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg).
+[Čára](5-4\_curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg).
 
-![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Křivka NURBS
 

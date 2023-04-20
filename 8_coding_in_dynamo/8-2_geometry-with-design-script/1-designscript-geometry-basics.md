@@ -77,7 +77,7 @@ surf = Surface.ByLoft([l1, l2, l3]);
 
 ### Od plochy k tělesu
 
-Plochy lze použít k vytvoření geometrie vyššího rozměru (těleso), například zesílením plochy o určitou vzdálenost. Ke spoustě objektů jsou připojeny funkcí, kterým se říká metody, a které umožňují nad daným objektem spouštět příkazy. Všechny geometrie mají společné metody _Translate_ a _Rotate_, které posunou respektive otočí geometrii o zadanou hodnotu. Plochy mají metodu _Thicken_, která jako vstup přijímá novou tloušťku plochy.
+Plochy lze použít k vytvoření geometrie vyššího rozměru (těleso), například zesílením plochy o určitou vzdálenost. K mnoha objektům jsou připojeny funkce, kterým se říká metody, a které umožňují nad daným objektem spouštět příkazy. Všechny geometrie mají společné metody _Translate_ a _Rotate_, které posunou respektive otočí geometrii o zadanou hodnotu. Plochy mají metodu _Thicken_, která jako vstup přijímá novou tloušťku plochy.
 
 ![](../images/8-2/1/GeometryBasics\_05.png)
 

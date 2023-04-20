@@ -87,7 +87,7 @@ Data tímto drátem budou protékat od vstupu do výstupu, na porty je však mo�
 
 * Chcete-li změnit propojení ke vstupnímu portu, klikněte levým tlačítkem myši na jiný vstupní port.
 
-![](images/nodesandwires-editwirechangeport(2).gif)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * Chcete-li drát odebrat, odsuňte jej pryč a klikněte levým tlačítkem myši na pracovní prostor.
 
@@ -116,7 +116,7 @@ Pokud chcete dráty v grafu skrýt, přejděte do nabídky Zobrazit > Konektory
 
 Při tomto nastavení se bledě modrou barvou zvýrazní pouze vybrané uzly a jejich spojovací dráty.
 
-![](images/nodesandwires-hidewiressetting(1).gif)
+\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### Skrytí pouze jednotlivých drátů
 

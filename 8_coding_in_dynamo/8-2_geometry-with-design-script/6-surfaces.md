@@ -43,7 +43,7 @@ surf = NurbsSurface.ByPoints(python_points_1, 6, 6);
 
 ### Šablonovaná plocha
 
-Podobně jako lze plochy vytvářet interpolací mezi sadou vstupních bodů, lze je vytvářet také interpolací mezi sadou základních křivek. Tomu se říká spojení profilů. Křivku spojením profilů lze vytvořit pomocí konstruktoru _Surface.ByLoft_, jediným jeho parametrem je kolekce vstupních křivek.
+Podobně jako lze plochy vytvářet interpolací mezi sadou vstupních bodů, lze je vytvářet také interpolací mezi sadou základních křivek. Tomu se říká šablonování. Šablonovanou křivku lze vytvořit pomocí konstruktoru _Surface.ByLoft_, jediným jeho parametrem je kolekce vstupních křivek.
 
 ![](../images/8-2/6/Surfaces\_04.png)
 
@@ -58,7 +58,7 @@ c3 = NurbsCurve.ByPoints(python_points_4);
 loft = Surface.ByLoft([c1, c2, c3]);
 ```
 
-### Rotace plochy
+### Plochy rotace
 
 Plochy rotace jsou dalším typem ploch vytvořených tažením základní křivky kolem střední osy. Pokud jsou interpolované plochy dvourozměrnou analogií interpolovaných křivek, pak rotační plochy jsou dvourozměrnou analogií kružnic a oblouků.
 

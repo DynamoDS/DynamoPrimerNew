@@ -19,15 +19,13 @@ Pro uživatele, kteří si chtějí prohlédnout ukázku pracovních postupů ap
 
 * [Parametrická váza](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
+![](images/1-2/vase1.gif)
 
 * [Body atraktoru](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} 
-Další tematická cvičení najdete v dalších kapitolách týkajících se různých aspektů aplikace Dynamo. **Cvičení** se obvykle nacházejí v poslední části každé stránky. 
-{% endhint %}
+{% hint style="info" %} Další tematická cvičení najdete v dalších kapitolách týkajících se různých aspektů aplikace Dynamo. **Cvičení** se obvykle nacházejí v poslední části každé stránky. {% endhint %}
 
 ### Komunita
 

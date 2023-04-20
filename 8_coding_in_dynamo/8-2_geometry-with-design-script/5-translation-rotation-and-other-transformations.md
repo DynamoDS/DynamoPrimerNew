@@ -76,16 +76,16 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 Změny měřítka a kolmý posun jsou mnohem složitější geometrické transformace než otočení nebo posunutí, proto je na některé objekty aplikace Dynamo nemusí být možné použít. Následující tabulka uvádí, u kterých objektů aplikace Dynamo lze provést nerovnoměrnou změnu měřítka nebo kolmý posun u jejich objektů CoordinateSystem.
 
-| Třída | CoordinateSystem s nerovnoměrně změněným měřítkem | CoordinateSystem s kolmým posunem |
+| Třída        | CoordinateSystem s nerovnoměrně změněným měřítkem | CoordinateSystem s kolmým posunem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Oblouk | Ne | Ne |
-| NurbsCurve | Ano | Ano |
-| NurbsSurface | Ne | Ne |
-| Kružnice | Ne | Ne |
-| Úsečka | Ano | Ano |
-| Rovina | Ne | Ne |
-| Bod | Ano | Ano |
-| Polygon | Ne | Ne |
-| Těleso | Ne | Ne |
-| Plocha | Ne | Ne |
-| Text | Ne | Ne |
+| Oblouk          | Ne                                    | Ne                       |
+| NurbsCurve   | Ano                                   | Ano                      |
+| NurbsSurface | Ne                                    | Ne                       |
+| Kružnice       | Ne                                    | Ne                       |
+| Úsečka         | Ano                                   | Ano                      |
+| Rovina        | Ne                                    | Ne                       |
+| Bod        | Ano                                   | Ano                      |
+| Polygon      | Ne                                    | Ne                       |
+| Těleso        | Ne                                    | Ne                       |
+| Plocha      | Ne                                    | Ne                       |
+| Text         | Ne                                    | Ne                       |

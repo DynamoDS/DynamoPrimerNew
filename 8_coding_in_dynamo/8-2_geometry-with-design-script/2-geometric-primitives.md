@@ -73,7 +73,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Přímka&#x20;
+### Čára 
 
 Primitivum s vyšším rozměrem v aplikaci Dynamo je úsečka, která představuje nekonečné množství bodů mezi dvěma koncovými body. Čáry lze vytvořit explicitním zadáním dvou okrajových bodů do konstruktoru _Line.ByStartPointEndPoint_ nebo zadáním počátečního bodu, směru a délky v tomto směru do konstruktoru _Line.ByStartPointDirectionLength_.
 

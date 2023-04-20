@@ -36,7 +36,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 ### Křivka řídicích bodů
 
-Křivky Nurbs lze vygenerovat stejným způsobem, vstupní body reprezentují koncové body úsečky a druhý parametr určuje sílu a typ vyhlazení, kterému se říká stupeň.\* Křivka se stupněm 1 nemá žádné vyhlazení, jedná se o lomenou čáru.
+Křivky Nurbs lze vygenerovat stejným způsobem, vstupní body reprezentují koncové body úsečky a druhý parametr určuje sílu a typ vyhlazení, kterému se říká stupeň.* Křivka se stupněm 1 nemá žádné vyhlazení, jedná se o křivku polyline.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-Křivka se stupněm 2 je vyhlazená, tak že prochází středy lomených čar a v průsečíku je k nim tečná:
+Křivka se stupněm 2 je vyhlazená, takže prochází středy lomených čar a v průsečíku je k nim tečná:
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -115,6 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}
-\*Jedná se o velmi zjednodušený popis geometrie křivky NURBS, přesnější a podrobnější popis naleznete v literatuře (Pottmann, et al, 2007).
-{% endhint %}
+{% hint style="info" %} *Jedná se o velmi zjednodušený popis geometrie křivky NURBS, přesnější a podrobnější popis naleznete v literatuře (Pottmann, et al, 2007). {% endhint %}

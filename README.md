@@ -55,7 +55,7 @@ Společnost **Matterlab** byla pověřena aktualizací příručky Primer tak, a
 
 Zvláštní poděkování Ianu Keoughovi za vytvoření a řízení projektu Dynamo.
 
-Děkujeme Mattu Jezykovi, Ianu Keoughovi, Zachu Kronovi, Racel Williamsové and Colinu McCroneovi za jejich spolupráci a účast na celé řadě projektů aplikace Dynamo.
+Děkujeme Mattu Jezykovi, Ianu Keoughovi, Zachu Kronovi, Racel Amourové a Colinu McCroneovi za jejich spolupráci a účast na celé řadě projektů aplikace Dynamo.
 
 ### Software a zdroje
 

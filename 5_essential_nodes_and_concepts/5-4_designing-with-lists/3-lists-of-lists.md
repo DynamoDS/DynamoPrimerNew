@@ -111,7 +111,7 @@ Uzel **List.Count** spočítá všechny položky v seznamu. Pomocí tohoto nás
 > 3. Připojte každý řádek bloku kódu do příslušných vstupů _X_ a _Y_ uzlu **Point.ByCoordinates**. Klikněte pravým tlačítkem na uzel, vyberte položku „Vázání“ a vyberte položku _„Vektorový součin“_. Tím se vytvoří osnova bodů. Vzhledem k tomu, že jsme definovali rozsah od -50 do 50, bude se rozsah pohybovat ve výchozí osnově aplikace Dynamo.
 > 4. Uzel _**Watch**_ zobrazí vytvořené body. Všimněte si datové struktury. Vytvořili jsme seznam seznamů. Každý seznam představuje řádek bodů v osnově.
 
-![Cvičení](../images/5-4/3/listsoflists-map02(1).jpg)
+\![Cvičení](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Připojte uzel **List.Count** k výstupu uzlu Watch z předchozího kroku.
 > 2. Připojte uzel **Watch** k výstupu uzlu **List.Count**.
@@ -244,7 +244,7 @@ Toto cvičení využívá část logiky stanovené v předchozím cvičení k 
 
 Začněte s výše uvedeným řetězcem uzlů. Vytváříme základní povrch, který pokrývá výchozí osnovu aplikace Dynamo.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. Pomocí **bloku kódu** vložte tyto dva řádky kódu a připojte je ke vstupům _u_ a _v_ uzlu **Surface.PointAtParameter**: `-50..50..#3;` `-50..50..#5;`
 > 2. Zkontrolujte, zda je vázání uzlu **Surface.PointAtParameter** nastaveno na možnost _„Vektorový součin“_.
@@ -252,20 +252,20 @@ Začněte s výše uvedeným řetězcem uzlů. Vytváříme základní povrch, 
 
 V tomto kroku je třeba dotazovat středový bod v osnově, kterou jste vytvořili. Chcete-li to provést, vyberte prostřední bod prostředního seznamu. To dává smysl, že?
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. Chcete-li potvrdit, že se jedná o správný bod, můžete toho dosáhnout kliknutím na položky uzlu Watch.
 > 2. Pomocí **bloku kódu** zapište základní řádek kódu k dotazování se na seznam seznamů:\
 `points[1][2];`
 > 3. Pomocí funkce **Geometry.Translate** přesuňte vybraný bod nahoru ve směru osy _Z_ o _20_ jednotek.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. Nyní vybereme také prostřední řádek bodů u uzlu **List.GetItemAtIndex**. Poznámka: Podobně jako v předchozím kroku můžete také zadat dotaz na seznam pomocí **bloku kódu** s řádkem `points[1];`.
 
 Zatím jsme se úspěšně dotázali na střed a posunuli jej nahoru. Nyní je potřeba vložit tento přesunutý bod zpět do původní datové struktury.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. Nejprve je třeba nahradit položku seznamu, kterou jsme izolovali v předchozím kroku.
 > 2. Pomocí metody **List.ReplaceItemAtIndex** nahraďte prostřední položku a použijte index _2_ s náhradní položkou připojenou k přesunutému bodu (**Geometry.Translate**).
@@ -273,18 +273,18 @@ Zatím jsme se úspěšně dotázali na střed a posunuli jej nahoru. Nyní je p
 
 Nyní, když byl seznam upraven, je třeba vložit tento seznam zpět do původní datové struktury: seznamu seznamů.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Podle stejné logiky nahraďte pomocí metody **List.ReplaceItemAtIndex** prostřední seznam upraveným seznamem.
-> 2. Všimněte si, že **bloky kódu** definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points[1][2]_).
+> 2. Všimněte si, že **bloky kódu** __ definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points[1][2]_).
 > 3. Po výběru seznamu na _indexu 1_ se v náhledu aplikace Dynamo zvýrazní datová struktura. Přesunutý bod tak byl úspěšně sloučen s původní datovou strukturou.
 
 Z této sady bodů je možné vytvořit povrch mnoha způsoby. V tomto případě se vytvoří povrch šablonováním křivek dohromady.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. Vytvořte uzel **NurbsCurve.ByPoints** a připojením nové datové struktury vytvořte tři křivky nurbs.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. Připojte uzel **Surface.ByLoft** k výstupu uzlu **NurbsCurve.ByPoints**. Nyní máme upravený povrch. Je možné změnit původní hodnotu _Z_ geometrie. Proveďte posun a sledujte, jak se geometrie aktualizuje!

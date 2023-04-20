@@ -6,12 +6,12 @@ Pokud jsou nejjednodušší formou dat čísla, nejjednodušším způsobem, jak
 
 Operátory jsou sada komponent, které používají algebraické funkce se dvěma číselnými vstupními hodnotami, které vrací jednu výstupní hodnotu (součet, rozdíl, násobení, dělení atd.). Najdete je pod položkou Operátory > Akce.
 
-| Ikona                                                | Název (Syntaxe)     | Vstupy                     | Výstupy      |
-| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Násobení (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Division.jpg)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| Ikona                                              | Název (Syntaxe)     | Vstupy                     | Výstupy      |
+| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Cvičení: Vzorec zlaté spirály
 
@@ -95,7 +95,7 @@ Dále postupujte podle těchto krátkých kroků a vygenerujte řadu spirál s 
 
 > a. **Geometry.Rotate:** Existuje několik možností **Geometry.Rotate**. Ujistěte se, že jste vybrali uzel se vstupy _geometry_, _basePlane_ a _degrees_. Připojte položku **Point.ByCoordinates** ke vstupu geometrie. Klikněte pravým tlačítkem na tento uzel a ujistěte se, že je vázání nastaveno na možnost Kartézský součin.
 >
-> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
+> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY:** Připojte se ke vstupu _basePlane_. Budeme se otáčet kolem počátku, což je stejné umístění jako základna spirály.
 >

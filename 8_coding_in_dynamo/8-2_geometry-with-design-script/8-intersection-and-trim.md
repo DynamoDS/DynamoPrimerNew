@@ -2,18 +2,18 @@
 
 Mnoho příkladů se dosud soustředilo na tvorbu vícerozměrných geometrií z méněrozměrných geometrií. Pomocí metod průsečíků je možné z vícerozměrných geometrií vygenerovat méněrozměrné objekty a po vytvoření geometrií lze jejich tvar dále upravit pomocí příkazů oříznutí.
 
-Metoda _Intersect_ je definována u všech geometrií aplikace Dynamo, teoreticky lze tedy provést průnik libovolných dvou geometrií. Některé průniky nedávají smysl, například průnik s body, protože výsledným objektem bude vždy daný vstupní bod. Další možné kombinace průniků mezi objekty jsou uvedeny v následujícím diagramu. Následující tabulka uvádí výsledky různých operací průniku:
+Metoda _Intersect_ je definována u všech geometrií aplikace Dynamo, teoreticky lze tedy provést průnik libovolných dvou geometrií. Některé průniky samozřejmě nedávají smysl, například průnik s body, protože výsledným objektem bude vždy samotný vstupní bod. Další možné kombinace průniků mezi objekty jsou uvedeny v následujícím diagramu. Následující tabulka uvádí výsledky různých operací průniku:
 
 ### **Průnik**
 
-| _Objektů:_ | Plocha | Křivka | Rovina | Těleso |
+| _S hodnotami:_     | Povrch | Křivka | Rovina        | Těleso   |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Plocha** | Křivka | Bod | Bod, křivka | Plocha |
-| **Křivka** | Bod | Bod | Bod | Křivka |
-| **Rovina** | Křivka | Bod | Křivka | Křivka |
-| **Těleso** | Plocha | Křivka | Křivka | Těleso |
+| **Povrch** | Křivka   | Bod | Bod, křivka | Povrch |
+| **Křivka**   | Bod   | Bod | Bod        | Křivka   |
+| **Rovina**   | Křivka   | Bod | Křivka        | Křivka   |
+| **Těleso**   | Povrch | Křivka | Křivka        | Těleso   |
 
-Následující velmi jednoduchý příklad ukazuje průnik roviny s plochou Nurbs. Průnik vygeneruje pole objektů NurbsCurve, které lze používat jako kterékoliv jiné křivky Nurbs.
+Následující velmi jednoduchý příklad ukazuje průnik roviny s plochou Nurbs. Průnik vygeneruje pole objektů NurbsCurve, které lze používat jako kterékoliv jiné objekty NurbsCurve.
 
 ![](../images/8-2/8/IntersectionAndTrim\_01.png)
 
@@ -40,10 +40,10 @@ Metoda _Trim_ je velmi podobná metodě Intersect v tom, že je definována u 
 
 |             | _Používá:_ Bod | Křivka | Rovina | Plocha | Těleso |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _Na:_ Křivka | Ano | Ne | Ne | Ne | Ne |
-| Polygon | - | Ne | Ano | Ne | Ne |
-| Plocha | - | Ano | Ano | Ano | Ano |
-| Těleso | - | - | Ano | Ano | Ano |
+| _Na:_ Křivka | Ano            | Ne    | Ne    | Ne      | Ne    |
+| Polygon     | -              | Ne    | Ano   | Ne      | Ne    |
+| Plocha     | -              | Ano   | Ano   | Ano     | Ano   |
+| Těleso       | -              | -     | Ano   | Ano     | Ano   |
 
 U metody _Trim_ je nutné zadat výběrový bod, který určuje, která geometrie má být zahozena a která má být zachována. Aplikace vyhledá a zahodí oříznutou geometrii, která bude výběrovému bodu nejblíže.
 

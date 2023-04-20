@@ -1,6 +1,6 @@
 # Stažení souboru PDF
 
-Chcete-li získat přístup k informacím v této příručce offline, stáhněte si soubor PDF:&#x20;
+Chcete-li získat přístup k informacím v této příručce offline, stáhněte si soubor PDF: 
 
 ## Verze:
 

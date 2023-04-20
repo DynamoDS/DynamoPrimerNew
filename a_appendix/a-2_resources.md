@@ -4,7 +4,7 @@
 
 ### **Wiki aplikace Dynamo**
 
-„Tato wiki slouží pro seznámení s vývojem pomocí API aplikace Dynamo, která podporuje knihovny a nástroje.“
+Tato wiki slouží k seznámení s vývojem pomocí API aplikace Dynamo, která podporuje knihovny a nástroje.
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
@@ -22,13 +22,13 @@ Programovací jazyky slouží k vyjádření nápadů, které zahrnují logiku 
 
 ### **Projekt Dynamo Primer**
 
-Dynamo Primer je projekt s otevřeným zdrojovým kódem, který vytvořil Matt Jezyk a tým vývojářů Dynamo společnosti Autodesk. První verze příručky Primer byla vyvinuta společností Mode Lab. Chcete-li k projektu přispět, forkněte repozitář, přidejte obsah a odešlete pull request.
+Dynamo Primer je projekt s otevřeným zdrojovým kódem, který vytvořil Matt Jezyk a tým vývojářů aplikace Dynamo společnosti Autodesk. První verze příručky Primer byla vyvinuta společností Mode Lab. Chcete-li k projektu přispět, forkněte repozitář, přidejte obsah a odešlete pull request.
 
 [https://github.com/DynamoDS/DynamoPrimer](https://github.com/DynamoDS/DynamoPrimer)
 
 ### **Vývoj doplňku Zero Touch pro aplikaci Dynamo**
 
-Tato stránka popisuje vývoj vlastního uzlu aplikace Dynamo v jazyku C# pomocí rozhraní „Zero Touch“. Ve většině případů lze statické metody a třídy jazyka C# importovat bez úprav. Pokud vaše knihovna potřebuje pouze volat funkce a nikoliv vytvářet nové objekty, toho lze dosáhnout velmi snadno pomocí statických metod. Když aplikace Dynamo načte vaši knihovnu DLL, odstraní jmenný prostor vašich tříd a zpřístupní všechny statické metody jako uzly.
+Tato stránka popisuje vývoj vlastního uzlu aplikace Dynamo v jazyku C# pomocí rozhraní Zero Touch. Ve většině případů lze statické metody a třídy jazyka C# importovat bez úprav. Pokud vaše knihovna potřebuje pouze volat funkce a nikoliv vytvářet nové objekty, lze toho dosáhnout velmi snadno pomocí statických metod. Když aplikace Dynamo načte vaši knihovnu DLL, odstraní obor názvů prostor vašich tříd a zpřístupní všechny statické metody jako uzly.
 
 [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development)
 
@@ -68,11 +68,11 @@ MathWorld je online matematický zdroj, který vytvořil Eric W. Weisstein spolu
 
 ### **Revit Python Shell**
 
-„RevitPythonShell přidává do aplikací Autodesk Revit a Vasari interpret IronPython.“ Tento projekt se starší než aplikace Dynamo a je skvělou předlohou pro vývoj v jazyce Python. Projekt RPS:&#x20;
+„RevitPythonShell přidává do aplikací Autodesk Revit a Vasari interpret IronPython.“ Tento projekt je starší než aplikace Dynamo a je skvělou referencí pro vývoj v jazyce Python. Projekt RPS: 
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell 
 
-Blog pro vývojáře:&#x20;
+Blog pro vývojáře: 
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 

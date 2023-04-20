@@ -4,23 +4,23 @@ Tato referenční stránka rozšiřuje doporučené postupy popsané ve skriptov
 
 ## Které knihovny se mají použít
 
-Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v programovacích jazycích Python a C# (Zerotouch). Aplikace Dynamo má také vlastní sadu knihoven, které přímo odpovídají hierarchii uzlu aplikace Dynamo, což uživateli umožňuje vytvořit v kódu cokoliv, co by mohlo být vytvořeno pomocí uzlů a drátů. Následuje příručka, která popisuje, jak jednotlivé knihovny aplikace Dynamo poskytují přístup a kdy mají používat standardní knihovnu.
+Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v programovacích jazycích Python a C# (Zerotouch). Aplikace Dynamo má také vlastní sadu knihoven, které přímo odpovídají hierarchii uzlu aplikace Dynamo, což uživateli umožňuje vytvořit v kódu cokoliv, co by mohlo být vytvořeno pomocí uzlů a drátů. V následující části je uveden postup, jak jednotlivé knihovny aplikace Dynamo poskytují přístup a kdy mají používat standardní knihovnu.
 
 ![](./images/3/textual-programming.jpg)
 
 **Standardní knihovny a knihovny aplikace Dynamo**
 
 * K vytvoření pokročilých dat a toků struktur v prostředí aplikace Dynamo lze použít i standardní knihovny jazyků Python a C#.
-* Knihovny aplikace Dynamo přímo odpovídají hierarchii uzlů k vytváření geometrie a dalších objektů aplikace Dynamo.
+* Knihovny aplikace Dynamo přímo odpovídají hierarchii uzlů pro vytváření geometrie a dalších objektů aplikace Dynamo.
 
 **Knihovny aplikace Dynamo**
 
-1. ProtoGeometry\*
+1.  ProtoGeometry*
 
-   * Funkce: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
-   * Způsob importu: `import Autodesk.DesignScript.Geometry`
+    * Funkce: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
+    * Způsob importu: `import Autodesk.DesignScript.Geometry`
 
-   ``
+    \`\`
 2. DSCoreNodes
    * Funkce: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
    * Způsob importu: `import DSCore`
@@ -31,9 +31,7 @@ Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v pr
    * Funkce: Excel.
    * Způsob importu: `import DSOffice`
 
-{% hint style="warning" %}
-\*Poznámka: Při použití knihovny **protoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete níže v části **Nespravované objekty**.
-{% endhint %}
+{% hint style="warning" %} *Poznámka: Při použití knihovny **protoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete níže v části **Nespravované objekty**. {% endhint %}
 
 ## Pečlivé použití popisků
 
@@ -108,7 +106,7 @@ agents_active = …
 agents_dead = ...
 ```
 
-> Je to rozumnější, ze strukturálního hlediska.
+> Z hlediska struktury je to rozumnější.
 
 **Zkratky by se měly používat ke zkrácení příliš dlouhých a často opakovaných řetězců:**
 
@@ -130,7 +128,7 @@ doc = DM.Instance.CurrentDBDocument
 uiapp = DM.Instance.CurrentUIApplication
 ```
 
-> Aliasing může rychle vést k velmi matoucím a nestandardním programům.
+> Používání zkratek může rychle vést k velmi matoucím a nestandardním programům.
 
 **Používejte pouze nezbytná slova:**
 
@@ -153,78 +151,78 @@ Obecně řečeno, existuje více než jeden způsob, jak něco programovat, prot
 **Konvence pojmenování:** (Vyberte jednu z níže uvedených konvencí pro každý typ entity v kódu a držte se jí.)
 
 * Proměnné, funkce, metody, balíčky, moduly:\
-   `lower_case_with_underscores`
+ `lower_case_with_underscores`
 * Třídy a výjimky:\
-   `CapWords`
+ `CapWords`
 * Chráněné metody a vnitřní funkce:\
-   `_single_leading_underscore(self, ...)`
+ `_single_leading_underscore(self, ...)`
 * Soukromé metody:\
-   `__double_leading_underscore(self, ...)`
-* Konstanty:\
-   `ALL_CAPS_WITH_UNDERSCORES`
+ `__double_leading_underscore(self, ...)`
+* Konstanty: \
+ `ALL_CAPS_WITH_UNDERSCORES`
 
-> Tip: Vyhněte se jednopísmenným proměnným (zvláště l, O, I) kromě velmi krátkých bloků, pokud je význam zřetelně viditelný z bezprostředního kontextu.
+> Tip: Vyhněte se jednopísmenným proměnným (zvláště I, O, I) kromě velmi krátkých bloků, kdy je význam zřetelně viditelný z bezprostředního kontextu.
 
 **Použití prázdných řádků:**
 
-* Obklopujte funkce a definice tříd dvěma prázdnými řádky.
-   * Definice metody uvnitř třídy jsou obklopeny jedním prázdným řádkem.
-   * Pro oddělení skupin souvisejících funkcí lze použít (střídmě) další prázdné řádky.
+* Definice funkcí a tříd nejvyšší úrovně obklopte dvěma prázdnými řádky.
+  * Definice metody uvnitř třídy jsou obklopeny jedním prázdným řádkem.
+  * Pro oddělení skupin souvisejících funkcí lze použít (střídmě) další prázdné řádky.
 
-**Vyhněte se nadbytečnému bílému prostoru:**
+**Vyhněte se nadbytečným prázdným znakům:**
 
-* Bezprostředně uvnitř závorek:
+*   Bezprostředně uvnitř závorek:
 
-   ```
-   ### BAD
-   function( apples[ 1 ], { oranges: 2 } )
-   ```
+    ```
+    ### BAD
+    function( apples[ 1 ], { oranges: 2 } )
+    ```
 
-   ```
-   ### GOOD:
-   function(apples[1], {oranges: 2})
-   ```
-* Bezprostředně před čárkou, středníkem nebo dvojtečkou:
+    ```
+    ### GOOD:
+    function(apples[1], {oranges: 2})
+    ```
+*   Bezprostředně před čárkou, středníkem nebo dvojtečkou:
 
-   ```
-   ### BAD
-    if x == 2 : print x , y ; x , y = y , x
-   ```
+    ```
+    ### BAD
+     if x == 2 : print x , y ; x , y = y , x
+    ```
 
-   ```
-   ### GOOD
-     if x == 2: print x, y; x, y = y, x
-   ```
-* Bezprostředně před otevřenou závorkou, která začíná seznam argumentů volání funkce:
+    ```
+    ### GOOD
+      if x == 2: print x, y; x, y = y, x
+    ```
+*   Bezprostředně před otevřenou závorkou, která začíná seznam argumentů volání funkce:
 
-   ```
-   ### BAD
-   function (1)
-   ```
+    ```
+    ### BAD
+    function (1)
+    ```
 
-   ```
-   ### GOOD
-   function(1)
-   ```
-* Bezprostředně před otvírací závorkou, která začíná indexování nebo řezy:
+    ```
+    ### GOOD
+    function(1)
+    ```
+*   Bezprostředně před otvírací závorkou, která začíná indexování nebo řezy:
 
-   ```
-   ### BAD
-   dict ['key'] = list [index]
-   ```
+    ```
+    ### BAD
+    dict ['key'] = list [index]
+    ```
 
-   ```
-   ### GOOD
-   dict['key'] = list[index]
-   ```
-* Vždy obklopte tyto binární operátory jednou mezerou na obou stranách:
+    ```
+    ### GOOD
+    dict['key'] = list[index]
+    ```
+*   Vždy obklopte tyto binární operátory jednou mezerou na obou stranách:
 
-   ```
-   assignment ( = )
-   augmented assignment ( += , -= etc.)
-   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-   Booleans ( and , or , not )
-   ```
+    ```
+    assignment ( = )
+    augmented assignment ( += , -= etc.)
+    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+    Booleans ( and , or , not )
+    ```
 
 **Dávejte pozor na délku řádků:**
 
@@ -235,26 +233,26 @@ Obecně řečeno, existuje více než jeden způsob, jak něco programovat, prot
 **Vyhněte se zjevným a nadbytečným komentářům:**
 
 * Někdy méně komentářů znamená čitelnější kód. Zvláště pokud vás nutí místo toho použít smysluplné názvy symbolů.
-* Přijetí kvalitních kódovacích návyků snižuje závislost na komentářích:
+*   Přijetí kvalitních kódovacích návyků snižuje závislost na komentářích:
 
-   ```
-   ### BAD
-     # get the country code
-     country_code = get_country_code(address)
+    ```
+    ### BAD
+      # get the country code
+      country_code = get_country_code(address)
 
-     # if country code is US
-     if (country_code == 'US'):
-       # display the form input for state
-       print form_input_state()
-   ```
+      # if country code is US
+      if (country_code == 'US'):
+        # display the form input for state
+        print form_input_state()
+    ```
 
-   ```
-   ### GOOD
-     # display state selection for US users
-     country_code = get_country_code(address)
-     if (country_code == 'US'):
-       print form_input_state()
-   ```
+    ```
+    ### GOOD
+      # display state selection for US users
+      country_code = get_country_code(address)
+      if (country_code == 'US'):
+        print form_input_state()
+    ```
 
 > Tip: Komentáře vám vysvětlují proč, kód vám říká jak.
 
@@ -262,23 +260,23 @@ Obecně řečeno, existuje více než jeden způsob, jak něco programovat, prot
 
 * Projekty s otevřeným zdrojovým kódem jsou založeny na spolupráci mnoha vývojářů. Tyto projekty musí udržovat vysokou úroveň čitelnosti kódu, aby tým mohl pracovat co nejúčinněji. Proto je vhodné procházet zdrojový kód těchto projektů a sledovat, co tito vývojáři provádějí.
 * Vylepšete své konvence:
-   * Je třeba se ptát, zda každá konvence funguje pro současné potřeby.
-   * Je ohrožena funkčnost/účinnost?
+  * Je třeba se ptát, zda každá konvence funguje pro současné potřeby.
+  * Je ohrožena funkčnost/účinnost?
 
 ## Standardy C# (Zerotouch)
 
 **Na těchto stránkách Wiki naleznete rady pro psaní C# pro Zerotouch a přispívání do aplikace Dynamo:**
 
-* Tato nápověda Wiki se zabývá některými obecnými standardy kódování pro dokumentaci a testování vašeho kódu: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards).
-* Tato nápověda Wiki se zabývá zejména standardy pojmenování knihoven, kategorií, názvů uzlů, názvů portů a zkratek: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards).
+* Tato nápověda Wiki obsahuje některé obecné standardy kódování pro dokumentaci a testování vašeho kódu: [https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards)
+* Tato nápověda Wiki se týká zejména norem pojmenování knihoven, kategorií, názvů uzlů, názvů portů a zkratek: [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
 **Nespravované objekty:**
 
-Při používání knihovny geometrie aplikace Dynamo _(ProtoGeometry)_ z geometrických objektů v jazyce Python nebo C# nebudou vytvářené objekty spravovány virtuálním počítačem a paměť po mnoha těchto objektech bude nutné vyčistit ručně. Chcete-li vyčistit nativní nebo nespravované objekty, můžete použít metodu **Dispose** nebo klíčové slovo **using**. Přehled najdete v této nápovědě Wiki: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
+Při používání knihovny geometrie aplikace Dynamo _(ProtoGeometry)_ z geometrických objektů v jazyce Python nebo C# nebudou vytvářené objekty spravovány virtuálním počítačem a paměť po mnoha těchto objektech bude nutné vyčistit ručně. Chcete-li vyčistit nativní nebo nespravované objekty, můžete použít metodu **Dispose** nebo klíčové slovo **using**. Přehled najdete v této položce Wiki: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-Je nutné pouze zpracovat nespravované zdroje, které se nevrací do grafu, nebo se na ně neukládá odkaz. Ve zbytku této části odkazujeme na tyto objekty jako _mezilehlou geometrii_. Příklad této třídy objektu je uveden v příkladu kódu níže. Tato funkce **singleCube** s nulovým dotykem C# vrací jednu krychli, ale během provádění vytvoří 10000 dalších krychlí. Můžeme předstírat, že tato jiná geometrie byla použita jako mezilehlá konstrukční geometrie.
+Je nutné pouze uvolnit nespravované zdroje, které se nevrací do grafu, nebo se na ně neukládá odkaz. Ve zbytku této části odkazujeme na tyto objekty jako _mezilehlou geometrii_. Příklad této třídy objektu je uveden v příkladu kódu níže. Tato funkce Zero Touch jazyka C# **singleCube** vrací jednu krychli, ale během provádění vytvoří 10 000 dalších krychlí. Můžeme předstírat, že tato jiná geometrie byla použita jako mezilehlá konstrukční geometrie.
 
-**Tato funkce nulového dotyku pravděpodobně způsobí selhání aplikace Dynamo.** Protože jsme vytvořili 10000 těles, ale pouze jedno z nich bylo uloženo a pouze toto bylo vráceno. Místo toho bychom měli odstranit všechny naše mezilehlé kostky, kromě té, kterou vrátíme. Nechceme odstranit tu, kterou vrátíme, protože bude propagována do grafu a použita jinými uzly.
+**Tato funkce Zero Touch pravděpodobně způsobí selhání aplikace Dynamo.** Protože jsme vytvořili 10 000 těles, ale pouze jedno z nich bylo uloženo a pouze toto bylo vráceno. Místo toho bychom měli odstranit všechny mezilehlé krychle, kromě té, kterou vrátíme. Nechceme odstranit tu, kterou vrátíme, protože bude propagována do grafu a použita jinými uzly.
 
 ```
 public Cuboid singleCube(){
