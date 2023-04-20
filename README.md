@@ -55,7 +55,7 @@ Aktualizację tego przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dy
 
 Specjalne podziękowania kierujemy do Iana Keougha za rozpoczęcie i prowadzenie projektu Dynamo.
 
-Dziękujemy Mattowi Jezykowi, Ianowi Keoughowi, Zachowi Kronowi, Racel Williams i Colinowi McCrone'owi za entuzjastyczną współpracę i możliwość wzięcia udziału w szerokiej gamie projektów dodatku Dynamo.
+Dziękujemy Mattowi Jezykowi, Ianowi Keoughowi, Zachowi Kronowi, Racel Amour i Colinowi McCrone'owi za entuzjastyczną współpracę i możliwość wzięcia udziału w szerokiej gamie projektów dodatku Dynamo.
 
 ### Oprogramowanie i zasoby
 

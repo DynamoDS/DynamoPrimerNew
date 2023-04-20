@@ -27,13 +27,13 @@ Przeglądaj bibliotekę, klikając poszczególne menu, aby rozwijać kategorie i
 
 Zapewnia to dodatkowe skategoryzowanie węzłów należących do tej samej podkategorii w zależności od tego, czy węzły **tworzą** dane, wykonują **operacje**, czy wysyłają **zapytania** dotyczące danych.
 
-* ![](images/3-2/userinterface-create.jpg) **Create** — węzły tworzenia: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
-* ![](images/3-2/userinterface-action.jpg) **Action** — węzły działań: wykonują operacje na obiekcie. Np. skalowanie okręgu.
-* ![](images/3-2/userinterface-query.jpg) **Query** — węzły zapytań: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
+* \![](<images/3-2/user interface - create.jpg>) **Create — węzły tworzenia**: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
+* \![](<images/3-2/user interface - action.jpg>) **Action — węzły operacji**: wykonują operacje na obiekcie. Np. skalowanie okręgu.
+* \![](<images/3-2/user interface - query.jpg>) **Query — węzły zapytań**: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
 
 Umieść wskaźnik myszy na węźle, aby wyświetlić informacje bardziej szczegółowe od jego nazwy i ikony. Dzięki temu można szybko zrozumieć, do czego służy węzeł, jakich wejść wymaga i jakie będą jego dane wyjściowe.
 
-![](images/3-2/userinterface-nodedescription.jpg)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Opis — prosty opis węzła
 > 2. Ikona — większa wersja ikony w menu Biblioteka
@@ -46,7 +46,7 @@ Jeśli dosyć dobrze wiadomo, jaki węzeł ma zostać dodany do obszaru roboczeg
 
 Wybierz, klikając węzeł, który chcesz dodać, lub naciśnij klawisz Enter, aby dodać wyróżnione węzły do środka obszaru roboczego.
 
-![](images/3-2/userinterface-search.jpg)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Wyszukiwanie według hierarchii
 
@@ -58,7 +58,7 @@ Wpisanie różnych części miejsca węzła w hierarchii biblioteki w formacie `
 
 * `library.category.nodeName`
 
-![](<images/3-2/library-searchbyhierarchygeometrypointbycoordinates(1) (1).jpg>)
+![](images/3-2/library-searchbyhierarchygeometrypointbycoordinates\(1\).jpg)
 
 * `category.nodeName`
 
@@ -123,9 +123,9 @@ Węzły Code Block (bloki kodu) umożliwiają definiowanie bloku kodu z wierszam
 
 Bloków kodu można też używać jako skrótów do definiowania wejścia liczbowego lub wywoływania funkcji innego węzła. Składnia potrzebna do tego celu jest zgodna z konwencją nazewnictwa języka tekstowego Dynamo, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
 
-Oto prosty przykład (z instrukcjami) użycia bloku kodu w skrypcie.
+Oto prosty przykład (z instrukcjami) użycia węzła Code Block w skrypcie.
 
-![](images/3-2/library-codeblockdemo.gif)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Kliknij dwukrotnie, aby utworzyć węzeł Code Block
 2. `Circle.ByCenterPointRadius(x,y);`Typ

@@ -18,9 +18,9 @@
 
 ### Linia
 
-[Linia](5-4\_curves.md#lines) składa się z zestawu punktów; każda linia ma co najmniej 2 punkty. Jednym z najpopularniejszych sposobów tworzenia linii w dodatku Dynamo jest użycie `Line.ByStartPointEndPoint` ![](./images/5-2/4/Linebystartpointendpoint.jpg) w celu utworzenia linii w dodatku Dynamo.
+[Linia](5-4\_curves.md#lines) składa się z zestawu punktów; każda linia ma co najmniej 2 punkty. Jednym z najpopularniejszych sposobów tworzenia linii w dodatku Dynamo jest użycie `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) w celu utworzenia linii w dodatku Dynamo.
 
-![](../images/5-2/4/curves-linebystartpointendpoint.jpg)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Krzywa NURBS
 

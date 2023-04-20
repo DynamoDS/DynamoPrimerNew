@@ -76,16 +76,16 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 Skalowanie i ścinanie to względnie bardziej skomplikowane transformacje geometryczne niż obrót i przekształcenie, więc nie każdy obiekt Dynamo może je przejść. W poniższej tabeli przedstawiono ogólnie, które obiekty Dynamo mogą mieć niejednorodnie skalowane obiekty CoordinateSystem i ścięte obiekty CoordinateSystem.
 
-| Klasa | Niejednorodnie skalowany obiekt CoordinateSystem | Ścięty obiekt CoordinateSystem |
+| Klasa        | Niejednorodnie skalowany obiekt CoordinateSystem | Ścięty obiekt CoordinateSystem |
 | ------------ | ------------------------------------- | ------------------------ |
-| Łuk | Nie | Nie |
-| Krzywa NurbsCurve | Tak | Tak |
-| Powierzchnia NurbsSurface | Nie | Nie |
-| Okrąg | Nie | Nie |
-| Linia | Tak | Tak |
-| Płaszczyzna | Nie | Nie |
-| Punkt | Tak | Tak |
-| Wielobok | Nie | Nie |
-| Wypełnienie | Nie | Nie |
-| Powierzchnia | Nie | Nie |
-| Tekst | Nie | Nie |
+| Łuk          | Nie                                    | Nie                       |
+| Krzywa NurbsCurve   | Tak                                   | Tak                      |
+| Powierzchnia NurbsSurface | Nie                                    | Nie                       |
+| Okrąg       | Nie                                    | Nie                       |
+| Linia         | Tak                                   | Tak                      |
+| Płaszczyzna        | Nie                                    | Nie                       |
+| Punkt        | Tak                                   | Tak                      |
+| Wielobok      | Nie                                    | Nie                       |
+| Wypełnienie        | Nie                                    | Nie                       |
+| Powierzchnia      | Nie                                    | Nie                       |
+| Tekst         | Nie                                    | Nie                       |

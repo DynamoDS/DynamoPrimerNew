@@ -8,4 +8,4 @@ _Choć funkcje słowników były dostępne w dodatku Dynamo już od jakiegoś cz
 
 ![](../images/5-5/wildDictionary.png)
 
-Oryginalny obraz za zgodą: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)
+Obraz oryginalny za zgodą: [_sixtysecondrevit.com_](http://sixtysecondrevit.com/2018-01-22-new-dictionary-nodes-in-dynamobim-daily-build/)

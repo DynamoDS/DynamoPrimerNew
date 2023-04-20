@@ -30,7 +30,7 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 * Czasami przy użyciu węzła Code Block można **szybko wpisać numer lub metodę węzła, zamiast wyszukiwać tę informację** (Point.ByCoordinates, Number, String, Formula).
 * Węzły Code Block są przydatne, **gdy trzeba zdefiniować funkcje niestandardowe w skrypcie DesignScript w celu ograniczenia liczby węzłów wykresu**.
 
-![](images/1/graphstrategy3(1).png)
+![](images/1/graphstrategy3\(1\).png)
 
 > Bloki 1 i 2 realizują tę samą funkcję. Szybciej jest napisać kilka wierszy kodu niż wyszukiwać i dodawać poszczególne węzły. Blok kodu jest też krótszy.
 >
@@ -65,7 +65,7 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 * Funkcja List@Level umożliwia **ograniczenie złożoności wykresu przez zastąpienie węzłów List.Map i List.Combine**, które mogą zajmować dużo miejsca na obszarze projektowania.
 * Funkcja List@Level oferuje** szybszą metodę tworzenia logiki węzłów niż węzły List.Map/List.Combine**. Umożliwia ona uzyskiwanie dostępu do danych na każdym poziomie listy wprost z poziomu portu wejściowego węzła.
 
-![](images/1/graphstrategy4(1)(1).png)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Można zweryfikować, ile wartości True z których list zwraca funkcja BoundingBox.Contains, aktywując funkcję List@Level dla wejścia „list” (lista) modułu CountTrue. Funkcja List@Level pozwala użytkownikowi określić, z jakiego poziomu danych wejściowych są pobierane dane. Korzystanie z funkcji List@Level jest elastyczne, efektywne i zalecane jako metoda skuteczniejsza niż stosowanie węzłów List.Map i List.Combine.
 >
@@ -84,7 +84,7 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 * Jeśli inne osoby będą pracowały nad tym samym wykresem, należy **zagwarantować płynny przepływ połączeń między węzłami przed dostarczeniem wykresu**.
 * Aby w prosty sposób wyrównać wykres, **można użyć funkcji Wyczyść układ węzłów, która robi to automatycznie** (choć mniej dokładnie niż człowiek).
 
-![](images/1/graphstrategy5(2)(1).png)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Nieuporządkowany wykres
 > 2. Wyrównany wykres
@@ -170,7 +170,7 @@ Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet je
 * W ramach szablonu można ustalić **standardowe kolory i rozmiary czcionek grup, które ułatwiają klasyfikację typów procesów roboczych i działań na danych**.
 * Tworząc szablon, można nawet określić standardowe **etykiety, kolory lub różnice stylów między procesami roboczymi (dostępnymi dla użytkownika) a wewnętrznymi** na wykresie.
 
-![](images/1/graphstrategy10(2).png)
+![](images/1/graphstrategy10\(2\).png)
 
 > 1. Interfejs programu (elementy dostępne dla użytkownika) — nazwa projektu, suwaki danych wejściowych i importowana geometria.
 > 2. Elementy wewnętrzne programu.
@@ -217,7 +217,7 @@ Po ustaleniu grup rozmieścimy węzły tak, aby wykres zawierał ciągły przep�
 
 Program będzie czytelniejszy, gdy dodamy kolejną warstwę ulepszeń graficznych. Dodaj notatki, aby opisać działanie danej części programu. Nadaj niestandardowe nazwy danym wejściowym. Przypisz kolory różnym typom grup.
 
-![](images/1/graphstrategy15(1).png)
+![](images/1/graphstrategy15\(1\).png)
 
 > Te ulepszenia graficzne powiedzą użytkownikom więcej o działaniu programu. Różne kolory grup ułatwiają odróżnianie danych wejściowych od funkcji.
 >

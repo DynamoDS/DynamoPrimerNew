@@ -1,6 +1,6 @@
 # Pobierz plik PDF
 
-Aby uzyskać dostęp do informacji na temat tego przewodnika Primer w trybie offline, pobierz plik pdf:&#x20;
+Aby uzyskać dostęp do informacji na temat tego przewodnika Primer w trybie offline, pobierz plik pdf: 
 
 ## Wersje:
 

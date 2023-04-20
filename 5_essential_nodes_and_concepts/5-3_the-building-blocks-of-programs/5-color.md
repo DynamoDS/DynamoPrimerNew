@@ -6,29 +6,29 @@ Kolor to doskonały typ danych do tworzenia atrakcyjnych wizualizacji, a także 
 
 Kolory w dodatku Dynamo są tworzone przy użyciu danych wejściowych ARGB. Odpowiadają one kanałom alfa, czerwonemu, zielonemu i niebieskiemu. Alfa określa _przezroczystość_ koloru, natomiast pozostałe trzy kanały są używane jako kolory podstawowe, łączone w celu generowania całego spektrum barw.
 
-| Ikona                                          | Nazwa (składnia)                 | Dane wejściowe  | Dane wyjściowe |
-| --------------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](../images/5-3/5/ColorbyARGB.jpg) | Kolor ARGB (**Color.ByARGB**) | A, R, G, B | color   |
+| Ikona                                     | Nazwa (składnia)                 | Dane wejściowe  | Dane wyjściowe |
+| ---------------------------------------- | ----------------------------- | ------- | ------- |
+| \![](<../images/5-1/ColorbyARGB (1).jpg>) | Kolor ARGB (**Color.ByARGB**) | A, R, G, B | color   |
 
 ### Zapytania o wartości kolorów
 
 Kolory w poniższej tabeli umożliwiają wykonywanie zapytań o właściwości użyte do zdefiniowania koloru: alfa, czerwony, zielony i niebieski. Należy zauważyć, że węzeł Color.Components zawiera wszystkie cztery elementy wyjściowe, a więc jest zalecany do wykonywania zapytań o właściwości koloru.
 
-| Ikona                                             | Nazwa (składnia)                     | Dane wejściowe | Dane wyjściowe    |
-| ------------------------------------------------ | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorAlpha.jpg) | Alfa (**Color.Alpha**)           | color  | A          |
-| ![](../images/5-3/5/ColorRed.jpg)       | Red (**Color.Red**)               | color  | R          |
-| ![](../images/5-3/5/ColorGreen.jpg) | Green (**Color.Green**)           | color  | G          |
-| ![](../images/5-3/5/ColorBlue.jpg)      | Blue (**Color.Blue**)             | color  | B          |
-| ![](../images/5-3/5/ColorComponent.jpg) | Components (**Color.Components**) | color  | A, R, G, B |
+| Ikona                                          | Nazwa (składnia)                     | Dane wejściowe | Dane wyjściowe    |
+| --------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| \![](<../images/5-1/ColorRed (1).jpg>)         | Red (**Color.Red**)               | color  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Green (**Color.Green**)           | color  | G          |
+| \![](<../images/5-1/ColorBlue (1).jpg>)        | Blue (**Color.Blue**)             | color  | B          |
+| \![](<../images/5-1/ColorComponent (1).jpg>)   | Components (**Color.Components**) | color  | A, R, G, B |
 
 Kolory w poniższej tabeli odpowiadają **przestrzeni kolorów HSB**. Podział koloru na barwę, nasycenie i jasność jest bardziej intuicyjny pod względem interpretacji kolorów: jaki to kolor? Jak bardzo jest intensywny? Jak bardzo jest jasny lub ciemny? To właśnie podział na barwę, nasycenie i jasność.
 
-| Ikona                                              | Nazwa (składnia)                     | Dane wejściowe | Dane wyjściowe    |
-| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](../images/5-3/5/ColorHue.jpg)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](../images/5-3/5/ColorSaturation.jpg) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](../images/5-3/5/ColorBrightness.jpg) | Brightness (**Color.Brightness**) | color  | Brightness |
+| Ikona                                         | Nazwa (składnia)                     | Dane wejściowe | Dane wyjściowe    |
+| -------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorHue (1).jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
+| \![](<../images/5-1/ColorSaturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
+| \![](<../images/5-1/ColorBrightness (1).jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
 
 ### Zakres kolorów
 
@@ -53,7 +53,7 @@ Węzeł **Display.ByGeometry** umożliwia pokolorowanie geometrii w rzutni dodat
 
 Węzeł **Display.BySurfaceColors** umożliwia odwzorowywanie danych na powierzchni za pomocą koloru. Ta funkcja wprowadza wiele ciekawych możliwości wizualizacji danych uzyskanych metodą analizy dyskretnej, na przykład światła słonecznego, energii i bliskości. Stosowanie koloru do powierzchni w dodatku Dynamo przebiega podobnie do stosowania tekstury do materiału w innych środowiskach CAD. W krótkim ćwiczeniu poniżej pokazano, jak używać tego narzędzia.
 
-![](../images/5-3/5/12(1).jpg)
+![](../images/5-3/5/12\(1\).jpg)
 
 ## Ćwiczenie
 

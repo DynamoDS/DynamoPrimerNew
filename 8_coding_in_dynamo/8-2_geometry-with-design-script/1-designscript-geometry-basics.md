@@ -97,7 +97,7 @@ surf = Surface.ByLoft([l1, l2]);
 solid = surf.Thicken(4.75, true);
 ```
 
-### Iloczyn logiczny
+### Przecięcie
 
 Polecenia _Intersection_ mogą wyodrębniać geometrię niższych wymiarów z obiektów wyższych wymiarów. Ta wyodrębniona geometria niższych wymiarów może stanowić podstawę dla geometrii wyższych wymiarów w cyklicznym procesie tworzenia, wyodrębniania i ponownego tworzenia geometrii. W tym przykładzie używamy wygenerowanej bryły do utworzenia powierzchni, a następnie używamy tej powierzchni do utworzenia krzywej.
 

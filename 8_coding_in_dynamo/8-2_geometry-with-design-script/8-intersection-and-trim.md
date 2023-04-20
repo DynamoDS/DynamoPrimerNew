@@ -4,14 +4,14 @@ Wiele z dotychczasowych przykładów koncentrowało się na konstruowaniu geomet
 
 Metoda _Intersect_ jest zdefiniowana dla wszystkich elementów geometrii w dodatku Dynamo, co oznacza, że teoretycznie każdy element geometrii może zostać przecięty za pomocą dowolnego innego elementu geometrii. Naturalnie niektóre przecięcia są bez znaczenia, na przykład przecięcia z punktami, ponieważ obiekt wynikowy będzie zawsze punktem wejściowym. Pozostałe możliwe kombinacje przecięć między obiektami zostały przedstawione w poniższym zestawieniu. W poniższej tabeli przedstawiono wyniki różnych operacji przecięcia:
 
-### **Przecięcie**
+### **Intersect**
 
-| _Z:_ | Powierzchnia | Łuk | Płaszczyzna | Wypełnienie |
+| _Z:_     | Powierzchnia | Łuk | Płaszczyzna        | Bryła   |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Powierzchnia** | Łuk | Punkt | Punkt, krzywa | Powierzchnia |
-| **Łuk** | Punkt | Punkt | Punkt | Łuk |
-| **Płaszczyzna** | Łuk | Punkt | Łuk | Łuk |
-| **Bryła** | Powierzchnia | Łuk | Łuk | Wypełnienie |
+| **Powierzchnia** | Krzywa   | Punkt | Punkt, krzywa | Powierzchnia |
+| **Krzywa**   | Punkt   | Punkt | Punkt        | Krzywa   |
+| **Płaszczyzna**   | Krzywa   | Punkt | Łuk        | Krzywa   |
+| **Bryła**   | Powierzchnia | Łuk | Łuk        | Wypełnienie   |
 
 Poniższy bardzo prosty przykład przedstawia przecięcie płaszczyzny z powierzchnią NurbsSurface. To przecięcie generuje szyk NurbsCurve, który może być używany jak każdy inny obiekt NurbsCurve.
 
@@ -36,14 +36,14 @@ crvs_moved = crvs.Translate(0, 0, 10);
 
 Metoda _Trim_ jest bardzo podobna do metody Intersect pod tym względem, że jest zdefiniowana dla niemal każdego elementu geometrii. Jednak dla metody _Trim_ istnieje znacznie więcej ograniczeń niż dla metody _Intersect_.
 
-### **Utnij**
+### **Trim**
 
-|             | _Za pomocą:_ punkt | Łuk | Płaszczyzna | Powierzchnia | Wypełnienie |
+|             | _Za pomocą:_ punkt | Krzywa | Płaszczyzna | Powierzchnia | Bryła |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _Na:_ krzywa | Tak | Nie | Nie | Nie | Nie |
-| Wielobok | - | Nie | Tak | Nie | Nie |
-| Powierzchnia | - | Tak | Tak | Tak | Tak |
-| Wypełnienie | - | - | Tak | Tak | Tak |
+| _Na:_ krzywa | Tak            | Nie    | Nie    | Nie      | Nie    |
+| Wielobok     | -              | Nie    | Tak   | Nie      | Nie    |
+| Powierzchnia     | -              | Tak   | Tak   | Tak     | Tak   |
+| Wypełnienie       | -              | -     | Tak   | Tak     | Tak   |
 
 W przypadku metod _Trim_ warto pamiętać o wymaganiu punktu „wyboru”, określającego, która geometria zostanie odrzucona, a które elementy zostaną zachowane. Dodatek Dynamo znajduje i odrzuca uciętą geometrię najbliżej wybranego punktu.
 

@@ -2,7 +2,7 @@
 
 ## **Dynamo**
 
-### **Witryna wiki dodatku Dynamo**
+### **Dynamo Wiki**
 
 „Witryna wiki pozwala dowiedzieć się więcej na temat opracowywania rozwiązań za pomocą interfejsu API dodatku Dynamo, obsługi bibliotek i narzędzi”.
 
@@ -68,11 +68,11 @@ MathWorld to internetowe materiały matematyczne zebrane przez Erica W. Weisstei
 
 ### **Revit Python Shell**
 
-„Powłoka RevitPythonShell dodaje tłumacza IronPython do programów Autodesk Revit i Vasari”. Ten projekt jest starszy niż dodatek Dynamo i stanowi doskonałe źródło dotyczące programowania w języku Python. Projekt RPS:&#x20;
+„Powłoka RevitPythonShell dodaje tłumacza IronPython do programów Autodesk Revit i Vasari”. Ten projekt jest starszy niż dodatek Dynamo i stanowi doskonałe źródło dotyczące programowania w języku Python. Projekt RPS: 
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell 
 
-Blog dla programistów:&#x20;
+Blog dla programistów: 
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 

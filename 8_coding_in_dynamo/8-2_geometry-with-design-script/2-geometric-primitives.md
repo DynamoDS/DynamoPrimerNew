@@ -73,7 +73,7 @@ pSphere = Point.BySphericalCoordinates(cs, radius,
     theta, phi);
 ```
 
-### Linia&#x20;
+### Linia 
 
 Kolejnym obiektem elementarnym wyższego wymiaru w dodatku Dynamo jest segment linii reprezentujący nieskończoną liczbę punktów między dwoma punktami końcowymi. Linie można tworzyć przez jawne określenie dwóch punktów obwiedni za pomocą konstruktora _Line.ByStartPointEndPoint_ lub przez określenie punktu początkowego, kierunku i długości w tym kierunku: _Line.ByStartPointDirectionLength_.
 

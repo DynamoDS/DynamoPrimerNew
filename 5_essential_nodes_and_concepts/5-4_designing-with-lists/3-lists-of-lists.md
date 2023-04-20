@@ -111,7 +111,7 @@ Węzeł **List.Count** liczy wszystkie elementy na liście. Użyjemy go, aby zad
 > 3. Połącz poszczególne wiersze węzła Code Block odpowiednio z danymi wejściowymi _X_ i _Y_ węzła **Point.ByCoordinates**. Kliknij węzeł prawym przyciskiem myszy, wybierz opcję Skratowanie i wybierz pozycję _Iloczyn wektorowy_. Zostanie utworzona siatka punktów. Ustawiliśmy zakres od –50 do 50, dlatego odpowiada to domyślnej siatce dodatku Dynamo.
 > 4. Węzeł _**Watch**_ ujawnia utworzone punkty. Przyjrzyjmy się strukturze danych. Powstała lista list. Każda lista odpowiada wierszowi punktów siatki.
 
-![Ćwiczenie](../images/5-4/3/listsoflists-map02(1).jpg)
+\![Ćwiczenie](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Połącz węzeł **List.Count** z wyjściem węzła obserwacyjnego z poprzedniego kroku.
 > 2. Połącz węzeł **Watch** z wyjściem węzła **List.Count**.
@@ -244,7 +244,7 @@ W tym ćwiczeniu zmienimy powierzchnię przy użyciu logiki zdefiniowanej w popr
 
 Zacznij od powyższego ciągu węzłów. Tworzymy prostą powierzchnię obejmującą domyślą siatkę dodatku Dynamo.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. Przy użyciu węzła **Code Block** wstaw te dwa wiersze kodu i połącz blok z wejściami _u_ i _v_ węzła **Surface.PointAtParameter**: `-50..50..#3;` `-50..50..#5;`
 > 2. Pamiętaj, aby ustawić skratowanie węzła **Surface.PointAtParameter** na _Iloczyn wektorowy_.
@@ -252,20 +252,20 @@ Zacznij od powyższego ciągu węzłów. Tworzymy prostą powierzchnię obejmuj�
 
 W tym kroku chcemy pobrać punkt środkowy utworzonej siatki. Aby to zrobić, wybierzemy środkowy punkt środkowej listy. To naprawdę proste.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. Aby upewnić się, że to właściwy punkt, można też klikać w węźle Watch, aby sprawdzić, czy używamy odpowiedniego elementu.
 > 2. Przy użyciu węzła **Code Block** napiszemy prosty kod pobierający listę list:\
  `points[1][2];`
 > 3. Przy użyciu węzła **Geometry.Translate** przesuniemy wybrany punkt w kierunku _Z_ o _20_ jednostek.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. Wybierzmy też środkowy wiersz punktów, używając węzła **List.GetItemAtIndex**. Uwaga: podobnie jak w poprzednim kroku, możemy pobrać elementy listy przy użyciu węzła **Code Block** zawierającego wiersz `points[1];`
 
 Pobraliśmy punkt środkowy i przesunęliśmy go w górę. Teraz chcemy wstawić przesunięty punkt z powrotem do struktury danych.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. Najpierw chcemy zastąpić odizolowany w poprzednim kroku element listy.
 > 2. Zastąpimy środkowy element przy użyciu węzła **List.ReplaceItemAtIndex**. Użyjemy indeksu _2_, a zastępujący go element będzie połączony z przesuniętym punktem (**Geometry.Translate**).
@@ -273,18 +273,18 @@ Pobraliśmy punkt środkowy i przesunęliśmy go w górę. Teraz chcemy wstawić
 
 Mając zmodyfikowaną listę, musimy wstawić ją z powrotem do oryginalnej struktury danych: listy list.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. W analogiczny sposób użyjemy węzła **List.ReplaceItemAtIndex**, aby wstawić naszą listę w miejsce środkowej listy.
-> 2. Węzły **Code Block** definiujące indeks tych dwóch węzłów mają numery 1 i 2, co odpowiada oryginalnemu zapytaniu w węźle **Code Block** (_points[1][2]_).
+> 2. Węzły **Code Block**__ definiujące indeks tych dwóch węzłów mają numery 1 i 2, co odpowiada oryginalnemu zapytaniu w węźle **Code Block** (_points[1][2]_).
 > 3. Po wybraniu listy o _indeksie 1_ zobaczymy tę strukturę danych podświetloną w podglądzie dodatku Dynamo. Pomyślnie scaliliśmy przesunięty punkt z oryginalną strukturą danych.
 
 Istnieją różne sposoby uzyskania powierzchni z tego zestawu punktów. W tym przypadku utworzymy ją przez wyciągnięcie połączonych krzywych.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. Utwórz węzeł **NurbsCurve.ByPoints** i połącz z nim nową strukturę danych, aby utworzyć trzy krzywe NURBS.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. Połącz węzeł **Surface.ByLoft** z wyjściem węzła **NurbsCurve.ByPoints**. Otrzymaliśmy zmodyfikowaną powierzchnię. Możemy zmienić oryginalną wartość _Z_ geometrii. Użyj translacji i zobacz, jak zostanie zaktualizowana geometria.

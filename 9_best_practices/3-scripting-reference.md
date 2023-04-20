@@ -15,12 +15,12 @@ Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w języ
 
 **Biblioteki Dynamo**
 
-1. ProtoGeometry\*
+1.  ProtoGeometry*
 
-   * Funkcjonalność: łuk, ramka ograniczająca, okrąg, stożek, układ współrzędnych, prostopadłościan, krzywa, walec, krawędź, elipsa, łuk eliptyczny, powierzchnia, geometria, helisa, grupa indeksu, linia, siatka, krzywa nurbs, powierzchnia nurbs, płaszczyzna, punkt, wielobok, prostokąt, bryła, sfera, powierzchnia, topologia, T-splajn, UV, wektor, wierzchołek.
-   * Sposób importowania: `import Autodesk.DesignScript.Geometry`
+    * Funkcjonalność: łuk, ramka ograniczająca, okrąg, stożek, układ współrzędnych, prostopadłościan, krzywa, walec, krawędź, elipsa, łuk eliptyczny, powierzchnia, geometria, helisa, grupa indeksu, linia, siatka, krzywa nurbs, powierzchnia nurbs, płaszczyzna, punkt, wielobok, prostokąt, bryła, sfera, powierzchnia, topologia, T-splajn, UV, wektor, wierzchołek.
+    * Sposób importowania: `import Autodesk.DesignScript.Geometry`
 
-   ``
+    \`\`
 2. DSCoreNodes
    * Funkcjonalność: kolor, zakres kolorów 2D, data i godzina, przedział czasu, IO, formuła, logika, lista, matematyka, drzewo czwórkowe, ciąg, gwint.
    * Sposób importowania: `import DSCore`
@@ -31,9 +31,7 @@ Biblioteki standardowe są zewnętrzne wobec dodatku Dynamo i są obecne w języ
    * Funkcjonalność: Excel.
    * Sposób importowania: `import DSOffice`
 
-{% hint style="warning" %}
-\*Uwaga: podczas używania obiektu **ProtoGeometry** za pomocą języka Python lub C# tworzone są obiekty niezarządzane, które wymagają ręcznego zarządzania pamięcią — więcej informacji znajduje się w poniższej sekcji: **Obiekty niezarządzane**.
-{% endhint %}
+{% hint style="warning" %} *Uwaga: podczas używania obiektu **ProtoGeometry** za pomocą języka Python lub C# tworzone są obiekty niezarządzane, które wymagają ręcznego zarządzania pamięcią — więcej informacji znajduje się w poniższej sekcji: **Obiekty niezarządzane**. {% endhint %}
 
 ## Uważne etykietowanie
 
@@ -144,7 +142,7 @@ rotateToCoord = rotateFromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vect
 toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordinates(0,0,1),5)
 ```
 
-> „Wszystko powinno zostać tak uproszczone, jak to tylko możliwe, ale nie bardziej”. — Albert Einstein
+> „Wszystko powinno zostać tak uproszczone, jak to tylko możliwe, ale nie bardziej” — Albert Einstein
 
 ## Styl spójny
 
@@ -153,78 +151,78 @@ Ogólnie rzecz biorąc, istnieje więcej niż jeden sposób na zaprogramowanie p
 **Konwencje nazewnictwa:** (wybierz jedną z poniższych konwencji dla każdego typu elementu w kodzie i trzymaj się jej).
 
 * Zmienne, funkcje, metody, pakiety, moduły:\
-   `lower_case_with_underscores`
+ `lower_case_with_underscores`
 * Klasy i wyjątki:\
-   `CapWords`
+ `CapWords`
 * Metody chronione i funkcje wewnętrzne:\
-   `_single_leading_underscore(self, ...)`
+ `_single_leading_underscore(self, ...)`
 * Metody prywatne:\
-   `__double_leading_underscore(self, ...)`
+ `__double_leading_underscore(self, ...)`
 * Stałe:\
-   `ALL_CAPS_WITH_UNDERSCORES`
+ `ALL_CAPS_WITH_UNDERSCORES`
 
 > Wskazówka: unikaj zmiennych jednoliterowych (szczególnie l, O, I) z wyjątkiem w bardzo krótkich blokach, kiedy ich znaczenie jest wyraźnie widoczne z bezpośredniego kontekstu.
 
 **Używaj pustych wierszy:**
 
 * Otaczaj definicje funkcji i klas najwyższego poziomu dwoma pustymi wierszami.
-   * Definicje metod wewnątrz klas są otoczone pojedynczym pustym wierszem.
-   * Dodatkowe puste wiersze mogą być używane (sporadycznie) do oddzielenia grup powiązanych funkcji.
+  * Definicje metod wewnątrz klas są otoczone pojedynczym pustym wierszem.
+  * Dodatkowe puste wiersze mogą być używane (sporadycznie) do oddzielenia grup powiązanych funkcji.
 
 **Unikaj zbędnych odstępów:**
 
-* Bezpośrednio wewnątrz nawiasów okrągłych, kwadratowych i klamrowych:
+*   Bezpośrednio wewnątrz nawiasów okrągłych, kwadratowych i klamrowych:
 
-   ```
-   ### BAD
-   function( apples[ 1 ], { oranges: 2 } )
-   ```
+    ```
+    ### BAD
+    function( apples[ 1 ], { oranges: 2 } )
+    ```
 
-   ```
-   ### GOOD:
-   function(apples[1], {oranges: 2})
-   ```
-* Bezpośrednio przed przecinkiem, średnikiem lub dwukropkiem:
+    ```
+    ### GOOD:
+    function(apples[1], {oranges: 2})
+    ```
+*   Bezpośrednio przed przecinkiem, średnikiem lub dwukropkiem:
 
-   ```
-   ### BAD
-    if x == 2 : print x , y ; x , y = y , x
-   ```
+    ```
+    ### BAD
+     if x == 2 : print x , y ; x , y = y , x
+    ```
 
-   ```
-   ### GOOD
-     if x == 2: print x, y; x, y = y, x
-   ```
-* Bezpośrednio przed nawiasem otwierającym, który rozpoczyna listę argumentów wywołania funkcji:
+    ```
+    ### GOOD
+      if x == 2: print x, y; x, y = y, x
+    ```
+*   Bezpośrednio przed nawiasem otwierającym, który rozpoczyna listę argumentów wywołania funkcji:
 
-   ```
-   ### BAD
-   function (1)
-   ```
+    ```
+    ### BAD
+    function (1)
+    ```
 
-   ```
-   ### GOOD
-   function(1)
-   ```
-* Bezpośrednio przed nawiasem otwierającym, który rozpoczyna indeksowanie lub fragmentowanie:
+    ```
+    ### GOOD
+    function(1)
+    ```
+*   Bezpośrednio przed nawiasem otwierającym, który rozpoczyna indeksowanie lub fragmentowanie:
 
-   ```
-   ### BAD
-   dict ['key'] = list [index]
-   ```
+    ```
+    ### BAD
+    dict ['key'] = list [index]
+    ```
 
-   ```
-   ### GOOD
-   dict['key'] = list[index]
-   ```
-* Zawsze otaczaj te operatory binarne pojedynczym odstępem po obu stronach:
+    ```
+    ### GOOD
+    dict['key'] = list[index]
+    ```
+*   Zawsze otaczaj te operatory binarne pojedynczym odstępem po obu stronach:
 
-   ```
-   assignment ( = )
-   augmented assignment ( += , -= etc.)
-   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-   Booleans ( and , or , not )
-   ```
+    ```
+    assignment ( = )
+    augmented assignment ( += , -= etc.)
+    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+    Booleans ( and , or , not )
+    ```
 
 **Przestrzegaj ograniczeń długości wiersza:**
 
@@ -235,26 +233,26 @@ Ogólnie rzecz biorąc, istnieje więcej niż jeden sposób na zaprogramowanie p
 **Unikaj oczywistych i nadmiarowych komentarzy:**
 
 * Czasami mniejsza liczba komentarzy zapewnia większą czytelność kodu. Zwłaszcza jeśli wymusza to używanie znaczących nazw symboli.
-* Przyjęcie dobrych nawyków kodowania zmniejsza zależność od komentarzy:
+*   Przyjęcie dobrych nawyków kodowania zmniejsza zależność od komentarzy:
 
-   ```
-   ### BAD
-     # get the country code
-     country_code = get_country_code(address)
+    ```
+    ### BAD
+      # get the country code
+      country_code = get_country_code(address)
 
-     # if country code is US
-     if (country_code == 'US'):
-       # display the form input for state
-       print form_input_state()
-   ```
+      # if country code is US
+      if (country_code == 'US'):
+        # display the form input for state
+        print form_input_state()
+    ```
 
-   ```
-   ### GOOD
-     # display state selection for US users
-     country_code = get_country_code(address)
-     if (country_code == 'US'):
-       print form_input_state()
-   ```
+    ```
+    ### GOOD
+      # display state selection for US users
+      country_code = get_country_code(address)
+      if (country_code == 'US'):
+        print form_input_state()
+    ```
 
 > Wskazówka: komentarze informują „dlaczego”, kod informuje „jak”.
 
@@ -262,8 +260,8 @@ Ogólnie rzecz biorąc, istnieje więcej niż jeden sposób na zaprogramowanie p
 
 * Projekty typu Open Source są wynikiem wspólnych wysiłków wielu programistów. W tych projektach trzeba utrzymywać wysoki poziom czytelności kodu, aby zespół mógł jak najsprawniej współpracować. Dlatego dobrze jest przeglądać kod źródłowy tych projektów, aby obserwować, co robią ci programiści.
 * Popraw konwencje:
-   * Analizuj, czy dana konwencja dobrze sprawdza się w odniesieniu do konkretnych potrzeb.
-   * Czy nie pogarsza funkcjonalności/wydajności?
+  * Analizuj, czy dana konwencja dobrze sprawdza się w odniesieniu do konkretnych potrzeb.
+  * Czy nie pogarsza funkcjonalności/wydajności?
 
 ## Standardy języka C# (Zerotouch)
 
@@ -276,7 +274,7 @@ Ogólnie rzecz biorąc, istnieje więcej niż jeden sposób na zaprogramowanie p
 
 W przypadku używania biblioteki geometrii dodatku Dynamo _(ProtoGeometry)_ z języka Python lub geometrii C# utworzone obiekty nie będą zarządzane przez maszynę wirtualną, a pamięć wielu z tych obiektów będzie musiała zostać wyczyszczona ręcznie. Aby wyczyścić natywne lub niezarządzane obiekty, można użyć metody **Dispose** lub słowa kluczowego **using**. Na tej stronie wiki przedstawiono omówienie: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-Wystarczy usunąć zasoby niezarządzane, które nie są zwracane w wykresie ani do których nie są zapisywane odwołania. W pozostałej części tej sekcji określamy te obiekty jako _geometrię pośrednią_. Przykład tej klasy obiektów można zobaczyć w poniższym przykładzie kodu. Ta funkcja **singleCube** w języku C# (Zerotouch) zwraca pojedynczy sześcian, ale podczas wykonywania generuje 10 000 dodatkowych sześcianów. Możemy udawać, że ta druga geometria została użyta jako pewnego rodzaju pośrednia geometria konstrukcji.
+Wystarczy usunąć zasoby niezarządzane, które nie są zwracane w wykresie ani do których nie są zapisywane odwołania. W pozostałej części tej sekcji określamy te obiekty jako _geometrię pośrednią_. Przykład tej klasy obiektów można zobaczyć w poniższym przykładzie kodu. Ta funkcja **singleCube** w języku C# (Zerotouch) zwraca pojedynczy sześcian, ale podczas wykonywania generuje 10000 dodatkowych sześcianów. Możemy udawać, że ta druga geometria została użyta jako pewnego rodzaju pośrednia geometria konstrukcji.
 
 **Ta funkcja Zerotouch najprawdopodobniej spowoduje awarię dodatku Dynamo.** Jest tak dlatego, że utworzyliśmy 10 000 brył, ale tylko jedną z nich zapisaliśmy i tę właśnie zwróciliśmy. Zamiast tego powinniśmy usunąć wszystkie sześciany pośrednie z wyjątkiem tego, który zwracamy. Nie chcemy usuwać tego, który zwracamy, ponieważ zostanie on propagowany do wykresu i będzie używany przez inne węzły.
 

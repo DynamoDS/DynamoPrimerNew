@@ -17,12 +17,12 @@ W tej sekcji przedstawiono sposób użycia funkcji Zero-Touch w celu zaimportowa
 
 Pakiety Zero-Touch stanowią dobre uzupełnienie węzłów niestandardowych zdefiniowanych przez użytkownika. W poniższej tabeli wymieniono kilka pakietów używających bibliotek C#. Aby uzyskać więcej informacji na temat pakietów, zobacz [sekcję Pakiety](../../a\_appendix/a-3\_packages.md) w Załączniku.
 
-| **Logo/obraz**                                                               | **Nazwa**                                                                    |
-| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)                        | [Zestaw Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                             | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                              | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| **Logo/obraz**                                                         | **Nazwa**                                                                    |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| ![](../images/6-2/2/meshToolkitcasestudy01.jpg)                        | [Zestaw Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](../images/6-2/5/rhynamo.jpg)                                       | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../images/6-2/5/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## Analiza przypadku — importowanie biblioteki AForge
 

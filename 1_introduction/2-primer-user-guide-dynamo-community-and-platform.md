@@ -19,15 +19,13 @@ Z myślą o użytkownikach chcących zobaczyć prezentację procesów roboczych 
 
 * [Wazon parametryczny](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
+![](images/1-2/vase1.gif)
 
 * [Punkty przyciągania](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} 
-W kolejnych rozdziałach znajduje się więcej ćwiczeń dotyczących różnych omawianych tematów związanych z dodatkiem Dynamo. **Ćwiczenia** można zazwyczaj znaleźć w ostatniej sekcji każdej strony. 
-{% endhint %}
+{% hint style="info" %} W kolejnych rozdziałach znajduje się więcej ćwiczeń dotyczących różnych omawianych tematów związanych z dodatkiem Dynamo. **Ćwiczenia** można zazwyczaj znaleźć w ostatniej sekcji każdej strony. {% endhint %}
 
 ### Społeczność
 

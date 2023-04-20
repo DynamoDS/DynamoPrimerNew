@@ -36,7 +36,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 ### Krzywa punktów kontrolnych
 
-Krzywe NurbsCurve są generowane w ten sam sposób, przy czym punkty wejściowe reprezentują punkty końcowe segmentu linii prostej, a drugi parametr, nazywany stopniem, określa wielkość i typ wygładzania krzywej.\* Krzywa stopnia 1. nie ma wygładzenia; to polilinia.
+Krzywe NurbsCurve są generowane w ten sam sposób, przy czym punkty wejściowe reprezentują punkty końcowe segmentu linii prostej, a drugi parametr, nazywany stopniem, określa wielkość i typ wygładzania krzywej.* Krzywa stopnia 1\. nie ma wygładzenia; to polilinia.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -50,7 +50,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 1);
 ```
 
-Krzywa stopnia 2. zostaje wygładzona w taki sposób, że przecina i jest styczna do punktu środkowego segmentów polilinii:
+Krzywa stopnia 2\. zostaje wygładzona w taki sposób, że przecina i jest styczna do punktu środkowego segmentów polilinii:
 
 ![](../images/8-2/4/Curves\_04.png)
 
@@ -64,7 +64,7 @@ pts = Point.ByCoordinates(1..30..#num_pts,
 ctrl_curve = NurbsCurve.ByControlPoints(pts, 2);
 ```
 
-Dodatek Dynamo obsługuje krzywe NURBS (niejednorodne wymierne B-splajn) do 20. stopnia, a poniższy skrypt ilustruje wpływ zwiększającego się poziomu wygładzania na kształt krzywej:
+Dodatek Dynamo obsługuje krzywe NURBS (niejednorodne wymierne B-splajn) do 20\. stopnia, a poniższy skrypt ilustruje wpływ zwiększającego się poziomu wygładzania na kształt krzywej:
 
 ![](../images/8-2/4/Curves\_05.png)
 
@@ -83,7 +83,7 @@ def create_curve(pts : Point[], degree : int)
 ctrl_crvs = create_curve(pts, 1..11);
 ```
 
-Należy zwrócić uwagę, że musi istnieć co najmniej jeden punkt kontrolny więcej niż wynosi stopień krzywej.
+Należy zwrócić uwagę, że musi istnieć co najmniej jeden punkt kontrolny więcej, niż wynosi stopień krzywej.
 
 Inną zaletą tworzenia krzywych przez wierzchołki kontrolne jest możliwość utrzymania styczności między poszczególnymi segmentami krzywej. Odbywa się to przez wyodrębnienie kierunku między dwoma ostatnimi punktami kontrolnymi i kontynuowanie tego kierunku z dwoma pierwszymi punktami kontrolnymi kolejnej krzywej. W poniższym przykładzie tworzone są dwie oddzielne krzywe NURBS, które mimo to są gładkie jak jedna krzywa:
 
@@ -115,6 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}
-\*Jest to bardzo uproszczony opis geometrii krzywej NURBS. Aby uzyskać dokładniejsze i bardziej szczegółowe omówienie, skorzystaj z dokumentacji w odniesieniach: Pottmann i inni, 2007 r.
-{% endhint %}
+{% hint style="info" %}*Jest to bardzo uproszczony opis geometrii krzywej NURBS. Aby uzyskać dokładniejsze i bardziej szczegółowe omówienie, skorzystaj z dokumentacji w odniesieniach: Pottmann i inni, 2007 r. {% endhint %}

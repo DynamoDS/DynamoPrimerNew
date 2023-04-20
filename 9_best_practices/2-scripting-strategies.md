@@ -23,9 +23,7 @@ Skrypty tekstowe pozwalają tworzyć relacje o wyższej złożoności niż progr
 | **Python**         | Tak         | Tak           | Częściowo          | Tak                | Nie            |
 | **ZeroTouch (C#)** | Nie          | Nie            | Nie                 | Tak                | Nie            |
 
-{% hint style="info" %} 
-[Materiały referencyjne dotyczące skryptów](13-3\_scripting-reference.md) zawierają listę funkcji wszystkich bibliotek dodatku Dynamo. 
-{% endhint %}
+{% hint style="info" %} [Materiały referencyjne dotyczące skryptów](13-3\_scripting-reference.md) zawierają listę funkcji wszystkich bibliotek dodatku Dynamo. {% endhint %}
 
 ### Myślenie parametryczne
 

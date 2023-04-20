@@ -22,9 +22,7 @@ Część `<PythonTemplateFilePath />` można po prostu zastąpić następującą
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} 
-_Uwaga: zastąp element CURRENTUSER nazwą użytkownika_ 
-{% endhint %}
+{% hint style="warning" %} _Uwaga: zastąp element CURRENTUSER nazwą użytkownika_ {% endhint %}
 
 Następnie musimy utworzyć szablon z funkcjami, które mają być wbudowane. W tym przypadku osadźmy powiązane z programem Revit importy i niektóre inne typowe elementy podczas pracy z programem Revit.
 

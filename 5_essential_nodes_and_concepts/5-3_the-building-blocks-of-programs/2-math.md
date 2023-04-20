@@ -6,12 +6,12 @@ Jeśli najprostszą formą danych są liczby, najprostszym sposobem powiązywani
 
 Operatory to zestaw komponentów, w których używane są funkcje algebraiczne z dwiema wejściowymi wartościami liczbowymi dającymi jedną wartość wyjściową (dodawanie, odejmowanie, mnożenie, dzielenie itp.). Można je znaleźć w obszarze Operatory > Operacje.
 
-| Ikona                                                | Nazwa (składnia)     | Dane wejściowe                     | Dane wyjściowe      |
-| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Mnożenie (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Division.jpg)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| Ikona                                              | Nazwa (składnia)     | Dane wejściowe                     | Dane wyjściowe      |
+| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Mnożenie (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ćwiczenie: formuła złotej spirali
 
@@ -95,7 +95,7 @@ Następnie wykonaj te minikroki, aby wygenerować serię spiral o różnych obro
 
 > a. **Geometry.Rotate:** dostępnych jest kilka opcji **Geometry.Rotate**. Należy pamiętać, aby wybrać węzeł z wejściami _geometry_, _basePlane_ i _degrees_. Połącz węzeł **Point.ByCoordinates** z wejściem geometry. Kliknij prawym przyciskiem myszy ten węzeł i upewnij się, że skratowanie jest ustawione na Iloczyn wektorowy
 >
-> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
+> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY:** połącz z wejściem _basePlane_. Wykonamy obrót wokół początku, który ma to samo położenie co podstawa spirali.
 >
