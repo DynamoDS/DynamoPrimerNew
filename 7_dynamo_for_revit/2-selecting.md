@@ -6,7 +6,7 @@ Revit è un ambiente ricco di dati. Offre un'ampia gamma di funzionalità di sel
 
 La libreria di Revit nell'interfaccia utente offre la categoria Selection, che consente di selezionare la geometria in più modi.
 
-![](../.gitbook/assets/select\_revit\_elements\_01.jpg)
+\![](<images/2/select revit elements 01.jpg>)
 
 ### Gerarchia di Revit
 
@@ -26,7 +26,7 @@ Nelle tre immagini riportate di seguito sono mostrate le categorie principali pe
 
 _Puntamento e clic_ è il modo più semplice per selezionare direttamente un elemento di Revit. È possibile selezionare un elemento del modello completo o parti della relativa topologia (ad esempio una superficie o un bordo). Questo rimane collegato dinamicamente a tale oggetto di Revit, pertanto quando il file di Revit ne aggiorna la posizione o i parametri, l'elemento di Dynamo di riferimento viene aggiornato nel grafico.
 
-![](../.gitbook/assets/selecting\_database\_navigation\_with\_dynamo\_nodes\_01.jpg)
+\![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
 I _menu a discesa_ consentono di creare un elenco di tutti gli elementi accessibili in un progetto di Revit. È possibile utilizzare questa opzione per fare riferimento ad elementi di Revit che non sono necessariamente visibili in una vista. Questo è un ottimo strumento per eseguire una query su elementi esistenti o crearne di nuovi in un Editor di famiglie o in un progetto di Revit.
 
@@ -48,7 +48,7 @@ Tenendo presenti le tre immagini riportate sopra, si esaminerà un esercizio che
 
 In questo file di Revit di esempio, ci sono tre tipi di elementi di un semplice edificio. Si utilizzerà questo file come esempio per la selezione di elementi di Revit nel contesto della gerarchia di Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_01.jpg)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (2).jpg>)
 
 > 1. Massa dell'edificio
 > 2. Travi (telaio strutturale)
@@ -58,7 +58,7 @@ Quali conclusioni è possibile trarre dagli elementi attualmente presenti nella 
 
 ### Selezione di massa e superfici
 
-![](../.gitbook/assets/selecting\_exercise\_02.jpg)
+\![](<images/2/selecting - exercise 02.jpg>)
 
 > 1. Poiché si sta utilizzando un'impostazione di base, selezionare la massa dell'edificio scegliendo _Massa_ nel nodo a discesa Categories. Questo file si trova nella scheda Revit > Selezione.
 > 2. L'output della categoria Massa è solo la categoria stessa. È necessario selezionare gli elementi. A tale scopo, utilizzare il nodo _All Elements of Category_.
@@ -67,13 +67,13 @@ A questo punto, non sarà presente alcuna geometria in Dynamo. È stato selezion
 
 In questo caso, si sta utilizzando una geometria semplice, pertanto si desidera importare la geometria nell'anteprima di Dynamo. Accanto al valore BldgMass nel nodo di controllo riportato sopra è presente un numero verde. Rappresenta l'ID dell'elemento e indica che si sta utilizzando un elemento di Revit, non la geometria di Dynamo. Il passaggio successivo consiste nel convertire questo elemento di Revit nella geometria in Dynamo.
 
-![](../.gitbook/assets/selecting\_exercise\_03.jpg)
+\![](<images/2/selecting - exercise 03.jpg>)
 
 > 1. Utilizzando il nodo _Element.Faces_, viene visualizzato un elenco di superfici che rappresentano ciascuna superficie della massa di Revit. Ora è possibile vedere la geometria nella finestra di Dynamo e iniziare a fare riferimento alla superficie per le operazioni parametriche.
 
 Ecco un metodo alternativo. In questo caso, non si esegue la selezione tramite la gerarchia di Revit _(All Elements of Category)_ e si sceglie di selezionare esplicitamente la geometria in Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_04.jpg)
+\![](<images/2/selecting - exercise 04.jpg>)
 
 > 1. Utilizzando il nodo _Select Model Element_, fare clic sul pulsante *Seleziona *(o _Modifica_). Nella finestra di Revit, selezionare l'elemento desiderato. In questo caso, selezionare la massa dell'edificio.
 > 2. Anziché _Element.Faces_, è possibile selezionare l'intera massa come geometria solida utilizzando _Element.Geometry_. In questo modo viene selezionata tutta la geometria contenuta all'interno della massa.
@@ -90,25 +90,25 @@ Utilizzando alcune operazioni di base con gli elenchi, è possibile eseguire una
 
 Il passaggio precedente era un po' complicato. È possibile eseguire questa operazione molto più rapidamente con il nodo _Select Face_. Questo consente di isolare una superficie che di per sé non è un elemento nel progetto di Revit. La stessa interazione si applica a _Select Model Element_, tranne per il fatto che è stata selezionata la superficie anziché l'elemento completo.
 
-![](../.gitbook/assets/selecting\_exercise\_06.jpg)
+\![](<images/2/selecting - exercise 06.jpg>)
 
 Si supponga di voler isolare i muri della facciata principale dell'edificio. Per eseguire questa operazione, è possibile utilizzare il nodo _Select Faces_. Fare clic sul pulsante Seleziona, quindi selezionare le quattro facciate principali in Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_07.jpg)
+\![](<images/2/selecting - exercise 07.jpg>)
 
 Dopo aver selezionato i quattro muri, assicurarsi di fare clic sul pulsante Termina in Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_08.jpg)
+\![](<../.gitbook/assets/selecting - exercise 08.jpg>)
 
 Le facce vengono ora importate in Dynamo come superfici.
 
-![](../.gitbook/assets/selecting\_exercise\_09.jpg)
+\![](<images/2/selecting - exercise 09.jpg>)
 
 ### Selezione di travi
 
 Ora, osservare le travi sopra l'atrio.
 
-![](../.gitbook/assets/selecting\_exercise\_10.jpg)
+\![](<images/2/selecting - exercise 10.jpg>)
 
 > 1. Utilizzando il nodo _Select Model Element_, selezionare una delle travi.
 > 2. Collegare l'elemento trave al nodo _Element.Geometry_, così ora la trave è presente nella finestra di Dynamo.
@@ -116,18 +116,18 @@ Ora, osservare le travi sopra l'atrio.
 
 Una domanda che potrebbe sorgere spesso nei workflow di Revit/Dynamo: com'è possibile selezionare un elemento e ottenere tutti gli elementi simili? Poiché l'elemento di Revit selezionato contiene tutte le relative informazioni gerarchiche, è possibile eseguire una query sul tipo di famiglia e selezionare tutti gli elementi di quel tipo.
 
-![](../.gitbook/assets/selecting\_exercise\_11.jpg)
+\![](<images/2/selecting - exercise 11.jpg>)
 
 > 1. Collegare l'elemento trave ad un nodo _Element.ElementType_.
 > 2. Il nodo _Watch_ mostra che l'output è ora un simbolo di famiglia anziché un elemento di Revit.
 > 3. _Element.ElementType_ è una query semplice, così è possibile eseguire questa operazione in Code Block con la stessa facilità di `x.ElementType;` e ottenere gli stessi risultati.
 
-![](../.gitbook/assets/selecting\_exercise\_12.jpg)
+\![](<images/2/selecting - exercise 12.jpg>)
 
 > 1. Per selezionare le travi rimanenti, utilizzare il nodo _All Elements of Family Type_.
 > 2. Il nodo di controllo mostra che sono stati selezionati cinque elementi di Revit.
 
-![](../.gitbook/assets/selecting\_exercise\_13.jpg)
+\![](<images/2/selecting - exercise 13.jpg>)
 
 > 1. È possibile convertire anche tutti questi cinque elementi nella geometria di Dynamo.
 
@@ -139,11 +139,11 @@ In ogni caso, se si dovessero importare 500 travi, sono necessarie tutte le supe
 
 Utilizzando lo stesso grafico dei nodi, selezionare l'elemento trave reticolare anziché l'elemento trave. Prima di eseguire questa operazione, eliminare il nodo Element.Geometry del passaggio precedente.
 
-![](../.gitbook/assets/selecting\_exercise\_14.jpg)
+\![](<images/2/selecting - exercise 14.jpg>)
 
 A questo punto, è possibile estrarre alcune informazioni di base dal tipo di famiglia di travi reticolari.
 
-![](../.gitbook/assets/selecting\_exercise\_15.jpg)
+\![](<images/2/selecting - exercise 15.jpg>)
 
 > 1. Nel nodo _Watch_ è presente un elenco di componenti adattivi selezionati da Revit. Si desidera estrarre le informazioni di base, quindi si inizia con i punti adattivi.
 > 2. Collegare il nodo _All Elements of Family Type_ al nodo _AdaptiveComponent.Location_. In questo modo si ottiene un elenco di elenchi, ciascuno con tre punti che rappresentano le posizioni dei punti adattivi.

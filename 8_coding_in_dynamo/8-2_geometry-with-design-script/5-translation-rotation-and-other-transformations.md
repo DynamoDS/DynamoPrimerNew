@@ -76,16 +76,16 @@ new_curves = cube.Transform(old_cs, new_cs);
 
 La messa in scala e il taglio sono trasformazioni geometriche relativamente più complesse rispetto alla rotazione e alla traslazione, pertanto non tutti gli oggetti di Dynamo possono essere sottoposti a queste trasformazioni. Nella seguente tabella sono riportati i contorni degli oggetti di Dynamo che possono presentare CoordinateSystem messi in scala in modo non uniforme e i CoordinateSystem tagliati.
 
-| Classe | CoordinateSystem messo in scala in modo non uniforme | CoordinateSystem tagliato |
+| Classe        | CoordinateSystem messo in scala in modo non uniforme | CoordinateSystem tagliato |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arco | No | No |
-| NurbsCurve | Sì | Sì |
-| NurbsSurface | No | No |
-| Cerchio | No | No |
-| Linea | Sì | Sì |
-| Piano | No | No |
-| Punto | Sì | Sì |
-| Poligono | No | No |
-| Uniforme | No | No |
-| Superficie | No | No |
-| Testo | No | No |
+| Arco          | No                                    | No                       |
+| NurbsCurve   | Sì                                   | Sì                      |
+| NurbsSurface | No                                    | No                       |
+| Cerchio       | No                                    | No                       |
+| Linea         | Sì                                   | Sì                      |
+| Piano        | No                                    | No                       |
+| Punto        | Sì                                   | Sì                      |
+| Poligono      | No                                    | No                       |
+| Uniforme        | No                                    | No                       |
+| Superficie      | No                                    | No                       |
+| Testo         | No                                    | No                       |

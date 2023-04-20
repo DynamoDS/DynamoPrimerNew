@@ -87,7 +87,7 @@ Spesso è necessario regolare il flusso di programma nel programma visivo modifi
 
 * Per modificare il collegamento in una porta di input, fare clic con il pulsante sinistro del mouse su un'altra porta di input.
 
-![](images/nodesandwires-editwirechangeport(2).gif)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * Per rimuovere il filo, trascinarlo e fare clic con il pulsante sinistro del mouse sull'area di lavoro.
 
@@ -116,7 +116,7 @@ Se si preferisce nascondere i fili nel grafico, è possibile trovare questa opzi
 
 Con questa impostazione, solo i nodi selezionati e i relativi fili di unione verranno mostrati con una leggera evidenziazione verde acqua.
 
-![](images/nodesandwires-hidewiressetting(1).gif)
+\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### Occultamento solo del singolo filo
 

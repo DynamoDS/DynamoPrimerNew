@@ -1,6 +1,6 @@
 # Download del file PDF
 
-Per accedere alle informazioni su questa guida introduttiva in modalità non in linea, scaricare il file .pdf:&#x20;
+Per accedere alle informazioni su questa guida introduttiva in modalità non in linea, scaricare il file .pdf: 
 
 ## Release:
 

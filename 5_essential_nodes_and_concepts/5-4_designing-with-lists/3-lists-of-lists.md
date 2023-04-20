@@ -111,7 +111,7 @@ Il nodo **List.Count** conteggia tutti gli elementi di un elenco. Verrà utilizz
 > 3. Collegare ogni riga del blocco di codice ai rispettivi input _X_ e _Y_ di un nodo **Point.ByCoordinates**. Fare clic con il pulsante destro del mouse sul nodo, selezionare Collegamento e scegliere _Globale_. In questo modo viene creata una griglia di punti. Poiché è stato definito l'intervallo da -50 a 50, la griglia di Dynamo di default viene estesa.
 > 4. Un nodo _**Watch**_ mostra i punti creati. Notare la struttura di dati. È stato creato un elenco di elenchi. Ogni elenco rappresenta una riga di punti della griglia.
 
-![Esercizio](../images/5-4/3/listsoflists-map02(1).jpg)
+\![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Associare un nodo **List.Count** all'output del nodo Watch del passaggio precedente.
 > 2. Collegare un nodo **Watch** all'output **List.Count**.
@@ -244,7 +244,7 @@ In questo esercizio viene utilizzata una parte della logica stabilita in un eser
 
 Iniziare con la stringa di nodi riportata sopra. Si sta creando una superficie di base che estende la griglia di default di Dynamo.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query01.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query01.jpg)
 
 > 1. Utilizzando **Code Block**, inserire queste due righe di codice e collegarle rispettivamente agli input _u_ e _v_ di **Surface.PointAtParameter**: `-50..50..#3;` `-50..50..#5;`.
 > 2. Assicurarsi di impostare il collegamento di **Surface.PointAtParameter** su _Globale_.
@@ -252,20 +252,20 @@ Iniziare con la stringa di nodi riportata sopra. Si sta creando una superficie d
 
 In questo passaggio, si desidera eseguire una query sul punto centrale nella griglia creata. Per eseguire questa operazione, selezionare il punto centrale nell'elenco centrale. Ha senso, giusto?
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query02.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. Per confermare che si tratta del punto corretto, è anche possibile fare clic sugli elementi del nodo Watch per confermare che è quello corretto.
 > 2. Utilizzando **Code Block**, si scriverà una riga di codice di base per l'esecuzione di una query su un elenco di elenchi:\
  `points[1][2];`.
 > 3. Utilizzando **Geometry.Translate**, si sposterà il punto selezionato verso l'alto nella direzione _Z_ di _20_ unità.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query03.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query03.jpg)
 
 > 1. Selezionare anche la riga centrale dei punti con un nodo **List.GetItemAtIndex**. Nota Analogamente a un passaggio precedente, è anche possibile eseguire una query sull'elenco con **Code Block**, utilizzando una riga di `points[1];`.
 
 Finora è stata eseguita correttamente la query sul punto centrale ed è stato spostato verso l'alto. Ora è necessario reinserire il punto spostato nella struttura di dati originale.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query04.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query04.jpg)
 
 > 1. Innanzitutto, si desidera sostituire l'elemento dell'elenco isolato in un passaggio precedente.
 > 2. Utilizzando **List.ReplaceItemAtIndex**, si sostituirà l'elemento centrale utilizzando un indice di _"2"_, con l'elemento sostitutivo collegato al punto spostato (**Geometry.Translate**).
@@ -273,18 +273,18 @@ Finora è stata eseguita correttamente la query sul punto centrale ed è stato s
 
 Dopo aver modificato l'elenco, è necessario reinserire l'elenco nella struttura di dati originale, ovvero l'elenco di elenchi.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query05.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Seguendo la stessa logica, utilizzare **List.ReplaceItemAtIndex** per sostituire l'elenco centrale con l'elenco modificato.
-> 2. Notare che i **Code Block** che definiscono l'indice per questi due nodi sono 1 e 2, che corrisponde alla query originale di **Code Block** (_points[1][2]_).
+> 2. Notare che i **Code Block**__ che definiscono l'indice per questi due nodi sono 1 e 2, che corrisponde alla query originale di **Code Block** (_points[1][2]_).
 > 3. Selezionando l'elenco in corrispondenza dell'_index 1_, viene visualizzata la struttura di dati evidenziata nell'anteprima di Dynamo. Il punto spostato è stato unito correttamente nella struttura di dati originale.
 
 Esistono molti modi per creare una superficie da questo gruppo di punti. In questo caso, si creerà una superficie eseguendo il loft delle curve insieme.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query06.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query06.jpg)
 
 > 1. Creare un nodo **NurbsCurve.ByPoints** e collegare la nuova struttura di dati per creare tre curve NURBS.
 
-![](../images/5-4/3/listoflists-exercisecbinsert&query07.jpg)
+![](../images/5-4/3/listoflists-exercisecbinsert\&query07.jpg)
 
 > 1. Collegare un nodo **Surface.ByLoft** all'output di **NurbsCurve.ByPoints**. Ora è presente una superficie modificata. È possibile modificare il valore _Z_ originale della geometria. Eseguire la traslazione e osservare l’aggiornamento della geometria.

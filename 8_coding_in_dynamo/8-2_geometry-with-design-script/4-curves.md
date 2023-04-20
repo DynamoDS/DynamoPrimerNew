@@ -36,7 +36,7 @@ crv2 = NurbsCurve.ByPoints(pts.Translate(5, 0, 0),
 
 ### Curva con punti di controllo
 
-Le NurbsCurve vengono generate in modo molto simile, con i punti di input che rappresentano i punti finali di un segmento di linea retta e un secondo parametro che specifica il livello e il tipo di levigatezza a cui è sottoposta la curva, denominati grado.\* Una curva di grado 1 non ha alcuna levigatezza; è una polilinea.
+Le NurbsCurve vengono generate in modo molto simile, con i punti di input che rappresentano i punti finali di un segmento di linea retta e un secondo parametro che specifica il livello e il tipo di levigatezza a cui è sottoposta la curva, denominati grado.* Una curva di grado 1 non ha alcuna levigatezza; è una polilinea.
 
 ![](../images/8-2/4/Curves\_03.png)
 
@@ -115,6 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}
-\*Questa è una descrizione molto semplificata della geometria della curva NURBS. Per una descrizione più accurata e dettagliata, vedere Pottmann, et al, 2007, nei riferimenti.
-{% endhint %}
+{% hint style="info" %} *Questa è una descrizione molto semplificata della geometria della curva NURBS. Per una descrizione più accurata e dettagliata, vedere Pottmann, et al, 2007, nei riferimenti. {% endhint %}

@@ -30,7 +30,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 * A volte, è possibile utilizzare un blocco di codice per **digitare un metodo di nodo o numero più rapidamente della ricerca** (Point.ByCoordinates, Number, String, Formula).
 * I blocchi di codice sono utili **quando si desidera definire funzioni personalizzate in DesignScript per ridurre il numero di nodi in un grafico**.
 
-![](images/1/graphstrategy3(1).png)
+![](images/1/graphstrategy3\(1\).png)
 
 > Entrambi i valori 1 e 2 svolgono la stessa funzione. La scrittura di alcune righe di codice è molto più rapida rispetto alla ricerca e all'aggiunta di ogni nodo singolarmente. Anche il blocco di codice è molto più conciso.
 >
@@ -65,7 +65,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 * L'utilizzo di List@Level può aiutare a **ridurre la complessità del grafico sostituendo i nodi List.Map e List.Combine** che potrebbero occupare una notevole quantità di spazio nell'area di disegno.
 * List@Level offre un** modo più rapido rispetto a List.Map/List.Combine per costruire la logica dei nodi**, consentendo di accedere ai dati a qualsiasi livello in un elenco direttamente dalla porta di input di un nodo.
 
-![](images/1/graphstrategy4(1)(1).png)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Si può verificare quanti valori True BoundingBox.Contains restituisce e in quali elenchi attivando List@Level per l'input "list" di CountTrue. List@Level consente all'utente di determinare da quale livello l'input acquisirà i dati. L'utilizzo di List@Level è flessibile, efficiente e altamente incoraggiato rispetto ad altri metodi che coinvolgono List.Map e List.Combine.
 >
@@ -82,9 +82,9 @@ Oltre a rendere il grafico il più semplice ed efficiente possibile, è necessar
 
 * Per ridurre il lavoro dopo aver completato la creazione del grafico, è necessario provare ad assicurarsi che il layout del nodo sia leggibile tramite l'**allineamento di nodi spesso e mentre si procede**.
 * Se altri utenti lavoreranno con il grafico, è necessario **verificare che il layout nodo-collegamento fluisca facilmente prima del rilascio**.
-* Per semplificare l'allineamento, **utilizzare la funzionalità "Semplifica layout nodi" per allineare automaticamente** il grafico, anche se in modo meno preciso rispetto a quello eseguito manualmente.
+* Per semplificare l'allineamento, **utilizzare la funzionalità Semplifica layout nodi per allineare automaticamente** il grafico, anche se in modo meno preciso rispetto a quello eseguito manualmente.
 
-![](images/1/graphstrategy5(2)(1).png)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Grafico non organizzato
 > 2. Grafico allineato
@@ -170,7 +170,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 * Durante la creazione di un modello, è possibile standardizzare **i colori dei gruppi e le dimensioni dei font** per suddividere in categorie i tipi di workflow o le azioni di dati.
 * Durante la creazione di un modello, è anche possibile standardizzare il modo in cui si desidera **etichettare, colorare o applicare stili alla differenza tra i workflow front-end e back-end** nel grafico.
 
-![](images/1/graphstrategy10(2).png)
+![](images/1/graphstrategy10\(2\).png)
 
 > 1. L'interfaccia utente, o front-end, del programma include un nome di progetto, dispositivi di scorrimento di input e geometria di importazione.
 > 2. Il back-end del programma.
@@ -217,7 +217,7 @@ Con i gruppi stabiliti, allineare i nodi per creare una continuità visiva nel g
 
 Rendere il programma più accessibile aggiungendo un altro livello di miglioramenti grafici. Aggiungere note per descrivere il funzionamento di una specifica area del programma, assegnare nomi personalizzati agli input e assegnare colori a diversi tipi di gruppi.
 
-![](images/1/graphstrategy15(1).png)
+![](images/1/graphstrategy15\(1\).png)
 
 > Questi miglioramenti grafici consentono all'utente di conoscere meglio le attività del programma. I diversi colori dei gruppi consentono di distinguere gli input dalle funzioni.
 >

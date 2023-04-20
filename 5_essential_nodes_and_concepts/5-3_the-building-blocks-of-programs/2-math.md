@@ -6,12 +6,12 @@ Se il formato più semplice di dati è rappresentato dai numeri, il modo più se
 
 Gli operatori sono un insieme di componenti che utilizzano funzioni algebriche con due valori di input numerico, che producono un valore di output (addizione, sottrazione, moltiplicazione, divisione e così via). Questi sono disponibili in Operators > Actions.
 
-| Icona                                                | Nome (Sintassi)     | Input                     | Output      |
-| --------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](../images/5-3/2/addition.jpg)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Subtraction.jpg)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Multiplication.jpg) | Multiply (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](../images/5-3/2/Division.jpg)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| Icona                                              | Nome (Sintassi)     | Input                     | Output      |
+| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiply ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Esercizio: Formula della spirale aurea
 
@@ -95,7 +95,7 @@ Quindi, seguire questi mini passaggi per generare una serie di spirali con rotaz
 
 > a. **Geometry.Rotate:** sono disponibili diverse opzioni di **Geometry.Rotate**; assicurarsi di aver scelto il nodo con _geometry_, _basePlane_ e _degrees_ come input. Collegare **Point.ByCoordinates** all'input geometry. Fare clic con il pulsante destro del mouse su questo nodo e verificare che il collegamento sia impostato su Globale.
 >
-> ![](../images/5-3/2/math-partIV-03crossproduct.jpg)
+> <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY:** collegare all'input _basePlane_. Si ruoterà attorno all'origine, che è la stessa posizione della base della spirale.
 >

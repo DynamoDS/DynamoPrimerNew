@@ -2,7 +2,7 @@
 
 Nelle sezioni precedenti, sono stati analizzati i dettagli su come il pacchetto _MapToSurface_ è configurato con nodi personalizzati e file di esempio. Ma com'è possibile pubblicare un pacchetto che è stato sviluppato localmente? Questo case study mostra come pubblicare un pacchetto da un gruppo di file in una cartella locale.
 
-![](../images/6-2/4/publishapackage-customnodes01.jpg)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (6).jpg>)
 
 Esistono diversi modi per pubblicare un pacchetto. Di seguito è riportato il processo consigliato: **pubblicare localmente, sviluppare localmente, quindi pubblicare in linea**. Si inizierà con una cartella contenente tutti i file del pacchetto.
 
@@ -47,7 +47,7 @@ Nella finestra _Pubblica un pacchetto di Dynamo_, sono stati compilati i moduli 
 
 Dopo la pubblicazione, i nodi personalizzati devono essere disponibili nel gruppo "DynamoPrimer" o nella libreria di Dynamo.
 
-![](../images/6-2/4/publishapackage-publishlocally04.jpg)
+\![](<../images/6-2/3/develop package - install package 02 (1) (4).jpg>)
 
 Ora osservare la directory principale per vedere in che modo Dynamo ha formattato il pacchetto appena creato. A tale scopo, fare clic su Dynamo > Preferenze > Package Manager > accanto a MapToSurface, fare clic sul menu con i puntini verticali > selezionare Mostra directory principale.
 

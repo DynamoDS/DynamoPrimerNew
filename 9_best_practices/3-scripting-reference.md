@@ -4,7 +4,7 @@ Questa pagina di riferimento estende le procedure ottimali descritte in Strategi
 
 ## Quali librerie utilizzare
 
-Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di programmazione Python e C# (zero-touch). Dynamo dispone anche di un suo gruppo di librerie che corrispondono direttamente alla gerarchia dei nodi, consentendo all'utente di creare qualsiasi elemento nel codice che potrebbe essere creato con nodi e fili. Di seguito è riportata una guida per quali elementi a cui ciascuna libreria di Dynamo consente di accedere e per quando utilizzarne una standard.
+Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di programmazione Python e C# (zero-touch). Dynamo dispone anche di un suo gruppo di librerie che corrispondono direttamente alla gerarchia dei nodi, consentendo all'utente di creare qualsiasi elemento nel codice che potrebbe essere creato con nodi e fili. Di seguito è riportata una guida per gli elementi a cui ciascuna libreria di Dynamo consente di accedere e per quando utilizzarne una standard.
 
 ![](./images/3/textual-programming.jpg)
 
@@ -15,12 +15,12 @@ Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di prog
 
 **Librerie di Dynamo**
 
-1. ProtoGeometry\*
+1.  ProtoGeometry*
 
-   * Funzionalità: arco, riquadro di delimitazione, cerchio, cono, sistema di coordinate, cuboide, curva, cilindro, spigolo, ellisse, arco di ellisse, faccia, geometria, elica, gruppo di indici, linea, mesh, curva NURBS, superficie NURBS, piano, punto, poligono, rettangolo, solido, sfera, superficie, topologia, TSpline, UV, vettore, vertice.
-   * Modalità di importazione: `import Autodesk.DesignScript.Geometry`
+    * Funzionalità: arco, riquadro di delimitazione, cerchio, cono, sistema di coordinate, cuboide, curva, cilindro, spigolo, ellisse, arco di ellisse, faccia, geometria, elica, gruppo di indici, linea, mesh, curva NURBS, superficie NURBS, piano, punto, poligono, rettangolo, solido, sfera, superficie, topologia, TSpline, UV, vettore, vertice.
+    * Modalità di importazione: `import Autodesk.DesignScript.Geometry`
 
-   ``
+    \`\`
 2. DSCoreNodes
    * Funzionalità: colore, intervallo di colori 2D, data e ora, intervallo di tempo, IO, formula, logica, elenco, matematica, Quadtree, stringa, filettatura.
    * Modalità di importazione: `import DSCore`
@@ -31,9 +31,7 @@ Le librerie standard sono esterne a Dynamo e sono presenti nei linguaggi di prog
    * Funzionalità: Excel.
    * Modalità di importazione: `import DSOffice`
 
-{% hint style="warning" %}
-\*Nota Quando si utilizza **ProtoGeometry** tramite Python o C#, si stanno creando oggetti non gestiti, che richiedono la gestione manuale della memoria. Per ulteriori informazioni, vedere la sezione riportata di seguito: **Oggetti non gestiti**.
-{% endhint %}
+{% hint style="warning" %} *Nota Quando si utilizza **ProtoGeometry** tramite Python o C#, si stanno creando oggetti non gestiti, che richiedono la gestione manuale della memoria. Per ulteriori informazioni, vedere la sezione riportata di seguito: **Oggetti non gestiti**. {% endhint %}
 
 ## Etichettatura con attenzione
 
@@ -153,78 +151,78 @@ In generale, esistono più modi per programmare qualsiasi cosa, quindi lo "stile
 **Convenzioni di denominazione:** scegliere una delle convenzioni riportate di seguito per ogni tipo di entità nel codice e attenersi ad essa.
 
 * Variabili, funzioni, metodi, pacchetti, moduli:\
-   `lower_case_with_underscores`
+ `lower_case_with_underscores`
 * Classi ed eccezioni:\
-   `CapWords`
+ `CapWords`
 * Metodi protetti e funzioni interne:\
-   `_single_leading_underscore(self, ...)`
+ `_single_leading_underscore(self, ...)`
 * Metodi privati:\
-   `__double_leading_underscore(self, ...)`
+ `__double_leading_underscore(self, ...)`
 * Costanti:\
-   `ALL_CAPS_WITH_UNDERSCORES`
+ `ALL_CAPS_WITH_UNDERSCORES`
 
 > Suggerimento: evitare variabili con una lettera (soprattutto l, O, I) tranne che in blocchi molto corti, quando il significato è chiaramente visibile dal contesto immediato.
 
 **Utilizzo di righe vuote:**
 
 * Circondare le definizioni di classi e funzioni di livello superiore con due righe vuote.
-   * Le definizioni dei metodi all'interno di una classe sono circondate da una singola riga vuota.
-   * È possibile utilizzare (con moderazione) righe vuote aggiuntive per separare gruppi di funzioni correlate.
+  * Le definizioni dei metodi all'interno di una classe sono circondate da una singola riga vuota.
+  * È possibile utilizzare (con moderazione) righe vuote aggiuntive per separare gruppi di funzioni correlate.
 
 **Evitare spazi estranei:**
 
-* Immediatamente all'interno delle parentesi tonde, quadre o graffe:
+*   Immediatamente all'interno delle parentesi tonde, quadre o graffe:
 
-   ```
-   ### BAD
-   function( apples[ 1 ], { oranges: 2 } )
-   ```
+    ```
+    ### BAD
+    function( apples[ 1 ], { oranges: 2 } )
+    ```
 
-   ```
-   ### GOOD:
-   function(apples[1], {oranges: 2})
-   ```
-* Subito prima di una virgola, un punto e virgola o due punti:
+    ```
+    ### GOOD:
+    function(apples[1], {oranges: 2})
+    ```
+*   Subito prima di una virgola, un punto e virgola o due punti:
 
-   ```
-   ### BAD
-    if x == 2 : print x , y ; x , y = y , x
-   ```
+    ```
+    ### BAD
+     if x == 2 : print x , y ; x , y = y , x
+    ```
 
-   ```
-   ### GOOD
-     if x == 2: print x, y; x, y = y, x
-   ```
-* Subito prima della parentesi aperta che inizia l'elenco di argomenti di una chiamata di funzione:
+    ```
+    ### GOOD
+      if x == 2: print x, y; x, y = y, x
+    ```
+*   Subito prima della parentesi aperta che inizia l'elenco di argomenti di una chiamata di funzione:
 
-   ```
-   ### BAD
-   function (1)
-   ```
+    ```
+    ### BAD
+    function (1)
+    ```
 
-   ```
-   ### GOOD
-   function(1)
-   ```
-* Subito prima della parentesi aperta che inizia un'indicizzazione o un sezionamento:
+    ```
+    ### GOOD
+    function(1)
+    ```
+*   Subito prima della parentesi aperta che inizia un'indicizzazione o un sezionamento:
 
-   ```
-   ### BAD
-   dict ['key'] = list [index]
-   ```
+    ```
+    ### BAD
+    dict ['key'] = list [index]
+    ```
 
-   ```
-   ### GOOD
-   dict['key'] = list[index]
-   ```
-* Circondare sempre questi operatori binari con uno spazio su entrambi i lati:
+    ```
+    ### GOOD
+    dict['key'] = list[index]
+    ```
+*   Circondare sempre questi operatori binari con uno spazio su entrambi i lati:
 
-   ```
-   assignment ( = )
-   augmented assignment ( += , -= etc.)
-   comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
-   Booleans ( and , or , not )
-   ```
+    ```
+    assignment ( = )
+    augmented assignment ( += , -= etc.)
+    comparisons ( == , < , > , != , <> , <= , >= , in , not in , is , is not )
+    Booleans ( and , or , not )
+    ```
 
 **Controllare la lunghezza della riga:**
 
@@ -235,26 +233,26 @@ In generale, esistono più modi per programmare qualsiasi cosa, quindi lo "stile
 **Evitare commenti ovvi e ridondanti:**
 
 * A volte meno commenti creano codice più leggibile. Soprattutto se obbliga ad utilizzare nomi di simboli significativi.
-* L'adozione di buone abitudini di codifica riduce la dipendenza dai commenti:
+*   L'adozione di buone abitudini di codifica riduce la dipendenza dai commenti:
 
-   ```
-   ### BAD
-     # get the country code
-     country_code = get_country_code(address)
+    ```
+    ### BAD
+      # get the country code
+      country_code = get_country_code(address)
 
-     # if country code is US
-     if (country_code == 'US'):
-       # display the form input for state
-       print form_input_state()
-   ```
+      # if country code is US
+      if (country_code == 'US'):
+        # display the form input for state
+        print form_input_state()
+    ```
 
-   ```
-   ### GOOD
-     # display state selection for US users
-     country_code = get_country_code(address)
-     if (country_code == 'US'):
-       print form_input_state()
-   ```
+    ```
+    ### GOOD
+      # display state selection for US users
+      country_code = get_country_code(address)
+      if (country_code == 'US'):
+        print form_input_state()
+    ```
 
 > Suggerimento: i commenti indicano perché, il codice indica come.
 
@@ -262,8 +260,8 @@ In generale, esistono più modi per programmare qualsiasi cosa, quindi lo "stile
 
 * I progetti open source sono realizzati grazie alle iniziative collaborative di molti sviluppatori. Questi progetti devono mantenere un elevato livello di leggibilità del codice, in modo che il team possa collaborare nel modo più efficiente possibile. È pertanto consigliabile esaminare il codice sorgente di questi progetti per osservare le attività di questi sviluppatori.
 * Migliorare le convenzioni:
-   * Chiedersi se ciascuna convenzione soddisfa o meno le esigenze imminenti.
-   * Le funzionalità/L'efficienza sono compromesse?
+  * Chiedersi se ciascuna convenzione soddisfa o meno le esigenze imminenti.
+  * Le funzionalità/L'efficienza sono compromesse?
 
 ## Standard di C# (zero-touch)
 
@@ -276,9 +274,9 @@ In generale, esistono più modi per programmare qualsiasi cosa, quindi lo "stile
 
 Quando si utilizza la libreria della geometria di Dynamo _(ProtoGeometry)_ da Python o C#, gli oggetti della geometria che si creano non verranno gestiti dalla macchina virtuale e la memoria di molti di questi oggetti dovrà essere pulita manualmente. Per eliminare oggetti nativi o non gestiti, è possibile utilizzare il metodo **Dispose** o la parola chiave **using**. Per una panoramica, vedere questa voce Wiki: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-È sufficiente eliminare le risorse non gestite che non vengono restituite nel grafico o in cui non viene memorizzato un riferimento. Per il resto di questa sezione, si farà riferimento a questi oggetti come _geometria intermedia_. Nell'esempio di codice riportato di seguito è mostrato un esempio di questa classe di oggetto. Questa funzione di C# zero-touch **singleCube** restituisce un singolo cubo, ma crea 10.000 cubi aggiuntivi durante l'esecuzione. Si può far finta che quest'altra geometria sia stata utilizzata come geometria di costruzione intermedia.
+È sufficiente eliminare le risorse non gestite che non vengono restituite nel grafico o in cui non viene memorizzato un riferimento. Per il resto di questa sezione, si farà riferimento a questi oggetti come _geometria intermedia_. Nell'esempio di codice riportato di seguito è mostrato un esempio di questa classe di oggetto. Questa funzione di C# zero-touch **singleCube** restituisce un singolo cubo, ma crea 10000 cubi aggiuntivi durante l'esecuzione. Si può far finta che quest'altra geometria sia stata utilizzata come geometria di costruzione intermedia.
 
-**Questa funzione zero-touch probabilmente provocherà un arresto anomalo di Dynamo.** E ciò perché sono stati creati 10.000 solidi, ma ne è stato memorizzato solo uno e ne è stato restituito solo uno. Si dovrebbero invece eliminare tutti i cubi intermedi, tranne quello restituito. Non si desidera eliminare ciò che viene restituito, perché verrà propagato nel grafico e utilizzato da altri nodi.
+**Questa funzione zero-touch probabilmente provocherà un arresto anomalo di Dynamo.** E ciò perché sono stati creati 10000 solidi, ma ne è stato memorizzato solo uno e ne è stato restituito solo uno. Si dovrebbero invece eliminare tutti i cubi intermedi, tranne quello restituito. Non si desidera eliminare ciò che viene restituito, perché verrà propagato nel grafico e utilizzato da altri nodi.
 
 ```
 public Cuboid singleCube(){

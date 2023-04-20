@@ -10,11 +10,11 @@ Le variabili numeriche possono memorizzare un intero intervallo di numeri divers
 
 L'istruzione "If" è un concetto chiave nella programmazione: "Se _ciò_ è vero, allora accade _questo_, altrimenti succede _qualcos'altro_. L'azione risultante dell'istruzione è determinata da un valore booleano. Esistono diversi modi per definire un'istruzione "If" in Dynamo:
 
-| Icona                                            | Nome (Sintassi)             | Input            | Output |
-| ----------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../images/5-3/3/If.jpg)         | If (**If**)               | test, true, false | risultato  |
-| ![](../images/5-3/3/Formula.jpg)          | Formula (**IF(x,y,z)**)   | x, y, z           | risultato  |
-| ![](../images/5-3/3/CodeBlock.jpg) | Code Block (**(x?y:z);**) | X, Y, Z           | risultato  |
+| Icona                                         | Nome (Sintassi)             | Input            | Output |
+| -------------------------------------------- | ------------------------- | ----------------- | ------- |
+| ![](../images/5-1/If.jpg)                    | If (**If**)               | test, true, false | risultato  |
+| ![](../images/5-1/Formula.jpg)               | Formula (**IF(x,y,z)**)   | x, y, z           | risultato  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Code Block (**(x?y:z);**) | X, Y, Z           | risultato  |
 
 Si esaminerà un breve esempio per ciascuno di questi tre nodi in azione utilizzando l'istruzione "If" condizionale.
 

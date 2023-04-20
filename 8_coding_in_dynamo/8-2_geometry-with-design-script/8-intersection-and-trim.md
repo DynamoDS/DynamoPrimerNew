@@ -4,14 +4,14 @@ Molti degli esempi riportati finora si sono concentrati sulla costruzione di geo
 
 Il metodo _Intersect_ è definito su tutti gli elementi della geometria in Dynamo, ovvero, in teoria qualsiasi elemento della geometria può essere intersecato con qualsiasi altro elemento della geometria. Naturalmente alcune intersezioni sono insignificanti, come le intersezioni che coinvolgono i punti, poiché l'oggetto risultante sarà sempre il punto di input stesso. Le altre possibili combinazioni di intersezioni tra gli oggetti sono descritte nel seguente grafico, in cui è illustrato il risultato di diverse operazioni di intersezione:
 
-### **Intersezione**
+### **Interseca**
 
-| _Con:_ | Superficie | Curva | Piano | Uniforme |
+| _Con:_     | Superficie | Curva | Piano        | Uniforme   |
 | ----------- | ------- | ----- | ------------ | ------- |
-| **Superficie** | Curva | Punto | Punto, curva | Superficie |
-| **Curva** | Punto | Punto | Punto | Curva |
-| **Piano** | Curva | Punto | Curva | Curva |
-| **Solido** | Superficie | Curva | Curva | Uniforme |
+| **Superficie** | Curva   | Punto | Punto, curva | Superficie |
+| **Curva**   | Punto   | Punto | Punto        | Curva   |
+| **Piano**   | Curva   | Punto | Curva        | Curva   |
+| **Uniforme**   | Superficie | Curva | Curva        | Uniforme   |
 
 Nel semplicissimo esempio riportato di seguito è mostrata l'intersezione di un piano con una NurbsSurface. L'intersezione genera una serie di NurbsCurve, che può essere utilizzata come qualsiasi altra NurbsCurve.
 
@@ -36,14 +36,14 @@ crvs_moved = crvs.Translate(0, 0, 10);
 
 Il metodo _Trim_ è molto simile al metodo Intersect, in quanto viene definito per quasi ogni elemento della geometria. Tuttavia, esistono molte più limitazioni per _Trim_ rispetto a _Intersect_.
 
-### **Taglia**
+### **Riduci**
 
 |             | _Mediante:_ Point | Curva | Piano | Superficie | Uniforme |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _Su_ Curva | Sì | No | No | No | No |
-| Poligono | - | No | Sì | No | No |
-| Superficie | - | Sì | Sì | Sì | Sì |
-| Uniforme | - | - | Sì | Sì | Sì |
+| _Su:_ Curva | Sì            | No    | No    | No      | No    |
+| Poligono     | -              | No    | Sì   | No      | No    |
+| Superficie     | -              | Sì   | Sì   | Sì     | Sì   |
+| Uniforme       | -              | -     | Sì   | Sì     | Sì   |
 
 Qualcosa da notare sui metodi _Trim_ è il requisito di un punto di "selezione", un punto che determina quale geometria eliminare e quali elementi mantenere. In Dynamo viene trovata ed eliminata la geometria ritagliata più vicina al punto di selezione.
 

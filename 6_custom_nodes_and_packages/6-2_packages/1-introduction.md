@@ -67,7 +67,7 @@ Aprire "SphereUnfold".
 
 Dopo aver aperto il file e aver fatto clic su "Esegui" nel risolutore, è presente una sfera spiegata. File di esempio come questi sono utili per imparare ad utilizzare un nuovo pacchetto di Dynamo.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg)
+\![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### Dynamo Package Manager
 

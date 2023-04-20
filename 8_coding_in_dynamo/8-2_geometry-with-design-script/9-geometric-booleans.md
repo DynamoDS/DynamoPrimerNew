@@ -4,7 +4,7 @@ _Intersect_, _Trim_ e _SelectTrim_ vengono utilizzati principalmente nella geome
 
 ### Unione
 
-Il metodo _Union_ utilizza due oggetti solidi e crea un singolo oggetto solido partendo dallo spazio coperto da entrambi gli oggetti. Lo spazio sovrapposto tra oggetti viene combinato nella forma finale. In questo esempio si combina una sfera e un cuboide in un'unica forma solida sfera-cubo:
+Il metodo _Unione_ utilizza due oggetti solidi e crea un singolo oggetto solido partendo dallo spazio coperto da entrambi gli oggetti. Lo spazio sovrapposto tra oggetti viene combinato nella forma finale. In questo esempio si combina una sfera e un cuboide in un'unica forma solida sfera-cubo:
 
 ![](../images/8-2/9/GeometricBooleans\_01.png)
 

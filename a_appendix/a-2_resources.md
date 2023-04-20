@@ -26,7 +26,7 @@ Dynamo Primer è un progetto open source avviato da Matt Jezyk e dal team di svi
 
 [https://github.com/DynamoDS/DynamoPrimer](https://github.com/DynamoDS/DynamoPrimer)
 
-### **Sviluppo di plug-in touch-zero per Dynamo**
+### **Sviluppo di plug-in zero-touch per Dynamo**
 
 In questa pagina viene descritta la procedura di sviluppo di un nodo di Dynamo personalizzato in C# utilizzando l'interfaccia zero-touch. Nella maggior parte dei casi, le classi e i metodi statici C# possono essere importati senza modifica. Se la libreria deve chiamare solo funzioni e non costruire nuovi oggetti, questo obiettivo si può ottenere molto facilmente con i metodi statici. Quando Dynamo carica la DLL, verrà rimossa dallo spazio dei nomi delle classi e tutti i metodi statici verranno esposti come nodi.
 
@@ -68,11 +68,11 @@ Questo blocco appunti tenta di rimediare ad alcune carenze delle risorse nell'ap
 
 ### **Shell Python di Revit**
 
-RevitPythonShell aggiunge un interprete IronPython ad Autodesk Revit e Vasari. Questo progetto precede Dynamo ed è un ottimo riferimento per lo sviluppo di Python. Progetto RPS:&#x20;
+RevitPythonShell aggiunge un interprete IronPython ad Autodesk Revit e Vasari. Questo progetto precede Dynamo ed è un ottimo riferimento per lo sviluppo di Python. Progetto RPS: 
 
-https://github.com/architecture-building-systems/revitpythonshell&#x20;
+https://github.com/architecture-building-systems/revitpythonshell 
 
-Blog per sviluppatori:&#x20;
+Blog per sviluppatori: 
 
 [http://darenatwork.blogspot.com/](http://darenatwork.blogspot.com)
 
