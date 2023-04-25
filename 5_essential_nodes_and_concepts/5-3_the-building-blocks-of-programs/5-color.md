@@ -8,7 +8,7 @@ Dynamo では、ARGB 入力を使用して色を作成します。これは、�
 
 | アイコン                                     | 名前(構文)                 | 入力  | 出力 |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB Color (**Color.ByARGB**) | A、R、G、B | color   |
+| ![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB Color (**Color.ByARGB**) | A、R、G、B | color   |
 
 ### 色の値のクエリー
 
@@ -16,19 +16,19 @@ Dynamo では、ARGB 入力を使用して色を作成します。これは、�
 
 | アイコン                                          | 名前(構文)                     | 入力 | 出力    |
 | --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | アルファ(**Color.Alpha**)           | color  | A          |
-| \![](<../images/5-1/ColorRed (1).jpg>)         | 赤(**Color.Red**)               | color  | R          |
-| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | 緑(**Color.Green**)           | color  | G          |
-| \![](<../images/5-1/ColorBlue (1).jpg>)        | 青(**Color.Blue**)             | color  | B          |
-| \![](<../images/5-1/ColorComponent (1).jpg>)   | コンポーネント(**Color.Components**) | color  | A、R、G、B |
+| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | アルファ(**Color.Alpha**)           | color  | A          |
+| ![](<../images/5-1/ColorRed (1).jpg>)         | 赤(**Color.Red**)               | color  | R          |
+| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | 緑(**Color.Green**)           | color  | G          |
+| ![](<../images/5-1/ColorBlue (1).jpg>)        | 青(**Color.Blue**)             | color  | B          |
+| ![](<../images/5-1/ColorComponent (1).jpg>)   | コンポーネント(**Color.Components**) | color  | A、R、G、B |
 
 次の表に記載されている色は、**HSB 色空間**に対応しています。色を、色相、彩度、明るさに分割すると、より直感的に色を解釈することができます。たとえば、最初に処理する色を決め、次にその色の彩度と明るさを設定します。このように、色相、彩度、明るさをそれぞれ個別に設定していきます。
 
 | アイコン                                         | 名前(構文)                     | 入力 | 出力    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/5-1/ColorHue (1).jpg>)        | 色相(**Color.Hue**)               | color  | Hue        |
-| \![](<../images/5-1/ColorSaturation (1).jpg>) | 彩度(**Color.Saturation**) | color  | Saturation |
-| \![](<../images/5-1/ColorBrightness (1).jpg>) | 明るさ(**Color.Brightness**) | color  | Brightness |
+| ![](<../images/5-1/ColorHue (1).jpg>)        | 色相(**Color.Hue**)               | color  | Hue        |
+| ![](<../images/5-1/ColorSaturation (1).jpg>) | 彩度(**Color.Saturation**) | color  | Saturation |
+| ![](<../images/5-1/ColorBrightness (1).jpg>) | 明るさ(**Color.Brightness**) | color  | Brightness |
 
 ### 色範囲
 
@@ -41,7 +41,7 @@ Dynamo では、ARGB 入力を使用して色を作成します。これは、�
 > 1. 3 つの色を定義する: **Code Block** ノードを使用して _0_ から _255_ までの適切な数値の組み合わせに接続することにより、_赤、緑_ 、 _青_ を定義します。
 > 2. **リストを作成する:** 3 つの色を 1 つのリストにマージします。
 > 3. インデックスを定義する: 0 から 1 までの範囲で、各色のグリップ位置を定義するリストを作成します。緑の値が 0.75 になっていることに注意してください。これにより、色範囲スライダの水平方向のグラデーションの 4 分の 3 が緑色になります。
-> 4. **Code Block ノードを設定する: ** 0 から 1 までの値を入力することで、グラデーションを色に変換します。
+> 4. **Code Block ノードを設定する:** 0 から 1 までの値を入力することで、グラデーションを色に変換します。
 
 ### 色のプレビュー
 
