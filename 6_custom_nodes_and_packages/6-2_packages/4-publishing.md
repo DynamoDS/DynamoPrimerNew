@@ -2,7 +2,7 @@
 
 Nas seções anteriores, analisamos os detalhes de como o pacote _MapToSurface_ é configurado com nós personalizados e arquivos de exemplo. Mas como publicamos um pacote que foi desenvolvido localmente? Este estudo de caso demonstra como publicar um pacote de um conjunto de arquivos em uma pasta local.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (6).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (6).jpg>)
 
 Há diversas formas de publicar um pacote. Confira abaixo o processo que aconselhamos: **publicar localmente, desenvolver localmente e publicar on-line**. Vamos começar com uma pasta contendo todos os arquivos do pacote.
 
@@ -47,7 +47,7 @@ Na janela _“Publicar um pacote do Dynamo”_, preencha os formulários relevan
 
 Após a publicação, os nós personalizados devem estar disponíveis no grupo “DynamoPrimer” ou na Biblioteca do Dynamo.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (4).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (4).jpg>)
 
 Agora, vamos examinar o diretório raiz para ver como o Dynamo formatou o pacote que acabamos de criar. Para fazer isso, clique em Dynamo > Preferências > Gerenciador de pacotes > ao lado de MapToSurface, clique no menu de pontos verticais > selecione Mostrar diretório raiz
 
