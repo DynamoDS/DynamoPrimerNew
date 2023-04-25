@@ -8,10 +8,10 @@ Los operadores son un conjunto de componentes que utilizan funciones algebraicas
 
 | Icono                                              | Nombre (sintaxis)     | Entradas                     | Salidas      |
 | ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiplicar ( ***** ) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiplicar ( **\*** ) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ejercicio: la fórmula de la espiral dorada
 
@@ -87,7 +87,7 @@ Ahora que hemos hecho una concha de caracol circular, vamos a pasar a las rejill
 
 Como punto de partida, vamos a realizar el mismo paso del ejercicio anterior: crear una matriz de puntos de espiral con el nodo **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+![](../images/5-3/2/math-part IV-01.jpg)
 
 A continuación, siga estos pequeños pasos para generar una serie de espirales en varias rotaciones.
 
