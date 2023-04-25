@@ -87,7 +87,7 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 * 입력 포트로의 연결을 변경하려면 다른 입력 포트를 마우스 왼쪽 버튼으로 클릭합니다.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * 와이어를 제거하려면 와이어를 바깥쪽으로 당긴 다음, 작업공간을 마우스 왼쪽 버튼으로 클릭합니다.
 
@@ -116,7 +116,7 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 이 설정을 사용하면 선택한 노드 및 해당 결합 와이어만 연한 청록색으로 강조 표시됩니다.
 
-\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### 개별 와이어만 숨기기
 
