@@ -8,10 +8,10 @@ Operátory jsou sada komponent, které používají algebraické funkce se dvěm
 
 | Ikona                                              | Název (Syntaxe)     | Vstupy                     | Výstupy      |
 | ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Násobení ( **\*** ) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Cvičení: Vzorec zlaté spirály
 
@@ -87,7 +87,7 @@ Nyní, když jsme vytvořili kruhovou ulitu loděnky, přejděme k parametrick�
 
 Jako výchozí bod použijeme stejný krok z předchozího cvičení: Vytvoření spirálového pole bodů pomocí uzlu **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+![](../images/5-3/2/math-part IV-01.jpg)
 
 Dále postupujte podle těchto krátkých kroků a vygenerujte řadu spirál s různým natočením.
 
