@@ -8,10 +8,10 @@ Gli operatori sono un insieme di componenti che utilizzano funzioni algebriche c
 
 | Icona                                              | Nome (Sintassi)     | Input                     | Output      |
 | ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiply ( ***** ) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Multiply ( **\*** ) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Esercizio: Formula della spirale aurea
 
@@ -87,7 +87,7 @@ Ora che è stata creata una conchiglia Nautilus circolare, si può passare alle 
 
 Come punto di partenza, iniziare con lo stesso passaggio dell'esercizio precedente: la creazione di una serie di punti della spirale con il nodo **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+![](../images/5-3/2/math-part IV-01.jpg)
 
 Quindi, seguire questi mini passaggi per generare una serie di spirali con rotazione diversa.
 
