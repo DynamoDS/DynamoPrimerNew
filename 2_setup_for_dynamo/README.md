@@ -4,7 +4,7 @@
 
 Dynamo は、アクティブなオープンソース開発プロジェクトです。[Dynamo を利用できるソフトウェアの一覧](http://dynamobim.org/download/)をご確認いただけます。
 
-![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) \![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
+![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) ![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
 
 ### 拡張機能としての Dynamo を起動する
 
@@ -12,7 +12,7 @@ Dynamo は、**Revit3D**、**FormIt**、**Civil3D** などのソフトウェア�
 
 使用を開始するには、ツールバー パネルから起動します。使用しているソフトウェアによって異なりますが、起動アイコンは通常、[メニュー] > [**管理**]タブにあります。Dynamo アイコン ![](images/dynamoCore-halfSize.png) をクリックして起動します。
 
-\![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
+![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
 
 特定のソフトウェアで Dynamo を使用する方法の詳細については、次のセクションを参照してください。
 
@@ -62,4 +62,6 @@ ZIP ファイルを右クリックして、[**すべて展開**]を選択しま�
 
 これで、DynamoSandbox を使用するための設定が完了しました。
 
-{% hint style="info" %} **Geometry** は、Dynamo Sandbox の追加機能です。この機能は、現在 Revit、Robot Structural Analysis、FormIt、Civil 3D の Autodesk ソフトウェアのサブスクリプションまたはライセンスを所有しているユーザのみが使用できます。**Geometry** を使用すると、Dynamo Sandbox からジオメトリを読み込み、作成、編集、書き出すことができます。{% endhint %}
+{% hint style="info" %}
+**Geometry** は、Dynamo Sandbox の追加機能です。この機能は、現在 Revit、Robot Structural Analysis、FormIt、Civil 3D の Autodesk ソフトウェアのサブスクリプションまたはライセンスを所有しているユーザのみが使用できます。**Geometry** を使用すると、Dynamo Sandbox からジオメトリを読み込み、作成、編集、書き出すことができます。
+{% endhint %}
