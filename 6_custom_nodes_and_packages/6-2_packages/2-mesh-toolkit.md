@@ -2,7 +2,7 @@
 
 Sada nástrojů pro sítě obsahuje nástroje pro import sítí ze souborů různých formátů, tvorbu sítě z objektů geometrií aplikace Dynamo a ruční tvorbu sítí z bodů a indexů. Knihovna také obsahuje nástroje pro úpravy sítí a extrahování vodorovných řezů pro použití ve výrobě.
 
-\![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
 
 Balíček Dynamo Mesh Toolkit je součástí probíhajícího výzkumu společnosti Autodesk a proto se bude v nadcházejících letech dále rozvíjet. Do sady budou často přidávány nové metody, tým aplikace Dynamo ocení jakékoliv komentáře, hlášení chyb nebo nápady na nové funkce.
 
