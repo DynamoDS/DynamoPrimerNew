@@ -14,7 +14,7 @@ Výraz „If“ je klíčovou koncepcí programování: „Pokud je _tato hodnot
 | -------------------------------------------- | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                    | If (**If**)               | test, true, false | výsledek  |
 | ![](../images/5-1/Formula.jpg)               | Formula (**IF(x,y,z)**)   | x, y, z           | výsledek  |
-| \![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | výsledek  |
+| ![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | výsledek  |
 
 Pojďme si projít stručný příklad každého z těchto tří uzlů v akci pomocí podmíněného výrazu „If“.
 
