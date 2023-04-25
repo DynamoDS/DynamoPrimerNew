@@ -4,7 +4,7 @@
 
 Dynamo는 활성 오픈 소스 개발 프로젝트입니다. [Dynamo를 지원하는 소프트웨어 리스트](http://dynamobim.org/download/)를 확인해 보십시오.
 
-![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) \![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
+![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) ![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
 
 ### Dynamo 확장 시작
 
@@ -12,7 +12,7 @@ Dynamo는 **Revit3D**, **FormIt**, **Civil3D** 등의 소프트웨어와 함께 
 
 사용하려면 도구막대 패널에서 시작합니다. 사용 중인 소프트웨어에 따라 일반적으로 시작 아이콘은 메뉴 > **관리** 탭에서 사용할 수 있습니다. Dynamo 아이콘 ![](images/dynamoCore-halfSize.png)을 클릭하여 시작합니다.
 
-\![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
+![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
 
 특정 소프트웨어에서 Dynamo를 사용하는 방법에 대한 자세한 지침은 다음 섹션을 참고하십시오.
 
@@ -62,4 +62,6 @@ DynamoSandbox 시작 화면이 다음과 같이 표시됩니다.
 
 축하합니다. DynamoSandbox 사용을 위한 설정이 완료되었습니다.
 
-{% hint style="info" %} **형상**은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다. **형상**을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다.
+{% hint style="info" %}
+**형상**은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다. **형상**을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다.
+{% endhint %}
