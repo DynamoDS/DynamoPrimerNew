@@ -25,7 +25,9 @@ Z myślą o użytkownikach chcących zobaczyć prezentację procesów roboczych 
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} W kolejnych rozdziałach znajduje się więcej ćwiczeń dotyczących różnych omawianych tematów związanych z dodatkiem Dynamo. **Ćwiczenia** można zazwyczaj znaleźć w ostatniej sekcji każdej strony. {% endhint %}
+{% hint style="info" %}
+W kolejnych rozdziałach znajduje się więcej ćwiczeń dotyczących różnych omawianych tematów związanych z dodatkiem Dynamo. **Ćwiczenia** można zazwyczaj znaleźć w ostatniej sekcji każdej strony. 
+{% endhint %}
 
 ### Społeczność
 
