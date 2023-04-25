@@ -14,7 +14,7 @@
 | -------------------------------------------- | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                    | If (**If**)               | test、true、false | result  |
 | ![](../images/5-1/Formula.jpg)               | Formula (**IF(x,y,z)**)   | x、y、z           | result  |
-| \![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
+| ![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
 
 接下來瞭解使用條件「if」陳述式的三種有效節點中每種節點的簡單範例。
 
