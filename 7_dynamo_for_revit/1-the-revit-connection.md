@@ -37,7 +37,7 @@ En un editor de proyectos o familias de Revit, vaya a Complementos y haga clic e
 
 {% hint style="warning" %}* Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió. {% endhint %}
 
-\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata de una adición completa a la interfaz de usuario que ofrece nodos que se adaptan específicamente a los flujos de trabajo de Revit.*
 
