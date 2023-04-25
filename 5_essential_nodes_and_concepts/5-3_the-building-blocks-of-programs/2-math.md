@@ -87,7 +87,7 @@ $$ y = r sin θ = a sin θe^{bθ} $$
 
 一開始，我們先執行上一個練習中的相同步驟：使用 **Point.ByCoordinates** 節點建立點的螺旋線陣列。
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+![](../images/5-3/2/math-part IV-01.jpg)
 
 接下來，依照這些小步驟，以各種旋轉產生一系列螺旋線。
 
