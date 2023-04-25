@@ -9,9 +9,9 @@
 |                                            |                                                                                                                       |                                                           |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
 |                                            | 创建                                                                                                                |                                                           |
-| ![](images/5-3/5/ColorbyARGB.jpg)          | <p><strong>Color.ByARGB</strong><br>按 Alpha、红色、绿色和蓝色分量构造颜色。</p>                  | ![](<images/5-1/indexofnodes-colorbyargb(1) (1) (1).jpg>) |
+| ![](images/5-3/5/ColorbyARGB.jpg)          | <p><strong>Color.ByARGB</strong><br>按 Alpha、红色、绿色和蓝色分量构造颜色。</p>                  | ![](<images/5-1/indexofnodes-colorbyargb(1) (1) (1).jpg>)  |
 | ![](images/5-1/ColorRange.jpg)             | <p><strong>颜色范围</strong><br>基于起点颜色和终点颜色之间的颜色渐变获取颜色。</p>      | ![](images/5-1/indexofnodes-colorrange\(1\).jpg)          |
-|                                            | 操作                                                                                                               |                                                           |
+|                                            | 操作                                                                                                               |                                                            |
 | ![](images/5-3/5/ColorBrightness.jpg)      | <p><strong>Color.Brightness</strong><br>获取该颜色的亮度值。</p>                                 | ![](images/5-1/indexofnodes-colorbrightness\(1\).jpg)     |
 | ![](<images/5-3/5/ColorComponent (1).jpg>) | <p><strong>Color.Components</strong><br>按以下顺序列出颜色分量：Alpha、红、绿、蓝。</p> | ![](images/5-1/indexofnodes-colorcomponent.jpg)           |
 | ![](images/5-3/5/ColorSaturation.jpg)      | <p><strong>Color.Saturation</strong><br>获取该颜色的饱和度值</p>                                  | ![](images/5-1/indexofnodes-colorsaturation.jpg)          |
@@ -100,7 +100,7 @@
 |                                    | 操作                                                                                                                                              |                                                          |
 | ![](images/5-1/Stringconcat.jpg)   | <p><strong>String.Concat</strong><br>将多个字符串合并为单个字符串。</p>                                                         | ![](images/5-1/indexofnodes-stringconcat.jpg)            |
 | ![](images/5-1/Stringcontains.jpg) | <p><strong>String.Contains</strong><br>确定给定字符串是否包含给定子字符串。</p>                                              | ![](images/5-1/indexofnodes-stringcontains.jpg)          |
-| ![](images/5-1/Stringjoin.jpg)     | <p><strong>String.Join</strong><br>将多个字符串合并为单个字符串，在每个连接的字符串之间插入给定分隔符。</p> | \![](<images/5-1/indexofnodes-stringjoin(1) (1) (1).jpg>) |
+| ![](images/5-1/Stringjoin.jpg)     | <p><strong>String.Join</strong><br>将多个字符串合并为单个字符串，在每个连接的字符串之间插入给定分隔符。</p> | ![](<images/5-1/indexofnodes-stringjoin(1) (1) (1).jpg>) |
 | ![](images/5-1/Stringsplit.jpg)    | <p><strong>String.Split</strong><br>使用由给定分隔符字符串确定的分段，将单个字符串拆分为字符串列表。</p>    | ![](images/5-1/indexofnodes-stringsplit.jpg)             |
 | ![](images/5-1/Stringtonumber.jpg) | <p><strong>String.ToNumber</strong><br>将字符串转换为整数或双精度数。</p>                                                              | ![](images/5-1/indexofnodes-stringtonumber.jpg)          |
 
