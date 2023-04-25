@@ -6,7 +6,7 @@ Revit は、非常に豊富なデータを扱う環境です。このため、�
 
 [Revit]ライブラリの[Selection]カテゴリから、さまざまな方法でジオメトリを選択できます。
 
-\![](<images/2/select revit elements 01.jpg>)
+![](<images/2/select revit elements 01.jpg>)
 
 ### Revit の階層
 
@@ -26,11 +26,11 @@ Revit の階層を簡単に確認してみましょう。
 
 _ポイント アンド クリック_ は、Revit の要素を直接選択する最も簡単な方法です。モデル要素全体であれ、そのトポロジの一部(たとえば 1 つの面や 1 つのエッジ)であれ、選択することができます。この方法では Revit オブジェクトへの動的なリンクが維持されるため、Revit ファイルの場所やパラメータが変更されると、グラフ内で参照されている Dynamo の要素が更新されます。
 
-\![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
+![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
 _ドロップダウン メニュー_ で、Revit プロジェクト内のアクセス可能なすべての要素のリストが作成されます。ビューで確認できない Revit の要素も含めて、これで参照できます。Revit プロジェクトやファミリ エディタで既存の要素をクエリーしたり、新しい要素を作成するには、このツールが役に立ちます。
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 Revit の要素の選択方法としては、他に _Revit の階層構造_ から特定の階層を指定する方法もあります。この方法は、設計図書作成、インスタンスの生成とカスタマイズなどのために準備されている大規模なデータ配列をカスタマイズするのにとても役立ちます。
 
@@ -48,7 +48,7 @@ Revit の要素の選択方法としては、他に _Revit の階層構造_ か�
 
 この Revit ファイルのサンプルには、3 つの要素タイプから成る 1 つの単純な建物モデルが含まれています。それでは、このモデルを見本として使用して、次に挙げる Revit の階層構造の中で Revit の要素を選択してみましょう。
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (2).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (2).jpg>)
 
 > 1. 建物のマス(基本形状)
 > 2. 梁(構造フレーム)
@@ -58,7 +58,7 @@ Revit のプロジェクト ビューに表示されている要素から、ど�
 
 ### マスとサーフェスを選択する
 
-\![](<images/2/selecting - exercise 02.jpg>)
+![](<images/2/selecting - exercise 02.jpg>)
 
 > 1. ここでは基本的な構造を扱っているので、Categories ドロップダウン ノードで[_Mass_]を選択して、建物のマスを選択してみましょう。これは、[Revit] > [Selection]タブにあります。
 > 2. [Mass]カテゴリのノードでは、単純にカテゴリ自体が出力されるので、要素を選択する必要があります。これを実行するには、_All Elements of Category_ ノードを使用します。
@@ -67,13 +67,13 @@ Revit のプロジェクト ビューに表示されている要素から、ど�
 
 ここでは単純なジオメトリを使用して演習を行っているので、Dynamo のプレビューでジオメトリを表示できるようにします。上記の Watch ノード中の「BldgMass」の隣に、緑の背景色付きで数値が表示されています。これは要素の ID を表しており、この ID からユーザが Dynamo ジオメトリではなく Revit 要素を扱っていることがわかります。次の手順で、この Revit 要素を Dynamo ジオメトリに変換してみましょう。
 
-\![](<images/2/selecting - exercise 03.jpg>)
+![](<images/2/selecting - exercise 03.jpg>)
 
 > 1. _Element.Faces_ ノードを使用して、Revit のマスの各面を表すサーフェスのリストを取得します。これで、Dynamo のビューポートでジオメトリを表示し、その面をパラメトリック操作の際に参照できるようになりました。
 
 別の方法を紹介します。この場合は、(_All Elements of Category_ ノードを使用して) Revit の階層から選択を行い、Revit のジオメトリを指定して明示的に選択するという方法を採りません。
 
-\![](<images/2/selecting - exercise 04.jpg>)
+![](<images/2/selecting - exercise 04.jpg>)
 
 > 1. _Select Model Element_ ノードを使用して、[選択] (または _[変更]_ )ボタンをクリックします。Revit のビューポートで、目的の要素を選択します。この場合は、建物のマスを選択することにします。
 > 2. _Element.Faces_ ノードではなく _Element.Geometry_ ノードを使用すると、マス全体を 1 つのソリッド ジオメトリとして選択できます。このノードでは、そのマスの内部に含まれるすべてのジオメトリが選択されます。
@@ -81,7 +81,7 @@ Revit のプロジェクト ビューに表示されている要素から、ど�
 
 リストの基本的操作をいくつか行うことで、対象の面のクエリーを実行できます。
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. 最初に、選択した要素を前のノードから Element.Faces ノードに出力します。
 > 2. 次に _List.Count_ ノードを使用して、作業中のマスに 23 のサーフェスが含まれていることを確認します。
@@ -90,25 +90,25 @@ Revit のプロジェクト ビューに表示されている要素から、ど�
 
 前の手順は少し面倒でした。_Select Face_ ノードを使用すると、同じことをもっとすばやく実行できます。この方法では、Revit プロジェクト内ではそれ自体で 1 つの要素として扱われない面も選択できます。_Select Model Element_ でも同様の操作を行うことができます。ただし、こちらでは要素全体ではなくサーフェスを選択します。
 
-\![](<images/2/selecting - exercise 06.jpg>)
+![](<images/2/selecting - exercise 06.jpg>)
 
 建物のメイン ファサードの壁を選択してみましょう。_Select Faces_ ノードを使用してこれを行うことができます。[選択]ボタンをクリックし、Revit で 4 つのメイン ファサードを選択します。
 
-\![](<images/2/selecting - exercise 07.jpg>)
+![](<images/2/selecting - exercise 07.jpg>)
 
 4 つの壁面を選択した後で、必ず Revit で[終了]ボタンをクリックしてください。
 
-\![](<../.gitbook/assets/selecting - exercise 08.jpg>)
+![](<../.gitbook/assets/selecting - exercise 08.jpg>)
 
 これで、面が Dynamo にサーフェスとして読み込まれました。
 
-\![](<images/2/selecting - exercise 09.jpg>)
+![](<images/2/selecting - exercise 09.jpg>)
 
 ### 梁を選択する
 
 さて、アトリウムの上の梁を見てみましょう。
 
-\![](<images/2/selecting - exercise 10.jpg>)
+![](<images/2/selecting - exercise 10.jpg>)
 
 > 1. _Select Model Element_ ノードを使用して、梁のうち 1 つを選択します。
 > 2. 梁の要素を _Element.Geometry_ ノードに接続すると、Dynamo のビューポートで梁が表示されるようになります。
@@ -116,18 +116,18 @@ Revit のプロジェクト ビューに表示されている要素から、ど�
 
 Revit と Dynamo の使用中にしばしば生じる疑問として、1 つの要素を選択して、それに類似するすべての要素を取得するにはどうすればいいのか、というものがあります。選択した Revit 要素にはその要素の階層に関する情報がすべて含まれているので、そのファミリ タイプをクエリーして、同じタイプの要素をすべて選択することができます。
 
-\![](<images/2/selecting - exercise 11.jpg>)
+![](<images/2/selecting - exercise 11.jpg>)
 
 > 1. 梁の要素を _Element.ElementType_ ノードに接続します。
 > 2. _Watch_ ノードで、出力が Revit 要素ではなくファミリ記号になっていることが確認できます。
 > 3. _Element.ElementType_ は単純なクエリーであるため、コード ブロック内で `x.ElementType;` と入力するだけで同様の結果を得ることができます。
 
-\![](<images/2/selecting - exercise 12.jpg>)
+![](<images/2/selecting - exercise 12.jpg>)
 
 > 1. 残りの梁を選択するには、_All Elements of Family Type_ ノードを使用します。
 > 2. Watch ノードで、5 つの Revit 要素が選択されていることを確認します。
 
-\![](<images/2/selecting - exercise 13.jpg>)
+![](<images/2/selecting - exercise 13.jpg>)
 
 > 1. これら 5 つの要素すべてを Dynamo のジオメトリに変換することもできます。
 
@@ -139,11 +139,11 @@ Revit と Dynamo の使用中にしばしば生じる疑問として、1 つの�
 
 同じノードのグラフを使用して、梁要素ではなくトラス要素を選択します。この操作を行う前に、ここまでの手順で使用した Element.Geometry を削除してください。
 
-\![](<images/2/selecting - exercise 14.jpg>)
+![](<images/2/selecting - exercise 14.jpg>)
 
 次に、トラスのファミリ タイプから基本的な情報を抽出する準備を行います。
 
-\![](<images/2/selecting - exercise 15.jpg>)
+![](<images/2/selecting - exercise 15.jpg>)
 
 > 1. _Watch_ ノードで、Revit から選択されたアダプティブ コンポーネントのリストを取得していることを確認できます。基本情報を抽出するために、まずはアダプティブ点からとりかかります。
 > 2. _All Elements of Family Type_ ノードを _AdaptiveComponent.Location_ ノードに接続します。これによってリストのリストが 1 つ作成されます。各リストは、アダプティブ点の場所を表す 3 つの点から構成されています。
