@@ -20,7 +20,7 @@ W dodatku Dynamo kliknij opcje _Pakiety>Wyszukaj pakiet... i wy_szukaj pakiet �
 
 Po zainstalowaniu węzły niestandardowe powinny być dostępne w sekcji Dodatki > Przewodnik Dynamo Primer.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Po zainstalowaniu pakietu przeanalizujmy jego konfigurację.
 
@@ -30,7 +30,7 @@ Tworzony pakiet zawiera pięć węzłów niestandardowych utworzonych na potrzeb
 
 To jest prosty pakiet z pięcioma węzłami niestandardowymi. W poniższych krokach omówiono krótko konfigurację każdego węzła niestandardowego.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
 
 #### **PointsToSurface**
 
