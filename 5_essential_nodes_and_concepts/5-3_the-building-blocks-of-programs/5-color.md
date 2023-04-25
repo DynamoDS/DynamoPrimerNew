@@ -8,7 +8,7 @@ Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、�
 
 | 图标                                     | 名称（语法）                 | 输入(Inputs)  | 输出 |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB 颜色 (**Color.ByARGB**) | A,R,G,B | 颜色   |
+| ![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB 颜色 (**Color.ByARGB**) | A,R,G,B | 颜色   |
 
 ### 查询颜色值
 
@@ -16,19 +16,19 @@ Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、�
 
 | 图标                                          | 名称（语法）                     | 输入(Inputs) | 输出    |
 | --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | 颜色  | A          |
-| \![](<../images/5-1/ColorRed (1).jpg>)         | 红色 (**Color.Red**)               | 颜色  | R          |
-| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | 绿色 (**Color.Green**)           | 颜色  | G          |
-| \![](<../images/5-1/ColorBlue (1).jpg>)        | 蓝色 (**Color.Blue**)             | 颜色  | B          |
-| \![](<../images/5-1/ColorComponent (1).jpg>)   | 组件 (**Color.Components**) | 颜色  | A,R,G,B |
+| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | 颜色  | A          |
+| ![](<../images/5-1/ColorRed (1).jpg>)         | 红色 (**Color.Red**)               | 颜色  | R          |
+| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | 绿色 (**Color.Green**)           | 颜色  | G          |
+| ![](<../images/5-1/ColorBlue (1).jpg>)        | 蓝色 (**Color.Blue**)             | 颜色  | B          |
+| ![](<../images/5-1/ColorComponent (1).jpg>)   | 组件 (**Color.Components**) | 颜色  | A,R,G,B |
 
 下表中的颜色对应于 **HSB 颜色空间**。对于我们如何解释颜色，将颜色分为色调、饱和度和亮度无疑更加直观：应该是什么颜色？应该如何呈现多彩？颜色应该如何变亮或变暗？这分别是色调、饱和度和亮度的细分。
 
 | 图标                                         | 名称（语法）                     | 输入(Inputs) | 输出    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/5-1/ColorHue (1).jpg>)        | 色调 (**Color.Hue**)               | 颜色  | 色调        |
-| \![](<../images/5-1/ColorSaturation (1).jpg>) | 饱和度 (**Color.Saturation**) | 颜色  | 饱和度 |
-| \![](<../images/5-1/ColorBrightness (1).jpg>) | 亮度 (**Color.Brightness**) | 颜色  | 亮度 |
+| ![](<../images/5-1/ColorHue (1).jpg>)        | 色调 (**Color.Hue**)               | 颜色  | 色调        |
+| ![](<../images/5-1/ColorSaturation (1).jpg>) | 饱和度 (**Color.Saturation**) | 颜色  | 饱和度 |
+| ![](<../images/5-1/ColorBrightness (1).jpg>) | 亮度 (**Color.Brightness**) | 颜色  | 亮度 |
 
 ### 颜色范围 (Color Range)
 
@@ -38,7 +38,7 @@ Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、�
 
 ![](../images/5-3/5/color-colorrange.jpg)
 
-> 1. 定义三种颜色：使用 **“Code Block”** 节点，通过插入相应的 _“0”_ 和 _“255”_ 组合来定义_红色、绿色_和_蓝色_。
+> 1. 定义三种颜色：使用 **“Code Block”** 节点，通过插入相应的 _“0”_ 和 _“255”_ 组合来定义 _红色、绿色_ 和 _蓝色_。
 > 2. **创建列表**：将三种颜色合并到一个列表中。
 > 3. 定义索引：创建列表以定义每种颜色的夹点位置（范围从 0 到 1）。请注意，值 0.75 表示绿色。这会将绿颜色 3/4 置于颜色范围滑块中水平渐变的位置。
 > 4. **代码块**：输入值（介于 0 和 1 之间）以转换为颜色。
@@ -78,7 +78,7 @@ Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、�
 
 > 1. **PolyCurve.ByPoints**：将 **“Point.ByCoordinates”** 输出连接到节点的 _“points”_ 输入。我们会得到螺旋曲线。
 > 2. **Curve.PointAtParameter**：将 **“PolyCurve.ByPoints”** 输出连接到 _“curve”_ 输入。此步骤的目的是创建一个沿曲线滑动的参数化吸引器点。由于曲线将计算参数处的点，因此我们需要输入一个介于 0 和 1 之间的 _参数_ 值。
-> 3. **数字滑块**：添加到画布后，将_最小_值更改为 _0.0_、将 _最大_ 值更改为 _1.0_、将 _步长_ 值更改为 _.01_。将滑块输出插入 **“Curve.PointAtParameter”** 的 _“param”_ 输入。现在，我们会沿螺旋线长度看到一个点，由滑块的百分比表示（起点处为 0，终点处为 1）。
+> 3. **数字滑块**：添加到画布后，将 _最小_ 值更改为 _0.0_、将 _最大_ 值更改为 _1.0_、将 _步长_ 值更改为 _.01_。将滑块输出插入 **“Curve.PointAtParameter”** 的 _“param”_ 输入。现在，我们会沿螺旋线长度看到一个点，由滑块的百分比表示（起点处为 0，终点处为 1）。
 
 创建参照点后，我们现在将比较参照点与定义螺旋线的原始点之间的距离。此距离值将驱动几何图形以及颜色。
 
@@ -95,7 +95,7 @@ Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、�
 > 2. **代码块**：将值为 _0.01_ 的代码块连接到 _“newMin”_ 输入，将值为 _1_ 的代码块连接到 _“newMax”_ 输入。
 > 3. **Watch**：将 **“Math.RemapRange”** 输出连接到一个节点，并将 **“Geometry.DistanceTo”** 输出连接到另一个节点。比较结果。
 
-此步骤已将距离列表重新映射为较小的范围。我们可以编辑 _“newMin”_ 和 _“newMax”_ 值，但我们认为合适。这些值将重新映射并在整个域中具有相同的_分布率_。
+此步骤已将距离列表重新映射为较小的范围。我们可以编辑 _“newMin”_ 和 _“newMax”_ 值，但我们认为合适。这些值将重新映射并在整个域中具有相同的 _分布率_。
 
 ![](../images/5-3/5/color-basichelixwithcolors05.jpg)
 
