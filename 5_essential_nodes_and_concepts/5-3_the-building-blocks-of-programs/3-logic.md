@@ -14,11 +14,11 @@
 | -------------------------------------------- | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                    | 如果 (**If**)               | test, true, false | 结果  |
 | ![](../images/5-1/Formula.jpg)               | 公式 (**IF(x,y,z)**)   | x, y, z           | 结果  |
-| \![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | 代码块 (**(x?y:z);**) | x? y, z           | 结果  |
+| ![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | 代码块 (**(x?y:z);**) | x? y, z           | 结果  |
 
 接下来，我们来看一个简短示例，分别介绍这三个节点在使用“If”条件语句时的行为。
 
-在本图中，_“boolean”_设置为_“true”_，这意味着结果是字符串读取：_“this is the result if true”_。在此处，创建 _“If”_ 语句的三个节点的工作方式相同。
+在本图中，_“boolean”_设置为_“true”_，这意味着结果是字符串读取： _“this is the result if true”_ 。在此处，创建 _“If”_ 语句的三个节点的工作方式相同。
 
 ![](../images/5-3/3/logic-conditionalstatements01false.jpg)
 
@@ -98,9 +98,9 @@
 
 ![](../images/5-3/3/logic-exercisepartII-06.jpg)
 
-> a.**List.FilterByBoolMask** \- 将上一步的**“Curve.PointAtParameter”**连接到_“list”_输入。
+> a.**List.FilterByBoolMask** \- 将上一步的 **“Curve.PointAtParameter”** 连接到_“list”_输入。
 >
-> b.**Watch** -_“in”_的观察节点和_“out”_的观察节点表明，我们有表示偶数索引和奇数索引的两个列表。这些点在曲线上的排序方式相同，我们将在下一步中进行演示。
+> b.**Watch** - _“in”_ 的观察节点和 _“out”_ 的观察节点表明，我们有表示偶数索引和奇数索引的两个列表。这些点在曲线上的排序方式相同，我们将在下一步中进行演示。
 
 7\.接下来，我们将在步骤 05 中使用 **“List.FilterByBoolMask”** 的输出结果，以根据其索引生成具有大小的几何图形。
 
