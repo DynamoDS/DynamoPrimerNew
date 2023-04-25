@@ -20,7 +20,7 @@
 
 [선](5-4\_curves.md#lines)은 점 세트로 구성되며 각 선에는 최소 2개의 점이 있습니다. Dynamo에서 선을 작성하는 가장 일반적인 방법 중 하나는 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg)를 사용하여 Dynamo에서 선을 작성하는 것입니다.
 
-\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS 곡선
 
