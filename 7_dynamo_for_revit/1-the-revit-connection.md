@@ -37,7 +37,7 @@ Navigieren Sie in einem Revit-Projekt oder im Familieneditor zu Zusatzmodule und
 
 {% hint style="warning" %} *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. {% endhint %}
 
-\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
 
