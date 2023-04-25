@@ -67,7 +67,7 @@ Otevřeme položku SphereUnfold.
 
 Po otevření souboru a stisknutí tlačítka Spustit na řešiči máme rozvinutou kouli. Ukázkové soubory, jako jsou tyto, jsou užitečné při studiu práce s novým balíčkem Dynamo.
 
-\![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
+![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### Nástroj Dynamo Package Manager
 
