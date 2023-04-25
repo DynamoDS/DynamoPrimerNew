@@ -20,7 +20,7 @@ Dynamo で、_[パッケージ] > [パッケージを検索]をクリックし�
 
 インストール後は、カスタム ノードを[Add-ons] > [Dynamo Primer]セクションで使用できるようになります。
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 これでパッケージのインストールが完了しました。次に、パッケージの設定方法を確認しましょう。
 
@@ -30,7 +30,7 @@ Dynamo で、_[パッケージ] > [パッケージを検索]をクリックし�
 
 上の図は、5 つのカスタム ノードによって構成される単純なパッケージを示しています。次の手順で、各カスタム ノードの設定について簡単に説明します。
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
 
 #### **PointsToSurface**
 
