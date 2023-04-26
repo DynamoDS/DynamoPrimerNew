@@ -32,7 +32,7 @@
 
 ![](./images/5/customizing-exercise01.jpg)
 
-> 1. 先選取兩條邊與_「Select Edge」_節點。兩條邊是中庭的長跨距。
+> 1. 先選取兩條邊與 _「Select Edge」_ 節點。兩條邊是中庭的長跨距。
 > 2. 使用 _List.Create_ 節點將兩條邊合併到一個清單中。
 > 3. 使用 _Surface.ByLoft_ 在兩條邊之間建立曲面。
 
