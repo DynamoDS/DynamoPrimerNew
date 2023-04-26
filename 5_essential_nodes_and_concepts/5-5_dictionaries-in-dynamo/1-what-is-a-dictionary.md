@@ -24,7 +24,7 @@ A separação dos dicionários das listas apresenta os dicionários como um elem
 
     ***
 
-\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
