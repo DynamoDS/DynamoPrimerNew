@@ -24,7 +24,7 @@ La separazione dei dizionari dagli elenchi introduce i dizionari come cittadino 
 
     ***
 
-\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
