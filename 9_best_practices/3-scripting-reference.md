@@ -31,7 +31,9 @@
    * 功能：Excel。
    * 如何匯入：`import DSOffice`
 
-{% hint style="warning" %} *注意：透過 Python 或 C# 使用 **ProtoGeometry** 時，您建立的是不受管理的物件，而這需要手動管理記憶體 - 請參閱以下一節：**不受管理的物件**，以取得更多資訊。{% endhint %}
+{% hint style="warning" %}
+*注意：透過 Python 或 C# 使用 **ProtoGeometry** 時，您建立的是不受管理的物件，而這需要手動管理記憶體 - 請參閱以下一節：**不受管理的物件**，以取得更多資訊。
+{% endhint %}
 
 ## 仔細標示
 
@@ -272,11 +274,11 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 **不受管理的物件：**
 
-從 Python 或 C# 使用 Dynamo 的幾何圖形資源庫_(ProtoGeometry)_ 時，您建立的幾何圖形物件不會受虛擬機器管理，而且許多物件的記憶體都需要手動進行清理。若要清理原生或不受管理的物件，您可以使用 **Dispose** 方法或 **using** 關鍵字。請參閱此 Wiki 項目的概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
+從 Python 或 C# 使用 Dynamo 的幾何圖形資源庫 _(ProtoGeometry)_ 時，您建立的幾何圖形物件不會受虛擬機器管理，而且許多物件的記憶體都需要手動進行清理。若要清理原生或不受管理的物件，您可以使用 **Dispose** 方法或 **using** 關鍵字。請參閱此 Wiki 項目的概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
 
-您只需要處置不傳入圖表或儲存參考的不受管理的資源。在本節其餘部分，我們會將這些物件稱為_中間幾何圖形_。您可以在以下的程式碼範例中查看有關此類別物件的範例。此 zero touch C# 函數 **singleCube** 會傳回一個立方塊，但在執行期間會額外建立 10000 個立方塊。我們可以假設這額外的幾何圖形是用作一些中間建構幾何圖形。
+您只需要處置不傳入圖表或儲存參考的不受管理的資源。在本節其餘部分，我們會將這些物件稱為 _中間幾何圖形_。您可以在以下的程式碼範例中查看有關此類別物件的範例。此 zero touch C# 函數 **singleCube** 會傳回一個立方塊，但在執行期間會額外建立 10000 個立方塊。我們可以假設這額外的幾何圖形是用作一些中間建構幾何圖形。
 
-**此 zero touch 功能很有可能會讓 Dynamo 當機。**雖然我們建立了 10000 個實體，但只儲存其中一個並傳回這一個。我們應該改為處置所有中間立方塊，除了我們傳回的那一個。我們不希望處置我們傳回的內容，因為它將擴展至圖表和被其他節點使用。
+**此 zero touch 功能很有可能會讓 Dynamo 當機。** 雖然我們建立了 10000 個實體，但只儲存其中一個並傳回這一個。我們應該改為處置所有中間立方塊，除了我們傳回的那一個。我們不希望處置我們傳回的內容，因為它將擴展至圖表和被其他節點使用。
 
 ```
 public Cuboid singleCube(){
