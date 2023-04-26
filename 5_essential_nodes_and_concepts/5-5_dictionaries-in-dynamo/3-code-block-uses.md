@@ -1,4 +1,4 @@
-# Dictionnaires dans les blocs de code
+# Dictionnaires dans les blocs de code 
 
 Dynamo 2.0 introduit non seulement les nœuds précédemment abordés dans les dictionnaires, mais aussi les blocs de code.
 
