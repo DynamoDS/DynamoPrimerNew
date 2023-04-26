@@ -1,4 +1,4 @@
-# Was ist ein Wörterbuch?
+# Was ist ein Wörterbuch? 
 
 Dynamo 2.0 führt das Konzept der Trennung des Datentyps Wörterbuch und des Datentyps Liste ein. Diese Neuerung bewirkt einige wichtige Änderungen hinsichtlich der Art und Weise, wie Sie Daten erstellen und in Ihren Arbeitsabläufen verwenden. Vor Version 2.0 waren Wörterbücher und Listen ein kombinierter Datentyp. Kurz gesagt: Listen waren eigentlich Wörterbücher mit ganzzahligen Schlüsseln.
 
