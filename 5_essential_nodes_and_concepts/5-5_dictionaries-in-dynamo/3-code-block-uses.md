@@ -1,4 +1,4 @@
-# Wörterbücher in Codeblöcken
+# Wörterbücher in Codeblöcken 
 
 Dynamo 2.0 stellt nicht nur die oben erwähnten Blöcke für Wörterbücher zur Verfügung, sondern gibt Codeblöcken auch neue Funktionen.
 
