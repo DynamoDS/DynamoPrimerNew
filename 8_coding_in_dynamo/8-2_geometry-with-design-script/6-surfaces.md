@@ -17,7 +17,7 @@ surf = NurbsSurface.ByPoints(python_points_1);
 
 ### 제어점 표면
 
-표면의 기본 제어점을 지정하여 자유형 NurbsSurface를 작성할 수도 있습니다. NurbsCurve와 마찬가지로, 제어점은 표면의 차수에 따라 최종 표면 형태로 완화되는 직선 세그먼트로 사각형 메쉬를 나타내는 것으로 간주할 수 있습니다. 제어점으로 NurbsSurface를 작성하려면 표면의 양방향에서 기본 곡선의 각도를 나타내는 두 개의 추가 매개변수를 _NurbsSurface.ByPoints_에 포함합니다.
+표면의 기본 제어점을 지정하여 자유형 NurbsSurface를 작성할 수도 있습니다. NurbsCurve와 마찬가지로, 제어점은 표면의 차수에 따라 최종 표면 형태로 완화되는 직선 세그먼트로 사각형 메쉬를 나타내는 것으로 간주할 수 있습니다. 제어점으로 NurbsSurface를 작성하려면 표면의 양방향에서 기본 곡선의 각도를 나타내는 두 개의 추가 매개변수를 _NurbsSurface.ByPoints_ 에 포함합니다.
 
 ![](../images/8-2/6/Surfaces\_02.png)
 
