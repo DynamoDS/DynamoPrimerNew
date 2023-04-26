@@ -1,4 +1,4 @@
-# Dicionários em blocos de código
+# Dicionários em blocos de código 
 
 O Dynamo 2.0 não só apresenta os nós anteriormente discutidos dos dicionários, como também existe uma nova funcionalidade nos blocos de código para isso.
 
