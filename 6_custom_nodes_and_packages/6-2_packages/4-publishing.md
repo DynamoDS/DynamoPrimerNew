@@ -1,4 +1,4 @@
-# Publicar um pacote 
+# Publicar um pacote
 
 Nas seções anteriores, analisamos os detalhes de como o pacote _MapToSurface_ é configurado com nós personalizados e arquivos de exemplo. Mas como publicamos um pacote que foi desenvolvido localmente? Este estudo de caso demonstra como publicar um pacote de um conjunto de arquivos em uma pasta local.
 
