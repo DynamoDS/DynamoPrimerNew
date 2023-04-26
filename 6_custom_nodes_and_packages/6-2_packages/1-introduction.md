@@ -1,4 +1,4 @@
-# Présentation des packages
+# Présentation des packages 
 
 En résumé, un package est un ensemble de nœuds personnalisés. Le gestionnaire de package Dynamo est un portail permettant à la communauté de télécharger tout package publié en ligne. Ces jeux d’outils sont développés par des tiers afin d’étendre les fonctionnalités clés de Dynamo, accessibles à tous, et prêts à être téléchargés en un clic.
 
