@@ -1,4 +1,4 @@
-# Desarrollo de un paquete 
+# Desarrollo de un paquete  
 
 Dynamo ofrece una gran variedad de métodos para crear un paquete para uso personal o para compartir con la comunidad de Dynamo. En el caso real incluido a continuación, veremos cómo se configura un paquete mediante la desconstrucción de uno existente. Este caso real se basa en las lecciones del capítulo anterior y proporciona un conjunto de nodos personalizados para la asignación de geometría, mediante coordenadas UV, de una superficie de Dynamo a otra.
 
