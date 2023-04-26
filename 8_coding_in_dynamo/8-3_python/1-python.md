@@ -48,7 +48,7 @@ Autodesk.DesignScript.Geometry 라이브러리를 사용하면 Code Block과 유
 
 ![](../images/8-3/1/pythonnode-thepythonnode03.jpg)
 
-> 메서드로는 _ByCoordinates_ 와 같은 구성자, _Add_와 같은 동작, _X_, _Y_ 및 _Z_ 좌표와 같은 조회 등이 있습니다.
+> 메서드로는 _ByCoordinates_ 와 같은 구성자, _Add_ 와 같은 동작, _X_, _Y_ 및 _Z_ 좌표와 같은 조회 등이 있습니다.
 
 ## 연습: 솔리드 모듈에서 패턴을 작성하기 위한 Python 스크립트가 있는 사용자 노드
 
