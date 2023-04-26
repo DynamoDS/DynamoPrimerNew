@@ -31,7 +31,9 @@ As bibliotecas padrão são externas ao Dynamo e estão presentes nas linguagens
    * Funcionalidade: Excel.
    * Como importar: `import DSOffice`
 
-{% hint style="warning" %} *Observação: Durante o uso de **ProtoGeometry** com o Python ou C#, você está criando objetos não gerenciados, que precisam ter memória gerenciada manualmente. Consulte a seção abaixo: **Objetos não gerenciados** para obter mais informações. {% endhint %}
+{% hint style="warning" %}
+*Observação: Durante o uso de **ProtoGeometry** com o Python ou C#, você está criando objetos não gerenciados, que precisam ter memória gerenciada manualmente. Consulte a seção abaixo: **Objetos não gerenciados** para obter mais informações. 
+{% endhint %}
 
 ## Rotular cuidadosamente
 
