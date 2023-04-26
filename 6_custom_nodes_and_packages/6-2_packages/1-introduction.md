@@ -1,4 +1,4 @@
-# Introdução aos pacotes
+# Introdução aos pacotes 
 
 Em resumo, um pacote é uma coleção de nós personalizados. O Dynamo Package Manager é um portal para a comunidade a fim de efetuar o download de qualquer pacote que tenha sido publicado on-line. Esses conjuntos de ferramentas são desenvolvidos por terceiros para ampliar a funcionalidade principal do Dynamo, são acessíveis a todos e estão prontos para download com um clique no botão.
 
