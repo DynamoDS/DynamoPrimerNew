@@ -64,7 +64,7 @@ Budeme vycházet z logiky stanovené v prvním cvičení a použijeme toto nas
 
 ![](../images/5-3/3/logic-exercisepartII-01.jpg)
 
-> a. a. Použijte uzel **Sequence** s těmito vstupními hodnotami.
+> a. Použijte uzel **Sequence** s těmito vstupními hodnotami.
 >
 > b. Seznam in jsme odpojili od uzlu **List.FilterByBoolMask**. Tyto uzly zatím necháme stranou, ale později se nám v tomto cvičení budou hodit.
 
