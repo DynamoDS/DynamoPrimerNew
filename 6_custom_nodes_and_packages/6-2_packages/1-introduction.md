@@ -1,4 +1,4 @@
-# Úvod do práce s balíčky
+# Úvod do práce s balíčky 
 
 Stručně řečeno, balíček je kolekce uživatelských uzlů. Nástroj Dynamo Package Manager je portál pro komunitu, kde lze stáhnout všechny balíčky, které byly publikovány online. Tyto sady nástrojů jsou vyvinuty třetími stranami, aby bylo možné rozšířit základní funkce aplikace Dynamo, jsou přístupné všem a připraveny ke stažení kliknutím na tlačítko.
 
