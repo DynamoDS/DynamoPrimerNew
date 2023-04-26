@@ -1,4 +1,4 @@
-# Slovníky v blocích kódu
+# Slovníky v blocích kódu 
 
 Kromě uzlů pro slovníky zavádí aplikace Dynamo 2.0 také nové funkce pro slovníky v blocích kódu.
 
