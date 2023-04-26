@@ -70,7 +70,7 @@ Vamos continuar adicionando alguns nós e conexões à nossa lógica para defini
 
 Vamos copiar esses nós quatro vezes para que os círculos definam nossa superfície. Altere os nomes do Controle deslizante de número, como mostrado abaixo.
 
-\![](<../images/10-1/1/vase4 (1).png>)
+![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Os círculos são criados por um ponto central e um raio
 
@@ -92,7 +92,7 @@ Para criar uma superfície usando o nó **Surface.ByLoft**, precisamos combinar 
 
 Também vamos desativar a visualização em outros nós para exibir somente a exibição Surface.ByLoft.
 
-\![](<../images/10-1/1/vase6 (1).png>)
+![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Uma superfície é criada elevando os círculos convertidos.
 
