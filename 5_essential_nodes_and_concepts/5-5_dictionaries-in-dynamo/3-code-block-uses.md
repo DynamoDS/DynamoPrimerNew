@@ -1,4 +1,4 @@
-# Dizionari nei blocchi di codice
+# Dizionari nei blocchi di codice 
 
 Dynamo 2.0 non solo introduce i nodi descritti in precedenza per i dizionari, ma anche nei blocchi di codice per questo aspetto è disponibile una nuova funzionalità.
 
