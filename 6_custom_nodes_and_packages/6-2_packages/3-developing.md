@@ -1,4 +1,4 @@
-# Sviluppo di un pacchetto 
+# Sviluppo di un pacchetto
 
 Dynamo offre diversi modi per creare un pacchetto per l'utilizzo personale o per la condivisione con la comunità di Dynamo. Nel case study riportato di seguito, si esaminerà in maniera dettagliata la configurazione di un pacchetto smontandone uno esistente. Questo case study si basa sulle lezioni del capitolo precedente, fornendo un gruppo di nodi personalizzati per il mappaggio della geometria, tramite le coordinate UV, da una superficie di Dynamo ad un'altra.
 
