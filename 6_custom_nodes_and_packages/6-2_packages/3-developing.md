@@ -1,4 +1,4 @@
-# Opracowywanie pakietu 
+# Opracowywanie pakietu
 
 Dodatek Dynamo udostępnia różne sposoby tworzenia pakietu do użytku osobistego lub do udostępnienia społeczności dodatku Dynamo. W poniższej analizie przypadku omówimy sposób konfigurowania pakietu przez dekonstrukcję istniejącego. Ta analiza przypadku opiera się na lekcjach z poprzedniego rozdziału — z udostępnieniem zestawu węzłów niestandardowych do odwzorowania geometrii, za pomocą współrzędnych UV, z jednej powierzchni Dynamo na inną.
 
