@@ -70,7 +70,7 @@ Vamos a seguir añadiendo algunos nodos y conexiones a nuestra lógica para defi
 
 Vamos a copiar estos nodos cuatro veces para que estos círculos definan nuestra superficie; cambie los nombres de los controles deslizantes de número, como se muestra a continuación.
 
-\![](<../images/10-1/1/vase4 (1).png>)
+![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Los círculos se crean mediante un centro y un radio.
 
@@ -92,7 +92,7 @@ Para crear una superficie mediante el nodo **Surface.ByLoft**, debemos combinar 
 
 Desactivaremos también la vista preliminar en otros nodos para visualizar únicamente Surface.ByLoft.
 
-\![](<../images/10-1/1/vase6 (1).png>)
+![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Una superficie se crea solevando los círculos trasladados.
 
