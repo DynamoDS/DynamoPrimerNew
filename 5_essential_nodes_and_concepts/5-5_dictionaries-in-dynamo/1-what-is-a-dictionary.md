@@ -1,4 +1,4 @@
-# Co je to slovník
+# Co je to slovník 
 
 Aplikace Dynamo 2.0 oddělila datový typ slovník od datového typu seznam. Tato změna může výrazně změnit způsob, jakým pracujete s daty. Před verzí 2.0 byly slovníky a seznamy spojeny v jediný datový typ. Stručně řečeno, seznamy byly ve skutečnosti slovníky s celočíselnými klíči.
 
