@@ -1,4 +1,4 @@
-# Słowniki w blokach kodu
+# Słowniki w blokach kodu 
 
 W dodatku Dynamo 2.0 wprowadzono nie tylko wcześniej omówione węzły dotyczące słowników — wprowadzono w nim również nowe związane z nimi funkcje w blokach kodów.
 
