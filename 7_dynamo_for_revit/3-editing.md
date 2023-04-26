@@ -4,7 +4,7 @@ Výkonnou funkcí aplikace Dynamo je, že můžete upravovat parametry na parame
 
 ### Parametry typu a instance
 
-\![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Parametry instance definují otvor panelů na povrchu střechy v rozsahu Poměr otvoru od 0.1 do 0.4.
 > 2. Parametry založené na typu jsou použity u každého prvku na povrchu, protože se jedná o stejný typ rodiny. Materiál každého panelu může být například řízen parametrem založeným na typu.
@@ -16,7 +16,9 @@ Výkonnou funkcí aplikace Dynamo je, že můžete upravovat parametry na parame
 
 Jako rychlý přehled parametrů v aplikaci Revit si ukážeme, že existují parametry typu a parametry instance. Oba lze upravovat pomocí aplikace Dynamo, ale v níže uvedeném cvičení budeme pracovat s parametry instance.
 
-{% hint style="info" %} Až zjistíte, jak široké jsou možnosti použití parametrů úprav, možná budete chtít upravovat velké množství prvků v aplikaci Revit pomocí aplikace Dynamo. Může to být _výpočetně nákladná_ operace, což znamená, že může být pomalá. Pokud upravujete velký počet prvků, můžete použít funkci uzlu „zmrazit“, aby bylo možné pozastavit provádění operací aplikace Revit při vytváření grafu. Další informace o zmrazení uzlů najdete v části [Zmrazení](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) v kapitole Tělesa. {% endhint %}
+{% hint style="info" %}
+Až zjistíte, jak široké jsou možnosti použití parametrů úprav, možná budete chtít upravovat velké množství prvků v aplikaci Revit pomocí aplikace Dynamo. Může to být _výpočetně nákladná_ operace, což znamená, že může být pomalá. Pokud upravujete velký počet prvků, můžete použít funkci uzlu „zmrazit“, aby bylo možné pozastavit provádění operací aplikace Revit při vytváření grafu. Další informace o zmrazení uzlů najdete v části [Zmrazení](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) v kapitole Tělesa. 
+{% endhint %}
 
 ### Jednotky
 
