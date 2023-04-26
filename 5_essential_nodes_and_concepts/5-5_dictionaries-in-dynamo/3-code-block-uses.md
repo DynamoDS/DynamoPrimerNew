@@ -1,4 +1,4 @@
-# Diccionarios en bloques de código
+# Diccionarios en bloques de código 
 
 Dynamo 2.0 no solo presenta los nodos indicados anteriormente para los diccionarios, sino que también hay nuevas funciones en los bloques de código para ello.
 
