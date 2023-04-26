@@ -1,4 +1,4 @@
-# Publicación de un paquete
+# Publicación de un paquete 
 
 En las secciones anteriores, examinamos cómo se configura el paquete de _MapToSurface_ con nodos personalizados y archivos de ejemplo. Pero, ¿cómo publicamos un paquete que se ha desarrollado localmente? En este caso real, se muestra cómo publicar un paquete a partir de un conjunto de archivos en una carpeta local.
 
