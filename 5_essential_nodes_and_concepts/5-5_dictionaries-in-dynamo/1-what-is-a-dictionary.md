@@ -1,4 +1,4 @@
-# ¿Qué es un diccionario?
+# ¿Qué es un diccionario? 
 
 Dynamo 2.0 introduce el concepto de separación del tipo de datos del diccionario del tipo de datos de lista. Esta novedad puede conllevar algunos cambios importantes en la forma de crear y trabajar con datos en los flujos de trabajo. Antes de la versión 2.0, los diccionarios y las listas se combinaban como un tipo de datos. En resumen, las listas eran en realidad diccionarios con claves de enteros.
 
