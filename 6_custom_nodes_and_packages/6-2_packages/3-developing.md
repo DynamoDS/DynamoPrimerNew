@@ -1,4 +1,4 @@
-# Développement d'un module
+# Développement d'un module 
 
 Dynamo offre de nombreuses méthodes de création de package en vue d'un usage personnel ou d'un partage avec la communauté Dynamo. Dans l'étude de cas ci-dessous, vous allez découvrir comment un package est configuré en déconstruisant un package existant. Cette étude de cas s'appuie sur les leçons du chapitre précédent, fournissant un ensemble de nœuds personnalisés pour la géométrie de mappage, en fonction des coordonnées UV, d'une surface Dynamo à une autre.
 
