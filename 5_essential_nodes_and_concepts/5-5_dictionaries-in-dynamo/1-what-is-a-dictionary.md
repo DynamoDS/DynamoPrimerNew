@@ -1,4 +1,4 @@
-# Co to jest słownik
+# Co to jest słownik 
 
 W dodatku Dynamo 2.0 wprowadzono oddzielenie typu danych słownika od typu danych listy. Ta modyfikacja może spowodować istotne zmiany w sposobie tworzenia i pracy z danymi w procesach roboczych. Przed wersją 2.0 słowniki i listy stanowiły jeden typ danych. W skrócie: listy były w rzeczywistości słownikami z kluczami w formie liczb całkowitych.
 
