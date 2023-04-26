@@ -1,4 +1,4 @@
-# Introducción a los paquetes
+# Introducción a los paquetes 
 
 En pocas palabras, un paquete es un conjunto de nodos personalizados. El administrador de paquetes de Dynamo es un portal para que la comunidad descargue cualquier paquete que se haya publicado en línea. Estos conjuntos de herramientas los desarrollan terceros para ampliar la funcionalidad principal de Dynamo. Están disponibles para todos los usuarios y listos para descargar con solo hacer clic.
 
