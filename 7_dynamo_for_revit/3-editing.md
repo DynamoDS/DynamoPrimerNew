@@ -4,7 +4,7 @@
 
 ### 類型參數與實體參數
 
-\![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. 實體參數定義屋頂曲面上的嵌板孔徑，開口率的範圍是 0.1 至 0.4。
 > 2. 以類型為基礎的參數將套用到曲面上的每個元素，因為它們的族群類型相同。例如，每片嵌板的材料可以由以類型為基礎的參數驅動。
@@ -16,7 +16,9 @@
 
 做為在 Revit 中對參數的快速檢閱，我們還記得存在類型參數與實體參數。兩者都可以在 Dynamo 中進行編輯，但我們在以下練習中將使用實體參數。
 
-{% hint style="info" %} 在探索編輯參數的廣泛應用時，您可能希望在 Revit 中使用 Dynamo 編輯大量元素。這是_運算量極大的_作業，即作業可能很慢。若您要編輯大量元素，可能需要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)一節。{% endhint %}
+{% hint style="info" %}
+在探索編輯參數的廣泛應用時，您可能希望在 Revit 中使用 Dynamo 編輯大量元素。這是_運算量極大的_作業，即作業可能很慢。若您要編輯大量元素，可能需要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)一節。
+{% endhint %}
 
 ### 單位
 
