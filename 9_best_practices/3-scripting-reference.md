@@ -31,7 +31,9 @@
    * 기능: Excel
    * 가져오는 방법: `import DSOffice`
 
-{% hint style="warning" %} *주: Python 또는 C#을 통해 **ProtoGeometry**를 사용할 때 비관리형 객체를 작성하는 경우에는 해당 메모리를 수동으로 관리해야 합니다. 자세한 내용은 아래의 **비관리형 객체** 섹션을 참고하십시오. {% endhint %}
+{% hint style="warning" %}
+*주: Python 또는 C#을 통해 **ProtoGeometry**를 사용할 때 비관리형 객체를 작성하는 경우에는 해당 메모리를 수동으로 관리해야 합니다. 자세한 내용은 아래의 **비관리형 객체** 섹션을 참고하십시오. 
+{% endhint %}
 
 ## 신중하게 레이블 지정하기
 
@@ -272,9 +274,9 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 **비관리형 객체:**
 
-사용자가 작성한 Python 또는 C# 형상 객체의 Dynamo 형상 라이브러리_(ProtoGeometry)_를 사용하는 과정을 가상 컴퓨터에서 관리하지 않고 이러한 여러 객체의 메모리를 수동으로 정리해야 하는 경우를 나타냅니다. 기본 또는 비관리형 객체를 정리하려면 **Dispose** 메서드 또는 **using** 키워드를 사용하면 됩니다. 개요를 보려면 다음 Wiki 항목을 참고하십시오. [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)
+사용자가 작성한 Python 또는 C# 형상 객체의 Dynamo 형상 라이브러리 _(ProtoGeometry)_ 를 사용하는 과정을 가상 컴퓨터에서 관리하지 않고 이러한 여러 객체의 메모리를 수동으로 정리해야 하는 경우를 나타냅니다. 기본 또는 비관리형 객체를 정리하려면 **Dispose** 메서드 또는 **using** 키워드를 사용하면 됩니다. 개요를 보려면 다음 Wiki 항목을 참고하십시오. [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)
 
-그래프로 반환하지 않거나 참조를 저장하지 않는 비관리형 리소스만 제거하면 됩니다. 이 섹션의 나머지 부분에서는 이러한 객체를 _중간 형상_이라고 부르겠습니다. 아래의 코드 예시에서는 이 객체 클래스의 예를 확인할 수 있습니다. 이 zero touch C# 함수 **singleCube**는 단일 정육면체를 반환하지만 실행 중에 10,000개의 추가 정육면체를 작성합니다. 이러한 다른 형상이 중간 구성 형상으로 사용된 것처럼 가장할 수 있습니다.
+그래프로 반환하지 않거나 참조를 저장하지 않는 비관리형 리소스만 제거하면 됩니다. 이 섹션의 나머지 부분에서는 이러한 객체를 _중간 형상_ 이라고 부르겠습니다. 아래의 코드 예시에서는 이 객체 클래스의 예를 확인할 수 있습니다. 이 zero touch C# 함수 **singleCube**는 단일 정육면체를 반환하지만 실행 중에 10,000개의 추가 정육면체를 작성합니다. 이러한 다른 형상이 중간 구성 형상으로 사용된 것처럼 가장할 수 있습니다.
 
 **이 zero touch 함수는 Dynamo와 충돌할 가능성이 높습니다.** 10,000개의 솔리드를 작성했지만 그중 하나만 저장하고 반환했습니다. 대신, 반환하는 항목을 제외한 모든 중간 정육면체를 제거해야 합니다. 반환하는 항목은 그래프로 전파되어 다른 노드에서 사용되므로 제거하지 않을 것입니다.
 
