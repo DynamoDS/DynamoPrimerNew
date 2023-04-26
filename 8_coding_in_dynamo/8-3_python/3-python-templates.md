@@ -22,7 +22,9 @@
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _注意：請使用您的使用者名稱替換 CURRENTUSER_ {% endhint %}
+{% hint style="warning" %}
+_注意：請使用您的使用者名稱替換 CURRENTUSER_ 
+{% endhint %}
 
 接下來，我們需要建置一個樣板，當中含有我們要使用的內建功能。在此範例中，我們嵌入 Revit 相關的匯入，和一些在處理 Revit 時的其他典型項目。
 
