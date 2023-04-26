@@ -38,7 +38,7 @@ Dynamo에서 새 파일을 작성하고 _파일 > 라이브러리 가져오기..
 
 ![](../images/6-2/5/casestudyaforge02.jpg)
 
-> 1. 팝업 창에서 AForge 설치의 릴리즈 폴더로 이동합니다. 이는 _C:\\Program Files (x86)\\AForge.NET\\Framework\\Release_와 유사한 폴더에 있을 수 있습니다.
+> 1. 팝업 창에서 AForge 설치의 릴리즈 폴더로 이동합니다. 이는 _C:\\Program Files (x86)\\AForge.NET\\Framework\\Release_ 와 유사한 폴더에 있을 수 있습니다.
 > 2. **AForge.Imaging.dll:** 이 성공 사례에서는 AForge 라이브러리의 이 파일 하나만 사용하겠습니다. 이 _.dll_ 을 선택하고 _"열기"_ 를 누릅니다.
 
 Dynamo로 돌아가면 라이브러리에 **AForge** 노드 그룹이 추가된 것을 볼 수 있습니다. 이제 비주얼 프로그램에서 AForge 이미징 라이브러리에 액세스할 수 있습니다.
