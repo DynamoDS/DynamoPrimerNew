@@ -1,4 +1,4 @@
-# Pubblicazione di un pacchetto 
+# Pubblicazione di un pacchetto
 
 Nelle sezioni precedenti, sono stati analizzati i dettagli su come il pacchetto _MapToSurface_ è configurato con nodi personalizzati e file di esempio. Ma com'è possibile pubblicare un pacchetto che è stato sviluppato localmente? Questo case study mostra come pubblicare un pacchetto da un gruppo di file in una cartella locale.
 
