@@ -1,4 +1,4 @@
-# Vývoj balíčku
+# Vývoj balíčku 
 
 Aplikace Dynamo nabízí řadu způsobů, jak vytvořit balíček pro vaše osobní použití nebo sdílení s komunitou aplikace Dynamo. V níže uvedené případové studii si rozebráním existujícího balíčku projdeme, jak je balíček vytvořen. Tato případová studie vychází ze zkušeností z předchozí kapitoly a poskytuje sadu vlastních uzlů pro mapování geometrie podle souřadnic UV, z jednoho povrchu aplikace Dynamo do jiného.
 
