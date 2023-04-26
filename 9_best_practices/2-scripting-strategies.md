@@ -23,7 +23,9 @@ La creación de secuencias de comandos de texto puede establecer relaciones de u
 | **Python**         | Sí         | Sí           | Parcialmente          | Sí                | No            |
 | **ZeroTouch (C#)** | No          | No            | No                 | Sí                | No            |
 
-{% hint style="info" %} Consulte [Referencia de secuencias de comandos](13-3\_scripting-reference.md) para obtener una lista de los elementos a los que cada biblioteca de Dynamo proporciona acceso. {% endhint %}
+{% hint style="info" %}
+Consulte [Referencia de secuencias de comandos](13-3\_scripting-reference.md) para obtener una lista de los elementos a los que cada biblioteca de Dynamo proporciona acceso. 
+{% endhint %}
 
 ### Pensamiento paramétrico
 
