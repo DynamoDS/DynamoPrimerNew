@@ -1,4 +1,4 @@
-# Che cos'è un dizionario?
+# Che cos'è un dizionario? 
 
 Dynamo 2.0 introduce il concetto di separazione del tipo di dati del dizionario dal tipo di dati dell'elenco. Questa modifica può portare a modifiche significative al modo in cui si creano e si utilizzano i dati nei workflow. Prima della versione 2.0, i dizionari e gli elenchi venivano combinati come tipo di dati. In breve, gli elenchi erano in realtà dizionari con chiavi di numeri interi.
 
