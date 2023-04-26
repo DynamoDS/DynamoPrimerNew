@@ -110,7 +110,7 @@ Code Block の性能を紹介するため、既存のアトラクタ フィー�
 
 ![](../images/8-1/2/DesignScript-exercise-04.jpg)
 
-> 1. 次に、_coordsXY_ シーケンスから点のグリッドを作成します。これを行うには **Point.ByCoordinates** 構文を使用します。ただし、ビジュアル スクリプトで実行した場合と同様、リストにある_外積_を作成する必要もあります。これを行うには、行(`gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);`)を入力します。山括弧は外積参照を意味します。
+> 1. 次に、_coordsXY_ シーケンスから点のグリッドを作成します。これを行うには **Point.ByCoordinates** 構文を使用します。ただし、ビジュアル スクリプトで実行した場合と同様、リストにある _外積_ を作成する必要もあります。これを行うには、行(`gridPts = Point.ByCoordinates(coordsXY<1>,coordsXY<2>,0);`)を入力します。山括弧は外積参照を意味します。
 > 2. **Watch3D** ノードには Dynamo のグリッド全体に点のグリッドが表示されます。
 
 ![](../images/8-1/2/DesignScript-exercise-05.jpg)
