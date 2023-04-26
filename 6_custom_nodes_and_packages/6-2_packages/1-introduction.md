@@ -1,4 +1,4 @@
-# Pakete – Einführung
+# Pakete – Einführung 
 
 Ein Paket ist, kurz gesagt, eine Sammlung benutzerdefinierter Blöcke. Der Dynamo Package Manager ist ein Community-Portal, aus dem Sie beliebige Pakete herunterladen können, die online veröffentlicht wurden. Diese Toolsets werden von externen Anbietern entwickelt und stellen Erweiterungen der Hauptfunktionen von Dynamo dar. Sie stehen für alle Benutzer zur Verfügung und können durch einfaches Klicken auf eine Schaltfläche heruntergeladen werden.
 
