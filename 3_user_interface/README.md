@@ -49,7 +49,7 @@ Se você tiver dúvidas, confira o menu **Ajuda**. Você pode acessar um dos sit
 A barra de ferramentas do Dynamo contém uma série de botões para acesso rápido ao trabalho com arquivos, bem como os comandos Desfazer [Ctrl + Z] e Refazer [Ctrl + Y]. Na parte mais à direita, há outro botão que exporta um instantâneo do espaço de trabalho, o que é extremamente útil para fins de documentação e compartilhamento.
 
 * ![](images/userinterface-newfile.jpg) Novo – Criar um novo arquivo .dyn
-* ![](<images/userinterface-open(1) (1).jpg>) Abrir – Abrir um arquivo existente .dyn (espaço de trabalho) ou .dyf (nó personalizado)
+* \![](<images/userinterface-open(1) (1).jpg>) Abrir – Abrir um arquivo existente .dyn (espaço de trabalho) ou .dyf (nó personalizado)
 * ![](images/userinterface-save.jpg) Salvar/Salvar como – Salvar o arquivo .dyn ou .dyf ativo
 * ![](images/userinterface-undo.jpg) Desfazer – Desfaz a última ação
 * ![](images/userinterface-redo.jpg) Refazer – Refaz a próxima ação

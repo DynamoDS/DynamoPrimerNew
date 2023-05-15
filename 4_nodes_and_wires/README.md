@@ -1,4 +1,4 @@
-# Nós e fios 
+# Nós e fios
 
 ## Nós
 
@@ -87,7 +87,7 @@ Frequentemente, queremos ajustar o fluxo do programa em nosso programa visual ed
 
 * Para alterar a conexão em uma porta de entrada, clique com o botão esquerdo do mouse em outra porta de entrada
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * Para remover o fio, afaste o fio e clique com o botão esquerdo do mouse no espaço de trabalho
 
@@ -116,7 +116,7 @@ Caso você prefira ocultar os fios no gráfico, pode encontrar essa opção em V
 
 Com essa configuração, somente os nós selecionados e seus fios unidos serão mostrados no realce azul-claro.
 
-![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### Ocultar somente fio individual
 
