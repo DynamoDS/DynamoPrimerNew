@@ -37,7 +37,7 @@ W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kl
 
 {% hint style="warning" %} *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie do procesów roboczych programu Revit*.
 
