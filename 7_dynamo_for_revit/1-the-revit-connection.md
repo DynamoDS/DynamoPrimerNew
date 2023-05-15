@@ -37,7 +37,7 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 {% hint style="warning" %} *Dynamo 只會在開啟它的檔案中執行。{% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 在 Revit 中開啟 Dynamo 時，會有一個稱為「Revit」的新品類。這是使用者介面的全面新增組件，其中提供了專用於 Revit 工作流程的節點。*
 

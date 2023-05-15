@@ -49,7 +49,7 @@ Dynamo 的使用者介面 (UI) 分為五個主要區域。我們在此將簡要�
 Dynamo 的工具列包含一系列按鈕，可快速存取以使用檔案及退回 [Ctrl + Z] 與重做 [Ctrl + Y] 指令。最右側是另一個按鈕，可以匯出工作區的快照，這對於製作文件及分享非常有用。
 
 * ![](images/userinterface-newfile.jpg) 新建 - 建立新的 .dyn 檔案
-* ![](<images/userinterface-open(1) (1).jpg>) 開啟 - 開啟既有的 .dyn (工作區) 或 .dyf (自訂節點) 檔案
+* \![](<images/userinterface-open(1) (1).jpg>) 開啟 - 開啟既有的 .dyn (工作區) 或 .dyf (自訂節點) 檔案
 * ![](images/userinterface-save.jpg) 儲存/另存新檔 - 儲存使用中的 .dyn 或 .dyf 檔案
 * ![](images/userinterface-undo.jpg) 退回 - 退回上一個動作
 * ![](images/userinterface-redo.jpg) 重做 - 重做下一個動作

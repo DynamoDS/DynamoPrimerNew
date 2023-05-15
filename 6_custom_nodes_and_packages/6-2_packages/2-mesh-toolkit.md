@@ -2,7 +2,7 @@
 
 Dynamo Mesh Toolkit 可提供工具，以匯入外部檔案格式的網格、根據 Dynamo 幾何圖形物件建立網格，並根據網格的頂點與索引手動建置網格。資源庫還提供工具來修改網格、修復網格，或萃取水平切片，以用於加工。
 
-![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+\![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
 
 Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此在未來的幾年將繼續成長。該工具箱將頻繁推出新方法，請隨時與 Dynamo 團隊聯繫以提供註解、錯誤以及新功能的建議。
 

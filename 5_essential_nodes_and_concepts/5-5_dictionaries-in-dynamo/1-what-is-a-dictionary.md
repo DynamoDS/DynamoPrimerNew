@@ -1,4 +1,4 @@
-# 什麼是字典 
+# 什麼是字典
 
 Dynamo 2.0 引入將字典資料類型與清單資料類型分開的概念。此變更可能會對您如何在工作流程中建立和使用資料造成一些重大變更。在 2.0 版之前，字典和清單合併成一種資料類型。簡單來說，清單實際上是有整數鍵的字典。
 
@@ -24,7 +24,7 @@ Dynamo 2.0 引入將字典資料類型與清單資料類型分開的概念。此
 
     ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
