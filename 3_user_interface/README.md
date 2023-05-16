@@ -49,7 +49,7 @@ Pokud máte problém, podívejte se do nabídky **Nápověda**. Prostřednictví
 Panel nástrojů aplikace Dynamo obsahuje řadu tlačítek pro rychlý přístup k práci se soubory a také příkazy Zpět [Ctrl+Z] a Znovu [Ctrl+Y]. Zcela vpravo je další tlačítko, které umožňuje exportovat snímek pracovního prostoru, což je mimořádně užitečné pro dokumentaci a sdílení.
 
 * ![](images/userinterface-newfile.jpg) Nový – Vytvoří nový soubor .dyn.
-* ![](<images/userinterface-open(1) (1).jpg>) Otevřít – Otevře existující soubor .dyn (pracovní prostor) nebo .dyf (vlastní uzel).
+* \![](<images/userinterface-open(1) (1).jpg>) Otevřít – Otevře existující soubor .dyn (pracovní prostor) nebo .dyf (vlastní uzel).
 * ![](images/userinterface-save.jpg) Uložit/uložit jako – Uloží aktivní soubor .dyn nebo .dyf.
 * ![](images/userinterface-undo.jpg) Zpět – Vrátí zpět poslední akci.
 * ![](images/userinterface-redo.jpg) Znovu – Znovu provede další akci.
