@@ -1,10 +1,10 @@
-# Diccionarios en bloques de código 
+# Diccionarios en bloques de código
 
 Dynamo 2.0 no solo presenta los nodos indicados anteriormente para los diccionarios, sino que también hay nuevas funciones en los bloques de código para ello.
 
 Puede utilizar una sintaxis como la siguiente o representaciones basadas en DesignScript de los nodos.
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (2).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (2).jpg>)
 
 Dado que un diccionario es un tipo de objeto de Dynamo, podemos realizar las siguientes acciones con él.
 
