@@ -1,4 +1,4 @@
-# Nœuds et fils 
+# Nœuds et fils
 
 ## Nœuds
 
@@ -87,7 +87,7 @@ Souvent, vous souhaitez ajuster le flux du programme dans votre programme visuel
 
 * Pour définir la connexion sur un port d’entrée, cliquez avec le bouton gauche de la souris sur un autre port d’entrée.
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * Pour supprimer le fil, retirez-le et cliquez avec le bouton gauche de la souris sur l’espace de travail.
 
@@ -116,7 +116,7 @@ Si vous préférez masquer les fils dans le graphique, vous pouvez accéder à c
 
 Avec ce paramètre, seuls les nœuds sélectionnés et les fils qui les rejoignent présentent une bordure bleu clair.
 
-![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### Masquage des fils individuels uniquement
 

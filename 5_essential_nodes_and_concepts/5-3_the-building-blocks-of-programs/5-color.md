@@ -8,7 +8,7 @@ Dans Dynamo, les couleurs sont créées à l’aide des entrées ARVB. Cet acron
 
 | Icône                                     | Nom (Syntaxe)                 | Entrées  | Sorties |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (1).jpg>) | Couleur ARVB (**Color.ByARGB**) | A,R,G,B | color   |
+| \![](<../images/5-1/ColorbyARGB (1).jpg>) | Couleur ARVB (**Color.ByARGB**) | A,R,G,B | color   |
 
 ### Interrogation des valeurs de couleur
 
@@ -16,19 +16,19 @@ Les couleurs du tableau ci-dessous recherchent les propriétés utilisées pour 
 
 | Icône                                          | Nom (Syntaxe)                     | Entrées | Sorties    |
 | --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-1/ColorRed (1).jpg>)         | Rouge (**Color.Red**)               | color  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Vert (**Color.Green**)           | color  | G          |
-| ![](<../images/5-1/ColorBlue (1).jpg>)        | Bleu (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-1/ColorComponent (1).jpg>)   | Composants (**Color.Components**) | color  | A,R,G,B |
+| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| \![](<../images/5-1/ColorRed (1).jpg>)         | Rouge (**Color.Red**)               | color  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Vert (**Color.Green**)           | color  | G          |
+| \![](<../images/5-1/ColorBlue (1).jpg>)        | Bleu (**Color.Blue**)             | color  | B          |
+| \![](<../images/5-1/ColorComponent (1).jpg>)   | Composants (**Color.Components**) | color  | A,R,G,B |
 
 Les couleurs du tableau ci-dessous correspondent à l’**espace de couleurs HSB**. Diviser la couleur en teinte, en saturation et en luminosité permet probablement de l’interpréter de façon plus intuitive : quelle couleur choisir ? Quel niveau de saturation de la couleur choisir ? Et quel niveau d'intensité de la couleur choisir ? Il s'agit respectivement de la répartition de la teinte, de la saturation et de la luminosité.
 
 | Icône                                         | Nom (Syntaxe)                     | Entrées | Sorties    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorHue (1).jpg>)        | Teinte (**Color.Hue**)               | color  | Teinte        |
-| ![](<../images/5-1/ColorSaturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-1/ColorBrightness (1).jpg>) | Luminosité (**Color.Brightness**) | color  | Luminosité |
+| \![](<../images/5-1/ColorHue (1).jpg>)        | Teinte (**Color.Hue**)               | color  | Teinte        |
+| \![](<../images/5-1/ColorSaturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
+| \![](<../images/5-1/ColorBrightness (1).jpg>) | Luminosité (**Color.Brightness**) | color  | Luminosité |
 
 ### Intervalles de couleurs
 
