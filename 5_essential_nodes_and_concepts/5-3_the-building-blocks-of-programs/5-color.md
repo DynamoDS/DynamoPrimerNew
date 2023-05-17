@@ -8,7 +8,7 @@ I colori in Dynamo vengono creati utilizzando gli input ARGB. Corrispondono ai c
 
 | Icona                                     | Nome (Sintassi)                 | Input  | Output |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (1).jpg>) | Colore ARGB (**Color.ByARGB**) | A,R,G,B | colore   |
+| \![](<../images/5-1/ColorbyARGB (1).jpg>) | Colore ARGB (**Color.ByARGB**) | A,R,G,B | colore   |
 
 ### Esecuzione di una query sui valori dei colori
 
@@ -16,19 +16,19 @@ I colori nella tabella riportata di seguito eseguono una query sulle proprietà 
 
 | Icona                                          | Nome (Sintassi)                     | Input | Output    |
 | --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alfa (**Color.Alpha**)           | colore  | A          |
-| ![](<../images/5-1/ColorRed (1).jpg>)         | Rosso (**Color.Red**)               | colore  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Verde (**Color.Green**)           | colore  | G          |
-| ![](<../images/5-1/ColorBlue (1).jpg>)        | Blu (**Color.Blue**)             | colore  | B          |
-| ![](<../images/5-1/ColorComponent (1).jpg>)   | Componenti (**Color.Components**) | colore  | A,R,G,B |
+| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alfa (**Color.Alpha**)           | colore  | A          |
+| \![](<../images/5-1/ColorRed (1).jpg>)         | Rosso (**Color.Red**)               | colore  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Verde (**Color.Green**)           | colore  | G          |
+| \![](<../images/5-1/ColorBlue (1).jpg>)        | Blu (**Color.Blue**)             | colore  | B          |
+| \![](<../images/5-1/ColorComponent (1).jpg>)   | Componenti (**Color.Components**) | colore  | A,R,G,B |
 
 I colori nella tabella riportata di seguito corrispondono allo **spazio colore HSB**. La divisione del colore in tonalità, saturazione e luminosità è probabilmente più intuitiva per la modalità di interpretazione del colore. Quale colore dovrebbe essere? Quanto dovrebbe essere colorato? E quanto dovrebbe essere chiaro o scuro il colore? Si tratta rispettivamente della suddivisione di tonalità, saturazione e luminosità.
 
 | Icona                                         | Nome (Sintassi)                     | Input | Output    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorHue (1).jpg>)        | Tonalità (**Color.Hue**)               | colore  | Tonalità        |
-| ![](<../images/5-1/ColorSaturation (1).jpg>) | Saturazione (**Color.Saturation**) | colore  | Saturazione |
-| ![](<../images/5-1/ColorBrightness (1).jpg>) | Luminosità (**Color.Brightness**) | colore  | Luminosità |
+| \![](<../images/5-1/ColorHue (1).jpg>)        | Tonalità (**Color.Hue**)               | colore  | Tonalità        |
+| \![](<../images/5-1/ColorSaturation (1).jpg>) | Saturazione (**Color.Saturation**) | colore  | Saturazione |
+| \![](<../images/5-1/ColorBrightness (1).jpg>) | Luminosità (**Color.Brightness**) | colore  | Luminosità |
 
 ### Intervallo colori
 

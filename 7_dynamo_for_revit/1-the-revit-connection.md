@@ -37,7 +37,7 @@ In un progetto o un editor di famiglie di Revit, individuare i moduli aggiuntivi
 
 {% hint style="warning" %} *Dynamo verrà eseguito solo nel file in cui è stato aperto. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 Quando si apre Dynamo in Revit, è presente una nuova categoria denominata Revit. Questa è un'aggiunta completa all'interfaccia utente che offre nodi specifici per i workflow di Revit.*
 
