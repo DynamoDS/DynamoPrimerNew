@@ -37,7 +37,7 @@
 
 {% hint style="warning" %}\\* Программа Dynamo будет работать только в том файле, в котором была открыта. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 При открытии Dynamo в Revit отображается новая категория с именем Revit. Это мощное дополнение к пользовательскому интерфейсу, включающее узлы, специально предназначенные для использования в рабочих процессах Revit*.
 
