@@ -1,4 +1,4 @@
-# Richieste pull
+# Richieste pull 
 
 Dynamo dipende dalla creatività e dall'impegno della sua comunità e il team di Dynamo incoraggia i collaboratori ad esplorare le possibilità, a testare le idee e a coinvolgere la comunità per ottenere un feedback. Sebbene l'innovazione sia fortemente incoraggiata, le modifiche verranno unite solo se rendono Dynamo più facile da utilizzare e soddisfano le linee guida definite in questo documento. Le modifiche con vantaggi definiti in modo restrittivo non verranno unite.
 
