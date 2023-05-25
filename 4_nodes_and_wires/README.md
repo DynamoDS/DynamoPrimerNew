@@ -116,7 +116,7 @@ Falls Sie es vorziehen, die Drähte im Diagramm auszublenden, können Sie diese 
 
 Mit dieser Einstellung werden nur die ausgewählten Blöcke und die verbindenden Drähte in hellem Aquamarin hervorgehoben.
 
-\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### Ausblenden von einzelnen Drähte
 
