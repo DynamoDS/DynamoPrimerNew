@@ -37,7 +37,7 @@ Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑
 
 {% hint style="warning" %} *Dynamo 仅在已打开的文件中运行。{% endhint %}
 
-\![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
 在 Revit 中打开 Dynamo 时，有一个名为“Revit”的新类别。这是对用户界面完全新增的功能，可提供专门针对 Revit 工作流的节点。*
 
