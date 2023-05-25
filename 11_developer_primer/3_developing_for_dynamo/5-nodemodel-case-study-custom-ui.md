@@ -138,7 +138,7 @@ To różnica w stosunku do węzłów Zero-Touch. Przeanalizujmy funkcje poszczeg
 * Instrukcja `var sliderValue = AstFactory.BuildDoubleNode(SliderValue)` tworzy węzeł AST reprezentujący wartość suwaka
 * Zmień dane wejściowe na zmienną `sliderValue` w zmiennej functionCall `new List<AssociativeNode> { inputAstNodes[0], sliderValue });`
 
-** 3. Wywoływanie funkcji**
+**3\. Wywoływanie funkcji**
 
 Projekt `CustomNodeModelFunction` zostanie skompilowany jako zespół oddzielny od projektu `CustomNodeModel`, dzięki czemu będzie można go wywołać.
 

@@ -142,7 +142,7 @@ Klasa `SampleViewExtension` tworzy element menu, który można kliknąć, służ
 * Instrukcja `Owner = p.DynamoWindow` ustawia dodatek Dynamo jako właściciela wyskakującego okna. Oznacza to, że nowe okno jest zależne od dodatku Dynamo, więc takie operacje jak zminimalizowanie, zmaksymalizowanie i przywrócenie dodatku Dynamo spowodują, że nowe okno będzie działało tak samo
 * Metoda `window.Show();` wyświetla okno, w którym ustawiono dodatkowe właściwości okna
 
-** 3. Implementowanie modelu widoku**
+**3\. Implementowanie modelu widoku**
 
 Po ustaleniu niektórych podstawowych parametrów okna dodamy logikę reagowania na różne zdarzenia związane z dodatkiem Dynamo i poinstruujemy interfejs użytkownika, aby dokonał aktualizacji na podstawie tych zdarzeń. Skopiuj następujący kod do pliku klasy `SampleWindowViewModel.cs`:
 

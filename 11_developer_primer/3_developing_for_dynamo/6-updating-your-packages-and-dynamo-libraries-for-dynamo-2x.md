@@ -109,7 +109,7 @@ W repozytorium dodatku Dynamo, [tutaj](https://github.com/DynamoDS/Dynamo/blob/m
 #### Konwertery: <a href="#converters" id="converters"></a>
 
 **Uwaga**\
- Jeśli tworzysz własną klasę konwertera JSON.net: dodatek Dynamo nie ma obecnie mechanizmu umożliwiającego wstrzyknięcie jej do metod wczytywania i zapisywania, więc nawet jeśli oznaczysz tę klasę atrybutem `[JsonConverter]`, może ona nie zostać użyta. Zamiast tego możesz wywołać ten konwerter bezpośrednio w mechanizmie ustawiania (setter) lub pobierania (getter). _//DO OPRACOWANIA Wymagane jest potwierdzenia tego ograniczenia. Wszelkie dowody są mile widziane._
+ Jeśli tworzysz własną klasę konwertera JSON.net: dodatek Dynamo nie ma obecnie mechanizmu umożliwiającego wstrzyknięcie jej do metod wczytywania i zapisywania, więc nawet jeśli oznaczysz tę klasę atrybutem `[JsonConverter]`, może ona nie zostać użyta. Zamiast tego możesz wywołać ten konwerter bezpośrednio w mechanizmie ustawiania (setter) lub pobierania (getter). _//DO OPRACOWANIA Wymagane jest potwierdzenie tego ograniczenia. Wszelkie dowody są mile widziane._
 
 W repozytorium dodatku Dynamo, [tutaj](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L66), można znaleźć przykład określający metodę serializacji do konwertowania właściwości na ciąg.
 
