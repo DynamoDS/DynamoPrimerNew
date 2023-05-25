@@ -21,7 +21,7 @@
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
-**“节点命名标准”**提供了在 Dynamo 中命名类别、节点以及输入和输出端口的标准和准则。
+**“节点命名标准”** 提供了在 Dynamo 中命名类别、节点以及输入和输出端口的标准和准则。
 
 [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
@@ -29,15 +29,15 @@
 
 [https://dynamods.github.io/DynamoAPI/](https://dynamods.github.io/DynamoAPI/)
 
-**“DynamoBIM”**获取其他信息、学习内容和论坛的最佳来源是 DynamoBIM 网站。
+**“DynamoBIM”** 获取其他信息、学习内容和论坛的最佳来源是 DynamoBIM 网站。
 
 [https://dynamobim.org](https://dynamobim.org)
 
-**“Dynamo 字典”**所有 Dynamo 节点的可搜索数据库
+**“Dynamo 字典”** 所有 Dynamo 节点的可搜索数据库
 
 [https://dictionary.dynamobim.com/](https://dictionary.dynamobim.com)
 
-**“DesignScript 语言手册”**编写 DesignScript 的 PDF 手册
+**“DesignScript 语言手册”** 编写 DesignScript 的 PDF 手册
 
 [PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo\_language\_guide\_version\_1.pdf)
 
