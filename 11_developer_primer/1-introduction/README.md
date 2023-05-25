@@ -2,7 +2,7 @@
 
 #### このガイドの目的について <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
-このガイドは、Dynamo で Zero-Touch ノードを作成する方法から、拡張機能を構築する方法まで、C# 開発の可能性の範囲をナビゲートすることを目的としています。
+このガイドは、Dynamo で Zero-Touch ノードを作成する方法から、拡張機能を構築する方法まで、C# 開発のさまざまな可能性の概要を説明することを目的としています。
 
 ![GitHub の Dynamo ソース](images/dynamogithub.jpg)
 > GitHub の Dynamo ソース

@@ -14,7 +14,7 @@ UI ノードと、NodeModel から直接派生したノードを 2.x で実行�
 
 ### 一般的なパッケージ化のルール: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
-* パッケージに Dynamo または Dynamo Revit の .dll をバンドルしないでください。これらの dll は、Dynamoによってもすでにロードされています。ユーザがロードしているバージョンとは異なるバージョンをバンドルした場合_(つまり、Dynamo Core 1.3 を配布したが、ユーザが Dynamo 2.0 でパッケージを実行している場合)_、予期しないランタイム エラーが発生します。これには、`DynamoCore.dll`、`DynamoServices.dll`、`DSCodeNodes.dll`、`ProtoGeometry.dll` などの dll が該当します 。
+* パッケージに Dynamo または Dynamo Revit の .dll をバンドルしないでください。これらの dll は、Dynamoによってもすでにロードされています。ユーザがロードしているバージョンとは異なるバージョンをバンドルした場合 _(つまり、Dynamo Core 1.3 を配布したが、ユーザが Dynamo 2.0 でパッケージを実行している場合)_、予期しないランタイム エラーが発生します。これには、`DynamoCore.dll`、`DynamoServices.dll`、`DSCodeNodes.dll`、`ProtoGeometry.dll`  などの dll が該当します 。
 * 可能な限り、パッケージに `newtonsoft.json.net` をバンドルして配布しないでください。この dll は、Dynamo 2.x によってもすでにロードされています。先ほどと同じ問題が発生する可能性があります。
 * 可能な限り、パッケージに `CEFSharp` をバンドルして配布しないでください。この dll は、Dynamo 2.x によってもすでにロードされています。先ほどと同じ問題が発生する可能性があります。
 * 一般的に、依存関係のバージョンを制御する必要がある場合は、Dynamo や Revit との依存関係を共有することは避けてください。
@@ -72,7 +72,7 @@ UI ノードと、NodeModel から直接派生したノードを 2.x で実行�
 
 `NodeModel` ベース クラス(または、その他の Dynamo のコア ベース クラス `DSDropDownBase` など)から派生したノードを更新するために必要となる最も一般的な変更は、クラスに JSON コンストラクタを追加する必要があることです。
 
-パラメータを持たない元のコンストラクタは、Dynamoで作成された新しいノードの初期化を引き続き処理します(たとえばライブラリなどを使用)。JSON コンストラクタは、保存した .dyn または .dyf ファイルからシリアル化解除した_(ロードした)_ノードを初期化するために必要です。
+パラメータを持たない元のコンストラクタは、Dynamoで作成された新しいノードの初期化を引き続き処理します(たとえばライブラリなどを使用)。JSON コンストラクタは、保存した .dyn または .dyf ファイルからシリアル化解除した _(ロードした)_ ノードを初期化するために必要です。
 
 JSON コンストラクタは、JSON ロード ロジックによって提供される `inPorts` および `outPorts` 用の `PortModel` パラメータがあるという点で、基本コンストラクタとは異なります。ノードのポートを登録する呼び出しは、データが .dyn ファイルに存在するためここでは必要ありません。JSON コンストラクタのサンプルは次のようになります。
 
@@ -88,9 +88,9 @@ JSON コンストラクタは、JSON ロード ロジックによって提供さ
 
 この構文 `:base(Inports,outPorts){}` は、ベース `nodeModel` コンストラクタを呼び出し、シリアル化解除されたポートを渡します。
 
-クラス コンストラクタに存在し、.dyn ファイルにシリアル化した特定のデータの初期化を含む特殊なロジック_(たとえば、ポート登録、レーシング戦略などの設定)_は、このコンストラクタで繰り返す必要はありません。これらの値は JSON から読み取ることができます。
+クラス コンストラクタに存在し、.dyn ファイルにシリアル化した特定のデータの初期化を含む特殊なロジック _(たとえば、ポート登録、レーシング戦略などの設定)_ は、このコンストラクタで繰り返す必要はありません。これらの値は JSON から読み取ることができます。
 
-これが nodeModel の JSON コンストラクタと非 JSON コンストラクタの主な違いです。JSON コンストラクタは、ファイルからロードするときに呼び出し、ロードしたデータを渡します。ただし、その他のユーザ ロジックは JSON コンストラクタで複製する必要があります_(たとえば、ノードのイベント ハンドラの初期化やアタッチなど)_。
+これが nodeModel の JSON コンストラクタと非 JSON コンストラクタの主な違いです。JSON コンストラクタは、ファイルからロードするときに呼び出し、ロードしたデータを渡します。ただし、その他のユーザ ロジックは JSON コンストラクタで複製する必要があります _(たとえば、ノードのイベント ハンドラの初期化やアタッチなど)_。
 
 サンプルについては、DynamoSamples リポジトリの [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156)、[DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23)、または [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123) を参照してください。
 
