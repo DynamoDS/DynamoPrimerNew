@@ -291,7 +291,7 @@ namespace CustomNodeModel.CustomNodeModel
 
 `GridNodeModel.cs` 定义滑块计算逻辑。
 
-** 5.配置为软件包**
+**5\.配置为软件包**
 
 在我们构建项目之前，最后一步是添加一个 `pkg.json` 文件，以便 Dynamo 可以读取软件包。
 

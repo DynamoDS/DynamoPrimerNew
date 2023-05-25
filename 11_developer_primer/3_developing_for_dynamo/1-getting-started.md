@@ -90,7 +90,7 @@ Visual Studio 将自动创建并打开一个 C# 文件。我们应为其指定�
 
 ![图形中的 SampleFunction.MultiplyByTwo 节点](images/multiplybytwo.png)
 
-> 1. 输入根据方法的参数名称命名为 `inputNumber`。
+> 1. 根据方法的参数名称，输入命名为 `inputNumber`。
 > 2. 输出默认命名为 `double`，因为这是要返回的数据类型。
 > 3. 节点命名为 `SampleFunctions.MultiplyByTwo`，因为这些是类和方法名称。
 

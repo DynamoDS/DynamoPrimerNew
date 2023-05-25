@@ -178,7 +178,7 @@ namespace ZeroTouchEssentials
 Dynamo 库可以使用原生 Dynamo 几何图形类型作为输入，并创建新的几何图形作为输出。通过以下方式创建几何图形类型：
 
 * 通过在 C# 文件顶部包含 `using Autodesk.DesignScript.Geometry;` 并将 ZeroTouchLibrary NuGet 软件包添加到项目中，可参照项目中的“ProtoGeometry.dll”。
-* **重要信息：**管理未从函数中返回的几何图形资源，请参见下面的 **Dispose/using 语句**部分。
+* **重要信息：** 管理未从函数中返回的几何图形资源，请参见下面的 **Dispose/using 语句**部分。
 
 > 注意：Dynamo 几何图形对象与传递给函数的任何其他对象一样使用。
 

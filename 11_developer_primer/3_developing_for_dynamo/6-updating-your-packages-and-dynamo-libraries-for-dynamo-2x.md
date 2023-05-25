@@ -14,7 +14,7 @@ UI 节点和直接从 NodeModel 派生的节点需要进行更多操作才能在
 
 ### 常规打包规则：<a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
-* 请勿将 Dynamo 或 Dynamo Revit .dll 与软件包捆绑在一起。这些 dll 会由 Dynamo 进行载入。如果捆绑的版本不同于用户已载入的版本_（即，您分发 Dynamo Core 1.3，但用户运行的是基于 Dynamo 2.0 的软件包）_，则会发生意外运行时错误。这包括诸如 `DynamoCore.dll`、`DynamoServices.dll`、`DSCodeNodes.dll`、`ProtoGeometry.dll` 之类的 dll
+* 请勿将 Dynamo 或 Dynamo Revit .dll 与软件包捆绑在一起。这些 dll 会由 Dynamo 进行载入。如果捆绑的版本不同于用户已载入的版本 _（即，您分发 Dynamo Core 1.3，但用户运行的是基于 Dynamo 2.0 的软件包）_，则会发生意外运行时错误。这包括诸如 `DynamoCore.dll`、`DynamoServices.dll`、`DSCodeNodes.dll`、`ProtoGeometry.dll` 之类的 dll
 * 如果可以避免，请勿将 `newtonsoft.json.net` 与软件包捆绑在一起并分发。此 dll 也将由 Dynamo 2.x 载入。可能会出现与上述相同的问题。
 * 如果可以避免，请勿将 `CEFSharp` 与软件包捆绑在一起并分发。此 dll 也将由 Dynamo 2.x 载入。可能会出现与上述相同的问题。
 * 通常，如果需要控制依存关系的版本，请避免将该依存关系与 Dynamo 或 Revit 共享。
@@ -72,9 +72,9 @@ UI 节点和直接从 NodeModel 派生的节点需要进行更多操作才能在
 
 更新派生自 `NodeModel` 基类（或其他 Dynamo 核心基类，即 `DSDropDownBase`）的节点所需的最常见更改是需要将 JSON 构造函数添加到您的类中。
 
-原始无参数构造函数仍将对在 Dynamo 中创建的新节点处理初始化（例如，通过库）。要初始化从保存的 .dyn 或 .dyf 文件反序列化_（载入）_的节点，需要使用 JSON 构造函数。
+原始无参数构造函数仍将对在 Dynamo 中创建的新节点处理初始化（例如，通过库）。要初始化从保存的 .dyn 或 .dyf 文件反序列化 _（载入）_ 的节点，需要使用 JSON 构造函数。
 
-JSON 构造函数与基础构造函数的不同之处在于，它将 `PortModel` 参数用于 `inPorts` 和 `outPorts`，这些参数由 JSON 载入逻辑提供。由于数据存在于 .dyn 文件中，因此此处不需要调用来注册节点的端口。JSON 构造函数的示例如下所示：
+JSON 构造函数与基础构造函数的不同之处在于，它将 `PortModel` 参数用于 `inPorts` 和 `outPorts`，这些参数由 JSON 载入逻辑提供。由于数据存在于 .dyn 文件中，此处不需要调用来注册节点的端口。JSON 构造函数的示例如下所示：
 
 `using Newtonsoft.Json; //New dependency for Json`
 
@@ -88,9 +88,9 @@ JSON 构造函数与基础构造函数的不同之处在于，它将 `PortModel`
 
 此语法 `:base(Inports,outPorts){}` 会调用基础 `nodeModel` 构造函数，并将反序列化端口传递给它。
 
-类构造函数中存在的任何涉及初始化已序列化到 .dyn 文件中的特定数据的特殊逻辑_（例如，设置端口注册、连缀策略等）_都不需要在此构造函数中重复，因为这些值可以从 JSON 中读取。
+类构造函数中存在的任何涉及初始化已序列化到 .dyn 文件中的特定数据的特殊逻辑 _（例如，设置端口注册、连缀策略等）_ 都不需要在此构造函数中重复，因为这些值可以从 JSON 中读取。
 
-这是 nodeModel 的 JSON 构造函数和非 JSON 构造函数之间的主要区别。JSON 构造函数在从文件载入时被调用，并被传递载入的数据。但是，必须在 JSON 构造函数中复制其他用户逻辑_（例如，为节点初始化事件处理程序或附加）_。
+这是 nodeModel 的 JSON 构造函数和非 JSON 构造函数之间的主要区别。JSON 构造函数在从文件载入时被调用，并被传递载入的数据。但是，必须在 JSON 构造函数中复制其他用户逻辑 _（例如，为节点初始化事件处理程序或附加）_。
 
 可以在此处的 DynamoSamples 存储库 -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156)、[DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) 或 [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123) 中找到示例
 
@@ -126,7 +126,7 @@ JSON 构造函数与基础构造函数的不同之处在于，它将 `PortModel`
 
 #### 撤消/重做 <a href="#undoredo" id="undoredo"></a>
 
-如上所述，过去使用 `SerializeCore` 和 `DeserializeCore` 方法是为了将节点保存和载入到 xml .dyn 文件中。此外，它们还用于保存和载入节点状态以进行撤消/重做，**现在仍然如此！**如果要为 nodeModel UI 节点实现复杂的撤消/重做功能，则需要实现这些方法并将其序列化到作为这些方法的参数提供的 XML 文档对象中。除了复杂的 UI 节点之外，这应该是一个罕见用例。
+如上所述，过去使用 `SerializeCore` 和 `DeserializeCore` 方法是为了将节点保存和载入到 xml .dyn 文件中。此外，它们还用于保存和载入节点状态以进行撤消/重做， **现在仍然如此！**如果要为 nodeModel UI 节点实现复杂的撤消/重做功能，则需要实现这些方法并将其序列化到作为这些方法的参数提供的 XML 文档对象中。除了复杂的 UI 节点之外，这应该是一个罕见用例。
 
 
 #### 输入和输出端口 API <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
