@@ -6,11 +6,11 @@ Si vous cherchez des exemples sur la façon de développer pour Dynamo, consulte
 
 Ces exemples sont des modèles Visual Studio que vous pouvez utiliser pour démarrer votre propre projet :
 
-* [**ZeroTouchEssentials**](https://github.com/DynamoDS/ZeroTouchEssentials)** :** modèle pour les nœuds ZeroTouch de base.
+* [**ZeroTouchEssentials**](https://github.com/DynamoDS/ZeroTouchEssentials)**:** modèle pour les nœuds ZeroTouch de base.
   * Renvoie plusieurs sorties : [code](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L15-L24)
   * Utiliser un objet de géométrie natif de Dynamo : [code](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L86-L89)
   * Propriété d’exemple (nœud de requête) : [code](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L48)
-* [**HelloDynamo**](https://github.com/teocomi/HelloDynamo)** :** modèles pour les nœuds NodeModel de base et la personnalisation des vues.
+* [**HelloDynamo**](https://github.com/teocomi/HelloDynamo)**:** modèles pour les nœuds NodeModel de base et la personnalisation des vues.
   * Modèle NodeModel de base : [HelloNodeModel.cs](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/HelloNodeModel.cs)
     * Définir les attributs des nœuds (noms des entrées/sorties, descriptions, types) : [code](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L15)
     * Renvoie un nœud nul s’il n’y a pas d’entrées : [code](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L34-L36)
@@ -20,7 +20,7 @@ Ces exemples sont des modèles Visual Studio que vous pouvez utiliser pour dém
     * Personnaliser le NodeModel : [code](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloGuiNodeView.cs#L11)
     * Définir les attributs de curseur : [code](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/Slider.xaml#L10)
     * Déterminer la logique d’interaction pour le curseur : [code](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
-* [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)** :** modèles pour ZeroTouch, interface utilisateur personnalisée, tests et extensions de vue.
+* [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** modèles pour ZeroTouch, interface utilisateur personnalisée, tests et extensions de vue.
   * [Exemples d’interface utilisateur](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
     * Créer un nœud d’interface utilisateur de base et personnalisé : [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
     * Créer un menu déroulant : [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
@@ -31,7 +31,7 @@ Ces exemples sont des modèles Visual Studio que vous pouvez utiliser pour dém
     * Exemple de nœuds ZeroTouch, dont un qui implémente `IGraphicItem` pour affecter le rendu de la géométrie : [BasicExample.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/BasicExample.cs)
     * Exemple de nœuds ZeroTouch pour colorer la géométrie en utilisant `IRenderPackage`: [ColorExample.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/ColorExample.cs)
   * [Exemples d’extension de vue](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleViewExtension) : implémentation IViewExtension qui affiche une fenêtre non modale lorsque l’utilisateur clique sur son élément MenuItem.
-* [**NodeModelsEssentials**](https://github.com/nonoesp/DynamoNodeModelsEssentials)** :** modèles pour le développement avancé de packages Dynamo à l’aide de NodeModel.
+* [**NodeModelsEssentials**](https://github.com/nonoesp/DynamoNodeModelsEssentials)**:** modèles pour le développement avancé de packages Dynamo à l’aide de NodeModel.
   * Exemples essentiels :
     * [Erreur](https://github.com/nonoesp/DynamoNodeModelsEssentials/blob/master/src/Essentials/NodeModelsEssentials/EssentialsError.cs)
     * [MultiOperation](https://github.com/nonoesp/DynamoNodeModelsEssentials/blob/master/src/Essentials/NodeModelsEssentials/EssentialsMultiOperation.cs)
@@ -50,7 +50,7 @@ Ces exemples sont des modèles Visual Studio que vous pouvez utiliser pour dém
     * [SliderBound](https://github.com/nonoesp/DynamoNodeModelsEssentials/blob/master/src/Essentials/NodeModelsEssentials/UISliderBound.cs)
     * [Etat](https://github.com/nonoesp/DynamoNodeModelsEssentials/blob/master/src/Essentials/NodeModelsEssentials/UIState.cs)
 
-[**DynamicText**](https://github.com/DynamoDS/DynamoText)** :** bibliothèque ZeroTouch permettant de créer du texte dans Dynamo.
+[**DynamicText**](https://github.com/DynamoDS/DynamoText)**:** bibliothèque ZeroTouch permettant de créer du texte dans Dynamo.
 
 #### Étude de cas <a href="#case-studies" id="case-studies"></a>
 
@@ -68,6 +68,6 @@ Les développeurs tiers ont apporté des contributions significatives et intére
 
 [https://github.com/ksobon/Bumblebee](https://github.com/ksobon/Bumblebee)
 
-**Clockwork** est une collection de nœuds personnalisés pour les activités liées à Revit ainsi que pour d’autres opérations tels que la gestion de listes, les opérations mathématiques, les opérations de chaîne, les opérations géométriques (principalement des zones de délimitation, des maillages, des plans, des points, des surfaces, des UV et des vecteurs) et la création de panneaux.
+**Clockwork** est une collection de nœuds personnalisés pour les activités liées à Revit ainsi que pour d’autres opérations telles que la gestion de listes, les opérations mathématiques, les opérations de chaîne, les opérations géométriques (principalement des zones de délimitation, des maillages, des plans, des points, des surfaces, des UV et des vecteurs) et la création de panneaux.
 
 [https://github.com/andydandy74/ClockworkForDynamo](https://github.com/andydandy74/ClockworkForDynamo)
