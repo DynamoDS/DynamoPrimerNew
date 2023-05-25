@@ -6,11 +6,11 @@ Se você estiver procurando exemplos sobre como desenvolver para o Dynamo, consu
 
 Essas amostras são modelos do Visual Studio que você pode usar para iniciar seu próprio projeto:
 
-* [**ZeroTouchEssentials**](https://github.com/DynamoDS/ZeroTouchEssentials)**:**modelo para os nós Sem toque básicos.
+* [**ZeroTouchEssentials**](https://github.com/DynamoDS/ZeroTouchEssentials)**:** modelo para os nós Sem toque básicos.
   * Retornar várias saídas: [Código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L15-L24)
   * Usar um objeto de geometria nativo do Dynamo: [Código](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L86-L89)
   * Exemplo de propriedade (nó de consulta): [Código](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L48)
-* [**HelloDynamo**](https://github.com/teocomi/HelloDynamo)**:**modelos para os nós NodeModel básicos e personalização da vista.
+* [**HelloDynamo**](https://github.com/teocomi/HelloDynamo)**:** modelos para os nós NodeModel básicos e personalização da vista.
   * Modelo básico do NodeModel: [HelloNodeModel.cs](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/HelloNodeModel.cs)
     * Definir atributos de nó (nomes de entrada/saída, descrições, tipos): [Código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L15)
     * Retornar um nó nulo se não houver entradas: [Código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L34-L36)
@@ -20,7 +20,7 @@ Essas amostras são modelos do Visual Studio que você pode usar para iniciar se
     * Personalizar o NodeModel: [Código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloGuiNodeView.cs#L11)
     * Definir os atributos do controle deslizante: [Código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/Slider.xaml#L10)
     * Determinar a lógica de interação do controle deslizante: [Código](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
-* [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:**modelos para o nó Sem toque, interface do usuário personalizada, testes e extensões de vista.
+* [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** modelos para o nó Sem toque, interface do usuário personalizada, testes e extensões de vista.
   * [Amostras de interface do usuário](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
     * Criar um nó de interface de usuário básico e personalizado: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
     * Criar um menu suspenso: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
