@@ -1,4 +1,4 @@
-# Pull-Anforderungen 
+# Pull-Anforderungen
 
 Dynamo basiert auf der Kreativität und dem Engagement der Community. Das Dynamo-Team empfiehlt allen Beitragenden, Möglichkeiten zu erkunden, Ideen zu testen und die Community um Feedback zu bitten. Innovationen werden sehr gern gesehen. Änderungen werden jedoch nur dann aufgenommen, wenn sie die Verwendung von Dynamo erleichtern und die in diesem Dokument definierten Kriterien erfüllen. Änderungen, die nur im kleinen Rahmen Vorteile bringen, werden nicht eingeführt.
 

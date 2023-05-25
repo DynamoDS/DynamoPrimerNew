@@ -60,7 +60,7 @@ Mit diesen Methoden haben wir folgende Möglichkeiten:
 
 * Einstieg in das Schreiben mit Python oder DesignScript ohne oder mit geringem Einrichtungsaufwand
 * Importieren von Python-Bibliotheken in Dynamo
-* Gemeinsame Nutzung von Codeblöcken, Python-Blöcken und benutzerdefinierten Blöcke mit der Dynamo-Community im Rahmen eines Pakets
+* Gemeinsame Nutzung von Codeblöcken, Python-Blöcken und benutzerdefinierten Blöcken mit der Dynamo-Community im Rahmen eines Pakets
 
 **Zero-Touch-Blöcke**
 

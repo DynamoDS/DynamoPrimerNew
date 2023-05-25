@@ -13,7 +13,7 @@ In diesem Handbuch verwenden wir folgende Versionen:
 
 Um einen erfolgreichen Build zu gewährleisten, werden sowohl das Dynamo- als auch das DynamoRevit-Repository, die für diese exemplarische Vorgehensweise verwendet werden, geklont und erstellt.
 
-_Anmerkung: Die manuelle Erstellung von Dynamo vor DynamoRevit ist nur erforderlich, wenn Sie Dynamo 1.x und DynamoRevit 1.x erstellen. Neuere Versionen des DynamoRevit-Repositorys basieren auf dem NuGet-Paket-Manager für die zum Erstellen erforderlichen Dynamo-Abhängigkeiten. Auch wenn beim Build Dynamo Revit 2.x kein manueller Abruf von Dynamo erforderlich ist, benötigen Sie die `dlls`-Kerndateien dennoch an anderer Stelle, um das Dynamo Revit-`addin` auszuführen. Es lohnt sich also, Dynamo dennoch abzurufen und zu erstellen. Weitere Informationen finden Sie unten: _[_Erstellen des Repositorys mit Visual Studio_](#building-the-repository-using-Visual-Studio)
+_Anmerkung: Die manuelle Erstellung von Dynamo vor DynamoRevit ist nur erforderlich, wenn Sie Dynamo 1.x und DynamoRevit 1.x erstellen. Neuere Versionen des DynamoRevit-Repositorys basieren auf dem NuGet-Paket-Manager für die zum Erstellen erforderlichen Dynamo-Abhängigkeiten. Auch wenn beim Build Dynamo Revit 2.x kein manueller Abruf von Dynamo erforderlich ist, benötigen Sie die `dlls` -Kerndateien dennoch an anderer Stelle, um das Dynamo Revit-`addin` auszuführen. Es lohnt sich also, Dynamo dennoch abzurufen und zu erstellen. Weitere Informationen finden Sie unten:_ [_Erstellen des Repositorys mit Visual Studio_](#building-the-repository-using-Visual-Studio)
 
 #### Suchen des DynamoRevit-Repositorys auf GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
