@@ -208,7 +208,7 @@ Dado que no se trata de una biblioteca de código abierto, no podemos realizar c
 > 3. En la pila de llamadas, se puede ver que la excepción procede de código que no es de usuario.
 > 4. Una ventana emergente que proporciona información sobre la excepción.
 
-Este proceso se puede aplicar a cualquier archivo de código fuente con el que se trabaje. Al desarrollar una biblioteca de nodos Zero-Touch para Dynamo Studio. podemos abrir el código fuente de la biblioteca y asociar un proceso de Dynamo para depurar la biblioteca de nodos. Aunque todo funcione perfectamente, la depuración es una excelente forma de explorar el código y descubrir el funcionamiento de los componentes.
+Este proceso se puede aplicar a cualquier archivo de código fuente con el que se trabaje. Al desarrollar una biblioteca de nodos Zero-Touch para Dynamo Studio, podemos abrir el código fuente de la biblioteca y asociar un proceso de Dynamo para depurar la biblioteca de nodos. Aunque todo funcione perfectamente, la depuración es una excelente forma de explorar el código y descubrir el funcionamiento de los componentes.
 
 #### Extraer la última compilación <a href="#pull-latest-build" id="pull-latest-build"></a>
 

@@ -6,11 +6,11 @@ Si desea obtener ejemplos sobre cómo desarrollar para Dynamo, consulte estos re
 
 Estos ejemplos son plantillas de Visual Studio que puede utilizar para iniciar su propio proyecto:
 
-* [**ZeroTouchEssentials**](https://github.com/DynamoDS/ZeroTouchEssentials)**: **plantilla para nodos Zero-Touch básicos.
+* [**ZeroTouchEssentials**](https://github.com/DynamoDS/ZeroTouchEssentials)**:** plantilla para nodos Zero-Touch básicos.
   * Devolver varias salidas: [código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L15-L24)
   * Utilizar un objeto de geometría nativo de Dynamo: [código](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L86-L89)
   * Propiedad de ejemplo (nodo de consulta): [código](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L48)
-* [**HelloDynamo**](https://github.com/teocomi/HelloDynamo)**: **plantillas para la personalización de vistas y nodos NodeModel básicos.
+* [**HelloDynamo**](https://github.com/teocomi/HelloDynamo)**:** plantillas para la personalización de vistas y nodos NodeModel básicos.
   * Plantilla básica de NodeModel: [HelloNodeModel.cs](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/HelloNodeModel.cs)
     * Definir atributos de nodo (nombres de entrada/salida, descripciones y tipos): [código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L15)
     * Devolver un nodo nulo si no hay entradas: [código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L34-L36)
@@ -20,7 +20,7 @@ Estos ejemplos son plantillas de Visual Studio que puede utilizar para iniciar s
     * Personalizar NodeModel: [código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloGuiNodeView.cs#L11)
     * Definir atributos de control deslizante: [código](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/Slider.xaml#L10)
     * Determinar la lógica de interacción del control deslizante: [código](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
-* [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**: **plantillas para Zero-Touch, la interfaz de usuario personalizada, pruebas y extensiones de vista.
+* [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:** plantillas para Zero-Touch, la interfaz de usuario personalizada, pruebas y extensiones de vista.
   * [Ejemplos de la interfaz de usuario](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
     * Crear un nodo de interfaz de usuario personalizado básico: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs)
     * Crear un menú desplegable: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs)
@@ -31,7 +31,7 @@ Estos ejemplos son plantillas de Visual Studio que puede utilizar para iniciar s
     * Ejemplos de nodos Zero-Touch, incluido uno que implementa `IGraphicItem` para afectar a la renderización de la geometría: [BasicExample.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/BasicExample.cs)
     * Ejemplos de nodos Zero-Touch para colorear geometría mediante `IRenderPackage`: [ColorExample.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryZeroTouch/Examples/ColorExample.cs)
   * [Ejemplos de extensiones de vista](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleViewExtension): una implementación de IViewExtension que muestra una ventana sin modo cuando se hace clic en su MenuItem.
-* [**NodeModelsEssentials**](https://github.com/nonoesp/DynamoNodeModelsEssentials)**: **plantillas para el desarrollo avanzado de paquetes de Dynamo mediante NodeModel.
+* [**NodeModelsEssentials**](https://github.com/nonoesp/DynamoNodeModelsEssentials)**:** plantillas para el desarrollo avanzado de paquetes de Dynamo mediante NodeModel.
   * Ejemplos esenciales:
     * [Error](https://github.com/nonoesp/DynamoNodeModelsEssentials/blob/master/src/Essentials/NodeModelsEssentials/EssentialsError.cs)
     * [MultiOperation](https://github.com/nonoesp/DynamoNodeModelsEssentials/blob/master/src/Essentials/NodeModelsEssentials/EssentialsMultiOperation.cs)
@@ -50,7 +50,7 @@ Estos ejemplos son plantillas de Visual Studio que puede utilizar para iniciar s
     * [SliderBound](https://github.com/nonoesp/DynamoNodeModelsEssentials/blob/master/src/Essentials/NodeModelsEssentials/UISliderBound.cs)
     * [State](https://github.com/nonoesp/DynamoNodeModelsEssentials/blob/master/src/Essentials/NodeModelsEssentials/UIState.cs)
 
-[**DynaText**](https://github.com/DynamoDS/DynamoText)**: **biblioteca Zero-Touch para crear texto en Dynamo.
+[**DynaText**](https://github.com/DynamoDS/DynamoText)**:** biblioteca Zero-Touch para crear texto en Dynamo.
 
 #### Casos reales <a href="#case-studies" id="case-studies"></a>
 

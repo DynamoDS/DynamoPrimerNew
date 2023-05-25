@@ -18,7 +18,7 @@ Este nodo se basa en una instancia del motor de secuencias de comandos de IronPy
 * Incluya las instrucciones `IronPython.Hosting` y `Microsoft.Scripting.Hosting` `using` en la clase.
 * Añada un constructor privado vacío para evitar que se agregue un nodo adicional a la biblioteca de Dynamo con nuestro paquete.
 * Cree un nuevo método que utilice una única cadena como parámetro de entrada.
-* En este método, se creará una instancia de un nuevo motor de Python y un ámbito de secuencias de comandos vacío. Puede considerar este ámbito como variables globales de una instancia del intérprete de Python
+* En este método, se creará una instancia de un nuevo motor de Python y un ámbito de secuencias de comandos vacío. Puede considerar este ámbito como variables globales de una instancia del intérprete de Python.
 * A continuación, llame a `Execute` en el motor que transfiere la cadena de entrada y el ámbito como parámetros
 * Por último, recupere y devuelva los resultados de la secuencia de comandos. Para ello, llame a `GetVariable` en el ámbito y transfiera el nombre de la variable desde la secuencia de comandos de Python que contiene el valor que intenta devolver. (Consulte el siguiente ejemplo para obtener más información).
 

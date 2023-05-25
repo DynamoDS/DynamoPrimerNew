@@ -8,7 +8,7 @@ En general, los autores de nodos Zero-Touch tendrán poco o ningún trabajo que 
 
 Los nodos de interfaz de usuario y aquellos que proceden directamente de NodeModel requerirán más trabajo para funcionar en 2.x.
 
-Es posible que los autores de extensiones tengan también algunos cambios potenciales que realizar en función de la cantidad de API de Dynamo Core que utilicen en sus extensiones.
+Es posible que los autores de extensiones también deban realizar algunos cambios en función de la cantidad de API de Dynamo Core que utilicen en sus extensiones.
 
 ***
 

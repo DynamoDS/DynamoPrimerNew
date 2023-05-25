@@ -98,11 +98,11 @@ Para obtener instrucciones sobre la compilación de Dynamo para otras plataforma
 
 #### Depuración de una compilación local mediante Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-La depuración es un proceso de identificación, aislamiento y corrección de errores o problemas. Una vez que Dynamo se haya creado correctamente a partir del código fuente, podemos utilizar varias herramientas de Visual Studio para depurar una aplicación en ejecución, por ejemplo, el complemento DynamoRevit. Podemos analizar su código fuente para encontrar la raíz de un problema u observar el código que se está ejecutando en ese momento. Para obtener una explicación más detallada sobre cómo depurar y desplazarse por el código en Visual Studio, consulte la [documentación de Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+La depuración es un proceso de identificación, aislamiento y corrección de errores o problemas. Una vez que Dynamo se haya creado correctamente a partir del código fuente, podemos utilizar varias herramientas de Visual Studio para depurar una aplicación en ejecución, por ejemplo, el complemento DynamoRevit. Podemos analizar su código fuente para encontrar la raíz de un problema u observar el código que se está ejecutando en ese momento. Para obtener una explicación más detallada sobre cómo desplazarse por el código en Visual Studio y cómo depurarlo, consulte la [documentación de Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 Para la aplicación Dynamo independiente, DynamoSandbox, se abordarán estas dos opciones de depuración:
 
-* Compile e inicie Dynamo directamente desde Visual Studio.
+* Compilar e iniciar Dynamo directamente desde Visual Studio
 * Asocie Visual Studio a un proceso en ejecución de Dynamo.
 
 El inicio de Dynamo desde Visual Studio vuelve a compilar la solución para cada sesión de depuración si es necesario, por lo que si hemos realizado cambios en el código fuente, estos se incorporarán al depurar. Con la solución `Dynamo.All.sln` aún abierta, seleccione `Debug`, `AnyCPU` y `DynamoSandbox` en los menús desplegables y, a continuación, haga clic en `Start`. Esta acción compilará Dynamo e iniciará un nuevo proceso (DynamoSandbox.exe) y asociará el depurador de Visual Studio a él.
@@ -139,7 +139,7 @@ En la siguiente sección, **Compilar DynamoRevit a partir del código fuente**, 
 
 #### Extracción de la última compilación <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
-Dado que el código fuente de Dynamo está alojado en GitHub, la forma más sencilla de mantener actualizados los archivos de código fuente locales es extrayendo los cambios mediante comandos de git.
+Dado que el código fuente de Dynamo se aloja en GitHub, la forma más sencilla de mantener actualizados los archivos de código fuente locales es extraer los cambios mediante comandos de git.
 
 Con la línea de comando, establezca el directorio actual en el repositorio de Dynamo, como se indica a continuación:
 
@@ -155,7 +155,7 @@ Utilice el siguiente comando para extraer los cambios más recientes:
 
 > 1. Aquí podemos ver que el repositorio local se ha actualizado con los cambios desde el origen remoto.
 
-Además de extraer actualizaciones, existen cuatro flujos de trabajo de git más con los que puede familiarizarse.
+Además de extraer actualizaciones, existen otros cuatro flujos de trabajo de git con los que puede familiarizarse.
 
 * **Bifurque** el repositorio de Dynamo para crear una copia independiente del original. Los cambios realizados aquí no afectarán al repositorio original y las actualizaciones se pueden obtener o enviar con solicitudes de incorporación de cambios. La bifurcación no es un comando de git, sino un flujo de trabajo que añade GitHub; la bifurcación, el modelo de solicitud de incorporación de cambios, es uno de los flujos de trabajo más comunes para contribuir a los proyectos de código abierto en línea. Merece la pena aprenderlo si desea realizar aportaciones a Dynamo.
 * **Ramificación**: utilice las ramificaciones para colaborar en experimentos o en nuevas funciones aisladas de otros trabajos. Esto facilita el envío de solicitudes de incorporación de cambios.
