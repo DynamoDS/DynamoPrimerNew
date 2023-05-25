@@ -14,7 +14,7 @@ NodeModel에서 직접 파생되는 노드와 UI 노드는 2.x에서 실행하�
 
 ### 일반 패키징 규칙: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
-* Dynamo 또는 Dynamo Revit .dll을 패키지와 번들로 묶지 마십시오. 이러한 dll은 Dynamo에 의해 이미 로드됩니다. 사용자가 로드한 버전과 다른 버전을 번들로 묶으면_(예: Dynamo Core 1.3을 배포하는데 사용자가 Dynamo 2.0에서 패키지를 실행 중인 경우)_ 이상한 런타임 버그가 발생합니다. 여기에는 `DynamoCore.dll`, `DynamoServices.dll`, `DSCodeNodes.dll`, `ProtoGeometry.dll` 등의 dll이 포함됩니다.
+* Dynamo 또는 Dynamo Revit .dll을 패키지와 번들로 묶지 마십시오. 이러한 dll은 Dynamo에 의해 이미 로드됩니다. 사용자가 로드한 버전과 다른 버전을 번들로 묶으면 _(예: Dynamo Core 1.3을 배포하는데 사용자가 Dynamo 2.0에서 패키지를 실행 중인 경우)_ 이상한 런타임 버그가 발생합니다. 여기에는 `DynamoCore.dll`, `DynamoServices.dll`, `DSCodeNodes.dll`, `ProtoGeometry.dll` 등의 dll이 포함됩니다.
 * 가능하다면 `newtonsoft.json.net`을 패키지와 번들로 묶어서 배포하지 마십시오. 이 dll은 Dynamo 2.x에 의해서도 이미 로드됩니다. 위와 동일한 이슈가 발생할 수 있습니다.
 * 가능하다면 `CEFSharp`을 패키지와 번들로 묶어서 배포하지 마십시오. 이 dll은 Dynamo 2.x에 의해서도 이미 로드됩니다. 위와 동일한 이슈가 발생할 수 있습니다.
 * 일반적으로, 해당 종속성 버전을 제어해야 하는 경우 Dynamo 또는 Revit과 종속성을 공유하지 않도록 합니다.
