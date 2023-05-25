@@ -87,7 +87,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 * 要更改到输入端口的连接，请在另一个输入端口上单击鼠标左键
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
 
 * 要删除导线，请将导线移离，然后在工作空间上单击鼠标左键
 
@@ -116,7 +116,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 使用此设置，只有选定的节点及其连接线将以淡绿色亮显。
 
-\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### 仅隐藏单条导线
 
