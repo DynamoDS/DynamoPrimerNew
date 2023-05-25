@@ -9,7 +9,7 @@
 
 #### Jaké další zdroje pro vývojáře poskytujeme? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>
 
-**Dynamo**: Stáhněte si nejnovější stabilní a denní sestavení aplikace Dynamo.
+**Dynamo**: Stažení nejnovějšího stabilního a denního sestavení aplikace Dynamo.
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
 
@@ -25,7 +25,7 @@
 
 [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
-**Příručka k jazyku aplikace Dynamo / rozhraní API**: Dokumentace k rozhraní API aplikace Dynamo aktuálně pokrývá hlavní funkce.
+**Příručka k jazyku a rozhraní API aplikace Dynamo**: Dokumentace k rozhraní API aplikace Dynamo aktuálně pokrývá hlavní funkce.
 
 [https://dynamods.github.io/DynamoAPI/](https://dynamods.github.io/DynamoAPI/)
 

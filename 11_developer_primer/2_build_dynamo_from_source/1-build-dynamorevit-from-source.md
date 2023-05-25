@@ -9,11 +9,11 @@ V této příručce použijeme následující zdroje:
 
 * Revit 2023
 * Nejnovější sestavení doplňku DynamoRevit založené na větvi aplikace `Revit2023`
-* Nejnovější sestavení doplňku Dynamo
+* Nejnovější sestavení aplikace Dynamo
 
 Abychom zajistili úspěšné sestavení, naklonujeme a sestavíme úložiště aplikace Dynamo a doplňku DynamoRevit, která použijeme v této ukázce.
 
-_Poznámka: Ruční sestavení aplikace Dynamo před doplňkem DynamoRevit je nutné pouze v případě, že vytváříte aplikaci Dynamo 1.x a doplněk DynamoRevit 1.x. Novější verze úložiště doplňku DynamoRevit se při tvorbě závislostí aplikace Dynamo potřebných k sestavení spoléhají na správce balíčků NuGet. I když sestavení doplňku DynamoRevit 2.x nevyžaduje ruční stažení aplikace Dynamo, budete stále potřebovat základní knihovny `dlls`, abyste mohli `addin` DynamoRevit skutečně spustit, proto se vyplatí aplikaci Dynamo stáhnout a vytvořit tak jako tak. Další informace naleznete níže:_ [_Tvorba úložiště pomocí aplikace Visual Studio_](#building-the-repository-using-Visual-Studio)
+_Poznámka: Ruční sestavení aplikace Dynamo před doplňkem DynamoRevit je nutné pouze v případě, že vytváříte aplikaci Dynamo 1.x a doplněk DynamoRevit 1.x. Novější verze úložiště doplňku DynamoRevit se při tvorbě závislostí aplikace Dynamo potřebných k sestavení spoléhají na správce balíčků NuGet. I když sestavení doplňku DynamoRevit 2.x nevyžaduje ruční stažení aplikace Dynamo, budete stále potřebovat základní knihovny `dlls`, abyste mohli `addin` DynamoRevit skutečně spustit, proto se vyplatí aplikaci Dynamo stáhnout a sestavit tak jako tak. Další informace naleznete níže:_ [_Tvorba úložiště pomocí aplikace Visual Studio_](#building-the-repository-using-Visual-Studio)
 
 #### Vyhledání úložiště doplňku DynamoRevit na Githubu <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
@@ -56,7 +56,7 @@ Je důležité vybrat správnou větev úložiště, abyste zajistili, že při 
 
 #### Vytvoření úložiště pomocí aplikace Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
-Před vytvořením úložiště bude nutné obnovit balíčky NuGet se souborem `restorepackages.bat` umístěným ve složce `src`. Tento soubor BAT používá správce balíčku [nuget](https://www.nuget.org) k získání vestavěných sestavených binárních souborů jádra aplikace Dynamo, které potřebuje doplněk DynamoRevit. Můžete se také rozhodnout sestavit je ručně, ale pouze pokud provádíte změny v doplňku DynamoRevit a ne v jádře aplikace Dynamo. Díky tomu bude začátek práce rychlejší. Ujistěte se, že jste tento soubor spustili jako správce.
+Před vytvořením úložiště bude nutné obnovit balíčky NuGet se souborem `restorepackages.bat` umístěným ve složce `src`. Tento soubor BAT používá správce balíčku [nuget](https://www.nuget.org) k získání vestavěných sestavených binárních souborů jádra aplikace Dynamo, které potřebuje doplněk DynamoRevit. Můžete se také rozhodnout sestavit je ručně, ale pouze pokud provádíte změny v doplňku DynamoRevit a ne v jádře aplikace Dynamo. Díky tomu bude začátek práce rychlejší. Nezapomeňte tento soubor spustit jako správce.
 
 ![Spustit jako správce](images/fe-restorepackages.jpg).
 
@@ -158,7 +158,7 @@ V předchozí části popisující **sestavení aplikace Dynamo ze zdroje** jsm
 
     > Na webu [2 000 Things You Should Know About C#](https://csharp.2000things.com/2013/05/20/847-how-the-call-stack-works/) (2 000 věcí, které byste měli vědět o C#) naleznete podrobnější vysvětlení zásobníků hovorů.
 
-Uzel **Wall.ByCurveAndHeight** vyvolá výjimku, pokud je jako vstup křivky zadán objekt PolyCurve, s následující zprávou: „_ Metoda převodu na objekt BSPlineCurve není implementována._“ Pomocí ladění můžeme zjistit, proč přesně tento typ geometrie uzel nepřijme jako vstup pro parametr křivky. V tomto příkladu předpokládáme, že doplněk DynamoRevit byl úspěšně vytvořen a lze jej spustit jako doplněk aplikace Revit.
+Uzel **Wall.ByCurveAndHeight** vyvolá výjimku, pokud je jako vstup křivky zadán objekt PolyCurve, s následující zprávou: _ „Metoda převodu na objekt BSPlineCurve není implementována.“_ Pomocí ladění můžeme zjistit, proč přesně tento typ geometrie uzel nepřijme jako vstup pro parametr křivky. V tomto příkladu předpokládáme, že doplněk DynamoRevit byl úspěšně vytvořen a lze jej spustit jako doplněk aplikace Revit.
 
 ![Uzel Wall.ByCurbeAndHeight vyvolávající výjimku](images/dyn-wallbycurveandheight.jpg)
 
