@@ -8,7 +8,7 @@
 
 #### 我有哪些選擇？<a href="#what-are-my-options" id="what-are-my-options"></a>
 
-Dynamo 的開發選項主要分為兩個類別：_為_ Dynamo，以及_在_ Dynamo。這兩個類別可視為：「在」Dynamo 表示使用 Dynamo IDE 建立要在 Dynamo 中使用的內容；「為」Dynamo 表示使用外部工具建立要匯入 Dynamo 中進行使用的內容。雖然本指南著重在_為_ Dynamo 的開發，但下面會描述所有程序的資源。
+Dynamo 的開發選項主要分為兩個類別：_為_ Dynamo，以及 _在_ Dynamo。這兩個類別可視為：「在」Dynamo 表示使用 Dynamo IDE 建立要在 Dynamo 中使用的內容；「為」Dynamo 表示使用外部工具建立要匯入 Dynamo 中進行使用的內容。雖然本指南著重在_為_ Dynamo 的開發，但下面會描述所有程序的資源。
 
 #### 為 Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 

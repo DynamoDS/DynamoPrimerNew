@@ -178,7 +178,7 @@ namespace ZeroTouchEssentials
 Dynamo 資源庫可以使用原生 Dynamo 幾何圖形類型做為輸入，並建立新幾何圖形做為輸出。透過以下方式可以建立幾何圖形類型：
 
 * 在專案中的 C# 檔案頂端包括 `using Autodesk.DesignScript.Geometry;` 參考「ProtoGeometry.dll」，並將 ZeroTouchLibrary NuGet 套件加入專案。
-* **重要事項：**管理未從函數傳回的幾何圖形資源，請參閱下方的〈**Dispose/using 陳述式**〉一節。
+* **重要事項：** 管理未從函數傳回的幾何圖形資源，請參閱下方的〈**Dispose/using 陳述式**〉一節。
 
 > 注意事項：Dynamo 幾何圖形物件的使用方式與任何其他傳入函數的物件相同。
 
