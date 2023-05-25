@@ -195,7 +195,7 @@ Agora, passe o cursor sobre cada linha no construtor até que a exceção seja a
 
 > 1. As ferramentas de depuração para navegação no código
 > 2. Pressionar `Step Over` para executar o código realçado e, em seguida, suspender a execução após a função retornar
-> 3. A próxima instrução a ser executada indicada pelo realce e pela seta amarelas
+> 3. A próxima instrução a ser executada, indicada pelo realce e pela seta amarelas
 
 Se continuarmos a percorrer a função, veremos a exceção exibida na janela do DynamoRevit. Observando a janela Pilha de chamadas, poderemos ver que a exceção foi originalmente acionada com base em um método chamado `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Felizmente, a exceção é tratada aqui, portanto, o Dynamo não teve um erro fatal. O processo de depuração forneceu contexto para o problema, trazendo-nos para outro método no código-fonte.
 

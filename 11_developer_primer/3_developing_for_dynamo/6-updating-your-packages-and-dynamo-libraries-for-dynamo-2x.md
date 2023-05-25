@@ -37,7 +37,7 @@ Isso pode ocorrer porque:
 
 2) Os nós estão completamente ausentes ao carregar o gráfico com alguns erros no console.
 
-* Isso pode ocorrer se a desserialização falhar por algum motivo. É uma boa prática serializar somente as propriedades que você precisa. Podemos usar `[JsonIgnore]` em propriedades complexas que não é necessário carregar ou salvar para ignorá-las. Propriedades como `function pointer, delegate, action,` ou `event` etc. Elas não devem ser serializadas, pois normalmente falharão ao desserializar e causarão um erro de tempo de execução.
+* Isso pode ocorrer se a desserialização falhar por algum motivo. É uma boa prática serializar somente as propriedades que você precisa. Podemos usar `[JsonIgnore]` em propriedades complexas que não precisam ser carregadas ou salvas para serem ignoradas. Propriedades como `function pointer, delegate, action,` ou `event` etc. Elas não devem ser serializadas, pois normalmente falharão ao desserializar e causarão um erro de tempo de execução.
 
 
 ### Atualização em profundidade: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>

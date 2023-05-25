@@ -43,4 +43,4 @@ O objetivo deste guia é ajudar você a navegar pela gama de possibilidades de d
 
 #### Como posso sugerir alterações a este guia? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 
-Esta documentação está aberta a sugestões. Elas podem ser feitos diretamente no Github criando solicitações de alterações.
+Esta documentação está aberta a sugestões. Elas podem ser feitas diretamente no Github, criando solicitações de alterações.

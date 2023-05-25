@@ -126,7 +126,7 @@ Como alternativa, podemos desejar depurar um processo do Dynamo que já está em
 > 2. Escolher `DynamoSandbox.exe`
 > 3. Selecionar `Attach`
 
-Em ambas as situações, estamos anexando o depurador a um processo que desejamos depurar. Podemos definir pontos de quebra no código antes ou após iniciar o depurador que fará com que o processo pause imediatamente antes de executar essa linha de código. Se uma exceção não capturada for gerada durante a depuração, o Visual Studio pulará para onde ela ocorreu no código-fonte. Esse é um método eficiente para localizar falhas simples, exceções não tratadas e para entender o fluxo de execução de um aplicativo.
+Em ambas as situações, estamos anexando o depurador a um processo que desejamos depurar. Podemos definir pontos de quebra no código antes ou após iniciar o depurador que fará com que o processo pause imediatamente antes de executar essa linha de código. Se uma exceção não capturada for gerada durante a depuração, o Visual Studio pulará para onde ela ocorreu no código-fonte. Esse é um método eficiente para localizar falhas simples e exceções não tratadas e também para entender o fluxo de execução de um aplicativo.
 
 ![Definir um ponto de quebra](images/vs-debug-dynamocore.jpg)
 
