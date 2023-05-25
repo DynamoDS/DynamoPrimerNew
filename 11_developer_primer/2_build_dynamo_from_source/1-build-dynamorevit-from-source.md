@@ -158,7 +158,7 @@ V předchozí části popisující **sestavení aplikace Dynamo ze zdroje** jsm
 
     > Na webu [2 000 Things You Should Know About C#](https://csharp.2000things.com/2013/05/20/847-how-the-call-stack-works/) (2 000 věcí, které byste měli vědět o C#) naleznete podrobnější vysvětlení zásobníků hovorů.
 
-Uzel **Wall.ByCurveAndHeight** vyvolá výjimku, pokud je jako vstup křivky zadán objekt PolyCurve, s následující zprávou: _ „Metoda převodu na objekt BSPlineCurve není implementována.“_ Pomocí ladění můžeme zjistit, proč přesně tento typ geometrie uzel nepřijme jako vstup pro parametr křivky. V tomto příkladu předpokládáme, že doplněk DynamoRevit byl úspěšně vytvořen a lze jej spustit jako doplněk aplikace Revit.
+Uzel **Wall.ByCurveAndHeight** vyvolá výjimku, pokud je jako vstup křivky zadán objekt PolyCurve, s následující zprávou: _„Metoda převodu na objekt BSPlineCurve není implementována.“_ Pomocí ladění můžeme zjistit, proč přesně tento typ geometrie uzel nepřijme jako vstup pro parametr křivky. V tomto příkladu předpokládáme, že doplněk DynamoRevit byl úspěšně vytvořen a lze jej spustit jako doplněk aplikace Revit.
 
 ![Uzel Wall.ByCurbeAndHeight vyvolávající výjimku](images/dyn-wallbycurveandheight.jpg)
 
