@@ -20,7 +20,7 @@
     * Персонализация NodeModel: [код](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloGuiNodeView.cs#L11)
     * Определение атрибутов ползунка: [код](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/Slider.xaml#L10)
     * Определение логики взаимодействия для ползунка: [код](https://github.com/teocomi/HelloDynamo/blob/master/HelloDynamo/HelloNodeModel/Slider.xaml.cs)
-* [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**: **шаблоны для ZeroTouch, персонализированного пользовательского интерфейса, тестов и расширений видов.
+* [**DynamoSamples**](https://github.com/DynamoDS/DynamoSamples)**:**шаблоны для ZeroTouch, персонализированного пользовательского интерфейса, тестов и расширений видов.
   * [Примеры API](https://github.com/DynamoDS/DynamoSamples/tree/master/src/SampleLibraryUI)
     * Создание базового узла персонализированного пользовательского интерфейса: [CustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/CustomNodeModel.cs).
     * Создание раскрывающегося меню: [DropDown.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs).

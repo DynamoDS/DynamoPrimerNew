@@ -55,7 +55,7 @@ GitHub — это хостинговая служба на базе [Git](https
 * Скачайте и установите [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) или более поздней версии.
 * Установите Microsoft DirectX из локального репозитория Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`).
 
-> Возможно, программы .NET и DirectX уже установлены.
+> Возможно, .NET и DirectX уже установлены.
 
 После завершения установки запустим Visual Studio и откроем файл `Dynamo.All.sln`, который находится в папке `Dynamo\src`.
 
