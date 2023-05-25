@@ -24,7 +24,7 @@ Dynamo 2.0 引入了将词典数据类型与列表数据类型进行分隔的概
 
     ***
 
-\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
 ***
 
