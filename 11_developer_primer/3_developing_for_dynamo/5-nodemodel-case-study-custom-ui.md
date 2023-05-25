@@ -8,7 +8,7 @@ NodeModel 기반 노드는 Zero-Touch 노드보다 훨씬 더 뛰어난 유연�
 
 #### Model-View-Viewmodel 패턴 <a href="#the-model-view-viewmodel-pattern" id="the-model-view-viewmodel-pattern"></a>
 
-Dynamo는 [MVM(model-view-viewmodel)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) 소프트웨어 아키텍처 패턴을 기반으로 UI를 백엔드와 분리하여 유지합니다. ZeroTouch 노드를 만들 때 Dynamo는 노드의 데이터와 해당 UI 간에 데이터 바인딩을 수행합니다. 사용자 지정 UI를 생성하려면 데이터 바인딩 논리를 추가해야 합니다.
+Dynamo는 [model-view-viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) 소프트웨어 아키텍처 패턴을 기반으로 UI를 백엔드와 분리하여 유지합니다. ZeroTouch 노드를 만들 때 Dynamo는 노드의 데이터와 해당 UI 간에 데이터 바인딩을 수행합니다. 사용자 지정 UI를 생성하려면 데이터 바인딩 논리를 추가해야 합니다.
 
 크게 보면 Dynamo에서 모델-뷰 관계를 설정하는 데는 두 가지 부분이 있습니다.
 
@@ -21,7 +21,7 @@ Dynamo는 [MVM(model-view-viewmodel)](https://en.wikipedia.org/wiki/Model%E2%80%
 
 NodeModel 노드는 Zero-Touch 노드와 몇 가지 중요한 차이점이 있으며, 이에 대해서는 이 예에서 다룰 것입니다. UI 사용자 지정으로 넘어가기 전에 NodeModel 논리를 빌드해 보겠습니다.
 
-**1\. 프로젝트 구조 생성하기: **
+**1\. 프로젝트 구조 생성하기:**
 
 NodeModel 노드는 함수를 호출할 수만 있으므로 NodeModel 및 함수를 서로 다른 라이브러리로 분리해야 합니다. Dynamo 패키지에 대해 이 작업을 수행하는 표준 방법은 각각에 대해 별도의 프로젝트를 생성하는 것입니다. 먼저 프로젝트를 포괄하는 새 솔루션을 생성합니다.
 

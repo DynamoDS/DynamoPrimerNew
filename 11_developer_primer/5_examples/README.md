@@ -6,7 +6,7 @@ Dynamo를 개발하는 방법에 대한 예제를 보려면 아래 리소스를 
 
 이러한 샘플은 자체 프로젝트를 시작하는 데 사용할 수 있는 Visual Studio 템플릿입니다.
 
-* [**ZeroTouchEssentials**](https://github.com/DynamoDS/ZeroTouchEssentials)**: **기본 ZeroTouch 노드에 대한 템플릿입니다.
+* [**ZeroTouchEssentials**](https://github.com/DynamoDS/ZeroTouchEssentials)**:** 기본 ZeroTouch 노드에 대한 템플릿입니다.
   * 여러 출력 반환: [코드](https://github.com/teocomi/HelloDynamo/blob/6c5333d731d58043c12e84cd3244cdbafbe74934/HelloDynamo/HelloNodeModel/HelloNodeModel.cs#L15-L24)
   * Dynamo의 기본 형상 객체 사용: [코드](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L86-L89)
   * 예제 특성(조회 노드): [코드](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L48)

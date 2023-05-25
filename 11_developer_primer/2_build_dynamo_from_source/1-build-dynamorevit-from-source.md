@@ -13,7 +13,7 @@
 
 성공적으로 빌드할 수 있도록 이 연습에서 사용할 Dynamo 및 DynamoRevit 리포지토리를 모두 복제하고 빌드할 것입니다.
 
-_참고: Dynamo 1.x 및 DynamoRevit 1.x를 빌드하는 경우에만 Dynamo를 수동으로 빌드해야 합니다. 최신 버전의 DynamoRevit 리포지토리에서는 빌드하는 데 필요한 Dynamo 종속성을 위해 NuGet 패키지 관리자를 사용합니다. DynamoRevit 2.x 빌드에서는 Dynamo를 수동으로 끌어올 필요가 없지만 실제로 DynamoRevit `addin`을 실행하려면 다른 곳에 여전히 코어 `dlls`가 필요하므로 Dynamo를 끌어오고 빌드하는 것이 좋습니다. 자세한 내용은 아래에 나오는 _[_Visual Studio를 사용하여 리포지토리 빌드_](#building-the-repository-using-Visual-Studio)를 참조하십시오.
+_참고: Dynamo 1.x 및 DynamoRevit 1.x를 빌드하는 경우에만 Dynamo를 수동으로 빌드해야 합니다. 최신 버전의 DynamoRevit 리포지토리에서는 빌드하는 데 필요한 Dynamo 종속성을 위해 NuGet 패키지 관리자를 사용합니다. DynamoRevit 2.x 빌드에서는 Dynamo를 수동으로 끌어올 필요가 없지만 실제로 DynamoRevit `addin` 을 실행하려면 다른 곳에 여전히 코어 `dlls` 가 필요하므로 Dynamo를 끌어오고 빌드하는 것이 좋습니다. 자세한 내용은 아래에 나오는_ [_Visual Studio를 사용하여 리포지토리 빌드_](#building-the-repository-using-Visual-Studio)를 참조하십시오.
 
 #### Github에서 DynamoRevit 리포지토리 찾기 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
@@ -23,7 +23,7 @@ DynamoRevit 소스는 [https://github.com/DynamoDS/DynamoRevit](https://github.c
 
 ![GitHub의 DynamoRevit](images/github-dynamorevit.jpg)
 
-> 1. 리포지토리를 복제 또는 다운로드합니다.
+> 1. 리포지토리 복제 또는 다운로드
 > 2. DynamoRevit의 분기는 Revit 버전을 참조합니다.
 
 #### git을 사용하여 리포지토리 복제하기 <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
@@ -158,7 +158,7 @@ Revit은 [설치 프로그램](http://dynamobim.org/download/)이 자동으로 �
 
     > [C#에 대해 알아야 할 2,000가지 사항](https://csharp.2000things.com/2013/05/20/847-how-the-call-stack-works/)에서 호출 스택에 대해 더 자세히 알아볼 수 있습니다.
 
-**Wall.ByCurveAndHeight** 노드는 곡선 입력으로 PolyCurve가 지정되면 _"BSPlineCurve까지가 구현되지 않음"_이라는 메시지와 함께 예외를 발생시킵니다. 디버깅을 통해 노드가 이 형상 유형을 곡선 매개변수의 입력으로 허용하지 않는 이유를 정확히 파악할 수 있습니다. 이 예에서는 DynamoRevit이 성공적으로 빌드되어 Revit용 애드인으로 실행할 수 있다고 가정합니다.
+**Wall.ByCurveAndHeight** 노드는 곡선 입력으로 PolyCurve가 지정되면 _"BSPlineCurve까지가 구현되지 않음"_ 이라는 메시지와 함께 예외를 발생시킵니다. 디버깅을 통해 노드가 이 형상 유형을 곡선 매개변수의 입력으로 허용하지 않는 이유를 정확히 파악할 수 있습니다. 이 예에서는 DynamoRevit이 성공적으로 빌드되어 Revit용 애드인으로 실행할 수 있다고 가정합니다.
 
 ![예외를 발생시키는 Wall.ByCurveAndHeight 노드](images/dyn-wallbycurveandheight.jpg)
 

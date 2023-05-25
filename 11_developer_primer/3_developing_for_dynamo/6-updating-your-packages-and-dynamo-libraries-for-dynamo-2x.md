@@ -88,16 +88,16 @@ JSON 생성자는 JSON 로드 논리에서 제공하는 `inPorts` 및 `outPorts`
 
 이 `:base(Inports,outPorts){}` 구문은 기본 `nodeModel` 생성자를 호출하고 역직렬화된 포트를 이 생성자에 전달합니다.
 
-클래스 생성자에 존재하며 .dyn 파일에 직렬화되는 특정 데이터의 초기화와 관련된 특수 논리_(예: 포트 등록, 레이싱 전략 설정 등)_는 해당 값을 JSON에서 읽을 수 있으므로 이 생성자에서 반복할 필요가 없습니다.
+클래스 생성자에 존재하며 .dyn 파일에 직렬화되는 특정 데이터의 초기화와 관련된 특수 논리 _(예: 포트 등록, 레이싱 전략 설정 등)_ 는 해당 값을 JSON에서 읽을 수 있으므로 이 생성자에서 반복할 필요가 없습니다.
 
-이것이 nodeModels에 대한 JSON 생성자와 비JSON 생성자 간의 주요 차이점입니다. JSON 생성자는 파일에서 로드될 때 호출되며 로드된 데이터를 전달받습니다. 그러나 다른 사용자 로직은 JSON 생성자에서 복제되어야 합니다_(예: 노드에 대한 이벤트 핸들러 초기화 또는 연결)_.
+이것이 nodeModels에 대한 JSON 생성자와 비JSON 생성자 간의 주요 차이점입니다. JSON 생성자는 파일에서 로드될 때 호출되며 로드된 데이터를 전달받습니다. 그러나 다른 사용자 로직은 JSON 생성자에서 복제되어야 합니다 _(예: 노드에 대한 이벤트 핸들러 초기화 또는 연결)_.
 
-예제는 DynamoSamples 리포지토리 -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) 또는 [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123)에서 확인할 수 있습니다
+예제는 DynamoSamples 리포지토리 -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) 또는 [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123) 에서 확인할 수 있습니다
 
 
 #### 공용 특성 및 직렬화 <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
-이전에는 개발자가 `SerializeCore` 및 `DeserializeCore` 메서드를 통해 특정 모델 데이터를 xml 문서로 직렬화하고 역직렬화할 수 있었습니다. 이러한 메서드는 API에 여전히 존재하지만 Dynamo의 향후 릴리즈에서는 더 이상 사용되지 않습니다(예는 [여기](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)에서 확인할 수 있음). 이제 JSON.NET 구현을 통해 NodeModel 파생 클래스의 `public` 특성을 .dyn 파일에 직접 직렬화할 수 있습니다. JSON.Net은 특성이 직렬화되는 방식을 제어하는 여러 속성을 제공합니다.
+이전에는 개발자가 `SerializeCore` 및 `DeserializeCore` 메서드를 통해 특정 모델 데이터를 xml 문서로 직렬화하고 역직렬화할 수 있었습니다. 이러한 메서드는 API에 여전히 존재하지만 Dynamo의 향후 릴리즈에서는 더 이상 사용되지 않습니다(예는 [여기](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140) 에서 확인할 수 있음). 이제 JSON.NET 구현을 통해 NodeModel 파생 클래스의 `public` 특성을 .dyn 파일에 직접 직렬화할 수 있습니다. JSON.Net은 특성이 직렬화되는 방식을 제어하는 여러 속성을 제공합니다.
 
 `PropertyName`을 지정하는 이 예는 Dynamo 리포지토리의 [여기](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/ColorPalette.cs#L38)에서 확인할 수 있습니다.
 
