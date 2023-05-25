@@ -90,7 +90,7 @@ Questa sintassi `:base(Inports,outPorts){}` chiama il costruttore di base `nodeM
 
 Non è necessario ripetere in questo costruttore qualsiasi logica speciale presente nel costruttore della classe che implica l'inizializzazione di dati specifici serializzati nel file .dyn _(ad esempio, l'impostazione della registrazione della porta, della strategia di collegamento e così via)_, poiché questi valori possono essere letti dal file JSON.
 
-Questa è la differenza principale tra il costruttore JSON e i costruttori non JSON per i nodi NodeModel. I costruttori JSON vengono richiamati quando si esegue il caricamento da un file e vengono trasferiti ad essi i dati caricati. È tuttavia necessario duplicare un'altra logica utente nel costruttore JSON _ (ad esempio, inizializzando i gestori eventi per il nodo o l'associazione)_.
+Questa è la differenza principale tra il costruttore JSON e i costruttori non JSON per i nodi NodeModel. I costruttori JSON vengono richiamati quando si esegue il caricamento da un file e vengono trasferiti ad essi i dati caricati. È tuttavia necessario duplicare un'altra logica utente nel costruttore JSON _(ad esempio, inizializzando i gestori eventi per il nodo o l'associazione)_.
 
 Sono disponibili esempi nel repository DynamoSamples - > [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) o [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123).
 

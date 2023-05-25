@@ -8,7 +8,7 @@ Indipendentemente dal livello di esperienza, la piattaforma Dynamo è progettata
 
 #### Quali sono le opzioni disponibili? <a href="#what-are-my-options" id="what-are-my-options"></a>
 
-Le opzioni di sviluppo per Dynamo si suddividono principalmente in due categorie: _ per _ Dynamo anziché _ in _ Dynamo. Le due categorie possono essere considerate come segue: "in" Dynamo implica che il contenuto creato con l'IDE Dynamo deve essere utilizzato in Dynamo e "per" Dynamo implica che devono essere utilizzati strumenti esterni per creare il contenuto da importare in Dynamo. Sebbene questa guida si concentri sullo sviluppo _ per _ Dynamo, le risorse per tutti i processi sono descritte qui di seguito.
+Le opzioni di sviluppo per Dynamo si suddividono principalmente in due categorie: _per_ Dynamo anziché _in_ Dynamo. Le due categorie possono essere considerate come segue: "in" Dynamo implica che il contenuto creato con l'IDE Dynamo deve essere utilizzato in Dynamo e "per" Dynamo implica che devono essere utilizzati strumenti esterni per creare il contenuto da importare in Dynamo. Sebbene questa guida si concentri sullo sviluppo _per_ Dynamo, le risorse per tutti i processi sono descritte qui di seguito.
 
 #### Per Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 

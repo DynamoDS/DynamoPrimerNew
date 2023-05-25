@@ -13,7 +13,7 @@ Per questa guida utilizzeremo i seguenti elementi:
 
 Per garantire una corretta compilazione, verranno clonati e creati entrambi i repository di Dynamo e DynamoRevit da utilizzare in questa simulazione.
 
-_Nota La creazione manuale di Dynamo prima di DynamoRevit è necessaria solo se si sta creando Dynamo 1.x e DynamoRevit 1.x. Le versioni più recenti del repository di DynamoRevit si basano su Gestione pacchetti NuGet per le dipendenze di Dynamo necessarie per la creazione. Sebbene una build di DynamoRevit 2.x non richieda il pull manuale di Dynamo, sarà comunque necessario disporre dei file `dlls` di Core in un altro punto per eseguire effettivamente DynamoRevit`addin`, pertanto vale la pena di eseguire il pull e la compilazione di Dynamo comunque. Per ulteriori informazioni, vedere __[Compilazione del repository utilizzando Visual Studio](#building-the-repository-using-Visual-Studio)_.
+_Nota La creazione manuale di Dynamo prima di DynamoRevit è necessaria solo se si sta creando Dynamo 1.x e DynamoRevit 1.x. Le versioni più recenti del repository di DynamoRevit si basano su Gestione pacchetti NuGet per le dipendenze di Dynamo necessarie per la creazione. Sebbene una build di DynamoRevit 2.x non richieda il pull manuale di Dynamo, sarà comunque necessario disporre dei file `dlls` di Core in un altro punto per eseguire effettivamente DynamoRevit`addin`, pertanto vale la pena di eseguire il pull e la compilazione di Dynamo comunque. Per ulteriori informazioni, vedere_ [_Compilazione del repository utilizzando Visual Studio_](#building-the-repository-using-Visual-Studio).
 
 #### Individuazione del repository di DynamoRevit su GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
