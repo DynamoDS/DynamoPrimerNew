@@ -73,7 +73,7 @@ En este caso trabajamos con geometría sencilla, por lo que vamos a incorporar l
 
 A continuación se incluye un método alternativo. En este caso, no vamos a realizar la selección mediante la jerarquía de Revit _("All Elements of Category")_, sino que vamos a seleccionar de forma explícita la geometría en Revit.
 
-\![](<images/2/selecting - exercise 04.jpg>)
+![](<images/2/selecting - exercise 04.jpg>)
 
 > 1. Mediante el nodo _"Select Model Element"_, haga clic en el botón *"select" *(o _"change"_). En la ventana gráfica de Revit, seleccione el elemento que desee. En este caso, seleccionamos la masa de construcción.
 > 2. En lugar de _Element.Faces_, se puede seleccionar la masa completa como una geometría sólida mediante _Element.Geometry_. De este modo, se selecciona toda la geometría contenida en la masa.
