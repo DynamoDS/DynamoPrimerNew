@@ -116,7 +116,7 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 이 설정을 사용하면 선택한 노드 및 해당 결합 와이어만 연한 청록색으로 강조 표시됩니다.
 
-\![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
 
 #### 개별 와이어만 숨기기
 
