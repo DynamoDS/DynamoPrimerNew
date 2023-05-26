@@ -6,7 +6,7 @@ Revit은 데이터가 풍부한 환경입니다. 따라서 "포인트 앤 클릭
 
 UI의 Revit 라이브러리에서는 여러 가지 방법으로 형상을 선택할 수 있는 "Selection" 카테고리를 제공합니다.
 
-\![](<images/2/select revit elements 01.jpg>)
+![](<images/2/select revit elements 01.jpg>)
 
 ### Revit 계층
 
@@ -26,11 +26,11 @@ Revit 계층을 간단히 살펴보겠습니다.
 
 _포인트 앤 클릭_ 은 Revit 요소를 직접 선택하는 가장 쉬운 방법입니다. 전체 모델 요소 또는 해당 위상의 일부(예: 면 또는 모서리)를 선택할 수 있습니다. 이렇게 하면 해당 Revit 객체에 동적으로 연결된 상태로 유지되므로 Revit 파일이 해당 위치 또는 매개변수를 업데이트하면 참조된 Dynamo 요소가 그래프에서 업데이트됩니다.
 
-\![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
+![](<images/2/selecting - database navigation with dynamo nodes 01.jpg>)
 
 _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는 모든 요소 리스트를 작성합니다. 이 메뉴를 사용하여 뷰에서 반드시 보이지 않을 수 있는 Revit 요소를 참조할 수 있습니다. 이 도구는 Revit 프로젝트 또는 패밀리 편집기에서 기존 요소를 조회하거나 새 요소를 작성하는 데 유용합니다.
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 또한 _Revit 계층_ 에서 특정 계층별로 Revit 요소를 선택할 수도 있습니다. 이 옵션은 문서화 또는 생성 인스턴스화 및 사용자화 준비를 위해 대규모 데이터 배열을 사용자화하기 위한 강력한 옵션입니다.
 
@@ -48,7 +48,7 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 이 Revit 파일 예에는 간단한 건물의 세 가지 요소 유형이 있습니다. 이를 Revit 계층의 컨텍스트에서 Revit 요소를 선택하는 예로 사용하겠습니다.
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (2).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (2).jpg>)
 
 > 1. 건물 매스
 > 2. 보(구조 프레임)
@@ -58,7 +58,7 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 ### 매스 및 표면 선택
 
-\![](<images/2/selecting - exercise 02.jpg>)
+![](<images/2/selecting - exercise 02.jpg>)
 
 > 1. 기본 설정으로 작업하고 있으므로 카테고리 드롭다운 노드에서 _"Mass"_ 를 선택하여 건물 매스를 선택해 보겠습니다. 이 옵션은 Revit > 선택 탭에서 찾을 수 있습니다.
 > 2. 매스 카테고리의 출력은 단순히 카테고리 자체입니다. 요소를 선택해야 합니다. 이렇게 하려면 _"All Elements of Category"_ 노드를 사용합니다.
@@ -67,13 +67,13 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 이 경우에는 간단한 형상으로 작업할 것이므로 형상을 Dynamo 미리보기로 가져오고자 합니다. 위의 감시 노드의 "BldgMass"에는 옆에 초록색 번호가 있습니다. 이는 요소의 ID를 나타내며 Dynamo 형상이 아닌 Revit 요소를 처리하고 있음을 나타냅니다. 다음 단계는 이 Revit 요소를 Dynamo의 형상으로 변환하는 것입니다.
 
-\![](<images/2/selecting - exercise 03.jpg>)
+![](<images/2/selecting - exercise 03.jpg>)
 
 > 1. _Element.Faces_ 노드를 사용하여 Revit 매스의 각 면을 나타내는 표면 리스트를 가져옵니다. 이제 Dynamo 뷰포트에서 형상을 보고, 파라메트릭 작업을 위해 면을 참조하기 시작할 수 있습니다.
 
 대체 방법은 다음과 같습니다. 이 경우 Revit 계층 _("All Elements of Category")_ 을 통해 선택하지 않고 Revit에서 형상을 명시적으로 선택합니다.
 
-\![](<images/2/selecting - exercise 04.jpg>)
+![](<images/2/selecting - exercise 04.jpg>)
 
 > 1. _"Select Model Element"_ 노드를 사용하여 *"선택" *(또는 _"변경"_) 버튼을 클릭합니다. Revit 뷰포트에서 원하는 요소를 선택합니다. 이 경우에는 건물 매스를 선택하겠습니다.
 > 2. _Element.Faces_ 가 아닌 _Element.Geometry_ 를 사용하여 전체 매스를 하나의 솔리드 형상으로 선택할 수 있습니다. 이렇게 하면 해당 매스 내에 포함된 모든 형상이 선택됩니다.
@@ -81,7 +81,7 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 몇 가지 기본 리스트 작업을 사용하여 관심 면을 조회할 수 있습니다.
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. 먼저, 선택한 요소를 이전 노드에서 Element.Faces 노드로 출력합니다.
 > 2. 다음으로, _List.Count_ 노드에는 매스의 23개 표면으로 작업하고 있다고 표시됩니다.
@@ -90,25 +90,25 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 이전 단계는 다소 번거로운 작업이었습니다. _"Select Face"_ 노드를 사용하면 이 작업을 훨씬 더 빠르게 수행할 수 있습니다. 이렇게 하면 Revit 프로젝트에서 요소 자체가 아닌 면을 분리할 수 있습니다. 전체 요소가 아닌 표면을 선택한다는 점을 제외하면 _"Select Model Element"_ 와 동일한 상호 작용이 적용됩니다.
 
-\![](<images/2/selecting - exercise 06.jpg>)
+![](<images/2/selecting - exercise 06.jpg>)
 
 건물의 주 정면 벽을 분리하려 한다고 가정합니다. _"Select Faces"_ 노드를 사용하여 이 작업을 수행할 수 있습니다. "선택" 버튼을 클릭한 다음, Revit에서 4개의 주요 정면을 선택합니다.
 
-\![](<images/2/selecting - exercise 07.jpg>)
+![](<images/2/selecting - exercise 07.jpg>)
 
 네 개의 벽을 선택한 후 Revit에서 "완료" 버튼을 클릭해야 합니다.
 
-\![](<../.gitbook/assets/selecting - exercise 08.jpg>)
+![](<../.gitbook/assets/selecting - exercise 08.jpg>)
 
 이제 면을 Dynamo에 표면으로 가져옵니다.
 
-\![](<images/2/selecting - exercise 09.jpg>)
+![](<images/2/selecting - exercise 09.jpg>)
 
 ### 보 선택
 
 이제 아트리움 위의 보를 살펴보겠습니다.
 
-\![](<images/2/selecting - exercise 10.jpg>)
+![](<images/2/selecting - exercise 10.jpg>)
 
 > 1. _"Select Model Element"_ 노드를 사용하여 보 중 하나를 선택합니다.
 > 2. 보 요소를 _Element.Geometry_ 노드에 연결합니다. 그러면 Dynamo 뷰포트에 해당 보가 표시됩니다.
@@ -116,18 +116,18 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 Revit/Dynamo 워크플로우에서 자주 묻는 질문은 바로 '요소 하나를 선택하고 유사한 요소를 모두 가져오는 방법은 무엇입니까?'입니다. 선택한 Revit 요소에 모든 계층 정보가 포함되어 있으므로 해당 패밀리 유형을 조회하고 해당 유형의 모든 요소를 선택할 수 있습니다.
 
-\![](<images/2/selecting - exercise 11.jpg>)
+![](<images/2/selecting - exercise 11.jpg>)
 
 > 1. 보 요소를 _Element.ElementType_ 노드에 연결합니다.
 > 2. 이제 _Watch_ 노드에 출력이 Revit 요소가 아닌 패밀리 기호임이 표시됩니다.
 > 3. _Element.ElementType_ 은 간단한 조회이므로 `x.ElementType;`을 사용할 때처럼 쉽게 code block에서 이 작업을 수행하고 동일한 결과를 얻을 수 있습니다.
 
-\![](<images/2/selecting - exercise 12.jpg>)
+![](<images/2/selecting - exercise 12.jpg>)
 
 > 1. 나머지 보를 선택하려면 _"All Elements of Family Type"_ 노드를 사용합니다.
 > 2. watch 노드는 다섯 개의 Revit 요소가 선택되었음을 나타냅니다.
 
-\![](<images/2/selecting - exercise 13.jpg>)
+![](<images/2/selecting - exercise 13.jpg>)
 
 > 1. 이러한 5가지 요소를 모두 Dynamo 형상으로 변환할 수도 있습니다.
 
@@ -139,11 +139,11 @@ Revit/Dynamo 워크플로우에서 자주 묻는 질문은 바로 '요소 하나
 
 동일한 노드 그래프를 사용하여 보 요소 대신 트러스 요소를 선택합니다. 이를 수행하기 전에 이전 단계에서 Element.Geometry를 삭제합니다.
 
-\![](<images/2/selecting - exercise 14.jpg>)
+![](<images/2/selecting - exercise 14.jpg>)
 
 이제 트러스 패밀리 유형에서 몇 가지 기본 정보를 추출할 준비가 되었습니다.
 
-\![](<images/2/selecting - exercise 15.jpg>)
+![](<images/2/selecting - exercise 15.jpg>)
 
 > 1. _Watch_ 노드에 Revit에서 선택한 가변 구성요소 리스트가 있는 것을 볼 수 있습니다. 기본 정보를 추출하려고 하므로 가변 점에서 시작합니다.
 > 2. _"All Elements of Family Type"_ 노드를 _"AdaptiveComponent.Location"_ 노드에 연결합니다. 이렇게 하면 각각에 가변 점 위치를 나타내는 세 개의 점이 있는 리스트의 목록이 제공됩니다.
