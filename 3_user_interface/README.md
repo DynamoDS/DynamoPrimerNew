@@ -49,7 +49,7 @@ Jeśli nie wiesz, co zrobić dalej, skorzystaj z menu **Pomoc**. Możesz odwiedz
 Pasek narzędzi Dynamo zawiera szereg przycisków umożliwiających szybki dostęp do plików oraz polecenia Cofnij [Ctrl+Z] i Ponów [Ctrl+Y]. Po skrajnej prawej stronie znajduje się kolejny przycisk, który umożliwia wyeksportowanie migawki obszaru roboczego. Jest on wyjątkowo przydatny do tworzenia dokumentacji i udostępniania.
 
 * ![](images/userinterface-newfile.jpg) Nowy — utwórz nowy plik .dyn
-* \![](<images/userinterface-open(1) (1).jpg>) Otwórz — otwórz istniejący plik .dyn (obszar roboczy) lub .dyf (węzeł niestandardowy)
+* ![](<images/userinterface-open(1) (1).jpg>) Otwórz — otwórz istniejący plik .dyn (obszar roboczy) lub .dyf (węzeł niestandardowy)
 * ![](images/userinterface-save.jpg) Zapisz/Zapisz jako — zapisz aktywny plik .dyn lub .dyf
 * ![](images/userinterface-undo.jpg) Cofnij — cofnij ostatnią operację
 * ![](images/userinterface-redo.jpg) Ponów — ponów następną operację
