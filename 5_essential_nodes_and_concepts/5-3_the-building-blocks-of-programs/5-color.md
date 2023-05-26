@@ -8,7 +8,7 @@ Kolory w dodatku Dynamo są tworzone przy użyciu danych wejściowych ARGB. Odpo
 
 | Ikona                                     | Nazwa (składnia)                 | Dane wejściowe  | Dane wyjściowe |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| \![](<../images/5-1/ColorbyARGB (1).jpg>) | Kolor ARGB (**Color.ByARGB**) | A, R, G, B | color   |
+| ![](<../images/5-1/ColorbyARGB (1).jpg>) | Kolor ARGB (**Color.ByARGB**) | A, R, G, B | color   |
 
 ### Zapytania o wartości kolorów
 
@@ -16,19 +16,19 @@ Kolory w poniższej tabeli umożliwiają wykonywanie zapytań o właściwości u
 
 | Ikona                                          | Nazwa (składnia)                     | Dane wejściowe | Dane wyjściowe    |
 | --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| \![](<../images/5-1/ColorRed (1).jpg>)         | Red (**Color.Red**)               | color  | R          |
-| \![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Green (**Color.Green**)           | color  | G          |
-| \![](<../images/5-1/ColorBlue (1).jpg>)        | Blue (**Color.Blue**)             | color  | B          |
-| \![](<../images/5-1/ColorComponent (1).jpg>)   | Components (**Color.Components**) | color  | A, R, G, B |
+| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| ![](<../images/5-1/ColorRed (1).jpg>)         | Red (**Color.Red**)               | color  | R          |
+| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Green (**Color.Green**)           | color  | G          |
+| ![](<../images/5-1/ColorBlue (1).jpg>)        | Blue (**Color.Blue**)             | color  | B          |
+| ![](<../images/5-1/ColorComponent (1).jpg>)   | Components (**Color.Components**) | color  | A, R, G, B |
 
 Kolory w poniższej tabeli odpowiadają **przestrzeni kolorów HSB**. Podział koloru na barwę, nasycenie i jasność jest bardziej intuicyjny pod względem interpretacji kolorów: jaki to kolor? Jak bardzo jest intensywny? Jak bardzo jest jasny lub ciemny? To właśnie podział na barwę, nasycenie i jasność.
 
 | Ikona                                         | Nazwa (składnia)                     | Dane wejściowe | Dane wyjściowe    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| \![](<../images/5-1/ColorHue (1).jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| \![](<../images/5-1/ColorSaturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| \![](<../images/5-1/ColorBrightness (1).jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| ![](<../images/5-1/ColorHue (1).jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
+| ![](<../images/5-1/ColorSaturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
+| ![](<../images/5-1/ColorBrightness (1).jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
 
 ### Zakres kolorów
 
