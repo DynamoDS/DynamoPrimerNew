@@ -35,7 +35,7 @@
 
 В редакторе проектов или семейств Revit перейдите в раздел «Надстройки» и выберите Dynamo.*
 
-{% hint style="warning" %}\\* Программа Dynamo будет работать только в том файле, в котором была открыта. {% endhint %}
+{% hint style="warning" %}* Программа Dynamo будет работать только в том файле, в котором была открыта. {% endhint %}
 
 ![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
 
