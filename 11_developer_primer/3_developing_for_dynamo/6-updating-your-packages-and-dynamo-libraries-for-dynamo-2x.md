@@ -64,7 +64,7 @@ Problemi noti:
 
 I nodi NodeModel richiedono la maggior parte del lavoro per eseguire l'aggiornamento a Dynamo 2.x. A livello generale, sarà necessario implementare i costruttori che verranno utilizzati solo per caricare i nodi dal file JSON, oltre ai normali costruttori di NodeModel usati per creare nuove istanze dei tipi di nodi. Per differenziarli, contrassegnare i costruttori del tempo di caricamento con `[JsonConstructor]`, che è un attributo di newtonsoft.Json.net.
 
-I nomi dei parametri nel costruttore dovrebbero in genere corrispondere ai nomi delle proprietà JSON, sebbene questo mappaggio risulti più complicata se si sostituiscono i nomi serializzati con gli attributi [JsonProperty].\
+I nomi dei parametri nel costruttore dovrebbero in genere corrispondere ai nomi delle proprietà JSON, sebbene questo mappaggio risulti più complicato se si sostituiscono i nomi serializzati con gli attributi [JsonProperty].\
  [Per ulteriori informazioni, vedere la documentazione sui file Json.net.](https://www.newtonsoft.com/json/help/html/Introduction.htm)
 
 
@@ -222,7 +222,7 @@ Nota Non chiamare `RegisterPorts()` o qualche variazione di tale valore nell'att
 ```
 
 Questo esempio aggiunge il costruttore JSON di caricamento minimo possibile. Ma cosa succede se servisse di eseguire una logica di costruzione più complessa, come impostare alcuni listener per la gestione di eventi all'interno del costruttore? L'esempio successivo tratto dal \
- [repository di DynamoSamples](https://github.com/DynamoDS/DynamoSamples) è collegato sopra nella parte `JsonConstructors Section` di questo documento.
+ [repository di DynamoSamples](https://github.com/DynamoDS/DynamoSamples) è collegato sopra nella `JsonConstructors Section` di questo documento.
 
 Di seguito è riportato un costruttore più complesso per un nodo dell'interfaccia utente:
 

@@ -102,7 +102,7 @@ I tipi di tag sono i seguenti:
 * `/// <returns name = "outputName">...</returns>` creerà la documentazione per più parametri di output.
 * `/// <search>...</search>` abbinerà il nodo ai risultati della ricerca in base ad un elenco separato da virgole. Ad esempio, se si crea un nodo che suddivide una maglia, si possono aggiungere tag come "mesh", "subdivision" e "catmull-clark".
 
-Di seguito è riportato un nodo di esempio con descrizioni di input e output, nonché un riepilogo che verrà visualizzato nella libreria.
+Di seguito è riportato un nodo di esempio con descrizioni di input e output, nonché una sintesi che verrà visualizzata nella libreria.
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -132,7 +132,7 @@ Notare che il codice per questo nodo di esempio contiene:
 
 > 1. Un riepilogo del nodo
 > 2. Una descrizione dell'input
-> 3. Un descrizione dell'output
+> 3. Descrizione di un output
 
 #### Oggetti <a href="#objects" id="objects"></a>
 
@@ -225,7 +225,7 @@ Le risorse della geometria che non vengono restituite dalle funzioni dovranno es
 
     > L'istruzione using è documentata [qui](https://msdn.microsoft.com/en-us/library/yh598w02.aspx).
     >
-    > Per ulteriori informazioni sulle nuove funzionalità di stabilità introdotte in Dynamo 2.5., vedere [Dynamo Geometry Stability Improvements](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
+    > Per ulteriori informazioni sulle nuove funzionalità di stabilità introdotte in Dynamo 2.5, vedere [Dynamo Geometry Stability Improvements](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Con le chiamate manuali di Dispose:
 
     ```

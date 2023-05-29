@@ -204,7 +204,7 @@ namespace SampleViewExtension
 }
 ```
 
-Questa implementazione della classe del modello di vista è in ascolto di `CurrentWorkspaceModel` e attiva un evento quando un nodo viene aggiunto o rimosso dall'area di lavoro. Ciò genera una modifica della proprietà che notifica all'interfaccia utente o agli elementi associati che i dati sono stati modificati e devono essere aggiornati. Viene chiamato il getter `ActiveNodeTypes` che chiama internamente una funzione helper aggiuntiva `getNodeTypes()`. Questa funzione esegue l'iterazione di tutti i nodi attivi nell'area di disegno, compila una stringa contenente i nomi di tali nodi e restituisce questa stringa alla nostra associazione nel file .xaml da visualizzare nella finestra a comparsa.
+Questa implementazione della classe del modello di vista è in ascolto di `CurrentWorkspaceModel` e attiva un evento quando un nodo viene aggiunto o rimosso dall'area di lavoro. Ciò genera una modifica della proprietà che notifica all'interfaccia utente o agli elementi associati che i dati sono stati modificati e devono essere aggiornati. Viene chiamato il getter `ActiveNodeTypes` che chiama internamente una funzione helper aggiuntiva `getNodeTypes()`. Questa funzione esegue l'iterazione di tutti i nodi attivi nell'area di disegno, compila una stringa contenente i nomi di tali nodi e restituisce questa stringa al nostro binding nel file .xaml da visualizzare nella finestra a comparsa.
 
 Con la logica di base dell'estensione definita, ora specificheremo i dettagli dell'aspetto della finestra con un file `.xaml`. Tutto ciò che server è una semplice finestra che visualizzi la stringa tramite l'associazione della proprietà `ActiveNodeTypes` in `TextBlock` `Text`.
 
@@ -237,7 +237,7 @@ Nel codice della finestra `.xaml`, dovremo associare `SelectedNodesText` ad un b
 
 * `Text="{Binding ActiveNodeTypes}"` associa il valore della proprietà `ActiveNodeTypes` in `SampleWindowViewModel.cs` al valore `TextBlock` `Text` nella finestra.
 
-Ora inizializzeremo la finestra di esempio nel file di baking .xaml C# `SampleWindow.xaml.cs`. Aggiungere il seguente codice a `SampleWindow.xaml`:
+Ora inizializzeremo la finestra di esempio nel file di backing .xaml C# `SampleWindow.xaml.cs`. Aggiungere il seguente codice a `SampleWindow.xaml`:
 
 ```
 using System.Windows;

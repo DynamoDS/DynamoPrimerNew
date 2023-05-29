@@ -28,7 +28,7 @@ L'origine di DynamoRevit è ospitata qui: [https://github.com/DynamoDS/DynamoRev
 
 #### Clonazione del repository mediante git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
-In un processo simile al pull del repository di Dynamo, utilizzeremo il comando clone di git per clonare DynamoRevit e specificare il ramo che corrisponde alla versione di Revit. Per iniziare, apriremo un'interfaccia della riga di comando e imposteremo la directory corrente sul percorso in cui desideriamo clonare i file.
+In un processo simile al pull del repository di Dynamo, utilizzeremo il comando clone di git per clonare DynamoRevit e specificare il ramo che corrisponde alla nostra versione di Revit. Per iniziare, apriremo un'interfaccia della riga di comando e imposteremo la directory corrente sul percorso in cui desideriamo clonare i file.
 
 `cd C:\Users\username\Documents\GitHub` modifica la directory corrente.
 
@@ -197,7 +197,7 @@ Ora eseguire ogni riga del costruttore fino a quando non viene rilevata l'eccezi
 > 2. Premere `Step Over` per eseguire il codice evidenziato, quindi sospendere l'esecuzione dopo la restituzione della funzione.
 > 3. L'istruzione successiva da eseguire è indicata dall'evidenziazione gialla e dalla freccia.
 
-Se si continua a eseguire la funzione, si rileverà l'eccezione visualizzata nella finestra di DynamoRevit. Osservando la finestra Call Stack, si può vedere che l'eccezione è stata originariamente generata da un metodo denominato `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Fortunatamente l'eccezione è gestita qui, pertanto Dynamo non è stato arrestato in modo anomalo. Il processo di debug ha fornito il contesto per il problema, portandoci a un altro metodo nel codice sorgente.
+Se si continua a eseguire la funzione, si rileverà l'eccezione visualizzata nella finestra di DynamoRevit. Osservando la finestra Call Stack, si può vedere che l'eccezione è stata originariamente generata da un metodo denominato `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Fortunatamente in questo caso l'eccezione è stata risolta e Dynamo non si è arrestato in modo anomalo. Il processo di debug ha fornito il contesto per il problema, portandoci a un altro metodo nel codice sorgente.
 
 Poiché non si tratta di una libreria open source, non si possono apportare modifiche. Ora che si hanno ulteriori informazioni, è possibile segnalare il problema con maggiore contesto, presentando un [problema](https://guides.github.com/features/issues/) su GitHub o si potrebbe proporre una soluzione per questo problema eseguendo una richiesta pull.
 

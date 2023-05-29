@@ -9,7 +9,7 @@ Il team di Dynamo prevede che le richieste pull seguano alcune linee guida:
 * Rispettare gli [standard di codifica](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards) e gli [standard di denominazione dei nodi](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards).
 * Includere unit test durante l'aggiunta di nuove funzionalità.
 * Quando si corregge un bug, aggiungere uno unit test che evidenzi come il funzionamento corrente sia compromesso.
-* Mantenere la discussione concentrata su un solo problema. Creare un nuovo problema se si presenta un argomento nuovo o correlato.
+* Mantenere la discussione concentrata su un solo problema. Creare un nuovo caso se si presenta un argomento nuovo o correlato.
 
 E alcune linee guida su cosa non fare:
 

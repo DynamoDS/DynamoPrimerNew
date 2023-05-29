@@ -12,10 +12,10 @@ Le opzioni di sviluppo per Dynamo si suddividono principalmente in due categorie
 
 #### Per Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
-Questi nodi consentono il massimo grado di personalizzazione. Molti pacchetti vengono creati con questo metodo ed è necessario per contribuire ai file di origine di Dynamo. Il processo di costruzione sarà descritto in questa guida.
+Questi nodi consentono il massimo grado di personalizzazione. Molti pacchetti vengono creati con questo metodo ed è necessario per contribuire ai file di origine di Dynamo. Il processo di creazione sarà descritto in questa guida.
 
 * Nodi zero-touch
-* Nodi derivati NodeModel
+* Nodi derivati da NodeModel
 * Estensioni
 
 > La Guida introduttiva contiene una guida sull'[importazione di librerie zero-touch](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
@@ -74,11 +74,11 @@ Con questo metodo è possibile:
 * Scrivere metodi C# e utilizzare facilmente i metodi come nodi in Dynamo.
 * Condividere una libreria C# come nodi con la comunità Dynamo in un pacchetto.
 
-**Nodi derivati NodeModel**
+**Nodi derivati da NodeModel**
 
 Questi nodi sono un livello più basso nella struttura di Dynamo. Si basano sulla classe `NodeModel` e sono scritti in C#. Sebbene questo metodo offra la massima flessibilità e potenza, la maggior parte degli aspetti del nodo deve essere definita esplicitamente e le funzioni devono risiedere in un assieme separato.
 
-![Nodi derivati NodeModel](images/Development-Icons-NodeModel.png)
+![Nodi derivati da NodeModel](images/Development-Icons-NodeModel.png)
 
 Con questo metodo è possibile:
 
