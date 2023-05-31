@@ -32,7 +32,7 @@ _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。�
 
 ![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
-您也可以依 _Revit 階層_中的特定層選取 Revit 元素。這是一個功能強大的選項，可自訂大型資料陣列，以準備進行記錄或生產實體化及客製化。
+您也可以依 _Revit 階層_ 中的特定層選取 Revit 元素。這是一個功能強大的選項，可自訂大型資料陣列，以準備進行記錄或生產實體化及客製化。
 
 ![UI](../.gitbook/assets/allelements.jpg)
 
