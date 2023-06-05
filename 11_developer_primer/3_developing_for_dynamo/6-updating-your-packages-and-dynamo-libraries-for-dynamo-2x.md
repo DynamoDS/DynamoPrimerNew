@@ -1,4 +1,4 @@
-# 更新 Dynamo 2.x 的软件包和 Dynamo 库
+# 更新 Dynamo 2.x 的软件包和 Dynamo 库 
 
 ### 简介：<a href="#introduction" id="introduction"></a>
 
