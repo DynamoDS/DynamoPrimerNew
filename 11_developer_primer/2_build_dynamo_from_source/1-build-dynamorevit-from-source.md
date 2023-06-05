@@ -151,14 +151,14 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 
 在上一节（**从源代码构建 Dynamo**）中，我们简要介绍了在 Visual Studio 中调试以及如何将 Visual Studio 附着到进程。以 Wall.ByCurveAndHeight 节点中的异常为例，我们将介绍如何附着到进程、设置断点、单步调试代码，以及使用调用堆栈来确定异常的来源。这些调试工具通常适用于 .net 开发工作流，值得在本手册之外进行探索。
 
-* **“附着到进程”**会将正在运行的应用程序链接到 Visual Studio，以进行调试。如果我们要调试 DynamoRevit 构建中发生的行为，则我们可以在 Visual Studio 中打开 DynamoRevit 源文件，然后附着 `Revit.exe` 进程，该进程是 DynamoRevit 附加模块的父进程。Visual Studio 使用[符号文件](https://msdn.microsoft.com/en-us/library/ms241613.aspx) (`.pbd`)，以在 DynamoRevit 正在执行的程序集和源代码之间建立连接。
-* **“断点”**会在源代码中建立应用程序将在执行之前暂停的代码行。如果某个节点导致 DynamoRevit 崩溃或返回意外结果，则我们可以向节点的源代码添加断点以暂停该过程、单步执行代码并检查变量的实时值，直到找到问题的根源。
-* **“单步调试代码”**会逐行遍历源代码。我们可以逐个运行函数、单步执行函数调用，或跳出当前正在执行的函数。
-*   **“调用堆栈”**会相对于涉及此函数调用的以前函数调用，显示进程当前正在运行的函数。Visual Studio 有一个“调用堆栈”窗口来显示此内容。例如，如果我们在源代码之外遇到异常，则我们可以在调用堆栈中查看调用代码的路径。
+* **“附着到进程”** 会将正在运行的应用程序链接到 Visual Studio，以进行调试。如果我们要调试 DynamoRevit 构建中发生的行为，则我们可以在 Visual Studio 中打开 DynamoRevit 源文件，然后附着 `Revit.exe` 进程，该进程是 DynamoRevit 附加模块的父进程。Visual Studio 使用[符号文件](https://msdn.microsoft.com/en-us/library/ms241613.aspx) (`.pbd`)，以在 DynamoRevit 正在执行的程序集和源代码之间建立连接。
+* **“断点”** 会在源代码中建立应用程序将在执行之前暂停的代码行。如果某个节点导致 DynamoRevit 崩溃或返回意外结果，则我们可以向节点的源代码添加断点以暂停该过程、单步执行代码并检查变量的实时值，直到找到问题的根源。
+* **“单步调试代码”** 会逐行遍历源代码。我们可以逐个运行函数、单步执行函数调用，或跳出当前正在执行的函数。
+*   **“调用堆栈”** 会相对于涉及此函数调用的以前函数调用，显示进程当前正在运行的函数。Visual Studio 有一个“调用堆栈”窗口来显示此内容。例如，如果我们在源代码之外遇到异常，则我们可以在调用堆栈中查看调用代码的路径。
 
     > [2,000 Things You Should Know About C#](https://csharp.2000things.com/2013/05/20/847-how-the-call-stack-works/) 对调用堆栈进行了更深入的说明。
 
-当给定 PolyCurve 作为**“Wall.ByCurveAndHeight”**节点的曲线输入时，该节点会抛出异常，并显示消息：_“未实现 BSPlineCurve”_。通过调试，我们可以弄清楚节点不会接受此几何图形类型作为曲线参数的输入的确切原因。在本例中，我们假定 DynamoRevit 已成功构建，并可以作为 Revit 的附加模块运行。
+当给定 PolyCurve 作为 **“Wall.ByCurveAndHeight”** 节点的曲线输入时，该节点会抛出异常，并显示消息：_“未实现 BSPlineCurve”_。通过调试，我们可以弄清楚节点不会接受此几何图形类型作为曲线参数的输入的确切原因。在本例中，我们假定 DynamoRevit 已成功构建，并可以作为 Revit 的附加模块运行。
 
 ![Wall.ByCurbeAndHeight 节点抛出异常](images/dyn-wallbycurveandheight.jpg)
 
