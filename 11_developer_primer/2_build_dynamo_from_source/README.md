@@ -1,4 +1,4 @@
-# 从源代码构建 Dynamo
+# 从源代码构建 Dynamo 
 
 Dynamo 的源代码托管在 GitHub 上，可供任何人克隆并参与修改。在这一章中，我们将漫游如何使用 git 克隆存储库、使用 Visual Studio 编译源文件、运行和调试本地构建，以及从 GitHub 中拉取任何新更改。
 
