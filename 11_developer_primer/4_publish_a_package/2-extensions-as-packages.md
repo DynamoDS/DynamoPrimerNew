@@ -1,4 +1,4 @@
-# パッケージとしての拡張機能
+# パッケージとしての拡張機能 
 
 ### パッケージとしての拡張機能 <a href="#extensions-as-packages" id="extensions-as-packages"></a>
 
