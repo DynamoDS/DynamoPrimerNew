@@ -1,4 +1,4 @@
-# 从源代码构建 DynamoRevit
+# 从源代码构建 DynamoRevit 
 
 DynamoRevit 源文件也托管在 DynamoDS GitHub 上，可供开发人员参与修改并构建 Beta 版。从源代码构建 DynamoRevit 通常遵循与 Dynamo 相同的过程，但一些重要细节除外：
 
