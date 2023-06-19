@@ -1,4 +1,4 @@
-# ソースから DynamoRevit をビルドする
+# ソースから DynamoRevit をビルドする 
 
 DynamoRevit ソース ファイルも、開発者が関与してベータ版をビルドできるように DynamoDS の GitHub にホストされています。ソースから DynamoRevit をビルドする場合は、通常は Dynamo と同じプロセスを実行しますが、重要な詳細がいくつかあります。
 
