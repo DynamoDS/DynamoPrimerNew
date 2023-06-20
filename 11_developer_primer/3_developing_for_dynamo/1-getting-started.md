@@ -1,4 +1,4 @@
-# Introducción
+# Introducción 
 
 Antes de iniciar el proceso de desarrollo, es importante sentar unas bases sólidas para un nuevo proyecto. Hay varias plantillas de proyectos en la comunidad de desarrolladores de Dynamo que suponen excelentes puntos de partida, pero es más valioso conocer cómo iniciar un proyecto desde cero. Compilar un proyecto desde el principio nos permitirá comprender mejor el proceso de desarrollo.
 
