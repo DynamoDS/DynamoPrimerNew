@@ -1,4 +1,4 @@
-# Erstellen von DynamoRevit aus Quelldateien
+# Erstellen von DynamoRevit aus Quelldateien 
 
 Die DynamoRevit-Quelldateien werden auch im DynamoDS-GitHub gehostet, damit Entwickler Beiträge einbringen und Beta-Versionen erstellen können. Die Erstellung von DynamoRevit aus Quelldateien folgt im Allgemeinen dem gleichen Prozess wie bei Dynamo, mit Ausnahme einiger wichtiger Details:
 
