@@ -1,4 +1,4 @@
-# Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 2.x
+# Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 2.x 
 
 ### Wprowadzenie: <a href="#introduction" id="introduction"></a>
 
