@@ -1,4 +1,4 @@
-# Rozšíření jako balíčky
+# Rozšíření jako balíčky 
 
 ### Rozšíření jako balíčky <a href="#extensions-as-packages" id="extensions-as-packages"></a>
 
