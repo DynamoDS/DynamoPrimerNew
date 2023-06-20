@@ -1,4 +1,4 @@
-# Caso real de NodeModel (interfaz de usuario personalizada)
+# Caso real de NodeModel (interfaz de usuario personalizada) 
 
 Los nodos basados en NodeModel proporcionan una flexibilidad y una eficacia mucho mayores que los nodos Zero-Touch. En este ejemplo, vamos a llevar el nodo de rejilla Zero-Touch al siguiente nivel mediante la adición de un control deslizante integrado que determina aleatoriamente el tamaño del rectángulo.
 
