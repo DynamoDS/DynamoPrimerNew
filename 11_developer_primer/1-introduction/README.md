@@ -1,4 +1,4 @@
-# Przewodnik Primer programisty
+# Przewodnik Primer programisty 
 
 #### Jaki jest cel tego przewodnika? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
