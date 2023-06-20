@@ -116,7 +116,7 @@ Revit 需要一个附加模块文件来识别 DynamoRevit，[安装程序](http:
 * 将 `<Assembly>...</Assembly>` 文件路径设置为 `DynamoRevitVersionSelector.dll`
 * `<FullClassName>...</FullClassName>` 指定哪些类要从我们使用上述程序集元素路径指向的程序集实例化。此类将成为我们附加模块的入口点。
 
-此外，我们还需要删除 Revit 附带的现有 Dynamo。要执行此操作，请转到 `C:\\Program Files\Autodesk\Revit 2023\AddIns ` 并删除包含**“Dynamo”**的两个文件夹：`DynamoForRevit` 和 `DynamoPlayerForRevit`。如果需要恢复原始 Dynamo for Revit，可以删除它们，也可以将它们备份在单独的文件夹中。
+此外，我们还需要删除 Revit 附带的现有 Dynamo。要执行此操作，请转到 `C:\\Program Files\Autodesk\Revit 2023\AddIns ` 并删除包含 **“Dynamo”** 的两个文件夹：`DynamoForRevit` 和 `DynamoPlayerForRevit`。如果需要恢复原始 Dynamo for Revit，可以删除它们，也可以将它们备份在单独的文件夹中。
 
 ![DynamoForRevit 和 DynamoPlayerforRevit 文件夹](images/fe-dynamo-folders-remove.jpg)
 
