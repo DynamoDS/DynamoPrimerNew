@@ -1,4 +1,4 @@
-# Erstellen eines Pakets in Visual Studio
+# Erstellen eines Pakets in Visual Studio 
 
 Wenn Sie Assemblys entwickeln, die als Paket für Dynamo publiziert werden sollen, kann das Projekt so konfiguriert werden, dass alle erforderlichen Objekte gruppiert und in einer paketkompatiblen Verzeichnisstruktur abgelegt werden. Dadurch kann das Projekt schnell als Paket getestet werden und die Benutzererfahrung simuliert werden.
 
