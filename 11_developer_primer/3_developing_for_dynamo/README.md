@@ -1,4 +1,4 @@
-# Desenvolvimento do Dynamo
+# Desenvolvimento do Dynamo 
 
 Independentemente do nível de experiência, a plataforma do Dynamo foi projetada para que todos os usuários sejam colaboradores. Há diversas opções de desenvolvimento voltadas para diferentes habilidades e níveis de habilidades, cada uma com seus pontos fortes e fracos, dependendo do objetivo. Abaixo, descreveremos as diferentes opções e como escolher uma em detrimento de outra.
 
