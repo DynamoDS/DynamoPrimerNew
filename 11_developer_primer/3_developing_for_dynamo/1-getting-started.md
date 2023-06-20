@@ -1,4 +1,4 @@
-# Mise en route
+# Mise en route 
 
 Avant de se lancer dans le développement, il est important d’établir des bases solides pour un nouveau projet. Il existe plusieurs modèles de projets dans la communauté des développeurs Dynamo qui sont d’excellents points de départ, mais il est encore plus utile de savoir comment démarrer un projet à partir de zéro. La génération d’un projet à partir de zéro permet de mieux comprendre le processus de développement.
 
