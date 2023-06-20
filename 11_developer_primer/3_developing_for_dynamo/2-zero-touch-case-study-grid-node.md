@@ -1,4 +1,4 @@
-# Případová studie funkce Zero-Touch – uzel osnovy
+# Případová studie funkce Zero-Touch – uzel osnovy 
 
 Po spuštění projektu v aplikaci Visual Studio si ukážeme, jak vytvořit vlastní uzel, který vytvoří obdélníkovou osnovu buněk. Ačkoli bychom ji mohli vytvořit pomocí několika standardních uzlů, jedná se o užitečný nástroj, který lze snadno umístit v uzlu Zero-Touch. Na rozdíl od čar osnovy lze velikost buněk měnit kolem středových bodů, dotazovat se na rohové vrcholy nebo je zabudovat do ploch.
 
