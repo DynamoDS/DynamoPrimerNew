@@ -1,4 +1,4 @@
-# Vytvoření balíčku z aplikace Visual Studio
+# Vytvoření balíčku z aplikace Visual Studio 
 
 Pokud vyvíjíte sestavy, které mají být publikovány jako balíček aplikace Dynamo, lze projekt nakonfigurovat tak, aby seskupil všechny potřebné komponenty a uložil je do adresářové struktury kompatibilní s balíčkem. To umožní rychlé testování projektu jako balíčku a simulaci uživatelského prostředí.
 
