@@ -1,4 +1,4 @@
-# Atualizar os pacotes e as bibliotecas do Dynamo para Dynamo 2.x 
+# Atualizar os pacotes e as bibliotecas do Dynamo para Dynamo 2.x
 
 ### Introdução: <a href="#introduction" id="introduction"></a>
 
@@ -14,7 +14,7 @@ Os autores da extensão também podem ter algumas alterações potenciais a sere
 
 ### Regras gerais de empacotamento: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
-* Não agrupe o Dynamo ou o Dynamo Revit .dlls com o pacote. Esses dlls já serão carregados pelo Dynamo. Se você agrupar uma versão diferente da que o usuário carregou _(ou seja, você distribui o dynamo core 1.3, mas o usuário está executando o pacote no dynamo 2.0) _, ocorrerão erros misteriosos de tempo de execução. Isso inclui dlls como `DynamoCore.dll`, `DynamoServices.dll`, `DSCodeNodes.dll`, `ProtoGeometry.dll`
+* Não agrupe o Dynamo ou o Dynamo Revit .dlls com o pacote. Esses dlls já serão carregados pelo Dynamo. Se você agrupar uma versão diferente da que o usuário carregou _(ou seja, você distribui o dynamo core 1.3, mas o usuário está executando o pacote no dynamo 2.0)_, ocorrerão erros misteriosos de tempo de execução. Isso inclui dlls como `DynamoCore.dll`, `DynamoServices.dll`, `DSCodeNodes.dll`, `ProtoGeometry.dll`
 * Não agrupe nem distribua o `newtonsoft.json.net` com o pacote se você puder evitá-lo. Esse dll também será carregado pelo Dynamo 2.x. O mesmo problema que acima pode ocorrer.
 * Não agrupe nem distribua o `CEFSharp` com o pacote se você puder evitá-lo. Esse dll também será carregado pelo Dynamo 2.x. O mesmo problema que acima pode ocorrer.
 * Em geral, evite compartilhar dependências com o Dynamo ou o Revit se precisar controlar a versão dessa dependência.
