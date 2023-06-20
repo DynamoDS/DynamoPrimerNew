@@ -1,4 +1,4 @@
-# Générer Dynamo à partir de la source
+# Générer Dynamo à partir de la source 
 
 La source de Dynamo est hébergée sur Github pour que tout le monde puisse la cloner et y apporter sa contribution. Dans ce chapitre, nous verrons comment cloner le dépôt à l’aide de git, compiler les fichiers sources avec Visual Studio, exécuter et déboguer une génération locale, et extraire toutes les nouvelles modifications de Github.
 
