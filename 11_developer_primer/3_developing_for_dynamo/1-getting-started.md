@@ -1,4 +1,4 @@
-# Pierwsze kroki
+# Pierwsze kroki 
 
 Przed rozpoczęciem prac nad rozwiązaniem należy opracować solidne podstawy dla nowego projektu. W społeczności programistów dodatku Dynamo dostępnych jest kilka szablonów projektów, które doskonale nadają się do rozpoczęcia pracy, ale jeszcze cenniejsza jest umiejętność rozpoczynania projektu od podstaw. Tworzenie projektu od podstaw pozwala lepiej zrozumieć proces opracowywania rozwiązania.
 
