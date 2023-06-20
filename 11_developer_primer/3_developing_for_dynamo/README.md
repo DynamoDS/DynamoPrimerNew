@@ -1,4 +1,4 @@
-# Vývoj pro aplikaci Dynamo
+# Vývoj pro aplikaci Dynamo 
 
 Platforma Dynamo je navržena tak, aby se přispěvateli mohli stát všichni uživatelé, bez ohledu na úroveň jejich zkušeností. Existuje několik možností vývoje, které se zaměřují na různé schopnosti a úrovně dovedností, přičemž každá má své silné a slabé stránky v závislosti na cíli. Níže uvádíme různé možnosti a způsob, jak si vybrat jednu z nich.
 
