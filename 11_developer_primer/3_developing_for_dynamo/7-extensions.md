@@ -1,4 +1,4 @@
-# Rozšíření
+# Rozšíření 
 
 Rozšíření jsou v ekosystému aplikace Dynamo velmi účinným nástrojem pro vývoj. Umožňují vývojářům vytvářet vlastní funkce založené na interakcích a logice aplikace Dynamo. Rozšíření lze rozdělit na dvě hlavní kategorie: rozšíření a rozšíření pohledu. Jak již název napovídá, systém rozšíření pohledu umožňuje rozšířit uživatelské rozhraní aplikace Dynamo registrací vlastních položek nabídky. Běžná rozšíření fungují velmi podobným způsobem bez uživatelského rozhraní. Můžeme například vytvořit rozšíření, které bude do konzoly aplikace Dynamo zaznamenávat konkrétní informace. Tento scénář nevyžaduje žádné vlastní uživatelské rozhraní, a proto by jej bylo možné provést také pomocí rozšíření.
 
