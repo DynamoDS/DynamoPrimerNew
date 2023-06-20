@@ -1,4 +1,4 @@
-# 從原始碼建置 DynamoRevit
+# 從原始碼建置 DynamoRevit 
 
 DynamoRevit 原始碼檔案也託管在 DynamoDS Github 上，開發人員可以參與並建置 Beta 版本。從原始碼建置 DynamoRevit 的程序通常與 Dynamo 相同，但有一些重要的細節例外：
 
