@@ -1,4 +1,4 @@
-# Erste Schritte
+# Erste Schritte 
 
 Bevor wir mit der Entwicklung beginnen, ist es wichtig, ein solides Fundament für ein neues Projekt zu schaffen. Die Dynamo-Entwickler-Community verfügt über mehrere Projektvorlagen, die sich hervorragend als Ausgangspunkt eignen. Ein umfassendes Verständnis, wie Sie ein Projekt von Grund auf neu beginnen, ist jedoch noch wertvoller. Der Aufbau eines Projekts von Grund auf ermöglicht ein tieferes Verständnis des Entwicklungsprozesses.
 
