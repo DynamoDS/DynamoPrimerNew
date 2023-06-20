@@ -1,4 +1,4 @@
-# Conceptos avanzados de Zero-Touch
+# Conceptos avanzados de Zero-Touch 
 
 Una vez que sabemos cómo crear un proyecto Zero-Touch, podemos profundizar en los detalles de la creación de un nodo mediante el ejemplo ZeroTouchEssentials en el GitHub de Dynamo.
 
