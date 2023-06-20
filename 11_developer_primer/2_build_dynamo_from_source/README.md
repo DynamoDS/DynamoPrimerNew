@@ -1,4 +1,4 @@
-# Erstellen von Dynamo aus Quelldateien
+# Erstellen von Dynamo aus Quelldateien 
 
 Die Quelldateien von Dynamo werden auf GitHub gehostet, sodass jeder sie klonen und dazu beitragen kann. In diesem Kapitel erfahren Sie, wie Sie das Repository mithilfe von Git klonen, die Quelldateien mit Visual Studio kompilieren, einen lokalen Build ausführen und ein Debugging für diesen durchführen sowie neue Änderungen aus GitHub abrufen.
 
