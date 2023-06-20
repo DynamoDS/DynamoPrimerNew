@@ -1,4 +1,4 @@
-# Étude de cas Zero-Touch : nœud grille
+# Étude de cas Zero-Touch : nœud grille 
 
 Avec un projet Visual Studio opérationnel, nous allons voir comment générer un nœud personnalisé qui crée une grille rectangulaire de cellules. Bien que nous puissions créer ce nœud avec plusieurs nœuds standard, il s’agit d’un outil utile qui peut être facilement contenu dans un nœud Zero-Touch. Contrairement aux lignes de grille, les cellules peuvent être mises à l’échelle autour de leurs points centraux, interrogées pour leurs sommets d’angle ou créées dans des faces.
 
