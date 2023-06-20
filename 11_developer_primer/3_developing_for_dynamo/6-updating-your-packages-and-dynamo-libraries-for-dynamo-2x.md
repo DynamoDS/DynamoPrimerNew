@@ -1,4 +1,4 @@
-# Aktualizace balíčků a knihoven aplikace Dynamo pro aplikaci Dynamo 2.x
+# Aktualizace balíčků a knihoven aplikace Dynamo pro aplikaci Dynamo 2.x 
 
 ### Úvod: <a href="#introduction" id="introduction"></a>
 
