@@ -1,5 +1,5 @@
 # Začínáme
-
+ 
 Než se pustíte do vývoje, je důležité vybudovat pevné základy nového projektu. V komunitě vývojářů aplikace Dynamo existuje několik šablon projektů, které jsou vynikajícím východiskem pro zahájení práce, ale ještě cennější je porozumět tomu, jak začít projekt od začátku. Vytvoření projektu od základů umožní hlubší pochopení procesu vývoje.
 
 ![Visual Studio](images/visual-studio.jpg)
