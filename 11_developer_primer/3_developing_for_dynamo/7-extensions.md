@@ -1,4 +1,4 @@
-# Erweiterungen
+# Erweiterungen 
 
 Erweiterungen sind ein leistungsstarkes Entwicklungswerkzeug im Dynamo-Ökosystem. Sie ermöglichen Entwicklern, benutzerdefinierte Funktionen basierend auf Dynamo-Interaktionen und -Logik zu steuern. Erweiterungen können in zwei Hauptkategorien unterteilt werden: Erweiterungen und Ansichtserweiterungen. Wie die Namen schon sagen, können Sie mit dem Ansichtserweiterungs-Framework die Dynamo-Benutzeroberfläche durch Registrieren benutzerdefinierter Menüelemente erweitern. Normale Erweiterungen funktionieren auf ähnliche Weise, nur ohne Benutzeroberfläche. Wir können beispielsweise eine Erweiterung erstellen, die bestimmte Informationen in der Dynamo-Konsole protokolliert. Dieses Szenario erfordert keine angepasste Benutzeroberfläche und kann daher auch mit einer Erweiterung durchgeführt werden.
 
