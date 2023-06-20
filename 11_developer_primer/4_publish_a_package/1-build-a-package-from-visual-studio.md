@@ -1,4 +1,4 @@
-# Compilar um pacote no Visual Studio
+# Compilar um pacote no Visual Studio 
 
 Se você estiver desenvolvendo montagens a serem publicadas como um pacote do Dynamo, o projeto poderá ser configurado para agrupar todos os recursos necessários e colocá-los em uma estrutura de diretório compatível com o pacote. Isso permitirá que o projeto seja rapidamente testado como um pacote e simulará a experiência do usuário.
 
