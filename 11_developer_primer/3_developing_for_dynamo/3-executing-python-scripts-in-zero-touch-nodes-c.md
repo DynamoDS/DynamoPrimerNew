@@ -1,4 +1,4 @@
-# Provádění skriptů jazyka Python v uzlech Zero-Touch (C#)
+# Provádění skriptů jazyka Python v uzlech Zero-Touch (C#) 
 
 ### Provádění skriptů jazyka Python v uzlech Zero-Touch (C#) <a href="#executing-python-scripts-in-zero-touch-nodes-c" id="executing-python-scripts-in-zero-touch-nodes-c"></a>
 
