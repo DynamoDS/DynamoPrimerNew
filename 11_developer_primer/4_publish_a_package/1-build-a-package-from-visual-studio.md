@@ -1,4 +1,4 @@
-# Kompilowanie pakietu z programu Visual Studio
+# Kompilowanie pakietu z programu Visual Studio 
 
 Jeśli opracowujesz zespoły, które mają być publikowane jako pakiet dla dodatku Dynamo, projekt można skonfigurować tak, aby zgrupować wszystkie niezbędne zasoby i umieścić je w strukturze katalogów zgodnej z pakietem. Dzięki temu projekt zostanie szybko przetestowany jako pakiet i będzie mógł symulować środowisko użytkownika.
 
