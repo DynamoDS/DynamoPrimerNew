@@ -1,4 +1,4 @@
-# Entwickeln für Dynamo
+# Entwickeln für Dynamo 
 
 Unabhängig vom Kenntnisstand ist die Dynamo-Plattform dafür konzipiert, dass alle Benutzer ihre Beiträge leisten können. Es gibt mehrere Entwicklungsoptionen, die auf unterschiedliche Fähigkeiten und Qualifikationen ausgerichtet sind und je nach Ziel alle ihre Stärken und Schwächen haben. Nachfolgend werden die verschiedenen Optionen und die Möglichkeiten zur Auswahl einer Option erläutert.
 
