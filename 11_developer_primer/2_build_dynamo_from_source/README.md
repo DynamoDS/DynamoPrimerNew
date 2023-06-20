@@ -1,4 +1,4 @@
-# Compilar o Dynamo da origem
+# Compilar o Dynamo da origem 
 
 A origem do Dynamo está hospedada no Github para que qualquer pessoa possa clonar e fazer contribuições. Neste capítulo, analisaremos como clonar o repositório usando o git, compilar os arquivos de origem com o Visual Studio, executar e depurar uma compilação local e extrair as novas alterações do Github.
 
