@@ -1,4 +1,4 @@
-# Analiza przypadku Zero-Touch — węzeł siatki
+# Analiza przypadku Zero-Touch — węzeł siatki 
 
 Mamy już działający projekt programu Visual Studio, więc teraz omówimy tworzenie węzła niestandardowego, który tworzy prostokątną siatkę komórek. Mimo że można ją utworzyć za pomocą kilku węzłów standardowych, jest to przydatne narzędzie, które można łatwo umieścić w węźle Zero-Touch. Inaczej niż w przypadku linii siatki komórki można skalować względem punktów środkowych, można sprawdzać ich wierzchołki narożnikowe i można wbudowywać je w powierzchnie.
 
