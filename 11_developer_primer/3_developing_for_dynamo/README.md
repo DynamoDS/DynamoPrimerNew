@@ -1,4 +1,4 @@
-# Développer pour Dynamo
+# Développer pour Dynamo 
 
 Quel que soit le niveau d’expérience, la plateforme Dynamo est conçue pour que tous les utilisateurs soient des contributeurs. Il existe plusieurs options de développement qui ciblent des capacités et des niveaux de compétence différents, chacune avec ses forces et ses faiblesses selon l’objectif. Nous présentons ci-dessous les différentes options et comment les choisir.
 
