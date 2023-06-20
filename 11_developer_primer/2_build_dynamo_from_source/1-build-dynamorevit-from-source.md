@@ -1,4 +1,4 @@
-# Compilar DynamoRevit a partir del código fuente
+# Compilar DynamoRevit a partir del código fuente 
 
 Los archivos de código fuente de DynamoRevit también están alojados en el GitHub de DynamoDS para que los desarrolladores puedan realizar contribuciones y compilar versiones beta. Por lo general, la compilación de DynamoRevit a partir del código fuente sigue el mismo proceso que Dynamo, con la excepción de algunos detalles importantes, como los siguientes:
 
