@@ -1,4 +1,4 @@
-# Kompilowanie dodatku DynamoRevit ze źródła
+# Kompilowanie dodatku DynamoRevit ze źródła 
 
 Pliki źródłowe dodatku DynamoRevit są również przechowywane w witrynie DynamoDS w serwisie GitHub dla programistów, którzy mogą współtworzyć dodatek i kompilować wersje beta. Kompilowanie dodatku DynamoRevit ze źródła zazwyczaj przebiega tak samo jak w przypadku dodatku Dynamo, z wyjątkiem kilku ważnych szczegółów:
 
