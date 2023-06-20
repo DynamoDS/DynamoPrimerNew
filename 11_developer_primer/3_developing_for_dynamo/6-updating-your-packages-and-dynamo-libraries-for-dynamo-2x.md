@@ -126,7 +126,7 @@ JSON 建構函式與基本建構函式不同，因為它有 `inPorts` 和 `outPo
 
 #### 退回/重做 <a href="#undoredo" id="undoredo"></a>
 
-如上所述，過去曾使用 `SerializeCore` 和 `DeserializeCore` 方法將節點儲存並載入至 xml .dyn 檔案。此外，這些方法也用來儲存和載入節點狀態以用於退回/重做，**現在也還是！**如果您要為 nodeModel 使用者介面節點實作複雜的退回/重做功能，則需要實作這些方法，並序列化為以這些方法的參數提供的 XML 文件物件。除了複雜的使用者介面節點，這應該是很少見的使用案例。
+如上所述，過去曾使用 `SerializeCore` 和 `DeserializeCore` 方法將節點儲存並載入至 xml .dyn 檔案。此外，這些方法也用來儲存和載入節點狀態以用於退回/重做，**現在也還是！** 如果您要為 nodeModel 使用者介面節點實作複雜的退回/重做功能，則需要實作這些方法，並序列化為以這些方法的參數提供的 XML 文件物件。除了複雜的使用者介面節點，這應該是很少見的使用案例。
 
 
 #### 輸入和輸出埠 API <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
