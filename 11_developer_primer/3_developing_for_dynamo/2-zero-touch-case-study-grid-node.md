@@ -1,4 +1,4 @@
-# Caso real de Zero-Touch (nodo de rejilla)
+# Caso real de Zero-Touch (nodo de rejilla) 
 
 Con un proyecto de Visual Studio en ejecución, veremos cómo generar un nodo personalizado que cree una rejilla rectangular de celdas. Aunque podríamos crear esto con varios nodos estándar, se trata de una herramienta útil que se puede incluir fácilmente en un nodo Zero-Touch. A diferencia de las líneas de rejilla, las celdas se pueden consultar para determinar su vértices de esquina o convertir en caras, o se puede ajustar su escala en relación con sus centros.
 
