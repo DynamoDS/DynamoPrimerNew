@@ -1,4 +1,4 @@
-# Opracowywanie rozwiązań dla dodatku Dynamo
+# Opracowywanie rozwiązań dla dodatku Dynamo 
 
 Platformę Dynamo zaprojektowano tak, aby umożliwić współtworzenie wszystkim użytkownikom, niezależnie od poziomu doświadczenia. Dostępnych jest kilka opcji programowania odpowiednich do różnych rodzajów i poziomów umiejętności, z których każda ma zalety i wady w zależności od zamierzonego celu. Poniżej omówimy te różne opcje i sposób wyboru między nimi.
 
