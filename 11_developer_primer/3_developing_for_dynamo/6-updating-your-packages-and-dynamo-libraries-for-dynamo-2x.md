@@ -1,4 +1,4 @@
-# 針對 Dynamo 2.x 更新您的套件和 Dynamo 資源庫
+# 針對 Dynamo 2.x 更新您的套件和 Dynamo 資源庫 
 
 ### 簡介：<a href="#introduction" id="introduction"></a>
 
