@@ -1,4 +1,4 @@
-# Расширения в виде пакетов
+# Расширения в виде пакетов 
 
 ### Расширения в виде пакетов <a href="#extensions-as-packages" id="extensions-as-packages"></a>
 
