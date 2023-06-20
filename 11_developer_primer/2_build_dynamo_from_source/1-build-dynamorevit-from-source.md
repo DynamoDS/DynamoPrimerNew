@@ -1,4 +1,4 @@
-# Sestavení doplňku DynamoRevit ze zdroje
+# Sestavení doplňku DynamoRevit ze zdroje 
 
 Zdrojové soubory doplňku DynamoRevit jsou také umístěny na Githubu DynamoDS, kde mohou vývojáři vytvářet příspěvky a sestavovat beta verze. Sestavení doplňku DynamoRevit ze zdroje obecně probíhá stejným způsobem jako u aplikace Dynamo s výjimkou několika důležitých detailů:
 
