@@ -1,4 +1,4 @@
-# Zero-Touch-Fallstudie - Rasterblock
+# Zero-Touch-Fallstudie - Rasterblock 
 
 Bei geöffnetem und gestartetem Visual Studio-Projekt werden Sie durch die Erstellung eines benutzerdefinierten Blocks geführt, mit dem ein rechteckiges Zellenraster erstellt wird. Auch wenn wir für die Erstellung mehrere Standardblöcke verwenden könnten, ist dies ein nützliches Werkzeug, das sich problemlos in einen Zero-Touch-Block integrieren lässt. Im Gegensatz zu Rasterlinien können Zellen um ihre Mittelpunkte skaliert, nach Eckscheitelpunkten abgefragt oder in Flächen integriert werden.
 
