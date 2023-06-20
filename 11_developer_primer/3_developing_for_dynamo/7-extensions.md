@@ -1,4 +1,4 @@
-# Rozszerzenia
+# Rozszerzenia 
 
 Rozszerzenia są zaawansowanym narzędziem programistycznym w ekosystemie dodatku Dynamo. Umożliwiają programistom sterowanie funkcjami niestandardowymi opartymi na interakcjach i logice dodatku Dynamo. Rozszerzenia można podzielić na dwie główne kategorie, rozszerzenia i rozszerzenia widoku. Jak sugeruje nazwa, struktura rozszerzeń widoku umożliwia rozszerzenie interfejsu użytkownika dodatku Dynamo przez zarejestrowanie niestandardowych elementów menu. Zwykłe rozszerzenia działają w bardzo podobny sposób, ale bez interfejsu użytkownika. Przykładowo można utworzyć rozszerzenie rejestrujące określone informacje w konsoli dodatku Dynamo. Ten scenariusz nie wymaga niestandardowego interfejsu użytkownika i dlatego można go zrealizować również za pomocą rozszerzenia.
 
