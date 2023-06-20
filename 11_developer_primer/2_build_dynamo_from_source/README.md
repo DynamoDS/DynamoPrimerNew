@@ -1,4 +1,4 @@
-# Compilar Dynamo a partir del código fuente
+# Compilar Dynamo a partir del código fuente 
 
 El código fuente de Dynamo está alojado en GitHub para que cualquiera pueda clonarlo y contribuir a él. En este capítulo, veremos cómo clonar el repositorio mediante git, compilar los archivos de código fuente con Visual Studio, ejecutar y depurar una compilación local, y extraer todos los nuevos cambios de GitHub.
 
