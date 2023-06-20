@@ -1,4 +1,4 @@
-# Estudo de caso do NodeModel – Interface do usuário personalizada
+# Estudo de caso do NodeModel – Interface do usuário personalizada 
 
 Os nós baseados no NodeModel fornecem significativamente mais flexibilidade e potência do que os nós Sem toque. Neste exemplo, levaremos o nó de grade Sem toque para o próximo nível ao adicionar um controle deslizante integrado que randomiza o tamanho do retângulo.
 
