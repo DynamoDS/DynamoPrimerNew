@@ -1,4 +1,4 @@
-# Guia de introdução
+# Guia de introdução 
 
 Antes de entrar no desenvolvimento, é importante compilar uma base sólida para um novo projeto. Há vários modelos de projeto na comunidade de desenvolvedores do Dynamo que são excelentes locais para começar, mas uma compreensão de como iniciar um projeto do zero é ainda mais valiosa. A compilação de um projeto desde o início proporcionará uma compreensão mais profunda do processo de desenvolvimento.
 
