@@ -1,4 +1,4 @@
-# Analiza przypadku NodeModel — niestandardowy interfejs użytkownika
+# Analiza przypadku NodeModel — niestandardowy interfejs użytkownika 
 
 Węzły oparte na klasie NodeModel zapewniają znacznie większą elastyczność i możliwości niż węzły Zero-Touch. W tym przykładzie przeniesiemy węzeł siatki Zero-Touch na następny poziom, dodając zintegrowany suwak losowo ustawiający rozmiar prostokąta.
 
