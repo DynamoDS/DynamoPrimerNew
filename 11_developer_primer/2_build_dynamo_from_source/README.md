@@ -1,4 +1,4 @@
-# Kompilowanie dodatku Dynamo ze źródła
+# Kompilowanie dodatku Dynamo ze źródła 
 
 Źródło dodatku Dynamo jest hostowane w serwisie Github, w którym każdy może je klonować i współtworzyć. W tym rozdziale omówimy sposób klonowania repozytorium za pomocą narzędzia git, kompilowania plików źródłowych za pomocą programu Visual Studio, uruchamiania i debugowania kompilacji lokalnej oraz ściągania (pull) nowych zmian z serwisu Github.
 
