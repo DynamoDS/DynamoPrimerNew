@@ -1,4 +1,4 @@
-# Sestavení aplikace Dynamo ze zdroje
+# Sestavení aplikace Dynamo ze zdroje 
 
 Zdroj aplikace Dynamo je hostován na Githubu, kde jej může kdokoli klonovat a přispívat do něj. V této kapitole si ukážeme, jak klonovat úložiště pomocí gitu, kompilovat zdrojové soubory pomocí aplikace Visual Studio, spustit a ladit místní sestavení a získat všechny nové změny z Githubu.
 
