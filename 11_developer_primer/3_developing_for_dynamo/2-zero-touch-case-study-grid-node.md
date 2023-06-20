@@ -1,4 +1,4 @@
-# Estudo de caso sem toque – Nó de grade
+# Estudo de caso sem toque – Nó de grade 
 
 Com um projeto do Visual Studio ativo e em execução, vamos analisar como compilar um nó personalizado que cria uma grade retangular de células. Embora possamos criar isso com vários nós padrão, é uma ferramenta útil que pode ser facilmente contida em um nó Sem toque. Ao contrário das linhas de grade, as células podem ser dimensionadas em torno de seus pontos centrais, consultadas para seus vértices de canto ou incorporadas em faces.
 
