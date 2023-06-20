@@ -1,4 +1,4 @@
-# Mettre à jour vos packages et bibliothèques Dynamo pour Dynamo 2.x
+# Mettre à jour vos packages et bibliothèques Dynamo pour Dynamo 2.x 
 
 ### Introduction : <a href="#introduction" id="introduction"></a>
 
