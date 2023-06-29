@@ -1,4 +1,4 @@
-# 정보
+# 정보 
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype 비디오{% endembed %}
 
