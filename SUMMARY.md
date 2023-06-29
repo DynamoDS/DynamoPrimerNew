@@ -1,4 +1,4 @@
-# Sommario
+# Sommario 
 
 * [Informazioni](README.md)
 * [Introduzione](1\_introduction/README.md)
