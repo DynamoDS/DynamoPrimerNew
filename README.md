@@ -1,4 +1,4 @@
-# この Web サイトについて
+# この Web サイトについて 
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
