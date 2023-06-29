@@ -1,4 +1,4 @@
-# Об этом руководстве
+# Об этом руководстве 
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Трейлер к Dynamo {% endembed %}
 
