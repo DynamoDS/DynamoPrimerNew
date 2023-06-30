@@ -1,4 +1,4 @@
-# Indeks węzłów
+# Indeks węzłów 
 
 Ten indeks zawiera dodatkowe informacje o wszystkich węzłach zawartych w tym elementarzu, a także o pozostałych składnikach, które mogą być przydatne. Podano w nim tylko część z około 500 węzłów dostępnych w programie Dynamo.
 
