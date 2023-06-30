@@ -1,4 +1,4 @@
-# Esecuzione di script Python in nodi zero-touch (C#)
+# Esecuzione di script Python in nodi zero-touch (C#) 
 
 ### Esecuzione di script Python in nodi zero-touch (C#) <a href="#executing-python-scripts-in-zero-touch-nodes-c" id="executing-python-scripts-in-zero-touch-nodes-c"></a>
 
