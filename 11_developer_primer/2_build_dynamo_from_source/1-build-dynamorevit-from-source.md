@@ -1,4 +1,4 @@
-# Compilazione di DynamoRevit dall'origine
+# Compilazione di DynamoRevit dall'origine 
 
 I file di origine di DynamoRevit sono inoltre ospitati sulla pagina di DynamoDS su GitHub per consentire agli sviluppatori di apportare contributi e compilare versioni beta. La compilazione di DynamoRevit dall'origine segue generalmente lo stesso processo di Dynamo, ad eccezione di alcuni dettagli importanti:
 
