@@ -1,4 +1,4 @@
-# 소스에서 DynamoRevit 빌드하기
+# 소스에서 DynamoRevit 빌드하기 
 
 개발자가 기여하고 베타 버전을 빌드할 수 있도록 DynamoRevit 소스 파일도 DynamoDS Github에 호스팅됩니다. 소스에서 DynamoRevit을 빌드하는 작업은 몇 가지 중요한 세부 사항을 제외하고는 일반적으로 Dynamo와 동일한 프로세스를 따릅니다.
 
