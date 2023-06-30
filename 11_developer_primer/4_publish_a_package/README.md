@@ -1,4 +1,4 @@
-# Pubblicazione di un pacchetto
+# Pubblicazione di un pacchetto 
 
 ### Pubblicazione di un pacchetto <a href="#publish-a-package" id="publish-a-package"></a>
 
