@@ -1,4 +1,4 @@
-# Indice dei nodi
+# Indice dei nodi 
 
 In questo indice sono fornite informazioni aggiuntive su tutti i nodi utilizzati in questa guida introduttiva, nonché su altri componenti che potrebbero risultare utili. Questa è solo un'introduzione ad alcuni dei 500 nodi disponibili in Dynamo.
 
