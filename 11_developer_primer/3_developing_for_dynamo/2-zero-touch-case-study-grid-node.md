@@ -1,4 +1,4 @@
-# Case study zero-touch - Nodo griglia
+# Case study zero-touch - Nodo griglia 
 
 Con un progetto di Visual Studio attivo e funzionante, illustreremo come creare un nodo personalizzato che crea una griglia rettangolare di celle. Sebbene sia possibile crearlo con diversi nodi standard, è uno strumento utile che può essere facilmente contenuto in un nodo zero-touch. A differenza delle linee della griglia, le celle possono essere messe in scala rispetto ai loro punti centrali, sottoposte a query per conoscere i loro vertici d'angolo o integrate in facce.
 
