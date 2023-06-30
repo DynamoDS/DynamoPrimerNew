@@ -1,4 +1,4 @@
-# Dynamo 2.x용 패키지 및 Dynamo 라이브러리 업데이트하기 
+# Dynamo 2.x용 패키지 및 Dynamo 라이브러리 업데이트하기
 
 ### 소개: <a href="#introduction" id="introduction"></a>
 
