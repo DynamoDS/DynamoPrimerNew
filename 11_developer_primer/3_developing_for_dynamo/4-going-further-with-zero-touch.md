@@ -1,4 +1,4 @@
-# Ulteriori informazioni sul concetto di zero-touch
+# Ulteriori informazioni sul concetto di zero-touch 
 
 Dopo aver capito come si crea un progetto zero-touch, possiamo approfondire le specifiche della creazione di un nodo, illustrando l'esempio ZeroTouchEssentials nella pagina di Dynamo su Github.
 
