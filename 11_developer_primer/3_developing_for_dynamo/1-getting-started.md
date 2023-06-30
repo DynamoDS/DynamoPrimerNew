@@ -1,4 +1,4 @@
-# Per iniziare
+# Per iniziare 
 
 Prima di dedicarci al tema dello sviluppo, è importante costruire una solida base per un nuovo progetto. Nella comunità di sviluppatori di Dynamo sono disponibili diversi modelli di progetto che rappresentano ottimi punti di partenza, ma è ancora più importante comprendere come iniziare un progetto da zero. Creare un progetto dalle fondamenta consente di comprendere meglio il processo di sviluppo.
 
