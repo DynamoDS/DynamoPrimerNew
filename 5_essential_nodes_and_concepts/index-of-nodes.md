@@ -1,4 +1,4 @@
-# Rejstřík uzlů
+# Rejstřík uzlů 
 
 Tento rejstřík nabízí dodatečné informace o všech uzlech použitých v této příručce a také dalších komponentách, které mohou být užitečné. Jedná se pouze o představení některých z 500 uzlů dostupných v aplikaci Dynamo.
 
