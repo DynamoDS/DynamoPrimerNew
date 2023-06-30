@@ -1,4 +1,4 @@
-# Case study NodeModel - Interfaccia utente personalizzata
+# Case study NodeModel - Interfaccia utente personalizzata 
 
 I nodi basati su NodeModel offrono una flessibilità e una potenza notevolmente superiori rispetto ai nodi zero-touch. In questo esempio, si porta il nodo griglia zero-touch al livello successivo aggiungendo un dispositivo di scorrimento integrato che imposta dimensioni casuali del rettangolo.
 
