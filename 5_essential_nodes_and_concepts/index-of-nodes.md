@@ -1,4 +1,4 @@
-# Índice de nodos
+# Índice de nodos 
 
 Este índice proporciona información adicional sobre todos los nodos utilizados en este manual de introducción, así como sobre otros componentes que puede resultar útiles. Esto es solo una introducción a algunos de los 500 nodos disponibles en Dynamo.
 
