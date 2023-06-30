@@ -1,4 +1,4 @@
-# Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 2.x
+# Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 2.x 
 
 ### Introduzione: <a href="#introduction" id="introduction"></a>
 
