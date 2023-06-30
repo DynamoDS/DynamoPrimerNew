@@ -1,4 +1,4 @@
-# Estensioni
+# Estensioni 
 
 Le estensioni sono un potente strumento di sviluppo nell'ecosistema di Dynamo. Consentono agli sviluppatori di gestire funzionalità personalizzate basate sulle interazioni e sula logica di Dynamo. Le estensioni possono essere suddivise in due categorie principali, ovvero estensioni ed estensioni delle viste. Come implica la denominazione, la framework dell'estensione della vista consente di estendere l'interfaccia utente di Dynamo registrando voci di menu personalizzate. Le estensioni standard funzionano in modo molto simile, meno l'interfaccia utente. Ad esempio, è possibile creare un'estensione che registra informazioni specifiche nella console di Dynamo. Questo scenario non richiede alcuna interfaccia utente personalizzata e pertanto potrebbe essere eseguito anche utilizzando un'estensione.
 
