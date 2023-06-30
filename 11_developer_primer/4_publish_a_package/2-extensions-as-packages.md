@@ -1,4 +1,4 @@
-# 패키지로 제공되는 확장
+# 패키지로 제공되는 확장 
 
 ### 패키지로 제공되는 확장 <a href="#extensions-as-packages" id="extensions-as-packages"></a>
 
