@@ -1,4 +1,4 @@
-# Índice de nós
+# Índice de nós 
 
 Este índice fornece informações adicionais sobre todos os nós usados neste manual de introdução, bem como outros componentes que você pode considerar úteis. Esta é apenas uma introdução a alguns dos 500 nós disponíveis no Dynamo.
 
