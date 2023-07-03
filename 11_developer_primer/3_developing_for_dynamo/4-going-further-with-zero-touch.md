@@ -1,10 +1,10 @@
-# Další práce s funkcí Zero-Touch 
+# Další práce s funkcí Zero-Touch
 
 Když nyní víme, jak vytvořit projekt Zero-Touch, můžeme se podrobněji seznámit se specifiky vytváření uzlu a projít si příklad ZeroTouchEssentials na Githubu aplikace Dynamo.
 
 ![Uzly Zero-Touch](images/ootbzerotouch.png)
 
-> Mnoho standardních uzlů aplikace Dynamo jsou v podstatě uzly Zero-Touch, například většina výše uvedených uzlů Math, Colour a DateTime.
+> Mnoho standardních uzlů aplikace Dynamo jsou v podstatě uzly Zero-Touch, například většina výše uvedených uzlů Math, Color a DateTime.
 
 Nejprve si stáhněte projekt ZeroTouchEssentials z tohoto umístění: [https://github.com/DynamoDS/ZeroTouchEssentials](https://github.com/DynamoDS/ZeroTouchEssentials)
 

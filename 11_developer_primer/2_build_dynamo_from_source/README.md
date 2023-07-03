@@ -1,4 +1,4 @@
-# Sestavení aplikace Dynamo ze zdroje 
+# Sestavení aplikace Dynamo ze zdroje
 
 Zdroj aplikace Dynamo je hostován na Githubu, kde jej může kdokoli klonovat a přispívat do něj. V této kapitole si ukážeme, jak klonovat úložiště pomocí gitu, kompilovat zdrojové soubory pomocí aplikace Visual Studio, spustit a ladit místní sestavení a získat všechny nové změny z Githubu.
 
@@ -55,7 +55,7 @@ Pomocí zdrojových souborů, které jsou nyní klonovány do místního počít
 * Stáhněte a nainstalujte rozhraní [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) nebo novější.
 * Nainstalujte rozhraní Microsoft DirectX z místního úložiště aplikace Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`).
 
-> Rozhraní .NET a DirectX již mohou být nainstalovány.
+> Rozhraní .NET a DirectX již mohou být nainstalována.
 
 Po dokončení instalace můžete spustit aplikaci Visual Studio a otevřít řešení `Dynamo.All.sln`, které se nachází v umístění `Dynamo\src`.
 
