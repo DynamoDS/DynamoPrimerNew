@@ -1,4 +1,4 @@
-# Developer Primer 
+# Developer Primer
 
 #### Welchen Zweck verfolgt dieses Handbuch? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
@@ -29,7 +29,7 @@ In diesem Handbuch erfahren Sie, wie Sie die verschiedenen C#-Entwicklungsmögli
 
 [https://dynamods.github.io/DynamoAPI/](https://dynamods.github.io/DynamoAPI/)
 
-**DynamoBIM** Die beste Quelle für zusätzliche Informationen, Lerninhalte und Foren ist die DynamoBIM-Website.
+**DynamoBIM:** Die beste Quelle für zusätzliche Informationen, Lerninhalte und Foren ist die DynamoBIM-Website.
 
 [https://dynamobim.org](https://dynamobim.org)
 
@@ -37,7 +37,7 @@ In diesem Handbuch erfahren Sie, wie Sie die verschiedenen C#-Entwicklungsmögli
 
 [https://dictionary.dynamobim.com/](https://dictionary.dynamobim.com)
 
-**Leitfaden für die DesignScript-Sprache** Ein PDF-Leitfaden zum Schreiben in DesignScript.
+**Leitfaden für die DesignScript-Sprache:** Ein PDF-Leitfaden zum Schreiben in DesignScript.
 
 [PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo\_language\_guide\_version\_1.pdf)
 

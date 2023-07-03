@@ -1,4 +1,4 @@
-# Erste Schritte 
+# Erste Schritte
 
 Bevor wir mit der Entwicklung beginnen, ist es wichtig, ein solides Fundament für ein neues Projekt zu schaffen. Die Dynamo-Entwickler-Community verfügt über mehrere Projektvorlagen, die sich hervorragend als Ausgangspunkt eignen. Ein umfassendes Verständnis, wie Sie ein Projekt von Grund auf neu beginnen, ist jedoch noch wertvoller. Der Aufbau eines Projekts von Grund auf ermöglicht ein tieferes Verständnis des Entwicklungsprozesses.
 
@@ -6,7 +6,7 @@ Bevor wir mit der Entwicklung beginnen, ist es wichtig, ein solides Fundament f�
 
 #### Erstellen eines Visual Studio-Projekts <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
-Visual Studio ist eine leistungsstarke IDE, in der wir ein Projekt erstellen, Referenzen hinzufügen, `.dlls`-Dateien generieren und debuggen können. Beim Erstellen eines neuen Projekts erstellt Visual Studio außerdem eine Projektmappe, eine Struktur zum Organisieren von Projekten. In einer einzelnen Projektmappe können mehrere Projekte enthalten sein, die zusammen erstellt werden können. Um einen Zero-Touch-Block zu erstellen, müssen wir ein neues Visual Studio-Projekt starten, in im wir eine C#-Klassenbibliothek schreiben und eine `.dll`-Datei erstellen.
+Visual Studio ist eine leistungsstarke IDE, in der wir ein Projekt erstellen, Referenzen hinzufügen, `.dll`-Dateien generieren und debuggen können. Beim Erstellen eines neuen Projekts erstellt Visual Studio außerdem eine Projektmappe, eine Struktur zum Organisieren von Projekten. In einer einzelnen Projektmappe können mehrere Projekte enthalten sein, die zusammen erstellt werden können. Um einen Zero-Touch-Block zu erstellen, müssen wir ein neues Visual Studio-Projekt starten, in im wir eine C#-Klassenbibliothek schreiben und eine `.dll`-Datei erstellen.
 
 ![Erstellen eines neuen Projekts in Visual Studio](images/vs-new-project-1.jpg)
 

@@ -16,7 +16,7 @@ Einige Richtlinien dazu, was Sie nicht tun sollten:
 * Überraschen Sie uns nicht mit großen Pull-Anforderungen. Übermitteln Sie stattdessen eine Anfrage, und beginnen Sie eine Diskussion, damit wir uns auf eine Richtung einigen können, bevor Sie viel Zeit investieren.
 * Führen Sie für Code, den Sie nicht geschrieben haben, kein Commit aus. Wenn Sie Code finden, der Ihrer Meinung nach gut für Dynamo geeignet wäre, übermitteln Sie eine Anfrage und beginnen eine Diskussion, bevor Sie fortfahren.
 * Übermitteln Sie keine Pull-Anforderungen, mit denen lizenzbezogene Dateien oder Header geändert werden. Wenn Sie der Meinung sind, dass es ein Problem mit diesen gibt, übermitteln Sie eine Anfrage. Wir nehmen uns der Angelegenheit gerne an.
-* Nehmen Sie keine API-Erweiterungen vor, ohne eine Anfrage zu übermitteln das Thema zunächst mit uns zu besprechen.
+* Nehmen Sie keine API-Erweiterungen vor, ohne eine Anfrage zu übermitteln und das Thema zunächst mit uns zu besprechen.
 
 #### Ausfüllen der Vorlage für Pull-Anforderungen <a href="#filling-out-the-pull-request-template" id="filling-out-the-pull-request-template"></a>
 
