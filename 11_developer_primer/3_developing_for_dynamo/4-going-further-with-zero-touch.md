@@ -1,4 +1,4 @@
-# Aprofundar o conhecimento sobre o nó Sem toque 
+# Aprofundar o conhecimento sobre o nó Sem toque
 
 Com um entendimento de como criar um projeto Sem toque, podemos nos aprofundar nos detalhes específicos da criação de um nó ao navegar pelo exemplo ZeroTouchEssentials no Dynamo Github.
 
@@ -44,11 +44,11 @@ namespace ZeroTouchEssentials
 
 #### Retornar vários valores <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
-Retornar vários valores é um pouco mais complexo do que criar várias entradas e precisará ser retornado usando um dicionário. As entradas do dicionário se tornam portas no lado de saída do nó. Várias portas de retorno são criadas da seguinte maneira:
+Retornar vários valores é um pouco mais complexo do que criar várias entradas e isso precisará ser feito usando um dicionário. As entradas do dicionário se tornam portas no lado de saída do nó. Várias portas de retorno são criadas da seguinte maneira:
 
 * Adicione `using System.Collections.Generic;` para usar `Dictionary<>`.
 * Adicione `using Autodesk.DesignScript.Runtime;` para usar o atributo `MultiReturn`. Isso faz referência ao “DynamoServices.dll” do pacote DynamoServices NuGet.
-* Adicione o atributo `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` ao método. As sequências de caracteres se referem às chaves no dicionário e se tornarão nos nomes das portas de saída.
+* Adicione o atributo `[MultiReturn(new[] { "string1", "string2", ... more strings here })]` ao método. As sequências de caracteres se referem às chaves no dicionário e se tornarão os nomes das portas de saída.
 * Retorne um `Dictionary<>` da função com chaves que coincidem com os nomes de parâmetro no atributo: `return new Dictionary<string, object>`
 
 ```

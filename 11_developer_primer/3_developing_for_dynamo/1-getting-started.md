@@ -1,4 +1,4 @@
-# Guia de introdução 
+# Guia de introdução
 
 Antes de entrar no desenvolvimento, é importante compilar uma base sólida para um novo projeto. Há vários modelos de projeto na comunidade de desenvolvedores do Dynamo que são excelentes locais para começar, mas uma compreensão de como iniciar um projeto do zero é ainda mais valiosa. A compilação de um projeto desde o início proporcionará uma compreensão mais profunda do processo de desenvolvimento.
 
@@ -86,7 +86,7 @@ Se uma categoria for criada na biblioteca chamada `MyCustomNode`, significa que 
 
 #### Como o Dynamo lê as classes e os métodos <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
-Quando o Dynamo carrega um .dll, ele exporá todos os métodos estáticos públicos como nós. Construtores, métodos e propriedades serão transformados em nós Criar, Ação e Consulta, respectivamente. No nosso exemplo de multiplicação, o método `MultiplyByTwo()` se torna num nó Ação no Dynamo. Isso ocorre porque o nó foi nomeado com base em seu método e classe.
+Quando o Dynamo carrega um .dll, ele expõe todos os métodos estáticos públicos como nós.  Construtores, métodos e propriedades serão transformados em nós Criar, Ação e Consulta, respectivamente. No nosso exemplo de multiplicação, o método `MultiplyByTwo()` se torna num nó Ação no Dynamo. Isso ocorre porque o nó foi nomeado com base em seu método e classe.
 
 ![Nó SampleFunction.MultiplyByTwo em um gráfico](images/multiplybytwo.png)
 

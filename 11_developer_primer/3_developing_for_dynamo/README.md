@@ -1,6 +1,6 @@
-# Desenvolvimento do Dynamo 
+# Desenvolvimento do Dynamo
 
-Independentemente do nível de experiência, a plataforma do Dynamo foi projetada para que todos os usuários sejam colaboradores. Há diversas opções de desenvolvimento voltadas para diferentes habilidades e níveis de habilidades, cada uma com seus pontos fortes e fracos, dependendo do objetivo. Abaixo, descreveremos as diferentes opções e como escolher uma em detrimento de outra.
+Independentemente do nível de experiência, a plataforma do Dynamo foi projetada para que todos os usuários sejam colaboradores. Há diversas opções de desenvolvimento voltadas para diferentes capacidades e níveis de habilidades, cada uma com seus pontos fortes e fracos, dependendo do objetivo.  Abaixo, descreveremos as diferentes opções e como escolher uma em detrimento de outra.
 
 ![Três ambientes de desenvolvimento](images/developing-for-dynamo.png)
 
@@ -105,4 +105,4 @@ A documentação da API do Dynamo atualmente cobre a funcionalidade principal: [
 
 Esteja ciente de que os .dll estão incluídos em um pacote que está sendo carregado no gerenciador de pacotes. Se o autor do pacote não tiver criado o .dll, ele deverá ter os direitos para compartilhá-lo.
 
-Se um pacote incluir binários, os usuários deverão ser solicitados ao fazer o download de que o pacote contém binários.
+Se um pacote incluir binários, os usuários deverão ser informados, ao fazer o download, de que o pacote contém binários.

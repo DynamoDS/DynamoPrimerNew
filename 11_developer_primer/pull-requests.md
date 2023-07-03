@@ -1,6 +1,6 @@
 # Solicitações de extração
 
-O Dynamo depende da criatividade e do compromisso de sua comunidade, e a equipe do Dynamo incentiva os colaboradores a explorar possibilidades, testar ideias e envolver a comunidade para enviar feedback. Embora a inovação seja altamente encorajada, as alterações só serão mescladas se facilitarem o uso do Dynamo e satisfaçam as diretrizes definidas neste documento. As alterações com benefícios pouco definidos não serão incorporadas.
+O Dynamo depende da criatividade e do compromisso de sua comunidade, e a equipe do Dynamo incentiva os colaboradores a explorar possibilidades, testar ideias e envolver a comunidade para enviar feedback. Embora a inovação seja altamente encorajada, as alterações só serão mescladas se facilitarem o uso do Dynamo e satisfizerem as diretrizes definidas neste documento.  As alterações com benefícios pouco definidos não serão incorporadas.
 
 #### Expectativas das solicitações de extração <a href="#pull-request-expectations" id="pull-request-expectations"></a>
 

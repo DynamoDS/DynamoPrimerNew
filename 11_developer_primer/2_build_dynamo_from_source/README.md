@@ -1,4 +1,4 @@
-# Compilar o Dynamo da origem 
+# Compilar o Dynamo da origem
 
 A origem do Dynamo está hospedada no Github para que qualquer pessoa possa clonar e fazer contribuições. Neste capítulo, analisaremos como clonar o repositório usando o git, compilar os arquivos de origem com o Visual Studio, executar e depurar uma compilação local e extrair as novas alterações do Github.
 
@@ -26,11 +26,11 @@ Precisamos de uma URL para o repositório do Dynamo para clonar. Essa URL pode s
 > 1. Selecionar “Clonar ou fazer o download”
 > 2. Copiar a URL
 
-Com o git instalado, podemos clonar o repositório do Dynamo. Comece abrindo o prompt de comando. Em seguida, use o comando `cd` alterar diretório para navegar até a pasta na qual desejamos que os arquivos de origem sejam clonados. Neste caso, criamos uma pasta chamada `Github` em `Documents`.
+Com o git instalado, podemos clonar o repositório do Dynamo. Comece abrindo o prompt de comando. Em seguida, use o comando de alteração de diretório `cd` para navegar até a pasta na qual desejamos que os arquivos de origem sejam clonados. Neste caso, criamos uma pasta chamada `Github` em `Documents`.
 
 `cd C:\Users\username\Documents\GitHub`
 
-> Substitua “nome de usuário” por seu nome de usuário
+> Substitua “username” por seu nome de usuário
 
 ![Prompt de comando](images/cli-1.jpg)
 
