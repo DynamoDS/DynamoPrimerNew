@@ -1,4 +1,4 @@
-# Mise en route 
+# Mise en route
 
 Avant de se lancer dans le développement, il est important d’établir des bases solides pour un nouveau projet. Il existe plusieurs modèles de projets dans la communauté des développeurs Dynamo qui sont d’excellents points de départ, mais il est encore plus utile de savoir comment démarrer un projet à partir de zéro. La génération d’un projet à partir de zéro permet de mieux comprendre le processus de développement.
 
@@ -86,7 +86,7 @@ Si une catégorie est créée dans la bibliothèque appelée `MyCustomNode`, le 
 
 #### Lecture des classes et des méthodes par Dynamo <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
-Lorsque Dynamo charge un fichier .dll, il expose toutes les méthodes statiques publiques sous forme de nœuds. Les constructeurs, les méthodes et les propriétés seront transformés respectivement en nœuds de création, d’action et de requête. Dans notre exemple de multiplication, la méthode `MultiplyByTwo()` devient un nœud Action dans Dynamo. Ceci est dû au fait que le nœud a été nommé en fonction de sa méthode et de sa classe.
+Lorsque Dynamo charge un fichier .dll, il expose toutes les méthodes statiques publiques sous forme de nœuds. Les constructeurs, les méthodes et les propriétés seront transformés respectivement en nœuds de création, d’action et de requête. Dans notre exemple de multiplication, la méthode `MultiplyByTwo()` devient un nœud d’action dans Dynamo. Ceci est dû au fait que le nœud a été nommé en fonction de sa méthode et de sa classe.
 
 ![Noeud SampleFunction.MultiplyByTwo dans un graphique](images/multiplybytwo.png)
 
@@ -94,7 +94,7 @@ Lorsque Dynamo charge un fichier .dll, il expose toutes les méthodes statiques
 > 2. La sortie est nommée `double` par défaut, car il s’agit du type de données renvoyé.
 > 3. Le nœud est nommé `SampleFunctions.MultiplyByTwo` car il s’agit des noms de classe et de méthode.
 
-Dans l’exemple ci-dessus, le nœud supplémentaire Create `SampleFunctions` a été créé, car nous n’avons pas fourni explicitement de constructeur et par conséquent un constructeur a été automatiquement créé. Nous pouvons éviter cela en créant un constructeur privé vide dans notre classe `SampleFunctions`.
+Dans l’exemple ci-dessus, le nœud supplémentaire de création `SampleFunctions` a été créé, car nous n’avons pas fourni explicitement de constructeur et par conséquent un constructeur a été automatiquement créé. Nous pouvons éviter cela en créant un constructeur privé vide dans notre classe `SampleFunctions`.
 
 ```
 namespace MyCustomNode
@@ -117,7 +117,7 @@ namespace MyCustomNode
 
 ![Méthode importée en tant que nœud de création](images/private-constructor.jpg)
 
-> 1. Dynamo a importé notre méthode en tant que nœud Create
+> 1. Dynamo a importé notre méthode en tant que nœud de création
 
 #### Ajouter des références de package Dynamo NuGet <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 

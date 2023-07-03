@@ -2,7 +2,7 @@
 
 ### Publier un package <a href="#publish-a-package" id="publish-a-package"></a>
 
-Les packages sont un moyen pratique de stocker et de partager des nœuds avec la communauté Dynamo. Un paquet peut contenir tout ce qui est nécessaire, des nœuds personnalisés créés dans l’espace de travail Dynamo aux nœuds dérivés de NodeModel. Les packages sont publiés et installés à l’aide du gestionnaire de package. En plus de cette page, le [guide](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) contient un guide général sur les packages.
+Les packages sont un moyen pratique de stocker et de partager des nœuds avec la communauté Dynamo. Un package peut contenir tout ce qui est nécessaire, des nœuds personnalisés créés dans l’espace de travail Dynamo aux nœuds dérivés de NodeModel. Les packages sont publiés et installés à l’aide du gestionnaire de package. En plus de cette page, le [guide](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) contient un guide général sur les packages.
 
 #### Qu’est-ce qu’un gestionnaire de package ? <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 

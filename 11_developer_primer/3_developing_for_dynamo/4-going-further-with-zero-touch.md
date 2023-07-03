@@ -1,4 +1,4 @@
-# Aller plus loin avec Zero-Touch 
+# Aller plus loin avec Zero-Touch
 
 Après avoir appris à créer un projet Zero-Touch, nous pouvons approfondir les spécificités de la création d’un nœud en parcourant l’exemple ZeroTouchEssentials sur Dynamo Github.
 
@@ -171,7 +171,7 @@ namespace ZeroTouchEssentials
 
 Une fois que le .dll ZeroTouchEssentials a été importé, un nœud ZeroTouchEssentials sera présent dans la bibliothèque. Cet objet peut être créé en utilisant le nœud `ByTwoDoubles`.
 
-![ByTwoDoubles node](images/dyn-constructor.jpg)
+![Nœud ByTwoDoubles](images/dyn-constructor.jpg)
 
 #### Utiliser des types de géométrie Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
@@ -209,7 +209,7 @@ Un nœud qui obtient la longueur d’une courbe et la double.
 
 #### Instructions using/dispose <a href="#disposeusing-statements" id="disposeusing-statements"></a>
 
-Les ressources de géométrie qui ne sont pas renvoyées par les fonctions devront être gérées manuellement à moins que vous n’utilisiez Dynamo version 2.5 ou ultérieure. Dans Dynamo 2.5 et versions ultérieures, les ressources de géométrie sont gérées en interne par le système. Toutefois, vous devrez peut-être supprimer la géométrie manuellement si vous avez un cas d’utilisation complexe ou si vous devez réduire la mémoire à un moment déterministe. Le moteur Dynamo traitera toutes les ressources de géométrie qui sont renvoyées par des fonctions. Les ressources de géométrie qui ne sont pas renvoyées peuvent être traitées manuellement de l’une des manières suivantes :
+Les ressources de géométrie qui ne sont pas renvoyées par les fonctions devront être gérées manuellement à moins que vous n’utilisiez Dynamo version 2.5 ou ultérieure. Dans Dynamo 2.5 et versions ultérieures, les ressources de géométrie sont gérées en interne par le système. Toutefois, vous devrez peut-être supprimer la géométrie manuellement si vous avez un cas d’utilisation complexe ou si vous devez réduire la mémoire à un moment précis. Le moteur Dynamo traitera toutes les ressources de géométrie qui sont renvoyées par des fonctions. Les ressources de géométrie qui ne sont pas renvoyées peuvent être traitées manuellement de l’une des manières suivantes :
 
 *   Avec une instruction using :
 
