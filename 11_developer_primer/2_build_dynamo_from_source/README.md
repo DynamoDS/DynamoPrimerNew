@@ -1,4 +1,4 @@
-# 从源代码构建 Dynamo 
+# 从源代码构建 Dynamo
 
 Dynamo 的源代码托管在 GitHub 上，可供任何人克隆并参与修改。在这一章中，我们将漫游如何使用 git 克隆存储库、使用 Visual Studio 编译源文件、运行和调试本地构建，以及从 GitHub 中拉取任何新更改。
 
@@ -23,7 +23,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 我们需要一个 Dynamo 存储库的 URL，以通过其进行克隆。这可以在存储库页面上的“克隆或下载”按钮中找到。复制要粘贴到命令提示中的 URL。
 
 ![克隆存储库](images/github-clone.png)
-> 1. 选择“克隆或下载”
+> 1. 选择“Clone or download”
 > 2. 复制 URL
 
 在完成安装 Git 后，我们就可以克隆 Dynamo 库。首先打开命令提示。然后，使用更改目录命令 `cd`，以导航到要将源文件克隆到的目标文件夹。在本例中，我们在 `Documents` 中已创建了一个名为 `Github` 的文件夹。

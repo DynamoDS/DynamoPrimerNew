@@ -1,4 +1,4 @@
-# 开发人员入门手册 
+# 开发人员入门手册
 
 #### 本手册的目的是什么？<a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
@@ -9,7 +9,7 @@
 
 #### 我们还提供了哪些其他开发人员资源？<a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>
 
-**Dynamo**：下载 Dynamo 的最新稳定每日构建
+**Dynamo**：下载 Dynamo 的最新稳定内部版和每日内部版
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
 
