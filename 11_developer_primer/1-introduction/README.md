@@ -13,7 +13,7 @@
 
 [https://dynamobuilds.com/](https://dynamobuilds.com/)
 
-**Dynamo GitHub** Dynamo는 GitHub의 오픈 소스 개발 프로젝트입니다.
+**Dynamo GitHub**: Dynamo는 GitHub의 오픈 소스 개발 프로젝트입니다.
 
 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 

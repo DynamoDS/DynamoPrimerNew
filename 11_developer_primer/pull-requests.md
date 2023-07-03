@@ -6,7 +6,7 @@ Dynamo는 커뮤니티의 창의성과 헌신에 의존하고 있으며, Dynamo 
 
 Dynamo 팀은 끌어오기 요청이 다음과 같은 몇 가지 지침을 준수하기를 기대합니다.
 
-* [코딩 표준](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards) 및 [노드 명명 표준을 준수합니다.](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
+* [코딩 표준](https://github.com/DynamoDS/Dynamo/wiki/Coding-Standards) 및 [노드 명명 표준](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)을 준수합니다.
 * 새 기능을 추가할 때 단위 테스트를 포함합니다.
 * 버그를 수정할 때 현재 동작이 작동하지 않는 방식을 강조 표시하는 단위 테스트를 추가합니다
 * 한 가지 이슈를 집중적으로 논의합니다. 새 주제 또는 관련 주제가 발생하면 새 이슈를 생성합니다.
