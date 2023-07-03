@@ -1,4 +1,4 @@
-# Per iniziare 
+# Per iniziare
 
 Prima di dedicarci al tema dello sviluppo, è importante costruire una solida base per un nuovo progetto. Nella comunità di sviluppatori di Dynamo sono disponibili diversi modelli di progetto che rappresentano ottimi punti di partenza, ma è ancora più importante comprendere come iniziare un progetto da zero. Creare un progetto dalle fondamenta consente di comprendere meglio il processo di sviluppo.
 
@@ -6,7 +6,7 @@ Prima di dedicarci al tema dello sviluppo, è importante costruire una solida ba
 
 #### Creazione di un progetto di Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
-Visual Studio è un potente IDE in cui è possibile creare un progetto, aggiungere riferimenti, creare file `.dlls` ed eseguire il debug. Quando si crea un nuovo progetto, in Visual Studio viene creata anche una soluzione, una struttura per l'organizzazione dei progetti. Più progetti possono coesistere all'interno di un'unica soluzione ed essere costruiti insieme. Per creare un nodo ZeroTouch, è necessario avviare un nuovo progetto di Visual Studio in cui scrivere una libreria di classi C# e creare un file `.dll`.
+Visual Studio è un potente IDE in cui è possibile creare un progetto, aggiungere riferimenti, creare file `.dll` ed eseguire il debug. Quando si crea un nuovo progetto, in Visual Studio viene creata anche una soluzione, una struttura per l'organizzazione dei progetti. Più progetti possono coesistere all'interno di un'unica soluzione ed essere costruiti insieme. Per creare un nodo ZeroTouch, è necessario avviare un nuovo progetto di Visual Studio in cui scrivere una libreria di classi C# e creare un file `.dll`.
 
 ![Creazione di un nuovo progetto in Visual Studio](images/vs-new-project-1.jpg)
 
@@ -35,28 +35,28 @@ In Visual Studio si creerà e si aprirà automaticamente un file C#. Dobbiamo as
  }
 ```
 
-![Utilizzo di Solution Explorer](images/vs-edit-class.jpg)
+![Utilizzo di Esplora soluzioni](images/vs-edit-class.jpg)
 
-> 1. Aprire le finestre Solution Explorer e Output da `View`.
-> 2. Rinominare il file `Class1.cs` con `SampleFunctions.cs` in Solution Explorer a destra.
+> 1. Aprire le finestre Esplora soluzioni e Output da `Visualizza`.
+> 2. Rinominare il file `Class1.cs` con `SampleFunctions.cs` in Esplora soluzioni a destra.
 > 3. Aggiungere il codice riportato sopra per la funzione di moltiplicazione. Descriveremo le specifiche di come Dynamo leggerà le classi C# in un secondo momento.
-> 4. Solution Explorer: consente di accedere a tutto ciò che è presente nel progetto.
+> 4. Esplora soluzioni: consente di accedere a tutto ciò che è presente nel progetto.
 > 5. La finestra Output: ci servirà in seguito per vedere se la creazione è andata a buon fine.
 
 Il passaggio successivo consiste nella creazione del progetto, ma prima di procedere con questa operazione dobbiamo verificare alcune impostazioni. Assicurarsi innanzitutto che l'opzione `Any CPU` o `x64` sia selezionata in Platform target e che l'opzione `Prefer 32-bit` sia deselezionata in Project Properties.
 
 ![Impostazioni di creazione di Visual Studio](images/vs-build-settings.jpg)
 
-> 1. Aprire le proprietà del progetto selezionando `Project > "ProjectName" Properties`.
-> 2. Selezionare la pagina `Build`.
+> 1. Aprire le proprietà del progetto selezionando `Progetto > "NomeProgetto" > Properties`.
+> 2. Selezionare la pagina `Compilazione`.
 > 3. Selezionare `Any CPU` o `x64` dal menu a discesa.
-> 4. Assicurarsi che l'opzione `Prefer 32-bit` sia deselezionata.
+> 4. Assicurarsi che l'opzione `Preferisci 32 bit` sia deselezionata.
 
-Ora possiamo realizzare il progetto per creare un file `.dll`. A tale scopo, selezionare `Build Solution` dal menu `Build` o utilizzare il tasto di scelta rapida `CTRL+SHIFT+B`.
+Ora possiamo realizzare il progetto per creare un file `.dll`. A tale scopo, selezionare `Compila soluzione` dal menu `Compilazione` o utilizzare il tasto di scelta rapida `CTRL+SHIFT+B`.
 
 ![Creazione di una soluzione](images/vs-build.jpg)
 
-> 1. Selezionare `Build > Build Solution`.
+> 1. Selezionare `Compilazione > Compila soluzione`.
 > 2. È possibile determinare se il progetto è stato creato correttamente controllando la finestra Output.
 
 Se il progetto è stato creato correttamente, nella cartella `bin` del progetto sarà presente un file `.dll` denominato `MyCustomNode`. Per questo esempio abbiamo lasciato il percorso del file del progetto di default di Visual Studio: `c:\users\username\documents\visual studio 2015\Projects`. Diamo un'occhiata alla struttura dei file del progetto.
@@ -68,14 +68,14 @@ Se il progetto è stato creato correttamente, nella cartella `bin` del progetto 
 > 3. Il file della classe.
 > 4. Poiché la configurazione della nostra soluzione è stata impostata su `Debug`, il file `.dll` verrà creato in `bin\Debug`.
 
-Ora possiamo aprire Dynamo e importare il file `.dll`. Con la funzione Add, accedere alla posizione `bin` del progetto e selezionare il file `.dll` da aprire.
+Ora possiamo aprire Dynamo e importare il file `.dll`. Con la funzione Add-ons, accedere alla posizione `bin` del progetto e selezionare il file `.dll` da aprire.
 
 ![Apertura del file .dll del progetto](images/dyn-import-dll.jpg)
 
-> 1. Selezionare il pulsante Add per importare un file `.dll`.
+> 1. Selezionare il pulsante Add-ons per importare un file `.dll`.
 > 2. Individuare la posizione del progetto. Il nostro progetto si trova nel percorso dei file di default di Visual Studio: `C:\Users\username\Documents\Visual Studio 2015\Projects\MyCustomNode`.
 > 3. Selezionare il file `MyCustomNode.dll` da importare.
-> 4. Fare clic su `Open` per caricare il file `.dll`.
+> 4. Fare clic su `Apri` per caricare il file `.dll`.
 
 Se nella libreria viene creata una categoria denominata `MyCustomNode`, il file .dll è stato importato correttamente. Tuttavia, Dynamo ha creato due nodi da quello che voleva essere un singolo nodo. Nella sezione successiva spiegheremo perché ciò accade e come Dynamo legge un file .dll.
 
@@ -134,21 +134,21 @@ Per fare riferimento a questi pacchetti in un progetto di Visual Studio, scarica
 
 ![Apertura di Gestione pacchetti NuGet](images/vs-nuget-package-manager2.jpg)
 
-> 1. Aprire Gestione pacchetti NuGet selezionando `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`.
+> 1. Aprire Gestione pacchetti NuGet selezionando `Strumenti > Gestione pacchetti NuGet > Gestione pacchetti NuGet per la soluzione`.
 
 Questo è Gestione pacchetti NuGet. Questa finestra mostra i pacchetti installati per il progetto e consente all'utente di cercarne altri. Se viene rilasciata una nuova versione del pacchetto DynamoServices, è possibile aggiornare i pacchetti da questa posizione o ripristinare una versione precedente.
 
 ![Gestione pacchetti NuGet](images/vs-nuget-package-manager.jpg)
 
-> 1. Selezionare Browse e cercare DynamoVisualProgramming per visualizzare i pacchetti di Dynamo.
+> 1. Selezionare Sfoglia e cercare DynamoVisualProgramming per visualizzare i pacchetti di Dynamo.
 > 2. I pacchetti di Dynamo. Selezionandone uno, verranno mostrate la versione corrente e la descrizione del loro contenuto.
-> 3. Selezionare la versione del pacchetto desiderata e fare clic su Install. In questo modo viene installato un pacchetto per il progetto specifico in cui si sta lavorando. Poiché si sta utilizzando la release stabile più recente di Dynamo, versione 1.3, scegliere la versione del pacchetto corrispondente.
+> 3. Selezionare la versione del pacchetto desiderata e fare clic su Installa. In questo modo viene installato un pacchetto per il progetto specifico in cui si sta lavorando. Poiché si sta utilizzando la release stabile più recente di Dynamo, versione 1.3, scegliere la versione del pacchetto corrispondente.
 
-Per aggiungere manualmente un pacchetto scaricato dal browser, aprire Reference Manager da Solution Explorer e cercare il pacchetto.
+Per aggiungere manualmente un pacchetto scaricato dal browser, aprire Gestione riferimenti da Esplora soluzioni e cercare il pacchetto.
 
 ![Reference Manager](images/vs-manual-dynamo-package.jpg)
 
-> 1. Fare clic con il pulsante destro del mouse su `References` e selezionare `Add Reference`.
-> 2. Selezionare `Browse` per accedere alla posizione del pacchetto.
+> 1. Fare clic con il pulsante destro del mouse su `Riferimenti` e selezionare `Aggiungi riferimento`.
+> 2. Selezionare `Sfoglia` per accedere alla posizione del pacchetto.
 
 Ora che Visual Studio è configurato correttamente e abbiamo aggiunto un file `.dll` a Dynamo, abbiamo una solida base per i concetti futuri. Questo è solo l'inizio, quindi è bene continuare a seguirci per ulteriori informazioni su come creare un nodo personalizzato.

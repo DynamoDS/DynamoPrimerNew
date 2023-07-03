@@ -1,4 +1,4 @@
-# Ulteriori informazioni sul concetto di zero-touch 
+# Ulteriori informazioni sul concetto di zero-touch
 
 Dopo aver capito come si crea un progetto zero-touch, possiamo approfondire le specifiche della creazione di un nodo, illustrando l'esempio ZeroTouchEssentials nella pagina di Dynamo su Github.
 
@@ -74,7 +74,7 @@ namespace ZeroTouchEssentials
 
 > Fare riferimento a questo esempio di codice in [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L70).
 
-Un ddo che restituisce più output.
+Un nodo che restituisce più output.
 
 ![Più output](images/multipleoutputs.png)
 
@@ -88,7 +88,7 @@ Un ddo che restituisce più output.
   * Ad esempio: `/// Documentation text and XML goes here`
 * Dopo le tre barre, creare tag XML sopra i metodi che Dynamo leggerà durante l'importazione del file .dll.
   * Ad esempio: `/// <summary>...</summary>`
-* Attivare la documentazione XML in Visual Studio scegliendo `Project > Project Properties > Build` e selezionando `XML documentation file`.
+* Attivare la documentazione XML in Visual Studio scegliendo `Progetto > NomeProgetto > Properties > Compilazione` e selezionando `File di documentazione XML`.
 
 ![Generazione di un file XML](images/vs-xml.jpg)
 
@@ -248,8 +248,8 @@ Quando si pubblica una versione più recente di una libreria, i nomi dei nodi po
 
 ![File Migrations](images/vs-migrations-file.jpg)
 
-> 1. Fare clic con il pulsante destro del mouse e selezionare `Add > New Item`.
-> 2. Scegliere `XML File`.
+> 1. Fare clic con il pulsante destro del mouse e selezionare `Aggiungi > Nuovo elemento`.
+> 2. Scegliere `File XML`.
 > 3. Per questo progetto, il nome del file Migrations è `ZeroTouchEssentials.Migrations.xml`.
 
 Questo codice di esempio indica a Dynamo che qualsiasi nodo denominato `GetClosestPoint` è ora denominato `ClosestPointTo`.

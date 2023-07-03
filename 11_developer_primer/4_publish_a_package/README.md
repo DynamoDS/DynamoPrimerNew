@@ -1,4 +1,4 @@
-# Pubblicazione di un pacchetto 
+# Pubblicazione di un pacchetto
 
 ### Pubblicazione di un pacchetto <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -14,19 +14,19 @@ Nel browser, cercare i pacchetti e visualizzare le statistiche: [https://dynamop
 
 ![Ricerca di pacchetti](images/dynamopackagemanager.jpg)
 
-> 1. Cercare i pacchetti in linea: `Packages > Search for a Package...`.
-> 2. Visualizzare/Modificare i pacchetti installati: `Packages > Manage Packages...`.
-> 3. Pubblicare un nuovo pacchetto: `Packages > Publish New Package...`.
+> 1. Cercare i pacchetti in linea: `Pacchetti > Ricerca pacchetti`.
+> 2. Visualizzare/Modificare i pacchetti installati: `Pacchetti > Gestisci pacchetti`.
+> 3. Pubblicare un nuovo pacchetto: `Pacchetti > Pubblica nuovo pacchetto`.
 
 #### Pubblicazione di un pacchetto <a href="#publishing-a-package" id="publishing-a-package"></a>
 
 I pacchetti vengono pubblicati da Package Manager all'interno di Dynamo. Il processo consigliato consiste nel pubblicare localmente, verificare il pacchetto e quindi pubblicarlo in linea per condividerlo con la comunità. Utilizzando il case study NodeModel, verranno eseguiti i passaggi necessari per pubblicare il nodo RectangularGrid come pacchetto localmente e quindi in linea.
 
-Avviare Dynamo e selezionare `Packages > Publish New Package...` per aprire la finestra `Publish a Package`.
+Avviare Dynamo e selezionare `Pacchetti > Pubblica nuovo pacchetto... ` per aprire la finestra `Pubblica un pacchetto`.
 
 ![Pubblicazione di un pacchetto](images/dyn-publish-package-add-files.jpg)
 
-> 1. Selezionare `Add file...` per cercare i file da aggiungere al pacchetto.
+> 1. Selezionare `Aggiungi file` per cercare i file da aggiungere al pacchetto.
 > 2. Selezionare i due file `.dll` dal case study NodeModel.
 > 3. Selezionare `Ok`.
 
@@ -45,21 +45,21 @@ Dopo la pubblicazione di un pacchetto, i nodi saranno disponibili nella libreria
 
 > 1. Il pacchetto appena creato nella libreria di Dynamo
 
-Quando il pacchetto è pronto per la pubblicazione in linea, aprire Package Manager e scegliere `Publish`, quindi `Publish Online`.
+Quando il pacchetto è pronto per la pubblicazione in linea, aprire Package Manager e scegliere `Pubblica`, quindi `Pubblica in linea`.
 
 ![Pubblicazione di un pacchetto in Package Manager](images/dyn-publish-package-directory.jpg)
 
 > 1. Per vedere come Dynamo ha formattato il pacchetto, fare clic sui tre punti verticali a destra di CustomNodeModel e scegliere Mostra directory principale.
-> 2. Selezionare `Publish`, quindi `Publish Online` nella finestra Pubblica un pacchetto di Dynamo.
-> 3. Per eliminare un pacchetto, selezionare `Delete`.
+> 2. Selezionare `Pubblica`, quindi `Pubblica in linea` nella finestra Pubblica un pacchetto di Dynamo.
+> 3. Per eliminare un pacchetto, selezionare `Elimina`.
 
 #### Come aggiornare un pacchetto <a href="#how-do-i-update-a-package" id="how-do-i-update-a-package"></a>
 
-L'aggiornamento di un pacchetto è un processo simile alla pubblicazione. Aprire Package Manager, selezionare `Publish Version...` nel pacchetto che deve essere aggiornato e immettere una versione successiva.
+L'aggiornamento di un pacchetto è un processo simile alla pubblicazione. Aprire Package Manager, selezionare `Pubblica versione...` nel pacchetto che deve essere aggiornato e immettere una versione successiva.
 
 ![Pubblicazione della versione di un pacchetto](images/dyn-publish-package-version.jpg)
 
-> 1. Selezionare `Publish Version` per aggiornare un pacchetto esistente con nuovi file nella directory principale, quindi scegliere se deve essere pubblicato localmente o in linea.
+> 1. Selezionare `Pubblica versione...` per aggiornare un pacchetto esistente con nuovi file nella directory principale, quindi scegliere se deve essere pubblicato localmente o in linea.
 
 #### Client Web di Package Manager <a href="#package-manager-web-client" id="package-manager-web-client"></a>
 

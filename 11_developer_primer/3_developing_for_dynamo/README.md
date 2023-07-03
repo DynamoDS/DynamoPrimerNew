@@ -1,4 +1,4 @@
-# Sviluppo per Dynamo 
+# Sviluppo per Dynamo
 
 Indipendentemente dal livello di esperienza, la piattaforma Dynamo è progettata per consentire a tutti gli utenti di contribuire. Esistono diverse opzioni di sviluppo che si rivolgono a diversi livelli di abilità e competenze, ciascuno con i suoi punti di forza e di debolezza a seconda dell'obiettivo. Di seguito illustreremo le diverse opzioni e come scegliere una piuttosto che un'altra.
 
@@ -82,7 +82,7 @@ Questi nodi sono un livello più basso nella struttura di Dynamo. Si basano sull
 
 Con questo metodo è possibile:
 
-* Crea un'interfaccia utente del nodo completamente personalizzabile con dispositivi di scorrimento, immagini, colori e così via (ad esempio, nodo ColorRange).
+* Creare un'interfaccia utente del nodo completamente personalizzabile con dispositivi di scorrimento, immagini, colori e così via (ad esempio, nodo ColorRange).
 * Accedere a ciò che accade nell'area di disegno di Dynamo e intervenire.
 * Personalizzare il collegamento.
 * Caricare elementi in Dynamo come pacchetto.

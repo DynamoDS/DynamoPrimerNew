@@ -1,4 +1,4 @@
-# Compilazione di Dynamo dall'origine 
+# Compilazione di Dynamo dall'origine
 
 L'origine di Dynamo è ospitata su GitHub per consentire a chiunque di clonare e apportare contributi. In questo capitolo verrà illustrato come clonare il repository utilizzando git, compilare i file di origine con Visual Studio, eseguire una build locale e sottoporla a debug e infine effettuare eventuali nuove modifiche da GitHub.
 
@@ -61,10 +61,10 @@ Al termine dell'installazione, è possibile avviare Visual Studio e aprire la so
 
 ![Apertura del file della soluzione](images/vs-open-dynamo.jpg)
 
-> 1. Selezionare `File > Open > Project/Solution`.
+> 1. Selezionare `File > Apri > Progetto/Soluzione`.
 > 2. Individuare il repository di Dynamo e aprire la cartella `src`.
 > 3. Selezionare il file della soluzione `Dynamo.All.sln`.
-> 4. Selezionare `Open`.
+> 4. Selezionare `Apri`.
 
 Prima di poter creare la soluzione, è necessario specificare alcune impostazioni. È necessario innanzitutto creare una versione di debug di Dynamo in modo che Visual Studio possa raccogliere più informazioni durante il debug per facilitare lo sviluppo e si desidera dedicarsi a qualsiasi CPU.
 
@@ -81,7 +81,7 @@ Con il progetto aperto, è possibile creare la soluzione. Questo processo creer�
 
 > La compilazione del progetto ripristinerà le dipendenze NuGet.
 >
-> 1. Selezionare `Build > Build Solution`.
+> 1. Selezionare `Compilazione > Compila soluzione`.
 > 2. Verificare che la build sia stata eseguita correttamente nella finestra Output. Il risultato dovrebbe essere simile a `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`.
 
 #### Esecuzione di una build locale <a href="#running-a-local-build" id="running-a-local-build"></a>
@@ -122,9 +122,9 @@ In alternativa, è possibile eseguire il debug di un processo di Dynamo che è g
 
 > Associazione di un processo in esecuzione a Visual Studio
 >
-> 1. Selezionare `Debug > Attach to Process...`.
+> 1. Selezionare `Debug > Connetti a processo`.
 > 2. Scegliere `DynamoSandbox.exe`.
-> 3. Selezionare `Attach`.
+> 3. Selezionare `Connetti`.
 
 In entrambe le situazioni, il debugger viene associato ad un processo di cui si desidera eseguire il debug. È possibile impostare punti di interruzione nel codice prima o dopo l'avvio del debugger, in modo che il processo venga messo in pausa immediatamente prima di eseguire quella riga di codice. Se durante il debug viene generata un'eccezione non rilevata, Visual Studio passerà alla posizione in cui si è verificata nel codice sorgente. Si tratta di un metodo efficiente per individuare semplici arresti anomali, eccezioni non gestite e per comprendere il flusso di esecuzione di un'applicazione.
 
