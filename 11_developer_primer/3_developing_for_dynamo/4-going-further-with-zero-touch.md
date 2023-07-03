@@ -1,4 +1,4 @@
-# Conceptos avanzados de Zero-Touch 
+# Conceptos avanzados de Zero-Touch
 
 Una vez que sabemos cómo crear un proyecto Zero-Touch, podemos profundizar en los detalles de la creación de un nodo mediante el ejemplo ZeroTouchEssentials en el GitHub de Dynamo.
 
@@ -225,7 +225,7 @@ Los recursos de geometría que no se devuelven a partir de las funciones deberá
 
     > Puede encontrar documentación sobre la instrucción "using" [aquí](https://msdn.microsoft.com/en-us/library/yh598w02.aspx).
     >
-    > Consulte el artículos sobre [mejoras en la estabilidad de la geometría de Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297) para obtener más información sobre las nuevas funciones de estabilidad introducidas en Dynamo 2.5.
+    > Consulte el artículo sobre [mejoras en la estabilidad de la geometría de Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297) para obtener más información sobre las nuevas funciones de estabilidad introducidas en Dynamo 2.5.
 *   Se muestra lo siguiente con llamadas manuales a "Dispose":
 
     ```

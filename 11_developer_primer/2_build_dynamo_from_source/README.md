@@ -1,4 +1,4 @@
-# Compilar Dynamo a partir del código fuente 
+# Compilar Dynamo a partir del código fuente
 
 El código fuente de Dynamo está alojado en GitHub para que cualquiera pueda clonarlo y contribuir a él. En este capítulo, veremos cómo clonar el repositorio mediante git, compilar los archivos de código fuente con Visual Studio, ejecutar y depurar una compilación local, y extraer todos los nuevos cambios de GitHub.
 
@@ -45,7 +45,7 @@ Sabemos que git funciona sin problemas si la operación de clonación se ha comp
 ![Archivos de código fuente de Dynamo](images/source-files.jpg)
 
 > 1. Archivos de código fuente de Dynamo
-> 2. Archivo de git
+> 2. Archivos de git
 
 #### Compilación del repositorio mediante Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
@@ -100,9 +100,9 @@ Para obtener instrucciones sobre la compilación de Dynamo para otras plataforma
 
 La depuración es un proceso de identificación, aislamiento y corrección de errores o problemas. Una vez que Dynamo se haya creado correctamente a partir del código fuente, podemos utilizar varias herramientas de Visual Studio para depurar una aplicación en ejecución, por ejemplo, el complemento DynamoRevit. Podemos analizar su código fuente para encontrar la raíz de un problema u observar el código que se está ejecutando en ese momento. Para obtener una explicación más detallada sobre cómo desplazarse por el código en Visual Studio y cómo depurarlo, consulte la [documentación de Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
-Para la aplicación Dynamo independiente, DynamoSandbox, se abordarán estas dos opciones de depuración:
+Para la aplicación de Dynamo independiente, DynamoSandbox, se abordarán estas dos opciones de depuración:
 
-* Compilar e iniciar Dynamo directamente desde Visual Studio
+* Compile e inicie Dynamo directamente desde Visual Studio.
 * Asocie Visual Studio a un proceso en ejecución de Dynamo.
 
 El inicio de Dynamo desde Visual Studio vuelve a compilar la solución para cada sesión de depuración si es necesario, por lo que si hemos realizado cambios en el código fuente, estos se incorporarán al depurar. Con la solución `Dynamo.All.sln` aún abierta, seleccione `Debug`, `AnyCPU` y `DynamoSandbox` en los menús desplegables y, a continuación, haga clic en `Start`. Esta acción compilará Dynamo e iniciará un nuevo proceso (DynamoSandbox.exe) y asociará el depurador de Visual Studio a él.

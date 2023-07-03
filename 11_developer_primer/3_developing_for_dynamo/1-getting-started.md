@@ -1,4 +1,4 @@
-# Introducción 
+# Introducción
 
 Antes de iniciar el proceso de desarrollo, es importante sentar unas bases sólidas para un nuevo proyecto. Hay varias plantillas de proyectos en la comunidad de desarrolladores de Dynamo que suponen excelentes puntos de partida, pero es más valioso conocer cómo iniciar un proyecto desde cero. Compilar un proyecto desde el principio nos permitirá comprender mejor el proceso de desarrollo.
 
@@ -20,7 +20,7 @@ Visual Studio es un eficaz IDE en el que podemos crear un proyecto, añadir refe
 > 4. Establezca la ruta de archivo del proyecto. En este ejemplo, utilizaremos la ubicación por defecto.
 > 5. Seleccione `Ok`.
 
-Visual Studio creará y abrirá automáticamente un archivo de C#. Se recomienda asignarle un nombre adecuado, configurar el espacio de trabajo y reemplazar el código por defecto con este método de multiplicación.
+Visual Studio creará y abrirá automáticamente un archivo de C#. Se recomienda asignarle un nombre adecuado, configurar el espacio de trabajo y reemplazar el código por defecto por este método de multiplicación.
 
 ```
  namespace MyCustomNode
@@ -52,7 +52,7 @@ El siguiente paso es compilar el proyecto, pero, antes de ello, hay que comproba
 > 3. Seleccione `Any CPU` o `x64` en el menú desplegable.
 > 4. Asegúrese de que `Prefer 32-bit` está desactivado.
 
-Ahora podemos compilar el proyecto para crear un archivo `.dll`. Para ello, seleccione `Build Solution` en el menú `Build` o utilice el método abreviado `CTRL+SHIFT+B`.
+Ahora podemos compilar el proyecto para crear un archivo `.dll`. Para ello, seleccione `Build Solution` en el menú `Build` o utilice el método abreviado `CTRL+MAYÚS+B`.
 
 ![Compilación de una solución](images/vs-build.jpg)
 
