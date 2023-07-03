@@ -1,4 +1,4 @@
-# Kompilowanie dodatku Dynamo ze źródła 
+# Kompilowanie dodatku Dynamo ze źródła
 
 Źródło dodatku Dynamo jest hostowane w serwisie Github, w którym każdy może je klonować i współtworzyć. W tym rozdziale omówimy sposób klonowania repozytorium za pomocą narzędzia git, kompilowania plików źródłowych za pomocą programu Visual Studio, uruchamiania i debugowania kompilacji lokalnej oraz ściągania (pull) nowych zmian z serwisu Github.
 
@@ -73,7 +73,7 @@ Przed skompilowaniem rozwiązania należy określić kilka ustawień. Najpierw n
 > Staną się one folderami w folderze `bin`
 >
 > 1. W tym przykładzie jako konfigurację rozwiązania wybraliśmy opcję `Debug`
-> 2. Jak platformę rozwiązania ustaw `Any CPU`
+> 2. Jako platformę rozwiązania ustaw `Any CPU`
 
 Przy otwartym projekcie możemy skompilować rozwiązanie. W tym procesie zostanie utworzony plik DynamoSandbox.exe, który można uruchomić.
 

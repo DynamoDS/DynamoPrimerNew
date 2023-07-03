@@ -1,8 +1,8 @@
-# Przewodnik Primer programisty 
+# Przewodnik Primer programisty
 
 #### Jaki jest cel tego przewodnika? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
-Celem tego podręcznika jest zapewnienie pomocy w poruszaniu się po zakresie możliwości programowania za pomocą języka C# w dodatku Dynamo: od tworzenia węzłów Zero-Touch po kompilowanie rozszerzeń.
+Celem tego przewodnika jest zapewnienie pomocy w poruszaniu się po zakresie możliwości programowania za pomocą języka C# w dodatku Dynamo: od tworzenia węzłów Zero-Touch po kompilowanie rozszerzeń.
 
 ![Źródło dodatku Dynamo w serwisie GitHub](images/dynamogithub.jpg)
 > Źródło dodatku Dynamo w serwisie GitHub
@@ -29,7 +29,7 @@ Celem tego podręcznika jest zapewnienie pomocy w poruszaniu się po zakresie mo
 
 [https://dynamods.github.io/DynamoAPI/](https://dynamods.github.io/DynamoAPI/)
 
-**DynamoBIM** — najlepsze źródło dodatkowych informacji, treści edukacyjnych oraz forów to witryna DynamoBIM.
+**DynamoBIM**: najlepsze źródło dodatkowych informacji, treści edukacyjnych oraz forów to witryna DynamoBIM.
 
 [https://dynamobim.org](https://dynamobim.org)
 
@@ -37,10 +37,10 @@ Celem tego podręcznika jest zapewnienie pomocy w poruszaniu się po zakresie mo
 
 [https://dictionary.dynamobim.com/](https://dictionary.dynamobim.com)
 
-**Podręcznik języka DesignScript** — podręcznik dotyczący języka DesignScript w formacie PDF
+**Podręcznik języka DesignScript**: podręcznik dotyczący języka DesignScript w formacie PDF
 
 [PDF](https://dynamobim.org/wp-content/uploads/forum-assets/colin-mccroneautodesk-com/07/10/Dynamo\_language\_guide\_version\_1.pdf)
 
-#### Jak można zasugerować zmiany w tym podręczniku? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
+#### Jak można zasugerować zmiany w tym przewodniku? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 
 Do tej dokumentacji można zgłaszać sugestie. Można je przekazywać bezpośrednio w serwisie Github, tworząc żądania zmian.
