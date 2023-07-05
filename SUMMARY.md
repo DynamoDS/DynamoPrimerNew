@@ -84,7 +84,7 @@
     * [Parametric Vase](10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
     * [Attractor Points](10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
   * [Concept Index](10\_sample\_workflow/10-2\_concept-index.md)
-* [Developer Primer](11\_developer\_primer/1-introduction/README.md)
+* [Developer Primer](11\_developer\_primer/1\_developer\_primer\_intro/README.md)
   * [Build Dynamo from Source](11\_developer\_primer/2\_build\_dynamo\_from\_source/README.md)
     * [Build DynamoRevit from Source](11\_developer\_primer/2\_build\_dynamo\_from\_source/1-build-dynamorevit-from-source.md)
   * [Developing for Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)
