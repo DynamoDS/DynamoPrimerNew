@@ -84,7 +84,7 @@
     * [パラメータを使用する花瓶](10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
     * [アトラクタ ポイント](10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
   * [概念インデックス](10\_sample\_workflow/10-2\_concept-index.md)
-* [開発者向け Primer](11\_developer\_primer/1-introduction/README.md)
+* [開発者向け Primer](11\_developer\_primer/1\_developer\_primer\_intro/README.md)
   * [ソースから Dynamo をビルドする](11\_developer\_primer/2\_build\_dynamo\_from\_source/README.md)
     * [ソースから DynamoRevit をビルドする](11\_developer\_primer/2\_build\_dynamo\_from\_source/1-build-dynamorevit-from-source.md)
   * [Dynamo 向けの開発](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)
