@@ -84,7 +84,7 @@
     * [Wazon parametryczny](10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
     * [Punkty przyciągania](10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
   * [Indeks pojęć](10\_sample\_workflow/10-2\_concept-index.md)
-* [Przewodnik Primer programisty](11\_developer\_primer/1-introduction/README.md)
+* [Przewodnik Primer programisty](11\_developer\_primer/1\_developer\_primer\_intro/README.md)
   * [Kompilowanie dodatku Dynamo ze źródła](11\_developer\_primer/2\_build\_dynamo\_from\_source/README.md)
     * [Kompilowanie dodatku DynamoRevit ze źródła](11\_developer\_primer/2\_build\_dynamo\_from\_source/1-build-dynamorevit-from-source.md)
   * [Opracowywanie rozwiązań dla dodatku Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)
