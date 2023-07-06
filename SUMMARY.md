@@ -84,7 +84,7 @@
     * [Параметрическая ваза](10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
     * [Точки притяжения](10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
   * [Индекс понятий](10\_sample\_workflow/10-2\_concept-index.md)
-* [Руководство для разработчиков](11\_developer\_primer/1-introduction/README.md)
+* [Руководство для разработчиков](11\_developer\_primer/1\_developer\_primer\_intro/README.md)
   * [Сборка Dynamo на основе исходного кода](11\_developer\_primer/2\_build\_dynamo\_from\_source/README.md)
     * [Сборка DynamoRevit на основе исходного кода](11\_developer\_primer/2\_build\_dynamo\_from\_source/1-build-dynamorevit-from-source.md)
   * [Разработка для Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)
