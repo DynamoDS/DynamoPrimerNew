@@ -84,7 +84,7 @@
     * [Parametrická váza](10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
     * [Body atraktoru](10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
   * [Rejstřík konceptů](10\_sample\_workflow/10-2\_concept-index.md)
-* [Příručka Primer pro vývojáře](11\_developer\_primer/1-introduction/README.md)
+* [Příručka Primer pro vývojáře](11\_developer\_primer/1\_developer\_primer\_intro/README.md)
   * [Sestavení aplikace Dynamo ze zdroje](11\_developer\_primer/2\_build\_dynamo\_from\_source/README.md)
     * [Sestavení doplňku DynamoRevit ze zdroje](11\_developer\_primer/2\_build\_dynamo\_from\_source/1-build-dynamorevit-from-source.md)
   * [Vývoj pro aplikaci Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)
