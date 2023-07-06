@@ -84,7 +84,7 @@
     * [參數式花瓶](10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
     * [牽引點](10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
   * [概念索引](10\_sample\_workflow/10-2\_concept-index.md)
-* [Developer Primer](11\_developer\_primer/1-introduction/README.md)
+* [Developer Primer](11\_developer\_primer/1\_developer\_primer\_intro/README.md)
   * [從原始碼建置 Dynamo](11\_developer\_primer/2\_build\_dynamo\_from\_source/README.md)
     * [從原始碼建置 DynamoRevit](11\_developer\_primer/2\_build\_dynamo\_from\_source/1-build-dynamorevit-from-source.md)
   * [為 Dynamo 開發](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)
