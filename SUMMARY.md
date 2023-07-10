@@ -1,6 +1,6 @@
 # 目录
 
-* [关于](README.md)
+* [关于](README.md) 
 * [简介](1\_introduction/README.md)
   * [什么是 Dynamo 以及它是如何工作的？](1\_introduction/1-what-is-dynamo.md)
   * [Primer 用户手册、Dynamo 社区和平台](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md)
