@@ -4,7 +4,7 @@ Dynamo offers a variety of ways to create a package for your personal use or for
 
 ## MapToSurface Package
 
-We're going to work with a sample package which demonstrates the UV mapping of points from one surface to another. We've already built the fundamentals of the tool in the [Creating a Custom Node](../10\_custom-nodes/10-2\_creating.md) section of this primer. The files below demonstrate how we can take the concept of UV Mapping and develop a set of tools for a publishable library.
+We're going to work with a sample package which demonstrates the UV mapping of points from one surface to another. We've already built the fundamentals of the tool in the [Creating a Custom Node](../6-1\_custom-nodes/2-creating.md) section of this primer. The files below demonstrate how we can take the concept of UV Mapping and develop a set of tools for a publishable library.
 
 In this image, we map a point from one surface to another using UV coordinates. The package is based on this concept, but with more complex geometry.
 
@@ -20,7 +20,7 @@ In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package
 
 After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (5).jpg>)
 
 With the package now installed, let's walk through how it's set up.
 
@@ -30,7 +30,7 @@ The package we're creating uses five custom nodes that we've built for reference
 
 This is a simple package with five custom nodes. In the steps below, we'll briefly talk about each custom node's setup.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Next, open the _"extra"_ folder, which houses all of the files in the package wh
 
 #### **01-PanelingWithPolygons**
 
-This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../10\_custom-nodes/10-2\_creating.md).
+This example file demonstrates how _"PointsToSurface"_ may be used to panelize a surface based on a grid of rectangles. This should look familiar, as we demonstrated a similar workflow in the [previous chapter](../6-1\_custom-nodes/2-creating.md).
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

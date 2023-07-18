@@ -22,7 +22,7 @@ The workflow we'll setup in the exercise below allows us to access all of this d
 
 ### Multiple Elements and Lists
 
-The [first exercise](8-4\_creating.md#exercise) below will walk through how Dynamo references data for Revit element creation. To generate multiple adaptive components, we define a list of lists, where each list has three points representing each point of the adaptive component. We'll keep this in mind as we manage the data structures in Dynamo.
+The [first exercise](4-creating.md#exercise-generate-elements-and-lists) below will walk through how Dynamo references data for Revit element creation. To generate multiple adaptive components, we define a list of lists, where each list has three points representing each point of the adaptive component. We'll keep this in mind as we manage the data structures in Dynamo.
 
 ![](images/4/creating-multipleelementsandlists01.jpg)
 
@@ -30,7 +30,7 @@ The [first exercise](8-4\_creating.md#exercise) below will walk through how Dyna
 
 Another method for importing parametric Dynamo geometry into Revit is with DirectShape. In summary, the DirectShape element and related classes support the ability to store externally created geometric shapes in a Revit document. The geometry can include closed solids or meshes. DirectShape is primarily intended for importing shapes from other data formats such as IFC or STEP where not enough information is available to create a "real" Revit element. Like the IFC and STEP workflow, the DirectShape functionality works well with importing Dynamo created geometries into Revit projects as real elements.
 
-Let's walk through [second exercise](8-4\_creating.md#exercise-directshape-elements) for importing Dynamo geometry as a DirectShape into our Revit project. Using this method, we can assign an imported geometry's category, material, and name - all while maintaining a parametric link to our Dynamo graph.
+Let's walk through [second exercise](4-creating.md#exercise-directshape-elements) for importing Dynamo geometry as a DirectShape into our Revit project. Using this method, we can assign an imported geometry's category, material, and name - all while maintaining a parametric link to our Dynamo graph.
 
 ## Exercise: Generate Elements and Lists
 

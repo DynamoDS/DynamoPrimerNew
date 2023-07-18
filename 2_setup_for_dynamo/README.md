@@ -12,7 +12,7 @@ Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civi
 
 To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](images/dynamoCore-halfSize.png) to launch it.
 
-![](<../7\_dynamo\_for\_revit/images/1/launchdynamofromrevit (1).jpg>)
+![](<../7\_dynamo\_for\_revit/images/1/launchdynamofromrevit (1) (2).jpg>)
 
 For more guidance on using Dynamo with a specific software, we recommend referring to the following sections:
 

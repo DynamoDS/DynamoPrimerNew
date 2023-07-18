@@ -39,7 +39,7 @@ In a Revit project or family editor, navigate to Addins and click Dynamo.\*
 \*Dynamo will run only in the file in which it was opened.
 {% endhint %}
 
-![](<../2\_setup\_for\_dynamo/images/launchdynamofromrevit (1).jpg>)
+![](<images/1/launchdynamofromrevit (1) (2).jpg>)
 
 When opening Dynamo in Revit, there is a new category called "Revit". This is a comprehensive addition to the UI which offers nodes specifically catering to Revit workflows.\*
 
@@ -51,7 +51,7 @@ When opening Dynamo in Revit, there is a new category called "Revit". This is a 
 
 ### Freezing Nodes
 
-Since Revit is a platform which provides robust project management, parametric operations in Dynamo can be complex and slow to calculate. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" section in the solids chapter.
+Since Revit is a platform which provides robust project management, parametric operations in Dynamo can be complex and slow to calculate. If Dynamo is taking a long time to calculate nodes, you may want to use the "freeze" node functionality in order to pause the execution of Revit operations while you develop your graph. For more information on freezing nodes, check out the "[Freezing](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)" section in the solids chapter.
 
 ### Community & Dynamo Blog
 

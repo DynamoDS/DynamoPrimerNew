@@ -96,7 +96,7 @@ The chop command divides lists based on a given list length. In some ways, chop 
 
 A **List.Map/Combine** applies a set function to an input list, but one step down in the hierarchy. Combinations are the same as Maps, except combinations can have multiple inputs corresponding to the input of a given function.
 
-_Note: This exercise was created with a previous version of Dynamo. Much of the_ **List.Map** _functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _below._
+_Note: This exercise was created with a previous version of Dynamo. Much of the_ **List.Map** _functionality has been resolved with the addition of the_ **List@Level** _feature. For more information, see_ [_List@Level_](3-lists-of-lists.md#lists-of-lists) _below._
 
 As a quick introduction, let's review the **List.Count** node from a previous section.
 

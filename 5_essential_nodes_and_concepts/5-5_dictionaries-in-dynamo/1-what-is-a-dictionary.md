@@ -22,11 +22,11 @@ The separation of dictionaries from lists introduces dictionaries as a first-cla
 * _New nodes_ have been introduced to the library to help you create, modify, and query dictionaries.
 *   Lists created in v1.x code blocks will automatically be migrated on load of the script to the new list syntax that uses square brackets `[ ]` instead of curly brackets `{ }` \\
 
-    ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
-***
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
+
+
 
 ### **Why should I care? What would you use these for?**
 

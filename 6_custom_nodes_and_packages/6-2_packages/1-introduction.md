@@ -67,7 +67,7 @@ Let's open up "SphereUnfold".
 
 After opening the file and hitting "Run" on the solver, we have an unfolded sphere! Example files like these are helpful for learning how to work with a new Dynamo package.
 
-![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1).jpg>)
 
 ### Dynamo Package Manager
 

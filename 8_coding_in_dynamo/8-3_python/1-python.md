@@ -1,6 +1,6 @@
 # Python Nodes
 
-Why would you use textual programming in Dynamo's visual programming environment? [Visual programming](../../a\_appendix/visual-programming-and-dynamo.md) has many advantages. It allows you to create programs without learning special syntax in an intuitive visual interface. However, a visual program can become cluttered, and can at times fall short in functionality. For example, Python offers much more achievable methods for writing conditional statements (if/then) and looping. Python is a powerful tool that can extend the capabilities of Dynamo and allow you to replace many nodes with a few concise lines of code.
+Why would you use textual programming in Dynamo's visual programming environment? [Visual programming](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) has many advantages. It allows you to create programs without learning special syntax in an intuitive visual interface. However, a visual program can become cluttered, and can at times fall short in functionality. For example, Python offers much more achievable methods for writing conditional statements (if/then) and looping. Python is a powerful tool that can extend the capabilities of Dynamo and allow you to replace many nodes with a few concise lines of code.
 
 **Visual Program:**
 
@@ -171,7 +171,7 @@ Since we will be both translating and rotating the solid modules, let’s use th
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

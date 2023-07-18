@@ -53,6 +53,10 @@ The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dyn
 
 ![](images/matterlab\_final-07.jpg)
 
+**Archilizer** was commissioned to update the primer to reflect the Dynamo 2.17. revisions.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
 ### Acknowledgments
 
 A special thanks to Ian Keough for initiating and guiding the Dynamo project.

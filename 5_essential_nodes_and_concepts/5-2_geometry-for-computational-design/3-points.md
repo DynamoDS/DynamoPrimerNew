@@ -4,7 +4,7 @@
 
 ### What is a Point?
 
-A [Point](5-3\_points.md#point-as-coordinates) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
+A [Point](3-points.md#deep-dive-into...) is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides.
 
 ### 2D & 3D Point
 

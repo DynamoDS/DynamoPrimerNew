@@ -4,7 +4,7 @@
 
 ### Vector
 
-[Vector ](5-2\_vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
+[Vector ](2-vectors.md#vector-1)is a representation of magnitude and direction, you can picture it as an arrow accelerating towards a particular direction at a given speed. It is a key component to our models in Dynamo. Note that, because they are in the Abstract category of "Helpers," when we create a Vector, we won't see anything in the Background Preview.
 
 ![Vectors in Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@
 
 ### Plane
 
-[Plane ](5-2\_vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
+[Plane ](2-vectors.md#plane-1)is a two dimensional surface, you can picture it as a flat surface that extends indefinitely. Each Plane has an Origin, X Direction, Y Direction, and a Z (Up) Direction.
 
 ![Planes in Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@
 
 ### Coordinate System
 
-[Coordinate system](5-2\_vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
+[Coordinate system](2-vectors.md#coordinate-system-1) is a system to determine the location of points or other geometric elements. The image below explains how it looks like in Dynamo and what each color represents.
 
 ![Coordinate System in Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

@@ -91,7 +91,7 @@ Frequently we will want to adjust the Program Flow in our Visual Program by edit
 
 * Change connection to an input Port, left-click on another input Port
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * To remove the Wire, pull the Wire away and left-click on Workspace
 
@@ -120,7 +120,7 @@ In case you prefer to hide the Wires in your graph, you can find this option fro
 
 With this setting, only the selected Nodes and its joining Wires will be shown in faint aqua highlight.
 
-![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+![](images/nodesandwires-hidewiressetting\(1\).gif)
 
 #### Hide Individual Wire Only
 

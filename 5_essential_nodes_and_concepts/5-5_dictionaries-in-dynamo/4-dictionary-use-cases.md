@@ -30,7 +30,7 @@ Now let's recreate this idea using dictionaries. First we need to collect all of
 > 1. We choose the Revit category we want to work with, (In this case, we are working with rooms).
 > 2. We tell Dynamo to collect all of those elements
 
-Next, we need to decide what keys we are going to use to look up this data by. (Information on keys can be found on the section, [What is a dictionary?](9-1\_what-is-a-dictionary.md)).
+Next, we need to decide what keys we are going to use to look up this data by. (Information on keys can be found on the section, [What is a dictionary?](1-what-is-a-dictionary.md)).
 
 ![](../images/5-5/4/dictionary-exerciseI-02.jpg)
 

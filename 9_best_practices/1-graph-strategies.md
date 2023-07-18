@@ -37,7 +37,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 > 1. Design Script written in Code Block
 > 2. Equivalent program in nodes
 >
-> For how to use Code Block, refer to [What's a Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> For how to use Code Block, refer to [What's a Code Block](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
 
 ### **Condense with Node to Code**
 
@@ -58,7 +58,7 @@ As you develop your Dynamo graph and test ideas, it can quickly grow in size and
 > 1. Existing program
 > 2. Code Block created from Node to Code
 >
-> For how to use Node to Code, refer to [Design Script Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> For how to use Node to Code, refer to [Design Script Syntax](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Access data flexibly with List@Level**
 
@@ -89,7 +89,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 > 1. Unorganized graph
 > 2. Aligned graph
 >
-> For how to use Node Alignment, refer to [Managing Your Program](3-4\_best\_practices.md).
+> For how to use Node Alignment, refer to [Managing Your Program](4-managing-your-program.md).
 
 ### **Descriptive labeling by renaming**
 
@@ -118,7 +118,7 @@ In addition to making your graph as simple and efficient as possible, strive for
 
 ## Flex Continuously
 
-While building your visual-script, it is important to verify that what is being returned is what you expected. Not all errors or issues will cause the program to fail immediately, especially null or zero values that could affect something far downstream. This strategy is also discussed in the context of text-scripting in [Scripting Strategies](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). The following practice will help ensure that you are getting what you expected.
+While building your visual-script, it is important to verify that what is being returned is what you expected. Not all errors or issues will cause the program to fail immediately, especially null or zero values that could affect something far downstream. This strategy is also discussed in the context of text-scripting in [Scripting Strategies](2-scripting-strategies.md). The following practice will help ensure that you are getting what you expected.
 
 ### **Monitor data with Watch and Preview Bubbles**
 
@@ -131,7 +131,7 @@ While building your visual-script, it is important to verify that what is being 
 > 1. The raw translation distances
 > 2. The values passed through the Sine equation
 >
-> For how to use Watch, refer to [Library](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> For how to use Watch, refer to [Library](../3\_user\_interface/2-library.md).
 
 ## Ensure Reusability
 
@@ -147,7 +147,7 @@ It is highly likely that someone else will be opening your program at some point
 * If there are **particular options or conditions that you want embedded in the graph**, you should use Presets for quick access
 * You can also use Presets to **reduce complexity by caching specific slider values** in a graph with long run times
 
-> For how to use Presets, refer to [Managing Your Data with Presets](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> For how to use Presets, refer to [Managing Your Data with Presets](1-graph-strategies.md#use-presets-to-embed-input-values).
 
 ### **Contain programs with Custom Nodes**
 
@@ -162,7 +162,7 @@ It is highly likely that someone else will be opening your program at some point
 > 1. Existing attractor program
 > 2. Custom Node that collects this program, PointGrid
 >
-> For how to use Custom Nodes, refer to [Custom Node Introduction](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> For how to use Custom Nodes, refer to [Custom Node Introduction](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
 
 ### **Build templates**
 

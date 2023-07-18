@@ -1,16 +1,16 @@
 # What's a Code Block
 
-Code blocks are a window deep into DesignScript, the programming language at the heart of Dynamo. Built from scratch to support exploratory design workflows, DesignScript is a readable and concise language that offers both immediate feedback to small bits of code and also scales to large and complex interactions. DesignScript also forms the backbone of the engine that drives most aspects of Dynamo “under the hood”. Because nearly all of the functionality found in Dynamo nodes and interactions have a one-to-one relationship with the scripting language, there are unique opportunities to move between node-based interactions and scripting in a fluid way. &#x20;
+Code blocks are a window deep into DesignScript, the programming language at the heart of Dynamo. Built from scratch to support exploratory design workflows, DesignScript is a readable and concise language that offers both immediate feedback to small bits of code and also scales to large and complex interactions. DesignScript also forms the backbone of the engine that drives most aspects of Dynamo “under the hood”. Because nearly all of the functionality found in Dynamo nodes and interactions have a one-to-one relationship with the scripting language, there are unique opportunities to move between node-based interactions and scripting in a fluid way.
 
 ![](../images/8-1/1/codeblock.jpg)
 
-For beginners, nodes can be automatically converted to text syntax to aid in learning DesignScript or simply to reduce the size of larger sections of graphs. This is done using a process called "Node to Code", which is outlined in more detail in the [DesignScript Syntax section](7-2\_design-script-syntax.md). More experienced users can use Code Blocks to create customized mashups of existing functionality and user authored relationships using many standard coding paradigms. In between the beginner and advanced user, there are a huge number of shortcuts and code snippets that will accelerate your designs. While the term 'code block' may be a little intimidating to non-programmers, it is both easy to use and robust. A beginner can use the code block efficiently with minimal coding, and an advanced user can define scripted definitions to be recalled elsewhere in a Dynamo definition.
+For beginners, nodes can be automatically converted to text syntax to aid in learning DesignScript or simply to reduce the size of larger sections of graphs. This is done using a process called "Node to Code", which is outlined in more detail in the [DesignScript Syntax section](2-design-script-syntax.md). More experienced users can use Code Blocks to create customized mashups of existing functionality and user authored relationships using many standard coding paradigms. In between the beginner and advanced user, there are a huge number of shortcuts and code snippets that will accelerate your designs. While the term 'code block' may be a little intimidating to non-programmers, it is both easy to use and robust. A beginner can use the code block efficiently with minimal coding, and an advanced user can define scripted definitions to be recalled elsewhere in a Dynamo definition.
 
-### Code Block: A Brief Overview&#x20;
+### Code Block: A Brief Overview
 
 In short, code blocks are a text-scripting interface within a visual-scripting environment. They can be used as numbers, strings, formulas, and other data types. The code block is designed for Dynamo, so one can define arbitrary variables in the code block, and those variables are automatically added to the inputs of the node:
 
-With code blocks, a user has the flexibility to decide how to specify inputs. Here are several different ways to make a basic point with coordinates _(10, 5, 0)_:&#x20;
+With code blocks, a user has the flexibility to decide how to specify inputs. Here are several different ways to make a basic point with coordinates _(10, 5, 0)_:
 
 ![](../images/8-1/1/codeblockbriefoverview.jpg)
 
@@ -34,4 +34,3 @@ The number, string, and formula nodes are three examples of Dynamo nodes which a
 
 > 1. "Old-school"
 > 2. Code Blocks
-

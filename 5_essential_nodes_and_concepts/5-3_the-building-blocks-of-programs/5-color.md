@@ -8,27 +8,27 @@ Colors in Dynamo are created using ARGB inputs.This corresponds to the Alpha, Re
 
 | Icon                                     | Name (Syntax)                 | Inputs  | Outputs |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
+| ![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB Color (**Color.ByARGB**) | A,R,G,B | color   |
 
 ### Querying Color Values
 
 The colors in the table below query the properties used to define the color: Alpha, Red, Green, and Blue. Note that the Color.Components Node gives us all four as different outputs, which makes this Node preferable for querying the properties of a color.
 
-| Icon                                          | Name (Syntax)                     | Inputs | Outputs    |
-| --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-1/ColorRed (1).jpg>)         | Red (**Color.Red**)               | color  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Green (**Color.Green**)           | color  | G          |
-| ![](<../images/5-1/ColorBlue (1).jpg>)        | Blue (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-1/ColorComponent (1).jpg>)   | Components (**Color.Components**) | color  | A, R, G, B |
+| Icon                                              | Name (Syntax)                     | Inputs | Outputs    |
+| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
+| ![](<../images/5-1/ColorAlpha(1)(1) (2) (3).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| ![](../images/5-1/ColorRed.jpg)                   | Red (**Color.Red**)               | color  | R          |
+| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Green (**Color.Green**)           | color  | G          |
+| ![](<../images/5-1/ColorBlue (2).jpg>)            | Blue (**Color.Blue**)             | color  | B          |
+| ![](../images/5-1/ColorComponent.jpg)             | Components (**Color.Components**) | color  | A, R, G, B |
 
 The colors in the table below correspond to the **HSB color space**. Dividing the color into hue, saturation, and brightness is arguably more intuitive for how we interpret color: What color should it be? How colorful should it be? And how light or dark should the color be? This is the breakdown of hue, saturation, and brightness respectively.
 
-| Icon                                         | Name (Syntax)                     | Inputs | Outputs    |
-| -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorHue (1).jpg>)        | Hue (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-1/ColorSaturation (1).jpg>) | Saturation (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-1/ColorBrightness (1).jpg>) | Brightness (**Color.Brightness**) | color  | Brightness |
+| Icon                                   | Name (Syntax)                     | Inputs | Outputs    |
+| -------------------------------------- | --------------------------------- | ------ | ---------- |
+| ![](../images/5-1/ColorHue.jpg)        | Hue (**Color.Hue**)               | color  | Hue        |
+| ![](../images/5-1/ColorSaturation.jpg) | Saturation (**Color.Saturation**) | color  | Saturation |
+| ![](../images/5-1/ColorBrightness.jpg) | Brightness (**Color.Brightness**) | color  | Brightness |
 
 ### Color Range
 

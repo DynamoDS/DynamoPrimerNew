@@ -18,7 +18,7 @@ These nodes allow for the highest degree of customization. Many packages are bui
 * NodeModel derived Nodes
 * Extensions
 
-> The Primer has a guide on [importing Zero-Touch libraries](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> The Primer has a guide on [importing Zero-Touch libraries](https://primer2.dynamobim.org/6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch).
 
 For the discussion below Visual Studio is used as the development environment for Zero-Touch and NodeModel nodes.
 
@@ -28,7 +28,7 @@ For the discussion below Visual Studio is used as the development environment fo
 
 #### In Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Though these processes exist in the visual programming workspace and are relatively straight forward, they are all viable options for customizing Dynamo. The Primer covers these extensively and provides scripting tips and best practices in the [Scripting Strategies](http://dynamoprimer.com/en/12\_Best-Practice/12-1\_Scripting-Strategies.html) chapter.
+Though these processes exist in the visual programming workspace and are relatively straight forward, they are all viable options for customizing Dynamo. The Primer covers these extensively and provides scripting tips and best practices in the [Scripting Strategies](../../9\_best\_practices/2-scripting-strategies.md) chapter.
 
 *   Code Blocks expose DesignScript in the visual programming environment, allowing for flexible text-script and node workflows. A function in a code block can be called by anything in the workspace.
 
@@ -70,7 +70,7 @@ Zero-Touch refers to a simple point-and-click method for importing C# libraries.
 
 With this method we can:
 
-* Import a library which was not necessarily developed for Dynamo and automatically create a suite of new nodes, such as the [A-Forge example](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html) in the Primer
+* Import a library which was not necessarily developed for Dynamo and automatically create a suite of new nodes, such as the [A-Forge example](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) in the Primer
 * Write C# methods and easily use the methods as nodes in Dynamo
 * Share a C# library as nodes with the Dynamo community in a package
 

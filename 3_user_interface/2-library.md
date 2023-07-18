@@ -8,7 +8,7 @@ The Library contains all of the loaded Nodes, including the ten default categori
 * Custom Nodes: Store your frequently used routines or special graph as Custom Nodes. You can also share your Custom Nodes with the community
 * Nodes from the Package Manager: Collection of published Custom Nodes.
 
-We will go through the [hierarchy of Nodes](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](3-3\_dynamo\_libraries.md#quick-search-in-library) and learn about some of the [frequently used Nodes](3-3\_dynamo\_libraries.md#frequently-used-nodes) among them.
+We will go through the [hierarchy of Nodes](2-library.md#library-hierarchy-for-categories) categories, show how you can [search quickly from the library](2-library.md#search-by-hierarchy) and learn about some of the [frequently used Nodes](2-library.md#frequently-used-nodes) among them.
 
 ### Library Hierarchy for Categories
 
@@ -125,7 +125,7 @@ Tip: Occasionally the 3D Preview can be distracting when your Visual Program con
 
 Code Block Nodes can be used to define a block of code with lines separated by semi-colons. This can be as simple as `X/Y`.
 
-We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+We can also use Code Blocks as a shortcut to defining a Number Input or call to another Node's functionality. The syntax to do so follows the Naming Convention of the Dynamo textual language, [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 Here is a simple demonstration (with instructions) for using Code Block in your script.
 

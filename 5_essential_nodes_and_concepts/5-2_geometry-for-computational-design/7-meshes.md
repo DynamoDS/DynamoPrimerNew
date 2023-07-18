@@ -23,7 +23,7 @@ Dynamo's mesh capabilities can be extended by installing the [Mesh Toolkit](http
 
 The library also provides tools to modify Meshes, repair Meshes, or extract horizontal slices for use in fabrication.
 
-Visit [Mesh Toolkit case studies](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) for example on using this package.
+Visit [Mesh Toolkit case studies](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes) for example on using this package.
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

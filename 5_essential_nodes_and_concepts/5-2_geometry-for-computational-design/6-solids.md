@@ -4,11 +4,11 @@
 
 ### What is Solid?
 
-If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](5-6\_solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
+If we want to construct more complex models that cannot be created from a single surface or if we want to define an explicit volume, we must now venture into the realm of [Solids ](6-solids.md#solids)(and Polysurfaces). Even a simple cube is complex enough to need six surfaces, one per face. Solids give access to two key concepts that Surfaces do not - a more refined topological description (faces, edges, vertices) and Boolean operations.
 
 ### Boolean Operation to Create Spiky Ball Solid
 
-You can use [Boolean operations](5-6\_solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
+You can use [Boolean operations](6-solids.md#boolean-operations) to modify solids. Let's use a few Boolean operations to create a spiky ball.
 
 ![](../images/5-2/6/solids-spikyball.jpg)
 
