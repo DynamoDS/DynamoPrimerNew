@@ -24,7 +24,7 @@ The separation of dictionaries from lists introduces dictionaries as a first-cla
 
 
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
 
 

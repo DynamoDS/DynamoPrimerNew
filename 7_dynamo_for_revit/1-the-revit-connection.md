@@ -39,7 +39,7 @@ In a Revit project or family editor, navigate to Addins and click Dynamo.\*
 \*Dynamo will run only in the file in which it was opened.
 {% endhint %}
 
-![](<images/1/launchdynamofromrevit (1) (2).jpg>)
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 When opening Dynamo in Revit, there is a new category called "Revit". This is a comprehensive addition to the UI which offers nodes specifically catering to Revit workflows.\*
 

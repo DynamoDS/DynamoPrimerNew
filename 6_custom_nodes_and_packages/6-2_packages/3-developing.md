@@ -20,7 +20,7 @@ In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package
 
 After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (5).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 With the package now installed, let's walk through how it's set up.
 
