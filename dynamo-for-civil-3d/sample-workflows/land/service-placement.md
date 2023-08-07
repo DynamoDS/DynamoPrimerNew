@@ -24,7 +24,7 @@ This graph will run on **Civil 3D 2020** and above.
 
 ## Dataset
 
-Before getting started, download the sample files below.
+Start by downloading the sample files below and then opening the DWG file and Dynamo graph.
 
 {% file src="../../../.gitbook/assets/Land_ServicePlacement.dyn" %}
 

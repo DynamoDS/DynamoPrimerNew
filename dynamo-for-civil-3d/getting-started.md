@@ -2,6 +2,10 @@
 
 Now that you know a little more about the big picture, let's jump right in and build your first Dynamo graph in Civil 3D!
 
+{% hint style="info" %}
+This is a simple example that is meant to demonstrate basic Dynamo functionality. It is recommended to work through the steps in a new, empty Civil 3D document.
+{% endhint %}
+
 ## Open Dynamo
 
 The first thing to do is open up an empty document in Civil 3D. Once you're there, navigate to the **Manage** tab in the Civil 3D ribbon and look for the **Visual Programming** panel.
@@ -20,7 +24,7 @@ Head to the [dynamo-player.md](dynamo-player.md "mention") section when you're r
 
 ## Start a New Graph
 
-Once Dynamo is open, you'll see the start screen. Click on **New Graph** to open up a blank workspace.
+Once Dynamo is open, you'll see the start screen. Click on **New** to open up a blank workspace.
 
 <figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Dynamo start screen</p></figcaption></figure>
 
