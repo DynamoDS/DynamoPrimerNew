@@ -113,7 +113,11 @@ From here, the last step is to create the Block References.
 
 ### Result
 
-When you run the graph, you should see new Block References show up in Model Space along the Corridor. And here's the cool part - if you edit the Excel file, the Block References update automatically!
+When you run the graph, you should see new Block References show up in Model Space along the Corridor. And here's the cool part - if the graph's execution mode is set to Automatic and you edit the Excel file, the Block References update automatically!
+
+{% hint style="info" %}
+You can read more about graph execution modes in the [3\_user\_interface](../../../3\_user\_interface/ "mention") section.
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Making updates to the Excel file and quickly seeing the results in Civil 3D</p></figcaption></figure>
 

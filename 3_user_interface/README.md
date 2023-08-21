@@ -73,8 +73,8 @@ Run your Dynamo script from here. Click the dropdown icon on the Execution butto
 
 ![](images/userinterface-executionbar.gif)
 
-* Automatic: Runs your script automatically. Changes is updated in realtime.
-* Manual: Script only runs when the 'Run' button is clicked. Useful for when making changes to complicated and 'heavy script'
-* Periodic: This option is grayed out by default. Only available when the DateTime.Now Node is used. You can set the graph to run automatically at a specified interval.
+* Automatic: Runs your script automatically. Changes are updated in realtime.
+* Manual: Script only runs when the 'Run' button is clicked. Useful for making changes to a complicated and 'heavy' script.
+* Periodic: This option is grayed out by default. Only available when the _DateTime.Now_ node is used. You can set the graph to run automatically at a specified interval.
 
 ![](images/userinterface-executionbarDateTimenode.jpg)
