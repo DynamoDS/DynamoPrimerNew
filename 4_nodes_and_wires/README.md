@@ -65,6 +65,16 @@ Tip: With this tooltip information in hand, examine the upstream Nodes to see if
 > 2. Use the Watch Node to examine the input data
 > 3. Upstream the Number Node is storing "Red," not a number
 
+### Freezing Nodes
+
+In some situations, you may want to prevent the execution of specific nodes in your Visual Program. You can do this by "freezing" the node, which is an option under the node's right-click menu.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+Freezing a node also freezes the nodes that are downstream of it. In other words, all the nodes that depend on the output of a frozen node will also be frozen.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
+
 ## Wires
 
 Wires connect between Nodes to create relationships and establish the Flow of our Visual Program. We can think of them literally as electrical wires that carry pulses of data from one object to the next.

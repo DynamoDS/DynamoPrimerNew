@@ -27,7 +27,7 @@ You can use [Boolean operations](6-solids.md#boolean-operations) to modify solid
 
 ### Freezing
 
-Boolean operations are complex and can be slow to calculate. Use Freeze functionality to suspend the execution of selected nodes and affected downstream nodes.
+Boolean operations are complex and can be slow to calculate. You can use the "freeze" functionality to suspend the execution of selected nodes and affected downstream nodes.
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
@@ -38,6 +38,10 @@ Boolean operations are complex and can be slow to calculate. Use Freeze function
 > 3\. To unfreeze the nodes, right-click and uncheck Freeze.
 >
 > 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+
+{% hint style="info" %}
+You can read more about freezing nodes in the [4\_nodes\_and\_wires](../../4\_nodes\_and\_wires/ "mention") section.
+{% endhint %}
 
 ## Deep Dive into...
 
