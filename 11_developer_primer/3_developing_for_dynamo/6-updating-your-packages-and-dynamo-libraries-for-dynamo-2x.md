@@ -10,7 +10,7 @@ NodeModel에서 직접 파생되는 노드와 UI 노드는 2.x에서 실행하�
 
 확장 작성자는 확장에서 사용하는 Dynamo Core API의 양에 따라 몇 가지 변경 사항을 적용할 수도 있습니다.
 
-***
+
 
 ### 일반 패키징 규칙: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -18,8 +18,6 @@ NodeModel에서 직접 파생되는 노드와 UI 노드는 2.x에서 실행하�
 * 가능하다면 `newtonsoft.json.net`을 패키지와 번들로 묶어서 배포하지 마십시오. 이 dll은 Dynamo 2.x에 의해서도 이미 로드됩니다. 위와 동일한 이슈가 발생할 수 있습니다.
 * 가능하다면 `CEFSharp`을 패키지와 번들로 묶어서 배포하지 마십시오. 이 dll은 Dynamo 2.x에 의해서도 이미 로드됩니다. 위와 동일한 이슈가 발생할 수 있습니다.
 * 일반적으로, 해당 종속성 버전을 제어해야 하는 경우 Dynamo 또는 Revit과 종속성을 공유하지 않도록 합니다.
-
-
 
 ### 일반적인 이슈: <a href="#common-issues" id="common-issues"></a>
 
@@ -39,7 +37,6 @@ NodeModel에서 직접 파생되는 노드와 UI 노드는 2.x에서 실행하�
 
 * 이는 몇 가지 이유로 역직렬화에 실패한 경우 발생할 수 있습니다. 필요한 특성만 직렬화하는 것이 좋습니다. 로드하거나 저장할 필요가 없는 복잡한 특성에는 `[JsonIgnore]`를 사용하여 무시할 수 있습니다. 이러한 특성으로는 `function pointer, delegate, action,` 또는 `event` 등이 있습니다. 이러한 특성은 일반적으로 역직렬화에 실패하여 런타임 오류를 발생시키므로 직렬화해서는 안 됩니다.
 
-
 ### 심층적으로 업그레이드하기: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### 사용자 지정 노드 1.3 - > 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
@@ -52,13 +49,11 @@ NodeModel에서 직접 파생되는 노드와 UI 노드는 2.x에서 실행하�
 * 주석은 선 주석 대신 블록 주석으로 변환됩니다.
 * 짧은 유형의 이름이 전체 이름으로 바뀝니다. 예를 들어, 사용자 지정 노드를 다시 로드할 때 유형을 지정하지 않은 경우 기본 유형인 `var[]..[]`이 표시됩니다.
 
-
 ### Zero Touch 노드 1.3 -> 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * Dynamo 2.0에서는 리스트와 사전 유형이 분리되었으며 리스트 및 사전을 생성하기 위한 구문이 변경되었습니다. 리스트는 `[]`를 사용하여 초기화되고 사전은 `{}`를 사용합니다.\
  이전에 `DefaultArgument` 속성을 사용하여 Zero-Touch 노드에 매개변수를 표시하고 리스트 구문을 사용하여 `someFunc([DefaultArgument("{0,1,2}")])`와 같은 특정 리스트를 기본값으로 설정했다면, 이는 더 이상 유효하지 않으며 리스트에 대한 새 초기화 구문을 사용하도록 DesignScript 조각을 수정해야 합니다.
 * 위에 설명한 것처럼 Dynamo dll을 패키지와 함께 배포하지 마십시오(`DynamoCore`, `DynamoServices` 등).
-
 
 ### Node Model 노드 1.3 -> 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ Dynamo 2.x로 업데이트할 때 가장 많은 작업을 수행해야 하는 �
 
 생성자의 매개변수 이름은 일반적으로 JSON 특성의 이름과 일치해야 하지만, [JsonProperty] 속성을 사용하여 직렬화된 이름을 재정의하는 경우 매핑이 더 복잡해집니다.\
  [자세한 내용은 Json.net 문서를 참조하십시오.](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### JSON 생성자 <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,7 +88,6 @@ JSON 생성자는 JSON 로드 논리에서 제공하는 `inPorts` 및 `outPorts`
 
 예제는 DynamoSamples 리포지토리 -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) 또는 [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123) 에서 확인할 수 있습니다
 
-
 #### 공용 특성 및 직렬화 <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
 이전에는 개발자가 `SerializeCore` 및 `DeserializeCore` 메서드를 통해 특정 모델 데이터를 xml 문서로 직렬화하고 역직렬화할 수 있었습니다. 이러한 메서드는 API에 여전히 존재하지만 Dynamo의 향후 릴리즈에서는 더 이상 사용되지 않습니다(예는 [여기](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140) 에서 확인할 수 있음). 이제 JSON.NET 구현을 통해 NodeModel 파생 클래스의 `public` 특성을 .dyn 파일에 직접 직렬화할 수 있습니다. JSON.Net은 특성이 직렬화되는 방식을 제어하는 여러 속성을 제공합니다.
@@ -104,7 +97,6 @@ JSON 생성자는 JSON 로드 논리에서 제공하는 `inPorts` 및 `outPorts`
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### 변환기: <a href="#converters" id="converters"></a>
 
@@ -117,17 +109,15 @@ JSON 생성자는 JSON 로드 논리에서 제공하는 `inPorts` 및 `outPorts`
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### 특성 무시하기 <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 직렬화용이 아닌 `public` 특성에는 `[JsonIgnore]` 속성을 추가해야 합니다. 노드가 .dyn 파일에 저장되면 이 데이터가 직렬화 메커니즘에서 무시되어 그래프를 다시 열 때 예상치 못한 결과가 발생하지 않습니다. 이에 대한 예는 Dynamo 리포지토리의 [여기](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45)에서 확인할 수 있습니다.
 
-***
+
 
 #### 실행 취소/다시 실행 <a href="#undoredo" id="undoredo"></a>
 
 위에서 설명한 대로, 과거에는 노드를 xml .dyn 파일에 저장하고 로드하는 데 `SerializeCore` 및 `DeserializeCore` 메서드를 사용했습니다. 또한 실행 취소/다시 실행을 위해 노드 상태를 저장 및 로드하는 데 사용되었으며 **지금도 여전히 사용되고 있습니다!** nodeModel UI 노드에 대해 복잡한 실행 취소/다시 실행 기능을 구현하려면 이러한 메서드를 구현하고 이러한 메서드에 매개변수로 제공된 XML 문서 객체로 직렬화해야 합니다. UI 노드가 복잡할 때를 제외하고는 드물게 사용될 것입니다.
-
 
 #### 입력 및 출력 포트 API <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
@@ -142,7 +132,6 @@ vs
 변환된 코드의 예제는 Dynamo 리포지토리 -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) 또는 [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281)에서 확인할 수 있습니다.
 
 2.0 API 변경 사항의 영향을 받는 다른 일반적인 사용 사례는 포트 커넥터의 유무에 따라 노드 동작을 결정하는 `BuildAst()` 메서드에서 일반적으로 사용하는 메서드와 관련이 있습니다. 이전에는 연결된 포트 상태의 유효성을 검사하는 데 `HasConnectedInput(index)`가 사용되었습니다. 이제 개발자는 `InPorts[0].IsConnected` 특성을 사용하여 포트 연결 상태를 확인해야 합니다. 이 아이콘의 예는 Dynamo 리포지토리의 [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83)에서 확인할 수 있습니다.
-
 
 ### 예제: <a href="#examples" id="examples"></a>
 

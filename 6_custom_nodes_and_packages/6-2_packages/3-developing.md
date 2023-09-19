@@ -4,7 +4,7 @@ Dynamo에서는 개인적으로 사용하거나 Dynamo 커뮤니티와 공유하
 
 ## MapToSurface 패키지
 
-한 표면에서 다른 표면으로의 점 UV 매핑을 보여 주는 샘플 패키지로 작업해 보겠습니다. 우리는 이 기본서의 [사용자 노드 작성](../10\_custom-nodes/10-2\_creating.md) 섹션에서 도구의 기본 사항을 이미 만들었습니다. 아래의 파일은 UV 매핑의 개념을 파악하고 게시 가능한 라이브러리를 위한 도구 세트를 개발하는 방법을 보여 줍니다.
+한 표면에서 다른 표면으로의 점 UV 매핑을 보여 주는 샘플 패키지로 작업해 보겠습니다. 이 입문서의 [사용자 노드 작성](../6-1\_custom-nodes/2-creating.md) 섹션에서 이미 도구의 기본 사항을 구축했습니다. 아래의 파일은 UV 매핑의 개념을 파악하고 게시 가능한 라이브러리를 위한 도구 세트를 개발하는 방법을 보여 줍니다.
 
 이 이미지에서는 UV 좌표를 사용하여 한 표면에서 다른 표면으로 점을 매핑합니다. 이 패키지는 이러한 개념을 기준으로 하지만, 좀 더 복잡한 형상을 나타냅니다.
 
@@ -20,7 +20,7 @@ Dynamo에서 패키지>패키지 검색...을 클릭하고 "MapToSurface"(1개�
 
 설치 후에 사용자 노드를 애드온 > Dynamo Primer 섹션에서 사용할 수 있습니다.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 이제 패키지가 설치되었으므로 설정 방법을 살펴보겠습니다.
 
@@ -30,7 +30,7 @@ Dynamo에서 패키지>패키지 검색...을 클릭하고 "MapToSurface"(1개�
 
 이는 5개의 사용자 노드로 구성된 간단한 패키지입니다. 아래 단계에서는 각 사용자 노드의 설정에 대해 간략하게 설명하겠습니다.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ MapToSurface 옆의 세로 점 메뉴 > 루트 디렉토리 표시를 클릭합�
 
 #### **01-PanelingWithPolygons**
 
-이 예제 파일에서는 직사각형 그리드를 기준으로 표면을 패널화하는 데 _"PointsToSurface"_ 를 사용하는 방법을 보여 줍니다. [이전 장](../10\_custom-nodes/10-2\_creating.md)에서 비슷한 워크플로우를 설명했기 때문에 이 과정은 익숙하게 느껴질 것입니다.
+이 예제 파일에서는 직사각형 그리드를 기준으로 표면을 패널화하는 데 _"PointsToSurface"_ 를 사용하는 방법을 보여 줍니다. [이전 장](../6-1\_custom-nodes/2-creating.md)에서 비슷한 워크플로우를 설명했기 때문에 이 과정은 익숙하게 느껴질 것입니다.
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

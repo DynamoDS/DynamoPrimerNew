@@ -8,7 +8,7 @@
 * 사용자 노드: 자주 사용하는 루틴 또는 특수 그래프를 사용자 노드로 저장합니다. 또한 커뮤니티와 사용자 노드를 공유할 수도 있습니다.
 * 패키지 관리자의 노드: 게시된 사용자 노드의 모음입니다.
 
-이제 [노드 카테고리의 계층](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories)을 살펴보고, [라이브러리에서 빠르게 검색](3-3\_dynamo\_libraries.md#quick-search-in-library)할 수 있는 방법과 그중에서 [자주 사용하는 노드](3-3\_dynamo\_libraries.md#frequently-used-nodes)에 대해 알아보겠습니다.
+이제 [노드 카테고리의 계층](2-library.md#library-hierarchy-for-categories)을 살펴보고, [라이브러리에서 빠르게 검색](2-library.md#search-by-hierarchy)할 수 있는 방법과 그중에서 [자주 사용하는 노드](2-library.md#frequently-used-nodes)에 대해 알아보겠습니다.
 
 ### 카테고리의 라이브러리 계층
 
@@ -27,13 +27,13 @@
 
 노드가 데이터를 **작성(Create)** 하는지, **작업(Action)** 을 실행하는지 또는 데이터를 **조회(Query)** 하는지에 따라 노드를 동일한 하위 카테고리로 추가로 분류합니다.
 
-* ![](<images/3-2/user interface - create.jpg>) **Create**: 처음부터 새로 형상을 작성하거나 구성합니다. 예: 원.
-* ![](<images/3-2/user interface - action.jpg>) **Action**: 객체에 대해 작업을 수행합니다. 예: 원 축척.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: 이미 존재하는 객체의 특성을 가져옵니다. 예: 원의 반지름 가져오기.
+* \![](<images/3-2/user interface - create.jpg>) **Create**: 처음부터 새로 형상을 작성하거나 구성합니다. 예: 원.
+* \![](<images/3-2/user interface - action.jpg>) **Action**: 객체에 대해 작업을 수행합니다. 예: 원 축척.
+* \![](<images/3-2/user interface - query.jpg>) **Query**: 이미 존재하는 객체의 특성을 가져옵니다. 예: 원의 반지름 가져오기.
 
 노드 위에 마우스를 놓으면 해당 노드의 이름 및 아이콘 외에 자세한 정보가 표시됩니다. 이를 통해 노드에서 수행하는 작업, 입력에 필요한 항목, 출력으로 제공되는 항목을 쉽게 파악할 수 있습니다.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. 설명 - 노드에 대한 일반 언어 설명
 > 2. 아이콘 - 더 큰 버전의 라이브러리 메뉴 아이콘
@@ -46,7 +46,7 @@
 
 추가하려는 노드를 클릭하여 선택하거나 Enter 키를 눌러 강조 표시된 노드를 작업공간의 중심에 추가합니다.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### 계층별 검색
 
@@ -121,11 +121,11 @@ Watch 노드는 시각적 프로그램을 통해 흐르는 데이터를 관리�
 
 Code Block 노드는 줄을 세미콜론으로 구분하여 코드 블록을 정의하는 데 사용할 수 있습니다. 이는 `X/Y`만큼이나 간단합니다.
 
-Code Block을 숫자 입력 정의에 대한 바로 가기나 다른 노드 기능에 대한 호출로 사용할 수도 있습니다. 이렇게 하는 구문은 Dynamo 텍스트 언어인 [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md)의 명명 규칙을 따릅니다.
+Code Block을 숫자 입력 정의에 대한 바로 가기나 다른 노드 기능에 대한 호출로 사용할 수도 있습니다. 이를 위한 구문은 Dynamo 텍스트 언어인 [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)의 명명 규칙을 따릅니다.
 
 다음은 스크립트에서 Code Block을 사용하는 간단한 데모(지침 포함)입니다.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. 두 번 클릭하여 Code Block 노드를 작성합니다.
 2. `Circle.ByCenterPointRadius(x,y);`를 입력합니다.

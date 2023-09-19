@@ -23,7 +23,7 @@ Dynamo에서는 면-정점 데이터 구조를 사용하여 메쉬를 정의합�
 
 라이브러리에서는 메쉬를 수정 또는 복구하거나 제작에 사용할 수평 슬라이스를 추출하는 도구도 제공합니다.
 
-이 패키지 사용에 대한 예를 확인하려면 [Mesh Toolkit 사례 연구](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)를 참조하십시오.
+이 패키지 사용에 대한 예를 확인하려면 [Mesh Toolkit 사례 연구](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)를 참조하십시오.
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

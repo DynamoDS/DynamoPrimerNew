@@ -9,4 +9,4 @@
 * [파라메트릭 꽃병](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [어트랙터 점](10-1\_getting-started-workflows/2-attractor-points.md)
 
-또한 [개념 색인](table-of-summary-for-some-concept-used-in-previous-exercises.md)을 사용하여 워크플로우에 소개된 개념을 찾을 수 있습니다.
+또한 [개념 색인](10-2\_concept-index.md)을 사용하여 워크플로우에 도입된 개념을 찾을 수 있습니다.

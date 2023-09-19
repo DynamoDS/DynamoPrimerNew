@@ -1,4 +1,4 @@
-# 패키지 소개 
+# 패키지 소개
 
 간단히 말해서 패키지는 사용자 노드의 모음입니다. Dynamo Package Manager는 커뮤니티가 온라인으로 게시된 패키지를 다운로드할 수 있는 포털입니다. 이러한 툴셋은 Dynamo의 핵심 기능을 확장하고, 누구나 액세스 가능하며, 버튼 클릭으로 다운로드되도록 타사에서 개발합니다.
 
@@ -67,7 +67,7 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 
 파일을 열고 솔버에서 "실행"을 누르면 펼쳐진 구가 표시됩니다. 이와 같은 예제 파일은 새 Dynamo 패키지를 사용하는 방법을 배우는 데 유용합니다.
 
-![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Dynamo Package Manager
 

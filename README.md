@@ -1,4 +1,4 @@
-# 정보 
+# 정보
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype 비디오{% endembed %}
 
@@ -41,15 +41,27 @@ Dynamo Primer는 Matt Jezyk 및 Autodesk의 Dynamo 개발 팀에서 시작한 �
 
 ***
 
-**Parallax 팀의 John Pierson**은 Dynamo 2.0 개정 내용을 포함하도록 입문서를 업데이트하는 업무를 맡았습니다.
+**Parallax 팀의 John Pierson**은 Dynamo 2.0 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab**은 Dynamo 2.13 개정 내용을 반영하도록 Primer를 업데이트하는 업무를 맡았습니다.
+**Matterlab**은 Dynamo 2.13 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
 
 ![](images/matterlab\_final-07.jpg)
+
+***
+
+**Archilizer**는 Dynamo 2.17 개정 내용을 반영하도록 입문서를 업데이트하는 업무를 맡았습니다.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+**Wood Rodgers**는 Dynamo for Civil 3D의 컨텐츠로 입문서를 업데이트하는 업무를 맡았습니다.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### 감사의 인사
 
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### 라이센스
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Apache License, 버전 2.0(이하 "라이센스")에 따라 라이센스가 부여되었으며, 라이센스를 준수하지 않을 경우 이 파일을 사용할 수 없습니다. 라이센스 사본은 다음에서 구할 수 있습니다.
 

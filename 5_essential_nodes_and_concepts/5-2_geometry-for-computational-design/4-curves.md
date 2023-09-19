@@ -4,7 +4,7 @@
 
 ### 곡선이란?
 
-[곡선](5-4\_curves.md#curve)은 선이 얼마나 구부러지거나 펴져 있는가? 또는 얼마나 길거나 짧은가? 등의 보다 익숙한 모양 설명 특성 세트를 포함하는 첫 번째 기하학적 데이터 유형입니다. 또한 점이 선에서 스플라인 사이의 모든 항목과 그 사이의 모든 곡선 유형을 정의하기 위한 빌딩 블록이라는 점은 그대로입니다.
+[곡선](4-curves.md#deep-dive-into...)은 우리가 처음 다룬 기하학적 데이터 유형으로, 선이 얼마나 구부러지거나 펴져 있는가? 또는 얼마나 길거나 짧은가? 등의 보다 익숙한 모양 설명 특성 세트를 포함하는 첫 번째 기하학적 데이터 유형입니다. 또한 점이 선에서 스플라인 사이의 모든 항목과 그 사이의 모든 곡선 유형을 정의하기 위한 빌딩 블록이라는 점은 그대로입니다.
 
 ![곡선 유형](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@
 
 ### 선
 
-[선](5-4\_curves.md#lines)은 점 세트로 구성되며 각 선에는 최소 2개의 점이 있습니다. Dynamo에서 선을 작성하는 가장 일반적인 방법 중 하나는 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg)를 사용하여 Dynamo에서 선을 작성하는 것입니다.
+[선](4-curves.md#lines)은 점의 집합으로 구성되며, 각 선에는 최소 2개의 점이 있습니다. Dynamo에서 선을 작성하는 가장 일반적인 방법 중 하나는 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg)를 사용하여 Dynamo에서 선을 작성하는 것입니다.
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS 곡선
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves)는 곡선과 표면을 정확하게 표현하는 데 사용되는 모델입니다. 결과를 비교하기 위해 NURBS 곡선을 작성하는 두 개의 서로 다른 방법을 사용하여 Dynamo에서 사인 곡선을 작성합니다.
+[NURBS](4-curves.md#nurbs-+-polycurves)는 곡선과 표면을 정확하게 표현하는 데 사용되는 모델입니다. 결과를 비교하기 위해 NURBS 곡선을 작성하는 두 개의 서로 다른 방법을 사용하여 Dynamo에서 사인 곡선을 작성합니다.
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

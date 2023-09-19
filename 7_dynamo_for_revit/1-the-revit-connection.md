@@ -37,7 +37,7 @@ Revit 프로젝트 또는 패밀리 편집기에서 애드인을 찾은 다음, 
 
 {% hint style="warning" %} *Dynamo는 열려 있는 파일에서만 실행됩니다. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Revit에서 Dynamo를 열면 "Revit"이라는 새 카테고리가 나타납니다. 이 카테고리는 Revit 워크플로우에 특히 적합한 노드를 제공하는 UI에 포괄적으로 추가되었습니다.*
 
@@ -47,7 +47,7 @@ Revit에서 Dynamo를 열면 "Revit"이라는 새 카테고리가 나타납니�
 
 ### 노드 동결
 
-Revit은 강력한 프로젝트 관리 기능을 제공하는 플랫폼이므로 Dynamo의 파라메트릭 작업은 복잡할 수 있고 이로 인해 계산 속도가 느려질 수 있습니다. Dynamo에서 노드를 계산하는 데 시간이 오래 걸리는 경우 그래프를 개발하는 동안 Revit 작업 실행을 일시 중지하기 위해 노드 "동결" 기능을 사용할 수도 있습니다. 노드 동결에 대한 자세한 내용은 솔리드 장의 "[동결](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)" 섹션을 확인하십시오.
+Revit은 강력한 프로젝트 관리 기능을 제공하는 플랫폼이므로 Dynamo의 파라메트릭 작업은 복잡할 수 있고 이로 인해 계산 속도가 느려질 수 있습니다. Dynamo에서 노드를 계산하는 데 시간이 오래 걸리는 경우 그래프를 개발하는 동안 Revit 작업 실행을 일시 중지하기 위해 노드 "동결" 기능을 사용할 수도 있습니다. 노드 동결에 대한 자세한 내용은 솔리드 장의 "[동결](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)" 섹션을 참조하십시오.
 
 ### 커뮤니티 및 Dynamo 블로그
 

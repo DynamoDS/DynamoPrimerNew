@@ -8,27 +8,27 @@ Dynamo의 색상은 ARGB 입력을 사용하여 작성됩니다. ARGB는 알파,
 
 | 아이콘                                     | 이름(구문)                 | 입력  | 출력 |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB 색상(**Color.ByARGB**) | A,R,G,B | 색상   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB 색상(**Color.ByARGB**) | A,R,G,B | 색상   |
 
 ### 색상 값 조회하기
 
 아래 표의 색상을 사용하면 색상을 정의하는 데 사용되는 특성(알파, 빨간색, 초록색 및 파란색)이 조회됩니다. Color.Components 노드는 다른 출력으로 4개의 색상을 모두 제공하므로 색상의 특성을 조회할 때 선호됩니다.
 
-| 아이콘                                          | 이름(구문)                     | 입력 | 출력    |
-| --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | 알파(**Color.Alpha**)           | 색상  | A          |
-| ![](<../images/5-1/ColorRed (1).jpg>)         | 빨간색(**Color.Red**)               | 색상  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | 초록색(**Color.Green**)           | 색상  | G          |
-| ![](<../images/5-1/ColorBlue (1).jpg>)        | 파란색(**Color.Blue**)             | 색상  | B          |
-| ![](<../images/5-1/ColorComponent (1).jpg>)   | 구성요소(**Color.Components**) | 색상  | A,R,G,B |
+| 아이콘                                              | 이름(구문)                     | 입력 | 출력    |
+| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | 알파(**Color.Alpha**)           | 색상  | A          |
+| ![](../images/5-1/ColorRed.jpg)                   | 빨간색(**Color.Red**)               | 색상  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 초록색(**Color.Green**)           | 색상  | G          |
+| ![](../images/5-1/ColorBlue.jpg)                  | 파란색(**Color.Blue**)             | 색상  | B          |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | 구성요소(**Color.Components**) | 색상  | A,R,G,B |
 
 아래 표의 색상은 **HSB 색상 공간**에 해당합니다. 색상을 색조, 채도 및 밝기로 나누면 색상을 좀 더 직관적으로 해석할 수 있습니다. 즉, '어떤 색상인가?', '색상이 얼마나 선명한가?', '색상이 얼마나 밝거나 어두운가?'와 같은 질문으로 각각 색조, 채도 및 밝기를 분석할 수 있습니다.
 
 | 아이콘                                         | 이름(구문)                     | 입력 | 출력    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorHue (1).jpg>)        | 색조(**Color.Hue**)               | 색상  | 색조        |
-| ![](<../images/5-1/ColorSaturation (1).jpg>) | 채도(**Color.Saturation**) | 색상  | 채도 |
-| ![](<../images/5-1/ColorBrightness (1).jpg>) | 밝기(**Color.Brightness**) | 색상  | 밝기 |
+| ![](../images/5-1/ColorHue.jpg)              | 색조(**Color.Hue**)               | 색상  | 색조        |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | 채도(**Color.Saturation**) | 색상  | 채도 |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | 밝기(**Color.Brightness**) | 색상  | 밝기 |
 
 ### 색상 범위
 

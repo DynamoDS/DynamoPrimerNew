@@ -23,7 +23,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 2. 입력 그룹(주황색)
 > 3. 스크립트 그룹(초록색)
 >
-> 그룹을 사용하는 방법은 [프로그램 관리하기](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)를 참조하십시오.
+> 그룹을 사용하는 방법은 [프로그램 관리하기](https://primer2.dynamobim.org/v/ko/9_best_practices/4-managing-your-program)를 참조하십시오.
 
 ### **Code Block을 사용하여 효율적으로 개발하기**
 
@@ -37,7 +37,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 1. Code Block에 작성된 설계 스크립트
 > 2. 노드 내 동등한 프로그램
 >
-> Code Block을 사용하는 방법은 [Code Block이란](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md)을 참조하십시오.
+> Code Block을 사용하는 방법은 [Code Block이란](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md)을 참조하십시오.
 
 ### **Node to Code를 사용하여 압축하기**
 
@@ -58,21 +58,21 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 1. 기존 프로그램
 > 2. Node to Code로 작성한 Code Block
 >
-> Node to Code를 사용하는 방법에 대한 자세한 내용은 [설계 스크립트 구문](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code)을 참조하십시오.
+> Node to Code를 사용하는 방법에 대한 자세한 내용은 [설계 스크립트 구문](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)을 참조하십시오.
 
 ### **List@Level을 통해 데이터에 유연하게 액세스하기**
 
 * List@Level을 사용하면 상당한 크기의 캔버스 공간을 차지할 수 있는 **List.Map 및 List.Combine 노드를 대체하여 그래프의 복잡성을 줄일** 수 있습니다.
 * List@Level에서는 노드의 입력 포트에서 바로 리스트의 임의 레벨에 있는 데이터에 액세스할 수 있게 해주어** List.Map/List.Combine보다 더 빨리 노드 논리를 구성하는 방법**을 제공합니다.
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > 우리는 CountTrue의 "list" 입력에 대해 List@Level을 활성화하여 BoundingBox.Contains에서 반환하는 True 값이 어떤 리스트에 몇 개인지 확인할 수 있습니다. 사용자는 List@Level을 통해 입력으로 데이터를 가져올 레벨을 결정할 수 있습니다. List@Level을 사용하면 유연하고 효율적이므로 List.Map 및 List.Combine과 관련된 다른 방법에 비해 적극 권장됩니다.
 >
 > 1. 리스트 레벨 2에서 true 값 계산
 > 2. 리스트 레벨 3에서 true 값 계산
 >
-> List@Level을 사용하는 방법은 [리스트의 리스트](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level)를 참조하십시오.
+> List@Level을 사용하는 방법은 [리스트의 리스트](https://primer2.dynamobim.org/v/ko/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists)를 참조하십시오.
 
 ## 가독성 유지하기
 
@@ -84,12 +84,12 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 * 다른 사용자가 사용자의 그래프를 사용해 작업하려는 경우 **보내기 전에 노드-와이어 배치가 쉽게 유동되는지 확인**해야 합니다.
 * 정렬에 활용하려면 **"노드 배치 정리" 기능을 사용하여 그래프를 자동으로 정렬**합니다. 그러나 이렇게 하는 것이 직접 정렬하는 것보다 정확하지는 않습니다.
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. 구성되지 않은 그래프
 > 2. 정렬된 그래프
 >
-> 노드 정렬을 사용하는 방법은 [프로그램 관리하기](3-4\_best\_practices.md)를 참조하십시오.
+> 노드 정렬을 사용하는 방법은 [프로그램 관리하기](4-managing-your-program.md)를 참조하십시오.
 
 ### **이름을 바꾸어 알아보기 쉽게 레이블 지정하기**
 
@@ -114,11 +114,11 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 1. 원시 변환 거리를 반환하는 프로그램 부분을 설명하는 메모
 > 2. 해당 값을 사인파에 매핑하는 코드를 설명하는 메모
 >
-> 메모를 추가하는 방법은 [프로그램 관리하기](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)를 참조하십시오.
+> 메모를 추가하는 방법은 [프로그램 관리하기](https://primer2.dynamobim.org/v/ko/9_best_practices/4-managing-your-program)를 참조하십시오.
 
 ## 지속적으로 조정하기
 
-시각적 스크립트를 작성하는 동안 반환되는 결과가 예상되는 결과와 같은지 확인하는 것이 중요합니다. 모든 오류나 문제가 프로그램의 즉각적인 실패를 초래하는 것은 아닙니다. 특히, 먼 다운스트림에 영향을 줄 수 있는 null 또는 0 값이 그렇습니다. 이 전략은 [스크립팅 전략](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html)의 텍스트 스크립팅 컨텍스트에도 설명되어 있습니다. 다음 방법은 예상한 결과를 얻을 수 있도록 도와줍니다.
+시각적 스크립트를 작성하는 동안 반환되는 결과가 예상되는 결과와 같은지 확인하는 것이 중요합니다. 모든 오류나 문제가 프로그램의 즉각적인 실패를 초래하는 것은 아닙니다. 특히, 먼 다운스트림에 영향을 줄 수 있는 null 또는 0 값이 그렇습니다. 이 전략은 [스크립팅 전략](2-scripting-strategies.md)의 텍스트 스크립팅 컨텍스트에서도 설명합니다. 다음 방법은 예상한 결과를 얻을 수 있도록 도와줍니다.
 
 ### **Watch 및 미리보기 풍선으로 데이터 모니터링하기**
 
@@ -131,7 +131,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 1. 원시 변환 거리
 > 2. 사인 방정식을 통해 전달되는 값
 >
-> Watch를 사용하는 방법에 대해서는 [라이브러리](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html)를 참조하십시오.
+> Watch를 사용하는 방법에 대해서는 [라이브러리](../3\_user\_interface/2-library.md)를 참조하십시오.
 
 ## 재사용 가능성 확인하기
 
@@ -147,7 +147,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 * **그래프에 포함할 특정 옵션 또는 조건**이 있는 경우 사전 설정을 사용하여 신속하게 액세스해야 합니다.
 * 사전 설정을 사용하면 실행 시간이 긴 그래프에서 **특정 슬라이더 값을 캐싱하여 복잡성을 줄일** 수도 있습니다.
 
-> 사전 설정을 사용하는 방법에 대해서는 [사전 설정을 사용하여 데이터 관리하기](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html)를 참조하십시오.
+> 사전 설정을 사용하는 방법에 대해서는 [사전 설정을 사용하여 데이터 관리하기](1-graph-strategies.md#use-presets-to-embed-input-values)를 참조하십시오.
 
 ### **사용자 노드를 사용하여 프로그램 포함하기**
 
@@ -162,7 +162,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 > 1. 기존 어트랙터 프로그램
 > 2. 이 프로그램(PointGrid)을 수집하는 사용자 노드
 >
-> 사용자 노드를 사용하는 방법에 대해서는 [사용자 노드 소개](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html)를 참조하십시오.
+> 사용자 노드를 사용하는 방법에 대해서는 [사용자 노드 소개](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md)를 참조하십시오.
 
 ### **템플릿 작성하기**
 

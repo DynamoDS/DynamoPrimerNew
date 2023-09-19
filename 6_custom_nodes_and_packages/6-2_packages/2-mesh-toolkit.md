@@ -2,13 +2,13 @@
 
 Dynamo Mesh Toolkit에서는 외부 파일 형식에서 메쉬를 가져오고, Dynamo 형상 객체에서 메쉬를 작성하고, 정점 및 색인으로 메쉬를 수동으로 작성하는 도구를 제공합니다. 라이브러리에서는 메쉬를 수정 또는 복구하거나 제작에 사용할 수평 슬라이스를 추출하는 도구도 제공합니다.
 
-![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Dynamo Mesh Toolkit은 Autodesk에서 지속적으로 연구하는 메쉬의 한 부분으로, 향후 몇 년 동안 지속적으로 발전할 것입니다. 툴킷에서 새로운 메서드가 자주 제공될 계획이니, 새 기능에 대한 의견, 버그 및 제안 사항과 관련하여 언제든지 Dynamo 팀에 연락해 주십시오.
 
 ### 메쉬와 솔리드 비교
 
-아래 연습에서는 Mesh Toolkit을 사용하는 몇 가지 기본적인 메쉬 작업을 보여줍니다. 이 연습에서는 메쉬를 일련의 평면과 교차하는데, 이는 솔리드를 사용하는 경우 계산이 많이 필요할 수 있습니다. 솔리드와 달리 메쉬에는 설정된 “해상도”가 있으며 수학적으로 정의되지 않고 위상적으로 정의되며, 작업에 따라 이 해상도를 손쉽게 정의할 수 있습니다. 메쉬-솔리드 관계에 대한 자세한 내용은 이 입문서의 [계산 방식 설계를 위한 형상](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) 장을 참조하십시오. Mesh Toolkit을 보다 자세히 살펴보려면 [Dynamo Wiki 페이지](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)를 참조하면 됩니다. 그러면 아래 연습의 패키지로 이동하겠습니다.
+아래 연습에서는 Mesh Toolkit을 사용하는 몇 가지 기본적인 메쉬 작업을 보여줍니다. 이 연습에서는 메쉬를 일련의 평면과 교차하는데, 이는 솔리드를 사용하는 경우 계산이 많이 필요할 수 있습니다. 솔리드와 달리 메쉬에는 설정된 “해상도”가 있으며 수학적으로 정의되지 않고 위상적으로 정의되며, 작업에 따라 이 해상도를 손쉽게 정의할 수 있습니다. 메쉬-솔리드 관계에 대한 자세한 내용은 이 입문서의 [계산 방식 설계를 위한 형상](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) 장을 참조하십시오. Mesh Toolkit을 보다 자세히 살펴보려면 [Dynamo Wiki 페이지](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)를 참조하면 됩니다. 그러면 아래 연습의 패키지로 이동하겠습니다.
 
 ### Mesh Toolkit 설치
 

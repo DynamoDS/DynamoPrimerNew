@@ -4,7 +4,7 @@
 
 ### 벡터
 
-[벡터](5-2\_vectors.md#vector-1)는 크기 및 방향을 표현한 것으로, 지정된 속도로 특정 방향으로 가속화되는 화살표로 나타낼 수 있습니다. Dynamo에서 모델의 핵심 구성요소입니다. 추상적인 "도우미" 카테고리에 속하기 때문에 벡터를 작성할 때는 때 배경 미리보기에 아무것도 표시되지 않습니다.
+[벡터](2-vectors.md#vector-1)는 크기 및 방향을 나타내는 것으로, 지정된 속도로 특정 방향을 향해 속도를 높이는 화살표라고 생각하면 됩니다. Dynamo에서 모델의 핵심 구성요소입니다. 추상적인 "도우미" 카테고리에 속하기 때문에 벡터를 작성할 때는 때 배경 미리보기에 아무것도 표시되지 않습니다.
 
 ![Dynamo의 벡터](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@
 
 ### 평면
 
-[평면](5-2\_vectors.md#plane-1)은 2D 표면으로, 무한하게 연장되는 평평한 표면으로 나타낼 수 있습니다. 각 평면에는 원점, X 방향, Y 방향 및 Z(위쪽) 방향이 있습니다.
+[평면](2-vectors.md#plane-1)은 2D 표면으로, 무한하게 연장되는 평평한 표면이라고 생각하면 됩니다. 각 평면에는 원점, X 방향, Y 방향 및 Z(위쪽) 방향이 있습니다.
 
 ![Dynamo의 평면](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@
 
 ### 좌표계
 
-[좌표계](5-2\_vectors.md#coordinate-system-1)는 점 또는 기타 형상 요소의 위치를 결정하는 시스템입니다. 아래 이미지는 Dynamo에서 어떻게 보이는지와 각 색상이 무엇을 나타내는지 설명합니다.
+[좌표계](2-vectors.md#coordinate-system-1)는 점 또는 기타 형상 요소의 위치를 결정하는 체계입니다. 아래 이미지는 Dynamo에서 어떻게 보이는지와 각 색상이 무엇을 나타내는지 설명합니다.
 
 ![Dynamo의 좌표계](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

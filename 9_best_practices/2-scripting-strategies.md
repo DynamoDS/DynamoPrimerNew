@@ -2,7 +2,7 @@
 
 시각적 스크립팅 환경 내의 텍스트 기반 스크립팅을 활용하면 DesignScript, Python, ZeroTouch(C#)를 사용하여 강력한 시각적 관계를 사용할 수 있습니다. 사용자는 입력 슬라이더와 같은 요소를 노출시키고, 대규모 작업을 DesignScript로 압축하며, 동일한 작업공간 내에서 Python 또는 C#을 통해 강력한 도구 및 라이브러리에 액세스할 수 있습니다. 효과적으로 관리할 경우 이러한 전략을 결합하면 전체 프로그램에 대해 사용자화 사용 가능성, 명확성 및 효율성을 많이 향상할 수 있습니다. 아래에는 텍스트 스크립트를 사용하여 시각적 스크립트를 보강하는 데 도움이 되는 일련의 지침이 나와 있습니다.
 
-![](./images/2/cad-chart-textual.jpg)
+![](images/2/cad-chart-textual.jpg)
 
 ### 스크립팅해야 하는 경우에 대해 알아보기
 
@@ -23,9 +23,7 @@
 | **Python**         | 예         | 예           | 부분적          | 예                | 아니요            |
 | **ZeroTouch (C#)** | 아니요          | 아니오            | 아니오                 | 예                | 아니요            |
 
-{% hint style="info" %}
-각 Dynamo 라이브러리에서 액세스 가능한 리스트를 보려면 [스크립팅 참조](13-3\_scripting-reference.md)를 참조하십시오.
-{% endhint %}
+{% hint style="info" %} 각 Dynamo 라이브러리에서 액세스 가능한 리스트를 보려면 [스크립팅 참조](3-scripting-reference.md)를 참조하십시오.
 
 ### 파라메트릭 방식으로 생각하기
 
@@ -39,7 +37,7 @@
   * 의도한 출력
   * 상수
 
-![](./images/2/thinkparametrically01.jpg)
+![](images/2/thinkparametrically01.jpg)
 
 > 몇 가지 변수는 코드를 작성하기 전에 설정되어 있습니다.
 >
@@ -57,9 +55,9 @@
 * 다음과 같이 키 매개변수를 노출하는 방식으로만 입력 수를 최소화합니다.
   * 매개변수 세트를 더 많은 상위 매개변수에서 파생할 수 있는 경우 상위 매개변수만 스크립트 입력으로 노출합니다. 그러면 인터페이스의 복잡성이 줄어들어 스크립트의 가용성이 높아집니다.
 
-![](./images/2/thinkparametrically02.jpg)
+![](images/2/thinkparametrically02.jpg)
 
-> [Python 노드](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html) 내 예시의 코드 "모듈"
+> [Python 노드](../8\_coding\_in\_dynamo/8-3\_python/1-python.md) 내 예시의 코드 "모듈"은 다음과 같습니다.
 >
 > 1. 입력
 > 2. 스크립트 내부의 변수
@@ -104,7 +102,7 @@ for i in range(count):
 * 인접 코드(함수, 클래스, 입력 그룹 또는 가져오고 있는 라이브러리)와 시각적으로 분리해야 하는 무엇이든 모듈이 될 수 있습니다.
 * 모듈에서 코드를 개발하면 시각적이고 직관적인 품질의 노드뿐만 아니라 텍스트 스크립팅에서만 가능한 복잡한 관계도 활용할 수 있습니다.
 
-![](./images/2/thinkparametrically02.jpg)
+![](images/2/thinkparametrically02.jpg)
 
 > 이러한 루프에서는 우리가 연습에서 개발할 "agent"라는 클래스를 호출합니다.
 >
@@ -119,7 +117,7 @@ for i in range(count):
 
 이 예시에서는 중심점의 Z 값을 기준으로 반지름과 색상을 사용하여 구를 작성합니다.
 
-![](./images/2/spotcoderesuse.jpg)
+![](images/2/spotcoderesuse.jpg)
 
 > 1. "작업자" 상위 함수 두 개: 반지름이 있는 구를 작성하고 중심점의 Z 값을 기준으로 색상을 표시하는 함수.
 > 2. 두 작업자 함수를 결합하는 "관리자" 상위 함수. 이를 호출하면 내부의 두 함수가 모두 호출됩니다.
@@ -184,7 +182,7 @@ Dynamo에서 텍스트 스크립트를 개발하는 동안 실제로 작성되�
   * 빠르게 테스트하여 "타당한" 데이터가 반환되는지 확인합니다.
 * 다음과 같이 스크립트가 업데이트되면 노드에서 항상 관련 데이터를 출력하도록 스크립트에서 작업 중인 최신 데이터를 출력으로 지정합니다.
 
-![](./images/2/flexcontinuously.jpg)
+![](images/2/flexcontinuously.jpg)
 
 > 1. 솔리드의 모든 모서리가 곡선으로 돌아가 경계 상자를 작성하는지 확인합니다.
 > 2. 개수 입력이 범위로 변환되는지 확인합니다.
@@ -234,9 +232,9 @@ for i in range(xCount):
 * 프로그램을 수정해야 하는 경우 모듈에서 개발된 코드는 다음과 같이 훨씬 더 쉽게 변경할 수 있습니다.
   * 새 모듈 또는 디버깅된 모듈을 기존 프로그램에 삽입할 수 있으며, 삽입하더라도 프로그램의 나머지 부분은 변경되지 않습니다.
 
-![](./images/2/leveragecode'smodularity.jpg)
+![](images/2/leveragecode'smodularity.jpg)
 
-> [Python 노드](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html)에서 예시 파일을 디버깅합니다.
+> [Python 노드](../8\_coding\_in\_dynamo/8-3\_python/1-python.md)에서의 예시 파일 디버깅은 다음과 같습니다.
 >
 > 1. 입력 형상에서 형상 자체보다 큰 경계 상자를 반환합니다. 이는 xDist 및 yDist를 OUT에 지정하면 볼 수 있습니다.
 > 2. 입력 형상의 모서리 곡선에서 xDist 및 yDist에 대해 올바른 거리로 적절한 경계 상자를 반환합니다.
@@ -248,25 +246,23 @@ for i in range(xCount):
 >
 > 전체 예시 파일 리스트는 부록에서 확인할 수 있습니다.
 
-{% file src="./datasets/9/2/SteepestPath.dyn" %}
-
 텍스트 스크립팅의 모범 사례를 고려하여 비 시뮬레이션 스크립트를 작성해 보겠습니다. 그래프 전략에서 체계적이지 않은 시각적 프로그램에 모범 사례를 적용할 수 있었지만 그렇게 하는 것은 텍스트 스크립팅을 사용하는 것보다 훨씬 더 어렵습니다. 텍스트 스크립팅에서 설정한 논리적 관계는 가시성이 낮아 복잡한 코드에서는 풀기가 거의 불가능할 수 있습니다. 텍스트 스크립팅의 기능을 사용하면 조직의 책임이 더 커집니다. 각 단계를 살펴보고 그 과정에서 모범 사례를 적용해 보겠습니다.
 
 우리의 스크립트는 어트랙터가 변형된 표면에 적용됩니다.
 
-![](./images/2/scriptingstrategies-exercise-01.jpg)
+![](images/2/scriptingstrategies-exercise-01.jpg)
 
 가장 먼저 해야 할 작업은 필요한 Dynamo 라이브러리를 가져오는 것입니다. 먼저 이렇게 하면 Python에서 Dynamo 기능에 전역적으로 액세스할 수 있게 됩니다.
 
 사용하려는 모든 라이브러리를 여기로 가져와야 합니다.
 
-![](./images/2/scriptingstrategies-exercise-02.jpg)
+![](images/2/scriptingstrategies-exercise-02.jpg)
 
 다음으로, 스크립트의 입력과 출력을 정의해야 합니다. 이는 노드에서 입력 포트로 표시됩니다. 이러한 외부 입력이 스크립트의 토대가 되고 파라메트릭 환경을 설정하는 열쇠가 됩니다.
 
 Python 스크립트에서 변수에 해당하는 입력을 정의하고 원하는 출력을 결정해야 합니다.
 
-![](./images/2/scriptingstrategies-exercise-03.jpg)
+![](images/2/scriptingstrategies-exercise-03.jpg)
 
 > 1. 우리가 걸어갈 표면
 > 2. 우리가 걷게 할 에이전트의 수
@@ -279,7 +275,7 @@ Python 스크립트에서 변수에 해당하는 입력을 정의하고 원하�
 
 한 걸음씩 걸을 때마다 가능한 가장 가파른 방향으로 이동하도록 선택하여 표면을 걷게 하려는 에이전트에 대해 다음과 같은 클래스 또는 청사진을 정의해야 합니다.
 
-![](./images/2/scriptingstrategies-exercise-04.jpg)
+![](images/2/scriptingstrategies-exercise-04.jpg)
 
 > 1. 이름
 > 2. 모든 에이전트가 공유하는 전역 속성
@@ -291,7 +287,7 @@ Python 스크립트에서 변수에 해당하는 입력을 정의하고 원하�
 
 표면을 걷는 것을 관찰하고 해당 초기 속성을 정의하려는 모든 에이전트를 인스턴스화해야 합니다.
 
-![](./images/2/scriptingstrategies-exercise-05.jpg)
+![](images/2/scriptingstrategies-exercise-05.jpg)
 
 > 1. 비어 있는 새 트레일 리스트
 > 2. 표면에서 여정을 시작할 위치
@@ -299,15 +295,15 @@ Python 스크립트에서 변수에 해당하는 입력을 정의하고 원하�
 
 각 단계에서 각 에이전트를 업데이트합니다. 그런 다음 내포된 루프를 입력해야 합니다. 여기서 각 에이전트와 각 걸음에 대해 해당 위치를 업데이트하고 해당 트레일 리스트에 기록합니다. 또한 걸음마다 에이전트가 표면에서 한 걸음 더 내디뎌서 내려갈 수 없는 지점에 도달하지 않았는지 확인합니다. 그러한 조건이 충족되면 해당 에이전트의 여정이 종료됩니다.
 
-![](./images/2/scriptingstrategies-exercise-06.jpg)
+![](images/2/scriptingstrategies-exercise-06.jpg)
 
 에이전트가 완전히 업데이트되었으므로 이들을 나타내는 형상을 반환해 보겠습니다. 모든 에이전트가 하강 제한 또는 최대 걸음 수에 도달한 후, 해당 트레일 리스트의 지점을 통해 polycurve를 작성하고 polycurve 트레일을 출력합니다.
 
-![](./images/2/scriptingstrategies-exercise-07.jpg)
+![](images/2/scriptingstrategies-exercise-07.jpg)
 
 가장 가파른 경로를 찾는 스크립트입니다.
 
-![](./images/2/scriptingstrategies-exercise-08.jpg)
+![](images/2/scriptingstrategies-exercise-08.jpg)
 
 > 1. 기본 표면의 강우를 시뮬레이션하는 사전 설정입니다.
 > 2. 가장 가파른 경로를 찾는 대신 기본 표면을 횡단하도록 에이전트를 전환할 수 있습니다.

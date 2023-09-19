@@ -1,6 +1,6 @@
 # Python 노드
 
-Dynamo의 시각적 프로그래밍 환경에서 텍스트 프로그래밍을 사용하는 이유는 무엇입니까? [시각적 프로그래밍](../../a\_appendix/visual-programming-and-dynamo.md)에는 많은 장점이 있습니다. 직관적인 시각적 인터페이스에서 특수 구문을 학습하지 않고도 프로그램을 작성할 수 있습니다. 그러나 시각적 프로그램은 다소 복잡해 보일 수 있으며, 경우에 따라 기능이 부족할 수 있습니다. 예를 들어, Python에서는 조건문(if/then)을 작성하고 순환하기 위한 보다 효율적인 메서드를 제공합니다. Python은 Dynamo의 기능을 확장하고 여러 노드를 간단한 몇 개의 코드 줄로 바꿀 수 있게 해주는 강력한 도구입니다.
+Dynamo의 시각적 프로그래밍 환경에서 텍스트 프로그래밍을 사용하는 이유는 무엇입니까? [시각적 프로그래밍](../../a\_appendix/a-1\_visual-programming-and-dynamo.md)은 장점이 많습니다. 직관적인 시각적 인터페이스에서 특수 구문을 학습하지 않고도 프로그램을 작성할 수 있습니다. 그러나 시각적 프로그램은 다소 복잡해 보일 수 있으며, 경우에 따라 기능이 부족할 수 있습니다. 예를 들어, Python에서는 조건문(if/then)을 작성하고 순환하기 위한 보다 효율적인 메서드를 제공합니다. Python은 Dynamo의 기능을 확장하고 여러 노드를 간단한 몇 개의 코드 줄로 바꿀 수 있게 해주는 강력한 도구입니다.
 
 **시각적 프로그램:**
 
@@ -48,7 +48,7 @@ Autodesk.DesignScript.Geometry 라이브러리를 사용하면 Code Block과 유
 
 ![](../images/8-3/1/pythonnode-thepythonnode03.jpg)
 
-> 메서드로는 _ByCoordinates_ 와 같은 구성자, _Add_ 와 같은 동작, _X_, _Y_ 및 _Z_ 좌표와 같은 조회 등이 있습니다.
+> 메서드로는 _ByCoordinates_ 와 같은 구성자, _Add_와 같은 동작, _X_, _Y_ 및 _Z_ 좌표와 같은 조회 등이 있습니다.
 
 ## 연습: 솔리드 모듈에서 패턴을 작성하기 위한 Python 스크립트가 있는 사용자 노드
 
@@ -171,7 +171,7 @@ OUT = solids
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

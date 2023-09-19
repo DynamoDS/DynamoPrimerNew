@@ -22,7 +22,7 @@
 
 ### 여러 요소 및 리스트
 
-아래의 [첫 번째 연습](8-4\_creating.md#exercise)에서는 Dynamo에서 Revit 요소 작성을 위해 데이터를 참조하는 방법에 대해 설명하겠습니다. 여러 개의 가변 구성요소를 생성하기 위해 가변 구성요소의 각 점을 나타내는 세 개의 점이 각 리스트에 있는 리스트의 리스트를 정의합니다. Dynamo에서 데이터 구조를 관리할 때 이 점을 염두에 두어야 합니다.
+아래의 [첫 번째 연습](4-creating.md#exercise-generate-elements-and-lists)에서는 Dynamo에서 Revit 요소 작성을 위해 데이터를 참조하는 방법에 대해 설명합니다. 여러 개의 가변 구성요소를 생성하기 위해 가변 구성요소의 각 점을 나타내는 세 개의 점이 각 리스트에 있는 리스트의 리스트를 정의합니다. Dynamo에서 데이터 구조를 관리할 때 이 점을 염두에 두어야 합니다.
 
 ![](images/4/creating-multipleelementsandlists01.jpg)
 
@@ -30,7 +30,7 @@
 
 파라메트릭 Dynamo 형상을 Revit으로 가져오는 또 다른 방법은 DirectShape를 사용하는 것입니다. 요약하면, DirectShape 요소 및 관련 클래스는 외부에서 작성된 형상 모양을 Revit 문서에 저장하는 기능을 지원합니다. 형상에 닫힌 솔리드나 메쉬가 포함될 수 있습니다. DirectShape는 기본적으로 "실제" Revit 요소를 작성하는 데 정보가 충분하지 않은 IFC 또는 STEP와 같은 다른 데이터 형식에서 모양을 가져오도록 되어 있습니다. IFC 및 STEP 워크플로우와 마찬가지로 DirectShape 기능은 Dynamo에서 작성된 형상을 Revit 프로젝트에 실제 요소로 가져오는 작업과 함께 사용하기에 적합합니다.
 
-Dynamo 형상을 DirectShape로 Revit 프로젝트에 가져오는 [두 번째 연습](8-4\_creating.md#exercise-directshape-elements)을 진행해 보겠습니다. 이 방법을 사용하면 가져온 형상의 카테고리, 재료, 이름을 지정할 수 있으며, 그동안 Dynamo 그래프에 대한 파라메트릭 링크는 유지됩니다.
+Dynamo 형상을 DirectShape로 Revit 프로젝트에 가져오는 [두 번째 연습](4-creating.md#exercise-directshape-elements)을 진행해 보겠습니다. 이 방법을 사용하면 가져온 형상의 카테고리, 재료, 이름을 지정할 수 있으며, 그동안 Dynamo 그래프에 대한 파라메트릭 링크는 유지됩니다.
 
 ## 연습: 요소 및 리스트 생성
 

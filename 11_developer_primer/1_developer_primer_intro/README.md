@@ -4,7 +4,8 @@
 
 이 안내서의 목적은 Zero-Touch 노드를 만드는 방법부터 확장 기능 구축에 이르기까지 Dynamo의 다양한 C# 개발 가능성을 탐색하는 데 도움을 주기 위한 것입니다.
 
-![Github의 Dynamo 소스](images/dynamogithub.jpg)
+![Github의 Dynamo 소스](../1-introduction/images/dynamogithub.jpg)
+
 > GitHub의 Dynamo 소스
 
 #### 추가로 제공되는 개발자 리소스는 무엇입니까? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>
