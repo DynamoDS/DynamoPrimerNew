@@ -4,7 +4,7 @@
 
 ### Wektor
 
-[Wektor](5-2\_vectors.md#vector-1) jest reprezentacją wielkości i kierunku. Można go interpretować jako strzałkę zmierzającą w określonym kierunku z daną prędkością. Jest to kluczowy element modeli w dodatku Dynamo. Ponieważ należą one do kategorii abstrakcyjnych „elementów pomocniczych”, gdy utworzymy wektor, nie zobaczymy niczego w podglądzie tła.
+[Wektor](2-vectors.md#vector-1) jest reprezentacją wielkości i kierunku. Można go interpretować jako strzałkę zmierzającą w określonym kierunku z daną prędkością. Jest to kluczowy element modeli w dodatku Dynamo. Ponieważ należą one do kategorii abstrakcyjnych „elementów pomocniczych”, gdy utworzymy wektor, nie zobaczymy niczego w podglądzie tła.
 
 ![Wektory w dodatku Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@
 
 ### Płaszczyzna
 
-[Płaszczyzna](5-2\_vectors.md#plane-1) jest powierzchnią dwuwymiarową. Można ją interpretować jako płaską powierzchnię, która rozciąga się w nieskończoność. Każda płaszczyzna ma początek, kierunek X, kierunek Y i kierunek Z (w górę).
+[Płaszczyzna](2-vectors.md#plane-1) jest powierzchnią dwuwymiarową. Można ją interpretować jako płaską powierzchnię, która rozciąga się w nieskończoność. Każda płaszczyzna ma początek, kierunek X, kierunek Y i kierunek Z (w górę).
 
 ![Płaszczyzny w dodatku Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@
 
 ### Układ współrzędnych
 
-[Układ współrzędnych](5-2\_vectors.md#coordinate-system-1) jest układem określającym położenie punktów lub innych elementów geometrycznych. Na poniższym rysunku wyjaśniono, jak to wygląda w dodatku Dynamo i co reprezentuje każdy kolor.
+[Układ współrzędnych](2-vectors.md#coordinate-system-1) jest układem określającym położenie punktów lub innych elementów geometrycznych. Na poniższym rysunku wyjaśniono, jak to wygląda w dodatku Dynamo i co reprezentuje każdy kolor.
 
 ![Układ współrzędnych w dodatku Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

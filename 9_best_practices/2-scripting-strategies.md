@@ -2,7 +2,7 @@
 
 Skrypty tekstowe opracowywane środowisku wizualnym pozwalają na korzystanie z zaawansowanych, wizualnych powiązań przy użyciu języków DesignScript, Python i ZeroTouch (C#). Można dzięki nim udostępniać elementy takie jak suwaki danych wejściowych, umieszczać całe złożone operacje w skryptach DesignScript, a także korzystać z zaawansowanych narzędzi i bibliotek Python oraz C# — wszystko to w tym samym obszarze roboczym. Efektywne stosowanie tych strategii umożliwia dostosowywanie, poprawianie czytelności i zwiększanie wydajności programu. Poniżej zebrano wskazówki, które pomagają w pracy nad skryptami wizualnymi i tekstowymi.
 
-![](./images/2/cad-chart-textual.jpg)
+![](images/2/cad-chart-textual.jpg)
 
 ### Kiedy warto użyć skryptu
 
@@ -23,9 +23,7 @@ Skrypty tekstowe pozwalają tworzyć relacje o wyższej złożoności niż progr
 | **Python**         | Tak         | Tak           | Częściowo          | Tak                | Nie            |
 | **ZeroTouch (C#)** | Nie          | Nie            | Nie                 | Tak                | Nie            |
 
-{% hint style="info" %}
-[Materiały referencyjne dotyczące skryptów](13-3\_scripting-reference.md) zawierają listę funkcji wszystkich bibliotek dodatku Dynamo. 
-{% endhint %}
+{% hint style="info" %} [Materiały referencyjne dotyczące skryptów](3-scripting-reference.md) zawierają listę funkcji wszystkich bibliotek dodatku Dynamo. {% endhint %}
 
 ### Myślenie parametryczne
 
@@ -39,7 +37,7 @@ Podczas tworzenia skryptów w dodatku Dynamo, który jako środowisko jest opart
   * Zamierzone dane wyjściowe
   * Stałe
 
-![](./images/2/thinkparametrically01.jpg)
+![](images/2/thinkparametrically01.jpg)
 
 > Wiele zmiennych jest znanych przed przystąpieniem do pisania kodu.
 >
@@ -57,9 +55,9 @@ Podczas tworzenia skryptów w dodatku Dynamo, który jako środowisko jest opart
 * Należy ograniczyć liczbę wejść, udostępniając tylko najważniejsze parametry:
   * Jeśli zestaw parametrów można obliczyć na podstawie innych parametrów nadrzędnych, wystarczy udostępnić same parametry nadrzędne jako wejścia skryptu. Ułatwia to korzystanie ze skryptu, gdyż upraszcza jego interfejs.
 
-![](./images/2/thinkparametrically02.jpg)
+![](images/2/thinkparametrically02.jpg)
 
-> Moduły kodu z przykładu w [węźle Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> „Moduły” kodu z przykładu w artykule [Węzeł Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
 >
 > 1. Wejścia.
 > 2. Zmienne wewnętrzne skryptu.
@@ -104,7 +102,7 @@ Z czasem kod staje się dłuższy i bardziej złożony, a jego ogólny zarys (g�
 * Może to obejmować wszelkie zadania, które powinny być wizualnie oddzielone od sąsiadującego kodu (funkcje, klasy, grupy danych wejściowych czy importowane biblioteki).
 * Pisanie kodu w modułach pozwala korzystać z intuicyjnego, wizualnego mechanizmu węzłów, a jednocześnie uzyskiwać złożone relacje dostępne tylko za pośrednictwem skryptów.
 
-![](./images/2/thinkparametrically02.jpg)
+![](images/2/thinkparametrically02.jpg)
 
 > Te pętle wywołują klasę o nazwie „agent”, którą zaprogramujemy w ramach ćwiczenia.
 >
@@ -119,7 +117,7 @@ Z czasem kod staje się dłuższy i bardziej złożony, a jego ogólny zarys (g�
 
 Ten przykładowy kod tworzy kule o promieniach i kolorach zależnych od wartości Z punktów środkowych.
 
-![](./images/2/spotcoderesuse.jpg)
+![](images/2/spotcoderesuse.jpg)
 
 > 1. Zawiera dwie nadrzędne robocze funkcje: jedną tworzącą kule o zadanych promieniach i jedną wyświetlającą kolory zależnie od wartości Z punktów środkowych.
 > 2. Nadrzędna funkcja zarządzająca łączy obie funkcje robocze. Jej wywołanie powoduje wywołanie obu zawartych w niej funkcji.
@@ -184,7 +182,7 @@ Podczas pracy nad skryptami tekstowymi w dodatku Dynamo warto w sposób ciągły
   * Wykonaj krótki test, aby sprawdzić, czy zwracane dane mają sens.
 * Przypisz dane, które ostatnio przetwarzał skrypt, jako wyjściowe, tak aby węzeł zawsze generował odpowiednie dane w razie aktualizacji skryptu:
 
-![](./images/2/flexcontinuously.jpg)
+![](images/2/flexcontinuously.jpg)
 
 > 1. Sprawdź, czy wszystkie krawędzie bryły są zwracane jako krzywe do tworzenia ramki ograniczającej.
 > 2. Sprawdź, czy liczniki wejściowe są prawidłowo konwertowane na zakresy.
@@ -234,9 +232,9 @@ for i in range(xCount):
 * Gdy trzeba zmodyfikować program, można łatwiej zmienić kod umieszczony w modułach:
   * Nowe lub debugowane moduły można wstawić do istniejącego programu bez ryzyka modyfikacji reszty programu.
 
-![](./images/2/leveragecode'smodularity.jpg)
+![](images/2/leveragecode'smodularity.jpg)
 
-> Debugowanie przykładowego pliku z [węzła Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Debugowanie przykładowego pliku z artykułu [Węzeł Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
 >
 > 1. Geometria wejściowa zwraca ramkę ograniczającą większą niż ta geometria, co widać po przypisaniu zmiennych xDist i yDist jako wyjściowych.
 > 2. Krzywe krawędzi geometrii wejściowej zwracają prawidłową ramkę ograniczającą z poprawnymi odległościami xDist i yDist.
@@ -248,25 +246,23 @@ for i in range(xCount):
 >
 > Pełna lista plików przykładowych znajduje się w załączniku.
 
-{% file src="./datasets/9/2/SteepestPath.dyn" %}
-
 Pamiętając o wzorcach postępowania pisania skryptów tekstowych, napiszemy skrypt symulujący deszcz. Zastosowaliśmy wzorce postępowania do zdezorganizowanego programu w ramach strategii dotyczących wykresu, ale praca nad skryptami tekstowymi jest trudniejsza. Relacje logiczne zdefiniowane w skryptach tekstowych nie są tak widoczne i często są ściśle powiązane ze skomplikowanym kodem. Skrypty tekstowe oferują zaawansowane możliwości, ale wymagają też więcej uwagi w organizacji. Przyjrzymy się wszystkim krokom i zastosujemy do nich wzorce postępowania.
 
 Nasz skrypt wprowadził powierzchnię zdeformowaną przy użyciu punktu przyciągania.
 
-![](./images/2/scriptingstrategies-exercise-01.jpg)
+![](images/2/scriptingstrategies-exercise-01.jpg)
 
 Na samym początku musimy zaimportować wymagane biblioteki dodatku Dynamo. Zapewni to globalny dostęp do funkcji dodatku Dynamo w kodzie Python.
 
 Tutaj należy zaimportować wszystkie biblioteki, których zamierzamy użyć.
 
-![](./images/2/scriptingstrategies-exercise-02.jpg)
+![](images/2/scriptingstrategies-exercise-02.jpg)
 
 Następnie musimy zdefiniować dane wejściowe i wyjściowe skryptu, które będą widoczne jako porty wejściowe węzła. Na tych zewnętrznych danych wejściowych opiera się nasz skrypt. Dzięki nim tworzymy środowisko parametryczne.
 
 Musimy zdefiniować dane wejściowe odpowiadające zmiennym skryptu Python i określić oczekiwane dane wyjściowe:
 
-![](./images/2/scriptingstrategies-exercise-03.jpg)
+![](images/2/scriptingstrategies-exercise-03.jpg)
 
 > 1. Powierzchnia, po której chcemy wykonać zejście.
 > 2. Liczba poruszających się agentów.
@@ -279,7 +275,7 @@ Teraz zastosujemy metodę modularności i utworzymy treść skryptu. Symulowanie
 
 Musimy zdefiniować klasę, która stanowi schemat agenta mającego przechodzić po powierzchni, przy każdym kroku wybierając najbardziej stromy kierunek:
 
-![](./images/2/scriptingstrategies-exercise-04.jpg)
+![](images/2/scriptingstrategies-exercise-04.jpg)
 
 > 1. Nazwa.
 > 2. Atrybuty globalne, które mają wszystkie agenty.
@@ -291,7 +287,7 @@ Zainicjujemy agenty, definiując ich położenie początkowe. Teraz warto sprawd
 
 Musimy utworzyć wystąpienia wszystkich agentów, które chcemy obserwować na ich drodze w dół powierzchni, a także zdefiniować ich atrybuty początkowe:
 
-![](./images/2/scriptingstrategies-exercise-05.jpg)
+![](images/2/scriptingstrategies-exercise-05.jpg)
 
 > 1. Nowa, pusta lista śladów.
 > 2. Miejsce rozpoczęcia przemieszczania na powierzchni.
@@ -299,15 +295,15 @@ Musimy utworzyć wystąpienia wszystkich agentów, które chcemy obserwować na 
 
 Aktualizowanie każdego agenta przy każdym kroku. Następnie musimy wprowadzić pętlę zagnieżdżoną, która dla każdego agenta przy każdym kroku aktualizuje i rejestruje jego położenie na liście śladów. Na każdym kroku musimy też upewnić się, że agent nie osiągnął punktu powierzchni, z którego nie może wykonać następnego kroku w dół. Jeśli ten warunek jest spełniony, kończymy podróż agenta.
 
-![](./images/2/scriptingstrategies-exercise-06.jpg)
+![](images/2/scriptingstrategies-exercise-06.jpg)
 
 Teraz nasze agenty są w pełni zaktualizowane. Zwrócimy reprezentującą je geometrię. Gdy wszystkie agenty osiągną limit podróży w dół lub maksymalną liczbę kroków, utworzymy krzywą złożoną łączącą wszystkie punkty na ich liście śladów i wygenerujemy wyjście zawierające ślady krzywych złożonych.
 
-![](./images/2/scriptingstrategies-exercise-07.jpg)
+![](images/2/scriptingstrategies-exercise-07.jpg)
 
 Nasz skrypt wykrywający najbardziej strome ścieżki.
 
-![](./images/2/scriptingstrategies-exercise-08.jpg)
+![](images/2/scriptingstrategies-exercise-08.jpg)
 
 > 1. Ustawienie wstępne symulujące padanie deszczu na oryginalną powierzchnię.
 > 2. Zamiast wykrywania najbardziej stromej ścieżki, agenty można przełączyć w tryb trawersowania powierzchni.

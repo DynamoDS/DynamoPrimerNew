@@ -1,6 +1,6 @@
 # Węzły języka Python
 
-Dlaczego w środowisku programowania wizualnego Dynamo warto używać programowania tekstowego? [Programowanie wizualne](../../a\_appendix/visual-programming-and-dynamo.md) ma wiele zalet. Umożliwia tworzenie programów bez konieczności poznawania specjalnej składni w intuicyjnym interfejsie wizualnym. Jednak program wizualny może z czasem zawierać zbyt wiele elementów i nie działać zgodnie z założeniami. Na przykład język Python oferuje znacznie więcej dostępnych metod pisania instrukcji warunkowych (jeśli/to) i zapętlania. Język Python jest zaawansowanym narzędziem, które umożliwia rozszerzenie możliwości dodatku Dynamo i zastąpienie wielu węzłów kilkoma zwięzłymi liniami kodu.
+Dlaczego w środowisku programowania wizualnego Dynamo warto używać programowania tekstowego? [Programowanie wizualne](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) ma wiele zalet. Umożliwia tworzenie programów bez konieczności poznawania specjalnej składni w intuicyjnym interfejsie wizualnym. Jednak program wizualny może z czasem zawierać zbyt wiele elementów i nie działać zgodnie z założeniami. Na przykład język Python oferuje znacznie więcej dostępnych metod pisania instrukcji warunkowych (jeśli/to) i zapętlania. Język Python jest zaawansowanym narzędziem, które umożliwia rozszerzenie możliwości dodatku Dynamo i zastąpienie wielu węzłów kilkoma zwięzłymi liniami kodu.
 
 **Program wizualny:**
 
@@ -171,7 +171,7 @@ Ponieważ będziemy zarówno przekształcać, jak i obracać moduły brył, uży
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

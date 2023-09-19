@@ -1,4 +1,4 @@
-# Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 2.x 
+# Aktualizowanie pakietów i bibliotek dodatku Dynamo dla dodatku Dynamo 2.x
 
 ### Wprowadzenie: <a href="#introduction" id="introduction"></a>
 
@@ -10,7 +10,7 @@ Zadbanie o działanie w wersji 2.x węzłów interfejsu użytkownika i węzłów
 
 Twórcy rozszerzeń również mogą być zmuszeni do wprowadzenia pewnych zmian w zależności od tego, w jakim stopniu wykorzystują w rozszerzeniach podstawowe interfejsy API dodatku Dynamo.
 
-***
+
 
 ### Ogólne zasady dotyczące pakowania: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -18,8 +18,6 @@ Twórcy rozszerzeń również mogą być zmuszeni do wprowadzenia pewnych zmian 
 * Należy w miarę możliwości unikać dodawania do pakietu i dystrybuowania z pakietem pliku `newtonsoft.json.net`. Ten plik dll również zostanie wcześniej wczytany przez dodatek Dynamo 2.x. Może wystąpić ten sam problem co powyżej.
 * Należy w miarę możliwości unikać dodawania do pakietu i dystrybuowania z pakietem pliku `CEFSharp`. Ten plik dll również zostanie wcześniej wczytany przez dodatek Dynamo 2.x. Może wystąpić ten sam problem co powyżej.
 * Ogólnie należy unikać udostępniania zależności wraz z dodatkiem Dynamo lub programem Revit, jeśli zachodzi potrzeba kontrolowania wersji tej zależności.
-
-
 
 ### Typowe problemy: <a href="#common-issues" id="common-issues"></a>
 
@@ -39,7 +37,6 @@ Inna możliwa przyczyna:
 
 * Może tak się zdarzyć, jeśli z jakiegoś powodu nie powiedzie się deserializacja. Zaleca się serializowanie tylko potrzebnych właściwości. Można używać atrybutu `[JsonIgnore]` w przypadku złożonych właściwości, których nie trzeba wczytywać ani zapisywać, aby je zignorować. Chodzi o właściwości takie jak `function pointer, delegate, action,` czy `event`. Nie należy ich serializować, ponieważ zazwyczaj nie można ich zdeserializować i powodują one błąd w trakcie wykonywania.
 
-
 ### Szczegółowe omówienie uaktualnienia: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### Węzły niestandardowe z wersji 1.3 do wersji 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
@@ -52,13 +49,11 @@ Znane problemy:
 * Komentarze zostaną zamienione na komentarze blokowe zamiast komentarzy jednowierszowych.
 * Krótkie nazwy typów zostaną zastąpione pełnymi nazwami. Jeśli na przykład podczas ponownego wczytywania węzła niestandardowego nie został określony typ, pojawi się `var[]..[]` — ponieważ jest to typ domyślny.
 
-
 ### Węzły Zero-Touch z wersji 1.3 do wersji 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * W dodatku Dynamo 2.0 typy List (lista) i Dictionary (słownik) zostały rozdzielone, a składnia tworzenia list i słowników została zmieniona. Listy inicjuje się przy użyciu `[]`, a słowniki przy użyciu `{}`.\
  Jeśli wcześniej używano atrybutu `DefaultArgument` do oznaczania parametrów w węzłach Zero-Touch i używano składni listy w celu utworzenia konkretnej listy domyślnej, takiej jak `someFunc([DefaultArgument("{0,1,2}")])`, nie będzie to już poprawne. Należy zmodyfikować fragment kodu DesignScript, stosując nową składnię inicjowania list.
 * Jak wspomniano powyżej, nie należy dystrybuować plików dll dodatku Dynamo wraz z pakietami. (`DynamoCore`, `DynamoServices` itp.)
-
 
 ### Węzły Node Model z wersji 1.3 do wersji 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ Zaktualizowanie węzłów Node Model do wersji Dynamo 2.x wymaga najwięcej prac
 
 Nazwy parametrów w konstruktorze powinny zasadniczo odpowiadać nazwom właściwości JSON — jednak to odwzorowanie jest bardziej skomplikowane w przypadku nadpisywania nazw serializowanych przy użyciu atrybutów [JsonProperty].\
  [Więcej informacji można znaleźć w dokumentacji Json.net.](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### Konstruktory JSON <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,7 +88,6 @@ Jest to główna różnica między konstruktorami JSON i innymi konstruktorami N
 
 Przykłady można znaleźć tutaj w repozytorium DynamoSamples -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) lub [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123)
 
-
 #### Właściwości publiczne i serializowanie <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
 Wcześniej programista mógł serializować i deserializować określone dane modelu do dokumentu xml za pomocą metod `SerializeCore` i `DeserializeCore`. Te metody nadal istnieją w interfejsie API, ale zostaną wycofane w przyszłej wersji dodatku Dynamo (przykład można znaleźć [tutaj](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)). Dzięki implementacji JSON.NET właściwości `public` klasy pochodnej od klasy NodeModel można teraz serializować bezpośrednio do pliku .dyn. W środowisku JSON.Net dostępnych jest wiele atrybutów umożliwiających sterowanie sposobem serializowania właściwości.
@@ -104,7 +97,6 @@ W repozytorium dodatku Dynamo, [tutaj](https://github.com/DynamoDS/Dynamo/blob/m
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### Konwertery: <a href="#converters" id="converters"></a>
 
@@ -117,17 +109,15 @@ W repozytorium dodatku Dynamo, [tutaj](https://github.com/DynamoDS/Dynamo/blob/m
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### Ignorowanie właściwości <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 Właściwości `public`, które nie są przeznaczone do serializacji, muszą mieć dodany atrybut `[JsonIgnore]`. Po zapisaniu węzłów w pliku .dyn zapewnia to ignorowanie tych danych przez mechanizm serializowania, więc nie będą one powodować nieoczekiwanych konsekwencji po ponownym otwarciu wykresu. Przykład tego można znaleźć [tutaj](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) w repozytorium dodatku Dynamo.
 
-***
+
 
 #### Cofanie/ponawianie <a href="#undoredo" id="undoredo"></a>
 
 Jak wspomniano powyżej, w przeszłości używano metod `SerializeCore` i `DeserializeCore` do zapisywania i wczytywania węzłów do pliku xml .dyn. Dodatkowo były też używane do zapisywania i wczytywania stanu węzła na potrzeby operacji cofania/ponawiania — i **nadal są**. Aby zaimplementować złożone funkcje cofania/ponawiania dla węzła interfejsu użytkownika nodeModel, należy zaimplementować te metody i zserializować je w obiekcie dokumentu XML dostarczanym jako parametr tych metod. Powinno to być stosowane rzadko, w przypadku złożonych węzłów interfejsu użytkownika.
-
 
 #### Interfejsy API portów wejściowych i wyjściowych <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
@@ -142,7 +132,6 @@ w porównaniu z nową
 Przykłady przekonwertowanego kodu można znaleźć tutaj w repozytorium dodatku Dynamo -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) lub [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281)
 
 Inny typowy przypadek użycia, na który wpływają zmiany interfejsu API 2.0, dotyczy metod powszechnie używanych w metodzie `BuildAst()` w celu określania zachowania węzłów na podstawie występowania lub braku złączy portów. Wcześniej do sprawdzania stanu połączenia portu używano metody `HasConnectedInput(index)`. Programiści powinni teraz sprawdzać stan połączenia portu za pomocą właściwości `InPorts[0].IsConnected`. Przykład tego można znaleźć w pliku [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) w repozytorium dodatku Dynamo.
-
 
 ### Przykłady: <a href="#examples" id="examples"></a>
 

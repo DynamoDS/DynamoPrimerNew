@@ -1,4 +1,4 @@
-# Pakiet — wprowadzenie 
+# Pakiet — wprowadzenie
 
 W skrócie: pakiet jest zbiorem węzłów niestandardowych. Dynamo Package Manager to portal dla społeczności umożliwiający pobranie dowolnego pakietu, który został opublikowany online. Te zestawy narzędzi zostały opracowane przez strony trzecie w celu rozszerzenia podstawowej funkcjonalności dodatku Dynamo i są dostępne dla wszystkich. Są gotowe do pobrania po kliknięciu przycisku.
 
@@ -67,7 +67,7 @@ Otwórzmy plik „SphereUnfold”.
 
 Po otwarciu pliku i naciśnięciu przycisku „Uruchom” w solwerze dostępna jest rozwinięta sfera. Pliki przykładowe są przydatne do nauki pracy z nowym pakietem Dynamo.
 
-![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Menedżer pakietów Dynamo
 

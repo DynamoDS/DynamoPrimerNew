@@ -6,12 +6,12 @@ Jeśli najprostszą formą danych są liczby, najprostszym sposobem powiązywani
 
 Operatory to zestaw komponentów, w których używane są funkcje algebraiczne z dwiema wejściowymi wartościami liczbowymi dającymi jedną wartość wyjściową (dodawanie, odejmowanie, mnożenie, dzielenie itp.). Można je znaleźć w obszarze Operatory > Operacje.
 
-| Ikona                                              | Nazwa (składnia)     | Dane wejściowe                     | Dane wyjściowe      |
-| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Mnożenie (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| Ikona                                                  | Nazwa (składnia)     | Dane wejściowe                     | Dane wyjściowe      |
+| ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ćwiczenie: formuła złotej spirali
 
@@ -87,7 +87,7 @@ Mamy już powłokę nautilusa — przejdźmy do siatek parametrycznych. Użyjemy
 
 Punktem wyjścia będzie ten sam krok co w poprzednim ćwiczeniu: utworzenie szyku spirali punktów za pomocą węzła **Point.ByCoordinates**.
 
-![](../images/5-3/2/math-part IV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 Następnie wykonaj te minikroki, aby wygenerować serię spiral o różnych obrotach.
 

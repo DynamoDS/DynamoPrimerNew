@@ -10,11 +10,11 @@ Zmienne liczbowe mogą przechowywać liczby z szerokiego zakresu. Zmienne logicz
 
 Instrukcja „If” (jeśli) stanowi kluczowe pojęcie w programowaniu: „Jeśli _to_ jest prawdą, wtedy _tak_ się stanie, w przeciwnym razie stanie się _coś innego_”. Wynikowa operacja tej instrukcji zależy od wartości logicznej. Istnieje wiele sposobów definiowania instrukcji „If” w dodatku Dynamo:
 
-| Ikona                                         | Nazwa (składnia)             | Dane wejściowe            | Dane wyjściowe |
-| -------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../images/5-1/If.jpg)                    | Jeśli (**If**)               | test, prawda, fałsz | wynik  |
-| ![](../images/5-1/Formula.jpg)               | Formuła (**IF(x,y,z)**)   | x, y, z           | wynik  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | wynik  |
+| Ikona                                             | Nazwa (składnia)             | Dane wejściowe            | Dane wyjściowe |
+| ------------------------------------------------ | ------------------------- | ----------------- | ------- |
+| ![](../images/5-1/If.jpg)                        | Jeśli (**If**)               | test, prawda, fałsz | wynik  |
+| ![](../images/5-1/Formula.jpg)                   | Formuła (**IF(x,y,z)**)   | x, y, z           | wynik  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | wynik  |
 
 Przeanalizujmy krótki przykład dotyczący działania każdego z tych trzech węzłów z użyciem instrukcji warunkowej „If”.
 

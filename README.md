@@ -1,4 +1,4 @@
-# Informacje 
+# Informacje
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype — nagranie wideo {% endembed %}
 
@@ -35,21 +35,33 @@ Jeśli chcesz wziąć udział w opracowywaniu nowej sekcji, pomóc w edycji lub 
 
 Przewodnik Dynamo Primer to projekt typu open source zainicjowany przez Matta Jezyka i zespół programistów dodatku Dynamo w firmie Autodesk.
 
-Napisanie pierwszej wersji tego przewodnika zlecono **Mode Lab**. Dziękujemy im za wszystkie starania mające na celu ustanowienie tego cennego zasobu.
+Napisanie pierwszej wersji tego przewodnika Primer zlecono **Mode Lab**. Dziękujemy im za wszystkie starania mające na celu ustanowienie tego cennego zasobu.
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-Aktualizację tego przewodnika w celu odzwierciedlenia zmian w dodatku Dynamo 2.0 zlecono **Johnowi Piersonowi z Parallax Team**.
+Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.0 zlecono **Johnowi Piersonowi z Parallax Team**.
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-Aktualizację tego przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.13 zlecono **Matterlab**.
+Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.13 zlecono **Matterlab**.
 
 ![](images/matterlab\_final-07.jpg)
+
+***
+
+Aktualizację przewodnika Primer w celu odzwierciedlenia zmian w dodatku Dynamo 2.17 zlecono **Archilizer**.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+Aktualizację przewodnika Primer o treści związane z dodatkiem Dynamo for Civil 3D zlecono **Wood Rodgers**.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Podziękowania
 
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### Licencja
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

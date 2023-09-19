@@ -1,16 +1,16 @@
 # Co to jest blok kodu
 
-Bloki kodu zapewniają głęboki wgląd w język DesignScript, czyli język programowania stanowiący rdzeń dodatku Dynamo. Język DesignScript, stworzony od podstaw do obsługi badawczych przepływów roboczych procesów projektowych, jest czytelny i zwięzły oraz zapewnia natychmiastową informację zwrotną dla małych fragmentów kodu, ale umożliwia też skalowanie do dużych i złożonych interakcji. Język DesignScript stanowi też fundament mechanizmu sterującego większością zaplecza dodatku Dynamo. Fakt, że prawie wszystkie funkcje dostępne w węzłach i interakcjach dodatku Dynamo mają relację „jeden do jednego” z językiem skryptów, zapewnia niepowtarzalne możliwości płynnego przechodzenia między interakcjami opartymi na węzłach a stosowaniem skryptów.  
+Bloki kodu zapewniają głęboki wgląd w język DesignScript, czyli język programowania stanowiący rdzeń dodatku Dynamo. Język DesignScript, stworzony od podstaw do obsługi badawczych przepływów roboczych procesów projektowych, jest czytelny i zwięzły oraz zapewnia natychmiastową informację zwrotną dla małych fragmentów kodu, ale umożliwia też skalowanie do dużych i złożonych interakcji. Język DesignScript stanowi też fundament mechanizmu sterującego większością zaplecza dodatku Dynamo. Fakt, że prawie wszystkie funkcje dostępne w węzłach i interakcjach dodatku Dynamo mają relację „jeden do jednego” z językiem skryptów, zapewnia niepowtarzalne możliwości płynnego przechodzenia między interakcjami opartymi na węzłach a stosowaniem skryptów.
 
 ![](../images/8-1/1/codeblock.jpg)
 
-W przypadku użytkowników początkujących węzły mogą być automatycznie przekształcane w składnię tekstową, co pomaga w nauce języka DesignScript, a także po prostu zmniejsza rozmiar większych części wykresów. Do tego celu służy proces o nazwie „Konwersja węzłów na kod”, który jest szczegółowo opisany w [sekcji Składnia języka DesignScript](7-2\_design-script-syntax.md). Bardziej doświadczeni użytkownicy mogą używać bloków kodu do tworzenia własnych połączeń istniejących funkcji oraz samodzielnie utworzonych relacji za pomocą wielu standardowych paradygmatów kodowania. Zarówno początkujący, jak i zaawansowani użytkownicy znajdą wiele przydatnych skrótów i fragmentów kodu, które przyspieszają pracę nad projektami. Chociaż termin „blok kodu” może wywoływać nieco niepokoju u użytkowników, którzy nie są programistami, jest to łatwe w obsłudze i niezawodne narzędzie. Początkujący użytkownik może efektywnie używać bloku kodu przy minimalnym kodowaniu, a zaawansowany użytkownik może tworzyć definicje skryptowe, które będą przywoływane w innych miejscach definicji dodatku Dynamo.
+W przypadku użytkowników początkujących węzły mogą być automatycznie przekształcane w składnię tekstową, co pomaga w nauce języka DesignScript, a także po prostu zmniejsza rozmiar większych części wykresów. Do tego celu służy proces o nazwie „Konwersja węzłów na kod”, który jest szczegółowo opisany w [sekcji Składnia języka DesignScript](2-design-script-syntax.md). Bardziej doświadczeni użytkownicy mogą używać bloków kodu do tworzenia własnych połączeń istniejących funkcji oraz samodzielnie utworzonych relacji za pomocą wielu standardowych paradygmatów kodowania. Zarówno początkujący, jak i zaawansowani użytkownicy znajdą wiele przydatnych skrótów i fragmentów kodu, które przyspieszają pracę nad projektami. Chociaż termin „blok kodu” może wywoływać nieco niepokoju u użytkowników, którzy nie są programistami, jest to łatwe w obsłudze i niezawodne narzędzie. Początkujący użytkownik może efektywnie używać bloku kodu przy minimalnym kodowaniu, a zaawansowany użytkownik może tworzyć definicje skryptowe, które będą przywoływane w innych miejscach definicji dodatku Dynamo.
 
-### Węzeł Code Block: krótkie omówienie 
+### Węzeł Code Block: krótkie omówienie
 
 W skrócie: bloki kodu są interfejsem skryptów tekstowych w środowisku skryptów wizualnych. Mogą one być używane jako liczby, ciągi, formuły i inne typy danych. Funkcję bloku kodu zaprojektowano dla dodatku Dynamo, więc można definiować w bloku kodu dowolne zmienne, które będą automatycznie dodawane do wejść węzła:
 
-Bloki kodu pozwalają użytkownikowi elastycznie decydować, w jaki sposób będą określane dane wejściowe. Oto kilka różnych sposobów na ustawienie podstawowego punktu o współrzędnych _(10, 5, 0)_: 
+Bloki kodu pozwalają użytkownikowi elastycznie decydować, w jaki sposób będą określane dane wejściowe. Oto kilka różnych sposobów na ustawienie podstawowego punktu o współrzędnych _(10, 5, 0)_:
 
 ![](../images/8-1/1/codeblockbriefoverview.jpg)
 
@@ -34,4 +34,3 @@ Number, String i Formula to trzy przykłady węzłów Dynamo, które są najpraw
 
 > 1. Rozwiązanie tradycyjne
 > 2. Węzły Code Block
-

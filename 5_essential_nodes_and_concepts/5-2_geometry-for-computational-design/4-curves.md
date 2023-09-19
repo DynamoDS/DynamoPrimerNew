@@ -4,7 +4,7 @@
 
 ### Co to jest krzywa?
 
-[Krzywe](5-4\_curves.md#curve) są pierwszym z opisanych typów danych geometrycznych, które mają bardziej znany zestaw właściwości opisujących kształt: jak bardzo są zakrzywione lub proste? Jak są długie lub krótkie? Należy też pamiętać, że punkty są nadal blokami konstrukcyjnymi służącymi do definiowania dowolnego elementu — od linii do splajnu oraz wszystkich typów krzywych.
+[Krzywe](4-curves.md#deep-dive-into...) są pierwszym z opisanych typów danych geometrycznych, które mają bardziej znany zestaw właściwości opisujących kształt: jak bardzo są zakrzywione lub proste? Jak są długie lub krótkie? Należy też pamiętać, że punkty są nadal blokami konstrukcyjnymi służącymi do definiowania dowolnego elementu — od linii do splajnu oraz wszystkich typów krzywych.
 
 ![Typy krzywych](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@
 
 ### Linia
 
-[Linia](5-4\_curves.md#lines) składa się z zestawu punktów; każda linia ma co najmniej 2 punkty. Jednym z najpopularniejszych sposobów tworzenia linii w dodatku Dynamo jest użycie `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) w celu utworzenia linii w dodatku Dynamo.
+[Linia](4-curves.md#lines) składa się z zestawu punktów; każda linia ma co najmniej 2 punkty. Jednym z najpopularniejszych sposobów tworzenia linii w dodatku Dynamo jest użycie `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) w celu utworzenia linii w dodatku Dynamo.
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Krzywa NURBS
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) to model używany do dokładnego przedstawiania krzywych i powierzchni. Krzywa sinusoidalna w dodatku Dynamo utworzona za pomocą dwóch różnych metod tworzenia krzywych NURBS w celu porównania wyników.
+[NURBS](4-curves.md#nurbs-+-polycurves) to model używany do dokładnego przedstawiania krzywych i powierzchni. Krzywa sinusoidalna w dodatku Dynamo utworzona za pomocą dwóch różnych metod tworzenia krzywych NURBS w celu porównania wyników.
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

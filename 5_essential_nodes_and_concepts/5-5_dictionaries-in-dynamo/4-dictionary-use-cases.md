@@ -30,7 +30,7 @@ Teraz odtwórzmy ten pomysł, używając słowników. Najpierw musimy zebrać ws
 > 1. Wybieramy kategorię programu Revit, z którą chcemy pracować (w tym przypadku pracujemy z pomieszczeniami).
 > 2. Zlecamy dodatkowi Dynamo zebranie wszystkich tych elementów.
 
-Następnie musimy zdecydować, jakich kluczy użyjemy do wyszukiwania tych danych. (Informacje na temat kluczy można znaleźć w sekcji [Co to jest słownik?](9-1\_what-is-a-dictionary.md)).
+Następnie musimy zdecydować, jakich kluczy użyjemy do wyszukiwania tych danych. (Informacje na temat kluczy można znaleźć w sekcji [Co to jest słownik?](1-what-is-a-dictionary.md)).
 
 ![](../images/5-5/4/dictionary-exerciseI-02.jpg)
 

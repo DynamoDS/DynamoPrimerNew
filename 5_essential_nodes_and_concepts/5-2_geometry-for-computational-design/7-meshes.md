@@ -23,7 +23,7 @@ Możliwości tworzenia siatki w dodatku Dynamo można rozszerzyć, instalując p
 
 Ta biblioteka zawiera również narzędzia do modyfikowania siatek, naprawiania siatek i wyodrębniania warstw poziomych do użycia w produkcji.
 
-Odwiedź [stronę analiz przypadków pakietu Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md), aby zapoznać się z przykładem korzystania z tego pakietu.
+Odwiedź [stronę analiz przypadków pakietu Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes), aby zapoznać się z przykładem korzystania z tego pakietu.
 
 ![Zestaw Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

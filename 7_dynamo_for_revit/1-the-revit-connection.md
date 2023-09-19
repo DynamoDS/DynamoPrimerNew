@@ -37,7 +37,7 @@ W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kl
 
 {% hint style="warning" %} *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie do procesów roboczych programu Revit*.
 
@@ -47,7 +47,7 @@ W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa katego
 
 ### Blokowanie węzłów
 
-Ponieważ program Revit jest platformą zapewniającą zaawansowane zarządzanie projektem, operacje parametryczne w dodatku Dynamo mogą być skomplikowane, a ich obliczanie — powolne. Jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu. Aby uzyskać więcej informacji na temat blokowania węzłów, zobacz sekcję „[Blokowanie](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)” w rozdziale poświęconym bryłom.
+Ponieważ program Revit jest platformą zapewniającą zaawansowane zarządzanie projektem, operacje parametryczne w dodatku Dynamo mogą być skomplikowane, a ich obliczanie — powolne. Jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu. Aby uzyskać więcej informacji na temat blokowania węzłów, zobacz sekcję [„Blokowanie”](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) w rozdziale poświęconym bryłom.
 
 ### Społeczność i blog poświęcone dodatkowi Dynamo
 

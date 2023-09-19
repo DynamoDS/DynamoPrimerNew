@@ -1,4 +1,4 @@
-# Opracowywanie rozwiązań dla dodatku Dynamo 
+# Opracowywanie rozwiązań dla dodatku Dynamo
 
 Platformę Dynamo zaprojektowano tak, aby umożliwić współtworzenie wszystkim użytkownikom, niezależnie od poziomu doświadczenia. Dostępnych jest kilka opcji programowania odpowiednich do różnych rodzajów i poziomów umiejętności, z których każda ma zalety i wady w zależności od zamierzonego celu. Poniżej omówimy te różne opcje i sposób wyboru między nimi.
 
@@ -18,7 +18,7 @@ Te węzły umożliwiają najwyższy stopień dostosowania. Wiele pakietów jest 
 * Węzły pochodne od klasy NodeModel
 * Rozszerzenia
 
-> Przewodnik Primer zawiera podręcznik dotyczący [importowania bibliotek Zero-Touch](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> Przewodnik Primer zawiera podręcznik dotyczący [importowania bibliotek Zero-Touch](https://primer2.dynamobim.org/v/pl/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 W poniższym omówieniu jako środowisko programistyczne dla węzłów Zero-Touch i NodeModel jest używany program Visual Studio.
 
@@ -28,17 +28,17 @@ W poniższym omówieniu jako środowisko programistyczne dla węzłów Zero-Touc
 
 #### W dodatku Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Mimo że te procesy istnieją w obszarze roboczym programowania wizualnego i są stosunkowo proste, wszystkie umożliwiają dostosowanie dodatku Dynamo. W przewodniku Primer opisano je szczegółowo i podano wskazówki dotyczące skryptów oraz wzorce postępowania — w rozdziale [Strategie dotyczące skryptów](http://dynamoprimer.com/en/12\_Best-Practice/12-1\_Scripting-Strategies.html).
+Mimo że te procesy istnieją w obszarze roboczym programowania wizualnego i są stosunkowo proste, wszystkie umożliwiają dostosowanie dodatku Dynamo. W przewodniku Primer opisano je szczegółowo i podano wskazówki dotyczące skryptów oraz wzorce postępowania — w rozdziale [Strategie dotyczące skryptów](../../9\_best\_practices/2-scripting-strategies.md).
 
 *   Węzły z bokami kodu, Code Block, uwidaczniają kod DesignScript w środowisku programowania wizualnego, umożliwiając używanie elastycznych procesów roboczych węzłów i skryptów tekstowych. Funkcję w węźle Code Block może wywołać dowolny element w obszarze roboczym.
 
-    > Pobierz przykład węzła Code Block (kliknij prawym przyciskiem myszy i zapisz jako) lub zobacz szczegółowe omówienie w [przewodniku Primer](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html).
+    > Pobierz przykład węzła Code Block (kliknij prawym przyciskiem myszy i zapisz jako) lub zobacz szczegółowe omówienie w [przewodniku Primer](https://primer2.dynamobim.org/v/pl/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block).
 *   Węzły niestandardowe są kontenerami dla kolekcji węzłów, a nawet całych wykresów. Są one skutecznym sposobem gromadzenia często używanych procedur i udostępniania ich społeczności.
 
-    > Pobierz przykład węzła niestandardowego (kliknij prawym przyciskiem myszy i zapisz jako) lub zobacz szczegółowe omówienie w [przewodniku Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html).
+    > Pobierz przykład węzła niestandardowego (kliknij prawym przyciskiem myszy i zapisz jako) lub zobacz szczegółowe omówienie w [przewodniku Primer](https://primer2.dynamobim.org/v/pl/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction).
 *   Węzły w języku Python są interfejsem skryptowym w obszarze roboczym programowania wizualnego, podobnie jak węzły Code Block. W bibliotekach Autodesk.DesignScript używa się zapisu kropkowego podobnego do tego używanego w języku DesignScript.
 
-    > Pobierz przykład węzła w języku Python (kliknij prawym przyciskiem myszy i zapisz jako) lub zobacz szczegółowe omówienie w [przewodniku Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html)
+    > Pobierz przykład węzła w języku Python (kliknij prawym przyciskiem myszy i zapisz jako) lub zobacz szczegółowe omówienie w [przewodniku Primer](https://primer2.dynamobim.org/v/pl/8_coding_in_dynamo/8-3_python)
 
 Programowanie w obszarze roboczym dodatku Dynamo to wydajne rozwiązanie umożliwiające natychmiastowe uzyskanie informacji zwrotnych.
 
@@ -70,7 +70,7 @@ Zero-Touch to prosta metoda importowania bibliotek C# przez wskazanie i kliknię
 
 Co można zrobić za pomocą tej metody:
 
-* Importowanie biblioteki, która nie została opracowana dla dodatku Dynamo, i automatyczne tworzenie pakietu nowych węzłów, jak w [przykładzie A-Forge](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html) z przewodnika Primer
+* Importowanie biblioteki, która nie została opracowana dla dodatku Dynamo, i automatyczne tworzenie pakietu nowych węzłów, jak w [przykładzie A-Forge](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) z przewodnika Primer
 * Pisanie metod w języku C# i łatwe używanie ich jako węzłów w dodatku Dynamo
 * Udostępnianie społeczności dodatku Dynamo biblioteki C# jako węzłów w pakiecie
 

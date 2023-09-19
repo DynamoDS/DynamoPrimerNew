@@ -4,11 +4,11 @@
 
 ### Co to jest bryła?
 
-Jeśli chcemy tworzyć bardziej złożone modele, których nie można utworzyć z pojedynczej powierzchni, lub jeśli chcemy zdefiniować dokładną objętość, musimy teraz omówić [bryły](5-6\_solids.md#solids) (i polipowierzchnie). Nawet prosty sześcian jest wystarczająco złożony, aby wymagać sześciu powierzchni — po jednej na ścianę. Bryły zapewniają dostęp do dwóch kluczowych pojęć, które nie istnieją w przypadku powierzchni — bardziej szczegółowego opisu topologicznego (powierzchni, krawędzi, wierzchołków) i operacji logicznych.
+Jeśli chcemy tworzyć bardziej złożone modele, których nie można utworzyć z pojedynczej powierzchni, lub jeśli chcemy zdefiniować dokładną objętość, musimy teraz omówić [bryły](6-solids.md#solids) (i powierzchnie PolySurface). Nawet prosty sześcian jest wystarczająco złożony, aby wymagać sześciu powierzchni — po jednej na ścianę. Bryły zapewniają dostęp do dwóch kluczowych pojęć, które nie istnieją w przypadku powierzchni — bardziej szczegółowego opisu topologicznego (powierzchni, krawędzi, wierzchołków) i operacji logicznych.
 
 ### Operacja logiczna mająca utworzyć bryłę kolczastej kuli
 
-Do modyfikowania brył można używać [operacji logicznych](5-6\_solids.md#boolean-operations). Użyjmy kilku operacji logicznych, by utworzyć kolczastą kulę.
+Do modyfikowania brył można używać [operacji logicznych](6-solids.md#boolean-operations). Użyjmy kilku operacji logicznych, by utworzyć kolczastą kulę.
 
 ![](../images/5-2/6/solids-spikyball.jpg)
 

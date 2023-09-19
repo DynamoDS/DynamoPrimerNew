@@ -2,13 +2,13 @@
 
 Zestaw Dynamo Mesh Toolkit zawiera narzędzia do importowania siatek z zewnętrznych formatów plików, tworzenia siatki z obiektów geometrii Dynamo oraz ręcznego tworzenia siatek na podstawie wierzchołków i indeksów. Ta biblioteka zawiera również narzędzia do modyfikowania siatek, naprawiania siatek i wyodrębniania warstw poziomych do użycia w produkcji.
 
-![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Zestaw narzędzi Dynamo Mesh Toolkit jest częścią nieustających badań firmy Autodesk nad siatką, więc w nadchodzących latach będzie się rozwijać. Należy spodziewać się częstego dodawania do zestawu nowych metod. Zachęcamy też do kierowania do zespołu Dynamo komentarzy, informacji o błędach i sugestii dotyczących nowych funkcji.
 
 ### Siatki a bryły
 
-W poniższym ćwiczeniu przedstawiono niektóre podstawowe operacje na siatce przeprowadzane za pomocą zestawu Mesh Toolkit. W tym ćwiczeniu przetniemy siatkę serią płaszczyzn, co w przypadku używania brył może być kosztowne z punktu widzenia obliczeń. W przeciwieństwie do bryły siatka ma stałą „rozdzielczość” i nie jest zdefiniowana matematycznie, lecz topologicznie. Tę rozdzielczość można zdefiniować na podstawie bieżącego zadania. Aby uzyskać więcej informacji na temat relacji między siatką a bryłami, zapoznaj się z rozdziałem [Geometria w projektowaniu obliczeniowym](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) tego przewodnika. Bardziej dogłębną analizę zestawu Mesh Toolkit można znaleźć na [stronie wiki dodatku Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). Przejdźmy do pakietu w ćwiczeniu poniżej.
+W poniższym ćwiczeniu przedstawiono niektóre podstawowe operacje na siatce przeprowadzane za pomocą zestawu Mesh Toolkit. W tym ćwiczeniu przetniemy siatkę serią płaszczyzn, co w przypadku używania brył może być kosztowne z punktu widzenia obliczeń. W przeciwieństwie do bryły siatka ma stałą „rozdzielczość” i nie jest zdefiniowana matematycznie, lecz topologicznie. Tę rozdzielczość można zdefiniować na podstawie bieżącego zadania. Aby uzyskać więcej informacji na temat relacji między siatką a bryłami, zapoznaj się z rozdziałem [Geometria w projektowaniu obliczeniowym](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) tego przewodnika Primer. Bardziej dogłębną analizę zestawu Mesh Toolkit można znaleźć na [stronie wiki dodatku Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). Przejdźmy do pakietu w ćwiczeniu poniżej.
 
 ### Instalowanie zestawu Mesh Toolkit
 

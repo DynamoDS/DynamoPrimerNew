@@ -4,7 +4,7 @@
 
 ### Co to jest punkt?
 
-[Punkt](5-3\_points.md#point-as-coordinates) jest zdefiniowany przez tylko jedną wartość lub tylko kilka wartości nazywanych współrzędnymi. Liczba wartości współrzędnych potrzebnych do zdefiniowania punktu zależy od układu współrzędnych lub kontekstu, w którym się on znajduje.
+[Punkt](3-points.md#deep-dive-into...) jest zdefiniowany przez tylko jedną wartość lub tylko kilka wartości nazywanych współrzędnymi. Liczba wartości współrzędnych potrzebnych do zdefiniowania punktu zależy od układu współrzędnych lub kontekstu, w którym się on znajduje.
 
 ### Punkt 2D/3D
 

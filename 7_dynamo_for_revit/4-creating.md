@@ -22,7 +22,7 @@ W poniższym przykładzie przygotujemy proces roboczy, który umożliwi uzyskani
 
 ### Wiele elementów i list
 
-W [pierwszym ćwiczeniu](8-4\_creating.md#exercise) poniżej omówimy sposób, w jaki dodatek Dynamo odnosi się do danych na potrzeby tworzenia elementów Revit. Aby wygenerować wiele komponentów adaptacyjnych, zdefiniujemy listę list, na której każda lista ma trzy punkty reprezentujące komponent adaptacyjny. Będziemy z tego korzystać podczas zarządzania strukturami danych w dodatku Dynamo.
+W [pierwszym ćwiczeniu](4-creating.md#exercise-generate-elements-and-lists) poniżej omówimy sposób, w jaki dodatek Dynamo odnosi się do danych na potrzeby tworzenia elementów programu Revit. Aby wygenerować wiele komponentów adaptacyjnych, zdefiniujemy listę list, na której każda lista ma trzy punkty reprezentujące komponent adaptacyjny. Będziemy z tego korzystać podczas zarządzania strukturami danych w dodatku Dynamo.
 
 ![](images/4/creating-multipleelementsandlists01.jpg)
 
@@ -30,7 +30,7 @@ W [pierwszym ćwiczeniu](8-4\_creating.md#exercise) poniżej omówimy sposób, w
 
 Inną metodą importowania geometrii parametrycznej z dodatku Dynamo do programu Revit jest zastosowanie kształtów bezpośrednich. Element kształtu bezpośredniego i powiązane z nim klasy umożliwiają przechowywanie w dokumencie programu Revit kształtów geometrycznych, które utworzono w innym oprogramowaniu. Taka geometria może obejmować bryły zamknięte i siatki. Kształty bezpośrednie są przede wszystkim przeznaczone do importowania kształtów z innych formatów danych, takich jak IFC lub STEP, które nie zawierają informacji wystarczających do utworzenia kompletnego elementu programu Revit. Podobnie jak w przypadku procesu roboczego związanego z plikami IFC i STEP, kształty bezpośrednie dobrze działają w przypadku importowania geometrii utworzonych w dodatku Dynamo jako rzeczywistych elementów projektów do programu Revit.
 
-W [drugim ćwiczeniu](8-4\_creating.md#exercise-directshape-elements) omówimy importowanie geometrii z dodatku Dynamo jako kształtu bezpośredniego do projektu programu Revit. Przy użyciu tej metody możemy przypisać kategorię, materiał i nazwę do importowanej geometrii — zachowując przy tym połączenie parametryczne z wykresem w programie Dynamo.
+W [drugim ćwiczeniu](4-creating.md#exercise-directshape-elements) omówimy importowanie geometrii z dodatku Dynamo jako kształtu bezpośredniego (DirectShape) do projektu programu Revit. Przy użyciu tej metody możemy przypisać kategorię, materiał i nazwę do importowanej geometrii — zachowując przy tym połączenie parametryczne z wykresem w programie Dynamo.
 
 ## Ćwiczenie: generowanie elementów i list
 

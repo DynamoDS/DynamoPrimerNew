@@ -4,7 +4,7 @@ Dodatek Dynamo udostępnia różne sposoby tworzenia pakietu do użytku osobiste
 
 ## Pakiet MapToSurface
 
-Będziemy pracować z przykładowym pakietem demonstrującym odwzorowywanie punktów UV z jednej powierzchni na inną. W sekcji [Tworzenie węzła niestandardowego](../10\_custom-nodes/10-2\_creating.md) tego podręcznika utworzyliśmy już podstawy narzędzia. W poniższych plikach przedstawiono, w jaki sposób można wykorzystać koncepcję odwzorowywania UV i opracować zestaw narzędzi dla publikowalnej biblioteki.
+Będziemy pracować z przykładowym pakietem demonstrującym odwzorowywanie punktów UV z jednej powierzchni na inną. W sekcji [Tworzenie węzła niestandardowego](../6-1\_custom-nodes/2-creating.md) tego przewodnika Primer utworzyliśmy już podstawy narzędzia. W poniższych plikach przedstawiono, w jaki sposób można wykorzystać koncepcję odwzorowywania UV i opracować zestaw narzędzi dla publikowalnej biblioteki.
 
 Na tej ilustracji odwzorowujemy punkt z jednej powierzchni na drugą za pomocą współrzędnych UV. Pakiet jest oparty na tej koncepcji, ale z bardziej złożoną geometrią.
 
@@ -20,7 +20,7 @@ W dodatku Dynamo kliknij opcje _Pakiety>Wyszukaj pakiet... i wy_szukaj pakiet �
 
 Po zainstalowaniu węzły niestandardowe powinny być dostępne w sekcji Dodatki > Przewodnik Dynamo Primer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Po zainstalowaniu pakietu przeanalizujmy jego konfigurację.
 
@@ -30,7 +30,7 @@ Tworzony pakiet zawiera pięć węzłów niestandardowych utworzonych na potrzeb
 
 To jest prosty pakiet z pięcioma węzłami niestandardowymi. W poniższych krokach omówiono krótko konfigurację każdego węzła niestandardowego.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Następnie otwórz folder _„extra”_ zawierający wszystkie pliki w pakiecie,
 
 #### **01-PanelingWithPolygons**
 
-Za pomocą tego pliku przykładowego przedstawiono, jak można wykorzystać węzeł _„PointsToSurface”_ do panelowania powierzchni w oparciu o siatkę prostokątów. Powinno to wyglądać znajomo, ponieważ podobny proces roboczy został przedstawiony w [poprzednim rozdziale](../10\_custom-nodes/10-2\_creating.md).
+Za pomocą tego pliku przykładowego przedstawiono, jak można wykorzystać węzeł _„PointsToSurface”_ do panelowania powierzchni w oparciu o siatkę prostokątów. Powinno to wyglądać znajomo, ponieważ podobny proces roboczy został przedstawiony w [poprzednim rozdziale](../6-1\_custom-nodes/2-creating.md).
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

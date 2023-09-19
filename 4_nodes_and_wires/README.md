@@ -87,7 +87,7 @@ Często chcemy dostosować przepływ programu w programie wizualnym, edytując p
 
 * Zmień połączenie z portem wejściowym: kliknij lewym przyciskiem myszy inny port wejściowy
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Aby usunąć przewód, odciągnij przewód, a następnie kliknij lewym przyciskiem myszy obszar roboczy
 
@@ -116,7 +116,7 @@ Jeśli wolisz ukryć przewody na wykresie, anuluj zaznaczenie opcji Widok > Zł�
 
 To ustawienie sprawia, że będą wyświetlane tylko wybrane węzły i połączone z nimi przewody z delikatnym niebieskim wyróżnieniem.
 
-![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+![](images/nodesandwires-hidewiressetting\(1\).gif)
 
 #### Ukrywanie tylko pojedynczego przewodu
 

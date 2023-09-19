@@ -23,7 +23,7 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 > 2. Grupa danych wejściowych (pomarańczowe)
 > 3. Grupa skryptów (zielone)
 >
-> Informacje o korzystaniu z grup można znaleźć w artykule [Zarządzanie programem](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informacje o korzystaniu z grup można znaleźć w artykule [Zarządzanie programem](https://primer2.dynamobim.org/v/pl/9_best_practices/4-managing-your-program).
 
 ### **Efektywne programowanie przy użyciu węzłów Code Block**
 
@@ -37,7 +37,7 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 > 1. Kod DesignScript w bloku kodu
 > 2. Równoważny program w węzłach
 >
-> Informacje o korzystaniu z węzłów Code Block można znaleźć w artykule [Co to jest węzeł Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Informacje o korzystaniu z węzłów Code Block można znaleźć w artykule [Co to jest węzeł Code Block](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
 
 ### **Kondensowanie przez konwersję węzłów na kod**
 
@@ -58,21 +58,21 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 > 1. Istniejący program
 > 2. Blok kodu utworzony przez konwersję węzłów na kod
 >
-> Informacje o konwersji węzłów na kod można znaleźć w artykule [Składnia języka DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Informacje o konwersji węzłów na kod można znaleźć w artykule [Składnia języka DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Elastyczny dostęp do danych przy użyciu funkcji List@Level**
 
 * Funkcja List@Level umożliwia **ograniczenie złożoności wykresu przez zastąpienie węzłów List.Map i List.Combine**, które mogą zajmować dużo miejsca na obszarze projektowania.
 * Funkcja List@Level oferuje** szybszą metodę tworzenia logiki węzłów niż węzły List.Map/List.Combine**. Umożliwia ona uzyskiwanie dostępu do danych na każdym poziomie listy wprost z poziomu portu wejściowego węzła.
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Można zweryfikować, ile wartości True z których list zwraca funkcja BoundingBox.Contains, aktywując funkcję List@Level dla wejścia „list” (lista) modułu CountTrue. Funkcja List@Level pozwala użytkownikowi określić, z jakiego poziomu danych wejściowych są pobierane dane. Korzystanie z funkcji List@Level jest elastyczne, efektywne i zalecane jako metoda skuteczniejsza niż stosowanie węzłów List.Map i List.Combine.
 >
 > 1. Liczenie wartości True na poziomie 2 listy
 > 2. Liczenie wartości True na poziomie 3 listy
 >
-> Sposób korzystania z funkcji List@Level omówiono w artykule [Listy list](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Sposób korzystania z funkcji List@Level omówiono w artykule [Listy list](https://primer2.dynamobim.org/v/pl/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
 
 ## Zachowywanie czytelności
 
@@ -84,12 +84,12 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 * Jeśli inne osoby będą pracowały nad tym samym wykresem, należy **zagwarantować płynny przepływ połączeń między węzłami przed dostarczeniem wykresu**.
 * Aby w prosty sposób wyrównać wykres, **można użyć funkcji Wyczyść układ węzłów, która robi to automatycznie** (choć mniej dokładnie niż człowiek).
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Nieuporządkowany wykres
 > 2. Wyrównany wykres
 >
-> Informacje o wyrównywaniu węzłów można znaleźć w artykule [Zarządzanie programem](3-4\_best\_practices.md).
+> Informacje o wyrównywaniu węzłów można znaleźć w artykule [Zarządzanie programem](4-managing-your-program.md).
 
 ### **Opisowe etykiety — zmienianie nazw**
 
@@ -114,11 +114,11 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 > 1. Notatka opisująca część programu, która zwraca pierwotne odległości przekształcenia
 > 2. Notatka opisująca kod odwzorowujący te wartości na falę sinusoidalną
 >
-> Informacje o sposobie dodawania notatek można znaleźć w artykule [Zarządzanie programem](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informacje o sposobie dodawania notatek można znaleźć w artykule [Zarządzanie programem](https://primer2.dynamobim.org/v/pl/9_best_practices/4-managing-your-program).
 
 ## Ciągłe sprawdzanie
 
-Podczas tworzenia skryptu wizualnego ważne jest weryfikowanie, że zwracane dane są zgodne z oczekiwaniami. Nie każdy błąd lub problem powoduje natychmiastową awarię programu. Szczególnie wartości null i zerowe mogą generować błędy dopiero w innych, zależnych węzłach. Tę strategię omówiono również w kontekście skryptów tekstowych w artykule [Strategie dotyczące skryptów](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). Poniższa procedura pozwala zagwarantować, że zawsze powstają dane zgodne z oczekiwaniami.
+Podczas tworzenia skryptu wizualnego ważne jest weryfikowanie, że zwracane dane są zgodne z oczekiwaniami. Nie każdy błąd lub problem powoduje natychmiastową awarię programu. Szczególnie wartości null i zerowe mogą generować błędy dopiero w innych, zależnych węzłach. Tę strategię omówiono również w kontekście skryptów tekstowych w artykule [Strategie dotyczące skryptów](2-scripting-strategies.md). Poniższa procedura pozwala zagwarantować, że zawsze powstają dane zgodne z oczekiwaniami.
 
 ### **Monitorowanie danych przy użyciu węzłów obserwacyjnych i podglądów**
 
@@ -131,7 +131,7 @@ Podczas tworzenia skryptu wizualnego ważne jest weryfikowanie, że zwracane dan
 > 1. pierwotnych odległości przekształcenia,
 > 2. wartości przekazywanych przez równanie sinusoidy.
 >
-> Informacje o korzystaniu z mechanizmu obserwacji można znaleźć w [Bibliotece](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Informacje o korzystaniu z węzła Watch można znaleźć w [Bibliotece](../3\_user\_interface/2-library.md).
 
 ## Gwarantowanie możliwości wielokrotnego użycia
 
@@ -147,7 +147,7 @@ Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet je
 * Jeśli **wykres powinien zawierać pewne opcje lub warunki**, szybki dostęp do nich zapewniają ustawienia wstępne.
 * Ustawienia wstępne pozwalają też **ograniczyć złożoność wykresu przez buforowanie określonych wartości suwaków**, gdy czas działania wykresu jest długi.
 
-> Informacje o korzystaniu z wykresów można znaleźć w artykule [Zarządzanie danymi przy użyciu ustawień wstępnych](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Informacje o korzystaniu z ustawień wstępnych można znaleźć w artykule [Zarządzanie danymi przy użyciu ustawień wstępnych](1-graph-strategies.md#use-presets-to-embed-input-values).
 
 ### **Umieszczanie programów w węzłach niestandardowych**
 
@@ -162,7 +162,7 @@ Jest bardzo prawdopodobne, że kiedyś inna osoba otworzy nasz program, nawet je
 > 1. Istniejący program punktu przyciągania
 > 2. Węzeł niestandardowy zawierający ten program — PointGrid
 >
-> Informacje o korzystaniu z węzłów niestandardowych można znaleźć w artykule Wstęp[ do węzłów niestandardowych](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Informacje o korzystaniu z węzłów niestandardowych można znaleźć w artykule [Wstęp do węzłów niestandardowych](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
 
 ### **Tworzenie szablonów**
 

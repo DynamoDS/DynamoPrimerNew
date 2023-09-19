@@ -4,7 +4,8 @@
 
 Celem tego przewodnika jest zapewnienie pomocy w poruszaniu się po zakresie możliwości programowania za pomocą języka C# w dodatku Dynamo: od tworzenia węzłów Zero-Touch po kompilowanie rozszerzeń.
 
-![Źródło dodatku Dynamo w serwisie GitHub](images/dynamogithub.jpg)
+![Źródło dodatku Dynamo w serwisie GitHub](../1-introduction/images/dynamogithub.jpg)
+
 > Źródło dodatku Dynamo w serwisie GitHub
 
 #### Jakie dodatkowe zasoby dla programistów udostępniamy? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

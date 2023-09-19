@@ -22,11 +22,11 @@ Rozdzielenie słowników od list sprawia, że słowniki stają się pierwszoligo
 * W bibliotece wprowadzono _nowe węzły_, aby ułatwić tworzenie i modyfikowanie słowników oraz stosowanie do nich zapytań.
 *   Listy tworzone w węzłach Code Block w wersji 1.x będą automatycznie migrowane po wczytaniu skryptu do nowej składni listy, w której są używane nawiasy kwadratowe `[ ]` zamiast nawiasów klamrowych `{ }` \\
 
-    ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
-***
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+
+
 
 ### **Dlaczego należy się tym przejmować? Do czego służą te elementy?**
 
