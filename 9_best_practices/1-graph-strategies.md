@@ -23,7 +23,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 > 2. Grupo de entradas (naranja)
 > 3. Grupo de secuencias de comandos (verde)
 >
-> Para obtener información sobre cómo utilizar los grupos, consulte [Administración del programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Para obtener información sobre cómo utilizar los grupos, consulte [Administración del programa](https://primer2.dynamobim.org/v/es/9_best_practices/4-managing-your-program).
 
 ### **Desarrollo eficaz con bloques de código**
 
@@ -37,7 +37,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 > 1. DesignScript escrito en bloques de código
 > 2. Programa equivalente en nodos
 >
-> Para obtener información sobre cómo utilizar el bloque de código, consulte [¿Qué es un bloque de código?](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Para obtener información sobre cómo utilizar el bloque de código, consulte [¿Qué es un bloque de código?](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
 
 ### **Condensación con de nodo a código**
 
@@ -58,21 +58,21 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 > 1. Programa existente
 > 2. Bloque de código creado con el método de nodo a código
 >
-> Para obtener información sobre cómo utilizar el método de nodo a código, consulte [Sintaxis de DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Para obtener información sobre cómo utilizar el método de nodo a código, consulte [Sintaxis de DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Acceso a los datos de forma flexible con List@Level**
 
 * El uso de List@Level puede ayudarle a **reducir la complejidad del gráfico mediante la sustitución de los nodos List.Map y List.Combine**, que pueden ocupar una cantidad considerable de espacio en el lienzo.
 * List@Level proporciona un** método más rápido que List.Map/List.Combine para crear una lógica de nodo**, lo que permite acceder a los datos de cualquier nivel de una lista directamente desde el puerto de entrada de un nodo
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Podemos comprobar cuántos valores devuelve True BoundingBox.Contains y en qué listas mediante la activación de List@Level para la entrada "list" de CountTrue. List@Level permite al usuario determinar de qué nivel se obtendrán los datos. El uso de List@Level es flexible, eficaz y muy recomendado frente a otros métodos en los que se utilizan List.Map y List.Combine.
 >
 > 1. Recuento de valores "true" (verdaderos) en el nivel de lista 2
 > 2. Recuento de valores "true" (verdaderos) en el nivel de lista 3
 >
-> Para obtener información sobre cómo utilizar List@Level, consulte [Listas de listas](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Para obtener información sobre cómo utilizar List@Level, consulte [Listas de listas](https://primer2.dynamobim.org/v/es/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
 
 ## Legibilidad
 
@@ -84,12 +84,12 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 * Si otros van a trabajar con el gráfico, **asegúrese de que el diseño de cables y nodos fluya con facilidad antes de enviarlo**.
 * Para facilitar la alineación, **utilice la función "Presentación de nodo de limpieza" para alinear automáticamente** el gráfico, aunque de forma menos precisa que manualmente.
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Gráfico desorganizado
 > 2. Gráfico alineado
 >
-> Para obtener información sobre cómo utilizar la alineación de nodos, consulte [Administración del programa.](3-4\_best\_practices.md)
+> Para obtener información sobre cómo utilizar la alineación de nodos, consulte [Administración del programa.](4-managing-your-program.md)
 
 ### **Etiquetado descriptivo mediante cambio de nombre**
 
@@ -114,11 +114,11 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 > 1. Una nota que describe la parte del programa que devuelve distancias de traslado sin procesar.
 > 2. Una nota que describe el código que asigna esos valores a una onda sinusoidal.
 >
-> Para obtener información sobre cómo añadir una nota, consulte [Administración del programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Para obtener información sobre cómo añadir una nota, consulte [Administración del programa](https://primer2.dynamobim.org/v/es/9_best_practices/4-managing-your-program).
 
 ## Ajuste continuo
 
-Al crear la secuencia de comandos visual, es importante comprobar que se devuelve lo que se esperaba. No todos los errores o los problemas provocarán que el programa falle inmediatamente, sobre todo, los valores nulos o cero que podrían afectar a niveles inferiores. Esta estrategia también se aborda en el contexto de la creación de secuencias de comandos de texto en las [Estrategias de creación de secuencias de comandos](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). El siguiente procedimiento le ayudará a asegurarse de que obtiene lo que esperaba.
+Al crear la secuencia de comandos visual, es importante comprobar que se devuelve lo que se esperaba. No todos los errores o los problemas provocarán que el programa falle inmediatamente, sobre todo, los valores nulos o cero que podrían afectar a niveles inferiores. Esta estrategia también se aborda en el contexto de la creación de secuencias de comandos de texto en las [Estrategias de creación de secuencias de comandos](2-scripting-strategies.md). El siguiente procedimiento le ayudará a asegurarse de que obtiene lo que esperaba.
 
 ### **Supervisión de datos con burbujas de visualización y vista preliminar**
 
@@ -131,7 +131,7 @@ Al crear la secuencia de comandos visual, es importante comprobar que se devuelv
 > 1. Las distancias de traslado sin procesar.
 > 2. Los valores que se transfieren a través de la ecuación de seno.
 >
-> Para obtener información sobre cómo utilizar la visualización, consulte [Biblioteca](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Para obtener información sobre cómo utilizar la visualización, consulte [Biblioteca](../3\_user\_interface/2-library.md).
 
 ## Garantizar la reutilización
 
@@ -147,7 +147,7 @@ Es muy probable que otro usuario abra el programa en algún momento, incluso aun
 * Si **desea insertar en el gráfico condiciones u opciones específicas**, debe utilizar valores predefinidos para acceder a ellos rápidamente.
 * También puede utilizar valores predefinidos para **reducir la complejidad mediante el almacenamiento en caché de los valores de controles deslizantes** de un gráfico con tiempos de ejecución prolongados.
 
-> Para obtener información sobre cómo utilizar los valores predefinidos, consulte [Administración de datos con valores predefinidos](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Para obtener información sobre cómo utilizar los valores predefinidos, consulte [Administración de datos con valores predefinidos](1-graph-strategies.md#use-presets-to-embed-input-values).
 
 ### **Inclusión de programas con nodos personalizados**
 
@@ -162,7 +162,7 @@ Es muy probable que otro usuario abra el programa en algún momento, incluso aun
 > 1. Programa de atractor existente.
 > 2. Nodo personalizado que recopila este programa, PointGrid.
 >
-> Para obtener información sobre cómo utilizar nodos personalizados, consulte [Introducción a los nodos personalizados](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Para obtener información sobre cómo utilizar nodos personalizados, consulte [Introducción a los nodos personalizados](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
 
 ### **Creación de plantillas**
 

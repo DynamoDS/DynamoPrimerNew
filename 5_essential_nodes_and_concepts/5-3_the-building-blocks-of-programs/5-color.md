@@ -8,27 +8,27 @@ Los colores de Dynamo se crean con entradas de ARGB. Estas corresponden a los ca
 
 | Icono                                     | Nombre (sintaxis)                 | Entradas  | Salidas |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (1).jpg>) | Color ARGB (**Color.ByARGB**) | A,R,G,B | color   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | Color ARGB (**Color.ByARGB**) | A,R,G,B | color   |
 
 ### Consulta de los valores de color
 
 Los colores de la tabla siguiente consultan las propiedades utilizadas para definir el color: alfa, rojo, verde y azul. Observe que el nodo Color.Components nos proporciona las cuatro salidas diferentes, lo que hace que este nodo sea preferible para consultar las propiedades de un color.
 
-| Icono                                          | Nombre (sintaxis)                     | Entradas | Salidas    |
-| --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alfa (**Color.Alpha**)           | color  | A          |
-| ![](<../images/5-1/ColorRed (1).jpg>)         | Rojo (**Color.Red**)               | color  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Verde (**Color.Green**)           | color  | G          |
-| ![](<../images/5-1/ColorBlue (1).jpg>)        | Azul (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-1/ColorComponent (1).jpg>)   | Componentes (**Color.Components**) | color  | A, R, G, B |
+| Icono                                              | Nombre (sintaxis)                     | Entradas | Salidas    |
+| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alfa (**Color.Alpha**)           | color  | A          |
+| ![](../images/5-1/ColorRed.jpg)                   | Rojo (**Color.Red**)               | color  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Verde (**Color.Green**)           | color  | G          |
+| ![](../images/5-1/ColorBlue.jpg)                  | Azul (**Color.Blue**)             | color  | B          |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | Componentes (**Color.Components**) | color  | A, R, G, B |
 
 Los colores de la tabla siguiente corresponden al **espacio de color HSB**. La división del color en el matiz, la saturación y el brillo es, probablemente, más intuitiva en la forma en que se interpreta el color: ¿Qué color debería ser? ¿Debería ser más o menos colorido? ¿Y debería ser más o menos claro u oscuro? Este es el desglose del matiz, la saturación y el brillo respectivamente.
 
 | Icono                                         | Nombre (sintaxis)                     | Entradas | Salidas    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorHue (1).jpg>)        | Matiz (**Color.Hue**)               | color  | Matiz        |
-| ![](<../images/5-1/ColorSaturation (1).jpg>) | Saturación (**Color.Saturation**) | color  | Saturación |
-| ![](<../images/5-1/ColorBrightness (1).jpg>) | Brillo (**Color.Brightness**) | color  | Brillo |
+| ![](../images/5-1/ColorHue.jpg)              | Matiz (**Color.Hue**)               | color  | Matiz        |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | Saturación (**Color.Saturation**) | color  | Saturación |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | Brillo (**Color.Brightness**) | color  | Brillo |
 
 ### Rango de colores
 

@@ -1,6 +1,6 @@
 # Nodos de Python
 
-¿Por qué habría que utilizar la programación textual en el entorno de programación visual de Dynamo? La [programación visual](../../a\_appendix/visual-programming-and-dynamo.md) tiene muchas ventajas. Permite crear programas sin necesidad de aprender sintaxis especial en una interfaz visual intuitiva. Sin embargo, un programa visual se puede sobrecargar y, a veces, su funcionalidad puede ser reducida. Por ejemplo, Python ofrece métodos mucho más eficaces para escribir instrucciones condicionales (if/then) y bucles. Python es una potente herramienta que permite ampliar las funciones de Dynamo y reemplazar muchos nodos por unas pocas líneas de código concisas.
+¿Por qué habría que utilizar la programación textual en el entorno de programación visual de Dynamo? La [programación visual](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) tiene muchas ventajas. Permite crear programas sin necesidad de aprender sintaxis especial en una interfaz visual intuitiva. Sin embargo, un programa visual se puede sobrecargar y, a veces, su funcionalidad puede ser reducida. Por ejemplo, Python ofrece métodos mucho más eficaces para escribir instrucciones condicionales (if/then) y bucles. Python es una potente herramienta que permite ampliar las funciones de Dynamo y reemplazar muchos nodos por unas pocas líneas de código concisas.
 
 **Programa visual:**
 
@@ -171,7 +171,7 @@ Ya que vamos a trasladar y girar los módulos sólidos, vamos a utilizar la oper
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

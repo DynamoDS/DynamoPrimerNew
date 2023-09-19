@@ -22,7 +22,7 @@ El flujo de trabajo que configuraremos en el siguiente ejercicio nos permite acc
 
 ### Varios elementos y listas
 
-En el [primer ejercicio](8-4\_creating.md#exercise), se describe cómo Dynamo consulta los datos para la creación de elementos de Revit. Para generar varios componentes adaptativos, definimos una lista de listas en la que cada lista tiene tres puntos que representan cada punto del componente adaptativo. Tendremos esto en cuenta a medida que gestionamos las estructuras de datos en Dynamo.
+En el [primer ejercicio](4-creating.md#exercise-generate-elements-and-lists), se describe cómo Dynamo consulta los datos para la creación de elementos de Revit. Para generar varios componentes adaptativos, definimos una lista de listas en la que cada lista tiene tres puntos que representan cada punto del componente adaptativo. Tendremos esto en cuenta a medida que gestionamos las estructuras de datos en Dynamo.
 
 ![](images/4/creating-multipleelementsandlists01.jpg)
 
@@ -30,7 +30,7 @@ En el [primer ejercicio](8-4\_creating.md#exercise), se describe cómo Dynamo co
 
 Otro método para importar geometría paramétrica de Dynamo a Revit es DirectShape. En resumen, el elemento DirectShape y las clases relacionadas permiten almacenar formas geométricas creadas externamente en un documento de Revit. La geometría puede incluir mallas o sólidos cerrados. DirectShape se ha diseñado principalmente para la importación de formas de otros formatos de datos, como IFC o STEP, donde no hay suficiente información disponible para crear un elemento de Revit "real". Al igual que en el flujo de trabajo de IFC y STEP, la función DirectShape permite importar sin problemas geometrías creadas en Dynamo a proyectos de Revit como elementos reales.
 
-Repasemos el [segundo ejercicio](8-4\_creating.md#exercise-directshape-elements) para importar geometría de Dynamo como DirectShape en el proyecto de Revit. Mediante este método, podemos asignar la categoría, el material y el nombre de una geometría importada, mientras se mantiene un vínculo paramétrico con nuestro gráfico de Dynamo.
+Repasemos el [segundo ejercicio](4-creating.md#exercise-directshape-elements) para importar geometría de Dynamo como DirectShape en el proyecto de Revit. Mediante este método, podemos asignar la categoría, el material y el nombre de una geometría importada, mientras se mantiene un vínculo paramétrico con nuestro gráfico de Dynamo.
 
 ## Ejercicio: generación de elementos y listas
 
@@ -87,7 +87,7 @@ Observe que la salida es una lista de listas de listas. Hay demasiadas listas pa
 ![](images/4/creating-exercise06.jpg)
 
 > 1. Conecte el nodo _Geometry.Intersect_ a la entrada de lista de _List.Map_.
-> 2. Conecte un nodo _Flatten_ a la entrada f(x) de _List.Map_. Los resultados proporcionan tres listas, cada uno con un número igual a la cantidad de vigas de celosía.
+> 2. Conecte un nodo _Flatten_ a la entrada f(x) de _List.Map_. Los resultados proporcionan tres listas, cada una con un número igual a la cantidad de vigas de celosía.
 > 3. Debemos cambiar estos datos. Si desea crear una instancia de la viga de celosía, debemos utilizar el mismo número de puntos adaptativos que se ha definido en la familia. Se trata de un componente adaptativo de tres puntos, por lo que, en lugar de tres listas con 10 elementos cada una (numberOfTrusses), deseamos obtener 10 listas con tres elementos cada una. De este modo, podemos crear 10 componentes adaptativos.
 > 4. Conecte _List.Map_ a un nodo _List.Transpose_. Ahora tenemos la salida de datos deseada.
 > 5. Para confirmar que los datos sean correctos, añada un nodo _Polygon.ByPoints_ al lienzo y realice una comprobación con la vista preliminar de Dynamo.

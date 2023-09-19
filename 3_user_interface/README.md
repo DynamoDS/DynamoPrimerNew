@@ -49,7 +49,7 @@ Si no sabe cómo continuar, consulte el menú de **Ayuda**. Puede acceder a uno 
 La barra de herramientas de Dynamo contiene una serie de botones para acceder rápidamente a los archivos, así como a los comandos Deshacer (Ctrl + Z) y Rehacer (Ctrl + Y). En el extremo derecho, hay otro botón que exporta una instantánea del espacio de trabajo, lo que resulta muy útil para la documentación y el uso compartido.
 
 * ![](images/userinterface-newfile.jpg)Nuevo: cree un nuevo archivo .dyn.
-* ![](<images/userinterface-open(1) (1).jpg>) Abrir: abra un archivo .dyn existente (espacio de trabajo) o un archivo .dyf (nodo personalizado).
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Abrir: abra un archivo .dyn existente (espacio de trabajo) o un archivo .dyf (nodo personalizado).
 * ![](images/userinterface-save.jpg) Guardar/Guardar como: guarde el archivo .dyn o .dyf activo.
 * ![](images/userinterface-undo.jpg) Deshacer: deshaga la última acción.
 * ![](images/userinterface-redo.jpg) Rehacer: rehaga la siguiente acción.
@@ -75,6 +75,6 @@ Ejecute la secuencia de comandos de Dynamo desde aquí. Haga clic en el icono de
 
 * Automático: ejecuta la secuencia de comandos automáticamente. Los cambios se actualizan en tiempo real.
 * Manual: la secuencia de comandos solo se ejecuta cuando se hace clic en el botón "Ejecutar". Este modo es útil para realizar cambios en secuencias de comandos complejas y de gran tamaño.
-* Periódica: esta opción está atenuada por defecto. Solo está disponible cuando se utiliza el nodo DateTime.Now. Puede establecer el gráfico para que se ejecute automáticamente en el intervalo especificado.
+* Periódica: esta opción está atenuada por defecto. Solo está disponible cuando se utiliza el nodo _DateTime.Now_. Puede establecer el gráfico para que se ejecute automáticamente en el intervalo especificado.
 
 ![](images/userinterface-executionbarDateTimenode.jpg)

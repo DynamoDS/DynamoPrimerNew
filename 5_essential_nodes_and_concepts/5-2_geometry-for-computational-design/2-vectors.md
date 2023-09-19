@@ -4,7 +4,7 @@
 
 ### Vector
 
-El [vector](5-2\_vectors.md#vector-1) es una representación de magnitud y dirección, que se puede mostrar como una flecha que se acelera hacia una dirección concreta a una velocidad determinada. Este es un componente clave de los modelos de Dynamo. Tenga en cuenta que, como se encuentran en la categoría abstracta de "ayudas", cuando creamos un vector, no aparecerá nada en la vista preliminar en segundo plano.
+El [vector](2-vectors.md#vector-1) es una representación de magnitud y dirección, que se puede mostrar como una flecha que se acelera hacia una dirección concreta a una velocidad determinada. Este es un componente clave de los modelos de Dynamo. Tenga en cuenta que, como se encuentran en la categoría abstracta de "ayudas", cuando creamos un vector, no aparecerá nada en la vista preliminar en segundo plano.
 
 ![Vectores en Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@ El [vector](5-2\_vectors.md#vector-1) es una representación de magnitud y direc
 
 ### Plano
 
-Un [plano](5-2\_vectors.md#plane-1) es una superficie bidimensional que puede tener el aspecto de una superficie plana que se extiende de forma indefinida. Cada plano tiene un origen y una dirección X, Y y Z (arriba).
+Un [plano](2-vectors.md#plane-1) es una superficie bidimensional que puede tener el aspecto de una superficie plana que se extiende de forma indefinida. Cada plano tiene un origen y una dirección X, Y y Z (arriba).
 
 ![Planos en Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@ Un [plano](5-2\_vectors.md#plane-1) es una superficie bidimensional que puede te
 
 ### Sistema de coordenadas
 
-Un [sistema de coordenadas](5-2\_vectors.md#coordinate-system-1) permite determinar la ubicación de puntos u otros elementos geométricos. En la imagen siguiente, se explica el aspecto que tiene en Dynamo y lo que representa cada color.
+Un [sistema de coordenadas](2-vectors.md#coordinate-system-1) permite determinar la ubicación de puntos u otros elementos geométricos. En la imagen siguiente, se explica el aspecto que tiene en Dynamo y lo que representa cada color.
 
 ![Sistema de coordenadas en Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

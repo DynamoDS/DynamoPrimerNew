@@ -1,4 +1,4 @@
-# Desarrollo para Dynamo 
+# Desarrollo para Dynamo
 
 Independientemente del nivel de experiencia, la plataforma Dynamo se ha diseñado para que todos los usuarios puedan colaborar. Existen varias opciones de desarrollo dirigidas a diferentes capacidades y niveles de habilidad, cada una con sus puntos fuertes y débiles en función del objetivo. A continuación, describiremos las distintas opciones y cómo elegir una sobre otra.
 
@@ -18,7 +18,7 @@ Estos nodos permiten el mayor grado de personalización. Muchos paquetes se comp
 * Nodos derivados de NodeModel
 * Extensiones
 
-> Dynamo Primer incluye una guía sobre la [importación de bibliotecas Zero-Touch](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> Dynamo Primer incluye una guía sobre la [importación de bibliotecas Zero-Touch](https://primer2.dynamobim.org/v/es/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 En el caso siguiente, se utiliza Visual Studio como entorno de desarrollo para los nodos Zero-Touch y NodeModel.
 
@@ -28,17 +28,17 @@ En el caso siguiente, se utiliza Visual Studio como entorno de desarrollo para l
 
 #### En Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Aunque estos procesos existen en el espacio de trabajo de programación visual y son relativamente sencillos, son opciones viables para personalizar Dynamo. En Dynamo Primer, se describen estos temas de forma exhaustiva y se proporcionan consejos sobre la creación de secuencias de comandos y procedimientos recomendados en el capítulo [Estrategias de creación de secuencias de comandos](http://dynamoprimer.com/en/12\_Best-Practice/12-1\_Scripting-Strategies.html).
+Aunque estos procesos existen en el espacio de trabajo de programación visual y son relativamente sencillos, son opciones viables para personalizar Dynamo. En Dynamo Primer, se describen estos temas de forma exhaustiva y se proporcionan consejos sobre la creación de secuencias de comandos y procedimientos recomendados en el capítulo [Estrategias de creación de secuencias de comandos](../../9\_best\_practices/2-scripting-strategies.md).
 
 *   Los bloques de código muestran DesignScript en el entorno de programación visual, lo que permite flujos de trabajo flexibles de nodos y secuencias de comandos de texto. Cualquier elemento del espacio de trabajo puede llamar a una función de un bloque de código.
 
-    > Descargue un ejemplo de bloque de código (haga clic con el botón derecho y seleccione Guardar como) o vea un recorrido detallado en [Dynamo Primer](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html).
+    > Descargue un ejemplo de bloque de código (haga clic con el botón derecho y seleccione Guardar como) o vea un recorrido detallado en [Dynamo Primer](https://primer2.dynamobim.org/v/es/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block).
 *   Los nodos personalizados son contenedores para recopilaciones de nodos o incluso gráficos completos. Son una manera eficaz de recopilar rutinas de uso frecuente y compartirlas con la comunidad.
 
-    > Descargue un ejemplo de nodo personalizado (haga clic con el botón derecho y seleccione Guardar como) o vea un recorrido detallado en [Dynamo Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html).
+    > Descargue un ejemplo de nodo personalizado (haga clic con el botón derecho y seleccione Guardar como) o vea un recorrido detallado en [Dynamo Primer](https://primer2.dynamobim.org/v/es/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction).
 *   Los nodos de Python son una interfaz de creación de secuencias de comandos en el espacio de trabajo de programación visual, similares a los bloques de código. Las bibliotecas de Autodesk.DesignScript utilizan una notación de punto similar a DesignScript.
 
-    > Descargue un ejemplo de nodo de Python (haga clic con el botón derecho y seleccione Guardar como) o vea un recorrido detallado en [Dynamo Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html).
+    > Descargue un ejemplo de nodo de Python (haga clic con el botón derecho y seleccione Guardar como) o vea un recorrido detallado en [Dynamo Primer](https://primer2.dynamobim.org/v/es/8_coding_in_dynamo/8-3_python).
 
 El desarrollo en el espacio de trabajo de Dynamo permite obtener de forma eficaz una respuesta inmediata.
 
@@ -70,7 +70,7 @@ Zero-Touch hace referencia a un sencillo método de señalar y hacer clic que pe
 
 Con este método, se puede realizar lo siguiente:
 
-* Importe una biblioteca que no se haya desarrollado necesariamente para Dynamo y cree automáticamente un conjunto de nodos nuevos, como el [ejemplo de A-Forge](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html) en Dynamo Primer.
+* Importe una biblioteca que no se haya desarrollado necesariamente para Dynamo y cree automáticamente un conjunto de nodos nuevos, como el [ejemplo de A-Forge](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) en Dynamo Primer.
 * Escriba métodos de C# y utilícelos fácilmente como nodos en Dynamo.
 * Comparta una biblioteca de C# como nodos con la comunidad de Dynamo en un paquete.
 

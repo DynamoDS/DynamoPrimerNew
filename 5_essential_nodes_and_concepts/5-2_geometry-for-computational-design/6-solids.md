@@ -4,11 +4,11 @@
 
 ### ¿Qué es un sólido?
 
-Si deseamos crear modelos más complejos que no se puedan crear a partir de una única superficie o si queremos definir un volumen explícito, debemos aventurarnos en el terreno de los [sólidos](5-6\_solids.md#solids) (y las PolySurfaces). Incluso un cubo sencillo es lo suficientemente complejo como para necesitar seis superficies, una por cara. Los sólidos proporcionan acceso a dos conceptos clave que las superficies no ofrecen: una descripción topológica más refinada (caras, aristas y vértices) y operaciones booleanas.
+Si deseamos crear modelos más complejos que no se puedan crear a partir de una única superficie o si queremos definir un volumen explícito, debemos aventurarnos en el terreno de los [sólidos](6-solids.md#solids) (y las PolySurfaces). Incluso un cubo sencillo es lo suficientemente complejo como para necesitar seis superficies, una por cara. Los sólidos proporcionan acceso a dos conceptos clave que las superficies no ofrecen: una descripción topológica más refinada (caras, aristas y vértices) y operaciones booleanas.
 
 ### Operación booleana para crear un sólido de bola llena de puntas
 
-Puede utilizar [operaciones booleanas](5-6\_solids.md#boolean-operations) para modificar sólidos. Vamos a utilizar algunas operaciones booleanas para crear una bola llena de puntas.
+Puede utilizar [operaciones booleanas](6-solids.md#boolean-operations) para modificar sólidos. Vamos a utilizar algunas operaciones booleanas para crear una bola llena de puntas.
 
 ![](../images/5-2/6/solids-spikyball.jpg)
 

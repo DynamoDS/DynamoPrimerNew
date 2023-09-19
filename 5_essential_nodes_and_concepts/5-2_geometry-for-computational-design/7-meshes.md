@@ -23,7 +23,7 @@ Las funciones de malla de Dynamo se pueden ampliar mediante la instalación del 
 
 La biblioteca también proporciona herramientas para modificar y reparar mallas, o extraer cortes horizontales para su uso en la fabricación.
 
-Consulte los [casos reales del Kit de herramientas de malla](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) para obtener un ejemplo de cómo utilizar este paquete.
+Consulte los [casos reales del Kit de herramientas de malla](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes) para obtener un ejemplo de cómo utilizar este paquete.
 
 ![Kit de herramientas de malla](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 
@@ -91,6 +91,6 @@ Otra diferencia importante es la extensión en la que un cambio local en la geom
 > 1. Superficie NURBS: el desplazamiento de un punto de control tiene una influencia que se extiende a lo largo de la forma.
 > 2. Geometría de malla: el desplazamiento de un vértice solo influye en los elementos adyacentes.
 
-Una analogía que puede resultar útil es comparar una imagen vectorial (compuesta de líneas y curvas) con una imagen ráster (compuesta de píxeles individuales). Si amplia la vista de una imagen vectorial, las curvas permanecen nítidas y claras, mientras que si se amplía la vista de una imagen ráster, los píxeles individuales aumentan de tamaño. En esta analogía, las superficies NURBS se pueden comparar con una imagen vectorial porque existe una relación matemática fluida, mientras que una malla se comporta de forma similar a una imagen ráster con una resolución establecida.
+Una analogía que puede resultar útil es comparar una imagen vectorial (compuesta de líneas y curvas) con una imagen ráster (compuesta de píxeles individuales). Si amplía la vista de una imagen vectorial, las curvas permanecen nítidas y claras, mientras que si se amplía la vista de una imagen ráster, los píxeles individuales aumentan de tamaño. En esta analogía, las superficies NURBS se pueden comparar con una imagen vectorial porque existe una relación matemática fluida, mientras que una malla se comporta de forma similar a una imagen ráster con una resolución establecida.
 
 ##

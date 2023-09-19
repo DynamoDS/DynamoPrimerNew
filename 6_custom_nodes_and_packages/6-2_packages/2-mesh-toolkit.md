@@ -2,13 +2,13 @@
 
 El Kit de herramientas de malla de Dynamo proporciona herramientas para importar mallas desde formatos de archivo externos, crear una malla a partir de objetos de geometría de Dynamo y generar manualmente mallas mediante sus vértices e índices. La biblioteca también proporciona herramientas para modificar y reparar mallas, o extraer cortes horizontales para su uso en la fabricación.
 
-![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 El Kit de herramientas de malla de Dynamo forma parte de la investigación de mallas en curso de Autodesk y, como tal, seguirá creciendo a lo largo de los próximos años. Esperamos que aparezcan con frecuencia nuevos métodos en este kit y no dude en ponerse en contacto con el equipo de Dynamo para ofrecer comentarios, indicar errores y enviar sugerencias sobre las nuevas funciones.
 
 ### Mallas frente a sólidos
 
-En el siguiente ejercicio, se muestran algunas operaciones básicas de malla que utiliza el Kit de herramientas de malla. En el ejercicio, intersecamos una malla con una serie de planos, lo que puede ser muy costoso desde una perspectiva computacional si se utilizan sólidos. A diferencia de los sólidos, las mallas tienen una "resolución" establecida y no se definen matemáticamente, sino topológicamente, y podemos definir esta resolución en función de la tarea que se está llevando a cabo. Para obtener más información sobre las relaciones entre mallas y sólidos, puede consultar el capítulo [Geometría para el diseño computacional de este manual de introducción](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/). Para examinar de forma más exhaustiva el Kit de herramientas de malla, consulte la [página wiki de Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). Pasemos al paquete en el ejercicio siguiente.
+En el siguiente ejercicio, se muestran algunas operaciones básicas de malla que utiliza el Kit de herramientas de malla. En el ejercicio, intersecamos una malla con una serie de planos, lo que puede ser muy costoso desde una perspectiva computacional si se utilizan sólidos. A diferencia de los sólidos, las mallas tienen una "resolución" establecida y no se definen matemáticamente, sino topológicamente, y podemos definir esta resolución en función de la tarea que se está llevando a cabo. Para obtener más información sobre las relaciones entre mallas y sólidos, puede consultar el capítulo [Geometría para el diseño computacional](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) de este manual de introducción. Para examinar de forma más exhaustiva el Kit de herramientas de malla, consulte la [página wiki de Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit). Pasemos al paquete en el ejercicio siguiente.
 
 ### Instalar el Kit de herramientas de malla
 

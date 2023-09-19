@@ -9,4 +9,4 @@ Están disponibles los siguientes flujos de trabajo de ejemplo:
 * [Jarrón paramétrico](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [Puntos de atractor](10-1\_getting-started-workflows/2-attractor-points.md)
 
-También puede localizar los conceptos introducidos en los flujos de trabajo mediante el [índice de conceptos](table-of-summary-for-some-concept-used-in-previous-exercises.md).
+También puede localizar los conceptos introducidos en los flujos de trabajo mediante el [índice de conceptos](10-2\_concept-index.md).

@@ -30,7 +30,7 @@ Ahora vamos a recrear esta idea mediante diccionarios. Debemos recopilar primero
 > 1. Seleccionamos la categoría de Revit con la que deseamos trabajar (en este caso, trabajaremos con habitaciones).
 > 2. Le indicamos a Dynamo que recopile todos esos elementos.
 
-A continuación, debemos decidir las claves que vamos a utilizar para buscar estos datos. (La información sobre las claves se encuentra en la sección [¿Qué es un diccionario?](9-1\_what-is-a-dictionary.md)).
+A continuación, debemos decidir las claves que vamos a utilizar para buscar estos datos. (La información sobre las claves se encuentra en la sección [¿Qué es un diccionario?](1-what-is-a-dictionary.md)).
 
 ![](../images/5-5/4/dictionary-exerciseI-02.jpg)
 

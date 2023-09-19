@@ -8,7 +8,7 @@ La biblioteca contiene todos los nodos cargados, incluidos los 10 nodos de cate
 * Nodos personalizados: almacene las rutinas o los gráficos especiales utilizados con frecuencia como nodos personalizados. También puede compartir los nodos personalizados con la comunidad.
 * Nodos de Package Manager: colección de nodos personalizados publicados.
 
-Repasaremos las categorías de [jerarquía de nodos](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories), mostraremos cómo realizar rápidamente [búsquedas en la biblioteca](3-3\_dynamo\_libraries.md#quick-search-in-library) y conoceremos algunos de los [nodos utilizados con frecuencia](3-3\_dynamo\_libraries.md#frequently-used-nodes).
+Repasaremos las categorías de [jerarquía de nodos](2-library.md#library-hierarchy-for-categories), mostraremos cómo realizar rápidamente [búsquedas en la biblioteca](2-library.md#search-by-hierarchy) y conoceremos algunos de los [nodos utilizados con frecuencia](2-library.md#frequently-used-nodes).
 
 ### Jerarquía de categorías de la biblioteca
 
@@ -27,13 +27,13 @@ Examine la biblioteca. Para ello, haga clic en los menús para expandir cada cat
 
 Estos clasifican aún más los nodos en la misma subcategoría en función si los nodos **crean** datos, ejecutan una **acción** o **consultan** datos.
 
-* ![](<images/3-2/user interface - create.jpg>) **Crear**: cree o construya una geometría desde cero. Por ejemplo, un círculo.
-* ![](<images/3-2/user interface - action.jpg>) **Acción**: realice una acción en un objeto. Por ejemplo, ajuste la escala de un círculo.
-* ![](<images/3-2/user interface - query.jpg>) **Consulta**: obtenga una propiedad de un objeto existente. Por ejemplo, obtenga el radio de un círculo.
+* \![](<images/3-2/user interface - create.jpg>) **Crear**: cree o construya una geometría desde cero. Por ejemplo, un círculo.
+* \![](<images/3-2/user interface - action.jpg>) **Acción**: realice una acción en un objeto. Por ejemplo, ajuste la escala de un círculo.
+* \![](<images/3-2/user interface - query.jpg>) **Consulta**: obtenga una propiedad de un objeto existente. Por ejemplo, obtenga el radio de un círculo.
 
 Coloque el puntero en un nodo para visualizar información más detallada, además de su nombre e icono. Esto nos permite conocer rápidamente lo que realiza el nodo, lo que necesitará para las entradas y lo que proporcionará como salida.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Descripción: descripción del nodo en lenguaje normal.
 > 2. Icono: versión más grande del icono en el menú Biblioteca.
@@ -46,7 +46,7 @@ Si sabe con precisión relativa qué nodo desea añadir al espacio de trabajo, e
 
 Haga clic en el nodo que desea añadir o pulse Intro para añadir los nodos resaltados al centro del espacio de trabajo.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Buscar por jerarquía
 
@@ -121,11 +121,11 @@ Ambos se encuentran en la categoría de vista de la biblioteca principal.
 
 Los nodos de bloque de código, Code Block, se pueden utilizar para definir un bloque de código con líneas separadas por signos de punto y coma. Esto puede ser tan sencillo como `X/Y`.
 
-También podemos utilizar bloques de código como un acceso directo para definir una entrada de número o una llamada a la función de otro nodo. La sintaxis para esta acción sigue la convención de nomenclatura del lenguaje textual de Dynamo, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+También podemos utilizar bloques de código como un acceso directo para definir una entrada de número o una llamada a la función de otro nodo. La sintaxis para esta acción sigue la convención de nomenclatura del lenguaje textual de Dynamo, [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 A continuación, se muestra una sencilla demostración (con instrucciones) de uso del bloque de código en la secuencia de comandos.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Haga doble clic para crear un nodo de bloque de código.
 2. `Circle.ByCenterPointRadius(x,y);`Tipo

@@ -4,7 +4,7 @@
 
 ### ¿Qué es una curva?
 
-Las [curvas](5-4\_curves.md#curve) son el primer tipo de datos geométricos abordado que presenta un conjunto más familiar de propiedades descriptivas de forma... ¿Qué grado de curvatura o rectitud? ¿Cómo de larga o corta? Recuerde que los puntos siguen siendo nuestros bloques de construcción para definir cualquier elemento, desde una línea a una spline y todos los tipos de curva intermedios.
+Las [curvas](4-curves.md#deep-dive-into...) son el primer tipo de datos geométricos abordado que presenta un conjunto más familiar de propiedades descriptivas de forma... ¿Qué grado de curvatura o rectitud? ¿Cómo de larga o corta? Recuerde que los puntos siguen siendo nuestros bloques de construcción para definir cualquier elemento, desde una línea a una spline y todos los tipos de curva intermedios.
 
 ![Tipos de curva](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@ Las [curvas](5-4\_curves.md#curve) son el primer tipo de datos geométricos abor
 
 ### Línea
 
-Una [línea](5-4\_curves.md#lines) está formada por un conjunto de puntos; cada línea tiene al menos dos puntos. Una de las formas más habituales de crear líneas en Dynamo es utilizar `Line.ByStartPointEndPoint`![](images/5-2/4/Linebystartpointendpoint.jpg).
+Una [línea](4-curves.md#lines) está formada por un conjunto de puntos; cada línea tiene al menos dos puntos. Una de las formas más habituales de crear líneas en Dynamo es utilizar `Line.ByStartPointEndPoint`![](images/5-2/4/Linebystartpointendpoint.jpg).
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Curva NURBS
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) es un modelo que se utiliza para representar curvas y superficies con precisión. Una curva de seno en Dynamo mediante dos métodos diferentes para crear curvas NURBS a fin de comparar los resultados.
+[NURBS](4-curves.md#nurbs-+-polycurves) es un modelo que se utiliza para representar curvas y superficies con precisión. Una curva de seno en Dynamo mediante dos métodos diferentes para crear curvas NURBS a fin de comparar los resultados.
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 
@@ -51,7 +51,7 @@ Todas las curvas también poseen una serie de propiedades o características que
 
 ### Líneas
 
-Las **líneas** son la forma más sencilla de las curvas. Puede que no parezcan curvadas, pero en realidad son curvas, solo que no tienen ninguna curvatura. Existen varias formas diferentes de crear líneas; el más intuitivo desde el punto A al punto B. La forma de la línea AB se dibujará entre los puntos, pero matemáticamente se extiende infinitamente en ambas direcciones.
+Las **líneas** son la forma más sencilla de las curvas. Puede que no parezcan curvadas, pero en realidad son curvas, solo que no tienen ninguna curvatura. Existen varias formas diferentes de crear líneas; la más intuitiva desde el punto A al punto B. La forma de la línea AB se dibujará entre los puntos, pero matemáticamente se extiende infinitamente en ambas direcciones.
 
 ![Línea](../images/5-2/4/Line.jpg)
 

@@ -22,11 +22,11 @@ La separación de los diccionarios y las listas convierte a los diccionarios en 
 * Se han introducido _nuevos nodos_ en la biblioteca para ayudarle a crear, modificar y consultar diccionarios.
 *   Las listas creadas con bloques de código v1.x se migrarán automáticamente al cargar la secuencia de comandos a la nueva sintaxis de lista que utiliza corchetes `[ ]` en lugar de llaves `{ }`.
 
-    ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
-***
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+
+
 
 ### **¿En qué me afecta? ¿Para qué se utilizan?**
 

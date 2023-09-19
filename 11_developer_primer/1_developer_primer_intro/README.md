@@ -1,10 +1,11 @@
-# Guía de introducción para desarrolladores 
+# Guía de introducción para desarrolladores
 
 #### ¿Cuál es la finalidad de esta guía? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
 Esta guía tiene como finalidad ayudarle a navegar por la gama de posibilidades de desarrollo de C# para Dynamo, desde cómo crear nodos Zero-Touch hasta cómo generar extensiones.
 
-![El código fuente de Dynamo en GitHub](images/dynamogithub.jpg)
+![El código fuente de Dynamo en GitHub](../1-introduction/images/dynamogithub.jpg)
+
 > Código fuente de Dynamo en GitHub
 
 #### ¿Qué recursos adicionales para desarrolladores ofrecemos? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

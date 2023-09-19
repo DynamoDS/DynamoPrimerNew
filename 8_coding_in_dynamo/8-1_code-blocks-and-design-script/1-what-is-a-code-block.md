@@ -1,16 +1,16 @@
 # ¿Qué es un bloque de código?
 
-Los bloques de código son una ventana a DesignScript, el lenguaje de programación que es la base de Dynamo. Creado desde cero para admitir flujos de trabajo de diseño exploratorios, DesignScript es un lenguaje legible y conciso que ofrece información inmediata a pequeños fragmentos de código y también se adapta a interacciones grandes y complejas. DesignScript también forma la columna vertebral del motor que impulsa la mayoría de los aspectos subyacentes de Dynamo. Como casi todas las funciones de los nodos y las interacciones de Dynamo tienen una relación de uno a uno con el lenguaje de creación de secuencias de comandos, se ofrecen oportunidades únicas de desplazarse entre secuencias de comandos e interacciones basadas en nodos de forma fluida.  
+Los bloques de código son una ventana a DesignScript, el lenguaje de programación que es la base de Dynamo. Creado desde cero para admitir flujos de trabajo de diseño exploratorios, DesignScript es un lenguaje legible y conciso que ofrece información inmediata a pequeños fragmentos de código y también se adapta a interacciones grandes y complejas. DesignScript también forma la columna vertebral del motor que impulsa la mayoría de los aspectos subyacentes de Dynamo. Como casi todas las funciones de los nodos y las interacciones de Dynamo tienen una relación de uno a uno con el lenguaje de creación de secuencias de comandos, se ofrecen oportunidades únicas de desplazarse entre secuencias de comandos e interacciones basadas en nodos de forma fluida.
 
 ![](../images/8-1/1/codeblock.jpg)
 
-Para los principiantes, los nodos se pueden convertir automáticamente en sintaxis de texto para facilitar el aprendizaje de DesignScript o para reducir el tamaño de secciones de gráficos de mayor tamaño. Esto se realiza mediante un proceso denominado "de nodo a código", que se describe con más detalle en la sección [Sintaxis de DesignScript](7-2\_design-script-syntax.md). Los usuarios con más experiencia pueden utilizar bloques de código para crear combinaciones personalizadas de funciones existentes y relaciones creadas por el usuario mediante una gran cantidad de paradigmas de codificación estándar. En un nivel intermedio entre los principiantes y los usuarios avanzados, hay disponibles un gran número de accesos directos y fragmentos de código que agilizarán los diseños. Si bien el término "bloque de código" puede intimidar un poco a los que no son programadores, es una herramienta eficaz y fácil de usar. Un principiante puede utilizar de forma eficaz el bloque de código con una mínima creación de código y un usuario avanzado puede establecer definiciones de secuencias de comandos que se pueden recuperar en cualquier parte de una definición de Dynamo.
+Para los principiantes, los nodos se pueden convertir automáticamente en sintaxis de texto para facilitar el aprendizaje de DesignScript o para reducir el tamaño de secciones de gráficos de mayor tamaño. Esto se realiza mediante un proceso denominado "de nodo a código", que se describe con más detalle en la sección [Sintaxis de DesignScript](2-design-script-syntax.md). Los usuarios con más experiencia pueden utilizar bloques de código para crear combinaciones personalizadas de funciones existentes y relaciones creadas por el usuario mediante una gran cantidad de paradigmas de codificación estándar. En un nivel intermedio entre los principiantes y los usuarios avanzados, hay disponibles un gran número de accesos directos y fragmentos de código que agilizarán los diseños. Si bien el término "bloque de código" puede intimidar un poco a los que no son programadores, es una herramienta eficaz y fácil de usar. Un principiante puede utilizar de forma eficaz el bloque de código con una mínima creación de código y un usuario avanzado puede establecer definiciones de secuencias de comandos que se pueden recuperar en cualquier parte de una definición de Dynamo.
 
-### Una breve descripción de los bloques de código 
+### Una breve descripción de los bloques de código
 
 En resumen, los bloques de código son una interfaz de creación de secuencias de comandos de texto dentro de un entorno de creación de secuencias de comandos visuales. Se pueden utilizar como números, cadenas, fórmulas y otros tipos de datos. El bloque de código se ha diseñado para Dynamo, por lo que se pueden definir variables arbitrarias en el bloque de código y esas variables se añaden automáticamente a las entradas del nodo:
 
-Con los bloques de código, un usuario dispone de flexibilidad para decidir cómo especificar entradas. A continuación, se indican varias formas de crear un punto básico con coordenadas _(10, 5, 0)_: 
+Con los bloques de código, un usuario dispone de flexibilidad para decidir cómo especificar entradas. A continuación, se indican varias formas de crear un punto básico con coordenadas _(10, 5, 0)_:
 
 ![](../images/8-1/1/codeblockbriefoverview.jpg)
 
@@ -34,4 +34,3 @@ Los nodos "number", "string" y "formula" son tres ejemplos de nodos de Dynamo qu
 
 > 1. "Forma tradicional"
 > 2. Bloques de código
-

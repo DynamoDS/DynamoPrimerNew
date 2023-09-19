@@ -1,10 +1,10 @@
-# Desarrollo de un paquete  
+# Desarrollo de un paquete
 
 Dynamo ofrece una gran variedad de métodos para crear un paquete para uso personal o para compartir con la comunidad de Dynamo. En el caso real incluido a continuación, veremos cómo se configura un paquete mediante la desconstrucción de uno existente. Este caso real se basa en las lecciones del capítulo anterior y proporciona un conjunto de nodos personalizados para la asignación de geometría, mediante coordenadas UV, de una superficie de Dynamo a otra.
 
 ## Paquete MapToSurface
 
-Vamos a trabajar con un paquete de ejemplo que demuestra la asignación de UV de puntos de una superficie a otra. Ya hemos aprendido los conceptos básicos de la herramienta en la sección [Creación de un nodo personalizado](../10\_custom-nodes/10-2\_creating.md) de este manual de introducción. Los archivos siguientes muestran cómo podemos utilizar el concepto de asignación de UV y desarrollar un conjunto de herramientas para una biblioteca publicable.
+Vamos a trabajar con un paquete de ejemplo que demuestra la asignación de UV de puntos de una superficie a otra. Ya hemos aprendido los conceptos básicos de la herramienta en la sección [Creación de un nodo personalizado](../6-1\_custom-nodes/2-creating.md) de este manual de introducción. Los archivos siguientes muestran cómo podemos utilizar el concepto de asignación de UV y desarrollar un conjunto de herramientas para una biblioteca publicable.
 
 En esta imagen, se asigna un punto de una superficie a otra mediante coordenadas UV. El paquete se basa en este concepto, pero con una geometría más compleja.
 
@@ -20,7 +20,7 @@ En Dynamo, haga clic en Paquetes > Buscar un paquete y busque el paquete "MapToS
 
 Después de la instalación, los nodos personalizados deben estar disponibles en la sección Complementos > Dynamo Primer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Con el paquete instalado, veamos cómo se configura.
 
@@ -30,7 +30,7 @@ El paquete que estamos creando utiliza cinco nodos personalizados que hemos crea
 
 Este es un paquete sencillo con cinco nodos personalizados. En los pasos siguientes, hablaremos brevemente de la configuración de cada nodo personalizado.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ A continuación, abra la carpeta _"extra"_, que aloja todos los archivos del paq
 
 #### **01-PanelingWithPolygons**
 
-Este archivo de ejemplo muestra cómo se puede utilizar _"PointsToSurface"_ para panelizar una superficie en función de una rejilla de rectángulos. Esto debería resultarle familiar, ya que hicimos una demostración de un flujo de trabajo similar en el [capítulo anterior](../10\_custom-nodes/10-2\_creating.md).
+Este archivo de ejemplo muestra cómo se puede utilizar _"PointsToSurface"_ para panelizar una superficie en función de una rejilla de rectángulos. Esto debería resultarle familiar, ya que hicimos una demostración de un flujo de trabajo similar en el [capítulo anterior](../6-1\_custom-nodes/2-creating.md).
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

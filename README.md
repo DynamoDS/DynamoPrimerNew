@@ -51,6 +51,18 @@ A **Matterlab** se le encargó actualizar el manual de introducción para inclui
 
 ![](images/matterlab\_final-07.jpg)
 
+***
+
+A **Archilizer** se le encargó actualizar el manual de introducción para incluir las revisiones de Dynamo 2.17.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+A **Wood Rodgers** se le encargó actualizar el manual de introducción con contenido sobre Dynamo para Civil 3D.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+
 ### Agradecimientos
 
 Un agradecimiento especial a Ian Keough por iniciar y guiar el proyecto de Dynamo.
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### Licencia
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. Puede obtener una copia de la licencia en
 

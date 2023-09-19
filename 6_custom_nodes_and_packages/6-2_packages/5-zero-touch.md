@@ -17,18 +17,18 @@ En esta sección se muestra cómo utilizar Zero-Touch para importar una bibliote
 
 Los paquetes de Zero-Touch son un buen complemento para los nodos personalizados definidos por el usuario. En la tabla siguiente se muestran algunos paquetes que utilizan bibliotecas C#. Para obtener información más detallada sobre los paquetes, visite la sección [Paquetes](../../a\_appendix/a-3\_packages.md) del Apéndice.
 
-| **Logotipo/imagen**                                                         | **Nombre**                                                                    |
-| ---------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](../images/6-2/2/meshToolkitcasestudy01.jpg)                        | [Kit de herramientas de malla](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                       | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| **Logotipo/imagen**                                                                   | **Nombre**                                                                    |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| \![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Kit de herramientas de malla](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| \![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](../images/6-2/5/rhynamo.jpg)                                                 | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../images/6-2/5/optimo.jpg)                                                  | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## Caso real: importación de AForge
 
 En este caso real, mostraremos cómo importar la biblioteca externa _.dll_ [AForge](http://www.aforgenet.com). AForge es una biblioteca sólida que ofrece una gama de funciones que van desde el procesamiento de imágenes hasta la inteligencia artificial. Haremos referencia a la clase de imágenes en AForge para realizar algunos ejercicios de procesamiento de imágenes a continuación.
 
-Descarguemos primero AForge. En la [página de descarga de AForge](http://www.aforgenet.com/framework/downloads.html), seleccione _[Download Installer]_ (Descargar instalador) y realice la instalación vez que haya finalizado la descarga.
+Descarguemos primero AForge. En la [página de descarga de AForge](http://www.aforgenet.com/framework/downloads.html), seleccione _[Download Installer]_ (Descargar instalador) y realice la instalación una vez que haya finalizado la descarga.
 
 En Dynamo, cree un archivo nuevo y seleccione _Archivo > Importar biblioteca_.
 

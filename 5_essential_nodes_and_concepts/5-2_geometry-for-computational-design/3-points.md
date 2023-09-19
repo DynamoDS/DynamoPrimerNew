@@ -4,7 +4,7 @@
 
 ### ¿Qué es un punto?
 
-Un [punto](5-3\_points.md#point-as-coordinates) se define por uno o más valores denominados coordenadas. El número de valores de coordenadas necesarios para definir el punto depende del sistema de coordenadas o del contexto en el que se encuentra.
+Un [punto](3-points.md#deep-dive-into...) se define por uno o más valores denominados coordenadas. El número de valores de coordenadas necesarios para definir el punto depende del sistema de coordenadas o del contexto en el que se encuentra.
 
 ### Punto 2D y 3D
 
