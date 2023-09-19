@@ -1,4 +1,4 @@
-# Introdução aos pacotes 
+# Introdução aos pacotes
 
 Em resumo, um pacote é uma coleção de nós personalizados. O Dynamo Package Manager é um portal para a comunidade a fim de efetuar o download de qualquer pacote que tenha sido publicado on-line. Esses conjuntos de ferramentas são desenvolvidos por terceiros para ampliar a funcionalidade principal do Dynamo, são acessíveis a todos e estão prontos para download com um clique no botão.
 
@@ -67,7 +67,7 @@ Vamos abrir “SphereUnfold”.
 
 Após abrir o arquivo e pressionar “Executar” no solucionador, teremos uma esfera desdobrada. Arquivos de exemplo como esses são úteis para saber como trabalhar com um novo pacote do Dynamo.
 
-![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Gerenciador de pacotes do Dynamo
 

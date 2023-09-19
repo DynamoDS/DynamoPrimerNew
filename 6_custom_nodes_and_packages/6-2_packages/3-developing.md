@@ -4,7 +4,7 @@ O Dynamo oferece diversas formas de criar um pacote para seu uso pessoal ou para
 
 ## Pacote MapToSurface
 
-Vamos trabalhar com um pacote de amostra que demonstra o mapeamento UV de pontos de uma superfície para outra. Já desenvolvemos os conceitos básicos da ferramenta na seção [Criar um nó personalizado](../10\_custom-nodes/10-2\_creating.md) desta introdução. Os arquivos abaixo demonstram como podemos usar o conceito de mapeamento UV e desenvolver um conjunto de ferramentas para uma biblioteca publicável.
+Vamos trabalhar com um pacote de amostra que demonstra o mapeamento UV de pontos de uma superfície para outra. Já desenvolvemos os conceitos básicos da ferramenta na seção [Criar um nó personalizado](../6-1\_custom-nodes/2-creating.md) deste manual. Os arquivos abaixo demonstram como podemos usar o conceito de mapeamento UV e desenvolver um conjunto de ferramentas para uma biblioteca publicável.
 
 Nessa imagem, mapeamos um ponto de uma superfície para outra usando as coordenadas UV. O pacote é baseado nesse conceito, mas com uma geometria mais complexa.
 
@@ -20,7 +20,7 @@ No Dynamo, clique em _Pacotes>Procurar um pacote... e p_rocure o pacote “MapTo
 
 Após a instalação, os nós personalizados devem estar disponíveis na seção Complementos > Dynamo Primer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Com o pacote já instalado, vamos analisar como ele está configurado.
 
@@ -30,7 +30,7 @@ O pacote que estamos criando usa cinco nós personalizados que criamos para refe
 
 Esse é um pacote simples com cinco nós personalizados. Nas etapas abaixo, falaremos brevemente sobre a configuração de cada nó personalizado.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Em seguida, abra a pasta _“extra”_, que contém todos os arquivos do pacote 
 
 #### **01-PanelingWithPolygons**
 
-Esse arquivo de exemplo demonstra como _“PointsToSurface”_ pode ser usado para criar painéis em uma superfície com base em uma grade de retângulos. Isso deve ser familiar, pois demonstramos um fluxo de trabalho similar no [capítulo anterior](../10\_custom-nodes/10-2\_creating.md).
+Esse arquivo de exemplo demonstra como _“PointsToSurface”_ pode ser usado para criar painéis em uma superfície com base em uma grade de retângulos. Isso deve parecer familiar para você, pois demonstramos um fluxo de trabalho similar no [capítulo anterior](../6-1\_custom-nodes/2-creating.md).
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

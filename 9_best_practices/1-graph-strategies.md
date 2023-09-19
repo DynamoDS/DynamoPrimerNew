@@ -23,7 +23,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 > 2. Grupo de entradas (laranja)
 > 3. Grupo de scripts (verde)
 >
-> Para saber como usar Grupos, consulte [Como gerenciar o programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Para saber como usar Grupos, consulte [Como gerenciar o programa](https://primer2.dynamobim.org/v/pt-br/9_best_practices/4-managing-your-program).
 
 ### **Desenvolver com eficiência usando blocos de código**
 
@@ -37,7 +37,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 > 1. DesignScript escrito no bloco de código
 > 2. Programa equivalente nos nós
 >
-> Para saber como usar o bloco de código, consulte [O que é um bloco de código](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Para saber como usar o bloco de código, consulte [O que é um bloco de código?](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md)
 
 ### **Condensar com Nó para código**
 
@@ -58,21 +58,21 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 > 1. Programa existente
 > 2. Bloco de código criado usando Nó para código
 >
-> Para saber como usar o Nó para código, consulte [Sintaxe do DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Para saber como usar Nó para código, consulte [Sintaxe do DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Acessar os dados de forma flexível com List@Level**
 
 * O uso do recurso List@Level pode ajudar a **reduzir a complexidade do gráfico substituindo os nós List.Map e List.Combine**, que podem ocupar um volume considerável de espaço da tela
 * O recurso List@Level oferece uma** forma mais rápida do que List.Map/List.Combine para criar a lógica do nó** permitindo acessar dados em qualquer nível de uma lista diretamente da porta de entrada de um nó
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > É possível verificar quantos valores verdadeiros BoundingBox.Contains retorna e em quais listas, ativando List@Level para a entrada de “lista” de CountTrue. O recurso List@Level permite que o usuário determine de qual nível a entrada extrairá os dados. O uso de List@Level é flexível, eficiente e altamente recomendável em relação a outros métodos que envolvem List.Map e List.Combine.
 >
 > 1. Contagem de valores verdadeiros no Nível de lista 2
 > 2. Contagem de valores verdadeiros no Nível de lista 3
 >
-> Para saber como usar List@Level, consulte [Listas de listas](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Para saber como usar List@Level, consulte [Listas de listas](https://primer2.dynamobim.org/v/pt-br/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
 
 ## Manter a legibilidade
 
@@ -84,12 +84,12 @@ Além de tornar o gráfico o mais simples e eficiente possível, tente obter mai
 * Se outras pessoas estiverem trabalhando com o gráfico, você deverá **garantir que o layout fio/nó flua com facilidade antes do envio**
 * Para ajudar com o alinhamento, **use o recurso “Limpeza do layout do nó” para alinhar automaticamente** o gráfico, porém de forma menos precisa do que se você fizesse isso manualmente
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Gráfico não organizado
 > 2. Gráfico alinhado
 >
-> Para saber como usar o Alinhamento de nós, consulte [Como gerenciar o programa](3-4\_best\_practices.md).
+> Para saber como usar o alinhamento de nós, consulte [Gerenciar o programa](4-managing-your-program.md).
 
 ### **Legendagem descritiva por meio de renomeação**
 
@@ -114,11 +114,11 @@ Além de tornar o gráfico o mais simples e eficiente possível, tente obter mai
 > 1. Uma nota que descreve a parte do programa que retorna as distâncias brutas de conversão
 > 2. Uma nota que descreve o código que mapeia esses valores para uma onda sinusoidal
 >
-> Para saber como adicionar uma nota, consulte [Como gerenciar o programa](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Para saber como adicionar uma nota, consulte [Como gerenciar o programa](https://primer2.dynamobim.org/v/pt-br/9_best_practices/4-managing-your-program).
 
 ## Flexionar de forma contínua
 
-Ao criar o script visual, é importante verificar se o que está sendo retornado é o que você esperava. Nem todos os erros ou problemas causarão a falha imediata do programa, principalmente valores nulos ou zero que possam afetar algo distante a jusante. Essa estratégia também é discutida no contexto de scripts de texto em [Estratégias de script](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). A prática a seguir ajudará a garantir que você obtenha o que esperava.
+Ao criar o script visual, é importante verificar se o que está sendo retornado é o que você esperava. Nem todos os erros ou problemas causarão a falha imediata do programa, principalmente valores nulos ou zero que possam afetar algo distante a jusante. Essa estratégia também é discutida no contexto de scripts de texto em [Estratégias de script](2-scripting-strategies.md). A prática a seguir ajudará a garantir que você obtenha o que esperava.
 
 ### **Monitorar os dados com balões de visualização e inspeção**
 
@@ -131,7 +131,7 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 > 1. As distâncias de conversão brutas
 > 2. Os valores passados pela equação de seno
 >
-> Para saber como usar a Inspeção, consulte [Biblioteca](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Para saber como usar a Inspeção, consulte [Biblioteca](../3\_user\_interface/2-library.md).
 
 ## Garantir a reutilização
 
@@ -147,7 +147,7 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 * Se houver **opções ou condições específicas que você queira incorporar ao gráfico**, use as predefinições para obter acesso rápido
 * Também é possível usar as predefinições para **reduzir a complexidade armazenando em cache os valores específicos de controle deslizante** em um gráfico com tempos de execução longos
 
-> Para saber como usar as predefinições, consulte [Gerenciar os dados com as predefinições](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Para saber como usar as predefinições, consulte [Gerenciar os dados com as predefinições](1-graph-strategies.md#use-presets-to-embed-input-values).
 
 ### **Conter programas com nós personalizados**
 
@@ -162,7 +162,7 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 > 1. Programa atrativo existente
 > 2. Nó personalizado que coleta este programa, PointGrid
 >
-> Para saber como usar nós personalizados, consulte [Introdução ao nó personalizado](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Para saber como usar nós personalizados, consulte [Introdução aos nós personalizados](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
 
 ### **Modelos de construção**
 

@@ -30,7 +30,7 @@ Agora, vamos recriar essa ideia usando dicionários. Primeiro, precisamos coleta
 > 1. Escolhemos a categoria do Revit com a qual queremos trabalhar (neste caso, estamos trabalhando com ambientes).
 > 2. Dizemos ao Dynamo para coletar todos esses elementos.
 
-Em seguida, precisamos decidir quais chaves usaremos para examinar esses dados. (Para obter informações sobre as chaves, consulte a seção [O que é um dicionário?](9-1\_what-is-a-dictionary.md)).
+Em seguida, precisamos decidir quais chaves usaremos para examinar esses dados. (Para obter informações sobre as chaves, consulte a seção [O que é um dicionário?](1-what-is-a-dictionary.md)).
 
 ![](../images/5-5/4/dictionary-exerciseI-02.jpg)
 

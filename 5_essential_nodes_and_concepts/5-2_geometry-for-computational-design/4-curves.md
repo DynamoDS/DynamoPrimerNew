@@ -4,7 +4,7 @@
 
 ### O que é uma curva?
 
-As [curvas ](5-4\_curves.md#curve) são o primeiro tipo de dados geométricos que abordamos com um conjunto mais familiar de propriedades descritivas de forma: em que medida elas são mais curvas ou retas? Longas ou curtas? E lembre-se de que os Pontos ainda são os nossos blocos de construção para definir qualquer coisa, desde uma linha a uma spline e todos os tipos de curva entre elas.
+As [curvas ](4-curves.md#deep-dive-into...) são o primeiro tipo de dados geométricos que abordamos com um conjunto mais familiar de propriedades descritivas de forma: em que medida elas são mais curvas ou retas? Longas ou curtas? E lembre-se de que os Pontos ainda são os nossos blocos de construção para definir qualquer coisa, desde uma linha a uma spline e todos os tipos de curva entre elas.
 
 ![Tipos de curvas](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@ As [curvas ](5-4\_curves.md#curve) são o primeiro tipo de dados geométricos qu
 
 ### Linha
 
-[Linha](5-4\_curves.md#lines) é composta por um conjunto de pontos, cada linha tem ao menos 2 pontos. Um dos modos mais comuns de criar linhas no Dynamo é usando `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) para criar uma linha no Dynamo.
+[Linha](4-curves.md#lines) é composta por um conjunto de pontos, cada linha tem ao menos dois pontos. Um dos modos mais comuns de criar linhas no Dynamo é usando `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) para criar uma linha no Dynamo.
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Curva NURBS
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) é um modelo usado para representar curvas e superfícies com precisão. Uma curva senoidal no Dynamo usando dois métodos diferentes para criar curvas NURBS para comparar os resultados.
+[NURBS](4-curves.md#nurbs-+-polycurves) é um modelo usado para representar curvas e superfícies com precisão. Uma curva senoidal no Dynamo usando dois métodos diferentes para criar curvas NURBS para comparar os resultados.
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

@@ -1,6 +1,6 @@
 # Nós do Python
 
-Por que você usaria a programação textual no ambiente de programação visual do Dynamo? A [Programação visual](../../a\_appendix/visual-programming-and-dynamo.md) tem muitas vantagens. Ela permite que você crie programas sem aprender sintaxe especial em uma interface visual intuitiva. No entanto, um programa visual pode se tornar confuso e, às vezes, pode ter funcionalidade insatisfatória. Por exemplo, o Python oferece métodos muito mais simples de escrever declarações condicionais (if/then) e loops. O Python é uma ferramenta avançada que pode ampliar os recursos do Dynamo e permitir que você substitua muitos nós por algumas linhas concisas de código.
+Por que você usaria a programação textual no ambiente de programação visual do Dynamo? A [Programação visual](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) tem muitas vantagens. Ela permite que você crie programas sem aprender sintaxe especial em uma interface visual intuitiva. No entanto, um programa visual pode se tornar confuso e, às vezes, pode ter funcionalidade insatisfatória. Por exemplo, o Python oferece métodos muito mais simples de escrever declarações condicionais (if/then) e loops. O Python é uma ferramenta avançada que pode ampliar os recursos do Dynamo e permitir que você substitua muitos nós por algumas linhas concisas de código.
 
 **Programa visual:**
 
@@ -171,7 +171,7 @@ Como vamos converter e girar os módulos de sólido, usaremos a operação Geome
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

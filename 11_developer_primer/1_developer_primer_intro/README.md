@@ -1,10 +1,11 @@
-# Manual do Desenvolvedor 
+# Manual do Desenvolvedor
 
 #### Qual é o propósito deste guia? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
 O objetivo deste guia é ajudar você a navegar pela gama de possibilidades de desenvolvimento em C# para o Dynamo, desde como criar nós sem toque até extensões de compilação.
 
-![Origem do Dynamo no Github](images/dynamogithub.jpg)
+![Origem do Dynamo no Github](../1-introduction/images/dynamogithub.jpg)
+
 > Origem do Dynamo no GitHub
 
 #### Que recursos adicionais de desenvolvedor fornecemos? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

@@ -96,7 +96,7 @@ O comando de corte divide as listas com base em um determinado comprimento de li
 
 **List.Map/Combine** aplica uma função definida a uma lista de entrada, mas um degrau abaixo na hierarquia. As combinações são o mesmo que os mapas, exceto pelo fato de que as combinações podem ter várias entradas correspondentes à entrada de uma determinada função.
 
-_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de_ **List.Map** _foi resolvida com a adição do recurso_ **List@Level** _. Para obter mais informações, consulte_ [_List@Level,_](6-3\_lists-of-lists.md#listlevel) _abaixo._
+_Observação: Este exercício foi criado com uma versão anterior do Dynamo. A maior parte da funcionalidade de_ **List.Map** _foi resolvida com a adição do recurso_ **List@Level** _. Para obter mais informações, consulte_ [_List@Level_](3-lists-of-lists.md#lists-of-lists) _abaixo._
 
 Como uma rápida introdução, vamos revisar o nó **List.Count** de uma seção anterior.
 
@@ -276,7 +276,7 @@ Agora que modificamos a lista, precisamos inseri-la de volta na estrutura de dad
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Seguindo a mesma lógica, use **List.ReplaceItemAtIndex** para substituir a lista do centro pela nossa lista modificada.
-> 2. Observe que os **Blocos de código** que definem o índice para esses dois nós são 1 e 2, que coincidem com a consulta original do **Bloco de código** (_pontos[1][2]_).
+> 2. Observe que os **Blocos de código**__ que definem o índice para esses dois nós são 1 e 2, que coincidem com a consulta original do **Bloco de código** (_pontos[1][2]_).
 > 3. Se selecionarmos a lista no _índice 1_, veremos a estrutura de dados realçada na visualização do Dynamo. Mesclamos com êxito o ponto movido para a estrutura de dados original.
 
 Existem várias maneiras de criar uma superfície com base nesse conjunto de pontos. Neste caso, vamos criar uma superfície por meio da elevação de curvas.

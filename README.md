@@ -1,4 +1,4 @@
-# Sobre 
+# Sobre
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Vídeo promocional do Dynamo {% endembed %}
 
@@ -41,15 +41,27 @@ A **Mode Lab** foi contratada para elaborar a primeira edição do manual. Agrad
 
 ***
 
-A **John Pierson of Parallax Team** foi contratada para atualizar o manual de modo a refletir as revisões do Dynamo 2.0.
+A **John Pierson of Parallax Team** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.0.
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-A **Matterlab** foi contratada para atualizar o manual de modo a refletir as revisões do Dynamo 2.13.
+A **Matterlab** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.13.
 
 ![](images/matterlab\_final-07.jpg)
+
+***
+
+A **Matterlab** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.17.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+A **Wood Rodgers** foi contratada para atualizar o manual com conteúdo para o Dynamo for Civil 3D.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Agradecimentos
 
@@ -79,9 +91,9 @@ Dynamo@autodesk.com
 
 ### Licença
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
-Licenciado com base na licença Apache, versão 2.0 (“Licença”); não é possível usar esse arquivo, exceto em conformidade com a licença. Você pode obter uma cópia da licença em:
+Licenciado com base na licença Apache, versão 2.0 (“Licença”); não é possível usar esse arquivo, exceto em conformidade com a licença. Você pode obter uma cópia da licença em:
 
 http://www.apache.org/licenses/LICENSE-2.0
 

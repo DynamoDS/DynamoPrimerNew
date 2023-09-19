@@ -4,7 +4,7 @@
 
 ### Vetor
 
-[Vetor](5-2\_vectors.md#vector-1) é uma representação de magnitude e direção. É possível visualizá-lo como uma seta que acelera em uma determinada direção em uma velocidade especificada. É um componente-chave para os nossos modelos no Dynamo. Observe que, como eles estão na categoria Abstrata de “Auxiliares”, quando criamos um vetor, não veremos nada na Visualização do plano de fundo.
+[Vetor ](2-vectors.md#vector-1)é uma representação de magnitude e direção. É possível visualizá-lo como uma seta que acelera em uma determinada direção em uma velocidade especificada. É um componente-chave para os nossos modelos no Dynamo. Observe que, como eles estão na categoria Abstrata de “Auxiliares”, quando criamos um vetor, não veremos nada na Visualização do plano de fundo.
 
 ![Vetores no Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@
 
 ### Plano
 
-[Plano](5-2\_vectors.md#plane-1) é uma superfície bidimensional. É possível imaginá-lo como uma superfície plana que se estende indefinidamente. Cada plano tem uma Origem, Direção X, Direção Y e uma Direção Z (para cima).
+[Plano ](2-vectors.md#plane-1)é uma superfície bidimensional. É possível imaginá-lo como uma superfície plana que se estende indefinidamente. Cada plano tem uma Origem, Direção X, Direção Y e uma Direção Z (para cima).
 
 ![Planos no Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@
 
 ### Sistema de coordenadas
 
-[Sistema de coordenadas](5-2\_vectors.md#coordinate-system-1) é um sistema para determinar a localização de pontos ou outros elementos geométricos. A imagem abaixo explica como o sistema de coordenadas é exibido no Dynamo e o que cada cor representa.
+[Sistema de coordenadas](2-vectors.md#coordinate-system-1) é um sistema para determinar a localização de pontos ou outros elementos geométricos. A imagem abaixo explica como o sistema de coordenadas é exibido no Dynamo e o que cada cor representa.
 
 ![Sistema de coordenadas no Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

@@ -23,7 +23,7 @@ Os recursos de malha do Dynamo podem ser estendidos instalando o pacote [Kit de 
 
 A biblioteca também fornece ferramentas para modificar malhas, reparar malhas ou extrair fatias horizontais para uso na fabricação.
 
-Acesse [Estudos de caso do Kit de ferramentas de malha](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md), por exemplo, para saber como usar esse pacote.
+Consulte [Estudos de caso do kit de ferramentas de malha](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes), por exemplo, para saber como usar esse pacote.
 
 ![Kit de ferramentas de malha](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

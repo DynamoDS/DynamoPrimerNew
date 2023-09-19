@@ -49,7 +49,7 @@ Se você tiver dúvidas, confira o menu **Ajuda**. Você pode acessar um dos sit
 A barra de ferramentas do Dynamo contém uma série de botões para acesso rápido ao trabalho com arquivos, bem como os comandos Desfazer [Ctrl + Z] e Refazer [Ctrl + Y]. Na parte mais à direita, há outro botão que exporta um instantâneo do espaço de trabalho, o que é extremamente útil para fins de documentação e compartilhamento.
 
 * ![](images/userinterface-newfile.jpg) Novo – Criar um novo arquivo .dyn
-* ![](<images/userinterface-open(1) (1).jpg>) Abrir – Abrir um arquivo existente .dyn (espaço de trabalho) ou .dyf (nó personalizado)
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Abrir – Abrir um arquivo .dyn (espaço de trabalho) ou .dyf (nó personalizado) existente
 * ![](images/userinterface-save.jpg) Salvar/Salvar como – Salvar o arquivo .dyn ou .dyf ativo
 * ![](images/userinterface-undo.jpg) Desfazer – Desfaz a última ação
 * ![](images/userinterface-redo.jpg) Refazer – Refaz a próxima ação
@@ -74,7 +74,7 @@ Execute o script do Dynamo daqui. Clique no ícone do menu suspenso no botão Ex
 ![](images/userinterface-executionbar.gif)
 
 * Automático: executa o script automaticamente. As alterações são atualizadas em tempo real.
-* Manual: o script somente é executado ao clicar no botão “Executar”. Isso é útil para fazer alterações em “scripts pesados” e complicados
-* Periódico: essa opção está desativada por padrão. Somente está disponível quando o nó DateTime.Now é usado. É possível definir o gráfico para ser executado automaticamente em um intervalo especificado.
+* Manual: o script somente é executado ao clicar no botão “Executar”. Isso é útil para fazer alterações em scripts “pesados” e complicados.
+* Periódico: essa opção está desativada por padrão. Somente está disponível quando o nó _DateTime.Now_ é usado. É possível definir o gráfico para ser executado automaticamente em um intervalo especificado.
 
 ![](images/userinterface-executionbarDateTimenode.jpg)
