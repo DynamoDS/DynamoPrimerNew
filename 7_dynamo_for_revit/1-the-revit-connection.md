@@ -37,7 +37,7 @@ Navigieren Sie in einem Revit-Projekt oder im Familieneditor zu Zusatzmodule und
 
 {% hint style="warning" %} *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
 
@@ -47,7 +47,7 @@ Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeig
 
 ### Anhalten von Blöcken
 
-Revit ist eine Plattform mit robusten Funktionen zum Projektmanagement. Aus diesem Grund sind parametrische Operationen in Dynamo eventuell komplex und ihre Berechnung kann viel Zeit beanspruchen. Falls die Berechnung von Blöcken in Dynamo sehr lange dauert, können Sie die Blockfunktionen anhalten ("einfrieren") und damit die Ausführung von Revit-Vorgängen unterbrechen, während Sie Ihr Diagramm entwickeln. Weitere Informationen zum [Anhalten](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) von Blöcken finden Sie im entsprechenden Abschnitt im Kapitel Körper.
+Revit ist eine Plattform mit robusten Funktionen zum Projektmanagement. Aus diesem Grund sind parametrische Operationen in Dynamo eventuell komplex und ihre Berechnung kann viel Zeit beanspruchen. Falls die Berechnung von Blöcken in Dynamo sehr lange dauert, können Sie die Blockfunktionen anhalten ("einfrieren") und damit die Ausführung von Revit-Vorgängen unterbrechen, während Sie Ihr Diagramm entwickeln. Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [Anhalten](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) im Kapitel Körper.
 
 ### Community und Dynamo-Blog
 

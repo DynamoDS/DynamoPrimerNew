@@ -1,4 +1,4 @@
-# Entwickeln für Dynamo 
+# Entwickeln für Dynamo
 
 Unabhängig vom Kenntnisstand ist die Dynamo-Plattform dafür konzipiert, dass alle Benutzer ihre Beiträge leisten können. Es gibt mehrere Entwicklungsoptionen, die auf unterschiedliche Fähigkeiten und Qualifikationen ausgerichtet sind und je nach Ziel alle ihre Stärken und Schwächen haben. Nachfolgend werden die verschiedenen Optionen und die Möglichkeiten zur Auswahl einer Option erläutert.
 
@@ -18,7 +18,7 @@ Diese Blöcke gestatten die größtmögliche Anpassung. Viele Pakete werden mit 
 * Von NodeModel abgeleitete Blöcke
 * Erweiterungen
 
-> Der Primer enthält eine Anleitung zum [Importieren von Zero-Touch-Bibliotheken](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> Der Primer enthält eine Anleitung zum [Importieren von Zero-Touch-Bibliotheken](https://primer2.dynamobim.org/v/de/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 Für die folgende Beschreibung wird Visual Studio als Entwicklungsumgebung für Zero-Touch- und NodeModel-Blöcke verwendet.
 
@@ -28,17 +28,17 @@ Für die folgende Beschreibung wird Visual Studio als Entwicklungsumgebung für 
 
 #### In Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Diese Prozesse befinden sich zwar im Arbeitsbereich für visuelle Programmierung und sind relativ einfach durchzuführen. Es handelt sich jedoch bei allen um realisierbare Optionen zur Anpassung von Dynamo. Der Primer behandelt diese Prozesse ausführlich und bietet im Kapitel [Vorgehensweisen zur Skripterstellung](http://dynamoprimer.com/de/12\_Best-Practice/12-1\_Scripting-Strategies.html) Tipps und Best Practices für die Skripterstellung.
+Diese Prozesse befinden sich zwar im Arbeitsbereich für visuelle Programmierung und sind relativ einfach durchzuführen. Es handelt sich jedoch bei allen um realisierbare Optionen zur Anpassung von Dynamo. Der Primer behandelt diese Prozesse ausführlich und bietet im Kapitel [Vorgehensweisen zur Skripterstellung](../../9\_best\_practices/2-scripting-strategies.md) Tipps und Best Practices für die Skripterstellung.
 
 *   Codeblöcke stellen DesignScript in der visuellen Programmierumgebung bereit und ermöglichen so flexible Text-Skript- und Block-Arbeitsabläufe. Eine Funktion in einem Codeblock kann von jedem beliebigen Element im Arbeitsbereich aufgerufen werden.
 
-    > Laden Sie ein Codeblock-Beispiel herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html) eine detaillierte exemplarische Vorgehensweise an.
+    > Laden Sie ein Codeblock-Beispiel herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer2.dynamobim.org/v/de/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block) eine detaillierte exemplarische Vorgehensweise an.
 *   Benutzerdefinierte Blöcke sind Container für Sammlungen von Blöcken oder sogar ganzen Diagrammen. Sie stellen eine effektive Methode dar, um häufig verwendete Routinen zu sammeln und sie mit der Community zu teilen.
 
-    > Laden Sie ein Beispiel für einen benutzerdefinierten Block herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html) eine detaillierte exemplarische Vorgehensweise an.
+    > Laden Sie ein Beispiel für einen benutzerdefinierten Block herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer2.dynamobim.org/v/de/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction) eine detaillierte exemplarische Vorgehensweise an.
 *   Python-Blöcke stellen eine Skripterstellungs-Schnittstelle im Arbeitsbereich für visuelle Programmierung dar, ähnlich wie Codeblöcke. Die Autodesk.DesignScript-Bibliotheken verwenden eine Punktnotation ähnlich der von DesignScript.
 
-    > Laden Sie ein Beispiel für einen Python-Block herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html) eine detaillierte exemplarische Vorgehensweise an.
+    > Laden Sie ein Beispiel für einen Python-Block herunter (klicken Sie mit der rechten Maustaste und dann auf Speichern unter), oder sehen Sie sich im [Primer](https://primer2.dynamobim.org/v/de/8_coding_in_dynamo/8-3_python) eine detaillierte exemplarische Vorgehensweise an.
 
 Die Entwicklung im Dynamo-Arbeitsbereich ist ein leistungsstarkes Werkzeug, um unmittelbar Feedback zu erhalten.
 
@@ -70,7 +70,7 @@ Unter Zero-Touch versteht man ein einfaches Verfahren zum Importieren von C#-Bib
 
 Mit dieser Methode haben wir folgende Möglichkeiten:
 
-* Importieren von Bibliotheken, die nicht unbedingt für Dynamo entwickelt wurden, und automatisches Erstellen einer Suite mit neuen Blöcken, z. B. wie im [A-Forge-Beispiel](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html) im Primer beschrieben.
+* Importieren von Bibliotheken, die nicht unbedingt für Dynamo entwickelt wurden, und automatisches Erstellen einer Suite mit neuen Blöcken, z. B. wie im [A-Forge-Beispiel](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) im Primer beschrieben.
 * Schreiben von C#-Methoden und einfache Nutzung der Methoden als Blöcke in Dynamo
 * Gemeinsame Nutzung einer C#-Bibliothek als Blöcke mit der Dynamo-Community in einem Paket
 

@@ -87,7 +87,7 @@ Es kommt häufig vor, dass Sie den Programmablauf in Ihrem visuellen Programm an
 
 * Um die Verbindung zu einem Eingabeanschluss zu ändern, klicken Sie mit der linken Maustaste auf einen anderen Eingabeanschluss.
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (2).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Um den Draht zu entfernen, ziehen Sie ihn weg und klicken mit der linken Maustaste in den Arbeitsbereich.
 
@@ -116,9 +116,9 @@ Falls Sie es vorziehen, die Drähte im Diagramm auszublenden, können Sie diese 
 
 Mit dieser Einstellung werden nur die ausgewählten Blöcke und die verbindenden Drähte in hellem Aquamarin hervorgehoben.
 
-![](<images/nodesandwires-hidewiressetting(1) (1).gif>)
+![](images/nodesandwires-hidewiressetting\(1\).gif)
 
-#### Ausblenden von einzelnen Drähte
+#### Nur einzelne Drähte ausblenden
 
 Sie können auch nur ausgewählte Drähte ausblenden, indem Sie mit der rechten Maustaste auf die Blockausgabe klicken und Drähte ausblenden auswählen.
 

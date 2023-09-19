@@ -30,7 +30,7 @@ Lassen Sie uns das nun mit Wörterbüchern probieren. Zuerst müssen wir alle R�
 > 1. Wir wählen wir die Revit-Kategorie, die wir verwendenden möchten (in diesem Fall Räume).
 > 2. Wir weisen Dynamo an, alle diese Elemente zu sammeln.
 
-Als Nächstes müssen wir entscheiden, welche Schlüssel wir verwenden, um diese Daten zu suchen. (Informationen zu Schlüsseln finden Sie im Abschnitt [Was ist ein Wörterbuch?](9-1\_what-is-a-dictionary.md)).
+Als Nächstes müssen wir entscheiden, welche Schlüssel wir verwenden, um diese Daten zu suchen. (Informationen zu Schlüsseln finden Sie im Abschnitt [Was ist ein Wörterbuch?](1-what-is-a-dictionary.md)).
 
 ![](../images/5-5/4/dictionary-exerciseI-02.jpg)
 

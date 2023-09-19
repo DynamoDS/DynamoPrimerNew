@@ -8,7 +8,7 @@ Die Bibliothek enthält alle geladenen Blöcke, einschließlich der zehn vorgabe
 * Benutzerdefinierte Blöcke: Speichern Sie häufig verwendete Routinen oder spezielle Diagramme als benutzerdefinierte Blöcke. Sie können Ihre benutzerdefinierten Blöcke auch für die Community freigeben.
 * Blöcke aus Package Manager: Sammlung von veröffentlichten benutzerdefinierten Blöcken.
 
-Wir sehen uns die Kategorien für die [Hierarchie der Blöcke](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories) an, und zeigen, wie Sie [schnell in der Bibliothek suchen](3-3\_dynamo\_libraries.md#quick-search-in-library) können. Außerdem werden einige der [häufig verwendeten Blöcke](3-3\_dynamo\_libraries.md#frequently-used-nodes) vorgestellt.
+Wir sehen uns die Kategorien für die [Hierarchie der Blöcke](2-library.md#library-hierarchy-for-categories) an und zeigen, wie Sie [schnell in der Bibliothek suchen](2-library.md#search-by-hierarchy) können. Außerdem werden einige der [häufig verwendeten Blöcke](2-library.md#frequently-used-nodes) vorgestellt.
 
 ### Bibliothekshierarchie für Kategorien
 
@@ -27,13 +27,13 @@ Durchsuchen Sie die Bibliothek, indem Sie durch die Menüs klicken, um die einze
 
 Mit diesen werden die Blöcke weiter in derselben Unterkategorie kategorisiert, je nachdem, ob die Blöcke Daten **erstellen**, eine **Aktion** ausführen oder Daten **abfragen**.
 
-* ![](<images/3-2/user interface - create.jpg>) **Erstellen**: Erstellt oder konstruiert eine Geometrie von Grund auf neu. Beispiel: Kreis.
-* ![](<images/3-2/user interface - action.jpg>) **Aktion**: Führt eine Aktion für ein Objekt aus. Beispiel: Skalieren eines Kreises.
-* ![](<images/3-2/user interface - query.jpg>) **Abfrage**: Ruft eine Eigenschaft eines bereits vorhandenen Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
+* \![](<images/3-2/user interface - create.jpg>) **Erstellen**: Erstellt oder konstruiert eine Geometrie von Grund auf neu. Beispiel: Kreis.
+* \![](<images/3-2/user interface - action.jpg>) **Aktion**: Führt eine Aktion für ein Objekt aus. Beispiel: Skalieren eines Kreises.
+* \![](<images/3-2/user interface - query.jpg>) **Abfrage**: Ruft eine Eigenschaft eines bereits vorhandenen Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
 
 Bewegen Sie den Mauszeiger über einen Block, um weitere Informationen über seinen Namen und sein Symbol hinaus anzuzeigen. Dadurch können Sie schnell nachvollziehen, welche Aktion der Block ausführt, welche Eingaben erforderlich sind und was von dem Block ausgegeben wird.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Beschreibung: Kurze Beschreibung des Blocks
 > 2. Symbol: Größere Version des Symbols im Menü Bibliothek
@@ -46,7 +46,7 @@ Wenn Sie relativ genau wissen, welchen Block Sie zu Ihrem Arbeitsbereich hinzuf�
 
 Treffen Sie Ihre Auswahl, indem Sie auf den hinzuzufügenden Block klicken, oder drücken Sie die EINGABETASTE, um die markierten Blöcke in der Mitte des Arbeitsbereichs hinzuzufügen.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Suchen nach Hierarchie
 
@@ -121,11 +121,11 @@ Beide Blöcke sind in der Kategorie View der Core-Bibliothek enthalten.
 
 Code Block-Blöcke können verwendet werden, um einen Codeblock mit Linien durch Semikolons getrennt zu definieren. Dies kann ganz einfach sein: `X/Y`.
 
-Wir können auch Codeblöcke als Abkürzung verwenden, um einen Number Input-Block zu definieren oder eine andere Funktion des Blocks aufzurufen. Die Syntax hierfür entspricht der Benennungskonvention der textuellen Sprache von Dynamo, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+Wir können auch Codeblöcke als Abkürzung verwenden, um einen Number Input-Block zu definieren oder eine andere Funktion des Blocks aufzurufen. Die Syntax hierfür entspricht der Namenskonvention der textuellen Sprache von Dynamo, [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 Hier sehen Sie eine einfache Demonstration (mit Anweisungen) zur Verwendung von Codeblöcken in Ihrem Skript.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Doppelklicken Sie, um einen Code Block-Block zu erstellen.
 2. `Circle.ByCenterPointRadius(x,y);`Typ

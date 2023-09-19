@@ -4,7 +4,7 @@
 
 ### Was ist eine Kurve?
 
-[Kurven](5-4\_curves.md#curve) sind der erste geometrische Datentyp, den wir abgedeckt haben, die einen vertrauteren Satz an beschreibenden Eigenschaften für die Form aufweisen: Wie kurvig oder gerade? Wie lange oder kurz? Und denken Sie daran, dass Punkte weiterhin unsere Bausteine für die Definition von allem darstellen, von einer Linie zu einem Spline und zu allen Kurvenarten dazwischen.
+[Kurven](4-curves.md#deep-dive-into...) sind der erste geometrische Datentyp, den wir abgedeckt haben, die einen vertrauteren Satz an beschreibenden Eigenschaften für die Form aufweisen: Wie kurvig oder gerade? Wie lange oder kurz? Und denken Sie daran, dass Punkte weiterhin unsere Bausteine für die Definition von allem darstellen, von einer Linie zu einem Spline und zu allen Kurvenarten dazwischen.
 
 ![Kurventypen](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@
 
 ### Linie
 
-Eine [Linie](5-4\_curves.md#lines) besteht aus einer Reihe von Punkten, jede Linie verfügt über mindestens 2 Punkte. Eine der häufigsten Methoden zum Erstellen von Linien in Dynamo ist die Verwendung von `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg), um eine Linie in Dynamo zu erstellen.
+Eine [Linie](4-curves.md#lines) besteht aus einer Reihe von Punkten, jede Linie verfügt über mindestens zwei Punkte. Eine der häufigsten Methoden zum Erstellen von Linien in Dynamo ist die Verwendung von `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg), um eine Linie in Dynamo zu erstellen.
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS-Kurve
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) ist ein Modell, das zur exakten Darstellung von Kurven und Oberflächen verwendet wird. Eine Sinuskurve in Dynamo mit zwei unterschiedlichen Methoden, um NURBS-Kurven zu erstellen und die Ergebnisse zu vergleichen.
+[NURBS](4-curves.md#nurbs-+-polycurves) ist ein Modell, das zur exakten Darstellung von Kurven und Oberflächen verwendet wird. Eine Sinuskurve in Dynamo mit zwei unterschiedlichen Methoden, um NURBS-Kurven zu erstellen und die Ergebnisse zu vergleichen.
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

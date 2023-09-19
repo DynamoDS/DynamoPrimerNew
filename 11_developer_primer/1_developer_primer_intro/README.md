@@ -4,7 +4,8 @@
 
 In diesem Handbuch erfahren Sie, wie Sie die verschiedenen C#-Entwicklungsmöglichkeiten für Dynamo verwenden - vom Erstellen von Zero-Touch-Blöcken bis hin zum Erstellen von Erweiterungen.
 
-![Dynamo-Quelldateien auf GitHub](images/dynamogithub.jpg)
+![Dynamo-Quelldateien auf GitHub](../1-introduction/images/dynamogithub.jpg)
+
 > Dynamo-Quelldateien auf GitHub
 
 #### Welche zusätzlichen Entwicklerressourcen stellen wir zur Verfügung? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

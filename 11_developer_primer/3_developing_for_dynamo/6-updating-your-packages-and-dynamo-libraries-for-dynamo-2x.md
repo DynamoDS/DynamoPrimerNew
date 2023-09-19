@@ -1,4 +1,4 @@
-# Aktualisieren der Pakete und Dynamo-Bibliotheken für Dynamo 2.x 
+# Aktualisieren der Pakete und Dynamo-Bibliotheken für Dynamo 2.x
 
 ### Einführung: <a href="#introduction" id="introduction"></a>
 
@@ -10,7 +10,7 @@ Benutzeroberflächen-Blöcke und Blöcke, die direkt aus NodeModel abgeleitet we
 
 Erweiterungsautoren müssen möglicherweise auch einige Änderungen vornehmen, je nachdem, wie viele der Dynamo Core-APIs sie in ihren Erweiterungen verwenden.
 
-***
+
 
 ### Allgemeine Paket-Regeln: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -18,8 +18,6 @@ Erweiterungsautoren müssen möglicherweise auch einige Änderungen vornehmen, j
 * Bündeln und verteilen Sie `newtonsoft.json.net` nach Möglichkeit nicht zusammen mit Ihrem Paket. Diese DLL-Datei ist ebenfalls bereits von Dynamo 2.x geladen. Das gleiche Problem wie oben kann auftreten.
 * Bündeln und verteilen Sie `CEFSharp` nach Möglichkeit nicht zusammen mit Ihrem Paket. Diese DLL-Datei ist ebenfalls bereits von Dynamo 2.x geladen. Das gleiche Problem wie oben kann auftreten.
 * Im Allgemeinen sollten Sie die Freigabe von Abhängigkeiten für Dynamo oder Revit vermeiden, wenn Sie die Version dieser Abhängigkeit steuern müssen.
-
-
 
 ### Häufige Probleme: <a href="#common-issues" id="common-issues"></a>
 
@@ -39,7 +37,6 @@ Dies kann folgende Ursachen haben:
 
 * Dies kann auftreten, wenn die Deserialisierung aus irgendeinem Grund fehlgeschlagen ist. Es empfiehlt sich, nur die benötigten Eigenschaften zu serialisieren. Wir können `[JsonIgnore]` für komplexe Eigenschaften verwenden, die Sie nicht laden oder speichern müssen, um sie zu ignorieren. Eigenschaften wie `function pointer, delegate, action,` oder `event` usw. Diese sollten nicht serialisiert werden, da sie in der Regel nicht deserialisiert werden können und einen Laufzeitfehler verursachen.
 
-
 ### Aktualisierung im Detail: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### Benutzerdefinierte Blöcke 1.3 - > 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
@@ -52,13 +49,11 @@ Bekannte Probleme:
 * Kommentare werden in Blockkommentare anstatt in Zeilenkommentare umgewandelt.
 * Kurze Typnamen werden durch vollständige Namen ersetzt. Wenn Sie beispielsweise beim erneuten Laden des benutzerdefinierten Blocks keinen Typ angegeben haben, wird `var[]..[]` angezeigt, da dies der Vorgabetyp ist.
 
-
 ### Zero-Touch-Blöcke 1.3 -> 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * In Dynamo 2.0 wurden Listen- und Wörterbuchtypen getrennt, und die Syntax zum Erstellen von Listen und Wörterbüchern wurde geändert. Listen werden mit `[]` initialisiert, während Wörterbücher `{}` verwenden.\
  Wenn Sie zuvor das Attribut `DefaultArgument` verwendet haben, um Parameter auf den Zero-Touch-Blöcken zu markieren, und die Listensyntax verwendet haben, um eine bestimmte Liste wie `someFunc([DefaultArgument("{0,1,2}")])` als Vorgabe zu verwenden, ist dies nicht mehr gültig. Sie müssen dann das DesignScript-Snippet ändern, um die neue Initialisierungssyntax für Listen zu verwenden.
 * Wie oben erwähnt, sollten Sie Dynamo-DLL-Dateien nicht mit Ihren Paketen verteilen (`DynamoCore`, `DynamoServices` usw.).
-
 
 ### NodeModel-Blöcke 1.3 -> 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ NodeModel-Blöcke erfordern die meiste Arbeit bei der Aktualisierung auf Dynamo�
 
 Die Namen der Parameter im Konstruktor sollten im Allgemeinen mit den Namen der JSON-Eigenschaften übereinstimmen. Diese Zuordnung wird jedoch komplizierter, wenn Sie die Namen überschreiben, die mithilfe von [JsonProperty]-Attributen serialisiert werden.\
  [Weitere Informationen finden Sie in der Dokumentation zu Json.net.](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### JSON-Konstruktoren <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,7 +88,6 @@ Dies ist der Hauptunterschied zwischen dem JSON-Konstruktor und Nicht-JSON-Konst
 
 Beispiele finden Sie hier im DynamoSamples-Repository -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) oder [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123).
 
-
 #### Öffentliche Eigenschaften und Serialisierung <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
 Bisher konnte ein Entwickler bestimmte Modelldaten über die `SerializeCore`- und `DeserializeCore`-Methode in das XML-Dokument serialisieren und deserialisieren. Diese Methoden sind weiterhin in der API vorhanden, werden jedoch in einer zukünftigen Version von Dynamo nicht mehr unterstützt (ein Beispiel finden Sie [hier](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)). Mit der JSON.NET-Implementierung können jetzt `public`-Eigenschaften in der von NodeModel abgeleiteten Klasse direkt in die DYN-Datei serialisiert werden. JSON.Net stellt mehrere Attribute bereit, mit denen die Serialisierung der Eigenschaft gesteuert wird.
@@ -104,7 +97,6 @@ Dieses Beispiel mit der Angabe eines `PropertyName` finden Sie [hier](https://gi
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### Konverter: <a href="#converters" id="converters"></a>
 
@@ -117,17 +109,15 @@ Ein Beispiel, in dem eine Serialisierungsmethode zum Konvertieren der Eigenschaf
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### Ignorieren von Eigenschaften <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 Für `public`-Eigenschaften, die nicht für die Serialisierung vorgesehen sind, muss das Attribut `[JsonIgnore]` hinzugefügt werden. Wenn die Blöcke in der DYN-Datei gespeichert werden, wird dadurch sichergestellt, dass diese Daten vom Serialisierungsmechanismus ignoriert werden. Beim erneuten Öffnen des Diagramms treten dann keine unerwarteten Auswirkungen auf. Ein Beispiel dafür finden Sie [hier](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) im Dynamo-Repository.
 
-***
+
 
 #### Rückgängig/Wiederholen <a href="#undoredo" id="undoredo"></a>
 
 Wie bereits erwähnt, wurden in der Vergangenheit die Methoden `SerializeCore` und `DeserializeCore` verwendet, um Blöcke zu speichern und in die XML-DYN-Datei zu laden. Außerdem wurden sie **und werden weiterhin** auch zum Speichern und Laden des Blockstatus zum Rückgängigmachen und Wiederherstellen verwendet. Wenn Sie komplexe Funktionen zum Rückgängigmachen und Wiederherstellen für den NodeModel-Benutzeroberflächen-Block implementieren möchten, müssen Sie diese Methoden implementieren und in das XML-Dokumentobjekt serialisieren, das als Parameter für diese Methoden bereitgestellt wird. Dies sollte ein selten auftretender Anwendungsfall sein, mit Ausnahme von komplexen Benutzeroberflächen-Blöcken.
-
 
 #### APIs für Ein- und Ausgabeanschlüsse <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
@@ -142,7 +132,6 @@ im Vergleich zu
 Beispiele für konvertierten Code finden Sie hier im Dynamo-Repository -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) oder [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281).
 
 Der andere häufige Anwendungsfall, der von den 2.0-API-Änderungen betroffen ist, bezieht sich auf die Methoden, die häufig in der Methode `BuildAst()` verwendet werden, um das Blockverhalten basierend auf dem Vorhandensein oder Fehlen von Anschlussverbindungen zu bestimmen. Zuvor wurde `HasConnectedInput(index)` verwendet, um einen verbundenen Anschlussstatus zu validieren. Entwickler sollten nun die Eigenschaft `InPorts[0].IsConnected` verwenden, um den Anschlussverbindungsstatus zu überprüfen. Ein Beispiel hierfür finden Sie in [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) im Dynamo-Repository.
-
 
 ### Beispiele: <a href="#examples" id="examples"></a>
 

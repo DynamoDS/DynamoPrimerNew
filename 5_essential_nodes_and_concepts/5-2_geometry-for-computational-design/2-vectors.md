@@ -4,7 +4,7 @@
 
 ### Vektor
 
-Ein [Vektor](5-2\_vectors.md#vector-1) ist eine Darstellung der Größe und Richtung. Sie können sich diesen als einen Pfeil vorstellen, der mit einer bestimmten Geschwindigkeit in eine bestimmte Richtung beschleunigt. Vektoren stellen eine wichtige Komponente für Modelle in Dynamo dar. Beachten Sie, dass Sie zur abstrakten Kategorie der "Helfer" gehören. Wenn Sie also einen Vektor erstellen, wird nichts in der Hintergrundvorschau angezeigt.
+Ein [Vektor](2-vectors.md#vector-1) ist eine Darstellung der Größe und Richtung. Sie können sich diesen als einen Pfeil vorstellen, der mit einer bestimmten Geschwindigkeit in eine bestimmte Richtung beschleunigt. Vektoren stellen eine wichtige Komponente für Modelle in Dynamo dar. Beachten Sie, dass Sie zur abstrakten Kategorie der "Helfer" gehören. Wenn Sie also einen Vektor erstellen, wird nichts in der Hintergrundvorschau angezeigt.
 
 ![Vektoren in Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@ Ein [Vektor](5-2\_vectors.md#vector-1) ist eine Darstellung der Größe und Rich
 
 ### Ebene
 
-Eine [Ebene](5-2\_vectors.md#plane-1) ist eine zweidimensionale Fläche. Sie können sich diese als eine flache Oberfläche vorstellen, die sich unendlich ausdehnt. Jede Ebene verfügt über einen Ursprung, eine X-Richtung, eine Y-Richtung und eine Z-Richtung (nach oben).
+Eine [Ebene](2-vectors.md#plane-1) ist eine zweidimensionale Fläche. Sie können sich diese als eine flache Oberfläche vorstellen, die sich unendlich ausdehnt. Jede Ebene verfügt über einen Ursprung, eine X-Richtung, eine Y-Richtung und eine Z-Richtung (nach oben).
 
 ![Ebenen in Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@ Eine [Ebene](5-2\_vectors.md#plane-1) ist eine zweidimensionale Fläche. Sie kö
 
 ### Koordinatensystem
 
-Ein [Koordinatensystem](5-2\_vectors.md#coordinate-system-1) ist ein System zur Bestimmung der Position von Punkten oder anderen geometrischen Elementen. In der folgenden Abbildung wird erläutert, wie die Darstellung in Dynamo aussieht und welche Bedeutung die einzelnen Farben haben.
+Ein [Koordinatensystem](2-vectors.md#coordinate-system-1) ist ein System zur Bestimmung der Position von Punkten oder anderen geometrischen Elementen. In der folgenden Abbildung wird erläutert, wie die Darstellung in Dynamo aussieht und welche Bedeutung die einzelnen Farben haben.
 
 ![Koordinatensystem in Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

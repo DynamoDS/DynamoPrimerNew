@@ -4,7 +4,7 @@ In Dynamo steht eine Reihe von Verfahren zum Entwickeln von Paketen zur Verfügu
 
 ## MapToSurface-Paket
 
-Sie arbeiten mit einem Beispielpaket, das die UV-Zuordnung von Punkten aus einer Oberfläche zu einer anderen zeigt. Sie haben die Grundfunktionen dieses Werkzeugs bereits im Abschnitt [Erstellen eines benutzerdefinierten Blocks](../10\_custom-nodes/10-2\_creating.md) in diesem Leitfaden erstellt. In den folgenden Dateien wird gezeigt, wie Sie die UV-Zuordnung weiterentwickeln und eine Gruppe von Werkzeugen für eine Bibliothek erstellen können, die anschließend veröffentlicht werden kann.
+Sie arbeiten mit einem Beispielpaket, das die UV-Zuordnung von Punkten aus einer Oberfläche zu einer anderen zeigt. Sie haben die Grundfunktionen dieses Werkzeugs bereits im Abschnitt [Erstellen eines benutzerdefinierten Blocks](../6-1\_custom-nodes/2-creating.md) in diesem Leitfaden kennengelernt. In den folgenden Dateien wird gezeigt, wie Sie die UV-Zuordnung weiterentwickeln und eine Gruppe von Werkzeugen für eine Bibliothek erstellen können, die anschließend veröffentlicht werden kann.
 
 In der unten gezeigten Abbildung wird ein Punkt aus einer Oberfläche mithilfe von UV-Koordinaten einer anderen zugeordnet. Dem Paket liegt dasselbe Prinzip zugrunde, es wird jedoch komplexere Geometrie verwendet.
 
@@ -20,7 +20,7 @@ Klicken Sie in Dynamo auf _Pakete > Suchen nach Paket... und s_uchen Sie nach de
 
 Nach der Installation sollten die benutzerdefinierten Blöcke im Abschnitt Add-Ons > Dynamo Primer verfügbar sein.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Nachdem Sie das Paket installiert haben, sehen Sie sich dessen Konfiguration an.
 
@@ -30,7 +30,7 @@ Für das Paket, das Sie hier erstellen, werden fünf benutzerdefinierte Blöcke 
 
 Dieses Paket ist mit fünf benutzerdefinierten Blöcken recht einfach konstruiert. In den nachfolgenden Schritten wird der Aufbau der einzelnen Blöcke kurz erläutert.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Navigieren Sie zum Ordner _extra_, in dem sich alle Dateien des Pakets befinden,
 
 #### **01-PanelingWithPolygons**
 
-Dieses Beispiel zeigt die Unterteilung einer Oberfläche anhand eines Rasters aus Rechtecken mithilfe von _PointsToSurface_. Dieser Vorgang ist Ihnen wahrscheinlich vertraut, da ein ähnlicher Arbeitsablauf im [vorherigen Kapitel](../10\_custom-nodes/10-2\_creating.md) gezeigt wurde.
+Dieses Beispiel zeigt die Unterteilung einer Oberfläche anhand eines Rasters aus Rechtecken mithilfe von _PointsToSurface_. Dieser Vorgang ist Ihnen wahrscheinlich vertraut, da ein ähnlicher Arbeitsablauf im [vorherigen Kapitel](../6-1\_custom-nodes/2-creating.md) gezeigt wurde.
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

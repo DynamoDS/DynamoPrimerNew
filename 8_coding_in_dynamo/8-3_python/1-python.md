@@ -1,6 +1,6 @@
 # Python-Blöcke
 
-Wozu dient die Textprogrammierung in der visuellen Programmierumgebung von Dynamo? [Visuelle Programmierung](../../a\_appendix/visual-programming-and-dynamo.md) bietet viele Vorteile. Sie ermöglicht es, in einer intuitiven visuellen Oberfläche Programme zu entwickeln, ohne eine spezielle Syntax zu erlernen. Visuelle Programme können jedoch recht unübersichtlich werden und enthalten zuweilen nicht genügend Funktionalität. So stehen in Python beispielsweise wesentlich praktischere Methoden zum Schreiben von Bedingungsanweisungen (if/then) und für Schleifen zur Verfügung. Python ist ein leistungsstarkes Werkzeug, das das Funktionsspektrum von Dynamo erweitern und Ihnen die Möglichkeit geben kann, eine große Gruppe von Blöcken durch einige wenige präzise Codezeilen zu ersetzen.
+Wozu dient die Textprogrammierung in der visuellen Programmierumgebung von Dynamo? [Visuelle Programmierung](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) bietet viele Vorteile. Sie ermöglicht es, in einer intuitiven visuellen Oberfläche Programme zu entwickeln, ohne eine spezielle Syntax zu erlernen. Visuelle Programme können jedoch recht unübersichtlich werden und enthalten zuweilen nicht genügend Funktionalität. So stehen in Python beispielsweise wesentlich praktischere Methoden zum Schreiben von Bedingungsanweisungen (if/then) und für Schleifen zur Verfügung. Python ist ein leistungsstarkes Werkzeug, das das Funktionsspektrum von Dynamo erweitern und Ihnen die Möglichkeit geben kann, eine große Gruppe von Blöcken durch einige wenige präzise Codezeilen zu ersetzen.
 
 **Visuelles Programm:**
 
@@ -171,7 +171,7 @@ Da die Körpermodule sowohl verschoben als auch gedreht werden sollen, verwenden
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

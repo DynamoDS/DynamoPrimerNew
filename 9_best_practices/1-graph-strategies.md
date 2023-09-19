@@ -23,7 +23,7 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
 > 2. Eingabengruppe (orange)
 > 3. Skriptgruppe (grün)
 >
-> Informationen zur Verwendung von Gruppen finden Sie unter [Verwalten Ihres Programms](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informationen zur Verwendung von Gruppen finden Sie unter [Verwalten Ihres Programms](https://primer2.dynamobim.org/v/de/9_best_practices/4-managing-your-program).
 
 ### **Effizientere Entwicklung mit Codeblöcken**
 
@@ -37,7 +37,7 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
 > 1. In Codeblock geschriebenes DesignScript
 > 2. Entsprechendes Programm in Blöcken
 >
-> Informationen zur Verwendung von Codeblöcken finden Sie unter [Was ist ein Codeblock](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Informationen zur Verwendung von Codeblöcken finden Sie unter [Was ist ein Codeblock?](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md)
 
 ### **Komprimieren mit Block zu Code**
 
@@ -58,21 +58,21 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
 > 1. Vorhandenes Programm
 > 2. Mithilfe von Block zu Code erstellter Codeblock
 >
-> Informationen zur Verwendung von Block zu Code finden Sie unter [DesignScript-Syntax](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Informationen zur Verwendung von Block zu Code finden Sie unter [DesignScript-Syntax](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Flexibler Zugriff auf Daten mit List@Level**
 
 * List@Level kann es Ihnen erleichtern, **Ihr Diagramm durch Ersetzen der Blöcke List.Map und List.Combine zu vereinfachen**, die viel Platz im Ansichtsbereich beanspruchen können.
 * List@Level bietet ein **schnelleres Verfahren zum Konstruieren von Blocklogik als List.Map/List.Combine**, indem es den Zugriff auf Daten auf einer beliebigen Ebene einer Liste direkt über den Eingabeanschluss eines Blocks ermöglicht.
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Sie können überprüfen, wie viele True-Werte BoundingBox.Contains zurückgibt und in welchen Listen diese enthalten sind, indem Sie List@Level für den list-Eingang von CountTrue aktivieren. List@Level ermöglicht es, die Ebene festzulegen, auf der die Eingabe Daten übernimmt. List@Level ist flexibel und effizient und wird gegenüber anderen Verfahren, die List.Map und List.Combine nutzen, dringend empfohlen.
 >
 > 1. Zählen der True-Werte auf Listenebene 2
 > 2. Zählen der True-Werte auf Listenebene 3
 >
-> Informationen zur Verwendung von List@Level finden Sie unter [Listen von Listen](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Informationen zur Verwendung von List@Level finden Sie unter [Listen von Listen](https://primer2.dynamobim.org/v/de/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
 
 ## Lesbarkeit gewährleisten
 
@@ -84,12 +84,12 @@ Gestalten Sie Ihr Diagramm nicht nur so einfach und effizient wie möglich, sond
 * Wenn andere Benutzer mit Ihrem Diagramm arbeiten sollen, **sorgen Sie vor der Bereitstellung für ein Layout mit einem leicht verständlichen Ablauf aus Blöcken und Drähten**.
 * Um die Ausrichtung zu erleichtern, **verwenden Sie die Funktion Blocklayout bereinigen zur automatischen Ausrichtung** des Diagramms. Durch manuelles Ausrichten erzielen Sie allerdings präzisere Ergebnisse.
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Ungeordnetes Diagramm
 > 2. Ausgerichtetes Diagramm
 >
-> Informationen zur Verwendung der Blockausrichtung finden Sie unter [Verwalten von Programmen](3-4\_best\_practices.md).
+> Informationen zur Verwendung der Blockausrichtung finden Sie unter [Verwalten von Programmen](4-managing-your-program.md).
 
 ### **Aussagekräftige Beschriftung durch Umbenennen**
 
@@ -114,11 +114,11 @@ Gestalten Sie Ihr Diagramm nicht nur so einfach und effizient wie möglich, sond
 > 1. Anmerkung zur Beschreibung des Teils des Programms, der Rohwerte der Verschiebungsstrecken zurückgibt
 > 2. Anmerkung zur Beschreibung des Codes, der diese Werte einer Sinuswelle zuordnet
 >
-> Informationen zum Hinzufügen einer Anmerkung finden Sie unter [Verwalten von Programmen](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informationen zum Hinzufügen einer Anmerkung finden Sie unter [Verwalten von Programmen](https://primer2.dynamobim.org/v/de/9_best_practices/4-managing-your-program).
 
 ## Laufendes Testen
 
-Es ist wichtig, während der Entwicklung des visuellen Skripts zu überprüfen, ob die zurückgegebenen Ergebnisse Ihren Erwartungen entsprechen. Nicht alle Fehler oder Probleme lassen das Programm sofort fehlschlagen, dies gilt insbesondere für Nullwerte, die sich erst viel später im weiteren Verlauf auswirken können. Diese Vorgehensweise wird auch im Zusammenhang mit Textskripts unter [Vorgehensweisen zur Skripterstellung](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html) beschrieben. Das folgende Verfahren hilft Ihnen, sicherzustellen, dass Sie das gewünschte Ergebnis erzielen:
+Es ist wichtig, während der Entwicklung des visuellen Skripts zu überprüfen, ob die zurückgegebenen Ergebnisse Ihren Erwartungen entsprechen. Nicht alle Fehler oder Probleme lassen das Programm sofort fehlschlagen, dies gilt insbesondere für Nullwerte, die sich erst viel später im weiteren Verlauf auswirken können. Diese Vorgehensweise wird auch im Zusammenhang mit Textskripts unter [Vorgehensweisen zur Skripterstellung](2-scripting-strategies.md) beschrieben. Das folgende Verfahren hilft Ihnen, sicherzustellen, dass Sie das gewünschte Ergebnis erzielen:
 
 ### **Überwachen von Daten mit Beobachtungs- und Vorschaublöcken**
 
@@ -131,7 +131,7 @@ Es ist wichtig, während der Entwicklung des visuellen Skripts zu überprüfen, 
 > 1. Die Rohwerte der Verschiebungsstrecken
 > 2. Die durch die Sinusgleichung geleiteten Werte
 >
-> Informationen zur Verwendung der Beobachtungsfunktion finden Sie unter [Bibliothek](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Informationen zur Verwendung der Beobachtungsfunktion finden Sie unter [Bibliothek](../3\_user\_interface/2-library.md).
 
 ## Wiederverwendbarkeit sicherstellen
 
@@ -147,7 +147,7 @@ Ihr Programm wird sehr wahrscheinlich irgendwann auch von anderen Benutzern geö
 * Falls **bestimmte Optionen oder Bedingungen vorhanden sind, die Sie in das Diagramm einbetten möchten**, empfiehlt es sich, Voreinstellungen für den schnellen Zugriff zu verwenden.
 * Mithilfe von Voreinstellungen können Sie darüber hinaus **durch Caching spezifischer Schiebereglerwerte die Komplexität** in Diagrammen mit langen Laufzeiten reduzieren.
 
-> Informationen zur Verwendung von Voreinstellungen finden Sie unter [Verwalten von Daten mit Voreinstellungen](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Informationen zur Verwendung von Voreinstellungen finden Sie unter [Verwalten von Daten mit Voreinstellungen](1-graph-strategies.md#use-presets-to-embed-input-values).
 
 ### **Verwenden von benutzerdefinierten Blöcken als Container für Programme**
 
@@ -162,7 +162,7 @@ Ihr Programm wird sehr wahrscheinlich irgendwann auch von anderen Benutzern geö
 > 1. Bestehendes Programm für Attraktor
 > 2. Benutzerdefinierter Block, in dem dieses Programm, PointGrid, enthalten ist
 >
-> Weitere Informationen zur Verwendung benutzerdefinierter Blöcke finden Sie unter [Einführung zu benutzerdefinierten Blöcken](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Weitere Informationen zur Verwendung benutzerdefinierter Blöcke finden Sie unter [Einführung zu benutzerdefinierten Blöcken](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
 
 ### **Vorlagen erstellen**
 

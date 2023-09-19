@@ -23,7 +23,7 @@ Der Funktionsumfang in Bezug auf Netze von Dynamo kann durch die Installation de
 
 Die Bibliothek enthält auch Werkzeuge zum Ändern und Reparieren von Netzen sowie zum Extrahieren horizontaler Scheiben zur Verwendung in der Fertigung.
 
-Ein Beispiel zur Verwendung dieses Pakets finden Sie in den [Fallstudien zu Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md).
+Ein Beispiel zur Verwendung dieses Pakets finden Sie in den [Fallstudien zu Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes).
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

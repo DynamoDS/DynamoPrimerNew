@@ -10,7 +10,7 @@
 
 ### Willkommen
 
-Sie haben gerade Dynamo Primer geöffnet, die umfassende Einführung in die visuelle Programmierung in Autodesk Dynamo. Bei diesem Primer handelt es sich um ein laufendes Projekt zum Austauschen der Grundlagen der Programmierung. Zu den enthaltenen Themen gehören die Verwendung der  Dynamo-Plattform für rechnerische Geometrie (Computational Geometry), Best Practices für regelbasierte Konstruktionen, interdisziplinäre Programmierungsanwendungen und andere.
+Sie haben gerade Dynamo Primer geöffnet, die umfassende Einführung in die visuelle Programmierung in Autodesk Dynamo. Bei diesem Primer handelt es sich um ein laufendes Projekt zum Austauschen der Grundlagen der Programmierung. Zu den enthaltenen Themen gehören die Verwendung der Dynamo-Plattform für rechnerische Geometrie (Computational Geometry), Best Practices für regelbasierte Konstruktionen, interdisziplinäre Programmierungsanwendungen und andere.
 
 Der Leistungsumfang von Dynamo spiegelt sich in einer breiten Palette von konstruktionsbezogenen Aktivitäten wider. Dynamo bietet eine umfassende Reihe an leicht zugänglichen Möglichkeiten für den ersten Einstieg, die ständig erweitert wird:
 
@@ -41,15 +41,27 @@ Dynamo Primer ist ein Open-Source-Projekt, das von Matt Jezyk und dem Dynamo-Ent
 
 ***
 
-**John Pierson von Parallax Team** wurde damit beauftragt, die Einführung mit den Änderungen an Dynamo 2.0 zu aktualisieren.
+**John Pierson von Parallax Team** wurde damit beauftragt, die Einführung mit den Änderungen an Dynamo 2.0 zu aktualisieren.
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab** wurde mit der Aktualisierung der Einführung beauftragt, um die Revisionen von Dynamo 2.13\. widerzuspiegeln.
+**Matterlab** wurde damit beauftragt, die Einführung um die Revisionen von Dynamo 2.13\. zu ergänzen.
 
 ![](images/matterlab\_final-07.jpg)
+
+***
+
+**Archilizer** wurde damit beauftragt, die Einführung um die Revisionen von Dynamo 2.17\. zu ergänzen.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+**Wood Rodgers** wurde damit beauftragt, die Einführung mit Inhalten für Dynamo for Civil 3D zu aktualisieren.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Danksagungen
 
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### Lizenz
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Lizenziert unter der Apache-Lizenz, Version 2.0 ("Lizenz"); Sie dürfen diese Datei nur in Übereinstimmung mit der Lizenz verwenden. Sie erhalten die Lizenz unter:
 

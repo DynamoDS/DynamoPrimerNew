@@ -4,11 +4,11 @@
 
 ### Was ist ein Volumenkörper?
 
-Wenn wir komplexere Modelle erstellen möchten, die nicht aus einer einzelnen Fläche erstellt werden können, oder wenn wir ein explizites Volumen definieren möchten, müssen wir uns in den Bereich der [Volumenkörper](5-6\_solids.md#solids) (und PolySurfaces) vorwagen. Selbst ein einfacher Würfel ist so komplex, dass er sechs Oberflächen erfordert, eine pro Seite. Volumenkörper ermöglichen den Zugriff auf zwei wichtige Konzepte, den Oberflächen nicht bieten – eine verfeinerte topologische Beschreibung (Flächen, Kanten, Scheitelpunkte) und boolesche Operationen.
+Wenn wir komplexere Modelle erstellen möchten, die nicht aus einer einzelnen Fläche erstellt werden können, oder wenn wir ein explizites Volumen definieren möchten, müssen wir uns in den Bereich der [Volumenkörper](6-solids.md#solids) (und PolySurfaces) vorwagen. Selbst ein einfacher Würfel ist so komplex, dass er sechs Oberflächen erfordert, eine pro Seite. Volumenkörper ermöglichen den Zugriff auf zwei wichtige Konzepte, den Oberflächen nicht bieten – eine verfeinerte topologische Beschreibung (Flächen, Kanten, Scheitelpunkte) und boolesche Operationen.
 
 ### Boolesche Operation zur Erstellung eines stacheligen Kugelvolumens
 
-Sie können [Boolesche Operationen](5-6\_solids.md#boolean-operations) verwenden, um Volumenmodelle zu ändern. Führen Sie mehrere boolesche Operationen aus, um einen Noppenball zu erstellen.
+Sie können [Boolesche Operationen](6-solids.md#boolean-operations) verwenden, um Volumenmodelle zu ändern. Führen Sie mehrere boolesche Operationen aus, um einen Noppenball zu erstellen.
 
 ![](../images/5-2/6/solids-spikyball.jpg)
 
