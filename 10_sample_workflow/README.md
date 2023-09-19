@@ -9,4 +9,4 @@
 * [Параметрическая ваза](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [Точки притяжения](10-1\_getting-started-workflows/2-attractor-points.md)
 
-Кроме того, с помощью [индекса понятий](table-of-summary-for-some-concept-used-in-previous-exercises.md) можно найти понятия, введенные в рабочие процессы.
+Кроме того, с помощью [индекса понятий](10-2\_concept-index.md) можно найти понятия, представленные в рабочих процессах.

@@ -1,10 +1,11 @@
-# Руководство для разработчиков 
+# Руководство для разработчиков
 
 #### Для чего предназначено это руководство? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
 Это руководство поможет вам освоить различные возможности разработки на языке C# для Dynamo — от создания узлов Zero-Touch до сборки расширений.
 
-![Репозиторий Dynamo на Github](images/dynamogithub.jpg)
+![Репозиторий Dynamo на Github](../1-introduction/images/dynamogithub.jpg)
+
 > Репозиторий Dynamo на GitHub
 
 #### Какие дополнительные ресурсы для разработчиков мы предоставляем? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

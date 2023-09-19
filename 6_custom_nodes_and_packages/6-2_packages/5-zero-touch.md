@@ -17,12 +17,12 @@ Zero-Touch позволяет импортировать библиотеки, �
 
 Пакеты Zero-Touch являются хорошим дополнением к пользовательским узлам. В таблице ниже приведены некоторые пакеты, в которых используются библиотеки C#. Дополнительные сведения о пакетах см. в разделе [Пакеты](../../a\_appendix/a-3\_packages.md) приложения.
 
-| **Логотип/изображение**                                                         | **Имя**                                                                    |
-| ---------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](../images/6-2/2/meshToolkitcasestudy01.jpg)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                       | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| **Логотип/изображение**                                                                   | **Имя**                                                                    |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| \![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| \![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](../images/6-2/5/rhynamo.jpg)                                                 | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../images/6-2/5/optimo.jpg)                                                  | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## Практикум. Импорт AForge
 

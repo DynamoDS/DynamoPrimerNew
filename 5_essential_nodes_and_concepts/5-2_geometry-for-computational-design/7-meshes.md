@@ -23,7 +23,7 @@
 
 В библиотеке также содержатся инструменты для изменения сетей, их восстановления или извлечения горизонтальных срезов для использования в производстве.
 
-Ознакомьтесь с [примерами работы с Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) на основе данного пакета.
+Ознакомьтесь с [примерами работы с Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes) на основе данного пакета.
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

@@ -1,4 +1,4 @@
-# Обновление пакетов и библиотек Dynamo для Dynamo 2.x 
+# Обновление пакетов и библиотек Dynamo для Dynamo 2.x
 
 ### Введение <a href="#introduction" id="introduction"></a>
 
@@ -10,7 +10,7 @@ Dynamo 2.0 — это основной выпуск, в котором изме
 
 Разработчикам расширений также потребуется внести некоторые изменения в зависимости от того, в каком объеме они используют API Dynamo Core в своих расширениях.
 
-***
+
 
 ### Общие правила упаковки: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -18,8 +18,6 @@ Dynamo 2.0 — это основной выпуск, в котором изме
 * Не объединяйте и не распространяйте `newtonsoft.json.net` вместе с пакетом, если это возможно. Этот DLL-файл также будет загружен в Dynamo 2.x. Может возникнуть та же проблема, что и выше.
 * Не объединяйте и не распространяйте `CEFSharp` вместе с пакетом, если этого можно избежать. Этот DLL-файл также будет загружен в Dynamo 2.x. Может возникнуть та же проблема, что и выше.
 * В целом, не допускайте совместного использования зависимостей Dynamo или Revit, если требуется управлять версией такой зависимости.
-
-
 
 ### Распространенные проблемы: <a href="#common-issues" id="common-issues"></a>
 
@@ -39,7 +37,6 @@ Dynamo 2.0 — это основной выпуск, в котором изме
 
 * Это может произойти, если по какой-либо причине не удалось выполнить десериализацию. Рекомендуется сериализовать только необходимые свойства. Можно использовать `[JsonIgnore]` со сложными свойствами, которые не нужно загружать или сохранять, чтобы игнорировать их. Это могут быть такие свойства, как `function pointer, delegate, action,` или `event` и т. д. Их не следует сериализовать, так как обычно их невозможно десериализовать, и они могут вызвать ошибку во время выполнения.
 
-
 ### Подробное описание обновления: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### Пользовательские узлы 1.3 - > 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
@@ -52,13 +49,11 @@ Dynamo 2.0 — это основной выпуск, в котором изме
 * Комментарии будут преобразованы в комментарии к блокам, а не к строкам.
 * Короткие имена типов будут заменены полными именами. Например, если при повторной загрузке пользовательского узла тип не был указан, то отобразится `var[]..[]`, так как это тип по умолчанию.
 
-
 ### Узлы Zero Touch 1.3 -> 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * Типы списка и словаря в Dynamo 2.0 разделены, а синтаксис создания списков и словарей изменен. Списки инициализируются с помощью `[]`, а словари — `{}`.\
  Если ранее для маркировки параметров на узлах Zero-Touch использовался атрибут `DefaultArgument`, а синтаксис списка использовался по умолчанию для определенного списка, например `someFunc([DefaultArgument("{0,1,2}")])`, то этот атрибут больше не будет действительным, и для использования нового синтаксиса инициализации списков потребуется изменить фрагмент кода DesignScript.
 * Как указано выше, DLL-файлы Dynamo не распространяются вместе с пакетами (`DynamoCore`, `DynamoServices` и т. д.).
-
 
 ### Узлы NodeModel 1.3 -> 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ Dynamo 2.0 — это основной выпуск, в котором изме
 
 Имена параметров в конструкторе должны, как правило, совпадать с именами свойств JSON, хотя это сопоставление усложняется, если вы переопределяете имена, сериализованные с помощью атрибутов [JsonProperty].\
  [Дополнительные сведения см. в документации по Json.net.](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### Конструкторы JSON <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,7 +88,6 @@ Dynamo 2.0 — это основной выпуск, в котором изме
 
 Примеры можно найти в репозитории DynamoSamples -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) или [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123)
 
-
 #### Общие свойства и сериализация <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
 Ранее разработчик мог сериализовать и десериализовать определенные данные модели в XML-документ с помощью методов `SerializeCore` и `DeserializeCore`. Эти методы по-прежнему существуют в API, но будут исключены из следующей версии Dynamo (пример можно найти [здесь](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)). Теперь при реализации JSON.NET свойства `public` производного класса NodeModel можно сериализовать непосредственно в файл DYN. JSON.Net предоставляет несколько атрибутов для управления сериализацией свойства.
@@ -104,7 +97,6 @@ Dynamo 2.0 — это основной выпуск, в котором изме
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### Конвертеры: <a href="#converters" id="converters"></a>
 
@@ -117,17 +109,15 @@ Dynamo 2.0 — это основной выпуск, в котором изме
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### Игнорирование свойств <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 К свойствам `public`, которые не предназначены для сериализации, необходимо добавить атрибут `[JsonIgnore]`. Если узлы сохраняются в файле DYN, эти данные игнорируются механизмом сериализации и не приводят к непредвиденным последствиям при повторном открытии графика. Пример можно найти [здесь](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) в репозитории Dynamo.
 
-***
+
 
 #### Отмена и повтор <a href="#undoredo" id="undoredo"></a>
 
 Как уже упоминалось выше, методы `SerializeCore` и `DeserializeCore` ранее использовались для сохранения и загрузки узлов в файл XML DYN. Кроме того, они также использовались для сохранения и загрузки состояния узла для команд отмены и повтора, и **по-прежнему применяются в этих целях.** Если требуется реализовать сложную функцию отмены и повтора для узла пользовательского интерфейса nodeModel, необходимо реализовать эти методы и сериализовать их в объект XML-документа, предоставляемый в качестве параметра для этих методов. Применяйте этот способ, только если используете сложные узлы пользовательского интерфейса.
-
 
 #### API портов ввода и вывода <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
@@ -142,7 +132,6 @@ vs
 Примеры преобразованного кода можно найти в файле Dynamo Repo -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) или [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281)
 
 Еще один распространенный вариант использования, на который влияют изменения API версии 2.0, относится к методам, обычно используемым в методе `BuildAst()` для определения поведения узла в зависимости от наличия или отсутствия соединителей портов. Ранее `HasConnectedInput(index)` использовался для проверки состояния подключенного порта. Теперь разработчикам следует использовать свойство `InPorts[0].IsConnected` для проверки состояния подключения порта. Пример такого соединения можно найти в файле [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) в репозитории Dynamo.
-
 
 ### Примеры: <a href="#examples" id="examples"></a>
 

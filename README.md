@@ -1,4 +1,4 @@
-# Об этом руководстве 
+# Об этом руководстве
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Трейлер к Dynamo {% endembed %}
 
@@ -51,6 +51,18 @@ Dynamo Primer — это проект с открытым исходным ко
 
 ![](images/matterlab\_final-07.jpg)
 
+***
+
+Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo 2.17, было выполнено специалистами **Archilizer**.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+Обновление этого руководства в соответствии с изменениями, внесенными в Dynamo for Civil 3D, было выполнено специалистами **Wood Rodgers**.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+
 ### Благодарности
 
 Выражаем особую благодарность Иэну Кио (Ian Keough) за то, что положил начало проекту Dynamo.
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### Лицензия
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Лицензировано Apache License, Version 2.0 («Лицензия»); использовать только в совокупности с Лицензией. Копию Лицензии можно получить по следующему адресу:
 
