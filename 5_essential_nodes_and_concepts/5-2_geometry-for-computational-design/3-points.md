@@ -4,7 +4,7 @@
 
 ### Qu’est-ce qu’un point ?
 
-Un [point](5-3\_points.md#point-as-coordinates) est défini uniquement par une ou plusieurs valeurs, appelées coordonnées. Le nombre de valeurs de coordonnées requises pour définir le point dépend du système de coordonnées ou du contexte dans lequel il se trouve.
+Un [point](3-points.md#deep-dive-into...) est défini uniquement par une ou plusieurs valeurs, appelées coordonnées. Le nombre de valeurs de coordonnées requises pour définir le point dépend du système de coordonnées ou du contexte dans lequel il se trouve.
 
 ### Point 2D et 3D
 

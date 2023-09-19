@@ -1,4 +1,4 @@
-# Mettre à jour vos packages et bibliothèques Dynamo pour Dynamo 2.x 
+# Mise à jour des packages et des bibliothèques Dynamo pour Dynamo 2.x
 
 ### Introduction : <a href="#introduction" id="introduction"></a>
 
@@ -10,7 +10,7 @@ Les nœuds d’interface utilisateur et les nœuds qui dérivent directement de 
 
 Les auteurs d’extensions peuvent également avoir des changements potentiels à faire selon la quantité d’API de Dynamo Core qu’ils utilisent dans leurs extensions.
 
-***
+
 
 ### Règles générales relatives aux packages : <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -18,8 +18,6 @@ Les auteurs d’extensions peuvent également avoir des changements potentiels �
 * évitez d’intégrer et de distribuer des `newtonsoft.json.net` avec votre package si vous pouvez l’éviter. Ce fichier .dll sera également chargé par Dynamo 2.x. Le même problème que ci-dessus peut se produire ;
 * évitez d’intégrer et de distribuer des `CEFSharp` avec votre package si vous pouvez l’éviter. Ce fichier .dll sera également chargé par Dynamo 2.x. Le même problème que ci-dessus peut se produire ;
 * de manière générale, évitez de partager des dépendances avec Dynamo ou Revit si vous avez besoin de contrôler la version de cette dépendance.
-
-
 
 ### Problèmes courants : <a href="#common-issues" id="common-issues"></a>
 
@@ -39,7 +37,6 @@ Cela peut se produire pour les raisons suivantes :
 
 * Cela peut se produire si votre désérialisation a échoué pour une raison quelconque. Il est recommandé de ne sérialiser que les propriétés dont vous avez besoin. Nous pouvons utiliser `[JsonIgnore]` sur les propriétés complexes que vous n’avez pas besoin de charger ou d’enregistrer pour les ignorer. Il s’agit de propriétés telles que `function pointer, delegate, action,` ou `event` etc. Elles ne doivent pas être sérialisées car elles échoueront généralement à la désérialisation et provoqueront une erreur d’exécution.
 
-
 ### Mise à niveau détaillée : <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### Nœuds personnalisés 1.3 - > 2.0<a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
@@ -52,13 +49,11 @@ Problèmes connus :
 * les commentaires seront transformés en commentaires de bloc au lieu de commentaires de ligne ;
 * les noms de type abrégés seront remplacés par des noms complets. Par exemple, si vous n’avez pas spécifié de type lorsque vous chargez à nouveau le nœud personnalisé, `var[]..[]` s’affiche, car il s’agit du type par défaut.
 
-
 ### Nœuds Zero-Touch 1.3 -> 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * Dans Dynamo 2.0, les types Liste et Dictionnaire ont été divisés et la syntaxe pour créer des listes et des dictionnaires a été modifiée. Les listes sont initialisées à l’aide de `[]` tandis que les dictionnaires utilisent `{}`.\
  Si vous utilisiez auparavant l’attribut `DefaultArgument` pour marquer les paramètres de vos nœuds Zero-Touch et utilisiez la syntaxe de liste par défaut pour une liste spécifique telle que `someFunc([DefaultArgument("{0,1,2}")])`, ceci ne sera plus valable et vous devrez modifier l’extrait de code DesignScript pour utiliser la nouvelle syntaxe d’initialisation pour les listes.
 * Comme indiqué ci-dessus, ne distribuez pas de fichiers .dll Dynamo avec vos packages. (`DynamoCore`, `DynamoServices`, etc.).
-
 
 ### Nœuds de modèle de nœud 1.3 -> 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ Les nœuds de modèle de nœud nécessitent le plus de travail pour passer à Dy
 
 Les noms des paramètres du constructeur doivent généralement correspondre aux noms des propriétés JSON, bien que ce mappage soit plus compliquée si vous remplacez les noms sérialisés à l’aide d’attributs [JsonProperty].\
  [Pour plus d’informations, reportez-vous à la documentation de Json.net.](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### Constructeurs JSON <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,7 +88,6 @@ C’est la principale différence entre le constructeur JSON et les constructeur
 
 Des exemples sont disponibles dans le dépôt DynamoSamples -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) ou [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123).
 
-
 #### Propriétés publiques et sérialisation <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
 Auparavant, un développeur pouvait sérialiser et désérialiser des données de modèle spécifiques dans le document XML à l’aide des méthodes `SerializeCore` et `DeserializeCore`. Ces méthodes existent toujours dans l’API, mais seront abandonnées dans une version ultérieure de Dynamo (un exemple est disponible [ici](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)). Avec l’implémentation JSON.NET, les propriétés `public` de la classe dérivée NodeModel peuvent être sérialisées directement dans le fichier .dyn. JSON.Net fournit plusieurs attributs pour contrôler la façon dont la propriété est sérialisée.
@@ -104,7 +97,6 @@ Cet exemple qui spécifie un `PropertyName` se trouve [ici](https://github.com/D
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### Convertisseurs : <a href="#converters" id="converters"></a>
 
@@ -117,17 +109,15 @@ Un exemple qui spécifie une méthode de sérialisation pour convertir la propri
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### Ignorer les propriétés <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 Les propriétés `public` qui ne sont pas destinées à la sérialisation doivent être accompagnées de l’attribut `[JsonIgnore]`. Lorsque les nœuds sont enregistrés dans le fichier .dyn, cela garantit que ces données sont ignorées par le mécanisme de sérialisation et qu’elles n’auront pas de conséquences inattendues lorsque le graphique sera ouvert à nouveau. Vous pouvez en trouver un exemple [ici](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45), dans le dépôt Dynamo.
 
-***
+
 
 #### Annuler/Rétablir<a href="#undoredo" id="undoredo"></a>
 
 Comme indiqué ci-dessus, les méthodes `SerializeCore` et `DeserializeCore` étaient utilisées dans le passé pour enregistrer et charger des nœuds dans le fichier xml .dyn. En outre, elles étaient également utilisées pour enregistrer et charger l’état des nœuds pour annuler/rétabliret le **sont toujours !** Si vous souhaitez mettre en œuvre une fonctionnalité complexe Annuler/Rétablir pour votre nœud de l’interface utilisateur nodeModel, vous devrez mettre en œuvre ces méthodes et sérialiser dans l’objet document XML fourni en tant que paramètre de ces méthodes. Il s’agit d’un cas d’utilisation rare, sauf pour les nœuds complexes de l’interface utilisateur.
-
 
 #### API des ports d’entrée et de sortie <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
@@ -142,7 +132,6 @@ comparé à
 Des exemples de code converti sont disponibles dans le dépôt Dynamo -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) ou [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281)
 
 L’autre cas d’utilisation courant affecté par les modifications de l’API 2.0 est lié aux méthodes couramment utilisées dans la méthode `BuildAst()` pour déterminer le comportement du nœud en fonction de la présence ou de l’absence de connecteurs de port. Auparavant, `HasConnectedInput(index)` était utilisé pour valider un état de port connecté. Les développeurs doivent maintenant utiliser la propriété `InPorts[0].IsConnected` pour vérifier l’état de la connexion au port. Un exemple de ceci peut être trouvé dans [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) dans le dépôt Dynamo.
-
 
 ### Exemples : <a href="#examples" id="examples"></a>
 

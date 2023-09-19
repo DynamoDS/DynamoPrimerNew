@@ -1,6 +1,6 @@
 # Nœuds Python
 
-Pourquoi utiliser la programmation textuelle dans l’environnement de programmation visuelle de Dynamo ? La [programmation visuelle](../../a\_appendix/visual-programming-and-dynamo.md) présente de nombreux avantages. Elle vous permet de créer des programmes sans avoir à apprendre la syntaxe spéciale dans une interface visuelle intuitive. Toutefois, un programme visuel peut être encombré et peut parfois ne pas fonctionner correctement. Par exemple, Python propose des méthodes beaucoup plus efficaces pour écrire des instructions conditionnelles (if/then) et des boucles. Python est un outil puissant qui permet d’étendre les capacités de Dynamo et de remplacer de nombreux nœuds par quelques lignes de code concises.
+Pourquoi utiliser la programmation textuelle dans l’environnement de programmation visuelle de Dynamo ? La [programmation visuelle](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) présente de nombreux avantages. Elle vous permet de créer des programmes sans avoir à apprendre la syntaxe spéciale dans une interface visuelle intuitive. Toutefois, un programme visuel peut être encombré et peut parfois ne pas fonctionner correctement. Par exemple, Python propose des méthodes beaucoup plus efficaces pour écrire des instructions conditionnelles (if/then) et des boucles. Python est un outil puissant qui permet d’étendre les capacités de Dynamo et de remplacer de nombreux nœuds par quelques lignes de code concises.
 
 **Programme visuel :**
 
@@ -171,7 +171,7 @@ Puisque vous allez convertir et faire pivoter les modules solides, utilisez l'op
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

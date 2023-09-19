@@ -33,15 +33,15 @@ Si vous souhaitez contribuer à une nouvelle section, à des modifications ou à
 
 ### Le projet Dynamo Primer
 
-Le guide Dynamo est un projet open source, initié par Matt Jezyk et l'équipe de développement Dynamo chez Autodesk.
+Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équipe de développement Dynamo chez Autodesk.
 
-**Mode Lab** a été chargé d'écrire la première édition du guide. Nous remercions l'équipe pour tous ses efforts afin d'établir cette précieuse ressource.
+**Mode Lab** a été chargé d’écrire la première édition du guide. Nous remercions l’équipe pour tous ses efforts afin d’établir cette précieuse ressource.
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-**John Pierson de Parallax Team** a été chargé de mettre à jour le guide pour qu'il contienne les révisions de Dynamo 2.0.
+**John Pierson de Parallax Team** a été chargé de mettre à jour le guide pour qu’il contienne les révisions de Dynamo 2.0.
 
 ![](images/PRLX\_Logo.jpg)
 
@@ -50,6 +50,18 @@ Le guide Dynamo est un projet open source, initié par Matt Jezyk et l'équipe 
 **Matterlab** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.13.
 
 ![](images/matterlab\_final-07.jpg)
+
+***
+
+**Archilizer** a été chargé de mettre à jour le guide pour refléter les révisions de Dynamo 2.17.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+**Wood Rodgers** a été chargé de mettre à jour le guide avec le contenu de Dynamo pour Civil 3D.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Remerciements
 
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### Licence
 
-Copyright 2022 Autodesk.
+Copyright 2023 Autodesk.
 
 Autorisé par la Licence Apache, version 2.0 (la "Licence") ; vous ne devez utiliser ce fichier que conformément à la Licence. Vous pouvez obtenir une copie de la Licence à l'adresse
 

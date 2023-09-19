@@ -23,7 +23,7 @@ L’installation du package [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wi
 
 La bibliothèque fournit également des outils permettant de modifier les maillages, de réparer les maillages ou d’extraire des sections horizontales à utiliser lors de la fabrication.
 
-Consultez les [études de cas Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md) pour découvrir des exemples d’utilisation de ce package.
+Consultez les [études de cas Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes) pour découvrir des exemples d’utilisation de ce package.
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

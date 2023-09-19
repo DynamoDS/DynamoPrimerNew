@@ -4,11 +4,11 @@
 
 ### Qu’est-ce qu’un solide ?
 
-Si vous voulez construire des modèles plus complexes qui ne peuvent pas être créés à partir d’une seule surface ou si vous voulez définir un volume explicite, vous devez maintenant vous aventurer dans le domaine des [solides](5-6\_solids.md#solids) (et des polysurfaces). Même un cube simple est assez complexe pour avoir besoin de six surfaces, une par face. Les solides donnent accès à deux concepts clés qui n'existent pas dans les surfaces : une description topologique plus affinée (faces, arêtes, sommets) et les opérations booléennes.
+Si vous voulez construire des modèles plus complexes qui ne peuvent pas être créés à partir d’une seule surface ou si vous voulez définir un volume explicite, vous devez maintenant vous aventurer dans le domaine des [solides](6-solids.md#solids) (et des polysurfaces). Même un cube simple est assez complexe pour avoir besoin de six surfaces, une par face. Les solides donnent accès à deux concepts clés qui n'existent pas dans les surfaces : une description topologique plus affinée (faces, arêtes, sommets) et les opérations booléennes.
 
 ### Opération booléenne pour créer un solide de balle hérisson
 
-Vous pouvez utiliser des [opérations booléennes](5-6\_solids.md#boolean-operations) pour modifier des solides. Utilisez quelques opérations booléennes pour créer une balle hérisson.
+Vous pouvez utiliser des [opérations booléennes](6-solids.md#boolean-operations) pour modifier des solides. Utilisez quelques opérations booléennes pour créer une balle hérisson.
 
 ![](../images/5-2/6/solids-spikyball.jpg)
 

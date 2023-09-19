@@ -96,7 +96,7 @@ La commande Chop divise les listes en fonction d'une longueur de liste donnée. 
 
 La commande **List.Map/Combine** applique une fonction définie à une liste d’entrées, mais à un niveau plus bas dans la hiérarchie. Les combinaisons correspondent aux mappages, à l’exception près que les combinaisons peuvent avoir plusieurs entrées correspondant à l’entrée d’une fonction donnée.
 
-_Remarque : cet exercice a été créé avec une version précédente de Dynamo. La plupart des fonctionnalités_ **List.Map** _ont été résolues par l’ajout de la fonctionnalité_ **List@Level** _. Pour plus d’informations, reportez-vous à la rubrique_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ci-dessous._
+_Remarque : cet exercice a été créé avec une version précédente de Dynamo. La plupart des fonctionnalités_ **List.Map** _ont été résolues par l’ajout de la fonctionnalité_ **List@Level** _. Pour plus d’informations, reportez-vous à la rubrique_ [_List@Level_](3-lists-of-lists.md#lists-of-lists) _ci-dessous._
 
 En guise d’introduction, examinons le nœud **List.Count** d’une section précédente.
 

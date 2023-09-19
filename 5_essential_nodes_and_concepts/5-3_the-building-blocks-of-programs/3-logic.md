@@ -10,11 +10,11 @@ Les variables numériques peuvent stocker un intervalle entier de nombres diffé
 
 L’instruction « If » est un concept clé de la programmation : « If » cet _élément_ a la valeur True, voici le _résultat_, sinon _autre chose_ se produit. L’action résultant de l’instruction est déterminée par une valeur booléenne. Il existe plusieurs méthodes pour définir une instruction "If" dans Dynamo :
 
-| Icône                                         | Nom (Syntaxe)             | Entrées            | Sorties |
-| -------------------------------------------- | ------------------------- | ----------------- | ------- |
-| ![](../images/5-1/If.jpg)                    | If (**If**)               | test, true, false | résultat  |
-| ![](../images/5-1/Formula.jpg)               | Formula (**IF(x,y,z)**)   | x, y, z           | résultat  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1).jpg>) | Code Block (**(x?y:z);**) | x ? y, z           | résultat  |
+| Icône                                             | Nom (Syntaxe)             | Entrées            | Sorties |
+| ------------------------------------------------ | ------------------------- | ----------------- | ------- |
+| ![](../images/5-1/If.jpg)                        | If (**If**)               | test, true, false | résultat  |
+| ![](../images/5-1/Formula.jpg)                   | Formula (**IF(x,y,z)**)   | x, y, z           | résultat  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x ? y, z           | résultat  |
 
 Voici un bref exemple de chacun de ces trois nœuds en action à l’aide de l’instruction conditionnelle « If ».
 

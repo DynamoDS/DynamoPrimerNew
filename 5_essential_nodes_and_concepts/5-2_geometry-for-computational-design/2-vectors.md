@@ -4,7 +4,7 @@
 
 ### Vecteur
 
-Un [vecteur](5-2\_vectors.md#vector-1) est une représentation de magnitude et de direction. Imaginez-vous une flèche accélérant vers une direction spécifique à une vitesse donnée. C’est un composant clé des modèles dans Dynamo. Dans la mesure où ils se trouvent dans la catégorie Abstract des « assistants », lorsque vous créez un vecteur, vous ne verrez rien dans l’aperçu en arrière-plan.
+Un [vecteur](2-vectors.md#vector-1) est une représentation de magnitude et de direction. Imaginez-vous une flèche accélérant vers une direction spécifique à une vitesse donnée. C’est un composant clé des modèles dans Dynamo. Dans la mesure où ils se trouvent dans la catégorie Abstract des « assistants », lorsque vous créez un vecteur, vous ne verrez rien dans l’aperçu en arrière-plan.
 
 ![Vecteurs dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@ Un [vecteur](5-2\_vectors.md#vector-1) est une représentation de magnitude et d
 
 ### Plan
 
-Un [plan](5-2\_vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vous une surface plane qui s’étend indéfiniment. Chaque plan possède une origine, une direction X, une direction Y et une direction Z (vers le haut).
+Un [plan](2-vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vous une surface plane qui s’étend indéfiniment. Chaque plan possède une origine, une direction X, une direction Y et une direction Z (vers le haut).
 
 ![Plans dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@ Un [plan](5-2\_vectors.md#plane-1) est une surface bidimensionnelle. Imaginez-vo
 
 ### Système de coordonnées
 
-Le [système de coordonnées](5-2\_vectors.md#coordinate-system-1) est un système permettant de déterminer l’emplacement des points ou d’autres éléments géométriques. L’image ci-dessous explique à quoi il ressemble dans Dynamo et à quoi correspond chaque couleur.
+Le [système de coordonnées](2-vectors.md#coordinate-system-1) est un système permettant de déterminer l’emplacement des points ou d’autres éléments géométriques. L’image ci-dessous explique à quoi il ressemble dans Dynamo et à quoi correspond chaque couleur.
 
 ![Système de coordonnées dans Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

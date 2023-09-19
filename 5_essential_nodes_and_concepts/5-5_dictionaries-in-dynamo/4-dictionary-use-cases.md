@@ -30,7 +30,7 @@ Recréez maintenant cette idée à l'aide de dictionnaires. Vous devez d’abord
 > 1. Choisissez la catégorie Revit avec laquelle vous voulez travailler (dans le cas présent, vous travaillez avec des pièces).
 > 2. Vous indiquez à Dynamo de collecter tous ces éléments.
 
-Ensuite, vous devez décider des clés que vous allez utiliser pour rechercher ces données. (Pour plus d’informations sur les clés, consultez la section [Qu’est-ce qu’un dictionnaire ?](9-1\_what-is-a-dictionary.md)).
+Ensuite, vous devez décider des clés que vous allez utiliser pour rechercher ces données. (Pour plus d’informations sur les clés, consultez la section [Qu’est-ce qu’un dictionnaire ?](1-what-is-a-dictionary.md)).
 
 ![](../images/5-5/4/dictionary-exerciseI-02.jpg)
 

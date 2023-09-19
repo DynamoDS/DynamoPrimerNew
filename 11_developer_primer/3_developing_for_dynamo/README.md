@@ -1,4 +1,4 @@
-# Développer pour Dynamo 
+# Développer pour Dynamo
 
 Quel que soit le niveau d’expérience, la plateforme Dynamo est conçue pour que tous les utilisateurs soient des contributeurs. Il existe plusieurs options de développement qui ciblent des capacités et des niveaux de compétence différents, chacune avec ses forces et ses faiblesses selon l’objectif. Nous présentons ci-dessous les différentes options et comment les choisir.
 
@@ -18,7 +18,7 @@ Ces nœuds permettent le plus haut degré de personnalisation. De nombreux packa
 * Nœuds dérivés de NodeModel
 * Extensions
 
-> Le guide contient des instructions sur l’[importation de bibliothèques Zero-Touch](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> Le guide contient des instructions sur l’[importation de bibliothèques Zero-Touch](https://primer2.dynamobim.org/v/fr/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 Visual Studio est utilisé comme environnement de développement pour les nœuds Zero Touch et NodeModel dans les explications ci-dessous.
 
@@ -28,17 +28,17 @@ Visual Studio est utilisé comme environnement de développement pour les nœud
 
 #### Dans Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Bien que ces processus existent dans l’espace de travail de programmation visuelle et soient relativement simples, ils constituent tous des options viables pour personnaliser Dynamo. Le guide couvre ces aspects de manière détaillée et fournit des conseils et des pratiques recommandées en matière d’utilisation de scripts dans le chapitre [Stratégies d’utilisation de scripts](http://dynamoprimer.com/en/12\_Best-Practice/12-1\_Scripting-Strategies.html).
+Bien que ces processus existent dans l’espace de travail de programmation visuelle et soient relativement simples, ils constituent tous des options viables pour personnaliser Dynamo. Le guide couvre ces aspects de manière détaillée et fournit des conseils et des meilleures pratiques en matière d’utilisation de scripts dans le chapitre [Stratégies d’utilisation de scripts](../../9\_best\_practices/2-scripting-strategies.md).
 
 *   Les blocs de code exposent DesignScript dans l’environnement de programmation visuel, ce qui permet des flux de travail de nœud et de script de texte flexibles. Une fonction dans un bloc de code peut être appelée par n’importe quel élément de l’espace de travail.
 
-    > Téléchargez un exemple de bloc de code (cliquez avec le bouton droit de la souris et choisissez Enregistrer sous) ou découvrez une présentation détaillée dans le [guide](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html).
+    > Téléchargez un exemple de bloc de code (cliquez avec le bouton droit de la souris et choisissez Enregistrer sous) ou découvrez une présentation détaillée dans le [guide](https://primer2.dynamobim.org/v/fr/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block).
 *   Les nœuds personnalisés sont des conteneurs destinés à des ensembles de nœuds ou même à des graphiques entiers. Ils sont un moyen efficace de collecter les routines fréquemment utilisées et de les partager avec la communauté.
 
-    > Téléchargez un exemple de nœud personnalisé (cliquez avec le bouton droit de la souris et choisissez Enregistrer sous) ou découvrez une présentation détaillée dans le [guide](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html).
+    > Téléchargez un exemple de nœud personnalisé (cliquez avec le bouton droit de la souris et choisissez Enregistrer sous) ou découvrez une présentation détaillée dans le [guide](https://primer2.dynamobim.org/v/fr/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction).
 *   Les nœuds Python sont une interface de script dans l’espace de travail de programmation visuelle, similaire aux blocs de code. Les bibliothèques Autodesk.DesignScript utilisent une notation par points similaire à DesignScript.
 
-    > Téléchargez un exemple de nœud Python (cliquez avec le bouton droit de la souris et choisissez Enregistrer sous) ou découvrez une présentation détaillée dans le [guide](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html).
+    > Téléchargez un exemple de nœud Python (cliquez avec le bouton droit de la souris et choisissez Enregistrer sous) ou découvrez une présentation détaillée dans le [guide](https://primer2.dynamobim.org/v/fr/8_coding_in_dynamo/8-3_python).
 
 Le développement dans l’espace de travail de Dynamo est un outil puissant qui permet d’obtenir un retour immédiat.
 
@@ -70,7 +70,7 @@ Zero Touch fait référence à une méthode pointer-cliquer simple permettant d
 
 Avec cette méthode, vous pouvez :
 
-* importer une bibliothèque qui n’a pas nécessairement été développée pour Dynamo et créer automatiquement une suite de nouveaux nœuds, comme l’[exemple d’A-Forge](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html) dans le guide ;
+* importer une bibliothèque qui n’a pas nécessairement été développée pour Dynamo et créer automatiquement une suite de nouveaux nœuds, comme l’[exemple d’A-Forge](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) dans le guide ;
 * écrire des méthodes C# et les utiliser facilement comme nœuds dans Dynamo ;
 * partager une bibliothèque C# en tant que nœuds avec la communauté Dynamo dans un package.
 

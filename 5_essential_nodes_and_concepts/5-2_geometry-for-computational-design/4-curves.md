@@ -4,7 +4,7 @@
 
 ### Qu’est-ce qu’une courbe ?
 
-Les [courbes ](5-4\_curves.md#curve)sont le premier type de données géométriques abordé qui a un jeu de propriétés descriptives de forme plus familier : courbe ou droite ? Longue ou courte ? N’oubliez pas que les points restent des blocs de construction permettant de définir n’importe quel élément d’une ligne à une spline et tous les types de courbes entre les deux.
+Les [courbes ](4-curves.md#deep-dive-into...)sont le premier type de données géométriques abordé qui a un jeu de propriétés descriptives de forme plus familier : courbe ou droite ? Longue ou courte ? N’oubliez pas que les points restent des blocs de construction permettant de définir n’importe quel élément d’une ligne à une spline et tous les types de courbes entre les deux.
 
 ![Types de courbes](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@ Les [courbes ](5-4\_curves.md#curve)sont le premier type de données géométriq
 
 ### Ligne
 
-La [ligne](5-4\_curves.md#lines) est un ensemble de points. Chaque ligne contient au moins 2 points. L’une des méthodes les plus courantes pour créer une ligne dans Dynamo consiste à utiliser `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg).
+La [ligne](4-curves.md#lines) est un ensemble de points. Chaque ligne contient au moins 2 points. L’une des méthodes les plus courantes pour créer une ligne dans Dynamo consiste à utiliser `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg).
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Courbe NURBS
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) est un modèle utilisé pour représenter les courbes et les surfaces avec précision. Une courbe sinusoïdale dans Dynamo à l’aide de deux méthodes différentes afin de créer des courbes NURBS et de comparer les résultats.
+[NURBS](4-curves.md#nurbs-+-polycurves) est un modèle utilisé pour représenter les courbes et les surfaces avec précision. Une courbe sinusoïdale dans Dynamo à l’aide de deux méthodes différentes afin de créer des courbes NURBS et de comparer les résultats.
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

@@ -23,7 +23,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 > 2. Groupe d'entrées (orange)
 > 3. Groupe de scripts (vert)
 >
-> Pour savoir comment utiliser les groupes, reportez-vous à la rubrique [Gestion de votre programme](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Pour savoir comment utiliser les groupes, reportez-vous à la rubrique [Gestion de votre programme](https://primer2.dynamobim.org/v/fr/9_best_practices/4-managing-your-program).
 
 ### **Développement efficace avec les blocs de code**
 
@@ -37,7 +37,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 > 1. Script de conception écrit en bloc de code
 > 2. Programme équivalent en nœuds
 >
-> Pour savoir comment utiliser le bloc de code, reportez-vous à la rubrique [Définition d’un bloc de code](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Pour savoir comment utiliser le bloc de code, reportez-vous à la rubrique [Définition d’un bloc de code](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
 
 ### **Condenser grâce à Nœud vers code**
 
@@ -58,21 +58,21 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 > 1. Programme existant
 > 2. Bloc de code créé à partir de Nœud vers code
 >
-> Pour savoir comment utiliser la fonctionnalité Nœud vers code, reportez-vous à la rubrique [Syntaxe du script de conception](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Pour savoir comment utiliser la fonctionnalité Nœud vers code, reportez-vous à la rubrique [Syntaxe du script de conception](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Accès aux données en toute flexibilité grâce à List@Level**
 
 * L’utilisation de List@Level vous permet de **réduire la complexité de votre graphique en remplaçant les nœuds List.Map et List.Combine** qui peuvent occuper une grande partie de la zone de dessin
 * List@Level fournit une méthode plus** rapide que List.Map/List.Combine pour établir la logique de nœud** en vous permettant d’accéder aux données à n’importe quel niveau d’une liste, directement à partir du port d’entrée d’un nœud
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Vous pouvez vérifier le nombre de valeurs True renvoyées par BoundingBox.Contains et dans quelles listes ces valeurs sont renvoyées en activant List@Level pour l’entrée « list » de CountTrue. La fonction List@Level permet à l'utilisateur de déterminer à quel niveau l'entrée va extraire des données. La fonction List@Level est flexible, efficace et vivement recommandée par rapport à d'autres méthodes impliquant List.Map et List.Combine.
 >
 > 1. Comptage des valeurs True au niveau de la liste 2
 > 2. Comptage de valeurs True au niveau de la liste 3
 >
-> Pour savoir comment utiliser List@Level, reportez-vous à la rubrique [Listes de listes](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Pour savoir comment utiliser List@Level, reportez-vous à la rubrique [Listes de listes](https://primer2.dynamobim.org/v/fr/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
 
 ## Maintenir la lisibilité
 
@@ -84,12 +84,12 @@ En plus de rendre le graphique aussi simple et efficace que possible, essayez d'
 * Si d’autres utilisateurs vont travailler avec votre graphique, **assurez-vous que la disposition des liaisons de nœud s’enchaîne facilement avant la livraison**
 * Pour vous aider avec la tâche d’alignement, **utilisez la fonction « Arranger l’affichage des nœuds » pour aligner automatiquement** votre graphique, même si elle est moins précise que vous-même
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Graphique non organisé
 > 2. Graphe aligné
 >
-> Pour utiliser l’alignement de nœud, reportez-vous à la rubrique [Gestion de votre programme](3-4\_best\_practices.md).
+> Pour utiliser l’alignement de nœud, reportez-vous à la rubrique [Gestion de votre programme](4-managing-your-program.md).
 
 ### **Étiquetage descriptif par changement de nom**
 
@@ -114,11 +114,11 @@ En plus de rendre le graphique aussi simple et efficace que possible, essayez d'
 > 1. Note décrivant la partie du programme qui renvoie les distances de conversion brutes
 > 2. Note décrivant le code qui mappe ces valeurs avec une onde sinusoïdale
 >
-> Pour savoir comment ajouter une note, reportez-vous à la rubrique [Gestion de votre programme](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Pour savoir comment ajouter une note, reportez-vous à la rubrique [Gestion de votre programme](https://primer2.dynamobim.org/v/fr/9_best_practices/4-managing-your-program).
 
 ## Flexibilité continue
 
-Lors de la création de votre script visuel, il est important de vérifier que le résultat renvoyé est celui attendu. Les erreurs ou les problèmes ne provoqueront pas tous l’échec immédiat du programme, notamment les valeurs nulles qui peuvent avoir une incidence sur un élément en aval. Cette stratégie est également abordée dans le contexte de la création de scripts de texte dans [Stratégies de script](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). La pratique suivante permet de vous assurer que vous obtenez le résultat attendu.
+Lors de la création de votre script visuel, il est important de vérifier que le résultat renvoyé est celui attendu. Les erreurs ou les problèmes ne provoqueront pas tous l’échec immédiat du programme, notamment les valeurs nulles qui peuvent avoir une incidence sur un élément en aval. Cette stratégie est également abordée dans le contexte de la création de scripts de texte dans [Stratégies de script](2-scripting-strategies.md). La pratique suivante permet de vous assurer que vous obtenez le résultat attendu.
 
 ### **Surveiller les données avec les bulles Watch et d’aperçu**
 
@@ -131,7 +131,7 @@ Lors de la création de votre script visuel, il est important de vérifier que l
 > 1. Distances de conversion brutes
 > 2. Valeurs transmises par l’équation sinusoïdale
 >
-> Pour savoir comment utiliser Watch, reportez-vous à la rubrique [Bibliothèque](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Pour savoir comment utiliser Watch, reportez-vous à la rubrique [Bibliothèque](../3\_user\_interface/2-library.md).
 
 ## Garantir la réutilisation
 
@@ -147,7 +147,7 @@ Il est fort probable qu'une autre personne ouvre votre programme à un moment do
 * Si vous souhaitez **intégrer des options ou conditions particulières au graphique**, utilisez les valeurs prédéfinies pour y accéder rapidement
 * Vous pouvez également utiliser les valeurs prédéfinies pour **réduire la complexité en mettant en cache des valeurs de curseur spécifiques** dans un graphique avec des temps d’exécution longs
 
-> Pour savoir comment utiliser les valeurs prédéfinies, reportez-vous à la rubrique [Gestion des données grâce aux valeurs prédéfinies](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Pour savoir comment utiliser les valeurs prédéfinies, reportez-vous à la rubrique [Gestion des données grâce aux valeurs prédéfinies](1-graph-strategies.md#use-presets-to-embed-input-values).
 
 ### **Limiter les programmes grâce aux nœuds personnalisés**
 
@@ -162,7 +162,7 @@ Il est fort probable qu'une autre personne ouvre votre programme à un moment do
 > 1. Programme d'attraction existant
 > 2. Nœud personnalisé qui collecte ce programme, PointGrid
 >
-> Pour savoir comment utiliser les nœuds personnalisés, reportez-vous à la rubrique [Introduction aux nœuds personnalisés](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Pour savoir comment utiliser les nœuds personnalisés, reportez-vous à la rubrique [Introduction aux nœuds personnalisés](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
 
 ### **Créer des gabarits**
 

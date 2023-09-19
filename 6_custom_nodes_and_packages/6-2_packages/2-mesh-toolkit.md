@@ -2,13 +2,13 @@
 
 Le package Dynamo Mesh Toolkit fournit des outils permettant d'importer des maillages à partir de formats de fichiers externes, de créer un maillage à partir d'objets de géométrie Dynamo et de créer manuellement des maillages à partir de leurs sommets et index. La bibliothèque fournit également des outils permettant de modifier et de réparer les maillages, ainsi que d’extraire des sections horizontales à utiliser lors de la fabrication.
 
-![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Le package Dynamo Mesh Toolkit s’inscrit dans le cadre des recherches en cours d’Autodesk sur les maillages, et il continuera à évoluer au cours des prochaines années. Attendez-vous à voir apparaître fréquemment de nouvelles méthodes applicables à ce package, et n'hésitez pas à faire parvenir à l'équipe de Dynamo vos commentaires, bogues et suggestions en vue d'intégrer de nouvelles fonctionnalités.
 
 ### Maillages et solides
 
-L'exercice ci-dessous présente certaines opérations de maillage de base à l'aide de Mesh Toolkit. Dans l'exercice, nous allons entrecouper un maillage avec une série de plans, une opération qui peut s'avérer coûteuse en ressources informatiques si elle est effectuée avec des solides. Contrairement à un solide, un maillage a une « résolution » établie et n’est pas défini sur un plan mathématique, mais topologique. Cette résolution peut être définie sur la base de la tâche en cours. Pour plus d’informations sur les relations entre les maillages et les solides, reportez-vous au chapitre [Géométrie pour la conception informatique](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) de ce guide. Pour en savoir plus sur le package Mesh Toolkit, vous pouvez consulter la page [wiki de Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Nous allons aborder le package dans l’exercice ci-dessous.
+L'exercice ci-dessous présente certaines opérations de maillage de base à l'aide de Mesh Toolkit. Dans l'exercice, nous allons entrecouper un maillage avec une série de plans, une opération qui peut s'avérer coûteuse en ressources informatiques si elle est effectuée avec des solides. Contrairement à un solide, un maillage a une « résolution » établie et n’est pas défini sur un plan mathématique, mais topologique. Cette résolution peut être définie sur la base de la tâche en cours. Pour plus d’informations sur les relations entre les maillages et les solides, reportez-vous au chapitre [Géométrie pour la conception informatique](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) de ce guide. Pour en savoir plus sur le package Mesh Toolkit, vous pouvez consulter la page [wiki de Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Nous allons aborder le package dans l’exercice ci-dessous.
 
 ### Installation de Mesh Toolkit
 

@@ -8,7 +8,7 @@ La bibliothèque contient tous les nœuds chargés, y compris les nœuds de cat�
 * Nœuds personnalisés : stockez vos routines fréquemment utilisées ou votre graphique spécial en tant que nœuds personnalisés. Vous pouvez également partager vos nœuds personnalisés avec la communauté.
 * Nœuds du gestionnaire de package : collection de nœuds personnalisés publiés.
 
-Nous allons parcourir la catégorie [Hiérarchie des nœuds](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories), apprendre comment [effectuer rapidement une recherche dans la bibliothèque](3-3\_dynamo\_libraries.md#quick-search-in-library) et découvrir certains des [nœuds fréquemment utilisés](3-3\_dynamo\_libraries.md#frequently-used-nodes).
+Nous allons parcourir la catégorie [Hiérarchie des nœuds](2-library.md#library-hierarchy-for-categories), apprendre comment [effectuer rapidement une recherche dans la bibliothèque](2-library.md#search-by-hierarchy) et découvrir certains des [nœuds fréquemment utilisés](2-library.md#frequently-used-nodes).
 
 ### Hiérarchie de la bibliothèque pour les catégories
 
@@ -27,13 +27,13 @@ Parcourez la bibliothèque en cliquant sur les menus pour développer chaque cat
 
 Ces menus permettent de classer les nœuds dans la même sous-catégorie selon que les nœuds **créent** des données, exécutent une **action** ou **interrogent** des données.
 
-* ![](<images/3-2/user interface - create.jpg>) **Créer** : créez ou construisez une géométrie à partir de zéro, par exemple, un cercle.
-* ![](<images/3-2/user interface - action.jpg>) **Action** : effectuez une action sur un objet, par exemple, mettre un cercle à l’échelle.
-* ![](<images/3-2/user interface - query.jpg>) **Requête** : permet d’obtenir une propriété d’un objet qui existe déjà, par exemple, obtenir le rayon d’un cercle.
+* \![](<images/3-2/user interface - create.jpg>) **Créer** : créez ou construisez une géométrie à partir de zéro, par exemple, un cercle.
+* \![](<images/3-2/user interface - action.jpg>) **Action** : effectuez une action sur un objet, par exemple, mettre un cercle à l’échelle.
+* \![](<images/3-2/user interface - query.jpg>) **Requête** : permet d’obtenir une propriété d’un objet qui existe déjà, par exemple, obtenir le rayon d’un cercle.
 
 Placez le curseur de la souris sur un nœud pour afficher des informations plus détaillées que son nom et son icône. Ces informations permettent de comprendre ce que fait le nœud, ce qu’il requiert pour les entrées et ce qu’il va donner en sortie.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Description : description du nœud en langage simple
 > 2. Icône : version plus grande de l'icône dans le menu de la bibliothèque
@@ -46,7 +46,7 @@ Si vous avez une idée du nœud que vous souhaitez ajouter à votre espace de tr
 
 Cliquez sur le nœud que vous souhaitez ajouter ou appuyez sur la touche Entrée pour ajouter les nœuds mis en surbrillance au centre de l’espace de travail.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Recherche par hiérarchie
 
@@ -121,11 +121,11 @@ Ces deux nœuds sont disponibles dans la catégorie View de la bibliothèque Cor
 
 Les nœuds Code Block servent à définir un bloc de code avec des lignes séparées par des points-virgules. Cela peut être aussi simple que `X/Y`.
 
-Vous pouvez également utiliser les nœuds Code Block comme raccourci pour définir un nœud Number Input ou appeler la fonctionnalité d’un autre nœud. La syntaxe permettant de procéder à cette opération suit la convention d’attribution de noms du langage textuel Dynamo, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+Vous pouvez également utiliser les nœuds Code Block comme raccourci pour définir un nœud Number Input ou appeler la fonctionnalité d’un autre nœud. La syntaxe permettant de procéder à cette opération suit la convention d’attribution de noms du langage textuel Dynamo, [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 Voici une démonstration simple (avec des instructions) de l’utilisation du nœud Code Block dans votre script.
 
-![](<images/3-2/library - code block demo.gif>)
+\![](<images/3-2/library - code block demo.gif>)
 
 1. Double-cliquez pour créer un nœud Code Block.
 2. `Circle.ByCenterPointRadius(x,y);`Type

@@ -9,4 +9,4 @@ Les exemples de workflows suivants sont disponibles :
 * [Vase paramétrique](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [Points d’attraction](10-1\_getting-started-workflows/2-attractor-points.md)
 
-Vous pouvez aussi identifier des concepts présentés dans des workflows à l’aide de l’[index de concept](table-of-summary-for-some-concept-used-in-previous-exercises.md).
+Vous pouvez aussi identifier des concepts présentés dans des workflows à l’aide de l’[index de concept](10-2\_concept-index.md).

@@ -4,7 +4,7 @@ Dynamo offre de nombreuses méthodes de création de package en vue d'un usage p
 
 ## Package MapToSurface
 
-Vous allez travailler avec un exemple de package qui illustre le mappage UV des points d’une surface à une autre. Vous avez déjà créé les concepts fondamentaux de l’outil dans la section [Création d’un nœud personnalisé](../10\_custom-nodes/10-2\_creating.md) de cette guide. Les fichiers ci-dessous montrent comment vous pouvez utiliser le concept du mappage UV et développer un jeu d’outils pour une bibliothèque publiable.
+Vous allez travailler avec un exemple de package qui illustre le mappage UV des points d’une surface à une autre. Vous avez déjà intégré les concepts de base de l’outil dans la section [Création d’un nœud personnalisé](../6-1\_custom-nodes/2-creating.md) de ce guide. Les fichiers ci-dessous montrent comment vous pouvez utiliser le concept du mappage UV et développer un jeu d’outils pour une bibliothèque publiable.
 
 Dans cette image, un point d'une surface est mappé sur une autre surface à l'aide des coordonnées UV. Le package est fondé sur ce concept, mais avec une géométrie plus complexe.
 
@@ -20,7 +20,7 @@ Dans Dynamo, cliquez sur _Packages>Rechercher un package… et recherchez le pac
 
 Une fois l’installation terminée, les nœuds personnalisés sont disponibles sous la section Compléments > Guide Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Une fois le package installé, voyons comment il est configuré.
 
@@ -30,7 +30,7 @@ Le package créé utilise cinq nœuds personnalisés créés pour référence. V
 
 Il s'agit d'un package simple de cinq nœuds personnalisés. Les étapes ci-dessous présentent brièvement la configuration de chaque nœud personnalisé.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Ensuite, ouvrez le dossier _« extra »_, qui contient tous les fichiers du pa
 
 #### **01-PanelingWithPolygons**
 
-Ce fichier d’exemple montre comment vous pouvez utiliser _« PointsToSurface »_ pour créer des panneaux sur une surface en fonction d’une grille de rectangles. Ce processus vous paraît sûrement familier, car un workflow similaire est présenté dans le [chapitre précédent](../10\_custom-nodes/10-2\_creating.md).
+Ce fichier d’exemple montre comment vous pouvez utiliser _« PointsToSurface »_ pour créer des panneaux sur une surface en fonction d’une grille de rectangles. Ce processus vous paraît sûrement familier, car un workflow similaire est présenté dans le [chapitre précédent](../6-1\_custom-nodes/2-creating.md).
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

@@ -1,10 +1,11 @@
-# Guide du développeur 
+# Guide du développeur
 
 #### Quel est le but de ce guide ? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
 L’objectif de ce guide est de vous aider à parcourir les différentes possibilités de développement en C# pour Dynamo, de la création de nœuds Zero-Touch à la génération d’extensions.
 
-![La source de Dynamo sur Github](images/dynamogithub.jpg)
+![La source de Dynamo sur Github](../1-introduction/images/dynamogithub.jpg)
+
 > La source Dynamo sur GitHub
 
 #### Quelles sont les ressources supplémentaires que nous mettons à la disposition des développeurs ? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

@@ -37,7 +37,7 @@ Dans un projet Revit ou un éditeur de familles, accédez à Compléments et cli
 
 {% hint style="warning" %} *Dynamo s’exécute uniquement dans le fichier dans lequel il a été ouvert. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Lors de l’ouverture de Dynamo dans Revit, une nouvelle catégorie appelée Revit apparaît. Il s’agit d’un ajout complet à l’interface utilisateur qui offre des nœuds spécifiquement conçus pour les workflows Revit.*
 
@@ -47,7 +47,7 @@ Lors de l’ouverture de Dynamo dans Revit, une nouvelle catégorie appelée Rev
 
 ### Gel des nœuds
 
-Revit étant une plate-forme qui fournit une gestion de projet robuste, les opérations paramétriques dans Dynamo peuvent être complexes et lentes à calculer. Si Dynamo prend du temps pour calculer des nœuds, vous pouvez utiliser la fonctionnalité de nœud « geler » pour interrompre l’exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d’informations sur le gel des nœuds, consultez la section [« Gel »](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) du chapitre Solides.
+Revit étant une plate-forme qui fournit une gestion de projet robuste, les opérations paramétriques dans Dynamo peuvent être complexes et lentes à calculer. Si Dynamo prend du temps pour calculer des nœuds, vous pouvez utiliser la fonctionnalité de nœud « geler » pour interrompre l’exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d’informations sur le gel des nœuds, consultez la section « [Gel](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) » du chapitre Solides.
 
 ### Blog Communauté et Dynamo
 
