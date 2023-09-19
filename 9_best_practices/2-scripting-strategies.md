@@ -2,7 +2,7 @@
 
 Lo scripting basato su testo all'interno dell'ambiente di creazione di scripting visivo consente relazioni potenti e visive utilizzando DesignScript, Python e ZeroTouch (C#). L'utente può esporre elementi quali dispositivi di scorrimento di input, comprimere operazioni di grandi dimensioni in DesignScript e accedere a potenti strumenti e librerie tramite Python o C#, tutto nella stessa area di lavoro. Se gestita in modo efficace, la combinazione di queste strategie può conferire un elevato livello di personalizzazione, chiarezza ed efficienza al programma generale. Di seguito è riportato un insieme di linee guida per ottimizzare lo script visivo con lo script testuale.
 
-![](./images/2/cad-chart-textual.jpg)
+![](images/2/cad-chart-textual.jpg)
 
 ### Sapere quando eseguire lo script
 
@@ -23,9 +23,7 @@ Lo scripting di testo può stabilire relazioni di maggiore complessità rispetto
 | **Python**         | Sì         | Sì           | Parzialmente          | Sì                | No            |
 | **ZeroTouch (C#)** | No          | No            | No                 | Sì                | No            |
 
-{% hint style="info" %}
-Fare riferimento a [Riferimento per lo scripting](13-3\_scripting-reference.md) per un elenco di ciò a cui ogni libreria di Dynamo consente di accedere.
-{% endhint %}
+{% hint style="info" %} Consultare [Riferimento per lo scripting](3-scripting-reference.md) per visualizzare un elenco delle funzionalità rese disponibili da ogni libreria di Dynamo. {% endhint %}
 
 ### Pensiero parametrico
 
@@ -39,7 +37,7 @@ Quando si esegue lo scripting in Dynamo, un ambiente inevitabilmente parametrico
   * L'output desiderato
   * Costanti
 
-![](./images/2/thinkparametrically01.jpg)
+![](images/2/thinkparametrically01.jpg)
 
 > Prima di scrivere il codice, sono state definite diverse variabili.
 >
@@ -57,9 +55,9 @@ Quando si esegue lo scripting in Dynamo, un ambiente inevitabilmente parametrico
 * Ridurre al minimo il numero di input esponendo solo i parametri chiave:
   * Se è possibile derivare un gruppo di parametri da più parametri principali, esporre solo i parametri principali come input di script. Ciò consente di migliorare la fruibilità dello script riducendone la complessità dell'interfaccia.
 
-![](./images/2/thinkparametrically02.jpg)
+![](images/2/thinkparametrically02.jpg)
 
-> I "moduli" del codice dell'esempio nel [nodo Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> I "moduli" del codice dell'esempio nel [nodo Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
 >
 > 1. Input.
 > 2. Variabili interne allo script.
@@ -104,7 +102,7 @@ Man mano che il codice diventa sempre più lungo e più complesso, la "grande id
 * Può trattarsi di qualsiasi elemento che deve essere separato visivamente dal codice adiacente (una funzione, una classe, un gruppo di input o le librerie che si stanno importando).
 * Lo sviluppo di codice nei moduli consente di sfruttare la qualità visiva e intuitiva dei nodi, nonché le complesse relazioni che possono essere ottenute solo tramite lo scripting di testo.
 
-![](./images/2/thinkparametrically02.jpg)
+![](images/2/thinkparametrically02.jpg)
 
 > Questi loop chiamano una classe denominata "agente" che verrà sviluppata nell'esercizio.
 >
@@ -119,7 +117,7 @@ Man mano che il codice diventa sempre più lungo e più complesso, la "grande id
 
 In questo esempio vengono create sfere con raggi e colori in base al valore Z dei punti centrali.
 
-![](./images/2/spotcoderesuse.jpg)
+![](images/2/spotcoderesuse.jpg)
 
 > 1. Due funzioni principali "worker": una che crea sfere con raggi e visualizza i colori in base al valore Z del punto centrale.
 > 2. Una funzione principale "manager" che combina le due funzioni worker. Chiamando questa funzione si chiameranno entrambe le funzioni al suo interno.
@@ -184,7 +182,7 @@ Durante lo sviluppo di script di testo in Dynamo, è opportuno assicurarsi costa
   * Fare rapidamente delle prove per assicurarsi che restituisca dati "appropriati".
 * Assegnare come output i dati più recenti che si stanno utilizzando nello script, in modo che il nodo generi sempre dati pertinenti quando lo script viene aggiornato:
 
-![](./images/2/flexcontinuously.jpg)
+![](images/2/flexcontinuously.jpg)
 
 > 1. Verificare che tutti i bordi del solido vengano restituiti come curve per creare un riquadro di delimitazione attorno.
 > 2. Verificare che gli input del conteggio siano stati convertiti correttamente in intervalli.
@@ -234,9 +232,9 @@ for i in range(xCount):
 * Quando un programma deve essere modificato, il codice sviluppato in moduli sarà molto più facile da modificare:
   * È possibile inserire moduli nuovi o sottoposti al debug in un programma esistente con la certezza che il resto del programma non cambierà.
 
-![](./images/2/leveragecode'smodularity.jpg)
+![](images/2/leveragecode'smodularity.jpg)
 
-> Debug del file di esempio del [nodo Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Debug del file di esempio del [nodo Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
 >
 > 1. La geometria di input restituisce un riquadro di delimitazione di dimensioni maggiori, come si può vedere dall'assegnazione di xDist e yDist ad OUT.
 > 2. Le curve dei bordi della geometria di input restituiscono un riquadro di delimitazione appropriato con le distanze corrette per xDist e yDist.
@@ -248,25 +246,23 @@ for i in range(xCount):
 >
 > Un elenco completo di file di esempio è disponibile nell'Appendice.
 
-{% file src="./datasets/9/2/SteepestPath.dyn" %}
-
 Tenendo a mente le procedure ottimali per lo scripting di testo, si scrive uno script di simulazione della pioggia. Sebbene sia stato possibile applicare le procedure ottimali ad un programma visivo disorganizzato in Strategie sui grafici, è molto più difficile farlo con lo scripting di testo. Le relazioni logiche definite nello scripting di testo sono meno visibili e sono quasi impossibile da distinguere in un codice caotico. La potenza dello scripting di testo comporta una responsabilità più grande nell'organizzazione. Si esaminerà ogni passaggio e si applicheranno le pratiche ottimali lungo il percorso.
 
 Lo script è stato applicato ad una superficie deformata dall'attrattore.
 
-![](./images/2/scriptingstrategies-exercise-01.jpg)
+![](images/2/scriptingstrategies-exercise-01.jpg)
 
 La prima cosa da fare è importare le librerie di Dynamo necessarie. Questa prima operazione garantirà l'accesso globale alle funzionalità di Dynamo in Python.
 
 Tutte le librerie che si intende utilizzare devono essere importate qui.
 
-![](./images/2/scriptingstrategies-exercise-02.jpg)
+![](images/2/scriptingstrategies-exercise-02.jpg)
 
 Successivamente dobbiamo definire gli input e l'output dello script, che verranno visualizzati come porte di input sul nodo. Questi input esterni sono la base dello script e la chiave per stabilire un ambiente parametrico.
 
 È necessario definire input corrispondenti alle variabili nello script Python e determinare l'output desiderato:
 
-![](./images/2/scriptingstrategies-exercise-03.jpg)
+![](images/2/scriptingstrategies-exercise-03.jpg)
 
 > 1. La superficie che si intende percorrere.
 > 2. Il numero di agenti che si desidera far camminare.
@@ -279,7 +275,7 @@ Ora, si applicherà la pratica della modularità e verrà creato il corpo dello 
 
 Occorre definire una classe, o cianografia, per un agente con l'intenzione di percorrere una superficie scegliendo di viaggiare nella direzione più ripida possibile ogni volta che fa un passo:
 
-![](./images/2/scriptingstrategies-exercise-04.jpg)
+![](images/2/scriptingstrategies-exercise-04.jpg)
 
 > 1. Nome.
 > 2. Attributi globali condivisi da tutti gli agenti.
@@ -291,7 +287,7 @@ Si inizializzano gli agenti definendo la loro posizione iniziale. Questa è un'o
 
 Occorre creare un'istanza di tutti gli agenti che si desidera osservare percorrere la superficie e definire i loro attributi iniziali:
 
-![](./images/2/scriptingstrategies-exercise-05.jpg)
+![](images/2/scriptingstrategies-exercise-05.jpg)
 
 > 1. Un nuovo elenco di tracce vuoto.
 > 2. Dove inizieranno il loro viaggio sulla superficie.
@@ -299,15 +295,15 @@ Occorre creare un'istanza di tutti gli agenti che si desidera osservare percorre
 
 Aggiornare ogni agente ad ogni passo. Sarà quindi necessario immettere un loop nidificato where per ogni agente e per ogni passo, quindi aggiornare e registrare la loro posizione nell'elenco delle loro tracce. Ad ogni passo, occorre assicurarsi inoltre che l'agente non abbia raggiunto un punto sulla superficie dove non può fare un altro passo che gli consenta la discesa. Se questa condizione è soddisfatta, finirà il viaggio dell'agente.
 
-![](./images/2/scriptingstrategies-exercise-06.jpg)
+![](images/2/scriptingstrategies-exercise-06.jpg)
 
 Ora che i nostri agenti sono stati completamente aggiornati, si può tornare alla geometria che li rappresenta. Dopo che tutti gli agenti hanno raggiunto il loro limite di discesa o il loro numero massimo di passi, verrà creata una PolyCurve attraverso i punti nell'elenco delle loro tracce e verranno generate le tracce di PolyCurve.
 
-![](./images/2/scriptingstrategies-exercise-07.jpg)
+![](images/2/scriptingstrategies-exercise-07.jpg)
 
 Lo script per trovare i percorsi più ripidi.
 
-![](./images/2/scriptingstrategies-exercise-08.jpg)
+![](images/2/scriptingstrategies-exercise-08.jpg)
 
 > 1. Una preimpostazione che simula la pioggia sulla superficie sottostante.
 > 2. Anziché trovare il percorso più ripido, gli agenti possono essere attivati per attraversare la superficie sottostante.

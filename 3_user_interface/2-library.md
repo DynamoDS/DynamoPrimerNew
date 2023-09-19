@@ -8,7 +8,7 @@ La Libreria contiene tutti i nodi caricati, compresi i dieci nodi delle categori
 * Nodi personalizzati: consentono di memorizzare le routine o il grafico speciale utilizzati più di frequente come nodi personalizzati. È inoltre possibile condividere i nodi personalizzati con la community.
 * Nodi di Package Manager: raccolta di nodi personalizzati pubblicati.
 
-Si esamineranno le categorie della [gerarchia dei nodi](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories), si mostreranno come eseguire [ricerche rapide dalla libreria](3-3\_dynamo\_libraries.md#quick-search-in-library) e si apprenderanno delle informazioni su alcuni dei [nodi utilizzati più di frequente](3-3\_dynamo\_libraries.md#frequently-used-nodes) tra di essi.
+Si esamineranno le categorie della [gerarchia dei nodi](2-library.md#library-hierarchy-for-categories), si mostreranno come eseguire [ricerche rapide dalla libreria](2-library.md#search-by-hierarchy) e si apprenderanno delle informazioni su alcuni dei [nodi utilizzati più di frequente](2-library.md#frequently-used-nodes) tra di essi.
 
 ### Gerarchia di librerie per le categorie
 
@@ -27,13 +27,13 @@ Sfogliare la Libreria facendo clic sui menu per espandere ogni categoria e la re
 
 Questi consentono di suddividere ulteriormente i nodi nella stessa sottocategoria in base al fatto se i nodi **creano** dei dati, eseguono un'**Azione** o una **Query** sui dati.
 
-* ![](<images/3-2/user interface - create.jpg>) **Crea**: consente di creare o costruire la geometria da zero. Ad esempio, un cerchio.
-* ![](<images/3-2/user interface - action.jpg>) **Azione**: consente di eseguire un'azione su un oggetto. Ad esempio, la messa in scala di un cerchio.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: consente di ottenere una proprietà di un oggetto già esistente. Ad esempio, ottenere il raggio di un cerchio.
+* \![](<images/3-2/user interface - create.jpg>) **Crea**: consente di creare o costruire la geometria da zero. Ad esempio, un cerchio.
+* \![](<images/3-2/user interface - action.jpg>) **Azione**: consente di eseguire un'azione su un oggetto. Ad esempio, la messa in scala di un cerchio.
+* \![](<images/3-2/user interface - query.jpg>) **Query**: consente di ottenere una proprietà di un oggetto già esistente. Ad esempio, ottenere il raggio di un cerchio.
 
 Posizionare il cursore del mouse su un nodo per visualizzare informazioni più dettagliate oltre al nome e all'icona. Questo offre un modo rapido per comprendere cosa fa il nodo, cosa richiederà per gli input e cosa verrà fornito come output.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Descrizione: descrizione con linguaggio normale del nodo
 > 2. Icona: versione più grande dell'icona nel menu Libreria
@@ -46,7 +46,7 @@ Se si conosce con relativa specificità il nodo che si desidera aggiungere all'a
 
 Scegliere facendo clic sul nodo che si desidera aggiungere o premere INVIO per aggiungere i nodi evidenziati al centro dell'area di lavoro.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Ricerca per gerarchia
 
@@ -121,11 +121,11 @@ Entrambi sono disponibili nella categoria View della libreria Core.
 
 I nodi Code Block possono essere utilizzati per definire un blocco di codice con righe separate da punti e virgola. Può essere semplice come `X/Y`.
 
-È inoltre possibile utilizzare i Code Block come scorciatoia per definire un input numerico o chiamare la funzionalità di un altro nodo. La sintassi per eseguire questa operazione segue la convenzione di denominazione del linguaggio testuale di Dynamo, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+È inoltre possibile utilizzare i Code Block come scorciatoia per definire un input numerico o chiamare la funzionalità di un altro nodo. La sintassi per eseguire questa operazione segue la convenzione di denominazione del linguaggio testuale di Dynamo, [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 Di seguito è disponibile una semplice dimostrazione (con le istruzioni) per l'utilizzo di Code Block nello script.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Fare doppio clic per creare un nodo Code Block.
 2. `Circle.ByCenterPointRadius(x,y);`Tipo

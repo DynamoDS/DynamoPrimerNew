@@ -4,7 +4,7 @@ Dynamo offre diversi modi per creare un pacchetto per l'utilizzo personale o per
 
 ## Pacchetto MapToSurface
 
-Si utilizzerà un pacchetto di esempio che mostra il mappaggio UV di punti da una superficie ad un'altra. Sono già stati illustrati i principi fondamentali dello strumento nella sezione [Creazione di un nodo personalizzato](../10\_custom-nodes/10-2\_creating.md) di questa guida introduttiva. I file riportati di seguito mostrano com'è possibile prendere il concetto di mappaggio UV e sviluppare un set di strumenti per una libreria pubblicabile.
+Si utilizzerà un pacchetto di esempio che mostra il mappaggio UV di punti da una superficie ad un'altra. Sono già stati illustrati i principi fondamentali dello strumento nella sezione [Creazione di un nodo personalizzato](../6-1\_custom-nodes/2-creating.md) di questa guida introduttiva. I file riportati di seguito mostrano com'è possibile prendere il concetto di mappaggio UV e sviluppare un set di strumenti per una libreria pubblicabile.
 
 In questa immagine, si associa un punto da una superficie ad un'altra utilizzando le coordinate UV. Il pacchetto si basa su questo concetto, ma con una geometria più complessa.
 
@@ -20,7 +20,7 @@ In Dynamo, fare clic su \\_Pacchetti>Cerca pacchetto... e c_ercare il pacchetto 
 
 Dopo l'installazione, i nodi personalizzati dovrebbero essere disponibili nella sezione Moduli aggiuntivi > Dynamo Primer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Dopo aver installato il pacchetto, esaminarne in maniera dettagliata la configurazione.
 
@@ -30,7 +30,7 @@ Il pacchetto che si sta creando utilizza cinque nodi personalizzati che sono sta
 
 Si tratta di un pacchetto semplice con cinque nodi personalizzati. Nei passaggi riportati di seguito, verrà descritta brevemente la configurazione di ogni nodo personalizzato.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Quindi, aprire la cartella _extra_, che contiene tutti i file del pacchetto che 
 
 #### **01-PanelingWithPolygons**
 
-Questo file di esempio illustra com'è possibile utilizzare _PointsToSurface_ per eseguire la suddivisione di una superficie in pannelli in base ad una griglia di rettangoli. Questo processo dovrebbe risultare familiare, poiché è stato dimostrato un workflow simile nel [capitolo precedente](../10\_custom-nodes/10-2\_creating.md).
+Questo file di esempio illustra com'è possibile utilizzare _PointsToSurface_ per eseguire la suddivisione di una superficie in pannelli in base ad una griglia di rettangoli. Questo processo dovrebbe risultare familiare, poiché è stato dimostrato un workflow simile nel [capitolo precedente](../6-1\_custom-nodes/2-creating.md).
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

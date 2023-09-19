@@ -35,21 +35,33 @@ Per contribuire ad una nuova sezione, a modifiche o a qualsiasi altro elemento d
 
 Dynamo Primer è un progetto open source avviato da Matt Jezyk e dal team di sviluppo di Dynamo di Autodesk.
 
-**Mode Lab** è stata incaricata di scrivere la prima edizione della guida introduttiva. La ringraziamo per tutti gli sforzi profusi nel creare questa preziosa risorsa.
+**Mode Lab** è stata incaricata di scrivere la prima edizione della Guida introduttiva. La ringraziamo per tutti gli sforzi profusi nel creare questa preziosa risorsa.
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-**John Pierson del team Parallax** è stato incaricato di aggiornare la guida introduttiva in modo che rifletta le revisioni di Dynamo 2.0.
+**John Pierson del team Parallax** è stato incaricato di aggiornare la Guida introduttiva in modo che rifletta le revisioni di Dynamo 2.0.
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab** è stato incaricato di aggiornare la guida introduttiva in modo che rifletta le revisioni di Dynamo 2.13.
+**Matterlab** è stato incaricato di aggiornare la Guida introduttiva in modo che rifletta le revisioni di Dynamo 2.13.
 
 ![](images/matterlab\_final-07.jpg)
+
+***
+
+**Matterlab** è stato incaricato di aggiornare la Guida introduttiva in modo che rifletta le revisioni di Dynamo 2.17.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+**Wood Rodgers** è stato incaricato di aggiornare la Guida introduttiva con il contenuto per Dynamo for Civil 3D.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### Riconoscimenti
 
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### Licenza
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

@@ -4,7 +4,7 @@
 
 ### Cos'è una curva?
 
-Le [curve ](5-4\_curves.md#curve)sono il primo tipo di dati geometrici descritto e hanno un insieme più familiare di proprietà descrittive della forma. Quanto curve o diritte? Quanto lunghe o corte? Ricordarsi che i punti sono ancora i blocchi predefiniti per definire qualsiasi elemento da una linea ad una spline e tutti i tipi di curva compresi tra loro.
+Le [curve ](4-curves.md#deep-dive-into...)sono il primo tipo di dati geometrici descritto e hanno un insieme più familiare di proprietà descrittive della forma. Quanto curve o diritte? Quanto lunghe o corte? Ricordarsi che i punti sono ancora i blocchi predefiniti per definire qualsiasi elemento da una linea ad una spline e tutti i tipi di curva compresi tra loro.
 
 ![Tipi di raccordi](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@ Le [curve ](5-4\_curves.md#curve)sono il primo tipo di dati geometrici descritto
 
 ### Linea
 
-La [linea](5-4\_curves.md#lines) è costituita da un gruppo di punti; ogni linea ha almeno 2 punti. Uno dei metodi più comuni per creare una linea in Dynamo consiste nell'utilizzare `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) per creare una linea in Dynamo.
+La [linea](4-curves.md#lines) è costituita da un gruppo di punti; ogni linea ha almeno 2 punti. Uno dei metodi più comuni per creare una linea in Dynamo consiste nell'utilizzare `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) per creare una linea in Dynamo.
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Curva NURBS
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) è un modello utilizzato per rappresentare in modo accurato curve e superfici. Si procederà con la creazione di una curva seno in Dynamo utilizzando due diversi metodi per creare curve NURBS e confrontare i risultati.
+[NURBS](4-curves.md#nurbs-+-polycurves) è un modello utilizzato per rappresentare in modo accurato curve e superfici. Si procederà con la creazione di una curva seno in Dynamo utilizzando due diversi metodi per creare curve NURBS e confrontare i risultati.
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

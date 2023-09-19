@@ -23,7 +23,7 @@ Le funzionalità della mesh di Dynamo possono essere estese installando il pacch
 
 La libreria fornisce inoltre strumenti per modificare e correggere la mesh o estrarre sezioni orizzontali da utilizzare nella fabbricazione.
 
-Visitare i [case study di Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md), ad esempio sull'utilizzo di questo pacchetto.
+Visitare i [case study di Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes), ad esempio sull'utilizzo di questo pacchetto.
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

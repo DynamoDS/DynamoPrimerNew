@@ -37,7 +37,7 @@ In un progetto o un editor di famiglie di Revit, individuare i moduli aggiuntivi
 
 {% hint style="warning" %} *Dynamo verrà eseguito solo nel file in cui è stato aperto. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Quando si apre Dynamo in Revit, è presente una nuova categoria denominata Revit. Questa è un'aggiunta completa all'interfaccia utente che offre nodi specifici per i workflow di Revit.*
 
@@ -47,7 +47,7 @@ Quando si apre Dynamo in Revit, è presente una nuova categoria denominata Revit
 
 ### Congelamento di nodi
 
-Poiché Revit è una piattaforma che offre una gestione affidabile dei progetti, le operazioni parametriche in Dynamo possono essere complesse e lente da calcolare. Se Dynamo richiede molto tempo per il calcolo dei nodi, è possibile utilizzare la funzionalità del nodo Congela per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) nel capitolo sui solidi.
+Poiché Revit è una piattaforma che offre una gestione affidabile dei progetti, le operazioni parametriche in Dynamo possono essere complesse e lente da calcolare. Se Dynamo richiede molto tempo per il calcolo dei nodi, è possibile utilizzare la funzionalità del nodo Congela per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) nel capitolo sui solidi.
 
 ### Comunità e blog di Dynamo
 

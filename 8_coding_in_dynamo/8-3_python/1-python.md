@@ -1,6 +1,6 @@
 # Nodi Python
 
-Perché è opportuno utilizzare la programmazione testuale nell'ambiente di programmazione visiva di Dynamo? La [programmazione visiva](../../a\_appendix/visual-programming-and-dynamo.md) offre molti vantaggi. Consente di creare programmi senza apprendere una sintassi speciale in un'interfaccia visiva intuitiva. Tuttavia, un programma visivo può diventare disordinato e a volte può risultare carente in termini di funzionalità. Ad esempio, Python offre metodi molto più facili da realizzare per la scrittura di istruzioni condizionali (if/then) e il loop. Python è un potente strumento in grado di ampliare le funzionalità di Dynamo e di consentire di sostituire molti nodi con alcune righe di codice concise.
+Perché è opportuno utilizzare la programmazione testuale nell'ambiente di programmazione visiva di Dynamo? La [programmazione visiva](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) offre molti vantaggi. Consente di creare programmi senza apprendere una sintassi speciale in un'interfaccia visiva intuitiva. Tuttavia, un programma visivo può diventare disordinato e a volte può risultare carente in termini di funzionalità. Ad esempio, Python offre metodi molto più facili da realizzare per la scrittura di istruzioni condizionali (if/then) e il loop. Python è un potente strumento in grado di ampliare le funzionalità di Dynamo e di consentire di sostituire molti nodi con alcune righe di codice concise.
 
 **Programma visivo:**
 
@@ -171,7 +171,7 @@ Poiché si eseguiranno sia la traslazione che la rotazione dei moduli solidi, ut
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

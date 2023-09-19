@@ -4,7 +4,7 @@
 
 ### Vettore
 
-Il [vettore](5-2\_vectors.md#vector-1) è una rappresentazione dell'intensità e della direzione, che è possibile visualizzare come una freccia che accelera verso una specifica direzione ad una determinata velocità. È un componente chiave per i modelli in Dynamo. Notare che, poiché si trovano nella categoria astratta di "helper", quando si crea un vettore, non verrà visualizzato alcun elemento nell'anteprima sfondo.
+Il [vettore](2-vectors.md#vector-1) è una rappresentazione dell'intensità e della direzione, che è possibile visualizzare come una freccia che accelera verso una specifica direzione ad una determinata velocità. È un componente chiave per i modelli in Dynamo. Notare che, poiché si trovano nella categoria astratta di "helper", quando si crea un vettore, non verrà visualizzato alcun elemento nell'anteprima sfondo.
 
 ![Vettori in Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@ Il [vettore](5-2\_vectors.md#vector-1) è una rappresentazione dell'intensità e
 
 ### Piano
 
-Il [piano ](5-2\_vectors.md#plane-1)è una superficie bidimensionale, che può essere visualizzata come superficie piana che si estende all'infinito. Ciascun piano ha un'origine, una direzione X, una direzione Y e una direzione Z (su).
+Il [piano ](2-vectors.md#plane-1)è una superficie bidimensionale, che può essere visualizzata come superficie piana che si estende all'infinito. Ciascun piano ha un'origine, una direzione X, una direzione Y e una direzione Z (su).
 
 ![Piani in Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@ Il [piano ](5-2\_vectors.md#plane-1)è una superficie bidimensionale, che può e
 
 ### Sistema di coordinate
 
-Il [sistema di coordinate](5-2\_vectors.md#coordinate-system-1) è un sistema che consente di determinare la posizione di punti o altri elementi geometrici. Nell'immagine seguente è illustrato l'aspetto che ha in Dynamo e ciò che ogni colore rappresenta.
+Il [sistema di coordinate](2-vectors.md#coordinate-system-1) è un sistema che consente di determinare la posizione di punti o altri elementi geometrici. Nell'immagine seguente è illustrato l'aspetto che ha in Dynamo e ciò che ogni colore rappresenta.
 
 ![Sistema di coordinate in Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

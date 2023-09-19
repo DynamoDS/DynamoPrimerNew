@@ -22,7 +22,7 @@ Il workflow che si imposterà nell'esercizio seguente consente di accedere a tut
 
 ### Più elementi ed elenchi
 
-Nel [primo esercizio](8-4\_creating.md#exercise) riportato di seguito viene illustrato come Dynamo fa riferimento ai dati per la creazione di elementi di Revit. Per generare più componenti adattivi, è necessario definire un elenco di elenchi, dove ogni elenco contiene tre punti che rappresentano ciascun punto del componente adattivo. Questo aspetto è importante da tenere presente quando si gestiscono le strutture di dati in Dynamo.
+Nel [primo esercizio](4-creating.md#exercise-generate-elements-and-lists) riportato di seguito viene illustrato come Dynamo fa riferimento ai dati per la creazione di elementi di Revit. Per generare più componenti adattivi, è necessario definire un elenco di elenchi, dove ogni elenco contiene tre punti che rappresentano ciascun punto del componente adattivo. Questo aspetto è importante da tenere presente quando si gestiscono le strutture di dati in Dynamo.
 
 ![](images/4/creating-multipleelementsandlists01.jpg)
 
@@ -30,7 +30,7 @@ Nel [primo esercizio](8-4\_creating.md#exercise) riportato di seguito viene illu
 
 Un altro metodo per importare la geometria di Dynamo parametrica in Revit è con DirectShape. In breve, l'elemento DirectShape e le classi correlate supportano la possibilità di memorizzare forme geometriche create esternamente in un documento di Revit. La geometria può includere mesh o solidi chiusi. DirectShape è principalmente destinato all'importazione di forme da altri formati di dati, ad esempio IFC o STEP, dove non sono disponibili informazioni sufficienti per creare un elemento di Revit "reale". Analogamente al workflow IFC e STEP, la funzionalità DirectShape funziona correttamente con l'importazione di geometrie create da Dynamo nei progetti di Revit come elementi reali.
 
-Si esaminerà dettagliatamente il [secondo esercizio](8-4\_creating.md#exercise-directshape-elements) per importare la geometria di Dynamo come DirectShape nel progetto di Revit. Utilizzando questo metodo, è possibile assegnare la categoria, il materiale e il nome di una geometria importata, mantenendo comunque un collegamento parametrico al grafico di Dynamo.
+Si esaminerà dettagliatamente il [secondo esercizio](4-creating.md#exercise-directshape-elements) per importare la geometria di Dynamo come DirectShape nel progetto di Revit. Utilizzando questo metodo, è possibile assegnare la categoria, il materiale e il nome di una geometria importata, mantenendo comunque un collegamento parametrico al grafico di Dynamo.
 
 ## Esercizio: Generazione di elementi ed elenchi
 

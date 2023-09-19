@@ -23,7 +23,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 > 2. Gruppo di input (arancione)
 > 3. Gruppo di script (verde)
 >
-> Per informazioni sull'utilizzo dei gruppi, fare riferimento a [Gestione del programma](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Per informazioni sull'utilizzo dei gruppi, fare riferimento a [Gestione del programma](https://primer2.dynamobim.org/v/it/9_best_practices/4-managing-your-program).
 
 ### **Sviluppo efficiente con i blocchi di codice**
 
@@ -37,7 +37,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 > 1. Linguaggio DesignScript scritto nel blocco di codice
 > 2. Programma equivalente nei nodi
 >
-> Per informazioni su come utilizzare il blocco di codice, vedere [Che cos'è un blocco di codice](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Per informazioni su come utilizzare il blocco di codice, vedere [Che cos'è un blocco di codice](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
 
 ### **Compressione con Nodo da aggiungere al codice**
 
@@ -58,21 +58,21 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 > 1. Programma esistente
 > 2. Blocco di codice creato da Nodo da aggiungere al codice
 >
-> Per informazioni su come utilizzare Nodo da aggiungere al codice, vedere [Sintassi di DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Per informazioni su come utilizzare Nodo da aggiungere al codice, vedere [Sintassi di DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Accesso flessibile ai dati con List@Level**
 
 * L'utilizzo di List@Level può aiutare a **ridurre la complessità del grafico sostituendo i nodi List.Map e List.Combine** che potrebbero occupare una notevole quantità di spazio nell'area di disegno.
 * List@Level offre un** modo più rapido rispetto a List.Map/List.Combine per costruire la logica dei nodi**, consentendo di accedere ai dati a qualsiasi livello in un elenco direttamente dalla porta di input di un nodo.
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Si può verificare quanti valori True BoundingBox.Contains restituisce e in quali elenchi attivando List@Level per l'input "list" di CountTrue. List@Level consente all'utente di determinare da quale livello l'input acquisirà i dati. L'utilizzo di List@Level è flessibile, efficiente e altamente incoraggiato rispetto ad altri metodi che coinvolgono List.Map e List.Combine.
 >
 > 1. Conteggio dei valori true al livello di elenco 2
 > 2. Conteggio dei valori true al livello di elenco 3
 >
-> Per informazioni su come utilizzare List@Level, fare riferimento a [Elenchi di elenchi](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Per informazioni su come utilizzare List@Level, fare riferimento a [Elenchi di elenchi](https://primer2.dynamobim.org/v/it/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
 
 ## Mantenimento della leggibilità
 
@@ -84,12 +84,12 @@ Oltre a rendere il grafico il più semplice ed efficiente possibile, è necessar
 * Se altri utenti lavoreranno con il grafico, è necessario **verificare che il layout nodo-collegamento fluisca facilmente prima del rilascio**.
 * Per semplificare l'allineamento, **utilizzare la funzionalità Semplifica layout nodi per allineare automaticamente** il grafico, anche se in modo meno preciso rispetto a quello eseguito manualmente.
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Grafico non organizzato
 > 2. Grafico allineato
 >
-> Per informazioni sull'utilizzo dell'allineamento dei nodi, fare riferimento a [Gestione del programma](3-4\_best\_practices.md).
+> Per informazioni sull'utilizzo dell'allineamento dei nodi, fare riferimento a [Gestione del programma](4-managing-your-program.md).
 
 ### **Assegnazione di etichette descrittive mediante ridenominazione**
 
@@ -114,11 +114,11 @@ Oltre a rendere il grafico il più semplice ed efficiente possibile, è necessar
 > 1. Una nota che descrive la parte del programma che restituisce le distanze di traslazione non elaborate
 > 2. Una nota che descrive il codice che associa tali valori a un'onda sinusoidale
 >
-> Per informazioni su come aggiungere una nota, fare riferimento a [Gestione del programma](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Per informazioni su come aggiungere una nota, fare riferimento a [Gestione del programma](https://primer2.dynamobim.org/v/it/9_best_practices/4-managing-your-program).
 
 ## Flessibilità continua
 
-Durante la compilazione dello script visivo, è importante verificare che ciò che viene restituito sia quello previsto. Non tutti gli errori o i problemi causano immediatamente la mancata esecuzione del programma, in particolare valori nulli o pari a zero che potrebbero influire più a valle. Questa strategia viene inoltre discussa nel contesto dello scripting di testo in [Strategie di scripting](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). La seguente procedura consentirà di assicurarsi di ottenere quanto previsto.
+Durante la compilazione dello script visivo, è importante verificare che ciò che viene restituito sia quello previsto. Non tutti gli errori o i problemi causano immediatamente la mancata esecuzione del programma, in particolare valori nulli o pari a zero che potrebbero influire più a valle. Questa strategia viene inoltre discussa nel contesto dello scripting di testo in [Strategie di scripting](2-scripting-strategies.md). La seguente procedura consentirà di assicurarsi di ottenere quanto previsto.
 
 ### **Monitoraggio dei dati con i simboli circolari di anteprima e controllo**
 
@@ -131,7 +131,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 > 1. Le distanze di traslazione non elaborate
 > 2. I valori passati tramite l'equazione in seno
 >
-> Per informazioni su come utilizzare Watch, fare riferimento a [Libreria](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Per informazioni su come utilizzare Watch, fare riferimento a [Libreria](../3\_user\_interface/2-library.md).
 
 ## Garanzia di riutilizzabilità
 
@@ -147,7 +147,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 * Se nel grafico sono presenti **determinate opzioni o condizioni che si desidera incorporare**, è necessario utilizzare le preimpostazioni per l'accesso rapido.
 * È inoltre possibile utilizzare le preimpostazioni per **ridurre la complessità memorizzando nella cache valori specifici del dispositivo di scorrimento** in un grafico con tempi di esecuzione lunghi.
 
-> Per informazioni sull'uso delle preimpostazioni, fare riferimento a [Gestione dei dati con le preimpostazioni](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Per informazioni sull'uso delle preimpostazioni, fare riferimento a [Gestione dei dati con le preimpostazioni](1-graph-strategies.md#use-presets-to-embed-input-values).
 
 ### **Contenimento di programmi con nodi personalizzati**
 
@@ -162,7 +162,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 > 1. Programma dell'attrattore esistente
 > 2. Nodo personalizzato che raccoglie questo programma, PointGrid
 >
-> Per informazioni sull'utilizzo dei nodi personalizzati, vedere [Introduzione ai nodi personalizzati](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Per informazioni sull'utilizzo dei nodi personalizzati, fare riferimento a [Introduzione ai nodi personalizzati](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
 
 ### **Creazione di modelli**
 

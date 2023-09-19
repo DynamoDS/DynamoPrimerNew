@@ -4,11 +4,11 @@
 
 ### Cos'è un solido?
 
-Se si desidera costruire modelli più complessi che non possono essere creati da una singola superficie o se si vuole definire un volume esplicito, occorre ora entrare nel regno [dei solidi](5-6\_solids.md#solids) (e delle PolySurface). Anche un cubo semplice è sufficientemente complesso da richiedere sei superfici, una per ogni faccia. I solidi introducono due concetti chiave a differenza delle superfici: una descrizione topologica più rifinita (facce, spigoli, vertici) e operazioni booleane.
+Se si desidera costruire modelli più complessi che non possono essere creati da una singola superficie o se si vuole definire un volume esplicito, occorre ora entrare nel regno dei [solidi](6-solids.md#solids) (e delle PolySurface). Anche un cubo semplice è sufficientemente complesso da richiedere sei superfici, una per ogni faccia. I solidi introducono due concetti chiave a differenza delle superfici: una descrizione topologica più rifinita (facce, spigoli, vertici) e operazioni booleane.
 
 ### Operazione booleana per la creazione di un solido palla riccio
 
-Si possono utilizzare le [operazioni booleane](5-6\_solids.md#boolean-operations) per modificare i solidi. Si utilizzeranno alcune operazioni booleane per creare una palla riccio.
+Si possono utilizzare le [operazioni booleane](6-solids.md#boolean-operations) per modificare i solidi. Si utilizzeranno alcune operazioni booleane per creare una palla riccio.
 
 ![](../images/5-2/6/solids-spikyball.jpg)
 

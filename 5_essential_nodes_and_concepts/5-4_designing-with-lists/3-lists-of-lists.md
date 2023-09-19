@@ -96,7 +96,7 @@ Il comando di suddivisione suddivide gli elenchi in base ad una determinata lung
 
 **List.Map/Combine** applica una funzione impostata ad un elenco di input, ma ad un livello inferiore nella gerarchia. Le combinazioni sono identiche a quelle delle mappe, tranne per il fatto che le combinazioni possono avere più input corrispondenti all'input di una funzione specificata.
 
-_Nota Questo esercizio è stato creato con una versione precedente di Dynamo. In gran parte il funzionamento di_ **List.Map** _è stato risolto con l'aggiunta della funzionalità_ **List@Level**_. Per ulteriori informazioni, vedere_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _di seguito._
+_Nota Questo esercizio è stato creato con una versione precedente di Dynamo. In gran parte il funzionamento di_ **List.Map** _è stato risolto con l'aggiunta della funzionalità_ **List@Level**_. Per ulteriori informazioni, vedere_ [_List@Level_](3-lists-of-lists.md#lists-of-lists) _di seguito._
 
 Come introduzione rapida, si esaminerà il nodo **List.Count** di una sezione precedente.
 
@@ -276,7 +276,7 @@ Dopo aver modificato l'elenco, è necessario reinserire l'elenco nella struttura
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Seguendo la stessa logica, utilizzare **List.ReplaceItemAtIndex** per sostituire l'elenco centrale con l'elenco modificato.
-> 2. Notare che i **Code Block** che definiscono l'indice per questi due nodi sono 1 e 2, che corrisponde alla query originale di **Code Block** (_points[1][2]_).
+> 2. Notare che i **Code Block**__ che definiscono l'indice per questi due nodi sono 1 e 2, che corrisponde alla query originale di **Code Block** (_points[1][2]_).
 > 3. Selezionando l'elenco in corrispondenza dell'_index 1_, viene visualizzata la struttura di dati evidenziata nell'anteprima di Dynamo. Il punto spostato è stato unito correttamente nella struttura di dati originale.
 
 Esistono molti modi per creare una superficie da questo gruppo di punti. In questo caso, si creerà una superficie eseguendo il loft delle curve insieme.

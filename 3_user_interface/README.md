@@ -49,7 +49,7 @@ Se si è bloccati, consultare il menu **?**. È possibile accedere ad uno dei si
 La barra degli strumenti di Dynamo contiene una serie di pulsanti per l'accesso rapido ai file, nonché i comandi Annulla [CTRL+Z] e Ripeti [CTRL+Y]. All'estrema destra è presente un altro pulsante che consente di esportare un'istantanea dell'area di lavoro, che è estremamente utile per la documentazione e la condivisione.
 
 * ![](images/userinterface-newfile.jpg) Nuovo: consente di creare un nuovo file .dyn.
-* ![](<images/userinterface-open(1) (1).jpg>) Apri: consente di aprire un file .dyn (area di lavoro) o .dyf (nodo personalizzato) esistente.
+* \![](<images/userinterface-open(1) (1) (1).jpg>) Apri: consente di aprire un file .dyn (area di lavoro) o .dyf (nodo personalizzato) esistente.
 * ![](images/userinterface-save.jpg) Salva/Salva con nome: consente di salvare il file .dyn o .dyf attivo.
 * ![](images/userinterface-undo.jpg) Annulla: consente di annullare l'ultima azione.
 * ![](images/userinterface-redo.jpg) Ripeti: consente di ripetere l'azione successiva.
@@ -74,7 +74,7 @@ Eseguire lo script di Dynamo da qui. Fare clic sull'icona dell'elenco a discesa 
 ![](images/userinterface-executionbar.gif)
 
 * Automatico: consente di eseguire automaticamente lo script. Le modifiche vengono aggiornate in tempo reale.
-* Manuale: lo script viene eseguito solo quando si fa clic sul pulsante Esegui. È utile per quando si apportano modifiche a script complessi e "pesanti".
-* Periodico: questa opzione è disattivata per default. È disponibile solo quando viene utilizzato il nodo DateTime.Now. È possibile impostare l'esecuzione automatica del grafico ad un intervallo specificato.
+* Manuale: lo script viene eseguito solo quando si fa clic sul pulsante Esegui. È utile per quando si apportano modifiche ad uno script complesso e "pesante".
+* Periodico: questa opzione è disattivata per default. È disponibile solo quando viene utilizzato il nodo _DateTime.Now_. È possibile impostare l'esecuzione automatica del grafico ad un intervallo specificato.
 
 ![](images/userinterface-executionbarDateTimenode.jpg)

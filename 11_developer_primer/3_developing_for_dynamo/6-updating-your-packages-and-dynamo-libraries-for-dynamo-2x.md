@@ -1,4 +1,4 @@
-# Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 2.x 
+# Aggiornamento di pacchetti e librerie di Dynamo per Dynamo 2.x
 
 ### Introduzione: <a href="#introduction" id="introduction"></a>
 
@@ -10,16 +10,14 @@ I nodi dell'interfaccia utente e i nodi che derivano direttamente da NodeModel r
 
 Anche gli autori di estensioni potrebbero dover apportare alcune modifiche, a seconda della quantità di API di Dynamo Core che utilizzano nelle loro estensioni.
 
-***
+
 
 ### Regole generali di creazione di pacchetti: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
-* Non aggregare i file .dll di Dynamo o DynamoRevit al pacchetto. Questi file DLL verranno già caricati da Dynamo. Se si aggrega una versione diversa da quella caricata dall'utente _(ad esempio si distribuisce Dynamo Core 1.3 ma l'utente sta eseguendo il pacchetto in Dynamo 2.0)_, si verificheranno inspiegabili bug di runtime. Ciò include file .dll come `DynamoCore.dll`, `DynamoServices.dll`, `DSCodeNodes.dll` e `ProtoGeometry.dll`.
+* Non aggregare i file .dll di Dynamo o DynamoRevit con il pacchetto. Questi file DLL verranno già caricati da Dynamo. Se si aggrega una versione diversa da quella caricata dall'utente _(ad esempio si distribuisce Dynamo Core 1.3 ma l'utente sta eseguendo il pacchetto in Dynamo 2.0)_, si verificheranno inspiegabili bug di runtime. Ciò include file .dll come `DynamoCore.dll`, `DynamoServices.dll`, `DSCodeNodes.dll` e `ProtoGeometry.dll`.
 * Non aggregare e distribuire `newtonsoft.json.net` con il pacchetto se è possibile evitarlo. Questo file .dll verrà caricato anche da Dynamo 2.x. Può verificarsi lo stesso problema descritto in precedenza.
 * Non aggregare e distribuire `CEFSharp` con il pacchetto se è possibile evitarlo. Questo file .dll verrà caricato anche da Dynamo 2.x. Può verificarsi lo stesso problema descritto in precedenza.
 * In generale, evitare di condividere le dipendenze con Dynamo o Revit se è necessario controllare la versione di tale dipendenza.
-
-
 
 ### Problemi comuni: <a href="#common-issues" id="common-issues"></a>
 
@@ -31,14 +29,13 @@ La causa principale comune è che il nodo è stato creato utilizzando un costrut
 
 Ciò può verificarsi perché:
 
-* Semplicemente era presente un valore `[JsonConstructor]` corrispondente o non è stato trasferito il valore `Inports` e `Outports` dal file .dyn JSON.
+* Semplicemente non era presente un valore `[JsonConstructor]` corrispondente o non è stato trasferito il valore `Inports` e `Outports` dal file .dyn JSON.
 * Sono state caricate due versioni di JSON.net nello stesso processo contemporaneamente, causando un errore di runtime del file.net, pertanto l'attributo `[JsonConstructor]` non può essere utilizzato correttamente per contrassegnare il costruttore.
-* Il file DynamoServices.dll con una versione diversa da quella corrente di Dynamo è stato aggregato nel pacchetto e causa la mancata identificazione dell'attributo `[MultiReturn]` in fase di runtime del file .net, pertanto i nodi zero-touch contrassegnati con vari attributi non verranno applicati. È possibile che un nodo restituisca un singolo output del dizionario anziché più porte.
+* Il file DynamoServices.dll con una versione diversa da quella corrente di Dynamo è stato aggregato con il pacchetto e causa la mancata identificazione dell'attributo `[MultiReturn]` in fase di runtime del file .net, pertanto i nodi zero-touch contrassegnati con vari attributi non verranno applicati. Potrebbe verificarsi che un nodo restituisca un singolo output del dizionario anziché più porte.
 
 2) I nodi risultano completamente mancanti durante il caricamento del grafico con alcuni errori nella console.
 
-* Ciò potrebbe verificarsi se la deserializzazione non è riuscita per qualche motivo. È consigliabile serializzare solo le proprietà necessarie. È possibile utilizzare `[JsonIgnore]` su proprietà complesse che non è necessario caricare o salvare per ignorarle. Proprietà come `function pointer, delegate, action,` o `event` e così via non dovrebbero essere serializzate, perché di solito non vengono deserializzate e causano un errore di runtime.
-
+* Ciò potrebbe succedere se la deserializzazione non è riuscita per qualche motivo. È consigliabile serializzare solo le proprietà necessarie. È possibile utilizzare `[JsonIgnore]` in proprietà complesse che non è necessario caricare o salvare per ignorarle. Proprietà come `function pointer, delegate, action,` o `event` e così via non dovrebbero essere serializzate, perché di solito non vengono deserializzate e causano un errore di runtime.
 
 ### Aggiornamento in profondità: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
@@ -52,13 +49,11 @@ Problemi noti:
 * I commenti verranno convertiti in commenti di blocco anziché in commenti di riga.
 * I nomi di tipo breve verranno sostituiti con nomi completi. Ad esempio, se non è stato specificato un tipo quando si carica nuovamente il nodo personalizzato, verrà visualizzato `var[]..[]`, poiché questo è il tipo di default.
 
-
 ### Nodi zero-touch 1.3 -> 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * In Dynamo 2.0 i tipi di elenco e dizionario sono stati divisi e la sintassi per la creazione di elenchi e dizionari è stata modificata. Gli elenchi vengono inizializzati utilizzando `[]`, mentre i dizionari usano `{}`.\
  Se in precedenza si utilizzava l'attributo `DefaultArgument` per contrassegnare i parametri sui nodi zero-touch e si usava la sintassi dell'elenco per impostare come default un elenco specifico come `someFunc([DefaultArgument("{0,1,2}")])`, questo metodo non sarà più valido e sarà necessario modificare il frammento DesignScript per utilizzare la nuova sintassi di inizializzazione per gli elenchi.
 * Come indicato in precedenza, non distribuire i file .dll di Dynamo con i pacchetti. (`DynamoCore`, `DynamoServices` e così via).
-
 
 ### Nodi NodeModel 1.3 -> 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ I nodi NodeModel richiedono la maggior parte del lavoro per eseguire l'aggiornam
 
 I nomi dei parametri nel costruttore dovrebbero in genere corrispondere ai nomi delle proprietà JSON, sebbene questo mappaggio risulti più complicato se si sostituiscono i nomi serializzati con gli attributi [JsonProperty].\
  [Per ulteriori informazioni, vedere la documentazione sui file Json.net.](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### Costruttori di file JSON <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,17 +88,15 @@ Questa è la differenza principale tra il costruttore JSON e i costruttori non J
 
 Sono disponibili esempi nel repository DynamoSamples - > [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) o [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123).
 
-
 #### Proprietà pubbliche e serializzazione <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
-In precedenza, uno sviluppatore poteva serializzare e deserializzare dati specifici del modello nel documento XML mediante i metodi `SerializeCore` e `DeserializeCore`. Questi metodi esistono ancora nell'API, ma verranno dichiarati obsoleti in una release futura di Dynamo (un esempio è disponibile [qui](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)). Con l'implementazione JSON.NET ora è possibile serializzare direttamente le proprietà `public` della classe derivata NodeModel nel file .dyn. JSON.net fornisce più attributi per controllare la modalità di serializzazione della proprietà.
+In precedenza, uno sviluppatore poteva serializzare e deserializzare dati specifici del modello nel documento XML mediante i metodi `SerializeCore` e `DeserializeCore`. Questi metodi esistono ancora nell'API, ma verranno dichiarati obsoleti in una release futura di Dynamo (un esempio è disponibile [qui](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)). Con l'implementazione JSON.NET ora è possibile serializzare direttamente le proprietà `public` della classe derivata da NodeModel nel file .dyn. JSON.net fornisce più attributi per controllare la modalità di serializzazione della proprietà.
 
 Questo esempio che specifica `PropertyName` è disponibile [qui](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/ColorPalette.cs#L38) nel repository di Dynamo.
 
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### Convertitori: <a href="#converters" id="converters"></a>
 
@@ -117,21 +109,19 @@ Un esempio che specifica un metodo di serializzazione per convertire la propriet
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### Esclusione delle proprietà <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 Alle proprietà `public` non destinate alla serializzazione è necessario aggiungere l'attributo `[JsonIgnore]`. Quando i nodi vengono salvati nel file .dyn, questo assicura che i dati vengano ignorati dal meccanismo di serializzazione e non provochino conseguenze impreviste quando il grafico viene aperto di nuovo. Un esempio di questo è disponibile [qui](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) nel repository di Dynamo.
 
-***
+
 
 #### Annullamento/Ripetizione <a href="#undoredo" id="undoredo"></a>
 
 Come indicato sopra, in passato sono stati utilizzati metodi `SerializeCore` e `DeserializeCore` per salvare e caricare i nodi nel file .dyn del documento XML. Inoltre, sono stati utilizzati per salvare e caricare lo stato del nodo per l'annullamento/la ripetizione e **lo sono ancora.** Se si desidera implementare funzionalità complesse di annullamento/ripetizione per il nodo NodeModel dell'interfaccia utente, sarà necessario implementare questi metodi e serializzarli nell'oggetto documento XML fornito come parametro per questi metodi. Questo dovrebbe essere un caso di utilizzo raro, ad eccezione dei nodi complessi dell'interfaccia utente.
 
-
 #### API delle porte di input e output <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
-Un'occorrenza comune nei nodi NodeModel interessati dalle modifiche API 2.0 è la registrazione della porta nel costruttore del nodo. Esaminando gli esempi nel repository di Dynamo o DynamoSamples, si è notato in precedenza l'uso dei metodi `InPortData.Add()` o `OutPortData.Add()`. In precedenza, nell'API di Dynamo, le proprietà pubbliche `InPortData` e `OutPortData` erano contrassegnate come obsolete. Nella versione 2.0 queste proprietà sono state rimosse. Gli sviluppatori dovrebbero ora utilizzare i metodi `InPorts.Add()` e `OutPorts.Add()`. Inoltre, questi due metodi `Add()` hanno firme leggermente diverse:
+Un'occorrenza comune nei nodi NodeModel interessati dalle modifiche all'API 2.0 è la registrazione della porta nel costruttore del nodo. Esaminando gli esempi nel repository di Dynamo o DynamoSamples, si è notato in precedenza l'uso dei metodi `InPortData.Add()` o `OutPortData.Add()`. In precedenza, nell'API di Dynamo, le proprietà pubbliche `InPortData` e `OutPortData` erano contrassegnate come obsolete. Nella versione 2.0 queste proprietà sono state rimosse. Gli sviluppatori dovrebbero ora utilizzare i metodi `InPorts.Add()` e `OutPorts.Add()`. Inoltre, questi due metodi `Add()` hanno firme leggermente diverse:
 
 `InPortData.Add(new PortData("Port Name", "Port Description")); //Old version valid in 1.3 but now deprecated`
 
@@ -141,12 +131,11 @@ e
 
 Esempi di codice convertito sono disponibili qui nel repository di Dynamo -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) o [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281).
 
-L'altro caso di utilizzo comune interessato dalle modifiche dell'API 2.0 è correlato ai metodi comunemente usati nel metodo `BuildAst()` per determinare il funzionamento del nodo in base alla presenza o all'assenza di connettori di porte. In precedenza veniva utilizzato l'attributo `HasConnectedInput(index)` per convalidare lo stato di una porta connessa. Gli sviluppatori dovrebbero ora utilizzare la proprietà `InPorts[0].IsConnected` per verificare lo stato di connessione della porta. Un esempio di questo aspetto è disponibile in [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) nel repository di Dynamo.
-
+L'altro caso di utilizzo comune interessato dalle modifiche all'API 2.0 è correlato ai metodi comunemente usati nel metodo `BuildAst()` per determinare il funzionamento del nodo in base alla presenza o all'assenza di connettori di porte. In precedenza veniva utilizzato l'attributo `HasConnectedInput(index)` per convalidare lo stato di una porta connessa. Gli sviluppatori dovrebbero ora utilizzare la proprietà `InPorts[0].IsConnected` per verificare lo stato di connessione della porta. Un esempio di questo aspetto è disponibile in [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) nel repository di Dynamo.
 
 ### Esempi: <a href="#examples" id="examples"></a>
 
-Illustriamo ora all'aggiornamento di un nodo dell'interfaccia utente 1.3 a Dynamo 2.x.
+Illustriamo ora l'aggiornamento di un nodo dell'interfaccia utente 1.3 a Dynamo 2.x.
 
 ```
 using System;
@@ -203,7 +192,7 @@ namespace CustomNodeModel.CustomNodeModel
 }
 ```
 
-Per caricare e salvare correttamente la classe `nodeModel` nella versione 2.0, è sufficiente aggiungere un attributo JsonConstructor per gestire il caricamento delle porte. Trasferire semplicemente le porte al costruttore di base e questa implementazione è vuota.
+Per caricare e salvare correttamente la classe `nodeModel` nella versione 2.0, è sufficiente aggiungere un attributo JsonConstructor per gestire il caricamento delle porte. Trasferire semplicemente le porte al costruttore di base; questa implementazione è vuota.
 
 ```
 [JsonConstructor]

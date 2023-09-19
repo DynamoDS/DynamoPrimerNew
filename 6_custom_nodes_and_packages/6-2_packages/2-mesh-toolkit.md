@@ -2,13 +2,13 @@
 
 Dynamo Mesh Toolkit fornisce strumenti per importare mesh da formati di file esterni, creare mesh da oggetti della geometria di Dynamo e generare manualmente mesh in base ai vertici e agli indici. La libreria fornisce inoltre strumenti per modificare e correggere mesh o estrarre sezioni orizzontali da utilizzare nella fabbricazione.
 
-![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Dynamo Mesh Toolkit fa parte del costante programma di ricerca sulle mesh di Autodesk e, come tale, continuerà a crescere nei prossimi anni. Si prevede di aggiungere frequentemente nuovi metodi nel toolkit e pertanto gli utenti sono invitati a contattare il team di Dynamo per eventuali commenti, bug e suggerimenti per le nuove funzionalità.
 
 ### Confronto tra mesh e solidi
 
-Nel seguente esercizio sono illustrate alcune operazioni di base sulle mesh mediante Mesh Toolkit. Nell'esercizio, si interseca una mesh con una serie di piani, il che può risultare complesso dal punto di vista computazionale se si utilizzano solidi. A differenza di un solido, una mesh presenta una risoluzione impostata e non è definita matematicamente, ma topologicamente; è possibile definire questa risoluzione in base all'attività in corso. Per ulteriori dettagli sulle relazioni tra mesh e solidi, è possibile fare riferimento al capitolo [Geometria per la progettazione computazionale](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/) di questa guida introduttiva. Per un esame più approfondito di Mesh Toolkit, è possibile fare riferimento alla [pagina Wiki di Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Passare al pacchetto nell'esercizio riportato di seguito.
+Nel seguente esercizio sono illustrate alcune operazioni di base sulle mesh mediante Mesh Toolkit. Nell'esercizio, si interseca una mesh con una serie di piani, il che può risultare complesso dal punto di vista computazionale se si utilizzano solidi. A differenza di un solido, una mesh presenta una risoluzione impostata e non è definita matematicamente, ma topologicamente; è possibile definire questa risoluzione in base all'attività in corso. Per ulteriori dettagli sulle relazioni tra mesh e solidi, è possibile fare riferimento al capitolo [Geometria per la progettazione computazionale](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/) di questa guida introduttiva. Per un esame più approfondito di Mesh Toolkit, è possibile fare riferimento alla [pagina Wiki di Dynamo.](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) Passare al pacchetto nell'esercizio riportato di seguito.
 
 ### Installazione di Mesh Toolkit
 

@@ -30,7 +30,7 @@ Ora procedere ricreando questa idea utilizzando i dizionari. Innanzitutto, è ne
 > 1. Scegliere la categoria di Revit che si desidera utilizzare (in questo caso, i locali).
 > 2. Si indicherà a Dynamo di raccogliere tutti questi elementi.
 
-Successivamente, è necessario decidere quali chiavi utilizzare per la ricerca di questi dati. Per informazioni sulle chiavi, vedere la sezione [Che cos'è un dizionario?](9-1\_what-is-a-dictionary.md).
+Successivamente, è necessario decidere quali chiavi utilizzare per la ricerca di questi dati. Per informazioni sulle chiavi, vedere la sezione [Che cos'è un dizionario?](1-what-is-a-dictionary.md).
 
 ![](../images/5-5/4/dictionary-exerciseI-02.jpg)
 

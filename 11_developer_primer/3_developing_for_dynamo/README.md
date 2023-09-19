@@ -18,7 +18,7 @@ Questi nodi consentono il massimo grado di personalizzazione. Molti pacchetti ve
 * Nodi derivati da NodeModel
 * Estensioni
 
-> La Guida introduttiva contiene una guida sull'[importazione di librerie zero-touch](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> La Guida introduttiva contiene una guida sull'[importazione di librerie zero-touch](https://primer2.dynamobim.org/v/it/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 Per la discussione seguente, Visual Studio viene utilizzato come ambiente di sviluppo per i nodi zero-touch e NodeModel.
 
@@ -28,17 +28,17 @@ Per la discussione seguente, Visual Studio viene utilizzato come ambiente di svi
 
 #### In Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Sebbene questi processi esistano nell'area di lavoro di programmazione visiva e siano relativamente semplici, sono tutte opzioni valide per personalizzare Dynamo. La Guida introduttiva li tratta ampiamente e fornisce suggerimenti e pratiche ottimali di scripting nel capitolo [Strategie di scripting](http://dynamoprimer.com/en/12\_Best-Practice/12-1\_Scripting-Strategies.html).
+Sebbene questi processi esistano nell'area di lavoro di programmazione visiva e siano relativamente semplici, sono tutte opzioni valide per personalizzare Dynamo. La Guida introduttiva li tratta ampiamente e fornisce suggerimenti e pratiche ottimali di scripting nel capitolo [Strategie di scripting](../../9\_best\_practices/2-scripting-strategies.md).
 
 *   I Code Block espongono DesignScript nell'ambiente di programmazione visiva, consentendo workflow flessibili per gli script di testo e i nodi. Una funzione in un Code Block può essere chiamata da qualsiasi elemento dell'area di lavoro.
 
-    > Scaricare un esempio di Code Block (fare clic con il pulsante destro del mouse e salvare con nome) o vedere una simulazione dettagliata nella [Guida introduttiva](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html).
+    > Scaricare un esempio di Code Block (fare clic con il pulsante destro del mouse e salvare con nome) o vedere una simulazione dettagliata nella [Guida introduttiva](https://primer2.dynamobim.org/v/it/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block).
 *   I nodi personalizzati sono contenitori per raccolte di nodi o anche interi grafici. Sono un modo efficace per raccogliere le routine utilizzate più di frequente e condividerle con la comunità.
 
-    > Scaricare un esempio di nodo personalizzato (fare clic con il pulsante destro del mouse e salvare con nome) o vedere una simulazione dettagliata nella [Guida introduttiva](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html).
+    > Scaricare un esempio di nodo personalizzato (fare clic con il pulsante destro del mouse e salvare con nome) o vedere una simulazione dettagliata nella [Guida introduttiva](https://primer2.dynamobim.org/v/it/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction).
 *   I nodi Python sono un'interfaccia di scripting nell'area di lavoro di programmazione visiva, simile ai Code Block. Le librerie Autodesk.DesignScript utilizzano una notazione con punto simile a DesignScript.
 
-    > Scaricare un esempio di nodo Python (fare clic con il pulsante destro del mouse e salvare con nome) o vedere una simulazione dettagliata nella [Guida introduttiva](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html)
+    > Scaricare un esempio di nodo Python (fare clic con il pulsante destro del mouse e salvare con nome) o vedere una simulazione dettagliata nella [Guida introduttiva](https://primer2.dynamobim.org/v/it/8_coding_in_dynamo/8-3_python)
 
 Lo sviluppo nell'area di lavoro di Dynamo è un potente strumento per ottenere un feedback immediato.
 
@@ -64,13 +64,13 @@ Con questi metodi è possibile:
 
 **Nodi zero-touch**
 
-Il termine zero-touch si riferisce a un semplice metodo di puntamento e clic per l'importazione di librerie C#. Dynamo consentirà di leggere i metodi pubblici di un file `.dll` e di convertirli in nodi di Dynamo. È possibile utilizzare il metodo zero-touch per sviluppare nodi e pacchetti personalizzati.
+Il termine zero-touch si riferisce ad un semplice metodo di puntamento e clic per l'importazione di librerie C#. Dynamo consentirà di leggere i metodi pubblici di un file `.dll` e di convertirli in nodi di Dynamo. È possibile utilizzare il metodo zero-touch per sviluppare nodi e pacchetti personalizzati.
 
 ![Nodi zero-touch](images/ZTImport.png)
 
 Con questo metodo è possibile:
 
-* Importare una libreria non necessariamente sviluppata per Dynamo e creare automaticamente una suite di nuovi nodi, come l'[esempio AForge](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html) nella Guida introduttiva.
+* Importare una libreria non necessariamente sviluppata per Dynamo e creare automaticamente una suite di nuovi nodi, come l'[esempio AForge](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) nella Guida introduttiva.
 * Scrivere metodi C# e utilizzare facilmente i metodi come nodi in Dynamo.
 * Condividere una libreria C# come nodi con la comunità Dynamo in un pacchetto.
 
@@ -87,7 +87,7 @@ Con questo metodo è possibile:
 * Personalizzare il collegamento.
 * Caricare elementi in Dynamo come pacchetto.
 
-#### Informazioni sul controllo sulle modifiche dell'API e delle versioni di Dynamo (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+#### Informazioni sul controllo sulle modifiche all'API e delle versioni di Dynamo (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 Poiché Dynamo viene aggiornato regolarmente, potrebbero essere apportate modifiche a parte dell'API utilizzata da un pacchetto. Il monitoraggio di queste modifiche è importante per garantire che i pacchetti esistenti continuino a funzionare correttamente.
 
@@ -95,7 +95,7 @@ Le modifiche all'API vengono registrate nella [pagina Wiki di Dynamo su GitHub](
 
 ![Documento delle modifiche all'API di Dynamo](images/api-changes.jpg)
 
-Un esempio di modifica significativa imminente è la transizione dal formato di file XML a JSON nella versione 2.0. I nodi derivati NodeModel ora richiedono un [costruttore JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), altrimenti non si apriranno in Dynamo 2.0.
+Un esempio di modifica significativa imminente è la transizione dal formato di file XML a JSON nella versione 2.0. I nodi derivati da NodeModel ora richiedono un [costruttore JSON](https://github.com/DynamoDS/Dynamo/wiki/Write-a-Json-Constructor-for-a-NodeModel-Node), altrimenti non si apriranno in Dynamo 2.0.
 
 La documentazione sull'API di Dynamo attualmente copre le funzionalità principali: [http://dynamods.github.io/DynamoAPI](http://dynamods.github.io/DynamoAPI).
 

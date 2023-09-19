@@ -9,4 +9,4 @@ Sono disponibili i seguenti esempi di workflow:
 * [Vaso parametrico](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [Punti attrattore](10-1\_getting-started-workflows/2-attractor-points.md)
 
-È inoltre possibile individuare i concetti introdotti nei workflow utilizzando l'[indice concettuale](table-of-summary-for-some-concept-used-in-previous-exercises.md).
+È inoltre possibile individuare i concetti introdotti nei workflow utilizzando l'[indice concettuale](10-2\_concept-index.md).
