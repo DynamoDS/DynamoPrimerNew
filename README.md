@@ -51,6 +51,18 @@ Společnost **Matterlab** byla pověřena aktualizací příručky Primer tak, a
 
 ![](images/matterlab\_final-07.jpg)
 
+***
+
+Společnost **Archilizer** byla pověřena aktualizací příručky Primer tak, aby odrážela revize aplikace Dynamo 2.17.
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+Společnost **Wood Rodgers** byla pověřena aktualizací příručky Primer obsahem týkajícím se aplikace Dynamo for Civil 3D.
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+
 ### Poděkování
 
 Zvláštní poděkování Ianu Keoughovi za vytvoření a řízení projektu Dynamo.
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### Licence
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Licence Apache, verze 2.0 („Licence“); tento soubor lze použít pouze v souladu s Licencí. Kopii licence lze získat na adrese
 

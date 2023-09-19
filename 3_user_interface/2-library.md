@@ -8,7 +8,7 @@ Knihovna obsahuje všechny načtené uzly, včetně výchozích kategorií uzlů
 * Vlastní uzly: Často používané postupy nebo speciální graf si můžete uložit jako vlastní uzly. Vlastní uzly můžete také sdílet s komunitou.
 * Uzly z nástroje Package Manager: Kolekce publikovaných vlastních uzlů.
 
-V tomto tématu si vysvětlíme [hierarchii kategorií uzlů](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories), ukážeme si, jak lze [rychle vyhledávat v knihovně](3-3\_dynamo\_libraries.md#quick-search-in-library) a seznámíme se s některými [často používanými uzly](3-3\_dynamo\_libraries.md#frequently-used-nodes).
+V tomto tématu si vysvětlíme [hierarchii kategorií uzlů](2-library.md#library-hierarchy-for-categories), ukážeme si, jak lze [rychle vyhledávat v knihovně](2-library.md#search-by-hierarchy) a seznámíme se s některými [často používanými uzly](2-library.md#frequently-used-nodes).
 
 ### Hierarchie knihovny pro kategorie
 
@@ -27,13 +27,13 @@ Procházejte knihovnu kliknutím na nabídky a rozbalte jednotlivé kategorie a 
 
 Uzly jsou dále kategorizovány do stejné podkategorie na základě toho, zda uzly **vytvářejí** data, provádějí **akce** nebo **dotazují** data.
 
-* ![](<images/3-2/user interface - create.jpg>) **Tvorba**: Vytvořte nebo sestavte geometrii od začátku. Vytvořte například kružnici.
-* ![](<images/3-2/user interface - action.jpg>) **Akce**: Proveďte akci s objektem. Změňte například velikost kružnice.
-* ![](<images/3-2/user interface - query.jpg>) **Dotaz**: Získejte vlastnost objektu, který již existuje. Zjistěte například poloměr kružnice.
+* \![](<images/3-2/user interface - create.jpg>) **Tvorba**: Vytvořte nebo sestavte geometrii od začátku. Vytvořte například kružnici.
+* \![](<images/3-2/user interface - action.jpg>) **Akce**: Proveďte akci s objektem. Změňte například velikost kružnice.
+* \![](<images/3-2/user interface - query.jpg>) **Dotaz**: Získejte vlastnost objektu, který již existuje. Zjistěte například poloměr kružnice.
 
 Přesunutím ukazatele myši nad uzel zobrazíte podrobnější informace kromě jeho názvu a ikony. To nám umožňuje rychle pochopit, co uzel dělá, jaké bude vyžadovat vstupy a jaký bude poskytovat výstup.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Popis – prostý jazyk popisující uzel
 > 2. Ikona – větší verze ikony v nabídce knihovny
@@ -46,7 +46,7 @@ Pokud přibližně víte, který uzel chcete přidat do pracovního prostoru, za
 
 Kliknutím na uzel, který chcete přidat, nebo stisknutím klávesy Enter přidáte zvýrazněné uzly do středu pracovního prostoru.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Hledání podle hierarchie
 
@@ -121,11 +121,11 @@ Oba tyto uzly jsou dostupné v základní knihovně v kategorii View.
 
 Uzly Code Block lze použít k definování bloku kódu pomocí řádků oddělených středníky. Může to být jednoduchý kód, například `X/Y`.
 
-Bloky kódu také můžete použít jako zkratku k definování položky Number Input nebo k volání funkce jiného uzlu. Syntaxe se řídí konvencí pojmenování textového jazyka aplikace Dynamo, [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md).
+Bloky kódu také můžete použít jako zkratku k definování položky Number Input nebo k volání funkce jiného uzlu. Syntaxe se řídí konvencí pojmenování textového jazyka aplikace Dynamo, [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 Níže je uvedena jednoduchá ukázka (s pokyny) použití bloku kódu ve skriptu.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Dvojitým kliknutím vytvořte uzel Code Block.
 2. Zadejte `Circle.ByCenterPointRadius(x,y);`.

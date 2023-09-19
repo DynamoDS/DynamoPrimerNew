@@ -8,27 +8,27 @@ Barvy v aplikaci Dynamo jsou tvořeny pomocí vstupů ARGB. To odpovídá kaná
 
 | Ikona                                     | Název (Syntaxe)                 | Vstupy  | Výstupy |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (1).jpg>) | Barva ARGB (**Color.ByARGB**) | A,R,G,B | barva   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | Barva ARGB (**Color.ByARGB**) | A,R,G,B | barva   |
 
 ### Dotazování se na hodnoty barev
 
 Barvy v níže uvedené tabulce se dotazují na vlastnosti, které se používají k definování barvy: Alfa, Červená, Zelená a Modrá. Všimněte si, že uzel Color.Components nám předá všechny čtyři kanály v samostatných výstupech, což je lepší k dotazování vlastností barvy.
 
-| Ikona                                          | Název (Syntaxe)                     | Vstupy | Výstupy    |
-| --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alfa (**Colour.Alpha**)           | barva  | A          |
-| ![](<../images/5-1/ColorRed (1).jpg>)         | Červená (**Colour.Red**)               | barva  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | Zelená (**Color.Green**)           | barva  | G          |
-| ![](<../images/5-1/ColorBlue (1).jpg>)        | Modrá (**Color.Blue**)             | barva  | B          |
-| ![](<../images/5-1/ColorComponent (1).jpg>)   | Komponenty (**Colour.Components**) | barva  | A,R,G,B |
+| Ikona                                              | Název (Syntaxe)                     | Vstupy | Výstupy    |
+| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alfa (**Colour.Alpha**)           | barva  | A          |
+| ![](../images/5-1/ColorRed.jpg)                   | Červená (**Colour.Red**)               | barva  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Zelená (**Color.Green**)           | barva  | G          |
+| ![](../images/5-1/ColorBlue.jpg)                  | Modrá (**Color.Blue**)             | barva  | B          |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | Komponenty (**Colour.Components**) | barva  | A,R,G,B |
 
 Barvy v tabulce níže odpovídají **barevnému prostoru HSB**. Rozdělení barvy na odstín, sytost a jas je pravděpodobně intuitivnější pro interpretaci barvy: Jaká barva by to měla být? Jak moc sytá má být? A jak moc světlá, či tmavá má být? Toto je rozbor odstínu, respektive sytosti, respektive jasu.
 
 | Ikona                                         | Název (Syntaxe)                     | Vstupy | Výstupy    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorHue (1).jpg>)        | Odstín (**Colour.Hue**)               | barva  | Odstín        |
-| ![](<../images/5-1/ColorSaturation (1).jpg>) | Sytost (**Colour.Saturation**) | barva  | Sytost |
-| ![](<../images/5-1/ColorBrightness (1).jpg>) | Jas (**Colour.Brightness**) | barva  | Jas |
+| ![](../images/5-1/ColorHue.jpg)              | Odstín (**Colour.Hue**)               | barva  | Odstín        |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | Sytost (**Colour.Saturation**) | barva  | Sytost |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | Jas (**Colour.Brightness**) | barva  | Jas |
 
 ### Rozsah barev
 

@@ -37,7 +37,7 @@ V projektu aplikace Revit nebo Editoru rodiny přejděte na doplňky a kliknět
 
 {% hint style="warning" %} *Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena. {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie s názvem „Revit“. Jedná se o rozšíření uživatelského rozhraní, které nabízí uzly pro práci s aplikací Revit.*
 
@@ -47,7 +47,7 @@ Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie 
 
 ### Zmrazení uzlů
 
-Protože Revit je platforma s robustními funkcemi pro správu projektů, výpočet parametrických operací v aplikaci Dynamo může být složitý a pomalý. Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná užitečné využít funkci „zmrazení“ uzlu, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf. Další informace o zmrazení uzlů najdete v části [Zmrazení](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) v kapitole Tělesa.
+Protože Revit je platforma s robustními funkcemi pro správu projektů, výpočet parametrických operací v aplikaci Dynamo může být složitý a pomalý. Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná užitečné využít funkci „zmrazení“ uzlu, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf. Další informace o zmrazení uzlů najdete v části [Zmrazení](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) v kapitole Tělesa.
 
 ### Komunita a blog aplikace Dynamo
 

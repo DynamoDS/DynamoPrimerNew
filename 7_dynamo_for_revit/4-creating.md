@@ -22,7 +22,7 @@ Pracovní postup použitý v níže uvedeném cvičení umožňuje přístup ke
 
 ### Více prvků a seznamů
 
-[První cvičení](8-4\_creating.md#exercise) níže znázorňuje, jak aplikace Dynamo odkazuje na data pro tvorbu prvků aplikace Revit. Chcete-li vytvořit více adaptivních komponent, definujte seznam seznamů, kde každý seznam obsahuje tři body představující každý bod adaptivní komponenty. Toto mějte na paměti při správě datových struktur v aplikaci Dynamo.
+[První cvičení](4-creating.md#exercise-generate-elements-and-lists) níže znázorňuje, jak aplikace Dynamo odkazuje na data pro tvorbu prvků aplikace Revit. Chcete-li vytvořit více adaptivních komponent, definujte seznam seznamů, kde každý seznam obsahuje tři body představující každý bod adaptivní komponenty. Toto mějte na paměti při správě datových struktur v aplikaci Dynamo.
 
 ![](images/4/creating-multipleelementsandlists01.jpg)
 
@@ -30,7 +30,7 @@ Pracovní postup použitý v níže uvedeném cvičení umožňuje přístup ke
 
 Další metodou importu parametrické geometrie aplikace Dynamo do aplikace Revit je DirectShape. V souhrnu prvek DirectShape a související třídy podporují možnost externě ukládat vytvořené geometrické tvary do dokumentu aplikace Revit. Geometrie může obsahovat uzavřená tělesa nebo sítě. Prvek DirectShape je primárně určen k importu tvarů z jiných datových formátů, například IFC nebo STEP, kde není k dispozici dostatek informací k vytvoření „skutečného“ prvku aplikace Revit. Prvek DirectShape, podobně jako u pracovního postupu formátů IFC a STEP, funguje dobře při importu geometrií vytvořených v aplikaci Dynamo do projektů aplikace Revit jako skutečných prvků.
 
-Nyní následuje rozbor a [druhé cvičení](8-4\_creating.md#exercise-directshape-elements) týkající se importu geometrie aplikace Dynamo jako prvku DirectShape do projektu aplikace Revit. Pomocí této metody můžeme přiřadit importované geometrii kategorii, materiál a název – to vše při zachování parametrického propojení s grafem aplikace Dynamo.
+Nyní následuje rozbor a [druhé cvičení](4-creating.md#exercise-directshape-elements) týkající se importu geometrie aplikace Dynamo jako prvku DirectShape do projektu aplikace Revit. Pomocí této metody můžeme přiřadit importované geometrii kategorii, materiál a název – to vše při zachování parametrického propojení s grafem aplikace Dynamo.
 
 ## Cvičení: Generování prvků a seznamů
 

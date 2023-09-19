@@ -9,4 +9,4 @@ K dispozici jsou následující vzorové pracovní postupy:
 * [Parametrická váza](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [Body atraktoru](10-1\_getting-started-workflows/2-attractor-points.md)
 
-Koncepty zavedené v pracovních postupech můžete také vyhledat pomocí [rejstříků konceptů](table-of-summary-for-some-concept-used-in-previous-exercises.md).
+Koncepty zavedené v pracovních postupech můžete také vyhledat pomocí [rejstříků konceptů](10-2\_concept-index.md).

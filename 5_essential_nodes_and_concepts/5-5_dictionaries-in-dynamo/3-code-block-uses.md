@@ -4,7 +4,7 @@ Kromě uzlů pro slovníky zavádí aplikace Dynamo 2.0 také nové funkce pro s
 
 Je možné použít syntaxi podle obrázku níže nebo reprezentaci uzlů v jazyce DesignScript.
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (2).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
 
 Protože je slovník typem objektu, je možné s ním v aplikaci Dynamo provádět následující akce.
 

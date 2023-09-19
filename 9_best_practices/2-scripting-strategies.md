@@ -2,7 +2,7 @@
 
 Textové skriptování v prostředí vizuálního skriptování umožňuje tvorbu výkonných a vizuálních vztahů pomocí jazyků DesignScript, Python a ZeroTouch (C#). Uživatel může odhalovat prvky, například posuvníky vstupů, zhustit rozsáhlé operace do aplikace DesignScript a umožnit přístup k výkonným nástrojům a knihovnám prostřednictvím jazyka Python nebo C#, a to ve stejném pracovním prostoru. Pokud jsou strategie efektivně spravovány, mohou díky jejich kombinaci do celého programu zavést značné množství možností, přizpůsobení, ale také přehlednosti a efektivity. Následuje sada pokynů, které vám pomohou vylepšit vizuální skript pomocí textového skriptu.
 
-![](./images/2/cad-chart-textual.jpg)
+![](images/2/cad-chart-textual.jpg)
 
 ### Kdy používat skripty
 
@@ -23,9 +23,7 @@ Textové skriptování může vytvořit vztahy vyšší složitosti než vizuál
 | **Python**         | Ano         | Ano           | Částečně          | Ano                | Ne            |
 | **ZeroTouch (C#)** | Ne          | Ne            | Ne                 | Ano                | Ne            |
 
-{% hint style="info" %}
-Seznam toho, k čemu vám jednotlivé knihovny aplikace Dynamo poskytují přístup, naleznete v části [Reference skriptování](13-3\_scripting-reference.md). 
-{% endhint %}
+{% hint style="info" %} Seznam toho, k čemu vám jednotlivé knihovny aplikace Dynamo poskytují přístup, naleznete v části [Reference skriptování](3-scripting-reference.md). {% endhint %}
 
 ### Uvažujte parametricky
 
@@ -39,7 +37,7 @@ Při skriptování v aplikaci Dynamo, což je nezbytně parametrické prostřed
   * Zamýšlený výstup
   * Konstanty
 
-![](./images/2/thinkparametrically01.jpg)
+![](images/2/thinkparametrically01.jpg)
 
 > Před zapsáním kódu bylo vytvořeno několik proměnných.
 >
@@ -57,9 +55,9 @@ Při skriptování v aplikaci Dynamo, což je nezbytně parametrické prostřed
 * Minimalizujte počet vstupů tím, že zobrazíte pouze klíčové parametry:
   * Pokud je možné sadu parametrů odvodit z více nadřazených parametrů, zobrazte pouze nadřazené parametry jako vstupy skriptu. Tím se zvýší použitelnost skriptu, protože se sníží složitost jeho rozhraní.
 
-![](./images/2/thinkparametrically02.jpg)
+![](images/2/thinkparametrically02.jpg)
 
-> Moduly kódu z příkladu v [uzlu jazyka Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Moduly kódu z příkladu v [uzlu jazyka Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
 >
 > 1. Vstupy.
 > 2. Interní proměnné skriptu.
@@ -104,7 +102,7 @@ Během toho, jak se kód rozrůstá a zesložiťuje, „hlavní myšlenka“ neb
 * Může to být cokoli, co by mělo být vizuálně odděleno od přilehlého kódu (funkce, třída, skupina vstupů nebo importované knihovny).
 * Vývoj kódu v modulech prováže vizuální, intuitivní kvalitu uzlů a také složité vztahy, kterých je možné dosáhnout pouze pomocí textového skriptování.
 
-![](./images/2/thinkparametrically02.jpg)
+![](images/2/thinkparametrically02.jpg)
 
 > Tyto smyčky volají třídu s názvem „agent“, která bude vytvořena v tomto cvičení.
 >
@@ -119,7 +117,7 @@ Během toho, jak se kód rozrůstá a zesložiťuje, „hlavní myšlenka“ neb
 
 Tento příklad vytvoří koule s poloměry a barvou podle hodnoty Z středů.
 
-![](./images/2/spotcoderesuse.jpg)
+![](images/2/spotcoderesuse.jpg)
 
 > 1. Dvě „pracovní“ nadřazené funkce: jedna, která vytváří koule s poloměry, a jedna, která zobrazí barvy, obojí podle hodnoty Z středu.
 > 2. „Správcovská“ nadřazená funkce, která kombinuje dvě pracovní funkce. Zavoláním této funkce zavoláte i funkce uvnitř ní.
@@ -184,7 +182,7 @@ Při vývoji textových skriptů v aplikaci Dynamo je moudré neustále kontrol
   * Rychle proveďte test, abyste se ujistili, že skript vrací data, která „dávají smysl“.
 * Přiřaďte jako výstup nejaktuálnější data, se kterými budete ve skriptu pracovat, aby uzel při aktualizaci skriptu vždy prováděl výstup relevantních dat:
 
-![](./images/2/flexcontinuously.jpg)
+![](images/2/flexcontinuously.jpg)
 
 > 1. Zkontrolujte, zda jsou všechny hrany tělesa, kolem kterého se má vytvořit hraniční kvádr, vráceny jako křivky.
 > 2. Zkontrolujte, zda jsou vstupní hodnoty počtu úspěšně převedeny na rozsahy.
@@ -234,9 +232,9 @@ for i in range(xCount):
 * Pokud je nutné program upravit, kód, který byl vyvinut v modulech, bude mnohem snadnější změnit:
   * Do existujícího programu můžete vložit nové nebo vyladěné moduly a přitom se spolehnout na to, že se zbytek programu nezmění.
 
-![](./images/2/leveragecode'smodularity.jpg)
+![](images/2/leveragecode'smodularity.jpg)
 
-> Ladění vzorového souboru z [uzlu jazyka Python](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-4\_Python.html).
+> Ladění vzorového souboru z [uzlu jazyka Python](../8\_coding\_in\_dynamo/8-3\_python/1-python.md).
 >
 > 1. Vstupní geometrie vrací hraniční obdélník, který je větší než její vlastní velikost, což je vidět po přiřazení proměnných xDist a yDist do proměnné OUT.
 > 2. Křivky hran vstupní geometrie vrátí odpovídající hraniční obdélník se správnými vzdálenostmi v proměnných xDist a yDist.
@@ -248,25 +246,23 @@ for i in range(xCount):
 >
 > Úplný seznam vzorových souborů najdete v dodatku.
 
-{% file src="./datasets/9/2/SteepestPath.dyn" %}
-
 Pojďme napsat skript simulace deště a přitom se budeme řídit našimi nejlepšími postupy textového skriptování. I když bylo možné použít nejlepší metody na neorganizovaný vizuální program ve strategiích grafů, je mnohem obtížnější to provést pomocí textového skriptování. Logické vztahy zavedené v textovém skriptování jsou méně viditelné a v neuspořádaném kódu může být téměř nemožné je rozluštit. S textovým skriptováním přichází i větší zodpovědnost v organizaci. Projdeme si nyní každý krok a během toho budeme používat ty nejlepší postupy.
 
 Skript byl použit na povrch deformovaný atraktorem.
 
-![](./images/2/scriptingstrategies-exercise-01.jpg)
+![](images/2/scriptingstrategies-exercise-01.jpg)
 
 Nejprve je nutné importovat nezbytné knihovny aplikace Dynamo. Pokud na začátku provedete tento krok, získáte globální přístup k funkcím aplikace Dynamo v jazyce Python.
 
 Všechny knihovny, které chceme použít, je nutné importovat zde.
 
-![](./images/2/scriptingstrategies-exercise-02.jpg)
+![](images/2/scriptingstrategies-exercise-02.jpg)
 
 Dále je potřeba definovat vstupy a výstup skriptu, které se zobrazí jako porty u uzlu. Tyto externí vstupy jsou základem pro náš skript a klíčem k vytvoření parametrického prostředí.
 
 Je třeba definovat vstupy, které odpovídají proměnným ve skriptu jazyka Python, a určit požadovaný výstup:
 
-![](./images/2/scriptingstrategies-exercise-03.jpg)
+![](images/2/scriptingstrategies-exercise-03.jpg)
 
 > 1. Povrch, který chceme projít.
 > 2. Počet agentů, které chceme projít.
@@ -279,7 +275,7 @@ Nyní pomocí praktiky modularity vytvoříme tělo skriptu. Simulace nejkratš�
 
 Je potřeba definovat pro agenta třídu (neboli plán činnosti) s úmyslem pohybu dolů po povrchu, a to výběrem varianty pohybu směrem s největší strmostí při každém kroku:
 
-![](./images/2/scriptingstrategies-exercise-04.jpg)
+![](images/2/scriptingstrategies-exercise-04.jpg)
 
 > 1. Název.
 > 2. Globální atributy, které sdílejí všichni agenti.
@@ -291,7 +287,7 @@ Inicializujeme agenty definováním jejich počátečního umístění. Toto je 
 
 Bude nutné vytvořit instance všech agentů, u kterých chceme sledovat jejich průchod po povrchu, a definovat jejich počáteční atributy:
 
-![](./images/2/scriptingstrategies-exercise-05.jpg)
+![](images/2/scriptingstrategies-exercise-05.jpg)
 
 > 1. Nový prázdný seznam trajektorií.
 > 2. Kde začnou svou cestu po povrchu.
@@ -299,15 +295,15 @@ Bude nutné vytvořit instance všech agentů, u kterých chceme sledovat jejic
 
 V každém kroku aktualizujte každého agenta. Poté bude nutné u každého agenta v každém kroku vstoupit do vnořené smyčky, ve které se aktualizuje a zaznamená pozice do jejich seznamu trajektorií. V každém kroku se také ujistíme, že agent nedosáhl bodu na povrchu, kde nemůže provést další krok, který by mu umožnil sestup. Pokud bude tato podmínka splněna, cesta tohoto agenta bude ukončena.
 
-![](./images/2/scriptingstrategies-exercise-06.jpg)
+![](images/2/scriptingstrategies-exercise-06.jpg)
 
 Nyní, když jsou agenti plně aktualizováni, vrátíme geometrii, která je reprezentuje. Jakmile všichni agenti dosáhnou svého meze sestupu nebo maximálního počtu kroků, vytvoříme křivku PolyCurve pomocí bodů v jejich seznamu trajektorií a vypíšeme trajektorie PolyCurve.
 
-![](./images/2/scriptingstrategies-exercise-07.jpg)
+![](images/2/scriptingstrategies-exercise-07.jpg)
 
 Náš skript sloužící k nalezení nejstrmějších cest.
 
-![](./images/2/scriptingstrategies-exercise-08.jpg)
+![](images/2/scriptingstrategies-exercise-08.jpg)
 
 > 1. Předvolba, která simuluje déšť na základním povrchu.
 > 2. Místo hledání nejstrmější cesty mohou být agenti přepnuti, tak aby mohli procházet přes základní povrch.

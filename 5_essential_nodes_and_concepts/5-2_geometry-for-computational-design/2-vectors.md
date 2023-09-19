@@ -4,7 +4,7 @@
 
 ### Vektor
 
-[Vektor](5-2\_vectors.md#vector-1) je vyjádřením velikosti a směru. Můžete si jej představit jako šipku zrychlující danou rychlostí do určitého směru. Jedná se o klíčovou komponentou pro naše modely v aplikaci Dynamo. Všimněte si, že protože jsou v abstraktní kategorii „Pomocníci“, když vytvoříme vektor, v náhledu pozadí nic neuvidíme.
+[Vektor](2-vectors.md#vector-1) je vyjádřením velikosti a směru. Můžete si jej představit jako šipku zrychlující danou rychlostí do určitého směru. Jedná se o klíčovou komponentou pro naše modely v aplikaci Dynamo. Všimněte si, že protože jsou v abstraktní kategorii „Pomocníci“, když vytvoříme vektor, v náhledu pozadí nic neuvidíme.
 
 ![Vektory v aplikaci Dynamo](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@
 
 ### Rovina
 
-[Rovina](5-2\_vectors.md#plane-1) je dvourozměrný povrch. Můžete si jej představit jako plochý povrch, která se neomezeně rozprostírá. Každá rovina má počátek, směr X, směr Y a směr Z (nahoru).
+[Rovina](2-vectors.md#plane-1) je dvourozměrný povrch. Můžete si jej představit jako plochý povrch, která se neomezeně rozprostírá. Každá rovina má počátek, směr X, směr Y a směr Z (nahoru).
 
 ![Roviny v aplikaci Dynamo](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@
 
 ### Souřadnicový systém
 
-[Souřadnicový systém](5-2\_vectors.md#coordinate-system-1) je systém, který slouží k určení umístění bodů nebo jiných geometrických prvků. Obrázek níže vysvětluje, jak vypadá v aplikaci Dynamo a co představují jednotlivé barvy.
+[Souřadnicový systém](2-vectors.md#coordinate-system-1) je systém, který slouží k určení umístění bodů nebo jiných geometrických prvků. Obrázek níže vysvětluje, jak vypadá v aplikaci Dynamo a co představují jednotlivé barvy.
 
 ![Souřadnicový systém v aplikaci Dynamo](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

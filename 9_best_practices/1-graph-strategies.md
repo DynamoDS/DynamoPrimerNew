@@ -23,7 +23,7 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 > 2. Skupina vstupů (oranžová)
 > 3. Skupina skriptů (zelená)
 >
-> Informace o tom, jak používat skupiny, naleznete v části [Správa programu](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Informace o tom, jak používat skupiny, naleznete v části [Správa programu](https://primer2.dynamobim.org/v/cs/9_best_practices/4-managing-your-program).
 
 ### **Efektivní vývoj pomocí bloků kódu**
 
@@ -37,7 +37,7 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 > 1. Kód jazyka DesignScript zapsaný v bloku kódu
 > 2. Ekvivalentní program v uzlech
 >
-> Informace o použití bloku kódu naleznete v části [Co je blok kódu](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md).
+> Informace o použití bloku kódu naleznete v části [Co je blok kódu](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
 
 ### **Zhuštění pomocí možnosti Uzel na kód**
 
@@ -58,21 +58,21 @@ Při vývoji grafu aplikace Dynamo a zkušebních nápadů může rychle dojít 
 > 1. Existující program
 > 2. Blok kódu vytvořený pomocí možnosti Uzel na kód
 >
-> Informace o tom, jak používat možnost Uzel na kód, naleznete v části [Syntaxe jazyka DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code).
+> Informace o tom, jak používat možnost Uzel na kód, naleznete v části [Syntaxe jazyka DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md).
 
 ### **Flexibilní přístup k datům pomocí funkce List@Level**
 
 * Funkce List@Level pomáhá **snížit složitost grafu nahrazením uzlů List.Map a List.Combine**, které mohou zabírat značné množství místa na pracovní ploše.
 * Funkce List@Level nabízí** rychlejší způsob, jak vytvořit logiku uzlu konstrukce, než u uzlů List.Map a List.Combine**, umožněním přístupu k datům na libovolné úrovni v seznamu přímo ze vstupního portu uzlu.
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Můžeme ověřit, kolik hodnot True vrátí metoda BoundingBox.Contains a ve kterých seznamech, a to aktivováním funkce List@Level u vstupu seznamu funkce CountTrue. List@Level umožňuje uživateli určit, ze které úrovně se bude přebírat vstup. Použití funkce List@Level je flexibilní, efektivní a vysoce podporované u jiných metod zahrnujících metody List.Map a List.Combine.
 >
 > 1. Počítání hodnot True na úrovni seznamu 2
 > 2. Počítání hodnot True na úrovni seznamu 3
 >
-> Informace o tom, jak používat funkci List@Level, naleznete v části [Seznamy seznamů](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level).
+> Informace o tom, jak používat funkci List@Level, naleznete v části [Seznamy seznamů](https://primer2.dynamobim.org/v/cs/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists).
 
 ## Zachovejte čitelnost
 
@@ -84,12 +84,12 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 * Pokud s grafem budou pracovat i ostatní, měli byste se **před jeho odesláním ujistit, že rozvržení drátů a uzlů je přehledné**.
 * Chcete-li si usnadnit zarovnání, **použijte funkci Rozvržení uzlů vyčištění k automatickému zarovnání** grafu, zarovnání však bude méně přesné, než když je uděláte sami.
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Neuspořádaný graf
 > 2. Zarovnaný graf
 >
-> Informace o tom, jak používat zarovnání uzlů, naleznete v části [Správa programu](3-4\_best\_practices.md).
+> Informace o tom, jak používat zarovnání uzlů, naleznete v části [Správa programu](4-managing-your-program.md).
 
 ### **Označení přejmenováním**
 
@@ -114,11 +114,11 @@ Kromě zjednodušení a zefektivnění grafu nejvíce, jak je to možné, snažt
 > 1. Poznámka popisující část programu, která vrací nezpracované vzdálenosti posunu
 > 2. Poznámka popisující kód, který mapuje tyto hodnoty na sinusovou vlnu
 >
-> Postup přidání poznámky naleznete v části [Správa programu](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html).
+> Postup přidání poznámky naleznete v části [Správa programu](https://primer2.dynamobim.org/v/cs/9_best_practices/4-managing-your-program).
 
 ## Neustále kontrolujte data
 
-Při tvorbě vizuálního skriptu je důležité ověřit, zda skript vrací očekávaný výstup. Ne všechny chyby nebo problémy způsobí chybu celého programu, zejména hodnoty null nebo nulové hodnoty, které by mohly ovlivnit něco dále v programu. Tato strategie je také popsána v kontextu textového skriptování v části [Strategie skriptování](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html). Následující postup vám pomůže zajistit, že skript vrátí očekávaný výstup.
+Při tvorbě vizuálního skriptu je důležité ověřit, zda skript vrací očekávaný výstup. Ne všechny chyby nebo problémy způsobí chybu celého programu, zejména hodnoty null nebo nulové hodnoty, které by mohly ovlivnit něco dále v programu. Tato strategie je také popsána v kontextu textového skriptování v části [Strategie skriptování](2-scripting-strategies.md). Následující postup vám pomůže zajistit, že skript vrátí očekávaný výstup.
 
 ### **Monitorování dat pomocí uzlů Watch a bublin náhledů**
 
@@ -131,7 +131,7 @@ Při tvorbě vizuálního skriptu je důležité ověřit, zda skript vrací oč
 > 1. Nezpracované vzdálenosti posunu
 > 2. Hodnoty, které prošly rovnicí sinu
 >
-> Postup použití sledování naleznete v části [Knihovna](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html).
+> Postup použití sledování naleznete v části [Knihovna](../3\_user\_interface/2-library.md).
 
 ## Zajistěte opakovatelnost použití
 
@@ -147,7 +147,7 @@ Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v př
 * Pokud existují **konkrétní možnosti nebo podmínky, které chcete do grafu vložit**, měli byste použít předvolby, abyste k těmto položkám měli rychlý přístup.
 * Pomocí předvoleb můžete také **snížit složitost ukládáním specifických hodnot posuvníku do mezipaměti** u grafu s dlouhou dobou běhu.
 
-> Postup použití předvoleb naleznete v části [Správa dat s předvolbami](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html).
+> Postup použití předvoleb naleznete v části [Správa dat s předvolbami](1-graph-strategies.md#use-presets-to-embed-input-values).
 
 ### **Izolace programů pomocí vlastních uzlů**
 
@@ -162,7 +162,7 @@ Je vysoce pravděpodobné, váš program otevře i někdo jiný, a to i v př
 > 1. Existující program atraktoru
 > 2. Vlastní uzel, který tento program shromažďuje, PointGrid
 >
-> Informace o použití vlastních uzlů naleznete v části [Úvod do vlastních uzlů](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html).
+> Informace o použití vlastních uzlů naleznete v části [Úvod do vlastních uzlů](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md).
 
 ### **Tvorba šablon**
 

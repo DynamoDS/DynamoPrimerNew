@@ -4,7 +4,7 @@
 
 ### Co je to bod?
 
-[Bod](5-3\_points.md#point-as-coordinates) není definován ničím jiným než jednou nebo více hodnotami, které se nazývají souřadnice. Počet hodnot souřadnic, které je potřeba definovat, závisí na souřadnicovém systému nebo kontextu, ve kterém se bod nachází.
+[Bod](3-points.md#deep-dive-into...) není definován ničím jiným než jednou nebo více hodnotami, které se nazývají souřadnice. Počet hodnot souřadnic, které je potřeba definovat, závisí na souřadnicovém systému nebo kontextu, ve kterém se bod nachází.
 
 ### 2D a 3D bod
 

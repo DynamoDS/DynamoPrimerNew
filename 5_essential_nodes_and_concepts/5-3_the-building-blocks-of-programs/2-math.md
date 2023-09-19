@@ -6,12 +6,12 @@ Pokud jsou nejjednodušší formou dat čísla, nejjednodušším způsobem, jak
 
 Operátory jsou sada komponent, které používají algebraické funkce se dvěma číselnými vstupními hodnotami, které vrací jednu výstupní hodnotu (součet, rozdíl, násobení, dělení atd.). Najdete je pod položkou Operátory > Akce.
 
-| Ikona                                              | Název (Syntaxe)     | Vstupy                     | Výstupy      |
-| ------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1).jpg>) | Násobení ( **\*** ) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| Ikona                                                  | Název (Syntaxe)     | Vstupy                     | Výstupy      |
+| ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Součet (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Rozdíl (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Násobení ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dělení (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Cvičení: Vzorec zlaté spirály
 
@@ -45,7 +45,7 @@ Obrázek níže znázorňuje zlatou spirálu ve vizuální programové podobě. 
 
 > a. **Number Slider:** Přidejte na kreslicí plochu dva posuvníky. Tyto posuvníky budou představovat proměnné _a_ a _b_ parametrické rovnice. Představují konstantu, která je flexibilní, nebo parametry, které lze upravit podle požadovaného výsledku.
 >
-> b. **Násobení (*)**: Uzel násobení je reprezentován hvězdičkou. Toto použijeme opakovaně k připojení násobných proměnných
+> b. b. **Násobení (*)**: Uzel násobení je reprezentován hvězdičkou. Toto použijeme opakovaně k připojení násobných proměnných
 >
 > c. **Math.RadiansToDegree:** Hodnoty '_t_' je nutné převést na stupně pro jejich vyhodnocení v trigonometrických funkcích. Nezapomeňte, že aplikace Dynamo pro vyhodnocení těchto funkcí ve výchozím stavu používá stupně.
 >
@@ -87,7 +87,7 @@ Nyní, když jsme vytvořili kruhovou ulitu loděnky, přejděme k parametrick�
 
 Jako výchozí bod použijeme stejný krok z předchozího cvičení: Vytvoření spirálového pole bodů pomocí uzlu **Point.ByCoordinates**.
 
-![](../images/5-3/2/math-part IV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 Dále postupujte podle těchto krátkých kroků a vygenerujte řadu spirál s různým natočením.
 

@@ -4,7 +4,7 @@ Aplikace Dynamo nabízí řadu způsobů, jak vytvořit balíček pro vaše osob
 
 ## Balíček MapToSurface
 
-Budeme pracovat se vzorovým balíčkem, který demonstruje mapování UV bodů z jednoho povrchu do druhého. Základy nástroje jsme již vytvořili v části [Vytvoření vlastního uzlu](../10\_custom-nodes/10-2\_creating.md) tohoto cvičení. Níže uvedené soubory ukazují, jak můžeme využít koncepci mapování UV a vytvořit sadu nástrojů pro publikovatelnou knihovnu.
+Budeme pracovat se vzorovým balíčkem, který demonstruje mapování UV bodů z jednoho povrchu do druhého. Základy nástroje jsme již vytvořili v části [Vytvoření vlastního uzlu](../6-1\_custom-nodes/2-creating.md) tohoto cvičení. Níže uvedené soubory ukazují, jak můžeme využít koncepci mapování UV a vytvořit sadu nástrojů pro publikovatelnou knihovnu.
 
 Na tomto obrázku namapujeme bod z jednoho povrchu na jiný pomocí souřadnic UV. Balíček je založen na tomto konceptu, ale se složitější geometrií.
 
@@ -20,7 +20,7 @@ V aplikaci Dynamo klikněte na nabídku Balíčky > Vyhledat balíček a vyhled
 
 Po instalaci by měly být vlastní uzly dostupné v části Doplňky > Dynamo Primer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 S instalovaným balíčkem projdeme to, jak ho nastavit.
 
@@ -30,7 +30,7 @@ Balíček, který vytváříme, používá pět uživatelských uzlů, které js
 
 Toto je jednoduchý balíček s pěti vlastními uzly. V níže uvedených krocích si stručně promluvíme o nastavení jednotlivých vlastních uzlů.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Nyní otevřete složku _extra_, která obsahuje všechny soubory v balíčku, 
 
 #### **01-PanelingWithPolygons**
 
-Tento vzorový soubor ukazuje, jak lze pomocí uzlu _PointsToSurface_ panelizovat povrch na základě osnovy obdélníků. Mělo by vám to připadat povědomé, protože jsme viděli podobný pracovní postup v [předchozí kapitole](../10\_custom-nodes/10-2\_creating.md).
+Tento vzorový soubor ukazuje, jak lze pomocí uzlu _PointsToSurface_ panelizovat povrch na základě osnovy obdélníků. Mělo by vám to připadat povědomé, protože jsme viděli podobný pracovní postup v [předchozí kapitole](../6-1\_custom-nodes/2-creating.md).
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

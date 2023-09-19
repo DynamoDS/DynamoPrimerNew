@@ -23,7 +23,7 @@ Možnosti sítě aplikace Dynamo lze rozšířit instalací balíčku [Mesh Tool
 
 Knihovna také poskytuje nástroje k úpravám sítí, opravě sítí nebo extrahování horizontálních řezů pro použití ve výrobě.
 
-Příklad použití tohoto balíčku naleznete v [případových studiích balíčku Mesh Toolkit](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md).
+Příklad použití tohoto balíčku naleznete v [případových studiích balíčku Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes).
 
 ![Balíček Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

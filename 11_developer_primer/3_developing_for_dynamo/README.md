@@ -1,4 +1,4 @@
-# Vývoj pro aplikaci Dynamo 
+# Vývoj pro aplikaci Dynamo
 
 Platforma Dynamo je navržena tak, aby se přispěvateli mohli stát všichni uživatelé, bez ohledu na úroveň jejich zkušeností. Existuje několik možností vývoje, které se zaměřují na různé schopnosti a úrovně dovedností, přičemž každá má své silné a slabé stránky v závislosti na cíli. Níže uvádíme různé možnosti a způsob, jak si vybrat jednu z nich.
 
@@ -18,7 +18,7 @@ Tyto uzly umožňují nejvyšší stupeň přizpůsobení. Touto metodou je sest
 * Uzly odvozené z uzlů NodeModel
 * Rozšíření
 
-> V této příručce naleznete pokyny k [importu knihoven Zero-Touch](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
+> V této příručce naleznete pokyny k [importu knihoven Zero-Touch](https://primer2.dynamobim.org/v/cs/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 V následujícím pojednání je jako vývojové prostředí pro uzly Zero-Touch a NodeModel použita aplikace Visual Studio.
 
@@ -28,17 +28,17 @@ V následujícím pojednání je jako vývojové prostředí pro uzly Zero-Touc
 
 #### V aplikaci Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-Ačkoli tyto procesy existují v pracovním prostoru vizuálního programování a jsou poměrně přímočaré, všechny představují vhodné možnosti pro přizpůsobení aplikace Dynamo. Tato příručka se jimi podrobně zabývá a v kapitole [Strategie skriptování](http://dynamoprimer.com/en/12\_Best-Practice/12-1\_Scripting-Strategies.html) poskytuje tipy a osvědčené postupy.
+Ačkoli tyto procesy existují v pracovním prostoru vizuálního programování a jsou poměrně přímočaré, všechny představují vhodné možnosti pro přizpůsobení aplikace Dynamo. Tato příručka se jimi podrobně zabývá a v kapitole [Strategie skriptování](../../9\_best\_practices/2-scripting-strategies.md) poskytuje tipy a osvědčené postupy.
 
 *   Bloky kódu zobrazují jazyk DesignScript ve vizuálním programovacím prostředí a umožňují flexibilní práci s textovým skriptem a uzly. Funkci v bloku kódu může volat cokoli v pracovním prostoru.
 
-    > Stáhněte si příklad bloku kódu (klikněte pravým tlačítkem a uložte jej) nebo si v této [příručce](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html) prohlédněte podrobnou ukázku.
+    > Stáhněte si příklad bloku kódu (klikněte pravým tlačítkem a uložte jej) nebo si v této [příručce](https://primer2.dynamobim.org/v/cs/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block) prohlédněte podrobnou ukázku.
 *   Vlastní uzly jsou kontejnery pro kolekce uzlů nebo dokonce celých grafů. Jsou účinným způsobem, jak shromažďovat často používané postupy a sdílet je s komunitou.
 
-    > Stáhněte si příklad vlastního uzlu (klikněte pravým tlačítkem a uložte jej) nebo si v této [příručce](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html) prohlédněte podrobnou ukázku.
+    > Stáhněte si příklad vlastního uzlu (klikněte pravým tlačítkem a uložte jej) nebo si v této [příručce](https://primer2.dynamobim.org/v/cs/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction) prohlédněte podrobnou ukázku.
 *   Uzly jazyka Python jsou skriptovací rozhraní v pracovním prostoru vizuálního programování, podobně jako bloky kódu. Knihovny Autodesk.DesignScript používají tečkovou notaci podobnou jazyku DesignScript.
 
-    > Stáhněte si příklad uzlu jazyka Python (klikněte pravým tlačítkem a uložte jej) nebo si v této [příručce](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html) prohlédněte podrobnou ukázku.
+    > Stáhněte si příklad uzlu jazyka Python (klikněte pravým tlačítkem a uložte jej) nebo si v této [příručce](https://primer2.dynamobim.org/v/cs/8_coding_in_dynamo/8-3_python) prohlédněte podrobnou ukázku.
 
 Vývoj v pracovním prostoru Dynamo představuje výkonný nástroj pro získání okamžité zpětné vazby.
 
@@ -70,7 +70,7 @@ Zero-Touch označuje jednoduchou metodu importu knihoven C# pomocí najetí kurz
 
 Pomocí této metody můžeme:
 
-* Importovat knihovnu, která nebyla nezbytně vyvinuta pro aplikaci Dynamo, a automaticky vytvořit sadu nových uzlů, viz [příklad A-Forge](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html) v příručce Primer.
+* Importovat knihovnu, která nebyla nezbytně vyvinuta pro aplikaci Dynamo, a automaticky vytvořit sadu nových uzlů, viz [příklad A-Forge](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge) v příručce Primer.
 * Psát metody C# a snadno je používat jako uzly v aplikaci Dynamo.
 * Sdílet knihovny C# jako uzly s komunitou aplikace Dynamo v balíčku
 

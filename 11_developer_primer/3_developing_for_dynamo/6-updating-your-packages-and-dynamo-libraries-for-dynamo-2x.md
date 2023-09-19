@@ -1,4 +1,4 @@
-# Aktualizace balíčků a knihoven aplikace Dynamo pro aplikaci Dynamo 2.x 
+# Aktualizace balíčků a knihoven aplikace Dynamo pro aplikaci Dynamo 2.x
 
 ### Úvod: <a href="#introduction" id="introduction"></a>
 
@@ -10,7 +10,7 @@ Zprovoznění uzlů uživatelského rozhraní a uzlů, které se odvozují pří
 
 Autoři rozšíření mohou také provést některé potenciální změny – v závislosti na tom, kolik rozhraní API jádra aplikace Dynamo používají ve svých rozšířeních.
 
-***
+
 
 ### Obecná pravidla pro tvorbu balíčků: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -18,8 +18,6 @@ Autoři rozšíření mohou také provést některé potenciální změny – v�
 * Pokud se tomu můžete vyhnout, nezahrnujte do svého balíčku knihovnu `newtonsoft.json.net` a nedistribuujte ji. Tato knihovna DLL již bude načtena aplikací Dynamo 2.x. Může dojít ke stejnému problému jako výše.
 * Pokud se tomu můžete vyhnout, nezahrnujte do svého balíčku knihovnu `CEFSharp` a nedistribuujte ji. Tato knihovna DLL již bude načtena aplikací Dynamo 2.x. Může dojít ke stejnému problému jako výše.
 * Obecně se vyhněte sdílení závislostí s aplikací Dynamo nebo Revit, pokud potřebujete kontrolovat verzi dané závislosti.
-
-
 
 ### Běžné problémy: <a href="#common-issues" id="common-issues"></a>
 
@@ -39,7 +37,6 @@ K tomu může dojít z následujících důvodů:
 
 * K tomu může dojít, pokud se z nějakého důvodu nezdařila deserializace. Je vhodné serializovat pouze vlastnosti, které potřebujete. Chcete-li ignorovat složité vlastnosti, které není nutné načíst nebo uložit, můžete použít `[JsonIgnore]`. Jedná se o vlastnosti jako `function pointer, delegate, action,` nebo `event` atd. Tyto vlastnosti by neměly být serializovány, protože se je obvykle nepodaří deserializovat a způsobí chybu za běhu.
 
-
 ### Podrobné informace o aktualizaci: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### Vlastní uzly1.3 -> 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
@@ -52,13 +49,11 @@ Známé problémy:
 * Komentáře budou namísto řádkových komentářů převedeny na blokové komentáře.
 * Krátké názvy typů budou nahrazeny úplnými názvy. Pokud jste například nezadali typ, při opětovném načtení vlastního uzlu se zobrazí `var[]..[]`, protože se jedná o výchozí typ.
 
-
 ### Uzly Zero Touch 1.3 -> 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * V aplikaci Dynamo 2.0 byly rozděleny typy seznamů a slovníků a byla změněna syntaxe pro vytváření seznamů a slovníků. Seznamy jsou inicializovány pomocí `[]`, zatímco slovníky používají `{}`.\
  Pokud jste dříve používali atribut `DefaultArgument` k označení parametrů v uzlech Zero Touch a používali syntaxi seznamu pro výchozí nastavení konkrétního seznamu, například `someFunc([DefaultArgument("{0,1,2}")])`, toto již nebude platné a bude nutné upravit úryvek jazyka DesignScript, aby používal novou inicializační syntaxi pro seznamy.
 * Jak bylo uvedeno výše, nedistribuujte knihovny DLL aplikace Dynamo s balíčky (`DynamoCore`, `DynamoServices` atd.).
-
 
 ### Uzly Node Model 1.3 -> 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ Uzly Node Model vyžadují při aktualizaci na verzi Dynamo 2.x nejvíce práce.
 
 Názvy parametrů v konstruktoru by obecně měly odpovídat názvům vlastností JSON. Toto mapování se však komplikuje, pokud přepíšete názvy, které jsou serializovány, pomocí atributů [JsonProperty].\
  [Další informace naleznete v dokumentaci k rozhraní Json.net.](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### Konstruktory JSON <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,7 +88,6 @@ Jedná se o hlavní rozdíl mezi konstruktorem JSON a jinými konstruktory, pro
 
 Příklady naleznete v úložišti DynamoSamples - > [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) nebo [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123).
 
-
 #### Veřejné vlastnosti a serializace <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
 Dříve mohl vývojář serializovat a deserializovat konkrétní data modelu do dokumentu XML pomocí metod `SerializeCore` a `DeserializeCore`. Tyto metody v rozhraní API stále existují, ale v budoucí verzi aplikace Dynamo budou vyřazeny (příklad naleznete [zde](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)). Díky implementaci rozhraní JSON.NET lze nyní vlastnosti `public` odvozené třídy NodeModel serializovat přímo do souboru .dyn. Rozhraní JSON.Net poskytuje několik atributů pro řízení způsobu serializace vlastností.
@@ -104,7 +97,6 @@ Tento příklad, který určuje `PropertyName`, naleznete [zde](https://github.c
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### Převodníky: <a href="#converters" id="converters"></a>
 
@@ -117,17 +109,15 @@ Příklad, který určuje metodu serializace pro převod vlastnosti na řetězec
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### Ignorování vlastností <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 Vlastnostem `public`, které nejsou určeny pro serializaci, musí mít přidán atribut `[JsonIgnore]`. Při uložení uzlů do souboru .dyn je zajištěno, že tato data budou serializačním mechanismem ignorována a nezpůsobí neočekávané následky při dalším otevření grafu. Příklad si můžete prohlédnout [zde](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) v úložišti Dynamo.
 
-***
+
 
 #### Vrácení a opakování změn <a href="#undoredo" id="undoredo"></a>
 
 Jak je uvedeno výše, metody `SerializeCore` a `DeserializeCore` se v minulosti používaly k ukládání a načítání uzlů do souboru xml s příponou .dyn. Kromě toho se také používaly a **stále používají** k ukládání a načítání stavu uzlu pro operace Zpět/Znovu. Pokud chcete pro uzel nodeModel uživatelského rozhraní implementovat složité funkce Zpět/Znovu, bude nutné tyto metody implementovat a serializovat do objektu dokumentu XML, který je těmto metodám poskytován jako parametr. To by měl být vzácný případ použití s výjimkou složitých uzlů uživatelského rozhraní.
-
 
 #### Rozhraní API vstupních a výstupních portů <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
@@ -142,7 +132,6 @@ vs.
 Příklady převedeného kódu naleznete zde v úložišti Dynamo -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) nebo [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281).
 
 Další běžný případ použití, který je ovlivněn změnami rozhraní API verze 2.0, se týká metod běžně používaných v metodě `BuildAst()` k určení chování uzlu na základě přítomnosti nebo nepřítomnosti konektorů portů. Dříve se k ověření stavu připojeného portu používala metoda `HasConnectedInput(index)`. Vývojáři by nyní měli kontrolovat stav připojení portu pomocí vlastnosti `InPorts[0].IsConnected`. Příklad naleznete v souboru [ColourRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) v úložišti Dynamo.
-
 
 ### Příklady: <a href="#examples" id="examples"></a>
 

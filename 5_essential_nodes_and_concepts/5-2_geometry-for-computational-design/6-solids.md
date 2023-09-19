@@ -4,11 +4,11 @@
 
 ### Co je těleso?
 
-Pokud chcete vytvářet složitější modely, které nelze vytvořit z jedné plochy, nebo pokud chcete explicitně definovat objem, je nutné využít [tělesa](5-6\_solids.md#solids) (a polyplochy). I obyčejná krychle je dost složitá na to, aby potřebovala šest ploch (pro každou stěnu jednu). Tělesa na rozdíl od ploch nabízejí dva klíčové koncepty – přesnější topologický popis (stěny, hrany, vrcholy) a booleovské operace.
+Pokud chcete vytvářet složitější modely, které nelze vytvořit z jedné plochy, nebo pokud chcete explicitně definovat objem, je nutné využít [tělesa](6-solids.md#solids) (a polyplochy). I obyčejná krychle je dost složitá na to, aby potřebovala šest ploch (pro každou stěnu jednu). Tělesa na rozdíl od ploch nabízejí dva klíčové koncepty – přesnější topologický popis (stěny, hrany, vrcholy) a booleovské operace.
 
 ### Booleovská operace k vytvoření ostnatého kulového tělesa
 
-K úpravě těles můžete použít [booleovské operace](5-6\_solids.md#boolean-operations). Pojďme vytvořit ostnatou kouli pomocí několika booleovských operací.
+K úpravě těles můžete použít [booleovské operace](6-solids.md#boolean-operations). Pojďme vytvořit ostnatou kouli pomocí několika booleovských operací.
 
 ![](../images/5-2/6/solids-spikyball.jpg)
 

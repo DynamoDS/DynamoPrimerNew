@@ -1,10 +1,11 @@
-# Příručka Primer pro vývojáře 
+# Příručka Primer pro vývojáře
 
 #### Jaký je účel této příručky? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
 Účelem této příručky je pomoci vám zorientovat se v možnostech vývoje aplikace Dynamo v jazyce C#, od vytváření uzlů Zero-Touch až po tvorbu rozšíření.
 
-![Zdroj pro aplikaci Dynamo na Githubu](images/dynamogithub.jpg)
+![Zdroj pro aplikaci Dynamo na Githubu](../1-introduction/images/dynamogithub.jpg)
+
 > Zdroj pro aplikaci Dynamo na GitHubu
 
 #### Jaké další zdroje pro vývojáře poskytujeme? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

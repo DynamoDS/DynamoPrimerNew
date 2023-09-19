@@ -4,7 +4,7 @@
 
 ### Co je křivka?
 
-[Křivky](5-4\_curves.md#curve) jsou první geometrický datový typ, kterému jsme se věnovali a který má známé sady vlastností popisujících tvar: Jak křivé nebo rovné? Jak dlouhé nebo krátké? Nezapomeňte, že body jsou stále stavební bloky pro definování všeho od úsečky k spline a všechny typy křivek mezi nimi.
+[Křivky](4-curves.md#deep-dive-into...) jsou první geometrický datový typ, kterému jsme se věnovali a který má známé sady vlastností popisujících tvar: Jak křivé nebo rovné? Jak dlouhé nebo krátké? Nezapomeňte, že body jsou stále stavební bloky pro definování všeho od úsečky k spline a všechny typy křivek mezi nimi.
 
 ![Typy oblouků](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@
 
 ### Čára
 
-[Čára](5-4\_curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg).
+[Čára](4-curves.md#lines) je tvořena sadou bodů, každá čára má alespoň 2 body. Jedním z nejběžnějších způsobů, jak vytvořit čáru v aplikaci Dynamo, je použití `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg).
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Křivka NURBS
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) je model používaný k přesnému znázornění křivek a povrchů. Pojďme v aplikaci Dynamo pomocí dvou různých metod vytvořit křivku NURBS ve tvaru sinusoidy a porovnat výsledky.
+[NURBS](4-curves.md#nurbs-+-polycurves) je model používaný k přesnému znázornění křivek a povrchů. Pojďme v aplikaci Dynamo pomocí dvou různých metod vytvořit křivku NURBS ve tvaru sinusoidy a porovnat výsledky.
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

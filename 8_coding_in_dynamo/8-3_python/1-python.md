@@ -1,6 +1,6 @@
 # Uzly jazyka Python
 
-Proč byste měli používat textové programování ve vizuálním programovacím prostředí aplikace Dynamo? [Vizuální programování](../../a\_appendix/visual-programming-and-dynamo.md) má mnoho výhod. Umožňuje vytvářet programy bez použití speciální syntaxe v intuitivním vizuálním rozhraní. Vizuální program však může být nepřehledný a v některých případech může mít menší funkčnost. Například jazyk Python nabízí mnohem jednodušší metody pro zápis podmínek (if/then) a cyklů. Python je výkonný nástroj, který umožňuje rozšířit možnosti aplikace Dynamo a umožňuje nahradit mnoho uzlů několika stručnými řádky kódů.
+Proč byste měli používat textové programování ve vizuálním programovacím prostředí aplikace Dynamo? [Vizuální programování](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) má mnoho výhod. Umožňuje vytvářet programy bez použití speciální syntaxe v intuitivním vizuálním rozhraní. Vizuální program však může být nepřehledný a v některých případech může mít menší funkčnost. Například jazyk Python nabízí mnohem jednodušší metody pro zápis podmínek (if/then) a cyklů. Python je výkonný nástroj, který umožňuje rozšířit možnosti aplikace Dynamo a umožňuje nahradit mnoho uzlů několika stručnými řádky kódů.
 
 **Vizuální program:**
 
@@ -171,7 +171,7 @@ Protože budeme převádět i otáčet moduly těles, použijeme operaci Geomet
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

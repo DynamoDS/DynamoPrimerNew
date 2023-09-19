@@ -96,7 +96,7 @@ Příkaz Rozdělit rozdělí seznamy podle dané délky seznamu. V některých 
 
 Metoda **List.Map/Combine** použije funkci sady na vstupní seznam, ale o jeden krok níže v hierarchii. Kombinace jsou stejné jako u map, kromě toho, že mohou mít více vstupů odpovídajících zadání dané funkce.
 
-_Poznámka: Toto cvičení bylo vytvořeno pomocí předchozí verze aplikace Dynamo. Většina funkčnosti metody_ **List.Map** _byla vyřešena přidáním funkce_ **List@Level** _. Další informace naleznete v části_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _níže._
+_Poznámka: Toto cvičení bylo vytvořeno pomocí předchozí verze aplikace Dynamo. Většina funkčnosti metody_ **List.Map** _byla vyřešena přidáním funkce_ **List@Level** _. Další informace naleznete v části_ [_List@Level_](3-lists-of-lists.md#lists-of-lists) _níže._
 
 V rámci rychlého úvodu si zopakujme uzel **List.Count** z předchozí části.
 
@@ -276,7 +276,7 @@ Nyní, když byl seznam upraven, je třeba vložit tento seznam zpět do původn
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Podle stejné logiky nahraďte pomocí metody **List.ReplaceItemAtIndex** prostřední seznam upraveným seznamem.
-> 2. Všimněte si, že **bloky kódu** definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points[1][2]_).
+> 2. Všimněte si, že **bloky kódu** __ definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points[1][2]_).
 > 3. Po výběru seznamu na _indexu 1_ se v náhledu aplikace Dynamo zvýrazní datová struktura. Přesunutý bod tak byl úspěšně sloučen s původní datovou strukturou.
 
 Z této sady bodů je možné vytvořit povrch mnoha způsoby. V tomto případě se vytvoří povrch šablonováním křivek dohromady.
