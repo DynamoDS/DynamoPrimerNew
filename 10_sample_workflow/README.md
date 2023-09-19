@@ -9,4 +9,4 @@
 * [参数化花瓶](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [吸引器点](10-1\_getting-started-workflows/2-attractor-points.md)
 
-还可以使用[概念索引](table-of-summary-for-some-concept-used-in-previous-exercises.md)找到工作流中引入的概念
+还可以使用[概念索引](10-2\_concept-index.md)找到工作流中引入的概念

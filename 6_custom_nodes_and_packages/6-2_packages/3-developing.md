@@ -1,10 +1,10 @@
-# 开发软件包 
+# 开发软件包
 
 Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo 社区共享。在下面的案例研究中，我们将通过解构现有软件包来逐步介绍如何创建一个软件包。本案例研究基于上一章的课程构建，提供一组自定义节点用于按 UV 坐标映射几何图形（从一个 Dynamo 曲面到另一个 Dynamo 曲面）。
 
 ## MapToSurface 软件包
 
-我们将使用一个示例包，演示点从一个曲面到另一个曲面的 UV 映射。我们已在本入门手册的[“创建自定义节点”](../10\_custom-nodes/10-2\_creating.md)部分中构建了工具的基础知识。下面的文件演示了如何理解 UV 映射的概念，并为可发布库开发一组工具。
+我们将使用一个示例包，演示点从一个曲面到另一个曲面的 UV 映射。我们已在本 Primer 的[创建自定义节点](../6-1\_custom-nodes/2-creating.md)部分中构建了该工具的基础知识。下面的文件演示了如何理解 UV 映射的概念，并为可发布库开发一组工具。
 
 在此图像中，我们使用 UV 坐标将点从一个曲面映射到另一个曲面。软件包基于此概念，但有更加复杂的几何图形。
 
@@ -20,9 +20,9 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 安装后，自定义节点应位于“附加模块”>“Dynamo Primer”部分下。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
-现在，软件包已完成安装，我们来介绍它的设置方式。
+现在，软件包已完成安装，我们来介绍其设置方式。
 
 ### 自定义节点
 
@@ -30,7 +30,7 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 这是一个包含五个自定义节点的简单软件包。在下面的步骤中，我们将简要介绍每个自定义节点的设置。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 #### **01-PanelingWithPolygons**
 
-此示例文件演示了如何使用 _“PointsToSurface”_ 来根据矩形栅格为曲面镶板。这应该看起来很熟悉，如我们在[上一章](../10\_custom-nodes/10-2\_creating.md)中演示的类似工作流。
+此示例文件演示了如何使用 _“PointsToSurface”_ 来根据矩形栅格为曲面镶板。这应该看起来很熟悉，如我们在[上一章](../6-1\_custom-nodes/2-creating.md)中演示的类似工作流。
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

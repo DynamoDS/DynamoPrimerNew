@@ -23,7 +23,7 @@ Dynamo 的网格功能可通过安装[“Mesh Toolkit”](https://github.com/Dyn
 
 该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。
 
-例如，有关使用此软件包的信息，请访问 [Mesh Toolkit 案例研究](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)。
+例如，有关使用此软件包的信息，请访问 [Mesh Toolkit 案例研究](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)。
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

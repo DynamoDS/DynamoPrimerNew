@@ -4,7 +4,7 @@
 
 ### 什么是曲线？
 
-[曲线](5-4\_curves.md#curve)是我们介绍的第一个几何数据类型，有一组更熟悉的形状描述特性 - 弯曲度或笔直度如何？多长或多短？请记住，点仍然是我们的构建块，用于定义从直线到样条曲线以及它们之间的所有曲线类型。
+[曲线](4-curves.md#deep-dive-into...)是我们介绍的第一个几何数据类型，有一组更熟悉的形状描述特性 - 弯曲度或笔直度如何？多长或多短？请记住，点仍然是我们的构建块，用于定义从直线到样条曲线以及它们之间的所有曲线类型。
 
 ![曲线类型](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,18 +18,18 @@
 
 ### 直线
 
-[直线](5-4\_curves.md#lines)由一组点组成，每条直线至少有 2 个点。在 Dynamo 中创建直线的最常见方法之一是使用 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) 在 Dynamo 中创建直线。
+[直线](4-curves.md#lines)由一组点组成，每条直线至少有 2 个点。在 Dynamo 中创建直线的最常见方法之一是使用 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) 在 Dynamo 中创建直线。
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS 曲线
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) 是用于精确表示曲线和曲面的模型。在 Dynamo 中使用两种不同方法制作正弦曲线，以创建 NURBS 曲线来比较结果。
+[NURBS](4-curves.md#nurbs-+-polycurves) 是一个用于精确表示曲线和曲面的模型。在 Dynamo 中使用两种不同方法制作正弦曲线，以创建 NURBS 曲线来比较结果。
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 
-> 1. _“NurbsCurve.ByControlPoints”_ 使用一列点作为控制点
-> 2. _“NurbsCurve.ByPoints”_ 通过一列点绘制曲线
+> 1. _“NurbsCurve.ByControlPoints”_使用一列点作为控制点
+> 2. _“NurbsCurve.ByPoints”_通过一列点绘制曲线
 
 > 单击下面的链接下载示例文件。
 >

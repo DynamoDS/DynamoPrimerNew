@@ -1,4 +1,4 @@
-# 关于 
+# 关于
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}Dynamo Hype 视频{% endembed %}
 
@@ -41,7 +41,7 @@ Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开
 
 ***
 
-已委派 **Parallax 团队的 John Pierson** 更新本 Primer 以反映 Dynamo 2.0 修订版。
+已委派 **Parallax 团队的 John Pierson** 更新本 Primer 以，反映 Dynamo 2.0 修订版。
 
 ![](images/PRLX\_Logo.jpg)
 
@@ -50,6 +50,18 @@ Dynamo Primer 是一个开源项目，由 Matt Jezyk 和 Autodesk 的 Dynamo 开
 已委派 **Matterlab** 更新本 Primer，以反映 Dynamo 2.13 修订版。
 
 ![](images/matterlab\_final-07.jpg)
+
+***
+
+已委派 **Archilizer** 更新本 Primer，以反映 Dynamo 2.17 修订版。
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+已委派 **Wood Rodgers** 使用 Dynamo for Civil 3D 的内容更新本 Primer。
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### 致谢
 
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### 许可
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at
 

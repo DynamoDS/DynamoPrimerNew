@@ -22,7 +22,7 @@
 
 ### 多个图元和列表
 
-下面的[第一个练习](8-4\_creating.md#exercise)将分步介绍 Dynamo 如何参照数据以创建 Revit 图元。为了生成多个自适应构件，我们会定义一个包含列表的列表，其中每个列表中都有表示自适应构件的每个点的三个点。在 Dynamo 中管理数据结构时，我们要记住这一点。
+下面的[第一个练习](4-creating.md#exercise-generate-elements-and-lists)将分步介绍 Dynamo 如何参照数据以创建 Revit 图元。为了生成多个自适应构件，我们会定义一个包含列表的列表，其中每个列表中都有表示自适应构件的每个点的三个点。在 Dynamo 中管理数据结构时，我们要记住这一点。
 
 ![](images/4/creating-multipleelementsandlists01.jpg)
 
@@ -30,7 +30,7 @@
 
 将参数化 Dynamo 几何图形输入 Revit 的另一种方法是使用 DirectShape。总之，DirectShape 图元和相关类支持将外部创建的几何形状存储在 Revit 文档中。几何图形可以包含闭合实体或网格。DirectShape 主要用于从 IFC 或 STEP 等其他数据格式输入形状，这些格式中没有足够信息可用于创建“真实”的 Revit 图元。与 IFC 和 STEP 工作流一样，DirectShape 功能非常适用于将 Dynamo 创建的几何图形作为真实图元输入到 Revit 项目。
 
-让我们通过[第二个练习](8-4\_creating.md#exercise-directshape-elements)来分步介绍如何将 Dynamo 几何图形作为 DirectShape 输入到 Revit 项目。使用此方法，我们可以指定输入的几何图形的类别、材质和名称，同时保留指向 Dynamo 图形的参数化链接。
+让我们通过[第二个练习](4-creating.md#exercise-directshape-elements)来分步介绍如何将 Dynamo 几何图形作为 DirectShape 输入到 Revit 项目中。使用此方法，我们可以指定输入的几何图形的类别、材质和名称，同时保留指向 Dynamo 图形的参数化链接。
 
 ## 练习：生成图元和列表
 

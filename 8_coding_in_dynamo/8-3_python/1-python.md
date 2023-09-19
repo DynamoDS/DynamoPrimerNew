@@ -1,6 +1,6 @@
 # Python 节点
 
-为什么要在 Dynamo 的可视化编程环境中使用文本编程？[可视化编程](../../a\_appendix/visual-programming-and-dynamo.md)有许多优势。它使您无需在直观的可视化界面中学习特殊语法即可创建程序。但是，可视化程序可能会变得混乱，有时可能会在功能上有所降低。例如，Python 提供了更多可实现的方法来编写条件语句 (if/then) 和循环。Python 是一款功能强大的工具，可扩展 Dynamo 的功能，并允许您将许多节点替换为几行简明的代码。
+为什么要在 Dynamo 的可视化编程环境中使用文本编程？[可视化编程](../../a\_appendix/a-1\_visual-programming-and-dynamo.md)有许多优势。它使您无需在直观的可视化界面中学习特殊语法即可创建程序。但是，可视化程序可能会变得混乱，有时可能会在功能上有所降低。例如，Python 提供了更多可实现的方法来编写条件语句 (if/then) 和循环。Python 是一款功能强大的工具，可扩展 Dynamo 的功能，并允许您将许多节点替换为几行简明的代码。
 
 **可视化程序：**
 
@@ -171,7 +171,7 @@ OUT = solids
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

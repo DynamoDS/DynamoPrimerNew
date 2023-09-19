@@ -8,27 +8,27 @@ Dynamo 中的颜色是使用 ARGB 输入创建的。这对应于 Alpha、红、�
 
 | 图标                                     | 名称（语法）                 | 输入(Inputs)  | 输出 |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (1).jpg>) | ARGB 颜色 (**Color.ByARGB**) | A,R,G,B | 颜色   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB 颜色 (**Color.ByARGB**) | A,R,G,B | 颜色   |
 
 ### 查询颜色值
 
 下表中的颜色查询用于定义相应颜色的特性：Alpha、红、绿和蓝。请注意，Color.Components 节点给出全部四个不同输出，这使得该节点更适合查询颜色的特性。
 
-| 图标                                          | 名称（语法）                     | 输入(Inputs) | 输出    |
-| --------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (1).jpg>) | Alpha (**Color.Alpha**)           | 颜色  | A          |
-| ![](<../images/5-1/ColorRed (1).jpg>)         | 红色 (**Color.Red**)               | 颜色  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (1).jpg>) | 绿色 (**Color.Green**)           | 颜色  | G          |
-| ![](<../images/5-1/ColorBlue (1).jpg>)        | 蓝色 (**Color.Blue**)             | 颜色  | B          |
-| ![](<../images/5-1/ColorComponent (1).jpg>)   | 组件 (**Color.Components**) | 颜色  | A,R,G,B |
+| 图标                                              | 名称（语法）                     | 输入(Inputs) | 输出    |
+| ------------------------------------------------- | --------------------------------- | ------ | ---------- |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | 颜色  | A          |
+| ![](../images/5-1/ColorRed.jpg)                   | 红色 (**Color.Red**)               | 颜色  | R          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 绿色 (**Color.Green**)           | 颜色  | G          |
+| ![](../images/5-1/ColorBlue.jpg)                  | 蓝色 (**Color.Blue**)             | 颜色  | B          |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | 组件 (**Color.Components**) | 颜色  | A,R,G,B |
 
 下表中的颜色对应于 **HSB 颜色空间**。对于我们如何解释颜色，将颜色分为色调、饱和度和亮度无疑更加直观：应该是什么颜色？应该如何呈现多彩？颜色应该如何变亮或变暗？这分别是色调、饱和度和亮度的细分。
 
-| 图标                                         | 名称（语法）                     | 输入(Inputs) | 输出    |
+| 图标                                         | 名称（语法）                     | 输入(Inputs) | 输出 (Outputs)    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorHue (1).jpg>)        | 色调 (**Color.Hue**)               | 颜色  | 色调        |
-| ![](<../images/5-1/ColorSaturation (1).jpg>) | 饱和度 (**Color.Saturation**) | 颜色  | 饱和度 |
-| ![](<../images/5-1/ColorBrightness (1).jpg>) | 亮度 (**Color.Brightness**) | 颜色  | 亮度 |
+| ![](../images/5-1/ColorHue.jpg)              | 色调 (**Color.Hue**)               | 颜色  | 色调        |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | 饱和度 (**Color.Saturation**) | 颜色  | 饱和度 |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | 亮度 (**Color.Brightness**) | 颜色  | 亮度 |
 
 ### 颜色范围 (Color Range)
 

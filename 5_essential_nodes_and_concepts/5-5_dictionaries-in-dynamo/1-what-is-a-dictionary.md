@@ -22,11 +22,11 @@ Dynamo 2.0 引入了将词典数据类型与列表数据类型进行分隔的概
 * 库中引入了 _新节点_，以帮助您创建、修改和查询词典。
 *   加载脚本时，v1.x 代码块中创建的列表会自动迁移为使用方括号 `[ ]`（而不是大括号 `{ }`）的新列表语法 \\
 
-    ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (4).jpg>)
 
-***
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+
+
 
 ### **我为什么应该关心？您会将它们用于什么？**
 

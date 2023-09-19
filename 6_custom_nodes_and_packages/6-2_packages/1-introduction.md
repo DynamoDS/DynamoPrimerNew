@@ -1,4 +1,4 @@
-# 软件包简介 
+# 软件包简介
 
 简而言之，软件包是自定义节点集。Dynamo Package Manager 是一个社区门户，可以下载已在线发布的任何软件包。这些工具集由第三方开发，以扩展 Dynamo 的核心功能，可供所有人访问，并可以通过单击相应按钮进行下载。
 
@@ -67,7 +67,7 @@
 
 在打开该文件并点击求解器上的“运行”后，我们会得到一个展开的球体！此类示例文件有助于了解如何使用新的 Dynamo 软件包。
 
-![](<../images/6-2/5/packageintroduction-installingpackagefolder07 (1).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Dynamo Package Manager
 

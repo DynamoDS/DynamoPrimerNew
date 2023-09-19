@@ -4,7 +4,7 @@
 
 ### 向量
 
-[向量](5-2\_vectors.md#vector-1)表示大小和方向，可以将其视为以给定速度朝特定方向加速的箭头。在 Dynamo 中，它是模型的关键组件。请注意，由于它们属于“辅助对象”的“抽象”类别，因此当我们创建向量时，不希望在背景预览中看到任何内容。
+[向量](2-vectors.md#vector-1)由大小和方向表示，可以将其视为以给定速度朝特定方向加速的箭头。在 Dynamo 中，它是模型的关键组件。请注意，由于它们属于“辅助对象”的“抽象”类别，因此当我们创建向量时，不希望在背景预览中看到任何内容。
 
 ![Dynamo 中的向量](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -18,7 +18,7 @@
 
 ### 平面
 
-[平面](5-2\_vectors.md#plane-1)是二维曲面，可以将其视为无限延伸的平面。每个平面都有一个原点、X 方向、Y 方向和 Z（向上）方向。
+[平面](2-vectors.md#plane-1)是一个二维曲面，可以将其视为无限延伸的平面。每个平面都有一个原点、X 方向、Y 方向和 Z（向上）方向。
 
 ![Dynamo 中的平面](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -33,7 +33,7 @@
 
 ### 坐标系
 
-[坐标系](5-2\_vectors.md#coordinate-system-1)是用于确定点或其他几何图元位置的系统。下图介绍了它在 Dynamo 中的外观以及每种颜色所表示的含义。
+[坐标系](2-vectors.md#coordinate-system-1)是一个用于确定点或其他几何图元位置的系统。下图介绍了它在 Dynamo 中的外观以及每种颜色所表示的含义。
 
 ![Dynamo 中的坐标系](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 

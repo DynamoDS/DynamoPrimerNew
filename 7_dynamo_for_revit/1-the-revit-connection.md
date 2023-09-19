@@ -37,7 +37,7 @@ Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑
 
 {% hint style="warning" %} *Dynamo 仅在已打开的文件中运行。{% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 在 Revit 中打开 Dynamo 时，有一个名为“Revit”的新类别。这是对用户界面完全新增的功能，可提供专门针对 Revit 工作流的节点。*
 
@@ -47,7 +47,7 @@ Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑
 
 ### 冻结节点
 
-由于 Revit 是一个提供强大项目管理的平台，因此 Dynamo 中的参数化操作可能非常复杂且计算速度缓慢。如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看“实体”章节中的“[冻结](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)”部分。
+由于 Revit 是一个提供强大项目管理的平台，因此 Dynamo 中的参数化操作可能非常复杂且计算速度缓慢。如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看“实体”章节中的“[冻结](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)”部分。
 
 ### 社区和 Dynamo 博客
 

@@ -2,7 +2,7 @@
 
 在前面的各部分中，我们详细介绍了如何使用自定义节点和示例文件构建 _“MapToSurface”_ 软件包。但是，我们如何发布本地开发的软件包？本案例研究演示了如何发布由本地文件夹中的一组文件构成的软件包。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (6).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 有多个方法可以发布软件包。下面是我们建议的流程：**本地发布、本地开发，然后联机发布**。我们首先从包含软件包中所有文件的文件夹开始。
 
@@ -33,11 +33,11 @@
 > 1. 此文件夹中包含五个自定义节点 (.dyf)。
 > 2. 此文件夹中还包含五个示例文件 (.dyn) 和一个输入的矢量文件 (.svg)。这些文件将用作介绍性练习，以向用户介绍如何使用自定义节点。
 
-在 Dynamo 中，先依次单击 _“软件包”>“发布新软件包...”_
+在 Dynamo 中，先依次单击_“软件包”>“发布新软件包...”_
 
 ![](../images/6-2/4/publishapackage-publishlocally02.jpg)
 
-在 _“发布 Dynamo 软件包”_ 窗口中，已填写了窗口左侧的相关表单。
+在_“发布 Dynamo 软件包”_窗口中，已填写了窗口左侧的相关表单。
 
 ![](../images/6-2/4/publishapackage-publishlocally03.jpg)
 
@@ -47,7 +47,7 @@
 
 发布后，应该会在“DynamoPrimer”组或 Dynamo 库下提供自定义节点。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (4).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 现在，我们来查看根目录，以了解 Dynamo 如何设置刚刚创建的软件包的格式。通过依次单击“Dynamo”>“首选项”>“Package Manager”> 在“MapToSurface”旁边依次单击垂直点菜单 > 选择“显示根目录”来执行此操作
 

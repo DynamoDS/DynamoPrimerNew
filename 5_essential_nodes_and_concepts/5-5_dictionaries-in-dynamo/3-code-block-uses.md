@@ -4,7 +4,7 @@ Dynamo 2.0 不仅引入之前针对词典讨论的节点，还在代码块中提
 
 可以使用如下所示的语法或基于 DesignScript 的节点表示。
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (2).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
 
 由于词典是 Dynamo 中的对象类型，因此我们可以对其执行以下操作。
 

@@ -4,7 +4,8 @@
 
 本手册的目的是帮助您了解 Dynamo 的 C# 开发可能性范围，从如何创建 Zero-Touch 节点到构建扩展。
 
-![GitHub 上的 Dynamo 源代码](images/dynamogithub.jpg)
+![GitHub 上的 Dynamo 源代码](../1-introduction/images/dynamogithub.jpg)
+
 > GitHub 上的 Dynamo 源代码
 
 #### 我们还提供了哪些其他开发人员资源？<a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

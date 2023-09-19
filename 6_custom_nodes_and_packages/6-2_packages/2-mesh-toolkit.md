@@ -2,13 +2,13 @@
 
 Dynamo Mesh Toolkit 包提供了多种工具，可从外部文件格式输入网格、从 Dynamo 几何体对象创建网格，以及按顶点和索引手动构建网格。该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。
 
-![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未来几年内将继续增长。希望新方法经常出现在工具包中，您可以随时与 Dynamo 团队联系并提供评论、错误和新功能建议。
 
 ### 网格与实体
 
-以下练习演示了使用 Mesh Toolkit 的一些基本网格操作。在该练习中，我们将网格与一系列平面相交，这可能需要使用实体进行大量的计算。与实体不同，网格有设置的“分辨率”，且不是以数学方式而是以拓扑方式定义，我们可以基于手头的任务定义此分辨率。有关网格与实体关系的详细信息，可参见本入门中的[“用于计算设计的几何图形”](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/)一章。要更全面的了解 Mesh Toolkit，可以参见 [Dynamo Wiki 页面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)。接下来，我们跳至下面练习中的软件包。
+以下练习演示了使用 Mesh Toolkit 的一些基本网格操作。在该练习中，我们将网格与一系列平面相交，这可能需要使用实体进行大量的计算。与实体不同，网格有设置的“分辨率”，且不是以数学方式而是以拓扑方式定义，我们可以基于手头的任务定义此分辨率。有关网格与实体关系的详细信息，可参考本 Primer 中的[“用于计算设计的几何图形”](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/)一章。要更全面的了解 Mesh Toolkit，可以参见 [Dynamo Wiki 页面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)。接下来，我们跳至下面练习中的软件包。
 
 ### 安装 Mesh Toolkit
 

@@ -23,7 +23,7 @@
 > 2. “输入”组（橙色）
 > 3. “脚本”组（绿色）
 >
-> 有关如何使用组的信息，请参见[管理程序](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)。
+> 有关如何使用组的信息，请参见[管理程序](https://primer2.dynamobim.org/v/zh-cn/9_best_practices/4-managing-your-program)。
 
 ### **使用代码块高效开发**
 
@@ -37,7 +37,7 @@
 > 1. 以代码块形式编写的设计脚本
 > 2. 节点中的等效程序
 >
-> 有关如何使用代码块的信息，请参见[什么是代码块](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md)。
+> 有关如何使用代码块的信息，请参见[什么是代码块](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md)。
 
 ### **使用“节点到代码”压缩**
 
@@ -58,21 +58,21 @@
 > 1. 现有程序
 > 2. 基于“节点到代码”创建的代码块
 >
-> 有关如何使用“节点到代码”的信息，请参见[设计脚本语法](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code)。
+> 有关如何使用“节点到代码”的信息，请参见[设计脚本语法](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)。
 
 ### **使用 List@Level 灵活访问数据**
 
 * 使用 List@Level，可以**通过替换 List.Map 和 List.Combine 节点降低图形的复杂性**，这可能会占用大量画布空间
 * List@Level 通过允许从节点的输入端口访问列表中任何级别的数据，从而为您提供了一种**快于 List.Map/List.Combine 的方法来构建节点逻辑**
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > 我们可以通过为 CountTrue 的“列表”输入激活 List@Level，来验证 BoundingBox.Contains 返回的 True 值数以及具体列表。List@Level 允许用户确定输入从哪个级别获取数据。与其他涉及 List.Map 和 List.Combine 的方法相比，使用 List@Level 灵活、高效并且强烈建议采用。
 >
 > 1. 计算列表级别 2 的 True 值
 > 2. 计算列表级别 3 的 True 值
 >
-> 有关如何使用 List@Level 的信息，请参见[列表的列表](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level)。
+> 有关如何使用 List@Level 的信息，请参见[列表的列表](https://primer2.dynamobim.org/v/zh-cn/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists)。
 
 ## 保持可读性
 
@@ -84,12 +84,12 @@
 * 如果其他人将要使用您的图形，则应**确保“节点-线”布局在发布之前轻松流动**
 * 为了帮助您进行对齐，请**使用“清理节点布局”功能自动对齐**您的图形，尽管不如您自己做的精确
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. 未组织的图形
 > 2. 对齐的图形
 >
-> 有关如何使用“节点对齐”的信息，请参见 [管理程序](3-4\_best\_practices.md)。
+> 有关如何使用“节点对齐”的信息，请参见[管理程序](4-managing-your-program.md)。
 
 ### **通过重命名进行描述性标记**
 
@@ -114,11 +114,11 @@
 > 1. 描述程序中返回原始平移距离的部分的注释
 > 2. 描述将这些值映射到正弦波的代码的注释
 >
-> 有关如何添加注释的信息，请参见[管理程序](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)。
+> 有关如何添加注释的信息，请参见[管理程序](https://primer2.dynamobim.org/v/zh-cn/9_best_practices/4-managing-your-program)。
 
 ## 连续调整
 
-构建可视化脚本时，请务必验证返回的内容是否符合您的预期。并非所有错误或问题都会导致程序立即停止运行，尤其是可能影响远距下游内容的 Null 值或零值。在[脚本编写策略](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html)中的文本脚本编写上下文中也讨论了此策略。以下练习有助于确保获得预期的效果。
+构建可视化脚本时，请务必验证返回的内容是否符合您的预期。并非所有错误或问题都会导致程序立即停止运行，尤其是可能影响远距下游内容的 Null 值或零值。在[脚本编写策略](2-scripting-strategies.md)中的文本脚本编写上下文中也讨论了此策略。以下练习有助于确保获得预期的效果。
 
 ### **使用“观察”和“预览”气泡监视数据**
 
@@ -131,7 +131,7 @@
 > 1. 原始平移距离
 > 2. 通过正弦方程传递的值
 >
-> 有关如何使用“Watch”的信息，请参见[库](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html)。
+> 有关如何使用“Watch”的信息，请参见[库](../3\_user\_interface/2-library.md)。
 
 ## 确保可重用性
 
@@ -147,7 +147,7 @@
 * 如果有**要嵌入到图形中的特定选项或条件**，则应使用预设进行快速访问
 * 还可以使用预设来**通过缓存特定滑块值降低复杂性**（在时间运行较长的图形中）
 
-> 有关如何使用预设的信息，请参见[使用预设管理数据](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html)。
+> 有关如何使用预设的信息，请参见[使用预设管理数据](1-graph-strategies.md#use-presets-to-embed-input-values)。
 
 ### **包含具有自定义节点的程序**
 
@@ -162,7 +162,7 @@
 > 1. 现有吸引器程序
 > 2. 收集此程序的自定义节点 PointGrid
 >
-> 有关如何使用自定义节点的信息，请参见[自定义节点简介](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html)。
+> 有关如何使用自定义节点的信息，请参见[自定义节点简介](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md)。
 
 ### **构建模板**
 

@@ -1,4 +1,4 @@
-# 为 Dynamo 开发 
+# 为 Dynamo 开发
 
 无论用户的经验水平如何，Dynamo 平台是专为所有用户设计的，旨在使他们都能够成为参与者。有多个针对不同能力和技能水平的开发选项，每个选项都有其优势和劣势，具体取决于目标。下面，我们将概述不同的选项以及如何选择其中一个。
 
@@ -18,7 +18,7 @@ Dynamo 的开发选项主要分为两类：_for_（面向）Dynamo 与 _in_（�
 * NodeModel 派生节点
 * 扩展
 
-> 本 Primer 提供了有关[输入 Zero-Touch 库](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch)的指南。
+> 本 Primer 提供了有关[输入 Zero-Touch 库](https://primer2.dynamobim.org/v/zh-cn/6_custom_nodes_and_packages/6-2_packages/5-zero-touch)的指南。
 
 在下面的讨论中，Visual Studio 将用作 Zero-Touch 和 NodeModel 节点的开发环境。
 
@@ -28,17 +28,17 @@ Dynamo 的开发选项主要分为两类：_for_（面向）Dynamo 与 _in_（�
 
 #### In（使用）Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
-尽管这些过程存在于可视化编程工作空间中并且相对简单，但它们都是用于自定义 Dynamo 的可行选项。本 Primer 涵盖了这些过程，并在[脚本编写策略](http://dynamoprimer.com/en/12\_Best-Practice/12-1\_Scripting-Strategies.html)一章中提供了脚本编写技巧和最佳实践。
+尽管这些过程存在于可视化编程工作空间中并且相对简单，但它们都是用于自定义 Dynamo 的可行选项。本 Primer 涵盖了这些内容，并在[脚本编写策略](../../9\_best\_practices/2-scripting-strategies.md)一章中提供了脚本编写技巧和最佳实践。
 
 *   代码块会在可视化编程环境中显示 DesignScript，从而支持灵活的文本脚本和节点工作流。代码块中的函数可由工作空间中的任何对象调用。
 
-    > 下载代码块示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html) 中查看详细漫游。
+    > 下载代码块示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer2.dynamobim.org/v/zh-cn/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block) 中查看详细漫游。
 *   自定义节点是节点集合甚至整个图形的容器。它们是收集常用例程并与社区共享这些例程的有效方式。
 
-    > 下载自定义节点示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html) 中查看详细漫游。
+    > 下载自定义节点示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer2.dynamobim.org/v/zh-cn/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction) 中查看详细漫游。
 *   Python 节点是可视化编程工作空间中的脚本接口，类似于代码块。Autodesk.DesignScript 库使用与 DesignScript 类似的点表示法。
 
-    > 下载 Python 节点示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html) 中查看详细漫游。
+    > 下载 Python 节点示例（单击鼠标右键，然后单击“另存为”），或在 [Primer](https://primer2.dynamobim.org/v/zh-cn/8_coding_in_dynamo/8-3_python) 中查看详细漫游。
 
 在 Dynamo 工作空间中开发是获得即时反馈的强大工具。
 
@@ -70,7 +70,7 @@ Dynamo 的开发选项旨在解决自定义需求的复杂性。无论目标是�
 
 使用此方法，我们可以：
 
-* 输入不一定是为 Dynamo 开发的库，并自动创建一组新节点，如 Primer 中的 [A-Forge 示例](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html)
+* 输入一个不一定是为 Dynamo 开发的库，并自动创建一组新节点（如本 Primer 中的 [A-Forge 示例](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge)）
 * 编写 C# 方法，并在 Dynamo 中轻松将这些方法用作节点
 * 通过软件包将 C# 库作为节点与 Dynamo 社区共享
 
