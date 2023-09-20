@@ -4,7 +4,7 @@
 
 ### 曲線とは
 
-ジオメトリ データ タイプには複数のタイプがありますが、最初に[曲線](5-4\_curves.md#curve)について説明します。曲線には、曲がっているか、まっすぐか、長いか、短いかなど、その形状を表す一連のプロパティが存在します。線分からスプライン曲線まで、すべての曲線タイプは点という構成要素で定義されることに注意してください。
+ジオメトリ データ タイプには複数のタイプがありますが、最初に[曲線](4-curves.md#deep-dive-into...)について説明します。曲線には、曲がっているか、まっすぐか、長いか、短いかなど、その形状を表す一連のプロパティが存在します。線分からスプライン曲線まで、すべての曲線タイプは点という構成要素で定義されることに注意してください。
 
 ![曲線タイプ](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@
 
 ### 線分
 
-[線分](5-4\_curves.md#lines)はポイントのセットで構成され、各ラインには最低 2 つのポイントがあります。Dynamo で線分を作成する最も一般的な方法の 1 つは、`Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) を使用して Dynamo で線分を作成することです。
+[線分](4-curves.md#lines)はポイントのセットで構成され、各ラインには最低 2 つのポイントがあります。Dynamo で線分を作成する最も一般的な方法の 1 つは、`Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) を使用して Dynamo で線分を作成することです。
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS 曲線
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) は、曲線やサーフェスを正確に表現するために使用されるモデルです。NURBS 曲線の作成には 2 つ方法があります。それぞれの方法で Dynamo で正弦曲線を作成し、結果を比較してみましょう。
+[NURBS](4-curves.md#nurbs-+-polycurves) は、曲線やサーフェスを正確に表現するために使用されるモデルです。NURBS 曲線の作成には 2 つ方法があります。それぞれの方法で Dynamo で正弦曲線を作成し、結果を比較してみましょう。
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

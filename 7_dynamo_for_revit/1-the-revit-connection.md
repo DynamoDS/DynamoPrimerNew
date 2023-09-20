@@ -37,7 +37,7 @@ Revit プロジェクトやファミリ エディタで、[アドイン]タブ�
 
 {% hint style="warning" %} *Dynamo は、Dynamo を起動したファイル内でのみ実行されることに注意してください。 {% endhint %}
 
-![](<../2_setup_for_dynamo/images/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Revit で Dynamo を起動すると、Dynamo のライブラリ内に[Revit]という新しいカテゴリが表示されます。この新しいカテゴリから、Revit ワークフロー専用のノードにアクセスすることができます。
 
@@ -47,7 +47,7 @@ Revit で Dynamo を起動すると、Dynamo のライブラリ内に[Revit]と�
 
 ### ノードのフリーズ
 
-Revit は堅牢なプロジェクト管理を提供するプラットフォームであるため、場合によっては Dynamo のパラメータ操作が複雑になり、計算速度が低下することがあります。Dynamo によるノード計算で時間がかかる場合は、ノードを「フリーズ」する機能を使用して、グラフの開発中に Revit 関連操作の実行を停止することができます。ノードをフリーズする操作の詳細については、「ソリッド」の章の「[フリーズ](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)」セクションを参照してください。
+Revit は堅牢なプロジェクト管理を提供するプラットフォームであるため、場合によっては Dynamo のパラメータ操作が複雑になり、計算速度が低下することがあります。Dynamo によるノード計算で時間がかかる場合は、ノードを「フリーズ」する機能を使用して、グラフの開発中に Revit 関連操作の実行を停止することができます。ノードをフリーズする操作の詳細については、「ソリッド」の章の「[フリーズ](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)」セクションを参照してください。
 
 ### コミュニティと Dynamo ブログ
 

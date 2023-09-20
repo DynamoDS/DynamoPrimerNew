@@ -23,7 +23,7 @@ Dynamo のメッシュ機能は、[Mesh Toolkit](https://github.com/DynamoDS/Dyn
 
 このライブラリには、メッシュの変更や修復を行うためのツールや、製造処理で使用する水平方向のスライスを抽出するためのツールも用意されています。
 
-このパッケージの使用例については、「[Mesh Toolkit のケース スタディ](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)」を参照してください。
+このパッケージの使用例については、「[Mesh Toolkit のケース スタディ](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)」を参照してください。
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

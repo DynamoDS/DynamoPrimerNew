@@ -17,12 +17,12 @@ Zero-Touch により、Dynamo 用に開発されたものではないライブ�
 
 Zero-touch パッケージは、ユーザが定義するカスタム ノードを補完するパッケージです。次の図は、C# ライブラリを使用するいくつかのパッケージを示しています。パッケージの詳細については、付録の「[パッケージ](../../a\_appendix/a-3\_packages.md)」セクションを参照してください。
 
-| **ロゴ/イメージ**                                                         | **名前**                                                                    |
-| ---------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| ![](../images/6-2/2/meshToolkitcasestudy01.jpg)                        | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| ![](../images/6-2/1/packageintroduction-installingpackagefolder07.jpg) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
-| ![](../images/6-2/5/rhynamo.jpg)                                       | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
-| ![](../images/6-2/5/optimo.jpg)                                        | [Optimo](https://github.com/BPOpt/Optimo)                                   |
+| **ロゴ/イメージ**                                                                   | **名前**                                                                    |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| \![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| \![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](../images/6-2/5/rhynamo.jpg)                                                 | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
+| ![](../images/6-2/5/optimo.jpg)                                                  | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
 ## ケース スタディ - AForge の読み込み
 

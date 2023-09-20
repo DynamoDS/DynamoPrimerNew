@@ -1,10 +1,11 @@
-# 開発者向け Primer 
+# 開発者向け Primer
 
 #### このガイドの目的について <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
 このガイドは、Dynamo で Zero-Touch ノードを作成する方法から、拡張機能を構築する方法まで、C# 開発のさまざまな可能性の概要を説明することを目的としています。
 
-![GitHub の Dynamo ソース](images/dynamogithub.jpg)
+![GitHub の Dynamo ソース](../1-introduction/images/dynamogithub.jpg)
+
 > GitHub の Dynamo ソース
 
 #### 追加で提供される開発者向けリソースとは <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

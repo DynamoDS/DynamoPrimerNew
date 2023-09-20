@@ -9,4 +9,4 @@
 * [パラメータを使用する花瓶](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [アトラクタ ポイント](10-1\_getting-started-workflows/2-attractor-points.md)
 
-また、[概念インデックス](table-of-summary-for-some-concept-used-in-previous-exercises.md)を使用して、ワークフローで導入された概念を探すことができます。
+また、[概念インデックス](10-2\_concept-index.md)を使用して、ワークフローで導入された概念を探すことができます。

@@ -4,7 +4,7 @@ Dynamo 2.0 では、これまでに説明したディクショナリのノード
 
 次のような構文、つまりノードの DesignScript ベースの表現を使用できます。
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (2).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
 
 ディクショナリは Dynamo のオブジェクト タイプであるため、次のアクションを実行できます。
 

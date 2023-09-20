@@ -8,7 +8,7 @@
 
 #### オプションの選び方について <a href="#what-are-my-options" id="what-are-my-options"></a>
 
-Dynamo の開発オプションは、主に Dynamo  _向け_ の開発と、Dynamo _で_ の開発の 2 つに分類されます。この 2 つのカテゴリは、Dynamo IDE を使用して作成されたコンテンツを Dynamo で使用する「Dynamo での開発」と、外部ツールを使用して作成されたコンテンツを Dynamo に読み込んで使用する「Dynamo 向けの開発」を意味します。このガイドでは、Dynamo _向け_ の開発に焦点を当てていますが、すべてのプロセスのリソースについて以下で説明します。
+Dynamo の開発オプションは、主に Dynamo 向け__の開発と、Dynamo __での開発の 2 つに分類されます。この 2 つのカテゴリは、Dynamo IDE を使用して作成されたコンテンツを Dynamo で使用する「Dynamo での開発」と、外部ツールを使用して作成されたコンテンツを Dynamo に読み込んで使用する「Dynamo 向けの開発」を意味します。このガイドでは、__Dynamo 向けの開発に焦点を当てていますが、すべてのプロセスのリソースについて以下で説明します。
 
 #### Dynamo 向けの開発<a href="#for-dynamo" id="for-dynamo"></a>
 
@@ -18,7 +18,7 @@ Dynamo の開発オプションは、主に Dynamo  _向け_ の開発と、Dyna
 * NodeModel 派生ノード
 * 拡張機能
 
-> Primer には、[Zero-Touch ライブラリをインポートする](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/5-zero-touch)ための手順が記載されています。
+> Primer には、[Zero-Touch ライブラリをインポートする](https://primer2.dynamobim.org/v/ja/6_custom_nodes_and_packages/6-2_packages/5-zero-touch)ための手順が記載されています。
 
 次の説明では、Zero-Touch ノードおよび NodeModel ノードの開発環境として Visual Studio を使用します。
 
@@ -28,17 +28,17 @@ Dynamo の開発オプションは、主に Dynamo  _向け_ の開発と、Dyna
 
 #### Dynamo での開発<a href="#in-dynamo" id="in-dynamo"></a>
 
-これらのプロセスはビジュアル プログラミング ワークスペース内に存在し、比較的単純ですが、すべてが Dynamo をカスタマイズするための有用なオプションです。Primer ではこれらの内容を広範囲にカバーし、「[スクリプト作成のガイドライン](http://dynamoprimer.com/en/12\_Best-Practice/12-1\_Scripting-Strategies.html)」の章では、スクリプトのヒントとベスト プラクティスについて説明します。
+これらのプロセスはビジュアル プログラミング ワークスペース内に存在し、比較的単純ですが、すべてが Dynamo をカスタマイズするための有用なオプションです。Primer ではこれらの内容を広範囲にカバーし、「[スクリプト作成のガイドライン](../../9\_best\_practices/2-scripting-strategies.md)」の章では、スクリプトのヒントとベスト プラクティスについて説明します。
 
 *   Code Block はビジュアル プログラミング環境で DesignScript を公開し、柔軟なテキスト スクリプトとノード ワークフローを可能にします。Code Block の関数は、ワークスペース内の任意の機能から呼び出すことができます。
 
-    > Code Block サンプルをダウンロードする(右クリックして名前を付けて保存する)か、[Primer](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html) で詳細な手順を確認してください。
+    > Code Block サンプルをダウンロードする(右クリックして名前を付けて保存する)か、[Primer](https://primer2.dynamobim.org/v/ja/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block) で詳細な手順を確認してください。
 *   カスタム ノードは、ノードの集合体またはグラフ全体のコンテナです。頻繁に使用するルーチンを収集し、コミュニティと共有するための効果的な手段です。
 
-    > カスタム ノードのサンプルをダウンロードする(右クリックして名前を付けて保存する)か、[Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html) で詳細な手順を確認してください。
+    > カスタム ノードのサンプルをダウンロードする(右クリックして名前を付けて保存する)か、[Primer](https://primer2.dynamobim.org/v/ja/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction) で詳細な手順を確認してください。
 *   Python ノードは、Code Block と同様の働きをするビジュアル プログラミング ワークスペースのスクリプト インタフェースです。Autodesk.DesignScript ライブラリでは、DesignScript と同様のドット表記を使用します。
 
-    > Python ノードのサンプルをダウンロードする(右クリックして名前を付けて保存する)か、[Primer](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html) で詳細な手順を確認してください。
+    > Python ノードのサンプルをダウンロードする(右クリックして名前を付けて保存する)か、[Primer](https://primer2.dynamobim.org/v/ja/8_coding_in_dynamo/8-3_python) で詳細な手順を確認してください。
 
 Dynamo ワークスペースでの開発は、即座にフィードバックが得られる強力な手段です。
 
@@ -70,7 +70,7 @@ Zero-Touch とは、C# ライブラリを読み込むための単純なポイン
 
 この方法では、次の操作が可能になります。
 
-* Primer の「[A-Forge の例](http://dynamoprimer.com/en/10\_Packages/10-5\_Zero-Touch.html)」のように、必ずしも Dynamo 用に開発されたのではないライブラリを読み込み、一連の新しいノードを自動的に作成します。
+* Primer の「[A-Forge の例](../../6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md#case-study-importing-aforge)」のように、必ずしも Dynamo 用に開発されたのではないライブラリを読み込み、一連の新しいノードを自動的に作成します。
 * C# メソッドを記述し、Dynamo でノードとして簡単に使用することができます。
 * パッケージ内の Dynamo コミュニティで C# ライブラリをノードとして共有できます。
 

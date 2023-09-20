@@ -1,4 +1,4 @@
-# この Web サイトについて 
+# この Web サイトについて
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
@@ -51,6 +51,18 @@ Dynamo Primer の初版は、**Mode Lab** によって作成されました。�
 
 ![](images/matterlab\_final-07.jpg)
 
+***
+
+**Archilizer** では依頼により、Dynamo 2.17 の改訂を反映するよう Primer を更新しました。
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+**Wood Rodgers** では依頼により、Dynamo for Civil 3D のコンテンツを使用して Primer を更新しました。
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
+
 ### 謝辞
 
 Dynamo プロジェクトの創立と指揮に携わった Ian Keough 氏に、深く感謝いたします。
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### License
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at
 

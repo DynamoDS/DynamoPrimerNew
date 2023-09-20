@@ -1,4 +1,4 @@
-# Dynamo 2.x 用のパッケージと Dynamo ライブラリを更新する 
+# Dynamo 2.x 用のパッケージと Dynamo ライブラリを更新する
 
 ### はじめに: <a href="#introduction" id="introduction"></a>
 
@@ -10,7 +10,7 @@ UI ノードと、NodeModel から直接派生したノードを 2.x で実行�
 
 また、拡張機能作成者は、拡張機能で使用する Dynamo Core API の数によっては、変更が必要になる可能性があります。
 
-***
+
 
 ### 一般的なパッケージ化のルール: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -18,8 +18,6 @@ UI ノードと、NodeModel から直接派生したノードを 2.x で実行�
 * 可能な限り、パッケージに `newtonsoft.json.net` をバンドルして配布しないでください。この dll は、Dynamo 2.x によってもすでにロードされています。先ほどと同じ問題が発生する可能性があります。
 * 可能な限り、パッケージに `CEFSharp` をバンドルして配布しないでください。この dll は、Dynamo 2.x によってもすでにロードされています。先ほどと同じ問題が発生する可能性があります。
 * 一般的に、依存関係のバージョンを制御する必要がある場合は、Dynamo や Revit との依存関係を共有することは避けてください。
-
-
 
 ### 一般的な問題: <a href="#common-issues" id="common-issues"></a>
 
@@ -39,7 +37,6 @@ UI ノードと、NodeModel から直接派生したノードを 2.x で実行�
 
 * これは、何らかの理由でシリアル化解除に失敗した場合に発生する可能性があります。必要なプロパティのみをシリアル化することをお勧めします。ロードや保存を必要としない複雑なプロパティに対して `[JsonIgnore]` を使用して、それらを無視することができます。`function pointer, delegate, action,` や `event` などのプロパティです。これらはシリアル化できないため、シリアル化解除に失敗し、ランタイム エラーが発生します。
 
-
 ### 詳細なアップグレード: <a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### カスタム ノード 1.3 > 2.0<a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
@@ -52,13 +49,11 @@ UI ノードと、NodeModel から直接派生したノードを 2.x で実行�
 * コメントは、行コメントではなくブロック コメントに変換されます。
 * ショート タイプ名はフル ネームに置き換えられます。たとえば、カスタム ノードを再ロードするときにタイプを指定しなかった場合、`var[]..[]` - が既定のタイプとして表示されます。
 
-
 ### Zero-Touch ノード 1.3 -> 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * Dynamo 2.0 では、リストとディクショナリのタイプが分割され、リストとディクショナリを作成するための構文が変更されました。リストは `[]` を使用して初期化され、ディクショナリは `{}` を使用して初期化されます。\
 以前に `DefaultArgument` 属性を使用して Zero-Touch ノードのパラメータをマークし、`someFunc([DefaultArgument("{0,1,2}")])` リスト構文を使用して特定のリストを既定として使用していた場合は、これは無効になり、リストに新しい初期化構文を使用するように DesignScript スニペットを変更する必要があります。
 * 前述ように、パッケージに Dynamo の dll を含めて配布しないでください。(`DynamoCore`、`DynamoServices` など)
-
 
 ### ノード モデル ノード 1.3 -> 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ UI ノードと、NodeModel から直接派生したノードを 2.x で実行�
 
 コンストラクタのパラメータの名前は、通常 JSON プロパティの名前と一致させる必要があります。ただし、[JsonProperty]属性を使用してシリアル化された名前を上書きすると、このマッピングはより複雑になります。\
 [詳細については、Json.net ドキュメントを参照してください。](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### JSON コンストラクタ <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,7 +88,6 @@ JSON コンストラクタは、JSON ロード ロジックによって提供さ
 
 サンプルについては、DynamoSamples リポジトリの [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156)、[DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23)、または [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123) を参照してください。
 
-
 #### パブリック プロパティとシリアル化 <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
 これまでは、開発者は `SerializeCore` および `DeserializeCore` メソッドを使用して、特定のモデル データを xml ドキュメントにシリアル化およびシリアル化解除できました。これらのメソッドは、API に引き続き存在しますが、Dynamo の将来のリリースでは廃止される予定です(サンプルについては、[こちら](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)を参照してください)。現在、JSON.NET が実装されたことで、NodeModel 派生クラスの `public` プロパティを、.dyn ファイルに直接シリアル化できるようになりました。JSON.Net には、プロパティをシリアル化する方法をコントロールするための複数の属性があります。
@@ -104,7 +97,6 @@ JSON コンストラクタは、JSON ロード ロジックによって提供さ
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### コンバータ: <a href="#converters" id="converters"></a>
 
@@ -117,17 +109,15 @@ JSON コンストラクタは、JSON ロード ロジックによって提供さ
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### プロパティを無視する <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 シリアル化を意図していない `public` プロパティには、`[JsonIgnore]` 属性を追加する必要があります。ノードを .dyn ファイルに保存すると、そのデータはシリアル化メカニズムによって無視されることが確実となり、グラフを再度開いたときに予期しない結果となることがなくなります。このサンプルについては Dynamo のリポジトリの[こちら](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45)を参照してください。
 
-***
+
 
 #### 元に戻す/やり直し<a href="#undoredo" id="undoredo"></a>
 
 すでに述べたように、`SerializeCore` および `DeserializeCore` メソッドは、以前 xml .dyn ファイルにノードを保存およびロードするために使用されていました。また、元に戻す/やり直し用のノード状態を保存およびロードする場合にも使用されていて、**現在も使用可能**です。nodeModel UI ノードに対して複雑な元に戻す/やり直し機能を実装する場合は、これらのメソッドを実装し、これらのメソッドのパラメータとして提供されるXML ドキュメント オブジェクトにシリアル化する必要があります。これは、複雑な UI ノードを除いて、まれな使用事例です。
-
 
 #### 入力および出力ポート API <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
@@ -142,7 +132,6 @@ vs
 変換されたコードのサンプルについては、Dynamo リポジトリの [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) または [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281) を参照してください。
 
 2.0 API の変更によって影響を受ける、その他の共通使用例は、ポート コネクタの有無に基づいてノードの動作を決定する手法で一般的に使用されている `BuildAst()` メソッドに関連するものです。以前は、接続ポートの状態を確認するために `HasConnectedInput(index)` が使用されていました。今後開発者は、`InPorts[0].IsConnected` プロパティを使用してポートの接続状態を確認する必要があります。これに関するサンプルは、Dynamo リポジトリの [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) を参照してください。
-
 
 ### サンプル <a href="#examples" id="examples"></a>
 
