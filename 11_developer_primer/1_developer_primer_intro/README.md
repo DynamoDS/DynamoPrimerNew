@@ -1,10 +1,11 @@
-# Developer Primer 
+# Developer Primer
 
 #### 本指南的目的是什麼？<a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
 本指南的目的是協助您瀏覽使用 C# 開發 Dynamo 的可能範圍，從如何建立 zero-touch 節點到建立延伸。
 
-![Github 上的 Dynamo 原始碼](images/dynamogithub.jpg)
+![Github 上的 Dynamo 原始碼](../1-introduction/images/dynamogithub.jpg)
+
 > GitHub 上的 Dynamo 原始碼
 
 #### 我們提供哪些額外的開發資源？<a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>

@@ -96,7 +96,7 @@
 
 **List.Map/Combine** 會對輸入清單套用一個設定好的函數，但下一階層的清單。組合與對映相同，只是組合可以有多個輸入對應於給定函數的輸入。
 
-_注意：此練習使用舊版本的 Dynamo 建立。大部分 _**List.Map**_ 功能已透過增加 _**List@Level**_ 功能解決。如需更多資訊，請參閱以下的 _[_List@Level_](6-3\_lists-of-lists.md#listlevel)_。_
+_注意：此練習使用舊版本的 Dynamo 建立。大部分 _**List.Map**_ 功能已透過增加 _**List@Level**_ 功能解決。如需更多資訊，請參閱以下的_ [_List@Level_](3-lists-of-lists.md#lists-of-lists)_。_
 
 我們回顧上一節的 **List.Count** 節點來快速介紹。
 
@@ -276,7 +276,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. 採用相同的邏輯，使用 **List.ReplaceItemAtIndex** 將中間清單更換為我們修改後的清單。
-> 2. 請注意，對這兩個節點定義索引的 **Code Block** 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
+> 2. 請注意，對這兩個節點定義索引的 **Code Block** __ 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
 > 3. 透過選取位於 _索引 1_ 的清單，我們可以在 Dynamo 預覽中看到亮顯的資料結構。我們已成功將移動點合併至原始資料結構中。
 
 有許多方式可以使用這組點建立曲面。在此案例中，我們將對曲線進行斷面混成，以建立曲面。

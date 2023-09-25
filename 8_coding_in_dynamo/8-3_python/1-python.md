@@ -1,6 +1,6 @@
 # Python 節點
 
-為什麼要在 Dynamo 的視覺程式設計環境中使用文字程式設計？[視覺程式設計](../../a\_appendix/visual-programming-and-dynamo.md)有許多優點。您可藉此在直覺的視覺介面中建立程式，不必學習特殊語法。但是，視覺程式可能會變得雜亂，有時會缺少功能。例如，Python 為編寫條件陳述式 (if/then) 及迴圈提供更容易達到目標的方法。Python 是功能強大的工具，可以延伸 Dynamo 的功能，您可藉此使用幾行簡潔的程式碼來取代許多節點。
+為什麼要在 Dynamo 的視覺程式設計環境中使用文字程式設計？[視覺程式設計](../../a\_appendix/a-1\_visual-programming-and-dynamo.md)有許多優點。您可藉此在直覺的視覺介面中建立程式，不必學習特殊語法。但是，視覺程式可能會變得雜亂，有時會缺少功能。例如，Python 為編寫條件陳述式 (if/then) 及迴圈提供更容易達到目標的方法。Python 是功能強大的工具，可以延伸 Dynamo 的功能，您可藉此使用幾行簡潔的程式碼來取代許多節點。
 
 **視覺程式：**
 
@@ -56,7 +56,7 @@ OUT = solids
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/8-2/1/Python_Custom-Node.dyn" %}
 
@@ -171,7 +171,7 @@ OUT = solids
 
 ![](../images/8-3/1/pythonnode-exerciseptI-06.jpg)
 
-``` py
+```py
 # Load the Python Standard and DesignScript Libraries
 import sys
 import clr

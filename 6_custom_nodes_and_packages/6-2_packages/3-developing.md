@@ -1,10 +1,10 @@
 # 開發套件
 
-Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群分享。在以下研究的案例中，我們將瞭解如何透過解構既有的套件以設置套件。此案例研究以上一章的課程為基礎，會提供一組自訂節點，以便在 Dynamo 曲面之間依 UV 座標對映幾何圖形。
+Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群分享。在以下案例研究中，我們將瞭解如何透過解構既有的套件以設置套件。此案例研究以上一章的課程為基礎，會提供一組自訂節點，以便在 Dynamo 曲面之間依 UV 座標對映幾何圖形。
 
 ## MapToSurface 套件
 
-我們將使用的範例套件會演示曲面之間點的 UV 對映。我們已在此手冊的[建立自訂節點](../10\_custom-nodes/10-2\_creating.md)一節中建置了工具的基礎內容。以下檔案將示範我們如何利用 UV 對映的概念，以及如何為可發佈資源庫開發一組工具。
+我們將使用的範例套件會演示曲面之間點的 UV 對映。我們已在此手冊的[建立自訂節點](../6-1\_custom-nodes/2-creating.md)一節中建置了工具的基礎內容。以下檔案將示範我們如何利用 UV 對映的概念，以及如何為可發佈資源庫開發一組工具。
 
 在此影像中，我們將使用 UV 座標在曲面之間對映點。套件以此概念為基礎，但具有更複雜的幾何圖形。
 
@@ -20,7 +20,7 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 安裝後，「Add-ons」>「Dynamo Primer」區段下應該會出現自訂節點。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 現在已安裝套件，接下來瞭解其設置方式。
 
@@ -30,7 +30,7 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 這是具有五個自訂節點的簡單套件。在以下步驟中，我們將簡要討論每個自訂節點的設置。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (3).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -74,7 +74,7 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 #### **01-PanelingWithPolygons**
 
-此範例檔案示範如何根據矩形的格線使用 _PointsToSurface_ 將曲面平板化。這看起來應該很熟悉，因為我們在[上一章](../10\_custom-nodes/10-2\_creating.md)示範了類似的工作流程。
+此範例檔案示範如何根據矩形的格線使用 _PointsToSurface_ 將曲面平板化。這看起來應該很熟悉，因為我們在[上一章](../6-1\_custom-nodes/2-creating.md)示範了類似的工作流程。
 
 ![](../images/6-2/3/developpackage-samplefile01.jpg)
 

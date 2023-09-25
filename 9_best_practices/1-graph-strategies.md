@@ -23,7 +23,7 @@
 > 2. 輸入群組 (橘色)
 > 3. 腳本群組 (綠色)
 >
-> 若要瞭解如何使用群組，請參閱[管理您的程式](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)。
+> 若要瞭解如何使用群組，請參閱[管理您的程式](https://primer2.dynamobim.org/v/zh-tw/9_best_practices/4-managing-your-program)。
 
 ### **使用 Code Block 有效率地開發**
 
@@ -37,18 +37,18 @@
 > 1. 使用 Code Block 撰寫的 DesignScript
 > 2. 節點中的相等程式
 >
-> 若要瞭解如何使用 Code Block，請參閱[什麼是 Code Block](../coding-in-dynamo/7\_code-blocks-and-design-script/7-1\_what-is-a-code-block.md)。
+> 若要瞭解如何使用 Code Block，請參閱[什麼是 Code Block](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md)。
 
-### **使用「要編碼的節點」進行濃縮**
+### **使用「將節點轉換為程式碼」進行濃縮**
 
-* 您可以**使用「要編碼的節點」減低圖表的複雜性**，它會收集簡單的節點，並在一個 Code Block 裡寫入與其對應的 DesignScript。
-* 「要編碼的節點」可以濃縮程式碼，而不會減低程式的清晰度**
-* 以下是使用「要編碼的節點」的**優點**：
+* 您可以**使用「將節點轉換為程式碼」減低圖表的複雜性**，它會收集簡單的節點，並在一個 Code Block 裡寫入與其對應的 DesignScript。
+* 「將節點轉換為程式碼」可以**濃縮程式碼，而不會減低程式的清晰度**
+* 以下是使用「將節點轉換為程式碼」的**優點**：
   * 輕鬆地將程式碼濃縮為仍可編輯的元件
   * 可以簡化圖表的重要部分
   * 如果不會對「小型程式」進行頻密的編輯，它將會很有用處
   * 適合用來整合其他程式碼區塊功能，例如函數
-* 以下是使用「要編碼的節點」的**缺點**：
+* 以下是使用「將節點轉換為程式碼」的**缺點**：
   * 一般命名使其不易辨認
   * 其他使用者比較難以瞭解
   * 較難返回視覺程式版本
@@ -56,23 +56,23 @@
 ![](images/1/graphstrategy3\_1.png)
 
 > 1. 既有的程式
-> 2. 從「要編碼的節點」建立的 Code Block
+> 2. 從「將節點轉換為程式碼」建立的 Code Block
 >
-> 若要瞭解如何使用「要編碼的節點」，請參閱 [DesignScript 語法](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#node-to-code)。
+> 若要瞭解如何使用「將節點轉換為程式碼」，請參閱 [DesignScript 語法](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md)。
 
 ### **使用 List@Level 彈性存取資料**
 
 * 使用 List@Level 可以協助您**取代可能會佔用大量圖元區空間的 List.Map 和 List.Combine 節點，降低圖表的複雜性**。
 * List@Level 是比 List.Map/List.Combine **更快建構節點邏輯的方法**，可讓您直接從節點的輸入埠存取清單中任何層級的資料。
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > 我們可以為 CountTrue 的 list 輸入啟用 List@Level，來確認 BoundingBox.Contains 在哪些清單中傳回多少 True 值。List@Level 可讓使用者決定輸入將在哪個層級取得資料。使用 List@Level 更為彈性、有效，強烈建議您以它來取代涉及 List.Map 和 List.Combine 的其他方式。
 >
 > 1. 計算 List Level 2 的 true 值
 > 2. 計算 List Level 3 的 true 值
 >
-> 若要瞭解如何使用 List@Level，請參閱[清單的清單](http://primer.dynamobim.org/en/06\_Designing-with-Lists/6-3\_lists-of-lists.html#list@level)。
+> 若要瞭解如何使用 List@Level，請參閱[清單的清單](https://primer2.dynamobim.org/v/zh-tw/5_essential_nodes_and_concepts/5-4_designing-with-lists/3-lists-of-lists)。
 
 ## 保持可讀性
 
@@ -84,17 +84,17 @@
 * 如果其他人要處理您的圖表，您應該**確保節點線路的配置在傳輸前能夠輕鬆地流動**
 * 為了協助您對齊，**請使用「清理節點配置」功能自動對齊**圖表，即使它未能如您自己手動對齊般精確
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. 未排列過的圖表
 > 2. 對齊的圖表
 >
-> 若要瞭解如何使用節點對齊，請參閱[管理您的程式](3-4\_best\_practices.md)。
+> 若要瞭解如何使用「節點對齊」，請參閱[管理您的程式](4-managing-your-program.md)。
 
 ### **利用更名做描述性的標示**
 
 * 將輸入更名可協助他人輕鬆瞭解您的圖表，**尤其當他們插入的內容不在螢幕上顯示時**
-* **更名節點而非輸入時請小心。** 另一種替代方法是從節點叢集建立自訂節點並對其進行更名；這會讓人瞭解它包含其他內容
+* **更名節點而非輸入時請小心。**另一種替代方法是從節點叢集建立自訂節點並對其進行更名；這會讓人瞭解它包含其他內容
 
 ![](images/1/graphstrategy6.png)
 
@@ -114,11 +114,11 @@
 > 1. 描述傳回原始轉換距離的程式部分的註釋
 > 2. 描述將這些值對映至正弦波形的程式碼的註釋
 >
-> 若要瞭解如何加入註釋，請參閱[管理您的程式](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-4\_best\_practices.html)。
+> 若要瞭解如何加入註釋，請參閱[管理您的程式](https://primer2.dynamobim.org/v/zh-tw/9_best_practices/4-managing-your-program)。
 
 ## 持續調整
 
-建置視覺指令碼時，請務必確認所傳回的與您所預期的相符。並非所有錯誤或問題都會導致程式立即失敗，尤其是可能會影響下游較遠處的 null 或零值。[指令碼撰寫策略](http://primer.dynamobim.org/en/12\_Best-Practice/13-2\_Scripting-Strategies.html)中討論文字指令碼撰寫的脈絡也討論此策略。以下練習將有助於確保您獲得預期的內容。
+建置視覺指令碼時，請務必確認所傳回的與您所預期的相符。並非所有錯誤或問題都會導致程式立即失敗，尤其是可能會影響下游較遠處的 null 或零值。[指令碼撰寫策略](2-scripting-strategies.md)中討論文字指令碼撰寫的脈絡也討論此策略。以下練習將有助於確保您獲得預期的內容。
 
 ### **使用 Watch 和「預覽標示圈」監看資料**
 
@@ -131,7 +131,7 @@
 > 1. 原始轉換距離
 > 2. 通過正弦方程式的值
 >
-> 若要瞭解如何使用 Watch，請參閱[資源庫](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-2\_dynamo\_libraries.html)。
+> 若要瞭解如何使用 Watch，請參閱[資源庫](../3\_user\_interface/2-library.md)。
 
 ## 確保可重複使用
 
@@ -147,7 +147,7 @@
 * 如果您有**想要嵌入到圖表中的特定選項或條件**，您應該使用「預置」以快速存取。
 * 您也可以使用「預置」，在執行時間較長的圖表中**快取特定的滑棒值來降低複雜性**。
 
-> 若要瞭解如何使用「預置」，請參閱[使用預置管理您的資料](http://primer.dynamobim.org/en/03\_Anatomy-of-a-Dynamo-Definition/3-5\_presets.html)。
+> 若要瞭解如何使用「預置」，請參閱[使用預置管理您的資料](1-graph-strategies.md#use-presets-to-embed-input-values)。
 
 ### **使用自訂節點包含程式**
 
@@ -162,7 +162,7 @@
 > 1. 既有牽引程式
 > 2. 收集此程式 PointGrid 的自訂節點
 >
-> 若要瞭解如何使用自訂節點，請參閱[自訂節點簡介](http://primer.dynamobim.org/en/09\_Custom-Nodes/9-1\_Introduction.html)。
+> 若要瞭解如何使用自訂節點，請參閱[自訂節點簡介](../6\_custom\_nodes\_and\_packages/6-1\_custom-nodes/1-introduction.md)。
 
 ### **建立樣板**
 
@@ -239,10 +239,10 @@
 
 ![](images/1/graphstrategy17.png)
 
-> 使用「要編碼的節點」和「自訂節點」濃縮程式，已經大幅減少圖表的大小。建立屋頂曲面和牆的群組已轉換為程式碼，因為它們特定於此程式。點轉換群組包含在自訂節點中，並且可以用於其他程式。在範例檔案中，從轉換點群組建立您的自訂節點。
+> 使用「將節點轉換為程式碼」和「自訂節點」濃縮程式，已經大幅減少圖表的大小。建立屋頂曲面和牆的群組已轉換為程式碼，因為它們特定於此程式。點轉換群組包含在自訂節點中，並且可以用於其他程式。在範例檔案中，從轉換點群組建立您的自訂節點。
 >
 > 1. 包含「轉換點網格」群組的自訂節點
-> 2. 壓縮「建立建築屋頂的曲面和帷幕牆」群組的 Node to Code
+> 2. 使用「將節點轉換為程式碼」壓縮「建立建築屋頂曲面和帷幕牆」群組
 
 最後一步是建立典型屋頂形狀的預置。
 

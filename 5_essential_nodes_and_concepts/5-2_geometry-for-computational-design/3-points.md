@@ -4,7 +4,7 @@
 
 ### 什麼是點？
 
-[點](5-3\_points.md#point-as-coordinates)只是利用稱為座標的一個值或多個值來定義。定義點需要的座標值數目取決於點所在的座標系統或環境。
+[點](3-points.md#deep-dive-into...)只是利用稱為座標的一個值或多個值來定義。定義點需要的座標值數目取決於點所在的座標系統或環境。
 
 ### 2D 與 3D 點
 
@@ -28,7 +28,7 @@ Dynamo 中的 2D 點有兩個座標 [X,Y]。
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-2/3/Geometry for Computational Design - Points.dyn" %}
 

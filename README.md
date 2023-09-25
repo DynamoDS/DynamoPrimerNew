@@ -35,21 +35,33 @@ Dynamo Primer 專案是開放原始碼專案！我們專注於提供高品質的
 
 Dynamo Primer 是一個開放原始碼專案，由 Autodesk 的 Matt Jezyk 和 Dynamo 開發團隊所發起。
 
-**Mode Lab** 受託撰寫此手冊的第一個版本。我們感謝他們為了建立這個寶貴資源付出的所有心力。
+**Mode Lab** 受託撰寫 Primer 的第一個版本。我們感謝他們為了建立這個寶貴資源付出的所有心力。
 
 ![](images/MODELAB\_Logo.png)
 
 ***
 
-**Parallax Team 的 John Pierson** 受託更新此手冊以反映 Dynamo 2.0 的修訂。
+**Parallax Team 的 John Pierson** 受託更新 Primer 以反映 Dynamo 2.0 的修訂。
 
 ![](images/PRLX\_Logo.jpg)
 
 ***
 
-**Matterlab** 受託更新手冊，以反映 Dynamo 2.13 的修訂。
+**Matterlab** 受託更新 Primer，以反映 Dynamo 2.13 的修訂。
 
 ![](images/matterlab\_final-07.jpg)
+
+***
+
+**Archilizer** 受託更新 Primer，以反映 Dynamo 2.17 的修訂。
+
+<figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
+
+***
+
+**Wood Rodgers** 受託更新 Primer 有關 Dynamo for Civil 3D 的內容。
+
+<figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 
 ### 致謝
 
@@ -79,7 +91,7 @@ Dynamo@autodesk.com
 
 ### 授權
 
-Copyright 2022 Autodesk
+Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.您可在以下網站獲取此「授權」的複本：
 

@@ -23,7 +23,7 @@ Dynamo 使用面-頂點資料結構定義網格。在最基本的層級，此結
 
 該資源庫還提供工具來修改網格、修復網格，或萃取水平切片，以用於加工。
 
-請造訪 [Mesh Toolkit 案例研究](../../custom-nodes-and-packages/11-packages/11-2\_mesh-toolkit.md)，取得使用此套件的範例。
+請造訪 [Mesh Toolkit 案例研究](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit#nodes)，取得使用此套件的範例。
 
 ![Mesh Toolkit](../images/5-2/7/meshes-meshtoolkitstandfordbunny.jpg)
 

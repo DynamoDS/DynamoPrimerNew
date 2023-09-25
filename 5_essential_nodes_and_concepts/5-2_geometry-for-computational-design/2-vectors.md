@@ -4,7 +4,7 @@
 
 ### 向量
 
-[向量](5-2\_vectors.md#vector-1)是一種大小和方向的表現法，您可以將其視為以指定速度向特定方向加速的箭頭。在 Dynamo 中，向量是模型的關鍵元件。請注意，由於向量屬於「協助工具」抽象品類，因此我們在建立向量時，不會在背景預覽中看到任何內容。
+[向量](2-vectors.md#vector-1)是一種大小和方向的表現法，您可以將其視為以指定速度向特定方向加速的箭頭。在 Dynamo 中，向量是模型的關鍵元件。請注意，由於向量屬於「協助工具」抽象品類，因此我們在建立向量時，不會在背景預覽中看到任何內容。
 
 ![Dynamo 中的向量](../images/5-2/2/GeometryforComputationalDesign-vectors.jpg)
 
@@ -12,13 +12,13 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Vectors.dyn" %}
 
 ### 平面
 
-[平面](5-2\_vectors.md#plane-1)是一個二維表面，您可以將其視為無限延伸的平面。每個平面都有原點、X 方向、Y 方向和 Z (向上) 方向。
+[平面](2-vectors.md#plane-1)是一個二維表面，您可以將其視為無限延伸的平面。每個平面都有原點、X 方向、Y 方向和 Z (向上) 方向。
 
 ![Dynamo 中的平面](../images/5-2/2/GeometryforComputationalDesign-plane.jpg)
 
@@ -27,13 +27,13 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Plane.dyn" %}
 
 ### 座標系統
 
-[座標系統](5-2\_vectors.md#coordinate-system-1)是一個決定點或其他幾何元素位置的系統。下圖說明座標系統在 Dynamo 中的外觀，以及每種顏色代表的意義。
+[座標系統](2-vectors.md#coordinate-system-1)是一個決定點或其他幾何元素位置的系統。下圖說明座標系統在 Dynamo 中的外觀，以及每種顏色代表的意義。
 
 ![Dynamo 中的座標系統](../images/5-2/2/GeometryforComputationalDesign-Coordinate.jpg)
 
@@ -42,7 +42,7 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="../datasets/5-2/2/Geometry for Computational Design - Coordinate System.dyn" %}
 

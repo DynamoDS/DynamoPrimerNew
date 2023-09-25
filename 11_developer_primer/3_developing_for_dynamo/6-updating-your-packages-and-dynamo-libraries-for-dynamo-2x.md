@@ -1,4 +1,4 @@
-# 針對 Dynamo 2.x 更新您的套件和 Dynamo 資源庫 
+# 針對 Dynamo 2.x 更新您的套件和 Dynamo 資源庫
 
 ### 簡介：<a href="#introduction" id="introduction"></a>
 
@@ -10,7 +10,7 @@ Dynamo 2.0 一個是重大版本，某些 API 已變更或移除。影響節點�
 
 延伸的作者也可能需要進行一些潛在的變更 - 取決於他們在延伸中使用多少 Dynamo 核心 API。
 
-***
+
 
 ### 一般封裝規則：<a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -18,8 +18,6 @@ Dynamo 2.0 一個是重大版本，某些 API 已變更或移除。影響節點�
 * 如果可以避免，請勿將 `newtonsoft.json.net` 與套件一起封裝並散發。此 dll 也將由 Dynamo 2.x 載入。可能會發生與上述相同的問題。
 * 如果可以避免，請勿將 `CEFSharp` 與套件一起封裝並散發。此 dll 也將由 Dynamo 2.x 載入。可能會發生與上述相同的問題。
 * 如果您需要控制相依性的版本，一般而言請避免與 dynamo 或 revit 共用相依性。
-
-
 
 ### 常見問題：<a href="#common-issues" id="common-issues"></a>
 
@@ -39,7 +37,6 @@ Dynamo 2.0 一個是重大版本，某些 API 已變更或移除。影響節點�
 
 * 如果還原序列化因某些原因失敗，則可能會發生此情況。最好只序列化您需要的性質。我們可以對您不需要載入或儲存的複雜性質使用 `[JsonIgnore]` 加以忽略。例如 `function pointer, delegate, action,` 或 `event` 等性質。這些性質不應該序列化，因為它們通常無法還原序列化而導致執行時期錯誤。
 
-
 ### 深度升級：<a href="#upgrading-in-depth" id="upgrading-in-depth"></a>
 
 ### 自訂節點 1.3 -> 2.0 <a href="#custom-nodes-13----20" id="custom-nodes-13----20"></a>
@@ -52,13 +49,11 @@ Dynamo 2.0 一個是重大版本，某些 API 已變更或移除。影響節點�
 * 註解將轉換為區塊註解，而不是行註解。
 * 簡短類型名稱將取代為完整名稱。例如，如果您在再次載入自訂節點時未指定類型，您會看到 `var[]..[]` - 因為這是預設類型。
 
-
 ### Zero Touch 節點 1.3 -> 2.0 <a href="#zero-touch-nodes-13---20" id="zero-touch-nodes-13---20"></a>
 
 * 在 Dynamo 2.0 中，清單和字典類型已經分開，用於建立清單和字典的語法也已經變更。清單使用 `[]` 初始化，字典則是使用 `{}`。\
 如果您先前使用 `DefaultArgument` 屬性標記 Zero Touch 節點上的參數，並使用清單語法預設為特定清單 (例如 `someFunc([DefaultArgument("{0,1,2}")])`)，此作業將不再有效，您需要修改 DesignScript 片段對清單使用新的初始化語法。
 * 如上所述，請勿將 Dynamo dll 與您的套件 (`DynamoCore`、`DynamoServices` 等) 一起散發。
-
 
 ### NodeModel 節點 1.3 -> 2.0 <a href="#node-model-nodes-13---20" id="node-model-nodes-13---20"></a>
 
@@ -66,7 +61,6 @@ NodeModel 節點需要最多工作才能更新到 Dynamo 2.x。除了用於實�
 
 建構函式中的參數名稱通常應與 JSON 性質的名稱相符，但是如果您使用 [JsonProperty] 屬性取代序列化的名稱，則此對映會更複雜。\
 [請參閱 Json.net 文件，以取得更多資訊。](https://www.newtonsoft.com/json/help/html/Introduction.htm)
-
 
 #### JSON 建構函式 <a href="#json-constructors" id="json-constructors"></a>
 
@@ -94,7 +88,6 @@ JSON 建構函式與基本建構函式不同，因為它有 `inPorts` 和 `outPo
 
 在 DynamoSamples 儲存庫 -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156)、[DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) 或 [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123) 中可以找到範例
 
-
 #### 公用性質和序列化 <a href="#public-properties-and-serialization" id="public-properties-and-serialization"></a>
 
 先前，開發人員可以透過 `SerializeCore` 和 `DeserializeCore` 方法將特定模型資料序列化和還原序列化為 xml 文件。這些方法仍存在於 API 中，但在未來版本的 Dynamo 中將棄用 (在[此處](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/Input/DoubleSlider.cs#L140)可找到範例)。現在實作 JSON.NET，NodeModel 衍生類別的 `public` 性質可以直接序列化為 .dyn 檔案。JSON.Net 提供多個屬性，可控制如何序列化性質。
@@ -104,7 +97,6 @@ JSON 建構函式與基本建構函式不同，因為它有 `inPorts` 和 `outPo
 `[JsonProperty(PropertyName = "InputValue")]`
 
 `public DSColor DsColor {...`
-
 
 #### 轉換器：<a href="#converters" id="converters"></a>
 
@@ -117,17 +109,15 @@ JSON 建構函式與基本建構函式不同，因為它有 `inPorts` 和 `outPo
 
 `public ConversionMetricUnit SelectedMetricConversion{...`
 
-
 #### 忽略性質 <a href="#ignoring-properties" id="ignoring-properties"></a>
 
 不用於序列化的 `public` 性質需要加入 `[JsonIgnore]` 屬性。節點儲存為 .dyn 檔案後，可確保序列化機制忽略此資料，再次開啟圖表時，不會導致非預期的結果。在 Dynamo 儲存庫中的[此處](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45)可以找到此內容的範例。
 
-***
+
 
 #### 退回/重做 <a href="#undoredo" id="undoredo"></a>
 
-如上所述，過去曾使用 `SerializeCore` 和 `DeserializeCore` 方法將節點儲存並載入至 xml .dyn 檔案。此外，這些方法也用來儲存和載入節點狀態以用於退回/重做，**現在也還是！** 如果您要為 nodeModel 使用者介面節點實作複雜的退回/重做功能，則需要實作這些方法，並序列化為以這些方法的參數提供的 XML 文件物件。除了複雜的使用者介面節點，這應該是很少見的使用案例。
-
+如上所述，過去曾使用 `SerializeCore` 和 `DeserializeCore` 方法將節點儲存並載入至 xml .dyn 檔案。此外，這些方法也用來儲存和載入節點狀態以用於退回/重做，**現在也還是！**如果您要為 nodeModel 使用者介面節點實作複雜的退回/重做功能，則需要實作這些方法，並序列化為以這些方法的參數提供的 XML 文件物件。除了複雜的使用者介面節點，這應該是很少見的使用案例。
 
 #### 輸入和輸出埠 API <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 
@@ -142,7 +132,6 @@ JSON 建構函式與基本建構函式不同，因為它有 `inPorts` 和 `outPo
 在 Dynamo 儲存庫 -> [DynamoConvert.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L142) 或 [FileSystem.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/Input/FileSystem.cs#L281) 中可以找到轉換的程式碼範例
 
 受 2.0 API 變更影響的其他常見使用案例與 `BuildAst()` 方法中常用的方法有關，該方法可根據埠連接器是否存在決定節點行為。先前 `HasConnectedInput(index)` 是用於驗證連接的埠狀態。開發人員現在應使用 `InPorts[0].IsConnected` 性質檢查埠連接狀態。在 Dynamo 儲存庫中的 [ColorRange.cs](https://github.com/DynamoDS/Dynamo/blob/RC2.0.0\_master/src/Libraries/CoreNodeModels/ColorRange.cs#L83) 可以找到此內容的範例。
-
 
 ### 範例：<a href="#examples" id="examples"></a>
 

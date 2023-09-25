@@ -4,7 +4,7 @@
 
 ### 什麼是曲線？
 
-[曲線](5-4\_curves.md#curve)是我們討論的第一種幾何資料類型，具有我們更熟悉的一組形狀描述性質 - 多彎或多直？多長或多短？請記住，點仍然是我們的基礎材料，用於定義從直線到雲形線的所有項目，以及所有曲線類型。
+[曲線](4-curves.md#deep-dive-into...)是我們討論的第一種幾何資料類型，具有我們更熟悉的一組形狀描述性質 - 多彎或多直？多長或多短？請記住，點仍然是我們的基礎材料，用於定義從直線到雲形線的所有項目，以及所有曲線類型。
 
 ![曲線類型](../images/5-2/4/CurveTypes.jpg)
 
@@ -18,13 +18,13 @@
 
 ### 直線
 
-[直線](5-4\_curves.md#lines)由一組點組成，每條直線至少有 2 個點。在 Dynamo 中建立直線最常使用的其中一個方法是使用 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg)。
+[直線](4-curves.md#lines)由一組點組成，每條直線至少有 2 個點。在 Dynamo 中建立直線最常使用的其中一個方法是使用 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg)。
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS 曲線
 
-[NURBS](5-4\_curves.md#nurbs-+-polycurves) 是一個用於精確表示曲線和曲面的模型。Dynamo 中的正弦曲線使用兩種不同方法建立 NURBS 曲線以比較結果。
+[NURBS](4-curves.md#nurbs-+-polycurves) 是一個用於精確表示曲線和曲面的模型。Dynamo 中的正弦曲線使用兩種不同方法建立 NURBS 曲線以比較結果。
 
 ![](../images/5-2/4/curves-NurbsCurves.jpg)
 

@@ -9,4 +9,4 @@
 * [參數式花瓶](10-1\_getting-started-workflows/1-parametric-vase.md)
 * [牽引點](10-1\_getting-started-workflows/2-attractor-points.md)
 
-您也可以使用[概念索引](table-of-summary-for-some-concept-used-in-previous-exercises.md)找出工作流程中引入的概念
+您也可以使用[概念索引](10-2\_concept-index.md)找出工作流程中引入的概念

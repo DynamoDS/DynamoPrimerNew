@@ -2,13 +2,13 @@
 
 Dynamo Mesh Toolkit 可提供工具，以匯入外部檔案格式的網格、根據 Dynamo 幾何圖形物件建立網格，並根據網格的頂點與索引手動建置網格。資源庫還提供工具來修改網格、修復網格，或萃取水平切片，以用於加工。
 
-![](<../images/6-2/5/meshToolkitcasestudy01 (1).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Dynamo Mesh Toolkit 是 Autodesk 持續進行網格研究的一部分，因此在未來的幾年將繼續成長。該工具箱將頻繁推出新方法，請隨時與 Dynamo 團隊聯繫以提供註解、錯誤以及新功能的建議。
 
 ### 網格與實體
 
-下面的練習演示了使用 Mesh Toolkit 可執行的一些基本網格作業。在此練習中，我們將網格與一系列的平面相交，如果使用實體執行此作業，則運算成本很高。與實體不同，網格具有一組「解析度」，不以數學方式定義，而是以拓樸方式定義，我們可根據要執行的作業來定義此解析度。有關網格與實體關係的詳細資訊，您可以參考此手冊的[用於計算設計的幾何圖形](../../a-closer-look-at-dynamo-essential-nodes-and-concepts/5\_geometry-for-computational-design/)一章。有關 Mesh Toolkit 的更詳細資訊，您可以參考 [Dynamo Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)。我們利用下面的練習來瞭解此套件。
+下面的練習演示了使用 Mesh Toolkit 可執行的一些基本網格作業。在此練習中，我們將網格與一系列的平面相交，如果使用實體執行此作業，則運算成本很高。與實體不同，網格具有一組「解析度」，不以數學方式定義，而是以拓樸方式定義，我們可根據要執行的作業來定義此解析度。有關網格與實體關係的詳細資訊，您可以參考此手冊的[用於計算設計的幾何圖形](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/)一章。有關 Mesh Toolkit 的更詳細資訊，您可以參考 [Dynamo Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit)。我們利用下面的練習來瞭解此套件。
 
 ### 安裝 Mesh Toolkit
 

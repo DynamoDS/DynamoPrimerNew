@@ -22,7 +22,7 @@
 
 ### 多個元素與清單
 
-以下[第一個練習](8-4\_creating.md#exercise)將講解 Dynamo 如何參考用於建立 Revit 元素的資料。為了產生多個自適應元件，我們定義了清單的清單，其中每個清單都包含三點，表示自適應元件的每個點。在 Dynamo 中管理資料結構時，我們將記住這一點。
+以下[第一個練習](4-creating.md#exercise-generate-elements-and-lists)將講解 Dynamo 如何參考用於建立 Revit 元素的資料。為了產生多個自適應元件，我們定義了清單的清單，其中每個清單都包含三點，表示自適應元件的每個點。在 Dynamo 中管理資料結構時，我們將記住這一點。
 
 ![](images/4/creating-multipleelementsandlists01.jpg)
 
@@ -30,13 +30,13 @@
 
 將參數式 Dynamo 幾何圖形匯入至 Revit 的另一種方法是使用 DirectShape。總之，DirectShape 元素與相關類別支援在 Revit 文件中儲存外部建立的幾何造型。幾何圖形可以包括封閉實體或網格。DirectShape 主要用於在未提供足夠的資訊以建立「真實」的 Revit 元素時，匯入其他資料格式 (例如 IFC 或 STEP) 的造型。與 IFC 與 STEP 工作流程類似，DirectShape 功能可以成功將 Dynamo 建立的幾何圖形匯入 Revit 專案中作為真實的元素。
 
-我們來逐步進行[第二個練習](8-4\_creating.md#exercise-directshape-elements)，將 Dynamo 幾何圖形作為 DirectShape 匯入 Revit 專案。使用此方法，我們可以指定所匯入幾何圖形的品類、材料與名稱等所有內容，同時保持 Dynamo 圖表的參數式連結。
+我們來逐步進行[第二個練習](4-creating.md#exercise-directshape-elements)，將 Dynamo 幾何圖形作為 DirectShape 匯入 Revit 專案。使用此方法，我們可以指定所匯入幾何圖形的品類、材料與名稱等所有內容，同時保持 Dynamo 圖表的參數式連結。
 
 ## 練習：產生元素和清單
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="datasets/4/Revit-Creating.zip" %}
 
@@ -113,7 +113,7 @@
 
 > 按一下下方的連結下載範例檔案。
 >
-> 附錄中提供範例檔案的完整清單。
+> 附錄中提供完整的範例檔案清單。
 
 {% file src="datasets/4/Revit-Creating-DirectShape.zip" %}
 
@@ -133,7 +133,7 @@
 
 ![](images/4/creating-exerciseII-03.jpg)
 
-> 1. 拉遠並平移至範例圖表中的右側，可以看到大型節點群組，這些是幾何圖形作業，將產生 Dynamo 預覽中可見的格架屋頂結構。這些節點是使用手冊的[程式碼區塊一節](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node)中討論的 _Node to Code_ 功能產生。
+> 1. 拉遠並平移至範例圖表中的右側，可以看到大型節點群組，這些是幾何圖形作業，將產生 Dynamo 預覽中可見的格架屋頂結構。這些節點是使用手冊的[程式碼區塊一節](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node)中討論的_將節點轉換為程式碼_功能產生。
 > 2. 結構由三個主要參數驅動，分別是 Diagonal Shift、Camber 與 Radius。
 
 進行縮放，特寫查看此圖表的參數。我們可以調整這些參數，以得到不同的幾何圖形輸出。

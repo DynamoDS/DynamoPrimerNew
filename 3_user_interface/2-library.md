@@ -8,7 +8,7 @@
 * 自訂節點：將常用常式或特殊圖表儲存為自訂節點。您也可以與社群共用您的自訂節點
 * Package Manager 中的節點：收集已發佈的自訂節點。
 
-我們將瀏覽[節點品類的階層](3-3\_dynamo\_libraries.md#library-hierarchy-for-categories)，示範如何[從資源庫快速搜尋](3-3\_dynamo\_libraries.md#quick-search-in-library)，並了解其中某些[常用節點](3-3\_dynamo\_libraries.md#frequently-used-nodes)。
+我們將瀏覽[節點品類的階層](2-library.md#library-hierarchy-for-categories)，示範如何[從資源庫快速搜尋](2-library.md#search-by-hierarchy)，並了解其中某些[常用節點](2-library.md#frequently-used-nodes)。
 
 ### 品類的資源庫階層
 
@@ -27,13 +27,13 @@
 
 這些項目會根據節點是**建立**資料、執行**動作**或**查詢**資料，進一步分類成有相同子品類的節點。
 
-* ![](<images/3-2/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
-* ![](<images/3-2/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
-* ![](<images/3-2/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
+* \![](<images/3-2/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
+* \![](<images/3-2/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
+* \![](<images/3-2/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
 
 將滑鼠懸停在節點上，可顯示名稱和圖示之外更詳細的資訊。我們由此可以快速了解節點的功能、所需的輸入及其提供的輸出。
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. 描述 - 節點的普通語言描述
 > 2. 圖示 -「資源庫」功能表中更大版本的圖示
@@ -46,7 +46,7 @@
 
 選擇按一下要加入的節點，或按 Enter 將亮顯的節點加入工作區的中心。
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### 依階層搜尋
 
@@ -121,11 +121,11 @@ Watch 節點對於管理流經視覺程式的資料非常重要。您可以透�
 
 Code Block 節點可以用於定義一塊程式碼 (以分號分隔各行)。這可以像 `X/Y` 一樣簡單。
 
-我們也可以使用 Code Block 做為捷徑定義數字輸入或呼叫其他節點的功能。執行此作業的語法遵循 Dynamo 文字語言 [DesignScript](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md) 的命名慣例。
+我們也可以使用 Code Block 做為捷徑定義數字輸入或呼叫其他節點的功能。執行此作業的語法遵循 Dynamo 文字語言 [DesignScript](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/2-design-script-syntax.md) 的命名慣例。
 
 以下是在腳本中使用 Code Block 的簡單示範 (含指示)。
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. 按兩下以建立 Code Block 節點
 2. 鍵入 `Circle.ByCenterPointRadius(x,y);`
