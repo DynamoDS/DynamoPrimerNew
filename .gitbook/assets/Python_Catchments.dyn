@@ -1,0 +1,425 @@
+{
+  "Uuid": "fa65147d-4165-47e4-8f01-2f405f3f54c2",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Home",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "Id": "52b69c6f91d248f89db10ff412db12cd",
+      "NodeType": "StringInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1dae104cf0964644ae0557480565c6eb",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string",
+      "InputValue": "C-HYDR-CTCH"
+    },
+    {
+      "ConcreteType": "Autodesk.AutoCAD.DynamoNodes.AcObjectsOnLayer, AutoCADNodesUI",
+      "Id": "87c1aafc2739499ca842d8fc4ce90b0f",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "fff35c5bfca34ead8daa53c819f1807f",
+          "Name": "layer",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0f84c6514acc4231b6ad181fd7c5b7d9",
+          "Name": "block",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "598b07ae1ec94e1facd521a48202f079",
+          "Name": "Object[]",
+          "Description": "Object[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select all objects on the layer."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "311685e9d5d644cab2fcb7958733c580",
+      "NodeType": "FunctionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0ed04b2fc48640d79ab9dfa29181e9a5",
+          "Name": "Document",
+          "Description": "Document",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.AutoCAD.DynamoNodes.Document.Current",
+      "Replication": "Auto",
+      "Description": "Get the current AutoCAD document.\n\nDocument.Current: Document"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "d465b739fe264a32be8aba889403b95a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "6bf8400493af4ec3a6369687df495a48",
+          "Name": "document",
+          "Description": "Autodesk.AutoCAD.DynamoNodes.Document",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cde1d028f34f48ea96be33ce9e49e92f",
+          "Name": "Block",
+          "Description": "Block",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.AutoCAD.DynamoNodes.Document.ModelSpace",
+      "Replication": "Auto",
+      "Description": "Get the model space block table record.\n\nDocument.ModelSpace: Block"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport sys\r\nimport clr\r\n\r\n# Add Assemblies for AutoCAD and Civil3D\r\nclr.AddReference('AcMgd')\r\nclr.AddReference('AcCoreMgd')\r\nclr.AddReference('AcDbMgd')\r\nclr.AddReference('AecBaseMgd')\r\nclr.AddReference('AecPropDataMgd')\r\nclr.AddReference('AeccDbMgd')\r\n\r\nclr.AddReference('ProtoGeometry')\r\n\r\n# Import references from AutoCAD\r\nfrom Autodesk.AutoCAD.Runtime import *\r\nfrom Autodesk.AutoCAD.ApplicationServices import *\r\nfrom Autodesk.AutoCAD.EditorInput import *\r\nfrom Autodesk.AutoCAD.DatabaseServices import *\r\nfrom Autodesk.AutoCAD.Geometry import *\r\n\r\n# Import references from Civil3D\r\nfrom Autodesk.Civil.ApplicationServices import *\r\nfrom Autodesk.Civil.DatabaseServices import *\r\n\r\nfrom Autodesk.DesignScript.Geometry import Point as DynPoint\r\n\r\n# The inputs to this node will be stored as a list in the IN variables.\r\nobjs = IN[0]\r\n\r\noutput = []\r\n\r\nif objs is None:\r\n    sys.exit(\"The input is null or empty.\")\r\n\r\nif not isinstance(objs, list):\r\n    objs = [objs]\r\n    \r\nadoc = Application.DocumentManager.MdiActiveDocument\r\neditor = adoc.Editor\r\n\r\nwith adoc.LockDocument():\r\n    with adoc.Database as db:\r\n        \r\n        with db.TransactionManager.StartTransaction() as t:\r\n            for obj in objs:              \r\n                id = obj.InternalObjectId\r\n                aeccObj = t.GetObject(id, OpenMode.ForRead)                \r\n                if isinstance(aeccObj, Catchment):\r\n                    catchment = aeccObj\r\n                    acPnts = catchment.BoundaryPolyline3d                    \r\n                    dynPnts = []\r\n                    for acPnt in acPnts:\r\n                        pnt = DynPoint.ByCoordinates(acPnt.X, acPnt.Y, acPnt.Z)\r\n                        dynPnts.append(pnt)\r\n                    output.append(dynPnts)\r\n            \r\n            # Commit before end transaction\r\n            t.Commit()\r\n            pass\r\n            \r\n# Assign your output to the OUT variable.\r\nOUT = output",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "ed3d643f950a4eb3bb8b0d0d1df2fb96",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "f20202a74a05445db230d8939bfb7e59",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f8f76afd903f4f418b4414308c56d28f",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6d07996f7cd04c6596de85517ae9b45a",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "b9a8cd9fd38140b58d7677f5e03261db",
+          "Name": "points",
+          "Description": "Points to make polycurve\n\nPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3128bb6eed8f46e4bb8464fd3d1fab45",
+          "Name": "connectLastToFirst",
+          "Description": "True to connect last point to first point, false to leave open\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "99ecd7b88afa490cbdca7d07189b0e5d",
+          "Name": "PolyCurve",
+          "Description": "Polycurve created by points",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[],bool",
+      "Replication": "Auto",
+      "Description": "Make PolyCurve by connecting points. Set the 'connectLastToFirst' input to true to close the PolyCurve.\n\nPolyCurve.ByPoints (points: Point[], connectLastToFirst: bool = false): PolyCurve"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "1dae104cf0964644ae0557480565c6eb",
+      "End": "fff35c5bfca34ead8daa53c819f1807f",
+      "Id": "e0fde04e15e44128a387c9b602ef2aa3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "598b07ae1ec94e1facd521a48202f079",
+      "End": "f20202a74a05445db230d8939bfb7e59",
+      "Id": "10fc9e43c3fe45ba989834021c67f8b0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0ed04b2fc48640d79ab9dfa29181e9a5",
+      "End": "6bf8400493af4ec3a6369687df495a48",
+      "Id": "82cb7171065d473a911a7d2d76c61167",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cde1d028f34f48ea96be33ce9e49e92f",
+      "End": "0f84c6514acc4231b6ad181fd7c5b7d9",
+      "Id": "87c966cf10ef453a8e8da431162d940b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f8f76afd903f4f418b4414308c56d28f",
+      "End": "b9a8cd9fd38140b58d7677f5e03261db",
+      "Id": "8d6cf7d0d21d40ef9efc527840231d7f",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.18",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.18.1.5096",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": 4708.0947265625,
+      "EyeY": 4034.275146484375,
+      "EyeZ": -1987.8489990234375,
+      "LookX": 194.78369140625,
+      "LookY": -3319.665283203125,
+      "LookZ": -1955.1702880859375,
+      "UpX": 0.072502642869949341,
+      "UpY": 0.68199825286865234,
+      "UpZ": -0.72775125503540039
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "52b69c6f91d248f89db10ff412db12cd",
+        "Name": "String",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -388.58448262650029,
+        "Y": 266.37522900018149
+      },
+      {
+        "Id": "87c1aafc2739499ca842d8fc4ce90b0f",
+        "Name": "All Objects on Layer",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 487.68872653191505,
+        "Y": 266.37522900018149
+      },
+      {
+        "Id": "311685e9d5d644cab2fcb7958733c580",
+        "Name": "Document.Current",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -134.82674624036184,
+        "Y": 372.0
+      },
+      {
+        "Id": "d465b739fe264a32be8aba889403b95a",
+        "Name": "Document.ModelSpace",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 158.9309901457766,
+        "Y": 372.0
+      },
+      {
+        "Id": "ed3d643f950a4eb3bb8b0d0d1df2fb96",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 793.4464629180535,
+        "Y": 266.37522900018149
+      },
+      {
+        "Id": "6d07996f7cd04c6596de85517ae9b45a",
+        "Name": "PolyCurve.ByPoints",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1052.2041993041919,
+        "Y": 266.37522900018149
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "e372f94165ff4ded9c37322f6459df9b",
+        "Title": "Input",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "52b69c6f91d248f89db10ff412db12cd"
+        ],
+        "HasNestedGroups": false,
+        "Left": -398.58448262650029,
+        "Top": 193.37522900018149,
+        "Width": 189.0,
+        "Height": 205.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "883066aa-1fe2-44a4-9bd1-c3df86bfe9f6",
+        "InitialTop": 266.37522900018149,
+        "InitialHeight": 162.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "b3b6f17040bb4a378824a48a37653930",
+        "Title": "Get all of the Catchments",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "87c1aafc2739499ca842d8fc4ce90b0f",
+          "311685e9d5d644cab2fcb7958733c580",
+          "d465b739fe264a32be8aba889403b95a"
+        ],
+        "HasNestedGroups": false,
+        "Left": -144.82674624036184,
+        "Top": 193.37522900018149,
+        "Width": 863.515472772277,
+        "Height": 310.62477099981851,
+        "FontSize": 36.0,
+        "GroupStyleId": "4d68be4a-a04d-4945-9dd5-cdf61079d790",
+        "InitialTop": 266.37522900018149,
+        "InitialHeight": 266.36979151838665,
+        "TextblockHeight": 63.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "a8b36052bf114ac38d7d944388a80b02",
+        "Title": "Get the Catchment boundary points",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "ed3d643f950a4eb3bb8b0d0d1df2fb96"
+        ],
+        "HasNestedGroups": false,
+        "Left": 783.4464629180535,
+        "Top": 63.375229000181491,
+        "Width": 194.0,
+        "Height": 335.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "4d68be4a-a04d-4945-9dd5-cdf61079d790",
+        "InitialTop": 266.37522900018149,
+        "InitialHeight": 162.0,
+        "TextblockHeight": 193.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "9a9deb61b0dc4fb7a99061df064cd275",
+        "Title": "Create PolyCurves from the boundary points",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "6d07996f7cd04c6596de85517ae9b45a"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1042.2041993041919,
+        "Top": 106.37522900018149,
+        "Width": 316.0,
+        "Height": 322.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "4d68be4a-a04d-4945-9dd5-cdf61079d790",
+        "InitialTop": 266.37522900018149,
+        "InitialHeight": 192.0,
+        "TextblockHeight": 150.0,
+        "Background": "#FFB9F9E1"
+      }
+    ],
+    "X": 392.72497513567549,
+    "Y": 163.18523225486052,
+    "Zoom": 0.78816779887071375
+  }
+}
