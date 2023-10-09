@@ -1,0 +1,708 @@
+{
+  "Uuid": "2a201eba-b0e1-414a-a063-cc09e4243033",
+  "IsCustomNode": false,
+  "Description": "Assigns COGO Points to Point Groups according to their descriptions.",
+  "Name": "Survey_CreatePointGroups",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [
+    {
+      "Id": "40946376e3904d0e964647823ea37ff9",
+      "Name": "Point Groups Created",
+      "Type": "unknown",
+      "InitialValue": "",
+      "Description": "Visualize the node's output"
+    }
+  ],
+  "Nodes": [
+    {
+      "ConcreteType": "Autodesk.Civil.DynamoNodes.CogoPointGroups, Civil3DNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "b8b3e607ea864f92a72bb85825262b97",
+      "Inputs": [
+        {
+          "Id": "416949da0d6442ed8430d86d7e82b1a1",
+          "Name": "document",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "850c80d9c28b4d3dbe5afb45ca37f109",
+          "Name": "CogoPointGroup[]",
+          "Description": "CogoPointGroup[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select all cogo point groups in the drawing."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.AutoCAD.DynamoNodes.Document.Current",
+      "Id": "80d2798146464deeb4a4fdabb1fcba98",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c36e38186f9d458680457d84864c8b35",
+          "Name": "Document",
+          "Description": "Document",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the current AutoCAD document.\n\nDocument.Current: Document"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.Civil.DynamoNodes.CogoPointGroup.CogoPoints",
+      "Id": "2729a094e83b4a1bb5f96bc06d18bad0",
+      "Inputs": [
+        {
+          "Id": "78012ede66c74c4daab2726d6a88a872",
+          "Name": "cogoPointGroup",
+          "Description": "Autodesk.Civil.DynamoNodes.CogoPointGroup",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a19b333b02274ac0aeae843b4b2ce301",
+          "Name": "CogoPoint[]",
+          "Description": "CogoPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get all the cogo points from a PointGroup.\n\nCogoPointGroup.CogoPoints: CogoPoint[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "6a9e05f8fefd4b2587a1caa4515d7bb5",
+      "Inputs": [
+        {
+          "Id": "e8e30210c1cd470590d28fdad9ca8e34",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1cab9fa7d8994638867f5c6e6c5685a0",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1c6887673a484233a5b5f27f3028ea3f",
+          "Name": "list",
+          "Description": "Flattened list by amount",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GroupByKey@var[]..[],var[]..[]",
+      "Id": "0b26936eaa7b4abea40c01355b8bdf63",
+      "Inputs": [
+        {
+          "Id": "3dfd9fb9954a47e6acd395c34a63b641",
+          "Name": "list",
+          "Description": "List of items to group as sublists\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a327af615d864109b13e70132faa5310",
+          "Name": "keys",
+          "Description": "Key values, one per item in the input list, used for grouping the items\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "37e5a1d05d494045844d5c1807378e46",
+          "Name": "groups",
+          "Description": "list of sublists, with items grouped by like key values",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6b5796b152204179a24221402e723fe0",
+          "Name": "uniqueKeys",
+          "Description": "key value corresponding to each group",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Group items into sub-lists based on their like key values\n\nList.GroupByKey (list: var[]..[], keys: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.Civil.DynamoNodes.CogoPointGroup.ByCogoPoints@Autodesk.Civil.DynamoNodes.CogoPoint[],string,Autodesk.AutoCAD.DynamoNodes.Document,string",
+      "Id": "661d887fe38947dc9954911b00dbfed1",
+      "Inputs": [
+        {
+          "Id": "6770db92c5c747358b2567a43c0e03d1",
+          "Name": "cogoPoints",
+          "Description": "CogoPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "52f7d43043354a9a841b9a8fce9f4db2",
+          "Name": "cogoPointGroupName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fbf0749347a94c7b8a0cfe9235d01924",
+          "Name": "document",
+          "Description": "Document",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2043e43d482c4b9aae05a6b6acffea27",
+          "Name": "description",
+          "Description": "string\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "92fcc9b0116347eb807b43dee3104100",
+          "Name": "CogoPointGroup",
+          "Description": "CogoPointGroup",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a point group by COGO points.\n\nCogoPointGroup.ByCogoPoints (cogoPoints: CogoPoint[], cogoPointGroupName: string, document: Document, description: string = \"\"): CogoPointGroup"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.Civil.DynamoNodes.CogoPoint.RawDescription",
+      "Id": "5c53e77351ee4bc7a623b97a50f9e67a",
+      "Inputs": [
+        {
+          "Id": "f6ba509eb5d04ee5bc34ac0bd65eec48",
+          "Name": "cogoPoint",
+          "Description": "Autodesk.Civil.DynamoNodes.CogoPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c3e6e26572c849cdaeb9a5bb6462ca7f",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the raw description for the selected COGO points\n\nCogoPoint.RawDescription: string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "40946376e3904d0e964647823ea37ff9",
+      "Inputs": [
+        {
+          "Id": "191e652912ec4965a75d8dfc2e888a76",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f012b02ba1d54168bb075004981f208a",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "850c80d9c28b4d3dbe5afb45ca37f109",
+      "End": "78012ede66c74c4daab2726d6a88a872",
+      "Id": "288aa386b53648679e27ecd17d320a5e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c36e38186f9d458680457d84864c8b35",
+      "End": "416949da0d6442ed8430d86d7e82b1a1",
+      "Id": "026a6488d6fa4a48944e2d24744d3ccb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c36e38186f9d458680457d84864c8b35",
+      "End": "fbf0749347a94c7b8a0cfe9235d01924",
+      "Id": "8f19692a29af4070a6f734f5b1ba60db",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a19b333b02274ac0aeae843b4b2ce301",
+      "End": "e8e30210c1cd470590d28fdad9ca8e34",
+      "Id": "98467a8303dd4dd0ba265690370dbbc2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1c6887673a484233a5b5f27f3028ea3f",
+      "End": "3dfd9fb9954a47e6acd395c34a63b641",
+      "Id": "634919e79cab430b99855b4d8b5446aa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1c6887673a484233a5b5f27f3028ea3f",
+      "End": "f6ba509eb5d04ee5bc34ac0bd65eec48",
+      "Id": "2cc90be2ac8d41d3b9810797291552f3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "37e5a1d05d494045844d5c1807378e46",
+      "End": "6770db92c5c747358b2567a43c0e03d1",
+      "Id": "6a775b627a3a4ec0a38fb864540bc70f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6b5796b152204179a24221402e723fe0",
+      "End": "52f7d43043354a9a841b9a8fce9f4db2",
+      "Id": "a0393b3868244dafa0b5feda224624de",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "6b5796b152204179a24221402e723fe0",
+      "End": "191e652912ec4965a75d8dfc2e888a76",
+      "Id": "01842ae6fe9f403aa0da79dc66a5ebbc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c3e6e26572c849cdaeb9a5bb6462ca7f",
+      "End": "a327af615d864109b13e70132faa5310",
+      "Id": "99cf726e765545a6853aee31a4d1ddf8",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "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",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.15",
+      "Data": {}
+    }
+  ],
+  "Author": "Autodesk, Inc.",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.15.1.6076",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "CogoPointGroups",
+        "ShowGeometry": true,
+        "Id": "b8b3e607ea864f92a72bb85825262b97",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 365.40191857752211,
+        "Y": 140.58404423741547
+      },
+      {
+        "Name": "Document.Current",
+        "ShowGeometry": true,
+        "Id": "80d2798146464deeb4a4fdabb1fcba98",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -0.58672119797608957,
+        "Y": 361.74058089382766
+      },
+      {
+        "Name": "CogoPointGroup.CogoPoints",
+        "ShowGeometry": true,
+        "Id": "2729a094e83b4a1bb5f96bc06d18bad0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 642.40191857752211,
+        "Y": 140.58404423741547
+      },
+      {
+        "Name": "List.Flatten",
+        "ShowGeometry": true,
+        "Id": "6a9e05f8fefd4b2587a1caa4515d7bb5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 999.90191857752211,
+        "Y": 140.58404423741547
+      },
+      {
+        "Name": "List.GroupByKey",
+        "ShowGeometry": true,
+        "Id": "0b26936eaa7b4abea40c01355b8bdf63",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1644.0367370104814,
+        "Y": 140.58404423741547
+      },
+      {
+        "Name": "CogoPointGroup.ByCogoPoints",
+        "ShowGeometry": true,
+        "Id": "661d887fe38947dc9954911b00dbfed1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2083.0710789566551,
+        "Y": 286.69067302220492
+      },
+      {
+        "Name": "CogoPoint.RawDescription",
+        "ShowGeometry": true,
+        "Id": "5c53e77351ee4bc7a623b97a50f9e67a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1306.768116271335,
+        "Y": 258.95155049377075
+      },
+      {
+        "Name": "Point Groups Created",
+        "ShowGeometry": true,
+        "Id": "40946376e3904d0e964647823ea37ff9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": true,
+        "Excluded": false,
+        "X": 2155.0710789566551,
+        "Y": -82.126831740338559
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "f45ff0b7fb1647bbb9e9eea6cb8e7b31",
+        "Title": "Get all COGO points in the drawing",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "b8b3e607ea864f92a72bb85825262b97",
+          "2729a094e83b4a1bb5f96bc06d18bad0",
+          "6a9e05f8fefd4b2587a1caa4515d7bb5",
+          "2a35eb8384cc44888eb9956584ae6ee2",
+          "a72a0b2c547b443597db0ec1929e7e84",
+          "0b210a8d696d4883b62151fe55cdd32a"
+        ],
+        "HasNestedGroups": false,
+        "Left": 329.90191857752211,
+        "Top": -11.415955762584531,
+        "Width": 927.0,
+        "Height": 314.0,
+        "FontSize": 36.0,
+        "InitialTop": 61.584044237415469,
+        "InitialHeight": 224.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "ef9a02a851644f678f2650e072ac8bff",
+        "Title": "Group the points by description",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "0b26936eaa7b4abea40c01355b8bdf63",
+          "5c53e77351ee4bc7a623b97a50f9e67a",
+          "ae1f18971fe94202a461b837de8d2814"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1296.768116271335,
+        "Top": -26.415955762584531,
+        "Width": 612.2686207391464,
+        "Height": 417.36750625635528,
+        "FontSize": 36.0,
+        "InitialTop": 46.584044237415469,
+        "InitialHeight": 343.28009399467015,
+        "TextblockHeight": 63.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "80bd512748e3478fa3c525f9a3057edc",
+        "Title": "Create point groups",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "661d887fe38947dc9954911b00dbfed1",
+          "5db97466270b4f7ebaa2e18bcb37f0e5"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2073.0710789566551,
+        "Top": 134.69067302220492,
+        "Width": 369.0,
+        "Height": 384.0,
+        "FontSize": 36.0,
+        "InitialTop": 207.69067302220492,
+        "InitialHeight": 224.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "b04f630818164321929502430dae82af",
+        "Title": "Show point group names in Dynamo Player",
+        "DescriptionText": "",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "40946376e3904d0e964647823ea37ff9",
+          "584155a5f2054bfeadef64edefd8b9be"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2134.0710789566551,
+        "Top": -364.12683174033856,
+        "Width": 319.0,
+        "Height": 418.0,
+        "FontSize": 36.0,
+        "InitialTop": -204.12683174033856,
+        "InitialHeight": 267.0,
+        "TextblockHeight": 150.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "2a35eb8384cc44888eb9956584ae6ee2",
+        "Title": "First, get all of the point groups in the drawing.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 339.90191857752211,
+        "Top": 90.584044237415469,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676",
+        "PinnedNode": "b8b3e607ea864f92a72bb85825262b97"
+      },
+      {
+        "Id": "a72a0b2c547b443597db0ec1929e7e84",
+        "Title": "Next, get all of the points in each point group. This will return a list that contains multiple lists of points (one for each point group).",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 639.40191857752211,
+        "Top": 61.584044237415469,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676",
+        "PinnedNode": "2729a094e83b4a1bb5f96bc06d18bad0"
+      },
+      {
+        "Id": "0b210a8d696d4883b62151fe55cdd32a",
+        "Title": "Moving forward, we just want to lump all of the points together in a single list, which is referred to as \"flattening\" the list.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 947.90191857752211,
+        "Top": 61.584044237415469,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676",
+        "PinnedNode": "6a9e05f8fefd4b2587a1caa4515d7bb5"
+      },
+      {
+        "Id": "ae1f18971fe94202a461b837de8d2814",
+        "Title": "This is where the magic happens! The List.GroupByKey node puts all of the points that share the same description into a list, and repeats that for each unique description.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 1613.0367370104814,
+        "Top": 46.584044237415469,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676",
+        "PinnedNode": "0b26936eaa7b4abea40c01355b8bdf63"
+      },
+      {
+        "Id": "5db97466270b4f7ebaa2e18bcb37f0e5",
+        "Title": "And the final step...create a point group for each of the unique point descriptions, putting the points into their respective groups.",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 2110.5710789566551,
+        "Top": 207.69067302220492,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676",
+        "PinnedNode": "661d887fe38947dc9954911b00dbfed1"
+      },
+      {
+        "Id": "584155a5f2054bfeadef64edefd8b9be",
+        "Title": "If you right-click on this node, you'll see that it is set to \"Is Output.\" This means that if you run the graph in Dynamo Player, the contents of the node (in this case, the names of the new point groups) will be displayed as an output after the graph is finished running. ",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 2144.0710789566551,
+        "Top": -204.12683174033856,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676",
+        "PinnedNode": "40946376e3904d0e964647823ea37ff9"
+      }
+    ],
+    "X": 30.324854724262707,
+    "Y": 362.06901898688153,
+    "Zoom": 0.55367817863629842
+  }
+}
