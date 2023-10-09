@@ -96,7 +96,7 @@
 
 **“List.Map/Combine”** 会将设置的函数应用于输入列表，但在层次结构中向下一步。组合与贴图相同，但组合可以具有与给定函数的输入相对应的多个输入。
 
-_注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**“List@Level”**_功能，_**“List.Map”**_的大部分功能已经解决。有关详细信息，请参见_下面_的_[_“List@Level”_](3-lists-of-lists.md#lists-of-lists)。
+_注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**“List@Level”**_功能，_**“List.Map”**_的大部分功能已经解决。有关详细信息，请参见 _下面_ 的_[_“List@Level”_](3-lists-of-lists.md#lists-of-lists)。
 
 通过简单介绍一下，我们来回顾上一节中的 **“List.Count”** 节点。
 
@@ -111,9 +111,9 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 > 3. 将代码块的每行连接到 **“Point.ByCoordinates”** 节点的相应 _“X”_ 和 _“Y”_ 输入。在节点上单击鼠标右键，选择“连缀”，然后选择 _“叉积”_。这将创建点栅格。因为我们定义的范围是 -50 到 50，所以我们跨越了默认的 Dynamo 栅格。
 > 4. _**“Watch”**_ 节点显示所创建的点。请注意数据结构。我们已创建一列列表。每个列表都表示栅格的一行点。
 
-\![练习](<../images/5-4/3/lists of lists - map 02.jpg>)
+![练习](<../images/5-4/3/lists of lists - map 02.jpg>)
 
-> 1. 将上一步中的**“List.Count”**节点附加到“Watch”节点的输出。
+> 1. 将上一步中的 **“List.Count”** 节点附加到“Watch”节点的输出。
 > 2. 将 **“Watch”** 节点连接到 **“List.Count”** 输出。
 
 请注意，“List.Count”节点提供的值为“5”。这等于代码块中所定义的“Nx”变量。这是为什么呢？
@@ -129,7 +129,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 ### **List.Combine**
 
-_注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**“List@Level”**_功能，“List.Combine”的大部分功能已经解决。有关详细信息，请参见下面的_[_“List@Level”_](6-3\_lists-of-lists.md#listlevel)_。_。
+_注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**“List@Level”**_功能，“List.Combine”的大部分功能已经解决。有关详细信息，请参见下面的_[_“List@Level”_](6-3\_lists-of-lists.md#listlevel)_。_
 
 在本练习中，我们将使用 **“List.Combine”** 演示如何使用它来在单独的对象列表中应用函数。
 
@@ -150,7 +150,9 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 完成后，通过 **“Line.ByStartPointEndPoint”** 函数将 2 组点压缩/成对组合在一起，并在 Dynamo 中返回 10 行。
 
-{% hint style="info" %}请参见 n 维列表中的练习，以查看使用“List.Combine”的另一个示例。{% endhint %}
+{% hint style="info" %}
+请参见 n 维列表中的练习，以查看使用“List.Combine”的另一个示例。
+{% endhint %}
 
 ### List@Level
 

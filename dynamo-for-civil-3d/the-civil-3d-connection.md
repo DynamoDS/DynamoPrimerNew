@@ -2,7 +2,7 @@
 
 <figure><img src="../.gitbook/assets/DynamoSwissKnife-WhiteBackground_edit (2).jpg" alt="" width="563"><figcaption></figcaption></figure>
 
-Dynamo for Civil 3D 为从事土木基础设施项目的工程师和设计师提供了_可视化编程_范例。可以将 Dynamo 视为一种面向 Civil 3D 用户的数字多功能工具 - 无论任务如何，它都有适合该工作的合适工具。Dynamo 的直观界面使您无需编写一行代码即可创建强大且可自定义的例程。您不需要_成为_一名程序员就可以使用 Dynamo，但您确实需要能够以程序员的逻辑_思考_。结合该 Primer 中的其他章，本章将帮助您培养逻辑技能，以便您能够以计算设计思维模式来处理任何任务。
+Dynamo for Civil 3D 为从事土木基础设施项目的工程师和设计师提供了_可视化编程_范例。可以将 Dynamo 视为一种面向 Civil 3D 用户的数字多功能工具 - 无论任务如何，它都有适合该工作的合适工具。Dynamo 的直观界面使您无需编写一行代码即可创建强大且可自定义的例程。您不需要 _成为_ 一名程序员就可以使用 Dynamo，但您确实需要能够以程序员的逻辑 _思考_。结合该 Primer 中的其他章，本章将帮助您培养逻辑技能，以便您能够以计算设计思维模式来处理任何任务。
 
 ## 历史记录
 

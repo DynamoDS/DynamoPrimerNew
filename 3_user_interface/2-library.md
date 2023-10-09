@@ -16,7 +16,9 @@
 
 通过单击菜单展开每个类别及其子类别来浏览库
 
-{% hint style="info" %}“几何图形”是开始探索的最佳菜单，因为它们包含最多数量的节点。{% endhint %}
+{% hint style="info" %}
+“几何图形”是开始探索的最佳菜单，因为它们包含最多数量的节点。
+{% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -25,15 +27,15 @@
 > 3. 子类别
 > 4. 节点
 
-这些选项会根据节点是**“创建”**数据、执行**“操作”**还是**“查询”**数据，来对同一子类别中的节点进一步分类。
+这些选项会根据节点是 **“创建”** 数据、执行 **“操作”** 还是 **“查询”** 数据，来对同一子类别中的节点进一步分类。
 
-* \![](<images/3-2/user interface - create.jpg>) **创建**：从头开始创建或构建几何图形。例如，圆。
-* \![](<images/3-2/user interface - action.jpg>) **操作**：对对象执行操作。例如，缩放圆。
-* \![](<images/3-2/user interface - query.jpg>) **查询**：获取已存在对象的特性。例如，获取圆的半径。
+* ![](<images/3-2/user interface - create.jpg>) **创建**：从头开始创建或构建几何图形。例如，圆。
+* ![](<images/3-2/user interface - action.jpg>) **操作**：对对象执行操作。例如，缩放圆。
+* ![](<images/3-2/user interface - query.jpg>) **查询**：获取已存在对象的特性。例如，获取圆的半径。
 
 将鼠标光标悬停在节点上，即可显示除其名称和图标以外的更多详细信息。这使我们可以快速了解节点的作用、所需输入内容以及输出内容。
 
-\![](<images/3-2/user interface - node description.jpg>)
+![](<images/3-2/user interface - node description.jpg>)
 
 > 1. 描述 - 节点的纯语言描述
 > 2. 图标 - 库菜单中图标的较大版本
@@ -46,7 +48,7 @@
 
 通过单击要添加的节点进行选择，或按 Enter 键将亮显的节点添加到工作空间的中心。
 
-\![](<images/3-2/user interface - search.jpg>)
+![](<images/3-2/user interface - search.jpg>)
 
 #### 按层次结构搜索
 
@@ -94,7 +96,7 @@ Dynamo 的基本安装中包含数百个节点，哪些节点对于开发可视�
 
 | 节点           |                                           | 节点           |                                           |
 | -------------- | ----------------------------------------- | -------------- | ----------------------------------------- |
-| Boolean        | ![](images/3-2/library-boolean.jpg)       | 数字         | ![](images/3-2/library-number.jpg)        |
+| Boolean        | ![](images/3-2/library-boolean.jpg)       | Number         | ![](images/3-2/library-number.jpg)        |
 | String         | ![](images/3-2/library-string.jpg)        | Number Slider  | ![](images/3-2/library-numberslider.jpg)  |
 | Directory Path | ![](images/3-2/library-directorypath.jpg) | Integer Slider | ![](images/3-2/library-integerslider.jpg) |
 | File Path      | ![](images/3-2/library-filepath.jpg)      |                |                                           |
@@ -115,7 +117,9 @@ Dynamo 的基本安装中包含数百个节点，哪些节点对于开发可视�
 
 这两个节点均位于核心库的“视图”类别中。
 
-{% hint style="info" %}提示：如果可视化程序中包含许多节点，则三维预览有时可能会分散注意力。请考虑取消选中“设置”菜单中的“显示背景预览”选项，然后使用“Watch3D”节点预览几何图形。{% endhint %}
+{% hint style="info" %}
+提示：如果可视化程序中包含许多节点，则三维预览有时可能会分散注意力。请考虑取消选中“设置”菜单中的“显示背景预览”选项，然后使用“Watch3D”节点预览几何图形。
+{% endhint %}
 
 #### Code Block
 
@@ -125,7 +129,7 @@ Code Block 节点可用于定义代码块，其中各行用分号隔开。这可
 
 下面是有关在脚本中使用“代码块”的简单演示（带有说明）。
 
-\![](<images/3-2/library-code block demo.gif>)
+![](<images/3-2/library-code block demo.gif>)
 
 1. 双击以创建“Code Block”节点
 2. `Circle.ByCenterPointRadius(x,y);`Type

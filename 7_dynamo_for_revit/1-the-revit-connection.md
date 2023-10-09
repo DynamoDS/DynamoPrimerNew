@@ -35,13 +35,17 @@ Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑
 
 在 Revit 项目或族编辑器中，导航到“附加模块”，然后单击 Dynamo。*
 
-{% hint style="warning" %} *Dynamo 仅在已打开的文件中运行。{% endhint %}
+{% hint style="warning" %}
+ *Dynamo 仅在已打开的文件中运行。
+{% endhint %}
 
-\![](<images/1/launchdynamofromrevit (1).jpg>)
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 在 Revit 中打开 Dynamo 时，有一个名为“Revit”的新类别。这是对用户界面完全新增的功能，可提供专门针对 Revit 工作流的节点。*
 
-{% hint style="warning" %} *通过使用 Revit 特定的节点族，Dynamo 图形将仅在 Dynamo for Revit 中打开时可用。例如，如果在 Dynamo 沙盒中打开 Dynamo for Revit 图形，Revit 节点将丢失。{% endhint %}
+{% hint style="warning" %}
+ *通过使用 Revit 特定的节点族，Dynamo 图形将仅在 Dynamo for Revit 中打开时可用。例如，如果在 Dynamo 沙盒中打开 Dynamo for Revit 图形，Revit 节点将丢失。
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
