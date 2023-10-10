@@ -111,7 +111,7 @@ Il nodo **List.Count** conteggia tutti gli elementi di un elenco. Verrà utilizz
 > 3. Collegare ogni riga del blocco di codice ai rispettivi input _X_ e _Y_ di un nodo **Point.ByCoordinates**. Fare clic con il pulsante destro del mouse sul nodo, selezionare Collegamento e scegliere _Globale_. In questo modo viene creata una griglia di punti. Poiché è stato definito l'intervallo da -50 a 50, la griglia di Dynamo di default viene estesa.
 > 4. Un nodo _**Watch**_ mostra i punti creati. Notare la struttura di dati. È stato creato un elenco di elenchi. Ogni elenco rappresenta una riga di punti della griglia.
 
-\![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Associare un nodo **List.Count** all'output del nodo Watch del passaggio precedente.
 > 2. Collegare un nodo **Watch** all'output **List.Count**.
@@ -150,7 +150,7 @@ Successivamente, verrà utilizzato **List.Combine** per applicare una funzione a
 
 Una volta completato, i 2 gruppi di punti vengono compressi/associati tramite una funzione **Line.ByStartPointEndPoint** e restituiscono 10 righe in Dynamo.
 
-{% hint style="info" %} Fare riferimento all'esercizio in Elenchi n-dimensionali per vedere un altro esempio di utilizzo di List.Combine. {% endhint %}
+{% hint style="info" %}\r\n Fare riferimento all'esercizio in Elenchi n-dimensionali per vedere un altro esempio di utilizzo di List.Combine. \r\n{% endhint %}
 
 ### List@Level
 

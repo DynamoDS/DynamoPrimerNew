@@ -22,7 +22,7 @@ Gli input e gli output per i nodi sono denominati porte e fungono da prese per i
 
 Si prevede che le porte ricevano dati di un certo tipo. Ad esempio, se si collega un numero come _2.75_ alle porte su un nodo Point.ByCoordinates, la creazione di un punto verrà eseguita correttamente. Se tuttavia si specifica _Red_ nella stessa porta, verrà generato un errore.
 
-{% hint style="info" %} Suggerimento Posizionare il cursore su una porta per visualizzare una descrizione comando contenente il tipo di dati previsto. {% endhint %}
+{% hint style="info" %}\r\n Suggerimento Posizionare il cursore su una porta per visualizzare una descrizione comando contenente il tipo di dati previsto. \r\n{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,7 +53,7 @@ Se si posiziona il cursore o si fa clic con il pulsante destro del mouse sul nom
 
 Se il programma visivo contiene avvertimenti o errori, in Dynamo verranno fornite ulteriori informazioni sul problema. Qualsiasi nodo giallo avrà anche una descrizione comando sopra il nome. Posizionare il cursore del mouse sull'icona della descrizione comando relativo all’avviso ![](images/nodesandwires-nodewarningicon.png) o all’errore ![](images/nodesandwires-nodeerroricon.png) per espanderla.
 
-{% hint style="info" %} Suggerimento Con queste informazioni sulla descrizione comando, esaminare i nodi a monte per verificare se la struttura di dati o il tipo di dati richiesto è errato. {% endhint %}
+{% hint style="info" %}\r\n Suggerimento Con queste informazioni sulla descrizione comando, esaminare i nodi a monte per verificare se la struttura di dati o il tipo di dati richiesto è errato. \r\n{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
@@ -87,7 +87,7 @@ Spesso è necessario regolare il flusso di programma nel programma visivo modifi
 
 * Per modificare il collegamento in una porta di input, fare clic con il pulsante sinistro del mouse su un'altra porta di input.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Per rimuovere il filo, trascinarlo e fare clic con il pulsante sinistro del mouse sull'area di lavoro.
 

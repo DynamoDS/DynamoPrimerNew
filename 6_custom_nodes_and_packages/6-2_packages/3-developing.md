@@ -20,7 +20,7 @@ In Dynamo, fare clic su \\_Pacchetti>Cerca pacchetto... e c_ercare il pacchetto 
 
 Dopo l'installazione, i nodi personalizzati dovrebbero essere disponibili nella sezione Moduli aggiuntivi > Dynamo Primer.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Dopo aver installato il pacchetto, esaminarne in maniera dettagliata la configurazione.
 
@@ -30,7 +30,7 @@ Il pacchetto che si sta creando utilizza cinque nodi personalizzati che sono sta
 
 Si tratta di un pacchetto semplice con cinque nodi personalizzati. Nei passaggi riportati di seguito, verrà descritta brevemente la configurazione di ogni nodo personalizzato.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 

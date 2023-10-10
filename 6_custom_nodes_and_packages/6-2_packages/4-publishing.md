@@ -2,7 +2,7 @@
 
 Nelle sezioni precedenti, sono stati analizzati i dettagli su come il pacchetto _MapToSurface_ è configurato con nodi personalizzati e file di esempio. Ma com'è possibile pubblicare un pacchetto che è stato sviluppato localmente? Questo case study mostra come pubblicare un pacchetto da un gruppo di file in una cartella locale.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Esistono diversi modi per pubblicare un pacchetto. Di seguito è riportato il processo consigliato: **pubblicare localmente, sviluppare localmente, quindi pubblicare in linea**. Si inizierà con una cartella contenente tutti i file del pacchetto.
 
@@ -18,7 +18,7 @@ Quindi riavviare Dynamo. Alla riapertura, quando si seleziona la finestra _Gesti
 
 ### Pubblicazione locale di un pacchetto
 
-{% hint style="warning" %} La pubblicazione del pacchetto di Dynamo è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D. Dynamo Sandbox non dispone di funzionalità di pubblicazione.{% endhint %}
+{% hint style="warning" %}\r\n La pubblicazione del pacchetto di Dynamo è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D. Dynamo Sandbox non dispone di funzionalità di pubblicazione.\r\n{% endhint %}
 
 > Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
@@ -47,7 +47,7 @@ Nella finestra _Pubblica un pacchetto di Dynamo_, sono stati compilati i moduli 
 
 Dopo la pubblicazione, i nodi personalizzati devono essere disponibili nel gruppo "DynamoPrimer" o nella libreria di Dynamo.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Ora osservare la directory principale per vedere in che modo Dynamo ha formattato il pacchetto appena creato. A tale scopo, fare clic su Dynamo > Preferenze > Package Manager > accanto a MapToSurface, fare clic sul menu con i puntini verticali > selezionare Mostra directory principale.
 
@@ -64,7 +64,7 @@ Si noti che la directory principale si trova nella posizione locale del pacchett
 
 ### Pubblicazione di un pacchetto in linea
 
-{% hint style="warning" %} Nota Seguire questa procedura solo se si sta effettivamente pubblicando un pacchetto personalizzato. {% endhint %}
+{% hint style="warning" %}\r\n Nota Seguire questa procedura solo se si sta effettivamente pubblicando un pacchetto personalizzato. \r\n{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 

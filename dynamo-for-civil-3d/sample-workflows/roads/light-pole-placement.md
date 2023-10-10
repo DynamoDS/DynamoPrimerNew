@@ -18,13 +18,13 @@ Uno dei molti casi di utilizzo importanti di Dynamo è il posizionamento dinamic
 
 ## Compatibilità delle versioni
 
-{% hint style="success" %} Questo grafico verrà eseguito su **Civil 3D 2020** e versioni successive. {% endhint %}
+{% hint style="success" %}\r\n Questo grafico verrà eseguito su **Civil 3D 2020** e versioni successive. \r\n{% endhint %}
 
 ## Set di dati
 
 Iniziare scaricando i file di esempio riportati qui sotto, quindi aprendo il file DWG e il grafico di Dynamo.
 
-{% hint style="info" %} È consigliabile salvare il file Excel nella stessa directory del grafico di Dynamo. {% endhint %}
+{% hint style="info" %}\r\n È consigliabile salvare il file Excel nella stessa directory del grafico di Dynamo. \r\n{% endhint %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -49,7 +49,7 @@ In questo grafico di esempio, si utilizzerà un file Excel per memorizzare i dat
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>La struttura della tabella di file Excel</p></figcaption></figure>
 
-{% hint style="info" %} L'utilizzo di Dynamo per la lettura dei dati da un file esterno (ad esempio un file Excel) è una strategia ottimale, soprattutto quando i dati devono essere condivisi con altri membri del team. {% endhint %}
+{% hint style="info" %}\r\n L'utilizzo di Dynamo per la lettura dei dati da un file esterno (ad esempio un file Excel) è una strategia ottimale, soprattutto quando i dati devono essere condivisi con altri membri del team. \r\n{% endhint %}
 
 I dati di Excel vengono importati in Dynamo in questo modo. 
 
@@ -59,7 +59,7 @@ Ora che sono disponibili i dati, è necessario suddividerli per colonna (_Corrid
 
 Sembra a posto, giusto? Ma c'è un potenziale problema con questo approccio. Cosa succede se l'ordine delle colonne nel file Excel cambia in futuro? Oppure tra due colonne ne viene aggiunta una nuova? Il grafico non funzionerà correttamente e richiederà un aggiornamento. È proteggere il grafico in futuro inserendo i dati in un **dizionario**, con le intestazioni di colonna di Excel come _keys_ e gli altri dati come _values_.
 
-{% hint style="info" %} Se non si conoscono i dizionari, consultare la sezione [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention"). {% endhint %}
+{% hint style="info" %}\r\n Se non si conoscono i dizionari, consultare la sezione [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention"). \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Inserimento dei dati di Excel in un dizionario</p></figcaption></figure>
 
@@ -81,13 +81,13 @@ Ora che i dati di Excel sono stati importati e sono pronti, iniziare a utilizzar
 
 Ora si procederà alla generazione di **sistemi di coordinate** lungo le linee caratteristiche del modellatore in corrispondenza dei valori di progressiva specificati nel file Excel. Questi sistemi di coordinate verranno utilizzati per definire la posizione, la rotazione e la scala dei riferimenti di blocco dei lampioni.
 
-{% hint style="info" %} Se non si conoscono i sistemi di coordinate, consultare la sezione [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Se non si conoscono i sistemi di coordinate, consultare la sezione [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>Acquisizione di sistemi di coordinate lungo le linee caratteristiche del modellatore</p></figcaption></figure>
 
 Si noti che qui viene utilizzato un blocco di codice per ruotare i sistemi di coordinate in base al lato della linea base su cui si trovano. Si potrebbe ottenere questo risultato utilizzando una sequenza di più nodi, ma questo è un buon esempio di una situazione in cui è più facile scriverlo.
 
-{% hint style="info" %} Se non si conoscono i blocchi di codice, consultare la sezione [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). {% endhint %}
+{% hint style="info" %}\r\n Se non si conoscono i blocchi di codice, consultare la sezione [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). \r\n{% endhint %}
 
 ### Creazione di riferimenti di blocco
 
@@ -103,7 +103,7 @@ Da qui, l'ultimo passaggio consiste nella creazione dei riferimenti di blocco.
 
 Quando si esegue il grafico, dovrebbero essere visualizzati nuovi riferimenti di blocco nello spazio modello lungo il modellatore. Ed ecco la parte più interessante. Se la modalità di esecuzione del grafico è impostata su Automatica e si modifica il file Excel, i riferimenti di blocco vengono aggiornati automaticamente.
 
-{% hint style="info" %} È possibile leggere ulteriori informazioni sulle modalità di esecuzione del grafico nella sezione [3_user_interface](../../../3\_user\_interface/ "mention"). {% endhint %}
+{% hint style="info" %}\r\n È possibile leggere ulteriori informazioni sulle modalità di esecuzione del grafico nella sezione [3_user_interface](../../../3\_user\_interface/ "mention"). \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Esecuzione di aggiornamenti al file Excel e rapida visualizzazione dei risultati in Civil 3D</p></figcaption></figure>
 
@@ -111,7 +111,7 @@ Di seguito è riportato un esempio di esecuzione del grafico mediante il **Letto
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Esecuzione del grafico mediante il Lettore Dynamo e visualizzazione dei risultati in Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../../dynamo-player.md "mention"). \r\n{% endhint %}
 
 > :tada: Missione compiuta!
 
@@ -134,8 +134,8 @@ Di seguito è riportato il risultato dell'anteprima di sfondo di Dynamo.
 
 Ecco alcune idee su come espandere le funzionalità di questo grafico.
 
-{% hint style="info" %} Aggiungere una colonna **rotation** al file Excel e utilizzarla per guidare la rotazione dei sistemi di coordinate. {% endhint %}
+{% hint style="info" %}\r\n Aggiungere una colonna **rotation** al file Excel e utilizzarla per guidare la rotazione dei sistemi di coordinate. \r\n{% endhint %}
 
-{% hint style="info" %} Aggiungere **offset orizzontali o verticali** al file Excel in modo che i lampioni possano deviare dalla linea caratteristica del modellatore, se necessario. {% endhint %}
+{% hint style="info" %}\r\n Aggiungere **offset orizzontali o verticali** al file Excel in modo che i lampioni possano deviare dalla linea caratteristica del modellatore, se necessario. \r\n{% endhint %}
 
-{% hint style="info" %} Anziché utilizzare un file Excel con valori di progressiva, generare i valori di progressiva ** direttamente in Dynamo** utilizzando una progressiva iniziale e una spaziatura tipica. {% endhint %}
+{% hint style="info" %}\r\n Anziché utilizzare un file Excel con valori di progressiva, generare i valori di progressiva ** direttamente in Dynamo** utilizzando una progressiva iniziale e una spaziatura tipica. \r\n{% endhint %}

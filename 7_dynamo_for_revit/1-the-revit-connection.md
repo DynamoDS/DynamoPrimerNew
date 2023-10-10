@@ -35,13 +35,13 @@ Utilizzando i nodi di Dynamo principali in combinazione con quelli di Revit pers
 
 In un progetto o un editor di famiglie di Revit, individuare i moduli aggiuntivi e fare clic su Dynamo.*
 
-{% hint style="warning" %} *Dynamo verrà eseguito solo nel file in cui è stato aperto. {% endhint %}
+{% hint style="warning" %}\r\n *Dynamo verrà eseguito solo nel file in cui è stato aperto. \r\n{% endhint %}
 
-\![](<images/1/launchdynamofromrevit (1).jpg>)
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Quando si apre Dynamo in Revit, è presente una nuova categoria denominata Revit. Questa è un'aggiunta completa all'interfaccia utente che offre nodi specifici per i workflow di Revit.*
 
-{% hint style="warning" %} *Utilizzando la famiglia di nodi specifica di Revit, il grafico di Dynamo funzionerà solo durante l'apertura in Dynamo for Revit. Se, ad esempio, viene aperto un grafico di Dynamo for Revit in Dynamo Sandbox, i nodi di Revit risulteranno mancanti. {% endhint %}
+{% hint style="warning" %}\r\n *Utilizzando la famiglia di nodi specifica di Revit, il grafico di Dynamo funzionerà solo durante l'apertura in Dynamo for Revit. Se, ad esempio, viene aperto un grafico di Dynamo for Revit in Dynamo Sandbox, i nodi di Revit risulteranno mancanti. \r\n{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 

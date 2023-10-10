@@ -1,6 +1,6 @@
 # Informazioni su
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video \r\n{% endembed %}
 
 ## Per Dynamo v2.13
 

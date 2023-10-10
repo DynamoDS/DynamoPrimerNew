@@ -14,7 +14,7 @@ L'istruzione "If" è un concetto chiave nella programmazione: "Se _ciò_ è vero
 | ------------------------------------------------ | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                        | If (**If**)               | test, true, false | risultato  |
 | ![](../images/5-1/Formula.jpg)                   | Formula (**IF(x,y,z)**)   | x, y, z           | risultato  |
-| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | X, Y, Z           | risultato  |
+| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | X, Y, Z           | risultato  |
 
 Si esaminerà un breve esempio per ciascuno di questi tre nodi in azione utilizzando l'istruzione "If" condizionale.
 
