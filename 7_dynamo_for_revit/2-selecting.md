@@ -18,7 +18,7 @@ Zobrazme si stručný přehled hierarchie aplikace Revit.
 
 Pamatujete si taxonomii z biologie? Říše, kmen, třída, řád, čeleď, rod, druh? Prvky aplikace Revit jsou uspořádány do kategorií podobným způsobem. Na základní úrovni je možné hierarchii aplikace Revit rozdělit na kategorie, rodiny, typy* a instance. Instance je samostatný prvek modelu (s jedinečným ID), zatímco kategorie definuje obecnou skupinu (například „stěny“ nebo „podlahy“). Pokud je databáze aplikace Revit tímto způsobem uspořádána, můžete vybrat jeden prvek a vybrat všechny podobné prvky podle určené úrovně hierarchie.
 
-{% hint style="warning" %} *Typy v aplikaci Revit jsou definovány jinak než typy u programování. Typ v aplikaci Revit odkazuje na větev hierarchie, nikoli na „datový typ“. {% endhint %}
+{% hint style="warning" %}\r\n *Typy v aplikaci Revit jsou definovány jinak než typy u programování. Typ v aplikaci Revit odkazuje na větev hierarchie, nikoli na „datový typ“. \r\n{% endhint %}
 
 ### Navigace v databázi pomocí uzlů aplikace Dynamo
 
@@ -149,4 +149,4 @@ Dále jsme připraveni extrahovat některé základní informace z typu rodiny 
 > 2. Připojte uzel _All Elements of Family Type_ k uzlu _AdaptiveComponent.Location_. Tím se zobrazí seznam seznamů, z nichž každý má tři body představující umístění adaptivních bodů.
 > 3. Připojením uzlu _Polygon.ByPoints_ pak vrátíte objekt PolyCurve. Ve výřezu aplikace Dynamo je to vidět. Touto metodou jste vizualizovali geometrii jednoho prvku a abstrahovali geometrii zbývajícího pole prvků (které mohlo být početně větší než v tomto příkladu).
 
-{% hint style="info" %} Tip: Pokud v aplikaci Dynamo kliknete na zelené číslo u prvku aplikace Revit, výřez aplikace Revit se na tento prvek přiblíží. {% endhint %}
+{% hint style="info" %}\r\n Tip: Pokud v aplikaci Dynamo kliknete na zelené číslo u prvku aplikace Revit, výřez aplikace Revit se na tento prvek přiblíží. \r\n{% endhint %}

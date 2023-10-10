@@ -18,7 +18,7 @@ Poté restartujte aplikaci Dynamo. Při opakovaném otevření by se v okně _S
 
 ### Místní publikování balíčku
 
-{% hint style="warning" %} Publikování balíčků aplikace Dynamo je povoleno pouze v aplikacích Dynamo for Revit a Dynamo pro aplikaci Civil 3D. Aplikace Dynamo Sandbox nemá funkce pro publikování. {% endhint %}
+{% hint style="warning" %}\r\n Publikování balíčků aplikace Dynamo je povoleno pouze v aplikacích Dynamo for Revit a Dynamo pro aplikaci Civil 3D. Aplikace Dynamo Sandbox nemá funkce pro publikování. \r\n{% endhint %}
 
 > Kliknutím na odkaz níže si stáhněte vzorový soubor.
 >
@@ -64,7 +64,7 @@ Všimněte si, že kořenový adresář se nachází v místním umístění ba
 
 ### Publikování balíčku online
 
-{% hint style="warning" %} Poznámka: Tento krok neprovádějte, pokud skutečně nepublikujete vlastní balíček! {% endhint %}
+{% hint style="warning" %}\r\n Poznámka: Tento krok neprovádějte, pokud skutečně nepublikujete vlastní balíček! \r\n{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 

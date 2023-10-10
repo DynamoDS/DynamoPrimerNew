@@ -7,7 +7,7 @@ Aplikace Dynamo je sice jako nástroj pro [vizuální programování](../../a\_a
 
 V této části se zaměříme na to, jak lze pomocí jazyka Python v prostředí aplikace Civil 3D efektivně využívat rozhraní .NET API aplikací AutoCAD a Civil 3D.
 
-{% hint style="info" %} Další obecné informace o používání jazyka Python v aplikaci Dynamo naleznete v části [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") . {% endhint %}
+{% hint style="info" %}\r\n Další obecné informace o používání jazyka Python v aplikaci Dynamo naleznete v části [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") . \r\n{% endhint %}
 
 ## Dokumentace k rozhraní API
 
@@ -21,7 +21,7 @@ Aplikace AutoCAD i Civil 3D mají k dispozici několik rozhraní API, která u
 
 [Referenční příručka rozhraní .NET API pro aplikaci Civil 3D](https://help.autodesk.com/view/CIV3D/2024/CSY/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %} Při procházení této části se můžete setkat s pojmy, které neznáte, jako jsou databáze, transakce, metody, vlastnosti atd. Mnoho z těchto pojmů tvoří základ pro práci s rozhraním .NET API a nejsou specifické pro aplikaci Dynamo nebo jazyk Python. Podrobné rozebírání těchto pojmů přesahuje rámec této části příručky Primer, proto doporučujeme často vyhledávat další informace na výše uvedených odkazech. {% endhint %}
+{% hint style="info" %}\r\n Při procházení této části se můžete setkat s pojmy, které neznáte, jako jsou databáze, transakce, metody, vlastnosti atd. Mnoho z těchto pojmů tvoří základ pro práci s rozhraním .NET API a nejsou specifické pro aplikaci Dynamo nebo jazyk Python. Podrobné rozebírání těchto pojmů přesahuje rámec této části příručky Primer, proto doporučujeme často vyhledávat další informace na výše uvedených odkazech. \r\n{% endhint %}
 
 ## Šablona kódu
 
@@ -39,8 +39,8 @@ Při první úpravě nového uzlu jazyka Python bude tento uzel předvyplněn k�
 > 8. Zrušte komentář tohoto řádku, aby se po dokončení hlavní práce provedla transakce.
 > 9. Pokud chcete z uzlu získat výstup libovolných dat, přiřaďte je na konci skriptu proměnné `OUT`.
 
-{% hint style="info" %} **Chcete si šablonu přizpůsobit?**\
- Výchozí šablonu jazyka Python si můžete přizpůsobit úpravou souboru `PythonTemplate.py`, který se nachází v umístění `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. {% endhint %}
+{% hint style="info" %}\r\n **Chcete si šablonu přizpůsobit?**\
+ Výchozí šablonu jazyka Python si můžete přizpůsobit úpravou souboru `PythonTemplate.py`, který se nachází v umístění `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. \r\n{% endhint %}
 
 ## Příklad
 
@@ -88,13 +88,13 @@ Než budeme pokračovat, musíme se krátce zastavit u důležitého pojmu. V 
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Typ aplikace Dynamo</th><th width="373">Zabalení</th></tr></thead><tbody><tr><td><strong>Objekt</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entita</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entita</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} Obecně je bezpečnější získat ID objektu pomocí vlastnosti `InternalObjectId` a poté získat přístup k zabalenému objektu v transakci. Důvodem je, že vlastnost `InternalDBObject` vrátí objekt DBObject aplikace AutoCAD, který není v zapisovatelném stavu. {% endhint %}
+{% hint style="warning" %}\r\n Obecně je bezpečnější získat ID objektu pomocí vlastnosti `InternalObjectId` a poté získat přístup k zabalenému objektu v transakci. Důvodem je, že vlastnost `InternalDBObject` vrátí objekt DBObject aplikace AutoCAD, který není v zapisovatelném stavu. \r\n{% endhint %}
 
 ### Skript jazyka Python
 
 Zde je úplný skript jazyka Python, který provádí přístup k vnitřním objektům povodí a získává jejich hraniční body. Zvýrazněné řádky jsou upraveny/přidány oproti výchozímu kódu šablony.
 
-{% hint style="info" %} Kliknutím na podtržený text ve skriptu zobrazíte popis k jednotlivým řádkům. {% endhint %}
+{% hint style="info" %}\r\n Kliknutím na podtržený text ve skriptu zobrazíte popis k jednotlivým řádkům. \r\n{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Načtení standardní knihovny jazyka Python a knihovny jazyka DesignScript
 import sys
@@ -161,7 +161,7 @@ with adoc.LockDocument():
 <strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
 </strong></code></pre>
 
-{% hint style="warning" %} Pravidlem je, že většinu logiky skriptu je vhodné zahrnout do transakce. Tím zajistíte bezpečný přístup k objektům, které váš skript čte/zapisuje. V mnoha případech může vynechání transakce způsobit závažnou chybu. {% endhint %}
+{% hint style="warning" %}\r\n Pravidlem je, že většinu logiky skriptu je vhodné zahrnout do transakce. Tím zajistíte bezpečný přístup k objektům, které váš skript čte/zapisuje. V mnoha případech může vynechání transakce způsobit závažnou chybu. \r\n{% endhint %}
 
 ### Vytvoření objektů PolyCurves
 
@@ -181,7 +181,7 @@ A zde je výsledná geometrie aplikace Dynamo.
 
 Jen stručná poznámka, než skončíme toto téma. V závislosti na používané verzi aplikace Civil 3D může být uzel jazyka Python konfigurován odlišně. V **aplikacích Civil 3D 2020 a 2021** používala aplikace Dynamo k přesunu dat mezi objekty .NET a skripty jazyka Python nástroj **IronPython**. V aplikaci **Civil 3D 2022** však aplikace Dynamo používá standardní nativní interpret jazyka Python (neboli **CPython**), který používá jazyk Python 3. Mezi výhody přechodu na tento interpret patří přístup k oblíbeným moderním knihovnám a novým funkcím platformy, nezbytná údržba a bezpečnostní opravy.
 
-{% hint style="info" %} Další informace o tomto přechodu a o upgradu starších skriptů naleznete na [blogu aplikace Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Pokud chcete i nadále používat nástroj IronPython, stačí nainstalovat balíček **DynamoIronPython2.7** pomocí nástroje Dynamo Package Manager. {% endhint %}
+{% hint style="info" %}\r\n Další informace o tomto přechodu a o upgradu starších skriptů naleznete na [blogu aplikace Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Pokud chcete i nadále používat nástroj IronPython, stačí nainstalovat balíček **DynamoIronPython2.7** pomocí nástroje Dynamo Package Manager. \r\n{% endhint %}
 
 [^1]: Ve výchozím nastavení není knihovna geometrie aplikace Dynamo přidána do prostředí jazyka Python. Cílem tohoto skriptu je vytvořit seznam bodů aplikace Dynamo pro hranice povodí, takže je nutné přidat tento řádek, abychom mohli později vytvořit body.
 

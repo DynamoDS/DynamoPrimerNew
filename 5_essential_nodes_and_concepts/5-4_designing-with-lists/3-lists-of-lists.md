@@ -150,7 +150,7 @@ Dále pomocí uzlu **List.Combine** použijeme funkci na objekty ve 2 samostatn�
 
 Po dokončení jsou 2 sady bodů komprimovány/spárovány dohromady pomocí funkce **Line.ByStartPointEndPoint** a vrátí 10 řádků v aplikaci Dynamo.
 
-{% hint style="info" %} Další příklad použití uzlu List.Combine naleznete ve cvičení v části N-rozměrné seznamy. {% endhint %}
+{% hint style="info" %}\r\n Další příklad použití uzlu List.Combine naleznete ve cvičení v části N-rozměrné seznamy. \r\n{% endhint %}
 
 ### Funkce List@Level
 

@@ -1,6 +1,6 @@
 # O aplikaci
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Propagační videofilm o aplikaci Dynamo {% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Propagační videofilm o aplikaci Dynamo \r\n{% endembed %}
 
 ## Pro aplikaci Dynamo verze 2.13
 
