@@ -4,7 +4,7 @@
 
 Dynamo — это активный проект разработки с открытым исходным кодом. Ознакомьтесь со [списком программ, поддерживающих Dynamo](http://dynamobim.org/download/)
 
-![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) \![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
+![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) ![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
 
 ### Запуск Dynamo как расширения
 
@@ -12,7 +12,7 @@ Dynamo поставляется в комплекте с таким програ
 
 Чтобы начать работу, запустите данную программу на панели инструментов. В зависимости от используемого программного обеспечения, значок запуска обычно находится на вкладке «Меню» > **Управление**. Щелкните значок Dynamo ![](images/dynamoCore-halfSize.png), чтобы запустить программу.
 
-\![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
+![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
 
 Дополнительные сведения об использовании Dynamo с конкретным программным обеспечением см. в следующих разделах.
 
@@ -33,9 +33,9 @@ Dynamo поставляется в комплекте с таким програ
 
 ![](images/DynamoSandboxAllbuilds.jpg)
 
-{% hint style="info" %} Новейшие разработки включают в себя новые экспериментальные возможности, которые еще не прошли полную проверку, поэтому могут функционировать нестабильно. С помощью этой версии можно обнаружить ошибки или проблемы, помочь нам улучшить приложение, сообщив о проблемах нашей команде.
+{% hint style="info" %}\r\n Новейшие разработки включают в себя новые экспериментальные возможности, которые еще не прошли полную проверку, поэтому могут функционировать нестабильно. С помощью этой версии можно обнаружить ошибки или проблемы, помочь нам улучшить приложение, сообщив о проблемах нашей команде.
 
-Для начинающих пользователей рекомендуется официальная стабильная версия. {% endhint %}
+Для начинающих пользователей рекомендуется официальная стабильная версия. \r\n{% endhint %}
 
 #### Распаковка
 
@@ -63,4 +63,4 @@ Dynamo поставляется в комплекте с таким програ
 
 Поздравляем! Настройка DynamoSandbox завершена.
 
-{% hint style="info" %} **Геометрия** — это дополнительная функция в Dynamo Sandbox, доступная только пользователям с действующей подпиской или лицензией на следующие программные продукты Autodesk: Revit, Robot Structural Analysis, FormIt и Civil 3D. **Геометрия** позволяет импортировать, создавать, редактировать и экспортировать геометрию из Dynamo Sandbox. {% endhint %}
+{% hint style="info" %}\r\n **Геометрия** — это дополнительная функция в Dynamo Sandbox, доступная только пользователям с действующей подпиской или лицензией на следующие программные продукты Autodesk: Revit, Robot Structural Analysis, FormIt и Civil 3D. **Геометрия** позволяет импортировать, создавать, редактировать и экспортировать геометрию из Dynamo Sandbox. \r\n{% endhint %}
