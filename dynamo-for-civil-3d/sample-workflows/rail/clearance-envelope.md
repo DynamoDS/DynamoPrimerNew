@@ -17,7 +17,9 @@
 
 ## バージョンの互換性
 
-{% hint style="success" %}\r\n このグラフは **Civil 3D 2020** 以降で実行できます。 \r\n{% endhint %}
+{% hint style="success" %}
+このグラフは **Civil 3D 2020** 以降で実行できます。 
+{% endhint %}
 
 ## データセット
 
@@ -55,7 +57,9 @@
 
 > 1. ノードの右下隅にある小さな **XXX** に注目してください。これは、ノードのレーシング設定が _[直積]_ に設定されていることを意味します。これは、両方の計画線に対して同じ測点値で座標系を生成するために必要です。
 
-{% hint style="info" %}\r\n ノード レーシングを初めて使用する場合は、「[1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention")」 セクションを参照してください。 \r\n{% endhint %}
+{% hint style="info" %}
+ノード レーシングを初めて使用する場合は、「[1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention")」 セクションを参照してください。 
+{% endhint %}
 
 ### Block ジオメトリを変換する
 
@@ -99,7 +103,9 @@ Dynamo では、次のようになります。
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。 \r\n{% endhint %}
+{% hint style="info" %}
+Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。 
+{% endhint %}
 
 > :tada: ミッションが達成されました。
 
@@ -107,8 +113,14 @@ Dynamo では、次のようになります。
 
 このグラフの機能を拡張する方法について、いくつかのアイデアを示します。
 
-{% hint style="info" %}\r\n 各トラックに対して**異なる測点範囲**を個別に使用する機能を追加します。 \r\n{% endhint %}
+{% hint style="info" %}
+各トラックに対して**異なる測点範囲**を個別に使用する機能を追加します。 
+{% endhint %}
 
-{% hint style="info" %}\r\n 小さなセグメントに**ソリッドを分割**し、クラッシュを個別に解析できるようにします。 \r\n{% endhint %}
+{% hint style="info" %}
+小さなセグメントに**ソリッドを分割**し、クラッシュを個別に解析できるようにします。
+{% endhint %}
 
-{% hint style="info" %}\r\n エンベロープ ソリッドが**フィーチャと交差**するかを確認し、クラッシュするソリッドに色を付けます。 \r\n{% endhint %}
+{% hint style="info" %}
+エンベロープ ソリッドが**フィーチャと交差**するかを確認し、クラッシュするソリッドに色を付けます。
+{% endhint %}
