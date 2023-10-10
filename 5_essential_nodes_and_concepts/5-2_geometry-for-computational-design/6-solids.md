@@ -27,7 +27,7 @@ Sie können [Boolesche Operationen](6-solids.md#boolean-operations) verwenden, u
 
 ### Anhalten
 
-Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise viel Zeit in Anspruch nehmen. Verwenden Sie die Anhaltfunktion, um die Ausführung der ausgewählten Blöcke und der betroffenen untergeordneten Blöcke zu unterbrechen.
+Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise viel Zeit in Anspruch nehmen. Sie können die Anhaltfunktion verwenden, um die Ausführung der ausgewählten Blöcke und der betroffenen untergeordneten Blöcke zu unterbrechen.
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
@@ -38,6 +38,10 @@ Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise
 > 3\. Um die Ausführung der Blöcke fortzusetzen, klicken Sie mit der rechten Maustaste und deaktivieren "Anhalten".
 >
 > 4\. Alle betroffenen Blöcke und die zugehörigen Geometrievorschauen werden aktualisiert und wieder im standardmäßigen Vorschaumodus angezeigt.
+
+{% hint style="info" %}
+ Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "Blöcke und Drähte"). 
+{% endhint %}
 
 ## Vertiefung...
 

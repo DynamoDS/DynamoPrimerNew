@@ -35,25 +35,33 @@ Die Core-Dynamo-Blöcke ermöglichen es dem Benutzer in Verbindung mit benutzerd
 
 Navigieren Sie in einem Revit-Projekt oder im Familieneditor zu Zusatzmodule und klicken Sie auf Dynamo.*
 
-{% hint style="warning" %}\r\n *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. 
+{% endhint %}
 
-![](<images/1/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
 
-{% hint style="warning" %}\r\n *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo for Revit öffnen. Wenn Sie ein Diagramm aus Dynamo for Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo for Revit öffnen. Wenn Sie ein Diagramm aus Dynamo for Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. 
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Anhalten von Blöcken
 
-Revit ist eine Plattform mit robusten Funktionen zum Projektmanagement. Aus diesem Grund sind parametrische Operationen in Dynamo eventuell komplex und ihre Berechnung kann viel Zeit beanspruchen. Falls die Berechnung von Blöcken in Dynamo sehr lange dauert, können Sie die Blockfunktionen anhalten ("einfrieren") und damit die Ausführung von Revit-Vorgängen unterbrechen, während Sie Ihr Diagramm entwickeln. Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [Anhalten](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) im Kapitel Körper.
+Revit ist eine Plattform mit robusten Funktionen zum Projektmanagement. Aus diesem Grund sind parametrische Operationen in Dynamo eventuell komplex und ihre Berechnung kann viel Zeit beanspruchen. Falls die Berechnung von Blöcken in Dynamo sehr lange dauert, können Sie die Blockfunktionen anhalten ("einfrieren") und damit die Ausführung von Revit-Vorgängen unterbrechen, während Sie Ihr Diagramm entwickeln.
+
+{% hint style="info" %}
+ Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../4\_nodes\_and\_wires/ "Blöcke und Drähte"). 
+{% endhint %}
 
 ### Community und Dynamo-Blog
 
 Da Dynamo ursprünglich für AEC erstellt wurde, bietet seine große und weiter wachsende Community ausgezeichnete Ressourcen, die es ermöglichen, von Experten der Branche zu lernen und sich mit ihnen auszutauschen. Die Dynamo-Community setzt sich zusammen aus Architekten, Ingenieuren, Programmierern und Designern, denen die Leidenschaft für Austausch und Entwicklung gemeinsam ist.
 
-Dynamo ist ein Open Source-Projekt und entwickelt sich daher ständig weiter. Ein großer Teil dieser Entwicklungen steht in Verbindung mit Revit. Wenn Sie neu hinzugekommen sind, können Sie damit beginnen, im Diskussionsforum [Fragen zu stellen](http://dynamobim.org/forums/forum/dyn/). Programmierer, die sich an der Entwicklung von Dynamo beteiligen möchten, finden auf der [GitHub-Seite](https://github.com/DynamoDS/Dynamo) alles Nötige. Eine hervorragende Ressource für Bibliotheken externe Bibliotheken ist auch der [Dynamo Package Manager](http://dynamopackages.com). Viele dieser Pakete werden für die Verwendung mit AEC entwickelt. In diesem Kapitel werden solche extern entwickelten Pakete für die Unterteilung von Oberflächen in Felder vorgestellt.
+Dynamo ist ein Open Source-Projekt und entwickelt sich daher ständig weiter. Ein großer Teil dieser Entwicklungen steht in Verbindung mit Revit. Wenn Sie neu hinzugekommen sind, können Sie damit beginnen, im Diskussionsforum [Fragen zu stellen](http://dynamobim.org/forums/forum/dyn/). Programmierer, die sich an der Entwicklung von Dynamo beteiligen möchten, finden alles Nötige im [GitHub-Repository](https://github.com/DynamoDS/Dynamo). Eine hervorragende Ressource für Bibliotheken externe Bibliotheken ist auch der [Dynamo Package Manager](http://dynamopackages.com). Viele dieser Pakete werden für die Verwendung mit AEC entwickelt. In diesem Kapitel werden solche extern entwickelten Pakete für die Unterteilung von Oberflächen in Felder vorgestellt.
 
 Für Dynamo steht auch ein aktives Blog zur Verfügung. Lesen Sie die neuesten Posts, um sich über neue Entwicklungen auf dem Laufenden zu halten.
 

@@ -22,7 +22,9 @@ Die Eingaben und Ausgaben für Blöcke werden als Anschlüsse bezeichnet. Sie fu
 
 Anschlüsse erwarten Daten eines bestimmten Typs. Das Verbinden einer Zahl wie _2,75_ mit den Anschlüssen eines Point By Coordinates-Blocks führt beispielsweise dazu, dass ein Punkt erfolgreich erstellt wird. Wenn jedoch _Rot_ an denselben Anschluss geliefert wird, tritt ein Fehler auf.
 
-{% hint style="info" %}\r\n Tipp: Bewegen Sie den Cursor auf einen Anschluss, um eine QuickInfo mit dem erwarteten Datentyp aufzurufen. \r\n{% endhint %}
+{% hint style="info" %}
+ Tipp: Bewegen Sie den Cursor auf einen Anschluss, um eine QuickInfo mit dem erwarteten Datentyp aufzurufen. 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,13 +55,25 @@ Durch Bewegen des Cursors auf den Namen bzw. die Anschlüsse oder durch Klicken 
 
 Wenn Ihr visuelles Programm Warnungen oder Fehler aufweist, gibt Dynamo zusätzliche Informationen zu dem Problem an. Alle Blöcke, die in gelb angezeigt werden, verfügen auch über eine QuickInfo über dem Namen. Bewegen Sie zum Erweitern den Mauszeiger über das QuickInfo-Symbol der Warnung ![](images/nodesandwires-nodewarningicon.png) oder des Fehlers ![](images/nodesandwires-nodeerroricon.png).
 
-{% hint style="info" %}\r\nTipp: Untersuchen Sie vor dem Hintergrund dieser QuickInfo die vorgelagerten Blöcke, um zu sehen, ob der erforderliche Datentyp oder die erforderliche Datenstruktur fehlerhaft ist. \r\n{% endhint %}
+{% hint style="info" %}
+Tipp: Untersuchen Sie vor dem Hintergrund dieser QuickInfo die vorgelagerten Blöcke, um zu sehen, ob der erforderliche Datentyp oder die erforderliche Datenstruktur fehlerhaft ist. 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. QuickInfo zu Warnung: "Null" oder keine Daten können nicht als Double verstanden werden, d. h. als Zahl.
 > 2. Verwenden Sie den Watch-Block, um die Eingabedaten zu untersuchen.
 > 3. Der vorgelagerte Number-Block speichert "Rot", keine Zahl.
+
+### Anhalten von Blöcken
+
+In einigen Situationen ist es möglicherweise empfehlenswert, die Ausführung bestimmter Blöcke in Ihrem visuellen Programm zu verhindern. Sie können dies tun, indem Sie den Block "anhalten". Dies ist eine Option im Kontextmenü des Blocks.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+Durch das Anhalten eines Blocks werden auch die untergeordneten Blöcke angehalten. Mit anderen Worten werden alle Blöcke, die von der Ausgabe eines angehaltenen Blocks abhängen, ebenfalls angehalten.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## Drähte
 

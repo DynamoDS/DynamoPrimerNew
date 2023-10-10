@@ -18,7 +18,9 @@ Lassen Sie uns kurz über die Revit-Hierarchie sprechen.
 
 Dies lässt sich mit der Taxonomie in der Biologie vergleichen: Reich, Stamm, Klasse, Ordnung, Familie, Gattung, Art. Die Elemente in Revit sind auf ähnliche Weise geordnet. Die Revit-Hierarchie gliedert sich grundsätzlich in Kategorien, Familien, Typen* und Exemplare. Ein Exemplar ist ein einzelnes Modellelement (mit eindeutiger ID), während eine Kategorie eine allgemeine Gruppe definiert (z. B. Wände oder Geschossdecken). Diese Struktur der Revit-Datenbank ermöglicht es, ein Element und anhand der angegebenen Ebene in der Hierarchie auch alle ihm ähnlichen Elemente auszuwählen.
 
-{% hint style="warning" %}\r\n *Typen sind in Revit auf andere Weise definiert als in der Programmierung. In Revit ist mit einem Typ ein Zweig in der Hierarchie, nicht ein "Datentyp" gemeint. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Typen sind in Revit auf andere Weise definiert als in der Programmierung. In Revit ist mit einem Typ ein Zweig in der Hierarchie, nicht ein "Datentyp" gemeint. 
+{% endhint %}
 
 ### Datenbanknavigation mit Dynamo-Blöcken
 
@@ -30,7 +32,7 @@ _Zeigen und Klicken:_ Dies ist das einfachste Verfahren zur direkten Auswahl von
 
 _Dropdown-Menüs:_ In diesen Menüs wird eine Liste aller Elemente im Revit-Projekt erstellt, auf die Sie zugreifen können. Über diese können Sie Revit-Elemente referenzieren, die eventuell in der jeweiligen Ansicht nicht sichtbar sind. Dieses Werkzeug eignet sich hervorragend zum Abfragen bestehender und zum Erstellen neuer Elemente in einem Revit-Projekt oder im Familieneditor.
 
-![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 Sie können darüber hinaus Revit-Elemente anhand ihrer Ebene in der _Revit-Hierarchie_ auswählen. Diese Option erweist sich als hocheffizient, wenn große Datenmengen zur Vorbereitung der Dokumentation oder für die generative Instanziierung und Anpassung verarbeitet werden müssen.
 
@@ -48,7 +50,7 @@ Die drei oben stehenden Abbildungen bilden die Grundlage für die folgende Übun
 
 Diese Revit-Beispieldatei enthält drei Elementtypen eines einfachen Gebäudes. Diese dient als Beispiel für die Auswahl von Revit-Elementen innerhalb der Revit-Hierarchie.
 
-![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Gebäudekörper
 > 2. Träger (Tragwerkselemente)
@@ -81,7 +83,7 @@ Eine Alternative dazu wird im Folgenden beschrieben. In diesem Fall nehmen Sie d
 
 Mithilfe einiger einfacher Listenoperationen können Sie eine bestimmte Fläche abrufen, die für Ihre Zwecke von Interesse ist.
 
-![](images/2/selecting - exercise 05.jpg)
+\![](images/2/selecting - exercise 05.jpg)
 
 > 1. Geben Sie zunächst die ausgewählten Elemente von zuvor an den Element.Faces-Block aus.
 > 2. Der _List.Count_-Block zeigt dann, dass 23 Oberflächen im Körper enthalten sind.
@@ -149,4 +151,6 @@ Als Nächstes extrahieren Sie grundlegende Informationen aus dem Fachwerkbinder-
 > 2. Verbinden Sie den _All Elements of Family Type_-Block mit dem _AdaptiveComponent.Location_-Block. Dadurch erhalten Sie eine Liste von Listen mit je drei Punkten für die Positionen der adaptiven Punkte.
 > 3. Indem Sie einen _Polygon.ByPoints_-Block verbinden, erhalten Sie eine Polykurve. Dies ist im Dynamo-Ansichtsfenster zu erkennen. Mithilfe dieses Verfahrens haben Sie die Geometrie eines Elements visualisiert und die Geometrie der verbleibenden Reihen von Elementen abstrahiert (wobei mehr Elemente als in diesem Beispiel vorhanden sein könnten).
 
-{% hint style="info" %}\r\n Tipp: Wenn Sie in Dynamo auf die grün unterlegte Nummer eines Revit-Elements klicken, wird im Revit-Ansichtsfenster auf dieses Element eingezoomt. \r\n{% endhint %}
+{% hint style="info" %}
+ Tipp: Wenn Sie in Dynamo auf die grün unterlegte Nummer eines Revit-Elements klicken, wird im Revit-Ansichtsfenster auf dieses Element eingezoomt. 
+{% endhint %}
