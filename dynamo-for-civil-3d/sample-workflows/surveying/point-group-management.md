@@ -16,7 +16,9 @@ Civil 3D で COGO ポイントとポイント グループを使用して作業�
 
 ## バージョンの互換性
 
-{% hint style="success" %}\r\n このグラフは **Civil 3D 2020** 以降で実行できます。 \r\n{% endhint %}
+{% hint style="success" %}
+このグラフは **Civil 3D 2020** 以降で実行できます。
+{% endhint %}
 
 ## データセット
 
@@ -69,7 +71,9 @@ Civil 3D で COGO ポイントとポイント グループを使用して作業�
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、ツールスペースで結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。\r\n{% endhint %}
+{% hint style="info" %}
+Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。
+{% endhint %}
 
 > :tada: ミッションが達成されました。
 
@@ -77,8 +81,14 @@ Civil 3D で COGO ポイントとポイント グループを使用して作業�
 
 このグラフの機能を拡張する方法について、いくつかのアイデアを示します。
 
-{% hint style="info" %}\r\n ポイントのグループ化を、未処理の説明ではなく **完全な説明** に基づいて行うように修正します。 \r\n{% endhint %}
+{% hint style="info" %}
+ポイントのグループ化を、未処理の説明ではなく **完全な説明** に基づいて行うように修正します。
+{% endhint %}
 
-{% hint style="info" %}\r\n 選択した他の **定義済みカテゴリ**  (「グラウンド ショット」、「モニュメント」など)によってポイントをグループ化します。 \r\n{% endhint %}
+{% hint style="info" %}
+選択した他の **定義済みカテゴリ**  (「グラウンド ショット」、「モニュメント」など)によってポイントをグループ化します。
+{% endhint %}
 
-{% hint style="info" %}\r\n特定のグループのポイントに対して TIN サーフェスを自動的に作成します。\r\n{% endhint %}
+{% hint style="info" %}
+特定のグループのポイントに対して TIN サーフェスを自動的に作成します。
+{% endhint %}
