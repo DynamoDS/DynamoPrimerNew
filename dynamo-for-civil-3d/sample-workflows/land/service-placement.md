@@ -18,7 +18,11 @@
 
 ## Совместимость версий
 
-{% hint style="success" %}\r\n Этот график будет работать в **Civil 3D 2020** и более поздних версиях. \r\n{% endhint %}
+{% hint style="success" %}
+
+ Этот график будет работать в **Civil 3D 2020** и более поздних версиях. 
+
+{% endhint %}
 
 ## Набор данных
 
@@ -44,7 +48,11 @@
 
 Сначала необходимо добавить геометрию для распределительной магистрали в Dynamo. Вместо того чтобы выбирать отдельные линии или полилинии, мы извлечем все объекты на определенном слое и объединим их в сложную кривую Dynamo.
 
-{% hint style="info" %}\r\n Если вы еще не знакомы с кривыми Dynamo, см. раздел [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+
+ Если вы еще не знакомы с кривыми Dynamo, см. раздел [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). 
+
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Объединение объектов из Civil 3D в одну сложную кривую</p></figcaption></figure>
 
@@ -64,7 +72,11 @@
 
 Теперь нужно решить, где будут размещены счетчики. Обычно их расположение определяется местными органами власти, поэтому мы просто укажем входные значения, которые можно изменить в соответствии с теми или иными условиями. В качестве основы для создания точек используем **систему координат**, расположенную вдоль линии участка. Это позволит с легкостью определить смещения относительно линии участка независимо от ее ориентации.
 
-{% hint style="info" %}\r\n Если вы еще не знакомы с системами координат, см. раздел [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+
+ Если вы еще не знакомы с системами координат, см. раздел [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
+
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Создание точек вставки для счетчиков</p></figcaption></figure>
 
@@ -99,13 +111,21 @@
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Параметры привязки объекта Dynamo</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Дополнительные сведения см. в разделе [object-binding.md](../../advanced-topics/object-binding.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+
+ Дополнительные сведения см. в разделе [object-binding.md](../../advanced-topics/object-binding.md "mention"). 
+
+{% endhint %}
 
 Изменив этот параметр, мы заставляем программу Dynamo «забывать» объекты, создаваемые при каждом запуске графика. Ниже приведен пример запуска графика с отключенной привязкой объектов в **проигрывателе Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Запуск графика с помощью проигрывателя Dynamo и просмотр результатов в Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+
+ Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). 
+
+{% endhint %}
 
 > :tada: Миссия выполнена!
 
@@ -113,8 +133,20 @@
 
 Вот несколько вариантов того, как можно расширить возможности этого графика.
 
-{% hint style="info" %}\r\n Размещение **нескольких подключений к коммуникациям** одновременно вместо выбора каждой линии участка по отдельности. \r\n{% endhint %}
+{% hint style="info" %}
 
-{% hint style="info" %}\r\n Изменение входных данных, чтобы вместо водопроводных счетчиков были размещены **прочистные люки канализации**. \r\n{% endhint %}
+ Размещение **нескольких подключений к коммуникациям** одновременно вместо выбора каждой линии участка по отдельности. 
 
-{% hint style="info" %}\r\n **Добавление переключателя**, позволяющего разместить подключение к коммуникациям на конкретной стороне линии участка, а не на обеих ее сторонах. \r\n{% endhint %}
+{% endhint %}
+
+{% hint style="info" %}
+
+ Изменение входных данных, чтобы вместо водопроводных счетчиков были размещены **прочистные люки канализации**. 
+
+{% endhint %}
+
+{% hint style="info" %}
+
+ **Добавление переключателя**, позволяющего разместить подключение к коммуникациям на конкретной стороне линии участка, а не на обеих ее сторонах. 
+
+{% endhint %}

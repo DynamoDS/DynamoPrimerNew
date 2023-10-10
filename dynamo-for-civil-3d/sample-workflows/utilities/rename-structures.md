@@ -17,7 +17,11 @@
 
 ## Совместимость версий
 
-{% hint style="success" %}\r\n Этот график будет работать в **Civil 3D 2020** и более поздних версиях. \r\n{% endhint %}
+{% hint style="success" %}
+
+ Этот график будет работать в **Civil 3D 2020** и более поздних версиях. 
+
+{% endhint %}
 
 ## Набор данных
 
@@ -77,7 +81,11 @@
 
 Нужно отфильтровать список колодцев, чтобы проигнорировать те из них, чье смещение от трассы превышает определенное значение. Для этого лучше всего подойдет узел **List.FilterByBoolMask**. Отфильтровав список колодцев, используем узел **List.SortByKey** для их сортировки по значениям пикетов.
 
-{% hint style="info" %}\r\n Если вы еще не знакомы со списками, см. раздел [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+
+ Если вы еще не знакомы со списками, см. раздел [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). 
+
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>Фильтрация и сортировка колодцев</p></figcaption></figure>
 
@@ -104,7 +112,11 @@
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Запуск графика с помощью проигрывателя Dynamo и просмотр результатов в Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+
+ Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). 
+
+{% endhint %}
 
 > :tada: Миссия выполнена!
 
@@ -122,8 +134,20 @@
 
 Вот несколько вариантов того, как можно расширить возможности этого графика.
 
-{% hint style="info" %}\r\n Переименование колодцев на основе **ближайшей трассы** вместо выбора конкретной трассы. \r\n{% endhint %}
+{% hint style="info" %}
 
-{% hint style="info" %}\r\n **Переименование труб** в дополнение к переименованию колодцев. \r\n{% endhint %}
+ Переименование колодцев на основе **ближайшей трассы** вместо выбора конкретной трассы. 
 
-{% hint style="info" %}\r\n **Задание слоев** для колодцев на основе их ветвей. \r\n{% endhint %}
+{% endhint %}
+
+{% hint style="info" %}
+
+ **Переименование труб** в дополнение к переименованию колодцев. 
+
+{% endhint %}
+
+{% hint style="info" %}
+
+ **Задание слоев** для колодцев на основе их ветвей. 
+
+{% endhint %}
