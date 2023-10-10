@@ -18,8 +18,8 @@
 
 ### 本端發佈套件
 
-
-{% hint style="warning" %} 只能在 Dynamo for Revit 和 Dynamo for Civil 3d 中發佈 Dynamo 套件。Dynamo Sandbox 沒有發佈功能。
+{% hint style="warning" %}
+ 只能在 Dynamo for Revit 和 Dynamo for Civil 3d 中發佈 Dynamo 套件。Dynamo Sandbox 沒有發佈功能。
 {% endhint %}
 
 > 按一下下方的連結下載範例檔案。
@@ -66,8 +66,8 @@
 
 ### 線上發佈套件
 
-
-{% hint style="warning" %} 注意：除非您要真的發佈自己的套件，否則請勿繼續執行此步驟！
+{% hint style="warning" %}
+ 注意：除非您要真的發佈自己的套件，否則請勿繼續執行此步驟！
 {% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)

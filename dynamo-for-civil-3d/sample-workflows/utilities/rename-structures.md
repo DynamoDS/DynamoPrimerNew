@@ -17,8 +17,8 @@
 
 ## 版本相容性
 
-
-{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。
+{% hint style="success" %}
+ 此圖表將在 **Civil 3D 2020** 及更高版本上執行。
 {% endhint %}
 
 ## 資料集
@@ -79,8 +79,8 @@
 
 因此，我們需要篩選結構清單，這樣就不用考慮那些與該定線之間大於特定偏移的結構。這最適合使用 **List.FilterByBoolMask** 節點完成。篩選結構清單後，我們使用 **List.SortByKey** 節點，依其樁號值排序。
 
-
-{% hint style="info" %} 如果您不熟悉使用清單，請查看[2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")一節。
+{% hint style="info" %}
+ 如果您不熟悉使用清單，請查看[2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")一節。
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>篩選和排序結構</p></figcaption></figure>
@@ -108,8 +108,8 @@
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器執行圖表，然後在 Civil 3D 中查看結果</p></figcaption></figure>
 
-
-{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention")一節。
+{% hint style="info" %}
+ 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention")一節。
 {% endhint %}
 
 > :tada: 任務完成！
@@ -128,14 +128,14 @@
 
 以下是一些如何擴充此圖表功能的構想。
 
-
-{% hint style="info" %} 根據結構 **最接近的定線** (而不是選取特定定線) 更名結構。
+{% hint style="info" %}
+ 根據結構 **最接近的定線** (而不是選取特定定線) 更名結構。
 {% endhint %}
 
-
-{% hint style="info" %} 除了更名結構外，還 **更名管**。
+{% hint style="info" %}
+ 除了更名結構外，還 **更名管**。
 {% endhint %}
 
-
-{% hint style="info" %} 根據結構的管路 **設定圖層**。
+{% hint style="info" %}
+ 根據結構的管路 **設定圖層**。
 {% endhint %}
