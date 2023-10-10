@@ -43,7 +43,9 @@ Civil 3D で COGO ポイントとポイント グループを使用して作業�
 
 最初に、ドキュメント内のすべてのポイントグループを取得し、次に各グループ内のすべての COGO ポイントを取得します。これにより、_ネストされたリスト_、つまり「リストのリスト」が得られます。これは、**List.Flatten** ノードを使用してリスト全体をフラット化する場合に、後で操作が簡単になります。
 
-{% hint style="info" %}\r\n リストを初めて使用する場合は、「[2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")」 セクションを参照してください。 \r\n{% endhint %}
+{% hint style="info" %}
+リストを初めて使用する場合は、「[2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")」 セクションを参照してください。 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>すべてのポイント グループと COGO ポイントを取得する </p></figcaption></figure>
 
