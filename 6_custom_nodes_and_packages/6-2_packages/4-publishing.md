@@ -18,7 +18,9 @@
 
 ### パッケージをローカルにパブリッシュする
 
-{% hint style="warning" %}\r\n Dynamo パッケージのパブリッシュは、Dynamo for Revit および Dynamo for Civil 3D でのみ有効です。Dynamo Sandbox には、パブリッシュ機能は用意されていません。\r\n{% endhint %}
+{% hint style="warning" %}
+Dynamo パッケージのパブリッシュは、Dynamo for Revit および Dynamo for Civil 3D でのみ有効です。Dynamo Sandbox には、パブリッシュ機能は用意されていません。
+{% endhint %}
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
@@ -64,7 +66,9 @@ Dynamo で、_[パッケージ] > [新しいパッケージをパブリッシュ
 
 ### パッケージをオンラインでパブリッシュする
 
-{% hint style="warning" %}\r\n注: 独自のパッケージを実際にパブリッシュしない場合は、この手順を実行しないでください。\r\n{% endhint %}
+{% hint style="warning" %}
+注: 独自のパッケージを実際にパブリッシュしない場合は、この手順を実行しないでください。
+{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 
