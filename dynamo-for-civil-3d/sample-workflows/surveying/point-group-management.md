@@ -79,6 +79,6 @@ Im Folgenden finden Sie einige Anregungen, wie Sie die Funktionen dieses Diagram
 
 {% hint style="info" %} Ändern Sie die Punktgruppierung, sodass die **ausführliche Beschreibung** anstelle der Kurzbeschreibung verwendet wird. {% endhint %}
 
-{% hint style="info" %} Gruppieren Sie die Punkte nach anderen **vordefinierten Kategorien**, die Sie auswählen (z. B. Geländeaufnahmen, Monumente usw.) {% endhint %}
+{% hint style="info" %} Gruppieren Sie die Punkte nach anderen **vordefinierten Kategorien**, die Sie auswählen (z. B. Geländeaufnahmen, Monumente usw.)  {% endhint %}
 
 {% hint style="info" %} Erstellen Sie automatisch triangulierte DGMs für Punkte in bestimmten Gruppen. {% endhint %}

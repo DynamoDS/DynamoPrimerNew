@@ -65,7 +65,7 @@ Während Sie Ihr Dynamo-Diagramm entwickeln und Ihre Ideen testen, kann es rasch
 * List@Level kann es Ihnen erleichtern, **Ihr Diagramm durch Ersetzen der Blöcke List.Map und List.Combine zu vereinfachen**, die viel Platz im Ansichtsbereich beanspruchen können.
 * List@Level bietet ein **schnelleres Verfahren zum Konstruieren von Blocklogik als List.Map/List.Combine**, indem es den Zugriff auf Daten auf einer beliebigen Ebene einer Liste direkt über den Eingabeanschluss eines Blocks ermöglicht.
 
-\![](<images/1/graphstrategy4 (1).png>)
+![](<images/1/graphstrategy4 (1).png>)
 
 > Sie können überprüfen, wie viele True-Werte BoundingBox.Contains zurückgibt und in welchen Listen diese enthalten sind, indem Sie List@Level für den list-Eingang von CountTrue aktivieren. List@Level ermöglicht es, die Ebene festzulegen, auf der die Eingabe Daten übernimmt. List@Level ist flexibel und effizient und wird gegenüber anderen Verfahren, die List.Map und List.Combine nutzen, dringend empfohlen.
 >
@@ -84,7 +84,7 @@ Gestalten Sie Ihr Diagramm nicht nur so einfach und effizient wie möglich, sond
 * Wenn andere Benutzer mit Ihrem Diagramm arbeiten sollen, **sorgen Sie vor der Bereitstellung für ein Layout mit einem leicht verständlichen Ablauf aus Blöcken und Drähten**.
 * Um die Ausrichtung zu erleichtern, **verwenden Sie die Funktion Blocklayout bereinigen zur automatischen Ausrichtung** des Diagramms. Durch manuelles Ausrichten erzielen Sie allerdings präzisere Ergebnisse.
 
-\![](<images/1/graphstrategy5 (2).png>)
+![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Ungeordnetes Diagramm
 > 2. Ausgerichtetes Diagramm

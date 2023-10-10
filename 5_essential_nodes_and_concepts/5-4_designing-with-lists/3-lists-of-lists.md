@@ -111,7 +111,7 @@ Der **List.Count**-Block zählt alle Elemente in einer Liste. An diesem Beispiel
 > 3. Verbinden Sie jede Zeile des Codeblocks mit der entsprechenden _X_\- bzw. _Y_-Eingabe eines **Point.ByCoordinates**-Blocks. Klicken Sie mit der rechten Maustaste auf den Block und wählen Sie zuerst Vergitterung und dann _"Kreuzprodukt"_. Dadurch wird ein Raster aus Punkten erstellt. Da der Bereich zwischen -50 und 50 definiert wurde, umfasst er das vorgabemäßige Raster von Dynamo.
 > 4. In einem _**Watch**_-Block werden die erstellten Punkte angezeigt. Beachten Sie die Datenstruktur. Es wurde eine Liste von Listen erstellt. Jede Liste entspricht einer Reihe von Punkten im Raster.
 
-\![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Verbinden Sie einen **List.Count**-Block mit der Ausgabe des Watch-Blocks aus dem vorigen Schritt.
 > 2. Verbinden Sie einen **Watch**-Block mit der Ausgabe des **List.Count**-Blocks.

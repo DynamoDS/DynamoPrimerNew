@@ -8,7 +8,7 @@ Nachdem Sie sich einen Gesamtüberblick verschafft haben, können Sie jetzt dire
 
 Als Erstes müssen Sie ein leeres Dokument in Civil 3D öffnen. Navigieren Sie in der Civil 3D-Multifunktionsleiste zur Registerkarte **Verwalten**, und suchen Sie die Gruppe **Visuelle Programmierung**.
 
-\![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 Klicken Sie auf die Schaltfläche **Dynamo**. Dadurch wird Dynamo in einem separaten Fenster gestartet.
 
