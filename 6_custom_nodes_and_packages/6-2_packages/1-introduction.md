@@ -67,7 +67,7 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 
 파일을 열고 솔버에서 "실행"을 누르면 펼쳐진 구가 표시됩니다. 이와 같은 예제 파일은 새 Dynamo 패키지를 사용하는 방법을 배우는 데 유용합니다.
 
-\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Dynamo Package Manager
 

@@ -4,7 +4,7 @@ Dynamo 2.0에서는 사전에 대해 이전에 앞서 논의한 노드가 도입
 
 아래와 같은 구문이나 노드의 DesignScript 기반 표현을 사용할 수 있습니다.
 
-\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
 
 사전은 Dynamo의 객체 유형이므로 사전에서 다음 커밋을 수행할 수 있습니다.
 

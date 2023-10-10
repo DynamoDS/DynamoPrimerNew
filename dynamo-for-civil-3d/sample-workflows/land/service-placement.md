@@ -107,7 +107,7 @@
 
 {% hint style="info" %} Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. {% endhint %}
 
-> :tadda: 작업을 완료했습니다!
+> :tada: 작업을 완료했습니다!
 
 ## 아이디어
 

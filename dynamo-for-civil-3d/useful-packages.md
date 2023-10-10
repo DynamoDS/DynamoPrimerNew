@@ -8,7 +8,7 @@ Dynamo 패키지는 Dynamo의 핵심 기능을 확장하기 위해 타사에서 
 
 ## Civil 3D 도구 키트
 
-_Civil 3D 도구 키트_는 대규모의 추가 노드 인벤토리를 통해 Dynamo의 기능을 크게 개선하는 Civil 3D용 Dynamo 패키지입니다.
+_Civil 3D 도구 키트_ 는 대규모의 추가 노드 인벤토리를 통해 Dynamo의 기능을 크게 개선하는 Civil 3D용 Dynamo 패키지입니다.
 
 #### 피드백
 
@@ -32,7 +32,7 @@ _Civil 3D 도구 키트_는 대규모의 추가 노드 인벤토리를 통해 Dy
 
 ## CivilConnection
 
-_CivilConnection_은 Civil 3D, Dynamo 및 Revit 간에 정보를 교환할 수 있는 오픈 소스 Dynamo for Revit 패키지입니다.
+_CivilConnection_ 은 Civil 3D, Dynamo 및 Revit 간에 정보를 교환할 수 있는 오픈 소스 Dynamo for Revit 패키지입니다.
 
 #### 관련 Autodesk University 강좌
 

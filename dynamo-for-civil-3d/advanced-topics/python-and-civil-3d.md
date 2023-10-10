@@ -39,7 +39,7 @@ AutoCAD와 Civil 3D에는 여러분과 같은 개발자가 사용자 지정 기�
 > 8. 주 작업이 완료된 후 이 행의 주석을 해제하여 트랜잭션을 커밋합니다.
 > 9. 노드에서 데이터를 출력하려면 스크립트 끝에 있는 `OUT` 변수에 데이터를 지정합니다.
 
-{% hint style="info" %} ** 사용자화하시겠습니까? **\
+{% hint style="info" %} **사용자화하시겠습니까?**\
  `C:\ProgramData\Autodesk\C3D <version>\Dynamo`에 있는 `PythonTemplate.py` 파일을 편집하여 기본 Python 템플릿을 수정할 수 있습니다. {% endhint %}
 
 ## 예
@@ -175,7 +175,7 @@ with adoc.LockDocument():
 
 <figure><img src="../../.gitbook/assets/Python_Dynamo_Curves.png" alt=""><figcaption><p>유역 경계에 대한 Dynamo PolyCurve 결과물</p></figcaption></figure>
 
-> :tadda: 작업을 완료했습니다!
+> :tada: 작업을 완료했습니다!
 
 ## IronPython과 CPython
 

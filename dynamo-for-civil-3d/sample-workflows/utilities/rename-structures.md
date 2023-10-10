@@ -82,7 +82,7 @@
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>구조 필터링 및 정렬</p></figcaption></figure>
 
 > 1. 구조물의 간격띄우기가 임계값보다 작은지 확인
-> 2. Null 값을 _false_로 대치
+> 2. Null 값을 _false_ 로 대치
 > 3. 구조물 및 측점 리스트 필터링
 > 4. 측점별로 구조물 정렬
 
@@ -106,7 +106,7 @@
 
 {% hint style="info" %} Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. {% endhint %}
 
-> :tadda: 작업을 완료했습니다!
+> :tada: 작업을 완료했습니다!
 
 ### 보너스: Dynamo에서 시각화
 
@@ -126,4 +126,4 @@
 
 {% hint style="info" %} 구조물 외에 **파이프의 이름을 바꿉니다**. {% endhint %}
 
-{% hint style="info" %} 해당 실행을 기준으로 구조물의 **도면층을 설정**합니다. {% endhint %}
+{% hint style="info" %} 해당 실행을 기준으로 구조물의 **도면층을 설정**합니다.  {% endhint %}

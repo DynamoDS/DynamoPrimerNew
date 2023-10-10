@@ -49,7 +49,7 @@ Dynamo의 UI(사용자 인터페이스)는 5개의 주요 영역으로 구성되
 Dynamo의 도구막대에는 파일 작업에 빠르게 액세스할 수 있는 일련의 버튼과 실행취소[Ctrl + Z] 및 재실행[Ctrl + Y] 명령이 포함되어 있습니다. 맨 오른쪽에는 작업공간의 스냅샷을 내보내는 또 다른 버튼이 있습니다. 이 버튼은 문서화 및 공유에 매우 유용합니다.
 
 * ![](images/userinterface-newfile.jpg) 새로 작성 - 새 .dyn 파일을 작성합니다.
-* \![](<images/userinterface-open(1) (1) (1).jpg>) 열기 - 기존 .dyn(작업공간) 또는 .dyf(사용자 노드) 파일을 엽니다.
+* ![](<images/userinterface-open(1) (1) (1).jpg>) 열기 - 기존 .dyn(작업공간) 또는 .dyf(사용자 노드) 파일을 엽니다.
 * ![](images/userinterface-save.jpg) 저장/다른 이름으로 저장 - 활성 .dyn 또는 .dyf 파일을 저장합니다.
 * ![](images/userinterface-undo.jpg) 실행취소 - 마지막 작업을 실행취소합니다.
 * ![](images/userinterface-redo.jpg) 재실행 - 다음 작업을 재실행합니다.

@@ -8,7 +8,7 @@
 
 가장 먼저 Civil 3D에서 빈 문서를 엽니다. 빈 문서에서 Civil 3D 리본의 **관리** 탭으로 이동하여 **시각적 프로그래밍** 패널을 찾습니다.
 
-\![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 **Dynamo** 버튼을 클릭합니다. 그러면 별도의 창에서 Dynamo가 실행합니다.
 
@@ -96,7 +96,7 @@ Dynamo 그래프로 돌아가서 문자열, 삽입점 좌표 등 몇 가지 입�
 
 기본적으로 Dynamo는 작성하는 객체를 "기억"합니다. 노드 입력 값을 변경하면 완전히 새로운 객체를 작성하는 대신 Civil 3D의 객체가 업데이트됩니다. 이 동작에 대한 자세한 내용은 [object-binding.md](advanced-topics/object-binding.md "mention") 섹션을 참조하십시오. {% endhint %}
 
-> :tadda: 작업을 완료했습니다!
+> :tada: 작업을 완료했습니다!
 
 ## 다음 단계
 
