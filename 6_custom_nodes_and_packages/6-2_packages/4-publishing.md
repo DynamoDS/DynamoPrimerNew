@@ -2,7 +2,7 @@
 
 在先前各節中，我們詳細瞭解了如何使用自訂節點與範例檔案設置 _MapToSurface_ 套件。但是，如何發佈已在本端開發的套件呢？此案例研究將示範如何從本端資料夾的一組檔案發佈套件。
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 有許多方式可以發佈套件。以下是建議的程序：**本端發佈、本端開發，然後線上發佈**。我們從包含套件中所有檔案的資料夾開始。
 
@@ -18,7 +18,9 @@
 
 ### 本端發佈套件
 
-{% hint style="warning" %} 只能在 Dynamo for Revit 和 Dynamo for Civil 3d 中發佈 Dynamo 套件。Dynamo Sandbox 沒有發佈功能。{% endhint %}
+
+{% hint style="warning" %} 只能在 Dynamo for Revit 和 Dynamo for Civil 3d 中發佈 Dynamo 套件。Dynamo Sandbox 沒有發佈功能。
+{% endhint %}
 
 > 按一下下方的連結下載範例檔案。
 >
@@ -47,7 +49,7 @@
 
 發佈後，在「DynamoPrimer」群組或 Dynamo 資源庫下應該會顯示自訂節點。
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 現在，我們看一下根目錄，以瞭解 Dynamo 如何格式化我們剛剛建立的套件。按一下「Dynamo」>「偏好」>「Package Manager」> MapToSurface 的旁邊，按一下垂直圓點功能表 > 選取「展示根目錄」來進行
 
@@ -64,7 +66,9 @@
 
 ### 線上發佈套件
 
-{% hint style="warning" %} 注意：除非您要真的發佈自己的套件，否則請勿繼續執行此步驟！{% endhint %}
+
+{% hint style="warning" %} 注意：除非您要真的發佈自己的套件，否則請勿繼續執行此步驟！
+{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 

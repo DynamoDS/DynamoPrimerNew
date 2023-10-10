@@ -19,8 +19,8 @@ Zero-touch 套件是使用者定義之自訂節點的良好補充。下表列出
 
 | **標誌/影像**                                                                   | **名稱**                                                                    |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| \![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| \![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Mesh Toolkit](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
 | ![](../images/6-2/5/rhynamo.jpg)                                                 | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
 | ![](../images/6-2/5/optimo.jpg)                                                  | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
@@ -30,7 +30,7 @@ Zero-touch 套件是使用者定義之自訂節點的良好補充。下表列出
 
 我們從下載 AForge 開始。在 [AForge 下載頁面](http://www.aforgenet.com/framework/downloads.html)上，選取 _[Download Installer (下載安裝程式)]_，並在下載完成後進行安裝。
 
-在 Dynamo 中，建立新檔案，然後選取_「檔案」>「匯入資源庫...」_
+在 Dynamo 中，建立新檔案，然後選取 _「檔案」>「匯入資源庫...」_ 
 
 ![](../images/6-2/5/casestudyaforge01.jpg)
 

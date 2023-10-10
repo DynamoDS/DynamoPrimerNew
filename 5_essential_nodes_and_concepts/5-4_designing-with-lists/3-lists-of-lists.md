@@ -111,7 +111,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 _**List.Map**_ �
 > 3. 將 Code Block 每一行分別連接至 **Point.ByCoordinates** 節點的 _X_ 與 _Y_ 輸入。在節點上按一下右鍵，選取「交織」，然後選擇 _「笛卡兒積」_。這會建立點的格線。由於我們定義的範圍是從 -50 到 50，因此將跨越預設的 Dynamo 格線。
 > 4. _**Watch**_ 節點會顯示已建立的點。請注意資料結構。我們已建立一個清單的清單。每個清單都代表格線的一列點。
 
-\![練習](<../images/5-4/3/lists of lists - map 02.jpg>)
+![練習](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. 將 **List.Count** 節點連接至上一步驟中 Watch 節點的輸出。
 > 2. 將 **Watch** 節點連接至 **List.Count** 輸出。
@@ -150,7 +150,9 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 
 完成後，2 組點會透過 **Line.ByStartPointEndPoint** 函數配對，並在 Dynamo 中傳回 10 條線。
 
-{% hint style="info" %} 請參閱 n 維清單中的練習，以查看使用 List.Combine 的另一個範例。{% endhint %}
+
+{% hint style="info" %} 請參閱 n 維清單中的練習，以查看使用 List.Combine 的另一個範例。
+{% endhint %}
 
 ### List@Level
 
@@ -276,7 +278,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. 採用相同的邏輯，使用 **List.ReplaceItemAtIndex** 將中間清單更換為我們修改後的清單。
-> 2. 請注意，對這兩個節點定義索引的 **Code Block** __ 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
+> 2. 請注意，對這兩個節點定義索引的 **Code Block**_ _ 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
 > 3. 透過選取位於 _索引 1_ 的清單，我們可以在 Dynamo 預覽中看到亮顯的資料結構。我們已成功將移動點合併至原始資料結構中。
 
 有許多方式可以使用這組點建立曲面。在此案例中，我們將對曲線進行斷面混成，以建立曲面。

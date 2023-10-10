@@ -1,6 +1,8 @@
 # 關於
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
+ Dynamo Hype Video 
+{% endembed %}
 
 ## 適用於 Dynamo 2.13 版
 

@@ -18,19 +18,21 @@ Revit 是資料豐富的環境。這能為我們提供許多選取功能，而�
 
 記得生物學的分類法嗎？界、門、綱、目、科、屬、種？Revit 元素的分類方式與此類似。在基本層級，可將 Revit 階層分為不同的品類、族群、類型*及例證。例證是個別模型元素 (具有唯一的 ID)，而品類可定義一般群組 (例如「牆」或「地板」)。以此方式組織 Revit 資料庫後，我們可以選取一個元素，然後根據階層中的指定層級選擇所有類似元素。
 
-{% hint style="warning" %} *Revit 中類型的定義與程式設計中的類型不同。在 Revit 中，類型是指階層的分支，而非「資料類型」。{% endhint %}
+
+{% hint style="warning" %} *Revit 中類型的定義與程式設計中的類型不同。在 Revit 中，類型是指階層的分支，而非「資料類型」。
+{% endhint %}
 
 ### 使用 Dynamo 節點進行資料庫導覽
 
 以下三個影像分別展示了 Dynamo 中 Revit 元素選取的主要品類。這些工具十分適合互相搭配使用，在後續練習中會研究其中部分工具。
 
-_點選_是直接選取 Revit 元素最簡單的方式。您可以選取完整的模型元素，也可以選取其拓樸的一部分 (例如一個面或一條邊)。這會與該 Revit 物件保持動態連結，因此在 Revit 檔案更新其位置或參數時，參考的 Dynamo 元素在圖表中也將更新。
+_點選_ 是直接選取 Revit 元素最簡單的方式。您可以選取完整的模型元素，也可以選取其拓樸的一部分 (例如一個面或一條邊)。這會與該 Revit 物件保持動態連結，因此在 Revit 檔案更新其位置或參數時，參考的 Dynamo 元素在圖表中也將更新。
 
 ![](../.gitbook/assets/selecting\_database\_navigation\_with\_dynamo\_nodes\_01.jpg)
 
 _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。您可以使用下拉式功能表參考視圖中不一定可見的 Revit 元素。這是非常強大的工具，可用於在 Revit 專案或族群編輯器中查詢既有元素或建立新元素。
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 您也可以依 _Revit 階層_中的特定層級選取 Revit 元素。這是一個功能強大的選項，可自訂大型資料陣列，以準備進行記錄或生產實體化及客製化。
 
@@ -48,7 +50,7 @@ _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。�
 
 在此範例 Revit 檔案中，包含一個簡單建築的三種元素類型。我們會以此為例，在 Revit 階層的環境中選取 Revit 元素。
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. 建築量體
 > 2. 樑 (結構框架)
@@ -81,7 +83,7 @@ _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。�
 
 使用一些基本清單作業，我們可以查詢感興趣的面。
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. 首先，將前面選取的元素輸出至 Element.Faces 節點。
 > 2. 接著，使用 _List.Count_ 節點顯示出我們正在處理量體中的 23 個曲面。
@@ -149,4 +151,6 @@ Revit/Dynamo 工作流程中可能經常會遇到以下問題：如何選取一�
 > 2. 將 _All Elements of Family Type_ 節點插入 _AdaptiveComponent.Location_ 節點。這會產生一個清單的清單，其中每個清單都包含三點，表示自適應點的位置。
 > 3. 若連接 _Polygon.ByPoints_ 節點，即會傳回 polycurve，可以在 Dynamo 視埠中看到。透過此方法，我們看到了一個元素的幾何圖形，並提取了其餘一系列元素 (數量可能多於此範例) 的幾何圖形。
 
-{% hint style="info" %} 秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。{% endhint %}
+
+{% hint style="info" %} 秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。
+{% endhint %}

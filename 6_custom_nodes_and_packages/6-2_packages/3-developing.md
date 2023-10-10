@@ -20,7 +20,7 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 安裝後，「Add-ons」>「Dynamo Primer」區段下應該會出現自訂節點。
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 現在已安裝套件，接下來瞭解其設置方式。
 
@@ -30,7 +30,7 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 這是具有五個自訂節點的簡單套件。在以下步驟中，我們將簡要討論每個自訂節點的設置。
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 

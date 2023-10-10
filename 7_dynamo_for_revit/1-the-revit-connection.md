@@ -35,13 +35,17 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 在 Revit 專案或族群編輯器中，導覽至「增益集」，然後按一下「Dynamo」。*
 
-{% hint style="warning" %} *Dynamo 只會在開啟它的檔案中執行。{% endhint %}
 
-\![](<images/1/launchdynamofromrevit (1).jpg>)
+{% hint style="warning" %} *Dynamo 只會在開啟它的檔案中執行。
+{% endhint %}
+
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 在 Revit 中開啟 Dynamo 時，會有一個稱為「Revit」的新品類。這是使用者介面的全面新增組件，其中提供了專用於 Revit 工作流程的節點。*
 
-{% hint style="warning" %} *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於 Dynamo for Revit 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟 Dynamo for Revit 圖表，則 Revit 節點將會遺失。{% endhint %}
+
+{% hint style="warning" %} *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於 Dynamo for Revit 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟 Dynamo for Revit 圖表，則 Revit 節點將會遺失。
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
