@@ -85,4 +85,6 @@ Um mehr Komplexität zu den parametrischen Funktionen hinzuzufügen, die eine Fo
 > 2. Grad = 2
 > 3. Grad = 3
 
-{% hint style="info" %}\r\n Beachten Sie, dass je höher der Gradwert ist, desto mehr Steuerpunkte werden verwendet, um die resultierende Kurve zu interpolieren. \r\n{% endhint %}
+{% hint style="info" %}
+Beachten Sie, dass je höher der Gradwert ist, desto mehr Steuerpunkte werden verwendet, um die resultierende Kurve zu interpolieren. 
+{% endhint %}
