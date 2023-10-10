@@ -35,13 +35,13 @@ Dynamo は、もともと Revit の設計ワークフローを合理化するた
 
 Revit プロジェクトやファミリ エディタで、[アドイン]タブから[Dynamo]をクリックします。*
 
-{% hint style="warning" %} *Dynamo は、Dynamo を起動したファイル内でのみ実行されることに注意してください。 {% endhint %}
+{% hint style="warning" %}\r\n *Dynamo は、Dynamo を起動したファイル内でのみ実行されることに注意してください。 \r\n{% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Revit で Dynamo を起動すると、Dynamo のライブラリ内に[Revit]という新しいカテゴリが表示されます。この新しいカテゴリから、Revit ワークフロー専用のノードにアクセスすることができます。
 
-{% hint style="warning" %} *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit で稼働している Dynamo から開いたときにのみ正常に動作します。たとえば、Revit で稼働している Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。 {% endhint %}
+{% hint style="warning" %}\r\n *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit で稼働している Dynamo から開いたときにのみ正常に動作します。たとえば、Revit で稼働している Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。 \r\n{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 

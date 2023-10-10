@@ -150,7 +150,7 @@ _注: この演習は前バージョンの Dynamo を使用して作成されま
 
 完了すると、2 つの点のセットが **Line.ByStartPointEndPoint** 関数を介して一緒に圧縮またはペアリングされ、Dynamo で 10 行が返されます。
 
-{% hint style="info" %}List.Combine の別の使用例については、N 次元のリストの演習を参照してください。{% endhint %}
+{% hint style="info" %}\r\nList.Combine の別の使用例については、N 次元のリストの演習を参照してください。\r\n{% endhint %}
 
 ### List@Level
 

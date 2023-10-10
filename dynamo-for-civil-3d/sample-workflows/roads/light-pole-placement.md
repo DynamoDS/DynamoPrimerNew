@@ -18,13 +18,13 @@ Dynamo の多くの優れた使用事例の 1 つは、コリドー モデルに
 
 ## バージョンの互換性
 
-{% hint style="success" %} このグラフは **Civil 3D 2020** 以降で実行できます。 {% endhint %}
+{% hint style="success" %}\r\n このグラフは **Civil 3D 2020** 以降で実行できます。 \r\n{% endhint %}
 
 ## データセット
 
 まず、以下のサンプル ファイルをダウンロードし、DWG ファイルと Dynamo グラフを開きます。
 
-{% hint style="info" %} Excel ファイルを Dynamo グラフと同じフォルダに保存することをお勧めします。{% endhint %}
+{% hint style="info" %}\r\n Excel ファイルを Dynamo グラフと同じフォルダに保存することをお勧めします。\r\n{% endhint %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -49,7 +49,7 @@ Dynamo の多くの優れた使用事例の 1 つは、コリドー モデルに
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>Excel ファイルのテーブル構造</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo を使用して外部ファイル(Excelファイルなど)からデータを読み込む方法は、特にデータを他のチーム メンバーと共有する必要がある場合に最適です。{% endhint %}
+{% hint style="info" %}\r\n Dynamo を使用して外部ファイル(Excelファイルなど)からデータを読み込む方法は、特にデータを他のチーム メンバーと共有する必要がある場合に最適です。\r\n{% endhint %}
 
 Excel データは、次ように Dynamo に読み込まれます。
 
@@ -59,7 +59,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 問題なさそうですね?しかし、このアプローチには潜在的な問題があります。Excel ファイルの列の順序が将来変更されたらどうなるでしょうか?あるいは、2 つの列の間に新しい列が追加されたら?その場合は、グラフが正しく機能しなくなり、更新が必要になります。Excel の列ヘッダーを _キー_ として、残りのデータを _値_ として使用して、データを**ディクショナリ**に入れることで、グラフを将来も使用できるように保証します。
 
-{% hint style="info" %} ディクショナリを初めて使用する場合は、「[5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %}\r\n ディクショナリを初めて使用する場合は、「[5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention")」セクションを参照してください。 \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Excel データをディクショナリに入れる</p></figcaption></figure>
 
@@ -81,13 +81,13 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 ここで、Excel ファイルで指定した測点値でコリドー計画線に沿って**座標系**を生成します。これらの座標系は、照明柱のブロック参照の位置、回転、および尺度を定義するために使用されます。
 
-{% hint style="info" %} 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %}\r\n 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」 セクションを参照してください。 \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>コリドー計画線に沿って座標系を取得する</p></figcaption></figure>
 
 基線のどちら側に座標系があるかに応じて座標系を回転するために、ここでコード ブロックを使用します。これは複数のノードのシーケンスを使用して実現できますが、これは単に書き出すほうが簡単である良い例です。
 
-{% hint style="info" %} コード ブロックを初めて使用する場合は、「[8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %}\r\n コード ブロックを初めて使用する場合は、「[8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention")」 セクションを参照してください。 \r\n{% endhint %}
 
 ### ブロック参照を作成する
 
@@ -103,7 +103,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 グラフを実行すると、コリドーに沿ってモデル空間に新しいブロック参照が表示されます。これが素晴らしいところで、グラフの実行モードが[自動]に設定されている状態で Excel ファイルを編集すると、ブロック参照が自動的に更新されます。
 
-{% hint style="info" %} グラフの実行モードの詳細については、「[3_user_interface](../../../3\_user\_interface/ "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %}\r\n グラフの実行モードの詳細については、「[3_user_interface](../../../3\_user\_interface/ "mention")」 セクションを参照してください。 \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Excel ファイルを更新して、Civil 3D で結果をすばやく表示する</p></figcaption></figure>
 
@@ -111,7 +111,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %}\r\n Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。 \r\n{% endhint %}
 
 > :tada: ミッションが達成されました。
 
@@ -134,8 +134,8 @@ Dynamo の背景プレビューの結果は次のとおりです。
 
 このグラフの機能を拡張する方法について、いくつかのアイデアを示します。
 
-{% hint style="info" %} Excel ファイルに **回転** 列を追加し、それを使用して座標系の回転を駆動します。 {% endhint %}
+{% hint style="info" %}\r\n Excel ファイルに **回転** 列を追加し、それを使用して座標系の回転を駆動します。 \r\n{% endhint %}
 
-{% hint style="info" %} 必要に応じて照明柱がコリドー計画線から外れるようにするため、Excel ファイルに **水平オフセットまたは垂直オフセット** を追加します。 {% endhint %}
+{% hint style="info" %}\r\n 必要に応じて照明柱がコリドー計画線から外れるようにするため、Excel ファイルに **水平オフセットまたは垂直オフセット** を追加します。 \r\n{% endhint %}
 
-{% hint style="info" %} Excel ファイルで測点値を使用する代わりに、開始測点と標準間隔を使用して、**Dynamo で直接** 測点値を生成します。 {% endhint %}
+{% hint style="info" %}\r\n Excel ファイルで測点値を使用する代わりに、開始測点と標準間隔を使用して、**Dynamo で直接** 測点値を生成します。 \r\n{% endhint %}

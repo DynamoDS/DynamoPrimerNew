@@ -22,7 +22,7 @@ Dynamo のほとんどのノードは、5 つのパーツで構成されてい�
 
 ポートは、特定のタイプのデータを受け取るように設定されています。たとえば、 _2.75_ という数値を Point.ByCoordinates ノードのポートに接続すると、点が正常に作成されます。ただし、同じポートに対して _「Red」_ を指定すると、エラーが発生します。
 
-{% hint style="info" %} ヒント: ポートにカーソルを合わせると、そのポートの正しいデータ タイプを含むツールチップが表示されます。 {% endhint %}
+{% hint style="info" %}\r\n ヒント: ポートにカーソルを合わせると、そのポートの正しいデータ タイプを含むツールチップが表示されます。 \r\n{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,7 +53,7 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 ビジュアル プログラムに警告やエラーが含まれている場合、その問題に関する追加情報が表示されます。また、黄色のノードでも、ノード名の上にツールチップが表示されます。警告 ![](images/nodesandwires-nodewarningicon.png) またはエラー ![](images/nodesandwires-nodeerroricon.png) ツールチップ アイコンにマウス カーソルを合わせて展開します。
 
-{% hint style="info" % } ヒント: このツールチップ情報を使用して上流のノードを検査することにより、必要なデータ タイプまたはデータ構造にエラーがないか確認できます。{% endhint %}
+{% hint style="info" % } ヒント: このツールチップ情報を使用して上流のノードを検査することにより、必要なデータ タイプまたはデータ構造にエラーがないか確認できます。\r\n{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
