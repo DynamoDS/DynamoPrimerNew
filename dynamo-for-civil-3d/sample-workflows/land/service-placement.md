@@ -6,7 +6,7 @@ Inženýrský návrh typické bytové výstavby zahrnuje práci s několika pod
 
 ## Cíl
 
-> :šipka: Umístěte reference bloků vodoměrů ve stanovených vzdálenostech od linie pozemku a nakreslete čáru pro každou servisní přípojku kolmo na rozvodnou síť.
+> :dart: Umístěte reference bloků vodoměrů ve stanovených vzdálenostech od linie pozemku a nakreslete čáru pro každou servisní přípojku kolmo na rozvodnou síť.
 
 ## Klíčové koncepty
 
@@ -18,7 +18,7 @@ Inženýrský návrh typické bytové výstavby zahrnuje práci s několika pod
 
 ## Kompatibilita verzí
 
-{% hint style="success" %} Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. {% endint %}
+{% hint style="success" %} Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. {% endhint %}
 
 ## Datová sada
 
@@ -44,7 +44,7 @@ Pojďme na to!
 
 Prvním krokem je získání geometrie rozvodné sítě do aplikace Dynamo. Místo výběru jednotlivých čar nebo křivek získáme všechny objekty v určité hladině a spojíme je dohromady jako objekt PolyCurve aplikace Dynamo.
 
-{% hint style="info" %} Pokud je pro vás geometrie křivek aplikace Dynamo novinkou, přečtěte si část [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% enddhint %}
+{% hint style="info" %} Pokud je pro vás geometrie křivek aplikace Dynamo novinkou, přečtěte si část [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Získání objektů z aplikace Civil 3D a jejich spojení do jednoho objektu PolyCurve</p></figcaption></figure>
 
@@ -64,7 +64,7 @@ Musíme se také vypořádat s potenciálním problémem, který může nastat.
 
 Je čas zjistit, kde budou umístěny měřiče služeb. Umístění je obvykle určeno požadavky místních úřadů, takže pouze zadáme vstupní hodnoty, které lze změnit tak, aby vyhovovaly různým podmínkám. Jako referenci pro vytvoření bodů použijeme **souřadnicový systém** podél linie pozemku. To velmi usnadní definování odsazení vzhledem k linii pozemku, bez ohledu na její orientaci.
 
-{% hint style="info" %} Pokud jsou pro vás souřadnicové systémy novinkou, přečtěte si část [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% enddhint %}
+{% hint style="info" %} Pokud jsou pro vás souřadnicové systémy novinkou, přečtěte si část [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Vytvoření bodů vložení pro měřiče služeb</p></figcaption></figure>
 
@@ -115,6 +115,6 @@ Zde je několik nápadů, jak byste mohli rozšířit možnosti tohoto grafu.
 
 {% hint style="info" %} Umístěte **několik servisních přípojek** současně místo výběru jednotlivých linií pozemku. {% endhint %}
 
-{% hint style="info" %} Upravte vstupy tak, aby místo vodoměrů byly umístěny **přípojky pro čištění kanalizace**. {% endhint %}
+{% hint style="info" %} Upravte vstupy tak, aby místo vodoměrů byly umístěny **přípojky pro čištění kanalizace** . {% endhint %}
 
-{% hint style="info" %} **Přidejte přepínač**, který umožní umístit jednu servisní přípojku na určitou stranu linie pozemku místo na obě strany. {% endhint %}
+{% hint style="info" %} **Přidejte přepínač** , který umožní umístit jednu servisní přípojku na určitou stranu linie pozemku místo na obě strany. {% endhint %}

@@ -111,7 +111,7 @@ Uzel **List.Count** spočítá všechny položky v seznamu. Pomocí tohoto nás
 > 3. Připojte každý řádek bloku kódu do příslušných vstupů _X_ a _Y_ uzlu **Point.ByCoordinates**. Klikněte pravým tlačítkem na uzel, vyberte položku „Vázání“ a vyberte položku _„Vektorový součin“_. Tím se vytvoří osnova bodů. Vzhledem k tomu, že jsme definovali rozsah od -50 do 50, bude se rozsah pohybovat ve výchozí osnově aplikace Dynamo.
 > 4. Uzel _**Watch**_ zobrazí vytvořené body. Všimněte si datové struktury. Vytvořili jsme seznam seznamů. Každý seznam představuje řádek bodů v osnově.
 
-\![Cvičení](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Cvičení](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Připojte uzel **List.Count** k výstupu uzlu Watch z předchozího kroku.
 > 2. Připojte uzel **Watch** k výstupu uzlu **List.Count**.

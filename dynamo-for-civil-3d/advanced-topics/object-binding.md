@@ -56,9 +56,9 @@ Tato možnost znamená, že metadata vazby objektů budou při ukládání seria
 
 {% hint style="info" %} **Vhodné použití**
 
-Tuto možnost použijte, pokud chcete, aby si aplikace Dynamo „zapamatovala“ objekty, které vytvořila při posledním spuštění v **určitém výkresu**. {% enddhint %}
+Tuto možnost použijte, pokud chcete, aby si aplikace Dynamo „zapamatovala“ objekty, které vytvořila při posledním spuštění v **určitém výkresu**. {% endhint %}
 
-{% hint style="warning" %} Tato možnost je vhodná pro situace, kdy je možné zachovat vztah 1:1 mezi **konkrétním výkresem** a grafem aplikace Dynamo. Možnosti 1 a 3 jsou vhodnější pro grafy, které jsou navrženy tak, aby je bylo možné spouštět ve více výkresech. {% enddhint %}
+{% hint style="warning" %} Tato možnost je vhodná pro situace, kdy je možné zachovat vztah 1:1 mezi **konkrétním výkresem** a grafem aplikace Dynamo. Možnosti 1 a 3 jsou vhodnější pro grafy, které jsou navrženy tak, aby je bylo možné spouštět ve více výkresech. {% endhint %}
 
 ### Možnost 3: Uložit ve výkresu pro aplikaci Dynamo
 
@@ -66,7 +66,7 @@ Tato možnost je podobná možnosti 2, s tím rozdílem, že data vazby objektu
 
 {% hint style="info" %} **Vhodné použití**
 
-Tuto možnost použijte, pokud chcete použít stejný graf ve **více výkresech** a aplikace Dynamo si má „pamatovat“, co provedla v každém z nich. {% enddhint %}
+Tuto možnost použijte, pokud chcete použít stejný graf ve **více výkresech** a aplikace Dynamo si má „pamatovat“, co provedla v každém z nich. {% endhint %}
 
 ### Možnost 4: Uložit ve výkresu pro aplikaci Přehrávač skriptů Dynamo
 

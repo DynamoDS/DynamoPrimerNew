@@ -14,7 +14,7 @@ Výraz „If“ je klíčovou koncepcí programování: „Pokud je _tato hodnot
 | ------------------------------------------------ | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                        | If (**If**)               | test, true, false | výsledek  |
 | ![](../images/5-1/Formula.jpg)                   | Formula (**IF(x,y,z)**)   | x, y, z           | výsledek  |
-| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | výsledek  |
+| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | výsledek  |
 
 Pojďme si projít stručný příklad každého z těchto tří uzlů v akci pomocí podmíněného výrazu „If“.
 
@@ -64,7 +64,7 @@ Budeme vycházet z logiky stanovené v prvním cvičení a použijeme toto nas
 
 ![](../images/5-3/3/logic-exercisepartII-01.jpg)
 
-> a. a. Použijte uzel **Sequence** s těmito vstupními hodnotami.
+> a. Použijte uzel **Sequence** s těmito vstupními hodnotami.
 >
 > b. Seznam in jsme odpojili od uzlu **List.FilterByBoolMask**. Tyto uzly zatím necháme stranou, ale později se nám v tomto cvičení budou hodit.
 

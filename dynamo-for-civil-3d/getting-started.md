@@ -8,7 +8,7 @@ Když jste si teď udělali základní obrázek, pojďme se rovnou pustit do vyt
 
 Nejprve otevřete prázdný dokument v aplikaci Civil 3D. V tomto dokumentu poté na pásu karet aplikace Civil 3D přejděte na kartu **Správa** a vyhledejte panel **Vizuální programování**.
 
-\![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 Kliknutím na tlačítko **Dynamo** spusťte aplikaci Dynamo v samostatném okně.
 
@@ -78,7 +78,7 @@ Podívejme se na výsledky našeho nového krásného grafu!
 
 V aplikaci Civil 3D zkontrolujte, zda je vybrána karta **Model**. Měl by se zobrazit nový textový objekt vytvořený aplikací Dynamo.
 
-{% hint style="info" %} Pokud text nevidíte, možná budete muset spustit příkaz ZOOM -> EXTENTS, abyste se přiblížili na správné místo. {% enddhint %}
+{% hint style="info" %} Pokud text nevidíte, možná budete muset spustit příkaz ZOOM -> EXTENTS, abyste se přiblížili na správné místo. {% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
 

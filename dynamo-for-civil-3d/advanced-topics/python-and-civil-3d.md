@@ -7,7 +7,7 @@ Aplikace Dynamo je sice jako nástroj pro [vizuální programování](../../a\_a
 
 V této části se zaměříme na to, jak lze pomocí jazyka Python v prostředí aplikace Civil 3D efektivně využívat rozhraní .NET API aplikací AutoCAD a Civil 3D.
 
-{% hint style="info" %} Další obecné informace o používání jazyka Python v aplikaci Dynamo naleznete v části [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention"). {% endhint %}
+{% hint style="info" %} Další obecné informace o používání jazyka Python v aplikaci Dynamo naleznete v části [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") . {% endhint %}
 
 ## Dokumentace k rozhraní API
 
