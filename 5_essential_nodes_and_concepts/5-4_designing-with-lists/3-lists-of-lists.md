@@ -111,7 +111,7 @@ Węzeł **List.Count** liczy wszystkie elementy na liście. Użyjemy go, aby zad
 > 3. Połącz poszczególne wiersze węzła Code Block odpowiednio z danymi wejściowymi _X_ i _Y_ węzła **Point.ByCoordinates**. Kliknij węzeł prawym przyciskiem myszy, wybierz opcję Skratowanie i wybierz pozycję _Iloczyn wektorowy_. Zostanie utworzona siatka punktów. Ustawiliśmy zakres od –50 do 50, dlatego odpowiada to domyślnej siatce dodatku Dynamo.
 > 4. Węzeł _**Watch**_ ujawnia utworzone punkty. Przyjrzyjmy się strukturze danych. Powstała lista list. Każda lista odpowiada wierszowi punktów siatki.
 
-\![Ćwiczenie](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Ćwiczenie](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Połącz węzeł **List.Count** z wyjściem węzła obserwacyjnego z poprzedniego kroku.
 > 2. Połącz węzeł **Watch** z wyjściem węzła **List.Count**.
@@ -150,7 +150,7 @@ Następnie użyjemy węzła **List.Combine**, aby zastosować funkcję do obiekt
 
 Po zakończeniu te 2 zestawy punktów są spakowane/sparowane za pomocą funkcji **Line.ByStartPointEndPoint** i powodują zwrócenie 10 linii w dodatku Dynamo.
 
-{% hint style="info" %} Zapoznaj się z ćwiczeniem w części dotyczącej list n-wymiarowych, aby zobaczyć inny przykład użycia węzła List.Combine. {% endhint %}
+{% hint style="info" %}\r\n Zapoznaj się z ćwiczeniem w części dotyczącej list n-wymiarowych, aby zobaczyć inny przykład użycia węzła List.Combine. \r\n{% endhint %}
 
 ### List@Level
 

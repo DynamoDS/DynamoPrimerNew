@@ -64,7 +64,7 @@ Musimy również dodać obsługę potencjalnego problemu. Linia działki ma punk
 
 Nadszedł czas, aby dowiedzieć się, gdzie zostaną umieszczone liczniki. Zazwyczaj położenie jest określane przez wymagania agencji lokalnej, dlatego wprowadzimy tylko wartości wejściowe, które można zmienić, aby odpowiadały różnym warunkom. Użyjemy **układu współrzędnych** wzdłuż linii działki jako odniesienia przy tworzeniu punktów. Ułatwi to zdefiniowanie odsunięć względem linii działki, bez względu na jej orientację.
 
-{% hint style="info" %} Jeśli pierwszy raz masz do czynienia z układami współrzędnych, skorzystaj z sekcji [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+Jeśli pierwszy raz masz do czynienia z układami współrzędnych, skorzystaj z sekcji [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Tworzenie punktów wstawiania dla mierników</p></figcaption></figure>
 

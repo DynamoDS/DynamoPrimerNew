@@ -17,7 +17,7 @@ Podczas dodawania rur i konstrukcji do sieci rurociągów program Civil 3D używ
 
 ## Zgodność wersji
 
-{% hint style="success" %} Ten wykres będzie działać w programie **Civil 3D 2020** i w nowszych wersjach. {% endhint %}
+{% hint style="success" %}\r\n Ten wykres będzie działać w programie **Civil 3D 2020** i w nowszych wersjach. \r\n{% endhint %}
 
 ## Zestaw danych
 
@@ -77,7 +77,7 @@ Tutaj zaczyna się robić trochę trudniej. Na tym etapie mamy dużą listę wsz
 
 Dlatego musimy przefiltrować listę konstrukcji, aby nie uwzględniać tych, które mają odsunięcie od linii trasowania większe niż określone. Najlepiej zrobić to za pomocą węzła **List.FilterByBoolMask**. Po przefiltrowaniu listy konstrukcji użyjemy węzła **List.SortByKey**, aby posortować je według wartości pikiet.
 
-{% hint style="info" %} Jeśli nie zdarzyło Ci się jeszcze pracować z listami, skorzystaj z sekcji [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Jeśli nie zdarzyło Ci się jeszcze pracować z listami, skorzystaj z sekcji [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>Filtrowanie i sortowanie konstrukcji</p></figcaption></figure>
 
@@ -104,7 +104,7 @@ Oto przykład uruchomienia wykresu za pomocą **Odtwarzacza Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Uruchamianie wykresu za pomocą Odtwarzacza Dynamo i wyświetlanie wyników w programie Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Jeśli nie znasz jeszcze Odtwarzacza Dynamo Player, skorzystaj z sekcji [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Jeśli nie znasz jeszcze Odtwarzacza Dynamo Player, skorzystaj z sekcji [dynamo-player.md](../../dynamo-player.md "mention"). \r\n{% endhint %}
 
 > :tada: Misja wykonana!
 
@@ -122,8 +122,8 @@ Teraz możemy lepiej zrozumieć, jak działa proces filtrowania konstrukcji na p
 
 Oto kilka pomysłów na rozszerzenie możliwości tego wykresu.
 
-{% hint style="info" %} Zmień nazwy konstrukcji na podstawie ich **najbliższych linii trasowania**, zamiast wybierać określoną linię trasowania. {% endhint %}
+{% hint style="info" %}\r\n Zmień nazwy konstrukcji na podstawie ich **najbliższych linii trasowania**, zamiast wybierać określoną linię trasowania. \r\n{% endhint %}
 
-{% hint style="info" %} **Zmień nazwy rur**, a nie tylko konstrukcji. {% endhint %}
+{% hint style="info" %}\r\n **Zmień nazwy rur**, a nie tylko konstrukcji. \r\n{% endhint %}
 
-{% hint style="info" %} **Ustaw warstwy** konstrukcji na podstawie ich segmentów. {% endhint %}
+{% hint style="info" %}\r\n **Ustaw warstwy** konstrukcji na podstawie ich segmentów.  \r\n{% endhint %}

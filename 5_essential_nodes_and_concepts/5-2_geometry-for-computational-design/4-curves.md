@@ -20,7 +20,7 @@
 
 [Linia](4-curves.md#lines) składa się z zestawu punktów; każda linia ma co najmniej 2 punkty. Jednym z najpopularniejszych sposobów tworzenia linii w dodatku Dynamo jest użycie `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) w celu utworzenia linii w dodatku Dynamo.
 
-\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Krzywa NURBS
 
@@ -85,4 +85,4 @@ Wraz ze wzrostem złożoności funkcji parametrycznych definiujących kształt m
 > 2. Stopień = 2
 > 3. Stopień = 3
 
-{% hint style="info" %} Należy zauważyć, że im większa wartość stopnia, tym więcej punktów kontrolnych jest używanych do interpolacji wynikowej krzywej. {% endhint %}
+{% hint style="info" %}\r\n Należy zauważyć, że im większa wartość stopnia, tym więcej punktów kontrolnych jest używanych do interpolacji wynikowej krzywej. \r\n{% endhint %}

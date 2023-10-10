@@ -4,7 +4,7 @@ Zaawansowaną funkcją dodatku Dynamo jest możliwość edycji parametrów na po
 
 ### Parametry typu i wystąpienia
 
-\![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Parametry wystąpienia definiują aperturę paneli na powierzchni dachu, od współczynnika apertury 0,1 do 0,4.
 > 2. Parametry oparte na typie są stosowane do każdego elementu na powierzchni, ponieważ mają one ten sam typ rodziny. Na przykład materiał każdego panelu może być sterowany przez parametr oparty na typie.
@@ -16,7 +16,7 @@ Zaawansowaną funkcją dodatku Dynamo jest możliwość edycji parametrów na po
 
 Jeśli chodzi o parametry w programie Revit, występują w nim parametry typu i parametry wystąpienia. Oba typy można edytować z poziomu dodatku Dynamo, ale w ćwiczeniu poniżej będziemy pracować z parametrami wystąpienia.
 
-{% hint style="info" %} Po zapoznaniu się z szeroką gamą zastosowań edycji parametrów można edytować dużą liczbę elementów w programie Revit za pomocą dodatku Dynamo. Może to być _kosztowna pod względem obliczeń_ operacja, co oznacza, że może być powolna. W przypadku edytowania dużej liczby elementów można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu. Aby uzyskać więcej informacji na temat blokowania węzłów, zobacz sekcję [„Blokowanie”](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) w rozdziale poświęconym bryłom. {% endhint %}
+{% hint style="info" %}\r\n Po zapoznaniu się z szeroką gamą zastosowań edycji parametrów można edytować dużą liczbę elementów w programie Revit za pomocą dodatku Dynamo. Może to być _kosztowna pod względem obliczeń_ operacja, co oznacza, że może być powolna. W przypadku edytowania dużej liczby elementów można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu. Aby uzyskać więcej informacji na temat blokowania węzłów, zobacz sekcję [„Blokowanie”](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) w rozdziale poświęconym bryłom. \r\n{% endhint %}
 
 ### Jednostki
 
@@ -34,7 +34,7 @@ Aby szybko przekształcić jednostki, użyj węzła _„Convert Between Units”
 
 {% file src="datasets/3/Revit-Editing.zip" %}
 
-{% hint style="warning" %} W ćwiczeniu poniżej używane są metry. {% endhint %}
+{% hint style="warning" %}\r\n W ćwiczeniu poniżej używane są metry. \r\n{% endhint %}
 
 W tym ćwiczeniu skupiono się na edycji elementów programu Revit bez wykonywania operacji geometrycznej w dodatku Dynamo. Nie importujemy tutaj geometrii dodatku Dynamo, a jedynie edytujemy parametry w projekcie programu Revit. To ćwiczenie jest podstawowe. Bardziej zaawansowani użytkownicy programu Revit powinni zwrócić uwagę na to, że choć używane są tu parametry wystąpienia bryły, ta sama logika może być stosowana do szyku elementów w celu dostosowywania ich w dużej skali. Wszystkie te operacje wykonuje się za pomocą węzła „Element.SetParameterByName”.
 
@@ -65,7 +65,7 @@ W dodatku Dynamo można pobrać parametry, wybierając element kierowania.
 > 2. Zdefiniuj kolejny węzeł _Code Block_ z listą o długości zgodnej z nazwami parametrów. W tym przypadku nazwiemy zmienne (bez cudzysłowów) tworzące wejścia dla węzła _Code Block_. Podłącz _suwaki_ do odpowiednich wejść: `{bw,bl,bh,ao,io,lu};`
 > 3. Połącz węzeł Code Block z wejściem wartości _„Element.SetParameterByName”*_. Gdy jest zaznaczona opcja automatycznego uruchamiania, wyniki zostaną wyświetlone automatycznie.
 
-{% hint style="warning" %} *Ten pokaz działa z parametrami wystąpienia, ale nie z parametrami typu. {% endhint %}
+{% hint style="warning" %}\r\n *Ten pokaz działa z parametrami wystąpienia, ale nie z parametrami typu. \r\n{% endhint %}
 
 Podobnie jak w programie Revit, wiele z tych parametrów jest od siebie zależnych. Istnieją oczywiście takie kombinacje, przy których geometria może się załamać. Można rozwiązać ten problem z użyciem zdefiniowanych formuł we właściwościach parametru lub skonfigurować podobną logikę z operacjami matematycznymi w dodatku Dynamo (jest to dodatkowe wyzwanie dla osób, które chcą rozszerzyć to ćwiczenie).
 

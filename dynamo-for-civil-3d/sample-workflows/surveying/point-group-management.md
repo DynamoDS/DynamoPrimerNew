@@ -16,7 +16,7 @@ Praca z punktami COGO i grupami punktów w programie Civil 3D jest podstawowym e
 
 ## Zgodność wersji
 
-{% hint style="success" %} Ten wykres będzie działać w programie **Civil 3D 2020** i w nowszych wersjach. {% endhint %}
+{% hint style="success" %}\r\n Ten wykres będzie działać w programie **Civil 3D 2020** i w nowszych wersjach. \r\n{% endhint %}
 
 ## Zestaw danych
 
@@ -41,7 +41,7 @@ Zacznijmy!
 
 Pierwszym krokiem jest pobranie wszystkich grup punktów w dokumencie, a następnie pobranie wszystkich punktów COGO w każdej grupie. Dzięki temu otrzymamy _listę zagnieżdżoną_ lub „listę list”, z którą łatwiej będzie pracować później, jeśli spłaszczymy wszystko do pojedynczej listy za pomocą węzła **List.Flatten**.
 
-{% hint style="info" %} Jeśli nie zdarzyło Ci się jeszcze pracować z listami, skorzystaj z sekcji [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Jeśli nie zdarzyło Ci się jeszcze pracować z listami, skorzystaj z sekcji [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>Pobieranie wszystkich grup punktów i punktów COGO </p></figcaption></figure>
 
@@ -69,7 +69,7 @@ Oto przykład uruchomienia wykresu za pomocą **Odtwarzacza Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Uruchamianie wykresu za pomocą Odtwarzacza Dynamo i wyświetlanie wyników w obszarze narzędzi</p></figcaption></figure>
 
-{% hint style="info" %} Jeśli nie znasz jeszcze Odtwarzacza Dynamo Player, skorzystaj z sekcji [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Jeśli nie znasz jeszcze Odtwarzacza Dynamo Player, skorzystaj z sekcji [dynamo-player.md](../../dynamo-player.md "mention"). \r\n{% endhint %}
 
 > :tada: Misja wykonana!
 
@@ -77,8 +77,8 @@ Oto przykład uruchomienia wykresu za pomocą **Odtwarzacza Dynamo**.
 
 Oto kilka pomysłów na rozszerzenie możliwości tego wykresu.
 
-{% hint style="info" %} Zmodyfikuj grupowanie punktów tak, aby było oparte na **pełnym opisie**, a nie na opisie nieprzetworzonym. {% endhint %}
+{% hint style="info" %}\r\n Zmodyfikuj grupowanie punktów tak, aby było oparte na **pełnym opisie**, a nie na opisie nieprzetworzonym. \r\n{% endhint %}
 
-{% hint style="info" %} Grupuj punkty na podstawie innych wybranych **wstępnie zdefiniowanych kategorii** (na przykład „Ground shots”, „Monuments” itp.) {% endhint %}
+{% hint style="info" %}\r\n Grupuj punkty na podstawie innych wybranych **wstępnie zdefiniowanych kategorii** (na przykład „Ground shots”, „Monuments” itp.) \r\n{% endhint %}
 
-{% hint style="info" %} Automatycznie twórz powierzchnie TIN dla punktów w niektórych grupach. {% endhint %}
+{% hint style="info" %}\r\n Automatycznie twórz powierzchnie TIN dla punktów w niektórych grupach. \r\n{% endhint %}

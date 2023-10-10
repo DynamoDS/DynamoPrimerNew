@@ -56,7 +56,7 @@ Użyliśmy węzłów _„Select Model Element”_ i _„Select Face”_, a teraz
 > 3. Zrób to samo w przypadku dolnych krawędzi fasady w programie Revit.
 > 4. Węzły _Watch_ wskazują, że powstały linie w dodatku Dynamo. Są one automatycznie konwertowane na geometrię dodatku Dynamo, gdyż same krawędzie nie są elementami programu Revit. Te krzywe stanowią odniesienia, przy użyciu których utworzymy wystąpienia kratownic adaptacyjnych wzdłuż fasady.
 
-{% hint style="info" %} *Aby zachować spójność topologii, odnosimy się do modelu, do którego nie dodano dodatkowych powierzchni ani krawędzi. Choć parametry mogą zmienić jego kształt, jego podstawowa konstrukcja nie ulega zmianie. {% endhint %}
+{% hint style="info" %}\r\n *Aby zachować spójność topologii, odnosimy się do modelu, do którego nie dodano dodatkowych powierzchni ani krawędzi. Choć parametry mogą zmienić jego kształt, jego podstawowa konstrukcja nie ulega zmianie. \r\n{% endhint %}
 
 Najpierw musimy połączyć krzywe i scalić je w jedną listę. W ten sposób _zgrupujemy_ krzywe, aby wykonywać operacje na geometrii.
 

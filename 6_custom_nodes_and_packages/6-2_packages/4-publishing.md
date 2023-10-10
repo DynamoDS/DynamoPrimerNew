@@ -2,7 +2,7 @@
 
 W poprzednich sekcjach omówiono szczegółowo skonfigurowanie pakietu _MapToSurface_ za pomocą węzłów niestandardowych i plików przykładowych. Jak jednak opublikować pakiet, który został utworzony lokalnie? W tej analizie przypadku pokazano sposób publikowania pakietu z zestawu plików w folderze lokalnym.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Istnieje wiele sposobów na opublikowanie pakietu. Poniżej przedstawiono zalecany przez nas proces: **publikowanie lokalne, opracowywanie lokalne, a następnie publikowanie online**. Rozpoczniemy od folderu zawierającego wszystkie pliki w pakiecie.
 
@@ -18,7 +18,7 @@ Następnie ponownie uruchom dodatek Dynamo. Po ponownym otwarciu w oknie _„Zar
 
 ### Publikowanie pakietu lokalnie
 
-{% hint style="warning" %} Publikowanie pakietu Dynamo jest możliwe tylko w dodatku Dynamo dla programu Revit i dodatku Dynamo dla programu Civil 3d. Obszar izolowany (piaskownica) dodatku Dynamo nie ma funkcji publikowania. {% endhint %}
+{% hint style="warning" %}\r\n Publikowanie pakietu Dynamo jest możliwe tylko w dodatku Dynamo dla programu Revit i dodatku Dynamo dla programu Civil 3d. Obszar izolowany (piaskownica) dodatku Dynamo nie ma funkcji publikowania. \r\n{% endhint %}
 
 > Pobierz plik przykładowy, klikając poniższe łącze.
 >
@@ -47,7 +47,7 @@ W oknie _Publikowanie pakietu Dynamo_ wypełniono odpowiednie formularze po lewe
 
 Po opublikowaniu węzły niestandardowe powinny być dostępne w grupie „DynamoPrimer” lub w bibliotece Dynamo.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Teraz spójrzmy na katalog główny, aby sprawdzić, w jaki sposób dodatek Dynamo sformatował utworzony właśnie pakiet. W tym celu kliknij opcje Dynamo > Preferencje > Menedżer pakietów > obok pozycji MapToSurface kliknij menu w postaci pionowych kropek > wybierz opcję Pokaż katalog główny
 
@@ -64,7 +64,7 @@ Zwróć uwagę, że katalog główny znajduje się w lokalnym położeniu pakiet
 
 ### Publikowanie pakietu online
 
-{% hint style="warning" %} Uwaga: ten krok należy wykonać tylko w przypadku, gdy faktycznie publikuje się własny pakiet. {% endhint %}
+{% hint style="warning" %}\r\n Uwaga: ten krok należy wykonać tylko w przypadku, gdy faktycznie publikuje się własny pakiet. \r\n{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 
