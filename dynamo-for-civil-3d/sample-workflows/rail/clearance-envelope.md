@@ -6,7 +6,7 @@
 
 ## 目標
 
-> :darrow: 車両の縦断ブロックを使用して、コリドーに沿ってクリアランスのエンベロープ 3D ソリッドを生成します。
+> :dart: 車両の縦断ブロックを使用して、コリドーに沿ってクリアランスのエンベロープ 3D ソリッドを生成します。
 
 ## 主要な概念
 
@@ -17,7 +17,7 @@
 
 ## バージョンの互換性
 
-{% hint style="success" %} このグラフは **Civil 3D 2020** 以降で実行できます。{% endhint %}
+{% hint style="success" %} このグラフは **Civil 3D 2020** 以降で実行できます。 {% endhint %}
 
 ## データセット
 
@@ -49,13 +49,13 @@
 
 ここで、指定した開始測点と終了測点の間に、コリドー計画線に沿って**座標系**を生成します。これらの座標系は、車両プロファイルの Block ジオメトリを コリドーに位置合わせするために使用されます。
 
-{% hint style="info" %} 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %} 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」 セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>コリドー計画線に沿って座標系を取得する</p></figcaption></figure>
 
-> 1. ノードの右下隅にある小さな **XXX** に注目してください。これは、ノードのレーシング設定が_[直積]_に設定されていることを意味します。これは、両方の計画線に対して同じ測点値で座標系を生成するために必要です。
+> 1. ノードの右下隅にある小さな **XXX** に注目してください。これは、ノードのレーシング設定が _[直積]_ に設定されていることを意味します。これは、両方の計画線に対して同じ測点値で座標系を生成するために必要です。
 
-{% hint style="info" %} ノード レーシングを初めて使用する場合は、「[1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %} ノード レーシングを初めて使用する場合は、「[1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention")」 セクションを参照してください。 {% endhint %}
 
 ### Block ジオメトリを変換する
 
@@ -69,9 +69,9 @@
 
 > 1. これにより、ドキュメントから Block 定義を取得します。
 > 2. これらのノードは、Block 内のオブジェクトの Dynamo ジオメトリを取得します。
-> 3. これらのノードは、基本的にジオメトリの_変換元_の座標系を定義します。
+> 3. これらのノードは、基本的にジオメトリの _変換元_ の座標系を定義します。
 > 4. 最後に、このノードはジオメトリを変換する実際の作業を行います。
-> 5. このノードの_最長_レーシングに注目してください。
+> 5. このノードの _最長_ レーシングに注目してください。
 
 Dynamo では、次のようになります。
 
@@ -99,7 +99,7 @@ Dynamo では、次のようになります。
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。{% endhint %}
+{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。 {% endhint %}
 
 > :tada: ミッションが達成されました。
 
@@ -107,8 +107,8 @@ Dynamo では、次のようになります。
 
 このグラフの機能を拡張する方法について、いくつかのアイデアを示します。
 
-{% hint style="info" %} 各トラックに対して**異なる測点範囲**を個別に使用する機能を追加します。{% endhint %}
+{% hint style="info" %} 各トラックに対して**異なる測点範囲**を個別に使用する機能を追加します。 {% endhint %}
 
-{% hint style="info" %} 小さなセグメントに**ソリッドを分割**し、クラッシュを個別に解析できるようにします。{% endhint %}
+{% hint style="info" %} 小さなセグメントに**ソリッドを分割**し、クラッシュを個別に解析できるようにします。 {% endhint %}
 
-{% hint style="info" %} エンベロープ ソリッドが**フィーチャと交差**するかを確認し、クラッシュするソリッドに色を付けます。{% endhint %}
+{% hint style="info" %} エンベロープ ソリッドが**フィーチャと交差**するかを確認し、クラッシュするソリッドに色を付けます。 {% endhint %}

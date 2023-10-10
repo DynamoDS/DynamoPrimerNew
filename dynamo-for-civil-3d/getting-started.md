@@ -6,9 +6,9 @@
 
 ## Dynamo を開く
 
-最初の手順は、Civil 3D で空のドキュメントを開くことです。次に、Civil 3D リボンの**[管理]**タブにナビゲートし、**[ビジュアル プログラミング]**パネルを探します。
+最初の手順は、Civil 3D で空のドキュメントを開くことです。次に、Civil 3D リボンの **[管理]** タブにナビゲートし、**[ビジュアル プログラミング]** パネルを探します。
 
-\![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 **Dynamo** ボタンをクリックすると、別のウィンドウで Dynamo が起動します。
 
@@ -16,23 +16,23 @@
 
 Dynamo は、グラフの作成と実行に使用します。Dynamo プレーヤは、Dynamo でグラフを開くことなく簡単にグラフを実行できます。
 
-使用してみる場合は、「[dynamo-player.md](dynamo-player.md "mention")」セクションに進んでください。{% endhint %}
+使用してみる場合は、「[dynamo-player.md](dynamo-player.md "mention")」 セクションに進んでください。 {% endhint %}
 
 ## 新しいグラフを開始する
 
-Dynamo を開くと、開始画面が表示されます。**[新規]**をクリックして、空のワークスペースを開きます。
+Dynamo を開くと、開始画面が表示されます。**[新規]** をクリックして、空のワークスペースを開きます。
 
 <figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Dynamo の開始画面</p></figcaption></figure>
 
 {% hint style="info" %} **サンプルについて**
 
-Dynamo for Civil 3D には、いくつかのグラフが事前に作成されています。これらのグラフを参考にして、Dynamo の使用方法に関してアイデアを発展させてください。いずれかの時点で、これらのサンプル グラフと、Primer 内の [sample-workflows](sample-workflows/ "mention") を確認することをお勧めします。{% endhint %}
+Dynamo for Civil 3D には、いくつかのグラフが事前に作成されています。これらのグラフを参考にして、Dynamo の使用方法に関してアイデアを発展させてください。いずれかの時点で、これらのサンプル グラフと、Primer 内の [sample-workflows](sample-workflows/ "mention") を確認することをお勧めします。 {% endhint %}
 
 ## ノードを追加する
 
 現在、空のワークスペースが表示されているはずです。Dynamo を実際に使用してみましょう。目標は次のとおりです。
 
->  :datsolo: **モデル空間にテキストを挿入する Dynamo グラフを作成します。**
+>  :dart: **モデル空間にテキストを挿入する Dynamo グラフを作成します。**
 
 とても簡単ですよね?しかし、開始する前に、いくつかの基礎事項を確認する必要があります。
 
@@ -56,7 +56,7 @@ Dynamo グラフの主要な構成要素は、**ノード**と呼ばれます。
 
 {% hint style="info" %} **使用するノードとそれらがある場所を調べる方法**
 
-ライブラリ内のノードは、動作に基づいて論理的なカテゴリにグループ化されています。詳細な説明については、[node-library.md](node-library.md "mention") セクションを参照してください。{% endhint %}
+ライブラリ内のノードは、動作に基づいて論理的なカテゴリにグループ化されています。詳細な説明については、[node-library.md](node-library.md "mention") セクションを参照してください。 {% endhint %}
 
 最終的なグラフは次ようになります。
 
@@ -78,7 +78,7 @@ Dynamo グラフの主要な構成要素は、**ノード**と呼ばれます。
 
 Civil 3D に戻り、**[モデル]**タブが選択されていることを確認します。Dynamo で作成された新しい Text オブジェクトが表示されるはずです。
 
-{% hint style="info" %} テキストが表示されない場合は、[ズーム] -> [範囲]コマンドを実行して適切な位置にズームする必要があります。{% endhint %}
+{% hint style="info" %} テキストが表示されない場合は、[ズーム] -> [範囲]コマンドを実行して適切な位置にズームする必要があります。 {% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
 
@@ -94,7 +94,7 @@ Dynamo グラフに戻り、テキスト文字列、挿入位置の座標など�
 
 {% hint style="info" %} **グラフを実行するたびに Dynamo が新しい Text オブジェクトを挿入しない理由とは**
 
-既定では、Dynamo は作成したオブジェクトを「記憶」します。ノード入力値を変更すると、まったく新しいオブジェクトが作成されるのではなく、Civil 3D のオブジェクトが更新されます。この動作の詳細については、「[object-binding.md](advanced-topics/object-binding.md "mention")」セクションを参照してください。{% endhint %}
+既定では、Dynamo は作成したオブジェクトを「記憶」します。ノード入力値を変更すると、まったく新しいオブジェクトが作成されるのではなく、Civil 3D のオブジェクトが更新されます。この動作の詳細については、「[object-binding.md](advanced-topics/object-binding.md "mention")」セクションを参照してください。 {% endhint %}
 
 > :tada: ミッションが達成されました。
 

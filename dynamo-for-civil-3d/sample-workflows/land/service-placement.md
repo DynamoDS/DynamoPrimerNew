@@ -18,7 +18,7 @@
 
 ## バージョンの互換性
 
-{% hint style="success" %} このグラフは **Civil 3D 2020** 以降で実行できます。{% endhint %}
+{% hint style="success" %} このグラフは **Civil 3D 2020** 以降で実行できます。 {% endhint %}
 
 ## データセット
 
@@ -44,7 +44,7 @@
 
 最初の手順では、Dynamo に配水本管のジオメトリを取得します。Lines または Polylines を個別に選択するのではなく、特定のレイヤ上のすべてのオブジェクトを取得し、Dynamo のポリカーブとしてそれらを結合します。
 
-{% hint style="info" %} Dynamo の曲線ジオメトリを初めて使用する場合は、「[4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention")」セクションを参照してください。{% endhint %}
+{% hint style="info" %} Dynamo の曲線ジオメトリを初めて使用する場合は、「[4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention")」 セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Civil 3D からオブジェクトを取得し、すべてを単一のポリカーブに結合する</p></figcaption></figure>
 
@@ -64,7 +64,7 @@
 
 次に、サービス メーターが配置される場所を決定します。通常、配置は現地の関係機関の要件によって決定されるため、さまざまな条件に合わせて変更できる入力値を指定します。点を作成するための参照として、区画線に沿って**座標系**を使用します。これにより、区画線に対するオフセットを、その向きに関係なく、非常に簡単に定義できます。
 
-{% hint style="info" %} 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %} 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」 セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>サービス メーターの挿入点を作成する</p></figcaption></figure>
 
@@ -105,7 +105,7 @@
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。{% endhint %}
+{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」 セクションを参照してください。 {% endhint %}
 
 > :tada: ミッションが達成されました。
 
@@ -113,8 +113,8 @@
 
 このグラフの機能を拡張する方法について、いくつかのアイデアを示します。
 
-{% hint style="info" %} 各区画行を選択する代わりに、**複数のサービス接続**を同時に配置します。{% endhint %}
+{% hint style="info" %} 各区画行を選択する代わりに、**複数のサービス接続** を同時に配置します。 {% endhint %}
 
-{% hint style="info" %} 入力を調整して、水道メーターの代わりに、**下水管の掃除口**を配置します。{% endhint %}
+{% hint style="info" %} 入力を調整して、水道メーターの代わりに、**下水管の掃除口** を配置します。 {% endhint %}
 
-{% hint style="info" %} **切り替えを追加**して、区画線の両側ではなく特定の側に単一のサービス接続を配置できるようにします。{% endhint %}
+{% hint style="info" %} **切り替えを追加** して、区画線の両側ではなく特定の側に単一のサービス接続を配置できるようにします。 {% endhint %}

@@ -6,7 +6,7 @@ Dynamo の多くの優れた使用事例の 1 つは、コリドー モデルに
 
 ## 目標
 
-> :darrow: Excel ファイルで指定した測点値でコリドーに沿って照明柱のブロック参照を配置します。
+> :dart: Excel ファイルで指定した測点値でコリドーに沿って照明柱のブロック参照を配置します。
 
 ## 主要な概念
 
@@ -18,7 +18,7 @@ Dynamo の多くの優れた使用事例の 1 つは、コリドー モデルに
 
 ## バージョンの互換性
 
-{% hint style="success" %} このグラフは **Civil 3D 2020** 以降で実行できます。{% endhint %}
+{% hint style="success" %} このグラフは **Civil 3D 2020** 以降で実行できます。 {% endhint %}
 
 ## データセット
 
@@ -55,9 +55,9 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetExcelData (1).png" alt="" width="548"><figcaption><p>Excel データを Dynamo に読み込む</p></figcaption></figure>
 
-データが得られたら、列(_Corridor_、_Baseline_、_PointCode_ など)で分割して、グラフの残りの部分で使用できるようにする必要があります。これを行う一般的な方法は、**List.GetItemAtIndex** ノードを使用して、必要な列のインデックス番号を指定することです。たとえば、_[Corridor]_列はインデックス 0、_[Baseline]_列はインデックス 1、などです。
+データが得られたら、列(_Corridor_、_Baseline_、_PointCode_ など)で分割して、グラフの残りの部分で使用できるようにする必要があります。これを行う一般的な方法は、**List.GetItemAtIndex** ノードを使用して、必要な列のインデックス番号を指定することです。たとえば、_[Corridor]_ 列はインデックス 0、_[Baseline]_ 列はインデックス 1、などです。
 
-問題なさそうですね?しかし、このアプローチには潜在的な問題があります。Excel ファイルの列の順序が将来変更されたらどうなるでしょうか?あるいは、2 つの列の間に新しい列が追加されたら?その場合は、グラフが正しく機能しなくなり、更新が必要になります。Excel の列ヘッダーを_キー_として、残りのデータを_値_として使用して、データを**ディクショナリ**に入れることで、グラフを将来も使用できるように保証します。
+問題なさそうですね?しかし、このアプローチには潜在的な問題があります。Excel ファイルの列の順序が将来変更されたらどうなるでしょうか?あるいは、2 つの列の間に新しい列が追加されたら?その場合は、グラフが正しく機能しなくなり、更新が必要になります。Excel の列ヘッダーを _キー_ として、残りのデータを _値_ として使用して、データを**ディクショナリ**に入れることで、グラフを将来も使用できるように保証します。
 
 {% hint style="info" %} ディクショナリを初めて使用する場合は、「[5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention")」セクションを参照してください。 {% endhint %}
 
@@ -81,13 +81,13 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 ここで、Excel ファイルで指定した測点値でコリドー計画線に沿って**座標系**を生成します。これらの座標系は、照明柱のブロック参照の位置、回転、および尺度を定義するために使用されます。
 
-{% hint style="info" %} 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %} 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」 セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>コリドー計画線に沿って座標系を取得する</p></figcaption></figure>
 
 基線のどちら側に座標系があるかに応じて座標系を回転するために、ここでコード ブロックを使用します。これは複数のノードのシーケンスを使用して実現できますが、これは単に書き出すほうが簡単である良い例です。
 
-{% hint style="info" %} コード ブロックを初めて使用する場合は、「[8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %} コード ブロックを初めて使用する場合は、「[8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention")」 セクションを参照してください。 {% endhint %}
 
 ### ブロック参照を作成する
 
@@ -103,7 +103,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 グラフを実行すると、コリドーに沿ってモデル空間に新しいブロック参照が表示されます。これが素晴らしいところで、グラフの実行モードが[自動]に設定されている状態で Excel ファイルを編集すると、ブロック参照が自動的に更新されます。
 
-{% hint style="info" %} グラフの実行モードの詳細については、「[3_user_interface](../../../3\_user\_interface/ "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %} グラフの実行モードの詳細については、「[3_user_interface](../../../3\_user\_interface/ "mention")」 セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Excel ファイルを更新して、Civil 3D で結果をすばやく表示する</p></figcaption></figure>
 
@@ -111,7 +111,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。{% endhint %}
+{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。 {% endhint %}
 
 > :tada: ミッションが達成されました。
 
@@ -119,7 +119,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 コンテキストを提供するために、Dynamo でコリドー ジオメトリを視覚化すると便利です。この特定のモデルでは、モデル空間で既に抽出されたコリドーのソリッドが存在するため、Dynamo に取り込んでみましょう。
 
-しかし、他にも検討する必要があることがあります。ソリッドは比較的重いジオメトリ タイプであるため、この操作によってグラフの速度が低下します。ソリッドを表示するかどうかを、簡単に_選択_できる方法があれば便利です。解決策は非常に単純で、 **Corridor.GetSolids** ノードの接続を解除するだけですが、これによってすべての下流ノードに警告が生成されてしまう点が少々面倒です。この状況では、**ScopeIf** ノードが役に立ちます。
+しかし、他にも検討する必要があることがあります。ソリッドは比較的重いジオメトリ タイプであるため、この操作によってグラフの速度が低下します。ソリッドを表示するかどうかを、簡単に _選択_ できる方法があれば便利です。解決策は非常に単純で、 **Corridor.GetSolids** ノードの接続を解除するだけですが、これによってすべての下流ノードに警告が生成されてしまう点が少々面倒です。この状況では、**ScopeIf** ノードが役に立ちます。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_VisualizeCorridor (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -134,8 +134,8 @@ Dynamo の背景プレビューの結果は次のとおりです。
 
 このグラフの機能を拡張する方法について、いくつかのアイデアを示します。
 
-{% hint style="info" %} Excel ファイルに**回転**列を追加し、それを使用して座標系の回転を駆動します。{% endhint %}
+{% hint style="info" %} Excel ファイルに **回転** 列を追加し、それを使用して座標系の回転を駆動します。 {% endhint %}
 
-{% hint style="info" %} 必要に応じて照明柱がコリドー計画線から外れるようにするため、Excel ファイルに**水平オフセットまたは垂直オフセット**を追加します。{% endhint %}
+{% hint style="info" %} 必要に応じて照明柱がコリドー計画線から外れるようにするため、Excel ファイルに **水平オフセットまたは垂直オフセット** を追加します。 {% endhint %}
 
-{% hint style="info" %} Excel ファイルで測点値を使用する代わりに、開始測点と標準間隔を使用して、**Dynamo で直接**測点値を生成します。{% endhint %}
+{% hint style="info" %} Excel ファイルで測点値を使用する代わりに、開始測点と標準間隔を使用して、**Dynamo で直接** 測点値を生成します。 {% endhint %}

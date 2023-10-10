@@ -30,7 +30,7 @@ _ポイント アンド クリック_ は、Revit の要素を直接選択する
 
 _ドロップダウン メニュー_ で、Revit プロジェクト内のアクセス可能なすべての要素のリストが作成されます。ビューで確認できない Revit の要素も含めて、これで参照できます。Revit プロジェクトやファミリ エディタで既存の要素をクエリーしたり、新しい要素を作成するには、このツールが役に立ちます。
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 Revit の要素の選択方法としては、他に _Revit の階層構造_ から特定の階層を指定する方法もあります。この方法は、設計図書作成、インスタンスの生成とカスタマイズなどのために準備されている大規模なデータ配列をカスタマイズするのにとても役立ちます。
 
@@ -48,7 +48,7 @@ Revit の要素の選択方法としては、他に _Revit の階層構造_ か�
 
 この Revit ファイルのサンプルには、3 つの要素タイプから成る 1 つの単純な建物モデルが含まれています。それでは、このモデルを見本として使用して、次に挙げる Revit の階層構造の中で Revit の要素を選択してみましょう。
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. 建物のマス(基本形状)
 > 2. 梁(構造フレーム)
@@ -81,7 +81,7 @@ Revit のプロジェクト ビューに表示されている要素から、ど�
 
 リストの基本的操作をいくつか行うことで、対象の面のクエリーを実行できます。
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. 最初に、選択した要素を前のノードから Element.Faces ノードに出力します。
 > 2. 次に _List.Count_ ノードを使用して、作業中のマスに 23 のサーフェスが含まれていることを確認します。

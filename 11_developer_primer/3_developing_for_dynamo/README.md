@@ -8,7 +8,7 @@
 
 #### オプションの選び方について <a href="#what-are-my-options" id="what-are-my-options"></a>
 
-Dynamo の開発オプションは、主に Dynamo 向け__の開発と、Dynamo __での開発の 2 つに分類されます。この 2 つのカテゴリは、Dynamo IDE を使用して作成されたコンテンツを Dynamo で使用する「Dynamo での開発」と、外部ツールを使用して作成されたコンテンツを Dynamo に読み込んで使用する「Dynamo 向けの開発」を意味します。このガイドでは、__Dynamo 向けの開発に焦点を当てていますが、すべてのプロセスのリソースについて以下で説明します。
+Dynamo の開発オプションは、主に Dynamo 向け_の_開発と、Dynamo _で_ の開発の 2 つに分類されます。この 2 つのカテゴリは、Dynamo IDE を使用して作成されたコンテンツを Dynamo で使用する「Dynamo での開発」と、外部ツールを使用して作成されたコンテンツを Dynamo に読み込んで使用する「Dynamo 向けの開発」を意味します。このガイドでは、Dynamo _向け_ の開発に焦点を当てていますが、すべてのプロセスのリソースについて以下で説明します。
 
 #### Dynamo 向けの開発<a href="#for-dynamo" id="for-dynamo"></a>
 

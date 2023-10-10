@@ -22,7 +22,7 @@ Dynamo のほとんどのノードは、5 つのパーツで構成されてい�
 
 ポートは、特定のタイプのデータを受け取るように設定されています。たとえば、 _2.75_ という数値を Point.ByCoordinates ノードのポートに接続すると、点が正常に作成されます。ただし、同じポートに対して _「Red」_ を指定すると、エラーが発生します。
 
-{% hint style="info" %} ヒント: ポートにカーソルを合わせると、そのポートの正しいデータ タイプを含むツールチップが表示されます。{% endhint %}
+{% hint style="info" %} ヒント: ポートにカーソルを合わせると、そのポートの正しいデータ タイプを含むツールチップが表示されます。 {% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -87,7 +87,7 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 * 入力ポートへの接続を変更するには、別の入力ポートを左クリックします。
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * ワイヤを削除するには、ワイヤを入力ポートから離してワークスペースを左クリックします。
 

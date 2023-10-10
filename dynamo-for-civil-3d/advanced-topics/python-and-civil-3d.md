@@ -7,7 +7,7 @@ Dynamo は[ビジュアル プログラミング](../../a\_appendix/a-1\_visual-
 
 このセクションでは、Civil 3D 環境で Python を活用して、AutoCAD および Civil 3D .NET API を利用する方法について説明します。
 
-{% hint style="info" %} Dynamo での Python の使用に関する一般情報については、「[8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention")」セクションを参照してください。{% endhint %}
+{% hint style="info" %} Dynamo での Python の使用に関する一般情報については、「[8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention")」セクションを参照してください。 {% endhint %}
 
 ## API ドキュメント
 
@@ -21,7 +21,7 @@ AutoCAD と Civil 3D にはどちらにも、開発者がカスタム機能を�
 
 [Civil 3D .NET API リファレンス ガイド](https://help.autodesk.com/view/CIV3D/2024/JPN/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %} このセクションを進めていくと、データベース、トランザクション、メソッド、プロパティなど、馴染みのない概念が出てくるかもしれません。これらの概念の多くは、.NET API を使用するための中核であり、Dynamo や Python に固有のものではありません。これらの項目の詳細については、Primer のこのセクションでは取り上げません。詳細については、上記のリンクを頻繁に参照することをお勧めします。{% endhint %}
+{% hint style="info" %} このセクションを進めていくと、データベース、トランザクション、メソッド、プロパティなど、馴染みのない概念が出てくるかもしれません。これらの概念の多くは、.NET API を使用するための中核であり、Dynamo や Python に固有のものではありません。これらの項目の詳細については、Primer のこのセクションでは取り上げません。詳細については、上記のリンクを頻繁に参照することをお勧めします。 {% endhint %}
 
 ## コード テンプレート
 
@@ -40,7 +40,7 @@ AutoCAD と Civil 3D にはどちらにも、開発者がカスタム機能を�
 > 9. ノードからデータを出力する場合は、スクリプトの最後にある変数 `OUT` に出力するデータを割り当てます。
 
 {% hint style="info" %} **カスタマイズする場合**\
-既定の Python テンプレートは、`C:\ProgramData\Autodesk\C3D <version>\Dynamo` 内の `PythonTemplate.py` ファイルを編集することで修正できます。{% endhint %}
+既定の Python テンプレートは、`C:\ProgramData\Autodesk\C3D <version>\Dynamo` 内の `PythonTemplate.py` ファイルを編集することで修正できます。 {% endhint %}
 
 ## 例
 
@@ -84,7 +84,7 @@ Dynamo for Civil 3D で Python スクリプトを作成する場合の基本的�
 
 ### オブジェクトをアンラップする
 
-先に進む前に、重要な概念について簡単に説明する必要があります。「[node-library.md](../node-library.md "mention")」セクションで、オブジェクトと CivilObjects の関係について説明しました。これをもう少し詳しく説明すると、**Dynamo オブジェクト**は** AutoCAD 図形**のラッパーです。同様に、**Dynamo CivilObject** は、**Civil 3D 図形**のラッパーです。`InternalDBObject` プロパティまたは `InternalObjectId` プロパティにアクセスすることで、オブジェクトを「アンラップ」することができます。
+先に進む前に、重要な概念について簡単に説明する必要があります。「[node-library.md](../node-library.md "mention")」セクションで、オブジェクトと CivilObjects の関係について説明しました。これをもう少し詳しく説明すると、**Dynamo オブジェクト** は **AutoCAD 図形** のラッパーです。同様に、**Dynamo CivilObject** は、**Civil 3D 図形**のラッパーです。`InternalDBObject` プロパティまたは `InternalObjectId` プロパティにアクセスすることで、オブジェクトを「アンラップ」することができます。
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo タイプ</th><th width="373">ラップ</th></tr></thead><tbody><tr><td><strong>オブジェクト</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>図形</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>図形</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
@@ -181,7 +181,7 @@ with adoc.LockDocument():
 
 最後に、注意事項を簡単に説明します。使用している Civil 3D のバージョンに応じて、Python ノードの設定が異なる場合があります。**Civil 3D 2020 および 2021** では、Dynamo は **IronPython** というツールを使用して .NET オブジェクトと Python スクリプトの間でデータを移動しました。**Civil 3D 2022** では、Dynamo は Python 3 を使用するのではなく、標準のネイティブ Python インタプリタ(**CPython** とも呼ばれる)を使用するように移行しました。この移行には、人気のある最新ライブラリや新しいプラットフォーム機能、基本的なメンテナンス、セキュリティ パッチへのアクセスなどのメリットがあります。
 
-{% hint style="info" %} この移行の詳細と、従来のスクリプトのアップグレード方法については、[Dynamo Blog](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) を参照してください。IronPython を今後も使用する場合は、Dynamo Package Manager を使用して **DynamoIronPython2.7** パッケージをインストールする必要があります。{% endhint %}
+{% hint style="info" %} この移行の詳細と、従来のスクリプトのアップグレード方法については、[Dynamo Blog](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) を参照してください。IronPython を今後も使用する場合は、Dynamo Package Manager を使用して **DynamoIronPython2.7** パッケージをインストールする必要があります。 {% endhint %}
 
 [^1]: 既定では、Dynamo ジオメトリ ライブラリは Python 環境に追加されません。このスクリプトの目的は、集水域境界の Dynamo の点のリストを出力することです。点を後で作成するには、この行を追加する必要があります。
 
