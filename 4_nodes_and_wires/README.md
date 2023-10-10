@@ -22,7 +22,7 @@ Dynamo의 노드 대부분은 5개 부분으로 구성되어 있습니다. 입�
 
 포트는 특정 유형의 데이터를 수신해야 합니다. 예를 들어 _2.75_ 와 같은 숫자를 좌표로 정의된 점 노드의 포트에 연결하면 점이 성공적으로 작성됩니다. 그러나 동일한 포트에 _"Red"_ 를 제공하면 오류가 발생합니다.
 
-{% hint style="info" %} 팁: 포트 위에 마우스 커서를 놓으면 예상 데이터 유형이 포함된 툴팁이 표시됩니다. {% endhint %}
+{% hint style="info" %}\r\n 팁: 포트 위에 마우스 커서를 놓으면 예상 데이터 유형이 포함된 툴팁이 표시됩니다. \r\n{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,7 +53,7 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 시각적 프로그램에 경고 또는 오류가 포함된 경우 Dynamo는 해당 문제에 대한 추가 정보를 제공합니다. 노란색으로 되어 있는 모든 노드는 이름 위에 툴팁도 표시됩니다. 경고 ![](images/nodesandwires-nodewarningicon.png) 또는 오류 ![](images/nodesandwires-nodeerroricon.png) 툴팁 아이콘 위에 마우스를 놓으면 툴팁이 확장됩니다.
 
-{% hint style="info" %} 팁: 이 툴팁 정보를 통해 업스트림 노드를 검사하여 필수 데이터 유형이나 데이터 구조에 오류가 있는지 확인합니다. {% endhint %}
+{% hint style="info" %}\r\n 팁: 이 툴팁 정보를 통해 업스트림 노드를 검사하여 필수 데이터 유형이나 데이터 구조에 오류가 있는지 확인합니다. \r\n{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 

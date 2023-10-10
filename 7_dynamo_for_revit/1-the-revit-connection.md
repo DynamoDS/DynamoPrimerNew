@@ -35,13 +35,13 @@ Dynamo는 원래 Revit에서 AEC 워크플로우를 간소화하기 위해 개�
 
 Revit 프로젝트 또는 패밀리 편집기에서 애드인을 찾은 다음, Dynamo를 클릭합니다.*
 
-{% hint style="warning" %} *Dynamo는 열려 있는 파일에서만 실행됩니다. {% endhint %}
+{% hint style="warning" %}\r\n *Dynamo는 열려 있는 파일에서만 실행됩니다. \r\n{% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Revit에서 Dynamo를 열면 "Revit"이라는 새 카테고리가 나타납니다. 이 카테고리는 Revit 워크플로우에 특히 적합한 노드를 제공하는 UI에 포괄적으로 추가되었습니다.*
 
-{% hint style="warning" %} *Revit 전용 노드 패밀리를 사용하면 Dynamo 그래프가 Dynamo for Revit에서 열 때만 작동합니다. 예를 들어 Dynamo for Revit 그래프를 Dynamo 샌드박스에서 여는 경우 Revit 노드가 누락됩니다. {% endhint %}
+{% hint style="warning" %}\r\n *Revit 전용 노드 패밀리를 사용하면 Dynamo 그래프가 Dynamo for Revit에서 열 때만 작동합니다. 예를 들어 Dynamo for Revit 그래프를 Dynamo 샌드박스에서 여는 경우 Revit 노드가 누락됩니다. \r\n{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 

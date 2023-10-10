@@ -134,7 +134,7 @@
 | ![](<images/5-1/Cuboidheight(1) (1) (1).jpg>)                    | <p><strong>Cuboid.Height</strong></p><p>이 함수는 실제 표준 공간 치수가 아니라 직육면체의 입력 치수를 반환합니다. **</p>           | ![](images/5-1/indexofnodes-cuboidheight.jpg)                    |
 | ![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>경계 상자를 솔리드 직육면체로 가져옵니다.</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
 
-{% hint style="warning" %} **즉, 폭(X축) 길이가 10인 직육면체를 작성하고 X 축척을 두 배로 하여 CoordinateSystem으로 변환해도 폭은 여전히 10입니다. ASM에서는 예측 가능한 순서로 본체의 정점을 추출할 수 없으므로, 변환 후 치수를 결정할 수 없습니다. {% endhint %}
+{% hint style="warning" %}\r\n **즉, 폭(X축) 길이가 10인 직육면체를 작성하고 X 축척을 두 배로 하여 CoordinateSystem으로 변환해도 폭은 여전히 10입니다. ASM에서는 예측 가능한 순서로 본체의 정점을 추출할 수 없으므로, 변환 후 치수를 결정할 수 없습니다. \r\n{% endhint %}
 
 ### 곡선
 

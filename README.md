@@ -1,6 +1,6 @@
 # 정보
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype 비디오{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype 비디오\r\n{% endembed %}
 
 ## Dynamo v2.13의 경우
 
