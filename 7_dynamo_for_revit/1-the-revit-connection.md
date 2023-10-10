@@ -35,13 +35,13 @@ Usando os principais nós do Dynamo juntamente com os nós personalizados do Rev
 
 Em um editor de família ou um projeto do Revit, navegue para Complementos e clique em Dynamo.*
 
-{% hint style="warning" %} *O Dynamo será executado somente no arquivo no qual foi aberto. {% endhint %}
+{% hint style="warning" %}\r\n *O Dynamo será executado somente no arquivo no qual foi aberto. \r\n{% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Quando o Dynamo é aberto no Revit, há uma nova categoria chamada “Revit”. Essa é uma adição abrangente à interface de usuário, oferecendo nós especificamente voltados para os fluxos de trabalho do Revit.*
 
-{% hint style="warning" %} *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo for Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. {% endhint %}
+{% hint style="warning" %}\r\n *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo for Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. \r\n{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 

@@ -33,9 +33,9 @@ Se você estiver procurando versões de desenvolvimento anteriores ou as mais av
 
 ![](images/DynamoSandboxAllbuilds.jpg)
 
-{% hint style="info" %} O desenvolvimento mais avançado pode incluir alguns recursos novos e experimentais que ainda não foram totalmente testados; portanto, pode ser instável. Se você usar esse desenvolvimento, poderá detectar erros ou problemas, e poderá nos ajudar a aprimorar o aplicativo informando os problemas à nossa equipe.
+{% hint style="info" %}\r\n O desenvolvimento mais avançado pode incluir alguns recursos novos e experimentais que ainda não foram totalmente testados; portanto, pode ser instável. Se você usar esse desenvolvimento, poderá detectar erros ou problemas, e poderá nos ajudar a aprimorar o aplicativo informando os problemas à nossa equipe.
 
-Recomenda-se que os iniciantes façam o download da versão estável oficial. {% endhint %}
+Recomenda-se que os iniciantes façam o download da versão estável oficial. \r\n{% endhint %}
 
 #### Descompactar
 
@@ -63,4 +63,4 @@ Você verá a tela de inicialização do DynamoSandbox, como mostrado a seguir.
 
 Parabéns. Você terminou a configuração para usar o DynamoSandbox.
 
-{% hint style="info" %} **Geometria** é uma funcionalidade adicional no Dynamo Sandbox que está disponível somente para usuários que têm uma assinatura ou licença atual para os seguintes softwares da Autodesk: Revit, Robot Structural Analysis, FormIt e Civil 3D. A funcionalidade**Geometria** permite que os usuários importem, criem, editem e exportem a geometria do Dynamo Sandbox. {% endhint %}
+{% hint style="info" %}\r\n **Geometria** é uma funcionalidade adicional no Dynamo Sandbox que está disponível somente para usuários que têm uma assinatura ou licença atual para os seguintes softwares da Autodesk: Revit, Robot Structural Analysis, FormIt e Civil 3D. A funcionalidade**Geometria** permite que os usuários importem, criem, editem e exportem a geometria do Dynamo Sandbox. \r\n{% endhint %}

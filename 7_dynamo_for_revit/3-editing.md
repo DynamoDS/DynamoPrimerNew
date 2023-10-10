@@ -16,7 +16,7 @@ O Dynamo possui um recurso avançado para permitir editar os parâmetros em um n
 
 Como uma revisão rápida dos parâmetros no Revit, lembramos que existem parâmetros de tipo e parâmetros de instância. Ambos podem ser editados no Dynamo, mas trabalharemos com parâmetros de instância no exercício abaixo.
 
-{% hint style="info" %} Depois de descobrir a aplicação abrangente de edição de parâmetros, você poderá editar uma grande quantidade de elementos no Revit com o Dynamo. Essa operação pode _exigir muitos cálculos computacionais_ , o que significa que pode ser lenta. Se estiver editando um grande número de elementos, poderá ser conveniente usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto você desenvolve o gráfico. Para obter mais informações sobre o congelamento de nós, consulte a seção “[Congelar](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)” no capítulo de sólidos. {% endhint %}
+{% hint style="info" %}\r\n Depois de descobrir a aplicação abrangente de edição de parâmetros, você poderá editar uma grande quantidade de elementos no Revit com o Dynamo. Essa operação pode _exigir muitos cálculos computacionais_ , o que significa que pode ser lenta. Se estiver editando um grande número de elementos, poderá ser conveniente usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto você desenvolve o gráfico. Para obter mais informações sobre o congelamento de nós, consulte a seção “[Congelar](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)” no capítulo de sólidos. \r\n{% endhint %}
 
 ### Unidades
 
@@ -34,7 +34,7 @@ Para uma conversão rápida das unidades, use o nó _“Converter entre unidades
 
 {% file src="datasets/3/Revit-Editing.zip" %}
 
-{% hint style="warning" %} O exercício abaixo funciona em metros. {% endhint %}
+{% hint style="warning" %}\r\n O exercício abaixo funciona em metros. \r\n{% endhint %}
 
 Esse exercício se concentra na edição de elementos do Revit sem executar a operação geométrica no Dynamo. Não estamos importando a geometria do Dynamo aqui, apenas editando os parâmetros em um projeto do Revit. Este exercício é básico e para os usuários mais avançados do Revit, observe que estes são parâmetros de instância de uma massa, mas a mesma lógica pode ser aplicada a uma matriz de elementos para personalizar em grande escala. Tudo isso é feito com o nó “Element.SetParameterByName”.
 
@@ -65,7 +65,7 @@ No Dynamo, podemos recuperar os parâmetros selecionando o elemento de destino.
 > 2. Defina outro _bloco de código_ com uma lista do mesmo tamanho que os nomes de parâmetro. Neste caso, nomeamos variáveis (sem aspas) que criam entradas para o _bloco de código_. Conecte os _controles deslizantes_ a cada entrada respectiva: `{bw,bl,bh,ao,io,lu};`
 > 3. Conecte o Bloco de código _à entrada de valor “Element.SetParameterByName”*_. Com a execução marcada automaticamente, veremos os resultados automaticamente.
 
-{% hint style="warning" %} *Esta demonstração funciona com parâmetros de instância, mas não com parâmetros de tipo. {% endhint %}
+{% hint style="warning" %}\r\n *Esta demonstração funciona com parâmetros de instância, mas não com parâmetros de tipo. \r\n{% endhint %}
 
 Assim como no Revit, muitos desses parâmetros dependem uns dos outros. É claro que há combinações nas quais a geometria pode ser interrompida. Podemos solucionar esse problema com fórmulas definidas nas propriedades de parâmetro ou definir uma lógica semelhante às operações matemáticas no Dynamo (esse será um desafio adicional se você desejar expandir o exercício).
 

@@ -18,7 +18,7 @@ Em seguida, reinicie o Dynamo. Depois de reabrir, quando você verificar a janel
 
 ### Publicar um pacote localmente
 
-{% hint style="warning" %} A publicação de pacote do Dynamo está ativada somente no Dynamo for Revit e no Dynamo for Civil 3D. O Dynamo Sandbox não tem a funcionalidade de publicação. {% endhint %}
+{% hint style="warning" %}\r\n A publicação de pacote do Dynamo está ativada somente no Dynamo for Revit e no Dynamo for Civil 3D. O Dynamo Sandbox não tem a funcionalidade de publicação. \r\n{% endhint %}
 
 > Faça o download do arquivo de exemplo clicando no link abaixo.
 >
@@ -64,7 +64,7 @@ Observe que o diretório raiz está na localização local do pacote (lembre-se 
 
 ### Publicar um pacote on-line
 
-{% hint style="warning" %} Observação: Siga estas etapas somente se você estiver realmente publicando um pacote próprio. {% endhint %}
+{% hint style="warning" %}\r\n Observação: Siga estas etapas somente se você estiver realmente publicando um pacote próprio. \r\n{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 

@@ -17,7 +17,7 @@ O desenvolvimento de envelopes cinemáticos para validação da altura livre é 
 
 ## Compatibilidade de versão
 
-{% hint style="success" %} Este gráfico será executado no **Civil 3D 2020** e versões superiores. {% endhint %}
+{% hint style="success" %}\r\n Este gráfico será executado no **Civil 3D 2020** e versões superiores. \r\n{% endhint %}
 
 ## Conjunto de dados
 
@@ -49,13 +49,13 @@ Nossa primeira etapa é obter os dados do corredor. Selecionaremos o modelo de c
 
 O que vamos fazer agora é gerar os **Sistemas de coordenadas** ao longo das linhas de recurso do corredor entre uma determinada estaca inicial e final. Esses sistemas de coordenadas serão usados para alinhar a geometria do bloco do perfil do veículo com o corredor.
 
-{% hint style="info" %} Se os sistemas de coordenadas forem algo novo para você, veja a seção [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Se os sistemas de coordenadas forem algo novo para você, veja a seção [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). \r\n{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>Obtenção dos sistemas de coordenadas ao longo das linhas de recurso do corredor</p></figcaption></figure>
 
 > 1. Observe os pequenos **XXX** no canto inferior direito do nó. Isso significa que as configurações de amarra do nó são definidas como _Produto transversal_, que é necessário para gerar os sistemas de coordenadas nos mesmos valores de estaca para ambas as linhas de recurso.
 
-{% hint style="info" %} Se a amarra de nó for algo novo para você, veja a seção [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Se a amarra de nó for algo novo para você, veja a seção [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention"). \r\n{% endhint %}
 
 ### Transformar a geometria de bloco
 
@@ -99,7 +99,7 @@ Veja um exemplo de como executar o gráfico usando o **Reprodutor do Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Execução do gráfico usando o Reprodutor do Dynamo e visualização dos resultados no Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}\r\n Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention"). \r\n{% endhint %}
 
 > :tada: Missão cumprida.
 
@@ -107,8 +107,8 @@ Veja um exemplo de como executar o gráfico usando o **Reprodutor do Dynamo**.
 
 Veja a seguir algumas ideias sobre como você pode expandir os recursos desse gráfico.
 
-{% hint style="info" %} Adicione a capacidade de usar **diferentes intervalos de estacas** separadamente para cada trilha. {% endhint %}
+{% hint style="info" %}\r\n Adicione a capacidade de usar **diferentes intervalos de estacas** separadamente para cada trilha. \r\n{% endhint %}
 
-{% hint style="info" %} **Divida os sólidos** em segmentos menores que podem ser analisados individualmente para detectar interferências. {% endhint %}
+{% hint style="info" %}\r\n **Divida os sólidos** em segmentos menores que podem ser analisados individualmente para detectar interferências. \r\n{% endhint %}
 
-{% hint style="info" %} Verifique se os sólidos de envelope **fazem interseção com recursos** e colore os que apresentam interferência. {% endhint %}
+{% hint style="info" %}\r\n Verifique se os sólidos de envelope **fazem interseção com recursos** e colore os que apresentam interferência. \r\n{% endhint %}

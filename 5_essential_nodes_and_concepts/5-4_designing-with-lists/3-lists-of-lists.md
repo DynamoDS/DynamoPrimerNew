@@ -150,7 +150,7 @@ Em seguida, usaremos **List.Combine** para aplicar uma função em objetos em du
 
 Após a conclusão, os dois conjuntos de pontos são compactados/emparelhados por meio de uma função **Line.ByStartPointEndPoint** e retornam 10 linhas no Dynamo.
 
-{% hint style="info" %} Consulte o exercício em Listas n-dimensionais para ver outro exemplo de uso de List.Combine. {% endhint %}
+{% hint style="info" %}\r\n Consulte o exercício em Listas n-dimensionais para ver outro exemplo de uso de List.Combine. \r\n{% endhint %}
 
 ### List@Level
 

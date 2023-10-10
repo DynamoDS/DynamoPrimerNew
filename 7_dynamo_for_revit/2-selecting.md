@@ -18,7 +18,7 @@ Vamos fazer uma rápida revisão da hierarquia do Revit.
 
 Você se lembra da taxonomia da biologia? Reino, Filo, Classe, Ordem, Família, Gênero, Espécie? Os elementos do Revit são categorizados de forma similar. Em um nível básico, é possível dividir a hierarquia do Revit em Categorias, Famílias, Tipos* e Instâncias. Uma instância é um elemento de modelo individual (com uma ID exclusiva), enquanto uma categoria define um grupo genérico (como “paredes” ou “pisos”). Com o banco de dados do Revit organizado dessa forma, é possível selecionar um elemento e escolher todos os elementos similares com base em um nível especificado na hierarquia.
 
-{% hint style="warning" %} *Os tipos no Revit são definidos de forma diferente dos tipos na programação. No Revit, um tipo se refere a uma ramificação da hierarquia, em vez de um “tipo de dados”. {% endhint %}
+{% hint style="warning" %}\r\n *Os tipos no Revit são definidos de forma diferente dos tipos na programação. No Revit, um tipo se refere a uma ramificação da hierarquia, em vez de um “tipo de dados”. \r\n{% endhint %}
 
 ### Navegação no banco de dados com os nós do Dynamo
 
@@ -149,4 +149,4 @@ Em seguida, estamos prontos para extrair algumas informações básicas do tipo 
 > 2. Conecte o nó _“Todos os elementos do tipo de família”_ ao nó _"AdaptiveComponent.Location"_. Isso nos fornece uma lista de listas, cada uma com três pontos que representam as localizações dos pontos adaptativos.
 > 3. A conexão de um nó _"Polygon.ByPoints"_ retorna uma policurva. Podemos ver isso na viewport do Dynamo. Com esse método, visualizamos a geometria de um elemento e abstraímos a geometria da matriz restante dos elementos (que pode ser maior em número do que este exemplo).
 
-{% hint style="info" %} Dica: Se você clicar no número verde de um elemento do Revit no Dynamo, a viewport do Revit efetuará o zoom para aquele elemento. {% endhint %}
+{% hint style="info" %}\r\n Dica: Se você clicar no número verde de um elemento do Revit no Dynamo, a viewport do Revit efetuará o zoom para aquele elemento. \r\n{% endhint %}
