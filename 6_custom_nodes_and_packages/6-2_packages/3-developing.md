@@ -20,7 +20,7 @@ No Dynamo, clique em _Pacotes>Procurar um pacote... e p_rocure o pacote “MapTo
 
 Após a instalação, os nós personalizados devem estar disponíveis na seção Complementos > Dynamo Primer.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Com o pacote já instalado, vamos analisar como ele está configurado.
 
@@ -30,7 +30,7 @@ O pacote que estamos criando usa cinco nós personalizados que criamos para refe
 
 Esse é um pacote simples com cinco nós personalizados. Nas etapas abaixo, falaremos brevemente sobre a configuração de cada nó personalizado.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 

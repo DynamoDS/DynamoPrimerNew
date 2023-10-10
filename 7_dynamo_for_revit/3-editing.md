@@ -4,7 +4,7 @@ O Dynamo possui um recurso avançado para permitir editar os parâmetros em um n
 
 ### Parâmetros de tipo e instância
 
-\![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Os parâmetros de instância definem a abertura dos painéis na superfície de telhado, variando de um coeficiente de abertura de 0,1 a 0,4.
 > 2. Os parâmetros com base no tipo são aplicados a cada elemento na superfície porque são do mesmo tipo de família. O material de cada painel, por exemplo, pode ser controlado por um parâmetro com base no tipo.

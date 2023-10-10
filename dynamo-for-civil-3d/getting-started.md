@@ -8,7 +8,7 @@ Agora que você sabe um pouco mais sobre o quadro geral, vamos entrar e criar o 
 
 A primeira coisa a fazer é abrir um documento vazio no Civil 3D. Depois disso, navegue até a guia **Gerenciar** na faixa de opções do Civil 3D e procure o painel **Programação visual**.
 
-\![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 Clique no botão **Dynamo**, que iniciará o Dynamo em uma janela separada.
 

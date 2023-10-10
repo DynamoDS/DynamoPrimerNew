@@ -65,7 +65,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 * O uso do recurso List@Level pode ajudar a **reduzir a complexidade do gráfico substituindo os nós List.Map e List.Combine**, que podem ocupar um volume considerável de espaço da tela
 * O recurso List@Level oferece uma** forma mais rápida do que List.Map/List.Combine para criar a lógica do nó** permitindo acessar dados em qualquer nível de uma lista diretamente da porta de entrada de um nó
 
-\![](<images/1/graphstrategy4 (1).png>)
+![](<images/1/graphstrategy4 (1).png>)
 
 > É possível verificar quantos valores verdadeiros BoundingBox.Contains retorna e em quais listas, ativando List@Level para a entrada de “lista” de CountTrue. O recurso List@Level permite que o usuário determine de qual nível a entrada extrairá os dados. O uso de List@Level é flexível, eficiente e altamente recomendável em relação a outros métodos que envolvem List.Map e List.Combine.
 >
@@ -84,7 +84,7 @@ Além de tornar o gráfico o mais simples e eficiente possível, tente obter mai
 * Se outras pessoas estiverem trabalhando com o gráfico, você deverá **garantir que o layout fio/nó flua com facilidade antes do envio**
 * Para ajudar com o alinhamento, **use o recurso “Limpeza do layout do nó” para alinhar automaticamente** o gráfico, porém de forma menos precisa do que se você fizesse isso manualmente
 
-\![](<images/1/graphstrategy5 (2).png>)
+![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Gráfico não organizado
 > 2. Gráfico alinhado

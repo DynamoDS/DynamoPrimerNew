@@ -18,7 +18,7 @@ Um ponto 2D no Dynamo tem duas coordenadas [X,Y].
 
 ### Ponto em curvas e superfícies
 
-Os parâmetros para curvas e superfícies são contínuos e se estendem além da aresta da geometria fornecida. Como as formas que definem o espaço paramétrico residem em um Sistema de coordenadas universais tridimensional, sempre podemos converter uma coordenada paramétrica em uma coordenada “Universal”. O ponto [0,2; 0,5] na superfície, por exemplo, é o mesmo que o ponto [1,8; 2,0, 4,1; nas coordenadas universais.
+Os parâmetros para curvas e superfícies são contínuos e se estendem além da aresta da geometria fornecida. Como as formas que definem o espaço paramétrico residem em um Sistema de coordenadas universais tridimensional, sempre podemos converter uma coordenada paramétrica em uma coordenada “Universal”. O ponto [0,2; 0,5] na superfície, por exemplo, é o mesmo que o ponto [1,8; 2,0; 4,1] nas coordenadas universais.
 
 ![](../images/5-2/3/points-xyzvscoordsysvsuv.jpg)
 

@@ -51,7 +51,7 @@ Quando você passa o cursor do mouse ou clica com o botão direito do mouse sobr
 
 #### Como lidar com nós com estado de erro ou de aviso
 
-Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone de dica de ferramenta de aviso ![![](images/nodesandwires-nodewarningicon.png)ou erro](images/nodesandwires-nodeerroricon.png) para expandi-lo.
+Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone de dica de ferramenta de aviso ![](images/nodesandwires-nodewarningicon.png) ou erro ![](images/nodesandwires-nodeerroricon.png) para expandi-lo.
 
 {% hint style="info" %} Dica: Com essa informação da dica de ferramenta, examine os nós a montante para ver se o tipo de dados ou a estrutura de dados necessários apresenta erro. {% endhint %}
 
@@ -87,7 +87,7 @@ Frequentemente, queremos ajustar o fluxo do programa em nosso programa visual ed
 
 * Para alterar a conexão em uma porta de entrada, clique com o botão esquerdo do mouse em outra porta de entrada
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Para remover o fio, afaste o fio e clique com o botão esquerdo do mouse no espaço de trabalho
 
