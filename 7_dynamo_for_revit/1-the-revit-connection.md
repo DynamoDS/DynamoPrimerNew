@@ -35,13 +35,13 @@ Die Core-Dynamo-Blöcke ermöglichen es dem Benutzer in Verbindung mit benutzerd
 
 Navigieren Sie in einem Revit-Projekt oder im Familieneditor zu Zusatzmodule und klicken Sie auf Dynamo.*
 
-{% hint style="warning" %} *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. {% endhint %}
+{% hint style="warning" %}\r\n *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. \r\n{% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
 
-{% hint style="warning" %} *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo for Revit öffnen. Wenn Sie ein Diagramm aus Dynamo for Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. {% endhint %}
+{% hint style="warning" %}\r\n *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo for Revit öffnen. Wenn Sie ein Diagramm aus Dynamo for Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. \r\n{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 

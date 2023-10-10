@@ -2,7 +2,7 @@
 
 Nachdem Sie sich einen Gesamtüberblick verschafft haben, können Sie jetzt direkt mit der Erstellung Ihres ersten Dynamo-Diagramms in Civil 3D beginnen.
 
-{% hint style="info" %} Dies ist ein einfaches Beispiel zur Veranschaulichung der grundlegenden Dynamo-Funktionen. Es wird empfohlen, die Schritte in einem neuen, leeren Civil 3D-Dokument zu durchlaufen. {% endhint %}
+{% hint style="info" %}\r\n Dies ist ein einfaches Beispiel zur Veranschaulichung der grundlegenden Dynamo-Funktionen. Es wird empfohlen, die Schritte in einem neuen, leeren Civil 3D-Dokument zu durchlaufen. \r\n{% endhint %}
 
 ## Öffnen von Dynamo
 
@@ -12,11 +12,11 @@ Als Erstes müssen Sie ein leeres Dokument in Civil 3D öffnen. Navigieren Sie 
 
 Klicken Sie auf die Schaltfläche **Dynamo**. Dadurch wird Dynamo in einem separaten Fenster gestartet.
 
-{% hint style="info" %} **Was ist der Unterschied zwischen Dynamo und Dynamo Player?**
+{% hint style="info" %}\r\n **Was ist der Unterschied zwischen Dynamo und Dynamo Player?**
 
 Dynamo wird zum Erstellen und Ausführen von Diagrammen verwendet. Dynamo Player bietet eine einfache Möglichkeit zum Ausführen von Diagrammen, ohne sie in Dynamo öffnen zu müssen.
 
-Gehen Sie zum Abschnitt [dynamo-player.md](dynamo-player.md "mention"), wenn sie ihn ausprobieren möchten. {% endhint %}
+Gehen Sie zum Abschnitt [dynamo-player.md](dynamo-player.md "mention"), wenn sie ihn ausprobieren möchten. \r\n{% endhint %}
 
 ## Starten eines neuen Diagramms
 
@@ -24,9 +24,9 @@ Wenn Dynamo geöffnet ist, wird der Startbildschirm angezeigt. Klicken Sie auf *
 
 <figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Dynamo-Startbildschirm</p></figcaption></figure>
 
-{% hint style="info" %} **Wie sieht es mit Beispielen aus?**
+{% hint style="info" %}\r\n **Wie sieht es mit Beispielen aus?**
 
-Dynamo for Civil 3D enthält einige vordefinierte Diagramme, die Ihnen Ideen zur Verwendung von Dynamo liefern können. Wir empfehlen, dass Sie sich diese sowie die hier in der Einführung erwähnten [sample-workflows](sample-workflows/ "mention") ansehen. {% endhint %}
+Dynamo for Civil 3D enthält einige vordefinierte Diagramme, die Ihnen Ideen zur Verwendung von Dynamo liefern können. Wir empfehlen, dass Sie sich diese sowie die hier in der Einführung erwähnten [sample-workflows](sample-workflows/ "mention") ansehen. \r\n{% endhint %}
 
 ## Hinzufügen von Blöcken
 
@@ -38,13 +38,13 @@ Ganz einfach, nicht wahr? Aber bevor wir beginnen, müssen wir einige Grundlagen
 
 Die wichtigsten Bausteine eines Dynamo-Diagramms werden **Blöcke** genannt. Ein Block ist wie ein kleiner Computer: Sie geben Daten ein, der Computer bearbeitet die Daten und gibt ein Ergebnis aus. Dynamo for Civil 3D verfügt über eine **Bibliothek** von Blöcken, die Sie mit **Drähten** verbinden können, um ein **Diagramm** zu erstellen, das größere und bessere Aufgaben bewältigen kann als ein einzelner Block.
 
-{% hint style="info" %} **Was ist, wenn ich noch nie mit Dynamo gearbeitet habe?**
+{% hint style="info" %}\r\n **Was ist, wenn ich noch nie mit Dynamo gearbeitet habe?**
 
 Einiges davon ist möglicherweise ziemlich neu für Sie. Aber keine Sorge. Diese Abschnitte helfen Ihnen.
 
 [3_user_interface](../3\_user\_interface/ "mention")\
  [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")\
- [5_essential_nodes_and_concepts](../5\_essential\_nodes\_and\_concepts/ "mention") {% endhint %}
+ [5_essential_nodes_and_concepts](../5\_essential\_nodes\_and\_concepts/ "mention") \r\n{% endhint %}
 
 Erstellen wir nun unser Diagramm. Hier sehen Sie eine Liste aller benötigten Blöcke.
 
@@ -54,9 +54,9 @@ Sie können diese Blöcke finden, indem Sie ihre Namen in die Suchleiste in der 
 
 <figure><img src="../.gitbook/assets/c3d-create-text-node-placement.gif" alt=""><figcaption><p>Blöcke können aus der Bibliothek oder durch Klicken mit der rechten Maustaste in den Ansichtsbereich platziert werden.</p></figcaption></figure>
 
-{% hint style="info" %} **Wie kann ich feststellen, welche Blöcke ich verwenden sollte und wo ich sie finde?**
+{% hint style="info" %}\r\n **Wie kann ich feststellen, welche Blöcke ich verwenden sollte und wo ich sie finde?**
 
-Blöcke in der Bibliothek werden in logische Kategorien eingeteilt, abhängig davon, welche Funktion sie haben. Eine ausführlichere Beschreibung finden Sie im Abschnitt [node-library.md](node-library.md "mention"). {% endhint %}
+Blöcke in der Bibliothek werden in logische Kategorien eingeteilt, abhängig davon, welche Funktion sie haben. Eine ausführlichere Beschreibung finden Sie im Abschnitt [node-library.md](node-library.md "mention"). \r\n{% endhint %}
 
 Hier sehen Sie, wie das endgültige Diagramm aussehen sollte.
 
@@ -78,7 +78,7 @@ Sehen wir uns nun die Ergebnisse unseres brandneuen Diagramms an.
 
 Vergewissern Sie sich in Civil 3D, dass die Registerkarte **Modell** ausgewählt ist. Das neue von Dynamo erstellte Text-Objekt sollte angezeigt werden.
 
-{% hint style="info" %} Wenn Sie den Text nicht sehen können, müssen Sie möglicherweise den Befehl ZOOM -> GRENZEN ausführen, um zur richtigen Stelle zu zoomen. {% endhint %}
+{% hint style="info" %}\r\n Wenn Sie den Text nicht sehen können, müssen Sie möglicherweise den Befehl ZOOM -> GRENZEN ausführen, um zur richtigen Stelle zu zoomen. \r\n{% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
 
@@ -92,9 +92,9 @@ Ausgezeichnet. Jetzt nehmen wir einige Änderungen am Text vor.
 
 </div>
 
-{% hint style="info" %} **Warum fügt Dynamo nicht bei jeder Ausführung des Diagramms ein neues Textobjekt ein?**
+{% hint style="info" %}\r\n **Warum fügt Dynamo nicht bei jeder Ausführung des Diagramms ein neues Textobjekt ein?**
 
-Vorgabemäßig "merkt sich" Dynamo die erstellten Objekte. Wenn Sie die Blockeingabewerte ändern, werden die Objekte in Civil 3D aktualisiert, anstatt neue Objekte zu erstellen. Weitere Informationen zu diesem Verhalten finden Sie im Abschnitt [object-binding.md](advanced-topics/object-binding.md "mention"). {% endhint %}
+Vorgabemäßig "merkt sich" Dynamo die erstellten Objekte. Wenn Sie die Blockeingabewerte ändern, werden die Objekte in Civil 3D aktualisiert, anstatt neue Objekte zu erstellen. Weitere Informationen zu diesem Verhalten finden Sie im Abschnitt [object-binding.md](advanced-topics/object-binding.md "mention"). \r\n{% endhint %}
 
 > :tada: Mission erfüllt!
 
