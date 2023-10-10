@@ -51,7 +51,9 @@
 
 ここで、指定した開始測点と終了測点の間に、コリドー計画線に沿って**座標系**を生成します。これらの座標系は、車両プロファイルの Block ジオメトリを コリドーに位置合わせするために使用されます。
 
-{% hint style="info" %}\r\n 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」 セクションを参照してください。 \r\n{% endhint %}
+{% hint style="info" %}
+座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」 セクションを参照してください。
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>コリドー計画線に沿って座標系を取得する</p></figcaption></figure>
 
