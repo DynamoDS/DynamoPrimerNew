@@ -23,7 +23,9 @@ Textové skriptování může vytvořit vztahy vyšší složitosti než vizuál
 | **Python**         | Ano         | Ano           | Částečně          | Ano                | Ne            |
 | **ZeroTouch (C#)** | Ne          | Ne            | Ne                 | Ano                | Ne            |
 
-{% hint style="info" %}\r\n Seznam toho, k čemu vám jednotlivé knihovny aplikace Dynamo poskytují přístup, naleznete v části [Reference skriptování](3-scripting-reference.md). \r\n{% endhint %}
+{% hint style="info" %}
+Seznam toho, k čemu vám jednotlivé knihovny aplikace Dynamo poskytují přístup, naleznete v části [Reference skriptování](3-scripting-reference.md). 
+{% endhint %}
 
 ### Uvažujte parametricky
 
@@ -63,7 +65,9 @@ Při skriptování v aplikaci Dynamo, což je nezbytně parametrické prostřed
 > 2. Interní proměnné skriptu.
 > 3. Smyčka, která pomocí těchto vstupů a proměnných provádí svou funkci.
 
-{% hint style="info" %}\r\n Tip: Na proces klaďte tak velký důraz, jaký kladete na řešení. \r\n{% endhint %}
+{% hint style="info" %}
+Tip: Na proces klaďte tak velký důraz, jaký kladete na řešení. 
+{% endhint %}
 
 ### **Neopakujte se (princip DRY):**
 
@@ -195,7 +199,9 @@ Při vývoji textových skriptů v aplikaci Dynamo je moudré neustále kontrol
 * Chyby, které odhalí některé základní problémy se skriptem, se někdy projeví pouze v těchto okrajových případech.
   * Zjistěte, co způsobuje chybu, a poté se rozhodněte, zda je nutné ji opravit interně nebo zda je nutné doménu parametrů předefinovat, aby se tomuto problému zabránilo.
 
-{% hint style="info" %}\r\n Tip: Vždy předpokládejte, že uživatel použije všechny kombinace všech možných vstupních hodnot, které mu zpřístupníte. Tímto můžete zabránit nežádoucím překvapením \r\n{% endhint %}.
+{% hint style="info" %}
+Tip: Vždy předpokládejte, že uživatel použije všechny kombinace všech možných vstupních hodnot, které mu zpřístupníte. Tímto můžete zabránit nežádoucím překvapením 
+{% endhint %}.
 
 ### Laďte efektivně
 
