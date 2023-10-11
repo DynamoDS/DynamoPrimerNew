@@ -8,9 +8,7 @@ Dynamo ist als [visuelles Programmierwerkzeug](../../a\_appendix/a-1\_visual-pro
 In diesem Abschnitt wird beschrieben, wie Sie Python in der Civil 3D-Umgebung einsetzen können, um die Vorteile der .NET-APIs von AutoCAD und Civil 3D zu nutzen.
 
 {% hint style="info" %}
-
- Weitere allgemeine Informationen zur Verwendung von Python in Dynamo finden Sie im Abschnitt [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention"). 
-
+Weitere allgemeine Informationen zur Verwendung von Python in Dynamo finden Sie im Abschnitt [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention"). 
 {% endhint %}
 
 ## API-Dokumentation
@@ -26,9 +24,7 @@ AutoCAD und Civil 3D verfügen über mehrere APIs, mit denen Entwickler wie Sie
 [Civil 3D-.NET-API - Referenzhandbuch](https://help.autodesk.com/view/CIV3D/2024/DEU/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
 {% hint style="info" %}
-
- Wenn Sie diesen Abschnitt durcharbeiten, werden Ihnen möglicherweise einige Konzepte begegnen, mit denen Sie nicht vertraut sind, z. B. Datenbanken, Transaktionen, Methoden, Eigenschaften usw. Viele dieser Konzepte sind für die Arbeit mit .NET-APIs wichtig und nicht spezifisch für Dynamo oder Python. Da diese Konzepte in diesem Abschnitt der Einführung nicht behandelt werden, empfehlen wir für weitere Informationen die oben genannten Links. 
-
+Wenn Sie diesen Abschnitt durcharbeiten, werden Ihnen möglicherweise einige Konzepte begegnen, mit denen Sie nicht vertraut sind, z. B. Datenbanken, Transaktionen, Methoden, Eigenschaften usw. Viele dieser Konzepte sind für die Arbeit mit .NET-APIs wichtig und nicht spezifisch für Dynamo oder Python. Da diese Konzepte in diesem Abschnitt der Einführung nicht behandelt werden, empfehlen wir für weitere Informationen die oben genannten Links. 
 {% endhint %}
 
 ## Code-Vorlage
@@ -48,10 +44,8 @@ Wenn Sie einen neuen Python-Block zum ersten Mal bearbeiten, wird er automatisch
 > 9. Wenn Sie Daten aus dem Block ausgeben möchten, weisen Sie diese der Variablen `OUT` am Ende des Skripts zu.
 
 {% hint style="info" %}
-
- **Sie möchten die Software anpassen?**\
- Sie können die vorgabemäßige Python-Vorlage ändern, indem Sie die Datei `PythonTemplate.py` in `C:\ProgramData\Autodesk\C3D <Version>\Dynamo` bearbeiten. 
-
+**Sie möchten die Software anpassen?**\
+Sie können die vorgabemäßige Python-Vorlage ändern, indem Sie die Datei `PythonTemplate.py` in `C:\ProgramData\Autodesk\C3D <Version>\Dynamo` bearbeiten. 
 {% endhint %}
 
 ## Beispiel
@@ -101,9 +95,7 @@ Bevor wir fortfahren, müssen wir noch kurz auf ein wichtiges Konzept eingehen. 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo-Typ</th><th width="373">Enthält im Wrapper</th></tr></thead><tbody><tr><td><strong>Objekt</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Objekt</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Objekt</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
 {% hint style="warning" %}
-
- Als Faustregel gilt: Es ist in der Regel sicherer, die Objekt-ID über die Eigenschaft `InternalObjectId` abzurufen und dann in einer Transaktion auf das im Wrapper enthaltene Objekt zuzugreifen. Dies liegt daran, dass die Eigenschaft `InternalDBObject` ein AutoCAD-DBObject zurückgibt, das sich nicht in einem schreibbaren Status befindet. 
-
+Als Faustregel gilt: Es ist in der Regel sicherer, die Objekt-ID über die Eigenschaft `InternalObjectId` abzurufen und dann in einer Transaktion auf das im Wrapper enthaltene Objekt zuzugreifen. Dies liegt daran, dass die Eigenschaft `InternalDBObject` ein AutoCAD-DBObject zurückgibt, das sich nicht in einem schreibbaren Status befindet. 
 {% endhint %}
 
 ### Python-Skript
@@ -111,9 +103,7 @@ Bevor wir fortfahren, müssen wir noch kurz auf ein wichtiges Konzept eingehen. 
 Hier sehen Sie das vollständige Python-Skript, das für den Zugriff auf die internen Einzugsgebietobjekte deren Umgrenzungspunkte abruft. Die hervorgehobenen Zeilen stehen für die Zeilen, die vom Vorgabevorlagencode geändert/hinzugefügt wurden.
 
 {% hint style="info" %}
-
- Klicken Sie auf den unterstrichenen Text im Skript, um eine Erläuterung für jede Zeile anzuzeigen. 
-
+Klicken Sie auf den unterstrichenen Text im Skript, um eine Erläuterung für jede Zeile anzuzeigen. 
 {% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Python-Standard- und DesignScript-Bibliotheken laden
@@ -182,9 +172,7 @@ with adoc.LockDocument():
 </strong></code></pre>
 
 {% hint style="warning" %}
-
- Als Faustregel sollten Sie den Großteil Ihrer Skriptlogik in eine Transaktion einschließen. Dadurch wird der sichere Zugriff auf die Objekte sichergestellt, die das Skript lesen und schreiben kann. In vielen Fällen kann das Auslassen einer Transaktion einen schwerwiegenden Fehler verursachen. 
-
+Als Faustregel sollten Sie den Großteil Ihrer Skriptlogik in eine Transaktion einschließen. Dadurch wird der sichere Zugriff auf die Objekte sichergestellt, die das Skript lesen und schreiben kann. In vielen Fällen kann das Auslassen einer Transaktion einen schwerwiegenden Fehler verursachen. 
 {% endhint %}
 
 ### Erstellen von PolyCurves
