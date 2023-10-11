@@ -7,7 +7,9 @@ Aunque Dynamo es extremadamente eficaz como herramienta de [programación visual
 
 Esta sección se centrará en cómo aprovechar Python en el entorno de Civil 3D para sacar partido de las API de .NET de AutoCAD y Civil 3D.
 
-{% hint style="info" %} Consulte la sección [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") para obtener información sobre cómo usar Python en Dynamo. {% endhint %}
+{% hint style="info" %}
+ Consulte la sección [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") para obtener información sobre cómo usar Python en Dynamo. 
+{% endhint %}
 
 ## Documentación de las API
 
@@ -21,7 +23,9 @@ Tanto AutoCAD como Civil 3D disponen de varias API que permiten a desarrolladore
 
 [Manual de referencia de las API de .NET de Civil 3D](https://help.autodesk.com/view/CIV3D/2024/ESP/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %} A medida que avance por esta sección, es posible que haya algunos conceptos con los que no esté familiarizado, como bases de datos, transacciones, métodos, propiedades, etc. Muchos de estos conceptos son fundamentales para trabajar con las API de .NET y no son específicos de Dynamo o Python. Está fuera del alcance de esta sección del manual abordar estos temas en detalle, por lo que se recomienda consultar con frecuencia los vínculos anteriores para obtener más información. {% endhint %}
+{% hint style="info" %}
+ A medida que avance por esta sección, es posible que haya algunos conceptos con los que no esté familiarizado, como bases de datos, transacciones, métodos, propiedades, etc. Muchos de estos conceptos son fundamentales para trabajar con las API de .NET y no son específicos de Dynamo o Python. Está fuera del alcance de esta sección del manual abordar estos temas en detalle, por lo que se recomienda consultar con frecuencia los vínculos anteriores para obtener más información. 
+{% endhint %}
 
 ## Plantilla de código
 
@@ -39,8 +43,10 @@ Al editar por primera vez un nuevo nodo de Python, este se rellenará previament
 > 8. Anule los comentarios de esta línea para confirmar la transacción una vez que haya terminado el trabajo principal.
 > 9. Si desea generar datos del nodo, asígnelo a la variable `OUT` al final de la secuencia de comandos.
 
-{% hint style="info" %} **¿Desea personalizar la plantilla?**\
- Puede modificar la plantilla de Python por defecto. Para ello, edite el archivo `PythonTemplate.py` ubicado en `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. {% endhint %}
+{% hint style="info" %}
+ **¿Desea personalizar la plantilla?**\
+ Puede modificar la plantilla de Python por defecto. Para ello, edite el archivo `PythonTemplate.py` ubicado en `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. 
+{% endhint %}
 
 ## Ejemplo
 
@@ -88,13 +94,17 @@ Antes de continuar, debemos abordar brevemente un concepto importante. En la sec
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Tipo de Dynamo</th><th width="373">Envolturas</th></tr></thead><tbody><tr><td><strong>Objeto</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entidad</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entidad</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} Por regla general, es más seguro obtener el ID de objeto mediante la propiedad `InternalObjectId` y, a continuación, acceder al objeto envuelto en una transacción. Esto se debe a que la propiedad `InternalDBObject` devolverá un DBObject de AutoCAD que no se encuentra en estado de escritura. {% endhint %}
+{% hint style="warning" %}
+ Por regla general, es más seguro obtener el ID de objeto mediante la propiedad `InternalObjectId` y, a continuación, acceder al objeto envuelto en una transacción. Esto se debe a que la propiedad `InternalDBObject` devolverá un DBObject de AutoCAD que no se encuentra en estado de escritura. 
+{% endhint %}
 
 ### Secuencia de comandos de Python
 
 A continuación, se muestra la secuencia de comandos completa de Python que realiza el trabajo de acceder a los objetos de cuenca vertiente internos para obtener sus puntos de contorno. Las líneas resaltadas representan las que se han modificado o añadido a partir del código de plantilla por defecto.
 
-{% hint style="info" %} Haga clic en el texto subrayado en la secuencia de comandos para obtener una explicación de cada línea. {% endhint %}
+{% hint style="info" %}
+ Haga clic en el texto subrayado en la secuencia de comandos para obtener una explicación de cada línea. 
+{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Cargar las bibliotecas de normas y DesignScript de Python
 import sys
@@ -161,7 +171,9 @@ with adoc.LockDocument():
 <strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
 </strong></code></pre>
 
-{% hint style="warning" %} Como regla general, es recomendable incluir la mayor parte de la lógica de la secuencia de comandos en una transacción. De este modo, se garantiza un acceso seguro a los objetos que la secuencia de comandos está leyendo o escribiendo. En muchos casos, omitir una transacción puede provocar un error grave. {% endhint %}
+{% hint style="warning" %}
+ Como regla general, es recomendable incluir la mayor parte de la lógica de la secuencia de comandos en una transacción. De este modo, se garantiza un acceso seguro a los objetos que la secuencia de comandos está leyendo o escribiendo. En muchos casos, omitir una transacción puede provocar un error grave. 
+{% endhint %}
 
 ### Crear PolyCurves
 
@@ -181,7 +193,9 @@ Y esta es la geometría final de Dynamo.
 
 Apenas una nota rápida aquí antes de terminar. En función de la versión de Civil 3D que esté utilizando, es posible que el nodo de Python se haya configurado de forma diferente. En **Civil 3D 2020 y 2021**, Dynamo utilizaba una herramienta denominada **IronPython** para desplazar datos entre objetos .NET y secuencias de comandos de Python. Sin embargo, en **Civil 3D 2022**, Dynamo realizó la transición al intérprete nativo de Python estándar (también conocido como **CPython**) que utiliza Python 3. Las ventajas de esta transición incluyen el acceso a las bibliotecas modernas más conocidas y a las nuevas funciones de la plataforma, el mantenimiento esencial y los parches de seguridad.
 
-{% hint style="info" %} Puede obtener más información sobre esta transición y sobre cómo actualizar las secuencias de comandos existentes en el [blog de Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Si desea seguir utilizando IronPython, solo tendrá que instalar el paquete de **DynamoIronPython2.7** mediante Dynamo Package Manager. {% endhint %}
+{% hint style="info" %}
+ Puede obtener más información sobre esta transición y sobre cómo actualizar las secuencias de comandos existentes en el [blog de Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Si desea seguir utilizando IronPython, solo tendrá que instalar el paquete de **DynamoIronPython2.7** mediante Dynamo Package Manager. 
+{% endhint %}
 
 [^1]: Por defecto, la biblioteca de geometría de Dynamo no se añade al entorno de Python. Nuestro objetivo con esta secuencia de comandos es generar una lista de puntos de Dynamo para los contornos de cuenca vertiente, por lo que es necesario añadir esta línea para crear los puntos más adelante.
 

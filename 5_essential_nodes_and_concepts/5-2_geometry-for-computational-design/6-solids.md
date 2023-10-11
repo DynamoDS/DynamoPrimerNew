@@ -27,7 +27,7 @@ Puede utilizar [operaciones booleanas](6-solids.md#boolean-operations) para modi
 
 ### Bloqueo
 
-Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Utilice la función Bloquear para suspender la ejecución de nodos seleccionados y nodos descendentes afectados.
+Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Puede utilizar la función "Bloquear" para suspender la ejecución de nodos seleccionados y nodos descendentes afectados.
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
@@ -38,6 +38,10 @@ Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Ut
 > 3\. Para desbloquear los nodos, haga clic con el botón derecho y desactive la opción Bloquear.
 >
 > 4\. Todos los nodos afectados y las vistas preliminares de la geometría asociada se actualizarán y se restablecerán al modo de vista preliminar estándar.
+
+{% hint style="info" %}
+ Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ## Información más detallada sobre...
 

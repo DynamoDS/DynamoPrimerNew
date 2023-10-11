@@ -18,7 +18,9 @@ El diseño de ingeniería de una construcción de viviendas típica implica trab
 
 ## Compatibilidad con versiones
 
-{% hint style="success" %} Este gráfico se ejecutará en **Civil 3D 2020** y versiones posteriores. {% endhint %}
+{% hint style="success" %}
+ Este gráfico se ejecutará en **Civil 3D 2020** y versiones posteriores. 
+{% endhint %}
 
 ## Conjunto de datos
 
@@ -44,7 +46,9 @@ A continuación, se ofrece una descripción general de la lógica de este gráfi
 
 Nuestro primer paso es introducir en Dynamo la geometría de la red de distribución. En lugar de seleccionar líneas o polilíneas individuales, utilizaremos todos los objetos de una determinada capa y los uniremos como una PolyCurve de Dynamo.
 
-{% hint style="info" %} Si es la primera vez que utiliza la geometría de curvas de Dynamo, consulte la sección [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si es la primera vez que utiliza la geometría de curvas de Dynamo, consulte la sección [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Obtener los objetos de Civil 3D y unir todo en una única PolyCurve</p></figcaption></figure>
 
@@ -64,7 +68,9 @@ También debemos ocuparnos de los posibles problemas que puedan surgir. La líne
 
 Es hora de decidir dónde se van a colocar los contadores de servicio. Por lo general, la colocación viene determinada por los requisitos de los organismos locales, por lo que nos limitaremos a proporcionar valores de entrada que puedan modificarse para adaptarlos a las distintas situaciones. Vamos a utilizar un **sistema de coordenadas** a lo largo de la línea de parcela como referencia para crear los puntos. Esto facilita la definición de desfases en relación con la línea de parcela, independientemente de su orientación.
 
-{% hint style="info" %} Si es la primera vez que utiliza los sistemas de coordenadas, consulte la sección [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si es la primera vez que utiliza los sistemas de coordenadas, consulte la sección [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Creación de los puntos de inserción para los contadores de servicio</p></figcaption></figure>
 
@@ -99,13 +105,17 @@ Este es el comportamiento por defecto de Dynamo y es muy útil en muchos casos. 
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Parámetros de enlace de objetos de Dynamo</p></figcaption></figure>
 
-{% hint style="info" %} Para obtener más información, consulte la sección [object-binding.md](../../advanced-topics/object-binding.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Para obtener más información, consulte la sección [object-binding.md](../../advanced-topics/object-binding.md "mention"). 
+{% endhint %}
 
 Al cambiar esta configuración, se obligará a Dynamo a "olvidar" los objetos que crea con cada ejecución. A continuación, se muestra un ejemplo de ejecución del gráfico con el enlace de objetos desactivado mediante el **Reproductor de Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Ejecución del gráfico mediante el Reproductor de Dynamo y visualización de los resultados en Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Si es la primera vez que utiliza el Reproductor de Dynamo, consulte la sección [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si es la primera vez que utiliza el Reproductor de Dynamo, consulte la sección [dynamo-player.md](../../dynamo-player.md "mention"). 
+{% endhint %}
 
 > :tada: ¡Misión cumplida!
 
@@ -113,8 +123,14 @@ Al cambiar esta configuración, se obligará a Dynamo a "olvidar" los objetos qu
 
 A continuación, se ofrecen algunas ideas sobre cómo podría ampliar las posibilidades de este gráfico.
 
-{% hint style="info" %} Coloque **varias conexiones de servicios** simultáneamente en lugar de seleccionar cada línea de parcela. {% endhint %}
+{% hint style="info" %}
+ Coloque **varias conexiones de servicios** simultáneamente en lugar de seleccionar cada línea de parcela. 
+{% endhint %}
 
-{% hint style="info" %} Ajuste las entradas para colocar **bocas de alcantarilla** en lugar de contadores de servicio de agua. {% endhint %}
+{% hint style="info" %}
+ Ajuste las entradas para colocar **bocas de alcantarilla** en lugar de contadores de servicio de agua. 
+{% endhint %}
 
-{% hint style="info" %} **Añada un conmutador** para permitir la colocación de una única conexión de servicio en un lado concreto de la línea de parcela en lugar de en ambos lados. {% endhint %}
+{% hint style="info" %}
+ **Añada un conmutador** para permitir la colocación de una única conexión de servicio en un lado concreto de la línea de parcela en lugar de en ambos lados. 
+{% endhint %}

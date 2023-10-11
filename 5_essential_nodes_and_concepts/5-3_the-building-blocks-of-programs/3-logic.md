@@ -14,7 +14,7 @@ La instrucción "If" ("si") es un concepto clave en la programación: "Si _esto_
 | ------------------------------------------------ | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                        | If (**If**)               | test, true, false | resultado  |
 | ![](../images/5-1/Formula.jpg)                   | Formula (**IF(x,y,z)**)   | x, y, z           | resultado  |
-| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | resultado  |
+| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | resultado  |
 
 Veamos un breve ejemplo de cada uno de estos tres nodos en acción mediante la instrucción condicional "If".
 

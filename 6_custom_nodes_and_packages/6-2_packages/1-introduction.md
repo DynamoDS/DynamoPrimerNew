@@ -14,7 +14,7 @@ En Dynamo, vaya a _Paquetes > Buscar un paquete_.
 
 ![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
 
-En la barra de búsqueda, buscamos "cuadrados de rejilla rectangular". Tras unos segundos, deberían aparecer todos los paquetes que coincidan con esta consulta de búsqueda. Vamos a seleccionar el primer paquete cuyo nombre coincida.
+En la barra de búsqueda, buscamos "Quads from Rectangular Grid". Tras unos segundos, deberían aparecer todos los paquetes que coincidan con esta consulta de búsqueda. Vamos a seleccionar el primer paquete cuyo nombre coincida.
 
 Haga clic en Instalar para añadir este paquete a la biblioteca. Listo.
 
@@ -67,7 +67,7 @@ Abriremos "SphereUnfold".
 
 Después de abrir el archivo y pulsar "Ejecutar" en el solucionador, tenemos una esfera desplegada. Estos archivos de ejemplo son útiles para aprender a trabajar con un nuevo paquete de Dynamo.
 
-\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Dynamo Package Manager
 

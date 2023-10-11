@@ -56,7 +56,9 @@ Hemos utilizado los nodos _"Select Model Element"_ y _"Select Face"_, bajamos un
 > 3. Realice lo mismo para los bordes inferiores de la fachada en Revit.
 > 4. En los nodos _Watch_, se muestra que ahora tenemos líneas en Dynamo. Esto se convierte automáticamente en geometría de Dynamo, ya que los bordes en sí no son elementos de Revit. Estas curvas son las referencias que utilizaremos para crear instancias de vigas de celosía adaptativas a lo largo de la fachada.
 
-{% hint style="info" %} * Para mantener la coherencia de la topología, consultaremos un modelo sin caras o bordes adicionales añadidos. Aunque los parámetros pueden cambiar su forma, el modo en que se crea sigue siendo coherente. {% endhint %}
+{% hint style="info" %}
+ * Para mantener la coherencia de la topología, consultaremos un modelo sin caras o bordes adicionales añadidos. Aunque los parámetros pueden cambiar su forma, el modo en que se crea sigue siendo coherente. 
+{% endhint %}
 
 Debemos unir primero las curvas y fusionarlas en una lista. De esta forma, podemos _"agrupar"_ las curvas para realizar operaciones geométricas.
 

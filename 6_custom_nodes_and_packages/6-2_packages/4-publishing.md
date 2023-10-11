@@ -2,7 +2,7 @@
 
 En las secciones anteriores, examinamos cómo se configura el paquete de _MapToSurface_ con nodos personalizados y archivos de ejemplo. Pero, ¿cómo publicamos un paquete que se ha desarrollado localmente? En este caso real, se muestra cómo publicar un paquete a partir de un conjunto de archivos en una carpeta local.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Hay muchas formas de publicar un paquete. A continuación, se indica el proceso recomendado: **publique localmente, desarrolle localmente y, a continuación, publique en línea**. Comenzaremos con una carpeta que contiene todos los archivos del paquete.
 
@@ -18,7 +18,9 @@ A continuación, reinicie Dynamo. Al volver a abrirlo, cuando active la ventana 
 
 ### Publicación local de un paquete
 
-{% hint style="warning" %} La publicación de paquetes de Dynamo solo está activada para Dynamo para Revit y Dynamo para Civil 3D. Dynamo Sandbox no incluye funciones de publicación. {% endhint %}
+{% hint style="warning" %}
+ La publicación de paquetes de Dynamo solo está activada para Dynamo para Revit y Dynamo para Civil 3D. Dynamo Sandbox no incluye funciones de publicación. 
+{% endhint %}
 
 > Descargue el archivo de ejemplo. Para ello, haga clic en el vínculo siguiente.
 >
@@ -47,7 +49,7 @@ En la ventana _"Publicar un paquete de Dynamo"_, hemos rellenado los formularios
 
 Tras la publicación, los nodos personalizados deberían estar disponibles en el grupo "DynamoPrimer" o en la biblioteca de Dynamo.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Ahora veamos el directorio raíz para comprobar cómo Dynamo ha aplicado formato al paquete que acabamos de crear. Para ello, haga clic en Dynamo > Preferencias > Package Manager > junto a MapToSurface, haga clic en el menú de puntos verticales > seleccione Mostrar directorio raíz.
 
@@ -64,7 +66,9 @@ Observe que el directorio raíz se encuentra en la ubicación local del paquete 
 
 ### Publicación de un paquete en línea
 
-{% hint style="warning" %} Nota: No siga este paso a menos que publique realmente un paquete suyo. {% endhint %}
+{% hint style="warning" %}
+ Nota: No siga este paso a menos que publique realmente un paquete suyo. 
+{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 

@@ -22,7 +22,9 @@ Las entradas y las salidas de los nodos se denominan puertos y actúan como rece
 
 Los puertos esperan recibir datos de un tipo determinado. Por ejemplo, al conectar un número como _2.75_ a los puertos de un nodo Point.ByCoordinates, se creará correctamente un punto. Sin embargo, si se proporciona _Red_ al mismo puerto, se producirá un error.
 
-{% hint style="info" %}Consejo: Coloque el cursor sobre un puerto para ver la información de herramientas que contiene el tipo de datos esperado. {% endhint %}
+{% hint style="info" %}
+Consejo: Coloque el cursor sobre un puerto para ver la información de herramientas que contiene el tipo de datos esperado. 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,13 +55,25 @@ Al colocar el cursor sobre el nombre o los puertos, o al hacer clic con el botó
 
 Si el programa visual contiene advertencias o errores, Dynamo proporcionará información adicional sobre el problema. Todos los nodos en amarillo también presentarán una información de herramientas sobre el nombre. Coloque el cursor sobre el icono de información de herramientas de advertencia ![](images/nodesandwires-nodewarningicon.png) o error ![](images/nodesandwires-nodeerroricon.png) para expandirlo.
 
-{% hint style="info" %} Consejo: Con esta información de herramientas a mano, examine los nodos ascendentes para ver si el tipo de datos o la estructura de datos necesarios presentan errores. {% endhint %}
+{% hint style="info" %}
+ Consejo: Con esta información de herramientas a mano, examine los nodos ascendentes para ver si el tipo de datos o la estructura de datos necesarios presentan errores. 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. Información de herramientas de advertencia: el valor "null" (nulo) o la falta de datos no se pueden considerar como doble, por ejemplo, un número.
 > 2. Utilice el nodo Watch para examinar los datos de entrada.
 > 3. El nodo Number ascendente almacena "Red", no un número.
+
+### Bloqueo de nodos
+
+En algunas situaciones, es posible que desee impedir la ejecución de determinados nodos del programa visual. Para ello, puede "bloquear" el nodo, que es una opción de su menú contextual.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+Al bloquear un nodo, también se bloquean los nodos que están en el nivel inferior. En otras palabras, también se bloquearán todos los nodos que dependan de la salida de un nodo bloqueado.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## Cables
 
@@ -87,7 +101,7 @@ Con frecuencia, desearemos ajustar el flujo de programa de nuestro programa visu
 
 * Cambie la conexión a un puerto de entrada; haga clic con el botón izquierdo en otro puerto de entrada.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Para eliminar el cable, retire el cable y haga clic con el botón izquierdo en el espacio de trabajo.
 

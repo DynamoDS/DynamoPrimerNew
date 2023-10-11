@@ -2,7 +2,9 @@
 
 Los paquetes de Dynamo son conjuntos de herramientas desarrollados por terceros para ampliar las principales funciones de Dynamo. Todos los usuarios pueden acceder a ellos y descargarlos con un solo clic.
 
-{% hint style="info" %} Consulte la sección [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") para obtener más información sobre cómo empezar a trabajar con paquetes. {% endhint %}
+{% hint style="info" %}
+ Consulte la sección [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") para obtener más información sobre cómo empezar a trabajar con paquetes. 
+{% endhint %}
 
 A continuación, se muestra una lista de algunos de los paquetes más populares que pueden llevar los gráficos de Dynamo para Civil 3D al siguiente nivel.
 

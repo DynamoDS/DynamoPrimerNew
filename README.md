@@ -1,6 +1,8 @@
 # Acerca de
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
+ Dynamo Hype Video 
+{% endembed %}
 
 ## Para Dynamo v2.13
 
@@ -81,7 +83,7 @@ http://dynamobim.com/download/ o http://dynamobuilds.com
 
 http://dynamobim.org
 
-Dynamo en **GitHub Dynamo** es un proyecto de desarrollo de código abierto en GitHub. Para colaborar, consulte DynamoDS.
+**Dynamo en GitHub** Dynamo es un proyecto de código abierto en GitHub. Para colaborar, consulte DynamoDS.
 
 https://github.com/DynamoDS/Dynamo
 

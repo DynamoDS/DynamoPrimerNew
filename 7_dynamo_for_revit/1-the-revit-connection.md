@@ -35,25 +35,33 @@ Mediante el uso de los nodos principales de Dynamo, junto con los nodos personal
 
 En un editor de proyectos o familias de Revit, vaya a Complementos y haga clic en Dynamo.*
 
-{% hint style="warning" %}* Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió. {% endhint %}
+{% hint style="warning" %}
+* Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió. 
+{% endhint %}
 
-\![](<images/1/launchdynamofromrevit (1).jpg>)
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata de una adición completa a la interfaz de usuario que ofrece nodos que se adaptan específicamente a los flujos de trabajo de Revit.*
 
-{% hint style="warning" %}* El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit. {% endhint %}
+{% hint style="warning" %}
+* El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit. 
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Bloqueo de nodos
 
-Como Revit es una plataforma que proporciona una sólida gestión de proyectos, las operaciones paramétricas de Dynamo pueden ser complejas y lentas de calcular. Si Dynamo tarda mucho tiempo en calcular los nodos, puede usar la función "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico. Para obtener más información sobre el bloqueo de nodos, consulte la sección "[Bloqueo](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)" del capítulo sobre sólidos.
+Como Revit es una plataforma que proporciona una sólida gestión de proyectos, las operaciones paramétricas de Dynamo pueden ser complejas y lentas de calcular. Si Dynamo tarda mucho tiempo en calcular los nodos, puede usar la función "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico.
+
+{% hint style="info" %}
+ Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ### Comunidad y blog de Dynamo
 
 Como Dynamo se creó originalmente para AEC, su comunidad grande y creciente es un recurso excelente para aprender del sector y ponerse en contacto con expertos de la industria. La comunidad de Dynamo la integran arquitectos, ingenieros, programadores y diseñadores a los que les apasiona compartir y crear.
 
-Dynamo es un proyecto de código abierto que evoluciona constantemente y gran parte del desarrollo está relacionado con Revit. Si es un nuevo usuario, diríjase al foro de debate y comience a [publicar preguntas](http://dynamobim.org/forums/forum/dyn/). Si es un programador y desea participar en el desarrollo de Dynamo, consulte la [página de GitHub](https://github.com/DynamoDS/Dynamo). Además, un recurso excelente para las bibliotecas de terceros es [Dynamo Package Manager](http://dynamopackages.com). Muchos de estos paquetes se crean teniendo en mente AEC y echaremos un vistazo a los paquetes de terceros para la panelización en este capítulo.
+Dynamo es un proyecto de código abierto que evoluciona constantemente y gran parte del desarrollo está relacionado con Revit. Si es un nuevo usuario, diríjase al foro de debate y comience a [publicar preguntas](http://dynamobim.org/forums/forum/dyn/). Si es un programador y desea participar en el desarrollo de Dynamo, consulte el [repositorio de GitHub](https://github.com/DynamoDS/Dynamo). Además, un recurso excelente para las bibliotecas de terceros es [Dynamo Package Manager](http://dynamopackages.com). Muchos de estos paquetes se crean teniendo en mente AEC y echaremos un vistazo a los paquetes de terceros para la panelización en este capítulo.
 
 Dynamo también mantiene un blog activo. Lea las últimas publicaciones para obtener información sobre los avances más recientes.
 

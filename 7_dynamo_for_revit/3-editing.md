@@ -4,7 +4,7 @@ Una característica útil de Dynamo es la posibilidad de editar parámetros en u
 
 ### Parámetros de tipo y ejemplar
 
-\![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Ejercicio](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Los parámetros de ejemplar definen la apertura de los paneles en la superficie de la cubierta, desde una proporción de apertura de 0,1 a 0,4.
 > 2. Los parámetros basados en tipo se aplican a todos los elementos de la superficie porque son del mismo tipo de familia. El material de cada panel, por ejemplo, puede controlarse mediante un parámetro basado en tipo.
@@ -16,7 +16,9 @@ Una característica útil de Dynamo es la posibilidad de editar parámetros en u
 
 Como revisión rápida de los parámetros en Revit, recordemos que existen parámetros de tipo y parámetros de ejemplar. Ambos se pueden editar en Dynamo, pero trabajaremos con parámetros de ejemplar en el ejercicio siguiente.
 
-{% hint style="info" %} A medida que descubra la amplia aplicación de la edición de parámetros, puede que desee editar una gran cantidad de elementos en Revit con Dynamo. Esta puede ser una operación _computacionalmente exigente_, lo que significa que puede ser lenta. Si va a editar un gran número de elementos, puede usar la función de nodo "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico. Para obtener más información sobre el bloqueo de nodos, consulte la sección "[Bloqueo](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)" del capítulo sobre sólidos. {% endhint %}
+{% hint style="info" %}
+ A medida que descubra la amplia aplicación de la edición de parámetros, puede que desee editar una gran cantidad de elementos en Revit con Dynamo. Esta puede ser una operación _computacionalmente exigente_, lo que significa que puede ser lenta. Si va a editar un gran número de elementos, puede usar la función de nodo "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico. Para obtener más información sobre el bloqueo de nodos, consulte la sección "[Bloqueo](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)" del capítulo sobre sólidos. 
+{% endhint %}
 
 ### Unidades
 
@@ -34,7 +36,9 @@ Para obtener una conversión rápida de unidades, utilice el nodo _"Convert Betw
 
 {% file src="datasets/3/Revit-Editing.zip" %}
 
-{% hint style="warning" %}En el siguiente ejercicio, se utilizan metros. {% endhint %}
+{% hint style="warning" %}
+En el siguiente ejercicio, se utilizan metros. 
+{% endhint %}
 
 Este ejercicio se centra en la edición de elementos de Revit sin realizar operaciones geométricas en Dynamo. No vamos a importar la geometría de Dynamo aquí, solo vamos a editar los parámetros de un proyecto de Revit. Este ejercicio es básico; para los usuarios más avanzados de Revit, observe que se trata de parámetros de ejemplar de una masa, pero la misma lógica se puede aplicar a una matriz de elementos para personalizarlos a gran escala. Esto se realiza con el nodo "Element.SetParameterByName".
 
@@ -65,7 +69,9 @@ En Dynamo, podemos recuperar los parámetros mediante la selección del elemento
 > 2. Defina otro _bloque de código_ con una lista de la misma longitud que los nombres de parámetro. En este caso, se asignan nombres a las variables (sin comillas) que crean entradas para el _bloque de código_. Conecte los _controles deslizantes_ a cada entrada respectiva: `{bw,bl,bh,ao,io,lu};`
 > 3. Conecte el bloque de código _a la entrada de valor "Element.SetParameterByName"*_. Con la opción Ejecutar automáticamente seleccionada, veremos los resultados automáticamente.
 
-{% hint style="warning" %} * Esta demostración funciona con parámetros de ejemplar, pero no con parámetros de tipo. {% endhint %}
+{% hint style="warning" %}
+ * Esta demostración funciona con parámetros de ejemplar, pero no con parámetros de tipo. 
+{% endhint %}
 
 Al igual que en Revit, muchos de estos parámetros dependen unos de otros. Por supuesto, existen combinaciones en las que la geometría se puede partir. Podemos solucionar este problema con las fórmulas definidas en las propiedades de los parámetros, o bien podemos configurar una lógica similar con operaciones matemáticas en Dynamo (este es un reto adicional si desea ampliar el ejercicio).
 

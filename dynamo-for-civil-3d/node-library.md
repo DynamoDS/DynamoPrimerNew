@@ -2,7 +2,9 @@
 
 Anteriormente, hemos mencionado que los **nodos** son los componentes básicos de un gráfico de Dynamo y que se organizan en grupos lógicos en la **biblioteca**. En Dynamo para Civil 3D, hay dos categorías (o **estantes**) de la biblioteca que contienen nodos específicos para trabajar con objetos de AutoCAD y Civil 3D, como alineaciones, perfiles, obras lineales, referencias a bloque, etc. El resto de la biblioteca contiene nodos de naturaleza más genérica y coherentes entre todas las "versiones" de Dynamo (por ejemplo, Dynamo for Revit, Dynamo Sandbox, etc.).
 
-{% hint style="info" %} Consulte la sección [2-library.md](../3\_user\_interface/2-library.md "mention") para obtener más información sobre la organización de los nodos de la biblioteca principal de Dynamo. {% endhint %}
+{% hint style="info" %}
+ Consulte la sección [2-library.md](../3\_user\_interface/2-library.md "mention") para obtener más información sobre la organización de los nodos de la biblioteca principal de Dynamo. 
+{% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>La biblioteca de nodos de Dynamo para Civil 3D</p></figcaption></figure>
 
@@ -10,11 +12,15 @@ Anteriormente, hemos mencionado que los **nodos** son los componentes básicos d
 > 2. Nodos de uso general
 > 3. Nodos de **paquetes** de terceros que se pueden instalar por separado
 
-{% hint style="warning" %} Al utilizar los nodos que se encuentran en los estantes de AutoCAD y Civil 3D, el gráfico de Dynamo solo funcionará en Dynamo para Civil 3D. Si se abre un gráfico de Dynamo para Civil 3D en otra ubicación (por ejemplo, en Dynamo for Revit), estos nodos se marcarán con una advertencia y no se ejecutarán. {% endhint %}
+{% hint style="warning" %}
+ Al utilizar los nodos que se encuentran en los estantes de AutoCAD y Civil 3D, el gráfico de Dynamo solo funcionará en Dynamo para Civil 3D. Si se abre un gráfico de Dynamo para Civil 3D en otra ubicación (por ejemplo, en Dynamo for Revit), estos nodos se marcarán con una advertencia y no se ejecutarán. 
+{% endhint %}
 
-{% hint style="info" %} **¿Por qué hay dos estantes independientes para AutoCAD y Civil 3D?**
+{% hint style="info" %}
+ **¿Por qué hay dos estantes independientes para AutoCAD y Civil 3D?**
 
-Esta organización distingue los nodos de los objetos nativos de AutoCAD (líneas, polilíneas, referencias a bloque, etc.) de los nodos de los objetos de Civil 3D (alineaciones, obras lineales, superficies, etc.). Desde el punto de vista técnico, AutoCAD y Civil 3D son dos componentes independientes; AutoCAD es la aplicación principal y Civil 3D se basa en ella. {% endhint %}
+Esta organización distingue los nodos de los objetos nativos de AutoCAD (líneas, polilíneas, referencias a bloque, etc.) de los nodos de los objetos de Civil 3D (alineaciones, obras lineales, superficies, etc.). Desde el punto de vista técnico, AutoCAD y Civil 3D son dos componentes independientes; AutoCAD es la aplicación principal y Civil 3D se basa en ella. 
+{% endhint %}
 
 ## Jerarquía de nodos
 
