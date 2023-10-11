@@ -1,4 +1,4 @@
-# Exemples de flux de travail
+# Exemples de workflows
 
 Cette section comporte une série de workflows qui vous aideront à utiliser Dynamo.
 

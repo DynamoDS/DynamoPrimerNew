@@ -20,7 +20,7 @@ Les [courbes ](4-curves.md#deep-dive-into...)sont le premier type de données g�
 
 La [ligne](4-curves.md#lines) est un ensemble de points. Chaque ligne contient au moins 2 points. L’une des méthodes les plus courantes pour créer une ligne dans Dynamo consiste à utiliser `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg).
 
-\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Courbe NURBS
 
@@ -85,4 +85,6 @@ Les **NURBS** (splines de base rationnelles non uniformes) sont des représentat
 > 2. Degré = 2
 > 3. Degré = 3
 
-{% hint style="info" %} Plus la valeur de degré est élevée, plus les points de contrôle sont utilisés pour interpoler la courbe obtenue. {% endhint %}
+{% hint style="info" %}
+ Plus la valeur de degré est élevée, plus les points de contrôle sont utilisés pour interpoler la courbe obtenue. 
+{% endhint %}

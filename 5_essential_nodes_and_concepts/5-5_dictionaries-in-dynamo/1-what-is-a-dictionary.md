@@ -24,7 +24,7 @@ La séparation des dictionnaires et des listes place les dictionnaires comme cit
 
 
 
-\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
 
 

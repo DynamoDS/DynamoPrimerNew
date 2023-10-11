@@ -22,7 +22,9 @@ Les entrées et les sorties des nœuds sont appelées "ports" et servent de réc
 
 Les ports doivent recevoir des données d'un certain type. Par exemple, la connexion d'un nombre tel que _2.75_ aux ports d'un nœud Point By Coordinates permet de créer un point. Toutefois, si vous indiquez _"Red"_ sur le même port, une erreur se produira.
 
-{% hint style="info" %} Conseil : placez le curseur sur un port pour afficher une info-bulle contenant le type de données attendu. {% endhint %}
+{% hint style="info" %}
+ Conseil : placez le curseur sur un port pour afficher une info-bulle contenant le type de données attendu. 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -47,19 +49,31 @@ Lorsque vous placez le curseur ou cliquez avec le bouton droit de la souris sur 
 > 6. Aperçu désactivé : une barre d’état grise sous le nœud et une icône en forme d’œil <img src="images/nodesandwires-previewoff.jpg" alt="" data-size="line"> indiquent que la prévisualisation de la géométrie du nœud est désactivée.
 > 7. Avertissement : une barre d'état jaune située sous le nœud indique l'état d'avertissement, ce qui signifie qu'il manque au nœud des données d'entrée ou que les types de données peuvent être incorrects.
 > 8. Erreur : une barre d'état rouge située sous le nœud indique que le nœud est en état d'erreur.
-> 9. Informations : la barre d'état bleue située sous le nœud indique l'état Informations, qui indique des informations utiles sur les nœuds. Cet état peut être déclenché lorsque vous approchez une valeur maximale prise en charge par le nœud, lorsque vous utilisez un nœud d'une manière susceptible d'avoir un impact sur les performances, etc.
+> 9. Infos : la barre d'état bleue située sous le nœud indique l'état Informations, qui indique des informations utiles sur les nœuds. Cet état peut être déclenché lorsque vous approchez une valeur maximale prise en charge par le nœud, lorsque vous utilisez un nœud d'une manière susceptible d'avoir un impact sur les performances, etc.
 
 #### Gestion des nœuds d'erreur ou d'avertissement
 
 Si votre programme visuel contient des avertissements ou des erreurs, Dynamo fournit des informations supplémentaires sur le problème. Tout nœud jaune comporte également une info-bulle au-dessus de son nom. Placez le curseur de la souris sur l’icône d’avertissement ![](images/nodesandwires-nodewarningicon.png) ou d’erreur ![](images/nodesandwires-nodeerroricon.png) dans l’info-bulle pour la développer.
 
-{% hint style="info" %} Conseil : examinez les nœuds en amont à la lumière de ces informations d’info-bulle pour voir si le type ou la structure de données requis est erroné. {% endhint %}
+{% hint style="info" %}
+ Conseil : examinez les nœuds en amont à la lumière de ces informations d’info-bulle pour voir si le type ou la structure de données requis est erroné. 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. Info-bulle d’avertissement : une valeur « Null » ou l’absence de donnée ne peut être comprise comme un double, c’est-à-dire un nombre
 > 2. Utilisez le nœud Watch pour examiner les données d'entrée
 > 3. En amont, le nœud Number contient "Red" et non un nombre
+
+### Gel des nœuds
+
+Dans certaines situations, vous pouvez souhaiter empêcher l’exécution de nœuds spécifiques dans votre programme visuel. Vous pouvez le faire en « gelant » le nœud. Cette option se trouve dans le menu contextuel du nœud.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+Le gel d’un nœud entraîne également le gel des nœuds situés en aval. En d’autres termes, tous les nœuds qui dépendent de la sortie d’un nœud gelé seront également gelés.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## Fils
 
@@ -87,7 +101,7 @@ Souvent, vous souhaitez ajuster le flux du programme dans votre programme visuel
 
 * Pour définir la connexion sur un port d’entrée, cliquez avec le bouton gauche de la souris sur un autre port d’entrée.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Pour supprimer le fil, retirez-le et cliquez avec le bouton gauche de la souris sur l’espace de travail.
 

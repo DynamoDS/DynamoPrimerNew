@@ -35,25 +35,33 @@ En utilisant les principaux nœuds Dynamo conjointement avec des nœuds Revit pe
 
 Dans un projet Revit ou un éditeur de familles, accédez à Compléments et cliquez sur Dynamo.*
 
-{% hint style="warning" %} *Dynamo s’exécute uniquement dans le fichier dans lequel il a été ouvert. {% endhint %}
+{% hint style="warning" %}
+ *Dynamo s’exécute uniquement dans le fichier dans lequel il a été ouvert. 
+{% endhint %}
 
-\![](<images/1/launchdynamofromrevit (1).jpg>)
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Lors de l’ouverture de Dynamo dans Revit, une nouvelle catégorie appelée Revit apparaît. Il s’agit d’un ajout complet à l’interface utilisateur qui offre des nœuds spécifiquement conçus pour les workflows Revit.*
 
-{% hint style="warning" %} *En utilisant la famille de nœuds propre à Revit, le graphique Dynamo fonctionne uniquement lorsqu’il est ouvert dans Dynamo for Revit. Si un graphique Dynamo for Revit est ouvert dans Dynamo Sandbox par exemple, les nœuds Revit sont manquants. {% endhint %}
+{% hint style="warning" %}
+ *En utilisant la famille de nœuds propre à Revit, le graphique Dynamo fonctionne uniquement lorsqu’il est ouvert dans Dynamo for Revit. Si un graphique Dynamo for Revit est ouvert dans Dynamo Sandbox par exemple, les nœuds Revit sont manquants. 
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Gel des nœuds
 
-Revit étant une plate-forme qui fournit une gestion de projet robuste, les opérations paramétriques dans Dynamo peuvent être complexes et lentes à calculer. Si Dynamo prend du temps pour calculer des nœuds, vous pouvez utiliser la fonctionnalité de nœud « geler » pour interrompre l’exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d’informations sur le gel des nœuds, consultez la section « [Gel](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) » du chapitre Solides.
+Revit étant une plate-forme qui fournit une gestion de projet robuste, les opérations paramétriques dans Dynamo peuvent être complexes et lentes à calculer. Si Dynamo prend du temps pour calculer des nœuds, vous pouvez utiliser la fonctionnalité de nœud « geler » pour interrompre l’exécution des opérations Revit lorsque vous développez votre graphique.
+
+{% hint style="info" %}
+ Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ### Blog Communauté et Dynamo
 
 Depuis que Dynamo a été créé pour le secteur AEC, sa vaste communauté dynamique est une excellente ressource pour apprendre et créer des liens avec des experts du secteur. La communauté de Dynamo est constituée d'architectes, d'ingénieurs, de programmeurs et de concepteurs dont la passion commune est de partager ce qu'ils font.
 
-Dynamo est un projet open source en constante évolution et un grand nombre de développements sont liés à Revit. Si vous êtes nouveau, rendez-vous sur le forum de discussion et [posez des questions](http://dynamobim.org/forums/forum/dyn/). Si vous êtes programmeur et que vous souhaitez vous impliquer dans le développement de Dynamo, consultez la [page github](https://github.com/DynamoDS/Dynamo). En outre, le [gestionnaire de packages Dynamo](http://dynamopackages.com) constitue une ressource très utile pour les bibliothèques tierces. Beaucoup de ces packages sont conçus pour le secteur AEC. Dans ce chapitre, vous étudierez les packages tiers pour la panélisation.
+Dynamo est un projet open source en constante évolution et un grand nombre de développements sont liés à Revit. Si vous êtes nouveau, rendez-vous sur le forum de discussion et [posez des questions](http://dynamobim.org/forums/forum/dyn/). Si vous êtes programmeur et que vous souhaitez vous impliquer dans le développement de Dynamo, consultez le [dépôt de github](https://github.com/DynamoDS/Dynamo). En outre, le [gestionnaire de packages Dynamo](http://dynamopackages.com) constitue une ressource très utile pour les bibliothèques tierces. Beaucoup de ces packages sont conçus pour le secteur AEC. Dans ce chapitre, vous étudierez les packages tiers pour la panélisation.
 
 Dynamo maintient également un blog actif. Lisez les articles récents pour en savoir plus sur les derniers développements.
 

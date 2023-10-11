@@ -1,4 +1,4 @@
-# Mailles
+# Maillages
 
 ## Maillage dans Dynamo
 

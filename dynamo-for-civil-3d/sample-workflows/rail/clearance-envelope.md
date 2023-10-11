@@ -17,7 +17,9 @@ L’élaboration d’enveloppes cinématiques pour la validation du dégagement 
 
 ## Compatibilité des versions
 
-{% hint style="success" %} Ce graphique peut s’exécuter dans **Civil 3D 2020** et les versions ultérieures. {% endhint %}
+{% hint style="success" %}
+ Ce graphique peut s’exécuter dans **Civil 3D 2020** et les versions ultérieures. 
+{% endhint %}
 
 ## Ensemble de données
 
@@ -49,13 +51,17 @@ La première étape consiste à obtenir les données du projet 3D. Sélectionne
 
 Vous allez maintenant générer des **systèmes de coordonnées** le long des lignes caractéristiques du terrain du projet 3D entre une abscisse curviligne de départ et de fin donnée. Ces systèmes de coordonnées seront utilisés pour aligner la géométrie du bloc de contour du véhicule sur le projet 3D.
 
-{% hint style="info" %} Si vous ne connaissez pas les systèmes de coordonnées, consultez la section [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas les systèmes de coordonnées, consultez la section [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>Obtention de systèmes de coordonnées le long des lignes caractéristiques du terrain du projet 3D</p></figcaption></figure>
 
 > 1. Remarquez le symbole **XXX** dans le coin inférieur droit du nœud. Cela signifie que les paramètres de combinaison du nœud sont définis sur _Produit cartésien_, ce qui est nécessaire pour générer les systèmes de coordonnées avec les mêmes valeurs d’abscisse curviligne pour les deux lignes caractéristiques du terrain.
 
-{% hint style="info" %} Si vous ne connaissez pas la combinaison de nœuds, consultez la section [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas la combinaison de nœuds, consultez la section [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention"). 
+{% endhint %}
 
 ### Transformer la géométrie du bloc
 
@@ -99,7 +105,9 @@ Voici un exemple d’exécution du graphique à l’aide du **Lecteur Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Exécution du graphique à l’aide du Lecteur Dynamo et visualisation des résultats dans Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). 
+{% endhint %}
 
 > :tada: Mission accomplie !
 
@@ -107,8 +115,14 @@ Voici un exemple d’exécution du graphique à l’aide du **Lecteur Dynamo**.
 
 Voici quelques suggestions pour élargir les possibilités offertes par ce graphique.
 
-{% hint style="info" %} Ajoutez la possibilité d’utiliser **différents intervalles d’abscisses curvilignes** séparément pour chaque voie. {% endhint %}
+{% hint style="info" %}
+ Ajoutez la possibilité d’utiliser **différents intervalles d’abscisses curvilignes** séparément pour chaque voie. 
+{% endhint %}
 
-{% hint style="info" %} **Divisez les solides ** en segments plus petits qui peuvent être analysés individuellement pour détecter d’éventuels conflits. {% endhint %}
+{% hint style="info" %}
+ **Divisez les solides** en segments plus petits qui peuvent être analysés individuellement pour détecter d’éventuels conflits. 
+{% endhint %}
 
-{% hint style="info" %} Vérifiez si les solides de l’enveloppe **croisent des objets** et coloriez ceux qui entrent en conflit. {% endhint %}
+{% hint style="info" %}
+ Vérifiez si les solides de l’enveloppe **croisent des objets** et coloriez ceux qui entrent en conflit. 
+{% endhint %}

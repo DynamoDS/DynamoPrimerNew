@@ -17,7 +17,9 @@ Lors de l’ajout de canalisations et de structures à un réseau de canalisatio
 
 ## Compatibilité des versions
 
-{% hint style="success" %} Ce graphique peut s’exécuter dans **Civil 3D 2020** et les versions ultérieures. {% endhint %}
+{% hint style="success" %}
+ Ce graphique peut s’exécuter dans **Civil 3D 2020** et les versions ultérieures. 
+{% endhint %}
 
 ## Ensemble de données
 
@@ -77,7 +79,9 @@ C’est là que les choses commencent à se compliquer. À ce stade, vous avez u
 
 Vous devez donc filtrer la liste des structures de sorte à ne pas prendre en compte celles qui sont supérieures à un certain décalage par rapport à l’axe. Pour ce faire, il est préférable d’utiliser le nœud **List.FilterByBoolMask**. Après avoir filtré la liste des structures, utilisez le nœud **List.SortByKey** pour les trier en fonction de leurs valeurs d’abscisse curviligne.
 
-{% hint style="info" %} Si vous ne connaissez pas les listes, consultez la section [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas les listes, consultez la section [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>Filtrage et tri des structures</p></figcaption></figure>
 
@@ -104,7 +108,9 @@ Voici un exemple d’exécution du graphique à l’aide du **Lecteur Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Exécution du graphique à l’aide du Lecteur Dynamo et visualisation des résultats dans Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). 
+{% endhint %}
 
 > :tada: Mission accomplie !
 
@@ -122,8 +128,14 @@ Vous comprenez maintenant mieux comment fonctionne le processus de filtrage des 
 
 Voici quelques suggestions pour élargir les possibilités offertes par ce graphique.
 
-{% hint style="info" %} Renommez les structures en fonction de leur **axe le plus proche** plutôt que de sélectionner un axe spécifique. {% endhint %}
+{% hint style="info" %}
+ Renommez les structures en fonction de leur **axe le plus proche** plutôt que de sélectionner un axe spécifique. 
+{% endhint %}
 
-{% hint style="info" %} **Renommez les canalisations ** en plus des structures. {% endhint %}
+{% hint style="info" %}
+ **Renommez les canalisations** en plus des structures. 
+{% endhint %}
 
-{% hint style="info" %} **Définissez les calques ** des structures en fonction de leur exécution. {% endhint %}
+{% hint style="info" %}
+ **Définissez les calques** des structures en fonction de leur exécution. 
+{% endhint %}

@@ -36,7 +36,9 @@ Après avoir effectué ce changement, vous obtenez le comportement que vous rech
 
 Dynamo pour Civil 3D permet de modifier le comportement par défaut des liaison d’objet via les paramètres **Stockage des données de liaison** du menu de **Dynamo**.
 
-{% hint style="info" %} Notez que les options de stockage des données de liaison sont disponibles dans **Civil 3D 2022.1** et dans les versions ultérieures. {% endhint %}
+{% hint style="info" %}
+ Notez que les options de stockage des données de liaison sont disponibles dans **Civil 3D 2022.1** et dans les versions ultérieures. 
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/c3d-binding-settings (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -46,36 +48,48 @@ Toutes les options sont activées par défaut. Voici un résumé des effets de c
 
 Lorsque cette option est activée, Dynamo « oublie » les objets qu’il a créés lors de la dernière exécution du graphique. Le graphique peut être exécuté dans n’importe quel dessin, dans n’importe quelle situation, et il créera des objets à chaque fois.
 
-{% hint style="info" %} **Quand l’utiliser**
+{% hint style="info" %}
+ **Quand l’utiliser**
 
-Utilisez cette option lorsque vous souhaitez que Dynamo « oublie » tout ce qu’il a fait lors des exécutions précédentes et crée de nouveaux objets à chaque fois. {% endhint %}
+Utilisez cette option lorsque vous souhaitez que Dynamo « oublie » tout ce qu’il a fait lors des exécutions précédentes et crée de nouveaux objets à chaque fois. 
+{% endhint %}
 
 ### Option 2 : stocker dans un graphique pour Dynamo
 
 Cette option signifie que les métadonnées de liaison d’objet seront sérialisées dans le graphique (fichier .dyn) lors de son enregistrement. Si vous fermez/rouvrez le graphique et l’exécutez dans le **même dessin**, tout devrait fonctionner comme vous l’avez laissé. Si vous exécutez le graphique dans un **autre dessin**, les données de liaison seront supprimées du graphique et de nouveaux objets seront créés. Cela signifie que si vous ouvrez le dessin d’origine et exécutez à nouveau le graphique, de nouveaux objets seront créés en plus des anciens.
 
-{% hint style="info" %} **Quand l’utiliser**
+{% hint style="info" %}
+ **Quand l’utiliser**
 
-Utilisez cette option lorsque vous souhaitez que Dynamo « se souvienne » des objets qu’il a créés la dernière fois qu’il s’est exécuté dans un **dessin spécifique**. {% endhint %}
+Utilisez cette option lorsque vous souhaitez que Dynamo « se souvienne » des objets qu’il a créés la dernière fois qu’il s’est exécuté dans un **dessin spécifique**. 
+{% endhint %}
 
-{% hint style="warning" %} Cette option convient mieux aux situations où il est possible de maintenir un rapport 1:1 entre un **dessin spécifique** et un graphique Dynamo. Les options 1 et 3 sont mieux adaptées aux graphiques conçus pour s’exécuter sur plusieurs dessins. {% endhint %}
+{% hint style="warning" %}
+ Cette option convient mieux aux situations où il est possible de maintenir un rapport 1:1 entre un **dessin spécifique** et un graphique Dynamo. Les options 1 et 3 sont mieux adaptées aux graphiques conçus pour s’exécuter sur plusieurs dessins. 
+{% endhint %}
 
 ### Option 3 : stocker dans un dessin pour Dynamo
 
 Cette option est similaire à l’option 2, sauf que les données de liaison d’objet sont sérialisées dans le dessin au lieu du graphique (fichier .dyn). Si vous fermez/rouvrez le graphique et l’exécutez dans le **même dessin**, tout devrait fonctionner comme vous l’avez laissé. Si vous exécutez le graphique dans un **autre dessin**, les données de liaison sont conservées dans le dessin d’origine, car elles sont enregistrées dans le dessin et non dans le graphique.
 
-{% hint style="info" %} **Quand l’utiliser**
+{% hint style="info" %}
+ **Quand l’utiliser**
 
-Utilisez cette option lorsque vous souhaitez utiliser le même graphique sur **plusieurs dessins** et que Dynamo « se souvienne » de ce qu’il a fait dans chacun d’eux. {% endhint %}
+Utilisez cette option lorsque vous souhaitez utiliser le même graphique sur **plusieurs dessins** et que Dynamo « se souvienne » de ce qu’il a fait dans chacun d’eux. 
+{% endhint %}
 
 ### Option 4 : stocker dans un dessin pour le Lecteur Dynamo
 
 La première chose à noter avec cette option est qu’elle n’a aucun effet sur la façon dont le graphique interagit avec le dessin lorsqu’il est exécuté via l’interface principale de Dynamo. Cette option s’applique _uniquement_ lorsque le graphique est exécuté à l’aide du Lecteur Dynamo.
 
-{% hint style="info" %} Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [dynamo-player.md](../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [dynamo-player.md](../dynamo-player.md "mention"). 
+{% endhint %}
 
 Si vous exécutez le graphique en utilisant l’interface principale de Dynamo, puis fermez et exécutez le même graphique en utilisant le Lecteur Dynamo, il créera de nouveaux objets en plus de ceux qu’il a créés auparavant. Cependant, une fois que le Lecteur Dynamo a exécuté le graphique une fois, il sérialisera les données de liaison d’objet dans le dessin. Ainsi, si vous exécutez le graphique plusieurs fois via le Lecteur Dynamo, il mettra à jour les objets au lieu d’en créer de nouveaux. Si vous exécutez le graphique via le Lecteur Dynamo sur un **autre dessin**, les données de liaison sont toujours conservées dans le dessin d’origine, car elles sont enregistrées dans le dessin et non dans le graphique.
 
-{% hint style="info" %} **Quand l’utiliser**
+{% hint style="info" %}
+ **Quand l’utiliser**
 
-Utilisez cette option lorsque vous souhaitez exécuter un graphique à l’aide du Lecteur Dynamo sur plusieurs dessins et que vous souhaitez qu’il « se souvienne » de ce qu’il a fait dans chacun d’eux. {% endhint %}
+Utilisez cette option lorsque vous souhaitez exécuter un graphique à l’aide du Lecteur Dynamo sur plusieurs dessins et que vous souhaitez qu’il « se souvienne » de ce qu’il a fait dans chacun d’eux. 
+{% endhint %}

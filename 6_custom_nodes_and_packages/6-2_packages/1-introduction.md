@@ -46,7 +46,7 @@ Examinez maintenant la structure de fichiers du package. Tout d’abord, sélect
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
 
-Dans la fenêtre contextuelle Préférences, ouvrez Gestionnaire de package > à côté de DynamoUnfold, sélectionnez le menu des points verticaux ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > Afficher le répertoire racine pour ouvrir le dossier racine de ce package.
+Dans la fenêtre contextuelle Préférences, ouvrez Package Manager > à côté de DynamoUnfold, sélectionnez le menu des points verticaux ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > Afficher le répertoire racine pour ouvrir le dossier racine de ce package.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
 
@@ -67,7 +67,7 @@ Ouvrez « SphereUnfold ».
 
 Après avoir ouvert le fichier et cliqué sur « Exécuter » dans le solveur, vous obtenez une sphère dépliée. Les fichiers d’exemple comme ceux-ci sont utiles pour apprendre à utiliser un nouveau package Dynamo.
 
-\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Gestionnaire de package Dynamo
 
@@ -81,12 +81,12 @@ Vous pouvez également télécharger les fichiers de package à partir du gestio
 
 ### Où sont les fichiers de package stockés localement ?
 
-Si vous téléchargez des fichiers à partir du gestionnaire de packages Dynamo ou si vous souhaitez voir où sont conservés tous vos fichiers de package, cliquez sur Dynamo > Gestionnaire de package > Chemins d’accès de nœud et de package, pour trouver votre répertoire de dossiers racine actuel.
+Si vous téléchargez des fichiers à partir du gestionnaire de packages Dynamo ou si vous souhaitez voir où sont conservés tous vos fichiers de package, cliquez sur Dynamo > Package Manager > Chemins d’accès de nœud et de package, pour trouver votre répertoire de dossiers racine actuel.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 Par défaut, les packages sont installés dans un emplacement semblable à celui du dossier suivant : _C:/Utilisateurs/[nom d’utilisateur]/AppData/Itinérance/Dynamo/[Version Dynamo]_.
 
-### Repousser les limites des modules
+### Repousser les limites des packages
 
 La communauté Dynamo est en constante évolution. Explorez le gestionnaire de package Dynamo de temps en temps : vous y découvrirez de nouvelles avancées intéressantes. Dans les sections suivantes, vous allez examiner les packages de manière plus approfondie, du point de vue de l'utilisateur final à la création de votre propre package Dynamo.

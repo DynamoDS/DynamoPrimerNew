@@ -18,7 +18,9 @@ La conception technique d’un projet de construction de logements typique impli
 
 ## Compatibilité des versions
 
-{% hint style="success" %} Ce graphique peut s’exécuter dans **Civil 3D 2020** et les versions ultérieures. {% endhint %}
+{% hint style="success" %}
+ Ce graphique peut s’exécuter dans **Civil 3D 2020** et les versions ultérieures. 
+{% endhint %}
 
 ## Ensemble de données
 
@@ -44,7 +46,9 @@ Allons-y !
 
 La première étape consiste à intégrer la géométrie de la conduite principale dans Dynamo. Au lieu de sélectionner des lignes ou des polylignes individuelles, nous allons plutôt récupérer tous les objets d’une certaine couche et les regrouper sous la forme d’une polycourbe Dynamo.
 
-{% hint style="info" %} Si vous ne connaissez pas la géométrie des courbes Dynamo, consultez la section [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas la géométrie des courbes Dynamo, consultez la section [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Récupération des objets de Civil 3D et regroupement de l’ensemble en une seule polycourbe</p></figcaption></figure>
 
@@ -64,7 +68,9 @@ Vous devez également gérer un problème potentiel qui pourrait survenir. La li
 
 Il est temps de déterminer l’emplacement des compteurs. Généralement, l’emplacement est déterminé par les exigences des autorités locales. Vous fournirez donc simplement des valeurs d’entrée qui peuvent être modifiées pour s’adapter à diverses conditions. Vous allez utiliser un **système de coordonnées** le long de la ligne de parcelle comme référence pour la création des points. Il est ainsi très facile de définir des décalages par rapport à la ligne de parcelle, quelle que soit son orientation.
 
-{% hint style="info" %} Si vous ne connaissez pas les systèmes de coordonnées, consultez la section [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas les systèmes de coordonnées, consultez la section [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Création des points d’insertion des compteurs</p></figcaption></figure>
 
@@ -99,13 +105,17 @@ C’est le comportement par défaut de Dynamo, et il est très utile dans de nom
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Paramètres de liaison d’objet de Dynamo</p></figcaption></figure>
 
-{% hint style="info" %} Pour plus d’informations, consultez la section [object-binding.md](../../advanced-topics/object-binding.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Pour plus d’informations, consultez la section [object-binding.md](../../advanced-topics/object-binding.md "mention"). 
+{% endhint %}
 
 La modification de ce paramètre forcera Dynamo à « oublier » les objets qu’il crée à chaque exécution. Voici un exemple d’exécution du graphique avec la liaison d’objet désactivée en utilisant le **Lecteur Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Exécution du graphique à l’aide du Lecteur Dynamo et visualisation des résultats dans Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). 
+{% endhint %}
 
 > :tada: Mission accomplie !
 
@@ -113,8 +123,14 @@ La modification de ce paramètre forcera Dynamo à « oublier » les objets qu
 
 Voici quelques suggestions pour élargir les possibilités offertes par ce graphique.
 
-{% hint style="info" %} Placez **plusieurs raccordements aux services** simultanément au lieu de sélectionner chaque ligne de parcelle. {% endhint %}
+{% hint style="info" %}
+ Placez **plusieurs raccordements aux services** simultanément au lieu de sélectionner chaque ligne de parcelle. 
+{% endhint %}
 
-{% hint style="info" %} Ajustez les données d’entrée pour remplacer les compteurs d’eau par des **regards de canalisation**. {% endhint %}
+{% hint style="info" %}
+ Ajustez les données d’entrée pour remplacer les compteurs d’eau par des **regards de canalisation**. 
+{% endhint %}
 
-{% hint style="info" %} **Ajoutez un bouton bascule** pour permettre de placer un seul raccordement aux services sur un côté particulier de la ligne de parcelle plutôt que sur les deux côtés. {% endhint %}
+{% hint style="info" %}
+ **Ajoutez un bouton bascule** pour permettre de placer un seul raccordement aux services sur un côté particulier de la ligne de parcelle plutôt que sur les deux côtés. 
+{% endhint %}

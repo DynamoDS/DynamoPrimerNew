@@ -8,7 +8,7 @@ Ajoutons un autre niveau à la hiérarchie. Si vous prenez le paquet de cartes d
 
 > Photo de [Dori](https://commons.wikimedia.org/wiki/File:Stack\_of\_coins\_0214.jpg).
 
-### Query
+### Requête
 
 Quelles **requêtes** pouvez-vous effectuer à partir de la liste de listes ? Elles permettent d’accéder aux propriétés existantes.
 
@@ -111,7 +111,7 @@ Le nœud **List.Count** compte tous les éléments d’une liste. Vous allez l�
 > 3. Connectez chaque ligne du bloc de code aux entrées _X_ et _Y_ respectives d’un nœud **Point.ByCoordinates**. Cliquez avec le bouton droit de la souris sur le nœud, sélectionnez « Combinaison », puis _« Produit vectoriel »_. Cela crée une grille de points. Étant donné que vous avez défini l’intervalle de -50 à 50, élargissez la grille Dynamo par défaut.
 > 4. Un nœud _**Watch**_ révèle les points créés. Observez la structure des données. Vous avez créé une liste de listes. Chaque liste représente une ligne de points de la grille.
 
-\![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Exercice](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Attachez un nœud **List.Count** à la sortie du nœud Watch de l’étape précédente.
 > 2. Connectez un nœud **Watch** à la sortie **List.Count**.
@@ -150,7 +150,9 @@ Ensuite, utilisez le nœud **List.Combine** pour appliquer une fonction aux obje
 
 Une fois l’opération terminée, les deux jeux de points sont compressés/associés via une fonction **Line.ByStartPointEndPoint** et renvoient 10 lignes dans Dynamo.
 
-{% hint style="info" %} Reportez-vous à l’exercice dans Listes à n dimensions pour découvrir un autre exemple d’utilisation du nœud List.Combine. {% endhint %}
+{% hint style="info" %}
+ Reportez-vous à l’exercice dans Listes à n dimensions pour découvrir un autre exemple d’utilisation du nœud List.Combine. 
+{% endhint %}
 
 ### List@Level
 

@@ -1,4 +1,4 @@
-# Développement d'un module
+# Développement d'un package
 
 Dynamo offre de nombreuses méthodes de création de package en vue d'un usage personnel ou d'un partage avec la communauté Dynamo. Dans l'étude de cas ci-dessous, vous allez découvrir comment un package est configuré en déconstruisant un package existant. Cette étude de cas s'appuie sur les leçons du chapitre précédent, fournissant un ensemble de nœuds personnalisés pour la géométrie de mappage, en fonction des coordonnées UV, d'une surface Dynamo à une autre.
 
@@ -12,15 +12,15 @@ Dans cette image, un point d'une surface est mappé sur une autre surface à l'a
 
 ### Installation du package
 
-Dans le chapitre précédent, vous avez étudié les méthodes de contruction de panneaux sur une surface dans Dynamo en fonction des courbes définies dans le plan XY. Cette étude de cas étend ces concepts pour davantage de cotes de géométrie. Vous allez installer ce module tel qu'il a été conçu pour montrer comment il a été développé. Dans la section suivante, vous allez découvrir comment ce module a été publié.
+Dans le chapitre précédent, vous avez étudié les méthodes de contruction de panneaux sur une surface dans Dynamo en fonction des courbes définies dans le plan XY. Cette étude de cas étend ces concepts pour davantage de cotes de géométrie. Vous allez installer ce package tel qu'il a été conçu pour montrer comment il a été développé. Dans la section suivante, vous allez découvrir comment ce package a été publié.
 
-Dans Dynamo, cliquez sur _Packages>Rechercher un package… et recherchez le package « MapToSurface » (en un mot). Cliquez sur Installer pour lancer le téléchargement et ajouter le module à votre bibliothèque.
+Dans Dynamo, cliquez sur _Packages>Rechercher un package… et recherchez le package « MapToSurface » (en un mot). Cliquez sur Installer pour lancer le téléchargement et ajouter le package à votre bibliothèque.
 
 ![](../images/6-2/3/developpackage-installpackage01.jpg)
 
 Une fois l’installation terminée, les nœuds personnalisés sont disponibles sous la section Compléments > Guide Dynamo.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Une fois le package installé, voyons comment il est configuré.
 
@@ -30,7 +30,7 @@ Le package créé utilise cinq nœuds personnalisés créés pour référence. V
 
 Il s'agit d'un package simple de cinq nœuds personnalisés. Les étapes ci-dessous présentent brièvement la configuration de chaque nœud personnalisé.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,7 +64,7 @@ Il s’agit d’un nœud simple qui crée une surface paramétrique à mapper de
 
 ### Fichiers d’exemple
 
-Les fichiers d’exemple se trouvent dans le dossier racine du package. Cliquez sur Dynamo > Préférences > Gestionnaire de package
+Les fichiers d’exemple se trouvent dans le dossier racine du package. Cliquez sur Dynamo > Préférences > Package Manager
 
 En regard de MapToSurface, cliquez sur le menu des trois points verticaux > Afficher le répertoire racine.
 

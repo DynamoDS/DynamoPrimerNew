@@ -56,7 +56,9 @@ Après avoir utilisé les nœuds _"Select Model Element"_ et _"Select Face"_, vo
 > 3. Procédez de la même manière pour les arêtes inférieures de la façade dans Revit.
 > 4. Les nœuds _Watch_ indiquent que vous avez désormais des lignes dans Dynamo. Cette opération est automatiquement convertie en géométrie Dynamo, car les arêtes elles-mêmes ne sont pas des éléments Revit. Ces courbes sont les références que vous allez utiliser pour instancier des fermes adaptatives sur la façade.
 
-{% hint style="info" %} * Pour conserver une topologie homogène, faites référence à un modèle auquel aucune face ou arête supplémentaire n'a été ajoutée. Bien que les paramètres puissent en modifier la forme, la façon dont il est créé reste cohérente. {% endhint %}
+{% hint style="info" %}
+ * Pour conserver une topologie homogène, faites référence à un modèle auquel aucune face ou arête supplémentaire n'a été ajoutée. Bien que les paramètres puissent en modifier la forme, la façon dont il est créé reste cohérente. 
+{% endhint %}
 
 Vous devez d'abord joindre les courbes et les fusionner en une liste. De cette manière, vous pouvez _« regrouper »_ les courbes pour effectuer des opérations de géométrie.
 

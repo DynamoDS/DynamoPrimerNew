@@ -2,7 +2,7 @@
 
 Dans les sections précédentes, vous avez découvert en détail comment configurer le package _MapToSurface_ avec des nœuds personnalisés et des fichiers d’exemple. Mais comment publier un package développé localement ? Cette étude de cas montre comment publier un package à partir d’un ensemble de fichiers dans un dossier local.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Il existe plusieurs façons de publier un package. Voici le processus recommandé :**publier localement, développer localement, puis publier en ligne**. Vous allez commencer par un dossier contenant tous les fichiers du package.
 
@@ -10,7 +10,7 @@ Il existe plusieurs façons de publier un package. Voici le processus recommand�
 
 Avant de commencer la publication du package MapToSurface, si vous avez installé le package à partir de la leçon précédente, désinstallez-le afin de ne pas utiliser les mêmes packages.
 
-Dans Dynamo, sélectionnez Préférences > Gestionnaire de package, puis cliquez sur Supprimer en regard de MapToSurface dans le menu des points verticaux.
+Dans Dynamo, sélectionnez Préférences > Package Manager, puis cliquez sur Supprimer en regard de MapToSurface dans le menu des points verticaux.
 
 ![](../images/6-2/4/publishapackage-deletepackage.jpg)
 
@@ -18,7 +18,9 @@ Ensuite, redémarrez Dynamo. Lors de la réouverture, vérifiez la fenêtre _«�
 
 ### Publication locale d’un package
 
-{% hint style="warning" %} La publication du package Dynamo est uniquement activée dans Dynamo for Revit et Dynamo pour Civil 3D. Dynamo Sandbox ne dispose pas de la fonctionnalité de publication. {% endhint %}
+{% hint style="warning" %}
+ La publication du package Dynamo est uniquement activée dans Dynamo for Revit et Dynamo pour Civil 3D. Dynamo Sandbox ne dispose pas de la fonctionnalité de publication. 
+{% endhint %}
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
@@ -47,9 +49,9 @@ Dans la fenêtre _« Publier un package Dynamo »_, remplissez les formulaires
 
 Une fois la publication terminée, les nœuds personnalisés doivent être disponibles sous le groupe « DynamoPrimer » ou votre bibliothèque Dynamo.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
-Examinez maintenant le répertoire racine pour découvrir comment Dynamo a mis en forme le package créé. Pour ce faire, cliquez sur Dynamo > Préférences > Gestionnaire de package > en regard de MapToSurface, cliquez sur le menu des points verticaux, puis sélectionnez Afficher le répertoire racine
+Examinez maintenant le répertoire racine pour découvrir comment Dynamo a mis en forme le package créé. Pour ce faire, cliquez sur Dynamo > Préférences > Package Manager > en regard de MapToSurface, cliquez sur le menu des points verticaux, puis sélectionnez Afficher le répertoire racine
 
 ![](../images/6-2/4/publishapackage-publishlocally05.jpg)
 
@@ -64,11 +66,13 @@ Le répertoire racine se trouve à l’emplacement local de votre package (n’o
 
 ### Publication d’un package en ligne
 
-{% hint style="warning" %}Remarque : ne suivez pas cette étape, sauf si vous publiez réellement un package de votre choix. {% endhint %}
+{% hint style="warning" %}
+Remarque : ne suivez pas cette étape, sauf si vous publiez réellement un package de votre choix. 
+{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 
-> 1. Lorsque vous êtes prêt à effectuer la publication, cliquez sur le bouton situé à droite de MapToSurface dans la fenêtre Préférences > Gestionnaire de package et choisissez _Publier…_
+> 1. Lorsque vous êtes prêt à effectuer la publication, cliquez sur le bouton situé à droite de MapToSurface dans la fenêtre Préférences > Package Manager et choisissez _Publier…_
 > 2. Si vous mettez à jour un package qui a déjà été publié, choisissez « Publier la version » et Dynamo mettra à jour votre package en ligne en fonction des nouveaux fichiers contenus dans le répertoire racine de ce package. C'est aussi simple que ça !
 
 ### Version de publication…

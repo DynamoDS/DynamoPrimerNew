@@ -27,7 +27,7 @@ Vous pouvez utiliser des [opérations booléennes](6-solids.md#boolean-operation
 
 ### Gel
 
-Les opérations booléennes sont complexes et peuvent être lentes à calculer. Utilisez la fonctionnalité Geler pour suspendre l’exécution des nœuds sélectionnés et affectés aux nœuds en aval.
+Les opérations booléennes sont complexes et peuvent être lentes à calculer. Vous pouvez utiliser la fonctionnalité Geler pour suspendre l’exécution des nœuds sélectionnés et affectés aux nœuds en aval.
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
@@ -39,7 +39,11 @@ Les opérations booléennes sont complexes et peuvent être lentes à calculer. 
 >
 > 4\. Tous les nœuds concernés et les aperçus de géométrie associés sont mis à jour et reviendront en mode d’aperçu standard.
 
-## Approfondir...
+{% hint style="info" %}
+ Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
+
+## Approfondir…
 
 ### Solides
 

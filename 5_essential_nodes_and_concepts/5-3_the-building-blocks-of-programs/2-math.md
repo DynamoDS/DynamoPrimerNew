@@ -8,10 +8,10 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 
 | Icône                                                  | Nom (Syntaxe)     | Entrées                     | Sorties      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier ( ***** ) | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier ( **\\*** ) | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
 
@@ -87,19 +87,19 @@ Maintenant que vous avez créé une coque Nautilus circulaire, passez aux grille
 
 Comme point de départ, commencez par la même étape qu’à l’exercice précédent : la création d’un réseau de points en forme de spirale avec le nœud **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+![](../images/5-3/2/math-part IV-01.jpg)
 
 Ensuite, suivez ces courtes étapes pour générer une série de clothoïdes à différentes rotations.
 
 ![](../images/5-3/2/math-partIV-02.jpg)
 
-> a. **Géométrie.Rotation :** il existe plusieurs options **Geometry.Rotate**. Assurez-vous d’avoir choisi le nœud avec les entrées _geometry_, _basePlane_ et _degrees_. Connectez **Point.ByCoordinates** à l’entrée geometry. Cliquez avec le bouton droit de la souris sur ce nœud et assurez-vous que la combinaison est définie sur « Produit vectoriel ».
+> a. **Geometry.Rotate :** il existe plusieurs options **Geometry.Rotate**. Assurez-vous d’avoir choisi le nœud avec les entrées _geometry_, _basePlane_ et _degrees_. Connectez **Point.ByCoordinates** à l’entrée geometry. Cliquez avec le bouton droit de la souris sur ce nœud et assurez-vous que la combinaison est définie sur « Produit vectoriel ».
 >
 > <img src="../images/5-3/2/math-partIV-03crossproduct.jpg" alt="" data-size="original">
 >
 > b. **Plane.XY :** connexion à l’entrée _basePlane_. Vous allez effectuer une rotation autour de l’origine, servant également de base pour la clothoïde.
 >
-> c. **Intervalle de nombres :** pour la saisie des degrés, vous devez créer plusieurs rotations. Pour ce faire, il suffit d’utiliser un composant **Number Range**. Connectez-le à l’entrée _degrees_.
+> c. **Number Range :** pour la saisie des degrés, vous devez créer plusieurs rotations. Pour ce faire, il suffit d’utiliser un composant **Number Range**. Connectez-le à l’entrée _degrees_.
 >
 > d. **Number :** pour définir l’intervalle de nombres, ajoutez trois nœuds Number à la zone de dessin dans l’ordre vertical. De haut en bas, affectez respectivement les valeurs _0.0, 360.0_ et _120.0_. Elles pilotent la rotation de la clothoïde. Après avoir connecté les trois nœuds Number au nœud Range, observez les sorties du nœud **Number Range**.
 

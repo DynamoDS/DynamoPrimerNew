@@ -4,7 +4,7 @@ Une puissante fonction de Dynamo est la possibilité de modifier les paramètres
 
 ### Paramètres de type et d'occurrence
 
-\![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Exercice](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Les paramètres d'occurence définissent l'ouverture des panneaux sur la surface du toit, allant d'un rapport d'ouverture de 0,1 à 0,4.
 > 2. Les paramètres basés sur le type sont appliqués à chaque élément de la surface, car ils appartiennent au même type de famille. Le matériau de chaque panneau, par exemple, peut être piloté par un paramètre basé sur le type.
@@ -16,7 +16,9 @@ Une puissante fonction de Dynamo est la possibilité de modifier les paramètres
 
 Pour rappel, Revit comprend des paramètres de type et des paramètres d'occurrence. Les deux peuvent être modifiés à partir de Dynamo, mais vous allez utiliser les paramètres d'occurrence dans l'exercice ci-dessous.
 
-{% hint style="info" %} Lorsque vous découvrez l'application complète de paramètres de modification, vous pouvez modifier un grand nombre d'éléments dans Revit avec Dynamo. Il peut s'agir d'une opération _coûteuse en ressources informatiques_ , ce qui signifie qu'elle peut être lente. Si vous modifiez un grand nombre d'éléments, vous pouvez utiliser la fonctionnalité de nœud "Geler" pour interrompre l'exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d’informations sur le gel des nœuds, consultez la section « [Gel](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) » du chapitre Solides. {% endhint %}
+{% hint style="info" %}
+ Lorsque vous découvrez l'application complète de paramètres de modification, vous pouvez modifier un grand nombre d'éléments dans Revit avec Dynamo. Il peut s'agir d'une opération _coûteuse en ressources informatiques_ , ce qui signifie qu'elle peut être lente. Si vous modifiez un grand nombre d'éléments, vous pouvez utiliser la fonctionnalité de nœud "Geler" pour interrompre l'exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d’informations sur le gel des nœuds, consultez la section « [Gel](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) » du chapitre Solides. 
+{% endhint %}
 
 ### Unités
 
@@ -34,7 +36,9 @@ Pour une conversion rapide des unités, utilisez le nœud _"Convert Between Unit
 
 {% file src="datasets/3/Revit-Editing.zip" %}
 
-{% hint style="warning" %} L'exercice ci-dessous utilise les mètres. {% endhint %}
+{% hint style="warning" %}
+ L'exercice ci-dessous utilise les mètres. 
+{% endhint %}
 
 Cet exercice est consacré à la modification d'éléments Revit sans effectuer d'opération géométrique dans Dynamo. Vous n'importez pas la géométrie Dynamo ici, mais modifiez simplement les paramètres dans un projet Revit. Il s'agit d'un exercice de base et pour les utilisateurs de Revit les plus avancés, notez qu'il s'agit de paramètres d'occurrence d'un volume, mais la même logique peut être appliquée à un réseau d'éléments à personnaliser à grande échelle. Cette opération est effectuée à l'aide du nœud "Element.SetParameterByName".
 
@@ -65,7 +69,9 @@ Dans Dynamo, vous pouvez récupérer les paramètres en sélectionnant l’élé
 > 2. Définissez un autre _bloc de code_ avec une liste de la même longueur que les noms des paramètres. Dans ce cas, nommez les variables (sans guillemets) qui créent des entrées pour le _bloc de code_. Connectez les _curseurs_ à chaque entrée respective : `{bw,bl,bh,ao,io,lu};`
 > 3. Connectez le nœud Code Block à la valeur d'entrée _"Element.SetParameterByName"_. Lorsque l'option Exécuter automatiquement est activée, les résultats sont automatiquement affichés.
 
-{% hint style="warning" %} * Cette démonstration fonctionne avec les paramètres d'occurrence, mais pas avec les paramètres de type. {% endhint %}
+{% hint style="warning" %}
+ * Cette démonstration fonctionne avec les paramètres d'occurrence, mais pas avec les paramètres de type. 
+{% endhint %}
 
 Tout comme dans Revit, la plupart de ces paramètres sont dépendants les uns des autres. Il existe bien entendu des combinaisons dans lesquelles la géométrie peut être rompue. Vous pouvez résoudre ce problème avec des formules définies dans les propriétés des paramètres, ou bien configurer une logique similaire avec des opérations mathématiques dans Dynamo (ce défi supplémentaire est nécessaire si vous souhaitez développer l’exercice).
 
