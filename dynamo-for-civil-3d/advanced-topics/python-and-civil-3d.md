@@ -199,7 +199,7 @@ Weitere Informationen zu dieser Umstellung und zum Aktualisieren älterer Skript
 
 [^1]: Vorgabemäßig wird die Dynamo-Geometriebibliothek nicht zur Python-Umgebung hinzugefügt. Unser Ziel mit diesem Skript ist die Ausgabe einer Liste von Dynamo-Punkten für die Einzugsgebietsgrenzen. Daher müssen wir diese Zeile hinzufügen, um die Punkte später erstellen zu können.
 
-[^2]:  Diese Zeile ruft die spezifische Klasse ab, die wir aus der Dynamo-Geometriebibliothek benötigen. Beachten Sie, dass wir hier `import Point as DynPoint` anstelle von `import *` angeben, da Letzteres zu Namenskonflikten führen würde.
+[^2]: Diese Zeile ruft die spezifische Klasse ab, die wir aus der Dynamo-Geometriebibliothek benötigen. Beachten Sie, dass wir hier `import Point as DynPoint` anstelle von `import *` angeben, da Letzteres zu Namenskonflikten führen würde.
 
 [^3]: Hier benennen wir die Vorgabevariable `dataEnteringNode` in `objs` um, damit sie aussagekräftiger ist.
 
