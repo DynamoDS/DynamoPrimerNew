@@ -94,7 +94,9 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}\r\n Tipp: Bevor Sie Objekte in Ihrem Skript duplizieren (wie die Konstante im obigen Beispiel), überlegen Sie, ob Sie stattdessen eine Verknüpfung zur Quelle erstellen können. \r\n{% endhint %}
+{% hint style="info" %}
+Tipp: Bevor Sie Objekte in Ihrem Skript duplizieren (wie die Konstante im obigen Beispiel), überlegen Sie, ob Sie stattdessen eine Verknüpfung zur Quelle erstellen können. 
+{% endhint %}
 
 ### Modulares Strukturieren
 
