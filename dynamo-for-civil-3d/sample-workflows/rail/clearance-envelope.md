@@ -137,6 +137,6 @@ Im Folgenden finden Sie einige Anregungen, wie Sie die Funktionen dieses Diagram
 
 {% hint style="info" %}
 
- Überprüfen Sie, ob sich die Profilvolumenkörper ** mit Objekten überschneiden**, und färben Sie kollidierende Objekte ein. 
+ Überprüfen Sie, ob sich die Profilvolumenkörper **mit Objekten überschneiden**, und färben Sie kollidierende Objekte ein. 
 
 {% endhint %}
