@@ -23,7 +23,9 @@ Mit Textskripts können Sie komplexere Beziehungen erstellen als durch visuelle 
 | **Python**         | Ja         | Ja           | Teilweise          | Ja                | Nein            |
 | **ZeroTouch (C#)** | Nein          | Nein            | Nein                 | Ja                | Nein            |
 
-{% hint style="info" %}\r\n Unter [Referenz für die Skripterstellung](3-scripting-reference.md) ist aufgelistet, worauf Sie mit welcher Dynamo-Bibliothek zugreifen können. \r\n{% endhint %}
+{% hint style="info" %}
+Unter [Referenz für die Skripterstellung](3-scripting-reference.md) ist aufgelistet, worauf Sie mit welcher Dynamo-Bibliothek zugreifen können. 
+{% endhint %}
 
 ### Parametrischer Denkansatz
 
@@ -63,7 +65,9 @@ Bei der Skripterstellung in Dynamo, einer zwangsläufig parametrischen Umgebung,
 > 2. Interne Variablen für das Skript.
 > 3. Eine Schleife, die diese Eingaben und Variablen für ihre Funktion nutzt.
 
-{% hint style="info" %}\r\n Tipp: Wenden Sie für den Prozess dieselbe Sorgfalt an wie für die Lösung. \r\n{% endhint %}
+{% hint style="info" %}
+Tipp: Wenden Sie für den Prozess dieselbe Sorgfalt an wie für die Lösung. 
+{% endhint %}
 
 ### **Vermeiden von Wiederholungen (das DRY-Prinzip – Don't repeat yourself):**
 
@@ -195,7 +199,9 @@ Es ist sinnvoll, während der Entwicklung von Textskripts in Dynamo laufend zu �
 * Bugs und Fehler, die auf grundlegende Probleme mit dem Skript hinweisen, werden zuweilen nur in solchen Grenzfällen erkennbar.
   * Ermitteln Sie die Fehlerursache, und entscheiden Sie, ob sie intern behoben werden muss oder ob zur Vermeidung des Problems eine Parameterdomäne neu definiert werden muss.
 
-{% hint style="info" %}\r\n Tipp: Gehen Sie stets davon aus, dass die Benutzer jede mögliche Kombination sämtlicher für sie bereitgestellten Eingabewerte verwenden werden. Auf diese Weise vermeiden Sie unangenehme Überraschungen. \r\n{% endhint %}
+{% hint style="info" %}
+Tipp: Gehen Sie stets davon aus, dass die Benutzer jede mögliche Kombination sämtlicher für sie bereitgestellten Eingabewerte verwenden werden. Auf diese Weise vermeiden Sie unangenehme Überraschungen. 
+{% endhint %}
 
 ### Effiziente Fehlersuche
 
