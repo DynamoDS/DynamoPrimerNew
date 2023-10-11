@@ -33,9 +33,11 @@ Dynamo 응용프로그램은 [Dynamo 웹사이트](http://dynamobim.com)에서 �
 
 ![](images/DynamoSandboxAllbuilds.jpg)
 
-{% hint style="info" %}\r\n '최신' 개발 버전에는 아직 완전히 테스트되지 않아 불안정한 몇 가지 새로운 실험 기능이 포함될 수 있습니다. 이 기능을 사용하여 버그 또는 문제를 발견하고, Autodesk 팀에 문제를 보고하여 응용프로그램을 개선할 수 있습니다.
+{% hint style="info" %}
+ '최신' 개발 버전에는 아직 완전히 테스트되지 않아 불안정한 몇 가지 새로운 실험 기능이 포함될 수 있습니다. 이 기능을 사용하여 버그 또는 문제를 발견하고, Autodesk 팀에 문제를 보고하여 응용프로그램을 개선할 수 있습니다.
 
-초보자는 안정적인 공식 버전을 다운로드하는 것이 좋습니다. \r\n{% endhint %}
+초보자는 안정적인 공식 버전을 다운로드하는 것이 좋습니다. 
+{% endhint %}
 
 #### 압축 해제
 
@@ -63,4 +65,6 @@ DynamoSandbox 시작 화면이 다음과 같이 표시됩니다.
 
 축하합니다. DynamoSandbox 사용을 위한 설정이 완료되었습니다.
 
-{% hint style="info" %}\r\n **형상**은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다. **형상**을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다. \r\n{% endhint %}
+{% hint style="info" %}
+ **형상**은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다. **형상**을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다. 
+{% endhint %}

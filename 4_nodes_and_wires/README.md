@@ -22,7 +22,9 @@ Dynamo의 노드 대부분은 5개 부분으로 구성되어 있습니다. 입�
 
 포트는 특정 유형의 데이터를 수신해야 합니다. 예를 들어 _2.75_ 와 같은 숫자를 좌표로 정의된 점 노드의 포트에 연결하면 점이 성공적으로 작성됩니다. 그러나 동일한 포트에 _"Red"_ 를 제공하면 오류가 발생합니다.
 
-{% hint style="info" %}\r\n 팁: 포트 위에 마우스 커서를 놓으면 예상 데이터 유형이 포함된 툴팁이 표시됩니다. \r\n{% endhint %}
+{% hint style="info" %}
+ 팁: 포트 위에 마우스 커서를 놓으면 예상 데이터 유형이 포함된 툴팁이 표시됩니다. 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,13 +55,25 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 시각적 프로그램에 경고 또는 오류가 포함된 경우 Dynamo는 해당 문제에 대한 추가 정보를 제공합니다. 노란색으로 되어 있는 모든 노드는 이름 위에 툴팁도 표시됩니다. 경고 ![](images/nodesandwires-nodewarningicon.png) 또는 오류 ![](images/nodesandwires-nodeerroricon.png) 툴팁 아이콘 위에 마우스를 놓으면 툴팁이 확장됩니다.
 
-{% hint style="info" %}\r\n 팁: 이 툴팁 정보를 통해 업스트림 노드를 검사하여 필수 데이터 유형이나 데이터 구조에 오류가 있는지 확인합니다. \r\n{% endhint %}
+{% hint style="info" %}
+ 팁: 이 툴팁 정보를 통해 업스트림 노드를 검사하여 필수 데이터 유형이나 데이터 구조에 오류가 있는지 확인합니다. 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. 경고 툴팁 - "Null" 또는 데이터 없음은 Double(예: 숫자)로 인식될 수 없습니다.
 > 2. Watch 노드를 사용하여 입력 데이터를 검사합니다.
 > 3. Upstream the Number 노드는 숫자가 아닌 "Red"를 저장합니다.
+
+### 노드 동결
+
+일부 상황에서는 비주얼 프로그램에서 특정 노드의 실행을 방지하고 싶을 수 있습니다. 노드의 마우스 오른쪽 버튼 클릭 메뉴에 있는 옵션인 노드 '동결'을 통해 이 작업을 수행할 수 있습니다.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+노드를 동결하면 노드의 다운스트림인 노드도 동결됩니다. 즉, 동결된 노드의 출력에 의존하는 모든 노드도 동결됩니다.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## 와이어
 

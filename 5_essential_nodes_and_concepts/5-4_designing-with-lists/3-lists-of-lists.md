@@ -150,7 +150,9 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Co
 
 완료되면 두 점 세트가 **Line.ByStartPointEndPoint** 함수를 통해 압축/쌍으로 연결되며, Dynamo에서 10개의 선이 반환됩니다.
 
-{% hint style="info" %}\r\n n-차원 리스트의 연습을 참조하여 List.Combine을 사용하는 또 다른 예제를 살펴보십시오. \r\n{% endhint %}
+{% hint style="info" %}
+ n-차원 리스트의 연습을 참조하여 List.Combine을 사용하는 또 다른 예제를 살펴보십시오. 
+{% endhint %}
 
 ### List@Level
 

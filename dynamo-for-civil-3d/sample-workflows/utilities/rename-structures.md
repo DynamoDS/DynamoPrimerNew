@@ -17,7 +17,9 @@
 
 ## 버전 호환성
 
-{% hint style="success" %}\r\n 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. \r\n{% endhint %}
+{% hint style="success" %}
+ 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. 
+{% endhint %}
 
 ## 데이터세트
 
@@ -77,7 +79,9 @@
 
 따라서 선형에서 특정 간격띄우기보다 큰 구조물은 고려하지 않도록 구조물 리스트를 필터링해야 합니다. 이 작업은 **List.FilterByBoolMask** 노드를 사용하여 수행하는 것이 가장 좋습니다. 구조물 리스트를 필터링한 후 **List.SortByKey** 노드를 사용하여 측점 값을 기준으로 구조물을 정렬합니다.
 
-{% hint style="info" %}\r\n 리스트 작업을 처음 해보는 경우 [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 섹션을 참조하십시오. \r\n{% endhint %}
+{% hint style="info" %}
+ 리스트 작업을 처음 해보는 경우 [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 섹션을 참조하십시오. 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>구조 필터링 및 정렬</p></figcaption></figure>
 
@@ -104,7 +108,9 @@
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Dynamo 플레이어를 사용하여 그래프를 실행하고 Civil 3D에서 결과 확인</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. \r\n{% endhint %}
+{% hint style="info" %}
+ Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. 
+{% endhint %}
 
 > :tada: 작업을 완료했습니다!
 
@@ -122,8 +128,14 @@
 
 다음은 이 그래프의 기능을 확장하는 방법에 대한 몇 가지 아이디어입니다.
 
-{% hint style="info" %}\r\n 특정 선형을 선택하는 대신 **가장 가까운 선형**을 기준으로 구조물의 이름을 바꿉니다. \r\n{% endhint %}
+{% hint style="info" %}
+ 특정 선형을 선택하는 대신 **가장 가까운 선형**을 기준으로 구조물의 이름을 바꿉니다. 
+{% endhint %}
 
-{% hint style="info" %}\r\n 구조물 외에 **파이프의 이름을 바꿉니다**. \r\n{% endhint %}
+{% hint style="info" %}
+ 구조물 외에 **파이프의 이름을 바꿉니다**. 
+{% endhint %}
 
-{% hint style="info" %}\r\n 해당 실행을 기준으로 구조물의 **도면층을 설정**합니다.  \r\n{% endhint %}
+{% hint style="info" %}
+ 해당 실행을 기준으로 구조물의 **도면층을 설정**합니다.  
+{% endhint %}
