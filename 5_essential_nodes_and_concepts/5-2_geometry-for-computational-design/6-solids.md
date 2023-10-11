@@ -27,7 +27,7 @@ Se quisermos criar modelos mais complexos que não possam ser criados com base e
 
 ### Congelar
 
-As operações booleanas são complexas e seu cálculo pode ser lento. Use a funcionalidade Congelar para suspender a execução dos nós selecionados e dos nós a jusante afetados.
+As operações booleanas são complexas e seu cálculo pode ser lento. É possível usar a funcionalidade “congelar” para suspender a execução dos nós selecionados e dos nós a jusante afetados.
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
@@ -38,6 +38,10 @@ As operações booleanas são complexas e seu cálculo pode ser lento. Use a fun
 > 3\. Para descongelar os nós, clique com o botão direito do mouse e desmarque Congelar.
 >
 > 4\. Todos os nós afetados e as visualizações de geometria associadas serão atualizados e revertidos para o modo de visualização padrão.
+
+{% hint style="info" %}
+ Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ## Análise abrangente de...
 

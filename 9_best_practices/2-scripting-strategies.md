@@ -23,7 +23,9 @@ Os scripts de texto podem estabelecer relacionamentos de maior complexidade do q
 | **Python**         | Sim         | Sim           | Parcialmente          | Sim                | Não            |
 | **ZeroTouch (C#))** | Não          | No            | Não                 | Sim                | Não            |
 
-{% hint style="info" %}\r\n Consulte [Referência de scripts](3-scripting-reference.md) para obter uma lista dos itens aos quais cada biblioteca do Dynamo fornece acesso. \r\n{% endhint %}
+{% hint style="info" %}
+ Consulte [Referência de scripts](3-scripting-reference.md) para obter uma lista dos itens aos quais cada biblioteca do Dynamo fornece acesso. 
+{% endhint %}
 
 ### Pensar de forma paramétrica
 
@@ -63,7 +65,9 @@ Ao criar scripts no Dynamo, um ambiente inevitavelmente paramétrico, é aconsel
 > 2. Variáveis internas do script.
 > 3. Um loop que usa essas entradas e variáveis para executar sua função.
 
-{% hint style="info" %}\r\n Dica: Dê ao processo a mesma ênfase que você dá à solução. \r\n{% endhint %}
+{% hint style="info" %}
+ Dica: Dê ao processo a mesma ênfase que você dá à solução. 
+{% endhint %}
 
 ### **Não se repita (o princípio DRY):**
 
@@ -90,7 +94,9 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}\r\n Dica: Antes de duplicar entidades no script (como a constante no exemplo acima), considere se é possível, em vez disso, vincular à origem. \r\n{% endhint %}
+{% hint style="info" %}
+ Dica: Antes de duplicar entidades no script (como a constante no exemplo acima), considere se é possível, em vez disso, vincular à origem. 
+{% endhint %}
 
 ### Estruturar de forma modular
 
@@ -195,7 +201,9 @@ Ao desenvolver scripts de texto no Dynamo, é recomendável garantir constanteme
 * Às vezes, as falhas e os erros que revelam um problema subjacente com seu script só surgirão durante esses casos de aresta.
   * Compreenda o que está causando o erro e, em seguida, decida se ele precisa ser corrigido internamente ou se um domínio de parâmetro precisa ser redefinido para evitar o problema.
 
-{% hint style="info" %}\r\n Dica: Sempre presuma que o usuário usará cada combinação de cada valor de entrada que foi exposto a ele/ela. Isso ajudará a eliminar surpresas indesejadas. \r\n{% endhint %}
+{% hint style="info" %}
+ Dica: Sempre presuma que o usuário usará cada combinação de cada valor de entrada que foi exposto a ele/ela. Isso ajudará a eliminar surpresas indesejadas. 
+{% endhint %}
 
 ### Depurar de forma eficiente
 

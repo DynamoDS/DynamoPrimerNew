@@ -2,7 +2,9 @@
 
 Mencionamos anteriormente que OS **nós** são os principais blocos de construção de um gráfico do Dynamo e eles são organizados em grupos lógicos na **biblioteca**. No Dynamo for Civil 3D, há duas categorias (ou **prateleiras**) na biblioteca que contêm nós dedicados para trabalhar com objetos do AutoCAD e do Civil 3D, como alinhamentos, perfis, corredores, referências de bloco etc. O restante da biblioteca contém nós que são mais genéricos por natureza e são consistentes em todas as “versões” do Dynamo (por exemplo, Dynamo for Revit, Dynamo Sandbox etc.).
 
-{% hint style="info" %}\r\n Confira a seção [2-library.md](../3\_user\_interface/2-library.md "mention") para obter mais informações sobre como os nós da biblioteca principal do Dynamo são organizados. \r\n{% endhint %}
+{% hint style="info" %}
+ Confira a seção [2-library.md](../3\_user\_interface/2-library.md "mention") para obter mais informações sobre como os nós da biblioteca principal do Dynamo são organizados. 
+{% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>Biblioteca de nós do Dynamo for Civil 3D</p></figcaption></figure>
 
@@ -10,11 +12,15 @@ Mencionamos anteriormente que OS **nós** são os principais blocos de construç
 > 2. Nós para uso geral
 > 3. Nós de **pacotes** de terceiros que você pode instalar separadamente
 
-{% hint style="warning" %}\r\n Se você usar os nós encontrados nas prateleiras do AutoCAD e do Civil 3D, o gráfico do Dynamo funcionará somente no Dynamo for Civil 3D. Se um gráfico do Dynamo for Civil 3D for aberto em outro lugar (no Dynamo for Revit, por exemplo), esses nós serão sinalizados com um aviso e não serão executados. \r\n{% endhint %}
+{% hint style="warning" %}
+ Se você usar os nós encontrados nas prateleiras do AutoCAD e do Civil 3D, o gráfico do Dynamo funcionará somente no Dynamo for Civil 3D. Se um gráfico do Dynamo for Civil 3D for aberto em outro lugar (no Dynamo for Revit, por exemplo), esses nós serão sinalizados com um aviso e não serão executados. 
+{% endhint %}
 
-{% hint style="info" %}\r\n **Por que há duas prateleiras separadas para o AutoCAD e o Civil 3D?**
+{% hint style="info" %}
+ **Por que há duas prateleiras separadas para o AutoCAD e o Civil 3D?**
 
-Essa organização distingue os nós de objetos nativos do AutoCAD (linhas, polilinhas, referências de bloco etc.) dos nós de objetos do Civil 3D (alinhamentos, corredores, superfícies etc.). E, do ponto de vista técnico, o AutoCAD e o Civil 3D são dois itens separados – o AutoCAD é o aplicativo base e o Civil 3D é construído com base nele. \r\n{% endhint %}
+Essa organização distingue os nós de objetos nativos do AutoCAD (linhas, polilinhas, referências de bloco etc.) dos nós de objetos do Civil 3D (alinhamentos, corredores, superfícies etc.). E, do ponto de vista técnico, o AutoCAD e o Civil 3D são dois itens separados – o AutoCAD é o aplicativo base e o Civil 3D é construído com base nele. 
+{% endhint %}
 
 ## Hierarquia de nós
 

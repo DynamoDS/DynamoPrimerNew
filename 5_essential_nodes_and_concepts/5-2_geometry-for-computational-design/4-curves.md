@@ -85,4 +85,6 @@ Quando nós conectamos duas linhas, temos uma **Polilinha**. Aqui temos uma repr
 > 2. Grau = 2
 > 3. Grau = 3
 
-{% hint style="info" %}\r\n Observe que quanto maior for o valor do grau, mais pontos de controle serão usados para interpolar a curva resultante. \r\n{% endhint %}
+{% hint style="info" %}
+ Observe que quanto maior for o valor do grau, mais pontos de controle serão usados para interpolar a curva resultante. 
+{% endhint %}

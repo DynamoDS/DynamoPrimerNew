@@ -16,7 +16,9 @@ Trabalhar com pontos COGO e grupos de pontos no Civil 3D é um elemento central
 
 ## Compatibilidade de versão
 
-{% hint style="success" %}\r\n Este gráfico será executado no **Civil 3D 2020** e versões superiores. \r\n{% endhint %}
+{% hint style="success" %}
+ Este gráfico será executado no **Civil 3D 2020** e versões superiores. 
+{% endhint %}
 
 ## Conjunto de dados
 
@@ -41,7 +43,9 @@ Vamos começar
 
 Nossa primeira etapa é obter todos os grupos de pontos no documento e, em seguida, obter todos os pontos COGO dentro de cada grupo. Isso nos fornecerá uma _lista aninhada_ ou uma “lista de listas” com a qual será mais fácil trabalhar mais tarde se aplainarmos tudo em uma única lista com o nó **List.Flatten**.
 
-{% hint style="info" %}\r\n Se você não estiver familiarizado com o trabalho com listas, veja a seção [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+ Se você não estiver familiarizado com o trabalho com listas, veja a seção [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>Obter todos os grupos de pontos e pontos COGO </p></figcaption></figure>
 
@@ -69,7 +73,9 @@ Veja um exemplo de como executar o gráfico usando o **Reprodutor do Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Execução do gráfico usando o Reprodutor do Dynamo e visualização dos resultados no espaço da ferramenta</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+ Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention"). 
+{% endhint %}
 
 > :tada: Missão cumprida.
 
@@ -77,8 +83,14 @@ Veja um exemplo de como executar o gráfico usando o **Reprodutor do Dynamo**.
 
 Veja a seguir algumas ideias sobre como você pode expandir os recursos desse gráfico.
 
-{% hint style="info" %}\r\n Modifique o agrupamento de pontos para que seja baseado na **descrição completa** em vez de na descrição original. \r\n{% endhint %}
+{% hint style="info" %}
+ Modifique o agrupamento de pontos para que seja baseado na **descrição completa** em vez de na descrição original. 
+{% endhint %}
 
-{% hint style="info" %}\r\n Agrupe os pontos em algumas outras **categorias predefinidas** que você escolher (por exemplo, “Instantâneos no nível do solo”, “Monumentos” etc.) \r\n{% endhint %}
+{% hint style="info" %}
+ Agrupe os pontos em algumas outras **categorias predefinidas** que você escolher (por exemplo, “Instantâneos no nível do solo”, “Monumentos” etc.) 
+{% endhint %}
 
-{% hint style="info" %}\r\n Cria automaticamente superfícies TIN para pontos em determinados grupos. \r\n{% endhint %}
+{% hint style="info" %}
+ Cria automaticamente superfícies TIN para pontos em determinados grupos. 
+{% endhint %}

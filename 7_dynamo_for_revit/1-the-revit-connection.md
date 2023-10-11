@@ -35,25 +35,33 @@ Usando os principais nós do Dynamo juntamente com os nós personalizados do Rev
 
 Em um editor de família ou um projeto do Revit, navegue para Complementos e clique em Dynamo.*
 
-{% hint style="warning" %}\r\n *O Dynamo será executado somente no arquivo no qual foi aberto. \r\n{% endhint %}
+{% hint style="warning" %}
+ *O Dynamo será executado somente no arquivo no qual foi aberto. 
+{% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Quando o Dynamo é aberto no Revit, há uma nova categoria chamada “Revit”. Essa é uma adição abrangente à interface de usuário, oferecendo nós especificamente voltados para os fluxos de trabalho do Revit.*
 
-{% hint style="warning" %}\r\n *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo for Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo for Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. 
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Congelar nós
 
-Como o Revit é uma plataforma que fornece um gerenciamento robusto de projetos, as operações paramétricas no Dynamo podem ser complexas e seu cálculo pode ser lento. Se o Dynamo estiver demorando muito para calcular os nós, será recomendável usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto desenvolve o gráfico. Para obter mais informações sobre o congelamento de nós, consulte a seção “[Congelar](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)” no capítulo de sólidos.
+Como o Revit é uma plataforma que fornece um gerenciamento robusto de projetos, as operações paramétricas no Dynamo podem ser complexas e seu cálculo pode ser lento. Se o Dynamo estiver demorando muito para calcular os nós, será recomendável usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto desenvolve o gráfico.
+
+{% hint style="info" %}
+ Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ### Comunidade e blog do Dynamo
 
 Desde que o Dynamo foi originalmente criado para o AEC, sua grande e crescente comunidade é um grande recurso para aprender e entrar em contato com especialistas no setor. A comunidade do Dynamo é formada por arquitetos, engenheiros, programadores e designers, apaixonados por compartilhar e criar.
 
-O Dynamo é um projeto de código aberto que está em constante evolução e muitos desenvolvimentos são relacionados ao Revit. Se você não estiver familiarizado com essa área, entre no fórum de discussão e comece a [fazer perguntas](http://dynamobim.org/forums/forum/dyn/). Se você for um programador e quiser participar do desenvolvimento do Dynamo, confira a [página do github](https://github.com/DynamoDS/Dynamo). Além disso, o [gerenciador de pacotes do Dynamo](http://dynamopackages.com) é um ótimo recurso para as bibliotecas de terceiros. Muitos desses pacotes são feitos com o AEC em mente. Vamos também analisar os pacotes de terceiros para obter uma panorâmica neste capítulo.
+O Dynamo é um projeto de código aberto que está em constante evolução e muitos desenvolvimentos são relacionados ao Revit. Se você não estiver familiarizado com essa área, entre no fórum de discussão e comece a [fazer perguntas](http://dynamobim.org/forums/forum/dyn/). Se você for um programador e quiser participar do desenvolvimento do Dynamo, confira o [repositório do Github](https://github.com/DynamoDS/Dynamo). Além disso, o [gerenciador de pacotes do Dynamo](http://dynamopackages.com) é um ótimo recurso para as bibliotecas de terceiros. Muitos desses pacotes são feitos com o AEC em mente. Vamos também analisar os pacotes de terceiros para obter uma panorâmica neste capítulo.
 
 O Dynamo também mantém um blog ativo. Leia os artigos recentes para saber mais sobre os últimos acontecimentos.
 

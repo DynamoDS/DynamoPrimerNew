@@ -22,7 +22,9 @@ As entradas e saídas nos nós são chamadas de portas e agem como receptores pa
 
 As portas esperam receber dados de um determinado tipo. Por exemplo, ao conectar um número como _2.75_ às portas em um nó Ponto por coordenadas, resultará na criação com êxito de um ponto; no entanto, se fornecermos _“Vermelho”_ à mesma porta, resultará em um erro.
 
-{% hint style="info" %}\r\n Dica: Passe o cursor do mouse sobre uma porta para ver uma dica de ferramenta contendo o tipo de dados esperado. \r\n{% endhint %}
+{% hint style="info" %}
+ Dica: Passe o cursor do mouse sobre uma porta para ver uma dica de ferramenta contendo o tipo de dados esperado. 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -51,15 +53,27 @@ Quando você passa o cursor do mouse ou clica com o botão direito do mouse sobr
 
 #### Como lidar com nós com estado de erro ou de aviso
 
-Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone de dica de ferramenta de aviso ![](images/nodesandwires-nodewarningicon.png) ou erro ![](images/nodesandwires-nodeerroricon.png) para expandi-lo.
+Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone de dica de ferramenta de aviso ![![](images/nodesandwires-nodewarningicon.png)ou erro](images/nodesandwires-nodeerroricon.png) para expandi-lo.
 
-{% hint style="info" %}\r\n Dica: Com essa informação da dica de ferramenta, examine os nós a montante para ver se o tipo de dados ou a estrutura de dados necessários apresenta erro. \r\n{% endhint %}
+{% hint style="info" %}
+ Dica: Com essa informação da dica de ferramenta, examine os nós a montante para ver se o tipo de dados ou a estrutura de dados necessários apresenta erro. 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. Dica de ferramenta de aviso – “Nulo” ou nenhum dado não pode ser entendido como um Duplo, ou seja, um número
 > 2. Use o nó de inspeção para examinar os dados de entrada
 > 3. A montante do nó de número está indicando “Vermelho”, e não um número
+
+### Congelar nós
+
+Em algumas situações, você pode desejar impedir a execução de nós específicos no programa visual. É possível fazer isso “congelando” o nó, que é uma opção no menu de contexto do nó.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+Congelar um nó também congela os nós que estão a jusante dele. Em outras palavras, todos os nós que dependem da saída de um nó congelado também serão congelados.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## Fios
 

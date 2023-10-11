@@ -16,7 +16,9 @@ Navegar por essas categorias é a maneira mais rápida de entender a hierarquia 
 
 Navegue na biblioteca clicando nos menus para expandir cada categoria e suas subcategorias
 
-{% hint style="info" %}\r\n Geometria oferece ótimos menus para começar a explorar, pois contêm a maior quantidade de nós. \r\n{% endhint %}
+{% hint style="info" %}
+ Geometria oferece ótimos menus para começar a explorar, pois contêm a maior quantidade de nós. 
+{% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -115,7 +117,9 @@ Ou consultar os resultados da geometria através de um nó **Watch3D**.
 
 Ambos são encontrados na categoria da vista na biblioteca principal.
 
-{% hint style="info" %}\r\n Dica: Às vezes, a visualização 3D pode causar distrações, quando o Programa visual contém muitos nós. Considere desmarcar a opção Exibir visualização de plano de fundo no menu Configurações e usar um nó Watch3D para visualizar a geometria. \r\n{% endhint %}
+{% hint style="info" %}
+ Dica: Às vezes, a visualização 3D pode causar distrações, quando o Programa visual contém muitos nós. Considere desmarcar a opção Exibir visualização de plano de fundo no menu Configurações e usar um nó Watch3D para visualizar a geometria. 
+{% endhint %}
 
 #### Bloco de código
 

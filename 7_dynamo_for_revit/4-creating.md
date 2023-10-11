@@ -56,7 +56,9 @@ Usamos os nós _“Selecionar o elemento do modelo”_ e _“Selecionar face”_
 > 3. Faça o mesmo para as arestas inferiores da fachada no Revit.
 > 4. Os nós de _Inspeção_ revelam que agora temos linhas no Dynamo. Isso é convertido automaticamente na geometria do Dynamo, já que as próprias arestas não são elementos do Revit. Essas curvas são as referências que usaremos para instanciar as treliças adaptativas na fachada.
 
-{% hint style="info" %}\r\n *Para manter uma topologia consistente, estamos nos referindo a um modelo que não tenha mais faces ou arestas adicionadas. Embora os parâmetros possam alterar sua forma, a maneira como ele é construído permanece consistente. \r\n{% endhint %}
+{% hint style="info" %}
+ *Para manter uma topologia consistente, estamos nos referindo a um modelo que não tenha mais faces ou arestas adicionadas. Embora os parâmetros possam alterar sua forma, a maneira como ele é construído permanece consistente. 
+{% endhint %}
 
 Primeiro, precisamos unir as curvas e mesclá-las em uma lista. Dessa forma, podemos _“agrupar”_ as curvas para realizar operações de geometria.
 

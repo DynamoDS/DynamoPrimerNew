@@ -134,7 +134,9 @@ Este índice fornece informações adicionais sobre todos os nós usados neste m
 | ![](<images/5-1/Cuboidheight(1) (1) (1).jpg>)                    | <p><strong>Cuboid.Height</strong></p><p>Retorna as cotas de entrada do Cuboide e NÃO as cotas reais do espaço universal. **</p>           | ![](images/5-1/indexofnodes-cuboidheight.jpg)                    |
 | ![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>Retorna a caixa delimitadora como um cuboide de sólido.</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
 
-{% hint style="warning" %}\r\n **Em outras palavras, se você criar um comprimento de largura de Cuboide (eixo X) 10 e transformá-lo em um CoordinateSystem com dimensionamento de 2 vezes em X, a largura ainda será 10. O ASM não permite extrair os vértices de um corpo em nenhuma ordem previsível; portanto, é impossível determinar as cotas após uma transformação. \r\n{% endhint %}
+{% hint style="warning" %}
+ **Em outras palavras, se você criar um comprimento de largura de Cuboide (eixo X) 10 e transformá-lo em um CoordinateSystem com dimensionamento de 2 vezes em X, a largura ainda será 10. O ASM não permite extrair os vértices de um corpo em nenhuma ordem previsível; portanto, é impossível determinar as cotas após uma transformação. 
+{% endhint %}
 
 ### Curva
 
