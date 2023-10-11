@@ -65,6 +65,16 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 > 2. 使用“Watch”节点检查输入数据
 > 3. 上游“Number”节点存储的是“Red”而非数字
 
+### 冻结节点
+
+在某些情况下，您可能希望阻止在可视化程序中执行特定节点。为此，可以“冻结”节点，该节点是节点右键单击菜单下的一个选项。
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+冻结节点还会冻结其下游的节点。换言之，依赖于冻结节点输出的所有节点也将冻结。
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
+
 ## 导线
 
 导线连接节点以创建关系并建立可视化程序的流。我们可以按照字面意思将其视为电线，用于将数据脉冲从一个对象传送到下一个对象。

@@ -51,13 +51,17 @@ Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑
 
 ### 冻结节点
 
-由于 Revit 是一个提供强大项目管理的平台，因此 Dynamo 中的参数化操作可能非常复杂且计算速度缓慢。如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。有关冻结节点的详细信息，请查看“实体”章节中的“[冻结](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)”部分。
+由于 Revit 是一个提供强大项目管理的平台，因此 Dynamo 中的参数化操作可能非常复杂且计算速度缓慢。如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。
+
+{% hint style="info" %}
+您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "提及")部分，阅读有关冻结节点的详细信息。
+{% endhint %}
 
 ### 社区和 Dynamo 博客
 
 由于 Dynamo 最初是为 AEC 开发的，因此其庞大且不断壮大的社区是一个绝佳资源，可供从业内专家处学习并与之联系。Dynamo 的社区由那些热衷于分享和创作的建筑师、工程师、程序员以及设计师组成。
 
-Dynamo 是一个不断发展的开源项目，而且许多开发与 Revit 相关。如果您对于该游戏是新手，请访问论坛并开始[发布问题](http://dynamobim.org/forums/forum/dyn/)!如果您是程序员并想参与 Dynamo 开发，请查看 [GitHub 页面](https://github.com/DynamoDS/Dynamo)。此外，[Dynamo 软件包管理器](http://dynamopackages.com)是第三方库的绝佳资源。其中许多软件包都是由 AEC 制作的，我们将在本章中查看用于镶板的第三方软件包。
+Dynamo 是一个不断发展的开源项目，而且许多开发与 Revit 相关。如果您对于该游戏是新手，请访问论坛并开始[发布问题](http://dynamobim.org/forums/forum/dyn/)!如果您是程序员并想参与 Dynamo 开发，请查看 [GitHub 库](https://github.com/DynamoDS/Dynamo)。此外，[Dynamo 软件包管理器](http://dynamopackages.com)是第三方库的绝佳资源。其中许多软件包都是由 AEC 制作的，我们将在本章中查看用于镶板的第三方软件包。
 
 Dynamo 还维护着一个活跃的博客。阅读最近的帖子，了解最新进展！
 
