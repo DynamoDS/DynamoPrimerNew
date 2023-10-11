@@ -150,7 +150,9 @@ Als Nächstes wenden Sie mit **List.Combine** eine Funktion auf Objekte in 2 se
 
 Nach Abschluss werden die 2 Punktgruppen mithilfe einer **Line.ByStartPointEndPoint**-Funktion komprimiert/gekoppelt, sodass in Dynamo 10 Zeilen zurückgegeben werden.
 
-{% hint style="info" %}\r\n In der Übung zu n-dimensionalen Listen finden Sie ein weiteres Beispiel für die Verwendung von List.Combine. \r\n{% endhint %}
+{% hint style="info" %}
+In der Übung zu n-dimensionalen Listen finden Sie ein weiteres Beispiel für die Verwendung von List.Combine. 
+{% endhint %}
 
 ### List@Level
 
