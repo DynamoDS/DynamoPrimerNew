@@ -27,7 +27,7 @@ Die Entwicklung kinematischer Profile für die Lichtraumvalidierung ist ein wich
 
 Laden Sie zunächst die folgenden Beispieldateien herunter, und öffnen Sie dann die DWG-Datei und das Dynamo-Diagramm.
 
-{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope (1).dyn" %}
+{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dyn" %}
 
 {% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dwg" %}
 
