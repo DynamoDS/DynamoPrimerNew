@@ -40,7 +40,7 @@ Boolesche Operationen sind sehr komplex und ihre Berechnung kann möglicherweise
 > 4\. Alle betroffenen Blöcke und die zugehörigen Geometrievorschauen werden aktualisiert und wieder im standardmäßigen Vorschaumodus angezeigt.
 
 {% hint style="info" %}
- Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "Blöcke und Drähte"). 
+ Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
 {% endhint %}
 
 ## Vertiefung...
