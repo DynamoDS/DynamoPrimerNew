@@ -34,7 +34,7 @@ Laden Sie zunächst die folgenden Beispieldateien herunter, und öffnen Sie dann
 
 {% endhint %}
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
