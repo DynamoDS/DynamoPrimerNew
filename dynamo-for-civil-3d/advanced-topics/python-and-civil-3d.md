@@ -206,9 +206,7 @@ Hier sehen Sie die endgültige Dynamo-Geometrie.
 Hier noch eine kurze Anmerkung. Je nachdem, welche Version von Civil 3D Sie verwenden, ist der Python-Block möglicherweise anders konfiguriert. In **Civil 3D 2020 und 2021** hat Dynamo das Werkzeug **IronPython** verwendet, um Daten zwischen .NET-Objekten und Python-Skripten zu verschieben. In **Civil 3D 2022** wurde in Dynamo jedoch der standardmäßige native Python-Interpreter (auch **CPython** genannt) anstelle von Python 3 verwendet. Zu den Vorteilen dieser Umstellung zählen der Zugriff auf beliebte moderne Bibliotheken und neue Plattformfunktionen, grundlegende Wartung und Sicherheits-Patches.
 
 {% hint style="info" %}
-
  Weitere Informationen zu dieser Umstellung und zum Aktualisieren älterer Skripte finden Sie im [Dynamo-Blog](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Wenn Sie IronPython weiterhin verwenden möchten, müssen Sie lediglich das **DynamoIronPython2.7**-Paket mithilfe des Dynamo Package Manager installieren. 
-
 {% endhint %}
 
 [^1]: Vorgabemäßig wird die Dynamo-Geometriebibliothek nicht zur Python-Umgebung hinzugefügt. Unser Ziel mit diesem Skript ist die Ausgabe einer Liste von Dynamo-Punkten für die Einzugsgebietsgrenzen. Daher müssen wir diese Zeile hinzufügen, um die Punkte später erstellen zu können.
