@@ -1,6 +1,6 @@
 # Python und Civil 3D
 
-Dynamo ist als [visuelles Programmierwerkzeug](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) zwar sehr leistungsstark, es ist jedoch auch möglich, nicht nur Blöcke und Drähte zu verwenden, sondern Code in Textform zu schreiben. Es gibt zwei Möglichkeiten, dies zu tun:
+Dynamo ist als [visuelles Programmierwerkzeug](../../a\_appendix/a-1\_visual-programming-and-dynamo.md) zwar sehr leistungsstark, es ist jedoch auch möglich, nicht nur Blöcke und Drähte zu verwenden, sondern Code in Textform zu schreiben. Es gibt zwei Möglichkeiten, dies zu tun: 
 
 1. Schreiben von **DesignScript** mithilfe eines Codeblocks
 2. Schreiben von **Python** mithilfe eines Python-Blocks
