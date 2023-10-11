@@ -7,7 +7,9 @@ Dodatek Dynamo daje niezwykłe możliwości jako narzędzie do [programowania wi
 
 W tej sekcji omówiono używanie języka Python w środowisku programu Civil 3D w celu wykorzystywania interfejsów API .NET programów AutoCAD i Civil 3D.
 
-{% hint style="info" %}\r\n Aby uzyskać bardziej ogólne informacje na temat używania języka Python w dodatku Dynamo, skorzystaj z sekcji [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+ Aby uzyskać bardziej ogólne informacje na temat używania języka Python w dodatku Dynamo, skorzystaj z sekcji [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention"). 
+{% endhint %}
 
 ## Dokumentacja interfejsu API
 
@@ -21,7 +23,9 @@ Dla programów AutoCAD i Civil 3D jest dostępnych po kilka interfejsów API, kt
 
 [Podręcznik użytkownika interfejsu API .NET dla programu Civil 3D](https://help.autodesk.com/view/CIV3D/2024/PLK/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %}\r\n Podczas zapoznawania się z tą sekcją możesz zetknąć się z pewnymi nowymi dla Ciebie pojęciami, takimi jak bazy danych, transakcje, metody, właściwości itp. Wiele z tych pojęć należy do podstaw pracy z interfejsami API .NET i nie są one charakterystyczne ani dla dodatku Dynamo, ani dla języka Python. Szczegółowe omówienie tych elementów wykracza poza zakres tej sekcji przewodnika Primer, dlatego zaleca się częste korzystanie z informacji, do których prowadzą powyższe łącza. \r\n{% endhint %}
+{% hint style="info" %}
+ Podczas zapoznawania się z tą sekcją możesz zetknąć się z pewnymi nowymi dla Ciebie pojęciami, takimi jak bazy danych, transakcje, metody, właściwości itp. Wiele z tych pojęć należy do podstaw pracy z interfejsami API .NET i nie są one charakterystyczne ani dla dodatku Dynamo, ani dla języka Python. Szczegółowe omówienie tych elementów wykracza poza zakres tej sekcji przewodnika Primer, dlatego zaleca się częste korzystanie z informacji, do których prowadzą powyższe łącza. 
+{% endhint %}
 
 ## Szablon kodu
 
@@ -39,8 +43,10 @@ Podczas pierwszej edycji nowego węzła w języku Python jest on wstępnie wype�
 > 8. Usuń oznaczenie komentarza tego wiersza, aby zatwierdzić transakcję po zakończeniu głównej pracy.
 > 9. Aby zapisać dane wyjściowe węzła, należy przypisać je do zmiennej `OUT` na końcu skryptu.
 
-{% hint style="info" %}\r\n **Chcesz wprowadzić dostosowania?**\
- Domyślny szablon w języku Python można zmodyfikować, edytując plik `PythonTemplate.py` znajdujący się w folderze `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. \r\n{% endhint %}
+{% hint style="info" %}
+ **Chcesz wprowadzić dostosowania?**\
+ Domyślny szablon w języku Python można zmodyfikować, edytując plik `PythonTemplate.py` znajdujący się w folderze `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. 
+{% endhint %}
 
 ## Przykład
 
@@ -88,13 +94,17 @@ Zanim przejdziemy dalej, musimy krótko odnieść się do ważnego pojęcia. W s
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Typ dodatku Dynamo</th><th width="373">Opakowania</th></tr></thead><tbody><tr><td><strong>Obiekt</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Element</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Element</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %}\r\n Ogólnie bezpieczniej jest uzyskać identyfikator obiektu za pomocą właściwości `InternalObjectId`, a następnie uzyskać dostęp do opakowanego obiektu w transakcji. Wynika to z tego, że właściwość `InternalDBObject` zwraca obiekt DBObject programu AutoCAD, który nie jest w stanie zapisywalnym. \r\n{% endhint %}
+{% hint style="warning" %}
+ Ogólnie bezpieczniej jest uzyskać identyfikator obiektu za pomocą właściwości `InternalObjectId`, a następnie uzyskać dostęp do opakowanego obiektu w transakcji. Wynika to z tego, że właściwość `InternalDBObject` zwraca obiekt DBObject programu AutoCAD, który nie jest w stanie zapisywalnym. 
+{% endhint %}
 
 ### Skrypt w języku Python
 
 Oto pełny skrypt w języku Python, który wykonuje operacje polegające na uzyskaniu dostępu do wewnętrznych obiektów zlewni i pobraniu ich punktów obwiedni. Wyróżnione wiersze to te zmodyfikowane lub dodane w domyślnym kodzie-szablonie.
 
-{% hint style="info" %}\r\n Klikaj podkreślony tekst w skrypcie, aby uzyskać wyjaśnienia dotyczące poszczególnych wierszy. \r\n{% endhint %}
+{% hint style="info" %}
+ Klikaj podkreślony tekst w skrypcie, aby uzyskać wyjaśnienia dotyczące poszczególnych wierszy. 
+{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># Wczytywanie bibliotek standardowych języka Python i bibliotek języka DesignScript
 import sys
@@ -161,7 +171,9 @@ with adoc.LockDocument():
 <strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
 </strong></code></pre>
 
-{% hint style="warning" %}\r\n Ogólnie najlepszą praktyką jest umieszczenie większości kodu logiki skryptu wewnątrz transakcji. Zapewnia to bezpieczny dostęp do obiektów, które są odczytywane/zapisywane przez skrypt. W wielu przypadkach pominięcie transakcji może spowodować błąd krytyczny. \r\n{% endhint %}
+{% hint style="warning" %}
+ Ogólnie najlepszą praktyką jest umieszczenie większości kodu logiki skryptu wewnątrz transakcji. Zapewnia to bezpieczny dostęp do obiektów, które są odczytywane/zapisywane przez skrypt. W wielu przypadkach pominięcie transakcji może spowodować błąd krytyczny. 
+{% endhint %}
 
 ### Tworzenie krzywych PolyCurve
 
@@ -181,7 +193,9 @@ Oto ostateczna geometria dodatku Dynamo.
 
 Zanim zakończymy tę część, omówmy jeszcze jedną kwestię. W zależności od używanej wersji programu Civil 3D węzeł w języku Python może być skonfigurowany w określony sposób. W programach **Civil 3D 2020 i 2021** dodatek Dynamo używał narzędzia o nazwie **IronPython** do przenoszenia danych między obiektami .NET a skryptami w języku Python. Jednak w programie **Civil 3D 2022** dodatek Dynamo używa standardowego natywnego interpretera języka Python (znanego jako **CPython**), w którym jest używany język Python 3. Korzyści płynące z przejścia na nowy model obejmują dostęp do popularnych nowoczesnych bibliotek i nowych funkcji platformy, niezbędne poprawki konserwacyjne i poprawki zabezpieczeń.
 
-{% hint style="info" %}\r\n Więcej informacji na temat tego przejścia i uaktualniania starszych skryptów można znaleźć w [blogu dotyczącym dodatku Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Aby nadal używać mechanizmu IronPython, wystarczy zainstalować pakiet **DynamoIronPython2.7** za pomocą Menedżera pakietów Dynamo. \r\n{% endhint %}
+{% hint style="info" %}
+ Więcej informacji na temat tego przejścia i uaktualniania starszych skryptów można znaleźć w [blogu dotyczącym dodatku Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Aby nadal używać mechanizmu IronPython, wystarczy zainstalować pakiet **DynamoIronPython2.7** za pomocą Menedżera pakietów Dynamo. 
+{% endhint %}
 
 [^1]: Domyślnie biblioteka geometrii dodatku Dynamo nie jest dodawana do środowiska języka Python. Celem tego skryptu jest utworzenie listy punktów dodatku Dynamo dla obwiedni zlewni, dlatego należy dodać ten wiersz, aby utworzyć punkty później.
 

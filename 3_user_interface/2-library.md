@@ -16,7 +16,9 @@ Przeglądanie tych kategorii jest najszybszym sposobem zrozumienia hierarchii te
 
 Przeglądaj bibliotekę, klikając poszczególne menu, aby rozwijać kategorie i ich podkategorie
 
-{% hint style="info" %}\r\n Geometria to świetne menu, które doskonale nadają się do rozpoczęcia przeglądania, ponieważ zawierają największą liczbę węzłów. \r\n{% endhint %}
+{% hint style="info" %}
+ Geometria to świetne menu, które doskonale nadają się do rozpoczęcia przeglądania, ponieważ zawierają największą liczbę węzłów. 
+{% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -115,7 +117,9 @@ Można też wyświetlić wyniki geometrii za pomocą węzła **Watch3D**.
 
 Oba te elementy znajdują się w kategorii widoku w bibliotece podstawowej.
 
-{% hint style="info" %}\r\n Wskazówka: czasami podgląd 3D może rozpraszać, gdy program wizualny zawiera wiele węzłów. Warto rozważyć wyczyszczenie zaznaczenia opcji Wyświetlanie podglądu tła w menu Ustawienia i użycie zamiast tego węzła Watch3D do wyświetlania podglądu geometrii. \r\n{% endhint %}
+{% hint style="info" %}
+ Wskazówka: czasami podgląd 3D może rozpraszać, gdy program wizualny zawiera wiele węzłów. Warto rozważyć wyczyszczenie zaznaczenia opcji Wyświetlanie podglądu tła w menu Ustawienia i użycie zamiast tego węzła Watch3D do wyświetlania podglądu geometrii. 
+{% endhint %}
 
 #### Code Block
 

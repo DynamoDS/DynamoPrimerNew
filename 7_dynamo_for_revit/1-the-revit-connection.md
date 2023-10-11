@@ -35,25 +35,33 @@ Używając podstawowych węzłów Dynamo wraz z węzłami niestandardowymi progr
 
 W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kliknij opcję Dynamo*.
 
-{% hint style="warning" %}\r\n *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. 
+{% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie do procesów roboczych programu Revit*.
 
-{% hint style="warning" %}\r\n*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. \r\n{% endhint %}
+{% hint style="warning" %}
+*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. 
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Blokowanie węzłów
 
-Ponieważ program Revit jest platformą zapewniającą zaawansowane zarządzanie projektem, operacje parametryczne w dodatku Dynamo mogą być skomplikowane, a ich obliczanie — powolne. Jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu. Aby uzyskać więcej informacji na temat blokowania węzłów, zobacz sekcję [„Blokowanie”](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) w rozdziale poświęconym bryłom.
+Ponieważ program Revit jest platformą zapewniającą zaawansowane zarządzanie projektem, operacje parametryczne w dodatku Dynamo mogą być skomplikowane, a ich obliczanie — powolne. Jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu.
+
+{% hint style="info" %}
+ Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ### Społeczność i blog poświęcone dodatkowi Dynamo
 
 Ponieważ dodatek Dynamo został pierwotnie utworzony dla dziedzin architektury, inżynierii i budownictwa (AEC), jego duża i stale rosnąca społeczność stanowi doskonałe źródło do nauki i zapewnia możliwości kontaktu z ekspertami w branży. Społeczność dodatku Dynamo składa się z architektów, inżynierów, programistów i projektantów pełnych pasji tworzenia i dzielenia się wynikami pracy.
 
-Dynamo to projekt typu open source, który ciągle ewoluuje, a znaczna część jego rozwoju jest związana z programem Revit. Jeśli jesteś nowym użytkownikiem, odwiedź forum dyskusyjne i zacznij [publikować pytania](http://dynamobim.org/forums/forum/dyn/). Jeśli jesteś programistą i chcesz się zaangażować w rozwój dodatku Dynamo, odwiedź [stronę w serwisie Github](https://github.com/DynamoDS/Dynamo). Przydatnym zasobem dotyczącym bibliotek innych dostawców jest [Menedżer pakietów Dynamo](http://dynamopackages.com). Wiele z tych pakietów utworzono z myślą o architekturze, inżynierii i budownictwie. W tym rozdziale przyjrzymy się pakietom innych dostawców do panelowania.
+Dynamo to projekt typu open source, który ciągle ewoluuje, a znaczna część jego rozwoju jest związana z programem Revit. Jeśli jesteś nowym użytkownikiem, odwiedź forum dyskusyjne i zacznij [publikować pytania](http://dynamobim.org/forums/forum/dyn/). Jeśli jesteś programistą i chcesz się zaangażować w rozwój dodatku Dynamo, odwiedź [repozytorium w serwisie Github](https://github.com/DynamoDS/Dynamo). Przydatnym zasobem dotyczącym bibliotek innych dostawców jest [Menedżer pakietów Dynamo](http://dynamopackages.com). Wiele z tych pakietów utworzono z myślą o architekturze, inżynierii i budownictwie. W tym rozdziale przyjrzymy się pakietom innych dostawców do panelowania.
 
 Z dodatkiem Dynamo związany jest też aktywny blog. Przeczytaj najnowsze wpisy, aby zapoznać się z nowościami i wiadomościami.
 

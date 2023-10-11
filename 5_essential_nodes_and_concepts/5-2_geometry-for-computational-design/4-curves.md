@@ -85,4 +85,6 @@ Wraz ze wzrostem złożoności funkcji parametrycznych definiujących kształt m
 > 2. Stopień = 2
 > 3. Stopień = 3
 
-{% hint style="info" %}\r\n Należy zauważyć, że im większa wartość stopnia, tym więcej punktów kontrolnych jest używanych do interpolacji wynikowej krzywej. \r\n{% endhint %}
+{% hint style="info" %}
+ Należy zauważyć, że im większa wartość stopnia, tym więcej punktów kontrolnych jest używanych do interpolacji wynikowej krzywej. 
+{% endhint %}

@@ -150,7 +150,9 @@ Następnie użyjemy węzła **List.Combine**, aby zastosować funkcję do obiekt
 
 Po zakończeniu te 2 zestawy punktów są spakowane/sparowane za pomocą funkcji **Line.ByStartPointEndPoint** i powodują zwrócenie 10 linii w dodatku Dynamo.
 
-{% hint style="info" %}\r\n Zapoznaj się z ćwiczeniem w części dotyczącej list n-wymiarowych, aby zobaczyć inny przykład użycia węzła List.Combine. \r\n{% endhint %}
+{% hint style="info" %}
+ Zapoznaj się z ćwiczeniem w części dotyczącej list n-wymiarowych, aby zobaczyć inny przykład użycia węzła List.Combine. 
+{% endhint %}
 
 ### List@Level
 

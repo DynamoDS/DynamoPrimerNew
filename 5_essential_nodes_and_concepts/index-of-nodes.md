@@ -134,7 +134,9 @@ Ten indeks zawiera dodatkowe informacje o wszystkich węzłach zawartych w tym e
 | ![](<images/5-1/Cuboidheight(1) (1) (1).jpg>)                    | <p><strong>Cuboid.Height</strong></p><p>Zwraca wymiary wejściowe prostopadłościanu, NIE rzeczywiste wymiary przestrzeni globalnej**.</p>           | ![](images/5-1/indexofnodes-cuboidheight.jpg)                    |
 | ![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>Pobierz ramkę ograniczającą jako prostopadłościan bryłowy</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
 
-{% hint style="warning" %}\r\n**Innymi słowy: jeśli utworzysz długość szerokości prostopadłościanu (na osi X) równą 10 i przekształcisz go, stosując układ współrzędnych z 2-krotnym skalowaniem na osi X, szerokość nadal będzie wynosić 10. ASM nie pozwala wyodrębnić wierzchołków bryły w przewidywalnej kolejności, dlatego nie można określić wymiarów po przekształceniu. \r\n{% endhint %}
+{% hint style="warning" %}
+**Innymi słowy: jeśli utworzysz długość szerokości prostopadłościanu (na osi X) równą 10 i przekształcisz go, stosując układ współrzędnych z 2-krotnym skalowaniem na osi X, szerokość nadal będzie wynosić 10. ASM nie pozwala wyodrębnić wierzchołków bryły w przewidywalnej kolejności, dlatego nie można określić wymiarów po przekształceniu. 
+{% endhint %}
 
 ### Krzywa
 

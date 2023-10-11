@@ -33,9 +33,11 @@ Jeśli szukasz wersji poprzednich lub eksperymentalnych („bleeding edge”), w
 
 ![](images/DynamoSandboxAllbuilds.jpg)
 
-{% hint style="info" %}\r\n W wersjach eksperymentalnych („bleeding edge”) mogą być dostępne niektóre nowe i eksperymentalne funkcje, które nie zostały jeszcze w pełni przetestowane, dlatego mogą być niestabilne. Korzystając z takiej wersji, możesz wykryć błędy lub problemy i pomóc nam doskonalić tę aplikację przez zgłoszenie problemów naszemu zespołowi.
+{% hint style="info" %}
+ W wersjach eksperymentalnych („bleeding edge”) mogą być dostępne niektóre nowe i eksperymentalne funkcje, które nie zostały jeszcze w pełni przetestowane, dlatego mogą być niestabilne. Korzystając z takiej wersji, możesz wykryć błędy lub problemy i pomóc nam doskonalić tę aplikację przez zgłoszenie problemów naszemu zespołowi.
 
-Początkującym zaleca się pobranie stabilnej oficjalnej wersji. \r\n{% endhint %}
+Początkującym zaleca się pobranie stabilnej oficjalnej wersji. 
+{% endhint %}
 
 #### Rozpakowywanie
 
@@ -63,4 +65,6 @@ Zostanie wyświetlony ekran startowy aplikacji DynamoSandbox, jak to tutaj pokaz
 
 Gratulacje, konfiguracja do korzystania z aplikacji DynamoSandbox jest gotowa.
 
-{% hint style="info" %}\r\n **Geometria** to dodatkowa funkcja w aplikacji Dynamo Sandbox dostępna tylko dla użytkowników posiadających bieżącą subskrypcję lub licencję na następujące oprogramowanie Autodesk: Revit, Robot Structural Analysis, FormIt i Civil 3D. **Geometria** umożliwia użytkownikom importowanie, tworzenie, edytowanie i eksportowanie geometrii z aplikacji Dynamo Sandbox. \r\n{% endhint %}
+{% hint style="info" %}
+ **Geometria** to dodatkowa funkcja w aplikacji Dynamo Sandbox dostępna tylko dla użytkowników posiadających bieżącą subskrypcję lub licencję na następujące oprogramowanie Autodesk: Revit, Robot Structural Analysis, FormIt i Civil 3D. **Geometria** umożliwia użytkownikom importowanie, tworzenie, edytowanie i eksportowanie geometrii z aplikacji Dynamo Sandbox. 
+{% endhint %}

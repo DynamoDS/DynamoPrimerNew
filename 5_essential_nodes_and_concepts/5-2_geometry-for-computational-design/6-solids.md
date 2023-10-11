@@ -27,7 +27,7 @@ Do modyfikowania brył można używać [operacji logicznych](6-solids.md#boolean
 
 ### Blokowanie
 
-Operacje logiczne są złożone i ich obliczanie może być powolne. Funkcja blokowania pozwala wstrzymać wykonywanie wybranych węzłów i zależnych od nich węzłów na dalszym etapie przepływu.
+Operacje logiczne są złożone i ich obliczanie może być powolne. Za pomocą funkcji „blokowania” można wstrzymać wykonywanie wybranych węzłów i zależnych od nich węzłów na dalszym etapie przepływu.
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
@@ -38,6 +38,10 @@ Operacje logiczne są złożone i ich obliczanie może być powolne. Funkcja blo
 > 3\. Aby odblokować węzły, kliknij prawym przyciskiem myszy i wyczyść pole wyboru Zablokuj.
 >
 > 4\. Wszystkie zależne węzły i skojarzone podglądy geometrii zostaną zaktualizowane i wrócą do standardowego trybu podglądu.
+
+{% hint style="info" %}
+ Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ## Bliższe spojrzenie na...
 

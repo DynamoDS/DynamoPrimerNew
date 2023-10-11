@@ -18,7 +18,9 @@ Omówimy pokrótce hierarchię programu Revit.
 
 Pamiętasz systematykę organizmów z biologii? Królestwo, typ, gromada, rząd, rodzina, rodzaj, gatunek? Elementy programu Revit są skategoryzowane podobnie. Na poziomie podstawowym hierarchię programu Revit można podzielić na kategorie, rodziny, typy* i wystąpienia. Wystąpienie to pojedynczy element modelu (z unikatowym identyfikatorem), a kategoria definiuje ogólną grupę (na przykład „ściany” czy „stropy”). Dzięki uporządkowaniu bazy danych programu Revit w ten sposób można wybrać jeden element, a następnie wybrać wszystkie podobne elementy na podstawie określonego poziomu w hierarchii.
 
-{% hint style="warning" %}\r\n *Uwaga — typy w programie Revit definiuje się inaczej niż typy w programowaniu. Typ w programie Revit oznacza gałąź hierarchii, a nie „typ danych”. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Uwaga — typy w programie Revit definiuje się inaczej niż typy w programowaniu. Typ w programie Revit oznacza gałąź hierarchii, a nie „typ danych”. 
+{% endhint %}
 
 ### Nawigacja w bazach danych za pomocą węzłów Dynamo
 
@@ -149,4 +151,6 @@ Następnie możemy wyodrębnić niektóre podstawowe informacje z typu rodziny k
 > 2. Połącz węzeł _„All Elements of Family Type”_ z węzłem _„AdaptiveComponent.Location”_. Otrzymamy listę list, z których każda zawiera trzy punkty reprezentujące położenie punktów adaptacyjnych.
 > 3. Po połączeniu z węzłem _„Polygon.ByPoints”_ otrzymamy krzywą PolyCurve. Widać to w rzutni dodatku Dynamo. Za pomocą tej metody zwizualizowaliśmy geometrię jednego elementu i wyabstrahowaliśmy geometrię pozostałych elementów (których może być więcej niż w tym przykładzie).
 
-{% hint style="info" %}\r\n Wskazówka: po kliknięciu zielonego numeru elementu programu Revit w dodatku Dynamo ten element zostanie powiększony w rzutni programu Revit. \r\n{% endhint %}
+{% hint style="info" %}
+ Wskazówka: po kliknięciu zielonego numeru elementu programu Revit w dodatku Dynamo ten element zostanie powiększony w rzutni programu Revit. 
+{% endhint %}

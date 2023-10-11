@@ -22,7 +22,9 @@ Wejścia i wyjścia węzłów są nazywane portami i działają jak gniazda dla 
 
 Porty oczekują, że otrzymają dane określonego typu. Na przykład podłączenie liczby, takiej jak _2,75_, do portów w węźle Point By Coordinates („punkt według współrzędnych”) spowoduje utworzenie punktu. Jednak jeśli do tego samego portu zostanie podłączony ciąg _„Czerwony”_, spowoduje to błąd.
 
-{% hint style="info" %}\r\n Wskazówka: umieść kursor na porcie, aby wyświetlić etykietę narzędzia zawierającą oczekiwany typ danych. \r\n{% endhint %}
+{% hint style="info" %}
+ Wskazówka: umieść kursor na porcie, aby wyświetlić etykietę narzędzia zawierającą oczekiwany typ danych. 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,13 +55,25 @@ Po ustawieniu wskaźnika myszy na nazwie lub portach albo kliknięciu ich prawym
 
 Jeśli program wizualny zawiera ostrzeżenie lub błędy, dodatek Dynamo dostarczy dodatkowe informacje na temat problemu. Każdy żółty węzeł ma również etykietę narzędzia nad nazwą. Ustaw wskaźnik myszy na ikonie etykiety narzędzia ostrzeżenia ![](images/nodesandwires-nodewarningicon.png) lub błędu ![](images/nodesandwires-nodeerroricon.png), aby ją rozwinąć.
 
-{% hint style="info" %}\r\n Wskazówka: na podstawie informacji z etykiety narzędzia sprawdź we wcześniejszych węzłach, czy wymagane typy danych lub struktury danych nie są błędne. \r\n{% endhint %}
+{% hint style="info" %}
+ Wskazówka: na podstawie informacji z etykiety narzędzia sprawdź we wcześniejszych węzłach, czy wymagane typy danych lub struktury danych nie są błędne. 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. Etykieta narzędzia z ostrzeżeniem — wartość „null” lub nie można zinterpretować danych jako wartości typu Double, czyli liczby
 > 2. Użyj węzła Watch, aby sprawdzić dane wejściowe
 > 3. Wcześniejszy węzeł przechowuje wartość „Czerwony”, a nie liczbę
+
+### Blokowanie węzłów
+
+W niektórych sytuacjach może zaistnieć potrzeba zapobiegania wykonywaniu określonych węzłów w programie wizualnym. Można to zrobić przez „zablokowanie” węzła — odpowiednia opcja jest dostępna w menu kontekstowym węzła.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+Zablokowanie węzła powoduje zablokowanie też węzłów znajdujących się po nim. Oznacza to, że wszystkie węzły zależne od wyniku zablokowanego węzła również zostaną zablokowane.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## Przewody
 
