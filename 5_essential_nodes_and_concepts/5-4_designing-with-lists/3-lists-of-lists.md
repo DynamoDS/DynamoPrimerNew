@@ -150,7 +150,9 @@ Successivamente, verrà utilizzato **List.Combine** per applicare una funzione a
 
 Una volta completato, i 2 gruppi di punti vengono compressi/associati tramite una funzione **Line.ByStartPointEndPoint** e restituiscono 10 righe in Dynamo.
 
-{% hint style="info" %}\r\n Fare riferimento all'esercizio in Elenchi n-dimensionali per vedere un altro esempio di utilizzo di List.Combine. \r\n{% endhint %}
+{% hint style="info" %}
+ Fare riferimento all'esercizio in Elenchi n-dimensionali per vedere un altro esempio di utilizzo di List.Combine. 
+{% endhint %}
 
 ### List@Level
 

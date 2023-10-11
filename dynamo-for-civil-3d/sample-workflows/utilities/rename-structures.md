@@ -17,7 +17,9 @@ Quando si aggiungono tubi e strutture ad una rete di tubazioni, in Civil 3D vien
 
 ## Compatibilità delle versioni
 
-{% hint style="success" %}\r\n Questo grafico verrà eseguito su **Civil 3D 2020** e versioni successive. \r\n{% endhint %}
+{% hint style="success" %}
+ Questo grafico verrà eseguito su **Civil 3D 2020** e versioni successive. 
+{% endhint %}
 
 ## Set di dati
 
@@ -77,7 +79,9 @@ Ecco dove le cose iniziano a diventare un po' complicate. A questo punto, si ha 
 
 Pertanto, è necessario filtrare l'elenco di strutture in modo da non considerare quelle che sono maggiori di un determinato offset rispetto al tracciato. Per ottenere questo risultato, è meglio utilizzare il nodo **List.FilterByBoolMask**. Dopo aver filtrato l'elenco di strutture, è possibile utilizzare il nodo **List.SortByKey** per ordinarle in base ai valori di progressiva.
 
-{% hint style="info" %}\r\n Se non si conoscono gli elenchi, consultare la sezione [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+ Se non si conoscono gli elenchi, consultare la sezione [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>Filtraggio e ordinamento delle strutture</p></figcaption></figure>
 
@@ -104,7 +108,9 @@ Di seguito è riportato un esempio di esecuzione del grafico mediante il **Letto
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Esecuzione del grafico mediante il Lettore Dynamo e visualizzazione dei risultati in Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../../dynamo-player.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+ Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../../dynamo-player.md "mention"). 
+{% endhint %}
 
 > :tada: Missione compiuta!
 
@@ -122,8 +128,14 @@ Ora è possibile capire meglio come funziona il processo di filtraggio delle str
 
 Ecco alcune idee su come espandere le funzionalità di questo grafico.
 
-{% hint style="info" %}\r\n Rinominare le strutture in base al relativo **tracciato più vicino** anziché selezionare un tracciato specifico. \r\n{% endhint %}
+{% hint style="info" %}
+ Rinominare le strutture in base al relativo **tracciato più vicino** anziché selezionare un tracciato specifico. 
+{% endhint %}
 
-{% hint style="info" %}\r\n **Rinominare i tubi** oltre alle strutture. \r\n{% endhint %}
+{% hint style="info" %}
+ **Rinominare i tubi** oltre alle strutture. 
+{% endhint %}
 
-{% hint style="info" %}\r\n **Impostare i layer** delle strutture in base al loro tratto. \r\n{% endhint %}
+{% hint style="info" %}
+ **Impostare i layer** delle strutture in base al loro tratto. 
+{% endhint %}

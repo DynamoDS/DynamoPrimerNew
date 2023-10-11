@@ -134,7 +134,9 @@ In questo indice sono fornite informazioni aggiuntive su tutti i nodi utilizzati
 | ![](<images/5-1/Cuboidheight(1) (1) (1).jpg>)                    | <p><strong>Cuboid.Height</strong></p><p>Restituisce le dimensioni di input del cuboide e NON le dimensioni nello spazio comune.</p>           | ![](images/5-1/indexofnodes-cuboidheight.jpg)                    |
 | ![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>Ottiene il riquadro di delimitazione come cuboide solido.</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
 
-{% hint style="warning" %}\r\n **In altri termini se si crea una larghezza del cuboide (asse X) pari a 10 e la si trasforma in un CoordinateSystem con scalatura 2x per l'asse X, il valore della larghezza resterà 10. ASM non consente l'estrazione dei vertici di un corpo in un ordine prevedibile, pertanto non è possibile determinare le dimensioni dopo una trasformazione. \r\n{% endhint %}
+{% hint style="warning" %}
+ **In altri termini se si crea una larghezza del cuboide (asse X) pari a 10 e la si trasforma in un CoordinateSystem con scalatura 2x per l'asse X, il valore della larghezza resterà 10. ASM non consente l'estrazione dei vertici di un corpo in un ordine prevedibile, pertanto non è possibile determinare le dimensioni dopo una trasformazione. 
+{% endhint %}
 
 ### Curva
 

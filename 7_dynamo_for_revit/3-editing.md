@@ -16,7 +16,9 @@ Una potente funzionalità di Dynamo è la possibilità di modificare i parametri
 
 Come rapido ripasso dei parametri in Revit, si ricorda che sono presenti parametri di tipo e di istanza. Entrambi possono essere modificati da Dynamo, ma nell'esercizio riportato di seguito verranno utilizzati i parametri di istanza.
 
-{% hint style="info" %}\r\n Mentre si rileva l'applicazione estesa della modifica di parametri, potrebbe essere necessario modificare una grande quantità di elementi in Revit con Dynamo. Questa operazione può essere _costosa dal punto di vista computazionale_ , ovvero può risultare lenta. Se si modifica un numero elevato di elementi, è possibile utilizzare la funzionalità Congela del nodo per interrompere l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) nel capitolo sui solidi. \r\n{% endhint %}
+{% hint style="info" %}
+ Mentre si rileva l'applicazione estesa della modifica di parametri, potrebbe essere necessario modificare una grande quantità di elementi in Revit con Dynamo. Questa operazione può essere _costosa dal punto di vista computazionale_ , ovvero può risultare lenta. Se si modifica un numero elevato di elementi, è possibile utilizzare la funzionalità Congela del nodo per interrompere l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) nel capitolo sui solidi. 
+{% endhint %}
 
 ### Unità di misura
 
@@ -34,7 +36,9 @@ Per una conversione rapida delle unità, utilizzare il nodo _Convert Between Uni
 
 {% file src="datasets/3/Revit-Editing.zip" %}
 
-{% hint style="warning" %}\r\n L'esercizio riportato di seguito è basato sui metri. \r\n{% endhint %}
+{% hint style="warning" %}
+ L'esercizio riportato di seguito è basato sui metri. 
+{% endhint %}
 
 Questo esercizio si concentra sulla modifica degli elementi di Revit senza eseguire un'operazione geometrica in Dynamo. Qui non si sta importando la geometria di Dynamo, ma si stanno modificando solo i parametri in un progetto di Revit. Questo è un esercizio di base e, per gli utenti più avanzati di Revit, notare che si tratta di parametri di istanza di una massa, ma la stessa logica può essere applicata ad una serie di elementi per la personalizzazione su larga scala. Tutto questo viene eseguito con il nodo "Element.SetParameterByName".
 
@@ -65,7 +69,9 @@ In Dynamo, è possibile recuperare i parametri selezionando l'elemento di destin
 > 2. Definire un altro _Code Block_ con un elenco della stessa lunghezza dei nomi dei parametri. In questo caso, vengono denominate variabili (senza virgolette) che creano input per _Code Block._ Collegare i _dispositivi di scorrimento_ a ciascun rispettivo input: `{bw,bl,bh,ao,io,lu};`.
 > 3. Collegare Code Block all'input del valore _Element.SetParameterByName*_. Con l'opzione Automatico selezionata, i risultati verranno visualizzati automaticamente.
 
-{% hint style="warning" %}\r\n *Questa dimostrazione funziona con i parametri di istanza, ma non con i parametri di tipo. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Questa dimostrazione funziona con i parametri di istanza, ma non con i parametri di tipo. 
+{% endhint %}
 
 Come in Revit, molti di questi parametri dipendono l'uno dall'altro. Ci sono naturalmente delle combinazioni in cui la geometria può interrompersi. È possibile risolvere questo problema con formule definite nelle proprietà dei parametri oppure è possibile configurare una logica simile con operazioni matematiche in Dynamo (questa è una difficoltà aggiuntiva se si desidera espandere l'esercizio).
 

@@ -27,7 +27,7 @@ Si possono utilizzare le [operazioni booleane](6-solids.md#boolean-operations) p
 
 ### Congelamento
 
-Le operazioni booleane sono complesse e possono essere lente da calcolare. Utilizzare la funzionalità Congela per sospendere l'esecuzione dei nodi selezionati e dei nodi a valle interessati.
+Le operazioni booleane sono complesse e possono essere lente da calcolare. È possibile utilizzare la funzionalità Congela per sospendere l'esecuzione dei nodi selezionati e dei nodi a valle interessati.
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
@@ -38,6 +38,10 @@ Le operazioni booleane sono complesse e possono essere lente da calcolare. Utili
 > 3\. Per scongelare i nodi, fare clic con il pulsante destro del mouse e deselezionare Congela.
 >
 > 4\. Tutti i nodi interessati e le anteprime della geometria associata verranno aggiornati e ripristineranno la modalità di anteprima standard.
+
+{% hint style="info" %}
+ YÈ possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ## Approfondimento su...
 

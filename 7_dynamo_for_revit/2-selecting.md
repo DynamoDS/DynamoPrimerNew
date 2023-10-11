@@ -18,7 +18,9 @@ Eseguire una rapida revisione della gerarchia di Revit.
 
 Vi ricordate la tassonomia in biologia? Regno, phylum, classe, ordine, famiglia, genere, specie? Gli elementi di Revit vengono suddivisi in categorie simili. Ad un livello di base, la gerarchia di Revit può essere suddivisa in categorie, famiglie, tipi* e istanze. Un'istanza è un singolo elemento del modello (con un ID univoco), mentre una categoria definisce un gruppo generico (ad esempio "muri" o "pavimenti"). Con il database di Revit organizzato in questo modo, è possibile selezionare un elemento e scegliere tutti gli elementi simili in base al livello specificato nella gerarchia.
 
-{% hint style="warning" %}\r\n *I tipi in Revit vengono definiti in modo diverso dai tipi della programmazione. In Revit, un tipo fa riferimento ad un ramo della gerarchia, anziché ad un "tipo di dati". \r\n{% endhint %}
+{% hint style="warning" %}
+ *I tipi in Revit vengono definiti in modo diverso dai tipi della programmazione. In Revit, un tipo fa riferimento ad un ramo della gerarchia, anziché ad un "tipo di dati". 
+{% endhint %}
 
 ### Navigazione nel database con nodi di Dynamo
 
@@ -149,4 +151,6 @@ A questo punto, è possibile estrarre alcune informazioni di base dal tipo di fa
 > 2. Collegare il nodo _All Elements of Family Type_ al nodo _AdaptiveComponent.Location_. In questo modo si ottiene un elenco di elenchi, ciascuno con tre punti che rappresentano le posizioni dei punti adattivi.
 > 3. Il collegamento di un nodo _Polygon.ByPoints_ restituisce una PolyCurve. Questo è visibile nella finestra di Dynamo. Con questo metodo, è stata visualizzata la geometria di un elemento ed è stata astratta la geometria della serie rimanente di elementi (che potrebbe essere maggiore di numero rispetto a questo esempio).
 
-{% hint style="info" %}\r\n Suggerimento Se si fa clic sul numero verde di un elemento di Revit in Dynamo, la finestra di Revit eseguirà lo zoom di tale elemento. \r\n{% endhint %}
+{% hint style="info" %}
+ Suggerimento Se si fa clic sul numero verde di un elemento di Revit in Dynamo, la finestra di Revit eseguirà lo zoom di tale elemento. 
+{% endhint %}

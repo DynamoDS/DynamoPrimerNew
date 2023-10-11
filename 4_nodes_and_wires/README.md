@@ -22,7 +22,9 @@ Gli input e gli output per i nodi sono denominati porte e fungono da prese per i
 
 Si prevede che le porte ricevano dati di un certo tipo. Ad esempio, se si collega un numero come _2.75_ alle porte su un nodo Point.ByCoordinates, la creazione di un punto verrà eseguita correttamente. Se tuttavia si specifica _Red_ nella stessa porta, verrà generato un errore.
 
-{% hint style="info" %}\r\n Suggerimento Posizionare il cursore su una porta per visualizzare una descrizione comando contenente il tipo di dati previsto. \r\n{% endhint %}
+{% hint style="info" %}
+ Suggerimento Posizionare il cursore su una porta per visualizzare una descrizione comando contenente il tipo di dati previsto. 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,13 +55,25 @@ Se si posiziona il cursore o si fa clic con il pulsante destro del mouse sul nom
 
 Se il programma visivo contiene avvertimenti o errori, in Dynamo verranno fornite ulteriori informazioni sul problema. Qualsiasi nodo giallo avrà anche una descrizione comando sopra il nome. Posizionare il cursore del mouse sull'icona della descrizione comando relativo all’avviso ![](images/nodesandwires-nodewarningicon.png) o all’errore ![](images/nodesandwires-nodeerroricon.png) per espanderla.
 
-{% hint style="info" %}\r\n Suggerimento Con queste informazioni sulla descrizione comando, esaminare i nodi a monte per verificare se la struttura di dati o il tipo di dati richiesto è errato. \r\n{% endhint %}
+{% hint style="info" %}
+ Suggerimento Con queste informazioni sulla descrizione comando, esaminare i nodi a monte per verificare se la struttura di dati o il tipo di dati richiesto è errato. 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. Descrizione comando di avviso: impossibile interpretare un valore "null" o i dati come Double, ossia un numero.
 > 2. Utilizzare il nodo Watch per esaminare i dati di input.
 > 3. A monte il nodo Number memorizza Red e non un numero.
+
+### Congelamento di nodi
+
+In alcune situazioni, è possibile impedire l'esecuzione di nodi specifici nel programma visivo. A tale scopo, è possibile congelare il nodo, un'opzione presente nel menu di scelta rapida del nodo.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+Congelando un nodo si congelano anche i nodi a valle. In altre parole, verranno congelati anche tutti i nodi che dipendono dall'output di un nodo congelato.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## Fili
 

@@ -35,25 +35,33 @@ Utilizzando i nodi di Dynamo principali in combinazione con quelli di Revit pers
 
 In un progetto o un editor di famiglie di Revit, individuare i moduli aggiuntivi e fare clic su Dynamo.*
 
-{% hint style="warning" %}\r\n *Dynamo verrà eseguito solo nel file in cui è stato aperto. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Dynamo verrà eseguito solo nel file in cui è stato aperto. 
+{% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Quando si apre Dynamo in Revit, è presente una nuova categoria denominata Revit. Questa è un'aggiunta completa all'interfaccia utente che offre nodi specifici per i workflow di Revit.*
 
-{% hint style="warning" %}\r\n *Utilizzando la famiglia di nodi specifica di Revit, il grafico di Dynamo funzionerà solo durante l'apertura in Dynamo for Revit. Se, ad esempio, viene aperto un grafico di Dynamo for Revit in Dynamo Sandbox, i nodi di Revit risulteranno mancanti. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Utilizzando la famiglia di nodi specifica di Revit, il grafico di Dynamo funzionerà solo durante l'apertura in Dynamo for Revit. Se, ad esempio, viene aperto un grafico di Dynamo for Revit in Dynamo Sandbox, i nodi di Revit risulteranno mancanti. 
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Congelamento di nodi
 
-Poiché Revit è una piattaforma che offre una gestione affidabile dei progetti, le operazioni parametriche in Dynamo possono essere complesse e lente da calcolare. Se Dynamo richiede molto tempo per il calcolo dei nodi, è possibile utilizzare la funzionalità del nodo Congela per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) nel capitolo sui solidi.
+Poiché Revit è una piattaforma che offre una gestione affidabile dei progetti, le operazioni parametriche in Dynamo possono essere complesse e lente da calcolare. Se Dynamo richiede molto tempo per il calcolo dei nodi, è possibile utilizzare la funzionalità del nodo Congela per mettere in pausa l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico.
+
+{% hint style="info" %}
+ È possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ### Comunità e blog di Dynamo
 
 Poiché Dynamo è stato originariamente creato per AEC, la sua vasta e crescente comunità è una grande risorsa da cui imparare e per connettersi con gli esperti del settore. La comunità di Dynamo è composta da architetti, ingegneri, programmatori e progettisti che hanno tutti passione per la condivisione e la creazione.
 
-Dynamo è un progetto open source in costante evoluzione e molti sviluppi sono correlati a Revit. Se non si conosce il programma, accedere al forum di discussione e iniziare a [pubblicare domande](http://dynamobim.org/forums/forum/dyn/). Se si è programmatori e si desidera essere coinvolti nello sviluppo di Dynamo, consultare la [pagina su Github](https://github.com/DynamoDS/Dynamo). Inoltre, una risorsa eccezionale per le librerie di terze parti è [Dynamo Package Manager](http://dynamopackages.com). Molti di questi pacchetti sono stati concepiti per AEC e si darà uno sguardo a pacchetti di terze parti per la suddivisione in pannelli in questo capitolo.
+Dynamo è un progetto open source in costante evoluzione e molti sviluppi sono correlati a Revit. Se non si conosce il programma, accedere al forum di discussione e iniziare a [pubblicare domande](http://dynamobim.org/forums/forum/dyn/). Se si è programmatori e si desidera essere coinvolti nello sviluppo di Dynamo, consultare il [repository su Github](https://github.com/DynamoDS/Dynamo). Inoltre, una risorsa eccezionale per le librerie di terze parti è [Dynamo Package Manager](http://dynamopackages.com). Molti di questi pacchetti sono stati concepiti per AEC e si darà uno sguardo a pacchetti di terze parti per la suddivisione in pannelli in questo capitolo.
 
 Dynamo gestisce anche un blog attivo. Per scoprire gli ultimi sviluppi, leggere i post recenti.
 

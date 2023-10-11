@@ -85,4 +85,6 @@ Man mano che si aggiunge maggiore complessità alle funzioni parametriche che de
 > 2. Grado = 2
 > 3. Grado = 3
 
-{% hint style="info" %}\r\n Notare che più alto è il valore del grado, maggiore sarà il numero di punti di controllo utilizzati per interpolare la curva risultante. \r\n{% endhint %}
+{% hint style="info" %}
+ Notare che più alto è il valore del grado, maggiore sarà il numero di punti di controllo utilizzati per interpolare la curva risultante. 
+{% endhint %}

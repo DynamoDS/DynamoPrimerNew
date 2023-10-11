@@ -18,7 +18,9 @@ Quindi riavviare Dynamo. Alla riapertura, quando si seleziona la finestra _Gesti
 
 ### Pubblicazione locale di un pacchetto
 
-{% hint style="warning" %}\r\n La pubblicazione del pacchetto di Dynamo è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D. Dynamo Sandbox non dispone di funzionalità di pubblicazione.\r\n{% endhint %}
+{% hint style="warning" %}
+ La pubblicazione del pacchetto di Dynamo è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D. Dynamo Sandbox non dispone di funzionalità di pubblicazione.
+{% endhint %}
 
 > Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
@@ -64,7 +66,9 @@ Si noti che la directory principale si trova nella posizione locale del pacchett
 
 ### Pubblicazione di un pacchetto in linea
 
-{% hint style="warning" %}\r\n Nota Seguire questa procedura solo se si sta effettivamente pubblicando un pacchetto personalizzato. \r\n{% endhint %}
+{% hint style="warning" %}
+ Nota Seguire questa procedura solo se si sta effettivamente pubblicando un pacchetto personalizzato. 
+{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 

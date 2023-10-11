@@ -33,9 +33,11 @@ Se si cercano release di sviluppo precedenti o "bleeding edge", tutte le version
 
 ![](images/DynamoSandboxAllbuilds.jpg)
 
-{% hint style="info" %}\r\n La release di sviluppo "bleeding edge" potrebbe includere alcune funzionalità nuove e sperimentali che non sono ancora state testate completamente, quindi potrebbe essere instabile. Utilizzando questo strumento, si potrebbero scoprire bug o problemi; per aiutarci a migliorare l'applicazione segnalare i problemi al nostro team.
+{% hint style="info" %}
+ La release di sviluppo "bleeding edge" potrebbe includere alcune funzionalità nuove e sperimentali che non sono ancora state testate completamente, quindi potrebbe essere instabile. Utilizzando questo strumento, si potrebbero scoprire bug o problemi; per aiutarci a migliorare l'applicazione segnalare i problemi al nostro team.
 
-Ai principianti viene consigliato di scaricare la release ufficiale stabile. \r\n{% endhint %}
+Ai principianti viene consigliato di scaricare la release ufficiale stabile. 
+{% endhint %}
 
 #### Decompressione
 
@@ -63,4 +65,6 @@ Verrà visualizzata la schermata di avvio di Dynamo Sandbox come indicato di seg
 
 Congratulazioni, è stata completata l'installazione per l'utilizzo di Dynamo Sandbox.
 
-{% hint style="info" %}\r\n **Geometry** è una funzionalità aggiuntiva in Dynamo Sandbox che è disponibile solo per gli utenti che dispongono di una licenza o di un abbonamento corrente per il seguente software Autodesk: Revit, Robot Structural Analysis, FormIt e Civil 3D. **Geometry** consente agli utenti di importare, creare, modificare ed esportare la geometria da Dynamo Sandbox.\r\n{% endhint %}
+{% hint style="info" %}
+ **Geometry** è una funzionalità aggiuntiva in Dynamo Sandbox che è disponibile solo per gli utenti che dispongono di una licenza o di un abbonamento corrente per il seguente software Autodesk: Revit, Robot Structural Analysis, FormIt e Civil 3D. **Geometry** consente agli utenti di importare, creare, modificare ed esportare la geometria da Dynamo Sandbox.
+{% endhint %}

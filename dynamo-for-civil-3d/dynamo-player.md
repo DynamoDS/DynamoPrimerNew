@@ -4,4 +4,6 @@
 
 Il **Lettore Dynamo** fornisce un metodo semplificato per eseguire i grafici di Dynamo in Civil 3D. Una volta creati i grafici, **non è necessaria alcuna esperienza con Dynamo** per utilizzare il lettore ed eseguire i grafici. In questo modo è più semplice condividere grafici con altri utenti che potrebbero non essere interessati a esplorare i dettagli di nodi e fili.
 
-{% hint style="info" %}\r\n Per ulteriori informazioni sul Lettore Dynamo in Civil 3D, consultare la documentazione fornita nel sito [Guida di Autodesk Civil 3D](https://help.autodesk.com/view/CIV3D/2024/ITA/?guid=Civil3D_Dynamo_Dynamo_Player_html). \r\n{% endhint %}
+{% hint style="info" %}
+ Per ulteriori informazioni sul Lettore Dynamo in Civil 3D, consultare la documentazione fornita nel sito [Guida di Autodesk Civil 3D](https://help.autodesk.com/view/CIV3D/2024/ITA/?guid=Civil3D_Dynamo_Dynamo_Player_html). 
+{% endhint %}

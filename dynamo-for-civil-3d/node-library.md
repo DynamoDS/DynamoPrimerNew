@@ -2,7 +2,9 @@
 
 È stato detto in precedenza che i **nodi** sono i blocchi predefiniti principali di un grafico di Dynamo e sono organizzati in gruppi logici nella **libreria**. In Dynamo for Civil 3D, sono presenti due categorie (o **scaffali**) nella libreria che contengono nodi dedicati per l'utilizzo di oggetti di AutoCAD e Civil 3D, quali tracciati, profili, modellatori, riferimenti di blocco e così via. Il resto della libreria contiene nodi che sono di natura più generica e sono coerenti tra tutte le "versioni" di Dynamo (ad esempio, Dynamo for Revit, Dynamo Sandbox e così via).
 
-{% hint style="info" %}\r\n Per ulteriori informazioni sull'organizzazione dei nodi nella libreria di Dynamo principale, consultare la sezione [2-library.md](../3\_user\_interface/2-library.md "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+ Per ulteriori informazioni sull'organizzazione dei nodi nella libreria di Dynamo principale, consultare la sezione [2-library.md](../3\_user\_interface/2-library.md "mention"). 
+{% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>La libreria di nodi in Dynamo for Civil 3D</p></figcaption></figure>
 
@@ -10,11 +12,15 @@
 > 2. Nodi generici
 > 3. Nodi di **pacchetti** di terze parti che è possibile installare separatamente
 
-{% hint style="warning" %}\r\n Utilizzando i nodi presenti negli scaffali di AutoCAD e Civil 3D, il grafico di Dynamo funzionerà solo in Dynamo for Civil 3D. Se un grafico di Dynamo for Civil 3D viene aperto altrove (ad esempio, in Dynamo for Revit), questi nodi verranno contrassegnati con un avviso e non verranno eseguiti. \r\n{% endhint %}
+{% hint style="warning" %}
+ Utilizzando i nodi presenti negli scaffali di AutoCAD e Civil 3D, il grafico di Dynamo funzionerà solo in Dynamo for Civil 3D. Se un grafico di Dynamo for Civil 3D viene aperto altrove (ad esempio, in Dynamo for Revit), questi nodi verranno contrassegnati con un avviso e non verranno eseguiti. 
+{% endhint %}
 
-{% hint style="info" %}\r\n **Perché sono presenti due scaffali separati per AutoCAD e Civil 3D?**
+{% hint style="info" %}
+ **Perché sono presenti due scaffali separati per AutoCAD e Civil 3D?**
 
-Questa organizzazione distingue i nodi per gli oggetti nativi di AutoCAD (linee, polilinee, riferimenti di blocco e così via) dai nodi per gli oggetti di Civil 3D (tracciati, modellatori, superfici e così via). Dal punto di vista tecnico, AutoCAD e Civil 3D sono due cose separate: AutoCAD è l'applicazione di base e Civil 3D si basa su essa. \r\n{% endhint %}
+Questa organizzazione distingue i nodi per gli oggetti nativi di AutoCAD (linee, polilinee, riferimenti di blocco e così via) dai nodi per gli oggetti di Civil 3D (tracciati, modellatori, superfici e così via). Dal punto di vista tecnico, AutoCAD e Civil 3D sono due cose separate: AutoCAD è l'applicazione di base e Civil 3D si basa su essa. 
+{% endhint %}
 
 ## Gerarchia dei nodi
 
