@@ -124,5 +124,5 @@ Zde je několik nápadů, jak byste mohli rozšířit možnosti tohoto grafu.
 {% endhint %}
 
 {% hint style="info" %}
- Zkontrolujte, zda se obálka těles ** protíná s návrhovými liniemi** a vybarvěte ty, které se střetávají. 
+ Zkontrolujte, zda se obálka těles **protíná s návrhovými liniemi** a vybarvěte ty, které se střetávají. 
 {% endhint %}
