@@ -33,9 +33,11 @@ Pokud hledáte předchozí nebo testovací vývojové verze, přejděte do doln�
 
 ![](images/DynamoSandboxAllbuilds.jpg)
 
-{% hint style="info" %}\r\n Testovací vývojové verze mohou obsahovat některé nové a experimentální funkce, které ještě nejsou plně testovány, a proto mohu být nestabilní. Jejich používáním můžete odhalit chyby nebo problémy a pomoci nám vylepšit aplikaci tím, že nahlásíte problémy našemu týmu.
+{% hint style="info" %}
+ Testovací vývojové verze mohou obsahovat některé nové a experimentální funkce, které ještě nejsou plně testovány, a proto mohu být nestabilní. Jejich používáním můžete odhalit chyby nebo problémy a pomoci nám vylepšit aplikaci tím, že nahlásíte problémy našemu týmu.
 
-Začátečníkům doporučujeme stáhnout oficiální stabilní verzi. \r\n{% endhint %}
+Začátečníkům doporučujeme stáhnout oficiální stabilní verzi. 
+{% endhint %}
 
 #### Rozbalení
 
@@ -63,4 +65,6 @@ Zobrazí se následující úvodní obrazovka aplikace Dynamo Sandbox.
 
 Blahopřejeme! Dokončili jste instalaci aplikace Dynamo Sandbox a můžete ji začít používat.
 
-{% hint style="info" %}\r\n **Geometrie** je dodatečná funkce aplikace Dynamo Sandbox, která je dostupná pouze uživatelům, kteří mají aktuální předplatné nebo licenci k následujícímu softwaru Autodesk: Revit, Robot Structural Analysis, FormIt a Civil 3D. **Geometrie** umožňuje uživatelům importovat, vytvářet, upravovat a exportovat geometrii z aplikace Dynamo Sandbox. \r\n{% endhint %}
+{% hint style="info" %}
+ **Geometrie** je dodatečná funkce aplikace Dynamo Sandbox, která je dostupná pouze uživatelům, kteří mají aktuální předplatné nebo licenci k následujícímu softwaru Autodesk: Revit, Robot Structural Analysis, FormIt a Civil 3D. **Geometrie** umožňuje uživatelům importovat, vytvářet, upravovat a exportovat geometrii z aplikace Dynamo Sandbox. 
+{% endhint %}

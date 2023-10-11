@@ -17,7 +17,9 @@ Vývoj kinematických obálek pro ověření průjezdnosti je důležitou souč�
 
 ## Kompatibilita verzí
 
-{% hint style="success" %}\r\n Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. \r\n{% endhint %}
+{% hint style="success" %}
+ Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. 
+{% endhint %}
 
 ## Datová sada
 
@@ -49,13 +51,17 @@ Prvním krokem je získání dat koridoru. Model koridoru vybereme podle jeho n�
 
 Nyní vytvoříme **souřadnicové systémy** podél návrhových linií koridoru mezi daným počátečním a koncovým staničením. Tyto souřadnicové systémy se použijí k zarovnání geometrie bloku profilu vozidla s koridorem.
 
-{% hint style="info" %}\r\n Pokud jsou pro vás souřadnicové systémy novinkou, přečtěte si část [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") . \r\n{% endhint %}
+{% hint style="info" %}
+ Pokud jsou pro vás souřadnicové systémy novinkou, přečtěte si část [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") . 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>Získání souřadnicových systémů podél návrhových linií koridoru</p></figcaption></figure>
 
 > 1. Všimněte si malých písmen **XXX** v pravém dolním rohu uzlu. Tato písmena znamenají, že nastavení vázání uzlu je nastaveno na hodnotu _Vektorový součin_, což je nutné k vytvoření souřadnicových systémů ve stejných hodnotách staničení pro obě návrhové linie.
 
-{% hint style="info" %}\r\n Pokud je vázání uzlu pro vás novinkou, přečtěte si část [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention") . \r\n{% endhint %}
+{% hint style="info" %}
+ Pokud je vázání uzlu pro vás novinkou, přečtěte si část [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention") . 
+{% endhint %}
 
 ### Transformace geometrie bloku
 
@@ -99,7 +105,9 @@ Zde je příklad spuštění grafu pomocí **Přehrávače skriptů Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Spuštění grafu pomocí Přehrávače skriptů Dynamo a zobrazení výsledků v aplikaci Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}\r\n Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention") . \r\n{% endhint %}
+{% hint style="info" %}
+ Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention") . 
+{% endhint %}
 
 > :tada: Úkol splněn!
 
@@ -107,8 +115,14 @@ Zde je příklad spuštění grafu pomocí **Přehrávače skriptů Dynamo**.
 
 Zde je několik nápadů, jak byste mohli rozšířit možnosti tohoto grafu.
 
-{% hint style="info" %}\r\n Přidejte možnost používat **různé rozsahy staničení** pro každou trasu zvlášť. \r\n{% endhint %}
+{% hint style="info" %}
+ Přidejte možnost používat **různé rozsahy staničení** pro každou trasu zvlášť. 
+{% endhint %}
 
-{% hint style="info" %}\r\n **Rozdělte tělesa** na menší segmenty, které by bylo možné jednotlivě analyzovat z hlediska kolizí. \r\n{% endhint %}
+{% hint style="info" %}
+ **Rozdělte tělesa** na menší segmenty, které by bylo možné jednotlivě analyzovat z hlediska kolizí. 
+{% endhint %}
 
-{% hint style="info" %}\r\n Zkontrolujte, zda se obálka těles ** protíná s návrhovými liniemi** a vybarvěte ty, které se střetávají. \r\n{% endhint %}
+{% hint style="info" %}
+ Zkontrolujte, zda se obálka těles ** protíná s návrhovými liniemi** a vybarvěte ty, které se střetávají. 
+{% endhint %}

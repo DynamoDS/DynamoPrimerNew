@@ -35,25 +35,33 @@ Pomocí základních uzlů aplikace Dynamo spolu s uzly pro aplikaci Revit je m
 
 V projektu aplikace Revit nebo Editoru rodiny přejděte na doplňky a klikněte na možnost Dynamo.*
 
-{% hint style="warning" %}\r\n *Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena. 
+{% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie s názvem „Revit“. Jedná se o rozšíření uživatelského rozhraní, které nabízí uzly pro práci s aplikací Revit.*
 
-{% hint style="warning" %}\r\n *Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo for Revit. Pokud graf modulu Dynamo for Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět. \r\n{% endhint %}
+{% hint style="warning" %}
+ *Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo for Revit. Pokud graf modulu Dynamo for Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět. 
+{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Zmrazení uzlů
 
-Protože Revit je platforma s robustními funkcemi pro správu projektů, výpočet parametrických operací v aplikaci Dynamo může být složitý a pomalý. Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná užitečné využít funkci „zmrazení“ uzlu, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf. Další informace o zmrazení uzlů najdete v části [Zmrazení](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) v kapitole Tělesa.
+Protože Revit je platforma s robustními funkcemi pro správu projektů, výpočet parametrických operací v aplikaci Dynamo může být složitý a pomalý. Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná užitečné využít funkci „zmrazení“ uzlu, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf.
+
+{% hint style="info" %}
+ Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ### Komunita a blog aplikace Dynamo
 
 Aplikace Dynamo byla původně vytvořena pro AEC a její velká a rostoucí komunita nabízí skvělou příležitost spojit se a učit se od expertů z oboru. Komunitu aplikace Dynamo tvoří architekti, inženýři, programátoři a konstruktéři, kteří rádi sdílejí a tvoří.
 
-Aplikace Dynamo je projekt s otevřeným zdrojovým kódem, která se neustále vyvíjí, přičemž velké množství vývoje souvisí také s aplikací Revit. Pokud s aplikací začínáte, neváhejte a [ptejte se](http://dynamobim.org/forums/forum/dyn/) na diskuzním fóru! Pokud jste programátor a chcete se zapojit do vývoje aplikace Dynamo, přejděte na [stránku na githubu](https://github.com/DynamoDS/Dynamo). Skvělým zdrojem knihoven třetích stran je také nástroj [Dynamo Package Manager](http://dynamopackages.com). Mnoho z těchto balíčků bylo vyvinuto s ohledem na AEC a v této kapitole budou probrány balíčky třetích stran pro panelizaci.
+Aplikace Dynamo je projekt s otevřeným zdrojovým kódem, která se neustále vyvíjí, přičemž velké množství vývoje souvisí také s aplikací Revit. Pokud s aplikací začínáte, neváhejte a [ptejte se](http://dynamobim.org/forums/forum/dyn/) na diskuzním fóru! Pokud jste programátor a chcete se zapojit do vývoje aplikace Dynamo, přejděte na [úložiště na Githubu](https://github.com/DynamoDS/Dynamo). Skvělým zdrojem knihoven třetích stran je také nástroj [Dynamo Package Manager](http://dynamopackages.com). Mnoho z těchto balíčků bylo vyvinuto s ohledem na AEC a v této kapitole budou probrány balíčky třetích stran pro panelizaci.
 
 Aplikace Dynamo také provozuje aktivní blog. Přečtěte si nejnovější příspěvky z vývoje.
 

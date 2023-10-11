@@ -2,7 +2,9 @@
 
 Balíčky aplikace Dynamo jsou sady nástrojů vyvinuté třetími stranami za účelem rozšíření základních funkcí aplikace Dynamo. Jsou přístupné všem a připravené ke stažení kliknutím na tlačítko.
 
-{% hint style="info" %}\r\n Další informace o tom, jak pracovat s balíčky, naleznete v části [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention"). \r\n{% endhint %}
+{% hint style="info" %}
+ Další informace o tom, jak pracovat s balíčky, naleznete v části [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention"). 
+{% endhint %}
 
 Zde je seznam některých nejoblíbenějších balíčků, které mohou posunout vaše grafy aplikace Dynamo for Civil 3D na vyšší úroveň.
 

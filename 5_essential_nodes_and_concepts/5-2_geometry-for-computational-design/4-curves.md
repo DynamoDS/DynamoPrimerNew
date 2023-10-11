@@ -85,4 +85,6 @@ Když přidáváme více složitosti k parametrickým funkcím, které definuj�
 > 2. Stupeň = 2
 > 3. Stupeň = 3
 
-{% hint style="info" %}\r\n Všimněte si, že čím vyšší je hodnota stupně, tím více řídících bodů se používá k interpolaci výsledné křivky. \r\n{% endhint %}
+{% hint style="info" %}
+ Všimněte si, že čím vyšší je hodnota stupně, tím více řídících bodů se používá k interpolaci výsledné křivky. 
+{% endhint %}

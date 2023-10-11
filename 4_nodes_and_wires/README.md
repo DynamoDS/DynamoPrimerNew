@@ -22,7 +22,9 @@ Vstupům a výstupům uzlů se říká porty, které se chovají jako zásuvky p
 
 Porty očekávají, že obdrží data určitého typu. Například připojením čísla _2.75_ na porty uzlu Point.ByCoordinates dojde k úspěšné tvorbě bodu, pokud však na stejný port zadáme hodnotu _Červená_, dojde k chybě.
 
-{% hint style="info" %}\r\n Přesunutím kurzoru nad port zobrazíte popisek s očekávaným datovým typem. \r\n{% endhint %}
+{% hint style="info" %}
+ Přesunutím kurzoru nad port zobrazíte popisek s očekávaným datovým typem. 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,13 +55,25 @@ Najetím myší nebo kliknutím pravým tlačítkem myši na název nebo porty s
 
 Pokud jsou ve vizuálním programu upozornění nebo chyby, aplikace Dynamo zobrazí další informace o problému. Nad názvy žlutých uzlů se navíc zobrazí popisky. Přesunutím ukazatele myši nad ikonu popisku upozornění ![](images/nodesandwires-nodewarningicon.png) nebo chyby ![](images/nodesandwires-nodeerroricon.png) tuto ikonu rozbalíte.
 
-{% hint style="info" %}\r\n Pomocí informací uvedených v popisku můžete zjistit, kde došlo k problému (například chybný datový typ nebo datová struktura u předchozích uzlů). \r\n{% endhint %}
+{% hint style="info" %}
+ Pomocí informací uvedených v popisku můžete zjistit, kde došlo k problému (například chybný datový typ nebo datová struktura u předchozích uzlů). 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. Popisek k upozornění – Hodnotu „Null“ nebo prázdná data nelze interpretovat jako typ Double, tj.číslo.
 > 2. Pomocí uzlu Watch můžete prozkoumat vstupní data uzlu.
 > 3. V předchozím uzlu Number je uložena hodnota „Red“ a nikoli číslo.
+
+### Zmrazení uzlů
+
+V některých situacích můžete chtít zabránit spuštění určitých uzlů ve vizuálním programu. To lze provést „zmrazením“ uzlu, což je možnost dostupná v místní nabídce uzlu.
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+Zmrazení uzlu zmrazí také uzly, které jsou za ním. Jinými slovy, všechny uzly, které závisí na výstupu zmrazeného uzlu, budou také zmrazeny.
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## Dráty
 

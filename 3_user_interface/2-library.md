@@ -16,7 +16,9 @@ Procházení těchto kategorií je nejrychlejší způsob, jak pochopit hierarch
 
 Procházejte knihovnu kliknutím na nabídky a rozbalte jednotlivé kategorie a jejich podkategorie.
 
-{% hint style="info" %}\r\n K počátečnímu zkoumání je vhodná nabídka Geometry, protože obsahuje největší množství uzlů. \r\n{% endhint %}
+{% hint style="info" %}
+ K počátečnímu zkoumání je vhodná nabídka Geometry, protože obsahuje největší množství uzlů. 
+{% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -115,7 +117,9 @@ Pomocí uzlu **Watch3D** si můžete zobrazit výsledky geometrie.
 
 Oba tyto uzly jsou dostupné v základní knihovně v kategorii View.
 
-{% hint style="info" %}\r\n Tip: Pokud vizuální program obsahuje mnoho uzlů, může být někdy 3D náhled rozptylující. Zvažte zrušení zaškrtnutí možnosti Zobrazovat náhled pozadí v nabídce Nastavení a použití uzlu Watch3D k zobrazení náhledu geometrie. \r\n{% endhint %}
+{% hint style="info" %}
+ Tip: Pokud vizuální program obsahuje mnoho uzlů, může být někdy 3D náhled rozptylující. Zvažte zrušení zaškrtnutí možnosti Zobrazovat náhled pozadí v nabídce Nastavení a použití uzlu Watch3D k zobrazení náhledu geometrie. 
+{% endhint %}
 
 #### Code Block
 

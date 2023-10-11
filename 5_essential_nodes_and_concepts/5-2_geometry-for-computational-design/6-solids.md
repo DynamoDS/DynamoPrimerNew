@@ -27,7 +27,7 @@ K úpravě těles můžete použít [booleovské operace](6-solids.md#boolean-o
 
 ### Zmrazení
 
-Booleovské operace jsou složité a jejich výpočet může být pomalý. Pomocí funkce zmrazení je možné vypnout výpočet vybraných uzlů a všech následných uzlů.
+Booleovské operace jsou složité a jejich výpočet může být pomalý. Pomocí funkce „zmrazení“ je možné pozastavit výpočet vybraných uzlů a všech následných uzlů.
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
@@ -38,6 +38,10 @@ Booleovské operace jsou složité a jejich výpočet může být pomalý. Pomoc
 > 3\. Chcete-li zmrazení zrušit, klikněte pravým tlačítkem a zrušte výběr možnosti Zmrazit.
 >
 > 4\. Všechny ovlivněné uzly a geometrie se aktualizují a zobrazí se běžným způsobem.
+
+{% hint style="info" %}
+ Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %}
 
 ## Podrobné informace...
 
