@@ -94,7 +94,9 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}\r\n Tip: Před duplikováním entit ve skriptu (například konstanty ve výše uvedeném příkladu) si můžete položit dotaz, zda se místo toho můžete připojit ke zdroji. \r\n{% endhint %}
+{% hint style="info" %}
+Tip: Před duplikováním entit ve skriptu (například konstanty ve výše uvedeném příkladu) si můžete položit dotaz, zda se místo toho můžete připojit ke zdroji. 
+{% endhint %}
 
 ### Strukturu tvořte modulárně
 
