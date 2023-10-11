@@ -3,7 +3,8 @@
 Když jste si teď udělali základní obrázek, pojďme se rovnou pustit do vytváření prvního grafu aplikace Dynamo v aplikaci Civil 3D!
 
 {% hint style="info" %}
- Jedná se o jednoduchý příklad, který má demonstrovat základní funkce aplikace Dynamo. Doporučujeme postupovat v novém prázdném dokumentu aplikace Civil 3D. {% enddhint %}
+ Jedná se o jednoduchý příklad, který má demonstrovat základní funkce aplikace Dynamo. Doporučujeme postupovat v novém prázdném dokumentu aplikace Civil 3D. 
+{% endhint %}
 
 ## Otevření aplikace Dynamo
 
