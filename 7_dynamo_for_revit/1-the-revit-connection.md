@@ -51,13 +51,17 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 ### 凍結節點
 
-由於 Revit 是功能強大的專案管理平台，Dynamo 中的參數式作業可能會很複雜且計算速度緩慢。若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)一節。
+由於 Revit 是功能強大的專案管理平台，Dynamo 中的參數式作業可能會很複雜且計算速度緩慢。若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。
+
+{% hint style="info" %}
+ 您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")一節閱讀有關凍結節點的更多資訊。
+{% endhint %}
 
 ### 社群與 Dynamo 部落格
 
 由於 Dynamo 最初是為 AEC 建立，其大型且不斷成長的社區是一個向行業專家學習和連線至行業專家的很棒資源。Dynamo 的社群由樂於分享和創造的建築師、工程師、程式設計人員及設計師組成。
 
-Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 頁面](https://github.com/DynamoDS/Dynamo)。另外，協力廠商資源庫的絕佳資源是 [Dynamo Package Manager](http://dynamopackages.com)。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
+Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 儲存庫](https://github.com/DynamoDS/Dynamo)。另外，協力廠商資源庫的絕佳資源是 [Dynamo Package Manager](http://dynamopackages.com)。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
 
 Dynamo 也會積極更新部落格。請閱讀最新的貼文以瞭解最新的開發工作！
 

@@ -65,6 +65,16 @@ Dynamo 會根據每個節點的狀態，讓節點呈現不同的顏色外觀，�
 > 2. 使用 Watch 節點檢查輸入資料
 > 3. 上游的 Number 節點儲存「Red」，不是數字
 
+### 凍結節點
+
+在某些情況下，您可能想要阻止特定節點在視覺程式中執行。您可以透過「凍結」節點這樣做，您可以在節點右鍵功能表下找到這個選項。
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+凍結節點也會凍結其下游的節點。換言之，所有依賴凍結節點輸出的節點也會跟著凍結。
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
+
 ## 線路
 
 線路連接兩個節點，以建立關係並建立視覺程式的流動。可以將這些按字面意思想成電線，用於將資料的脈衝從一個物件傳遞至另一個物件。
