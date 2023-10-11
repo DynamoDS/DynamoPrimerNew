@@ -18,7 +18,9 @@ Starten Sie dann Dynamo erneut. Wenn Sie beim erneuten Öffnen das Fenster _Pake
 
 ### Lokale Veröffentlichung von Paketen
 
-{% hint style="warning" %}\r\n Das Publizieren von Dynamo-Paketen ist nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert. Dynamo Sandbox verfügt nicht über Veröffentlichungsfunktionen. \r\n{% endhint %}
+{% hint style="warning" %}
+Das Publizieren von Dynamo-Paketen ist nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert. Dynamo Sandbox verfügt nicht über Veröffentlichungsfunktionen. 
+{% endhint %}
 
 > Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
@@ -64,7 +66,9 @@ Das Stammverzeichnis befindet sich am lokalen Speicherort des Pakets (da Sie es 
 
 ### Online-Veröffentlichung von Paketen
 
-{% hint style="warning" %}\r\n Anmerkung: Führen Sie diesen Schritt bitte nicht aus, es sei denn, Sie möchten tatsächlich ein eigenes Paket veröffentlichen. \r\n{% endhint %}
+{% hint style="warning" %}
+Anmerkung: Führen Sie diesen Schritt bitte nicht aus, es sei denn, Sie möchten tatsächlich ein eigenes Paket veröffentlichen. 
+{% endhint %}
 
 ![](../images/6-2/4/publishapackage-publishonline01.jpg)
 
