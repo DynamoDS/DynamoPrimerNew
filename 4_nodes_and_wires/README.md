@@ -22,7 +22,9 @@ Dynamo のほとんどのノードは、5 つのパーツで構成されてい�
 
 ポートは、特定のタイプのデータを受け取るように設定されています。たとえば、 _2.75_ という数値を Point.ByCoordinates ノードのポートに接続すると、点が正常に作成されます。ただし、同じポートに対して _「Red」_ を指定すると、エラーが発生します。
 
-{% hint style="info" %}\r\n ヒント: ポートにカーソルを合わせると、そのポートの正しいデータ タイプを含むツールチップが表示されます。 \r\n{% endhint %}
+{% hint style="info" %}
+ ヒント: ポートにカーソルを合わせると、そのポートの正しいデータ タイプを含むツールチップが表示されます。
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,13 +55,24 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 ビジュアル プログラムに警告やエラーが含まれている場合、その問題に関する追加情報が表示されます。また、黄色のノードでも、ノード名の上にツールチップが表示されます。警告 ![](images/nodesandwires-nodewarningicon.png) またはエラー ![](images/nodesandwires-nodeerroricon.png) ツールチップ アイコンにマウス カーソルを合わせて展開します。
 
-{% hint style="info" % } ヒント: このツールチップ情報を使用して上流のノードを検査することにより、必要なデータ タイプまたはデータ構造にエラーがないか確認できます。\r\n{% endhint %}
+{% hint style="info" % } ヒント: このツールチップ情報を使用して上流のノードを検査することにより、必要なデータ タイプまたはデータ構造にエラーがないか確認できます。
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
 > 1. 警告のツールチップ - 「Null」またはデータがない場合は、倍精度浮動小数点数つまり数値として認識されません。
 > 2. Watch ノードを使用して入力データを検査します。
 > 3. 上流の Number ノードに数値ではなく「red」が指定されています。
+
+### ノードをフリーズする
+
+場合によっては、ビジュアル プログラムで特定のノードが実行されないようにする必要があります。これを行うには、ノードの右クリック メニューから選択してノードを「フリーズ」します。
+
+<figure><img src="../.gitbook/assets/nodes-freezing.png" alt="" width="312"><figcaption></figcaption></figure>
+
+ノードをフリーズすると、その下流にあるノードもフリーズします。つまり、フリーズされたノードの出力に依存するすべてのノードもフリーズされます。
+
+<figure><img src="../.gitbook/assets/nodes-freezing-animated.gif" alt=""><figcaption></figcaption></figure>
 
 ## ワイヤ
 

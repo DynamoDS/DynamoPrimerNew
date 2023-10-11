@@ -36,7 +36,7 @@ Dynamo は、もともと Revit の設計ワークフローを合理化するた
 Revit プロジェクトやファミリ エディタで、[アドイン]タブから[Dynamo]をクリックします。*
 
 {% hint style="warning" %}
-*Dynamo は、Dynamo を起動したファイル内でのみ実行されることに注意してください。 
+ *Dynamo は、Dynamo を起動したファイル内でのみ実行されることに注意してください。 
 {% endhint %}
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
@@ -44,20 +44,24 @@ Revit プロジェクトやファミリ エディタで、[アドイン]タブ�
 Revit で Dynamo を起動すると、Dynamo のライブラリ内に[Revit]という新しいカテゴリが表示されます。この新しいカテゴリから、Revit ワークフロー専用のノードにアクセスすることができます。
 
 {% hint style="warning" %}
-*Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit で稼働している Dynamo から開いたときにのみ正常に動作します。たとえば、Revit で稼働している Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。 
+ *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit で稼働している Dynamo から開いたときにのみ正常に動作します。たとえば、Revit で稼働している Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。 
 {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### ノードのフリーズ
 
-Revit は堅牢なプロジェクト管理を提供するプラットフォームであるため、場合によっては Dynamo のパラメータ操作が複雑になり、計算速度が低下することがあります。Dynamo によるノード計算で時間がかかる場合は、ノードを「フリーズ」する機能を使用して、グラフの開発中に Revit 関連操作の実行を停止することができます。ノードをフリーズする操作の詳細については、「ソリッド」の章の「[フリーズ](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)」セクションを参照してください。
+Revit は堅牢なプロジェクト管理を提供するプラットフォームであるため、場合によっては Dynamo のパラメータ操作が複雑になり、計算速度が低下することがあります。Dynamo によるノード計算で時間がかかる場合は、ノードを「フリーズ」する機能を使用して、グラフの開発中に Revit 関連操作の実行を停止できます。
+
+{% hint style="info" %}
+ ノードのフリーズの詳細については、「[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")」セクションを参照してください。 
+{% endhint %}
 
 ### コミュニティと Dynamo ブログ
 
 Dynamo は、もともと建築設計者や構造設計者向けに開発されたツールです。Dynamo のコミュニティは、建設業界の専門家と交流しながら学ぶことができる場所として、現在も成長を続けています。Dynamo のコミュニティは、情報の共有と開発プロジェクトに積極的に参加する建築設計者、構造設計者、プログラマ、デザイナーによって構成されています。
 
-Dynamo は、継続的に進化していくオープンソース プロジェクトであり、その開発の大部分は Revit に関係しています。ディスカッション フォーラムにアクセスし、[質問を投稿](http://dynamobim.org/forums/forum/dyn/)してみてください。プログラマとして Dynamo プロジェクトに参加する場合は、次のリンクを参照してください: [GitHub の Dynamo ページ](https://github.com/DynamoDS/Dynamo)また、[Dynamo package manager](http://dynamopackages.com) では、さまざまなサードパーティ製ライブラリが提供されています。提供されているパッケージの多くは、建設業界のワークフローで使用することを目的として作成されています。実際に、パネル作成用のサードパーティ製パッケージを使用してみましょう。
+Dynamo は、継続的に進化していくオープンソース プロジェクトであり、その開発の大部分は Revit に関係しています。ディスカッション フォーラムにアクセスし、[質問を投稿](http://dynamobim.org/forums/forum/dyn/)してみてください。プログラマとして Dynamo プロジェクトに参加する場合は、[GitHub リポジトリ](https://github.com/DynamoDS/Dynamo)を参照してください。また、[Dynamo package manager](http://dynamopackages.com) では、さまざまなサードパーティ製ライブラリが提供されています。提供されているパッケージの多くは、建設業界のワークフローで使用することを目的として作成されています。実際に、パネル作成用のサードパーティ製パッケージを使用してみましょう。
 
 Dynamo 開発チームは、ブログを頻繁に更新しています。最近の記事を確認し、最新の開発情報を入手してください。
 
