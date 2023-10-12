@@ -61,7 +61,7 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 由於 Dynamo 最初是為 AEC 建立，其大型且不斷成長的社區是一個向行業專家學習和連線至行業專家的很棒資源。Dynamo 的社群由樂於分享和創造的建築師、工程師、程式設計人員及設計師組成。
 
-Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 儲存庫](https://github.com/DynamoDS/Dynamo)。另外，協力廠商資源庫的絕佳資源是 [Dynamo Package Manager](http://dynamopackages.com)。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
+Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 儲存庫](https://github.com/DynamoDS/Dynamo)。另外，[Dynamo Package Manager](http://dynamopackages.com) 是協力廠商資源庫的絕佳資源。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
 
 Dynamo 也會積極更新部落格。請閱讀最新的貼文以瞭解最新的開發工作！
 
