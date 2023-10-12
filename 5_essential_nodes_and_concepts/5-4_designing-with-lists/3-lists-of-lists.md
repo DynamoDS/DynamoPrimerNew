@@ -278,7 +278,7 @@ Agora que modificamos a lista, precisamos inseri-la de volta na estrutura de dad
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Seguindo a mesma lógica, use **List.ReplaceItemAtIndex** para substituir a lista do centro pela nossa lista modificada.
-> 2. Observe que os **Blocos de código**__ que definem o índice para esses dois nós são 1 e 2, que coincidem com a consulta original do **Bloco de código** (_pontos[1][2]_).
+> 2. Observe que os **Blocos de código** que definem o índice para esses dois nós são 1 e 2, que coincidem com a consulta original do **Bloco de código** (_pontos[1][2]_).
 > 3. Se selecionarmos a lista no _índice 1_, veremos a estrutura de dados realçada na visualização do Dynamo. Mesclamos com êxito o ponto movido para a estrutura de dados original.
 
 Existem várias maneiras de criar uma superfície com base nesse conjunto de pontos. Neste caso, vamos criar uma superfície por meio da elevação de curvas.
