@@ -89,7 +89,7 @@ Ecco alcune idee su come espandere le funzionalità di questo grafico.
 
 {% hint style="info" %}
  Raggruppare i punti in altre **categorie predefinite** scelte (ad esempio, "Foto del suolo", "Monumenti" e così via). 
-{% endpoint %}
+{% endhint %}
 
 {% hint style="info" %}
  Creare automaticamente superfici TIN per i punti in determinati gruppi. 
