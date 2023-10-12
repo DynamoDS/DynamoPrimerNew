@@ -131,7 +131,7 @@ from Autodesk.AutoCAD.Geometry import *
 from Autodesk.Civil.ApplicationServices import *
 from Autodesk.Civil.DatabaseServices import *
 
-<strong><a data-footnote-ref href="#user-content-fn-2">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
+<strong><a data-footnote-ref href="#user-content-fn-3">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
 </strong>
 # 此节点的输入内容将以列表形式存储在 IN 变量中。
 <strong><a data-footnote-ref href="#user-content-fn-3">objs</a> = <a data-footnote-ref href="#user-content-fn-4">IN[0]</a>
