@@ -47,7 +47,7 @@
 我们的第一步是将配水总管的几何图形输入到 Dynamo 中。我们将改为获取特定图层上的所有对象，并将这些对象一起连接为 Dynamo PolyCurve，而不是选择单条直线或多段线。
 
 {% hint style="info" %}
-如果您对使用 Dynamo 曲线几何图形不熟悉，请参见 [4-曲线.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "提及")部分。
+如果您对使用 Dynamo 曲线几何图形不熟悉，请参见 [4-曲线.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention")部分。
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>从 Civil 3D 获取对象并将所有对象一起连接为单个 PolyCurve</p></figcaption></figure>
@@ -69,7 +69,7 @@
 现在应该确定服务设施计量表将放置的位置。通常情况下，放置位置由当地机构的要求确定，因此我们只需提供可以更改以适应各种情况的输入值。我们会将沿地块线的**坐标系**用作创建点的参照。这使得定义相对于地块线的偏移非常容易，而无需考虑地块线的方向。
 
 {% hint style="info" %}
-如果您对使用坐标系不熟悉，请参见 [2-向量.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "提及")部分。
+如果您对使用坐标系不熟悉，请参见 [2-向量.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")部分。
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>创建服务设施计量表的插入点</p></figcaption></figure>
@@ -114,7 +114,7 @@
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>使用 Dynamo 播放器运行图形并在 Civil 3D 中查看结果</p></figcaption></figure>
 
 {% hint style="info" %}
-如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "提及")部分。
+如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention")部分。
 {% endhint %}
 
 > :tada: 任务完成！
