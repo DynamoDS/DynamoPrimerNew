@@ -199,11 +199,11 @@ with adoc.LockDocument():
 
 [^1]: 默认情况下，Dynamo 几何图形库不会添加到 Python 环境中。我们使用此脚本的目标是输出汇流边界的 Dynamo 点列表，因此我们需要添加此行以便稍后创建点。
 
-[^2]: This lines gets the specific class that we need from the Dynamo geometry library. Note that we specify `import Point as DynPoint` here instead of `import *` as the latter would introduce naming clashes.
+[^2]: 此行从 Dynamo 几何图形库中获取我们需要的特定类。请注意，我们在此处指定 `import Point as DynPoint` 而不是 `import *`，因为后者会引发命名冲突。
 
 [^3]: 此处，我们将默认变量 `dataEnteringNode` 重命名为 `objs`，以便该名称更具描述性。
 
-[^4]: Here we specify exactly which input port contains the data that we want instead of the default `IN`, which refers to the entire list of all inputs.
+[^4]: 在此处，我们准确指定哪个输入端口包含我们需要的数据，而不是使用默认的 `IN`，后者指的是所有输入的整个列表。
 
 [^5]: 这将创建一个空列表，我们稍后会将输出数据添加到该列表中。
 
