@@ -19,7 +19,7 @@
 
 * [参数化花瓶](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](images/1-2/vase1.gif)
+![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
 
 * [吸引器点](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 

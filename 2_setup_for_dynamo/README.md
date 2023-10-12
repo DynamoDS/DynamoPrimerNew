@@ -12,7 +12,7 @@ Dynamo 会随 **“Revit3D”**、**“FormIt”**、**“Civil3D”** 等软件
 
 要开始使用，请从工具栏面板启动它。根据您使用的软件，通常可以从“菜单”> **“管理”** 选项卡找到启动图标。单击 Dynamo 图标 ![](images/dynamoCore-halfSize.png) 以启动它。
 
-![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
+![](<../7\_dynamo\_for\_revit/images/1/launchdynamofromrevit (1).jpg>)
 
 有关将 Dynamo 与特定软件配合使用的更多指导，建议您参见以下部分：
 
@@ -27,7 +27,7 @@ Dynamo 会随 **“Revit3D”**、**“FormIt”**、**“Civil3D”** 等软件
 
 Dynamo 应用程序可从 [Dynamo 网站](http://dynamobim.com)获得。正式版本、过去版本或预发布版本均可从下载页面获得。访问[获取 Dynamo](http://dynamobim.org/download/)页面，然后单击**下载**以获取正式发布的版本。
 
-![](images/dynamo-sandbox\(1\).png)
+![](<images/dynamo-sandbox(1) (1).png>)
 
 如果要查找以前或“前沿”开发版本，则可以在同一页面的下半部分找到所有版本。
 

@@ -8,7 +8,7 @@
 本部分将重点介绍如何在 Civil 3D 环境中利用 Python，来利用 AutoCAD 和 Civil 3D .NET API。
 
 {% hint style="info" %}
- 有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8\_coding\_in\_dynamo/8-3\_python/ "提及")部分。
+有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3\_Python](../../8\_coding\_in\_dynamo/8-3\_python/)部分。
 {% endhint %}
 
 ## API 文档
@@ -17,7 +17,7 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 [AutoCAD .NET API 开发人员手册](https://help.autodesk.com/view/OARX/2024/CHS/?guid=GUID-C3F3C736-40CF-44A0-9210-55F6A939B6F2)
 
-[AutoCAD .NET API 参考手册](https://help.autodesk.com/view/OARX/2024/CHS/?guid=OARX-ManagedRefGuide-What_s_New)
+[AutoCAD .NET API 参考手册](https://help.autodesk.com/view/OARX/2024/CHS/?guid=OARX-ManagedRefGuide-What\_s\_New)
 
 [Civil 3D .NET API 开发人员手册](https://help.autodesk.com/view/CIV3D/2024/CHS/?guid=GUID-DA303320-B66D-4F4F-A4F4-9FBBEC0754E0)
 
@@ -44,7 +44,7 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 > 9. 如果要输出节点中的任何数据，请在脚本末尾将该节点指定给 `OUT` 变量。
 
 {% hint style="info" %}
- **要自定义？**\
+**要自定义？**\
 可以通过编辑位于 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 文件，来修改默认 Python 模板。
 {% endhint %}
 
@@ -90,7 +90,7 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 ### 展开对象
 
-在进一步介绍之前，我们需要简要介绍一个重要概念。在[节点库.md](../node-library.md "提及")部分中，我们讨论了 Objects 和 CivilObject 之间的关系。对此详加说明，**Dynamo Object** 是 **AutoCAD Entity** 的包裹器。同样，**Dynamo CivilObject** 是 **Civil 3D Entity** 的包裹器。可以通过访问对象的 `InternalDBObject` 或 `InternalObjectId` 特性来“展开”该对象。
+在进一步介绍之前，我们需要简要介绍一个重要概念。在[节点库.md](../node-library.md)部分中，我们讨论了 Objects 和 CivilObject 之间的关系。对此详加说明，**Dynamo Object** 是 **AutoCAD Entity** 的包裹器。同样，**Dynamo CivilObject** 是 **Civil 3D Entity** 的包裹器。可以通过访问对象的 `InternalDBObject` 或 `InternalObjectId` 特性来“展开”该对象。
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo 类型</th><th width="373">包裹</th></tr></thead><tbody><tr><td><strong>Object</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entity</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entity</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
@@ -118,8 +118,8 @@ clr.AddReference('AecBaseMgd')
 clr.AddReference('AecPropDataMgd')
 clr.AddReference('AeccDbMgd')
 
-<strong><a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
-</strong>
+<a data-footnote-ref href="#user-content-fn-1">clr.AddReference('ProtoGeometry')</a>
+
 # 从 AutoCAD 输入参照
 from Autodesk.AutoCAD.Runtime import *
 from Autodesk.AutoCAD.ApplicationServices import *
@@ -131,18 +131,18 @@ from Autodesk.AutoCAD.Geometry import *
 from Autodesk.Civil.ApplicationServices import *
 from Autodesk.Civil.DatabaseServices import *
 
-<strong><a data-footnote-ref href="#user-content-fn-30">from Autodesk.DesignScript.Geometry import Point as DynPoint</a>
+<strong>from Autodesk.DesignScript.Geometry import Point as DynPoint
 </strong>
 # 此节点的输入内容将以列表形式存储在 IN 变量中。
-<strong><a data-footnote-ref href="#user-content-fn-3">objs</a> = <a data-footnote-ref href="#user-content-fn-4">IN[0]</a>
+<strong><a data-footnote-ref href="#user-content-fn-2">objs</a> = IN[0]
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-5">output = []</a>
+<a data-footnote-ref href="#user-content-fn-3">output = []</a>
+
+<strong>if objs is None:
+</strong><strong>    <a data-footnote-ref href="#user-content-fn-4">sys.exit("The input is null or empty.")</a>
 </strong>
-<strong><a data-footnote-ref href="#user-content-fn-6">if objs is None:</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-7">sys.exit("The input is null or empty.")</a>
-</strong>
-<strong><a data-footnote-ref href="#user-content-fn-8">if not isinstance(objs, list):</a>
-</strong><strong>    <a data-footnote-ref href="#user-content-fn-9">objs = [objs]</a>
+<strong>if not isinstance(objs, list):
+</strong><strong>    <a data-footnote-ref href="#user-content-fn-5">objs = [objs]</a>
 </strong>   
 adoc = Application.DocumentManager.MdiActiveDocument
 editor = adoc.Editor
@@ -151,24 +151,24 @@ with adoc.LockDocument():
     with adoc.Database as db:
         
         with db.TransactionManager.StartTransaction() as t:
-<strong>            <a data-footnote-ref href="#user-content-fn-10">for obj in objs:</a>             
-</strong><strong>                <a data-footnote-ref href="#user-content-fn-11">id = obj.InternalObjectId</a>
-</strong><strong>                <a data-footnote-ref href="#user-content-fn-12">aeccObj = t.GetObject(id, OpenMode.ForRead)</a>               
-</strong><strong>                <a data-footnote-ref href="#user-content-fn-13">if isinstance(aeccObj, Catchment):</a>
-</strong><strong>                    <a data-footnote-ref href="#user-content-fn-14">catchment = aeccObj</a>
-</strong><strong>                    <a data-footnote-ref href="#user-content-fn-15">acPnts = catchment.BoundaryPolyline3d</a>                   
-</strong><strong>                    <a data-footnote-ref href="#user-content-fn-16">dynPnts = []</a>
-</strong><strong>                    <a data-footnote-ref href="#user-content-fn-17">for acPnt in acPnts:</a>
-</strong><strong>                        <a data-footnote-ref href="#user-content-fn-18">pnt = DynPoint.ByCoordinates(acPnt.X, acPnt.Y, acPnt.Z)</a>
-</strong><strong>                        <a data-footnote-ref href="#user-content-fn-19">dynPnts.append(pnt)</a>
-</strong><strong>                    <a data-footnote-ref href="#user-content-fn-20">output.append(dynPnts)</a>
+<strong>            for obj in objs:             
+</strong><strong>                <a data-footnote-ref href="#user-content-fn-6">id = obj.InternalObjectId</a>
+</strong><strong>                aeccObj = t.GetObject(id, OpenMode.ForRead)               
+</strong><strong>                <a data-footnote-ref href="#user-content-fn-7">if isinstance(aeccObj, Catchment):</a>
+</strong><strong>                    catchment = aeccObj
+</strong><strong>                    <a data-footnote-ref href="#user-content-fn-8">acPnts = catchment.BoundaryPolyline3d</a>                   
+</strong><strong>                    dynPnts = []
+</strong><strong>                    <a data-footnote-ref href="#user-content-fn-9">for acPnt in acPnts:</a>
+</strong><strong>                        pnt = DynPoint.ByCoordinates(acPnt.X, acPnt.Y, acPnt.Z)
+</strong><strong>                        <a data-footnote-ref href="#user-content-fn-10">dynPnts.append(pnt)</a>
+</strong><strong>                    output.append(dynPnts)
 </strong>           
             # 在结束事务前提交
-<strong>            <a data-footnote-ref href="#user-content-fn-21">t.Commit()</a>
+<strong>            <a data-footnote-ref href="#user-content-fn-11">t.Commit()</a>
 </strong>            pass
             
 # 将输出内容指定给 OUT 变量。
-<strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
+<strong>OUT = output
 </strong></code></pre>
 
 {% hint style="warning" %}
@@ -197,46 +197,27 @@ with adoc.LockDocument():
 可以在 [Dynamo 博客](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/)上，详细了解此转变以及如何升级旧脚本。如果要继续使用 IronPython，只需使用 Dynamo Package Manager 安装 **DynamoIronPython2.7** 软件包。
 {% endhint %}
 
+1. 此行从 Dynamo 几何图形库中获取我们需要的特定类。请注意，我们在此处指定 `import Point as DynPoint` 而不是 `import *`，因为后者会引发命名冲突。
+2. 在此处，我们准确指定哪个输入端口包含我们需要的数据，而不是使用默认的 `IN`，后者指的是所有输入的整个列表。
+
 [^1]: 默认情况下，Dynamo 几何图形库不会添加到 Python 环境中。我们使用此脚本的目标是输出汇流边界的 Dynamo 点列表，因此我们需要添加此行以便稍后创建点。
 
-[^30]: 此行从 Dynamo 几何图形库中获取我们需要的特定类。请注意，我们在此处指定 `import Point as DynPoint` 而不是 `import *`，因为后者会引发命名冲突。
+[^2]: 此处，我们将默认变量 `dataEnteringNode` 重命名为 `objs`，以便该名称更具描述性。
 
-[^3]: 此处，我们将默认变量 `dataEnteringNode` 重命名为 `objs`，以便该名称更具描述性。
+[^3]: 这将创建一个空列表，我们稍后会将输出数据添加到该列表中。
 
-[^4]: 在此处，我们准确指定哪个输入端口包含我们需要的数据，而不是使用默认的 `IN`，后者指的是所有输入的整个列表。
+[^4]: 我们将输出一条有用消息来说明脚本无法继续运行的原因，而不是中断运行脚本。
 
-[^5]: 这将创建一个空列表，我们稍后会将输出数据添加到该列表中。
+[^5]: 如果输入不是一个列表（即，单个对象），我们只需创建一个新列表（其中该对象作为唯一项）。
 
-[^6]: 这是为了防止我们的脚本中可能出现空值或 null 输入。
+[^6]: 通过获取 Dynamo 对象的对象 ID，“展开”该对象。
 
-[^7]: 我们将输出一条有用消息来说明脚本无法继续运行的原因，而不是中断运行脚本。
+[^7]: 输入的对象列表可能同时包含汇流和其他非汇流项目。我们需要检查是否存在此情况，并进行相应处理（即，仅当项目确实是汇流时，才继续循环的此迭代）。
 
-[^8]: 脚本的其余部分假定我们有一个要处理的对象列表（而不是单个对象）。但是，如果只有一个对象（即，具有单个汇流的图形），我们仍希望脚本能够运行。
+[^8]: 此处是我们使用先前在 API 文档中查找的相应特性来检索汇流边界点的位置。如前所述，这将为我们提供一个 `Point3dCollection` 对象，它本质上是一个 AutoCAD 点列表。我们需要将这些点“转换”为 Dynamo 点，这样一来它们才可用。
 
-[^9]: 如果输入不是一个列表（即，单个对象），我们只需创建一个新列表（其中该对象作为唯一项）。
+[^9]: 为 `Point3dCollection` 中的每个 `Point3d` 对象启动循环。
 
-[^10]: 为列表中的每个对象启动一个循环。
+[^10]: 将点添加到列表中。
 
-[^11]: 通过获取 Dynamo 对象的对象 ID，“展开”该对象。
-
-[^12]: 从 AutoCAD 数据库中检索“包裹”对象。请注意，由于我们不打算对对象进行任何编辑，因此 OpenMode 在此处设置为 `ForRead`。我们只是在简单地“查询”数据。
-
-[^13]: 输入的对象列表可能同时包含汇流和其他非汇流项目。我们需要检查是否存在此情况，并进行相应处理（即，仅当项目确实是汇流时，才继续循环的此迭代）。
-
-[^14]: 如果脚本已运行到此处，那么我们就知道该对象确实是汇流。我们将在此处添加一个新变量，仅为了使命名保持清晰易懂。
-
-[^15]: 此处是我们使用先前在 API 文档中查找的相应特性来检索汇流边界点的位置。如前所述，这将为我们提供一个 `Point3dCollection` 对象，它本质上是一个 AutoCAD 点列表。我们需要将这些点“转换”为 Dynamo 点，这样一来它们才可用。
-
-[^16]: 创建一个空列表以存储此汇流的边界点。
-
-[^17]: 为 `Point3dCollection` 中的每个 `Point3d` 对象启动循环。
-
-[^18]: 使用 AutoCAD 点的坐标创建 Dynamo 点。
-
-[^19]: 将点添加到列表中。
-
-[^20]: 完成所有 AutoCAD 点到 Dynamo 点的“转换”后，我们将生成的列表添加到输出中。之后，外部循环将移动到输入列表中的下一个对象。
-
-[^21]: 取消注释此行以提交事务。
-
-[^22]: 最后但同样重要的是，我们输出 Dynamo 点列表。
+[^11]: 取消注释此行以提交事务。
