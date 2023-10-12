@@ -106,7 +106,7 @@
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo 的对象绑定设置</p></figcaption></figure>
 
 {% hint style="info" %}
-有关详细信息，请参见[对象绑定.md](../../advanced-topics/object-binding.md "提及")部分。
+有关详细信息，请参见[对象绑定.md](../../advanced-topics/object-binding.md "mention")部分。
 {% endhint %}
 
 更改此设置会强制 Dynamo“忘记”它使用每个管路创建的对象。以下是一个使用 **Dynamo 播放器**运行图形（其对象绑定已关闭）的示例。
