@@ -24,7 +24,7 @@
 | **ZeroTouch (C#)** | 不可          | 不可            | 不可                 | 可                | 不可            |
 
 {% hint style="info" %}
-各 Dynamo ライブラリでアクセスできるコンテンツのリストについては、「[スクリプトの参照情報](3-scripting-reference.md)」を参照してください。
+ 各 Dynamo ライブラリでアクセスできるコンテンツのリストについては、「[スクリプトの参照情報](3-scripting-reference.md)」を参照してください。 
 {% endhint %}
 
 ### パラメトリックに考える

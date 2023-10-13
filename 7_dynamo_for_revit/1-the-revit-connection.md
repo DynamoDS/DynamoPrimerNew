@@ -44,14 +44,14 @@ Revit プロジェクトやファミリ エディタで、[アドイン]タブ�
 Revit で Dynamo を起動すると、Dynamo のライブラリ内に[Revit]という新しいカテゴリが表示されます。この新しいカテゴリから、Revit ワークフロー専用のノードにアクセスすることができます。
 
 {% hint style="warning" %}
- *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit で稼働している Dynamo から開いたときにのみ正常に動作します。たとえば、Revit で稼働している Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。 
+ *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit で稼働している Dynamo から開いたときにのみ正常に動作します。たとえば、Revit で稼働している Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。
 {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### ノードのフリーズ
 
-Revit は堅牢なプロジェクト管理を提供するプラットフォームであるため、場合によっては Dynamo のパラメータ操作が複雑になり、計算速度が低下することがあります。Dynamo によるノード計算で時間がかかる場合は、ノードを「フリーズ」する機能を使用して、グラフの開発中に Revit 関連操作の実行を停止できます。
+Revit は堅牢なプロジェクト管理を提供するプラットフォームであるため、場合によっては Dynamo のパラメータ操作が複雑になり、計算速度が低下することがあります。Dynamo によるノード計算で時間がかかる場合は、ノードを「フリーズ」する機能を使用して、グラフの開発中に Revit 関連操作の実行を停止することができます。
 
 {% hint style="info" %}
  ノードのフリーズの詳細については、「[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")」セクションを参照してください。 

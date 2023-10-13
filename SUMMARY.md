@@ -46,7 +46,7 @@
     * [パッケージを開発する](6\_custom\_nodes\_and\_packages/6-2\_packages/3-developing.md)
     * [パッケージをパブリッシュする](6\_custom\_nodes\_and\_packages/6-2\_packages/4-publishing.md)
     * [Zero-Touch Importing](6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md)
-* [Revit で Dynamo を使用する](7\_dynamo\_for\_revit/README.md)
+* [Revit 用の Dynamo](7\_dynamo\_for\_revit/README.md)
   * [Revit との連携](7\_dynamo\_for\_revit/1-the-revit-connection.md)
   * [選択](7\_dynamo\_for\_revit/2-selecting.md)
   * [編集](7\_dynamo\_for\_revit/3-editing.md)
