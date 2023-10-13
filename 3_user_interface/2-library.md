@@ -17,7 +17,7 @@ Das Durchsuchen dieser Kategorien stellt die schnellste Möglichkeit dar, um die
 Durchsuchen Sie die Bibliothek, indem Sie durch die Menüs klicken, um die einzelnen Kategorien und ihre Unterkategorien zu erweitern.
 
 {% hint style="info" %}
-Am besten untersuchen Sie zunächst die Menüs unter Geometry, da sie die größte Anzahl an Blöcken enthalten. 
+ Am besten untersuchen Sie zunächst die Menüs unter Geometry, da sie die größte Anzahl an Blöcken enthalten. 
 {% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
@@ -118,7 +118,7 @@ Sie können die Geometrieergebnisse auch über einen **Watch3D**-Block anzeigen.
 Beide Blöcke sind in der Kategorie View der Core-Bibliothek enthalten.
 
 {% hint style="info" %}
-Tipp: Die 3D-Vorschau kann bisweilen unübersichtlich sein, wenn Ihr visuelles Programm viele Blöcke enthält. Ziehen Sie in diesem Fall in Betracht, im Einstellungsmenü die Option zum Anzeigen der Hintergrundvorschau zu deaktivieren und einen Watch3D-Block zu verwenden, um eine Vorschau der Geometrie anzuzeigen. 
+ Tipp: Die 3D-Vorschau kann bisweilen unübersichtlich sein, wenn Ihr visuelles Programm viele Blöcke enthält. Ziehen Sie in diesem Fall in Betracht, im Einstellungsmenü die Option zum Anzeigen der Hintergrundvorschau zu deaktivieren und einen Watch3D-Block zu verwenden, um eine Vorschau der Geometrie anzuzeigen. 
 {% endhint %}
 
 #### Code Block

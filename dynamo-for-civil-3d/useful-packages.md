@@ -3,9 +3,7 @@
 Dynamo-Pakete sind Toolsets, die von Drittanbietern entwickelt wurden, um die Kernfunktionen von Dynamo zu erweitern. Sie stehen allen Anwendern zur Verfügung und können mit einem Klick auf die Schaltfläche heruntergeladen werden.
 
 {% hint style="info" %}
-
  Weitere Informationen zum Einstieg in die Arbeit mit Paketen finden Sie im Abschnitt [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention"). 
-
 {% endhint %}
 
 Hier finden Sie eine Liste der beliebtesten Pakete, mit denen Sie Ihre Dynamo for Civil 3D-Diagramme optimieren können.
@@ -36,7 +34,7 @@ Camber ist ein Open-Source-Paket für Dynamo for Civil 3D, das Hunderte von Bl�
 
 ## CivilConnection
 
-_CivilConnection_ ist ein Open-Source-Paket für Dynamo for Revit, das den Austausch von Informationen zwischen Civil 3D, Dynamo und Revit ermöglicht.
+_CivilConnection_ ist ein Open-Source-Paket für Dynamo für Revit, das den Austausch von Informationen zwischen Civil 3D, Dynamo und Revit ermöglicht.
 
 #### Verwandte Autodesk University-Kurse
 

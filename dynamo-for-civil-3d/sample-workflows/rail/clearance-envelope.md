@@ -18,16 +18,14 @@ Die Entwicklung kinematischer Profile für die Lichtraumvalidierung ist ein wich
 ## Kompatibilität der Versionen
 
 {% hint style="success" %}
-
  Dieses Diagramm wird in **Civil 3D 2020** und höher ausgeführt. 
-
 {% endhint %}
 
 ## Datensatz
 
 Laden Sie zunächst die folgenden Beispieldateien herunter, und öffnen Sie dann die DWG-Datei und das Dynamo-Diagramm.
 
-{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dyn" %}
+{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope (1).dyn" %}
 
 {% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dwg" %}
 
@@ -54,9 +52,7 @@ Unser erster Schritt ist das Abrufen von 3D-Profilkörperdaten. Wir wählen das 
 Als Nächstes generieren wir **Koordinatensysteme** entlang der Elementkanten eines 3D-Profilkörpers zwischen einer bestimmten Anfangs- und Endstation. Diese Koordinatensysteme werden verwendet, um die Blockgeometrie des Fahrzeug-Längsschnitts am 3D-Profilkörper auszurichten.
 
 {% hint style="info" %}
-
  Wenn Koordinatensysteme neu für Sie sind, finden Sie im Abschnitt [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") weitere Informationen. 
-
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>Abrufen von Koordinatensystemen entlang der 3D-Profilkörper-Elementkanten</p></figcaption></figure>
@@ -64,9 +60,7 @@ Als Nächstes generieren wir **Koordinatensysteme** entlang der Elementkanten ei
 > 1. Beachten Sie das kleine **XXX** in der unteren rechten Ecke des Blocks. Dies bedeutet, dass die Vergitterungseinstellungen des Blocks auf _Kreuzprodukt_ festgelegt sind. Dies ist erforderlich, um die Koordinatensysteme an den gleichen Stationswerten für beide Elementkanten zu generieren.
 
 {% hint style="info" %}
-
  Wenn die Blockvergitterung neu für Sie ist, finden Sie im Abschnitt [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention") weitere Informationen. 
-
 {% endhint %}
 
 ### Transformieren von Blockgeometrie
@@ -112,9 +106,7 @@ Hier sehen Sie ein Beispiel für die Ausführung des Diagramms mit **Dynamo Play
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Ausführen des Diagramms mit Dynamo Player und Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
 
 {% hint style="info" %}
-
  Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. 
-
 {% endhint %}
 
 > :tada: Mission erfüllt!
@@ -124,19 +116,13 @@ Hier sehen Sie ein Beispiel für die Ausführung des Diagramms mit **Dynamo Play
 Im Folgenden finden Sie einige Anregungen, wie Sie die Funktionen dieses Diagramms erweitern können.
 
 {% hint style="info" %}
-
  Fügen Sie eine Funktion hinzu, mit der Sie **verschiedene Stationsbereiche** separat für jede Spur verwenden können. 
-
 {% endhint %}
 
 {% hint style="info" %}
-
  **Teilen Sie die Volumenkörper** in kleinere Segmente, die einzeln auf Kollisionen analysiert werden können. 
-
 {% endhint %}
 
 {% hint style="info" %}
-
- Überprüfen Sie, ob sich die Profilvolumenkörper **mit Objekten überschneiden**, und färben Sie kollidierende Objekte ein. 
-
+ Überprüfen Sie, ob sich die Profilvolumenkörper ** mit Objekten überschneiden**, und färben Sie kollidierende Objekte ein. 
 {% endhint %}

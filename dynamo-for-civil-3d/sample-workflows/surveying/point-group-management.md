@@ -17,9 +17,7 @@ Die Arbeit mit Koordinatenpunkten und Punktgruppen in Civil 3D ist ein Kernelem
 ## Kompatibilität der Versionen
 
 {% hint style="success" %}
-
  Dieses Diagramm wird in **Civil 3D 2020** und höher ausgeführt. 
-
 {% endhint %}
 
 ## Datensatz
@@ -46,9 +44,7 @@ Los gehts!
 Der erste Schritt besteht darin, alle Punktgruppen im Dokument und dann alle Koordinatenpunkte in jeder Gruppe abzurufen. Dadurch erhalten wir eine _verschachtelte Liste_ bzw. "Liste von Listen", die später einfacher zu bearbeiten ist, wenn wir alles mithilfe des **List.Flatten**-Blocks auf eine einzige Liste reduzieren.
 
 {% hint style="info" %}
-
  Wenn Listen neu für Sie sind, finden Sie im Abschnitt [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") weitere Informationen. 
-
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>Alle Punktgruppen und Koordinatenpunkte abrufen </p></figcaption></figure>
@@ -78,9 +74,7 @@ Hier sehen Sie ein Beispiel für die Ausführung des Diagramms mit **Dynamo Play
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Ausführen des Diagramms mit Dynamo Player und Anzeigen der Ergebnisse im Projektbrowser</p></figcaption></figure>
 
 {% hint style="info" %}
-
  Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. 
-
 {% endhint %}
 
 > :tada: Mission erfüllt!
@@ -90,19 +84,13 @@ Hier sehen Sie ein Beispiel für die Ausführung des Diagramms mit **Dynamo Play
 Im Folgenden finden Sie einige Anregungen, wie Sie die Funktionen dieses Diagramms erweitern können.
 
 {% hint style="info" %}
-
  Ändern Sie die Punktgruppierung, sodass die **ausführliche Beschreibung** anstelle der Kurzbeschreibung verwendet wird. 
-
 {% endhint %}
 
 {% hint style="info" %}
-
  Gruppieren Sie die Punkte nach anderen **vordefinierten Kategorien**, die Sie auswählen (z. B. Geländeaufnahmen, Monumente usw.)  
-
 {% endhint %}
 
 {% hint style="info" %}
-
  Erstellen Sie automatisch triangulierte DGMs für Punkte in bestimmten Gruppen. 
-
 {% endhint %}

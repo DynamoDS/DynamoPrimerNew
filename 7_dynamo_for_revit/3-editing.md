@@ -4,7 +4,7 @@ Zu den leistungsstarken Funktionen von Dynamo gehört die Möglichkeit zum Bearb
 
 ### Typen- und Exemplarparameter
 
-![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Übung](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Exemplarparameter definieren die Öffnung der Elemente in der Dachoberfläche mit einem Öffnungsanteil zwischen 0.1 und 0.4.
 > 2. Typenparameter werden auf sämtliche Elemente der Oberfläche angewendet, da diese zum selben Familientyp gehören. So kann beispielsweise das Material der einzelnen Elemente durch einen Typenparameter gesteuert werden.

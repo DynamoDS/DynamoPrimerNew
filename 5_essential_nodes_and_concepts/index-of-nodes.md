@@ -135,7 +135,7 @@ Dieser Index enthält weitere Informationen zu allen in dieser Einführung verwe
 | ![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>Ruft den Begrenzungsrahmen als quaderförmigen Volumenkörper ab.</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
 
 {% hint style="warning" %}
-**Mit anderen Worten: Wenn Sie einen Quader mit einer Länge von 10 (X-Achse) erstellen und ihn in ein CoordinateSystem mit der 2-fachen Skalierung von X umwandeln, beträgt die Breite immer noch 10. ASM lässt nicht zu, dass Sie die Scheitelpunkte eines Körpers in vorhersehbarer Reihenfolge extrahieren. Es ist daher nicht möglich, die Bemaßungen nach einer Transformation zu bestimmen. 
+ **Mit anderen Worten: Wenn Sie einen Quader mit einer Länge von 10 (X-Achse) erstellen und ihn in ein CoordinateSystem mit der 2-fachen Skalierung von X umwandeln, beträgt die Breite immer noch 10. ASM lässt nicht zu, dass Sie die Scheitelpunkte eines Körpers in vorhersehbarer Reihenfolge extrahieren. Es ist daher nicht möglich, die Bemaßungen nach einer Transformation zu bestimmen. 
 {% endhint %}
 
 ### Kurve
