@@ -2,15 +2,15 @@
 
 ![](images/1/revitconnectionlink.jpg)
 
-O Dynamo for Revit estende a modelagem das informações de construção com o ambiente de dados e de lógica de um editor de algoritmo gráfico. Sua flexibilidade, juntamente com um banco de dados robusto do Revit, oferece uma nova perspectiva para o BIM.
+O Dynamo para Revit estende a modelagem das informações de construção com o ambiente de dados e de lógica de um editor de algoritmo gráfico. Sua flexibilidade, juntamente com um banco de dados robusto do Revit, oferece uma nova perspectiva para o BIM.
 
 Este capítulo é voltado para os fluxos de trabalho do Dynamo para o BIM. As seções são baseadas principalmente em exercícios, uma vez que saltar direto para um projeto é a melhor maneira de se familiarizar com um editor de algoritmos gráficos para BIM. Mas primeiro, vamos falar sobre o começo do programa.
 
 ### Compatibilidade com a versão do Revit
 
-À medida que o Revit e o Dynamo continuam a evoluir, você poderá notar que a versão do Revit com a qual você está trabalhando não é compatível com a versão do Dynamo for Revit instalada em seu computador. Abaixo estão descritas quais versões do Dynamo for Revit são compatíveis com o Revit.
+À medida que o Revit e o Dynamo continuam a evoluir, você poderá notar que a versão do Revit com a qual você está trabalhando não é compatível com a versão do Dynamo para Revit instalada em seu computador. Abaixo estão descritas quais versões do Dynamo para Revit são compatíveis com o Revit.
 
-| Versão do Revit | Primeira versão estável do Dynamo                                                       | Última versão suportada do Dynamo for Revit                                                                                                                                |
+| Versão do Revit | Primeira versão estável do Dynamo                                                       | Última versão suportada do Dynamo para Revit                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
 | 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
@@ -44,7 +44,7 @@ Em um editor de família ou um projeto do Revit, navegue para Complementos e cli
 Quando o Dynamo é aberto no Revit, há uma nova categoria chamada “Revit”. Essa é uma adição abrangente à interface de usuário, oferecendo nós especificamente voltados para os fluxos de trabalho do Revit.*
 
 {% hint style="warning" %}
- *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo for Revit. Se um gráfico do Dynamo for Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. 
+ *Usando a família de nós específica do Revit, o gráfico do Dynamo só funcionará quando for aberto no Dynamo para Revit. Se um gráfico do Dynamo para Revit for aberto no Dynamo Sandbox, por exemplo, os nós do Revit estarão ausentes. 
 {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)

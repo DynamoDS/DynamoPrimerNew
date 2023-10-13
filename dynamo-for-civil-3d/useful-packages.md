@@ -34,7 +34,7 @@ O Camber é um pacote de código aberto do Dynamo for Civil 3D que inclui cente
 
 ## CivilConnection
 
-O _CivilConnection_ é um pacote do Dynamo for Revit de código aberto que permite a troca de informações entre o Civil 3D, o Dynamo e o Revit.
+O _CivilConnection_ é um pacote do Dynamo para Revit de código aberto que permite a troca de informações entre o Civil 3D, o Dynamo e o Revit.
 
 #### Aulas relacionadas da Autodesk University
 

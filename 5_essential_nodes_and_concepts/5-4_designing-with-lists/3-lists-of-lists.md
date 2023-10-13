@@ -111,7 +111,7 @@ O nó **List.Count** conta todos os itens em uma lista. Usaremos isso para demon
 > 3. Conecte cada linha do bloco de código às respectivas entradas _X_ e _Y_ de um nó **Point.ByCoordinates**. Clique com o botão direito do mouse no nó, selecione “Amarra” e selecione _“Produto transversal”_. Isso cria um eixo de pontos. Como definimos o intervalo de -50 a 50, estamos expandindo o eixo padrão do Dynamo.
 > 4. Um nó _**Inspeção**_ revela os pontos criados. Observe a estrutura de dados. Criamos uma lista de listas. Cada lista representa uma linha de pontos do eixo.
 
-![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Exercício](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Anexe um nó **List.Count** à saída do nó de inspeção da etapa anterior.
 > 2. Conecte um nó **Inspeção** à saída **List.Count**.
@@ -278,7 +278,7 @@ Agora que modificamos a lista, precisamos inseri-la de volta na estrutura de dad
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Seguindo a mesma lógica, use **List.ReplaceItemAtIndex** para substituir a lista do centro pela nossa lista modificada.
-> 2. Observe que os **Blocos de código** que definem o índice para esses dois nós são 1 e 2, que coincidem com a consulta original do **Bloco de código** (_pontos[1][2]_).
+> 2. Observe que os **Blocos de código**__ que definem o índice para esses dois nós são 1 e 2, que coincidem com a consulta original do **Bloco de código** (_pontos[1][2]_).
 > 3. Se selecionarmos a lista no _índice 1_, veremos a estrutura de dados realçada na visualização do Dynamo. Mesclamos com êxito o ponto movido para a estrutura de dados original.
 
 Existem várias maneiras de criar uma superfície com base nesse conjunto de pontos. Neste caso, vamos criar uma superfície por meio da elevação de curvas.
