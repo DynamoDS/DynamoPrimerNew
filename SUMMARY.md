@@ -46,7 +46,7 @@
     * [Разработка пакетов](6\_custom\_nodes\_and\_packages/6-2\_packages/3-developing.md)
     * [Публикация пакетов](6\_custom\_nodes\_and\_packages/6-2\_packages/4-publishing.md)
     * [Импорт Zero Touch](6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md)
-* [Dynamo for Revit](7\_dynamo\_for\_revit/README.md)
+* [Dynamo для Revit](7\_dynamo\_for\_revit/README.md)
   * [Подключение к Revit](7\_dynamo\_for\_revit/1-the-revit-connection.md)
   * [Выбор](7\_dynamo\_for\_revit/2-selecting.md)
   * [Редактирование](7\_dynamo\_for\_revit/3-editing.md)
