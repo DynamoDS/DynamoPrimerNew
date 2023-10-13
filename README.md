@@ -61,7 +61,7 @@ Le guide Dynamo est un projet open source, initié par Matt Jezyk et l’équip
 
 ***
 
-**Wood Rodgers** a été chargé de mettre à jour le guide avec le contenu de Dynamo pour Civil 3D.
+**Wood Rodgers** a été chargé de mettre à jour le guide avec le contenu de Dynamo for Civil 3D.
 
 <figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 

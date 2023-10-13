@@ -43,7 +43,7 @@ Les opérations booléennes sont complexes et peuvent être lentes à calculer. 
  Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
 {% endhint %}
 
-## Approfondir…
+## Approfondir...
 
 ### Solides
 

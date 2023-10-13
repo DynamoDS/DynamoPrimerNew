@@ -1,6 +1,6 @@
 # Liaison d’objet
 
-Dynamo pour Civil 3D contient un mécanisme très puissant qui « se souvient » des objets créés par chaque nœud. Ce mécanisme est appelé **Liaison d’objet** et permet à un graphique Dynamo de produire des résultats cohérents chaque fois qu’il est exécuté dans le même document. Bien que cela soit souhaitable dans de nombreuses situations, il est possible que vous vouliez avoir plus de contrôle sur le comportement de Dynamo dans d’autres cas. Cette section vous aidera à comprendre le fonctionnement de la liaison d’objet et comment en tirer parti.
+Dynamo for Civil 3D contient un mécanisme très puissant qui « se souvient » des objets créés par chaque nœud. Ce mécanisme est appelé **Liaison d’objet** et permet à un graphique Dynamo de produire des résultats cohérents chaque fois qu’il est exécuté dans le même document. Bien que cela soit souhaitable dans de nombreuses situations, il est possible que vous vouliez avoir plus de contrôle sur le comportement de Dynamo dans d’autres cas. Cette section vous aidera à comprendre le fonctionnement de la liaison d’objet et comment en tirer parti.
 
 ## Exemple
 
@@ -34,7 +34,7 @@ Après avoir effectué ce changement, vous obtenez le comportement que vous rech
 
 ## Paramètres de liaison
 
-Dynamo pour Civil 3D permet de modifier le comportement par défaut des liaison d’objet via les paramètres **Stockage des données de liaison** du menu de **Dynamo**.
+Dynamo for Civil 3D permet de modifier le comportement par défaut des liaison d’objet via les paramètres **Stockage des données de liaison** du menu de **Dynamo**.
 
 {% hint style="info" %}
  Notez que les options de stockage des données de liaison sont disponibles dans **Civil 3D 2022.1** et dans les versions ultérieures. 

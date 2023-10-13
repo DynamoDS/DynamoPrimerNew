@@ -50,7 +50,7 @@ Lorsque vous modifiez un nouveau nœud Python pour la première fois, il est pr�
 
 ## Exemple
 
-Examinons un exemple pour démontrer certains des concepts essentiels de l’écriture de scripts Python dans Dynamo pour Civil 3D.
+Examinons un exemple pour démontrer certains des concepts essentiels de l’écriture de scripts Python dans Dynamo for Civil 3D.
 
 ### Objectif
 
@@ -86,7 +86,7 @@ Vous pouvez maintenant commencer à construire la logique graphique. La premièr
 
 <figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Obtention de tous les bassins versants du document par calque</p></figcaption></figure>
 
-Notez ici que la sortie du nœud **Tous les objets du calque** est une liste de CivilObjects. En effet, Dynamo pour Civil 3D ne dispose pas actuellement de nœuds pour travailler avec des bassins versants, ce qui explique pourquoi nous devons accéder à l’API en Python.
+Notez ici que la sortie du nœud **Tous les objets du calque** est une liste de CivilObjects. En effet, Dynamo for Civil 3D ne dispose pas actuellement de nœuds pour travailler avec des bassins versants, ce qui explique pourquoi nous devons accéder à l’API en Python.
 
 ### Déballer des objets
 

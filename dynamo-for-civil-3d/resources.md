@@ -1,6 +1,6 @@
 # Ressources
 
-Ce guide n’est que le début de votre aventure avec Dynamo pour Civil 3D. Une communauté dynamique d’utilisateurs de Dynamo met à votre disposition une grande quantité de connaissances. Consultez ces ressources au fur et à mesure de votre apprentissage.
+Ce guide n’est que le début de votre aventure avec Dynamo for Civil 3D. Une communauté dynamique d’utilisateurs de Dynamo met à votre disposition une grande quantité de connaissances. Consultez ces ressources au fur et à mesure de votre apprentissage.
 
 ## Aide de Civil 3D
 

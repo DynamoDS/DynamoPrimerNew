@@ -1,19 +1,19 @@
 # Bibliothèque de nœuds
 
-Nous avons mentionné précédemment que les **nœuds** sont les blocs de construction principaux d’un graphique Dynamo et qu’ils sont organisés en groupes logiques dans la **bibliothèque**. Dans Dynamo pour Civil 3D, il existe deux catégories (ou **étagères**) dans la bibliothèque qui contiennent des nœuds dédiés pour travailler avec des objets AutoCAD et Civil 3D, tels que des axes, des contours, des projets 3D, des références de bloc, etc. Le reste de la bibliothèque contient des nœuds qui sont plus génériques par nature et sont cohérents entre toutes les « variantes » de Dynamo (par exemple, Dynamo pour Revit, Dynamo Sandbox, etc.).
+Nous avons mentionné précédemment que les **nœuds** sont les blocs de construction principaux d’un graphique Dynamo et qu’ils sont organisés en groupes logiques dans la **bibliothèque**. Dans Dynamo for Civil 3D, il existe deux catégories (ou **étagères**) dans la bibliothèque qui contiennent des nœuds dédiés pour travailler avec des objets AutoCAD et Civil 3D, tels que des axes, des contours, des projets 3D, des références de bloc, etc. Le reste de la bibliothèque contient des nœuds qui sont plus génériques par nature et sont cohérents entre toutes les « variantes » de Dynamo (par exemple, Dynamo pour Revit, Dynamo Sandbox, etc.).
 
 {% hint style="info" %}
  Consultez la section [2-library.md](../3\_user\_interface/2-library.md "mention") pour plus d’informations sur l’organisation des nœuds de la bibliothèque Dynamo principale. 
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>Bibliothèque de nœuds dans Dynamo pour Civil 3D</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>Bibliothèque de nœuds dans Dynamo for Civil 3D</p></figcaption></figure>
 
 > 1. Nœuds spécifiques pour l’utilisation d’objets AutoCAD et Civil 3D
 > 2. Nœuds à usage général
 > 3. Nœuds provenant de **packages** tiers que vous pouvez installer séparément
 
 {% hint style="warning" %}
- En utilisant les nœuds trouvés sous les étagères AutoCAD et Civil 3D, votre graphique Dynamo ne fonctionnera que dans Dynamo pour Civil 3D. Si un graphique Dynamo pour Civil 3D est ouvert ailleurs (dans Dynamo pour Revit, par exemple), ces nœuds seront signalés par un avertissement et ne s’exécuteront pas.. 
+ En utilisant les nœuds trouvés sous les étagères AutoCAD et Civil 3D, votre graphique Dynamo ne fonctionnera que dans Dynamo for Civil 3D. Si un graphique Dynamo for Civil 3D est ouvert ailleurs (dans Dynamo pour Revit, par exemple), ces nœuds seront signalés par un avertissement et ne s’exécuteront pas.. 
 {% endhint %}
 
 {% hint style="info" %}

@@ -31,7 +31,7 @@ Une fois Dynamo ouvert, l’écran d’accueil s’affiche. Cliquez sur **Nouvea
 {% hint style="info" %}
  **Et les exemples ?**
 
-Dynamo pour Civil 3D est fourni avec quelques graphiques prédéfinis qui peuvent vous donner des idées supplémentaires sur la façon dont vous pouvez utiliser Dynamo. Nous vous recommandons de les consulter ultérieurement, ainsi que les [sample-workflows](sample-workflows/ "mention") présentés dans le guide. 
+Dynamo for Civil 3D est fourni avec quelques graphiques prédéfinis qui peuvent vous donner des idées supplémentaires sur la façon dont vous pouvez utiliser Dynamo. Nous vous recommandons de les consulter ultérieurement, ainsi que les [sample-workflows](sample-workflows/ "mention") présentés dans le guide. 
 {% endhint %}
 
 ## Ajouter des nœuds
@@ -114,4 +114,4 @@ Par défaut, Dynamo se « souvient » des objets qu’il crée. Si vous modifi
 
 ## Étapes suivantes
 
-Cet exemple ne fait qu’effleurer les possibilités offertes par Dynamo pour Civil 3D. Poursuivez votre lecture pour en savoir plus !
+Cet exemple ne fait qu’effleurer les possibilités offertes par Dynamo for Civil 3D. Poursuivez votre lecture pour en savoir plus !

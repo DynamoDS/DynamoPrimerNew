@@ -6,11 +6,11 @@ Les packages Dynamo sont des jeux d’outils développés par des tiers afin d�
  Consultez la section [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") pour découvrir comment bien débuter avec les packages. 
 {% endhint %}
 
-Voici une liste de certains des packages les plus populaires qui peuvent faire passer vos graphiques Dynamo pour Civil 3D au niveau supérieur.
+Voici une liste de certains des packages les plus populaires qui peuvent faire passer vos graphiques Dynamo for Civil 3D au niveau supérieur.
 
 ## Boîte à outils Civil 3D
 
-Le _boîte à outils Civil 3D_ est un package Dynamo pour Civil 3D qui apporte des améliorations significatives aux fonctionnalités de Dynamo grâce à un large éventail de nœuds supplémentaires.
+Le _boîte à outils Civil 3D_ est un package Dynamo for Civil 3D qui apporte des améliorations significatives aux fonctionnalités de Dynamo grâce à un large éventail de nœuds supplémentaires.
 
 #### Commentaires
 
@@ -22,7 +22,7 @@ Le _boîte à outils Civil 3D_ est un package Dynamo pour Civil 3D qui apporte
 
 ## Camber
 
-Camber est un package open source de Dynamo pour Civil 3D qui inclut des centaines de nœuds pour travailler avec des étiquettes, des Xrefs, des raccourcis de données, des styles, et plus encore.
+Camber est un package open source de Dynamo for Civil 3D qui inclut des centaines de nœuds pour travailler avec des étiquettes, des Xrefs, des raccourcis de données, des styles, et plus encore.
 
 #### Commentaires
 
@@ -50,7 +50,7 @@ _CivilConnection_ est un package open source de Dynamo pour Revit qui permet l�
 
 ## Nœuds Arkance Systems
 
-Les nœuds Arkance Systems sont un package Dynamo pour Civil 3D contenant une grande variété de nœuds utiles pour travailler avec les dimensions, les tableaux, les vues, Drill Control, et bien plus encore.
+Les nœuds Arkance Systems sont un package Dynamo for Civil 3D contenant une grande variété de nœuds utiles pour travailler avec les dimensions, les tableaux, les vues, Drill Control, et bien plus encore.
 
 #### Commentaires
 

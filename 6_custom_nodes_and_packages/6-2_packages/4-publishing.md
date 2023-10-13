@@ -19,7 +19,7 @@ Ensuite, redémarrez Dynamo. Lors de la réouverture, vérifiez la fenêtre _«�
 ### Publication locale d’un package
 
 {% hint style="warning" %}
- La publication du package Dynamo est uniquement activée dans Dynamo for Revit et Dynamo pour Civil 3D. Dynamo Sandbox ne dispose pas de la fonctionnalité de publication. 
+ La publication du package Dynamo est uniquement activée dans Dynamo pour Revit et Dynamo for Civil 3D. Dynamo Sandbox ne dispose pas de la fonctionnalité de publication. 
 {% endhint %}
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
