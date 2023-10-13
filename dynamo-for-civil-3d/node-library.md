@@ -1,6 +1,6 @@
 # 節點資源庫
 
-我們先前提到，**節點**是 Dynamo 圖表的核心建置圖塊，在**資源庫**中被組織為邏輯群組。在 Dynamo for Civil 3D 中，資源庫中有兩個品類 (也就是**層架**)，包含用於處理 AutoCAD 和 Civil 3D 物件 (例如定線、縱斷面、廊道、圖塊參考等) 的專用節點。資源庫的其餘部分包含本質上比較通用的節點，在所有「類型」的 Dynamo (例如，Dynamo for Revit、Dynamo Sandbox 等) 之間都一致。
+我們先前提到，**節點**是 Dynamo 圖表的核心建置圖塊，在**資源庫**中被組織為邏輯群組。在 Dynamo for Civil 3D 中，資源庫中有兩個品類 (也就是**層架**)，包含用於處理 AutoCAD 和 Civil 3D 物件 (例如定線、縱斷面、廊道、圖塊參考等) 的專用節點。資源庫的其餘部分包含本質上比較通用的節點，在所有「類型」的 Dynamo (例如，適用於 Revit 的 Dynamo、Dynamo Sandbox 等) 之間都一致。
 
 {% hint style="info" %}
  請查看[2-library.md](../3\_user\_interface/2-library.md "mention")一節，進一步瞭解會如何在核心 Dynamo 資源庫中排列節點。
@@ -13,7 +13,7 @@
 > 3. 您可以單獨安裝的協力廠商**套件**中的節點
 
 {% hint style="warning" %}
- 如果使用 AutoCAD 和 Civil 3D 層架下的節點，您的 Dynamo 圖表就只能在 Dynamo for Civil 3D 中運作。如果 Dynamo for Civil 3D 圖表在其他位置開啟 (例如在 Dynamo for Revit 中)，這些節點上會標示警告，而且不會執行。
+ 如果使用 AutoCAD 和 Civil 3D 層架下的節點，您的 Dynamo 圖表就只能在 Dynamo for Civil 3D 中運作。如果 Dynamo for Civil 3D 圖表在其他位置開啟 (例如在適用於 Revit 的 Dynamo 中)，這些節點上會標示警告，而且不會執行。
 {% endhint %}
 
 {% hint style="info" %}

@@ -34,7 +34,7 @@ Camber 是一個開放原始碼的 Dynamo for Civil 3D 套件，包含數百個�
 
 ## CivilConnection
 
-_CivilConnection_ 是一個開放原始碼的 Dynamo for Revit 套件，可讓您在 Civil 3D、Dynamo 和 Revit 之間交換資訊。
+_CivilConnection_ 是一個開放原始碼的適用於 Revit 的 Dynamo 套件，可讓您在 Civil 3D、Dynamo 和 Revit 之間交換資訊。
 
 #### 相關的 Autodesk University 課程
 

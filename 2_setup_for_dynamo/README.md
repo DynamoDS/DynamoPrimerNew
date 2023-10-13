@@ -16,7 +16,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 如需更多 Dynamo 搭配特定軟體的使用說明，建議參閱以下各節：
 
-* [Dynamo for Revit](../7\_dynamo\_for\_revit/)
+* [適用於 Revit 的 Dynamo](../7\_dynamo\_for\_revit/)
 * [Dynamo for Civil 3D](../dynamo-for-civil-3d/)
 
 如果想要以獨立應用程式的形式使用 Dynamo，請繼續閱讀 Sandbox 的下載說明。

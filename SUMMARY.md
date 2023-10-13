@@ -46,7 +46,7 @@
     * [開發套件](6\_custom\_nodes\_and\_packages/6-2\_packages/3-developing.md)
     * [發佈套件](6\_custom\_nodes\_and\_packages/6-2\_packages/4-publishing.md)
     * [Zero-Touch 匯入](6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md)
-* [Dynamo for Revit](7\_dynamo\_for\_revit/README.md)
+* [適用於 Revit 的 Dynamo](7\_dynamo\_for\_revit/README.md)
   * [Revit 連接](7\_dynamo\_for\_revit/1-the-revit-connection.md)
   * [選取](7\_dynamo\_for\_revit/2-selecting.md)
   * [編輯](7\_dynamo\_for\_revit/3-editing.md)

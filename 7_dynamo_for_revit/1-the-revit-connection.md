@@ -2,15 +2,15 @@
 
 ![](images/1/revitconnectionlink.jpg)
 
-Dynamo for Revit 使用圖形演算法編輯器的資料和邏輯環境來延伸建築資訊模型。其靈活性以及功能強大的 Revit 資料庫，為 BIM 提供了新視角。
+適用於 Revit 的 Dynamo 使用圖形演算法編輯器的資料和邏輯環境來延伸建築資訊模型。其靈活性以及功能強大的 Revit 資料庫，為 BIM 提供了新視角。
 
 本章的重點在於 BIM 的 Dynamo 工作流程。各小節主要基於練習，因為直接開始處理專案是熟悉 BIM 圖形算法編輯器的最佳方法。但是，首先讓我們來瞭解程式的開頭。
 
 ### Revit 版本相容性
 
-隨著 Revit 和 Dynamo 兩者持續開發，您可能會發現，您使用的 Revit 版本與安裝在您電腦上的 Dynamo for Revit 版本不相容。以下概述哪些版本的 Dynamo for Revit 與 Revit 相容。
+隨著 Revit 和 Dynamo 兩者持續開發，您可能會發現，您使用的 Revit 版本與安裝在您電腦上的適用於 Revit 的 Dynamo 版本不相容。以下概述哪些版本的適用於 Revit 的 Dynamo 與 Revit 相容。
 
-| Revit 版本 | 第一個穩定的 Dynamo 版本                                                       | 最後一個支援的 Dynamo for Revit 版本                                                                                                                                |
+| Revit 版本 | 第一個穩定的 Dynamo 版本                                                       | 最後一個支援的適用於 Revit 的 Dynamo 版本                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
 | 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
@@ -44,7 +44,7 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 在 Revit 中開啟 Dynamo 時，會有一個稱為「Revit」的新品類。這是使用者介面的全面新增組件，其中提供了專用於 Revit 工作流程的節點。*
 
 {% hint style="warning" %}
- *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於 Dynamo for Revit 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟 Dynamo for Revit 圖表，則 Revit 節點將會遺失。
+ *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於適用於 Revit 的 Dynamo 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟適用於 Revit 的 Dynamo 圖表，則 Revit 節點將會遺失。
 {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
@@ -61,7 +61,7 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 由於 Dynamo 最初是為 AEC 建立，其大型且不斷成長的社區是一個向行業專家學習和連線至行業專家的很棒資源。Dynamo 的社群由樂於分享和創造的建築師、工程師、程式設計人員及設計師組成。
 
-Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 儲存庫](https://github.com/DynamoDS/Dynamo)。另外，[Dynamo Package Manager](http://dynamopackages.com) 是協力廠商資源庫的絕佳資源。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
+Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 儲存庫](https://github.com/DynamoDS/Dynamo)。另外，協力廠商資源庫的絕佳資源是 [Dynamo Package Manager](http://dynamopackages.com)。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
 
 Dynamo 也會積極更新部落格。請閱讀最新的貼文以瞭解最新的開發工作！
 
