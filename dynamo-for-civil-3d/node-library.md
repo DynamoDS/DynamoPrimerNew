@@ -1,6 +1,6 @@
 # 노드 라이브러리
 
-앞서 **노드**는 Dynamo 그래프의 핵심 빌딩 블록이며, **라이브러리**에서 논리 그룹으로 구성된다고 언급했습니다. Dynamo for Civil 3D에는 라이브러리에 정렬, 프로파일, 코리더, 블록 참조 등과 같은 AutoCAD 및 Civil 3D 객체 작업을 위한 전용 노드가 포함된 두 개의 카테고리(또는 **선반**)가 있습니다. 라이브러리의 나머지 부분에는 보다 일반적인 성격의 노드가 포함되어 있으며, 이러한 노드는 Dynamo의 모든 "제품"(예: Dynamo for Revit, Dynamo Sandbox 등) 간에 일관됩니다.
+앞서 **노드**는 Dynamo 그래프의 핵심 빌딩 블록이며, **라이브러리**에서 논리 그룹으로 구성된다고 언급했습니다. Dynamo for Civil 3D에는 라이브러리에 정렬, 프로파일, 코리더, 블록 참조 등과 같은 AutoCAD 및 Civil 3D 객체 작업을 위한 전용 노드가 포함된 두 개의 카테고리(또는 **선반**)가 있습니다. 라이브러리의 나머지 부분에는 보다 일반적인 성격의 노드가 포함되어 있으며, 이러한 노드는 Dynamo의 모든 "제품"(예: Revit용 Dynamo, Dynamo Sandbox 등) 간에 일관됩니다.
 
 {% hint style="info" %}
  코어 Dynamo 라이브러리의 노드 구성 방식에 대한 자세한 내용은 [2-library.md](../3\_user\_interface/2-library.md "mention") 섹션을 참조하십시오. 
@@ -13,7 +13,7 @@
 > 3. 별도로 설치할 수 있는 타사 **패키지**의 노드
 
 {% hint style="warning" %}
- AutoCAD 및 Civil 3D 선반 아래에 있는 노드를 사용하면 Dynamo 그래프가 Dynamo for Civil 3D에서만 작동합니다. Dynamo for Civil 3D 그래프를 다른 곳(예: Dynamo for Revit)에서 열면 이러한 노드는 경고와 함께 플래그가 표시되고 실행되지 않습니다. 
+ AutoCAD 및 Civil 3D 선반 아래에 있는 노드를 사용하면 Dynamo 그래프가 Dynamo for Civil 3D에서만 작동합니다. Dynamo for Civil 3D 그래프를 다른 곳(예: Revit용 Dynamo)에서 열면 이러한 노드는 경고와 함께 플래그가 표시되고 실행되지 않습니다. 
 {% endhint %}
 
 {% hint style="info" %}

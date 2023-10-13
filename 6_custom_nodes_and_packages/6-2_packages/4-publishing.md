@@ -19,7 +19,7 @@
 ### 패키지를 로컬로 게시하기
 
 {% hint style="warning" %}
- Dynamo 패키지 게시는 Dynamo for Revit 및 Dynamo for Civil 3d에서만 사용할 수 있습니다. Dynamo Sandbox에는 게시 기능이 없습니다. 
+ Dynamo 패키지 게시는 Revit용 Dynamo 및 Dynamo for Civil 3D에서만 사용할 수 있습니다. Dynamo Sandbox에는 게시 기능이 없습니다. 
 {% endhint %}
 
 > 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.

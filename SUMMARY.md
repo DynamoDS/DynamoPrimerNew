@@ -46,7 +46,7 @@
     * [패키지 개발](6\_custom\_nodes\_and\_packages/6-2\_packages/3-developing.md)
     * [패키지 게시하기](6\_custom\_nodes\_and\_packages/6-2\_packages/4-publishing.md)
     * [Zero-Touch 가져오기](6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md)
-* [Dynamo for Revit](7\_dynamo\_for\_revit/README.md)
+* [Revit용 Dynamo](7\_dynamo\_for\_revit/README.md)
   * [Revit 연결](7\_dynamo\_for\_revit/1-the-revit-connection.md)
   * [선택](7\_dynamo\_for\_revit/2-selecting.md)
   * [편집](7\_dynamo\_for\_revit/3-editing.md)

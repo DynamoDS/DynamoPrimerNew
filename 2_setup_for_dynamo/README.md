@@ -16,8 +16,8 @@ Dynamo는 **Revit3D**, **FormIt**, **Civil3D** 등의 소프트웨어와 함께 
 
 특정 소프트웨어에서 Dynamo를 사용하는 방법에 대한 자세한 지침은 다음 섹션을 참고하십시오.
 
-* [Dynamo for Revit](../7\_dynamo\_for\_revit/)
-* [Civil 3D용 Dynamo](../dynamo-for-civil-3d/)
+* [Revit용 Dynamo](../7\_dynamo\_for\_revit/)
+* [Dynamo for Civil 3D](../dynamo-for-civil-3d/)
 
 Dynamo를 독립 실행형 응용프로그램으로 사용하려는 경우, Sandbox 다운로드에 대한 지침을 계속 읽습니다.
 

@@ -2,15 +2,15 @@
 
 ![](images/1/revitconnectionlink.jpg)
 
-Dynamo for Revit은 그래픽 알고리즘 편집기의 데이터 및 논리 환경으로 건물 정보 모델링을 확장했습니다. 이 제품은 대단히 유연하고 강력한 Revit 데이터베이스를 제공하므로 BIM을 새로운 차원에서 활용할 수 있게 됩니다.
+Revit용 Dynamo은 그래픽 알고리즘 편집기의 데이터 및 논리 환경으로 건물 정보 모델링을 확장했습니다. 이 제품은 대단히 유연하고 강력한 Revit 데이터베이스를 제공하므로 BIM을 새로운 차원에서 활용할 수 있게 됩니다.
 
 이 장에서는 BIM을 위한 Dynamo 워크플로우에 대해 중점적으로 설명합니다. 프로젝트로 바로 이동하는 것은 BIM용 그래픽 알고리즘 편집기에 익숙해지는 가장 좋은 방법이기 때문에 섹션은 주로 연습으로 구성되어 있습니다. 우선 프로그램을 시작하는 것부터 살펴보겠습니다.
 
 ### Revit 버전 호환성
 
-Revit과 Dynamo가 계속해서 발전함에 따라, 현재 사용 중인 Revit 버전이 컴퓨터에 설치한 Dynamo for Revit용 버전과 호환되지 않음을 알게 될 수도 있습니다. 아래에는 Revit과 호환되는 Dynamo for Revit 버전을 간단히 설명되어 있습니다.
+Revit과 Dynamo가 계속해서 발전함에 따라, 현재 사용 중인 Revit 버전이 컴퓨터에 설치한 Revit용 Dynamo용 버전과 호환되지 않음을 알게 될 수도 있습니다. 아래에는 Revit과 호환되는 Revit용 Dynamo 버전을 간단히 설명되어 있습니다.
 
-| Revit 버전 | 첫 번째 안정적인 Dynamo 버전                                                       | 마지막으로 지원되는 Dynamo for Revit 버전                                                                                                                                |
+| Revit 버전 | 첫 번째 안정적인 Dynamo 버전                                                       | 마지막으로 지원되는 Revit용 Dynamo 버전                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
 | 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
@@ -44,7 +44,7 @@ Revit 프로젝트 또는 패밀리 편집기에서 애드인을 찾은 다음, 
 Revit에서 Dynamo를 열면 "Revit"이라는 새 카테고리가 나타납니다. 이 카테고리는 Revit 워크플로우에 특히 적합한 노드를 제공하는 UI에 포괄적으로 추가되었습니다.*
 
 {% hint style="warning" %}
- *Revit 전용 노드 패밀리를 사용하면 Dynamo 그래프가 Dynamo for Revit에서 열 때만 작동합니다. 예를 들어 Dynamo for Revit 그래프를 Dynamo 샌드박스에서 여는 경우 Revit 노드가 누락됩니다. 
+ *Revit 전용 노드 패밀리를 사용하면 Dynamo 그래프가 Revit용 Dynamo에서 열 때만 작동합니다. 예를 들어 Revit용 Dynamo 그래프를 Dynamo 샌드박스에서 여는 경우 Revit 노드가 누락됩니다. 
 {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)

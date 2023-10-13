@@ -96,7 +96,7 @@ chop 명령을 사용하면 지정된 리스트 길이를 기준으로 리스트
 
 **List.Map/Combine**에서는 지정된 함수를 입력 리스트에 적용하지만 계층의 한 단계 아래에 적용합니다. 조합은 지정된 함수의 입력에 해당하는 여러 입력이 있을 수 있다는 점을 제외하고 맵과 동일합니다.
 
-_참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다._ **List.Map** _기능의 대부분은_ **List@Level** _기능을 추가하여 해결되었습니다. 자세한 내용은 아래의_ [_List@Level_](3-lists-of-lists.md#lists-of-lists) _을 참조하십시오._
+_참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. _ **List.Map** _기능의 대부분은_ **List@Level** _기능을 추가하여 해결되었습니다. 자세한 내용은 아래의 _ [_List@Level_](3-lists-of-lists.md#lists-of-lists) _을 참조하십시오._
 
 간단한 소개를 위해 이전 섹션의 **List.Count** 노드를 살펴보겠습니다.
 
@@ -111,7 +111,7 @@ _참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다._ **List
 > 3. code block의 각 줄을 **Point.ByCoordinates** 노드의 각 _X_ 및 _Y_ 입력에 연결합니다. 노드를 마우스 오른쪽 버튼으로 클릭하고 "레이싱"을 선택한 다음 _"외적"_ 을 선택합니다. 그러면 점의 그리드가 작성됩니다. 범위는 -50에서 50 사이로 정의했으므로 기본 Dynamo 그리드에 걸쳐 있습니다.
 > 4. _**Watch**_ 노드에 작성된 점이 표시됩니다. 데이터 구조를 알 수 있습니다. 리스트의 리스트를 작성했습니다. 각 리스트에는 그리드 점의 행이 나타납니다.
 
-![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
+![연습](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. 이전 단계에서 Watch 노드의 출력에 **List.Count** 노드를 부착합니다.
 > 2. **Watch** 노드를 **List.Count** 출력에 연결합니다.
@@ -129,7 +129,7 @@ List.Count 노드는 5 값을 제공합니다. 이는 code block에 정의된 "N
 
 ### **List.Combine**
 
-_참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Combine 기능의 대부분은_ **List@Level** _기능을 추가하여 해결되었습니다. 자세한 내용은 아래의_[_List@Level_](6-3\_lists-of-lists.md#listlevel) _을 참조하십시오._
+_참고: 이 연습은 이전 버전의 Dynamo로 작성되었습니다. List.Combine 기능의 대부분은_ **List@Level** _기능을 추가하여 해결되었습니다. 자세한 내용은 _아래의_  __List@Level__ 을 참조하십시오.
 
 이 연습에서는 **List.Combine**을 사용하여 별도의 객체 리스트에 함수를 적용하는 방법을 보여 줍니다.
 
@@ -278,7 +278,7 @@ Code block 줄임에서는 "[]"을 사용하여 리스트를 정의합니다. �
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. 동일한 논리 다음에 **List.ReplaceItemAtIndex**를 사용하여 중간 리스트를 수정된 리스트로 대치합니다.
-> 2. 이러한 두 노드의 색인을 정의하는 **Code Block** 은 1과 2이며, **Code Block**(_points[1][2]_)의 원래 조회와 일치합니다.
+> 2. 이러한 두 노드의 색인을 정의하는 **Code Block** __ 은 1과 2이며, **Code Block**(_points[1][2]_)의 원래 조회와 일치합니다.
 > 3. _index 1_ 에서 리스트를 선택하면 Dynamo 미리보기에 데이터 구조가 강조 표시됩니다. 이동된 점을 원래 데이터 구조에 병합했습니다.
 
 이 점 세트에서 표면을 만드는 여러 가지 방법이 있습니다. 이 경우 곡선을 함께 로프트하여 표면을 작성하겠습니다.
