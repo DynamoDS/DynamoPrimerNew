@@ -31,7 +31,7 @@ Una vez que Dynamo esté abierto, aparecerá la pantalla de inicio. Haga clic en
 {% hint style="info" %}
  **¿Y los ejemplos?**
 
-Dynamo para Civil 3D incluye algunos gráficos prediseñados que pueden servirle de inspiración para otras ideas sobre cómo usar Dynamo. Es recomendable que les eche un vistazo en algún momento, así como a los [sample-workflows](sample-workflows/ "mention") aquí en el manual de introducción. 
+Dynamo for Civil 3D incluye algunos gráficos prediseñados que pueden servirle de inspiración para otras ideas sobre cómo usar Dynamo. Es recomendable que les eche un vistazo en algún momento, así como a los [sample-workflows](sample-workflows/ "mention") aquí en el manual de introducción. 
 {% endhint %}
 
 ## Añadir nodos
@@ -42,7 +42,7 @@ Ahora debería aparecer un espacio de trabajo vacío. Vamos a ver Dynamo en acci
 
 Muy sencillo, ¿verdad? Sin embargo, antes de empezar, debemos abordar algunos aspectos fundamentales.
 
-Los componentes básicos de un gráfico de Dynamo se denominan **nodos**. Un nodo es como una pequeña máquina; se le introducen datos, realiza algún trabajo con ellos y genera un resultado. Dynamo para Civil 3D cuenta con una **biblioteca** de nodos que se pueden conectar mediante **cables** para formar un **gráfico** que realiza tareas más eficaces y de mayor tamaño que las que puede realizar un nodo por sí solo.
+Los componentes básicos de un gráfico de Dynamo se denominan **nodos**. Un nodo es como una pequeña máquina; se le introducen datos, realiza algún trabajo con ellos y genera un resultado. Dynamo for Civil 3D cuenta con una **biblioteca** de nodos que se pueden conectar mediante **cables** para formar un **gráfico** que realiza tareas más eficaces y de mayor tamaño que las que puede realizar un nodo por sí solo.
 
 {% hint style="info" %}
  **Espere... ¿Y si nunca he utilizado Dynamo?**
@@ -114,4 +114,4 @@ Por defecto, Dynamo "recordará" los objetos que crea. Si cambia los valores de 
 
 ## Siguientes pasos
 
-Este ejemplo es apenas una pequeña muestra de lo que puede hacer con Dynamo para Civil 3D. Siga leyendo para obtener más información.
+Este ejemplo es apenas una pequeña muestra de lo que puede hacer con Dynamo for Civil 3D. Siga leyendo para obtener más información.

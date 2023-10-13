@@ -61,7 +61,7 @@ A **Archilizer** se le encargó actualizar el manual de introducción para inclu
 
 ***
 
-A **Wood Rodgers** se le encargó actualizar el manual de introducción con contenido sobre Dynamo para Civil 3D.
+A **Wood Rodgers** se le encargó actualizar el manual de introducción con contenido sobre Dynamo for Civil 3D.
 
 <figure><img src=".gitbook/assets/WR_Logo_NoTagLine_Color (1).jpg" alt=""><figcaption></figcaption></figure>
 

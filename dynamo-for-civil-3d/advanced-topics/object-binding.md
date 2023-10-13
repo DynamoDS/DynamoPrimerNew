@@ -1,6 +1,6 @@
 # Enlace de objetos
 
-Dynamo para Civil 3D contiene un mecanismo muy eficaz para "recordar" los objetos que crea cada nodo. Este mecanismo se denomina **Enlace de objetos** y permite que un gráfico de Dynamo genere resultados coherentes cada vez que se ejecuta en el mismo documento. Aunque esto es muy deseable en muchas situaciones, hay otras en las que es posible que desee tener más control sobre el comportamiento de Dynamo. Esta sección le ayudará a comprender cómo funciona el enlace de objetos y cómo puede aprovecharlo.
+Dynamo for Civil 3D contiene un mecanismo muy eficaz para "recordar" los objetos que crea cada nodo. Este mecanismo se denomina **Enlace de objetos** y permite que un gráfico de Dynamo genere resultados coherentes cada vez que se ejecuta en el mismo documento. Aunque esto es muy deseable en muchas situaciones, hay otras en las que es posible que desee tener más control sobre el comportamiento de Dynamo. Esta sección le ayudará a comprender cómo funciona el enlace de objetos y cómo puede aprovecharlo.
 
 ## Ejemplo
 
@@ -34,7 +34,7 @@ Tras realizar ese cambio, obtenemos el comportamiento que buscamos.
 
 ## Parámetros de enlace
 
-Dynamo para Civil 3D permite modificar el comportamiento por defecto de enlace de objetos a través de los parámetros de **Almacenamiento de datos de enlace** en el menú de **Dynamo**.
+Dynamo for Civil 3D permite modificar el comportamiento por defecto de enlace de objetos a través de los parámetros de **Almacenamiento de datos de enlace** en el menú de **Dynamo**.
 
 {% hint style="info" %}
  Tenga en cuenta que las opciones de almacenamiento de datos de enlace están disponibles en **Civil 3D 2022.1** y versiones posteriores. 

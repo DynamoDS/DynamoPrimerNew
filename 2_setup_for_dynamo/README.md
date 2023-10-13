@@ -16,8 +16,8 @@ Para empezar a utilizarlo, inícielo desde el panel de la barra de herramientas.
 
 Para obtener más información sobre el uso de Dynamo con un software específico, es recomendable consultar las siguientes secciones:
 
-* [Dynamo for Revit](../7\_dynamo\_for\_revit/)
-* [Dynamo para Civil 3D](../dynamo-for-civil-3d/)
+* [Dynamo para Revit](../7\_dynamo\_for\_revit/)
+* [Dynamo for Civil 3D](../dynamo-for-civil-3d/)
 
 Si desea utilizar Dynamo como una aplicación independiente, siga leyendo para obtener instrucciones sobre cómo descargar Sandbox.
 

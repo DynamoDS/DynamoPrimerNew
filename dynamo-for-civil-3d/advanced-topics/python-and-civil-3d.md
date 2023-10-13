@@ -50,7 +50,7 @@ Al editar por primera vez un nuevo nodo de Python, este se rellenará previament
 
 ## Ejemplo
 
-Veamos un ejemplo para mostrar algunos de los conceptos básicos de la escritura de secuencias de comandos de Python en Dynamo para Civil 3D.
+Veamos un ejemplo para mostrar algunos de los conceptos básicos de la escritura de secuencias de comandos de Python en Dynamo for Civil 3D.
 
 ### Objetivo
 
@@ -86,7 +86,7 @@ Ahora podemos empezar a crear la lógica del gráfico. Lo primero que hay que ha
 
 <figure><img src="../../.gitbook/assets/Python_Get_Catchments.png" alt=""><figcaption><p>Obtener todas las cuencas vertientes del documento por capas</p></figcaption></figure>
 
-Observe que la salida del nodo **All Objects on Layer** es una lista de CivilObjects. Esto se debe a que Dynamo para Civil 3D no dispone actualmente de ningún nodo que permita trabajar con cuencas vertientes, que es el motivo por el que necesitamos acceder a la API a través de Python.
+Observe que la salida del nodo **All Objects on Layer** es una lista de CivilObjects. Esto se debe a que Dynamo for Civil 3D no dispone actualmente de ningún nodo que permita trabajar con cuencas vertientes, que es el motivo por el que necesitamos acceder a la API a través de Python.
 
 ### Desenvoltura de objetos
 

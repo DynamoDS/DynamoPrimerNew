@@ -1,6 +1,6 @@
 # Recursos
 
-Este manual de introducción es solo el comienzo de su andadura con Dynamo para Civil 3D. Hay una gran cantidad de conocimientos disponibles en la floreciente comunidad de usuarios de Dynamo. Eche un vistazo a algunos de estos recursos mientras continúa con su aprendizaje.
+Este manual de introducción es solo el comienzo de su andadura con Dynamo for Civil 3D. Hay una gran cantidad de conocimientos disponibles en la floreciente comunidad de usuarios de Dynamo. Eche un vistazo a algunos de estos recursos mientras continúa con su aprendizaje.
 
 ## Ayuda de Civil 3D
 
