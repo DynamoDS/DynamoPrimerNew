@@ -1,6 +1,6 @@
 # Knihovna uzlů
 
-Již dříve jsme uvedli, že **uzly** jsou základními stavebními bloky grafu aplikace Dynamo a jsou uspořádány do logických skupin v **knihovně**. V aplikaci Dynamo for Civil 3D jsou v knihovně dvě kategorie (neboli **police**), které obsahují vyhrazené uzly pro práci s objekty aplikací AutoCAD a Civil 3D, například trasy, profily, koridory, reference bloků atd. Zbytek knihovny obsahuje uzly, které jsou obecnější povahy, a jsou konzistentní mezi všemi verzemi aplikace Dynamo (například Dynamo for Revit, Dynamo Sandbox atd.).
+Již dříve jsme uvedli, že **uzly** jsou základními stavebními bloky grafu aplikace Dynamo a jsou uspořádány do logických skupin v **knihovně**. V aplikaci Dynamo for Civil 3D jsou v knihovně dvě kategorie (neboli **police**), které obsahují vyhrazené uzly pro práci s objekty aplikací AutoCAD a Civil 3D, například trasy, profily, koridory, reference bloků atd. Zbytek knihovny obsahuje uzly, které jsou obecnější povahy, a jsou konzistentní mezi všemi verzemi aplikace Dynamo (například Dynamo pro aplikaci Revit, Dynamo Sandbox atd.).
 
 {% hint style="info" %}
  Další informace o uspořádání uzlů v základní knihovně aplikace Dynamo naleznete v části [2-library.md](../3\_user\_interface/2-library.md "mention") . 
@@ -13,7 +13,7 @@ Již dříve jsme uvedli, že **uzly** jsou základními stavebními bloky grafu
 > 3. Uzly z **balíčků** třetích stran, které lze instalovat samostatně.
 
 {% hint style="warning" %}
- Použijete-li uzly, které se nacházejí v policích pro aplikace AutoCAD a Civil 3D, bude graf aplikace Dynamo fungovat pouze v aplikaci Dynamo for Civil 3D. Pokud bude graf pro aplikaci Dynamo for Civil 3D otevřen jinde (například v aplikaci Dynamo for Revit), tyto uzly budou označeny upozorněním a nebudou spuštěny. 
+ Použijete-li uzly, které se nacházejí v policích pro aplikace AutoCAD a Civil 3D, bude graf aplikace Dynamo fungovat pouze v aplikaci Dynamo for Civil 3D. Pokud bude graf pro aplikaci Dynamo for Civil 3D otevřen jinde (například v aplikaci Dynamo pro aplikaci Revit), tyto uzly budou označeny upozorněním a nebudou spuštěny. 
 {% endhint %}
 
 {% hint style="info" %}

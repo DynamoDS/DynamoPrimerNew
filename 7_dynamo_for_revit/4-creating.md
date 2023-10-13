@@ -57,7 +57,7 @@ Byly použity uzly _Select Model Element_ a _Select Face_ a nyní pokračujeme o
 > 4. Uzly _Watch_ zobrazují, že se nyní v aplikaci Dynamo nacházejí čáry. Toto se automaticky převede na geometrii aplikace Dynamo, protože hrany samy nejsou prvky aplikace Revit. Tyto křivky jsou reference, pomocí kterých se vytvoří instance adaptivních příhradových nosníků na průčelí.
 
 {% hint style="info" %}
-*Abychom zachovali konzistentní topologii, odkazujeme se na model, který nemá přidány další plochy ani hrany. Zatímco parametry mohou změnit její tvar, způsob, jakým je vytvořena, zůstává konzistentní. 
+ *Abychom zachovali konzistentní topologii, odkazujeme se na model, který nemá přidány další plochy ani hrany. Zatímco parametry mohou změnit její tvar, způsob, jakým je vytvořena, zůstává konzistentní. 
 {% endhint %}
 
 Nejprve je potřeba spojit křivky a sloučit je do jednoho seznamu. Tímto způsobem je možné _„seskupit“_ křivky za účelem provedení operací geometrie.

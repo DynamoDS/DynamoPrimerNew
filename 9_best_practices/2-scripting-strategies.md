@@ -24,7 +24,7 @@ Textové skriptování může vytvořit vztahy vyšší složitosti než vizuál
 | **ZeroTouch (C#)** | Ne          | Ne            | Ne                 | Ano                | Ne            |
 
 {% hint style="info" %}
-Seznam toho, k čemu vám jednotlivé knihovny aplikace Dynamo poskytují přístup, naleznete v části [Reference skriptování](3-scripting-reference.md). 
+ Seznam toho, k čemu vám jednotlivé knihovny aplikace Dynamo poskytují přístup, naleznete v části [Reference skriptování](3-scripting-reference.md). 
 {% endhint %}
 
 ### Uvažujte parametricky
@@ -66,7 +66,7 @@ Při skriptování v aplikaci Dynamo, což je nezbytně parametrické prostřed
 > 3. Smyčka, která pomocí těchto vstupů a proměnných provádí svou funkci.
 
 {% hint style="info" %}
-Tip: Na proces klaďte tak velký důraz, jaký kladete na řešení. 
+ Tip: Na proces klaďte tak velký důraz, jaký kladete na řešení. 
 {% endhint %}
 
 ### **Neopakujte se (princip DRY):**
@@ -95,7 +95,7 @@ for i in range(count):
 ```
 
 {% hint style="info" %}
-Tip: Před duplikováním entit ve skriptu (například konstanty ve výše uvedeném příkladu) si můžete položit dotaz, zda se místo toho můžete připojit ke zdroji. 
+ Tip: Před duplikováním entit ve skriptu (například konstanty ve výše uvedeném příkladu) si můžete položit dotaz, zda se místo toho můžete připojit ke zdroji. 
 {% endhint %}
 
 ### Strukturu tvořte modulárně
@@ -202,7 +202,7 @@ Při vývoji textových skriptů v aplikaci Dynamo je moudré neustále kontrol
   * Zjistěte, co způsobuje chybu, a poté se rozhodněte, zda je nutné ji opravit interně nebo zda je nutné doménu parametrů předefinovat, aby se tomuto problému zabránilo.
 
 {% hint style="info" %}
-Tip: Vždy předpokládejte, že uživatel použije všechny kombinace všech možných vstupních hodnot, které mu zpřístupníte. Tímto můžete zabránit nežádoucím překvapením 
+ Tip: Vždy předpokládejte, že uživatel použije všechny kombinace všech možných vstupních hodnot, které mu zpřístupníte. Tímto můžete zabránit nežádoucím překvapením 
 {% endhint %}.
 
 ### Laďte efektivně

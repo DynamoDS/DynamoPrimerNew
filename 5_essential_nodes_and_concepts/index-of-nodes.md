@@ -135,7 +135,7 @@ Tento rejstřík nabízí dodatečné informace o všech uzlech použitých v 
 | ![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>Získá hraniční kvádr jako objemový kvádr.</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
 
 {% hint style="warning" %}
-**Jinými slovy, pokud vytvoříte šířku kvádru (osa X) o délce 10 a transformujete ji na souřadnicový systém s 2krát větším měřítkem v ose X, šířka bude stále 10. ASM neumožňuje extrahovat vrcholy tělesa v předvídatelném pořadí, takže po transformaci není možné určit rozměry. 
+ **Jinými slovy, pokud vytvoříte šířku kvádru (osa X) o délce 10 a transformujete ji na souřadnicový systém s 2krát větším měřítkem v ose X, šířka bude stále 10. ASM neumožňuje extrahovat vrcholy tělesa v předvídatelném pořadí, takže po transformaci není možné určit rozměry. 
 {% endhint %}
 
 ### Křivka

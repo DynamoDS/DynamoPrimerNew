@@ -4,7 +4,7 @@ Výkonnou funkcí aplikace Dynamo je, že můžete upravovat parametry na parame
 
 ### Parametry typu a instance
 
-![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Cvičení](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Parametry instance definují otvor panelů na povrchu střechy v rozsahu Poměr otvoru od 0.1 do 0.4.
 > 2. Parametry založené na typu jsou použity u každého prvku na povrchu, protože se jedná o stejný typ rodiny. Materiál každého panelu může být například řízen parametrem založeným na typu.

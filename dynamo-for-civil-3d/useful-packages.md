@@ -34,7 +34,7 @@ Camber je balíček pro aplikaci Dynamo for Civil 3D s otevřeným zdrojovým k
 
 ## CivilConnection
 
-_CivilConnection_ je balíček pro aplikaci Dynamo for Revit s otevřeným zdrojovým kódem, který umožňuje výměnu informací mezi aplikacemi Civil 3D, Dynamo a Revit.
+_CivilConnection_ je balíček pro aplikaci Dynamo pro aplikaci Revit s otevřeným zdrojovým kódem, který umožňuje výměnu informací mezi aplikacemi Civil 3D, Dynamo a Revit.
 
 #### Související kurzy na webu Autodesk University
 

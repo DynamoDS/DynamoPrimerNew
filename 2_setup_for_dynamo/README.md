@@ -16,7 +16,7 @@ Chcete-li ji začít používat, spusťte ji z panelu nástrojů. Ikona spušt�
 
 Další pokyny k používání aplikace Dynamo s konkrétním softwarem naleznete v následujících částech:
 
-* [Dynamo for Revit](../7\_dynamo\_for\_revit/)
+* [Dynamo pro aplikaci Revit](../7\_dynamo\_for\_revit/)
 * [Dynamo for Civil 3D](../dynamo-for-civil-3d/)
 
 Pokud chcete aplikaci Dynamo používat jako samostatnou aplikaci, přečtěte si níže pokyny ke stažení aplikace Dynamo Sandbox.

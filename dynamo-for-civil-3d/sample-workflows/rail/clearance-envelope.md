@@ -25,7 +25,7 @@ Vývoj kinematických obálek pro ověření průjezdnosti je důležitou souč�
 
 Začněte stažením níže uvedených vzorových souborů a poté otevřete soubor DWG a graf aplikace Dynamo.
 
-{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dyn" %}
+{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope (1).dyn" %}
 
 {% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dwg" %}
 
@@ -124,5 +124,5 @@ Zde je několik nápadů, jak byste mohli rozšířit možnosti tohoto grafu.
 {% endhint %}
 
 {% hint style="info" %}
- Zkontrolujte, zda se obálka těles **protíná s návrhovými liniemi** a vybarvěte ty, které se střetávají. 
+ Zkontrolujte, zda se obálka těles ** protíná s návrhovými liniemi** a vybarvěte ty, které se střetávají. 
 {% endhint %}

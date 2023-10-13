@@ -2,7 +2,7 @@
 
 ![](images/1/revitconnectionlink.jpg)
 
-Modul Dynamo for Revit rozšiřuje informační model budovy o data a logiku grafického editoru algoritmů. Jeho flexibilita spolu s robustní databázi aplikace Revit umožňují pracovat na BIM inovativním způsobem.
+Modul Dynamo pro aplikaci Revit rozšiřuje informační model budovy o data a logiku grafického editoru algoritmů. Jeho flexibilita spolu s robustní databázi aplikace Revit umožňují pracovat na BIM inovativním způsobem.
 
 Tato kapitola se zaměřuje na práci na BIM v rozhraní Dynamo. Jednotlivé části jsou zaměřeny zejména na praktická cvičení, protože práce na projektu je nejlepší způsob, jak se seznámit s grafickým editorem algoritmů pro BIM. Řekněme si ale nejdřív něco k počátkům programu.
 
@@ -44,14 +44,14 @@ V projektu aplikace Revit nebo Editoru rodiny přejděte na doplňky a kliknět
 Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie s názvem „Revit“. Jedná se o rozšíření uživatelského rozhraní, které nabízí uzly pro práci s aplikací Revit.*
 
 {% hint style="warning" %}
- *Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo for Revit. Pokud graf modulu Dynamo for Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět. 
+ *Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo pro aplikaci Revit. Pokud graf modulu Dynamo pro aplikaci Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět. 
 {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
 ### Zmrazení uzlů
 
-Protože Revit je platforma s robustními funkcemi pro správu projektů, výpočet parametrických operací v aplikaci Dynamo může být složitý a pomalý. Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, může být užitečné využít funkci „zmrazení“ uzlu, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf.
+Protože Revit je platforma s robustními funkcemi pro správu projektů, výpočet parametrických operací v aplikaci Dynamo může být složitý a pomalý. Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, bude možná užitečné využít funkci „zmrazení“ uzlu, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf.
 
 {% hint style="info" %}
  Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 

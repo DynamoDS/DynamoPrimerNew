@@ -31,7 +31,7 @@ Po otevření aplikace Dynamo se zobrazí úvodní obrazovka. Kliknutím na tla�
 {% hint style="info" %}
  **Jsou dostupné nějaké ukázky?**
 
-Aplikace Dynamo for Civil 3D obsahuje několik předdefinovaných grafů, které vám pomohou podnítit některé další nápady, jak používat aplikaci Dynamo. Doporučujeme se na ně někdy podívat a také si přečtěte část [sample-workflows](sample-workflows/ "mention") v této příručce Primer. 
+Aplikace Dynamo for Civil 3D obsahuje několik předdefinovaných grafů, které vám pomohou podnítit některé další nápady, jak používat aplikaci Dynamo. Doporučujeme se na ně někdy podívat a také si přečtěte část [sample-workflowstitlemention v této příručce Primer. 
 {% endhint %}
 
 ## Přidání uzlů

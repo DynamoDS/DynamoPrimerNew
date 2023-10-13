@@ -151,7 +151,7 @@ Dále pomocí uzlu **List.Combine** použijeme funkci na objekty ve 2 samostatn�
 Po dokončení jsou 2 sady bodů komprimovány/spárovány dohromady pomocí funkce **Line.ByStartPointEndPoint** a vrátí 10 řádků v aplikaci Dynamo.
 
 {% hint style="info" %}
-Další příklad použití uzlu List.Combine naleznete ve cvičení v části N-rozměrné seznamy.
+ Další příklad použití uzlu List.Combine naleznete ve cvičení v části N-rozměrné seznamy. 
 {% endhint %}
 
 ### Funkce List@Level
@@ -278,7 +278,7 @@ Nyní, když byl seznam upraven, je třeba vložit tento seznam zpět do původn
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Podle stejné logiky nahraďte pomocí metody **List.ReplaceItemAtIndex** prostřední seznam upraveným seznamem.
-> 2. Všimněte si, že **bloky kódu** definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points[1][2]_).
+> 2. Všimněte si, že **bloky kódu** __ definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points[1][2]_).
 > 3. Po výběru seznamu na _indexu 1_ se v náhledu aplikace Dynamo zvýrazní datová struktura. Přesunutý bod tak byl úspěšně sloučen s původní datovou strukturou.
 
 Z této sady bodů je možné vytvořit povrch mnoha způsoby. V tomto případě se vytvoří povrch šablonováním křivek dohromady.

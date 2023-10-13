@@ -30,7 +30,7 @@ Začněte stažením níže uvedených vzorových souborů a poté otevřete sou
  Doporučujeme soubor aplikace Excel uložit ve stejném adresáři jako graf aplikace Dynamo. 
 {% endhint %}
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
