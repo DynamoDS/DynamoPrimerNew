@@ -10,7 +10,7 @@ Operatory to zestaw komponentów, w których używane są funkcje algebraiczne z
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
 | ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
 | ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (*****) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (**\***) | var[]...[], var[]...[] | var[]...[] |
 | ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ćwiczenie: formuła złotej spirali
