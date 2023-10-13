@@ -4,7 +4,7 @@ Zaawansowaną funkcją dodatku Dynamo jest możliwość edycji parametrów na po
 
 ### Parametry typu i wystąpienia
 
-![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Ćwiczenie](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Parametry wystąpienia definiują aperturę paneli na powierzchni dachu, od współczynnika apertury 0,1 do 0,4.
 > 2. Parametry oparte na typie są stosowane do każdego elementu na powierzchni, ponieważ mają one ten sam typ rodziny. Na przykład materiał każdego panelu może być sterowany przez parametr oparty na typie.

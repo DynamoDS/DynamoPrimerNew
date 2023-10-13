@@ -19,7 +19,7 @@ Następnie ponownie uruchom dodatek Dynamo. Po ponownym otwarciu w oknie _„Zar
 ### Publikowanie pakietu lokalnie
 
 {% hint style="warning" %}
- Publikowanie pakietu Dynamo jest możliwe tylko w dodatku Dynamo dla programu Revit i dodatku Dynamo dla programu Civil 3d. Obszar izolowany (piaskownica) dodatku Dynamo nie ma funkcji publikowania. 
+ Publikowanie pakietu Dynamo jest możliwe tylko w dodatku Dynamo dla programu Revit i dodatku Dynamo for Civil 3D. Obszar izolowany (piaskownica) dodatku Dynamo nie ma funkcji publikowania. 
 {% endhint %}
 
 > Pobierz plik przykładowy, klikając poniższe łącze.

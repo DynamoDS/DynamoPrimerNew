@@ -50,7 +50,7 @@ Podczas pierwszej edycji nowego węzła w języku Python jest on wstępnie wype�
 
 ## Przykład
 
-Przeanalizujmy przykład, aby zademonstrować niektóre z najważniejszych pojęć dotyczących pisania skryptów w języku Python w dodatku Dynamo dla programu Civil 3D.
+Przeanalizujmy przykład, aby zademonstrować niektóre z najważniejszych pojęć dotyczących pisania skryptów w języku Python w dodatku Dynamo for Civil 3D.
 
 ### Cel
 
