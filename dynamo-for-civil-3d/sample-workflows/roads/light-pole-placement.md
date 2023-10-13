@@ -159,5 +159,5 @@ Ecco alcune idee su come espandere le funzionalità di questo grafico.
 {% endhint %}
 
 {% hint style="info" %}
- Anziché utilizzare un file Excel con valori di progressiva, generare i valori di progressiva **direttamente in Dynamo** utilizzando una progressiva iniziale e una spaziatura tipica. 
+ Anziché utilizzare un file Excel con valori di progressiva, generare i valori di progressiva ** direttamente in Dynamo** utilizzando una progressiva iniziale e una spaziatura tipica. 
 {% endhint %}

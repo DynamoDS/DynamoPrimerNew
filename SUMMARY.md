@@ -46,7 +46,7 @@
     * [Sviluppo di un pacchetto](6\_custom\_nodes\_and\_packages/6-2\_packages/3-developing.md)
     * [Pubblicazione di un pacchetto](6\_custom\_nodes\_and\_packages/6-2\_packages/4-publishing.md)
     * [Importazione zero-touch](6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch.md)
-* [Dynamo for Revit](7\_dynamo\_for\_revit/README.md)
+* [Dynamo per Revit](7\_dynamo\_for\_revit/README.md)
   * [Correlazione con Revit](7\_dynamo\_for\_revit/1-the-revit-connection.md)
   * [Selezione](7\_dynamo\_for\_revit/2-selecting.md)
   * [Modifica](7\_dynamo\_for\_revit/3-editing.md)

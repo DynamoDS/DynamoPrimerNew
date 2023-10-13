@@ -124,7 +124,8 @@ La modifica di questa impostazione forzerà Dynamo a "dimenticare" gli oggetti c
 Ecco alcune idee su come espandere le funzionalità di questo grafico.
 
 {% hint style="info" %}
- Posizionare **più collegamenti dei servizi** contemporaneamente anziché selezionare ogni linea del lotto. {% endpoint %}
+ Posizionare **più collegamenti dei servizi** contemporaneamente anziché selezionare ogni linea del lotto. 
+{% endhint %}
 
 {% hint style="info" %}
  Regolare gli input per posizionare invece **sportelli di ispezione per fognature** anziché i contatori del servizio idrico. 

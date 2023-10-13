@@ -4,7 +4,7 @@ Una potente funzionalità di Dynamo è la possibilità di modificare i parametri
 
 ### Parametri di istanza e tipo
 
-![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Esercizio](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. I parametri di istanza definiscono l'apertura dei pannelli sulla superficie del tetto, che prevedono un rapporto di apertura compreso tra 0.1 e 0.4.
 > 2. I parametri basati sul tipo vengono applicati ad ogni elemento della superficie in quanto si tratta dello stesso tipo di famiglia. Il materiale di ciascun pannello, ad esempio, può essere determinato da un parametro basato sul tipo.

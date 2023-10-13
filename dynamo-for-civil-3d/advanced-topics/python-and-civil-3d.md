@@ -172,7 +172,8 @@ with adoc.LockDocument():
 </strong></code></pre>
 
 {% hint style="warning" %}
- In genere, è consigliabile includere la maggior parte della logica di script all'interno di una transazione. In questo modo si garantisce l'accesso sicuro agli oggetti che lo script sta leggendo/scrivendo. In molti casi, omettere una transazione può causare un errore irreversibile. {% endpoint %}
+ In genere, è consigliabile includere la maggior parte della logica di script all'interno di una transazione. In questo modo si garantisce l'accesso sicuro agli oggetti che lo script sta leggendo/scrivendo. In molti casi, omettere una transazione può causare un errore irreversibile. 
+{% endhint %}
 
 ### Creazione di PolyCurve
 

@@ -108,8 +108,8 @@ Questo passaggio crea punti lungo la curva. I numeri sono stati riassociati da 0
 
 ![](../images/5-3/3/logic-exercisepartII-07.jpg)
 
-> a. Elenco di cuboidi in corrispondenza di indici pari.
+> a. a. Elenco di cuboidi in corrispondenza di indici pari.
 >
-> b. Elenco di cuboidi in corrispondenza di indici dispari
+> b. b. Elenco di cuboidi in corrispondenza di indici dispari
 
 Voila! È stato appena programmato un processo per definire le quote della geometria in base all'operazione logica illustrata in questo esercizio.

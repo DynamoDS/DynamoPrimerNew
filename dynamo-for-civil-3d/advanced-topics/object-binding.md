@@ -65,7 +65,8 @@ Utilizzare questa opzione quando si desidera che Dynamo "memorizzi" gli oggetti 
 {% endhint %}
 
 {% hint style="warning" %}
- Questa opzione è particolarmente adatta per le situazioni in cui è possibile mantenere un rapporto 1:1 tra una **Carta specifica** e un grafico di Dynamo. Le opzioni 1 e 3 sono più adatte per i grafici progettati per l'esecuzione su più disegni. {% endpoint %}
+ Questa opzione è particolarmente adatta per le situazioni in cui è possibile mantenere un rapporto 1:1 tra una **Carta specifica** e un grafico di Dynamo. Le opzioni 1 e 3 sono più adatte per i grafici progettati per l'esecuzione su più disegni. 
+{% endhint %}
 
 ### Opzione 3: Memorizza nella Carta per Dynamo
 
@@ -74,7 +75,8 @@ Questa opzione è simile all'opzione 2, tranne per il fatto che i dati dell'unio
 {% hint style="info" %}
  **Quando utilizzare**
 
-Utilizzare questa opzione quando si desidera utilizzare lo stesso grafico in **più Carte** e fare in modo che Dynamo "memorizzi"ciò che ha svolto in ciascuno. {% endpoint %}
+Utilizzare questa opzione quando si desidera utilizzare lo stesso grafico in **più Carte** e fare in modo che Dynamo "memorizzi"ciò che ha svolto in ciascuno. 
+{% endhint %}
 
 ### Opzione 4: Memorizza nella Carta per Lettore Dynamo
 

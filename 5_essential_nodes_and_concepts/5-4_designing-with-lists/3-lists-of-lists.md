@@ -111,7 +111,7 @@ Il nodo **List.Count** conteggia tutti gli elementi di un elenco. Verrà utilizz
 > 3. Collegare ogni riga del blocco di codice ai rispettivi input _X_ e _Y_ di un nodo **Point.ByCoordinates**. Fare clic con il pulsante destro del mouse sul nodo, selezionare Collegamento e scegliere _Globale_. In questo modo viene creata una griglia di punti. Poiché è stato definito l'intervallo da -50 a 50, la griglia di Dynamo di default viene estesa.
 > 4. Un nodo _**Watch**_ mostra i punti creati. Notare la struttura di dati. È stato creato un elenco di elenchi. Ogni elenco rappresenta una riga di punti della griglia.
 
-![Exercise](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Esercizio](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Associare un nodo **List.Count** all'output del nodo Watch del passaggio precedente.
 > 2. Collegare un nodo **Watch** all'output **List.Count**.
@@ -278,7 +278,7 @@ Dopo aver modificato l'elenco, è necessario reinserire l'elenco nella struttura
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Seguendo la stessa logica, utilizzare **List.ReplaceItemAtIndex** per sostituire l'elenco centrale con l'elenco modificato.
-> 2. Notare che i **Code Block** che definiscono l'indice per questi due nodi sono 1 e 2, che corrisponde alla query originale di **Code Block** (_points[1][2]_).
+> 2. Notare che i **Code Block**__ che definiscono l'indice per questi due nodi sono 1 e 2, che corrisponde alla query originale di **Code Block** (_points[1][2]_).
 > 3. Selezionando l'elenco in corrispondenza dell'_index 1_, viene visualizzata la struttura di dati evidenziata nell'anteprima di Dynamo. Il punto spostato è stato unito correttamente nella struttura di dati originale.
 
 Esistono molti modi per creare una superficie da questo gruppo di punti. In questo caso, si creerà una superficie eseguendo il loft delle curve insieme.
