@@ -60,7 +60,7 @@
   * [Exemples de workflows](dynamo-for-civil-3d/sample-workflows/README.md)
     * [Routes](dynamo-for-civil-3d/sample-workflows/roads/README.md)
       * [Positionnement des lampadaires](dynamo-for-civil-3d/sample-workflows/roads/light-pole-placement.md)
-    * [Land (Terrain)](dynamo-for-civil-3d/sample-workflows/land/README.md)
+    * [Terrain](dynamo-for-civil-3d/sample-workflows/land/README.md)
       * [Positionnement des services](dynamo-for-civil-3d/sample-workflows/land/service-placement.md)
     * [Réseaux techniques](dynamo-for-civil-3d/sample-workflows/utilities/README.md)
       * [Renommer des structures](dynamo-for-civil-3d/sample-workflows/utilities/rename-structures.md)
