@@ -113,3 +113,4 @@ L’analyse de la syntaxe d’un fichier .svg permet de convertir les courbes au
 Les courbes importées sont mappées avec une surface cible. Cela vous permet de concevoir de manière explicite (pointer-cliquer) une contruction de panneaux dans Illustrator, de l’importer dans Dynamo et de l’appliquer à une surface cible.
 
 ![](../images/6-2/3/developpackage-samplefile05c.jpg)
+
