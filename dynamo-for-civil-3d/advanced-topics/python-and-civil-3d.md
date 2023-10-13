@@ -8,7 +8,7 @@
 本部分将重点介绍如何在 Civil 3D 环境中利用 Python，来利用 AutoCAD 和 Civil 3D .NET API。
 
 {% hint style="info" %}
- 有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8\_coding\_in\_dynamo/8-3\_python/ "提及")部分。
+ 有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention")部分。
 {% endhint %}
 
 ## API 文档
@@ -90,7 +90,7 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 ### 展开对象
 
-在进一步介绍之前，我们需要简要介绍一个重要概念。在[节点库.md](../node-library.md "提及")部分中，我们讨论了 Objects 和 CivilObject 之间的关系。对此详加说明，**Dynamo Object** 是 **AutoCAD Entity** 的包裹器。同样，**Dynamo CivilObject** 是 **Civil 3D Entity** 的包裹器。可以通过访问对象的 `InternalDBObject` 或 `InternalObjectId` 特性来“展开”该对象。
+在进一步介绍之前，我们需要简要介绍一个重要概念。在[节点库.md](../node-library.md "mention")部分中，我们讨论了 Objects 和 CivilObject 之间的关系。对此详加说明，**Dynamo Object** 是 **AutoCAD Entity** 的包裹器。同样，**Dynamo CivilObject** 是 **Civil 3D Entity** 的包裹器。可以通过访问对象的 `InternalDBObject` 或 `InternalObjectId` 特性来“展开”该对象。
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo 类型</th><th width="373">包裹</th></tr></thead><tbody><tr><td><strong>Object</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entity</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entity</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 

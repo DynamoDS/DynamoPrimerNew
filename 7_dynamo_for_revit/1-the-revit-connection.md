@@ -2,15 +2,15 @@
 
 ![](images/1/revitconnectionlink.jpg)
 
-Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑信息模型。它的灵活性与强大的 Revit 数据库相结合，可以提供全新的 BIM 视角。
+适用于 Revit 的 Dynamo 使用图形算法编辑器的数据和逻辑环境扩展建筑信息模型。它的灵活性与强大的 Revit 数据库相结合，可以提供全新的 BIM 视角。
 
 本章着重介绍适用于 BIM 的 Dynamo 工作流。各部分主要基于练习，因为直接进入项目是熟悉 BIM 图形算法编辑器的最佳方式。首先，我们来谈谈程序的开头部分。
 
 ### Revit 版本兼容性
 
-由于 Revit 和 Dynamo 都在不断发展，您可能会注意到，您使用的 Revit 版本与您计算机上安装的 Dynamo for Revit 版本不兼容。下面概述了哪些 Dynamo for Revit 版本与 Revit 兼容。
+由于 Revit 和 Dynamo 都在不断发展，您可能会注意到，您使用的 Revit 版本与您计算机上安装的适用于 Revit 的 Dynamo 版本不兼容。下面概述了哪些适用于 Revit 的 Dynamo 版本与 Revit 兼容。
 
-| Revit 版本 | 第一个稳定的 Dynamo 版本                                                       | 上次支持的 Dynamo for Revit 版本                                                                                                                                |
+| Revit 版本 | 第一个稳定的 Dynamo 版本                                                       | 上次支持的适用于 Revit 的 Dynamo 版本                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
 | 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
@@ -44,7 +44,7 @@ Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑
 在 Revit 中打开 Dynamo 时，有一个名为“Revit”的新类别。这是对用户界面完全新增的功能，可提供专门针对 Revit 工作流的节点。*
 
 {% hint style="warning" %}
- *通过使用 Revit 特定的节点族，Dynamo 图形将仅在 Dynamo for Revit 中打开时可用。例如，如果在 Dynamo 沙盒中打开 Dynamo for Revit 图形，Revit 节点将丢失。
+ *通过使用 Revit 特定的节点族，Dynamo 图形将仅在适用于 Revit 的 Dynamo 中打开时可用。例如，如果在 Dynamo 沙盒中打开适用于 Revit 的 Dynamo 图形，Revit 节点将丢失。
 {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
@@ -54,7 +54,7 @@ Dynamo for Revit 使用图形算法编辑器的数据和逻辑环境扩展建筑
 由于 Revit 是一个提供强大项目管理的平台，因此 Dynamo 中的参数化操作可能非常复杂且计算速度缓慢。如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。
 
 {% hint style="info" %}
-您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "提及")部分，阅读有关冻结节点的详细信息。
+您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")部分，阅读有关冻结节点的详细信息。
 {% endhint %}
 
 ### 社区和 Dynamo 博客

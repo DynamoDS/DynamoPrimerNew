@@ -40,7 +40,7 @@
 > 4\.所有受影响的节点和关联的几何图形预览将更新并还原为标准预览模式。
 
 {% hint style="info" %}
-您可以在[4_nodes_and_wires](../../4\_nodes\_and\_wires/ "提及")部分，阅读有关冻结节点的详细信息。
+您可以在[4_nodes_and_wiresmentiontitle部分，阅读有关冻结节点的详细信息。
 {% endhint %}
 
 ## 深入探讨...

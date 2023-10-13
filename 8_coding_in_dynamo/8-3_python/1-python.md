@@ -44,7 +44,7 @@ OUT = solids
 
 ![](../images/8-3/1/pythonnode-thepythonnode02.jpg)
 
-Autodesk.DesignScript.Geometry 库使您能够使用与代码块类似的点符号。有关 Dynamo 语法的详细信息，请参见 [7-2_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md " 提及")以及 [DesignScript 手册](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)（要下载此 PDF 文档，请在链接上单击鼠标右键并选择“将链接另存为...”）。键入几何图形类型（如“Point.”），将显示用于创建和查询点的方法列表。
+Autodesk.DesignScript.Geometry 库使您能够使用与代码块类似的点符号。有关 Dynamo 语法的详细信息，请参见 [7-2_design-script-syntax.md](../../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md "mention")以及 [DesignScript 手册](https://dynamobim.org/wp-content/links/DesignScriptGuide.pdf)（要下载此 PDF 文档，请在链接上单击鼠标右键并选择“将链接另存为...”）。键入几何图形类型（如“Point.”），将显示用于创建和查询点的方法列表。
 
 ![](../images/8-3/1/pythonnode-thepythonnode03.jpg)
 

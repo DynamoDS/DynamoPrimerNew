@@ -80,7 +80,7 @@
 因此，我们需要过滤结构列表，以便我们不必考虑大于与路线的特定偏移量的结构。最好使用 **List.FilterByBoolMask** 节点完成此操作。过滤结构列表后，我们使用 **List.SortByKey** 节点以按其桩号值对结构进行排序。
 
 {% hint style="info" %}
-如果您对操作列表不熟悉，请参见 [2-使用列表.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "提及")部分。
+如果您对操作列表不熟悉，请参见 [2-使用列表.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")部分。
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>过滤和排序结构</p></figcaption></figure>
@@ -109,7 +109,7 @@
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器运行图形并在 Civil 3D 中查看结果</p></figcaption></figure>
 
 {% hint style="info" %}
-如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "提及")部分。
+如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention")部分。
 {% endhint %}
 
 > :tada: 任务完成！

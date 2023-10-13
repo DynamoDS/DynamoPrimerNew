@@ -19,7 +19,7 @@
 ### 本地发布软件包
 
 {% hint style="warning" %}
-Dynamo 软件包发布仅在 Dynamo for Revit 和 Dynamo for Civil 3d 中启用。Dynamo 沙箱没有发布功能。
+Dynamo 软件包发布仅在适用于 Revit 的 Dynamo 和 Dynamo for Civil 3D 的 Dynamo 中启用。Dynamo 沙箱没有发布功能。
 {% endhint %}
 
 > 单击下面的链接下载示例文件。

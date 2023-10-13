@@ -24,7 +24,7 @@ Dynamo for Civil 3D 包含一个非常强大的机制，用于“记住”每个
 
 <figure><img src="../../.gitbook/assets/c3d-binding-select-circle.gif" alt=""><figcaption><p>选择一个新圆时 Dynamo 的默认行为</p></figcaption></figure>
 
-似乎每次运行图形时都会删除并重新创建文字。实际上，文字的位置会根据选择的圆进行_修改_。如此一来，就是文字相同，位置却不同！为了每次都创建新文字，我们需要修改 Dynamo 的对象绑定设置，以便不保留绑定数据（请参见下文的[\#绑定设置](object-binding.md#binding-settings "提及")）。
+似乎每次运行图形时都会删除并重新创建文字。实际上，文字的位置会根据选择的圆进行_修改_。如此一来，就是文字相同，位置却不同！为了每次都创建新文字，我们需要修改 Dynamo 的对象绑定设置，以便不保留绑定数据（请参见下文的[\#绑定设置](object-binding.md#binding-settings "mention")）。
 
 <figure><img src="../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>对象绑定设置</p></figcaption></figure>
 
@@ -48,8 +48,8 @@ Dynamo for Civil 3D 允许通过 **“Dynamo”** 菜单中的 **“绑定数据
 
 启用此选项后，Dynamo 将“忘记”上次运行图形时创建的对象。因此，图形可以在任何情况下在任何图形中运行，每次都会创建新对象。
 
-{% hint style="info" %} 
-**何时使用**
+{% hint style="info" %}
+ **何时使用**
 
 如果希望 Dynamo“忘记”以前运行时所执行的所有操作并每次都创建新对象，请使用此选项。
 {% endhint %}
@@ -83,7 +83,7 @@ Dynamo for Civil 3D 允许通过 **“Dynamo”** 菜单中的 **“绑定数据
 使用此选项时，首先要注意的是，当通过主 Dynamo 界面运行图形时，该选项对图形与图形的交互方式没有影响。_仅_当使用 Dynamo 播放器运行图形时，此选项才适用。
 
 {% hint style="info" %}
-如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../dynamo-player.md "提及")部分。
+如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../dynamo-player.md "mention")部分。
 {% endhint %}
 
 如果使用主 Dynamo 界面运行图形，然后关闭并使用 Dynamo 播放器运行同一图形，则它将在之前创建的对象之上创建新对象。但是，Dynamo 播放器执行一次图形后，该播放器将序列化图形中的对象绑定数据。因此，如果通过 Dynamo 播放器多次运行图形，则该播放器会更新对象，而不是创建新对象。如果通过 Dynamo 播放器对**其他图形**运行图形，则由于绑定数据保存在图形 (drawing)（而不是图形 (graph)）中，因此该绑定数据仍保留在原始图形中。
