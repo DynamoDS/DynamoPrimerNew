@@ -12,7 +12,7 @@
 
 ![](<../.gitbook/assets/image (7).png>)
 
-单击**“Dynamo”**按钮，这即会在单独窗口中启动 Dynamo。
+单击 **“Dynamo”** 按钮，这即会在单独窗口中启动 Dynamo。
 
 {% hint style="info" %}
 **Dynamo 和 Dynamo 播放器之间有何区别？**
