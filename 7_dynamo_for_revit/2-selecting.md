@@ -83,7 +83,7 @@ _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。�
 
 使用一些基本清單作業，我們可以查詢感興趣的面。
 
-![](images/2/selecting - exercise 05.jpg)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. 首先，將前面選取的元素輸出至 Element.Faces 節點。
 > 2. 接著，使用 _List.Count_ 節點顯示出我們正在處理量體中的 23 個曲面。
