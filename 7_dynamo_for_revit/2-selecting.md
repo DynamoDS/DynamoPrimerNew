@@ -83,7 +83,7 @@ Veja a seguir um método alternativo. Nesse caso, estamos deixando de lado a sel
 
 Usando algumas operações básicas de lista, podemos consultar uma face de interesse.
 
-![](images/2/selecting - exercise 05.jpg)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. Primeiro, gere os elementos selecionados anteriormente para o nó Element.Faces.
 > 2. Em seguida, use o nó _List.Count_ que revela que estamos trabalhando com 23 superfícies na massa.
