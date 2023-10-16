@@ -15,7 +15,7 @@ La première chose à faire est d’ouvrir un document vide dans Civil 3D. Une 
 Cliquez sur le bouton **Dynamo**, qui lance Dynamo dans une fenêtre distincte.
 
 {% hint style="info" %}
- **Quelle est la différence entre Dynamo et le Lecteur Dynamo ? **
+ **Quelle est la différence entre Dynamo et le Lecteur Dynamo ?**
 
 Dynamo est ce que vous utilisez pour créer et exécuter des graphiques. Le Lecteur Dynamo est un moyen facile d’exécuter des graphiques sans avoir à les ouvrir dans Dynamo.
 

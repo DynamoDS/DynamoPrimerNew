@@ -83,7 +83,7 @@ Voici une autre méthode : dans ce cas, vous ne pouvez pas effectuer de sélect
 
 Certaines des opérations de liste de base vous permettent d’interroger la face qui vous intéresse.
 
-![](images/2/selecting - exercise 05.jpg)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. Tout d’abord, connectez les éléments sélectionnés précédemment au nœud Element.Faces.
 > 2. Ensuite, le nœud _List.Count_ indique que vous travaillez avec 23 surfaces du volume.
