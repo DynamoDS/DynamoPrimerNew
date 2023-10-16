@@ -19,7 +19,7 @@
 ### パッケージをローカルにパブリッシュする
 
 {% hint style="warning" %}
-Dynamo パッケージのパブリッシュは、Dynamo for Revit および Dynamo for Civil 3D でのみ有効です。Dynamo Sandbox には、パブリッシュ機能は用意されていません。
+Dynamo パッケージのパブリッシュは、Revit 用の Dynamo および Dynamo for Civil 3D でのみ有効です。Dynamo Sandbox には、パブリッシュ機能は用意されていません。
 {% endhint %}
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。

@@ -8,9 +8,9 @@ Dynamo を Revit に組み込んで使用すると、Revit のビルディング
 
 ### Revit のバージョンの互換性
 
-Revit と Dynamo はどちらも進化し続けているため、作業中の Revit のバージョンが、マシンにインストールされている Dynamo for Revit のバージョンと互換性がない場合があります。次の一覧は Revit と互換性のある Dynamo for Revit のバージョンの概要です。
+Revit と Dynamo はどちらも進化し続けているため、作業中の Revit のバージョンが、マシンにインストールされている Revit 用の Dynamo のバージョンと互換性がない場合があります。次の一覧は Revit と互換性のある Revit 用の Dynamo のバージョンの概要です。
 
-| Revit のバージョン | 最も安定する Dynamo のバージョン                                                       | サポートされる最も古い Dynamo for Revit のバージョン                                                                                                                                |
+| Revit のバージョン | 最も安定する Dynamo のバージョン                                                       | サポートされる最も古い Revit 用の Dynamo のバージョン                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
 | 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
@@ -44,7 +44,7 @@ Revit プロジェクトやファミリ エディタで、[アドイン]タブ�
 Revit で Dynamo を起動すると、Dynamo のライブラリ内に[Revit]という新しいカテゴリが表示されます。この新しいカテゴリから、Revit ワークフロー専用のノードにアクセスすることができます。
 
 {% hint style="warning" %}
- *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit で稼働している Dynamo から開いたときにのみ正常に動作します。たとえば、Revit で稼働している Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。
+ *Revit 固有のファミリを扱うノードを使用する場合、Dynamo グラフは Revit 用の Dynamo から開いたときにのみ正常に動作します。たとえば、Revit 用の Dynamo のグラフを Dynamo Sandbox で開くと、Revit ノードが失われます。
 {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)

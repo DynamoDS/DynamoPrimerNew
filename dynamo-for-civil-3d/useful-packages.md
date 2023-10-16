@@ -34,7 +34,7 @@ Camber はオープン ソースの Dynamo for Civil 3D パッケージであり
 
 ## CivilConnection
 
-_CivilConnection_ は、Civil 3D、Dynamo、Revit 間での情報交換を可能にするオープン ソースの Dynamo for Revit パッケージです。
+_CivilConnection_ は、Civil 3D、Dynamo、Revit 間での情報交換を可能にするオープン ソースの Revit 用の Dynamo パッケージです。
 
 #### 関連する Autodesk University のクラス
 
