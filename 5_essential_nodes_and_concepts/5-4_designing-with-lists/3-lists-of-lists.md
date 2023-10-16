@@ -278,7 +278,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. 採用相同的邏輯，使用 **List.ReplaceItemAtIndex** 將中間清單更換為我們修改後的清單。
-> 2. 請注意，對這兩個節點定義索引的 **Code Block**_ _ 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
+> 2. 請注意，對這兩個節點定義索引的 **Code Block** 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
 > 3. 透過選取位於 _索引 1_ 的清單，我們可以在 Dynamo 預覽中看到亮顯的資料結構。我們已成功將移動點合併至原始資料結構中。
 
 有許多方式可以使用這組點建立曲面。在此案例中，我們將對曲線進行斷面混成，以建立曲面。

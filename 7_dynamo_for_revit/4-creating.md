@@ -135,7 +135,7 @@
 
 ![](images/4/creating-exerciseII-03.jpg)
 
-> 1. 拉遠並平移至範例圖表中的右側，可以看到大型節點群組，這些是幾何圖形作業，將產生 Dynamo 預覽中可見的格架屋頂結構。這些節點是使用手冊的[程式碼區塊一節](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node)中討論的_將節點轉換為程式碼_功能產生。
+> 1. 拉遠並平移至範例圖表中的右側，可以看到大型節點群組，這些是幾何圖形作業，將產生 Dynamo 預覽中可見的格架屋頂結構。這些節點是使用手冊的[程式碼區塊一節](../coding-in-dynamo/7\_code-blocks-and-design-script/7-2\_design-script-syntax.md#Node)中討論的 _將節點轉換為程式碼_ 功能產生。
 > 2. 結構由三個主要參數驅動，分別是 Diagonal Shift、Camber 與 Radius。
 
 進行縮放，特寫查看此圖表的參數。我們可以調整這些參數，以得到不同的幾何圖形輸出。
