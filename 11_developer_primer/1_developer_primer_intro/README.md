@@ -1,4 +1,4 @@
-# 開発者向け Primer 
+# 開発者向け Primer
 
 #### このガイドの目的について <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
