@@ -83,7 +83,7 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 몇 가지 기본 리스트 작업을 사용하여 관심 면을 조회할 수 있습니다.
 
-![](images/2/selecting - exercise 05.jpg)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. 먼저, 선택한 요소를 이전 노드에서 Element.Faces 노드로 출력합니다.
 > 2. 다음으로, _List.Count_ 노드에는 매스의 23개 표면으로 작업하고 있다고 표시됩니다.
