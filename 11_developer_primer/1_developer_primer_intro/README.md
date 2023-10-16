@@ -1,4 +1,4 @@
-# Guida introduttiva per sviluppatori
+# Guida introduttiva per sviluppatori 
 
 #### Qual è lo scopo di questa guida? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
