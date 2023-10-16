@@ -83,7 +83,7 @@ Ecco un metodo alternativo. In questo caso, non si esegue la selezione tramite l
 
 Utilizzando alcune operazioni di base con gli elenchi, è possibile eseguire una query su una superficie di interesse.
 
-![](images/2/selecting - exercise 05.jpg)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. Innanzitutto, generare gli elementi selezionati da una versione precedente al nodo Element.Faces.
 > 2. Quindi, utilizzare il nodo _List.Count_ per mostrare che si stanno utilizzando 23 superfici nella massa.
