@@ -1,4 +1,4 @@
-# Příručka Primer pro vývojáře
+# Příručka Primer pro vývojáře 
 
 #### Jaký je účel této příručky? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
