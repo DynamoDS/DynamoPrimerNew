@@ -83,7 +83,7 @@ Eine Alternative dazu wird im Folgenden beschrieben. In diesem Fall nehmen Sie d
 
 Mithilfe einiger einfacher Listenoperationen können Sie eine bestimmte Fläche abrufen, die für Ihre Zwecke von Interesse ist.
 
-![](images/2/selecting - exercise 05.jpg)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. Geben Sie zunächst die ausgewählten Elemente von zuvor an den Element.Faces-Block aus.
 > 2. Der _List.Count_-Block zeigt dann, dass 23 Oberflächen im Körper enthalten sind.
