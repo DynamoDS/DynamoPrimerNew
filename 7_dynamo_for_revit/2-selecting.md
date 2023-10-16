@@ -83,7 +83,7 @@ Oto alternatywna metoda. W tym przypadku zamiast wybierać za pomocą hierarchii
 
 Za pomocą podstawowych operacji listy można utworzyć zapytanie o interesującą nas ścianę.
 
-![](images/2/selecting - exercise 05.jpg)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. Najpierw wyprowadź wybrane elementy z wcześniejszego węzła Element.Faces.
 > 2. Następnie w węźle _List.Count_ widzimy, że pracujemy z 23 powierzchniami w ramach bryły.
