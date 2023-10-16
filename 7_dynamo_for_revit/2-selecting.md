@@ -83,7 +83,7 @@ _“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。�
 
 使用一些基本列表操作，我们可以查询关注的面。
 
-![](images/2/selecting - exercise 05.jpg)
+![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. 首先，将之前选定的图元输出到“Element.Faces”节点。
 > 2. 接着，_“List.Count”_ 节点会显示我们正在处理体量中的 23 个曲面。

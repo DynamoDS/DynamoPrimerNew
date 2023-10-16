@@ -32,7 +32,7 @@ Dynamo 的许多绝佳用例之一是沿道路模型动态放置离散对象。�
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
-{% file src="../../../.gitbook/assets/Roads_Corr idorBlockRefs.dwg" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
 {% file src="../../../.gitbook/assets/LightPoles.xlsx" %}
 
