@@ -84,7 +84,7 @@ Esta sintaxis `:base(Inports,outPorts){}` llama al constructor base `nodeModel` 
 
 No es necesario repetir en este constructor la lógica especial presente en el constructor de clase que implicará la inicialización de datos específicos serializados en el archivo .dyn _(por ejemplo, la configuración del registro del puerto, la estrategia de encaje, etc.)_, ya que estos valores se pueden leer desde JSON.
 
-Esta es la diferencia principal entre el constructor JSON y los constructores que no son JSON para nodeModels. Se llama a los constructores JSON al cargar desde un archivo y se transfieren los datos cargados a estos. Sin embargo, debe duplicarse otra lógica de usuario en el constructor JSON _ (por ejemplo, mediante la inicialización de controladores de eventos para el nodo o el enlace)_.
+Esta es la diferencia principal entre el constructor JSON y los constructores que no son JSON para nodeModels. Se llama a los constructores JSON al cargar desde un archivo y se transfieren los datos cargados a estos. Sin embargo, debe duplicarse otra lógica de usuario en el constructor JSON _(por ejemplo, mediante la inicialización de controladores de eventos para el nodo o el enlace)_.
 
 Aquí se pueden encontrar ejemplos en el repositorio de DynamoSamples -> [ButtonCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/ButtonCustomNodeModel.cs#L156), [DropDown](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/DropDown.cs#L23) o [SliderCustomNodeModel](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/SliderCustomNodeModel.cs#L123).
 
