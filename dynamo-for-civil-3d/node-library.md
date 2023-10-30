@@ -19,7 +19,7 @@
 {% hint style="info" %}
  **為什麼 AutoCAD 和 Civil 3D 有兩個獨立層架？**
 
-這種排列方式是為了將原生 AutoCAD 物件 (直線、聚合線、圖塊參考等) 的節點和 Civil 3D 物件 (定線、廊道、地形等) 的節點區分開來從技術角度來看，AutoCAD 和 Civil 3D 是兩個獨立的項目 - AutoCAD 是基礎應用程式，Civil 3D 則建置在其上。
+這種排列方式是為了將原生 AutoCAD 物件 (直線、聚合線、圖塊參考等) 的節點和 Civil 3D 物件 (定線、廊道、地形等) 的節點區分開來。從技術角度來看，AutoCAD 和 Civil 3D 是兩個獨立的項目 - AutoCAD 是基礎應用程式，Civil 3D 則建置在其上。
 {% endhint %}
 
 ## 節點階層
@@ -36,9 +36,9 @@
 
 <figure><img src="../.gitbook/assets/c3d-node-library-alignment-set-name (1).png" alt=""><figcaption></figcaption></figure>
 
-一開始，這看起來可能不太直覺。**CivilObject** 是什麼？為什麼資源庫沒有 **Alignment.SetName** 節點？答案與_可重複使用性_和_簡易性_有關。請思考一下，無論物件是定線、廊道、縱斷面還是其他物件，變更 Civil 3D 物件名稱的過程都相同。因此，與其讓重複節點基本上都執行相同的作業 (例如 **Alignment.SetName、Corridor.SetName、Profile.SetName** 等)，不如將該功能收闔為單一節點。這正是 **CivilObject.SetName** 的功能！
+一開始，這看起來可能不太直覺。**CivilObject** 是什麼？為什麼資源庫沒有 **Alignment.SetName** 節點？答案與 _可重複使用性_ 和 _簡易性_ 有關。請思考一下，無論物件是定線、廊道、縱斷面還是其他物件，變更 Civil 3D 物件名稱的過程都相同。因此，與其讓重複節點基本上都執行相同的作業 (例如 **Alignment.SetName、Corridor.SetName、Profile.SetName** 等)，不如將該功能收闔為單一節點。這正是 **CivilObject.SetName** 的功能！
 
-另一種考量的方式是_關係_。定線和廊道都是一種 **Civil 物件**，就像蘋果和梨一樣都是水果。Civil 物件節點適用於任何類型的 Civil 物件，就像您想要使用一種削皮刀就可以削蘋果和削梨一樣。如果你為每種水果都買一個單獨的削皮刀，你的廚房會變得很混亂！從這個意義上來說，Dynamo 節點資源庫與您的廚房相似。
+另一種考量的方式是 _關係_。定線和廊道都是一種 **Civil 物件**，就像蘋果和梨一樣都是水果。Civil 物件節點適用於任何類型的 Civil 物件，就像您想要使用一種削皮刀就可以削蘋果和削梨一樣。如果你為每種水果都買一個單獨的削皮刀，你的廚房會變得很混亂！從這個意義上來說，Dynamo 節點資源庫與您的廚房相似。
 
 ### 物件
 
