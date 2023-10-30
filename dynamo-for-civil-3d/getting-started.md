@@ -107,7 +107,7 @@ De vuelta en el gráfico de Dynamo, cambie algunos de los valores de entrada, co
 {% hint style="info" %}
  **¿Por qué Dynamo no inserta un nuevo objeto de texto cada vez que se ejecuta el gráfico?**
 
-Por defecto, Dynamo "recordará" los objetos que crea. Si cambia los valores de entrada del nodo, los objetos de Civil 3D se actualizan en lugar de crear objetos nuevos. Puede obtener más información sobre este comportamiento en la sección [object-binding.md](advanced-topics/object-binding.md "mention"). 
+Por defecto, Dynamo "recordará" los objetos que crea. Si cambia los valores de entrada del nodo, los objetos de Civil 3D se actualizan en lugar de crear objetos nuevos. Obtenga más información sobre este comportamiento en la sección [object-binding.md](advanced-topics/object-binding.md "mention"). 
 {% endhint %}
 
 > :tada: ¡Misión cumplida!
