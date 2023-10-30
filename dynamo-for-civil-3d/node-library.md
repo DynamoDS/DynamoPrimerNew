@@ -1,6 +1,6 @@
 # Biblioteca de nós
 
-Mencionamos anteriormente que OS **nós** são os principais blocos de construção de um gráfico do Dynamo e eles são organizados em grupos lógicos na **biblioteca**. No Dynamo for Civil 3D, há duas categorias (ou **prateleiras**) na biblioteca que contêm nós dedicados para trabalhar com objetos do AutoCAD e do Civil 3D, como alinhamentos, perfis, corredores, referências de bloco etc. O restante da biblioteca contém nós que são mais genéricos por natureza e são consistentes em todas as “versões” do Dynamo (por exemplo, Dynamo para Revit, Dynamo Sandbox etc.).
+Mencionamos anteriormente que os **nós** são os principais blocos de construção de um gráfico do Dynamo e eles são organizados em grupos lógicos na **biblioteca**. No Dynamo for Civil 3D, há duas categorias (ou **prateleiras**) na biblioteca que contêm nós dedicados para trabalhar com objetos do AutoCAD e do Civil 3D, como alinhamentos, perfis, corredores, referências de bloco etc. O restante da biblioteca contém nós que são mais genéricos por natureza e são consistentes em todas as “versões” do Dynamo (por exemplo, Dynamo para Revit, Dynamo Sandbox etc.).
 
 {% hint style="info" %}
  Confira a seção [2-library.md](../3\_user\_interface/2-library.md "mention") para obter mais informações sobre como os nós da biblioteca principal do Dynamo são organizados. 
