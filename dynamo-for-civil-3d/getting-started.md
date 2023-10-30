@@ -114,4 +114,4 @@ Domyślnie dodatek Dynamo „zapamiętuje” utworzone przez siebie obiekty. Je�
 
 ## Następne kroki
 
-W tym przykładzie przedstawiono zaledwie mały przykład tego, co można zrobić za pomocą dodatku Dynamo for Civil 3D. Czytaj dalej, aby dowiedzieć się więcej!
+Przedstawiono tu zaledwie mały przykład tego, co można zrobić za pomocą dodatku Dynamo for Civil 3D. Czytaj dalej, aby dowiedzieć się więcej!
