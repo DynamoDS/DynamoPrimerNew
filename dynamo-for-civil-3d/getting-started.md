@@ -19,7 +19,7 @@ Klicken Sie auf die Schaltfläche **Dynamo**. Dadurch wird Dynamo in einem separ
 
 Dynamo wird zum Erstellen und Ausführen von Diagrammen verwendet. Dynamo Player bietet eine einfache Möglichkeit zum Ausführen von Diagrammen, ohne sie in Dynamo öffnen zu müssen.
 
-Gehen Sie zum Abschnitt [dynamo-player.md](dynamo-player.md "mention"), wenn sie ihn ausprobieren möchten. 
+Gehen Sie zum Abschnitt [dynamo-player.md](dynamo-player.md "mention"), wenn Sie ihn ausprobieren möchten. 
 {% endhint %}
 
 ## Starten eines neuen Diagramms
