@@ -10,7 +10,7 @@ UI nodes and nodes that derive directly from NodeModel will take more work to ge
 
 Extension authors may also have some potential changes to make - depending on how much of the Dynamo core APIs they use in their extensions.
 
-
+***
 
 ### General packaging rules: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ An example that specifies a serialization method to convert the property to a st
 
 `public` properties that are not meant for serialization need to have the `[JsonIgnore]` attribute added. When the nodes is saved to the .dyn file this insures this data is ignored by the serialization mechanism and will not cause unexpected consequences when the graph is opened again. An example of this can be [here](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) in the Dynamo repo.
 
-
+***
 
 #### Undo/Redo <a href="#undoredo" id="undoredo"></a>
 

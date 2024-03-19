@@ -14,11 +14,11 @@ In this image, we map a point from one surface to another using UV coordinates. 
 
 In the previous chapter, we explored ways for panelizing a surface in Dynamo based on curves defined in the XY plane. This case study extends these concepts for more dimensions of geometry. We're going to install this package as built in order to demonstrate how it was developed. In the next section, we'll demonstrate how this package was published.
 
-In Dynamo, click \_Packages>Search for a Package... and s\_earch for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
+In Dynamo, click  Packages > Package Manager and search for the package "MapToSurface" (all one word). Click Install to start the download and add the package to your library.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-After installing, the custom nodes should be available under the Add-ons > Dynamo Primer section.
+After installing, the custom nodes should be available under the Add-ons > DynamoPrimer section.
 
 ![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
@@ -64,11 +64,11 @@ This is a simple node which creates a parametric surface to map from the source 
 
 ### Example Files
 
-The example files can be found in the package's root folder. Click Dynamo > Preferences > Package Manager
+The example files can be found in the package's root folder. Click Package Manager > Installed Packages tab.
 
-Next to MapToSurface, click verticle dots menu > Show Root Directory
+Next to MapToSurface, click the vertical dots menu > Show Root Directory.
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Next, open the _"extra"_ folder, which houses all of the files in the package which are not custom nodes. This is where examples files (if they exist) are stored for Dynamo packages. The screenshots below discuss the concepts demonstrated in each example file.
 

@@ -12,9 +12,9 @@ The exercise below demonstrates some basic mesh operations using the Mesh Toolki
 
 ### Install Mesh Toolkit
 
-In Dynamo, go to _Packages > Search for Packages..._ in the top menu bar. In the search field, type _"MeshToolkit"_, all one word, minding the caps. Click Install to start the download. Simple as that!
+In Dynamo, go to Packages > Package Manager... in the top menu bar. In the search field, type MeshToolkit, all one word. Click Install and accept the confirmations to start the download. Simple as that!
 
-![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Exercise: Intersect Mesh
 
