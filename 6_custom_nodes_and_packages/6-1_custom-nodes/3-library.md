@@ -5,7 +5,7 @@ We've just created a custom node and applied it to a specific process in our Dyn
 By publishing a node locally, the node will be accessible in your Dynamo library when you open a new session. Without publishing a node, a Dynamo graph which references a custom node must also have that custom node in its folder (or the custom node must be imported into Dynamo using _File > Import Library_).
 
 {% hint style="warning" %}
-Publishing Custom Node is only enabled in Dynamo for Revit and Dynamo for Civil 3D. Dynamo Sandbox does not have publishing functionality.
+You can publish custom nodes and packages from Dynamo Sandbox in version 2.17 and newer, as long as they have no host API dependencies. In older versions, publishing custom nodes and packages is only enabled in Dynamo for Revit and Dynamo for Civil 3D.&#x20;
 {% endhint %}
 
 ## Exercise: Publishing a Custom Node Locally

@@ -19,7 +19,7 @@ Then restart Dynamo. When reopening, when you check the _"Manage Packages"_ wind
 ### Publishing a Package Locally
 
 {% hint style="warning" %}
-Dynamo package publication is only enabled in Dynamo for Revit and Dynamo for Civil 3d. Dynamo Sandbox does not have publishing functionality.
+You can publish custom nodes and packages from Dynamo Sandbox in version 2.17 and newer, as long as they have no host API dependencies. In older versions, publishing custom nodes and packages is only enabled in Dynamo for Revit and Dynamo for Civil 3D.&#x20;
 {% endhint %}
 
 > Download the example file by clicking on the link below.
