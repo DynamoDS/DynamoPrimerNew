@@ -4,7 +4,7 @@
 Dynamo Hype Video
 {% endembed %}
 
-## For Dynamo v2.13
+## For Dynamo v2.13 and newer
 
 ![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
 
