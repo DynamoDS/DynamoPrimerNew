@@ -10,7 +10,7 @@ Zadbanie o działanie w wersji 2.x węzłów interfejsu użytkownika i węzłów
 
 Twórcy rozszerzeń również mogą być zmuszeni do wprowadzenia pewnych zmian w zależności od tego, w jakim stopniu wykorzystują w rozszerzeniach podstawowe interfejsy API dodatku Dynamo.
 
-
+***
 
 ### Ogólne zasady dotyczące pakowania: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ W repozytorium dodatku Dynamo, [tutaj](https://github.com/DynamoDS/Dynamo/blob/m
 
 Właściwości `public`, które nie są przeznaczone do serializacji, muszą mieć dodany atrybut `[JsonIgnore]`. Po zapisaniu węzłów w pliku .dyn zapewnia to ignorowanie tych danych przez mechanizm serializowania, więc nie będą one powodować nieoczekiwanych konsekwencji po ponownym otwarciu wykresu. Przykład tego można znaleźć [tutaj](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) w repozytorium dodatku Dynamo.
 
-
+***
 
 #### Cofanie/ponawianie <a href="#undoredo" id="undoredo"></a>
 

@@ -1,8 +1,6 @@
 # Informacje
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
- Dynamo Hype — nagranie wideo 
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype — nagranie wideo {% endembed %}
 
 ## Dla dodatku Dynamo 2.13
 

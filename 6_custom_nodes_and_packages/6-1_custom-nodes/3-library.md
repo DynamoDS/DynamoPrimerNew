@@ -4,7 +4,7 @@ Właśnie utworzyliśmy węzeł niestandardowy i zastosowaliśmy go do określon
 
 Węzeł opublikowany lokalnie będzie dostępny w bibliotece dodatku Dynamo po otwarciu nowej sesji. Jeśli nie opublikujemy węzła, w folderze wykresu Dynamo, który odwołuje się do węzła niestandardowego, musi również znajdować się ten węzeł niestandardowy (lub węzeł niestandardowy musi zostać zaimportowany do dodatku Dynamo za pomocą polecenia _Plik > Importuj bibliotekę_).
 
-{% hint style="warning" %} Publikowanie węzła niestandardowego jest możliwe tylko w dodatku Dynamo dla programu Revit i dodatku Dynamo dla programu Civil 3d. Obszar izolowany (piaskownica) dodatku Dynamo nie ma funkcji publikowania. {% endhint %}
+{% hint style="warning" %} Pakiety i węzły niestandardowe można publikować w środowisku Dynamo Sandbox w wersji 2.17 lub nowszej, o ile nie mają one zależności od nadrzędnego interfejsu API. W starszych wersjach publikowanie pakietów i węzłów niestandardowych jest włączone tylko w dodatku Dynamo dla programu Revit i dodatku Dynamo dla programu Civil 3D. {% endhint %}
 
 ## Ćwiczenie: publikowanie węzła niestandardowego lokalnie
 
@@ -24,27 +24,27 @@ Aby opublikować węzeł niestandardowy lokalnie, wystarczy kliknąć prawym prz
 
 Podaj odpowiednie informacje (podobnie, jak to zrobiono na ilustracji powyżej) i wybierz opcję _„Opublikuj lokalnie”._ Należy zwrócić uwagę, że pole Grupa definiuje element główny dostępny w menu dodatku Dynamo.
 
-![](../images/6-1/3/publishcustomnodeexercise-03.jpg)
+<figure><img src="../../.gitbook/assets/publish_a_package.png" alt=""><figcaption></figcaption></figure>
 
-Wybierz folder, w którym będą przechowywane wszystkie węzły niestandardowe publikowane lokalnie. Ten folder będzie sprawdzany przy każdym wczytywaniu dodatku Dynamo, dlatego upewnij się, że jest to folder trwały. Przejdź do tego folderu i wybierz opcję _„Wybierz folder”._ Węzeł Dynamo jest teraz publikowany lokalnie i będzie dostępny na pasku narzędzi dodatku Dynamo po każdym wczytaniu programu.
+Wybierz folder, w którym będą przechowywane wszystkie węzły niestandardowe publikowane lokalnie. Ten folder będzie sprawdzany przy każdym wczytywaniu dodatku Dynamo, dlatego upewnij się, że jest to folder trwały. Przejdź do tego folderu i wybierz opcję _„Wybierz folder”._ Węzeł Dynamo jest teraz opublikowany lokalnie i będzie dostępny w bibliotece dodatku Dynamo po każdym wczytaniu programu.
 
 ![](../images/6-1/3/publishcustomnodeexercise-04.jpg)
 
-Aby sprawdzić położenie folderu węzłów niestandardowych, przejdź do obszaru _Dynamo > Preferencje > Menedżer pakietów > Ścieżki do węzłów i pakietów_
+Aby sprawdzić położenie folderu węzłów niestandardowych, przejdź do obszaru _Dynamo > Preferencje > Ustawienia pakietów > Ścieżki do węzłów i pakietów_
 
-![](../images/6-1/3/publishcustomnodeexercise-05.jpg)
+<figure><img src="../../.gitbook/assets/settings.png" alt="" width="520"><figcaption></figcaption></figure>
 
 W tym oknie jest widoczna lista ścieżek.
 
-![](../images/6-1/3/publishcustomnodeexercise-06.jpg)
+<figure><img src="../../.gitbook/assets/package-locations.png" alt=""><figcaption></figcaption></figure>
 
 > 1. Ścieżka _Documents\\DynamoCustomNodes..._ odnosi się do położenia węzłów niestandardowych, które zostały opublikowane lokalnie.
 > 2. Ścieżka _AppData\\Roaming\\Dynamo..._ odnosi się do domyślnego położenia pakietów dodatku Dynamo instalowanych online.
-> 3. Możesz przenieść ścieżkę folderu lokalnego w dół powyższej listy (wybierając ścieżkę folderu i klikając strzałkę skierowaną w dół po lewej stronie nazwy ścieżki). Folder na początku listy stanowi domyślną ścieżkę do instalacji pakietów. Dlatego jeśli domyślna ścieżka instalacji pakietów Dynamo zostanie zachowana jako folder domyślny, pakiety online będą oddzielone od węzłów opublikowanych lokalnie.
+> 3. Można przenieść ścieżkę folderu lokalnego w dół listy, klikając strzałkę skierowaną w dół po lewej stronie nazwy ścieżki. Folder na początku listy stanowi domyślną ścieżkę do instalacji pakietów. Dlatego jeśli domyślna ścieżka instalacji pakietów Dynamo zostanie zachowana jako folder domyślny, pakiety online będą oddzielone od węzłów opublikowanych lokalnie.
 
 Zmieniliśmy kolejność nazw ścieżek, aby lokalizacją instalacji pakietu była domyślna ścieżka dodatku Dynamo.
 
-![](../images/6-1/3/publishcustomnodeexercise-07.jpg)
+<figure><img src="../../.gitbook/assets/updated-package-locations.png" alt=""><figcaption></figcaption></figure>
 
 Po przejściu do tego folderu lokalnego oryginalny węzeł niestandardowy znajdziemy w folderze _„.dyf”_ — ta nazwa stanowi rozszerzenie pliku węzła niestandardowego dodatku Dynamo (Dynamo Custom Node). Możemy edytować plik w tym folderze, a węzeł zostanie zaktualizowany w interfejsie użytkownika. Możemy także dodać więcej węzłów do głównego folderu _DynamoCustomNode_, a dodatek Dynamo doda je do biblioteki po ponownym uruchomieniu.
 

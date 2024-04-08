@@ -14,13 +14,13 @@ Na tej ilustracji odwzorowujemy punkt z jednej powierzchni na drugą za pomocą 
 
 W poprzednim rozdziale omówiliśmy sposoby panelowania powierzchni w dodatku Dynamo na podstawie krzywych zdefiniowanych na płaszczyźnie XY. W tej analizie przypadku rozszerzono zakres tych pojęć o więcej wymiarów geometrii. Zainstalujemy ten pakiet jako wbudowany, aby zademonstrować, w jaki sposób został on opracowany. W następnej sekcji pokażemy, jak ten pakiet opublikowano.
 
-W dodatku Dynamo kliknij opcje _Pakiety>Wyszukaj pakiet... i wy_szukaj pakiet „MapToSurface” (jest to jeden wyraz). Kliknij przycisk Zainstaluj, aby rozpocząć pobieranie i dodać pakiet do biblioteki.
+W dodatku Dynamo kliknij kolejno opcje Pakiety > Menedżer pakietów i wyszukaj pakiet „MapToSurface” (jest to jeden wyraz). Kliknij przycisk Zainstaluj, aby rozpocząć pobieranie i dodać pakiet do biblioteki.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
 Po zainstalowaniu węzły niestandardowe powinny być dostępne w sekcji Dodatki > Przewodnik Dynamo Primer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Po zainstalowaniu pakietu przeanalizujmy jego konfigurację.
 
@@ -30,7 +30,7 @@ Tworzony pakiet zawiera pięć węzłów niestandardowych utworzonych na potrzeb
 
 To jest prosty pakiet z pięcioma węzłami niestandardowymi. W poniższych krokach omówiono krótko konfigurację każdego węzła niestandardowego.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Jest to prosty węzeł, który tworzy powierzchnię parametryczną do odwzorowan
 
 ### Pliki przykładowe
 
-Pliki przykładowe można znaleźć w folderze głównym pakietu. Kliknij opcje Dynamo > Preferencje > Menedżer pakietów
+Pliki przykładowe można znaleźć w folderze głównym pakietu. Kliknij kolejno kartę Menedżer pakietów > Zainstalowane pakiety.
 
 Obok pozycji MapToSurface kliknij menu w postaci pionowych kropek > Pokaż katalog główny
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Następnie otwórz folder _„extra”_ zawierający wszystkie pliki w pakiecie, które nie są węzłami niestandardowymi. W tym miejscu przechowywane są pliki przykładowe (jeśli istnieją) dla pakietów Dynamo. Zrzuty ekranu poniżej ilustrują koncepcje przedstawione w poszczególnych plikach przykładowych.
 

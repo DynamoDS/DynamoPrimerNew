@@ -1,6 +1,6 @@
 # Pakiet — wprowadzenie
 
-W skrócie: pakiet jest zbiorem węzłów niestandardowych. Dynamo Package Manager to portal dla społeczności umożliwiający pobranie dowolnego pakietu, który został opublikowany online. Te zestawy narzędzi zostały opracowane przez strony trzecie w celu rozszerzenia podstawowej funkcjonalności dodatku Dynamo i są dostępne dla wszystkich. Są gotowe do pobrania po kliknięciu przycisku.
+Dodatek Dynamo udostępnia wiele funkcji gotowych do użycia oraz obszerną bibliotekę pakietów, które mogą znacznie zwiększyć możliwości dodatku. Pakiet jest zbiorem węzłów niestandardowych lub dodatkowych funkcji. Dynamo Package Manager to portal dla społeczności umożliwiający pobranie dowolnego pakietu, który został opublikowany online. Te zestawy narzędzi zostały opracowane przez strony trzecie w celu rozszerzenia podstawowej funkcjonalności dodatku Dynamo i są dostępne dla wszystkich. Są gotowe do pobrania przez kliknięcie przycisku.
 
 ![Witryna Menedżera pakietów](../images/6-2/1/dpm.jpg)
 
@@ -8,17 +8,17 @@ Projekt open-source, taki jak dodatek Dynamo, rozwija się dzięki takiemu zaang
 
 ### Instalowanie pakietu
 
-Najprostszym sposobem instalacji pakietu jest użycie paska narzędzi Pakiety w interfejsie dodatku Dynamo. Przejdźmy od razu do rzeczy i zainstalujmy pakiet teraz. W tym szybkim przykładzie zainstalujemy popularny pakiet umożliwiający tworzenie paneli czworokątnych na siatce.
+Najprostszym sposobem instalacji pakietu jest użycie opcji menu Pakiety w interfejsie dodatku Dynamo. Przejdźmy od razu do rzeczy i zainstalujmy pakiet teraz. W tym szybkim przykładzie zainstalujemy popularny pakiet umożliwiający tworzenie paneli czworokątnych na siatce.
 
-W dodatku Dynamo przejdź do obszaru _Pakiety > Wyszukaj pakiet_.
+W dodatku Dynamo przejdź do obszaru _Pakiety > Menedżer pakietów_.
 
-![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
+<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 Na pasku wyszukiwania wyszukaj frazę „quads from rectangular grid”. Po kilku chwilach powinny pojawić się wszystkie pakiety zgodne z tym zapytaniem. Wybierzmy pierwszy pakiet z pasującą nazwą.
 
-Kliknij przycisk Zainstaluj, aby dodać ten pakiet do biblioteki. Gotowe.
+Kliknij przycisk Zainstaluj, aby dodać ten pakiet do biblioteki, a następnie zaakceptuj potwierdzenie. Gotowe.
 
-![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
+<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Zwróć uwagę, że w bibliotece Dynamo pojawiła się kolejna grupa o nazwie „buildz”. Ta nazwa odnosi się do programisty pakietu, a węzeł niestandardowy zostaje umieszczony w tej grupie. Możemy od razu zacząć z niego korzystać.
 
@@ -32,23 +32,23 @@ Użyj węzła **Code Block**, aby szybko zdefiniować prostokątną siatkę, zap
 
 W powyższym przykładzie skupiono się na pakiecie z jednym węzłem niestandardowym, ale ten sam proces jest używany do pobierania pakietów z kilkoma węzłami niestandardowymi i plikami danych pomocniczych. Zademonstrujmy to teraz z wszechstronniejszym pakietem: Dynamo Unfold.
 
-Tak jak w przykładzie powyżej, rozpocznij od wybrania opcji _Pakiety > Wyszukaj pakiet_.
+Tak jak w przykładzie powyżej, rozpocznij od wybrania opcji _Pakiety > Menedżer pakietów_.
 
-Tym razem poszukamy jednego słowa, _„DynamoUnfold”_, zwracając uwagę na wielkość liter. Po wyświetleniu pakietów pobierz je, klikając przycisk Zainstaluj, aby dodać składniki Dynamo Unfold do biblioteki Dynamo.
+Tym razem poszukamy jednego słowa, _„DynamoUnfold”_. Po wyświetleniu pakietów pobierz je, klikając przycisk Zainstaluj, aby dodać składniki Dynamo Unfold do biblioteki Dynamo.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
+<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
 W bibliotece Dynamo dostępna jest grupa _DynamoUnfold_ z wieloma kategoriami i węzłami niestandardowymi.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Spójrzmy teraz na strukturę plików pakietu. Najpierw wybierz opcję Dynamo > Preferencje
+Spójrzmy teraz na strukturę plików pakietu. 
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
+1. Najpierw przejdź do obszaru Pakiety > Menedżer pakietów > Zainstalowane pakiety.
+2. Obok węzła DynamoUnfold wybierz menu opcji <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
+3. Następnie kliknij opcję Pokaż katalog główny, aby otworzyć folder główny dla tego pakietu.
 
-W oknie podręcznym Preferencje otwórz Menedżera pakietów > obok opcji DynamoUnfold wybierz menu w postaci pionowych kropek ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > Pokaż katalog główny, aby otworzyć folder główny dla tego pakietu.
-
-![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
+<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Spowoduje to przejście do katalogu głównego pakietu. Zwróć uwagę, że mamy 3 foldery i plik.
 
@@ -67,21 +67,25 @@ Otwórzmy plik „SphereUnfold”.
 
 Po otwarciu pliku i naciśnięciu przycisku „Uruchom” w solwerze dostępna jest rozwinięta sfera. Pliki przykładowe są przydatne do nauki pracy z nowym pakietem Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
-### Menedżer pakietów Dynamo
+### Przeglądanie i wyświetlanie informacji o pakiecie
 
-Innym sposobem odkrywania pakietów Dynamo jest zapoznanie się z [Menedżerem pakietów Dynamo](http://dynamopackages.com) online. Jest to dobry sposób przeglądania w poszukiwaniu pakietów, ponieważ repozytorium sortuje pakiety w kolejności ich pobierania i popularności. Jest również łatwym sposobem na gromadzenie informacji o najnowszych aktualizacjach pakietów, ponieważ w przypadku niektórych pakietów Dynamo ma zastosowanie obsługa wersji i zależności kompilacji dodatku Dynamo.
+W Menedżerze pakietów można odszukiwać pakiety, korzystając z opcji sortowania i filtrowania na karcie Wyszukaj pakiety. Dostępnych jest kilka filtrów dotyczących programu nadrzędnego, statusu (nowy, nieaktualny lub z cofniętą nieaktualnością) oraz tego, czy pakiet ma zależności.
 
-Klikając opcję _„Quads from Rectangular Grid”_ w Menedżerze pakietów Dynamo, można wyświetlić odpowiednie opisy, wersje, informacje o programiście i możliwe zależności.
+Sortując pakiety, można zidentyfikować pakiety wysoko oceniane lub najczęściej pobierane albo znaleźć pakiety z najnowszymi aktualizacjami. 
+
+Aby uzyskać dostęp do większej ilości szczegółowych informacji dotyczących danego pakietu, kliknij przycisk Wyświetl szczegóły. Spowoduje to otwarcie panelu bocznego w Menedżerze pakietów, w którym można znaleźć takie dane, jak obsługa wersji i zależności, adres URL witryny lub repozytorium, informacje o licencji itp.
+
+### Witryna Dynamo Package Manager
+
+Innym sposobem odkrywania pakietów Dynamo jest przeglądanie witryny [Dynamo Package Manager](http://dynamopackages.com). Tutaj można znaleźć statystyki dotyczące pakietów i tablice wiodących autorów. Pliki pakietu można również pobrać z Menedżera pakietów Dynamo, ale robienie tego bezpośrednio z poziomu dodatku Dynamo stanowi płynniejszy proces.
 
 ![](../images/6-2/1/dpm2.jpg)
 
-Pliki pakietu można również pobrać z Menedżera pakietów Dynamo, ale robienie tego bezpośrednio z poziomu dodatku Dynamo stanowi płynniejszy proces.
-
 ### Gdzie lokalnie są przechowywane pliki pakietów?
 
-Jeśli pobierasz pliki z Menedżera pakietów Dynamo lub chcesz sprawdzić, gdzie są przechowywane wszystkie pliki pakietu, kliknij opcje Dynamo > Menedżer pakietów > Ścieżki do węzłów i pakietów, a następnie odszukaj bieżący katalog główny folderu.
+Jeśli chcesz zobaczyć, gdzie przechowywane są pliki pakietu, w górnym obszarze nawigacji kliknij kolejno opcje Dynamo > Preferencje > Ustawienia pakietów > Lokalizacje plików węzłów i pakietów. Tutaj znajdziesz bieżący katalog główny.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 

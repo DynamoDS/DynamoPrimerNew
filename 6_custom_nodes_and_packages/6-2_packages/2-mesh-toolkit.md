@@ -2,7 +2,7 @@
 
 Zestaw Dynamo Mesh Toolkit zawiera narzędzia do importowania siatek z zewnętrznych formatów plików, tworzenia siatki z obiektów geometrii Dynamo oraz ręcznego tworzenia siatek na podstawie wierzchołków i indeksów. Ta biblioteka zawiera również narzędzia do modyfikowania siatek, naprawiania siatek i wyodrębniania warstw poziomych do użycia w produkcji.
 
-![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Zestaw narzędzi Dynamo Mesh Toolkit jest częścią nieustających badań firmy Autodesk nad siatką, więc w nadchodzących latach będzie się rozwijać. Należy spodziewać się częstego dodawania do zestawu nowych metod. Zachęcamy też do kierowania do zespołu Dynamo komentarzy, informacji o błędach i sugestii dotyczących nowych funkcji.
 
@@ -12,9 +12,9 @@ W poniższym ćwiczeniu przedstawiono niektóre podstawowe operacje na siatce pr
 
 ### Instalowanie zestawu Mesh Toolkit
 
-W dodatku Dynamo przejdź do obszaru _Pakiety > Wyszukaj pakiety_ na górnym pasku menu. W polu wyszukiwania wpisz _„MeshToolkit”_ (jedno słowo), pamiętając o wielkich literach. Kliknij przycisk Zainstaluj, aby rozpocząć pobieranie. To wystarczy.
+W dodatku Dynamo na górnym pasku menu przejdź do obszaru Pakiety > Menedżer pakietów. W polu wyszukiwania wpisz „MeshToolkit” (jedno słowo). Kliknij przycisk Zainstaluj i zaakceptuj potwierdzenia, aby rozpocząć pobieranie. To wystarczy.
 
-![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Ćwiczenie: przecinająca się siatka
 
