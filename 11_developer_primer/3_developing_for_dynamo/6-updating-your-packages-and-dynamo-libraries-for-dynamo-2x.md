@@ -10,7 +10,7 @@ Zprovoznění uzlů uživatelského rozhraní a uzlů, které se odvozují pří
 
 Autoři rozšíření mohou také provést některé potenciální změny – v závislosti na tom, kolik rozhraní API jádra aplikace Dynamo používají ve svých rozšířeních.
 
-
+***
 
 ### Obecná pravidla pro tvorbu balíčků: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ Příklad, který určuje metodu serializace pro převod vlastnosti na řetězec
 
 Vlastnostem `public`, které nejsou určeny pro serializaci, musí mít přidán atribut `[JsonIgnore]`. Při uložení uzlů do souboru .dyn je zajištěno, že tato data budou serializačním mechanismem ignorována a nezpůsobí neočekávané následky při dalším otevření grafu. Příklad si můžete prohlédnout [zde](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) v úložišti Dynamo.
 
-
+***
 
 #### Vrácení a opakování změn <a href="#undoredo" id="undoredo"></a>
 

@@ -2,7 +2,7 @@
 
 Sada nástrojů pro sítě obsahuje nástroje pro import sítí ze souborů různých formátů, tvorbu sítě z objektů geometrií aplikace Dynamo a ruční tvorbu sítí z bodů a indexů. Knihovna také obsahuje nástroje pro úpravy sítí a extrahování vodorovných řezů pro použití ve výrobě.
 
-![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Balíček Dynamo Mesh Toolkit je součástí probíhajícího výzkumu společnosti Autodesk a proto se bude v nadcházejících letech dále rozvíjet. Do sady budou často přidávány nové metody, tým aplikace Dynamo ocení jakékoliv komentáře, hlášení chyb nebo nápady na nové funkce.
 
@@ -12,9 +12,9 @@ V následujícím cvičení budou demonstrovány základní operace pomocí sad
 
 ### Instalace balíčku Mesh Toolkit
 
-V horní nabídce aplikace Dynamo vyberte možnost _Balíčky > Vyhledat balíčky_. Do pole pro hledání zadejte výraz _MeshToolkit_.Jedná se o jedno slovo, dbejte na velikost písmen. Kliknutím na tlačítko Instalovat zahájíte stahování. Je to tak jednoduché.
+V horní nabídce aplikace Dynamo vyberte možnost Balíčky > Package Manager. Do vyhledávacího pole zadejte MeshToolkit. Jedná se o jedno slovo. Klikněte na tlačítko Instalovat a potvrďte, že chcete zahájit stahování. Je to tak jednoduché.
 
-![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Cvičení: Průnik sítě
 

@@ -22,11 +22,11 @@ Díky oddělení slovníků od seznamů můžete slovníky používat k rychlé
 * Do knihovny byly přidány _nové uzly_, které vám pomohou vytvářet, upravovat a dotazovat slovníky.
 *   Seznamy vytvořené v blocích kódu verze 1.x budou po načtení skriptu automaticky převedeny do nové syntaxe seznamu, která používá hranaté závorky `[ ]` místo složených závorek `{ }` \\.
 
+    ***
 
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
-
-
+***
 
 ### **Proč je to důležité? K čemu se to používá?**
 

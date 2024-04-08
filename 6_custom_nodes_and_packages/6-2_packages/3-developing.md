@@ -14,13 +14,13 @@ Na tomto obrázku namapujeme bod z jednoho povrchu na jiný pomocí souřadnic 
 
 V předchozí kapitole jsme prozkoumali způsoby panelizace povrchu v aplikaci Dynamo podle křivek definovaných v rovině XY. Tato případová studie tyto koncepty rozšiřuje o další kóty geometrie. Tento balíček nainstalujeme, tak jak byl vytvořen, abychom ukázali, jak byl vyvinut. V další části ukážeme, jak byl tento balíček publikován.
 
-V aplikaci Dynamo klikněte na nabídku Balíčky > Vyhledat balíček a vyhledejte balíček „MapToSurface“ (jedno slovo). Kliknutím na tlačítko Instalovat zahájíte stahování a přidáte balíček do své knihovny.
+V aplikaci Dynamo klikněte na položky Balíčky > Package Manager a vyhledejte balíček MapToSurface (jedná se o jedno slovo). Kliknutím na tlačítko Instalovat zahájíte stahování a přidáte balíček do své knihovny.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-Po instalaci by měly být vlastní uzly dostupné v části Doplňky > Dynamo Primer.
+Po instalaci by měly být vlastní uzly dostupné v části Doplňky > DynamoPrimer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 S instalovaným balíčkem projdeme to, jak ho nastavit.
 
@@ -30,7 +30,7 @@ Balíček, který vytváříme, používá pět uživatelských uzlů, které js
 
 Toto je jednoduchý balíček s pěti vlastními uzly. V níže uvedených krocích si stručně promluvíme o nastavení jednotlivých vlastních uzlů.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Toto je jednoduchý uzel, který vytvoří parametrický povrch k mapování ze
 
 ### Vzorové soubory
 
-Vzorové soubory naleznete v kořenové složce balíčku. Klikněte na nabídku Dynamo > Předvolby > Package Manager.
+Vzorové soubory naleznete v kořenové složce balíčku. Klikněte na kartu Package Manager > Instalované balíčky.
 
 Vedle položky MapToSurface klikněte na nabídku se svislými tečkami > Zobrazit kořenový adresář.
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Nyní otevřete složku _extra_, která obsahuje všechny soubory v balíčku, které nejsou vlastními uzly. Zde jsou uloženy vzorové soubory (pokud existují) pro balíčky aplikace Dynamo. Níže uvedené snímky obrazovky popisují koncepty demonstrované v jednotlivých vzorových souborech.
 
