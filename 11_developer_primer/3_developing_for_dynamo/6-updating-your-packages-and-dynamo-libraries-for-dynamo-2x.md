@@ -10,7 +10,7 @@ UI ノードと、NodeModel から直接派生したノードを 2.x で実行�
 
 また、拡張機能作成者は、拡張機能で使用する Dynamo Core API の数によっては、変更が必要になる可能性があります。
 
-
+***
 
 ### 一般的なパッケージ化のルール: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ JSON コンストラクタは、JSON ロード ロジックによって提供さ
 
 シリアル化を意図していない `public` プロパティには、`[JsonIgnore]` 属性を追加する必要があります。ノードを .dyn ファイルに保存すると、そのデータはシリアル化メカニズムによって無視されることが確実となり、グラフを再度開いたときに予期しない結果となることがなくなります。このサンプルについては Dynamo のリポジトリの[こちら](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45)を参照してください。
 
-
+***
 
 #### 元に戻す/やり直し<a href="#undoredo" id="undoredo"></a>
 

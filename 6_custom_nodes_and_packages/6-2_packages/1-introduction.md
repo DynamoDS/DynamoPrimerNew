@@ -1,6 +1,6 @@
 # パッケージの概要
 
-簡単に説明すると、パッケージとはカスタム ノードの集合のことです。Dynamo Package Manager は、オンラインでパブリッシュされたパッケージをダウンロードするためのコミュニティ ポータルです。これらのツールセットは、Dynamo の基本機能を拡張するためにサード パーティによって開発されたもので、すべてのユーザがアクセスでき、ボタンをクリックするだけでダウンロードすることができます。
+Dynamo には豊富な機能が用意されており、Dynamo の機能を大幅に拡張できる広範なパッケージ ライブラリも保持されています。パッケージは、カスタム ノードまたは追加機能のコレクションです。Dynamo Package Manager は、オンラインでパブリッシュされたパッケージをダウンロードするためのコミュニティ ポータルです。これらのツールセットは、Dynamo の基本機能を拡張するためにサード パーティによって開発されたもので、すべてのユーザがアクセスでき、ボタンをクリックするだけでダウンロードすることができます。
 
 ![Package Manager サイト](../images/6-2/1/dpm.jpg)
 
@@ -8,17 +8,17 @@ Dynamo のようなオープンソース プロジェクトは、このような
 
 ### パッケージをインストールする
 
-パッケージを最も簡単にインストールする方法は、Dynamo インタフェースの[パッケージ]ツールバーを使用する方法です。では、実際にインストールしてみましょう。ここでは、次に示す簡単な例を使用して、グリッド上に四角いパネルを作成するためのパッケージをインストールします。
+パッケージを最も簡単にインストールするには、Dynamo インタフェースの[パッケージ]メニュー オプションを使用します。では、実際にパッケージをインストールしてみましょう。ここでは、次に示す簡単な例を使用して、グリッド上に四角いパネルを作成するためのパッケージをインストールします。
 
-Dynamo で、_[パッケージ] > [パッケージの検索...]_ に移動します。
+Dynamo で、_[パッケージ] > [Package Manager...]_に移動します。
 
-![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
+<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 [検索]バーで、「quads from rectangular grid」を検索してみましょう。しばらくすると、この検索クエリーに一致するパッケージがすべて表示されます。一致する名前を持つ最初のパッケージを選択します。
 
-このパッケージをライブラリに追加するには、[インストール]をクリックします。以上です。
+[インストール]をクリックしてこのパッケージをライブラリに追加し、確認を承諾します。以上です。
 
-![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
+<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Dynamo ライブラリに「buildz」という名前の新しいグループが表示されます。この名前は、パッケージの開発者を参照して付けられます。また、カスタム ノードはこのグループ内に配置されます。このグループは、すぐに使用することができます。
 
@@ -32,23 +32,23 @@ Dynamo ライブラリに「buildz」という名前の新しいグループが�
 
 上記の例では、1 つのカスタム ノードが含まれているパッケージを使用しましたが、複数のカスタム ノードやサポート データ ファイルが含まれているパッケージをダウンロードする場合も、同じプロセスを実行します。ここでは、より包括的な Dynamo Unfold パッケージを使用して手順を説明します。
 
-上記の例と同様に、_[パッケージ] > [パッケージの検索...]_ を選択します。
+上記の例と同様に、_[パッケージ] > [Package Manager...]_を選択します。
 
-ここでは、「_DynamoUnfold_」という 1 つの単語を、大文字と小文字を区別して検索します。パッケージが表示されたら、[インストール]をクリックして Dynamo Unfold をダウンロードし、Dynamo ライブラリに追加します。
+今回は、_「DynamoUnfold」_という、スペースを入れない 1 つの単語を検索します。パッケージが表示されたら、[インストール]をクリックして Dynamo Unfold をダウンロードし、Dynamo ライブラリに追加します。
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
+<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
 Dynamo ライブラリに _DynamoUnfold_ グループが表示されます。このグループに、複数のカテゴリとカスタム ノードが含まれているのがわかります。
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-ここで、パッケージのファイル構造を確認しましょう。まず、[Dynamo] > [基本設定]を選択します
+ここで、パッケージのファイル構造を確認しましょう。
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
+1. まず、[パッケージ] > [Package Manager] > [インストール済みパッケージ]に移動します。
+2. DynamoUnfold の横にあるオプション メニュー <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line"> を選択します。
+3. 次に、[ルート フォルダを表示]をクリックして、このパッケージのルート フォルダを開きます。
 
-[基本設定]のポップアップから、[Package Manager]を開き、[DynamoUnfold]の横の縦ドットのメニュー ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > [ルート フォルダを表示]を選択するとルート フォルダが表示されるので、このパッケージのフォルダを開きます。
-
-![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
+<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 この操作により、パッケージのルート フォルダが表示されます。このルート フォルダには、3 つのフォルダと 1 つのファイルが格納されています。
 
@@ -67,21 +67,25 @@ extra フォルダを開くと、インストール時にダウンロードさ�
 
 ファイルを開いてからソルバで[実行]をクリックすると、展開された球形が表示されます。これらのサンプル ファイルは、新しい Dynamo パッケージの使用方法を理解するのに役立ちます。
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
-### Dynamo Package Manager
+### パッケージ情報を参照、表示する
 
-Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo Package Manager](http://dynamopackages.com) をオンラインで参照する方法もあります。これは、パッケージを参照するのに便利な方法です。リポジトリにより、ダウンロード回数と人気度に応じて、パッケージが並べ替えられます。また、パッケージの最新の更新プログラムに関する情報を簡単に収集することもできます。一部の Dynamo パッケージは、Dynamo ビルドのバージョン管理と依存関係の影響を受けます。
+Package Manager では、[パッケージの検索]タブで並べ替えとフィルタ オプションを使用してパッケージを参照できます。ホスト プログラム、ステータス(新規、非推奨、非推奨解除)、およびパッケージに依存関係があるかどうかを示すフィルタがいくつかあります。
 
-Dynamo Package Manager で[_Quads from Rectangular Grid_]をクリックすると、説明、バージョン、開発者、依存関係を確認することができます。
+パッケージを並べ替えることで、評価の高いパッケージや最もダウンロードされているパッケージを特定したり、最新の更新プログラムが適用されたパッケージを検索することができます。
+
+[詳細を表示]をクリックして、各パッケージの詳細にアクセスすることもできます。これにより、Package Manager のサイド パネルが開き、バージョン情報や依存関係、Web サイトまたはリポジトリの URL、ライセンス情報などの情報を検索できます。
+
+### Dynamo Package Manager の Web サイト
+
+Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo Package Manager](http://dynamopackages.com) の Web サイトを参照する方法もあります。ここでは、パッケージや作成者のリーダーボードに関する統計情報を確認できます。また、Dynamo Package Manager からパッケージ ファイルをダウンロードすることもできますが、Dynamo から直接ダウンロードした方が簡単です。
 
 ![](../images/6-2/1/dpm2.jpg)
 
-また、Dynamo Package Manager からパッケージ ファイルをダウンロードすることもできますが、Dynamo から直接ダウンロードした方が簡単です。
-
 ### ローカルでのパッケージ ファイルの保存場所
 
-Dynamo Package Manager からファイルをダウンロードするか、すべてのパッケージ ファイルの保存場所を確認する場合は、[Dynamo] > [Package Manager] > [ノードとパッケージのパス]をクリックすると、ここから現在のルート フォルダを検索できます。
+パッケージ ファイルの保存場所を確認する場合は、一番上のナビゲーションで[Dynamo] > [基本設定] > [パッケージ設定] > [ノードとパッケージ ファイルの場所]をクリックします。ここから現在のルート フォルダを見つけることができます。
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 

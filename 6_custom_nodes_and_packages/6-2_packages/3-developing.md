@@ -14,13 +14,13 @@ Dynamo では、さまざまな方法でパッケージを作成することが�
 
 前の章では、Dynamo 内の XY 平面上に定義された複数の曲線に基づいてサーフェスをパネル化する方法について確認しました。このケース スタディでは、この考え方を広げて、より高次元のジオメトリを処理します。ここでは、この構築済みパッケージをインストールし、このパッケージがどのように開発されたかを確認していきます。次のセクションでは、このパッケージのパブリッシュ方法を確認します。
 
-Dynamo で、_[パッケージ] > [パッケージを検索]をクリックして、「MapToSurface」(区切りなしの 1 語)でパッケージを検索します。[インストール]をクリックしてダウンロードを開始し、パッケージをライブラリに追加します。
+Dynamo で、[パッケージ] > [Package Manager]をクリックして、「MapToSurface」(スペースを入れない 1 つの単語)でパッケージを検索します。[インストール]をクリックしてダウンロードを開始し、パッケージをライブラリに追加します。
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-インストール後は、カスタム ノードを[Add-ons] > [Dynamo Primer]セクションで使用できるようになります。
+インストール後は、カスタム ノードを[アドオン] > [DynamoPrimer]セクションで使用できるようになります。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 これでパッケージのインストールが完了しました。次に、パッケージの設定方法を確認しましょう。
 
@@ -30,7 +30,7 @@ Dynamo で、_[パッケージ] > [パッケージを検索]をクリックし�
 
 上の図は、5 つのカスタム ノードによって構成される単純なパッケージを示しています。次の手順で、各カスタム ノードの設定について簡単に説明します。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Dynamo で、_[パッケージ] > [パッケージを検索]をクリックし�
 
 ### サンプル ファイル
 
-サンプル ファイルは、パッケージのルート フォルダにあります。[Dynamo] > [基本設定] > [Package Manager]をクリックします
+サンプル ファイルは、パッケージのルート フォルダにあります。[Package Manager] > [インストール済みパッケージ]タブをクリックします。
 
-[MapToSurface]の横にある縦ドットのメニュー > [ルート フォルダを表示]をクリックします
+[MapToSurface]の横にある縦のドット メニュー > [ルート フォルダを表示]をクリックします
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 次に「_extra_」フォルダにナビゲートします。このフォルダには、パッケージ内のすべてのファイル(カスタム ノードを除く)が格納されています。Dynamo パッケージ用のサンプル ファイル(存在する場合)も、このフォルダに格納されています。これ以降のスクリーンショットは、各サンプル ファイルの概念を示しています。
 
