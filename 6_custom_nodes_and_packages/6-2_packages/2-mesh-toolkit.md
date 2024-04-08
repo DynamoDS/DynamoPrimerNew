@@ -2,7 +2,7 @@
 
 El Kit de herramientas de malla de Dynamo proporciona herramientas para importar mallas desde formatos de archivo externos, crear una malla a partir de objetos de geometría de Dynamo y generar manualmente mallas mediante sus vértices e índices. La biblioteca también proporciona herramientas para modificar y reparar mallas, o extraer cortes horizontales para su uso en la fabricación.
 
-![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 El Kit de herramientas de malla de Dynamo forma parte de la investigación de mallas en curso de Autodesk y, como tal, seguirá creciendo a lo largo de los próximos años. Esperamos que aparezcan con frecuencia nuevos métodos en este kit y no dude en ponerse en contacto con el equipo de Dynamo para ofrecer comentarios, indicar errores y enviar sugerencias sobre las nuevas funciones.
 
@@ -12,9 +12,9 @@ En el siguiente ejercicio, se muestran algunas operaciones básicas de malla que
 
 ### Instalar el Kit de herramientas de malla
 
-En Dynamo, vaya a _Paquetes > Buscar paquetes_ en la barra de menús superior. En el campo de búsqueda, escriba _"MeshToolkit"_ con una sola palabra, teniendo en cuenta mayúsculas y minúsculas. Haga clic en Instalar para iniciar la descarga. Así de fácil.
+En Dynamo, vaya a Paquetes > Package Manager en la barra de menús superior. En el campo de búsqueda, escriba "MeshToolkit", todo en una sola palabra. Haga clic en Instalar y acepte las confirmaciones para iniciar la descarga. Así de fácil.
 
-![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Ejercicio: intersección de malla
 

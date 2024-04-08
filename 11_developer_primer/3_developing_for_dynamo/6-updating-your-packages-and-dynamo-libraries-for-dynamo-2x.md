@@ -10,7 +10,7 @@ Los nodos de interfaz de usuario y aquellos que proceden directamente de NodeMod
 
 Es posible que los autores de extensiones también deban realizar algunos cambios en función de la cantidad de API de Dynamo Core que utilicen en sus extensiones.
 
-
+***
 
 ### Reglas generales de empaquetado <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ Este ejemplo que especifica un `PropertyName` se encuentra [aquí](https://githu
 
 Para las propiedades `public` que no se han diseñado para la serialización, es necesario añadir el atributo `[JsonIgnore]`. Cuando se guardan los nodos en el archivo .dyn, esto garantiza que el mecanismo de serialización no omitirá estos datos y estos no provocarán consecuencias inesperadas cuando se abra de nuevo el gráfico. [Aquí](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) puede encontrar un ejemplo es esto en el repositorio de Dynamo.
 
-
+***
 
 #### Deshacer/rehacer <a href="#undoredo" id="undoredo"></a>
 

@@ -1,6 +1,6 @@
 # Introducción a los paquetes
 
-En pocas palabras, un paquete es un conjunto de nodos personalizados. El administrador de paquetes de Dynamo es un portal para que la comunidad descargue cualquier paquete que se haya publicado en línea. Estos conjuntos de herramientas los desarrollan terceros para ampliar la funcionalidad principal de Dynamo. Están disponibles para todos los usuarios y listos para descargar con solo hacer clic.
+Dynamo ofrece un gran número de funciones listas para usar y también mantiene una extensa biblioteca de paquetes que puede ampliar considerablemente la capacidad de Dynamo. Un paquete es una colección de nodos personalizados o funciones adicionales. Dynamo Package Manager es un portal para que la comunidad descargue cualquier paquete que se haya publicado en línea. Estos conjuntos de herramientas los desarrollan terceros para ampliar la funcionalidad principal de Dynamo. Están disponibles para todos los usuarios y listos para descargar con solo hacer clic.
 
 ![Sitio de Package Manager](../images/6-2/1/dpm.jpg)
 
@@ -8,17 +8,17 @@ Un proyecto de código abierto como Dynamo crece con este tipo de participación
 
 ### Instalación de un paquete
 
-La forma más sencilla de instalar un paquete es mediante la barra de herramientas Paquetes de la interfaz de Dynamo. Vamos a ir directos a la acción e instalar uno ahora. En este ejemplo rápido, instalaremos un paquete popular para la creación de paneles de cuadrados en una rejilla.
+La forma más sencilla de instalar un paquete es mediante la opción de menú Paquetes de la interfaz de Dynamo. Pongámonos manos a la obra e instalemos ahora un paquete. En este ejemplo rápido, instalaremos un paquete popular para la creación de paneles de cuadrados en una rejilla.
 
-En Dynamo, vaya a _Paquetes > Buscar un paquete_.
+En Dynamo, vaya a _Paquetes > Package Manager_.
 
-![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
+<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 En la barra de búsqueda, buscamos "Quads from Rectangular Grid". Tras unos segundos, deberían aparecer todos los paquetes que coincidan con esta consulta de búsqueda. Vamos a seleccionar el primer paquete cuyo nombre coincida.
 
-Haga clic en Instalar para añadir este paquete a la biblioteca. Listo.
+Haga clic en Instalar para añadir este paquete a la biblioteca y acepte la confirmación. Listo.
 
-![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
+<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Observe que ahora tenemos otro grupo en la biblioteca de Dynamo denominado "buildz". Este nombre hace referencia al desarrollador del paquete y el nodo personalizado se encuentra en este grupo. Podemos empezar a utilizarlo al instante.
 
@@ -32,23 +32,23 @@ Utilice **Code Block** para definir rápidamente una rejilla rectangular, genera
 
 El ejemplo anterior se centra en un paquete con un nodo personalizado, pero se utiliza el mismo proceso para descargar paquetes con varios nodos personalizados y archivos de datos complementarios. Vamos a demostrar esto a continuación con un paquete más completo: Dynamo Unfold.
 
-Como en el ejemplo anterior, seleccione _Paquetes > Buscar un paquete_.
+Como en el ejemplo anterior, seleccione primero _Paquetes > Package Manager_.
 
-Esta vez, buscaremos _"DynamoUnfold"_, en una sola palabra y respetando las mayúsculas y minúsculas. Cuando aparezcan los paquetes, descárguelos. Para ello, haga clic en Instalar a fin de añadir Dynamo Unfold a la biblioteca de Dynamo.
+Esta vez, buscaremos _"DynamoUnfold"_, todo en una sola palabra. Cuando aparezcan los paquetes, descárguelos. Para ello, haga clic en Instalar a fin de añadir Dynamo Unfold a la biblioteca de Dynamo.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
+<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
 En la biblioteca de Dynamo, tenemos un grupo de _DynamoUnfold_ con varias categorías y nodos personalizados.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Ahora, veamos la estructura de archivos del paquete. En primer lugar, seleccione Dynamo > Preferencias.
+Ahora, veamos la estructura de archivos del paquete. 
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
+1. Vaya primero a Paquetes > Package Manager > Paquetes instalados.
+2. Junto a DynamoUnfold, seleccione el menú de opciones <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
+3. A continuación, haga clic en Mostrar directorio raíz para abrir la carpeta raíz de este paquete.
 
-En la ventana emergente Preferencias, abra Package Manager > junto a DynamoUnfold, seleccione el menú de puntos verticales![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > Mostrar directorio raíz para abrir la carpeta raíz de este paquete.
-
-![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
+<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Esto nos llevará al directorio raíz del paquete. Observe que hay tres carpetas y un archivo.
 
@@ -67,21 +67,25 @@ Abriremos "SphereUnfold".
 
 Después de abrir el archivo y pulsar "Ejecutar" en el solucionador, tenemos una esfera desplegada. Estos archivos de ejemplo son útiles para aprender a trabajar con un nuevo paquete de Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
-### Dynamo Package Manager
+### Examinar y ver información de paquetes
 
-Otra forma de descubrir los paquetes de Dynamo es explorar el [Dynamo Package Manager](http://dynamopackages.com) en línea. Es una buena forma de buscar paquetes, ya que el repositorio ordena los paquetes por número de descargas y popularidad. Asimismo, es una forma sencilla de recopilar información sobre las actualizaciones recientes para los paquetes, ya que algunos paquetes de Dynamo están sujetos a las versiones y dependencias de Dynamo.
+En Package Manager, puede buscar paquetes mediante las opciones de orden y filtrado de la ficha Buscar paquetes. Hay varios filtros disponibles para el programa anfitrión, el estado (nuevo, obsoleto o no obsoleto) y si el paquete tiene o no dependencias.
 
-Al hacer clic en _"Quads from Rectangular Grid"_ en Dynamo Package Manager, aparecen las descripciones, las versiones, el desarrollador y las posibles dependencias.
+Al ordenar los paquetes, puede identificar los más valorados o los más descargados, o aquellos con actualizaciones recientes. 
+
+También puede acceder a más información sobre cada paquete. Para ello, haga clic en Ver detalles. Se abrirá un panel lateral en Package Manager, donde podrá encontrar información como las versiones y las dependencias, la URL del sitio web o del repositorio, información sobre la licencia, etc.
+
+### Sitio web de Dynamo Package Manager
+
+Otra forma de descubrir los paquetes de Dynamo es explorar el sitio web de [Dynamo Package Manager](http://dynamopackages.com). Aquí puede encontrar estadísticas sobre paquetes y tablas de clasificación de autores. También puede descargar los archivos de paquete desde Dynamo Package Manager, pero este proceso es más directo si se realiza desde Dynamo.
 
 ![](../images/6-2/1/dpm2.jpg)
 
-También puede descargar los archivos de paquete desde Dynamo Package Manager, pero este proceso es más directo si se realiza desde Dynamo.
-
 ### ¿Dónde se almacenan los archivos de paquetes localmente?
 
-Si descarga archivos desde Dynamo Package Manager o si desea ver dónde se conservan todos los archivos de paquetes, haga clic en Dynamo > Package Manager > Rutas de nodos y paquetes; en esta ubicación, puede encontrar el directorio de carpeta raíz actual.
+Si desea ver dónde se guardan los archivos de los paquetes, en el panel de navegación superior haga clic en Dynamo > Preferencias > Configuración de paquetes > Ubicaciones de archivo de nodos y paquetes, donde podrá encontrar el directorio de la carpeta raíz actual.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
@@ -89,4 +93,4 @@ Por defecto, los paquetes se instalan en una ubicación similar a esta ruta de c
 
 ### Más detalles sobre los paquetes
 
-La comunidad de Dynamo está en constante crecimiento y evolución. Si explora el administrador de paquetes de Dynamo de vez en cuando, descubrirá algunos avances excelentes. En las secciones siguientes, analizaremos en profundidad los paquetes, desde la perspectiva del usuario final hasta la autoría de un paquete de Dynamo propio.
+La comunidad de Dynamo está en constante crecimiento y evolución. Si explora Dynamo Package Manager de vez en cuando, descubrirá algunos avances excelentes. En las secciones siguientes, analizaremos en profundidad los paquetes, desde la perspectiva del usuario final hasta la autoría de un paquete de Dynamo propio.

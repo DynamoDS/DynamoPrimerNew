@@ -14,13 +14,13 @@ En esta imagen, se asigna un punto de una superficie a otra mediante coordenadas
 
 En el capítulo anterior, exploramos métodos para panelizar una superficie en Dynamo según las curvas definidas en el plano XY. Este caso real amplía estos conceptos a más dimensiones de la geometría. Vamos a instalar este paquete como se creó para mostrar cómo se ha desarrollado. En la siguiente sección, mostraremos cómo se ha publicado este paquete.
 
-En Dynamo, haga clic en Paquetes > Buscar un paquete y busque el paquete "MapToSurface". Haga clic en Instalar para iniciar la descarga y añada el paquete a la biblioteca.
+En Dynamo, haga clic en Paquetes > Package Manager y busque el paquete "MapToSurface" (todo en una sola palabra). Haga clic en Instalar para iniciar la descarga y añada el paquete a la biblioteca.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-Después de la instalación, los nodos personalizados deben estar disponibles en la sección Complementos > Dynamo Primer.
+Después de la instalación, los nodos personalizados deben estar disponibles en la sección Complementos > DynamoPrimer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Con el paquete instalado, veamos cómo se configura.
 
@@ -30,7 +30,7 @@ El paquete que estamos creando utiliza cinco nodos personalizados que hemos crea
 
 Este es un paquete sencillo con cinco nodos personalizados. En los pasos siguientes, hablaremos brevemente de la configuración de cada nodo personalizado.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Se trata de un nodo simple que crea una superficie paramétrica para asignar de 
 
 ### Archivos de ejemplo
 
-Los archivos de ejemplo se pueden encontrar en la carpeta raíz del paquete. Haga clic en Dynamo > Preferencias > Package Manager.
+Los archivos de ejemplo se pueden encontrar en la carpeta raíz del paquete. Haga clic en Package Manager > ficha Paquetes instalados.
 
 Junto a MapToSurface, haga clic en el menú de puntos verticales > Mostrar directorio raíz.
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 A continuación, abra la carpeta _"extra"_, que aloja todos los archivos del paquete que no son nodos personalizados. Aquí es donde se almacenan los archivos de ejemplo (si existen) de los paquetes de Dynamo. Las capturas de pantalla que se muestran a continuación explican los conceptos demostrados en cada archivo de ejemplo.
 
