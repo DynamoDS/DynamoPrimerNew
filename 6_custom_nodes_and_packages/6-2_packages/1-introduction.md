@@ -1,6 +1,6 @@
 # Introduzione ai pacchetti
 
-In breve, un pacchetto è una raccolta di nodi personalizzati. Dynamo Package Manager è un portale che consente alla comunità di scaricare qualsiasi pacchetto pubblicato online. Questi set di strumenti sono stati sviluppati da terze parti per estendere le funzionalità principali di Dynamo, sono accessibili a tutti e sono pronti per il download con un semplice clic.
+Dynamo offre numerose funzionalità predefinite e dispone anche di un'ampia libreria di pacchetti in grado di estendere in modo significativo le sue potenzialità. Un pacchetto è una raccolta di nodi personalizzati o funzionalità aggiuntive. Dynamo Package Manager è un portale che consente alla comunità di scaricare qualsiasi pacchetto pubblicato online. Questi set di strumenti sono stati sviluppati da terze parti per estendere le funzionalità principali di Dynamo, sono accessibili a tutti e sono pronti per il download con un semplice clic.
 
 ![Sito di Package Manager](../images/6-2/1/dpm.jpg)
 
@@ -8,17 +8,17 @@ Un progetto open source, come Dynamo, si basa su questo tipo di coinvolgimento d
 
 ### Installazione di un pacchetto
 
-Il modo più semplice per installare un pacchetto consiste nell'utilizzare la barra degli strumenti Pacchetti nell'interfaccia di Dynamo. Adesso si può passare direttamente al pacchetto e installarne uno. In questo esempio rapido, verrà installato un comune pacchetto per la creazione di pannelli quadrangolari su una griglia.
+Il modo più semplice per installare un pacchetto consiste nell'utilizzare l'opzione di menu Pacchetti nell'interfaccia di Dynamo. Adesso si può passare direttamente al pacchetto e installarne uno. In questo esempio rapido, verrà installato un comune pacchetto per la creazione di pannelli quadrangolari su una griglia.
 
-In Dynamo, accedere a _Pacchetti > Cerca pacchetto_.
+In Dynamo, accedere a _Pacchetti > Package Manager_.
 
-![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
+<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 Sulla barra di ricerca, cercare "quads from rettangular grid". Dopo alcuni minuti, si dovrebbero vedere tutti i pacchetti che corrispondono alla query di ricerca. Si desidera selezionare il primo pacchetto con il nome corrispondente.
 
-Fare clic su Ínstalla per aggiungere questo pacchetto alla libreria. Fatto.
+Fare clic su Installa per aggiungere il pacchetto alla libreria, quindi accettare la conferma. Fatto.
 
-![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
+<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Notare che ora è presente un altro gruppo nella libreria di Dynamo denominato "buildz". Questo nome si riferisce allo sviluppatore del pacchetto e il nodo personalizzato viene posizionato in questo gruppo. È possibile iniziare ad utilizzarlo immediatamente.
 
@@ -32,23 +32,23 @@ Utilizzare **Code Block** per definire rapidamente una griglia rettangolare, gen
 
 L'esempio riportato sopra si concentra su un pacchetto con un nodo personalizzato, ma si utilizza lo stesso processo per il download di pacchetti con diversi nodi personalizzati e file di dati di supporto. Ora si dimostrerà ciò con un pacchetto più completo: DynamoUnfold.
 
-Come nell'esempio precedente, iniziare selezionando _Pacchetti > Cerca pacchetto_.
+Come nell'esempio precedente, iniziare selezionando _Pacchetti > Package Manager_.
 
-Questa volta, si cercherà _"DynamoUnfold"_, una parola, facendo attenzione alle lettere maiuscole. Quando vengono visualizzati i pacchetti, scaricarli facendo clic su Installa per aggiungere DynamoUnfold alla libreria di Dynamo.
+Questa volta, si cercherà _"DynamoUnfold"_, una parola. Quando vengono visualizzati i pacchetti, scaricarli facendo clic su Installa per aggiungere DynamoUnfold alla libreria di Dynamo.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
+<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
 Nella libreria di Dynamo, è presente un gruppo _DynamoUnfold_ con più categorie e nodi personalizzati.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Ora, si può dare un'occhiata alla struttura dei file del pacchetto. Selezionare innanzitutto Dynamo > Preferenze.
+Ora, si può dare un'occhiata alla struttura dei file del pacchetto. 
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
+1. Innanzitutto, accedere a Pacchetti > Package Manager > Pacchetti installati.
+2. Accanto a DynamoUnfold, selezionare il menu delle opzioni <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
+3. Quindi, fare clic su Mostra directory principale per aprire la cartella principale per questo pacchetto.
 
-Dalla finestra popup Preferenze, aprire Package Manager > accanto a DynamoUnfold, selezionare il menu con i puntini verticali ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > Mostra directory principale per aprire la cartella principale per questo pacchetto.
-
-![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
+<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Verrà aperta la directory principale del pacchetto. Notare che sono presenti 3 cartelle e un file.
 
@@ -67,21 +67,25 @@ Aprire "SphereUnfold".
 
 Dopo aver aperto il file e aver fatto clic su "Esegui" nel risolutore, è presente una sfera spiegata. File di esempio come questi sono utili per imparare ad utilizzare un nuovo pacchetto di Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
-### Dynamo Package Manager
+### Consultazione e visualizzazione delle informazioni sui pacchetti
 
-Un altro modo per scoprire i pacchetti di Dynamo consiste nell'esplorare [Dynamo Package Manager](http://dynamopackages.com) online. Si tratta di un ottimo modo per cercare i pacchetti, poiché il repository dispone i pacchetti in ordine di conteggio dei download e popolarità. Inoltre, è un modo semplice per raccogliere informazioni sugli aggiornamenti recenti per i pacchetti, poiché alcuni pacchetti di Dynamo sono soggetti al controllo delle versioni e alle dipendenze delle build di Dynamo.
+In Package Manager, è possibile cercare i pacchetti utilizzando le opzioni di ordinamento e filtraggio disponibili nella scheda Cerca pacchetti. Sono disponibili diversi filtri per il programma host, lo stato (nuovo, obsoleto o non obsoleto) e la presenza o meno di dipendenze nel pacchetto.
 
-Facendo clic su _"Quads from Rectangular Grid"_ in Dynamo Package Manager, è possibile visualizzarne le descrizioni, le versioni, lo sviluppatore e le possibili dipendenze.
+Ordinando i pacchetti, è possibile identificare i pacchetti più votati o più scaricati oppure trovare i pacchetti con aggiornamenti recenti. 
+
+È inoltre possibile accedere a ulteriori dettagli su ciascun pacchetto facendo clic su Visualizza dettagli. Viene aperto un pannello laterale in Package Manager, in cui è possibile trovare informazioni quali il confronto delle versioni e le dipendenze, l'URL del sito Web o del repository, le informazioni sulla licenza e così via.
+
+### Sito Web di Dynamo Package Manager
+
+Un altro modo per scoprire i pacchetti di Dynamo consiste nell'esplorare il sito Web di [Dynamo Package Manager](http://dynamopackages.com). Qui si possono trovare le statistiche sui pacchetti e le classifiche degli autori. È inoltre possibile scaricare i file di pacchetto da Dynamo Package Manager, ma eseguire questa operazione direttamente da Dynamo è un processo più agevole.
 
 ![](../images/6-2/1/dpm2.jpg)
 
-È inoltre possibile scaricare i file di pacchetto da Dynamo Package Manager, ma eseguire questa operazione direttamente da Dynamo è un processo più agevole.
+### Dove vengono memorizzati i file di pacchetto in locale?
 
-### Dove vengono memorizzati i file di pacchetti in locale?
-
-Se si scaricano i file da Package Manager di Dynamo o si desidera vedere dove sono mantenuti tutti i file di pacchetti, fare clic su Dynamo > Package Manager > Percorsi di nodi e pacchetti; è possibile trovare la directory principale corrente delle cartelle da qui.
+Se si desidera vedere dove vengono mantenuti i file di pacchetto, nella parte superiore del browser fare clic su Dynamo > Preferenze > Impostazioni pacchetto > Posizioni di nodi e pacchetti; da qui è possibile trovare la directory della cartella principale corrente.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 

@@ -14,13 +14,13 @@ In questa immagine, si associa un punto da una superficie ad un'altra utilizzand
 
 Nel capitolo precedente, sono stati esaminati i metodi per la suddivisione di una superficie in pannelli in Dynamo in base alle curve definite nel piano XY. Questo case study estende questi concetti per altre quote della geometria. Si installerà questo pacchetto una volta creato per dimostrare com'è stato sviluppato. Nella sezione successiva, verrà illustrato come questo pacchetto è stato pubblicato.
 
-In Dynamo, fare clic su \\_Pacchetti>Cerca pacchetto... e c_ercare il pacchetto MapToSurface (tutta una parola). Fare clic su Installa per avviare il download e aggiungere il pacchetto alla libreria.
+In Dynamo, fare clic su Pacchetti > Package Manager e cercare il pacchetto "MapToSurface" (tutta una parola). Fare clic su Installa per avviare il download e aggiungere il pacchetto alla libreria.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-Dopo l'installazione, i nodi personalizzati dovrebbero essere disponibili nella sezione Moduli aggiuntivi > Dynamo Primer.
+Dopo l'installazione, i nodi personalizzati dovrebbero essere disponibili nella sezione Moduli aggiuntivi > DynamoPrimer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Dopo aver installato il pacchetto, esaminarne in maniera dettagliata la configurazione.
 
@@ -30,7 +30,7 @@ Il pacchetto che si sta creando utilizza cinque nodi personalizzati che sono sta
 
 Si tratta di un pacchetto semplice con cinque nodi personalizzati. Nei passaggi riportati di seguito, verrà descritta brevemente la configurazione di ogni nodo personalizzato.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Questo è un nodo semplice che crea una superficie parametrica da associare dall
 
 ### File di esempio
 
-I file di esempio sono disponibili nella cartella principale del pacchetto. Fare clic su Dynamo > Preferenze > Package Manager.
+I file di esempio sono disponibili nella cartella principale del pacchetto. Fare clic su Package Manager > scheda Pacchetti installati.
 
 Accanto a MapToSurface, fare clic sul menu con i puntini verticali > Mostra directory principale.
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Quindi, aprire la cartella _extra_, che contiene tutti i file del pacchetto che non sono nodi personalizzati. Questo è il percorso in cui vengono memorizzati i file di esempio (se presenti) per i pacchetti di Dynamo. Nelle schermate riportate di seguito sono mostrati i concetti illustrati in ogni file di esempio.
 

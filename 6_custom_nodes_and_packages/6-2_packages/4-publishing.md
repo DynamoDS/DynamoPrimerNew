@@ -2,7 +2,7 @@
 
 Nelle sezioni precedenti, sono stati analizzati i dettagli su come il pacchetto _MapToSurface_ è configurato con nodi personalizzati e file di esempio. Ma com'è possibile pubblicare un pacchetto che è stato sviluppato localmente? Questo case study mostra come pubblicare un pacchetto da un gruppo di file in una cartella locale.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Esistono diversi modi per pubblicare un pacchetto. Di seguito è riportato il processo consigliato: **pubblicare localmente, sviluppare localmente, quindi pubblicare in linea**. Si inizierà con una cartella contenente tutti i file del pacchetto.
 
@@ -10,17 +10,15 @@ Esistono diversi modi per pubblicare un pacchetto. Di seguito è riportato il pr
 
 Prima di passare alla pubblicazione del pacchetto MapToSurface, se il pacchetto è stato installato dalla lezione precedente, disinstallarlo in modo da non utilizzare pacchetti identici.
 
-Iniziare accedendo a Dynamo > Preferenze > Package Manager > accanto a MapToSurface, fare clic sul menu con i puntini verticali > Elimina.
+Iniziare accedendo a Pacchetti > Package Manager > scheda Pacchetti installati > accanto a MapToSurface, fare clic sul menu con i puntini verticali > Elimina.
 
-![](../images/6-2/4/publishapackage-deletepackage.jpg)
+<figure><img src="../../.gitbook/assets/delete-map-to-surface.png" alt=""><figcaption></figcaption></figure>
 
 Quindi riavviare Dynamo. Alla riapertura, quando si seleziona la finestra _Gestisci pacchetti_, _MapToSurface_ non dovrebbe più essere presente. Ora si è pronti per cominciare dall'inizio.
 
 ### Pubblicazione locale di un pacchetto
 
-{% hint style="warning" %}
- La pubblicazione del pacchetto di Dynamo è abilitata solo in Dynamo per Revit e Dynamo for Civil 3D. Dynamo Sandbox non dispone di funzionalità di pubblicazione.
-{% endhint %}
+{% hint style="warning" %} È possibile pubblicare nodi e pacchetti personalizzati da Dynamo Sandbox nella versione 2.17 e successive, purché non presentino dipendenze API host. Nelle versioni precedenti, la pubblicazione di nodi e pacchetti personalizzati è abilitata solo in Dynamo for Revit e Dynamo for Civil 3D. {% endhint %}
 
 > Scaricare il file di esempio facendo clic sul collegamento seguente.
 >
@@ -35,25 +33,33 @@ Questo è il primo invio per il pacchetto e tutti i file di esempio e i nodi per
 > 1. Questa cartella contiene cinque nodi personalizzati (.dyf).
 > 2. Contiene inoltre cinque file di esempio (.dyn) e un file vettoriale importato (.svg). Questi file fungeranno da esercizi introduttivi per mostrare all'utente come utilizzare i nodi personalizzati.
 
-In Dynamo, iniziare facendo clic su _Pacchetti > Pubblica nuovo pacchetto_.
+In Dynamo, iniziare facendo clic su _Pacchetti > Package Manager > scheda Pubblica nuovo pacchetto_.
 
-![](../images/6-2/4/publishapackage-publishlocally02.jpg)
+Nella scheda _Pubblica un pacchetto_, compilare i campi pertinenti sul lato sinistro della finestra.
 
-Nella finestra _Pubblica un pacchetto di Dynamo_, sono stati compilati i moduli pertinenti a sinistra della finestra.
+<figure><img src="../../.gitbook/assets/package-details.png" alt=""><figcaption></figcaption></figure>
 
-![](../images/6-2/4/publishapackage-publishlocally03.jpg)
+Successivamente, verranno aggiunti i file di pacchetto. È possibile aggiungere i file uno ad una o intere cartelle selezionando Aggiungi directory (1). Per aggiungere file che non sono in formato .dyf, assicurarsi di modificare il tipo di file nella finestra del browser in **"Tutti i file (**_._**)"**. Notare che verrà aggiunto indistintamente ogni file, il nodo personalizzato (.dyf) o il file di esempio (.dyn). Dynamo consentirà di suddividere questi elementi quando si pubblica il pacchetto.
 
-> 1. Facendo clic su _Aggiungi file_, sono stati aggiunti anche i file della struttura delle cartelle sul lato destro dello schermo (per aggiungere i file diversi dal formato .dyf, assicurarsi di modificare il tipo di file nella finestra del browser in **Tutti i file (**_**.**_**)**. Notare che è stato aggiunto indiscriminatamente ogni file, il nodo personalizzato (.dyf) o il file di esempio (.dyn). Dynamo consentirà di suddividere questi elementi quando si pubblica il pacchetto.
-> 2. Il campo "Gruppo" definisce in quale gruppo trovare i nodi personalizzati nell'interfaccia utente di Dynamo.
-> 3. Pubblicare facendo clic su Pubblica localmente. Se si sta seguendo questa procedura, assicurarsi di fare clic su _Pubblica localmente_ e **non** _Pubblica in linea_. Non si desidera creare un gruppo di pacchetti duplicati in Package Manager.
+<figure><img src="../../.gitbook/assets/map-to-surface-contents.png" alt=""><figcaption></figcaption></figure>
+
+Dopo aver selezionato la cartella MapToSurface, Package Manager ne mostra il contenuto. Se si sta caricando un pacchetto personalizzato con una struttura di cartelle complessa e non si desidera che Dynamo apporti modifiche a tale struttura, è possibile attivare il pulsante di commutazione Mantieni struttura delle cartelle. Questa opzione è destinata agli utenti avanzati; se il pacchetto non è stato appositamente impostato in un modo specifico, è consigliabile lasciare disattivato questo pulsante di commutazione e consentire a Dynamo di organizzare i file in base alle esigenze. Fare clic su Avanti per continuare.
+
+<figure><img src="../../.gitbook/assets/map-to-surface-contents-preview.png" alt=""><figcaption></figcaption></figure>
+
+Qui, è possibile visualizzare un'anteprima di come Dynamo organizzerà i file di pacchetto prima della pubblicazione. Fare clic su Fine per continuare.
+
+<figure><img src="../../.gitbook/assets/publish-locally.png" alt=""><figcaption></figcaption></figure>
+
+Pubblicare facendo clic su Pubblica localmente (1). Se si sta seguendo questa procedura, assicurarsi di fare clic su _Pubblica localmente_ e **non** _Pubblica in linea per evitare di creare_ un gruppo di pacchetti duplicati in Package Manager.
 
 Dopo la pubblicazione, i nodi personalizzati devono essere disponibili nel gruppo "DynamoPrimer" o nella libreria di Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
-Ora osservare la directory principale per vedere in che modo Dynamo ha formattato il pacchetto appena creato. A tale scopo, fare clic su Dynamo > Preferenze > Package Manager > accanto a MapToSurface, fare clic sul menu con i puntini verticali > selezionare Mostra directory principale.
+Ora osservare la directory principale per vedere in che modo Dynamo ha formattato il pacchetto appena creato. A tale scopo, accedere alla scheda Pacchetti installati > accanto a MapToSurface, fare clic sul menu con i puntini verticali > selezionare Mostra directory principale.
 
-![](../images/6-2/4/publishapackage-publishlocally05.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Si noti che la directory principale si trova nella posizione locale del pacchetto (tenere presente che il pacchetto è stato pubblicato "localmente"). Dynamo fa attualmente riferimento a questa cartella per la lettura di nodi personalizzati. È pertanto importante pubblicare la directory localmente in una posizione di cartella permanente (ad esempio, non sul desktop). Di seguito è riportata la suddivisione delle cartelle del pacchetto di Dynamo.
 
@@ -66,15 +72,13 @@ Si noti che la directory principale si trova nella posizione locale del pacchett
 
 ### Pubblicazione di un pacchetto in linea
 
-{% hint style="warning" %}
- Nota Seguire questa procedura solo se si sta effettivamente pubblicando un pacchetto personalizzato. 
-{% endhint %}
+{% hint style="warning" %} Nota Seguire questa procedura solo se si sta effettivamente pubblicando un pacchetto personalizzato. {% endhint %}
 
-![](../images/6-2/4/publishapackage-publishonline01.jpg)
+<figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
-> 1. Quando si è pronti per la pubblicazione, nella finestra Preferenze > Package Manager, selezionare il pulsante a destra di MapToSurface e scegliere _Pubblica_.
-> 2. Se si sta aggiornando un pacchetto già pubblicato, scegliere Pubblica versione. Dynamo aggiornerà il pacchetto in linea in base ai nuovi file nella directory principale del pacchetto. È semplicissimo.
+1. Quando si è pronti per la pubblicazione, nella finestra Pacchetti > Package Manager > Pacchetti installati, selezionare il pulsante a destra del pacchetto che si desidera pubblicare e scegliere Pubblica.
+2. Se si sta aggiornando un pacchetto già pubblicato, scegliere Pubblica versione. Dynamo aggiornerà il pacchetto in linea in base ai nuovi file nella directory principale del pacchetto. È semplicissimo.
 
 ### Pubblica versione...
 
-Quando si aggiornano i file nella cartella principale del pacchetto pubblicato, è possibile pubblicare una nuova versione del pacchetto selezionando _Pubblica versione..._ nella finestra _Gestisci pacchetti_. Questo è un modo semplice per apportare gli aggiornamenti necessari al contenuto e condividerli con la comunità. _Pubblica versione_ funziona solo se si è il gestore del pacchetto.
+Quando si aggiornano i file nella cartella principale del pacchetto pubblicato, è anche possibile pubblicare una nuova versione del pacchetto selezionando _Pubblica versione..._ nella finestra _Pacchetti personali_. Questo è un modo semplice per apportare gli aggiornamenti necessari al contenuto e condividerli con la comunità. _Pubblica versione_ funziona solo se si è il gestore del pacchetto.

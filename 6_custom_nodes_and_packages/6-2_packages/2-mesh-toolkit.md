@@ -2,7 +2,7 @@
 
 Dynamo Mesh Toolkit fornisce strumenti per importare mesh da formati di file esterni, creare mesh da oggetti della geometria di Dynamo e generare manualmente mesh in base ai vertici e agli indici. La libreria fornisce inoltre strumenti per modificare e correggere mesh o estrarre sezioni orizzontali da utilizzare nella fabbricazione.
 
-![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Dynamo Mesh Toolkit fa parte del costante programma di ricerca sulle mesh di Autodesk e, come tale, continuerà a crescere nei prossimi anni. Si prevede di aggiungere frequentemente nuovi metodi nel toolkit e pertanto gli utenti sono invitati a contattare il team di Dynamo per eventuali commenti, bug e suggerimenti per le nuove funzionalità.
 
@@ -12,9 +12,9 @@ Nel seguente esercizio sono illustrate alcune operazioni di base sulle mesh medi
 
 ### Installazione di Mesh Toolkit
 
-In Dynamo, accedere a _Pacchetti > Cerca pacchetto..._ sulla barra dei menu superiore. Nel campo di ricerca, digitare _MeshToolkit_, tutta una parola, facendo attenzione alle maiuscole. Fare clic su Installa per avviare il download. È semplicissimo.
+In Dynamo, accedere a Pacchetti > Package Manager... sulla barra dei menu superiore. Nel campo di ricerca, digitare MeshToolkit, tutta una parola. Fare clic su Installa e accettare le conferme per avviare il download. È semplicissimo.
 
-![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Esercizio: Intersezione di mesh
 

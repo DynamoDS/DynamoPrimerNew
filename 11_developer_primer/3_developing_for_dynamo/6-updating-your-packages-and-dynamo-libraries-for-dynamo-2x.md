@@ -10,7 +10,7 @@ I nodi dell'interfaccia utente e i nodi che derivano direttamente da NodeModel r
 
 Anche gli autori di estensioni potrebbero dover apportare alcune modifiche, a seconda della quantità di API di Dynamo Core che utilizzano nelle loro estensioni.
 
-
+***
 
 ### Regole generali di creazione di pacchetti: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ Un esempio che specifica un metodo di serializzazione per convertire la propriet
 
 Alle proprietà `public` non destinate alla serializzazione è necessario aggiungere l'attributo `[JsonIgnore]`. Quando i nodi vengono salvati nel file .dyn, questo assicura che i dati vengano ignorati dal meccanismo di serializzazione e non provochino conseguenze impreviste quando il grafico viene aperto di nuovo. Un esempio di questo è disponibile [qui](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) nel repository di Dynamo.
 
-
+***
 
 #### Annullamento/Ripetizione <a href="#undoredo" id="undoredo"></a>
 

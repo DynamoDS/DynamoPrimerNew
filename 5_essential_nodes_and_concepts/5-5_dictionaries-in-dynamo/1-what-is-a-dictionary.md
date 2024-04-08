@@ -22,11 +22,11 @@ La separazione dei dizionari dagli elenchi introduce i dizionari come cittadino 
 * Nella libreria sono stati introdotti _nuovi nodi_ per aiutare a creare, modificare o sottoporre a query i dizionari.
 *   Gli elenchi creati nei blocchi di codice v1.x verranno migrati automaticamente al caricamento dello script nella nuova sintassi dell'elenco che utilizza parentesi quadre `[ ]` anziché parentesi graffe `{ }` \\.
 
+    ***
 
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
-
-
+***
 
 ### **Perché dovrebbe essere importante? Per cosa si utilizzerebbero questi elementi?**
 
