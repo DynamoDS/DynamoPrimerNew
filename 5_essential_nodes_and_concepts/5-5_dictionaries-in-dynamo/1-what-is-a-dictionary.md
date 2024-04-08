@@ -22,11 +22,11 @@ A separação dos dicionários das listas apresenta os dicionários como um elem
 * _Novos nós_ foram introduzidos na biblioteca para ajudar a criar, modificar e consultar dicionários.
 *   As listas criadas em blocos de código v1.x migrarão automaticamente durante o carregamento do script com a nova sintaxe de lista que usa colchetes `[ ]` em vez de chaves `{ }` \\
 
+    ***
 
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
-
-
+***
 
 ### **Por que isso é importante para mim? Para que você usaria isso?**
 

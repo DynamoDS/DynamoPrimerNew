@@ -1,8 +1,6 @@
 # Sobre
 
-{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}
- Vídeo promocional do Dynamo 
-{% endembed %}
+{% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Vídeo promocional do Dynamo {% endembed %}
 
 ## Para o Dynamo v2.13
 

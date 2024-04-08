@@ -10,7 +10,7 @@ Os nós da interface do usuário e os nós que derivam diretamente do NodeModel 
 
 Os autores da extensão também podem ter algumas alterações potenciais a serem feitas, dependendo de quanto das APIs principais do Dynamo eles usam em suas extensões.
 
-
+***
 
 ### Regras gerais de empacotamento: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ Um exemplo que especifica um método de serialização para converter a propried
 
 As propriedades `public` que não são destinadas à serialização precisam ter o atributo `[JsonIgnore]` adicionado. Quando os nós são salvos no arquivo .dyn, isso garante que esses dados sejam ignorados pelo mecanismo de serialização e não causará consequências inesperadas quando o gráfico for aberto novamente. Um exemplo disso pode ser encontrado [aqui](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) no repositório do Dynamo.
 
-
+***
 
 #### Desfazer/Refazer <a href="#undoredo" id="undoredo"></a>
 

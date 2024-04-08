@@ -14,13 +14,13 @@ Nessa imagem, mapeamos um ponto de uma superfície para outra usando as coordena
 
 No capítulo anterior, exploramos formas de criar painéis em uma superfície no Dynamo com base nas curvas definidas no plano XY. Este estudo de caso estende esses conceitos para mais cotas de geometria. Vamos instalar esse pacote conforme construído para demonstrar como ele foi desenvolvido. Na próxima seção, demonstraremos como esse pacote foi publicado.
 
-No Dynamo, clique em _Pacotes>Procurar um pacote... e p_rocure o pacote “MapToSurface” (uma só palavra). Clique em Instalar para iniciar o download e adicionar o pacote à biblioteca.
+No Dynamo, clique em Pacotes > Package Manager e procure o pacote “MapToSurface” (uma única palavra). Clique em Instalar para iniciar o download e adicionar o pacote à biblioteca.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-Após a instalação, os nós personalizados devem estar disponíveis na seção Complementos > Dynamo Primer.
+Após a instalação, os nós personalizados devem estar disponíveis na seção Complementos > DynamoPrimer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Com o pacote já instalado, vamos analisar como ele está configurado.
 
@@ -30,7 +30,7 @@ O pacote que estamos criando usa cinco nós personalizados que criamos para refe
 
 Esse é um pacote simples com cinco nós personalizados. Nas etapas abaixo, falaremos brevemente sobre a configuração de cada nó personalizado.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Esse é um nó simples que cria uma superfície paramétrica para mapear da grad
 
 ### Arquivos de exemplo
 
-Os arquivos de exemplo podem ser encontrados na pasta raiz do pacote. Clique em Dynamo > Preferências > Gerenciador de pacotes
+Os arquivos de exemplo podem ser encontrados na pasta raiz do pacote. Clique na guia Package Manager > Pacotes instalados.
 
-Ao lado de MapToSurface, clique no menu de pontos de verticais > Mostrar diretório raiz
+Ao lado de MapToSurface, clique no menu de pontos verticais > Mostrar diretório raiz.
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Em seguida, abra a pasta _“extra”_, que contém todos os arquivos do pacote que não são nós personalizados. Esse é o local onde os arquivos de exemplos (se existirem) são armazenados para pacotes do Dynamo. As capturas de tela abaixo apresentam os conceitos demonstrados em cada arquivo de exemplo.
 
