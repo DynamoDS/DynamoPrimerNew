@@ -10,7 +10,7 @@ Dynamo 2.0 一個是重大版本，某些 API 已變更或移除。影響節點�
 
 延伸的作者也可能需要進行一些潛在的變更 - 取決於他們在延伸中使用多少 Dynamo 核心 API。
 
-
+***
 
 ### 一般封裝規則：<a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ JSON 建構函式與基本建構函式不同，因為它有 `inPorts` 和 `outPo
 
 不用於序列化的 `public` 性質需要加入 `[JsonIgnore]` 屬性。節點儲存為 .dyn 檔案後，可確保序列化機制忽略此資料，再次開啟圖表時，不會導致非預期的結果。在 Dynamo 儲存庫中的[此處](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45)可以找到此內容的範例。
 
-
+***
 
 #### 退回/重做 <a href="#undoredo" id="undoredo"></a>
 

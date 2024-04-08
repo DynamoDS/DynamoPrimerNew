@@ -14,13 +14,13 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 在上一章中，我們探索了根據 XY 平面中定義的曲線在 Dynamo 中將曲面面板化的方式。此案例研究將針對幾何圖形的更多標註延伸這些概念。我們會將此套件安裝為已建置的套件，以演示其開發方式。在下一節，我們將示範此套件的發佈方式。
 
-在 Dynamo 中，按一下「套件」>「搜尋套件...」，然後搜尋套件「MapToSurface」(全部一個字)。按一下「安裝」以開始下載，並將套件加入您的資源庫。
+在 Dynamo 中，按一下「套件」>「Package Manager」，然後搜尋套件「MapToSurface」(全部一個字，無空格)。按一下「安裝」以開始下載，並將套件加入您的資源庫。
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-安裝後，「Add-ons」>「Dynamo Primer」區段下應該會出現自訂節點。
+安裝後，「Add-ons」>「DynamoPrimer」區段下應該會顯示自訂節點。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 現在已安裝套件，接下來瞭解其設置方式。
 
@@ -30,7 +30,7 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 這是具有五個自訂節點的簡單套件。在以下步驟中，我們將簡要討論每個自訂節點的設置。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Dynamo 提供了多種套件建立方式，供個人使用或與 Dynamo 社群�
 
 ### 範例檔案
 
-範例檔案可在套件的根資料夾中找到。按一下「Dynamo」>「偏好」>「Package Manager」
+範例檔案可在套件的根資料夾中找到。按一下「Package Manager」>「安裝的套件」頁籤。
 
-在 MapToSurface 旁邊，按一下垂直圓點功能表 >「展示根目錄」
+按一下「MapToSurface」旁的垂直圓點功能表 >「展示根目錄」。
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 接著開啟 _「extra」_ 資料夾，此資料夾包含套件中不是自訂節點的所有檔案。這是 Dynamo 套件的範例檔案 (若存在) 的儲存位置。以下螢幕擷取畫面討論每個範例檔案中示範的概念。
 
