@@ -22,11 +22,11 @@ La séparation des dictionnaires et des listes place les dictionnaires comme cit
 * De _nouveaux nœuds_ ont été introduits dans la bibliothèque pour vous aider à créer et à modifier les dictionnaires, ainsi qu’à leur envoyer des requêtes.
 *   Les listes créées dans les nœuds Code Block v1.x seront automatiquement migrées au chargement du script vers la nouvelle syntaxe de liste qui utilise des crochets `[ ]` au lieu des accolades `{ }` \\
 
+    ***
 
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
-
-
+***
 
 ### **En quoi suis-je concerné ? Dans quel but dois-je les utiliser ?**
 

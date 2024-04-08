@@ -10,7 +10,7 @@ Les nœuds d’interface utilisateur et les nœuds qui dérivent directement de 
 
 Les auteurs d’extensions peuvent également avoir des changements potentiels à faire selon la quantité d’API de Dynamo Core qu’ils utilisent dans leurs extensions.
 
-
+***
 
 ### Règles générales relatives aux packages : <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ Un exemple qui spécifie une méthode de sérialisation pour convertir la propri
 
 Les propriétés `public` qui ne sont pas destinées à la sérialisation doivent être accompagnées de l’attribut `[JsonIgnore]`. Lorsque les nœuds sont enregistrés dans le fichier .dyn, cela garantit que ces données sont ignorées par le mécanisme de sérialisation et qu’elles n’auront pas de conséquences inattendues lorsque le graphique sera ouvert à nouveau. Vous pouvez en trouver un exemple [ici](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45), dans le dépôt Dynamo.
 
-
+***
 
 #### Annuler/Rétablir<a href="#undoredo" id="undoredo"></a>
 

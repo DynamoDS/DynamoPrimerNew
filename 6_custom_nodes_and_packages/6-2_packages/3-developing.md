@@ -14,13 +14,13 @@ Dans cette image, un point d'une surface est mappé sur une autre surface à l'a
 
 Dans le chapitre précédent, vous avez étudié les méthodes de contruction de panneaux sur une surface dans Dynamo en fonction des courbes définies dans le plan XY. Cette étude de cas étend ces concepts pour davantage de cotes de géométrie. Vous allez installer ce package tel qu'il a été conçu pour montrer comment il a été développé. Dans la section suivante, vous allez découvrir comment ce package a été publié.
 
-Dans Dynamo, cliquez sur _Packages>Rechercher un package… et recherchez le package « MapToSurface » (en un mot). Cliquez sur Installer pour lancer le téléchargement et ajouter le package à votre bibliothèque.
+Dans Dynamo, cliquez sur Packages > Gestionnaire de package et recherchez le package « MapToSurface » (en un mot). Cliquez sur Installer pour lancer le téléchargement et ajouter le package à votre bibliothèque.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-Une fois l’installation terminée, les nœuds personnalisés sont disponibles sous la section Compléments > Guide Dynamo.
+Une fois l’installation terminée, les nœuds personnalisés sont disponibles sous la section Compléments > DynamoPrimer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Une fois le package installé, voyons comment il est configuré.
 
@@ -30,7 +30,7 @@ Le package créé utilise cinq nœuds personnalisés créés pour référence. V
 
 Il s'agit d'un package simple de cinq nœuds personnalisés. Les étapes ci-dessous présentent brièvement la configuration de chaque nœud personnalisé.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Il s’agit d’un nœud simple qui crée une surface paramétrique à mapper de
 
 ### Fichiers d’exemple
 
-Les fichiers d’exemple se trouvent dans le dossier racine du package. Cliquez sur Dynamo > Préférences > Package Manager
+Les fichiers d’exemple se trouvent dans le dossier racine du package. Cliquez sur Gestionnaire de package > onglet Packages installés.
 
 En regard de MapToSurface, cliquez sur le menu des trois points verticaux > Afficher le répertoire racine.
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Ensuite, ouvrez le dossier _« extra »_, qui contient tous les fichiers du package qui ne sont pas des nœuds personnalisés. C’est là que sont stockés les fichiers d’exemple (s’ils existent) des packages Dynamo. Les captures d’écran ci-dessous décrivent les concepts présentés dans chaque fichier d’exemple.
 
@@ -113,4 +113,3 @@ L’analyse de la syntaxe d’un fichier .svg permet de convertir les courbes au
 Les courbes importées sont mappées avec une surface cible. Cela vous permet de concevoir de manière explicite (pointer-cliquer) une contruction de panneaux dans Illustrator, de l’importer dans Dynamo et de l’appliquer à une surface cible.
 
 ![](../images/6-2/3/developpackage-samplefile05c.jpg)
-

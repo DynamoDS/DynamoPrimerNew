@@ -1,24 +1,24 @@
 # Présentation des packages
 
-En résumé, un package est un ensemble de nœuds personnalisés. Le gestionnaire de package Dynamo est un portail permettant à la communauté de télécharger tout package publié en ligne. Ces jeux d’outils sont développés par des tiers afin d’étendre les fonctionnalités clés de Dynamo, accessibles à tous, et prêts à être téléchargés en un clic.
+Dynamo offre un grand nombre de fonctionnalités prêtes à l’emploi et dispose également d’une bibliothèque de packages complète qui permet d’étendre considérablement les capacités de Dynamo. Un package est un ensemble de nœuds personnalisés ou de fonctionnalités supplémentaires. Le gestionnaire de package Dynamo est un portail permettant à la communauté de télécharger tout package publié en ligne. Ces jeux d’outils sont développés par des tiers afin d’étendre les fonctionnalités clés de Dynamo, accessibles à tous, et prêts à être téléchargés en un clic.
 
-![Site du gestionnaire de packages](../images/6-2/1/dpm.jpg)
+![Site du gestionnaire de package](../images/6-2/1/dpm.jpg)
 
 Un projet Open Source comme Dynamo s’appuie sur ce type d’implication de la communauté. Avec ses développeurs tiers dédiés, Dynamo peut étendre sa portée aux workflows dans différents secteurs d’activité. Par conséquent, l'équipe de Dynamo a entrepris de rationaliser le développement et la publication des packages (sujets abordés plus en détail dans les sections suivantes).
 
-### Installation d'un package
+### Installation d’un package
 
-La méthode la plus simple pour installer un package consiste à utiliser la barre d'outils Packages de l'interface Dynamo. Passez à présent au vif du sujet et installez-en un. Dans cet exemple rapide, vous allez installer un package très utilisé pour créer des panneaux quadrilatéraux sur une grille.
+La méthode la plus simple pour installer un package consiste à utiliser l’option de menu Packages de l’interface Dynamo. Passez à présent au vif du sujet et installez un package. Dans cet exemple rapide, vous allez installer un package très utilisé pour créer des panneaux quadrilatéraux sur une grille.
 
-Dans Dynamo, accédez à _Packages > Rechercher un package…_
+Dans Dynamo, accédez à _Packages > Gestionnaire de package..._
 
-![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
+<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 Dans la barre de recherche, recherchez « quadrilatères à partir de la grille rectangulaire ». Au bout de quelques instants, l'ensemble des packages correspondants à cette demande de recherche apparaissent. Sélectionnez le premier package avec le nom correspondant.
 
-Cliquez sur Installer pour ajouter ce package à votre bibliothèque. Terminé !
+Cliquez sur Installer pour ajouter ce package à votre bibliothèque, puis acceptez la confirmation. Terminé !
 
-![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
+<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 Vous avez maintenant un autre groupe appelé « buildz » dans la bibliothèque Dynamo. Son nom fait référence au développeur du package. Le nœud personnalisé est placé dans ce groupe. Vous pouvez commencer à l’utiliser immédiatement.
 
@@ -32,23 +32,23 @@ Utilisez un nœud **Code Block**pour définir rapidement une grille rectangulair
 
 L'exemple ci-dessus est axé sur un package avec un nœud personnalisé, mais vous utilisez le même processus pour télécharger des packages avec plusieurs nœuds personnalisés et des fichiers de données de prise en charge. Démontrez-le maintenant avec un package plus complet : Dynamo Unfold.
 
-Comme dans l’exemple ci-dessus, commencez par sélectionner _Packages > Rechercher un package…_.
+Comme dans l’exemple ci-dessus, commencez par sélectionner _Packages > Gestionnaire de package.._.
 
-Cette fois, recherchez _« DynamoUnfold »_, en un mot, en gardant les majuscules. Lorsque les packages s’affichent, cliquez sur Installer pour ajouter Dynamo Unfold à votre bibliothèque Dynamo.
+Cette fois, recherchez _« DynamoUnfold »_, en un mot. Lorsque les packages s’affichent, cliquez sur Installer pour ajouter Dynamo Unfold à votre bibliothèque Dynamo.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
+<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
 La bibliothèque Dynamo contient un groupe _DynamoUnfold_ avec plusieurs catégories et nœuds personnalisés.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Examinez maintenant la structure de fichiers du package. Tout d’abord, sélectionnez Dynamo > Préférences.
+Examinez maintenant la structure de fichiers du package. 
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
+1. Tout d’abord, accédez à Packages > Gestionnaire de package > Packages installés.
+2. À côté de DynamoUnfold, sélectionnez le menu d’options <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
+3. Cliquez ensuite sur Afficher le répertoire racine pour ouvrir le dossier racine de ce package.
 
-Dans la fenêtre contextuelle Préférences, ouvrez Package Manager > à côté de DynamoUnfold, sélectionnez le menu des points verticaux ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > Afficher le répertoire racine pour ouvrir le dossier racine de ce package.
-
-![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
+<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Cette action permet d’accéder au répertoire racine du package. Il contient trois dossiers et un fichier.
 
@@ -67,21 +67,25 @@ Ouvrez « SphereUnfold ».
 
 Après avoir ouvert le fichier et cliqué sur « Exécuter » dans le solveur, vous obtenez une sphère dépliée. Les fichiers d’exemple comme ceux-ci sont utiles pour apprendre à utiliser un nouveau package Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
-### Gestionnaire de package Dynamo
+### Parcourir et afficher les informations sur le package
 
-Une autre façon de découvrir les packages Dynamo est d’explorer le [Gestionnaire de packages Dynamo](http://dynamopackages.com) en ligne. C’est une bonne façon de rechercher des packages, car le référentiel trie les packages par ordre de nombre de téléchargements et de popularité. Il s’agit également d’un moyen facile de collecter des informations sur les dernières mises à jour des packages, car certains packages Dynamo sont soumis au contrôle des versions et aux dépendances des versions de Dynamo.
+Dans le gestionnaire de package, vous pouvez rechercher des packages à l’aide des options de tri et de filtrage de l’onglet Rechercher des packages. Plusieurs filtres sont disponibles pour le programme hôte, l’état (nouveau, obsolète ou non obsolète) et si le package possède des dépendances.
 
-En cliquant sur _« Quadrilatères à partir de la grille rectangulaire »_ dans le gestionnaire de package Dynamo, vous pouvez voir ses descriptions, ses versions, le développeur et les éventuelles dépendances.
+En triant les packages, vous pouvez identifier les packages les mieux notés ou les plus téléchargés, ou trouver les packages ayant fait l’objet de mises à jour récentes. 
+
+Vous pouvez également obtenir plus de détails sur chaque paquet en cliquant sur Afficher les détails. Cela ouvre un panneau latéral dans le Gestionnaire de package, où vous pouvez trouver des informations telles que la version et les dépendances, l’URL du site Web ou du dépôt, les informations sur la licence, etc.
+
+### Site Web du gestionnaire de package Dynamo
+
+Une autre façon de découvrir les packages Dynamo est d’explorer le site Web du [gestionnaire de package Dynamo](http://dynamopackages.com). Vous y trouverez des statistiques sur les packages et les classements des auteurs. Vous pouvez également télécharger les fichiers de package à partir du gestionnaire de package Dynamo, mais le processus de Dynamo est plus simple.
 
 ![](../images/6-2/1/dpm2.jpg)
 
-Vous pouvez également télécharger les fichiers de package à partir du gestionnaire de package Dynamo, mais le processus de Dynamo est plus simple.
-
 ### Où sont les fichiers de package stockés localement ?
 
-Si vous téléchargez des fichiers à partir du gestionnaire de packages Dynamo ou si vous souhaitez voir où sont conservés tous vos fichiers de package, cliquez sur Dynamo > Package Manager > Chemins d’accès de nœud et de package, pour trouver votre répertoire de dossiers racine actuel.
+Si vous souhaitez voir où vos fichiers de package sont conservés, dans la barre de navigation supérieure, cliquez sur Dynamo > Préférences > Paramètres de package > Emplacement des fichiers de nœuds et de packages. Vous pouvez trouver le répertoire de votre dossier racine actuel à partir d’ici.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
