@@ -14,13 +14,13 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 在前一章中，我们探讨了在 Dynamo 中基于在 XY 平面中定义的曲线为曲面镶板的方法。本案例研究扩展了这些概念，以获得更多几何图形尺寸。我们将以内置方式安装此软件包，以演示其开发方式。在下一节中，我们将演示如何发布此软件包。
 
-在 Dynamo 中，依次单击“软件包”>“搜索软件包...”，然后搜索软件包“MapToSurface”（全部为一个单词）。单击“安装”以开始下载，并将软件包添加到库。
+在 Dynamo 中，依次单击“软件包”>“软件包管理器”，然后搜索软件包“MapToSurface”（全部写为一个单词）。单击“安装”以开始下载，并将软件包添加到库。
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-安装后，自定义节点应位于“附加模块”>“Dynamo Primer”部分下。
+完成安装后，自定义节点应位于“附加模块”>“DynamoPrimer”部分下。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 现在，软件包已完成安装，我们来介绍其设置方式。
 
@@ -30,7 +30,7 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 这是一个包含五个自定义节点的简单软件包。在下面的步骤中，我们将简要介绍每个自定义节点的设置。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 ### 示例文件
 
-示例文件位于软件包的根文件夹中。依次单击“Dynamo”>“首选项”>“Package Manager”
+示例文件位于软件包的根文件夹中。依次单击“软件包管理器”>“已安装的软件包”选项卡。
 
-在“MapToSurface”旁边，依次单击垂直点菜单 >“显示根目录”
+在“MapToSurface”的旁边，依次单击垂直点菜单 >“显示根目录”。
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 接着，打开 _“extra”_ 文件夹，该文件夹存储软件包中所有非自定义节点的文件。这是存储 Dynamo 软件包示例文件（如果存在）的位置。下面的屏幕截图介绍每个示例文件中演示的概念。
 

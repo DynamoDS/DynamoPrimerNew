@@ -10,7 +10,7 @@ UI 节点和直接从 NodeModel 派生的节点需要进行更多操作才能在
 
 扩展作者可能还要进行一些潜在更改，具体取决于他们在其扩展中使用的 Dynamo 核心 API 数量。
 
-
+***
 
 ### 常规打包规则：<a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,11 +113,11 @@ JSON 构造函数与基础构造函数的不同之处在于，它将 `PortModel`
 
 不用于序列化的 `public` 特性需要添加 `[JsonIgnore]` 属性。当将节点保存到 .dyn 文件时，这将确保序列化机制会忽略此数据，并且再次打开图形时不会导致出现意外结果。此情况的示例可以在[此处](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45)的 Dynamo 存储库中找到。
 
-
+***
 
 #### 撤消/重做 <a href="#undoredo" id="undoredo"></a>
 
-如上所述，过去使用 `SerializeCore` 和 `DeserializeCore` 方法是为了将节点保存和载入到 xml .dyn 文件中。此外，它们还用于保存和载入节点状态以进行撤消/重做， **现在仍然如此！** 如果要为 nodeModel UI 节点实现复杂的撤消/重做功能，则需要实现这些方法并将其序列化到作为这些方法的参数提供的 XML 文档对象中。除了复杂的 UI 节点之外，这应该是一个罕见用例。
+如上所述，过去使用 `SerializeCore` 和 `DeserializeCore` 方法是为了将节点保存和载入到 xml .dyn 文件中。此外，它们还用于保存和载入节点状态以进行撤消/重做， **现在仍然如此！**如果要为 nodeModel UI 节点实现复杂的撤消/重做功能，则需要实现这些方法并将其序列化到作为这些方法的参数提供的 XML 文档对象中。除了复杂的 UI 节点之外，这应该是一个罕见用例。
 
 #### 输入和输出端口 API <a href="#input-and-output-port-apis" id="input-and-output-port-apis"></a>
 

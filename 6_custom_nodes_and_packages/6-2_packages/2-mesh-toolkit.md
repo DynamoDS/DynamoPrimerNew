@@ -2,7 +2,7 @@
 
 Dynamo Mesh Toolkit 包提供了多种工具，可从外部文件格式输入网格、从 Dynamo 几何体对象创建网格，以及按顶点和索引手动构建网格。该库还提供了一些工具，可用于修改网格、修复网格或提取水平切片以在制造中使用。
 
-![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未来几年内将继续增长。希望新方法经常出现在工具包中，您可以随时与 Dynamo 团队联系并提供评论、错误和新功能建议。
 
@@ -12,9 +12,9 @@ Dynamo Mesh Toolkit 是 Autodesk 持续网格研究的一部分，因此在未�
 
 ### 安装 Mesh Toolkit
 
-在 Dynamo 中，转到顶部菜单栏中的 _“软件包”>“搜索软件包...”_。在搜索字段中，键入 _“MeshToolkit”_，全部写为一个单词并注意大小写。单击“安装”以开始下载。就这么简单！
+在 Dynamo 中，转到顶部菜单栏中的“软件包”>“软件包管理器...”。在搜索字段中，键入“MeshToolkit”，全部写为一个单词。单击“安装”并接受确认以开始下载。就这么简单！
 
-![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## 练习：使网格相交
 
