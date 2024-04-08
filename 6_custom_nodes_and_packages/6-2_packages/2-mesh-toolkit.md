@@ -2,7 +2,7 @@
 
 Dynamo Mesh Toolkit에서는 외부 파일 형식에서 메쉬를 가져오고, Dynamo 형상 객체에서 메쉬를 작성하고, 정점 및 색인으로 메쉬를 수동으로 작성하는 도구를 제공합니다. 라이브러리에서는 메쉬를 수정 또는 복구하거나 제작에 사용할 수평 슬라이스를 추출하는 도구도 제공합니다.
 
-![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Dynamo Mesh Toolkit은 Autodesk에서 지속적으로 연구하는 메쉬의 한 부분으로, 향후 몇 년 동안 지속적으로 발전할 것입니다. 툴킷에서 새로운 메서드가 자주 제공될 계획이니, 새 기능에 대한 의견, 버그 및 제안 사항과 관련하여 언제든지 Dynamo 팀에 연락해 주십시오.
 
@@ -12,9 +12,9 @@ Dynamo Mesh Toolkit은 Autodesk에서 지속적으로 연구하는 메쉬의 한
 
 ### Mesh Toolkit 설치
 
-Dynamo의 맨 위 메뉴 막대에서 _패키지 > 패키지 검색..._ 으로 이동합니다. 검색 필드에 _"MeshToolkit"_ 을 한 글자씩 입력합니다. 이때 대/소문자를 지켜야 합니다. 설치를 클릭하여 다운로드를 시작합니다. 아주 간단합니다.
+Dynamo의 상단 메뉴 막대에서 패키지 > Package Manager...로 이동합니다. 검색 필드에 MeshToolkit을 한 글자씩 입력합니다. 설치를 클릭하고 확인을 수락하여 다운로드를 시작합니다. 아주 간단합니다.
 
-![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## 연습: 메쉬 교차
 

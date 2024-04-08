@@ -14,13 +14,13 @@ Dynamo에서는 개인적으로 사용하거나 Dynamo 커뮤니티와 공유하
 
 이전 장에서는 XY 평면에 정의된 곡선을 기준으로 Dynamo에서 표면을 패널화하기 위한 방법을 살펴보았습니다. 이 성공 사례에서는 더 많은 치수를 포함하는 형상을 위해 이러한 개념을 확장합니다. 이 패키지가 개발된 방식을 보여 주기 위해 이를 구축된 대로 설치해 보겠습니다. 다음 섹션에서는 이 패키지가 게시된 방식을 살펴보겠습니다.
 
-Dynamo에서 패키지>패키지 검색...을 클릭하고 "MapToSurface"(1개의 단어) 패키지를 검색합니다. 설치를 클릭하여 다운로드를 시작하고 패키지를 라이브러리에 추가합니다.
+Dynamo에서 패키지 > Package Manager를 클릭하고 "MapToSurface"(1개의 단어) 패키지를 검색합니다. 설치를 클릭하여 다운로드를 시작하고 패키지를 라이브러리에 추가합니다.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
-설치 후에 사용자 노드를 애드온 > Dynamo Primer 섹션에서 사용할 수 있습니다.
+설치 후에 사용자 노드를 애드온 > DynamoPrimer 섹션에서 사용할 수 있습니다.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 이제 패키지가 설치되었으므로 설정 방법을 살펴보겠습니다.
 
@@ -30,7 +30,7 @@ Dynamo에서 패키지>패키지 검색...을 클릭하고 "MapToSurface"(1개�
 
 이는 5개의 사용자 노드로 구성된 간단한 패키지입니다. 아래 단계에서는 각 사용자 노드의 설정에 대해 간략하게 설명하겠습니다.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ _"PolygonsToSurface"_ 노드에서와 같이 동일한 논리가 여기에 적�
 
 ### 예제 파일
 
-예제 파일은 패키지의 루트 폴더에 있습니다. Dynamo > 기본 설정 > Package Manager를 클릭합니다.
+예제 파일은 패키지의 루트 폴더에 있습니다. Package Manager > 설치된 패키지 탭을 클릭합니다.
 
 MapToSurface 옆의 세로 점 메뉴 > 루트 디렉토리 표시를 클릭합니다.
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 다음으로 _"extra"_ 폴더를 엽니다. 이 폴더에는 사용자 노드가 아닌 패키지의 모든 파일이 들어 있습니다. 여기에는 Dynamo 패키지에 대한 예제 파일(있는 경우)이 저장되어 있습니다. 아래의 스크린샷에는 각 예제 파일에 설명된 개념이 나와 있습니다.
 

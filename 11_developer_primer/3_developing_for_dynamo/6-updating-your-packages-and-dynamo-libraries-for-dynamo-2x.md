@@ -10,7 +10,7 @@ NodeModel에서 직접 파생되는 노드와 UI 노드는 2.x에서 실행하�
 
 확장 작성자는 확장에서 사용하는 Dynamo Core API의 양에 따라 몇 가지 변경 사항을 적용할 수도 있습니다.
 
-
+***
 
 ### 일반 패키징 규칙: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ JSON 생성자는 JSON 로드 논리에서 제공하는 `inPorts` 및 `outPorts`
 
 직렬화용이 아닌 `public` 특성에는 `[JsonIgnore]` 속성을 추가해야 합니다. 노드가 .dyn 파일에 저장되면 이 데이터가 직렬화 메커니즘에서 무시되어 그래프를 다시 열 때 예상치 못한 결과가 발생하지 않습니다. 이에 대한 예는 Dynamo 리포지토리의 [여기](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45)에서 확인할 수 있습니다.
 
-
+***
 
 #### 실행 취소/다시 실행 <a href="#undoredo" id="undoredo"></a>
 

@@ -1,6 +1,6 @@
 # 패키지 소개
 
-간단히 말해서 패키지는 사용자 노드의 모음입니다. Dynamo Package Manager는 커뮤니티가 온라인으로 게시된 패키지를 다운로드할 수 있는 포털입니다. 이러한 툴셋은 Dynamo의 핵심 기능을 확장하고, 누구나 액세스 가능하며, 버튼 클릭으로 다운로드되도록 타사에서 개발합니다.
+Dynamo는 다양한 기능을 기본적으로 제공하고, Dynamo의 기능을 크게 확장할 수 있는 광범위한 패키지 라이브러리도 유지합니다. 패키지는 사용자 노드 또는 추가 기능의 모음입니다. Dynamo Package Manager는 커뮤니티가 온라인으로 게시된 패키지를 다운로드할 수 있는 포털입니다. 이러한 도구 세트는 Dynamo의 핵심 기능을 확장하고, 누구나 액세스할 수 있으며, 버튼 클릭으로 즉시 다운로드할 수 있도록 타사에서 개발되었습니다.
 
 ![Package Manager 사이트](../images/6-2/1/dpm.jpg)
 
@@ -8,17 +8,17 @@ Dynamo와 같은 오픈 소스 프로젝트에서는 이러한 유형의 커뮤�
 
 ### 패키지 설치
 
-패키지를 설치하는 가장 쉬운 방법은 Dynamo 인터페이스에서 패키지 도구막대를 사용하는 것입니다. 이 기능으로 이동한 후 바로 설치하겠습니다. 이 빠른 예에서는 그리드에서 쿼드 패널을 작성할 때 자주 사용하는 패키지를 설치합니다.
+패키지를 설치하는 가장 쉬운 방법은 Dynamo 인터페이스에서 패키지 메뉴 옵션을 사용하는 것입니다. 이 기능으로 이동한 후 바로 패키지를 설치하겠습니다. 이 빠른 예에서는 그리드에서 쿼드 패널을 작성할 때 자주 사용하는 패키지를 설치합니다.
 
-Dynamo에서 _패키지>패키지 검색..._ 으로 이동합니다.
+Dynamo에서 _패키지 > Package Manager..._로 이동합니다.
 
-![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
+<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 검색 막대에서 "직사각형 그리드의 쿼드"를 검색해 보겠습니다. 그러면 이 검색 조회와 일치하는 모든 패키지가 표시됩니다. 일치하는 이름을 가진 첫 번째 패키지를 선택하려고 합니다.
 
-설치를 클릭하여 이 패키지를 라이브러리에 추가합니다. 완료되었습니다.
+설치를 클릭하여 이 패키지를 라이브러리에 추가한 다음 확인을 수락합니다. 완료되었습니다.
 
-![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
+<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 이제 Dynamo 라이브러리에 "buildz"라는 다른 그룹이 있는 것을 확인할 수 있습니다. 이 이름은 패키지의 개발자를 나타내며, 사용자 노드가 이 그룹에 배치됩니다. 이것을 바로 사용할 수 있습니다.
 
@@ -32,23 +32,23 @@ Dynamo에서 _패키지>패키지 검색..._ 으로 이동합니다.
 
 위의 예에서는 하나의 사용자 노드가 있는 패키지에 초점을 맞추고 있지만, 여러 개의 사용자 노드 및 지원 데이터 파일이 있는 패키지를 다운로드할 때도 동일한 프로세스를 사용합니다. 이제 보다 포괄적인 패키지인 Dynamo Unfold를 사용하면서 살펴보겠습니다.
 
-위의 예에서와 같이 먼저 _패키지>패키지 검색.._ 을 선택합니다.
+위의 예에서와 같이 먼저 _패키지 > Package Manager.._를 선택합니다.
 
-이번에는 대/소문자에 주의하면서 한 단어 _"DynamoUnfold"_ 를 검색해 보겠습니다. 패키지가 표시되면 설치를 클릭하여 Dynamo Unfold를 Dynamo 라이브러리에 추가하여 다운로드합니다.
+이번에는 한 단어 _"DynamoUnfold"_를 검색해 보겠습니다. 패키지가 표시되면 설치를 클릭하여 Dynamo Unfold를 Dynamo 라이브러리에 추가하여 다운로드합니다.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
+<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
 Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _DynamoUnfold_ 그룹이 있습니다.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-이제 패키지의 파일 구조를 살펴보겠습니다. 먼저 Dynamo > 기본 설정을 선택합니다.
+이제 패키지의 파일 구조를 살펴보겠습니다. 
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
+1. 먼저 패키지 > Package Manager > 설치된 패키지로 이동합니다.
+2. DynamoUnfold 옆의 옵션 메뉴 <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">를 선택합니다.
+3. 그런 다음 루트 디렉토리 표시를 클릭하여 이 패키지의 루트 폴더를 엽니다.
 
-기본 설정 팝업에서 Package Manager > DynamoUnfold 옆에 있는 세로 점 메뉴 ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) > 루트 디렉토리 표시를 선택하여 이 패키지의 루트 폴더를 엽니다.
-
-![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
+<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 이렇게 하면 패키지의 루트 디렉토리로 이동됩니다. 3개의 폴더와 1개의 파일이 있는지 확인합니다.
 
@@ -67,21 +67,25 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 
 파일을 열고 솔버에서 "실행"을 누르면 펼쳐진 구가 표시됩니다. 이와 같은 예제 파일은 새 Dynamo 패키지를 사용하는 방법을 배우는 데 유용합니다.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
-### Dynamo Package Manager
+### 패키지 정보 찾아보기 및 보기
 
-Dynamo 패키지를 찾는 또 다른 방법은 온라인으로 [Dynamo Package Manager](http://dynamopackages.com)를 탐색하는 것입니다. 이 리포지토리는 다운로드 횟수와 인기 순서대로 패키지를 정렬하기 때문에 패키지를 찾는 좋은 방법입니다. 또한 일부 Dynamo 패키지는 Dynamo 빌드의 버전 및 종속성에 따라 영향을 받기 때문에 이는 패키지의 최신 업데이트에 대한 정보를 쉽게 수집하는 방법이기도 합니다.
+Package Manager에서 패키지 검색 탭의 정렬 및 필터링 옵션을 사용하여 패키지를 찾을 수 있습니다. 호스트 프로그램, 상태(신규, 더 이상 사용되지 않음 또는 아직 사용 가능) 및 패키지의 종속성 유무에 따라 사용할 수 있는 여러 필터가 있습니다.
 
-Dynamo Package Manager에서 _"Quads from Rectangular Grid"_ 를 클릭하면 설명, 버전, 개발자 및 가능한 종속성을 확인할 수 있습니다.
+패키지를 정렬하여 평가 점수가 높거나 가장 많이 다운로드된 패키지를 식별하거나 최신 업데이트가 있는 패키지를 찾을 수 있습니다. 
+
+상세 정보 보기를 클릭하여 각 패키지에 대한 자세한 내용에 액세스할 수도 있습니다. 이렇게 하면 Package Manager의 측면 패널이 열리며, 여기에서 버전 관리 및 종속성, 웹사이트 또는 리포지토리 URL, 라이센스 정보 등과 같은 정보를 찾을 수 있습니다.
+
+### Dynamo Package Manager 웹사이트
+
+Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://dynamopackages.com) 웹사이트를 탐색하는 것입니다. 여기에서 패키지에 대한 통계를 찾고 순위표를 작성할 수 있습니다. 패키지 파일은 Dynamo Package Manager에서 다운로드할 수도 있지만, 보다 원활한 프로세스는 Dynamo에서 바로 다운로드하는 것입니다.
 
 ![](../images/6-2/1/dpm2.jpg)
 
-패키지 파일은 Dynamo Package Manager에서 다운로드할 수도 있지만, 보다 원활한 프로세스는 Dynamo에서 바로 다운로드하는 것입니다.
-
 ### 패키지 파일이 로컬로 저장되는 위치
 
-Dynamo Package Manager에서 파일을 다운로드하거나 모든 패키지 파일이 저장되는 위치를 보려면 Dynamo > Package Manager > 노드 및 패키지 경로를 클릭합니다. 여기에서 현재 루트 폴더 디렉토리를 찾을 수 있습니다.
+패키지 파일이 저장되는 위치를 확인하려면 상단 탐색에서 Dynamo > 기본 설정 > 패키지 설정 > 노드 및 패키지 파일 위치를 클릭합니다. 여기에서 현재 루트 폴더 디렉토리를 찾을 수 있습니다.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
