@@ -14,13 +14,13 @@ In der unten gezeigten Abbildung wird ein Punkt aus einer Oberfläche mithilfe v
 
 Im vorigen Kapitel wurden in Dynamo verfügbare Methoden vorgestellt, mit denen eine Oberfläche mithilfe in der xy-Ebene definierter Kurven in Felder unterteilt werden kann. In dieser Fallstudie wird dies auf mehrdimensionale Geometrie erweitert. Dabei installieren Sie das fertige Paket und es wird gezeigt, wie dieses entwickelt wurde. Im nächsten Abschnitt wird gezeigt, wie dieses Paket veröffentlicht wurde.
 
-Klicken Sie in Dynamo auf _Pakete > Suchen nach Paket... und s_uchen Sie nach dem Paket "MapToSurface" (alles ein Wort). Klicken Sie auf Installieren, um den Download zu starten und das Paket zu Ihrer Bibliothek hinzuzufügen.
+Klicken Sie in Dynamo auf Pakete > Package Manager, und suchen Sie nach dem Paket MapToSurface (in einem Wort geschrieben). Klicken Sie auf Installieren, um den Download zu starten und das Paket zu Ihrer Bibliothek hinzuzufügen.
 
-![](../images/6-2/3/developpackage-installpackage01.jpg)
+<figure><img src="../../.gitbook/assets/map-to-surface-install.png" alt=""><figcaption></figcaption></figure>
 
 Nach der Installation sollten die benutzerdefinierten Blöcke im Abschnitt Add-Ons > Dynamo Primer verfügbar sein.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Nachdem Sie das Paket installiert haben, sehen Sie sich dessen Konfiguration an.
 
@@ -30,7 +30,7 @@ Für das Paket, das Sie hier erstellen, werden fünf benutzerdefinierte Blöcke 
 
 Dieses Paket ist mit fünf benutzerdefinierten Blöcken recht einfach konstruiert. In den nachfolgenden Schritten wird der Aufbau der einzelnen Blöcke kurz erläutert.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
@@ -64,11 +64,11 @@ Mit diesem einfachen Block wird eine parametrische Oberfläche erstellt, die aus
 
 ### Beispieldateien
 
-Die Beispieldateien befinden sich im Stammordner des Pakets. Klicken Sie auf Dynamo > Einstellungen > Package Manager.
+Die Beispieldateien befinden sich im Stammordner des Pakets. Klicken Sie auf Package Manager > Registerkarte Installierte Pakete.
 
 Klicken Sie neben MapToSurface auf das Menü mit den drei Punkten > Stammverzeichnis anzeigen.
 
-![](../images/6-2/3/developpackage-examplefiles01.jpg)
+<figure><img src="../../.gitbook/assets/show-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Navigieren Sie zum Ordner _extra_, in dem sich alle Dateien des Pakets befinden, die keine benutzerdefinierten Blöcke sind. Hier werden Beispieldateien (sofern vorhanden) für Dynamo-Pakete abgelegt. Mit den im Folgenden gezeigten Abbildungen werden die in den einzelnen Beispieldateien gezeigten Konzepte erläutert.
 

@@ -1,6 +1,6 @@
-# Pakete – Einführung
+# Pakete - Einführung
 
-Ein Paket ist, kurz gesagt, eine Sammlung benutzerdefinierter Blöcke. Der Dynamo Package Manager ist ein Community-Portal, aus dem Sie beliebige Pakete herunterladen können, die online veröffentlicht wurden. Diese Toolsets werden von externen Anbietern entwickelt und stellen Erweiterungen der Hauptfunktionen von Dynamo dar. Sie stehen für alle Benutzer zur Verfügung und können durch einfaches Klicken auf eine Schaltfläche heruntergeladen werden.
+Dynamo bietet eine große Anzahl sofort einsatzbereiter Funktionen und verfügt außerdem über eine umfangreiche Paketbibliothek, mit der sich die Funktionen von Dynamo erheblich erweitern lassen. Ein Paket ist eine Sammlung benutzerdefinierter Blöcke oder zusätzlicher Funktionen. Der Dynamo Package Manager ist ein Community-Portal, aus dem Sie beliebige Pakete herunterladen können, die online publiziert wurden. Diese Toolsets werden von externen Anbietern entwickelt und stellen Erweiterungen der Hauptfunktionen von Dynamo dar. Sie stehen für alle Benutzer zur Verfügung und können durch einfaches Klicken auf eine Schaltfläche heruntergeladen werden.
 
 ![Package Manager-Site](../images/6-2/1/dpm.jpg)
 
@@ -8,17 +8,17 @@ Community-Engagement wie dieses ist die Grundlage des Erfolgs von Open Source-Pr
 
 ### Installation eines Pakets
 
-Die einfachste Methode zum Installieren eines Pakets ist die Verwendung des Werkzeugkastens Pakete in der Dynamo-Benutzeroberfläche. Diese Methode wird im Folgenden beschrieben. In diesem Beispiel installieren Sie ein häufig verwendetes Paket zum Erstellen viereckiger Felder in einem Raster.
+Die einfachste Methode zum Installieren eines Pakets ist die Verwendung der Menüoption Pakete in der Dynamo-Benutzeroberfläche. Diese Methode wird im Folgenden beschrieben. In diesem Beispiel installieren Sie ein häufig verwendetes Paket zum Erstellen viereckiger Felder in einem Raster.
 
-Wechseln Sie in Dynamo zu _Pakete > Suchen nach Paket_.
+Wechseln Sie in Dynamo zu _Pakete > Package Manager..._
 
-![](../images/6-2/1/packageintroduction-installingapackage01.jpg)
+<figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
 Suchen Sie mithilfe der Suchleiste nach "quads from rectangular grid". Nach kurzer Zeit sollten alle Pakete, die dieser Suchabfrage entsprechen, angezeigt werden. Sie müssen in diesem Fall das erste Paket mit passendem Namen auswählen.
 
-Klicken Sie auf Installieren, um dieses Paket zu Ihrer Bibliothek hinzuzufügen. Fertig!
+Klicken Sie auf Installieren, um dieses Paket zu Ihrer Bibliothek hinzuzufügen, und bestätigen Sie anschließend den Vorgang. Fertig!
 
-![](../images/6-2/1/packageintroduction-installingapackage02.jpg)
+<figure><img src="../../.gitbook/assets/quads-from-rectangular-grid.png" alt=""><figcaption></figcaption></figure>
 
 In der Dynamo-Bibliothek wird jetzt eine weitere Gruppe namens buildz angezeigt. Dieser Name bezieht sich auf den Entwickler des Pakets und der benutzerdefinierte Block wird in dieser Gruppe abgelegt. Sie können ihn sofort verwenden.
 
@@ -32,23 +32,23 @@ Verwenden Sie den **Codeblock**, um schnell ein rechteckiges Raster zu definiere
 
 Das Paket im vorigen Beispiel enthält nur einen benutzerdefinierten Block. Pakete, die mehrere benutzerdefinierte Blöcke und die unterstützenden Datendateien enthalten, werden jedoch auf dieselbe Weise heruntergeladen. Dies wird hier an einem umfassenderen Paket demonstriert: Dynamo Unfold.
 
-Beginnen Sie wie im Beispiel oben, indem Sie _Pakete > Suchen nach Paket_ wählen.
+Beginnen Sie wie im Beispiel oben, indem Sie _Pakete > Package Manager..._ wählen.
 
-Suchen Sie in diesem Fall nach _DynamoUnfold_ – in einem Wort geschrieben und unter Berücksichtigung der Groß- und Kleinschreibung. Wenn die Pakete angezeigt werden, laden Sie sie herunter, indem Sie auf Installieren klicken, um Dynamo Unfold Ihrer Dynamo-Bibliothek hinzuzufügen.
+Dieses Mal suchen wir nach _DynamoUnfold_ (in einem Wort geschrieben). Wenn die Pakete angezeigt werden, laden Sie sie herunter, indem Sie auf Installieren klicken, um Dynamo Unfold Ihrer Dynamo-Bibliothek hinzuzufügen.
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder01.jpg)
+<figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
 Die Dynamo-Bibliothek enthält jetzt die Gruppe _DynamoUnfold_ mit mehreren Kategorien und benutzerdefinierten Blöcken.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Als Nächstes betrachten Sie die Dateistruktur des Pakets genauer. Wählen Sie zunächst Dynamo > Einstellungen.
+Als Nächstes betrachten Sie die Dateistruktur des Pakets genauer. 
 
-![](../images/6-2/1/packageintroduction-installingpackagefolder03.jpg)
+1. Navigieren Sie zunächst zu Pakete > Package Manager > Installierte Pakete.
+2. Wählen Sie neben DynamoUnfold das Optionsmenü <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line"> aus.
+3. Klicken Sie anschließend auf Stammverzeichnis anzeigen, um den Stammordner für dieses Paket zu öffnen.
 
-Öffnen Sie über das Popup-Menü Voreinstellungen den Package Manager, und wählen Sie neben DynamoUnfold das vertikale Punktemenü ![](../images/6-2/1/packageintroduction-verticaldotsmenu.jpg) und dann Stammverzeichnis anzeigen aus, um den Stammordner für dieses Paket zu öffnen.
-
-![](../images/6-2/1/packageintroduction-installingpackagefolder04.jpg)
+<figure><img src="../../.gitbook/assets/view-root-directory.png" alt=""><figcaption></figcaption></figure>
 
 Dadurch gelangen Sie zum Stammverzeichnis des Pakets. Hier sind drei Ordner und eine Datei vorhanden.
 
@@ -67,21 +67,25 @@ Wenn Sie den Ordner extra öffnen, sehen Sie eine Reihe von Beispieldateien, die
 
 Nachdem Sie die Datei geöffnet und im Solver auf Ausführen geklickt haben, erhalten Sie das Netz einer Kugel! Beispieldateien wie diese erleichtern den Einstieg in die Arbeit mit einem neuen Dynamo-Paket.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
-### Dynamo Package Manager
+### Durchsuchen und Anzeigen von Paketinformationen
 
-Sie können auch online im [Dynamo Package Manager](http://dynamopackages.com) nach Dynamo-Paketen suchen. Dies ist ein sehr effizientes Verfahren für die Suche nach Paketen, da diese im Repository nach Anzahl der Downloads und Beliebtheit sortiert werden. Sie finden auf diese Weise auch mühelos Informationen zu kürzlich erfolgten Aktualisierungen der Pakete: Manche Dynamo-Pakete unterliegen einer Versionskontrolle und es bestehen Abhängigkeiten zu Dynamo-Builds.
+Mithilfe der Sortier- und Filteroptionen auf der Registerkarte Nach Paketen suchen können Sie im Package Manager nach Paketen suchen. Es stehen verschiedene Filter für das Host-Programm und den Status (neu, veraltet oder nicht veraltet) zur Verfügung, bzw. dafür, ob das Paket Abhängigkeiten aufweist.
 
-Durch Klicken auf _Quads from Rectangular Grid_ im Dynamo Package Manager zeigen Sie die Beschreibungen, Versionen, den Entwickler sowie eventuelle Abhängigkeiten an.
+Durch Sortieren der Pakete können Sie die hoch bewerteten oder die am häufigsten heruntergeladenen Pakete ermitteln bzw. Pakete mit aktuellen Updates suchen. 
+
+Sie können auch auf weitere Details zu jedem Paket zugreifen, indem Sie auf Details anzeigen klicken. Dadurch wird eine Seitenleiste im Package Manager geöffnet, in der Sie Informationen wie Versionierung und Abhängigkeiten, Website- oder Repository-URL, Lizenzinformationen usw. finden.
+
+### Dynamo Package Manager-Website
+
+Sie können auch auf der [Dynamo Package Manager-Website](http://dynamopackages.com) nach Dynamo-Paketen suchen. Hier finden Sie die Statistiken zu Paketen und zu den Ranglisten der Autoren. Sie können die Paketdateien auch über den Dynamo Package Manager herunterladen, der direkte Download in Dynamo ist jedoch ein nahtloserer Ablauf.
 
 ![](../images/6-2/1/dpm2.jpg)
 
-Sie können die Paketdateien auch über den Dynamo Package Manager herunterladen, der direkte Download in Dynamo ist jedoch ein nahtloserer Ablauf.
-
 ### Wo werden die Paketdateien lokal gespeichert?
 
-Wenn Sie Dateien aus dem Dynamo Package Manager herunterladen oder sehen möchten, wo alle Paketdateien gespeichert sind, klicken Sie auf Dynamo > Package Manager > Pfade für Blöcke und Pakete. Hier finden Sie das aktuelle Stammordnerverzeichnis.
+Wenn Sie wissen möchten, wo Ihre Paketdateien gespeichert sind, klicken Sie in der oberen Navigationsleiste auf Dynamo > Voreinstellungen > Paketeinstellungen > Dateispeicherorte für Blöcke und Pakete. Hier finden Sie das aktuelle Stammordnerverzeichnis.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 

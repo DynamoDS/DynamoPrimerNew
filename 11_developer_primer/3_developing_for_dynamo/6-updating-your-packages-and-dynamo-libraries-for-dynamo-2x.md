@@ -10,7 +10,7 @@ Benutzeroberflächen-Blöcke und Blöcke, die direkt aus NodeModel abgeleitet we
 
 Erweiterungsautoren müssen möglicherweise auch einige Änderungen vornehmen, je nachdem, wie viele der Dynamo Core-APIs sie in ihren Erweiterungen verwenden.
 
-
+***
 
 ### Allgemeine Paket-Regeln: <a href="#general-packaging-rules" id="general-packaging-rules"></a>
 
@@ -113,7 +113,7 @@ Ein Beispiel, in dem eine Serialisierungsmethode zum Konvertieren der Eigenschaf
 
 Für `public`-Eigenschaften, die nicht für die Serialisierung vorgesehen sind, muss das Attribut `[JsonIgnore]` hinzugefügt werden. Wenn die Blöcke in der DYN-Datei gespeichert werden, wird dadurch sichergestellt, dass diese Daten vom Serialisierungsmechanismus ignoriert werden. Beim erneuten Öffnen des Diagramms treten dann keine unerwarteten Auswirkungen auf. Ein Beispiel dafür finden Sie [hier](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/DynamoConvert.cs#L45) im Dynamo-Repository.
 
-
+***
 
 #### Rückgängig/Wiederholen <a href="#undoredo" id="undoredo"></a>
 

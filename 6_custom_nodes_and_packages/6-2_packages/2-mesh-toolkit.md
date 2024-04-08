@@ -2,7 +2,7 @@
 
 Das Dynamo Mesh Toolkit enthält Werkzeuge zum Importieren von Netzen aus externen Dateiformaten, zum Erstellen von Netzen aus Dynamo-Geometrieobjekten und zum manuellen Erstellen von Netzen aus ihren Scheitelpunkten und Indizes. In der Bibliothek stehen außerdem Werkzeuge zum Ändern oder Reparieren von Netzen sowie zum Extrahieren horizontaler Segmente zur Verwendung in der Fertigung zur Verfügung.
 
-![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
+\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Das Dynamo Mesh Toolkit ist Bestandteil der von Autodesk durchgeführten laufenden Forschungsarbeiten zu Netzen und wird daher in den kommenden Jahren weiter ausgebaut. Sie können damit rechnen, dass häufig neue Methoden zu diesem Toolkit hinzukommen. Falls Sie Kommentare oder Vorschläge haben oder Fehler melden möchten, ist das Dynamo-Team jederzeit für Sie da.
 
@@ -12,9 +12,9 @@ In der unten folgenden Übung werden einige grundlegende Operationen für Netze 
 
 ### Installieren von Mesh Toolkit
 
-Wählen Sie in Dynamo in der Menüleiste oben _Pakete > Suchen nach Paket_. Geben Sie _MeshToolkit_ in das Suchfeld ein (in einem Wort und unter Berücksichtigung der Groß- und Kleinschreibung). Klicken Sie auf Installieren, um den Download zu starten. Dieser einfache Schritt genügt.
+Wechseln Sie in Dynamo in der oberen Menüleiste zu Pakete > Package Manager... Geben Sie im Suchfeld MeshToolkit ein (in einem Wort geschrieben). Klicken Sie auf Installieren, und akzeptieren Sie die Bestätigungen, um den Download zu starten. Dieser einfache Schritt genügt.
 
-![](../images/6-2/2/meshToolkitcasestudy-installpackage.jpg)
+<figure><img src="../../.gitbook/assets/install-mesh-toolkit.png" alt=""><figcaption></figcaption></figure>
 
 ## Übung: Schneiden von Netzen
 
