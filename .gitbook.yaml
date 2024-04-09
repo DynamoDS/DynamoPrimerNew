@@ -1,4 +1,4 @@
 root: ./
 
 redirects:
-  7-extensions: 8-extensions
+  7-extensions.md: 8-extensions.md
