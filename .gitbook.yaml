@@ -1,0 +1,4 @@
+root: ./
+
+redirects:
+  7-extensions.md: 8-extensions.md
