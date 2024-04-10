@@ -1,6 +1,6 @@
 # Updating your Packages and Dynamo Libraries for Dynamo 3.x and NET8
 
-### Introduction: <a href="#introduction" id="introduction"></a>
+### Introduction <a href="#introduction" id="introduction"></a>
 
 This section contains information on issues you may encounter while migrating your graphs, packages, and libraries to Dynamo 3.x
 
