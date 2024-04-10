@@ -2,7 +2,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype 비디오{% endembed %}
 
-## Dynamo v2.13의 경우
+## Dynamo 2.13 이상 버전용
 
 ![Dynamo 로고](images/dynamo\_logo\_dark-trim.jpg)
 
