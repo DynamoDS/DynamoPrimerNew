@@ -2,7 +2,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Трейлер к Dynamo {% endembed %}
 
-## Для версии Dynamo 2.13
+## Для Dynamo 2.13 и более поздних версий
 
 ![Логотип Dynamo](images/dynamo\_logo\_dark-trim.jpg)
 
