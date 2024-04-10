@@ -2,7 +2,7 @@
 
 ### Introduction <a href="#introduction" id="introduction"></a>
 
-This section contains information on issues you may encounter while migrating your graphs, packages, and libraries to Dynamo 3.x
+This section contains information on issues you may encounter while migrating your graphs, packages, and libraries to Dynamo 3.x.
 
 Dynamo 3.0 is a major release and some APIs have been changed or removed. The biggest change that is likely to affect you as a developer or user of Dynamo 3.x is the move to .NET8.
 
