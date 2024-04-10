@@ -22,6 +22,6 @@ You may also notice this type of warning in your Dynamo log files at package loa
 
 #### Using Dynamo 3.x Packages in Dynamo 2.x 
 
-It's very unlikely that a package built for Dynamo 3.x (*using .Net8*) is going to work on Dynamo 2.x. You will also see a warning when downloading packages built for newer versions of Dynamo while using an older version. This is not a new warning, so you have probably seen it before.
+It's very unlikely that a package built for Dynamo 3.x (*using .Net8*) is going to work on Dynamo 2.x. You will also see a warning when downloading packages built for newer versions of Dynamo while using an older version.
 
 
