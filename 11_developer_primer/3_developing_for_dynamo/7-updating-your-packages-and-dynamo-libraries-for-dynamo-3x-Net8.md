@@ -8,7 +8,7 @@ Dynamo 3.0 is a major release, and some APIs have been changed or removed. The b
 
 Dotnet/.NET is the runtime that powers the C# language that Dynamo is written in. We have updated to a modern version of this runtime along with the rest of the Autodesk ecosystem.
 
-You can read more in our blog post [here](https://dynamobim.org/dynamo-on-net-8/):
+You can read more in [our blog post](https://dynamobim.org/dynamo-on-net-8/).
 ***
 
 ### Package Compatibility: <a href="#package-compatibility" id="package-compatibility"></a>
