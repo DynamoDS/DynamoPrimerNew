@@ -2,7 +2,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Vídeo promocional do Dynamo {% endembed %}
 
-## Para o Dynamo v2.13
+## Para o Dynamo v2.13 e mais recente
 
 ![Logotipo do Dynamo](images/dynamo\_logo\_dark-trim.jpg)
 
