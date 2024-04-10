@@ -2,7 +2,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype Video {% endembed %}
 
-## Pour Dynamo v2.13
+## Pour Dynamo v2.13 et plus récent
 
 ![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
 
