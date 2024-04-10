@@ -14,7 +14,7 @@ You can read more in [our blog post](https://dynamobim.org/dynamo-on-net-8/).
 ### Package Compatibility <a href="#package-compatibility" id="package-compatibility"></a>
 
 #### Using Dynamo 2.x Packages in Dynamo 3.x 
-Because Dynamo 3.x now runs on the .NET8 runtime packages that were built for Dynamo 2.x (*using .NET48*) are not guaranteed to work in Dynamo 3.x. When you attempt to download a package which was published from a Dynamo version less than 3.0 in Dynamo 3.x you will get a warning that the package is from an older version of Dynamo. 
+Because Dynamo 3.x now runs on the .NET8 runtime, packages that were built for Dynamo 2.x (*using .NET48*) are not guaranteed to work in Dynamo 3.x. When you attempt to download a package in Dynamo 3.x that was published from a Dynamo version less than 3.0, you will get a warning that the package is from an older version of Dynamo. 
 
 **This does not mean the package will not work** It's simply a warning that there could be compatibility issues, and in general it's a good idea to check if theres a newer version that has been built specifically for Dynamo 3.x.
 
