@@ -2,7 +2,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %}Dynamo Hype 视频{% endembed %}
 
-## 对于 Dynamo v2.13
+## 适用于 Dynamo v2.13 及更高版本
 
 ![Dynamo 徽标](images/dynamo\_logo\_dark-trim.jpg)
 
