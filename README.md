@@ -2,7 +2,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Propagační videofilm o aplikaci Dynamo {% endembed %}
 
-## Pro aplikaci Dynamo verze 2.13
+## Pro aplikaci Dynamo verze 2.13 a novější
 
 ![Logo aplikace Dynamo](images/dynamo\_logo\_dark-trim.jpg)
 
