@@ -18,7 +18,7 @@ Because Dynamo 3.x now runs on the .NET8 runtime, packages that were built for D
 
 **This does not mean the package will not work** It's simply a warning that there could be compatibility issues, and in general it's a good idea to check if there's a newer version that has been built specifically for Dynamo 3.x.
 
-You may also notice this type of warning in your dynamo log files at package load time. If everything is working correctly you can ignore it.
+You may also notice this type of warning in your Dynamo log files at package load time. If everything is working correctly, you can ignore it.
 
 #### Using Dynamo 3.x Packages in Dynamo 2.x 
 
