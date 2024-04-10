@@ -1,4 +1,0 @@
-root: ./
-
-redirects:
- 1_developer_primer_intro/3_developing_for_dynamo/7-extensions: 11_developer_primer/3_developing_for_dynamo/8-extensions.md
