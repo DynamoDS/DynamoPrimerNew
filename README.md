@@ -2,7 +2,7 @@
 
 {% embed url="https://www.youtube.com/watch?v=9vafneOBgYs" %} Dynamo Hype — nagranie wideo {% endembed %}
 
-## Dla dodatku Dynamo 2.13
+## Dla dodatku Dynamo 2.13 i nowszych wersji
 
 ![Logo dodatku Dynamo](images/dynamo\_logo\_dark-trim.jpg)
 
