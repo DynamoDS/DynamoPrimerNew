@@ -10,7 +10,7 @@ Dynamo のようなオープンソース プロジェクトは、このような
 
 パッケージを最も簡単にインストールするには、Dynamo インタフェースの[パッケージ]メニュー オプションを使用します。では、実際にパッケージをインストールしてみましょう。ここでは、次に示す簡単な例を使用して、グリッド上に四角いパネルを作成するためのパッケージをインストールします。
 
-Dynamo で、_[パッケージ] > [Package Manager...]_に移動します。
+Dynamo で、_[パッケージ] > [Package Manager...]_ に移動します。
 
 <figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
@@ -32,9 +32,9 @@ Dynamo ライブラリに「buildz」という名前の新しいグループが�
 
 上記の例では、1 つのカスタム ノードが含まれているパッケージを使用しましたが、複数のカスタム ノードやサポート データ ファイルが含まれているパッケージをダウンロードする場合も、同じプロセスを実行します。ここでは、より包括的な Dynamo Unfold パッケージを使用して手順を説明します。
 
-上記の例と同様に、_[パッケージ] > [Package Manager...]_を選択します。
+上記の例と同様に、_[パッケージ] > [Package Manager...]_ を選択します。
 
-今回は、_「DynamoUnfold」_という、スペースを入れない 1 つの単語を検索します。パッケージが表示されたら、[インストール]をクリックして Dynamo Unfold をダウンロードし、Dynamo ライブラリに追加します。
+今回は、_「DynamoUnfold」_ という、スペースを入れない 1 つの単語を検索します。パッケージが表示されたら、[インストール]をクリックして Dynamo Unfold をダウンロードし、Dynamo ライブラリに追加します。
 
 <figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
