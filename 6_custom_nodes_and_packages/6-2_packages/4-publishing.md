@@ -51,7 +51,7 @@ Ici, vous avez la possibilité de voir comment Dynamo organisera vos fichiers de
 
 <figure><img src="../../.gitbook/assets/publish-locally.png" alt=""><figcaption></figcaption></figure>
 
-Publiez en cliquant sur « Publier localement » (1). Si vous suivez, veillez à cliquer sur _« Publier localement »_ et **non** _« Publier en ligne » pour éviter _d’avoir un groupe de packages en double dans le gestionnaire de package.
+Publiez en cliquant sur « Publier localement » (1). Si vous suivez, veillez à cliquer sur _« Publier localement »_ et **non** _« Publier en ligne » pour éviter_ d’avoir un groupe de packages en double dans le gestionnaire de package.
 
 Une fois la publication terminée, les nœuds personnalisés doivent être disponibles sous le groupe « DynamoPrimer » ou votre bibliothèque Dynamo.
 
