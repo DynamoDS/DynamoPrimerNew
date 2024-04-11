@@ -10,7 +10,7 @@ Dynamo와 같은 오픈 소스 프로젝트에서는 이러한 유형의 커뮤�
 
 패키지를 설치하는 가장 쉬운 방법은 Dynamo 인터페이스에서 패키지 메뉴 옵션을 사용하는 것입니다. 이 기능으로 이동한 후 바로 패키지를 설치하겠습니다. 이 빠른 예에서는 그리드에서 쿼드 패널을 작성할 때 자주 사용하는 패키지를 설치합니다.
 
-Dynamo에서 _패키지 > Package Manager..._로 이동합니다.
+Dynamo에서 _패키지 > Package Manager..._ 로 이동합니다.
 
 <figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
@@ -32,9 +32,9 @@ Dynamo에서 _패키지 > Package Manager..._로 이동합니다.
 
 위의 예에서는 하나의 사용자 노드가 있는 패키지에 초점을 맞추고 있지만, 여러 개의 사용자 노드 및 지원 데이터 파일이 있는 패키지를 다운로드할 때도 동일한 프로세스를 사용합니다. 이제 보다 포괄적인 패키지인 Dynamo Unfold를 사용하면서 살펴보겠습니다.
 
-위의 예에서와 같이 먼저 _패키지 > Package Manager.._를 선택합니다.
+위의 예에서와 같이 먼저 _패키지 > Package Manager.._ 를 선택합니다.
 
-이번에는 한 단어 _"DynamoUnfold"_를 검색해 보겠습니다. 패키지가 표시되면 설치를 클릭하여 Dynamo Unfold를 Dynamo 라이브러리에 추가하여 다운로드합니다.
+이번에는 한 단어 _"DynamoUnfold"_ 를 검색해 보겠습니다. 패키지가 표시되면 설치를 클릭하여 Dynamo Unfold를 Dynamo 라이브러리에 추가하여 다운로드합니다.
 
 <figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
