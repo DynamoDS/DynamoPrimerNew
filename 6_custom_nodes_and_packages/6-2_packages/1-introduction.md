@@ -10,7 +10,7 @@ Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫�
 
 最簡易的套件安裝方式是使用 Dynamo 介面中的「套件」功能表選項。現在，讓我們直接開始安裝套件。在此簡單範例中，我們將安裝某個常見套件，在格線上建立四邊形板。
 
-在 Dynamo 中，前往_「套件」>「Package Manager...」_
+在 Dynamo 中，前往 _「套件」>「Package Manager...」_
 
 <figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
@@ -34,7 +34,7 @@ Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫�
 
 如同上述範例，首先請選取 _「套件」>「Package Manager...」_。
 
-這次我們要搜尋_「DynamoUnfold」_，這是一個字，沒有空格。當我們看到套件時，按一下「安裝」下載，將 DynamoUnfold 加入您的 Dynamo 資源庫。
+這次我們要搜尋 _「DynamoUnfold」_，這是一個字，沒有空格。當我們看到套件時，按一下「安裝」下載，將 DynamoUnfold 加入您的 Dynamo 資源庫。
 
 <figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
