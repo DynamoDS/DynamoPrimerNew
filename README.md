@@ -53,7 +53,7 @@ A **Matterlab** foi contratada para atualizar o manual para refletir as revisõe
 
 ***
 
-A **Matterlab** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.17.
+A **Archilizer** foi contratada para atualizar o manual para refletir as revisões do Dynamo 2.17.
 
 <figure><img src=".gitbook/assets/Archilizer_2020.png" alt="" width="100"><figcaption></figcaption></figure>
 
