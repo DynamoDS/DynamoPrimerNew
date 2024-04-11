@@ -10,7 +10,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 安装软件包的最简单方法是使用 Dynamo 界面中的“软件包”菜单选项。现在，让我们直接跳转到该菜单选项并安装软件包。在本快速示例中，我们将安装一个常用软件包，用于在栅格上创建四边形嵌板。
 
-在 Dynamo 中，转到_“软件包”>“软件包管理器...”_。
+在 Dynamo 中，转到 _“软件包”>“软件包管理器...”_。
 
 <figure><img src="../../.gitbook/assets/package-manager-menu.png" alt=""><figcaption></figcaption></figure>
 
@@ -32,9 +32,9 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 上述示例重点介绍内含一个自定义节点的软件包，但相同过程可用于下载内含多个自定义节点的软件包以及支持数据文件。现在，我们通过一个更全面的软件包来进行演示：Dynamo Unfold。
 
-如上例中所示，首先选择_“软件包”>“软件包管理器...”_。
+如上例中所示，首先选择 _“软件包”>“软件包管理器...”_。
 
-这次，我们将搜索_“DynamoUnfold”_一词。当我们看到该软件包时，请通过单击“安装”下载，以将“Dynamo Unfold”添加到 Dynamo 库中。
+这次，我们将搜索 _“DynamoUnfold”_ 一词。当我们看到该软件包时，请通过单击“安装”下载，以将“Dynamo Unfold”添加到 Dynamo 库中。
 
 <figure><img src="../../.gitbook/assets/unfold.png" alt=""><figcaption></figcaption></figure>
 
