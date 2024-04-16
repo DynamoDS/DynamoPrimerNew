@@ -21,7 +21,7 @@ Os autores da extensão também podem ter algumas alterações potenciais a sere
 
 ### Problemas comuns: <a href="#common-issues" id="common-issues"></a>
 
-1) Durante a abertura de um gráfico, alguns nós têm várias portas com o mesmo nome, mas o gráfico parecia correto ao salvar. Esse problema pode ter algumas causas.
+1\) Durante a abertura de um gráfico, alguns nós têm várias portas com o mesmo nome, mas o gráfico parecia correto ao salvar. Esse problema pode ter algumas causas.
 
 A causa raiz comum é porque o nó foi criado usando um construtor que recriou as portas. Em vez disso, o construtor que carregou as portas deveria ter sido usado. Esses construtores são geralmente marcados `[JsonConstructor]`_veja exemplos abaixo_
 
@@ -33,7 +33,7 @@ Isso pode ocorrer porque:
 * Havia duas versões do JSON.net carregadas no mesmo processo ao mesmo tempo, causando falha de tempo de execução .net, de modo que o atributo `[JsonConstructor]` não podia ser usado corretamente para marcar o construtor.
 * O DynamoServices.dll com uma versão diferente da versão atual do Dynamo foi fornecido com o pacote e está causando a falha do tempo de execução .net ao identificar o atributo `[MultiReturn]`; portanto, os nós Sem toque marcados com vários atributos não terão sido aplicados. Você pode descobrir que um nó retorna uma única saída de dicionário em vez de várias portas.
 
-2) Os nós estão completamente ausentes ao carregar o gráfico com alguns erros no console.
+2\) Os nós estão completamente ausentes ao carregar o gráfico com alguns erros no console.
 
 * Isso pode ocorrer se a desserialização falhar por algum motivo. É uma boa prática serializar somente as propriedades que você precisa. Podemos usar `[JsonIgnore]` em propriedades complexas que não precisam ser carregadas ou salvas para serem ignoradas. Propriedades como `function pointer, delegate, action,` ou `event` etc. Elas não devem ser serializadas, pois normalmente falharão ao desserializar e causarão um erro de tempo de execução.
 
