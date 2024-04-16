@@ -21,7 +21,7 @@ Anche gli autori di estensioni potrebbero dover apportare alcune modifiche, a se
 
 ### Problemi comuni: <a href="#common-issues" id="common-issues"></a>
 
-1) All'apertura di un grafico, alcuni nodi presentano più porte con lo stesso nome, ma il grafico risultava corretto al momento del salvataggio. Questo problema può avere varie cause.
+1\) All'apertura di un grafico, alcuni nodi presentano più porte con lo stesso nome, ma il grafico risultava corretto al momento del salvataggio. Questo problema può avere varie cause.
 
 La causa principale comune è che il nodo è stato creato utilizzando un costruttore che ha ricreato le porte. Invece, avrebbe dovuto essere utilizzato un costruttore che ha caricato le porte. Questi costruttori sono generalmente contrassegnati `[JsonConstructor]`. _Per alcuni esempi, vedere di seguito._
 
@@ -33,7 +33,7 @@ Ciò può verificarsi perché:
 * Sono state caricate due versioni di JSON.net nello stesso processo contemporaneamente, causando un errore di runtime del file.net, pertanto l'attributo `[JsonConstructor]` non può essere utilizzato correttamente per contrassegnare il costruttore.
 * Il file DynamoServices.dll con una versione diversa da quella corrente di Dynamo è stato aggregato con il pacchetto e causa la mancata identificazione dell'attributo `[MultiReturn]` in fase di runtime del file .net, pertanto i nodi zero-touch contrassegnati con vari attributi non verranno applicati. Potrebbe verificarsi che un nodo restituisca un singolo output del dizionario anziché più porte.
 
-2) I nodi risultano completamente mancanti durante il caricamento del grafico con alcuni errori nella console.
+2\) I nodi risultano completamente mancanti durante il caricamento del grafico con alcuni errori nella console.
 
 * Ciò potrebbe succedere se la deserializzazione non è riuscita per qualche motivo. È consigliabile serializzare solo le proprietà necessarie. È possibile utilizzare `[JsonIgnore]` in proprietà complesse che non è necessario caricare o salvare per ignorarle. Proprietà come `function pointer, delegate, action,` o `event` e così via non dovrebbero essere serializzate, perché di solito non vengono deserializzate e causano un errore di runtime.
 
