@@ -21,7 +21,7 @@ Autoři rozšíření mohou také provést některé potenciální změny – v�
 
 ### Běžné problémy: <a href="#common-issues" id="common-issues"></a>
 
-1) Po otevření grafu mají některé uzly více portů se stejným názvem, ale při uložení vypadal graf v pořádku. Tento problém může mít několik příčin.
+1\) Po otevření grafu mají některé uzly více portů se stejným názvem, ale při uložení vypadal graf v pořádku. Tento problém může mít několik příčin.
 
 Obvyklou hlavní příčinou je, že uzel byl vytvořen pomocí konstruktoru, který znovu vytvořil porty. Místo toho měl být použit konstruktor, který porty načte. Tyto konstruktory jsou obvykle označeny `[JsonConstructor]` _viz příklady níže_.
 
@@ -33,7 +33,7 @@ K tomu může dojít z následujících důvodů:
 * Do stejného procesu byly načteny dvě verze rozhraní JSON.net současně, což způsobilo chybu modulu runtime rozhraní .net, takže atribut `[JsonConstructor]` nebylo možné správně použít k označení konstruktoru.
 * K balíčku byl přibalen soubor DynamoServices.dll s jinou verzí, než je aktuální verze aplikace Dynamo, což způsobuje, že modul runtime rozhraní .net nedokáže identifikovat atribut `[MultiReturn]`, takže u uzlů Zero Touch označených různými atributy nebudou tyto atributy použity. Může se stát, že uzel vrací jeden výstup slovníku místo více portů.
 
-2) Při načítání grafu zcela chybí uzly a v konzoli se zobrazují chyby.
+2\) Při načítání grafu zcela chybí uzly a v konzoli se zobrazují chyby.
 
 * K tomu může dojít, pokud se z nějakého důvodu nezdařila deserializace. Je vhodné serializovat pouze vlastnosti, které potřebujete. Chcete-li ignorovat složité vlastnosti, které není nutné načíst nebo uložit, můžete použít `[JsonIgnore]`. Jedná se o vlastnosti jako `function pointer, delegate, action,` nebo `event` atd. Tyto vlastnosti by neměly být serializovány, protože se je obvykle nepodaří deserializovat a způsobí chybu za běhu.
 
