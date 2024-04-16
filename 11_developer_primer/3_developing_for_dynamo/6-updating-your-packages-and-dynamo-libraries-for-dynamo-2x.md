@@ -21,7 +21,7 @@ Les auteurs d’extensions peuvent également avoir des changements potentiels �
 
 ### Problèmes courants : <a href="#common-issues" id="common-issues"></a>
 
-1) Lors de l’ouverture d’un graphique, certains nœuds ont plusieurs ports portant le même nom, mais le graphique semble correct lors de l’enregistrement. Ce problème peut avoir plusieurs causes.
+1\) Lors de l’ouverture d’un graphique, certains nœuds ont plusieurs ports portant le même nom, mais le graphique semble correct lors de l’enregistrement. Ce problème peut avoir plusieurs causes.
 
 La cause principale est que le nœud a été créé à l’aide d’un constructeur qui a recréé les ports. Au lieu de cela, il aurait fallu utiliser un constructeur capable de charger les ports. Ces constructeurs sont généralement marqués `[JsonConstructor]`. _Voir les exemples ci-dessous_
 
@@ -33,7 +33,7 @@ Cela peut se produire pour les raisons suivantes :
 * deux versions de JSON.net ont été chargées simultanément dans le même processus, ce qui a entraîné une erreur au niveau de l’exécution .net, de sorte que l’attribut `[JsonConstructor]` n’a pas pu être utilisé correctement pour marquer le constructeur ;
 * une version de DynamoServices.dll différente de la version actuelle de Dynamo a été incluse dans le package et provoque l’échec de l’exécution .net à identifier l’attribut `[MultiReturn]`, de sorte que les nœuds Zero-Touch marqués avec divers attributs ne pourront pas être appliqués. Il se peut qu’un nœud renvoie une seule sortie de dictionnaire au lieu de plusieurs ports.
 
-2) Des nœuds sont complètement absents lors du chargement du graphique avec des erreurs dans la console.
+2\) Des nœuds sont complètement absents lors du chargement du graphique avec des erreurs dans la console.
 
 * Cela peut se produire si votre désérialisation a échoué pour une raison quelconque. Il est recommandé de ne sérialiser que les propriétés dont vous avez besoin. Nous pouvons utiliser `[JsonIgnore]` sur les propriétés complexes que vous n’avez pas besoin de charger ou d’enregistrer pour les ignorer. Il s’agit de propriétés telles que `function pointer, delegate, action,` ou `event` etc. Elles ne doivent pas être sérialisées car elles échoueront généralement à la désérialisation et provoqueront une erreur d’exécution.
 
