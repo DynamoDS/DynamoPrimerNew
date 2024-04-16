@@ -21,7 +21,7 @@ Es posible que los autores de extensiones también deban realizar algunos cambio
 
 ### Problemas frecuentes <a href="#common-issues" id="common-issues"></a>
 
-1) Al abrir un gráfico, algunos nodos tienen varios puertos con el mismo nombre, pero el gráfico presenta un aspecto correcto al guardar. Este problema puede tener varias causas.
+1\) Al abrir un gráfico, algunos nodos tienen varios puertos con el mismo nombre, pero el gráfico presenta un aspecto correcto al guardar. Este problema puede tener varias causas.
 
 La principal causa habitual es que el nodo se ha creado con un constructor que ha vuelto a crear los puertos. En su lugar, debería haberse utilizado un constructor que cargara los puertos. Estos constructores suelen estar marcados con `[JsonConstructor]`. _Consulte los ejemplos siguientes:_
 
@@ -33,7 +33,7 @@ Esto puede deberse a lo siguiente:
 * Había dos versiones de JSON.net cargadas en el mismo proceso al mismo tiempo, lo que provocaba fallos en el tiempo de ejecución de .net, por lo que el atributo `[JsonConstructor]` no podía utilizarse correctamente para marcar el constructor.
 * DynamoServices.dll con una versión diferente a la versión actual de Dynamo se ha incluido con el paquete, lo que provoca que el tiempo de ejecución de .net no identifique el atributo `[MultiReturn]`, por lo que los nodos Zero-Touch marcados con varios atributos no podrán aplicarlos. Es posible que un nodo devuelva una única salida de diccionario en lugar de varios puertos.
 
-2) Faltan completamente nodos al cargar el gráfico con algunos errores en la consola.
+2\) Faltan completamente nodos al cargar el gráfico con algunos errores en la consola.
 
 * Esto puede producirse si la deserialización falla por algún motivo. Es recomendable serializar solo las propiedades necesarias. Podemos utilizar `[JsonIgnore]` en propiedades complejas que no sea necesario cargar o guardar para omitirlas como, por ejemplo, `function pointer, delegate, action,` o `event`, etc. No deben serializarse, ya que normalmente fallarán durante la deserialización y provocarán un error de ejecución.
 
