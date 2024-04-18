@@ -2,7 +2,7 @@
 
 In den vorigen Abschnitten wurde gezeigt, wie das _MapToSurface_-Paket sich aus benutzerdefinierten Blöcken und Beispieldateien zusammensetzt. Aber wie veröffentlichen Sie ein Paket, das lokal entwickelt wurde? Diese Fallstudie zeigt, wie Sie ein Paket aus einer Gruppe von Dateien in einem lokalen Ordner publizieren können.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Es gibt mehrere Möglichkeiten zum Publizieren von Paketen. Im Folgenden wird der von uns empfohlene Prozess beschrieben: **Sie publizieren lokal, entwickeln lokal und publizieren schließlich online**. Sie beginnen mit einem Ordner, der sämtliche Dateien im Paket enthält.
 
@@ -55,7 +55,7 @@ Publizieren Sie das Paket, indem Sie auf Lokal publizieren (1) klicken. Achten S
 
 Nach dem Publizieren werden die benutzerdefinierten Blöcke in der Gruppe DynamoPrimer oder in Ihrer Dynamo-Bibliothek angezeigt.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Sehen wir jetzt im Stammverzeichnis nach, wie Dynamo das eben erstellte Paket formatiert hat. Navigieren Sie dazu zur Registerkarte Installierte Pakete, klicken Sie neben MapToSurface auf das Menü mit den drei Punkten, und wählen Sie Stammverzeichnis anzeigen aus.
 
