@@ -115,6 +115,7 @@
     * [Conceptos avanzados de Zero-Touch](11\_developer\_primer/3\_developing\_for\_dynamo/4-going-further-with-zero-touch.md)
     * [Caso real de NodeModel (interfaz de usuario personalizada)](11\_developer\_primer/3\_developing\_for\_dynamo/5-nodemodel-case-study-custom-ui.md)
     * [Actualización de paquetes y bibliotecas de Dynamo para Dynamo 2.x](11\_developer\_primer/3\_developing\_for\_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+    * [Actualización de paquetes y bibliotecas de Dynamo para Dynamo 3.x](11\_developer\_primer/3\_developing\_for\_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
     * [Extensiones](11\_developer\_primer/3\_developing\_for\_dynamo/7-extensions.md)
   * [Publicar un paquete](11\_developer\_primer/4\_publish\_a\_package/README.md)
     * [Compilar un paquete desde Visual Studio](11\_developer\_primer/4\_publish\_a\_package/1-build-a-package-from-visual-studio.md)
