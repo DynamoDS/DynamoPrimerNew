@@ -1,4 +1,4 @@
-# Publikowanie w bibliotece użytkownika
+# Publikowanie w bibliotece użytkownika 
 
 Właśnie utworzyliśmy węzeł niestandardowy i zastosowaliśmy go do określonego procesu na wykresie Dynamo. Ten węzeł podoba nam się tak bardzo, że chcemy pozostawić go w naszej bibliotece dodatku Dynamo, aby odwoływać się do niego na innych wykresach. Aby to zrobić, opublikujemy ten węzeł lokalnie. Jest to proces podobny do publikowania pakietu, który bardziej szczegółowo omówimy w następnym rozdziale.
 
