@@ -115,6 +115,7 @@
     * [Další práce s funkcí Zero-Touch](11\_developer\_primer/3\_developing\_for\_dynamo/4-going-further-with-zero-touch.md)
     * [Případová studie uzlu NodeModel – vlastní uživatelské rozhraní](11\_developer\_primer/3\_developing\_for\_dynamo/5-nodemodel-case-study-custom-ui.md)
     * [Aktualizace balíčků a knihoven aplikace Dynamo pro aplikaci Dynamo 2.x](11\_developer\_primer/3\_developing\_for\_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+    * [Aktualizace balíčků a knihoven aplikace Dynamo pro aplikaci Dynamo 3.x](11\_developer\_primer/3\_developing\_for\_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
     * [Rozšíření](11\_developer\_primer/3\_developing\_for\_dynamo/7-extensions.md)
   * [Publikování balíčku](11\_developer\_primer/4\_publish\_a\_package/README.md)
     * [Vytvoření balíčku z aplikace Visual Studio](11\_developer\_primer/4\_publish\_a\_package/1-build-a-package-from-visual-studio.md)
