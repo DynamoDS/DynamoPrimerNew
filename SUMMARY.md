@@ -115,6 +115,7 @@
     * [Zero-Touch로 한 단계 더 나아가기](11\_developer\_primer/3\_developing\_for\_dynamo/4-going-further-with-zero-touch.md)
     * [NodeModel 사례 연구 - 사용자 지정 UI](11\_developer\_primer/3\_developing\_for\_dynamo/5-nodemodel-case-study-custom-ui.md)
     * [Dynamo 2.x용 패키지 및 Dynamo 라이브러리 업데이트하기](11\_developer\_primer/3\_developing\_for\_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+    * [Dynamo 3.x용 패키지 및 Dynamo 라이브러리 업데이트하기](11\_developer\_primer/3\_developing\_for\_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
     * [확장](11\_developer\_primer/3\_developing\_for\_dynamo/7-extensions.md)
   * [패키지 게시하기](11\_developer\_primer/4\_publish\_a\_package/README.md)
     * [Visual Studio에서 패키지 빌드하기](11\_developer\_primer/4\_publish\_a\_package/1-build-a-package-from-visual-studio.md)
