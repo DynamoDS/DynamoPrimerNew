@@ -16,7 +16,7 @@ Pour en savoir plus, consultez [notre billet de blog](https://dynamobim.org/dyna
 #### Utilisation des modules Dynamo 2.x dans Dynamo 3.x 
 Comme Dynamo 3.x s'exécute désormais sur le runtime .NET8, les modules qui ont été créés pour Dynamo 2.x (*à l'aide de .NET48*) sont susceptibles de ne pas fonctionner dans Dynamo 3.x. Lorsque vous tentez de télécharger un module dans Dynamo 3.x qui a été publié à partir d'une version de Dynamo antérieure à la version 3.0, vous recevez un avertissement vous indiquant que le module provient d'une version antérieure de Dynamo. 
 
-**Cela ne signifie pas que le module ne fonctionnera pas.**Il s'agit simplement d'un avertissement indiquant que des problèmes de compatibilité peuvent survenir. En général, il est conseillé de vérifier si une version plus récente a été spécialement conçue pour Dynamo 3.x.
+**Cela ne signifie pas que le module ne fonctionnera pas.** Il s'agit simplement d'un avertissement indiquant que des problèmes de compatibilité peuvent survenir. En général, il est conseillé de vérifier si une version plus récente a été spécialement conçue pour Dynamo 3.x.
 
 Vous pouvez également remarquer ce type d'avertissement dans vos fichiers journaux Dynamo au moment du chargement du module. Si tout fonctionne correctement, vous pouvez l'ignorer.
 
