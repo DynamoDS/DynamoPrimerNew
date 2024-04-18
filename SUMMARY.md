@@ -115,6 +115,7 @@
     * [Дальнейшая работа с Zero-Touch](11\_developer\_primer/3\_developing\_for\_dynamo/4-going-further-with-zero-touch.md)
     * [Пример использования NodeModel — настраиваемый пользовательский интерфейс](11\_developer\_primer/3\_developing\_for\_dynamo/5-nodemodel-case-study-custom-ui.md)
     * [Обновление пакетов и библиотек Dynamo для Dynamo 2.x](11\_developer\_primer/3\_developing\_for\_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+    * [Обновление пакетов и библиотек Dynamo для Dynamo 3.x](11\_developer\_primer/3\_developing\_for\_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
     * [Расширения](11\_developer\_primer/3\_developing\_for\_dynamo/7-extensions.md)
   * [Публикация пакета](11\_developer\_primer/4\_publish\_a\_package/README.md)
     * [Создание пакета из Visual Studio](11\_developer\_primer/4\_publish\_a\_package/1-build-a-package-from-visual-studio.md)
