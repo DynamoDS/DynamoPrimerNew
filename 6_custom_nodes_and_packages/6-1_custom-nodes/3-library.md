@@ -1,4 +1,4 @@
-# Publication dans votre bibliothèque
+# Publication dans votre bibliothèque 
 
 Vous venez de créer un nœud personnalisé et de l'appliquer à un processus spécifique dans le graphique Dynamo. Vous souhaitez en outre conserver ce nœud dans la bibliothèque Dynamo pour établir des références à d'autres graphiques. Pour ce faire, vous allez publier le nœud localement. Cette procédure est semblable à celle utilisée pour publier un package, que vous verrez plus en détail dans le chapitre suivant.
 
