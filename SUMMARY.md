@@ -115,6 +115,7 @@
     * [Zero-Touch の詳細を確認する](11\_developer\_primer/3\_developing\_for\_dynamo/4-going-further-with-zero-touch.md)
     * [NodeModel ケース スタディ - カスタム UI](11\_developer\_primer/3\_developing\_for\_dynamo/5-nodemodel-case-study-custom-ui.md)
     * [Dynamo 2.x 用のパッケージと Dynamo ライブラリを更新する](11\_developer\_primer/3\_developing\_for\_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
+    * [Dynamo 3.x 用のパッケージと Dynamo ライブラリを更新する](11\_developer\_primer/3\_developing\_for\_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
     * [拡張機能](11\_developer\_primer/3\_developing\_for\_dynamo/7-extensions.md)
   * [パッケージをパブリッシュする](11\_developer\_primer/4\_publish\_a\_package/README.md)
     * [Visual Studio からパッケージをビルドする](11\_developer\_primer/4\_publish\_a\_package/1-build-a-package-from-visual-studio.md)
