@@ -20,7 +20,7 @@ Dynamo에서 패키지 > Package Manager를 클릭하고 "MapToSurface"(1개의 
 
 설치 후에 사용자 노드를 애드온 > DynamoPrimer 섹션에서 사용할 수 있습니다.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 이제 패키지가 설치되었으므로 설정 방법을 살펴보겠습니다.
 
@@ -30,7 +30,7 @@ Dynamo에서 패키지 > Package Manager를 클릭하고 "MapToSurface"(1개의 
 
 이는 5개의 사용자 노드로 구성된 간단한 패키지입니다. 아래 단계에서는 각 사용자 노드의 설정에 대해 간략하게 설명하겠습니다.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
