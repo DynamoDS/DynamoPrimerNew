@@ -127,4 +127,5 @@
   * [Resources](a\_appendix/a-2\_resources.md)
   * [Useful Packages](a\_appendix/a-3\_packages.md)
   * [Example Files](a\_appendix/a-4\_example-files.md)
+  * [Host Integration Map](a\_appendix/host-integration-map.md)
   * [Download PDF](a\_appendix/a-5\_download-pdf.md)
