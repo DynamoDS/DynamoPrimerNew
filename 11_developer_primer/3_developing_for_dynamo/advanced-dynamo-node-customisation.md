@@ -184,3 +184,177 @@ In this example:
 * **Message**: `"Only CSV files are supported."`
 
 This warns users to ensure they are passing a CSV file, helping prevent issues related to incompatible file formats.
+
+## Adding Informational Messages with `OnLogInfoMessage` <a href="#adding-informational-messages-with-onloginfomessage" id="adding-informational-messages-with-onloginfomessage"></a>
+
+In Dynamo, `OnLogInfoMessage` from the `DynamoServices` namespace lets developers log informational messages directly to Dynamo's console. This is helpful for confirming successful operations, communicating progress, or providing additional insights about node actions. This guide will teach you how to add `OnLogInfoMessage` in any Zero Touch node to enhance feedback and improve user experience.
+
+### Implementation Steps for `OnLogInfoMessage` <a href="#implementation-steps-for-onloginfomessage" id="implementation-steps-for-onloginfomessage"></a>
+#### Step 1: Import the Required Namespace <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
+
+`OnLogWarningMessage` is part of the `DynamoServices` namespace, so begin by adding this to your project file.
+
+#### Step 2: Identify When to Log Information <a href="#step-2-identify-when-to-log-information" id="step-2-identify-when-to-log-information"></a>
+
+Before adding an info message, think about the purpose of your method:
+
+* What information would be useful to confirm after an action is completed?
+* Are there key steps or milestones within the method that users might want to know about?
+
+Examples of useful confirmations:
+
+* **Completion messages** (e.g., when a grid or model is fully created).
+* **Details of processed data** (e.g., “10 items processed successfully”).
+* **Execution summaries** (e.g., parameters used in the process).
+
+#### Step 3: Use `OnLogInfoMessage` to Log Informational Messages <a href="#step-3-use-onloginfomessage-to-log-informational-message" id="step-3-use-onloginfomessage-to-log-informational-message"></a>
+
+Place `OnLogInfoMessage` calls at meaningful points in your method. When a key step or completion occurs, log an informational message to update the user on what happened.
+
+### Syntax for `OnLogInfoMessage` <a href="#syntax-for-onloginfomessage" id="syntax-for-onloginfomessage"></a>
+
+```
+LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
+```
+
+### Example Implementations of `OnLogInfoMessage` <a href="#example-implementations-of-onloginfomessage" id="example-implementations-of-onloginfomessage"></a>
+
+Here are different scenarios to demonstrate using `OnLogInfoMessage` in your Zero Touch nodes.
+
+#### Example 1: Validating Numeric Inputs <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
+
+In this example, we’ll build upon the custom node created in the previous “**Zero-Touch Case Study - Grid Node”;** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogInfoMessage` to provide info after the node has completed its run.
+
+![OnLogInfoMessage Example 1](images/onloginfomessage-example-1.png)
+
+###### Using `OnLogInfoMessage` for Input Validation <a href="#using-onloginfomessage-for-unput-validation" id="using-onloginfomessage-for-unput-validation"></a>
+
+When generating a grid based on `xCount` and `yCount`. After generating the grid, you want to confirm its creation by logging an informational message with the grid’s dimensions.
+
+```
+public static List<Rectangle> CreateGrid(int xCount, int yCount)
+{
+    // Check if xCount and yCount are positive
+    if (xCount <= 0 || yCount <= 0)
+    {
+        LogWarningMessageEvents.OnLogWarningMessage("Grid count values must be positive integers.");
+        return new List<Rectangle>();  // Return an empty list if inputs are invalid
+    }
+    // Proceed with grid creation...
+}
+```
+
+In this example:
+
+* **Condition**: The grid creation process has completed.
+* **Message**: `"Successfully created a grid with dimensions {xCount}x{yCount}."`
+
+This message will inform users that the grid was created as specified, helping them confirm that the node worked as expected.
+
+Now we know what this looks like, we can implement it into the Grids example node:
+
+```
+using Autodesk.DesignScript.Geometry;
+using DynamoServices;
+
+namespace CustomNodes
+{
+    public class Grids
+    {
+        // The empty private constructor.
+        // This will not be imported into Dynamo.
+        private Grids() { }
+
+        /// <summary>
+        /// This method creates a rectangular grid from an X and Y count.
+        /// </summary>
+        /// <param name="xCount">Number of grid cells in the X direction</param>
+        /// <param name="yCount">Number of grid cells in the Y direction</param>
+        /// <returns>A list of rectangles</returns>
+        /// <search>grid, rectangle</search>
+        public static List<Rectangle> RectangularGrid(int xCount = 10, int yCount = 10)
+        {
+            double x = 0;
+            double y = 0;
+
+            var pList = new List<Rectangle>();
+
+            for (int i = 0; i < xCount; i++)
+            {
+                y++;
+                x = 0;
+                for (int j = 0; j < yCount; j++)
+                {
+                    x++;
+                    Point pt = Point.ByCoordinates(x, y);
+                    Vector vec = Vector.ZAxis();
+                    Plane bP = Plane.ByOriginNormal(pt, vec);
+                    Rectangle rect = Rectangle.ByWidthLength(bP, 1, 1);
+                    pList.Add(rect);
+                    Point cPt = rect.Center();
+                }
+            }
+
+            // Log an info message indicating the grid was successfully created
+            LogWarningMessageEvents.OnLogInfoMessage($"Successfully created a grid with dimensions {xCount}x{yCount}.");
+
+            return pList;
+        }
+    }
+}
+```
+
+#### Example 2: Providing Data Count Information <a href="#example-2-providing-data-count-information" id="example-2-providing-data-count-information"></a>
+
+If you’re creating a node that processes a list of points, you might want to log how many points were processed successfully. This can be useful for large datasets.
+
+![OnLogInfoMessage Example 2](images/onloginfomessage-example-2.png)
+
+```
+public static List<Point> ProcessPoints(List<Point> points)
+{
+    var processedPoints = new List<Point>();
+    foreach (var point in points)
+    {
+        // Process each point...
+        processedPoints.Add(point);
+    }
+
+    // Log info about the count of processed points
+    LogWarningMessageEvents.OnLogInfoMessage($"{processedPoints.Count} points were processed successfully.");
+
+    return processedPoints;
+}
+```
+
+In this example:
+
+* **Condition**: After the loop completes, showing the count of processed items.
+* **Message**: `"6 points were processed successfully."`
+
+This message will help users understand the result of the processing and confirm that all points were processed.
+
+
+#### Example 3: Summarizing Parameters Used <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
+
+In some cases, it’s useful to confirm the input parameters a node used to complete an action. For example, if your node exports data to a file, logging the file name and path can reassure users that the correct file was used.
+
+![OnLogInfoMessage Example 3](images/onloginfomessage-example-3.png)
+
+```
+public static void ExportData(string filePath, List<string> data)
+{
+    // Code to write data to the specified file path...
+
+    // Log the file path used for export
+    LogWarningMessageEvents.OnLogInfoMessage($"Data exported successfully to {filePath}.");
+
+}
+```
+
+In this example:
+
+* **Condition**: The export process completes successfully.
+* **Message**: `"Data exported successfully to {filePath}."`
+
+This message confirms to users that the export worked and shows the exact file path, helping avoid confusion over file locations.
