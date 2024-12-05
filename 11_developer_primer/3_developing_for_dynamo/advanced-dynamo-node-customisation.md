@@ -47,7 +47,7 @@ To demonstrate `OnLogWarningMessage` in action, here are different scenarios you
 
 #### Example 1: Validating Numeric Inputs <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-In this example, we’ll build upon the custom node created in the previous “**Zero-Touch Case Study - Grid Node”;** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogWarningMessage` to log a warning and stop processing.
+In this example, we'll build upon the custom node created in the previous "**Zero-Touch Case Study - Grid Node";** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogWarningMessage` to log a warning and stop processing.
 
 ![OnLogWarningMessage Example 1](images/onlogwarningmessage-example-1.png)
 
