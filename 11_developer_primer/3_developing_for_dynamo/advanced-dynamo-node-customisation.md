@@ -180,7 +180,7 @@ public static void ProcessFile(string filePath)
 
 In this example:
 
-* **Condition**: If the file path doesn’t end with “.csv”.
+* **Condition**: If the file path doesnÂ’t end with Â“.csvÂ”.
 * **Message**: `"Only CSV files are supported."`
 
 This warns users to ensure they are passing a CSV file, helping prevent issues related to incompatible file formats.
@@ -204,7 +204,7 @@ Before adding an info message, think about the purpose of your method:
 Examples of useful confirmations:
 
 * **Completion messages** (e.g., when a grid or model is fully created).
-* **Details of processed data** (e.g., “10 items processed successfully”).
+* **Details of processed data** (e.g., Â“10 items processed successfullyÂ”).
 * **Execution summaries** (e.g., parameters used in the process).
 
 #### Step 3: Use `OnLogInfoMessage` to Log Informational Messages <a href="#step-3-use-onloginfomessage-to-log-informational-message" id="step-3-use-onloginfomessage-to-log-informational-message"></a>
@@ -223,13 +223,13 @@ Here are different scenarios to demonstrate using `OnLogInfoMessage` in your Zer
 
 #### Example 1: Validating Numeric Inputs <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-In this example, we’ll build upon the custom node created in the previous “**Zero-Touch Case Study - Grid Node”;** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogInfoMessage` to provide info after the node has completed its run.
+In this example, weÂ’ll build upon the custom node created in the previous Â“**Zero-Touch Case Study - Grid NodeÂ”;** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogInfoMessage` to provide info after the node has completed its run.
 
 ![OnLogInfoMessage Example 1](images/onloginfomessage-example-1.png)
 
 ###### Using `OnLogInfoMessage` for Input Validation <a href="#using-onloginfomessage-for-unput-validation" id="using-onloginfomessage-for-unput-validation"></a>
 
-When generating a grid based on `xCount` and `yCount`. After generating the grid, you want to confirm its creation by logging an informational message with the grid’s dimensions.
+When generating a grid based on `xCount` and `yCount`. After generating the grid, you want to confirm its creation by logging an informational message with the gridÂ’s dimensions.
 
 ```
 public static List<Rectangle> CreateGrid(int xCount, int yCount)
@@ -306,7 +306,7 @@ namespace CustomNodes
 
 #### Example 2: Providing Data Count Information <a href="#example-2-providing-data-count-information" id="example-2-providing-data-count-information"></a>
 
-If you’re creating a node that processes a list of points, you might want to log how many points were processed successfully. This can be useful for large datasets.
+If youÂ’re creating a node that processes a list of points, you might want to log how many points were processed successfully. This can be useful for large datasets.
 
 ![OnLogInfoMessage Example 2](images/onloginfomessage-example-2.png)
 
@@ -337,7 +337,7 @@ This message will help users understand the result of the processing and confirm
 
 #### Example 3: Summarizing Parameters Used <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
 
-In some cases, it’s useful to confirm the input parameters a node used to complete an action. For example, if your node exports data to a file, logging the file name and path can reassure users that the correct file was used.
+In some cases, itÂ’s useful to confirm the input parameters a node used to complete an action. For example, if your node exports data to a file, logging the file name and path can reassure users that the correct file was used.
 
 ![OnLogInfoMessage Example 3](images/onloginfomessage-example-3.png)
 
