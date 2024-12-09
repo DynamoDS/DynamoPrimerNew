@@ -180,7 +180,7 @@ public static void ProcessFile(string filePath)
 
 In this example:
 
-* **Condition**: If the file path doesn't end with ".csv”.
+* **Condition**: If the file path doesn't end with ".csv".
 * **Message**: `"Only CSV files are supported."`
 
 This warns users to ensure they are passing a CSV file, helping prevent issues related to incompatible file formats.
@@ -204,7 +204,7 @@ Before adding an info message, think about the purpose of your method:
 Examples of useful confirmations:
 
 * **Completion messages** (e.g., when a grid or model is fully created).
-* **Details of processed data** (e.g., "10 items processed successfully”).
+* **Details of processed data** (e.g., "10 items processed successfully").
 * **Execution summaries** (e.g., parameters used in the process).
 
 #### Step 3: Use `OnLogInfoMessage` to Log Informational Messages <a href="#step-3-use-onloginfomessage-to-log-informational-message" id="step-3-use-onloginfomessage-to-log-informational-message"></a>
@@ -223,7 +223,7 @@ Here are different scenarios to demonstrate using `OnLogInfoMessage` in your Zer
 
 #### Example 1: Validating Numeric Inputs <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-In this example, we'll build upon the custom node created in the previous "**Zero-Touch Case Study - Grid Node”;** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogInfoMessage` to provide info after the node has completed its run.
+In this example, we'll build upon the custom node created in the previous "**Zero-Touch Case Study - Grid Node";** A Method named `RectangularGrid` that generates a grid of rectangles based on `xCount` and `yCount` inputs. We will walk through testing If an input is invalid, and then using `OnLogInfoMessage` to provide info after the node has completed its run.
 
 ![OnLogInfoMessage Example 1](images/onloginfomessage-example-1.png)
 
