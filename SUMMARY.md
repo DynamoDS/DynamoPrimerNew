@@ -113,7 +113,7 @@
     * [Zero-Touch Case Study - Grid Node](11\_developer\_primer/3\_developing\_for\_dynamo/2-zero-touch-case-study-grid-node.md)
     * [Executing Python Scripts in Zero-Touch Nodes (C#)](11\_developer\_primer/3\_developing\_for\_dynamo/3-executing-python-scripts-in-zero-touch-nodes-c.md)
     * [Going Further with Zero-Touch](11\_developer\_primer/3\_developing\_for\_dynamo/4-going-further-with-zero-touch.md)
-    * [Advanced Dynamo Node Customisation](11\_developer\_primer/3\_developing\_for\_dynamo/advanced-dynamo-node-customisation.md)
+    * [Advanced Dynamo Node Customisation](11\_developer\_primer/3\_developing\_for\_dynamo/8-advanced-dynamo-node-customisation.md)
     * [NodeModel Case Study - Custom UI](11\_developer\_primer/3\_developing\_for\_dynamo/5-nodemodel-case-study-custom-ui.md)
     * [Updating your Packages and Dynamo Libraries for Dynamo 2.x](11\_developer\_primer/3\_developing\_for\_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
     * [Updating your Packages and Dynamo Libraries for Dynamo 3.x](11\_developer\_primer/3\_developing\_for\_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
