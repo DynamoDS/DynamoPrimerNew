@@ -13,7 +13,6 @@ The "If" statement is a key concept in programming: "If _this_ is true, then _th
 | Icon                                             | Name (Syntax)             | Inputs            | Outputs |
 | ------------------------------------------------ | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                        | If (**If**)               | test, true, false | result  |
-| ![](../images/5-1/Formula.jpg)                   | Formula (**IF(x,y,z)**)   | x, y, z           | result  |
 | ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | result  |
 
 Let's go over a brief example on each of these three nodes in action using the conditional "If" statement.
