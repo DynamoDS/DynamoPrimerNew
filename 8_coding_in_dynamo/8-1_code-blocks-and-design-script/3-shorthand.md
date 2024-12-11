@@ -94,7 +94,7 @@ In this step, we employ our first function to move the grid of points up in the 
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. Rather than using a formula node, we use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
+> 1. We use a **Code Block** with the line: `(0..Math.Sin(x*360)..#50)*5;`. To quickly break this down, we're defining a range with a formula inside of it. This formula is the Sine function. The sine function receives degree inputs in Dynamo, so in order to get a full sine wave, we multiple our x values (this is the range input from 0 to 1) by 360. Next we want the same number of divisions as control grid points for each row, so we define fifty subdivisions with #50. Finally, the multiplier of 5 simply increases the amplitude of translation so that we can see the effect in the Dynamo Preview.
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -140,6 +140,6 @@ Looking at the visual graph, we can highlight the code blocks and see each of th
 >
 > 2\. The second **Code Block** replaces the **Number Range** node.
 >
-> 3\. The third **Code Block** replaces the **Formula** node (as well as **List.Transpose**, **List.Count** and **Number Range**).
+> 3\. The third **Code Block** replaces the **List.Transpose**, **List.Count** and **Number Range** nodes.
 >
 > 4\. The fourth **Code Block** queries a list of lists, replacing the **List.GetItemAtIndex** node.

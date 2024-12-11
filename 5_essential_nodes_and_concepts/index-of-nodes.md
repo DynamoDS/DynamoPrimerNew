@@ -90,7 +90,6 @@ This index provides additional information on all the nodes used in this primer,
 | ![](images/5-1/Mathradianstodegrees.jpg) | <p><strong>Math.RadiansToDegrees</strong><br>Converts an angle in radians to an angle in degrees.</p>                        | ![](images/5-1/indexofnodes-mathradianstodegrees.jpg) |
 | ![](images/5-1/Mathremaprange.jpg)       | <p><strong>Math.RemapRange</strong><br>Adjusts the range of a list of numbers while preserving the distribution ratio.</p>   | ![](images/5-1/indexofnodes-mathremaprange.jpg)       |
 | ![](images/5-1/Mathsin.jpg)              | <p><strong>Math.Sin</strong><br>Finds the sine of an angle.</p>                                                              | ![](images/5-1/indexofnodes-mathsin.jpg)              |
-| ![](images/5-1/Formula.jpg)              | <p><strong>Formula</strong><br>Evaluates mathematical formulas. Uses NCalc for evaluation. See http://ncalc.codeplex.com</p> | ![](images/5-1/indexofnodes-formula.jpg)              |
 | ![](<images/5-1/Map(1) (1) (1) (1).jpg>) | <p><strong>Map</strong><br>Maps a value into an input range</p>                                                              | ![](images/5-1/indexofnodes-mathmap.jpg)              |
 
 ## String
