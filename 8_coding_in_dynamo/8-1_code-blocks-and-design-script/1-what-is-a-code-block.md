@@ -28,7 +28,7 @@ Code blocks are also flexible towards data types. The user can quickly define nu
 
 In the image below, you can see the "old school" way of doing things is a little long-winded: the user searches for the intended node in the interface, adds the node to the canvas, and then inputs the data. With code block, the user can double-click on the canvas to pull up the node, and type in the correct data type with basic syntax.
 
-The number, string, and formula nodes are three examples of Dynamo nodes which are arguably obsolete in comparison to the code block.
+The number and string nodes are two examples of Dynamo nodes which are arguably obsolete in comparison to the code block.
 
 ![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 
