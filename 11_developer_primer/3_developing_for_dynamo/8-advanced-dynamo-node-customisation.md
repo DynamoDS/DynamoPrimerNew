@@ -373,6 +373,7 @@ This guide will show you how to add icons to your Zero Touch nodes.
 #### Step 1: Set Up Your Project
 
 To begin, create a Visual Studio Class Library (.NET Framework) project for your Zero Touch nodes. If you don't already have a project, refer to the **Getting Started** section for step-by-step instructions on creating one.
+
 ![Creating a new Visual Studio Project](images/vs-new-project-1.jpg)
 
 ![Configuring a new project in Visual Studio](images/zerotouchicons-configure-new-project.jpg)
@@ -407,16 +408,19 @@ To embed your icons into the `.dll`, create a resources file:
 
 1. **Add a New Resources File**:
     * Right-click your project in the **Solution Explorer**.
-    ![Addding a new item](images/zerotouchicons-add-resources-file-1.jpg)
+
+![Adding a new item](images/zerotouchicons-add-resources-file-1.jpg)
     * Go to **Add > New Item** and select **Resources File**.
-    ![Adding a resources file](images/zerotouchicons-add-resources-file-2.jpg)
+
+![Adding a resources file](images/zerotouchicons-add-resources-file-2.jpg)
     * Name the file `<ProjectName>Images.resx`. For example, `ZeroTouchNodeIconsImages.resx`.
 
 2. **Clear the Custom Tool Property**:
     * Select the resources file in the **Solution Explorer**.
     * In the **Properties** panel, clear the `Custom Tool` field by removing the `ResXFileCodeGenerator` value.
-![Cleaing the Custom Tool Property](images/zerotouchicons-custom-tool-property.jpg)
-    
+
+![Cleaning the Custom Tool Property](images/zerotouchicons-custom-tool-property.jpg)
+
 > *NOTE: Failing to clear the "Custom Tool" field will result in Visual Studio converting periods to underscores in your resource names. Please verify before Building that your resource names have periods separating class names rather than underscores.*
 
 
@@ -425,13 +429,19 @@ To embed your icons into the `.dll`, create a resources file:
 1. Open the resources file using the **Managed Resources Editor (Legacy)**:
     * If using Visual Studio 17.11 or later, right-click the resources file, choose **Open With**, and select **Managed Resources Editor (Legacy)**.
     * If using a Visual Studio version previous to 17.11, double click on the resources file to open with the Resources Editor (which in your version of Visual Studio has not been made legacy yet).
+
 ![Using Open With...](images/zerotouchicons-open-resource-editor.jpg)
+
 ![Opening the resources file with Managed Resources Editor (Legacy)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+
 2. Add your images:
     * Drag and drop your image files into the editor or use the **Add Existing File** option.
+
 ![Adding Existing Files](images/zerotouchicons-add-existing-file.jpg)
+
 3. Update persistence:
     * Select the images from within the Resources Editor (this will not work if you select them from the Solution Explorer), change the **Persistence** property in the **Properties** panel to `Embedded in .resx`. This ensures the images are included in your `.dll`.
+
 ![Updating Persistence](images/zerotouchicons-edit-persistence-property.jpg)
 
 #### Step 5: Convert Your Project to SDK-Style
@@ -439,12 +449,19 @@ To embed your icons into the `.dll`, create a resources file:
 If your project is not already SDK-style (required for embedding resources), convert it:
 
 1. Install the `.NET Upgrade Assistant` extension from Visual Studio's **Extensions > Manage Extensions** menu.
+
 ![Manage Extensions](images/zerotouchicons-manage-extensions.jpg)
+
 ![Installing the .NET Upgrade Assistant](images/zerotouchicons-net-upgrade-assistant.jpg)
+
 2. Right-click the project in the **Solution Explorer** and select **Upgrade > Convert project to SDK-style**.
+
 ![Upgrade the project](images/zerotouchicons-upgrade-project.jpg)
+
 ![Convert to SDK-style](images/zerotouchicons-convert-to-sdk-style.jpg)
+
 3. Wait for the conversion to complete.
+
 ![Upgrade Complete](images/zerotouchicons-upgrade-complete.jpg)
 
 
@@ -452,7 +469,9 @@ If your project is not already SDK-style (required for embedding resources), con
 
 1. Unload the project:
     * Right-click the project in the **Solution Explorer** and select **Unload Project**.
+
 ![Unload the project](images/zerotouchicons-unload-project.jpg)
+
 2. Edit the `.csproj` file:
     * Add the following `<Target>` element between `</ItemGroup>` and `</Project>`:
 
@@ -475,6 +494,7 @@ If your project is not already SDK-style (required for embedding resources), con
 1. Replace all instances of `ZeroTouchNodeIcons` with your project name.
 2. Reload the project:
     * Right-click the unloaded project and select **Reload Project**.
+
 ![Reload the project](images/zerotouchicons-reload-project.jpg)
 
 
@@ -482,10 +502,14 @@ If your project is not already SDK-style (required for embedding resources), con
 
 1. Build the project:
     * After adding the After-Build script, build your project in Visual Studio.
-    ![Build Solution](images/zerotouchicons-build-solution.jpg)
+
+![Build Solution](images/zerotouchicons-build-solution.jpg)
+
 2. Check for output files:
     * Ensure your `.dll` and the `.customization.dll` are in the `bin` folder.
 3. Add the `.dll` to Dynamo:
     * In Dynamo, use the Import Library button to import your .dll into Dynamo.
-    ![Import Library Button](images/zerotouchicons-icon-in-dynamo.jpg)
+
+![Import Library Button](images/zerotouchicons-icon-in-dynamo.jpg)
+
 4. Your custom nodes should now appear with their respective icons.
