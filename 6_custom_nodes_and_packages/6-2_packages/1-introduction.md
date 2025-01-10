@@ -91,6 +91,20 @@ If you would like to see where your package files are kept, in the top navigatio
 
 By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
 
+### Loading Packages with Binaries from a Network Location
+
+#### Scenario
+
+An organization might want to standardize the packages installed by different workstations and users. A way to do this, could be to install these packages from Package Manager selecting a network folder as the install location, and get workstations to add that path to `Manage Node and Package Paths`.
+
+#### Problem
+
+While the scenario works properly for packages that contain only custom nodes, it might not work for packages containing binaries, like zero-touch nodes. This issue is caused by [security measures](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location) the .NET framework places over loading assemblies when they come from a network location. Unfortunately, using the `loadFromRemoteSources` configuration element, as suggested in the linked thread, is not a possible solution for Dynamo, because it is distributed as a component rather than an application.
+
+#### Workaround
+
+One possible workaround is to use a mapped network drive pointing to the network location, and have workstations reference that path instead. The steps to create a mapped network drive are described [here](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+
 ### Going Further with Packages
 
 The Dynamo community is constantly growing and evolving. By exploring the Dynamo Package Manager from time to time, you'll find some exciting new developments. In the following sections, we'll take a more in-depth look at packages, from the end-user perspective to authorship of your own Dynamo Package.
