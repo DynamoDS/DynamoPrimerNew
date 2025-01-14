@@ -79,7 +79,7 @@ You can also access more detail on each package by clicking View Details. This o
 
 ### Dynamo Package Manager Website
 
-Another way to discover Dynamo packages is to explore the [Dynamo Package Manager](http://dynamopackages.com) website. Here, you can find stats on packages and author leaderboards. You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
+Another way to discover Dynamo packages is to explore the [Dynamo Package Manager](http://dynamopackages.com) website. Here, you can find package dependencies and host/version compatibility information provided by Package Authors. You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
 
 ![](../images/6-2/1/dpm2.jpg)
 
