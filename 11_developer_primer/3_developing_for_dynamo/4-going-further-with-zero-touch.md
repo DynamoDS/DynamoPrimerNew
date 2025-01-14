@@ -134,6 +134,40 @@ Note that the code for this example node contains:
 > 2. An input description
 > 3. An output description
 
+##### Dynamo Node Descriptions Best Practices 
+
+Node descriptions briefly describe a node’s function and output. In Dynamo, they appear in two places:
+
+- In the node tooltip
+- In the documentation browser
+
+![node-description](images/node-description.png)
+
+Follow these guidelines to ensure consistency and help save time when writing or updating node descriptions.
+
+###### Overview
+
+Descriptions should be one to two sentences. If more info is needed, include it under In Depth in the Documentation Browser.
+
+Sentence case (capitalize the first word of a sentence and any proper nouns). No period at the end.
+
+Language should be as clear and simple as possible. Define acronyms at first mention unless they are known even to non-expert users.
+
+Always prioritize clarity, even if that means deviating from these guidelines.
+
+###### Guidelines
+
+| Do's      | Don'ts |
+| ----------- | ----------- |
+| Start the description with a third-person verb. <ul><li>Example: *Determines* if one geometry object intersects with another</li></ul>      | Don't start with a second-person verb or with any noun. <ul><li>Example: *Determine* if one geometry object intersects with another</li></ul>       |
+| Use "Returns," "Creates," or another descriptive verb instead of "Gets." <ul><li>Example: *Returns* a Nurbs representation of a surface</li></ul>   | Don't use "Get" or "Gets." It's less specific and has several possible translations. <ul><li>Example: *Gets* a Nurbs representation of the surface</li></ul>        |
+| When referring to inputs, use "given" or "input" instead of "specified" or any other terms. Omit "given" or "input" when possible to simplify the description and reduce word count. <ul><li>Example: Deletes the *given* file</li><li>Example: Projects a curve along the *given* projection direction onto *given* base geometry</li></ul>You may use "specified" when not directly referring to an input. <ul><li>Example: Writes text content to a file *specified* by the given path</li></ul>       | When referring to inputs, to ensure consistency, don't use "specified" or any other term except "given" or "input." Don't mix "given" and "input" in the same description unless needed for clarity. <ul><li>Example: Deletes the *specified* file</li><li>Example: Projects an *input* curve along a *given* projection direction onto a *specified* base geometry</li></ul>      |
+| Use "a" or "an" when first referring to an input. Use "the given" or "the input" instead of "a" or "an" as needed for clarity.<ul><li>Example: Sweeps *a* curve along the path curve</li></ul>      | Don't use "this" when first referring to an input. <ul><li>Example: Sweeps *this* surve along the path curve      |
+| When first referring to an output or other noun that's the target of the node operation, use "a" or "an." Only use "the" when pairing it with "input" or "given." <ul><li>Example: Copies *a* file</li><li>Example: Copies *the given* file</li></ul>      | When first referring to an output or other noun that's the target of the node operation, don't use "the" on its own. <ul><li>Example: Copies *the* file</li></ul>      |
+| Capitalize the first word of a sentence and any proper nouns such as names and traditionally capitalized nouns. <ul><li>Example: Returns the intersection of two *BoundingBoxes*</li></ul>      | Don't capitalize common geometry objects and concepts unless needed for clarity. <ul><li>Example: Scales non-uniformly around the given *Plane*      |
+| Capitalize Boolean. Capitalize True and False when referring to the output of Booleans. <ul><li>Example: Returns *True* if the two values are different</li><li>Example: Converts a string to all uppercase or all lowercase characters based on a *Boolean* parameter      | Don't lowercase Boolean. Don't lowercase True and False when referring to the output of Booleans. <ul><li>Example: Returns *true* if the two values are different</li><li>Example: Converts a string to all uppercase characters or all lowercase characters based on a *boolean* parameter</li></ul>
+
+
 #### Objects <a href="#objects" id="objects"></a>
 
 Dynamo doesn't have a `new` keyword, so objects will need to be constructed using static construction methods. Objects are constructed in the following way:
