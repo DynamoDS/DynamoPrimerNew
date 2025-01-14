@@ -29,7 +29,7 @@
 
 `CTRL + T` Open an existing template.
 
-`CTRL + P` Toggle ‘Pan’ mode.
+`CTRL + P` Toggle ‘Pan mode.
 
 `CTRL + S` Save the active file (dyn or dyf).
 
@@ -45,7 +45,7 @@
 
 `CTRL + 0` Zoom extents if nothing selected, Zoom to origin if already at extents, Zoom to selection if node(s), note(s) or group(s) are selected.
 
-`­­­­CTRL + - (not number pad)` Zoom out.
+`­­CTRL + - (not number pad)` Zoom out.
 
 `CTRL + =` Zoom in.
 
@@ -56,7 +56,7 @@
 
 ### Workspace view single key shortcuts:
 
-`Esc (hold)` Toggle to geometry preview – will revert to workspace view once released.
+`Esc (hold)` Toggle to geometry preview - will revert to workspace view once released.
 
 `Tab` Add nodes connected to current selection to selection (select nodes at end of highlighted wires).
 
@@ -108,7 +108,7 @@
 
 `CTRL + C` Copy selected geometry.
 
-`CTRL + D` Creates new custom node from the node which creates the selected geometry(s). Exactly what is included in the custom node can expand beyond the specific nodes – best to be careful when using this with a selection from the geometry preview windows.
+`CTRL + D` Creates new custom node from the node which creates the selected geometry(s). Exactly what is included in the custom node can expand beyond the specific nodes - best to be careful when using this with a selection from the geometry preview windows.
 
 `CTRL + E` Sets zoom to the default distance and re-centers camera.
 
@@ -140,7 +140,7 @@
 
 `CTRL + 0` Zoom extents if nothing selected. Zoom to selected geometry if any is selected.
 
-`­­­­CTRL + - (not number pad)` Zoom out from pivot point.
+`CTRL + - (not number pad)` Zoom out from pivot point.
 
 `CTRL + =` Zoom in towards pivot point.
 
