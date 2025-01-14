@@ -95,7 +95,7 @@ By default, packages are installed in a location similar to this folder path: _C
 
 #### Scenario
 
-An organization might want to standardize the packages installed by different workstations and users. A way to do this, could be to install these packages from Package Manager selecting a network folder as the install location, and get workstations to add that path to `Manage Node and Package Paths`.
+An organization might want to standardize the packages installed by different workstations and users. A way to do this, could be to install these packages from *Dynamo -> Preferences -> Package Settings -> Node and Package file locations*, selecting a network folder as the install location, and get workstations to add that path to `Manage Node and Package Paths`.
 
 #### Problem
 
