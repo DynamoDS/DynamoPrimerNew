@@ -407,13 +407,16 @@ To create custom icons:
 To embed your icons into the `.dll`, create a resources file:
 
 1. **Add a New Resources File**:
-    * Right-click your project in the **Solution Explorer**.
+
+  * Right-click your project in the **Solution Explorer**.
 
 ![Adding a new item](images/zerotouchicons-add-resources-file-1.jpg)
-    * Go to **Add > New Item** and select **Resources File**.
+
+  * Go to **Add > New Item** and select **Resources File**.
 
 ![Adding a resources file](images/zerotouchicons-add-resources-file-2.jpg)
-    * Name the file `<ProjectName>Images.resx`. For example, `ZeroTouchNodeIconsImages.resx`.
+
+  * Name the file `<ProjectName>Images.resx`. For example, `ZeroTouchNodeIconsImages.resx`.
 
 2. **Clear the Custom Tool Property**:
     * Select the resources file in the **Solution Explorer**.
