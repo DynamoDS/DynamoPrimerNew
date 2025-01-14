@@ -141,7 +141,7 @@ Node descriptions briefly describe a node’s function and output. In Dynamo, th
 - In the node tooltip
 - In the documentation browser
 
-![node-description](images/node-description.png)
+![Node Description](images/node-description.png)
 
 Follow these guidelines to ensure consistency and help save time when writing or updating node descriptions.
 
