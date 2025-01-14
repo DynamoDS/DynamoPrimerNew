@@ -29,7 +29,7 @@
 
 `CTRL + T` Open an existing template.
 
-`CTRL + P` Toggle ‘Pan mode.
+`CTRL + P` Toggle Pan mode.
 
 `CTRL + S` Save the active file (dyn or dyf).
 
@@ -45,7 +45,7 @@
 
 `CTRL + 0` Zoom extents if nothing selected, Zoom to origin if already at extents, Zoom to selection if node(s), note(s) or group(s) are selected.
 
-`­­CTRL + - (not number pad)` Zoom out.
+`CTRL + - (not number pad)` Zoom out.
 
 `CTRL + =` Zoom in.
 
