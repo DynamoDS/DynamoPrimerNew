@@ -359,6 +359,66 @@ In this example:
 
 This message confirms to users that the export worked and shows the exact file path, helping avoid confusion over file locations.
 
+## Creating and Adding Custom Documentation to Nodes
+
+### Custom node documentation
+Historically, there has been limitations in Dynamo for how package authors could provide documentation for their nodes. Custom Node authors have been restricted to only allowing a short description that displays in the tooltip of the node, or to ship your package with heavily annotated sample graphs.
+
+![Node Tooltip Description](images/customnodedocumentation-overloads.png)
+
+### A new way
+Dynamo now offers an improved system for package authors to provide better and more explanatory documentation for your custom nodes. This new approach utilises the user-friendly Markdown language for text authoring and the Documentation Browser view extension to display the Markdown in Dynamo. Using Markdown gives package authors a wide array of new possibilities when documenting their custom nodes. 
+
+#### What is Markdown?
+Markdown is a lightweight markup language that you can use to format plaintext text documents. Since Markdown was created in 2004 it's popularity has only increased and is now one of the most popular markup languages in the world.
+
+#### Getting started with Markdown
+It's easy to start making Markdown files - all you need is a simple text editor, like Notepad, and you're good to go. However, there are easier ways to write Markdown than using Notepad. There are several online editors, such as [Dillinger](https://dillinger.io/), that let you see your changes in real-time as you make them. Another popular way of editing Markdown files is using a code editor like [Visual studio code](https://code.visualstudio.com/).
+
+#### What can Markdown do?
+Markdown is very flexible and should provide enough functionality to easily create good documentation - this includes; adding media files like images or videos, creating tables with different forms of content, and of course simple text formatting features like making text **bold** or *italic*. All of this and so much more is possible when writing Markdown documents, for more information have a look at this guide which explains the 
+[basic Markdown syntax](https://www.Markdownguide.org/basic-syntax/).
+
+### Adding extended documentation to your nodes
+Adding documentation to your nodes is easy. Documentation can be added to all flavors of custom nodes, covering:
+* Out of the Box Dynamo Nodes
+* Custom Nodes (.dyf) - Collections of out of the box and/or other package nodes.
+* Custom C# Package Nodes (Also known as Zerotouch. These custom nodes look like the out-of-the-box nodes)
+* NodeModel Nodes (Nodes that contain special UI features such as drop downs or selection buttons)
+* NodeModel Nodes with Custom UI (Nodes that contain unique UI features such as graphics on the node)
+
+Follow these few steps to get your Markdown files to show inside Dynamo.
+
+#### Opening documentation files in Dynamo
+Dynamo uses the Documentation Browser view extension to display nodes documentation. To open a nodes documentation, right click on the node and select help. This will open up the Documentation Browser and display the Markdown associated with that node, if there is any provided.
+
+![Documentation Browser](images/customnodedocumentation-no-documentation-provided.png)
+
+The documentation displayed in the Documentation Browser is made up of two parts. The first is the `Node Info` section, this is auto generated from the information extracted from the node, such as the inputs/outputs, node category, node name/namespace and the nodes short description. Second part show the custom nodes documentation, which is the Markdown file that is provided to document the node.
+
+![Custom Node Documentation](images/customnodedocumentation-custom-node-documentation.png)
+
+#### Package doc folder
+To add documentation files to your nodes in Dynamo, create a new folder in your package directory called `/doc`. When your package is loaded, Dynamo will scan this directory and get all of the documentation Markdown files in it.
+
+#### Naming Markdown files
+To make sure Dynamo knows which file to open when requested for a specific node, the naming of the Markdown file needs to be in a specific format. Your Markdown file should be named according to the node it documents' namespace. If you are unsure about the namespace of the node, look at the `Node Info` section when you press `Help` on the node and under the node name you will see the full namespace of the selected node. 
+
+This namespace should be the name of your Markdown file for that particular node. For example the namespace of `CustomNodeExample` from above images, is `TestPackage.TestCategory.CustomNodeExample` therefore the Markdown file for this node should be named `TestPackage.TestCategory.CustomNodeExample.md`
+
+In special cases where you have overloads of your nodes (nodes with same name, but different inputs), you will have to add the input names in `()` after the node namespace. For example the built-in node `Geometry.Translate` has multiple overloads. In this case we would name the Markdown files for below nodes as follows:
+`Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md`
+`Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
+
+![Overload Nodes](images/customnodedocumentation-overloads.png)
+
+#### Modifying Markdown files while open in Dynamo
+To make it easy to modify documentation files, the Documentation Browser implements a File Watcher on the open documentation file. This enables you to make changes to your Markdown file and you will see the changes in Dynamo instantly. 
+
+![Hot Reloading](images/customnodedocumentation-hot-reload.gif)
+
+Adding new documentation files can also be done whilst Dynamo is open. Simply add a new Markdown file to the `/doc` folder, with a name that corresponds to the node it documents.
+
 ## Adding Custom Icons to Zero Touch Nodes
 
 ### Overview
