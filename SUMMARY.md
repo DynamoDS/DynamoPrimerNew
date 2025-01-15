@@ -130,3 +130,4 @@
   * [Example Files](a\_appendix/a-4\_example-files.md)
   * [Host Integration Map](a\_appendix/host-integration-map.md)
   * [Download PDF](a\_appendix/a-5\_download-pdf.md)
+  * [Dynamo Keyboard Shortcuts](a\_appendix/a-6\_dynamo-keyboard-shortcuts.md)
