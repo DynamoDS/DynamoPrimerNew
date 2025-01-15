@@ -79,7 +79,7 @@ You can also access more detail on each package by clicking View Details. This o
 
 ### Dynamo Package Manager Website
 
-Another way to discover Dynamo packages is to explore the [Dynamo Package Manager](http://dynamopackages.com) website. Here, you can find stats on packages and author leaderboards. You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
+Another way to discover Dynamo packages is to explore the [Dynamo Package Manager](http://dynamopackages.com) website. Here, you can find package dependencies and host/version compatibility information provided by Package Authors. You can also download the package files from the Dynamo Package Manager, but doing so directly from Dynamo is a more seamless process.
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,20 @@ If you would like to see where your package files are kept, in the top navigatio
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
+
+### Loading Packages with Binaries from a Network Location
+
+#### Scenario
+
+An organization might want to standardize the packages installed by different workstations and users. A way to do this, could be to install these packages from *Dynamo -> Preferences -> Package Settings -> Node and Package file locations*, selecting a network folder as the install location, and get workstations to add that path to `Manage Node and Package Paths`.
+
+#### Problem
+
+While the scenario works properly for packages that contain only custom nodes, it might not work for packages containing binaries, like zero-touch nodes. This issue is caused by [security measures](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location) the .NET framework places over loading assemblies when they come from a network location. Unfortunately, using the `loadFromRemoteSources` configuration element, as suggested in the linked thread, is not a possible solution for Dynamo, because it is distributed as a component rather than an application.
+
+#### Workaround
+
+One possible workaround is to use a mapped network drive pointing to the network location, and have workstations reference that path instead. The steps to create a mapped network drive are described [here](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
 
 ### Going Further with Packages
 
