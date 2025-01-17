@@ -99,11 +99,11 @@ The approach that will solve this issue and allow for control at a central locat
 **Adding a network folder where the BIM manager or others could supervise the stocking of the folder with office approved packages**  
 In the UI of an individual application, go to *Dynamo -> Preferences -> Package Settings -> Node and Package file locations*.  In the dialog, press the "Add Path" button and browse to the network location for the shared package resource. 
  
-As an automated process, it would involve adding information to the configuration file that is installed with Dynamo:  C:\Users\Username\AppData\Roaming\Dynamo\Dynamo Revit\3.2\DynamoSettings.xml. By default, the configuration for Dynamo for Revit is:
+As an automated process, it would involve adding information to the configuration file that is installed with Dynamo:  _C:\Users/\[Username]\AppData\Roaming\Dynamo\Dynamo Revit/\[Dynamo Version]\DynamoSettings.xml_. By default, the configuration for Dynamo for Revit is:
  
 `<CustomPackageFolders>`  
 
-`<string>C:\Users\kronz\AppData\Roaming\Dynamo\Dynamo Revit\3.2</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
 
 `</CustomPackageFolders>`
 
@@ -111,7 +111,7 @@ Adding a custom location would look like:
 
 `<CustomPackageFolders>`  
 
-`<string>C:\Users\kronz\AppData\Roaming\Dynamo\Dynamo Revit\3.2</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
 
 `<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
 
