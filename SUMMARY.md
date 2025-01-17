@@ -124,6 +124,7 @@
   * [Pull Requests](11\_developer\_primer/pull-requests.md)
   * [Examples](11\_developer\_primer/5\_examples/README.md)
 * [Appendix](a\_appendix/README.md)
+  * [Frequently Asked Questions](a\_appendix/a-7\_frequently-asked-questions.md)
   * [Visual Programming and Dynamo](a\_appendix/a-1\_visual-programming-and-dynamo.md)
   * [Resources](a\_appendix/a-2\_resources.md)
   * [Useful Packages](a\_appendix/a-3\_packages.md)
