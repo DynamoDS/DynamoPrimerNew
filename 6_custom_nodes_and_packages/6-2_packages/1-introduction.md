@@ -91,6 +91,35 @@ If you would like to see where your package files are kept, in the top navigatio
 
 By default, packages are installed in a location similar to this folder path: _C:/Users/\[username]/AppData/Roaming/Dynamo/\[Dynamo Version]_.
 
+### Setting up a Shared Location for Packages in an Office
+
+For users who are asking if it is possible to deploy Dynamo (in any form) with pre-attached packages:
+The approach that will solve this issue and allow for control at a central location for all users with Dynamo installs is to add a custom package path to each installation.
+
+**Adding a network folder where the BIM manager or others could supervise the stocking of the folder with office approved packages**  
+In the UI of an individual application, go to *Dynamo -> Preferences -> Package Settings -> Node and Package file locations*.  In the dialog, press the "Add Path" button and browse to the network location for the shared package resource. 
+ 
+As an automated process, it would involve adding information to the configuration file that is installed with Dynamo:  _C:\Users/\[Username]\AppData\Roaming\Dynamo\Dynamo Revit/\[Dynamo Version]\DynamoSettings.xml_. By default, the configuration for Dynamo for Revit is:
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+Adding a custom location would look like:  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+The central management for this folder can also be controlled by simply making the folder read only.
+
 ### Loading Packages with Binaries from a Network Location
 
 #### Scenario
