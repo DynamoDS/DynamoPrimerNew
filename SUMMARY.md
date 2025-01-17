@@ -95,6 +95,7 @@
     * [Python Nodes](8\_coding\_in\_dynamo/8-3\_python/1-python.md)
     * [Python and Revit](8\_coding\_in\_dynamo/8-3\_python/2-python-revit.md)
     * [Setup Your Own Python Template](8\_coding\_in\_dynamo/8-3\_python/3-python-templates.md)
+  * [Language Changes](8\_coding\_in\_dynamo/8-4\_language-changes/1-dynamo-2.0-language-changes.md)
 * [Best Practices](9\_best\_practices/README.md)
   * [Graph Strategies](9\_best\_practices/1-graph-strategies.md)
   * [Scripting Strategies](9\_best\_practices/2-scripting-strategies.md)
