@@ -26,7 +26,7 @@ You should be able to launch DynamoSandbox.exe in the extracted folder to use Dy
 ##### 7zip used for unzipping the package [here](https://www.7-zip.org/download.html)
 
 
-##### Microsoft Visual C++ 2015 Redistributable [link](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+##### Microsoft Visual C++ 2015-2024 Redistributable (x64) [link](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 ##### Optional components
 Geometry Library (It will only be available with particular Autodesk modeling tools like Revit, Civil 3D, Advanced Steel, etc)
@@ -49,7 +49,7 @@ Please follow the Microsoft instructions here to check if you have DirectX insta
 
 ![](images/a-7/dynamo-builds-3.png)
 
-##### Installing Microsoft Visual C++ 2015 Redistributable
+##### Installing Microsoft Visual C++ 2015-2024 Redistributable (x64)
 Please download the latest [here](https://aka.ms/vs/17/release/vc_redist.x64.exe). Then you should be able to run the installer named vc_redist.x64.exe in your browser download location. Once you see the dialog below, feel free to click install to put this component in the default location.
 
 ![](images/a-7/dynamo-builds-4.png)
