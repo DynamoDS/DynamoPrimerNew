@@ -100,7 +100,7 @@ Compatibility information can be updated retroactively for previously published 
 
 Follow the below flow chart and refer to the table below to help you understand which option works best for your package.
 
-![Which Option to Choose for “Edit Compatibility Info” workflow](images/Package-Manager_Image_7.png)
+![Which Option to Choose for "Edit Compatibility Info" workflow](images/Package-Manager_Image_7.png)
 
 Let’s use some examples to walk through some scenarios:
 
