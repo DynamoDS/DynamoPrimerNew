@@ -88,7 +88,7 @@ Authors can edit their package description, website link, and repository link by
 
 Compatibility information can be updated retroactively for previously published package versions. Follow these steps:  
 
-![Edit Compatibility Info for Published Packages – Step 1](images/Package-Manager_Image_6.png)
+![Edit Compatibility Info for Published Packages - Step 1](images/Package-Manager_Image_6.png)
 
 **Step 1:**  
 
@@ -102,16 +102,16 @@ Follow the below flow chart and refer to the table below to help you understand 
 
 ![Which Option to Choose for "Edit Compatibility Info" workflow](images/Package-Manager_Image_7.png)
 
-Let’s use some examples to walk through some scenarios:
+Let's use some examples to walk through some scenarios:
 
-**Example Package # 1**- Civil Connection: This package has API dependencies with both Revit & Civil 3D and does not include a collection of core nodes (eg: geometry functions, math functions, and/or list management). So, in this case, the ideal option would be to go with Option 1. The package will be shown as Compatible in Revit and Civil 3D that matches the version range and/or individual version list.
+**Example Package # 1** - Civil Connection: This package has API dependencies with both Revit & Civil 3D and does not include a collection of core nodes (eg: geometry functions, math functions, and/or list management). So, in this case, the ideal option would be to go with Option 1. The package will be shown as Compatible in Revit and Civil 3D that matches the version range and/or individual version list.
 
-**Example Package # 2** – Rhythm: This package is a collection of Revit specific nodes along with a collection of Core nodes. In this case, the package has host dependencies. But also includes core nodes that will work in Dynamo Core. So, in this case, the ideal option would be Option 2. The package will be shown as Compatible in Revit and Dynamo Core (also called Dynamo Sandbox) environment that matches the version range and/or individual version list.
+**Example Package # 2** - Rhythm: This package is a collection of Revit specific nodes along with a collection of Core nodes. In this case, the package has host dependencies. But also includes core nodes that will work in Dynamo Core. So, in this case, the ideal option would be Option 2. The package will be shown as Compatible in Revit and Dynamo Core (also called Dynamo Sandbox) environment that matches the version range and/or individual version list.
 
-**Example Package # 3** – Mesh Toolkit: This package is a Dynamo Core package which is a collection of geometry nodes that has no host dependencies. So, in this case, the ideal option would be Option 3. The package will be shown as Compatible in Dynamo and all host environments that matches the version range and/or individual version list.
+**Example Package # 3** - Mesh Toolkit: This package is a Dynamo Core package which is a collection of geometry nodes that has no host dependencies. So, in this case, the ideal option would be Option 3. The package will be shown as Compatible in Dynamo and all host environments that matches the version range and/or individual version list.
 
 ![Edit Compatibility Info Options](images/Package-Manager_Image_8.png)
 
 Depending on the option selected, Dynamo and/or Host specific fields will pop-up as shown in the image below.
 
-![Edit Compatibility Info – Step 2](images/Package-Manager_Image_9.png)
+![Edit Compatibility Info - Step 2](images/Package-Manager_Image_9.png)
