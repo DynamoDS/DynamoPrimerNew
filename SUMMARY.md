@@ -108,6 +108,7 @@
 * [Developer Primer](11\_developer\_primer/1\_developer\_primer\_intro/README.md)
   * [Build Dynamo from Source](11\_developer\_primer/2\_build\_dynamo\_from\_source/README.md)
     * [Build DynamoRevit from Source](11\_developer\_primer/2\_build\_dynamo\_from\_source/1-build-dynamorevit-from-source.md)
+    * [Managing and Updating Dependancies in Dynamo](11\_developer\_primer/2\_build\_dynamo\_from\_source/2-managing-and-updating-dependancies-in-dynamo.md)]
   * [Developing for Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md)
     * [Getting Started](11\_developer\_primer/3\_developing\_for\_dynamo/1-getting-started.md)
     * [Zero-Touch Case Study - Grid Node](11\_developer\_primer/3\_developing\_for\_dynamo/2-zero-touch-case-study-grid-node.md)
