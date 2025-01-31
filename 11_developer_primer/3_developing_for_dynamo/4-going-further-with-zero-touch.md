@@ -88,7 +88,7 @@ It is best practice to add documentation to Dynamo nodes that describe the node'
   * For example: `/// Documentation text and XML goes here`
 * After the three slashes, create XML tags above methods that Dynamo will read when importing the .dll
   * For example: `/// <summary>...</summary>`
-* Enable XML documentation in Visual Studio by selecting `Project > Project Properties > Build` and checking `XML documentation file`
+* Enable XML documentation in Visual Studio by selecting `Project > [Project] Properties > Build > Output` and checking `Documentation file`
 
 ![Generating an XML file](images/vs-xml.jpg)
 
