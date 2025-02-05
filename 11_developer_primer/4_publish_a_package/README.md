@@ -63,8 +63,55 @@ Updating a package is a similar process to publishing. Open the Package Manager 
 
 #### Package Manager web client <a href="#package-manager-web-client" id="package-manager-web-client"></a>
 
-The Package Manager web client is used exclusively for searching and viewing package data such as versioning and download statistics.
+The Package Manager web client allows users to search for and view package data, including versioning, download statistics, and other relevant information. Additionally, package authors can log in to update their package details, such as compatibility information, directly through the web client.
+
+For more information about these features, see the blog post here: [https://dynamobim.org/discover-the-new-dynamo-package-management-experience/](https://dynamobim.org/discover-the-new-dynamo-package-management-experience/).
 
 The Package Manager web client can be accessed at this link: [https://dynamopackages.com/](https://dynamopackages.com)
 
 ![Package manager web client](images/packagemanager-browser.jpg)
+
+##### Updating Package Details
+
+Authors can edit their package description, website link, and repository link by following these steps:  
+
+> 1. Under **My Packages**, select the package and click **Edit package details**.  
+> 2. Add or modify the **Website** and **Repository** links using the respective fields.  
+> 3. Update the **Package Description** as needed.  
+> 4. Click **Save changes** to apply updates.  
+
+ **Note**: Updates may take up to 15 minutes to refresh in the Package Manager within Dynamo, as server updates take some time. Efforts are underway to reduce this delay.  
+
+ ![New UI to update Package Details for Published Packages](images/Package-Manager_Image_5.png)
+
+##### Edit Compatibility Information for Published Package Versions  
+
+Compatibility information can be updated retroactively for previously published package versions. Follow these steps:  
+
+![Edit Compatibility Info for Published Packages - Step 1](images/Package-Manager_Image_6.png)
+
+**Step 1:**  
+
+1. Click on the package version you want to update.  
+2. The **Depends on** list will be auto-populated with the packages your package depends on.  
+3. Click the pencil icon next to **Compatibility** to open the **Edit Compatibility Information** workflow.  
+
+**Step 2:**  
+
+Follow the below flow chart and refer to the table below to help you understand which option works best for your package.
+
+![Which Option to Choose for "Edit Compatibility Info" workflow](images/Package-Manager_Image_7.png)
+
+Let's use some examples to walk through some scenarios:
+
+**Example Package # 1** - Civil Connection: This package has API dependencies with both Revit & Civil 3D and does not include a collection of core nodes (eg: geometry functions, math functions, and/or list management). So, in this case, the ideal option would be to go with Option 1. The package will be shown as Compatible in Revit and Civil 3D that matches the version range and/or individual version list.
+
+**Example Package # 2** - Rhythm: This package is a collection of Revit specific nodes along with a collection of Core nodes. In this case, the package has host dependencies. But also includes core nodes that will work in Dynamo Core. So, in this case, the ideal option would be Option 2. The package will be shown as Compatible in Revit and Dynamo Core (also called Dynamo Sandbox) environment that matches the version range and/or individual version list.
+
+**Example Package # 3** - Mesh Toolkit: This package is a Dynamo Core package which is a collection of geometry nodes that has no host dependencies. So, in this case, the ideal option would be Option 3. The package will be shown as Compatible in Dynamo and all host environments that matches the version range and/or individual version list.
+
+![Edit Compatibility Info Options](images/Package-Manager_Image_8.png)
+
+Depending on the option selected, Dynamo and/or Host specific fields will pop-up as shown in the image below.
+
+![Edit Compatibility Info - Step 2](images/Package-Manager_Image_9.png)

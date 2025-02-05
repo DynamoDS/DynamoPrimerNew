@@ -88,7 +88,7 @@ It is best practice to add documentation to Dynamo nodes that describe the node'
   * For example: `/// Documentation text and XML goes here`
 * After the three slashes, create XML tags above methods that Dynamo will read when importing the .dll
   * For example: `/// <summary>...</summary>`
-* Enable XML documentation in Visual Studio by selecting `Project > Project Properties > Build` and checking `XML documentation file`
+* Enable XML documentation in Visual Studio by selecting `Project > [Project] Properties > Build > Output` and checking `Documentation file`
 
 ![Generating an XML file](images/vs-xml.jpg)
 
@@ -167,6 +167,11 @@ Always prioritize clarity, even if that means deviating from these guidelines.
 | Capitalize the first word of a sentence and any proper nouns such as names and traditionally capitalized nouns. <ul><li>Example: Returns the intersection of two *BoundingBoxes*</li></ul>      | Don't capitalize common geometry objects and concepts unless needed for clarity. <ul><li>Example: Scales non-uniformly around the given *Plane*      |
 | Capitalize Boolean. Capitalize True and False when referring to the output of Booleans. <ul><li>Example: Returns *True* if the two values are different</li><li>Example: Converts a string to all uppercase or all lowercase characters based on a *Boolean* parameter      | Don't lowercase Boolean. Don't lowercase True and False when referring to the output of Booleans. <ul><li>Example: Returns *true* if the two values are different</li><li>Example: Converts a string to all uppercase characters or all lowercase characters based on a *boolean* parameter</li></ul>
 
+##### Dynamo Node Warnings and Errors
+
+Node warnings and errors alert the user to an issue with the graph. They notify the user of problems that interfere with normal graph operation by displaying an icon and expanded text bubble above the node. Node errors and warnings can vary in severity: Some graphs can run sufficiently with warnings, while others block expected results. In all cases, node errors and warnings are important tools to keep the user up to date on issues with their graph.
+
+For guidelines to ensure consistency and help save time when writing or updating node warning and error messages please refer to the [Content Pattern: Node Warnings and Errors](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors) wiki page.
 
 #### Objects <a href="#objects" id="objects"></a>
 
