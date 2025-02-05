@@ -126,7 +126,7 @@
     * [Build a Package from Visual Studio](11\_developer\_primer/4\_publish\_a\_package/1-build-a-package-from-visual-studio.md)
     * [Extensions as Packages](11\_developer\_primer/4\_publish\_a\_package/2-extensions-as-packages.md)
   * [Pull Requests](11\_developer\_primer/5\_pull\_requests/1-pull-requests.md)
-  * [Pull Requests](11\_developer\_primer/6\_testing\_expectations/1-testing-expectations.md)
+  * [Testing Expectations](11\_developer\_primer/6\_testing\_expectations/1-testing-expectations.md)
   * [Examples](11\_developer\_primer/7\_examples/README.md)
 * [Appendix](a\_appendix/README.md)
   * [Visual Programming and Dynamo](a\_appendix/a-1\_visual-programming-and-dynamo.md)
