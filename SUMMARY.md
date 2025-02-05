@@ -130,6 +130,7 @@
 * [Appendix](a\_appendix/README.md)
   * [Visual Programming and Dynamo](a\_appendix/a-1\_visual-programming-and-dynamo.md)
   * [Resources](a\_appendix/a-2\_resources.md)
+  * [Release Notes](a\_appendix/a-7\_release-notes.md)
   * [Useful Packages](a\_appendix/a-3\_packages.md)
   * [Example Files](a\_appendix/a-4\_example-files.md)
   * [Host Integration Map](a\_appendix/host-integration-map.md)
