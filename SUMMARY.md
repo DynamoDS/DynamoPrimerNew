@@ -122,6 +122,7 @@
     * [Updating your Packages and Dynamo Libraries for Dynamo 3.x](11\_developer\_primer/3\_developing\_for\_dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-3x-Net8.md)
     * [Extensions](11\_developer\_primer/3\_developing\_for\_dynamo/7-extensions.md)
     * [Defining Custom Package Organisation for Dynamo 2.0+](11\_developer\_primer/3\_developing\_for\_dynamo/9-defining-custom-package-organisation-dynamo2.0+.md)
+    * [Dynamo Command Line Interface](11\_developer\_primer/3\_developing\_for\_dynamo/10-command-line-interface.md)
   * [Publish a Package](11\_developer\_primer/4\_publish\_a\_package/README.md)
     * [Build a Package from Visual Studio](11\_developer\_primer/4\_publish\_a\_package/1-build-a-package-from-visual-studio.md)
     * [Extensions as Packages](11\_developer\_primer/4\_publish\_a\_package/2-extensions-as-packages.md)
