@@ -101,7 +101,7 @@ The approach that will solve this issue and allow for control at a central locat
 In the UI of an individual application, go to *Dynamo -> Preferences -> Package Settings -> Node and Package file locations*.  In the dialog, press the "Add Path" button and browse to the network location for the shared package resource. 
  
 As an automated process, it would involve adding information to the configuration file that is installed with Dynamo:  
-`C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml_.`
+`C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
 By default, the configuration for Dynamo for Revit is:
  
