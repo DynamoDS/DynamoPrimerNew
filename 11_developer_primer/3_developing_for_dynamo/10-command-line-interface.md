@@ -45,6 +45,16 @@
 ***
       --ServiceMode                 Specify the service mode startup
 
+
+#### Why 
+ You might want to control Dynamo from the command line for various reasons, these might include: 
+ 
+ * Automating many Dynamo runs
+ * Testing of Dynamo Graphs (also look at -c when using DynamoSandbox)
+ * Running a sequence of Dynamo graphs in a specific order
+ * Writing batch files that run multiple command line executions
+ * Writing another program to control and automate the running of Dynamo graphs and do cool things with the results of those computations
+
 #### What
 The Command Line Interface (DynamoCLI) is a supplement to DynamoSandbox. it is a dos/terminal command line utility designed to provide the convenience of command line arguments to run Dynamo. In its first implementation, it does not run standalone, it must be run from the folder where the Dynamo binaries reside, as it depends on the same core DLLs as the Sandbox. It can not interoperate with other builds of Dynamo.
 
@@ -68,19 +78,8 @@ This command will tell Dynamo to open the specified file at *"C:\someReallyCoolD
 * At this time you will need to run DynamoCLI from its install location inside the [Dynamo Version] folder. The CLI needs access to the same .dlls as Dynamo so it should not be moved.
 * You should be able to execute graphs that are currently open in Dynamo, but this may cause unintended side effects.
 * All file paths are fully dos compliant so relative and fully qualified paths should work, but be sure to enclose your paths in quotes *"C:path\to\file.dyn"* 
-* DynamoCLI is new functionality and currently in flux: the **CLI loads only a subset** of standard Dynamo libraries at this time, note this if a graph does not execute correctly. These libraries are specified [here](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs) 
+* DynamoCLI is new functionality and currently in flux: the **CLI loads only a subset** of standard Dynamo libraries at this time, note this if a graph does not execute correctly. These libraries are specified [here](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28) 
 * Currently no std output is provided if no errors are encountered, the CLI will simply exit after the run completes.
- 
-
-#### Why 
- You might want to control Dynamo from the command line for various reasons, these might include: 
- 
- * Automating many Dynamo runs
- * Testing of Dynamo Graphs (also look at -c when using DynamoSandbox)
- * Running a sequence of Dynamo graphs in a specific order
- * Writing batch files that run multiple command line executions
- * Writing another program to control and automate the running of Dynamo graphs and do cool things with the results of those computations
- 
  
 #### How
 
