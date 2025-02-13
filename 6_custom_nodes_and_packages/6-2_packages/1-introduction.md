@@ -97,9 +97,14 @@ For users who are asking if it is possible to deploy Dynamo (in any form) with p
 The approach that will solve this issue and allow for control at a central location for all users with Dynamo installs is to add a custom package path to each installation.
 
 **Adding a network folder where the BIM manager or others could supervise the stocking of the folder with office approved packages**  
+
 In the UI of an individual application, go to *Dynamo -> Preferences -> Package Settings -> Node and Package file locations*.  In the dialog, press the "Add Path" button and browse to the network location for the shared package resource. 
  
-As an automated process, it would involve adding information to the configuration file that is installed with Dynamo:  _C:\Users/\[Username]\AppData\Roaming\Dynamo\Dynamo Revit/\[Dynamo Version]\DynamoSettings.xml_. By default, the configuration for Dynamo for Revit is:
+As an automated process, it would involve adding information to the configuration file that is installed with Dynamo:  
+`C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+By default, the configuration for Dynamo for Revit is:
+ 
  
 `<CustomPackageFolders>`  
 
