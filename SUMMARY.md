@@ -101,6 +101,7 @@
   * [Scripting Strategies](9\_best\_practices/2-scripting-strategies.md)
   * [Scripting Reference](9\_best\_practices/3-scripting-reference.md)
   * [Managing Your Program](9\_best\_practices/4-managing-your-program.md)
+  * [Efficiently Working With Large Data Sets In Dynamo](9\_best\_practices/5-efficiently-working-with-large-datasets.md)
 * [Sample Workflows](10\_sample\_workflow/README.md)
   * [Getting Started Workflows](10\_sample\_workflow/10-1\_getting-started-workflows/README.md)
     * [Parametric Vase](10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
