@@ -28,7 +28,7 @@ Creates a Revit BoundingBoxXYZ from a Dynamo coordinate system and two defining 
 
 Converts a Dynamo BoundingBox to a Revit BoundingBoxXYZ.
 
-The convertUnits flag (defaulted to true) determines if the coordinates should be converted from Dynamo’s unit system to Revit’s internal units.
+The convertUnits flag (defaulted to true) determines if the coordinates should be converted from Dynamo's unit system to Revit's internal units.
 
 `public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitType(this Autodesk.DesignScript.Geometry.BoundingBox bb, bool convertUnits = true)`
 
@@ -92,7 +92,7 @@ Converts an array of Dynamo Vector objects into an array of Revit XYZ vectors.
 
 #### ToDoubleArray
 
-Converts an array of double values into Revit’s DoubleArray.
+Converts an array of double values into Revit's DoubleArray.
 
 `public static DoubleArray ToDoubleArray(this double[] list)`
 
