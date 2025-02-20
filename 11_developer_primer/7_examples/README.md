@@ -56,7 +56,7 @@ These samples are Visual Studio templates that you can use to start your own pro
 
 Third party developers have made significant and exciting contributions to the platform, many of which are open source as well. The following projects are exceptional examples of what can be done with Dynamo.
 
-**Ladybug** is a Python library to load, analyze and modify EneregyPlus Weather files (epw).
+**Ladybug** is a Python library to load, analyze and modify EnergyPlus Weather files (epw).
 
 [https://github.com/ladybug-tools/ladybug](https://github.com/ladybug-tools/ladybug)
 

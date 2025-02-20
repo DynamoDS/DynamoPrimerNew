@@ -43,5 +43,5 @@ Example of things that don't need System Tests:
 
 System tests should:
 
-* Assert the correct behaviour
-* Assert an absence of pathological behaviours, e.g. no exceptions
+* Assert the correct behavior
+* Assert an absence of pathological behaviors, e.g. no exceptions

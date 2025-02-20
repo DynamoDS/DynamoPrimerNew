@@ -1,8 +1,8 @@
-# Advanced Dynamo Node Customisation
+# Advanced Dynamo Node Customization
 
-With a foundation knowledge of ZeroTouch already established. this section delves into the advantages of customising Dynamo nodes to enhance both functionality and user experience. By adding features such as warning messages, informational messages, and custom icons, you can create nodes that are more intuitive, informative, and visually engaging. These customisations not only help users understand potential issues or optimise their workflows but also make your nodes stand out as professional and user-friendly tools.
+With a foundation knowledge of ZeroTouch already established. this section delves into the advantages of customizing Dynamo nodes to enhance both functionality and user experience. By adding features such as warning messages, informational messages, and custom icons, you can create nodes that are more intuitive, informative, and visually engaging. These customizations not only help users understand potential issues or optimize their workflows but also make your nodes stand out as professional and user-friendly tools.
 
-Customising nodes is an excellent way to ensure your solutions are clear, reliable, and tailored to meet specific project needs.
+Customizing nodes is an excellent way to ensure your solutions are clear, reliable, and tailored to meet specific project needs.
 
 ## Generating Custom Warning Messages Using OnLogWarningMessage <a href="#generating-custom-warning-messages-using-onlogwarningmessage" id="generating-custom-warning-messages-using-onlogwarningmessage"></a>
 
@@ -367,7 +367,7 @@ Historically, there has been limitations in Dynamo for how package authors could
 ![Node Tooltip Description](images/customnodedocumentation-overloads.png)
 
 ### A new way
-Dynamo now offers an improved system for package authors to provide better and more explanatory documentation for your custom nodes. This new approach utilises the user-friendly Markdown language for text authoring and the Documentation Browser view extension to display the Markdown in Dynamo. Using Markdown gives package authors a wide array of new possibilities when documenting their custom nodes. 
+Dynamo now offers an improved system for package authors to provide better and more explanatory documentation for your custom nodes. This new approach utilizes the user-friendly Markdown language for text authoring and the Documentation Browser view extension to display the Markdown in Dynamo. Using Markdown gives package authors a wide array of new possibilities when documenting their custom nodes. 
 
 #### What is Markdown?
 Markdown is a lightweight markup language that you can use to format plaintext text documents. Since Markdown was created in 2004 it's popularity has only increased and is now one of the most popular markup languages in the world.
@@ -423,7 +423,7 @@ Adding new documentation files can also be done whilst Dynamo is open. Simply ad
 
 ### Overview
 
-Custom icons for Zero Touch nodes in Dynamo make your nodes visually distinctive and easier to recognise in the Library. By adding bespoke icons, you can make your nodes stand out from the rest, allowing users to quickly identify them in a list.
+Custom icons for Zero Touch nodes in Dynamo make your nodes visually distinctive and easier to recognize in the Library. By adding bespoke icons, you can make your nodes stand out from the rest, allowing users to quickly identify them in a list.
 
 This guide will show you how to add icons to your Zero Touch nodes.
 

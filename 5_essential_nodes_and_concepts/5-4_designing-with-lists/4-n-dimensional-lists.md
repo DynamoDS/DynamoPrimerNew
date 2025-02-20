@@ -177,7 +177,7 @@ Last step, let's reverse the direction of the striated members. As we used trans
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
-> 1. Since we have one more tier to the hierarchy, so we need to use **List.Map** with a **List.Tranpose** function to change the direction of our Nurbs curves.
+> 1. Since we have one more tier to the hierarchy, so we need to use **List.Map** with a **List.Transpose** function to change the direction of our Nurbs curves.
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 

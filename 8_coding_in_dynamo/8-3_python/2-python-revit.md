@@ -47,7 +47,7 @@ The examples below demonstrate ways to implement Revit-specific operations from 
 
 In these exercises, we'll explore elementary Python scripts in Dynamo for Revit. The exercise will focus on dealing with Revit files and elements, as well as the communication between Revit and Dynamo.
 
-This is a cut and dry method for retrieving the _doc_, _uiapp_, and _app_ of the Revit file linked to your Dynamo sesson. Programmers who have worked in the Revit API before may notice the items in the watch list. If these items do not look familiar, that's okay; we'll be using other examples in the exercises below.
+This is a cut and dry method for retrieving the _doc_, _uiapp_, and _app_ of the Revit file linked to your Dynamo session. Programmers who have worked in the Revit API before may notice the items in the watch list. If these items do not look familiar, that's okay; we'll be using other examples in the exercises below.
 
 Here is how we're importing Revit Services and retrieving the document data in Dynamo.
 

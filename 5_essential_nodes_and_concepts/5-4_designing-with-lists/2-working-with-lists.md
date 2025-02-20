@@ -53,7 +53,7 @@ The image below is the base graph which we are drawing lines between two circles
 > 6. With a **Geometry.Translate** node, move the circle up 100 units in the Z direction.
 > 7. With a **Code Block** node, define a range of ten numbers between 0 and 1 with this line of code: `0..1..#10;`
 > 8. Plug the code block from the previous step into the _param_ input of two **Curve.PointAtParameter** nodes. Plug **Circle.ByPlaneRadius** into the curve input of the top node, and **Geometry.Translate** into the curve input of the node beneath it.
-> 9. Using a **Line.ByStartPointEndPoint**, connect the two **Curve.PointAtParamete**_r_ nodes.
+> 9. Using a **Line.ByStartPointEndPoint**, connect the two **Curve.PointAtParameter** nodes.
 
 ### List.Count
 

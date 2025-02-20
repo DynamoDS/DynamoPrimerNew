@@ -20,7 +20,7 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
         SampleViewExtension_ViewExtensionDefinition.xml
 ```
 
-Assuming you have already built your extension you will (at a minimum) have a .NET assebly and a manifest file. The assembly should contain a class which implements `IViewExtension` or `IExtension`. The manifest .XML file tells Dynamo which class to instantiate in order to launch your extension. For the package manager to correctly locate the extension the manifest file should accurately correspond to the assembly location and naming.
+Assuming you have already built your extension you will (at a minimum) have a .NET assembly and a manifest file. The assembly should contain a class which implements `IViewExtension` or `IExtension`. The manifest .XML file tells Dynamo which class to instantiate in order to launch your extension. For the package manager to correctly locate the extension the manifest file should accurately correspond to the assembly location and naming.
 
 Place any assembly files in the `bin` folder and the manifest file in the `extra` folder. Any additional assets can also be placed in this folder.
 
@@ -45,6 +45,6 @@ Before publishing publicly you should always publish locally to make sure everyt
 
 ### Pulling <a href="#pulling" id="pulling"></a>
 
-To verify your package has been succesffully uploaded you should be able to search for it given the naming and keywords specificed in the publishing step. Finally, it is important to note that same extensions will require a reboot of Dynamo before functioning. Usually these extensions require parameters specified when Dynamo boots up.
+To verify your package has been successfully uploaded you should be able to search for it given the naming and keywords specified in the publishing step. Finally, it is important to note that same extensions will require a reboot of Dynamo before functioning. Usually these extensions require parameters specified when Dynamo boots up.
 
 ![Search for packages](images/ViewExtension_Search.jpg)

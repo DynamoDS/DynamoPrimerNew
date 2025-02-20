@@ -33,7 +33,7 @@ Using the core Dynamo nodes in tandem with custom Revit ones, a user can substan
 
 ### Running Dynamo in Revit
 
-In a Revit project or family editor, navigate to Addins and click Dynamo.\*
+In a Revit project or family editor, navigate to Add-ins and click Dynamo.\*
 
 {% hint style="warning" %}
 \*Dynamo will run only in the file in which it was opened.
