@@ -105,6 +105,7 @@ As an automated process, it would involve adding information to the configuratio
 
 By default, the configuration for Dynamo for Revit is:
  
+ 
 `<CustomPackageFolders>`  
 
 `<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
@@ -120,6 +121,7 @@ Adding a custom location would look like:
 `<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
 
 `</CustomPackageFolders>`
+
 
 The central management for this folder can also be controlled by simply making the folder read only.
 
