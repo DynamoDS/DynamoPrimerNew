@@ -8,6 +8,7 @@ Below, is a list of what Dynamo version was shipped with some of the key Autodes
 
 | Host Version | Dynamo       |
 | ------------ | ------------ |
+| 2025.4       | 3.3.0.6316   |
 | 2025.2       | 3.2.1.5366   |
 | 2025.1       | 3.0.3.7597   |
 | 2025         | 3.0.3.7597   |
