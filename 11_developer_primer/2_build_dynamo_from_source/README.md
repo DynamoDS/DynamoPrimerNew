@@ -2,7 +2,7 @@
 
 Dynamo's source is hosted on Github for anyone to clone and make contributions to. In this chapter, we will walk through how to clone the repository using git, compile the source files with Visual Studio, run and debug a local build, and pull any new changes from Github.
 
-#### Locating the Dynamo repositories on Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Locating the Dynamo repositories on Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 Github is a hosting service based on [git](https://help.github.com/articles/git-and-github-learning-resources/), a version control system for tracking changes and coordinating work between people. Git is a tool we can leverage to download Dynamo's source files, and keep them updated with a few commands. Using this method will avoid the unnecessary and inherently messy work of downloading and manually replacing the source files at every update. The git version control system will track any differences between a local and remote code repository.
 
@@ -16,7 +16,7 @@ Dynamo's source is hosted on the DynamoDS Github in this repository: [https://gi
 > 3. Dynamo's source files
 > 4. Git specific files
 
-#### Pulling the Dynamo repository using git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### Pulling the Dynamo repository using git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
 Before we can clone the repository, we need to install git. Follow this [short guide](https://help.github.com/articles/set-up-git/#setting-up-git) for installation steps, and how to setup a GitHub username and email. For this example, we will be using git on the command line. This guide assumes you will be using windows but you can also use git on mac or Linux to clone the dynamo source.
 
@@ -47,7 +47,7 @@ We know git is working if the cloning operation completed successfully. In the f
 > 1. Dynamo's source files
 > 2. Git files
 
-#### Building the repository using Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### Building the repository using Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 With the source files now cloned to our local machine, we can build an executable file for Dynamo. In order to do this, we will need to set up the Visual Studio IDE and ensure that the .NET Framework and DirectX are installed.
 
@@ -84,7 +84,7 @@ With the project open, we can build the solution. This process will create a Dyn
 > 1. Select `Build > Build Solution`
 > 2. Verify that the build was successful in the Output window, it should read similar to `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
-#### Running a local build <a href="#running-a-local-build" id="running-a-local-build"></a>
+### Running a local build <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 If Dynamo builds successfully, a `bin` folder will be created in the Dynamo repository with the DynamoSandbox.exe file. In our case, we're building with the Debug option, so the executable file is located in `bin\AnyCPU\Debug`. Running this will open a local build of Dynamo.
 
@@ -96,7 +96,7 @@ Now we are almost fully set up to start developing for Dynamo.
 
 For instructions on building Dynamo for other platforms (e.g. Linux or OS X) visit this [wiki page](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac).
 
-#### Debugging a local build using Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### Debugging a local build using Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
 Debugging is a process of identifying, isolating, and correcting a bug or issue. Once Dynamo has been successfully built from source, we can use several tools in Visual Studio to debug a running application, the DynamoRevit add-in for example. We can analyze its source code to find the root of an issue, or watch the currently executing code. For a more detailed explanation of how to debug and navigate code in Visual Studio, refer to the [Visual Studio Docs](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
@@ -137,7 +137,7 @@ In both situations we are attaching the debugger to a process we wish to debug. 
 
 In the next section, **Build DynamoRevit from Source,** we will walk through a specific example of debugging, and explain how to set break points, step through code, and read the call stack.
 
-#### Pulling latest build <a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### Pulling latest build <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 Since the Dynamo source is hosted on Github, the easiest way to keep local source files updated is by pulling changes using git commands.
 

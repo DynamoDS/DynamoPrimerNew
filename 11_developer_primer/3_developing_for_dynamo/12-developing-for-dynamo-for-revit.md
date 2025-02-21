@@ -44,7 +44,7 @@ The convertUnits flag (defaulted to true) converts the coordinates if necessary.
 
 Converts a Dynamo Vector to a Revit XYZ.
 
-Notice that the convertUnits flag is defaulted to false because vectors represent direction and magnitude, which usually do not require unit conversion. Covnersion might effect the direction and length of the vector. 
+Notice that the convertUnits flag is defaulted to false because vectors represent direction and magnitude, which usually do not require unit conversion. Conversion might effect the direction and length of the vector. 
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +58,7 @@ Converts a Dynamo Point to a Revit XYZ.
 
 Converts a Dynamo Vector to a Revit XYZ.
 
-Notice that the convertUnits flag is defaulted to false because vectors represent direction and magnitude, which usually do not require unit conversion. Covnersion might effect the direction and length of the vector. 
+Notice that the convertUnits flag is defaulted to false because vectors represent direction and magnitude, which usually do not require unit conversion. Conversion might effect the direction and length of the vector. 
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 

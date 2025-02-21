@@ -1,14 +1,14 @@
 # Using COM (interop) types in Dynamo Packages
 
 ## Some general information about interop types
-What are COM types? - https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model 
+What are COM types? - [https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model](https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model )
 
 The standard way to use COM types in C# is to reference and ship the primary interop assemblies (Basically a big collection of APIs) with your package. 
 
 An alternative to this is to embed the PIA (Primary interop assemblies) in your managed assembly. This basically only includes the types and members that are actually used by a managed assembly. However this approach has some other issues like type equivalence.
 
 This post describes the issue pretty well: 
-* https://learn.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types
+* [https://learn.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types](https://learn.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)
 
 ## How Dynamo manages types equivalence
 Dynamo delegates type equivalence to the .NET (dotnet) runtime. 
