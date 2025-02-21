@@ -18,7 +18,7 @@ We will use the terms dynamo script, graph, and program interchangeably in these
 ## Dynamo Custom Entry Point
 #### Dynamo Revit as Example 
 
-[https://github.com/DynamoDS/DynamoRevit/blob/f1e305e3180819815d8adc763976eadb95831ebe/src/DynamoRevit/DynamoRevit.cs#L425](https://github.com/DynamoDS/DynamoRevit/blob/f1e305e3180819815d8adc763976eadb95831ebe/src/DynamoRevit/DynamoRevit.cs#L425 )
+[https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
 The `DynamoModel` is the entry point for an application hosting Dynamo – it represents a Dynamo Application. The model is the top level root object which contains references to the other important data structures and objects that make up the dynamo application and DesignScript virtual machine. 
 
