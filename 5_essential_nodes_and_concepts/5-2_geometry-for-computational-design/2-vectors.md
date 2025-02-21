@@ -80,7 +80,7 @@ Planes are two-dimensional abstract "Helpers." More specifically, Planes are con
 
 You might be thinking, "Wait! Origin? That sounds like a Coordinate System... like the one I use to model in my CAD software!"
 
-And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimentional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
+And you're correct! Most modeling software take advantage of construction planes or "levels" to define a local two-dimensional context to draft in. XY, XZ, YZ -or- North, Southeast, Plan might sound more familiar. These are all Planes, defining an infinite "flat" context. Planes don't have depth, but they do help us describe direction as well -
 
 ### Coordinate System
 

@@ -4,7 +4,7 @@
 
 ### What is Curve?
 
-[Curves ](4-curves.md#deep-dive-into...)are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvey or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
+[Curves ](4-curves.md#deep-dive-into...)are the first Geometric Data Type we've covered that have a more familiar set of shape descriptive properties - How curvy or straight? How long or short? And remember that Points are still our building blocks for defining anything from a line to a spline and all the Curve types in between.
 
 ![Curve Types](../images/5-2/4/CurveTypes.jpg)
 

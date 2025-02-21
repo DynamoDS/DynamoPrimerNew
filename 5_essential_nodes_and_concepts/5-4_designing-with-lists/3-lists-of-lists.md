@@ -139,7 +139,7 @@ Start by setting up two lists of points.
 
 > 1. Use **Sequence** node to generate 10 values, each with a 10 step increment.
 > 2. Connect the result to the x input of a **Point.ByCoordinates** node. This will create a list of points in Dynamo.
-> 3. Add a second **Point.ByCoordinates** node to the workspace, use the same **Sequence** output as its x input, but use an **Interger Slider** as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.
+> 3. Add a second **Point.ByCoordinates** node to the workspace, use the same **Sequence** output as its x input, but use an **Integer Slider** as its y input, and set its value to 31 (it can be any value as long as they do not overlap with the first set of points) so the 2 sets of points are not overlapped on top of each other.
 
 Next, we will use **List.Combine** to apply a function on objects in 2 separate lists. In this case, it will be a simple draw line function.
 

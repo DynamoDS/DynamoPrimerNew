@@ -55,7 +55,7 @@ The image below represents the golden spiral in in visual programming form. When
 >
 > d. **Math.Pow**: as a function of the '_t_' and the number '_e_' this creates the Fibonacci sequence.
 >
-> e. **Math.Cos and Math.Sin**: These two trigonmetric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
+> e. **Math.Cos and Math.Sin**: These two trigonometric functions will differentiate the x-coordinate and the y-coordinate, respectively, of each parametric point.
 >
 > f. **Watch**: We now see that our output is two lists, these will be the _x_ and _y_ coordinates of the points used to generate the spiral.
 

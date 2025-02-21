@@ -18,7 +18,7 @@ Open Dynamo and import the `ZeroTouchEssentials.dll` to get the nodes we will be
 
 The code examples are pulled from and generally match [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/master/ZeroTouchEssentials/ZeroTouchEssentials.cs). The XML documentation has been removed to keep them concise, and each code example will create the node in the image above it.
 
-#### Default Input Values <a href="#default-input-values" id="default-input-values"></a>
+### Default Input Values <a href="#default-input-values" id="default-input-values"></a>
 
 Dynamo supports the definition of default values for input ports on a node. These default values will be supplied to the node if the ports have no connections. Defaults are expressed using the C# mechanism of specifying optional arguments in the [C# Programming Guide](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Default are specified in the following way:
 
@@ -42,7 +42,7 @@ namespace ZeroTouchEssentials
 
 > 1. The default value will show up when hovering over the node input port
 
-#### Returning Multiple Values <a href="#returning-multiple-values" id="returning-multiple-values"></a>
+### Returning Multiple Values <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
 Returning multiple values is a bit more complex than creating multiple inputs and will need to be returned using a dictionary. The dictionary's entries become ports on the output side of the node. Multiple return ports are created in the following way:
 
@@ -80,7 +80,7 @@ A node that returns multiple outputs.
 
 > 1. Notice that there are now two output ports named according to the strings we entered for the dictionary's keys.
 
-#### Documentation, Tooltips, and Search <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
+### Documentation, Tooltips, and Search <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
 
 It is best practice to add documentation to Dynamo nodes that describe the node's function, inputs, outputs, search tags, etc. This is done through XML documentation tags. XML documentation is created in the following way:
 
@@ -134,7 +134,7 @@ Note that the code for this example node contains:
 > 2. An input description
 > 3. An output description
 
-##### Dynamo Node Descriptions Best Practices 
+#### Dynamo Node Descriptions Best Practices 
 
 Node descriptions briefly describe a node’s function and output. In Dynamo, they appear in two places:
 
@@ -145,7 +145,7 @@ Node descriptions briefly describe a node’s function and output. In Dynamo, th
 
 Follow these guidelines to ensure consistency and help save time when writing or updating node descriptions.
 
-###### Overview
+##### Overview
 
 Descriptions should be one to two sentences. If more info is needed, include it under In Depth in the Documentation Browser.
 
@@ -155,7 +155,7 @@ Language should be as clear and simple as possible. Define acronyms at first men
 
 Always prioritize clarity, even if that means deviating from these guidelines.
 
-###### Guidelines
+##### Guidelines
 
 | Do's      | Don'ts |
 | ----------- | ----------- |
@@ -167,13 +167,13 @@ Always prioritize clarity, even if that means deviating from these guidelines.
 | Capitalize the first word of a sentence and any proper nouns such as names and traditionally capitalized nouns. <ul><li>Example: Returns the intersection of two *BoundingBoxes*</li></ul>      | Don't capitalize common geometry objects and concepts unless needed for clarity. <ul><li>Example: Scales non-uniformly around the given *Plane*      |
 | Capitalize Boolean. Capitalize True and False when referring to the output of Booleans. <ul><li>Example: Returns *True* if the two values are different</li><li>Example: Converts a string to all uppercase or all lowercase characters based on a *Boolean* parameter      | Don't lowercase Boolean. Don't lowercase True and False when referring to the output of Booleans. <ul><li>Example: Returns *true* if the two values are different</li><li>Example: Converts a string to all uppercase characters or all lowercase characters based on a *boolean* parameter</li></ul>
 
-##### Dynamo Node Warnings and Errors
+#### Dynamo Node Warnings and Errors
 
 Node warnings and errors alert the user to an issue with the graph. They notify the user of problems that interfere with normal graph operation by displaying an icon and expanded text bubble above the node. Node errors and warnings can vary in severity: Some graphs can run sufficiently with warnings, while others block expected results. In all cases, node errors and warnings are important tools to keep the user up to date on issues with their graph.
 
 For guidelines to ensure consistency and help save time when writing or updating node warning and error messages please refer to the [Content Pattern: Node Warnings and Errors](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors) wiki page.
 
-#### Objects <a href="#objects" id="objects"></a>
+### Objects <a href="#objects" id="objects"></a>
 
 Dynamo doesn't have a `new` keyword, so objects will need to be constructed using static construction methods. Objects are constructed in the following way:
 
@@ -212,7 +212,7 @@ After the ZeroTouchEssentials dll has been imported there will be a ZeroTouchEss
 
 ![ByTwoDoubles node](images/dyn-constructor.jpg)
 
-#### Using Dynamo Geometry Types <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
+### Using Dynamo Geometry Types <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
 Dynamo libraries can use native Dynamo geometry types as inputs and create new geometry as outputs. Geometry types are created in the following way:
 
@@ -246,7 +246,7 @@ A node that gets a curve's length and doubles it.
 
 > 1. This node accepts a Curve geometry type as an input.
 
-#### Dispose/using Statements <a href="#disposeusing-statements" id="disposeusing-statements"></a>
+### Dispose/using Statements <a href="#disposeusing-statements" id="disposeusing-statements"></a>
 
 Geometry resources that are not returned out of functions will need to be manually managed unless you are using Dynamo version 2.5 or later. In Dynamo 2.5 and later versions, geometry resources are handled by the system internally, however, you may still have to dispose geometry manually if you have a complex use case or you have to cut down on memory at a deterministic time. The Dynamo engine will handle any geometry resources that are returned out of functions. Geometry resources that are not returned can be handled manually in the following ways:
 
@@ -276,7 +276,7 @@ Geometry resources that are not returned out of functions will need to be manual
     return l;
     ```
 
-#### Migrations <a href="#migrations" id="migrations"></a>
+### Migrations <a href="#migrations" id="migrations"></a>
 
 When publishing a newer version of a library, node names may change. Name changes can be specified in a migrations file so that graphs built on previous versions of a library continue to work properly when an update is made. Migrations are implemented in the following way:
 
@@ -305,7 +305,7 @@ This example code is telling Dynamo that any node named `GetClosestPoint` is now
 
 > Refer to this code example in [ProtoGeometry.Migrations.xml](https://github.com/DynamoDS/Dynamo/blob/master/extern/ProtoGeometry/ProtoGeometry.Migrations.xml)
 
-#### Generics <a href="#generics" id="generics"></a>
+### Generics <a href="#generics" id="generics"></a>
 
 Zero-Touch currently does not support the use of generics. They can be used, but not in the code that is directly imported where the type is not set. Methods, properties, or classes that are generic and don’t have the type set cannot be exposed.
 

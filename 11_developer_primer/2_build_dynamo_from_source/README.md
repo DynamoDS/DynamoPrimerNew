@@ -18,7 +18,7 @@ Dynamo's source is hosted on the DynamoDS Github in this repository: [https://gi
 
 #### Pulling the Dynamo repository using git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Before we can clone the repository, we need to install git. Follow this [short guide](https://help.github.com/articles/set-up-git/#setting-up-git) for installation steps, and how to setup a gihub username and email. For this example, we will be using git on the command line. This guide assumes you will be using windows but you can also use git on mac or linux to clone the dynamo source.
+Before we can clone the repository, we need to install git. Follow this [short guide](https://help.github.com/articles/set-up-git/#setting-up-git) for installation steps, and how to setup a GitHub username and email. For this example, we will be using git on the command line. This guide assumes you will be using windows but you can also use git on mac or Linux to clone the dynamo source.
 
 We need a URL for the Dynamo repository to clone from. This can be found in the "Clone or download" button on the repository page. Copy the URL to paste into command prompt.
 

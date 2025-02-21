@@ -53,7 +53,7 @@ Now that the source files are in a separate folder, add a `AfterBuild` target to
 >
 > 1. Place AfterBuild target before the end `</Project>` tag.
 
-In the `<ItemGroup>` section, a number of variables are defined to represent specific file types. For example, the `Dll` variable represents all files in the ouput directory whose extension is `.dll`.
+In the `<ItemGroup>` section, a number of variables are defined to represent specific file types. For example, the `Dll` variable represents all files in the output directory whose extension is `.dll`.
 
 ```
 <ItemGroup>
