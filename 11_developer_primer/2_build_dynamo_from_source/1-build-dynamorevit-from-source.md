@@ -15,7 +15,7 @@ To ensure a successful build we will clone and build both the Dynamo and DynamoR
 
 _Note: building Dynamo manually before DynamoRevit is only required if you are building Dynamo 1.x and DynamoRevit 1.x - newer versions of the DynamoRevit repository rely on the NuGet package manager for the Dynamo dependencies required to build. While a build of DynamoRevit 2.x does not require pulling Dynamo manually you'll still need the core `dlls` somewhere else to actually run the DynamoRevit `add-in` - so it's worth pulling and building Dynamo anyway. See more below:_ [_Building the repository using Visual Studio_](#building-the-repository-using-Visual-Studio)
 
-#### Locating the DynamoRevit repository on Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Locating the DynamoRevit repository on Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
 The code for the DynamoRevit project lives in a separate repository on Github from the core Dynamo source code. This repo contains the the source files for Revit-specific nodes and the Revit add-in which loads Dynamo. Builds of DynamoRevit for different versions of Revit (2016, 2017, or 2018, for example) are organized as branches in the repository.
 
@@ -26,7 +26,7 @@ DynamoRevit's source is hosted here: [https://github.com/DynamoDS/DynamoRevit](h
 > 1. Clone or download the repository
 > 2. DynamoRevit's branches reference Revit versions
 
-#### Cloning the repository using git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### Cloning the repository using git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
 In a similar process to pulling the Dynamo repository we will use the git clone command to clone DynamoRevit and specify the branch that matches our Revit version. To get started, we will open a command line interface and set the current directory to the location where we want to clone the files to.
 
@@ -54,7 +54,7 @@ Once the repository has finished cloning, change the current directory to the re
 
 It is important to choose the correct branch of the repository to ensure that when the project builds in Visual Studio it will reference assemblies in the correct version of Revit's installation directory, specifically `RevitAPI.dll` and `RevitAPIUI.dll`.
 
-#### Building the repository using Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### Building the repository using Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
 Before building the repository, we will need to restore the NuGet packages with the `restorepackages.bat` file located in the `src` folder. This bat file uses the [NuGet](https://www.nuget.org) package manager to pull built binaries of dynamo core, which DynamoRevit needs. You might also choose to build these manually, but if you are only making changes to DynamoRevit and not Dynamo core. This makes getting started faster. Make sure to run this file as an admin.
 
@@ -75,7 +75,7 @@ With the packages restored, open the `DynamoRevit.All.sln` Visual Studio solutio
 > 1. Select `Build > Build Solution`
 > 2. Verify that the build was successful in the Output window. A message should read `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
 
-#### Running a local build of DynamoRevit in Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### Running a local build of DynamoRevit in Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
 Revit requires an add-in file to recognize DynamoRevit, something the [installer](http://dynamobim.org/download/) would create automatically. In development we need to manually create an add-in file that points to the build of DynamoRevit we want to use, specifically the `DynamoRevitDS.dll` assembly. We also need to point DynamoRevit to a build of Dynamo.
 
@@ -147,7 +147,7 @@ Now when we open Revit, there should be a Dynamo add-in located in the Manage ta
 
 If an error dialog window appears showing missing assemblies, it is likely that there was a mismatch between the versions of DynamoCore that you built against and the ones you are loading at runtime. For example, DynamoRevit with the latest 2.0 beta packages of DynamoCore will not work if you try to start it using Dynamo 1.3 dlls. Make sure that both repos are of the same version and DynamoRevit is pulling a matching version of the NuGet dependencies. These are defined in the `package.json` file of the DynamoRevit repo.
 
-#### Debugging DynamoRevit using Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### Debugging DynamoRevit using Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
 In the previous section, **Build Dynamo from Source**, we briefly introduced debugging in Visual Studio and how to attach visual studio to a process. Using an exception in the Wall.ByCurveAndHeight node as an example, we will walk through how to attach to a process, set break points, step through code, and use the call stack to determine the exception's source. These debugging tools apply generally to .net development workflows, and are worth exploring outside of this guide.
 
@@ -210,7 +210,7 @@ Since this is not an open source library, we cannot make changes there - now tha
 
 This process can be applied to any source files we are working with. If we are developing a library of Zero-Touch nodes for Dynamo Studio, we can open the library's source and attach a Dynamo process to debug the node library. Even if everything is functioning perfectly, debugging is a great way to explore code and find out how things are working.
 
-#### Pull latest build <a href="#pull-latest-build" id="pull-latest-build"></a>
+### Pull latest build <a href="#pull-latest-build" id="pull-latest-build"></a>
 
 This process is nearly identical to pulling changes for Dynamo, except that we will need to ensure that we are on the correct branch. Use the `git branch` command in the DynamoRevit repository to see which branches are available locally and which are currently checked out.
 

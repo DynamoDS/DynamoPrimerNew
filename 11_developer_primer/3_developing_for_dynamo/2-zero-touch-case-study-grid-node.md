@@ -6,7 +6,7 @@ This example will touch on a few of the features and concepts to be aware of whe
 
 ![Rectangular grid graph](images/cover-image.jpg)
 
-#### Custom Rectangular Grid Node <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Custom Rectangular Grid Node <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 To start building the grid node, create a new Visual Studio class library project. Refer to the Getting Started page for an in-depth walk-through of how to set up a project.
 
@@ -96,7 +96,7 @@ Check the project's `bin` folder for a `.dll`. If the build was successful, we c
 > 2. The custom node on the canvas
 > 3. The Add button for adding the `.dll` to Dynamo
 
-#### Custom Node Modifications <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### Custom Node Modifications <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 In the example above, we created a fairly simple node that didn't define much else outside of the `RectangularGrids` method. However, we may want to create tooltips for input ports or give the node a summary like the standard Dynamo nodes. Adding these features to custom nodes makes them easier to use, especially if a user wants to search for them in the Library.
 

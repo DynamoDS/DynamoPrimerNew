@@ -18,13 +18,13 @@ We will use the terms dynamo script, graph, and program interchangeably in these
 ## Dynamo Custom Entry Point
 #### Dynamo Revit as Example 
 
-https://github.com/DynamoDS/DynamoRevit/blob/f1e305e3180819815d8adc763976eadb95831ebe/src/DynamoRevit/DynamoRevit.cs#L425 
+[https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
 The `DynamoModel` is the entry point for an application hosting Dynamo – it represents a Dynamo Application. The model is the top level root object which contains references to the other important data structures and objects that make up the dynamo application and DesignScript virtual machine. 
 
 A configuration object is used to set common parameters on the `DynamoModel` when it is constructed. 
 
-The examples in this document are taken from the DynamoRevit implementation, which is an integration where Revit hosts a `DynamoModel` as an Addin. (Plugin architecture for Revit). When this Addin loads – it starts a `DynamoModel` and then displays it to the user with a `DynamoView` and `DynamoViewModel`. 
+The examples in this document are taken from the DynamoRevit implementation, which is an integration where Revit hosts a `DynamoModel` as an Add-in. (Plugin architecture for Revit). When this Add-in loads – it starts a `DynamoModel` and then displays it to the user with a `DynamoView` and `DynamoViewModel`. 
 
 Dynamo is a c# .net project and to use it in process in your application you need to be able to host and execute .net code.
 
@@ -111,7 +111,7 @@ It consists of the following:
 
 * PreloadLibraryPaths // where are preloaded nodes binaries located, e.g. DSOffice.dll 
 
-* AdditioanlNodeDirectories // Where additional node binaries are located
+* AdditionalNodeDirectories // Where additional node binaries are located
  
 * AdditionalResolutionPaths // Additional assembly resolution paths for other dependencies that might be required while loading libraries 
 
@@ -169,7 +169,7 @@ Default preference setting path is managed by `PathManager.PreferenceFilePath`, 
 
 * BackupFiles // A list of backup file paths 
 
-* CustomPackageFolders // A list of folders containing zero-touch binaries and direcory paths that will be scanned for packages and custom nodes.
+* CustomPackageFolders // A list of folders containing zero-touch binaries and directory paths that will be scanned for packages and custom nodes.
 
 * PackageDirectoriesToUninstall // A list of packages used by the Package Manager to determine which packages are marked for deletion. These paths will be deleted if possible during Dynamo startup.
 
@@ -294,7 +294,7 @@ An example of serialized preference settings:
 
 * UpdateManager // Integrator’s implementation of UpdateManager, see description above 
 
-* ProcessMode // Equivalent to TaskProcessMode, Synchronous if in test mode, otherwise Asynchronous - This controls the behavior of the scheduler. Single threaded enviornments may also set this to synchronous.
+* ProcessMode // Equivalent to TaskProcessMode, Synchronous if in test mode, otherwise Asynchronous - This controls the behavior of the scheduler. Single threaded environments may also set this to synchronous.
 
 Use the target StartConfiguration to launch `DynamoModel`
 
@@ -614,7 +614,7 @@ The important phases of the constructor's execution as they relate to element bi
 ### Discussion
 
 #### Efficiency
-* Currently each serialize trace object is serialized using SOAP xml formatting - this is quite verbose and duplicates a lot of information. Then the data is base64 encoded twice - This is not efficent in terms of serialization or deserialization. This can be improved in the future if the internal format is not built on top of. Again, we repeat, do not rely on the format of the serialized data at rest.
+* Currently each serialize trace object is serialized using SOAP xml formatting - this is quite verbose and duplicates a lot of information. Then the data is base64 encoded twice - This is not efficient in terms of serialization or deserialization. This can be improved in the future if the internal format is not built on top of. Again, we repeat, do not rely on the format of the serialized data at rest.
 
 #### Should ElementBinding be on by default?
 * There are use cases where element binding is not desired. What if one is an advanced dynamo user developing a program which should be run multiple times to generate random groupings elements. The programs intent is to create additional elements each time the program is run. This use case is not easily achievable without workarounds to stop element binding from working.
@@ -710,7 +710,7 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
 
 #### DynamoCore base classes: 
 
-* https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs 
+* [https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs](https://github.com/DynamoDS/Dynamo/blob/ec10f936824152e7dd7d6d019efdcda0d78a5264/src/Libraries/CoreNodeModels/Selection.cs )
 
 * [NodeModel Case Study - Custom UI](11\_developer\_primer/3\_developing\_for\_dynamo/5-nodemodel-case-study-custom-ui.md)
 * [Updating your Packages and Dynamo Libraries for Dynamo 2.x](11\_developer\_primer/3\_developing\_for\_dynamo/6-updating-your-packages-and-dynamo-libraries-for-dynamo-2x.md)
@@ -720,9 +720,9 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
 
 #### DynamoRevit: 
 
-* https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs 
+* [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs )
 
-* https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Elements.cs 
+* [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Elements.cs](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Elements.cs)
 
 
 ## Dynamo Built-In Packages Overview
@@ -760,13 +760,13 @@ For internal ADSK packages intended for `Built-In Packages` inclusion - the curr
 
 Using a workaround it's possible to manually create (and even publish) packages with culture subdirectories in the /bin folder of a package.
 
-First create the culture specific subdirectories you require under the packages's `/bin` folder manually. 
+First create the culture specific subdirectories you require under the packages `/bin` folder manually. 
 
 If for some reason, the package needs to also be published to the package manager then you must first publish a version of the package that is missing these culture subdirectories - then publish a new version of the package using the DynamoUI `publish package version`. The new version upload in Dynamo should not delete your folders and files under`/bin`, which you have added manually using the windows file explorer. The package upload process in Dynamo will be updated to deal with the requirements for localized files in the future.
 
 These culture subdirectories are loaded without issue by the .net runtime if they are located in the same directory as the node / extension binaries.
 
-For more information on resource assemblies and .resx files please see: https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps.
+For more information on resource assemblies and .resx files please see: [https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 You'll likely be creating the `.resx` files and compiling them with visual studio. For a given assembly `xyz.dll` - the resulting resources will be compiled to a new assembly `xyz.resources.dll` - as is described above the location and name of this assembly are important.
 
@@ -775,11 +775,11 @@ The generated `xyz.resources.dll` should be located as follows:
 
 To access the localized strings in your package - you can use the ResourceManager - but even simpler you should be able to refer to the `Properties.Resources.YourLocalizedResourceName` from within the assembly you have added a `.resx` file for. For example, see: 
 
-https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodes/List.cs#L457 for an example of a localized error message
+[https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodes/List.cs#L457](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodes/List.cs#L457) for an example of a localized error message
 
-or https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/ColorRange.cs#L19 for an example of a localized Dynamo specific NodeDescription Attribute string.
+or [https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/ColorRange.cs#L19](https://github.com/DynamoDS/Dynamo/blob/master/src/Libraries/CoreNodeModels/ColorRange.cs#L19) for an example of a localized Dynamo specific NodeDescription Attribute string.
 
-or https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs for another example.
+or [https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs](https://github.com/DynamoDS/DynamoSamples/blob/master/src/SampleLibraryUI/Examples/LocalizedCustomNodeModel.cs) for another example.
 
 ### Node Library Layout
 

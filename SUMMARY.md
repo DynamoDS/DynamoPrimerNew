@@ -125,7 +125,7 @@
     * [Defining Custom Package Organization for Dynamo 2.0+](11\_developer\_primer/3\_developing\_for\_dynamo/9-defining-custom-package-organisation-dynamo2.0+.md)
     * [Dynamo Command Line Interface](11\_developer\_primer/3\_developing\_for\_dynamo/10-command-line-interface.md)
     * [Dynamo Integration](11\_developer\_primer/3\_developing\_for\_dynamo/13-dynamo-integration.md)
-    * [Developing For Dynamo For Revit](11\_developer\_primer/3\_developing\_for\_dynamo/12-developing-for-dynamo-for-revit+.md)
+    * [Developing For Dynamo For Revit](11\_developer\_primer/3\_developing\_for\_dynamo/12-developing-for-dynamo-for-revit.md)
     * [Publish a Package](11\_developer\_primer/4\_publish\_a\_package/README.md)
     * [Build a Package from Visual Studio](11\_developer\_primer/4\_publish\_a\_package/1-build-a-package-from-visual-studio.md)
     * [Extensions as Packages](11\_developer\_primer/4\_publish\_a\_package/2-extensions-as-packages.md)

@@ -1,4 +1,4 @@
-# Defining Custom Package Organisation (Dynamo 2.0+)
+# Defining Custom Package Organization (Dynamo 2.0+)
 
 Achieving a desired layout for your package depends on the types of nodes you will be including in your package.  Node Model derived nodes, ZeroTouch nodes, and Custom nodes all have a slightly different process for defining the categorization.  You can mix and match these node types within the same package, but it will require a combination of the strategies outlined below.
 

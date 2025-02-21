@@ -6,11 +6,11 @@ Regardless of experience level, the Dynamo platform is designed for all users to
 
 > Three development environments: Visual Studio, Python Editor, and Code Block DesignScript
 
-#### What are my options? <a href="#what-are-my-options" id="what-are-my-options"></a>
+### What are my options? <a href="#what-are-my-options" id="what-are-my-options"></a>
 
 Development options for Dynamo fall primarily into two categories: _for_ Dynamo versus _in_ Dynamo. The two categories can be thought about as; "in" Dynamo implies content that is created using the Dynamo IDE to be used in Dynamo, and "for" Dynamo implies using external tools to create content to be imported into Dynamo to be used. Though this guide is focused on development _for_ Dynamo, resources for all processes are described below.
 
-#### For Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
+### For Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
 These nodes allow for the highest degree of customization. Many packages are built with this method, and it is necessary for contributing to Dynamo's source. The process of building them will be covered in this guide.
 
@@ -26,7 +26,7 @@ For the discussion below Visual Studio is used as the development environment fo
 
 > The Visual Studio interface with a project that we will be developing
 
-#### In Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
+### In Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
 Though these processes exist in the visual programming workspace and are relatively straight forward, they are all viable options for customizing Dynamo. The Primer covers these extensively and provides scripting tips and best practices in the [Scripting Strategies](../../9\_best\_practices/2-scripting-strategies.md) chapter.
 
@@ -46,7 +46,7 @@ Developing in the Dynamo workspace is a powerful tool for getting immediate feed
 
 > Developing in the Dynamo workspace with the Python Node
 
-#### What are the advantages/disadvantages of each? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### What are the advantages/disadvantages of each? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
 Development options for Dynamo have been designed to address the complexity of a customization need. Whether the goal is to write a recursive script in Python or build an entirely custom node UI, there are options for implementing code that involve only what's necessary to get up and running.
 
@@ -87,7 +87,7 @@ With this method we can:
 * Customize lacing
 * Load into Dynamo as a package
 
-#### Understanding Dynamo versioning and API changes (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### Understanding Dynamo versioning and API changes (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 Since Dynamo is being regularly updated, changes might be made to part of the API that a package uses. Tracking these changes is important to ensure that existing packages continue to work properly.
 
@@ -101,13 +101,13 @@ Dynamo's API documentation currently covers the core functionality: [http://dyna
 
 ![API documentation](images/api-docs.jpg)
 
-#### Permission to distribute binaries in a package <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
+### Permission to distribute binaries in a package <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
 Be aware of .dll's included in a package being uploaded to the package manager. If the package author did not create the .dll, they must have the rights to share it.
 
 If a package includes binaries, users must be prompted upon downloading that the package contains binaries.
 
-#### Dynamo UI Performance Considerations
+### Dynamo UI Performance Considerations
 At the time of writing, Dynamo primarily uses WPF (windows presentation foundation) to render its UI. WPF is a complex and powerful xaml/binding based system. Because Dynamo has a complex UI, it's easy to create UI hangs, memory leaks, or wrap the graph execution and UI updates together in ways that degrade performance.
 
 Please refer to the [Dynamo Performance Considerations Wiki Page](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance) which will help you avoid a few common pitfalls making changes to Dynamo's code.
