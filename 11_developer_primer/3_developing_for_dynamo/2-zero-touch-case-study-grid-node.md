@@ -17,7 +17,7 @@ To start building the grid node, create a new Visual Studio class library projec
 > 1. Choose `Class Library` for the project type
 > 2. Name the project `CustomNodes`
 
-Since we will be creating geometry, we need to reference the appropriate NuGet package. Install the ZeroTouchLibrary package from the Nuget Package Manager. This package is necessary for the `using Autodesk.DesignScript.Geometry;` statement.
+Since we will be creating geometry, we need to reference the appropriate NuGet package. Install the ZeroTouchLibrary package from the NuGet Package Manager. This package is necessary for the `using Autodesk.DesignScript.Geometry;` statement.
 
 ![ZeroTouchLibrary package](images/vs-nugetpackage.jpg)
 

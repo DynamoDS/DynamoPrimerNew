@@ -61,7 +61,7 @@ Create a **Code Block** and introduce our definition.
 
 ![](../images/8-1/4/functions-exercise-03.jpg)
 
-> 1. Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parenetheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
+> 1. Adding to the **Code Block** function, we place a comment and a _sphereRadius_ variable which queries the _Z_ position of each point. Remember, _inputPt.Z_ does not need parentheses as a method. This is a _query_ of an existing element's properties, so no inputs are necessary:
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)

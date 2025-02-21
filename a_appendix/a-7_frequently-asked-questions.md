@@ -1,6 +1,6 @@
 # Frequently Asked Questions (FAQ)
 
-## How to Utilise Dynamo Builds
+## How to Utilize Dynamo Builds
 
 ### Daily builds versus Stable builds
 It is a tradition that the Dynamo at Autodesk team keeps up a fast pace of iteration by releasing both daily builds per commit, and also stable release builds after our system testing and release cycle. Our team would love to restart the daily and stable builds so that users can control where DynamoCore is extracted on their disk locally, so users can have confidence using it, without impacting Dynamo for other ADSK products. There are a few natural candidates for this purpose, including .nupkg, .zip file, or a dedicated installer where users can choose install path or other options. 
@@ -63,7 +63,7 @@ After installing both required components from the link above, re-launch DynamoS
 
 You may also run into graphics issues running sandbox for the fist time, you can follow the standard graphics issues FAQ here:
 
-https://github.com/DynamoDS/Dynamo/wiki/Dynamo-FAQ
+[https://github.com/DynamoDS/Dynamo/wiki/Dynamo-FAQ](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-FAQ)
 
 In general you will likely need to force high performance GPU mode for your graphics card when using the DynamoSandbox.exe
 
@@ -75,7 +75,7 @@ _example nvidia control panel:_
 Right now the next Dynamo modules are using the WebView2 component: Documentation Browser, Guided Tours and Library, so in order to ensure that this parts of Dynamo display correctly the Web content we need to install the WebView2 Evergreen Runtime installer ( you will need to validate if is already installed in the computer or needs to be installed).
 
 This is the link for installing the WebView2 Runtime:
-https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section
+[https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section)
 
 ![](images/a-7/dynamo-builds-7.png)
 
@@ -92,11 +92,11 @@ You can refer to this [article](https://knowledge.autodesk.com/support/revit-pro
 ### Dynamo Builds Location
 Stable Releases
 
-https://dynamobim.org/download/
+[https://dynamobim.org/download/](https://dynamobim.org/download/)
 
-https://github.com/DynamoDS/Dynamo/releases
+[https://github.com/DynamoDS/Dynamo/releases](https://github.com/DynamoDS/Dynamo/releases)
 
 Daily Builds and Stable Releases
 
-https://dynamobuilds.com/
+[https://dynamobuilds.com/](https://dynamobuilds.com/)
 

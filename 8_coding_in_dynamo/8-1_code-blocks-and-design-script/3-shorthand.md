@@ -4,7 +4,7 @@
 
 There are a few basic shorthand methods in the code block which, simply put, make data management _a lot_ easier. We'll break down the basics below and discuss how this shorthand can be used both for creating and querying data.
 
-| **Data Type**          | **Standard Dynamo**                                      | **Code Block Equilvalent**                                    |
+| **Data Type**          | **Standard Dynamo**                                      | **Code Block Equivalent**                                    |
 | ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
 | Numbers                | ![](../images/8-1/3/01node-numbers.jpg)       | ![](../images/8-1/3/01codeblock-numbers.jpg)       |
 | Strings                | ![](../images/8-1/3/02node-string.jpg)        | ![](../images/8-1/3/02codeblock-string.jpg)         |
@@ -110,7 +110,7 @@ By changing the sliders (ranging from 0 to 10), we get some interesting results.
 
 ![](../images/8-1/3/shorthand-exercise07.jpg)
 
-> 1. We get a distorted eggshell surface when we add the sineList and the tranposeList: `eggShellList = sineList+transposeList;`
+> 1. We get a distorted eggshell surface when we add the sineList and the transposeList: `eggShellList = sineList+transposeList;`
 
 Let's change the sliders values specified below to 'calm the waters' of this algorithm.
 

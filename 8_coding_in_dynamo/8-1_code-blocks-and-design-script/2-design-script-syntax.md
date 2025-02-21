@@ -6,7 +6,7 @@ You may have noticed a common theme in the names of nodes in Dynamo: each node u
 
 As a general analogy for the dot notation, how can we deal with a parametric apple in Dynamo? Below are a few methods we'll run on the apple before deciding to eat it. (Note: these are not actual Dynamo methods):
 
-| Human Readible                 | Dot Notation              | Output |
+| Human Readable                 | Dot Notation              | Output |
 | ------------------------------ | ------------------------- | ------ |
 | What color is the apple?       | Apple.color               | red    |
 | Is the apple ripe?             | Apple.isRipe              | true   |
