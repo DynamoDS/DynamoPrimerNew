@@ -1,8 +1,11 @@
 # Dynamo Command Line Interface
 
+<div style="overflow-x: auto;">
+
 ***
       -o, -O, --OpenFilePath        Instruct Dynamo to open a command file and run the commands it contains at 
                                     this path, this option is only supported when run from DynamoSandbox
+
 ***
       -c, -C, --CommandFilePath     Instruct Dynamo to open a command file and run the commands it contains at 
                                     this path, this option is only supported when run from DynamoSandbox                      
@@ -44,6 +47,8 @@
       --CERLocation                 Specify the crash error report tool located on the disk
 ***
       --ServiceMode                 Specify the service mode startup
+
+</div>
 
 
 #### Why 
