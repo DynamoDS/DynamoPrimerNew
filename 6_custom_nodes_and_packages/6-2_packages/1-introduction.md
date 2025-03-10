@@ -67,7 +67,7 @@ Vamos abrir “SphereUnfold”.
 
 Após abrir o arquivo e pressionar “Executar” no solucionador, teremos uma esfera desdobrada. Arquivos de exemplo como esses são úteis para saber como trabalhar com um novo pacote do Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Procurar e visualizar informações dos pacotes
 
@@ -79,7 +79,7 @@ Também é possível acessar mais detalhes em cada pacote clicando em Exibir det
 
 ### Site do Dynamo Package Manager
 
-Outra forma de descobrir pacotes do Dynamo é explorar o site do [Dynamo Package Manager](http://dynamopackages.com). Nesse site, é possível encontrar estatísticas sobre os pacotes e criar quadros de pontuação. Também é possível fazer o download dos arquivos do pacote no Dynamo Package Manager, mas fazer isso diretamente no Dynamo é um processo mais intuitivo.
+Outra forma de descobrir pacotes do Dynamo é explorar o site do [Dynamo Package Manager](http://dynamopackages.com). Aqui, você pode encontrar dependências do pacote e informações de compatibilidade de hospedeiros/versões fornecidas pelos autores do pacote. Também é possível fazer o download dos arquivos do pacote no Dynamo Package Manager, mas fazer isso diretamente no Dynamo é um processo mais intuitivo.
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -91,6 +91,53 @@ Se você quiser ver onde os arquivos dos pacotes estão armazenados, na parte su
 
 Por padrão, os pacotes são instalados em uma localização similar a este caminho de pasta: _C:/Usuários/[nome de usuário]/AppData/Roaming/Dynamo/[versão do Dynamo]_.
 
-### Aprofundar o conhecimento sobre pacotes
+### Configurar uma localização compartilhada para pacotes em um escritório
+
+Para usuários que estão perguntando se é possível implantar o Dynamo (de qualquer forma) com pacotes pré-anexados: a abordagem que resolverá esse problema e permitirá o controle em um local central para todos os usuários com instalações do Dynamo é adicionar um caminho de pacote personalizado a cada instalação.
+
+**Adicionar uma pasta de rede, onde o gerente de BIM ou outros possam supervisionar o armazenamento da pasta com pacotes aprovados pelo escritório**  
+
+Na interface do usuário de um aplicativo individual, vá para *Dynamo -> Preferências -> Configurações do pacote -> Localizações dos arquivos de nós e pacotes*. Na caixa de diálogo, pressione o botão “Adicionar caminho” e navegue até o local de rede do recurso do pacote compartilhado. 
+ 
+Como um processo automatizado, isso envolveria adicionar informações ao arquivo de configuração instalado com o Dynamo:  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+Por padrão, a configuração do Dynamo para Revit é:
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+A adição de uma localização personalizada teria esta aparência:  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+Também é possível controlar o gerenciamento central dessa pasta tornando a pasta somente leitura.
+
+### Carregar pacotes com binários de uma localização de rede
+
+#### Cenário
+
+Uma organização pode desejar padronizar os pacotes instalados por diferentes estações de trabalho e usuários. Uma maneira de fazer isso pode ser instalar esses pacotes em *Dynamo -> Preferências -> Configurações do pacote -> Localizações dos arquivos de nós e pacotes*, selecionando uma pasta de rede como o localização de instalação e fazer com que as estações de trabalho adicionem esse caminho a `Manage Node and Package Paths`.
+
+#### Problema
+
+Embora o cenário funcione corretamente para pacotes que contêm apenas nós personalizados, ele pode não funcionar para pacotes que contêm binários, como nós sem toque. Esse problema é causado por [medidas de segurança](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location) que o .NET Framework coloca sobre o carregamento de montagens quando eles vêm de uma localização de rede. Infelizmente, usar o elemento de configuração `loadFromRemoteSources`, como sugerido no thread vinculado, não é uma solução possível para o Dynamo, pois ele é distribuído como um componente em vez de um aplicativo.
+
+#### Solução
+
+Uma solução possível é usar uma unidade de rede mapeada apontando para a localização de rede e, em vez disso, fazer com que as estações de trabalho façam referência a esse caminho. As etapas para criar uma unidade de rede mapeada estão descritas [aqui](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+
+### Conhecer mais sobre pacotes
 
 A comunidade do Dynamo está crescendo e evoluindo constantemente. Explorando o Dynamo Package Manager periodicamente, você encontrará alguns novos desenvolvimentos empolgantes. Nas seções a seguir, analisaremos com mais detalhes os pacotes, da perspectiva do usuário final até a criação do seu próprio pacote do Dynamo.

@@ -1,4 +1,4 @@
-# Extensões 
+# Extensões
 
 As extensões são uma poderosa ferramenta de desenvolvimento no ecossistema do Dynamo. Elas permitem que os desenvolvedores direcionem a funcionalidade personalizada com base nas interações e lógica do Dynamo. As extensões podem ser divididas em duas categorias principais, extensões e extensões de vista. Como a nomenclatura indica, a estrutura de extensão da vista permite estender a interface do usuário do Dynamo registrando itens de menu personalizados. As extensões regulares operam de forma muito semelhante, exceto a interface do usuário. Por exemplo, podemos compilar uma extensão que registra informações específicas no console do Dynamo. Esse cenário não requer uma interface do usuário personalizada e, portanto, também pode ser realizado usando uma extensão.
 

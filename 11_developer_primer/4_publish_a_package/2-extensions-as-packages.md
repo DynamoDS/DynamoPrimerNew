@@ -1,4 +1,4 @@
-# Extensões como pacotes 
+# Extensões como pacotes
 
 ### Extensões como pacotes <a href="#extensions-as-packages" id="extensions-as-packages"></a>
 
@@ -20,7 +20,7 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
         SampleViewExtension_ViewExtensionDefinition.xml
 ```
 
-Presumindo que você já tenha compilado a extensão, terá (no mínimo) uma montagem .NET e um arquivo de manifesto. A montagem deve conter uma classe que implementa `IViewExtension` ou `IExtension`. O arquivo de manifesto .XML informa ao Dynamo qual classe deve ser instanciada para iniciar a extensão. Para que o gerenciador de pacotes localize corretamente a extensão, o arquivo de manifesto deve corresponder com precisão à localização e à nomenclatura da montagem.
+Supondo que você já tenha compilado sua extensão, terá (no mínimo) uma montagem .NET e um arquivo de manifesto. A montagem deve conter uma classe que implementa `IViewExtension` ou `IExtension`. O arquivo de manifesto .XML informa ao Dynamo qual classe deve ser instanciada para iniciar a extensão. Para que o gerenciador de pacotes localize corretamente a extensão, o arquivo de manifesto deve corresponder com precisão à localização e à nomenclatura da montagem.
 
 Coloque os arquivos de montagem na pasta `bin` e o arquivo de manifesto na pasta `extra`. Também é possível colocar todos os recursos adicionais nessa pasta.
 
@@ -45,6 +45,6 @@ Antes de publicar de forma pública, você deve sempre publicar localmente para 
 
 ### Extrair <a href="#pulling" id="pulling"></a>
 
-Para verificar se o pacote foi carregado com êxito, você deverá ser capaz de pesquisá-lo com base na nomeação e nas palavras-chave especificadas na etapa de publicação. Por fim, é importante observar que as mesmas extensões exigirão uma reinicialização do Dynamo antes de funcionar. Normalmente, essas extensões exigem parâmetros especificados quando o Dynamo é inicializado.
+Para verificar se o pacote foi carregado com êxito, você deverá conseguir pesquisá-lo com base na nomeação e nas palavras-chave especificadas na etapa de publicação. Por fim, é importante observar que as mesmas extensões exigirão uma reinicialização do Dynamo antes de funcionar. Normalmente, essas extensões exigem parâmetros especificados quando o Dynamo é inicializado.
 
 ![Procurar pacotes](images/ViewExtension_Search.jpg)

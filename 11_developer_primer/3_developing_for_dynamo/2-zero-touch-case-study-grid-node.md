@@ -1,4 +1,4 @@
-# Estudo de caso sem toque – Nó de grade 
+# Estudo de caso sem toque – Nó de grade
 
 Com um projeto do Visual Studio ativo e em execução, vamos analisar como compilar um nó personalizado que cria uma grade retangular de células. Embora possamos criar isso com vários nós padrão, é uma ferramenta útil que pode ser facilmente contida em um nó Sem toque. Ao contrário das linhas de grade, as células podem ser dimensionadas em torno de seus pontos centrais, consultadas para seus vértices de canto ou incorporadas em faces.
 
@@ -6,7 +6,7 @@ Este exemplo abordará alguns dos recursos e conceitos a serem considerados ao c
 
 ![Gráfico de grade retangular](images/cover-image.jpg)
 
-#### Nó de grade retangular personalizado <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Nó de grade retangular personalizado <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Para começar a compilar o nó de grade, crie um novo projeto de biblioteca de classes do Visual Studio. Consulte a página Introdução para obter uma visão geral detalhada de como configurar um projeto.
 
@@ -17,7 +17,7 @@ Para começar a compilar o nó de grade, crie um novo projeto de biblioteca de c
 > 1. Escolher `Class Library` para o tipo de projeto
 > 2. Nomear o projeto `CustomNodes`
 
-Como vamos criar geometria, precisamos fazer referência ao pacote NuGet apropriado. Instale o pacote ZeroTouchLibrary do Gerenciador de pacotes Nuget. Esse pacote é necessário para a declaração `using Autodesk.DesignScript.Geometry;`.
+Como vamos criar geometria, precisamos fazer referência ao pacote NuGet apropriado. Instale o pacote ZeroTouchLibrary do Gerenciador de pacotes NuGet. Esse pacote é necessário para a declaração `using Autodesk.DesignScript.Geometry;`.
 
 ![Pacote ZeroTouchLibrary](images/vs-nugetpackage.jpg)
 
@@ -96,7 +96,7 @@ Verifique a pasta `bin` do projeto para obter um `.dll`. Se a compilação tiver
 > 2. O nó personalizado na tela
 > 3. O botão Adicionar para adicionar o `.dll` ao Dynamo
 
-#### Modificações de nós personalizados <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### Modificações de nós personalizados <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 No exemplo acima, criamos um nó bastante simples que não definiu muito mais fora do método `RectangularGrids`. No entanto, podemos desejar criar dicas de ferramentas para portas de entrada ou fornecer ao nó um resumo, como os nós padrão do Dynamo. Adicionar esses recursos a nós personalizados facilita seu uso, especialmente se um usuário desejar pesquisá-los na biblioteca.
 

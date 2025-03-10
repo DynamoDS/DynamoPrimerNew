@@ -22,9 +22,7 @@ As entradas e saídas nos nós são chamadas de portas e agem como receptores pa
 
 As portas esperam receber dados de um determinado tipo. Por exemplo, ao conectar um número como _2.75_ às portas em um nó Ponto por coordenadas, resultará na criação com êxito de um ponto; no entanto, se fornecermos _“Vermelho”_ à mesma porta, resultará em um erro.
 
-{% hint style="info" %}
- Dica: Passe o cursor do mouse sobre uma porta para ver uma dica de ferramenta contendo o tipo de dados esperado. 
-{% endhint %}
+{% hint style="info" %} Dica: Passe o cursor do mouse sobre uma porta para ver uma dica de ferramenta contendo o tipo de dados esperado. {% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -55,9 +53,7 @@ Quando você passa o cursor do mouse ou clica com o botão direito do mouse sobr
 
 Se o programa visual tiver avisos ou erros, o Dynamo fornecerá informações adicionais sobre o problema. Qualquer nó exibido em amarelo também terá uma dica de ferramenta acima do nome. Passe o cursor do mouse sobre o ícone de dica de ferramenta de aviso ![](images/nodesandwires-nodewarningicon.png) ou erro ![](images/nodesandwires-nodeerroricon.png) para expandi-lo.
 
-{% hint style="info" %}
- Dica: Com essa informação da dica de ferramenta, examine os nós a montante para ver se o tipo de dados ou a estrutura de dados necessários apresenta erro. 
-{% endhint %}
+{% hint style="info" %} Dica: Com essa informação da dica de ferramenta, examine os nós a montante para ver se o tipo de dados ou a estrutura de dados necessários apresenta erro. {% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
@@ -101,7 +97,7 @@ Frequentemente, queremos ajustar o fluxo do programa em nosso programa visual ed
 
 * Para alterar a conexão em uma porta de entrada, clique com o botão esquerdo do mouse em outra porta de entrada
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Para remover o fio, afaste o fio e clique com o botão esquerdo do mouse no espaço de trabalho
 

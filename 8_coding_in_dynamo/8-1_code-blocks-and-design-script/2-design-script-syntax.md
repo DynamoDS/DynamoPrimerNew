@@ -6,7 +6,7 @@ Você pode ter notado um tema comum nos nomes dos nós no Dynamo: cada nó usa u
 
 Como uma analogia geral da notação de ponto, como podemos lidar com uma maçã paramétrica no Dynamo? Abaixo estão alguns métodos que iremos executar na maçã antes de decidir comê-la. (Observação: Estes não são métodos reais do Dynamo):
 
-| Humanamente legível                 | Notação de ponto              | Saída |
+| Legível por humanos                 | Notação de ponto              | Saída |
 | ------------------------------ | ------------------------- | ------ |
 | Qual é a cor da maçã?       | Apple.color               | vermelho    |
 | A maçã está madura?             | Apple.isRipe              | true   |

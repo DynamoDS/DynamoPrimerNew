@@ -18,7 +18,7 @@ Uma coisa que pode parecer estranha no início é que o primeiro índice de uma 
 
 Por exemplo, se você contasse o número de dedos que temos na mão direita, as chances são de que você teria contado de 1 a 5. No entanto, se você colocar seus dedos em uma lista, o Dynamo teria dado índices de 0 a 4. Embora isso possa parecer um pouco estranho para programadores iniciantes, o índice com base em zero é uma prática padrão na maioria dos sistemas de cálculo.
 
-Observe que ainda temos cinco itens na lista; é apenas que a lista está usando um sistema de contagem baseado em zero. E os itens que estão sendo armazenados na lista não precisam ser apenas números. Eles podem ser qualquer tipo de dados que o Dynamo suporta, como pontos, curvas, superfícies, famílias etc.
+Observe que ainda temos cinco itens na lista; só que a lista está usando um sistema de contagem baseado em zero. E os itens que estão sendo armazenados na lista não precisam ser apenas números. Eles podem ser qualquer tipo de dados que o Dynamo suporta, como pontos, curvas, superfícies, famílias etc.
 
 ![](../images/5-4/1/what'salist-zerobasedindices.jpg)
 
@@ -76,6 +76,32 @@ Por fim, o método “Produto transversal” torna todas as conexões possíveis
 Como você pode ver, há diferentes maneiras de desenhar linhas entre estes conjuntos de pontos. É possível encontrar as opções de amarra clicando com o botão direito do mouse no centro de um nó e selecionando o menu “Amarra”.
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+
+### O que é replicação?
+
+Imagine que você tem um cacho de uvas. Se você quisesse fazer suco de uva, não espremeria cada uva individualmente, mas sim colocaria todas no espremedor de uma vez. A replicação no Dynamo funciona de forma semelhante: em vez de aplicar uma operação a um item por vez, o Dynamo pode aplicá-la a uma lista inteira de uma só vez.
+
+Os nós do Dynamo reconhecem automaticamente quando estão trabalhando com listas e aplicam suas operações em vários elementos. Isso significa que você não precisa percorrer os itens manualmente: isso simplesmente acontece. Mas como o Dynamo decide como processar listas quando há mais de uma?
+
+Há duas formas principais:
+
+#### Replicação cartesiana
+Digamos que você esteja na cozinha, fazendo sucos de frutas. Você tem uma lista de frutas: `{apple, orange, pear}` e uma quantidade fixa de água para cada suco: `1 cup`. Você quer fazer um suco com cada fruta, usando a mesma quantidade de água. Nesse caso, a replicação cartesiana entra em ação.
+
+No Dynamo, isso significa que você está alimentando a lista de frutas na entrada de frutas do nó Juice.Maker, enquanto a entrada de água permanece constante em 1 xícara. O nó então processa cada fruta individualmente, combinando-a com a quantidade fixa de água. O resultado é:
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+Cada fruta é combinada com a mesma quantidade de água.
+
+#### Replicação zip
+A replicação zip funciona de forma um pouco diferente. Se você tivesse duas listas, uma para frutas: `{apple, orange, pear}` e outra para quantidades de açúcar: `{2 tbsp, 3 tbsp, 1 tbsp}`, a replicação zip combinaria os itens correspondentes de cada lista. Por exemplo:
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+Cada fruta é combinada com a quantidade correspondente de açúcar.
+
+Para uma análise mais profunda sobre como isso funciona, confira os [Guias de replicação e amarra](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1).
 
 ## Exercício
 

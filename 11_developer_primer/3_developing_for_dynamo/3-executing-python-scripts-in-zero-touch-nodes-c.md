@@ -1,4 +1,4 @@
-# Executar scripts Python em nós sem toque (C#) 
+# Executar scripts Python em nós sem toque (C#)
 
 ### Executar scripts Python em nós sem toque (C#) <a href="#executing-python-scripts-in-zero-touch-nodes-c" id="executing-python-scripts-in-zero-touch-nodes-c"></a>
 

@@ -2,7 +2,7 @@
 
 A origem do Dynamo está hospedada no Github para que qualquer pessoa possa clonar e fazer contribuições. Neste capítulo, analisaremos como clonar o repositório usando o git, compilar os arquivos de origem com o Visual Studio, executar e depurar uma compilação local e extrair as novas alterações do Github.
 
-#### Localizar os repositórios do Dynamo no Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Localizar os repositórios do Dynamo no Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 O Github é um serviço de hospedagem baseado no [git](https://help.github.com/articles/git-and-github-learning-resources/), um sistema de controle de versão para rastrear alterações e coordenar o trabalho entre as pessoas. O Git é uma ferramenta que podemos aproveitar para fazer download dos arquivos de origem do Dynamo e mantê-los atualizados com alguns comandos. O uso desse método evitará o trabalho desnecessário e inerentemente confuso de fazer o download e substituir manualmente os arquivos de origem em cada atualização. O sistema de controle de versão git rastreará as diferenças entre um repositório de código local e remoto.
 
@@ -16,23 +16,23 @@ A origem do Dynamo está hospedada no DynamoDS Github neste repositório: [https
 > 3. Arquivos de origem do Dynamo
 > 4. Arquivos específicos do Git
 
-#### Extrair o repositório do Dynamo usando o git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### Extrair o repositório do Dynamo usando o git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Antes de clonar o repositório, precisamos instalar o git. Siga este [guia curto](https://help.github.com/articles/set-up-git/#setting-up-git) para obter as etapas de instalação e como configurar um nome de usuário e e-mail do github. Neste exemplo, usaremos o git na linha de comando. Esse guia presume que você esteja usando o Windows, mas também é possível usar o git no Mac ou Linux para clonar a origem do Dynamo.
+Antes de clonar o repositório, precisamos instalar o git. Siga este [breve guia](https://help.github.com/articles/set-up-git/#setting-up-git) para ver as etapas de instalação e como configurar um nome de usuário e e-mail no GitHub. Neste exemplo, usaremos o git na linha de comando. Este guia pressupõe que você esteja usando o Windows, mas também pode usar o git no Mac ou Linux para clonar a origem do Dynamo.
 
-Precisamos de uma URL para o repositório do Dynamo para clonar. Essa URL pode ser encontrada no botão “Clonar ou fazer o download” na página do repositório. Copie a URL para colar no prompt de comando.
+Precisamos de uma URL para o repositório do Dynamo para clonar. Essa URL pode ser encontrada no botão “Clonar ou fazer o download” na página do repositório. Copie a URL para colar no prompt do comando.
 
 ![Clonar um repositório](images/github-clone.png)
 > 1. Selecionar “Clonar ou fazer o download”
 > 2. Copiar a URL
 
-Com o git instalado, podemos clonar o repositório do Dynamo. Comece abrindo o prompt de comando. Em seguida, use o comando de alteração de diretório `cd` para navegar até a pasta na qual desejamos que os arquivos de origem sejam clonados. Neste caso, criamos uma pasta chamada `Github` em `Documents`.
+Com o git instalado, podemos clonar o repositório do Dynamo. Comece abrindo o prompt do comando. Em seguida, use o comando de alteração de diretório `cd` para navegar até a pasta na qual desejamos que os arquivos de origem sejam clonados. Neste caso, criamos uma pasta chamada `Github` em `Documents`.
 
 `cd C:\Users\username\Documents\GitHub`
 
 > Substitua “username” por seu nome de usuário
 
-![Prompt de comando](images/cli-1.jpg)
+![Prompt do comando](images/cli-1.jpg)
 
 Na próxima etapa, executaremos um comando git para clonar o repositório do Dynamo para o local que especificamos. A URL no comando é obtida clicando no botão “Clonar ou fazer o download” no Github. Execute esse comando no terminal de comando. Observe que isso clonará a ramificação mestre de repositório do Dynamo, que é o código mais atualizado do Dynamo, e conterá a versão mais recente do código do Dynamo. Essa ramificação muda diariamente.
 
@@ -47,7 +47,7 @@ Saberemos que o git está funcionando se a operação de clonagem tiver sido con
 > 1. Arquivos de origem do Dynamo
 > 2. Arquivos do Git
 
-#### Compilar o repositório usando o Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### Compilar o repositório usando o Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 Com os arquivos de origem agora clonados em nosso computador local, podemos compilar um arquivo executável para o Dynamo. Para fazer isso, precisamos configurar o Visual Studio IDE e assegurar que o .NET Framework e o DirectX estejam instalados.
 
@@ -81,10 +81,10 @@ Com o projeto aberto, podemos compilar a solução. Esse processo criará um arq
 
 > A compilação do projeto restaurará as dependências do NuGet.
 >
-> 1. Selecionar `Build > Build Solution`.
+> 1. Selecionar `Build > Build Solution`
 > 2. Verificar se a compilação foi bem-sucedida na janela Saída. Deve ser semelhante a `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
-#### Executar uma compilação local <a href="#running-a-local-build" id="running-a-local-build"></a>
+### Executar uma compilação local <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 Se o Dynamo for compilado com êxito, uma pasta `bin` será criada no repositório do Dynamo com o arquivo DynamoSandbox.exe. No nosso caso, estamos compilando com a opção Depurar, portanto, o arquivo executável estará localizado em `bin\AnyCPU\Debug`. A execução dessa ação abrirá uma compilação local do Dynamo.
 
@@ -96,9 +96,9 @@ Agora estamos quase totalmente preparados para começar a desenvolver o Dynamo.
 
 Para obter instruções sobre como compilar o Dynamo para outras plataformas (por exemplo, Linux ou OS X), visite esta [página wiki](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac).
 
-#### Depurar uma compilação local usando o Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### Depurar uma compilação local usando o Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-A depuração é um processo de identificação, isolamento e correção de um problema ou bug. Após o Dynamo ter sido criado com êxito da origem, poderemos usar diversas ferramentas no Visual Studio para depurar um aplicativo em execução, por exemplo, o complemento DynamoRevit. Podemos analisar seu código-fonte para localizar a causa de um problema ou observar o código em execução no momento. Para obter uma explicação mais detalhada de como depurar e navegar no código no Visual Studio, consulte o [Documentos do Visual Studio](https://docs.microsoft.com/pt-br/visualstudio/debugger/navigating-through-code-with-the-debugger).
+A depuração é um processo de identificação, isolamento e correção de um problema ou bug. Após o Dynamo ter sido criado com êxito da origem, poderemos usar diversas ferramentas no Visual Studio para depurar um aplicativo em execução, por exemplo, o complemento DynamoRevit. Podemos analisar seu código-fonte para localizar a causa de um problema ou observar o código em execução no momento. Para obter uma explicação mais detalhada de como depurar e navegar no código no Visual Studio, consulte o [Documentos do Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 Para o aplicativo independente do Dynamo, DynamoSandbox, abordaremos duas opções para depuração:
 
@@ -137,7 +137,7 @@ Em ambas as situações, estamos anexando o depurador a um processo que desejamo
 
 Na próxima seção, **Compilar o DynamoRevit da origem**, analisaremos um exemplo específico de depuração e explicaremos como definir pontos de quebra, passar pelo código e ler a pilha de chamadas.
 
-#### Extrair a compilação mais recente <a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### Extrair a compilação mais recente <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 Como a origem do Dynamo está hospedada no Github, a maneira mais fácil de manter os arquivos de origem locais atualizados é extraindo as alterações usando os comandos git.
 

@@ -39,9 +39,7 @@ As operações booleanas são complexas e seu cálculo pode ser lento. É possí
 >
 > 4\. Todos os nós afetados e as visualizações de geometria associadas serão atualizados e revertidos para o modo de visualização padrão.
 
-{% hint style="info" %}
- Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). {% endhint %}
 
 ## Análise abrangente de...
 

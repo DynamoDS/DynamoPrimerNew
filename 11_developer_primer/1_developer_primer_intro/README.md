@@ -1,4 +1,4 @@
-# Manual do Desenvolvedor 
+# Manual do Desenvolvedor
 
 #### Qual é o propósito deste guia? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 

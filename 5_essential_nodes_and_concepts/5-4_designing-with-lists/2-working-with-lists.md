@@ -53,7 +53,7 @@ A imagem abaixo é o gráfico de base no qual estamos desenhando linhas entre do
 > 6. Com um nó **Geometry.Translate**, movimente o círculo 100 unidades para cima na direção Z.
 > 7. Com um nó de **Bloco de código**, defina um intervalo de dez números entre 0 e 1 com esta linha de código: `0..1..#10;`
 > 8. Conecte o bloco de código da etapa anterior à entrada _parâmetro_ de dois nós **Curve.PointAtParameter**. Conecte **Circle.ByPlaneRadius** à entrada de curva do nó superior e **Geometry.Translate** à entrada de curva do nó abaixo dele.
-> 9. Usando **Line.ByStartPointEndPoint**, conecte os dois nós **Curve.PointAtParamete**_r_.
+> 9. Usando **Line.ByStartPointEndPoint**, conecte os dois nós **Curve.PointAtParameter**.
 
 ### List.Count
 

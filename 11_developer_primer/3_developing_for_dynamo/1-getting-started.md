@@ -4,7 +4,7 @@ Antes de entrar no desenvolvimento, é importante compilar uma base sólida para
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Criar um projeto do Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Criar um projeto do Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 O Visual Studio é um IDE poderoso, onde podemos criar um projeto, adicionar referências, compilar `.dlls` e depurar. Ao criar um novo projeto, o Visual Studio também criará uma Solução, uma estrutura para organizar projetos. Vários projetos podem existir em uma única solução e podem ser compilados juntos. Para criar um nó Sem toque, precisaremos iniciar um novo projeto do Visual Studio no qual gravaremos uma biblioteca de classe C# e compilaremos um `.dll`.
 
@@ -84,7 +84,7 @@ Se uma categoria for criada na biblioteca chamada `MyCustomNode`, significa que 
 > 1. MyCustomNode na biblioteca do Dynamo. A categoria da biblioteca é determinada pelo nome `.dll`.
 > 2. SampleFunctions.MultiplyByTwo na tela.
 
-#### Como o Dynamo lê as classes e os métodos <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Como o Dynamo lê as classes e os métodos <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Quando o Dynamo carrega um .dll, ele expõe todos os métodos estáticos públicos como nós.  Construtores, métodos e propriedades serão transformados em nós Criar, Ação e Consulta, respectivamente. No nosso exemplo de multiplicação, o método `MultiplyByTwo()` se torna num nó Ação no Dynamo. Isso ocorre porque o nó foi nomeado com base em seu método e classe.
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. O Dynamo importou nosso método como um nó Criar
 
-#### Adicionar referências do pacote NuGet do Dynamo <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Adicionar referências do pacote NuGet do Dynamo <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 O nó de multiplicação é muito simples e não é necessário fazer referências ao Dynamo. Se quisermos acessar qualquer funcionalidade do Dynamo para criar geometria, por exemplo, precisaremos fazer referência aos pacotes NuGet do Dynamo.
 

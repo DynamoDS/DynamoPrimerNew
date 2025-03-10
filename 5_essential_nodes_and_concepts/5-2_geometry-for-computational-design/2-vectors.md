@@ -80,7 +80,7 @@ Os planos são "Ajudas" abstratas bidimensionais. Mais especificamente, os plano
 
 Você pode estar pensando: “Espere um segundo. Origem? Isso parece um sistema de coordenadas... como o que eu uso para modelar no meu software CAD!"
 
-E você está correto! A maioria dos softwares de modelagem tira proveito dos planos de construção ou "níveis" para definir um contexto de duas dimensões locais na qual a inclinação será desenhada. XY, XZ, YZ, ou: Norte, Sudoeste, o plano pode parecer mais familiar. Todos esses são os Planos, definindo um contexto "plano" infinito. Os planos não têm profundidade, mas eles nos ajudam a descrever a direção também -
+E você está correto! A maioria dos softwares de modelagem aproveita os planos de construção ou “níveis” para definir um contexto de duas dimensões locais na qual a inclinação será desenhada. XY, XZ, YZ ou Norte, Sudeste, Plano pode parecer mais familiar. Todos esses são os Planos, definindo um contexto "plano" infinito. Os planos não têm profundidade, mas eles nos ajudam a descrever a direção também -
 
 ### Sistema de coordenadas
 

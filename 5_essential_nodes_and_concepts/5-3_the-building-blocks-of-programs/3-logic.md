@@ -13,8 +13,7 @@ A declaração “If” é um conceito-chave em programação: “se _isso_ for 
 | Ícone                                             | Nome (Sintaxe)             | Entradas            | Saídas |
 | ------------------------------------------------ | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                        | Se (**If**)               | teste, true, false | resultado  |
-| ![](../images/5-1/Formula.jpg)                   | Fórmula (**IF(x,y,z)**)   | x, y, z           | resultado  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Bloco de código (**(x?y:z);**) | X, Y, Z           | resultado  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Bloco de código (**(x?y:z);**) | X, Y, Z           | resultado  |
 
 Vamos examinar um breve exemplo de cada um desses três nós em ação usando a declaração condicional “Se”.
 

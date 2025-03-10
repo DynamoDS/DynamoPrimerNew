@@ -31,9 +31,7 @@ As bibliotecas padrão são externas ao Dynamo e estão presentes nas linguagens
    * Funcionalidade: Excel.
    * Como importar: `import DSOffice`
 
-{% hint style="warning" %}
-*Observação: Durante o uso de **ProtoGeometry** com o Python ou C#, você está criando objetos não gerenciados, que precisam ter memória gerenciada manualmente. Consulte a seção abaixo: **Objetos não gerenciados** para obter mais informações. 
-{% endhint %}
+{% hint style="warning" %} *Observação: Durante o uso de **ProtoGeometry** com o Python ou C#, você está criando objetos não gerenciados, que precisam ter memória gerenciada manualmente. Consulte a seção abaixo: **Objetos não gerenciados** para obter mais informações. {% endhint %}
 
 ## Rotular cuidadosamente
 
@@ -276,7 +274,7 @@ Em termos gerais, há mais de uma maneira de programar qualquer coisa; portanto,
 
 Ao usar a biblioteca de geometria do Dynamo _(ProtoGeometry)_ do Python ou C#, os objetos de geometria que você criar não serão gerenciados pela máquina virtual, e a memória de muitos desses objetos precisará ser limpa manualmente. Para limpar objetos nativos ou não gerenciados, é possível usar o método **Descartar** ou **usar** a palavra-chave. Consulte esta entrada do wiki para obter uma visão geral: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-Você só precisa descartar os recursos não gerenciados aos quais não retorne no gráfico ou para os quais não armazene uma referência. Para o restante desta seção, chamaremos esses objetos _geometria intermediária_. É possível ver um exemplo dessa classe de objeto no exemplo de código abaixo. Essa função C# zerotouch **singleCube** retorna um único cubo, mas cria 10.000 cubos extras durante sua execução. É possível simular que usamos essa outra geometria como alguma geometria de construção intermediária.
+Você só precisa descartar os recursos não gerenciados aos quais não retorne no gráfico ou para os quais não armazene uma referência. Para o restante desta seção, chamaremos esses objetos _geometria intermediária_. É possível ver um exemplo dessa classe de objeto no exemplo de código abaixo. Essa função C# zerotouch **singleCube** retorna um único cubo, mas cria 10000 cubos extras durante sua execução. É possível simular que usamos essa outra geometria como alguma geometria de construção intermediária.
 
 **Essa função zerotouch provavelmente causará um erro fatal no Dynamo.** Como criamos 10.000 sólidos, mas somente um deles foi armazenado, só esse será devolvido. Devemos, em vez disso, descartar todos os nossos cubos intermediários, exceto o que retornamos. Não queremos descartar o que retornamos, pois será propagado no gráfico e usado por outros nós.
 

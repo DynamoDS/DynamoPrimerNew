@@ -94,7 +94,7 @@ Nesta etapa, empregamos nossa primeira função para mover o eixo de pontos para
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. Em vez de usar um nó de fórmula, usamos um **Bloco de código** com a linha: `(0..Math.Sin(x*360)..#50)*5;`. Para analisar isso rapidamente, definimos um intervalo com uma fórmula dentro dele. Essa fórmula é a função Seno. A função seno recebe entradas de grau no Dynamo, portanto, para obter uma onda senoidal completa, multiplicamos nossos valores de x (essa é a entrada de intervalo de 0 a 1) por 360. Em seguida, queremos o mesmo número de divisões que os pontos de eixo de controle para cada linha, portanto, definimos cinquenta subdivisões com #50. Finalmente, o multiplicador de 5 simplesmente aumenta a amplitude da conversão para que possamos ver o efeito na Visualização do Dynamo.
+> 1. Usamos um **Bloco de código** com a linha: `(0..Math.Sin(x*360)..#50)*5;`. Para analisar isso rapidamente, definimos um intervalo com uma fórmula dentro dele. Essa fórmula é a função Seno. A função seno recebe entradas de grau no Dynamo, portanto, para obter uma onda senoidal completa, multiplicamos nossos valores de x (essa é a entrada de intervalo de 0 a 1) por 360. Em seguida, queremos o mesmo número de divisões que os pontos de eixo de controle para cada linha, portanto, definimos cinquenta subdivisões com #50. Finalmente, o multiplicador de 5 simplesmente aumenta a amplitude da conversão para que possamos ver o efeito na Visualização do Dynamo.
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -140,6 +140,6 @@ Analisando o gráfico visual, podemos realçar os blocos de código e ver cada u
 >
 > 2\. O segundo **Bloco de código** substitui o nó **Intervalo de números**.
 >
-> 3\. O terceiro **Bloco de código** substitui o nó **Fórmula** (assim como **List.Transpose**, **List.Count** e **Intervalo de números**).
+> 3\. O terceiro **Bloco de código** substitui os nós **List.Transpose**, **List.Count** e **Intervalo de números**.
 >
 > 4\. O quarto **Bloco de código** consulta uma lista de listas, substituindo o nó **List.GetItemAtIndex**.

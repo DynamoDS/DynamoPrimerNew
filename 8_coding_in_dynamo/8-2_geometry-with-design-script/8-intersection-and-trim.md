@@ -40,8 +40,8 @@ O método _Trim_ é muito similar ao método Intersect, pois é definido para qu
 
 |             | _Usando:_ Ponto | Curva | Plano | Superfície | Sólido |
 | ----------- | -------------- | ----- | ----- | ------- | ----- |
-| _Em:_ curva | Sim            | Não    | Não    | Não      | Não    |
-| Polígono     | -              | Não    | Sim   | Não      | Não    |
+| _Em:_ curva | Sim            | No    | No    | No      | Não    |
+| Polígono     | -              | Não    | Sim   | No      | Não    |
 | Superfície     | -              | Sim   | Sim   | Sim     | Sim   |
 | Sólido       | -              | -     | Sim   | Sim     | Sim   |
 

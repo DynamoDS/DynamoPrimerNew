@@ -4,7 +4,7 @@
 
 ### O que é uma curva?
 
-As [curvas ](4-curves.md#deep-dive-into...) são o primeiro tipo de dados geométricos que abordamos com um conjunto mais familiar de propriedades descritivas de forma: em que medida elas são mais curvas ou retas? Longas ou curtas? E lembre-se de que os Pontos ainda são os nossos blocos de construção para definir qualquer coisa, desde uma linha a uma spline e todos os tipos de curva entre elas.
+As [curvas](4-curves.md#deep-dive-into...) são o primeiro tipo de dados geométricos que abordamos e que tem um conjunto mais familiar de propriedades descritivas de forma: em que medida elas são mais curvas ou retas? Longas ou curtas? E lembre-se de que os Pontos ainda são os nossos blocos de construção para definir qualquer coisa, desde uma linha a uma spline e todos os tipos de curva entre elas.
 
 ![Tipos de curvas](../images/5-2/4/CurveTypes.jpg)
 
@@ -20,7 +20,7 @@ As [curvas ](4-curves.md#deep-dive-into...) são o primeiro tipo de dados geomé
 
 [Linha](4-curves.md#lines) é composta por um conjunto de pontos, cada linha tem ao menos dois pontos. Um dos modos mais comuns de criar linhas no Dynamo é usando `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) para criar uma linha no Dynamo.
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Curva NURBS
 
@@ -85,6 +85,4 @@ Quando nós conectamos duas linhas, temos uma **Polilinha**. Aqui temos uma repr
 > 2. Grau = 2
 > 3. Grau = 3
 
-{% hint style="info" %}
- Observe que quanto maior for o valor do grau, mais pontos de controle serão usados para interpolar a curva resultante. 
-{% endhint %}
+{% hint style="info" %} Observe que quanto maior for o valor do grau, mais pontos de controle serão usados para interpolar a curva resultante. {% endhint %}

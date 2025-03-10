@@ -28,7 +28,7 @@ Os blocos de código também são flexíveis em relação aos tipos de dados. O 
 
 Na imagem abaixo, é possível ver que a forma de fazer as coisas “à moda antiga” é um pouco demorada: o usuário procura o nó desejado na interface, adiciona o nó à tela e insere os dados. Com o bloco de código, o usuário pode clicar duas vezes na tela para abrir o nó e digitar o tipo de dados correto com sintaxe básica.
 
-Os nós número, sequência de caracteres e fórmula são três exemplos de nós do Dynamo que são provavelmente obsoletos em comparação ao bloco de código.
+Os nós número e sequência de caracteres são dois exemplos de nós do Dynamo que são provavelmente obsoletos em comparação ao bloco de código.
 
 ![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 

@@ -18,9 +18,7 @@ Vamos fazer uma rápida revisão da hierarquia do Revit.
 
 Você se lembra da taxonomia da biologia? Reino, Filo, Classe, Ordem, Família, Gênero, Espécie? Os elementos do Revit são categorizados de forma similar. Em um nível básico, é possível dividir a hierarquia do Revit em Categorias, Famílias, Tipos* e Instâncias. Uma instância é um elemento de modelo individual (com uma ID exclusiva), enquanto uma categoria define um grupo genérico (como “paredes” ou “pisos”). Com o banco de dados do Revit organizado dessa forma, é possível selecionar um elemento e escolher todos os elementos similares com base em um nível especificado na hierarquia.
 
-{% hint style="warning" %}
- *Os tipos no Revit são definidos de forma diferente dos tipos na programação. No Revit, um tipo se refere a uma ramificação da hierarquia, em vez de um “tipo de dados”. 
-{% endhint %}
+{% hint style="warning" %} *Os tipos no Revit são definidos de forma diferente dos tipos na programação. No Revit, um tipo se refere a uma ramificação da hierarquia, em vez de um “tipo de dados”. {% endhint %}
 
 ### Navegação no banco de dados com os nós do Dynamo
 
@@ -32,7 +30,7 @@ _Apontar e clicar_ é a forma mais fácil de selecionar diretamente um elemento 
 
 Os _menus suspensos_ criam uma lista de todos os elementos acessíveis em um projeto do Revit. É possível usar essa opção para referenciar elementos do Revit que não são necessariamente visíveis em uma vista. Essa é uma ótima ferramenta para consultar elementos existentes ou criar novos em um projeto do Revit ou em um editor de família.
 
-![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 Também é possível selecionar o elemento do Revit por camadas específicas na _hierarquia do Revit_. Essa é uma opção eficaz para personalizar grandes matrizes de dados na preparação da documentação ou da instanciação generativa e personalização.
 
@@ -50,7 +48,7 @@ Com as três imagens acima em mente, vamos nos aprofundar em um exercício que s
 
 Neste arquivo de exemplo do Revit, temos três tipos de elementos de uma construção simples. Usaremos isso como exemplo para selecionar elementos do Revit no contexto da hierarquia do Revit.
 
-![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Massa de construção
 > 2. Vigas (Framing estrutural)
@@ -83,7 +81,7 @@ Veja a seguir um método alternativo. Nesse caso, estamos deixando de lado a sel
 
 Usando algumas operações básicas de lista, podemos consultar uma face de interesse.
 
-![](<images/2/selecting - exercise 05.jpg>)
+\![](images/2/selecting - exercise 05.jpg)
 
 > 1. Primeiro, gere os elementos selecionados anteriormente para o nó Element.Faces.
 > 2. Em seguida, use o nó _List.Count_ que revela que estamos trabalhando com 23 superfícies na massa.
@@ -151,6 +149,4 @@ Em seguida, estamos prontos para extrair algumas informações básicas do tipo 
 > 2. Conecte o nó _“Todos os elementos do tipo de família”_ ao nó _"AdaptiveComponent.Location"_. Isso nos fornece uma lista de listas, cada uma com três pontos que representam as localizações dos pontos adaptativos.
 > 3. A conexão de um nó _"Polygon.ByPoints"_ retorna uma policurva. Podemos ver isso na viewport do Dynamo. Com esse método, visualizamos a geometria de um elemento e abstraímos a geometria da matriz restante dos elementos (que pode ser maior em número do que este exemplo).
 
-{% hint style="info" %}
- Dica: Se você clicar no número verde de um elemento do Revit no Dynamo, a viewport do Revit efetuará o zoom para aquele elemento. 
-{% endhint %}
+{% hint style="info" %} Dica: Se você clicar no número verde de um elemento do Revit no Dynamo, a viewport do Revit efetuará o zoom para aquele elemento. {% endhint %}

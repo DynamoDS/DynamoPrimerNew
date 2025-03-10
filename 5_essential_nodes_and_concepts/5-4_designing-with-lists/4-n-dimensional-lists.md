@@ -177,7 +177,7 @@ Não é a cadeira de balanço mais confortável de todos os tempos, mas há muit
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
-> 1. Como temos mais um nível para a hierarquia, vamos precisar usar **List.Map** com uma função de **List.Tranpose** para alterar a direção das curvas Nurbs.
+> 1. Como temos mais um nível para a hierarquia, vamos precisar usar **List.Map** com uma função de **List.Transpose** para alterar a direção das curvas Nurbs.
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 

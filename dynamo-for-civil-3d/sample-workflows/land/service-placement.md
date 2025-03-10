@@ -18,9 +18,7 @@ O projeto de engenharia de uma construção habitacional típica envolve o traba
 
 ## Compatibilidade de versão
 
-{% hint style="success" %}
- Este gráfico será executado no **Civil 3D 2020** e versões superiores. 
-{% endhint %}
+{% hint style="success" %} Este gráfico será executado no **Civil 3D 2020** e versões superiores. {% endhint %}
 
 ## Conjunto de dados
 
@@ -46,9 +44,7 @@ Vamos começar
 
 Nossa primeira etapa é obter a geometria da linha de distribuição principal no Dynamo. Em vez de selecionar linhas individuais ou polilinhas, vamos obter todos os objetos em uma determinada camada e uni-los como uma PolyCurve do Dynamo.
 
-{% hint style="info" %}
- Se a geometria da curva do Dynamo for nova para você, veja a seção [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Se a geometria da curva do Dynamo for nova para você, veja a seção [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Obtenção dos objetos do Civil 3D e união de tudo em uma única PolyCurve</p></figcaption></figure>
 
@@ -68,9 +64,7 @@ Também precisamos lidar com um possível problema que surja. A linha do lote te
 
 É hora de descobrir onde os medidores de serviço serão colocados. Normalmente, a colocação é determinada pelos requisitos de órgãos locais; portanto, forneceremos valores de entrada que podem ser alterados para atender a várias condições. Vamos usar um **Sistema de coordenadas** ao longo da linha do lote como referência para criar os pontos. Isso torna muito fácil a definição de deslocamentos relativos à linha do lote, não importando sua orientação.
 
-{% hint style="info" %}
- Se os sistemas de coordenadas forem algo novo para você, veja a seção [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Se os sistemas de coordenadas forem algo novo para você, veja a seção [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Criação de pontos de inserção para os medidores de serviço</p></figcaption></figure>
 
@@ -105,17 +99,13 @@ Esse é o comportamento padrão do Dynamo e é muito útil em muitos casos. No e
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Configurações da vinculação de objetos do Dynamo</p></figcaption></figure>
 
-{% hint style="info" %}
- Veja a seção [object-binding.md](../../advanced-topics/object-binding.md "mention") para obter mais informações. 
-{% endhint %}
+{% hint style="info" %} Veja a seção [object-binding.md](../../advanced-topics/object-binding.md "mention") para obter mais informações. {% endhint %}
 
 Alterar essa configuração forçará o Dynamo a “esquecer” os objetos que cria a cada execução. Veja a seguir um exemplo de como executar o gráfico com a vinculação de objetos desativada usando o **Reprodutor do Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Execução do gráfico usando o Reprodutor do Dynamo e visualização dos resultados no Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}
- Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 
 > :tada: Missão cumprida.
 
@@ -123,14 +113,8 @@ Alterar essa configuração forçará o Dynamo a “esquecer” os objetos que c
 
 Veja a seguir algumas ideias sobre como você pode expandir os recursos desse gráfico.
 
-{% hint style="info" %}
- Coloque **várias conexões de serviço** simultaneamente em vez de selecionar cada linha do lote. 
-{% endhint %}
+{% hint style="info" %} Coloque **várias conexões de serviço** simultaneamente em vez de selecionar cada linha do lote. {% endhint %}
 
-{% hint style="info" %}
- Ajuste as entradas para colocar **limpeza de esgoto** em vez de medidores de serviço de água. 
-{% endhint %}
+{% hint style="info" %} Ajuste as entradas para colocar **limpeza de esgoto** em vez de medidores de serviço de água. {% endhint %}
 
-{% hint style="info" %}
- **Adicione um botão de alternância** para permitir a colocação de uma única conexão de serviço em um lado específico da linha do lote em vez de em ambos os lados. 
-{% endhint %}
+{% hint style="info" %} **Adicione um botão de alternância** para permitir a colocação de uma única conexão de serviço em um lado específico da linha do lote em vez de em ambos os lados. {% endhint %}

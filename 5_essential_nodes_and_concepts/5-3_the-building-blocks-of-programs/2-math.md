@@ -8,10 +8,10 @@ Os operadores são um conjunto de componentes que usam funções algébricas com
 
 | Ícone                                                  | Nome (Sintaxe)     | Entradas                     | Saídas      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Exercício: Fórmula da espiral dourada
 
@@ -35,9 +35,13 @@ Combine operadores e variáveis para formar uma relação mais complexa através
 
 A espiral dourada é definida como a equação:
 
-$$ x = r cos θ = a cos θ e^{bθ} $$
+$$
+x = r cos θ = a cos θ e^{bθ}
+$$
 
-$$ y = r sin θ = a sin θe^{bθ} $$
+$$
+y = r sin θ = a sin θe^{bθ}
+$$
 
 A imagem abaixo representa a espiral dourada na forma de programação visual. Quando você percorrer o grupo de nós, tente prestar atenção ao paralelo entre o programa visual e a equação escrita.
 
@@ -87,7 +91,7 @@ Agora que fizemos uma casca circular nautiloide, vamos passar para os eixos para
 
 Como ponto de partida, vamos começar com a mesma etapa do exercício anterior: criar uma matriz de espiral de pontos com o nó **Point.ByCoordinates**.
 
-![](../images/5-3/2/math-part IV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 Em seguida, siga estas minietapas para gerar uma série de espirais em várias rotações.
 

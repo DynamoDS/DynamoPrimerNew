@@ -78,14 +78,14 @@ A escala e o cisalhamento são, comparativamente, transformações geométricas 
 
 | Classe        | CoordinateSystem com escala não uniforme | CoordinateSystem com cisalhamento |
 | ------------ | ------------------------------------- | ------------------------ |
-| Arco          | Não                                    | Não                       |
+| Arco          | No                                    | Não                       |
 | NurbsCurve   | Sim                                   | Sim                      |
-| NurbsSurface | Não                                    | Não                       |
-| Círculo       | Não                                    | Não                       |
+| NurbsSurface | No                                    | Não                       |
+| Círculo       | No                                    | Não                       |
 | Linha         | Sim                                   | Sim                      |
-| Plano        | Não                                    | Não                       |
+| Plano        | No                                    | Não                       |
 | Ponto        | Sim                                   | Sim                      |
-| Polígono      | Não                                    | Não                       |
-| Sólido        | Não                                    | Não                       |
-| Superfície      | Não                                    | Não                       |
-| Texto         | Não                                    | Não                       |
+| Polígono      | No                                    | Não                       |
+| Sólido        | No                                    | Não                       |
+| Superfície      | No                                    | Não                       |
+| Texto         | No                                    | Não                       |
