@@ -18,7 +18,7 @@ Auf den ersten Blick scheint es ungewohnt, dass der erste Index einer Liste imme
 
 Wenn Sie etwa die Finger an Ihrer rechten zählen, würden Sie von 1 bis 5 zählen. In einer Liste in Dynamo hätten Ihre Finger jedoch die Indizes 0–4. Für Einsteiger in die Programmierung ist dies eventuell zunächst ungewohnt. Nullbasierte Indizes sind jedoch die in den meisten Rechensystemen gebräuchliche Praxis.
 
-Beachten Sie, dass die Liste nach wie vor 5 Einträge enthält, sie werden nur beginnend mit 0 gezählt. Die Einträge in Listen müssen nicht unbedingt Zahlen sein. Vielmehr können alle in Dynamo unterstützten Datentypen verwendet werden: Punkte, Kurven, Oberflächen, Familien usw.
+Beachten Sie, dass die Liste nach wie vor 5 Einträge enthält, sie werden nur beginnend mit 0 gezählt. Die Einträge in Listen müssen nicht unbedingt Zahlen sein. Vielmehr können alle in Dynamo unterstützten Datentypen verwendet werden: Punkte, Kurven, Oberflächen, Familien usw.
 
 ![](../images/5-4/1/what'salist-zerobasedindices.jpg)
 
@@ -76,6 +76,32 @@ Mit der Methode "Kreuzprodukt" werden sämtliche möglichen Verbindungen hergest
 Es ist leicht zu erkennen, dass es mehrere Möglichkeiten gibt, Linien zwischen diesen Punktgruppen zu zeichnen. Um die Vergitterungsoptionen aufzurufen, klicken Sie mit der rechten Maustaste in die Mitte eines Blocks und wählen das Menü Vergitterung.
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+
+### Was ist eine Replikation?
+
+Stellen Sie sich vor, Sie haben Weintrauben. Wenn Sie Traubensaft herstellen möchten, werden Sie nicht jede Beere einzeln auspressen, sondern die ganzen Trauben in den Entsafter geben. Die Replikation in Dynamo funktioniert auf ähnliche Weise: Anstatt einen Vorgang immer nur auf ein Element anzuwenden, kann Dynamo ihn gleichzeitig auf eine ganze Liste anwenden.
+
+Dynamo-Blöcke erkennen automatisch, wenn sie es mit Listen zu tun haben, und wenden die Vorgänge auf mehrere Elemente an. Das bedeutet, dass Sie Elemente nicht manuell durchgehen müssen. Dies geschieht automatisch. Aber wie entscheidet Dynamo, wie Listen verarbeitet werden, wenn mehrere Listen vorhanden sind?
+
+Es gibt im Wesentlichen zwei Möglichkeiten:
+
+#### Kartesische Replikation
+Nehmen wir an, Sie stehen in der Küche und bereiten Fruchtsäfte zu. Sie haben eine Liste mit Früchten: `{apple, orange, pear}` und eine feste Menge Wasser für jeden Saft: `1 cup`. Sie möchten aus jeder Frucht einen Saft mit der gleichen Menge Wasser herstellen. In diesem Fall kommt die kartesische Replikation ins Spiel.
+
+In Dynamo bedeutet dies, dass Sie die Liste der Früchte in die Frucht-Eingabe des Juice.Maker-Blocks eingeben, während die Wasser-Eingabe konstant bei 1 cup bleibt. Der Block verarbeitet dann jede Frucht einzeln und kombiniert sie mit der festen Menge Wasser. Ergebnis:
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+Jede Frucht wird mit der gleichen Menge Wasser kombiniert.
+
+#### ZIP-Replikation
+Die ZIP-Replikation funktioniert etwas anders. Wenn Sie zwei Listen haben, eine für Früchte (`{apple, orange, pear}`) und eine andere für die Zuckermenge (`{2 tbsp, 3 tbsp, 1 tbsp}`), würde die ZIP-Replikation die entsprechenden Elemente aus jeder Liste kombinieren. Beispiel:
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+Jede Frucht wird mit der entsprechenden Menge Zucker kombiniert.
+
+Weitere Informationen zur Funktionsweise finden Sie in den [Handbüchern für Replikation und Vergitterung](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1).
 
 ## Übung
 

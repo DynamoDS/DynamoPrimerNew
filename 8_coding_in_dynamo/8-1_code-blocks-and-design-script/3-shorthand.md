@@ -94,7 +94,7 @@ In diesem Schritt verschieben Sie das Raster aus Punkten mithilfe der ersten Fun
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. Verwenden Sie anstelle eines Formelblocks einen **Codeblock** mit der folgenden Zeile: `(0..Math.Sin(x*360)..#50)*5;`. Dadurch definieren Sie, kurz zusammengefasst, einen Bereich, der eine Formel enthält. Diese Formel ist die Sinusfunktion. Da für die Sinusfunktion in Dynamo Werte in Grad eingegeben werden müssen, multiplizieren Sie die x-Werte (d. h. den eingegebenen Bereich zwischen 0 und 1) mit 360, um eine vollständige Sinuskurve zu erhalten. Als Nächstes wird dieselbe Anzahl Unterteilungen als Rastersteuerpunkte für die einzelnen Reihen benötigt. Definieren Sie daher 50 Unterteilungen mit #50. Der Multiplikator 5 schließlich verstärkt die Verschiebung, sodass deren Wirkung in der Dynamo-Vorschau deutlich zu sehen ist.
+> 1. Wir verwenden einen **Codeblock** mit folgender Zeile: `(0..Math.Sin(x*360)..#50)*5;`. Dadurch definieren Sie, kurz zusammengefasst, einen Bereich, der eine Formel enthält. Diese Formel ist die Sinusfunktion. Da für die Sinusfunktion in Dynamo Werte in Grad eingegeben werden müssen, multiplizieren Sie die x-Werte (d. h. den eingegebenen Bereich zwischen 0 und 1) mit 360, um eine vollständige Sinuskurve zu erhalten. Als Nächstes wird dieselbe Anzahl Unterteilungen als Rastersteuerpunkte für die einzelnen Reihen benötigt. Definieren Sie daher 50 Unterteilungen mit #50. Der Multiplikator 5 schließlich verstärkt die Verschiebung, sodass deren Wirkung in der Dynamo-Vorschau deutlich zu sehen ist.
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -140,6 +140,6 @@ Im visuellen Diagramm können Sie die einzelnen Codeblöcke markieren und ihre F
 >
 > 2\. Der zweite **Codeblock** ersetzt den **Number Range**-Block.
 >
-> 3\. Der dritte **Codeblock** ersetzt den **Formula**-Block (sowie **List.Transpose**, **List.Count** und **Number Range**).
+> 3\. Der dritte **Codeblock** ersetzt die Blöcke **List.Transpose**, **List.Count** und **Number Range**.
 >
 > 4\. Der vierte **Codeblock** ruft eine Liste von Listen ab und ersetzt den **List.GetItemAtIndex**-Block.

@@ -21,7 +21,7 @@ Erweiterungsautoren müssen möglicherweise auch einige Änderungen vornehmen, j
 
 ### Häufige Probleme: <a href="#common-issues" id="common-issues"></a>
 
-1\) Beim Öffnen eines Diagramms haben einige Blöcke mehrere Anschlüsse mit demselben Namen, das Diagramm sah beim Speichern jedoch einwandfrei aus. Dieses Problem kann mehrere Ursachen haben.
+1) Beim Öffnen eines Diagramms haben einige Blöcke mehrere Anschlüsse mit demselben Namen, das Diagramm sah beim Speichern jedoch einwandfrei aus. Dieses Problem kann mehrere Ursachen haben.
 
 Die häufigste Fehlerursache ist, dass der Block mit einem Konstruktor erstellt wurde, der die Anschlüsse neu erstellt hat. Stattdessen hätte ein Konstruktor verwendet werden müssen, der die Anschlüsse geladen hat. Diese Konstruktoren sind gewöhnlich mit `[JsonConstructor]` gekennzeichnet. _Beispiele finden Sie unten_.
 
@@ -33,7 +33,7 @@ Dies kann folgende Ursachen haben:
 * Es wurden zwei Versionen von JSON.net gleichzeitig in denselben Prozess geladen, was einen .NET-Laufzeitfehler verursachte, sodass das Attribut `[JsonConstructor]` nicht ordnungsgemäß verwendet werden konnte, um den Konstruktor zu markieren.
 * Die Datei DynamoServices.dll mit einer anderen Version als die aktuelle Dynamo-Version wurde mit dem Paket gebündelt. Dadurch kann ein .NET-Laufzeitfehler beim Ermitteln des Attributs `[MultiReturn]` auftreten, sodass die mit verschiedenen Attributen markierten Zero-Touch-Blöcke diese nicht anwenden können. Sie werden möglicherweise feststellen, dass ein Block eine einzelne Wörterbuchausgabe anstelle mehrerer Anschlüsse zurückgibt.
 
-2\) Beim Laden des Diagramms fehlen Blöcke vollständig, und es treten Fehler in der Konsole auf.
+2) Beim Laden des Diagramms fehlen Blöcke vollständig, und es treten Fehler in der Konsole auf.
 
 * Dies kann auftreten, wenn die Deserialisierung aus irgendeinem Grund fehlgeschlagen ist. Es empfiehlt sich, nur die benötigten Eigenschaften zu serialisieren. Wir können `[JsonIgnore]` für komplexe Eigenschaften verwenden, die Sie nicht laden oder speichern müssen, um sie zu ignorieren. Eigenschaften wie `function pointer, delegate, action,` oder `event` usw. Diese sollten nicht serialisiert werden, da sie in der Regel nicht deserialisiert werden können und einen Laufzeitfehler verursachen.
 

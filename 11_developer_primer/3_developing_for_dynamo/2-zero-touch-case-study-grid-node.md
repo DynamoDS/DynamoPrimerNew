@@ -1,4 +1,4 @@
-# Zero-Touch-Fallstudie - Rasterblock 
+# Zero-Touch-Fallstudie - Rasterblock
 
 Bei geöffnetem und gestartetem Visual Studio-Projekt werden Sie durch die Erstellung eines benutzerdefinierten Blocks geführt, mit dem ein rechteckiges Zellenraster erstellt wird. Auch wenn wir für die Erstellung mehrere Standardblöcke verwenden könnten, ist dies ein nützliches Werkzeug, das sich problemlos in einen Zero-Touch-Block integrieren lässt. Im Gegensatz zu Rasterlinien können Zellen um ihre Mittelpunkte skaliert, nach Eckscheitelpunkten abgefragt oder in Flächen integriert werden.
 
@@ -6,7 +6,7 @@ In diesem Beispiel werden einige der Funktionen und Konzepte behandelt, die Sie 
 
 ![Rechteckiges Rasterdiagramm](images/cover-image.jpg)
 
-#### Benutzerdefinierter, rechteckiger Rasterblock <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Benutzerdefinierter, rechteckiger Rasterblock <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Um mit dem Erstellen des Rasterblocks zu beginnen, erstellen Sie ein neues Visual Studio-Klassenbibliotheksprojekt. Eine ausführliche exemplarische Vorgehensweise zum Einrichten eines Projekts finden Sie auf der Seite Erste Schritte.
 
@@ -17,7 +17,7 @@ Um mit dem Erstellen des Rasterblocks zu beginnen, erstellen Sie ein neues Visua
 > 1. Wählen Sie `Class Library` für den Projekttyp.
 > 2. Geben Sie dem Projekt den Namen `CustomNodes`.
 
-Da wir Geometrie erstellen, müssen wir das entsprechende NuGet-Paket referenzieren. Installieren Sie das ZeroTouchLibrary-Paket über den NuGet-Paket-Manager. Dieses Paket ist für die Anweisung `using Autodesk.DesignScript.Geometry;` erforderlich.
+Da wir Geometrie erstellen, müssen wir das entsprechende NuGet-Paket referenzieren. Installieren Sie das ZeroTouchLibrary-Paket über den NuGet Package Manager. Dieses Paket ist für die Anweisung `using Autodesk.DesignScript.Geometry;` erforderlich.
 
 ![ZeroTouchLibrary-Paket](images/vs-nugetpackage.jpg)
 
@@ -96,7 +96,7 @@ Prüfen Sie, ob im Ordner `bin` des Projekts eine `.dll`-Datei enthalten ist. We
 > 2. Der benutzerdefinierte Block im Ansichtsbereich
 > 3. Die Schaltfläche Hinzufügen zum Hinzufügen der `.dll`-Datei zu Dynamo
 
-#### Benutzerdefinierte Blockänderungen <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### Benutzerdefinierte Blockänderungen <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 Im obigen Beispiel haben wir einen recht einfachen Block erstellt, der außerhalb der Methode `RectangularGrids` nicht viel mehr definiert hat. Es ist jedoch eventuell empfehlenswert, QuickInfos für Eingabeanschlüsse zu erstellen oder dem Block eine Zusammenfassung hinzuzufügen, wie bei den Dynamo-Standardblöcken. Das Hinzufügen dieser Elemente zu benutzerdefinierten Blöcken erleichtert deren Verwendung, insbesondere dann, wenn ein Benutzer in der Bibliothek nach ihnen suchen möchte.
 

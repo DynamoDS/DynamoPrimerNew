@@ -22,9 +22,7 @@ Die Eingaben und Ausgaben für Blöcke werden als Anschlüsse bezeichnet. Sie fu
 
 Anschlüsse erwarten Daten eines bestimmten Typs. Das Verbinden einer Zahl wie _2,75_ mit den Anschlüssen eines Point By Coordinates-Blocks führt beispielsweise dazu, dass ein Punkt erfolgreich erstellt wird. Wenn jedoch _Rot_ an denselben Anschluss geliefert wird, tritt ein Fehler auf.
 
-{% hint style="info" %}
- Tipp: Bewegen Sie den Cursor auf einen Anschluss, um eine QuickInfo mit dem erwarteten Datentyp aufzurufen. 
-{% endhint %}
+{% hint style="info" %} Tipp: Bewegen Sie den Cursor auf einen Anschluss, um eine QuickInfo mit dem erwarteten Datentyp aufzurufen. {% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -55,9 +53,7 @@ Durch Bewegen des Cursors auf den Namen bzw. die Anschlüsse oder durch Klicken 
 
 Wenn Ihr visuelles Programm Warnungen oder Fehler aufweist, gibt Dynamo zusätzliche Informationen zu dem Problem an. Alle Blöcke, die in gelb angezeigt werden, verfügen auch über eine QuickInfo über dem Namen. Bewegen Sie zum Erweitern den Mauszeiger über das QuickInfo-Symbol der Warnung ![](images/nodesandwires-nodewarningicon.png) oder des Fehlers ![](images/nodesandwires-nodeerroricon.png).
 
-{% hint style="info" %}
-Tipp: Untersuchen Sie vor dem Hintergrund dieser QuickInfo die vorgelagerten Blöcke, um zu sehen, ob der erforderliche Datentyp oder die erforderliche Datenstruktur fehlerhaft ist. 
-{% endhint %}
+{% hint style="info" %}Tipp: Untersuchen Sie vor dem Hintergrund dieser QuickInfo die vorgelagerten Blöcke, um zu sehen, ob der erforderliche Datentyp oder die erforderliche Datenstruktur fehlerhaft ist. {% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
@@ -101,7 +97,7 @@ Es kommt häufig vor, dass Sie den Programmablauf in Ihrem visuellen Programm an
 
 * Um die Verbindung zu einem Eingabeanschluss zu ändern, klicken Sie mit der linken Maustaste auf einen anderen Eingabeanschluss.
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Um den Draht zu entfernen, ziehen Sie ihn weg und klicken mit der linken Maustaste in den Arbeitsbereich.
 

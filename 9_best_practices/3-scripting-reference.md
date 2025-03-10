@@ -31,9 +31,7 @@ Standardbibliotheken sind außerhalb von Dynamo verfügbar und liegen in den Pro
    * Funktion: Excel.
    * Importverfahren: `import DSOffice`
 
-{% hint style="warning" %}
-*Anmerkung: Beachten Sie bei der Verwendung von **ProtoGeometry** in Python oder C#, dass Sie hierbei nicht verwaltete Objekte erstellen, deren Speicher manuell verwaltet werden muss, wie weiter unten im Abschnitt **Nicht verwaltete Objekte** genauer beschrieben. 
-{% endhint %}
+{% hint style="warning" %} *Anmerkung: Beachten Sie bei der Verwendung von **ProtoGeometry** in Python oder C#, dass Sie hierbei nicht verwaltete Objekte erstellen, deren Speicher manuell verwaltet werden muss, wie weiter unten im Abschnitt **Nicht verwaltete Objekte** genauer beschrieben. {% endhint %}
 
 ## Sorgfältige Kennzeichnung
 

@@ -17,9 +17,7 @@ Beim Hinzufügen von Haltungen und Schächten/Bauwerken zu einem Kanalnetz verwe
 
 ## Kompatibilität der Versionen
 
-{% hint style="success" %}
- Dieses Diagramm wird in **Civil 3D 2020** und höher ausgeführt. 
-{% endhint %}
+{% hint style="success" %} Dieses Diagramm wird in **Civil 3D 2020** und höher ausgeführt. {% endhint %}
 
 ## Datensatz
 
@@ -79,9 +77,7 @@ Jetzt wird es etwas schwieriger. Zu diesem Zeitpunkt haben wir eine große Liste
 
 Wir müssen die Liste der Schächte/Bauwerke filtern, sodass diejenigen, die einen bestimmten Versatz von der Achse überschreiten, nicht berücksichtigt werden. Dies erreichen Sie am besten mit dem Block **List.FilterByBoolMask**. Nach dem Filtern der Schacht-/Bauwerksliste verwenden Sie den **List.SortByKey**-Block, um sie nach ihren Stationswerten zu sortieren.
 
-{% hint style="info" %}
- Wenn Listen neu für Sie sind, finden Sie im Abschnitt [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") weitere Informationen. 
-{% endhint %}
+{% hint style="info" %} Wenn Listen neu für Sie sind, finden Sie im Abschnitt [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") weitere Informationen. {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>Filtern und Sortieren der Schächte/Bauwerke</p></figcaption></figure>
 
@@ -108,9 +104,7 @@ Hier sehen Sie ein Beispiel für die Ausführung des Diagramms mit **Dynamo Play
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Ausführen des Diagramms mit Dynamo Player und Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}
- Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. 
-{% endhint %}
+{% hint style="info" %} Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. {% endhint %}
 
 > :tada: Mission erfüllt!
 
@@ -128,14 +122,8 @@ Jetzt verstehen wir besser, wie der Prozess des Filterns der Schächte/Bauwerke 
 
 Im Folgenden finden Sie einige Anregungen, wie Sie die Funktionen dieses Diagramms erweitern können.
 
-{% hint style="info" %}
- Benennen Sie die Schächte/Bauwerke basierend auf der **nächstgelegenen Achse** um, anstatt eine bestimmte Achse auszuwählen. 
-{% endhint %}
+{% hint style="info" %} Benennen Sie die Schächte/Bauwerke basierend auf der **nächstgelegenen Achse** um, anstatt eine bestimmte Achse auszuwählen. {% endhint %}
 
-{% hint style="info" %}
- **Benennen Sie die Haltungen um** – zusätzlich zu den Schächten/Bauwerken. 
-{% endhint %}
+{% hint style="info" %} **Benennen Sie die Haltungen um** – zusätzlich zu den Schächten/Bauwerken. {% endhint %}
 
-{% hint style="info" %}
- **Legen Sie die Layer der Schächte/Bauwerke fest** – basierend auf ihrem Verlauf. 
-{% endhint %}
+{% hint style="info" %} **Legen Sie die Layer der Schächte/Bauwerke fest** – basierend auf ihrem Verlauf. {% endhint %}

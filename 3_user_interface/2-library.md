@@ -16,9 +16,7 @@ Das Durchsuchen dieser Kategorien stellt die schnellste Möglichkeit dar, um die
 
 Durchsuchen Sie die Bibliothek, indem Sie durch die Menüs klicken, um die einzelnen Kategorien und ihre Unterkategorien zu erweitern.
 
-{% hint style="info" %}
- Am besten untersuchen Sie zunächst die Menüs unter Geometry, da sie die größte Anzahl an Blöcken enthalten. 
-{% endhint %}
+{% hint style="info" %} Am besten untersuchen Sie zunächst die Menüs unter Geometry, da sie die größte Anzahl an Blöcken enthalten. {% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -29,13 +27,13 @@ Durchsuchen Sie die Bibliothek, indem Sie durch die Menüs klicken, um die einze
 
 Mit diesen werden die Blöcke weiter in derselben Unterkategorie kategorisiert, je nachdem, ob die Blöcke Daten **erstellen**, eine **Aktion** ausführen oder Daten **abfragen**.
 
-* ![](<images/3-2/user interface - create.jpg>) **Erstellen**: Erstellt oder konstruiert eine Geometrie von Grund auf neu. Beispiel: Kreis.
-* ![](<images/3-2/user interface - action.jpg>) **Aktion**: Führt eine Aktion für ein Objekt aus. Beispiel: Skalieren eines Kreises.
-* ![](<images/3-2/user interface - query.jpg>) **Abfrage**: Ruft eine Eigenschaft eines bereits vorhandenen Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
+* \![](<images/3-2/user interface - create.jpg>) **Erstellen**: Erstellt oder konstruiert eine Geometrie von Grund auf neu. Beispiel: Kreis.
+* \![](<images/3-2/user interface - action.jpg>) **Aktion**: Führt eine Aktion für ein Objekt aus. Beispiel: Skalieren eines Kreises.
+* \![](<images/3-2/user interface - query.jpg>) **Abfrage**: Ruft eine Eigenschaft eines bereits vorhandenen Objekts ab. Beispiel: Abrufen des Radius eines Kreises.
 
 Bewegen Sie den Mauszeiger über einen Block, um weitere Informationen über seinen Namen und sein Symbol hinaus anzuzeigen. Dadurch können Sie schnell nachvollziehen, welche Aktion der Block ausführt, welche Eingaben erforderlich sind und was von dem Block ausgegeben wird.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Beschreibung: Kurze Beschreibung des Blocks
 > 2. Symbol: Größere Version des Symbols im Menü Bibliothek
@@ -48,7 +46,7 @@ Wenn Sie relativ genau wissen, welchen Block Sie zu Ihrem Arbeitsbereich hinzuf�
 
 Treffen Sie Ihre Auswahl, indem Sie auf den hinzuzufügenden Block klicken, oder drücken Sie die EINGABETASTE, um die markierten Blöcke in der Mitte des Arbeitsbereichs hinzuzufügen.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Suchen nach Hierarchie
 
@@ -117,9 +115,7 @@ Sie können die Geometrieergebnisse auch über einen **Watch3D**-Block anzeigen.
 
 Beide Blöcke sind in der Kategorie View der Core-Bibliothek enthalten.
 
-{% hint style="info" %}
- Tipp: Die 3D-Vorschau kann bisweilen unübersichtlich sein, wenn Ihr visuelles Programm viele Blöcke enthält. Ziehen Sie in diesem Fall in Betracht, im Einstellungsmenü die Option zum Anzeigen der Hintergrundvorschau zu deaktivieren und einen Watch3D-Block zu verwenden, um eine Vorschau der Geometrie anzuzeigen. 
-{% endhint %}
+{% hint style="info" %} Tipp: Die 3D-Vorschau kann bisweilen unübersichtlich sein, wenn Ihr visuelles Programm viele Blöcke enthält. Ziehen Sie in diesem Fall in Betracht, im Einstellungsmenü die Option zum Anzeigen der Hintergrundvorschau zu deaktivieren und einen Watch3D-Block zu verwenden, um eine Vorschau der Geometrie anzuzeigen. {% endhint %}
 
 #### Code Block
 
@@ -129,7 +125,7 @@ Wir können auch Codeblöcke als Abkürzung verwenden, um einen Number Input-Blo
 
 Hier sehen Sie eine einfache Demonstration (mit Anweisungen) zur Verwendung von Codeblöcken in Ihrem Skript.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Doppelklicken Sie, um einen Code Block-Block zu erstellen.
 2. `Circle.ByCenterPointRadius(x,y);`Typ

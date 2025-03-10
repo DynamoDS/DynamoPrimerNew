@@ -1,4 +1,4 @@
-# Weitere Schritte mit Zero-Touch 
+# Weitere Schritte mit Zero-Touch
 
 Wenn wir wissen, wie wir ein Zero-Touch-Projekt erstellen, können wir uns die Details zum Erstellen eines Blocks anhand des Beispiels ZeroTouchEssentials im Dynamo-GitHub genauer ansehen.
 
@@ -18,7 +18,7 @@ Laden Sie zunächst hier das Projekt ZeroTouchEssentials herunter: [https://gith
 
 Die Codebeispiele werden aus [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/master/ZeroTouchEssentials/ZeroTouchEssentials.cs) abgerufen und entsprechen im Allgemeinen dieser Datei. Die XML-Dokumentation wurde entfernt, um sie kurz zu halten, und bei jedem Codebeispiel wird der Block in der Abbildung darüber erstellt.
 
-#### Vorgegebene Eingabewerte <a href="#default-input-values" id="default-input-values"></a>
+### Vorgegebene Eingabewerte <a href="#default-input-values" id="default-input-values"></a>
 
 Dynamo unterstützt die Definition von Vorgabewerten für Eingabeanschlüsse auf einem Block. Diese Vorgabewerte werden für den Block bereitgestellt, wenn die Anschlüsse keine Verbindungen haben. Vorgaben werden mithilfe des C#-Mechanismus zum Angeben optionaler Argumente im [C#-Programmierhandbuch](https://msdn.microsoft.com/de-de/library/dd264739.aspx) ausgedrückt. Die Vorgaben werden wie folgt angegeben:
 
@@ -42,7 +42,7 @@ namespace ZeroTouchEssentials
 
 > 1. Der Vorgabewert wird angezeigt, wenn Sie den Mauszeiger über den Eingabeanschluss des Blocks bewegen.
 
-#### Zurückgeben mehrerer Werte <a href="#returning-multiple-values" id="returning-multiple-values"></a>
+### Zurückgeben mehrerer Werte <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
 Das Zurückgeben mehrerer Werte ist etwas komplexer als die Erstellung mehrerer Eingaben, daher müssen sie mithilfe eines Wörterbuchs zurückgegeben werden. Die Einträge im Wörterbuch werden auf der Ausgabeseite des Blocks zu Anschlüssen. Mehrere Rückgabe-Anschlüsse werden auf folgende Weise erstellt:
 
@@ -80,7 +80,7 @@ Ein Block, der mehrere Ausgaben zurückgibt.
 
 > 1. Beachten Sie, dass nun zwei Ausgabeanschlüsse vorhanden sind, die entsprechend den Zeichenfolgen benannt sind, die wir für die Wörterbuchschlüssel eingegeben haben.
 
-#### Dokumentation, QuickInfos und Suche <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
+### Dokumentation, QuickInfos und Suche <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
 
 Es wird empfohlen, Dynamo-Blöcken Dokumentation hinzuzufügen, die die Funktion, Eingaben, Ausgaben, Suchbegriffe usw. des Blocks beschreibt. Dies erfolgt über XML-Dokumentations-Tags. XML-Dokumentation wird wie folgt erstellt:
 
@@ -88,7 +88,7 @@ Es wird empfohlen, Dynamo-Blöcken Dokumentation hinzuzufügen, die die Funktion
   * Beispiel: `/// Documentation text and XML goes here`
 * Erstellen Sie nach den drei Schrägstrichen XML-Tags über Methoden, die Dynamo beim Importieren der DLL-Datei liest.
   * Beispiel: `/// <summary>...</summary>`
-* Aktivieren Sie die XML-Dokumentation in Visual Studio, indem Sie `Project > Project Properties > Build` auswählen und `XML documentation file` aktivieren.
+* Aktivieren Sie die XML-Dokumentation in Visual Studio, indem Sie `Project > [Project] Properties > Build > Output` auswählen und `Documentation file` aktivieren.
 
 ![Erstellen einer XML-Datei](images/vs-xml.jpg)
 
@@ -134,7 +134,46 @@ Beachten Sie, dass der Code für diesen Beispielblock Folgendes enthält:
 > 2. Eine Eingabebeschreibung
 > 3. Eine Ausgabebeschreibung
 
-#### Objekte <a href="#objects" id="objects"></a>
+#### Optimale Verfahren für Dynamo-Blockbeschreibungen 
+
+Blockbeschreibungen erläutern kurz die Funktion und die Ausgabe eines Blocks. In Dynamo werden sie an zwei Stellen angezeigt:
+
+- In der QuickInfo des Blocks
+- Im Dokumentationsbrowser
+
+![Blockbeschreibung](images/node-description.png)
+
+Befolgen Sie diese Richtlinien, um beim Schreiben oder Aktualisieren von Blockbeschreibungen Konsistenz zu gewährleisten und Zeit zu sparen.
+
+##### Überblick
+
+Beschreibungen sollten aus ein bis zwei Sätzen bestehen. Wenn Sie weitere Informationen benötigen, fügen Sie diese im Dokumentationsbrowser unter Im Detail ein.
+
+Groß- und Kleinschreibung (Großschreibung des ersten Wortes eines Satzes und von Eigennamen). Kein Punkt am Ende.
+
+Die Sprache sollte so klar und einfach wie möglich sein. Definieren Sie Akronyme bei der ersten Erwähnung, es sei denn, sie sind auch unter Laien allgemein bekannt.
+
+Legen Sie immer Wert auf Klarheit, auch wenn das bedeutet, von diesen Richtlinien abzuweichen.
+
+##### Richtlinien
+
+| So sollten Sie vorgehen      | So sollten Sie nicht vorgehen |
+| ----------- | ----------- |
+| Beginnen Sie die Beschreibung mit einem Verb in der dritten Person. <ul><li>Beispiel: *Ermittelt*, ob sich ein Geometrieobjekt mit einem anderen schneidet.</li></ul>      | Beginnen Sie nicht mit einem Verb in der zweiten Person oder mit einem Substantiv. <ul><li>Beispiel: *Ermitteln*, ob sich ein Geometrieobjekt mit einem anderen schneidet</li></ul>       |
+| Verwenden Sie "Gibt zurück" oder "Erstellt" bzw. ein anderes beschreibendes Verb anstelle von "Holt". <ul><li>Beispiel: *Gibt eine NURBS-Darstellung einer Fläche zurück.*</li></ul>   | Verwenden Sie nicht "Holen" oder "Holt". Dieses Verb ist wenig spezifisch und kann sehr unterschiedlich übersetzt werden. <ul><li>Beispiel: *Holt* eine NURBS-Darstellung der Fläche.</li></ul>        |
+| Wenn Sie sich auf Eingaben beziehen, verwenden Sie "angegeben" oder "eingegeben" anstelle von "festgelegt" oder anderen Begriffen. Lassen Sie "angegeben" oder "eingegeben" nach Möglichkeit weg, um die Beschreibung zu vereinfachen und die Wortzahl zu reduzieren. <ul><li>Beispiel: Löscht die *angegebene* Datei.</li><li>Beispiel: Projiziert eine Kurve entlang der *angegebenen* Projektionsrichtung auf die *angegebene* Basisgeometrie.</li></ul>Sie können "festgelegt" verwenden, wenn Sie sich nicht direkt auf eine Eingabe beziehen. <ul><li>Beispiel: Schreibt Textinhalte in eine Datei, die durch den angegebenen Pfad *festgelegt* wird.</li></ul>       | Um die Konsistenz zu gewährleisten, sollten Sie bei Eingaben weder "festgelegt" noch einen anderen Begriff außer "angegeben" oder "eingegeben" verwenden. Mischen Sie "angegeben" und "eingegeben" nicht in derselben Beschreibung, es sei denn, dies ist aus Gründen der Übersichtlichkeit erforderlich. <ul><li>Beispiel: Löscht die *festgelegte* Datei.</li><li>Beispiel: Projiziert eine *eingegebene* Kurve entlang einer *angegebenen* Projektionsrichtung auf eine *festgelegte* Basisgeometrie.</li></ul>      |
+| Verwenden Sie "ein" oder "eine", wenn Sie sich zum ersten Mal auf eine Eingabe beziehen. Verwenden Sie aus Gründen der Übersichtlichkeit ggf. "der/die/das ein-/angegebene" anstelle von "ein" oder "eine".<ul><li>Beispiel: Sweept *eine* Kurve entlang der Pfadkurve.</li></ul>      | Verwenden Sie nicht "dies(e/r)", wenn Sie sich zum ersten Mal auf eine Eingabe beziehen. <ul><li>Beispiel: Sweept *diese* Kurve entlang der Pfadkurve.      |
+| Wenn Sie sich zum ersten Mal auf eine Ausgabe oder ein anderes Substantiv beziehen, das das Ziel der Blockoperation ist, verwenden Sie "ein" oder "eine". Verwenden Sie "der/die/das" nur, wenn Sie den Artikel zusammen mit "eingegeben" oder "angegeben" verwenden. <ul><li>Beispiel: Kopiert *eine* Datei.</li><li>Beispiel: Kopiert *die angegebene* Datei.</li></ul>      | Wenn Sie sich zum ersten Mal auf eine Ausgabe oder ein anderes Substantiv beziehen, das das Ziel der Blockoperation ist, verwenden Sie nicht "der/die/das" allein. <ul><li>Beispiel: Kopiert *die* Datei.</li></ul>      |
+| Schreiben Sie das erste Wort eines Satzes und alle Eigennamen, Substantive und Wörter, die im Allgemeinen groß geschrieben werden, groß. <ul><li>Beispiel: Gibt den Schnittpunkt zweier *Begrenzungsrahmen* zurück.</li></ul>      | Schreiben Sie gängige Geometrieobjekte und Konzepte nur groß, wenn dies aus Gründen der Übersichtlichkeit erforderlich ist. <ul><li>Beispiel: Skaliert ungleichmäßig um die angegebene *Ebene*.      |
+| Schreiben Sie Boolesch groß. Schreiben Sie True und False groß, wenn Sie sich auf die Ausgabe von Booleschen Werten beziehen. <ul><li>Beispiel: Gibt *True* zurück, wenn die beiden Werte unterschiedlich sind.</li><li>Beispiel: Wandelt eine Zeichenfolge basierend auf einem *Booleschen* Parameter in Groß- oder Kleinbuchstaben um.      | Boolesche Werte dürfen nicht klein geschrieben werden. Schreiben Sie True und False nicht klein, wenn Sie sich auf die Ausgabe von Booleschen Werten beziehen. <ul><li>Beispiel: Gibt *true* zurück, wenn die beiden Werte unterschiedlich sind.</li><li>Beispiel: Wandelt eine Zeichenfolge basierend auf einem *booleschen* Parameter in Groß- oder Kleinbuchstaben um.</li></ul>
+
+#### Warnungen und Fehler in Dynamo-Blöcken
+
+Blockwarnungen und -fehler machen den Benutzer auf ein Problem mit dem Diagramm aufmerksam. Sie informieren den Benutzer über Probleme, die die normale Ausführung des Diagramms beeinträchtigen, indem ein Symbol und ein erweiterter Text-Beschriftungsblock über dem Block angezeigt werden. Blockfehler und -warnungen können unterschiedliche Schweregrade aufweisen: Einige Diagramme können mit Warnungen dennoch ausgeführt werden, während bei anderen die erwarteten Ergebnisse blockiert werden. In allen Fällen sind Blockfehler und -warnungen wichtige Werkzeuge, um den Benutzer über Probleme mit dem Diagramm auf dem Laufenden zu halten.
+
+Richtlinien zur Gewährleistung der Konsistenz und zur Zeitersparnis beim Schreiben oder Aktualisieren von Blockwarn- und -fehlermeldungen finden Sie auf der Wiki-Seite [Inhaltsmuster: Blockwarnungen und -fehler](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors).
+
+### Objekte <a href="#objects" id="objects"></a>
 
 Dynamo verfügt nicht über das Schlüsselwort `new`, sodass Objekte unter Verwendung statischer Konstruktionsmethoden erstellt werden müssen. Objekte werden wie folgt konstruiert:
 
@@ -173,7 +212,7 @@ Nachdem die DLL-Datei ZeroTouchEssentials importiert wurde, befindet sich ein Ze
 
 ![Block ByTwoDoubles](images/dyn-constructor.jpg)
 
-#### Verwenden von Dynamo-Geometrietypen <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
+### Verwenden von Dynamo-Geometrietypen <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
 Dynamo-Bibliotheken können native Dynamo-Geometrietypen als Eingaben verwenden und neue Geometrie als Ausgaben erstellen. Geometrietypen werden wie folgt erstellt:
 
@@ -207,7 +246,7 @@ Ein Block, der die Länge einer Kurve abruft und diese verdoppelt.
 
 > 1. Dieser Block akzeptiert einen Kurvengeometrietyp als Eingabe.
 
-#### Verwerfen/Verwenden von Anweisungen <a href="#disposeusing-statements" id="disposeusing-statements"></a>
+### Verwerfen/Verwenden von Anweisungen <a href="#disposeusing-statements" id="disposeusing-statements"></a>
 
 Geometrieressourcen, die nicht aus Funktionen zurückgegeben werden, müssen manuell verwaltet werden, es sei denn, Sie verwenden die Dynamo-Version 2.5 oder höher. In Dynamo 2.5 und späteren Versionen werden Geometrieressourcen intern vom System verwaltet. Sie müssen Geometrie jedoch möglicherweise weiterhin manuell entfernen, wenn es sich um einen komplexen Anwendungsfall handelt oder wenn Sie zu einem festgelegten Zeitpunkt Speicherplatz reduzieren müssen. Die Dynamo-Engine verarbeitet alle Geometrieressourcen, die aus Funktionen zurückgegeben werden. Nicht zurückgegebene Geometrieressourcen können wie folgt manuell verarbeitet werden:
 
@@ -237,7 +276,7 @@ Geometrieressourcen, die nicht aus Funktionen zurückgegeben werden, müssen man
     return l;
     ```
 
-#### Migrationen <a href="#migrations" id="migrations"></a>
+### Migrationen <a href="#migrations" id="migrations"></a>
 
 Beim Publizieren einer neueren Version einer Bibliothek können sich Blocknamen ändern. Namensänderungen können in einer Migrationsdatei angegeben werden, sodass in früheren Versionen einer Bibliothek erstellte Diagramme auch nach einer Aktualisierung ordnungsgemäß funktionieren. Migrationen werden wie folgt durchgeführt:
 
@@ -266,7 +305,7 @@ Dieser Beispielcode weist Dynamo an, dass alle Blöcke mit dem Namen `GetClosest
 
 > Weitere Informationen finden Sie in diesem Codebeispiel in [ProtoGeometry.Migrations.xml](https://github.com/DynamoDS/Dynamo/blob/master/extern/ProtoGeometry/ProtoGeometry.Migrations.xml).
 
-#### Generika <a href="#generics" id="generics"></a>
+### Generika <a href="#generics" id="generics"></a>
 
 Zero-Touch unterstützt derzeit keine Generika. Sie können verwendet werden, jedoch nicht in dem Code, der direkt importiert wird, wenn der Typ nicht festgelegt ist. Methoden, Eigenschaften oder Klassen, die generisch sind und nicht über einen festgelegten Typ verfügen, können nicht verfügbar gemacht werden.
 

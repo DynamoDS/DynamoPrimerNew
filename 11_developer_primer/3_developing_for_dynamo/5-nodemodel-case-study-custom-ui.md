@@ -1,4 +1,4 @@
-# NodeModel-Fallstudie - Angepasste Benutzeroberfläche 
+# NodeModel-Fallstudie - Angepasste Benutzeroberfläche
 
 Auf NodeModel basierende Blöcke bieten erheblich mehr Flexibilität und Leistung als Zero-Touch-Blöcke. In diesem Beispiel wird der Zero-Touch-Rasterblock weiter optimiert. Dazu wird ein integrierter Schieberegler hinzugefügt, mit dem die Größe des Rechtecks zufällig festgelegt wird.
 

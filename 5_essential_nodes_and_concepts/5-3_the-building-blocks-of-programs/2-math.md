@@ -8,10 +8,10 @@ Operatoren sind Komponenten für algebraische Funktionen, die zwei Eingabewerte 
 
 | Symbol                                                  | Name (Syntax)     | Eingaben                     | Ausgaben      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplizieren (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplizieren (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Übung: Die Goldene Spirale-Formel
 
@@ -35,9 +35,13 @@ Kombinieren Sie Operatoren und Variablen, um mithilfe von **Formeln** eine kompl
 
 Die Goldene Spirale ist durch die folgende Gleichungen definiert:
 
-$$ x = r cos θ = a cos θ e^{bθ} $$
+$$
+x = r cos θ = a cos θ e^{bθ}
+$$
 
-$$ y = r sin θ = a sin θe^{bθ} $$
+$$
+y = r sin θ = a sin θe^{bθ}
+$$
 
 Die folgende Abbildung zeigt die goldene Spirale in visueller Programmierung. Beachten Sie bei der Betrachtung dieser Blockgruppe die Entsprechungen zwischen dem visuellen Programm und der schriftlichen Gleichung.
 
@@ -87,7 +91,7 @@ Muster: Nachdem Sie eine Nautilusmuschel aus Kreisen erstellt haben, betrachten 
 
 Beginnen Sie mit demselben Schritt wie in der vorigen Übung, d. h., indem Sie mithilfe des **Point.ByCoordinates**-Blocks ein spiralförmiges Array aus Punkten erstellen.
 
-![](../images/5-3/2/math-part IV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 Als Nächstes führen Sie diese kleinen Schritte aus, um eine Reihe von Spiralen mit verschiedenen Drehungen zu erstellen.
 

@@ -4,7 +4,7 @@ Zu den leistungsstarken Funktionen von Dynamo gehört die Möglichkeit zum Bearb
 
 ### Typen- und Exemplarparameter
 
-![Übung](<../.gitbook/assets/32 (2).jpg>)
+\![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Exemplarparameter definieren die Öffnung der Elemente in der Dachoberfläche mit einem Öffnungsanteil zwischen 0.1 und 0.4.
 > 2. Typenparameter werden auf sämtliche Elemente der Oberfläche angewendet, da diese zum selben Familientyp gehören. So kann beispielsweise das Material der einzelnen Elemente durch einen Typenparameter gesteuert werden.
@@ -16,9 +16,7 @@ Zu den leistungsstarken Funktionen von Dynamo gehört die Möglichkeit zum Bearb
 
 Rufen Sie sich zunächst ins Gedächtnis zurück, dass in Revit Typen- und Exemplarparameter verwendet werden. Beide können in Dynamo bearbeitet werden. In der folgenden Übung verwenden Sie jedoch Exemplarparameter.
 
-{% hint style="info" %}
- Während Sie das breite Spektrum der Verwendungsmöglichkeiten für die Parameterbearbeitung kennenlernen, müssen Sie in manchen Fällen eventuell sehr zahlreiche Revit-Elemente mit Dynamo bearbeiten. Solche Vorgänge können sehr _rechenintensiv_ sein und laufen deshalb eventuell nur langsam ab. Bei der Bearbeitung zahlreicher Elemente kann es daher sinnvoll sein, die Ausführung von Revit-Vorgängen mithilfe der Funktion Anhalten vorübergehend zu unterbrechen, während Sie das Diagramm entwickeln. Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [Anhalten](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) im Kapitel Körper. 
-{% endhint %}
+{% hint style="info" %} Während Sie das breite Spektrum der Verwendungsmöglichkeiten für die Parameterbearbeitung kennenlernen, müssen Sie in manchen Fällen eventuell sehr zahlreiche Revit-Elemente mit Dynamo bearbeiten. Solche Vorgänge können sehr _rechenintensiv_ sein und laufen deshalb eventuell nur langsam ab. Bei der Bearbeitung zahlreicher Elemente kann es daher sinnvoll sein, die Ausführung von Revit-Vorgängen mithilfe der Funktion Anhalten vorübergehend zu unterbrechen, während Sie das Diagramm entwickeln. Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [Anhalten](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) im Kapitel Körper. {% endhint %}
 
 ### Einheiten
 
@@ -36,9 +34,7 @@ Verwenden Sie zur schnellen Konvertierung von Einheiten den Block _Convert Betwe
 
 {% file src="datasets/3/Revit-Editing.zip" %}
 
-{% hint style="warning" %}
- Die unten stehende Übung wird in Metern durchgeführt. 
-{% endhint %}
+{% hint style="warning" %} Die unten stehende Übung wird in Metern durchgeführt. {% endhint %}
 
 In dieser Übung bearbeiten Sie Revit-Elemente, ohne geometrische Operationen in Dynamo auszuführen. In diesem Fall importieren Sie keine Dynamo-Geometrie, sondern bearbeiten lediglich Parameter in einem Revit-Projekt. Dies ist eine Übung zu Grundlagen. Benutzer mit fortgeschrittenen Revit-Kenntnissen sollten beachten, dass hier zwar die Exemplarparameter eines Körpers behandelt werden, mithilfe derselben Logik jedoch auch Arrays von Elementen umfassend angepasst werden können. Für diesen Vorgang wird der Element.SetParameterByName-Block verwendet.
 
@@ -69,9 +65,7 @@ In Dynamo können Sie die Parameter abrufen, indem Sie das Zielelement auswähle
 > 2. Definieren Sie einen weiteren _Code Block_ mit einer Liste von derselben Länge wie die Liste der Parameternamen. In diesem Fall geben Sie dabei Variablennamen (ohne Anführungszeichen) an und erhalten dadurch Eingaben für den _Code Block_. Verbinden Sie die _Schieberegler_ mit den entsprechenden Eingaben: `{bw,bl,bh,ao,io,lu};`
 > 3. Verbinden Sie den Codeblock mit der Werteingabe _Element.SetParameterByName*_. Ist die Option Automatisch ausführen aktiviert, werden die Ergebnisse sofort angezeigt.
 
-{% hint style="warning" %}
- *Diese Demonstration kann nur mit Exemplarparametern, nicht jedoch mit Typenparametern durchgeführt werden. 
-{% endhint %}
+{% hint style="warning" %} *Diese Demonstration kann nur mit Exemplarparametern, nicht jedoch mit Typenparametern durchgeführt werden. {% endhint %}
 
 Viele dieser Parameter sind genau wie in Revit voneinander abhängig. Dabei können manche Kombinationen selbstverständlich zu ungültiger Geometrie führen. Dieses Problem können Sie mithilfe definierter Formeln in den Parametereigenschaften beheben. Sie können stattdessen auch eine ähnliche Logik mit mathematischen Operationen in Dynamo einrichten. (Sie könnten dies als Zusatzübung ausprobieren.)
 

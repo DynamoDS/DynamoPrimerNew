@@ -13,8 +13,7 @@ Die "If"-Anweisung ist ein wichtiges Konzept in der Programmierung: "Wenn _dies_
 | Symbol                                             | Name (Syntax)             | Eingaben            | Ausgaben |
 | ------------------------------------------------ | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                        | Wenn (**If**)               | test, true, false | result  |
-| ![](../images/5-1/Formula.jpg)                   | Formel (**IF(x,y,z)**)   | x, y, z           | result  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Codeblock (**(x?y:z);**) | x? y, z           | result  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Codeblock (**(x?y:z);**) | x? y, z           | result  |
 
 Die folgenden kurzen Beispiele zeigen die Funktionsweise dieser drei Blöcke in der If-Bedingungsanweisung.
 

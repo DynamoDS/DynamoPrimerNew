@@ -1,0 +1,26 @@
+# Effizientes Arbeiten mit großen Datensätzen in Dynamo
+
+Auf dieser Seite finden Sie einige Faustregeln für das effiziente Arbeiten mit großen Datensätzen in Dynamo. Sie können die Tipps hoffentlich verwenden, um Engpässe in Ihren Diagrammen zu identifizieren, sodass Ihr Diagramm in wenigen Minuten statt in mehreren Stunden ausgeführt werden kann.
+
+Inhalt:
+* Geometriegenerierung und Tessellation im Vergleich
+* Speichernutzung
+* Revit API
+
+### Geometriegenerierung und Tessellation im Vergleich
+
+In Dynamo sind das Erstellen eines Geometrieobjekts und das Zeichnen zwei völlig unterschiedliche Ereignisse. Im Allgemeinen ist das Erstellen von Geometrie viel schneller und erfordert weniger Speicherplatz als das Zeichnen des Objekts. Sie können sich die Geometrie als eine Liste von Maßen vorstellen, um einen Anzug herzustellen, während die Tessellation der Anzug selbst ist. Anhand seiner Maße können Sie ziemlich viel über den Anzug aussagen: wie lang die Arme sind, wie viel er kostet usw., aber Sie müssen den fertigen Anzug fast immer sehen und anprobieren, um zu erfahren, ob er passt. Auf ähnliche Weise können Sie bei nicht tessellierter Geometrie den Begrenzungsrahmen, die Fläche und das Volumen bestimmen, sie mit anderer Geometrie schneiden und im SAT- oder Revit-Format exportieren. Sie müssen die Geometrie jedoch fast immer tessellieren, um ein Gefühl dafür zu bekommen, ob sie korrekt ist oder nicht. 
+
+Wenn Ihr Dynamo-Diagramm viele Objekte enthält und während der Ausführung langsamer wird, können Sie möglicherweise die Tessellationsschritte aus dem Diagramm entfernen, um den Vorgang zu beschleunigen.  
+
+Geometrieblöcke in Dynamo werden immer tesselliert*. Somit stehen Ihnen zwei Optionen für die Arbeit mit nicht tessellierter Geometrie zur Verfügung: Python-Blöcke und ZeroTouch-Blöcke. Solange Sie ein Geometrieobjekt nicht aus Ihrem Python- oder ZeroTouch-Block zurückgeben, wird die Geometrie nicht tesselliert. Wenn Ihr Diagramm beispielsweise mehrere Punktblöcke aufweist, die mit mehreren Linienblöcken verbunden sind, die mit mehreren Erhebungsblöcken verbunden sind, die mit mehreren Verdickungsblöcken verbunden sind, wird die Geometrie bei jedem Schritt tesselliert. Stattdessen können Sie diese Logik in einem Python- oder ZeroTouch-Block bündeln und nur das endgültige Objekt aus dem Block zurückgeben.
+
+Weitere Informationen zur Verwendung von ZeroTouch-Blöcken finden Sie im Abschnitt [Entwickeln für Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md) in diesem Primer.
+
+### Speichernutzung
+
+Wenn Sie keine Geometrie mehr tessellieren, kann durch überschüssige Geometrieansammlung möglicherweise ein Speicherengpass entstehen. Geometrieobjekte in Dynamo benötigen bei ihrer Erstellung eine geringe, aber nicht unerhebliche Menge an Speicher. Wenn Sie mit Hunderttausenden oder gar Millionen von Objekten arbeiten, kann dies zu einem Absturz von Dynamo oder Revit führen. In Dynamo Version 2.5 und höher wird dies implizit durch das Verwerfen nicht verwendeter Objekte gelöst. Wenn Sie jedoch eine Version vor Version 2.5 verwenden, besteht eine Möglichkeit zum Vermeiden der Erstellung von übermäßig viel Geometrie darin, die Objekte zu verwerfen, wenn Sie sie nicht mehr benötigen. Nehmen wir beispielsweise an, Sie würden Hunderttausende von NurbsCurves-Objekten erstellen, von denen jedes Dutzende von Punkten erfordert. Eine Möglichkeit, sie zu erstellen, ist eine zweidimensionale Liste in Dynamo, die in einen NurbsCurve.ByPoints-Block eingegeben wird. Dazu müssen jedoch Millionen von Punkten erstellt werden. Eine andere Möglichkeit ist die Verwendung eines Python- oder ZeroTouch-Blocks. In diesem Block können Sie ein Dutzend Punkte erstellen, diese in den Block NurbsCurve.ByPoints eingeben und dann das Dutzend Punkte mit dem Methodenaufruf .Dispose() entfernen. Weitere Informationen zur Verwendung von ZeroTouch-Blöcken finden Sie im Abschnitt [Entwickeln für Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md) in diesem Primer. Wenn Sie die Geometrieobjekte nach der Erstellung entfernen, kann der verwendete Speicherplatz unter bestimmten Umständen drastisch reduziert werden. Obwohl dies für Benutzer ab Dynamo 2.5 kein Problem mehr ist, wird dennoch empfohlen, dass die Benutzer Geometrie explizit löschen, wenn der Anwendungsfall es erfordert, zu einem bestimmten Zeitpunkt den verwendeten Arbeitsspeicher zu reduzieren. Weitere Informationen zu den neuen Stabilitätsfunktionen ab Dynamo 2.5 finden Sie im Artikel zu [Verbesserungen der Stabilität der Dynamo-Geometrie](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
+
+### Revit API
+
+Wenn Sie Objekte in einem ZeroTouch- oder Python-Block generell immer verwerfen und dennoch Speicher- oder Leistungsprobleme auftreten, müssen Sie Dynamo möglicherweise vollständig umgehen und Revit-Objekte direkt über die API erstellen. Sie können beispielsweise eine Excel-Datei auf Punktinformationen analysieren und diese Informationen verwenden, um XYZ- und andere Revit-Elemente über die entsprechende API zu erstellen. An diesem Punkt wird Revit zum ultimativen Engpass, was sich nicht vermeiden lässt.

@@ -1,4 +1,4 @@
-# Publizieren eines Pakets 
+# Publizieren eines Pakets
 
 ### Publizieren eines Pakets <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -63,8 +63,55 @@ Das Aktualisieren eines Pakets ist ein ähnlicher Vorgang wie das Publizieren. �
 
 #### Web-Client des Package Manager <a href="#package-manager-web-client" id="package-manager-web-client"></a>
 
-Der Web-Client des Package Manager wird ausschließlich zum Suchen und Anzeigen von Paketdaten wie z. B. Versionierung und Download-Statistiken verwendet.
+Mit dem Web-Client des Package Manager können Benutzer nach Paketdaten suchen und diese anzeigen, einschließlich Versionierung, Download-Statistiken und anderen relevanten Informationen. Darüber hinaus können sich Paketautoren anmelden, um ihre Paketdetails, wie z. B. Kompatibilitätsinformationen, direkt über den Web-Client zu aktualisieren.
+
+Weitere Informationen zu diesen Funktionen finden Sie im folgenden Blog-Post: [https://dynamobim.org/discover-the-new-dynamo-package-management-experience/](https://dynamobim.org/discover-the-new-dynamo-package-management-experience/).
 
 Der Web-Client des Package Manager ist über folgenden Link verfügbar: [https://dynamopackages.com/](https://dynamopackages.com)
 
 ![Web-Client des Package Manager](images/packagemanager-browser.jpg)
+
+##### Aktualisieren von Paketdetails
+
+Autoren können ihre Paketbeschreibung, den Website-Link und den Repository-Link bearbeiten, indem sie die folgenden Schritte ausführen:  
+
+> 1. Wählen Sie unter **Meine Pakete** das Paket aus, und klicken Sie auf **Paketdetails bearbeiten**.  
+> 2. Fügen Sie die Links für die **Website** und das **Repository** mithilfe der entsprechenden Felder hinzu, oder ändern Sie sie.  
+> 3. Aktualisieren Sie bei Bedarf die **Paketbeschreibung**.  
+> 4. Klicken Sie auf **Änderungen speichern**, um die Aktualisierungen anzuwenden.  
+
+ **Anmerkung**: Die Aktualisierung im Package Manager in Dynamo kann bis zu 15 Minuten dauern, da Server-Updates einige Zeit in Anspruch nehmen. Wir arbeiten daran, um diese Zeit zu reduzieren.  
+
+ ![Neue Benutzeroberfläche zum Aktualisieren der Paketdetails für publizierte Pakete](images/Package-Manager_Image_5.png)
+
+##### Bearbeiten von Kompatibilitätsinformationen für publizierte Paketversionen  
+
+Kompatibilitätsinformationen können rückwirkend für zuvor publizierte Paketversionen aktualisiert werden. Führen Sie die folgenden Schritte aus:  
+
+![Bearbeiten der Kompatibilitätsinformationen für publizierte Pakete – Schritt 1](images/Package-Manager_Image_6.png)
+
+**Schritt 1:**  
+
+1. Klicken Sie auf die Paketversion, die Sie aktualisieren möchten.  
+2. Die Liste **Abhängig von** wird automatisch mit den Paketen gefüllt, von denen Ihr Paket abhängt.  
+3. Klicken Sie auf das Stiftsymbol neben **Kompatibilität**, um den Arbeitsablauf **Kompatibilitätsinformationen bearbeiten** zu öffnen.  
+
+**Schritt 2:**  
+
+Folgen Sie dem Flussdiagramm unten, und prüfen Sie die folgende Tabelle, um zu ermitteln, welche Option für Ihr Paket am besten geeignet ist.
+
+![Welche Option sollte für den Arbeitsablauf Kompatibilitätsinformationen bearbeiten ausgewählt werden?](images/Package-Manager_Image_7.png)
+
+Sehen wir uns einige Szenarien anhand von Beispielen an:
+
+**Beispielpaket Nr. 1** – Civil Connection: Dieses Paket verfügt über API-Abhängigkeiten in Bezug auf Revit und Civil 3D und enthält keine Sammlung von Kernblöcken (z. B. Geometriefunktionen, mathematische Funktionen und/oder Listenverwaltung). In diesem Fall wäre Option 1 die ideale Option. Das Paket wird in Revit und Civil 3D als kompatibel angezeigt, die dem Versionsbereich und/oder der Liste der einzelnen Versionen entsprechen.
+
+**Beispielpaket Nr. 2** – Rhythm: Dieses Paket ist eine Sammlung aus Revit-spezifischen Blöcken sowie Core-Blöcken. In diesem Fall weist das Paket Host-Abhängigkeiten auf. Es enthält aber auch Core-Blöcke, die in Dynamo Core verwendet werden können. In diesem Fall wäre die ideale Option Option 2. Das Paket wird in der Revit- und Dynamo Core-Umgebung (auch als Dynamo Sandbox bezeichnet) als kompatibel angezeigt, die dem Versionsbereich und/oder der Liste der einzelnen Versionen entspricht.
+
+**Beispielpaket Nr. 3** – Mesh Toolkit: Dieses Paket ist ein Dynamo Core-Paket, bei dem es sich um eine Sammlung von Geometrieblöcken ohne Host-Abhängigkeiten handelt. In diesem Fall wäre die ideale Option Option 3. Das Paket wird in Dynamo und allen Host-Umgebungen als kompatibel angezeigt, die dem Versionsbereich und/oder der Liste der einzelnen Versionen entsprechen.
+
+![Optionen zum Bearbeiten der Kompatibilitätsinformationen](images/Package-Manager_Image_8.png)
+
+Je nach ausgewählter Option werden Dynamo- und/oder Host-spezifische Felder eingeblendet, wie in der folgenden Abbildung gezeigt.
+
+![Kompatibilitätsinformationen bearbeiten – Schritt 2](images/Package-Manager_Image_9.png)

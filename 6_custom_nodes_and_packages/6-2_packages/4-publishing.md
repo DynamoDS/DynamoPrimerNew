@@ -2,7 +2,7 @@
 
 In den vorigen Abschnitten wurde gezeigt, wie das _MapToSurface_-Paket sich aus benutzerdefinierten Blöcken und Beispieldateien zusammensetzt. Aber wie veröffentlichen Sie ein Paket, das lokal entwickelt wurde? Diese Fallstudie zeigt, wie Sie ein Paket aus einer Gruppe von Dateien in einem lokalen Ordner publizieren können.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Es gibt mehrere Möglichkeiten zum Publizieren von Paketen. Im Folgenden wird der von uns empfohlene Prozess beschrieben: **Sie publizieren lokal, entwickeln lokal und publizieren schließlich online**. Sie beginnen mit einem Ordner, der sämtliche Dateien im Paket enthält.
 
@@ -55,7 +55,7 @@ Publizieren Sie das Paket, indem Sie auf Lokal publizieren (1) klicken. Achten S
 
 Nach dem Publizieren werden die benutzerdefinierten Blöcke in der Gruppe DynamoPrimer oder in Ihrer Dynamo-Bibliothek angezeigt.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Sehen wir jetzt im Stammverzeichnis nach, wie Dynamo das eben erstellte Paket formatiert hat. Navigieren Sie dazu zur Registerkarte Installierte Pakete, klicken Sie neben MapToSurface auf das Menü mit den drei Punkten, und wählen Sie Stammverzeichnis anzeigen aus.
 
@@ -78,6 +78,11 @@ Das Stammverzeichnis befindet sich am lokalen Speicherort des Pakets (da Sie es 
 
 1. Wenn Sie zum Publizieren bereit sind, wählen Sie im Fenster Pakete > Package Manager > Installierte Pakete die Schaltfläche rechts neben dem Paket, das Sie publizieren möchten, und dann Publizieren aus.
 2. Um ein bereits veröffentlichtes Paket zu aktualisieren, wählen Sie Version veröffentlichen. Dynamo aktualisiert dann Ihr Paket online mit den neuen Dateien im Stammverzeichnis des Pakets. Dieser einfache Schritt genügt.
+
+#### Testen des Package Manager-Servers
+Senden Sie beim Testen des Package Manager Ihre Testpakete nicht an den Produktionsserver. Verwenden Sie den Staging-Server. Dadurch wird verhindert, dass Ihre Pakete echte Pakete und Aktivitäten beeinträchtigen. Es ist einfach, Dynamo für die Verwendung des Staging-Servers zu konfigurieren. 
+
+Weitere Informationen hierzu finden Sie auf der [Wiki-Seite zum Testen des Package Manager-Servers](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
 
 ### Version veröffentlichen
 

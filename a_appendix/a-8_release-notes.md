@@ -1,0 +1,3 @@
+# Versionshinweise
+
+Die neuesten Updates, Fehlerbehebungen und neuen Funktionen in Dynamo finden Sie in den [Versionshinweisen](https://github.com/DynamoDS/Dynamo/wiki/Release-Notes) oder im [Archiv der Versionshinweise](https://github.com/DynamoDS/Dynamo/wiki/Release-Notes-Archive). Diese bieten eine hervorragende Möglichkeit, über die Verbesserungen und Änderungen in jeder Version auf dem Laufenden zu bleiben.

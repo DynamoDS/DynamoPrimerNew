@@ -28,7 +28,7 @@ Codeblöcke können auch flexibel für unterschiedliche Datentypen eingesetzt we
 
 Die folgende Abbildung zeigt, dass der "herkömmliche" Ablauf für diese Angaben etwas umständlich ist: Der Benutzer sucht in der Benutzeroberfläche nach dem gewünschten Block, fügt diesen im Ansichtsbereich hinzu und gibt die Daten ein. Einen Codeblock hingegen kann der Benutzer durch Doppelklicken im Ansichtsbereich aufrufen, um anschließend den benötigten Datentyp in der entsprechenden Syntax einzugeben.
 
-Die Blöcke number, string und formula sind drei Beispiele für Dynamo-Blöcke, die im Vergleich zu Code Block als veraltet betrachtet werden könnten.
+Die Nummern- und Zeichenfolgenblöcke sind zwei Beispiele für Dynamo-Blöcke, die im Vergleich zum Codeblock als veraltet betrachtet werden könnten.
 
 ![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 

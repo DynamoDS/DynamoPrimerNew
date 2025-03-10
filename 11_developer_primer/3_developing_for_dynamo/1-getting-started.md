@@ -4,7 +4,7 @@ Bevor wir mit der Entwicklung beginnen, ist es wichtig, ein solides Fundament f�
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Erstellen eines Visual Studio-Projekts <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Erstellen eines Visual Studio-Projekts <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio ist eine leistungsstarke IDE, in der wir ein Projekt erstellen, Referenzen hinzufügen, `.dll`-Dateien generieren und debuggen können. Beim Erstellen eines neuen Projekts erstellt Visual Studio außerdem eine Projektmappe, eine Struktur zum Organisieren von Projekten. In einer einzelnen Projektmappe können mehrere Projekte enthalten sein, die zusammen erstellt werden können. Um einen Zero-Touch-Block zu erstellen, müssen wir ein neues Visual Studio-Projekt starten, in im wir eine C#-Klassenbibliothek schreiben und eine `.dll`-Datei erstellen.
 
@@ -84,7 +84,7 @@ Wenn eine Kategorie mit dem Namen `MyCustomNode` in der Bibliothek erstellt wird
 > 1. MyCustomNode in der Dynamo-Bibliothek. Die Bibliothekskategorie wird durch den Namen der `.dll`-Datei bestimmt.
 > 2. SampleFunctions.MultiplyByTwo im Ansichtsbereich.
 
-#### So liest Dynamo Klassen und Methoden <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### So liest Dynamo Klassen und Methoden <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Wenn Dynamo eine DLL-Datei lädt, werden alle öffentlichen statischen Methoden als Blöcke angezeigt. Konstruktoren, Methoden und Eigenschaften werden in Erstellungs-, Aktions- und Abfrageblöcke umgewandelt. In unserem Multiplikationsbeispiel wird die Methode `MultiplyByTwo()` zu einem Aktionsblock in Dynamo. Dies liegt daran, dass der Block basierend auf der zugehörigen Methode und Klasse benannt wurde.
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dynamo hat unsere Methode als Erstellungsblock importiert.
 
-#### Hinzufügen von Dynamo-NuGet-Paketreferenzen <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Hinzufügen von Dynamo-NuGet-Paketreferenzen <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 Der Block für die Multiplikation ist sehr einfach, und es sind keine Referenzen auf Dynamo erforderlich. Wenn wir beispielsweise auf eine Dynamo-Funktion zum Erstellen von Geometrie zugreifen möchten, müssen wir die Dynamo-NuGet-Pakete referenzieren.
 

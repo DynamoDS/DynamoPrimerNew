@@ -1,8 +1,8 @@
-# Erstellen von Dynamo aus Quelldateien 
+# Erstellen von Dynamo aus Quelldateien
 
 Die Quelldateien von Dynamo werden auf GitHub gehostet, sodass jeder sie klonen und dazu beitragen kann. In diesem Kapitel erfahren Sie, wie Sie das Repository mithilfe von Git klonen, die Quelldateien mit Visual Studio kompilieren, einen lokalen Build ausführen und ein Debugging für diesen durchführen sowie neue Änderungen aus GitHub abrufen.
 
-#### Suchen der Dynamo-Repositorys auf GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Suchen der Dynamo-Repositorys auf GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 GitHub ist ein Hosting-Dienst, der auf [Git](https://help.github.com/articles/git-and-github-learning-resources/), einem Versionskontrollsystem zur Änderungsverfolgung und Koordination der Arbeit zwischen verschiedenen Personen, basiert. Git ist ein Werkzeug, mit dem wir die Quelldateien von Dynamo herunterladen und mit ein paar Befehlen auf dem neuesten Stand halten können. Mit dieser Methode vermeiden wir die unnötige und von Natur aus unübersichtliche Arbeit des Herunterladens und manuellen Ersetzens der Quelldateien bei jedem Update. Das Git-Versionskontrollsystem verfolgt alle Unterschiede zwischen einem lokalen und einem Remote-Code-Repository.
 
@@ -16,9 +16,9 @@ Die Quelldateien von Dynamo werden im DynamoDS-GitHub im folgenden Repository ge
 > 3. Dynamo-Quelldateien
 > 4. Git-spezifische Dateien
 
-#### Abrufen des Dynamo-Repositorys mit Git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### Abrufen des Dynamo-Repositorys mit Git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Bevor wir das Repository klonen können, müssen wir Git installieren. Befolgen Sie diese [Kurzanleitung](https://help.github.com/articles/set-up-git/#setting-up-git), um die Installationsschritte auszuführen und zu erfahren, wie Sie einen GitHub-Benutzernamen und eine -E-Mail-Adresse einrichten. In diesem Beispiel verwenden wir Git in der Befehlszeile. In diesem Handbuch wird davon ausgegangen, dass Sie Windows verwenden. Sie können Git jedoch auch unter Mac oder Linux verwenden, um die Dynamo-Quelle zu klonen.
+Bevor wir das Repository klonen können, müssen wir Git installieren. Befolgen Sie diese [Kurzanleitung](https://help.github.com/articles/set-up-git/#setting-up-git), um die Installationsschritte auszuführen und zu erfahren, wie Sie einen GitHub-Benutzernamen und eine GitHub-E-Mail-Adresse einrichten. In diesem Beispiel verwenden wir Git in der Befehlszeile. In diesem Handbuch wird davon ausgegangen, dass Sie Windows verwenden. Sie können Git jedoch auch unter Mac oder Linux verwenden, um die Dynamo-Quelle zu klonen.
 
 Wir benötigen eine URL für das Dynamo-Repository, von dem geklont werden soll. Sie finden diese auf der Repository-Seite unter der Schaltfläche Clone or Download. Kopieren Sie die URL zum Einfügen in die Befehlszeile.
 
@@ -47,7 +47,7 @@ Wir wissen, dass Git funktioniert, wenn der Klonvorgang erfolgreich abgeschlosse
 > 1. Dynamo-Quelldateien
 > 2. Git-Dateien
 
-#### Erstellen des Repositorys mit Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### Erstellen des Repositorys mit Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 Nachdem die Quelldateien nun auf den lokalen Computer geklont wurden, können wir eine ausführbare Datei für Dynamo erstellen. Dazu müssen wir die Visual Studio-IDE einrichten und sicherstellen, dass .NET Framework und DirectX installiert sind.
 
@@ -84,7 +84,7 @@ Wenn das Projekt geöffnet ist, können wir die Projektmappe erstellen. Durch di
 > 1. Wählen Sie `Build > Build Solution` aus.
 > 2. Stellen Sie im Ausgabefenster sicher, dass der Build erfolgreich war. Er sollte in etwa wie folgt lauten: `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
-#### Ausführen eines lokalen Builds <a href="#running-a-local-build" id="running-a-local-build"></a>
+### Ausführen eines lokalen Builds <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 Wenn Dynamo erfolgreich erstellt wurde, wird im Dynamo-Repository ein Ordner namens `bin` mit der Datei DynamoSandbox.exe erstellt. In unserem Fall verwenden wir die Option Debug für die Erstellung, sodass sich die ausführbare Datei unter `bin\AnyCPU\Debug` befindet. Durch Ausführen dieser Datei wird ein lokaler Build von Dynamo geöffnet.
 
@@ -96,7 +96,7 @@ Damit sind wir fast bereit, um mit der Entwicklung für Dynamo zu beginnen.
 
 Anweisungen zum Erstellen von Dynamo für andere Plattformen (z. B. Linux oder OS X) finden Sie auf dieser [Wiki-Seite](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac).
 
-#### Debuggen eines lokalen Builds mithilfe von Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### Debuggen eines lokalen Builds mithilfe von Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
 Beim Debuggen werden Fehler oder Probleme identifiziert, isoliert und behoben. Nachdem Dynamo erfolgreich aus den Quelldateien erstellt wurde, können wir verschiedene Werkzeuge in Visual Studio verwenden, um das Debugging für eine laufende Anwendung, z. B. das DynamoRevit-Zusatzmodul, durchzuführen. Wir können den Quellcode analysieren, um die Ursache eines Problems zu finden, oder den derzeit ausgeführten Code überwachen. Eine ausführlichere Beschreibung des Debugging und der Navigation durch Code in Visual Studio finden Sie in den [Visual Studio-Dokumenten](https://docs.microsoft.com/de-de/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
@@ -137,7 +137,7 @@ In beiden Fällen hängen wir den Debugger an einen Prozess an, für den wir das
 
 Im nächsten Abschnitt, **Erstellen von DynamoRevit aus Quelldateien**, wird ein spezifisches Debugging-Beispiel vorgestellt. Außerdem wird erläutert, wie Sie Haltepunkte festlegen, Code durchgehen und die Aufrufliste lesen.
 
-#### Abrufen des aktuellen Builds <a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### Abrufen des aktuellen Builds <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 Da die Dynamo-Quelldateien auf GitHub gehostet werden, lassen sich lokale Quelldateien am einfachsten auf dem aktuellen Stand halten, indem Sie Änderungen mithilfe von Git-Befehlen abrufen.
 

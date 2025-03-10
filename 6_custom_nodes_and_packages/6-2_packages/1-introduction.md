@@ -67,7 +67,7 @@ Wenn Sie den Ordner extra öffnen, sehen Sie eine Reihe von Beispieldateien, die
 
 Nachdem Sie die Datei geöffnet und im Solver auf Ausführen geklickt haben, erhalten Sie das Netz einer Kugel! Beispieldateien wie diese erleichtern den Einstieg in die Arbeit mit einem neuen Dynamo-Paket.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Durchsuchen und Anzeigen von Paketinformationen
 
@@ -79,7 +79,7 @@ Sie können auch auf weitere Details zu jedem Paket zugreifen, indem Sie auf Det
 
 ### Dynamo Package Manager-Website
 
-Sie können auch auf der [Dynamo Package Manager-Website](http://dynamopackages.com) nach Dynamo-Paketen suchen. Hier finden Sie die Statistiken zu Paketen und zu den Ranglisten der Autoren. Sie können die Paketdateien auch über den Dynamo Package Manager herunterladen, der direkte Download in Dynamo ist jedoch ein nahtloserer Ablauf.
+Sie können auch auf der [Dynamo Package Manager-Website](http://dynamopackages.com) nach Dynamo-Paketen suchen. Hier finden Sie Paketabhängigkeiten und Informationen zur Host-/Versionskompatibilität, die von den Paketautoren bereitgestellt wurden. Sie können die Paketdateien auch über den Dynamo Package Manager herunterladen, der direkte Download in Dynamo ist jedoch ein nahtloserer Ablauf.
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,53 @@ Wenn Sie wissen möchten, wo Ihre Paketdateien gespeichert sind, klicken Sie in 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 Pakete werden vorgabemäßig unter einem Speicherort ähnlich dem folgenden installiert: _C:/Benutzer/[Benutzername]/AppData/Roaming/Dynamo/[Dynamo-Version]_.
+
+### Einrichten eines freigegebenen Speicherorts für Pakete in einem Büro
+
+Für Benutzer, die wissen möchten, ob es möglich ist, Dynamo (in beliebiger Form) mit vorinstallierten Paketen einzurichten: Der Ansatz, der dieses Problem löst und allen Benutzern mit einer Dynamo-Installation die Steuerung an einem zentralen Ort ermöglicht, besteht darin, jeder Installation einen benutzerdefinierten Paketpfad hinzuzufügen.
+
+**Hinzufügen eines Netzwerkordners, in dem der BIM-Manager oder andere Benutzer die Bestückung des Ordners mit vom Büro genehmigten Paketen überwachen können**  
+
+Wechseln Sie in der Benutzeroberfläche einer einzelnen Anwendung zu *Dynamo -> Voreinstellungen -> Paketeinstellungen -> Dateispeicherorte für Blöcke und Pakete*. Klicken Sie im Dialogfeld auf die Schaltfläche Pfad hinzufügen, und navigieren Sie zum Netzwerkspeicherort für die freigegebene Paketressource. 
+ 
+Dieser automatisierte Vorgang umfasst das Hinzufügen von Informationen zur Konfigurationsdatei, die mit Dynamo installiert wird:   
+ `C:\Benutzer\[Benutzername]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo-Version]\DynamoSettings.xml`
+
+Die Konfiguration für Dynamo for Revit lautet vorgabemäßig wie folgt:
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+Das Hinzufügen eines benutzerdefinierten Speicherorts würde wie folgt aussehen:  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+Die zentrale Verwaltung dieses Ordners kann auch gesteuert werden, indem Sie den Ordner einfach mit Schreibschutz versehen.
+
+### Laden von Paketen mit Binärdateien aus einem Netzwerkspeicherort
+
+#### Szenario
+
+Ein Unternehmen möchte möglicherweise die Pakete standardisieren, die von verschiedenen Arbeitsstationen und Benutzern installiert werden. Eine Möglichkeit hierfür könnte darin bestehen, diese Pakete über *Dynamo -> Voreinstellungen -> Paketeinstellungen -> Dateispeicherorte für Blöcke und Pakete* zu installieren, einen Netzwerkordner als Installationsverzeichnis auszuwählen und diesen Pfad auf den Arbeitsstationen zu `Manage Node and Package Paths` hinzuzufügen.
+
+#### Problem
+
+Während das Szenario für Pakete, die nur benutzerdefinierte Blöcke enthalten, ordnungsgemäß funktioniert, funktioniert es möglicherweise nicht für Pakete, die Binärdateien enthalten, wie z. B. Zero-Touch-Blöcke. Dieses Problem wird durch [Sicherheitsmaßnahmen](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location) verursacht, die .NET Framework beim Laden von Assemblys anwendet, wenn diese aus einem Netzwerkspeicherort stammen. Leider ist die Verwendung des Konfigurationselements `loadFromRemoteSources`, wie im verknüpften Thread vorgeschlagen, keine mögliche Lösung für Dynamo, da es als Komponente und nicht als Anwendung verteilt wird.
+
+#### Problembehandlung
+
+Eine mögliche Umgehungslösung besteht darin, ein zugeordnetes Netzwerklaufwerk zu verwenden, das auf den Netzwerkspeicherort verweist, und dafür zu sorgen, dass die Arbeitsstationen stattdessen diesen Pfad referenzieren. Die Schritte zum Erstellen eines zugeordneten Netzlaufwerks werden [hier](https://support.microsoft.com/de-de/help/4026635/windows-10-map-a-network-drive) beschrieben.
 
 ### Weitere Schritte mit Paketen
 

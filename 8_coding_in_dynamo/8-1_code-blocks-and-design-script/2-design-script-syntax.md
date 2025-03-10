@@ -6,7 +6,7 @@ Die Namen von Blöcken in Dynamo weisen ein gemeinsames Merkmal auf: Sie enthalt
 
 Zur allgemeinen Veranschaulichung der Punktnotation dient hier die parametrische Behandlung eines Apfels in Dynamo. Im Folgenden werden einige "Methoden" betrachtet, die Sie für den Apfel ausführen können (bevor Sie ihn essen). (Anmerkung: Diese Methoden sind keine echten Dynamo-Methoden.)
 
-| Für Menschen lesbar                 | Punktnotation              | Ausgabe |
+| Von Menschen lesbar.                 | Punktnotation              | Ausgabe |
 | ------------------------------ | ------------------------- | ------ |
 | Welche Farbe hat der Apfel?       | Apfel.Farbe               | Rot    |
 | Ist der Apfel reif?             | Apfel.istReif              | Wahr   |

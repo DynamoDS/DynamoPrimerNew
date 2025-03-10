@@ -8,7 +8,7 @@ Farben werden in Dynamo mithilfe von ARGB-Eingaben erstellt. Dies entspricht den
 
 | Symbol                                     | Name (Syntax)                 | Eingaben  | Ausgaben |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB-Farbe (**Color.ByARGB**) | A, R, G, B | color   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB-Farbe (**Color.ByARGB**) | A, R, G, B | color   |
 
 ### Abfragen von Farbwerten
 
@@ -16,19 +16,19 @@ Mithilfe der Farben in der Tabelle unten werden die Eigenschaften zum Definieren
 
 | Symbol                                              | Name (Syntax)                     | Eingaben | Ausgaben    |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
 | ![](../images/5-1/ColorRed.jpg)                   | Rot (**Color.Red**)               | color  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Grün (**Color.Green**)           | color  | G          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | Grün (**Color.Green**)           | color  | G          |
 | ![](../images/5-1/ColorBlue.jpg)                  | Blau (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-1/ColorComponent (2).jpg>)       | Komponenten (**Color.Components**) | color  | A, R, G, B |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | Komponenten (**Color.Components**) | color  | A, R, G, B |
 
 Die Farben in der Tabelle unten entsprechen dem **HSB-Farbraum**. Die Interpretation einer anhand von Farbton, Sättigung und Helligkeit definierten Farbe mag intuitiver scheinen: Welche Farbe ist gemeint? Wie intensiv soll sie sein? Wie hell oder dunkel soll die Farbe sein? Dies ist die Differenzierung nach Farbton, Sättigung und Helligkeit.
 
 | Symbol                                         | Name (Syntax)                     | Eingaben | Ausgaben    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](../images/5-1/ColorHue.jpg)              | Farbton (**Color.Hue**)               | color  | Hue        |
-| ![](<../images/5-1/ColorSaturation (2).jpg>) | Sättigung (**Color.Saturation**) | color  | Saturation |
-| ![](<../images/5-1/ColorBrightness (2).jpg>) | Helligkeit (**Color.Brightness**) | color  | Brightness |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | Sättigung (**Color.Saturation**) | color  | Saturation |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | Helligkeit (**Color.Brightness**) | color  | Brightness |
 
 ### Farbbereich
 

@@ -56,9 +56,7 @@ Sie haben bereits mit den Blöcken _Select Model Element_ und _Select Face_ gear
 > 3. Wiederholen Sie dies für die Kanten am unteren Ende der Fassade in Revit.
 > 4. In den _Watch_-Blöcken wird angezeigt, dass in Dynamo jetzt Linien vorhanden sind. Diese werden automatisch in Dynamo-Geometrie konvertiert, da die Kanten selbst keine Revit-Elemente sind. Diese Kurven sind die Referenzen, die zum Instanziieren der adaptiven Fachwerkbinder entlang der Fassade verwendet werden.
 
-{% hint style="info" %}
- *Um eine konsistente Topologie zu erhalten, wird hier ein Modell verwendet, dem keine zusätzlichen Flächen oder Kanten hinzugefügt wurden. Sie können zwar mithilfe von Parametern seine Form ändern, seine Struktur bleibt jedoch einheitlich. 
-{% endhint %}
+{% hint style="info" %} *Um eine konsistente Topologie zu erhalten, wird hier ein Modell verwendet, dem keine zusätzlichen Flächen oder Kanten hinzugefügt wurden. Sie können zwar mithilfe von Parametern seine Form ändern, seine Struktur bleibt jedoch einheitlich. {% endhint %}
 
 Als Erstes müssen Sie die Kurven verbinden und zu einer Liste zusammenführen. Dadurch _gruppieren_ Sie die Kurven, um geometrische Operationen durchführen zu können.
 

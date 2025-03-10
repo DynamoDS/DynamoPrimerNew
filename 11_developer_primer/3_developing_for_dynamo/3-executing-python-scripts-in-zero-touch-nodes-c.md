@@ -1,4 +1,4 @@
-# Ausführen von Python-Skripts in Zero-Touch-Blöcken (C#) 
+# Ausführen von Python-Skripts in Zero-Touch-Blöcken (C#)
 
 ### Ausführen von Python-Skripts in Zero-Touch-Blöcken (C#) <a href="#executing-python-scripts-in-zero-touch-nodes-c" id="executing-python-scripts-in-zero-touch-nodes-c"></a>
 
