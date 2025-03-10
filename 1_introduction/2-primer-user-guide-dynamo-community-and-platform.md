@@ -25,9 +25,7 @@ Pour découvrir la démonstration des workflows Dynamo, consultez les graphiques
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %}
-À mesure que nous abordons les différentes rubriques de Dynamo, vous pourrez retrouver des exercices plus spécifiques dans les prochains chapitres. Les **exercices** se trouvent généralement dans la dernière section de chaque page. 
-{% endhint %}
+{% hint style="info" %} À mesure que nous abordons les différentes rubriques de Dynamo, vous pourrez retrouver des exercices plus spécifiques dans les prochains chapitres. Les **exercices** se trouvent généralement dans la dernière section de chaque page. {% endhint %}
 
 ### Communauté
 

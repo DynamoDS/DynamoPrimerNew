@@ -1,4 +1,4 @@
-# Guide du développeur 
+# Guide du développeur
 
 #### Quel est le but de ce guide ? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 

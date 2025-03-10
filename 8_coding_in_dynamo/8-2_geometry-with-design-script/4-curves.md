@@ -115,4 +115,4 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}* Il s’agit d’une description très simplifiée de la géométrie des courbes NURBS. Pour obtenir des informations plus précises et détaillées, reportez-vous à Pottmann et al, 2007, dans les références. {% endhint %}
+{% hint style="info" %}\\* Il s’agit d’une description très simplifiée de la géométrie des courbes NURBS. Pour obtenir des informations plus précises et détaillées, reportez-vous à Pottmann et al, 2007, dans les références. {% endhint %}

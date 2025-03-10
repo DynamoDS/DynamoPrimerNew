@@ -47,7 +47,7 @@ Les exemples ci-dessous montrent comment mettre en oeuvre des opérations spéci
 
 Dans ces exercices, vous allez explorer les scripts élémentaires de Python dans Dynamo for Revit. Cet exercice est axé sur la gestion des fichiers et des éléments Revit, ainsi que sur la communication entre Revit et Dynamo.
 
-Il s'agit d'une méthode de découpe et de séchage permettant de récupérer les éléments _doc_, _uiapp_ et _app_ du fichier Revit lié à votre session Dynamo. Les programmeurs qui ont déjà travaillé dans l'API de Revit reconnaîtront peut-être les éléments dans la liste d'observation. Si ces éléments ne vous semblent pas familiers, pas d'inquiétude. Vous allez utiliser d'autres exemples dans les exercices ci-dessous.
+Il s’agit d’une méthode de découpe et de séchage permettant de récupérer les éléments _doc_, _uiapp_ et _app_ du fichier Revit lié à votre session Dynamo. Les programmeurs qui ont déjà travaillé dans l’API de Revit reconnaîtront peut-être les éléments dans la liste d’observation. Si ces éléments ne vous semblent pas familiers, pas d'inquiétude. Vous allez utiliser d'autres exemples dans les exercices ci-dessous.
 
 Voici comment importer les services Revit et récupérer les données du document dans Dynamo.
 

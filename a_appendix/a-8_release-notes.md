@@ -1,0 +1,3 @@
+# Informations sur la nouvelle version
+
+Pour accéder aux dernières mises à jour, aux corrections de bogues et aux nouvelles fonctionnalités de Dynamo, consultez les [Informations sur la nouvelle version](https://github.com/DynamoDS/Dynamo/wiki/Release-Notes) ou l’[Archive des informations sur la nouvelle version](https://github.com/DynamoDS/Dynamo/wiki/Release-Notes-Archive). Il s’agit d’un excellent moyen de se tenir au courant des améliorations et des changements apportés à chaque version.

@@ -70,7 +70,7 @@ Continuons à ajouter des nœuds et des connexions à notre logique pour défini
 
 Copiez ces nœuds 4 fois pour que ces cercles définissent la surface et modifiez les noms de Number Slider comme illustré ci-dessous.
 
-![](<../images/10-1/1/vase4 (1).png>)
+\![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Les cercles sont créés à l’aide d’un point central et d’un rayon
 
@@ -92,7 +92,7 @@ Pour créer une surface à l’aide du nœud **Surface.ByLoft**, vous devez comb
 
 Désactivez également l’aperçu dans les autres nœuds pour afficher uniquement l’affichage Surface.ByLoft.
 
-![](<../images/10-1/1/vase6 (1).png>)
+\![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Une surface est créée en lissant les cercles convertis.
 

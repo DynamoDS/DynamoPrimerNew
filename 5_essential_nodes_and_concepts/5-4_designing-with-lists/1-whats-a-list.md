@@ -16,7 +16,7 @@ Dans Dynamo, les données de liste sont triées et le premier élément de chaqu
 
 Aussi étrange que cela puisse paraître à première vue, le premier index d'une liste est toujours 0, et non 1. Lorsqu'il est question du premier élément d'une liste, il s'agit en fait de l'élément qui correspond à l'index 0.
 
-Par exemple, si vous comptez le nombre de doigts de votre main droite, il y a de fortes chances que vous comptiez de 1 à 5. Cependant, si vous deviez placer vos doigts dans une liste, Dynamo leur aurait donné des index de 0 à 4. Bien que cela puisse paraître un peu étrange aux débutants en programmation, l'index de base 0 est une pratique courante dans la plupart des systèmes de calcul.
+Par exemple, si vous comptez le nombre de doigts de votre main droite, il y a de fortes chances que vous comptiez de 1 à 5. Cependant, si vous deviez placer vos doigts dans une liste, Dynamo leur aurait donné des index de 0 à 4. Bien que cela puisse paraître un peu étrange aux débutants en programmation, l’index de base 0 est une pratique courante dans la plupart des systèmes de calcul.
 
 La liste contient toujours 5 éléments : elle utilise un système de comptage de base 0. Les éléments stockés dans la liste ne sont pas nécessairement des nombres. Il peut s’agir de tout type de données pris en charge par Dynamo, tel que des points, des courbes, des surfaces, des familles, etc.
 
@@ -76,6 +76,32 @@ Enfin, la méthode « Produit cartésien » permet d’établir toutes les con
 Comme vous pouvez le voir, il existe différentes manières de dessiner des lignes entre ces jeux de points. Pour accéder aux options de combinaison, cliquez avec le bouton droit de la souris sur le centre d’un nœud et sélectionnez le menu « Combinaison ».
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
+
+### Qu’est-ce que la réplication ?
+
+Imaginez que vous ayez une grappe de raisin. Si vous vouliez faire du jus de raisin, vous ne presseriez pas chaque raisin individuellement, vous les mettriez tous en même temps dans l’extracteur de jus. La réplication dans Dynamo fonctionne de la même manière : au lieu d’appliquer une opération à un élément à la fois, Dynamo peut l’appliquer à une liste entière en une seule fois.
+
+Lorsqu’ils travaillent avec des listes, les nœuds Dynamo le reconnaissent automatiquement et appliquent leurs opérations à plusieurs éléments. Cela signifie que vous n’avez pas besoin de revenir manuellement sur chaque élément, tout se passe automatiquement. Mais comment Dynamo décide-t-il de la manière de traiter les listes lorsqu’il y en a plusieurs ?
+
+Il existe deux méthodes principales :
+
+#### Réplication cartésienne
+Imaginons que vous soyez dans la cuisine, en train de préparer des jus de fruits. Vous avez une liste de fruits : `{apple, orange, pear}` et une quantité fixe d’eau pour chaque jus : `1 cup`. Vous voulez faire un jus avec chaque fruit, en utilisant la même quantité d’eau. Dans ce cas, la réplication cartésienne entre en jeu.
+
+Dans Dynamo, cela signifie que vous introduisez la liste des fruits dans l’entrée de fruits du nœud Juice.Maker, tandis que l’entrée d’eau reste constante à 1 tasse. Le nœud traite ensuite chaque fruit individuellement, en le combinant avec la quantité fixe d’eau. Le résultat est le suivant :
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+Chaque fruit est associé à la même quantité d’eau.
+
+#### Réplication zip
+La réplication zip fonctionne un peu différemment. Si vous aviez deux listes, une pour les fruits : `{apple, orange, pear}` et une autre pour les quantités de sucre : `{2 tbsp, 3 tbsp, 1 tbsp}`, la réplication zip combinerait les éléments correspondants de chaque liste. Exemples :
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+Chaque fruit est associé à sa quantité correspondante de sucre.
+
+Pour en savoir plus sur ce fonctionnement, consultez les [Guides de réplication et de laçage](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1).
 
 ## Exercice
 

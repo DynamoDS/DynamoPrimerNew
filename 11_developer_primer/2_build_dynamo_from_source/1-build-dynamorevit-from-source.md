@@ -1,4 +1,4 @@
-# Générer DynamoRevit à partir de la source 
+# Générer DynamoRevit à partir de la source
 
 Les fichiers sources de DynamoRevit sont également hébergés sur DynamoDS Github pour que les développeurs puissent apporter des contributions et générer des versions bêta. Générer DynamoRevit à partir des sources suit généralement le même processus que Dynamo à l’exception de quelques détails importants :
 
@@ -13,11 +13,11 @@ Pour ce guide, nous utiliserons ce qui suit :
 
 Pour assurer une génération réussie, nous allons cloner et générer les dépôts Dynamo et DynamoRevit pour les utiliser dans ce guide.
 
-_Remarque : générer Dynamo manuellement avant DynamoRevit n’est nécessaire que si vous générez Dynamo 1.x et DynamoRevit 1.x. Les versions plus récentes du dépôt DynamoRevit s’appuient sur le gestionnaire de package NuGet pour les dépendances de Dynamo nécessaires à la génération. Bien qu’une génération de DynamoRevit 2.x ne nécessite pas de tirer Dynamo manuellement, vous aurez toujours besoin du noyau `dlls` ailleurs pour exécuter DynamoRevit `addin`. Il est donc préférable de tirer et de générer Dynamo. Pour en savoir plus, consultez la rubrique ci-dessous :_ [_Générer le dépôt avec Visual Studio_](#building-the-repository-using-Visual-Studio)
+_Remarque : générer Dynamo manuellement avant DynamoRevit n’est nécessaire que si vous générez Dynamo 1.x et DynamoRevit 1.x. Les versions plus récentes du dépôt DynamoRevit s’appuient sur le gestionnaire de package NuGet pour les dépendances de Dynamo nécessaires à la génération. Bien qu’une génération de DynamoRevit 2.x ne nécessite pas de tirer Dynamo manuellement, vous aurez toujours besoin du noyau `dlls` ailleurs pour exécuter DynamoRevit `add-in`. Il est donc préférable de tirer et de générer Dynamo. Pour en savoir plus, consultez la rubrique ci-dessous :_ [_Générer le dépôt avec Visual Studio_](#building-the-repository-using-Visual-Studio)
 
-#### Localiser le dépôt DynamoRevit sur Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Localiser le dépôt DynamoRevit sur Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
-Le code du projet DynamoRevit se trouve dans un dépôt séparé sur Github du code source principal de Dynamo. Ce dépôt contient les fichiers sources pour les nœuds spécifiques à Revit et le complément Revit qui charge Dynamo. Les générations de DynamoRevit pour différentes versions de Revit (2016, 2017 ou 2018, par exemple) sont organisées comme des branches dans le dépôt.
+Le code du projet DynamoRevit se trouve dans un dépôt séparé sur GitHub du code source principal de Dynamo. Ce dépôt contient les fichiers sources pour les nœuds spécifiques à Revit et le complément Revit qui charge Dynamo. Les générations de DynamoRevit pour différentes versions de Revit (2016, 2017 ou 2018, par exemple) sont organisées comme des branches dans le dépôt.
 
 La source de DynamoRevit est hébergée ici : [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
@@ -26,7 +26,7 @@ La source de DynamoRevit est hébergée ici : [https://github.com/DynamoDS/Dyna
 > 1. Cloner ou télécharger le dépôt
 > 2. Les branches de DynamoRevit font référence aux versions de Revit
 
-#### Cloner le dépôt en utilisant git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### Cloner le dépôt en utilisant git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
 De la même manière que pour le dépôt Dynamo, nous allons utiliser la commande git clone pour cloner DynamoRevit et spécifier la branche qui correspond à notre version de Revit. Pour commencer, nous allons ouvrir une interface en ligne de commande et placer le répertoire courant là où nous voulons cloner les fichiers.
 
@@ -54,9 +54,9 @@ Une fois que le clonage du dépôt est terminé, changez le répertoire courant 
 
 Il est important de choisir la bonne branche du dépôt pour s’assurer que lorsque le projet sera générer dans Visual Studio, il fera référence aux assemblages dans la bonne version du répertoire d’installation de Revit, à savoir `RevitAPI.dll` et `RevitAPIUI.dll`.
 
-#### Générer un dépôt à l’aide de Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### Générer un dépôt à l’aide de Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
-Avant de générer le dépôt, nous devons restaurer les packages NuGet avec le fichier `restorepackages.bat` situé dans le dossier `src`. Ce fichier .bat utilise le gestionnaire de package [nuget](https://www.nuget.org) pour tirer les fichiers binaires intégrés de Dynamo Core, dont DynamoRevit a besoin. Vous pouvez également choisir de les générer manuellement, à condition de ne faire que des changements dans DynamoRevit et non dans Dynamo Core. Cela permet de démarrer plus rapidement. Veillez à exécuter ce fichier en tant qu’administrateur.
+Avant de générer le dépôt, nous devons restaurer les packages NuGet avec le fichier `restorepackages.bat` situé dans le dossier `src`. Ce fichier .bat utilise le gestionnaire de package [NuGet](https://www.nuget.org) pour tirer les fichiers binaires intégrés de Dynamo Core, dont DynamoRevit a besoin. Vous pouvez également choisir de les générer manuellement, à condition de ne faire que des changements dans DynamoRevit et non dans Dynamo Core. Cela permet de démarrer plus rapidement. Veillez à exécuter ce fichier en tant qu’administrateur.
 
 ![Exécution en tant qu’Administrateur](images/fe-restorepackages.jpg)
 
@@ -75,7 +75,7 @@ Une fois les packages restaurés, ouvrez le fichier de solution `DynamoRevit.All
 > 1. Sélectionnez `Build > Build Solution`.
 > 2. Vérifiez que la génération a réussi dans la fenêtre de sortie. Un message devrait indiquer `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
 
-#### Exécuter une génération locale de DynamoRevit dans Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### Exécuter une génération locale de DynamoRevit dans Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
 Revit requiert un fichier de complément pour reconnaître DynamoRevit, ce que le [programme d’installation](http://dynamobim.org/download/) créerait automatiquement. Dans le développement, nous devons créer manuellement un fichier de complément qui pointe vers la génération de DynamoRevit que nous voulons utiliser, en particulier l’assemblage `DynamoRevitDS.dll`. Nous devons également faire pointer DynamoRevit vers une génération de Dynamo.
 
@@ -122,7 +122,7 @@ En outre, nous devons supprimer la version existante de Dynamo qui est livrée a
 
 La deuxième étape consiste à ajouter un chemin d’accès au fichier `Dynamo.config` dans le dossier `bin` de DynamoRevit pour les assemblages de Dynamo Core. DynamoRevit les chargera lorsque le complément sera ouvert dans Revit. Ce fichier de configuration vous permet de faire pointer votre complément DynamoRevit vers différentes versions de Dynamo Core pour développer et tester des changements à la fois dans Dynamo Core et dans DynamoRevit.
 
-Le code devrait ressembler à ceci :
+Le code devrait ressembler à ceci :
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -145,13 +145,13 @@ Désormais, lorsque nous ouvrons Revit, un complément Dynamo doit se trouver da
 > 2. Cliquez sur l’icône du complément Dynamo
 > 3. Une instance de DynamoRevit
 
-Si une boîte de dialogue d’erreur s’affiche et indique des assemblages manquants, il est probable qu’il existe une différence entre les versions de DynamoCore sur lesquelles vous avez effectué la génération et celles que vous chargez au moment de l’exécution. Par exemple, DynamoRevit avec les derniers packages bêta 2.0 de DynamoCore ne fonctionnera pas si vous essayez de le démarrer en utilisant les .dll de Dynamo 1.3. Assurez-vous que les deux dépôts sont de la même version et que DynamoRevit tire une version correspondante des dépendances nuget. Celles-ci sont définies dans le fichier `package.json` du dépôt DynamoRevit.
+Si une boîte de dialogue d’erreur s’affiche et indique des assemblages manquants, il est probable qu’il existe une différence entre les versions de DynamoCore sur lesquelles vous avez effectué la génération et celles que vous chargez au moment de l’exécution. Par exemple, DynamoRevit avec les derniers packages bêta 2.0 de DynamoCore ne fonctionnera pas si vous essayez de le démarrer en utilisant les .dll de Dynamo 1.3. Assurez-vous que les deux dépôts sont de la même version et que DynamoRevit tire une version correspondante des dépendances NuGet. Celles-ci sont définies dans le fichier `package.json` du dépôt DynamoRevit.
 
-#### Déboguer DynamoRevit avec Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### Déboguer DynamoRevit avec Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
 Dans la section précédente, **Générer Dynamo à partir de la source**, nous avons brièvement présenté le débogage dans Visual Studio et la manière d’attacher Visual Studio à un processus. En utilisant une exception dans le nœud Wall.ByCurveAndHeight comme exemple, nous verrons comment s’attacher à un processus, définir des points d’arrêt, parcourir le code et utiliser la pile d’exécution pour déterminer la source de l’exception. Ces outils de débogage s’appliquent généralement aux flux de travail de développement .net et méritent d’être explorés en dehors de ce guide.
 
-* **Attacher au processus** lie une application en cours d’exécution à Visual Studio pour le débogage. Si vous souhaitez déboguer un comportement qui se produit dans une version de DynamoRevit, vous pouvez ouvrir les fichiers source DynamoRevit dans Visual Studio et attacher le processus `Revit.exe`, qui est le processus parent du complément DynamoRevit. Visual Studio utilise un [fichier de symboles](https://msdn.microsoft.com/en-us/library/ms241613.aspx) (`.pbd`) pour faire le lien entre les assemblages que DynamoRevit exécute et le code source.
+* **Attacher au processus** lie une application en cours d’exécution à Visual Studio pour le débogage. Si vous souhaitez déboguer un comportement qui se produit dans une version de DynamoRevit, vous pouvez ouvrir les fichiers sources de DynamoRevit dans Visual Studio et attacher le processus `Revit.exe`, qui est le processus parent du complément DynamoRevit. Visual Studio utilise un [fichier de symboles](https://msdn.microsoft.com/en-us/library/ms241613.aspx) (`.pbd`) pour faire le lien entre les assemblages que DynamoRevit exécute et le code source.
 * **Les points d’arrêt** établissent des lignes dans le code source où l’application fera une pause avant de s’exécuter. Si un nœud provoque le blocage de DynamoRevit ou renvoie un résultat inattendu, nous pouvons ajouter un point d’arrêt à la source du nœud pour mettre le processus en pause, entrer dans le code et inspecter les valeurs en direct des variables jusqu’à ce que nous trouvions la racine du problème.
 * **Parcourir le code** permet de parcourir le code source ligne par ligne. Nous pouvons exécuter les fonctions une par une, passer à un appel de fonction ou quitter la fonction en cours d’exécution.
 *   **La pile d’exécution** affiche la fonction qu’un processus est en train d’exécuter par rapport aux appels de fonction précédents qui ont invoqué cet appel de fonction. Visual Studio dispose d’une fenêtre Pile d’exécution pour afficher cela. Par exemple, si nous rencontrons une exception en dehors du code source, nous pouvons voir le chemin vers le code appelant dans la pile d’exécution.
@@ -210,7 +210,7 @@ Comme il ne s’agit pas d’une bibliothèque open source, nous ne pouvons pas
 
 Ce processus peut être appliqué à tous les fichiers sources avec lesquels nous travaillons. Si nous développons une bibliothèque de nœuds Zero-Touch pour Dynamo Studio, nous pouvons ouvrir la source de la bibliothèque et attacher un processus Dynamo pour déboguer la bibliothèque de nœuds. Même si vous ne rencontre pas de problème, le débogage est un excellent moyen d’explorer le code et de découvrir comment les choses fonctionnent.
 
-#### Tirer la dernière version <a href="#pull-latest-build" id="pull-latest-build"></a>
+### Tirer la dernière version <a href="#pull-latest-build" id="pull-latest-build"></a>
 
 Ce processus est presque identique à celui du tirage de modifications pour Dynamo, sauf que nous devons nous assurer que nous sommes sur la bonne branche. Utilisez la commande `git branch` dans le dépôt DynamoRevit pour voir quelles branches sont disponibles localement et lesquelles sont actuellement vérifiées.
 

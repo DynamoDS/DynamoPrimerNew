@@ -94,7 +94,7 @@ Dans cette étape, vous allez utiliser votre première fonction pour déplacer l
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. Au lieu d’utiliser un nœud Formula, utilisez un nœud **Code Block** avec la ligne : `(0..Math.Sin(x*360)..#50)*5;`. Pour décomposer rapidement cet intervalle, définissez un intervalle contenant une formule. Cette formule est la fonction Sinus. La fonction Sinus reçoit les entrées de degrés dans Dynamo. Ainsi, pour obtenir une onde sinusoïdale complète, multipliez les valeurs x (valeur d'entrée de l'intervalle de 0 à 1) par 360. Ensuite, utilisez le même nombre de divisions que les points de grille de contrôle pour chaque ligne. Définissez donc 50 sous-divisions avec #50. Enfin, le multiplicateur de 5 augmente simplement l’amplitude de la translation de sorte que l’effet soit visible dans l’aperçu Dynamo.
+> 1. Vous utilisez un **bloc de code** avec la ligne : `(0..Math.Sin(x*360)..#50)*5;`. Pour décomposer rapidement cet intervalle, définissez un intervalle contenant une formule. Cette formule est la fonction Sinus. La fonction Sinus reçoit les entrées de degrés dans Dynamo. Ainsi, pour obtenir une onde sinusoïdale complète, multipliez les valeurs x (valeur d'entrée de l'intervalle de 0 à 1) par 360. Ensuite, utilisez le même nombre de divisions que les points de grille de contrôle pour chaque ligne. Définissez donc 50 sous-divisions avec #50. Enfin, le multiplicateur de 5 augmente simplement l’amplitude de la translation de sorte que l’effet soit visible dans l’aperçu Dynamo.
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -110,7 +110,7 @@ La modification des curseurs (de 0 à 10) permet d’obtenir des résultats int�
 
 ![](../images/8-1/3/shorthand-exercise07.jpg)
 
-> 1. Lorsque vous ajoutez sineList et tranposeLit, vous obtenez une surface en coquille d’œuf déformée : `eggShellList = sineList+transposeList;`.
+> 1. Lorsque vous ajoutez sineList et transposeList, vous obtenez une surface en coquille d’œuf déformée : `eggShellList = sineList+transposeList;`.
 
 Modifiez les valeurs de curseurs spécifiées ci-dessous pour retrouver un algorithme « paisible ».
 
@@ -140,6 +140,6 @@ En examinant le graphique visuel, vous pouvez mettre en surbrillance les nœuds 
 >
 > 2\. Le deuxième nœud **Code Block** remplace le nœud **Number Range**.
 >
-> 3\. Le troisième nœud **Code Block** remplace le nœud **Formula** (ainsi que **List.Transpose**, **List.Count** et **Number Range**).
+> 3\. Le troisième **bloc de code** remplace les nœuds **List.Transpose**, **List.Count** et **Number Range**.
 >
 > 4\. Le quatrième nœud **Code Block** interroge une liste de listes, remplaçant ainsi le nœud **List.GetItemAtIndex**.

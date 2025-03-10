@@ -80,7 +80,7 @@ Les plans sont des "assistants" abstraits 2D. Plus spécifiquement, les plans s
 
 Vous pensez peut-être, "Attendez ! Et l'origine ? Cela ressemble à un système de coordonnées... comme celui que j'utilise pour modéliser des éléments dans mon logiciel de CAO !"
 
-Et vous avez raison ! La plupart des logiciels de modélisation tirent parti des plans de construction ou des "niveaux" afin de définir un contexte local bidimensionnel pour le dessin. XY, XZ, YZ ou Nord, Sud-est, le plan peut sembler plus familier. Il s'agit de tous les plans, définissant un contexte "plat" infini. Les plans n’ont pas de profondeur, mais ils permettent aussi de décrire la direction.
+Et vous avez raison ! La plupart des logiciels de modélisation tirent parti des plans de construction ou des « niveaux » afin de définir un contexte local bidimensionnel pour le dessin. XY, XZ, YZ ou Nord, Sud-est, le plan peut sembler plus familier. Il s'agit de tous les plans, définissant un contexte "plat" infini. Les plans n’ont pas de profondeur, mais ils permettent aussi de décrire la direction.
 
 ### Système de coordonnées
 

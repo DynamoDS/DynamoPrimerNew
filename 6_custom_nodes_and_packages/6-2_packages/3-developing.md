@@ -20,7 +20,7 @@ Dans Dynamo, cliquez sur Packages > Gestionnaire de package et recherchez le pac
 
 Une fois l’installation terminée, les nœuds personnalisés sont disponibles sous la section Compléments > DynamoPrimer.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Une fois le package installé, voyons comment il est configuré.
 
@@ -30,7 +30,7 @@ Le package créé utilise cinq nœuds personnalisés créés pour référence. V
 
 Il s'agit d'un package simple de cinq nœuds personnalisés. Les étapes ci-dessous présentent brièvement la configuration de chaque nœud personnalisé.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 

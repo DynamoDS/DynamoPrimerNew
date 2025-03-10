@@ -8,10 +8,10 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 
 | Icône                                                  | Nom (Syntaxe)     | Entrées                     | Sorties      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier (**\***) | var[]…[], var[]…[] | var[]…[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier ( **\\*** ) | var[]…[], var[]…[] | var[]…[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
 
@@ -35,9 +35,13 @@ Combinez les opérateurs et les variables pour créer une relation plus complexe
 
 La clothoïde dorée est définie comme l’équation suivante :
 
-$$ x = r cos θ = a cos θ e^{bθ} $$
+$$
+x = r cos θ = a cos θ e^{bθ}
+$$
 
-$$ y = r sin θ = a sin θe^{bθ} $$
+$$
+y = r sin θ = a sin θe^{bθ}
+$$
 
 L’image ci-dessous représente la spirale dorée sous forme de programmation visuelle. Lorsque vous parcourez le groupe de nœuds, essayez de faire le parallèle entre le programme visuel et l’équation écrite.
 
@@ -51,7 +55,7 @@ L’image ci-dessous représente la spirale dorée sous forme de programmation v
 >
 > d. **Math.Pow :** la fonction de « _t_ » et le numéro « _e_ » permettent de créer la séquence Fibonacci.
 >
-> . **Math.Cos et Math.Sin :** ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
+> e. **Math.Cos et Math.Sin :** ces deux fonctions trigonométriques différencient respectivement la coordonnée x et la coordonnée y de chaque point paramétrique.
 >
 > f. **Watch** : le résultat obtenu se compose de deux listes. Elles représentent les coordonnées _x_ et _y_ des points utilisés pour générer la clothoïde.
 
@@ -87,7 +91,7 @@ Maintenant que vous avez créé une coque Nautilus circulaire, passez aux grille
 
 Comme point de départ, commencez par la même étape qu’à l’exercice précédent : la création d’un réseau de points en forme de spirale avec le nœud **Point.ByCoordinates**.
 
-![](../images/5-3/2/math-part IV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 Ensuite, suivez ces courtes étapes pour générer une série de clothoïdes à différentes rotations.
 

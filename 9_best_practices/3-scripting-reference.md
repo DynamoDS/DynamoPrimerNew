@@ -31,9 +31,7 @@ Les bibliothèques standard sont externes à Dynamo et sont présentes dans les 
    * Fonctionnalité : Excel.
    * Comment importer : `import DSOffice`
 
-{% hint style="warning" %}
-*Remarque : lorsque vous utilisez **ProtoGeometry** via Python ou C#, vous créez des objets non gérés dont la mémoire doit être gérée manuellement. Pour plus d’informations, reportez-vous à la section **Objets non gérés**.
-{% endhint %}
+{% hint style="warning" %}\\*Remarque : lorsque vous utilisez **ProtoGeometry** via Python ou C#, vous créez des objets non gérés dont la mémoire doit être gérée manuellement. Pour plus d’informations, reportez-vous à la section **Objets non gérés**.
 
 ## Étiquetage soigneux
 
@@ -278,7 +276,7 @@ Lorsque vous utilisez la bibliothèque de géométrie de Dynamo _(ProtoGeometry)
 
 Il vous suffit de supprimer les ressources non gérées que vous ne renvoyez pas dans le graphique ou pour lesquelles vous n’enregistrez pas de référence. Le reste de cette section fait référence à ces objets comme étant une _géométrie intermédiaire_. Vous pouvez voir un exemple de cette classe d’objets dans l’exemple de code ci-dessous. La fonction C# Zero Touch **singleCube** renvoie un seul cube, mais permet de créer 10000 cubes supplémentaires au cours de son exécution. Il est possible que cette autre géométrie ait été utilisée comme géométrie de construction intermédiaire.
 
-**Cette fonction Zero Touch risque de bloquer Dynamo** , étant donné que vous avez créé 10000 solides, mais n’avez enregistré qu’un seul d’entre eux et n’avez renvoyé que celui-ci. Vous devez plutôt éliminer tous les cubes intermédiaires, sauf celui renvoyé. Il est préférable de ne pas supprimer les objets renvoyés, car ces derniers sont propagés dans le graphique et utilisés par d'autres nœuds.
+**Cette fonction Zero Touch risque de bloquer Dynamo** , étant donné que vous avez créé 10000 solides, mais n’avez enregistré qu’un seul d’entre eux et n’avez renvoyé que celui-ci. Vous devez plutôt éliminer tous les cubes intermédiaires, sauf celui renvoyé. Il est préférable de ne pas supprimer les objets renvoyés, car ces derniers sont propagés dans le graphe et utilisés par d’autres nœuds.
 
 ```
 public Cuboid singleCube(){

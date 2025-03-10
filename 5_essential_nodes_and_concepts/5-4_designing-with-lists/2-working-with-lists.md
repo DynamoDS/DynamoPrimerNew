@@ -53,7 +53,7 @@ L’image ci-dessous est le graphique de base sur lequel vous dessinez des ligne
 > 6. À l’aide d’un nœud **Geometry.Translate**, déplacez le cercle de 100 unités vers le haut dans la direction Z.
 > 7. À l’aide d’un nœud **Code Block**, définissez un intervalle de dix nombres entre 0 et 1 avec la ligne de code suivante : `0..1..#10;`
 > 8. Connectez le bloc de code de l’étape précédente à l’entrée _param_ de deux nœuds **Curve.PointAtParameter**. Connectez **Circle.ByPlaneRadius** à l’entrée curve du nœud supérieur, puis **Geometry.Translate** à l’entrée curve du nœud situé en dessous.
-> 9. À l’aide d’un nœud **Line.ByStartPointEndPoint**, connectez les deux nœuds **Curve.PointAtParamete**_r_.
+> 9. À l’aide d’un nœud **Line.ByStartPointEndPoint**, connectez les deux nœuds **Curve.PointAtParameter**.
 
 ### List.Count
 

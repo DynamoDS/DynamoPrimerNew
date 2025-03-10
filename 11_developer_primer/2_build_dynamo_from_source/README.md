@@ -1,8 +1,8 @@
-# Générer Dynamo à partir de la source 
+# Générer Dynamo à partir de la source
 
 La source de Dynamo est hébergée sur Github pour que tout le monde puisse la cloner et y apporter sa contribution. Dans ce chapitre, nous verrons comment cloner le dépôt à l’aide de git, compiler les fichiers sources avec Visual Studio, exécuter et déboguer une génération locale, et extraire toutes les nouvelles modifications de Github.
 
-#### Localiser les dépôts Dynamo sur Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Localiser les dépôts Dynamo sur Github <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 Github est un service d’hébergement basé sur [git](https://help.github.com/articles/git-and-github-learning-resources/), un système de contrôle de version permettant de suivre les modifications et de coordonner le travail entre les personnes. Git est un outil que nous pouvons utiliser pour télécharger les fichiers sources de Dynamo, et les maintenir à jour avec quelques commandes. L’utilisation de cette méthode permet d’éviter le travail fastidieux et inutile consistant à télécharger et à remplacer manuellement les fichiers sources à chaque mise à jour. Le système de contrôle de version git suit toutes les différences entre un dépôt de code local et un dépôt de code distant.
 
@@ -16,9 +16,9 @@ La source de Dynamo est hébergée sur Github DynamoDS dans ce dépôt : [https
 > 3. Fichiers source de Dynamo
 > 4. Fichiers spécifiques à Git
 
-#### Tirer le dépôt Dynamo à l’aide de git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### Tirer le dépôt Dynamo à l’aide de git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Avant de pouvoir cloner le dépôt, nous devons installer git. Suivez ce [petit guide](https://help.github.com/articles/set-up-git/#setting-up-git) pour connaître les étapes de l’installation, et savoir comment configurer un nom d’utilisateur et une adresse email gihub. Pour cet exemple, nous utiliserons git en ligne de commande. Ce guide part du principe que vous utilisez Windows, mais vous pouvez également utiliser git sur mac ou linux pour cloner la source de dynamo.
+Avant de pouvoir cloner le dépôt, nous devons installer git. Suivez ce [guide](https://help.github.com/articles/set-up-git/#setting-up-git) pour connaître les étapes à suivre pour l’installation et savoir comment configurer un nom d’utilisateur et une adresse email GitHub. Pour cet exemple, nous utiliserons git en ligne de commande. Ce guide part du principe que vous utilisez Windows, mais vous pouvez également utiliser git sur Mac ou Linux pour cloner la source de dynamo.
 
 Nous avons besoin d’une URL pour le dépôt Dynamo à cloner. Celle-ci se trouve en cliquant sur le bouton « Cloner ou télécharger » sur la page du dépôt. Copiez l’URL pour la coller dans l’invite de commande.
 
@@ -47,7 +47,7 @@ Nous savons que git fonctionne si l’opération de clonage s’est terminée av
 > 1. Fichiers source de Dynamo
 > 2. Fichiers Git
 
-#### Générer le dépôt à l’aide de Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### Générer le dépôt à l’aide de Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 Les fichiers sources étant maintenant clonés sur notre machine locale, nous pouvons générer un fichier exécutable pour Dynamo. Pour ce faire, nous devons configurer l’IDE Visual Studio et nous assurer que le .NET Framework et DirectX sont installés.
 
@@ -84,7 +84,7 @@ Une fois le projet ouvert, nous pouvons générer la solution. Ce processus cré
 > 1. Sélectionnez `Build > Build Solution`
 > 2. Vérifiez que la génération a réussi dans la fenêtre de sortie, elle devrait ressembler à `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
-#### Exécution d’une génération locale <a href="#running-a-local-build" id="running-a-local-build"></a>
+### Exécution d’une génération locale <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 Si Dynamo est généré correctement, un dossier `bin` est créé dans le dépôt Dynamo avec le fichier DynamoSandbox.exe. Dans notre cas, nous générons avec l’option Debug, donc le fichier exécutable est situé dans `bin\AnyCPU\Debug`. L’exécution de cette commande ouvrira une version locale de Dynamo.
 
@@ -96,7 +96,7 @@ Nous sommes maintenant presque prêts à commencer à développer pour Dynamo.
 
 Pour des instructions sur la génération de Dynamo pour d’autres plate-formes (par exemple Linux ou OS X), visitez cette [page wiki](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac).
 
-#### Déboguer une version locale à l’aide de Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### Déboguer une version locale à l’aide de Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
 Le débogage est un processus qui permet d’identifier, d’isoler et de corriger un bogue ou un problème. Une fois que Dynamo a été généré à partir de la source, nous pouvons utiliser plusieurs outils dans Visual Studio pour déboguer une application en cours d’exécution, le complément DynamoRevit par exemple. Nous pouvons analyser son code source pour trouver l’origine d’un problème, ou observer le code en cours d’exécution. Pour une explication plus détaillée sur la manière de déboguer et de parcourir le code dans Visual Studio, reportez-vous à la [documentation de Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
@@ -137,7 +137,7 @@ Dans les deux cas, nous attachons le débogueur à un processus que nous souhait
 
 Dans la section suivante, **Générer DynamoRevit à partir de la source**, nous aborderons un exemple spécifique de débogage et expliquerons comment définir des points d’arrêt, parcourir le code et lire la pile d’appels.
 
-#### Tirer la dernière version<a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### Tirer la dernière version<a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 Puisque la source de Dynamo est hébergée sur Github, la façon la plus simple de garder les fichiers source locaux à jour est de tirer les changements en utilisant les commandes git.
 

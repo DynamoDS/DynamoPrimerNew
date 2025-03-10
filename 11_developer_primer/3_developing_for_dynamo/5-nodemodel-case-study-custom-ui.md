@@ -1,4 +1,4 @@
-# Étude de cas de modèle de nœud : interface utilisateur personnalisée 
+# Étude de cas de modèle de nœud : interface utilisateur personnalisée
 
 Les nœuds basés sur NodeModel offrent beaucoup plus de flexibilité et de puissance que les nœuds Zero-Touch. Dans cet exemple, nous ferons passer le nœud de grille Zero-Touch au niveau supérieur en ajoutant un curseur intégré qui randomise la taille du rectangle.
 

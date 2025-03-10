@@ -45,6 +45,6 @@ Avant de publier publiquement, vous devez toujours publier localement pour vous 
 
 ### Tirer <a href="#pulling" id="pulling"></a>
 
-Pour vérifier que votre package a été correctement téléchargé, vous devez être en mesure de le rechercher en fonction du nom et des mots clés spécifiés lors de l’étape de publication. Enfin, il est important de noter que ces extensions nécessitent un redémarrage de Dynamo avant de fonctionner. En général, ces extensions requièrent des paramètres spécifiés lors du démarrage de Dynamo.
+Pour vérifier que votre package a été correctement téléchargé, vous devez être en mesure de le rechercher en fonction du nom et des mots-clés spécifiés lors de l’étape de publication. Enfin, il est important de noter que ces extensions nécessitent un redémarrage de Dynamo avant de fonctionner. En général, ces extensions requièrent des paramètres spécifiés lors du démarrage de Dynamo.
 
 ![Rechercher des packages](images/ViewExtension_Search.jpg)

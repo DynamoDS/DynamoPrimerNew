@@ -63,8 +63,55 @@ La mise à jour d’un package est un processus similaire à la publication. Ouv
 
 #### Client Web du gestionnaire de package <a href="#package-manager-web-client" id="package-manager-web-client"></a>
 
-Le client Web du gestionnaire de package est utilisé exclusivement pour rechercher et afficher des données de package, telles que le contrôle des versions et les statistiques de téléchargement.
+Le client Web du gestionnaire de package permet aux utilisateurs de rechercher et d’afficher les données des packages, y compris le contrôle des versions, les statistiques de téléchargement et d’autres informations pertinentes. En outre, les créateurs de packages peuvent se connecter pour mettre à jour les détails du package, telles que la compatibilité, directement via le client Web.
+
+Pour plus d’informations sur ces fonctionnalités, consultez l’article de blog suivant : [https://dynamobim.org/discover-the-new-dynamo-package-management-experience/](https://dynamobim.org/discover-the-new-dynamo-package-management-experience/).
 
 Le client Web du gestionnaire de package est accessible à l’adresse suivante : [https://dynamopackages.com/](https://dynamopackages.com)
 
 ![Client Web du gestionnaire de package](images/packagemanager-browser.jpg)
+
+##### Mise à jour des détails du package
+
+Les créateurs peuvent modifier la description du package, le lien vers le site Web et le lien vers le référentiel en procédant comme suit :  
+
+> 1. Sous **Mes packages**, sélectionnez le package et cliquez sur **Modifier les détails du package**.  
+> 2. Ajoutez ou modifiez les liens vers le **site Web** et le **référentiel** à l’aide des champs respectifs.  
+> 3. Mettez à jour la **description du package** si nécessaire.  
+> 4. Cliquez sur **Enregistrer les modifications** pour appliquer les mises à jour.  
+
+ **Remarque** : l’application des mises à jour dans le gestionnaire de packages peut prendre jusqu’à 15 minutes dans Dynamo, car les mises à jour du serveur prennent un certain temps. Nous nous efforçons de réduire ce retard.  
+
+ ![Nouvelle interface utilisateur pour mettre à jour les détails des packages publiés](images/Package-Manager_Image_5.png)
+
+##### Modifier les informations de compatibilité pour les versions de packages publiés  
+
+Les informations de compatibilité peuvent être mises à jour de manière rétroactive pour les versions de package précédemment publiés. Procédez comme suit :  
+
+![Modifier les informations de compatibilité des packages publiés - Étape 1](images/Package-Manager_Image_6.png)
+
+**Étape 1 :**  
+
+1. Cliquez sur la version du package que vous voulez mettre à jour.  
+2. La liste **Dépend de** sera automatiquement remplie avec les packages dont dépend votre package.  
+3. Cliquez sur l’icône en forme de crayon à côté de **Compatibilité** pour ouvrir le workflow **Modifier les informations de compatibilité**.  
+
+**Étape 2 :**  
+
+Suivez le schéma opérationnel ci-dessous et reportez-vous au tableau pour choisir l’option qui convient le mieux à votre package.
+
+![Quelle option choisir pour le workflow « Modifier les informations de compatibilité »](images/Package-Manager_Image_7.png)
+
+Voici quelques exemples pour explorer différents scénarios :
+
+**Exemple de package # 1** \- Civil Connection : ce package a des dépendances d’API avec Revit et Civil 3D et n’inclut pas de collection de nœuds principaux (par exemple : fonctions géométriques, fonctions mathématiques et/ou gestion de liste). Donc, dans ce cas, la solution idéale serait l’option 1. Le package s’affiche comme compatible dans Revit et Civil 3D et correspond à la gamme de versions et/ou à la liste de versions individuelle.
+
+**Exemple de package # 2** \- Rythm : ce package contient une collection de nœuds Revit spécifiques ainsi qu’une collection de nœuds principaux. Dans ce cas, le package a des dépendances d’hôte. Mais il inclut également les nœuds principaux qui fonctionnent dans Dynamo Core. Donc, dans ce cas, la solution idéale serait l’option 2. Le package s’affiche comme compatible dans les environnements Revit et Dynamo Core (également appelé Dynamo Sandbox) qui correspondent à la gamme de versions et/ou à la liste de versions individuelle.
+
+**Exemple de package # 3** \- Mesh Toolkit : il s’agit d’un package Dynamo Core qui contient une collection de nœuds de géométrie et n’a pas de dépendances d’hôte. Donc, dans ce cas, la solution idéale serait l’option 3. Le package s’affiche comme compatible dans Dynamo et dans tous les environnements hôtes qui correspondent à la gamme de versions et/ou à la liste de versions individuelle.
+
+![Modifier les options d’informations de compatibilité](images/Package-Manager_Image_8.png)
+
+Selon l’option sélectionnée, les champs spécifiques à Dynamo et/ou à l’hôte s’affichent, comme illustré sur l’image ci-dessous.
+
+![Modifier les informations de compatibilité - Étape 2](images/Package-Manager_Image_9.png)

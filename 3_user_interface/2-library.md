@@ -16,9 +16,7 @@ Parcourir ces catégories est la manière la plus rapide de comprendre la hiéra
 
 Parcourez la bibliothèque en cliquant sur les menus pour développer chaque catégorie et sa sous-catégorie.
 
-{% hint style="info" %}
- Géométrie est un excellent menu à explorer en premier, car il contient la plus grande quantité de nœuds. 
-{% endhint %}
+{% hint style="info" %} Géométrie est un excellent menu à explorer en premier, car il contient la plus grande quantité de nœuds. {% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -29,13 +27,13 @@ Parcourez la bibliothèque en cliquant sur les menus pour développer chaque cat
 
 Ces menus permettent de classer les nœuds dans la même sous-catégorie selon que les nœuds **créent** des données, exécutent une **action** ou **interrogent** des données.
 
-* ![](<images/3-2/user interface - create.jpg>) **Créer** : créez ou construisez une géométrie à partir de zéro, par exemple, un cercle.
-* ![](<images/3-2/user interface - action.jpg>) **Action** : effectuez une action sur un objet, par exemple, mettre un cercle à l’échelle.
-* ![](<images/3-2/user interface - query.jpg>) **Requête** : permet d’obtenir une propriété d’un objet qui existe déjà, par exemple, obtenir le rayon d’un cercle.
+* \![](<images/3-2/user interface - create.jpg>) **Créer** : créez ou construisez une géométrie à partir de zéro, par exemple, un cercle.
+* \![](<images/3-2/user interface - action.jpg>) **Action** : effectuez une action sur un objet, par exemple, mettre un cercle à l’échelle.
+* \![](<images/3-2/user interface - query.jpg>) **Requête** : permet d’obtenir une propriété d’un objet qui existe déjà, par exemple, obtenir le rayon d’un cercle.
 
 Placez le curseur de la souris sur un nœud pour afficher des informations plus détaillées que son nom et son icône. Ces informations permettent de comprendre ce que fait le nœud, ce qu’il requiert pour les entrées et ce qu’il va donner en sortie.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Description : description du nœud en langage simple
 > 2. Icône : version plus grande de l'icône dans le menu de la bibliothèque
@@ -48,7 +46,7 @@ Si vous avez une idée du nœud que vous souhaitez ajouter à votre espace de tr
 
 Cliquez sur le nœud que vous souhaitez ajouter ou appuyez sur la touche Entrée pour ajouter les nœuds mis en surbrillance au centre de l’espace de travail.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Recherche par hiérarchie
 
@@ -117,9 +115,7 @@ Vous pouvez également afficher les résultats de la géométrie à l’aide d�
 
 Ces deux nœuds sont disponibles dans la catégorie View de la bibliothèque Core.
 
-{% hint style="info" %}
- Conseil : il peut arriver que l’aperçu 3D soit gênant lorsque votre programme visuel contient un grand nombre de nœuds. Pensez à désactiver l’option Afficher l’aperçu en arrière-plan dans le menu Paramètres et à utiliser un nœud Watch3D pour afficher un aperçu de la géométrie. 
-{% endhint %}
+{% hint style="info" %} Conseil : il peut arriver que l’aperçu 3D soit gênant lorsque votre programme visuel contient un grand nombre de nœuds. Pensez à désactiver l’option Afficher l’aperçu en arrière-plan dans le menu Paramètres et à utiliser un nœud Watch3D pour afficher un aperçu de la géométrie. {% endhint %}
 
 #### Code Block
 
@@ -129,7 +125,7 @@ Vous pouvez également utiliser les nœuds Code Block comme raccourci pour défi
 
 Voici une démonstration simple (avec des instructions) de l’utilisation du nœud Code Block dans votre script.
 
-![](<images/3-2/library - code block demo.gif>)
+\![](<images/3-2/library - code block demo.gif>)
 
 1. Double-cliquez pour créer un nœud Code Block.
 2. `Circle.ByCenterPointRadius(x,y);`Type

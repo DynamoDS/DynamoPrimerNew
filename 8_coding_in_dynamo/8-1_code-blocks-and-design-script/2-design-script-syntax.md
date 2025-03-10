@@ -6,7 +6,7 @@ Vous avez peut-être remarqué que les noms des nœuds dans Dynamo ont un point 
 
 Prenons une pomme paramétrique comme analogie générale de la notation par points : comment pouvez-vous la traiter dans Dynamo ? Voici quelques méthodes que vous allez exécuter sur la pomme avant de la manger. (Remarque : il ne s’agit pas de méthodes Dynamo réelles) :
 
-| Visible de tous                 | Notation par points              | Sortie |
+| Lisible par l’homme                 | Notation par points              | Sortie |
 | ------------------------------ | ------------------------- | ------ |
 | De quelle couleur est la pomme ?       | Apple.color               | rouge    |
 | La pomme est-elle mûre ?             | Apple.isRipe              | true   |

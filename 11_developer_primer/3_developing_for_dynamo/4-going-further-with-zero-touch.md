@@ -18,7 +18,7 @@ Ouvrez Dynamo et importez le `ZeroTouchEssentials.dll` pour obtenir les nœuds q
 
 Les exemples de code sont tirés de [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/master/ZeroTouchEssentials/ZeroTouchEssentials.cs) et correspondent généralement à ce dernier. La documentation XML a été supprimée pour préserver la concision, et chaque exemple de code créera le nœud figurant dans l’image ci-dessus.
 
-#### Valeur d’entrée par défaut <a href="#default-input-values" id="default-input-values"></a>
+### Valeur d’entrée par défaut <a href="#default-input-values" id="default-input-values"></a>
 
 Dynamo prend en charge la définition de valeurs par défaut pour les ports d’entrée d’un nœud. Ces valeurs par défaut seront fournies au nœud si les ports ne sont pas connectés. Les valeurs par défaut sont exprimées à l’aide du mécanisme C# qui spécifie les arguments facultatifs dans le [Guide de programmation C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Les valeurs par défaut sont spécifiées de la manière suivante :
 
@@ -42,7 +42,7 @@ namespace ZeroTouchEssentials
 
 > 1. La valeur par défaut s’affiche lorsque vous passez le curseur sur le port d’entrée du nœud.
 
-#### Renvoyer plusieurs valeurs <a href="#returning-multiple-values" id="returning-multiple-values"></a>
+### Renvoyer plusieurs valeurs <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
 Le renvoi de plusieurs valeurs est un peu plus complexe que la création de plusieurs entrées et devra être renvoyé à l’aide d’un dictionnaire. Les entrées du dictionnaire deviennent des ports sur le côté sortie du nœud. Les ports de retour multiples peuvent être créés de la manière suivante :
 
@@ -80,7 +80,7 @@ Un nœud qui renvoie plusieurs sorties.
 
 > 1. Notez que deux ports de sortie sont désormais nommés en fonction des chaînes que nous avons saisies pour les clés du dictionnaire.
 
-#### Documentation, info-bulles et recherche <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
+### Documentation, info-bulles et recherche <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
 
 Il est recommandé d’ajouter de la documentation aux nœuds Dynamo pour décrire la fonction du nœud, les entrées, les sorties, les balises de recherche, etc. Cela se fait par le biais de balises de documentation XML. Pour créer de la documentation XML, procédez de la manière suivante :
 
@@ -88,7 +88,7 @@ Il est recommandé d’ajouter de la documentation aux nœuds Dynamo pour décri
   * par exemple : `/// Documentation text and XML goes here`
 * après les trois barres obliques, créez des balises XML au-dessus des méthodes que Dynamo lira lors de l’importation du fichier .dll ;
   * par exemple : `/// <summary>...</summary>`
-* activez la documentation XML dans Visual Studio en sélectionnant `Project > Project Properties > Build` et en cochant la case `XML documentation file`.
+* Activez la documentation XML dans Visual Studio en sélectionnant `Project > [Project] Properties > Build > Output` et en cochant la case `Documentation file`.
 
 ![Générer un fichier XML](images/vs-xml.jpg)
 
@@ -134,7 +134,46 @@ Notez que le code de cet exemple de nœud contient :
 > 2. une description d’entrée ;
 > 3. une description de sortie.
 
-#### Objets <a href="#objects" id="objects"></a>
+#### Meilleures pratiques concernant les descriptions des nœuds Dynamo 
+
+Les descriptions de nœud décrivent brièvement la fonction et la sortie d’un nœud. Dans Dynamo, elles apparaissent à deux endroits :
+
+- Dans l’info-bulle du nœud
+- Dans le navigateur de documentation
+
+![Description du nœud](images/node-description.png)
+
+Suivez ces instructions pour harmoniser les descriptions de nœud et gagner du temps lors de leur rédaction ou de leur mise à jour.
+
+##### Présentation
+
+Les descriptions doivent comporter une ou deux phrases. Si des informations supplémentaires sont nécessaires, ajoutez-les à la section Description approfondie du navigateur de documentation.
+
+Casse des phrases (mettez en majuscule le premier mot de chaque phrase et les noms propres). Pas de point à la fin.
+
+Le langage doit être aussi clair et simple que possible. Expliquez les acronymes la première fois qu’ils apparaissent, à moins qu’ils ne soient connus même des utilisateurs non experts.
+
+Privilégiez toujours la clarté, même si cela implique de vous écarter de ces instructions.
+
+##### Instructions
+
+| À faire      | À ne pas faire |
+| ----------- | ----------- |
+| Commencez la description par un verbe à la troisième personne. <ul><li>Exemple : *Determines* if one geometry object intersects with another</li></ul>      | Ne commencez pas par un verbe à la deuxième personne du pluriel ou par un nom. <ul><li>Exemple : *Determine* if one geometry object intersects with another</li></ul>       |
+| Utilisez « Returns », « Creates » ou un autre verbe descriptif plutôt que « Gets ». <ul><li>Exemple : *Returns* a Nurbs representation of a surface</li></ul>   | N’utilisez pas « Get » ou « Gets ». Ce verbe est moins spécifique et a plusieurs traductions possibles. <ul><li>Exemple : *Gets* a Nurbs representation of the surface</li></ul>        |
+| Lorsque vous vous référez à des entrées, utilisez « given » ou « input » plutôt que « specified » ou tout autre terme. Omettez « given » ou « input » lorsque cela est possible pour simplifier la description et réduire le nombre de mots. <ul><li>Exemple : Deletes the *given* file</li><li>Exemple : Projects a curve along the *given* projection direction onto *given* base geometry</li></ul>Vous pouvez utiliser « specified » lorsque vous ne faites pas directement référence à une entrée. <ul><li>Exemple : Writes text content to a file *specified* by the given path</li></ul>       | Lorsque vous faites référence à des entrées, pour harmoniser vos descriptions, n’utilisez pas « specified » ni tout autre terme autre que « given » ou « input ». Ne mélangez pas « given » et « input » dans la même description, à moins que cela ne soit nécessaire pour plus de clarté. <ul><li>Exemple : Deletes the *specified* file</li><li>Exemple : Projects an *input* curve along a *given* projection direction onto a *specified* base geometry</li></ul>      |
+| Utilisez « a » ou « an » lorsque vous faites référence à une entrée pour la première fois. Utilisez « the given » ou « the input » plutôt que « a » ou « an » si cela est nécessaire pour plus de clarté.<ul><li>Exemple : Sweeps *a* curve along the path curve</li></ul>      | N’utilisez pas « this » lorsque vous faites référence à une entrée pour la première fois. <ul><li>Exemple : Sweeps *this* curve along the path curve      |
+| Lorsque vous faites référence pour la première fois à une sortie ou à un autre nom qui est la cible de l’opération de nœud, utilisez « a » ou « an ». N’utilisez « the » que lorsque vous l’associez à « input » ou « given ». <ul><li>Exemple : Copies *a* file</li><li>Exemple : Copies *the given* file</li></ul>      | Lorsque vous faites référence pour la première fois à une sortie ou à un autre nom qui est la cible de l’opération de nœud, n’utilisez pas « the » seul. <ul><li>Exemple : Copies *the* file</li></ul>      |
+| Mettez une majuscule au premier mot de chaque phrase et aux noms propres, comme les noms de personnes et d’autres noms qui sont généralement mis en majuscule. <ul><li>Exemple : Returns the intersection of two *BoundingBoxes*</li></ul>      | Ne mettez pas de majuscules aux concepts et objets de géométrie courants, à moins que cela ne soit nécessaire pour plus de clarté. <ul><li>Exemple : Scales non-uniformly around the given *Plane*      |
+| Mettez une majuscule à « Boolean ». Mettez une majuscule à « True » et « False » lorsque vous faites référence à la sortie de booléens. <ul><li>Exemple : Returns *True* if the two values are different</li><li>Exemple : Converts a string to all uppercase or all lowercase characters based on a *Boolean* parameter      | Ne mettez pas « Boolean » en minuscules. Ne mettez pas « True » et « False » en minuscules lorsque vous faites référence à la sortie de booléens. <ul><li>Exemple : Returns *true* if the two values are different</li><li>Exemple : Converts a string to all uppercase characters or all lowercase characters based on a *boolean* parameter</li></ul>
+
+#### Avertissements et erreurs liés aux nœuds Dynamo
+
+Les avertissements et les erreurs liés aux nœuds informent l’utilisateur d’un problème concernant le graphe. Ils avertissent l’utilisateur de problèmes qui interfèrent avec le fonctionnement normal du graphe en affichant une icône et une bulle de texte ouverte au-dessus du nœud. Les erreurs et les avertissements liés aux nœuds peuvent varier en gravité : certains graphes peuvent s’exécuter suffisamment avec des avertissements, tandis que d’autres bloquent les résultats attendus. Dans tous les cas, les erreurs et les avertissements liés aux nœuds sont des outils importants pour tenir l’utilisateur au courant des problèmes liés à son graphe.
+
+Pour obtenir des instructions afin d’assurer la cohérence et de gagner du temps lors de la rédaction ou de la mise à jour de messages d’avertissement et d’erreur concernant les nœuds, veuillez vous référer à la page Wiki [Modèle de contenu : avertissements et erreurs liés aux nœuds](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors).
+
+### Objets <a href="#objects" id="objects"></a>
 
 Dynamo ne possède pas de mot-clé `new`, les objets doivent donc être construits à l’aide de méthodes de construction statiques. Les objets sont construits de la façon suivante :
 
@@ -173,7 +212,7 @@ Une fois que le .dll ZeroTouchEssentials a été importé, un nœud ZeroTouchEs
 
 ![Nœud ByTwoDoubles](images/dyn-constructor.jpg)
 
-#### Utiliser des types de géométrie Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
+### Utiliser des types de géométrie Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
 Les bibliothèques Dynamo peuvent utiliser les types de géométrie Dynamo en entrée et créer de nouvelles géométries en sortie. Les types de géométrie sont créés de la manière suivante :
 
@@ -207,7 +246,7 @@ Un nœud qui obtient la longueur d’une courbe et la double.
 
 > 1. Ce nœud accepte un type de géométrie Courbe comme entrée.
 
-#### Instructions using/dispose <a href="#disposeusing-statements" id="disposeusing-statements"></a>
+### Instructions using/dispose <a href="#disposeusing-statements" id="disposeusing-statements"></a>
 
 Les ressources de géométrie qui ne sont pas renvoyées par les fonctions devront être gérées manuellement à moins que vous n’utilisiez Dynamo version 2.5 ou ultérieure. Dans Dynamo 2.5 et versions ultérieures, les ressources de géométrie sont gérées en interne par le système. Toutefois, vous devrez peut-être supprimer la géométrie manuellement si vous avez un cas d’utilisation complexe ou si vous devez réduire la mémoire à un moment précis. Le moteur Dynamo traitera toutes les ressources de géométrie qui sont renvoyées par des fonctions. Les ressources de géométrie qui ne sont pas renvoyées peuvent être traitées manuellement de l’une des manières suivantes :
 
@@ -237,7 +276,7 @@ Les ressources de géométrie qui ne sont pas renvoyées par les fonctions devro
     return l;
     ```
 
-#### Migrations <a href="#migrations" id="migrations"></a>
+### Migrations <a href="#migrations" id="migrations"></a>
 
 Lors de la publication d’une nouvelle version d’une bibliothèque, les noms des nœuds peuvent changer. Les changements de nom peuvent être spécifiés dans un fichier migrations afin que les graphiques générés sur des versions antérieures d’une bibliothèque continuent à fonctionner correctement lorsqu’une mise à jour est effectuée. Les migrations sont implémentées de la manière suivante :
 
@@ -266,7 +305,7 @@ Cet exemple de code indique à Dynamo que tout nœud nommé `GetClosestPoint` es
 
 > Reportez-vous à cet exemple de code dans [ProtoGeometry.Migrations.xml](https://github.com/DynamoDS/Dynamo/blob/master/extern/ProtoGeometry/ProtoGeometry.Migrations.xml).
 
-#### Génériques <a href="#generics" id="generics"></a>
+### Génériques <a href="#generics" id="generics"></a>
 
 Zero-Touch ne prend pas en charge l’utilisation de génériques pour l’instant. Ils peuvent être utilisés, mais pas dans le code importé directement lorsque le type n’est pas défini. Les méthodes, propriétés ou classes génériques qui ne possèdent pas le type défini ne peuvent pas être exposées.
 

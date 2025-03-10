@@ -1,4 +1,4 @@
-# Étude de cas Zero-Touch : nœud grille 
+# Étude de cas Zero-Touch : nœud grille
 
 Avec un projet Visual Studio opérationnel, nous allons voir comment générer un nœud personnalisé qui crée une grille rectangulaire de cellules. Bien que nous puissions créer ce nœud avec plusieurs nœuds standard, il s’agit d’un outil utile qui peut être facilement contenu dans un nœud Zero-Touch. Contrairement aux lignes de grille, les cellules peuvent être mises à l’échelle autour de leurs points centraux, interrogées pour leurs sommets d’angle ou créées dans des faces.
 
@@ -6,7 +6,7 @@ Cet exemple aborde quelques-unes des caractéristiques et des concepts à prendr
 
 ![Graphique de grille rectangulaire](images/cover-image.jpg)
 
-#### Noeud de grille rectangulaire personnalisé <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Noeud de grille rectangulaire personnalisé <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Pour commencer à générer le nœud de grille, créez un nouveau projet de bibliothèque de classes Visual Studio. Reportez-vous à la page Mise en route pour obtenir un guide détaillé de la configuration d’un projet.
 
@@ -17,7 +17,7 @@ Pour commencer à générer le nœud de grille, créez un nouveau projet de bibl
 > 1. Choisissez `Class Library` comme type de projet
 > 2. Nommez le projet `CustomNodes`
 
-Comme nous allons créer une géométrie, nous devons référencer le package NuGet approprié. Installez le package ZeroTouchLibrary à partir du gestionnaire de package Nuget. Ce package est nécessaire pour l’instruction `using Autodesk.DesignScript.Geometry;`.
+Comme nous allons créer une géométrie, nous devons référencer le package NuGet approprié. Installez le package ZeroTouchLibrary à partir du gestionnaire de package NuGet. Ce package est nécessaire pour l’instruction `using Autodesk.DesignScript.Geometry;`.
 
 ![Package ZeroTouchLibrary](images/vs-nugetpackage.jpg)
 
@@ -96,7 +96,7 @@ Vérifiez si le dossier `bin` du projet contient un `.dll`. Si la génération e
 > 2. Le nœud personnalisé sur la zone de dessin
 > 3. Le bouton Ajouter permet d’ajouter le `.dll` à Dynamo
 
-#### Modifications de nœuds personnalisé <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### Modifications de nœuds personnalisé <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 Dans l’exemple ci-dessus, nous avons créé un nœud assez simple qui définit essentiellement la méthode `RectangularGrids`. Cependant, nous pouvons vouloir créer des infobulles pour les ports d’entrée ou donner au nœud un résumé comme les nœuds Dynamo standard. L’ajout de ces fonctionnalités aux nœuds personnalisés les rend plus faciles à utiliser, en particulier si un utilisateur souhaite les rechercher dans la bibliothèque.
 

@@ -4,7 +4,7 @@ Avant de se lancer dans le développement, il est important d’établir des bas
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Créer un projet Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Créer un projet Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio est un environnement IDE puissant dans lequel vous pouvez créer un projet, ajouter des références, générer des `.dlls` et déboguer. Lors de la création d’un projet, Visual Studio crée également une solution, une structure pour l’organisation des projets. Plusieurs projets peuvent exister au sein d’une même solution et peuvent être créés ensemble. Pour créer un nœud ZeroTouch, nous devons démarrer un nouveau projet Visual Studio dans lequel nous écrirons une bibliothèque de classes en C# et générerons un `.dll`.
 
@@ -84,7 +84,7 @@ Si une catégorie est créée dans la bibliothèque appelée `MyCustomNode`, le 
 > 1. MyCustomNode dans la bibliothèque Dynamo. La catégorie Bibliothèque est déterminée par le nom `.dll`.
 > 2. SampleFunctions.MultiplyByTwo dans la zone de dessin.
 
-#### Lecture des classes et des méthodes par Dynamo <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Lecture des classes et des méthodes par Dynamo <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Lorsque Dynamo charge un fichier .dll, il expose toutes les méthodes statiques publiques sous forme de nœuds. Les constructeurs, les méthodes et les propriétés seront transformés respectivement en nœuds de création, d’action et de requête. Dans notre exemple de multiplication, la méthode `MultiplyByTwo()` devient un nœud d’action dans Dynamo. Ceci est dû au fait que le nœud a été nommé en fonction de sa méthode et de sa classe.
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dynamo a importé notre méthode en tant que nœud de création
 
-#### Ajouter des références de package Dynamo NuGet <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Ajouter des références de package Dynamo NuGet <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 Le nœud de multiplication est très simple et aucune référence à Dynamo n’est nécessaire. Si nous voulons accéder à l’une des fonctionnalités de Dynamo pour créer une géométrie par exemple, nous devrons faire référence aux packages NuGet de Dynamo.
 

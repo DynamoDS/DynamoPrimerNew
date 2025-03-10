@@ -18,9 +18,7 @@ Examinez rapidement la hiérarchie de Revit.
 
 Vous vous souvenez de la taxinomie en biologie ? Règne, Embranchement, Classe, Ordre, Famille, Genre, Espèces ? Les éléments Revit sont classés de la même manière. À la base, la hiérarchie Revit peut être divisée en catégories, familles, types* et instances. Une instance est un élément de modèle individuel (avec un ID unique), tandis qu'une catégorie définit un groupe générique (tel que "murs" ou "sols"). La base de données Revit étant organisée de cette manière, vous pouvez sélectionner un élément et choisir tous les éléments similaires en fonction d'un niveau spécifié dans la hiérarchie.
 
-{% hint style="warning" %}
- * Les types définis dans Revit diffèrent des types de programmation. Dans Revit, un type fait référence à une branche de la hiérarchie plutôt qu'à un "type de données". 
-{% endhint %}
+{% hint style="warning" %} * Les types définis dans Revit diffèrent des types de programmation. Dans Revit, un type fait référence à une branche de la hiérarchie plutôt qu'à un "type de données". {% endhint %}
 
 ### Navigation dans la base de données avec les nœuds Dynamo
 
@@ -32,7 +30,7 @@ _Pointer-cliquer_ est la méthode la plus simple pour sélectionner directement 
 
 Les _menus déroulants_ permettent de créer une liste de tous les éléments accessibles dans un projet Revit. Vous pouvez utiliser cette option pour référencer des éléments Revit qui ne sont pas nécessairement visibles dans une vue. C’est un outil formidable pour rechercher des éléments existants ou en créer d’autres dans un projet Revit ou l’Éditeur de familles.
 
-![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 Vous pouvez également sélectionner des éléments Revit en fonction de niveaux spécifiques dans la _hiérarchie Revit_. Cette option est puissante pour personnaliser des réseaux de données volumineux en vue de la documentation ou de l'instanciation et de la personnalisation génératives.
 
@@ -50,7 +48,7 @@ Tout en gardant les trois images ci-dessus, vous allez étudier un exercice qui 
 
 Ce fichier d'exemple Revit contient trois types d'éléments d'un bâtiment simple. Utilisez ce fichier comme exemple pour sélectionner des éléments Revit dans le contexte de la hiérarchie Revit.
 
-![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Volume de bâtiment
 > 2. Poutres (ossature)
@@ -83,7 +81,7 @@ Voici une autre méthode : dans ce cas, vous ne pouvez pas effectuer de sélect
 
 Certaines des opérations de liste de base vous permettent d’interroger la face qui vous intéresse.
 
-![](<images/2/selecting - exercise 05.jpg>)
+\![](images/2/selecting - exercise 05.jpg)
 
 > 1. Tout d’abord, connectez les éléments sélectionnés précédemment au nœud Element.Faces.
 > 2. Ensuite, le nœud _List.Count_ indique que vous travaillez avec 23 surfaces du volume.
@@ -151,6 +149,4 @@ Ensuite, extrayez des informations de base à partir du type de famille de ferme
 > 2. Connectez le nœud _"All Elements of Family Type"_ au nœud _"AdaptiveComponent.Location"_. Vous obtenez une liste de listes, chacune avec trois points qui représentent les emplacements des points adaptatifs.
 > 3. La connexion d'un nœud _"Polygon.ByPoints"_ renvoie une polycourbe. Celle-ci apparaît dans la fenêtre Dynamo. Cette méthode vous a permis de visualiser la géométrie d'un élément et de supprimer la géométrie du réseau d'éléments restants (qui peut être plus grand en nombre que dans cet exemple).
 
-{% hint style="info" %}
- Conseil : si vous cliquez sur le numéro vert d'un élément Revit dans Dynamo, la fenêtre Revit effectue un zoom sur cet élément. 
-{% endhint %}
+{% hint style="info" %} Conseil : si vous cliquez sur le numéro vert d'un élément Revit dans Dynamo, la fenêtre Revit effectue un zoom sur cet élément. {% endhint %}

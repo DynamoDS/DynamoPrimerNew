@@ -2,7 +2,7 @@
 
 Dans les sections précédentes, vous avez découvert en détail comment configurer le package _MapToSurface_ avec des nœuds personnalisés et des fichiers d’exemple. Mais comment publier un package développé localement ? Cette étude de cas montre comment publier un package à partir d’un ensemble de fichiers dans un dossier local.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Il existe plusieurs façons de publier un package. Voici le processus recommandé :**publier localement, développer localement, puis publier en ligne**. Vous allez commencer par un dossier contenant tous les fichiers du package.
 
@@ -55,7 +55,7 @@ Publiez en cliquant sur « Publier localement » (1). Si vous suivez, veillez 
 
 Une fois la publication terminée, les nœuds personnalisés doivent être disponibles sous le groupe « DynamoPrimer » ou votre bibliothèque Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Examinez maintenant le répertoire racine pour découvrir comment Dynamo a mis en forme le package créé. Pour ce faire, allez dans l’onglet Packages installés > à côté de MapToSurface, cliquez sur le menu des points verticaux > sélectionnez Afficher le répertoire racine.
 
@@ -77,7 +77,12 @@ Le répertoire racine se trouve à l’emplacement local de votre package (n’o
 <figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
 1. Lorsque vous êtes prêt à publier, dans la fenêtre Packages > Gestionnaire de package > Packages installés, sélectionnez le bouton situé à droite du package que vous souhaitez publier et choisissez Publier.
-2. Si vous mettez à jour un package qui a déjà été publié, choisissez « Publier la version » et Dynamo mettra à jour votre package en ligne en fonction des nouveaux fichiers contenus dans le répertoire racine de ce package. C'est aussi simple que ça !
+2. Si vous mettez à jour un package qui a déjà été publié, choisissez « Publier la version » et Dynamo mettra à jour votre package en ligne en fonction des nouveaux fichiers contenus dans le répertoire racine de ce package. C’est aussi simple que ça !
+
+#### Test du serveur du gestionnaire de packages
+Lorsque vous testez le gestionnaire de packages, n’envoyez pas vos packages de test au serveur de production. Utilisez le serveur intermédiaire. Cela permet d’éviter que vos packages ne polluent l’activité et les packages réels. Il est facile de configurer Dynamo pour utiliser le serveur intermédiaire. 
+
+Pour plus d’informations à ce sujet, veuillez vous référer à la page Wiki [Test du serveur du gestionnaire de packages](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
 
 ### Version de publication…
 

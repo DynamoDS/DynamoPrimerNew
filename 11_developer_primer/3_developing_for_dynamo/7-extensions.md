@@ -1,4 +1,4 @@
-# Extensions 
+# Extensions
 
 Les extensions sont un outil de développement puissant dans l’écosystème Dynamo. Elles permettent aux développeurs de créer des fonctionnalités personnalisées basées sur les interactions et la logique de Dynamo. Les extensions peuvent être divisées en deux catégories principales : les extensions et les extensions de vue. Comme son nom l’indique, le cadre d’extension de vue vous permet d’étendre l’interface utilisateur Dynamo en enregistrant des éléments de menu personnalisés. Les extensions classiques fonctionnent de manière très similaire, à l’exception de l’interface utilisateur. Par exemple, nous pourrions générer une extension qui enregistre des informations spécifiques dans la console Dynamo. Ce scénario ne nécessite pas d’interface utilisateur personnalisée et pourrait donc être réalisé à l’aide d’une extension.
 

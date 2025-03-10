@@ -28,7 +28,7 @@ Les blocs de code sont également flexibles en ce qui concerne les types de donn
 
 Dans l'image ci-dessous, vous pouvez voir que la manière "classique" de faire les choses est un peu longue : l'utilisateur recherche le nœud voulu dans l'interface, ajoute le nœud à la zone de dessin, puis saisit les données. Avec le bloc de code, l'utilisateur peut double-cliquer sur la zone de dessin pour afficher le nœud et entrer le type de données correct avec la syntaxe de base.
 
-Les nœuds number, string et formula sont trois exemples de nœuds Dynamo qui sont probablement obsolètes par rapport au bloc de code.
+Les nœuds number et string sont deux exemples de nœuds Dynamo qui sont probablement obsolètes par rapport au bloc de code.
 
 ![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 

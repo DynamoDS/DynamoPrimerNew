@@ -22,9 +22,7 @@ Les entrées et les sorties des nœuds sont appelées "ports" et servent de réc
 
 Les ports doivent recevoir des données d'un certain type. Par exemple, la connexion d'un nombre tel que _2.75_ aux ports d'un nœud Point By Coordinates permet de créer un point. Toutefois, si vous indiquez _"Red"_ sur le même port, une erreur se produira.
 
-{% hint style="info" %}
- Conseil : placez le curseur sur un port pour afficher une info-bulle contenant le type de données attendu. 
-{% endhint %}
+{% hint style="info" %} Conseil : placez le curseur sur un port pour afficher une info-bulle contenant le type de données attendu. {% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -55,9 +53,7 @@ Lorsque vous placez le curseur ou cliquez avec le bouton droit de la souris sur 
 
 Si votre programme visuel contient des avertissements ou des erreurs, Dynamo fournit des informations supplémentaires sur le problème. Tout nœud jaune comporte également une info-bulle au-dessus de son nom. Placez le curseur de la souris sur l’icône d’avertissement ![](images/nodesandwires-nodewarningicon.png) ou d’erreur ![](images/nodesandwires-nodeerroricon.png) dans l’info-bulle pour la développer.
 
-{% hint style="info" %}
- Conseil : examinez les nœuds en amont à la lumière de ces informations d’info-bulle pour voir si le type ou la structure de données requis est erroné. 
-{% endhint %}
+{% hint style="info" %} Conseil : examinez les nœuds en amont à la lumière de ces informations d’info-bulle pour voir si le type ou la structure de données requis est erroné. {% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
@@ -101,7 +97,7 @@ Souvent, vous souhaitez ajuster le flux du programme dans votre programme visuel
 
 * Pour définir la connexion sur un port d’entrée, cliquez avec le bouton gauche de la souris sur un autre port d’entrée.
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Pour supprimer le fil, retirez-le et cliquez avec le bouton gauche de la souris sur l’espace de travail.
 

@@ -67,7 +67,7 @@ Ouvrez « SphereUnfold ».
 
 Après avoir ouvert le fichier et cliqué sur « Exécuter » dans le solveur, vous obtenez une sphère dépliée. Les fichiers d’exemple comme ceux-ci sont utiles pour apprendre à utiliser un nouveau package Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Parcourir et afficher les informations sur le package
 
@@ -79,7 +79,7 @@ Vous pouvez également obtenir plus de détails sur chaque paquet en cliquant su
 
 ### Site Web du gestionnaire de package Dynamo
 
-Une autre façon de découvrir les packages Dynamo est d’explorer le site Web du [gestionnaire de package Dynamo](http://dynamopackages.com). Vous y trouverez des statistiques sur les packages et les classements des auteurs. Vous pouvez également télécharger les fichiers de package à partir du gestionnaire de package Dynamo, mais le processus de Dynamo est plus simple.
+Une autre façon de découvrir les packages Dynamo est d’explorer le site Web du [gestionnaire de package Dynamo](http://dynamopackages.com). Vous y trouverez les dépendances des packages et les informations sur la compatibilité hôte/version fournies par les auteurs de chaque package. Vous pouvez également télécharger les fichiers de package à partir du gestionnaire de package Dynamo, mais le processus de Dynamo est plus simple.
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,53 @@ Si vous souhaitez voir où vos fichiers de package sont conservés, dans la barr
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 Par défaut, les packages sont installés dans un emplacement semblable à celui du dossier suivant : _C:/Utilisateurs/[nom d’utilisateur]/AppData/Itinérance/Dynamo/[Version Dynamo]_.
+
+### Configuration d’un emplacement partagé pour les packages dans un bureau
+
+Pour les utilisateurs qui se demandent s’il est possible de déployer Dynamo (sous quelque forme que ce soit) avec des packages pré-attachés : pour résoudre ce problème et permettre un contrôle centralisé pour tous les utilisateurs avec des installations Dynamo, ajoutez un chemin d’accès au package personnalisé à chaque installation.
+
+**Ajout d’un dossier réseau dans lequel le responsable BIM ou d’autres personnes pourraient superviser le stockage du dossier avec des packages approuvés par le bureau**  
+
+Dans l’interface utilisateur d’une application individuelle, accédez à *Dynamo -> Préférences -> Paramètres de packages -> Emplacements des fichiers de nœuds et de packages*. Dans la boîte de dialogue, appuyez sur le bouton « Ajouter un chemin » et accédez à l’emplacement réseau de la ressource de package partagée. 
+ 
+Comme il s’agit d’un processus automatisé, il faut ajouter des informations au fichier de configuration installé avec Dynamo :  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+Par défaut, la configuration de Dynamo for Revit est la suivante :
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+L’ajout d’un emplacement personnalisé ressemble à ce qui suit :  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+Pour contrôler la gestion centralisée de ce dossier, vous pouvez simplement le mettre en lecture seule.
+
+### Charger des packages avec des binaires à partir d’un emplacement réseau
+
+#### Scénario
+
+Une organisation peut vouloir harmoniser les packages installés par différents postes de travail et utilisateurs. Pour ce faire, vous pouvez installer ces packages sous *Dynamo -> Préférences -> Paramètres de package -> Chemins d’accès des nœuds et packages*, en sélectionnant un dossier réseau en tant qu’emplacement d’installation et en demandant aux stations de travail d’ajouter ce chemin à `Manage Node and Package Paths`.
+
+#### Problème
+
+Bien que le scénario fonctionne correctement pour les packages qui contiennent uniquement des nœuds personnalisés, il peut ne pas fonctionner pour les packages contenant des binaires, comme les nœuds Zero-Touch. Ce problème est dû à des [mesures de sécurité](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location) que .NET Framework impose aux ensembles chargés lorsqu’ils proviennent d’un emplacement réseau. Malheureusement, l’utilisation de l’élément de configuration `loadFromRemoteSources`, comme suggéré dans le thread cible, n’est pas une solution possible pour Dynamo, car il est distribué en tant que composant et non pas en tant qu’application.
+
+#### Alternative
+
+Une solution de contournement possible est d’utiliser un lecteur réseau mappé pointant vers l’emplacement réseau et de faire en sorte que les postes de travail fassent référence à ce chemin à la place. Les étapes à suivre pour créer un lecteur réseau mappé sont décrites [ici](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
 
 ### Repousser les limites des packages
 

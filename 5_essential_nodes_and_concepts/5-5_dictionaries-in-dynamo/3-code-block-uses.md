@@ -4,7 +4,7 @@ Dynamo 2.0 introduit non seulement les nœuds précédemment abordés dans les 
 
 Vous pouvez utiliser une syntaxe semblable à celle présentée ci-dessous ou des représentations de nœuds basées sur DesignScript.
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
 
 Étant donné qu’un dictionnaire est un type d’objet dans Dynamo, nous pouvons lui appliquer les actions suivantes.
 
