@@ -67,7 +67,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 在打开该文件并点击求解器上的“运行”后，我们会得到一个展开的球体！此类示例文件有助于了解如何使用新的 Dynamo 软件包。
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### 浏览和查看软件包信息
 
@@ -79,7 +79,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 ### Dynamo Package Manager 网站
 
-了解 Dynamo 软件包的另一种方法是浏览 [Dynamo Package Manager](http://dynamopackages.com) 网站。在此处，可以查找软件包和作者排行榜的统计信息。还可以从 Dynamo Package Manager 下载软件包文件，但直接在 Dynamo 中进行下载是一个更无缝的过程。
+了解 Dynamo 软件包的另一种方法是浏览 [Dynamo Package Manager](http://dynamopackages.com) 网站。在此处，您可以找到软件包作者提供的软件包依赖项和主机/版本兼容性信息。还可以从 Dynamo Package Manager 下载软件包文件，但直接在 Dynamo 中进行下载是一个更无缝的过程。
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,53 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 默认情况下，软件包安装在与以下文件夹路径类似的位置：_C:/Users/[用户名]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
+
+### 在办公室中为软件包设置共享位置
+
+对于询问是否可以部署具有预附着软件包的 Dynamo（以任何形式）的用户：解决此问题并允许安装了 Dynamo 的所有用户在中心位置进行控制的方法是将自定义软件包路径添加到每个安装。
+
+**添加网络文件夹，以便 BIM 经理或其他人可以使用办公室批准的软件包监督文件夹的存放情况**  
+
+在单个应用程序的 UI 中，转到 *Dynamo -> 首选项 -> 软件包设置 -> 节点和软件包文件位置*。在对话框中，按“添加路径”按钮，然后浏览到共享软件包资源的网络位置。 
+ 
+作为一个自动化过程，它将涉及将信息添加到随 Dynamo 一起安装的配置文件：  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+默认情况下，Dynamo for Revit 的配置为：
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+添加自定义位置将如下所示：  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+也可以通过简单地将文件夹设为只读来控制此文件夹的集中管理。
+
+### 从网络位置加载包含二进制文件的软件包
+
+#### 场景
+
+组织可能希望标准化由不同工作站和用户安装的包。执行此操作的一种方法是从 *Dynamo -> 首选项 -> 软件包设置 -> 节点和软件包文件位置*安装这些软件包，选择网络文件夹作为安装位置，然后让工作站将该路径添加到 `Manage Node and Package Paths`。
+
+#### 问题
+
+虽然该方案适用于仅包含自定义节点的软件包，但它可能不适用于包含二进制文件的软件包，例如 Zero-Touch 节点。此问题是由[安全措施](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location)引起的，当程序集来自网络位置时，.NET Framework 会过度加载程序集。遗憾的是，使用链接线程中建议的 `loadFromRemoteSources` 配置元素对 Dynamo 来说不是一个可行的解决方案，因为它是作为组件而不是应用程序分发的。
+
+#### 解决方法
+
+一种可能的解决方法是使用指向网络位置的映射网络驱动器，并让工作站引用该路径。创建映射网络驱动器的步骤在[此处](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive)描述。
 
 ### 进一步了解软件包
 

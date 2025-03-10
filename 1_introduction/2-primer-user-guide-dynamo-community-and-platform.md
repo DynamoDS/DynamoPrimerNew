@@ -19,15 +19,13 @@
 
 * [参数化花瓶](../10\_sample\_workflow/10-1\_getting-started-workflows/1-parametric-vase.md)
 
-![](../10\_sample\_workflow/images/10-1/1/vase1\(3\).gif)
+![](images/1-2/vase1.gif)
 
 * [吸引器点](../10\_sample\_workflow/10-1\_getting-started-workflows/2-attractor-points.md)
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %}
-我们会介绍有关 Dynamo 的不同主题，因此可以在后面的章节中找到更多特定于主题的练习。**“练习”** 通常位于每个页面的最后一部分。
-{% endhint %}
+{% hint style="info" %}我们会介绍有关 Dynamo 的不同主题，因此可以在后面的章节中找到更多特定于主题的练习。**“练习”** 通常位于每个页面的最后一部分。{% endhint %}
 
 ### 社区
 

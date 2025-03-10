@@ -2,7 +2,7 @@
 
 Dynamo 的源代码托管在 GitHub 上，可供任何人克隆并参与修改。在这一章中，我们将漫游如何使用 git 克隆存储库、使用 Visual Studio 编译源文件、运行和调试本地构建，以及从 GitHub 中拉取任何新更改。
 
-#### 在 GitHub 上查找 Dynamo 存储库 <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### 在 GitHub 上查找 Dynamo 存储库 <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 GitHub 是一种基于 [Git](https://help.github.com/articles/git-and-github-learning-resources/) 的托管服务，它是一个版本控制系统，可用于跟踪更改并协调用户之间的工作。Git 是一种工具，我们可以利用它来下载 Dynamo 的源文件，并可以通过几条命令来保持更新这些源文件。通过使用此方法，将避免每次更新时下载和手动替换源文件这一不必要的固有混乱工作。Git 版本控制系统将跟踪本地和远程代码存储库之间的任何差异。
 
@@ -16,9 +16,9 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 > 3. Dynamo 的源文件
 > 4. Git 特定文件
 
-#### 使用 Git 拉取 Dynamo 存储库 <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### 使用 Git 拉取 Dynamo 存储库 <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-在可以克隆存储库之前，我们需要先安装 Git。请跟随此[简短手册](https://help.github.com/articles/set-up-git/#setting-up-git)来了解安装步骤，以及如何设置 gihub 用户名和电子邮件地址。在本例中，我们将在命令行中使用 Git。本手册假定您将使用的是 Windows，但也可以在 Mac 或 Linux 中使用 Git 来克隆 Dynamo 源代码。
+在可以克隆存储库之前，我们需要先安装 Git。请跟随此[简短手册](https://help.github.com/articles/set-up-git/#setting-up-git)来了解安装步骤，以及如何设置 GitHub 用户名和电子邮件地址。在本例中，我们将在命令行中使用 Git。本手册假定您将使用的是 Windows，但也可以在 Mac 或 Linux 中使用 Git 来克隆 Dynamo 源代码。
 
 我们需要一个 Dynamo 存储库的 URL，以通过其进行克隆。这可以在存储库页面上的“克隆或下载”按钮中找到。复制要粘贴到命令提示中的 URL。
 
@@ -47,7 +47,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 > 1. Dynamo 的源文件
 > 2. Git 文件
 
-#### 使用 Visual Studio 构建存储库 <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### 使用 Visual Studio 构建存储库 <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 在源文件现已克隆到我们的本地计算机后，我们可以为 Dynamo 构建可执行文件。为此，我们需要设置 Visual Studio IDE，并确保已安装 .NET Framework 和 DirectX。
 
@@ -84,7 +84,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 > 1. 选择 `Build > Build Solution`
 > 2. 在“输出”窗口中确认构建是否已成功，其内容应类似于 `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
-#### 运行本地构建 <a href="#running-a-local-build" id="running-a-local-build"></a>
+### 运行本地构建 <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 如果 Dynamo 构建成功，则会在 Dynamo 存储库中创建一个 `bin` 文件夹，其中包含 DynamoSandbox.exe 文件。在我们的案例中，我们使用“调试”选项进行构建，因此可执行文件位于 `bin\AnyCPU\Debug` 中。运行此文件会打开 Dynamo 的本地构建。
 
@@ -96,7 +96,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 有关为其他平台（例如，Linux 或 OS X）构建 Dynamo 的说明，请访问此 [Wiki 页面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac)。
 
-#### 使用 Visual Studio 调试本地构建 <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### 使用 Visual Studio 调试本地构建 <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
 调试是一个识别、隔离和更正错误或问题的过程。在从源代码成功构建 Dynamo 后，我们可以使用 Visual Studio 中的多款工具来调试正在运行的应用程序（例如，DynamoRevit 附加模块）。我们可以分析它的源代码来查找问题的根源，也可以观察当前正在执行的代码。有关如何在 Visual Studio 中调试和导览代码的更详细说明，请参见 [Visual Studio 文档](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger)。
 
@@ -137,7 +137,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 在下一节（**从源代码构建 DynamoRevit**）中，我们将漫游一个特定的调试示例，并说明如何设置断点、单步调试代码和读取调用堆栈。
 
-#### 拉取最新构建 <a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### 拉取最新构建 <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 由于 Dynamo 源代码托管在 GitHub 上，因此保持更新本地源文件的最简单方法是使用 Git 命令拉取更改。
 

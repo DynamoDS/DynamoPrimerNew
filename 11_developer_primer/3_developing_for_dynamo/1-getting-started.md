@@ -1,10 +1,10 @@
-# 快速入门 
+# 快速入门
 
 在开始开发之前，请务必为新项目打下坚实基础。Dynamo 开发人员社区中的多个项目模板是绝佳的起点，但了解如何从头开始构建项目更有价值。通过从头开始构建项目，将能够更深入地了解开发过程。
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### 创建 Visual Studio 项目 <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### 创建 Visual Studio 项目 <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio 是一个功能强大的 IDE，我们可以在其中创建项目、添加参照、构建 `.dlls` 和调试。在创建新项目时，Visual Studio 还会创建一个解决方案，即用于组织项目的结构。多个项目可以存在于一个解决方案中，并可以一起构建。要创建 ZeroTouch 节点，我们需要开始一个新的 Visual Studio 项目，我们将在该项目中编写一个 C# 类库并构建一个 `.dll`。
 
@@ -84,7 +84,7 @@ Visual Studio 将自动创建并打开一个 C# 文件。我们应为其指定�
 > 1. Dynamo 库中的 MyCustomNode。“库”类别由 `.dll` 名称确定。
 > 2. 画布上的 SampleFunctions.MultiplyByTwo。
 
-#### Dynamo 读取类和方法的方式 <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Dynamo 读取类和方法的方式 <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 在 Dynamo 载入 .dll 后，它会将所有公有静态方法显示为节点。构造函数、方法和特性将分别转换为 Create、Action 和 Query 节点。在我们的乘法示例中，`MultiplyByTwo()` 方法会在 Dynamo 中成为 Action 节点。这是因为节点已根据其方法和类进行命名。
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dynamo 已将我们的方法输入为 Create 节点
 
-#### 添加 Dynamo NuGet 软件包参照 <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### 添加 Dynamo NuGet 软件包参照 <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 乘法节点非常简单，不需要参照 Dynamo。例如，如果我们要访问 Dynamo 的任何功能来创建几何图形，则我们需要参照 Dynamo NuGet 软件包。
 

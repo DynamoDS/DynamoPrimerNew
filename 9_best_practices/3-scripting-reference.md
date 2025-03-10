@@ -31,9 +31,7 @@
    * 功能：Excel。
    * 如何输入：`import DSOffice`
 
-{% hint style="warning" %}
-*注意：通过 Python 或 C# 使用 **“ProtoGeometry”** 时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分：**“非托管对象”** 以了解详细信息。
-{% endhint %}
+{% hint style="warning" %} *注意：通过 Python 或 C# 使用**“ProtoGeometry”**时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分：**“非托管对象”**以了解详细信息。{% endhint %}
 
 ## 小心标记
 
@@ -274,11 +272,11 @@ toCoord = fromCoord.Rotate(solid.ContextCoordinateSystem.Origin,Vector.ByCoordin
 
 **非托管对象：**
 
-从创建的 Python 或 C# 几何图形对象使用 Dynamo 的几何图形库 _(ProtoGeometry)_ 时将不由虚拟机进行托管，并且将需要手动清理其中许多对象的内存。要清理本地对象或非托管对象，可以使用 **“Dispose”** 方法 或 **“using”** 关键字。请参见此 Wiki 条目以了解概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
+从创建的 Python 或 C# 几何图形对象使用 Dynamo 的几何图形库 _(ProtoGeometry)_ 时将不由虚拟机进行托管，并且将需要手动清理其中许多对象的内存。要清理本地对象或非托管对象，可以使用**“Dispose”**方法或**“using”**关键字。请参见此 Wiki 条目以了解概述：[https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement)。
 
-只需处理不返回到图形或存储对其参照的非托管资源。在本部分的其余部分中，我们将这些对象称为 _“中间几何图形”_。在下面的代码示例中，可以看到此类对象的示例。此 Zerotouch  C# 函数 **“singleCube”** 会返回单个立方体，但在其执行期间会额外创建 10000 个立方体。我们可以假定该其他几何图形用作一些中间构造几何图形。
+只需处理不返回到图形或存储对其参照的非托管资源。在本部分的其余部分中，我们将这些对象称为_“中间几何图形”_。在下面的代码示例中，可以看到此类对象的示例。此 Zerotouch C# 函数**“singleCube”**会返回单个立方体，但在其执行期间会额外创建 10000 个立方体。我们可以假定该其他几何图形用作一些中间构造几何图形。
 
-**此 Zerotouch 函数最有可能导致 Dynamo 崩溃。** 由于我们创建了 10000 个实体，但仅存储其中的一个，并仅返回该实体。我们应该改为处理所有中间立方体，但要返回的立方体除外。我们不希望对返回的内容进行处理，因为它将传播到图形中并由其他节点使用。
+**此 Zerotouch 函数最有可能导致 Dynamo 崩溃。**由于我们创建了 10000 个实体，但仅存储其中的一个，并仅返回该实体。我们应该改为处理所有中间立方体，但要返回的立方体除外。我们不希望对返回的内容进行处理，因为它将传播到图形中并由其他节点使用。
 
 ```
 public Cuboid singleCube(){

@@ -1,4 +1,4 @@
-# Zero-Touch 案例研究 - 网格节点 
+# Zero-Touch 案例研究 - 网格节点
 
 在 Visual Studio 项目启动并运行后，我们将介绍如何构建一个自定义节点来创建一个单元的矩形网格。尽管我们可以使用多个标准节点创建该矩形网格，但它是一个非常有用的工具，可轻松包含在 Zero-Touch 节点中。与网格线不同，单元可以围绕其中心点进行单元、查询其角顶点，或将其构建到面中。
 
@@ -6,7 +6,7 @@
 
 ![矩形网格图形](images/cover-image.jpg)
 
-#### 自定义矩形网格节点 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### 自定义矩形网格节点 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 要开始构建网格节点，请创建一个新的 Visual Studio 类库项目。有关如何设置项目的深入介绍，请参见“快速入门”页面。
 
@@ -96,7 +96,7 @@ namespace CustomNodes
 > 2. 画布上的自定义节点
 > 3. 用于将 `.dll` 添加到 Dynamo 中的“添加”按钮
 
-#### 自定义节点修改 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### 自定义节点修改 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 在上例中，我们创建了一个非常简单的节点，该节点未定义 `RectangularGrids` 方法之外的太多其他内容。但是，我们可能要为输入端口创建工具提示，或者像标准 Dynamo 节点一样为该节点提供摘要。将这些功能添加到自定义节点会使其更易于使用，尤其是当用户要在库中搜索这些节点时。
 

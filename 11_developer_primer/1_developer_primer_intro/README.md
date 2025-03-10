@@ -1,4 +1,4 @@
-# 开发人员入门手册 
+# 开发人员入门手册
 
 #### 本手册的目的是什么？<a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 

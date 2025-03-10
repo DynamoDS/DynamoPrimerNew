@@ -77,6 +77,32 @@
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
+### 什么是复制？
+
+想象一下你有一串葡萄。如果您想制作葡萄汁，您不会一颗一颗地榨葡萄——您会把它们一次全部放进榨汁机。Dynamo 中的数据同步工作方式类似：Dynamo 可以一次性将操作应用于整个列表，而不是一次将操作应用于一个条目。
+
+Dynamo 节点会自动识别何时使用列表，并在多个图元之间应用其操作。这意味着您不必手动遍历条目 - 它会自行发生。但是，当存在多个列表时，Dynamo 决定如何处理列表？
+
+主要有两种方法：
+
+#### 笛卡尔复制
+假设您在厨房里制作果汁。您有一个水果清单：`{apple, orange, pear}` 和每种果汁的固定量的水：`1 cup`。您想用每种水果制作果汁，用相同量的水。在这种情况下，笛卡尔复制开始发挥作用。
+
+在 Dynamo 中，这意味着将水果清单输入到 Juice.Maker 节点的水果输入，而水输入保持不变，为 1 杯。然后，该节点单独处理每个水果，将其与固定量的水混合。结果为：
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+每个水果都与相同数量的水配对。
+
+#### Zip 复制
+Zip 复制的工作方式略有不同。如果您有两个列表，一个用于水果：`{apple, orange, pear}`，另一个用于糖量：`{2 tbsp, 3 tbsp, 1 tbsp}`，Zip 复制将合并每个列表中的相应项目。例如：
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+每个水果都搭配其相应数量的糖。
+
+要更深入地了解其工作原理，请查看[复制和连缀手册](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1)。
+
 ## 练习
 
 > 单击下面的链接下载示例文件。

@@ -49,7 +49,7 @@ Dynamo 的用户界面 (UI) 分为五个主要区域。我们将在此简要介�
 Dynamo 工具栏包含一系列按钮，可快速处理文件以及访问“Undo [Ctrl + Z]”和“Redo [Ctrl + Y]”命令。最右侧是另一个按钮，它将输出工作空间快照，这对于文档编制和共享非常重要。
 
 * ![](images/userinterface-newfile.jpg) 新建 - 创建新的 .dyn 文件
-* ![](<images/userinterface-open(1) (1) (1).jpg>) 打开 - 打开现有 .dyn（工作空间）或 .dyf（自定义节点）文件
+* \![](<images/userinterface-open(1) (1) (1).jpg>) 打开 - 打开现有 .dyn（工作空间）或 .dyf（自定义节点）文件
 * ![](images/userinterface-save.jpg) 保存/另存为 - 保存活动的 .dyn 或 .dyf 文件
 * ![](images/userinterface-undo.jpg) 撤消 - 撤消上一个操作
 * ![](images/userinterface-redo.jpg) 重做 - 重做下一个操作

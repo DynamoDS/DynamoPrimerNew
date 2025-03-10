@@ -20,7 +20,7 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 完成安装后，自定义节点应位于“附加模块”>“DynamoPrimer”部分下。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 现在，软件包已完成安装，我们来介绍其设置方式。
 
@@ -30,7 +30,7 @@ Dynamo 提供了多种方法来创建软件包，以供个人使用或与 Dynamo
 
 这是一个包含五个自定义节点的简单软件包。在下面的步骤中，我们将简要介绍每个自定义节点的设置。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 

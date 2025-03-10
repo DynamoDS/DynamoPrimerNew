@@ -18,9 +18,7 @@ UI 中的 Revit 库提供了“选择”类别，该类别允许通过多种方�
 
 还记得生物学的分类法吗？界、门类、类别、等级、族、属、种？Revit 图元以类似方式分类。在基本级别上，Revit 层次结构可以分解为“类别”、“族”、“类型*”和“实例”。实例是一个模型图元（具有唯一 ID），而类别则定义常规组（如“墙”或“楼板”）。通过这种方式组织 Revit 数据库，我们可以选择一个图元，并根据层次结构中的指定级别选择所有相似图元。
 
-{% hint style="warning" %}
- *Revit 中的类型定义与编程中的类型不同。在 Revit 中，类型是指层次结构的分支，而不是“数据类型”。
-{% endhint %}
+{% hint style="warning" %} *Revit 中的类型定义与编程中的类型不同。在 Revit 中，类型是指层次结构的分支，而不是“数据类型”。{% endhint %}
 
 ### 使用 Dynamo 节点进行数据库导航
 
@@ -32,7 +30,7 @@ _“点击”_ 是直接选择 Revit 图元的最简单方法。可以选择完�
 
 _“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。可以使用此选项来参照在视图中不一定可见的 Revit 图元。这是一款优秀的工具，可用于查询现有图元或者在 Revit 项目或族编辑器中创建新图元。
 
-![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 还可以在 _Revit 层次结构_ 中按特定层级选择 Revit 图元。这是一个功能强大的选项，可用于自定义大型数据阵列，以准备文档或衍生式实例化和自定义。
 
@@ -50,7 +48,7 @@ _“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。�
 
 在此 Revit 文件示例中，我们有三种图元类型的简单建筑。我们将以此为例，在 Revit 层次结构的上下文中选择 Revit 图元。
 
-![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. 建筑体量
 > 2. 梁（结构框架）
@@ -83,7 +81,7 @@ _“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。�
 
 使用一些基本列表操作，我们可以查询关注的面。
 
-![](<images/2/selecting - exercise 05.jpg>)
+\![](images/2/selecting - exercise 05.jpg)
 
 > 1. 首先，将之前选定的图元输出到“Element.Faces”节点。
 > 2. 接着，_“List.Count”_ 节点会显示我们正在处理体量中的 23 个曲面。
@@ -151,6 +149,4 @@ Revit/Dynamo 工作流中可能经常遇到的问题：如何选择一个图元�
 > 2. 将 _“All Elements of Family Type”_ （所有族类型的图元）节点连接到 _“AdaptiveComponent.Location”_ 节点。这样，我们就得到了一个包含列表的列表，每个列表都有三个点，这三个点代表自适应点的位置。
 > 3. 连接 _“Polygon.ByPoints”_ 节点会返回一条复合线。我们可以在 Dynamo 视口中看到这一结果。通过此方法，我们已可视化了一个图元的几何图形，并对其余图元阵列的几何图形进行了抽象处理（其数量可能大于本示例）。
 
-{% hint style="info" %}
-提示：如果在 Dynamo 中单击 Revit 图元的绿色数字，则 Revit 视口将缩放到该图元。
-{% endhint %}
+{% hint style="info" %}提示：如果在 Dynamo 中单击 Revit 图元的绿色数字，则 Revit 视口将缩放到该图元。{% endhint %}

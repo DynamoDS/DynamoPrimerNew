@@ -124,12 +124,12 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist03.jpg)
 
 > 1. 按照与上一练习相同的方式，使用以下两行代码定义 **“代码块”**：`0..1..#20;` `0..1..#20;`
-> 2. 将这些输出连接到两个 **“Surface.PointAtParameter”** 节点，每个节点的连缀设置为 _“叉积”_。其中一个节点连接到原始曲面，而另一个节点连接到偏移曲面。
+> 2. 将这些输出连接到两个**“Surface.PointAtParameter”**节点，每个节点的连缀设置为_“叉积”_。其中一个节点连接到原始曲面，而另一个节点连接到偏移曲面。
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist04.jpg)
 
 > 1. 与上一练习中一样，将输出连接到两个 **“NurbsCurve.ByPoints”** 节点。
-> 2. 查看 **“NurbsCurve.ByPoints”** 的输出，注意到这是一列两个列表，比上一练习更复杂。数据按基础曲面分类，因此我们为结构化数据添加了另一个层级。
+> 2. 查看**“NurbsCurve.ByPoints”**的输出，注意到这是一列两个列表，比上一练习更复杂。数据按基础曲面分类，因此我们为结构化数据添加了另一个层级。
 > 3. 请注意，**“Surface.PointAtParameter”** 节点中的对象变得更加复杂。在本例中，我们会看到一列列表。
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist05.jpg)
@@ -177,7 +177,7 @@ n 维列表很难用直观的方式进行解释，但是我们在本章中设置
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
-> 1. 由于我们的层次结构中还有一层级，因此我们需要将 **“List.Map”** 与 **“List.Tranpose”** 函数一起使用来更改 NURBS 曲线的方向。
+> 1. 由于我们的层次结构中还有一层级，因此我们需要将**“List.Map”**与**“List.Tranpose”**函数一起使用来更改 NURBS 曲线的方向。
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 

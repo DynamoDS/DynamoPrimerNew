@@ -22,9 +22,7 @@ Dynamo 中的大多数节点由五个部分组成。虽然存在例外（如输�
 
 端口希望接收特定类型的数据。例如，将数字（如 _2.75_）连接到“Point By Coordinates”（坐标点）节点上的端口将成功创建点；但是，如果我们向同一端口提供 _“Red”_ ，则会导致错误。
 
-{% hint style="info" %}
-提示：将光标悬停在端口上，可查看包含预期数据类型的工具提示。
-{% endhint %}
+{% hint style="info" %}提示：将光标悬停在端口上，可查看包含预期数据类型的工具提示。{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -55,9 +53,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 如果可视化程序包含警告或错误，Dynamo 将提供有关该问题的其他信息。任何黄色节点在名称上方也会有工具提示。将鼠标光标悬停在警告 ![](images/nodesandwires-nodewarningicon.png) 或错误 ![](images/nodesandwires-nodeerroricon.png) 工具提示图标上可将其展开。
 
-{% hint style="info" %}
-提示：掌握此工具提示信息后，检查上游节点以查看所需的数据类型或数据结构是否出错。
-{% endhint %}
+{% hint style="info" %}提示：掌握此工具提示信息后，检查上游节点以查看所需的数据类型或数据结构是否出错。{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
@@ -101,7 +97,7 @@ Dynamo 通过基于每个节点的状态使用不同颜色方案渲染节点，�
 
 * 要更改到输入端口的连接，请在另一个输入端口上单击鼠标左键
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * 要删除导线，请将导线移离，然后在工作空间上单击鼠标左键
 

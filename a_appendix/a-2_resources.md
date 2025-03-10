@@ -68,7 +68,7 @@ MathWorld 是一个在线数学资源，由 Eric W. Weisstein 组建，并由数
 
 ### **Revit Python Shell**
 
-“RevitPythonShell 向 Autodesk Revit 和 Vasari 添加了 IronPython 解释器。” 此项目早于 Dynamo，是用于 Python 开发的一个很好参考。RPS 项目：
+“RevitPythonShell 向 Autodesk Revit 和 Vasari 添加了 IronPython 解释器。”此项目早于 Dynamo，是用于 Python 开发的一个很好参考。RPS 项目：
 
 https://github.com/architecture-building-systems/revitpythonshell
 

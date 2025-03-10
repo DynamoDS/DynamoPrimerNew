@@ -6,11 +6,11 @@
 
 > 三种开发环境：Visual Studio、Python 编辑器和代码块 DesignScript
 
-#### 我有哪些选项？<a href="#what-are-my-options" id="what-are-my-options"></a>
+### 我有哪些选项？<a href="#what-are-my-options" id="what-are-my-options"></a>
 
 Dynamo 的开发选项主要分为两类：_for_（面向）Dynamo 与 _in_（使用）Dynamo。可以将这两个类别视为如下所述：“in”Dynamo 表示使用 Dynamo IDE 创建要在 Dynamo 中使用的内容，而“for”Dynamo 表示使用外部工具创建要输入到 Dynamo 中以供使用的内容。尽管本手册重点介绍 _for_ Dynamo 开发，但下面介绍了适用于所有过程的资源。
 
-#### For（面向）Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
+### For（面向）Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
 这些节点允许最高程度的自定义。许多软件包都是使用此方法构建的，它对于参与 Dynamo 的源代码而言必不可少。本手册将介绍构建这些软件包的过程。
 
@@ -26,7 +26,7 @@ Dynamo 的开发选项主要分为两类：_for_（面向）Dynamo 与 _in_（�
 
 > 我们将要开发的项目的 Visual Studio 界面
 
-#### In（使用）Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
+### In（使用）Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
 尽管这些过程存在于可视化编程工作空间中并且相对简单，但它们都是用于自定义 Dynamo 的可行选项。本 Primer 涵盖了这些内容，并在[脚本编写策略](../../9\_best\_practices/2-scripting-strategies.md)一章中提供了脚本编写技巧和最佳实践。
 
@@ -46,7 +46,7 @@ Dynamo 的开发选项主要分为两类：_for_（面向）Dynamo 与 _in_（�
 
 > 在 Dynamo 工作空间中使用 Python 节点开发
 
-#### 每种方法有哪些优点/缺点？<a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### 每种方法有哪些优点/缺点？<a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
 Dynamo 的开发选项旨在解决自定义需求的复杂性。无论目标是在 Python 中编写递归脚本还是构建完全自定义的节点 UI，都有一些选项可用于实现仅涉及启动和运行所需内容的代码。
 
@@ -87,7 +87,7 @@ Dynamo 的开发选项旨在解决自定义需求的复杂性。无论目标是�
 * 自定义连缀
 * 作为软件包载入到 Dynamo 中
 
-#### 了解 Dynamo 版本控制和 API 更改 (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### 了解 Dynamo 版本控制和 API 更改 (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 由于 Dynamo 会定期更新，因此可能会对软件包使用的 API 的一部分进行更改。跟踪这些更改对于确保现有软件包继续正常工作而言非常重要。
 
@@ -101,8 +101,13 @@ Dynamo 的 API 文档目前涵盖了核心功能：[http://dynamods.github.io/Dy
 
 ![API 文档](images/api-docs.jpg)
 
-#### 在软件包中分发二进制文件的权限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
+### 在软件包中分发二进制文件的权限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
 请注意，.dll 包含在要上传到软件包管理器的软件包中。如果软件包作者未创建 .dll，则他们必须有权共享它。
 
 如果软件包包含二进制文件，则在下载时必须提示用户该软件包包含二进制文件。
+
+### Dynamo UI 性能注意事项
+在撰写本文时，Dynamo 主要使用 WPF（Windows 演示基础）来呈现其 UI。WPF 是一个复杂而强大的基于 xaml/绑定的系统。由于 Dynamo 具有复杂的 UI，因此很容易造成 UI 挂起、内存泄漏，或者以降低性能的方式将图形执行和 UI 更新包装在一起。
+
+请参考 [Dynamo 性能注意事项 Wiki 页面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance)，该页面将帮助您避免在更改 Dynamo 代码时遇到的一些常见陷阱。

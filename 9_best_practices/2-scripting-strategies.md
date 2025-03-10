@@ -23,9 +23,7 @@
 | **Python**         | 是         | 是           | 部分          | 是                | 否            |
 | **ZeroTouch (C#)** | 否          | 否            | 否                 | 是                | 否            |
 
-{% hint style="info" %}
-有关每个 Dynamo 库所提供访问内容的列表，请参见[脚本编写参考](3-scripting-reference.md)。
-{% endhint %}
+{% hint style="info" %}有关每个 Dynamo 库所提供访问内容的列表，请参见[脚本编写参考](3-scripting-reference.md)。{% endhint %}
 
 ### 以参数化方式考虑
 
@@ -65,9 +63,7 @@
 > 2. 脚本内部变量。
 > 3. 使用这些输入和变量执行其函数的循环。
 
-{% hint style="info" %}
-提示：像重视解决方案一样重视过程。
-{% endhint %}
+{% hint style="info" %}提示：像重视解决方案一样重视过程。{% endhint %}
 
 ### **不要自我重复（DRY 原则）：**
 
@@ -94,9 +90,7 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}
-提示：在脚本中复制实体（如上例中的常量）之前，请先问问自己是否可以改为链接到源。
-{% endhint %}
+{% hint style="info" %}提示：在脚本中复制实体（如上例中的常量）之前，请先问问自己是否可以改为链接到源。{% endhint %}
 
 ### 结构模块化
 
@@ -201,9 +195,7 @@ for i in range(count):
 * 有时，暴露脚本的一些潜在问题的 Bug 和错误仅在这些边缘情况下才会出现。
   * 了解导致出现错误的原因，然后确定是需要进行内部修复还是需要重新定义参数域，来避免出现该问题。
 
-{% hint style="info" %}
-提示：始终假定用户将使用已呈现给他/她的每个输入值的每种组合。这将有助于消除意外情况。
-{% endhint %}
+{% hint style="info" %}提示：始终假定用户将使用已呈现给他/她的每个输入值的每种组合。这将有助于消除意外情况。{% endhint %}
 
 ### 高效调试
 

@@ -65,7 +65,7 @@
 * 使用 List@Level，可以**通过替换 List.Map 和 List.Combine 节点降低图形的复杂性**，这可能会占用大量画布空间
 * List@Level 通过允许从节点的输入端口访问列表中任何级别的数据，从而为您提供了一种**快于 List.Map/List.Combine 的方法来构建节点逻辑**
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > 我们可以通过为 CountTrue 的“列表”输入激活 List@Level，来验证 BoundingBox.Contains 返回的 True 值数以及具体列表。List@Level 允许用户确定输入从哪个级别获取数据。与其他涉及 List.Map 和 List.Combine 的方法相比，使用 List@Level 灵活、高效并且强烈建议采用。
 >
@@ -84,7 +84,7 @@
 * 如果其他人将要使用您的图形，则应**确保“节点-线”布局在发布之前轻松流动**
 * 为了帮助您进行对齐，请**使用“清理节点布局”功能自动对齐**您的图形，尽管不如您自己做的精确
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. 未组织的图形
 > 2. 对齐的图形

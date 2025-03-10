@@ -1,4 +1,4 @@
-# 发布软件包 
+# 发布软件包
 
 ### 发布软件包 <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -63,8 +63,55 @@ Dynamo Package Manager 是一个软件注册表（类似于 npm），可以从 D
 
 #### 软件包管理器 Web 客户端 <a href="#package-manager-web-client" id="package-manager-web-client"></a>
 
-软件包管理器 Web 客户端专用于搜索和查看软件包数据，例如版本控制和下载统计信息。
+软件包管理器 Web 客户端允许用户搜索和查看软件包数据，包括版本控制、下载统计信息和其他相关信息。此外，软件包作者可以直接通过 Web 客户端登录以更新其软件包详细信息，例如兼容性信息。
+
+有关这些功能的详细信息，请参阅此处的博客帖子：[https://dynamobim.org/discover-the-new-dynamo-package-management-experience/](https://dynamobim.org/discover-the-new-dynamo-package-management-experience/)。
 
 可以通过以下链接访问软件包管理器 Web 客户端：[https://dynamopackages.com/](https://dynamopackages.com)
 
 ![软件包管理器 Web 客户端](images/packagemanager-browser.jpg)
+
+##### 更新软件包详细信息
+
+作者可以按照以下步骤编辑其软件包说明、网站链接和存储库链接：  
+
+> 1. 在**“我的软件包”**下，选择软件包，然后单击**“编辑软件包详细信息”**。  
+> 2. 使用各自的字段添加或修改**网站**和**存储库**链接。  
+> 3. 根据需要更新**“软件包说明”**。  
+> 4. 单击**“保存更改”**以应用更新。  
+
+ **注意**：由于服务器更新需要一些时间，因此更新可能需要长达 15 分钟才能在 Dynamo 内的软件包管理器中刷新。正在努力减少这种延误。  
+
+ ![用于更新已发布软件包的软件包详细信息的新 UI](images/Package-Manager_Image_5.png)
+
+##### 编辑已发布软件包版本的兼容性信息  
+
+兼容性信息可以针对以前发布的软件包版本进行追溯更新。请遵循下列步骤：  
+
+![编辑已发布软件包的兼容性信息 - 第 1 步](images/Package-Manager_Image_6.png)
+
+**第 1 步：**  
+
+1. 单击要更新的软件包版本。  
+2. **依赖于**列表将自动填充您的软件包所依赖的软件包。  
+3. 单击**“兼容性”**旁边的铅笔图标以打开**“编辑兼容性信息”**工作流。  
+
+**第 2 步：**  
+
+请按照流程图并参考下表，帮助您了解哪个选项最适合您的软件包。
+
+![为“编辑兼容性信息”工作流选择哪个选项](images/Package-Manager_Image_7.png)
+
+让我们使用一些示例来演练一些方案：
+
+**示例软件包 # 1** \- Civil 连接：此软件包与 Revit 和 Civil 3D 都有 API 依存关系，并且不包括核心节点的集合（例如：几何函数、数学函数和/或列表管理）。因此，在这种情况下，理想的选择是使用选项 1。该软件包在 Revit 和 Civil 3D 中将显示为兼容，与版本范围和/或单个版本列表匹配。
+
+**示例软件包 # 2** \- Rhythm：此软件包是 Revit 特定节点以及核心节点的集合。在这种情况下，软件包具有主机依存关系。但还包括将在 Dynamo Core 中工作的核心节点。因此，在这种情况下，理想的选择是选项 2。该软件包在与版本范围和/或单个版本列表匹配的 Revit 和 Dynamo Core（也称为 Dynamo Sandbox）环境中将显示为“兼容”。
+
+**示例软件包 # 3** \- Mesh Toolkit：此软件包是 Dynamo Core 软件包，它是不依赖于主机的几何图形节点的集合。因此，在这种情况下，理想的选择是选项 3。该软件包在 Dynamo 和所有与版本范围和/或单个版本列表匹配的主机环境中将显示为“兼容”。
+
+![编辑兼容性信息选项](images/Package-Manager_Image_8.png)
+
+根据选定的选项，将弹出 Dynamo 和/或主机特定字段，如下图所示。
+
+![编辑兼容性信息 - 第 2 步](images/Package-Manager_Image_9.png)

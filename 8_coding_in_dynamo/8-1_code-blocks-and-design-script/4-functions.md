@@ -61,7 +61,7 @@ FunctionName(in1,in2);
 
 ![](../images/8-1/4/functions-exercise-03.jpg)
 
-> 1. 通过添加到 **“代码块”** 函数，我们放置注释和 _“sphereRadius”_ 变量（该变量会查询每个点的 _“Z”_ 位置）。请记住，_“inputPt.Z”_ 不需要圆括号以用作方法。这是对现有图元特性的 _“查询”_，因此不需要输入：
+> 1. 通过添加到 **“代码块”** 函数，我们放置注释和 _“sphereRadius”_ 变量（该变量会查询每个点的 _“Z”_ 位置）。请记住，_“inputPt.Z”_不需要圆括号用作方法。这是对现有图元特性的_“查询”_，因此不需要输入：
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)

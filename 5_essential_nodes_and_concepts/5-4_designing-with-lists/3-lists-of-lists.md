@@ -111,7 +111,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 > 3. 将代码块的每行连接到 **“Point.ByCoordinates”** 节点的相应 _“X”_ 和 _“Y”_ 输入。在节点上单击鼠标右键，选择“连缀”，然后选择 _“叉积”_。这将创建点栅格。因为我们定义的范围是 -50 到 50，所以我们跨越了默认的 Dynamo 栅格。
 > 4. _**“Watch”**_ 节点显示所创建的点。请注意数据结构。我们已创建一列列表。每个列表都表示栅格的一行点。
 
-![练习](<../images/5-4/3/lists of lists - map 02.jpg>)
+\![练习](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. 将上一步中的 **“List.Count”** 节点附加到“Watch”节点的输出。
 > 2. 将 **“Watch”** 节点连接到 **“List.Count”** 输出。
@@ -139,7 +139,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 > 1. 使用 **“Sequence”** 节点生成 10 个值，每个值都有 10 步增量。
 > 2. 将结果连接到 **“Point.ByCoordinates”** 节点的 x 输入。这将在 Dynamo 中创建点列表。
-> 3. 将第二个 **“Point.ByCoordinates”** 节点添加到工作空间、使用相同的 **“Sequence”** 输出作为其 x 输入，但使用 **“Interger Slider”** 作为其 y 输入并将其值设置为 31（它可以是任何值，只要它们不与第一组点重叠），这样 2 组点就不会相互重叠。
+> 3. 将第二个**“Point.ByCoordinates”**节点添加到工作空间、使用相同的**“Sequence”**输出作为其 x 输入，但使用**“Interger Slider”**作为其 y 输入并将其值设置为 31（它可以是任何值，只要它们不与第一组点重叠），这样 2 组点就不会相互重叠。
 
 接下来，我们将使用 **“List.Combine”** 对 2 个单独列表中的对象应用函数。在本例中，它将是一个简单的绘制线函数。
 
@@ -150,9 +150,7 @@ _注意：此练习是使用 Dynamo 的先前版本创建的。通过添加_**�
 
 完成后，通过 **“Line.ByStartPointEndPoint”** 函数将 2 组点压缩/成对组合在一起，并在 Dynamo 中返回 10 行。
 
-{% hint style="info" %}
-请参见 n 维列表中的练习，以查看使用“List.Combine”的另一个示例。
-{% endhint %}
+{% hint style="info" %}请参见 n 维列表中的练习，以查看使用“List.Combine”的另一个示例。{% endhint %}
 
 ### List@Level
 
