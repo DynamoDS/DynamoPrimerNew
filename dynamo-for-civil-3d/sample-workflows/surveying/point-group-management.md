@@ -16,9 +16,7 @@ Civil 3D에서 COGO 점 및 점 그룹으로 작업하는 것은 많은 필드-�
 
 ## 버전 호환성
 
-{% hint style="success" %}
- 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. 
-{% endhint %}
+{% hint style="success" %} 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. {% endhint %}
 
 ## 데이터세트
 
@@ -28,7 +26,7 @@ Civil 3D에서 COGO 점 및 점 그룹으로 작업하는 것은 많은 필드-�
 
 {% file src="../../../.gitbook/assets/Survey_CreatePointGroups.dwg" %}
 
-## 해결책
+## 해결 방법
 
 이 그래프의 논리에 대한 개요는 다음과 같습니다.
 
@@ -43,9 +41,7 @@ Civil 3D에서 COGO 점 및 점 그룹으로 작업하는 것은 많은 필드-�
 
 첫 번째 단계는 문서의 모든 점 그룹을 가져온 다음 각 그룹 내의 모든 COGO 점을 가져오는 것입니다. 그러면 _내포된 리스트_ 또는 "리스트의 리스트"가 생성되며, **List.Flatten** 노드를 사용하여 모든 것을 단일 리스트로 단순화하면 나중에 작업하기가 더 쉬워집니다.
 
-{% hint style="info" %}
- 리스트 작업을 처음 해보는 경우 [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} 리스트 작업을 처음 해보는 경우 [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>모든 점 그룹 및 COGO 점 가져오기 </p></figcaption></figure>
 
@@ -73,9 +69,7 @@ Civil 3D에서 COGO 점 및 점 그룹으로 작업하는 것은 많은 필드-�
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Dynamo 플레이어를 사용하여 그래프를 실행하고 도구공간에서 결과 확인</p></figcaption></figure>
 
-{% hint style="info" %}
- Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 > :tada: 작업을 완료했습니다!
 
@@ -83,14 +77,8 @@ Civil 3D에서 COGO 점 및 점 그룹으로 작업하는 것은 많은 필드-�
 
 다음은 이 그래프의 기능을 확장하는 방법에 대한 몇 가지 아이디어입니다.
 
-{% hint style="info" %}
- 초기 정보 대신 ** 전체 설명**을 기반으로 점 그룹을 수정합니다. 
-{% endhint %}
+{% hint style="info" %} 초기 정보 대신 ** 전체 설명**을 기반으로 점 그룹을 수정합니다. {% endhint %}
 
-{% hint style="info" %}
- 선택한 몇 가지 다른 **사전 정의된 카테고리**(예: "Ground shots", "Monuments" 등)로 점을 그룹화합니다. 
-{% endhint %}
+{% hint style="info" %} 선택한 몇 가지 다른 **사전 정의된 카테고리**(예: "Ground shots", "Monuments" 등)로 점을 그룹화합니다. {% endhint %}
 
-{% hint style="info" %}
- 특정 그룹의 점에 대한 TIN 지표면을 자동으로 작성합니다. 
-{% endhint %}
+{% hint style="info" %} 특정 그룹의 점에 대한 TIN 지표면을 자동으로 작성합니다. {% endhint %}

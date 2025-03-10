@@ -1,4 +1,4 @@
-# 패키지로 제공되는 확장 
+# 패키지로 제공되는 확장
 
 ### 패키지로 제공되는 확장 <a href="#extensions-as-packages" id="extensions-as-packages"></a>
 
@@ -20,7 +20,7 @@ C:\Users\User\AppData\Roaming\Dynamo\Dynamo Core\2.1\packages\Sample View Extens
         SampleViewExtension_ViewExtensionDefinition.xml
 ```
 
-확장을 이미 빌드했다고 가정하면 최소한 .NET 어셈블리와 매니페스트 파일이 있어야 합니다. 어셈블리에는 `IViewExtension` 또는 `IExtension`을 구현하는 클래스가 포함되어 있어야 합니다. 매니페스트 .XML 파일은 확장을 실행하기 위해 인스턴스화해야 하는 클래스를 Dynamo에 알려줍니다. 패키지 관리자가 확장을 올바르게 찾으려면 매니페스트 파일이 어셈블리 위치 및 이름과 정확하게 일치해야 합니다.
+확장을 이미 빌드했다고 가정하면 최소한 .NET 조립품과 매니페스트 파일이 있어야 합니다. 어셈블리에는 `IViewExtension` 또는 `IExtension`을 구현하는 클래스가 포함되어 있어야 합니다. 매니페스트 .XML 파일은 확장을 실행하기 위해 인스턴스화해야 하는 클래스를 Dynamo에 알려줍니다. 패키지 관리자가 확장을 올바르게 찾으려면 매니페스트 파일이 어셈블리 위치 및 이름과 정확하게 일치해야 합니다.
 
 어셈블리 파일은 `bin` 폴더에 배치하고 매니페스트 파일은 `extra` 폴더에 배치합니다. 이 폴더에 추가 자산을 배치해도 됩니다.
 

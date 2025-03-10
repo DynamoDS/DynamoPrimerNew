@@ -4,7 +4,7 @@
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Visual Studio 프로젝트 생성하기 <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Visual Studio 프로젝트 생성하기 <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio는 프로젝트를 생성하고, 참조를 추가하고, `.dlls`를 빌드하고, 디버깅할 수 있는 강력한 IDE입니다. Visual Studio에서 새 프로젝트를 생성하면 프로젝트를 구성하기 위한 구조인 솔루션도 생성됩니다. 하나의 솔루션 내에 여러 프로젝트가 존재할 수 있으며 여러 프로젝트를 함께 구축할 수 있습니다. ZeroTouch 노드를 만들려면 C# 클래스 라이브러리를 작성하고 `.dll`을 빌드할 새 Visual Studio 프로젝트를 시작해야 합니다.
 
@@ -84,7 +84,7 @@ Visual Studio에서 자동으로 C# 파일을 생성하고 엽니다. 적절한 
 > 1. Dynamo 라이브러리의 MyCustomNode. 라이브러리 범주는 `.dll` 이름에 따라 결정됩니다.
 > 2. 캔버스의 SampleFunctions.MultiplyByTwo
 
-#### Dynamo에서 클래스 및 메서드를 읽는 방법 <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Dynamo에서 클래스 및 메서드를 읽는 방법 <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Dynamo에서 .dll을 로드하면 모든 공용 정적 메서드가 노드로 노출됩니다. 생성자, 메서드 및 특성은 각각 Create, Action 및 Query 노드로 변환됩니다. 곱하기 예제에서 `MultiplyByTwo()` 메서드는 Dynamo의 Action 노드가 됩니다. 그 이유는 노드의 이름이 메서드 및 클래스를 기반으로 지정되었기 때문입니다.
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dynamo에서 Create 노드로 메서드를 가져왔습니다.
 
-#### Dynamo NuGet 패키지 참조 추가하기 <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Dynamo NuGet 패키지 참조 추가하기 <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 곱하기 노드는 매우 간단하므로 Dynamo에 대한 참조가 필요하지 않습니다. 예를 들어 형상을 작성하기 위해 Dynamo의 기능에 액세스하려면 Dynamo NuGet 패키지를 참조해야 합니다.
 

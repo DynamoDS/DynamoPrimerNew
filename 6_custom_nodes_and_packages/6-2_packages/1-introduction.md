@@ -67,7 +67,7 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 
 파일을 열고 솔버에서 "실행"을 누르면 펼쳐진 구가 표시됩니다. 이와 같은 예제 파일은 새 Dynamo 패키지를 사용하는 방법을 배우는 데 유용합니다.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### 패키지 정보 찾아보기 및 보기
 
@@ -79,7 +79,7 @@ Package Manager에서 패키지 검색 탭의 정렬 및 필터링 옵션을 사
 
 ### Dynamo Package Manager 웹사이트
 
-Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://dynamopackages.com) 웹사이트를 탐색하는 것입니다. 여기에서 패키지에 대한 통계를 찾고 순위표를 작성할 수 있습니다. 패키지 파일은 Dynamo Package Manager에서 다운로드할 수도 있지만, 보다 원활한 프로세스는 Dynamo에서 바로 다운로드하는 것입니다.
+Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://dynamopackages.com) 웹사이트를 탐색하는 것입니다. 여기에서는 패키지 의존성 및 패키지 작성자가 제공한 호스트/버전 호환성 정보를 확인할 수 있습니다. 패키지 파일은 Dynamo Package Manager에서 다운로드할 수도 있지만, 보다 원활한 프로세스는 Dynamo에서 바로 다운로드하는 것입니다.
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,53 @@ Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 기본적으로 패키지는 _C:/Users/[사용자 이름]/AppData/Roaming/Dynamo/[Dynamo 버전]_ 폴더 경로와 비슷한 위치에 설치됩니다.
+
+### 사무실에서 패키지를 위한 공유 위치 설정
+
+패키지가 미리 첨부된 상태로 Dynamo를 배포할 수 있는지 묻는 사용자를 위한 참고 사항: 이 문제를 해결하고 Dynamo를 설치한 모든 사용자가 중앙 위치에서 제어할 수 있도록 하는 접근 방식은 각 설치에 사용자 지정 패키지 경로를 추가하는 것입니다.
+
+**BIM 관리자 또는 다른 사람이 사무실 승인 패키지가 있는 폴더의 재고를 감독할 수 있는 네트워크 폴더를 추가합니다**  
+
+개별 응용프로그램의 UI에서 *Dynamo -> 기본 설정 -> 패키지 설정 -> 노드 및 패키지 파일 위치*로 이동합니다. 대화상자에서 "경로 추가" 버튼을 누르고 공유 패키지 리소스의 네트워크 위치를 탐색합니다. 
+ 
+자동화된 프로세스로, Dynamo와 함께 설치된 구성 파일에 정보를 추가하는 작업이 포함됩니다.  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+기본적으로 Dynamo for Revit의 구성은 다음과 같습니다.
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+사용자 지정 위치를 추가하는 방법은 다음과 같습니다.  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+이 폴더에 대한 중앙 관리도 폴더를 읽기 전용으로 설정하여 제어할 수 있습니다.
+
+### 네트워크 위치에서 바이너리를 포함한 패키지 로드
+
+#### 시나리오
+
+조직에서 서로 다른 워크스테이션 및 사용자가 설치한 패키지를 표준화하려고 할 수 있습니다. 이 작업을 수행하는 한 가지 방법은 *Dynamo -> 기본 설정 -> 패키지 설정 -> 노드 및 패키지 파일 위치*에서 이러한 패키지를 설치하고 설치 위치로 네트워크 폴더를 선택한 다음 워크스테이션이 해당 경로를 `Manage Node and Package Paths`에 추가하도록 하는 것입니다.
+
+#### 문제
+
+이 시나리오는 사용자 정의 노드만 포함된 패키지에 대해서는 제대로 작동하지만 Zerp Touch 노드와 같이 바이너리가 포함된 패키지에 대해서는 작동하지 않을 수 있습니다. 이 문제는 .NET Framework가 네트워크 위치에서 오는 어셈블리 로드를 제한하는 [보안 조치](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location)로 인해 발생합니다. 불행히도, 링크된 스레드에서 제안된 `loadFromRemoteSources` 구성 요소를 사용하는 것은 Dynamo에서는 적용할 수 없는 해결 방법입니다. 그 이유는 Dynamo가 응용프로그램이 아니라 구성 요소로 배포되기 때문입니다.
+
+#### 해결 방법
+
+한 가지 가능한 해결 방법은 네트워크 위치를 가리키는 매핑된 네트워크 드라이브를 사용하고 워크스테이션이 해당 경로를 대신 참조하도록 하는 것입니다. 매핑된 네트워크 드라이브를 생성하는 단계는 [여기](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive)에 설명되어 있습니다.
 
 ### 패키지에 대해 좀 더 자세히 알아보기
 

@@ -2,9 +2,7 @@
 
 Dynamo 패키지는 Dynamo의 핵심 기능을 확장하기 위해 타사에서 개발한 도구 세트입니다. 누구나 액세스할 수 있으며 한 번의 버튼 클릭으로 다운로드할 수 있습니다.
 
-{% hint style="info" %}
- 패키지를 시작하는 방법에 대한 자세한 내용은 [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} 패키지를 시작하는 방법에 대한 자세한 내용은 [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") 섹션을 참조하십시오. {% endhint %}
 
 다음은 Dynamo for Civil 3D 그래프를 한 단계 높은 수준으로 끌어올릴 수 있는 가장 인기 있는 패키지 리스트입니다.
 

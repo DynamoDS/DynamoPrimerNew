@@ -17,9 +17,7 @@
 
 ## 버전 호환성
 
-{% hint style="success" %}
- 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. 
-{% endhint %}
+{% hint style="success" %} 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. {% endhint %}
 
 ## 데이터세트
 
@@ -29,7 +27,7 @@
 
 {% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dwg" %}
 
-## 해결책
+## 해결 방법
 
 이 그래프의 논리에 대한 개요는 다음과 같습니다.
 
@@ -51,17 +49,13 @@
 
 이제 지정된 시작 측점과 끝 측점 사이의 코리더 형상선을 따라 **좌표계**를 생성하겠습니다. 이러한 좌표계는 차량 프로파일 블록 형상을 코리더에 정렬하는 데 사용됩니다.
 
-{% hint style="info" %}
- 좌표계를 처음 사용하는 경우 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} 좌표계를 처음 사용하는 경우 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>코리더 형상선을 따라 좌표계 가져오기</p></figcaption></figure>
 
 > 1. 노드의 오른쪽 아래 모서리에 있는 작은 **XXX**이(가) 있습니다. 이는 노드의 레이싱 설정이 두 형상선에 대해 동일한 측점 값으로 좌표계를 생성하는 데 필요한 _외적_으로 설정되어 있음을 의미합니다.
 
-{% hint style="info" %}
- 노드 레이싱을 처음 사용하는 경우 [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} 노드 레이싱을 처음 사용하는 경우 [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 ### 블록 형상 변환
 
@@ -105,9 +99,7 @@
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Dynamo 플레이어를 사용하여 그래프를 실행하고 Civil 3D에서 결과 확인</p></figcaption></figure>
 
-{% hint style="info" %}
- Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 > :tada: 작업을 완료했습니다!
 
@@ -115,14 +107,8 @@
 
 다음은 이 그래프의 기능을 확장하는 방법에 대한 몇 가지 아이디어입니다.
 
-{% hint style="info" %}
- 각 트랙에 대해 **다른 측점 범위**를 별도로 사용할 수 있는 기능을 추가합니다. 
-{% endhint %}
+{% hint style="info" %} 각 트랙에 대해 **다른 측점 범위**를 별도로 사용할 수 있는 기능을 추가합니다. {% endhint %}
 
-{% hint style="info" %}
- 충돌을 개별적으로 분석할 수 있도록 **솔리드를 더 작은 세그먼트로 분할**합니다. 
-{% endhint %}
+{% hint style="info" %} 충돌을 개별적으로 분석할 수 있도록 **솔리드를 더 작은 세그먼트로 분할**합니다. {% endhint %}
 
-{% hint style="info" %}
- 엔벨로프 솔리드가 **피쳐와 교차**하는 확인하고 충돌하는 부분에 색상을 지정합니다. 
-{% endhint %}
+{% hint style="info" %} 엔벨로프 솔리드가 **피쳐와 교차**하는 확인하고 충돌하는 부분에 색상을 지정합니다. {% endhint %}

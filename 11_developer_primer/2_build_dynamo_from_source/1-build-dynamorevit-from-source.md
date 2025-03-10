@@ -1,4 +1,4 @@
-# 소스에서 DynamoRevit 빌드하기 
+# 소스에서 DynamoRevit 빌드하기
 
 개발자가 기여하고 베타 버전을 빌드할 수 있도록 DynamoRevit 소스 파일도 DynamoDS Github에 호스팅됩니다. 소스에서 DynamoRevit을 빌드하는 작업은 몇 가지 중요한 세부 사항을 제외하고는 일반적으로 Dynamo와 동일한 프로세스를 따릅니다.
 
@@ -13,9 +13,9 @@
 
 성공적으로 빌드할 수 있도록 이 연습에서 사용할 Dynamo 및 DynamoRevit 리포지토리를 모두 복제하고 빌드할 것입니다.
 
-_참고: Dynamo 1.x 및 DynamoRevit 1.x를 빌드하는 경우에만 Dynamo를 수동으로 빌드해야 합니다. 최신 버전의 DynamoRevit 리포지토리에서는 빌드하는 데 필요한 Dynamo 종속성을 위해 NuGet 패키지 관리자를 사용합니다. DynamoRevit 2.x 빌드에서는 Dynamo를 수동으로 끌어올 필요가 없지만 실제로 DynamoRevit `addin` 을 실행하려면 다른 곳에 여전히 코어 `dlls` 가 필요하므로 Dynamo를 끌어오고 빌드하는 것이 좋습니다. 자세한 내용은 아래에 나오는_ [_Visual Studio를 사용하여 리포지토리 빌드_](#building-the-repository-using-Visual-Studio)를 참조하십시오.
+_참고: Dynamo 1.x 및 DynamoRevit 1.x를 빌드하는 경우에만 Dynamo를 수동으로 빌드해야 합니다. 최신 버전의 DynamoRevit 리포지토리에서는 빌드하는 데 필요한 Dynamo 종속성을 위해 NuGet 패키지 관리자를 사용합니다. DynamoRevit 2.x 빌드에서는 Dynamo를 수동으로 끌어올 필요가 없지만 실제로 DynamoRevit `add-in`을 실행하려면 다른 곳에 여전히 코어 `dlls`가 필요하므로 Dynamo를 끌어오고 빌드하는 것이 좋습니다. 자세한 내용은 아래에 나오는_ [_Visual Studio를 사용하여 리포지토리 빌드_](#building-the-repository-using-Visual-Studio)를 참조하십시오.
 
-#### Github에서 DynamoRevit 리포지토리 찾기 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Github에서 DynamoRevit 리포지토리 찾기 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
 DynamoRevit 프로젝트에 대한 코드는 핵심 Dynamo 소스 코드와는 별도로 Github의 리포지토리에 있습니다. 이 리포지토리에는 Revit 전용 노드에 대한 소스 파일과 Dynamo를 로드하는 Revit 애드인이 포함되어 있습니다. 다른 버전의 Revit(예: 2016, 2017 또는 2018)용 DynamoRevit 빌드는 리포지토리에 분기로 구성됩니다.
 
@@ -26,7 +26,7 @@ DynamoRevit 소스는 [https://github.com/DynamoDS/DynamoRevit](https://github.c
 > 1. 리포지토리 복제 또는 다운로드
 > 2. DynamoRevit의 분기는 Revit 버전을 참조합니다.
 
-#### git을 사용하여 리포지토리 복제하기 <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### git을 사용하여 리포지토리 복제하기 <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
 Dynamo 리포지토리를 끌어오는 것과 유사한 프로세스로 git 복제 명령을 사용하여 DynamoRevit을 복제하고 Revit 버전과 일치하는 분기를 지정합니다. 시작하기 위해 명령행 인터페이스를 열고 파일을 복제할 위치로 현재 디렉토리를 설정합니다.
 
@@ -54,9 +54,9 @@ Dynamo 리포지토리를 끌어오는 것과 유사한 프로세스로 git 복�
 
 Visual Studio에서 프로젝트를 빌드할 때 올바른 버전의 Revit 설치 디렉토리(특히 `RevitAPI.dll` 및 `RevitAPIUI.dll`)에서 어셈블리를 참조하도록 리포지토리의 올바른 분기를 선택하는 것이 중요합니다.
 
-#### Visual Studio를 사용하여 리포지토리 빌드하기 <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### Visual Studio를 사용하여 리포지토리 빌드하기 <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
-리포지토리를 빌드하기 전에 `src` 폴더에 있는 `restorepackages.bat` 파일을 사용하여 NuGet 패키지를 복원해야 합니다. 이 bat 파일은 [nuget](https://www.nuget.org) 패키지 관리자를 사용하여 Dynamo Revit에 필요한 Dynamo 코어의 빌드된 바이너리를 끌어옵니다. DynamoRevit만 변경하고 Dynamo 코어는 변경하지 않는 경우에는 이러한 바이너리를 수동으로 빌드하도록 선택할 수도 있습니다. 이렇게 하면 더 빠르게 시작할 수 있습니다. 이 파일을 관리자 권한으로 실행해야 합니다.
+리포지토리를 빌드하기 전에 `src` 폴더에 있는 `restorepackages.bat` 파일을 사용하여 NuGet 패키지를 복원해야 합니다. 이 bat 파일은 [NuGet](https://www.nuget.org) 패키지 관리자를 사용하여 DynamoRevit에 필요한 Dynamo Core의 빌드된 바이너리를 끌어옵니다. DynamoRevit만 변경하고 Dynamo Core는 변경하지 않는 경우에는 이러한 바이너리를 수동으로 빌드하도록 선택할 수도 있습니다. 이렇게 하면 더 빠르게 시작할 수 있습니다. 이 파일을 관리자 권한으로 실행해야 합니다.
 
 ![관리자 권한으로 실행](images/fe-restorepackages.jpg)
 
@@ -75,7 +75,7 @@ Visual Studio에서 프로젝트를 빌드할 때 올바른 버전의 Revit 설�
 > 1. `Build > Build Solution`을 선택합니다.
 > 2. 출력 창에서 빌드가 성공적으로 수행되었는지 확인합니다. `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`라는 메시지가 표시되어야 합니다.
 
-#### Revit에서 DynamoRevit의 로컬 빌드 실행하기 <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### Revit에서 DynamoRevit의 로컬 빌드 실행하기 <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
 Revit은 [설치 프로그램](http://dynamobim.org/download/)이 자동으로 생성하는 애드인 파일이 있어야 DynamoRevit을 인식할 수 있습니다. 개발 단계에서는 사용할 DynamoRevit 빌드, 특히 `DynamoRevitDS.dll` 어셈블리를 가리키는 애드인 파일을 수동으로 생성해야 합니다. 또한 DynamoRevit이 Dynamo의 빌드를 가리키도록 지정해야 합니다.
 
@@ -120,7 +120,7 @@ Revit은 [설치 프로그램](http://dynamobim.org/download/)이 자동으로 �
 
 ![DynamoForRevit 및 DynamoPlayerforRevit 폴더](images/fe-dynamo-folders-remove.jpg)
 
-두 번째 단계는 Dynamo 코어 어셈블리의 파일 경로를 DynamoRevit의 `bin` 폴더에 있는 `Dynamo.config` 파일에 추가하는 것입니다. DynamoRevit은 애드인이 Revit에서 열릴 때 이러한 파일을 로드합니다. 이 구성 파일을 사용하면 DynamoRevit 애드인이 Dynamo 코어의 다른 버전을 가리키도록 지정하여 Core와 DynamoRevit 모두에서 변경 사항을 개발 및 테스트할 수 있습니다.
+두 번째 단계는 Dynamo 코어 어셈블리의 파일 경로를 DynamoRevit의 `bin` 폴더에 있는 `Dynamo.config` 파일에 추가하는 것입니다. DynamoRevit은 애드인이 Revit에서 열릴 때 이러한 파일을 로드합니다. 이 구성 파일을 사용하면 DynamoRevit 애드인이 Dynamo Core의 다른 버전을 가리키도록 지정하여 Core와 DynamoRevit 모두에서 변경 사항을 개발 및 테스트할 수 있습니다.
 
 코드는 다음과 같아야 합니다.
 
@@ -145,9 +145,9 @@ Revit은 [설치 프로그램](http://dynamobim.org/download/)이 자동으로 �
 > 2. Dynamo 애드인 아이콘을 클릭합니다.
 > 3. DynamoRevit의 인스턴스
 
-누락된 어셈블리가 표시된 오류 대화상자 창이 나타나면 빌드한 DynamoCore 버전과 런타임 시 로드하는 버전이 일치하지 않는 것일 수 있습니다. 예를 들어, 최신 2.0 베타 패키지의 DynamoCore가 포함된 DynamoRevit은 Dynamo 1.3 dlls를 사용하여 시작하려고 하면 작동하지 않습니다. 두 리포지토리의 버전이 동일하고 DynamoRevit이 일치하는 버전의 nuget 종속성을 끌어오고 있는지 확인합니다. 이것은 DynamoRevit 리포지토리의 `package.json` 파일에 정의되어 있습니다.
+누락된 어셈블리가 표시된 오류 대화상자 창이 나타나면 빌드한 DynamoCore 버전과 런타임 시 로드하는 버전이 일치하지 않는 것일 수 있습니다. 예를 들어, 최신 2.0 베타 패키지의 DynamoCore가 포함된 DynamoRevit은 Dynamo 1.3 dlls를 사용하여 시작하려고 하면 작동하지 않습니다. 두 리포지토리의 버전이 동일하고 DynamoRevit이 일치하는 버전의 NuGet 종속성을 끌어오고 있는지 확인합니다. 이것은 DynamoRevit 리포지토리의 `package.json` 파일에 정의되어 있습니다.
 
-#### Visual Studio를 사용하여 DynamoRevit 디버깅하기 <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### Visual Studio를 사용하여 DynamoRevit 디버깅하기 <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
 이전 섹션인 **소스에서 Dynamo 빌드하기**에서는 Visual Studio에서 디버깅하는 방법과 Visual Studio를 프로세스에 연결하는 방법을 간략하게 설명했습니다. Wall.ByCurveAndHeight 노드의 예외를 예로 들어, 프로세스에 연결하고, 중단점을 설정하고, 코드를 단계별로 실행하고, 호출 스택을 사용하여 예외의 소스를 확인하는 방법을 살펴보겠습니다. 이러한 디버깅 도구는 일반적으로 .net 개발 워크플로우에 적용되며 다른 리소스를 통해 살펴볼 가치가 있습니다.
 
@@ -210,7 +210,7 @@ Visual Studio가 Revit에 연결된 상태로 `Wall.cs`에서 Wall.ByCurveAndHei
 
 이 프로세스는 작업 중인 모든 소스 파일에 적용할 수 있습니다. Dynamo Studio용 Zero-Touch 노드 라이브러리를 개발하는 경우 라이브러리의 소스를 열고 Dynamo 프로세스를 연결하여 노드 라이브러리를 디버깅할 수 있습니다. 모든 것이 완벽하게 작동하더라도 디버깅은 코드를 탐색하고 작동 방식을 파악할 수 있는 유용한 방법입니다.
 
-#### 최신 빌드 끌어오기 <a href="#pull-latest-build" id="pull-latest-build"></a>
+### 최신 빌드 끌어오기 <a href="#pull-latest-build" id="pull-latest-build"></a>
 
 이 프로세스는 올바른 분기에 있는지 확인해야 한다는 점을 제외하면 Dynamo에 대한 변경 사항을 끌어오는 것과 거의 동일합니다. DynamoRevit 리포지토리에서 `git branch` 명령을 사용하여 로컬에서 사용할 수 있는 분기와 현재 체크아웃된 분기를 확인할 수 있습니다.
 

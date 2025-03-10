@@ -1,4 +1,4 @@
-# 개발자 입문서 
+# 개발자 입문서
 
 #### 이 안내서의 목적은 무엇입니까? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 

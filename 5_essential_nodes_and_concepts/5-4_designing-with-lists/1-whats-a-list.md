@@ -77,6 +77,32 @@ Dynamo에서는 리스트 데이터가 정렬되고, 각 리스트의 첫 번째
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
+### 복제란?
+
+포도 한 송이가 있다고 상상해 보십시오. 포도 주스를 만들려면 각 포도를 한 알씩 짜는 대신 한 번에 착즙기에 모두 넣을 것입니다. Dynamo의 복제도 유사한 방식으로 작동합니다. 즉, 한 번에 항목 하나에만 작업을 적용하는 대신 Dynamo는 작업을 전체 리스트에 한 번에 적용할 수 있습니다.
+
+Dynamo 노드는 리스트로 작업할 때 이를 자동으로 인식하여 여러 요소에 작업을 적용합니다. 즉, 항목을 하나씩 수동으로 반복할 필요가 없이 자동으로 수행됩니다. 하지만 리스트가 둘 이상인 경우 Dynamo에서는 리스트 처리 방법을 어떻게 결정할까요?
+
+두 가지 주요 방법은 다음과 같습니다.
+
+#### 직교 복제
+부엌에서 과일 주스를 만들고 있다고 가정해 보겠습니다. `{apple, orange, pear}`라는 과일 리스트가 있고 각 주스에 사용할 물의 양이 `1 cup`으로 고정되어 있습니다. 각 과일에 같은 양의 물을 사용하여 주스를 만들고 싶습니다. 이 경우 직교 복제가 적용됩니다.
+
+Dynamo에서 이는 물 입력이 1컵으로 일정하게 유지되는 동안 과일 리스트를 Juice.Maker 노드의 과일 입력에 제공한다는 의미입니다. 그런 다음 이 노드는 각 과일을 개별적으로 처리하여 고정된 양의 물과 결합합니다. 결과는 다음과 같습니다.
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+각 과일은 같은 양의 물과 쌍으로 연결됩니다.
+
+#### Zip 복제
+Zip 복제는 약간 다르게 작동합니다. 과일 리스트(`{apple, orange, pear}`)와 설탕 리스트(`{2 tbsp, 3 tbsp, 1 tbsp}`) 두 개가 있는 경우 Zip 복제는 각 리스트의 해당 항목을 결합합니다. 예는 다음과 같습니다.
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+각 과일은 그에 상응하는 양의 설탕과 쌍으로 연결됩니다.
+
+이 작동 방식에 대한 자세한 내용은 [복제 및 레이싱 가이드](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1)를 참조하십시오.
+
 ## 연습
 
 > 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.

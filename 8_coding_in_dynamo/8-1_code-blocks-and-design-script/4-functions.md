@@ -61,7 +61,7 @@ FunctionName(in1,in2);
 
 ![](../images/8-1/4/functions-exercise-03.jpg)
 
-> 1. **Code Block** 함수에 추가하여 주석과 각 점의 _Z_ 위치를 조회하는 _sphereRadius_ 변수를 배치합니다. _inputPt.Z_ 에는 괄호가 메서드로 필요하지 않습니다. 기존 요소 특성의 _조회_ 이므로 입력이 필요하지 않습니다.
+> 1. **Code Block** 함수에 추가하여 주석과 각 점의 _Z_ 위치를 조회하는 _sphereRadius_ 변수를 배치합니다. _inputPt.Z_에는 메서드처럼 괄호가 필요하지 않습니다. 기존 요소 특성의 _조회_ 이므로 입력이 필요하지 않습니다.
 >
 > ```
 > def sphereByZ(inputPt,radiusRatio)
@@ -73,7 +73,7 @@ FunctionName(in1,in2);
 
 ![](../images/8-1/4/functions-exercise-04.jpg)
 
-> 1. 이제 다른 **Code Block**에서 작성한 함수를 불러오겠습니다. 캔버스를 두 번 클릭하여 새 _code block_ 을 작성하고 _sphereB_ 를 입력하면 Dynamo는 정의한 _sphereByZ_ 함수를 제안합니다. 함수가 intellisense 라이브러리에 추가되었습니다. 멋지지 않은가요?
+> 1. 이제 다른 **Code Block**에서 작성한 함수를 불러오겠습니다. 캔버스를 두 번 클릭하여 새 _code block_을 작성하고 _sphereB_를 입력하면 Dynamo는 정의한 _sphereByZ_ 함수를 제안합니다. 함수가 intellisense 라이브러리에 추가되었습니다. 멋지지 않은가요?
 
 ![](../images/8-1/4/functions-exercise-05.jpg)
 

@@ -65,7 +65,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 * List@Level을 사용하면 상당한 크기의 캔버스 공간을 차지할 수 있는 **List.Map 및 List.Combine 노드를 대체하여 그래프의 복잡성을 줄일** 수 있습니다.
 * List@Level에서는 노드의 입력 포트에서 바로 리스트의 임의 레벨에 있는 데이터에 액세스할 수 있게 해주어** List.Map/List.Combine보다 더 빨리 노드 논리를 구성하는 방법**을 제공합니다.
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > 우리는 CountTrue의 "list" 입력에 대해 List@Level을 활성화하여 BoundingBox.Contains에서 반환하는 True 값이 어떤 리스트에 몇 개인지 확인할 수 있습니다. 사용자는 List@Level을 통해 입력으로 데이터를 가져올 레벨을 결정할 수 있습니다. List@Level을 사용하면 유연하고 효율적이므로 List.Map 및 List.Combine과 관련된 다른 방법에 비해 적극 권장됩니다.
 >
@@ -84,7 +84,7 @@ Dynamo 그래프를 개발하고 아이디어를 테스트함에 따라 규모�
 * 다른 사용자가 사용자의 그래프를 사용해 작업하려는 경우 **보내기 전에 노드-와이어 배치가 쉽게 유동되는지 확인**해야 합니다.
 * 정렬에 활용하려면 **"노드 배치 정리" 기능을 사용하여 그래프를 자동으로 정렬**합니다. 그러나 이렇게 하는 것이 직접 정렬하는 것보다 정확하지는 않습니다.
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. 구성되지 않은 그래프
 > 2. 정렬된 그래프

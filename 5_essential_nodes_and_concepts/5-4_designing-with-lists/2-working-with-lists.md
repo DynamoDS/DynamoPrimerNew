@@ -53,7 +53,7 @@
 > 6. **Geometry.Translate** 노드를 사용하여 Z 방향으로 최대 100개 단위만큼 원을 이동합니다.
 > 7. **Code Block** 노드에서 코드 줄 `0..1..#10;`을 사용하여 0과 1 사이의 10개 숫자 범위를 정의합니다.
 > 8. 이전 단계의 code block을 두 **Curve.PointAtParameter** 노드의 _param_ 입력에 연결합니다. **Circle.ByPlaneRadius**를 최상위 노드의 곡선 입력에 연결하고 **Geometry.Translate**를 그 아래 노드의 곡선 입력에 연결합니다.
-> 9. **Line.ByStartPointEndPoint**를 사용하여 두 **Curve.PointAtParamete**_r_ 노드를 연결합니다.
+> 9. **Line.ByStartPointEndPoint**를 사용하여 두 **Curve.PointAtParameter** 노드를 연결합니다.
 
 ### List.Count
 
@@ -143,8 +143,8 @@ _List.Reverse_ 는 리스트의 모든 항목 순서를 반대로 합니다.
 > 1. **Code Block**을 사용하여 `0..List.Count(list);` 구문으로 표현식을 정의합니다. **Curve.PointAtParameter** 노드를 _list_ 입력에 연결합니다. code block록 장에서 이 설정에 대해 좀 더 자세히 설명하겠지만, 이 경우에는 코드 줄에서 **Curve.PointAtParameter** 노드의 각 색인을 나타내는 리스트를 제공합니다.
 > 2. _**%**_** (modulus)** 노드를 사용하여 _code block_ 의 출력을 _x_ 입력에 연결하고 _4_ 값을 _y_ 입력에 연결합니다. 이렇게 하면 색인 리스트를 4로 나눈 나머지가 표시됩니다. Modulus는 패턴 작성에 매우 유용한 노드입니다. 모든 값은 가능한 나머지 4개(0, 1, 2, 3)로 표시됩니다.
 > 3. _**%**_** (modulus)** 노드에서 0 값은 색인이 4로 나누어떨어짐을 의미합니다(0, 4, 8 등). **==** 노드를 사용하면 _"0"_ 값을 기준으로 테스트하여 나누어떨어지는지 테스트할 수 있습니다.
-> 4. **Watch** 노드에서는 _true,false,false,false..._ 로 표시되는 true/false 패턴이 있음을 나타냅니다.
+> 4. **Watch** 노드에서는 _true,false,false,false..._로 표시되는 true/false 패턴이 있음을 나타냅니다.
 > 5. 이 true/false 패턴을 사용하여 두 **List.FilterByBooleanMask** 노드의 마스크 입력에 연결합니다.
 > 6. **Curve.PointAtParameter** 노드를 **List.FilterByBooleanMask**의 각 리스트 입력에 연결합니다.
-> 7. **Filter.ByBooleanMask**의 출력은 _"in"_ 및 _"out"_ 으로 표시됩니다. _"In"_ 은 마스크 값이 _"true"_ 인 값을 나타내고 _"out"_ 은 마스크 값이 _"false"_ 인 값을 나타냅니다. **Line.ByStartPointEndPoint** 노드의 _"in"_ 출력을 _startPoint_ 및 _endPoint_ 입력에 연결하여 필터링된 선 리스트를 작성했습니다.
+> 7. **Filter.ByBooleanMask**의 출력은 _"in"_ 및 _"out"_으로 표시됩니다. _"In"_ 은 마스크 값이 _"true"_ 인 값을 나타내고 _"out"_ 은 마스크 값이 _"false"_ 인 값을 나타냅니다. **Line.ByStartPointEndPoint** 노드의 _"in"_ 출력을 _startPoint_ 및 _endPoint_ 입력에 연결하여 필터링된 선 리스트를 작성했습니다.
 > 8. **Watch3D** 노드에서는 점보다 선 수가 더 적은 것을 나타냅니다. true 값만 필터링하여 노드의 25%만 선택했습니다.

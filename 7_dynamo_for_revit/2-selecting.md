@@ -18,9 +18,7 @@ Revit 계층을 간단히 살펴보겠습니다.
 
 생물학의 분류법인 계, 문, 강, 목, 과, 속, 종을 기억하십니까? Revit 요소도 비슷한 방식으로 분류됩니다. 기본 레벨에서 Revit 계층은 카테고리, 패밀리, 유형* 및 인스턴스로 구분할 수 있습니다. 인스턴스는 고유한 ID를 가진 개별 모델 요소이지만, 카테고리는 일반 그룹(예: "벽" 또는 "바닥")을 정의합니다. Revit 데이터베이스를 이러한 방식으로 구성하면 요소 하나를 선택하고 계층의 지정된 레벨에 따라 유사한 요소를 모두 선택할 수 있습니다.
 
-{% hint style="warning" %}
- *Revit의 유형은 프로그래밍의 유형과 다르게 정의됩니다. Revit에서 유형은 "데이터 유형"이 아닌 계층의 분기를 참조합니다. 
-{% endhint %}
+{% hint style="warning" %} *Revit의 유형은 프로그래밍의 유형과 다르게 정의됩니다. Revit에서 유형은 "데이터 유형"이 아닌 계층의 분기를 참조합니다. {% endhint %}
 
 ### Dynamo 노드를 사용한 데이터베이스 탐색
 
@@ -32,7 +30,7 @@ _포인트 앤 클릭_ 은 Revit 요소를 직접 선택하는 가장 쉬운 방
 
 _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는 모든 요소 리스트를 작성합니다. 이 메뉴를 사용하여 뷰에서 반드시 보이지 않을 수 있는 Revit 요소를 참조할 수 있습니다. 이 도구는 Revit 프로젝트 또는 패밀리 편집기에서 기존 요소를 조회하거나 새 요소를 작성하는 데 유용합니다.
 
-![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 또한 _Revit 계층_ 에서 특정 계층별로 Revit 요소를 선택할 수도 있습니다. 이 옵션은 문서화 또는 생성 인스턴스화 및 사용자화 준비를 위해 대규모 데이터 배열을 사용자화하기 위한 강력한 옵션입니다.
 
@@ -50,7 +48,7 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 이 Revit 파일 예에는 간단한 건물의 세 가지 요소 유형이 있습니다. 이를 Revit 계층의 컨텍스트에서 Revit 요소를 선택하는 예로 사용하겠습니다.
 
-![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. 건물 매스
 > 2. 보(구조 프레임)
@@ -83,7 +81,7 @@ _드롭다운 메뉴_ 에서는 Revit 프로젝트에서 액세스할 수 있는
 
 몇 가지 기본 리스트 작업을 사용하여 관심 면을 조회할 수 있습니다.
 
-![](<images/2/selecting - exercise 05.jpg>)
+\![](images/2/selecting - exercise 05.jpg)
 
 > 1. 먼저, 선택한 요소를 이전 노드에서 Element.Faces 노드로 출력합니다.
 > 2. 다음으로, _List.Count_ 노드에는 매스의 23개 표면으로 작업하고 있다고 표시됩니다.
@@ -151,6 +149,4 @@ Revit/Dynamo 워크플로우에서 자주 묻는 질문은 바로 '요소 하나
 > 2. _"All Elements of Family Type"_ 노드를 _"AdaptiveComponent.Location"_ 노드에 연결합니다. 이렇게 하면 각각에 가변 점 위치를 나타내는 세 개의 점이 있는 리스트의 목록이 제공됩니다.
 > 3. _"Polygon.ByPoints"_ 노드를 연결하면 polycurve가 반환됩니다. 이 내용은 Dynamo 뷰포트에서 확인할 수 있습니다. 이 방법을 통해 하나의 요소에 대한 형상을 시각화하고 요소의 나머지 배열에 대한 형상을 추상화했습니다(이 예에 포함된 것보다 번호가 더 클 수 있음).
 
-{% hint style="info" %}
-팁: Dynamo에서 Revit 요소의 초록색 번호를 클릭하면 Revit 뷰포트가 해당 요소로 줌됩니다. 
-{% endhint %}
+{% hint style="info" %}팁: Dynamo에서 Revit 요소의 초록색 번호를 클릭하면 Revit 뷰포트가 해당 요소로 줌됩니다. {% endhint %}

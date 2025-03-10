@@ -18,9 +18,7 @@
 
 ## 버전 호환성
 
-{% hint style="success" %}
- 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. 
-{% endhint %}
+{% hint style="success" %} 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. {% endhint %}
 
 ## 데이터세트
 
@@ -30,7 +28,7 @@
 
 {% file src="../../../.gitbook/assets/Land_ServicePlacement.dwg" %}
 
-## 해결책
+## 해결 방법
 
 이 그래프의 논리에 대한 개요는 다음과 같습니다.
 
@@ -46,9 +44,7 @@
 
 첫 번째 단계는 분배 본관에 대한 형상을 Dynamo로 가져오는 것입니다. 개별 선 또는 폴리선을 선택하는 대신, 특정 도면층에 있는 모든 객체를 가져와서 Dynamo PolyCurve로 결합합니다.
 
-{% hint style="info" %}
- Dynamo 곡선 형상을 처음 사용하는 경우 [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} Dynamo 곡선 형상을 처음 사용하는 경우 [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Civil 3D에서 객체를 가져와 모든 것을 하나의 PolyCurve에 결합</p></figcaption></figure>
 
@@ -68,9 +64,7 @@
 
 이제 서비스 계량기를 어디에 배치할지 결정할 차례입니다. 일반적으로 현지 에이전시 요구 사항에 따라 배치가 결정되므로 다양한 조건에 맞게 변경할 수 있는 입력 값만 제공합니다. 점을 만들기 위한 참조로 로트 선을 따라 **좌표계**를 사용하겠습니다. 이렇게 하면 로트 선의 방향에 관계없이 로트 선을 기준으로 간격띄우기를 쉽게 정의할 수 있습니다.
 
-{% hint style="info" %}
- 좌표계를 처음 사용하는 경우 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} 좌표계를 처음 사용하는 경우 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>서비스 계량기에 대한 삽입점 작성</p></figcaption></figure>
 
@@ -105,17 +99,13 @@
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo의 객체 바인딩 설정</p></figcaption></figure>
 
-{% hint style="info" %}
- 자세한 내용은 [ object-binding.md](../../advanced-topics/object-binding.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} 자세한 내용은 [ object-binding.md](../../advanced-topics/object-binding.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 이 설정을 변경하면 Dynamo가 실행할 때마다 작성하는 객체를 "잊어버립니다". 다음은 **Dynamo 플레이어**를 사용하여 객체 바인딩을 끈 상태에서 그래프를 실행하는 예입니다.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Dynamo 플레이어를 사용하여 그래프를 실행하고 Civil 3D에서 결과 확인</p></figcaption></figure>
 
-{% hint style="info" %}
- Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. 
-{% endhint %}
+{% hint style="info" %} Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. {% endhint %}
 
 > :tada: 작업을 완료했습니다!
 
@@ -123,14 +113,8 @@
 
 다음은 이 그래프의 기능을 확장하는 방법에 대한 몇 가지 아이디어입니다.
 
-{% hint style="info" %}
- 각 로트 선을 선택하는 대신 **여러 개의 서비스 연결**을 동시에 배치합니다. 
-{% endhint %}
+{% hint style="info" %} 각 로트 선을 선택하는 대신 **여러 개의 서비스 연결**을 동시에 배치합니다. {% endhint %}
 
-{% hint style="info" %}
- 입력을 조정하여 수도 서비스 계량기 대신 **하수 청소구**를 배치합니다. 
-{% endhint %}
+{% hint style="info" %} 입력을 조정하여 수도 서비스 계량기 대신 **하수 청소구**를 배치합니다. {% endhint %}
 
-{% hint style="info" %}
- 로트 선의 양쪽이 아닌 특정 쪽에 단일 서비스 연결을 배치할 수 있는 **토글을 추가**합니다. 
-{% endhint %}
+{% hint style="info" %} 로트 선의 양쪽이 아닌 특정 쪽에 단일 서비스 연결을 배치할 수 있는 **토글을 추가**합니다. {% endhint %}

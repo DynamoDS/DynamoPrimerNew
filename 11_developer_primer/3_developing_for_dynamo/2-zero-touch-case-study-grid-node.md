@@ -1,4 +1,4 @@
-# Zero-Touch 사례 연구 - 그리드 노드 
+# Zero-Touch 사례 연구 - 그리드 노드
 
 Visual Studio 프로젝트를 실행한 상태에서 직사각형의 셀 그리드를 만드는 사용자 지정 노드를 빌드하는 방법을 살펴봅니다. 여러 표준 노드를 사용하여 이 노드를 생성할 수 있지만, 이 노드는 Zero-Touch 노드에 쉽게 포함할 수 있는 유용한 도구입니다. 그리드 선과 달리 셀은 중심점을 기준으로 크기를 조정하거나, 모서리 정점을 조회하거나, 면에 내장될 수 있습니다.
 
@@ -6,7 +6,7 @@ Visual Studio 프로젝트를 실행한 상태에서 직사각형의 셀 그리�
 
 ![직사각형 그리드 그래프](images/cover-image.jpg)
 
-#### 사용자 지정 직사각형 그리드 노드 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### 사용자 지정 직사각형 그리드 노드 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 그리드 노드 빌드를 시작하려면 새 Visual Studio 클래스 라이브러리 프로젝트를 생성합니다. 프로젝트를 설정하는 방법에 대한 자세한 설명은 시작하기 페이지를 참조하십시오.
 
@@ -17,7 +17,7 @@ Visual Studio 프로젝트를 실행한 상태에서 직사각형의 셀 그리�
 > 1. 프로젝트 유형으로 `Class Library`를 선택합니다.
 > 2. 프로젝트의 이름을 `CustomNodes`로 지정합니다.
 
-형상을 작성하고 있으므로 적절한 NuGet 패키지를 참조해야 합니다. Nuget Package Manager에서 ZeroTouchLibrary 패키지를 설치합니다. 이 패키지는 `using Autodesk.DesignScript.Geometry;` 문에 필요합니다.
+형상을 작성하고 있으므로 적절한 NuGet 패키지를 참조해야 합니다. NuGet 패키지 관리자에서 ZeroTouchLibrary 패키지를 설치합니다. 이 패키지는 `using Autodesk.DesignScript.Geometry;` 문에 필요합니다.
 
 ![ZeroTouchLibrary 패키지](images/vs-nugetpackage.jpg)
 
@@ -96,7 +96,7 @@ namespace CustomNodes
 > 2. 캔버스의 사용자 지정 노드
 > 3. Dynamo에 `.dll`을 추가하기 위한 추가 버튼
 
-#### 사용자 지정 노드 수정 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### 사용자 지정 노드 수정 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 위의 예에서는 `RectangularGrids` 메서드 외에 다른 것을 정의하지 않은 매우 간단한 노드를 만들었습니다. 그러나 입력 포트에 대한 툴팁을 작성하거나 표준 Dynamo 노드처럼 노드에 요약을 제공할 수 있습니다. 이러한 기능을 사용자 지정 노드에 추가하면 특히 사용자가 라이브러리에서 기능을 검색하려는 경우 더 쉽게 사용할 수 있습니다.
 
