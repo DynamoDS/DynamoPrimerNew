@@ -4,7 +4,7 @@
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Создание проекта Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Создание проекта Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio — это многофункциональная среда разработки, в которой можно создавать проекты, добавлять ссылки, создавать файлы `.dll` и выполнять отладку. При создании нового проекта Visual Studio также создается решение, структура для организации проектов. В одном решении можно создать несколько проектов, которые будут собраны вместе. Чтобы создать узел ZeroTouch, необходимо запустить новый проект Visual Studio, в котором будет создана библиотека классов C# и собран файл `.dll`.
 
@@ -84,7 +84,7 @@ Visual Studio автоматически создаст и откроет фай
 > 1. MyCustomNode в библиотеке Dynamo. Категория «Библиотека» определяется именем `.dll`.
 > 2. SampleFunctions.MultiplyByTwo в рабочей области.
 
-#### Способы чтения классов и методов в Dynamo <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Способы чтения классов и методов в Dynamo <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Когда Dynamo загружает DLL-файл, он предоставляет все открытые статические методы в виде узлов. Конструкторы, методы и свойства преобразуются в узлы Create, Action и Query соответственно. В нашем примере умножения метод `MultiplyByTwo()` становится узлом Action в Dynamo. Это связано с тем, что узел назван в соответствии с методом и классом.
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dynamo импортировал метод в качестве узла Create.
 
-#### Добавление ссылок на пакеты Dynamo NuGet <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Добавление ссылок на пакеты Dynamo NuGet <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 Узел умножения очень простой и не требует ссылок на Dynamo. Если необходимо получить доступ к функциям Dynamo, например для создания геометрии, используйте пакеты Dynamo NuGet.
 

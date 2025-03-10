@@ -2,7 +2,7 @@
 
 Исходный код Dynamo размещен на GitHub в общем доступе, чтобы любой разработчик мог клонировать его и вносить свой вклад в развитие.  В этой главе мы рассмотрим клонирование репозитория с помощью Git, компиляцию исходных файлов с помощью Visual Studio, запуск и отладку локальной сборки, а также получение новых изменений из GitHub.
 
-#### Поиск репозиториев Dynamo на GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Поиск репозиториев Dynamo на GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 GitHub — это хостинговая служба на базе [Git](https://help.github.com/articles/git-and-github-learning-resources/), системы управления версиями, которая позволяет отслеживать изменения и координировать работу пользователей. Git можно использовать для скачивания исходных файлов Dynamo и их обновления с помощью нескольких команд. Этот метод позволяет избежать ненужной и изначально сложной работы по скачиванию и замене исходных файлов при каждом обновлении вручную.  Система управления версиями Git отслеживает любые различия между локальным и удаленным репозиториями кода.
 
@@ -16,9 +16,9 @@ GitHub — это хостинговая служба на базе [Git](https
 > 3. Исходные файлы Dynamo
 > 4. Файлы, относящиеся к Git
 
-#### Извлечение репозитория Dynamo с помощью Git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### Извлечение репозитория Dynamo с помощью Git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Установите Git, прежде чем клонировать репозиторий. Это [краткое руководство](https://help.github.com/articles/set-up-git/#setting-up-git) содержит инструкции по установке и настройке адреса электронной почты и имени пользователя на GitHub. В нашем примере мы будем использовать Git в командной строке. В этом руководстве предполагается, что вы работаете в Windows, но вы также можете использовать Git для клонирования исходных файлов Dynamo в macOC или Linux.
+Установите Git, прежде чем клонировать репозиторий. Это [краткое руководство](https://help.github.com/articles/set-up-git/#setting-up-git) содержит инструкции по установке и настройке адреса электронной почты и имени пользователя на GitHub. В нашем примере мы будем использовать Git в командной строке. В этом руководстве предполагается, что вы работаете в Windows, но вы также можете использовать Git для клонирования исходных файлов Dynamo в macOS или Linux.
 
 Нам нужен URL-адрес для клонирования репозитория Dynamo. Его можно найти, нажав кнопку «Clone or download» (Клонировать или скачать) на странице репозитория. Скопируйте URL-адрес для вставки в командную строку.
 
@@ -47,7 +47,7 @@ GitHub — это хостинговая служба на базе [Git](https
 > 1. Исходные файлы Dynamo
 > 2. Файлы Git
 
-#### Создание репозитория с помощью Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### Создание репозитория с помощью Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 Мы клонировали исходные файлы на локальный компьютер и теперь можем собрать исполняемый файл для Dynamo. Для этого потребуется настроить среду разработки Visual Studio IDE и убедиться, что .NET Framework и DirectX установлены.
 
@@ -84,7 +84,7 @@ GitHub — это хостинговая служба на базе [Git](https
 > 1. Выберите `Build > Build Solution` (Сборка > Собрать решение).
 > 2. В окне вывода отобразится сообщение об успешной сборке. Например: `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`.
 
-#### Выполнение локальной сборки <a href="#running-a-local-build" id="running-a-local-build"></a>
+### Выполнение локальной сборки <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 Если сборка Dynamo выполнена успешно, в репозитории Dynamo будет создана папка `bin` с файлом DynamoSandbox.exe. Мы выполняем сборку с параметром Debug, поэтому исполняемый файл находится в папке `bin\AnyCPU\Debug`. При запуске откроется локальная сборка Dynamo.
 
@@ -96,7 +96,7 @@ GitHub — это хостинговая служба на базе [Git](https
 
 Инструкции по сборке Dynamo для других платформ (например, Linux или OS X) см. на [вики-странице](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac).
 
-#### Отладка локальной сборки с помощью Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### Отладка локальной сборки с помощью Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
 Отладка представляет собой процесс выявления, изоляции и исправления ошибок или проблем. После успешной сборки Dynamo на основе исходного кода можно использовать несколько инструментов Visual Studio для отладки выполняющегося приложения. Например, надстройку DynamoRevit. Мы можем проанализировать исходный код, чтобы найти причину проблемы, или просмотреть выполняемый в данный момент код. Более подробное описание процедуры отладки кода и навигации по нему в Visual Studio см. в [документации по Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
@@ -137,7 +137,7 @@ GitHub — это хостинговая служба на базе [Git](https
 
 В следующем разделе, **Сборка DynamoRevit на основе исходного кода**, мы рассмотрим конкретный пример отладки и объясним, как задать точки прерывания, пошагово выполнить код и прочитать стек вызовов.
 
-#### Извлечение последней сборки <a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### Извлечение последней сборки <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 Поскольку исходный код Dynamo размещен на Github, проще всего обновлять локальные исходные файлы с помощью команд Git.
 

@@ -1,4 +1,4 @@
-# Руководство для разработчиков 
+# Руководство для разработчиков
 
 #### Для чего предназначено это руководство? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 

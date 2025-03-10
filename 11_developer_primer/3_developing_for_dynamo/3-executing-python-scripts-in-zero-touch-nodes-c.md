@@ -1,4 +1,4 @@
-# Выполнение сценариев Python в узлах Zero-Touch (C#) 
+# Выполнение сценариев Python в узлах Zero-Touch (C#)
 
 ### Выполнение сценариев Python в узлах Zero-Touch (C#) <a href="#executing-python-scripts-in-zero-touch-nodes-c" id="executing-python-scripts-in-zero-touch-nodes-c"></a>
 
