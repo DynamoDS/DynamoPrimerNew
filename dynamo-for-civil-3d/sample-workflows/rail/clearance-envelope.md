@@ -17,9 +17,7 @@ Opracowywanie obwiedni kinematycznych do weryfikacji prześwitu jest ważną cz�
 
 ## Zgodność wersji
 
-{% hint style="success" %}
- Ten wykres będzie działać w programie **Civil 3D 2020** i w nowszych wersjach. 
-{% endhint %}
+{% hint style="success" %} Ten wykres będzie działać w programie **Civil 3D 2020** i w nowszych wersjach. {% endhint %}
 
 ## Zestaw danych
 
@@ -51,17 +49,13 @@ Pierwszym krokiem jest pobranie danych korytarza. Wybierzemy model korytarza na 
 
 Teraz wygenerujemy **układy współrzędnych** wzdłuż linii charakterystycznych korytarza między daną pikietą początkową a końcową. Te układy współrzędnych zostaną użyte do wyrównania geometrii bloku profilu pojazdu względem korytarza.
 
-{% hint style="info" %}
- Jeśli pierwszy raz masz do czynienia z układami współrzędnych, skorzystaj z sekcji [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Jeśli pierwszy raz masz do czynienia z układami współrzędnych, skorzystaj z sekcji [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>Pobieranie układów współrzędnych wzdłuż linii charakterystycznych korytarza</p></figcaption></figure>
 
 > 1. Zwróć uwagę na małą pozycję **XXX** w prawym dolnym rogu węzła. Oznacza to, że ustawienia skratowania węzła skonfigurowano jako _Iloczyn wektorowy_, co jest niezbędne do generowania układów współrzędnych przy tych samych wartościach pikiet dla obu linii charakterystycznych.
 
-{% hint style="info" %}
- Jeśli pierwszy raz masz do czynienia ze skratowaniem węzłów, skorzystaj z sekcji [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Jeśli pierwszy raz masz do czynienia ze skratowaniem węzłów, skorzystaj z sekcji [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention"). {% endhint %}
 
 ### Przekształcanie geometrii bloku
 
@@ -105,9 +99,7 @@ Oto przykład uruchomienia wykresu za pomocą **Odtwarzacza Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Uruchamianie wykresu za pomocą Odtwarzacza Dynamo i wyświetlanie wyników w programie Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}
- Jeśli nie znasz jeszcze Odtwarzacza Dynamo Player, skorzystaj z sekcji [dynamo-player.md](../../dynamo-player.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Jeśli nie znasz jeszcze Odtwarzacza Dynamo Player, skorzystaj z sekcji [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 
 > :tada: Misja wykonana!
 
@@ -115,14 +107,8 @@ Oto przykład uruchomienia wykresu za pomocą **Odtwarzacza Dynamo**.
 
 Oto kilka pomysłów na rozszerzenie możliwości tego wykresu.
 
-{% hint style="info" %}
- Dodaj możliwość używania **różnych zakresów pikiet** oddzielnie dla poszczególnych torów. 
-{% endhint %}
+{% hint style="info" %} Dodaj możliwość używania **różnych zakresów pikiet** oddzielnie dla poszczególnych torów. {% endhint %}
 
-{% hint style="info" %}
- **Podziel bryły** na mniejsze segmenty, które można analizować indywidualnie pod kątem kolizji. 
-{% endhint %}
+{% hint style="info" %} **Podziel bryły** na mniejsze segmenty, które można analizować indywidualnie pod kątem kolizji. {% endhint %}
 
-{% hint style="info" %}
- Sprawdź, czy bryły obwiedni **przecinają się z obiektami** i pokoloruj te, w przypadku których występują kolizje. 
-{% endhint %}
+{% hint style="info" %} Sprawdź, czy bryły obwiedni **przecinają się z obiektami** i pokoloruj te, w przypadku których występują kolizje. {% endhint %}

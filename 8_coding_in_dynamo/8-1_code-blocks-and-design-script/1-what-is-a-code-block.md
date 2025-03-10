@@ -28,7 +28,7 @@ Bloki kodu są również elastyczne pod względem typów danych. Użytkownik mo�
 
 Na poniższej ilustracji pokazano „stary” i nieco pracochłonny sposób realizacji zadania: użytkownik wyszukuje węzeł w interfejsie, dodaje go do obszaru rysunku, a następnie wprowadza dane. Za pomocą bloku kodu użytkownik może kliknąć dwukrotnie obszar rysunku, aby pojawił się węzeł, i wpisać właściwy typ danych za pomocą podstawowej składni.
 
-Number, String i Formula to trzy przykłady węzłów Dynamo, które są najprawdopodobniej przestarzałe w porównaniu z węzłem Code Block.
+Number i String to dwa przykłady węzłów dodatku Dynamo, które są najprawdopodobniej przestarzałe w porównaniu z węzłem Code Block.
 
 ![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 

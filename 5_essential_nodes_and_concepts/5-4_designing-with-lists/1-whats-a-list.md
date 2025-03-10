@@ -77,6 +77,32 @@ Jak widać, istnieją różne sposoby rysowania linii między tymi zbiorami punk
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
+### Co to jest replikacja?
+
+Wyobraź sobie, że masz kiść winogron. Jeśli chcesz zrobić sok winogronowy, nie będziesz wyciskać każdego winogrona z osobna — włożysz je wszystkie naraz do sokowirówki. Replikacja w dodatku Dynamo działa w podobny sposób: zamiast stosować operację do jednego elementu naraz, dodatek Dynamo może zastosować ją do całej listy za jednym razem.
+
+Węzły Dynamo automatycznie rozpoznają, kiedy pracują z listami, i stosują operacje do wielu elementów. Oznacza to, że nie trzeba ręcznie przechodzić między kolejnymi elementami — dzieje się to automatycznie. Jak jednak dodatek Dynamo decyduje o sposobie przetwarzania list, gdy istnieje więcej niż jedna?
+
+Istnieją dwa główne sposoby:
+
+#### Replikacja kartezjańska
+Powiedzmy, że jesteś w kuchni i robisz soki owocowe. Masz listę owoców: `{apple, orange, pear}` i ustaloną ilość wody na każdy sok: `1 cup`. Z każdego owocu chcesz zrobić sok, używając takiej samej ilości wody. W tym przypadku do gry wchodzi replikacja kartezjańska.
+
+W dodatku Dynamo oznacza to, że wprowadzasz listę owoców do wejścia fruit (owoc) węzła Juice.Maker (sokowirówka), a wartość wejściowa water (woda) pozostaje stała i wynosi „1 cup” (1 filiżanka). Następnie węzeł przetwarza każdy owoc osobno, łącząc go ze stałą ilością wody. Wynik jest następujący:
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+Każdy owoc zostaje połączony z taką samą ilością wody.
+
+#### Replikacja na suwak
+Replikacja na suwak (zip) działa nieco inaczej. Gdyby istniały dwie listy, jedna dla owoców: `{apple, orange, pear}`, a druga dla ilości cukru: `{2 tbsp, 3 tbsp, 1 tbsp}`, replikacja na suwak (zip) połączyłaby odpowiednie elementy z poszczególnych list. Przykładowo:
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+Każdy owoc zostaje sparowany z odpowiednią ilością cukru.
+
+Aby dowiedzieć się więcej o tym, jak to działa, zapoznaj się z [przewodnikami po replikacji i skratowaniu](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1).
+
 ## Ćwiczenie
 
 > Pobierz plik przykładowy, klikając poniższe łącze.

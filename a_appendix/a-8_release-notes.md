@@ -1,0 +1,3 @@
+# Uwagi do wydania
+
+Aby zapoznać się z najnowszymi aktualizacjami, poprawkami błędów i nowymi funkcjami dodatku Dynamo, sprawdź [informacje o wersji](https://github.com/DynamoDS/Dynamo/wiki/Release-Notes) lub [archiwum informacji o wersji](https://github.com/DynamoDS/Dynamo/wiki/Release-Notes-Archive). To doskonały sposób, aby być na bieżąco z ulepszeniami i zmianami wprowadzanymi w poszczególnych wersjach.

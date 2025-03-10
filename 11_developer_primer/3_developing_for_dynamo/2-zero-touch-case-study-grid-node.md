@@ -1,4 +1,4 @@
-# Analiza przypadku Zero-Touch — węzeł siatki 
+# Analiza przypadku Zero-Touch — węzeł siatki
 
 Mamy już działający projekt programu Visual Studio, więc teraz omówimy tworzenie węzła niestandardowego, który tworzy prostokątną siatkę komórek. Mimo że można ją utworzyć za pomocą kilku węzłów standardowych, jest to przydatne narzędzie, które można łatwo umieścić w węźle Zero-Touch. Inaczej niż w przypadku linii siatki komórki można skalować względem punktów środkowych, można sprawdzać ich wierzchołki narożnikowe i można wbudowywać je w powierzchnie.
 
@@ -6,7 +6,7 @@ W tym przykładzie omówiono kilka funkcji i pojęć, które należy uwzględni�
 
 ![Wykres siatki prostokątnej](images/cover-image.jpg)
 
-#### Węzeł niestandardowy siatki prostokątnej <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Węzeł niestandardowy siatki prostokątnej <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Aby rozpocząć kompilowanie węzła siatki, utwórz nowy projekt biblioteki klas programu Visual Studio. Na stronie „Pierwsze kroki” można znaleźć szczegółowe omówienie sposobu konfigurowania projektu.
 
@@ -17,7 +17,7 @@ Aby rozpocząć kompilowanie węzła siatki, utwórz nowy projekt biblioteki kla
 > 1. Jako typ projektu wybierz `Class Library`
 > 2. Nadaj projektowi nazwę `CustomNodes`
 
-Ponieważ będziemy tworzyć geometrię, musimy odwołać się do odpowiedniego pakietu NuGet. Zainstaluj pakiet ZeroTouchLibrary za pomocą Menedżera pakietów Nuget. Ten pakiet jest niezbędny dla instrukcji `using Autodesk.DesignScript.Geometry;`.
+Ponieważ będziemy tworzyć geometrię, musimy odwołać się do odpowiedniego pakietu NuGet. Zainstaluj pakiet ZeroTouchLibrary za pomocą Menedżera pakietów NuGet. Ten pakiet jest niezbędny dla instrukcji `using Autodesk.DesignScript.Geometry;`.
 
 ![Pakiet ZeroTouchLibrary](images/vs-nugetpackage.jpg)
 
@@ -96,7 +96,7 @@ Sprawdź, czy w folderze `bin` projektu znajduje się plik `.dll`. Jeśli kompil
 > 2. Węzeł niestandardowy w obszarze rysunku
 > 3. Przycisk Add (Dodaj) umożliwiający dodanie pliku `.dll` do dodatku Dynamo
 
-#### Modyfikacje węzłów niestandardowych <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### Modyfikacje węzłów niestandardowych <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 W powyższym przykładzie utworzyliśmy dość prosty węzeł, który nie definiował wiele więcej oprócz metody `RectangularGrids`. Jednak może być konieczne utworzenie etykiet narzędzi dla portów wejściowych lub nadanie węzłowi podsumowania, jak w przypadku standardowych węzłów Dynamo. Dodanie tych elementów do węzłów niestandardowych ułatwia korzystanie z nich, zwłaszcza jeśli użytkownik chce wyszukiwać je w bibliotece.
 

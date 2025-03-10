@@ -1,10 +1,10 @@
-# Pierwsze kroki 
+# Pierwsze kroki
 
 Przed rozpoczęciem prac nad rozwiązaniem należy opracować solidne podstawy dla nowego projektu. W społeczności programistów dodatku Dynamo dostępnych jest kilka szablonów projektów, które doskonale nadają się do rozpoczęcia pracy, ale jeszcze cenniejsza jest umiejętność rozpoczynania projektu od podstaw. Tworzenie projektu od podstaw pozwala lepiej zrozumieć proces opracowywania rozwiązania.
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Tworzenie projektu programu Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Tworzenie projektu programu Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Program Visual Studio to zaawansowane środowisko IDE, w którym można tworzyć projekty, dodawać odwołania, kompilować biblioteki `.dlls` i debugować. Podczas tworzenia nowego projektu program Visual Studio tworzy również rozwiązanie, czyli strukturę organizacyjną projektów. W jednym rozwiązaniu może istnieć wiele projektów i można je kompilować razem. Aby utworzyć węzeł ZeroTouch, należy rozpocząć nowy projekt programu Visual Studio, w którym zostanie napisana biblioteka klas języka C# i zostanie skompilowany plik `.dll`.
 
@@ -84,7 +84,7 @@ Jeśli w bibliotece o nazwie `MyCustomNode` została utworzona kategoria, plik .
 > 1. Węzeł MyCustomNode w bibliotece dodatku Dynamo. Kategoria biblioteki jest określana przez nazwę pliku `.dll`.
 > 2. Węzeł SampleFunctions.MultiplyByTwo w obszarze rysunku.
 
-#### Jak dodatek Dynamo odczytuje klasy i metody <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Jak dodatek Dynamo odczytuje klasy i metody <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Gdy dodatek Dynamo wczytuje plik .dll, wszystkie publiczne metody statyczne zostają uwidocznione jako węzły. Konstruktory, metody i właściwości zostają przekształcone w węzły odpowiednio Create (tworzenia), Action (operacji) i Query (zapytań). W tym przykładzie z mnożeniem metoda `MultiplyByTwo()` staje się węzłem operacji w dodatku Dynamo. Dzieje się tak, ponieważ węzeł został nazwany na podstawie metody i klasy.
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dodatek Dynamo zaimportował metodę jako węzeł tworzenia
 
-#### Dodawanie odwołań do pakietów NuGet dodatku Dynamo <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Dodawanie odwołań do pakietów NuGet dodatku Dynamo <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 Ten węzeł mnożenia jest bardzo prosty i nie są wymagane żadne odwołania do dodatku Dynamo. Aby uzyskać dostęp do dowolnej funkcji dodatku Dynamo na przykład w celu utworzenia geometrii, należy odwołać się do pakietów NuGet dodatku Dynamo.
 

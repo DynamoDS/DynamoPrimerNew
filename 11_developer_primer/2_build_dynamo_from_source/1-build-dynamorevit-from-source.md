@@ -1,4 +1,4 @@
-# Kompilowanie dodatku DynamoRevit ze źródła 
+# Kompilowanie dodatku DynamoRevit ze źródła
 
 Pliki źródłowe dodatku DynamoRevit są również przechowywane w witrynie DynamoDS w serwisie GitHub dla programistów, którzy mogą współtworzyć dodatek i kompilować wersje beta. Kompilowanie dodatku DynamoRevit ze źródła zazwyczaj przebiega tak samo jak w przypadku dodatku Dynamo, z wyjątkiem kilku ważnych szczegółów:
 
@@ -13,9 +13,9 @@ W tym podręczniku używamy następujących składników:
 
 Aby zapewnić pomyślną kompilację, sklonujemy i skompilujemy repozytoria dodatku Dynamo i dodatku DynamoRevit, które będą używane w tym przewodniku.
 
-_Uwaga: ręczne skompilowanie dodatku Dynamo przed rozpoczęciem kompilowania dodatku DynamoRevit jest wymagane tylko w przypadku kompilowania dodatków Dynamo 1.x i DynamoRevit 1.x — nowsze wersje repozytorium DynamoRevit używają Menedżera pakietów NuGet do obsługi zależności dodatku Dynamo wymaganych do skompilowania. Mimo że skompilowanie dodatku DynamoRevit 2.x nie wymaga ręcznego ściągnięcia (pull) dodatku Dynamo, nadal są potrzebne podstawowe biblioteki (`dlls`) w innym miejscu, aby faktycznie uruchomić składnik `addin` dodatku DynamoRevit — warto więc jednak ściągnąć i skompilować dodatek Dynamo. Zobacz więcej poniżej:_ [_Kompilowanie repozytorium za pomocą programu Visual Studio_](#building-the-repository-using-Visual-Studio)
+_Uwaga: ręczne skompilowanie dodatku Dynamo przed rozpoczęciem kompilowania dodatku DynamoRevit jest wymagane tylko w przypadku kompilowania dodatków Dynamo 1.x i DynamoRevit 1.x — nowsze wersje repozytorium DynamoRevit używają Menedżera pakietów NuGet do obsługi zależności dodatku Dynamo wymaganych do skompilowania. Mimo że skompilowanie dodatku DynamoRevit 2.x nie wymaga ręcznego ściągnięcia (pull) dodatku Dynamo, nadal są potrzebne podstawowe biblioteki (`dlls`) w innym miejscu, aby faktycznie uruchomić składnik `add-in` dodatku DynamoRevit — warto więc jednak ściągnąć i skompilować dodatek Dynamo. Zobacz więcej poniżej:_ [_Kompilowanie repozytorium za pomocą programu Visual Studio_](#building-the-repository-using-Visual-Studio)
 
-#### Znajdowanie repozytorium DynamoRevit w serwisie Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Znajdowanie repozytorium DynamoRevit w serwisie Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
 Kod projektu DynamoRevit znajduje się w serwisie Github w repozytorium oddzielnym od podstawowego kodu źródłowego dodatku Dynamo. To repozytorium zawiera pliki źródłowe dla węzłów charakterystycznych dla programu Revit i dodatek programu Revit, który wczytuje dodatek Dynamo. Kompilacje dodatku DynamoRevit dla różnych wersji programu Revit (na przykład 2016, 2017 lub 2018) są zorganizowane jako gałęzie w repozytorium.
 
@@ -26,7 +26,7 @@ Kod projektu DynamoRevit znajduje się w serwisie Github w repozytorium oddzieln
 > 1. Klonowanie lub pobieranie repozytorium
 > 2. Gałęzie dodatku DynamoRevit odnoszą się do wersji programu Revit
 
-#### Klonowanie repozytorium przy użyciu narzędzia git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### Klonowanie repozytorium przy użyciu narzędzia git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
 W procesie podobnym do ściągania (pull) repozytorium dodatku Dynamo użyjemy polecenia git clone, aby sklonować dodatek DynamoRevit i określić gałąź, która odpowiada używanej wersji programu Revit. Aby rozpocząć, otworzymy interfejs wiersza polecenia i ustawimy jako bieżący katalog, do którego mają zostać sklonowane pliki.
 
@@ -54,9 +54,9 @@ Polecenie `git branch` sprawdza, w której gałęzi pracujemy, i wyświetla inne
 
 Ważne jest wybranie właściwej gałęzi repozytorium, aby zapewnić, że podczas kompilowania projektu w programie Visual Studio będzie on odwoływał się do zespołów we właściwej wersji katalogu instalacyjnego programu Revit, w szczególności do plików `RevitAPI.dll` i `RevitAPIUI.dll`.
 
-#### Kompilowanie repozytorium za pomocą programu Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### Kompilowanie repozytorium za pomocą programu Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
-Przed skompilowaniem repozytorium musimy przywrócić pakiety NuGet za pomocą pliku `restorepackages.bat` znajdującego się w folderze `src`. Ten plik bat wykorzystuje Menedżera pakietów [nuget](https://www.nuget.org) do ściągnięcia (pull) skompilowanych plików binarnych podstawowych elementów dodatku Dynamo wymaganych przez dodatek DynamoRevit. Można również zdecydować się na skompilowanie ich ręcznie, ale tylko w przypadku wprowadzania zmian w dodatku DynamoRevit, a nie w elementach podstawowych dodatku Dynamo. Dzięki temu można szybciej rozpocząć pracę. Ten plik należy uruchomić z uprawnieniami administratora.
+Przed skompilowaniem repozytorium musimy przywrócić pakiety NuGet za pomocą pliku `restorepackages.bat` znajdującego się w folderze `src`. Ten plik bat wykorzystuje Menedżera pakietów [NuGet](https://www.nuget.org) do ściągnięcia (pull) skompilowanych plików binarnych podstawowych elementów dodatku Dynamo wymaganych przez dodatek DynamoRevit. Można również zdecydować się na skompilowanie ich ręcznie, ale tylko w przypadku wprowadzania zmian w dodatku DynamoRevit, a nie w elementach podstawowych dodatku Dynamo. Dzięki temu można szybciej rozpocząć pracę. Ten plik należy uruchomić z uprawnieniami administratora.
 
 ![Uruchamianie z uprawnieniami administratora](images/fe-restorepackages.jpg)
 
@@ -75,7 +75,7 @@ Po przywróceniu pakietów otwórz plik rozwiązania programu Visual Studio `Dyn
 > 1. Wybierz opcję `Build > Build Solution`
 > 2. Sprawdź, czy kompilacja została zakończona pomyślnie w oknie danych wyjściowych. Komunikat powinien wyglądać tak: `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
 
-#### Uruchamianie kompilacji lokalnej dodatku DynamoRevit w programie Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### Uruchamianie kompilacji lokalnej dodatku DynamoRevit w programie Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
 Program Revit wymaga pliku dodatku w celu rozpoznania dodatku DynamoRevit. [Instalator](http://dynamobim.org/download/) tworzy go automatycznie. W trakcie opracowywania musimy ręcznie utworzyć plik dodatku, który wskazuje kompilację dodatku DynamoRevit, której chcemy użyć, a konkretnie zespół `DynamoRevitDS.dll`. Musimy również wskazać dodatkowi DynamoRevit kompilację dodatku Dynamo.
 
@@ -120,7 +120,7 @@ Ponadto musimy usunąć istniejący dodatek Dynamo dostarczany z programem Revit
 
 ![Foldery DynamoForRevit i DynamoPlayerforRevit](images/fe-dynamo-folders-remove.jpg)
 
-Drugim krokiem jest dodanie ścieżki pliku dla zespołów podstawowych dodatku Dynamo do pliku `Dynamo.config` w folderze `bin` dodatku DynamoRevit. Dodatek DynamoRevit wczyta je po otwarciu go w programie Revit. Ten plik konfiguracji umożliwia wskazanie dodatkowi DynamoRevit różnych wersji dodatku Dynamo na potrzeby opracowywania i testowania zmian zarówno w dodatku podstawowym, jak i w dodatku DynamoRevit.
+Drugim krokiem jest dodanie ścieżki pliku dla zespołów podstawowych dodatku Dynamo do pliku `Dynamo.config` w folderze `bin` dodatku DynamoRevit. Dodatek DynamoRevit wczyta je po otwarciu go w programie Revit. Ten plik konfiguracyjnego umożliwia wskazanie dodatkowi DynamoRevit różnych wersji dodatku Dynamo na potrzeby opracowywania i testowania zmian zarówno w dodatku podstawowym, jak i w dodatku DynamoRevit.
 
 Kod powinien wyglądać następująco:
 
@@ -145,9 +145,9 @@ Teraz po otwarciu programu Revit na karcie Zarządzaj powinien istnieć dodatek 
 > 2. Kliknij ikonę dodatku Dynamo
 > 3. Wystąpienie dodatku DynamoRevit
 
-Jeśli pojawia się okno dialogowe błędu brakujących zespołów, prawdopodobnie występuje niezgodność między wersjami dodatku DynamoCore, przy których wykonywano kompilację, a tymi, które są wczytywane w środowisku wykonywania. Na przykład dodatek DynamoRevit z najnowszymi pakietami beta w wersji 2.0 dodatku DynamoCore nie będzie działać w przypadku uruchomienia go za pomocą dodatku bibliotek dll dodatku Dynamo 1.3. Upewnij się, że oba repozytoria są w tej samej wersji, a dodatek DynamoRevit ściąga (pull) zgodną wersję zależności nuget. Są one zdefiniowane w pliku `package.json` repozytorium DynamoRevit.
+Jeśli pojawia się okno dialogowe błędu brakujących zespołów, prawdopodobnie występuje niezgodność między wersjami dodatku DynamoCore, przy których wykonywano kompilację, a tymi, które są wczytywane w środowisku wykonywania. Na przykład dodatek DynamoRevit z najnowszymi pakietami beta w wersji 2.0 dodatku DynamoCore nie będzie działać w przypadku uruchomienia go za pomocą dodatku bibliotek dll dodatku Dynamo 1.3. Upewnij się, że oba repozytoria są w tej samej wersji, a dodatek DynamoRevit ściąga (pull) zgodną wersję zależności NuGet. Są one zdefiniowane w pliku `package.json` repozytorium DynamoRevit.
 
-#### Debugowanie dodatku DynamoRevit za pomocą programu Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### Debugowanie dodatku DynamoRevit za pomocą programu Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
 W poprzedniej sekcji, **Kompilowanie dodatku Dynamo ze źródła**, krótko omówiono debugowanie w programie Visual Studio i sposób dołączania programu Visual Studio do procesu. Używając wyjątku w węźle Wall.ByCurveAndHeight jako przykładu, omówimy sposób dołączania do procesu, ustawiania punktów przerwania, krokowe wykonywanie kodu i używania stosu wywołań w celu określenia źródła wyjątku. Te narzędzia debugowania mają ogólne zastosowanie do procesów roboczych opracowywania rozwiązań .net i warto zapoznać się z nimi w zakresie wykraczającym poza ten podręcznik.
 
@@ -210,7 +210,7 @@ Ponieważ nie jest to biblioteka open source, nie możemy tam wprowadzać zmian.
 
 Ten proces można zastosować do wszystkich plików źródłowych, z którymi pracujemy. W przypadku tworzenia biblioteki węzłów Zero-Touch dla programu Dynamo Studio można otworzyć źródło biblioteki i dołączyć proces dodatku Dynamo w celu debugowania tej biblioteki węzłów. Nawet jeśli wszystko działa doskonale, debugowanie to doskonały sposób na przeglądanie kodu i analizowanie jego działania.
 
-#### Ściąganie (pull) najnowszej kompilacji <a href="#pull-latest-build" id="pull-latest-build"></a>
+### Ściąganie (pull) najnowszej kompilacji <a href="#pull-latest-build" id="pull-latest-build"></a>
 
 Proces ten jest niemal identyczny jak w przypadku ściągania (pull) zmian dla dodatku Dynamo, ale należy upewnić się, że jest używana właściwa gałąź. Użyj polecenia `git branch` w repozytorium DynamoRevit, aby sprawdzić, które gałęzie są dostępne lokalnie i które są obecnie wyrejestrowane.
 

@@ -39,9 +39,7 @@ Operacje logiczne są złożone i ich obliczanie może być powolne. Za pomocą 
 >
 > 4\. Wszystkie zależne węzły i skojarzone podglądy geometrii zostaną zaktualizowane i wrócą do standardowego trybu podglądu.
 
-{% hint style="info" %}
- Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). {% endhint %}
 
 ## Bliższe spojrzenie na...
 

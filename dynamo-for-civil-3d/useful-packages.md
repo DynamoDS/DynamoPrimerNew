@@ -2,9 +2,7 @@
 
 Pakiety dodatku Dynamo to zestawy narzędzi opracowane przez strony trzecie w celu rozszerzenia podstawowej funkcjonalności dodatku Dynamo. Są one dostępne dla wszystkich i można je pobrać kliknięciem przycisku.
 
-{% hint style="info" %}
- Aby uzyskać więcej informacji na temat rozpoczynania pracy z pakietami, zapoznaj się z sekcją [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Aby uzyskać więcej informacji na temat rozpoczynania pracy z pakietami, zapoznaj się z sekcją [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention"). {% endhint %}
 
 Oto lista najpopularniejszych pakietów, które pozwalają przenieść wykresy dodatku Dynamo for Civil 3D na wyższy poziom.
 

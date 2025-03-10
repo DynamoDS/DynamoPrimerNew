@@ -16,9 +16,7 @@ Przeglądanie tych kategorii jest najszybszym sposobem zrozumienia hierarchii te
 
 Przeglądaj bibliotekę, klikając poszczególne menu, aby rozwijać kategorie i ich podkategorie
 
-{% hint style="info" %}
- Geometria to świetne menu, które doskonale nadają się do rozpoczęcia przeglądania, ponieważ zawierają największą liczbę węzłów. 
-{% endhint %}
+{% hint style="info" %} Geometria to świetne menu, które doskonale nadają się do rozpoczęcia przeglądania, ponieważ zawierają największą liczbę węzłów. {% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -29,13 +27,13 @@ Przeglądaj bibliotekę, klikając poszczególne menu, aby rozwijać kategorie i
 
 Zapewnia to dodatkowe skategoryzowanie węzłów należących do tej samej podkategorii w zależności od tego, czy węzły **tworzą** dane, wykonują **operacje**, czy wysyłają **zapytania** dotyczące danych.
 
-* ![](<images/3-2/user interface - create.jpg>) **Create — węzły tworzenia**: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
-* ![](<images/3-2/user interface - action.jpg>) **Action — węzły operacji**: wykonują operacje na obiekcie. Np. skalowanie okręgu.
-* ![](<images/3-2/user interface - query.jpg>) **Query — węzły zapytań**: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
+* \![](<images/3-2/user interface - create.jpg>) **Create — węzły tworzenia**: tworzą lub konstruują geometrię od podstaw. Np. okrąg.
+* \![](<images/3-2/user interface - action.jpg>) **Action — węzły operacji**: wykonują operacje na obiekcie. Np. skalowanie okręgu.
+* \![](<images/3-2/user interface - query.jpg>) **Query — węzły zapytań**: pobierają właściwość obiektu, który już istnieje. Np. pobieranie promienia okręgu.
 
 Umieść wskaźnik myszy na węźle, aby wyświetlić informacje bardziej szczegółowe od jego nazwy i ikony. Dzięki temu można szybko zrozumieć, do czego służy węzeł, jakich wejść wymaga i jakie będą jego dane wyjściowe.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Opis — prosty opis węzła
 > 2. Ikona — większa wersja ikony w menu Biblioteka
@@ -48,7 +46,7 @@ Jeśli dosyć dobrze wiadomo, jaki węzeł ma zostać dodany do obszaru roboczeg
 
 Wybierz, klikając węzeł, który chcesz dodać, lub naciśnij klawisz Enter, aby dodać wyróżnione węzły do środka obszaru roboczego.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Wyszukiwanie według hierarchii
 
@@ -117,9 +115,7 @@ Można też wyświetlić wyniki geometrii za pomocą węzła **Watch3D**.
 
 Oba te elementy znajdują się w kategorii widoku w bibliotece podstawowej.
 
-{% hint style="info" %}
- Wskazówka: czasami podgląd 3D może rozpraszać, gdy program wizualny zawiera wiele węzłów. Warto rozważyć wyczyszczenie zaznaczenia opcji Wyświetlanie podglądu tła w menu Ustawienia i użycie zamiast tego węzła Watch3D do wyświetlania podglądu geometrii. 
-{% endhint %}
+{% hint style="info" %} Wskazówka: czasami podgląd 3D może rozpraszać, gdy program wizualny zawiera wiele węzłów. Warto rozważyć wyczyszczenie zaznaczenia opcji Wyświetlanie podglądu tła w menu Ustawienia i użycie zamiast tego węzła Watch3D do wyświetlania podglądu geometrii. {% endhint %}
 
 #### Code Block
 
@@ -129,7 +125,7 @@ Bloków kodu można też używać jako skrótów do definiowania wejścia liczbo
 
 Oto prosty przykład (z instrukcjami) użycia węzła Code Block w skrypcie.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Kliknij dwukrotnie, aby utworzyć węzeł Code Block
 2. `Circle.ByCenterPointRadius(x,y);`Typ

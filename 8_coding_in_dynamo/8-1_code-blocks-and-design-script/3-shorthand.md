@@ -94,7 +94,7 @@ W tym kroku użyjemy pierwszej funkcji do przesunięcia siatki punktów w górę
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. Zamiast używać węzła formuły, użyjemy węzła **Code Block** z wierszem: `(0..Math.Sin(x*360)..#50)*5;`. Krótkie objaśnienie: definiujemy zakres z formułą w jego wnętrzu. Ta formuła jest funkcją sinus. Funkcja sinus przyjmuje w dodatku Dynamo dane wejściowe w stopniach, więc aby uzyskać pełny kształt funkcji sinus, należy przemnożyć wartości x (jest to wejście zakresu od 0 do 1) przez 360. Następnie chcemy uzyskać taką samą liczbę podziałów, ile jest punktów siatki sterującej dla każdego wiersza, dlatego zdefiniujemy pięćdziesiąt podziałów podrzędnych za pomocą instrukcji #50. Na koniec: mnożnik 5 po prostu zwiększa amplitudę przekształcenia, dzięki czemu możemy zobaczyć efekt w podglądzie Dynamo.
+> 1. Używamy węzła **Code Block** z wierszem: `(0..Math.Sin(x*360)..#50)*5;`. Krótkie objaśnienie: definiujemy zakres z formułą w jego wnętrzu. Ta formuła jest funkcją sinus. Funkcja sinus przyjmuje w dodatku Dynamo dane wejściowe w stopniach, więc aby uzyskać pełny kształt funkcji sinus, należy przemnożyć wartości x (jest to wejście zakresu od 0 do 1) przez 360. Następnie chcemy uzyskać taką samą liczbę podziałów, ile jest punktów siatki sterującej dla każdego wiersza, dlatego zdefiniujemy pięćdziesiąt podziałów podrzędnych za pomocą instrukcji #50. Na koniec: mnożnik 5 po prostu zwiększa amplitudę przekształcenia, dzięki czemu możemy zobaczyć efekt w podglądzie Dynamo.
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -140,6 +140,6 @@ Przyglądając się wykresowi wizualnemu, możemy wyróżnić bloki kodu i przej
 >
 > 2\. Drugi węzeł **Code Block** zastępuje węzeł **Number Range**.
 >
-> 3\. Trzeci węzeł **Code Block** zastępuje węzeł **Formula** (jak również węzły **List.Transpose**, **List.Count** i **Number Range**).
+> 3\. Trzeci węzeł **Code Block** zastępuje węzły **List.Transpose**, **List.Count** i **Number Range**.
 >
 > 4\. Czwarty węzeł **Code Block** stosuje zapytania do listy list, zastępując węzeł **List.GetItemAtIndex**.

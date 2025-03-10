@@ -8,10 +8,10 @@ Operatory to zestaw komponentów, w których używane są funkcje algebraiczne z
 
 | Ikona                                                  | Nazwa (składnia)     | Dane wejściowe                     | Dane wyjściowe      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Dodawanie (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Odejmowanie (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Mnożenie (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dzielenie (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ćwiczenie: formuła złotej spirali
 
@@ -35,9 +35,13 @@ Połącz operatory i zmienne, aby utworzyć bardziej złożone zależności za p
 
 Złota spirala jest zdefiniowana jako równanie:
 
-$$ x = r cos θ = a cos θ e^{bθ} $$
+$$
+x = r cos θ = a cos θ e^{bθ}
+$$
 
-$$ y = r sin θ = a sin θe^{bθ} $$
+$$
+y = r sin θ = a sin θe^{bθ}
+$$
 
 Poniższa ilustracja przedstawia złotą spiralę w postaci programowania wizualnego. Podczas przechodzenia przez grupę węzłów należy zwrócić uwagę na analogię pomiędzy programem wizualnym a równaniem pisemnym.
 
@@ -87,7 +91,7 @@ Mamy już powłokę nautilusa — przejdźmy do siatek parametrycznych. Użyjemy
 
 Punktem wyjścia będzie ten sam krok co w poprzednim ćwiczeniu: utworzenie szyku spirali punktów za pomocą węzła **Point.ByCoordinates**.
 
-![](../images/5-3/2/math-part IV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 Następnie wykonaj te minikroki, aby wygenerować serię spiral o różnych obrotach.
 

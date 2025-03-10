@@ -21,7 +21,7 @@ Twórcy rozszerzeń również mogą być zmuszeni do wprowadzenia pewnych zmian 
 
 ### Typowe problemy: <a href="#common-issues" id="common-issues"></a>
 
-1\) Po otwarciu wykresu niektóre węzły mają wiele portów o tej samej nazwie, mimo że wykres wyglądał dobrze podczas zapisywania. Ten problem może mieć kilka przyczyn.
+1) Po otwarciu wykresu niektóre węzły mają wiele portów o tej samej nazwie, mimo że wykres wyglądał dobrze podczas zapisywania. Ten problem może mieć kilka przyczyn.
 
 Typową przyczyną jest to, że węzeł utworzono za pomocą konstruktora ponownie tworzącego porty. Zamiast tego należało użyć konstruktora wczytującego porty. Te konstruktory mają zwykle oznaczenie `[JsonConstructor]` _zobacz przykłady poniżej_
 
@@ -33,7 +33,7 @@ Inna możliwa przyczyna:
 * W tym samym czasie do tego samego procesu wczytano dwie wersje JSON.net, co spowodowało błąd środowiska uruchomieniowego .NET, więc nie można było poprawnie użyć atrybutu `[JsonConstructor]` do oznaczenia konstruktora.
 * Do pakietu dołączono plik DynamoServices.dll w wersji innej niż bieżąca wersja dodatku Dynamo i powoduje to, że środowisko uruchomieniowe .NET nie może zidentyfikować atrybutu `[MultiReturn]`, więc dla węzłów Zero-Touch oznaczonych różnymi atrybutami nie można zastosować tych atrybutów. Może się okazać, że węzeł zwraca jeden słownik wyjściowy zamiast wielu portów.
 
-2\) Całkowicie brakuje węzłów po wczytaniu wykresu z pewnymi błędami w konsoli.
+2) Całkowicie brakuje węzłów po wczytaniu wykresu z pewnymi błędami w konsoli.
 
 * Może tak się zdarzyć, jeśli z jakiegoś powodu nie powiedzie się deserializacja. Zaleca się serializowanie tylko potrzebnych właściwości. Można używać atrybutu `[JsonIgnore]` w przypadku złożonych właściwości, których nie trzeba wczytywać ani zapisywać, aby je zignorować. Chodzi o właściwości takie jak `function pointer, delegate, action,` czy `event`. Nie należy ich serializować, ponieważ zazwyczaj nie można ich zdeserializować i powodują one błąd w trakcie wykonywania.
 

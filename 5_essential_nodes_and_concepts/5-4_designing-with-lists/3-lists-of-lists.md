@@ -111,7 +111,7 @@ Węzeł **List.Count** liczy wszystkie elementy na liście. Użyjemy go, aby zad
 > 3. Połącz poszczególne wiersze węzła Code Block odpowiednio z danymi wejściowymi _X_ i _Y_ węzła **Point.ByCoordinates**. Kliknij węzeł prawym przyciskiem myszy, wybierz opcję Skratowanie i wybierz pozycję _Iloczyn wektorowy_. Zostanie utworzona siatka punktów. Ustawiliśmy zakres od –50 do 50, dlatego odpowiada to domyślnej siatce dodatku Dynamo.
 > 4. Węzeł _**Watch**_ ujawnia utworzone punkty. Przyjrzyjmy się strukturze danych. Powstała lista list. Każda lista odpowiada wierszowi punktów siatki.
 
-![Ćwiczenie](<../images/5-4/3/lists of lists - map 02.jpg>)
+\![Ćwiczenie](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Połącz węzeł **List.Count** z wyjściem węzła obserwacyjnego z poprzedniego kroku.
 > 2. Połącz węzeł **Watch** z wyjściem węzła **List.Count**.
@@ -150,9 +150,7 @@ Następnie użyjemy węzła **List.Combine**, aby zastosować funkcję do obiekt
 
 Po zakończeniu te 2 zestawy punktów są spakowane/sparowane za pomocą funkcji **Line.ByStartPointEndPoint** i powodują zwrócenie 10 linii w dodatku Dynamo.
 
-{% hint style="info" %}
- Zapoznaj się z ćwiczeniem w części dotyczącej list n-wymiarowych, aby zobaczyć inny przykład użycia węzła List.Combine. 
-{% endhint %}
+{% hint style="info" %} Zapoznaj się z ćwiczeniem w części dotyczącej list n-wymiarowych, aby zobaczyć inny przykład użycia węzła List.Combine. {% endhint %}
 
 ### List@Level
 
@@ -278,7 +276,7 @@ Mając zmodyfikowaną listę, musimy wstawić ją z powrotem do oryginalnej stru
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. W analogiczny sposób użyjemy węzła **List.ReplaceItemAtIndex**, aby wstawić naszą listę w miejsce środkowej listy.
-> 2. Węzły **Code Block** definiujące indeks tych dwóch węzłów mają numery 1 i 2, co odpowiada oryginalnemu zapytaniu w węźle **Code Block** (_points[1][2]_).
+> 2. Węzły **Code Block**__ definiujące indeks tych dwóch węzłów mają numery 1 i 2, co odpowiada oryginalnemu zapytaniu w węźle **Code Block** (_points[1][2]_).
 > 3. Po wybraniu listy o _indeksie 1_ zobaczymy tę strukturę danych podświetloną w podglądzie dodatku Dynamo. Pomyślnie scaliliśmy przesunięty punkt z oryginalną strukturą danych.
 
 Istnieją różne sposoby uzyskania powierzchni z tego zestawu punktów. W tym przypadku utworzymy ją przez wyciągnięcie połączonych krzywych.

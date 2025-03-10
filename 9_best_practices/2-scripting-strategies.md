@@ -23,9 +23,7 @@ Skrypty tekstowe pozwalają tworzyć relacje o wyższej złożoności niż progr
 | **Python**         | Tak         | Tak           | Częściowo          | Tak                | Nie            |
 | **ZeroTouch (C#)** | Nie          | Nie            | Nie                 | Tak                | Nie            |
 
-{% hint style="info" %}
- [Materiały referencyjne dotyczące skryptów](3-scripting-reference.md) zawierają listę funkcji wszystkich bibliotek dodatku Dynamo. 
-{% endhint %}
+{% hint style="info" %} [Materiały referencyjne dotyczące skryptów](3-scripting-reference.md) zawierają listę funkcji wszystkich bibliotek dodatku Dynamo. {% endhint %}
 
 ### Myślenie parametryczne
 
@@ -65,9 +63,7 @@ Podczas tworzenia skryptów w dodatku Dynamo, który jako środowisko jest opart
 > 2. Zmienne wewnętrzne skryptu.
 > 3. Pętla realizująca funkcję skryptu przy użyciu tych danych i zmiennych.
 
-{% hint style="info" %}
- Wskazówka: warto zająć się całym procesem równie uważnie jak samym rozwiązaniem. 
-{% endhint %}
+{% hint style="info" %} Wskazówka: warto zająć się całym procesem równie uważnie jak samym rozwiązaniem. {% endhint %}
 
 ### **Ograniczanie powtórzeń (reguła DRY):**
 
@@ -94,9 +90,7 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}
- Wskazówka: zanim powielisz elementy skryptu (na przykład stałą w powyższym przykładzie), zastanów się, czy można zamiast tego użyć połączenia z elementem źródłowym. 
-{% endhint %}
+{% hint style="info" %} Wskazówka: zanim powielisz elementy skryptu (na przykład stałą w powyższym przykładzie), zastanów się, czy można zamiast tego użyć połączenia z elementem źródłowym. {% endhint %}
 
 ### Konstrukcje modułowe
 
@@ -201,9 +195,7 @@ Podczas pracy nad skryptami tekstowymi w dodatku Dynamo warto w sposób ciągły
 * Czasami tylko przypadki brzegowe pozwalają wykryć błędy wskazujące na ukryty problem w skrypcie.
   * Po zbadaniu, co wywołało błąd, można zdecydować, czy należy rozwiązać go wewnętrznie, czy trzeba zmienić definicję domeny parametrów w celu jego uniknięcia.
 
-{% hint style="info" %}
- Wskazówka: zawsze należy zakładać, że użytkownik użyje wszystkich kombinacji wszystkich wartości wejściowych, do których ma dostęp. Zapobiega to przykrym niespodziankom. 
-{% endhint %}
+{% hint style="info" %} Wskazówka: zawsze należy zakładać, że użytkownik użyje wszystkich kombinacji wszystkich wartości wejściowych, do których ma dostęp. Zapobiega to przykrym niespodziankom. {% endhint %}
 
 ### Efektywne debugowanie
 

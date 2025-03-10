@@ -70,7 +70,7 @@ Kontynuujmy dodawanie węzłów i połączeń do logiki w celu zdefiniowania waz
 
 Skopiujmy te węzły 4 razy, aby uzyskać okręgi definiujące powierzchnię. Zmień nazwy suwaków Number Slider, jak pokazano poniżej.
 
-![](<../images/10-1/1/vase4 (1).png>)
+\![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Okręgi są tworzone za pomocą punktu środkowego i promienia
 
@@ -92,7 +92,7 @@ Aby utworzyć powierzchnię za pomocą węzła **Surface.ByLoft**, należy poł�
 
 Wyłączmy również podgląd w innych węzłach, aby wyświetlić tylko wyświetlanie Surface.ByLoft.
 
-![](<../images/10-1/1/vase6 (1).png>)
+\![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Przez wyciągnięcie przekształconych okręgów zostanie utworzona powierzchnia.
 

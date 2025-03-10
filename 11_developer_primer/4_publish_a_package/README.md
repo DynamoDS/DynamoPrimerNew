@@ -1,4 +1,4 @@
-# Publikowanie pakietu 
+# Publikowanie pakietu
 
 ### Publikowanie pakietu <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -63,8 +63,55 @@ Aktualizowanie pakietu jest procesem podobnym do publikowania. Otwórz Menedżer
 
 #### Klient internetowy Menedżera pakietów <a href="#package-manager-web-client" id="package-manager-web-client"></a>
 
-Klient internetowy Menedżera pakietów służy wyłącznie do wyszukiwania i wyświetlania danych pakietu, na przykład informacji o wersjach i statystyki pobierania.
+Klient internetowy Menadżera pakietów umożliwia użytkownikom wyszukiwanie i wyświetlanie danych pakietów, w tym przechowywania wersji, statystyk pobierania i innych istotnych informacji. Ponadto autorzy pakietów mogą się logować, aby aktualizować szczegóły pakietu, takie jak informacje o zgodności, bezpośrednio za pomocą klienta internetowego.
+
+Aby uzyskać więcej informacji na temat tych funkcji, zobacz wpis w blogu tutaj: [https://dynamobim.org/discover-the-new-dynamo-package-management-experience/](https://dynamobim.org/discover-the-new-dynamo-package-management-experience/).
 
 Dostęp do klienta internetowego Menedżera pakietów można uzyskać za pomocą tego linku: [https://dynamopackages.com/](https://dynamopackages.com)
 
 ![Klient internetowy Menedżera pakietów ](images/packagemanager-browser.jpg)
+
+##### Aktualizowanie szczegółów pakietu
+
+Autorzy mogą edytować opis pakietu, link do witryny internetowej i link do repozytorium, wykonując następujące kroki:  
+
+> 1. W obszarze **Moje pakiety** wybierz pakiet i kliknij opcję **Edytuj szczegóły pakietu**.  
+> 2. Dodaj lub zmodyfikuj łącza **Witryna** i **Repozytorium** przy użyciu odpowiednich pól.  
+> 3. Zaktualizuj pole **Opis pakietu** zgodnie z potrzebami.  
+> 4. Kliknij przycisk **Zapisz zmiany**, aby zastosować aktualizacje.  
+
+ **Uwaga**: odświeżenie w celu uwzględnienia aktualizacji w Menedżerze pakietów w dodatku Dynamo może potrwać do 15 minut, ponieważ zastosowanie aktualizacji serwera może zająć trochę czasu. Podejmowane są działania mające na celu zmniejszenie tego opóźnienia.  
+
+ ![Nowy interfejs użytkownika umożliwiający aktualizację szczegółów pakietów dla opublikowanych pakietów](images/Package-Manager_Image_5.png)
+
+##### Edytowanie informacji o zgodności dotyczących opublikowanych wersji pakietu  
+
+Informacje o zgodności można aktualizować wstecz dla opublikowanych wcześniej wersji pakietów. Wykonaj następujące czynności:  
+
+![Edycja informacji o zgodności dotyczących opublikowanych pakietów — krok 1](images/Package-Manager_Image_6.png)
+
+**Krok 1:**  
+
+1. Kliknij wersję pakietu, którą chcesz zaktualizować.  
+2. Lista **Zależy od** zostanie automatycznie wypełniona pakietami, od których zależy pakiet.  
+3. Kliknij ikonę ołówka obok pozycji **Zgodność**, aby otworzyć proces **Edycja informacji o zgodności**.  
+
+**Krok 2:**  
+
+Postępuj zgodnie z poniższym schematem blokowym i zapoznaj się z poniższą tabelą, aby zrozumieć, która opcja najlepiej pasuje do Twojego pakietu.
+
+![Którą opcję wybrać dla procesu „Edycja informacji o zgodności”](images/Package-Manager_Image_7.png)
+
+Przeanalizujmy kilka przykładów, aby omówić niektóre scenariusze:
+
+**Pakiet przykładowy nr 1** — Civil Connection: ten pakiet ma zależności interfejsu API dotyczące zarówno programu Revit, jak i programu Civil 3D. Ponadto nie zawiera kolekcji węzłów podstawowych (np. funkcji geometrii, funkcji matematycznych ani zarządzania listami). Tak więc w tym przypadku idealnym rozwiązaniem byłoby skorzystanie z opcji 1. Pakiet będzie wyświetlany jako zgodny w programach Revit i Civil 3D zgodnych z zakresem wersji i/lub listą poszczególnych wersji.
+
+**Pakiet przykładowy nr 2** — Rhythm: ten pakiet to kolekcja węzłów charakterystycznych dla programu Revit wraz z kolekcją węzłów podstawowych. W tym przypadku pakiet ma zależności od oprogramowania nadrzędnego. Ale zawiera również węzły podstawowe, które będą działać w dodatku Dynamo Core. Tak więc w tym przypadku idealnym rozwiązaniem byłaby opcja 2. Pakiet będzie wyświetlany jako zgodny w programie Revit i dodatku Dynamo Core (nazywanym również Dynamo Sandbox), które są zgodne z zakresem wersji i/lub listą poszczególnych wersji.
+
+**Pakiet przykładowy nr 3** — Mesh Toolkit: ten pakiet jest pakietem Dynamo Core stanowiącym kolekcję węzłów geometrii, która nie ma zależności od oprogramowania nadrzędnego. Tak więc w tym przypadku idealnym rozwiązaniem byłaby opcja 3. Pakiet będzie wyświetlany jako zgodny w dodatku Dynamo i wszystkich środowiskach nadrzędnych zgodnych z zakresem wersji i/lub listą poszczególnych wersji.
+
+![Opcje edycji informacji o zgodności](images/Package-Manager_Image_8.png)
+
+W zależności od wybranej opcji zostaną wyświetlone pola specyficzne dla dodatku Dynamo i/lub programu nadrzędnego, jak pokazano na poniższej ilustracji.
+
+![Edycja informacji o zgodności — krok 2](images/Package-Manager_Image_9.png)

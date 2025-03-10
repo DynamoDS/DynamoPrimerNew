@@ -67,7 +67,7 @@ Otwórzmy plik „SphereUnfold”.
 
 Po otwarciu pliku i naciśnięciu przycisku „Uruchom” w solwerze dostępna jest rozwinięta sfera. Pliki przykładowe są przydatne do nauki pracy z nowym pakietem Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Przeglądanie i wyświetlanie informacji o pakiecie
 
@@ -79,7 +79,7 @@ Aby uzyskać dostęp do większej ilości szczegółowych informacji dotyczącyc
 
 ### Witryna Dynamo Package Manager
 
-Innym sposobem odkrywania pakietów Dynamo jest przeglądanie witryny [Dynamo Package Manager](http://dynamopackages.com). Tutaj można znaleźć statystyki dotyczące pakietów i tablice wiodących autorów. Pliki pakietu można również pobrać z Menedżera pakietów Dynamo, ale robienie tego bezpośrednio z poziomu dodatku Dynamo stanowi płynniejszy proces.
+Innym sposobem odkrywania pakietów Dynamo jest przeglądanie witryny [Dynamo Package Manager](http://dynamopackages.com). W tym miejscu można znaleźć zależności pakietów i informacje o zgodności hosta/wersji udostępnione przez autorów pakietów. Pliki pakietu można również pobrać z Menedżera pakietów Dynamo, ale robienie tego bezpośrednio z poziomu dodatku Dynamo stanowi płynniejszy proces.
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,53 @@ Jeśli chcesz zobaczyć, gdzie przechowywane są pliki pakietu, w górnym obszar
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 Domyślnie pakiety są instalowane w położeniu podobnym do tej ścieżki folderu: _C:/Users/[nazwa_użytkownika]/AppData/Roaming/Dynamo/[wersja dodatku Dynamo]_.
+
+### Konfigurowanie lokalizacji współdzielonej pakietów w biurze
+
+Dla użytkowników pytających, czy można wdrożyć dodatek Dynamo (w dowolnej postaci) ze wstępnie dołączonymi pakietami: sposobem na rozwiązanie tego problemu i zapewnienie kontroli w centralnym położeniu dla wszystkich użytkowników z instalacjami dodatku Dynamo jest dodanie do każdej instalacji niestandardowej ścieżki pakietów.
+
+**Dodawanie folderu sieciowego, w którym menedżer BIM lub inne osoby mogą nadzorować umieszczanie w folderze pakietów zatwierdzonych przez biuro**  
+
+W interfejsie użytkownika osobnej aplikacji przejdź do obszaru *Dynamo -> Preferencje -> Ustawienia pakietów -> Lokalizacje plików węzłów i pakietów*. W oknie dialogowym naciśnij przycisk „Dodaj ścieżkę” i przejdź do lokalizacji sieciowej zasobu pakietów współdzielonych. 
+ 
+Ponieważ proces jest zautomatyzowany, obejmuje dodanie informacji do pliku konfiguracyjnego instalowanego razem z dodatkiem Dynamo:  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+Domyślna konfiguracja dodatku Dynamo dla programu Revit to:
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+Dodanie lokalizacji niestandardowej wyglądałoby następująco:  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+Centralnym zarządzaniem tym folderem można również sterować poprzez ustawienie go jako tylko do odczytu.
+
+### Wczytywanie pakietów z plikami binarnymi z lokalizacji sieciowej
+
+#### Scenariusz
+
+Organizacja może chcieć ustandaryzować pakiety instalowane przez różne stacje robocze i użytkowników. Sposobem na to może być instalowanie tych pakietów za pomocą narzędzia *Dynamo -> Preferencje -> Ustawienia pakietów -> Lokalizacje plików węzłów i pakietów*, wybranie folderu sieciowego jako lokalizacji instalacji i dodanie tej ścieżki na stacjach roboczych do `Manage Node and Package Paths`.
+
+#### Problem
+
+Chociaż ten scenariusz działa poprawnie w przypadku pakietów zawierających tylko węzły niestandardowe, może nie sprawdzać się w przypadku pakietów zawierających pliki binarne, takich jak węzły Zero Touch. Ten problem jest spowodowany przez [mechanizmy zabezpieczeń](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location) platformy .NET Framework używane w przypadku wczytywania zespołów pochodzących z lokalizacji sieciowej. Niestety użycie elementu konfiguracyjnego `loadFromRemoteSources`, jak sugeruje się w wątku dostępnym za pośrednictwem linku, nie jest możliwym rozwiązaniem dla dodatku Dynamo, ponieważ jest on dystrybuowany jako komponent, a nie jako aplikacja.
+
+#### Obejście problemu:
+
+Jednym z możliwych obejść tego problemu jest użycie zamapowanego dysku sieciowego wskazującego lokalizację sieciową i skonfigurowanie na stacjach roboczych odwołania do tej ścieżki. Czynności umożliwiające utworzenie zamapowanego dysku sieciowego opisano [tutaj](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
 
 ### Dalsze kroki z pakietami
 

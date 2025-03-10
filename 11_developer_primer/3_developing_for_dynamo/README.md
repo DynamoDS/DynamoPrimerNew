@@ -6,11 +6,11 @@ Platformę Dynamo zaprojektowano tak, aby umożliwić współtworzenie wszystkim
 
 > Trzy środowiska programistyczne: program Visual Studio, Edytor języka Python i język Code Block DesignScript
 
-#### Jakie mam opcje? <a href="#what-are-my-options" id="what-are-my-options"></a>
+### Jakie mam opcje? <a href="#what-are-my-options" id="what-are-my-options"></a>
 
 Opcje programowania rozwiązań dla dodatku Dynamo należą przede wszystkim do dwóch kategorii: _dla_ dodatku Dynamo i _w_ dodatku Dynamo. Te dwie kategorie należy rozumieć tak: „w” dodatku Dynamo oznacza zawartość tworzoną za pomocą środowiska IDE dodatku Dynamo, która ma być używana w dodatku Dynamo; natomiast „dla” dodatku Dynamo oznacza tworzenie za pomocą narzędzi zewnętrznych zawartości, która ma być importowana do dodatku Dynamo w celu jej używania. W tym podręczniku skoncentrowano się na programowaniu _dla_ dodatku Dynamo, ale poniżej opisano zasoby dotyczące wszystkich procesów.
 
-#### Dla dodatku Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
+### Dla dodatku Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
 Te węzły umożliwiają najwyższy stopień dostosowania. Wiele pakietów jest kompilowanych za pomocą tej metody i jest ona niezbędna do współtworzenia źródła dodatku Dynamo. Proces ich kompilowania zostanie omówiony w tym podręczniku.
 
@@ -26,7 +26,7 @@ W poniższym omówieniu jako środowisko programistyczne dla węzłów Zero-Touc
 
 > Interfejs programu Visual Studio z projektem, który będziemy opracowywać
 
-#### W dodatku Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
+### W dodatku Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
 Mimo że te procesy istnieją w obszarze roboczym programowania wizualnego i są stosunkowo proste, wszystkie umożliwiają dostosowanie dodatku Dynamo. W przewodniku Primer opisano je szczegółowo i podano wskazówki dotyczące skryptów oraz wzorce postępowania — w rozdziale [Strategie dotyczące skryptów](../../9\_best\_practices/2-scripting-strategies.md).
 
@@ -46,7 +46,7 @@ Programowanie w obszarze roboczym dodatku Dynamo to wydajne rozwiązanie umożli
 
 > Programowanie w obszarze roboczym dodatku Dynamo za pomocą węzła w języku Python
 
-#### Jakie są zalety/wady poszczególnych opcji? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### Jakie są zalety/wady poszczególnych opcji? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
 Opcje programowania dla dodatku Dynamo zaprojektowano z uwzględnieniem złożoności wymagań dotyczących dostosowywania. Niezależnie od tego, czy celem jest napisanie skryptu cyklicznego w języku Python, czy opracowanie całkowicie niestandardowego interfejsu użytkownika węzła, dostępne są opcje implementowania kodu obejmujące tylko czynności niezbędne do przygotowania działającego rozwiązania.
 
@@ -87,7 +87,7 @@ Co można zrobić za pomocą tej metody:
 * Dostosowywanie skratowania
 * Wczytywanie do dodatku Dynamo w postaci pakietu
 
-#### Omówienie obsługi wersji dodatku Dynamo i zmian w interfejsie API (z wersji 1.x do wersji 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### Omówienie obsługi wersji dodatku Dynamo i zmian w interfejsie API (z wersji 1.x do wersji 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 Ponieważ dodatek Dynamo jest regularnie aktualizowany, w części interfejsu API używanej przez pakiet mogą być wprowadzane zmiany. Śledzenie tych zmian jest ważne na potrzeby zapewnienia dalszego poprawnego działania istniejących pakietów.
 
@@ -101,8 +101,13 @@ Dokumentacja interfejsu API dodatku Dynamo obejmuje obecnie podstawowe funkcje: 
 
 ![Dokumentacja interfejsu API](images/api-docs.jpg)
 
-#### Uprawnienia do dystrybucji plików binarnych w pakiecie <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
+### Uprawnienia do dystrybucji plików binarnych w pakiecie <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
 Należy nadzorować pliki .dll zawarte w pakiecie przekazywanym do Menedżera pakietów. Jeśli autor pakietu nie utworzył danego pliku .dll, musi mieć uprawnienia do jego udostępniania.
 
 Jeśli pakiet zawiera pliki binarne, użytkownicy muszą być monitowani podczas pobierania z informacją o tym, że pakiet zawiera pliki binarne.
+
+### Zagadnienia dotyczące wydajności interfejsu użytkownika dodatku Dynamo
+W chwili pisania tego tekstu dodatek Dynamo używa do renderowania interfejsu użytkownika głównie platformy WPF (Windows Presentation Foundation). Platforma WPF jest złożonym i zaawansowanym systemem opartym na XAML/powiązaniach. Ponieważ dodatek Dynamo ma złożony interfejs użytkownika, łatwo jest wytworzyć zawieszenia interfejsu użytkownika, przecieki pamięci lub zawinięcia wykonywania wykresu i aktualizacji interfejsu użytkownika w sposób, który obniża wydajność.
+
+Zapoznaj się ze [stroną wiki poświęconą zagadnieniom związanym z wydajnością dodatku Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance), która pomoże Ci uniknąć kilku typowych pułapek podczas wprowadzania zmian w kodzie dodatku Dynamo.

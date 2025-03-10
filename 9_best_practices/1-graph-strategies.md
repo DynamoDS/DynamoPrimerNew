@@ -65,7 +65,7 @@ Podczas pracy w programie Dynamo i testowania pomysłów wykres może szybko prz
 * Funkcja List@Level umożliwia **ograniczenie złożoności wykresu przez zastąpienie węzłów List.Map i List.Combine**, które mogą zajmować dużo miejsca na obszarze projektowania.
 * Funkcja List@Level oferuje** szybszą metodę tworzenia logiki węzłów niż węzły List.Map/List.Combine**. Umożliwia ona uzyskiwanie dostępu do danych na każdym poziomie listy wprost z poziomu portu wejściowego węzła.
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Można zweryfikować, ile wartości True z których list zwraca funkcja BoundingBox.Contains, aktywując funkcję List@Level dla wejścia „list” (lista) modułu CountTrue. Funkcja List@Level pozwala użytkownikowi określić, z jakiego poziomu danych wejściowych są pobierane dane. Korzystanie z funkcji List@Level jest elastyczne, efektywne i zalecane jako metoda skuteczniejsza niż stosowanie węzłów List.Map i List.Combine.
 >
@@ -84,7 +84,7 @@ Oprócz uproszczenia i poprawienia efektywności wykresu należy pamiętać o je
 * Jeśli inne osoby będą pracowały nad tym samym wykresem, należy **zagwarantować płynny przepływ połączeń między węzłami przed dostarczeniem wykresu**.
 * Aby w prosty sposób wyrównać wykres, **można użyć funkcji Wyczyść układ węzłów, która robi to automatycznie** (choć mniej dokładnie niż człowiek).
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Nieuporządkowany wykres
 > 2. Wyrównany wykres

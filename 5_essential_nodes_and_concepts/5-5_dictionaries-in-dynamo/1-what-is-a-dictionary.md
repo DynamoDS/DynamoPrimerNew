@@ -24,7 +24,7 @@ Rozdzielenie słowników od list sprawia, że słowniki stają się pierwszoligo
 
     ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
 ***
 

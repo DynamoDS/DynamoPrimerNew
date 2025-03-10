@@ -53,7 +53,7 @@ Poniższy rysunek przedstawia wykres bazowy, na którym rysujemy linie między d
 > 6. Za pomocą węzła **Geometry.Translate** przesuń okrąg w górę o 100 jednostek w kierunku Z.
 > 7. Za pomocą węzła **Code Block** zdefiniuj zakres dziesięciu liczb z zakresu od 0 do 1 przy użyciu tego wiersza kodu: `0..1..#10;`
 > 8. Wstaw blok kodu z poprzedniego kroku do wejścia _param_ dwóch węzłów **Curve.PointAtParameter**. Podłącz węzeł **Circle.ByPlaneRadius** do wejścia curve górnego węzła i węzeł **Geometry.Translate** do wejścia curve węzła poniżej.
-> 9. Za pomocą węzła **Line.ByStartPointEndPoint** połącz dwa węzły **Curve.PointAtParamete**_r_.
+> 9. Za pomocą węzła **Line.ByStartPointEndPoint** połącz dwa węzły **Curve.PointAtParameter**.
 
 ### List.Count
 

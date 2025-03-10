@@ -13,8 +13,7 @@ Instrukcja „If” (jeśli) stanowi kluczowe pojęcie w programowaniu: „Jeśl
 | Ikona                                             | Nazwa (składnia)             | Dane wejściowe            | Dane wyjściowe |
 | ------------------------------------------------ | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                        | Jeśli (**If**)               | test, prawda, fałsz | wynik  |
-| ![](../images/5-1/Formula.jpg)                   | Formuła (**IF(x,y,z)**)   | x, y, z           | wynik  |
-| ![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | wynik  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | wynik  |
 
 Przeanalizujmy krótki przykład dotyczący działania każdego z tych trzech węzłów z użyciem instrukcji warunkowej „If”.
 

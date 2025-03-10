@@ -22,9 +22,7 @@ Wejścia i wyjścia węzłów są nazywane portami i działają jak gniazda dla 
 
 Porty oczekują, że otrzymają dane określonego typu. Na przykład podłączenie liczby, takiej jak _2,75_, do portów w węźle Point By Coordinates („punkt według współrzędnych”) spowoduje utworzenie punktu. Jednak jeśli do tego samego portu zostanie podłączony ciąg _„Czerwony”_, spowoduje to błąd.
 
-{% hint style="info" %}
- Wskazówka: umieść kursor na porcie, aby wyświetlić etykietę narzędzia zawierającą oczekiwany typ danych. 
-{% endhint %}
+{% hint style="info" %} Wskazówka: umieść kursor na porcie, aby wyświetlić etykietę narzędzia zawierającą oczekiwany typ danych. {% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -55,9 +53,7 @@ Po ustawieniu wskaźnika myszy na nazwie lub portach albo kliknięciu ich prawym
 
 Jeśli program wizualny zawiera ostrzeżenie lub błędy, dodatek Dynamo dostarczy dodatkowe informacje na temat problemu. Każdy żółty węzeł ma również etykietę narzędzia nad nazwą. Ustaw wskaźnik myszy na ikonie etykiety narzędzia ostrzeżenia ![](images/nodesandwires-nodewarningicon.png) lub błędu ![](images/nodesandwires-nodeerroricon.png), aby ją rozwinąć.
 
-{% hint style="info" %}
- Wskazówka: na podstawie informacji z etykiety narzędzia sprawdź we wcześniejszych węzłach, czy wymagane typy danych lub struktury danych nie są błędne. 
-{% endhint %}
+{% hint style="info" %} Wskazówka: na podstawie informacji z etykiety narzędzia sprawdź we wcześniejszych węzłach, czy wymagane typy danych lub struktury danych nie są błędne. {% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
@@ -101,7 +97,7 @@ Często chcemy dostosować przepływ programu w programie wizualnym, edytując p
 
 * Zmień połączenie z portem wejściowym: kliknij lewym przyciskiem myszy inny port wejściowy
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Aby usunąć przewód, odciągnij przewód, a następnie kliknij lewym przyciskiem myszy obszar roboczy
 
