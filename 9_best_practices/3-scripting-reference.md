@@ -31,9 +31,7 @@ Las bibliotecas estándar son externas a Dynamo y están presentes en los lengua
    * Función: Excel.
    * Cómo importar: `import DSOffice`
 
-{% hint style="warning" %}
-* Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información. 
-{% endhint %}
+{% hint style="warning" %}* Nota: Tenga en cuenta que, al utilizar **ProtoGeometry** a través de Python o C#, se crean objetos no administrados, que requieren que la memoria se administre manualmente. Consulte la sección **Objetos no administrados** mostrada a continuación para obtener más información. {% endhint %}
 
 ## Atención en el uso de etiquetas
 
@@ -276,7 +274,7 @@ Por lo general, hay más de una manera de programar prácticamente cualquier cos
 
 Cuando se utiliza la biblioteca de geometría de Dynamo _(ProtoGeometry)_ desde Python o C#, los objetos de geometría que se creen no se gestionarán mediante la máquina virtual, y la memoria de muchos de estos objetos deberá limpiarse manualmente. Para limpiar objetos nativos o no administrados, puede utilizar el método **Dispose** o la palabra clave **using**. Consulte esta entrada wiki para obtener una descripción general: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose—using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-Solo es necesario eliminar los recursos no administrados que no se devuelvan al gráfico y los que no almacenan una referencia. En el resto de esta sección, nos referiremos a estos objetos como _geometría intermedia_. Puede ver un ejemplo de esta clase de objeto en el código siguiente. La función de Zero Touch C# **singleCube** devuelve un único cubo, pero crea 10 000 cubos adicionales durante su ejecución. Podemos fingir que esta otra geometría se ha utilizado como geometría de construcción intermedia.
+Solo es necesario eliminar los recursos no administrados que no se devuelvan al gráfico y los que no almacenan una referencia. En el resto de esta sección, nos referiremos a estos objetos como _geometría intermedia_. Puede ver un ejemplo de esta clase de objeto en el código siguiente. La función de Zero Touch C# **singleCube** devuelve un único cubo, pero crea 10000 cubos adicionales durante su ejecución. Podemos fingir que esta otra geometría se ha utilizado como geometría de construcción intermedia.
 
 **Es muy probable que esta función de Zero Touch bloquee Dynamo.** Esto se debe a que hemos creado 10 000 sólidos, pero solo hemos almacenado uno de ellos y solo hemos devuelto ese mismo. Deberíamos desechar todos los cubos intermedios, excepto el que devolvemos. No debemos desechar lo que devolvemos, ya que se propaga en el gráfico y lo utilizan otros nodos.
 

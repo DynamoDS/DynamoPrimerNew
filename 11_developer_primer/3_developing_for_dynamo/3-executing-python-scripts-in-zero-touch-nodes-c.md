@@ -1,4 +1,4 @@
-# Ejecución de secuencias de comandos de Python en nodos Zero-Touch (C#) 
+# Ejecución de secuencias de comandos de Python en nodos Zero-Touch (C#)
 
 ### Ejecución de secuencias de comandos de Python en nodos Zero-Touch (C#) <a href="#executing-python-scripts-in-zero-touch-nodes-c" id="executing-python-scripts-in-zero-touch-nodes-c"></a>
 

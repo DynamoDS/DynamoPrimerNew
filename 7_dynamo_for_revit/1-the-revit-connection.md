@@ -12,13 +12,13 @@ A medida que Revit y Dynamo continúan evolucionando, es posible que observe que
 
 | Versión de Revit | Primera versión de Dynamo estable                                                       | Última versión de Dynamo para Revit compatible                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
-| 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
-| 2015          | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe)                                                                                      |
-| 2016          | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe)                                                                                      |
-| 2017          | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2018          | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2019          | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
+| 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                                      |
+| 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                                      |
+| 2015          | [0.7.1](https://downloads.dynamobuilds.com/DynamoInstall0.7.1.exe) | [1.2.1](https://downloads.dynamobuilds.com/DynamoInstall1.2.1.exe)                                                                                      |
+| 2016          | [0.7.2](https://downloads.dynamobuilds.com/DynamoInstall0.7.2.exe) | [1.3.2](https://downloads.dynamobuilds.com/DynamoInstall1.3.2.exe)                                                                                      |
+| 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
 | 2020         | 2.1.0: Revit 2020 o superior ahora incluye Dynamo y recibe actualizaciones al igual que Revit.      | N/A                                                                                                                                                                    |
 
 ### Historia de Dynamo
@@ -35,17 +35,13 @@ Mediante el uso de los nodos principales de Dynamo, junto con los nodos personal
 
 En un editor de proyectos o familias de Revit, vaya a Complementos y haga clic en Dynamo.*
 
-{% hint style="warning" %}
-* Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió. 
-{% endhint %}
+{% hint style="warning" %}* Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió. {% endhint %}
 
-![](<images/1/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata de una adición completa a la interfaz de usuario que ofrece nodos que se adaptan específicamente a los flujos de trabajo de Revit.*
 
-{% hint style="warning" %}
-* El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit. 
-{% endhint %}
+{% hint style="warning" %}* El gráfico de Dynamo solo funcionará al abrirse en Dynamo para Revit mediante la familia de nodos específica de Revit. Si se abre un gráfico de Dynamo para Revit en Dynamo Sandbox, por ejemplo, no aparecerán los nodos de Revit. {% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
@@ -53,9 +49,7 @@ Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata 
 
 Como Revit es una plataforma que proporciona una sólida gestión de proyectos, las operaciones paramétricas de Dynamo pueden ser complejas y lentas de calcular. Si Dynamo tarda mucho tiempo en calcular los nodos, puede usar la función "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico.
 
-{% hint style="info" %}
- Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). {% endhint %}
 
 ### Comunidad y blog de Dynamo
 

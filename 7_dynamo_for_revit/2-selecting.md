@@ -18,9 +18,7 @@ Vamos a revisar rápidamente la jerarquía de Revit.
 
 ¿Recuerda la taxonomía de la biología? Reino, phylum, clase, orden, familia, género y especie. Los elementos de Revit se clasifican de forma similar. En un nivel básico, la jerarquía de Revit se puede dividir en categorías, familias, tipos* y ejemplares. Un ejemplar es un elemento de modelo individual (con un ID exclusivo), mientras que una categoría define un grupo genérico (como "muros" o "suelos"). Con la base de datos de Revit organizada de este modo, podemos seleccionar un elemento y elegir todos los elementos similares en función de un nivel especificado en la jerarquía.
 
-{% hint style="warning" %}
- * Los tipos en Revit se definen de forma distinta a los tipos en programación. En Revit, un tipo hace referencia a una ramificación de la jerarquía, en lugar de a un "tipo de datos". 
-{% endhint %}
+{% hint style="warning" %} * Los tipos en Revit se definen de forma distinta a los tipos en programación. En Revit, un tipo hace referencia a una ramificación de la jerarquía, en lugar de a un "tipo de datos". {% endhint %}
 
 ### Navegación por las bases de datos con nodos de Dynamo
 
@@ -32,7 +30,7 @@ _Señalar y hacer clic_ es el método más sencillo para seleccionar directament
 
 Los _menús desplegables_ crean una lista de todos los elementos a los que se puede acceder en un proyecto de Revit. Puede utilizar esta opción para hacer referencia a elementos de Revit que no están necesariamente visibles en una vista. Esta es una herramienta excelente para consultar elementos existentes o crear nuevos elementos en un editor de proyectos o familias de Revit.
 
-![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 También puede seleccionar elementos de Revit por niveles específicos en la _jerarquía de Revit_. Esta es una opción eficaz para personalizar grandes matrices de datos para preparar la documentación o la creación de ejemplares y personalización generativas.
 
@@ -50,7 +48,7 @@ Teniendo en cuenta las tres imágenes anteriores, vamos a profundizar en un ejer
 
 En este archivo de Revit de ejemplo, tenemos tres tipos de elementos de un edificio sencillo. Vamos a usar este archivo como ejemplo para seleccionar elementos de Revit en el contexto de la jerarquía de Revit.
 
-![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Masa de construcción
 > 2. Vigas (armazón estructural)
@@ -83,7 +81,7 @@ A continuación se incluye un método alternativo. En este caso, no vamos a real
 
 Mediante algunas operaciones de lista básicas, podemos consultar una cara de interés.
 
-![](<images/2/selecting - exercise 05.jpg>)
+\![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. En primer lugar, genere los elementos seleccionados anteriormente en el nodo Element.Faces.
 > 2. A continuación, el nodo _List.Count_ indica que estamos trabajando con 23 superficies en la masa.
@@ -151,6 +149,4 @@ A continuación, ya estamos listos para extraer información básica del tipo de
 > 2. Conecte el nodo _"All Elements of Family Type"_ al nodo _"AdaptiveComponent.Location"_. Esto nos proporciona una lista de listas, cada una con tres puntos que representan las ubicaciones de los puntos adaptativos.
 > 3. Al conectar un nodo _"Polygon.ByPoints"_, se obtiene una PolyCurve. Se puede ver en la ventana gráfica de Dynamo. Con este método, hemos visualizado la geometría de un elemento y hemos abstraído la geometría de la matriz de elementos restantes (que podría ser mayor en número que este ejemplo).
 
-{% hint style="info" %}
- Consejo: Si hace clic en el número verde de un elemento de Revit en Dynamo, la ventana gráfica de Revit ampliará ese elemento. 
-{% endhint %}
+{% hint style="info" %} Consejo: Si hace clic en el número verde de un elemento de Revit en Dynamo, la ventana gráfica de Revit ampliará ese elemento. {% endhint %}

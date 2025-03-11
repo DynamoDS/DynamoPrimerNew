@@ -177,7 +177,7 @@ En el último paso, vamos a invertir la dirección de los miembros estriados. Co
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
-> 1. Tenemos un nivel más en la jerarquía, por lo que debemos utilizar **List.Map** con la función **List.Tranpose** para cambiar la dirección de las curvas NURBS.
+> 1. Tenemos un nivel más en la jerarquía, por lo que debemos utilizar **List.Map** con la función **List.Transpose** para cambiar la dirección de las curvas NURBS.
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 

@@ -53,7 +53,7 @@ La imagen siguiente es el gráfico base en el que se dibujan líneas entre dos c
 > 6. Con un nodo **Geometry.Translate**, desplace el círculo hacia arriba 100 unidades en la dirección Z.
 > 7. Con un nodo **Code Block**, defina un rango de diez números entre 0 y 1 con esta línea de código: `0..1..#10;`.
 > 8. Conecte el bloque de código del paso anterior a la entrada _param_ de dos nodos **Curve.PointAtParameter**. Conecte **Circle.ByPlaneRadius** a la entrada "curve" del nodo superior y **Geometry.Translate** a la entrada curve del nodo situado debajo del mismo.
-> 9. Con un nodo **Line.ByStartPointEndPoint**, conecte los dos nodos **Curve.PointAtParamete**_r_.
+> 9. Con un nodo **Line.ByStartPointEndPoint**, conecte los dos nodos **Curve.PointAtParameter**.
 
 ### List.Count
 

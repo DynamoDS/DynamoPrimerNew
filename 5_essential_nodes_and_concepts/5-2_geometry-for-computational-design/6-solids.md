@@ -39,9 +39,7 @@ Las operaciones booleanas son complejas y pueden resultar lentas de calcular. Pu
 >
 > 4\. Todos los nodos afectados y las vistas preliminares de la geometría asociada se actualizarán y se restablecerán al modo de vista preliminar estándar.
 
-{% hint style="info" %}
- Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). {% endhint %}
 
 ## Información más detallada sobre...
 

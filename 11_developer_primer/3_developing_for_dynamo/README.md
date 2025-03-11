@@ -6,11 +6,11 @@ Independientemente del nivel de experiencia, la plataforma Dynamo se ha diseñad
 
 > Tres entornos de desarrollo: Visual Studio, el editor de Python y DesignScript para bloques de código
 
-#### ¿Qué opciones tengo? <a href="#what-are-my-options" id="what-are-my-options"></a>
+### ¿Qué opciones tengo? <a href="#what-are-my-options" id="what-are-my-options"></a>
 
 Las opciones de desarrollo de Dynamo se dividen principalmente en dos categorías: _para_ Dynamo frente a _en_ Dynamo. Las dos categorías se pueden definir de la siguiente forma: "en" Dynamo implica contenido que se crea mediante el IDE de Dynamo para su uso en Dynamo y "para" Dynamo implica el uso de herramientas externas a fin de crear contenido que se importará en Dynamo para su uso. Aunque esta guía se centra en el desarrollo _para_ Dynamo, a continuación, se describen los recursos para todos los procesos.
 
-#### Para Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
+### Para Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
 Estos nodos permiten el mayor grado de personalización. Muchos paquetes se compilan con este método y es necesario para colaborar en el código fuente de Dynamo. El proceso de compilación de estos elementos se abordará en esta guía.
 
@@ -26,7 +26,7 @@ En el caso siguiente, se utiliza Visual Studio como entorno de desarrollo para l
 
 > La interfaz de Visual Studio con un proyecto que vamos a desarrollar
 
-#### En Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
+### En Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
 Aunque estos procesos existen en el espacio de trabajo de programación visual y son relativamente sencillos, son opciones viables para personalizar Dynamo. En Dynamo Primer, se describen estos temas de forma exhaustiva y se proporcionan consejos sobre la creación de secuencias de comandos y procedimientos recomendados en el capítulo [Estrategias de creación de secuencias de comandos](../../9\_best\_practices/2-scripting-strategies.md).
 
@@ -46,7 +46,7 @@ El desarrollo en el espacio de trabajo de Dynamo permite obtener de forma eficaz
 
 > Desarrollo en el espacio de trabajo de Dynamo con el nodo de Python
 
-#### ¿Cuáles son las ventajas o las desventajas de cada método? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### ¿Cuáles son las ventajas o las desventajas de cada método? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
 Las opciones de desarrollo para Dynamo se han diseñado para abordar la complejidad de una necesidad de personalización. Tanto si el objetivo es escribir una secuencia de comandos recursiva en Python como compilar una interfaz de usuario de nodos totalmente personalizada, existen opciones para implementar código que solo implican lo necesario para ponerse en marcha.
 
@@ -87,7 +87,7 @@ Con este método, se puede realizar lo siguiente:
 * Personalice el encaje.
 * Cargue contenido en Dynamo como un paquete.
 
-#### Descripción de las versiones de Dynamo y los cambios en las API (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### Descripción de las versiones de Dynamo y los cambios en las API (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 Dado que Dynamo se actualiza periódicamente, es posible que se realicen cambios en parte de la API que utiliza un paquete. Es importante realizar un seguimiento de estos cambios para garantizar que los paquetes existentes sigan funcionando correctamente.
 
@@ -101,8 +101,13 @@ La documentación de las API de Dynamo aborda actualmente las funciones principa
 
 ![Documentación de las API](images/api-docs.jpg)
 
-#### Permiso para distribuir archivos binarios en un paquete <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
+### Permiso para distribuir archivos binarios en un paquete <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
 Tenga cuidado con los archivos .dll incluidos en un paquete que se cargue en Package Manager. Si el autor del paquete no ha creado el archivo .dll, debe tener los derechos necesarios para compartirlo.
 
 Si un paquete incluye archivos binarios, al descargarlo, se debe indicar esto a los usuarios.
+
+### Consideraciones sobre el rendimiento de la interfaz de usuario de Dynamo
+En el momento de escribir este artículo, Dynamo utiliza principalmente WPF (Windows Presentation Base) para renderizar su interfaz de usuario. WPF es un sistema complejo y eficaz basado en xaml/binding. Como Dynamo tiene una interfaz de usuario compleja, es fácil provocar bloqueos, fugas de memoria o agrupar la ejecución del gráfico y las actualizaciones de la interfaz de usuario de forma que se reduzca el rendimiento.
+
+Consulte la página wiki sobre las [consideraciones de rendimiento de Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance) que le ayudará a evitar algunos errores comunes al realizar cambios en el código de Dynamo.

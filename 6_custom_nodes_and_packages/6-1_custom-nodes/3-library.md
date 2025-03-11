@@ -1,4 +1,4 @@
-# Publicación en la biblioteca 
+# Publicación en la biblioteca
 
 Acabamos de crear un nodo personalizado y lo hemos aplicado a un proceso específico en el gráfico de Dynamo. Y nos gusta tanto este nodo que deseamos conservarlo en nuestra biblioteca de Dynamo para hacer referencia a él en otros gráficos. Para ello, publicaremos el nodo localmente. Este es un proceso similar al de la publicación de un paquete, que se explicará con más detalle en el siguiente capítulo.
 

@@ -1,4 +1,4 @@
-# Caso real de Zero-Touch (nodo de rejilla) 
+# Caso real de Zero-Touch (nodo de rejilla)
 
 Con un proyecto de Visual Studio en ejecución, veremos cómo generar un nodo personalizado que cree una rejilla rectangular de celdas. Aunque podríamos crear esto con varios nodos estándar, se trata de una herramienta útil que se puede incluir fácilmente en un nodo Zero-Touch. A diferencia de las líneas de rejilla, las celdas se pueden consultar para determinar su vértices de esquina o convertir en caras, o se puede ajustar su escala en relación con sus centros.
 
@@ -6,7 +6,7 @@ En este ejemplo, se abordarán algunas de las funciones y los conceptos que debe
 
 ![Gráfico de rejilla rectangular](images/cover-image.jpg)
 
-#### Nodo de rejilla rectangular personalizado <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Nodo de rejilla rectangular personalizado <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Para comenzar a generar el nodo de rejilla, cree un nuevo proyecto de biblioteca de clases de Visual Studio. Consulte la página Introducción para obtener un recorrido detallado sobre cómo configurar un proyecto.
 
@@ -96,7 +96,7 @@ En la carpeta `bin` del proyecto, busque un archivo `.dll`. Si la compilación s
 > 2. El nodo personalizado en el lienzo
 > 3. El botón Añadir para añadir el archivo `.dll` a Dynamo
 
-#### Modificaciones de nodos personalizados <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### Modificaciones de nodos personalizados <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 En el ejemplo anterior, hemos creado un nodo bastante sencillo que solo define el método `RectangularGrids`. Sin embargo, es posible que deseemos crear información de herramientas para los puertos de entrada o proporcionar al nodo un resumen como los nodos estándar de Dynamo. La adición de estas funciones a nodos personalizados facilita su uso, sobre todo, si un usuario desea buscarlas en la biblioteca.
 

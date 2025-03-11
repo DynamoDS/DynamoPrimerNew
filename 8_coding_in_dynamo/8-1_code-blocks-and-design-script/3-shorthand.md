@@ -94,7 +94,7 @@ En este paso, utilizamos nuestra primera función para mover la rejilla de punto
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. En lugar de utilizar un nodo de fórmula, utilizamos un **bloque de código** con la siguiente línea: `(0..Math.Sin(x*360)..#50)*5;`. Para descomponerlo rápidamente, vamos a definir un rango con una fórmula dentro de él. Esta fórmula es la función de seno. La función de seno recibe entradas de grado en Dynamo, por lo que, para obtener una onda sinusoidal completa, multiplicamos los valores x (es decir, la entrada de rango de 0 a 1) por 360. A continuación, queremos que haya el mismo número de divisiones que de puntos de rejilla de control para cada fila, por lo que definimos cincuenta subdivisiones con #50. Por último, el multiplicador de 5 simplemente aumenta la amplitud de la traslación para que podamos ver el efecto en la vista preliminar de Dynamo.
+> 1. Utilizamos un **bloque de código** con la línea: `(0..Math.Sin(x*360)..#50)*5;`. Para descomponerlo rápidamente, vamos a definir un rango con una fórmula dentro de él. Esta fórmula es la función de seno. La función de seno recibe entradas de grado en Dynamo, por lo que, para obtener una onda sinusoidal completa, multiplicamos los valores x (es decir, la entrada de rango de 0 a 1) por 360. A continuación, queremos que haya el mismo número de divisiones que de puntos de rejilla de control para cada fila, por lo que definimos cincuenta subdivisiones con #50. Por último, el multiplicador de 5 simplemente aumenta la amplitud de la traslación para que podamos ver el efecto en la vista preliminar de Dynamo.
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -110,7 +110,7 @@ Al cambiar los controles deslizantes (de 0 a 10), obtenemos resultados interesan
 
 ![](../images/8-1/3/shorthand-exercise07.jpg)
 
-> 1. Se obtiene una superficie de cáscara de huevo distorsionada al añadir los elementos sineList y tranposeList: `eggShellList = sineList+transposeList;`.
+> 1. Se obtiene una superficie de cáscara de huevo distorsionada al añadir los elementos sineList y transposeList: `eggShellList = sineList+transposeList;`.
 
 Cambiemos los valores de los controles deslizantes especificados a continuación para "calmar las aguas" de este algoritmo.
 
@@ -140,6 +140,6 @@ En el gráfico visual, podemos resaltar los bloques de código y ver cada una de
 >
 > 2\. El segundo **bloque de código** sustituye al nodo **Number Range**.
 >
-> 3\. El tercer **bloque de código** sustituye al nodo **Formula** (así como **aList.Transpose**, **List.Count** y **Number Range**).
+> 3\. El tercer **bloque de código** sustituye a los nodos **List.Transpose**, **List.Count** y **Number Range**.
 >
 > 4\. El cuatro **bloque de código** consulta una lista de listas y sustituye al nodo **List.GetItemAtIndex**.

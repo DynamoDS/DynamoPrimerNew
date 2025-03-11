@@ -6,14 +6,14 @@ Es posible que haya observado que en los nombres de los nodos de Dynamo se da un
 
 Como analogía general para la notación de puntos, ¿cómo podemos tratar una manzana paramétrica en Dynamo? A continuación se indican algunos métodos que ejecutaremos en la manzana antes de decidir consumirla. (Nota: estos no son métodos reales de Dynamo):
 
-| Legible para el ser humano                 | Notación de puntos              | Salida |
+| Legible por humanos                 | Notación de puntos              | Salida |
 | ------------------------------ | ------------------------- | ------ |
 | ¿De qué color es la manzana?       | Manazana.color               | rojo    |
 | ¿Está madura la manzana?             | Manzana.madura              | verdadero   |
 | ¿Cuánto pesa la manzana? | Manzana.peso              | 170 g  |
 | ¿De dónde viene la manzana? | Manzana.padre              | árbol   |
 | ¿Qué crea la manzana?    | Manzana.hijo            | semillas  |
-| ¿Esta manzana se producido de forma local?   | Manzana.distanciaDeHuerta | 96 km |
+| ¿Esta manzana se ha producido de forma local?   | Manzana.distanciaDeHuerta | 96 km |
 
 A juzgar por las salidas de la tabla de arriba, esta parece una manzana sabrosa. Creo que voy a _Manzana.comer_.
 

@@ -1,0 +1,26 @@
+# Trabajar de forma eficaz con grandes conjuntos de datos en Dynamo
+
+En esta página, se presentan algunas reglas generales para trabajar eficazmente con grandes conjuntos de datos en Dynamo. Esperamos que pueda utilizar estos consejos para identificar cuellos de botella en los gráficos y que estos se ejecuten en cuestión de minutos en lugar de horas.
+
+Contenido:
+* Generación de geometría frente a triangulación
+* Uso de memoria
+* API de Revit
+
+### Generación de geometría frente a triangulación
+
+En Dynamo, crear una pieza de geometría y dibujarla son dos eventos completamente diferentes. En general, la creación de geometría es mucho más rápida y utiliza menos memoria que el dibujo del objeto. Puede pensar en la geometría como una lista de medidas para confeccionar un traje, mientras que la triangulación es el traje en sí. A partir de sus medidas, se puede saber bastante sobre el traje: cuánto miden los brazos, cuánto cuesta, etc. Sin embargo, casi siempre es necesario verlo y probarse el traje acabado para saber si es el correcto. Del mismo modo, con la geometría no triangulada, puede determinar el cuadro delimitador, el área y el volumen e intersecarla con otra geometría para después exportarla a SAT o Revit. Sin embargo, casi siempre hay que triangular la geometría para hacerse una idea de si es correcta o no. 
+
+Si el gráfico de Dynamo contiene una gran cantidad de objetos y se reduce su rendimiento durante la ejecución, podría ser beneficioso considerar la eliminación de los pasos de triangulación del gráfico para optimizar la velocidad de procesamiento.  
+
+Los nodos de geometría de Dynamo siempre se triangulan*. Esto le deja dos opciones para trabajar con geometría no triangulada: nodos de Python y ZeroTouch. Mientras no se devuelva un objeto geométrico fuera del nodo de Python o ZeroTouch, la geometría no se triangulará. Por ejemplo, si el gráfico muestra varios nodos de punto, conectados a varios nodos de línea, a su vez conectados a varios nodos de solevación, y estos, a su vez, conectados a varios nodos de engrosamiento, la geometría se triangulará en cada paso. En su lugar, puede agrupar esta lógica en un nodo de Python o ZeroTouch y solo devolver el objeto final fuera del nodo.
+
+Puede encontrar más información sobre el uso de nodos ZeroTouch en la sección [Desarrollo para Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md) de este manual de introducción.
+
+### Uso de memoria
+
+Si ya no está triangulando geometría, puede encontrarse con un cuello de botella de memoria debido a la acumulación excesiva de geometría. Los objetos geométricos de Dynamo consumen una cantidad menor, aunque no insignificante, de memoria al crearse. Si trabaja con cientos de miles o millones de objetos, esto puede sumarse y provocar que Dynamo o Revit se bloqueen. En la versión 2.5 de Dynamo y posteriores, esto se gestiona implícitamente deshaciéndose de los objetos no utilizados. Sin embargo, si utiliza una versión anterior a la 2.5, una forma de evitar la creación de mucha geometría es deshacerse de los objetos cuando haya terminado de utilizarlos. Por ejemplo, supongamos que va a crear cientos de miles de NurbsCurves, cada una de las cuales requiere docenas de puntos. Una forma de crearlas es una lista bidimensional en Dynamo para introducirlas a continuación en un nodo NurbsCurve.ByPoints. Sin embargo, eso requiere crear millones de puntos. Otra forma es utilizar un nodo de Python o ZeroTouch. En este nodo, puede crear una docena de puntos, introducirlos en NurbsCurve.ByPoints y, a continuación, eliminarlos con una llamada al método .Dispose(). Puede encontrar más información sobre el uso de nodos ZeroTouch en la sección [Desarrollo para Dynamo](11\_developer\_primer/3\_developing\_for\_dynamo/README.md) de este manual de introducción. La eliminación de los objetos geométricos después de crearlos puede reducir considerablemente la cantidad de memoria utilizada en determinadas circunstancias. Aunque esto ya se gestiona para los usuarios de Dynamo 2.5 y versiones posteriores, recomendamos que el usuario siga eliminando la geometría explícitamente si el caso de uso requiere reducir la memoria en un momento determinado. Consulte el artículo sobre [mejoras en la estabilidad de la geometría de Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297) para obtener más información sobre las nuevas funciones de estabilidad introducidas en Dynamo 2.5.
+
+### API de Revit
+
+Si elimina objetos de forma agresiva en un nodo ZeroTouch o de Python y sigue teniendo problemas de memoria o rendimiento, puede que sea necesario saltarse por completo el uso de Dynamo y crear objetos de Revit directamente a través de la API. Por ejemplo, puede analizar un archivo de Excel para obtener información sobre puntos y utilizarla para crear XYZ y otros de elementos de Revit mediante la API correspondiente. Llegados a este punto, Revit se convertirá en el último cuello de botella, lo que no puede evitarse.

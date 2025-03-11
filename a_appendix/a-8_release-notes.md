@@ -1,0 +1,3 @@
+# Notas de la versión
+
+Para obtener las últimas actualizaciones, correcciones de errores y nuevas funciones de Dynamo, eche un vistazo a las [Notas de la versión](https://github.com/DynamoDS/Dynamo/wiki/Release-Notes) o al [almacén de Notas de la versión](https://github.com/DynamoDS/Dynamo/wiki/Release-Notes-Archive). Son una excelente forma de mantenerse al día con las mejoras y los cambios de cada versión.

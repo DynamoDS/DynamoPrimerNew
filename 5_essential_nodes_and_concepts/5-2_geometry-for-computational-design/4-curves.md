@@ -20,7 +20,7 @@ Las [curvas](4-curves.md#deep-dive-into...) son el primer tipo de datos geométr
 
 Una [línea](4-curves.md#lines) está formada por un conjunto de puntos; cada línea tiene al menos dos puntos. Una de las formas más habituales de crear líneas en Dynamo es utilizar `Line.ByStartPointEndPoint`![](images/5-2/4/Linebystartpointendpoint.jpg).
 
-![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Curva NURBS
 
@@ -85,6 +85,4 @@ A medida que se añade más complejidad a las funciones paramétricas que define
 > 2. Grado = 2
 > 3. Grado = 3
 
-{% hint style="info" %}
- Tenga en cuenta que cuanto mayor sea el valor de grado, más puntos de control se utilizarán para interpolar la curva resultante. 
-{% endhint %}
+{% hint style="info" %} Tenga en cuenta que cuanto mayor sea el valor de grado, más puntos de control se utilizarán para interpolar la curva resultante. {% endhint %}

@@ -17,9 +17,7 @@ Al añadir tuberías y estructuras a una red de tuberías, Civil 3D utiliza una 
 
 ## Compatibilidad con versiones
 
-{% hint style="success" %}
- Este gráfico se ejecutará en **Civil 3D 2020** y versiones posteriores. 
-{% endhint %}
+{% hint style="success" %} Este gráfico se ejecutará en **Civil 3D 2020** y versiones posteriores. {% endhint %}
 
 ## Conjunto de datos
 
@@ -79,9 +77,7 @@ Aquí es donde las cosas empiezan a ponerse un poco complicadas. En esta fase, t
 
 Por lo tanto, debemos filtrar la lista de estructuras para que no se tengan en cuenta las que superen un determinado desfase con respecto a la alineación. La mejor forma de conseguirlo es mediante el nodo **List.FilterByBoolMask**. Después de filtrar la lista de estructuras, utilizamos el nodo **List.SortByKey** para ordenarlas por sus valores de P.K.
 
-{% hint style="info" %}
- Si es la primera vez que trabaja con listas, consulte la sección [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Si es la primera vez que trabaja con listas, consulte la sección [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>Filtrado y ordenación de las estructuras</p></figcaption></figure>
 
@@ -108,9 +104,7 @@ A continuación, se muestra un ejemplo de cómo ejecutar el gráfico con el **Re
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Ejecución del gráfico mediante el Reproductor de Dynamo y visualización de los resultados en Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}
- Si es la primera vez que utiliza el Reproductor de Dynamo, consulte la sección [dynamo-player.md](../../dynamo-player.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Si es la primera vez que utiliza el Reproductor de Dynamo, consulte la sección [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 
 > :tada: ¡Misión cumplida!
 
@@ -128,14 +122,8 @@ Ahora podemos entender mejor cómo funciona el proceso de filtrado de las estruc
 
 A continuación, se ofrecen algunas ideas sobre cómo podría ampliar las posibilidades de este gráfico.
 
-{% hint style="info" %}
- Cambie el nombre de las estructuras en función de su **alineación más cercana** en lugar de seleccionar una alineación específica. 
-{% endhint %}
+{% hint style="info" %} Cambie el nombre de las estructuras en función de su **alineación más cercana** en lugar de seleccionar una alineación específica. {% endhint %}
 
-{% hint style="info" %}
- **Cambie el nombre de las tuberías**, además del de las estructuras. 
-{% endhint %}
+{% hint style="info" %} **Cambie el nombre de las tuberías**, además del de las estructuras. {% endhint %}
 
-{% hint style="info" %}
- **Establezca las capas** de las estructuras en función del tramo. 
-{% endhint %}
+{% hint style="info" %} **Establezca las capas** de las estructuras en función del tramo. {% endhint %}

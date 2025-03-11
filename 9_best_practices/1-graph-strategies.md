@@ -65,7 +65,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 * El uso de List@Level puede ayudarle a **reducir la complejidad del gráfico mediante la sustitución de los nodos List.Map y List.Combine**, que pueden ocupar una cantidad considerable de espacio en el lienzo.
 * List@Level proporciona un** método más rápido que List.Map/List.Combine para crear una lógica de nodo**, lo que permite acceder a los datos de cualquier nivel de una lista directamente desde el puerto de entrada de un nodo
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > Podemos comprobar cuántos valores devuelve True BoundingBox.Contains y en qué listas mediante la activación de List@Level para la entrada "list" de CountTrue. List@Level permite al usuario determinar de qué nivel se obtendrán los datos. El uso de List@Level es flexible, eficaz y muy recomendado frente a otros métodos en los que se utilizan List.Map y List.Combine.
 >
@@ -84,7 +84,7 @@ Además de conseguir que el gráfico sea lo más sencillo y eficaz posible, inte
 * Si otros van a trabajar con el gráfico, **asegúrese de que el diseño de cables y nodos fluya con facilidad antes de enviarlo**.
 * Para facilitar la alineación, **utilice la función "Presentación de nodo de limpieza" para alinear automáticamente** el gráfico, aunque de forma menos precisa que manualmente.
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Gráfico desorganizado
 > 2. Gráfico alineado

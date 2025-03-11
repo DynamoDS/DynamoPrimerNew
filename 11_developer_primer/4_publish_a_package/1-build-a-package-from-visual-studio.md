@@ -1,4 +1,4 @@
-# Compilar un paquete desde Visual Studio 
+# Compilar un paquete desde Visual Studio
 
 Si está desarrollando montajes para publicarlos como un paquete para Dynamo, el proyecto se puede configurar para agrupar todos los componentes necesarios y colocarlos en una estructura de directorios compatible con paquetes. Esto permitirá probar rápidamente el proyecto como un paquete y simular la experiencia de un usuario.
 

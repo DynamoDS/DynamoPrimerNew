@@ -1,4 +1,4 @@
-# Publicar un paquete 
+# Publicar un paquete
 
 ### Publicar un paquete <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -63,8 +63,55 @@ La actualización de un paquete es un proceso similar al de su publicación. Abr
 
 #### Cliente web de Package Manager <a href="#package-manager-web-client" id="package-manager-web-client"></a>
 
-El cliente web de Package Manager se utiliza exclusivamente para buscar y ver datos de paquetes, como el control de versiones y las estadísticas de descarga.
+El cliente web de Package Manager permite a los usuarios buscar y ver los datos de paquetes, incluidas las versiones, las estadísticas de descarga y otra información relevante. Además, los autores de paquetes pueden iniciar sesión para actualizar los detalles de los paquetes, como la información sobre compatibilidad, directamente a través del cliente web.
+
+Para obtener más información sobre estas funciones, consulte esta publicación del blog: [https://dynamobim.org/discover-the-new-dynamo-package-management-experience/](https://dynamobim.org/discover-the-new-dynamo-package-management-experience/).
 
 Se puede acceder al cliente web de Package Manager en el siguiente vínculo: [https://dynamopackages.com/](https://dynamopackages.com).
 
 ![Cliente web de Package Manager](images/packagemanager-browser.jpg)
+
+##### Actualización de detalles del paquete
+
+Los autores pueden editar la descripción del paquete, el enlace al sitio web y el enlace del repositorio siguiendo estos pasos:  
+
+> 1. En **Mis paquetes**, seleccione el paquete y haga clic en **Editar detalles del paquete**.  
+> 2. Agregue o modifique los enlaces del **sitio web** y el **repositorio** utilizando los campos respectivos.  
+> 3. Actualice la **Descripción del paquete** según sea necesario.  
+> 4. Haga clic en **Guardar cambios** para aplicar las actualizaciones.  
+
+ **Nota**: Las actualizaciones pueden tardar hasta 15 minutos en actualizarse en Package Manager dentro de Dynamo, ya que las actualizaciones del servidor llevan cierto tiempo. Se están realizando esfuerzos para reducir este retardo.  
+
+ ![Nueva interfaz de usuario para actualizar los detalles de paquetes publicados](images/Package-Manager_Image_5.png)
+
+##### Editar la información sobre compatibilidad de las versiones de paquete publicadas  
+
+La información sobre compatibilidad se puede actualizar de forma retroactiva para las versiones del paquete publicadas anteriormente. Siga estos pasos:  
+
+![Editar la información sobre compatibilidad de los paquetes publicados: paso 1](images/Package-Manager_Image_6.png)
+
+**Paso 1:**  
+
+1. Haga clic en la versión del paquete que desea actualizar.  
+2. La lista **Depende de** se rellenará automáticamente con los paquetes de los que depende el paquete.  
+3. Haga clic en el icono de lápiz situado junto a **Compatibilidad** para abrir el flujo de trabajo **Editar información de compatibilidad**.  
+
+**Paso 2:**  
+
+Siga el diagrama de flujo siguiente y consulte la tabla de abajo para determinar la opción que mejor se adapta a su paquete.
+
+![Qué opción elegir para el flujo de trabajo "Editar información de compatibilidad"](images/Package-Manager_Image_7.png)
+
+Usaremos varios ejemplos para analizar diferentes escenarios:
+
+**Paquete de ejemplo n.º 1** \- Conexión de Civil: este paquete tiene dependencias de API con Revit y Civil 3D y no incluye una colección de nodos principales (por ejemplo, funciones de geometría, funciones matemáticas y/o gestión de listas). Por lo tanto, en este caso, la opción ideal sería optar por la opción 1. El paquete se mostrará como "Compatible" en las versiones de Revit y Civil 3D que coincidan con el rango especificado o con la lista de versiones individuales.
+
+**Paquete de ejemplo n.º 2** \- Rhythm: este paquete es una colección de nodos específicos de Revit junto con una colección de nodos principales. En este caso, el paquete tiene dependencias de anfitrión, pero también incluye nodos principales que funcionarán en Dynamo Core. Por lo tanto, en este caso, la opción ideal sería la opción 2. El paquete se mostrará como "Compatible" en los entornos de Revit y Dynamo Core (también denominado Dynamo Sandbox) que coincidan con el rango de versiones o la lista de versiones individuales especificados.
+
+**Paquete de ejemplo n.º 3** \- Kit de herramientas de malla: este es un paquete de Dynamo Core que consiste en una colección de nodos de geometría que no tiene dependencias de anfitrión. Por lo tanto, en este caso, la opción ideal sería la opción 3. El paquete se mostrará como "Compatible" en Dynamo y en todos los entornos anfitriones que coincidan con el rango de versiones o la lista de versiones individuales especificados.
+
+![Opciones en la edición de información de compatibilidad](images/Package-Manager_Image_8.png)
+
+En función de la opción seleccionada, aparecerán campos específicos de Dynamo o del anfitrión, tal como se muestra en la imagen siguiente.
+
+![Editar información de compatibilidad: paso 2](images/Package-Manager_Image_9.png)

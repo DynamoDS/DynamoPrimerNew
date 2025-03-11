@@ -28,7 +28,7 @@ Los bloques de código también son flexibles en relación con los tipos de dato
 
 En la imagen siguiente, puede comprobar que la forma tradicional de trabajo es algo prolija: el usuario busca el nodo previsto en la interfaz, lo añade al lienzo y, a continuación, introduce los datos. Con el bloque de código, el usuario puede hacer doble clic en el lienzo para desplegar el nodo y escribir el tipo de datos correcto con la sintaxis básica.
 
-Los nodos "number", "string" y "formula" son tres ejemplos de nodos de Dynamo que posiblemente estén obsoletos en comparación con el bloque de código.
+Los nodos "number" y "string" son dos ejemplos de nodos de Dynamo que posiblemente estén obsoletos en comparación con el bloque de código.
 
 ![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 

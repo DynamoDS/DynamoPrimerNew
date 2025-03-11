@@ -67,7 +67,7 @@ Abriremos "SphereUnfold".
 
 Después de abrir el archivo y pulsar "Ejecutar" en el solucionador, tenemos una esfera desplegada. Estos archivos de ejemplo son útiles para aprender a trabajar con un nuevo paquete de Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Examinar y ver información de paquetes
 
@@ -79,7 +79,7 @@ También puede acceder a más información sobre cada paquete. Para ello, haga c
 
 ### Sitio web de Dynamo Package Manager
 
-Otra forma de descubrir los paquetes de Dynamo es explorar el sitio web de [Dynamo Package Manager](http://dynamopackages.com). Aquí puede encontrar estadísticas sobre paquetes y tablas de clasificación de autores. También puede descargar los archivos de paquete desde Dynamo Package Manager, pero este proceso es más directo si se realiza desde Dynamo.
+Otra forma de descubrir los paquetes de Dynamo es explorar el sitio web de [Dynamo Package Manager](http://dynamopackages.com). Aquí puede encontrar dependencias de paquetes e información sobre compatibilidad de anfitrión y versión proporcionada por los autores de los paquetes. También puede descargar los archivos de paquete desde Dynamo Package Manager, pero este proceso es más directo si se realiza desde Dynamo.
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -91,6 +91,53 @@ Si desea ver dónde se guardan los archivos de los paquetes, en el panel de nave
 
 Por defecto, los paquetes se instalan en una ubicación similar a esta ruta de carpeta: _C:/Usuarios/[nombre de usuario]/AppData/Roaming/Dynamo/[Versión de Dynamo]_.
 
+### Configuración de una ubicación compartida para paquetes en una oficina
+
+Para los usuarios que preguntan si es posible implantar Dynamo (de cualquier forma) con paquetes enlazados previamente: el enfoque que resuelve este problema y permite llevar el control desde una ubicación central para todos los usuarios con instalaciones de Dynamo consiste en añadir una ruta de paquete personalizada a cada instalación.
+
+**Añadir una carpeta de red para que el administrador de BIM u otros usuarios puedan supervisar el almacenamiento de la carpeta con paquetes aprobados por la oficina**  
+
+En la interfaz de usuario de una aplicación individual, vaya a *Dynamo -> Preferencias -> Configuración de paquetes -> Ubicaciones de archivo de nodos y paquetes*. En el cuadro de diálogo, presione el botón "Añadir ruta" y busque la ubicación de red del recurso de paquete compartido. 
+ 
+Como proceso automatizado, implicaría añadir información al archivo de configuración que se instala con Dynamo:  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`.
+
+Por defecto, la configuración de Dynamo for Revit es:
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+La adición de una ubicación personalizada tendría el siguiente aspecto:  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+La administración central de esta carpeta también se puede controlar simplemente haciendo que la carpeta sea de solo lectura.
+
+### Carga de paquetes con archivos binarios desde una ubicación de red
+
+#### Escenario
+
+Es posible que una organización desee estandarizar los paquetes instalados por diferentes estaciones de trabajo y usuarios. Una forma de hacerlo podría consistir en instalar estos paquetes desde *Dynamo -> Preferencias -> Configuración de paquetes -> Ubicaciones de archivo de nodos y paquetes*, seleccionar una carpeta de red como ubicación de instalación y hacer que las estaciones de trabajo agreguen esa ruta a `Manage Node and Package Paths`.
+
+#### Problema
+
+Si bien el escenario planteado funciona correctamente para paquetes que contengan solo nodos personalizados, es posible que no funcione para los paquetes que contengan archivos binarios, como los nodos Zero Touch. Este problema se debe a las [medidas de seguridad](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location) que .NET Framework aplica a la carga de ensamblajes cuando proceden de una ubicación de red. Desafortunadamente, el uso del elemento de configuración `loadFromRemoteSources`, como se sugiere en el hilo vinculado, no es una solución factible para Dynamo, ya que se distribuye como componente y no como aplicación.
+
+#### Solución alternativa
+
+Una posible solución alternativa es utilizar una unidad de red asignada que apunte a la ubicación de la red y hacer que las estaciones de trabajo hagan referencia a esa ruta. Los pasos para crear una unidad de red asignada se describen [aquí](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+
 ### Más detalles sobre los paquetes
 
-La comunidad de Dynamo está en constante crecimiento y evolución. Si explora Dynamo Package Manager de vez en cuando, descubrirá algunos avances excelentes. En las secciones siguientes, analizaremos en profundidad los paquetes, desde la perspectiva del usuario final hasta la autoría de un paquete de Dynamo propio.
+La comunidad de Dynamo está en constante crecimiento y evolución. Si explora el administrador de paquetes de Dynamo de vez en cuando, descubrirá algunos avances excelentes. En las secciones siguientes, analizaremos en profundidad los paquetes, desde la perspectiva del usuario final hasta la autoría de un paquete de Dynamo propio.

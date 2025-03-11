@@ -23,9 +23,7 @@ La creación de secuencias de comandos de texto puede establecer relaciones de u
 | **Python**         | Sí         | Sí           | Parcialmente          | Sí                | No            |
 | **ZeroTouch (C#)** | No          | No            | No                 | Sí                | No            |
 
-{% hint style="info" %}
- Consulte [Referencia de secuencias de comandos](3-scripting-reference.md) para obtener una lista de los elementos a los que cada biblioteca de Dynamo proporciona acceso. 
-{% endhint %}
+{% hint style="info" %} Consulte [Referencia de secuencias de comandos](3-scripting-reference.md) para obtener una lista de los elementos a los que cada biblioteca de Dynamo proporciona acceso. {% endhint %}
 
 ### Pensamiento paramétrico
 
@@ -65,9 +63,7 @@ Al crear secuencias de comandos en Dynamo, un entorno inevitablemente paramétri
 > 2. Variables internas de la secuencia de comandos.
 > 3. Un bucle que utiliza estas entradas y variables para realizar su función.
 
-{% hint style="info" %}
- Consejo: Céntrese tanto en el proceso como lo hace en la solución. 
-{% endhint %}
+{% hint style="info" %} Consejo: Céntrese tanto en el proceso como lo hace en la solución. {% endhint %}
 
 ### **No se repita (principio de no repetición):**
 
@@ -94,9 +90,7 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}
- Consejo: Antes de duplicar entidades en la secuencia de comandos (como la constante en el ejemplo anterior), pregúntese si puede establecer un vínculo con el origen en su lugar. 
-{% endhint %}
+{% hint style="info" %} Consejo: Antes de duplicar entidades en la secuencia de comandos (como la constante en el ejemplo anterior), pregúntese si puede establecer un vínculo con el origen en su lugar. {% endhint %}
 
 ### Estructuración modular
 
@@ -201,9 +195,7 @@ Al desarrollar secuencias de comandos de texto en Dynamo, es recomendable asegur
 * En algunos casos, los errores y las incidencias que revelan algún problema subyacente en la secuencia de comandos solo se detectarán durante estos casos extremos.
   * Conozca las causas del error y decida posteriormente si se debe corregir internamente o si se debe volver a definir un dominio de parámetro para evitar el problema.
 
-{% hint style="info" %}
- Consejo: Siempre presuponga que el usuario utilizará todas las combinaciones de cada uno de los valores de entrada que se le hayan presentado. Esto ayudará a eliminar sorpresas no deseadas. 
-{% endhint %}
+{% hint style="info" %} Consejo: Siempre presuponga que el usuario utilizará todas las combinaciones de cada uno de los valores de entrada que se le hayan presentado. Esto ayudará a eliminar sorpresas no deseadas. {% endhint %}
 
 ### Depuración eficaz
 

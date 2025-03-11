@@ -77,6 +77,32 @@ Como puede ver, existen diferentes métodos para dibujar líneas entre estos con
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
+### ¿Qué es la replicación?
+
+Imagine que tiene un racimo de uvas. Si quisiera hacer zumo de uva, no las exprimiría una a una, sino que las pasaría todas por el exprimidor a la vez. La replicación en Dynamo funciona de forma similar; en lugar de aplicar una operación a un elemento cada vez, Dynamo puede aplicarla a toda una lista de una sola vez.
+
+Los nodos de Dynamo reconocen automáticamente cuándo están trabajando con listas y aplican sus operaciones a varios elementos. Esto significa que no es necesario recorrer manualmente los elementos, simplemente ocurre. Pero, ¿cómo decide Dynamo cómo procesar las listas cuando hay más de una?
+
+De una de las siguientes formas:
+
+#### Replicación cartesiana
+Digamos que está en la cocina haciendo zumos de frutas. Tiene una lista de frutas (`{apple, orange, pear}`) y una cantidad fija de agua para cada zumo (`1 cup`). Desea hacer zumo con cada fruta utilizando la misma cantidad de agua. En este caso, entra en juego la replicación cartesiana.
+
+En Dynamo, esto significa que está introduciendo la lista de frutas en la entrada de frutas del nodo Juice.Maker, mientras que la entrada de agua se mantiene constante en 1 taza. A continuación, el nodo procesa cada fruta individualmente, combinándola con la cantidad fija de agua. El resultado es el siguiente:
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+Cada fruta se combina con la misma cantidad de agua.
+
+#### Replicación Zip
+La replicación Zip funciona de forma algo diferente. Si tuviera dos listas, una para frutas (`{apple, orange, pear}`) y otra para cantidades de azúcar (`{2 tbsp, 3 tbsp, 1 tbsp}`), la replicación Zip combinaría los elementos correspondientes de cada lista. Por ejemplo:
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+Cada fruta se combina con su correspondiente cantidad de azúcar.
+
+Para obtener más información sobre cómo funciona, consulte las [guías de replicación y encaje](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1).
+
 ## Ejercicio
 
 > Descargue el archivo de ejemplo. Para ello, haga clic en el vínculo siguiente.

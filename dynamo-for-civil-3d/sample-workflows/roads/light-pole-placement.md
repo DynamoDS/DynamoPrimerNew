@@ -18,17 +18,13 @@ Uno de los muchos y excelentes casos de uso de Dynamo es la colocación dinámic
 
 ## Compatibilidad con versiones
 
-{% hint style="success" %}
- Este gráfico se ejecutará en **Civil 3D 2020** y versiones posteriores. 
-{% endhint %}
+{% hint style="success" %} Este gráfico se ejecutará en **Civil 3D 2020** y versiones posteriores. {% endhint %}
 
 ## Conjunto de datos
 
 Descargue primero los archivos de ejemplo que aparecen a continuación y abra el archivo DWG y el gráfico de Dynamo.
 
-{% hint style="info" %}
- Es preferible que el archivo de Excel se guarde en el mismo directorio que el gráfico de Dynamo. 
-{% endhint %}
+{% hint style="info" %} Es preferible que el archivo de Excel se guarde en el mismo directorio que el gráfico de Dynamo. {% endhint %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -53,9 +49,7 @@ En este gráfico de ejemplo, vamos a utilizar un archivo de Excel  a fin de alma
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>Estructura de la tabla del archivo de Excel</p></figcaption></figure>
 
-{% hint style="info" %}
- El uso de Dynamo para leer datos de un archivo externo (como un archivo de Excel) es una excelente estrategia, sobre todo, cuando los datos deben compartirse con otros miembros del equipo. 
-{% endhint %}
+{% hint style="info" %} El uso de Dynamo para leer datos de un archivo externo (como un archivo de Excel) es una excelente estrategia, sobre todo, cuando los datos deben compartirse con otros miembros del equipo. {% endhint %}
 
 Los datos de Excel se importan en Dynamo de este modo. 
 
@@ -65,9 +59,7 @@ Ahora que tenemos los datos, debemos dividirlos por columna (_Corridor_, _Baseli
 
 Parece lógico, ¿verdad? Sin embargo, este planteamiento puede plantear un problema. ¿Qué ocurre si el orden de las columnas del archivo de Excel cambia en el futuro? ¿O se añade una nueva columna entre otras dos? En ese caso, el gráfico no funcionará correctamente y deberá actualizarse. Podemos preparar el gráfico para el futuro incluyendo los datos en un **diccionario**, con los encabezados de las columnas de Excel como _claves_ y el resto de los datos como _valores_.
 
-{% hint style="info" %}
- Si es la primera vez que utiliza estos diccionarios, consulte la sección [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Si es la primera vez que utiliza estos diccionarios, consulte la sección [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Colocación de datos de Excel en un diccionario</p></figcaption></figure>
 
@@ -89,17 +81,13 @@ Ahora que ya tenemos los datos de Excel importados y listos, empecemos a utiliza
 
 Ahora vamos a generar **sistemas de coordenadas** a lo largo de las líneas características de obra lineal en los valores de P.K. especificados del archivo de Excel. Estos sistemas de coordenadas se utilizarán para definir la posición, la rotación y la escala de las referencias a bloque de las farolas.
 
-{% hint style="info" %}
- Si es la primera vez que utiliza los sistemas de coordenadas, consulte la sección [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Si es la primera vez que utiliza los sistemas de coordenadas, consulte la sección [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>Obtención de sistemas de coordenadas a lo largo de las líneas características de obra lineal</p></figcaption></figure>
 
 Observe aquí el uso de un bloque de código para rotar los sistemas de coordenadas en función del lado de la línea base en el que se encuentren. Esto podría lograrse mediante una secuencia de varios nodos, pero este es un buen ejemplo de una situación en la que es más fácil simplemente escribirlo.
 
-{% hint style="info" %}
- Si es la primera vez que utiliza bloques de código, consulte la sección [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Si es la primera vez que utiliza bloques de código, consulte la sección [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). {% endhint %}
 
 ### Crear referencias a bloque
 
@@ -115,9 +103,7 @@ A continuación, el último paso es crear las referencias a bloque.
 
 Al ejecutar el gráfico, deberían aparecer nuevas referencias a bloque en el espacio modelo a lo largo de la obra lineal. Y esta es la mejor parte: si el modo de ejecución del gráfico se ha establecido en Automático y edita el archivo de Excel, las referencias de bloque se actualizan automáticamente.
 
-{% hint style="info" %}
- Puede obtener más información sobre los modos de ejecución de gráficos en la sección [3_user_interface](../../../3\_user\_interface/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Puede obtener más información sobre los modos de ejecución de gráficos en la sección [3_user_interface](../../../3\_user\_interface/ "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Realización de cambios en el archivo de Excel y visualización rápida de los resultados en Civil 3D</p></figcaption></figure>
 
@@ -125,9 +111,7 @@ A continuación, se muestra un ejemplo de cómo ejecutar el gráfico con el **Re
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Ejecución del gráfico mediante el Reproductor de Dynamo y visualización de los resultados en Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}
- Si es la primera vez que utiliza el Reproductor de Dynamo, consulte la sección [dynamo-player.md](../../dynamo-player.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Si es la primera vez que utiliza el Reproductor de Dynamo, consulte la sección [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 
 > :tada: ¡Misión cumplida!
 
@@ -150,14 +134,8 @@ Este es el resultado de la vista preliminar en segundo plano de Dynamo.
 
 A continuación, se ofrecen algunas ideas sobre cómo podría ampliar las posibilidades de este gráfico.
 
-{% hint style="info" %}
- Añada una columna de **rotación** al archivo de Excel y utilícela para controlar la rotación de los sistemas de coordenadas. 
-{% endhint %}
+{% hint style="info" %} Añada una columna de **rotación** al archivo de Excel y utilícela para controlar la rotación de los sistemas de coordenadas. {% endhint %}
 
-{% hint style="info" %}
- Añada **desfases horizontales o verticales** al archivo de Excel para que las farolas puedan desviarse de la línea característica de obra lineal si es necesario. 
-{% endhint %}
+{% hint style="info" %} Añada **desfases horizontales o verticales** al archivo de Excel para que las farolas puedan desviarse de la línea característica de obra lineal si es necesario. {% endhint %}
 
-{% hint style="info" %}
- En lugar de utilizar un archivo de Excel con valores de P.K., genere estos valores **directamente en Dynamo** mediante un P.K. inicial y una separación típica. 
-{% endhint %}
+{% hint style="info" %} En lugar de utilizar un archivo de Excel con valores de P.K., genere estos valores **directamente en Dynamo** mediante un P.K. inicial y una separación típica. {% endhint %}

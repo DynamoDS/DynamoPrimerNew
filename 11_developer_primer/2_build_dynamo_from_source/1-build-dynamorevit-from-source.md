@@ -1,4 +1,4 @@
-# Compilar DynamoRevit a partir del código fuente 
+# Compilar DynamoRevit a partir del código fuente
 
 Los archivos de código fuente de DynamoRevit también están alojados en el GitHub de DynamoDS para que los desarrolladores puedan realizar contribuciones y compilar versiones beta. Por lo general, la compilación de DynamoRevit a partir del código fuente sigue el mismo proceso que Dynamo, con la excepción de algunos detalles importantes, como los siguientes:
 
@@ -13,9 +13,9 @@ Para esta guía, utilizaremos lo siguiente:
 
 Para garantizar una compilación correcta, clonaremos y compilaremos los repositorios de Dynamo y DynamoRevit para utilizarlos en esta guía.
 
-_Nota: Solo es necesario compilar Dynamo manualmente antes de DynamoRevit si compila Dynamo 1.x y DynamoRevit 1.x; las versiones más recientes del repositorio de DynamoRevit dependen del administrador de paquetes NuGet para las dependencias de Dynamo necesarias para la compilación. Aunque, para la compilación de DynamoRevit 2.x, no es necesario extraer Dynamo manualmente, seguirá necesitando los archivos `dlls` de Core en alguna otra ubicación para ejecutar el `addin` DynamoRevit, por lo que vale la pena extraer y compilar Dynamo de todos modos. Consulte más información a continuación en_ [_Compilación del repositorio mediante Visual Studio_](#building-the-repository-using-Visual-Studio).
+_Nota: Solo es necesario compilar Dynamo manualmente antes de DynamoRevit si compila Dynamo 1.x y DynamoRevit 1.x; las versiones más recientes del repositorio de DynamoRevit dependen del administrador de paquetes NuGet para las dependencias de Dynamo necesarias para la compilación. Aunque, para la compilación de DynamoRevit 2.x, no es necesario extraer Dynamo manualmente, seguirá necesitando los archivos `dlls` de Core en alguna otra ubicación para ejecutar el `add-in` DynamoRevit, por lo que vale la pena extraer y compilar Dynamo de todos modos. Consulte más información a continuación en_ [_Compilación del repositorio mediante Visual Studio_](#building-the-repository-using-Visual-Studio).
 
-#### Ubicación del repositorio de DynamoRevit en GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Ubicación del repositorio de DynamoRevit en GitHub <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
 El código del proyecto DynamoRevit se encuentra en un repositorio de GitHub distinto al del código fuente principal de Dynamo. Este repositorio contiene los archivos de código fuente de los nodos específicos de Revit y el complemento de Revit que carga Dynamo. Las compilaciones de DynamoRevit para diferentes versiones de Revit (por ejemplo, 2016, 2017 o 2018) se organizan como ramificaciones en el repositorio.
 
@@ -26,7 +26,7 @@ El código fuente de DynamoRevit se encuentra aquí: [https://github.com/DynamoD
 > 1. Clone o descargue el repositorio.
 > 2. Las ramificaciones de DynamoRevit hacen referencia a las versiones de Revit.
 
-#### Clonación del repositorio mediante git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### Clonación del repositorio mediante git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
 En un proceso similar al de extracción del repositorio de Dynamo, utilizaremos el comando "git clone" para clonar DynamoRevit y especificar la ramificación que coincida con nuestra versión de Revit. Para empezar, abriremos una interfaz de línea de comando y estableceremos el directorio actual en la ubicación en la que deseamos clonar los archivos.
 
@@ -54,7 +54,7 @@ Una vez que el repositorio haya terminado de clonarse, cambie el directorio actu
 
 Es importante elegir la ramificación correcta del repositorio para asegurarse de que cuando el proyecto se compile en Visual Studio, este hará referencia a los montajes de la versión correcta del directorio de instalación de Revit, en concreto, a `RevitAPI.dll` y `RevitAPIUI.dll`.
 
-#### Compilación del repositorio mediante Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### Compilación del repositorio mediante Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
 Antes de crear el repositorio, necesitaremos restablecer los paquetes NuGet con el archivo `restorepackages.bat` ubicado en la carpeta `src`. Este archivo bat utiliza el administrador de paquetes [NuGet](https://www.nuget.org) para extraer los archivos binarios de Dynamo Core compilados necesarios para DynamoRevit. También puede optar por compilarlos manualmente, pero solo si realiza cambios en DynamoRevit y no en Dynamo Core. Esto agiliza el proceso de inicio. Asegúrese de ejecutar este archivo como administrador.
 
@@ -75,7 +75,7 @@ Con los paquetes restablecidos, abra el archivo de la solución de Visual Studio
 > 1. Seleccione `Build > Build Solution`.
 > 2. Compruebe que la compilación se haya realizado correctamente en la ventana de salida. Debería aparecer el siguiente mensaje. `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
 
-#### Ejecución de una compilación local de DynamoRevit en Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### Ejecución de una compilación local de DynamoRevit en Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
 Revit requiere un archivo de complemento para reconocer DynamoRevit, algo que el [instalador](http://dynamobim.org/download/) creará automáticamente. Durante el desarrollo, debemos crear manualmente un archivo de complemento que señale a la compilación de DynamoRevit que deseamos utilizar, en concreto, el montaje `DynamoRevitDS.dll`. También es necesario señalar DynamoRevit a una compilación de Dynamo.
 
@@ -147,7 +147,7 @@ Ahora, al abrir Revit, debería haber un complemento de Dynamo ubicado en la fic
 
 Si aparece un cuadro de diálogo de error que muestra los montajes que faltan, es probable que haya una discrepancia entre las versiones de DynamoCore que ha creado y las que está cargando en el tiempo de ejecución. Por ejemplo, DynamoRevit con los paquetes beta 2.0 más recientes de DynamoCore no funcionará si intenta iniciarlo con los archivos dll de Dynamo 1.3. Asegúrese de que ambos repositorios presenten la misma versión y de que DynamoRevit utilice una versión coincidente de las dependencias de NuGet. Estos se definen en el archivo `package.json` del repositorio de DynamoRevit.
 
-#### Depuración de DynamoRevit mediante Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### Depuración de DynamoRevit mediante Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
 En la sección anterior, **Compilar Dynamo a partir del código fuente**, se presentó brevemente la depuración en Visual Studio y cómo enlazar Visual Studio a un proceso. Mediante una excepción en el nodo Wall.ByCurveAndHeight como ejemplo, veremos cómo enlazar a un proceso, establecer puntos de interrupción, recorrer el código y utilizar la pila de llamadas para determinar el origen de la excepción. Estas herramientas de depuración se aplican generalmente a los flujos de trabajo de desarrollo de .net y vale la pena explorarlas fuera de esta guía.
 
@@ -210,7 +210,7 @@ Dado que no se trata de una biblioteca de código abierto, no podemos realizar c
 
 Este proceso se puede aplicar a cualquier archivo de código fuente con el que se trabaje. Al desarrollar una biblioteca de nodos Zero-Touch para Dynamo Studio, podemos abrir el código fuente de la biblioteca y asociar un proceso de Dynamo para depurar la biblioteca de nodos. Aunque todo funcione perfectamente, la depuración es una excelente forma de explorar el código y descubrir el funcionamiento de los componentes.
 
-#### Extraer la última compilación <a href="#pull-latest-build" id="pull-latest-build"></a>
+### Extraer la última compilación <a href="#pull-latest-build" id="pull-latest-build"></a>
 
 Este proceso es casi idéntico al de extracción de cambios para Dynamo, excepto en que tendremos que asegurarnos de que estamos en la ramificación correcta. Utilice el comando `git branch` en el repositorio de DynamoRevit para ver las ramificaciones que están disponibles localmente y las que se han restaurado.
 
