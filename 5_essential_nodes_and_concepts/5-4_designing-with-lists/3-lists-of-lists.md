@@ -111,7 +111,7 @@ Uzel **List.Count** spočítá všechny položky v seznamu. Pomocí tohoto nás
 > 3. Připojte každý řádek bloku kódu do příslušných vstupů _X_ a _Y_ uzlu **Point.ByCoordinates**. Klikněte pravým tlačítkem na uzel, vyberte položku „Vázání“ a vyberte položku _„Vektorový součin“_. Tím se vytvoří osnova bodů. Vzhledem k tomu, že jsme definovali rozsah od -50 do 50, bude se rozsah pohybovat ve výchozí osnově aplikace Dynamo.
 > 4. Uzel _**Watch**_ zobrazí vytvořené body. Všimněte si datové struktury. Vytvořili jsme seznam seznamů. Každý seznam představuje řádek bodů v osnově.
 
-![Cvičení](<../images/5-4/3/lists of lists - map 02.jpg>)
+\![Cvičení](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Připojte uzel **List.Count** k výstupu uzlu Watch z předchozího kroku.
 > 2. Připojte uzel **Watch** k výstupu uzlu **List.Count**.
@@ -150,9 +150,7 @@ Dále pomocí uzlu **List.Combine** použijeme funkci na objekty ve 2 samostatn�
 
 Po dokončení jsou 2 sady bodů komprimovány/spárovány dohromady pomocí funkce **Line.ByStartPointEndPoint** a vrátí 10 řádků v aplikaci Dynamo.
 
-{% hint style="info" %}
- Další příklad použití uzlu List.Combine naleznete ve cvičení v části N-rozměrné seznamy. 
-{% endhint %}
+{% hint style="info" %} Další příklad použití uzlu List.Combine naleznete ve cvičení v části N-rozměrné seznamy. {% endhint %}
 
 ### Funkce List@Level
 
@@ -278,7 +276,7 @@ Nyní, když byl seznam upraven, je třeba vložit tento seznam zpět do původn
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. Podle stejné logiky nahraďte pomocí metody **List.ReplaceItemAtIndex** prostřední seznam upraveným seznamem.
-> 2. Všimněte si, že **bloky kódu** definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points[1][2]_).
+> 2. Všimněte si, že **bloky kódu** __ definující index těchto dvou uzlů jsou 1 a 2, což odpovídá původnímu dotazu z **bloku kódu** (_points[1][2]_).
 > 3. Po výběru seznamu na _indexu 1_ se v náhledu aplikace Dynamo zvýrazní datová struktura. Přesunutý bod tak byl úspěšně sloučen s původní datovou strukturou.
 
 Z této sady bodů je možné vytvořit povrch mnoha způsoby. V tomto případě se vytvoří povrch šablonováním křivek dohromady.

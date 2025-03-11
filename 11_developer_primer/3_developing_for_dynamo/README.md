@@ -6,11 +6,11 @@ Platforma Dynamo je navržena tak, aby se přispěvateli mohli stát všichni u�
 
 > Tři vývojová prostředí: Visual Studio, Editor jazyka Python a Blok kódů s jazykem DesignScript
 
-#### Jaké máte možnosti? <a href="#what-are-my-options" id="what-are-my-options"></a>
+### Jaké máte možnosti? <a href="#what-are-my-options" id="what-are-my-options"></a>
 
 Možnosti vývoje pro aplikaci Dynamo spadají primárně do dvou kategorií: _pro_ aplikaci Dynamo a _v_ aplikaci Dynamo. Tyto dvě kategorie si lze představit takto: „v“ aplikaci Dynamo znamená obsah vytvořený pomocí vývojového prostředí aplikace Dynamo, který bude použit v aplikaci Dynamo, a „pro“ aplikaci Dynamo znamená použití externích nástrojů k vytvoření obsahu, který bude importován do aplikace Dynamo a poté zde použit. Ačkoliv je tato příručka zaměřena na vývoj _pro_ aplikaci Dynamo, níže jsou popsány zdroje pro všechny procesy.
 
-#### Pro aplikaci Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
+### Pro aplikaci Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
 Tyto uzly umožňují nejvyšší stupeň přizpůsobení. Touto metodou je sestaveno mnoho balíčků a je nezbytná pro přispívání do zdrojů aplikace Dynamo. Proces jejich sestavení bude popsán v této příručce.
 
@@ -26,7 +26,7 @@ V následujícím pojednání je jako vývojové prostředí pro uzly Zero-Touc
 
 > Rozhraní aplikace Visual Studio s projektem, který budeme vyvíjet.
 
-#### V aplikaci Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
+### V aplikaci Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
 Ačkoli tyto procesy existují v pracovním prostoru vizuálního programování a jsou poměrně přímočaré, všechny představují vhodné možnosti pro přizpůsobení aplikace Dynamo. Tato příručka se jimi podrobně zabývá a v kapitole [Strategie skriptování](../../9\_best\_practices/2-scripting-strategies.md) poskytuje tipy a osvědčené postupy.
 
@@ -46,7 +46,7 @@ Vývoj v pracovním prostoru Dynamo představuje výkonný nástroj pro získá
 
 > Vývoj v pracovním prostoru aplikace Dynamo pomocí uzlu jazyka Python
 
-#### Jaké jsou výhody/nevýhody jednotlivých možností vývoje? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### Jaké jsou výhody/nevýhody jednotlivých možností vývoje? <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
 Možnosti vývoje aplikace Dynamo byly navrženy tak, aby řešily složitost potřeby přizpůsobení. Ať už je cílem napsat rekurzivní skript v jazyce Python, nebo sestavit vlastní uživatelské rozhraní uzlu, existují možnosti implementace kódu, které zahrnují pouze to, co je nezbytné pro spuštění.
 
@@ -87,7 +87,7 @@ Pomocí této metody můžeme:
 * Přizpůsobit vázání.
 * Načítat uzly do aplikace Dynamo jako balíček.
 
-#### Informace o změnách verzí aplikace Dynamo a rozhraní API (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### Informace o změnách verzí aplikace Dynamo a rozhraní API (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 Protože je aplikace Dynamo pravidelně aktualizována, mohou být provedeny změny v části rozhraní API, které jsou používány v balíčku. Sledování těchto změn je důležité pro zajištění správné funkce stávajících balíčků.
 
@@ -101,8 +101,13 @@ Dokumentace rozhraní API aplikace Dynamo aktuálně pokrývá hlavní funkce: [
 
 ![Dokumentace k rozhraní API](images/api-docs.jpg)
 
-#### Oprávnění k distribuci binárních souborů v balíčku <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
+### Oprávnění k distribuci binárních souborů v balíčku <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
 Dávejte pozor na soubory DLL obsažené v balíčku, který je nahráván do správce balíčků. Pokud autor balíčku nevytvořil knihovnu .dll, musí mít práva na její sdílení.
 
 Jestliže balíček obsahuje binární soubory, je nutné uživatele při stahování upozornit, že balíček obsahuje binární soubory.
+
+### Důležité informace o výkonu uživatelského rozhraní aplikace Dynamo
+V době psaní tohoto článku používá aplikace Dynamo k vykreslování uživatelského rozhraní primárně WPF (Windows Presentation Foundation). WPF je složitý a výkonný systém založený na XAML/vazbě. Vzhledem k tomu, že Dynamo má složité uživatelské rozhraní, je snadné způsobit jeho zablokování, úniky paměti nebo zabalit provádění grafu a aktualizace uživatelského rozhraní dohromady způsobem, který snižuje výkon.
+
+Podívejte se na stránku wiki zabývající se [různými aspekty výkonu aplikace Dynamo](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance), která vám pomůže vyhnout se několika běžným nástrahám při provádění změn v kódu aplikace Dynamo.

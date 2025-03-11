@@ -67,7 +67,7 @@ Otevřeme položku SphereUnfold.
 
 Po otevření souboru a stisknutí tlačítka Spustit na řešiči máme rozvinutou kouli. Ukázkové soubory, jako jsou tyto, jsou užitečné při studiu práce s novým balíčkem Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Procházení a zobrazení informací o balíčku
 
@@ -79,7 +79,7 @@ Další podrobnosti o jednotlivých balíčcích můžete také zobrazit kliknu
 
 ### Web nástroje Dynamo Package Manager
 
-Další způsob, jak objevovat balíčky aplikace Dynamo, je prozkoumat web nástroje nástroj [Dynamo Package Manager](http://dynamopackages.com). Zde najdete statistiky balíčků a žebříčky autorů. Soubory balíčku můžete také stáhnout z aplikace Dynamo Package Manager, ale přímo z aplikace Dynamo je proces jednodušší.
+Další způsob, jak objevovat balíčky aplikace Dynamo, je prozkoumat web nástroje nástroj [Dynamo Package Manager](http://dynamopackages.com). Zde najdete závislosti balíčků a informace o kompatibilitě hostitelů a verzí, které poskytují autoři balíčků. Soubory balíčku můžete také stáhnout z aplikace Dynamo Package Manager, ale přímo z aplikace Dynamo je proces jednodušší.
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,53 @@ Pokud chcete zjistit, kde jsou uloženy soubory balíčku, klikněte v horní �
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 Ve výchozím nastavení jsou balíčky nainstalovány do umístění podobného této cestě: _C:/Users/[uživatelské jméno]/AppData/Roaming/Dynamo/[verze aplikace Dynamo]_.
+
+### Nastavení sdíleného umístění pro balíčky v organizaci
+
+Informace pro uživatele, kteří se ptají, zda je možné nasadit aplikaci Dynamo (v libovolné formě) pomocí předem připojených balíčků: Chcete-li tento problém vyřešit a umožnit kontrolu v centrálním umístění pro všechny uživatele s instalacemi aplikace Dynamo, přidejte ke každé instalaci vlastní cestu k balíčku.
+
+**Přidání síťové složky, ve které může správce BIM nebo jiní uživatelé dohlížet na plnění složky balíčky schválenými organizací**  
+
+V uživatelském rozhraní jednotlivých aplikací přejděte do nabídky *Dynamo -> Předvolby -> Nastavení balíčku -> Umístění souborů uzlů a balíčků*. V dialogu klikněte na tlačítko Přidat cestu a přejděte do síťového umístění sdíleného prostředku balíčku. 
+ 
+Jedná se o automatizovaný proces, který by zahrnoval přidání informací do konfiguračního souboru, který je nainstalován s aplikací Dynamo:  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+Ve výchozím nastavení je konfigurace aplikace Dynamo pro Revit následující:
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+Přidání vlastního umístění by vypadalo takto:  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+Centrální správu této složky lze také ovládat jednoduše nastavením složky pouze ke čtení.
+
+### Načítání balíčků s binárními soubory ze síťového umístění
+
+#### Scénář
+
+Organizace může chtít standardizovat balíčky nainstalované různými pracovními stanicemi a uživateli. Způsobem, jak toho dosáhnout, by mohlo být nainstalovat tyto balíčky z nabídky *Dynamo -> Předvolby -> Nastavení balíčku -> Umístění souborů uzlů a balíčků*, vybrat síťovou složku jako umístění instalace a přimět pracovní stanice, aby tuto cestu přidaly do `Manage Node and Package Paths`.
+
+#### Problém
+
+I když tento scénář funguje správně pro balíčky, které obsahují pouze vlastní uzly, nemusí fungovat pro balíčky obsahující binární soubory, jako jsou uzly Zero-Touch. Tento problém je způsoben [bezpečnostními opatřeními](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location), které rozhraní .NET Framework uplatňuje při načítá sestav, které pocházejí ze síťového umístění. Bohužel, použití konfiguračního prvku `loadFromRemoteSources`, jak je navrženo v odkazovaném vlákně, není pro aplikaci Dynamo možným řešením, protože je distribuován jako komponenta, nikoli jako aplikace.
+
+#### Řešení
+
+Jedním z možných alternativních řešení je použít namapovanou síťovou jednotku odkazující na síťové umístění a nechat pracovní stanice odkazovat na tuto cestu. Postup vytvoření mapované síťové jednotky je popsán [zde](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
 
 ### Další práce s balíčky
 

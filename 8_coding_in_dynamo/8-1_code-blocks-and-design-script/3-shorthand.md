@@ -94,7 +94,7 @@ V tomto kroku použijeme první funkci k přesunutí rastru bodů nahoru v os
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. Místo použití uzlu vzorce použijeme **blok kódu** s řádkem: `(0..Math.Sin(x*360)..#50)*5;`. Jednoduše řečeno, definujeme rozsah se vzorcem uvnitř něj. Tento vzorec je funkce Sinus. Funkce sinus získá v aplikaci Dynamo vstupy ve stupních, takže abychom získali plnou sinusovou vlnu, je nutné násobit hodnoty x (toto je vstup rozsahu od 0 do 1) hodnotou 360. Dále chceme stejný počet dělení jako řídicí body rastru pro každý řádek, takže definujeme padesát oddílů pomocí #50. Nakonec násobitel hodnoty 5 jednoduše zvýší amplitudu převodu, abychom viděli účinek v náhledu aplikace Dynamo.
+> 1. Použijeme uzel **blok kódu** s tímto řádkem: `(0..Math.Sin(x*360)..#50)*5;`. Jednoduše řečeno, definujeme rozsah se vzorcem uvnitř něj. Tento vzorec je funkce Sinus. Funkce sinus získá v aplikaci Dynamo vstupy ve stupních, takže abychom získali plnou sinusovou vlnu, je nutné násobit hodnoty x (toto je vstup rozsahu od 0 do 1) hodnotou 360. Dále chceme stejný počet dělení jako řídicí body rastru pro každý řádek, takže definujeme padesát oddílů pomocí #50. Nakonec násobitel hodnoty 5 jednoduše zvýší amplitudu převodu, abychom viděli účinek v náhledu aplikace Dynamo.
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -110,7 +110,7 @@ Změnou posuvníků (v rozmezí od 0 do 10) získáme zajímavé výsledky.
 
 ![](../images/8-1/3/shorthand-exercise07.jpg)
 
-> 1. Pokud do kódu přidáme sineList a tranposeList, vytvoří se deformovaný povrch vaječné skořápky: `eggShellList = sineList+transposeList;`.
+> 1. Pokud do kódu přidáme sineList a transposeList, vytvoří se deformovaný povrch vaječné skořápky: `eggShellList = sineList+transposeList;`.
 
 Změňte hodnoty posuvníků uvedené níže, abychom získali klidnější průběh tohoto algoritmu.
 
@@ -140,6 +140,6 @@ Při pohledu na vizuální graf můžeme zvýraznit bloky kódu a zobrazit jedno
 >
 > 2\. Druhý **blok kódu** nahrazuje uzel **Number Range**.
 >
-> 3\. Třetí**blok kódu** nahrazuje uzel **Formula** (a také uzly **List.Transpose**, **List.Count** a **Number Range**).
+> 3\. Třetí **blok kódu** nahrazuje uzly **List.Transpose**, **List.Count** a **Number Range**.
 >
 > 4\. Čtvrtý **blok kódu** se dotazuje na seznam seznamů, přičemž nahrazuje uzel **List.GetItemAtIndex**.

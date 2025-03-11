@@ -28,7 +28,7 @@ Bloky kódu umožňují flexibilní práci s datovými typy. Uživatel může r
 
 Na obrázku níže vidíte starý způsob práce, který je poněkud zdlouhavý: uživatel musí vyhledat požadovaný uzel v rozhraní, přidat uzel na pracovní plochu a poté zadat data. S blokem kódu uživateli stačí, když dvakrát klikne na pracovní plochu, čímž vytvoří uzel, a poté zadá požadovaná data splňující základní syntaxi.
 
-Uzly number, string a formula představují příklady uzlů aplikace Dynamo, které jsou v porovnání s blokem kódu poněkud zastaralé.
+Uzly number a string představují dva příklady uzlů aplikace Dynamo, které jsou v porovnání s blokem kódu poněkud zastaralé.
 
 ![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 

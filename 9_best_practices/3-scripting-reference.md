@@ -31,9 +31,7 @@ Standardní knihovny jsou externí pro aplikaci Dynamo a jsou k dispozici v pr
    * Funkce: Excel.
    * Způsob importu: `import DSOffice`
 
-{% hint style="warning" %}
-*Poznámka: Při použití knihovny **protoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete níže v části **Nespravované objekty**. 
-{% endhint %}
+{% hint style="warning" %} *Poznámka: Při použití knihovny **protoGeometry** prostřednictvím jazyka Python nebo C# vytváříte nespravované objekty, které vyžadují ruční správu paměti. Další informace najdete níže v části **Nespravované objekty**. {% endhint %}
 
 ## Pečlivé použití popisků
 
@@ -276,7 +274,7 @@ Obecně řečeno, existuje více než jeden způsob, jak něco programovat, prot
 
 Při používání knihovny geometrie aplikace Dynamo _(ProtoGeometry)_ z geometrických objektů v jazyce Python nebo C# nebudou vytvářené objekty spravovány virtuálním počítačem a paměť po mnoha těchto objektech bude nutné vyčistit ručně. Chcete-li vyčistit nativní nebo nespravované objekty, můžete použít metodu **Dispose** nebo klíčové slovo **using**. Přehled najdete v této položce Wiki: [https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement](https://github.com/DynamoDS/Dynamo/wiki/Zero-Touch-Plugin-Development#dispose--using-statement).
 
-Je nutné pouze uvolnit nespravované zdroje, které se nevrací do grafu, nebo se na ně neukládá odkaz. Ve zbytku této části odkazujeme na tyto objekty jako _mezilehlou geometrii_. Příklad této třídy objektu je uveden v příkladu kódu níže. Tato funkce Zero Touch jazyka C# **singleCube** vrací jednu krychli, ale během provádění vytvoří 10 000 dalších krychlí. Můžeme předstírat, že tato jiná geometrie byla použita jako mezilehlá konstrukční geometrie.
+Je nutné pouze uvolnit nespravované zdroje, které se nevrací do grafu, nebo se na ně neukládá odkaz. Ve zbytku této části odkazujeme na tyto objekty jako _mezilehlou geometrii_. Příklad této třídy objektu je uveden v příkladu kódu níže. Tato funkce Zero Touch jazyka C# **singleCube** vrací jednu krychli, ale během provádění vytvoří 10000 dalších krychlí. Můžeme předstírat, že tato jiná geometrie byla použita jako mezilehlá konstrukční geometrie.
 
 **Tato funkce Zero Touch pravděpodobně způsobí selhání aplikace Dynamo.** Protože jsme vytvořili 10 000 těles, ale pouze jedno z nich bylo uloženo a pouze toto bylo vráceno. Místo toho bychom měli odstranit všechny mezilehlé krychle, kromě té, kterou vrátíme. Nechceme odstranit tu, kterou vrátíme, protože bude propagována do grafu a použita jinými uzly.
 

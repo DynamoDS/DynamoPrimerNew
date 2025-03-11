@@ -1,4 +1,4 @@
-# Publikování balíčku 
+# Publikování balíčku
 
 ### Publikování balíčku <a href="#publish-a-package" id="publish-a-package"></a>
 
@@ -63,8 +63,55 @@ Aktualizace balíčku probíhá podobně jako publikování. Otevřete nástroj 
 
 #### Webový klient Package Manager <a href="#package-manager-web-client" id="package-manager-web-client"></a>
 
-Webový klient Package Manager se používá výhradně k vyhledávání a prohlížení dat o balíčcích, jako jsou verze a statistiky stahování.
+Webový klient Package Manager umožňuje uživatelům vyhledávat a prohlížet data balíčku, včetně správy verzí, statistik stahování a dalších relevantních informací. Kromě toho se autoři balíčků mohou přihlásit a aktualizovat podrobnosti o svých balíčcích, například informace o kompatibilitě, přímo prostřednictvím webového klienta.
+
+Další informace o těchto funkcích najdete v blogovém příspěvku na následujícím odkazu: [https://dynamobim.org/discover-the-new-dynamo-package-management-experience/](https://dynamobim.org/discover-the-new-dynamo-package-management-experience/).
 
 K webovému klientu Package Manager lze získat přístup pomocí tohoto odkazu: [https://dynamopackages.com/](https://dynamopackages.com)
 
 ![Webový klient Package Manager](images/packagemanager-browser.jpg)
+
+##### Aktualizace podrobností balíčku
+
+Autoři mohou upravit popis balíčku, odkaz na web a odkaz na úložiště pomocí následujících kroků:  
+
+> 1. V části **My Packages** (Moje balíčky) vyberte balíček a klikněte na možnost **Edit package details** (Upravit podrobnosti balíčku).  
+> 2. Pomocí příslušných polí přidejte nebo upravte odkazy na **webové stránky** a **úložiště**.  
+> 3. Podle potřeby aktualizujte **popis balíčku**.  
+> 4. Kliknutím na tlačítko **Save changes** (Uložit změny) aktualizace použijte.  
+
+ **Poznámka**: Aktualizace v nástroji Package Manager v aplikaci Dynamo mohou trvat až 15 minut, protože aktualizace serveru nějakou dobu trvají. Snažíme se toto zpoždění zkrátit.  
+
+ ![Nové uživatelské rozhraní pro aktualizaci podrobností o publikovaných balíčcích](images/Package-Manager_Image_5.png)
+
+##### Úprava informací o kompatibilitě publikovaných verzí balíčků  
+
+Informace o kompatibilitě lze zpětně aktualizovat pro dříve publikované verze balíčků. Postupujte podle následujících kroků:  
+
+![Úprava informací o kompatibilitě publikovaných balíčků – krok 1](images/Package-Manager_Image_6.png)
+
+**Krok 1:**  
+
+1. Klikněte na verzi balíčku, kterou chcete aktualizovat.  
+2. Seznam **Depends on** (Závisí na) bude automaticky vyplněn balíčky, na kterých váš balíček závisí.  
+3. Kliknutím na ikonu tužky vedle položky **Compatibility** (Kompatibilita) otevřete okno pracovního postupu **Edit Compatibility Information** (Upravit informace o kompatibilitě).  
+
+**Krok 2:**  
+
+Postupujte podle níže uvedeného vývojového diagramu a podívejte se na tabulku níže, jež vám pomůže pochopit, která možnost je pro váš balíček nejvhodnější.
+
+![Kterou možnost zvolit pro pracovní postup Upravit informace o kompatibilitě](images/Package-Manager_Image_7.png)
+
+Projděme si na příkladech několik scénářů:
+
+**Příklad balíčku č. 1** – Civil Connection: Tento balíček obsahuje závislosti rozhraní API pro aplikace Revit i Civil 3D a neobsahuje kolekci základních uzlů (např. geometrické funkce, matematické funkce nebo správu seznamů). V tomto případě by tedy bylo ideální zvolit možnost 1. Balíček se zobrazí jako kompatibilní v aplikacích Revit a Civil 3D, které odpovídají rozsahu verzí nebo seznamu jednotlivých verzí.
+
+**Příklad balíčku č. 2** – Rhythm: Tento balíček obsahuje kolekci uzlů specifických pro aplikaci Revit a kolekci základních uzlů. V tomto případě má balíček závislosti hostitele. Obsahuje ale také základní uzly, které budou fungovat v komponentě Dynamo Core. V tomto případě by tedy bylo ideální zvolit možnost 2. Balíček se zobrazí jako kompatibilní v aplikaci Revit a prostředí Dynamo Core (označovaném také jako Dynamo Sandbox), které odpovídají rozsahu verzí nebo seznamu jednotlivých verzí.
+
+**Příklad balíčku č. 3** – Mesh Toolkit: Tento balíček je balíček Dynamo Core, což je kolekce uzlů geometrie, která nemá žádné závislosti na hostiteli. V tomto případě by tedy bylo ideální zvolit možnost 3. Balíček se zobrazí jako kompatibilní v aplikaci Dynamo a ve všech hostitelských prostředích, které odpovídají rozsahu verzí nebo seznamu jednotlivých verzí.
+
+![Možnosti úprav informací o kompatibilitě](images/Package-Manager_Image_8.png)
+
+V závislosti na vybrané možnosti se zobrazí pole specifická pro aplikaci Dynamo a/nebo hostitele, jak je znázorněno na obrázku níže.
+
+![Úprava informací o kompatibilitě – krok 2](images/Package-Manager_Image_9.png)

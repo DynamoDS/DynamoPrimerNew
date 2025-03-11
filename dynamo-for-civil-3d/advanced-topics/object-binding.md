@@ -36,9 +36,7 @@ Po provedení této změny získáme požadované chování.
 
 Aplikace Dynamo for Civil 3D umožňuje upravit výchozí chování vazby objektů pomocí nastavení **Úložiště dat vazeb** v nabídce aplikace **Dynamo**.
 
-{% hint style="info" %}
- Možnosti nastavení Úložiště dat vazeb jsou k dispozici v aplikaci **Civil 3D 2022.1** a vyšších verzích. 
-{% endhint %}
+{% hint style="info" %} Možnosti nastavení Úložiště dat vazeb jsou k dispozici v aplikaci **Civil 3D 2022.1** a vyšších verzích. {% endhint %}
 
 <figure><img src="../../.gitbook/assets/c3d-binding-settings (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -48,48 +46,36 @@ Ve výchozím nastavení jsou povoleny všechny možnosti. Zde je souhrn toho, c
 
 Pokud je tato povolena možnost, aplikace Dynamo „zapomene“ na objekty, které vytvořila při posledním spuštění grafu. Graf lze tedy spustit v libovolném výkresu v libovolné situaci a pokaždé vytvoří nové objekty.
 
-{% hint style="info" %}
- **Vhodné použití**
+{% hint style="info" %} **Vhodné použití**
 
-Tuto možnost použijte, pokud chcete, aby aplikace Dynamo „zapomněla“ na vše, co provedla v předchozích spuštěních, a pokaždé vytvořila nové objekty. 
-{% endhint %}
+Tuto možnost použijte, pokud chcete, aby aplikace Dynamo „zapomněla“ na vše, co provedla v předchozích spuštěních, a pokaždé vytvořila nové objekty. {% endhint %}
 
 ### Možnost 2: Uložit v grafu pro aplikaci Dynamo
 
 Tato možnost znamená, že metadata vazby objektů budou při ukládání serializována do grafu (soubor .dyn). Pokud graf zavřete nebo znovu otevřete a spustíte jej ve **stejném výkresu**, pak by mělo vše fungovat stejně, jako když jste jej opustili. Jestliže graf spustíte v **jiném výkresu**, budou data vazby z grafu odstraněna a vytvoří se nové objekty. To znamená, že pokud otevřete původní výkres a spustíte graf znovu, vytvoří se kromě starých objektů i nové.
 
-{% hint style="info" %}
- **Vhodné použití**
+{% hint style="info" %} **Vhodné použití**
 
-Tuto možnost použijte, pokud chcete, aby si aplikace Dynamo „zapamatovala“ objekty, které vytvořila při posledním spuštění v **určitém výkresu**. 
-{% endhint %}
+Tuto možnost použijte, pokud chcete, aby si aplikace Dynamo „zapamatovala“ objekty, které vytvořila při posledním spuštění v **určitém výkresu**. {% endhint %}
 
-{% hint style="warning" %}
- Tato možnost je vhodná pro situace, kdy je možné zachovat vztah 1:1 mezi **konkrétním výkresem** a grafem aplikace Dynamo. Možnosti 1 a 3 jsou vhodnější pro grafy, které jsou navrženy tak, aby je bylo možné spouštět ve více výkresech. 
-{% endhint %}
+{% hint style="warning" %} Tato možnost je vhodná pro situace, kdy je možné zachovat vztah 1:1 mezi **konkrétním výkresem** a grafem aplikace Dynamo. Možnosti 1 a 3 jsou vhodnější pro grafy, které jsou navrženy tak, aby je bylo možné spouštět ve více výkresech. {% endhint %}
 
 ### Možnost 3: Uložit ve výkresu pro aplikaci Dynamo
 
 Tato možnost je podobná možnosti 2, s tím rozdílem, že data vazby objektu jsou jsou serializována ve výkresu namísto v souboru .dyn. Pokud graf zavřete nebo znovu otevřete a spustíte jej ve **stejném výkresu**, pak by mělo vše fungovat stejně, jako když jste jej opustili. Jestliže graf spustíte v **jiném výkresu**, data vazby zůstanou zachována v původním výkresu, protože jsou uložena ve výkresu, nikoli v grafu.
 
-{% hint style="info" %}
- **Vhodné použití**
+{% hint style="info" %} **Vhodné použití**
 
-Tuto možnost použijte, pokud chcete použít stejný graf ve **více výkresech** a aplikace Dynamo si má „pamatovat“, co provedla v každém z nich. 
-{% endhint %}
+Tuto možnost použijte, pokud chcete použít stejný graf ve **více výkresech** a aplikace Dynamo si má „pamatovat“, co provedla v každém z nich. {% endhint %}
 
 ### Možnost 4: Uložit ve výkresu pro aplikaci Přehrávač skriptů Dynamo
 
 V první řadě je třeba poznamenat, že tato možnost nemá žádný vliv na interakci grafu s výkresem při spuštění grafu prostřednictvím hlavního rozhraní aplikace Dynamo. Tato možnost se použije _pouze_ tehdy, když je graf spuštěn pomocí Přehrávače skriptů Dynamo.
 
-{% hint style="info" %}
- Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../dynamo-player.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../dynamo-player.md "mention"). {% endhint %}
 
 Jestliže graf spustíte pomocí hlavního rozhraní aplikace Dynamo a pak jej zavřete a spustíte stejný graf pomocí Přehrávače skriptů Dynamo, vytvoří se nové objekty nad těmi, které byly vytvořeny dříve. Jakmile však Přehrávač skriptů Dynamo graf jednou spustí, serializuje data vazeb objektů ve výkresu. Pokud tedy graf spustíte vícekrát prostřednictvím Přehrávače skriptů Dynamo, bude objekty aktualizovat, místo aby vytvářel nové. Jestliže graf spustíte v Přehrávači skriptů Dynamo v **jiném výkresu**, data vazby zůstanou zachována v původním výkresu, protože jsou uložena ve výkresu, nikoli v grafu.
 
-{% hint style="info" %}
- **Vhodné použití**
+{% hint style="info" %} **Vhodné použití**
 
-Tuto možnost použijte, pokud chcete spustit graf pomocí Přehrávače skriptů Dynamo ve více výkresech a nechat jej, aby si „pamatoval“, co provedl v každém z nich. 
-{% endhint %}
+Tuto možnost použijte, pokud chcete spustit graf pomocí Přehrávače skriptů Dynamo ve více výkresech a nechat jej, aby si „pamatoval“, co provedl v každém z nich. {% endhint %}

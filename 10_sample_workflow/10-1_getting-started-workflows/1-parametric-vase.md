@@ -70,7 +70,7 @@ Pokračujte v přidávání uzlů a jejich připojením k naší logice, abych
 
 Zkopírujte tyto uzly čtyřikrát, aby kružnice definovaly povrch, a změňte názvy posuvníku čísel, jak je znázorněno níže.
 
-![](<../images/10-1/1/vase4 (1).png>)
+\![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Kružnice jsou vytvořeny pomocí středu a poloměru.
 
@@ -92,7 +92,7 @@ Abychom vytvořili povrch pomocí uzlu **Surface.ByLoft**, je nutné spojit vše
 
 Vypněte také náhled v ostatních uzlech, aby se zobrazilo pouze zobrazení uzlu Surface.ByLoft.
 
-![](<../images/10-1/1/vase6 (1).png>)
+\![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Povrch je vytvořen šablonováním převedených kružnic.
 

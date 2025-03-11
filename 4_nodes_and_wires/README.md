@@ -22,9 +22,7 @@ Vstupům a výstupům uzlů se říká porty, které se chovají jako zásuvky p
 
 Porty očekávají, že obdrží data určitého typu. Například připojením čísla _2.75_ na porty uzlu Point.ByCoordinates dojde k úspěšné tvorbě bodu, pokud však na stejný port zadáme hodnotu _Červená_, dojde k chybě.
 
-{% hint style="info" %}
- Přesunutím kurzoru nad port zobrazíte popisek s očekávaným datovým typem. 
-{% endhint %}
+{% hint style="info" %} Přesunutím kurzoru nad port zobrazíte popisek s očekávaným datovým typem. {% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -55,9 +53,7 @@ Najetím myší nebo kliknutím pravým tlačítkem myši na název nebo porty s
 
 Pokud jsou ve vizuálním programu upozornění nebo chyby, aplikace Dynamo zobrazí další informace o problému. Nad názvy žlutých uzlů se navíc zobrazí popisky. Přesunutím ukazatele myši nad ikonu popisku upozornění ![](images/nodesandwires-nodewarningicon.png) nebo chyby ![](images/nodesandwires-nodeerroricon.png) tuto ikonu rozbalíte.
 
-{% hint style="info" %}
- Pomocí informací uvedených v popisku můžete zjistit, kde došlo k problému (například chybný datový typ nebo datová struktura u předchozích uzlů). 
-{% endhint %}
+{% hint style="info" %} Pomocí informací uvedených v popisku můžete zjistit, kde došlo k problému (například chybný datový typ nebo datová struktura u předchozích uzlů). {% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 
@@ -101,7 +97,7 @@ Data tímto drátem budou protékat od vstupu do výstupu, na porty je však mo�
 
 * Chcete-li změnit propojení ke vstupnímu portu, klikněte levým tlačítkem myši na jiný vstupní port.
 
-![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Chcete-li drát odebrat, odsuňte jej pryč a klikněte levým tlačítkem myši na pracovní prostor.
 

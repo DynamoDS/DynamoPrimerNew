@@ -1,4 +1,4 @@
-# Sestavení doplňku DynamoRevit ze zdroje 
+# Sestavení doplňku DynamoRevit ze zdroje
 
 Zdrojové soubory doplňku DynamoRevit jsou také umístěny na Githubu DynamoDS, kde mohou vývojáři vytvářet příspěvky a sestavovat beta verze. Sestavení doplňku DynamoRevit ze zdroje obecně probíhá stejným způsobem jako u aplikace Dynamo s výjimkou několika důležitých detailů:
 
@@ -13,9 +13,9 @@ V této příručce použijeme následující zdroje:
 
 Abychom zajistili úspěšné sestavení, naklonujeme a sestavíme úložiště aplikace Dynamo a doplňku DynamoRevit, která použijeme v této ukázce.
 
-_Poznámka: Ruční sestavení aplikace Dynamo před doplňkem DynamoRevit je nutné pouze v případě, že vytváříte aplikaci Dynamo 1.x a doplněk DynamoRevit 1.x. Novější verze úložiště doplňku DynamoRevit se při tvorbě závislostí aplikace Dynamo potřebných k sestavení spoléhají na správce balíčků NuGet. I když sestavení doplňku DynamoRevit 2.x nevyžaduje ruční stažení aplikace Dynamo, budete stále potřebovat základní knihovny `dlls`, abyste mohli `addin` DynamoRevit skutečně spustit, proto se vyplatí aplikaci Dynamo stáhnout a sestavit tak jako tak. Další informace naleznete níže:_ [_Tvorba úložiště pomocí aplikace Visual Studio_](#building-the-repository-using-Visual-Studio)
+_Poznámka: Ruční sestavení aplikace Dynamo před doplňkem DynamoRevit je nutné pouze v případě, že vytváříte aplikaci Dynamo 1.x a doplněk DynamoRevit 1.x. Novější verze úložiště doplňku DynamoRevit se při tvorbě závislostí aplikace Dynamo potřebných k sestavení spoléhají na správce balíčků NuGet. I když sestavení doplňku DynamoRevit 2.x nevyžaduje ruční stažení aplikace Dynamo, budete stále potřebovat základní knihovny `dlls`, abyste mohli `add-in` DynamoRevit skutečně spustit, proto se vyplatí aplikaci Dynamo stáhnout a sestavit tak jako tak. Další informace naleznete níže:_ [_Tvorba úložiště pomocí aplikace Visual Studio_](#building-the-repository-using-Visual-Studio)
 
-#### Vyhledání úložiště doplňku DynamoRevit na Githubu <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### Vyhledání úložiště doplňku DynamoRevit na Githubu <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
 Kód projektu doplňku DynamoRevit se nachází v samostatném úložišti na Githubu, které je odděleno od základního zdrojového kódu aplikace Dynamo. Toto úložiště obsahuje zdrojové soubory pro uzly specifické pro aplikaci Revit a doplněk aplikace Revit, který načítá aplikaci Dynamo. Sestavení doplňku DynamoRevit pro různé verze aplikace Revit (například 2016, 2017 nebo 2018) jsou v úložišti uspořádána jako větve.
 
@@ -26,7 +26,7 @@ Zdroj doplňku DynamoRevit je hostován zde: [https://github.com/DynamoDS/Dynamo
 > 1. Klonování nebo stáhnutí úložiště
 > 2. Větve doplňku DynamoRevit odkazují na verze aplikace Revit.
 
-#### Klonování úložiště pomocí systému git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### Klonování úložiště pomocí systému git <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
 Podobně jako při získávání úložiště aplikace Dynamo použijeme příkaz git clone ke klonování doplňku DynamoRevit a k určení větve, která odpovídá verzi aplikace Revit. Nejprve otevřeme rozhraní příkazového řádku a nastavíme aktuální adresář do umístění, do kterého chcete soubory klonovat.
 
@@ -54,9 +54,9 @@ Příkaz `cd C:\Users\username\Documents\GitHub\DynamoRevit` změní adresář n
 
 Je důležité vybrat správnou větev úložiště, abyste zajistili, že při vytváření projektu v aplikaci Visual Studio bude projekt odkazovat na sestavy ve správné verzi instalačního adresáře aplikace Revit, konkrétně `RevitAPI.dll` a `RevitAPIUI.dll`.
 
-#### Vytvoření úložiště pomocí aplikace Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### Vytvoření úložiště pomocí aplikace Visual Studio <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
-Před vytvořením úložiště bude nutné obnovit balíčky NuGet se souborem `restorepackages.bat` umístěným ve složce `src`. Tento soubor BAT používá správce balíčku [nuget](https://www.nuget.org) k získání vestavěných sestavených binárních souborů jádra aplikace Dynamo, které potřebuje doplněk DynamoRevit. Můžete se také rozhodnout sestavit je ručně, ale pouze pokud provádíte změny v doplňku DynamoRevit a ne v jádře aplikace Dynamo. Díky tomu bude začátek práce rychlejší. Nezapomeňte tento soubor spustit jako správce.
+Před vytvořením úložiště bude nutné obnovit balíčky NuGet se souborem `restorepackages.bat` umístěným ve složce `src`. Tento soubor BAT používá správce balíčku [NuGet](https://www.nuget.org) k získání vestavěných sestavených binárních souborů jádra aplikace Dynamo, které potřebuje doplněk DynamoRevit. Můžete se také rozhodnout sestavit je ručně, ale pouze pokud provádíte změny v doplňku DynamoRevit a ne v jádře aplikace Dynamo. Díky tomu bude začátek práce rychlejší. Nezapomeňte tento soubor spustit jako správce.
 
 ![Spustit jako správce](images/fe-restorepackages.jpg).
 
@@ -75,7 +75,7 @@ Po obnovení balíčků otevřete soubor řešení aplikace Visual Studio `Dynam
 > 1. Vyberte `Build > Build Solution`.
 > 2. V okně Výstup ověřte, zda sestavení proběhlo úspěšně. Měla by se zobrazit následující zpráva: `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
 
-#### Spuštění místního sestavení doplňku DynamoRevit v aplikaci Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### Spuštění místního sestavení doplňku DynamoRevit v aplikaci Revit <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
 Aplikace Revit vyžaduje k rozpoznání doplňku DynamoRevit soubor doplňku, který [instalační program](http://dynamobim.org/download/) vytvoří automaticky. Při vývoji je nutné ručně vytvořit soubor doplňku odkazující na sestavení doplňku DynamoRevit, které chceme používat, konkrétně na sestavu `DynamoRevitDS.dll`. Také musíme doplněk DynamoRevit odkázat na sestavení aplikace Dynamo.
 
@@ -145,9 +145,9 @@ Když nyní otevřete aplikaci Revit, měl by se na kartě Správa nacházet dop
 > 2. Klikněte na ikonu doplňku Dynamo.
 > 3. Instance doplňku DynamoRevit
 
-Pokud se zobrazí chybové okno s chybějícími sestavami, je pravděpodobné, že se neshodují verze DynamoCore, které jste sestavili, a verze, které se načítají za běhu. Například doplněk DynamoRevit s nejnovějšími balíčky DynamoCore verze 2.0 beta nebude fungovat, pokud se jej pokusíte spustit pomocí knihoven DLL aplikace Dynamo 1.3. Ujistěte se, že obě úložiště mají stejnou verzi a doplněk DynamoRevit získává odpovídající verzi závislých položek nuget. Ty jsou definovány v souboru `package.json` úložiště DynamoRevit.
+Pokud se zobrazí chybové okno s chybějícími sestavami, je pravděpodobné, že se neshodují verze DynamoCore, které jste sestavili, a verze, které se načítají za běhu. Například doplněk DynamoRevit s nejnovějšími balíčky DynamoCore verze 2.0 beta nebude fungovat, pokud se jej pokusíte spustit pomocí knihoven DLL aplikace Dynamo 1.3. Ujistěte se, že obě úložiště mají stejnou verzi a doplněk DynamoRevit získává odpovídající verzi závislých položek NuGet. Ty jsou definovány v souboru `package.json` úložiště DynamoRevit.
 
-#### Ladění doplňku DynamoRevit pomocí aplikace Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### Ladění doplňku DynamoRevit pomocí aplikace Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
 V předchozí části popisující **sestavení aplikace Dynamo ze zdroje** jsme stručně představili ladění v aplikaci Visual Studio a způsob připojení aplikace Visual Studio k procesu. Na příkladu výjimky v uzlu Wall.ByCurveAndHeight si ukážeme, jak se připojit k procesu, nastavíme body přerušení, projdeme kód a pomocí zásobníku volání určíme zdroj výjimky. Tyto nástroje pro ladění platí obecně pro pracovní postupy vývoje v prostředí .net a stojí za to je prozkoumat i mimo tuto příručku.
 
@@ -210,7 +210,7 @@ Protože se nejedná o knihovnu s otevřeným zdrojovým kódem, nemůžeme zd
 
 Tento proces lze použít u všech zdrojových souborů, se kterými pracujete. Pokud vyvíjíme knihovnu uzlů Zero-Touch pro aplikaci Dynamo Studio, můžeme otevřít zdroj knihovny a připojit proces aplikace Dynamo pro účely ladění knihovny uzlů. I když vše funguje bezchybně, ladění je skvělý způsob, jak prozkoumat kód a zjistit, jak věci fungují.
 
-#### Získání nejnovějšího sestavení <a href="#pull-latest-build" id="pull-latest-build"></a>
+### Získání nejnovějšího sestavení <a href="#pull-latest-build" id="pull-latest-build"></a>
 
 Tento proces je téměř identický se získáváním změn pro aplikaci Dynamo, jen je třeba se ujistit, že se nacházíme ve správné větvi. Pomocí příkazu `git branch` v úložišti aplikace DynamoRevit zjistíte, které větve jsou k dispozici místně a které jsou aktuálně zarezervované.
 

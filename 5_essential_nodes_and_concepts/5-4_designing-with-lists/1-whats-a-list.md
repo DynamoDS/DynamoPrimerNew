@@ -77,6 +77,32 @@ Jak vidíte, existují různé způsoby kreslení čar mezi těmito množinami b
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
+### Co je replikace?
+
+Představte si, že máte trs hroznů. Kdybyste chtěli vyrobit hroznovou šťávu, nemačkali byste každý hrozen zvlášť – dali byste je do odšťavňovače všechny najednou. Replikace v aplikaci Dynamo funguje podobně: místo toho, aby aplikace Dynamo použila operaci vždy jen na jednu položku současně, může ji použít na celý seznam najednou.
+
+Uzly aplikace Dynamo automaticky rozpoznají, kdy pracují se seznamy, a použijí své operace na více prvků. To znamená, že nemusíte ručně procházet položky ve smyčce – prostě se to stane. Jak se ale aplikace Dynamo rozhodne, jak seznamy zpracovat, když jich je víc?
+
+Existují dva hlavní způsoby:
+
+#### Kartézská replikace
+Řekněme, že jste v kuchyni a připravujete ovocné šťávy. Máte seznam ovoce: `{apple, orange, pear}` a pevně dané množství vody na každou šťávu: `1 cup`. Z každého ovoce chcete připravit šťávu za použití stejného množství vody. V tomto případě přichází na řadu kartézská replikace.
+
+V aplikaci Dynamo to znamená, že do vstupu ovoce uzlu Juice.Maker zadáváte seznam ovoce, zatímco vstup vody zůstává konstantní na hodnotě 1 šálku. Uzel pak zpracovává každé ovoce jednotlivě a kombinuje je s pevným množstvím vody. Výsledek je...
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+Každé ovoce je spárováno se stejným množstvím vody.
+
+#### Replikace zipu
+Replikace zipu funguje trochu odlišně. Pokud byste měli dva seznamy, jeden pro ovoce: `{apple, orange, pear}` a druhý pro množství cukru: `{2 tbsp, 3 tbsp, 1 tbsp}`, replikace zipu by zkombinovala odpovídající položky z každého seznamu. Příklad:
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+Každé ovoce je spárováno s odpovídajícím množstvím cukru.
+
+Pokud chcete získat podrobnější informace o tom, jak to funguje, podívejte se na [Průvodce replikací a vázáním](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1).
+
 ## Cvičení
 
 > Kliknutím na odkaz níže si stáhněte vzorový soubor.

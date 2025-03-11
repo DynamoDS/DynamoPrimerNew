@@ -1,10 +1,10 @@
 # Začínáme
- 
+
 Než se pustíte do vývoje, je důležité vybudovat pevné základy nového projektu. V komunitě vývojářů aplikace Dynamo existuje několik šablon projektů, které jsou vynikajícím východiskem pro zahájení práce, ale ještě cennější je porozumět tomu, jak začít projekt od začátku. Vytvoření projektu od základů umožní hlubší pochopení procesu vývoje.
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Vytvoření projektu aplikace Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Vytvoření projektu aplikace Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio je výkonné integrované vývojové prostředí, ve kterém můžeme vytvořit projekt, přidat odkazy, vytvořit knihovny `.dlls` a provádět ladění. Při tvorbě nového projektu vytvoří aplikace Visual Studio také tzv. řešení, což je struktura pro uspořádání projektů. V rámci jednoho řešení může existovat více projektů, které lze vytvářet společně. Chcete-li vytvořit uzel ZeroTouch, bude nutné vytvořit nový projekt aplikace Visual Studio, do kterého zapíšeme knihovnu tříd C# a vytvoříme knihovnu `.dll`.
 
@@ -84,7 +84,7 @@ Pokud je v knihovně vytvořena kategorie s názvem `MyCustomNode`, byla kniho
 > 1. Kategorie MyCustomNode v knihovně aplikace Dynamo. Kategorie knihovny je určena názvem knihovny `.dll`.
 > 2. Uzel SampleFunctions.MultiplyByTwo na kreslicí ploše.
 
-#### Jak aplikace Dynamo čte třídy a metody <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Jak aplikace Dynamo čte třídy a metody <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Když aplikace Dynamo načte knihovnu .dll, zobrazí všechny veřejné statické metody jako uzly. Konstruktory, metody a vlastnosti budou převedeny na uzly pro tvorbu, akci a dotazování. V našem příkladu násobení se metoda `MultiplyByTwo()` v aplikaci Dynamo stane uzlem akce. Je tomu tak proto, že uzel byl pojmenován na základě své metody a třídy.
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Aplikace Dynamo naimportovala naši metodu jako uzel tvorby.
 
-#### Přidání referencí na balíčky NuGet aplikace Dynamo<a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Přidání referencí na balíčky NuGet aplikace Dynamo<a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 Uzel násobení je velmi jednoduchý a nejsou nutné žádné odkazy na aplikaci Dynamo. Pokud ale chceme získat přístup k některé z funkcí aplikace Dynamo, například k vytváření geometrie, bude nutné odkazovat na balíčky NuGet aplikace Dynamo.
 

@@ -17,9 +17,7 @@ Při přidávání potrubí a stavebních objektů do potrubní sítě použív�
 
 ## Kompatibilita verzí
 
-{% hint style="success" %}
- Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. 
-{% endhint %}
+{% hint style="success" %} Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. {% endhint %}
 
 ## Datová sada
 
@@ -79,9 +77,7 @@ Tady to začíná být trochu složitější. V této fázi máme velký seznam
 
 Proto je nutné seznam stavebních objektů filtrovat, aby nebyly brány v úvahu stavební objekty, jejichž odsazení od trasy je větší než zadaná hodnota. To lze nejlépe provést pomocí uzlu **List.FilterByBoolMask**. Po filtrování seznamu stavebních objektů je pomocí uzlu **List.SortByKey** uspořádáme podle hodnot staničení.
 
-{% hint style="info" %}
- Pokud se seznamy pracujete poprvé, přečtěte si část [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Pokud se seznamy pracujete poprvé, přečtěte si část [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>Filtrování a řazení stavebních objektů</p></figcaption></figure>
 
@@ -108,9 +104,7 @@ Zde je příklad spuštění grafu pomocí **Přehrávače skriptů Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Spuštění grafu pomocí Přehrávače skriptů Dynamo a zobrazení výsledků v aplikaci Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}
- Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 
 > :tada: Úkol splněn!
 
@@ -128,14 +122,8 @@ Nyní lépe rozumíme tomu, jak funguje proces filtrování stavebních objektů
 
 Zde je několik nápadů, jak byste mohli rozšířit možnosti tohoto grafu.
 
-{% hint style="info" %}
- Přejmenujte stavební objekty podle jejich **nejbližší trasy** místo výběru konkrétní trasy. 
-{% endhint %}
+{% hint style="info" %} Přejmenujte stavební objekty podle jejich **nejbližší trasy** místo výběru konkrétní trasy. {% endhint %}
 
-{% hint style="info" %}
- Kromě stavebních objektů **přejmenujte také potrubí**. 
-{% endhint %}
+{% hint style="info" %} Kromě stavebních objektů **přejmenujte také potrubí**. {% endhint %}
 
-{% hint style="info" %}
- **Nastavte hladiny** stavebních objektů podle jejich spuštění. 
-{% endhint %}
+{% hint style="info" %} **Nastavte hladiny** stavebních objektů podle jejich spuštění. {% endhint %}

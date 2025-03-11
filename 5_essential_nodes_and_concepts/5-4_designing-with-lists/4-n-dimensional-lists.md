@@ -177,7 +177,7 @@ V posledním kroku obrátíme směr žlábkovaných členů. V předchozím kr
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
-> 1. Vzhledem k tomu, že hierarchie má ještě další vrstvu, je třeba pomocí uzlu **List.Map** a funkce **List.Tranpose** změnit směr křivek nurbs.
+> 1. Vzhledem k tomu, že hierarchie má ještě další vrstvu, je třeba pomocí uzlu **List.Map** a funkce **List.Transpose** změnit směr křivek nurbs.
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 

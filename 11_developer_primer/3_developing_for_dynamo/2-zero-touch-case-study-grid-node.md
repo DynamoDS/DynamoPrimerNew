@@ -1,4 +1,4 @@
-# Případová studie funkce Zero-Touch – uzel osnovy 
+# Případová studie funkce Zero-Touch – uzel osnovy
 
 Po spuštění projektu v aplikaci Visual Studio si ukážeme, jak vytvořit vlastní uzel, který vytvoří obdélníkovou osnovu buněk. Ačkoli bychom ji mohli vytvořit pomocí několika standardních uzlů, jedná se o užitečný nástroj, který lze snadno umístit v uzlu Zero-Touch. Na rozdíl od čar osnovy lze velikost buněk měnit kolem středových bodů, dotazovat se na rohové vrcholy nebo je zabudovat do ploch.
 
@@ -6,7 +6,7 @@ V tomto příkladu si představíme několik funkcí a konceptů, které je tř
 
 ![Graf obdélníkové osnovy](images/cover-image.jpg)
 
-#### Vlastní uzel obdélníkové osnovy <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Vlastní uzel obdélníkové osnovy <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Chcete-li začít vytvářet uzel osnovy, vytvořte nový projekt knihovny tříd aplikace Visual Studio. Podrobné informace o nastavení projektu naleznete na stránce Začínáme.
 
@@ -17,7 +17,7 @@ Chcete-li začít vytvářet uzel osnovy, vytvořte nový projekt knihovny tří
 > 1. Vyberte `Class Library` pro typ projektu.
 > 2. Pojmenujte projekt jako `CustomNodes`.
 
-Protože budeme vytvářet geometrii, je nutné odkazovat na příslušný balíček NuGet. Ze Správce balíčků NuGet nainstalujte balíček ZeroTouchLibrary. Tento balíček je nezbytný pro příkaz `using Autodesk.DesignScript.Geometry;`.
+Protože budeme vytvářet geometrii, je nutné odkazovat na příslušný balíček NuGet. Ze správce balíčků NuGet nainstalujte balíček ZeroTouchLibrary. Tento balíček je nezbytný pro příkaz `using Autodesk.DesignScript.Geometry;`.
 
 ![Balíček ZeroTouchLibrary](images/vs-nugetpackage.jpg)
 
@@ -96,7 +96,7 @@ Zkontrolujte složku projektu `bin` pro knihovnu `.dll`. Pokud bylo sestavení �
 > 2. Vlastní uzel na kreslicí ploše
 > 3. Tlačítko Přidat pro přidání knihovny `.dll` do aplikace Dynamo
 
-#### Úpravy vlastních uzlů <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### Úpravy vlastních uzlů <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 Ve výše uvedeném příkladu jsme vytvořili poměrně jednoduchý uzel, který kromě metody `RectangularGrids` nedefinoval nic dalšího. Můžeme však chtít vytvořit popisky pro vstupní porty nebo poskytnout uzlu souhrn jako u standardních uzlů aplikace Dynamo. Přidání těchto funkcí do vlastních uzlů usnadní jejich používání, zejména pokud je uživatel chce vyhledávat v knihovně.
 

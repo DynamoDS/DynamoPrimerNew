@@ -2,7 +2,7 @@
 
 Zdroj aplikace Dynamo je hostován na Githubu, kde jej může kdokoli klonovat a přispívat do něj. V této kapitole si ukážeme, jak klonovat úložiště pomocí gitu, kompilovat zdrojové soubory pomocí aplikace Visual Studio, spustit a ladit místní sestavení a získat všechny nové změny z Githubu.
 
-#### Vyhledání úložišť aplikace Dynamo na Githubu <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### Vyhledání úložišť aplikace Dynamo na Githubu <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 Github je hostovací služba založená na [gitu](https://help.github.com/articles/git-and-github-learning-resources/), systému pro správu verzí, který slouží ke sledování změn a koordinaci práce mezi lidmi. Git je nástroj, který můžeme využít ke stažení zdrojových souborů aplikace Dynamo a jejich aktualizaci pomocí několika příkazů. Použitím této metody se vyhnete zbytečné a nepřehledné práci se stahováním a ručním nahrazováním zdrojových souborů při každé aktualizaci. Systém správy verzí git bude sledovat veškeré rozdíly mezi místním a vzdáleným úložištěm kódů.
 
@@ -16,9 +16,9 @@ Zdroj aplikace Dynamo je hostován na Githubu DynamoDS v tomto úložišti: [ht
 > 3. Zdrojové soubory aplikace Dynamo
 > 4. Specifické soubory Gitu
 
-#### Získání úložiště aplikace Dynamo pomocí gitu <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### Získání úložiště aplikace Dynamo pomocí gitu <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Než bude možné úložiště klonovat, je třeba nainstalovat git. V této [krátké příručce](https://help.github.com/articles/set-up-git/#setting-up-git) naleznete postup instalace a nastavení uživatelského jména a e-mailu pro github. V tomto příkladu použijeme git na příkazovém řádku. Tato příručka předpokládá, že budete používat systém Windows, ale ke klonování zdroje aplikace Dynamo můžete použít také git v systému Mac nebo Linux.
+Než bude možné úložiště klonovat, je třeba nainstalovat git. V této [krátké příručce](https://help.github.com/articles/set-up-git/#setting-up-git) naleznete postup instalace a nastavení uživatelského jména a e-mailu pro GitHub. V tomto příkladu použijeme git na příkazovém řádku. Tato příručka předpokládá, že budete používat systém Windows, ale ke klonování zdroje aplikace Dynamo můžete použít také git v systému Mac nebo Linux.
 
 Potřebujeme adresu URL úložiště aplikace Dynamo, ze kterého se bude klonovat. Tu najdeme v tlačítku Clone or download (Klonovat nebo stáhnout) na stránce úložiště. Zkopírujte adresu URL, kterou chcete vložit do příkazového řádku.
 
@@ -47,7 +47,7 @@ Pokud byla operace klonování úspěšně dokončena, víme, že git funguje. V
 > 1. Zdrojové soubory aplikace Dynamo
 > 2. Soubory Git
 
-#### Vytvoření úložiště pomocí aplikace Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### Vytvoření úložiště pomocí aplikace Visual Studio <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 Pomocí zdrojových souborů, které jsou nyní klonovány do místního počítače, můžeme vytvořit spustitelný soubor pro aplikaci Dynamo. Za tímto účelem je nutné nastavit prostředí Visual Studio IDE a zajistit instalaci rozhraní .NET Framework a DirectX.
 
@@ -84,7 +84,7 @@ S otevřeným projektem můžeme vytvořit řešení. Tento proces vytvoří so
 > 1. Vyberte `Build > Build Solution`.
 > 2. V okně Výstup ověřte, zda sestavení proběhlo úspěšně. Měla by se zobrazit zpráva podobná této: `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
-#### Spuštění místního sestavení <a href="#running-a-local-build" id="running-a-local-build"></a>
+### Spuštění místního sestavení <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 Pokud sestavení aplikace Dynamo proběhlo úspěšně, vytvoří se v úložišti aplikace Dynamo složka `bin` se souborem DynamoSandbox.exe. V našem případě vytváříme sestavení s možností Debug, takže spustitelný soubor se nachází v umístění `bin\AnyCPU\Debug`. Spuštěním tohoto souboru otevřete místní sestavení aplikace Dynamo.
 
@@ -96,7 +96,7 @@ Nyní jsme téměř plně připraveni začít s vývojem pro aplikaci Dynamo.
 
 Pokyny k vytváření aplikace Dynamo pro další platformy (například Linux nebo OS X) naleznete na této [stránce Wiki](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac).
 
-#### Ladění místního sestavení pomocí aplikace Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### Ladění místního sestavení pomocí aplikace Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
 Ladění je proces identifikace, izolování a opravy chyby nebo problému. Po úspěšném sestavení aplikace Dynamo ze zdroje můžeme pomocí několika nástrojů v aplikaci Visual Studio ladit spuštěnou aplikaci, například doplněk DynamoRevit. Můžeme analyzovat jeho zdrojový kód a najít příčinu problému nebo sledovat aktuálně prováděný kód. Podrobnější informace o tom, jak ladit a procházet kód v aplikaci Visual Studio, naleznete v [dokumentaci k aplikaci Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
@@ -137,7 +137,7 @@ V obou případech připojujeme ladicí program k procesu, který chceme ladit
 
 V další části **Sestavení doplňku DynamoRevit ze zdroje** si ukážeme konkrétní příklad ladění a vysvětlíme, jak nastavit body přerušení, krokovat kód a číst zásobník volání.
 
-#### Získání nejnovějšího sestavení <a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### Získání nejnovějšího sestavení <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 Protože je zdroj aplikace Dynamo hostován na Githubu, nejjednodušším způsobem, jak aktualizovat místní zdrojové soubory, je získávání změn pomocí příkazů git.
 

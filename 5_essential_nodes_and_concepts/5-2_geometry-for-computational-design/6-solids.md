@@ -39,9 +39,7 @@ Booleovské operace jsou složité a jejich výpočet může být pomalý. Pomoc
 >
 > 4\. Všechny ovlivněné uzly a geometrie se aktualizují a zobrazí se běžným způsobem.
 
-{% hint style="info" %}
- Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). {% endhint %}
 
 ## Podrobné informace...
 

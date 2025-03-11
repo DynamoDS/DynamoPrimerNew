@@ -18,17 +18,13 @@ Jedním z mnoha případů skvělého použití aplikace Dynamo je dynamické u
 
 ## Kompatibilita verzí
 
-{% hint style="success" %}
- Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. 
-{% endhint %}
+{% hint style="success" %} Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. {% endhint %}
 
 ## Datová sada
 
 Začněte stažením níže uvedených vzorových souborů a poté otevřete soubor DWG a graf aplikace Dynamo.
 
-{% hint style="info" %}
- Doporučujeme soubor aplikace Excel uložit ve stejném adresáři jako graf aplikace Dynamo. 
-{% endhint %}
+{% hint style="info" %} Doporučujeme soubor aplikace Excel uložit ve stejném adresáři jako graf aplikace Dynamo. {% endhint %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -53,9 +49,7 @@ V tomto vzorovém grafu použijeme soubor aplikace Excel k uložení dat, kter
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>Struktura tabulky souboru aplikace Excel</p></figcaption></figure>
 
-{% hint style="info" %}
- Použití aplikace Dynamo k načtení dat z externího souboru (například souboru aplikace Excel) je skvělou strategií, zejména pokud je potřeba data sdílet s ostatními členy týmu. 
-{% endhint %}
+{% hint style="info" %} Použití aplikace Dynamo k načtení dat z externího souboru (například souboru aplikace Excel) je skvělou strategií, zejména pokud je potřeba data sdílet s ostatními členy týmu. {% endhint %}
 
 Data ze souboru aplikace Excel se do aplikace Dynamo importují následujícím způsobem. 
 
@@ -65,9 +59,7 @@ Nyní, když máme data, je nutné je rozdělit podle sloupců (_Corridor_, _Bas
 
 Vypadá to dobře, že? Ale tento přístup v sobě skrývá možný problém. Co když se v budoucnu změní pořadí sloupců v souboru aplikace Excel? Nebo se mezi dva sloupce přidá nový sloupec? Potom graf nebude správně fungovat a bude vyžadovat aktualizaci. Budoucí fungování grafu můžeme zajistit vložením dat do **slovníku**, přičemž záhlaví sloupců v souboru aplikace Excel budou sloužit jako _klíče_ a zbývající data jako _hodnoty_.
 
-{% hint style="info" %}
- Pokud jsou pro vás slovníky novinkou, přečtěte si část [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") . 
-{% endhint %}
+{% hint style="info" %} Pokud jsou pro vás slovníky novinkou, přečtěte si část [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") . {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Vložení dat aplikace Excel do slovníku</p></figcaption></figure>
 
@@ -89,17 +81,13 @@ Nyní, když máme importovaná a připravená data aplikace Excel, začneme je 
 
 Nyní vytvoříme **souřadnicové systémy** podél návrhových linií koridoru v hodnotách staničení, které jsme zadali v souboru aplikace Excel. Tyto souřadnicové systémy budou použity k definování polohy, otočení a měřítka referencí bloků sloupů osvětlení.
 
-{% hint style="info" %}
- Pokud jsou pro vás souřadnicové systémy novinkou, přečtěte si část [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") . 
-{% endhint %}
+{% hint style="info" %} Pokud jsou pro vás souřadnicové systémy novinkou, přečtěte si část [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") . {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>Získání souřadnicových systémů podél návrhových linií koridoru</p></figcaption></figure>
 
 Všimněte si, že je zde použit blok kódu k otočení souřadnicových systémů v závislosti na tom, na které straně základny se nacházejí. Toho lze dosáhnout pomocí posloupnosti několika uzlů, ale toto je dobrý příklad situace, kdy je jednodušší to prostě sepsat.
 
-{% hint style="info" %}
- Pokud jsou bloky kódu pro vás novinkou, přečtěte si část [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Pokud jsou bloky kódu pro vás novinkou, přečtěte si část [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). {% endhint %}
 
 ### Vytvoření referencí bloků
 
@@ -115,9 +103,7 @@ Posledním krokem je vytvoření referencí bloků.
 
 Po spuštění grafu by se měly v modelovém prostoru podél koridoru zobrazit nové reference bloků. A tady je ta skvělá část – pokud je režim spuštění grafu nastaven na Automaticky a upravíte soubor aplikace Excel, reference bloků se automaticky aktualizují!
 
-{% hint style="info" %}
- Další informace o režimech spouštění grafů naleznete v části [3_user_interface](../../../3\_user\_interface/ "mention"). 
-{% endhint %}
+{% hint style="info" %} Další informace o režimech spouštění grafů naleznete v části [3_user_interface](../../../3\_user\_interface/ "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Provádění změn v souboru aplikace Excel a rychlé zobrazení výsledků v aplikaci Civil 3D</p></figcaption></figure>
 
@@ -125,9 +111,7 @@ Zde je příklad spuštění grafu pomocí **Přehrávače skriptů Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Spuštění grafu pomocí Přehrávače skriptů Dynamo a zobrazení výsledků v aplikaci Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %}
- Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention") . 
-{% endhint %}
+{% hint style="info" %} Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 
 > :tada: Úkol splněn!
 
@@ -150,14 +134,8 @@ Zde je výsledek v náhledu na pozadí v aplikaci Dynamo.
 
 Zde je několik nápadů, jak byste mohli rozšířit možnosti tohoto grafu.
 
-{% hint style="info" %}
- Přidejte do souboru aplikace Excel sloupec **rotation** a použijte jej k řízení otáčení souřadnicových systémů. 
-{% endhint %}
+{% hint style="info" %} Přidejte do souboru aplikace Excel sloupec **rotation** a použijte jej k řízení otáčení souřadnicových systémů. {% endhint %}
 
-{% hint style="info" %}
- Přidejte do souboru aplikace Excel **horizontální nebo vertikální odsazení**, aby se sloupy osvětlení mohly v případě potřeby odchýlit od návrhové linie koridoru. 
-{% endhint %}
+{% hint style="info" %} Přidejte do souboru aplikace Excel **horizontální nebo vertikální odsazení**, aby se sloupy osvětlení mohly v případě potřeby odchýlit od návrhové linie koridoru. {% endhint %}
 
-{% hint style="info" %}
- Místo použití souboru aplikace Excel s hodnotami staničení vygenerujte hodnoty staničení **přímo v aplikaci Dynamo** pomocí počátečního staničení a typické rozteče. 
-{% endhint %}
+{% hint style="info" %} Místo použití souboru aplikace Excel s hodnotami staničení vygenerujte hodnoty staničení **přímo v aplikaci Dynamo** pomocí počátečního staničení a typické rozteče. {% endhint %}

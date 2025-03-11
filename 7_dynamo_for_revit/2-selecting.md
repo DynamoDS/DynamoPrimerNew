@@ -18,9 +18,7 @@ Zobrazme si stručný přehled hierarchie aplikace Revit.
 
 Pamatujete si taxonomii z biologie? Říše, kmen, třída, řád, čeleď, rod, druh? Prvky aplikace Revit jsou uspořádány do kategorií podobným způsobem. Na základní úrovni je možné hierarchii aplikace Revit rozdělit na kategorie, rodiny, typy* a instance. Instance je samostatný prvek modelu (s jedinečným ID), zatímco kategorie definuje obecnou skupinu (například „stěny“ nebo „podlahy“). Pokud je databáze aplikace Revit tímto způsobem uspořádána, můžete vybrat jeden prvek a vybrat všechny podobné prvky podle určené úrovně hierarchie.
 
-{% hint style="warning" %}
- *Typy v aplikaci Revit jsou definovány jinak než typy u programování. Typ v aplikaci Revit odkazuje na větev hierarchie, nikoli na „datový typ“. 
-{% endhint %}
+{% hint style="warning" %} *Typy v aplikaci Revit jsou definovány jinak než typy u programování. Typ v aplikaci Revit odkazuje na větev hierarchie, nikoli na „datový typ“. {% endhint %}
 
 ### Navigace v databázi pomocí uzlů aplikace Dynamo
 
@@ -32,7 +30,7 @@ _Najetí kurzorem a kliknutí_ je nejjednodušší způsob, jak přímo vybrat p
 
 _Rozevírací nabídky_ slouží k tvorbě seznamu všech dostupných prvků v projektu aplikace Revit. Pomocí tohoto nástroje můžete odkazovat na prvky aplikace Revit, které nemusí být v pohledu viditelné. Jedná se o skvělý nástroj k dotazování existujících prvků nebo tvorbě nových v projektu aplikace Revit nebo v editoru rodin.
 
-![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
+\![](<../.gitbook/assets/selecting - database navigation with dynamo nodes 02.png>)
 
 Prvek aplikace Revit můžete také vybrat podle konkrétních vrstev v _hierarchii aplikace Revit_. Toto je účinná možnost přizpůsobení velkých polí dat při přípravě dokumentace nebo generativních instancí a přizpůsobení.
 
@@ -50,7 +48,7 @@ Se třemi výše zmíněnými obrázky stále na paměti se pusťte do cvičení
 
 V tomto vzorovém souboru aplikace Revit jsou k dispozici tři typy prvků jednoduché budovy. Tento soubor bude sloužit jako příklad výběru prvků aplikace Revit v rámci kontextu hierarchie aplikace Revit.
 
-![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Objem budovy
 > 2. Nosníky (rámová konstrukce)
@@ -83,7 +81,7 @@ Zde je alternativní metoda. Tentokrát se vyhneme výběru přes hierarchii apl
 
 Pomocí některých základních operací se seznamem se můžete dotazovat na určitou plochu.
 
-![](<images/2/selecting - exercise 05.jpg>)
+\![](<images/2/selecting - exercise 05.jpg>)
 
 > 1. Nejprve odešlete dříve vybrané prvky do uzlu Element.Faces.
 > 2. Uzel _List.Count_ následně zobrazí, že pracujete s 23 povrchy v objemu.
@@ -151,6 +149,4 @@ Dále jsme připraveni extrahovat některé základní informace z typu rodiny 
 > 2. Připojte uzel _All Elements of Family Type_ k uzlu _AdaptiveComponent.Location_. Tím se zobrazí seznam seznamů, z nichž každý má tři body představující umístění adaptivních bodů.
 > 3. Připojením uzlu _Polygon.ByPoints_ pak vrátíte objekt PolyCurve. Ve výřezu aplikace Dynamo je to vidět. Touto metodou jste vizualizovali geometrii jednoho prvku a abstrahovali geometrii zbývajícího pole prvků (které mohlo být početně větší než v tomto příkladu).
 
-{% hint style="info" %}
- Tip: Pokud v aplikaci Dynamo kliknete na zelené číslo u prvku aplikace Revit, výřez aplikace Revit se na tento prvek přiblíží. 
-{% endhint %}
+{% hint style="info" %} Tip: Pokud v aplikaci Dynamo kliknete na zelené číslo u prvku aplikace Revit, výřez aplikace Revit se na tento prvek přiblíží. {% endhint %}

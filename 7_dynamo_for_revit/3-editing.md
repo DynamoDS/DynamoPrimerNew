@@ -4,7 +4,7 @@ Výkonnou funkcí aplikace Dynamo je, že můžete upravovat parametry na parame
 
 ### Parametry typu a instance
 
-![Cvičení](<../.gitbook/assets/32 (2).jpg>)
+\![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Parametry instance definují otvor panelů na povrchu střechy v rozsahu Poměr otvoru od 0.1 do 0.4.
 > 2. Parametry založené na typu jsou použity u každého prvku na povrchu, protože se jedná o stejný typ rodiny. Materiál každého panelu může být například řízen parametrem založeným na typu.
@@ -16,9 +16,7 @@ Výkonnou funkcí aplikace Dynamo je, že můžete upravovat parametry na parame
 
 Jako rychlý přehled parametrů v aplikaci Revit si ukážeme, že existují parametry typu a parametry instance. Oba lze upravovat pomocí aplikace Dynamo, ale v níže uvedeném cvičení budeme pracovat s parametry instance.
 
-{% hint style="info" %}
- Až zjistíte, jak široké jsou možnosti použití parametrů úprav, možná budete chtít upravovat velké množství prvků v aplikaci Revit pomocí aplikace Dynamo. Může to být _výpočetně nákladná_ operace, což znamená, že může být pomalá. Pokud upravujete velký počet prvků, můžete použít funkci uzlu „zmrazit“, aby bylo možné pozastavit provádění operací aplikace Revit při vytváření grafu. Další informace o zmrazení uzlů najdete v části [Zmrazení](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) v kapitole Tělesa. 
-{% endhint %}
+{% hint style="info" %} Až zjistíte, jak široké jsou možnosti použití parametrů úprav, možná budete chtít upravovat velké množství prvků v aplikaci Revit pomocí aplikace Dynamo. Může to být _výpočetně nákladná_ operace, což znamená, že může být pomalá. Pokud upravujete velký počet prvků, můžete použít funkci uzlu „zmrazit“, aby bylo možné pozastavit provádění operací aplikace Revit při vytváření grafu. Další informace o zmrazení uzlů najdete v části [Zmrazení](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) v kapitole Tělesa. {% endhint %}
 
 ### Jednotky
 
@@ -36,9 +34,7 @@ K rychlému převodu jednotek použijte uzel _Convert Between Units_. Jedná se
 
 {% file src="datasets/3/Revit-Editing.zip" %}
 
-{% hint style="warning" %}
-V níže uvedeném cvičení jsou použity metry. 
-{% endhint %}
+{% hint style="warning" %}V níže uvedeném cvičení jsou použity metry. {% endhint %}
 
 Toto cvičení je zaměřeno na úpravy prvků aplikace Revit bez provedení geometrické operace v aplikaci Dynamo. Zde neimportujeme geometrii aplikace Dynamo, pouze upravujeme parametry v projektu aplikace Revit. Toto cvičení je základní, pokročilejší uživatelé aplikace Revit si mohou všimnout, že se jedná o parametry instance objemu, ale stejnou logiku lze použít na pole prvků, které chcete přizpůsobit ve velkém měřítku. To vše provedeme s uzlem Element.SetParameterByName.
 
@@ -69,9 +65,7 @@ V aplikaci Dynamo můžeme načíst parametry výběrem cílového prvku.
 > 2. Definujte další _blok kódu_ se seznamem stejné délky jako názvy parametrů. V tomto případě pojmenujeme proměnné (bez uvozovek), které vytvářejí vstupy pro _blok kódu_. Připojte _posuvníky_ ke každému odpovídajícímu vstupu: `{bw,bl,bh,ao,io,lu};`
 > 3. Připojte blok kódu ke vstupu value uzlu _Element.SetParameterByName*_. Po automatické kontrole spuštění se výsledky automaticky zobrazí.
 
-{% hint style="warning" %}
-*Tato ukázka funguje s parametry instance, ale ne s parametry typu. 
-{% endhint %}
+{% hint style="warning" %}*Tato ukázka funguje s parametry instance, ale ne s parametry typu. {% endhint %}
 
 Stejně jako v aplikaci Revit je mnoho těchto parametrů na sobě závislých. Samozřejmě existují kombinace, ve kterých se může geometrie přerušit. Tento problém můžeme vyřešit definovanými vzorci ve vlastnostech parametru nebo můžeme nastavit podobnou logiku pomocí matematických operací v aplikaci Dynamo (pokud si chcete cvičení rozšířit, je to další výzva).
 

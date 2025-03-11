@@ -53,7 +53,7 @@ Obrázek níže je základní graf, ve kterém nakreslíme čáry mezi dvěma kr
 > 6. Pomocí uzlu **Geometry.Translate** posuňte kružnici o 100 jednotek ve směru osy Z.
 > 7. Pomocí uzlu **Code Block** definujte rozsah deseti čísel mezi 0 a 1 s tímto řádkem kódu: `0..1..#10;`
 > 8. Blok kódu z předchozího kroku propojte se vstupem _param_ dvou uzlů **Curve.PointAtParameter**. Propojte uzel **Circle.ByPlaneRadius** se vstupem curve horního uzlu a uzel **Geometry.Translate** se vstupem curve dolního uzlu.
-> 9. Pomocí uzlu **Line.ByStartPointEndPoint** spojte dva uzly **Curve.PointAtParamete**_r_.
+> 9. Pomocí uzlu **Line.ByStartPointEndPoint** spojte dva uzly **Curve.PointAtParameter**.
 
 ### List.Count
 

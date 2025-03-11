@@ -1,4 +1,4 @@
-# Případová studie uzlu NodeModel – vlastní uživatelské rozhraní 
+# Případová studie uzlu NodeModel – vlastní uživatelské rozhraní
 
 Uzly založené na uzlech NodeModel poskytují podstatně větší flexibilitu a výkon než uzly Zero-Touch. V tomto příkladu posuneme uzel mřížky Zero-Touch na další úroveň přidáním integrovaného posuvníku, který náhodně nastaví velikost obdélníku.
 

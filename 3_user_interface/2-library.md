@@ -16,9 +16,7 @@ Procházení těchto kategorií je nejrychlejší způsob, jak pochopit hierarch
 
 Procházejte knihovnu kliknutím na nabídky a rozbalte jednotlivé kategorie a jejich podkategorie.
 
-{% hint style="info" %}
- K počátečnímu zkoumání je vhodná nabídka Geometry, protože obsahuje největší množství uzlů. 
-{% endhint %}
+{% hint style="info" %} K počátečnímu zkoumání je vhodná nabídka Geometry, protože obsahuje největší množství uzlů. {% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -29,13 +27,13 @@ Procházejte knihovnu kliknutím na nabídky a rozbalte jednotlivé kategorie a 
 
 Uzly jsou dále kategorizovány do stejné podkategorie na základě toho, zda uzly **vytvářejí** data, provádějí **akce** nebo **dotazují** data.
 
-* ![](<images/3-2/user interface - create.jpg>) **Tvorba**: Vytvořte nebo sestavte geometrii od začátku. Vytvořte například kružnici.
-* ![](<images/3-2/user interface - action.jpg>) **Akce**: Proveďte akci s objektem. Změňte například velikost kružnice.
-* ![](<images/3-2/user interface - query.jpg>) **Dotaz**: Získejte vlastnost objektu, který již existuje. Zjistěte například poloměr kružnice.
+* \![](<images/3-2/user interface - create.jpg>) **Tvorba**: Vytvořte nebo sestavte geometrii od začátku. Vytvořte například kružnici.
+* \![](<images/3-2/user interface - action.jpg>) **Akce**: Proveďte akci s objektem. Změňte například velikost kružnice.
+* \![](<images/3-2/user interface - query.jpg>) **Dotaz**: Získejte vlastnost objektu, který již existuje. Zjistěte například poloměr kružnice.
 
 Přesunutím ukazatele myši nad uzel zobrazíte podrobnější informace kromě jeho názvu a ikony. To nám umožňuje rychle pochopit, co uzel dělá, jaké bude vyžadovat vstupy a jaký bude poskytovat výstup.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Popis – prostý jazyk popisující uzel
 > 2. Ikona – větší verze ikony v nabídce knihovny
@@ -48,7 +46,7 @@ Pokud přibližně víte, který uzel chcete přidat do pracovního prostoru, za
 
 Kliknutím na uzel, který chcete přidat, nebo stisknutím klávesy Enter přidáte zvýrazněné uzly do středu pracovního prostoru.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Hledání podle hierarchie
 
@@ -117,9 +115,7 @@ Pomocí uzlu **Watch3D** si můžete zobrazit výsledky geometrie.
 
 Oba tyto uzly jsou dostupné v základní knihovně v kategorii View.
 
-{% hint style="info" %}
- Tip: Pokud vizuální program obsahuje mnoho uzlů, může být někdy 3D náhled rozptylující. Zvažte zrušení zaškrtnutí možnosti Zobrazovat náhled pozadí v nabídce Nastavení a použití uzlu Watch3D k zobrazení náhledu geometrie. 
-{% endhint %}
+{% hint style="info" %} Tip: Pokud vizuální program obsahuje mnoho uzlů, může být někdy 3D náhled rozptylující. Zvažte zrušení zaškrtnutí možnosti Zobrazovat náhled pozadí v nabídce Nastavení a použití uzlu Watch3D k zobrazení náhledu geometrie. {% endhint %}
 
 #### Code Block
 
@@ -129,7 +125,7 @@ Bloky kódu také můžete použít jako zkratku k definování položky Number
 
 Níže je uvedena jednoduchá ukázka (s pokyny) použití bloku kódu ve skriptu.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Dvojitým kliknutím vytvořte uzel Code Block.
 2. Zadejte `Circle.ByCenterPointRadius(x,y);`.

@@ -18,7 +18,7 @@ Otevřete aplikaci Dynamo a importujte knihovnu `ZeroTouchEssentials.dll`, abyst
 
 Příklady kódu jsou získány ze souboru [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/master/ZeroTouchEssentials/ZeroTouchEssentials.cs) a obecně se s ním shodují. Dokumentace XML byla odstraněna, aby byl projekt stručnější, a každý příklad kódu vytvoří uzel na obrázku nad ním.
 
-#### Výchozí vstupní hodnota <a href="#default-input-values" id="default-input-values"></a>
+### Výchozí vstupní hodnota <a href="#default-input-values" id="default-input-values"></a>
 
 Aplikace Dynamo podporuje definici výchozích hodnot vstupních portů v uzlu. Tyto výchozí hodnoty budou do uzlu zadány, pokud porty nemají žádná připojení. Výchozí hodnoty jsou vyjádřeny pomocí mechanismu jazyka C# pro zadávání volitelných argumentů popsaném v [Příručce programování v jazyce C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Výchozí hodnoty jsou určeny následujícím způsobem:
 
@@ -42,7 +42,7 @@ namespace ZeroTouchEssentials
 
 > 1. Výchozí hodnota se zobrazí, když umístíte kurzor nad vstupní port uzlu.
 
-#### Vrácení více hodnot <a href="#returning-multiple-values" id="returning-multiple-values"></a>
+### Vrácení více hodnot <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
 Vracení více hodnot je o něco složitější než vytváření více vstupů a je třeba je vracet pomocí slovníku. Položky slovníku se stanou porty na výstupní straně uzlu. Porty vracející více hodnot se vytvářejí následujícím způsobem:
 
@@ -80,7 +80,7 @@ Uzel, který vrací více výstupů.
 
 > 1. Všimněte si, že nyní existují dva výstupní porty pojmenované podle řetězců, které jsme zadali pro klíče slovníku.
 
-#### Dokumentace, popisky a vyhledávání <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
+### Dokumentace, popisky a vyhledávání <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
 
 Osvědčeným postupem je přidat k uzlům aplikace Dynamo dokumentaci, která popisuje funkci uzlu, vstupy, výstupy, vyhledávací štítky atd. To se provádí pomocí štítků dokumentace XML. Dokumentace XML je vytvořena následujícím způsobem:
 
@@ -88,7 +88,7 @@ Osvědčeným postupem je přidat k uzlům aplikace Dynamo dokumentaci, která 
   * Například: `/// Documentation text and XML goes here`
 * Za třemi lomítky vytvořte nad metodami štítky XML, které aplikace Dynamo přečte při importu knihovny DLL.
   * Například: `/// <summary>...</summary>`
-* Povolte dokumentaci XML v aplikaci Visual Studio výběrem možnosti `Project > Project Properties > Build` a zaškrtnutím políčka `XML documentation file`.
+* Povolte dokumentaci XML v aplikaci Visual Studio výběrem možnosti `Project > [Project] Properties > Build > Output` a zaškrtnutím políčka `Documentation file`.
 
 ![Generování souboru XML](images/vs-xml.jpg)
 
@@ -134,7 +134,46 @@ Všimněte si, že kód pro tento vzorový uzel obsahuje:
 > 2. Popis vstupu
 > 3. Popis výstupu
 
-#### Objekty <a href="#objects" id="objects"></a>
+#### Popisy uzlů aplikace Dynamo – osvědčené postupy 
+
+Popisy uzlů stručně popisují funkci a výstup uzlu. V aplikaci Dynamo se objevují na dvou místech:
+
+- V popisku nástroje uzlu.
+- V Prohlížeči dokumentace.
+
+![Popis uzlu](images/node-description.png)
+
+Dodržováním těchto pokynů zajistíte konzistenci a ušetříte čas při psaní nebo aktualizaci popisů uzlů.
+
+##### Přehled
+
+Popis by měl obsahovat jednu až dvě věty. Pokud jsou potřeba další informace, uveďte je v Prohlížeči dokumentace v části Podrobnosti.
+
+Větná stavba (první slovo věty a vlastní podstatná jména pište s velkým počátečním písmenem). Na konci není tečka.
+
+Jazyk by měl být co nejsrozumitelnější a nejjednodušší. Definujte zkratky při první zmínce, pokud nejsou známé i neodborným uživatelům.
+
+Vždy upřednostněte srozumitelnost, i kdyby to mělo znamenat, že se odchýlíte od těchto pokynů.
+
+##### Pokyny
+
+| Co dělat      | Co nedělat |
+| ----------- | ----------- |
+| Popis začínejte slovesem ve třetí osobě. <ul><li>Příklad: *Určuje*, zda se jeden geometrický objekt protíná s jiným.</li></ul>      | Nezačínejte slovesem ve druhé osobě ani žádným podstatným jménem. <ul><li>Příklad: *Určete*, zda se jeden geometrický objekt protíná s jiným.</li></ul>       |
+| Místo slovesa „Získá“ použijte „Vrátí“, „Vytvoří“ nebo jiné popisné sloveso. <ul><li>Příklad: *Vrátí* reprezentaci NURBS povrchu.</li></ul>   | Nepoužívejte sloveso „Získá“ (při psaní popisu v angličtině nepoužívejte slovesa „Get“ nebo „Gets“). Je to méně konkrétní a méně přesné. <ul><li>Příklad: *Získá* reprezentaci NURBS povrchu</li></ul>        |
+| Pokud píšete popis v angličtině a odkazujete na vstupy, použijte slovo „given“ nebo „input“ místo „specified“ nebo jiných výrazů. Pokud je to však možné, vynechejte i tato slova, abyste popis zjednodušili a snížili počet slov. <ul><li>Příklad: Deletes the *given* file</li><li>Příklad: Projects a curve along the *given* projection direction onto *given* base geometry</li></ul>Slovo „specified“ můžete použít v případě, že neodkazuje na vstup. <ul><li>Příklad: Writes text content to a file *specified* by the given path</li></ul>       | Při odkazování na vstupy nepoužívejte kvůli konzistenci výraz „specified“ ani žádný jiný výraz kromě „given“ nebo „input“. Nemíchejte výrazy „given“ a „input“ ve stejném popisu, pokud to není nutné kvůli srozumitelnosti. <ul><li>Příklad: Deletes the *specified* file</li><li>Příklad: Projects an *input* curve along a *given* projection direction onto a *specified* base geometry</li></ul>      |
+| Pokud píšete popis v angličtině, použijte při prvním odkazování na vstup člen „a“ nebo „an“. Místo slov „a“ nebo „an“ používejte v případě potřeby kvůli přehlednosti „the given“ nebo „the input“.<ul><li>Příklad: Sweeps *a* curve along the path curve</li></ul>      | Při prvním odkazu na vstup nepoužívejte v angličtině zájmeno „this“. <ul><li>Příklad: Sweeps *this* curve along the path curve      |
+| Při prvním odkazu na výstup nebo jiné podstatné jméno, které je cílem operace uzlu, použijte člen „a“ nebo „an“. Člen „the“ používejte pouze ve spojení se slovem „input“ nebo „given“. <ul><li>Příklad: Copies *a* file</li><li>Příklad: Copies *the given* file</li></ul>      | Při prvním odkazu na výstup nebo jiné podstatné jméno, které je cílem operace uzlu, nepoužívejte člen „the“ samostatně. <ul><li>Příklad: Copies *the* file</li></ul>      |
+| První slovo věty a všechna vlastní jména, jako jsou jména a tradičně psaná podstatná jména, pište s počátečním velkým písmenem. <ul><li>Příklad: Vrátí průsečík dvou objektů *BoundingBox*.</li></ul>      | U běžných geometrických objektů a pojmů nepoužívejte počáteční velká písmena, pokud to není nutné kvůli přehlednosti. <ul><li>Příklad: Upraví měřítko nerovnoměrně kolem dané *Roviny*.      |
+| Při psaní popisů v angličtině pište slovo Boolean s počátečním velkým písmenem. Při odkazování na výstup booleovských hodnot pište slova True a False s počátečním velkým písmenem. <ul><li>Příklad: Returns *True* if the two values are different</li><li>Příklad: Converts a string to all uppercase or all lowercase characters based on a *Boolean* parameter      | Při psaní popisů v angličtině nepište slovo Boolean s počátečním malým písmenem. Při odkazování na výstup booleovských hodnot nepište slova True a False s počátečním malým písmenem. <ul><li>Příklad: Returns *true* if the two values are different</li><li>Příklad: Converts a string to all uppercase characters or all lowercase characters based on a *boolean* parameter</li></ul>
+
+#### Upozornění a chyby uzlu v aplikaci Dynamo
+
+Upozornění a chyby uzlů upozorňují uživatel na problém s grafem. Uživatel je na problémy, které narušují normální fungování grafu, upozorněn zobrazením ikony a rozšířenou textovou bublinou nad uzlem. Chyby a upozornění uzlů se mohou lišit podle závažnosti: některé grafy mohou běžet dostatečně i s upozorněními, zatímco jiné blokují očekávané výsledky. Ve všech případech jsou chyby a upozornění uzlů důležitými nástroji, které uživatel průběžně informují o problémech s grafem.
+
+Pokyny k zajištění konzistence a úspoře času při psaní nebo aktualizaci upozornění a chybových zpráv uzlů naleznete na wiki stránce [Vzor obsahu: Upozornění a chyby uzlů](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors).
+
+### Objekty <a href="#objects" id="objects"></a>
 
 Aplikace Dynamo nemá klíčové slovo `new`, takže objekty bude nutné konstruovat pomocí statických konstrukčních metod. Objekty jsou konstruovány následujícím způsobem:
 
@@ -173,7 +212,7 @@ Po importu knihovny dll ZeroTouchEssentials bude v knihovně uzel ZeroTouchEsse
 
 ![Uzel ByTwoDoubles](images/dyn-constructor.jpg)
 
-#### Použití typů geometrie aplikace Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
+### Použití typů geometrie aplikace Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
 Knihovny aplikace Dynamo mohou jako vstupy použít nativní typy geometrie aplikace Dynamo a jako výstupy vytvořit novou geometrii. Typy geometrie se vytvářejí následujícím způsobem:
 
@@ -207,7 +246,7 @@ Uzel, který získá délku křivky a zdvojnásobí ji.
 
 > 1. Tento uzel přijímá jako vstup typ geometrie Křivka.
 
-#### Příkazy dispose/using <a href="#disposeusing-statements" id="disposeusing-statements"></a>
+### Příkazy dispose/using <a href="#disposeusing-statements" id="disposeusing-statements"></a>
 
 Zdroje geometrie, které nejsou vráceny z funkcí, bude nutné spravovat ručně, pokud nepoužíváte aplikaci Dynamo verze 2.5 nebo novější. V aplikaci Dynamo 2.5 a novějších verzích jsou zdroje geometrie interně zpracovány systémem, ale i přesto může být nutné odstranit geometrii ručně, pokud máte složitý případ použití nebo potřebujete omezit paměť v pevně dané době. Modul aplikace Dynamo zpracuje všechny zdroje geometrie, které jsou vráceny z funkcí. Zdroje geometrie, které nejsou vráceny, lze zpracovat ručně následujícími způsoby:
 
@@ -237,7 +276,7 @@ Zdroje geometrie, které nejsou vráceny z funkcí, bude nutné spravovat ručn
     return l;
     ```
 
-#### Migrace <a href="#migrations" id="migrations"></a>
+### Migrace <a href="#migrations" id="migrations"></a>
 
 Při publikování novější verze knihovny se mohou změnit názvy uzlů. Změny názvů lze zadat v souboru migrace, aby grafy vytvořené na základě předchozích verzí knihovny správně fungovaly i po aktualizaci. Migrace jsou implementovány následujícím způsobem:
 
@@ -266,7 +305,7 @@ Tento vzorový kód sděluje aplikaci Dynamo, že každý uzel s názvem `GetCl
 
 > Podívejte se na tento příklad kódu v souboru [ProtoGeometry.Migrations.xml](https://github.com/DynamoDS/Dynamo/blob/master/extern/ProtoGeometry/ProtoGeometry.Migrations.xml).
 
-#### Obecné typy <a href="#generics" id="generics"></a>
+### Obecné typy <a href="#generics" id="generics"></a>
 
 Funkce Zero-Touch v současné době nepodporuje použití generických typů. Lze je použít, ale ne v kódu, který je přímo importován tam, kde tento typ není nastaven. Metody, vlastnosti nebo třídy, které jsou obecné a nemají sadu typů, nelze zpřístupnit.
 
