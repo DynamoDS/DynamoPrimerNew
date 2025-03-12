@@ -4,9 +4,9 @@ Prima di dedicarci al tema dello sviluppo, è importante costruire una solida ba
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Creazione di un progetto di Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Creazione di un progetto di Visual Studio <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
-Visual Studio è un potente IDE in cui è possibile creare un progetto, aggiungere riferimenti, creare file `.dll` ed eseguire il debug. Quando si crea un nuovo progetto, in Visual Studio viene creata anche una soluzione, una struttura per l'organizzazione dei progetti. Più progetti possono coesistere all'interno di un'unica soluzione ed essere costruiti insieme. Per creare un nodo ZeroTouch, è necessario avviare un nuovo progetto di Visual Studio in cui scrivere una libreria di classi C# e creare un file `.dll`.
+Visual Studio è un potente IDE in cui è possibile creare un progetto, aggiungere riferimenti, creare file `.dlls` ed eseguire il debug. Quando si crea un nuovo progetto, in Visual Studio viene creata anche una soluzione, una struttura per l'organizzazione dei progetti. Più progetti possono coesistere all'interno di un'unica soluzione ed essere costruiti insieme. Per creare un nodo ZeroTouch, è necessario avviare un nuovo progetto di Visual Studio in cui scrivere una libreria di classi C# e creare un file `.dll`.
 
 ![Creazione di un nuovo progetto in Visual Studio](images/vs-new-project-1.jpg)
 
@@ -84,9 +84,9 @@ Se nella libreria viene creata una categoria denominata `MyCustomNode`, il file 
 > 1. MyCustomNode nella libreria di Dynamo. La categoria Libreria è determinata dal nome `.dll`.
 > 2. SampleFunctions.MultiplyByTwo nell'area di disegno.
 
-#### Modalità di lettura di classi e metodi in Dynamo <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Modalità di lettura di classi e metodi in Dynamo <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
-Quando Dynamo carica un file .dll, espone tutti i metodi statici pubblici come nodi. I costruttori, i metodi e le proprietà verranno convertiti rispettivamente in nodi Create, Action e Query. Nel nostro esempio di moltiplicazione, il metodo `MultiplyByTwo()` diventa un nodo Action in Dynamo. Ciò è dovuto al fatto che il nome del nodo è stato assegnato in base al metodo e alla classe corrispondenti.
+Quando Dynamo carica un file .dll, espone tutti i metodi statici pubblici come nodi. I costruttori, i metodi e le proprietà verranno convertiti rispettivamente nei nodi Create, Action e Query. Nel nostro esempio di moltiplicazione, il metodo `MultiplyByTwo()` diventa un nodo Action in Dynamo. Ciò è dovuto al fatto che il nome del nodo è stato assegnato in base al metodo e alla classe corrispondenti.
 
 ![Nodo SampleFunction.MultiplyByTwo in un grafico](images/multiplybytwo.png)
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dynamo ha importato il metodo come nodo Create.
 
-#### Aggiunta di riferimenti ai pacchetti NuGet di Dynamo <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Aggiunta di riferimenti ai pacchetti NuGet di Dynamo <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 Il nodo di moltiplicazione è molto semplice e non sono necessari riferimenti a Dynamo. Se si desidera accedere ad una qualsiasi delle funzionalità di Dynamo per creare, ad esempio, la geometria, sarà necessario fare riferimento ai pacchetti NuGet di Dynamo.
 
@@ -136,13 +136,13 @@ Per fare riferimento a questi pacchetti in un progetto di Visual Studio, scarica
 
 > 1. Aprire Gestione pacchetti NuGet selezionando `Strumenti > Gestione pacchetti NuGet > Gestione pacchetti NuGet per la soluzione`.
 
-Questo è Gestione pacchetti NuGet. Questa finestra mostra i pacchetti installati per il progetto e consente all'utente di cercarne altri. Se viene rilasciata una nuova versione del pacchetto DynamoServices, è possibile aggiornare i pacchetti da questa posizione o ripristinare una versione precedente.
+È Gestione pacchetti NuGet. Questa finestra mostra i pacchetti installati per il progetto e consente all'utente di cercarne altri. Se viene rilasciata una nuova versione del pacchetto DynamoServices, è possibile aggiornare i pacchetti da questa posizione o ripristinare una versione precedente.
 
 ![Gestione pacchetti NuGet](images/vs-nuget-package-manager.jpg)
 
 > 1. Selezionare Sfoglia e cercare DynamoVisualProgramming per visualizzare i pacchetti di Dynamo.
 > 2. I pacchetti di Dynamo. Selezionandone uno, verranno mostrate la versione corrente e la descrizione del loro contenuto.
-> 3. Selezionare la versione del pacchetto desiderata e fare clic su Installa. In questo modo viene installato un pacchetto per il progetto specifico in cui si sta lavorando. Poiché si sta utilizzando la release stabile più recente di Dynamo, versione 1.3, scegliere la versione del pacchetto corrispondente.
+> 3. Selezionare la versione del pacchetto desiderata e fare clic su Installa. In questo modo viene installato un pacchetto per il progetto specifico in cui si sta lavorando. Poiché si sta utilizzando la release stabile più recente di Dynamo, la versione 1.3, scegliere la versione del pacchetto corrispondente.
 
 Per aggiungere manualmente un pacchetto scaricato dal browser, aprire Gestione riferimenti da Esplora soluzioni e cercare il pacchetto.
 

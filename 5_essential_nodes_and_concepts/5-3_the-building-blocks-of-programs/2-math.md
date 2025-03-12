@@ -8,10 +8,10 @@ Gli operatori sono un insieme di componenti che utilizzano funzioni algebriche c
 
 | Icona                                                  | Nome (Sintassi)     | Input                     | Output      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiply (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Add (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtract (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiply ( ***** ) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Divide (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Esercizio: Formula della spirale aurea
 
@@ -35,9 +35,13 @@ Combinare operatori e variabili per formare una relazione più complessa mediant
 
 La spirale aurea viene definita come l'equazione:
 
-$$ x = r cos θ = a cos θ e^{bθ} $$
+$$
+x = r cos θ = a cos θ e^{bθ}
+$$
 
-$$ y = r sin θ = a sin θe^{bθ} $$
+$$
+y = r sin θ = a sin θe^{bθ}
+$$
 
 L'immagine seguente rappresenta la spirale aurea sotto forma di programmazione visiva. Quando si scorre il gruppo di nodi, provare a prestare attenzione al parallelo tra il programma visivo e l'equazione scritta.
 
@@ -87,7 +91,7 @@ Ora che è stata creata una conchiglia Nautilus circolare, si può passare alle 
 
 Come punto di partenza, iniziare con lo stesso passaggio dell'esercizio precedente: la creazione di una serie di punti della spirale con il nodo **Point.ByCoordinates**.
 
-![](../images/5-3/2/math-part IV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 Quindi, seguire questi mini passaggi per generare una serie di spirali con rotazione diversa.
 

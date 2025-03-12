@@ -6,7 +6,7 @@ Nei nomi dei nodi di Dynamo è possibile aver notato un tema comune: ogni nodo u
 
 Come analogia generale per la notazione con punto, in che modo è possibile gestire una mela parametrica in Dynamo? Di seguito sono riportati alcuni metodi che si eseguiranno sulla mela prima di decidere di mangiarla (nota: questi non sono metodi di Dynamo effettivi):
 
-| Testo leggibile dall'utente                 | Notazione con punto              | Output |
+| Leggibile dall'uomo                 | Notazione con punto              | Output |
 | ------------------------------ | ------------------------- | ------ |
 | Di che colore è la mela?       | Apple.color               | rosso    |
 | La mela è matura?             | Apple.isRipe              | true   |

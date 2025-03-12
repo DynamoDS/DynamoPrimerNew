@@ -1,0 +1,26 @@
+# Utilizzo efficiente di set di dati di grandi dimensioni in Dynamo
+
+In questa pagina vengono presentate alcune regole pratiche per lavorare in modo efficiente con set di dati di grandi dimensioni in Dynamo. La speranza è che sia possibile utilizzare i suggerimenti per identificare i colli di bottiglia nei grafici, in modo che il grafico venga eseguito in pochi minuti, anziché in poche ore.
+
+Sommario:
+* Confronto tra generazione e tassellazione della geometria
+* Utilizzo della memoria
+* API di Revit
+
+### Confronto tra generazione e tassellazione della geometria
+
+In Dynamo, la creazione di un elemento di geometria e il relativo disegno sono due eventi completamente diversi. In generale, la creazione della geometria è molto più rapida e richiede meno memoria rispetto al disegno dell'oggetto. Si può pensare alla geometria come a un elenco di misure per realizzare un abito, mentre la tassellazione è l'abito stesso. Dalle misure si possono capire molte cose sull'abito: quanto sono lunghe le braccia, quanto costa, ecc. ma quasi sempre è necessario vedere e provare l'abito finito per capire se è corretto o meno. Analogamente, con la geometria non tessellata, è possibile determinarne il riquadro di delimitazione, l'area e il volume; intersecarlo con altra geometria; ed esportarlo in formato SAT o Revit. Tuttavia, è quasi sempre necessario tassellare la geometria per verificare se sia corretta o meno. 
+
+Se il grafico di Dynamo contiene molti oggetti e rallenta durante l'esecuzione, potrebbe essere possibile rimuovere i passaggi di tassellazione dal grafico per velocizzare le operazioni.  
+
+I nodi della geometria in Dynamo vengono sempre tassellati*. In questo modo sono disponibili due opzioni per lavorare con la geometria non tassellata: i nodi Python e i nodi zero-touch. Finché non viene restituito un oggetto geometria dal nodo Python o zero-touch, la geometria non verrà tassellata. Ad esempio, se il grafico ha diversi nodi punto, connessi a diversi nodi linea, connessi a diversi nodi loft, connessi a diversi nodi ispessimento, la geometria verrà tassellata ad ogni passaggio. È invece possibile raggruppare questa logica in un nodo Python o zero-touch e restituire solo l'oggetto finale dal nodo.
+
+Per ulteriori informazioni sull'utilizzo dei nodi zero-touch, consultare la sezione [Sviluppo per Dynamo](https://primer2.dynamobim.org/it/1_developer_primer_intro/3_developing_for_dynamo) di questa guida introduttiva.
+
+### Utilizzo della memoria
+
+Se non si esegue più la tassellazione della geometria, è possibile che si tratti un collo di bottiglia della memoria dovuto all'accumulo eccessivo di geometria. Gli oggetti geometria in Dynamo richiedono una quantità minore, ma non insignificante, di memoria al momento della creazione. Se si utilizzano centinaia di migliaia o milioni di oggetti, è possibile che i problemi si sommino e causino l'arresto anomalo di Dynamo o Revit. In Dynamo versione 2.5 e successive, questo problema viene gestito implicitamente eliminando gli oggetti inutilizzati, ma se si utilizza una versione precedente alla 2.5, un modo per evitare di creare molta geometria consiste nell'eliminare gli oggetti quando si è finito di usarli. Ad esempio, si supponga di creare centinaia di migliaia di NurbsCurve, ognuna delle quali richiede decine di punti. Un modo per creare tali elementi è stilare un elenco bidimensionale in Dynamo e inserirlo in un nodo NurbsCurve.ByPoints. Tuttavia, ciò richiede la creazione di milioni di punti. Un altro modo consiste nell'utilizzare un nodo Python o zero-touch. In questo nodo, è possibile creare una dozzina di punti, inserirli in NurbsCurve.ByPoints, quindi eliminare la dozzina di punti con la chiamata del metodo Dispose(). Per ulteriori informazioni sull'utilizzo dei nodi zero-touch, consultare la sezione [Sviluppo per Dynamo](https://primer2.dynamobim.org/it/1_developer_primer_intro/3_developing_for_dynamo) di questa guida introduttiva. L'eliminazione degli oggetti geometria dopo averli creati può ridurre drasticamente la quantità di memoria utilizzata in determinate circostanze e, sebbene questo venga gestito per gli utenti di Dynamo 2.5 e versioni successive, si consiglia all'utente di eliminare comunque la geometria in modo esplicito, se il caso di utilizzo richiede di ridurre la memoria in un determinato momento. Per ulteriori informazioni sulle nuove funzionalità di stabilità introdotte in Dynamo 2.5, vedere [Dynamo Geometry Stability Improvements](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
+
+### API di Revit
+
+Se si eliminano in modo aggressivo gli oggetti in un nodo zero-touch o Python e si verificano ancora problemi relativi alla memoria o alle prestazioni, potrebbe essere necessario ignorare completamente Dynamo e creare oggetti di Revit direttamente tramite l'API. Ad esempio, è possibile analizzare un file di Excel per cercare informazioni sui punti e utilizzare queste informazioni per creare coordinate XYZ e altri elementi di Revit tramite la relativa API. A questo punto, Revit diventerà il collo di bottiglia definitivo che non può essere evitato.

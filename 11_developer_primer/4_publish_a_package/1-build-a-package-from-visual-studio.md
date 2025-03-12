@@ -1,4 +1,4 @@
-# Creazione di un pacchetto da Visual Studio 
+# Creazione di un pacchetto da Visual Studio
 
 Se si stanno sviluppando assiemi da pubblicare come pacchetto per Dynamo, il progetto può essere configurato per raggruppare tutti i componenti di progetto necessari e inserirli in una struttura di directory compatibile con il pacchetto. Ciò consentirà di testare rapidamente il progetto come pacchetto e di simulare l'esperienza dell'utente.
 

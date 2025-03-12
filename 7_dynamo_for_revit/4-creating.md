@@ -56,9 +56,7 @@ Sono stati utilizzati i nodi _Select Model Element_ e _Select Face_. Ora si scen
 > 3. Ripetere la stessa operazione per i bordi inferiori della facciata in Revit.
 > 4. I nodi _Watch_ mostrano che ora sono presenti linee in Dynamo. Questo valore viene convertito automaticamente nella geometria di Dynamo poiché i bordi stessi non sono elementi di Revit. Queste curve sono i riferimenti che verranno utilizzati per creare un'istanza di travi reticolari adattive nella facciata.
 
-{% hint style="info" %}
- *Per mantenere una topologia coerente, si sta facendo riferimento ad un modello che non ha facce o bordi supplementari aggiunti. Sebbene i parametri possano modificarne la forma, il modo in cui è stata creata rimane coerente.
-{% endhint %}
+{% hint style="info" %} *Per mantenere una topologia coerente, si sta facendo riferimento ad un modello che non ha facce o bordi supplementari aggiunti. Sebbene i parametri possano modificarne la forma, il modo in cui è stata creata rimane coerente.{% endhint %}
 
 È necessario innanzitutto unire le curve e accorparle in un elenco. In questo modo è possibile _"raggruppare"_ le curve per eseguire operazioni di geometria.
 

@@ -53,7 +53,7 @@ L'immagine seguente è il grafico di base che si sta disegnando tra due cerchi p
 > 6. Con un nodo **Geometry.Translate**, spostare il cerchio verso l'alto di 100 unità nella direzione Z.
 > 7. Con un nodo **Code Block**, definire un intervallo di dieci numeri compreso tra 0 e 1 con questa riga di codice: `0..1..#10;`.
 > 8. Collegare il Code Block del passaggio precedente all'input _param_ di due nodi **Curve.PointAtParameter**. Collegare **Circle.ByPlaneRadius** all'input curve del nodo superiore e **Geometry.Translate** all'input curve del nodo sottostante.
-> 9. Utilizzando **Line.ByStartPointEndPoint**, collegare i due nodi **Curve.PointAtParamete**_r_.
+> 9. Utilizzando **Line.ByStartPointEndPoint**, collegare i due nodi **Curve.PointAtParameter**.
 
 ### List.Count
 

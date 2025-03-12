@@ -94,7 +94,7 @@ In questo passaggio, si utilizza la prima funzione per spostare la griglia di pu
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. Anziché utilizzare un nodo di formula, viene utilizzato un **Code Block** con la riga: `(0..Math.Sin(x*360)..#50)*5;`. Per suddividerlo rapidamente, definire un intervallo con una formula al suo interno. Questa formula è la funzione seno. La funzione seno riceve gli input di gradi in Dynamo, pertanto per ottenere un'onda seno completa, è necessario moltiplicare i valori x (questo è l'input di intervallo da 0 a 1) per 360. Successivamente, si desidera che il numero di divisioni corrisponda a quello dei punti della griglia di controllo per ogni riga, pertanto si definiscono 50 suddivisioni con #50. Infine, il moltiplicatore 5 aumenta semplicemente l'ampiezza della traslazione in modo da poter vedere l'effetto nell'anteprima di Dynamo.
+> 1. Utilizziamo un **Code Block** con la riga: `(0..Math.Sin(x*360)..#50)*5;`. Per suddividerlo rapidamente, definire un intervallo con una formula al suo interno. Questa formula è la funzione seno. La funzione seno riceve gli input di gradi in Dynamo, pertanto per ottenere un'onda seno completa, è necessario moltiplicare i valori x (questo è l'input di intervallo da 0 a 1) per 360. Successivamente, si desidera che il numero di divisioni corrisponda a quello dei punti della griglia di controllo per ogni riga, pertanto si definiscono 50 suddivisioni con #50. Infine, il moltiplicatore 5 aumenta semplicemente l'ampiezza della traslazione in modo da poter vedere l'effetto nell'anteprima di Dynamo.
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -140,6 +140,6 @@ Osservando il grafico visivo, è possibile evidenziare i Code Block e vedere cia
 >
 > 2\. Il secondo **Code Block** sostituisce il nodo **Range**.
 >
-> 3\. Il terzo **Code Block** sostituisce il nodo **Formula** (nonché **List.Transpose**, **List.Count** e **Range**).
+> 3\. Il terzo **Code Block** sostituisce i nodi **List.Transpose**, **List.Count** e **Number Range**.
 >
 > 4\. Il quarto **Code Block** esegue una query su un elenco di elenchi, sostituendo il nodo **List.GetItemAtIndex**.

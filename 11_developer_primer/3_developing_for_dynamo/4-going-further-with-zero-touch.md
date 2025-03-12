@@ -18,7 +18,7 @@ Aprire Dynamo e importare `ZeroTouchEssentials.dll` per ottenere i nodi a cui fa
 
 Gli esempi di codice derivano da e in genere corrispondono a [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/master/ZeroTouchEssentials/ZeroTouchEssentials.cs). La documentazione XML è stata rimossa per mantenerli concisi e ogni esempio di codice creerà il nodo nell'immagine che si trova sopra.
 
-#### Valori di input di default <a href="#default-input-values" id="default-input-values"></a>
+### Valori di input di default <a href="#default-input-values" id="default-input-values"></a>
 
 Dynamo supporta la definizione dei valori di default per le porte di input in un nodo. Questi valori di default verranno forniti al nodo se le porte non dispongono di connessioni. I valori di default vengono espressi utilizzando il meccanismo C# di definizione degli argomenti facoltativi nella [Guida per programmatori C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Le impostazioni di default vengono specificate nel seguente modo:
 
@@ -42,7 +42,7 @@ namespace ZeroTouchEssentials
 
 > 1. Il valore di default verrà mostrato quando si posiziona il cursore sulla porta di input del nodo.
 
-#### Restituzione di più valori <a href="#returning-multiple-values" id="returning-multiple-values"></a>
+### Restituzione di più valori <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
 La restituzione di più valori è un po' più complessa rispetto alla creazione di più input e dovrà essere eseguita utilizzando un dizionario. Le voci del dizionario diventano porte sul lato di output del nodo. Vengono create più porte restituite nel modo seguente:
 
@@ -80,7 +80,7 @@ Un nodo che restituisce più output.
 
 > 1. Notare che ora sono presenti due porte di output denominate in base alle stringhe immesse per le chiavi del dizionario.
 
-#### Documentazione, descrizioni comandi e ricerca <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
+### Documentazione, descrizioni comandi e ricerca <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
 
 È buona norma aggiungere ai nodi Dynamo una documentazione che descriva la funzione del nodo, gli input, gli output, i tag di ricerca, ecc. Questa operazione viene eseguita tramite i tag della documentazione XML. La documentazione XML viene creata nel modo seguente:
 
@@ -88,7 +88,7 @@ Un nodo che restituisce più output.
   * Ad esempio: `/// Documentation text and XML goes here`
 * Dopo le tre barre, creare tag XML sopra i metodi che Dynamo leggerà durante l'importazione del file .dll.
   * Ad esempio: `/// <summary>...</summary>`
-* Attivare la documentazione XML in Visual Studio scegliendo `Progetto > NomeProgetto > Properties > Compilazione` e selezionando `File di documentazione XML`.
+* Attivare la documentazione XML in Visual Studio scegliendo `Project > [Project] Properties > Build > Output` e selezionando `Documentation file`.
 
 ![Generazione di un file XML](images/vs-xml.jpg)
 
@@ -100,7 +100,7 @@ I tipi di tag sono i seguenti:
 * `/// <param name="inputName">...</param>` creerà la documentazione per parametri di input specifici.
 * `/// <returns>...</returns>` creerà la documentazione per un parametro di output.
 * `/// <returns name = "outputName">...</returns>` creerà la documentazione per più parametri di output.
-* `/// <search>...</search>` abbinerà il nodo ai risultati della ricerca in base ad un elenco separato da virgole. Ad esempio, se si crea un nodo che suddivide una maglia, si possono aggiungere tag come "mesh", "subdivision" e "catmull-clark".
+* `/// <search>...</search>` abbinerà il nodo ai risultati della ricerca in base ad un elenco separato da virgole. Ad esempio, se si crea un nodo che suddivide una mesh, si possono aggiungere tag come "mesh", "subdivision" e "catmull-clark".
 
 Di seguito è riportato un nodo di esempio con descrizioni di input e output, nonché una sintesi che verrà visualizzata nella libreria.
 
@@ -130,11 +130,50 @@ namespace ZeroTouchEssentials
 
 Notare che il codice per questo nodo di esempio contiene:
 
-> 1. Un riepilogo del nodo
+> 1. Una sintesi del nodo
 > 2. Una descrizione dell'input
 > 3. Descrizione di un output
 
-#### Oggetti <a href="#objects" id="objects"></a>
+#### Pratiche ottimali per le descrizioni dei nodi di Dynamo 
+
+Le descrizioni dei nodi illustrano brevemente la funzione e l'output di un nodo. In Dynamo, vengono visualizzati in due posizioni:
+
+- Nella descrizione comando del nodo
+- Nel Browser della documentazione
+
+![Descrizione del nodo](images/node-description.png)
+
+Seguire queste linee guida per garantire la coerenza e risparmiare tempo durante la scrittura o l'aggiornamento delle descrizioni dei nodi.
+
+##### Panoramica
+
+Le descrizioni dovrebbero essere composte da una o due frasi. Se sono necessarie ulteriori informazioni, includerle in In profondità nel Browser della documentazione.
+
+Comporre la frase rispettando le maiuscole (scrivere in maiuscolo la prima parola di una frase e tutti i nomi propri). Non aggiungere un punto alla fine.
+
+Il linguaggio deve essere il più chiaro e semplice possibile. Definire gli acronimi alla prima occorrenza, a meno che non siano noti anche agli utenti non esperti.
+
+Dare sempre priorità alla chiarezza, anche se ciò significa discostarsi da queste linee guida.
+
+##### Linee guida
+
+| Cosa fare      | Cosa non fare |
+| ----------- | ----------- |
+| Iniziare la descrizione con un verbo in terza persona. <ul><li>Esempio: *Determina* se un oggetto geometrico interseca un altro</li></ul>      | Non iniziare con un verbo in seconda persona o con un sostantivo. <ul><li>Esempio: *Determinare* se un oggetto geometrico si interseca con un altro</li></ul>       |
+| Utilizzare "Restituisce", "Crea" o un altro verbo descrittivo invece di "Ottiene". <ul><li>Esempio: *Restituisce* una rappresentazione NURBS di una superficie</li></ul>   | Non utilizzare "Ottenere" o "Ottiene". È meno specifico e ha diverse possibili traduzioni. <ul><li>Esempio: *Ottiene* una rappresentazione NURBS della superficie</li></ul>        |
+| Quando si fa riferimento agli input, utilizzare "dato" o "input" invece di "specificato" o qualsiasi altro termine. Omettere "dato" o "input", quando possibile, per semplificare la descrizione e ridurre il numero di parole. <ul><li>Esempio: Elimina il file *dato*</li><li>Esempio: Proietta una curva lungo la direzione di proiezione *data* sulla geometria di base *data*</li></ul>È possibile utilizzare "specificato" quando non si fa riferimento diretto ad un input. <ul><li>Esempio: Scrive il contenuto di testo in un file *specificato* dal percorso dato.</li></ul>       | Quando si fa riferimento agli input, per garantire la coerenza, non utilizzare "specificato" o qualsiasi altro termine tranne "dato" o "input". Non combinare "dato" e "input" nella stessa descrizione, a meno che non sia necessario per motivi di chiarezza. <ul><li>Esempio: Elimina il file *specificato*</li><li>Esempio: Proietta una curva di *input* lungo una direzione di proiezione *data* su una geometria di base *specificata*</li></ul>      |
+| Utilizzare "un/uno" o "un'/una" quando si fa riferimento per la prima volta ad un input. Utilizzare "il dato" o "l'input" invece di "un/uno" o "un'/una", secondo necessità, per chiarezza.<ul><li>Esempio: Esegue l'estrusione su percorso di *una* curva lungo la traiettoria della curva</li></ul>      | Non utilizzare "questo/a" quando si fa riferimento per la prima volta ad un input. <ul><li>Esempio: Esegue l'estrusione su percorso di *questa* curva lungo la traiettoria della curva      |
+| Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, utilizzare "un/uno" o "un'/una". Utilizzare solo " quando associato ad "input" o "dato". <ul><li>Esempio: Copia *un* file</li><li>Esempio: Copia *il dato* file</li></ul>      | Quando si fa riferimento per la prima volta ad un output o a un altro sostantivo che è la destinazione dell'operazione del nodo, non utilizzare "il/la" da solo. <ul><li>Esempio: Copia *il* file</li></ul>      |
+| Scrivere in maiuscolo la prima parola di una frase e tutti i nomi propri, come i nomi e i sostantivi tradizionalmente maiuscoli. <ul><li>Esempio: Restituisce l'intersezione di due *BoundingBox*</li></ul>      | Non scrivere in maiuscolo oggetti e concetti di geometria comuni a meno che non sia necessario per fare maggiore chiarezza. <ul><li>Esempio: Scala in modo non uniforme attorno al *Piano* dato      |
+| Scrivere in maiuscolo Booleano. Scrivere in maiuscolo True e False quando si fa riferimento all'output dei valori Booleani. <ul><li>Esempio: Restituisce *True* se i due valori sono diversi</li><li>Esempio: Converte una stringa in tutti caratteri maiuscoli o minuscoli in base ad un parametro *Booleano*      | Non scrivere in minuscolo Booleano. Non scrivere in minuscolo True e False in quando si fa riferimento all'output di valori Booleani. <ul><li>Esempio: Restituisce *True* se i due valori sono diversi</li><li>Esempio: Converte una stringa in tutti caratteri maiuscoli o minuscoli in base ad un parametro *booleano*</li></ul>
+
+#### Avvisi ed errori relativi ai nodi di Dynamo
+
+Gli avvisi e gli errori relativi ai nodi segnalano all'utente un problema con il grafico. Avvisano l'utente di problemi che interferiscono con il normale funzionamento del grafico, visualizzando un'icona e testo a bolle espanse sopra il nodo. Gli errori e gli avvisi relativi ai nodi possono variare in termini di gravità: alcuni grafici possono essere eseguiti in modo sufficiente con gli avvisi, mentre altri bloccano i risultati previsti. In tutti i casi, gli errori e gli avvisi relativi ai nodi sono strumenti importanti per mantenere l'utente aggiornato sui problemi riguardati il grafico.
+
+Per le linee guida volte a garantire la coerenza e ad aiutare a risparmiare tempo quando si scrivono o si aggiornano i messaggi di avviso e di errore relativi ai nodi, fare riferimento alla pagina Wiki [Content Pattern: Node Warnings and Errors](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors).
+
+### Oggetti <a href="#objects" id="objects"></a>
 
 Dynamo non dispone di una parola chiave `new`, pertanto gli oggetti dovranno essere costruiti utilizzando metodi di costruzione statici. Gli oggetti vengono costruiti nel modo seguente:
 
@@ -169,11 +208,11 @@ namespace ZeroTouchEssentials
 
 > Fare riferimento a questo esempio di codice in [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/9917fd8159afc9e7bdb2944c960155a496e0b2dc/ZeroTouchEssentials/ZeroTouchEssentials.cs#L26).
 
-Dopo l'importazione del file dll ZeroTouchEssentials, nella libreria sarà presente un nodo ZeroTouchEssentials. Questo oggetto può essere creato utilizzando il nodo `ByTwoDoubles`
+Dopo l'importazione del file .dll ZeroTouchEssentials, nella libreria sarà presente un nodo ZeroTouchEssentials. Questo oggetto può essere creato utilizzando il nodo `ByTwoDoubles`
 
 ![Nodo ByTwoDoubles](images/dyn-constructor.jpg)
 
-#### Utilizzo dei tipi di geometria di Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
+### Utilizzo dei tipi di geometria di Dynamo <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
 Le librerie di Dynamo possono utilizzare tipi di geometria di Dynamo nativi come input e creare nuova geometria come output. I tipi di geometria vengono creati nel seguente modo:
 
@@ -207,7 +246,7 @@ Un nodo che ottiene la lunghezza di una curva e la raddoppia.
 
 > 1. Questo nodo accetta un tipo di geometria curve come input.
 
-#### Istruzioni Dispose/using <a href="#disposeusing-statements" id="disposeusing-statements"></a>
+### Istruzioni Dispose/using <a href="#disposeusing-statements" id="disposeusing-statements"></a>
 
 Le risorse della geometria che non vengono restituite dalle funzioni dovranno essere gestite manualmente, a meno che non si stia utilizzando Dynamo versione 2.5 o successiva. In Dynamo 2.5 e versioni successive, le risorse della geometria vengono gestite internamente dal sistema, tuttavia, potrebbe essere ancora necessario rimuovere la geometria manualmente se si dispone di un caso di utilizzo complesso o se è necessario ridurre la memoria in un determinato momento. Il motore di Dynamo gestirà eventuali risorse della geometria restituite da funzioni. Le risorse della geometria non restituite possono essere gestite manualmente nei seguenti modi:
 
@@ -237,11 +276,11 @@ Le risorse della geometria che non vengono restituite dalle funzioni dovranno es
     return l;
     ```
 
-#### Migrazioni <a href="#migrations" id="migrations"></a>
+### Migrazioni <a href="#migrations" id="migrations"></a>
 
 Quando si pubblica una versione più recente di una libreria, i nomi dei nodi potrebbero cambiare. Le modifiche ai nomi possono essere specificate in un file Migrations in modo che i grafici creati con versioni precedenti di una libreria continuino a funzionare correttamente quando si esegue un aggiornamento. Le migrazioni vengono implementate nel seguente modo:
 
-* Creare un file `.xml` nella stessa cartella di `.dll` con il seguente formato: "BaseDLLName".Migrations.xml.
+* Creare un file `.xml` nella stessa cartella del file `.dll` con il seguente formato: "BaseDLLName".Migrations.xml.
 * Nel file `.xml`, creare un singolo elemento `<migrations>...</migrations>`.
 * All'interno dell'elemento migrations, creare elementi `<priorNameHint>...</priorNameHint>` per ogni modifica del nome.
 * Per ogni modifica del nome, fornire un elemento `<oldName>...</oldName>` e `<newName>...</newName>`.
@@ -266,11 +305,11 @@ Questo codice di esempio indica a Dynamo che qualsiasi nodo denominato `GetClose
 
 > Fare riferimento a questo esempio di codice in [ProtoGeometry.Migrations.xml](https://github.com/DynamoDS/Dynamo/blob/master/extern/ProtoGeometry/ProtoGeometry.Migrations.xml).
 
-#### Generics <a href="#generics" id="generics"></a>
+### Generics <a href="#generics" id="generics"></a>
 
 Zero-Touch attualmente non supporta l'uso di generics. Possono essere utilizzati, ma non nel codice che viene importato direttamente dove il tipo non è impostato. I metodi, le proprietà o le classi che sono generici e senza il tipo impostato non possono essere esposti.
 
-Nell'esempio seguente, un nodo zero-touch di tipo `T` non verrà importato. Se il resto della libreria viene importato in Dynamo, risulteranno mancante delle eccezioni del tipo.
+Nell'esempio seguente, un nodo zero-touch di tipo `T` non verrà importato. Se il resto della libreria viene importato in Dynamo, ci saranno eccezioni del tipo mancanti.
 
 ```
 public class SomeGenericClass<T>

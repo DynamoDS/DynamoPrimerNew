@@ -1,4 +1,4 @@
-# Pubblicazione nella libreria 
+# Pubblicazione nella libreria
 
 È stato appena creato un nodo personalizzato ed è stato applicato ad un processo specifico nel grafico di Dynamo. E dato che questo nodo è ben riuscito, si desidera mantenerlo nella libreria di Dynamo come riferimento in altri grafici. Per eseguire questa operazione, il nodo verrà pubblicato localmente. Questo è un processo simile alla pubblicazione di un pacchetto, che sarà esaminata più in dettaglio nel prossimo capitolo.
 

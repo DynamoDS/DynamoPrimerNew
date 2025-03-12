@@ -4,7 +4,7 @@ Dynamo 2.0 non solo introduce i nodi descritti in precedenza per i dizionari, ma
 
 È possibile utilizzare la sintassi come illustrato di seguito o le rappresentazioni basate su DesignScript dei nodi.
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1).jpg>)
 
 Poiché un dizionario è un tipo di oggetto in Dynamo, è possibile eseguire il commit delle seguenti operazioni su di esso.
 

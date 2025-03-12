@@ -1,4 +1,4 @@
-# Case study NodeModel - Interfaccia utente personalizzata 
+# Case study NodeModel - Interfaccia utente personalizzata
 
 I nodi basati su NodeModel offrono una flessibilità e una potenza notevolmente superiori rispetto ai nodi zero-touch. In questo esempio, si porta il nodo griglia zero-touch al livello successivo aggiungendo un dispositivo di scorrimento integrato che imposta dimensioni casuali del rettangolo.
 
@@ -8,7 +8,7 @@ I nodi basati su NodeModel offrono una flessibilità e una potenza notevolmente 
 
 #### Modello Model-View-Viewmodel <a href="#the-model-view-viewmodel-pattern" id="the-model-view-viewmodel-pattern"></a>
 
-Dynamo è basato sul modello di architettura del software [Model-View-Viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) per mantenere l'interfaccia utente separata dal back-end. Quando si creano nodi zero-touch, Dynamo esegue l'associazione tra i dati di un nodo e la relativa interfaccia utente. Per creare un'interfaccia utente personalizzata, è necessario aggiungere la logica di associazione dei dati.
+Dynamo è basato sul modello di architettura del software [Model-View-Viewmodel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) (MVVM) per mantenere l'interfaccia utente separata dal back-end. Quando si creano nodi zero-touch, Dynamo esegue il binding tra i dati di un nodo e la relativa interfaccia utente. Per creare un'interfaccia utente personalizzata, è necessario aggiungere la logica di binding dei dati.
 
 Ad un livello generale sono disponibili due parti per stabilire una relazione modello-vista in Dynamo:
 

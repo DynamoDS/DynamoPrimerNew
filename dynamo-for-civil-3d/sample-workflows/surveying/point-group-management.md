@@ -16,9 +16,7 @@ L'utilizzo di punti COGO e gruppi di punti in Civil 3D è un elemento fondamenta
 
 ## Compatibilità delle versioni
 
-{% hint style="success" %}
- Questo grafico verrà eseguito su **Civil 3D 2020** e versioni successive. 
-{% endhint %}
+{% hint style="success" %} Questo grafico verrà eseguito su **Civil 3D 2020** e versioni successive. {% endhint %}
 
 ## Set di dati
 
@@ -43,9 +41,7 @@ Procediamo!
 
 Il primo passaggio consiste nell'ottenere tutti i gruppi di punti nel documento, quindi tutti i punti COGO all'interno di ciascun gruppo. In questo modo verrà fornito un _elenco nidificato_ o un "elenco di elenchi", che sarà più semplice utilizzare in un secondo momento se si riduce la nidificazione di tutto trasformandolo in un unico elenco con il nodo **List.Flatten**.
 
-{% hint style="info" %}
- Se non si ha familiarità con gli elenchi, consultare la sezione [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Se non si ha familiarità con gli elenchi, consultare la sezione [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>Recupero di tutti i gruppi di punti e punti COGO </p></figcaption></figure>
 
@@ -73,9 +69,7 @@ Di seguito è riportato un esempio di esecuzione del grafico mediante il **Letto
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Esecuzione del grafico utilizzando il Lettore Dynamo e visualizzazione dei risultati nell'Area strumenti</p></figcaption></figure>
 
-{% hint style="info" %}
- Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../../dynamo-player.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
 
 > :tada: Missione compiuta!
 
@@ -83,14 +77,8 @@ Di seguito è riportato un esempio di esecuzione del grafico mediante il **Letto
 
 Ecco alcune idee su come espandere le funzionalità di questo grafico.
 
-{% hint style="info" %}
- Modificare il raggruppamento di punti in modo che si basi sulla **descrizione completa** anziché sulla descrizione non elaborata. 
-{% endhint %}
+{% hint style="info" %} Modificare il raggruppamento di punti in modo che si basi sulla **descrizione completa** anziché sulla descrizione non elaborata. {% endhint %}
 
-{% hint style="info" %}
- Raggruppare i punti in altre **categorie predefinite** scelte (ad esempio, "Foto del suolo", "Monumenti" e così via). 
-{% endhint %}
+{% hint style="info" %} Raggruppare i punti in altre **categorie predefinite** scelte (ad esempio, "Foto del suolo", "Monumenti" e così via). {% endhint %}
 
-{% hint style="info" %}
- Creare automaticamente superfici TIN per i punti in determinati gruppi. 
-{% endhint %}
+{% hint style="info" %} Creare automaticamente superfici TIN per i punti in determinati gruppi. {% endhint %}

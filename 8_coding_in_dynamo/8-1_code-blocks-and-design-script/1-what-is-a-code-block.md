@@ -28,7 +28,7 @@ Anche i blocchi di codice sono flessibili rispetto ai tipi di dati. L'utente pu�
 
 Nella seguente immagine, è possibile vedere che il modo di eseguire le operazioni della "vecchia scuola" è leggermente più lungo: l'utente cerca il nodo desiderato nell'interfaccia, aggiunge il nodo all'area di disegno e quindi inserisce i dati. Con il blocco di codice, l'utente può fare doppio clic nell'area di disegno per estrarre il nodo e digitare il tipo di dati corretto con la sintassi di base.
 
-I nodi Number, String e Formula sono tre esempi di nodi di Dynamo che risultano probabilmente obsoleti rispetto al blocco di codice.
+I nodi Number e String sono due esempi di nodi di Dynamo che risultano probabilmente obsoleti rispetto al blocco di codice.
 
 ![](../images/8-1/1/oldschoolvscodeblocksnodes.jpg)
 

@@ -77,6 +77,32 @@ Come si può vedere, esistono diversi modi in cui è possibile disegnare linee t
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
+### Cos'è la replica?
+
+Si immagini di avere un grappolo d'uva. Per ottenere il succo d'uva, non bisogna spremere ogni acino singolarmente, ma metterli tutti insieme nello spremiagrumi. La replica in Dynamo funziona in modo simile: anziché applicare un'operazione ad un elemento alla volta, Dynamo può applicarla ad un intero elenco in un'unica operazione.
+
+I nodi di Dynamo riconoscono automaticamente quando stanno lavorando con gli elenchi e applicano le loro operazioni a più elementi. Ciò significa che non è necessario scorrere manualmente gli elementi, ma semplicemente che questo avviene. Ma come fa Dynamo a decidere come elaborare gli elenchi quando ce n'è più di uno?
+
+Esistono due modi principali:
+
+#### Replica cartesiana
+Supponiamo di trovarci in cucina a preparare succhi di frutta. Si ha un elenco di frutti: `{apple, orange, pear}` e una quantità fissa di acqua per ogni succo: `1 cup`. Si vuole fare un succo con ogni frutto, con la stessa quantità d'acqua. In questo caso, entra in gioco la replica cartesiana.
+
+In Dynamo, ciò significa che si inserisce l'elenco di frutti nell'input fruit del nodo Juice.Maker, mentre l'input water rimane costante a 1 tazza. Il nodo elabora quindi ogni frutto singolarmente, combinandolo con la quantità fissa di acqua. Il risultato è:
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+Ogni frutto è abbinato alla stessa quantità di acqua.
+
+#### Replica in formato .zip
+La replica in formato .zip funziona in modo leggermente diverso. Se si avessero due elenchi, uno per i frutti: `{apple, orange, pear}` e un altro per le quantità di zucchero: `{2 tbsp, 3 tbsp, 1 tbsp}`, la replica in formato .zip combinerebbe gli elementi corrispondenti di ciascun elenco. Ad esempio:
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+Ogni frutto è abbinato alla sua corrispondente quantità di zucchero.
+
+Per ulteriori informazioni sul funzionamento, consultare la pagina [Replication and Lacing Guides](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1).
+
 ## Esercizio
 
 > Scaricare il file di esempio facendo clic sul collegamento seguente.

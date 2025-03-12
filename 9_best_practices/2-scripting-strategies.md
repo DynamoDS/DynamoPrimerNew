@@ -23,9 +23,7 @@ Lo scripting di testo può stabilire relazioni di maggiore complessità rispetto
 | **Python**         | Sì         | Sì           | Parzialmente          | Sì                | No            |
 | **ZeroTouch (C#)** | No          | No            | No                 | Sì                | No            |
 
-{% hint style="info" %}
- Consultare [Riferimento per lo scripting](3-scripting-reference.md) per visualizzare un elenco delle funzionalità rese disponibili da ogni libreria di Dynamo. 
-{% endhint %}
+{% hint style="info" %} Consultare [Riferimento per lo scripting](3-scripting-reference.md) per visualizzare un elenco delle funzionalità rese disponibili da ogni libreria di Dynamo. {% endhint %}
 
 ### Pensiero parametrico
 
@@ -65,9 +63,7 @@ Quando si esegue lo scripting in Dynamo, un ambiente inevitabilmente parametrico
 > 2. Variabili interne allo script.
 > 3. Un loop che utilizza questi input e variabili per eseguirne la funzione.
 
-{% hint style="info" %}
- Suggerimento Porre l'accento sul processo come si fa con la soluzione. 
-{% endhint %}
+{% hint style="info" %} Suggerimento Porre l'accento sul processo come si fa con la soluzione. {% endhint %}
 
 ### **Don't repeat yourself (principio DRY):**
 
@@ -94,9 +90,7 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %}
- Suggerimento Prima di duplicare le entità nello script (ad esempio una costante nell'esempio precedente), chiedere se è invece possibile eseguire il collegamento all'origine. 
-{% endhint %}
+{% hint style="info" %} Suggerimento Prima di duplicare le entità nello script (ad esempio una costante nell'esempio precedente), chiedere se è invece possibile eseguire il collegamento all'origine. {% endhint %}
 
 ### Strutturazione modulare
 
@@ -201,9 +195,7 @@ Durante lo sviluppo di script di testo in Dynamo, è opportuno assicurarsi costa
 * Talvolta, i bug e gli errori che evidenziano un problema di base relativo allo script compariranno solo durante questi casi limite.
   * Comprendere la causa dell'errore, quindi decidere se deve essere corretto internamente o se è necessario ridefinire un dominio dei parametri per evitare il problema.
 
-{% hint style="info" %}
- Suggerimento Assicurarsi sempre che l'utente utilizzi ogni combinazione di ogni valore di input che gli è stato esposto. Questo aiuterà ad eliminare sorprese indesiderate. 
-{% endhint %}
+{% hint style="info" %} Suggerimento Assicurarsi sempre che l'utente utilizzi ogni combinazione di ogni valore di input che gli è stato esposto. Questo aiuterà ad eliminare sorprese indesiderate. {% endhint %}
 
 ### Debug efficiente
 

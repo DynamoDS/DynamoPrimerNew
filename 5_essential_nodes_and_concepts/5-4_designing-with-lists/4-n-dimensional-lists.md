@@ -177,7 +177,7 @@ Come ultimo passaggio, invertire la direzione dei membri striati. Dal momento ch
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
-> 1. Poiché c'è un livello in più nella gerarchia, è necessario utilizzare **List.Map** con una funzione **List.Tranpose** per modificare la direzione delle curve NURBS.
+> 1. Poiché c'è un livello in più nella gerarchia, è necessario utilizzare **List.Map** con una funzione **List.Transpose** per modificare la direzione delle curve NURBS.
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 

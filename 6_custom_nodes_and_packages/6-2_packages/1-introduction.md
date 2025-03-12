@@ -67,7 +67,7 @@ Aprire "SphereUnfold".
 
 Dopo aver aperto il file e aver fatto clic su "Esegui" nel risolutore, è presente una sfera spiegata. File di esempio come questi sono utili per imparare ad utilizzare un nuovo pacchetto di Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Consultazione e visualizzazione delle informazioni sui pacchetti
 
@@ -79,17 +79,64 @@ Ordinando i pacchetti, è possibile identificare i pacchetti più votati o più 
 
 ### Sito Web di Dynamo Package Manager
 
-Un altro modo per scoprire i pacchetti di Dynamo consiste nell'esplorare il sito Web di [Dynamo Package Manager](http://dynamopackages.com). Qui si possono trovare le statistiche sui pacchetti e le classifiche degli autori. È inoltre possibile scaricare i file di pacchetto da Dynamo Package Manager, ma eseguire questa operazione direttamente da Dynamo è un processo più agevole.
+Un altro modo per scoprire i pacchetti di Dynamo consiste nell'esplorare il sito Web di [Dynamo Package Manager](http://dynamopackages.com). Qui è possibile trovare le dipendenze dei pacchetti e le informazioni sulla compatibilità tra host e versioni fornite dagli autori dei pacchetti. È inoltre possibile scaricare i file di pacchetto da Dynamo Package Manager, ma eseguire questa operazione direttamente da Dynamo è un processo più agevole.
 
 ![](../images/6-2/1/dpm2.jpg)
 
 ### Dove vengono memorizzati i file di pacchetto in locale?
 
-Se si desidera vedere dove vengono mantenuti i file di pacchetto, nella parte superiore del browser fare clic su Dynamo > Preferenze > Impostazioni pacchetto > Posizioni di nodi e pacchetti; da qui è possibile trovare la directory della cartella principale corrente.
+Se si desidera vedere dove vengono mantenuti i file di pacchetto, nella parte superiore del browser fare clic su Dynamo > Preferenze > Impostazioni pacchetto > Posizioni di file di pacchetti e nodi; da qui è possibile trovare la directory della cartella principale corrente.
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 Per default, i pacchetti vengono installati in una posizione simile a questo percorso delle cartelle: _C:/Utenti/[nome utente]/AppData/Roaming/Dynamo/[versione di Dynamo]_.
+
+### Impostazione di una posizione condivisa per i pacchetti in un ufficio
+
+Per gli utenti che chiedono se sia possibile distribuire Dynamo (in qualsiasi forma) con pacchetti preassociati: l'approccio che risolverà questo problema e consentirà il controllo in una posizione centrale per tutti gli utenti con installazioni di Dynamo è quello di aggiungere un percorso di pacchetti personalizzato a ogni installazione.
+
+**Aggiunta di una cartella di rete in cui il responsabile BIM o altri utenti possono supervisionare l'archiviazione della cartella con i pacchetti approvati dall'ufficio**  
+
+Nell'interfaccia utente di una singola applicazione, accedere a *Dynamo -> Preferenze -> Impostazioni pacchetto -> Percorsi di nodi e pacchetti*. Nella finestra di dialogo, premere il pulsante Aggiungi percorso e cercare nel percorso di rete la risorsa condivisa del pacchetto. 
+ 
+Come processo automatico, si tratta di aggiungere informazioni al file di configurazione installato con Dynamo:  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+Per default, la configurazione di Dynamo for Revit è:
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+L'aggiunta di una posizione personalizzata sarebbe simile alla seguente:  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+La gestione centrale di questa cartella può anche essere controllata semplicemente impostando la cartella di sola lettura.
+
+### Caricamento di pacchetti con file binari da una posizione di rete
+
+#### Situazione di design
+
+Un'azienda potrebbe voler standardizzare i pacchetti installati da workstation e utenti diversi. Un modo per farlo potrebbe essere quello di installare questi pacchetti da *Dynamo -> Preferenze -> Impostazioni pacchetto -> Posizioni di file di pacchetti e nodi*, selezionando una cartella di rete come posizione di installazione e facendo in modo che le workstation aggiungano tale percorso a `Manage Node and Package Paths`.
+
+#### Problema
+
+Sebbene lo scenario funzioni correttamente per i pacchetti che contengono solo nodi personalizzati, potrebbe non funzionare per i pacchetti contenenti file binari, come i nodi zero-touch. Questo problema è causato dalle [misure di sicurezza](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location) che .NET Framework adotta per il caricamento degli assembly quando provengono da una posizione di rete. Sfortunatamente, l'utilizzo dell'elemento di configurazione `loadFromRemoteSources`, come suggerito nel thread collegato, non è una soluzione possibile per Dynamo, perché è distribuito come un componente piuttosto che come un'applicazione.
+
+#### Soluzione
+
+Una possibile soluzione consiste nell'utilizzare un'unità di rete mappata che punta al percorso di rete e fare in modo che le workstation facciano riferimento a tale percorso. I passaggi per creare un'unità di rete mappata sono descritti [qui](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
 
 ### Ulteriori informazioni sui pacchetti
 

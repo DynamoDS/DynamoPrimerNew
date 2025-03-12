@@ -1,8 +1,8 @@
-# Esecuzione di script Python in nodi zero-touch (C#) 
+# Esecuzione di script Python in nodi zero-touch (C#)
 
 ### Esecuzione di script Python in nodi zero-touch (C#) <a href="#executing-python-scripts-in-zero-touch-nodes-c" id="executing-python-scripts-in-zero-touch-nodes-c"></a>
 
-Se si ha familiarità con la scrittura di script in Python e si desidera ottenere più funzionalità dai nodi Python di Dynamo standard, è possibile utilizzare nodi zero-touch per creare nodi personalizzati. Iniziamo con un semplice esempio che ci consente di passare uno script Python come stringa ad un nodo zero-touch dove viene eseguito lo script e viene restituito un risultato. Questo case study si baserà sulle simulazioni e sugli esempi della sezione Per iniziare, a cui fare riferimento se si è completamente inesperti nella creazione di nodi zero-touch.
+Se si ha familiarità con la scrittura di script in Python e si desidera ottenere più funzionalità dai nodi Python di Dynamo standard, è possibile utilizzare nodi zero-touch per creare nodi personalizzati. Iniziamo con un semplice esempio che ci consente di trasferire uno script Python come stringa ad un nodo zero-touch dove viene eseguito lo script e viene restituito un risultato. Questo case study si baserà sulle simulazioni e sugli esempi della sezione Per iniziare, a cui fare riferimento se si è completamente inesperti nella creazione di nodi zero-touch.
 
 ![Nodo zero-touch che eseguirà una stringa di script Python](images/python-case-study.png)
 
@@ -22,7 +22,7 @@ Questo nodo si basa su un'istanza del motore di scripting IronPython. A tale sco
 * Quindi, chiamare `Execute` nel motore che trasferisce la stringa di input e l'ambito come parametri.
 * Infine, recuperare e restituire i risultati dello script chiamando `GetVariable` nell'ambito e trasferendo il nome della variabile dallo script Python che contiene il valore che si sta tentando di restituire. Per ulteriori dettagli, vedere l'esempio seguente.
 
-Il seguente codice fornisce un esempio per il passaggio menzionato sopra. La creazione della soluzione creerà un nuovo file `.dll` situato nella cartella bin del progetto. Ora è possibile importare il file `.dll` in Dynamo come parte di un pacchetto o accedendo a `File < Import Library...`.
+Il seguente codice fornisce un esempio per il passaggio menzionato sopra. La creazione della soluzione creerà un nuovo file `.dll` situato nella cartella bin del progetto. Ora è possibile importare il file `.dll` in Dynamo come parte di un pacchetto o individuando `File < Import Library...`.
 
 ```
 using IronPython.Hosting;

@@ -1,4 +1,4 @@
-# Case study zero-touch - Nodo griglia 
+# Case study zero-touch - Nodo griglia
 
 Con un progetto di Visual Studio attivo e funzionante, illustreremo come creare un nodo personalizzato che crea una griglia rettangolare di celle. Sebbene sia possibile crearlo con diversi nodi standard, è uno strumento utile che può essere facilmente contenuto in un nodo zero-touch. A differenza delle linee della griglia, le celle possono essere messe in scala rispetto ai loro punti centrali, sottoposte a query per conoscere i loro vertici d'angolo o integrate in facce.
 
@@ -6,7 +6,7 @@ Questo esempio riguarda alcune delle funzionalità e dei concetti di cui tenere 
 
 ![Grafico a griglia rettangolare](images/cover-image.jpg)
 
-#### Nodo griglia rettangolare personalizzata <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### Nodo griglia rettangolare personalizzata <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 Per iniziare a creare il nodo griglia, creare un nuovo progetto della libreria di classi di Visual Studio. Fare riferimento alla pagina Per iniziare per una simulazione dettagliata di come impostare un progetto.
 
@@ -96,16 +96,16 @@ Cercare un file `bin` nella cartella `.dll` del progetto. Se la creazione è sta
 > 2. Il nodo personalizzato nell'area di disegno
 > 3. Il pulsante Aggiungi per aggiungere `.dll` a Dynamo
 
-#### Modifiche di nodi personalizzati <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### Modifiche di nodi personalizzati <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
-Nell'esempio precedente, abbiamo creato un nodo piuttosto semplice che non definiva molto altro al di fuori del metodo `RectangularGrids`. Tuttavia, potremmo voler creare delle descrizioni comandi per le porte di input o assegnare al nodo un riepilogo come i nodi standard di Dynamo. L'aggiunta di queste funzionalità ai nodi personalizzati ne semplifica l'utilizzo, soprattutto se un utente desidera cercarle nella libreria.
+Nell'esempio precedente, abbiamo creato un nodo piuttosto semplice che non definiva molto altro al di fuori del metodo `RectangularGrids`. Tuttavia, potremmo voler creare delle descrizioni comandi per le porte di input o assegnare al nodo una sintesi come i nodi standard di Dynamo. L'aggiunta di queste funzionalità ai nodi personalizzati ne semplifica l'utilizzo, soprattutto se un utente desidera cercarle nella libreria.
 
 ![Descrizione comando di input](images/nodemodification.png)
 
 > 1. Un valore di input di default
 > 2. Una descrizione comando per l'input xCount
 
-Il nodo RectangularGrid richiede alcune di queste funzionalità di base. Nel codice riportato di seguito sono state aggiunte descrizioni delle porte di input e di output, un riepilogo e valori di input di default.
+Il nodo RectangularGrid richiede alcune di queste funzionalità di base. Nel codice riportato di seguito sono state aggiunte descrizioni delle porte di input e di output, una sintesi e valori di input di default.
 
 ```
 using Autodesk.DesignScript.Geometry;
@@ -151,7 +151,7 @@ namespace CustomNodes
 ```
 
 * Fornire i valori di default degli input assegnando valori ai parametri del metodo: `RectangularGrid(int xCount = 10, int yCount = 10)`.
-* Creare descrizioni comandi di input e output, parole chiave di ricerca e un riepilogo con la documentazione XML preceduta da `///`.
+* Creare descrizioni comandi di input e output, parole chiave di ricerca e una sintesi con la documentazione XML preceduta da `///`.
 
 Per aggiungere descrizioni comandi, abbiamo bisogno di un file XML nella directory del progetto. Un file `.xml` può essere generato automaticamente da Visual Studio attivando l'opzione.
 

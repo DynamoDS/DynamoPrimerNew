@@ -36,9 +36,7 @@ Dopo aver apportato questa modifica, otteniamo il funzionamento desiderato.
 
 Dynamo for Civil 3D consente di modificare il funzionamento di default dell'unione di oggetti tramite le impostazioni di **Archivio dati di unione** nel menu **Dynamo**.
 
-{% hint style="info" %}
- Notare che le opzioni di Archivio dati di unione sono disponibili in **Civil 3D 2022.1** e versioni successive. 
-{% endhint %}
+{% hint style="info" %} Notare che le opzioni di Archivio dati di unione sono disponibili in **Civil 3D 2022.1** e versioni successive. {% endhint %}
 
 <figure><img src="../../.gitbook/assets/c3d-binding-settings (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -48,48 +46,36 @@ Tutte le opzioni sono attivate per default. Ecco un riepilogo delle funzionalit�
 
 Quando questa opzione è attivata, Dynamo "dimentica" gli oggetti che ha creato l'ultima volta che il grafico è stato eseguito. Il grafico può essere eseguito in qualsiasi Carta in qualunque situazione e creerà nuovi oggetti ogni volta.
 
-{% hint style="info" %}
- **Quando utilizzare**
+{% hint style="info" %} **Quando utilizzare**
 
-Utilizzare questa opzione quando si desidera che Dynamo "dimentichi" tutto ciò che ha svolto nelle esecuzioni precedenti e crei nuovi oggetti ogni volta. 
-{% endhint %}
+Utilizzare questa opzione quando si desidera che Dynamo "dimentichi" tutto ciò che ha svolto nelle esecuzioni precedenti e crei nuovi oggetti ogni volta. {% endhint %}
 
 ### Opzione 2: Memorizza nel grafico per Dynamo
 
 Questa opzione indica che i metadati dell'unione di oggetti verranno serializzati nel grafico (file .dyn) al momento del salvataggio. Se si chiude/riapre il grafico e lo si esegue nella **stessa Carta**, tutto dovrebbe funzionare come è stato lasciato. Se si esegue il grafico in una **Carta diversa**, i dati dell'unione verranno rimossi dal grafico e verranno creati nuovi oggetti. Ciò significa che se si apre la Carta originale ed si riesegue il grafico, verranno creati nuovi oggetti oltre a quelli precedenti.
 
-{% hint style="info" %}
- **Quando utilizzare**
+{% hint style="info" %} **Quando utilizzare**
 
-Utilizzare questa opzione quando si desidera che Dynamo "memorizzi" gli oggetti che ha creato l'ultima volta che è stato eseguito in una **Carta specifica**. 
-{% endhint %}
+Utilizzare questa opzione quando si desidera che Dynamo "memorizzi" gli oggetti che ha creato l'ultima volta che è stato eseguito in una **Carta specifica**. {% endhint %}
 
-{% hint style="warning" %}
- Questa opzione è particolarmente adatta per le situazioni in cui è possibile mantenere un rapporto 1:1 tra una **Carta specifica** e un grafico di Dynamo. Le opzioni 1 e 3 sono più adatte per i grafici progettati per l'esecuzione su più disegni. 
-{% endhint %}
+{% hint style="warning" %} Questa opzione è particolarmente adatta per le situazioni in cui è possibile mantenere un rapporto 1:1 tra una **Carta specifica** e un grafico di Dynamo. Le opzioni 1 e 3 sono più adatte per i grafici progettati per l'esecuzione su più disegni. {% endhint %}
 
 ### Opzione 3: Memorizza nella Carta per Dynamo
 
 Questa opzione è simile all'opzione 2, tranne per il fatto che i dati dell'unione di oggetti vengono serializzati nella Carta anziché nel grafico (file .dyn). Se si chiude/riapre il grafico e lo si esegue nella **stessa Carta**, tutto dovrebbe funzionare come è stato lasciato. Se il grafico viene eseguito in una **Carta diversa**, i dati dell'unione sono comunque mantenuti nel disegno originale poiché vengono salvati nel disegno e non nel grafico.
 
-{% hint style="info" %}
- **Quando utilizzare**
+{% hint style="info" %} **Quando utilizzare**
 
-Utilizzare questa opzione quando si desidera utilizzare lo stesso grafico in **più Carte** e fare in modo che Dynamo "memorizzi"ciò che ha svolto in ciascuno. 
-{% endhint %}
+Utilizzare questa opzione quando si desidera utilizzare lo stesso grafico in **più Carte** e fare in modo che Dynamo "memorizzi"ciò che ha svolto in ciascuno. {% endhint %}
 
 ### Opzione 4: Memorizza nella Carta per Lettore Dynamo
 
 La prima cosa da notare con questa opzione è che non ha alcun effetto sul modo in cui il grafico interagisce con la Carta quando si esegue il grafico tramite l'interfaccia principale di Dynamo. Questa opzione è valida _solo_ quando il grafico viene eseguito utilizzando il Lettore Dynamo.
 
-{% hint style="info" %}
- Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../dynamo-player.md "mention"). 
-{% endhint %}
+{% hint style="info" %} Se non si conosce il Lettore Dynamo, consultare la sezione [dynamo-player.md](../dynamo-player.md "mention"). {% endhint %}
 
 Se si esegue il grafico utilizzando l'interfaccia principale di Dynamo e quindi si chiude ed esegue lo stesso grafico utilizzando il Lettore Dynamo, verranno creati nuovi oggetti sopra a quelli creati in precedenza. Tuttavia, una volta eseguito il grafico, il Lettore Dynamo serializzerà i dati dell'unione di oggetti nella Carta. Pertanto, se si esegue il grafico più volte tramite il Lettore Dynamo, gli oggetti verranno aggiornati anziché creati di nuovi. Se si esegue il grafico tramite il Lettore Dynamo in una **Carta diversa**, i dati dell'unione sono comunque mantenuti nella Carta originale poiché vengono salvati nella Carta e non nel grafico.
 
-{% hint style="info" %}
- **Quando utilizzare**
+{% hint style="info" %} **Quando utilizzare**
 
-Utilizzare questa opzione quando si desidera eseguire un grafico utilizzando il Lettore Dynamo in più Carte e fare in modo che "memorizzi" ciò che ha svolto in ciascuno. 
-{% endhint %}
+Utilizzare questa opzione quando si desidera eseguire un grafico utilizzando il Lettore Dynamo in più Carte e fare in modo che "memorizzi" ciò che ha svolto in ciascuno. {% endhint %}
