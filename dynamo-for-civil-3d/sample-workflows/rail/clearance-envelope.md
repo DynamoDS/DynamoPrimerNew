@@ -17,9 +17,7 @@
 
 ## 版本相容性
 
-{% hint style="success" %}
- 此圖表將在 **Civil 3D 2020** 及更高版本上執行。
-{% endhint %}
+{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。{% endhint %}
 
 ## 資料集
 
@@ -51,17 +49,13 @@
 
 我們現在要沿廊道地勢線，在指定的起點樁號和終點樁號之間產生**座標系統**。這些座標系統將用於將車輛縱斷面圖塊幾何圖形與廊道對齊。
 
-{% hint style="info" %}
- 如果您不熟悉座標系統，請查看[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")一節。
-{% endhint %}
+{% hint style="info" %} 如果您不熟悉座標系統，請查看[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")一節。{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>沿廊道地勢線取得座標系統</p></figcaption></figure>
 
 > 1. 請注意節點右下角的小 **XXX**。這表示節點的交織設定已設定為_笛卡兒積_，如此才能在兩條地勢線的相同樁號值處產生座標系統。
 
-{% hint style="info" %}
- 如果您不熟悉節點交織，請查看[1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention")一節。
-{% endhint %}
+{% hint style="info" %} 如果您不熟悉節點交織，請查看[1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention")一節。{% endhint %}
 
 ### 轉換圖塊幾何圖形
 
@@ -105,9 +99,7 @@
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器執行圖表，然後在 Civil 3D 中查看結果</p></figcaption></figure>
 
-{% hint style="info" %}
- 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention")一節。
-{% endhint %}
+{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention")一節。{% endhint %}
 
 > :tada: 任務完成！
 
@@ -115,14 +107,8 @@
 
 以下是一些如何擴充此圖表功能的構想。
 
-{% hint style="info" %}
- 加入針對每條軌道分別使用 **不同樁號範圍** 的功能。
-{% endhint %}
+{% hint style="info" %} 加入針對每條軌道分別使用 **不同樁號範圍** 的功能。{% endhint %}
 
-{% hint style="info" %}
- **將實體分割** 為可單獨分析衝突的較小區段。
-{% endhint %}
+{% hint style="info" %} **將實體分割** 為可單獨分析衝突的較小區段。{% endhint %}
 
-{% hint style="info" %}
- 請檢查包絡線實體是否 **與圖徵相交**，並為發生衝突的實體著色。 
-{% endhint %}
+{% hint style="info" %} 請檢查包絡線實體是否 **與圖徵相交**，並為發生衝突的實體著色。 {% endhint %}

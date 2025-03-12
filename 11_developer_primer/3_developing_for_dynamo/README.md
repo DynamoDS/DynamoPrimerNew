@@ -6,11 +6,11 @@
 
 > 三種開發環境：Visual Studio、Python 編輯器和 Code Block DesignScript
 
-#### 我有哪些選擇？<a href="#what-are-my-options" id="what-are-my-options"></a>
+### 我有哪些選擇？<a href="#what-are-my-options" id="what-are-my-options"></a>
 
 Dynamo 的開發選項主要分為兩個類別：_為_ Dynamo，以及 _在_ Dynamo。這兩個類別可視為：「在」Dynamo 表示使用 Dynamo IDE 建立要在 Dynamo 中使用的內容；「為」Dynamo 表示使用外部工具建立要匯入 Dynamo 中進行使用的內容。雖然本指南著重在 _為_ Dynamo 的開發，但下面會描述所有程序的資源。
 
-#### 為 Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
+### 為 Dynamo <a href="#for-dynamo" id="for-dynamo"></a>
 
 這些節點允許最高程度的自訂。許多套件都使用此方法建置，因此要對 Dynamo 的原始碼做出貢獻也需要此方法。本指南將涵蓋建置這些節點的程序。
 
@@ -26,17 +26,17 @@ Dynamo 的開發選項主要分為兩個類別：_為_ Dynamo，以及 _在_ Dyn
 
 > Visual Studio 介面，以及我們將開發的專案
 
-#### 在 Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
+### 在 Dynamo <a href="#in-dynamo" id="in-dynamo"></a>
 
 雖然這些程序都在視覺程式設計工作區中，相對而言也簡單易懂，但它們都是自訂 Dynamo 的可行選項。Primer 廣泛涵蓋這些內容，並在[指令碼撰寫策略](../../9\_best\_practices/2-scripting-strategies.md)一章中提供撰寫指令碼的秘訣和最佳實踐。
 
-*   「程式碼區塊」可在視覺程式設計環境中顯示 DesignScript，提供靈活的文字腳本和節點工作流程。程式碼區塊中的函數可被工作區中的任何內容呼叫。
+*   Code Block 可在視覺程式設計環境中顯示 DesignScript，提供靈活的文字腳本和節點工作流程。Code Block 中的函數可被工作區中的任何內容呼叫。
 
-    > 下載程式碼區塊範例 (按一下右鍵後另存)，或在 [Primer](https://primer2.dynamobim.org/v/zh-tw/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block) 中查看詳細的逐步解說。
+    > 下載 Code Block 範例 (按一下右鍵後另存)，或在 [Primer](https://primer2.dynamobim.org/v/zh-tw/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block) 中查看詳細的逐步解說。
 *   「自訂節點」是節點集合 (甚至整個圖表) 的容器。是收集常用常式並與社群分享的有效方式。
 
     > 下載自訂節點範例 (按一下右鍵後另存)，或在 [Primer](https://primer2.dynamobim.org/v/zh-tw/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction) 中查看詳細的逐步解說。
-*   「Python 節點」是視覺程式設計工作區中的腳本撰寫介面，與程式碼區塊類似。Autodesk.DesignScript 資源庫使用與 DesignScript 類似的點標記法。
+*   「Python 節點」是視覺程式設計工作區中的腳本撰寫介面，與 Code Block 類似。Autodesk.DesignScript 資源庫使用與 DesignScript 類似的點標記法。
 
     > 下載 Python 節點範例 (按一下右鍵後另存)，或在 [Primer](https://primer2.dynamobim.org/v/zh-tw/8_coding_in_dynamo/8-3_python) 中查看詳細的逐步解說。
 
@@ -46,21 +46,21 @@ Dynamo 的開發選項主要分為兩個類別：_為_ Dynamo，以及 _在_ Dyn
 
 > 在 Dynamo 工作區中使用 Python 節點開發
 
-#### 每種方法有哪些優點/缺點？<a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### 每種方法有哪些優點/缺點？<a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
 Dynamo 的開發選項已設計為可解決自訂需求的複雜性。無論目標是以 Python 撰寫遞迴指令碼，還是建置一個完全自訂的節點使用者介面，都有一些選項可實作只包含啟動和執行所需的程式碼。
 
-**Dynamo 中的程式碼區塊、Python 節點和自訂節點**
+**Dynamo 中的 Code Block、Python 節點和自訂節點**
 
 這些是在 Dynamo 視覺程式設計環境中撰寫程式碼的簡單選項。Dynamo 視覺程式設計工作區可讓您存取 Python、DesignScript，並且能在自訂節點內包含多個節點。
 
-![程式碼區塊、Python 指令碼和自訂節點](images/Development-Icons.png)
+![Code Block、Python 指令碼和自訂節點](images/Development-Icons.png)
 
 使用這些方法，我們可以：
 
 * 開始撰寫 Python 或 DesignScript，幾乎不用進行設定。
 * 將 Python 資源庫匯入 Dynamo。
-* 將程式碼區塊、Python 節點和自訂節點做為套件的一部分與 Dynamo 社群分享。
+* 將 Code Block、Python 節點和自訂節點做為套件的一部分與 Dynamo 社群分享。
 
 **Zero-Touch 節點**
 
@@ -87,7 +87,7 @@ Dynamo 的開發選項已設計為可解決自訂需求的複雜性。無論目�
 * 自訂交織
 * 載入 Dynamo 中成為套件
 
-#### 瞭解 Dynamo 版本管理和 API 變更 (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### 瞭解 Dynamo 版本管理和 API 變更 (1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 由於 Dynamo 會定期更新，因此可能會變更套件所使用的 API 部分。追蹤這些變更非常重要，以確保既有套件能持續正常運作。
 
@@ -101,8 +101,13 @@ Dynamo 的 API 文件目前涵蓋核心功能：[http://dynamods.github.io/Dynam
 
 ![API 文件](images/api-docs.jpg)
 
-#### 以套件散發二進位檔案的權限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
+### 以套件散發二進位檔案的權限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
 請注意要上傳到 Package Manager 的套件中是否包含 .dll。如果套件作者未建立 .dll，他們必須具有分享該 .dll 的權限。
 
 如果套件包含二進位檔案，則必須在使用者下載包含二進位檔案的套件時加以提示。
+
+### Dynamo UI 在效能方面的考慮事項
+在撰寫本文時，Dynamo 主要使用 WPF (Windows Presentation Foundation) 來呈現其 UI。WPF 是一個複雜而強大的 XAML/繫結型系統。由於 Dynamo 具有複雜的 UI，因此很容易發生 UI 當機、記憶體洩漏，或者以降低效能的方式將圖表執行與 UI 更新包裹在一起。
+
+請參閱 [Dynamo 效能考慮事項 Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance)，該頁面將協助您避免發生一些變更 Dynamo 程式碼的常見錯誤。

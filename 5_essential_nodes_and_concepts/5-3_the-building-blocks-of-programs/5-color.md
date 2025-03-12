@@ -8,7 +8,7 @@
 
 | 圖示                                     | 名稱 (語法)                 | 輸入  | 輸出 |
 | ---------------------------------------- | ----------------------------- | ------- | ------- |
-| ![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB 顏色 (**Color.ByARGB**) | A、R、G、B | color   |
+| \![](<../images/5-1/ColorbyARGB (2).jpg>) | ARGB 顏色 (**Color.ByARGB**) | A、R、G、B | color   |
 
 ### 查詢顏色值
 
@@ -16,19 +16,19 @@
 
 | 圖示                                              | 名稱 (語法)                     | 輸入 | 輸出    |
 | ------------------------------------------------- | --------------------------------- | ------ | ---------- |
-| ![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
+| \![](<../images/5-1/ColorAlpha(1)(1) (2) (2).jpg>) | Alpha (**Color.Alpha**)           | color  | A          |
 | ![](../images/5-1/ColorRed.jpg)                   | 紅色 (**Color.Red**)               | color  | R          |
-| ![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 綠色 (**Color.Green**)           | color  | G          |
+| \![](<../images/5-1/ColorGreen(1)(1) (2) (1).jpg>) | 綠色 (**Color.Green**)           | color  | G          |
 | ![](../images/5-1/ColorBlue.jpg)                  | 藍色 (**Color.Blue**)             | color  | B          |
-| ![](<../images/5-1/ColorComponent (2).jpg>)       | 組成 (**Color.Components**) | color  | A、R、G、B |
+| \![](<../images/5-1/ColorComponent (2).jpg>)       | 組成 (**Color.Components**) | color  | A、R、G、B |
 
 以下表格中的顏色對應於 **HSB 顏色空間**。將顏色分為色相、飽和度與亮度可以更直觀地解譯顏色：顏色應該是怎樣的？顏色是什麼色彩？顏色的明暗程度應該是怎樣的？這是分別劃分的色相、飽和度與亮度。
 
 | 圖示                                         | 名稱 (語法)                     | 輸入 | 輸出    |
 | -------------------------------------------- | --------------------------------- | ------ | ---------- |
 | ![](../images/5-1/ColorHue.jpg)              | 色相 (**Color.Hue**)               | color  | 色相        |
-| ![](<../images/5-1/ColorSaturation (2).jpg>) | 飽和度 (**Color.Saturation**) | color  | 飽和度 |
-| ![](<../images/5-1/ColorBrightness (2).jpg>) | 亮度 (**Color.Brightness**) | color  | 亮度 |
+| \![](<../images/5-1/ColorSaturation (2).jpg>) | 飽和度 (**Color.Saturation**) | color  | 飽和度 |
+| \![](<../images/5-1/ColorBrightness (2).jpg>) | 亮度 (**Color.Brightness**) | color  | 亮度 |
 
 ### 顏色範圍
 

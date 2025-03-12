@@ -1,4 +1,4 @@
-# 將延伸當作套件 
+# 將延伸當作套件
 
 ### 將延伸當作套件 <a href="#extensions-as-packages" id="extensions-as-packages"></a>
 

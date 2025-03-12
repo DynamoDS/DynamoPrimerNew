@@ -4,21 +4,19 @@
 
 ### 類型參數與實體參數
 
-![練習](<../.gitbook/assets/32 (2).jpg>)
+\![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. 實體參數定義屋頂曲面上的嵌板孔徑，開口率的範圍是 0.1 至 0.4。
 > 2. 以類型為基礎的參數將套用到曲面上的每個元素，因為它們的族群類型相同。例如，每片嵌板的材料可以由以類型為基礎的參數驅動。
 
 ![練習](../.gitbook/assets/params.jpg)
 
-> 1. 如果您先前已設置 Revit 族群，請記住，必須指定參數類型 (字串、數字、標註等)。 從 Dynamo 指定參數時，請確保使用正確的資料類型。
+> 1. 如果您先前已設置 Revit 族群，請記住，必須指定參數類型 (字串、數字、標註等)。從 Dynamo 指定參數時，請確保使用正確的資料類型。
 > 2. 您也可以搭配使用 Dynamo 與 Revit 族群性質中定義的參數式約束。
 
 做為在 Revit 中對參數的快速檢閱，我們還記得存在類型參數與實體參數。兩者都可以在 Dynamo 中進行編輯，但我們在以下練習中將使用實體參數。
 
-{% hint style="info" %}
- 在探索編輯參數的廣泛應用時，您可能希望在 Revit 中使用 Dynamo 編輯大量元素。這是_運算量極大的_作業，即作業可能很慢。若您要編輯大量元素，可能需要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)一節。
-{% endhint %}
+{% hint style="info" %} 在探索編輯參數的廣泛應用時，您可能希望在 Revit 中使用 Dynamo 編輯大量元素。這是_運算量極大的_作業，即作業可能很慢。若您要編輯大量元素，可能需要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)一節。{% endhint %}
 
 ### 單位
 
@@ -30,15 +28,13 @@
 
 ## 練習
 
-> 按一下下方的連結下載範例檔案。
+> 在下方的連結按一下，下載範例檔案。
 >
 > 附錄中提供完整的範例檔案清單。
 
 {% file src="datasets/3/Revit-Editing.zip" %}
 
-{% hint style="warning" %}
- 以下的練習以公尺為單位。
-{% endhint %}
+{% hint style="warning" %} 以下的練習以公尺為單位。{% endhint %}
 
 此練習的重點是在 Dynamo 中編輯 Revit 元素而不執行幾何作業。在此我們不匯入 Dynamo 幾何圖形，只編輯 Revit 專案中的參數。此練習是基本練習，對於更高級的 Revit 使用者，請注意這些是量體的實體參數，但可以將相同的邏輯套用至元素陣列，以實現大規模的自訂。僅使用「Element.SetParameterByName」節點即可完成此練習。
 
@@ -69,9 +65,7 @@
 > 2. 使用與參數名稱具有相同長度的清單定義另一個 _Code Block_。在此案例中，我們命名的變數 (沒有引號) 會建立 _Code Block_ 的輸入。將 _滑棒_ 插入每個各自的輸入：`{bw,bl,bh,ao,io,lu};`
 > 3. 將 Code Block 連接至 _「Element.SetParameterByName」*_ 值輸入。勾選「自動執行」後，我們會自動看到結果。
 
-{% hint style="warning" %}
- *此示範使用實體參數，而不是類型參數。
-{% endhint %}
+{% hint style="warning" %} *此示範使用實體參數，而不是類型參數。{% endhint %}
 
 正如在 Revit 中一樣，其中許多參數彼此依賴。當然，存在可能導致幾何圖形中斷的組合。我們可以使用參數性質中定義的公式來解決此問題，也可以使用 Dynamo 中的數學運算來設置類似邏輯 (如果您希望在此練習基礎上進行拓展，這是另一項難題)。
 

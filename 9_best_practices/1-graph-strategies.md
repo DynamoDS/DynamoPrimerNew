@@ -65,7 +65,7 @@
 * 使用 List@Level 可以協助您**取代可能會佔用大量圖元區空間的 List.Map 和 List.Combine 節點，降低圖表的複雜性**。
 * List@Level 是比 List.Map/List.Combine **更快建構節點邏輯的方法**，可讓您直接從節點的輸入埠存取清單中任何層級的資料。
 
-![](<images/1/graphstrategy4 (1).png>)
+\![](<images/1/graphstrategy4 (1).png>)
 
 > 我們可以為 CountTrue 的 list 輸入啟用 List@Level，來確認 BoundingBox.Contains 在哪些清單中傳回多少 True 值。List@Level 可讓使用者決定輸入將在哪個層級取得資料。使用 List@Level 更為彈性、有效，強烈建議您以它來取代涉及 List.Map 和 List.Combine 的其他方式。
 >
@@ -84,7 +84,7 @@
 * 如果其他人要處理您的圖表，您應該**確保節點線路的配置在傳輸前能夠輕鬆地流動**
 * 為了協助您對齊，**請使用「清理節點配置」功能自動對齊**圖表，即使它未能如您自己手動對齊般精確
 
-![](<images/1/graphstrategy5 (2).png>)
+\![](<images/1/graphstrategy5 (2).png>)
 
 > 1. 未排列過的圖表
 > 2. 對齊的圖表

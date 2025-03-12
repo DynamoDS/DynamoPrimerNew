@@ -1,8 +1,8 @@
-# 從原始碼建置 Dynamo 
+# 從原始碼建置 Dynamo
 
 Dynamo 的原始碼託管在 Github，可供任何人複製並提出貢獻。在本章中，我們將逐步瞭解如何使用 git 複製儲存庫、使用 Visual Studio 編譯原始碼檔案、執行本端建置版本並除錯，以及從 Github 提取任何新變更。
 
-#### 在 Github 上找出 Dynamo 儲存庫 <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### 在 Github 上找出 Dynamo 儲存庫 <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 Github 是一種以 [git](https://help.github.com/articles/git-and-github-learning-resources/) 為基礎的託管服務，是一種可追蹤變更並協調不同使用者工作的版本控制系統。Git 是一種工具，我們可以利用它來下載 Dynamo 的原始碼檔案，並透過一些指令保持更新。使用此方法可避免每次更新時都要手動下載和取代原始碼檔案這些不必要且繁雜的工作。Git 版本控制系統會追蹤本端和遠端程式碼儲存庫之間的任何差異。
 
@@ -16,9 +16,9 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 > 3. Dynamo 的原始碼檔案
 > 4. Git 特有的檔案
 
-#### 使用 git 提取 Dynamo 儲存庫 <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### 使用 git 提取 Dynamo 儲存庫 <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-在複製儲存庫之前，必須先安裝 git。請遵循此[簡短指南](https://help.github.com/articles/set-up-git/#setting-up-git)以瞭解安裝步驟，以及如何設定 Gihub 使用者名稱和電子郵件。在此範例中，我們將在指令行使用 git。本指南假設您使用 Windows，但您也可以在 mac 或 Linux 上使用 git 複製 Dynamo 原始碼。
+在複製儲存庫之前，必須先安裝 git。請遵循此[簡短指南](https://help.github.com/articles/set-up-git/#setting-up-git)以瞭解安裝步驟，以及如何設定 GitHub 使用者名稱和電子郵件。在此範例中，我們將在指令行使用 git。本指南假設您使用 Windows，但您也可以在 mac 或 Linux 上使用 git 複製 Dynamo 原始碼。
 
 我們需要 Dynamo 儲存庫的 URL 才能從中複製。您可以在儲存庫頁面的「Clone or download (複製或下載)」按鈕中找到。複製要貼至指令提示的 URL。
 
@@ -47,7 +47,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 > 1. Dynamo 的原始碼檔案
 > 2. Git 檔案
 
-#### 使用 Visual Studio 建置儲存庫 <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### 使用 Visual Studio 建置儲存庫 <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 將原始碼檔案複製到本端電腦後，我們可以建置 Dynamo 的可執行檔。要執行此作業，我們需要設定 Visual Studio IDE，並確保已安裝 .NET Framework 和 DirectX。
 
@@ -84,7 +84,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 > 1. 選取「`Build > Build Solution`」
 > 2. 在「Output (輸出)」視窗中確認建置成功，看起來應該類似 `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
-#### 執行本端建置版本 <a href="#running-a-local-build" id="running-a-local-build"></a>
+### 執行本端建置版本 <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 如果 Dynamo 建置成功，Dynamo 儲存庫中會建立一個包含 DynamoSandbox.exe 檔案的 `bin` 資料夾。在我們的範例中，我們使用「Debug (除錯)」選項建置，因此可執行檔位於 `bin\AnyCPU\Debug`。執行此檔案將開啟 Dynamo 的本端建置版本。
 
@@ -96,7 +96,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 如需有關為其他平台 (例如 Linux 或 OS X) 建置 Dynamo 的指示，請造訪此 [Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac)。
 
-#### 使用 Visual Studio 為本端建置版本除錯 <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### 使用 Visual Studio 為本端建置版本除錯 <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
 除錯是識別、隔離和修正錯誤或問題的一個過程。從原始碼成功建置 Dynamo 後，我們可以使用 Visual Studio 中的數種工具為執行中的應用程式 (例如 DynamoRevit 增益集) 除錯。我們可以分析其原始程式碼以尋找問題的根本原因，或監看目前正在執行的程式碼。如需有關如何在 Visual Studio 中除錯和瀏覽程式碼的更詳細說明，請參閱 [Visual Studio 文件](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger)。
 
@@ -137,7 +137,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 在下一節〈**從原始碼建置 DynamoRevit**〉中，我們將逐步介紹除錯的特定範例，並說明如何設定中斷點、逐步執行程式碼，以及解讀呼叫堆疊。
 
-#### 提取最新建置版本 <a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### 提取最新建置版本 <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 由於 Dynamo 原始碼託管在 Github 上，因此讓本端原始碼檔案保持更新最簡單的方式是使用 git 指令提取變更。
 

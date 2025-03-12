@@ -2,7 +2,7 @@
 
 在先前各節中，我們詳細瞭解了如何使用自訂節點與範例檔案設置 _MapToSurface_ 套件。但是，如何發佈已在本端開發的套件呢？此案例研究將示範如何從本端資料夾的一組檔案發佈套件。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 有許多方式可以發佈套件。以下是建議的程序：**本端發佈、本端開發，然後線上發佈**。我們從包含套件中所有檔案的資料夾開始。
 
@@ -20,7 +20,7 @@
 
 {% hint style="warning" %} 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。{% endhint %}
 
-> 在下方的連結按一下，下載範例檔案。
+> 按一下下方的連結下載範例檔案。
 >
 > 附錄中提供完整的範例檔案清單。
 
@@ -55,7 +55,7 @@
 
 發佈後，在「DynamoPrimer」群組或 Dynamo 資源庫下應該會顯示自訂節點。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 現在，我們看一下根目錄，以瞭解 Dynamo 如何格式化我們剛剛建立的套件。前往「已安裝的套件」頁籤 > 按一下「MapToSurface」旁的垂直圓點功能表 > 選取「展示根目錄」，即可查看根目錄。
 
@@ -78,6 +78,11 @@
 
 1. 準備好發佈後，在「套件」>「Package Manager」>「已安裝的套件」視窗中，選取要發佈之套件右側的按鈕，然後選擇「發佈」。
 2. 如果您要更新已發佈的套件，請選擇「發佈版本」，Dynamo 將根據該套件根目錄中的新檔案，線上更新您的套件。非常簡單！
+
+#### 測試 Package Manager 伺服器
+測試 Package Manager 時，不要將測試套件傳送到生產伺服器。請使用暫存伺服器。這可以防止您的套件影響到真實的套件和活動。規劃 Dynamo 使用暫存伺服器很容易。 
+
+如需更多資訊，請參閱[測試 Package Manager 伺服器 Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server)。
 
 ### 發佈版本...
 

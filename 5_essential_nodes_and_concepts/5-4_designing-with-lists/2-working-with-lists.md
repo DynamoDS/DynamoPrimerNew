@@ -1,4 +1,4 @@
-# 處理清單
+# 使用清單
 
 ### 使用清單
 
@@ -53,7 +53,7 @@
 > 6. 使用 **Geometry.Translate** 節點，在 Z 方向將圓上移 100 個單位。
 > 7. 使用 **Code Block** 節點，透過以下程式碼定義 10 個 0 和 1 之間的數字：`0..1..#10;`
 > 8. 將上一步驟的 Code Block 插入兩個 **Curve.PointAtParameter** 節點的 _param_ 輸入。將 **Circle.ByPlaneRadius** 插入頂部節點的 curve 輸入，將 **Geometry.Translate** 插入下方節點的 curve 輸入。
-> 9. 使用 **Line.ByStartPointEndPoint**，連接兩個 **Curve.PointAtParamete**_r_ 節點。
+> 9. 使用 **Line.ByStartPointEndPoint**，連接兩個 **Curve.PointAtParameter** 節點。
 
 ### List.Count
 
@@ -140,7 +140,7 @@ _List.Reverse_ 會反轉清單中所有項目的順序。
 
 為了建立一系列「True」或「False」值，我們需要多做一些工作...
 
-> 1. 使用 **Code Block**，採用以下語法定義表示式：`0..List.Count(list);`。將 **Curve.PointAtParameter** 節點連接至 _list_ 輸入。我們將在程式碼區塊一章中更詳細地講解此設置，但此案例中的程式碼行將產生代表 **Curve.PointAtParameter** 節點每個索引的清單。
+> 1. 使用 **Code Block**，採用以下語法定義表示式：`0..List.Count(list);`。將 **Curve.PointAtParameter** 節點連接至 _list_ 輸入。我們將在 Code Block 一章中更詳細地講解此設置，但此案例中的程式碼行將產生代表 **Curve.PointAtParameter** 節點每個索引的清單。
 > 2. 使用 _ **%** _ ** (模數)** 節點，將 _Code Block_ 的輸出連接至 _x_ 輸入，將值 _4_ 連接至 _y_ 輸入。這會產生索引清單除以 4 時的餘數。模數在建立樣式時是非常有用的節點。4 的所有可能餘數包括：0、1、2、3。
 > 3. 從 _**%**_** (模數)** 節點，我們知道值 0 表示索引可由 4 整除 (0、4、8 等)。使用 **==** 節點，我們可以測試餘數的值是否為 _0_，以測試是否能整除。
 > 4. **Watch** 節點顯示此狀況：True/False 樣式為：_true,false,false,false..._。

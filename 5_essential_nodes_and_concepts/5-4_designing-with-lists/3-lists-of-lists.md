@@ -111,7 +111,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 _**List.Map**_ �
 > 3. 將 Code Block 每一行分別連接至 **Point.ByCoordinates** 節點的 _X_ 與 _Y_ 輸入。在節點上按一下右鍵，選取「交織」，然後選擇 _「笛卡兒積」_。這會建立點的格線。由於我們定義的範圍是從 -50 到 50，因此將跨越預設的 Dynamo 格線。
 > 4. _**Watch**_ 節點會顯示已建立的點。請注意資料結構。我們已建立一個清單的清單。每個清單都代表格線的一列點。
 
-![練習](<../images/5-4/3/lists of lists - map 02.jpg>)
+\![練習](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. 將 **List.Count** 節點連接至上一步驟中 Watch 節點的輸出。
 > 2. 將 **Watch** 節點連接至 **List.Count** 輸出。
@@ -139,7 +139,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 
 > 1. 使用 **Sequence** 節點產生 10 個值，每個值都有 10 個步長增量。
 > 2. 將結果連接至 **Point.ByCoordinates** 節點的 x 輸入。這會在 Dynamo 中建立一個點清單。
-> 3. 在工作區中增加第二個 **Point.ByCoordinates** 節點，使用相同的 **Sequence** 輸出做為其 x 輸入，但使用 **Interger Slider** 做為其 y 輸入，並將其值設定為 31 (可以是任何值，只要不與第一組點重疊即可)，讓兩組點不會彼此重疊。
+> 3. 在工作區中增加第二個 **Point.ByCoordinates** 節點，使用相同的 **Sequence** 輸出做為其 x 輸入，但使用 **Integer Slider** 做為其 y 輸入，並將其值設定為 31 (可以是任何值，只要不與第一組點重疊即可)，讓兩組點不會彼此重疊。
 
 接下來，我們使用 **List.Combine** 對 2 個單獨清單中的物件套用函數。在此範例中，是一個簡單的繪製線條函數。
 
@@ -150,9 +150,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 
 完成後，2 組點會透過 **Line.ByStartPointEndPoint** 函數配對，並在 Dynamo 中傳回 10 條線。
 
-{% hint style="info" %}
- 請參閱 n 維清單中的練習，以查看使用 List.Combine 的另一個範例。
-{% endhint %}
+{% hint style="info" %} 請參閱 n 維清單中的練習，以查看使用 List.Combine 的另一個範例。{% endhint %}
 
 ### List@Level
 
@@ -222,15 +220,15 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 > 2. 請注意摘要結果：轉置會將清單結構從 5 個清單 (每個含 3 個項目) 變更為 3 個清單 (每個含 5 個項目)。
 > 3. 請注意幾何圖形結果：使用 **PolyCurve.ByPoints**，會在原始曲線的垂直方向產生 3 條 PolyCurve。
 
-## 清單建立的程式碼區塊
+## 清單建立的 Code Block
 
-程式碼區塊速寫使用「[]」定義清單。與 **List.Create** 節點相比，這是更快速更流暢的清單建立方式。在[程式碼區塊和 DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) 中會更詳細地討論**程式碼區塊**。參考以下影像，請注意使用程式碼區塊如何定義具有多個表示式的清單。
+Code Block 速寫使用「[]」定義清單。與 **List.Create** 節點相比，這是更快速更流暢的清單建立方式。在 [Code Block 和 DesignScript](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/) 中會更詳細地討論**Code Block**。參考以下影像，請注意使用 Code Block 如何定義具有多個表示式的清單。
 
 ![](../images/5-4/3/listsoflists-codeblockforlistcreation01.jpg)
 
-#### 程式碼區塊查詢
+#### Code Block 查詢
 
-**程式碼區塊**速寫使用「[]」是一個快速輕鬆的方式，可從複雜的資料結構中選取所需的特定項目。在[程式碼區塊和 DesignScript 一章](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)會更詳細地討論**程式碼區塊**。參考以下影像，請注意使用程式碼區塊如何查詢具有多種資料類型的清單。
+**Code Block** 速寫使用「[]」是一個快速輕鬆的方式，可從複雜的資料結構中選取所需的特定項目。在 [Code Block 和 DesignScript 一章](../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/)會更詳細地討論**Code Block**。參考以下影像，請注意使用 Code Block 如何查詢具有多種資料類型的清單。
 
 ![](../images/5-4/3/listsoflists-codeblockforlistcreation02.jpg)
 
@@ -257,7 +255,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query02.jpg)
 
 > 1. 為了確認這是否為正確的點，也可以在 Watch 節點項目中到處按一下，以確認我們針對的是正確的點。
-> 2. 使用 **Code Block**，我們將編寫一行基本程式碼來查詢清單的清單：\
+> 2. 使用 **Code Block**，我們將撰寫一行基本程式碼來查詢清單的清單：\
  `points[1][2];`
 > 3. 使用 **Geometry.Translate**，我們將選取的點沿 _Z_ 方向上移 _20_ 個單位。
 
@@ -278,7 +276,7 @@ _注意：此練習使用舊版本的 Dynamo 建立。大部分 List.Map 功能�
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. 採用相同的邏輯，使用 **List.ReplaceItemAtIndex** 將中間清單更換為我們修改後的清單。
-> 2. 請注意，對這兩個節點定義索引的 **Code Block** 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
+> 2. 請注意，對這兩個節點定義索引的 **Code Block**__ 為 1 與 2，這與 **Code Block** (_points[1][2]_) 中的原始查詢相符。
 > 3. 透過選取位於 _索引 1_ 的清單，我們可以在 Dynamo 預覽中看到亮顯的資料結構。我們已成功將移動點合併至原始資料結構中。
 
 有許多方式可以使用這組點建立曲面。在此案例中，我們將對曲線進行斷面混成，以建立曲面。

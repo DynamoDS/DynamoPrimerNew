@@ -12,13 +12,13 @@
 
 | Revit 版本 | 第一個穩定的 Dynamo 版本                                                       | 最後一個支援的適用於 Revit 的 Dynamo 版本                                                                                                                                |
 | ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2013          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.6.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.3.exe)                                                                                      |
-| 2014          | [0.6.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.6.1.exe) | [0.8.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.8.2.exe)                                                                                      |
-| 2015          | [0.7.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.1.exe) | [1.2.1](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.2.1.exe)                                                                                      |
-| 2016          | [0.7.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.7.2.exe) | [1.3.2](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.2.exe)                                                                                      |
-| 2017          | [0.9.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall0.9.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2018          | [1.3.0](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.0.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.3](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.3.exe) |
-| 2019          | [1.3.3](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.3.exe) | [1.3.4](http://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall1.3.4.exe) / [2.0.4](https://dyn-builds-data.s3-us-west-2.amazonaws.com/DynamoInstall2.0.4.exe) |
+| 2013          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.6.3](https://downloads.dynamobuilds.com/DynamoInstall0.6.3.exe)                                                                                      |
+| 2014          | [0.6.1](https://downloads.dynamobuilds.com/DynamoInstall0.6.1.exe) | [0.8.2](https://downloads.dynamobuilds.com/DynamoInstall0.8.2.exe)                                                                                      |
+| 2015          | [0.7.1](https://downloads.dynamobuilds.com/DynamoInstall0.7.1.exe) | [1.2.1](https://downloads.dynamobuilds.com/DynamoInstall1.2.1.exe)                                                                                      |
+| 2016          | [0.7.2](https://downloads.dynamobuilds.com/DynamoInstall0.7.2.exe) | [1.3.2](https://downloads.dynamobuilds.com/DynamoInstall1.3.2.exe)                                                                                      |
+| 2017          | [0.9.0](https://downloads.dynamobuilds.com/DynamoInstall0.9.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2018          | [1.3.0](https://downloads.dynamobuilds.com/DynamoInstall1.3.0.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.3](https://downloads.dynamobuilds.com/DynamoInstall2.0.3.exe) |
+| 2019          | [1.3.3](https://downloads.dynamobuilds.com/DynamoInstall1.3.3.exe) | [1.3.4](https://downloads.dynamobuilds.com/DynamoInstall1.3.4.exe) / [2.0.4](https://downloads.dynamobuilds.com/DynamoInstall2.0.4.exe) |
 | 2020+         | 2.1.0 - Revit 2020+ 現在包含 Dynamo，而且會像 Revit 一樣收到更新。      | N/A                                                                                                                                                                    |
 
 ### Dynamo 的歷史
@@ -35,17 +35,13 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 在 Revit 專案或族群編輯器中，導覽至「增益集」，然後按一下「Dynamo」。*
 
-{% hint style="warning" %}
- *Dynamo 只會在開啟它的檔案中執行。
-{% endhint %}
+{% hint style="warning" %} *Dynamo 只會在開啟它的檔案中執行。{% endhint %}
 
-![](<images/1/launchdynamofromrevit (1).jpg>)
+\![](<images/1/launchdynamofromrevit (1).jpg>)
 
 在 Revit 中開啟 Dynamo 時，會有一個稱為「Revit」的新品類。這是使用者介面的全面新增組件，其中提供了專用於 Revit 工作流程的節點。*
 
-{% hint style="warning" %}
- *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於適用於 Revit 的 Dynamo 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟適用於 Revit 的 Dynamo 圖表，則 Revit 節點將會遺失。
-{% endhint %}
+{% hint style="warning" %} *使用 Revit 特定的節點族群，Dynamo 圖表就只能在於適用於 Revit 的 Dynamo 中開啟時運作。例如，如果在 Dynamo Sandbox 中開啟適用於 Revit 的 Dynamo 圖表，則 Revit 節點將會遺失。{% endhint %}
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
@@ -53,15 +49,13 @@ Dynamo 最初建立的目的是為了簡化 Revit 中的 AEC 工作流程。雖�
 
 由於 Revit 是功能強大的專案管理平台，Dynamo 中的參數式作業可能會很複雜且計算速度緩慢。若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。
 
-{% hint style="info" %}
- 您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")一節閱讀有關凍結節點的更多資訊。
-{% endhint %}
+{% hint style="info" %} 您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")一節閱讀有關凍結節點的更多資訊。{% endhint %}
 
 ### 社群與 Dynamo 部落格
 
 由於 Dynamo 最初是為 AEC 建立，其大型且不斷成長的社區是一個向行業專家學習和連線至行業專家的很棒資源。Dynamo 的社群由樂於分享和創造的建築師、工程師、程式設計人員及設計師組成。
 
-Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 儲存庫](https://github.com/DynamoDS/Dynamo)。另外，協力廠商資源庫的絕佳資源是 [Dynamo Package Manager](http://dynamopackages.com)。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
+Dynamo 是不斷發展的開放程式碼專案，而且有大量的開發工作都與 Revit 相關。如果您是新使用者，可造訪「討論論壇」並開始[發問](http://dynamobim.org/forums/forum/dyn/)！如果您是程式設計人員並想要參與 Dynamo 開發，可造訪 [Github 儲存庫](https://github.com/DynamoDS/Dynamo)。另外，[Dynamo Package Manager](http://dynamopackages.com) 是協力廠商資源庫的絕佳資源。許多這些套件都是在 AEC 基礎上開發的，本章中我們將瞭解用於平板化的協力廠商套件。
 
 Dynamo 也會積極更新部落格。請閱讀最新的貼文以瞭解最新的開發工作！
 

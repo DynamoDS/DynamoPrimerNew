@@ -2,9 +2,7 @@
 
 Dynamo 是一種[視覺程式設計](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo)應用程式，可以獨立的「沙箱」模式，或以其他軟體 (例如 Revit、FormIt 或 Civil 3D) 的外掛程式下載並執行。
 
-{% hint style="info" %}
-進一步瞭解 [**Dynamo Core**/**Revit**/**Sandbox** 之間的差異。](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) 
-{% endhint %}
+{% hint style="info" %} 進一步瞭解 [**Dynamo Core**/**Revit**/**Sandbox** 之間的差異。](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) {% endhint %}
 
 ### 流程
 

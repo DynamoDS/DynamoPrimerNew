@@ -1,4 +1,4 @@
-# 深入瞭解 Zero-Touch 
+# 深入瞭解 Zero-Touch
 
 瞭解如何建立 Zero-Touch 專案後，我們可以逐步瀏覽 Dynamo Github 上的 ZeroTouchEssentials 範例，更深入地瞭解建立節點的詳細資訊。
 
@@ -18,7 +18,7 @@
 
 程式碼範例是從 [ZeroTouchEssentials.cs](https://github.com/DynamoDS/ZeroTouchEssentials/blob/master/ZeroTouchEssentials/ZeroTouchEssentials.cs) 提取，通常與其相符。為了簡潔已移除 XML 文件，每個程式碼範例都會建立其上方影像中的節點。
 
-#### 預設輸入值 <a href="#default-input-values" id="default-input-values"></a>
+### 預設輸入值 <a href="#default-input-values" id="default-input-values"></a>
 
 Dynamo 支援定義節點上輸入埠的預設值。如果埠沒有連接，則會對節點提供這些預設值。預設值使用在《[C# 程式設計手冊](https://msdn.microsoft.com/en-us/library/dd264739.aspx)》中指定可選引數的 C# 機制表示。預設值以下列方式指定：
 
@@ -42,7 +42,7 @@ namespace ZeroTouchEssentials
 
 > 1. 將游標懸停在節點輸入埠上時，會出現預設值
 
-#### 傳回多個值 <a href="#returning-multiple-values" id="returning-multiple-values"></a>
+### 傳回多個值 <a href="#returning-multiple-values" id="returning-multiple-values"></a>
 
 傳回多個值比建立多個輸入要複雜一些，因此需要使用字典傳回。字典的項目會成為節點輸出端的埠。透過以下方式可以建立多個傳回埠：
 
@@ -80,7 +80,7 @@ namespace ZeroTouchEssentials
 
 > 1. 請注意，現在有兩個輸出埠，根據我們為字典的鍵輸入的字串進行命名。
 
-#### 文件、工具提示和搜尋 <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
+### 文件、工具提示和搜尋 <a href="#documentation-tooltips-and-search" id="documentation-tooltips-and-search"></a>
 
 最佳實踐是在 Dynamo 節點中加入文件，描述節點的功能、輸入、輸出、搜尋標籤等。這可以透過 XML 文件標籤完成。透過以下方式可以建立 XML 文件：
 
@@ -88,7 +88,7 @@ namespace ZeroTouchEssentials
   * 例如：`/// Documentation text and XML goes here`
 * 三條斜線後，在 Dynamo 匯入 .dll 時將讀取的方法上方建立 XML 標籤
   * 例如：`/// <summary>...</summary>`
-* 在 Visual Studio 中選取「`Project > Project Properties > Build`」並勾選「`XML documentation file`」以啟用 XML 文件
+* 在 Visual Studio 中選取「`Project > [Project] Properties > Build > Output`」並勾選「`Documentation file`」以啟用 XML 文件
 
 ![產生 XML 檔案](images/vs-xml.jpg)
 
@@ -134,7 +134,46 @@ namespace ZeroTouchEssentials
 > 2. 輸入描述
 > 3. 輸出描述
 
-#### 物件 <a href="#objects" id="objects"></a>
+#### Dynamo 節點描述最佳實踐 
+
+節點描述簡短描述節點的功能和輸出。在 Dynamo 中，節點描述會出現在兩個位置：
+
+- 在節點工具提示中
+- 在文件瀏覽器中
+
+![節點描述](images/node-description.png)
+
+請按照這些準則，在撰寫或更新節點描述時，可確保一致性並幫助節省時間。
+
+##### 概述
+
+描述應該是一到兩句話。如果需要更多資訊，請將其放在文件瀏覽器的「深入資訊」下。
+
+句子大小寫 (將句子的第一個單字和任何專有名詞大寫)。句尾不用句點。
+
+語言應盡可清楚、簡單。在第一次提到首字母縮寫字時加以定義，除非連非專業使用者也知道這些縮寫字。
+
+一律以清楚明瞭為優先考量，即使可能偏離這些準則亦同。
+
+##### 指南
+
+| 要      | 不要 |
+| ----------- | ----------- |
+| 以第三人稱動詞開始描述。<ul><li>範例：*判定 (Determines)* 一個幾何圖形物件是否與另一個幾何圖形物件相交</li></ul>      | 不要以第二人稱動詞或任何名詞開頭。<ul><li>範例：*判定 (Determine)* 一個幾何圖形物件是否與另一個幾何圖形物件相交</li></ul>       |
+| 使用「傳回 (Returns)」、「建立 (Creates)」或其他描述性動詞代替「取得 (Gets)」。<ul><li>範例：*傳回 (Returns)* 曲面的 Nurbs 表現法</li></ul>   | 不要使用「取得」(Get 或 Gets)。它不太具體，可能會有幾種不同的翻譯。<ul><li>範例：*取得 (Gets)* 曲面的 Nurbs 表現法</li></ul>        |
+| 提到輸入時，請使用「給定 (given)」或「輸入 (input)」，而不要使用「指定 (specified)」或其他任何詞彙。盡可能省略「給定 (given)」或「輸入 (input)」，以簡化描述並減少字數。<ul><li>範例：刪除*給定 (given)* 的檔案</li><li>範例：將一條曲線沿著*給定 (given)* 的投影方向投影到*給定 (given)* 的基礎幾何圖形上</li></ul>如果不是直接提到輸入，可以使用「指定 (specified)」。<ul><li>範例：將文字內容寫入由給定路徑*指定 (specified)* 的檔案</li></ul>       | 提到輸入時，為了確保一致性，請不要使用「指定 (specified)」或除了「給定 (given)」或「輸入 (input)」以外的其他任何詞彙。不要在同一個描述中混合「給定 (given)」和「輸入 (input)」，除非為了清楚起見需要。<ul><li>範例：刪除*指定 (specified)* 的檔案</li><li>範例：將一條*輸入 (input)* 曲線沿著*給定 (given)* 的投影方向投影到*指定 (specified)* 的基礎幾何圖形上</li></ul>      |
+| 第一次提到輸入時，請使用「一個 (a 或 an)」。為清楚起見，請根據需要使用「給定 (the given)」或「輸入 (the input)」，而不是一個 (a 或 an)。<ul><li>範例：沿著路徑曲線掃掠*一條 (a)* 曲線</li></ul>      | 第一次提到輸入時，不要使用「這 (this)」。<ul><li>範例：沿著路徑曲線掃掠*這條 (this)* 曲線      |
+| 第一次提到節點運算目標的輸出或其他名詞時，請使用「一個 (a 或 an)」。只有在與「輸入 (input)」或「給定 (given)」搭配使用時，才使用「這 (the)」。<ul><li>範例：複製*一個 (a)* 檔案</li><li>範例：複製*給定 (given)* 的檔案</li></ul>      | 第一次提到節點運算目標的輸出或其他名詞時，請不要單獨使用「這個 (the)」。<ul><li>範例：複製*這個 (the)* 檔案</li></ul>      |
+| 將句子的第一個單字和任何專有名詞 (例如名稱和傳統上大寫的名詞) 大寫。<ul><li>範例：傳回兩個*邊界框 (BoundingBoxe)* 的交點</li></ul>      | 除非為了清楚起見需要，否則請不要將常見的幾何圖形物件和概念大寫。<ul><li>範例：繞著給定的*平面 (Plane)* 非等比例調整      |
+| 將布林 (Boolean) 大寫。提到布林的輸出時，請將 True 和 False 大寫。<ul><li>範例：如果兩個值不同，則傳回 *True*</li><li>範例：根據*布林 (Boolean)* 參數，將字串轉換為全部大寫或全部小寫的字元      | 不要將布林 (Boolean) 小寫。提到布林的輸出時，請不要將 True 和 False 小寫。<ul><li>範例：如果兩個值不同，則傳回 *true*</li><li>範例：根據*布林 (boolean)* 參數，將字串轉換為全部大寫的字元或全部小寫的字元</li></ul>
+
+#### Dynamo 節點的警告和錯誤
+
+節點的警告和錯誤會提醒使用者圖表有問題。通知使用者問題的方式，是在節點上方顯示圖示和展開的文字標示圈，來干擾正常的圖表運作。節點錯誤和警告的嚴重性可能有所不同：某些圖表還是能在有警告的情況下充分執行，但某些圖表卻可能無法獲得預期的結果。無論如何，節點的錯誤和警告都是重要的工具，可讓使用者隨時掌握圖表的問題。
+
+如需在寫入或更新節點警告和錯誤訊息時確保一致性並協助節省時間的準則，請參閱[內容模式：節點的警告與錯誤](https://github.com/DynamoDS/Dynamo/wiki/Content-Pattern:-Node-Warnings-and-Errors) Wiki 頁面。
+
+### 物件 <a href="#objects" id="objects"></a>
 
 Dynamo 沒有 `new` 關鍵字，因此需要使用靜態建構方法建構物件。透過以下方式可以建構物件：
 
@@ -173,7 +212,7 @@ namespace ZeroTouchEssentials
 
 ![ByTwoDoubles 節點](images/dyn-constructor.jpg)
 
-#### 使用 Dynamo 幾何圖形類型 <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
+### 使用 Dynamo 幾何圖形類型 <a href="#using-dynamo-geometry-types" id="using-dynamo-geometry-types"></a>
 
 Dynamo 資源庫可以使用原生 Dynamo 幾何圖形類型做為輸入，並建立新幾何圖形做為輸出。透過以下方式可以建立幾何圖形類型：
 
@@ -207,7 +246,7 @@ namespace ZeroTouchEssentials
 
 > 1. 此節點接受曲線幾何圖形類型做為輸入。
 
-#### Dispose/using 陳述式 <a href="#disposeusing-statements" id="disposeusing-statements"></a>
+### Dispose/using 陳述式 <a href="#disposeusing-statements" id="disposeusing-statements"></a>
 
 除非您使用 Dynamo 2.5 版或更高版本，否則必須手動管理未從函數傳回的幾何圖形資源。在 Dynamo 2.5 和更高版本中，幾何圖形資源由系統內部處理，但是，如果您的使用案例較複雜，或者您必須在決定性時間減少消耗記憶體，您可能仍需要手動處置幾何圖形。Dynamo 引擎將處理從函數傳回的任何幾何圖形資源。透過以下方式可以手動處理未傳回的幾何圖形資源：
 
@@ -237,7 +276,7 @@ namespace ZeroTouchEssentials
     return l;
     ```
 
-#### 移轉 <a href="#migrations" id="migrations"></a>
+### 移轉 <a href="#migrations" id="migrations"></a>
 
 發佈較新版本的資源庫時，節點名稱可能會變更。在移轉檔案中可以指定名稱變更，以便在更新時，以舊版資源庫建置的圖表可以持續正常運作。透過以下方式可以實作移轉：
 
@@ -249,7 +288,7 @@ namespace ZeroTouchEssentials
 ![移轉檔案](images/vs-migrations-file.jpg)
 
 > 1. 按一下右鍵，然後選取「`Add > New Item`」
-> 2. 選擇 `XML File`
+> 2. 選擇「`XML File`」
 > 3. 對於此專案，我們將移轉檔案命名為 `ZeroTouchEssentials.Migrations.xml`
 
 此範例程式碼告訴 Dynamo，任何名為 `GetClosestPoint` 的節點現在都命名為 `ClosestPointTo`。
@@ -266,7 +305,7 @@ namespace ZeroTouchEssentials
 
 > 請參閱 [ProtoGeometry.Migrations.xml](https://github.com/DynamoDS/Dynamo/blob/master/extern/ProtoGeometry/ProtoGeometry.Migrations.xml) 中的此程式碼範例
 
-#### 泛型 <a href="#generics" id="generics"></a>
+### 泛型 <a href="#generics" id="generics"></a>
 
 Zero-Touch 目前不支援使用泛型。可以使用泛型，但不能在直接匯入且未設定類型的程式碼中使用。無法顯示屬於泛型且未設定類型的方法、性質或類別。
 

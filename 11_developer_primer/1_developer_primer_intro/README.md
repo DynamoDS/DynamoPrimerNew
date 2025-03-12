@@ -1,4 +1,4 @@
-# Developer Primer 
+# Developer Primer
 
 #### 本指南的目的是什麼？<a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 

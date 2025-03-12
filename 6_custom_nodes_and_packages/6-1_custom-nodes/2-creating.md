@@ -47,9 +47,9 @@ Dynamo 提供自訂節點的多種不同建立方法。您可以從頭開始建�
 
 ![](../images/6-1/2/customnodeforuvmappingptI-05.jpg)
 
-> 1. **PolyCurve.ByPoints：** 連接曲面上的點以建構通過這些點的 PolyCurve。
-> 2. **Boolean：** 在工作區中加入 **Boolean**，將其連接至 _connectLastToFirst_ 輸入，並切換至「True」以封閉 polycurve。現在，您應該能看到對映到曲面的矩形。
-> 3. **Surface.ByPatch：** 將 polycurve 連接至 _closedCurve_ 輸入，以建構曲面修補。
+> 1. **PolyCurve.ByPoints：**連接曲面上的點以建構通過這些點的 PolyCurve。
+> 2. **Boolean：**在工作區中加入 **Boolean**，將其連接至 _connectLastToFirst_ 輸入，並切換至「True」以封閉 polycurve。現在，您應該能看到對映到曲面的矩形。
+> 3. **Surface.ByPatch：**將 polycurve 連接至 _closedCurve_ 輸入，以建構曲面修補。
 
 ### 第 II 部分：從圖表到自訂節點
 

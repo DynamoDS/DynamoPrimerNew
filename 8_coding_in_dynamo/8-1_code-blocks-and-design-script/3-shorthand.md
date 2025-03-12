@@ -26,7 +26,7 @@
 
 ### 範圍和序列
 
-定義範圍與序列的方法可以精簡為基本速寫。使用以下影像作為「..」語法的指南，以使用程式碼區塊定義一系列數值資料。瞭解此標記法後，建立數值資料就會非常有效率：
+定義範圍與序列的方法可以精簡為基本速寫。使用以下影像作為「..」語法的指南，以使用 Code Block 定義一系列數值資料。瞭解此標記法後，建立數值資料就會非常有效率：
 
 ![](../images/8-1/3/shorthand-rangesandsequences.jpg)
 
@@ -53,7 +53,7 @@
 
 ### 建立清單與取得清單中的項目
 
-除了使用速寫建立清單外，我們也可以快速建立清單。這些清單可以包含多種元素類型，也可以進行查詢 (請記住，清單本身就是物件)。總而言之，使用程式碼區塊，您將使用括號 (方括號) 建立清單和查詢清單中的項目：
+除了使用速寫建立清單外，我們也可以快速建立清單。這些清單可以包含多種元素類型，也可以進行查詢 (請記住，清單本身就是物件)。總而言之，使用 Code Block，您將使用括號 (方括號) 建立清單和查詢清單中的項目：
 
 ![](../images/8-1/3/shorthand-list&getfromlist01.jpg)
 
@@ -79,9 +79,9 @@
 
 {% file src="../datasets/8-1/3/Obsolete-Nodes_Sine-Surface.dyn" %}
 
-在本練習中，我們將靈活運用新的速寫技能，以建立由範圍與公式定義的炫酷蛋殼曲面。在本練習中，請注意我們如何搭配使用程式碼區塊與既有 Dynamo 節點：我們對處理大量資料的工作使用程式碼區塊，而以視覺方式配置 Dynamo 節點以實現定義的易讀性。
+在本練習中，我們將靈活運用新的速寫技能，以建立由範圍與公式定義的炫酷蛋殼曲面。在本練習中，請注意我們如何搭配使用 Code Block 與既有 Dynamo 節點：我們對處理大量資料的工作使用 Code Block，而以視覺方式配置 Dynamo 節點以實現定義的易讀性。
 
-首先，透過連接以上節點以建立曲面。不是使用數字節點來定義寬度與長度，而是按兩下圖元區，然後在程式碼區塊中輸入 `100;`。
+首先，透過連接以上節點以建立曲面。不是使用數字節點來定義寬度與長度，而是按兩下圖元區，然後在 Code Block 中輸入 `100;`。
 
 ![](../images/8-1/3/shorthand-exercise01.jpg)
 
@@ -94,7 +94,7 @@
 
 ![](../images/8-1/3/shorthand-exercise03.jpg)
 
-> 1. 我們不使用公式節點，而是使用包含 `(0..Math.Sin(x*360)..#50)*5;` 這一行的 **Code Block**。為了快速詳細說明這一點，我們將定義內含公式的範圍。此公式是正弦函數。正弦函數會接收 Dynamo 中輸入的角度，因此為了取得完整的正弦波形，我們將 x 值 (這是 0 到 1 的範圍輸入) 乘以 360。接下來，我們希望份數與每列的控制格線點數量相同，所以使用 #50 定義五十份。最後，乘數 5 只是為了增加平移的振幅，方便我們在 Dynamo 預覽中查看效果。
+> 1. 我們使用包含 `(0..Math.Sin(x*360)..#50)*5;` 這一行的 **Code Block**。為了快速詳細說明這一點，我們將定義內含公式的範圍。此公式是正弦函數。正弦函數會接收 Dynamo 中輸入的角度，因此為了取得完整的正弦波形，我們將 x 值 (這是 0 到 1 的範圍輸入) 乘以 360。接下來，我們希望份數與每列的控制格線點數量相同，所以使用 #50 定義五十份。最後，乘數 5 只是為了增加平移的振幅，方便我們在 Dynamo 預覽中查看效果。
 
 ![](../images/8-1/3/shorthand-exercise04.jpg)
 
@@ -110,13 +110,13 @@
 
 ![](../images/8-1/3/shorthand-exercise07.jpg)
 
-> 1. 加入 sineList 與 tranposeList 後會得到一個扭曲的蛋殼曲面：`eggShellList = sineList+transposeList;`
+> 1. 加入 sineList 與 transposeList 後會得到一個扭曲的蛋殼曲面：`eggShellList = sineList+transposeList;`
 
 變更下面指定的滑棒值，將此演算法「變平靜」。
 
 ![](../images/8-1/3/shorthand-exercise08.jpg)
 
-最後，我們使用程式碼區塊查詢資料的隔離部分。若要重新產生具有特定範圍點的曲面，請在 **Geometry.Translate** 與 **NurbsSurface.ByPoints** 節點之間加入以上程式碼區塊。這包括文字行：`sineStrips[0..15..1];`。這將選取前 16 列的點 (從 50 個點中)。重新建立曲面，我們可以看到已產生點格線的隔離部分。
+最後，我們使用 Code Block 查詢資料的隔離部分。若要重新產生具有特定範圍點的曲面，請在 **Geometry.Translate** 與 **NurbsSurface.ByPoints** 節點之間加入以上 Code Block。這包括文字行：`sineStrips[0..15..1];`。這將選取前 16 列的點 (從 50 個點中)。重新建立曲面，我們可以看到已產生點格線的隔離部分。
 
 ![](../images/8-1/3/shorthand-exercise09.jpg)
 
@@ -132,7 +132,7 @@
 
 ![](../images/8-1/3/shorthand-exercise12.jpg)
 
-查看視覺圖表，我們可以亮顯程式碼區塊，並查看其中的每項函數。
+查看視覺圖表，我們可以亮顯 Code Block，並查看其中的每項函數。
 
 ![](../images/8-1/3/shorthand-exercise13.jpg)
 
@@ -140,6 +140,6 @@
 >
 > 2\.第二個 **Code Block** 取代 **Number Range** 節點。
 >
-> 3\.第三個 **Code Block** 取代 **Formula** 節點 (以及 **List.Transpose**、**List.Count** 與 **Number Range**)。
+> 3\.第三個 **Code Block** 取代 **List.Transpose**、**List.Count** 和 **Number Range** 節點。
 >
-> 4 種。第四個 **Code Block** 查詢清單的清單，取代 **List.GetItemAtIndex** 節點。
+> 4\.第四個 **Code Block** 查詢清單的清單，取代 **List.GetItemAtIndex** 節點。

@@ -1,4 +1,4 @@
-# Zero-Touch 案例研究 - 網格節點 
+# Zero-Touch 案例研究 - 網格節點
 
 在 Visual Studio 專案啟動並執行時，我們將逐步瞭解如何建置一個自訂節點來建立一個矩形的儲存格網格。雖然我們可以使用幾個標準節點建立此節點，但它是一個實用的工具，可以輕鬆包含在 Zero-Touch 節點中。與網格線相反，儲存格可以繞其中心點調整比例、查詢其角落頂點，或建置到面中。
 
@@ -6,7 +6,7 @@
 
 ![矩形網格圖表](images/cover-image.jpg)
 
-#### 自訂矩形網格節點 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### 自訂矩形網格節點 <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 若要開始建置網格節點，請建立新的 Visual Studio 類別資源庫專案。請參閱「入門」頁面，以取得如何設定專案的深入逐步解說。
 
@@ -17,7 +17,7 @@
 > 1. 選擇「`Class Library`」做為專案類型
 > 2. 將專案命名為 `CustomNodes`
 
-由於我們要建立幾何圖形，因此需要參考適當的 NuGet 套件。從 Nuget 套件管理員安裝 ZeroTouchLibrary 套件。`using Autodesk.DesignScript.Geometry;` 陳述式需要此套件。
+由於我們要建立幾何圖形，因此需要參考適當的 NuGet 套件。從 NuGet 套件管理員安裝 ZeroTouchLibrary 套件。`using Autodesk.DesignScript.Geometry;` 陳述式需要此套件。
 
 ![ZeroTouchLibrary 套件](images/vs-nugetpackage.jpg)
 
@@ -96,7 +96,7 @@ namespace CustomNodes
 > 2. 圖元區上的自訂節點
 > 3. 將 `.dll` 加入 Dynamo 的「加入」按鈕
 
-#### 修改自訂節點 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### 修改自訂節點 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 在以上範例中，我們建立了一個相當簡單的節點，此節點除了 `RectangularGrids` 方法外沒有定義太多其他內容。但是，我們也許需要建立輸入埠的工具提示，或為節點提供類似標準 Dynamo 節點的摘要。將這些功能加入自訂節點，可以讓使用者更輕鬆地使用這些節點，尤其是當使用者想要在資源庫中搜尋這些節點時。
 

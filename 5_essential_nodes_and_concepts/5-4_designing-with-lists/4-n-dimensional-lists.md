@@ -177,7 +177,7 @@
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist14.jpg)
 
-> 1. 由於階層中還有一層，因此我們需要搭配使用 **List.Map** 與 **List.Tranpose** 函數來變更 Nurbs 曲線的方向。
+> 1. 由於階層中還有一層，因此我們需要搭配使用 **List.Map** 與 **List.Transpose** 函數來變更 Nurbs 曲線的方向。
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist15.jpg)
 

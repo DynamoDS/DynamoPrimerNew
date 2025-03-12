@@ -1,4 +1,4 @@
-# 從原始碼建置 DynamoRevit 
+# 從原始碼建置 DynamoRevit
 
 DynamoRevit 原始碼檔案也託管在 DynamoDS Github 上，開發人員可以參與並建置 Beta 版本。從原始碼建置 DynamoRevit 的程序通常與 Dynamo 相同，但有一些重要的細節例外：
 
@@ -13,9 +13,9 @@ DynamoRevit 原始碼檔案也託管在 DynamoDS Github 上，開發人員可以
 
 為確保能成功建置，我們將複製並建置 Dynamo 和 DynamoRevit 兩個儲存庫在此逐步解說中使用。
 
-_注意事項：只有當您建置 Dynamo 1.x 和 DynamoRevit 1.x 時，才需要在 DynamoRevit 之前手動建置 Dynamo - 較新版本的 DynamoRevit 儲存庫依賴 NuGet 套件管理員，才能獲得建置所需的 Dynamo 相依性。雖然 DynamoRevit 2.x 的建置版本不需要手動提取 Dynamo，但您在其他位置仍然需要核心 `dlls` 才能真正執行 DynamoRevit `addin` \- 因此無論如何還是要提取和建置 Dynamo。參閱更多資訊：_[_使用 Visual Studio 建置儲存庫_](#building-the-repository-using-Visual-Studio)
+_注意事項：只有當您建置 Dynamo 1.x 和 DynamoRevit 1.x 時，才需要在 DynamoRevit 之前手動建置 Dynamo - 較新版本的 DynamoRevit 儲存庫依賴 NuGet 套件管理員，才能獲得建置所需的 Dynamo 相依性。雖然 DynamoRevit 2.x 的建置版本不需要手動提取 Dynamo，但您在其他位置仍然需要核心 `dlls` 才能真正執行 DynamoRevit `add-in` \- 因此無論如何還是要提取和建置 Dynamo。參閱更多資訊：_[_使用 Visual Studio 建置儲存庫_](#building-the-repository-using-Visual-Studio)
 
-#### 在 Github 上找出 DynamoRevit 儲存庫 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### 在 Github 上找出 DynamoRevit 儲存庫 <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
 DynamoRevit 專案的程式碼與核心 Dynamo 原始程式碼在 Github 是位在不同的儲存庫中。此儲存庫包含 Revit 特定節點的原始碼檔案，以及載入 Dynamo 的 Revit 增益集。適用於不同 Revit 版本 (例如 2016、2017 或 2018) 的 DynamoRevit 建置版本在儲存庫中會整理成不同的分支。
 
@@ -26,7 +26,7 @@ DynamoRevit 的原始碼託管在此：[https://github.com/DynamoDS/DynamoRevit]
 > 1. 複製或下載儲存庫
 > 2. DynamoRevit 的分支參考 Revit 版本
 
-#### 使用 git 複製儲存庫 <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### 使用 git 複製儲存庫 <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
 在與提取 Dynamo 儲存庫類似的過程中，我們將使用 git clone 指令來複製 DynamoRevit，並指定與 Revit 版本相符的分支。首先，我們開啟指令行介面，將目前目錄設定為要將檔案複製到的位置。
 
@@ -54,9 +54,9 @@ DynamoRevit 的原始碼託管在此：[https://github.com/DynamoDS/DynamoRevit]
 
 選擇正確的儲存庫分支很重要，這樣才能確保專案在 Visual Studio 中建置時，會參考 Revit 安裝目錄正確版本 (尤其是 `RevitAPI.dll` 和 `RevitAPIUI.dll`) 中的組合。
 
-#### 使用 Visual Studio 建置儲存庫 <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### 使用 Visual Studio 建置儲存庫 <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
-在建置儲存庫之前，我們需要使用 `src` 資料夾中的 `restorepackages.bat` 檔案還原 NuGet 套件。此 bat 檔案使用 [nuget](https://www.nuget.org) 套件管理員提取 DynamoRevit 所需的 Dynamo 核心已建置二進位檔案。您也可以選擇手動建置這些元件，但如果您只是對 DynamoRevit (而不是 Dynamo 核心) 進行變更，這樣可以更快開始。請務必以管理員身分執行此檔案。
+在建置儲存庫之前，我們需要使用 `src` 資料夾中的 `restorepackages.bat` 檔案還原 NuGet 套件。此 bat 檔案使用 [NuGet](https://www.nuget.org) 套件管理員提取 DynamoRevit 所需的 Dynamo 核心已建置二進位檔案。您也可以選擇手動建置這些元件，但如果您只是對 DynamoRevit (而不是 Dynamo 核心) 進行變更，這樣可以更快開始。請務必以管理員身分執行此檔案。
 
 ![以系統管理員身分執行](images/fe-restorepackages.jpg)
 
@@ -75,7 +75,7 @@ DynamoRevit 的原始碼託管在此：[https://github.com/DynamoDS/DynamoRevit]
 > 1. 選取「`Build > Build Solution`」
 > 2. 在「Output (輸出)」視窗中確認建置成功。訊息應為 `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`。
 
-#### 在 Revit 中執行 DynamoRevit 的本端建置版本 <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### 在 Revit 中執行 DynamoRevit 的本端建置版本 <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
 Revit 需要增益集檔案才能辨識 DynamoRevit，[安裝程式](http://dynamobim.org/download/)會自動建立此檔案。在開發過程中，我們需要手動建立一個指向我們要使用的 DynamoRevit 建置版本的增益集檔案，明確來說是 `DynamoRevitDS.dll` 組合。我們還需要將 DynamoRevit 指向 Dynamo 的建置版本。
 
@@ -145,9 +145,9 @@ Revit 需要增益集檔案才能辨識 DynamoRevit，[安裝程式](http://dyna
 > 2. 按一下 Dynamo 增益集圖示
 > 3. 一個 DynamoRevit 例證
 
-如果出現錯誤對話方塊視窗顯示缺少組合，可能是您建置所依據的 DynamoCore 版本與您在執行時期載入的 DynamoCore 版本不相符。例如，如果您嘗試使用 Dynamo 1.3 dll 啟動 DynamoCore，則 DynamoRevit 搭配最新的 DynamoCore 2.0 Beta 套件將無法運作。請確保兩個儲存庫的版本相同，且 DynamoRevit 提取的是相符版本的 nuget 相依性。這些版本定義在 DynamoRevit 儲存庫的 `package.json` 檔案中。
+如果出現錯誤對話方塊視窗顯示缺少組合，可能是您建置所依據的 DynamoCore 版本與您在執行時期載入的 DynamoCore 版本不相符。例如，如果您嘗試使用 Dynamo 1.3 dll 啟動 DynamoCore，則 DynamoRevit 搭配最新的 DynamoCore 2.0 Beta 套件將無法運作。請確保兩個儲存庫的版本相同，且 DynamoRevit 提取的是相符版本的 NuGet 相依性。這些版本定義在 DynamoRevit 儲存庫的 `package.json` 檔案中。
 
-#### 使用 Visual Studio 為 DynamoRevit 除錯 <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### 使用 Visual Studio 為 DynamoRevit 除錯 <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
 在上一節〈**從原始碼建置 Dynamo**〉中，我們簡單介紹了在 Visual Studio 中進行除錯，以及如何將 Visual Studio 附加到處理序。以 Wall.ByCurveAndHeight 節點中的例外狀況為例，我們將逐步瞭解如何附加到處理序、設定中斷點、逐步執行程式碼，以及使用呼叫堆疊來判斷例外狀況的來源。這些除錯工具通常適用於 .net 開發工作流程，值得您在參考本指南之餘進行探索。
 
@@ -210,7 +210,7 @@ Revit 需要增益集檔案才能辨識 DynamoRevit，[安裝程式](http://dyna
 
 此程序可套用至我們處理的任何原始碼檔案。如果我們要開發 Dynamo Studio 的 Zero-Touch 節點資源庫，可以開啟資源庫的原始碼並附加 Dynamo 處理序，為節點資源庫除錯。即使一切正常，除錯也是探索程式碼並瞭解其運作方式的絕佳方式。
 
-#### 提取最新建置版本 <a href="#pull-latest-build" id="pull-latest-build"></a>
+### 提取最新建置版本 <a href="#pull-latest-build" id="pull-latest-build"></a>
 
 此程序幾乎與提取 Dynamo 的變更相同，但是需要確保位於正確的分支。在 DynamoRevit 儲存庫中使用 `git branch` 指令，查看哪些分支可在本端使用，哪些分支目前已出庫使用。
 

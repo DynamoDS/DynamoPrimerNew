@@ -1,4 +1,4 @@
-# 套件簡介 
+# 套件簡介
 
 Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫，可顯著擴充 Dynamo 的功能。套件是自訂節點或其他功能的集合。Dynamo Package Manager 是一個入口網站，可讓社群下載已在線上發佈的套件。這些工具集由協力廠商開發，可擴充 Dynamo 的核心功能，任何人都能存取，按一下按鈕即可下載。
 
@@ -79,7 +79,7 @@ Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫�
 
 ### Dynamo Package Manager 網站
 
-探索 Dynamo 套件的另一種方式是探索 [Dynamo Package Manager](http://dynamopackages.com) 網站。您可以在這裡找到套件和作者排行榜的統計資料。您也可以從 Dynamo Package Manager 下載套件檔案，但是從 Dynamo 直接執行會更順暢。
+探索 Dynamo 套件的另一種方式是探索 [Dynamo Package Manager](http://dynamopackages.com) 網站。您在這裡可以找到套件作者提供的套件相依性和主體程式/版本相容性資訊。您也可以從 Dynamo Package Manager 下載套件檔案，但是從 Dynamo 直接執行會更順暢。
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,53 @@ Dynamo 提供大量即裝即用的功能，並維護了豐富的套件資源庫�
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 套件預設安裝在與以下資料夾路徑類似的位置：_C:/Users/[使用者名稱]/AppData/Roaming/Dynamo/[Dynamo 版本]_。
+
+### 在辦公室中設定套件的共用位置
+
+對於詢問是否可以使用預先附加的套件 (以任何形式) 部署 Dynamo 的使用者：解決此問題並允許所有安裝 Dynamo 的使用者在一個中央位置進行控制的方法，是為每個安裝增加一個自訂的套件路徑。
+
+**增加一個網路資料夾，BIM 管理員或其他人可以監督包含辦公室核准套件的資料夾儲存過程**  
+
+在個別應用程式的使用者介面中，移至*「Dynamo」->「偏好」->「套件設定」->「節點和套件檔案位置」*。在對話方塊中，按「加入路徑」按鈕並瀏覽到共用套件資源的網路位置。 
+ 
+自動程序會將資訊加到隨 Dynamo 安裝的規劃檔中：  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+Dynamo for Revit 的規劃預設為：
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+新增自訂位置將如下所示：  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+也可以透過將資料夾設定為唯讀，來控制此資料夾的集中管理。
+
+### 從網路位置載入包含二進位檔的套件
+
+#### 情境
+
+組織可能希望將不同工作站和使用者安裝的套件標準化。達成此目標的一種方法，是從*「Dynamo」->「偏好」->「套件設定」->「節點和套件檔案位置」*安裝這些套件，選取網路資料夾作為安裝位置，然後讓工作站將該路徑加到「`Manage Node and Package Paths`」中。
+
+#### 問題
+
+雖然此情境適用於只包含自訂節點的套件，但可能不適用於包含二進位檔的套件 (例如 zero-touch 節點)。此問題是 .NET Framework 在針對載入網路位置的組合時採取的[安全措施](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location)所導致。遺憾的是，按照連結討論串中的建議，使用 `loadFromRemoteSources` 規劃元素不是適用於 Dynamo 的可能解決方案，因為它是以元件而不是以應用程式分發。
+
+#### 解決方法
+
+一種可能的權宜辦法是，使用指向網路位置的對應網路磁碟機，讓工作站改為參考該路徑。[這裡](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive)介紹建立對應網路磁碟機的步驟。
 
 ### 進一步使用套件
 
