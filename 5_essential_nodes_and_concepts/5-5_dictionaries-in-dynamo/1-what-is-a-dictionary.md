@@ -24,7 +24,7 @@ Dynamo 2.0 では、ディクショナリのデータ タイプをリストの�
 
     ***
 
-![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
 ***
 

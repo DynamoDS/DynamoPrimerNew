@@ -1,10 +1,10 @@
-# スタートアップ 
+# スタートアップ
 
 開発に取り組む前に、新しいプロジェクトのための強固な基盤を築くことが重要です。Dynamo 開発者のコミュニティには複数のプロジェクト テンプレートがあり、ここから始めると便利ですが、プロジェクトをゼロから開始する方法を理解することはさらに重要です。プロジェクトをゼロから構築すると、開発プロセスをより深く理解できます。
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Visual Studio プロジェクトを作成する <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Visual Studio プロジェクトを作成する <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio は、プロジェクトの作成、参照の追加、`.dlls` のビルド、デバッグを行うことができる強力な IDE です。新しいプロジェクトを作成する際に、Visual Studio ではプロジェクトを編成するための構造であるソリューションも作成します。複数のプロジェクトを、単一のソリューション内に配置し、まとめてビルドできます。ZeroTouch ノードを作成するには、C# クラス ライブラリを記述して `.dll` をビルドする新しい Visual Studio プロジェクトを開始する必要があります。
 
@@ -84,7 +84,7 @@ Visual Studio では自動的に C# ファイルを作成して開きます。�
 > 1. Dynamo ライブラリ内の MyCustomNode。ライブラリのカテゴリは、`.dll` の名前によって決まります。
 > 2. キャンバス上の SampleFunctions.MultiplyByTwo。
 
-#### Dynamo によるクラスとメソッドを読み込む仕組み <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### Dynamo によるクラスとメソッドを読み込む仕組み <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 Dynamo は .dll をロードする際、すべてのパブリック静的メソッドをノードとして公開します。コンストラクタ、メソッド、およびプロパティは、それぞれ Create ノード、Action ノード、および Query ノードに変換されます。この乗算の例では、`MultiplyByTwo()` メソッドが Dynamo で Action ノードになります。これは、ノードの名前がそのメソッドとクラスに基づいて付けられているためです。
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dynamo が Create ノードとしてメソッドを読み込みました。
 
-#### Dynamo NuGet パッケージの参照設定を追加する <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Dynamo NuGet パッケージの参照設定を追加する <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 乗算ノードは非常に単純なため、Dynamo への参照設定は必要ありません。たとえば、ジオメトリを作成するために Dynamo の機能にアクセスする場合は、Dynamo NuGet パッケージを参照する必要があります。
 

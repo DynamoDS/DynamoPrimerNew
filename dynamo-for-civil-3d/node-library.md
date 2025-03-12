@@ -2,9 +2,7 @@
 
 以前に、**ノード**は Dynamo グラフの主要な構成要素であり、**ライブラリ**内で論理グループに編成されていると説明しました。Dynamo for Civil 3D では、ライブラリ内に、Alignments、Profiles、Corridors、Block References など、AutoCAD および Civil 3D オブジェクトを操作するための専用ノードを含む 2 つのカテゴリ(**シェルフ**)があります。ライブラリの残りの部分には、本質的により汎用的であり、Dynamo のすべての「フレーバー」(Revit 用の Dynamo、Dynamo Sandbox など)間で一貫しているノードが含まれています。
 
-{% hint style="info" %}
- コアの Dynamo ライブラリでノードを構成する方法の詳細については、「[2-library.md](../3\_user\_interface/2-library.md "mention")」セクションを参照してください。 
-{% endhint %}
+{% hint style="info" %} コアの Dynamo ライブラリでノードを構成する方法の詳細については、「[2-library.md](../3\_user\_interface/2-library.md "mention")」セクションを参照してください。 {% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>Dynamo for Civil 3D のノード ライブラリ</p></figcaption></figure>
 
@@ -12,15 +10,11 @@
 > 2. 汎用ノード
 > 3. 個別にインストールできるサードパーティ製**パッケージ**のノード
 
-{% hint style="warning" %}
- AutoCAD および Civil 3D シェルフにあるノードを使用すると、Dynamo グラフは Dynamo for Civil 3D でのみ動作します。Dynamo for Civil 3D グラフを別の場所(たとえば Revit 用の Dynamo)で開くと、これらのノードに警告フラグが設定され、実行されません。 
-{% endhint %}
+{% hint style="warning" %} AutoCAD および Civil 3D シェルフにあるノードを使用すると、Dynamo グラフは Dynamo for Civil 3D でのみ動作します。Dynamo for Civil 3D グラフを別の場所(たとえば Revit 用の Dynamo)で開くと、これらのノードに警告フラグが設定され、実行されません。 {% endhint %}
 
-{% hint style="info" %}
- **AutoCAD と Civil 3D に 2 つの別個のシェルフがある理由とは**
+{% hint style="info" %} **AutoCAD と Civil 3D に 2 つの別個のシェルフがある理由とは**
 
-この構成により、ネイティブ AutoCAD オブジェクト(Lines、Polylines、Block References など)のノードと Civil 3D オブジェクト(Alignments、Corridors、Surfaces など)のノードが区別されます。また、技術的には、AutoCAD と Civil 3D は 2 つの別個の製品です。AutoCAD は基礎となるアプリケーションであり、Civil 3D はその上に構築されています。 
-{% endhint %}
+この構成により、ネイティブ AutoCAD オブジェクト(Lines、Polylines、Block References など)のノードと Civil 3D オブジェクト(Alignments、Corridors、Surfaces など)のノードが区別されます。また、技術的には、AutoCAD と Civil 3D は 2 つの別個の製品です。AutoCAD は基礎となるアプリケーションであり、Civil 3D はその上に構築されています。 {% endhint %}
 
 ## ノード階層
 

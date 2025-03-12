@@ -6,11 +6,11 @@
 
 > 次の 3 つの開発環境があります: Visual Studio、Python Editor、Code Block DesignScript
 
-#### オプションの選び方について <a href="#what-are-my-options" id="what-are-my-options"></a>
+### オプションの選び方について <a href="#what-are-my-options" id="what-are-my-options"></a>
 
 Dynamo の開発オプションは、主に Dynamo 向け_の_開発と、Dynamo _で_ の開発の 2 つに分類されます。この 2 つのカテゴリは、Dynamo IDE を使用して作成されたコンテンツを Dynamo で使用する「Dynamo での開発」と、外部ツールを使用して作成されたコンテンツを Dynamo に読み込んで使用する「Dynamo 向けの開発」を意味します。このガイドでは、Dynamo _向け_ の開発に焦点を当てていますが、すべてのプロセスのリソースについて以下で説明します。
 
-#### Dynamo 向けの開発<a href="#for-dynamo" id="for-dynamo"></a>
+### Dynamo 向けの開発<a href="#for-dynamo" id="for-dynamo"></a>
 
 これらのノードを使用することにより、最高レベルのカスタマイズが可能になります。多くのパッケージがこの方法を使用して構築されており、Dynamo のソースに貢献するために必要な手法です。このガイドでは、これらの構築プロセスについて説明します。
 
@@ -26,7 +26,7 @@ Dynamo の開発オプションは、主に Dynamo 向け_の_開発と、Dynamo
 
 > これから開発するプロジェクトがある Visual Studio インタフェース
 
-#### Dynamo での開発<a href="#in-dynamo" id="in-dynamo"></a>
+### Dynamo での開発<a href="#in-dynamo" id="in-dynamo"></a>
 
 これらのプロセスはビジュアル プログラミング ワークスペース内に存在し、比較的単純ですが、すべてが Dynamo をカスタマイズするための有用なオプションです。Primer ではこれらの内容を広範囲にカバーし、「[スクリプト作成のガイドライン](../../9\_best\_practices/2-scripting-strategies.md)」の章では、スクリプトのヒントとベスト プラクティスについて説明します。
 
@@ -46,7 +46,7 @@ Dynamo ワークスペースでの開発は、即座にフィードバックが�
 
 > Python ノードを使用して Dynamo ワークスペースで開発する
 
-#### それぞれの利点と欠点について <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
+### それぞれの利点と欠点について <a href="#what-are-the-advantagesdisadvantages-of-each" id="what-are-the-advantagesdisadvantages-of-each"></a>
 
 Dynamo の開発オプションは、カスタマイズの必要性に伴う複雑な作業に対応できるように設計されています。目的が Python で再帰スクリプトを記述するのか、完全にカスタム化したノード UI を構築するのかに関わらず、起動と実行に必要なものだけでコードを実装できるオプションがあります。
 
@@ -87,7 +87,7 @@ Zero-Touch とは、C# ライブラリを読み込むための単純なポイン
 * レーシングをカスタマイズします。
 * Dynamo にパッケージとしてロードします。
 
-#### Dynamo のバージョン管理と API の変更点について理解する(1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
+### Dynamo のバージョン管理と API の変更点について理解する(1.x → 2.x) <a href="#understanding-dynamo-versioning-and-api-changes-1x-2x" id="understanding-dynamo-versioning-and-api-changes-1x-2x"></a>
 
 Dynamo は定期的に更新されるため、パッケージが使用する API の一部が変更される場合があります。既存のパッケージが正しく動作し続けるようにするためには、これらの変更を追跡することが重要になります。
 
@@ -101,8 +101,13 @@ API の変更は、[Dynamo GitHub Wiki](https://github.com/DynamoDS/Dynamo/wiki/
 
 ![API ドキュメント](images/api-docs.jpg)
 
-#### パッケージのバイナリを配布する権限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
+### パッケージのバイナリを配布する権限 <a href="#permission-to-distribute-binaries-in-a-package" id="permission-to-distribute-binaries-in-a-package"></a>
 
 Package Manager にアップロードされるパッケージに含まれる .dll に注意してください。パッケージの作成者が .dll を作成しなかった場合、それらを共有する権限が必要です。
 
 パッケージにバイナリが含まれている場合、パッケージにバイナリが含まれていることをダウンロード時にユーザに確認する必要があります。
+
+### Dynamo UI のパフォーマンスに関する考慮事項
+本記事の作成時点では、Dynamo は UI のレンダリングに、主に WPF (Windows Presentation Foundation)を使用しています。WPF は、複雑ですが強力な、 xaml/バインディング ベースのシステムです。Dynamo の UI は複雑なため、UI の停止やメモリ リークが発生したり、グラフの実行と UI の更新をラップしてパフォーマンスが低下するといった事態が起こりやすくなります。
+
+Wiki ページ「[Dynamo のパフォーマンスに関する考慮事項](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-UI-Performance)」を参照してください。Dynamo のコードを変更する際に起こりがちな問題を回避するのに役立ちます。

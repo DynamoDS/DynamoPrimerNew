@@ -77,6 +77,32 @@ Dynamo では、リスト データには順序が付けられ、各リストの
 
 ![](../images/5-4/1/what'salist-rightclicklacingopt.jpg)
 
+### 複製とは
+
+たとえば、ブドウが一房あるとします。グレープ ジュースを作ろうとする場合、粒を 1 つ 1 つ絞るのではなく、丸ごとジューサーに入れるでしょう。Dynamo の複製も同様に機能します。操作を一度に 1 つずつの項目に適用するのではなく、Dynamo で一度にリスト全体に適用します。
+
+Dynamo ノードは、リストを操作していることを自動的に認識し、複数の要素に操作を適用します。つまり、手動で項目を繰り返す必要はありません。自動で実行されます。しかし、リストが複数ある場合、Dynamo はリストの処理方法をどのように決定するのでしょうか。
+
+主に 2 つの方法があります。
+
+#### 直交座標系複製
+たとえば、キッチンでフルーツ ジュースを作っているとします。フルーツのリスト(`{apple, orange, pear}`)と、各ジュース用の決まった分量の水(`1 cup`)があります。同じ量の水を使って、それぞれのフルーツでジュースを作るとします。このような場合に役立つのが直交座標系複製です。
+
+つまり、Dynamo では、フルーツのリストを Juice.Maker ノードの fruit 入力に入れ、water 入力はすべてカップ 1 個になります。次に、ノードは各フルーツを個別に処理し、一定量の水と組み合わせます。結果は次のとおりです。
+
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
+
+各フルーツは同じ量の水とのペアになります。
+
+#### Zip 複製
+Zip 複製は仕組みが少し異なります。フルーツ(`{apple, orange, pear}`)と砂糖の量(`{2 tbsp, 3 tbsp, 1 tbsp}`)の 2 つのリストがあるとすると、Zip 複製では各リストの対応する項目を結合します。例:
+
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
+
+各フルーツは、対応する量の砂糖とのペアになっています。
+
+この仕組みの詳細については、「[複製とレーシングのガイド](https://github.com/DynamoDS/Dynamo/wiki/Replication-and-Replication-Guide-Part-1)」を参照してください。
+
 ## 演習
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。

@@ -1,4 +1,4 @@
-# ソースから DynamoRevit をビルドする 
+# ソースから DynamoRevit をビルドする
 
 DynamoRevit ソース ファイルも、開発者が関与してベータ版をビルドできるように DynamoDS の GitHub にホストされています。ソースから DynamoRevit をビルドする場合は、通常は Dynamo と同じプロセスを実行しますが、重要な詳細がいくつかあります。
 
@@ -13,9 +13,9 @@ DynamoRevit ソース ファイルも、開発者が関与してベータ版を�
 
 正常なビルドを確実にするために、この説明で使用する Dynamo と DynamoRevit の両方のリポジトのクローンを作成してビルドします。
 
-_注: Dynamo 1.x と DynamoRevit 1.x をビルドする場合にのみ DynamoRevit の前に Dynamo を手動でビルドする必要があります。これより新しいバージョンの DynamoRevit リポジトリでは、NuGet パッケージ マネージャを使用してビルドに必要な Dynamo の依存関係を取得します。DynamoRevit 2.x のビルドでは Dynamo を手動でプルする必要はありませんが、DynamoRevit `addin` を実際に実行するには別の場所にコア `dlls` が必要であるため、やはり Dynamo のプルおよびビルドが必要です。詳細については、「[_Visual Studio を使用してリポジトリをビルドする_](#building-the-repository-using-Visual-Studio)」を参照してください。_
+_注: Dynamo 1.x と DynamoRevit 1.x をビルドする場合にのみ DynamoRevit の前に Dynamo を手動でビルドする必要があります。これより新しいバージョンの DynamoRevit リポジトリでは、NuGet パッケージ マネージャを使用してビルドに必要な Dynamo の依存関係を取得します。DynamoRevit 2.x のビルドでは Dynamo を手動でプルする必要はありませんが、DynamoRevit `add-in` を実際に実行するには別の場所にコア `dlls` が必要であるため、やはり Dynamo のプルおよびビルドが必要です。詳細については、「[_Visual Studio を使用してリポジトリをビルドする_](#building-the-repository-using-Visual-Studio)」を参照してください。_
 
-#### GitHub で DynamoRevit リポジトリを見つける <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
+### GitHub で DynamoRevit リポジトリを見つける <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
 DynamoRevit プロジェクトのコードは、GitHub で、Dynamo のソース コードとは別のリポジトリにあります。このリポジトリには、Revit 固有のノードのソース ファイルと、Dynamo をロードする Revit アドインが含まれています。Revit の異なるバージョン(2016、2017、2018 など)の DynamoRevit のビルドは、リポジトリ内でブランチとして構成されています。
 
@@ -26,7 +26,7 @@ DynamoRevit のソースは、[https://github.com/DynamoDS/DynamoRevit](https://
 > 1. リポジトリをクローン作成またはダウンロードします。
 > 2. DynamoRevit のブランチで Revit のバージョンを参照します。
 
-#### git を使用してリポジトリのクローンを作成する <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
+### git を使用してリポジトリのクローンを作成する <a href="#cloning-the-repository-using-git" id="cloning-the-repository-using-git"></a>
 
 Dynamo リポジトリのプルと同様のプロセスで、git clone コマンドを使用して DynamoRevit のクローンを作成し、Revit のバージョンに一致するブランチを指定します。まず、コマンド ライン インタフェースを開き、ファイルのクローンを作成する場所に現在のフォルダを設定します。
 
@@ -54,7 +54,7 @@ Dynamo リポジトリのプルと同様のプロセスで、git clone コマン
 
 Visual Studio でのプロジェクトのビルドの際に、確実に Revit の正しいバージョンのインストール フォルダ内のアセンブリ(具体的には、`RevitAPI.dll` および `RevitAPIUI.dll`)を参照するには、リポジトリの正しいブランチを選択することが重要です。
 
-#### Visual Studio を使用してリポジトリをビルドする <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
+### Visual Studio を使用してリポジトリをビルドする <a href="#building-dynamo-revit" id="building-dynamo-revit"></a>
 
 リポジトリをビルドする前に、`src` フォルダにある `restorepackages.bat` ファイルを使用して NuGet パッケージを復元する必要があります。この bat ファイルは、[NuGet](https://www.nuget.org) パッケージ マネージャを使用して、DynamoRevit で必要な Dynamo Core のビルド済みのバイナリをプルします。Dynamo Core を変更せずに DynamoRevit のみを変更する場合は、バイナリを手動でビルドすることもできます。これにより、より迅速に作業を開始できます。このファイルは必ず管理者として実行してください。
 
@@ -75,7 +75,7 @@ Visual Studio でのプロジェクトのビルドの際に、確実に Revit �
 > 1. `Build > Build Solution` を選択します。
 > 2. 出力ウィンドウでビルドが正常に作成されたことを確認します。「`===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`」というメッセージが表示されるはずです。
 
-#### Revit で DynamoRevit のローカル ビルドを実行する <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
+### Revit で DynamoRevit のローカル ビルドを実行する <a href="#running-a-local-build-of-dynamorevit-in-revit" id="running-a-local-build-of-dynamorevit-in-revit"></a>
 
 Revit には、DynamoRevit を認識するためのアドイン ファイルが必要です。[インストーラ](http://dynamobim.org/download/)で自動的に作成される場合もあります。開発の際には、使用する DynamoRevit のビルドを指定するアドイン ファイル、具体的には `DynamoRevitDS.dll` アセンブリを手動で作成する必要があります。また、DynamoRevit で Dynamo のビルドを指定する必要があります。
 
@@ -120,7 +120,7 @@ Revit には、DynamoRevit を認識するためのアドイン ファイルが�
 
 ![DynamoForRevit フォルダおよび DynamoPlayerforRevit フォルダ](images/fe-dynamo-folders-remove.jpg)
 
-次の手順では、Dynamo Core アセンブリのファイル パスを、DynamoRevit の `bin` フォルダ内の `Dynamo.config` ファイルに追加します。DynamoRevit は、アドインを Revit で開いたときに、これらのアセンブリをロードします。この config ファイルを使用すると、さまざまなバージョンの Dynamo Core に DynamoRevit アドインを指定することができ、開発と変更のテストを Core と DynamoRevit の両方で実施できます。
+次の手順では、Dynamo Core アセンブリのファイル パスを、DynamoRevit の `bin` フォルダ内の `Dynamo.config` ファイルに追加します。DynamoRevit は、アドインを Revit で開いたときに、これらのアセンブリをロードします。この config ファイルを使用すると、さまざまなバージョンの Dynamo Core に DynamoRevit アドインを指定し、開発と変更のテストを Core と DynamoRevit の両方で実施できます。
 
 コードは次のようになります。
 
@@ -147,7 +147,7 @@ Revit を開くと、[管理]タブに Dynamo アドインがあるはずです�
 
 エラー ダイアログ ウィンドウにアセンブリが見つからないと表示される場合は、構築された DynamoCore のバージョンと実行時にロードするバージョンが一致していない可能性があります。たとえば、DynamoCore の最新の 2.0 ベータ版パッケージに対応する DynamoRevit は、Dynamo 1.3 dll を使用して起動しようとしても動作しません。両方のリポジトリが同じバージョンであり、DynamoRevit が一致するバージョンの NuGet 依存関係をプルしていることを確認します。これらは、DynamoRevit リポジトリの `package.json` ファイルで定義されています。
 
-#### Visual Studio を使用して DynamoRevit をデバッグする <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
+### Visual Studio を使用して DynamoRevit をデバッグする <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
 前のセクション「**ソースから Dynamo をビルドする**」では、Visual Studio でのデバッグと、プロセスに Visual Studio をアタッチする方法について簡単に説明しました。例として、Wall.ByCurveAndHeight ノードの例外を使用して、プロセスへのアタッチ、ブレーク ポイントの設定、コードのステップ実行、およびコール スタックを使用した例外のソースの決定方法について説明します。これらのデバッグ ツールは、一般的に .net 開発ワークフローに適用され、このガイド以外でも役立ちます。
 
@@ -210,7 +210,7 @@ Visual Studio を Revit にアタッチした状態で、`Wall.cs` にある Wal
 
 このプロセスは、作業中のソース ファイルに適用できます。Dynamo Studio 用の Zero-Touch ノードのライブラリを開発している場合は、ライブラリのソースを開いて Dynamo プロセスをアタッチするとノード ライブラリをデバッグできます。すべてが完全に機能していても、デバッグは、コードを調べて動作の仕組みを理解するのに最適な方法です。
 
-#### 最新ビルドをプルする <a href="#pull-latest-build" id="pull-latest-build"></a>
+### 最新ビルドをプルする <a href="#pull-latest-build" id="pull-latest-build"></a>
 
 このプロセスは、Dynamo の変更をプルするプロセスとほとんど同じですが、正しいブランチにいることを確認する必要があります。DynamoRevit リポジトリで `git branch` コマンドを使用して、ローカルで使用可能なブランチと現在チェック アウトされているブランチを確認します。
 

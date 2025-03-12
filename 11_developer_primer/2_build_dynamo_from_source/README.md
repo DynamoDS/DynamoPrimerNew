@@ -1,8 +1,8 @@
-# ソースから Dynamo をビルドする 
+# ソースから Dynamo をビルドする
 
 Dynamo のソースは、クローンを作成して他のユーザに提供するために、GitHub でホストされています。この章では、git を使用してリポジトリをクローン作成する方法、Visual Studio を使用してソース ファイルをコンパイルする方法、ローカル ビルドを実行およびデバッグする方法、および GitHub から新しい変更を取得する方法について説明します。
 
-#### GitHub で Dynamo リポジトリを検索する <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
+### GitHub で Dynamo リポジトリを検索する <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
 GitHub は、利用者間の変更を追跡し、作業を調整するためのバージョン管理システムである [git](https://help.github.com/articles/git-and-github-learning-resources/) に基づくホスト サービスです。git は、Dynamo のソース ファイルをダウンロードして、いくつかのコマンドでそれらを更新するために活用できるツールです。この方法を使用すると、更新のたびにソース ファイルをダウンロードし、手動で置き換えるといった面倒な作業を回避できます。git バージョン管理システムは、ローカルおよびリモート間のコード リポジトリの違いを追跡します。
 
@@ -16,7 +16,7 @@ Dynamo のソースは、次のリポジトリの DynamoDS GitHub でホスト�
 > 3. Dynamo のソース ファイル
 > 4. git 固有ファイル
 
-#### git を使用して Dynamo リポジトリをプルする <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
+### git を使用して Dynamo リポジトリをプルする <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
 リポジトリをクローン作成する前に、git をインストールする必要があります。インストール手順、および GitHub ユーザ名と電子メールの設定方法については、この[簡易ガイド](https://help.github.com/articles/set-up-git/#setting-up-git)に従ってください。この例では、コマンド ラインで git を実行します。このガイドでは、Windows を使用することを前提としていますが、Mac または Linux で git を使用して Dynamo ソースをクローン作成することもできます。
 
@@ -47,7 +47,7 @@ git がインストールされていると、Dynamo リポジトリをクロー
 > 1. Dynamo のソース ファイル
 > 2. git ファイル
 
-#### Visual Studio を使用してリポジトリをビルドする <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
+### Visual Studio を使用してリポジトリをビルドする <a href="#building-the-repository-using-visual-studio" id="building-the-repository-using-visual-studio"></a>
 
 ソース ファイルがローカル マシンにクローン化されたため、Dynamo の実行可能ファイルを構築できるようになりました。これを進めるには、Visual Studio IDE をセットアップし、.NET Framework と DirectX がインストールされていることを確認する必要があります。
 
@@ -84,7 +84,7 @@ git がインストールされていると、Dynamo リポジトリをクロー
 > 1. `Build > Build Solution` を選択します。
 > 2. 出力ウィンドウで正常にビルドされたことを確認します。次のように表示されます。 `==== Build: 69 succeeded, 0 failed, 0 up-to-date, 0 skipped ====`
 
-#### ローカル ビルドを実行する <a href="#running-a-local-build" id="running-a-local-build"></a>
+### ローカル ビルドを実行する <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 Dynamo が正常にビルドを完了すると、DynamoSandbox.exe ファイルを含む `bin` フォルダが Dynamo リポジトリに作成されます。このサンプルでは、デバッグ オプションを使用してビルドしているため、実行可能ファイルは `bin\AnyCPU\Debug` に配置されます。これ実行すると、Dynamo のローカル ビルドが開きます。
 
@@ -96,7 +96,7 @@ Dynamo が正常にビルドを完了すると、DynamoSandbox.exe ファイル�
 
 その他のプラットフォーム(Linux や OS X など)向けに Dynamo を構築する手順については、[Wiki ページ](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-on-Linux,-Mac)を参照してください。
 
-#### Visual Studio を使用してローカル ビルドをデバッグする <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
+### Visual Studio を使用してローカル ビルドをデバッグする <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
 デバッグは、不具合や問題を特定し、分離、修正するプロセスです。Dynamo がソースから正常に構築されると、Visual Studio のいくつかのツールを使用して、DynamoRevit アドインなど実行中のアプリケーションをデバッグすることができます。ソース コードを分析して問題の原因を特定したり、現在実行中のコードを検討することができます。Visual Studio のコードのデバッグ方法およびナビゲーション方法の詳細については、「[Visual Studio ドキュメント](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger)」を参照してください。
 
@@ -137,7 +137,7 @@ Visual Studio から Dynamo を起動すると、必要に応じてデバッグ 
 
 次のセクション「**ソースから DynamoRevit をビルドする**」では、デバッグの特定のサンプルについて説明し、ブレーク ポイントの設定、コードのステップ実行、コール スタックの読み込み方法について説明します。
 
-#### 最新ビルドをプルする <a href="#pulling-latest-build" id="pulling-latest-build"></a>
+### 最新ビルドをプルする <a href="#pulling-latest-build" id="pulling-latest-build"></a>
 
 Dynamo ソースは GitHub でホストされていることから、ローカル ソース ファイルを更新する最も簡単な方法は、git コマンドを使用して変更をプルすることです。
 

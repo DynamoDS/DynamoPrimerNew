@@ -1,4 +1,4 @@
-# Zero-Touch ケース スタディ - グリッド ノード 
+# Zero-Touch ケース スタディ - グリッド ノード
 
 Visual Studio プロジェクトを開始できたので、セルの矩形グリッドを作成するカスタム ノードのビルド方法について説明します。矩形グリッドは複数の標準ノードを使用して作成できますが、このカスタム ノードは Zero-Touch ノードに簡単に含めることができる便利なツールです。通芯とは異なり、セルは、中心点を基点にスケールを変更したり、コーナーの頂点がクエリーされたり、面を構成することができます。
 
@@ -6,7 +6,7 @@ Visual Studio プロジェクトを開始できたので、セルの矩形グリ
 
 ![矩形グリッドのグラフ](images/cover-image.jpg)
 
-#### カスタムの矩形グリッド ノード <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
+### カスタムの矩形グリッド ノード <a href="#custom-rectangular-grid-node" id="custom-rectangular-grid-node"></a>
 
 グリッド ノードのビルドを開始するには、新しい Visual Studio クラス ライブラリ プロジェクトを作成します。プロジェクトの設定方法の詳細な説明については、「スタートアップ」ページを参照してください。
 
@@ -96,7 +96,7 @@ namespace CustomNodes
 > 2. キャンバス上のカスタム ノード。
 > 3. Dynamo に `.dll` を追加するための[追加]ボタン。
 
-#### カスタム ノードの修正 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
+### カスタム ノードの修正 <a href="#custom-node-modifications" id="custom-node-modifications"></a>
 
 上記の例では、`RectangularGrids` メソッド以外の定義があまりないかなり単純なノードを作成しました。しかし、入力ポートのツールチップを作成したり、標準の Dynamo ノードと同様にノードの概要を設定することができます。これらの機能をカスタム ノードに追加すると、特にライブラリで検索する場合に、そのカスタム ノードを簡単に使用できるようになります。
 

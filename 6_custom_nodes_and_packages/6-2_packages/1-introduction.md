@@ -67,7 +67,7 @@ extra フォルダを開くと、インストール時にダウンロードさ�
 
 ファイルを開いてからソルバで[実行]をクリックすると、展開された球形が表示されます。これらのサンプル ファイルは、新しい Dynamo パッケージの使用方法を理解するのに役立ちます。
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### パッケージ情報を参照、表示する
 
@@ -79,7 +79,7 @@ Package Manager では、[パッケージの検索]タブで並べ替えとフ�
 
 ### Dynamo Package Manager の Web サイト
 
-Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo Package Manager](http://dynamopackages.com) の Web サイトを参照する方法もあります。ここでは、パッケージや作成者のリーダーボードに関する統計情報を確認できます。また、Dynamo Package Manager からパッケージ ファイルをダウンロードすることもできますが、Dynamo から直接ダウンロードした方が簡単です。
+Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo Package Manager](http://dynamopackages.com) の Web サイトを参照する方法もあります。ここでは、パッケージ作成者が提供するパッケージの依存関係とホスト/バージョンの互換性情報を確認することができます。また、Dynamo Package Manager からパッケージ ファイルをダウンロードすることもできますが、Dynamo から直接ダウンロードした方が簡単です。
 
 ![](../images/6-2/1/dpm2.jpg)
 
@@ -90,6 +90,53 @@ Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo
 ![](../images/6-2/1/packageintroduction-installingpackagefolder08.jpg)
 
 既定では、パッケージは _C:/Users/[ユーザ名]/AppData/Roaming/Dynamo/[Dynamo バージョン]_ というフォルダ パスにインストールされます。
+
+### Office でパッケージの共有場所を設定する
+
+事前にパッケージがアタッチされた Dynamo を(任意の形式で)配置できるかどうかを確認する場合: この問題を解決し、Dynamo をインストールしたすべてのユーザが一元管理できるようにする方法は、各インストールにカスタム パッケージ パスを追加することです。
+
+**BIM 管理者などが、Office 認定パッケージが入ったフォルダの保管を監督できるネットワーク フォルダを追加する**  
+
+個々のアプリケーションの UI で、[Dynamo] -> [基本設定] -> [パッケージ設定] -> [ノードとパッケージ ファイルの場所]**に移動します。ダイアログで[パスを追加] ボタンを押し、共有パッケージ リソースのネットワークの場所を参照します。 
+ 
+自動化されたプロセスとして、Dynamo と共にインストールされる設定ファイルにも情報を追加します。  
+ `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
+
+既定では、Dynamo for Revit の設定は次のとおりです。
+ 
+ 
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`</CustomPackageFolders>`
+
+カスタムの場所を追加すると、次のようになります。  
+
+`<CustomPackageFolders>`  
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+
+`</CustomPackageFolders>`
+
+
+このフォルダの一元管理は、フォルダを読み取り専用にすることでも制御できます。
+
+### ネットワーク上の保存場所からバイナリを含むパッケージをロードする
+
+#### シナリオ
+
+組織においては、異なるワークステーションやユーザによってインストールされるパッケージを標準化したい場合があります。これを行う方法として、[*Dynamo*] > [基本設定] > [パッケージ設定] > [ノードとパッケージ ファイルの場所]からそれらのパッケージをインストールし、インストール場所としてネットワーク フォルダを選択して、そのパスを `Manage Node and Package Paths` に追加するためにワークステーションを取得することが考えられます。
+
+#### 問題
+
+このシナリオは、カスタム ノードのみを含むパッケージでは適切に機能しますが、ZeroTouch ノードなどのバイナリを含むパッケージでは機能しない可能性があります。この問題は、.NET Framework がネットワーク上の場所からアセンブリのロードを過剰に実行する[セキュリティ対策](https://stackoverflow.com/questions/5328274/load-assembly-from-network-location)が原因で発生します。残念ながら、リンクされたスレッドで提案されている `loadFromRemoteSources` 構成要素の使用は、アプリケーションではなくコンポーネントとして配布されるため、Dynamo の利用可能な解決策ではありません。
+
+#### 回避策
+
+利用可能な回避策の 1 つは、ネットワークの場所を指すマップされたネットワーク ドライブを使用し、ワークステーションが代わりにそのパスを参照するようにすることです。マップされたネットワーク ドライブを作成する手順については、[こちら](https://support.microsoft.com/ja-jp/help/4026635/windows-10-map-a-network-drive)を参照してください。
 
 ### パッケージの拡張
 
