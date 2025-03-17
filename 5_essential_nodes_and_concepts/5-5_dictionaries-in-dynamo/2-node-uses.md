@@ -18,7 +18,7 @@ Dynamo 2.0 exposes a variety of Dictionary nodes for our use. This includes _cre
 
 5\. `Dictionary.ValueAtKey` will return the value at the input key.
 
-#### Count
+#### Query
 
 6\. `Dictionary.Count` will tell you how many key value pairs are in the dictionary.
 
