@@ -4,9 +4,9 @@
 
 A list is a collection of elements, or items. Take a bunch of bananas, for example. Each banana is an item within the list (or bunch). It's easier to pick up a bunch of bananas rather than each banana individually, and the same holds for grouping elements by parametric relationships in a data structure.
 
-![Bananas](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Bananas](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
 When we buy groceries, we put all of the purchased items into a bag. This bag is also a list. If we're making banana bread, we need 3 bunches of bananas (we're making a _lot_ of banana bread). The bag represents a list of banana bunches and each bunch represents a list of bananas. The bag is a list of lists (two-dimensional) and the banana bunch is a list (one-dimensional).
 
@@ -86,22 +86,20 @@ Dynamo nodes automatically recognize when they're working with lists and apply t
 There are two main ways:
 
 #### Cartesian Replication
+
 Let's say you're in the kitchen, making fruit juices. You have a list of fruits: `{apple, orange, pear}` and a fixed amount of water for each juice: `1 cup`. You want to make a juice with each fruit, using the same amount of water. In this case, Cartesian Replication comes into play.
 
 In Dynamo, this means you're feeding the list of fruits into the fruit input of the Juice.Maker node, while the water input remains constant at 1 cup. The node then processes each fruit individually, combining it with the fixed amount of water. The result is:
 
-`apple juice with 1 cup of water`
-`orange juice with 1 cup of water`
-`pear juice with 1 cup of water`
+`apple juice with 1 cup of water` `orange juice with 1 cup of water` `pear juice with 1 cup of water`
 
 Each fruit is paired with the same amount of water.
 
 #### Zip Replication
+
 Zip Replication works a little differently. If you had two lists, one for fruits: `{apple, orange, pear}` and another for sugar amounts: `{2 tbsp, 3 tbsp, 1 tbsp}`, Zip Replication would combine corresponding items from each list. For example:
 
-`apple juice with 2 tablespoons of sugar`
-`orange juice with 3 tablespoons of sugar`
-`pear juice with 1 tablespoon of sugar`
+`apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
 
 Each fruit is paired with it's corresponding amount of sugar.
 

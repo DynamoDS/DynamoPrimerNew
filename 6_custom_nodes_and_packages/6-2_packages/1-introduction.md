@@ -42,7 +42,7 @@ In the Dynamo Library, we have a _DynamoUnfold_ Group with multiple categories a
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Now, let's take a look at the package's file structure.&#x20;
+Now, let's take a look at the package's file structure.
 
 1. First, go to Packages > Package Manager > Installed Packages.
 2. Next to DynamoUnfold, select the options menu <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
@@ -73,7 +73,7 @@ After opening the file and hitting "Run" on the solver, we have an unfolded sphe
 
 In the Package Manager, you can browse for packages by using the sorting and filtering options in the Search for Packages tab. There are several filters available for host program, status (new, deprecated, or undeprecated), and whether or not the package has dependencies.
 
-By sorting the packages, you can identify highly rated or most downloaded packages, or find packages with recent updates.&#x20;
+By sorting the packages, you can identify highly rated or most downloaded packages, or find packages with recent updates.
 
 You can also access more detail on each package by clicking View Details. This opens a side panel in the Package Manager, where you can find information such as versioning and dependencies, website or repository URL, license information, etc.
 
@@ -93,35 +93,32 @@ By default, packages are installed in a location similar to this folder path: _C
 
 ### Setting up a Shared Location for Packages in an Office
 
-For users who are asking if it is possible to deploy Dynamo (in any form) with pre-attached packages:
-The approach that will solve this issue and allow for control at a central location for all users with Dynamo installs is to add a custom package path to each installation.
+For users who are asking if it is possible to deploy Dynamo (in any form) with pre-attached packages: The approach that will solve this issue and allow for control at a central location for all users with Dynamo installs is to add a custom package path to each installation.
 
-**Adding a network folder where the BIM manager or others could supervise the stocking of the folder with office approved packages**  
+**Adding a network folder where the BIM manager or others could supervise the stocking of the folder with office approved packages**
 
-In the UI of an individual application, go to *Dynamo -> Preferences -> Package Settings -> Node and Package file locations*.  In the dialog, press the "Add Path" button and browse to the network location for the shared package resource. 
- 
-As an automated process, it would involve adding information to the configuration file that is installed with Dynamo:  
+In the UI of an individual application, go to _Dynamo -> Preferences -> Package Settings -> Node and Package file locations_. In the dialog, press the "Add Path" button and browse to the network location for the shared package resource.
+
+As an automated process, it would involve adding information to the configuration file that is installed with Dynamo:\
 `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
 By default, the configuration for Dynamo for Revit is:
- 
- 
-`<CustomPackageFolders>`  
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+`<CustomPackageFolders>`
 
-`</CustomPackageFolders>`
-
-Adding a custom location would look like:  
-
-`<CustomPackageFolders>`  
-
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
-
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
+Adding a custom location would look like:
+
+`<CustomPackageFolders>`
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+
+`</CustomPackageFolders>`
 
 The central management for this folder can also be controlled by simply making the folder read only.
 
@@ -129,7 +126,7 @@ The central management for this folder can also be controlled by simply making t
 
 #### Scenario
 
-An organization might want to standardize the packages installed by different workstations and users. A way to do this, could be to install these packages from *Dynamo -> Preferences -> Package Settings -> Node and Package file locations*, selecting a network folder as the install location, and get workstations to add that path to `Manage Node and Package Paths`.
+An organization might want to standardize the packages installed by different workstations and users. A way to do this, could be to install these packages from _Dynamo -> Preferences -> Package Settings -> Node and Package file locations_, selecting a network folder as the install location, and get workstations to add that path to `Manage Node and Package Paths`.
 
 #### Problem
 

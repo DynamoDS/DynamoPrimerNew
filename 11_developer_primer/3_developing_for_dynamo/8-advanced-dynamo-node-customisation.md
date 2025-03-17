@@ -51,7 +51,7 @@ In this example, we'll build upon the custom node created in the previous "**Zer
 
 ![OnLogWarningMessage Example 1](images/onlogwarningmessage-example-1.png)
 
-##### Using `OnLogWarningMessage` for Input Validation <a href="#using-onlogwarningmessage-for-input-validation" id="using-onlogwarningmessage-for-input-validation"></a>
+**Using `OnLogWarningMessage` for Input Validation**
 
 When generating a grid based on `xCount` and `yCount`. You want to ensure both values are positive integers before proceeding.
 
@@ -73,7 +73,7 @@ In this example:
 * **Condition**: If either `xCount` or `yCount` is less than or equal to zero.
 * **Message**: `"Grid count values must be positive integers."`
 
-This will show the warning in Dynamo if a user enters zero or negative values, helping them understand the expected input. 
+This will show the warning in Dynamo if a user enters zero or negative values, helping them understand the expected input.
 
 Now we know what this looks like, we can implement it into the Grids example node:
 
@@ -133,7 +133,7 @@ namespace CustomNodes
 }
 ```
 
-##### Example 2: Checking for Null or Empty Collections <a href="#example-2-checking-for-null-or-empty-collections" id="example-2-checking-for-null-or-empty-collections"></a>
+**Example 2: Checking for Null or Empty Collections**
 
 If your method requires a list of points but a user passes an empty or null list, you can use `OnLogWarningMessage` to inform them about the issue.
 
@@ -158,9 +158,9 @@ In this example:
 
 This warns users that they need to pass a valid list with at least three points to form a polygon.
 
----
+***
 
-##### Example 3: Verifying File Type Compatibility <a href="#example-3-verifying-file-type-compatibility" id="example-3-verifying-file-type-compatibility"></a>
+**Example 3: Verifying File Type Compatibility**
 
 For a node that processes file paths, you may want to ensure that only certain file types are allowed. If an unsupported file type is detected, log a warning.
 
@@ -190,6 +190,7 @@ This warns users to ensure they are passing a CSV file, helping prevent issues r
 In Dynamo, `OnLogInfoMessage` from the `DynamoServices` namespace lets developers log informational messages directly to Dynamo's console. This is helpful for confirming successful operations, communicating progress, or providing additional insights about node actions. This guide will teach you how to add `OnLogInfoMessage` in any Zero Touch node to enhance feedback and improve user experience.
 
 ### Implementation Steps for `OnLogInfoMessage` <a href="#implementation-steps-for-onloginfomessage" id="implementation-steps-for-onloginfomessage"></a>
+
 #### Step 1: Import the Required Namespace <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
 
 `OnLogInfoMessage` is part of the `DynamoServices` namespace, so begin by adding this to your project file.
@@ -227,7 +228,7 @@ In this example, we'll build upon the custom node created in the previous "**Zer
 
 ![OnLogInfoMessage Example 1](images/onloginfomessage-example-1.png)
 
-###### Using `OnLogInfoMessage` for Input Validation <a href="#using-onloginfomessage-for-unput-validation" id="using-onloginfomessage-for-unput-validation"></a>
+**Using `OnLogInfoMessage` for Input Validation**
 
 When generating a grid based on `xCount` and `yCount`. After generating the grid, you want to confirm its creation by logging an informational message with the grid's dimensions.
 
@@ -334,7 +335,6 @@ In this example:
 
 This message will help users understand the result of the processing and confirm that all points were processed.
 
-
 #### Example 3: Summarizing Parameters Used <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
 
 In some cases, it's useful to confirm the input parameters a node used to complete an action. For example, if your node exports data to a file, logging the file name and path can reassure users that the correct file was used.
@@ -362,25 +362,31 @@ This message confirms to users that the export worked and shows the exact file p
 ## Creating and Adding Custom Documentation to Nodes
 
 ### Custom node documentation
+
 Historically, there has been limitations in Dynamo for how package authors could provide documentation for their nodes. Custom Node authors have been restricted to only allowing a short description that displays in the tooltip of the node, or to ship your package with heavily annotated sample graphs.
 
 ![Node Tooltip Description](images/customnodedocumentation-overloads.png)
 
 ### A new way
-Dynamo now offers an improved system for package authors to provide better and more explanatory documentation for your custom nodes. This new approach utilizes the user-friendly Markdown language for text authoring and the Documentation Browser view extension to display the Markdown in Dynamo. Using Markdown gives package authors a wide array of new possibilities when documenting their custom nodes. 
+
+Dynamo now offers an improved system for package authors to provide better and more explanatory documentation for your custom nodes. This new approach utilizes the user-friendly Markdown language for text authoring and the Documentation Browser view extension to display the Markdown in Dynamo. Using Markdown gives package authors a wide array of new possibilities when documenting their custom nodes.
 
 #### What is Markdown?
+
 Markdown is a lightweight markup language that you can use to format plaintext text documents. Since Markdown was created in 2004 it's popularity has only increased and is now one of the most popular markup languages in the world.
 
 #### Getting started with Markdown
+
 It's easy to start making Markdown files - all you need is a simple text editor, like Notepad, and you're good to go. However, there are easier ways to write Markdown than using Notepad. There are several online editors, such as [Dillinger](https://dillinger.io/), that let you see your changes in real-time as you make them. Another popular way of editing Markdown files is using a code editor like [Visual studio code](https://code.visualstudio.com/).
 
 #### What can Markdown do?
-Markdown is very flexible and should provide enough functionality to easily create good documentation - this includes; adding media files like images or videos, creating tables with different forms of content, and of course simple text formatting features like making text **bold** or *italic*. All of this and so much more is possible when writing Markdown documents, for more information have a look at this guide which explains the 
-[basic Markdown syntax](https://www.Markdownguide.org/basic-syntax/).
+
+Markdown is very flexible and should provide enough functionality to easily create good documentation - this includes; adding media files like images or videos, creating tables with different forms of content, and of course simple text formatting features like making text **bold** or _italic_. All of this and so much more is possible when writing Markdown documents, for more information have a look at this guide which explains the [basic Markdown syntax](https://www.markdownguide.org/basic-syntax/).
 
 ### Adding extended documentation to your nodes
+
 Adding documentation to your nodes is easy. Documentation can be added to all flavors of custom nodes, covering:
+
 * Out of the Box Dynamo Nodes
 * Custom Nodes (.dyf) - Collections of out of the box and/or other package nodes.
 * Custom C# Package Nodes (Also known as Zerotouch. These custom nodes look like the out-of-the-box nodes)
@@ -390,6 +396,7 @@ Adding documentation to your nodes is easy. Documentation can be added to all fl
 Follow these few steps to get your Markdown files to show inside Dynamo.
 
 #### Opening documentation files in Dynamo
+
 Dynamo uses the Documentation Browser view extension to display nodes documentation. To open a nodes documentation, right click on the node and select help. This will open up the Documentation Browser and display the Markdown associated with that node, if there is any provided.
 
 ![Documentation Browser](images/customnodedocumentation-no-documentation-provided.png)
@@ -399,21 +406,22 @@ The documentation displayed in the Documentation Browser is made up of two parts
 ![Custom Node Documentation](images/customnodedocumentation-custom-node-documentation.png)
 
 #### Package doc folder
+
 To add documentation files to your nodes in Dynamo, create a new folder in your package directory called `/doc`. When your package is loaded, Dynamo will scan this directory and get all of the documentation Markdown files in it.
 
 #### Naming Markdown files
-To make sure Dynamo knows which file to open when requested for a specific node, the naming of the Markdown file needs to be in a specific format. Your Markdown file should be named according to the node it documents' namespace. If you are unsure about the namespace of the node, look at the `Node Info` section when you press `Help` on the node and under the node name you will see the full namespace of the selected node. 
+
+To make sure Dynamo knows which file to open when requested for a specific node, the naming of the Markdown file needs to be in a specific format. Your Markdown file should be named according to the node it documents' namespace. If you are unsure about the namespace of the node, look at the `Node Info` section when you press `Help` on the node and under the node name you will see the full namespace of the selected node.
 
 This namespace should be the name of your Markdown file for that particular node. For example the namespace of `CustomNodeExample` from above images, is `TestPackage.TestCategory.CustomNodeExample` therefore the Markdown file for this node should be named `TestPackage.TestCategory.CustomNodeExample.md`
 
-In special cases where you have overloads of your nodes (nodes with same name, but different inputs), you will have to add the input names in `()` after the node namespace. For example the built-in node `Geometry.Translate` has multiple overloads. In this case we would name the Markdown files for below nodes as follows:
-`Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md`
-`Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
+In special cases where you have overloads of your nodes (nodes with same name, but different inputs), you will have to add the input names in `()` after the node namespace. For example the built-in node `Geometry.Translate` has multiple overloads. In this case we would name the Markdown files for below nodes as follows: `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction).md` `Autodesk.DesignScript.Geometry.Geometry.Translate(geometry,direction,distance).md`
 
 ![Overload Nodes](images/customnodedocumentation-overloads.png)
 
 #### Modifying Markdown files while open in Dynamo
-To make it easy to modify documentation files, the Documentation Browser implements a File Watcher on the open documentation file. This enables you to make changes to your Markdown file and you will see the changes in Dynamo instantly. 
+
+To make it easy to modify documentation files, the Documentation Browser implements a File Watcher on the open documentation file. This enables you to make changes to your Markdown file and you will see the changes in Dynamo instantly.
 
 ![Hot Reloading](images/customnodedocumentation-hot-reload.gif)
 
@@ -427,7 +435,6 @@ Custom icons for Zero Touch nodes in Dynamo make your nodes visually distinctive
 
 This guide will show you how to add icons to your Zero Touch nodes.
 
-
 ### Steps to Add Custom Node Icons
 
 #### Step 1: Set Up Your Project
@@ -440,19 +447,18 @@ To begin, create a Visual Studio Class Library (.NET Framework) project for your
 
 Make sure you have at least one functional Zero Touch node, as icons can only be added to existing nodes. For guidance, see the **Zero Touch Case Study - Grid Node**.
 
-
 #### Step 2: Create Your Icon Images
 
 To create custom icons:
 
 1. **Design Your Icons**: Use an image editor to create simple, visually clear icons for your nodes.
 2. **Image Specifications**:
-    * **Small Icon**: 32x32 pixels (used in the Library's sidebar and on the node itself).
-    * **Large Icon**: 128x128 pixels (used in the node properties when hovering over the node in the library).
+   * **Small Icon**: 32x32 pixels (used in the Library's sidebar and on the node itself).
+   * **Large Icon**: 128x128 pixels (used in the node properties when hovering over the node in the library).
 3. **File Naming Convention**:
-    * The file names must match the format below to associate them with the correct node:
-        * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (for the small icon).
-        * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (for the large icon).
+   * The file names must match the format below to associate them with the correct node:
+     * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (for the small icon).
+     * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (for the large icon).
 
 **Example**: If your project is `ZeroTouchNodeIcons`, your class is `Grids`, and your method is `RectangularGrid`, the files would be named:
 
@@ -461,49 +467,47 @@ To create custom icons:
 
 > Tip: Stick to a consistent design theme across all your icons for a professional look.
 
-
 #### Step 3: Add a Resources File to Your Project
 
 To embed your icons into the `.dll`, create a resources file:
 
 1. **Add a New Resources File**:
 
-  * Right-click your project in the **Solution Explorer**.
+* Right-click your project in the **Solution Explorer**.
 
 ![Adding a new item](images/zerotouchicons-add-resources-file-1.jpg)
 
-  * Go to **Add > New Item** and select **Resources File**.
+* Go to **Add > New Item** and select **Resources File**.
 
 ![Adding a resources file](images/zerotouchicons-add-resources-file-2.jpg)
 
-  * Name the file `<ProjectName>Images.resx`. For example, `ZeroTouchNodeIconsImages.resx`.
+* Name the file `<ProjectName>Images.resx`. For example, `ZeroTouchNodeIconsImages.resx`.
 
 2. **Clear the Custom Tool Property**:
-    * Select the resources file in the **Solution Explorer**.
-    * In the **Properties** panel, clear the `Custom Tool` field by removing the `ResXFileCodeGenerator` value.
+   * Select the resources file in the **Solution Explorer**.
+   * In the **Properties** panel, clear the `Custom Tool` field by removing the `ResXFileCodeGenerator` value.
 
 ![Cleaning the Custom Tool Property](images/zerotouchicons-custom-tool-property.jpg)
 
-> *NOTE: Failing to clear the "Custom Tool" field will result in Visual Studio converting periods to underscores in your resource names. Please verify before Building that your resource names have periods separating class names rather than underscores.*
-
+> _NOTE: Failing to clear the "Custom Tool" field will result in Visual Studio converting periods to underscores in your resource names. Please verify before Building that your resource names have periods separating class names rather than underscores._
 
 #### Step 4: Add Your Images as Resources
 
 1. Open the resources file using the **Managed Resources Editor (Legacy)**:
-    * If using Visual Studio 17.11 or later, right-click the resources file, choose **Open With**, and select **Managed Resources Editor (Legacy)**.
-    * If using a Visual Studio version previous to 17.11, double click on the resources file to open with the Resources Editor (which in your version of Visual Studio has not been made legacy yet).
+   * If using Visual Studio 17.11 or later, right-click the resources file, choose **Open With**, and select **Managed Resources Editor (Legacy)**.
+   * If using a Visual Studio version previous to 17.11, double click on the resources file to open with the Resources Editor (which in your version of Visual Studio has not been made legacy yet).
 
 ![Using Open With...](images/zerotouchicons-open-resource-editor.jpg)
 
 ![Opening the resources file with Managed Resources Editor (Legacy)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. Add your images:
-    * Drag and drop your image files into the editor or use the **Add Existing File** option.
+   * Drag and drop your image files into the editor or use the **Add Existing File** option.
 
 ![Adding Existing Files](images/zerotouchicons-add-existing-file.jpg)
 
 3. Update persistence:
-    * Select the images from within the Resources Editor (this will not work if you select them from the Solution Explorer), change the **Persistence** property in the **Properties** panel to `Embedded in .resx`. This ensures the images are included in your `.dll`.
+   * Select the images from within the Resources Editor (this will not work if you select them from the Solution Explorer), change the **Persistence** property in the **Properties** panel to `Embedded in .resx`. This ensures the images are included in your `.dll`.
 
 ![Updating Persistence](images/zerotouchicons-edit-persistence-property.jpg)
 
@@ -527,16 +531,15 @@ If your project is not already SDK-style (required for embedding resources), con
 
 ![Upgrade Complete](images/zerotouchicons-upgrade-complete.jpg)
 
-
 #### Step 6: Add an After-Build Script to Embed Resources
 
 1. Unload the project:
-    * Right-click the project in the **Solution Explorer** and select **Unload Project**.
+   * Right-click the project in the **Solution Explorer** and select **Unload Project**.
 
 ![Unload the project](images/zerotouchicons-unload-project.jpg)
 
 2. Edit the `.csproj` file:
-    * Add the following `<Target>` element between `</ItemGroup>` and `</Project>`:
+   * Add the following `<Target>` element between `</ItemGroup>` and `</Project>`:
 
 ```
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
@@ -553,25 +556,26 @@ If your project is not already SDK-style (required for embedding resources), con
 		<AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)ZeroTouchNodeIconsImages.resources" OutputAssembly="$(OutDir)ZeroTouchNodeIcons.customization.dll" Version="%(AssemblyInfo.Version)" />
 	</Target>
 ```
+
 ![Adding the After Build code](images/zerotouchicons-after-build.jpg)
+
 1. Replace all instances of `ZeroTouchNodeIcons` with your project name.
 2. Reload the project:
-    * Right-click the unloaded project and select **Reload Project**.
+   * Right-click the unloaded project and select **Reload Project**.
 
 ![Reload the project](images/zerotouchicons-reload-project.jpg)
-
 
 #### Step 7: Build and Load Your .dll into Dynamo
 
 1. Build the project:
-    * After adding the After-Build script, build your project in Visual Studio.
+   * After adding the After-Build script, build your project in Visual Studio.
 
 ![Build Solution](images/zerotouchicons-build-solution.jpg)
 
 2. Check for output files:
-    * Ensure your `.dll` and the `.customization.dll` are in the `bin` folder.
+   * Ensure your `.dll` and the `.customization.dll` are in the `bin` folder.
 3. Add the `.dll` to Dynamo:
-    * In Dynamo, use the Import Library button to import your .dll into Dynamo.
+   * In Dynamo, use the Import Library button to import your .dll into Dynamo.
 
 ![Import Library Button](images/zerotouchicons-icon-in-dynamo.jpg)
 

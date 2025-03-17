@@ -74,6 +74,8 @@
   * [Dynamo Player](dynamo-for-civil-3d/dynamo-player.md)
   * [Useful Packages](dynamo-for-civil-3d/useful-packages.md)
   * [Resources](dynamo-for-civil-3d/resources.md)
+* [Dynamo in Forma Beta](dynamo-in-forma-beta/README.md)
+  * [Dynamo compute service differences with Desktop Dynamo](dynamo-in-forma-beta/dynamo-compute-service-differences-with-desktop-dynamo.md)
 * [Coding in Dynamo](8_coding_in_dynamo/README.md)
   * [Code Blocks and DesignScript](8_coding_in_dynamo/8-1_code-blocks-and-design-script/README.md)
     * [What's a Code Block](8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block.md)
