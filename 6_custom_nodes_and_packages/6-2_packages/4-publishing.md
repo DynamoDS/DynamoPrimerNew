@@ -19,7 +19,7 @@ Then restart Dynamo. When reopening, when you check the _"Manage Packages"_ wind
 ### Publishing a Package Locally
 
 {% hint style="warning" %}
-You can publish custom nodes and packages from Dynamo Sandbox in version 2.17 and newer, as long as they have no host API dependencies. In older versions, publishing custom nodes and packages is only enabled in Dynamo for Revit and Dynamo for Civil 3D.&#x20;
+You can publish custom nodes and packages from Dynamo Sandbox in version 2.17 and newer, as long as they have no host API dependencies. In older versions, publishing custom nodes and packages is only enabled in Dynamo for Revit and Dynamo for Civil 3D.
 {% endhint %}
 
 > Download the example file by clicking on the link below.
@@ -83,11 +83,10 @@ Note: please do not follow along with this step unless you are actually publishi
 1. When you're ready to publish, in the Packages > Package Manager > Installed Packages window, select the button the right of the package you want to publish and choose Publish.
 2. If you're updating a package that has already been published, choose "Publish Version" and Dynamo will update your package online based on the new files in that package's root directory. Simple as that!
 
-#### Testing the Package Manager Server
-When testing the package manager, don't send your test packages to the production server. Use the staging server. This prevents your packages from polluting real packages and activity. It's easy to configure Dynamo to use the staging server. 
-
-For more information on this, please refer to the [Testing the Package Manager Server Wiki Page](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
-
 ### Publish Version...
 
 When you update the files in your published package's root folder, you can also publish a new version of the package by selecting _"Publish Version..."_ in the _My Packages_ tab. This is a seamless way to make necessary updates to your content and share with the community. _Publish Version_ will only work if you're the maintainer of the package.
+
+### Transferring Ownership of a Package
+
+Currently, you cannot transfer package ownership via the Package Manager. You can ask the Dynamo team to add an additional owner. Note we cannot remove existing owners, only add more maintainers of the package. If you wish to add an account as an owner to your existing package, please send an email to [dynamoteam@dynamobim.org](mailto:dynamoteam@dynamobim.org). Make sure to provide the package name and the account name you wish to add.

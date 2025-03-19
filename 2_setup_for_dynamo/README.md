@@ -12,11 +12,11 @@ Dynamo comes pre-installed with software such as **Revit3D**, **FormIt**, **Civi
 
 To start using, launch it from your toolbar panel. Depends on which software you are using, the launch icon can usually be found from the Menu > **Manage** Tab. Click on Dynamo icon ![](images/dynamoCore-halfSize.png) to launch it.
 
-![](<../7\_dynamo\_for\_revit/images/1/launchdynamofromrevit (1).jpg>)
+![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
 
 For more guidance on using Dynamo with a specific software, we recommend referring to the following sections:
 
-* [Dynamo for Revit](../7\_dynamo\_for\_revit/)
+* [Dynamo for Revit](../7_dynamo_for_revit/)
 * [Dynamo for Civil 3D](../dynamo-for-civil-3d/)
 
 If you would like to use Dynamo as a standalone application. Continue reading for guidance on downloading the Sandbox.
@@ -66,5 +66,5 @@ You will see the DynamoSandbox startup screen as follow.
 Congratulations, you have now finished the setup for using DynamoSandbox!
 
 {% hint style="info" %}
-**Geometry** is an additional functionality in Dynamo Sandbox that is only available to users who have a current subscription or license to the following Autodesk software: Revit, Robot Structural Analysis, FormIt, and Civil 3D. **Geometry** allows users too import, create, edit and export geometry from Dynamo Sandbox.
+**Geometry** is an additional functionality in Dynamo Sandbox that is only available to users who have a current subscription or license to the following Autodesk software: Revit, Robot Structural Analysis, FormIt, and Civil 3D. **Geometry** allows users to import, create, edit and export geometry from Dynamo Sandbox.
 {% endhint %}

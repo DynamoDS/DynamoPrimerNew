@@ -4,7 +4,7 @@ Before jumping into development, it is important to build a strong foundation fo
 
 ![Visual Studio](images/visual-studio.jpg)
 
-#### Creating a Visual Studio Project <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
+### Creating a Visual Studio Project <a href="#creating-a-visual-studio-project" id="creating-a-visual-studio-project"></a>
 
 Visual Studio is a powerful IDE where we can create a project, add references, build `.dlls`, and debug. When creating a new project Visual Studio will also create a Solution, a structure for organizing projects. Multiple projects can exist inside a single solution and can be built together. To create a ZeroTouch node, we will need to start a new Visual Studio project in which we will write a C# class library and build a `.dll`.
 
@@ -84,7 +84,7 @@ If a category is created in the library called `MyCustomNode`, the .dll was impo
 > 1. MyCustomNode in the Dynamo Library. The Library category is determined by the `.dll` name.
 > 2. SampleFunctions.MultiplyByTwo on the canvas.
 
-#### How Dynamo Reads Classes and Methods <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
+### How Dynamo Reads Classes and Methods <a href="#how-dynamo-reads-classes-and-methods" id="how-dynamo-reads-classes-and-methods"></a>
 
 When Dynamo loads a .dll, it will expose all public static methods as nodes. Constructors, methods, and properties will be turned into Create, Action, and Query nodes respectively. In our multiplication example, the `MultiplyByTwo()` method becomes an Action node in Dynamo. This is because the node has been named based on its method and class.
 
@@ -119,7 +119,7 @@ namespace MyCustomNode
 
 > 1. Dynamo has imported our method as a Create node
 
-#### Adding Dynamo NuGet Package References <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
+### Adding Dynamo NuGet Package References <a href="#adding-dynamo-nuget-package-references" id="adding-dynamo-nuget-package-references"></a>
 
 The multiplication node is very simple and no references to Dynamo are required. If we want to access any of Dynamo's functionality to create geometry for example, we will need to reference the Dynamo NuGet packages.
 
