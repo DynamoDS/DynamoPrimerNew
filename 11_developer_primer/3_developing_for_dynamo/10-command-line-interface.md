@@ -1,16 +1,27 @@
 # Dynamo Command Line Interface
 
-<div style="overflow-x: auto;">
-
-***
+```plaintext
       -o, -O, --OpenFilePath        Instruct Dynamo to open a command file and run the commands it contains at 
                                     this path, this option is only supported when run from DynamoSandbox
+```
 
-***
+<div style="overflow-x: auto; white-space: nowrap;">
+
+```plaintext
       -c, -C, --CommandFilePath     Instruct Dynamo to open a command file and run the commands it contains at 
                                     this path, this option is only supported when run from DynamoSandbox                      
-***
+```
+
+</div> 
+
+<div style="overflow-x: auto; white-space: nowrap;">
+  <pre>
+    <code>
       -v, -V, --Verbose             Instruct Dynamo to output all evaluations it performs to an XML file at this path
+    </code>
+  </pre>
+</div>
+
 ***                                        
       -g, -G, --Geometry            Instruct Dynamo to output geometry from all evaluations to a JSON file at this path
 ***
@@ -47,8 +58,6 @@
       --CERLocation                 Specify the crash error report tool located on the disk
 ***
       --ServiceMode                 Specify the service mode startup
-
-</div>
 
 
 #### Why 
