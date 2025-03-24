@@ -47,7 +47,7 @@ LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 
 #### 예제 1: 숫자 입력의 유효성 검사 <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-이 예제에서는 이전의 "**Zero-Touch 사례 연구 - 그리드 노드"**에서 생성한 사용자 정의 노드를 기반으로 구축할 것입니다. 그리도 노드는 `xCount` 및 `yCount` 입력을 바탕으로 직사각형 그리드를 생성하는 `RectangularGrid`라는 메서드를 포함합니다. 입력이 유효하지 않은지를 테스트한 다음, `OnLogWarningMessage`를 사용하여 경고를 기록하고 처리를 중지하는 과정을 살펴보겠습니다.
+이 예제에서는 이전의 "**Zero-Touch 사례 연구 - 그리드 노드"** 에서 생성한 사용자 정의 노드를 기반으로 구축할 것입니다. 그리도 노드는 `xCount` 및 `yCount` 입력을 바탕으로 직사각형 그리드를 생성하는 `RectangularGrid`라는 메서드를 포함합니다. 입력이 유효하지 않은지를 테스트한 다음, `OnLogWarningMessage`를 사용하여 경고를 기록하고 처리를 중지하는 과정을 살펴보겠습니다.
 
 ![OnLogWarningMessage 예제 1](images/onlogwarningmessage-example-1.png)
 
@@ -223,7 +223,7 @@ LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 
 #### 예제 1: 숫자 입력의 유효성 검사 <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-이 예제에서는 이전의 "**Zero-Touch 사례 연구 - 그리드 노드"**에서 생성한 사용자 정의 노드를 기반으로 구축할 것입니다. 그리도 노드는 `xCount` 및 `yCount` 입력을 바탕으로 직사각형 그리드를 생성하는 `RectangularGrid`라는 메서드를 포함합니다. 입력이 유효하지 않은지를 테스트한 다음, 노드 실행이 완료된 후 `OnLogInfoMessage`를 사용하여 정보를 제공하는 과정을 살펴보겠습니다.
+이 예제에서는 이전의 "**Zero-Touch 사례 연구 - 그리드 노드"** 에서 생성한 사용자 정의 노드를 기반으로 구축할 것입니다. 그리도 노드는 `xCount` 및 `yCount` 입력을 바탕으로 직사각형 그리드를 생성하는 `RectangularGrid`라는 메서드를 포함합니다. 입력이 유효하지 않은지를 테스트한 다음, 노드 실행이 완료된 후 `OnLogInfoMessage`를 사용하여 정보를 제공하는 과정을 살펴보겠습니다.
 
 ![OnLogInfoMessage 예제 1](images/onloginfomessage-example-1.png)
 
@@ -486,8 +486,8 @@ Dynamo에서 Zero Touch 노드에 사용자 정의 아이콘을 추가하면 노
 
 #### 4단계: 이미지를 리소스로 추가
 
-1. **관리되는 리소스 편집기(레거시)**를 사용하여 리소스 파일을 엽니다.
-    * Visual Studio 17.11 이상을 사용하는 경우 리소스 파일을 마우스 오른쪽 버튼으로 클릭하고, **연결 프로그램**을 선택하고, **관리되는 리소스 편집기(레거시)**를 선택합니다.
+1. **관리되는 리소스 편집기(레거시)** 를 사용하여 리소스 파일을 엽니다.
+    * Visual Studio 17.11 이상을 사용하는 경우 리소스 파일을 마우스 오른쪽 버튼으로 클릭하고, **연결 프로그램**을 선택하고, **관리되는 리소스 편집기(레거시)** 를 선택합니다.
     * 17.11 이전 버전의 Visual Studio를 사용하는 경우 리소스 파일을 두 번 클릭하여 리소스 편집기로 엽니다(해당 버전의 Visual Studio에서는 아직 레거시로 전환되지 않았음).
 
 ![연결 프로그램... 사용](images/zerotouchicons-open-resource-editor.jpg)

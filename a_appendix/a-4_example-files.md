@@ -36,7 +36,7 @@
 
 ### 프로그램의 빌딩 블록
 
-#### 패널 >
+#### 패널
 
 {% file src="../5_essential_nodes_and_concepts/datasets/5-3/1/Building Blocks of Programs - Data.dyn" %}
 

@@ -40,7 +40,7 @@ AutoCAD와 Civil 3D에는 여러분과 같은 개발자가 사용자 지정 기�
 > 9. 노드에서 데이터를 출력하려면 스크립트 끝에 있는 `OUT` 변수에 데이터를 지정합니다.
 
 {% hint style="info" %} **사용자화하시겠습니까?**\
- `C:\ProgramData\Autodesk\C3D <version>\Dynamo`에 있는 `PythonTemplate.py` 파일을 편집하여 기본 Python 템플릿을 수정할 수 있습니다. {% endhint %}
+ `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 에 있는 `PythonTemplate.py` 파일을 편집하여 기본 Python 템플릿을 수정할 수 있습니다. {% endhint %}
 
 ## 예제
 
@@ -84,7 +84,7 @@ AutoCAD와 Civil 3D에는 여러분과 같은 개발자가 사용자 지정 기�
 
 ### 객체 언래핑
 
-더 자세히 알아보기 전에 중요한 개념을 간단히 살펴봐야 합니다. [node-library.md](../node-library.md "mention") 섹션에서 객체와 CivilObjects가 어떻게 관련되어 있는지 살펴보았습니다. 이에 대해 조금 더 자세히 설명하자면, **Dynamo 객체**는 **AutoCAD 도면요소**를 감싸는 래퍼입니다. 마찬가지로, **Dynamo CivilObject**도 **Civil 3D 도면요소**를 감싸는 래퍼입니다. 해당 `InternalDBObject` 또는 `InternalObjectId` 특성에 액세스하여 객체의 "언래핑"할 수 있습니다.
+더 자세히 알아보기 전에 중요한 개념을 간단히 살펴봐야 합니다. [node-library.md](../node-library.md "mention") 섹션에서 객체와 CivilObjects가 어떻게 관련되어 있는지 살펴보았습니다. 이에 대해 조금 더 자세히 설명하자면, **Dynamo 객체** 는 **AutoCAD 도면요소** 를 감싸는 래퍼입니다. 마찬가지로, **Dynamo CivilObject** 도 **Civil 3D 도면요소** 를 감싸는 래퍼입니다. 해당 `InternalDBObject` 또는 `InternalObjectId` 특성에 액세스하여 객체의 "언래핑"할 수 있습니다.
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo 유형</th><th width="373">랩</th></tr></thead><tbody><tr><td><strong>객체</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>도면요소</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>도면요소</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
@@ -179,9 +179,9 @@ with adoc.LockDocument():
 
 ## IronPython과 CPython
 
-마무리하기 전에 간단히 한 가지 더 알려드리겠습니다. 사용 중인 Civil 3D 버전에 따라 Python 노드가 다르게 구성될 수 있습니다. **Civil 3D 2020 및 2021**에서 Dynamo는 **IronPython**이라는 도구를 사용하여 .NET 객체와 Python 스크립트 간에 데이터를 이동했습니다. 그러나 **Civil 3D 2022**에서는 Dynamo가 Python 3을 사용하는 대신 표준 기본 Python 인터프리터(**CPython**)를 사용하도록 전환되었습니다. 이러한 전환의 이점으로는 널리 사용되는 최신 라이브러리와 새로운 플랫폼 기능, 필수 유지보수 및 보안 패치에 대한 액세스가 포함됩니다.
+마무리하기 전에 간단히 한 가지 더 알려드리겠습니다. 사용 중인 Civil 3D 버전에 따라 Python 노드가 다르게 구성될 수 있습니다. **Civil 3D 2020 및 2021** 에서 Dynamo는 **IronPython** 이라는 도구를 사용하여 .NET 객체와 Python 스크립트 간에 데이터를 이동했습니다. 그러나 **Civil 3D 2022** 에서는 Dynamo가 Python 3을 사용하는 대신 표준 기본 Python 인터프리터(**CPython**)를 사용하도록 전환되었습니다. 이러한 전환의 이점으로는 널리 사용되는 최신 라이브러리와 새로운 플랫폼 기능, 필수 유지보수 및 보안 패치에 대한 액세스가 포함됩니다.
 
-{% hint style="info" %} [Dynamo 블로그](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/)에서 이 전환에 대한 자세한 내용과 기존 스크립트를 업그레이드하는 방법을 확인할 수 있습니다. IronPython을 계속 사용하려면 Dynamo Package Manager를 사용하여 **DynamoIronPython2.7** 패키지를 설치하기만 하면 됩니다. {% endhint %}
+{% hint style="info" %} [Dynamo 블로그](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) 에서 이 전환에 대한 자세한 내용과 기존 스크립트를 업그레이드하는 방법을 확인할 수 있습니다. IronPython을 계속 사용하려면 Dynamo Package Manager를 사용하여 **DynamoIronPython2.7** 패키지를 설치하기만 하면 됩니다. {% endhint %}
 
 [^1]: 기본적으로 Dynamo 형상 라이브러리는 Python 환경에 추가되지 않습니다. 이 스크립트의 목적은 유역 경계에 대한 Dynamo 점 리스트를 출력하는 것이므로, 나중에 점을 작성하기 위해 이 행을 추가해야 합니다.
 

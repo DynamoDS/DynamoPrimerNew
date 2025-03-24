@@ -85,7 +85,7 @@ Runtime이 설치되면 Dynamo의 다음 구성요소가 제대로 작동해야 
 
 
 ##### Dynamo Excel 노드 문제
-진단은 이 [문서](https://knowledge.autodesk.com/support/revit-products/troubleshooting/caas/sfdcarticles/sfdcarticles/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html)를 참조하십시오.
+진단은 이 [문서](https://www.autodesk.com/kr/support/technical/article/caas/sfdcarticles/sfdcarticles/KOR/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html)를 참조하십시오.
 
 ### Dynamo 빌드 위치
 안정적인 릴리즈

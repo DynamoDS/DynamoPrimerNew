@@ -63,7 +63,7 @@ Dynamo로 가져온 Excel 데이터는 다음과 같습니다.
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>사전에 Excel 데이터 넣기</p></figcaption></figure>
 
-이렇게 하면 Excel에서 열의 순서를 유연하게 변경할 수 있으므로 그래프의 탄력성이 향상됩니다. 열 헤더가 동일하게 유지되는 한, 해당 _키_(즉, 열 헤더)를 사용하여 사전에서 데이터를 간단히 검색할 수 있으며, 이것이 우리가 다음에 수행할 작업입니다.
+이렇게 하면 Excel에서 열의 순서를 유연하게 변경할 수 있으므로 그래프의 탄력성이 향상됩니다. 열 헤더가 동일하게 유지되는 한, 해당 _키_ (즉, 열 헤더)를 사용하여 사전에서 데이터를 간단히 검색할 수 있으며, 이것이 우리가 다음에 수행할 작업입니다.
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_DictionaryRetrieval.png" alt=""><figcaption><p>사전에서 데이터 검색</p></figcaption></figure>
 
@@ -79,7 +79,7 @@ Dynamo로 가져온 Excel 데이터는 다음과 같습니다.
 
 ### 좌표계 생성
 
-이제 Excel 파일에서 지정한 측점 값으로 코리더 형상선을 따라 **좌표계**를 생성하겠습니다. 이러한 좌표계는 등주 블록 참조의 위치, 회전 및 축척을 정의하는 데 사용됩니다.
+이제 Excel 파일에서 지정한 측점 값으로 코리더 형상선을 따라 **좌표계** 를 생성하겠습니다. 이러한 좌표계는 등주 블록 참조의 위치, 회전 및 축척을 정의하는 데 사용됩니다.
 
 {% hint style="info" %} 좌표계를 처음 사용하는 경우 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 섹션을 참조하십시오. {% endhint %}
 
@@ -103,11 +103,11 @@ Dynamo로 가져온 Excel 데이터는 다음과 같습니다.
 
 그래프를 실행하면 코리더를 따라 모형 공간에 새 블록 참조가 표시되는 것을 볼 수 있습니다. 그래프의 실행 모드를 자동으로 설정하고 Excel 파일을 편집하면 블록 참조가 자동으로 업데이트됩니다. 아주 멋진 기능입니다.
 
-{% hint style="info" %} [3_user_interface](../../../3\_user\_interface/ "mention") 섹션에서 그래프 실행 모드에 대한 자세한 내용을 확인할 수 있습니다.   {% endhint %}
+{% hint style="info" %} [3_user_interface](../../../3\_user\_interface/ "mention") 섹션에서 그래프 실행 모드에 대한 자세한 내용을 확인할 수 있습니다. {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Excel 파일을 업데이트하고 Civil 3D에서 빠르게 결과 확인</p></figcaption></figure>
 
-다음은 **Dynamo 플레이어**를 사용하여 그래프를 실행하는 예입니다.
+다음은 **Dynamo 플레이어** 를 사용하여 그래프를 실행하는 예입니다.
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Dynamo 플레이어를 사용하여 그래프를 실행하고 Civil 3D에서 결과 확인</p></figcaption></figure>
 
@@ -123,7 +123,7 @@ Dynamo에서 코리더 형상을 시각화하여 컨텍스트를 제공하면 �
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_VisualizeCorridor (1).png" alt=""><figcaption></figcaption></figure>
 
-> 1. **Object.Geometry** 노드의 맨 아래에는 회색 막대가 있습니다. 즉, 노드 미리보기가 꺼져 있으므로(노드를 마우스 오른쪽 버튼으로 클릭하여 액세스 가능) **GeometryColor.ByGeometryColor**가 배경 미리보기에서 다른 형상과 화면표시 우선순위를 두고 "경쟁"하는 것을 피할 수 있습니다.
+> 1. **Object.Geometry** 노드의 맨 아래에는 회색 막대가 있습니다. 즉, 노드 미리보기가 꺼져 있으므로(노드를 마우스 오른쪽 버튼으로 클릭하여 액세스 가능) **GeometryColor.ByGeometryColor** 가 배경 미리보기에서 다른 형상과 화면표시 우선순위를 두고 "경쟁"하는 것을 피할 수 있습니다.
 > 2. **ScopeIf** 노드를 사용하면 기본적으로 노드의 전체 분기를 선택적으로 실행할 수 있습니다. _test_ 입력이 false이면 **ScopeIf** 노드에 연결된 모든 노드가 실행되지 않습니다.
 
 Dynamo 배경 미리보기의 결과는 다음과 같습니다.
@@ -136,6 +136,6 @@ Dynamo 배경 미리보기의 결과는 다음과 같습니다.
 
 {% hint style="info" %} Excel 파일에 **회전** 열을 추가하고 이를 사용하여 좌표계의 회전을 구동합니다. {% endhint %}
 
-{% hint style="info" %} 필요한 경우 등주가 코리더 형상선에서 벗어날 수 있도록 Excel 파일에 **수평 또는 수직 간격띄우기**를 추가합니다. {% endhint %}
+{% hint style="info" %} 필요한 경우 등주가 코리더 형상선에서 벗어날 수 있도록 Excel 파일에 **수평 또는 수직 간격띄우기** 를 추가합니다. {% endhint %}
 
 {% hint style="info" %} 측점 값이 있는 Excel 파일을 사용하는 대신, 시작 측점 및 일반적인 간격을 사용하여 **Dynamo에서 직접** 측점 값을 생성합니다. {% endhint %}

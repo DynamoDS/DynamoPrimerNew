@@ -12,7 +12,7 @@
 
 > * 사용자 입력을 위한 **객체 선택** 노드 사용
 > * 좌표계 관련 작업
-> * **Geometry.DistanceTo** 및 **Geometry.ClosestPointTo**와 같은 기하학적 연산 사용
+> * **Geometry.DistanceTo** 및 **Geometry.ClosestPointTo** 와 같은 기하학적 연산 사용
 > * 블록 참조 작성
 > * 객체 바인딩 설정 제어
 
@@ -113,8 +113,8 @@
 
 다음은 이 그래프의 기능을 확장하는 방법에 대한 몇 가지 아이디어입니다.
 
-{% hint style="info" %} 각 로트 선을 선택하는 대신 **여러 개의 서비스 연결**을 동시에 배치합니다. {% endhint %}
+{% hint style="info" %} 각 로트 선을 선택하는 대신 **여러 개의 서비스 연결** 을 동시에 배치합니다. {% endhint %}
 
-{% hint style="info" %} 입력을 조정하여 수도 서비스 계량기 대신 **하수 청소구**를 배치합니다. {% endhint %}
+{% hint style="info" %} 입력을 조정하여 수도 서비스 계량기 대신 **하수 청소구** 를 배치합니다. {% endhint %}
 
-{% hint style="info" %} 로트 선의 양쪽이 아닌 특정 쪽에 단일 서비스 연결을 배치할 수 있는 **토글을 추가**합니다. {% endhint %}
+{% hint style="info" %} 로트 선의 양쪽이 아닌 특정 쪽에 단일 서비스 연결을 배치할 수 있는 **토글을 추가** 합니다. {% endhint %}

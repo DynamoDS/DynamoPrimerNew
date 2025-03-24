@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-Python 스크립트가 변수 `output`을 반환하므로 Python 스크립트에 `output` 변수가 있어야 합니다. 이 샘플 스크립트를 사용하여 Dynamo의 노드를 테스트하십시오. Dynamo에서 Python 노드를 사용해 본 적이 있다면 다음이 익숙할 것입니다. 자세한 내용은 [입문서의 Python 섹션](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html)을 참조하십시오.
+Python 스크립트가 변수 `output`을 반환하므로 Python 스크립트에 `output` 변수가 있어야 합니다. 이 샘플 스크립트를 사용하여 Dynamo의 노드를 테스트하십시오. Dynamo에서 Python 노드를 사용해 본 적이 있다면 다음이 익숙할 것입니다. 자세한 내용은 [입문서의 Python 섹션](https://primer2.dynamobim.org/v/ko/8_coding_in_dynamo/8-3_python)을 참조하십시오.
 
 ```
 import clr

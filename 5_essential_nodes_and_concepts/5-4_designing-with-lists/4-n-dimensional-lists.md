@@ -76,7 +76,7 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 ![](../images/5-4/4/n-dimensionallists-2dlistsadvance03.jpg)
 
 > 1. 이전 연습과 같은 방법으로 다음과 같은 코드 두 줄을 사용하여 _code block_ 을 정의합니다. `0..1..#10;` `0..1..#5;`
-> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter** 노드에 연결하고 각 _레이싱_을 _"외적"_ 으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
+> 2. 이러한 출력을 두 개의 **Surface.PointAtParameter** 노드에 연결하고 각 _레이싱_ 을 _"외적"_ 으로 설정합니다. 이러한 노드 중 하나는 원래 표면에 연결되어 있고 다른 노드는 오프셋 표면에 연결되어 있습니다.
 
 ![](../images/5-4/4/n-dimensionallists-2dlistsadvance04.jpg)
 
@@ -118,7 +118,7 @@ n차원 리스트는 시각적으로 설명하기 어렵지만, 이 장에서는
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist02.jpg)
 
-> 1. 이전 연습에서와 같이 **Surface.Offset** 노드를 사용하여 _10_만큼 간격을 띄웁니다.
+> 1. 이전 연습에서와 같이 **Surface.Offset** 노드를 사용하여 _10_ 만큼 간격을 띄웁니다.
 > 2. 출력에서 오프셋 노드를 사용하여 두 개의 표면을 생성했습니다.
 
 ![](../images/5-4/4/n-Dimensional-Lists-3dlist03.jpg)

@@ -12,7 +12,7 @@
 
 {% hint style="warning" %} AutoCAD 및 Civil 3D 선반 아래에 있는 노드를 사용하면 Dynamo 그래프가 Dynamo for Civil 3D에서만 작동합니다. Dynamo for Civil 3D 그래프를 다른 곳(예: Revit용 Dynamo)에서 열면 이러한 노드는 경고와 함께 플래그가 표시되고 실행되지 않습니다. {% endhint %}
 
-{% hint style="info" %} **AutoCAD와 Civil 3D를 위한 별도의 선반이 두 개 있는 이유는 무엇입니까?**
+{% hint style="info" %} **AutoCAD와 Civil 3D를 위한 별도의 선반이 두 개 있는 이유는 무엇입니까?** 
 
 이 구성은 기본 AutoCAD 객체(선, 폴리선, 블록 참조 등)를 위한 노드와 Civil 3D 객체(선형, 코리더, 표면 등)를 위한 노드를 구분합니다. 기술적인 관점에서 볼 때 AutoCAD와 Civil 3D는 서로 다른 두 개의 제품이며, AutoCAD는 기본 응용프로그램이고 Civil 3D는 AutoCAD를 기반으로 하는 제품입니다. {% endhint %}
 

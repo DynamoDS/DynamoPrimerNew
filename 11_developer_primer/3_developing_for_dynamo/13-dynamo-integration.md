@@ -439,7 +439,7 @@ Dynamo는 라이브 프로그래밍 환경이며 그래프를 변경하면 새�
 
 .dyn 파일의 직렬화된 데이터 형식을 사용하는 대신 [Serializable] 속성 및 인터페이스를 사용하십시오.
 
-반면 ElementBinding은 추적 API를 기반으로 빌드되며 Dynamo 통합*(DynamoRevit, Dynamo4Civil 등)에서 구현됩니다.*
+반면 ElementBinding은 추적 API를 기반으로 빌드되며 Dynamo 통합 *(DynamoRevit, Dynamo4Civil 등)에서 구현됩니다.*
 
 
 #### 추적 API
@@ -495,9 +495,9 @@ Dynamo가 기존 파일에서 로드했거나 생성 중인 추적 데이터와 
 
 정적 util 클래스 `TraceExampleWrapper`를 Dynamo에 노드로 가져옵니다. 이 클래스에는 `TraceExampleItem`을 작성하는 단일 메서드 `ByString`이 포함되어 있습니다. 이들은 `description` 속성을 포함하는 일반적인 .net 객체입니다.
 
-각 `TraceExampleItem`은 `TraceableId`로 표현되는 추적으로 직렬화되며, `SOAP` 포맷터로 직렬화할 수 있도록 `[Serializeable]`이 표시된 `IntId`를 포함하는 클래스입니다. [직렬화 가능 속성에 대한 자세한 내용은 여기](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8)를 참조하십시오.
+각 `TraceExampleItem`은 `TraceableId`로 표현되는 추적으로 직렬화되며, `SOAP` 포맷터로 직렬화할 수 있도록 `[Serializeable]`이 표시된 `IntId`를 포함하는 클래스입니다. [직렬화 가능 속성에 대한 자세한 내용은 여기](https://docs.microsoft.com/ko-kr/dotnet/api/system.serializableattribute?view=netframework-4.8)를 참조하십시오.
 
-[여기](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)에서 정의된 `ISerializable` 인터페이스도 구현해야 합니다.
+[여기](https://docs.microsoft.com/ko-kr/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)에서 정의된 `ISerializable` 인터페이스도 구현해야 합니다.
 
 
 ``` c#
@@ -612,7 +612,7 @@ DynamoRevit용으로 구현될 때 요소 바인딩을 사용하는 노드가 �
 
 일반적으로 이러한 노드를 통해 사용자는 참조하려는 활성 Revit 문서의 하위 세트를 설명할 수 있습니다. 사용자가 (아래에서 설명하는) Revit 요소를 참조하는 방법에는 여러 가지가 있으며, 노드의 결과 출력은 Revit 요소 래퍼(DynamoRevit 래퍼)이거나 (Revit 형상에서 변환된) 몇몇 Dynamo 형상일 수 있습니다. 다른 호스트 통합 컨텍스트에서 이러한 출력 유형 간의 차이점을 고려하면 도움이 됩니다.
 
-개략적으로 **이러한 노드는 요소 ID가 입력되면 해당 요소를 가리키거나 해당 요소를 나타내는 일부 형상을 가리키는 포인터를 반환하는 함수로 개념화하는 것이 좋습니다. ** 
+개략적으로 **이러한 노드는 요소 ID가 입력되면 해당 요소를 가리키거나 해당 요소를 나타내는 일부 형상을 가리키는 포인터를 반환하는 함수로 개념화하는 것이 좋습니다.** 
 
 DynamoRevit에는 `�Selection�` 노드가 여러 개 있으며 이러한 노드는 최소 두 개의 그룹으로 나눌 수 있습니다. 
 
@@ -753,7 +753,7 @@ D4C의 워크플로우는 위에서 Revit에 대해 설명한 내용과 매우 �
 
 이러한 문화 하위 디렉터리는 노드/확장 이진 파일과 동일한 디렉터리에 있는 경우 .net 런타임에서 문제 없이 로드됩니다.
 
-리소스 어셈블리 및 .resx 파일에 대한 자세한 내용은 [https://docs.microsoft.com/ko-kr/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps)를 참조하십시오.
+리소스 어셈블리 및 .resx 파일에 대한 자세한 내용은 [https://docs.microsoft.com/ko-kr/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/ko-kr/dotnet/framework/resources/creating-resource-files-for-desktop-apps)를 참조하십시오.
 
 Visual Studio를 사용하여 `.resx` 파일을 작성하고 컴파일할 수 있습니다. 지정된 조립품 `xyz.dll`의 경우 결과 리소스가 새 조립품 `xyz.resources.dll`로 컴파일되는데, 위에서 설명한 대로 이 조립품의 위치와 이름이 중요합니다.
 

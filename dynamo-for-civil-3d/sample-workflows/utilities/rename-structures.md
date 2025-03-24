@@ -49,7 +49,7 @@
 
 ### 구조물 위치 가져오기
 
-이제 구조물이 준비되었으므로 공간에서 구조물의 위치를 파악하여 위치에 따라 구조물을 정렬해야 합니다. 이를 위해 각 객체의 경계 상자를 활용하겠습니다. 객체의 **경계 상자**는 객체의 기하학적 범위를 완전히 포함하는 최소 크기의 상자입니다. 경계 상자의 중심을 계산하면 구조물 삽입점에 대한 근사치를 꽤 정확하게 구할 수 있습니다.
+이제 구조물이 준비되었으므로 공간에서 구조물의 위치를 파악하여 위치에 따라 구조물을 정렬해야 합니다. 이를 위해 각 객체의 경계 상자를 활용하겠습니다. 객체의 **경계 상자** 는 객체의 기하학적 범위를 완전히 포함하는 최소 크기의 상자입니다. 경계 상자의 중심을 계산하면 구조물 삽입점에 대한 근사치를 꽤 정확하게 구할 수 있습니다.
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_GetPosition.png" alt=""><figcaption><p>경계 상자를 사용하여 각 구조물의 대략적인 삽입점 가져오기</p></figcaption></figure>
 
@@ -88,7 +88,7 @@
 
 ### 새 이름 생성
 
-마지막으로 해야 할 작업은 구조물의 이름을 새로 생성하는 것입니다. 사용할 형식은 `<alignment name>-STRC-<number>`입니다. 원하는 경우 숫자를 0으로 채울 수 있는 몇 가지 추가 노드가 있습니다(예: "1" 대신 "01").
+마지막으로 해야 할 작업은 구조물의 이름을 새로 생성하는 것입니다. 사용할 형식은 `<alignment name>-STRC-<number>` 입니다. 원하는 경우 숫자를 0으로 채울 수 있는 몇 가지 추가 노드가 있습니다(예: "1" 대신 "01").
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_GenerateNames.png" alt=""><figcaption><p>새 구조물 이름 생성</p></figcaption></figure>
 
@@ -100,7 +100,7 @@
 
 ### 결과
 
-다음은 **Dynamo 플레이어**를 사용하여 그래프를 실행하는 예입니다.
+다음은 **Dynamo 플레이어** 를 사용하여 그래프를 실행하는 예입니다.
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Dynamo 플레이어를 사용하여 그래프를 실행하고 Civil 3D에서 결과 확인</p></figcaption></figure>
 
@@ -122,8 +122,8 @@
 
 다음은 이 그래프의 기능을 확장하는 방법에 대한 몇 가지 아이디어입니다.
 
-{% hint style="info" %} 특정 선형을 선택하는 대신 **가장 가까운 선형**을 기준으로 구조물의 이름을 바꿉니다. {% endhint %}
+{% hint style="info" %} 특정 선형을 선택하는 대신 **가장 가까운 선형** 을 기준으로 구조물의 이름을 바꿉니다. {% endhint %}
 
 {% hint style="info" %} 구조물 외에 **파이프의 이름을 바꿉니다**. {% endhint %}
 
-{% hint style="info" %} 해당 실행을 기준으로 구조물의 **도면층을 설정**합니다.  {% endhint %}
+{% hint style="info" %} 해당 실행을 기준으로 구조물의 **도면층을 설정** 합니다.  {% endhint %}

@@ -31,7 +31,7 @@
    * 기능: Excel
    * 가져오는 방법: `import DSOffice`
 
-{% hint style="warning" %} *주: Python 또는 C#을 통해 **ProtoGeometry**를 사용할 때 비관리형 객체를 작성하는 경우에는 해당 메모리를 수동으로 관리해야 합니다. 자세한 내용은 아래의 **비관리형 객체** 섹션을 참고하십시오. {% endhint %}
+{% hint style="warning" %} *주: Python 또는 C#을 통해 **ProtoGeometry** 를 사용할 때 비관리형 객체를 작성하는 경우에는 해당 메모리를 수동으로 관리해야 합니다. 자세한 내용은 아래의 **비관리형 객체** 섹션을 참고하십시오. {% endhint %}
 
 ## 신중하게 레이블 지정하기
 

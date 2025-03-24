@@ -199,7 +199,7 @@ Visual Studio가 Revit에 연결된 상태로 `Wall.cs`에서 Wall.ByCurveAndHei
 
 함수를 계속 실행하면 DynamoRevit 창에 발생한 예외가 표시됩니다. 호출 스택 창을 보면 예외가 `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`라는 메서드에서 처음 발생했음을 알 수 있습니다. 다행히도 예외는 여기에서 처리되므로 Dynamo에서 충돌이 발생하지 않았습니다. 디버깅 프로세스는 소스 코드의 다른 메서드로 이동하여 이슈에 대한 컨텍스트를 제공했습니다.
 
-이 라이브러리는 오픈 소스 라이브러리가 아니므로 변경할 수 없습니다. 지금까지 많은 정보를 살펴보았으므로, 이제 더 많은 컨텍스트와 함께 github [이슈](https://guides.github.com/features/issues/)를 제기하여 이슈를 보고하거나 끌어오기 요청을 통해 이 이슈에 대한 해결 방법을 제안할 수 있습니다.
+이 라이브러리는 오픈 소스 라이브러리가 아니므로 변경할 수 없습니다. 지금까지 많은 정보를 살펴보았으므로, 이제 더 많은 컨텍스트와 함께 github [이슈](https://docs.github.com/ko/issues/tracking-your-work-with-issues/about-issues)를 제기하여 이슈를 보고하거나 끌어오기 요청을 통해 이 이슈에 대한 해결 방법을 제안할 수 있습니다.
 
 ![Visual Studio의 예외](images/vs-exception.jpg)
 

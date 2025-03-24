@@ -34,7 +34,7 @@ crvs = surf.Intersect(pl);
 crvs_moved = crvs.Translate(0, 0, 10);
 ```
 
-_Trim_ 메서드는 거의 모든 형상 조각에 정의된다는 점에서 Intersect 메서드와 매우 유사합니다. 그러나 _Intersect_보다 _Trim_에 훨씬 더 많은 제한이 있습니다.
+_Trim_ 메서드는 거의 모든 형상 조각에 정의된다는 점에서 Intersect 메서드와 매우 유사합니다. 그러나 _Intersect_ 보다 _Trim_ 에 훨씬 더 많은 제한이 있습니다.
 
 ### **자르기**
 

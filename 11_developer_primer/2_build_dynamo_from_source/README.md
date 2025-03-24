@@ -4,7 +4,7 @@ Dynamo의 소스는 누구나 복제하고 기여할 수 있도록 Github에 호
 
 ### Github에서 Dynamo 리포지토리 찾기 <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-Github는 변경 사항을 추적하고 작업자 간 작업을 조정하기 위한 버전 관리 시스템인 [git](https://help.github.com/articles/git-and-github-learning-resources/)을 기반으로 하는 호스팅 서비스입니다. git은 Dynamo의 소스 파일을 다운로드하고 몇 가지 명령으로 소스 파일을 지속적으로 업데이트하는 데 활용할 수 있는 도구입니다. 이 방법을 사용하면 업데이트할 때마다 소스 파일을 다운로드하고 수동으로 바꾸는 불필요하고 번거로운 작업을 피할 수 있습니다. git 버전 관리 시스템은 로컬 코드 리포지토리와 원격 코드 리포지토리 간의 차이를 추적합니다.
+Github는 변경 사항을 추적하고 작업자 간 작업을 조정하기 위한 버전 관리 시스템인 [git](https://docs.github.com/ko/get-started/quickstart/git-and-github-learning-resources)을 기반으로 하는 호스팅 서비스입니다. git은 Dynamo의 소스 파일을 다운로드하고 몇 가지 명령으로 소스 파일을 지속적으로 업데이트하는 데 활용할 수 있는 도구입니다. 이 방법을 사용하면 업데이트할 때마다 소스 파일을 다운로드하고 수동으로 바꾸는 불필요하고 번거로운 작업을 피할 수 있습니다. git 버전 관리 시스템은 로컬 코드 리포지토리와 원격 코드 리포지토리 간의 차이를 추적합니다.
 
 Dynamo의 소스는 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo) 리포지토리의 DynamoDS Github에 호스팅됩니다.
 
@@ -18,7 +18,7 @@ Dynamo의 소스는 [https://github.com/DynamoDS/Dynamo](https://github.com/Dyna
 
 ### git을 사용하여 Dynamo 리포지토리 끌어오기 <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-리포지토리를 복제하려면 먼저 git을 설치해야 합니다. 설치 단계 및 GitHub 사용자 이름 및 이메일을 설정하는 방법에 대해서는 이 [간략한 안내서](https://help.github.com/articles/set-up-git/#setting-up-git)를 따르십시오. 이 예에서는 명령행에서 git을 사용할 것입니다. 이 안내서에서는 Windows를 사용한다고 가정하지만, mac 또는 Linux에서도 git을 사용하여 Dynamo 소스를 복제할 수 있습니다.
+리포지토리를 복제하려면 먼저 git을 설치해야 합니다. 설치 단계 및 GitHub 사용자 이름 및 이메일을 설정하는 방법에 대해서는 이 [간략한 안내서](https://docs.github.com/ko/get-started/quickstart/set-up-git#setting-up-git)를 따르십시오. 이 예에서는 명령행에서 git을 사용할 것입니다. 이 안내서에서는 Windows를 사용한다고 가정하지만, mac 또는 Linux에서도 git을 사용하여 Dynamo 소스를 복제할 수 있습니다.
 
 복제할 Dynamo 리포지토리의 URL을 파악해야 합니다. 이 기능은 리포지토리 페이지의 "복제 또는 다운로드" 버튼에서 찾을 수 있습니다. URL을 복사하여 명령 프롬프트에 붙여넣습니다.
 
@@ -52,7 +52,7 @@ git이 설치되어 있으면 Dynamo 리포지토리를 복제할 수 있습니�
 소스 파일이 로컬 컴퓨터에 복제되면, 이제 Dynamo용 실행 파일을 빌드할 수 있습니다. 이를 위해서는 Visual Studio IDE를 설정하고 .NET Framework 및 DirectX가 설치되어 있는지 확인해야 합니다.
 
 * 완전한 기능을 갖춘 무료 IDE(통합 개발 환경)인 [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results)(이후 버전도 작동할 수 있음)를 다운로드한 후 설치합니다.
-* [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) 이상 버전을 다운로드한 후 설치합니다.
+* [Microsoft .NET Framework 4.5](https://www.microsoft.com/ko-kr/download/details.aspx?id=30653) 이상 버전을 다운로드한 후 설치합니다.
 * 로컬 Dynamo 리포지토리에서 Microsoft DirectX(`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)를 설치합니다.
 
 > .NET 및 DirectX가 이미 설치되어 있을 수 있습니다.
@@ -98,7 +98,7 @@ Dynamo가 성공적으로 빌드되면 DynamoSandbox.exe 파일이 있는 `bin` 
 
 ### Visual Studio를 사용하여 로컬 빌드 디버깅하기 <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-디버깅은 버그 또는 이슈를 식별하고 가려내고 해결하는 프로세스입니다. Dynamo가 소스에서 성공적으로 빌드되면 Visual Studio의 여러 도구를 사용하여 실행 중인 응용프로그램(예: DynamoRevit 애드인)을 디버깅할 수 있습니다. 또한, 소스 코드를 분석하여 이슈의 근본 원인을 찾거나 현재 실행 중인 코드를 확인할 수 있습니다. Visual Studio에서 코드를 디버깅하고 탐색하는 방법에 대한 자세한 내용은 [Visual Studio 문서](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger)를 참조하십시오.
+디버깅은 버그 또는 이슈를 식별하고 가려내고 해결하는 프로세스입니다. Dynamo가 소스에서 성공적으로 빌드되면 Visual Studio의 여러 도구를 사용하여 실행 중인 응용프로그램(예: DynamoRevit 애드인)을 디버깅할 수 있습니다. 또한, 소스 코드를 분석하여 이슈의 근본 원인을 찾거나 현재 실행 중인 코드를 확인할 수 있습니다. Visual Studio에서 코드를 디버깅하고 탐색하는 방법에 대한 자세한 내용은 [Visual Studio 문서](https://docs.microsoft.com/ko-kr/visualstudio/debugger/navigating-through-code-with-the-debugger)를 참조하십시오.
 
 독립 실행형 Dynamo 응용프로그램인 DynamoSandbox의 두 가지 디버깅 옵션을 살펴보겠습니다.
 

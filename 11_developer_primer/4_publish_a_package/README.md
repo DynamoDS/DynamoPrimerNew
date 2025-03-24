@@ -2,7 +2,7 @@
 
 ### 패키지 게시하기 <a href="#publish-a-package" id="publish-a-package"></a>
 
-패키지는 노드를 저장하고 Dynamo 커뮤니티와 공유할 수 있는 편리한 방법입니다. 패키지에는 Dynamo 작업공간에서 생성된 사용자 지정 노드부터 NodeModel 파생 노드까지 모든 것이 포함될 수 있습니다. 패키지는 패키지 관리자를 사용하여 게시되고 설치됩니다. 이 페이지 외에도 [입문서](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction)에 패키지에 대한 일반적인 설명이 나와 있습니다.
+패키지는 노드를 저장하고 Dynamo 커뮤니티와 공유할 수 있는 편리한 방법입니다. 패키지에는 Dynamo 작업공간에서 생성된 사용자 지정 노드부터 NodeModel 파생 노드까지 모든 것이 포함될 수 있습니다. 패키지는 패키지 관리자를 사용하여 게시되고 설치됩니다. 이 페이지 외에도 [입문서](https://primer2.dynamobim.org/v/ko/6_custom_nodes_and_packages/6-2_packages/1-introduction)에 패키지에 대한 일반적인 설명이 나와 있습니다.
 
 #### 패키지 관리자란 무엇입니까? <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 

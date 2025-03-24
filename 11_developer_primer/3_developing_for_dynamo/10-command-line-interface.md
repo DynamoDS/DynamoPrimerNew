@@ -68,7 +68,7 @@ CLI에는 DynamoCLI.exe 응용프로그램을 통해 액세스할 수 있습니�
  
     C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
  
-이 명령은 UI를 그리지 않고 *"C:\\someReallyCoolDynamoFile.Dyn"*에서 지정된 파일을 연 다음 실행하도록 Dynamo에 지시합니다. 그런 다음 그래프 실행이 완료되면 Dynamo가 종료됩니다. 
+이 명령은 UI를 그리지 않고 *"C:\\someReallyCoolDynamoFile.Dyn"* 에서 지정된 파일을 연 다음 실행하도록 Dynamo에 지시합니다. 그런 다음 그래프 실행이 완료되면 Dynamo가 종료됩니다. 
 
 **버전 2.1의 새로운 기능**: DynamoWPFCLI.exe 응용프로그램. 이 응용프로그램은 형상(-g) 옵션 이외에 DynamoCLI.exe 응용프로그램이 지원하는 모든 것을 지원합니다. DynamoWPFCLI.exe 응용프로그램은 Windows에서만 사용할 수 있습니다.
 
@@ -77,8 +77,8 @@ CLI에는 DynamoCLI.exe 응용프로그램을 통해 액세스할 수 있습니�
 * DynamoCLI와 상호 작용하는 기본 방법은 명령 프롬프트 인터페이스를 사용하는 것입니다.
 * 이 경우 [Dynamo 버전] 폴더 내의 설치 위치에서 DynamoCLI를 실행해야 합니다. CLI는 Dynamo와 동일한 .dll에 액세스해야 하므로 이동해서는 안 됩니다.
 * 현재 Dynamo에 열려 있는 그래프를 실행할 수 있어야 하지만 이로 인해 의도치 않은 결과가 발생할 수 있습니다.
-* 모든 파일 경로는 DOS와 완벽하게 호환되므로 상대 경로와 정규화된 경로도 작동하지만 *"C:path\\to\\file.dyn"*처럼 경로를 따옴표로 묶어야 합니다. 
-* DynamoCLI는 새로운 기능이며 현재 개발 중입니다. 현재 **CLI는 표준 Dynamo 라이브러리의 하위 세트만 로드**합니다. 그래프가 제대로 실행되지 않는 경우 이 점에 유의하십시오. 이러한 라이브러리는 [여기](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28)에서 지정됩니다. 
+* 모든 파일 경로는 DOS와 완벽하게 호환되므로 상대 경로와 정규화된 경로도 작동하지만 *"C:path\\to\\file.dyn"* 처럼 경로를 따옴표로 묶어야 합니다. 
+* DynamoCLI는 새로운 기능이며 현재 개발 중입니다. 현재 **CLI는 표준 Dynamo 라이브러리의 하위 세트만 로드** 합니다. 그래프가 제대로 실행되지 않는 경우 이 점에 유의하십시오. 이러한 라이브러리는 [여기](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28)에서 지정됩니다. 
 * 현재 std 출력은 제공되지 않습니다. 오류가 발생하지 않으면 실행이 완료된 후 CLI가 종료됩니다.
  
 #### 사용 방법
