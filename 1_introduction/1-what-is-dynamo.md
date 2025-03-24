@@ -1,6 +1,6 @@
 # Co to jest dodatek Dynamo i jak działa?
 
-Dynamo to aplikacja do [programowania wizualnego](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo), którą można pobrać i uruchomić w samodzielnym trybie „piaskownicy” (odizolowanym) lub jako wtyczkę do innego oprogramowania, takiego jak Revit, FormIt lub Civil 3D.
+Dynamo to aplikacja do [programowania wizualnego](https://primer2.dynamobim.org/v/pl/a_appendix/a-1_visual-programming-and-dynamo), którą można pobrać i uruchomić w samodzielnym trybie „piaskownicy” (odizolowanym) lub jako wtyczkę do innego oprogramowania, takiego jak Revit, FormIt lub Civil 3D.
 
 {% hint style="info" %} Dowiedz się więcej na temat [różnicy między **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) {% endhint %}
 

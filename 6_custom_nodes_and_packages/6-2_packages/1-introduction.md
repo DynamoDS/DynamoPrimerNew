@@ -136,7 +136,7 @@ Chociaż ten scenariusz działa poprawnie w przypadku pakietów zawierających t
 
 #### Obejście problemu:
 
-Jednym z możliwych obejść tego problemu jest użycie zamapowanego dysku sieciowego wskazującego lokalizację sieciową i skonfigurowanie na stacjach roboczych odwołania do tej ścieżki. Czynności umożliwiające utworzenie zamapowanego dysku sieciowego opisano [tutaj](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+Jednym z możliwych obejść tego problemu jest użycie zamapowanego dysku sieciowego wskazującego lokalizację sieciową i skonfigurowanie na stacjach roboczych odwołania do tej ścieżki. Czynności umożliwiające utworzenie zamapowanego dysku sieciowego opisano [tutaj](https://support.microsoft.com/pl-pl/help/4026635/windows-10-map-a-network-drive).
 
 ### Dalsze kroki z pakietami
 

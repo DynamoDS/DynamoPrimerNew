@@ -52,7 +52,7 @@ Jeśli operacja klonowania zakończyła się pomyślnie, oznacza to, że narzęd
 Po sklonowaniu plików źródłowych na komputer lokalny można utworzyć plik wykonywalny dla dodatku Dynamo. W tym celu należy skonfigurować środowisko IDE programu Visual Studio oraz upewnić się, że zainstalowano programy .NET Framework i DirectX.
 
 * Pobierz i zainstaluj oprogramowanie [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results) — bezpłatne i w pełni funkcjonalne środowisko IDE (czyli zintegrowane środowisko programistyczne — mogą się również sprawdzić nowsze wersje)
-* Pobierz i zainstaluj program [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) lub nowszy
+* Pobierz i zainstaluj program [Microsoft .NET Framework 4.5](https://www.microsoft.com/pl-pl/download/details.aspx?id=30653) lub nowszy
 * Zainstaluj program Microsoft DirectX z lokalnego repozytorium dodatku Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)
 
 > Programy .NET i DirectX mogą być już zainstalowane.
@@ -98,7 +98,7 @@ Instrukcje dotyczące kompilowania dodatku Dynamo dla innych platform (np. Linux
 
 ### Debugowanie kompilacji lokalnej za pomocą programu Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-Debugowanie to proces identyfikowania, izolowania i usuwania błędów lub problemów. Po pomyślnym skompilowaniu dodatku Dynamo ze źródła można za pomocą kilku narzędzi w programie Visual Studio debugować uruchomioną aplikację, na przykład dodatek DynamoRevit. Można przeanalizować kod źródłowy aplikacji, aby znaleźć źródło problemu, lub obserwować wykonywanie kodu na bieżąco. Aby uzyskać bardziej szczegółowe wyjaśnienia dotyczące debugowania i nawigowania po kodzie w programie Visual Studio, zapoznaj się z [dokumentacją programu Visual Studio w witrynie Docs](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Debugowanie to proces identyfikowania, izolowania i usuwania błędów lub problemów. Po pomyślnym skompilowaniu dodatku Dynamo ze źródła można za pomocą kilku narzędzi w programie Visual Studio debugować uruchomioną aplikację, na przykład dodatek DynamoRevit. Można przeanalizować kod źródłowy aplikacji, aby znaleźć źródło problemu, lub obserwować wykonywanie kodu na bieżąco. Aby uzyskać bardziej szczegółowe wyjaśnienia dotyczące debugowania i nawigowania po kodzie w programie Visual Studio, zapoznaj się z [dokumentacją programu Visual Studio w witrynie Docs](https://docs.microsoft.com/pl-pl/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 W przypadku autonomicznej aplikacji Dynamo, DynamoSandbox, omówimy dwie opcje debugowania:
 

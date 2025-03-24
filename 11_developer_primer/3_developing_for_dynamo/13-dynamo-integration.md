@@ -495,9 +495,9 @@ Ogólnie konfiguracja jest następująca:
 
 Statyczna klasa narzędziowa `TraceExampleWrapper` jest importowana jako węzeł do dodatku Dynamo. Zawiera pojedynczą metodę `ByString` tworzącą element `TraceExampleItem` — są to zwykłe obiekty .net, które zawierają właściwość `description`.
 
-Każdy obiekt `TraceExampleItem` jest serializowany do postaci śladu reprezentowanego za pomocą `TraceableId` — jest to po prostu klasa zawierająca `IntId` z oznaczeniem `[Serializeable]`, aby umożliwić serializację za pomocą elementu formatującego `SOAP`. [Tutaj można uzyskać więcej informacji na temat atrybutu serializable](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8)
+Każdy obiekt `TraceExampleItem` jest serializowany do postaci śladu reprezentowanego za pomocą `TraceableId` — jest to po prostu klasa zawierająca `IntId` z oznaczeniem `[Serializeable]`, aby umożliwić serializację za pomocą elementu formatującego `SOAP`. [Tutaj można uzyskać więcej informacji na temat atrybutu serializable](https://docs.microsoft.com/pl-pl/dotnet/api/system.serializableattribute?view=netframework-4.8)
 
-Należy również zaimplementować interfejs `ISerializable` zdefiniowany [tutaj](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)
+Należy również zaimplementować interfejs `ISerializable` zdefiniowany [tutaj](https://docs.microsoft.com/pl-pl/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)
 
 
 ``` c#
@@ -753,7 +753,7 @@ Jeśli z jakiegoś powodu pakiet musi zostać opublikowany również w Menedżer
 
 Te podkatalogi kultur są bez problemu wczytywane przez środowisko uruchomieniowe platformy .net, jeśli znajdują się w tym samym katalogu co pliki binarne węzłów/rozszerzeń.
 
-Aby uzyskać więcej informacji na temat zespołów zasobów i plików resx, zobacz: [https://docs.microsoft.com/pl-pl/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+Aby uzyskać więcej informacji na temat zespołów zasobów i plików resx, zobacz: [https://docs.microsoft.com/pl-pl/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/pl-pl/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 Prawdopodobnie będziesz tworzyć pliki `.resx` i kompilować je za pomocą programu Visual Studio. Dla danego pliku `xyz.dll` zespołu — wynikowe zasoby zostaną skompilowane do postaci nowego pliku `xyz.resources.dll` zespołu — jak opisano powyżej, ważne są położenie i nazwa tego zespołu.
 

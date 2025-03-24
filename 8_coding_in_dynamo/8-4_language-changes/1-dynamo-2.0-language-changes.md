@@ -253,7 +253,7 @@ Ta zmiana usuwa teraz dodawanie nadmiarowego poziomu listy, a także rozwiązuje
 
 ### Zalety:
 
-**Czytelność: ** wyniki są zgodne z oczekiwaniami użytkownika i łatwiejsze do zrozumienia
+**Czytelność:** wyniki są zgodne z oczekiwaniami użytkownika i łatwiejsze do zrozumienia
 
 **Zgodność:** węzły interfejsu użytkownika (z opcją skratowania) i węzły bloku kodu korzystające z prowadnic replikacji zapewniają zgodne wyniki
 

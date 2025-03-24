@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-Skrypt w języku Python zwraca zmienną `output`, co oznacza, że w skrypcie w języku Python będzie potrzebna zmienna `output`. Użyj tego skryptu przykładowego, aby przetestować węzeł w dodatku Dynamo. Jeśli ten węzeł języka Python był kiedykolwiek używany w dodatku Dynamo, poniższe czynności powinny wyglądać znajomo. Aby uzyskać więcej informacji, zobacz [sekcję dotyczącą języka Python w przewodniku](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html).
+Skrypt w języku Python zwraca zmienną `output`, co oznacza, że w skrypcie w języku Python będzie potrzebna zmienna `output`. Użyj tego skryptu przykładowego, aby przetestować węzeł w dodatku Dynamo. Jeśli ten węzeł języka Python był kiedykolwiek używany w dodatku Dynamo, poniższe czynności powinny wyglądać znajomo. Aby uzyskać więcej informacji, zobacz [sekcję dotyczącą języka Python w przewodniku](https://primer2.dynamobim.org/v/pl/8_coding_in_dynamo/8-3_python).
 
 ```
 import clr

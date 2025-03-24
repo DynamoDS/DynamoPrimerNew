@@ -20,7 +20,7 @@ Przykłady kodu są ściągane z pliku [ZeroTouchEssentials.cs](https://github.c
 
 ### Domyślna wartość wejściowa <a href="#default-input-values" id="default-input-values"></a>
 
-Dodatek Dynamo obsługuje definiowanie wartości domyślnych dla portów wejściowych w węźle. Te wartości domyślne zostają dostarczone do węzła, jeśli porty nie mają połączeń. Wartości domyślne są wyrażane za pomocą mechanizmu języka C# do określania argumentów opcjonalnych omówionego w [Podręczniku programowania C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Wartości domyślne określa się w następujący sposób:
+Dodatek Dynamo obsługuje definiowanie wartości domyślnych dla portów wejściowych w węźle. Te wartości domyślne zostają dostarczone do węzła, jeśli porty nie mają połączeń. Wartości domyślne są wyrażane za pomocą mechanizmu języka C# do określania argumentów opcjonalnych omówionego w [Podręczniku programowania C#](https://msdn.microsoft.com/pl-pl/library/dd264739.aspx). Wartości domyślne określa się w następujący sposób:
 
 * Ustaw domyślną wartość parametrów metody: `inputNumber = 2.0`
 
@@ -262,7 +262,7 @@ Zasobami geometrii, które nie są zwracane z funkcji, należy zarządzać ręcz
     }
     ```
 
-    > Instrukcję using opisano [tutaj](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)
+    > Instrukcję using opisano [tutaj](https://msdn.microsoft.com/pl-pl/library/yh598w02.aspx)
     >
     > Aby dowiedzieć się więcej na temat nowych funkcji zwiększających stabilność wprowadzonych w dodatku Dynamo 2.5, zobacz [Ulepszenia stabilności geometrii w dodatku Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Za pomocą ręcznych wywołań metody Dispose:

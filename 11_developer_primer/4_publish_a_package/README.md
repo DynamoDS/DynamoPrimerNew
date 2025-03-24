@@ -2,7 +2,7 @@
 
 ### Publikowanie pakietu <a href="#publish-a-package" id="publish-a-package"></a>
 
-Pakiety to wygodny sposób przechowywania węzłów i udostępniania ich społeczności dodatku Dynamo. Pakiet może zawierać wszystko, od węzłów niestandardowych utworzonych w obszarze roboczym dodatku Dynamo po węzły pochodne od klasy NodeModel. Pakiety publikuje się i instaluje za pomocą Menedżera pakietów. Oprócz tej strony, także przewodnik [Primer](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) zawiera ogólne wskazówki dotyczące pakietów.
+Pakiety to wygodny sposób przechowywania węzłów i udostępniania ich społeczności dodatku Dynamo. Pakiet może zawierać wszystko, od węzłów niestandardowych utworzonych w obszarze roboczym dodatku Dynamo po węzły pochodne od klasy NodeModel. Pakiety publikuje się i instaluje za pomocą Menedżera pakietów. Oprócz tej strony, także przewodnik [Primer](https://primer2.dynamobim.org/v/pl/6_custom_nodes_and_packages/6-2_packages/1-introduction) zawiera ogólne wskazówki dotyczące pakietów.
 
 #### Czym jest Menedżer pakietów? <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 
