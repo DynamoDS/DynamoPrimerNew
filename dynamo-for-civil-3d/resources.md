@@ -12,23 +12,23 @@
 
 ## Autodesk University
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Getting-Started-Dynamo-Civil-3D-Beginners-Guide-2019" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Getting-Started-Dynamo-Civil-3D-Beginners-Guide-2019" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Dynamo-Civil-3D-Introduction-Unlocking-Mystery-Scripting-2019" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Dynamo-Civil-3D-Introduction-Unlocking-Mystery-Scripting-2019" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Computational-Design-Civil-Engineers-2019" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Computational-Design-Civil-Engineers-2019" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Mundane-Civil-3D-Tasks-Automate-Dynamo-Civil-3D-2019" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Mundane-Civil-3D-Tasks-Automate-Dynamo-Civil-3D-2019" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Dynamo-Civil-3D-Automated-Checks-Open-Format-Road-Design-Made-Easy-2021" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Dynamo-Civil-3D-Automated-Checks-Open-Format-Road-Design-Made-Easy-2021" %}
 
 {% embed url="https://www.autodesk.com/autodesk-university/ru/class/Underground-Utility-GIS-Features-Civil-3D-Pipe-Networks-Dynamo-2021" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Civil-3D-and-Dynamo-Dynamic-Culvert-Design-and-Analysis-2019" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Civil-3D-and-Dynamo-Dynamic-Culvert-Design-and-Analysis-2019" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Generating-Transforming-and-Analyzing-Railway-Design-Data-Civil-3D-and-Dynamo-2019" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Generating-Transforming-and-Analyzing-Railway-Design-Data-Civil-3D-and-Dynamo-2019" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Optimize-Road-Design-Dynamo-Civil-3D-and-Generative-Design-2021" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Optimize-Road-Design-Dynamo-Civil-3D-and-Generative-Design-2021" %}
 
 ## Книги
 

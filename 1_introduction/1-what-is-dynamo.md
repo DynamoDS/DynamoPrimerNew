@@ -1,8 +1,8 @@
 # Что представляет собой программа Dynamo и как она работает?
 
-Dynamo — это приложение для [визуального программирования](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo), которое можно скачать и запустить в автономном режиме «песочницы» или в качестве подключаемого модуля для другого программного обеспечения, например Revit, FormIt или Civil 3D.
+Dynamo — это приложение для [визуального программирования](https://primer2.dynamobim.org/v/ru/a_appendix/a-1_visual-programming-and-dynamo), которое можно скачать и запустить в автономном режиме «песочницы» или в качестве подключаемого модуля для другого программного обеспечения, например Revit, FormIt или Civil 3D.
 
-{% hint style="info" %} Подробнее о [различиях между **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) {% endhint %}
+{% hint style="info" %} Подробнее о [различиях между **Dynamo Core** / **Revit** / **Sandbox** .](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/)  {% endhint %}
 
 ### Процесс
 

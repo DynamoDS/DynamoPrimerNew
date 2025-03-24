@@ -99,7 +99,7 @@
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Параметры привязки объекта Dynamo</p></figcaption></figure>
 
-{% hint style="info" %} Дополнительные сведения см. в разделе [object-binding.md](../../advanced-topics/object-binding.md "mention"). {% endhint %}
+{% hint style="info" %} Дополнительные сведения см. в разделе [object-binding.md](../../advanced-topics/object-binding.md "mention") . {% endhint %}
 
 Изменив этот параметр, мы заставляем программу Dynamo «забывать» объекты, создаваемые при каждом запуске графика. Ниже приведен пример запуска графика с отключенной привязкой объектов в **проигрывателе Dynamo**.
 

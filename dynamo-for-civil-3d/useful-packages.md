@@ -2,7 +2,7 @@
 
 Пакеты Dynamo — это наборы инструментов, созданные сторонними разработчиками и призванные расширить основные функции Dynamo. Они доступны для всех, и их можно загрузить одним щелчком.
 
-{% hint style="info" %} Дополнительные сведения по началу работы с пакетами см. в разделе [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention"). {% endhint %}
+{% hint style="info" %} Дополнительные сведения по началу работы с пакетами см. в разделе [6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") . {% endhint %}
 
 Ниже приведен список самых популярных пакетов, которые помогут вам создавать графики Dynamo for Civil 3D высшего уровня.
 
@@ -16,7 +16,7 @@ _Civil 3D Toolkit_ — это пакет Dynamo for Civil 3D, который �
 
 #### Сопутствующие классы Autodesk University
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Supercharge-Your-Dynamo-Graph-Civil-3D-Toolkit-2020" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Supercharge-Your-Dynamo-Graph-Civil-3D-Toolkit-2020" %}
 
 ## Camber
 
@@ -36,11 +36,11 @@ _CivilConnection_ — это пакет Dynamo для Revit с открытым
 
 #### Сопутствующие классы Autodesk University
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Computational-modeling-linear-structure-Civil-3D-Revit-Dynamo-CivilConnection-2019" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Computational-modeling-linear-structure-Civil-3D-Revit-Dynamo-CivilConnection-2019" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Bridge-Detailing-20-Computational-modelling-methods-using-Civil-3D-Revit-Dynamo-2019" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Bridge-Detailing-20-Computational-modelling-methods-using-Civil-3D-Revit-Dynamo-2019" %}
 
-{% embed url="https://www.autodesk.com/autodesk-university/ru/class/Parametric-modeling-and-automating-placement-Universal-TBM-Rings-2021" %}
+{% embed url="https://www.autodesk.com/autodesk-university/class/Parametric-modeling-and-automating-placement-Universal-TBM-Rings-2021" %}
 
 #### Исходный код
 

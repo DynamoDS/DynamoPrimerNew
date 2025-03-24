@@ -2,7 +2,7 @@
 
 Ранее мы упомянули, что **узлы** являются основными компоновочными блоками графика Dynamo. Узлы хранятся в **библиотеке**, где они сгруппированы по логическим признакам. В Dynamo for Civil 3D в библиотеке есть две категории (или **полки**), содержащие специальные узлы для работы с объектами AutoCAD и Civil 3D, такими как трассы, профили, коридоры, вхождения блоков и т. д. Прочие разделы библиотеки содержат универсальные узлы, одинаковые во всех версиях Dynamo (например, в Dynamo для Revit, Dynamo Sandbox и т. д.).
 
-{% hint style="info" %} Подробные сведения об организации узлов в корневой библиотеке Dynamo см. в разделе [2-library.md](../3\_user\_interface/2-library.md "mention"). {% endhint %}
+{% hint style="info" %} Подробные сведения об организации узлов в корневой библиотеке Dynamo см. в разделе [2-library.md](../3\_user\_interface/2-library.md "mention") . {% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>Библиотека узлов в Dynamo for Civil 3D</p></figcaption></figure>
 
