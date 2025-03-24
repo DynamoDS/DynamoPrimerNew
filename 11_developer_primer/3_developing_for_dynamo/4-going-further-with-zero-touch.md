@@ -20,7 +20,7 @@ Dynamo を開いて `ZeroTouchEssentials.dll` を読み込み、次の例で参�
 
 ### 既定の入力値 <a href="#default-input-values" id="default-input-values"></a>
 
-Dynamo では、ノードの入力ポートに対する既定値の定義がサポートされています。これらの既定値は、ポートに接続がない場合にノードに渡されます。既定では、「[C# プログラミング ガイド](https://msdn.microsoft.com/en-us/library/dd264739.aspx)」のオプションの引数を指定する C# メカニズムを使用して表します。既定では次のように指定します。
+Dynamo では、ノードの入力ポートに対する既定値の定義がサポートされています。これらの既定値は、ポートに接続がない場合にノードに渡されます。既定では、「[C# プログラミング ガイド](https://msdn.microsoft.com/ja-jp/library/dd264739.aspx)」のオプションの引数を指定する C# メカニズムを使用して表します。既定では次のように指定します。
 
 * メソッドのパラメータを既定値 `inputNumber = 2.0` に設定します
 
@@ -262,7 +262,7 @@ namespace ZeroTouchEssentials
     }
     ```
 
-    > using ステートメントについては、[こちら](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)で説明しています。
+    > using ステートメントについては、[こちら](https://msdn.microsoft.com/ja-jp/library/yh598w02.aspx)で説明しています。
     >
     > Dynamo 2.5 で導入された安定性に関する新機能の詳細については、「[Dynamo ジオメトリの安定性の向上](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)」を参照してください
 *   手動の Dispose の呼び出しを使用する場合は次のようになります。

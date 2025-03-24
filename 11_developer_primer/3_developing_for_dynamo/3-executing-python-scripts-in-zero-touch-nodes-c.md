@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-Python スクリプトが変数 `output` を返すため、Python スクリプトには `output` という変数が必要です。このサンプル スクリプトを使用して、Dynamo でノードをテストします。Dynamo で Python ノードを使用したことがある場合は、同じように操作できます。詳細については、[Primer の「Python」のセクション](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html)を確認してください。
+Python スクリプトが変数 `output` を返すため、Python スクリプトには `output` という変数が必要です。このサンプル スクリプトを使用して、Dynamo でノードをテストします。Dynamo で Python ノードを使用したことがある場合は、同じように操作できます。詳細については、[Primer の「Python」のセクション](https://primer2.dynamobim.org/v/ja/8_coding_in_dynamo/8-3_python)を確認してください。
 
 ```
 import clr

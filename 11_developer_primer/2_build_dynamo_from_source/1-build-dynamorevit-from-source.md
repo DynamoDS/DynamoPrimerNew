@@ -199,7 +199,7 @@ Visual Studio を Revit にアタッチした状態で、`Wall.cs` にある Wal
 
 関数をステップ実行し続けると、DynamoRevit ウィンドウに表示された例外にヒットします。コール スタック ウィンドウを見ると、例外が元は `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve` というメソッドからスローされたことがわかります。ここでは例外が処理されているため、Dynamo はクラッシュしませんでした。デバッグ プロセスによって、ソース コード内の別のメソッドが表示されて、問題のコンテキストがわかりました。
 
-これはオープン ソース ライブラリではないため、変更を加えることはできませんが、詳細な情報が得られたため、GitHub の [Issue](https://guides.github.com/features/issues/) を提出して問題を詳しくレポートしたり、プル リクエストを行ってこの問題の回避策を提案できます。
+これはオープン ソース ライブラリではないため、変更を加えることはできませんが、詳細な情報が得られたため、GitHub の [Issue](https://docs.github.com/ja/issues/tracking-your-work-with-issues/about-issues) を提出して問題を詳しくレポートしたり、プル リクエストを行ってこの問題の回避策を提案できます。
 
 ![Visual Studio での例外](images/vs-exception.jpg)
 

@@ -32,9 +32,9 @@
 
 > 1. [Input] > [Basic] > [**Number**]を選択します。
 > 2. [Input] > [Basic] > [**Number Slider**]を選択します。
-> 3. [Geometry] > [Points] > [Point] > [**By Coordinates(x,y,z)**]
-> 4. [Geometry] > [Modifiers] > [Geometry] > [**DistanceTo**]
-> 5. [Geometry] > [Curves] > [Circle] > [**ByCenterPointRadius**]
+> 3. [Geometry] > [Points] > [Point] > [**By Coordinates(x,y,z)**]を選択します。
+> 4. [Geometry] > [Modifiers] > [Geometry] > [**DistanceTo**]を選択します。
+> 5. [Geometry] > [Curves] > [Circle] > [**ByCenterPointRadius**]を選択します。
 
 ### ノードをワイヤで接続する
 

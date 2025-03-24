@@ -4,7 +4,7 @@ Dynamo のソースは、クローンを作成して他のユーザに提供す�
 
 ### GitHub で Dynamo リポジトリを検索する <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-GitHub は、利用者間の変更を追跡し、作業を調整するためのバージョン管理システムである [git](https://help.github.com/articles/git-and-github-learning-resources/) に基づくホスト サービスです。git は、Dynamo のソース ファイルをダウンロードして、いくつかのコマンドでそれらを更新するために活用できるツールです。この方法を使用すると、更新のたびにソース ファイルをダウンロードし、手動で置き換えるといった面倒な作業を回避できます。git バージョン管理システムは、ローカルおよびリモート間のコード リポジトリの違いを追跡します。
+GitHub は、利用者間の変更を追跡し、作業を調整するためのバージョン管理システムである [git](https://docs.github.com/ja/get-started/quickstart/git-and-github-learning-resources) に基づくホスト サービスです。git は、Dynamo のソース ファイルをダウンロードして、いくつかのコマンドでそれらを更新するために活用できるツールです。この方法を使用すると、更新のたびにソース ファイルをダウンロードし、手動で置き換えるといった面倒な作業を回避できます。git バージョン管理システムは、ローカルおよびリモート間のコード リポジトリの違いを追跡します。
 
 Dynamo のソースは、次のリポジトリの DynamoDS GitHub でホストされます。 [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
@@ -18,7 +18,7 @@ Dynamo のソースは、次のリポジトリの DynamoDS GitHub でホスト�
 
 ### git を使用して Dynamo リポジトリをプルする <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-リポジトリをクローン作成する前に、git をインストールする必要があります。インストール手順、および GitHub ユーザ名と電子メールの設定方法については、この[簡易ガイド](https://help.github.com/articles/set-up-git/#setting-up-git)に従ってください。この例では、コマンド ラインで git を実行します。このガイドでは、Windows を使用することを前提としていますが、Mac または Linux で git を使用して Dynamo ソースをクローン作成することもできます。
+リポジトリをクローン作成する前に、git をインストールする必要があります。インストール手順、および GitHub ユーザ名と電子メールの設定方法については、この[簡易ガイド](https://docs.github.com/ja/get-started/quickstart/set-up-git#setting-up-git)に従ってください。この例では、コマンド ラインで git を実行します。このガイドでは、Windows を使用することを前提としていますが、Mac または Linux で git を使用して Dynamo ソースをクローン作成することもできます。
 
 クローン作成する Dynamo リポジトリの URL が必要です。これは、リポジトリのページの「クローンまたはダウンロード」ボタンにあります。URL をコピーしてコマンド プロンプトに貼り付けます。
 
@@ -52,7 +52,7 @@ git がインストールされていると、Dynamo リポジトリをクロー
 ソース ファイルがローカル マシンにクローン化されたため、Dynamo の実行可能ファイルを構築できるようになりました。これを進めるには、Visual Studio IDE をセットアップし、.NET Framework と DirectX がインストールされていることを確認する必要があります。
 
 * 完全な機能を備えた無料の IDE (統合開発環境) [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results) をダウンロードしてインストールします(これ以降のバージョンでも動作する可能性があります)。
-* [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) 以降をダウンロードしてインストールします
+* [Microsoft .NET Framework 4.5](https://www.microsoft.com/ja-jp/download/details.aspx?id=30653) 以降をダウンロードしてインストールします
 * ローカルの Dynamo リポジトリ(`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)から、Microsoft DirectX をインストールします
 
 > .NET および DirectX は、すでにインストールされている可能性があります。
@@ -98,7 +98,7 @@ Dynamo が正常にビルドを完了すると、DynamoSandbox.exe ファイル�
 
 ### Visual Studio を使用してローカル ビルドをデバッグする <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-デバッグは、不具合や問題を特定し、分離、修正するプロセスです。Dynamo がソースから正常に構築されると、Visual Studio のいくつかのツールを使用して、DynamoRevit アドインなど実行中のアプリケーションをデバッグすることができます。ソース コードを分析して問題の原因を特定したり、現在実行中のコードを検討することができます。Visual Studio のコードのデバッグ方法およびナビゲーション方法の詳細については、「[Visual Studio ドキュメント](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger)」を参照してください。
+デバッグは、不具合や問題を特定し、分離、修正するプロセスです。Dynamo がソースから正常に構築されると、Visual Studio のいくつかのツールを使用して、DynamoRevit アドインなど実行中のアプリケーションをデバッグすることができます。ソース コードを分析して問題の原因を特定したり、現在実行中のコードを検討することができます。Visual Studio のコードのデバッグ方法およびナビゲーション方法の詳細については、「[Visual Studio ドキュメント](https://docs.microsoft.com/ja-jp/visualstudio/debugger/navigating-through-code-with-the-debugger)」を参照してください。
 
 デバッグ用の 2 つのオプション、スタンドアロンの Dynamo アプリケーション、DynamoSandbox について説明します。
 

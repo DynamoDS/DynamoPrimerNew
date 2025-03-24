@@ -7,7 +7,7 @@ Dynamo は[ビジュアル プログラミング](../../a\_appendix/a-1\_visual-
 
 このセクションでは、Civil 3D 環境で Python を活用して、AutoCAD および Civil 3D .NET API を利用する方法について説明します。
 
-{% hint style="info" %} Dynamo での Python の使用に関する一般情報については、「[8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %} Dynamo での Python の使用に関する一般情報については、「 [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 」セクションを参照してください。 {% endhint %}
 
 ## API ドキュメント
 
@@ -48,7 +48,7 @@ Dynamo for Civil 3D で Python スクリプトを作成する場合の基本的�
 
 ### 目標
 
-> :datt: 図面内のすべての集水域の境界ジオメトリを取得します。
+> :dart: 図面内のすべての集水域の境界ジオメトリを取得します。
 
 ### データセット
 
@@ -161,7 +161,7 @@ with adoc.LockDocument():
 <strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
 </strong></code></pre>
 
-{% hint style="warning" %} 経験則として、スクリプト ロジックの大部分をトランザクション内に含めることをお勧めします。これにより、スクリプトが読み取り/書き込みを行うオブジェクトに安全にアクセスできるようになります。多くの場合、トランザクションを省略すると致命的なエラーが発生する可能性があります。{% endhint %}
+{% hint style="warning" %} 経験則として、スクリプト ロジックの大部分をトランザクション内に含めることをお勧めします。これにより、スクリプトが読み取り/書き込みを行うオブジェクトに安全にアクセスできるようになります。多くの場合、トランザクションを省略すると致命的なエラーが発生する可能性があります。 {% endhint %}
 
 ### ポリカーブを作成する
 

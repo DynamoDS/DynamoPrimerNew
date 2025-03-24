@@ -77,7 +77,7 @@
 
 そのため、Alignment からの特定のオフセットよりも外にある構造物は対象に含めないように、構造物のリストをフィルタする必要があります。これは、**List.FilterByBoolMask** ノードを使用して行うのが最適です。構造物のリストをフィルタした後、**List.SortByKey** ノードを使用して、測点値で並べ替えます。
 
-{% hint style="info" %} リストを初めて使用する場合は、「[2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %} リストを初めて使用する場合は、「 [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 」セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>構造物をフィルタし、並べ替える</p></figcaption></figure>
 
@@ -104,7 +104,7 @@
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「 [dynamo-player.md](../../dynamo-player.md "mention") 」セクションを参照してください。 {% endhint %}
 
 > :tada: ミッションが達成されました。
 

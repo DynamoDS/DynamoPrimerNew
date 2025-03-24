@@ -59,7 +59,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 問題なさそうですね?しかし、このアプローチには潜在的な問題があります。Excel ファイルの列の順序が将来変更されたらどうなるでしょうか?あるいは、2 つの列の間に新しい列が追加されたら?その場合は、グラフが正しく機能しなくなり、更新が必要になります。Excel の列ヘッダーを _キー_ として、残りのデータを _値_ として使用して、データを**ディクショナリ**に入れることで、グラフを将来も使用できるように保証します。
 
-{% hint style="info" %} ディクショナリを初めて使用する場合は、「[5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %} ディクショナリを初めて使用する場合は、「 [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") 」セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Excel データをディクショナリに入れる</p></figcaption></figure>
 
@@ -81,13 +81,13 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 ここで、Excel ファイルで指定した測点値でコリドー計画線に沿って**座標系**を生成します。これらの座標系は、照明柱のブロック参照の位置、回転、および尺度を定義するために使用されます。
 
-{% hint style="info" %} 座標系を初めて使用する場合は、「[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %} 座標系を初めて使用する場合は、「 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 」セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>コリドー計画線に沿って座標系を取得する</p></figcaption></figure>
 
 基線のどちら側に座標系があるかに応じて座標系を回転するために、ここでコード ブロックを使用します。これは複数のノードのシーケンスを使用して実現できますが、これは単に書き出すほうが簡単である良い例です。
 
-{% hint style="info" %} コード ブロックを初めて使用する場合は、「[8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %} コード ブロックを初めて使用する場合は、「 [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention") 」セクションを参照してください。 {% endhint %}
 
 ### ブロック参照を作成する
 
@@ -103,7 +103,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 グラフを実行すると、コリドーに沿ってモデル空間に新しいブロック参照が表示されます。これが素晴らしいところで、グラフの実行モードが[自動]に設定されている状態で Excel ファイルを編集すると、ブロック参照が自動的に更新されます。
 
-{% hint style="info" %} グラフの実行モードの詳細については、「[3_user_interface](../../../3\_user\_interface/ "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %} グラフの実行モードの詳細については、「 [3_user_interface](../../../3\_user\_interface/ "mention") 」セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Excel ファイルを更新して、Civil 3D で結果をすばやく表示する</p></figcaption></figure>
 
@@ -111,7 +111,7 @@ Excel データは、次ように Dynamo に読み込まれます。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、Civil 3D で結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「 [dynamo-player.md](../../dynamo-player.md "mention") 」セクションを参照してください。 {% endhint %}
 
 > :tada: ミッションが達成されました。
 

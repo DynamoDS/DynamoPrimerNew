@@ -2,7 +2,7 @@
 
 ### パッケージをパブリッシュする <a href="#publish-a-package" id="publish-a-package"></a>
 
-パッケージは、Dynamo コミュニティでノードを保存し、共有できる便利な方法です。パッケージには、Dynamo ワークスペースで作成されたカスタム ノードから NodeModel 派生ノードまで、すべての情報を含めることができます。パッケージは、Package Manager を使用してパブリッシュおよびインストールします。ここで説明する内容に加えて、[Primer](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) のパッケージに関する一般的なガイドも参照してください。
+パッケージは、Dynamo コミュニティでノードを保存し、共有できる便利な方法です。パッケージには、Dynamo ワークスペースで作成されたカスタム ノードから NodeModel 派生ノードまで、すべての情報を含めることができます。パッケージは、Package Manager を使用してパブリッシュおよびインストールします。ここで説明する内容に加えて、[Primer](https://primer2.dynamobim.org/v/ja/6_custom_nodes_and_packages/6-2_packages/1-introduction) のパッケージに関する一般的なガイドも参照してください。
 
 #### Package Manager について <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 

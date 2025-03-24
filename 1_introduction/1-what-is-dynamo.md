@@ -1,6 +1,6 @@
 # Dynamo とは、その動作の仕組みとは
 
-Dynamo は、スタンドアロンの「Sandbox」モードで、または Revit、FormIt、Civil 3D などの他のソフトウェアのプラグインとして、ダウンロードして実行できる、[ビジュアル プログラミング](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo) アプリケーションです。
+Dynamo は、スタンドアロンの「Sandbox」モードで、または Revit、FormIt、Civil 3D などの他のソフトウェアのプラグインとして、ダウンロードして実行できる、[ビジュアル プログラミング](https://primer2.dynamobim.org/v/ja/a_appendix/a-1_visual-programming-and-dynamo) アプリケーションです。
 
 {% hint style="info" %}[**Dynamo Core**/**Revit**/**Sandbox** の違いについて説明します。](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) {% endhint %}
 

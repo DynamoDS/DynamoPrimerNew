@@ -385,7 +385,7 @@ Dynamo グラフをディスクから開くと、ディスクに保存された�
  
 ```
 
- シリアル化された base64 でエンコードされたデータの形式に依存することはできません**。
+ シリアル化された base64 でエンコードされたデータの形式に依存することは *できません*。
 
 
 #### どんな問題を解決しようとしているのか。
@@ -400,7 +400,7 @@ Dynamo グラフをディスクから開くと、ディスクに保存された�
 
 ユーザが初めてプログラムを実行すると、これらの 100 個のドアが生成されます。
 
-後でユーザがプログラムへの入力を変更して再実行すると、プログラムは*(要素のバインドなしで)* 100 個の新しいドアを作成しますが、古いドアは新しいドアとともにモデルに存在します。
+後でユーザがプログラムへの入力を変更して再実行すると、プログラムは *(要素のバインドなしで)* 100 個の新しいドアを作成しますが、古いドアは新しいドアとともにモデルに存在します。
 
 ----
 
@@ -439,7 +439,7 @@ Dynamo はライブ プログラミング 環境であり、グラフへの変�
 
 .dyn ファイル内のデータのシリアル化された形式に依存しないよう、代わりに[Serializable]属性とインタフェースを使用します。
 
-一方、ElementBinding はトレース API 上で構築され、Dynamo の統合*(DynamoRevit、Dynamo4Civil など)に実装されます。*
+一方、ElementBinding はトレース API 上で構築され、Dynamo の統合 *(DynamoRevit、Dynamo4Civil など)に実装されます。*
 
 
 #### トレース API
@@ -495,7 +495,7 @@ Dynamo が既存のファイルからロードしたトレース データや生
 
 静的な util クラス `TraceExampleWrapper` は、Dynamo にノードとして読み込まれます。これには、`TraceExampleItem` を作成する単一のメソッド `ByString` が含まれています。これらは、`description` プロパティを含む通常の .net オブジェクトです。
 
-各 `TraceExampleItem` はトレースにシリアル化され、`TraceableId` として表されます。これは、`[Serializeable]` とマークされた `IntId` を含むクラスなので、`SOAP` フォーマッタでシリアル化できます。Serializable 属性の詳細については、[こちら](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8)を参照してください
+各 `TraceExampleItem` はトレースにシリアル化され、`TraceableId` として表されます。これは、`[Serializeable]` とマークされた `IntId` を含むクラスなので、`SOAP` フォーマッタでシリアル化できます。[Serializable 属性の詳細については、こちら](https://docs.microsoft.com/ja-jp/dotnet/api/system.serializableattribute?view=netframework-4.8)を参照してください
 
 また、[こちら](https://docs.microsoft.com/ja-jp/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)で定義されている `ISerializable` インタフェースも実装する必要があります。
 

@@ -12,7 +12,7 @@
 
 **Dynamo** ボタンをクリックすると、別のウィンドウで Dynamo が起動します。
 
-{% hint style="info" %} **Dynamo と Dynamo プレーヤの違いとは**
+{% hint style="info" %} **Dynamo と Dynamo プレーヤの違いとは** 
 
 Dynamo は、グラフの作成と実行に使用します。Dynamo プレーヤは、Dynamo でグラフを開くことなく簡単にグラフを実行できます。
 
@@ -24,7 +24,7 @@ Dynamo を開くと、開始画面が表示されます。**[新規]** をクリ
 
 <figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Dynamo の開始画面</p></figcaption></figure>
 
-{% hint style="info" %} **サンプルについて**
+{% hint style="info" %} **サンプルについて** 
 
 Dynamo for Civil 3D には、いくつかのグラフが事前に作成されています。これらのグラフを参考にして、Dynamo の使用方法に関してアイデアを発展させてください。いずれかの時点で、これらのサンプル グラフと、Primer 内の [sample-workflows](sample-workflows/ "mention") を確認することをお勧めします。 {% endhint %}
 
@@ -38,7 +38,7 @@ Dynamo for Civil 3D には、いくつかのグラフが事前に作成されて
 
 Dynamo グラフの主要な構成要素は、**ノード**と呼ばれます。ノードは小さなマシンのようなものです。ノードにデータを入れると、そのデータに対して何らかの処理が行われ、結果が出力されます。Dynamo for Civil 3D には、ノードの**ライブラリ**が用意されています。このライブラリを**ワイヤ**で接続して、ノードが単独で実行する以上の規模と内容を実行できる**グラフ**を形成することができます。
 
-{% hint style="info" %} **Dynamo を使用したことがない場合はどうすればよいですか?**
+{% hint style="info" %} **Dynamo を使用したことがない場合はどうすればよいですか?** 
 
 見慣れないものがあるかもしれませんが、大丈夫です。次のセクションが役に立ちます。
 
@@ -54,7 +54,7 @@ Dynamo グラフの主要な構成要素は、**ノード**と呼ばれます。
 
 <figure><img src="../.gitbook/assets/c3d-create-text-node-placement.gif" alt=""><figcaption><p>ノードは、ライブラリから配置することも、キャンバス内で右クリックして配置することもできる</p></figcaption></figure>
 
-{% hint style="info" %} **使用するノードとそれらがある場所を調べる方法**
+{% hint style="info" %} **使用するノードとそれらがある場所を調べる方法** 
 
 ライブラリ内のノードは、動作に基づいて論理的なカテゴリにグループ化されています。詳細な説明については、[node-library.md](node-library.md "mention") セクションを参照してください。 {% endhint %}
 

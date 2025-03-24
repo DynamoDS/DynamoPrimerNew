@@ -14,7 +14,7 @@ C# で COM タイプを使用する標準的な方法は、主要な相互運用
 Dynamo は、同等のタイプを .NET (dotnet)ランタイムに委任します。たとえば、名前と名前空間が同じで、異なるアセンブリからの 2 つのタイプは同等とは見なされず、競合するアセンブリを読み込むときに Dynamo でエラーが発生します。相互運用タイプについて、Dynamo は [IsEquivalentTo API](https://learn.microsoft.com/en-us/dotnet/api/system.type.isequivalentto) を使用して、相互運用タイプが同等かどうかを確認します。
 
 ## 埋め込まれた相互運用タイプ間の競合を回避する方法
-一部のパッケージは、埋め込まれた相互運用タイプ(例: CivilConnection)を使用して既に作成されています。同等とは見なされない相互運用機能アセンブリが埋め込まれた 2 つのパッケージ([こちら](https://learn.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)で定義されている異なるバージョン)をロードすると、`package load error` が発生します。このため、パッケージ作成者は、相互運用タイプに動的バインディング(遅延バインディング)を使用することをお勧めします(ソリューションについては[こちら](https://blogs.iis.net/samng/the-pain-of-deploying-primary-interop-assemblies)でも説明されています)。
+一部のパッケージは、埋め込まれた相互運用タイプ(例: CivilConnection)を使用して既に作成されています。同等とは見なされない相互運用機能アセンブリが埋め込まれた 2 つのパッケージ([こちら](https://learn.microsoft.com/ja-jp/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)で定義されている異なるバージョン)をロードすると、`package load error` が発生します。このため、パッケージ作成者は、相互運用タイプに動的バインディング(遅延バインディング)を使用することをお勧めします(ソリューションについては[こちら](https://blogs.iis.net/samng/the-pain-of-deploying-primary-interop-assemblies)でも説明されています)。
 
 この例を参考にしてください。
 ```

@@ -41,7 +41,7 @@ Civil 3D で COGO ポイントとポイント グループを使用して作業�
 
 最初に、ドキュメント内のすべてのポイントグループを取得し、次に各グループ内のすべての COGO ポイントを取得します。これにより、_ネストされたリスト_、つまり「リストのリスト」が得られます。これは、**List.Flatten** ノードを使用してリスト全体をフラット化する場合に、後で操作が簡単になります。
 
-{% hint style="info" %} リストを初めて使用する場合は、「[2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %} リストを初めて使用する場合は、「 [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 」セクションを参照してください。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>すべてのポイント グループと COGO ポイントを取得する </p></figcaption></figure>
 
@@ -69,7 +69,7 @@ Civil 3D で COGO ポイントとポイント グループを使用して作業�
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Dynamo プレーヤを使用してグラフを実行し、ツールスペースで結果を確認する</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「[dynamo-player.md](../../dynamo-player.md "mention")」セクションを参照してください。{% endhint %}
+{% hint style="info" %} Dynamo プレーヤを初めて使用する場合は、「 [dynamo-player.md](../../dynamo-player.md "mention") 」セクションを参照してください。 {% endhint %}
 
 > :tada: ミッションが達成されました。
 
@@ -79,6 +79,6 @@ Civil 3D で COGO ポイントとポイント グループを使用して作業�
 
 {% hint style="info" %} ポイントのグループ化を、未処理の説明ではなく **完全な説明** に基づいて行うように修正します。 {% endhint %}
 
-{% hint style="info" %} 選択した他の **定義済みカテゴリ**  (「グラウンド ショット」、「モニュメント」など)によってポイントをグループ化します。 {% endhint %}
+{% hint style="info" %} 選択した他の **定義済みカテゴリ** (「グラウンド ショット」、「モニュメント」など)によってポイントをグループ化します。 {% endhint %}
 
-{% hint style="info" %}特定のグループのポイントに対して TIN サーフェスを自動的に作成します。{% endhint %}
+{% hint style="info" %} 特定のグループのポイントに対して TIN サーフェスを自動的に作成します。 {% endhint %}
