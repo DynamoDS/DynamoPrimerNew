@@ -4,7 +4,7 @@
 
 通过本地发布节点，可以在打开新会话时在 Dynamo 库中访问该节点。如果不发布节点，则引用自定义节点的 Dynamo 图形也必须在其文件夹中具有该自定义节点（或必须使用 _“文件”>“输入库”_ 将自定义节点输入到 Dynamo 中）。
 
-{% hint style="warning" %}只要 Dynamo Sandbox 2.17 及更高版本中的自定义节点和软件包没有宿主 API 依存关系，就可以发布它们。在早期版本中，只能在 Dynamo for Revit 和 Dynamo for Civil 3D 中发布自定义节点和软件包。{% endhint %}
+{% hint style="warning" %}只要 Dynamo Sandbox 2.17 及更高版本中的自定义节点和软件包没有宿主 API 依存关系，就可以发布它们。在早期版本中，只能在适用于 Revit 的 Dynamo 和 Dynamo for Civil 3D 中发布自定义节点和软件包。{% endhint %}
 
 ## 练习：本地发布自定义节点
 

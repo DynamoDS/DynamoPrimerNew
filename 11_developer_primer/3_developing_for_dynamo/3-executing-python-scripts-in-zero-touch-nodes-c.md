@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-Python 脚本将返回变量 `output`，这意味着我们在 Python 脚本中需要一个 `output` 变量。使用此样例脚本以在 Dynamo 中测试节点。如果您曾在 Dynamo 中使用过 Python 节点，则以下内容应该很熟悉。有关详细信息，请查看[入门手册的 Python 部分](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html)。
+Python 脚本将返回变量 `output`，这意味着我们在 Python 脚本中需要一个 `output` 变量。使用此样例脚本以在 Dynamo 中测试节点。如果您曾在 Dynamo 中使用过 Python 节点，则以下内容应该很熟悉。有关详细信息，请查看[入门手册的 Python 部分](https://primer2.dynamobim.org/v/zh-cn/8_coding_in_dynamo/8-3_python)。
 
 ```
 import clr

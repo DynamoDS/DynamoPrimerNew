@@ -49,7 +49,7 @@
 
 由于 Revit 是一个提供强大项目管理的平台，因此 Dynamo 中的参数化操作可能非常复杂且计算速度缓慢。如果 Dynamo 计算节点需要较长时间，可能需要使用“冻结”节点功能，以便在开发图形时暂停执行 Revit 操作。
 
-{% hint style="info" %}您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention")部分，阅读有关冻结节点的详细信息。{% endhint %}
+{% hint style="info" %}  您可以在[4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention") 部分，阅读有关冻结节点的详细信息。 {% endhint %}
 
 ### 社区和 Dynamo 博客
 

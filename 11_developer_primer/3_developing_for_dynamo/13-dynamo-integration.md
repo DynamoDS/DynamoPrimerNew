@@ -385,7 +385,7 @@ StartupConfiguration 用于将 DynamoModel 作为参数传入，这表示它包�
  
 ```
 
- *不*建议依赖序列化 base64 编码数据的格式。
+ *不* 建议依赖序列化 base64 编码数据的格式。
 
 
 #### 我们试图解决什么问题。
@@ -400,7 +400,7 @@ StartupConfiguration 用于将 DynamoModel 作为参数传入，这表示它包�
 
 用户第一次运行该程序时，它会生成这 100 扇门。
 
-稍后，当用户修改其程序的输入并重新执行它时 - 他们的程序将*（无元素绑定）*创建 100 扇新门，旧门和新门仍将存在于模型中。
+稍后，当用户修改其程序的输入并重新执行它时 - 他们的程序将 *（无元素绑定）* 创建 100 扇新门，旧门和新门仍将存在于模型中。
 
 ----
 
@@ -439,7 +439,7 @@ StartupConfiguration 用于将 DynamoModel 作为参数传入，这表示它包�
 
 不要依赖 .dyn 文件中数据的序列化格式 - 而是使用 [Serializable] 属性和接口
 
-另一方面，ElementBinding 基于跟踪 API 构建，并在 Dynamo 集成*（Dynamo、Revit、Dynamo4Civil 等）*中实现
+另一方面，ElementBinding 基于跟踪 API 构建，并在 Dynamo 集成 *（Dynamo、Revit、Dynamo4Civil 等）* 中实现
 
 
 #### 跟踪 API
@@ -495,9 +495,9 @@ public static void SetTraceData(string key, ISerializable value)
 
 静态实用程序类 `TraceExampleWrapper` 将作为节点导入到 Dynamo 中。它包含一个方法 `ByString`，它将创建 `TraceExampleItem` - 这些是包含 `description` 特性的常规 .net 对象。
 
-每个 `TraceExampleItem` 都序列化到表示为 `TraceableId` 的跟踪中 - 这只是一个包含标记为 `[Serializeable]` 的 `IntId` 类，因此可以使用 `SOAP` Formatter 对其进行序列化。有关可序列化属性的详细信息，请参见[此处](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8)
+每个 `TraceExampleItem` 都序列化到表示为 `TraceableId` 的跟踪中 - 这只是一个包含标记为 `[Serializeable]` 的 `IntId` 类，因此可以使用 `SOAP` Formatter 对其进行序列化。有关可序列化属性的详细信息，请参见[此处](https://docs.microsoft.com/zh-cn/dotnet/api/system.serializableattribute?view=netframework-4.8)
 
-您还必须实现[此处](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)定义的 `ISerializable` 接口
+您还必须实现[此处](https://docs.microsoft.com/zh-cn/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)定义的 `ISerializable` 接口
 
 
 ``` c#
@@ -753,7 +753,7 @@ D4C 中的工作流与上述针对 Revit 的描述非常相似，以下是 D4C �
 
 如果这些区域性子目录与节点/扩展二进制文件位于同一目录中，则 .net 运行时会加载这些区域性子目录，而不会出现任何问题。
 
-有关资源程序集和 .resx 文件的详细信息，请参见：[https://docs.microsoft.com/zh-cn/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。
+有关资源程序集和 .resx 文件的详细信息，请参见：[https://docs.microsoft.com/zh-cn/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/zh-cn/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。
 
 您可能会创建 `.resx` 文件并使用 Visual Studio 对其进行编译。对于给定程序集 `xyz.dll` - 生成的资源将编译为新的程序集 `xyz.resources.dll` \- 如上所述，此程序集的位置和名称非常重要。
 

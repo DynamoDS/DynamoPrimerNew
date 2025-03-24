@@ -20,7 +20,7 @@
 
 ### 默认输入值 <a href="#default-input-values" id="default-input-values"></a>
 
-Dynamo 支持为节点上的输入端口定义默认值。如果端口没有连接，则这些默认值会提供给节点。默认值是使用[《C# 编程手册》](https://msdn.microsoft.com/en-us/library/dd264739.aspx)中指定可选参数的 C# 机制来表示的。通过以下方式指定默认值：
+Dynamo 支持为节点上的输入端口定义默认值。如果端口没有连接，则这些默认值会提供给节点。默认值是使用[《C# 编程手册》](https://msdn.microsoft.com/zh-cn/library/dd264739.aspx)中指定可选参数的 C# 机制来表示的。通过以下方式指定默认值：
 
 * 将方法参数设置为默认值：`inputNumber = 2.0`
 
@@ -262,7 +262,7 @@ namespace ZeroTouchEssentials
     }
     ```
 
-    > 在[此处](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)介绍了 using 语句
+    > 在[此处](https://msdn.microsoft.com/zh-cn/library/yh598w02.aspx)介绍了 using 语句
     >
     > 请参见 [Dynamo 几何图形稳定性改进](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以详细了解 Dynamo 2.5 中引入的新稳定性功能
 *   使用手动 Dispose 调用：

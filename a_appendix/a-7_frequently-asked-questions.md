@@ -85,7 +85,7 @@ _NVIDIA 控制面板示例：_
 
 
 ##### Dynamo Excel 节点问题
-可以参考此[文章](https://knowledge.autodesk.com/support/revit-products/troubleshooting/caas/sfdcarticles/sfdcarticles/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html)进行诊断。
+可以参考此[文章](https://www.autodesk.com.cn/support/technical/article/caas/sfdcarticles/sfdcarticles/CHS/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html)进行诊断。
 
 ### Dynamo 内部版位置
 稳定版本

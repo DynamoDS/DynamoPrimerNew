@@ -68,7 +68,7 @@
  
     C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
  
-此命令将告知 Dynamo 在*“C：\\someReallyCoolDynamoFile.Dyn”*打开指定的文件，而不绘制任何 UI，然后运行它。图形完成运行后，Dynamo 将退出。 
+此命令将告知 Dynamo 在 *“C：\\someReallyCoolDynamoFile.Dyn”* 打开指定的文件，而不绘制任何 UI，然后运行它。图形完成运行后，Dynamo 将退出。 
 
 **2.1 版中的新功能**：DynamoWPFCLI.exe 应用程序。此应用程序通过添加几何图形 (-g) 选项支持 DynamoCLI.exe 应用程序支持的所有内容。DynamoWPFCLI.exe 应用程序仅适用于 Windows。
 
@@ -77,7 +77,7 @@
 * 与 DynamoCLI 交互的首选方法是通过命令提示符界面。
 * 此时，您需要从 [Dynamo 版本] 文件夹内的安装位置运行 DynamoCLI。CLI 需要访问与 Dynamo 相同的 .dll，因此不应移动它。
 * 您应该能够执行当前在 Dynamo 中打开的图形，但这可能会导致意外的附带后果。
-* 所有文件路径都完全符合 DOS 要求，因此相对路径和完全限定路径应该起作用，但请确保将路径用引号括起来*“C:path\\to\\file.dyn”* 
+* 所有文件路径都完全符合 DOS 要求，因此相对路径和完全限定路径应该起作用，但请确保将路径用引号括起来 *“C:path\\to\\file.dyn”* 
 * DynamoCLI 是一项新功能，目前正在不断变化：**CLI 目前仅加载标准 Dynamo 库的子集**，如果图形未正确执行，请注意这一点。这些库在[此处](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28)指定 
 * 当前不提供 std 输出，如果没有遇到错误，CLI 将在运行完成后退出。
  

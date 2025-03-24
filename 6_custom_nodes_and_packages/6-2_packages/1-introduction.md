@@ -102,7 +102,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 作为一个自动化过程，它将涉及将信息添加到随 Dynamo 一起安装的配置文件：  
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-默认情况下，Dynamo for Revit 的配置为：
+默认情况下，适用于 Revit 的 Dynamo 的配置为：
  
  
 `<CustomPackageFolders>`  
@@ -136,7 +136,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 #### 解决方法
 
-一种可能的解决方法是使用指向网络位置的映射网络驱动器，并让工作站引用该路径。创建映射网络驱动器的步骤在[此处](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive)描述。
+一种可能的解决方法是使用指向网络位置的映射网络驱动器，并让工作站引用该路径。创建映射网络驱动器的步骤在[此处](https://support.microsoft.com/zh-cn/help/4026635/windows-10-map-a-network-drive)描述。
 
 ### 进一步了解软件包
 

@@ -18,7 +18,7 @@ Dynamo 的许多绝佳用例之一是沿道路模型动态放置离散对象。�
 
 ## 版本兼容性
 
-{% hint style="success" %}此图形将在 **Civil 3D 2020** 及更高版本上运行。{% endhint %}
+{% hint style="success" %} 此图形将在 **Civil 3D 2020** 及更高版本上运行。 {% endhint %}
 
 ## 数据集
 
@@ -26,7 +26,7 @@ Dynamo 的许多绝佳用例之一是沿道路模型动态放置离散对象。�
 
 {% hint style="info" %}最好将 Excel 文件和 Dynamo 图形保存在同一目录中。{% endhint %}
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
@@ -59,7 +59,7 @@ Excel 会如下所示输入到 Dynamo 中。
 
 看起来不错，对吧？但这种方法有潜在问题。如果 Excel 文件中列的顺序将来发生更改，该怎么办？在两列之间添加新列，又该怎么办？然后，图形将无法正常运行，需要更新。我们可以通过将数据放入到**词典**中、将 Excel 列标题作为 _键_、将数据的其余部分作为 _值_，来使图形适应未来变化。
 
-{% hint style="info" %}如果您对使用词典不熟悉，请参见 [5-5_Dynamo 中的词典](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用词典不熟悉，请参见 [5-5_Dynamo 中的词典](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") 部分。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>将 Excel 数据放入到词典中</p></figcaption></figure>
 
@@ -81,13 +81,13 @@ Excel 会如下所示输入到 Dynamo 中。
 
 现在，我们将沿道路要素线以我们在 Excel 文件中指定的桩号值生成**坐标系**。这些坐标系将用于定义灯杆块参照的位置、旋转和比例。
 
-{% hint style="info" %}如果您对使用坐标系不熟悉，请参见 [2-向量.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用坐标系不熟悉，请参见 [2-向量.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 部分。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>沿道路要素线获取坐标系</p></figcaption></figure>
 
 请注意，在此处使用代码块可旋转坐标系，具体取决于坐标系位于基准线的哪一侧。这可以使用多个节点序列来实现，但这是一个很好的例子，说明只需编写代码块即可。
 
-{% hint style="info" %}如果您对使用代码块不熟悉，请参见 [8-1_代码块和 DesignScript](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用代码块不熟悉，请参见 [8-1_代码块和 DesignScript](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention") 部分。 {% endhint %}
 
 ### 创建块参照
 
@@ -103,7 +103,7 @@ Excel 会如下所示输入到 Dynamo 中。
 
 当运行图形时，您应该会在模型空间中看到新的块参照沿道路显示。以下是一个很酷的部分 - 如果图形的执行模式设置为“自动”，然后您编辑 Excel 文件，则块参照会自动更新！
 
-{% hint style="info" %}可以在 [3_用户界面](../../../3\_user\_interface/ "mention")部分中，了解有关图形执行模式的详细信息。{% endhint %}
+{% hint style="info" %} 可以在 [3_用户界面](../../../3\_user\_interface/ "mention") 部分中，了解有关图形执行模式的详细信息。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>更新 Excel 文件并在 Civil 3D 中快速查看结果</p></figcaption></figure>
 
@@ -111,7 +111,7 @@ Excel 会如下所示输入到 Dynamo 中。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>使用 Dynamo 播放器运行图形并在 Civil 3D 中查看结果</p></figcaption></figure>
 
-{% hint style="info" %}如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention") 部分。 {% endhint %}
 
 > :tada: 任务完成！
 
@@ -119,7 +119,7 @@ Excel 会如下所示输入到 Dynamo 中。
 
 在 Dynamo 中可视化道路几何图形以提供上下文可能会很有帮助。此特定模型已在模型空间中提取了道路实体，因此让我们将这些道路实体输入到 Dynamo 中。
 
-但我们还需要考虑其他一些事项。实体是一种较“重”的几何图形类型，这意味着此操作会降低图形的运行速度。如果有一种简单方法来_选择_我们是否需要查看实体，那就太好了。显而易见的答案是，只需断开连接 **Corridor.GetSolids** 节点，但这会对所有下游节点产生警告，这有点乱。在这种情况下，**ScopeIf** 节点的作用确实显著。
+但我们还需要考虑其他一些事项。实体是一种较“重”的几何图形类型，这意味着此操作会降低图形的运行速度。如果有一种简单方法来 _选择_ 我们是否需要查看实体，那就太好了。显而易见的答案是，只需断开连接 **Corridor.GetSolids** 节点，但这会对所有下游节点产生警告，这有点乱。在这种情况下，**ScopeIf** 节点的作用确实显著。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_VisualizeCorridor (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -134,8 +134,8 @@ Excel 会如下所示输入到 Dynamo 中。
 
 以下是一些有关如何扩展此图形功能的想法。
 
-{% hint style="info" %}将 **旋转** 列添加到 Excel 文件中，然后使用该列来驱动旋转坐标系。{% endhint %}
+{% hint style="info" %} 将 **旋转** 列添加到 Excel 文件中，然后使用该列来驱动旋转坐标系。 {% endhint %}
 
-{% hint style="info" %}将 **水平或垂直偏移** 添加到 Excel 文件中，以便灯杆可以根据需要偏离道路要素线。{% endhint %}
+{% hint style="info" %}  将 **水平或垂直偏移** 添加到 Excel 文件中，以便灯杆可以根据需要偏离道路要素线。 {% endhint %}
 
-{% hint style="info" %} **直接在 Dynamo** 中使用起点桩号和典型间距生成桩号值，而不是使用具有桩号值的 Excel 文件。{% endhint %}
+{% hint style="info" %} **直接在 Dynamo** 中使用起点桩号和典型间距生成桩号值，而不是使用具有桩号值的 Excel 文件。 {% endhint %}

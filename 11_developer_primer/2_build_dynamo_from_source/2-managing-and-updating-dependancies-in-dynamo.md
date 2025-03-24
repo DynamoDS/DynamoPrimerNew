@@ -6,7 +6,7 @@
 ### 注意事项
 1. 新的或更新的依存关系的许可是什么 - 只有一些开源许可在未与 ADSK 法律部门协商的情况下获得批准。
     * 解析许可后，确保依存关系和版本记录在内部 wiki 中。
-    * 如果许可为 `LGPL`、`GPL` 或 `Apache`，则必须将许可文件复制到 Dynamo 内部版本的_“Open Source Licenses”_子文件夹中。
+    * 如果许可为 `LGPL`、`GPL` 或 `Apache`，则必须将许可文件复制到 Dynamo 内部版本的 _“Open Source Licenses”_ 子文件夹中。
     * 如果许可为 `LGPL`，则必须将所有第三方组件的完整源代码及其相应开源许可的文本副本上传到 [www.autodesk.com/lgplsource](https://www.autodesk.com/company/legal-notices-trademarks/open-source-distribution)
 2. 如果是更新，许可类型是否与先前版本不同？
 3. 依存关系是否跨平台？ 

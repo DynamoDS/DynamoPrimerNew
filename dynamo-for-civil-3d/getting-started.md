@@ -12,7 +12,7 @@
 
 单击 **“Dynamo”** 按钮，这即会在单独窗口中启动 Dynamo。
 
-{% hint style="info" %}**Dynamo 和 Dynamo 播放器之间有何区别？**
+{% hint style="info" %} **Dynamo 和 Dynamo 播放器之间有何区别？**
 
 Dynamo 是用于构建和运行图形的工具。Dynamo 播放器是一种运行图形的简单方法，无需在 Dynamo 中打开这些图形。
 
@@ -24,7 +24,7 @@ Dynamo 打开后，您会看到开始屏幕。单击 **“新建”** 以打开�
 
 <figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Dynamo 开始屏幕</p></figcaption></figure>
 
-{% hint style="info" %}**有哪些样例？**
+{% hint style="info" %} **有哪些样例？**
 
 Dynamo for Civil 3D 附带了一些预构建的图形，有助于激发更多有关如何使用 Dynamo 的想法。建议您在某个时候查看这些内容，以及在本 Primer 中此处参见[样例工作流](sample-workflows/ "mention")部分。{% endhint %}
 
@@ -38,7 +38,7 @@ Dynamo for Civil 3D 附带了一些预构建的图形，有助于激发更多有
 
 Dynamo 图形的核心构建块称为 **“节点”**。一个节点就像一台小型机器 - 您将数据输入到该机器中、它对该数据进行一些处理，然后输出结果。Dynamo for Civil 3D 有一个节点 **库**，可以使用 **导线** 将这些节点连接起来以形成一个比单个节点本身的作用更大更好的 **图形**。
 
-{% hint style="info" %}**等一等，如果我以前从未使用过 Dynamo，该怎么办？**
+{% hint style="info" %} **等一等，如果我以前从未使用过 Dynamo，该怎么办？**
 
 您可能对其中的一些操作并不完全熟悉，没关系！以下部分会有所帮助。
 
@@ -54,7 +54,7 @@ Dynamo 图形的核心构建块称为 **“节点”**。一个节点就像一�
 
 <figure><img src="../.gitbook/assets/c3d-create-text-node-placement.gif" alt=""><figcaption><p>节点可以从库放置，也可以通过在画布中单击鼠标右键来放置</p></figcaption></figure>
 
-{% hint style="info" %}**如何知道要使用哪些节点以及在何处找到它们？**
+{% hint style="info" %} **如何知道要使用哪些节点以及在何处找到它们？**
 
 库中的节点根据它们的作用分组为逻辑类别。如需更深入浏览，请参见[节点库.md](node-library.md "mention")部分。{% endhint %}
 
@@ -92,7 +92,7 @@ Dynamo 图形的核心构建块称为 **“节点”**。一个节点就像一�
 
 </div>
 
-{% hint style="info" %}**为什么 Dynamo 不在每次运行图形时插入一个新的文字对象？**
+{% hint style="info" %} **为什么 Dynamo 不在每次运行图形时插入一个新的文字对象？**
 
 默认情况下，Dynamo 会“记住”它创建的对象。如果更改节点输入值，则 Civil 3D 中的对象会更新，而不是创建全新的对象。有关此行为的详细信息，请参见[对象绑定.md](advanced-topics/object-binding.md "mention")部分。{% endhint %}
 

@@ -47,7 +47,7 @@ LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 
 #### 示例 1：验证数值输入 <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-在此示例中，我们将基于之前的**“Zero-Touch 案例研究 - 网格节点”**中创建的自定义节点；一种名为 `RectangularGrid` 的方法，用于根据 `xCount` 和 `yCount` 输入生成矩形网格。如果输入无效，我们将演练测试，然后使用 `OnLogWarningMessage` 记录警告并停止处理。
+在此示例中，我们将基于之前的 **“Zero-Touch 案例研究 - 网格节点”** 中创建的自定义节点；一种名为 `RectangularGrid` 的方法，用于根据 `xCount` 和 `yCount` 输入生成矩形网格。如果输入无效，我们将演练测试，然后使用 `OnLogWarningMessage` 记录警告并停止处理。
 
 ![OnLogWarningMessage 示例 1](images/onlogwarningmessage-example-1.png)
 
@@ -223,7 +223,7 @@ LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 
 #### 示例 1：验证数值输入 <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-在此示例中，我们将基于之前的**“Zero-Touch 案例研究 - 网格节点”**中创建的自定义节点；一种名为 `RectangularGrid` 的方法，用于根据 `xCount` 和 `yCount` 输入生成矩形网格。如果输入无效，我们将演练测试，然后在节点完成运行后使用 `OnLogInfoMessage` 提供信息。
+在此示例中，我们将基于之前的 **“Zero-Touch 案例研究 - 网格节点”** 中创建的自定义节点；一种名为 `RectangularGrid` 的方法，用于根据 `xCount` 和 `yCount` 输入生成矩形网格。如果输入无效，我们将演练测试，然后在节点完成运行后使用 `OnLogInfoMessage` 提供信息。
 
 ![OnLogInfoMessage 示例 1](images/onloginfomessage-example-1.png)
 
@@ -469,15 +469,15 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 
 ![添加新项目](images/zerotouchicons-add-resources-file-1.jpg)
 
-  * 转到**“添加”>“新建项目”**，然后选择**“资源文件”**。
+  * 转到 **“添加”>“新建项目”**，然后选择 **“资源文件”**。
 
 ![添加资源文件](images/zerotouchicons-add-resources-file-2.jpg)
 
   * 将该文件命名为 `<ProjectName>Images.resx`。例如：`ZeroTouchNodeIconsImages.resx`。
 
 2. **清除自定义工具特性**：
-    * 在**“解决方案资源管理器”**中选择资源文件。
-    * 在**“特性”**面板中，通过删除 `ResXFileCodeGenerator` 值来清除 `Custom Tool` 字段。
+    * 在 **“解决方案资源管理器”** 中选择资源文件。
+    * 在 **“特性”** 面板中，通过删除 `ResXFileCodeGenerator` 值来清除 `Custom Tool` 字段。
 
 ![清理自定义工具特性](images/zerotouchicons-custom-tool-property.jpg)
 
@@ -486,8 +486,8 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 
 #### 步骤 4：将图像添加为资源
 
-1. 使用**“托管资源编辑器（旧版）”**打开资源文件：
-    * 如果使用 Visual Studio 17.11 或更高版本，请右键单击资源文件，选择**“打开方式”**，然后选择**“托管资源编辑器（旧版）”**。
+1. 使用 **“托管资源编辑器（旧版）”** 打开资源文件：
+    * 如果使用 Visual Studio 17.11 或更高版本，请右键单击资源文件，选择 **“打开方式”**，然后选择 **“托管资源编辑器（旧版）”**。
     * 如果使用 17.11 之前的 Visual Studio 版本，请双击资源文件以使用资源编辑器打开（在您的 Visual Studio 版本中，该编辑器尚未成为旧版）。
 
 ![使用“打开方式...”](images/zerotouchicons-open-resource-editor.jpg)
@@ -495,12 +495,12 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 ![使用托管资源编辑器（旧版）打开资源文件](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. 添加图片：
-    * 将图像文件拖放到编辑器中，或使用**“添加现有文件”**选项。
+    * 将图像文件拖放到编辑器中，或使用 **“添加现有文件”** 选项。
 
 ![添加现有文件](images/zerotouchicons-add-existing-file.jpg)
 
 3. 更新持久性：
-    * 从“资源编辑器”中选择图像（如果从“解决方案资源管理器”中选择图像，则此图像将不起作用），将**“特性”**面板中的**“持久性”**特性更改为 `Embedded in .resx`。这可确保图像包含在您的 `.dll` 中。
+    * 从“资源编辑器”中选择图像（如果从“解决方案资源管理器”中选择图像，则此图像将不起作用），将 **“特性”** 面板中的 **“持久性”** 特性更改为 `Embedded in .resx`。这可确保图像包含在您的 `.dll` 中。
 
 ![更新持久性](images/zerotouchicons-edit-persistence-property.jpg)
 
@@ -514,7 +514,7 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 
 ![安装 .NET 升级助手](images/zerotouchicons-net-upgrade-assistant.jpg)
 
-2. 在**解决方案资源管理器**中的项目上单击鼠标右键，然后选择**“升级”>“将项目转换为 SDK 样式”**。
+2. 在**解决方案资源管理器**中的项目上单击鼠标右键，然后选择 **“升级”>“将项目转换为 SDK 样式”**。
 
 ![升级项目](images/zerotouchicons-upgrade-project.jpg)
 
@@ -553,7 +553,7 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 ![添加构建后代码](images/zerotouchicons-after-build.jpg)
 1. 将所有 `ZeroTouchNodeIcons` 实例替换为您的项目名称。
 2. 重新加载项目：
-    * 在已卸载的项目上单击鼠标右键，然后选择**“重新加载项目”**。
+    * 在已卸载的项目上单击鼠标右键，然后选择 **“重新加载项目”**。
 
 ![重新加载项目](images/zerotouchicons-reload-project.jpg)
 

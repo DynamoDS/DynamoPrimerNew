@@ -97,9 +97,9 @@
 
 ![](../images/5-3/3/logic-exercisepartII-06.jpg)
 
-> a.**List.FilterByBoolMask** \- 将上一步的**“Curve.PointAtParameter”**连接到_“list”_输入。
+> a.**List.FilterByBoolMask** \- 将上一步的 **“Curve.PointAtParameter”** 连接到 _“list”_ 输入。
 >
-> b.**Watch** -_“in”_的观察节点和_“out”_的观察节点表明，我们有表示偶数索引和奇数索引的两个列表。这些点在曲线上的排序方式相同，我们将在下一步中进行演示。
+> b.**Watch** - _“in”_ 的观察节点和 _“out”_ 的观察节点表明，我们有表示偶数索引和奇数索引的两个列表。这些点在曲线上的排序方式相同，我们将在下一步中进行演示。
 
 7\.接下来，我们将在步骤 05 中使用 **“List.FilterByBoolMask”** 的输出结果，以根据其索引生成具有大小的几何图形。
 

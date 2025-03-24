@@ -63,4 +63,4 @@ Dynamo 应用程序可从 [Dynamo 网站](http://dynamobim.com)获得。正式�
 
 恭喜您，现在已完成设置 DynamoSandbox，可立即使用！
 
-{% hint style="info" %}**“几何图形”** 是 Dynamo Sandbox 中的一项附加功能，仅适用于拥有以下 Autodesk 软件的当前固定期限的许可或许可的用户：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**“几何图形”**允许用户从 Dynamo Sandbox 输入、创建、编辑和输出几何图形。{% endhint %}
+{% hint style="info" %} **“几何图形”** 是 Dynamo Sandbox 中的一项附加功能，仅适用于拥有以下 Autodesk 软件的当前固定期限的许可或许可的用户：Revit、Robot Structural Analysis、FormIt 和 Civil 3D。**“几何图形”** 允许用户从 Dynamo Sandbox 输入、创建、编辑和输出几何图形。 {% endhint %}

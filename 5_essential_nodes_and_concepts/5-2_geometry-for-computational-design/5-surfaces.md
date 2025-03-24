@@ -1,6 +1,6 @@
 # 曲面
 
-## Surfaces in Dynamo
+## Dynamo 中的曲面
 
 ### 什么是曲面
 
@@ -47,7 +47,7 @@
 
 **UV 坐标**：UV 参数空间中的点由 U、V（有时为 W）定义。
 
-![Surface Coordinate](../images/5-2/5/SurfaceCoordinate.jpg)
+![曲面坐标](../images/5-2/5/SurfaceCoordinate.jpg)
 
 **垂直平面**：在给定 UV 坐标处与 U 向和 V 向等位曲线垂直的平面。
 

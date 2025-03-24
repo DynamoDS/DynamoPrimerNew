@@ -4,7 +4,7 @@ Dynamo 的源代码托管在 GitHub 上，可供任何人克隆并参与修改�
 
 ### 在 GitHub 上查找 Dynamo 存储库 <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-GitHub 是一种基于 [Git](https://help.github.com/articles/git-and-github-learning-resources/) 的托管服务，它是一个版本控制系统，可用于跟踪更改并协调用户之间的工作。Git 是一种工具，我们可以利用它来下载 Dynamo 的源文件，并可以通过几条命令来保持更新这些源文件。通过使用此方法，将避免每次更新时下载和手动替换源文件这一不必要的固有混乱工作。Git 版本控制系统将跟踪本地和远程代码存储库之间的任何差异。
+GitHub 是一种基于 [Git](https://docs.github.com/zh/get-started/quickstart/git-and-github-learning-resources) 的托管服务，它是一个版本控制系统，可用于跟踪更改并协调用户之间的工作。Git 是一种工具，我们可以利用它来下载 Dynamo 的源文件，并可以通过几条命令来保持更新这些源文件。通过使用此方法，将避免每次更新时下载和手动替换源文件这一不必要的固有混乱工作。Git 版本控制系统将跟踪本地和远程代码存储库之间的任何差异。
 
 Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
@@ -18,7 +18,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 ### 使用 Git 拉取 Dynamo 存储库 <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-在可以克隆存储库之前，我们需要先安装 Git。请跟随此[简短手册](https://help.github.com/articles/set-up-git/#setting-up-git)来了解安装步骤，以及如何设置 GitHub 用户名和电子邮件地址。在本例中，我们将在命令行中使用 Git。本手册假定您将使用的是 Windows，但也可以在 Mac 或 Linux 中使用 Git 来克隆 Dynamo 源代码。
+在可以克隆存储库之前，我们需要先安装 Git。请跟随此[简短手册](https://docs.github.com/zh/get-started/quickstart/set-up-git#setting-up-git)来了解安装步骤，以及如何设置 GitHub 用户名和电子邮件地址。在本例中，我们将在命令行中使用 Git。本手册假定您将使用的是 Windows，但也可以在 Mac 或 Linux 中使用 Git 来克隆 Dynamo 源代码。
 
 我们需要一个 Dynamo 存储库的 URL，以通过其进行克隆。这可以在存储库页面上的“克隆或下载”按钮中找到。复制要粘贴到命令提示中的 URL。
 
@@ -52,7 +52,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 在源文件现已克隆到我们的本地计算机后，我们可以为 Dynamo 构建可执行文件。为此，我们需要设置 Visual Studio IDE，并确保已安装 .NET Framework 和 DirectX。
 
 * 下载并安装 [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results)，这是一个功能齐全的免费 IDE（集成开发环境 - 更高版本也可以使用）
-* 下载并安装 [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) 或更高版本
+* 下载并安装 [Microsoft .NET Framework 4.5](https://www.microsoft.com/zh-cn/download/details.aspx?id=30653) 或更高版本
 * 从本地 Dynamo 存储库 (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`) 安装 Microsoft DirectX
 
 > 可能已安装 .NET 和 DirectX。
@@ -98,7 +98,7 @@ Dynamo 的源代码托管在 DynamoDS GitHub 上的以下存储库中：[https:/
 
 ### 使用 Visual Studio 调试本地构建 <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-调试是一个识别、隔离和更正错误或问题的过程。在从源代码成功构建 Dynamo 后，我们可以使用 Visual Studio 中的多款工具来调试正在运行的应用程序（例如，DynamoRevit 附加模块）。我们可以分析它的源代码来查找问题的根源，也可以观察当前正在执行的代码。有关如何在 Visual Studio 中调试和导览代码的更详细说明，请参见 [Visual Studio 文档](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger)。
+调试是一个识别、隔离和更正错误或问题的过程。在从源代码成功构建 Dynamo 后，我们可以使用 Visual Studio 中的多款工具来调试正在运行的应用程序（例如，DynamoRevit 附加模块）。我们可以分析它的源代码来查找问题的根源，也可以观察当前正在执行的代码。有关如何在 Visual Studio 中调试和导览代码的更详细说明，请参见 [Visual Studio 文档](https://docs.microsoft.com/zh-cn/visualstudio/debugger/navigating-through-code-with-the-debugger)。
 
 对于单机版 Dynamo 应用程序 DynamoSandbox，我们会介绍两个用于调试的选项：
 

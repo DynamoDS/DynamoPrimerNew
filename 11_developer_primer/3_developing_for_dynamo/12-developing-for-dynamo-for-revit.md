@@ -1,4 +1,4 @@
-# 为 Dynamo for Revit 开发
+# 为适用于 Revit 的 Dynamo 开发
 
 ## 在 `GeometryPrimitiveConverter.cs` 中使用方法
 

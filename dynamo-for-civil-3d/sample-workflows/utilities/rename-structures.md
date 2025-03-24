@@ -17,7 +17,7 @@
 
 ## 版本兼容性
 
-{% hint style="success" %}此图形将在 **Civil 3D 2020** 及更高版本上运行。{% endhint %}
+{% hint style="success" %} 此图形将在 **Civil 3D 2020** 及更高版本上运行。 {% endhint %}
 
 ## 数据集
 
@@ -77,7 +77,7 @@
 
 因此，我们需要过滤结构列表，以便我们不必考虑大于与路线的特定偏移量的结构。最好使用 **List.FilterByBoolMask** 节点完成此操作。过滤结构列表后，我们使用 **List.SortByKey** 节点以按其桩号值对结构进行排序。
 
-{% hint style="info" %}如果您对操作列表不熟悉，请参见 [2-使用列表.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对操作列表不熟悉，请参见 [2-使用列表.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 部分。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>过滤和排序结构</p></figcaption></figure>
 
@@ -104,7 +104,7 @@
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器运行图形并在 Civil 3D 中查看结果</p></figcaption></figure>
 
-{% hint style="info" %}如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention") 部分。 {% endhint %}
 
 > :tada: 任务完成！
 
@@ -122,8 +122,8 @@
 
 以下是一些有关如何扩展此图形功能的想法。
 
-{% hint style="info" %}根据结构的 **最近路线** 来重命名结构，而不是选择特定路线。{% endhint %}
+{% hint style="info" %} 根据结构的 **最近路线** 来重命名结构，而不是选择特定路线。  {% endhint %}
 
-{% hint style="info" %}除了结构外，还 **重命名管道**。{% endhint %}
+{% hint style="info" %} 除了结构外，还 **重命名管道**。 {% endhint %}
 
-{% hint style="info" %}根据结构的管路，来 **设置其图层**。{% endhint %}
+{% hint style="info" %} 根据结构的管路，来 **设置其图层**。 {% endhint %}

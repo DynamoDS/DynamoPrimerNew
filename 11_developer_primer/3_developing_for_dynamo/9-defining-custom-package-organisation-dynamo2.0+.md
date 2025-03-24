@@ -101,7 +101,7 @@ MyZTLibrary/Utilities/doubleValue
 
 自定义节点是在创建节点（使用新的“自定义节点”对话框）期间根据指定的 `Category Name` 组织的。  
 
-**警告!**<br>
+**警告！**<br>
 在节点名称或类别中使用点表示法将产生其他嵌套的子类别。`.` 将用作分隔符来确定其他层次结构。这是 Dynamo 2.0 库中的新行为。
 
 ![自定义节点特性](images/custom-node-properties.jpg)

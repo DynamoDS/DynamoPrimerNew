@@ -17,7 +17,7 @@
 
 ## 版本兼容性
 
-{% hint style="success" %}此图形将在 **Civil 3D 2020** 及更高版本上运行。{% endhint %}
+{% hint style="success" %} 此图形将在 **Civil 3D 2020** 及更高版本上运行。 {% endhint %}
 
 ## 数据集
 
@@ -49,13 +49,13 @@
 
 现在，我们将沿道路要素线在起点桩号和终点桩号之间生成**坐标系**。这些坐标系将用于将车辆轮廓块几何图形与道路对齐。
 
-{% hint style="info" %}如果您对使用坐标系不熟悉，请参见 [2-向量.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用坐标系不熟悉，请参见 [2-向量.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 部分。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>沿道路要素线获取坐标系</p></figcaption></figure>
 
-> 1. 请注意节点右下角的小 **XXX**。这意味着节点的连缀设置设为_“叉积”_，这对于以相同桩号值为两条要素线生成坐标系而言是必要的。
+> 1. 请注意节点右下角的小 **XXX**。这意味着节点的连缀设置设为 _“叉积”_，这对于以相同桩号值为两条要素线生成坐标系而言是必要的。
 
-{% hint style="info" %}如果您对使用节点连缀不熟悉，请参见 [1-什么是列表.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用节点连缀不熟悉，请参见 [1-什么是列表.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention") 部分。 {% endhint %}
 
 ### 转换块几何图形
 
@@ -63,15 +63,15 @@
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_TransformAnimation.gif" alt=""><figcaption><p>在坐标系之间转换几何图形的可视化。</p></figcaption></figure>
 
-实际上，我们基于_单个_块定义获取 Dynamo 几何图形，然后移动/旋转该几何图形，同时沿要素线创建阵列。酷炫！节点序列如下所示。
+实际上，我们基于  _单个_ 块定义获取 Dynamo 几何图形，然后移动/旋转该几何图形，同时沿要素线创建阵列。酷炫！节点序列如下所示。
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Transform.png" alt=""><figcaption></figcaption></figure>
 
 > 1. 这将从文档中获取块定义。
 > 2. 这些节点获取块中对象的 Dynamo 几何图形。
-> 3. 这些节点本质上定义了我们将转换几何图形的_来源_坐标系。
+> 3. 这些节点本质上定义了我们将转换几何图形的 _来源_ 坐标系。
 > 4. 最后，此节点执行转换几何图形的实际工作。
-> 5. 注意此节点上的_“最长”_连缀。
+> 5. 注意此节点上的 _“最长”_ 连缀。
 
 以下是我们在 Dynamo 中获取的内容。
 
@@ -99,7 +99,7 @@
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器运行图形并在 Civil 3D 中查看结果</p></figcaption></figure>
 
-{% hint style="info" %}如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention") 部分。 {% endhint %}
 
 > :tada: 任务完成！
 
@@ -107,8 +107,8 @@
 
 以下是一些有关如何扩展此图形功能的想法。
 
-{% hint style="info" %}添加为每个轨迹单独使用 **不同桩号范围** 的功能。{% endhint %}
+{% hint style="info" %} 添加为每个轨迹单独使用 **不同桩号范围** 的功能。 {% endhint %}
 
-{% hint style="info" %} **拆分实体** 为可以单独分析其是否发生碰撞的较小段。{% endhint %}
+{% hint style="info" %} **拆分实体** 为可以单独分析其是否发生碰撞的较小段。 {% endhint %}
 
-{% hint style="info" %}检查以查看包络实体是否 **与要素相交**，并为发生碰撞的实体标注颜色。{% endhint %}
+{% hint style="info" %} 检查以查看包络实体是否 **与要素相交**，并为发生碰撞的实体标注颜色。 {% endhint %}

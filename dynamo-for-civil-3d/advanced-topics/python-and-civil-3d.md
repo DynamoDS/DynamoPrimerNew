@@ -7,7 +7,7 @@
 
 本部分将重点介绍如何在 Civil 3D 环境中利用 Python，来利用 AutoCAD 和 Civil 3D .NET API。
 
-{% hint style="info" %} 有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention")部分。{% endhint %}
+{% hint style="info" %} 有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 部分。{% endhint %}
 
 ## API 文档
 
@@ -40,7 +40,7 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 > 9. 如果要输出节点中的任何数据，请在脚本末尾将该节点指定给 `OUT` 变量。
 
 {% hint style="info" %} **要自定义？**\
-可以通过编辑位于 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 文件，来修改默认 Python 模板。{% endhint %}
+可以通过编辑位于 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 文件，来修改默认 Python 模板。  {% endhint %}
 
 ## 示例
 
@@ -88,7 +88,7 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo 类型</th><th width="373">包裹</th></tr></thead><tbody><tr><td><strong>Object</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entity</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entity</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %}根据经验，通常使用 `InternalObjectId` 特性获取对象 ID，然后在事务中访问包裹对象更安全。这是因为 `InternalDBObject` 特性会返回一个不处于可写状态的 AutoCAD DBObject。{% endhint %}
+{% hint style="warning" %} 根据经验，通常使用 `InternalObjectId` 特性获取对象 ID，然后在事务中访问包裹对象更安全。这是因为 `InternalDBObject` 特性会返回一个不处于可写状态的 AutoCAD DBObject。 {% endhint %}
 
 ### Python 脚本
 
@@ -181,7 +181,7 @@ with adoc.LockDocument():
 
 在我们结束之前，作一个简短说明。根据您正在使用的 Civil 3D 版本，Python 节点的配置可能会有所不同。在 **Civil 3D 2020 和 2021** 中，Dynamo 使用名为 **IronPython** 的工具在 .NET 对象和 Python 脚本之间移动数据。但在 **Civil 3D 2022** 中，Dynamo 转变为使用标准的本地 Python 解释器（也称为 **CPython**），而不是使用 Python 3。此转变的好处包括能够访问常用现代库和新平台功能、基本维护和安全修补程序。
 
-{% hint style="info" %}可以在 [Dynamo 博客](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/)上，详细了解此转变以及如何升级旧脚本。如果要继续使用 IronPython，只需使用 Dynamo Package Manager 安装 **DynamoIronPython2.7** 软件包。{% endhint %}
+{% hint style="info" %} 可以在 [Dynamo 博客](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) 上，详细了解此转变以及如何升级旧脚本。如果要继续使用 IronPython，只需使用 Dynamo Package Manager 安装 **DynamoIronPython2.7** 软件包。 {% endhint %}
 
 [^1]: 默认情况下，Dynamo 几何图形库不会添加到 Python 环境中。我们使用此脚本的目标是输出汇流边界的 Dynamo 点列表，因此我们需要添加此行以便稍后创建点。
 

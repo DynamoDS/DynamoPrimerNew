@@ -16,7 +16,7 @@
 
 ## 版本兼容性
 
-{% hint style="success" %}此图形将在 **Civil 3D 2020** 及更高版本上运行。{% endhint %}
+{% hint style="success" %} 此图形将在 **Civil 3D 2020** 及更高版本上运行。 {% endhint %}
 
 ## 数据集
 
@@ -41,7 +41,7 @@
 
 我们的第一步是获取文档中的所有点编组，然后获取每个编组中的所有几何空间点。这将为我们提供 _嵌套列表_ 或“列表的列表”（稍后如果我们使用 **List.Flatten** 节点将所有内容都向下展平为单个列表，将更易于使用它们）。
 
-{% hint style="info" %}如果您对操作列表不熟悉，请参见 [2-使用列表.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对操作列表不熟悉，请参见 [2-使用列表.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 部分。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>获取所有点编组和几何空间点 </p></figcaption></figure>
 
@@ -69,7 +69,7 @@
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器运行图形并在工具空间中查看结果</p></figcaption></figure>
 
-{% hint style="info" %}如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention")部分。{% endhint %}
+{% hint style="info" %} 如果您对使用 Dynamo 播放器不熟悉，请参见 [Dynamo 播放器.md](../../dynamo-player.md "mention") 部分。 {% endhint %}
 
 > :tada: 任务完成！
 
@@ -77,8 +77,8 @@
 
 以下是一些有关如何扩展此图形功能的想法。
 
-{% hint style="info" %}将点编组修改为基于 **完整描述** 而非原始描述。{% endhint %}
+{% hint style="info" %} 将点编组修改为基于 **完整描述** 而非原始描述。 {% endhint %}
 
-{% hint style="info" %}按您选择的其他 **预定义类别**（例如，“地面快照”、“碑界”等）对点进行分组。{% endhint %}
+{% hint style="info" %} 按您选择的其他 **预定义类别**（例如，“地面快照”、“碑界”等）对点进行分组。 {% endhint %}
 
-{% hint style="info" %}为某些组中的点自动创建三角网曲面。{% endhint %}
+{% hint style="info" %} 为某些组中的点自动创建三角网曲面。 {% endhint %}
