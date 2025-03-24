@@ -17,7 +17,7 @@
 
 ## 版本相容性
 
-{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。{% endhint %}
+{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。 {% endhint %}
 
 ## 資料集
 
@@ -47,15 +47,15 @@
 
 ### 產生座標系統
 
-我們現在要沿廊道地勢線，在指定的起點樁號和終點樁號之間產生**座標系統**。這些座標系統將用於將車輛縱斷面圖塊幾何圖形與廊道對齊。
+我們現在要沿廊道地勢線，在指定的起點樁號和終點樁號之間產生 **座標系統** 。這些座標系統將用於將車輛縱斷面圖塊幾何圖形與廊道對齊。
 
-{% hint style="info" %} 如果您不熟悉座標系統，請查看[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉座標系統，請查看 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 一節。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>沿廊道地勢線取得座標系統</p></figcaption></figure>
 
-> 1. 請注意節點右下角的小 **XXX**。這表示節點的交織設定已設定為_笛卡兒積_，如此才能在兩條地勢線的相同樁號值處產生座標系統。
+> 1. 請注意節點右下角的小 **XXX**。這表示節點的交織設定已設定為 _笛卡兒積_ ，如此才能在兩條地勢線的相同樁號值處產生座標系統。
 
-{% hint style="info" %} 如果您不熟悉節點交織，請查看[1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉節點交織，請查看 [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention") 一節。 {% endhint %}
 
 ### 轉換圖塊幾何圖形
 
@@ -63,15 +63,15 @@
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_TransformAnimation.gif" alt=""><figcaption><p>在座標系統之間轉換幾何圖形的視覺圖像。</p></figcaption></figure>
 
-因此，我們基本上是從_單一_圖塊定義中取得 Dynamo 幾何圖形，然後移動/旋轉它，同時沿地勢線建立一個陣列。好酷的東西！以下是節點序列的外觀。
+因此，我們基本上是從 _單一_ 圖塊定義中取得 Dynamo 幾何圖形，然後移動/旋轉它，同時沿地勢線建立一個陣列。好酷的東西！以下是節點序列的外觀。
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Transform.png" alt=""><figcaption></figcaption></figure>
 
 > 1. 這會從文件中取得圖塊定義。
 > 2. 這些節點會取得圖塊內物件的 Dynamo 幾何圖形。
-> 3. 這些節點基本上是定義我們要從中轉換幾何圖形的_來源_座標系統。
+> 3. 這些節點基本上是定義我們要從中轉換幾何圖形的 _來源_ 座標系統。
 > 4. 最後，此節點會實際執行轉換幾何圖形的工作。
-> 5. 請注意此節點上_最長的_交織。
+> 5. 請注意此節點上 _最長的_ 交織。
 
 以下是我們在 Dynamo 中得到的結果。
 
@@ -95,11 +95,11 @@
 
 ### 結果
 
-以下是使用 **Dynamo 播放器**執行圖表的範例。
+以下是使用 **Dynamo 播放器** 執行圖表的範例。
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器執行圖表，然後在 Civil 3D 中查看結果</p></figcaption></figure>
 
-{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention") 一節。 {% endhint %}
 
 > :tada: 任務完成！
 
@@ -107,8 +107,8 @@
 
 以下是一些如何擴充此圖表功能的構想。
 
-{% hint style="info" %} 加入針對每條軌道分別使用 **不同樁號範圍** 的功能。{% endhint %}
+{% hint style="info" %} 加入針對每條軌道分別使用 **不同樁號範圍** 的功能。 {% endhint %}
 
-{% hint style="info" %} **將實體分割** 為可單獨分析衝突的較小區段。{% endhint %}
+{% hint style="info" %} **將實體分割** 為可單獨分析衝突的較小區段。 {% endhint %}
 
 {% hint style="info" %} 請檢查包絡線實體是否 **與圖徵相交**，並為發生衝突的實體著色。 {% endhint %}

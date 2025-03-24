@@ -12,7 +12,7 @@
 
 ## 定義我們的目標
 
-在本練習中，我們希望建立圓 (_目標_)，其半徑輸入由距附近點的距離定義 (_關係_)。
+在本練習中，我們希望建立圓 ( _目標_ )，其半徑輸入由距附近點的距離定義 ( _關係_ )。
 
 ![手繪圓](../images/10-1/2/00-Hand-Sketch-of-Circle.png)
 
@@ -26,7 +26,7 @@
 
 {% file src="../datasets/10-1/2/DynamoSampleWorkflow-Attractors.dyn" %}
 
-現在，我們繪製了目標與關係，可以開始建立圖表。我們需要節點展示 Dynamo 將執行的動作序列。我們先加入以下節點：**Number**、**Number Slider**、**Point.ByCoordinates**、**Geometry.DistanceTo、Circle.ByCenterPointRadius**。
+現在，我們繪製了目標與關係，可以開始建立圖表。我們需要節點展示 Dynamo 將執行的動作序列。我們先加入以下節點： **Number** 、 **Number Slider** 、 **Point.ByCoordinates** 、 **Geometry.DistanceTo、Circle.ByCenterPointRadius** 。
 
 ![](../images/10-1/2/attractor(2).png)
 
@@ -60,7 +60,7 @@
 
 ### 加入 **Code Block**
 
-如果程式能運作，我們會在 3D 預覽中看到通過牽引點的圓。這很好，但我們可能需要加入更多詳圖或更多控制項。接下來調整圓節點的輸入，以便可以校正對半徑的影響。在工作區加入另一個 **Number Slider**，然後按兩下工作區的空白區域加入一個 **Code Block** 節點。在 Code Block 中編輯欄位，指定 `X/Y`。
+如果程式能運作，我們會在 3D 預覽中看到通過牽引點的圓。這很好，但我們可能需要加入更多詳圖或更多控制項。接下來調整圓節點的輸入，以便可以校正對半徑的影響。在工作區加入另一個 **Number Slider** ，然後按兩下工作區的空白區域加入一個 **Code Block** 節點。在 Code Block 中編輯欄位，指定 `X/Y`。
 
 ![](../images/10-1/2/attractor(5).png)
 
@@ -80,12 +80,12 @@
 
 ### 透過直接操控進行調整
 
-有時數字操控方法並不合適。現在，您在背景 3D 預覽中導覽時，可以手動推拉點幾何圖形。我們還可以控制由點建構的其他幾何圖形。例如，**Sphere.ByCenterPointRadius** 也可以進行直接操控。我們可以透過 **Point.ByCoordinates** 使用一系列 X、Y 與 Z 值控制點的位置。但是，使用直接操控方法，您可以在 **3D 預覽導覽**模式中手動移動點，以更新滑棒的值。這樣可以更直觀地控制識別點位置的一組離散值。
+有時數字操控方法並不合適。現在，您在背景 3D 預覽中導覽時，可以手動推拉點幾何圖形。我們還可以控制由點建構的其他幾何圖形。例如，**Sphere.ByCenterPointRadius** 也可以進行直接操控。我們可以透過 **Point.ByCoordinates** 使用一系列 X、Y 與 Z 值控制點的位置。但是，使用直接操控方法，您可以在 **3D 預覽導覽** 模式中手動移動點，以更新滑棒的值。這樣可以更直觀地控制識別點位置的一組離散值。
 
 ![](../images/10-1/2/attractor(7).png)
 
-> 1. 若要使用**直接操控**，請選取要移動的點的那一格，在所選點的上方將顯示箭頭。
-> 2. 切換至 **3D 預覽導覽**模式。
+> 1. 若要使用 **直接操控** ，請選取要移動的點的那一格，在所選點的上方將顯示箭頭。
+> 2. 切換至 **3D 預覽導覽**  模式。
 
 ![](../images/10-1/2/attractor\(8\).png)
 
@@ -94,5 +94,5 @@
 
 ![](../images/10-1/2/attractor(1).png)
 
-> 1. 請注意，在**直接操控**之前，只有一個滑棒插入 **Point.ByCoordinates** 的分量中。在 X 方向手動移動點時，Dynamo 會為 X 輸入自動產生新的 **Number Slider**。
+> 1. 請注意，在 **直接操控** 之前，只有一個滑棒插入 **Point.ByCoordinates** 的分量中。在 X 方向手動移動點時，Dynamo 會為 X 輸入自動產生新的 **Number Slider**  。
 

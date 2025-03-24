@@ -39,7 +39,7 @@
 
 ![](./images/4/managingyourprogram-grouping02.jpg)
 
-{% hint style="info" %} 秘訣：使用註釋和群組是標註檔案並提高可讀性的有效方法。{% endhint %}
+{% hint style="info" %} 秘訣：使用註釋和群組是標註檔案並提高可讀性的有效方法。 {% endhint %}
 
 以下是加入「註釋」和「群組」的程式範例：
 

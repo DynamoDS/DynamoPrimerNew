@@ -4,7 +4,7 @@
 
 透過在本端發佈節點，當您開啟一個新的階段作業時該節點將可在 Dynamo 資源庫中存取。如果不發佈節點，參照自訂節點的 Dynamo 圖表也必須在其資料夾中具有該自訂節點 (或必須使用 _「檔案」>「匯入資源庫」_ 將自訂節點匯入 Dynamo 中)。
 
-{% hint style="warning" %} 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。{% endhint %}
+{% hint style="warning" %} 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。 {% endhint %}
 
 ## 練習：在本端發佈自訂節點
 

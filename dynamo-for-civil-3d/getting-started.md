@@ -2,7 +2,7 @@
 
 您現在對整個圖像有一點瞭解，我們直接在 Civil 3D 中建置您的第一個 Dynamo 圖表！
 
-{% hint style="info" %} 這是一個簡單的範例，旨在示範基本的 Dynamo 功能。建議您在新的空白 Civil 3D 文件中完成所有步驟。{% endhint %}
+{% hint style="info" %} 這是一個簡單的範例，旨在示範基本的 Dynamo 功能。建議您在新的空白 Civil 3D 文件中完成所有步驟。 {% endhint %}
 
 ## 開啟 Dynamo
 
@@ -12,11 +12,11 @@
 
 按一下 **「Dynamo」** 按鈕，這會在單獨的視窗中啟動 Dynamo。
 
-{% hint style="info" %} **Dynamo 與 Dynamo 播放器有何差異？**
+{% hint style="info" %} **Dynamo 與 Dynamo 播放器有何差異？** 
 
 Dynamo 是您用來建置和執行圖表的工具。Dynamo 播放器是一種無需在 Dynamo 中開啟圖表即可執行圖表的簡易方式。
 
-當您準備好試用時，請前往 [dynamo-player.md](dynamo-player.md "mention")一節。{% endhint %}
+當您準備好試用時，請前往 [dynamo-player.md](dynamo-player.md "mention") 一節。  {% endhint %}
 
 ## 開始新圖表
 
@@ -24,9 +24,9 @@ Dynamo 是您用來建置和執行圖表的工具。Dynamo 播放器是一種無
 
 <figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Dynamo 開始畫面</p></figcaption></figure>
 
-{% hint style="info" %} **範例呢？**
+{% hint style="info" %} **範例呢？** 
 
-Dynamo for Civil 3D 隨附一些預先建置的圖表，可協助您激發更多有關如何使用 Dynamo 的想法。我們建議您有時候可以查看這些內容，以及 Primer 中的[sample-workflows](sample-workflows/ "mention")。{% endhint %}
+Dynamo for Civil 3D 隨附一些預先建置的圖表，可協助您激發更多有關如何使用 Dynamo 的想法。我們建議您有時候可以查看這些內容，以及 Primer 中的 [sample-workflows](sample-workflows/ "mention")  。 {% endhint %}
 
 ## 加入節點
 
@@ -38,7 +38,7 @@ Dynamo for Civil 3D 隨附一些預先建置的圖表，可協助您激發更多
 
 Dynamo 圖表的核心建置圖塊稱為**節點**。節點就像一台小機器 - 您將資料放入其中，它對該資料執行某些作業，然後輸出結果。Dynamo for Civil 3D 有一個節點**資源庫**，您可以用**線路**將節點連接在一起形成**圖表**，圖表能做的事情比單獨任何一個節點所能做的更多、更好。
 
-{% hint style="info" %} **等一下，如果我以前從來沒使用過 Dynamo，該怎麼辦？**
+{% hint style="info" %} **等一下，如果我以前從來沒使用過 Dynamo，該怎麼辦？** 
 
 有些內容對您來說可能非常陌生，沒關係！以下這些章節可以幫助您。
 
@@ -54,9 +54,9 @@ Dynamo 圖表的核心建置圖塊稱為**節點**。節點就像一台小機器
 
 <figure><img src="../.gitbook/assets/c3d-create-text-node-placement.gif" alt=""><figcaption><p>您可以從資源庫，或在圖元區中按一下右鍵來放置節點</p></figcaption></figure>
 
-{% hint style="info" %} **如何知道要使用哪些節點？以及在何處找到它們？**
+{% hint style="info" %} **如何知道要使用哪些節點？以及在何處找到它們？** 
 
-資源庫中的節點會根據作用分成不同邏輯品類。請參閱[node-library.md](node-library.md "mention")一節，以取得更深入的導覽。{% endhint %}
+資源庫中的節點會根據作用分成不同邏輯品類。請參閱  [node-library.md](node-library.md "mention") 一節，以取得更深入的導覽。 {% endhint %}
 
 以下是您的最終圖表的外觀。
 
@@ -78,7 +78,7 @@ Dynamo 圖表的核心建置圖塊稱為**節點**。節點就像一台小機器
 
 回到 Civil 3D，確保已選取 **「模型」** 頁籤。您應該會看到 Dynamo 建立的新文字物件。
 
-{% hint style="info" %} 如果您沒看到文字，可能需要執行 ZOOM -> EXTENTS 指令以縮放至右側位置。{% endhint %}
+{% hint style="info" %} 如果您沒看到文字，可能需要執行 ZOOM -> EXTENTS 指令以縮放至右側位置。 {% endhint %}
 
 <figure><img src="../.gitbook/assets/c3d-create-text-result.png" alt="" width="413"><figcaption></figcaption></figure>
 
@@ -92,9 +92,9 @@ Dynamo 圖表的核心建置圖塊稱為**節點**。節點就像一台小機器
 
 </div>
 
-{% hint style="info" %} **為什麼 Dynamo 不在每次執行圖表時插入新的文字物件？**
+{% hint style="info" %} **為什麼 Dynamo 不在每次執行圖表時插入新的文字物件？** 
 
-Dynamo 預設會「記住」它建立的物件。如果您變更節點輸入值，Civil 3D 中的物件會更新，而不是建立全新物件。您可以在[object-binding.md](advanced-topics/object-binding.md "mention")一節閱讀有關此行為的更多資訊。{% endhint %}
+Dynamo 預設會「記住」它建立的物件。如果您變更節點輸入值，Civil 3D 中的物件會更新，而不是建立全新物件。您可以在 [object-binding.md](advanced-topics/object-binding.md "mention") 一節閱讀有關此行為的更多資訊。 {% endhint %}
 
 > :tada: 任務完成！
 

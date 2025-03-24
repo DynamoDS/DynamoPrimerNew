@@ -32,7 +32,7 @@ description: suggested exercise
 
 {% file src="../datasets/10-1/1/DynamoSampleWorkflow-vase.dyn" %}
 
-我們需要一些節點來展示 Dynamo 將執行的動作序列。我們知道要嘗試建立圓形，所以先找出執行該作業的節點。使用**搜尋欄位**或瀏覽 **Library** 以尋找 **Circle.ByCenterPointRadius** 節點，並將其加入工作區
+我們需要一些節點來展示 Dynamo 將執行的動作序列。我們知道要嘗試建立圓形，所以先找出執行該作業的節點。使用 **搜尋欄位** 或瀏覽 **Library** 以尋找 **Circle.ByCenterPointRadius** 節點，並將其加入工作區
 
 ![](../images/10-1/1/vase8.png)
 
@@ -40,11 +40,11 @@ description: suggested exercise
 > 2. 選取 >「ByCenterPointRadius」
 > 3. 節點將顯示在工作區中
 
-我們來詳細瞭解這個節點。在左側，您有節點的輸入 (_centerPoint_ 和 _radius_)，在右側，您有節點的輸出 (Circle)。請注意，輸出有一條淺藍線。這表示輸入有預設值。若要取得有關輸入的更多資訊，請將游標懸停在輸入名稱上。_radius_ 輸入需要一個 double (雙精確度) 輸入，且預設值為 1。
+我們來詳細瞭解這個節點。在左側，您有節點的輸入 ( _centerPoint_ 和 _radius_ )，在右側，您有節點的輸出 (Circle)。請注意，輸出有一條淺藍線。這表示輸入有預設值。若要取得有關輸入的更多資訊，請將游標懸停在輸入名稱上。_radius_ 輸入需要一個 double (雙精確度) 輸入，且預設值為 1。
 
 ![](../images/10-1/1/vase10.png)
 
-我們將保留 _centerPoint_ 的預設值，但加入一個**數字滑棒**控制半徑。與使用 **Circle.ByCenterPointRadius** 節點時一樣，使用資源庫搜尋 **Number Slider**，並將其加入圖表。
+我們將保留 _centerPoint_ 的預設值，但加入一個 **數字滑棒** 控制半徑。與使用 **Circle.ByCenterPointRadius** 節點時一樣，使用資源庫搜尋 **Number Slider**，並將其加入圖表。
 
 此節點與我們先前的節點稍有不同，因為它包含滑棒。您可以使用介面變更滑棒的輸出值。
 
@@ -98,7 +98,7 @@ description: suggested exercise
 
 ## 結果
 
-我們的工作流程已經準備好！我們現在可以使用腳本中定義的**數字滑棒**產生不同的花瓶設計。
+我們的工作流程已經準備好！我們現在可以使用腳本中定義的 **數字滑棒** 產生不同的花瓶設計。
 
 ![](../../1\_introduction/images/1-2/vase1.gif)
 

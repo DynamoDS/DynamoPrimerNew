@@ -52,7 +52,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 將原始碼檔案複製到本端電腦後，我們可以建置 Dynamo 的可執行檔。要執行此作業，我們需要設定 Visual Studio IDE，並確保已安裝 .NET Framework 和 DirectX。
 
 * 下載並安裝 [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results)，這是一款免費且功能齊全的 IDE (整合式開發環境 - 更高版本也同樣能運作)
-* 下載並安裝 [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) 或更高版本
+* 下載並安裝 [Microsoft .NET Framework 4.5](https://www.microsoft.com/zh-tw/download/details.aspx?id=30653) 或更高版本
 * 從本端 Dynamo 儲存庫安裝 Microsoft DirectX (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)
 
 > .NET 和 DirectX 可能已經安裝。
@@ -98,7 +98,7 @@ Dynamo 的原始碼託管在 DynamoDS Github 上的 [https://github.com/DynamoDS
 
 ### 使用 Visual Studio 為本端建置版本除錯 <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-除錯是識別、隔離和修正錯誤或問題的一個過程。從原始碼成功建置 Dynamo 後，我們可以使用 Visual Studio 中的數種工具為執行中的應用程式 (例如 DynamoRevit 增益集) 除錯。我們可以分析其原始程式碼以尋找問題的根本原因，或監看目前正在執行的程式碼。如需有關如何在 Visual Studio 中除錯和瀏覽程式碼的更詳細說明，請參閱 [Visual Studio 文件](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger)。
+除錯是識別、隔離和修正錯誤或問題的一個過程。從原始碼成功建置 Dynamo 後，我們可以使用 Visual Studio 中的數種工具為執行中的應用程式 (例如 DynamoRevit 增益集) 除錯。我們可以分析其原始程式碼以尋找問題的根本原因，或監看目前正在執行的程式碼。如需有關如何在 Visual Studio 中除錯和瀏覽程式碼的更詳細說明，請參閱 [Visual Studio 文件](https://docs.microsoft.com/zh-tw/visualstudio/debugger/navigating-through-code-with-the-debugger)。
 
 對於單機版 Dynamo 應用程式 DynamoSandbox，我們將介紹兩個用於除錯的選項：
 

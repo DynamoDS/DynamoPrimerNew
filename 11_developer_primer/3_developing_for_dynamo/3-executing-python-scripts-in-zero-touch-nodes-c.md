@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-Python 指令碼傳回變數 `output`，這表示我們在 Python 指令碼中需要一個 `output` 變數。請使用此範例指令碼測試 Dynamo 中的節點。如果您曾在 Dynamo 中使用過 Python 節點，以下內容應該看起來很熟悉。如需更多資訊，請參閱 [Primer 的 Python 部分](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html)。
+Python 指令碼傳回變數 `output`，這表示我們在 Python 指令碼中需要一個 `output` 變數。請使用此範例指令碼測試 Dynamo 中的節點。如果您曾在 Dynamo 中使用過 Python 節點，以下內容應該看起來很熟悉。如需更多資訊，請參閱 [Primer 的 Python 部分](https://primer2.dynamobim.org/v/zh-tw/8_coding_in_dynamo/8-3_python)。
 
 ```
 import clr

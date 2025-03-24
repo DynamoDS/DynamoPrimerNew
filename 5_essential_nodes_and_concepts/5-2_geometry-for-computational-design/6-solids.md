@@ -39,7 +39,7 @@
 >
 > 4\.所有受影響的節點和關聯的幾何圖像預覽將更新並回復至標準預覽模式。
 
-{% hint style="info" %} 您可以在[4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention")一節閱讀有關凍結節點的更多資訊。{% endhint %}
+{% hint style="info" %} 您可以在 [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention") 一節閱讀有關凍結節點的更多資訊。 {% endhint %}
 
 ## 深入探索...
 

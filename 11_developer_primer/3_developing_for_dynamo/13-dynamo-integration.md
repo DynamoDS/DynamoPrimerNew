@@ -495,9 +495,9 @@ public static void SetTraceData(string key, ISerializable value)
 
 將靜態 util 類別 `TraceExampleWrapper` 作為節點匯入 Dynamo。它包含建立 `TraceExampleItem` 的單一方法 `ByString` - 這些是包含 `description` 性質的一般 .NET 物件。
 
-每個 `TraceExampleItem` 都序列化為以 `TraceableId` 表示的追蹤 - 這只是一個包含 `IntId` (標記為 `[Serializeable]`) 的類別，因此可以使用 `SOAP` 格式化程式進行序列化。請參閱[此處，以取得有關可序列化屬性的更多資訊](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8)
+每個 `TraceExampleItem` 都序列化為以 `TraceableId` 表示的追蹤 - 這只是一個包含 `IntId` (標記為 `[Serializeable]`) 的類別，因此可以使用 `SOAP` 格式化程式進行序列化。請參閱[此處，以取得有關可序列化屬性的更多資訊](https://docs.microsoft.com/zh-tw/dotnet/api/system.serializableattribute?view=netframework-4.8)
 
-您也必須實作[此處](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)定義的 `ISerializable` 介面
+您也必須實作[此處](https://docs.microsoft.com/zh-tw/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)定義的 `ISerializable` 介面
 
 
 ``` c#
@@ -753,7 +753,7 @@ D4C 中的工作流程與上述針對 Revit 的描述非常類似，以下是 D4
 
 如果這些文化子目錄與節點/延伸二進位檔位於相同目錄，.net 執行階段載入這些子目錄時就不會發生任何問題。
 
-如需資源組合和 .resx 檔案的更多資訊，請參閱：[https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。
+如需資源組合和 .resx 檔案的更多資訊，請參閱：[https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/zh-tw/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。
 
 您可能要使用 Visual Studio 建立 `.resx` 檔案並進行編譯。對於給定的組合 `xyz.dll` - 產生的資源將會編譯為新的組合 `xyz.resources.dll` \- 如上所述，此組合的位置和名稱非常重要。
 

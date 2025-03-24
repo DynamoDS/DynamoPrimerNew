@@ -18,7 +18,7 @@ Revit 是資料豐富的環境。這能為我們提供許多選取功能，而�
 
 記得生物學的分類法嗎？界、門、綱、目、科、屬、種？Revit 元素的分類方式與此類似。在基本層級，可將 Revit 階層分為不同的品類、族群、類型*及例證。例證是個別模型元素 (具有唯一的 ID)，而品類可定義一般群組 (例如「牆」或「地板」)。以此方式組織 Revit 資料庫後，我們可以選取一個元素，然後根據階層中的指定層級選擇所有類似元素。
 
-{% hint style="warning" %} *Revit 中類型的定義與程式設計中的類型不同。在 Revit 中，類型是指階層的分支，而非「資料類型」。{% endhint %}
+{% hint style="warning" %} *Revit 中類型的定義與程式設計中的類型不同。在 Revit 中，類型是指階層的分支，而非「資料類型」。 {% endhint %}
 
 ### 使用 Dynamo 節點進行資料庫導覽
 
@@ -32,7 +32,7 @@ _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。�
 
 \![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
-您也可以依 _Revit 階層_中的特定層級選取 Revit 元素。這是一個功能強大的選項，可自訂大型資料陣列，以準備進行記錄或生產實體化及客製化。
+您也可以依 _Revit 階層_ 中的特定層級選取 Revit 元素。這是一個功能強大的選項，可自訂大型資料陣列，以準備進行記錄或生產實體化及客製化。
 
 ![UI](../.gitbook/assets/allelements.jpg)
 
@@ -71,7 +71,7 @@ _下拉式功能表_ 會建立 Revit 專案中所有可存取元素的清單。�
 
 > 1. 使用 _Element.Faces_ 節點，可取得一份曲面清單，代表 Revit 量體的每一個面。我們現在可以在 Dynamo 視埠中看到幾何圖形，可以開始參考用於參數式作業的面。
 
-以下是替代方法。在此案例中，我們不是透過 Revit 階層選取 _(「All Elements of Category」)_，而是選擇在 Revit 中明確選取幾何圖形。
+以下是替代方法。在此案例中，我們不是透過 Revit 階層選取 _(「All Elements of Category」)_ ，而是選擇在 Revit 中明確選取幾何圖形。
 
 ![](../.gitbook/assets/selecting\_exercise\_04.jpg)
 
@@ -131,7 +131,7 @@ Revit/Dynamo 工作流程中可能經常會遇到以下問題：如何選取一�
 
 > 1. 我們也可以將所有這五個元素轉換為 Dynamo 幾何圖形。
 
-如果有 500 根樑會怎樣呢？將所有這些元素轉換為 Dynamo 幾何圖形會非常慢。若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的[凍結](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing)一節。
+如果有 500 根樑會怎樣呢？將所有這些元素轉換為 Dynamo 幾何圖形會非常慢。若 Dynamo 花費很長時間來計算節點，您可能要在開發圖表時，使用「凍結」節點功能以暫停執行 Revit 作業。如需有關凍結節點的更多資訊，請參閱〈實體〉一章中的 [凍結](../essential-nodes-and-concepts/5\_geometry-for-computational-design/5-6\_solids.md#freezing) 一節。
 
 是否不論何種情況，若要匯入 500 根樑，所有曲面都需要執行所需的參數運算？還是其實可以擷取樑的基本資訊，並使用基本幾何圖形執行生成工作？在逐步瞭解本章內容的過程中，需要隨時考慮這個問題。例如，我們接下來看看桁架系統。
 
@@ -149,4 +149,4 @@ Revit/Dynamo 工作流程中可能經常會遇到以下問題：如何選取一�
 > 2. 將 _All Elements of Family Type_ 節點插入 _AdaptiveComponent.Location_ 節點。這會產生一個清單的清單，其中每個清單都包含三點，表示自適應點的位置。
 > 3. 若連接 _Polygon.ByPoints_ 節點，即會傳回 polycurve，可以在 Dynamo 視埠中看到。透過此方法，我們看到了一個元素的幾何圖形，並提取了其餘一系列元素 (數量可能多於此範例) 的幾何圖形。
 
-{% hint style="info" %} 秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。{% endhint %}
+{% hint style="info" %} 秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。 {% endhint %}

@@ -21,7 +21,7 @@ Dynamo 工作區由四個主要元素組成。
 
 ![](./images/3-1/workspace-customnodetab.jpg)
 
-{% hint style="info" %} 每個 Dynamo 視窗只允許一個首頁工作區，但您可以用頁籤開啟多個自訂節點工作區。{% endhint %}
+{% hint style="info" %} 每個 Dynamo 視窗只允許一個首頁工作區，但您可以用頁籤開啟多個自訂節點工作區。 {% endhint %}
 
 ### 預覽模式
 

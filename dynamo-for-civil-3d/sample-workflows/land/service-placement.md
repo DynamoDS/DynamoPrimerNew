@@ -18,7 +18,7 @@
 
 ## 版本相容性
 
-{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。{% endhint %}
+{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。 {% endhint %}
 
 ## 資料集
 
@@ -44,7 +44,7 @@
 
 我們的第一步是讓分佈主線的幾何圖形進入 Dynamo。我們要取得特定圖層上的所有物件，並接合在一起成為 Dynamo PolyCurve，而不是選取個別的線或聚合線。
 
-{% hint style="info" %} 如果您不熟悉 Dynamo 曲線幾何圖形，請查看[4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉 Dynamo 曲線幾何圖形，請查看 [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") 一節。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>從 Civil 3D 取得物件，並將所有物件接合在一起成為單一條 PolyCurve</p></figcaption></figure>
 
@@ -64,7 +64,7 @@
 
 現在要來找出服務計量器的放置位置。放置通常由本端代理需求決定，因此我們只要提供可變更以滿足各種條件的輸入值。我們將使用沿界址線的**座標系統**做為建立點的參考。這可讓您非常輕鬆地定義相對於界址線的偏移，而不論其方位為何。
 
-{% hint style="info" %} 如果您不熟悉座標系統，請查看[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉座標系統，請查看 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 一節。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>建立服務計量器的插入點</p></figcaption></figure>
 
@@ -99,13 +99,13 @@
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Dynamo 的物件併入設定</p></figcaption></figure>
 
-{% hint style="info" %} 請查看[object-binding.md](../../advanced-topics/object-binding.md "mention")一節，以取得更多資訊。{% endhint %}
+{% hint style="info" %} 請查看 [object-binding.md](../../advanced-topics/object-binding.md "mention") 一節，以取得更多資訊。 {% endhint %}
 
-變更此設定將強制 Dynamo「忘記」每次執行時所建立的物件。以下是在關閉物件併入的情況下，使用 **Dynamo 播放器**執行圖表的範例。
+變更此設定將強制 Dynamo「忘記」每次執行時所建立的物件。以下是在關閉物件併入的情況下，使用 **Dynamo 播放器** 執行圖表的範例。
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>使用 Dynamo 播放器執行圖表，然後在 Civil 3D 中查看結果</p></figcaption></figure>
 
-{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention") 一節。 {% endhint %}
 
 > :tada: 任務完成！
 
@@ -113,8 +113,8 @@
 
 以下是一些如何擴充此圖表功能的構想。
 
-{% hint style="info" %} 同時放置 **多個服務連接**，而不是選取每條界址線。{% endhint %}
+{% hint style="info" %} 同時放置 **多個服務連接** ，而不是選取每條界址線。 {% endhint %}
 
-{% hint style="info" %} 將輸入調整為改放置 **污水管清掃口**，而不是供水服務計量器。{% endhint %}
+{% hint style="info" %} 將輸入調整為改放置 **污水管清掃口** ，而不是供水服務計量器。 {% endhint %}
 
-{% hint style="info" %} **加入開關**，以允許在界址線的特定一側 (而非兩側) 放置單一服務連接。{% endhint %}
+{% hint style="info" %} **加入開關** ，以允許在界址線的特定一側 (而非兩側) 放置單一服務連接。 {% endhint %}

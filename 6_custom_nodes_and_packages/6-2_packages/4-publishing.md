@@ -18,7 +18,7 @@
 
 ### 本端發佈套件
 
-{% hint style="warning" %} 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。{% endhint %}
+{% hint style="warning" %} 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。 {% endhint %}
 
 > 按一下下方的連結下載範例檔案。
 >
@@ -72,7 +72,7 @@
 
 ### 線上發佈套件
 
-{% hint style="warning" %} 注意：除非您要真的發佈自己的套件，否則請勿繼續執行此步驟！{% endhint %}
+{% hint style="warning" %} 注意：除非您要真的發佈自己的套件，否則請勿繼續執行此步驟！ {% endhint %}
 
 <figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 

@@ -18,13 +18,13 @@ Dynamo 其中一種相當適合的使用案例，便是沿廊道模型動態放�
 
 ## 版本相容性
 
-{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。{% endhint %}
+{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。  {% endhint %}
 
 ## 資料集
 
 首先，下載以下範例檔案，然後開啟 DWG 檔案和 Dynamo 圖表。
 
-{% hint style="info" %} Excel 檔案與 Dynamo 圖表最好儲存在同一個目錄中。{% endhint %}
+{% hint style="info" %} Excel 檔案與 Dynamo 圖表最好儲存在同一個目錄中。 {% endhint %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -49,7 +49,7 @@ Dynamo 其中一種相當適合的使用案例，便是沿廊道模型動態放�
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>Excel 檔案表格結構</p></figcaption></figure>
 
-{% hint style="info" %} 使用 Dynamo 從外部檔案 (例如 Excel 檔案) 讀取資料是種很好的策略，尤其是當需要與其他團隊成員共用資料時。{% endhint %}
+{% hint style="info" %} 使用 Dynamo 從外部檔案 (例如 Excel 檔案) 讀取資料是種很好的策略，尤其是當需要與其他團隊成員共用資料時。 {% endhint %}
 
 Excel 資料會像下面這樣匯入至 Dynamo。
 
@@ -59,11 +59,11 @@ Excel 資料會像下面這樣匯入至 Dynamo。
 
 看起來沒問題，對吧？但是這個方法有一個潛在的問題。如果 Excel 檔案中欄的順序在將來發生變更，該怎麼辦？或是兩欄之間加入新的一欄？如此一來，圖表將無法正常運作而需要更新。我們可以將資料放入 **字典**，將 Excel 欄標題做為 _鍵_，其餘資料做為 _值_，讓圖表能繼續使用。
 
-{% hint style="info" %} 如果您不熟悉字典，請查看[5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉字典，請查看 [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") 一節。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>將 Excel 資料放入字典</p></figcaption></figure>
 
-這可讓圖表變得更具彈性，因為它允許變更 Excel 中欄的順序。只要欄標題保持不變，您就可以使用其_鍵_ (即欄標題) 從字典中擷取資料，這是我們接下來要執行的作業。
+這可讓圖表變得更具彈性，因為它允許變更 Excel 中欄的順序。只要欄標題保持不變，您就可以使用其 _鍵_ (即欄標題) 從字典中擷取資料，這是我們接下來要執行的作業。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_DictionaryRetrieval.png" alt=""><figcaption><p>從字典中擷取資料</p></figcaption></figure>
 
@@ -81,13 +81,13 @@ Excel 資料會像下面這樣匯入至 Dynamo。
 
 我們現在要沿廊道地勢線，在 Excel 檔案中指定的樁號值處產生**座標系統**。這些座標系統將用於定義燈柱圖塊參考的位置、旋轉和比例。
 
-{% hint style="info" %} 如果您不熟悉座標系統，請查看[2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉座標系統，請查看 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 一節。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>沿廊道地勢線取得座標系統</p></figcaption></figure>
 
 請注意，在此處使用程式碼區塊 (Code Block) 是為了根據座標系統在基準線哪一側來旋轉座標系統。您也可以使用幾個節點來達成這個目標，但這是一個很好的範例，說明撰寫出來更容易。
 
-{% hint style="info" %} 如果您不熟悉程式碼區塊，請查看[8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉程式碼區塊，請查看 [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention") 一節。 {% endhint %}
 
 ### 建立圖塊參考
 
@@ -103,7 +103,7 @@ Excel 資料會像下面這樣匯入至 Dynamo。
 
 當您執行圖表時，您應該會看到新的圖塊參考沿廊道展示在模型空間中。以下是最酷的部分 - 如果圖表的執行模式設定為「自動」，而且您編輯了 Excel 檔案，圖塊參考會自動更新！
 
-{% hint style="info" %} 您可以在[3_user_interface](../../../3\_user\_interface/ "mention")一節閱讀有關圖表執行模式的更多資訊。{% endhint %}
+{% hint style="info" %} 您可以在 [3_user_interface](../../../3\_user\_interface/ "mention") 一節閱讀有關圖表執行模式的更多資訊。 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>更新 Excel 檔案，在 Civil 3D 中很快就會看到結果</p></figcaption></figure>
 
@@ -111,7 +111,7 @@ Excel 資料會像下面這樣匯入至 Dynamo。
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>使用 Dynamo 播放器執行圖表，然後在 Civil 3D 中查看結果</p></figcaption></figure>
 
-{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention")一節。{% endhint %}
+{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention") 一節。 {% endhint %}
 
 > :tada: 任務完成！
 
@@ -134,8 +134,8 @@ Excel 資料會像下面這樣匯入至 Dynamo。
 
 以下是一些如何擴充此圖表功能的構想。
 
-{% hint style="info" %} 在 Excel 檔案中新增 **旋轉** 一欄，就可以使用它驅動座標系統的旋轉。{% endhint %}
+{% hint style="info" %} 在 Excel 檔案中新增 **旋轉** 一欄，就可以使用它驅動座標系統的旋轉。 {% endhint %}
 
-{% hint style="info" %} 在 Excel 檔案中新增 **水平或垂直偏移**，就可以視需要讓燈柱偏離廊道地勢線。{% endhint %}
+{% hint style="info" %} 在 Excel 檔案中新增 **水平或垂直偏移** ，就可以視需要讓燈柱偏離廊道地勢線。 {% endhint %}
 
-{% hint style="info" %} **直接在 Dynamo 中** 中使用起點樁號和典型間距產生樁號值，而不使用內含樁號值的 Excel 檔案。{% endhint %}
+{% hint style="info" %} **直接在 Dynamo 中** 中使用起點樁號和典型間距產生樁號值，而不使用內含樁號值的 Excel 檔案。 {% endhint %}

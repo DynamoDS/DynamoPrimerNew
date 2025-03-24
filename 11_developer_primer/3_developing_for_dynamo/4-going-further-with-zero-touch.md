@@ -20,7 +20,7 @@
 
 ### 預設輸入值 <a href="#default-input-values" id="default-input-values"></a>
 
-Dynamo 支援定義節點上輸入埠的預設值。如果埠沒有連接，則會對節點提供這些預設值。預設值使用在《[C# 程式設計手冊](https://msdn.microsoft.com/en-us/library/dd264739.aspx)》中指定可選引數的 C# 機制表示。預設值以下列方式指定：
+Dynamo 支援定義節點上輸入埠的預設值。如果埠沒有連接，則會對節點提供這些預設值。預設值使用在《[C# 程式設計手冊](https://msdn.microsoft.com/zh-tw/library/dd264739.aspx)》中指定可選引數的 C# 機制表示。預設值以下列方式指定：
 
 * 將方法參數設定為預設值：`inputNumber = 2.0`
 
@@ -262,7 +262,7 @@ namespace ZeroTouchEssentials
     }
     ```
 
-    > [此處](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)說明 using 陳述式
+    > [此處](https://msdn.microsoft.com/zh-tw/library/yh598w02.aspx)說明 using 陳述式
     >
     > 請參閱 [Dynamo 幾何圖形穩定性的改進](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297)，以進一步瞭解 Dynamo 2.5 中引入的新穩定性功能
 *   使用手動的 Dispose 呼叫：
