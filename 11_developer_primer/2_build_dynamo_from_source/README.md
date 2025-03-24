@@ -4,7 +4,7 @@ Die Quelldateien von Dynamo werden auf GitHub gehostet, sodass jeder sie klonen 
 
 ### Suchen der Dynamo-Repositorys auf GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-GitHub ist ein Hosting-Dienst, der auf [Git](https://help.github.com/articles/git-and-github-learning-resources/), einem Versionskontrollsystem zur Änderungsverfolgung und Koordination der Arbeit zwischen verschiedenen Personen, basiert. Git ist ein Werkzeug, mit dem wir die Quelldateien von Dynamo herunterladen und mit ein paar Befehlen auf dem neuesten Stand halten können. Mit dieser Methode vermeiden wir die unnötige und von Natur aus unübersichtliche Arbeit des Herunterladens und manuellen Ersetzens der Quelldateien bei jedem Update. Das Git-Versionskontrollsystem verfolgt alle Unterschiede zwischen einem lokalen und einem Remote-Code-Repository.
+GitHub ist ein Hosting-Dienst, der auf [Git](https://docs.github.com/de/get-started/quickstart/git-and-github-learning-resources), einem Versionskontrollsystem zur Änderungsverfolgung und Koordination der Arbeit zwischen verschiedenen Personen, basiert. Git ist ein Werkzeug, mit dem wir die Quelldateien von Dynamo herunterladen und mit ein paar Befehlen auf dem neuesten Stand halten können. Mit dieser Methode vermeiden wir die unnötige und von Natur aus unübersichtliche Arbeit des Herunterladens und manuellen Ersetzens der Quelldateien bei jedem Update. Das Git-Versionskontrollsystem verfolgt alle Unterschiede zwischen einem lokalen und einem Remote-Code-Repository.
 
 Die Quelldateien von Dynamo werden im DynamoDS-GitHub im folgenden Repository gehostet: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
@@ -18,7 +18,7 @@ Die Quelldateien von Dynamo werden im DynamoDS-GitHub im folgenden Repository ge
 
 ### Abrufen des Dynamo-Repositorys mit Git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Bevor wir das Repository klonen können, müssen wir Git installieren. Befolgen Sie diese [Kurzanleitung](https://help.github.com/articles/set-up-git/#setting-up-git), um die Installationsschritte auszuführen und zu erfahren, wie Sie einen GitHub-Benutzernamen und eine GitHub-E-Mail-Adresse einrichten. In diesem Beispiel verwenden wir Git in der Befehlszeile. In diesem Handbuch wird davon ausgegangen, dass Sie Windows verwenden. Sie können Git jedoch auch unter Mac oder Linux verwenden, um die Dynamo-Quelle zu klonen.
+Bevor wir das Repository klonen können, müssen wir Git installieren. Befolgen Sie diese [Kurzanleitung](https://docs.github.com/de/get-started/quickstart/set-up-git#setting-up-git), um die Installationsschritte auszuführen und zu erfahren, wie Sie einen GitHub-Benutzernamen und eine GitHub-E-Mail-Adresse einrichten. In diesem Beispiel verwenden wir Git in der Befehlszeile. In diesem Handbuch wird davon ausgegangen, dass Sie Windows verwenden. Sie können Git jedoch auch unter Mac oder Linux verwenden, um die Dynamo-Quelle zu klonen.
 
 Wir benötigen eine URL für das Dynamo-Repository, von dem geklont werden soll. Sie finden diese auf der Repository-Seite unter der Schaltfläche Clone or Download. Kopieren Sie die URL zum Einfügen in die Befehlszeile.
 

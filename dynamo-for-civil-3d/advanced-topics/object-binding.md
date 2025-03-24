@@ -46,7 +46,7 @@ Alle Optionen sind vorgabemäßig aktiviert. Hier finden Sie eine Zusammenfassun
 
 Wenn diese Option aktiviert ist, werden die Objekte, die beim letzten Ausführen des Diagramms erstellt wurden, von Dynamo "vergessen". Das Diagramm kann also in jeder beliebigen Zeichnung ausgeführt werden und erstellt jedes Mal neue Objekte.
 
-{% hint style="info" %} **Verwendung**
+{% hint style="info" %} **Verwendung** 
 
 Verwenden Sie diese Option, wenn Dynamo alle Aktionen aus früheren Durchläufen "vergessen" und jedes Mal neue Objekte erstellen soll. {% endhint %}
 
@@ -54,7 +54,7 @@ Verwenden Sie diese Option, wenn Dynamo alle Aktionen aus früheren Durchläufen
 
 Diese Option bedeutet, dass Metadaten der Objektbindung in das Diagramm (DYN-Datei) serialisiert werden, wenn es gespeichert wird. Wenn Sie das Diagramm schließen/erneut öffnen und es in **derselben Zeichnung** ausführen, sollte alles wie beim letzten Mal funktionieren. Wenn Sie das Diagramm in einer **anderen Zeichnung** ausführen, werden die Bindungsdaten aus dem Diagramm entfernt und neue Objekte erstellt. Dies bedeutet, dass beim Öffnen der ursprünglichen Zeichnung und erneuten Ausführen des Diagramms neue Objekte zusätzlich zu den alten erstellt werden.
 
-{% hint style="info" %} **Verwendung**
+{% hint style="info" %} **Verwendung** 
 
 Verwenden Sie diese Option, wenn sich Dynamo die Objekte "merken" soll, die beim letzten Ausführen in einer **bestimmten Zeichnung** erstellt wurden. {% endhint %}
 
@@ -64,7 +64,7 @@ Verwenden Sie diese Option, wenn sich Dynamo die Objekte "merken" soll, die beim
 
 Dies ähnelt Option 2, mit der Ausnahme, dass die Objektbindungsdaten in der Zeichnung und nicht im Diagramm (DYN-Datei) serialisiert werden. Wenn Sie das Diagramm schließen/erneut öffnen und es in **derselben Zeichnung** ausführen, sollte alles wie beim letzten Mal funktionieren. Wenn Sie das Diagramm in einer **anderen Zeichnung** ausführen, bleiben die Bindungsdaten in der ursprünglichen Zeichnung erhalten, da sie in der Zeichnung und nicht im Diagramm gespeichert werden.
 
-{% hint style="info" %} **Verwendung**
+{% hint style="info" %} **Verwendung** 
 
 Verwenden Sie diese Option, wenn Sie dasselbe Diagramm in **mehreren Zeichnungen** verwenden möchten und Dynamo sich dabei "merken" soll, wie es in jeder Zeichnung dargestellt wurde. {% endhint %}
 

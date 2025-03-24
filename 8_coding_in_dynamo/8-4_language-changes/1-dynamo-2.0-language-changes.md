@@ -61,7 +61,7 @@ Im Folgenden werden die Änderungen in Version 2.0 erläutert:
 * Variablen in imperativen Blöcken gelten lokal für den imperativen Bereich
 * Trennung von Listen und Wörterbüchern
 
-## 1\. Vereinfachte list@level-Syntax 
+## 1\. Vereinfachte List@Level-Syntax 
 
 Neue Syntax für list@level, sodass `list@L1` anstelle von `list@-1` ![](../images/8-4/1/lang2_1.png) verwendet wird
 

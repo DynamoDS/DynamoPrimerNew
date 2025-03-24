@@ -199,7 +199,7 @@ Nachdem der Haltepunkt festgelegt wurde, muss der Prozess durch die Funktion Wal
 
 Wenn wir weiter durch die Funktion gehen, erreichen wir die Ausnahme, die im DynamoRevit-Fenster angezeigt wird. Im Fenster mit der Aufrufliste können wir sehen, dass die Ausnahme ursprünglich von einer Methode mit dem Namen `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve` ausgelöst wurde. Glücklicherweise wird die Ausnahme hier verarbeitet, sodass Dynamo nicht abgestürzt ist. Der Debugging-Prozess hat den Kontext für das Problem zugänglich gemacht, indem eine andere Methode im Quellcode ermittelt wurde.
 
-Da dies keine Open-Source-Bibliothek ist, können wir dort keine Änderungen vornehmen. Jetzt, da wir über weitere Informationen verfügen, können wir das Problem mit mehr Kontext melden, indem wir eine GitHub-[Anfrage](https://guides.github.com/features/issues/) übermitteln. Oder wir können eine Lösung für dieses Problem vorschlagen, indem wir eine Pull-Anforderung stellen.
+Da dies keine Open-Source-Bibliothek ist, können wir dort keine Änderungen vornehmen. Jetzt, da wir über weitere Informationen verfügen, können wir das Problem mit mehr Kontext melden, indem wir eine GitHub-[Anfrage](https://docs.github.com/de/issues/tracking-your-work-with-issues/about-issues) übermitteln. Oder wir können eine Lösung für dieses Problem vorschlagen, indem wir eine Pull-Anforderung stellen.
 
 ![Ausnahme in Visual Studio](images/vs-exception.jpg)
 

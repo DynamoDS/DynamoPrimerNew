@@ -2,7 +2,7 @@
 
 ### Publizieren eines Pakets <a href="#publish-a-package" id="publish-a-package"></a>
 
-Pakete sind eine einfache Möglichkeit, Blöcke zu speichern und gemeinsam mit der Dynamo-Community zu nutzen. Ein Paket kann alle möglichen Elemente enthalten, von benutzerdefinierten Blöcken, die im Dynamo-Arbeitsbereich erstellt wurden, bis hin zu von NodeModel abgeleiteten Blöcken. Pakete werden mit dem Package Manager publiziert und installiert. Zusätzlich zu dieser Seite enthält der [Primer](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) eine allgemeine Anleitung für Pakete.
+Pakete sind eine einfache Möglichkeit, Blöcke zu speichern und gemeinsam mit der Dynamo-Community zu nutzen. Ein Paket kann alle möglichen Elemente enthalten, von benutzerdefinierten Blöcken, die im Dynamo-Arbeitsbereich erstellt wurden, bis hin zu von NodeModel abgeleiteten Blöcken. Pakete werden mit dem Package Manager publiziert und installiert. Zusätzlich zu dieser Seite enthält der [Primer](https://primer2.dynamobim.org/v/de/6_custom_nodes_and_packages/6-2_packages/1-introduction) eine allgemeine Anleitung für Pakete.
 
 #### Was ist ein Package Manager? <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 

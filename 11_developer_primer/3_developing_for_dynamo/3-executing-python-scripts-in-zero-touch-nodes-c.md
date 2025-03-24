@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-Das Python-Skript gibt die Variable `output` zurück, d. h., wir benötigen eine `output`-Variable im Python-Skript. Verwenden Sie dieses Beispielskript, um den Block in Dynamo zu testen. Wenn Sie den Python-Block schon einmal in Dynamo verwendet haben, sollte Ihnen die folgende Darstellung bekannt sein. Weitere Informationen finden Sie im [Primer-Abschnitt zu Python](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html).
+Das Python-Skript gibt die Variable `output` zurück, d. h., wir benötigen eine `output`-Variable im Python-Skript. Verwenden Sie dieses Beispielskript, um den Block in Dynamo zu testen. Wenn Sie den Python-Block schon einmal in Dynamo verwendet haben, sollte Ihnen die folgende Darstellung bekannt sein. Weitere Informationen finden Sie im [Primer-Abschnitt zu Python](https://primer2.dynamobim.org/v/de/8_coding_in_dynamo/8-3_python).
 
 ```
 import clr
