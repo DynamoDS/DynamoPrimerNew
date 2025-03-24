@@ -12,7 +12,7 @@ Nejprve otevřete prázdný dokument v aplikaci Civil 3D. V tomto dokumentu po
 
 Kliknutím na tlačítko **Dynamo** spusťte aplikaci Dynamo v samostatném okně.
 
-{% hint style="info" %} **Jaký je rozdíl mezi aplikací Dynamo a Přehrávačem skriptů Dynamo?**
+{% hint style="info" %} **Jaký je rozdíl mezi aplikací Dynamo a Přehrávačem skriptů Dynamo?** 
 
 Aplikace Dynamo se používá k vytváření a spouštění grafů. Přehrávač skriptů Dynamo umožňuje snadno spouštět grafy, aniž by bylo nutné je otevírat v aplikaci Dynamo.
 
@@ -24,7 +24,7 @@ Po otevření aplikace Dynamo se zobrazí úvodní obrazovka. Kliknutím na tla�
 
 <figure><img src="../.gitbook/assets/c3d-start.png" alt=""><figcaption><p>Úvodní obrazovka aplikace Dynamo</p></figcaption></figure>
 
-{% hint style="info" %} **Jsou dostupné nějaké ukázky?**
+{% hint style="info" %} **Jsou dostupné nějaké ukázky?** 
 
 Aplikace Dynamo for Civil 3D obsahuje několik předdefinovaných grafů, které vám pomohou podnítit některé další nápady, jak používat aplikaci Dynamo. Doporučujeme se na ně někdy podívat a také si přečtěte část [sample-workflows](sample-workflows/ "mention") v této příručce Primer. {% endhint %}
 
@@ -38,7 +38,7 @@ Vypadá to jednoduše, že? Než však začneme, musíme se seznámit s několi
 
 Základní stavební bloky grafu aplikace Dynamo se nazývají **uzly**. Uzel je jako malý počítač – vložíte do něj data, on s nimi provede nějakou práci a vygeneruje výsledek. Aplikace Dynamo for Civil 3D obsahuje **knihovnu** uzlů, které můžete propojit pomocí **drátů** a vytvořit tak **graf**, který dokáže větší a lepší věci než kterýkoli uzel sám o sobě.
 
-{% hint style="info" %} **Počkat, co když jsem úplně nový uživatel aplikace Dynamo?**
+{% hint style="info" %} **Počkat, co když jsem úplně nový uživatel aplikace Dynamo?** 
 
 Některé z těchto informací pro vás mohou být zcela nové – to je v pořádku! Tyto části vám pomohou.
 
@@ -54,7 +54,7 @@ Tyto uzly můžete najít zadáním jejich názvu do vyhledávacího řádku v 
 
 <figure><img src="../.gitbook/assets/c3d-create-text-node-placement.gif" alt=""><figcaption><p>Uzly lze umístit z knihovny nebo kliknutím pravým tlačítkem na kreslicí plochu.</p></figcaption></figure>
 
-{% hint style="info" %} **Jak poznám, které uzly použít a kde je najít?**
+{% hint style="info" %} **Jak poznám, které uzly použít a kde je najít?** 
 
 Uzly v knihovně jsou seskupeny do logických kategorií podle toho, co dělají. Přečtěte si část [node-library.md](node-library.md "mention"), ve které naleznete podrobnější informace. {% endhint %}
 
@@ -92,7 +92,7 @@ Vraťte se do grafu aplikace Dynamo a změňte několik vstupních hodnot, např
 
 </div>
 
-{% hint style="info" %} **Proč aplikace Dynamo nevloží nový textový objekt při každém spuštění grafu?**
+{% hint style="info" %} **Proč aplikace Dynamo nevloží nový textový objekt při každém spuštění grafu?** 
 
 Ve výchozím nastavení si aplikace Dynamo „pamatuje“ objekty, které vytvoří. Pokud změníte vstupní hodnoty uzlu, objekty v aplikaci Civil 3D se aktualizují místo vytváření zcela nových objektů. Další informace o tomto chování naleznete v části [object-binding.md](advanced-topics/object-binding.md "mention"). {% endhint %}
 

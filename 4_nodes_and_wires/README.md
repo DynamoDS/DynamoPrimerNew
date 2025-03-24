@@ -43,7 +43,7 @@ Najetím myší nebo kliknutím pravým tlačítkem myši na název nebo porty s
 > 2. Nepřipojené vstupy – Pokud má uzel na jednom nebo více vstupních portech červené svislé pruhy, je nutné tyto vstupy připojit.
 > 3. Funkce – Uzel, jehož výstupem je funkce, a u jehož výstupního portu je zobrazen šedý svislý pruh, je uzel funkce.
 > 4. Vybráno – Aktuálně vybrané uzly mají světle modré rámečky.
-> 5. Zmrazeno –Průsvitný modrý uzel je zmrazen, čímž je pozastaveno provádění uzlu.
+> 5. Zmrazeno –  Průsvitný modrý uzel je zmrazen, čímž je pozastaveno provádění uzlu.
 > 6. Náhled vypnut – Šedý stavový řádek pod uzlem a ikona oka <img src="images/nodesandwires-previewoff.jpg" alt="" data-size="line"> označuje, že náhled geometrie uzlu je vypnutý.
 > 7. Upozornění – Žlutý stavový řádek pod uzlem označuje stav upozornění, což znamená, že buď chybí vstupní data, nebo jsou použity nesprávné datové typy.
 > 8. Chyba – Červený stavový řádek pod uzlem označuje chybový stav uzlu.

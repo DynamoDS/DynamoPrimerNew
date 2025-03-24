@@ -2,7 +2,7 @@
 
 Mnoho příkladů se dosud soustředilo na tvorbu vícerozměrných geometrií z méněrozměrných geometrií. Pomocí metod průsečíků je možné z vícerozměrných geometrií vygenerovat méněrozměrné objekty a po vytvoření geometrií lze jejich tvar dále upravit pomocí příkazů oříznutí.
 
-Metoda _Intersect_ je definována u všech geometrií aplikace Dynamo, teoreticky lze tedy provést průnik libovolných dvou geometrií. Některé průniky samozřejmě nedávají smysl, například průnik s body, protože výsledným objektem bude vždy samotný vstupní bod. Další možné kombinace průniků mezi objekty jsou uvedeny v následujícím diagramu. Následující tabulka uvádí výsledky různých operací průniku:
+Metoda _Průnik_ je definována u všech geometrií aplikace Dynamo, teoreticky lze tedy provést průnik libovolných dvou geometrií. Některé průniky samozřejmě nedávají smysl, například průnik s body, protože výsledným objektem bude vždy samotný vstupní bod. Další možné kombinace průniků mezi objekty jsou uvedeny v následujícím diagramu. Následující tabulka uvádí výsledky různých operací průniku:
 
 ### **Průnik**
 
@@ -34,7 +34,7 @@ crvs = surf.Intersect(pl);
 crvs_moved = crvs.Translate(0, 0, 10);
 ```
 
-Metoda _Trim_ je velmi podobná metodě Intersect v tom, že je definována u téměř všech geometrií. Metoda _Trim_ je však omezenější než metoda _Intersect_.
+Metoda _Oříznutí_ je velmi podobná metodě Průnik v tom, že je definována u téměř všech geometrií. Metoda _Oříznutí_ je však omezenější než metoda _Průnik_.
 
 ### **Oříznutí**
 
@@ -45,7 +45,7 @@ Metoda _Trim_ je velmi podobná metodě Intersect v tom, že je definována u 
 | Plocha     | -              | Ano   | Ano   | Ano     | Ano   |
 | Těleso       | -              | -     | Ano   | Ano     | Ano   |
 
-U metody _Trim_ je nutné zadat výběrový bod, který určuje, která geometrie má být zahozena a která má být zachována. Aplikace vyhledá a zahodí oříznutou geometrii, která bude výběrovému bodu nejblíže.
+U metody _Oříznutí_ je nutné zadat výběrový bod, který určuje, která geometrie má být zahozena a která má být zachována. Aplikace vyhledá a zahodí oříznutou geometrii, která bude výběrovému bodu nejblíže.
 
 ![](../images/8-2/8/IntersectionAndTrim\_02.png)
 

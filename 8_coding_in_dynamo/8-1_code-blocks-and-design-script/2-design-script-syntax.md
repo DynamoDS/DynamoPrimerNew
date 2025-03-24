@@ -54,7 +54,7 @@ Akce je něco, co se provede u objektu daného typu. Aplikace Dynamo používá
 ![](../images/8-1/2/DesignScript-action.jpg)
 
 > 1. Uzel **Point.Add** je uzel typu Akce, takže syntaxe funguje trochu jinak.
-> 2. Vstupy jsou (1) _bod_ a (2) _vektor_, které se mají přidat. V **bloku kódu** jsme bod (položku) pojmenovali výrazem _„pt“_. Chcete-li přidat vektor s názvem *„vec *k bodu _„pt“_, zadejte výraz _pt.Add(vec)_ neboli položka, tečka, akce. Akce Add má pouze jeden vstup nebo všechny vstupy z uzlu **Point.Add **kromě prvního. První vstup uzlu **Point.Add** je samotný bod.
+> 2. Vstupy jsou (1) _bod_ a (2) _vektor_, které se mají přidat. V **bloku kódu** jsme bod (položku) pojmenovali výrazem _„pt“_. Chcete-li přidat vektor s názvem *„vec *k bodu _„pt“_, zadejte výraz _pt.Add(vec)_ neboli položka, tečka, akce. Akce Add má pouze jeden vstup nebo všechny vstupy z uzlu **Point.Add** romě prvního. První vstup uzlu **Point.Add** je samotný bod.
 
 #### Dotaz
 

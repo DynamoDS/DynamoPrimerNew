@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-Skript jazyka Python vrací proměnnou `output`, což znamená, že ve skriptu jazyka Python budeme potřebovat proměnnou `output`. K otestování uzlu v aplikaci Dynamo použijte tento vzorový skript. Pokud jste někdy v aplikaci Dynamo použili uzel jazyka Python, měl by vám následující skript být povědomý. Další informace naleznete v části [Python v příručce Primer](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html).
+Skript jazyka Python vrací proměnnou `output`, což znamená, že ve skriptu jazyka Python budeme potřebovat proměnnou `output`. K otestování uzlu v aplikaci Dynamo použijte tento vzorový skript. Pokud jste někdy v aplikaci Dynamo použili uzel jazyka Python, měl by vám následující skript být povědomý. Další informace naleznete v části [Python v příručce Primer](https://primer2.dynamobim.org/v/cs/8_coding_in_dynamo/8-3_python).
 
 ```
 import clr

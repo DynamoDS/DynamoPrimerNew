@@ -136,7 +136,7 @@ I když tento scénář funguje správně pro balíčky, které obsahují pouze
 
 #### Řešení
 
-Jedním z možných alternativních řešení je použít namapovanou síťovou jednotku odkazující na síťové umístění a nechat pracovní stanice odkazovat na tuto cestu. Postup vytvoření mapované síťové jednotky je popsán [zde](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+Jedním z možných alternativních řešení je použít namapovanou síťovou jednotku odkazující na síťové umístění a nechat pracovní stanice odkazovat na tuto cestu. Postup vytvoření mapované síťové jednotky je popsán [zde](https://support.microsoft.com/cs-cz/help/4026635/windows-10-map-a-network-drive).
 
 ### Další práce s balíčky
 

@@ -14,7 +14,7 @@ Jakmile na pracovní plochu přidáte několik uzlů, můžete je chtít přeusp
 
 ### Poznámky 
 
-S trochou zkušeností můžeme vizuální program „číst“ tak, že se podíváme na názvy uzlů a budeme sledovat tok programu. Dobrým zvykem je vkládat na pracovní plochu popisy. Aplikace Dynamo obsahuje uzel **Notes** s upravitelným textovým polem. Poznámky lze na pracovní plochu přidávat dvěma způsoby:
+S trochou zkušeností můžeme vizuální program „číst“ tak, že se podíváme na názvy uzlů a budeme sledovat tok programu. Dobrým zvykem je vkládat na pracovní plochu popisy. Aplikace Dynamo obsahuje uzel **Poznámky** s upravitelným textovým polem. Poznámky lze na pracovní plochu přidávat dvěma způsoby:
 
 ![](./images/4/managingyourprogram-notes.jpg)
 

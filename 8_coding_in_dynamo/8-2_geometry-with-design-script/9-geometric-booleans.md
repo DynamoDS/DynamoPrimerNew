@@ -1,10 +1,10 @@
 # Booleovské operace geometrií
 
-Metody _Intersect_, _Trim_ a _SelectTrim_ se používají zejména u méněrozměrných geometrií, například u bodů, křivek a ploch. Geometrie těles obsahují další sadu metod, které umožňují upravovat jejich tvar, například odebráním materiálu podobně jako u metody _Trim_, nebo prvky kombinovat a vytvářet tak větší celky.
+Metody _Průnik_, _Oříznutí_ a _SelectTrim_ se používají zejména u méněrozměrných geometrií, například u bodů, křivek a ploch. Geometrie těles obsahují další sadu metod, které umožňují upravovat jejich tvar, například odebráním materiálu podobně jako u metody _Trim_, nebo prvky kombinovat a vytvářet tak větší celky.
 
-### Union (Sjednocení)
+### Sjednocení
 
-Metoda _Union_ přijímá dvě tělesa a z prostoru, který tyto objekty zaujímají, vytváří jedno těleso. Překrývající se prostor mezi objekty se zkombinuje do konečného tvaru. Tento příklad kombinuje kouli a kvádr do jednoho tvaru:
+Metoda _Sjednocení_ přijímá dvě tělesa a z prostoru, který tyto objekty zaujímají, vytváří jedno těleso. Překrývající se prostor mezi objekty se zkombinuje do konečného tvaru. Tento příklad kombinuje kouli a kvádr do jednoho tvaru:
 
 ![](../images/8-2/9/GeometricBooleans\_01.png)
 
@@ -19,9 +19,9 @@ s2 = Sphere.ByCenterPointRadius(
 combined = s1.Union(s2);
 ```
 
-### Difference (Rozdíl)
+### Rozdíl
 
-Metoda _Difference_ funguje podobně jako metoda _Trim_ odečítá obsah vstupního tělesa od základního tělesa. V tomto příkladu odřízneme od koule malý kus:
+Metoda _Rozdíl_ funguje podobně jako metoda _Oříznutí_ odečítá obsah vstupního tělesa od základního tělesa. V tomto příkladu odřízneme od koule malý kus:
 
 ![](../images/8-2/9/GeometricBooleans\_02.png)
 
@@ -38,7 +38,7 @@ result = s.Difference(tool);
 
 ### Průnik
 
-Metoda _Intersect_ vrací těleso tvořené překrývajícím se prostorem dvou vstupních těles. V následujícím příkladu je metoda _Difference_ změněna na _Intersect_, výsledným tělesem je kus, který byl v předchozím příkladu odříznut:
+Metoda _Průnik_ vrací těleso tvořené překrývajícím se prostorem dvou vstupních těles. V následujícím příkladu je metoda _Rozdíl_ změněna na _Průnik_, výsledným tělesem je kus, který byl v předchozím příkladu odříznut:
 
 ![](../images/8-2/9/GeometricBooleans\_03.png)
 

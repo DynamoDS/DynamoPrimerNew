@@ -78,7 +78,7 @@ Tento příkaz aplikaci Dynamo sdělí, aby otevřela zadaný soubor v umístě
 * V tuto chvíli je rozhraní DynamoCLI třeba spouštět z jeho instalačního umístění ve složce [Verze aplikace Dynamo]. Rozhraní CLI potřebuje přístup ke stejným knihovnám DLL jako aplikace Dynamo, proto by se nemělo přesouvat.
 * Měli byste být schopni spouštět grafy, které jsou aktuálně otevřené v aplikaci Dynamo, ale může to způsobit nežádoucí vedlejší účinky.
 * Všechny cesty k souborům jsou plně kompatibilní se systémem DOS, takže by relativní a plně kvalifikované cesty měly fungovat, ale nezapomeňte cesty uzavřít do uvozovek: *"C:cesta\\k\\soubor.dyn"*. 
-* DynamoCLI je nová funkce, která se v současné době vyvíjí: aktuálně **CLI načítá pouze podmnožinu ** standardních knihoven Dynamo. Mějte to na paměti, pokud se graf nespustí správně. Tyto knihovny jsou uvedeny [zde](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28) 
+* DynamoCLI je nová funkce, která se v současné době vyvíjí: aktuálně **CLI načítá pouze podmnožinu** standardních knihoven Dynamo. Mějte to na paměti, pokud se graf nespustí správně. Tyto knihovny jsou uvedeny [zde](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28) 
 * V současné době není k dispozici žádný standardní výstup. Pokud nedojde k žádným chybám, CLI se po dokončení běhu jednoduše ukončí.
  
 #### Jak se to používá?

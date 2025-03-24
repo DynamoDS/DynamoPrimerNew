@@ -20,7 +20,7 @@ Příklady kódu jsou získány ze souboru [ZeroTouchEssentials.cs](https://gith
 
 ### Výchozí vstupní hodnota <a href="#default-input-values" id="default-input-values"></a>
 
-Aplikace Dynamo podporuje definici výchozích hodnot vstupních portů v uzlu. Tyto výchozí hodnoty budou do uzlu zadány, pokud porty nemají žádná připojení. Výchozí hodnoty jsou vyjádřeny pomocí mechanismu jazyka C# pro zadávání volitelných argumentů popsaném v [Příručce programování v jazyce C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Výchozí hodnoty jsou určeny následujícím způsobem:
+Aplikace Dynamo podporuje definici výchozích hodnot vstupních portů v uzlu. Tyto výchozí hodnoty budou do uzlu zadány, pokud porty nemají žádná připojení. Výchozí hodnoty jsou vyjádřeny pomocí mechanismu jazyka C# pro zadávání volitelných argumentů popsaném v [Příručce programování v jazyce C#](https://msdn.microsoft.com/cs-cz/library/dd264739.aspx). Výchozí hodnoty jsou určeny následujícím způsobem:
 
 * Nastavte parametry metody na výchozí hodnotu: `inputNumber = 2.0`
 
@@ -262,7 +262,7 @@ Zdroje geometrie, které nejsou vráceny z funkcí, bude nutné spravovat ručn
     }
     ```
 
-    > Příkaz using je zdokumentován [zde](https://msdn.microsoft.com/en-us/library/yh598w02.aspx).
+    > Příkaz using je zdokumentován [zde](https://msdn.microsoft.com/cs-cz/library/yh598w02.aspx).
     >
     > Další informace o nových funkcích stability v aplikaci Dynamo 2.5 naleznete v části [Vylepšení stability geometrie aplikace Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Pomocí ručního volání příkazu Dispose:

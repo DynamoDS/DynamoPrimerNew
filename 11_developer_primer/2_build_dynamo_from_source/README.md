@@ -52,7 +52,7 @@ Pokud byla operace klonování úspěšně dokončena, víme, že git funguje. V
 Pomocí zdrojových souborů, které jsou nyní klonovány do místního počítače, můžeme vytvořit spustitelný soubor pro aplikaci Dynamo. Za tímto účelem je nutné nastavit prostředí Visual Studio IDE a zajistit instalaci rozhraní .NET Framework a DirectX.
 
 * Stáhněte a nainstalujte [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results), bezplatné, plně vybavené integrované vývojové prostředí (IDE – mohou fungovat i novější verze).
-* Stáhněte a nainstalujte rozhraní [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) nebo novější.
+* Stáhněte a nainstalujte rozhraní [Microsoft .NET Framework 4.5](https://www.microsoft.com/cs-cz/download/details.aspx?id=30653) nebo novější.
 * Nainstalujte rozhraní Microsoft DirectX z místního úložiště aplikace Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`).
 
 > Rozhraní .NET a DirectX již mohou být nainstalována.
@@ -98,7 +98,7 @@ Pokyny k vytváření aplikace Dynamo pro další platformy (například Linux 
 
 ### Ladění místního sestavení pomocí aplikace Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-Ladění je proces identifikace, izolování a opravy chyby nebo problému. Po úspěšném sestavení aplikace Dynamo ze zdroje můžeme pomocí několika nástrojů v aplikaci Visual Studio ladit spuštěnou aplikaci, například doplněk DynamoRevit. Můžeme analyzovat jeho zdrojový kód a najít příčinu problému nebo sledovat aktuálně prováděný kód. Podrobnější informace o tom, jak ladit a procházet kód v aplikaci Visual Studio, naleznete v [dokumentaci k aplikaci Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Ladění je proces identifikace, izolování a opravy chyby nebo problému. Po úspěšném sestavení aplikace Dynamo ze zdroje můžeme pomocí několika nástrojů v aplikaci Visual Studio ladit spuštěnou aplikaci, například doplněk DynamoRevit. Můžeme analyzovat jeho zdrojový kód a najít příčinu problému nebo sledovat aktuálně prováděný kód. Podrobnější informace o tom, jak ladit a procházet kód v aplikaci Visual Studio, naleznete v [dokumentaci k aplikaci Visual Studio](https://docs.microsoft.com/cs-cz/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 V případě samostatné aplikace Dynamo, DynamoSandbox, se budeme zabývat dvěma možnostmi ladění:
 

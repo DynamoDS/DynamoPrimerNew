@@ -1,6 +1,6 @@
 # Co je aplikace Dynamo a jak funguje?
 
-Dynamo je aplikace pro [vizuální programování](https://primer2.dynamobim.org/a_appendix/a-1_visual-programming-and-dynamo), kterou lze stáhnout a spustit v samostatném režimu „Sandbox“ nebo jako modul plug-in pro jiný software, například Revit, FormIt nebo Civil 3D.
+Dynamo je aplikace pro [vizuální programování](https://primer2.dynamobim.org/v/cs/a_appendix/a-1_visual-programming-and-dynamo), kterou lze stáhnout a spustit v samostatném režimu „Sandbox“ nebo jako modul plug-in pro jiný software, například Revit, FormIt nebo Civil 3D.
 
 {% hint style="info" %}Přečtěte si další informace o [rozdílu mezi verzemi **Dynamo Core**/**Revit**/**Sandbox**.](https://dynamobim.org/a-new-way-to-get-dynamo-sandbox/) {% endhint %}
 

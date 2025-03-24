@@ -2,7 +2,7 @@
 
 ### Publikování balíčku <a href="#publish-a-package" id="publish-a-package"></a>
 
-Balíčky představují pohodlný způsob ukládání a sdílení uzlů s komunitou aplikace Dynamo. Balíček může obsahovat vše od vlastních uzlů vytvořených v pracovním prostoru aplikace Dynamo po uzly odvozené z uzlů NodeModel. Balíčky jsou publikovány a nainstalovány pomocí nástroje Package Manager. Kromě této stránky naleznete v příručce [Primer](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) také obecné pokyny k balíčkům.
+Balíčky představují pohodlný způsob ukládání a sdílení uzlů s komunitou aplikace Dynamo. Balíček může obsahovat vše od vlastních uzlů vytvořených v pracovním prostoru aplikace Dynamo po uzly odvozené z uzlů NodeModel. Balíčky jsou publikovány a nainstalovány pomocí nástroje Package Manager. Kromě této stránky naleznete v příručce [Primer](https://primer2.dynamobim.org/v/cs/6_custom_nodes_and_packages/6-2_packages/1-introduction) také obecné pokyny k balíčkům.
 
 #### Co je nástroj Package Manager? <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 
@@ -75,10 +75,10 @@ K webovému klientu Package Manager lze získat přístup pomocí tohoto odkazu
 
 Autoři mohou upravit popis balíčku, odkaz na web a odkaz na úložiště pomocí následujících kroků:  
 
-> 1. V části **My Packages** (Moje balíčky) vyberte balíček a klikněte na možnost **Edit package details** (Upravit podrobnosti balíčku).  
+> 1. V části **Moje balíčky** vyberte balíček a klikněte na možnost **Upravit podrobnosti balíčku**.  
 > 2. Pomocí příslušných polí přidejte nebo upravte odkazy na **webové stránky** a **úložiště**.  
 > 3. Podle potřeby aktualizujte **popis balíčku**.  
-> 4. Kliknutím na tlačítko **Save changes** (Uložit změny) aktualizace použijte.  
+> 4. Kliknutím na tlačítko **Uložit změny** aktualizace použijte.  
 
  **Poznámka**: Aktualizace v nástroji Package Manager v aplikaci Dynamo mohou trvat až 15 minut, protože aktualizace serveru nějakou dobu trvají. Snažíme se toto zpoždění zkrátit.  
 
@@ -93,8 +93,8 @@ Informace o kompatibilitě lze zpětně aktualizovat pro dříve publikované v
 **Krok 1:**  
 
 1. Klikněte na verzi balíčku, kterou chcete aktualizovat.  
-2. Seznam **Depends on** (Závisí na) bude automaticky vyplněn balíčky, na kterých váš balíček závisí.  
-3. Kliknutím na ikonu tužky vedle položky **Compatibility** (Kompatibilita) otevřete okno pracovního postupu **Edit Compatibility Information** (Upravit informace o kompatibilitě).  
+2. Seznam **Závisí na** bude automaticky vyplněn balíčky, na kterých váš balíček závisí.  
+3. Kliknutím na ikonu tužky vedle položky **Kompatibilita** otevřete okno pracovního postupu **Upravit informace o kompatibilitě**.  
 
 **Krok 2:**  
 

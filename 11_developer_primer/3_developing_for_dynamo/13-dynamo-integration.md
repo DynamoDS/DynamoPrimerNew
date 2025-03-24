@@ -495,9 +495,9 @@ Hrubé nastavení je následující:
 
 Statická třída `TraceExampleWrapper` je importována jako uzel do aplikace Dynamo. Obsahuje jedinou metodu, `ByString`, která vytváří `TraceExampleItem`. Jedná se o běžné objekty rozhraní .net, které obsahují vlastnost `description`.
 
-Každý objekt `TraceExampleItem` je serializován do trasování reprezentovanému jako `TraceableId`. Jedná se pouze o třídu obsahující `IntId`, která je označena jako `[Serializeable]`, takže může být serializována pomocí formátovacího modulu `SOAP`. Další informace o atributu Serializable najdete [zde](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8)
+Každý objekt `TraceExampleItem` je serializován do trasování reprezentovanému jako `TraceableId`. Jedná se pouze o třídu obsahující `IntId`, která je označena jako `[Serializeable]`, takže může být serializována pomocí formátovacího modulu `SOAP`. Další informace o atributu Serializable najdete [zde](https://docs.microsoft.com/cs-cz/dotnet/api/system.serializableattribute?view=netframework-4.8)
 
-Je také nutné implementovat rozhraní `ISerializable` definované [zde](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8).
+Je také nutné implementovat rozhraní `ISerializable` definované [zde](https://docs.microsoft.com/cs-cz/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8).
 
 
 ``` c#
@@ -753,7 +753,7 @@ Pokud je z nějakého důvodu nutné balíček také publikovat v nástroji Pa
 
 Tyto podadresáře jazykových verzí jsou bez problémů načítány modulem runtime .net, pokud se nacházejí ve stejném adresáři jako binární soubory uzlu nebo rozšíření.
 
-Další informace o sestavách prostředků a souborech .resx naleznete zde: [https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+Další informace o sestavách prostředků a souborech .resx naleznete zde: [https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/cs-cz/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 Pravděpodobně budete vytvářet soubory `.resx` a kompilovat je pomocí aplikace Visual Studio. Pro danou sestavu `xyz.dll` budou výsledné prostředky zkompilovány do nové sestavy `xyz.resources.dll`. Jak je popsáno výše, důležité je umístění a název této sestavy.
 

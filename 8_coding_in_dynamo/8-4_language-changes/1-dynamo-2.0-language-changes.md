@@ -79,7 +79,7 @@ BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
 Pokud uživatel přetáhl první uzel na kreslicí plochu a připojil seznam geometrií, očekávat by, že se spustí replikace, ale k tomu nikdy nedošlo, protože za běhu by místo toho bylo voláno druhé přetížení, jak je znázorněno na obrázku: ![](../images/8-4/1/lang2_2.png)
  
-Ve verzi 2.0 jsme z tohoto důvodu zakázali přetížené funkce, které se liší pouze kardinalitou parametrů. To znamená, že u přetížených funkcí, které mají stejný počet a typy parametrů, ale mají jeden nebo více parametrů, které se liší pouze úrovní, vítězí vždy přetížení, které je definováno jako první, zatímco ostatní jsou překladačem vyřazeny. Hlavní výhodou tohoto zjednodušení je zjednodušení logiky rozlišení metody díky rychlé cestě k výběru kandidátů na funkce.
+Ve verzi 2.0 jsme z tohoto důvodu zakázali přetížené funkce, které se liší pouze kardinalitou parametrů. To znamená, že u přetížených funkcí, které mají stejný počet a typy parametrů, ale mají jeden nebo více parametrů, které se liší pouze úrovní, vítězí vždy přetížení, které je definováno jako první, zatímco ostatní jsou překladačem vyřazena. Hlavní výhodou tohoto zjednodušení je zjednodušení logiky rozlišení metody díky rychlé cestě k výběru kandidátů na funkce.
 
 V knihovně geometrie pro verzi 2.0 bylo první přetížení v příkladu `BoundingBox.ByGeometry` zrušeno a druhé bylo zachováno, takže pokud je uzel určen k replikaci, tj. používá se v kontextu prvního, je nutné jej použít s nejkratší (nebo nejdelší) možností vázání nebo v bloku kódu s vodítky replikace: 
 ```
@@ -149,7 +149,7 @@ Tento příklad by dříve fungoval ve verzi 1.x, protože graf by se zkompilova
 
 **Kompatibilita:** Mezi kódem a vizuálním programem je lepší korelace.
 
-**Instruktáž:** Předávání heterogenních vstupů seznamu uzlům má nyní za následek hodnoty jiné než null pro typy, které jsou uzlem přijaty, a hodnoty null pro typy, které uzel neimplementuje. Výsledky jsou předvídatelnější a lépe ukazují, které typy jsou pro uzel přípustné.
+**Instruktáž:** Předávání vstupů heterogenních seznamů uzlům má nyní za následek hodnoty jiné než null pro typy, které jsou uzlem přijaty, a hodnoty null pro typy, které uzel neimplementuje. Výsledky jsou předvídatelnější a lépe ukazují, které typy jsou pro uzel přípustné.
 
 ### Upozornění: Nevyřešené nejasnosti s přetíženými metodami
 
