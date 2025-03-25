@@ -29,7 +29,7 @@ Dynamo의 많은 뛰어난 사용 사례 중 하나는 코리더 모형을 따�
  Excel 파일은 Dynamo 그래프와 동일한 디렉토리에 저장하는 것이 가장 좋습니다. 
 {% endhint %} 
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
