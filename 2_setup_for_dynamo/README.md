@@ -63,5 +63,5 @@ DynamoSandbox 시작 화면이 다음과 같이 표시됩니다.
 
 축하합니다. DynamoSandbox 사용을 위한 설정이 완료되었습니다.
 
-{% hint style="info" %} 
-**형상** 은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다. **형상** 을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다. {% endhint %}
+{% hint style="info" %}
+**형상** 은 Dynamo Sandbox의 추가 기능으로, 현재 Revit, Robot Structural Analysis, FormIt 및 Civil 3D 소프트웨어에 대한 라이센스 또는 멤버쉽을 보유한 사용자만 사용할 수 있습니다.**형상** 을 사용하면 사용자가 Dynamo Sandbox에서 형상을 가져오고, 작성하고, 편집하고, 내보낼 수 있습니다. {% endhint %}
