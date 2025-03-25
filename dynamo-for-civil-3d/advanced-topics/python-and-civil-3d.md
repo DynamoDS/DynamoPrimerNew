@@ -7,7 +7,9 @@
 
 本部分将重点介绍如何在 Civil 3D 环境中利用 Python，来利用 AutoCAD 和 Civil 3D .NET API。
 
-{% hint style="info" %} 有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 部分。{% endhint %}
+{% hint style="info" %}
+有关如何在 Dynamo 中使用 Python 的更多常规信息，请参见 [8-3_Python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 部分。
+{% endhint %}
 
 ## API 文档
 
@@ -21,7 +23,9 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 [Civil 3D .NET API 参考手册](https://help.autodesk.com/view/CIV3D/2024/CHS/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331)
 
-{% hint style="info" %}在您浏览此部分时，可能会有一些您不熟悉的概念（如数据库、事务、方法、特性等）。其中许多概念是使用 .NET API 的核心，并不是 Dynamo 或 Python 特有的。本 Primer 的此部分不会详细讨论这些项目，因此建议您经常参见上述链接以了解详细信息。{% endhint %}
+{% hint style="info" %}
+在您浏览此部分时，可能会有一些您不熟悉的概念（如数据库、事务、方法、特性等）。其中许多概念是使用 .NET API 的核心，并不是 Dynamo 或 Python 特有的。本 Primer 的此部分不会详细讨论这些项目，因此建议您经常参见上述链接以了解详细信息。
+{% endhint %}
 
 ## 代码模板
 
@@ -39,8 +43,10 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 > 8. 在主要工作完成后，取消注释此行以提交事务。
 > 9. 如果要输出节点中的任何数据，请在脚本末尾将该节点指定给 `OUT` 变量。
 
-{% hint style="info" %} **要自定义？**\
-可以通过编辑位于 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 文件，来修改默认 Python 模板。  {% endhint %}
+{% hint style="info" %}
+**要自定义？**
+可以通过编辑位于 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 文件，来修改默认 Python 模板。 
+{% endhint %}
 
 ## 示例
 
@@ -88,13 +94,17 @@ AutoCAD 和 Civil 3D 都提供了多个 API，使像您这样的开发人员能�
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo 类型</th><th width="373">包裹</th></tr></thead><tbody><tr><td><strong>Object</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entity</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entity</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} 根据经验，通常使用 `InternalObjectId` 特性获取对象 ID，然后在事务中访问包裹对象更安全。这是因为 `InternalDBObject` 特性会返回一个不处于可写状态的 AutoCAD DBObject。 {% endhint %}
+{% hint style="warning" %}
+根据经验，通常使用 `InternalObjectId` 特性获取对象 ID，然后在事务中访问包裹对象更安全。这是因为 `InternalDBObject` 特性会返回一个不处于可写状态的 AutoCAD DBObject。
+{% endhint %}
 
 ### Python 脚本
 
 以下是一个完整的 Python 脚本，用于访问内部汇流对象以获取其边界点。亮显行表示基于默认模板代码修改/添加的行。
 
-{% hint style="info" %}单击脚本中带下划线的文字，可了解每行的说明。{% endhint %}
+{% hint style="info" %}
+单击脚本中带下划线的文字，可了解每行的说明。
+{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># 加载 Python 标准库和 DesignScript 库
 import sys
@@ -161,7 +171,9 @@ with adoc.LockDocument():
 <strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
 </strong></code></pre>
 
-{% hint style="warning" %}根据经验，最好将大部分脚本逻辑包含在事务中。这可确保安全访问脚本正在读/写的对象。在许多情况下，忽略事务可能会导致出现致命错误。{% endhint %}
+{% hint style="warning" %}
+根据经验，最好将大部分脚本逻辑包含在事务中。这可确保安全访问脚本正在读/写的对象。在许多情况下，忽略事务可能会导致出现致命错误。
+{% endhint %}
 
 ### 创建 PolyCurve
 
@@ -181,7 +193,9 @@ with adoc.LockDocument():
 
 在我们结束之前，作一个简短说明。根据您正在使用的 Civil 3D 版本，Python 节点的配置可能会有所不同。在 **Civil 3D 2020 和 2021** 中，Dynamo 使用名为 **IronPython** 的工具在 .NET 对象和 Python 脚本之间移动数据。但在 **Civil 3D 2022** 中，Dynamo 转变为使用标准的本地 Python 解释器（也称为 **CPython**），而不是使用 Python 3。此转变的好处包括能够访问常用现代库和新平台功能、基本维护和安全修补程序。
 
-{% hint style="info" %} 可以在 [Dynamo 博客](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) 上，详细了解此转变以及如何升级旧脚本。如果要继续使用 IronPython，只需使用 Dynamo Package Manager 安装 **DynamoIronPython2.7** 软件包。 {% endhint %}
+{% hint style="info" %}
+可以在 [Dynamo 博客](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) 上，详细了解此转变以及如何升级旧脚本。如果要继续使用 IronPython，只需使用 Dynamo Package Manager 安装 **DynamoIronPython2.7** 软件包。
+{% endhint %}
 
 [^1]: 默认情况下，Dynamo 几何图形库不会添加到 Python 环境中。我们使用此脚本的目标是输出汇流边界的 Dynamo 点列表，因此我们需要添加此行以便稍后创建点。
 
