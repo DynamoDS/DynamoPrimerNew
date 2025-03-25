@@ -25,7 +25,9 @@ Wenn Sie eine Demonstration der Dynamo-Arbeitsabläufe sehen möchten, finden Si
 
 ![](images/1-2/attractor1.gif)
 
-{% hint style="info" %} In den folgenden Kapiteln finden Sie themenspezifische Übungen, die sich mit unterschiedlichen Themen zu Dynamo befassen.  **Übungen** finden Sie normalerweise im letzten Abschnitt jeder Seite. {% endhint %}
+{% hint style="info" %}
+In den folgenden Kapiteln finden Sie themenspezifische Übungen, die sich mit unterschiedlichen Themen zu Dynamo befassen.  **Übungen** finden Sie normalerweise im letzten Abschnitt jeder Seite.
+{% endhint %}
 
 ### Community
 
