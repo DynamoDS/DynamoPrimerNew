@@ -18,13 +18,16 @@ Einer der vielen praktischen Anwendungsfälle von Dynamo ist das dynamische Plat
 
 ## Kompatibilität der Versionen
 
-{% hint style="success" %} Dieses Diagramm wird in **Civil 3D 2020** und höher ausgeführt. {% endhint %}
+{% hint style="success" %} Dieses Diagramm wird in **Civil 3D 2020** und höher ausgeführt. 
+{% endhint %} 
 
 ## Datensatz
 
 Laden Sie zunächst die folgenden Beispieldateien herunter, und öffnen Sie dann die DWG-Datei und das Dynamo-Diagramm.
 
-{% hint style="info" %} Die Excel-Datei sollte im selben Verzeichnis wie das Dynamo-Diagramm gespeichert werden. {% endhint %}
+{% hint style="info" %}
+ Die Excel-Datei sollte im selben Verzeichnis wie das Dynamo-Diagramm gespeichert werden. 
+{% endhint %} 
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -49,7 +52,9 @@ In diesem Beispieldiagramm verwenden wir eine Excel-Datei, um die Daten zu speic
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>Struktur der Excel-Dateitabelle</p></figcaption></figure>
 
-{% hint style="info" %} Das Lesen von Daten aus externen Dateien (z. B. Excel-Dateien) mit Dynamo ist praktisch, insbesondere dann, wenn auch andere Teammitglieder die Daten nutzen müssen. {% endhint %}
+{% hint style="info" %}
+ Das Lesen von Daten aus externen Dateien (z. B. Excel-Dateien) mit Dynamo ist praktisch, insbesondere dann, wenn auch andere Teammitglieder die Daten nutzen müssen. 
+{% endhint %} 
 
 Die Excel-Daten werden wie folgt in Dynamo importiert. 
 
@@ -59,7 +64,9 @@ Nachdem wir die Daten erstellt haben, müssen wir sie nach Spalten aufteilen (_C
 
 Klingt gut, oder? Doch bei diesem Ansatz gibt es ein potenzielles Problem. Was geschieht, wenn sich die Reihenfolge der Spalten in der Excel-Datei in Zukunft ändert? Oder wenn eine neue Spalte zwischen zwei Spalten hinzugefügt wird? Das Diagramm funktioniert dann nicht ordnungsgemäß und muss aktualisiert werden. Sie können das Diagramm für zukünftige Aktionen absichern, indem Sie die Daten in ein **Wörterbuch** einfügen, wobei die Excel-Spaltenüberschriften die _Schlüssel_ und die übrigen Daten die _Werte_ sind.
 
-{% hint style="info" %} Wenn Wörterbücher neu für Sie sind, finden Sie im Abschnitt [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") weitere Informationen. {% endhint %}
+{% hint style="info" %}
+ Wenn Wörterbücher neu für Sie sind, finden Sie im Abschnitt [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") weitere Informationen. 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Einfügen der Excel-Daten in ein Wörterbuch</p></figcaption></figure>
 
@@ -81,13 +88,17 @@ Nachdem wir die Excel-Daten importiert haben und bereit für die Arbeit sind, k�
 
 Als Nächstes generieren wir **Koordinatensysteme** entlang der 3D-Profilkörper-Elementkanten an den Stationswerten, die wir in der Excel-Datei angegeben haben. Diese Koordinatensysteme werden verwendet, um die Position, Drehung und Skalierung der Lichtmast-Blockreferenzen zu definieren.
 
-{% hint style="info" %} Wenn Koordinatensysteme neu für Sie sind, finden Sie im Abschnitt [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") weitere Informationen. {% endhint %}
+{% hint style="info" %}
+ Wenn Koordinatensysteme neu für Sie sind, finden Sie im Abschnitt [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") weitere Informationen. 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>Abrufen von Koordinatensystemen entlang der 3D-Profilkörper-Elementkanten</p></figcaption></figure>
 
 Beachten Sie, dass zum Drehen der Koordinatensysteme hier ein Codeblock verwendet wird, je nachdem, auf welcher Seite der Basislinie sie sich befinden. Dies könnte mithilfe einer Sequenz von mehreren Blöcken erreicht werden, ist aber ein gutes Beispiel für eine Situation, in der es einfacher ist, einfach den Code zu schreiben.
 
-{% hint style="info" %} Wenn Codeblöcke neu für Sie sind, finden Sie im Abschnitt [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention") weitere Informationen. {% endhint %}
+{% hint style="info" %}
+ Wenn Codeblöcke neu für Sie sind, finden Sie im Abschnitt [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention") weitere Informationen. 
+{% endhint %} 
 
 ### Erstellen von Blockreferenzen
 
@@ -103,7 +114,9 @@ Der letzte Schritt ist die Erstellung der Blockreferenzen.
 
 Beim Ausführen des Diagramms sollten neue Blockreferenzen im Modellbereich entlang des 3D-Profilkörpers angezeigt werden. Wenn der Ausführungsmodus des Diagramms auf Automatisch eingestellt ist und Sie die Excel-Datei bearbeiten, werden die Blockreferenzen automatisch aktualisiert.
 
-{% hint style="info" %} Weitere Informationen über die Diagrammausführungsmodi finden Sie im Abschnitt [3_user_interface](../../../3\_user\_interface/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Weitere Informationen über die Diagrammausführungsmodi finden Sie im Abschnitt [3_user_interface](../../../3\_user\_interface/ "mention"). 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Aktualisieren der Excel-Datei und schnelles Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
 
@@ -111,7 +124,9 @@ Hier sehen Sie ein Beispiel für die Ausführung des Diagramms mit **Dynamo Play
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Ausführen des Diagramms mit Dynamo Player und Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. {% endhint %}
+{% hint style="info" %}
+ Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. 
+{% endhint %} 
 
 > :tada: Mission erfüllt!
 
@@ -134,8 +149,14 @@ Hier sehen Sie das Ergebnis in der Dynamo-Hintergrundvorschau.
 
 Im Folgenden finden Sie einige Anregungen, wie Sie die Funktionen dieses Diagramms erweitern können.
 
-{% hint style="info" %} Fügen Sie eine **rotation**-Spalte zur Excel-Datei hinzu, die Sie zum Steuern der Drehung des Koordinatensystems verwenden können. {% endhint %}
+{% hint style="info" %}
+ Fügen Sie eine **rotation**-Spalte zur Excel-Datei hinzu, die Sie zum Steuern der Drehung des Koordinatensystems verwenden können. 
+{% endhint %} 
 
-{% hint style="info" %} Fügen Sie **horizontale oder vertikale Versätze** zur Excel-Datei hinzu, sodass die Lichtmasten bei Bedarf von der 3D-Profilkörper-Elementkante abweichen können. {% endhint %}
+{% hint style="info" %}
+ Fügen Sie **horizontale oder vertikale Versätze** zur Excel-Datei hinzu, sodass die Lichtmasten bei Bedarf von der 3D-Profilkörper-Elementkante abweichen können. 
+{% endhint %} 
 
-{% hint style="info" %} Anstatt eine Excel-Datei mit Stationswerten zu verwenden, generieren Sie die Stationswerte **direkt in Dynamo** mit einer Anfangsstation und typischem Abstand. {% endhint %}
+{% hint style="info" %}
+ Anstatt eine Excel-Datei mit Stationswerten zu verwenden, generieren Sie die Stationswerte **direkt in Dynamo** mit einer Anfangsstation und typischem Abstand. 
+{% endhint %} 
