@@ -70,7 +70,7 @@ Wir fahren fort, indem wir der Logik einige Blöcke und Verbindungen hinzufügen
 
 Wir kopieren diese Blöcke 4 Mal, sodass diese Kreise unsere Oberfläche definieren. Ändern Sie die Namen der Number Slider wie unten gezeigt.
 
-\![](<../images/10-1/1/vase4 (1).png>)
+![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. Kreise werden durch einen Mittelpunkt und einen Radius erstellt.
 
@@ -92,7 +92,7 @@ Um eine Oberfläche mithilfe des **Surface.ByLoft**-Blocks zu erstellen, müssen
 
 Wir deaktivieren außerdem die Vorschau in anderen Blöcken, um nur die Surface.ByLoft-Anzeige darzustellen.
 
-\![](<../images/10-1/1/vase6 (1).png>)
+![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Eine Oberfläche wird durch Erhebung der verschobenen Kreise erstellt.
 
