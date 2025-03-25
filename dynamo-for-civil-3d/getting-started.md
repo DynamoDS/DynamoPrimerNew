@@ -10,7 +10,7 @@
 
 首先，在 Civil 3D 中打开一个空文档。进入后，导航到 Civil 3D 功能区中的 **“管理”** 选项卡，然后查找 **“可视化编程”** 面板。
 
-\![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 单击 **“Dynamo”** 按钮，这即会在单独窗口中启动 Dynamo。
 
