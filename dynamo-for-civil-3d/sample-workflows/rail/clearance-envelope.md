@@ -24,7 +24,7 @@ Opracowywanie obwiedni kinematycznych do weryfikacji prześwitu jest ważną cz�
 
 Najpierw pobierz pliki przykładów poniżej, a następnie otwórz plik DWG i wykres dodatku Dynamo.
 
-{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope (1).dyn" %}
+{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dyn" %}
 
 {% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dwg" %}
 
