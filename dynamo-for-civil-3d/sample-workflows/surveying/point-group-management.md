@@ -16,7 +16,8 @@ Práce s body COGO a skupinami bodů v aplikaci Civil 3D je základním prvkem
 
 ## Kompatibilita verzí
 
-{% hint style="success" %} Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. {% endhint %}
+{% hint style="success" %} Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. 
+{% endhint %} 
 
 ## Datová sada
 
@@ -41,7 +42,9 @@ Pojďme na to!
 
 V prvním kroku získáme všechny skupiny bodů v dokumentu a potom všechny body COGO v každé skupině. Tím získáme _vnořený seznam_ neboli „seznam seznamů“, se kterým se nám bude později lépe pracovat, pokud vše sloučíme do jediného seznamu pomocí uzlu **List.Flatten**.
 
-{% hint style="info" %} Pokud se seznamy pracujete poprvé, přečtěte si část [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") . {% endhint %}
+{% hint style="info" %}
+ Pokud se seznamy pracujete poprvé, přečtěte si část [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") . 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>Získání všech skupin bodů a bodů COGO </p></figcaption></figure>
 
@@ -69,7 +72,9 @@ Zde je příklad spuštění grafu pomocí **Přehrávače skriptů Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Spuštění grafu pomocí Přehrávače skriptů Dynamo a zobrazení výsledků v prostoru nástrojů</p></figcaption></figure>
 
-{% hint style="info" %} Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention"). 
+{% endhint %} 
 
 > :tada: Úkol splněn!
 
@@ -77,8 +82,14 @@ Zde je příklad spuštění grafu pomocí **Přehrávače skriptů Dynamo**.
 
 Zde je několik nápadů, jak byste mohli rozšířit možnosti tohoto grafu.
 
-{% hint style="info" %} Upravte seskupení bodů tak, aby bylo založeno na **úplném popisu** místo hrubého popisu. {% endhint %}
+{% hint style="info" %}
+ Upravte seskupení bodů tak, aby bylo založeno na **úplném popisu** místo hrubého popisu. 
+{% endhint %} 
 
-{% hint style="info" %} Seskupte body podle dalších **předdefinovaných kategorií**, které vyberete (například „Pozemní snímky“, „Vztažné body“ atd.) {% endhint %}
+{% hint style="info" %}
+ Seskupte body podle dalších **předdefinovaných kategorií**, které vyberete (například „Pozemní snímky“, „Vztažné body“ atd.) 
+{% endhint %} 
 
-{% hint style="info" %} Automaticky vytvořte povrchy TIN pro body v určitých skupinách.  {% endhint %}
+{% hint style="info" %}
+ Automaticky vytvořte povrchy TIN pro body v určitých skupinách.  
+{% endhint %} 
