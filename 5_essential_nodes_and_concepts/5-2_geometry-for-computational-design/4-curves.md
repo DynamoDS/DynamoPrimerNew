@@ -20,7 +20,7 @@
 
 Eine [Linie](4-curves.md#lines) besteht aus einer Reihe von Punkten, jede Linie verfügt über mindestens zwei Punkte. Eine der häufigsten Methoden zum Erstellen von Linien in Dynamo ist die Verwendung von `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg), um eine Linie in Dynamo zu erstellen.
 
-\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS-Kurve
 
