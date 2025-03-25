@@ -29,7 +29,7 @@ Dynamo の多くの優れた使用事例の 1 つは、コリドー モデルに
  Excel ファイルを Dynamo グラフと同じフォルダに保存することをお勧めします。
 {% endhint %} 
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
