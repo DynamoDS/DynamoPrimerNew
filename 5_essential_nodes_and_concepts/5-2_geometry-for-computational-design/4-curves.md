@@ -20,7 +20,7 @@
 
 [線分](4-curves.md#lines)はポイントのセットで構成され、各ラインには最低 2 つのポイントがあります。Dynamo で線分を作成する最も一般的な方法の 1 つは、`Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) を使用して Dynamo で線分を作成することです。
 
-\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS 曲線
 
