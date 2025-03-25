@@ -8,10 +8,10 @@ Les opérateurs sont un ensemble de composants qui utilisent des fonctions algé
 
 | Icône                                                  | Nom (Syntaxe)     | Entrées                     | Sorties      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier ( **\\*** ) | var[]…[], var[]…[] | var[]…[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Ajouter (**+**)       | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Soustraire (**-**)  | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplier (**\***) | var[]…[], var[]…[] | var[]…[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Diviser (**/**)    | var[]…[], var[]…[] | var[]…[] |
 
 ## Exercice : Formule de la clothoïde dorée
 
@@ -91,7 +91,7 @@ Maintenant que vous avez créé une coque Nautilus circulaire, passez aux grille
 
 Comme point de départ, commencez par la même étape qu’à l’exercice précédent : la création d’un réseau de points en forme de spirale avec le nœud **Point.ByCoordinates**.
 
-\![](../images/5-3/2/math-part IV-01.jpg)
+![](../images/5-3/2/math-part IV-01.jpg)
 
 Ensuite, suivez ces courtes étapes pour générer une série de clothoïdes à différentes rotations.
 
