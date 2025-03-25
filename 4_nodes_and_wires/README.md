@@ -22,7 +22,9 @@ Dynamo 中的大多數節點由五個部分組成。雖然有一些例外，例�
 
 埠應當接收特定類型的資料。例如，若將一個數字 (例如 _2.75_) 連接至座標點節點上的埠，會成功建立一個點；但是如果為同一埠提供 _「RED」_，則會導致錯誤。
 
-{% hint style="info" %} 秘訣：將游標懸停在埠上可看到一個工具提示，其中包含預期的資料類型。 {% endhint %}
+{% hint style="info" %} 
+秘訣：將游標懸停在埠上可看到一個工具提示，其中包含預期的資料類型。 
+{% endhint %}
 
 ![](images/nodesandwires-nodesinputandtooltip.jpg)
 
@@ -53,7 +55,9 @@ Dynamo 會根據每個節點的狀態，讓節點呈現不同的顏色外觀，�
 
 如果您的視覺程式包含警告或錯誤，Dynamo 會提供有關問題的其他資訊。任何顯示為黃色的節點會在其名稱上方顯示工具提示。將滑鼠懸停在警告 ![](images/nodesandwires-nodewarningicon.png) 或錯誤 ![](images/nodesandwires-nodeerroricon.png) 工具提示圖示上，可將其展開。
 
-{% hint style="info" %} 秘訣：隨時使用此工具提示資訊檢查上游節點，可查看所需的資料類型或資料結構是否有錯誤。 {% endhint %}
+{% hint style="info" %} 
+秘訣：隨時使用此工具提示資訊檢查上游節點，可查看所需的資料類型或資料結構是否有錯誤。 
+{% endhint %}
 
 ![](images/nodesandwires-nodeswithwarningtooltip.jpg)
 

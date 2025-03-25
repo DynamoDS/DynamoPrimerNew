@@ -133,7 +133,8 @@
 | ![](<images/5-1/Cuboidheight(1) (1) (1).jpg>)                    | <p><strong>Cuboid.Height</strong></p><p>傳回立方體的輸入尺寸，而不是實際世界的空間尺寸。</p>           | ![](images/5-1/indexofnodes-cuboidheight.jpg)                    |
 | ![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>取得邊界框做為實體立方體</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
 
-{% hint style="warning" %} **換句話說，如果您建立一個立方體寬度 (X 軸) 長度為 10，然後將其轉換為 X 軸 2 倍比例的座標系統，則寬度仍為 10。ASM 不允許您以任何可預測的順序擷取本體的頂點，因此在轉換後無法決定尺寸。 {% endhint %}
+{% hint style="warning" %} **換句話說，如果您建立一個立方體寬度 (X 軸) 長度為 10，然後將其轉換為 X 軸 2 倍比例的座標系統，則寬度仍為 10。ASM 不允許您以任何可預測的順序擷取本體的頂點，因此在轉換後無法決定尺寸。 
+{% endhint %}
 
 ### 曲線
 

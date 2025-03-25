@@ -115,4 +115,6 @@ pts_2[4] = Point.ByCoordinates(21, 0.5, 0);
 crv_2 = NurbsCurve.ByControlPoints(pts_2, 3);
 ```
 
-{% hint style="info" %}*這是一個非常簡化的 NURBS 曲線幾何圖形說明，如需更準確更詳細的討論，請參閱參考資料中的 Pottmann, et al, 2007。 {% endhint %}
+{% hint style="info" %} 
+*這是一個非常簡化的 NURBS 曲線幾何圖形說明，如需更準確更詳細的討論，請參閱參考資料中的 Pottmann, et al, 2007。 
+{% endhint %}

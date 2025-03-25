@@ -7,7 +7,9 @@
 
 本節會重點介紹如何在 Civil 3D 環境中運用 Python，以善加活用 AutoCAD 和 Civil 3D .NET API。
 
-{% hint style="info" %} 請查看 [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 一節，以取得有關在 Dynamo 中使用 Python 的更多一般資訊。 {% endhint %}
+{% hint style="info" %} 
+請查看 [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") 一節，以取得有關在 Dynamo 中使用 Python 的更多一般資訊。 
+{% endhint %}
 
 ## API 文件
 
@@ -21,7 +23,9 @@ AutoCAD 和 Civil 3D 兩者都有數個可用的 API，可讓像您這樣的開�
 
 [Civil 3D .NET API 參考指南](https://help.autodesk.com/view/CIV3D/2024/CHT/?guid=73fd1950-ee31-00b8-4872-c3f328ea1331) (英文)
 
-{% hint style="info" %} 在您進行本節時，可能會有一些您不熟悉的概念，例如資料庫、交易、方法、性質等等。這當中的許多概念是使用 .NET API 的核心，並非專屬於 Dynamo 或 Python。詳細討論這些內容超出 Primer 本節的範圍，因此我們建議您經常參考上述連結以取得更多資訊。 {% endhint %}
+{% hint style="info" %} 
+在您進行本節時，可能會有一些您不熟悉的概念，例如資料庫、交易、方法、性質等等。這當中的許多概念是使用 .NET API 的核心，並非專屬於 Dynamo 或 Python。詳細討論這些內容超出 Primer 本節的範圍，因此我們建議您經常參考上述連結以取得更多資訊。 
+{% endhint %}
 
 ## 程式碼樣板
 
@@ -39,8 +43,10 @@ AutoCAD 和 Civil 3D 兩者都有數個可用的 API，可讓像您這樣的開�
 > 8. 將這一行取消註解，即可在主要工作完成後提交交易。
 > 9. 如果您要輸出節點中的任何資料，請在指令碼結尾將資料指定給 `OUT` 變數。
 
-{% hint style="info" %} **想要自訂？**\
-您可以編輯 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 檔案，修改預設的 Python 樣板。 {% endhint %}
+{% hint style="info" %} 
+**想要自訂？**\
+您可以編輯 `C:\ProgramData\Autodesk\C3D <version>\Dynamo` 中的 `PythonTemplate.py` 檔案，修改預設的 Python 樣板。 
+{% endhint %}
 
 ## 範例
 
@@ -88,13 +94,16 @@ AutoCAD 和 Civil 3D 兩者都有數個可用的 API，可讓像您這樣的開�
 
 <table data-full-width="false"><thead><tr><th width="377.3333333333333">Dynamo 類型</th><th width="373">包裝</th></tr></thead><tbody><tr><td><strong>Object</strong><br>Autodesk.AutoCAD.DynamoNodes.Object</td><td><strong>Entity</strong><br>Autodesk.AutoCAD.DatabaseServices.Entity</td></tr><tr><td><strong>CivilObject</strong><br>Autodesk.Civil.DynamoNodes.CivilObject</td><td><strong>Entity</strong><br>Autodesk.Civil.DatabaseServices.Entity</td></tr></tbody></table>
 
-{% hint style="warning" %} 根據經驗法則，使用 `InternalObjectId` 性質取得物件 ID，然後在交易中存取包裝後的物件通常比較安全。這是因為 `InternalDBObject` 性質會傳回非處於可寫入狀態的 AutoCAD DBObject。 {% endhint %}
+{% hint style="warning" %} 根據經驗法則，使用 `InternalObjectId` 性質取得物件 ID，然後在交易中存取包裝後的物件通常比較安全。這是因為 `InternalDBObject` 性質會傳回非處於可寫入狀態的 AutoCAD DBObject。 
+{% endhint %}
 
 ### Python 指令碼
 
 以下是存取內部集水區物件並取得其邊界點的完整 Python 指令碼。亮顯的行表示從預設樣板程式碼修改/增加的行。
 
-{% hint style="info" %} 按一下指令碼中加底線的文字，可查看每一行的說明。 {% endhint %}
+{% hint style="info" %} 
+按一下指令碼中加底線的文字，可查看每一行的說明。 
+{% endhint %}
 
 <pre class="language-python" data-line-numbers><code class="lang-python"># 載入 Python 標準和 DesignScript 資源庫
 import sys
@@ -161,7 +170,8 @@ with adoc.LockDocument():
 <strong><a data-footnote-ref href="#user-content-fn-22">OUT = output</a>
 </strong></code></pre>
 
-{% hint style="warning" %} 根據經驗法則，最好是將大部分指令碼邏輯內容放在交易內。這可確保安全地存取指令碼讀取/寫入的物件。在許多情況下，忽略交易可能會導致嚴重錯誤。 {% endhint %}
+{% hint style="warning" %} 根據經驗法則，最好是將大部分指令碼邏輯內容放在交易內。這可確保安全地存取指令碼讀取/寫入的物件。在許多情況下，忽略交易可能會導致嚴重錯誤。 
+{% endhint %}
 
 ### 建立 PolyCurve
 
@@ -181,7 +191,9 @@ with adoc.LockDocument():
 
 在收尾前，我們在這裡快速地總結。根據您使用的 Civil 3D 版本，Python 節點的規劃可能會有所不同。在 **Civil 3D 2020 和 2021** 中，Dynamo 使用一個稱為 **IronPython** 的工具，在 .NET 物件與 Python 指令碼之間移動資料。但是，在 **Civil 3D 2022** 中，Dynamo 已轉變為使用標準原生的 Python 解譯器 (也稱為 **CPython**)，而不是使用 Python 3。這項轉換的優點包括可存取常見的新式資源庫和新的平台功能、基本維護和安全性修補。
 
-{% hint style="info" %} 您可以在 [Dynamo 部落格](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) 閱讀更多有關此項轉換，以及如何升級舊式指令碼的資訊。如果您想要繼續使用 IronPython，只需使用 Dynamo Package Manager 安裝 **DynamoIronPython2.7** 套件。 {% endhint %}
+{% hint style="info" %} 
+您可以在 [Dynamo 部落格](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/) 閱讀更多有關此項轉換，以及如何升級舊式指令碼的資訊。如果您想要繼續使用 IronPython，只需使用 Dynamo Package Manager 安裝 **DynamoIronPython2.7** 套件。 
+{% endhint %}
 
 [^1]: Dynamo 幾何圖形資源庫預設不會加到 Python 環境中。這個指令碼的目標是輸出集水區邊界的 Dynamo 點清單，因此我們需要加入這一行，稍後才能建立點。
 

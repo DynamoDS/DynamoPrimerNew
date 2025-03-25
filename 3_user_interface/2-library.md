@@ -16,7 +16,9 @@
 
 透過四處按一下功能表瀏覽資源庫，展開每個品類及其子品類
 
-{% hint style="info" %} Geometry 功能表很適合在開始探索時使用，因為它們包含最多數量的節點。 {% endhint %}
+{% hint style="info" %} 
+Geometry 功能表很適合在開始探索時使用，因為它們包含最多數量的節點。 
+{% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -115,7 +117,9 @@ Watch 節點對於管理流經視覺程式的資料非常重要。您可以透�
 
 這兩個節點都位於核心資源庫內的 View 品類中。
 
-{% hint style="info" %} 秘訣：若視覺程式包含許多節點，3D 預覽有時可能會分散您的注意力。請考慮不勾選「設定」功能表中的「展示背景預覽」選項，並使用 Watch3D 節點預覽幾何圖形。 {% endhint %}
+{% hint style="info" %} 
+秘訣：若視覺程式包含許多節點，3D 預覽有時可能會分散您的注意力。請考慮不勾選「設定」功能表中的「展示背景預覽」選項，並使用 Watch3D 節點預覽幾何圖形。 
+{% endhint %}
 
 #### Code Block
 

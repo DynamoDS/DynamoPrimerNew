@@ -16,7 +16,8 @@
 
 ## 版本相容性
 
-{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。 {% endhint %}
+{% hint style="success" %} 此圖表將在 **Civil 3D 2020** 及更高版本上執行。 
+{% endhint %}
 
 ## 資料集
 
@@ -41,7 +42,9 @@
 
 第一步是取得文件中所有的點群組，然後取得每個群組內的所有 COGO 點。這會產生一個 _巢狀清單_ ，也就是「清單的清單」，如果稍後使用 **List.Flatten** 節點將所有內容向下展開為單一清單，會更容易處理。
 
-{% hint style="info" %} 如果您不熟悉使用清單，請查看 [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 一節。 {% endhint %}
+{% hint style="info" %} 
+如果您不熟悉使用清單，請查看 [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention") 一節。 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>取得所有點群組和 COGO 點 </p></figcaption></figure>
 
@@ -69,7 +72,9 @@
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>使用 Dynamo 播放器執行圖表，然後在「工具區」中查看結果</p></figcaption></figure>
 
-{% hint style="info" %} 如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention") 一節。 {% endhint %}
+{% hint style="info" %} 
+如果您不熟悉 Dynamo 播放器，請查看 [dynamo-player.md](../../dynamo-player.md "mention") 一節。 
+{% endhint %}
 
 > :tada: 任務完成！
 
@@ -77,8 +82,14 @@
 
 以下是一些如何擴充此圖表功能的構想。
 
-{% hint style="info" %} 將點群組修改為根據 **完整描述** ，而非原始描述。 {% endhint %}
+{% hint style="info" %} 
+將點群組修改為根據 **完整描述** ，而非原始描述。 
+{% endhint %}
 
-{% hint style="info" %} 將點分組，分組時依據您選擇的其他某些 **預先定義的品類**  (例如，「地面快照」、「碑界」等)。 {% endhint %}
+{% hint style="info" %} 
+將點分組，分組時依據您選擇的其他某些 **預先定義的品類**  (例如，「地面快照」、「碑界」等)。 
+{% endhint %}
 
-{% hint style="info" %} 為某些群組中的點自動建立不規則三角網地形。 {% endhint %}
+{% hint style="info" %} 
+為某些群組中的點自動建立不規則三角網地形。 
+{% endhint %}

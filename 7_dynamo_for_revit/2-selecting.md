@@ -18,7 +18,8 @@ Revit 是資料豐富的環境。這能為我們提供許多選取功能，而�
 
 記得生物學的分類法嗎？界、門、綱、目、科、屬、種？Revit 元素的分類方式與此類似。在基本層級，可將 Revit 階層分為不同的品類、族群、類型*及例證。例證是個別模型元素 (具有唯一的 ID)，而品類可定義一般群組 (例如「牆」或「地板」)。以此方式組織 Revit 資料庫後，我們可以選取一個元素，然後根據階層中的指定層級選擇所有類似元素。
 
-{% hint style="warning" %} *Revit 中類型的定義與程式設計中的類型不同。在 Revit 中，類型是指階層的分支，而非「資料類型」。 {% endhint %}
+{% hint style="warning" %} *Revit 中類型的定義與程式設計中的類型不同。在 Revit 中，類型是指階層的分支，而非「資料類型」。 
+{% endhint %}
 
 ### 使用 Dynamo 節點進行資料庫導覽
 
@@ -149,4 +150,6 @@ Revit/Dynamo 工作流程中可能經常會遇到以下問題：如何選取一�
 > 2. 將 _All Elements of Family Type_ 節點插入 _AdaptiveComponent.Location_ 節點。這會產生一個清單的清單，其中每個清單都包含三點，表示自適應點的位置。
 > 3. 若連接 _Polygon.ByPoints_ 節點，即會傳回 polycurve，可以在 Dynamo 視埠中看到。透過此方法，我們看到了一個元素的幾何圖形，並提取了其餘一系列元素 (數量可能多於此範例) 的幾何圖形。
 
-{% hint style="info" %} 秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。 {% endhint %}
+{% hint style="info" %} 
+秘訣：若在 Dynamo 中按一下 Revit 元素的綠色數字，Revit 視埠將縮放至該元素。 
+{% endhint %}
