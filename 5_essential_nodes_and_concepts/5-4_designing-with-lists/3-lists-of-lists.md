@@ -111,7 +111,7 @@ Le nœud **List.Count** compte tous les éléments d’une liste. Vous allez l�
 > 3. Connectez chaque ligne du bloc de code aux entrées _X_ et _Y_ respectives d’un nœud **Point.ByCoordinates**. Cliquez avec le bouton droit de la souris sur le nœud, sélectionnez « Combinaison », puis _« Produit vectoriel »_. Cela crée une grille de points. Étant donné que vous avez défini l’intervalle de -50 à 50, élargissez la grille Dynamo par défaut.
 > 4. Un nœud _**Watch**_ révèle les points créés. Observez la structure des données. Vous avez créé une liste de listes. Chaque liste représente une ligne de points de la grille.
 
-\![Exercice](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Exercice](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Attachez un nœud **List.Count** à la sortie du nœud Watch de l’étape précédente.
 > 2. Connectez un nœud **Watch** à la sortie **List.Count**.
