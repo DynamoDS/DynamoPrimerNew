@@ -20,7 +20,7 @@ Klicken Sie in Dynamo auf Pakete > Package Manager, und suchen Sie nach dem Pake
 
 Nach der Installation sollten die benutzerdefinierten Blöcke im Abschnitt Add-Ons > Dynamo Primer verfügbar sein.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Nachdem Sie das Paket installiert haben, sehen Sie sich dessen Konfiguration an.
 
@@ -30,7 +30,7 @@ Für das Paket, das Sie hier erstellen, werden fünf benutzerdefinierte Blöcke 
 
 Dieses Paket ist mit fünf benutzerdefinierten Blöcken recht einfach konstruiert. In den nachfolgenden Schritten wird der Aufbau der einzelnen Blöcke kurz erläutert.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
