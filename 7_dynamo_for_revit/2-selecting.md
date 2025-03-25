@@ -30,7 +30,7 @@ _Pointer-cliquer_ est la méthode la plus simple pour sélectionner directement 
 
 Les _menus déroulants_ permettent de créer une liste de tous les éléments accessibles dans un projet Revit. Vous pouvez utiliser cette option pour référencer des éléments Revit qui ne sont pas nécessairement visibles dans une vue. C’est un outil formidable pour rechercher des éléments existants ou en créer d’autres dans un projet Revit ou l’Éditeur de familles.
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 Vous pouvez également sélectionner des éléments Revit en fonction de niveaux spécifiques dans la _hiérarchie Revit_. Cette option est puissante pour personnaliser des réseaux de données volumineux en vue de la documentation ou de l'instanciation et de la personnalisation génératives.
 
@@ -48,7 +48,7 @@ Tout en gardant les trois images ci-dessus, vous allez étudier un exercice qui 
 
 Ce fichier d'exemple Revit contient trois types d'éléments d'un bâtiment simple. Utilisez ce fichier comme exemple pour sélectionner des éléments Revit dans le contexte de la hiérarchie Revit.
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Volume de bâtiment
 > 2. Poutres (ossature)
@@ -81,7 +81,7 @@ Voici une autre méthode : dans ce cas, vous ne pouvez pas effectuer de sélect
 
 Certaines des opérations de liste de base vous permettent d’interroger la face qui vous intéresse.
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. Tout d’abord, connectez les éléments sélectionnés précédemment au nœud Element.Faces.
 > 2. Ensuite, le nœud _List.Count_ indique que vous travaillez avec 23 surfaces du volume.
