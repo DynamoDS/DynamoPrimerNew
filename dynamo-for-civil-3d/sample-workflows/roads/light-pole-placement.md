@@ -18,13 +18,16 @@ L’un des nombreux cas d’utilisation de Dynamo est le placement dynamique d�
 
 ## Compatibilité des versions
 
-{% hint style="success" %} Ce graphique peut s’exécuter dans **Civil 3D 2020** et les versions ultérieures. {% endhint %}
+{% hint style="success" %} Ce graphique peut s’exécuter dans **Civil 3D 2020** et les versions ultérieures. 
+{% endhint %} 
 
 ## Ensemble de données
 
 Commencez par télécharger les fichiers d’exemple ci-dessous, puis ouvrez le fichier DWG et le graphique Dynamo.
 
-{% hint style="info" %} Il est préférable d’enregistrer le fichier Excel dans le même répertoire que le graphique Dynamo. {% endhint %}
+{% hint style="info" %}
+ Il est préférable d’enregistrer le fichier Excel dans le même répertoire que le graphique Dynamo. 
+{% endhint %} 
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -49,7 +52,9 @@ Dans cet exemple de graphique, nous allons utiliser un fichier Excel pour stocke
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>Structure du tableau du fichier Excel</p></figcaption></figure>
 
-{% hint style="info" %} L’utilisation de Dynamo pour lire des données à partir d’un fichier externe (tel qu’un fichier Excel) est une excellente stratégie, en particulier lorsque les données doivent être partagées avec d’autres membres de l’équipe. {% endhint %}
+{% hint style="info" %}
+ L’utilisation de Dynamo pour lire des données à partir d’un fichier externe (tel qu’un fichier Excel) est une excellente stratégie, en particulier lorsque les données doivent être partagées avec d’autres membres de l’équipe. 
+{% endhint %} 
 
 Les données Excel sont importées dans Dynamo de la manière suivante. 
 
@@ -59,7 +64,9 @@ Maintenant que vous disposez des données, vous devez les diviser par colonne (_
 
 Cela semble correct, n’est-ce pas ? Mais cette approche peut poser problème. Que se passe-t-il si l’ordre des colonnes dans le fichier Excel change par la suite ? Ou si une nouvelle colonne est ajoutée entre deux colonnes ? Dans ce cas, le graphique ne fonctionnera pas correctement et devra être mis à jour. Vous pouvez protéger le graphique en plaçant les données dans un **dictionnaire**, avec les en-têtes des colonnes Excel comme _clés_ et le reste des données comme _valeurs_.
 
-{% hint style="info" %} Si vous ne connaissez pas les dictionnaires, consultez la section [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas les dictionnaires, consultez la section [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention"). 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Insertion des données Excel dans un dictionnaire</p></figcaption></figure>
 
@@ -81,13 +88,17 @@ Maintenant que les données Excel sont importées et prêtes à l’emploi, comm
 
 Vous allez maintenant générer des **systèmes de coordonnées** le long des lignes caractéristiques du terrain du projet 3D aux valeurs d’abscisse curviligne spécifiées dans le fichier Excel. Ces systèmes de coordonnées seront utilisés pour définir la position, la rotation et l’échelle des références de bloc du lampadaire.
 
-{% hint style="info" %} Si vous ne connaissez pas les systèmes de coordonnées, consultez la section [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas les systèmes de coordonnées, consultez la section [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>Obtention de systèmes de coordonnées le long des lignes caractéristiques du terrain du projet 3D</p></figcaption></figure>
 
 Notez l’utilisation d’un bloc de code pour faire pivoter les systèmes de coordonnées en fonction du côté de la ligne de base sur lequel ils se trouvent. Cela pourrait être réalisé en utilisant une séquence de plusieurs nœuds, mais ceci est un bon exemple d’une situation où il est plus facile de l’écrire.
 
-{% hint style="info" %} Si vous ne connaissez pas les blocs de code, consultez la section [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas les blocs de code, consultez la section [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). 
+{% endhint %} 
 
 ### Créer des références de bloc
 
@@ -103,7 +114,9 @@ La dernière étape consiste à créer les références de bloc.
 
 Lorsque vous exécutez le graphique, vous devriez voir apparaître de nouvelles références de bloc dans l’espace objet le long du projet 3D. Et voici la partie la plus intéressante : si le mode d’exécution du graphique est défini sur Automatique et que vous modifiez le fichier Excel, les références de bloc sont mises à jour automatiquement !
 
-{% hint style="info" %} Pour en savoir plus sur les modes d’exécution des graphiques, consultez la section [3_user_interface](../../../3\_user\_interface/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Pour en savoir plus sur les modes d’exécution des graphiques, consultez la section [3_user_interface](../../../3\_user\_interface/ "mention"). 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Mise à jour du fichier Excel et visualisation rapide des résultats dans Civil 3D</p></figcaption></figure>
 
@@ -111,7 +124,9 @@ Voici un exemple d’exécution du graphique à l’aide du **Lecteur Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Exécution du graphique à l’aide du Lecteur Dynamo et visualisation des résultats dans Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [lecteur-dynamo.md](../../dynamo-player.md "mention"). 
+{% endhint %} 
 
 > :tada: Mission accomplie !
 
@@ -134,8 +149,14 @@ Voici le résultat dans l’aperçu de arrière-plan de Dynamo.
 
 Voici quelques suggestions pour élargir les possibilités offertes par ce graphique.
 
-{% hint style="info" %} Ajoutez une colonne de **rotation** au fichier Excel et utilisez-la pour commander la rotation des systèmes de coordonnées. {% endhint %}
+{% hint style="info" %}
+ Ajoutez une colonne de **rotation** au fichier Excel et utilisez-la pour commander la rotation des systèmes de coordonnées. 
+{% endhint %} 
 
-{% hint style="info" %} Ajoutez des **décalages horizontaux ou verticaux** au fichier Excel de sorte que les lampadaires puissent dévier de la ligne caractéristique du terrain du projet 3D si nécessaire. {% endhint %}
+{% hint style="info" %}
+ Ajoutez des **décalages horizontaux ou verticaux** au fichier Excel de sorte que les lampadaires puissent dévier de la ligne caractéristique du terrain du projet 3D si nécessaire. 
+{% endhint %} 
 
-{% hint style="info" %} Au lieu d’utiliser un fichier Excel avec des valeurs d’abscisse curviligne, générez les valeurs d’abscisse curviligne **directement dans Dynamo** à l’aide d’une abscisse curviligne de départ et d’un espacement standard. {% endhint %}
+{% hint style="info" %}
+ Au lieu d’utiliser un fichier Excel avec des valeurs d’abscisse curviligne, générez les valeurs d’abscisse curviligne **directement dans Dynamo** à l’aide d’une abscisse curviligne de départ et d’un espacement standard. 
+{% endhint %} 
