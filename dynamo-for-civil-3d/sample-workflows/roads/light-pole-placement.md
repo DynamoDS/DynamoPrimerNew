@@ -18,13 +18,16 @@ Dynamo의 많은 뛰어난 사용 사례 중 하나는 코리더 모형을 따�
 
 ## 버전 호환성
 
-{% hint style="success" %} 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. {% endhint %}
+{% hint style="success" %} 이 그래프는 **Civil 3D 2020** 이상 버전에서 실행됩니다. 
+{% endhint %} 
 
 ## 데이터세트
 
 먼저 아래의 샘플 파일을 다운로드한 다음 DWG 파일과 Dynamo 그래프를 엽니다.
 
-{% hint style="info" %} Excel 파일은 Dynamo 그래프와 동일한 디렉토리에 저장하는 것이 가장 좋습니다. {% endhint %}
+{% hint style="info" %}
+ Excel 파일은 Dynamo 그래프와 동일한 디렉토리에 저장하는 것이 가장 좋습니다. 
+{% endhint %} 
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -49,7 +52,9 @@ Dynamo의 많은 뛰어난 사용 사례 중 하나는 코리더 모형을 따�
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>Excel 파일 테이블 구조</p></figcaption></figure>
 
-{% hint style="info" %} 외부 파일(예: Excel 파일)에서 데이터를 읽을 때 Dynamo를 사용하는 것은 훌륭한 전략이며, 특히 데이터를 다른 팀 구성원과 공유해야 하는 경우 더 그렇습니다. {% endhint %}
+{% hint style="info" %}
+ 외부 파일(예: Excel 파일)에서 데이터를 읽을 때 Dynamo를 사용하는 것은 훌륭한 전략이며, 특히 데이터를 다른 팀 구성원과 공유해야 하는 경우 더 그렇습니다. 
+{% endhint %} 
 
 Dynamo로 가져온 Excel 데이터는 다음과 같습니다. 
 
@@ -59,7 +64,9 @@ Dynamo로 가져온 Excel 데이터는 다음과 같습니다.
 
 괜찮아 보이시죠? 하지만 이 접근 방식에는 잠재적인 문제가 있습니다. 나중에 Excel 파일의 열 순서가 변경되면 어떻게 됩니까? 아니면 두 열 사이에 새 열이 추가됩니까? 그러면 그래프가 제대로 작동하지 않기 때문에 업데이트해야 합니다. Excel 열 헤더를 _키_ 로, 나머지 데이터를 _값_ 으로 사용하여 데이터를 **사전** 에 넣으면 추후에도 그래프를 사용할 수 있습니다.
 
-{% hint style="info" %} 사전을 처음 사용하는 경우 [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") 섹션을 참조하십시오. {% endhint %}
+{% hint style="info" %}
+ 사전을 처음 사용하는 경우 [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention") 섹션을 참조하십시오. 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>사전에 Excel 데이터 넣기</p></figcaption></figure>
 
@@ -81,13 +88,17 @@ Dynamo로 가져온 Excel 데이터는 다음과 같습니다.
 
 이제 Excel 파일에서 지정한 측점 값으로 코리더 형상선을 따라 **좌표계** 를 생성하겠습니다. 이러한 좌표계는 등주 블록 참조의 위치, 회전 및 축척을 정의하는 데 사용됩니다.
 
-{% hint style="info" %} 좌표계를 처음 사용하는 경우 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 섹션을 참조하십시오. {% endhint %}
+{% hint style="info" %}
+ 좌표계를 처음 사용하는 경우 [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") 섹션을 참조하십시오. 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>코리더 형상선을 따라 좌표계 가져오기</p></figcaption></figure>
 
 여기에서는 Code Block을 사용하여 좌표계가 기준선의 어느 쪽에 있는지에 따라 좌표계를 회전합니다. 여러 노드의 시퀀스를 사용하여 이를 달성할 수도 있지만, 이것은 그냥 작성하는 것이 더 쉬운 상황임을 보여주는 좋은 예입니다.
 
-{% hint style="info" %} Code Block을 처음 사용하는 경우 [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention") 섹션을 참조하십시오. {% endhint %}
+{% hint style="info" %}
+ Code Block을 처음 사용하는 경우 [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention") 섹션을 참조하십시오. 
+{% endhint %} 
 
 ### 블록 참조 작성
 
@@ -103,7 +114,9 @@ Dynamo로 가져온 Excel 데이터는 다음과 같습니다.
 
 그래프를 실행하면 코리더를 따라 모형 공간에 새 블록 참조가 표시되는 것을 볼 수 있습니다. 그래프의 실행 모드를 자동으로 설정하고 Excel 파일을 편집하면 블록 참조가 자동으로 업데이트됩니다. 아주 멋진 기능입니다.
 
-{% hint style="info" %} [3_user_interface](../../../3\_user\_interface/ "mention") 섹션에서 그래프 실행 모드에 대한 자세한 내용을 확인할 수 있습니다. {% endhint %}
+{% hint style="info" %}
+ [3_user_interface](../../../3\_user\_interface/ "mention") 섹션에서 그래프 실행 모드에 대한 자세한 내용을 확인할 수 있습니다. 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Excel 파일을 업데이트하고 Civil 3D에서 빠르게 결과 확인</p></figcaption></figure>
 
@@ -111,7 +124,9 @@ Dynamo로 가져온 Excel 데이터는 다음과 같습니다.
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Dynamo 플레이어를 사용하여 그래프를 실행하고 Civil 3D에서 결과 확인</p></figcaption></figure>
 
-{% hint style="info" %} Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. {% endhint %}
+{% hint style="info" %}
+ Dynamo 플레이어를 처음 사용하는 경우 [dynamo-player.md](../../dynamo-player.md "mention") 섹션을 참조하십시오. 
+{% endhint %} 
 
 > :tada: 작업을 완료했습니다!
 
@@ -134,8 +149,14 @@ Dynamo 배경 미리보기의 결과는 다음과 같습니다.
 
 다음은 이 그래프의 기능을 확장하는 방법에 대한 몇 가지 아이디어입니다.
 
-{% hint style="info" %} Excel 파일에 **회전** 열을 추가하고 이를 사용하여 좌표계의 회전을 구동합니다. {% endhint %}
+{% hint style="info" %}
+ Excel 파일에 **회전** 열을 추가하고 이를 사용하여 좌표계의 회전을 구동합니다. 
+{% endhint %} 
 
-{% hint style="info" %} 필요한 경우 등주가 코리더 형상선에서 벗어날 수 있도록 Excel 파일에 **수평 또는 수직 간격띄우기** 를 추가합니다. {% endhint %}
+{% hint style="info" %}
+ 필요한 경우 등주가 코리더 형상선에서 벗어날 수 있도록 Excel 파일에 **수평 또는 수직 간격띄우기** 를 추가합니다. 
+{% endhint %} 
 
-{% hint style="info" %} 측점 값이 있는 Excel 파일을 사용하는 대신, 시작 측점 및 일반적인 간격을 사용하여 **Dynamo에서 직접** 측점 값을 생성합니다. {% endhint %}
+{% hint style="info" %}
+ 측점 값이 있는 Excel 파일을 사용하는 대신, 시작 측점 및 일반적인 간격을 사용하여 **Dynamo에서 직접** 측점 값을 생성합니다. 
+{% endhint %} 
