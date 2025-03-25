@@ -20,7 +20,7 @@
 
 [直线](4-curves.md#lines)由一组点组成，每条直线至少有 2 个点。在 Dynamo 中创建直线的最常见方法之一是使用 `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) 在 Dynamo 中创建直线。
 
-\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### NURBS 曲线
 
