@@ -67,7 +67,7 @@ Dynamo 提供了大量现成功能，还维护了一个丰富的软件包库，�
 
 在打开该文件并点击求解器上的“运行”后，我们会得到一个展开的球体！此类示例文件有助于了解如何使用新的 Dynamo 软件包。
 
-\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### 浏览和查看软件包信息
 
