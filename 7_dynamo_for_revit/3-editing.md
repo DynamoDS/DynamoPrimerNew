@@ -4,7 +4,7 @@ Une puissante fonction de Dynamo est la possibilité de modifier les paramètres
 
 ### Paramètres de type et d'occurrence
 
-\![Exercice](<../.gitbook/assets/32 (2).jpg>)
+![Exercice](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Les paramètres d'occurence définissent l'ouverture des panneaux sur la surface du toit, allant d'un rapport d'ouverture de 0,1 à 0,4.
 > 2. Les paramètres basés sur le type sont appliqués à chaque élément de la surface, car ils appartiennent au même type de famille. Le matériau de chaque panneau, par exemple, peut être piloté par un paramètre basé sur le type.
@@ -16,7 +16,9 @@ Une puissante fonction de Dynamo est la possibilité de modifier les paramètres
 
 Pour rappel, Revit comprend des paramètres de type et des paramètres d'occurrence. Les deux peuvent être modifiés à partir de Dynamo, mais vous allez utiliser les paramètres d'occurrence dans l'exercice ci-dessous.
 
-{% hint style="info" %} Lorsque vous découvrez l'application complète de paramètres de modification, vous pouvez modifier un grand nombre d'éléments dans Revit avec Dynamo. Il peut s'agir d'une opération _coûteuse en ressources informatiques_ , ce qui signifie qu'elle peut être lente. Si vous modifiez un grand nombre d'éléments, vous pouvez utiliser la fonctionnalité de nœud "Geler" pour interrompre l'exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d’informations sur le gel des nœuds, consultez la section « [Gel](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) » du chapitre Solides. {% endhint %}
+{% hint style="info" %}
+Lorsque vous découvrez l'application complète de paramètres de modification, vous pouvez modifier un grand nombre d'éléments dans Revit avec Dynamo. Il peut s'agir d'une opération _coûteuse en ressources informatiques_ , ce qui signifie qu'elle peut être lente. Si vous modifiez un grand nombre d'éléments, vous pouvez utiliser la fonctionnalité de nœud "Geler" pour interrompre l'exécution des opérations Revit lorsque vous développez votre graphique. Pour plus d’informations sur le gel des nœuds, consultez la section « [Gel](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) » du chapitre Solides. 
+{% endhint %}
 
 ### Unités
 
