@@ -65,7 +65,7 @@ Lorsque vous développez votre graphique Dynamo et testez vos idées, la taille 
 * L’utilisation de List@Level vous permet de **réduire la complexité de votre graphique en remplaçant les nœuds List.Map et List.Combine** qui peuvent occuper une grande partie de la zone de dessin
 * List@Level fournit une méthode plus** rapide que List.Map/List.Combine pour établir la logique de nœud** en vous permettant d’accéder aux données à n’importe quel niveau d’une liste, directement à partir du port d’entrée d’un nœud
 
-\![](<images/1/graphstrategy4 (1).png>)
+![](<images/1/graphstrategy4 (1).png>)
 
 > Vous pouvez vérifier le nombre de valeurs True renvoyées par BoundingBox.Contains et dans quelles listes ces valeurs sont renvoyées en activant List@Level pour l’entrée « list » de CountTrue. La fonction List@Level permet à l'utilisateur de déterminer à quel niveau l'entrée va extraire des données. La fonction List@Level est flexible, efficace et vivement recommandée par rapport à d'autres méthodes impliquant List.Map et List.Combine.
 >
@@ -84,7 +84,7 @@ En plus de rendre le graphique aussi simple et efficace que possible, essayez d'
 * Si d’autres utilisateurs vont travailler avec votre graphique, **assurez-vous que la disposition des liaisons de nœud s’enchaîne facilement avant la livraison**
 * Pour vous aider avec la tâche d’alignement, **utilisez la fonction « Arranger l’affichage des nœuds » pour aligner automatiquement** votre graphique, même si elle est moins précise que vous-même
 
-\![](<images/1/graphstrategy5 (2).png>)
+![](<images/1/graphstrategy5 (2).png>)
 
 > 1. Graphique non organisé
 > 2. Graphique aligné
