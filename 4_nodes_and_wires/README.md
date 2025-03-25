@@ -97,7 +97,7 @@ Dynamo는 각 노드의 상태에 따라 다른 색상 체계로 노드를 렌�
 
 * 입력 포트로의 연결을 변경하려면 다른 입력 포트를 마우스 왼쪽 버튼으로 클릭합니다.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * 와이어를 제거하려면 와이어를 바깥쪽으로 당긴 다음, 작업공간을 마우스 왼쪽 버튼으로 클릭합니다.
 
