@@ -88,6 +88,8 @@ Si vous ne connaissez pas le Lecteur Dynamo, consultez la section [dynamo-player
 
 Si vous exécutez le graphique en utilisant l’interface principale de Dynamo, puis fermez et exécutez le même graphique en utilisant le Lecteur Dynamo, il créera de nouveaux objets en plus de ceux qu’il a créés auparavant. Cependant, une fois que le Lecteur Dynamo a exécuté le graphique une fois, il sérialisera les données de liaison d’objet dans le dessin. Ainsi, si vous exécutez le graphique plusieurs fois via le Lecteur Dynamo, il mettra à jour les objets au lieu d’en créer de nouveaux. Si vous exécutez le graphique via le Lecteur Dynamo sur un **autre dessin**, les données de liaison sont toujours conservées dans le dessin d’origine, car elles sont enregistrées dans le dessin et non dans le graphique.
 
-{% hint style="info" %} **Quand l’utiliser**
+{% hint style="info" %}
+**Quand l’utiliser**
 
-Utilisez cette option lorsque vous souhaitez exécuter un graphique à l’aide du Lecteur Dynamo sur plusieurs dessins et que vous souhaitez qu’il « se souvienne » de ce qu’il a fait dans chacun d’eux. {% endhint %}
+Utilisez cette option lorsque vous souhaitez exécuter un graphique à l’aide du Lecteur Dynamo sur plusieurs dessins et que vous souhaitez qu’il « se souvienne » de ce qu’il a fait dans chacun d’eux.
+{% endhint %}
