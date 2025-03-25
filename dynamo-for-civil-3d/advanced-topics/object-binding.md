@@ -64,7 +64,9 @@ Ta opcja oznacza, że metadane wiązania obiektów są serializowane do wykresu 
 Używaj tej opcji, aby dodatek Dynamo „pamiętał” obiekty, które utworzył podczas ostatniego uruchomienia na **określonym rysunku**. 
 {% endhint %}
 
-{% hint style="warning" %} Ta opcja jest najodpowiedniejsza w sytuacjach, gdy możliwe jest zachowanie relacji 1:1 między **konkretnym rysunkiem** a wykresem Dynamo. W przypadku wykresów przeznaczonych do uruchamiania na wielu rysunkach lepsze są opcje 1 i 3\. {% endhint %}
+{% hint style="warning" %}
+Ta opcja jest najodpowiedniejsza w sytuacjach, gdy możliwe jest zachowanie relacji 1:1 między **konkretnym rysunkiem** a wykresem Dynamo. W przypadku wykresów przeznaczonych do uruchamiania na wielu rysunkach lepsze są opcje 1 i 3.
+{% endhint %}
 
 ### Opcja 3\. Przechowuj w rysunku dla dodatku Dynamo
 
