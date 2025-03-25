@@ -24,7 +24,7 @@ Dynamo 2.0 引入將字典資料類型與清單資料類型分開的概念。此
 
     ***
 
-\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
 ***
 

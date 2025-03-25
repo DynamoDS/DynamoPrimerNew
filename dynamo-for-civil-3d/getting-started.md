@@ -8,7 +8,7 @@
 
 首先在 Civil 3D 中開啟一個空白文件。開啟後，導覽到 Civil 3D 功能區的 **「管理」** 頁籤，並尋找 **「視覺程式設計」** 面板。
 
-\![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 按一下 **「Dynamo」** 按鈕，這會在單獨的視窗中啟動 Dynamo。
 

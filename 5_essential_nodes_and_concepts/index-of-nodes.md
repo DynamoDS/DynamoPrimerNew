@@ -9,23 +9,23 @@
 |                                               |                                                                                                                       |                                                                   |
 | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 |                                               | 建立                                                                                                                |                                                                   |
-| \![](<images/5-1/ColorbyARGB (1) (1).jpg>)     | <p><strong>Color.ByARGB</strong><br>依 Alpha、紅色、綠色與藍色等組成來建構顏色。</p>                  | \![](<images/5-1/indexofnodes-colorbyargb(1) (1).jpg>)             |
-| ![](images/5-1/ColorRange.jpg)                | <p><strong>Color Range</strong><br>從開始顏色與結束顏色之間的顏色漸層取得顏色。</p>      | \![](<images/5-1/indexofnodes-colorrange(1) (1) (1).jpg>)          |
+| ![](<images/5-1/ColorbyARGB (1) (1).jpg>)     | <p><strong>Color.ByARGB</strong><br>依 Alpha、紅色、綠色與藍色等組成來建構顏色。</p>                  | ![](<images/5-1/indexofnodes-colorbyargb(1) (1).jpg>)             |
+| ![](images/5-1/ColorRange.jpg)                | <p><strong>Color Range</strong><br>從開始顏色與結束顏色之間的顏色漸層取得顏色。</p>      | ![](<images/5-1/indexofnodes-colorrange(1) (1) (1).jpg>)          |
 |                                               | 動作                                                                                                               |                                                                   |
-| \![](<images/5-1/ColorBrightness (1) (1).jpg>) | <p><strong>Color.Brightness</strong><br>取得此顏色的亮度值。</p>                                 | \![](<images/5-1/indexofnodes-colorbrightness(1) (1) (1) (1).jpg>) |
-| \![](<images/5-1/ColorComponent (1).jpg>)      | <p><strong>Color.Components</strong><br>依照以下順序列示顏色組成：Alpha、紅色、綠色、藍色。</p> | ![](images/5-1/indexofnodes-colorcomponent.jpg)                   |
-| \![](<images/5-1/ColorSaturation (1) (1).jpg>) | <p><strong>Color.Saturation</strong><br>取得此顏色的飽和度值</p>                                  | ![](images/5-1/indexofnodes-colorsaturation.jpg)                  |
-| \![](<images/5-1/ColorHue (1).jpg>)            | <p><strong>Color.Hue</strong><br>取得此顏色的色相值。</p>                                               | ![](images/5-1/indexofnodes-colorhue.jpg)                         |
+| ![](<images/5-1/ColorBrightness (1) (1).jpg>) | <p><strong>Color.Brightness</strong><br>取得此顏色的亮度值。</p>                                 | ![](<images/5-1/indexofnodes-colorbrightness(1) (1) (1) (1).jpg>) |
+| ![](<images/5-1/ColorComponent (1).jpg>)      | <p><strong>Color.Components</strong><br>依照以下順序列示顏色組成：Alpha、紅色、綠色、藍色。</p> | ![](images/5-1/indexofnodes-colorcomponent.jpg)                   |
+| ![](<images/5-1/ColorSaturation (1) (1).jpg>) | <p><strong>Color.Saturation</strong><br>取得此顏色的飽和度值</p>                                  | ![](images/5-1/indexofnodes-colorsaturation.jpg)                  |
+| ![](<images/5-1/ColorHue (1).jpg>)            | <p><strong>Color.Hue</strong><br>取得此顏色的色相值。</p>                                               | ![](images/5-1/indexofnodes-colorhue.jpg)                         |
 |                                               | 查詢                                                                                                                 |                                                                   |
-| \![](<images/5-1/ColorAlpha(1)(1) (1).jpg>)    | <p><strong>Color.Alpha</strong><br>找出顏色的 Alpha 組成 (0 到 255)。</p>                                 | ![](images/5-1/indexofnodes-coloralpha.jpg)                       |
-| \![](<images/5-1/ColorBlue (1) (1).jpg>)       | <p><strong>Color.Blue</strong><br>找出顏色的藍色組成 (0 到 255)。</p>                                   | ![](images/5-1/indexofnodes-colorblue.jpg)                        |
-| \![](<images/5-1/ColorGreen(1)(1) (1).jpg>)    | <p><strong>Color.Green</strong><br>找出顏色的綠色組成 (0 到 255)。</p>                                 | ![](images/5-1/indexofnodes-colorgreen.jpg)                       |
-| \![](<images/5-1/ColorRed (1) (1).jpg>)        | <p><strong>Color.Red</strong><br>找出顏色的紅色組成 (0 到 255)。</p>                                     | ![](images/5-1/indexofnodes-colorred.jpg)                         |
+| ![](<images/5-1/ColorAlpha(1)(1) (1).jpg>)    | <p><strong>Color.Alpha</strong><br>找出顏色的 Alpha 組成 (0 到 255)。</p>                                 | ![](images/5-1/indexofnodes-coloralpha.jpg)                       |
+| ![](<images/5-1/ColorBlue (1) (1).jpg>)       | <p><strong>Color.Blue</strong><br>找出顏色的藍色組成 (0 到 255)。</p>                                   | ![](images/5-1/indexofnodes-colorblue.jpg)                        |
+| ![](<images/5-1/ColorGreen(1)(1) (1).jpg>)    | <p><strong>Color.Green</strong><br>找出顏色的綠色組成 (0 到 255)。</p>                                 | ![](images/5-1/indexofnodes-colorgreen.jpg)                       |
+| ![](<images/5-1/ColorRed (1) (1).jpg>)        | <p><strong>Color.Red</strong><br>找出顏色的紅色組成 (0 到 255)。</p>                                     | ![](images/5-1/indexofnodes-colorred.jpg)                         |
 
 |                                                               |                                                                                           |                                                               |
 | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 |                                                               | 建立                                                                                    |                                                               |
-| \![](<images/5-1/GeometryColorByGeometryColor(1) (1) (1).jpg>) | <p><strong>GeometryColor.ByGeometryColor</strong><br>使用顏色顯示幾何圖形。</p> | ![](images/5-1/indexofnodes-geometrycolorbygeometrycolor.jpg) |
+| ![](<images/5-1/GeometryColorByGeometryColor(1) (1) (1).jpg>) | <p><strong>GeometryColor.ByGeometryColor</strong><br>使用顏色顯示幾何圖形。</p> | ![](images/5-1/indexofnodes-geometrycolorbygeometrycolor.jpg) |
 
 ### Watch
 
@@ -41,13 +41,13 @@
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 |                                             | 動作                                                                                                  |                                                          |
 | ![](images/5-1/Boolean.jpg)                 | <p><strong>Boolean</strong><br>在 true 與 false 之間進行選取。</p>                                   | ![](images/5-1/indexofnodes-boolean.jpg)                 |
-| \![](<images/5-1/CodeBlock(1)(1) (1).jpg>)   | <p><strong>Code Block</strong><br>允許直接撰寫 DesignScript 程式碼。</p>              | ![](images/5-1/indexofnodes-codeblock.jpg)               |
+| ![](<images/5-1/CodeBlock(1)(1) (1).jpg>)   | <p><strong>Code Block</strong><br>允許直接撰寫 DesignScript 程式碼。</p>              | ![](images/5-1/indexofnodes-codeblock.jpg)               |
 | ![](images/5-1/DirectoryPath.jpg)           | <p><strong>Directory Path</strong><br>可讓您選取系統上的目錄，以取得其路徑</p> | ![](images/5-1/indexofnodes-directorypath.jpg)           |
 | ![](images/5-1/FilePath.jpg)                | <p><strong>File Path</strong><br>可讓您選取系統中的檔案，以取得其檔名</p>        | ![](images/5-1/indexofnodes-filepath.jpg)                |
 | ![](images/5-1/Integerslider.jpg)           | <p><strong>Integer Slider</strong><br>產生整數值的滑棒。</p>                         | ![](images/5-1/indexofnodes-integerslider.jpg)           |
-| \![](<images/5-1/number(1) (1) (1) (1).jpg>) | <p><strong>Number</strong><br>建立數字。</p>                                                      | \![](<images/5-1/indexofnodes-number(1) (1) (1) (1).jpg>) |
+| ![](<images/5-1/number(1) (1) (1) (1).jpg>) | <p><strong>Number</strong><br>建立數字。</p>                                                      | ![](<images/5-1/indexofnodes-number(1) (1) (1) (1).jpg>) |
 | ![](images/5-1/Numberslider.jpg)            | <p><strong>Number Slider</strong><br>產生數值的滑棒。</p>                          | ![](images/5-1/indexofnodes-numberslider.jpg)            |
-| \![](<images/5-1/string(1) (1) (1) (1).jpg>) | <p><strong>String</strong><br>建立字串。</p>                                                      | ![](images/5-1/indexofnodes-string.jpg)                  |
+| ![](<images/5-1/string(1) (1) (1) (1).jpg>) | <p><strong>String</strong><br>建立字串。</p>                                                      | ![](images/5-1/indexofnodes-string.jpg)                  |
 | ![](images/5-1/ObjectisNull.jpg)            | <p><strong>Object.IsNull</strong><br>判定給定物件是否為空值。</p>                         | ![](images/5-1/indexofnodes-objectisnull.jpg)            |
 
 ## 清單
@@ -57,11 +57,11 @@
 |                                            | 建立                                                                                                                                                                                                                                        |                                                            |
 | ![](images/5-1/ListCreate.jpg)             | <p><strong>List.Create</strong><br>從給定的輸入製作新清單。</p>                                                                                                                                                              | ![](images/5-1/indexofnodes-listcreate.jpg)                |
 | ![](images/5-1/ListCombine.jpg)            | <p><strong>List.Combine</strong><br>將結合器套用至兩個序列中的每個元素</p>                                                                                                                                                 | ![](images/5-1/indexofnodes-listcombine.jpg)               |
-| ![](images/5-1/Range.jpg)                  | <p><strong>Number Range</strong><br>建立指定範圍內的一系列數字</p>                                                                                                                                                  | \![](<images/5-1/indexofnodes-range(1) (1) (1).jpg>)        |
+| ![](images/5-1/Range.jpg)                  | <p><strong>Number Range</strong><br>建立指定範圍內的一系列數字</p>                                                                                                                                                  | ![](<images/5-1/indexofnodes-range(1) (1) (1).jpg>)        |
 | ![](images/5-1/Sequence.jpg)               | <p><strong>Number Sequence</strong><br>建立一系列數字。</p>                                                                                                                                                                     | ![](images/5-1/indexofnodes-sequence.jpg)                  |
 |                                            | 動作                                                                                                                                                                                                                                       |                                                            |
 | ![](images/5-1/ListChop.jpg)               | <p><strong>List.Chop</strong><br>將一個清單細分為一組清單 (其中每個清單包含指定數量的項目)。</p>                                                                                                                               | ![](images/5-1/indexofnodes-listchop.jpg)                  |
-| \![](<images/5-1/Count(1) (1) (1) (1).jpg>) | <p><strong>List.Count</strong><br>傳回給定清單中儲存的項目數目。</p>                                                                                                                                                   | \![](<images/5-1/indexofnodes-count(1)(1) (1) (2) (6).jpg>) |
+| ![](<images/5-1/Count(1) (1) (1) (1).jpg>) | <p><strong>List.Count</strong><br>傳回給定清單中儲存的項目數目。</p>                                                                                                                                                   | ![](<images/5-1/indexofnodes-count(1)(1) (1) (2) (6).jpg>) |
 | ![](images/5-1/ListFlatten.jpg)            | <p><strong>List.Flatten</strong><br>依特定數量展開清單的巢狀清單。</p>                                                                                                                                                  | ![](images/5-1/indexofnodes-listflatten.jpg)               |
 | ![](images/5-1/ListFilterbyBoolMask.jpg)   | <p><strong>List.FilterByBoolMask</strong><br>查看個別布林清單中的對應索引來篩選順序。</p>                                                                                                       | ![](images/5-1/indexofnodes-listfilterbyboolmask.jpg)      |
 | ![](images/5-1/ListGetItemAtIndex.jpg)     | <p><strong>List.GetItemAtIndex</strong><br>取得給定清單中位於指定索引處的項目。</p>                                                                                                                        | ![](images/5-1/indexofnodes-listgetitematindex.jpg)        |
@@ -90,7 +90,7 @@
 | ![](images/5-1/Mathradianstodegrees.jpg) | <p><strong>Math.RadiansToDegrees</strong><br>將以弳度表示的角度轉換為以度表示的角度。</p>                        | ![](images/5-1/indexofnodes-mathradianstodegrees.jpg) |
 | ![](images/5-1/Mathremaprange.jpg)       | <p><strong>Math.RemapRange</strong><br>調整數字清單的範圍，同時保留分配比率。</p>   | ![](images/5-1/indexofnodes-mathremaprange.jpg)       |
 | ![](images/5-1/Mathsin.jpg)              | <p><strong>Math.Sin</strong><br>計算角度的正弦值。</p>                                                              | ![](images/5-1/indexofnodes-mathsin.jpg)              |
-| \![](<images/5-1/Map(1) (1) (1) (1).jpg>) | <p><strong>Map</strong><br>將值對映到輸入範圍</p>                                                              | ![](images/5-1/indexofnodes-mathmap.jpg)              |
+| ![](<images/5-1/Map(1) (1) (1) (1).jpg>) | <p><strong>Map</strong><br>將值對映到輸入範圍</p>                                                              | ![](images/5-1/indexofnodes-mathmap.jpg)              |
 
 ## 字串
 
@@ -99,7 +99,7 @@
 |                                    | 動作                                                                                                                                              |                                                          |
 | ![](images/5-1/Stringconcat.jpg)   | <p><strong>String.Concat</strong><br>將多個字串連接成單一字串。</p>                                                         | ![](images/5-1/indexofnodes-stringconcat.jpg)            |
 | ![](images/5-1/Stringcontains.jpg) | <p><strong>String.Contains</strong><br>判定給定的字串是否包含給定的子字串。</p>                                              | ![](images/5-1/indexofnodes-stringcontains.jpg)          |
-| ![](images/5-1/Stringjoin.jpg)     | <p><strong>String.Join</strong><br>將多個字串連接成單一字串，同時在接合的每個字串之間插入給定的分隔符號。</p> | \![](<images/5-1/indexofnodes-stringjoin(1) (1) (2).jpg>) |
+| ![](images/5-1/Stringjoin.jpg)     | <p><strong>String.Join</strong><br>將多個字串連接成單一字串，同時在接合的每個字串之間插入給定的分隔符號。</p> | ![](<images/5-1/indexofnodes-stringjoin(1) (1) (2).jpg>) |
 | ![](images/5-1/Stringsplit.jpg)    | <p><strong>String.Split</strong><br>將單一字串分割為字串清單，分割位置由給定的分隔符號字串決定。</p>    | ![](images/5-1/indexofnodes-stringsplit.jpg)             |
 | ![](images/5-1/Stringtonumber.jpg) | <p><strong>String.ToNumber</strong><br>將字串轉換為整數或倍精數。</p>                                                              | ![](images/5-1/indexofnodes-stringtonumber.jpg)          |
 
@@ -117,21 +117,21 @@
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 |                                                                               | 建立                                                                                                                                                                                             |                                                                            |
 | ![](images/5-1/Coordinatesystembyorigin.jpg)                                  | <p><strong>CoordinateSystem.ByOrigin</strong><br>建立一個原點在輸入點、X 與 Y 軸分別設定為 WCS X 軸與 Y 軸的座標系統</p>                                               | ![](images/5-1/indexofnodes-coordinatessystembyorigin.jpg)                 |
-| \![](<images/5-1/Coordinatesystembycylindricalcoordinates(1) (1) (1) (1).jpg>) | <p><strong>CoordinateSystem.ByCylindricalCoordinates</strong><br>以相對於指定座標系統的指定圓柱座標參數，建立一個座標系統</p> | ![](images/5-1/indexofnodes-coordinatessystembycylindricalcoordinates.jpg) |
+| ![](<images/5-1/Coordinatesystembycylindricalcoordinates(1) (1) (1) (1).jpg>) | <p><strong>CoordinateSystem.ByCylindricalCoordinates</strong><br>以相對於指定座標系統的指定圓柱座標參數，建立一個座標系統</p> | ![](images/5-1/indexofnodes-coordinatessystembycylindricalcoordinates.jpg) |
 
 ### 立方體
 
 |                                                                  |                                                                                                                                            |                                                                  |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
 |                                                                  | 建立                                                                                                                                     |                                                                  |
-| \![](<images/5-1/Cuboidbylength(1) (1) (1).jpg>)                  | <p><strong>Cuboid.ByLengths</strong><br>建立一個中心點在 WCS 原點，且具有長度、寬度、高度的立方體。</p>                        | ![](images/5-1/indexofnodes-cuboidbylengths.jpg)                 |
-| \![](<images/5-1/Cuboidbylengthorigin(1) (1) (1) (1).jpg>)        | <p><strong>Cuboid.ByLengths</strong> (origin)</p><p>建立一個中心點在輸入點，具有指定寬度、長度及高度的立方體。</p> | ![](images/5-1/indexofnodes-cuboidbylengthsorigin.jpg)           |
-| \![](<images/5-1/Cuboidbylengthcoordinatessystem(1) (1) (1).jpg>) | <p><strong>Cuboid.ByLengths</strong> (coordinateSystem)</p><p>建立一個中心點在 WCS 原點，且具有長度、寬度、高度的立方體。</p>  | ![](images/5-1/indexofnodes-cuboidbylengthscoordinatesystem.jpg) |
-| \![](<images/5-1/Cuboidbycorners(1) (1) (1) (1).jpg>)             | <p><strong>Cuboid.ByCorners</strong></p><p>建立一個從低點跨距到高點的立方體。</p>                                      | ![](images/5-1/indexofnodes-cuboidbycorners.jpg)                 |
-| \![](<images/5-1/Cuboidlength(1) (1) (2).jpg>)                    | <p><strong>Cuboid.Length</strong></p><p>傳回立方體的輸入尺寸，而不是實際世界的空間尺寸。</p>           | ![](images/5-1/indexofnodes-cuboidlength.jpg)                    |
-| \![](<images/5-1/Cuboidwidth(1) (1) (1) (1).jpg>)                 | <p><strong>Cuboid.Width</strong></p><p>傳回立方體的輸入尺寸，而不是實際世界的空間尺寸。</p>            | ![](images/5-1/indexofnodes-cuboidwidth.jpg)                     |
-| \![](<images/5-1/Cuboidheight(1) (1) (1).jpg>)                    | <p><strong>Cuboid.Height</strong></p><p>傳回立方體的輸入尺寸，而不是實際世界的空間尺寸。</p>           | ![](images/5-1/indexofnodes-cuboidheight.jpg)                    |
-| \![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>取得邊界框做為實體立方體</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
+| ![](<images/5-1/Cuboidbylength(1) (1) (1).jpg>)                  | <p><strong>Cuboid.ByLengths</strong><br>建立一個中心點在 WCS 原點，且具有長度、寬度、高度的立方體。</p>                        | ![](images/5-1/indexofnodes-cuboidbylengths.jpg)                 |
+| ![](<images/5-1/Cuboidbylengthorigin(1) (1) (1) (1).jpg>)        | <p><strong>Cuboid.ByLengths</strong> (origin)</p><p>建立一個中心點在輸入點，具有指定寬度、長度及高度的立方體。</p> | ![](images/5-1/indexofnodes-cuboidbylengthsorigin.jpg)           |
+| ![](<images/5-1/Cuboidbylengthcoordinatessystem(1) (1) (1).jpg>) | <p><strong>Cuboid.ByLengths</strong> (coordinateSystem)</p><p>建立一個中心點在 WCS 原點，且具有長度、寬度、高度的立方體。</p>  | ![](images/5-1/indexofnodes-cuboidbylengthscoordinatesystem.jpg) |
+| ![](<images/5-1/Cuboidbycorners(1) (1) (1) (1).jpg>)             | <p><strong>Cuboid.ByCorners</strong></p><p>建立一個從低點跨距到高點的立方體。</p>                                      | ![](images/5-1/indexofnodes-cuboidbycorners.jpg)                 |
+| ![](<images/5-1/Cuboidlength(1) (1) (2).jpg>)                    | <p><strong>Cuboid.Length</strong></p><p>傳回立方體的輸入尺寸，而不是實際世界的空間尺寸。</p>           | ![](images/5-1/indexofnodes-cuboidlength.jpg)                    |
+| ![](<images/5-1/Cuboidwidth(1) (1) (1) (1).jpg>)                 | <p><strong>Cuboid.Width</strong></p><p>傳回立方體的輸入尺寸，而不是實際世界的空間尺寸。</p>            | ![](images/5-1/indexofnodes-cuboidwidth.jpg)                     |
+| ![](<images/5-1/Cuboidheight(1) (1) (1).jpg>)                    | <p><strong>Cuboid.Height</strong></p><p>傳回立方體的輸入尺寸，而不是實際世界的空間尺寸。</p>           | ![](images/5-1/indexofnodes-cuboidheight.jpg)                    |
+| ![](<images/5-1/Boundingboxtocuboid(1) (1).jpg>)                 | <p><strong>BoundingBox.ToCuboid</strong></p><p>取得邊界框做為實體立方體</p>                                                  | ![](images/5-1/indexofnodes-boundingboxtocuboid.jpg)             |
 
 {% hint style="warning" %} **換句話說，如果您建立一個立方體寬度 (X 軸) 長度為 10，然後將其轉換為 X 軸 2 倍比例的座標系統，則寬度仍為 10。ASM 不允許您以任何可預測的順序擷取本體的頂點，因此在轉換後無法決定尺寸。 {% endhint %}
 
@@ -161,7 +161,7 @@
 |                                                     | 建立                                                                                                                                                   |                                                                  |
 | ![](images/5-1/Linebybestfitthroughpoints.jpg)      | <p><strong>Line.ByBestFitThroughPoints</strong><br>建立一條與點的散射圖最近似的線。</p>                                       | ![](images/5-1/indexofnodes-linebybestfitthroughpoints.jpg)      |
 | ![](images/5-1/Linebystartpointdirectionlength.jpg) | <p><strong>Line.ByStartPointDirectionLength</strong><br>建立一條從某點開始，沿向量方向延伸指定長度的直線。</p> | ![](images/5-1/indexofnodes-linebystartpointdirectionlength.jpg) |
-| \![](<images/5-1/Linebystartpointendpoint (1).jpg>)  | <p><strong>Line.ByStartPointEndPoint</strong><br>在兩個輸入點之間建立一條直線。</p>                                                   | ![](images/5-1/indexofnodes-linebystartpointendpoint.jpg)        |
+| ![](<images/5-1/Linebystartpointendpoint (1).jpg>)  | <p><strong>Line.ByStartPointEndPoint</strong><br>在兩個輸入點之間建立一條直線。</p>                                                   | ![](images/5-1/indexofnodes-linebystartpointendpoint.jpg)        |
 | ![](images/5-1/Linebytangency.jpg)                  | <p><strong>Line.ByTangency</strong><br>建立一條在輸入曲線的參數點位置與輸入曲線相切的線。</p>               | ![](images/5-1/indexofnodes-linebytangency.jpg)                  |
 |                                                     | 查詢                                                                                                                                                    |                                                                  |
 | ![](images/5-1/Linedirection.jpg)                   | <p><strong>Line.Direction</strong><br>曲線的方向。</p>                                                                                    | ![](images/5-1/indexofnodes-linedirection.jpg)                   |
@@ -232,31 +232,31 @@
 |                                                          |                                                                                                                                                      |                                                              |
 | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 |                                                          | 建立                                                                                                                                               |                                                              |
-| \![](<images/5-1/Surfacebyloft(1)(1) (1) (1) (1).jpg>)    | <p><strong>Surface.ByLoft</strong><br>透過在輸入斷面曲線之間進行斷面混成來建立曲面</p>                                             | ![](images/5-1/indexofnodes-surfacebyloft.jpg)               |
-| \![](<images/5-1/Surfacebyloft(1)(1) (1) (1) (2).jpg>)    | <p><strong>Surface.ByPatch</strong><br>透過填滿輸入曲線所定義之封閉邊界的內部來建立曲面。</p>                 | \![](<images/5-1/indexofnodes-surfacebypatch(1) (1) (1).jpg>) |
+| ![](<images/5-1/Surfacebyloft(1)(1) (1) (1) (1).jpg>)    | <p><strong>Surface.ByLoft</strong><br>透過在輸入斷面曲線之間進行斷面混成來建立曲面</p>                                             | ![](images/5-1/indexofnodes-surfacebyloft.jpg)               |
+| ![](<images/5-1/Surfacebyloft(1)(1) (1) (1) (2).jpg>)    | <p><strong>Surface.ByPatch</strong><br>透過填滿輸入曲線所定義之封閉邊界的內部來建立曲面。</p>                 | ![](<images/5-1/indexofnodes-surfacebypatch(1) (1) (1).jpg>) |
 |                                                          | 動作                                                                                                                                              |                                                              |
-| \![](<images/5-1/Surfaceoffset(1) (1) (2).jpg>)           | <p><strong>Surface.Offset</strong><br>沿曲面法線方向，將曲面偏移指定的距離</p>                                        | ![](images/5-1/indexofnodes-surfaceoffset.jpg)               |
-| \![](<images/5-1/Surfacepointatparameter(1) (1) (1).jpg>) | <p><strong>Surface.PointAtParameter</strong><br>傳回指定的 U 與 V 參數處的點。</p>                                              | ![](images/5-1/indexofnodes-surfacepointatparameter.jpg)     |
-| \![](<images/5-1/Surfacethicken(1) (1) (1) (2).jpg>)      | <p><strong>Surface.Thicken</strong><br>將曲面增厚為實體，沿曲面法線的方向朝曲面兩側擠出。</p> | ![](images/5-1/indexofnodes-surfacethicken.jpg)              |
+| ![](<images/5-1/Surfaceoffset(1) (1) (2).jpg>)           | <p><strong>Surface.Offset</strong><br>沿曲面法線方向，將曲面偏移指定的距離</p>                                        | ![](images/5-1/indexofnodes-surfaceoffset.jpg)               |
+| ![](<images/5-1/Surfacepointatparameter(1) (1) (1).jpg>) | <p><strong>Surface.PointAtParameter</strong><br>傳回指定的 U 與 V 參數處的點。</p>                                              | ![](images/5-1/indexofnodes-surfacepointatparameter.jpg)     |
+| ![](<images/5-1/Surfacethicken(1) (1) (1) (2).jpg>)      | <p><strong>Surface.Thicken</strong><br>將曲面增厚為實體，沿曲面法線的方向朝曲面兩側擠出。</p> | ![](images/5-1/indexofnodes-surfacethicken.jpg)              |
 
 ### UV
 
 |                                                  |                                                                           |                                                  |
 | ------------------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------ |
 |                                                  | 建立                                                                    |                                                  |
-| \![](<images/5-1/UVbycoordinates(1) (1) (2).jpg>) | <p><strong>UV.ByCoordinates</strong><br>從兩個倍精數建立 UV。</p> | ![](images/5-1/indexofnodes-UVbycoordinates.jpg) |
+| ![](<images/5-1/UVbycoordinates(1) (1) (2).jpg>) | <p><strong>UV.ByCoordinates</strong><br>從兩個倍精數建立 UV。</p> | ![](images/5-1/indexofnodes-UVbycoordinates.jpg) |
 
 ### 向量
 
 |                                                  |                                                                                          |                                                      |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 |                                                  | 建立                                                                                   |                                                      |
-| \![](<images/5-1/Vectorbycoordinates(1) (1).jpg>) | <p><strong>Vector.ByCoordinates</strong><br>由 3 個歐幾里得座標形成一個向量</p> | ![](images/5-1/indexofnodes-vectorbycoordinates.jpg) |
-| \![](<images/5-1/Vectorxaxis(1) (1) (1) (1).jpg>) | <p><strong>Vector.XAxis</strong><br>取得標準 X 軸向量 (1,0,0)</p>         | ![](images/5-1/indexofnodes-vectorx.jpg)             |
-| \![](<images/5-1/Vectoryaxis(1) (1) (1) (1).jpg>) | <p><strong>Vector.YAxis</strong><br>取得標準 Y 軸向量 (0,1,0)</p>         | ![](images/5-1/indexofnodes-vectory.jpg)             |
-| \![](<images/5-1/Vectorzaxis(1) (1) (1) (1).jpg>) | <p><strong>Vector.ZAxis</strong><br>取得標準 Z 軸向量 (0,0,1)</p>         | ![](images/5-1/indexofnodes-vectorz.jpg)             |
+| ![](<images/5-1/Vectorbycoordinates(1) (1).jpg>) | <p><strong>Vector.ByCoordinates</strong><br>由 3 個歐幾里得座標形成一個向量</p> | ![](images/5-1/indexofnodes-vectorbycoordinates.jpg) |
+| ![](<images/5-1/Vectorxaxis(1) (1) (1) (1).jpg>) | <p><strong>Vector.XAxis</strong><br>取得標準 X 軸向量 (1,0,0)</p>         | ![](images/5-1/indexofnodes-vectorx.jpg)             |
+| ![](<images/5-1/Vectoryaxis(1) (1) (1) (1).jpg>) | <p><strong>Vector.YAxis</strong><br>取得標準 Y 軸向量 (0,1,0)</p>         | ![](images/5-1/indexofnodes-vectory.jpg)             |
+| ![](<images/5-1/Vectorzaxis(1) (1) (1) (1).jpg>) | <p><strong>Vector.ZAxis</strong><br>取得標準 Z 軸向量 (0,0,1)</p>         | ![](images/5-1/indexofnodes-vectorz.jpg)             |
 |                                                  | 動作                                                                                  |                                                      |
-| \![](<images/5-1/Vectornormalized(1) (1).jpg>)    | <p><strong>Vector.Normalized</strong><br>取得向量的正規化版本</p>      | ![](images/5-1/indexofnodes-vectornormalized.jpg)    |
+| ![](<images/5-1/Vectornormalized(1) (1).jpg>)    | <p><strong>Vector.Normalized</strong><br>取得向量的正規化版本</p>      | ![](images/5-1/indexofnodes-vectornormalized.jpg)    |
 
 ## 座標系統
 
@@ -264,17 +264,17 @@
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 |                                                                               | 建立                                                                                                                                                                                             |                                                                            |
 | ![](images/5-1/Coordinatesystembyorigin.jpg)                                  | <p><strong>CoordinateSystem.ByOrigin</strong><br>建立一個原點在輸入點、X 與 Y 軸分別設定為 WCS X 軸與 Y 軸的座標系統</p>                                               | ![](images/5-1/indexofnodes-coordinatessystembyorigin.jpg)                 |
-| \![](<images/5-1/Coordinatesystembycylindricalcoordinates(1) (1) (1) (1).jpg>) | <p><strong>CoordinateSystem.ByCylindricalCoordinates</strong><br>以相對於指定座標系統的指定圓柱座標參數，建立一個座標系統</p> | ![](images/5-1/indexofnodes-coordinatessystembycylindricalcoordinates.jpg) |
+| ![](<images/5-1/Coordinatesystembycylindricalcoordinates(1) (1) (1) (1).jpg>) | <p><strong>CoordinateSystem.ByCylindricalCoordinates</strong><br>以相對於指定座標系統的指定圓柱座標參數，建立一個座標系統</p> | ![](images/5-1/indexofnodes-coordinatessystembycylindricalcoordinates.jpg) |
 
 ## 運算子
 
 |                                                |                                                                                                                         |                                                 |
 | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| \![](<images/5-1/addition(1)(1) (1).jpg>)       | <p><strong>+</strong><br>加</p>                                                                                   | ![](images/5-1/indexofnodes-addition.jpg)       |
-| \![](<images/5-1/Subtraction(1)(1) (1).jpg>)    | <p><strong>-</strong><br>減</p>                                                                                | ![](images/5-1/indexofnodes-subtraction.jpg)    |
-| \![](<images/5-1/Multiplication(1)(1) (1).jpg>) | <p><strong>*</strong><br>乘</p>                                                                             | ![](images/5-1/indexofnodes-multiplication.jpg) |
-| \![](<images/5-1/Division(1)(1) (1).jpg>)       | <p><strong>/</strong><br>除</p>                                                                                   | ![](images/5-1/indexofnodes-division.jpg)       |
-| \![](<images/5-1/modular(1) (1) (1).jpg>)       | <p><strong>%</strong><br>模除會計算第一個輸入除以第二個輸入後的餘數</p> | ![](images/5-1/indexofnodes-modular.jpg)        |
-| \![](<images/5-1/Lessthan(1) (1) (1).jpg>)      | <p><strong><</strong><br>小於</p>                                                                             | ![](images/5-1/indexofnodes-lessthan.jpg)       |
-| \![](<images/5-1/greaterthan(1) (1).jpg>)       | <p><strong>></strong><br>大於</p>                                                                               | ![](images/5-1/indexofnodes-greaterthan.jpg)    |
-| \![](<images/5-1/==(1) (1).jpg>)                | <p><strong>==</strong><br>相等性會測試兩個值是否相等。</p>                                           | ![](images/5-1/indexofnodes-==.jpg)             |
+| ![](<images/5-1/addition(1)(1) (1).jpg>)       | <p><strong>+</strong><br>加</p>                                                                                   | ![](images/5-1/indexofnodes-addition.jpg)       |
+| ![](<images/5-1/Subtraction(1)(1) (1).jpg>)    | <p><strong>-</strong><br>減</p>                                                                                | ![](images/5-1/indexofnodes-subtraction.jpg)    |
+| ![](<images/5-1/Multiplication(1)(1) (1).jpg>) | <p><strong>*</strong><br>乘</p>                                                                             | ![](images/5-1/indexofnodes-multiplication.jpg) |
+| ![](<images/5-1/Division(1)(1) (1).jpg>)       | <p><strong>/</strong><br>除</p>                                                                                   | ![](images/5-1/indexofnodes-division.jpg)       |
+| ![](<images/5-1/modular(1) (1) (1).jpg>)       | <p><strong>%</strong><br>模除會計算第一個輸入除以第二個輸入後的餘數</p> | ![](images/5-1/indexofnodes-modular.jpg)        |
+| ![](<images/5-1/Lessthan(1) (1) (1).jpg>)      | <p><strong><</strong><br>小於</p>                                                                             | ![](images/5-1/indexofnodes-lessthan.jpg)       |
+| ![](<images/5-1/greaterthan(1) (1).jpg>)       | <p><strong>></strong><br>大於</p>                                                                               | ![](images/5-1/indexofnodes-greaterthan.jpg)    |
+| ![](<images/5-1/==(1) (1).jpg>)                | <p><strong>==</strong><br>相等性會測試兩個值是否相等。</p>                                           | ![](images/5-1/indexofnodes-==.jpg)             |

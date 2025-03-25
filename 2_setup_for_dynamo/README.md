@@ -4,7 +4,7 @@
 
 Dynamo 是進行中的開放原始碼開發專案。瞭解[支援 Dynamo 的軟體清單](http://dynamobim.org/download/)。
 
-![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) \![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
+![](images/setupfordynamo-dynamorevit.png) ![](images/setupfordynamo-dynamocivil3D.png) ![](images/setupfordynamo-dynamoaliasdesign.png) ![](images/setupfordynamo-dynamoformit.png) ![](<images/setupfordynamo-dynamoadvancesteel (1).png>) ![](images/setupfordynamo-dynamorobotstructuralanalysis.png)
 
 ### 以延伸模組形式啟動 Dynamo
 
@@ -12,7 +12,7 @@ Dynamo 隨附於如 **Revit3D**、**FormIt**、**Civil3D** 等軟體而預先安
 
 若要開始使用，請從工具列面板啟動。視您使用的軟體而定，通常可從「功能表」> **「管理」** 頁籤找到啟動圖示。按一下 Dynamo 圖示 ![](images/dynamoCore-halfSize.png) 即可啟動。
 
-\![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
+![](<../7_dynamo_for_revit/images/1/launchdynamofromrevit (1).jpg>)
 
 如需更多 Dynamo 搭配特定軟體的使用說明，建議參閱以下各節：
 

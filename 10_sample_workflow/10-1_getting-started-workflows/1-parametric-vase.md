@@ -70,7 +70,7 @@ description: suggested exercise
 
 我們複製這些節點 4 次，讓這些圓定義曲面，變更 Number Slider 的名稱，如下圖所示。
 
-\![](<../images/10-1/1/vase4 (1).png>)
+![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. 圓是由一個中心點和一個半徑產生
 
@@ -92,7 +92,7 @@ description: suggested exercise
 
 我們也關閉其他節點中的預覽，只顯示 Surface.ByLoft 的畫面。
 
-\![](<../images/10-1/1/vase6 (1).png>)
+![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\.曲面是透過斷面混成平移的圓建立而成。
 
