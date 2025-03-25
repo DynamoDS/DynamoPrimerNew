@@ -37,7 +37,7 @@ V projektu aplikace Revit nebo Editoru rodiny přejděte na doplňky a kliknět
 
 {% hint style="warning" %} *Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena. {% endhint %}
 
-\![](<images/1/launchdynamofromrevit (1).jpg>)
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie s názvem „Revit“. Jedná se o rozšíření uživatelského rozhraní, které nabízí uzly pro práci s aplikací Revit.*
 
