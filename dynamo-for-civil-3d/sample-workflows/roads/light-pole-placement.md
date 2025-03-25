@@ -18,13 +18,16 @@
 
 ## Совместимость версий
 
-{% hint style="success" %} Этот график будет работать в **Civil 3D 2020** и более поздних версиях. {% endhint %}
+{% hint style="success" %} Этот график будет работать в **Civil 3D 2020** и более поздних версиях. 
+{% endhint %}
 
 ## Набор данных
 
 Сначала скачайте файлы примеров ниже, а затем откройте файл DWG и график Dynamo.
 
-{% hint style="info" %} Рекомендуем сохранить файл Excel в одной папке с графиком Dynamo. {% endhint %}
+{% hint style="info" %} 
+Рекомендуем сохранить файл Excel в одной папке с графиком Dynamo. 
+{% endhint %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
 
@@ -49,7 +52,9 @@
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_ExcelFile.png" alt=""><figcaption><p>Структура таблицы в файле Excel</p></figcaption></figure>
 
-{% hint style="info" %} Использование Dynamo для чтения данных из внешнего файла (например, файла Excel) — это отличная стратегия, особенно если эти данные необходимо предоставить другим участникам группы. {% endhint %}
+{% hint style="info" %} 
+Использование Dynamo для чтения данных из внешнего файла (например, файла Excel) — это отличная стратегия, особенно если эти данные необходимо предоставить другим участникам группы. 
+{% endhint %}
 
 Данные Excel импортируются в Dynamo следующим образом. 
 
@@ -59,7 +64,9 @@
 
 Пока все вроде бы в порядке. Однако при использовании такого подхода может возникнуть проблема. Что будет, если порядок столбцов в файле Excel впоследствии изменится? Или если между двумя столбцами будет вставлен третий? График перестанет работать должным образом, и его нужно будет изменить. Чтобы избежать этого, поместим данные в **словарь**, записав заголовки столбцов Excel в качестве _ключей_ (keys), а остальные данные в качестве _значений_ (values).
 
-{% hint style="info" %} Если вы еще не знакомы со словарями, см. раздел [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention"). {% endhint %}
+{% hint style="info" %} 
+Если вы еще не знакомы со словарями, см. раздел [5-5_dictionaries-in-dynamo](../../../5_essential_nodes_and_concepts/5-5_dictionaries-in-dynamo/ "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Преобразование данных Excel в словарь</p></figcaption></figure>
 
@@ -81,13 +88,17 @@
 
 Теперь создадим **системы координат** вдоль характерных линий коридора на пикетах, значения которых заданы в файле Excel. Эти системы координат будут определять положение, поворот и масштаб вхождений блока осветительного столба.
 
-{% hint style="info" %} Если вы еще не знакомы с системами координат, см. раздел [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %} 
+Если вы еще не знакомы с системами координат, см. раздел [2-vectors.md](../../../5_essential_nodes_and_concepts/5-2_geometry-for-computational-design/2-vectors.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_GetCoordinateSystems (1).png" alt=""><figcaption><p>Получение систем координат, расположенных вдоль характерных линий коридора</p></figcaption></figure>
 
 Обратите внимание, что мы используем Code Block для поворота систем координат в зависимости от того, на какой стороне базовой линии они находятся. Добиться этого можно также с помощью последовательности из нескольких узлов, но в данном случае проще взять и написать код.
 
-{% hint style="info" %} Если вы еще не знакомы с элементами Code Block, см. раздел [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). {% endhint %}
+{% hint style="info" %} 
+Если вы еще не знакомы с элементами Code Block, см. раздел [8-1_code-blocks-and-design-script](../../../8_coding_in_dynamo/8-1_code-blocks-and-design-script/ "mention"). 
+{% endhint %}
 
 ### Создание вхождений блоков
 
@@ -103,7 +114,9 @@
 
 При запуске графика в пространстве модели вдоль коридора должны отобразиться новые вхождения блоков. И вот что здорово: если выбран автоматический режим выполнения графика, то при внесении изменений в файл Excel вхождения блоков обновляются автоматически.
 
-{% hint style="info" %} Для получения подробностей о режимах выполнения графиков см. раздел [3_user_interface](../../../3\_user\_interface/ "mention"). {% endhint %}
+{% hint style="info" %} 
+Для получения подробностей о режимах выполнения графиков см. раздел [3_user_interface](../../../3_user_interface/ "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Excel.gif" alt=""><figcaption><p>Обновление файла Excel и быстрое визуальное представление результатов в Civil 3D</p></figcaption></figure>
 
@@ -111,7 +124,9 @@
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Player (1).gif" alt=""><figcaption><p>Запуск графика с помощью проигрывателя Dynamo и просмотр результатов в Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %} 
+Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). 
+{% endhint %}
 
 > :tada: Миссия выполнена!
 
@@ -134,8 +149,14 @@
 
 Вот несколько вариантов того, как можно расширить возможности этого графика.
 
-{% hint style="info" %} Добавление столбца **rotation** в файл Excel и его использование для поворота систем координат. {% endhint %}
+{% hint style="info" %} 
+Добавление столбца **rotation** в файл Excel и его использование для поворота систем координат. 
+{% endhint %}
 
-{% hint style="info" %} Добавление **значений смещения по горизонтали или по вертикали** в файл Excel, чтобы при необходимости осветительные столбы могли отклоняться от характерной линии коридора. {% endhint %}
+{% hint style="info" %} 
+Добавление **значений смещения по горизонтали или по вертикали** в файл Excel, чтобы при необходимости осветительные столбы могли отклоняться от характерной линии коридора. 
+{% endhint %}
 
-{% hint style="info" %} Создание значений пикетов **непосредственно в Dynamo** (вместо использования файла Excel со значениями пикетов) на основе начального пикета и типового интервала. {% endhint %}
+{% hint style="info" %} 
+Создание значений пикетов **непосредственно в Dynamo** (вместо использования файла Excel со значениями пикетов) на основе начального пикета и типового интервала. 
+{% endhint %}

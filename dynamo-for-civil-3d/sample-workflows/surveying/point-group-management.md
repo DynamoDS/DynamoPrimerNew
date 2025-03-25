@@ -16,7 +16,8 @@
 
 ## Совместимость версий
 
-{% hint style="success" %} Этот график будет работать в **Civil 3D 2020** и более поздних версиях. {% endhint %}
+{% hint style="success" %} Этот график будет работать в **Civil 3D 2020** и более поздних версиях. 
+{% endhint %}
 
 ## Набор данных
 
@@ -41,7 +42,9 @@
 
 Сначала необходимо получить все группы точек в документе, а затем все точки COGO в каждой группе. В результате мы получим _вложенный список_, или список списков. Если мы выровняем все элементы в один список с помощью узла **List.Flatten**, это упростит дальнейшую работу.
 
-{% hint style="info" %} Если вы еще не знакомы со списками, см. раздел [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). {% endhint %}
+{% hint style="info" %} 
+Если вы еще не знакомы со списками, см. раздел [2-working-with-lists.md](../../../5_essential_nodes_and_concepts/5-4_designing-with-lists/2-working-with-lists.md "mention"). 
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_GetPoints.png" alt=""><figcaption><p>Получение всех групп точек и точек COGO </p></figcaption></figure>
 
@@ -69,7 +72,9 @@
 
 <figure><img src="../../../.gitbook/assets/Survey_CreatePointGroups_Player.gif" alt=""><figcaption><p>Запуск графика с помощью проигрывателя Dynamo и просмотр результатов в области инструментов</p></figcaption></figure>
 
-{% hint style="info" %} Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %} 
+Если вы еще не знакомы с проигрывателем Dynamo, см. раздел [dynamo-player.md](../../dynamo-player.md "mention"). 
+{% endhint %}
 
 > :tada: Миссия выполнена!
 
@@ -77,8 +82,14 @@
 
 Вот несколько вариантов того, как можно расширить возможности этого графика.
 
-{% hint style="info" %} Изменение принципа группировки точек, чтобы она выполнялась по **полному описанию**, а не по исходному. {% endhint %}
+{% hint style="info" %} 
+Изменение принципа группировки точек, чтобы она выполнялась по **полному описанию**, а не по исходному. 
+{% endhint %}
 
-{% hint style="info" %} Группировка точек по другим **готовым категориям** (например, «Базовые снимки», «Геодезические знаки» и т. д.). {% endhint %}
+{% hint style="info" %} 
+Группировка точек по другим **готовым категориям** (например, «Базовые снимки», «Геодезические знаки» и т. д.). 
+{% endhint %}
 
-{% hint style="info" %} Автоматическое создание поверхностей TIN для точек в определенных группах. {% endhint %}
+{% hint style="info" %} 
+Автоматическое создание поверхностей TIN для точек в определенных группах. 
+{% endhint %}
