@@ -30,7 +30,7 @@ _“点击”_ 是直接选择 Revit 图元的最简单方法。可以选择完�
 
 _“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。可以使用此选项来参照在视图中不一定可见的 Revit 图元。这是一款优秀的工具，可用于查询现有图元或者在 Revit 项目或族编辑器中创建新图元。
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 还可以在 _Revit 层次结构_ 中按特定层级选择 Revit 图元。这是一个功能强大的选项，可用于自定义大型数据阵列，以准备文档或衍生式实例化和自定义。
 
@@ -48,7 +48,7 @@ _“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。�
 
 在此 Revit 文件示例中，我们有三种图元类型的简单建筑。我们将以此为例，在 Revit 层次结构的上下文中选择 Revit 图元。
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. 建筑体量
 > 2. 梁（结构框架）
@@ -81,7 +81,7 @@ _“下拉”菜单_ 在 Revit 项目中创建所有可访问图元的列表。�
 
 使用一些基本列表操作，我们可以查询关注的面。
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. 首先，将之前选定的图元输出到“Element.Faces”节点。
 > 2. 接着，_“List.Count”_ 节点会显示我们正在处理体量中的 23 个曲面。
