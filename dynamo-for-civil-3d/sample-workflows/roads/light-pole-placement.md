@@ -29,7 +29,7 @@ Najpierw pobierz pliki przykładów poniżej, a następnie otwórz plik DWG i wy
  Najlepiej jest, jeśli plik programu Excel jest zapisany w tym samym katalogu co wykres dodatku Dynamo. 
 {% endhint %} 
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
