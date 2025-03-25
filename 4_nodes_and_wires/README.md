@@ -97,7 +97,7 @@ Często chcemy dostosować przepływ programu w programie wizualnym, edytując p
 
 * Zmień połączenie z portem wejściowym: kliknij lewym przyciskiem myszy inny port wejściowy
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Aby usunąć przewód, odciągnij przewód, a następnie kliknij lewym przyciskiem myszy obszar roboczy
 
