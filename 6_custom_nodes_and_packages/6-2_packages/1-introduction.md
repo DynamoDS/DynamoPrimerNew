@@ -67,7 +67,7 @@
 
 Нажав после этого кнопку «Запуск» в решателе, получим развернутую сферу. Файлы примеров, подобные этим, используются для обучения работе с новыми пакетами Dynamo.
 
-\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Просмотр информации о пакете
 
