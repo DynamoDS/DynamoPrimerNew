@@ -36,7 +36,9 @@ Nachdem wir diese Änderung vorgenommen haben, erhalten wir das gewünschte Verh
 
 Dynamo for Civil 3D ermöglicht die Änderung des vorgegebenen Verhaltens für Objektbindungen über die Einstellungen für **Bindungsdatenspeicherung** im Menü **Dynamo**.
 
-{% hint style="info" %} Beachten Sie, dass die Optionen für die Bindungsdatenspeicherung in **Civil 3D 2022.1** und höher verfügbar sind. {% endhint %}
+{% hint style="info" %}
+Beachten Sie, dass die Optionen für die Bindungsdatenspeicherung in **Civil 3D 2022.1** und höher verfügbar sind.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/c3d-binding-settings (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -46,36 +48,48 @@ Alle Optionen sind vorgabemäßig aktiviert. Hier finden Sie eine Zusammenfassun
 
 Wenn diese Option aktiviert ist, werden die Objekte, die beim letzten Ausführen des Diagramms erstellt wurden, von Dynamo "vergessen". Das Diagramm kann also in jeder beliebigen Zeichnung ausgeführt werden und erstellt jedes Mal neue Objekte.
 
-{% hint style="info" %} **Verwendung** 
+{% hint style="info" %}
+**Verwendung** 
 
-Verwenden Sie diese Option, wenn Dynamo alle Aktionen aus früheren Durchläufen "vergessen" und jedes Mal neue Objekte erstellen soll. {% endhint %}
+Verwenden Sie diese Option, wenn Dynamo alle Aktionen aus früheren Durchläufen "vergessen" und jedes Mal neue Objekte erstellen soll.
+{% endhint %}
 
 ### Option 2: In Diagramm für Dynamo speichern
 
 Diese Option bedeutet, dass Metadaten der Objektbindung in das Diagramm (DYN-Datei) serialisiert werden, wenn es gespeichert wird. Wenn Sie das Diagramm schließen/erneut öffnen und es in **derselben Zeichnung** ausführen, sollte alles wie beim letzten Mal funktionieren. Wenn Sie das Diagramm in einer **anderen Zeichnung** ausführen, werden die Bindungsdaten aus dem Diagramm entfernt und neue Objekte erstellt. Dies bedeutet, dass beim Öffnen der ursprünglichen Zeichnung und erneuten Ausführen des Diagramms neue Objekte zusätzlich zu den alten erstellt werden.
 
-{% hint style="info" %} **Verwendung** 
+{% hint style="info" %}
+**Verwendung** 
 
-Verwenden Sie diese Option, wenn sich Dynamo die Objekte "merken" soll, die beim letzten Ausführen in einer **bestimmten Zeichnung** erstellt wurden. {% endhint %}
+Verwenden Sie diese Option, wenn sich Dynamo die Objekte "merken" soll, die beim letzten Ausführen in einer **bestimmten Zeichnung** erstellt wurden.
+{% endhint %}
 
-{% hint style="warning" %} Diese Option eignet sich am besten für Situationen, in denen eine 1:1-Beziehung zwischen einer **bestimmten Zeichnung** und einem Dynamo-Diagramm beibehalten werden kann. Optionen 1 und 3 eignen sich besser für Diagramme, die für die Ausführung in mehreren Zeichnungen ausgelegt sind. {% endhint %}
+{% hint style="warning" %}
+Diese Option eignet sich am besten für Situationen, in denen eine 1:1-Beziehung zwischen einer **bestimmten Zeichnung** und einem Dynamo-Diagramm beibehalten werden kann. Optionen 1 und 3 eignen sich besser für Diagramme, die für die Ausführung in mehreren Zeichnungen ausgelegt sind.
+{% endhint %}
 
 ### Option 3: In Zeichnung für Dynamo speichern
 
 Dies ähnelt Option 2, mit der Ausnahme, dass die Objektbindungsdaten in der Zeichnung und nicht im Diagramm (DYN-Datei) serialisiert werden. Wenn Sie das Diagramm schließen/erneut öffnen und es in **derselben Zeichnung** ausführen, sollte alles wie beim letzten Mal funktionieren. Wenn Sie das Diagramm in einer **anderen Zeichnung** ausführen, bleiben die Bindungsdaten in der ursprünglichen Zeichnung erhalten, da sie in der Zeichnung und nicht im Diagramm gespeichert werden.
 
-{% hint style="info" %} **Verwendung** 
+{% hint style="info" %}
+**Verwendung** 
 
-Verwenden Sie diese Option, wenn Sie dasselbe Diagramm in **mehreren Zeichnungen** verwenden möchten und Dynamo sich dabei "merken" soll, wie es in jeder Zeichnung dargestellt wurde. {% endhint %}
+Verwenden Sie diese Option, wenn Sie dasselbe Diagramm in **mehreren Zeichnungen** verwenden möchten und Dynamo sich dabei "merken" soll, wie es in jeder Zeichnung dargestellt wurde.
+{% endhint %}
 
 ### Option 4: In Zeichnung für Dynamo Player speichern
 
 Bei dieser Option ist zunächst zu beachten, dass sie keine Auswirkung darauf hat, wie das Diagramm mit der Zeichnung interagiert, wenn das Diagramm über die Dynamo-Hauptbenutzeroberfläche ausgeführt wird. Diese Option ist _nur_ dann relevant, wenn das Diagramm mit Dynamo Player ausgeführt wird.
 
-{% hint style="info" %} Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../dynamo-player.md "mention") weitere Informationen. {% endhint %}
+{% hint style="info" %}
+Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../dynamo-player.md "mention") weitere Informationen.
+{% endhint %}
 
 Wenn Sie das Diagramm über die Dynamo-Hauptbenutzeroberfläche ausführen, es schließen und anschließend mit Dynamo Player ausführen, werden zusätzlich zu den zuvor erstellten Objekten neue Objekte erstellt. Sobald das Diagramm jedoch einmal von Dynamo Player ausgeführt wurde, werden die Objektbindungsdaten in der Zeichnung serialisiert. Wenn Sie das Diagramm also mehrmals mit Dynamo Player ausführen, werden Objekte aktualisiert, statt neue zu erstellen. Wenn Sie das Diagramm mit Dynamo Player in einer **anderen Zeichnung** ausführen, bleiben die Bindungsdaten in der ursprünglichen Zeichnung erhalten, da sie in der Zeichnung und nicht im Diagramm gespeichert werden.
 
-{% hint style="info" %} **Verwendung**
+{% hint style="info" %}
+**Verwendung**
 
-Verwenden Sie diese Option, wenn Sie ein Diagramm mit Dynamo Player über mehrere Zeichnungen hinweg ausführen und Dynamo Player sich dabei "merken" soll, wie es in jeder Zeichnung dargestellt wurde. {% endhint %}
+Verwenden Sie diese Option, wenn Sie ein Diagramm mit Dynamo Player über mehrere Zeichnungen hinweg ausführen und Dynamo Player sich dabei "merken" soll, wie es in jeder Zeichnung dargestellt wurde.
+{% endhint %}
