@@ -2,7 +2,7 @@
 
 V předchozích částech jsme se zabývali podrobnostmi o tom, jak je balíček _MapToSurface_ nastaven pomocí vlastních uzlů a vzorových souborů. Ale jak publikujeme balíček, který byl vyvinut místně? Tato případová studie ukazuje, jak publikovat balíček ze sady souborů v místní složce.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Balíček lze publikovat mnoha způsoby. Níže je popsán proces, který doporučujeme: **publikovat místně, vyvíjet místně a poté publikovat online**. Začneme složkou obsahující všechny soubory v balíčku.
 
@@ -55,7 +55,7 @@ Publikujte balíček kliknutím na tlačítko Publikovat místně (1).. Pokud pr
 
 Po publikování by měly být vlastní uzly dostupné ve skupině DynamoPrimer nebo v knihovně aplikace Dynamo.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Nyní se podívejme na kořenový adresář a uvidíme, jak aplikace Dynamo formátovala balíček, který jsme právě vytvořili. Proveďte to tak, že přejdete na kartu Nainstalované balíčky > vedle položky MapToSurface klikněte na nabídku se svislými tečkami > vyberte možnost Zobrazit kořenový adresář.
 
