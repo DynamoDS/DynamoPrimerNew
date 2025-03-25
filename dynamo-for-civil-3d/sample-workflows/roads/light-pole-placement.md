@@ -29,7 +29,7 @@ Commencez par télécharger les fichiers d’exemple ci-dessous, puis ouvrez le 
  Il est préférable d’enregistrer le fichier Excel dans le même répertoire que le graphique Dynamo. 
 {% endhint %} 
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
