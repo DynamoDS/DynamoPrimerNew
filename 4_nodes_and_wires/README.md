@@ -97,7 +97,7 @@ Souvent, vous souhaitez ajuster le flux du programme dans votre programme visuel
 
 * Pour définir la connexion sur un port d’entrée, cliquez avec le bouton gauche de la souris sur un autre port d’entrée.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Pour supprimer le fil, retirez-le et cliquez avec le bouton gauche de la souris sur l’espace de travail.
 
