@@ -24,7 +24,7 @@ Dynamo 2.0에서는 사전 데이터 유형을 리스트 데이터 유형과 분
 
     ***
 
-\![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
+![](<../images/5-5/1/what is a dictionary - what are the changes (1) (1) (1).jpg>)
 
 ***
 
