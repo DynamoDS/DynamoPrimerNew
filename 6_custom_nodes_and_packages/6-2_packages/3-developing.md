@@ -20,7 +20,7 @@ V aplikaci Dynamo klikněte na položky Balíčky > Package Manager a vyhledej
 
 Po instalaci by měly být vlastní uzly dostupné v části Doplňky > DynamoPrimer.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 S instalovaným balíčkem projdeme to, jak ho nastavit.
 
@@ -30,7 +30,7 @@ Balíček, který vytváříme, používá pět uživatelských uzlů, které js
 
 Toto je jednoduchý balíček s pěti vlastními uzly. V níže uvedených krocích si stručně promluvíme o nastavení jednotlivých vlastních uzlů.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
