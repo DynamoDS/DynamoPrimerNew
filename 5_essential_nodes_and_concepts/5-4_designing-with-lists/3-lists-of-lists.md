@@ -276,7 +276,7 @@ Mając zmodyfikowaną listę, musimy wstawić ją z powrotem do oryginalnej stru
 ![](../images/5-4/3/listoflists-exercisecbinsert\&query05.jpg)
 
 > 1. W analogiczny sposób użyjemy węzła **List.ReplaceItemAtIndex**, aby wstawić naszą listę w miejsce środkowej listy.
-> 2. Węzły **Code Block**__ definiujące indeks tych dwóch węzłów mają numery 1 i 2, co odpowiada oryginalnemu zapytaniu w węźle **Code Block** (_points[1][2]_).
+> 2. Węzły **Code Block** definiujące indeks tych dwóch węzłów mają numery 1 i 2, co odpowiada oryginalnemu zapytaniu w węźle **Code Block** (_points[1][2]_).
 > 3. Po wybraniu listy o _indeksie 1_ zobaczymy tę strukturę danych podświetloną w podglądzie dodatku Dynamo. Pomyślnie scaliliśmy przesunięty punkt z oryginalną strukturą danych.
 
 Istnieją różne sposoby uzyskania powierzchni z tego zestawu punktów. W tym przypadku utworzymy ją przez wyciągnięcie połączonych krzywych.
