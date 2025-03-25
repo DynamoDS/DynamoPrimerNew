@@ -70,7 +70,7 @@ description: suggested exercise
 
 我们将这些节点复制 4 次，以便这些圆定义曲面，更改“Number Slider”的名称，如下所示。
 
-\![](<../images/10-1/1/vase4 (1).png>)
+![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. 圆由圆心和半径创建
 
@@ -92,7 +92,7 @@ description: suggested exercise
 
 我们还要关闭其他节点中的预览，以仅显示“Surface.ByLoft”显示。
 
-\![](<../images/10-1/1/vase6 (1).png>)
+![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\.通过放样平移的圆来创建曲面。
 
