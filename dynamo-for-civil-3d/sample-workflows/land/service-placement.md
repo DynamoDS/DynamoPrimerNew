@@ -18,7 +18,8 @@ Beim technischen Entwurf eines typischen Wohngebäudes werden verschiedene unter
 
 ## Kompatibilität der Versionen
 
-{% hint style="success" %} Dieses Diagramm wird in **Civil 3D 2020** und höher ausgeführt. {% endhint %}
+{% hint style="success" %} Dieses Diagramm wird in **Civil 3D 2020** und höher ausgeführt. 
+{% endhint %} 
 
 ## Datensatz
 
@@ -44,7 +45,9 @@ Los gehts!
 
 Der erste Schritt besteht darin, die Geometrie für die Hauptverteilung in Dynamo zu übernehmen. Anstatt einzelne Linien oder Polylinien auszuwählen, rufen wir stattdessen alle Objekte auf einem bestimmten Layer ab und führen sie als Dynamo-PolyCurve zusammen.
 
-{% hint style="info" %} Wenn die Kurvengeometrie in Dynamo neu für Sie ist, finden Sie im Abschnitt [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") weitere Informationen. {% endhint %}
+{% hint style="info" %}
+ Wenn die Kurvengeometrie in Dynamo neu für Sie ist, finden Sie im Abschnitt [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention") weitere Informationen. 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Abrufen der Objekte aus Civil 3D und Zusammenführen aller Objekte zu einer einzelnen PolyCurve</p></figcaption></figure>
 
@@ -64,7 +67,9 @@ An dieser Stelle tritt möglicherweise ein Problem auf, um das wir uns kümmern 
 
 Jetzt überlegen wir, wo die Zähler platziert werden sollen. In der Regel wird die Platzierung durch die Anforderungen der lokalen Behörden bestimmt, daher geben wir einfach Eingabewerte an, die geändert werden können, um verschiedenen Bedingungen zu entsprechen. Wir verwenden ein **Koordinatensystem** entlang der Parzellenlinie als Referenz für die Erstellung der Punkte. Dadurch können Sie Versätze relativ zur Parzellenlinie ganz einfach definieren, unabhängig von der Ausrichtung.
 
-{% hint style="info" %} Wenn Koordinatensysteme neu für Sie sind, finden Sie im Abschnitt [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") weitere Informationen. {% endhint %}
+{% hint style="info" %}
+ Wenn Koordinatensysteme neu für Sie sind, finden Sie im Abschnitt [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention") weitere Informationen. 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Erstellen der Einfügepunkte für die Zähler</p></figcaption></figure>
 
@@ -99,13 +104,17 @@ Dies ist das Vorgabeverhalten von Dynamo und in vielen Fällen sehr nützlich. M
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Einstellungen für Objektbindung in Dynamo</p></figcaption></figure>
 
-{% hint style="info" %} Weitere Informationen finden Sie im Abschnitt [object-bound.md](../../advanced-topics/object-binding.md "mention") {% endhint %}
+{% hint style="info" %}
+ Weitere Informationen finden Sie im Abschnitt [object-bound.md](../../advanced-topics/object-binding.md "mention") 
+{% endhint %} 
 
 Durch Ändern dieser Einstellung wird Dynamo gezwungen, die Objekte, die mit jedem Durchlauf erstellt werden, zu "vergessen". Hier sehen Sie ein Beispiel für die Ausführung des Diagramms mit deaktivierter Objektbindung in **Dynamo Player**.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Ausführen des Diagramms mit Dynamo Player und Anzeigen der Ergebnisse in Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. {% endhint %}
+{% hint style="info" %}
+ Wenn Dynamo Player neu für Sie ist, finden Sie im Abschnitt [dynamo-player.md](../../dynamo-player.md "mention") weitere Informationen. 
+{% endhint %} 
 
 > :tada: Mission erfüllt!
 
@@ -113,8 +122,14 @@ Durch Ändern dieser Einstellung wird Dynamo gezwungen, die Objekte, die mit jed
 
 Im Folgenden finden Sie einige Anregungen, wie Sie die Funktionen dieses Diagramms erweitern können.
 
-{% hint style="info" %} Platzieren Sie **mehrere Hausanschlüsse** gleichzeitig, anstatt jede Parzellenlinie auszuwählen. {% endhint %}
+{% hint style="info" %}
+ Platzieren Sie **mehrere Hausanschlüsse** gleichzeitig, anstatt jede Parzellenlinie auszuwählen. 
+{% endhint %} 
 
-{% hint style="info" %} Passen Sie die Eingaben an, um **Kanalöffnungen** anstelle von Wasserzählern zu platzieren. {% endhint %}
+{% hint style="info" %}
+ Passen Sie die Eingaben an, um **Kanalöffnungen** anstelle von Wasserzählern zu platzieren. 
+{% endhint %} 
 
-{% hint style="info" %} **Fügen Sie einen Schalter hinzu**, um das Platzieren eines einzelnen Hausanschlusses auf einer bestimmten Seite der Parzellenlinie anstatt auf beiden Seiten zu ermöglichen. {% endhint %}
+{% hint style="info" %}
+ **Fügen Sie einen Schalter hinzu**, um das Platzieren eines einzelnen Hausanschlusses auf einer bestimmten Seite der Parzellenlinie anstatt auf beiden Seiten zu ermöglichen. 
+{% endhint %} 
