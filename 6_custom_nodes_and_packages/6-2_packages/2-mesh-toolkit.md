@@ -2,7 +2,7 @@
 
 Le package Dynamo Mesh Toolkit fournit des outils permettant d'importer des maillages à partir de formats de fichiers externes, de créer un maillage à partir d'objets de géométrie Dynamo et de créer manuellement des maillages à partir de leurs sommets et index. La bibliothèque fournit également des outils permettant de modifier et de réparer les maillages, ainsi que d’extraire des sections horizontales à utiliser lors de la fabrication.
 
-\![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
+![](<../images/6-2/2/meshToolkitcasestudy01 (2).jpg>)
 
 Le package Dynamo Mesh Toolkit s’inscrit dans le cadre des recherches en cours d’Autodesk sur les maillages, et il continuera à évoluer au cours des prochaines années. Attendez-vous à voir apparaître fréquemment de nouvelles méthodes applicables à ce package, et n'hésitez pas à faire parvenir à l'équipe de Dynamo vos commentaires, bogues et suggestions en vue d'intégrer de nouvelles fonctionnalités.
 
