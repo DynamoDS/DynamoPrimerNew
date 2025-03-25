@@ -30,7 +30,7 @@ Najprostszym sposobem bezpośredniego wybrania elementu programu Revit jest _wsk
 
 _Menu rozwijane_ zawierają listę wszystkich dostępnych elementów w projekcie programu Revit. Można ich użyć, aby tworzyć odniesienia do elementów programu Revit, które niekoniecznie są widoczne w widoku. Jest to doskonałe narzędzie do wykonywania zapytań dotyczących istniejących elementów oraz tworzenia nowych w projekcie programu Revit lub edytorze rodzin.
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 Można również wybrać element programu Revit na podstawie określonych poziomów w _hierarchii programu Revit_. Jest to zaawansowana opcja umożliwiająca dostosowywanie dużych zestawów danych w przygotowaniu do tworzenia dokumentacji lub generacyjnego tworzenia i dostosowywania wystąpień.
 
@@ -48,7 +48,7 @@ Pamiętając o trzech powyższych ilustracjach, przejdźmy do ćwiczenia polegaj
 
 Ten plik przykładowy programu Revit zawiera trzy typy elementów prostego budynku. Użyjemy tego przykładu do wybierania elementów programu Revit w kontekście hierarchii programu Revit.
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Bryła budynku
 > 2. Belki (ramy konstrukcyjne)
@@ -81,7 +81,7 @@ Oto alternatywna metoda. W tym przypadku zamiast wybierać za pomocą hierarchii
 
 Za pomocą podstawowych operacji listy można utworzyć zapytanie o interesującą nas ścianę.
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. Najpierw wyprowadź wybrane elementy z wcześniejszego węzła Element.Faces.
 > 2. Następnie w węźle _List.Count_ widzimy, że pracujemy z 23 powierzchniami w ramach bryły.
