@@ -31,7 +31,9 @@
    * 功能：Excel。
    * 如何输入：`import DSOffice`
 
-{% hint style="warning" %} *注意：通过 Python 或 C# 使用 **“ProtoGeometry”** 时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分： **“非托管对象”** 以了解详细信息。{% endhint %}
+{% hint style="warning" %}
+*注意：通过 Python 或 C# 使用 **“ProtoGeometry”** 时，正在创建的是非托管对象，这些对象需要手动对其内存进行管理 - 请参见以下部分： **“非托管对象”** 以了解详细信息。
+{% endhint %}
 
 ## 小心标记
 
