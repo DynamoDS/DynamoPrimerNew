@@ -67,7 +67,7 @@ extra フォルダを開くと、インストール時にダウンロードさ�
 
 ファイルを開いてからソルバで[実行]をクリックすると、展開された球形が表示されます。これらのサンプル ファイルは、新しい Dynamo パッケージの使用方法を理解するのに役立ちます。
 
-\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### パッケージ情報を参照、表示する
 
