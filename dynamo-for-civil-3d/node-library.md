@@ -2,7 +2,9 @@
 
 Wcześniej wspomniano, że **węzły** są podstawowymi elementami wykresu Dynamo i są zorganizowane w logiczne grupy w **bibliotece**. W dodatku Dynamo for Civil 3D w bibliotece znajdują się dwie kategorie (czyli **półki**), które zawierają węzły przeznaczone do pracy z obiektami programów AutoCAD i Civil 3D, takimi jak linie trasowania, profile, korytarze, odniesienia do bloków itp. Pozostała część biblioteki zawiera węzły, które są bardziej ogólne i są spójne we wszystkich „odmianach” dodatku Dynamo (takich jak dodatek Dynamo dla programu Revit, Dynamo Sandbox itp.).
 
-{% hint style="info" %} Aby uzyskać więcej informacji na temat organizacji węzłów w podstawowej bibliotece dodatku Dynamo, skorzystaj z sekcji [2-library.md](../3\_user\_interface/2-library.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Aby uzyskać więcej informacji na temat organizacji węzłów w podstawowej bibliotece dodatku Dynamo, skorzystaj z sekcji [2-library.md](../3\_user\_interface/2-library.md "mention"). 
+{% endhint %} 
 
 <figure><img src="../.gitbook/assets/c3d-node-library.png" alt="" width="563"><figcaption><p>Biblioteka węzłów w dodatku Dynamo for Civil 3D</p></figcaption></figure>
 
@@ -10,11 +12,14 @@ Wcześniej wspomniano, że **węzły** są podstawowymi elementami wykresu Dynam
 > 2. Węzły ogólnego przeznaczenia
 > 3. Węzły z **pakietów** innych producentów, które można zainstalować oddzielnie
 
-{% hint style="warning" %} W przypadku używania węzłów z półek programów AutoCAD i Civil 3D dany wykres dodatku Dynamo będzie działał tylko w dodatku Dynamo for Civil 3D. Jeśli wykres dodatku Dynamo for Civil 3D zostanie otwarty w innym miejscu (na przykład w dodatku Dynamo dla programu Revit), węzły te zostaną oznaczone ostrzeżeniami i nie będą uruchamiane. {% endhint %}
+{% hint style="warning" %} W przypadku używania węzłów z półek programów AutoCAD i Civil 3D dany wykres dodatku Dynamo będzie działał tylko w dodatku Dynamo for Civil 3D. Jeśli wykres dodatku Dynamo for Civil 3D zostanie otwarty w innym miejscu (na przykład w dodatku Dynamo dla programu Revit), węzły te zostaną oznaczone ostrzeżeniami i nie będą uruchamiane. 
+{% endhint %} 
 
-{% hint style="info" %} **Dlaczego istnieją dwie oddzielne półki dla programów AutoCAD i Civil 3D?**
+{% hint style="info" %}
+ **Dlaczego istnieją dwie oddzielne półki dla programów AutoCAD i Civil 3D?**
 
-Ta organizacja pozwala odróżnić węzły dla natywnych obiektów programu AutoCAD (takich jak linie, polilinie, odniesienia do bloków itp.) od węzłów dla obiektów programu Civil 3D (jak linie trasowania, korytarze, powierzchnie itp.). Z technicznego punktu widzenia programy AutoCAD i Civil 3D to dwa oddzielne komponenty: program AutoCAD jest aplikacją bazową, a program Civil 3D jest produktem na niej opartym. {% endhint %}
+Ta organizacja pozwala odróżnić węzły dla natywnych obiektów programu AutoCAD (takich jak linie, polilinie, odniesienia do bloków itp.) od węzłów dla obiektów programu Civil 3D (jak linie trasowania, korytarze, powierzchnie itp.). Z technicznego punktu widzenia programy AutoCAD i Civil 3D to dwa oddzielne komponenty: program AutoCAD jest aplikacją bazową, a program Civil 3D jest produktem na niej opartym. 
+{% endhint %} 
 
 ## Hierarchia węzłów
 
