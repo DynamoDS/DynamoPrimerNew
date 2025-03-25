@@ -6,7 +6,7 @@ Dynamo 2.0 では[Dictionary]カテゴリのさまざまなノードが公開さ
 
 #### Create
 
-1. `Dictionary.ByKeysValues` は、指定した値とキーでディクショナリを作成します。_(項目数は、最短のリストの入力によります)_
+1.`Dictionary.ByKeysValues` は、指定した値とキーでディクショナリを作成します。_(項目数は、最短のリストの入力によります)_
 
 #### Action
 
