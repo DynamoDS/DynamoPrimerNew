@@ -22,7 +22,7 @@
 
 [https://github.com/DynamoDS/Dynamo/wiki](https://github.com/DynamoDS/Dynamo/wiki)
 
-**節點命名標準**提供在 Dynamo 中命名品類、節點以及輸入埠和輸出埠的標準和準則。
+**節點命名標準** 提供在 Dynamo 中命名品類、節點以及輸入埠和輸出埠的標準和準則。
 
 [https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards](https://github.com/DynamoDS/Dynamo/wiki/Naming-Standards)
 
