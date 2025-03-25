@@ -20,10 +20,10 @@ Dynamo 2.0 带有各种词典节点供我们使用。这包括 _创建、操作�
 
 #### 合计
 
-6. `Dictionary.Count` 会告诉您词典中有多少键值对。
+6\. `Dictionary.Count` 会告诉您词典中有多少键值对。
 
-7. `Dictionary.Keys` 会返回当前存储在词典中的键。
+7\. `Dictionary.Keys` 会返回当前存储在词典中的键。
 
-8. `Dictionary.Values` 会返回当前存储在词典中的值。
+8\. `Dictionary.Values` 会返回当前存储在词典中的值。
 
 与词典建立整体关联数据是对使用索引和列表的旧方法的重大替代。
