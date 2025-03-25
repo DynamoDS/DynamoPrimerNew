@@ -18,7 +18,8 @@ Inženýrský návrh typické bytové výstavby zahrnuje práci s několika pod
 
 ## Kompatibilita verzí
 
-{% hint style="success" %} Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. {% endhint %}
+{% hint style="success" %} Tento graf bude funkční v aplikaci **Civil 3D 2020** a vyšších verzích. 
+{% endhint %} 
 
 ## Datová sada
 
@@ -44,7 +45,9 @@ Pojďme na to!
 
 Prvním krokem je získání geometrie rozvodné sítě do aplikace Dynamo. Místo výběru jednotlivých čar nebo křivek získáme všechny objekty v určité hladině a spojíme je dohromady jako objekt PolyCurve aplikace Dynamo.
 
-{% hint style="info" %} Pokud je pro vás geometrie křivek aplikace Dynamo novinkou, přečtěte si část [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Pokud je pro vás geometrie křivek aplikace Dynamo novinkou, přečtěte si část [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Získání objektů z aplikace Civil 3D a jejich spojení do jednoho objektu PolyCurve</p></figcaption></figure>
 
@@ -64,7 +67,9 @@ Musíme se také vypořádat s potenciálním problémem, který může nastat.
 
 Je čas zjistit, kde budou umístěny měřiče služeb. Umístění je obvykle určeno požadavky místních úřadů, takže pouze zadáme vstupní hodnoty, které lze změnit tak, aby vyhovovaly různým podmínkám. Jako referenci pro vytvoření bodů použijeme **souřadnicový systém** podél linie pozemku. To velmi usnadní definování odsazení vzhledem k linii pozemku, bez ohledu na její orientaci.
 
-{% hint style="info" %} Pokud jsou pro vás souřadnicové systémy novinkou, přečtěte si část [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Pokud jsou pro vás souřadnicové systémy novinkou, přečtěte si část [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Vytvoření bodů vložení pro měřiče služeb</p></figcaption></figure>
 
@@ -99,13 +104,17 @@ Toto je výchozí chování aplikace Dynamo, které je v mnoha případech velm
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Nastavení vazby objektů aplikace Dynamo</p></figcaption></figure>
 
-{% hint style="info" %} Další informace naleznete v části [object-binding.md](../../advanced-topics/object-binding.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Další informace naleznete v části [object-binding.md](../../advanced-topics/object-binding.md "mention"). 
+{% endhint %} 
 
 Změna tohoto nastavení způsobí, že aplikace Dynamo „zapomene“ na objekty, které vytvoří při každém spuštění. Zde je příklad spuštění grafu s vypnutou vazbou objektů pomocí **Přehrávače skriptů Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Spuštění grafu pomocí Přehrávače skriptů Dynamo a zobrazení výsledků v aplikaci Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Pokud je pro vás Přehrávač skriptů Dynamo novinkou, přečtěte si část [dynamo-player.md](../../dynamo-player.md "mention"). 
+{% endhint %} 
 
 > :tada: Úkol splněn!
 
@@ -113,8 +122,14 @@ Změna tohoto nastavení způsobí, že aplikace Dynamo „zapomene“ na objekt
 
 Zde je několik nápadů, jak byste mohli rozšířit možnosti tohoto grafu.
 
-{% hint style="info" %} Umístěte **několik servisních přípojek** současně místo výběru jednotlivých linií pozemku. {% endhint %}
+{% hint style="info" %}
+ Umístěte **několik servisních přípojek** současně místo výběru jednotlivých linií pozemku. 
+{% endhint %} 
 
-{% hint style="info" %} Upravte vstupy tak, aby místo vodoměrů byly umístěny **přípojky pro čištění kanalizace** . {% endhint %}
+{% hint style="info" %}
+ Upravte vstupy tak, aby místo vodoměrů byly umístěny **přípojky pro čištění kanalizace** . 
+{% endhint %} 
 
-{% hint style="info" %} **Přidejte přepínač** , který umožní umístit jednu servisní přípojku na určitou stranu linie pozemku místo na obě strany. {% endhint %}
+{% hint style="info" %}
+ **Přidejte přepínač** , který umožní umístit jednu servisní přípojku na určitou stranu linie pozemku místo na obě strany. 
+{% endhint %} 
