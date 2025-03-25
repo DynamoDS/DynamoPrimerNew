@@ -18,7 +18,8 @@ Projekt inżynierski typowego osiedla mieszkaniowego obejmuje pracę z kilkoma i
 
 ## Zgodność wersji
 
-{% hint style="success" %} Ten wykres będzie działać w programie **Civil 3D 2020** i w nowszych wersjach. {% endhint %}
+{% hint style="success" %} Ten wykres będzie działać w programie **Civil 3D 2020** i w nowszych wersjach. 
+{% endhint %} 
 
 ## Zestaw danych
 
@@ -44,7 +45,9 @@ Zacznijmy!
 
 Pierwszym krokiem jest pobranie do dodatku Dynamo geometrii systemu dystrybucji. Zamiast wybierać pojedyncze linie lub polilinie, pobierzemy wszystkie obiekty na określonej warstwie i połączymy je w krzywą PolyCurve dodatku Dynamo.
 
-{% hint style="info" %} Jeśli pierwszy raz masz do czynienia z geometrią krzywej dodatku Dynamo, skorzystaj z sekcji [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Jeśli pierwszy raz masz do czynienia z geometrią krzywej dodatku Dynamo, skorzystaj z sekcji [4-curves.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/4-curves.md "mention"). 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_DistributionMain (1).png" alt=""><figcaption><p>Pobieranie obiektów z programu Civil 3D i łączenie wszystkiego w jedną krzywą PolyCurve</p></figcaption></figure>
 
@@ -64,7 +67,9 @@ Musimy również dodać obsługę potencjalnego problemu. Linia działki ma punk
 
 Nadszedł czas, aby dowiedzieć się, gdzie zostaną umieszczone liczniki. Zazwyczaj położenie jest określane przez wymagania agencji lokalnej, dlatego wprowadzimy tylko wartości wejściowe, które można zmienić, aby odpowiadały różnym warunkom. Użyjemy **układu współrzędnych** wzdłuż linii działki jako odniesienia przy tworzeniu punktów. Ułatwi to zdefiniowanie odsunięć względem linii działki, bez względu na jej orientację.
 
-{% hint style="info" %} Jeśli pierwszy raz masz do czynienia z układami współrzędnych, skorzystaj z sekcji [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Jeśli pierwszy raz masz do czynienia z układami współrzędnych, skorzystaj z sekcji [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). 
+{% endhint %} 
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_InsertionPoints.png" alt=""><figcaption><p>Tworzenie punktów wstawiania dla mierników</p></figcaption></figure>
 
@@ -99,13 +104,17 @@ Jest to domyślne zachowanie dodatku Dynamo, które jest bardzo przydatne w wiel
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Ustawienia wiązania obiektów dodatku Dynamo</p></figcaption></figure>
 
-{% hint style="info" %} Aby uzyskać więcej informacji, skorzystaj z sekcji [object-binding.md](../../advanced-topics/object-binding.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Aby uzyskać więcej informacji, skorzystaj z sekcji [object-binding.md](../../advanced-topics/object-binding.md "mention"). 
+{% endhint %} 
 
 Zmiana tego ustawienia spowoduje, że dodatek Dynamo będzie „zapominać” obiekty tworzone w poszczególnych uruchomieniach. Oto przykład uruchomienia wykresu z wyłączonym wiązaniem obiektów za pomocą **Odtwarzacza Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Land_ServicePlacement_Player (2).gif" alt=""><figcaption><p>Uruchamianie wykresu za pomocą Odtwarzacza Dynamo i wyświetlanie wyników w programie Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Jeśli nie znasz jeszcze Odtwarzacza Dynamo Player, skorzystaj z sekcji [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+ Jeśli nie znasz jeszcze Odtwarzacza Dynamo Player, skorzystaj z sekcji [dynamo-player.md](../../dynamo-player.md "mention"). 
+{% endhint %} 
 
 > :tada: Misja wykonana!
 
@@ -113,8 +122,14 @@ Zmiana tego ustawienia spowoduje, że dodatek Dynamo będzie „zapominać” ob
 
 Oto kilka pomysłów na rozszerzenie możliwości tego wykresu.
 
-{% hint style="info" %} Umieść **wiele połączeń usług** jednocześnie, zamiast zaznaczać każdą linię działki. {% endhint %}
+{% hint style="info" %}
+ Umieść **wiele połączeń usług** jednocześnie, zamiast zaznaczać każdą linię działki. 
+{% endhint %} 
 
-{% hint style="info" %} Dopasuj dane wejściowe, aby zamiast mierników wody umieszczać **odejścia czyszczące**. {% endhint %}
+{% hint style="info" %}
+ Dopasuj dane wejściowe, aby zamiast mierników wody umieszczać **odejścia czyszczące**. 
+{% endhint %} 
 
-{% hint style="info" %} **Dodaj przełącznik**, aby umożliwić umieszczenie pojedynczego połączenia usług po określonej stronie linii działki zamiast po obu stronach. {% endhint %}
+{% hint style="info" %}
+ **Dodaj przełącznik**, aby umożliwić umieszczenie pojedynczego połączenia usług po określonej stronie linii działki zamiast po obu stronach. 
+{% endhint %} 
