@@ -97,7 +97,7 @@ Es kommt häufig vor, dass Sie den Programmablauf in Ihrem visuellen Programm an
 
 * Um die Verbindung zu einem Eingabeanschluss zu ändern, klicken Sie mit der linken Maustaste auf einen anderen Eingabeanschluss.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Um den Draht zu entfernen, ziehen Sie ihn weg und klicken mit der linken Maustaste in den Arbeitsbereich.
 
