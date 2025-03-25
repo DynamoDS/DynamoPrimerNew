@@ -97,7 +97,7 @@ Dynamo は、各ノードのステータスに基づいて異なるカラー ス
 
 * 入力ポートへの接続を変更するには、別の入力ポートを左クリックします。
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * ワイヤを削除するには、ワイヤを入力ポートから離してワークスペースを左クリックします。
 
