@@ -24,7 +24,7 @@
 
 まず、以下のサンプル ファイルをダウンロードし、DWG ファイルと Dynamo グラフを開きます。
 
-{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope (1).dyn" %}
+{% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dyn" %}
 
 {% file src="../../../.gitbook/assets/Rail_ClearanceEnvelope.dwg" %}
 
