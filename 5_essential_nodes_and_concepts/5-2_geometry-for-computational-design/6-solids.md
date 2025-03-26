@@ -39,7 +39,9 @@ Le operazioni booleane sono complesse e possono essere lente da calcolare. È po
 >
 > 4\. Tutti i nodi interessati e le anteprime della geometria associata verranno aggiornati e ripristineranno la modalità di anteprima standard.
 
-{% hint style="info" %} YÈ possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+YÈ possibile leggere ulteriori informazioni sul congelamento dei nodi nella sezione [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention").
+{% endhint %}
 
 ## Approfondimento su...
 
