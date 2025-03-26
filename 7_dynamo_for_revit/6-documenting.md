@@ -65,7 +65,7 @@ La configuración de la relación de apertura no demuestra claramente la desviac
 
 ![](images/6/documenting-exerciseII-02.jpg)
 
-> 1. Mediante _Math.RemapRange_, vuelva a asignar los valores de desviación plana a un rango entre* 0* y _1_ (también puede utilizar el nodo _"MapTo"_ para definir un dominio de origen).
+> 1. Mediante _Math.RemapRange_, vuelva a asignar los valores de desviación plana a un rango entre *0* y _1_ (también puede utilizar el nodo _"MapTo"_ para definir un dominio de origen).
 > 2. Conecte los resultados en un nodo _Color Range_.
 > 3. Observe que nuestra salida es un rango de colores en lugar de un rango de números.
 > 4. Si se ha establecido la opción Manual, pulse _Ejecutar_. A partir de este momento, todo debería funcionar según lo esperado estableciendo la opción Automático.

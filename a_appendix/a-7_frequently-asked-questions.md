@@ -85,7 +85,7 @@ Una vez instalado el tiempo de ejecución, los siguientes componentes de Dynamo 
 
 
 ##### Incidencias de los nodos de Excel de Dynamo
-Puede consultar este [artículo](https://knowledge.autodesk.com/support/revit-products/troubleshooting/caas/sfdcarticles/sfdcarticles/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html) para obtener diagnósticos.
+Puede consultar este [artículo](https://www.autodesk.com/es/support/technical/article/caas/sfdcarticles/sfdcarticles/ESP/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html) para obtener diagnósticos.
 
 ### Ubicación de compilaciones de Dynamo
 Versiones estables

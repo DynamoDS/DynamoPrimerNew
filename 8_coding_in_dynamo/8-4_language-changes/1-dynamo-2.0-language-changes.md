@@ -16,7 +16,7 @@ La sección Cambios en el lenguaje proporciona una descripción general de las a
 
 4. Desactivación de la promoción de matriz con guías de replicación
 
-5. Convertir las variables de los bloques imperativos en locales al ámbito del bloque imperativo
+5. Conversión de las variables de los bloques imperativos en locales al ámbito del bloque imperativo
 * Los valores de variable definidos dentro de los bloques de código imperativo no se verán alterados por los cambios realizados dentro de los bloques imperativos que hacen referencia a ellos.  
 
 6. Conversión de las variables en inmutables para desactivar la actualización asociativa en los nodos de bloque de código
@@ -81,14 +81,14 @@ Si el usuario coloca el primer nodo en el lienzo y conecta una lista de geometr�
  
 En la versión 2.0, no se permiten las funciones sobrecargadas que solo difieren en la cardinalidad de los parámetros por este motivo. Esto significa que, para las funciones sobrecargadas que tienen el mismo número y tipo de parámetros, pero que tienen uno o más parámetros que difieren solo en el rango, la sobrecarga que se define primero siempre se impone, mientras que el resto las descarta el compilador. La principal ventaja de realizar esta simplificación es la de simplificar la lógica de resolución del método al tener una ruta rápida para seleccionar las funciones candidatas.
 
-En la biblioteca de geometría de la versión 2.0, la primera sobrecarga del ejemplo d `BoundingBox.ByGeometry` quedó obsoleta y la segunda se conservó, por lo que si el nodo estuviera destinado a replicarse, es decir, a usarse en el contexto de la primera, tendría que usarse con la opción de encaje más corta (o más larga), o en un bloque de código con guías de replicación: 
+En la biblioteca de geometría de la versión 2.0, la primera sobrecarga del ejemplo d `BoundingBox.ByGeometry` se retiró y la segunda se conservó, por lo que si el nodo estuviera destinado a replicarse, es decir, a usarse en el contexto de la primera, tendría que usarse con la opción de encaje más corta (o más larga), o en un bloque de código con guías de replicación: 
 ```
 BoundingBox.ByGeometry(geometry<1>);
 ```
 Podemos ver en este ejemplo que el nodo de mayor rango se puede usar tanto en una llamada replicada como en una no replicada y, por lo tanto, siempre se prefiere a una sobrecarga de menor rango. Por lo tanto, como regla general, **siempre se recomienda a los autores de nodos que descarten las sobrecargas de menor rango en favor de los métodos de mayor rango**, de modo que el compilador de DesignScript siempre llame al método de mayor rango al ser el primero y único que encuentra.
 
 ### Ejemplos:
-En el ejemplo siguiente, se han definido dos sobrecargas de la función `foo`. En las versiones 1.x, no está claro qué sobrecarga se ejecuta en tiempo de ejecución. El usuario podría esperar que se ejecute el segundo `foo(a:int, b:int)` de sobrecarga, en cuyo caso, se esperaría que el método se replicara tres veces y devolviese un valor de `10` tres veces. En realidad, lo que se devuelve es un único valor de `10`, ya que lo que se invoca es la primera sobrecarga con el parámetro list.
+En el ejemplo siguiente, se han definido dos sobrecargas de la función `foo`. En las versiones 1.x, no está claro qué sobrecarga se ejecuta en tiempo de ejecución. El usuario podría esperar que se ejecute`foo(a:int, b:int)` de la segunda sobrecarga, en cuyo caso se esperaría que el método se replicara tres veces y devolviese un valor de `10` tres veces. En realidad, lo que se devuelve es un único valor de `10`, ya que lo que se invoca es la primera sobrecarga con el parámetro list.
 
 ### La segunda sobrecarga se omite en 2.0:
 En la versión 2.0, siempre se elige el primer método definido sobre el resto. Se hace valer el orden de llegada.
@@ -135,7 +135,7 @@ Con los métodos estáticos, la resolución del método en tiempo de ejecución 
 La semántica de `foo.Bar()` (método de ejemplar) debe verificar el tipo de `foo` y también comprobar si es una lista o no y, luego, compararlo con las funciones candidatas. Esto es mucho trabajo. Por otro lado, la semántica de `Foo.Bar(foo)` (método estático) solo necesita verificar una función con el tipo de parámetro `foo`.
 
 Esto es lo que sucede en la versión 2.0:
-* Un nodo de propiedad de la interfaz de usuario se compila en un getter estático: el motor genera una versión estática de un getter para cada propiedad. Por ejemplo, un nodo `Point.X` se compila en un getter estático `Point.get_X(pt)`. Tenga en cuenta que también se puede llamar al getter estático mediante su alias: `Point.X(pt)` en un nodo de bloque de código.
+* Un nodo de propiedad de la interfaz de usuario se compila en un getter estático: el motor genera una versión estática de un getter para cada propiedad. Por ejemplo, un nodo `Point.X` se compila en un captador estático `Point.get_X(pt)`. Tenga en cuenta que también se puede llamar al getter estático mediante su alias: `Point.X(pt)` en un nodo de bloque de código.
 * Un nodo de método de interfaz de usuario se compila en la versión estática: el motor genera el método estático correspondiente para el nodo. Por ejemplo, el nodo `Curve.PointAtParameter` se compila en `Curve.PointAtParameter(curve: Curve, parameter:double)` en lugar de `curve.PointAtParameter(parameter)`. 
 
 **Nota:** No hemos eliminado la compatibilidad con el método de ejemplar con este cambio, por lo que los métodos de ejemplar existentes utilizados en CBN, como `pt.X` y `curve.PointAtParameter(parameter)` en los ejemplos anteriores, seguirán funcionando.
@@ -164,7 +164,7 @@ Consideremos un ejemplo de nodos `TSpline` en `ProtoGeometry` (tenga en cuenta q
 
 ![](../images/8-4/1/lang2_7.png)
 
-Por su parte, el nuevo comportamiento estático se veía forzado a llamar al método de clase base, `Topology.Edges`. De este modo, este nodo devolvió objetos `Edge` de clase base en lugar de los objetos de clase derivados de tipo `TSplineEdge`.
+Por su parte, el nuevo comportamiento estático se veía forzado a llamar al método de clase base, `Topology.Edges`. De este modo, este nodo devolvió objetos `Edge` de clase base en lugar de los objetos de clase derivada de tipo `TSplineEdge`.
  
 ![](../images/8-4/1/lang2_8.png)
 
@@ -314,9 +314,9 @@ En este ejemplo de geometría, dado que el valor `b` del cubo depende de sí mis
 2: x = foo(5);                         // first definition of “foo” called
 3: def foo(v: int) { return v * 3; }   // overload of “foo” defined, will x update?
 ```
-A partir de la experiencia, hemos comprobado que la actualización asociativa no resulta útil en los nodos de bloque de código dentro de un contexto de gráfico de flujo de datos basado en nodos. Antes de que estuviesen disponibles los entornos de programación visual, la única forma de explorar las opciones era cambiar explícitamente los valores de algunas de las variables en el programa. Los programas basados en texto mantienen un historial completo de las actualizaciones de una variable, mientras que en un entorno de programación visual, solo se muestra el último valor de una variable. 
+A partir de la experiencia, hemos comprobado que la actualización asociativa no resulta útil en los nodos de bloque de código dentro de un contexto de gráfico de flujo de datos basado en nodos. Antes de que estuviesen disponibles los entornos de programación visual, la única forma de explorar las opciones era cambiar explícitamente los valores de algunas de las variables en el programa. Los programas basados en texto mantienen un historial completo de las actualizaciones de una variable, mientras que, en un entorno de programación visual, solo se muestra el último valor de una variable. 
 
-Si lo ha utilizado algún usuario, lo más probable es que haya sido sin saberlo, lo que provoca más daño que beneficio. Por lo tanto, en la versión 2.0, decidimos ocultar la asociatividad en el uso de nodos de bloque de código haciendo que las variables sean inmutables, mientras que seguimos conservando la actualización asociativa solo como característica nativa del motor DS." Este es otro cambio realizado con la idea de simplificar la experiencia del usuario a la hora de crear secuencias de comandos.
+Si lo ha utilizado algún usuario, lo más probable es que haya sido sin saberlo, lo que provoca más daño que beneficio. Por lo tanto, en la versión 2.0, decidimos ocultar la asociatividad en el uso de nodos de bloque de código haciendo que las variables sean inmutables, mientras que seguimos conservando la actualización asociativa solo como característica nativa del motor DS. Este es otro cambio realizado con la idea de simplificar la experiencia del usuario a la hora de crear secuencias de comandos.
 
 **La actualización asociativa se ha deshabilitado en los CBN al impedir la redefinición de variables:** ![](../images/8-4/1/lang2_17.png)
 
@@ -445,7 +445,7 @@ Por ejemplo, podría haber otros casos, como esta sentencia, en los que sería d
 ```
 dict = {["foo", "bar"] : "baz" };
 ```
-Añadir más sintaxis de guía de replicación, etc. a la mezcla, no solo identificadores, iría en contra de la idea de simplificar el lenguaje. 
+Añadir más sintaxis de guía de replicación, etc., a la mezcla, no solo identificadores, iría en contra de la idea de simplificar el lenguaje. 
 
 _Podríamos_ ampliar las claves del diccionario para admitir expresiones arbitrarias en el futuro, pero también tendremos que asegurarnos de que la interacción con otras características del lenguaje sea coherente e inteligible a costa de añadir complejidad en lugar de hacer que el sistema sea un poco menos potente pero simple de entender. Siempre hay una forma alternativa de abordar esto mediante el uso del método `Dictionary.ByKeysValues(keyList, valueList)`, lo cual no es tan exagerado.
 
@@ -471,7 +471,7 @@ __3\. El diccionario de Dynamo se puede transferir como entrada al nodo Zero-Tou
 
 ### Vista preliminar de diccionario en nodos de retorno múltiple
 
-Los diccionarios son pares clave-valor sin ordenar. De acuerdo con esta idea, no se garantiza que las vistas previas de los pares clave-valor de los nodos que devuelven diccionarios se ordenen en el orden de los valores devueltos por los nodos. 
+Los diccionarios son pares clave-valor sin ordenar. De acuerdo con esta idea, no se garantiza que las vistas previas de los pares clave-valor de los nodos que devuelven diccionarios sigan el orden de los valores devueltos por los nodos. 
 
 Sin embargo, hemos hecho una excepción con los nodos de retorno múltiple que tienen definidos `MultiReturnAttribute`. En el siguiente ejemplo, el nodo `DateTime.Components` es un nodo de "retorno múltiple" y la vista preliminar del nodo refleja sus pares clave-valor para que estén en el mismo orden que el de los puertos de salida del nodo, que también es el orden en que se especifican las salidas en función de los `MultiReturnAttribute` en la definición del nodo.
 

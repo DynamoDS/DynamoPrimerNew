@@ -54,7 +54,7 @@ Una acción es algo que se hace a un objeto de un tipo concreto. Dynamo utiliza 
 ![](../images/8-1/2/DesignScript-action.jpg)
 
 > 1. El nodo **Point.Add** es un nodo de acción, por lo que la sintaxis funciona de forma algo distinta.
-> 2. Las entradas son (1) el _punto_ y (2) el _vector_ que añadir. En un **bloque de código**, hemos designado al punto (el elemento) _"pt"_. Para añadir un vector denominado *"vec" *a _"pt"_, escribimos _pt.Add(vec)_, o elemento, punto, acción. La acción Add (añadir) solo tiene una entrada o todas las entradas del nodo **Point.Add** menos la primera. La primera entrada del nodo **Point.Add** es el punto en sí.
+> 2. Las entradas son (1) el _punto_ y (2) el _vector_ que añadir. En un **bloque de código**, hemos designado al punto (el elemento) _"pt"_. Para añadir un vector denominado *"vec"* a _"pt"_, escribimos _pt.Add(vec)_, o elemento, punto, acción. La acción Add (añadir) solo tiene una entrada o todas las entradas del nodo **Point.Add** menos la primera. La primera entrada del nodo **Point.Add** es el punto en sí.
 
 #### Consulta
 

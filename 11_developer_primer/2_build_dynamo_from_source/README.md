@@ -4,7 +4,7 @@ El código fuente de Dynamo está alojado en GitHub para que cualquiera pueda cl
 
 ### Ubicación de los repositorios de Dynamo en GitHub <a href="#locating-the-dynamo-repositories-on-github" id="locating-the-dynamo-repositories-on-github"></a>
 
-GitHub es un servicio de alojamiento basado en [git](https://help.github.com/articles/git-and-github-learning-resources/), un sistema de control de versiones para el seguimiento de cambios y la coordinación del trabajo entre personas. Git es una herramienta que podemos aprovechar para descargar los archivos de código fuente de Dynamo y mantenerlos actualizados con unos pocos comandos. Este método evitará el trabajo innecesario e intrínsecamente engorroso de descargar y sustituir manualmente los archivos de código fuente en cada actualización. El sistema de control de versiones de git identificará cualquier diferencia entre un repositorio de código local y uno remoto.
+GitHub es un servicio de alojamiento basado en [git](https://docs.github.com/es/get-started/quickstart/git-and-github-learning-resources), un sistema de control de versiones para el seguimiento de cambios y la coordinación del trabajo entre personas. Git es una herramienta que podemos aprovechar para descargar los archivos de código fuente de Dynamo y mantenerlos actualizados con unos pocos comandos. Este método evitará el trabajo innecesario e intrínsecamente engorroso de descargar y sustituir manualmente los archivos de código fuente en cada actualización. El sistema de control de versiones de git identificará cualquier diferencia entre un repositorio de código local y uno remoto.
 
 El código fuente de Dynamo está alojado en el GitHub de DynamoDS, en este repositorio: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo).
 
@@ -18,7 +18,7 @@ El código fuente de Dynamo está alojado en el GitHub de DynamoDS, en este repo
 
 ### Extracción del repositorio de Dynamo mediante git <a href="#pulling-the-dynamo-repository-using-git" id="pulling-the-dynamo-repository-using-git"></a>
 
-Antes de poder clonar el repositorio, debemos instalar git. Siga esta [breve guía](https://help.github.com/articles/set-up-git/#setting-up-git) para conocer los pasos de instalación y cómo configurar un nombre de usuario y una dirección de correo electrónico de GitHub. En este ejemplo, utilizaremos git en la línea de comando. En esta guía, se presupone que utilizará Windows, pero también puede usar git en Mac o Linux para clonar el código fuente de Dynamo.
+Antes de poder clonar el repositorio, debemos instalar git. Siga esta [breve guía](https://docs.github.com/es/get-started/quickstart/set-up-git#setting-up-git) para conocer los pasos de instalación y cómo configurar un nombre de usuario y una dirección de correo electrónico de GitHub. En este ejemplo, utilizaremos git en la línea de comando. En esta guía, se presupone que utilizará Windows, pero también puede usar git en Mac o Linux para clonar el código fuente de Dynamo.
 
 Necesitamos una dirección URL desde la que clonar el repositorio de Dynamo. Para obtenerla, se puede utilizar el botón para clonar o descargar de la página del repositorio. Copie la dirección URL para pegarla en la solicitud de comando.
 
@@ -52,7 +52,7 @@ Sabemos que git funciona sin problemas si la operación de clonación se ha comp
 Ahora que los archivos de código fuente se han clonado en el equipo local, podemos compilar un archivo ejecutable para Dynamo. Para ello, debemos configurar el IDE de Visual Studio y garantizar que .NET Framework y DirectX estén instalados.
 
 * Descargue e instale [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results), un IDE (entorno de desarrollo integrado) gratuito con todas las funciones (también se pueden utilizar las versiones posteriores).
-* Descargue e instale [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) o una versión posterior.
+* Descargue e instale [Microsoft .NET Framework 4.5](https://www.microsoft.com/es-es/download/details.aspx?id=30653) o una versión posterior.
 * Instale Microsoft DirectX desde el repositorio local de Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`).
 
 > Es posible que .NET y DirectX ya estén instalados.
@@ -98,7 +98,7 @@ Para obtener instrucciones sobre la compilación de Dynamo para otras plataforma
 
 ### Depuración de una compilación local mediante Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-La depuración es un proceso de identificación, aislamiento y corrección de errores o problemas. Una vez que Dynamo se haya creado correctamente a partir del código fuente, podemos utilizar varias herramientas de Visual Studio para depurar una aplicación en ejecución, por ejemplo, el complemento DynamoRevit. Podemos analizar su código fuente para encontrar la raíz de un problema u observar el código que se está ejecutando en ese momento. Para obtener una explicación más detallada sobre cómo desplazarse por el código en Visual Studio y cómo depurarlo, consulte la [documentación de Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+La depuración es un proceso de identificación, aislamiento y corrección de errores o problemas. Una vez que Dynamo se haya creado correctamente a partir del código fuente, podemos utilizar varias herramientas de Visual Studio para depurar una aplicación en ejecución, por ejemplo, el complemento DynamoRevit. Podemos analizar su código fuente para encontrar la raíz de un problema u observar el código que se está ejecutando en ese momento. Para obtener una explicación más detallada sobre cómo desplazarse por el código en Visual Studio y cómo depurarlo, consulte la [documentación de Visual Studio](https://docs.microsoft.com/es-es/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 Para la aplicación de Dynamo independiente, DynamoSandbox, se abordarán estas dos opciones de depuración:
 

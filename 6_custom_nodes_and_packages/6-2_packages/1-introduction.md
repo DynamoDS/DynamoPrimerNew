@@ -136,7 +136,7 @@ Si bien el escenario planteado funciona correctamente para paquetes que contenga
 
 #### Solución alternativa
 
-Una posible solución alternativa es utilizar una unidad de red asignada que apunte a la ubicación de la red y hacer que las estaciones de trabajo hagan referencia a esa ruta. Los pasos para crear una unidad de red asignada se describen [aquí](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+Una posible solución alternativa es utilizar una unidad de red asignada que apunte a la ubicación de la red y hacer que las estaciones de trabajo hagan referencia a esa ruta. Los pasos para crear una unidad de red asignada se describen [aquí](https://support.microsoft.com/es-es/help/4026635/windows-10-map-a-network-drive).
 
 ### Más detalles sobre los paquetes
 

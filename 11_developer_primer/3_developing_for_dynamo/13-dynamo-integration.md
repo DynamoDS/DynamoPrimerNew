@@ -331,7 +331,7 @@ Para crear la `DynamoView`, todo lo que se requiere es el `DynamoViewModel`. La 
 
  ### Ejemplo de DynamoSandbox.exe:
 
- DynamoSandbox.exe es un entorno de desarrollo para probar y utilizar DynamoCore y experimentar con él. Es un excelente ejemplo para ver cómo se cargan y se configuran los componentes `DynamoCore` y `DynamoCoreWPF`. Puede ver algunos de los puntos de entrada [aquí](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37)
+ DynamoSandbox.exe es un entorno de desarrollo para probar y utilizar DynamoCore y experimentar con él. Es un excelente ejemplo para ver cómo se cargan y se configuran los componentes `DynamoCore` y `DynamoCoreWPF`. Puede ver algunos de los puntos de entrada [aquí](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37).
 
  ## Enlace y seguimiento de elementos
 
@@ -495,9 +495,9 @@ Esta es la configuración aproximada:
 
 Se importa un `TraceExampleWrapper` de clase de utilidad estática como un nodo en Dynamo. Contiene un único método `ByString` que crea `TraceExampleItem`. Son objetos de .net normales que contienen una propiedad `description`.
 
-Cada `TraceExampleItem` se serializa en un seguimiento representado con un `TraceableId`; se trata simplemente de una clase que contiene un `IntId` que está marcado como `[Serializeable]` para que se pueda serializar con el formateador `SOAP`. Consulte la información mostrada [aquí](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8) para obtener más información sobre el atributo serializable.
+Cada `TraceExampleItem` se serializa en un seguimiento representado con un `TraceableId`; se trata simplemente de una clase que contiene un `IntId` que está marcado como `[Serializeable]` para que se pueda serializar con el formateador `SOAP`. Consulte la información mostrada [aquí](https://docs.microsoft.com/es-es/dotnet/api/system.serializableattribute?view=netframework-4.8) para obtener más información sobre el atributo serializable.
 
-También debe implementar la interfaz de `ISerializable` definida [aquí](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8).
+También debe implementar la interfaz de `ISerializable` definida [aquí](https://docs.microsoft.com/es-es/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8).
 
 
 ``` c#
@@ -753,7 +753,7 @@ Si, por alguna razón, el paquete también necesita publicarse en Package Manage
 
 Estos subdirectorios de localización se cargan sin incidencias mediante el tiempo de ejecución de .net si se encuentran en el mismo directorio que los archivos binarios de nodo/extensión.
 
-Para obtener más información sobre los montajes de recursos y los archivos .resx, consulte [https://docs.microsoft.com/es-es/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+Para obtener más información sobre los montajes de recursos y los archivos .resx, consulte [https://docs.microsoft.com/es-es/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/es-es/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 Es probable que cree los archivos `.resx` y los compile con Visual Studio. Para un `xyz.dll` de montaje determinado, los recursos resultantes se compilarán en un nuevo montaje `xyz.resources.dll` (como se ha descrito anteriormente); la ubicación y el nombre de este montaje son importantes.
 

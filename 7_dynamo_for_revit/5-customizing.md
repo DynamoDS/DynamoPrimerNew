@@ -58,7 +58,7 @@ Esta rejilla de puntos sirve como puntos de control para una superficie definida
 
 ![](./images/5/customizing-exercise05.jpg)
 
-> 1. Ahora tenemos una lista de valores tal y como los define el algoritmo. Usaremos esta lista de valores para mover los puntos hacia arriba en la dirección _+Z_. Con _Geometry.Translate_, conecte el *bloque de código *a _zTranslation_ y el nodo _Surface.PointAtParameter_ a la entrada _geometry_. Deben aparecer los nuevos puntos en la vista preliminar de Dynamo.
+> 1. Ahora tenemos una lista de valores tal y como los define el algoritmo. Usaremos esta lista de valores para mover los puntos hacia arriba en la dirección _+Z_. Con _Geometry.Translate_, conecte el *bloque de código* a _zTranslation_ y el nodo _Surface.PointAtParameter_ a la entrada _geometry_. Deben aparecer los nuevos puntos en la vista preliminar de Dynamo.
 > 2. Por último, creamos una superficie con el nodo _NurbsSurface.ByPoints_ y conectamos el nodo del paso anterior a la entrada points. Ya tenemos una superficie paramétrica. Puede arrastrar el control deslizante para reducir o aumentar el relieve.
 
 Con la superficie paramétrica, vamos a definir un método para dividirla en paneles y crear la matriz de componentes adaptativos de cuatro puntos. Dynamo no dispone de funciones predefinidas para la división en paneles de las superficies, por lo que podemos buscar en la comunidad paquetes de Dynamo útiles.

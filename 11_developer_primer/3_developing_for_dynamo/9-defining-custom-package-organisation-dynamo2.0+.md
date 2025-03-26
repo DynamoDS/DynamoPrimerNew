@@ -40,7 +40,7 @@ public ButtonCustomNodeModel()
 }
 ```
 
-El nodo ahora se encontrará en Complementos en:
+El nodo ahora se encontrará en Add-ons en:
 ```
 NewSampleLibraryUI/Examples/MyNodeModel
 ```
@@ -126,7 +126,7 @@ El nombre de categoría se puede actualizar posteriormente en el archivo .dyf (X
 
 ## Estrategias para la migración de nodos de paquete
 
-Cuando un autor de un paquete decide cambiar el nombre de un nodo existente anteriormente en una nueva versión, debe proporcionar un medio para migrar los gráficos que contengan nodos con los nombres antiguos. Esto se puede lograr de las siguientes maneras...
+Cuando el autor de un paquete decide cambiar el nombre de un nodo existente anteriormente en una nueva versión, debe proporcionar un medio para migrar los gráficos que contengan nodos con los nombres antiguos. Esto se puede lograr de las siguientes maneras...
 
 Los nodos **ZeroTouch** utilizan un archivo `Namespace.Migrations.XML` ubicado en la carpeta `bin` de los paquetes, como por ejemplo:
 

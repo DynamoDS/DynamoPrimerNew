@@ -65,7 +65,7 @@ Este es un desglose de los vectores en sus diferentes partes mediante la misma n
 ![Vector](../images/5-2/2/Vector.jpg)
 
 > 1. El **punto inicial** del vector se denomina **base**.
-> 2. El **punto final **del vector se denomina **punta** o **sentido**.
+> 2. El **punto final** del vector se denomina **punta** o **sentido**.
 > 3. El vector AB no es igual al vector BA, que señalaría la dirección opuesta.
 
 Si desea ver un momento cómico en relación con los vectores (y su definición abstracta), eche un vistazo al clásico de la comedia "Aterriza como puedas" y escuche la siguiente línea de diálogo burlona bastante citada:

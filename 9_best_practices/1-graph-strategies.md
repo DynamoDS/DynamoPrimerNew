@@ -10,9 +10,9 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 
 ### **Modularidad con grupos**
 
-* Los grupos permiten **crear partes con diferentes funciones** a medida que se genera un programa
-* Los grupos permiten **desplazar grandes partes del programa** sin perder la modularidad y la alineación
-* Puede cambiar el **color del grupo para diferenciar** su finalidad (entradas y funciones)
+* Los grupos permiten **crear partes con diferentes funciones** a medida que se genera un programa.
+* Los grupos permiten **desplazar grandes partes del programa** sin perder la modularidad y la alineación.
+* Puede cambiar el **color del grupo para diferenciar** su finalidad (entradas y funciones).
 * Puede utilizar grupos para empezar a **organizar el gráfico a fin de simplificar la creación de nodos personalizados**.
 
 ![](images/1/graphstrategy2.png)
@@ -42,7 +42,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 ### **Condensación con de nodo a código**
 
 * Puede **reducir la complejidad de un gráfico mediante el método de nodo a código**, que utilizará una colección de nodos sencillos y escribirá la secuencia DesignScript correspondiente en un único bloque de código.
-* El método de nodo a código** permite condensar código sin que el programa pierda claridad**.
+* El método de nodo a código **permite condensar código sin que el programa pierda claridad**.
 * A continuación, se indican las **ventajas** de utilizar el método de nodo a código:
   * Condensa el código fácilmente en un componente que aún puede editarse.
   * Puede simplificar una parte significativa del gráfico.
@@ -63,7 +63,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 ### **Acceso a los datos de forma flexible con List@Level**
 
 * El uso de List@Level puede ayudarle a **reducir la complejidad del gráfico mediante la sustitución de los nodos List.Map y List.Combine**, que pueden ocupar una cantidad considerable de espacio en el lienzo.
-* List@Level proporciona un** método más rápido que List.Map/List.Combine para crear una lógica de nodo**, lo que permite acceder a los datos de cualquier nivel de una lista directamente desde el puerto de entrada de un nodo
+* List@Level proporciona un **método más rápido que List.Map/List.Combine para crear una lógica de nodo**, lo que permite acceder a los datos de cualquier nivel de una lista directamente desde el puerto de entrada de un nodo
 
 \![](<images/1/graphstrategy4 (1).png>)
 
@@ -122,7 +122,7 @@ Al crear la secuencia de comandos visual, es importante comprobar que se devuelv
 
 ### **Supervisión de datos con burbujas de visualización y vista preliminar**
 
-* Utilice las burbujas de visualización y vista preliminar al crear el programa para** comprobar que las salidas clave devuelvan lo que esperaba**.
+* Utilice las burbujas de visualización y vista preliminar al crear el programa para **comprobar que las salidas clave devuelvan lo que esperaba**.
 
 ![](images/1/graphstrategy8.png)
 

@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-La secuencia de comandos de Python devuelve la variable `output`, lo que significa que necesitaremos una variable `output` en la secuencia de comandos de Python. Utilice esta secuencia de comandos de ejemplo para probar el nodo en Dynamo. Si alguna vez ha utilizado el nodo de Python en Dynamo, debería resultarle familiar lo siguiente. Para obtener más información, consulte la [sección sobre Python de Dynamo Primer](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html).
+La secuencia de comandos de Python devuelve la variable `output`, lo que significa que necesitaremos una variable `output` en la secuencia de comandos de Python. Utilice esta secuencia de comandos de ejemplo para probar el nodo en Dynamo. Si alguna vez ha utilizado el nodo de Python en Dynamo, debería resultarle familiar lo siguiente. Para obtener más información, consulte la [sección sobre Python de Dynamo Primer](https://primer2.dynamobim.org/v/es/8_coding_in_dynamo/8-3_python).
 
 ```
 import clr

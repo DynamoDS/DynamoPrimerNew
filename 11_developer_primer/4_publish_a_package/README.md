@@ -2,7 +2,7 @@
 
 ### Publicar un paquete <a href="#publish-a-package" id="publish-a-package"></a>
 
-Los paquetes permiten almacenar y compartir de forma cómoda nodos con la comunidad de Dynamo. Un paquete puede contener todo tipo de elementos, desde nodos personalizados creados en el espacio de trabajo de Dynamo hasta nodos derivados de NodeModel. Los paquetes se publican y se instalan mediante Package Manager. Además de esta página, [Dynamo Primer](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) incluye una guía general sobre los paquetes.
+Los paquetes permiten almacenar y compartir de forma cómoda nodos con la comunidad de Dynamo. Un paquete puede contener todo tipo de elementos, desde nodos personalizados creados en el espacio de trabajo de Dynamo hasta nodos derivados de NodeModel. Los paquetes se publican y se instalan mediante Package Manager. Además de esta página, [Dynamo Primer](https://primer2.dynamobim.org/v/es/6_custom_nodes_and_packages/6-2_packages/1-introduction) incluye una guía general sobre los paquetes.
 
 #### ¿Qué es Package Manager? <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 
@@ -14,9 +14,9 @@ En el navegador, busque paquetes y vea estadísticas. Para ello, visite [https:/
 
 ![Búsqueda de paquetes](images/dynamopackagemanager.jpg)
 
-> 1. Busque paquetes en línea mediante `Packages > Search for a Package...`.
-> 2. Vea o edite los paquetes instalados mediante `Packages > Manage Packages...`.
-> 3. Publique un nuevo paquete `Packages > Publish New Package...`.
+> 1. Busque paquetes en línea mediante `Packages > Search for a Package...`
+> 2. Vea o edite los paquetes instalados mediante `Packages > Manage Packages...`
+> 3. Publique un nuevo paquete `Packages > Publish New Package...`
 
 #### Publicación de un paquete <a href="#publishing-a-package" id="publishing-a-package"></a>
 
@@ -80,7 +80,7 @@ Los autores pueden editar la descripción del paquete, el enlace al sitio web y 
 > 3. Actualice la **Descripción del paquete** según sea necesario.  
 > 4. Haga clic en **Guardar cambios** para aplicar las actualizaciones.  
 
- **Nota**: Las actualizaciones pueden tardar hasta 15 minutos en actualizarse en Package Manager dentro de Dynamo, ya que las actualizaciones del servidor llevan cierto tiempo. Se están realizando esfuerzos para reducir este retardo.  
+ **Nota**: Las actualizaciones pueden tardar hasta 15 minutos en actualizarse en Package Manager dentro de Dynamo, ya que las actualizaciones del servidor llevan cierto tiempo. Se están tomando medidas para reducir este retardo.  
 
  ![Nueva interfaz de usuario para actualizar los detalles de paquetes publicados](images/Package-Manager_Image_5.png)
 

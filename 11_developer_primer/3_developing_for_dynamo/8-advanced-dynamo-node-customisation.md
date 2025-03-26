@@ -47,7 +47,7 @@ Para demostrar `OnLogWarningMessage` en acción, aquí presentamos diferentes es
 
 #### Ejemplo 1: Validación de entradas numéricas <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-En este ejemplo, nos basaremos en el nodo personalizado creado en el anterior "**Caso real de Zero-Touch (nodo de rejilla)"; ** un método denominado `RectangularGrid` que genera una rejilla de rectángulos basada en entradas de `xCount` y `yCount`. Veremos paso a paso cómo hacer las pruebas si una entrada no es válida y, a continuación, cómo utilizar `OnLogWarningMessage` para registrar una advertencia y detener el procesamiento.
+En este ejemplo, nos basaremos en el nodo personalizado creado en el anterior **"Caso real de Zero-Touch (nodo de rejilla)";** un método denominado `RectangularGrid` que genera una rejilla de rectángulos basada en entradas de `xCount` y `yCount`. Veremos paso a paso cómo hacer las pruebas si una entrada no es válida y, a continuación, cómo utilizar `OnLogWarningMessage` para registrar una advertencia y detener el procesamiento.
 
 ![Ejemplo 1 de OnLogWarningMessage](images/onlogwarningmessage-example-1.png)
 
@@ -223,7 +223,7 @@ A continuación se presentan diferentes escenarios para demostrar el uso de `OnL
 
 #### Ejemplo 1: Validación de entradas numéricas <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-En este ejemplo, nos basaremos en el nodo personalizado creado en el anterior "**Caso real de Zero-Touch (nodo de rejilla)"; ** un método denominado `RectangularGrid` que genera una rejilla de rectángulos basada en entradas de `xCount` y `yCount`. Veremos paso a paso cómo hacer las pruebas si una entrada no es válida y, a continuación, cómo utilizar `OnLogInfoMessage` para proporcionar información después de que el nodo haya completado su ejecución.
+En este ejemplo, nos basaremos en el nodo personalizado creado en el anterior **"Caso real de Zero-Touch (nodo de rejilla)";** un método denominado `RectangularGrid` que genera una rejilla de rectángulos basada en entradas de `xCount` y `yCount`. Veremos paso a paso cómo hacer las pruebas si una entrada no es válida y, a continuación, cómo utilizar `OnLogInfoMessage` para proporcionar información después de que el nodo haya completado su ejecución.
 
 ![Ejemplo 1 de OnLogInfoMessage](images/onloginfomessage-example-1.png)
 
@@ -373,7 +373,7 @@ Dynamo ahora ofrece un sistema mejorado para que los autores de paquetes proporc
 Markdown es un lenguaje de marcado ligero que se puede utilizar para dar formato a documentos de texto sin formato. Desde que se creó Markdown en 2004, su popularidad no ha hecho más que aumentar y ahora es uno de los lenguajes de marcado más populares del mundo.
 
 #### Para empezar con Markdown
-Es fácil comenzar a crear archivos de Markdown: todo lo que necesita es un editor de texto simple, como el Bloc de notas, y listo. Sin embargo, hay formas más fáciles de escribir Markdown que usar el Bloc de notas. Hay varios editores en línea, como [Dillinger](https://dillinger.io/), que permiten ver los cambios en tiempo real a medida que se realizan. Otra forma popular de editar archivos de Markdown es usar un editor de código como [Visual Studio Code](https://code.visualstudio.com/).
+Es fácil comenzar a crear archivos de Markdown: todo lo que necesita es un editor de texto simple, como el Bloc de notas. Sin embargo, hay formas más fáciles de escribir Markdown que usar el Bloc de notas. Hay varios editores en línea, como [Dillinger](https://dillinger.io/), que permiten ver los cambios en tiempo real a medida que se realizan. Otra forma popular de editar archivos de Markdown es usar un editor de código como [Visual Studio Code](https://code.visualstudio.com/).
 
 #### ¿Qué puede hacer Markdown?
 Markdown es muy flexible y las funciones que ofrece deberían bastar para crear fácilmente una buena documentación; entre estas funciones están la adición de archivos multimedia como imágenes o vídeos, la creación de tablas con diferentes formas de contenido y, por supuesto, funciones sencillas de formato de texto, como poner el texto en **negrita** o *cursiva*. Markdown permite hacer todo esto y mucho más. Para obtener más información, consulte esta guía en la que se explica la [sintaxis básica de Markdown](https://www.Markdownguide.org/basic-syntax/).
@@ -393,7 +393,7 @@ Dynamo utiliza la extensión de vista del Navegador de documentación para mostr
 
 ![Navegador de documentación](images/customnodedocumentation-no-documentation-provided.png)
 
-La documentación que se muestra en el Navegador de documentación consta de dos partes. La primera es la sección `Node Info`, que se genera automáticamente a partir de la información extraída del nodo, como las entradas/salidas, la categoría, el nombre/espacio de nombres y la descripción breve del nodo. La segunda parte muestra la documentación del nodo personalizado, que es el archivo Markdown que se proporciona para generar la documentación el nodo.
+La documentación que se muestra en el Navegador de documentación consta de dos partes. La primera es la sección `Node Info`, que se genera automáticamente a partir de la información extraída del nodo, como las entradas/salidas, la categoría, el nombre/espacio de nombres y la descripción breve del nodo. La segunda parte muestra la documentación del nodo personalizado, que es el archivo de Markdown que se proporciona para generar dicha documentación.
 
 ![Documentación de nodos personalizados](images/customnodedocumentation-custom-node-documentation.png)
 

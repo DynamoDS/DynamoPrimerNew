@@ -20,7 +20,7 @@ Los ejemplos de código se extraen de [ZeroTouchEssentials.cs](https://github.co
 
 ### Valores de entrada por defecto <a href="#default-input-values" id="default-input-values"></a>
 
-Dynamo admite la definición de valores por defecto para los puertos de entrada de un nodo. Estos valores por defecto se proporcionarán al nodo si los puertos no tienen conexiones. Los valores por defecto se expresan mediante el mecanismo de C# de especificación de argumentos opcionales en el [manual de programación de C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Los valores por defecto se especifican de la siguiente forma:
+Dynamo admite la definición de valores por defecto para los puertos de entrada de un nodo. Estos valores por defecto se proporcionarán al nodo si los puertos no tienen conexiones. Los valores por defecto se expresan mediante el mecanismo de C# de especificación de argumentos opcionales en el [manual de programación de C#](https://msdn.microsoft.com/es-es/library/dd264739.aspx). Los valores por defecto se especifican de la siguiente forma:
 
 * Establezca los parámetros del método en un valor por defecto: `inputNumber = 2.0`.
 
@@ -262,7 +262,7 @@ Los recursos de geometría que no se devuelven a partir de las funciones deberá
     }
     ```
 
-    > Puede encontrar documentación sobre la instrucción "using" [aquí](https://msdn.microsoft.com/en-us/library/yh598w02.aspx).
+    > Puede encontrar documentación sobre la instrucción "using" [aquí](https://msdn.microsoft.com/es-es/library/yh598w02.aspx).
     >
     > Consulte el artículo sobre [mejoras en la estabilidad de la geometría de Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297) para obtener más información sobre las nuevas funciones de estabilidad introducidas en Dynamo 2.5.
 *   Se muestra lo siguiente con llamadas manuales a "Dispose":
