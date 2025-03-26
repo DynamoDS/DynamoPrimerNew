@@ -19,8 +19,8 @@ Los paquetes de Zero-Touch son un buen complemento para los nodos personalizados
 
 | **Logotipo/imagen**                                                                   | **Nombre**                                                                    |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| \![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Kit de herramientas de malla](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| \![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
+| ![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Kit de herramientas de malla](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Dynamo Unfold](http://dynamobim.com/dynamounfold/)                         |
 | ![](../images/6-2/5/rhynamo.jpg)                                                 | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
 | ![](../images/6-2/5/optimo.jpg)                                                  | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
