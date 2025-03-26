@@ -110,7 +110,7 @@ Dynamo ベクトル オブジェクトの配列を Revit XYZ ベクトルの配�
 
 この例では、ToXyz (Point)メソッドを使用して、Dynamo Point.ByCoordinates を Revit XYZ にすばやく簡単に変換する方法を示します。 
 
-![Dynamo Point.ByCoordinates を Revit XYZ に変換する](Images/dynamo-point-to-revit-xyz.png)
+![Dynamo Point.ByCoordinates を Revit XYZ に変換する](images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -193,7 +193,7 @@ Revit XYZ ポイントのリストを Dynamo ポイントのリストに変換�
 
 この例では、.ToPoint (XYZ)メソッドを使用して、Revit XYZ を Dynamo ポイントにすばやく簡単に変換する方法を示します。 
 
-![Revit XYZ を Dynamo Point.ByCoordinates に変換します](Images/revit-xyz-to-dynamo-point.png)
+![Revit XYZ を Dynamo Point.ByCoordinates に変換します](images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -242,7 +242,7 @@ OUT = revit_point
 
 この例では、.ToRadians メソッドを使用して、度単位をラジアン単位にすばやく簡単に変換する方法を示します。 
 
-![度単位をラジアン単位に変換](Images/degrees-to-radians.png)
+![度単位をラジアン単位に変換](images/degrees-to-radians.png)
 
 ```
 import sys
@@ -284,7 +284,7 @@ OUT = radian_angle
 
 この例では、.GetPerpendicular メソッドを使用して、入力されたベクトルに対し垂直なベクトルをすばやく簡単に取得する方法を示します。 
 
-![垂直ベクトルを取得する](Images/get-perpendicular-vector.png)
+![垂直ベクトルを取得する](images/get-perpendicular-vector.png)
 
 ```
 import clr
