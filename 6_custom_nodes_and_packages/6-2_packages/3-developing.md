@@ -20,7 +20,7 @@ En Dynamo, haga clic en Paquetes > Package Manager y busque el paquete "MapToSur
 
 Después de la instalación, los nodos personalizados deben estar disponibles en la sección Complementos > DynamoPrimer.
 
-\![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
+![](<../images/6-2/3/develop package - install package 02 (1) (2) (2).jpg>)
 
 Con el paquete instalado, veamos cómo se configura.
 
@@ -30,7 +30,7 @@ El paquete que estamos creando utiliza cinco nodos personalizados que hemos crea
 
 Este es un paquete sencillo con cinco nodos personalizados. En los pasos siguientes, hablaremos brevemente de la configuración de cada nodo personalizado.
 
-\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
+![](<../images/6-2/3/develop package - custom nodes 01 (1) (1) (1).jpg>)
 
 #### **PointsToSurface**
 
