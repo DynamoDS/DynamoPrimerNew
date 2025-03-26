@@ -97,7 +97,7 @@ Con frecuencia, desearemos ajustar el flujo de programa de nuestro programa visu
 
 * Cambie la conexión a un puerto de entrada; haga clic con el botón izquierdo en otro puerto de entrada.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Para eliminar el cable, retire el cable y haga clic con el botón izquierdo en el espacio de trabajo.
 
