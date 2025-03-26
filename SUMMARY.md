@@ -125,7 +125,7 @@
     * [Dynamo 2.0+에 대한 사용자 패키지 구성 정의](11_developer_primer/3_developing_for_dynamo/9-defining-custom-package-organisation-dynamo2.0+.md)
     * [Dynamo 명령행 인터페이스](11_developer_primer/3_developing_for_dynamo/10-command-line-interface.md)
     * [Dynamo 통합](11_developer_primer/3_developing_for_dynamo/13-dynamo-integration.md)
-    * [Dynamo For Revit을 위한 개발](11_developer_primer/3_developing_for_dynamo/12-developing-for-dynamo-for-revit.md)
+    * [Revit용 Dynamo을 위한 개발](11_developer_primer/3_developing_for_dynamo/12-developing-for-dynamo-for-revit.md)
     * [패키지 게시하기](11_developer_primer/4_publish_a_package/README.md)
     * [Visual Studio에서 패키지 빌드하기](11_developer_primer/4_publish_a_package/1-build-a-package-from-visual-studio.md)
     * [패키지로 제공되는 확장](11_developer_primer/4_publish_a_package/2-extensions-as-packages.md)
