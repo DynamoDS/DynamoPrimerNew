@@ -2,7 +2,9 @@
 
 Dynamo パッケージは、Dynamo のコア機能を拡張するためにサード パーティが開発したツールセットです。すべてのユーザがアクセスでき、ボタンをクリックすることでダウンロードできます。
 
-{% hint style="info" %} パッケージの使用を開始する方法の詳細については、「[6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention")」 セクションを参照してください。 {% endhint %}
+{% hint style="info" %}
+パッケージの使用を開始する方法の詳細については、「[6-2_packages](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention")」 セクションを参照してください。
+{% endhint %}
 
 Dynamo for Civil 3D のグラフを次のレベルに引き上げることができる最も人気の高いパッケージをいくつかご紹介します。
 
