@@ -102,7 +102,7 @@ Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://
 자동화된 프로세스로, Dynamo와 함께 설치된 구성 파일에 정보를 추가하는 작업이 포함됩니다.  
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-기본적으로 Dynamo for Revit의 구성은 다음과 같습니다.
+기본적으로 Revit용 Dynamo의 구성은 다음과 같습니다.
  
  
 `<CustomPackageFolders>`  
