@@ -110,7 +110,7 @@ Konwertuje szyk dwuwymiarowy (double[][]), w którym każdy szyk wewnętrzny rep
 
 W tym przykładzie pokazano szybkie i łatwe użycie metody .ToXyz (Point) do przekonwertowania punktu Point.ByCoordinates dodatku Dynamo na zestaw współrzędnych XYZ programu Revit. 
 
-![Konwertowanie punktu Point.ByCoordinates dodatku Dynamo na zestaw współrzędnych XYZ programu Revit](Images/dynamo-point-to-revit-xyz.png)
+![Konwertowanie punktu Point.ByCoordinates dodatku Dynamo na zestaw współrzędnych XYZ programu Revit](images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -193,7 +193,7 @@ Konwertuje listę punktów XYZ programu Revit na listę punktów dodatku Dynamo.
 
 W tym przykładzie pokazano szybkie i łatwe użycie metody .ToPoint (XYZ) do przekonwertowania zestawu współrzędnych XYZ programu Revit na punkt dodatku Dynamo. 
 
-![Konwertowanie zestawu współrzędnych XYZ programu Revit na punkt Point.ByCoordinates dodatku Dynamo](Images/revit-xyz-to-dynamo-point.png)
+![Konwertowanie zestawu współrzędnych XYZ programu Revit na punkt Point.ByCoordinates dodatku Dynamo](images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -242,7 +242,7 @@ Konwertuje radiany na stopnie.
 
 W tym przykładzie pokazano szybkie i łatwe użycie metody .ToRadians do przekonwertowania stopni na radiany. 
 
-![Ze stopni na radiany](Images/degrees-to-radians.png)
+![Ze stopni na radiany](images/degrees-to-radians.png)
 
 ```
 import sys
@@ -284,7 +284,7 @@ Ta metoda zwraca wektor `Vector` dodatku Dynamo prostopadły do danego wektora `
 
 W tym przykładzie pokazano szybkie i łatwe użycie metody .GetPerpendicular do wygenerowania wektora prostopadłego do wektora wejściowego. 
 
-![Pobieranie wektora prostopadłego](Images/get-perpendicular-vector.png)
+![Pobieranie wektora prostopadłego](images/get-perpendicular-vector.png)
 
 ```
 import clr
