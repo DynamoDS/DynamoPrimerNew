@@ -67,7 +67,7 @@ Vamos abrir “SphereUnfold”.
 
 Após abrir o arquivo e pressionar “Executar” no solucionador, teremos uma esfera desdobrada. Arquivos de exemplo como esses são úteis para saber como trabalhar com um novo pacote do Dynamo.
 
-\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Procurar e visualizar informações dos pacotes
 
