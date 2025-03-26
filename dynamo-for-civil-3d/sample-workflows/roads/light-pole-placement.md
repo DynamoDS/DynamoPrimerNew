@@ -29,7 +29,7 @@ Dynamo 其中一種相當適合的使用案例，便是沿廊道模型動態放�
 Excel 檔案與 Dynamo 圖表最好儲存在同一個目錄中。 
 {% endhint %}
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
