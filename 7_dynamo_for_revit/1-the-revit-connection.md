@@ -35,13 +35,17 @@ Dynamo는 원래 Revit에서 AEC 워크플로우를 간소화하기 위해 개�
 
 Revit 프로젝트 또는 패밀리 편집기에서 애드인을 찾은 다음, Dynamo를 클릭합니다.*
 
-{% hint style="warning" %} *Dynamo는 열려 있는 파일에서만 실행됩니다. {% endhint %}
+{% hint style="warning" %}
+ *Dynamo는 열려 있는 파일에서만 실행됩니다. 
+{% endhint %} 
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Revit에서 Dynamo를 열면 "Revit"이라는 새 카테고리가 나타납니다. 이 카테고리는 Revit 워크플로우에 특히 적합한 노드를 제공하는 UI에 포괄적으로 추가되었습니다.*
 
-{% hint style="warning" %} *Revit 전용 노드 패밀리를 사용하면 Dynamo 그래프가 Revit용 Dynamo에서 열 때만 작동합니다. 예를 들어 Revit용 Dynamo 그래프를 Dynamo 샌드박스에서 여는 경우 Revit 노드가 누락됩니다. {% endhint %}
+{% hint style="warning" %}
+ *Revit 전용 노드 패밀리를 사용하면 Dynamo 그래프가 Revit용 Dynamo에서 열 때만 작동합니다. 예를 들어 Revit용 Dynamo 그래프를 Dynamo 샌드박스에서 여는 경우 Revit 노드가 누락됩니다. 
+{% endhint %} 
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
@@ -49,7 +53,9 @@ Revit에서 Dynamo를 열면 "Revit"이라는 새 카테고리가 나타납니�
 
 Revit은 강력한 프로젝트 관리 기능을 제공하는 플랫폼이므로 Dynamo의 파라메트릭 작업은 복잡할 수 있고 이로 인해 계산 속도가 느려질 수 있습니다. Dynamo에서 노드를 계산하는 데 시간이 오래 걸리는 경우 그래프를 개발하는 동안 Revit 작업 실행을 일시 중지하기 위해 노드 "동결" 기능을 사용할 수도 있습니다.
 
-{% hint style="info" %} [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention") 섹션에서 노드 동결에 대한 자세한 내용을 확인할 수 있습니다. {% endhint %}
+{% hint style="info" %}
+ [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention") 섹션에서 노드 동결에 대한 자세한 내용을 확인할 수 있습니다. 
+{% endhint %} 
 
 ### 커뮤니티 및 Dynamo 블로그
 
