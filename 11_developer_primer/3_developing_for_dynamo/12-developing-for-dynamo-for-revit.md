@@ -110,7 +110,7 @@ Převede dvojrozměrné pole (double[][]), kde každé vnitřní pole představu
 
 Tento příklad ukazuje rychlý a snadný způsob použití metody .ToXyz (Point) k převodu objektu Point.ByCoordinates aplikace Dynamo na objekt XYZ aplikace Revit. 
 
-![Převod objektu Point.ByCoordinates aplikace Dynamo na objekt XYZ aplikace Revit](Images/dynamo-point-to-revit-xyz.png)
+![Převod objektu Point.ByCoordinates aplikace Dynamo na objekt XYZ aplikace Revit](images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -193,7 +193,7 @@ Převede seznam bodů XYZ aplikace Revit na seznam bodů objektů Point aplikace
 
 Tento příklad ukazuje rychlý a snadný způsob použití metody .ToPoint (XYZ) k převodu objektu XYZ aplikace Revit na objekt Point aplikace Dynamo. 
 
-![Převod objektu XYZ aplikace Revit na objekt Point.ByCoordinates aplikace Dynamo](Images/revit-xyz-to-dynamo-point.png)
+![Převod objektu XYZ aplikace Revit na objekt Point.ByCoordinates aplikace Dynamo](images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -242,7 +242,7 @@ Převede radiány na stupně.
 
 Tento příklad ukazuje rychlý a snadný způsob použití metody .ToRadians pro převod ze stupňů na radiány. 
 
-![Stupně na radiány](Images/degrees-to-radians.png)
+![Stupně na radiány](images/degrees-to-radians.png)
 
 ```
 import sys
@@ -284,7 +284,7 @@ Tato metoda vrací objekt `Vector` aplikace Dynamo kolmý na zadaný objekt `Vec
 
 Tento příklad ukazuje rychlý a snadný způsob použití metody .GetPerpendicular k získání vektoru kolmého na vstupní vektor. 
 
-![Získání kolmého vektoru](Images/get-perpendicular-vector.png)
+![Získání kolmého vektoru](images/get-perpendicular-vector.png)
 
 ```
 import clr
