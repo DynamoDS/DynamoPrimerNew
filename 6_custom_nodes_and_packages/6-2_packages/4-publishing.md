@@ -18,7 +18,7 @@ Starten Sie dann Dynamo erneut. Wenn Sie beim erneuten Öffnen das Fenster _Pake
 
 ### Lokale Veröffentlichung von Paketen
 
-{% hint style="warning" %} Sie können benutzerdefinierte Blöcke und Pakete aus Dynamo Sandbox in Version 2.17 und höher publizieren, sofern diese keine Abhängigkeiten zur Host-API aufweisen. In älteren Versionen ist das Publizieren von benutzerdefinierten Blöcken und Paketen nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert. {% endhint %}
+{% hint style="warning" %} Sie können benutzerdefinierte Blöcke und Pakete aus Dynamo Sandbox in Version 2.17 und höher publizieren, sofern diese keine Abhängigkeiten zur Host-API aufweisen. In älteren Versionen ist das Publizieren von benutzerdefinierten Blöcken und Paketen nur in Dynamo für Revit und Dynamo for Civil 3D aktiviert. {% endhint %}
 
 > Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
