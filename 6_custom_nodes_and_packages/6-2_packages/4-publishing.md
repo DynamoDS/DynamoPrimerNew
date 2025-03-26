@@ -18,7 +18,7 @@
 
 ### パッケージをローカルにパブリッシュする
 
-{% hint style="warning" %} ホスト API の依存関係がない限り、バージョン 2.17 以降で Dynamo Sandbox からカスタム ノードとパッケージをパブリッシュすることができます。旧バージョンでは、カスタム ノードとパッケージのパブリッシュは、Dynamo for Revit と Dynamo for Civil 3D でのみ有効です。 {% endhint %}
+{% hint style="warning" %} ホスト API の依存関係がない限り、バージョン 2.17 以降で Dynamo Sandbox からカスタム ノードとパッケージをパブリッシュすることができます。旧バージョンでは、カスタム ノードとパッケージのパブリッシュは、Revit 用の Dynamo と Dynamo for Civil 3D でのみ有効です。 {% endhint %}
 
 > 下のリンクをクリックして、サンプル ファイルをダウンロードします。
 >
