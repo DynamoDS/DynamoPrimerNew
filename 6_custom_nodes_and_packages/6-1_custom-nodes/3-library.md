@@ -4,7 +4,7 @@ Vytvořili jsme vlastní uzel a použili jej na proces v grafu aplikace Dynamo.
 
 Po místním publikování uzlu bude uzel dostupný v knihovně aplikace Dynamo po otevřené nové relace. Pokud by uzel publikován nebyl, graf aplikace Dynamo odkazující na vlastní uzel by musel tento uzel obsahovat ve své složce (další možností je uzel importovat do aplikace Dynamo pomocí možnosti _Soubor > Importovat knihovnu_).
 
-{% hint style="warning" %} Vlastní uzly a balíčky z aplikace Dynamo Sandbox ve verzi 2.17 a novějších můžete publikovat, pokud nemají žádné závislosti na hostitelském rozhraní API. Ve starších verzích je publikování vlastních uzlů a balíčků povoleno pouze v aplikacích Dynamo for Revit a Dynamo for Civil 3D. {% endhint %}
+{% hint style="warning" %} Vlastní uzly a balíčky z aplikace Dynamo Sandbox ve verzi 2.17 a novějších můžete publikovat, pokud nemají žádné závislosti na hostitelském rozhraní API. Ve starších verzích je publikování vlastních uzlů a balíčků povoleno pouze v aplikacích Dynamo pro aplikaci Revit a Dynamo for Civil 3D. {% endhint %}
 
 ## Cvičení: Místní publikování vlastního uzlu
 
