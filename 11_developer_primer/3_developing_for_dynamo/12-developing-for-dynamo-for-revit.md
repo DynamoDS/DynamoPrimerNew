@@ -1,4 +1,4 @@
-# Entwickeln für Dynamo for Revit
+# Entwickeln für Dynamo für Revit
 
 ## Verwenden von Methoden in `GeometryPrimitiveConverter.cs`
 
