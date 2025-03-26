@@ -1,4 +1,4 @@
-# Časté otázky
+# Časté otázky 
 
 ## Jak používat sestavení aplikace Dynamo
 
