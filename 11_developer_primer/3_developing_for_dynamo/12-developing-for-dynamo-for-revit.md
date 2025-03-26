@@ -110,7 +110,7 @@ Konvertiert ein zweidimensionales Array (double[][]), in dem jedes innere Array 
 
 Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToXyz (Point) zum Konvertieren eines Dynamo-Point.ByCoordinates-Objekts in einen Revit-XYZ-Wert. 
 
-![Konvertieren eines Dynamo-Point.ByCoordinates-Objekts in einen Revit-XYZ-Wert](Images/dynamo-point-to-revit-xyz.png)
+![Konvertieren eines Dynamo-Point.ByCoordinates-Objekts in einen Revit-XYZ-Wert](images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -193,7 +193,7 @@ Konvertiert eine Liste mit Revit-XYZ-Punkten in eine Liste mit Dynamo-Punkten.
 
 Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToPoint (XYZ) zum Konvertieren eines Revit-XYZ-Werts in einen Dynamo-Punkt. 
 
-![Konvertieren eines Revit-XYZ-Werts in ein Dynamo-Point.ByCoordinates-Objekt](Images/revit-xyz-to-dynamo-point.png)
+![Konvertieren eines Revit-XYZ-Werts in ein Dynamo-Point.ByCoordinates-Objekt](images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -242,7 +242,7 @@ Wandelt Bogenmaß in Grad um.
 
 Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToRadians zum Umwandeln von Grad in Bogenmaß. 
 
-![Grad in Bogenmaß](Images/degrees-to-radians.png)
+![Grad in Bogenmaß](images/degrees-to-radians.png)
 
 ```
 import sys
@@ -284,7 +284,7 @@ Diese Methode gibt einen lotrechten Dynamo-`Vector`-Wert für den angegebenen Dy
 
 Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .GetPerpendicular zum Abrufen des lotrechten Vektors für einen Eingabevektor. 
 
-![Lotrechten Vektor abrufen](Images/get-perpendicular-vector.png)
+![Lotrechten Vektor abrufen](images/get-perpendicular-vector.png)
 
 ```
 import clr
