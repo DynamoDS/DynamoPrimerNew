@@ -35,13 +35,17 @@ Die Core-Dynamo-Blöcke ermöglichen es dem Benutzer in Verbindung mit benutzerd
 
 Navigieren Sie in einem Revit-Projekt oder im Familieneditor zu Zusatzmodule und klicken Sie auf Dynamo.*
 
-{% hint style="warning" %} *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. {% endhint %}
+{% hint style="warning" %}
+ *Dynamo wird nur in der Datei ausgeführt, in der die Anwendung geöffnet wurde. 
+{% endhint %} 
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeigt. In dieser umfassenden Erweiterung der Benutzeroberfläche stehen spezielle Blöcke für Revit-Arbeitsabläufe zur Verfügung.*
 
-{% hint style="warning" %} *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo für Revit öffnen. Wenn Sie ein Diagramm aus Dynamo für Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. {% endhint %}
+{% hint style="warning" %}
+ *Da die für Revit spezifische Familie von Blöcken verwendet wird, funktioniert das Dynamo-Diagramm nur, wenn Sie es in Dynamo für Revit öffnen. Wenn Sie ein Diagramm aus Dynamo für Revit beispielsweise in Dynamo Sandbox öffnen, fehlen die Revit-Blöcke. 
+{% endhint %} 
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
@@ -49,7 +53,9 @@ Wenn Sie Dynamo in Revit öffnen, wird eine neue Kategorie namens Revit angezeig
 
 Revit ist eine Plattform mit robusten Funktionen zum Projektmanagement. Aus diesem Grund sind parametrische Operationen in Dynamo eventuell komplex und ihre Berechnung kann viel Zeit beanspruchen. Falls die Berechnung von Blöcken in Dynamo sehr lange dauert, können Sie die Blockfunktionen anhalten ("einfrieren") und damit die Ausführung von Revit-Vorgängen unterbrechen, während Sie Ihr Diagramm entwickeln.
 
-{% hint style="info" %} Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Weitere Informationen zum Anhalten von Blöcken finden Sie im Abschnitt [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %} 
 
 ### Community und Dynamo-Blog
 
