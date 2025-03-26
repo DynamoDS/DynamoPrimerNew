@@ -102,7 +102,7 @@ Wechseln Sie in der Benutzeroberfläche einer einzelnen Anwendung zu *Dynamo -> 
 Dieser automatisierte Vorgang umfasst das Hinzufügen von Informationen zur Konfigurationsdatei, die mit Dynamo installiert wird:   
  `C:\Benutzer\[Benutzername]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo-Version]\DynamoSettings.xml`
 
-Die Konfiguration für Dynamo for Revit lautet vorgabemäßig wie folgt:
+Die Konfiguration für Dynamo für Revit lautet vorgabemäßig wie folgt:
  
  
 `<CustomPackageFolders>`  
