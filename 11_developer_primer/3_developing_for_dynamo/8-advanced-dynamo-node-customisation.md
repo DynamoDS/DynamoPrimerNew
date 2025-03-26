@@ -29,7 +29,7 @@ Esempi di condizioni da verificare:
 
 * **Valori non compresi nell'intervallo** (ad es., `if (inputValue < 0)`).
 * **Raccolte nulle o vuote** (ad es., `if (list == null || list.Count == 0)`).
-* **Tipi di dati non corrispondenti **(ad es., se un tipo di file non è supportato).
+* **Tipi di dati non corrispondenti** (ad es., se un tipo di file non è supportato).
 
 #### Passaggio 3: utilizzare `OnLogWarningMessage` per registrare l'avviso <a href="#use-onlogwarningmessage-to-log-the-warning" id="use-onlogwarningmessage-to-log-the-warning"></a>
 
@@ -47,7 +47,7 @@ Per dimostrare `OnLogWarningMessage` in azione, ecco diversi scenari che potrest
 
 #### Esempio 1: convalida degli input numerici <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-In questo esempio, ci baseremo sul nodo personalizzato creato nel precedente "**Case study zero-touch - Nodo griglia"; ** un metodo denominato `RectangularGrid` che genera una griglia di rettangoli basati sugli input `xCount` e `yCount`. Verificheremo se un input non è valido e quindi verrà utilizzeremo `OnLogWarningMessage` per registrare un avviso e interrompere l'elaborazione.
+In questo esempio, ci baseremo sul nodo personalizzato creato nel precedente **"Case study zero-touch - Nodo griglia";** un metodo denominato `RectangularGrid` che genera una griglia di rettangoli basati sugli input `xCount` e `yCount`. Verificheremo se un input non è valido e quindi verrà utilizzeremo `OnLogWarningMessage` per registrare un avviso e interrompere l'elaborazione.
 
 ![OnLogWarningMessage - Esempio 1](images/onlogwarningmessage-example-1.png)
 
@@ -223,7 +223,7 @@ Di seguito sono riportati diversi scenari per dimostrare l'utilizzo di `OnLogInf
 
 #### Esempio 1: convalida degli input numerici <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-In questo esempio, ci baseremo sul nodo personalizzato creato nel precedente "**Case study zero-touch - Nodo griglia"; ** un metodo denominato `RectangularGrid` che genera una griglia di rettangoli basati sugli input `xCount` e `yCount`. Verificheremo se un input non è valido e quindi verrà utilizzeremo `OnLogInfoMessage` per fornire informazioni dopo il completamento dell'esecuzione del nodo.
+In questo esempio, ci baseremo sul nodo personalizzato creato nel precedente **"Case study zero-touch - Nodo griglia";** un metodo denominato `RectangularGrid` che genera una griglia di rettangoli basati sugli input `xCount` e `yCount`. Verificheremo se un input non è valido e quindi verrà utilizzeremo `OnLogInfoMessage` per fornire informazioni dopo il completamento dell'esecuzione del nodo.
 
 ![OnLogInfoMessage - Esempio 1](images/onloginfomessage-example-1.png)
 
@@ -364,7 +364,7 @@ Questo messaggio conferma agli utenti che l'esportazione ha funzionato e mostra 
 ### Documentazione dei nodi personalizzati
 Storicamente, in Dynamo ci sono state limitazioni nel modo in cui gli autori dei pacchetti potevano fornire la documentazione per i loro nodi. Gli autori di nodi personalizzati hanno potuto limitarsi a consentire solo una breve descrizione che viene visualizzata nella descrizione comando del nodo o a inviare il pacchetto con grafici di esempio ricchi di annotazioni.
 
-![Descrizione nella descrizione comando del nodo](images/customnodedocumentation-overloads.png)
+![Descrizione comando del nodo](images/customnodedocumentation-overloads.png)
 
 ### Un nuovo modo
 Dynamo ora offre un sistema migliorato per gli autori di pacchetti, che consente di fornire una documentazione migliore e più esplicativa per i nodi personalizzati. Questo nuovo approccio utilizza il linguaggio Markdown, facile da usare, per la creazione di testo e l'estensione della vista del Browser della documentazione per visualizzare Markdown in Dynamo. Con Markdown gli autori dei pacchetti hanno a disposizione un'ampia gamma di nuove possibilità per documentare i loro nodi personalizzati. 

@@ -16,7 +16,7 @@ Nell'immagine seguente, viene associato un punto da una superficie ad un'altra u
 
 {% file src="../datasets/6-1/2/UV-CustomNode.zip" %}
 
-Iniziare creando un grafico che si desidera nidificare in un nodo personalizzato. In questo esempio, verrà creato un grafico che associa i poligoni da una superficie di base ad una superficie di destinazione utilizzando le coordinate UV. Questo processo di mappaggio UV è un metodo utilizzato di frequente, il che lo rende un buon candidato per un nodo personalizzato. Per ulteriori informazioni sulle superfici e sullo spazio UV, fare riferimento alla pagina [Superficie ](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). Il grafico completo è _UVmapping_Custom-Node.dyn_ dal file .zip scaricato in precedenza.
+Iniziare creando un grafico che si desidera nidificare in un nodo personalizzato. In questo esempio, verrà creato un grafico che associa i poligoni da una superficie di base ad una superficie di destinazione utilizzando le coordinate UV. Questo processo di mappaggio UV è un metodo utilizzato di frequente, il che lo rende un buon candidato per un nodo personalizzato. Per ulteriori informazioni sulle superfici e sullo spazio UV, fare riferimento alla pagina [Superficie](../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/5-surfaces.md). Il grafico completo è _UVmapping_Custom-Node.dyn_ dal file .zip scaricato in precedenza.
 
 ![](../images/6-1/2/customnodeforuvmappingptI-02.jpg)
 

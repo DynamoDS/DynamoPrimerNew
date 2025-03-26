@@ -20,7 +20,7 @@ Gli esempi di codice derivano da e in genere corrispondono a [ZeroTouchEssential
 
 ### Valori di input di default <a href="#default-input-values" id="default-input-values"></a>
 
-Dynamo supporta la definizione dei valori di default per le porte di input in un nodo. Questi valori di default verranno forniti al nodo se le porte non dispongono di connessioni. I valori di default vengono espressi utilizzando il meccanismo C# di definizione degli argomenti facoltativi nella [Guida per programmatori C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Le impostazioni di default vengono specificate nel seguente modo:
+Dynamo supporta la definizione dei valori di default per le porte di input in un nodo. Questi valori di default verranno forniti al nodo se le porte non dispongono di connessioni. I valori di default vengono espressi utilizzando il meccanismo C# di definizione degli argomenti facoltativi nella [Guida per programmatori C#](https://msdn.microsoft.com/it-it/library/dd264739.aspx). Le impostazioni di default vengono specificate nel seguente modo:
 
 * Impostare i parametri del metodo su un valore di default: `inputNumber = 2.0`.
 
@@ -262,7 +262,7 @@ Le risorse della geometria che non vengono restituite dalle funzioni dovranno es
     }
     ```
 
-    > L'istruzione using è documentata [qui](https://msdn.microsoft.com/en-us/library/yh598w02.aspx).
+    > L'istruzione using è documentata [qui](https://msdn.microsoft.com/it-it/library/yh598w02.aspx).
     >
     > Per ulteriori informazioni sulle nuove funzionalità di stabilità introdotte in Dynamo 2.5, vedere [Dynamo Geometry Stability Improvements](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297).
 *   Con le chiamate manuali di Dispose:

@@ -56,9 +56,9 @@ Di seguito è riportato l'elenco delle modifiche apportate alla versione 2.0:
 * La sintassi di List@Level è stata semplificata.
 * I metodi in overload con parametri che differiscono solo in base alla classificazione non sono validi. 
 * Tutti i nodi dell'interfaccia utente vengono compilati come metodi statici.
-* È stato disattivato l'innalzamento di livello dell'elenco quando utilizzato con le guide per la replica/il collegamento.
+* L'innalzamento di livello dell'elenco è disattivato quando viene utilizzato con le guide per la replica/il collegamento.
 * Le variabili nei blocchi associativi sono immutabili per impedire l'aggiornamento associativo.
-* Le variabili nei blocchi imperativi sono locali rispetto all'ambito imperativo.
+* Le variabili dei blocchi imperativi sono collocate nell'ambito imperativo.
 * Esiste una separazione tra elenchi e dizionari.
 
 ## 1\. Sintassi di list@level semplificata 
@@ -72,12 +72,12 @@ Le funzioni in overload sono problematiche per diversi motivi:
 * La risoluzione del metodo è costosa e non è adatta alle funzioni in overload.
 * È difficile comprendere il comportamento della replica per le funzioni in overload.
 
-Prendiamo `BoundingBox.ByGeometry` come esempio: c'erano due funzioni in overload nelle versioni precedenti di Dynamo, una che richiedeva un argomento a valore singolo e l'altra che richiedeva un elenco di geometrie come argomento:
+Prendiamo `BoundingBox.ByGeometry` come esempio: c'erano due funzioni in overload nelle versioni precedenti di Dynamo, che come argomento richiedevano un valore singolo e un elenco di geometrie rispettivamente:
 ```
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry) {...}
 BoundingBox BoundingBox.ByGeometry(geometry: Geometry[]) {...}
 ```
-Se l'utente eliminava il primo nodo nell'area di disegno e collegava un elenco di geometrie, si aspettava che venisse avviata la replica, ma non ciò si verificava mai perché in fase di runtime veniva chiamato invece il secondo overload come mostrato: ![](../images/8-4/1/lang2_2.png)
+Se l'utente eliminava il primo nodo nell'area di disegno e collegava un elenco di geometrie, si aspettava che venisse avviata la replica, ma ciò non si verificava mai perché in fase di runtime veniva chiamato il secondo overload come mostrato qui: ![](../images/8-4/1/lang2_2.png)
  
 Nella versione 2.0 non sono consentite funzioni in overload che differiscono solo nella cardinalità dei parametri per questo motivo. Ciò significa che per le funzioni in overload che hanno lo stesso numero e gli stessi tipi di parametri ma hanno uno o più parametri che differiscono solo per la classificazione, l'overload definito per primo ha sempre la precedenza, mentre gli altri vengono scartati dal compilatore. Il vantaggio principale di questa operazione è quello di semplificare la logica di risoluzione del metodo disponendo di un percorso rapido per selezionare le funzioni candidate.
 
@@ -176,9 +176,9 @@ Il problema è stato risolto aggiungendo una verifica di runtime nella logica di
 
 ![](../images/8-4/1/lang2_9.png)
 
-In questo caso, poiché il primo elemento `a` è `TSpline`, si tratta del metodo derivato `TSplineTopology.Edges` che viene richiamato in fase di runtime. Di conseguenza, restituisce `null` per il tipo `Topology` di base `b`. 
+In questo caso, poiché il primo elemento `a` è `TSpline`, si tratta del metodo derivato `TSplineTopology.Edges` che viene richiamato in fase di runtime. Di conseguenza, restituisce `null` per `Topology` base di tipo `b`. 
 
-Nel secondo caso, poiché il tipo `Topology` generale `b` è il primo elemento, viene chiamato il metodo `Topology.Edges` di base. Poiché `Topology.Edges` accetta anche il tipo `TSplineTopology` derivato, `a` come input restituisce `Edges` per entrambi gli input, `a` e `b`.
+Nel secondo caso, poiché `Topology` generale di tipo `b` è il primo elemento, viene chiamato il metodo `Topology.Edges` di base. Poiché `Topology.Edges` accetta anche il tipo `TSplineTopology` derivato, `a` come input restituisce `Edges` per entrambi gli input, `a` e `b`.
 
 ![](../images/8-4/1/lang2_10.png)
  
@@ -198,16 +198,16 @@ Surface.PointAtParameter(surface<1>, u<2>, v<3>);
 ```
 ottenendo un elenco 3D di punti con un elenco più esterno ridondante.
 
-Questo effetto collaterale della compilazione dei nodi dell'interfaccia utente come metodi statici potrebbe potenzialmente causare regressioni in tali casi di utilizzo esistenti. Questo problema è stato risolto disattivando l'innalzamento di livello di input a valore singolo ad elenco quando vengono utilizzati con le guide per la replica/il collegamento (vedere l'elemento successivo).
+Questo effetto collaterale della compilazione dei nodi dell'interfaccia utente come metodi statici potrebbe causare regressioni nei casi d'uso esistenti. Questo problema è stato risolto disattivando l'innalzamento di livello di input a valore singolo ad elenco quando vengono utilizzati con le guide per la replica/il collegamento (vedere l'elemento successivo).
  
 **4\. Innalzamento di livello ad elenco disattivato con guide per la replica/collegamento**
 
-Nella versione 1.x c'erano due casi in cui valori singoli venivano innalzati di livello ad elenchi:
+Nella versione 1.x c'erano due casi in cui valori singoli venivano innalzati al livello di elenco:
 
 * Quando gli input con classificazione inferiore erano passati nelle funzioni che prevedevano input con classificazione superiore
 * Quando gli input di livello inferiore erano passati nelle funzioni che prevedevano la stessa classificazione ma in cui gli argomenti di input erano caratterizzati dalle guide per la replica o utilizzavano il collegamento
 
-Nella versione 2.0 quest'ultimo caso non è più supportato impedendo l'innalzamento di livello ad elenco in tali scenari.
+Nella versione 2.0 quest'ultimo caso non è più supportato, pertanto l'innalzamento al livello di elenco in tali scenari non è possibile.
 
 Nel seguente grafico della versione 1.x, un livello di guida per la replica per ognuno dei valori `y` e `z` forzava l'innalzamento di livello a matrice con classificazione 1 per ciascuno di essi, motivo per cui il risultato aveva una classificazione 3 (1 ciascuna per `x`, `y` e `z`). L'utente si aspettava invece che il risultato fosse di classificazione 1 poiché non era del tutto ovvio che la presenza di guide per la replica per gli input a valore singolo aggiungesse livelli al risultato.
 ```
@@ -239,13 +239,13 @@ produceva un elenco 3D di punti in Dynamo 1.x. Ciò si verificava a causa dell'i
 
 ![](../images/8-4/1/lang2_13.png)
 
-Nella versione 2.0 è stato disattivato l'innalzamento di livello degli argomenti a valore singolo ad elenchi quando vengono utilizzati con le guide per la replica o il collegamento. Quindi ora la chiamata a:
+Nella versione 2.0 è stato disattivato l'innalzamento al livello di elenchi degli argomenti a valore singolo quando vengono utilizzati con le guide per la replica o il collegamento. Quindi ora la chiamata a:
 ```
 Surface.PointAtParameter(surface<1>, u<2>, v<3>);
 ```
 restituisce semplicemente un elenco 2D poiché l'input surface non viene alzato di livello.
 
-### Dynamo 2.0: disattivato l'innalzamento di livello dell'argomenti a valore singolo ad elenco con la guida per la replica
+### Dynamo 2.0: disattivato l'innalzamento al livello di elenco dell'argomento a valore singolo, se utilizzato con una guida per la replica
 
 ![](../images/8-4/1/lang2_14.png)
 
@@ -265,7 +265,7 @@ Questa modifica ora rimuove l'aggiunta di un livello di elenco ridondante e riso
 
 ## 5\. Le variabili sono immutabili nei nodi di blocchi di codice per impedire l'aggiornamento associativo 
 
-DesignScript supporta storicamente due paradigmi di programmazione: la programmazione associativa e la programmazione imperativa. Il codice associativo crea un grafico delle dipendenze dalle istruzioni del programma in cui le variabili dipendono l'una dall'altra. L'aggiornamento di una variabile può attivare gli aggiornamenti per tutte le altre variabili che dipendono da essa. Ciò significa che la sequenza di esecuzione delle istruzioni in un blocco associativo non si basa sul loro ordine, ma sulle relazioni di dipendenza tra le variabili.
+DesignScript supporta storicamente due paradigmi di programmazione: la programmazione associativa e la programmazione imperativa. Il codice associativo crea un grafico delle dipendenze dalle istruzioni del programma in cui le variabili dipendono l'una dall'altra. L'aggiornamento di una variabile può comportare l'aggiornamento di tutte le variabili che dipendono da essa. Ciò significa che la sequenza di esecuzione delle istruzioni in un blocco associativo non si basa sul loro ordine, ma sulle relazioni di dipendenza tra le variabili.
 
 Nel seguente esempio, la sequenza di esecuzione del codice è costituita dalle righe 1 -> 2 -> 3 -> 2. Poiché `b` ha una dipendenza da `a`, quando `a` viene aggiornato nella riga 3, l'esecuzione passa di nuovo alla riga 2 per aggiornare `b` con il nuovo valore di `a`. 
 ```
@@ -328,11 +328,11 @@ In questo esempio l'elenco `a` viene inizializzato ma può essere successivament
 
 ![](../images/8-4/1/lang2_18.png)
 
-## 6\. Le variabili nei blocchi imperativi sono locali rispetto all'ambito del blocco imperativo
+## 6\. Le variabili dei blocchi imperativi sono collocate nell'ambito del blocco imperativo
 
-Sono state apportate modifiche nella versione 2.0 relativamente alle regole di definizione dell'ambito imperativo, al fine di evitare complicati scenari di aggiornamento tra linguaggio differenti.
+Le regole di definizione dell'ambito imperativo sono state modificate nella versione 2.0 per evitare complicati scenari di aggiornamento tra linguaggi differenti.
 
-In Dynamo 1.x, la sequenza di esecuzione del seguente script prevedeva le righe 1 -> 2 -> 4 -> 6 -> 4, dove una modifica veniva propagata dagli ambiti di linguaggio esterni a quelli interni. Poiché il valore `y` veniva aggiornato nel blocco associativo esterno e poiché `x` nel blocco imperativo ha una dipendenza da `y`, il controllo passa dal programma associativo esterno al linguaggio imperativo nella riga 4. 
+In Dynamo 1.x, la sequenza di esecuzione del seguente script prevedeva le righe 1 -> 2 -> 4 -> 6 -> 4, dove una modifica veniva propagata dagli ambiti di linguaggio esterni a quelli interni. Poiché il valore `y` viene aggiornato nel blocco associativo esterno e poiché `x` nel blocco imperativo ha una dipendenza da `y`, il controllo passa dal programma associativo esterno al linguaggio imperativo nella riga 4. 
 ```
 1: x = 1;
 2: y = 2;
@@ -376,7 +376,7 @@ Si consideri il seguente esempio:
 6: y = 3; // x = 1, y = 3
 ```
 * Il valore di `y` viene copiato localmente all'interno dell'ambito imperativo.  
-* Il valore di `x` locale rispetto all'ambito imperativo è `4`.
+* Il valore di `x` collocato nell'ambito imperativo è `4`.
 * L'aggiornamento del valore di `y` nell'ambito esterno continua a determinare l'aggiornamento di `x` a causa dell'aggiornamento tra i vari linguaggi, ma è disattivato nei blocchi di codice nella versione 2.0 a causa dell'immutabilità delle variabili.
 * I valori di `x` e `y` nell'ambito associativo esterno rimangono rispettivamente `1` e `2`.
 
@@ -445,9 +445,9 @@ Ad esempio, potrebbero esserci altri casi come questa istruzione in cui sarebbe 
 ```
 dict = {["foo", "bar"] : "baz" };
 ```
-Aggiungere ulteriormente al tutto la sintassi delle guide per la replica e così via, non solo gli identificatori, sarebbe andare contro l'idea di semplicità del linguaggio. 
+Aggiungere la sintassi delle guide per la replica o altro, invece di limitarsi ai soli identificatori, sarebbe andare contro l'idea di semplicità del linguaggio. 
 
-In futuro _potremmo_ estendere le chiavi del dizionario per supportare espressioni arbitrarie, ma dovremmo anche garantire che l'interazione con altre caratteristiche del linguaggio sia coerente e comprensibile, a costo di aggiungere complessità piuttosto che rendere il sistema un po' meno potente ma semplice da capire. In ogni caso, c'è sempre un modo alternativo per affrontare questo problema utilizzando il metodo `Dictionary.ByKeysValues(keyList, valueList)`, che non è poi così difficile.
+In futuro _potremmo_ estendere le chiavi del dizionario per supportare espressioni arbitrarie, ma dovremmo anche garantire che l'interazione con altre caratteristiche del linguaggio rimanga coerente e comprensibile. Il rischio di rendere il sistema più complesso è quello di sacrificare un po' della sua potenza e facilità d'uso. In ogni caso, c'è sempre un modo alternativo per affrontare questo problema utilizzando il metodo `Dictionary.ByKeysValues(keyList, valueList)`, che non è poi così difficile.
 
 ### Interazione con nodi zero-touch:
 

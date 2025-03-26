@@ -113,7 +113,7 @@ In questo primo esempio, si assembla un cilindro svuotato che mostra la gerarchi
 
 ![](../images/5-3/1/data-exercisestep10.jpg)
 
-> a. **Moltiplicazione (*):** per prima cosa, si desidera moltiplicare il valore del passaggio precedente per 2. Il valore del passaggio precedente rappresenta un raggio e si desidera spostare il cilindro in base al diametro completo.
+> a. **Moltiplicazione:** per prima cosa, si desidera moltiplicare il valore del passaggio precedente per 2. Il valore del passaggio precedente rappresenta un raggio e si desidera spostare il cilindro in base al diametro completo.
 >
 > b. **Number Sequence:** viene creata una serie di numeri con questo nodo. Il primo input è il nodo della _moltiplicazione_ del passaggio precedente che viene collegato al valore _step_. Il valore _start_ può essere impostato su _0.0_ utilizzando un nodo _Number_.
 >

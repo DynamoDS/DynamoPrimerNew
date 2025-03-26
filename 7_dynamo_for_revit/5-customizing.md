@@ -39,7 +39,7 @@ Questo esercizio verterà sulle tecniche illustrate nella sezione precedente. In
 ![](./images/5/customizing-exercise02.jpg)
 
 > 1. Utilizzando _Code Block_, definire un intervallo da 0 a 1 con 10 valori a spaziatura uniforme: `0..1..#10;`.
-> 2. Collegare _Code Block_ agli input *u *e _v_ di un nodo _Surface.PointAtParameter_ e collegare il nodo _Surface.ByLoft_ all'input _surface_. Fare clic con il pulsante destro del mouse sul nodo e modificare _Collegamento_ in _Globale_. In questo modo si ottiene una griglia di punti sulla superficie.
+> 2. Collegare _Code Block_ agli input *u* e _v_ di un nodo _Surface.PointAtParameter_ e collegare il nodo _Surface.ByLoft_ all'input _surface_. Fare clic con il pulsante destro del mouse sul nodo e modificare _Collegamento_ in _Globale_. In questo modo si ottiene una griglia di punti sulla superficie.
 
 Questa griglia di punti funge da punti di controllo per una superficie definita in modo parametrico. Si desidera estrarre le posizioni u e v di ciascuno di questi punti in modo da poterle collegare ad una formula parametrica e mantenere la stessa struttura di dati. A tale scopo, è possibile eseguire una query sulle posizioni dei parametri dei punti appena creati.
 
@@ -58,7 +58,7 @@ Questa griglia di punti funge da punti di controllo per una superficie definita 
 
 ![](./images/5/customizing-exercise05.jpg)
 
-> 1. Ora è disponibile un elenco di valori come definito dall'algoritmo. Utilizzare questo elenco di valori per spostare i punti verso l'alto nella direzione _+Z_. Utilizzando _Geometry.Translate_, collegare *Code Block *a _zTranslation_ e _Surface.PointAtParameter_ all'input _geometry_. I nuovi punti dovrebbero essere visualizzati nell'anteprima di Dynamo.
+> 1. Ora è disponibile un elenco di valori come definito dall'algoritmo. Utilizzare questo elenco di valori per spostare i punti verso l'alto nella direzione _+Z_. Utilizzando _Geometry.Translate_, collegare *Code Block* a _zTranslation_ e _Surface.PointAtParameter_ all'input _geometry_. I nuovi punti dovrebbero essere visualizzati nell'anteprima di Dynamo.
 > 2. Infine, creare una superficie con il nodo _NurbsSurface.ByPoints_, collegando il nodo del passaggio precedente all'input points. Si ottiene una superficie parametrica. È possibile trascinare il dispositivo di scorrimento per restringere e ingrandire la protuberanza.
 
 Con la superficie parametrica, si vuole definire un modo per suddividerla in pannelli al fine di creare la serie di componenti adattivi a quattro punti. Dynamo non dispone di funzionalità predefinite per la suddivisione della superficie in pannelli, pertanto è possibile accedere alla community per i pacchetti di Dynamo utili.

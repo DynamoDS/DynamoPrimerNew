@@ -5,7 +5,7 @@ Quando si lavora su una nuova funzionalità o semplicemente si aggiorna una dipe
 
 ### Considerazioni
 1. Qual è la licenza della dipendenza nuova o aggiornata - solo alcune licenze open source vengono approvate senza parlare con l'ufficio legale Autodesk.
-    * Dopo aver risolto la licenza, assicurarsi che la dipendenza e la versione siano registrati nella wiki interna.
+    * Dopo aver risolto la licenza, assicurarsi che la dipendenza e la versione siano registrate nella wiki interna.
     * Se la licenza è `LGPL`, `GPL` o `Apache`, il file di licenza deve essere copiato nella sottocartella _"Open Source Licenses"_ della build di Dynamo.
     * Se la licenza è `LGPL`, il codice sorgente completo per tutti i componenti di terze parti, insieme alle copie di testo delle licenze open source appropriate, deve essere caricato su [www.autodesk.com/lgplsource](https://www.autodesk.com/company/legal-notices-trademarks/open-source-distribution)
 2. In caso di aggiornamento, il tipo di licenza è cambiato rispetto alla versione precedente?

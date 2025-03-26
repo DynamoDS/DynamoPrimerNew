@@ -38,14 +38,14 @@ Per quanto riguarda gli elenchi, input e output variano a seconda del nodo di Dy
 
 ![Esempi di input](../images/5-4/1/what'salist-inputsandoutputs.jpg)
 
-> 1. L'input _points_ per **PolyCurve.ByPoints** cerca _“Point\\[]”_. Rappresenta un elenco di punti.
+> 1. L'input _points_ per **PolyCurve.ByPoints** cerca _“Point[]”_. Rappresenta un elenco di punti.
 > 2. L'output per **PolyCurve.ByPoints** è una PolyCurve singola creata da un elenco di cinque punti.
 > 3. L'input _centerPoint_ per **Circle.ByCenterPointRadius** richiede _"Point"_.
 > 4. L'output per **Circle.ByCenterPointRadius** è un elenco di cinque cerchi i cui centri corrispondono all'elenco originale di punti.
 
 I dati di input per **PolyCurve.ByPoints** e **Circle.ByCenterPointRadius** sono gli stessi, tuttavia il nodo **Polycurve.ByPoints** fornisce una PolyCurve mentre il nodo **Circle.ByCenterPointRadius** fornisce 5 cerchi con centri in ogni punto. In modo intuitivo, questa operazione ha senso: la PolyCurve viene disegnata come curva che collega i 5 punti, mentre i cerchi creano un cerchio diverso in ogni punto. Quindi cosa sta succedendo con i dati?
 
-Posizionando il cursore sull'input _points_ per **Polycurve.ByPoints**, si noterà che l'input cerca _“Point\\[]”_. Notare le parentesi alla fine. Rappresenta un elenco di punti e, per creare una PolyCurve, l'input deve essere un elenco per ogni PolyCurve. Questo nodo comprimerà pertanto ogni elenco in una PolyCurve.
+Posizionando il cursore sull'input _points_ per **Polycurve.ByPoints**, si noterà che l'input cerca _“Point[]”_. Notare le parentesi alla fine. Rappresenta un elenco di punti e, per creare una PolyCurve, l'input deve essere un elenco per ogni PolyCurve. Questo nodo comprimerà pertanto ogni elenco in una PolyCurve.
 
 Dall'altro lato, l'input _centerPoint_ per **Circle.ByCenterPointRadius** richiede _"Point"_. Questo nodo cerca un punto, come elemento, per definire il punto centrale del cerchio. Per questo motivo, si ottengono cinque cerchi dai dati di input. Riconoscere queste differenze con gli input in Dynamo aiuta a comprendere meglio il funzionamento dei nodi durante la gestione dei dati.
 

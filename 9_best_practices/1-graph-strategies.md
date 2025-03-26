@@ -42,7 +42,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 ### **Compressione con Nodo da aggiungere al codice**
 
 * È possibile **ridurre la complessità di un grafico utilizzando Nodo da aggiungere al codice**, che consente di acquisire una raccolta di nodi semplici e di scrivere il linguaggio DesignScript corrispondente in un unico blocco di codice.
-* Nodo da aggiungere al codice può** comprimere il codice senza eliminare la chiarezza del programma.**
+* Nodo da aggiungere al codice può **comprimere il codice senza eliminare la chiarezza del programma**.
 * Di seguito sono riportati i **vantaggi** dell'utilizzo di Nodo da aggiungere al codice:
   * Comprime facilmente il codice in un componente che è ancora modificabile.
   * Può semplificare una parte significativa del grafico.
@@ -63,7 +63,7 @@ Man mano che si sviluppa il grafico di Dynamo e si testano le idee, è possibile
 ### **Accesso flessibile ai dati con List@Level**
 
 * L'utilizzo di List@Level può aiutare a **ridurre la complessità del grafico sostituendo i nodi List.Map e List.Combine** che potrebbero occupare una notevole quantità di spazio nell'area di disegno.
-* List@Level offre un** modo più rapido rispetto a List.Map/List.Combine per costruire la logica dei nodi**, consentendo di accedere ai dati a qualsiasi livello in un elenco direttamente dalla porta di input di un nodo.
+* List@Level offre un **modo più rapido rispetto a List.Map/List.Combine per costruire la logica dei nodi**, consentendo di accedere ai dati a qualsiasi livello in un elenco direttamente dalla porta di input di un nodo.
 
 \![](<images/1/graphstrategy4 (1).png>)
 
@@ -122,7 +122,7 @@ Durante la compilazione dello script visivo, è importante verificare che ciò c
 
 ### **Monitoraggio dei dati con i simboli circolari di anteprima e controllo**
 
-* Durante la compilazione del programma, utilizzare i simboli circolari di anteprima o controllo per** verificare che gli output chiave restituiscano ciò che è previsto.**
+* Durante la compilazione del programma, utilizzare i simboli circolari di anteprima o controllo per **verificare che gli output chiave restituiscano ciò che è previsto.**
 
 ![](images/1/graphstrategy8.png)
 

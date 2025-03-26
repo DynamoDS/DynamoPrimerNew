@@ -13,7 +13,7 @@ L'istruzione "If" è un concetto chiave nella programmazione: "Se _ciò_ è vero
 | Icona                                             | Nome (Sintassi)             | Input            | Output |
 | ------------------------------------------------ | ------------------------- | ----------------- | ------- |
 | ![](../images/5-1/If.jpg)                        | If (**If**)               | test, true, false | risultato  |
-| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | X, Y, Z           | risultato  |
+| \![](<../images/5-1/CodeBlock(1)(1) (1) (1).jpg>) | Code Block (**(x?y:z);**) | x? y, z           | risultato  |
 
 Si esaminerà un breve esempio per ciascuno di questi tre nodi in azione utilizzando l'istruzione "If" condizionale.
 
@@ -107,8 +107,8 @@ Questo passaggio crea punti lungo la curva. I numeri sono stati riassociati da 0
 
 ![](../images/5-3/3/logic-exercisepartII-07.jpg)
 
-> a. a. Elenco di cuboidi in corrispondenza di indici pari.
+> a. Elenco di cuboidi in corrispondenza di indici pari.
 >
-> b. b. Elenco di cuboidi in corrispondenza di indici dispari
+> b. Elenco di cuboidi in corrispondenza di indici dispari
 
 Voila! È stato appena programmato un processo per definire le quote della geometria in base all'operazione logica illustrata in questo esercizio.

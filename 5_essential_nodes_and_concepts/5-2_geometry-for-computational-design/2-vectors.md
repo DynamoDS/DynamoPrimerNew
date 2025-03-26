@@ -65,7 +65,7 @@ Suddividere ulteriormente i vettori nelle loro parti utilizzando la stessa notaz
 ![Vettore](../images/5-2/2/Vector.jpg)
 
 > 1. Il **punto iniziale** del vettore è denominato **base**.
-> 2. Il **punto finale **del vettore è denominato **punta** o **senso**.
+> 2. Il **punto finale** del vettore è denominato **punta** o **senso**.
 > 3. Il vettore AB non è uguale al vettore BA, il quale punta nella direzione opposta.
 
 Per una visione in chiave comica dei vettori (e della loro definizione astratta), guardare la commedia classica L'aereo più pazzo del mondo e ascoltare la frase ironica, citata spesso:

@@ -128,7 +128,7 @@ Il nome della categoria può essere successivamente aggiornato nel file .dyf (XM
 
 Quando l'autore di un pacchetto decide di rinominare un nodo precedentemente esistente in una nuova release, dovrebbe fornire un mezzo per eseguire la migrazione dei grafici che contengono nodi con i vecchi nomi. Questa operazione può essere eseguita nei seguenti modi:
 
-I nodi **zero-touch** utilizzano un file di `Namespace.Migrations.XML` che si trova nella cartella `bin` dei pacchetti, ad esempio:
+I nodi **zero-touch** utilizzano un file `Namespace.Migrations.XML` che si trova nella cartella `bin` dei pacchetti, ad esempio:
 
 Da `MyZeroTouchLib.MyNodes.SayHello` a `MyZeroTouchLib.MyNodes.SayHelloRENAMED`
 ```XML

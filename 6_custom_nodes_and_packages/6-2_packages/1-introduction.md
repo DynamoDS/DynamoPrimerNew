@@ -95,9 +95,9 @@ Per default, i pacchetti vengono installati in una posizione simile a questo per
 
 Per gli utenti che chiedono se sia possibile distribuire Dynamo (in qualsiasi forma) con pacchetti preassociati: l'approccio che risolverà questo problema e consentirà il controllo in una posizione centrale per tutti gli utenti con installazioni di Dynamo è quello di aggiungere un percorso di pacchetti personalizzato a ogni installazione.
 
-**Aggiunta di una cartella di rete in cui il responsabile BIM o altri utenti possono supervisionare l'archiviazione della cartella con i pacchetti approvati dall'ufficio**  
+**Aggiungere una cartella di rete in una posizione che consenta al responsabile BIM o ad altri utenti di supervisionare l'archiviazione di pacchetti approvati dall'ufficio**  
 
-Nell'interfaccia utente di una singola applicazione, accedere a *Dynamo -> Preferenze -> Impostazioni pacchetto -> Percorsi di nodi e pacchetti*. Nella finestra di dialogo, premere il pulsante Aggiungi percorso e cercare nel percorso di rete la risorsa condivisa del pacchetto. 
+Nell'interfaccia utente di una singola applicazione, accedere a *Dynamo -> Preferenze -> Impostazioni pacchetto -> Posizioni di file di pacchetti e nodi*. Nella finestra di dialogo, premere il pulsante Aggiungi percorso e cercare nel percorso di rete la risorsa condivisa del pacchetto. 
  
 Come processo automatico, si tratta di aggiungere informazioni al file di configurazione installato con Dynamo:  
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
@@ -136,7 +136,7 @@ Sebbene lo scenario funzioni correttamente per i pacchetti che contengono solo n
 
 #### Soluzione
 
-Una possibile soluzione consiste nell'utilizzare un'unità di rete mappata che punta al percorso di rete e fare in modo che le workstation facciano riferimento a tale percorso. I passaggi per creare un'unità di rete mappata sono descritti [qui](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+Una possibile soluzione consiste nell'utilizzare un'unità di rete mappata che punta al percorso di rete e fare in modo che le workstation facciano riferimento a tale percorso. I passaggi per creare un'unità di rete mappata sono descritti [qui](https://support.microsoft.com/it-it/help/4026635/windows-10-map-a-network-drive).
 
 ### Ulteriori informazioni sui pacchetti
 

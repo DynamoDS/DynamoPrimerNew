@@ -495,7 +495,7 @@ L'impostazione approssimativa è:
 
 Una classe di utilità statica `TraceExampleWrapper` viene importata come nodo in Dynamo. Contiene un singolo metodo `ByString`, che crea `TraceExampleItem`. Si tratta di oggetti .NET normali che contengono una proprietà `description`.
 
-Ogni `TraceExampleItem` viene serializzato in una traccia rappresentata come `TraceableId`, ovvero una classe contenente un `IntId` contrassegnato `[Serializeable]` in modo che possa essere serializzato con il formattatore `SOAP`. Per ulteriori informazioni sull'attributo serializzabile, vedere [qui](https://learn.microsoft.com/it-it/dotnet/api/system.serializableattribute?view=netframework-4.8).
+Ogni `TraceExampleItem` viene serializzato in una traccia rappresentata come `TraceableId`, ovvero una classe contenente un `IntId` contrassegnato `[Serializeable]` in modo che possa essere serializzato con il formattatore `SOAP`. Per ulteriori informazioni sull'attributo serializzabile, vedere [qui](https://docs.microsoft.com/it-it/dotnet/api/system.serializableattribute?view=netframework-4.8).
 
 È inoltre necessario implementare l'interfaccia `ISerializable` definita [qui](https://learn.microsoft.com/it-it/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8).
 
@@ -753,7 +753,7 @@ Se per qualche motivo, è necessario pubblicare il pacchetto anche in Package Ma
 
 Queste sottodirectory relative alla propria lingua vengono caricate senza problemi dal runtime .NET se si trovano nella stessa directory dei file binari del nodo/dell'estensione.
 
-Per ulteriori informazioni sugli assiemi di risorse e sui file .resx, vedere: [https://learn.microsoft.com/it-it/dotnet/core/extensions/create-resource-files](https://learn.microsoft.com/it-it/dotnet/core/extensions/create-resource-files).
+Per ulteriori informazioni sugli assiemi di risorse e sui file .resx, vedere: [https://learn.microsoft.com/it-it/dotnet/core/extensions/create-resource-files](https://docs.microsoft.com/it-it/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 È probabile che i file `.resx` vengano creati e compilati con Visual Studio. Per un determinato assieme `xyz.dll`, le risorse risultanti verranno compilate in un nuovo assieme `xyz.resources.dll`, come descritto in precedenza, il posizione e il nome di questo assieme sono importanti.
 

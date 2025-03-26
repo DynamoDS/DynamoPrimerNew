@@ -2,7 +2,7 @@
 
 ### Pubblicazione di un pacchetto <a href="#publish-a-package" id="publish-a-package"></a>
 
-I pacchetti rappresentano un modo comodo per memorizzare e condividere i nodi con la comunità di Dynamo. Un pacchetto può contenere tutti gli elementi, dai nodi personalizzati creati nell'area di lavoro di Dynamo ai nodi derivati da NodeModel. I pacchetti vengono pubblicati e installati utilizzando Package Manager. Oltre a questa pagina, la [Guida introduttiva](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) include una guida generale sui pacchetti.
+I pacchetti rappresentano un modo comodo per memorizzare e condividere i nodi con la comunità di Dynamo. Un pacchetto può contenere tutti gli elementi, dai nodi personalizzati creati nell'area di lavoro di Dynamo ai nodi derivati da NodeModel. I pacchetti vengono pubblicati e installati utilizzando Package Manager. Oltre a questa pagina, la [Guida introduttiva](https://primer2.dynamobim.org/v/it/6_custom_nodes_and_packages/6-2_packages/1-introduction) include una guida generale sui pacchetti.
 
 #### Che cos'è Package Manager? <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 
@@ -104,11 +104,11 @@ Seguire il seguente diagramma di flusso e fare riferimento alla tabella sottosta
 
 Utilizziamo degli esempi per illustrare alcuni scenari:
 
-**Pacchetto di esempio n. 1**: Civil Connection: questo pacchetto ha dipendenze API sia con Revit che con Civil 3D e non include una raccolta di nodi principali (ad esempio: funzioni geometriche, funzioni matematiche e/o gestione di elenchi). Quindi, in questo caso, l'ideale sarebbe scegliere l'opzione 1. Il pacchetto verrà mostrato come Compatibile in Revit e nell'ambiente Civil 3D che corrisponde alla serie di versioni e/o all'elenco delle singole versioni.
+**Pacchetto di esempio n. 1**: Civil Connection: questo pacchetto ha dipendenze API sia con Revit che con Civil 3D e non include una raccolta di nodi principali (ad esempio: funzioni geometriche, funzioni matematiche e/o gestione di elenchi). Quindi, in questo caso, l'ideale sarebbe scegliere l'opzione 1. Il pacchetto verrà mostrato come Compatibile in una versione di Revit e di Civil 3D che rientra nella gamma di versioni e/o nell'elenco di singole versioni.
 
-**Pacchetto di esempio n. 2**: Rhythm: questo pacchetto è una raccolta di nodi specifici di Revit insieme ad una raccolta di nodi di Core. In questo caso, il pacchetto ha dipendenze host. Ma include anche i nodi principali che funzioneranno in Dynamo Core. Quindi, in questo caso, l'ideale sarebbe scegliere l'opzione 2. Il pacchetto verrà mostrato come Compatibile in Revit e nell'ambiente Dynamo Core (denominato anche Dynamo Sandbox) che corrisponde alla serie di versioni e/o all'elenco delle singole versioni.
+**Pacchetto di esempio n. 2** \- Rhythm: questo pacchetto è una raccolta di nodi specifici di Revit insieme ad una raccolta di nodi di Core. In questo caso, il pacchetto ha dipendenze host. Ma include anche i nodi principali che funzioneranno in Dynamo Core. Quindi, in questo caso, l'ideale sarebbe scegliere l'opzione 2. Il pacchetto verrà mostrato come Compatibile in Revit e nell'ambiente Dynamo Core (denominato anche Dynamo Sandbox) che corrisponde alla serie di versioni e/o all'elenco delle singole versioni.
 
-**Pacchetto di esempio n. 3**: Mesh Toolkit: si tratta di un pacchetto di Dynamo Core, che è una raccolta di nodi geometrici senza dipendenze host. Quindi, in questo caso, l'ideale sarebbe scegliere l'opzione 3. Il pacchetto verrà mostrato come Compatibile in Dynamo e in tutti gli ambienti host che corrispondono alla serie di versioni e/o all'elenco delle singole versioni.
+**Pacchetto di esempio n. 3** \- Mesh Toolkit: si tratta di un pacchetto di Dynamo Core, ovvero una raccolta di nodi geometrici senza dipendenze host. Quindi, in questo caso, l'ideale sarebbe scegliere l'opzione 3. Il pacchetto verrà mostrato come Compatibile in Dynamo e in tutti gli ambienti host che corrispondono alla serie di versioni e/o all'elenco delle singole versioni.
 
 ![Opzioni di modifica delle informazioni di compatibilità](images/Package-Manager_Image_8.png)
 

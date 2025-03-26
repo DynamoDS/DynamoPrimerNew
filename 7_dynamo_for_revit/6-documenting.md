@@ -65,7 +65,7 @@ L'impostazione del rapporto di apertura non mostra chiaramente la deviazione dei
 
 ![](images/6/documenting-exerciseII-02.jpg)
 
-> 1. Utilizzando _Math.RemapRange_, riassociare i valori della deviazione planare ad un intervallo compreso tra* 0* e _1_. Nota È anche possibile utilizzare il nodo _MapTo_ per definire un dominio di origine.
+> 1. Utilizzando _Math.RemapRange_, riassociare i valori della deviazione planare ad un intervallo compreso tra *0* e _1_. Nota È anche possibile utilizzare il nodo _MapTo_ per definire un dominio di origine.
 > 2. Collegare i risultati ad un nodo _Color Range_.
 > 3. Notare che l'output è un intervallo di colori anziché un intervallo di numeri.
 > 4. Se l'opzione è impostata su Manuale, fare clic su _Esegui_. Dovrebbe essere possibile procedere facilmente da questo momento in poi avendo impostato l'opzione su Automatico.

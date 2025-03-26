@@ -52,7 +52,7 @@ Sappiamo che git funziona se l'operazione di clonazione è stata completata corr
 Con i file di origine ora clonati nel computer locale, è possibile creare un file eseguibile per Dynamo. A tale scopo, è necessario configurare l'IDE Visual Studio e verificare che siano installati .NET Framework e DirectX.
 
 * Scaricare e installare [Microsoft Visual Studio Community 2015](https://my.visualstudio.com/Downloads/Results), un IDE (ambiente di sviluppo integrato) gratuito e completo (potrebbero funzionare anche le versioni successive).
-* Scaricare e installare [Microsoft .NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) o versione successiva.
+* Scaricare e installare [Microsoft .NET Framework 4.5](https://www.microsoft.com/it-it/download/details.aspx?id=30653) o versione successiva.
 * Installazione di Microsoft DirectX dal repository locale di Dynamo (`Dynamo\tools\install\Extra\DirectX\DXSETUP.exe`)
 
 > È possibile che .NET e DirectX siano già installati.
@@ -98,7 +98,7 @@ Per istruzioni sulla compilazione di Dynamo per altre piattaforme (ad esempio, L
 
 ### Debug di una build locale mediante Visual Studio <a href="#debugging-a-local-build-using-visual-studio" id="debugging-a-local-build-using-visual-studio"></a>
 
-Il debug è un processo di identificazione, isolamento e correzione di un bug o di un problema. Una volta che Dynamo è stato creato correttamente dalla sorgente, è possibile utilizzare diversi strumenti in Visual Studio per eseguire il debug di un'applicazione in esecuzione, ad esempio il modulo aggiuntivo DynamoRevit. È possibile analizzare il codice sorgente per individuare la causa di un problema o controllare il codice attualmente in esecuzione. Per una spiegazione più dettagliata su come eseguire il debug e spostarsi all'interno del codice in Visual Studio, consultare i [documenti su Visual Studio](https://docs.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Il debug è un processo di identificazione, isolamento e correzione di un bug o di un problema. Una volta che Dynamo è stato creato correttamente dalla sorgente, è possibile utilizzare diversi strumenti in Visual Studio per eseguire il debug di un'applicazione in esecuzione, ad esempio il modulo aggiuntivo DynamoRevit. È possibile analizzare il codice sorgente per individuare la causa di un problema o controllare il codice attualmente in esecuzione. Per una spiegazione più dettagliata su come eseguire il debug e spostarsi all'interno del codice in Visual Studio, consultare i [documenti su Visual Studio](https://docs.microsoft.com/it-it/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 Per l'applicazione Dynamo indipendente, DynamoSandbox, verranno descritte due opzioni per il debug:
 

@@ -67,7 +67,7 @@ Il nodo _List.Count_ è semplice: calcola il numero di valori in un elenco e res
 
 ![Count](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. Il nodo **List.Count **_****_ restituisce il numero di linee nel nodo **Line.ByStartPointEndPoint**. In questo caso, il valore è 10, che corrisponde al numero di punti creati dal nodo **Code Block** originale.
+> 1. Il nodo **List.Count**_****_ restituisce il numero di linee nel nodo **Line.ByStartPointEndPoint**. In questo caso, il valore è 10, che corrisponde al numero di punti creati dal nodo **Code Block** originale.
 
 ### List.GetItemAtIndex
 

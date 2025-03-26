@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-Lo script Python restituisce la variabile `output`, il che significa che è necessaria una variabile `output` nello script Python. Utilizzare questo script di esempio per verificare il nodo in Dynamo. Se si è mai utilizzato il nodo Python in Dynamo, quanto segue dovrebbe risultare familiare. Per ulteriori informazioni, consultare la [sezione Python della Guida introduttiva](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html).
+Lo script Python restituisce la variabile `output`, il che significa che è necessaria una variabile `output` nello script Python. Utilizzare questo script di esempio per verificare il nodo in Dynamo. Se si è mai utilizzato il nodo Python in Dynamo, quanto segue dovrebbe risultare familiare. Per ulteriori informazioni, consultare la [sezione Python della Guida introduttiva](https://primer2.dynamobim.org/v/it/8_coding_in_dynamo/8-3_python).
 
 ```
 import clr
