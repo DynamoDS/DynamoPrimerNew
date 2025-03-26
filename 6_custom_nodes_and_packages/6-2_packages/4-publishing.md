@@ -18,7 +18,7 @@ Ensuite, redémarrez Dynamo. Lors de la réouverture, vérifiez la fenêtre _«�
 
 ### Publication locale d’un package
 
-{% hint style="warning" %} Vous pouvez publier des nœuds et des packages personnalisés à partir de Dynamo Sandbox dans la version 2.17 et les versions ultérieures, tant qu’ils n’ont pas de dépendances de l’API hôte. Dans les versions plus anciennes, la publication de nœuds et de packages personnalisés n’est possible que dans Dynamo for Revit et Dynamo for Civil 3D. {% endhint %}
+{% hint style="warning" %} Vous pouvez publier des nœuds et des packages personnalisés à partir de Dynamo Sandbox dans la version 2.17 et les versions ultérieures, tant qu’ils n’ont pas de dépendances de l’API hôte. Dans les versions plus anciennes, la publication de nœuds et de packages personnalisés n’est possible que dans Dynamo pour Revit et Dynamo for Civil 3D. {% endhint %}
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
