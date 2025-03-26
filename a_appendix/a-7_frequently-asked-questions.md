@@ -1,4 +1,4 @@
-# Często zadawane pytania (FAQ)
+# Często zadawane pytania (FAQ) 
 
 ## Jak korzystać z kompilacji dodatku Dynamo
 
