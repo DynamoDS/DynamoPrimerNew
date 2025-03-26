@@ -111,7 +111,7 @@ El nodo **List.Count** realiza un recuento de todos los elementos de una lista. 
 > 3. Conecte cada línea del bloque de código a las entradas _X_ e _Y_ respectivas de un nodo **Point.ByCoordinates**. Haga clic con el botón derecho en el nodo, seleccione "Encaje" y, a continuación, elija _"Producto vectorial"_. Esta acción crea una rejilla de puntos. Como hemos definido el intervalo de -50 a 50, se extiende la rejilla de Dynamo por defecto.
 > 4. En el nodo _**Watch**_, se muestran los puntos creados. Observe la estructura de datos. Hemos creado una lista de listas. Cada lista representa una fila de puntos de la rejilla.
 
-\![Ejercicio](<../images/5-4/3/lists of lists - map 02.jpg>)
+![Ejercicio](<../images/5-4/3/lists of lists - map 02.jpg>)
 
 > 1. Enlace un nodo **List.Count** a la salida del nodo de visualización del paso anterior.
 > 2. Conecte un nodo **Watch** a la salida de **List.Count**.
