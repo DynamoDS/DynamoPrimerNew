@@ -110,7 +110,7 @@ convertUnits 标志（默认为 true）在必要时转换坐标。
 
 此示例显示了一种快捷方法，用于使用 .ToXyz（点）方法将 Dynamo Point.ByCoordinates 转换为 Revit XYZ。 
 
-![将 Dynamo Point.ByCoordinates 转换为 Revit XYZ](Images/dynamo-point-to-revit-xyz.png)
+![将 Dynamo Point.ByCoordinates 转换为 Revit XYZ](images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -193,7 +193,7 @@ OUT = revit_point
 
 此示例显示了一种快捷方法，用于使用 .ToPoint (XYZ) 方法将 Revit XYZ 转换为 Dynamo 点。 
 
-![将 Revit XYZ 转换为 Dynamo Point.ByCoordinates](Images/revit-xyz-to-dynamo-point.png)
+![将 Revit XYZ 转换为 Dynamo Point.ByCoordinates](images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -242,7 +242,7 @@ OUT = revit_point
 
 此示例显示了一种快捷方法，用于使用 .ToRadians 方法从度转换为弧度。 
 
-![将度转换为弧度](Images/degrees-to-radians.png)
+![将度转换为弧度](images/degrees-to-radians.png)
 
 ```
 import sys
@@ -284,7 +284,7 @@ OUT = radian_angle
 
 此示例显示了一种快捷方法，用于使用 .GetPerpendicular 方法获取输入向量的垂直向量。 
 
-![获取垂直向量](Images/get-perpendicular-vector.png)
+![获取垂直向量](images/get-perpendicular-vector.png)
 
 ```
 import clr
