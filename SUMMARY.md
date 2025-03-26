@@ -140,5 +140,5 @@
   * [Packages utiles](a_appendix/a-3_packages.md)
   * [Fichiers d’exemple](a_appendix/a-4_example-files.md)
   * [Carte d’intégration de l’hôte](a_appendix/host-integration-map.md)
-  * [Télécharger le PDF.](a_appendix/a-5_download-pdf.md)
+  * [Télécharger le PDF](a_appendix/a-5_download-pdf.md)
   * [Raccourcis clavier de Dynamo](a_appendix/a-6_dynamo-keyboard-shortcuts.md)
