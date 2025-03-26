@@ -1,4 +1,4 @@
-# Changements relatifs au langage
+# Changements relatifs au langage 
 
 La section Changements relatifs au langage fournit un aperçu des mises à jour et des modifications apportées au langage dans Dynamo pour chaque version. Ces modifications peuvent avoir un impact sur le fonctionnement, les performances et l’utilisation. Ce guide aide les utilisateurs à comprendre quand et pourquoi s’adapter à ces mises à jour.
 
