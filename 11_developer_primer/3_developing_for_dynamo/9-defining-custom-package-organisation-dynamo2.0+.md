@@ -1,4 +1,4 @@
-# Définition de l’organisation des packages personnalisés (Dynamo 2.0+)
+# Définition de l’organisation des packages personnalisés (Dynamo 2.0+) 
 
 L’organisation de votre package dépend des types de nœuds que vous allez y inclure. Les nœuds dérivés du modèle de nœud, les nœuds Zero Touch et les nœuds personnalisés ont tous un processus de catégorisation légèrement différent. Vous pouvez mélanger et faire correspondre ces types de nœuds dans le même package, mais cela nécessitera une combinaison des stratégies décrites ci-dessous.
 
