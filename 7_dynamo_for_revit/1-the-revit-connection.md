@@ -35,13 +35,17 @@ Używając podstawowych węzłów Dynamo wraz z węzłami niestandardowymi progr
 
 W edytorze rodziny lub projekcie programu Revit przejdź do pozycji Dodatki i kliknij opcję Dynamo*.
 
-{% hint style="warning" %} *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. {% endhint %}
+{% hint style="warning" %}
+ *Dodatek Dynamo zostanie uruchomiony tylko w pliku, w którym został otwarty. 
+{% endhint %} 
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa kategoria o nazwie „Revit”. Jest to kompleksowy dodatek do interfejsu użytkownika, który zawiera węzły opracowane konkretnie do procesów roboczych programu Revit*.
 
-{% hint style="warning" %}*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. {% endhint %}
+{% hint style="warning" %}
+*W razie użycia rodziny węzłów charakterystycznej dla programu Revit wykres dodatku Dynamo będzie działać tylko po otwarciu w dodatku Dynamo dla programu Revit. Jeśli na przykład wykres dodatku Dynamo dla programu Revit zostanie otwarty w dodatku Dynamo w trybie „piaskownicy” (Sandbox), będzie brakować węzłów programu Revit. 
+{% endhint %} 
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
@@ -49,7 +53,9 @@ W przypadku otwarcia dodatku Dynamo w programie Revit dostępna jest nowa katego
 
 Ponieważ program Revit jest platformą zapewniającą zaawansowane zarządzanie projektem, operacje parametryczne w dodatku Dynamo mogą być skomplikowane, a ich obliczanie — powolne. Jeśli w dodatku Dynamo obliczanie węzłów trwa zbyt długo, można użyć funkcji zablokowania węzła, aby wstrzymać wykonywanie operacji programu Revit podczas tworzenia wykresu.
 
-{% hint style="info" %} Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Więcej informacji na temat blokowania węzłów można znaleźć w sekcji [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %} 
 
 ### Społeczność i blog poświęcone dodatkowi Dynamo
 
