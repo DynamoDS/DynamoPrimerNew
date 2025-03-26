@@ -78,7 +78,7 @@ Cette commande indiquera à Dynamo d’ouvrir le fichier spécifié à *"C:\\som
 * À ce stade, vous devez exécuter DynamoCLI à partir depuis son emplacement d’installation dans le dossier [Version de Dynamo]. La CLI doit accéder aux mêmes fichiers .dll que Dynamo. Elle ne doit donc pas être déplacée.
 * Vous devriez être en mesure d’exécuter des graphes actuellement ouverts dans Dynamo, mais cela peut entraîner des effets secondaires inattendus.
 * Tous les chemins d’accès de fichiers sont entièrement compatibles avec DOS, donc les chemins relatifs et complets devraient fonctionner, mais assurez-vous de placer vos chemins entre guillemets *"C:path\\to\\file.dyn"* 
-* DynamoCLI est une nouvelle fonctionnalité et actuellement en cours de développement. Actuellement, la **CLI ne charge qu’un seul sous-ensemble ** de bibliothèques Dynamo standard, tenez-en compte si un graphe ne s’exécute pas correctement. Ces bibliothèques sont spécifiées [ici](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28) 
+* DynamoCLI est une nouvelle fonctionnalité et actuellement en cours de développement. Actuellement, la **CLI ne charge qu’un seul sous-ensemble** de bibliothèques Dynamo standard, tenez-en compte si un graphe ne s’exécute pas correctement. Ces bibliothèques sont spécifiées [ici](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28) 
 * Actuellement, aucune sortie std n’est fournie si aucune erreur n’est rencontrée. Dans ce cas, la CLI se fermera simplement une fois l’exécution terminée.
  
 #### Comment
