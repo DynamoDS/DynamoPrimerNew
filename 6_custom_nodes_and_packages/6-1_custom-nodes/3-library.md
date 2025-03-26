@@ -4,7 +4,7 @@ Vous venez de créer un nœud personnalisé et de l'appliquer à un processus sp
 
 Avec la publication locale, le nœud sera accessible dans votre bibliothèque Dynamo lorsque vous ouvrirez une nouvelle session. Si le nœud n’est pas publié, un graphique Dynamo qui fait référence à un nœud personnalisé doit également comporter ce nœud personnalisé dans son dossier (ou le nœud personnalisé doit être importé dans Dynamo à l’aide de l’option _Fichier > Importer une bibliothèque_).
 
-{% hint style="warning" %} Vous pouvez publier des nœuds et des packages personnalisés à partir de Dynamo Sandbox dans la version 2.17 et les versions ultérieures, tant qu’ils n’ont pas de dépendances de l’API hôte. Dans les versions plus anciennes, la publication de nœuds et de packages personnalisés n’est possible que dans Dynamo for Revit et Dynamo for Civil 3D. {% endhint %}
+{% hint style="warning" %} Vous pouvez publier des nœuds et des packages personnalisés à partir de Dynamo Sandbox dans la version 2.17 et les versions ultérieures, tant qu’ils n’ont pas de dépendances de l’API hôte. Dans les versions plus anciennes, la publication de nœuds et de packages personnalisés n’est possible que dans Dynamo pour Revit et Dynamo for Civil 3D. {% endhint %}
 
 ## Exercice : Publication locale d’un nœud personnalisé
 
