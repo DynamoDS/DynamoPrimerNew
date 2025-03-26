@@ -39,7 +39,9 @@ Les opérations booléennes sont complexes et peuvent être lentes à calculer. 
 >
 > 4\. Tous les nœuds concernés et les aperçus de géométrie associés sont mis à jour et reviendront en mode d’aperçu standard.
 
-{% hint style="info" %} Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %} 
 
 ## Approfondir…
 
