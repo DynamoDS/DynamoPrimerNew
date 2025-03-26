@@ -110,7 +110,7 @@ Convertit un tableau à deux dimensions (double[][]), où chaque tableau interne
 
 Cet exemple illustre une façon simple et rapide d’utiliser la méthode .ToXyz (Point) pour convertir un système Dynamo Point.ByCoordinates en Revit XYZ. 
 
-![Conversion de Dynamo Point.ByCoordinates en Revit XYZ](Images/dynamo-point-to-revit-xyz.png)
+![Conversion de Dynamo Point.ByCoordinates en Revit XYZ](images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -193,7 +193,7 @@ Convertit une liste de points Revit XYZ en liste de points Dynamo Point.
 
 Cet exemple illustre une façon simple et rapide d’utiliser la méthode .ToPoint (XYZ) pour convertir un Revit XYZ en point Dynamo Point. 
 
-![Conversion de Revit XYZ en Dynamo Point.ByCoordinates](Images/revit-xyz-to-dynamo-point.png)
+![Conversion de Revit XYZ en Dynamo Point.ByCoordinates](images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -242,7 +242,7 @@ Convertit les radians en degrés.
 
 Cet exemple illustre une façon simple et rapide d’utiliser la méthode .ToRadians pour effectuer une conversion de degrés en radians. 
 
-![Degrés en radians](Images/degrees-to-radians.png)
+![Degrés en radians](images/degrees-to-radians.png)
 
 ```
 import sys
@@ -284,7 +284,7 @@ Cette méthode renvoie un vecteur Dynamo `Vector` perpendiculaire au vecteur Dyn
 
 Cet exemple illustre une façon simple et rapide d’utiliser la méthode .GetPerpendicular pour obtenir le vecteur perpendiculaire à un vecteur d’entrée. 
 
-![Obtention de vecteur perpendiculaire](Images/get-perpendicular-vector.png)
+![Obtention de vecteur perpendiculaire](images/get-perpendicular-vector.png)
 
 ```
 import clr
