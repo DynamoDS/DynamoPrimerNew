@@ -1,4 +1,4 @@
-# Definování vlastní organizace balíčků (Dynamo 2.0+)
+# Definování vlastní organizace balíčků (Dynamo 2.0+) 
 
 Dosažení požadovaného rozvržení balíčku závisí na typech uzlů, které do balíčku zahrnete. Uzly odvozené z uzlů NodeModel, uzly ZeroTouch a vlastní uzly mají mírně odlišný proces definování kategorizace. Tyto typy uzlů můžete kombinovat v rámci stejného balíčku, ale bude to vyžadovat kombinaci níže uvedených strategií.
 
