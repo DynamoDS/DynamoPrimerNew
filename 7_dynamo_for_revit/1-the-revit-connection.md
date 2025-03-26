@@ -35,13 +35,17 @@ Pomocí základních uzlů aplikace Dynamo spolu s uzly pro aplikaci Revit je m
 
 V projektu aplikace Revit nebo Editoru rodiny přejděte na doplňky a klikněte na možnost Dynamo.*
 
-{% hint style="warning" %} *Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena. {% endhint %}
+{% hint style="warning" %}
+ *Aplikace Dynamo se spustí pouze v souboru, ve kterém byla otevřena. 
+{% endhint %} 
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie s názvem „Revit“. Jedná se o rozšíření uživatelského rozhraní, které nabízí uzly pro práci s aplikací Revit.*
 
-{% hint style="warning" %} *Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo pro aplikaci Revit. Pokud graf modulu Dynamo pro aplikaci Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět. {% endhint %}
+{% hint style="warning" %}
+ *Pokud použijete uzly určené pro práci v aplikaci Revit, graf aplikace Dynamo bude fungovat pouze při otevření v modulu Dynamo pro aplikaci Revit. Pokud graf modulu Dynamo pro aplikaci Revit otevřete například v aplikaci Dynamo Sandbox, uzly aplikace Revit budou chybět. 
+{% endhint %} 
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
@@ -49,7 +53,9 @@ Po otevření aplikace Dynamo v aplikaci Revit je k dispozici nová kategorie 
 
 Protože Revit je platforma s robustními funkcemi pro správu projektů, výpočet parametrických operací v aplikaci Dynamo může být složitý a pomalý. Pokud aplikaci Dynamo trvá výpočet uzlů dlouho, může být užitečné využít funkci „zmrazení“ uzlu, která pozastaví provádění operací aplikace Revit, zatímco vyvíjíte graf.
 
-{% hint style="info" %} Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Další informace o zmrazení uzlů naleznete v části [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %} 
 
 ### Komunita a blog aplikace Dynamo
 
