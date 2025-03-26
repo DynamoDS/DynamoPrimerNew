@@ -23,7 +23,9 @@ Les scripts de texte peuvent établir des relations plus complexes que la progra
 | **Python**         | Oui         | Oui           | Partiellement          | Oui                | Non            |
 | **ZeroTouch (C#)** | Non          | Non            | Non                 | Oui                | Non            |
 
-{% hint style="info" %} Reportez-vous à la rubrique [Références concernant la création et la gestion des scripts](3-scripting-reference.md) pour obtenir une liste des éléments auxquels chaque bibliothèque Dynamo vous donne accès. {% endhint %}
+{% hint style="info" %}
+ Reportez-vous à la rubrique [Références concernant la création et la gestion des scripts](3-scripting-reference.md) pour obtenir une liste des éléments auxquels chaque bibliothèque Dynamo vous donne accès. 
+{% endhint %} 
 
 ### Penser de manière paramétrique
 
@@ -63,7 +65,9 @@ Lorsque vous créez des scripts dans Dynamo, un environnement inévitablement pa
 > 2. Variables internes au script.
 > 3. Boucle qui utilise ces entrées et variables pour exécuter sa fonction.
 
-{% hint style="info" %} Conseil : mettez l’accent sur le processus, comme vous le faites pour la solution. {% endhint %}
+{% hint style="info" %}
+ Conseil : mettez l’accent sur le processus, comme vous le faites pour la solution. 
+{% endhint %} 
 
 ### **Ne vous répétez pas (principe DRY) :**
 
@@ -90,7 +94,9 @@ for i in range(count):
     points.append(point)
 ```
 
-{% hint style="info" %} Conseil : avant de dupliquer des entités dans votre script (par exemple, une constante dans l’exemple ci-dessus), demandez-vous si vous pouvez établir un lien vers la source. {% endhint %}
+{% hint style="info" %}
+ Conseil : avant de dupliquer des entités dans votre script (par exemple, une constante dans l’exemple ci-dessus), demandez-vous si vous pouvez établir un lien vers la source. 
+{% endhint %} 
 
 ### Structurer de manière modulaire
 
@@ -195,7 +201,9 @@ Lors du développement de scripts de texte dans Dynamo, il est préférable de s
 * Parfois, les bogues et les erreurs qui révèlent un problème sous-jacent avec votre script ne se produiront que lors de ces cas extrêmes.
   * Trouvez la cause de l’erreur et déterminez si elle doit être corrigée en interne ou si un domaine de paramètre doit être redéfini pour éviter le problème.
 
-{% hint style="info" %} Conseil : supposez toujours que l’utilisateur utilise toutes les combinaisons de chaque valeur d’entrée qui lui a été exposée. Cela permettra d’éliminer les mauvaises surprises. {% endhint %}
+{% hint style="info" %}
+ Conseil : supposez toujours que l’utilisateur utilise toutes les combinaisons de chaque valeur d’entrée qui lui a été exposée. Cela permettra d’éliminer les mauvaises surprises. 
+{% endhint %} 
 
 ### Débogage efficace
 
