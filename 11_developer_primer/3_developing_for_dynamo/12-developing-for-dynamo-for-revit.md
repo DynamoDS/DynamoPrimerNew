@@ -110,7 +110,7 @@ double 값 배열을 Revit의 DoubleArray로 변환합니다.
 
 이 예에서는 .ToXyz(점) 메서드를 사용하여 Dynamo Point.ByCoordinates를 Revit XYZ로 빠르고 쉽게 변환하는 방법을 보여줍니다. 
 
-![Dynamo Point.ByCoordinates를 Revit XYZ로 변환](Images/dynamo-point-to-revit-xyz.png)
+![Dynamo Point.ByCoordinates를 Revit XYZ로 변환](images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -193,7 +193,7 @@ Revit XYZ 점 리스트를 Dynamo 점 리스트로 변환합니다.
 
 이 예에서는 .ToPoint(XYZ) 메서드를 사용하여 Revit XYZ를 Dynamo 점으로 빠르고 쉽게 변환하는 방법을 보여줍니다. 
 
-![Revit XYZ를 Dynamo Point.ByCoordinates로 변환](Images/revit-xyz-to-dynamo-point.png)
+![Revit XYZ를 Dynamo Point.ByCoordinates로 변환](images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -242,7 +242,7 @@ OUT = revit_point
 
 이 예에서는 .ToRadians 메서드를 사용하여 각도를 라디안으로 빠르고 쉽게 변환하는 방법을 보여줍니다. 
 
-![각도 라디안 변환](Images/degrees-to-radians.png)
+![각도 라디안 변환](images/degrees-to-radians.png)
 
 ```
 import sys
@@ -284,7 +284,7 @@ OUT = radian_angle
 
 이 예에서는 .GetPerpendicular 메서드를 사용하여 입력 벡터에 대한 수직 벡터를 빠르고 쉽게 가져오는 방법을 보여줍니다. 
 
-![수직 벡터 가져오기](Images/get-perpendicular-vector.png)
+![수직 벡터 가져오기](images/get-perpendicular-vector.png)
 
 ```
 import clr
