@@ -1,4 +1,4 @@
-# Další práce s funkcí Zero-Touch
+# Další práce s funkcí Zero-Touch 
 
 Když nyní víme, jak vytvořit projekt Zero-Touch, můžeme se podrobněji seznámit se specifiky vytváření uzlu a projít si příklad ZeroTouchEssentials na Githubu aplikace Dynamo.
 
