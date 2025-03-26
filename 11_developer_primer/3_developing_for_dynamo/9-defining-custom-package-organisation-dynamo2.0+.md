@@ -1,4 +1,4 @@
-# Definiowanie niestandardowej organizacji pakietów (Dynamo 2.0+)
+# Definiowanie niestandardowej organizacji pakietów (Dynamo 2.0+) 
 
 Osiągnięcie żądanego układu pakietu zależy od typów węzłów, które zostaną uwzględnione w pakiecie. Węzły pochodne Node Model, węzły ZeroTouch i węzły niestandardowe mają nieco inne procesy definiowania kategoryzacji. Możesz mieszać i zestawiać te typy węzłów w tym samym pakiecie, ale będzie to wymagało łączenia różnych strategii opisanych poniżej.
 
