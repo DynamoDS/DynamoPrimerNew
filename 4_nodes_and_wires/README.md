@@ -97,7 +97,7 @@ Frequentemente, queremos ajustar o fluxo do programa em nosso programa visual ed
 
 * Para alterar a conexão em uma porta de entrada, clique com o botão esquerdo do mouse em outra porta de entrada
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Para remover o fio, afaste o fio e clique com o botão esquerdo do mouse no espaço de trabalho
 
