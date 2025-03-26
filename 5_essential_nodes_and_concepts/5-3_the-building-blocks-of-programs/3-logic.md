@@ -47,7 +47,7 @@ Là encore, les nœuds fonctionnent de la même façon. Si la _valeur booléenne
 >
 > d. **Module (%) :** **Number Range** en _x_ et _2.0_ en _y_. Cela permet de calculer le reste pour chaque nombre de la liste divisé par 2. La sortie de cette liste vous donne une liste de valeurs alternant entre 0 et 1.
 >
-> . **Test d’égalité (==) :** permet d’ajouter un test d’égalité à la zone de dessin. Connectez la sortie du _module_ à l’entrée _x_ et _0.0_ à l’entrée _y_.
+> e. **Test d’égalité (==) :** permet d’ajouter un test d’égalité à la zone de dessin. Connectez la sortie du _module_ à l’entrée _x_ et _0.0_ à l’entrée _y_.
 >
 > f. **Watch :** la sortie du test d’égalité est une liste de valeurs alternant entre true et false. Il s’agit des valeurs utilisées pour séparer les éléments de la liste. _0_ (ou _true_) représente des nombres pairs et _1_ (ou _false_) des nombres impairs.
 >
