@@ -20,7 +20,7 @@ As [curvas](4-curves.md#deep-dive-into...) são o primeiro tipo de dados geomét
 
 [Linha](4-curves.md#lines) é composta por um conjunto de pontos, cada linha tem ao menos dois pontos. Um dos modos mais comuns de criar linhas no Dynamo é usando `Line.ByStartPointEndPoint` ![](images/5-2/4/Linebystartpointendpoint.jpg) para criar uma linha no Dynamo.
 
-\![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
+![](<../images/5-2/4/curves - line by start point end point (1).jpg>)
 
 ### Curva NURBS
 
