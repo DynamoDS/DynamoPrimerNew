@@ -97,7 +97,7 @@ Spesso è necessario regolare il flusso di programma nel programma visivo modifi
 
 * Per modificare il collegamento in una porta di input, fare clic con il pulsante sinistro del mouse su un'altra porta di input.
 
-\![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
+![](<images/nodesandwires-editwirechangeport(1)(1) (1) (1).gif>)
 
 * Per rimuovere il filo, trascinarlo e fare clic con il pulsante sinistro del mouse sull'area di lavoro.
 
