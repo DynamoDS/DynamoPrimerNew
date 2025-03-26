@@ -39,7 +39,9 @@
 >
 > 4\.影響を受けるすべてのノードとそれに関連するジオメトリのプレビューが更新され、標準プレビュー モードに戻ります。
 
-{% hint style="info" %} ノードのフリーズの詳細については、「[4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention")」セクションを参照してください。 {% endhint %}
+{% hint style="info" %}
+ ノードのフリーズの詳細については、「[4_nodes_and_wires](../../4\_nodes\_and\_wires/ "mention")」セクションを参照してください。 
+{% endhint %} 
 
 ## 詳細
 
