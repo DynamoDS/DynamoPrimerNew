@@ -102,7 +102,7 @@ Dans l’interface utilisateur d’une application individuelle, accédez à *Dy
 Comme il s’agit d’un processus automatisé, il faut ajouter des informations au fichier de configuration installé avec Dynamo :  
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-Par défaut, la configuration de Dynamo for Revit est la suivante :
+Par défaut, la configuration de Dynamo pour Revit est la suivante :
  
  
 `<CustomPackageFolders>`  
