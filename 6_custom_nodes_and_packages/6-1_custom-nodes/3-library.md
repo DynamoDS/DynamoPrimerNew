@@ -4,7 +4,7 @@
 
 노드를 로컬로 게시하면 새 세션을 열 때 Dynamo 라이브러리에서 해당 노드에 액세스할 수 있게 됩니다. 노드를 게시하지 않은 경우 사용자 노드를 참조하는 Dynamo 그래프의 해당 폴더에도 해당 사용자 노드가 있어야 합니다(또는 _파일 > 라이브러리 가져오기_ 를 사용하여 사용자 노드를 Dynamo로 가져와야 함).
 
-{% hint style="warning" %} 호스트 API 종속성이 없는 경우 Dynamo Sandbox 2.17 이후 버전에서 사용자 노드 및 패키지를 게시할 수 있습니다. 이전 버전에서는 Dynamo for Revit 및 Dynamo for Civil 3D에서만 사용자 노드 및 패키지 게시를 사용할 수 있습니다. {% endhint %}
+{% hint style="warning" %} 호스트 API 종속성이 없는 경우 Dynamo Sandbox 2.17 이후 버전에서 사용자 노드 및 패키지를 게시할 수 있습니다. 이전 버전에서는 Revit용 Dynamo 및 Dynamo for Civil 3D에서만 사용자 노드 및 패키지 게시를 사용할 수 있습니다. {% endhint %}
 
 ## 연습: 사용자 노드를 로컬로 게시
 
