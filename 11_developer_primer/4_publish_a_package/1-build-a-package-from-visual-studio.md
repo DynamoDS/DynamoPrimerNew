@@ -1,4 +1,4 @@
-# Générer un package à partir de Visual Studio
+# Générer un package à partir de Visual Studio 
 
 Si vous développez des assemblages destinés à être publiés sous forme de package pour Dynamo, le projet peut être configuré pour regrouper toutes les ressources nécessaires et les placer dans une structure de répertoire compatible avec le package. Cela permettra de tester rapidement le projet en tant que package et de simuler l’expérience d’un utilisateur.
 
