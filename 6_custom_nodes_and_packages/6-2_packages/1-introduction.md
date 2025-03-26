@@ -102,7 +102,7 @@ Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo
 自動化されたプロセスとして、Dynamo と共にインストールされる設定ファイルにも情報を追加します。  
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-既定では、Dynamo for Revit の設定は次のとおりです。
+既定では、Revit 用の Dynamo の設定は次のとおりです。
  
  
 `<CustomPackageFolders>`  
