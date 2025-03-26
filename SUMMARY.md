@@ -125,7 +125,7 @@
     * [为 Dynamo 2.0+ 定义自定义软件包组织](11_developer_primer/3_developing_for_dynamo/9-defining-custom-package-organisation-dynamo2.0+.md)
     * [Dynamo 命令行界面](11_developer_primer/3_developing_for_dynamo/10-command-line-interface.md)
     * [Dynamo 集成](11_developer_primer/3_developing_for_dynamo/13-dynamo-integration.md)
-    * [为 Dynamo For Revit 开发](11_developer_primer/3_developing_for_dynamo/12-developing-for-dynamo-for-revit.md)
+    * [为适用于 Revit 的 Dynamo 开发](11_developer_primer/3_developing_for_dynamo/12-developing-for-dynamo-for-revit.md)
     * [发布软件包](11_developer_primer/4_publish_a_package/README.md)
     * [从 Visual Studio 构建软件包](11_developer_primer/4_publish_a_package/1-build-a-package-from-visual-studio.md)
     * [软件包形式的扩展](11_developer_primer/4_publish_a_package/2-extensions-as-packages.md)
