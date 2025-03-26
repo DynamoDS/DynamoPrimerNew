@@ -2,7 +2,9 @@
 
 Dynamo 软件包是第三方为扩展 Dynamo 的核心功能而开发的工具集。所有用户都可以访问这些软件包，只需单击相应按钮即可下载它们。
 
-{% hint style="info" %} 有关如何开始使用软件包的详细信息，请参见 [6-2_软件包](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") 部分。 {% endhint %}
+{% hint style="info" %}
+有关如何开始使用软件包的详细信息，请参见 [6-2_软件包](../6\_custom\_nodes\_and\_packages/6-2\_packages/ "mention") 部分。
+{% endhint %}
 
 下面列出了一些最受欢迎的软件包，这些软件包可将 Dynamo for Civil 3D 图形处理提升到更高级别。
 
