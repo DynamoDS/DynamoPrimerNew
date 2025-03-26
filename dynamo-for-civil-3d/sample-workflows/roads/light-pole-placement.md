@@ -29,7 +29,7 @@
 Рекомендуем сохранить файл Excel в одной папке с графиком Dynamo. 
 {% endhint %}
 
-{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs (1).dyn" %}
+{% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dyn" %}
 
 {% file src="../../../.gitbook/assets/Roads_CorridorBlockRefs.dwg" %}
 
