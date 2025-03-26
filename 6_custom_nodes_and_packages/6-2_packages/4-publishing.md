@@ -18,7 +18,7 @@
 
 ### 패키지를 로컬로 게시하기
 
-{% hint style="warning" %} 호스트 API 종속성이 없는 경우 Dynamo Sandbox 2.17 이후 버전에서 사용자 노드 및 패키지를 게시할 수 있습니다. 이전 버전에서는 Dynamo for Revit 및 Dynamo for Civil 3D에서만 사용자 노드 및 패키지 게시를 사용할 수 있습니다. {% endhint %}
+{% hint style="warning" %} 호스트 API 종속성이 없는 경우 Dynamo Sandbox 2.17 이후 버전에서 사용자 노드 및 패키지를 게시할 수 있습니다. 이전 버전에서는 Revit용 Dynamo 및 Dynamo for Civil 3D에서만 사용자 노드 및 패키지 게시를 사용할 수 있습니다. {% endhint %}
 
 > 아래 링크를 클릭하여 예제 파일을 다운로드하십시오.
 >
