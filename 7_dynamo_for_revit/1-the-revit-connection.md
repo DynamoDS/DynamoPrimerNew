@@ -35,13 +35,17 @@ En utilisant les principaux nœuds Dynamo conjointement avec des nœuds Revit pe
 
 Dans un projet Revit ou un éditeur de familles, accédez à Compléments et cliquez sur Dynamo*.
 
-{% hint style="warning" %} *Dynamo s’exécute uniquement dans le fichier dans lequel il a été ouvert. {% endhint %}
+{% hint style="warning" %}
+ *Dynamo s’exécute uniquement dans le fichier dans lequel il a été ouvert. 
+{% endhint %} 
 
 ![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Lors de l’ouverture de Dynamo dans Revit, une nouvelle catégorie appelée Revit apparaît. Il s’agit d’un ajout complet à l’interface utilisateur qui offre des nœuds spécifiquement conçus pour les workflows Revit.*
 
-{% hint style="warning" %} *En utilisant la famille de nœuds propre à Revit, le graphique Dynamo fonctionne uniquement lorsqu’il est ouvert dans Dynamo pour Revit. Si un graphique Dynamo pour Revit est ouvert dans Dynamo Sandbox par exemple, les nœuds Revit sont manquants. {% endhint %}
+{% hint style="warning" %}
+ *En utilisant la famille de nœuds propre à Revit, le graphique Dynamo fonctionne uniquement lorsqu’il est ouvert dans Dynamo pour Revit. Si un graphique Dynamo pour Revit est ouvert dans Dynamo Sandbox par exemple, les nœuds Revit sont manquants. 
+{% endhint %} 
 
 ![](images/1/revitconnection-runningdynamoinrevit02.jpg)
 
@@ -49,7 +53,9 @@ Lors de l’ouverture de Dynamo dans Revit, une nouvelle catégorie appelée Rev
 
 Revit étant une plate-forme qui fournit une gestion de projet robuste, les opérations paramétriques dans Dynamo peuvent être complexes et lentes à calculer. Si Dynamo prend du temps pour calculer des nœuds, vous pouvez utiliser la fonctionnalité de nœud « geler » pour interrompre l’exécution des opérations Revit lorsque vous développez votre graphique.
 
-{% hint style="info" %} Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+ Pour en savoir plus sur le gel des nœuds, consultez la section [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). 
+{% endhint %} 
 
 ### Blog Communauté et Dynamo
 
