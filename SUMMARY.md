@@ -125,7 +125,7 @@
     * [Dynamo 2.0+ のカスタム パッケージ編成を定義する](11_developer_primer/3_developing_for_dynamo/9-defining-custom-package-organisation-dynamo2.0+.md)
     * [Dynamo コマンド ライン インタフェース](11_developer_primer/3_developing_for_dynamo/10-command-line-interface.md)
     * [Dynamo の統合](11_developer_primer/3_developing_for_dynamo/13-dynamo-integration.md)
-    * [Dynamo for Revit 向けの開発](11_developer_primer/3_developing_for_dynamo/12-developing-for-dynamo-for-revit.md)
+    * [Revit 用の Dynamo 向けの開発](11_developer_primer/3_developing_for_dynamo/12-developing-for-dynamo-for-revit.md)
     * [パッケージをパブリッシュする](11_developer_primer/4_publish_a_package/README.md)
     * [Visual Studio からパッケージをビルドする](11_developer_primer/4_publish_a_package/1-build-a-package-from-visual-studio.md)
     * [パッケージとしての拡張機能](11_developer_primer/4_publish_a_package/2-extensions-as-packages.md)
