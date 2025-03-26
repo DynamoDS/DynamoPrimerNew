@@ -47,7 +47,7 @@ Pour démontrer `OnLogWarningMessage` en action, voici différents scénarios qu
 
 #### Exemple 1 : validation des entrées numériques <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-Dans cet exemple, nous allons nous appuyer sur le nœud personnalisé créé dans la précédente « **Étude de cas Zero-Touch : nœud grille »,** une méthode appelée `RectangularGrid` qui génère une grille de rectangles en fonction des entrées `xCount` et `yCount`. Nous allons voir comment effectuer un test pour savoir si une entrée est invalide, puis comment utiliser `OnLogWarningMessage` pour enregistrer un avertissement et arrêter le traitement.
+Dans cet exemple, nous allons nous appuyer sur le nœud personnalisé créé dans la précédente **« Étude de cas Zero-Touch : nœud grille »,** une méthode appelée `RectangularGrid` qui génère une grille de rectangles en fonction des entrées `xCount` et `yCount`. Nous allons voir comment effectuer un test pour savoir si une entrée est invalide, puis comment utiliser `OnLogWarningMessage` pour enregistrer un avertissement et arrêter le traitement.
 
 ![Exemple 1 de message OnLogWarningMessage](images/onlogwarningmessage-example-1.png)
 
@@ -223,7 +223,7 @@ Voici différents scénarios illustrant l’utilisation de `OnLogInfoMessage` da
 
 #### Exemple 1 : validation des entrées numériques <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-Dans cet exemple, nous allons nous appuyer sur le nœud personnalisé créé dans la précédente « **Étude de cas Zero-Touch : nœud grille »,** une méthode appelée `RectangularGrid` qui génère une grille de rectangles en fonction des entrées `xCount` et `yCount`. Nous allons voir comment effectuer un test pour savoir si une entrée est invalide, puis comment utiliser `OnLogInfoMessage` pour fournir des informations une fois l’exécution du nœud terminée.
+Dans cet exemple, nous allons nous appuyer sur le nœud personnalisé créé dans la précédente **« Étude de cas Zero-Touch : nœud grille »,** une méthode appelée `RectangularGrid` qui génère une grille de rectangles en fonction des entrées `xCount` et `yCount`. Nous allons voir comment effectuer un test pour savoir si une entrée est invalide, puis comment utiliser `OnLogInfoMessage` pour fournir des informations une fois l’exécution du nœud terminée.
 
 ![Exemple 1 de message OnLogInfoMessage](images/onloginfomessage-example-1.png)
 
