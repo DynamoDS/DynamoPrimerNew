@@ -19,8 +19,8 @@ Os pacotes sem toque são um bom complemento aos nós personalizados definidos p
 
 | **Logotipo/Imagem**                                                                   | **Nome**                                                                    |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| \![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Kit de ferramentas de malha](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
-| \![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Desdobramento do Dynamo](http://dynamobim.com/dynamounfold/)                         |
+| ![](<../images/6-2/2/meshToolkitcasestudy01 (1).jpg>)                            | [Kit de ferramentas de malha](https://github.com/DynamoDS/Dynamo/wiki/Dynamo-Mesh-Toolkit) |
+| ![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (1).jpg>) | [Desdobramento do Dynamo](http://dynamobim.com/dynamounfold/)                         |
 | ![](../images/6-2/5/rhynamo.jpg)                                                 | [Rhynamo](http://www.case-inc.com/blog/what-is-rhynamo)                     |
 | ![](../images/6-2/5/optimo.jpg)                                                  | [Optimo](https://github.com/BPOpt/Optimo)                                   |
 
