@@ -4,4 +4,6 @@
 
 **Přehrávač skriptů Dynamo** nabízí zjednodušený způsob spouštění grafů aplikace Dynamo v aplikaci Civil 3D. Jakmile je graf vytvořen, **nejsou k používání Přehrávače a spouštění grafů zapotřebí žádné odborné znalosti aplikace Dynamo**. To usnadňuje sdílení grafů s ostatními uživateli, kteří nemají zájem pronikat do detailů uzlů a drátů.
 
-{% hint style="info" %} Další informace o Přehrávači skriptů Dynamo v aplikaci Civil 3D naleznete v dokumentaci k aplikaci na stránce [nápovědy k aplikaci Civil 3D](https://help.autodesk.com/view/CIV3D/2025/CSY/?guid=dynamo_player). {% endhint %}
+{% hint style="info" %}
+Další informace o Přehrávači skriptů Dynamo v aplikaci Civil 3D naleznete v dokumentaci k aplikaci na stránce [nápovědy k aplikaci Civil 3D](https://help.autodesk.com/view/CIV3D/2025/CSY/?guid=dynamo_player).
+{% endhint %}
