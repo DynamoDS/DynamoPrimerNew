@@ -1,4 +1,4 @@
-# Definieren einer benutzerdefinierten Paketorganisation (Dynamo 2.0+)
+# Definieren einer benutzerdefinierten Paketorganisation (Dynamo 2.0+) 
 
 Das gewünschte Layout für Ihr Paket hängt von den Blocktypen ab, die Sie in das Paket aufnehmen. Vom Blockmodell abgeleitete Blöcke, ZeroTouch-Blöcke und benutzerdefinierte Blöcke weisen alle einen leicht unterschiedlichen Prozess zum Definieren der Kategorisierung auf. Sie können diese Blocktypen innerhalb desselben Pakets mischen und anpassen. Dies erfordert jedoch eine Kombination der unten beschriebenen Strategien.
 
