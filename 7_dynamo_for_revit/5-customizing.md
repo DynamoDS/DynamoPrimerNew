@@ -39,7 +39,7 @@ Este exercício permite expandir as técnicas demonstradas na seção anterior. 
 ![](./images/5/customizing-exercise02.jpg)
 
 > 1. Usando o _bloco de código_, defina um intervalo de 0 a 1 com 10 valores uniformemente espaçados: `0..1..#10;`
-> 2. Conecte o _bloco de código_ às entradas *u *e _v_ de um nó _Surface.PointAtParameter_ e conecte o nó _Surface.ByLoft_ à entrada _superfície_. Clique com o botão direito do mouse no nó e altere a _amarra_ para _Produto transversal_. Isso fornecerá uma grade de pontos na superfície.
+> 2. Conecte o _bloco de código_ às entradas *u* e _v_ de um nó _Surface.PointAtParameter_ e conecte o nó _Surface.ByLoft_ à entrada _superfície_. Clique com o botão direito do mouse no nó e altere a _amarra_ para _Produto transversal_. Isso fornecerá uma grade de pontos na superfície.
 
 Essa grade de pontos serve como os pontos de controle para uma superfície definida parametricamente. Queremos extrair as posições “u” e “v” de cada um desses pontos para que possamos conectá-los em uma fórmula paramétrica e manter a mesma estrutura de dados. É possível fazer isso consultando as localizações dos parâmetros dos pontos que acabamos de criar.
 
@@ -58,7 +58,7 @@ Essa grade de pontos serve como os pontos de controle para uma superfície defin
 
 ![](./images/5/customizing-exercise05.jpg)
 
-> 1. Agora, temos uma lista de valores conforme definido pelo algoritmo. Vamos usar essa lista de valores para mover os pontos para cima na direção _+Z_. Usando _Geometry.Translate_, conecte o *bloco de código *a _zTranslation_ e _Surface.PointAtParameter_ à entrada _geometria_. Você deve ver os novos pontos exibidos na visualização do Dynamo.
+> 1. Agora, temos uma lista de valores conforme definido pelo algoritmo. Vamos usar essa lista de valores para mover os pontos para cima na direção _+Z_. Usando _Geometry.Translate_, conecte o *bloco de código* a _zTranslation_ e _Surface.PointAtParameter_ à entrada _geometria_. Você deve ver os novos pontos exibidos na visualização do Dynamo.
 > 2. Finalmente, criamos uma superfície com o nó _NurbsSurface.ByPoints_, conectando o nó da etapa anterior à entrada de pontos. Dessa forma, obtemos uma superfície paramétrica. Sinta-se à vontade para arrastar o controle deslizante para ver o encolhimento e aumento dos montículos.
 
 Com a superfície paramétrica, queremos definir uma forma de aplicar painéis para criar matrizes em quatro pontos de componentes adaptativos. O Dynamo não tem uma funcionalidade pronta para uso para aplicar painéis à superfície; portanto, podemos consultar a comunidade para obter pacotes úteis do Dynamo.

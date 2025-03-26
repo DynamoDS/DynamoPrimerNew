@@ -38,7 +38,7 @@ Nas listas, as entradas e as saídas variam de acordo com o nó do Dynamo que es
 
 ![Exemplos de entrada](../images/5-4/1/what'salist-inputsandoutputs.jpg)
 
-> 1. A entrada _pontos_ para **PolyCurve.ByPoints** está procurando _“Point[]”_. Isso representa uma lista de pontos
+> 1. A entrada _pontos_ para **PolyCurve.ByPoints** está procurando _“Point[]”_. Isso representa uma lista de pontos.
 > 2. A saída para **PolyCurve.ByPoints** é uma policurva única criada com base em uma lista de cinco pontos.
 > 3. A entrada _centerPoint_ para **Circle.ByCenterPointRadius** solicita _“Ponto”_.
 > 4. A saída para **Circle.ByCenterPointRadius** é uma lista de cinco círculos, cujos centros correspondem à lista original de pontos.

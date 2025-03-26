@@ -42,7 +42,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 ### **Condensar com Nó para código**
 
 * É possível **reduzir a complexidade de um gráfico com a opção Nó para código**, que usa um conjunto de nós simples e grava o DesignScript correspondente em um único bloco de código
-* O Nó para código pode** condensar o código sem eliminar a clareza do programa**
+* O Nó para código pode **condensar o código sem eliminar a clareza do programa**
 * **Vantagens** do uso de Nó para código:
   * Condensa facilmente o código em um componente que ainda é editável
   * Pode simplificar uma parte significativa do gráfico
@@ -63,7 +63,7 @@ Antes deste capítulo, a introdução abordou como implementar os recursos avan�
 ### **Acessar os dados de forma flexível com List@Level**
 
 * O uso do recurso List@Level pode ajudar a **reduzir a complexidade do gráfico substituindo os nós List.Map e List.Combine**, que podem ocupar um volume considerável de espaço da tela
-* O recurso List@Level oferece uma** forma mais rápida do que List.Map/List.Combine para criar a lógica do nó** permitindo acessar dados em qualquer nível de uma lista diretamente da porta de entrada de um nó
+* O recurso List@Level oferece uma **forma mais rápida do que List.Map/List.Combine para criar a lógica do nó** permitindo acessar dados em qualquer nível de uma lista diretamente da porta de entrada de um nó
 
 \![](<images/1/graphstrategy4 (1).png>)
 
@@ -122,7 +122,7 @@ Ao criar o script visual, é importante verificar se o que está sendo retornado
 
 ### **Monitorar os dados com balões de visualização e inspeção**
 
-* Use balões de visualização ou inspeção durante a criação do programa para** verificar se as saídas principais estão retornando o que você esperava**
+* Use balões de visualização ou inspeção durante a criação do programa para **verificar se as saídas principais estão retornando o que você esperava**
 
 ![](images/1/graphstrategy8.png)
 

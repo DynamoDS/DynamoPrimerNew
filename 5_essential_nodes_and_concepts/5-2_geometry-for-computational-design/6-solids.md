@@ -16,8 +16,8 @@ Se quisermos criar modelos mais complexos que não possam ser criados com base e
 > 2. **Topology.Faces**, **Face.SurfaceGeometry**: consulte as faces do sólido e converta-as em geometria da superfície. Neste caso, a esfera tem apenas uma face.
 > 3. **Cone.ByPointsRadii**: crie cones usando pontos na superfície.
 > 4. **Solid.UnionAll**: una os cones e a esfera.
-> 5. **Topology.Edges**: consulte as arestas do novo sólido
-> 6. **Solid.Fillet**: arredonde as arestas da esfera pontiaguda
+> 5. **Topology.Edges**: consulte as arestas do novo sólido.
+> 6. **Solid.Fillet**: arredonde as arestas da esfera pontiaguda.
 
 > Faça o download do arquivo de exemplo clicando no link abaixo.
 >

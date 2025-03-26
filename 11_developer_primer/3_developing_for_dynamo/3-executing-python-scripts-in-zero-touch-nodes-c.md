@@ -50,7 +50,7 @@ namespace PythonLibrary
 }
 ```
 
-O script Python está retornando a variável `output`, o que significa que precisaremos de uma variável `output` no script Python. Use esse script de amostra para testar o nó no Dynamo. Se você já tiver usado o nó Python no Dynamo, o seguinte deverá ser familiar. Para obter mais informações, consulte a [seção Python do manual](http://dynamoprimer.com/en/09\_Custom-Nodes/9-4\_Python.html).
+O script Python está retornando a variável `output`, o que significa que precisaremos de uma variável `output` no script Python. Use esse script de amostra para testar o nó no Dynamo. Se você já tiver usado o nó Python no Dynamo, o seguinte deverá ser familiar. Para obter mais informações, consulte a [seção Python do manual](https://primer2.dynamobim.org/v/pt-br/8_coding_in_dynamo/8-3_python).
 
 ```
 import clr

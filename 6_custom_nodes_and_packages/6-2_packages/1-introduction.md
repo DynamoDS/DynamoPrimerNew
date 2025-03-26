@@ -136,7 +136,7 @@ Embora o cenário funcione corretamente para pacotes que contêm apenas nós per
 
 #### Solução
 
-Uma solução possível é usar uma unidade de rede mapeada apontando para a localização de rede e, em vez disso, fazer com que as estações de trabalho façam referência a esse caminho. As etapas para criar uma unidade de rede mapeada estão descritas [aqui](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+Uma solução possível é usar uma unidade de rede mapeada apontando para a localização de rede e, em vez disso, fazer com que as estações de trabalho façam referência a esse caminho. As etapas para criar uma unidade de rede mapeada estão descritas [aqui](https://support.microsoft.com/pt-br/help/4026635/windows-10-map-a-network-drive).
 
 ### Conhecer mais sobre pacotes
 

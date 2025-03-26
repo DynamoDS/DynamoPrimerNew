@@ -24,7 +24,7 @@ No entanto, isso é o que acontece quando um círculo diferente é selecionado.
 
 <figure><img src="../../.gitbook/assets/c3d-binding-select-circle.gif" alt=""><figcaption><p>Comportamento padrão do Dynamo ao selecionar um novo círculo</p></figcaption></figure>
 
-Parece que o texto é excluído e recriado a cada execução do gráfico. Na realidade, a posição do texto está sendo _modificada_, dependendo de qual círculo está selecionado. Portanto, é o mesmo texto, só que em um lugar diferente. Para criar um novo texto a cada vez, é necessário modificar as configurações de vinculação de objetos do Dynamo para que nenhum dado de vinculação seja mantido (consulte [\#binding-settings ](object-binding.md#binding-settings "mention") abaixo).
+Parece que o texto é excluído e recriado a cada execução do gráfico. Na realidade, a posição do texto está sendo _modificada_, dependendo de qual círculo está selecionado. Portanto, é o mesmo texto, só que em um lugar diferente. Para criar um novo texto a cada vez, é necessário modificar as configurações de vinculação de objetos do Dynamo para que nenhum dado de vinculação seja mantido (consulte [\#binding-settings](object-binding.md#binding-settings "mention") abaixo).
 
 <figure><img src="../../.gitbook/assets/Land_ServicePlacement_BindingSettings.png" alt=""><figcaption><p>Configurações de vinculação de objetos</p></figcaption></figure>
 

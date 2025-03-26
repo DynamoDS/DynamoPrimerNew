@@ -495,9 +495,9 @@ A configuração bruta é:
 
 Uma classe utilitária estática `TraceExampleWrapper` é importada como um nó no Dynamo. Ela contém um único método `ByString` que cria `TraceExampleItem`. Esses são objetos .net regulares que contêm uma propriedade `description`.
 
-Cada `TraceExampleItem` é serializado em um rastreamento representado como um `TraceableId`. Essa é apenas uma classe que contém um `IntId` que é marcado como `[Serializeable]` para que possa ser serializado com o formatador `SOAP`. Consulte [aqui para obter mais informações sobre o atributo serializável](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=netframework-4.8)
+Cada `TraceExampleItem` é serializado em um rastreamento representado como um `TraceableId`. Essa é apenas uma classe que contém um `IntId` que é marcado como `[Serializeable]` para que possa ser serializado com o formatador `SOAP`. Consulte [aqui para obter mais informações sobre o atributo serializável](https://docs.microsoft.com/pt-br/dotnet/api/system.serializableattribute?view=netframework-4.8)
 
-Também é preciso implementar a interface `ISerializable` definida [aqui](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)
+Também é preciso implementar a interface `ISerializable` definida [aqui](https://docs.microsoft.com/pt-br/dotnet/api/system.runtime.serialization.iserializable?view=netframework-4.8)
 
 
 ``` c#
@@ -753,7 +753,7 @@ Se, por algum motivo, o pacote também precisar ser publicado no gerenciador de 
 
 Esses subdiretórios de cultura serão carregados sem problemas pelo tempo de execução .net se estiverem localizados no mesmo diretório que os binários do nó/extensão.
 
-Para obter mais informações sobre as montagens de recursos e os arquivos .resx, consulte: [https://docs.microsoft.com/pt-br/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+Para obter mais informações sobre as montagens de recursos e os arquivos .resx, consulte: [https://docs.microsoft.com/pt-br/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/pt-br/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 Você provavelmente estará criando os arquivos `.resx` e compilando-os com o Visual Studio. Para uma determinada montagem `xyz.dll` (os recursos resultantes serão compilados em uma nova montagem `xyz.resources.dll`). Conforme descrito acima, a localização e o nome dessa montagem são importantes.
 

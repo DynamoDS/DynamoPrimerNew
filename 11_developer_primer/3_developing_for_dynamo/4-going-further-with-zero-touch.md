@@ -20,7 +20,7 @@ Os exemplos de código são extraídos e geralmente coincidem com [ZeroTouchEsse
 
 ### Valores de entrada padrão <a href="#default-input-values" id="default-input-values"></a>
 
-O Dynamo suporta a definição de valores padrão para portas de entrada em um nó. Esses valores padrão serão fornecidos ao nó se as portas não tiverem conexões. Os padrões são expressos usando o mecanismo C# de especificação de argumentos opcionais no [Guia de programação C#](https://msdn.microsoft.com/en-us/library/dd264739.aspx). Os valores padrão são especificados da seguinte maneira:
+O Dynamo suporta a definição de valores padrão para portas de entrada em um nó. Esses valores padrão serão fornecidos ao nó se as portas não tiverem conexões. Os padrões são expressos usando o mecanismo C# de especificação de argumentos opcionais no [Guia de programação C#](https://msdn.microsoft.com/pt-br/library/dd264739.aspx). Os valores padrão são especificados da seguinte maneira:
 
 * Defina os parâmetros do método para um valor padrão: `inputNumber = 2.0`
 
@@ -262,7 +262,7 @@ Os recursos de geometria que não são retornados de funções precisarão ser g
     }
     ```
 
-    > A declaração de uso está documentada [aqui](https://msdn.microsoft.com/en-us/library/yh598w02.aspx)
+    > A declaração de uso está documentada [aqui](https://msdn.microsoft.com/pt-br/library/yh598w02.aspx)
     >
     > Consulte [Melhorias na estabilidade da geometria do Dynamo](https://forum.dynamobim.com/t/dynamo-geometry-stability-improvements-request-for-feedback/39297) para saber mais sobre os novos recursos de estabilidade introduzidos no Dynamo 2.5
 *   Com chamadas Dispor manuais:

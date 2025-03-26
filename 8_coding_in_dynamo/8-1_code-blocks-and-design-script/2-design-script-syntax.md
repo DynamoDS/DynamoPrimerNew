@@ -54,7 +54,7 @@ Uma ação é algo que você faz em relação a um objeto desse tipo. O Dynamo u
 ![](../images/8-1/2/DesignScript-action.jpg)
 
 > 1. O nó **Point.Add** é um nó de tipo de ação, de modo que a sintaxe funciona de forma um pouco diferente.
-> 2. As entradas são (1) o _ponto_ e (2) o _vetor_ a ser adicionado. Em um **Bloco de código**, nomeamos o ponto (o item) _“pt”_. Para adicionar um vetor chamado *“vec” * a _“pt”_, podemos escrever _pt.Add(vec)_ ou: item, ponto, ação. A ação Adicionar tem somente uma entrada ou todas as entradas do nó **Point.Add**, menos a primeira. A primeira entrada do nó **Point.Add** é o ponto em si.
+> 2. As entradas são (1) o _ponto_ e (2) o _vetor_ a ser adicionado. Em um **Bloco de código**, nomeamos o ponto (o item) _“pt”_. Para adicionar um vetor chamado *“vec”* a _“pt”_, podemos escrever _pt.Add(vec)_ ou: item, ponto, ação. A ação Adicionar tem somente uma entrada ou todas as entradas do nó **Point.Add**, menos a primeira. A primeira entrada do nó **Point.Add** é o ponto em si.
 
 #### Consulta
 

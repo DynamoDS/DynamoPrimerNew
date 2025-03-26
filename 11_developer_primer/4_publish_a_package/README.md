@@ -2,7 +2,7 @@
 
 ### Publicar um pacote <a href="#publish-a-package" id="publish-a-package"></a>
 
-Os pacotes são uma forma conveniente de armazenar e compartilhar nós com a comunidade do Dynamo. Um pacote pode conter tudo, desde nós personalizados criados no espaço de trabalho do Dynamo até nós derivados do NodeModel. Os pacotes são publicados e instalados usando o Gerenciador de pacotes. Além desta página, o [Manual](https://primer2.dynamobim.org/6_custom_nodes_and_packages/6-2_packages/1-introduction) tem um guia geral sobre os pacotes.
+Os pacotes são uma forma conveniente de armazenar e compartilhar nós com a comunidade do Dynamo. Um pacote pode conter tudo, desde nós personalizados criados no espaço de trabalho do Dynamo até nós derivados do NodeModel. Os pacotes são publicados e instalados usando o Gerenciador de pacotes. Além desta página, o [Manual](https://primer2.dynamobim.org/v/pt-br/6_custom_nodes_and_packages/6-2_packages/1-introduction) tem um guia geral sobre os pacotes.
 
 #### O que é um Gerenciador de pacotes? <a href="#what-is-a-package-manager" id="what-is-a-package-manager"></a>
 

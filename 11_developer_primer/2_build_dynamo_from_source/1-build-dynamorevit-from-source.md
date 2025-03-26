@@ -199,7 +199,7 @@ Agora, passe o cursor sobre cada linha no construtor até que a exceção seja a
 
 Se continuarmos a percorrer a função, veremos a exceção exibida na janela do DynamoRevit. Observando a janela Pilha de chamadas, poderemos ver que a exceção foi originalmente acionada com base em um método chamado `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Felizmente, a exceção é tratada aqui, portanto, o Dynamo não teve um erro fatal. O processo de depuração forneceu contexto para o problema, trazendo-nos para outro método no código-fonte.
 
-Como não é uma biblioteca de código aberto, não poderemos fazer alterações. Agora que temos mais informações, poderemos relatar o problema com mais contexto preenchendo um [problema](https://guides.github.com/features/issues/) do github ou poderemos propor uma solução alternativa para esse problema, fazendo uma solicitação de extração.
+Como não é uma biblioteca de código aberto, não poderemos fazer alterações. Agora que temos mais informações, poderemos relatar o problema com mais contexto preenchendo um [problema](https://docs.github.com/pt/issues/tracking-your-work-with-issues/about-issues) do github ou poderemos propor uma solução alternativa para esse problema, fazendo uma solicitação de extração.
 
 ![Exceção no Visual Studio](images/vs-exception.jpg)
 

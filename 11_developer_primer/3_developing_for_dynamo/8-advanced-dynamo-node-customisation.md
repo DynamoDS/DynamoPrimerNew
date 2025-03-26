@@ -47,7 +47,7 @@ Para demonstrar `OnLogWarningMessage` na prática, aqui estão diferentes cenár
 
 #### Exemplo 1: Validar entradas numéricas <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-Neste exemplo, vamos nos basear no nó personalizado criado no “**Estudo de caso do nó Sem toque – Nó de grade”** anterior; um método denominado `RectangularGrid` que gera uma grade de retângulos com base em entradas `xCount` e `yCount`. Vamos percorrer o processo de teste Se uma entrada é inválida e, em seguida, usar `OnLogWarningMessage` para registrar um aviso e parar o processamento.
+Neste exemplo, vamos nos basear no nó personalizado criado no **“Estudo de caso do nó Sem toque – Nó de grade”** anterior; um método denominado `RectangularGrid` que gera uma grade de retângulos com base em entradas `xCount` e `yCount`. Vamos percorrer o processo de teste Se uma entrada é inválida e, em seguida, usar `OnLogWarningMessage` para registrar um aviso e parar o processamento.
 
 ![Exemplo 1 de OnLogWarningMessage](images/onlogwarningmessage-example-1.png)
 
@@ -223,7 +223,7 @@ Veja diferentes cenários para demonstrar usando `OnLogInfoMessage` nos nós Sem
 
 #### Exemplo 1: Validar entradas numéricas <a href="#example-1-validating-numeric-inputs" id="example-1-validating-numeric-inputs"></a>
 
-Neste exemplo, vamos nos basear no nó personalizado criado no “**Estudo de caso do nó Sem toque – Nó de grade”** anterior; um método denominado `RectangularGrid` que gera uma grade de retângulos com base em entradas `xCount` e `yCount`. Vamos percorrer o teste Se uma entrada é inválida e, em seguida, usar `OnLogInfoMessage` para fornecer informações após o nó ter concluído sua execução.
+Neste exemplo, vamos nos basear no nó personalizado criado no **“Estudo de caso do nó Sem toque – Nó de grade”** anterior; um método denominado `RectangularGrid` que gera uma grade de retângulos com base em entradas `xCount` e `yCount`. Vamos percorrer o teste Se uma entrada é inválida e, em seguida, usar `OnLogInfoMessage` para fornecer informações após o nó ter concluído sua execução.
 
 ![Exemplo 1 de OnLogInfoMessage](images/onloginfomessage-example-1.png)
 
@@ -398,7 +398,7 @@ A documentação exibida no Navegador de documentação é composta de duas part
 ![Documentação personalizada do nó](images/customnodedocumentation-custom-node-documentation.png)
 
 #### Pasta doc do pacote
-Para adicionar arquivos de documentação aos nós no Dynamo, crie uma nova pasta no diretório de pacotes chamada `/doc`. Quando o pacote for carregado, o Dynamo verificará esse diretório e obterá todos os arquivos Markdown de documentação nele.
+Para adicionar arquivos de documentação aos nós no Dynamo, crie uma nova pasta no diretório de pacotes chamado `/doc`. Quando o pacote for carregado, o Dynamo verificará esse diretório e obterá todos os arquivos Markdown de documentação nele.
 
 #### Nomenclatura dos arquivos Markdown
 Para garantir que o Dynamo saiba qual arquivo abrir quando um nó específico for solicitado, a nomenclatura do arquivo Markdown precisará estar em um formato específico. O arquivo Markdown deve ser nomeado de acordo com o nó que o namespace documenta. Se você não tiver certeza do namespace do nó, examine a seção `Node Info` quando pressionar `Help` no nó e, no nome do nó, você verá o namespace completo do nó selecionado. 

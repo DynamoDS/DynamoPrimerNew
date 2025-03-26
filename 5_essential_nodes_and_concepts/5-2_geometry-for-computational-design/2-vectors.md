@@ -65,7 +65,7 @@ Dividindo os vetores em suas partes, usando a mesma notação AB:
 ![Vetor](../images/5-2/2/Vector.jpg)
 
 > 1. O **Ponto inicial** do vetor é chamado **Base**.
-> 2. O *Ponto final **do vetor é chamado **Ponta** ou **Sentido**.
+> 2. O **Ponto final** do vetor é chamado **Ponta** ou **Sentido**.
 > 3. O vetor AB não é o mesmo que o vetor BA, que apontaria na direção oposta.
 
 Se você precisar de uma anedota no que diz respeito aos vetores (e sua definição abstrata), veja a comédia clássica Airplane e ouça o diálogo engraçado:

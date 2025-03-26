@@ -18,7 +18,7 @@ Estes nós permitem o maior grau de personalização. Muitos pacotes são criado
 * Nós derivados do NodeModel
 * Extensões
 
-> O Manual tem um guia sobre como [importar bibliotecas Sem toque](https://primer2.dynamobim.org/6\_custom\_nodes\_and\_packages/6-2\_packages/5-zero-touch).
+> O Manual tem um guia sobre como [importar bibliotecas Sem toque](https://primer2.dynamobim.org/v/pt-br/6_custom_nodes_and_packages/6-2_packages/5-zero-touch).
 
 Para a discussão abaixo, o Visual Studio é usado como o ambiente de desenvolvimento para os nós Sem toque e NodeModel.
 
@@ -32,13 +32,13 @@ Embora esses processos existam no espaço de trabalho de programação visual e 
 
 *   Os Blocos de código expõem o DesignScript no ambiente de programação visual, permitindo fluxos de trabalho flexíveis de scripts de texto e nós. Uma função em um bloco de código pode ser chamada por qualquer item no espaço de trabalho.
 
-    > Faça o download de um exemplo de bloco de código (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer.dynamobim.org/07\_Code-Block/7-1\_what-is-a-code-block.html).
+    > Faça o download de um exemplo de bloco de código (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer2.dynamobim.org/v/pt-br/8_coding_in_dynamo/8-1_code-blocks-and-design-script/1-what-is-a-code-block).
 *   Os nós personalizados são contêineres para coleções de nós ou até mesmo gráficos inteiros. Eles são uma forma eficaz de coletar rotinas usadas com frequência e compartilhá-las com a comunidade.
 
-    > Faça o download de um exemplo de nó personalizado (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer.dynamobim.org/10\_Custom-Nodes/10-1\_Introduction.html).
+    > Faça o download de um exemplo de nó personalizado (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer2.dynamobim.org/v/pt-br/6_custom_nodes_and_packages/6-1_custom-nodes/1-introduction).
 *   Os nós Python são uma interface de scripts no espaço de trabalho de programação visual, semelhante aos blocos de código. As bibliotecas Autodesk.DesignScript usam uma notação de ponto similar ao DesignScript.
 
-    > Faça o download de um exemplo de nó Python (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer.dynamobim.org/10\_Custom-Nodes/10-4\_Python.html)
+    > Faça o download de um exemplo de nó Python (clique com o botão direito do mouse e salve como) ou veja um percurso virtual detalhado no [Manual](https://primer2.dynamobim.org/v/pt-br/8_coding_in_dynamo/8-3_python)
 
 O desenvolvimento no espaço de trabalho do Dynamo é uma ferramenta poderosa para obter feedback imediato.
 

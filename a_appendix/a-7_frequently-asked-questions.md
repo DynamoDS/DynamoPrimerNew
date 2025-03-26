@@ -85,7 +85,7 @@ Após a instalação do Runtime, os próximos componentes do Dynamo deverão est
 
 
 ##### Problemas de nós do Excel do Dynamo
-Consulte este [artigo](https://knowledge.autodesk.com/support/revit-products/troubleshooting/caas/sfdcarticles/sfdcarticles/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html) para obter os diagnósticos.
+Consulte este [artigo](https://www.autodesk.com/br/support/technical/article/caas/sfdcarticles/sfdcarticles/PTB/Warning-Data-ImportExcel-operation-failed-Could-not-load-file-or-assembly-Microsoft-Office-Interop-Excel-when-running-the-Dynamo-script-in-Revit.html) para obter os diagnósticos.
 
 ### Localização das compilações do Dynamo
 Versões estáveis

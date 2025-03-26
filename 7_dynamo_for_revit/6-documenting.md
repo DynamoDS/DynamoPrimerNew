@@ -65,7 +65,7 @@ Definir a Proporção de abertura não demonstra claramente o desvio dos painéi
 
 ![](images/6/documenting-exerciseII-02.jpg)
 
-> 1. Usando _Math.RemapRange_, remapeie os valores de desvio do plano para um intervalo entre* 0* e _1_ (observação: também é possível usar o nó _“MapTo”_ para definir um domínio de origem).
+> 1. Usando _Math.RemapRange_, remapeie os valores de desvio do plano para um intervalo entre *0* e _1_ (observação: também é possível usar o nó _“MapTo”_ para definir um domínio de origem).
 > 2. Conecte os resultados a um nó _Intervalo de cores_.
 > 3. Observe que nossa saída é um intervalo de cores, em vez de um intervalo de números.
 > 4. Se a definição estiver como Manual, pressione _Executar_. A partir desse ponto, você deve conseguir estabelecer a definição como Automático.

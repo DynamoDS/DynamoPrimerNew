@@ -29,7 +29,7 @@ A seção Alterações de linguagem fornece uma visão geral das atualizações 
 9. Migração de nomes antigos de métodos em CBNs
 * Muitos nós foram renomeados para aumentar a legibilidade e a colocação na interface do usuário do navegador de biblioteca
 
-10. Listagem como limpeza de dicionário
+10. Listar como limpeza de dicionário
 
 ----
 Problemas conhecidos:
