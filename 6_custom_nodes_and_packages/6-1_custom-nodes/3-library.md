@@ -4,7 +4,7 @@ Sie haben einen benutzerdefinierten Block erstellt und ihn auf einen bestimmten 
 
 Indem Sie den Block lokal veröffentlichen, stellen Sie ihn in Ihrer Dynamo-Bibliothek bereit und können darauf zugreifen, wenn Sie eine neue Sitzung öffnen. Wenn ein Block nicht publiziert wird, muss er für ein Dynamo-Diagramm, das diesen benutzerdefinierten Block referenziert, in dessen Ordner enthalten sein (oder über _Datei > Bibliothek importieren_ in Dynamo importiert werden).
 
-{% hint style="warning" %} Sie können benutzerdefinierte Blöcke und Pakete aus Dynamo Sandbox in Version 2.17 und höher publizieren, sofern diese keine Abhängigkeiten zur Host-API aufweisen. In älteren Versionen ist das Publizieren von benutzerdefinierten Blöcken und Paketen nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert. {% endhint %}
+{% hint style="warning" %} Sie können benutzerdefinierte Blöcke und Pakete aus Dynamo Sandbox in Version 2.17 und höher publizieren, sofern diese keine Abhängigkeiten zur Host-API aufweisen. In älteren Versionen ist das Publizieren von benutzerdefinierten Blöcken und Paketen nur in Dynamo für Revit und Dynamo for Civil 3D aktiviert. {% endhint %}
 
 ## Übung: Lokales Veröffentlichen eines benutzerdefinierten Blocks
 
