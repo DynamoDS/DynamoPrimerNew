@@ -1,4 +1,4 @@
-# 安裝 Dynamo
+# 安裝 Dynamo 
 
 ### 以延伸模組形式使用 Dynamo 與使用 Dynamo Sandbox 的差異
 
