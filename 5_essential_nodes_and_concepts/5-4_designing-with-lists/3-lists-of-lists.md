@@ -129,7 +129,7 @@ Le nœud List.Count donne une valeur de 5. Il s'agit de la variable "Nx" telle q
 
 ### **List.Combine**
 
-_Remarque : cet exercice a été créé avec une version précédente de Dynamo. La plupart des fonctionnalités List.Combine ont été résolues avec l’ajout de la fonction_ **List@Level**. _ Pour plus d’informations, reportez-vous à la rubrique_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ci-dessous._
+_Remarque : cet exercice a été créé avec une version précédente de Dynamo. La plupart des fonctionnalités List.Combine ont été résolues avec l’ajout de la fonction_ **List@Level**. _Pour plus d’informations, reportez-vous à la rubrique_ [_List@Level_](6-3\_lists-of-lists.md#listlevel) _ci-dessous._
 
 Dans cet exercice, vous allez utiliser le nœud **List.Combine** pour montrer comment il peut être utilisé pour appliquer une fonction à des listes d’objets distinctes.
 
