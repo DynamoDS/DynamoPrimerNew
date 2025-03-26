@@ -28,7 +28,7 @@ Před přidáním zprávy s upozorněním zvažte logiku své metody:
 Příklady podmínek ke kontrole:
 
 * **Hodnoty mimo rozsah** (např. `if (inputValue < 0)`).
-* **Kolekce s hodnotou null nebo prázdné kolekce ** (např. `if (list == null || list.Count == 0)`).
+* **Kolekce s hodnotou null nebo prázdné kolekce** (např. `if (list == null || list.Count == 0)`).
 * **Neshody datových typů** (např. pokud typ souboru není podporován).
 
 #### Krok 3: Použijte metodu `OnLogWarningMessage` k protokolování upozornění <a href="#use-onlogwarningmessage-to-log-the-warning" id="use-onlogwarningmessage-to-log-the-warning"></a>
