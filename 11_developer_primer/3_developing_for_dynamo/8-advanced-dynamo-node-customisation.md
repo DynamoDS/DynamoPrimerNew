@@ -1,4 +1,4 @@
-# Zaawansowane dostosowywanie węzłów dodatku Dynamo
+# Zaawansowane dostosowywanie węzłów dodatku Dynamo 
 
 Masz już ugruntowaną wiedzę na temat węzłów ZeroTouch. W tej sekcji omówiono zalety dostosowywania węzłów dodatku Dynamo w celu usprawniania funkcjonalności i środowiska użytkownika. Dodając funkcje, takie jak komunikaty ostrzegawcze, komunikaty informacyjne i ikony niestandardowe, można tworzyć węzły, które są bardziej intuicyjne i atrakcyjne wizualnie oraz dostarczają więcej informacji. Te dostosowania nie tylko pomagają użytkownikom zrozumieć potencjalne problemy lub zoptymalizować proces, ale sprawiają też, że węzły te wyróżniają się jako profesjonalne i przyjazne dla użytkownika narzędzia.
 
