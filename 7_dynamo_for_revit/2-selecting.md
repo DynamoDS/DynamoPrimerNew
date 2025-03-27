@@ -48,7 +48,7 @@ Tenendo presenti le tre immagini riportate sopra, si esaminerà un esercizio che
 
 In questo file di Revit di esempio, ci sono tre tipi di elementi di un semplice edificio. Si utilizzerà questo file come esempio per la selezione di elementi di Revit nel contesto della gerarchia di Revit.
 
-![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+![](<../.gitbook/assets/selecting\_exercise\_01 (1) (1).jpg>)
 
 > 1. Massa dell'edificio
 > 2. Travi (telaio strutturale)
@@ -81,7 +81,7 @@ Ecco un metodo alternativo. In questo caso, non si esegue la selezione tramite l
 
 Utilizzando alcune operazioni di base con gli elenchi, è possibile eseguire una query su una superficie di interesse.
 
-![](images/2/selecting - exercise 05.jpg)
+!\[]\(images/2/selecting - exercise 05.jpg)
 
 > 1. Innanzitutto, generare gli elementi selezionati da una versione precedente al nodo Element.Faces.
 > 2. Quindi, utilizzare il nodo _List.Count_ per mostrare che si stanno utilizzando 23 superfici nella massa.
