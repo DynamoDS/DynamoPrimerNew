@@ -30,7 +30,7 @@ _Apontar e clicar_ é a forma mais fácil de selecionar diretamente um elemento 
 
 Os _menus suspensos_ criam uma lista de todos os elementos acessíveis em um projeto do Revit. É possível usar essa opção para referenciar elementos do Revit que não são necessariamente visíveis em uma vista. Essa é uma ótima ferramenta para consultar elementos existentes ou criar novos em um projeto do Revit ou em um editor de família.
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 Também é possível selecionar o elemento do Revit por camadas específicas na _hierarquia do Revit_. Essa é uma opção eficaz para personalizar grandes matrizes de dados na preparação da documentação ou da instanciação generativa e personalização.
 
@@ -48,7 +48,7 @@ Com as três imagens acima em mente, vamos nos aprofundar em um exercício que s
 
 Neste arquivo de exemplo do Revit, temos três tipos de elementos de uma construção simples. Usaremos isso como exemplo para selecionar elementos do Revit no contexto da hierarquia do Revit.
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Massa de construção
 > 2. Vigas (Framing estrutural)
@@ -81,7 +81,7 @@ Veja a seguir um método alternativo. Nesse caso, estamos deixando de lado a sel
 
 Usando algumas operações básicas de lista, podemos consultar uma face de interesse.
 
-\![](images/2/selecting - exercise 05.jpg)
+!\[]\(images/2/selecting - exercise 05.jpg)
 
 > 1. Primeiro, gere os elementos selecionados anteriormente para o nó Element.Faces.
 > 2. Em seguida, use o nó _List.Count_ que revela que estamos trabalhando com 23 superfícies na massa.
