@@ -508,9 +508,9 @@ Dynamo 中 Zero Touch 节点的自定义图标使节点在视觉上与众不同�
 
 如果您的项目尚未采用 SDK 样式（嵌入资源时需要），请将其转换：
 
-1. 从 Visual Studio 的 **Extensions > Manage Extensions** 菜单安装 `.NET Upgrade Assistant` 扩展。
+1. 从 Visual Studio 的 **扩展 > 管理扩展** 菜单安装 `.NET Upgrade Assistant` 扩展。
 
-![Manage Extensions](images/zerotouchicons-manage-extensions.jpg)
+![管理扩展](images/zerotouchicons-manage-extensions.jpg)
 
 ![安装 .NET 升级助手](images/zerotouchicons-net-upgrade-assistant.jpg)
 
