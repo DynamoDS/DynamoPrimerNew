@@ -4,7 +4,7 @@ Una potente funzionalità di Dynamo è la possibilità di modificare i parametri
 
 ### Parametri di istanza e tipo
 
-\![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. I parametri di istanza definiscono l'apertura dei pannelli sulla superficie del tetto, che prevedono un rapporto di apertura compreso tra 0.1 e 0.4.
 > 2. I parametri basati sul tipo vengono applicati ad ogni elemento della superficie in quanto si tratta dello stesso tipo di famiglia. Il materiale di ciascun pannello, ad esempio, può essere determinato da un parametro basato sul tipo.
@@ -16,7 +16,9 @@ Una potente funzionalità di Dynamo è la possibilità di modificare i parametri
 
 Come rapido ripasso dei parametri in Revit, si ricorda che sono presenti parametri di tipo e di istanza. Entrambi possono essere modificati da Dynamo, ma nell'esercizio riportato di seguito verranno utilizzati i parametri di istanza.
 
-{% hint style="info" %} Mentre si rileva l'applicazione estesa della modifica di parametri, potrebbe essere necessario modificare una grande quantità di elementi in Revit con Dynamo. Questa operazione può essere _costosa dal punto di vista computazionale_ , ovvero può risultare lenta. Se si modifica un numero elevato di elementi, è possibile utilizzare la funzionalità Congela del nodo per interrompere l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) nel capitolo sui solidi. {% endhint %}
+{% hint style="info" %}
+Mentre si rileva l'applicazione estesa della modifica di parametri, potrebbe essere necessario modificare una grande quantità di elementi in Revit con Dynamo. Questa operazione può essere _costosa dal punto di vista computazionale_ , ovvero può risultare lenta. Se si modifica un numero elevato di elementi, è possibile utilizzare la funzionalità Congela del nodo per interrompere l'esecuzione delle operazioni di Revit durante lo sviluppo del grafico. Per ulteriori informazioni sul congelamento dei nodi, controllare la sezione [Congelamento](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md) nel capitolo sui solidi.
+{% endhint %}
 
 ### Unità di misura
 
