@@ -30,7 +30,7 @@ _Puntamento e clic_ è il modo più semplice per selezionare direttamente un ele
 
 I _menu a discesa_ consentono di creare un elenco di tutti gli elementi accessibili in un progetto di Revit. È possibile utilizzare questa opzione per fare riferimento ad elementi di Revit che non sono necessariamente visibili in una vista. Questo è un ottimo strumento per eseguire una query su elementi esistenti o crearne di nuovi in un Editor di famiglie o in un progetto di Revit.
 
-\![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
 
 È inoltre possibile selezionare un elemento di Revit in base a livelli specifici nella _gerarchia di Revit_. Si tratta di un'opzione potente per la personalizzazione di grandi serie di dati in preparazione della documentazione o della creazione di istanze generative e della personalizzazione.
 
@@ -48,7 +48,7 @@ Tenendo presenti le tre immagini riportate sopra, si esaminerà un esercizio che
 
 In questo file di Revit di esempio, ci sono tre tipi di elementi di un semplice edificio. Si utilizzerà questo file come esempio per la selezione di elementi di Revit nel contesto della gerarchia di Revit.
 
-\![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
+![](<../.gitbook/assets/selecting_exercise_01 (1) (1).jpg>)
 
 > 1. Massa dell'edificio
 > 2. Travi (telaio strutturale)
@@ -75,18 +75,18 @@ Ecco un metodo alternativo. In questo caso, non si esegue la selezione tramite l
 
 ![](../.gitbook/assets/selecting\_exercise\_04.jpg)
 
-> 1. Utilizzando il nodo _Select Model Element_, fare clic sul pulsante *Seleziona *(o _Modifica_). Nella finestra di Revit, selezionare l'elemento desiderato. In questo caso, selezionare la massa dell'edificio.
+> 1. Utilizzando il nodo _Select Model Element_, fare clic sul pulsante \*Seleziona \*(o _Modifica_). Nella finestra di Revit, selezionare l'elemento desiderato. In questo caso, selezionare la massa dell'edificio.
 > 2. Anziché _Element.Faces_, è possibile selezionare l'intera massa come geometria solida utilizzando _Element.Geometry_. In questo modo viene selezionata tutta la geometria contenuta all'interno della massa.
 > 3. Utilizzando _Geometry.Explode_ è possibile ottenere di nuovo l'elenco delle superfici. Questi due nodi funzionano allo stesso modo di _Element.Faces_, ma offrono opzioni alternative per fare ricerche nella geometria di un elemento di Revit.
 
 Utilizzando alcune operazioni di base con gli elenchi, è possibile eseguire una query su una superficie di interesse.
 
-\![](images/2/selecting - exercise 05.jpg)
+![](images/2/selecting - exercise 05.jpg)
 
 > 1. Innanzitutto, generare gli elementi selezionati da una versione precedente al nodo Element.Faces.
 > 2. Quindi, utilizzare il nodo _List.Count_ per mostrare che si stanno utilizzando 23 superfici nella massa.
-> 3. Facendo riferimento a questo numero, è possibile modificare il valore massimo di *Integer Slider *in _22_.
-> 4. Utilizzando _List.GetItemAtIndex_, immettere gli elenchi e dei valori in *Integer Slider * per _index_. Scorrendo il dispositivo con l'elemento selezionato, fermarsi quando si ottiene _index 9_ e viene isolata la facciata principale che ospita le travi reticolari.
+> 3. Facendo riferimento a questo numero, è possibile modificare il valore massimo di \*Integer Slider \*in _22_.
+> 4. Utilizzando _List.GetItemAtIndex_, immettere gli elenchi e dei valori in \*Integer Slider \* per _index_. Scorrendo il dispositivo con l'elemento selezionato, fermarsi quando si ottiene _index 9_ e viene isolata la facciata principale che ospita le travi reticolari.
 
 Il passaggio precedente era un po' complicato. È possibile eseguire questa operazione molto più rapidamente con il nodo _Select Face_. Questo consente di isolare una superficie che di per sé non è un elemento nel progetto di Revit. La stessa interazione si applica a _Select Model Element_, tranne per il fatto che è stata selezionata la superficie anziché l'elemento completo.
 
