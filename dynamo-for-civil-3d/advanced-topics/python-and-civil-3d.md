@@ -7,7 +7,9 @@ Aunque Dynamo es extremadamente eficaz como herramienta de [programación visual
 
 Esta sección se centrará en cómo aprovechar Python en el entorno de Civil 3D para sacar partido de las API de .NET de AutoCAD y Civil 3D.
 
-{% hint style="info" %} Consulte la sección [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") para obtener información sobre cómo usar Python en Dynamo. {% endhint %}
+{% hint style="info" %}
+Consulte la sección [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") para obtener información sobre cómo usar Python en Dynamo.
+{% endhint %}
 
 ## Documentación de las API
 
@@ -39,8 +41,10 @@ Al editar por primera vez un nuevo nodo de Python, este se rellenará previament
 > 8. Anule los comentarios de esta línea para confirmar la transacción una vez que haya terminado el trabajo principal.
 > 9. Si desea generar datos del nodo, asígnelo a la variable `OUT` al final de la secuencia de comandos.
 
-{% hint style="info" %} **¿Desea personalizar la plantilla?**\
- Puede modificar la plantilla de Python por defecto. Para ello, edite el archivo `PythonTemplate.py` ubicado en `C:\ProgramData\Autodesk\C3D <version>\Dynamo`. {% endhint %}
+{% hint style="info" %}
+**¿Desea personalizar la plantilla?**\
+ Puede modificar la plantilla de Python por defecto. Para ello, edite el archivo `PythonTemplate.py` ubicado en `C:\ProgramData\Autodesk\C3D <version>\Dynamo`.
+ {% endhint %}
 
 ## Ejemplo
 
@@ -181,7 +185,9 @@ Y esta es la geometría final de Dynamo.
 
 Apenas una nota rápida aquí antes de terminar. En función de la versión de Civil 3D que esté utilizando, es posible que el nodo de Python se haya configurado de forma diferente. En **Civil 3D 2020 y 2021**, Dynamo utilizaba una herramienta denominada **IronPython** para desplazar datos entre objetos .NET y secuencias de comandos de Python. Sin embargo, en **Civil 3D 2022**, Dynamo realizó la transición al intérprete nativo de Python estándar (también conocido como **CPython**) que utiliza Python 3. Las ventajas de esta transición incluyen el acceso a las bibliotecas modernas más conocidas y a las nuevas funciones de la plataforma, el mantenimiento esencial y los parches de seguridad.
 
-{% hint style="info" %} Puede obtener más información sobre esta transición y sobre cómo actualizar las secuencias de comandos existentes en el [blog de Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Si desea seguir utilizando IronPython, solo tendrá que instalar el paquete de **DynamoIronPython2.7** mediante Dynamo Package Manager. {% endhint %}
+{% hint style="info" %}
+Puede obtener más información sobre esta transición y sobre cómo actualizar las secuencias de comandos existentes en el [blog de Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Si desea seguir utilizando IronPython, solo tendrá que instalar el paquete de **DynamoIronPython2.7** mediante Dynamo Package Manager.
+{% endhint %}
 
 [^1]: Por defecto, la biblioteca de geometría de Dynamo no se añade al entorno de Python. Nuestro objetivo con esta secuencia de comandos es generar una lista de puntos de Dynamo para los contornos de cuenca vertiente, por lo que es necesario añadir esta línea para crear los puntos más adelante.
 
