@@ -7,7 +7,9 @@ Embora o Dynamo seja extremamente poderoso como uma ferramenta de [programação
 
 Esta seção se concentrará em como aproveitar o Python no ambiente do Civil 3D para tirar proveito das APIs .NET do AutoCAD e do Civil 3D.
 
-{% hint style="info" %} Dê uma olhada na seção [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") para obter informações mais gerais sobre como usar o Python no Dynamo. {% endhint %}
+{% hint style="info" %}
+Dê uma olhada na seção [8-3_python](../../8\_coding\_in\_dynamo/8-3\_python/ "mention") para obter informações mais gerais sobre como usar o Python no Dynamo.
+{% endhint %}
 
 ## Documentação das APIs
 
@@ -39,8 +41,10 @@ Quando você editar um novo nó Python pela primeira vez, ele será preenchido p
 > 8. Retire o comentário dessa linha para confirmar a transação após seu trabalho principal ter sido concluído.
 > 9. Se desejar gerar dados do nó, atribua-os à variável `OUT` no final do script.
 
-{% hint style="info" %} **Deseja personalizar?**\
- É possível modificar o modelo Python padrão editando o arquivo `PythonTemplate.py` localizado em `C:\ProgramData\Autodesk\C3D <versão>\Dynamo`. {% endhint %}
+{% hint style="info" %}
+**Deseja personalizar?**\
+ É possível modificar o modelo Python padrão editando o arquivo `PythonTemplate.py` localizado em `C:\ProgramData\Autodesk\C3D <versão>\Dynamo`.
+ {% endhint %}
 
 ## Exemplo
 
@@ -181,7 +185,9 @@ E aqui está a geometria final do Dynamo.
 
 Apenas uma rápida observação aqui antes de finalizarmos. Dependendo de qual versão do Civil 3D você está usando, o nó Python pode ser configurado de forma diferente. No **Civil 3D 2020 e 2021**, o Dynamo usava uma ferramenta chamada **IronPython** para mover dados entre objetos .NET e scripts Python. No entanto, no **Civil 3D 2022**, o Dynamo fez a transição para usar o interpretador Python nativo padrão (também conhecido como **CPython**), que usa o Python 3. Os benefícios dessa transição incluem o acesso a bibliotecas modernas e populares, além de novos recursos de plataforma, manutenção essencial e patches de segurança.
 
-{% hint style="info" %} Você pode ler mais sobre essa transição e sobre como atualizar os scripts herdados no [Blog do Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Se você desejar continuar usando o IronPython, basta instalar o pacote **DynamoIronPython2.7** usando o Dynamo Package Manager. {% endhint %}
+{% hint style="info" %}
+Você pode ler mais sobre essa transição e sobre como atualizar os scripts herdados no [Blog do Dynamo](https://dynamobim.org/why-has-dynamo-switched-to-python-3-should-i-update-too/). Se você desejar continuar usando o IronPython, basta instalar o pacote **DynamoIronPython2.7** usando o Dynamo Package Manager.
+{% endhint %}
 
 [^1]: Por padrão, a biblioteca de geometria do Dynamo não é adicionada ao ambiente Python. Nosso objetivo com este script é gerar uma lista de pontos do Dynamo para os limites da área de contribuição; portanto, precisamos adicionar essa linha para criar os pontos mais tarde.
 
