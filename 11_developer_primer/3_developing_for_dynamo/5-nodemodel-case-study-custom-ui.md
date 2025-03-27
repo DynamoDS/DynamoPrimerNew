@@ -264,7 +264,7 @@ namespace CustomNodeModel.CustomNodeModel
 </UserControl>
 ```
 
-* スライダ コントロールのパラメータは、`.xaml` ファイルの In で定義されています。Minimum および Maximum__ の属性は、このスライダの数値範囲を定義します。
+* スライダ コントロールのパラメータは、`.xaml` ファイルの In で定義されています。_Minimum および Maximum_ の属性は、このスライダの数値範囲を定義します。
 * `<Grid>...</Grid>` 内に、Visual Studio ツールボックスからさまざまなユーザ コントロールを配置できます。
 
 `Slider.xaml` ファイルを作成すると、Visual Studio によって自動的に `Slider.xaml.cs` という C# ファイルが作成され、スライダが初期化されます。このファイルの名前空間を変更します。
