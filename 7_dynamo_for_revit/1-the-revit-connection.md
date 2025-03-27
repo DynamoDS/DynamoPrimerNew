@@ -37,7 +37,7 @@ Em um editor de família ou um projeto do Revit, navegue para Complementos e cli
 
 {% hint style="warning" %} *O Dynamo será executado somente no arquivo no qual foi aberto. {% endhint %}
 
-\![](<images/1/launchdynamofromrevit (1).jpg>)
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Quando o Dynamo é aberto no Revit, há uma nova categoria chamada “Revit”. Essa é uma adição abrangente à interface de usuário, oferecendo nós especificamente voltados para os fluxos de trabalho do Revit.*
 
@@ -49,7 +49,9 @@ Quando o Dynamo é aberto no Revit, há uma nova categoria chamada “Revit”. 
 
 Como o Revit é uma plataforma que fornece um gerenciamento robusto de projetos, as operações paramétricas no Dynamo podem ser complexas e seu cálculo pode ser lento. Se o Dynamo estiver demorando muito para calcular os nós, será recomendável usar a funcionalidade do nó “congelar” para pausar a execução das operações do Revit enquanto desenvolve o gráfico.
 
-{% hint style="info" %} Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Você pode obter mais informações sobre o congelamento de nós na seção [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention").
+{% endhint %}
 
 ### Comunidade e blog do Dynamo
 
