@@ -61,7 +61,8 @@ Ora che sono disponibili i dati, è necessario suddividerli per colonna (_Corrid
 
 Sembra a posto, giusto? Ma c'è un potenziale problema con questo approccio. Cosa succede se l'ordine delle colonne nel file Excel cambia in futuro? Oppure tra due colonne ne viene aggiunta una nuova? Il grafico non funzionerà correttamente e richiederà un aggiornamento. È proteggere il grafico in futuro inserendo i dati in un **dizionario**, con le intestazioni di colonna di Excel come _keys_ e gli altri dati come _values_.
 
-{% hint style="info" %}Se non si conoscono i dizionari, consultare la sezione [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention").
+{% hint style="info" %}
+Se non si conoscono i dizionari, consultare la sezione [5-5_dictionaries-in-dynamo](../../../5\_essential\_nodes\_and\_concepts/5-5\_dictionaries-in-dynamo/ "mention").
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Roads_CorridorBlockRefs_Dictionary.png" alt=""><figcaption><p>Inserimento dei dati di Excel in un dizionario</p></figcaption></figure>
@@ -92,7 +93,9 @@ Se non si conoscono i sistemi di coordinate, consultare la sezione [2-vectors.md
 
 Si noti che qui viene utilizzato un blocco di codice per ruotare i sistemi di coordinate in base al lato della linea base su cui si trovano. Si potrebbe ottenere questo risultato utilizzando una sequenza di più nodi, ma questo è un buon esempio di una situazione in cui è più facile scriverlo.
 
-{% hint style="info" %} Se non si conoscono i blocchi di codice, consultare la sezione [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention"). {% endhint %}
+{% hint style="info" %}
+Se non si conoscono i blocchi di codice, consultare la sezione [8-1_code-blocks-and-design-script](../../../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/ "mention").
+{% endhint %}
 
 ### Creazione di riferimenti di blocco
 
