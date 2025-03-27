@@ -17,7 +17,9 @@ Ao adicionar tubulações e estruturas a uma rede de tubulação, o Civil 3D us
 
 ## Compatibilidade de versão
 
-{% hint style="success" %} Este gráfico será executado no **Civil 3D 2020** e versões superiores. {% endhint %}
+{% hint style="success" %}
+Este gráfico será executado no **Civil 3D 2020** e versões superiores.
+{% endhint %}
 
 ## Conjunto de dados
 
@@ -77,7 +79,9 @@ Neste ponto é que as coisas começam a ficar um pouco complicadas. Nesta fase, 
 
 Portanto, precisamos filtrar a lista de estruturas para que não consideremos as que são maiores do que um determinado deslocamento do alinhamento. Isso é melhor realizado usando o nó **List.FilterByBoolMask**. Após filtrar a lista de estruturas, usamos o nó **List.SortByKey** para classificá-las por seus valores de estaca.
 
-{% hint style="info" %} Se você não estiver familiarizado com o trabalho com listas, veja a seção [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention"). {% endhint %}
+{% hint style="info" %}
+Se você não estiver familiarizado com o trabalho com listas, veja a seção [2-working-with-lists.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/2-working-with-lists.md "mention").
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_FilterAndSort.png" alt=""><figcaption><p>Filtragem e classificação das estruturas</p></figcaption></figure>
 
@@ -104,7 +108,9 @@ Veja um exemplo de como executar o gráfico usando o **Reprodutor do Dynamo**.
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_Player.gif" alt=""><figcaption><p>Execução do gráfico usando o Reprodutor do Dynamo e visualização dos resultados no Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../../dynamo-player.md "mention").
+{% endhint %}
 
 > :tada: Missão cumprida.
 
@@ -122,8 +128,14 @@ Agora podemos entender melhor como funciona o processo de filtragem das estrutur
 
 Veja a seguir algumas ideias sobre como você pode expandir os recursos desse gráfico.
 
-{% hint style="info" %} Renomeie as estruturas com base em seu **Alinhamento mais próximo** em vez de selecionar um alinhamento específico. {% endhint %}
+{% hint style="info" %}
+Renomeie as estruturas com base em seu **Alinhamento mais próximo** em vez de selecionar um alinhamento específico.
+{% endhint %}
 
-{% hint style="info" %} **Renomeie as tubulações** além das estruturas. {% endhint %}
+{% hint style="info" %}
+**Renomeie as tubulações** além das estruturas.
+{% endhint %}
 
-{% hint style="info" %} **Defina as camadas** das estruturas com base em seu trecho. {% endhint %}
+{% hint style="info" %}
+**Defina as camadas** das estruturas com base em seu trecho.
+{% endhint %}
