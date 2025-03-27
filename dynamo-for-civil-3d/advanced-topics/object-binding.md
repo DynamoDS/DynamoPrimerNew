@@ -36,7 +36,9 @@ Depois de fazer essa alteração, temos o comportamento que procuramos.
 
 O Dynamo for Civil 3D permite modificar o comportamento padrão da vinculação de objetos por meio das configurações **Armazenamento de dados de vinculação** no menu do **Dynamo**.
 
-{% hint style="info" %} Observe que as opções de Armazenamento de dados de vinculação estão disponíveis no **Civil 3D 2022.1** e versões posteriores. {% endhint %}
+{% hint style="info" %}
+Observe que as opções de Armazenamento de dados de vinculação estão disponíveis no **Civil 3D 2022.1** e versões posteriores.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/c3d-binding-settings (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -46,36 +48,48 @@ Todas as opções estão ativadas por padrão. Veja a seguir um resumo do que ca
 
 Quando essa opção está ativada, o Dynamo “esquecerá” os objetos que criou na última vez que o gráfico foi executado. Assim, o gráfico pode ser executado em qualquer desenho em qualquer situação e criará novos objetos a cada vez.
 
-{% hint style="info" %} **Quando usar**
+{% hint style="info" %}
+**Quando usar**
 
-Use essa opção quando desejar que o Dynamo “esqueça” tudo sobre o que fez em execuções anteriores e crie novos objetos todas as vezes. {% endhint %}
+Use essa opção quando desejar que o Dynamo “esqueça” tudo sobre o que fez em execuções anteriores e crie novos objetos todas as vezes.
+{% endhint %}
 
 ### Opção 2: Armazenar no desenho para o Dynamo
 
 Essa opção significa que os metadados da vinculação de objetos serão serializados no gráfico (arquivo .dyn) quando ele for salvo. Se você fechar/reabrir o gráfico e executá-lo no **mesmo desenho**, tudo deverá funcionar da mesma forma que você deixou. Se o gráfico for executado em um **desenho diferente**, os dados de vinculação serão removidos do gráfico e novos objetos serão criados. Isso significa que, se você abrir o desenho original e executar o gráfico novamente, serão criados novos objetos além dos antigos.
 
-{% hint style="info" %} **Quando usar**
+{% hint style="info" %}
+**Quando usar**
 
-Use essa opção quando desejar que o Dynamo “lembre-se” dos objetos que criou na última vez que foi executado em um **desenho específico**. {% endhint %}
+Use essa opção quando desejar que o Dynamo “lembre-se” dos objetos que criou na última vez que foi executado em um **desenho específico**.
+{% endhint %}
 
-{% hint style="warning" %} Essa opção é mais adequada para situações em que é possível manter uma relação 1:1 entre um **desenho específico** e um gráfico do Dynamo. As opções 1 e 3 são mais adequadas para gráficos projetados para execução em vários desenhos. {% endhint %}
+{% hint style="warning" %}
+Essa opção é mais adequada para situações em que é possível manter uma relação 1:1 entre um **desenho específico** e um gráfico do Dynamo. As opções 1 e 3 são mais adequadas para gráficos projetados para execução em vários desenhos.
+{% endhint %}
 
 ### Opção 3: Armazenar no desenho para o Dynamo
 
 Essa opção é semelhante à Opção 2, exceto que os dados de vinculação de objetos são serializados no desenho em vez de serem no gráfico (arquivo .dyn). Se você fechar/reabrir o gráfico e executá-lo no **mesmo desenho**, tudo deverá funcionar da mesma forma que você deixou. Se o gráfico for executado em um **desenho diferente**, os dados de vinculação ainda serão preservados no desenho original, já que ele é salvo no desenho e não no gráfico.
 
-{% hint style="info" %} **Quando usar**
+{% hint style="info" %}
+**Quando usar**
 
-Use essa opção quando desejar usar o mesmo gráfico em **vários desenhos** e que o Dynamo “lembre” do que fez em cada um deles. {% endhint %}
+Use essa opção quando desejar usar o mesmo gráfico em **vários desenhos** e que o Dynamo “lembre” do que fez em cada um deles.
+{% endhint %}
 
 ### Opção 4: Armazenar no desenho para o Reprodutor do Dynamo
 
 A primeira coisa a observar com essa opção é que ela não tem efeito sobre como o gráfico interage com o desenho ao executar o gráfico através da interface principal do Dynamo. Essa opção _somente_ se aplica quando o gráfico é executado usando o Reprodutor do Dynamo.
 
-{% hint style="info" %} Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+Se o Reprodutor do Dynamo for algo novo para você, veja a seção [dynamo-player.md](../dynamo-player.md "mention").
+{% endhint %}
 
 Se o gráfico for executado usando a interface principal do Dynamo e, em seguida, fechar e executar o mesmo gráfico usando o Reprodutor do Dynamo, ele criará novos objetos além dos que criou antes. No entanto, quando o Reprodutor do Dynamo executar o gráfico uma vez, ele serializará os dados da vinculação de objetos no desenho. Portanto, se o gráfico for executado várias vezes através do Reprodutor do Dynamo, ele atualizará os objetos em vez de criar novos. Se o gráfico for executado através do Reprodutor do Dynamo em um **desenho diferente**, os dados de vinculação ainda serão preservados no desenho original, já que ele será salvo no desenho e não no gráfico.
 
-{% hint style="info" %} **Quando usar**
+{% hint style="info" %}
+**Quando usar**
 
-Use essa opção quando desejar executar um gráfico usando o Reprodutor do Dynamo em vários desenhos e que ele “lembre” o que fez em cada um deles. {% endhint %}
+Use essa opção quando desejar executar um gráfico usando o Reprodutor do Dynamo em vários desenhos e que ele “lembre” o que fez em cada um deles.
+{% endhint %}
