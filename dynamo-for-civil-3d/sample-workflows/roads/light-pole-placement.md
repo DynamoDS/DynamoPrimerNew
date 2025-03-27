@@ -155,5 +155,5 @@ Aggiungere **offset orizzontali o verticali** al file Excel in modo che i lampio
 {% endhint %}
 
 {% hint style="info" %}
-Anziché utilizzare un file Excel con valori di progressiva, generare i valori di progressiva ** direttamente in Dynamo** utilizzando una progressiva iniziale e una spaziatura tipica.
+Anziché utilizzare un file Excel con valori di progressiva, generare i valori di progressiva **direttamente in Dynamo** utilizzando una progressiva iniziale e una spaziatura tipica.
 {% endhint %}
