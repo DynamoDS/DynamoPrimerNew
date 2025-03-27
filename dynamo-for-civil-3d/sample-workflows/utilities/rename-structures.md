@@ -92,7 +92,7 @@ Se você não estiver familiarizado com o trabalho com listas, veja a seção [2
 
 ### Gerar os novos nomes
 
-O último trabalho que precisamos fazer é criar os novos nomes para as estruturas. O formato que usaremos é `<alignment name>-STRC-<number>`. Há alguns nós extras aqui para preencher os números com zeros extras, se desejado (por exemplo, “01”em vez de “1”).
+O último trabalho que precisamos fazer é criar os novos nomes para as estruturas. O formato que usaremos é `<alignment name>-STRC-<number>`. Há alguns nós extras aqui para preencher os números com zeros extras, se desejado (por exemplo, “01” em vez de “1”).
 
 <figure><img src="../../../.gitbook/assets/Utilities_RenameStructures_GenerateNames.png" alt=""><figcaption><p>Geração dos novos nomes das estruturas</p></figcaption></figure>
 
