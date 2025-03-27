@@ -30,7 +30,7 @@ _Señalar y hacer clic_ es el método más sencillo para seleccionar directament
 
 Los _menús desplegables_ crean una lista de todos los elementos a los que se puede acceder en un proyecto de Revit. Puede utilizar esta opción para hacer referencia a elementos de Revit que no están necesariamente visibles en una vista. Esta es una herramienta excelente para consultar elementos existentes o crear nuevos elementos en un editor de proyectos o familias de Revit.
 
-![](../.gitbook/assets/selecting _database_navigation_with_dynamo_nodes_02.png)
+!\[]\(../.gitbook/assets/selecting \_database\_navigation\_with\_dynamo\_nodes\_02.png)
 
 También puede seleccionar elementos de Revit por niveles específicos en la _jerarquía de Revit_. Esta es una opción eficaz para personalizar grandes matrices de datos para preparar la documentación o la creación de ejemplares y personalización generativas.
 
@@ -75,7 +75,7 @@ A continuación se incluye un método alternativo. En este caso, no vamos a real
 
 ![](../.gitbook/assets/selecting\_exercise\_04.jpg)
 
-> 1. Mediante el nodo _"Select Model Element"_, haga clic en el botón \*"select" \*(o _"change"_). En la ventana gráfica de Revit, seleccione el elemento que desee. En este caso, seleccionamos la masa de construcción.
+> 1. Mediante el nodo _"Select Model Element"_, haga clic en el botón \*"select"\* (o _"change"_). En la ventana gráfica de Revit, seleccione el elemento que desee. En este caso, seleccionamos la masa de construcción.
 > 2. En lugar de _Element.Faces_, se puede seleccionar la masa completa como una geometría sólida mediante _Element.Geometry_. De este modo, se selecciona toda la geometría contenida en la masa.
 > 3. Mediante _Geometry.Explode_, podemos obtener la lista de superficies de nuevo. Estos dos nodos funcionan de la misma forma que _Element.Faces_, pero ofrecen opciones alternativas para profundizar en la geometría de un elemento de Revit.
 
@@ -85,8 +85,8 @@ Mediante algunas operaciones de lista básicas, podemos consultar una cara de in
 
 > 1. En primer lugar, genere los elementos seleccionados anteriormente en el nodo Element.Faces.
 > 2. A continuación, el nodo _List.Count_ indica que estamos trabajando con 23 superficies en la masa.
-> 3. Al hacer referencia a este número, se cambia el valor máximo de un \*control deslizante de enteros \*a _"22"_.
-> 4. Con _List.GetItemAtIndex_, se introducen las listas y el \*control deslizante de enteros \*para el _índice_. Deslizamos la selección y nos detenemos cuando lleguemos al _índice 9_ y hayamos aislado la fachada principal que contiene las vigas de celosía.
+> 3. Al hacer referencia a este número, se cambia el valor máximo de un \*control deslizante de enteros\* a _"22"_.
+> 4. Con _List.GetItemAtIndex_, se introducen las listas y el \*control deslizante de enteros\* para el _índice_. Deslizamos la selección y nos detenemos cuando lleguemos al _índice 9_ y hayamos aislado la fachada principal que contiene las vigas de celosía.
 
 El paso anterior era un poco engorroso. Esto se puede hacer mucho más deprisa con el nodo _"Select Face"_. Este nos permite aislar una cara que no es un elemento en el proyecto de Revit. Se aplica la misma interacción que con _"Select Model Element"_, excepto que seleccionamos la superficie en lugar del elemento completo.
 
