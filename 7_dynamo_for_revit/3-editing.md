@@ -4,7 +4,7 @@ Una característica útil de Dynamo es la posibilidad de editar parámetros en u
 
 ### Parámetros de tipo y ejemplar
 
-\![Exercise](<../.gitbook/assets/32 (2).jpg>)
+![Exercise](<../.gitbook/assets/32 (2).jpg>)
 
 > 1. Los parámetros de ejemplar definen la apertura de los paneles en la superficie de la cubierta, desde una proporción de apertura de 0,1 a 0,4.
 > 2. Los parámetros basados en tipo se aplican a todos los elementos de la superficie porque son del mismo tipo de familia. El material de cada panel, por ejemplo, puede controlarse mediante un parámetro basado en tipo.
@@ -16,7 +16,9 @@ Una característica útil de Dynamo es la posibilidad de editar parámetros en u
 
 Como revisión rápida de los parámetros en Revit, recordemos que existen parámetros de tipo y parámetros de ejemplar. Ambos se pueden editar en Dynamo, pero trabajaremos con parámetros de ejemplar en el ejercicio siguiente.
 
-{% hint style="info" %} A medida que descubra la amplia aplicación de la edición de parámetros, puede que desee editar una gran cantidad de elementos en Revit con Dynamo. Esta puede ser una operación _computacionalmente exigente_, lo que significa que puede ser lenta. Si va a editar un gran número de elementos, puede usar la función de nodo "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico. Para obtener más información sobre el bloqueo de nodos, consulte la sección "[Bloqueo](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)" del capítulo sobre sólidos. {% endhint %}
+{% hint style="info" %}
+A medida que descubra la amplia aplicación de la edición de parámetros, puede que desee editar una gran cantidad de elementos en Revit con Dynamo. Esta puede ser una operación _computacionalmente exigente_, lo que significa que puede ser lenta. Si va a editar un gran número de elementos, puede usar la función de nodo "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico. Para obtener más información sobre el bloqueo de nodos, consulte la sección "[Bloqueo](../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/6-solids.md)" del capítulo sobre sólidos.
+{% endhint %}
 
 ### Unidades
 
