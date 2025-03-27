@@ -37,7 +37,7 @@ En un editor de proyectos o familias de Revit, vaya a Complementos y haga clic e
 
 {% hint style="warning" %}* Tenga en cuenta que Dynamo solo se ejecutará en el archivo en el que se abrió. {% endhint %}
 
-\![](<images/1/launchdynamofromrevit (1).jpg>)
+![](<images/1/launchdynamofromrevit (1).jpg>)
 
 Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata de una adición completa a la interfaz de usuario que ofrece nodos que se adaptan específicamente a los flujos de trabajo de Revit.*
 
@@ -49,7 +49,9 @@ Al abrir Dynamo en Revit, hay una nueva categoría denominada "Revit". Se trata 
 
 Como Revit es una plataforma que proporciona una sólida gestión de proyectos, las operaciones paramétricas de Dynamo pueden ser complejas y lentas de calcular. Si Dynamo tarda mucho tiempo en calcular los nodos, puede usar la función "Bloquear" para poner en pausa la ejecución de operaciones de Revit mientras desarrolla el gráfico.
 
-{% hint style="info" %} Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention"). {% endhint %}
+{% hint style="info" %}
+Puede obtener más información sobre cómo bloquear nodos en la sección [4_nodes_and_wires](../4\_nodes\_and\_wires/ "mention").
+{% endhint %}
 
 ### Comunidad y blog de Dynamo
 
