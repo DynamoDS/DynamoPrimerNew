@@ -17,7 +17,9 @@ El desarrollo de envolventes cinemáticos para la validación de la separación 
 
 ## Compatibilidad con versiones
 
-{% hint style="success" %} Este gráfico se ejecutará en **Civil 3D 2020** y versiones posteriores. {% endhint %}
+{% hint style="success" %}
+Este gráfico se ejecutará en **Civil 3D 2020** y versiones posteriores.
+{% endhint %}
 
 ## Conjunto de datos
 
@@ -49,13 +51,17 @@ El primer paso es obtener datos de obra lineal. Seleccionaremos el modelo de obr
 
 Ahora vamos a generar **sistemas de coordenadas** a lo largo de las líneas características de obra lineal entre un P.K. inicial y uno final especificados. Estos sistemas de coordenadas se utilizarán para alinear la geometría de bloque del perfil del vehículo con la obra lineal.
 
-{% hint style="info" %} Si es la primera vez que utiliza los sistemas de coordenadas, consulte la sección [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention"). {% endhint %}
+{% hint style="info" %}
+Si es la primera vez que utiliza los sistemas de coordenadas, consulte la sección [2-vectors.md](../../../5\_essential\_nodes\_and\_concepts/5-2\_geometry-for-computational-design/2-vectors.md "mention").
+{% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_CreateCoordinateSystems.png" alt=""><figcaption><p>Obtención de sistemas de coordenadas a lo largo de las líneas características de obra lineal</p></figcaption></figure>
 
 > 1. Observe el pequeño **XXX** en la esquina inferior derecha del nodo. Esto significa que los parámetros de encaje del nodo se han definido como _Producto vectorial_, lo que es necesario para generar los sistemas de coordenadas con los mismos valores de P.K. para ambas líneas características.
 
-{% hint style="info" %} Si es la primera vez que utiliza el encaje de nodos, consulte la sección [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention"). {% endhint %}
+{% hint style="info" %}
+Si es la primera vez que utiliza el encaje de nodos, consulte la sección [1-whats-a-list.md](../../../5\_essential\_nodes\_and\_concepts/5-4\_designing-with-lists/1-whats-a-list.md "mention").
+{% endhint %}
 
 ### Transformar la geometría de bloque
 
@@ -99,7 +105,9 @@ A continuación, se muestra un ejemplo de cómo ejecutar el gráfico con el **Re
 
 <figure><img src="../../../.gitbook/assets/Rail_ClearanceEnvelope_Player.gif" alt=""><figcaption><p>Ejecución del gráfico mediante el Reproductor de Dynamo y visualización de los resultados en Civil 3D</p></figcaption></figure>
 
-{% hint style="info" %} Si es la primera vez que utiliza el Reproductor de Dynamo, consulte la sección [dynamo-player.md](../../dynamo-player.md "mention"). {% endhint %}
+{% hint style="info" %}
+Si es la primera vez que utiliza el Reproductor de Dynamo, consulte la sección [dynamo-player.md](../../dynamo-player.md "mention").
+{% endhint %}
 
 > :tada: ¡Misión cumplida!
 
@@ -107,8 +115,14 @@ A continuación, se muestra un ejemplo de cómo ejecutar el gráfico con el **Re
 
 A continuación, se ofrecen algunas ideas sobre cómo podría ampliar las posibilidades de este gráfico.
 
-{% hint style="info" %} Añada la capacidad de utilizar **diferentes intervalos de P.K.** por separado para cada vía. {% endhint %}
+{% hint style="info" %}
+Añada la capacidad de utilizar **diferentes intervalos de P.K.** por separado para cada vía.
+{% endhint %}
 
-{% hint style="info" %} **Divida los sólidos** en segmentos más pequeños que se puedan analizar individualmente para detectar conflictos. {% endhint %}
+{% hint style="info" %}
+**Divida los sólidos** en segmentos más pequeños que se puedan analizar individualmente para detectar conflictos.
+{% endhint %}
 
-{% hint style="info" %} Compruebe si los sólidos de envolvente **se intersecan con elementos** y coloree aquellos que entren en conflicto. {% endhint %}
+{% hint style="info" %}
+Compruebe si los sólidos de envolvente **se intersecan con elementos** y coloree aquellos que entren en conflicto.
+{% endhint %}
