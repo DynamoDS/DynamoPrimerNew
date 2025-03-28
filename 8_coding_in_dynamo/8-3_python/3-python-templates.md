@@ -22,7 +22,9 @@ Dove è visibile la riga `<PythonTemplateFilePath />`, è sufficiente sostituirl
 </PythonTemplateFilePath>
 ```
 
-{% hint style="warning" %} _Nota Sostituire CURRENTUSER con il nome utente._ {% endhint %}
+{% hint style="warning" %}
+_Nota Sostituire CURRENTUSER con il nome utente._
+{% endhint %}
 
 Successivamente, è necessario creare un modello con le funzionalità incorporate che si desidera utilizzare. In questo caso, si incorporano le importazioni correlate a Revit e alcuni degli altri elementi tipici quando si utilizza Revit.
 
@@ -69,7 +71,7 @@ Al termine, salvare il file come `PythonTemplate.py` nella posizione `APPDATA`.
 
 ### Funzionamento successivo dello script Python
 
-D_o_po aver definito un modello di Python, verrà cercato in Dynamo ogni volta che viene posizionato un nodo Python. Se non viene trovato, sarà simile alla finestra di Python di default.
+D\_o\_po aver definito un modello di Python, verrà cercato in Dynamo ogni volta che viene posizionato un nodo Python. Se non viene trovato, sarà simile alla finestra di Python di default.
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
