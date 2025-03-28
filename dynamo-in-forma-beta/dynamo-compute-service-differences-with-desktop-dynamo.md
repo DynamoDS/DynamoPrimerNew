@@ -17,8 +17,8 @@ The version is based on 3.x and is updated frequently based on Dynamo's open-sou
 * Most of the core nodes, see the next section for some specific limitations.
 * `DynamoFormaBeta` package for interacting with the Forma API.
 * `VASA` for voxelization / efficient analysis.
-* `MeshToolKit` for mesh manipulation.
-* `RefineryToolkit` for optimization/options generation.
+* `MeshToolKit` for mesh manipulation. Mesh toolkit is also available out-of-the-box starting in Dynamo 3.4.
+* `RefineryToolkit` for useful algorithms that allow clash test, view distance, shortest path, isovist, etc.
 
 ## What should I be aware of while I write graphs for DaaS?
 
