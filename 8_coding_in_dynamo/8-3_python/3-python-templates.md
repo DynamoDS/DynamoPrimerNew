@@ -71,7 +71,7 @@ Al termine, salvare il file come `PythonTemplate.py` nella posizione `APPDATA`.
 
 ### Funzionamento successivo dello script Python
 
-D\_o\_po aver definito un modello di Python, verrà cercato in Dynamo ogni volta che viene posizionato un nodo Python. Se non viene trovato, sarà simile alla finestra di Python di default.
+Dopo aver definito un modello di Python, verrà cercato in Dynamo ogni volta che viene posizionato un nodo Python. Se non viene trovato, sarà simile alla finestra di Python di default.
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
