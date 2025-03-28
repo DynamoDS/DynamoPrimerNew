@@ -53,7 +53,6 @@ Scaricare la versione più recente [qui](https://aka.ms/vs/17/release/vc_redist.
 
 ![](images/a-7/dynamo-builds-4.png)
 
-
 Dopo aver installato entrambi i componenti richiesti dal collegamento precedente, riavviare DynamoSandbox.exe. Si dovrebbe vedere il seguente risultato:
 
 ![](images/a-7/dynamo-builds-5.png)
