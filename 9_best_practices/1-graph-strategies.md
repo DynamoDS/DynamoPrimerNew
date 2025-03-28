@@ -37,7 +37,7 @@ A medida que desarrolla el gráfico de Dynamo y prueba sus ideas, su tamaño y s
 > 1. DesignScript escrito en bloques de código
 > 2. Programa equivalente en nodos
 >
-> Para obtener información sobre cómo utilizar el bloque de código, consulte [¿Qué es un bloque de código?](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md).
+> Para obtener información sobre cómo utilizar el bloque de código, consulte [¿Qué es un bloque de código?](../8\_coding\_in\_dynamo/8-1\_code-blocks-and-design-script/1-what-is-a-code-block.md)
 
 ### **Condensación con de nodo a código**
 
