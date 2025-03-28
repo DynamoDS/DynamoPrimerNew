@@ -91,7 +91,7 @@ Pattern Now that we've made a circular Nautilus shell, let's jump into parametri
 
 As a jumping-off point, let's start with the same step from the previous exercise: creating a spiral array of points with the **Point.ByCoordinates** Node.
 
-![](../images/5-3/2/math-partIV-01.jpg)
+![] (../images/5-3/2/math-partIV-01.jpg)
 
 Next, follow these mini steps to generate a series of spiral at various rotation.
 
