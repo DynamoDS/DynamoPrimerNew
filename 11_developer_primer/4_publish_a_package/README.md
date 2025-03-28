@@ -67,7 +67,7 @@ O cliente Web do Gerenciador de pacotes permite que os usuários pesquisem e vis
 
 Para obter mais informações sobre esses recursos, consulte a postagem do blog aqui: [https://dynamobim.org/discover-the-new-dynamo-package-management-experience/](https://dynamobim.org/discover-the-new-dynamo-package-management-experience/).
 
-É possível acessar o cliente Web do Gerenciador de pacotes neste link: [https://dynamopackages.com/](https://dynamopackages.com)
+É possível acessar o cliente Web do Gerenciador de pacotes neste link: [https://dynamopackages.com/](https://dynamopackages.com).
 
 ![Cliente Web do gerenciador de pacotes](images/packagemanager-browser.jpg)
 
