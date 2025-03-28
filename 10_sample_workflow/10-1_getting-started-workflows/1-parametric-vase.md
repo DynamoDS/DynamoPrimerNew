@@ -70,7 +70,7 @@ Continuare ad aggiungere alcuni nodi e collegamenti alla logica per definire il 
 
 Copiare questi nodi 4 volte in modo che i cerchi definiscano la nostra superficie, quindi modificare i nomi di Number Slider come mostrato qui sotto.
 
-\![](<../images/10-1/1/vase4 (1).png>)
+![](<../images/10-1/1/vase4 (1).png>)
 
 > 1. I cerchi vengono creati da un punto centrale e da un raggio.
 
@@ -92,7 +92,7 @@ Per creare una superficie utilizzando il nodo **Surface.ByLoft**, si devono comb
 
 Disattivare anche l'anteprima in altri nodi per visualizzare solo Surface.ByLoft.
 
-\![](<../images/10-1/1/vase6 (1).png>)
+![](<../images/10-1/1/vase6 (1).png>)
 
 > 3\. Una superficie viene creata tramite il loft dei cerchi traslati.
 
