@@ -23,7 +23,9 @@ Lo scripting di testo può stabilire relazioni di maggiore complessità rispetto
 | **Python**         | Sì         | Sì           | Parzialmente          | Sì                | No            |
 | **ZeroTouch (C#)** | No          | No            | No                 | Sì                | No            |
 
-{% hint style="info" %} Consultare [Riferimento per lo scripting](3-scripting-reference.md) per visualizzare un elenco delle funzionalità rese disponibili da ogni libreria di Dynamo. {% endhint %}
+{% hint style="info" %}
+Consultare [Riferimento per lo scripting](3-scripting-reference.md) per visualizzare un elenco delle funzionalità rese disponibili da ogni libreria di Dynamo.
+{% endhint %}
 
 ### Pensiero parametrico
 
