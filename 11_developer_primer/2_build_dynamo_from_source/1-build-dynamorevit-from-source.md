@@ -170,10 +170,10 @@ Abra primero el archivo de la solución `DynamoRevit.All.sln`, inicie Revit e in
 
 > Revit y DynamoRevit deben estar en ejecución para mostrarse como un proceso disponible.
 >
-> 1. Abra la ventana `Attach to Process`. Para ello, seleccione `Debug > Attach to Process...`.
-> 2. Establezca `Transport` en `Default`.
-> 3. Seleccione `Revit.exe`.
-> 4. Seleccione `Attach`.
+> 1. Abra la ventana `Attach to Process`. Para ello, seleccione `Debug > Attach to Process...`
+> 2. Establezca `Transport` en `Default`
+> 3. Seleccione `Revit.exe`
+> 4. Seleccione `Attach`
 
 Con Visual Studio enlazado a Revit, abra el código fuente de Wall.ByCurveAndHeight en `Wall.cs`. Podemos encontrarlo en el Explorador de soluciones, en `Libraries > RevitNodes > Elements`, en la región `Public static constructors` del archivo. Establezca un punto de interrupción en el constructor del tipo de muro para que, cuando se ejecute el nodo en Dynamo, el proceso se interrumpa y se pueda recorrer cada línea de código de forma individual. Por lo general, los constructores de tipo Zero-Touch de Dynamo comienzan por `By<parameters>`.
 
