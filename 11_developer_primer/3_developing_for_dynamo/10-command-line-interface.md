@@ -1,49 +1,41 @@
 # Dynamo コマンド ライン インタフェース
 
-***
-      -o, -O, --OpenFilePath        Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox
-***
-      -c, -C, --CommandFilePath     Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox                      
-***
-      -v, -V, --Verbose             Instruct Dynamo to output all evaluations it performs to an XML file at this path
-***                                        
-      -g, -G, --Geometry            Instruct Dynamo to output geometry from all evaluations to a JSON file at this path
-***
-      -h, -H, --help                Get some help
-***
-      -i, -I, --Import              Instruct Dynamo to import an assembly as a node library. This argument should be a 
-                                    file path to a single.dll - if you wish to import multiple dlls - list the dlls 
-                                    separated by a space: -i 'assembly1.dll' 'assembly2.dll'
-***
-      --GeometryPath                Relative or absolute path to a directory containing ASM. When supplied, instead of 
-                                    searching the hard disk for ASM, it will be loaded directly from this path
-***
-      -k, -K, --KeepAlive           Keepalive mode, leave the Dynamo process running until a loaded extension shuts it 
-                                    down
-***
-      --HostName                    Identify Dynamo variation associated with the host
-***
-      -s, -S, --SessionId           Identify Dynamo host analytics session id
-***
-      -p, -P, --ParentId            Identify Dynamo host analytics parent id
-***
-      -x, -X, --ConvertFile         When used in combination with the 'O' flag, opens a .dyn file from the specified 
-                                    path and converts it to .json. The file will have the .json extension and be 
-                                    located in the same directory as the original file
-***
-      -n, -N, --NoConsole           Don't rely on the console window to interact with CLI in Keepalive mode
-***
-      -u, -U  --UserData            Specify user data folder to be used by PathResolver with CLI
-***
-      --CommonData                  Specify common data folder to be used by PathResolver with CLI
-***
-      --DisableAnalytics            Disables analytics in Dynamo for the process lifetime
-***
-      --CERLocation                 Specify the crash error report tool located on the disk
-***
-      --ServiceMode                 Specify the service mode startup
+`-o, -O, --OpenFilePath` コマンド ファイルを開いてこのパスに含まれているコマンドを実行するよう Dynamo に指示します。このオプションは、DynamoSandbox から実行する場合にのみ利用できます。  
+
+`-c, -C, --CommandFilePath` コマンド ファイルを開いてこのパスに含まれているコマンドを実行するよう Dynamo に指示します。このオプションは、DynamoSandbox から実行する場合にのみ利用できます。  
+
+`-v, -V, --Verbose` 実行したすべての評価を指定したパスの XML ファイルに出力するよう Dynamo に指示します。  
+
+`-g, -G, --Geometry` すべての評価のジオメトリをこのパスの JSON ファイルに出力するよう Dynamo に指示します。  
+
+`-h, -H, --help` ヘルプを表示します。  
+
+`-i, -I, --Import` アセンブリをノード ライブラリとして読み込むよう Dynamo に指示します。この引数は単一の `.dll` へのファイル パスである必要があります。複数の `.dlls` を読み込む場合は、`-i 'assembly1.dll' 'assembly2.dll'` のように、スペースで区切って並べます。  
+
+`--GeometryPath` ASM を含むフォルダへの相対パスまたは絶対パスです。指定した場合、ASM はハード ディスクで検索されるのではなく、このパスから直接ロードされます。  
+
+`-k, -K, --KeepAlive` キープアライブ モード。ロードされた拡張機能によってシャットダウンされるまで、Dynamo プロセスを実行したままにします。  
+
+`--HostName` ホストに関連付けられている Dynamo バリエーションを特定します。  
+
+`-s, -S, --SessionId` Dynamo ホスト解析セッション ID を特定します。  
+
+`-p, -P, --ParentId` Dynamo ホスト解析の親 ID を特定します。  
+
+`-x, -X, --ConvertFile` `-O` フラグと組み合わせて使用すると、指定したパスから `.dyn` ファイルを開いて `.json` に変換できます。ファイルには `.json` 拡張子がつけられ、元のファイルと同じフォルダに配置されます。  
+
+`-n, -N, --NoConsole` キープアライブ モードでの CLI の操作にコンソール ウィンドウを使用しないようにします。  
+
+`-u, -U, --UserData` PathResolver が CLI で使用するユーザー データ フォルダを指定します。  
+
+`--CommonData` PathResolver が CLI で使用する共通データ フォルダを指定します。  
+
+`--DisableAnalytics` プロセスの寿命の間、Dynamo での解析を無効にします。  
+
+`--CERLocation` ディスクにあるクラッシュ エラー レポート ツールを指定します。  
+
+`--ServiceMode` サービス モードの起動を指定します。  
+
 
 
 #### 使用する理由 
@@ -66,7 +58,7 @@ CLI の実行方法は 4 つあります。まず DOS プロンプトから実�
 
 CLI は、DynamoCLI.exe アプリケーションからアクセスできます。このアプリケーションを使用すると、コマンド文字列を指定して DynamoCLI.exe を呼び出すことで、ユーザまたは別のアプリケーションが Dynamo 評価モデルとやりとりを行うことができます。結果は次のようになります。
  
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
+ `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
  
 このコマンドは、Dynamo に対して、*"C:\\someReallyCoolDynamoFile.Dyn"* にある指定ファイルを、UI を描画せずに開き、実行するように指示します。グラフの実行が完了すると、Dynamo は終了します。 
 
@@ -84,13 +76,13 @@ CLI は、DynamoCLI.exe アプリケーションからアクセスできます�
 #### 使用方法
 
 `-o` グラフを実行するヘッドレス モードで、.dyn を参照する Dynamo を開くことができます。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
+
 `-v` このフラグは、Dynamo がヘッドレス モードで実行されている場合(`-o` を使用してファイルを開いた場合)に使用できます。このフラグは、グラフ内のすべてのノードを反復し、その出力値を単純な XML ファイルにダンプします。`--ServiceMode` フラグは Dynamo に複数のグラフ評価を実行するように強制できるため、出力ファイルには各評価の値が含まれます。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"`
+
         
 XML 出力ファイルには、次の形式があります。
 ``` XML
@@ -120,52 +112,49 @@ XML 出力ファイルには、次の形式があります。
     </evaluations>
 ```
 `-g` Dynamo がヘッドレス モードで実行されている場合(`-o` を使用してファイルを開いた場合)に使用できます。このフラグはグラフを生成し、結果のジオメトリを JSON ファイルにダンプします。 
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"
-```  
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"`
+  
 JSON ジオメトリ ファイルには、次のような形式があります。
-```
- TBD - Work in progress
-```
+
+ 未定 - 作業中
+
 `-h` これを使用して、使用可能なオプションのリストを取得します
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h`
+
 -i フラグを複数回使用して、開こうとしているグラフの実行に必要な複数のアセンブリを読み込むことができます。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"`
 
 -l フラグは、異なるロケール設定で Dynamo を実行するために使用できます。ただし通常は、ロケールの設定はグラフの結果に影響しません
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"`
 
 --GeometryPath フラグを使用すると、DynamoSandbox または CLI に ASM バイナリの特定のセットを指すことができます。次に使用例を示します。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
 
 または
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
+
 -k フラグを使用すると、ロードされた拡張機能によってシャットダウンされるまで、Dynamo プロセスを実行したままにすることができます。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k`
+
 --HostName フラグを使用すると、ホストに関連付けられている Dynamo バリエーションを識別できます。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"`
+
 または
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"`
+
 -s フラグを使用すると、Dynamo ホスト解析セッション ID を識別できます
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]`
+
 -p フラグを使用すると、Dynamo ホスト解析の親 ID を識別できます
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"`

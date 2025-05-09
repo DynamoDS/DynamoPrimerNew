@@ -67,7 +67,7 @@ extra フォルダを開くと、インストール時にダウンロードさ�
 
 ファイルを開いてからソルバで[実行]をクリックすると、展開された球形が表示されます。これらのサンプル ファイルは、新しい Dynamo パッケージの使用方法を理解するのに役立ちます。
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### パッケージ情報を参照、表示する
 
@@ -95,32 +95,30 @@ Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo
 
 事前にパッケージがアタッチされた Dynamo を(任意の形式で)配置できるかどうかを確認する場合: この問題を解決し、Dynamo をインストールしたすべてのユーザが一元管理できるようにする方法は、各インストールにカスタム パッケージ パスを追加することです。
 
-**BIM 管理者などが、Office 認定パッケージが入ったフォルダの保管を監督できるネットワーク フォルダを追加する**  
+**BIM 管理者などが、Office 認定パッケージが入ったフォルダの保管を監督できるネットワーク フォルダを追加する**
 
-個々のアプリケーションの UI で、*[Dynamo] -> [基本設定] -> [パッケージ設定] -> [ノードとパッケージ ファイルの場所]* に移動します。ダイアログで[パスを追加] ボタンを押し、共有パッケージ リソースのネットワークの場所を参照します。 
- 
-自動化されたプロセスとして、Dynamo と共にインストールされる設定ファイルにも情報を追加します。  
+個々のアプリケーションの UI で、_[Dynamo] -> [基本設定] -> [パッケージ設定] -> [ノードとパッケージ ファイルの場所]_に移動します。ダイアログで[パスを追加] ボタンを押し、共有パッケージ リソースのネットワークの場所を参照します。
+
+自動化されたプロセスとして、Dynamo と共にインストールされる設定ファイルにも情報を追加します。\
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-既定では、Revit 用の Dynamo の設定は次のとおりです。
- 
- 
-`<CustomPackageFolders>`  
+既定では、Dynamo for Revit の設定は次のとおりです。
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+`<CustomPackageFolders>`
 
-`</CustomPackageFolders>`
-
-カスタムの場所を追加すると、次のようになります。  
-
-`<CustomPackageFolders>`  
-
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
-
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
+カスタムの場所を追加すると、次のようになります。
+
+`<CustomPackageFolders>`
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+
+`</CustomPackageFolders>`
 
 このフォルダの一元管理は、フォルダを読み取り専用にすることでも制御できます。
 
@@ -128,7 +126,7 @@ Dynamo パッケージの仕組みを理解する別の方法として、[Dynamo
 
 #### シナリオ
 
-組織においては、異なるワークステーションやユーザによってインストールされるパッケージを標準化したい場合があります。これを行う方法として、[*Dynamo*] > [基本設定] > [パッケージ設定] > [ノードとパッケージ ファイルの場所]からそれらのパッケージをインストールし、インストール場所としてネットワーク フォルダを選択して、そのパスを `Manage Node and Package Paths` に追加するためにワークステーションを取得することが考えられます。
+組織においては、異なるワークステーションやユーザによってインストールされるパッケージを標準化したい場合があります。これを行う方法として、[_Dynamo_] > [基本設定] > [パッケージ設定] > [ノードとパッケージ ファイルの場所]からそれらのパッケージをインストールし、インストール場所としてネットワーク フォルダを選択して、ワークステーションがそのパスを `Manage Node and Package Paths` に追加するようにすることが考えられます。
 
 #### 問題
 

@@ -4,9 +4,9 @@
 
 リストとは、要素(項目)の集合です。例として、1 房のバナナを考えてみましょう。1 本のバナナが、リスト(房)内の 1 つの項目になります。それぞれのバナナをばらばらに取り上げるより、房をまとめて持ち上げる方が簡単です。同じことが、データ構造内のパラメータに基づく関係によって各要素をグループ化する場合についても当てはまります。
 
-![バナナ](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![バナナ](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> 写真: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list)
+> 写真: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list)
 
 日用品を購入する場合、購入した商品をすべて買い物カゴに入れます。このカゴも、リストと考えることができます。たとえば、3 房のバナナを使用して _多くの_ バナナ ブレッドを作るとします。この場合、すべてのバナナが入っている袋がバナナの房のリストで、それぞれの房がバナナのリストになります。この袋は 2 次元の「リストのリスト」で、バナナの房は 1 次元の「リスト」です。
 
@@ -86,6 +86,7 @@ Dynamo ノードは、リストを操作していることを自動的に認識�
 主に 2 つの方法があります。
 
 #### 直交座標系複製
+
 たとえば、キッチンでフルーツ ジュースを作っているとします。フルーツのリスト(`{apple, orange, pear}`)と、各ジュース用の決まった分量の水(`1 cup`)があります。同じ量の水を使って、それぞれのフルーツでジュースを作るとします。このような場合に役立つのが直交座標系複製です。
 
 つまり、Dynamo では、フルーツのリストを Juice.Maker ノードの fruit 入力に入れ、water 入力はすべてカップ 1 個になります。次に、ノードは各フルーツを個別に処理し、一定量の水と組み合わせます。結果は次のとおりです。
@@ -95,6 +96,7 @@ Dynamo ノードは、リストを操作していることを自動的に認識�
 各フルーツは同じ量の水とのペアになります。
 
 #### Zip 複製
+
 Zip 複製は仕組みが少し異なります。フルーツ(`{apple, orange, pear}`)と砂糖の量(`{2 tbsp, 3 tbsp, 1 tbsp}`)の 2 つのリストがあるとすると、Zip 複製では各リストの対応する項目を結合します。例:
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`

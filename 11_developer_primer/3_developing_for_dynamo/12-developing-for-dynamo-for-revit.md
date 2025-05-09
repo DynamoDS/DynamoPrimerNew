@@ -1,4 +1,4 @@
-# Revit 用の Dynamo 向けの開発
+# Dynamo for Revit 向けの開発
 
 ## `GeometryPrimitiveConverter.cs` のメソッドを使用する
 
@@ -11,7 +11,7 @@ DynamoRevit コード ライブラリの [GeometryPrimitiveConverter](https://gi
 1. **Proto to Revit タイプ**: Dynamo (Proto)タイプを Revit タイプに変換するメソッドです。
 2. **Revit to Proto タイプ**: Revit タイプを Dynamo (Proto)タイプに変換するメソッドです。
 3. **Degrees & Radians**: 度とラジアン間の変換を行うメソッドです。
-4. **X & UZ**: 垂直ベクトルの取得を扱うメソッドです。 
+4. **X & UZ**: 垂直ベクトルの取得を扱うメソッドです。
 
 ### Proto to Revit タイプ
 
@@ -19,10 +19,7 @@ DynamoRevit コード ライブラリの [GeometryPrimitiveConverter](https://gi
 
 Dynamo 座標系と 2 つの定義点(最小と最大)から Revit BoundingBoxXYZ を作成します。
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -44,7 +41,7 @@ convertUnits フラグ(既定値は true)は、必要に応じて座標を変換
 
 Dynamo ベクトルを Revit XYZ に変換します。
 
-convertUnits フラグの既定値は false です。ベクトルは方向と大きさを表しており、通常は単位変換が不要なためです。変換は、ベクトルの方向と長さに影響を与える可能性があります。 
+convertUnits フラグの既定値は false です。ベクトルは方向と大きさを表しており、通常は単位変換が不要なためです。変換は、ベクトルの方向と長さに影響を与える可能性があります。
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@ Dynamo ポイントを Revit XYZ に変換します。
 
 Dynamo ベクトルを Revit XYZ に変換します。
 
-convertUnits フラグの既定値は false です。ベクトルは方向と大きさを表しており、通常は単位変換が不要なためです。変換は、ベクトルの方向と長さに影響を与える可能性があります。 
+convertUnits フラグの既定値は false です。ベクトルは方向と大きさを表しており、通常は単位変換が不要なためです。変換は、ベクトルの方向と長さに影響を与える可能性があります。
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,9 +105,9 @@ Dynamo ベクトル オブジェクトの配列を Revit XYZ ベクトルの配�
 
 #### Proto To Revit タイプの使用例
 
-この例では、ToXyz (Point)メソッドを使用して、Dynamo Point.ByCoordinates を Revit XYZ にすばやく簡単に変換する方法を示します。 
+この例では、ToXyz (Point)メソッドを使用して、Dynamo Point.ByCoordinates を Revit XYZ にすばやく簡単に変換する方法を示します。
 
-![Dynamo Point.ByCoordinates を Revit XYZ に変換する](images/dynamo-point-to-revit-xyz.png)
+![Dynamo Point.ByCoordinates を Revit XYZ に変換する](Images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### Revit to Proto タイプ
 
@@ -191,9 +186,9 @@ Revit XYZ ポイントのリストを Dynamo ポイントのリストに変換�
 
 #### Revit To Proto タイプの使用例
 
-この例では、.ToPoint (XYZ)メソッドを使用して、Revit XYZ を Dynamo ポイントにすばやく簡単に変換する方法を示します。 
+この例では、.ToPoint (XYZ)メソッドを使用して、Revit XYZ を Dynamo ポイントにすばやく簡単に変換する方法を示します。
 
-![Revit XYZ を Dynamo Point.ByCoordinates に変換します](images/revit-xyz-to-dynamo-point.png)
+![Revit XYZ を Dynamo Point.ByCoordinates に変換します](Images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -224,25 +219,19 @@ OUT = revit_point
 
 度単位をラジアン単位に変換します。
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 ラジアン単位を度単位に変換します。
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### Degrees & Radians の使用例
 
-この例では、.ToRadians メソッドを使用して、度単位をラジアン単位にすばやく簡単に変換する方法を示します。 
+この例では、.ToRadians メソッドを使用して、度単位をラジアン単位にすばやく簡単に変換する方法を示します。
 
-![度単位をラジアン単位に変換](images/degrees-to-radians.png)
+![度単位をラジアン単位に変換](Images/degrees-to-radians.png)
 
 ```
 import sys
@@ -266,25 +255,26 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X & UZ
 
 #### GetPerpendicular (XYZ)
 
 このメソッドは、指定された `XYZ` ベクトルに垂直な`XYZ` ベクトルを返します。
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular (Vector)
 
 このメソッドは、指定されたDynamo `Vector` に垂直な Dynamo `Vector` を返します。
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### X & UZ の使用例
 
-この例では、.GetPerpendicular メソッドを使用して、入力されたベクトルに対し垂直なベクトルをすばやく簡単に取得する方法を示します。 
+この例では、.GetPerpendicular メソッドを使用して、入力されたベクトルに対し垂直なベクトルをすばやく簡単に取得する方法を示します。
 
-![垂直ベクトルを取得する](images/get-perpendicular-vector.png)
+![垂直ベクトルを取得する](Images/get-perpendicular-vector.png)
 
 ```
 import clr
