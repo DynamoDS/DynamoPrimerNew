@@ -42,7 +42,7 @@ V knihovně aplikace Dynamo je k dispozici skupina aplikace _DynamoUnfold_ s 
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Nyní se podíváme na strukturu souborů balíčku. 
+Nyní se podíváme na strukturu souborů balíčku.
 
 1. Nejprve přejděte do nabídky Balíčky > Package Manager > Instalované balíčky.
 2. Vedle položky DynamoUnfold vyberte nabídku možností <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
@@ -67,13 +67,13 @@ Otevřeme položku SphereUnfold.
 
 Po otevření souboru a stisknutí tlačítka Spustit na řešiči máme rozvinutou kouli. Ukázkové soubory, jako jsou tyto, jsou užitečné při studiu práce s novým balíčkem Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Procházení a zobrazení informací o balíčku
 
 V nástroji Package Manager můžete procházet balíčky pomocí možností třídění a filtrování na kartě Vyhledat balíčky. K dispozici je několik filtrů pro hostitelský program, stav (nový, odmítnutý nebo neodmítnutý) a informace o tom, zda má balíček závislosti.
 
-Seřazením balíčků můžete identifikovat vysoce hodnocené nebo nejčastěji stahované balíčky nebo vyhledat balíčky s nejnovějšími aktualizacemi. 
+Seřazením balíčků můžete identifikovat vysoce hodnocené nebo nejčastěji stahované balíčky nebo vyhledat balíčky s nejnovějšími aktualizacemi.
 
 Další podrobnosti o jednotlivých balíčcích můžete také zobrazit kliknutím na možnost Zobrazit podrobnosti. Tím se v nástroji Package Manager otevře postranní panel, kde najdete podrobné informace o balíčku, jako je správa verzí a závislosti, adresa URL webu nebo úložiště, informace o licenci atd.
 
@@ -95,32 +95,30 @@ Ve výchozím nastavení jsou balíčky nainstalovány do umístění podobného
 
 Informace pro uživatele, kteří se ptají, zda je možné nasadit aplikaci Dynamo (v libovolné formě) pomocí předem připojených balíčků: Chcete-li tento problém vyřešit a umožnit kontrolu v centrálním umístění pro všechny uživatele s instalacemi aplikace Dynamo, přidejte ke každé instalaci vlastní cestu k balíčku.
 
-**Přidání síťové složky, ve které může správce BIM nebo jiní uživatelé dohlížet na plnění složky balíčky schválenými organizací**  
+**Přidání síťové složky, ve které může správce BIM nebo jiní uživatelé dohlížet na plnění složky balíčky schválenými organizací**
 
-V uživatelském rozhraní jednotlivých aplikací přejděte do nabídky *Dynamo -> Předvolby -> Nastavení balíčku -> Umístění souborů uzlů a balíčků*. V dialogu klikněte na tlačítko Přidat cestu a přejděte do síťového umístění sdíleného prostředku balíčku. 
- 
-Jedná se o automatizovaný proces, který by zahrnoval přidání informací do konfiguračního souboru, který je nainstalován s aplikací Dynamo:  
+V uživatelském rozhraní jednotlivých aplikací přejděte do nabídky _Dynamo -> Předvolby -> Nastavení balíčku -> Umístění souborů uzlů a balíčků_. V dialogu klikněte na tlačítko Přidat cestu a přejděte do síťového umístění sdíleného prostředku balíčku.
+
+Jedná se o automatizovaný proces, který by zahrnoval přidání informací do konfiguračního souboru, který je nainstalován s aplikací Dynamo:\
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
 Ve výchozím nastavení je konfigurace aplikace Dynamo pro Revit následující:
- 
- 
-`<CustomPackageFolders>`  
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+`<CustomPackageFolders>`
 
-`</CustomPackageFolders>`
-
-Přidání vlastního umístění by vypadalo takto:  
-
-`<CustomPackageFolders>`  
-
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
-
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
+Přidání vlastního umístění by vypadalo takto:
+
+`<CustomPackageFolders>`
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+
+`</CustomPackageFolders>`
 
 Centrální správu této složky lze také ovládat jednoduše nastavením složky pouze ke čtení.
 
@@ -128,7 +126,7 @@ Centrální správu této složky lze také ovládat jednoduše nastavením slo�
 
 #### Scénář
 
-Organizace může chtít standardizovat balíčky nainstalované různými pracovními stanicemi a uživateli. Způsobem, jak toho dosáhnout, by mohlo být nainstalovat tyto balíčky z nabídky *Dynamo -> Předvolby -> Nastavení balíčku -> Umístění souborů uzlů a balíčků*, vybrat síťovou složku jako umístění instalace a přimět pracovní stanice, aby tuto cestu přidaly do `Manage Node and Package Paths`.
+Organizace může chtít standardizovat balíčky nainstalované různými pracovními stanicemi a uživateli. Způsobem, jak toho dosáhnout, by mohlo být nainstalovat tyto balíčky z nabídky _Dynamo -> Předvolby -> Nastavení balíčku -> Umístění souborů uzlů a balíčků_, vybrat síťovou složku jako umístění instalace a přimět pracovní stanice, aby tuto cestu přidaly do `Manage Node and Package Paths`.
 
 #### Problém
 

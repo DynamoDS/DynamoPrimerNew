@@ -18,7 +18,7 @@ Aplikace Dynamo 2.0 nabízí několik uzlů pro slovníky. Mezi ně patří uzly
 
 5\. Uzel `Dictionary.ValueAtKey` vrátí hodnotu na pozici vstupního klíče.
 
-#### Počet
+#### Dotaz
 
 6\. Uzel `Dictionary.Count` vrátí počet dvojic hodnot a klíčů ve slovníku.
 

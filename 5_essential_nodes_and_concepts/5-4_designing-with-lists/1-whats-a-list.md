@@ -4,9 +4,9 @@
 
 Seznam je kolekce prvků nebo položek. Vezměte si například trs banánů. Každý banán je položka v seznamu (nebo v trsu). Je jednodušší sebrat celý trs banánů, než brát každý banán jednotlivě, a to samé platí pro seskupení prvků podle parametrických vztahů v datové struktuře.
 
-![Banány](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Banány](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> Autor fotografie: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Autor fotografie: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
 Při nákupu potravin naskládáme všechny zakoupené položky do tašky. Tato taška je také seznamem. Pokud chceme vyrobit banánový chléb, potřebujeme 3 trsy banánů (chceme vyrobit _hodně_ banánového chleba). Taška představuje seznam trsů banánů a každý trs představuje seznam banánů. Taška je seznam seznamů (dvourozměrný) a trs banánů je seznam (jednorozměrný).
 
@@ -86,6 +86,7 @@ Uzly aplikace Dynamo automaticky rozpoznají, kdy pracují se seznamy, a použij
 Existují dva hlavní způsoby:
 
 #### Kartézská replikace
+
 Řekněme, že jste v kuchyni a připravujete ovocné šťávy. Máte seznam ovoce: `{apple, orange, pear}` a pevně dané množství vody na každou šťávu: `1 cup`. Z každého ovoce chcete připravit šťávu za použití stejného množství vody. V tomto případě přichází na řadu kartézská replikace.
 
 V aplikaci Dynamo to znamená, že do vstupu ovoce uzlu Juice.Maker zadáváte seznam ovoce, zatímco vstup vody zůstává konstantní na hodnotě 1 šálku. Uzel pak zpracovává každé ovoce jednotlivě a kombinuje je s pevným množstvím vody. Výsledek je...
@@ -95,6 +96,7 @@ V aplikaci Dynamo to znamená, že do vstupu ovoce uzlu Juice.Maker zadáváte 
 Každé ovoce je spárováno se stejným množstvím vody.
 
 #### Replikace zipu
+
 Replikace zipu funguje trochu odlišně. Pokud byste měli dva seznamy, jeden pro ovoce: `{apple, orange, pear}` a druhý pro množství cukru: `{2 tbsp, 3 tbsp, 1 tbsp}`, replikace zipu by zkombinovala odpovídající položky z každého seznamu. Příklad:
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`

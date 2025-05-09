@@ -1,49 +1,41 @@
 # Rozhraní příkazového řádku aplikace Dynamo
 
-***
-      -o, -O, --OpenFilePath        Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox
-***
-      -c, -C, --CommandFilePath     Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox                      
-***
-      -v, -V, --Verbose             Instruct Dynamo to output all evaluations it performs to an XML file at this path
-***                                        
-      -g, -G, --Geometry            Instruct Dynamo to output geometry from all evaluations to a JSON file at this path
-***
-      -h, -H, --help                Get some help
-***
-      -i, -I, --Import              Instruct Dynamo to import an assembly as a node library. This argument should be a 
-                                    file path to a single.dll - if you wish to import multiple dlls - list the dlls 
-                                    separated by a space: -i 'assembly1.dll' 'assembly2.dll'
-***
-      --GeometryPath                Relative or absolute path to a directory containing ASM. When supplied, instead of 
-                                    searching the hard disk for ASM, it will be loaded directly from this path
-***
-      -k, -K, --KeepAlive           Keepalive mode, leave the Dynamo process running until a loaded extension shuts it 
-                                    down
-***
-      --HostName                    Identify Dynamo variation associated with the host
-***
-      -s, -S, --SessionId           Identify Dynamo host analytics session id
-***
-      -p, -P, --ParentId            Identify Dynamo host analytics parent id
-***
-      -x, -X, --ConvertFile         When used in combination with the 'O' flag, opens a .dyn file from the specified 
-                                    path and converts it to .json. The file will have the .json extension and be 
-                                    located in the same directory as the original file
-***
-      -n, -N, --NoConsole           Don't rely on the console window to interact with CLI in Keepalive mode
-***
-      -u, -U  --UserData            Specify user data folder to be used by PathResolver with CLI
-***
-      --CommonData                  Specify common data folder to be used by PathResolver with CLI
-***
-      --DisableAnalytics            Disables analytics in Dynamo for the process lifetime
-***
-      --CERLocation                 Specify the crash error report tool located on the disk
-***
-      --ServiceMode                 Specify the service mode startup
+`-o, -O, --OpenFilePath` Dynamo otevře soubor příkazového řádku a spustí příkazy, které obsahuje, v této cestě. Tato možnost je podporována pouze při spouštění z aplikace Dynamo Sandbox.  
+
+`-c, -C, --CommandFilePath` Dynamo otevře soubor příkazového řádku a spustí příkazy, které obsahuje, v této cestě. Tato možnost je podporována pouze při spouštění z aplikace Dynamo Sandbox.  
+
+`-v, -V, --Verbose` Dynamo všechna provedená vyhodnocení vypíše do souboru XML v zadané cestě.  
+
+`-g, -G, --Geometry` Dynamo vypíše geometrii ze všech vyhodnocení do souboru JSON v této cestě.  
+
+`-h, -H, --help` Zobrazí nápovědu.  
+
+`-i, -I, --Import` Dynamo importuje sestavu jako knihovnu uzlů. Argumentem by měla být cesta k jednomu souboru `.dll`. Chcete-li importovat více souborů `.dlls`, vypište je oddělené mezerou: `-i 'assembly1.dll' 'assembly2.dll'`.  
+
+`--GeometryPath` Relativní nebo absolutní cesta k adresáři obsahujícímu ASM. Pokud je zadána, místo hledání na pevném disku se ASM načte přímo z této cesty.  
+
+`-k, -K, --KeepAlive` Režim Keepalive lze použít k tomu, aby proces aplikace Dynamo běžel, dokud jej načtené rozšíření nevypne.  
+
+`--HostName` Slouží k identifikaci variace aplikace Dynamo přidružené k hostiteli.  
+
+`-s, -S, --SessionId` Slouží k identifikaci ID relace analytického hostitele aplikace Dynamo.  
+
+`-p, -P, --ParentId` Slouží k identifikaci ID nadřazeného analytického hostitele Dynamo.  
+
+`-x, -X, --ConvertFile` Při použití v kombinaci s příznakem `-O` otevře soubor `.dyn` ze zadané cesty a převede jej na soubor `.json`. Soubor bude mít příponu `.json` a bude umístěn ve stejném adresáři jako původní soubor.  
+
+`-n, -N, --NoConsole` K interakci s CLI v režimu Keepalive nebude použito okno konzoly.  
+
+`-u, -U, --UserData` Slouží k určení složky s uživatelskými daty, kterou má PathResolver použít s CLI.  
+
+`--CommonData` Slouží k určení složky se společnými daty, kterou má PathResolver použít s CLI.  
+
+`--DisableAnalytics` Zakáže analýzu v aplikaci Dynamo po dobu životnosti procesu.  
+
+`--CERLocation` Slouží k určení nástroje pro hlášení chyb při selhání, který je umístěn na disku.  
+
+`--ServiceMode` Slouží k určení režimu spuštění služby.  
+
 
 
 #### K čemu to slouží? 
@@ -66,7 +58,7 @@ Při předběžném testování nástroj CLI podporuje lokalizované verze syst�
 
 K CLI lze přistupovat prostřednictvím aplikace DynamoCLI.exe. Tato aplikace umožňuje uživateli nebo jiné aplikaci komunikovat s vyhodnocovacím modelem aplikace Dynamo vyvoláním souboru DynamoCLI.exe s řetězcem příkazu. Ten může vypadat například takto:
  
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
+ `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
  
 Tento příkaz aplikaci Dynamo sdělí, aby otevřela zadaný soubor v umístění *"C:\\someReallyCoolDynamoFile.Dyn"* bez vykreslení uživatelského rozhraní a poté jej spustila. Po dokončení běhu grafu se aplikace Dynamo ukončí. 
 
@@ -84,13 +76,13 @@ Tento příkaz aplikaci Dynamo sdělí, aby otevřela zadaný soubor v umístě
 #### Jak se to používá?
 
 `-o`: Aplikaci Dynamo můžete otevřít tak, že bude odkazovat na soubor .dyn, a to v bezobslužném režimu, který spustí graf.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
+
 `-v`: Lze použít, když je aplikace Dynamo spuštěna v bezobslužném režimu (pokud jste k otevření souboru použil příznak `-o`). Tento příznak iteruje všechny uzly v grafu a vypíše jejich výstupní hodnoty do jednoduchého souboru XML. Vzhledem k tomu, že příznak `--ServiceMode` může vynutit, aby aplikace Dynamo spustila více vyhodnocení grafu, bude výstupní soubor obsahovat hodnoty pro každé vyhodnocení, ke kterému dojde.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"`
+
         
 Výstupní soubor XML by měl následující podobu:
 ``` XML
@@ -120,52 +112,49 @@ Výstupní soubor XML by měl následující podobu:
     </evaluations>
 ```
 `-g`: Lze použít, když je aplikace Dynamo spuštěna v bezobslužném režimu (pokud jste k otevření souboru použil příznak `-o`). Tento příznak vygeneruje graf a poté vypíše výslednou geometrii do souboru JSON. 
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"
-```  
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"`
+  
 Soubor geometrie JSON by měl následující podobu:
-```
- TBD - Work in progress
-```
+
+ Rozpracováno
+
 `-h`: Slouží k získání seznamu možných možností.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h`
+
 Příznak -i je možné použít vícekrát k importu více sestavení, která graf, jenž se pokoušíte otevřít, vyžaduje ke spuštění.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"`
 
 Příznak -l je možné použít ke spuštění aplikace Dynamo v jiném nastavení národního prostředí. Nastavení národního prostředí však obvykle neovlivňuje výsledky grafu
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"`
 
 Příznak --GeometryPath lze použít k nasměrování aplikace DynamoSandbox nebo CLI na konkrétní sadu binárních souborů ASM. Použijte jej jako v následujícím příkladu:
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
 
 nebo
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
+
 Příznak -k lze použít k tomu, aby proces aplikace Dynamo běžel, dokud jej načtené rozšíření nevypne.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k`
+
 Příznak --HostName lze použít k identifikaci variace aplikace Dynamo přidružené k hostiteli.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"`
+
 nebo
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"`
+
 Příznak -s lze použít k identifikaci ID relace analytického hostitele aplikace Dynamo.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]`
+
 Příznak -p lze použít k identifikaci ID nadřazeného analytického hostitele Dynamo.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"`

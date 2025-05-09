@@ -28,7 +28,7 @@ Před přidáním zprávy s upozorněním zvažte logiku své metody:
 Příklady podmínek ke kontrole:
 
 * **Hodnoty mimo rozsah** (např. `if (inputValue < 0)`).
-* **Kolekce s hodnotou null nebo prázdné kolekce** (např. `if (list == null || list.Count == 0)`).
+* **Kolekce s hodnotou null nebo prázdné kolekce ** (např. `if (list == null || list.Count == 0)`).
 * **Neshody datových typů** (např. pokud typ souboru není podporován).
 
 #### Krok 3: Použijte metodu `OnLogWarningMessage` k protokolování upozornění <a href="#use-onlogwarningmessage-to-log-the-warning" id="use-onlogwarningmessage-to-log-the-warning"></a>
@@ -51,7 +51,7 @@ V tomto příkladu budeme vycházet z vlastního uzlu vytvořeném v předcho
 
 ![OnLogWarningMessage – příklad 1](images/onlogwarningmessage-example-1.png)
 
-##### Použití metody `OnLogWarningMessage` k ověření vstupu <a href="#using-onlogwarningmessage-for-input-validation" id="using-onlogwarningmessage-for-input-validation"></a>
+**Použití metody `OnLogWarningMessage` k ověření vstupu**
 
 Chcete vygenerovat osnovu založenou na vstupech `xCount` a `yCount`. Než budete pokračovat, ujistěte se, že obě hodnoty jsou kladná celá čísla.
 
@@ -73,7 +73,7 @@ V tomto příkladu:
 * **Podmínka**: Pokud je hodnota `xCount` nebo `yCount` menší nebo rovna nule.
 * **Zpráva**: `"Grid count values must be positive integers."`
 
-Pokud uživatel zadá nulové nebo záporné hodnoty, zobrazí se v aplikaci Dynamo upozornění, které mu pomůže pochopit očekávaný vstup. 
+Pokud uživatel zadá nulové nebo záporné hodnoty, zobrazí se v aplikaci Dynamo upozornění, které mu pomůže pochopit očekávaný vstup.
 
 Když nyní víme, jak zprávu vytvořit, můžeme ji implementovat do ukázkového uzlu Grids:
 
@@ -133,7 +133,7 @@ namespace CustomNodes
 }
 ```
 
-##### Příklad 2: Kontrola prázdných kolekcí nebo kolekcí s hodnotou null <a href="#example-2-checking-for-null-or-empty-collections" id="example-2-checking-for-null-or-empty-collections"></a>
+**Příklad 2: Kontrola prázdných kolekcí nebo kolekcí s hodnotou null**
 
 Pokud vaše metoda vyžaduje seznam bodů, ale uživatel předá prázdný nebo nulový seznam, můžete ho o problému informovat pomocí metody `OnLogWarningMessage`.
 
@@ -158,9 +158,9 @@ V tomto příkladu:
 
 Tato zpráva uživatele upozorní, že k vytvoření mnohoúhelníku je třeba předat platný seznam s alespoň třemi body.
 
----
+***
 
-##### Příklad 3: Ověření kompatibility typů souborů <a href="#example-3-verifying-file-type-compatibility" id="example-3-verifying-file-type-compatibility"></a>
+**Příklad 3: Ověření kompatibility typů souborů**
 
 U uzlu, který zpracovává cesty k souborům, můžete chtít zajistit, že budou povoleny pouze určité typy souborů. Pokud bude zjištěn nepodporovaný typ souboru, bude zaprotokolováno upozornění.
 
@@ -190,6 +190,7 @@ Tato zpráva uživatele upozorňuje, aby se ujistili, že předávají soubor CS
 Metoda `OnLogInfoMessage` z jmenného prostoru `DynamoServices` v aplikaci Dynamo umožňuje vývojářům protokolovat informační zprávy přímo do konzole aplikace Dynamo. To se hodí k potvrzování úspěšných operací, sdělování informací o průběhu nebo poskytování dalších přehledů o akcích uzlů. V této příručce se dozvíte, jak přidat metodu `OnLogInfoMessage` do libovolného uzlu Zero Touch, abyste zlepšili zpětnou vazbu a usnadnili uživatelům práci.
 
 ### Postup implementace metody `OnLogInfoMessage` <a href="#implementation-steps-for-onloginfomessage" id="implementation-steps-for-onloginfomessage"></a>
+
 #### Krok 1: Importujte požadovaný jmenný prostor <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
 
 Metoda `OnLogInfoMessage` je součástí jmenného prostoru `DynamoServices`, takže začněte tím, že ji přidáte do souboru projektu.
@@ -227,7 +228,7 @@ V tomto příkladu budeme vycházet z vlastního uzlu vytvořeném v předcho
 
 ![OnLogInfoMessage – příklad 1](images/onloginfomessage-example-1.png)
 
-###### Použití metody `OnLogInfoMessage` k ověření vstupu <a href="#using-onloginfomessage-for-unput-validation" id="using-onloginfomessage-for-unput-validation"></a>
+**Použití metody `OnLogInfoMessage` k ověření vstupu**
 
 Chcete vygenerovat osnovu založenou na vstupech `xCount` a `yCount`. Po vygenerování osnovy chcete její vytvoření potvrdit zaprotokolováním informační zprávy s rozměry osnovy.
 
@@ -334,7 +335,6 @@ V tomto příkladu:
 
 Tato zpráva pomůže uživatelům pochopit výsledek zpracování a potvrdí, že byly zpracovány všechny body.
 
-
 #### Příklad 3: Souhrn použitých parametrů <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
 
 V některých případech je užitečné potvrdit vstupní parametry, které uzel použil k dokončení akce. Pokud například uzel exportuje data do souboru, můžete zaprotokolováním názvu souboru a cesty uživatele ujistit, že byl použit správný soubor.
@@ -362,24 +362,31 @@ Tato zpráva uživatelům potvrdí, že export proběhl, a zobrazí přesnou ces
 ## Vytváření a přidávání vlastní dokumentace k uzlům
 
 ### Dokumentace k vlastním uzlům
+
 V minulosti existovala v aplikaci Dynamo omezení, pokud jde o způsob, jakým mohli autoři balíčků poskytovat dokumentaci ke svým uzlům. Autoři vlastních uzlů mohli pouze zadat krátký popis, který se zobrazí v popisku uzlu, nebo dodat balíček s ukázkovými grafy s velkým množstvím poznámek.
 
 ![Popisek uzlu](images/customnodedocumentation-overloads.png)
 
 ### Nový způsob
-Aplikace Dynamo nyní autorům balíčků nabízí vylepšený systém, který umožňuje poskytovat lepší a podrobnější dokumentaci k vlastním uzlům. Tento nový přístup využívá uživatelsky přívětivý jazyk Markdown pro psaní textu a rozšíření pohledu Prohlížeče dokumentace k zobrazení jazyka Markdown v aplikaci Dynamo. Použití jazyka Markdown poskytuje autorům balíčků širokou škálu nových možností při tvorbě dokumentace k vlastním uzlům. 
+
+Aplikace Dynamo nyní autorům balíčků nabízí vylepšený systém, který umožňuje poskytovat lepší a podrobnější dokumentaci k vlastním uzlům. Tento nový přístup využívá uživatelsky přívětivý jazyk Markdown pro psaní textu a rozšíření pohledu Prohlížeče dokumentace k zobrazení jazyka Markdown v aplikaci Dynamo. Použití jazyka Markdown poskytuje autorům balíčků širokou škálu nových možností při tvorbě dokumentace k vlastním uzlům.
 
 #### Co je jazyk Markdown?
+
 Markdown je odlehčený značkovací jazyk, který slouží k formátování textových dokumentů ve formátu prostého textu. Od roku 2004, kdy byl jazyk Markdown vytvořen, jeho popularita neustále roste a nyní je jedním z nejoblíbenějších značkovacích jazyků na světě.
 
 #### Začínáme s jazykem Markdown
+
 Vytváření souborů Markdown je snadné – potřebujete pouze jednoduchý textový editor, například Poznámkový blok, a můžete začít. Existují však jednodušší způsoby, jak psát v jazyce Markdown, než pomocí Poznámkového bloku. Existuje několik online editorů, jako je [Dillinger](https://dillinger.io/), které umožňují zobrazit změny v reálném čase, jakmile je provedete. Dalším oblíbeným způsobem úprav souborů Markdown je použití editoru kódu, jako je [Visual Studio Code](https://code.visualstudio.com/).
 
 #### Jaké jsou možnosti jazyka Markdown?
-Markdown je velmi flexibilní jazyk, který poskytuje dostatek funkcí pro snadnou tvorbu dobré dokumentace, a to včetně přidávání mediálních souborů, jako jsou obrázky nebo videa, vytváření tabulek s různými formami obsahu a samozřejmě jednoduché funkce formátování textu, jako je **tučné** písmo nebo *kurzíva*. To vše a mnohem více je možné při psaní dokumentů v jazyce Markdown. Další informace najdete v této příručce, v níž je popsána [základní syntaxe jazyka Markdown](https://www.Markdownguide.org/basic-syntax/).
+
+Markdown je velmi flexibilní jazyk, který poskytuje dostatek funkcí pro snadnou tvorbu dobré dokumentace, a to včetně přidávání mediálních souborů, jako jsou obrázky nebo videa, vytváření tabulek s různými formami obsahu a samozřejmě jednoduché funkce formátování textu, jako je **tučné** písmo nebo _kurzíva_. To vše a mnohem více je možné při psaní dokumentů v jazyce Markdown. Další informace najdete v této příručce, v níž je popsána [základní syntaxe jazyka Markdown](https://www.markdownguide.org/basic-syntax/).
 
 ### Přidání rozšířené dokumentace k uzlům
+
 Přidání dokumentace k uzlům je snadné. Dokumentaci lze přidat do všech variant vlastních uzlů, které zahrnují:
+
 * Přednastavené uzly aplikace Dynamo.
 * Vlastní uzly (.dyf) – kolekce předem připravených uzlů nebo uzlů jiných balíčků.
 * Vlastní uzly balíčků v jazyce C#. (Označované také jako uzly Zero Touch. Tyto vlastní uzly vypadají jako předem připravené uzly.)
@@ -389,6 +396,7 @@ Přidání dokumentace k uzlům je snadné. Dokumentaci lze přidat do všech v
 Postupujte podle následujících několika kroků, aby se soubory Markdown zobrazily v aplikaci Dynamo.
 
 #### Otevírání souborů dokumentace v aplikaci Dynamo
+
 Dynamo používá k zobrazení dokumentace uzlů rozšíření pohledu Prohlížeče dokumentace. Chcete-li otevřít dokumentaci uzlů, klikněte pravým tlačítkem na uzel a vyberte nápovědu. Tím se otevře Prohlížeč dokumentace a zobrazí se soubor Markdown přiřazený k danému uzlu, pokud je k dispozici.
 
 ![Prohlížeč dokumentace](images/customnodedocumentation-no-documentation-provided.png)
@@ -398,10 +406,12 @@ Dokumentace zobrazená v Prohlížeči dokumentace se skládá ze dvou částí
 ![Dokumentace vlastních uzlů](images/customnodedocumentation-custom-node-documentation.png)
 
 #### Složka doc balíčku
+
 Chcete-li přidat soubory dokumentace ke svým uzlům v aplikaci Dynamo, vytvořte v adresáři balíčku novou složku s názvem `/doc`. Po načtení balíčku Dynamo tento adresář prohledá a získá všechny soubory dokumentace v jazyce Markdown, které se v něm nacházejí.
 
 #### Pojmenování souborů Markdown
-Aby aplikace Dynamo poznala, který soubor má při požadavku na konkrétní uzel otevřít, musí být název souboru Markdown v určitém formátu. Soubor Markdown by měl být pojmenován podle jmenného prostoru uzlu, který dokumentuje. Pokud si nejste jisti jmenným prostorem uzlu, podívejte se po kliknutí na tlačítko `Help` na uzlu do části `Node Info` a pod názvem uzlu uvidíte celý jmenný prostor vybraného uzlu. 
+
+Aby aplikace Dynamo poznala, který soubor má při požadavku na konkrétní uzel otevřít, musí být název souboru Markdown v určitém formátu. Soubor Markdown by měl být pojmenován podle jmenného prostoru uzlu, který dokumentuje. Pokud si nejste jisti jmenným prostorem uzlu, podívejte se po kliknutí na tlačítko `Help` na uzlu do části `Node Info` a pod názvem uzlu uvidíte celý jmenný prostor vybraného uzlu.
 
 Tento jmenný prostor by měl být název souboru Markdown pro daný uzel. Například jmenný prostor uzlu `CustomNodeExample` z obrázků výše je `TestPackage.TestCategory.CustomNodeExample`, proto by měl být soubor Markdown pro tento uzel pojmenován jako `TestPackage.TestCategory.CustomNodeExample.md`
 
@@ -410,7 +420,8 @@ Ve speciálních případech s přetížením uzlů (uzly se stejným názvem, 
 ![Přetížené uzly](images/customnodedocumentation-overloads.png)
 
 #### Úpravy souborů Markdown při otevření v aplikaci Dynamo
-Aby bylo možné soubory dokumentace snadno upravovat, implementuje Prohlížeč dokumentace do otevřeného souboru dokumentace nástroj pro sledování souboru. Díky tomu můžete provádět změny v souboru Markdown, přičemž tyto změny okamžitě uvidíte v aplikaci Dynamo. 
+
+Aby bylo možné soubory dokumentace snadno upravovat, implementuje Prohlížeč dokumentace do otevřeného souboru dokumentace nástroj pro sledování souboru. Díky tomu můžete provádět změny v souboru Markdown, přičemž tyto změny okamžitě uvidíte v aplikaci Dynamo.
 
 ![Opakované načítání za provozu](images/customnodedocumentation-hot-reload.gif)
 
@@ -424,7 +435,6 @@ Díky vlastním ikonám uzlů Zero Touch budou vaše uzly v aplikaci Dynamo viz
 
 V této příručce se dozvíte, jak přidat ikony do uzlů Zero Touch.
 
-
 ### Postup přidání vlastních ikon uzlů
 
 #### Krok 1: Nastavte projekt
@@ -437,19 +447,18 @@ Začněte tím, že vytvoříte projekt knihovny tříd aplikace Visual Studio (
 
 Ujistěte se, že máte alespoň jeden funkční uzel Zero Touch, protože ikony lze přidávat pouze do existujících uzlů. Pokyny najdete v části **Případová studie funkce Zero-Touch – uzel osnovy**.
 
-
 #### Krok 2: Vytvořte obrázky ikon
 
 Vytvoření vlastních ikon:
 
 1. **Navrhněte své ikony**: Pomocí editoru obrázků vytvořte jednoduché a vizuálně zřetelné ikony uzlů.
 2. **Specifikace obrázku**:
-    * **Malá ikona**: 32×32 pixelů (používá se na bočním panelu knihovny a na samotném uzlu).
-    * **Velká ikona**: 128×128 pixelů (používá se ve vlastnostech uzlu při umístění kurzoru nad uzel v knihovně).
+   * **Malá ikona**: 32×32 pixelů (používá se na bočním panelu knihovny a na samotném uzlu).
+   * **Velká ikona**: 128×128 pixelů (používá se ve vlastnostech uzlu při umístění kurzoru nad uzel v knihovně).
 3. **Konvence pojmenování souboru**:
-    * Názvy souborů musí odpovídat níže uvedenému formátu, aby byly přiřazeny ke správnému uzlu:
-        * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (pro malou ikonu).
-        * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (pro velkou ikonu).
+   * Názvy souborů musí odpovídat níže uvedenému formátu, aby byly přiřazeny ke správnému uzlu:
+     * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (pro malou ikonu).
+     * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (pro velkou ikonu).
 
 **Příklad**: Pokud je projekt `ZeroTouchNodeIcons`, třída je `Grids` a metoda je `RectangularGrid`, soubory by měly být pojmenovány následovně:
 
@@ -458,49 +467,47 @@ Vytvoření vlastních ikon:
 
 > Tip: U všech ikon zachovejte jednotný motiv designu, abyste dosáhli profesionálního vzhledu.
 
-
 #### Krok 3: Přidejte soubor zdrojů do projektu
 
 Pokud chcete vložit ikony do `.dll`, vytvořte soubor zdrojů:
 
 1. **Přidejte nový soubor zdrojů**:
 
-  * Klikněte pravým tlačítkem myši na projekt v nástroji **Solution Explorer**.
+* Klikněte pravým tlačítkem myši na projekt v nástroji **Solution Explorer**.
 
 ![Přidání nové položky](images/zerotouchicons-add-resources-file-1.jpg)
 
-  * Přejděte do nabídky **Add > New Item** a vyberte možnost **Resources File**.
+* Přejděte do nabídky **Add > New Item** a vyberte možnost **Resources File**.
 
 ![Přidání souboru zdrojů](images/zerotouchicons-add-resources-file-2.jpg)
 
-  * Pojmenujte soubor jako `<ProjectName>Images.resx`. Příklad: `ZeroTouchNodeIconsImages.resx`.
+* Pojmenujte soubor jako `<ProjectName>Images.resx`. Příklad: `ZeroTouchNodeIconsImages.resx`.
 
 2. **Zrušte zaškrtnutí vlastnosti Custom Tool**:
-    * Vyberte soubor zdrojů v nástroji **Solution Explorer**.
-    * Na panelu **Properties** vymažte pole `Custom Tool` odebráním hodnoty `ResXFileCodeGenerator`.
+   * Vyberte soubor zdrojů v nástroji **Solution Explorer**.
+   * Na panelu **Properties** vymažte pole `Custom Tool` odebráním hodnoty `ResXFileCodeGenerator`.
 
 ![Čištění vlastnosti Custom Tool](images/zerotouchicons-custom-tool-property.jpg)
 
-> *POZNÁMKA: Pokud se nepodaří vymazat pole Custom Tool, Visual Studio převede v názvech zdrojů tečky na podtržítka. Před sestavením ověřte, že názvy zdrojů mají tečky oddělující názvy tříd, nikoli podtržítka.*
-
+> _POZNÁMKA: Pokud se nepodaří vymazat pole Custom Tool, Visual Studio převede v názvech zdrojů tečky na podtržítka. Před sestavením ověřte, že názvy zdrojů mají tečky oddělující názvy tříd, nikoli podtržítka._
 
 #### Krok 4: Přidejte obrázky jako zdroje
 
 1. Otevřete soubor zdrojů pomocí nástroje **Managed Resources Editor (Legacy)**:
-    * Pokud používáte aplikaci Visual Studio 17.11 nebo novější, klikněte pravým tlačítkem myši na soubor prostředků, zvolte **Open With** a vyberte položku **Managed Resources Editor (Legacy)**.
-    * Pokud používáte verzi aplikace Visual Studio starší než 17.11, dvojím kliknutím na soubor zdrojů jej otevřete v nástroji Resources Editor (který ve vaší verzi aplikace Visual Studio ještě není starší verzí).
+   * Pokud používáte aplikaci Visual Studio 17.11 nebo novější, klikněte pravým tlačítkem myši na soubor prostředků, zvolte **Open With** a vyberte položku **Managed Resources Editor (Legacy)**.
+   * Pokud používáte verzi aplikace Visual Studio starší než 17.11, dvojím kliknutím na soubor zdrojů jej otevřete v nástroji Resources Editor (který ve vaší verzi aplikace Visual Studio ještě není starší verzí).
 
 ![Použití příkazu Open With](images/zerotouchicons-open-resource-editor.jpg)
 
 ![Otevření souboru zdrojů pomocí nástroje Managed Resources Editor (Legacy)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. Přidejte obrázky:
-    * Přetáhněte soubory obrázků do editoru nebo použijte možnost **Add Existing File**.
+   * Přetáhněte soubory obrázků do editoru nebo použijte možnost **Add Existing File**.
 
 ![Přidání existujících souborů](images/zerotouchicons-add-existing-file.jpg)
 
 3. Aktualizace vlastnosti Persistence:
-    * Vyberte obrázky v nástroji Resources Editor (pokud je vyberete v nástroji Solution Explorer, nebude to fungovat) a změňte vlastnost **Persistence** na panelu **Properties** na `Embedded in .resx`. Tím zajistíte, že obrázky budou zahrnuty do vaší knihovny `.dll`.
+   * Vyberte obrázky v nástroji Resources Editor (pokud je vyberete v nástroji Solution Explorer, nebude to fungovat) a změňte vlastnost **Persistence** na panelu **Properties** na `Embedded in .resx`. Tím zajistíte, že obrázky budou zahrnuty do vaší knihovny `.dll`.
 
 ![Aktualizace vlastnosti Persistence](images/zerotouchicons-edit-persistence-property.jpg)
 
@@ -524,16 +531,15 @@ Pokud váš projekt ještě není ve stylu SDK (nutné pro vkládání prostřed
 
 ![Upgrade dokončen](images/zerotouchicons-upgrade-complete.jpg)
 
-
 #### Krok 6: Přidejte skript po sestavení pro vložení zdrojů
 
 1. Uvolněte projekt:
-    * Klikněte pravým tlačítkem myši na projekt v nástroji **Solution Explorer** a vyberte možnost **Unload Project**.
+   * Klikněte pravým tlačítkem myši na projekt v nástroji **Solution Explorer** a vyberte možnost **Unload Project**.
 
 ![Uvolnění projektu](images/zerotouchicons-unload-project.jpg)
 
 2. Upravte soubor `.csproj`:
-    * Mezi `</ItemGroup>` a `</Project>` přidejte následující prvek `<Target>`:
+   * Mezi `</ItemGroup>` a `</Project>` přidejte následující prvek `<Target>`:
 
 ```
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
@@ -550,25 +556,26 @@ Pokud váš projekt ještě není ve stylu SDK (nutné pro vkládání prostřed
 		<AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)ZeroTouchNodeIconsImages.resources" OutputAssembly="$(OutDir)ZeroTouchNodeIcons.customization.dll" Version="%(AssemblyInfo.Version)" />
 	</Target>
 ```
+
 ![Přidání kódu po sestavení](images/zerotouchicons-after-build.jpg)
+
 1. Nahraďte všechny instance `ZeroTouchNodeIcons` názvem projektu.
 2. Znovu načtěte projekt:
-    * Klikněte pravým tlačítkem myši na uvolněný projekt a vyberte možnost **Reload Project**.
+   * Klikněte pravým tlačítkem myši na uvolněný projekt a vyberte možnost **Reload Project**.
 
 ![Opakované načtení projektu](images/zerotouchicons-reload-project.jpg)
-
 
 #### Krok 7: Sestavte svou knihovnu .dll a načtěte ji do aplikace Dynamo
 
 1. Sestavení projektu:
-    * Po přidání skriptu po sestavení sestavte projekt v aplikaci Visual Studio.
+   * Po přidání skriptu po sestavení sestavte projekt v aplikaci Visual Studio.
 
 ![Sestavení řešení](images/zerotouchicons-build-solution.jpg)
 
 2. Kontrola výstupních souborů:
-    * Ujistěte se, že vaše knihovny `.dll` a `.customization.dll` jsou ve složce `bin`.
+   * Ujistěte se, že vaše knihovny `.dll` a `.customization.dll` jsou ve složce `bin`.
 3. Přidejte knihovnu `.dll` do aplikace Dynamo:
-    * V aplikaci Dynamo importujte svou knihovnu .dll pomocí tlačítka Importovat knihovnu.
+   * V aplikaci Dynamo importujte svou knihovnu .dll pomocí tlačítka Importovat knihovnu.
 
 ![Tlačítko Importovat knihovnu](images/zerotouchicons-icon-in-dynamo.jpg)
 

@@ -11,7 +11,7 @@ Metody ve třídě `GeometryPrimitiveConverter.cs` lze seskupit do čtyř hlavn�
 1. **Typy Proto na Revit**: Metody, které převádějí typy aplikace Dynamo (Proto) na typy aplikace Revit.
 2. **Typy Revit na Proto**: Metody, které převádějí typy aplikace Revit na typy aplikace Dynamo (Proto).
 3. **Stupně a radiány**: Metody, které převádějí stupně a radiány.
-4. **X a UZ**: Metody, které se zabývají získáváním kolmých vektorů. 
+4. **X a UZ**: Metody, které se zabývají získáváním kolmých vektorů.
 
 ### Typy Proto na Revit
 
@@ -19,10 +19,7 @@ Metody ve třídě `GeometryPrimitiveConverter.cs` lze seskupit do čtyř hlavn�
 
 Vytvoří objekt BoundingBoxXYZ aplikace Revit ze souřadnicového systému aplikace Dynamo a dvou definičních bodů (minimum a maximum).
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -44,7 +41,7 @@ Příznak convertUnits (výchozí hodnota true) v případě potřeby převede 
 
 Převede objekt Vector aplikace Dynamo na objekt XYZ aplikace Revit.
 
-Všimněte si, že výchozí hodnotou příznaku convertUnits je false, protože vektory představují směr a velikost, které obvykle nevyžadují převod jednotek. Převod může ovlivnit směr a délku vektoru. 
+Všimněte si, že výchozí hodnotou příznaku convertUnits je false, protože vektory představují směr a velikost, které obvykle nevyžadují převod jednotek. Převod může ovlivnit směr a délku vektoru.
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@ Převede objekt Point aplikace Dynamo na objekt XYZ aplikace Revit.
 
 Převede objekt Vector aplikace Dynamo na objekt XYZ aplikace Revit.
 
-Všimněte si, že výchozí hodnotou příznaku convertUnits je false, protože vektory představují směr a velikost, které obvykle nevyžadují převod jednotek. Převod může ovlivnit směr a délku vektoru. 
+Všimněte si, že výchozí hodnotou příznaku convertUnits je false, protože vektory představují směr a velikost, které obvykle nevyžadují převod jednotek. Převod může ovlivnit směr a délku vektoru.
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,9 +105,9 @@ Převede dvojrozměrné pole (double[][]), kde každé vnitřní pole představu
 
 #### Příklad použití typů Proto To Revit
 
-Tento příklad ukazuje rychlý a snadný způsob použití metody .ToXyz (Point) k převodu objektu Point.ByCoordinates aplikace Dynamo na objekt XYZ aplikace Revit. 
+Tento příklad ukazuje rychlý a snadný způsob použití metody .ToXyz (Point) k převodu objektu Point.ByCoordinates aplikace Dynamo na objekt XYZ aplikace Revit.
 
-![Převod objektu Point.ByCoordinates aplikace Dynamo na objekt XYZ aplikace Revit](images/dynamo-point-to-revit-xyz.png)
+![Převod objektu Point.ByCoordinates aplikace Dynamo na objekt XYZ aplikace Revit](Images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### Typy Revit na Proto
 
@@ -191,9 +186,9 @@ Převede seznam bodů XYZ aplikace Revit na seznam bodů objektů Point aplikace
 
 #### Příklad použití typů Revit na Proto
 
-Tento příklad ukazuje rychlý a snadný způsob použití metody .ToPoint (XYZ) k převodu objektu XYZ aplikace Revit na objekt Point aplikace Dynamo. 
+Tento příklad ukazuje rychlý a snadný způsob použití metody .ToPoint (XYZ) k převodu objektu XYZ aplikace Revit na objekt Point aplikace Dynamo.
 
-![Převod objektu XYZ aplikace Revit na objekt Point.ByCoordinates aplikace Dynamo](images/revit-xyz-to-dynamo-point.png)
+![Převod objektu XYZ aplikace Revit na objekt Point.ByCoordinates aplikace Dynamo](Images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -224,25 +219,19 @@ OUT = revit_point
 
 Převede stupně na radiány.
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 Převede radiány na stupně.
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### Příklad použití stupňů a radiánů
 
-Tento příklad ukazuje rychlý a snadný způsob použití metody .ToRadians pro převod ze stupňů na radiány. 
+Tento příklad ukazuje rychlý a snadný způsob použití metody .ToRadians pro převod ze stupňů na radiány.
 
-![Stupně na radiány](images/degrees-to-radians.png)
+![Stupně na radiány](Images/degrees-to-radians.png)
 
 ```
 import sys
@@ -266,25 +255,26 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X a UZ
 
 #### GetPerpendicular (XYZ)
 
 Tato metoda vrací vektor `XYZ` kolmý na zadaný vektor `XYZ`.
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular (Vector)
 
 Tato metoda vrací objekt `Vector` aplikace Dynamo kolmý na zadaný objekt `Vector` aplikace Dynamo.
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### Příklad použití metody X a UZ
 
-Tento příklad ukazuje rychlý a snadný způsob použití metody .GetPerpendicular k získání vektoru kolmého na vstupní vektor. 
+Tento příklad ukazuje rychlý a snadný způsob použití metody .GetPerpendicular k získání vektoru kolmého na vstupní vektor.
 
-![Získání kolmého vektoru](images/get-perpendicular-vector.png)
+![Získání kolmého vektoru](Images/get-perpendicular-vector.png)
 
 ```
 import clr

@@ -2,7 +2,7 @@
 
 V předchozích částech jsme se zabývali podrobnostmi o tom, jak je balíček _MapToSurface_ nastaven pomocí vlastních uzlů a vzorových souborů. Ale jak publikujeme balíček, který byl vyvinut místně? Tato případová studie ukazuje, jak publikovat balíček ze sady souborů v místní složce.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Balíček lze publikovat mnoha způsoby. Níže je popsán proces, který doporučujeme: **publikovat místně, vyvíjet místně a poté publikovat online**. Začneme složkou obsahující všechny soubory v balíčku.
 
@@ -55,7 +55,7 @@ Publikujte balíček kliknutím na tlačítko Publikovat místně (1).. Pokud pr
 
 Po publikování by měly být vlastní uzly dostupné ve skupině DynamoPrimer nebo v knihovně aplikace Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Nyní se podívejme na kořenový adresář a uvidíme, jak aplikace Dynamo formátovala balíček, který jsme právě vytvořili. Proveďte to tak, že přejdete na kartu Nainstalované balíčky > vedle položky MapToSurface klikněte na nabídku se svislými tečkami > vyberte možnost Zobrazit kořenový adresář.
 
@@ -79,11 +79,10 @@ Všimněte si, že kořenový adresář se nachází v místním umístění ba
 1. Až budete připraveni k publikování, v okně Balíčky > Package Manager > Instalované balíčky vyberte tlačítko vpravo od balíčku, který chcete publikovat, a zvolte možnost Publikovat.
 2. Pokud aktualizujete balíček, který již byl publikován, klikněte na tlačítko Publikovat verzi a aplikace Dynamo aktualizuje balíček online podle nových souborů v kořenovém adresáři daného balíčku. Je to tak jednoduché.
 
-#### Testování serveru nástroje Package Manager
-Při testování nástroje Package Manager neposílejte testovací balíčky na produkční server. Použijte testovací server. Tím zabráníte tomu, aby se vaše balíčky vmísily mezi skutečné balíčky a aktivity. Konfigurace aplikace Dynamo k použití testovacího serveru je snadná. 
-
-Další informace naleznete na wiki stránce popisující [testování serveru nástroje Package Manager](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
-
 ### Publikování verze...
 
 Při aktualizaci souborů v kořenové složce publikovaného balíčku můžete také publikovat novou verzi balíčku výběrem možnosti _Publikovat verzi_ na kartě _Moje balíčky_. Jedná se o snadný způsob, jak provést nezbytné aktualizace vašeho obsahu a sdílet jej s komunitou. Možnost _Publikovat verzi_ bude fungovat pouze v případě, že udržujete balíček.
+
+### Převod vlastnictví balíčku
+
+V současné době nelze převést vlastnictví balíčku pomocí nástroje Package Manager. Můžete ale požádat tým aplikace Dynamo, aby přidal dalšího vlastníka. Všimněte si, že nemůžeme odebrat existující vlastníky, pouze přidat další správce balíčku. Pokud si přejete přidat účet jako vlastníka k existujícího balíčku, pošlete e-mail na adresu [dynamoteam@dynamobim.org](mailto:dynamoteam@dynamobim.org). Nezapomeňte uvést název balíčku a název účtu, který chcete přidat.
