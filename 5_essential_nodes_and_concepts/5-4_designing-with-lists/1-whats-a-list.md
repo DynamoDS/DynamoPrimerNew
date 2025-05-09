@@ -4,9 +4,9 @@
 
 Eine Liste ist eine Sammlung von Elementen oder Einträgen. Ein Beispiel kann z. B. ein Bündel Bananen sein. Jede Banane ist ein Eintrag in der Liste (bzw. im Bündel). Ein Bündel Bananen ist leichter aufzuheben als die einzelnen Bananen. Dasselbe gilt für die Gruppierung von Elementen durch parametrische Beziehungen in einer Datenstruktur.
 
-![Bananen](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Bananen](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> Foto von [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Foto von [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
 Beim Einkaufen packen Sie alle gekauften Artikel in eine Tasche. Auch diese Tasche ist eine Liste. Angenommen, Sie benötigen drei Bündel Bananen, um (eine _große Menge_) Bananenbrot zu backen. Damit stellt die Tasche eine Liste mit Bananenbündeln und jedes Bündel eine Liste mit Bananen dar. Die Tasche ist eine Liste von Listen (zweidimensional) und jedes Bananenbündel ist eine Liste (eindimensional).
 
@@ -86,6 +86,7 @@ Dynamo-Blöcke erkennen automatisch, wenn sie es mit Listen zu tun haben, und we
 Es gibt im Wesentlichen zwei Möglichkeiten:
 
 #### Kartesische Replikation
+
 Nehmen wir an, Sie stehen in der Küche und bereiten Fruchtsäfte zu. Sie haben eine Liste mit Früchten: `{apple, orange, pear}` und eine feste Menge Wasser für jeden Saft: `1 cup`. Sie möchten aus jeder Frucht einen Saft mit der gleichen Menge Wasser herstellen. In diesem Fall kommt die kartesische Replikation ins Spiel.
 
 In Dynamo bedeutet dies, dass Sie die Liste der Früchte in die Frucht-Eingabe des Juice.Maker-Blocks eingeben, während die Wasser-Eingabe konstant bei 1 cup bleibt. Der Block verarbeitet dann jede Frucht einzeln und kombiniert sie mit der festen Menge Wasser. Ergebnis:
@@ -95,6 +96,7 @@ In Dynamo bedeutet dies, dass Sie die Liste der Früchte in die Frucht-Eingabe d
 Jede Frucht wird mit der gleichen Menge Wasser kombiniert.
 
 #### ZIP-Replikation
+
 Die ZIP-Replikation funktioniert etwas anders. Wenn Sie zwei Listen haben, eine für Früchte (`{apple, orange, pear}`) und eine andere für die Zuckermenge (`{2 tbsp, 3 tbsp, 1 tbsp}`), würde die ZIP-Replikation die entsprechenden Elemente aus jeder Liste kombinieren. Beispiel:
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`

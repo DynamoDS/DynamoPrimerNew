@@ -2,7 +2,7 @@
 
 In den vorigen Abschnitten wurde gezeigt, wie das _MapToSurface_-Paket sich aus benutzerdefinierten Blöcken und Beispieldateien zusammensetzt. Aber wie veröffentlichen Sie ein Paket, das lokal entwickelt wurde? Diese Fallstudie zeigt, wie Sie ein Paket aus einer Gruppe von Dateien in einem lokalen Ordner publizieren können.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Es gibt mehrere Möglichkeiten zum Publizieren von Paketen. Im Folgenden wird der von uns empfohlene Prozess beschrieben: **Sie publizieren lokal, entwickeln lokal und publizieren schließlich online**. Sie beginnen mit einem Ordner, der sämtliche Dateien im Paket enthält.
 
@@ -18,7 +18,7 @@ Starten Sie dann Dynamo erneut. Wenn Sie beim erneuten Öffnen das Fenster _Pake
 
 ### Lokale Veröffentlichung von Paketen
 
-{% hint style="warning" %} Sie können benutzerdefinierte Blöcke und Pakete aus Dynamo Sandbox in Version 2.17 und höher publizieren, sofern diese keine Abhängigkeiten zur Host-API aufweisen. In älteren Versionen ist das Publizieren von benutzerdefinierten Blöcken und Paketen nur in Dynamo für Revit und Dynamo for Civil 3D aktiviert. {% endhint %}
+{% hint style="warning" %} Sie können benutzerdefinierte Blöcke und Pakete aus Dynamo Sandbox in Version 2.17 und höher publizieren, sofern diese keine Abhängigkeiten zur Host-API aufweisen. In älteren Versionen ist das Publizieren von benutzerdefinierten Blöcken und Paketen nur in Dynamo for Revit und Dynamo for Civil 3D aktiviert. {% endhint %}
 
 > Laden Sie die Beispieldatei herunter, indem Sie auf den folgenden Link klicken.
 >
@@ -55,7 +55,7 @@ Publizieren Sie das Paket, indem Sie auf Lokal publizieren (1) klicken. Achten S
 
 Nach dem Publizieren werden die benutzerdefinierten Blöcke in der Gruppe DynamoPrimer oder in Ihrer Dynamo-Bibliothek angezeigt.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Sehen wir jetzt im Stammverzeichnis nach, wie Dynamo das eben erstellte Paket formatiert hat. Navigieren Sie dazu zur Registerkarte Installierte Pakete, klicken Sie neben MapToSurface auf das Menü mit den drei Punkten, und wählen Sie Stammverzeichnis anzeigen aus.
 
@@ -79,11 +79,10 @@ Das Stammverzeichnis befindet sich am lokalen Speicherort des Pakets (da Sie es 
 1. Wenn Sie zum Publizieren bereit sind, wählen Sie im Fenster Pakete > Package Manager > Installierte Pakete die Schaltfläche rechts neben dem Paket, das Sie publizieren möchten, und dann Publizieren aus.
 2. Um ein bereits veröffentlichtes Paket zu aktualisieren, wählen Sie Version veröffentlichen. Dynamo aktualisiert dann Ihr Paket online mit den neuen Dateien im Stammverzeichnis des Pakets. Dieser einfache Schritt genügt.
 
-#### Testen des Package Manager-Servers
-Senden Sie beim Testen des Package Manager Ihre Testpakete nicht an den Produktionsserver. Verwenden Sie den Staging-Server. Dadurch wird verhindert, dass Ihre Pakete echte Pakete und Aktivitäten beeinträchtigen. Es ist einfach, Dynamo für die Verwendung des Staging-Servers zu konfigurieren. 
-
-Weitere Informationen hierzu finden Sie auf der [Wiki-Seite zum Testen des Package Manager-Servers](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
-
 ### Version veröffentlichen
 
 Wenn Sie die Dateien im Stammverzeichnis des publizierten Pakets aktualisieren, können Sie über _Version veröffentlichen..._ auf der Registerkarte _Meine Pakete_ auch eine neue Version des Pakets publizieren. Auf diese Weise können Sie nahtlos erforderliche Aktualisierungen Ihrer Inhalte vornehmen und sie für die Community bereitstellen. Die Funktion _Version veröffentlichen_ kann nur verwendet werden, wenn Sie der Verwalter des Pakets sind.
+
+### Übertragen der Eigentümerschaft eines Pakets
+
+Derzeit können Sie die Paketeigentümerschaft nicht über den Package Manager übertragen. Sie können das Dynamo-Team bitten, einen zusätzlichen Eigentümer hinzuzufügen. Beachten Sie, dass wir keine bestehenden Eigentümer entfernen, sondern nur weitere Maintainer des Pakets hinzufügen können. Wenn Sie ein Konto als Eigentümer zu Ihrem vorhandenen Paket hinzufügen möchten, senden Sie eine E-Mail an [dynamoteam@dynamobim.org](mailto:dynamoteam@dynamobim.org). Stellen Sie sicher, dass Sie den Paketnamen und den Kontonamen angeben, die Sie hinzufügen möchten.

@@ -42,7 +42,7 @@ Die Dynamo-Bibliothek enthält jetzt die Gruppe _DynamoUnfold_ mit mehreren Kate
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Als Nächstes betrachten Sie die Dateistruktur des Pakets genauer. 
+Als Nächstes betrachten Sie die Dateistruktur des Pakets genauer.
 
 1. Navigieren Sie zunächst zu Pakete > Package Manager > Installierte Pakete.
 2. Wählen Sie neben DynamoUnfold das Optionsmenü <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line"> aus.
@@ -67,13 +67,13 @@ Wenn Sie den Ordner extra öffnen, sehen Sie eine Reihe von Beispieldateien, die
 
 Nachdem Sie die Datei geöffnet und im Solver auf Ausführen geklickt haben, erhalten Sie das Netz einer Kugel! Beispieldateien wie diese erleichtern den Einstieg in die Arbeit mit einem neuen Dynamo-Paket.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Durchsuchen und Anzeigen von Paketinformationen
 
 Mithilfe der Sortier- und Filteroptionen auf der Registerkarte Nach Paketen suchen können Sie im Package Manager nach Paketen suchen. Es stehen verschiedene Filter für das Host-Programm und den Status (neu, veraltet oder nicht veraltet) zur Verfügung, bzw. dafür, ob das Paket Abhängigkeiten aufweist.
 
-Durch Sortieren der Pakete können Sie die hoch bewerteten oder die am häufigsten heruntergeladenen Pakete ermitteln bzw. Pakete mit aktuellen Updates suchen. 
+Durch Sortieren der Pakete können Sie die hoch bewerteten oder die am häufigsten heruntergeladenen Pakete ermitteln bzw. Pakete mit aktuellen Updates suchen.
 
 Sie können auch auf weitere Details zu jedem Paket zugreifen, indem Sie auf Details anzeigen klicken. Dadurch wird eine Seitenleiste im Package Manager geöffnet, in der Sie Informationen wie Versionierung und Abhängigkeiten, Website- oder Repository-URL, Lizenzinformationen usw. finden.
 
@@ -95,32 +95,30 @@ Pakete werden vorgabemäßig unter einem Speicherort ähnlich dem folgenden inst
 
 Für Benutzer, die wissen möchten, ob es möglich ist, Dynamo (in beliebiger Form) mit vorinstallierten Paketen einzurichten: Der Ansatz, der dieses Problem löst und allen Benutzern mit einer Dynamo-Installation die Steuerung an einem zentralen Ort ermöglicht, besteht darin, jeder Installation einen benutzerdefinierten Paketpfad hinzuzufügen.
 
-**Hinzufügen eines Netzwerkordners, in dem der BIM-Manager oder andere Benutzer die Bestückung des Ordners mit vom Büro genehmigten Paketen überwachen können**  
+**Hinzufügen eines Netzwerkordners, in dem der BIM-Manager oder andere Benutzer die Bestückung des Ordners mit vom Büro genehmigten Paketen überwachen können**
 
-Wechseln Sie in der Benutzeroberfläche einer einzelnen Anwendung zu *Dynamo -> Voreinstellungen -> Paketeinstellungen -> Dateispeicherorte für Blöcke und Pakete*. Klicken Sie im Dialogfeld auf die Schaltfläche Pfad hinzufügen, und navigieren Sie zum Netzwerkspeicherort für die freigegebene Paketressource. 
- 
-Dieser automatisierte Vorgang umfasst das Hinzufügen von Informationen zur Konfigurationsdatei, die mit Dynamo installiert wird:   
+Wechseln Sie in der Benutzeroberfläche einer einzelnen Anwendung zu _Dynamo -> Voreinstellungen -> Paketeinstellungen -> Dateispeicherorte für Blöcke und Pakete_. Klicken Sie im Dialogfeld auf die Schaltfläche Pfad hinzufügen, und navigieren Sie zum Netzwerkspeicherort für die freigegebene Paketressource.
+
+Dieser automatisierte Vorgang umfasst das Hinzufügen von Informationen zur Konfigurationsdatei, die mit Dynamo installiert wird: \
  `C:\Benutzer\[Benutzername]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo-Version]\DynamoSettings.xml`
 
-Die Konfiguration für Dynamo für Revit lautet vorgabemäßig wie folgt:
- 
- 
-`<CustomPackageFolders>`  
+Die Konfiguration für Dynamo for Revit lautet vorgabemäßig wie folgt:
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+`<CustomPackageFolders>`
 
-`</CustomPackageFolders>`
-
-Das Hinzufügen eines benutzerdefinierten Speicherorts würde wie folgt aussehen:  
-
-`<CustomPackageFolders>`  
-
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
-
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
+Das Hinzufügen eines benutzerdefinierten Speicherorts würde wie folgt aussehen:
+
+`<CustomPackageFolders>`
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+
+`</CustomPackageFolders>`
 
 Die zentrale Verwaltung dieses Ordners kann auch gesteuert werden, indem Sie den Ordner einfach mit Schreibschutz versehen.
 
@@ -128,7 +126,7 @@ Die zentrale Verwaltung dieses Ordners kann auch gesteuert werden, indem Sie den
 
 #### Szenario
 
-Ein Unternehmen möchte möglicherweise die Pakete standardisieren, die von verschiedenen Arbeitsstationen und Benutzern installiert werden. Eine Möglichkeit hierfür könnte darin bestehen, diese Pakete über *Dynamo -> Voreinstellungen -> Paketeinstellungen -> Dateispeicherorte für Blöcke und Pakete* zu installieren, einen Netzwerkordner als Installationsverzeichnis auszuwählen und diesen Pfad auf den Arbeitsstationen zu `Manage Node and Package Paths` hinzuzufügen.
+Ein Unternehmen möchte möglicherweise die Pakete standardisieren, die von verschiedenen Arbeitsstationen und Benutzern installiert werden. Eine Möglichkeit hierfür könnte darin bestehen, diese Pakete über _Dynamo -> Voreinstellungen -> Paketeinstellungen -> Dateispeicherorte für Blöcke und Pakete_ zu installieren, einen Netzwerkordner als Installationsverzeichnis auszuwählen und diesen Pfad auf den Arbeitsstationen zu `Manage Node and Package Paths` hinzuzufügen.
 
 #### Problem
 

@@ -1,4 +1,4 @@
-# Erweiterte Anpassung von Dynamo-Blöcken 
+# Erweiterte Anpassung von Dynamo-Blöcken
 
 In diesem Abschnitt werden, ein Grundwissen über ZeroTouch vorausgesetzt, die Vorteile der Anpassung von Dynamo-Blöcken erläutert, um sowohl die Funktionalität als auch das Benutzererlebnis zu verbessern. Durch Hinzufügen von Elementen wie Warnmeldungen, Informationsmeldungen und benutzerdefinierten Symbolen können Sie Blöcke erstellen, die intuitiver, informativer und visuell ansprechender sind. Diese Anpassungen helfen den Benutzern nicht nur, potenzielle Probleme zu verstehen oder ihre Arbeitsabläufe zu optimieren, sondern stellen Ihre Blöcke auch als professionelle und benutzerfreundliche Werkzeuge in den Vordergrund.
 
@@ -51,7 +51,7 @@ In diesem Beispiel verwenden wir den benutzerdefinierten Block, der im vorherige
 
 ![OnLogWarningMessage - Beispiel 1](images/onlogwarningmessage-example-1.png)
 
-##### Verwenden von `OnLogWarningMessage` für die Eingabevalidierung <a href="#using-onlogwarningmessage-for-input-validation" id="using-onlogwarningmessage-for-input-validation"></a>
+**Verwenden von `OnLogWarningMessage` für die Eingabevalidierung**
 
 Für die Erstellung eines Rasters basierend auf `xCount` und `yCount`. Stellen Sie sicher, dass es sich bei beiden Werten um positive Ganzzahlen handelt, bevor Sie fortfahren.
 
@@ -73,7 +73,7 @@ In diesem Beispiel:
 * **Bedingung**: Wenn entweder `xCount` oder `yCount` kleiner oder gleich null ist
 * **Meldung**: `"Grid count values must be positive integers."`
 
-Dadurch wird die Warnung in Dynamo angezeigt, wenn ein Benutzer null oder negative Werte eingibt. Dies erleichtert das Verständnis der erwarteten Eingabe. 
+Dadurch wird die Warnung in Dynamo angezeigt, wenn ein Benutzer null oder negative Werte eingibt. Dies erleichtert das Verständnis der erwarteten Eingabe.
 
 Nun können wir die Warnung in den Beispielblock Grids implementieren:
 
@@ -133,7 +133,7 @@ namespace CustomNodes
 }
 ```
 
-##### Beispiel 2: Prüfung auf keine oder leere Sammlungen <a href="#example-2-checking-for-null-or-empty-collections" id="example-2-checking-for-null-or-empty-collections"></a>
+**Beispiel 2: Prüfung auf keine oder leere Sammlungen**
 
 Wenn Ihre Methode eine Liste von Punkten erfordert, ein Benutzer jedoch eine leere oder Nullliste übergibt, können Sie `OnLogWarningMessage` verwenden, um ihn über das Problem zu informieren.
 
@@ -158,9 +158,9 @@ In diesem Beispiel:
 
 Dadurch werden Benutzer gewarnt, dass sie eine gültige Liste mit mindestens drei Punkten übergeben müssen, um ein Polygon zu bilden.
 
----
+***
 
-##### Beispiel 3: Überprüfen der Dateitypkompatibilität <a href="#example-3-verifying-file-type-compatibility" id="example-3-verifying-file-type-compatibility"></a>
+**Beispiel 3: Überprüfen der Dateitypkompatibilität **
 
 Bei einem Block, der Dateipfade verarbeitet, sollten Sie sicherstellen, dass nur bestimmte Dateitypen zulässig sind. Wenn ein nicht unterstützter Dateityp erkannt wird, protokollieren Sie eine Warnung.
 
@@ -190,6 +190,7 @@ Dadurch werden Benutzer darauf aufmerksam gemacht, sicherzustellen, dass sie ein
 In Dynamo ermöglicht es `OnLogInfoMessage` aus dem `DynamoServices`-Namensbereich Entwicklern, Informationsmeldungen direkt in der Konsole von Dynamo zu protokollieren. Dies ist hilfreich, um erfolgreiche Vorgänge zu bestätigen, den Fortschritt zu kommunizieren oder zusätzliche Einblicke in Blockaktionen zu erhalten. In dieser Anleitung erfahren Sie, wie Sie `OnLogInfoMessage` in einen beliebigen Zero-Touch-Block einfügen, um Feedback und Benutzerfreundlichkeit zu verbessern.
 
 ### Implementierungsschritte für `OnLogInfoMessage` <a href="#implementation-steps-for-onloginfomessage" id="implementation-steps-for-onloginfomessage"></a>
+
 #### Schritt 1: Importieren des erforderlichen Namensbereichs <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
 
 `OnLogInfoMessage` ist Teil des `DynamoServices`-Namensbereichs. Fügen Sie dies daher zunächst Ihrer Projektdatei hinzu.
@@ -227,7 +228,7 @@ In diesem Beispiel verwenden wir den benutzerdefinierten Block, der im vorherige
 
 ![OnLogInfoMessage - Beispiel 1](images/onloginfomessage-example-1.png)
 
-###### Verwenden von `OnLogInfoMessage` für die Eingabevalidierung <a href="#using-onloginfomessage-for-unput-validation" id="using-onloginfomessage-for-unput-validation"></a>
+**Verwenden von `OnLogInfoMessage` für die Eingabevalidierung**
 
 Für die Erstellung eines Rasters basierend auf `xCount` und `yCount`. Nach dem Erstellen des Rasters können Sie dessen Erstellung bestätigen, indem Sie eine Informationsmeldung mit den Bemaßungen des Rasters protokollieren.
 
@@ -334,7 +335,6 @@ In diesem Beispiel:
 
 Diese Meldung hilft Benutzern, das Ergebnis der Verarbeitung nachzuvollziehen und zu bestätigen, dass alle Punkte verarbeitet wurden.
 
-
 #### Beispiel 3: Zusammenfassung der verwendeten Parameter <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
 
 In einigen Fällen ist es hilfreich, die Eingabeparameter zu bestätigen, die ein Block zum Abschließen einer Aktion verwendet hat. Wenn Ihr Block beispielsweise Daten in eine Datei exportiert, können Sie durch das Protokollieren des Dateinamens und -pfads Benutzern die Sicherheit geben, dass die richtige Datei verwendet wurde.
@@ -362,24 +362,31 @@ Mit dieser Meldung wird den Benutzern bestätigt, dass der Export erfolgreich wa
 ## Erstellen und Hinzufügen von benutzerdefinierter Dokumentation zu Blöcken
 
 ### Dokumentation für benutzerdefinierte Blöcke
+
 In der Vergangenheit gab es in Dynamo Einschränkungen bei der Art und Weise, wie Paketautoren die Dokumentation für ihre Blöcke bereitstellen konnten. Autoren von benutzerdefinierten Blöcken konnten nur kurze Beschreibungen in der QuickInfo des Blocks angeben oder das Paket mit ausführlich kommentierten Beispieldiagrammen versenden.
 
 ![Beschreibung in der Block-QuickInfo](images/customnodedocumentation-overloads.png)
 
 ### Eine neue Möglichkeit
-Dynamo bietet jetzt ein verbessertes System für Paketautoren, mit dem eine optimierte und mehr beschreibende Dokumentation für Ihre benutzerdefinierten Blöcke bereitgestellt werden kann. Bei diesem neuen Ansatz werden die benutzerfreundliche Markdown-Sprache für die Texterstellung und die Ansichtserweiterung des Dokumentationsbrowsers zur Anzeige von Markdown in Dynamo verwendet. Die Verwendung von Markdown bietet Paketautoren eine Vielzahl neuer Möglichkeiten beim Dokumentieren ihrer benutzerdefinierten Blöcke. 
+
+Dynamo bietet jetzt ein verbessertes System für Paketautoren, mit dem eine optimierte und mehr beschreibende Dokumentation für Ihre benutzerdefinierten Blöcke bereitgestellt werden kann. Bei diesem neuen Ansatz werden die benutzerfreundliche Markdown-Sprache für die Texterstellung und die Ansichtserweiterung des Dokumentationsbrowsers zur Anzeige von Markdown in Dynamo verwendet. Die Verwendung von Markdown bietet Paketautoren eine Vielzahl neuer Möglichkeiten beim Dokumentieren ihrer benutzerdefinierten Blöcke.
 
 #### Was ist Markdown?
+
 Markdown ist eine einfache Auszeichnungssprache, die Sie zum Formatieren von Klartextdokumenten verwenden können. Seit Markdown im Jahr 2004 ins Leben gerufen wurde, hat ihre Popularität stetig zugenommen, sodass sie heute eine der beliebtesten Auszeichnungssprachen der Welt ist.
 
 #### Erste Schritte mit Markdown
+
 Es ist ganz einfach, Markdown-Dateien zu erstellen. Alles, was Sie brauchen, ist ein einfacher Texteditor, wie den Windows-Editor, und schon kann es losgehen. Es gibt jedoch noch einfachere Möglichkeiten, Markdown-Code zu schreiben, als den Editor zu verwenden. Es gibt mehrere Online-Editoren, wie z. B. [Dillinger](https://dillinger.io/), mit denen Sie Ihre Änderungen in Echtzeit sehen können, während Sie sie vornehmen. Eine weitere beliebte Methode zum Bearbeiten von Markdown-Dateien ist die Verwendung eines Code-Editors wie [Visual Studio Code](https://code.visualstudio.com/).
 
 #### Was kann Markdown?
-Markdown ist sehr flexibel und sollte genügend Funktionen bieten, um auf einfache Weise eine gute Dokumentation zu erstellen. Dazu gehören: Hinzufügen von Mediendateien wie Bildern oder Videos, Erstellen von Tabellen mit verschiedenen Inhaltsformen und natürlich einfache Textformatierungsfunktionen wie **fett** oder *kursiv*. All dies und noch viel mehr ist beim Schreiben von Markdown-Dokumenten möglich. Weitere Informationen finden Sie in dieser Anleitung, in der die [grundlegende Markdown-Syntax](https://www.Markdownguide.org/basic-syntax/) erklärt wird.
+
+Markdown ist sehr flexibel und sollte genügend Funktionen bieten, um auf einfache Weise eine gute Dokumentation zu erstellen. Dazu gehören: Hinzufügen von Mediendateien wie Bildern oder Videos, Erstellen von Tabellen mit verschiedenen Inhaltsformen und natürlich einfache Textformatierungsfunktionen wie **fett** oder _kursiv_. All dies und noch viel mehr ist beim Schreiben von Markdown-Dokumenten möglich. Weitere Informationen finden Sie in dieser Anleitung, in der die [grundlegende Markdown-Syntax](https://www.markdownguide.org/basic-syntax/) erklärt wird.
 
 ### Hinzufügen erweiterter Dokumentation zu Ihren Blöcken
+
 Das Hinzufügen von Dokumentation zu Ihren Blöcken ist einfach. Die Dokumentation kann zu allen Varianten benutzerdefinierter Blöcke hinzugefügt werden, dazu gehören:
+
 * Vordefinierte Dynamo-Blöcke
 * Benutzerdefinierte Blöcke (.dyf): Sammlungen von vordefinierten und/oder anderen Paketblöcken.
 * Benutzerdefinierte C#-Paketblöcke (auch als ZeroTouch bezeichnet). Diese benutzerdefinierten Blöcke sehen wie die vordefinierten Blöcke aus.
@@ -389,6 +396,7 @@ Das Hinzufügen von Dokumentation zu Ihren Blöcken ist einfach. Die Dokumentati
 Führen Sie die folgenden Schritte aus, damit Ihre Markdown-Dateien in Dynamo angezeigt werden.
 
 #### Öffnen von Dokumentationsdateien in Dynamo
+
 Dynamo verwendet die Ansichtserweiterung des Dokumentationsbrowsers, um die Dokumentation für Blöcke anzuzeigen. Um die Dokumentation eines Blocks zu öffnen, klicken Sie mit der rechten Maustaste auf den Block und wählen Hilfe. Dadurch wird der Dokumentationsbrowser geöffnet, und der mit diesem Block verknüpften Markdown-Code wird angezeigt, sofern vorhanden.
 
 ![Dokumentationsbrowser](images/customnodedocumentation-no-documentation-provided.png)
@@ -398,10 +406,12 @@ Die im Dokumentationsbrowser angezeigte Dokumentation besteht aus zwei Teilen. D
 ![Dokumentation für benutzerdefinierte Blöcke](images/customnodedocumentation-custom-node-documentation.png)
 
 #### doc-Ordner für Pakete
+
 Um Dokumentationsdateien zu Ihren Blöcken in Dynamo hinzuzufügen, erstellen Sie in Ihrem Paketverzeichnis einen neuen Ordner mit dem Namen `/doc`. Wenn das Paket geladen ist, durchsucht Dynamo dieses Verzeichnis und ruft alle darin enthaltenen Markdown-Dokumentationsdateien ab.
 
 #### Benennen von Markdown-Dateien
-Um sicherzustellen, dass Dynamo weiß, welche Datei geöffnet werden soll, wenn diese für einen bestimmten Block angefordert wird, muss die Benennung der Markdown-Datei in einem bestimmten Format erfolgen. Die Markdown-Datei sollte entsprechend dem Namensbereich des Blocks benannt werden, den sie dokumentiert. Wenn Sie sich beim Namensbereich des Blocks nicht sicher sind, sehen Sie sich den Abschnitt `Node Info` an, nachdem Sie `Help` im Block gedrückt haben. Unter dem Blocknamen sehen Sie den vollständigen Namensbereich des ausgewählten Blocks. 
+
+Um sicherzustellen, dass Dynamo weiß, welche Datei geöffnet werden soll, wenn diese für einen bestimmten Block angefordert wird, muss die Benennung der Markdown-Datei in einem bestimmten Format erfolgen. Die Markdown-Datei sollte entsprechend dem Namensbereich des Blocks benannt werden, den sie dokumentiert. Wenn Sie sich beim Namensbereich des Blocks nicht sicher sind, sehen Sie sich den Abschnitt `Node Info` an, nachdem Sie `Help` im Block gedrückt haben. Unter dem Blocknamen sehen Sie den vollständigen Namensbereich des ausgewählten Blocks.
 
 Dieser Namensbereich sollte der Name der Markdown-Datei für diesen bestimmten Block sein. Der Namensbereich von `CustomNodeExample` aus den obigen Abbildungen lautet beispielsweise `TestPackage.TestCategory.CustomNodeExample`. Daher sollte die Markdown-Datei für diesen Block den Namen `TestPackage.TestCategory.CustomNodeExample.md` erhalten.
 
@@ -410,7 +420,8 @@ In besonderen Fällen, in denen Überlastungen Ihrer Blöcke (Blöcke mit demsel
 ![Überlastete Blöcke](images/customnodedocumentation-overloads.png)
 
 #### Ändern von Markdown-Dateien, während sie in Dynamo geöffnet sind
-Um das Ändern von Dokumentationsdateien zu erleichtern, implementiert der Dokumentationsbrowser einen Dateibeobachter für die geöffnete Dokumentationsdatei. Dadurch können Sie Änderungen an der Markdown-Datei vornehmen, und die Änderungen werden sofort in Dynamo angezeigt. 
+
+Um das Ändern von Dokumentationsdateien zu erleichtern, implementiert der Dokumentationsbrowser einen Dateibeobachter für die geöffnete Dokumentationsdatei. Dadurch können Sie Änderungen an der Markdown-Datei vornehmen, und die Änderungen werden sofort in Dynamo angezeigt.
 
 ![Hot Reloading](images/customnodedocumentation-hot-reload.gif)
 
@@ -424,7 +435,6 @@ Durch benutzerdefinierte Symbole für Zero-Touch-Blöcke in Dynamo werden Ihre B
 
 In dieser Anleitung erfahren Sie, wie Sie Symbole zu Ihren Zero-Touch-Blöcken hinzufügen.
 
-
 ### Schritte zum Hinzufügen von benutzerdefinierten Blocksymbolen
 
 #### Schritt 1: Einrichten des Projekts
@@ -437,19 +447,18 @@ Erstellen Sie zunächst ein Visual Studio-Klassenbibliotheksprojekt (.NET Framew
 
 Stellen Sie sicher, dass Sie mindestens einen funktionalen Zero-Touch-Block haben, da Symbole nur zu vorhandenen Blöcken hinzugefügt werden können. Weitere Informationen finden Sie unter **Zero-Touch-Fallstudie - Rasterblock**.
 
-
 #### Schritt 2: Erstellen Ihrer Symbolbilder
 
 So erstellen Sie benutzerdefinierte Symbole
 
 1. **Entwerfen Sie Ihre Symbole**: Verwenden Sie einen Bildeditor, um einfache, visuell klare Symbole für Ihre Blöcke zu erstellen.
 2. **Bildspezifikationen**:
-    * **Kleines Symbol**: 32 x 32 Pixel (wird in der Seitenleiste der Bibliothek und auf dem Block selbst verwendet).
-    * **Großes Symbol**: 128 x 128 Pixel (wird in den Blockeigenschaften verwendet, wenn Sie den Mauszeiger in der Bibliothek über den Block bewegen).
+   * **Kleines Symbol**: 32 x 32 Pixel (wird in der Seitenleiste der Bibliothek und auf dem Block selbst verwendet).
+   * **Großes Symbol**: 128 x 128 Pixel (wird in den Blockeigenschaften verwendet, wenn Sie den Mauszeiger in der Bibliothek über den Block bewegen).
 3. **Dateibenennungskonvention**:
-    * Die Dateinamen müssen dem folgenden Format entsprechen, um mit dem richtigen Block verknüpft zu werden:
-        * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (für das kleine Symbol)
-        * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (für das große Symbol)
+   * Die Dateinamen müssen dem folgenden Format entsprechen, um mit dem richtigen Block verknüpft zu werden:
+     * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (für das kleine Symbol)
+     * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (für das große Symbol)
 
 **Beispiel**: Wenn das Projekt `ZeroTouchNodeIcons`, Ihre Klasse `Grids` und Ihre Methode `RectangularGrid` lauten, werden die Dateien wie folgt benannt:
 
@@ -458,49 +467,47 @@ So erstellen Sie benutzerdefinierte Symbole
 
 > Tipp: Verwenden Sie für alle Ihre Symbole einen einheitlichen Designstil, um ein professionelles Aussehen zu erzielen.
 
-
 #### Schritt 3: Hinzufügen einer Ressourcendatei zum Projekt
 
 Erstellen Sie eine Ressourcendatei, um Ihre Symbole in die `.dll` einzubetten:
 
 1. **Fügen Sie eine neue Ressourcendatei hinzu**:
 
-  * Klicken Sie im **Solution Explorer** mit der rechten Maustaste auf das Projekt.
+* Klicken Sie im **Solution Explorer** mit der rechten Maustaste auf das Projekt.
 
 ![Hinzufügen eines neuen Elements](images/zerotouchicons-add-resources-file-1.jpg)
 
-  * Wechseln Sie zu **Add > New Item** und wählen Sie **Resources File** aus.
+* Wechseln Sie zu **Add > New Item** und wählen Sie **Resources File** aus.
 
 ![Hinzufügen einer Ressourcendatei](images/zerotouchicons-add-resources-file-2.jpg)
 
-  * Geben Sie der Datei den Namen `<ProjectName>Images.resx`. Beispielsweise `ZeroTouchNodeIconsImages.resx`.
+* Geben Sie der Datei den Namen `<ProjectName>Images.resx`. Beispielsweise `ZeroTouchNodeIconsImages.resx`.
 
 2. **Deaktivieren Sie die benutzerdefinierte Werkzeugeigenschaft**:
-    * Wählen Sie die Ressourcendatei im **Solution Explorer** aus.
-    * Löschen Sie in der Gruppe **Properties** das Feld `Custom Tool`, indem Sie den Wert `ResXFileCodeGenerator` entfernen.
+   * Wählen Sie die Ressourcendatei im **Solution Explorer** aus.
+   * Löschen Sie in der Gruppe **Properties** das Feld `Custom Tool`, indem Sie den Wert `ResXFileCodeGenerator` entfernen.
 
 ![Bereinigen der Eigenschaft von Custom Tool](images/zerotouchicons-custom-tool-property.jpg)
 
-> *ANMERKUNG: Wenn Sie das Feld Custom Tool nicht bereinigen, konvertiert Visual Studio Punkte in Ihren Ressourcennamen in Unterstriche. Vergewissern Sie sich vor der Erstellung, dass die Ressourcennamen anstelle von Unterstrichen Punkte als Trennzeichen für Klassennamen enthalten.*
-
+> _ANMERKUNG: Wenn Sie das Feld Custom Tool nicht bereinigen, konvertiert Visual Studio Punkte in Ihren Ressourcennamen in Unterstriche. Vergewissern Sie sich vor der Erstellung, dass die Ressourcennamen anstelle von Unterstrichen Punkte als Trennzeichen für Klassennamen enthalten._
 
 #### Schritt 4: Fügen Sie Ihre Bilder als Ressourcen hinzu
 
 1. Öffnen Sie die Ressourcendatei mithilfe des **Managed Resources Editor (Legacy)**:
-    * Wenn Sie Visual Studio 17.11 oder höher verwenden, klicken Sie mit der rechten Maustaste auf die Ressourcendatei, wählen **Open With** und dann **Managed Resources Editor (Legacy)** aus.
-    * Wenn Sie eine Visual Studio-Version vor 17.11 verwenden, doppelklicken Sie auf die Ressourcendatei, um sie mit dem Resources Editor zu öffnen (der in Ihrer Version von Visual Studio noch nicht veraltet ist).
+   * Wenn Sie Visual Studio 17.11 oder höher verwenden, klicken Sie mit der rechten Maustaste auf die Ressourcendatei, wählen **Open With** und dann **Managed Resources Editor (Legacy)** aus.
+   * Wenn Sie eine Visual Studio-Version vor 17.11 verwenden, doppelklicken Sie auf die Ressourcendatei, um sie mit dem Resources Editor zu öffnen (der in Ihrer Version von Visual Studio noch nicht veraltet ist).
 
 ![Verwenden von Open With...](images/zerotouchicons-open-resource-editor.jpg)
 
 ![Öffnen der Ressourcendatei mit dem Managed Resources Editor (Legacy)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. Fügen Sie Ihre Bilder hinzu:
-    * Verschieben Sie Ihre Bilddateien per Ziehen und Ablegen in den Editor, oder verwenden Sie die Option **Add Existing File**.
+   * Verschieben Sie Ihre Bilddateien per Ziehen und Ablegen in den Editor, oder verwenden Sie die Option **Add Existing File**.
 
 ![Hinzufügen vorhandener Dateien](images/zerotouchicons-add-existing-file.jpg)
 
 3. Aktualisieren Sie die Persistenz:
-    * Wählen Sie die Bilder im Resources Editor aus (dies funktioniert nicht, wenn Sie sie im Solution Explorer auswählen), und ändern Sie die Eigenschaft **Persistence** in der Gruppe **Properties** in `Embedded in .resx`. Dadurch wird sichergestellt, dass die Bilder in der `.dll` enthalten sind.
+   * Wählen Sie die Bilder im Resources Editor aus (dies funktioniert nicht, wenn Sie sie im Solution Explorer auswählen), und ändern Sie die Eigenschaft **Persistence** in der Gruppe **Properties** in `Embedded in .resx`. Dadurch wird sichergestellt, dass die Bilder in der `.dll` enthalten sind.
 
 ![Aktualisieren der Persistenz](images/zerotouchicons-edit-persistence-property.jpg)
 
@@ -524,16 +531,15 @@ Wenn Ihr Projekt noch nicht im SDK-Stil vorliegt (erforderlich zum Einbetten von
 
 ![Aktualisierung abgeschlossen](images/zerotouchicons-upgrade-complete.jpg)
 
-
 #### Schritt 6: Hinzufügen eines After-Build-Skripts zum Einbetten von Ressourcen
 
 1. Beenden Sie das Projekt:
-    * Klicken Sie im **Solution Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Unload Project** aus.
+   * Klicken Sie im **Solution Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Unload Project** aus.
 
 ![Projekt beenden](images/zerotouchicons-unload-project.jpg)
 
 2. Bearbeiten Sie die Datei `.csproj`:
-    * Fügen Sie das folgende `<Target>`-Element zwischen `</ItemGroup>` und `</Project>` hinzu:
+   * Fügen Sie das folgende `<Target>`-Element zwischen `</ItemGroup>` und `</Project>` hinzu:
 
 ```
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
@@ -550,25 +556,26 @@ Wenn Ihr Projekt noch nicht im SDK-Stil vorliegt (erforderlich zum Einbetten von
 		<AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)ZeroTouchNodeIconsImages.resources" OutputAssembly="$(OutDir)ZeroTouchNodeIcons.customization.dll" Version="%(AssemblyInfo.Version)" />
 	</Target>
 ```
+
 ![Hinzufügen des After-Build-Codes](images/zerotouchicons-after-build.jpg)
+
 1. Ersetzen Sie alle Instanzen von `ZeroTouchNodeIcons` durch Ihren Projektnamen.
 2. Laden Sie das Projekt neu:
-    * Klicken Sie mit der rechten Maustaste auf das beendete Projekt, und wählen Sie **Reload Project**.
+   * Klicken Sie mit der rechten Maustaste auf das beendete Projekt, und wählen Sie **Reload Project**.
 
 ![Projekt erneut laden](images/zerotouchicons-reload-project.jpg)
-
 
 #### Schritt 7: Erstellen und Laden Ihrer .dll in Dynamo
 
 1. Erstellen Sie das Projekt:
-    * Nachdem Sie das After-Build-Skript hinzugefügt haben, erstellen Sie Ihr Projekt in Visual Studio.
+   * Nachdem Sie das After-Build-Skript hinzugefügt haben, erstellen Sie Ihr Projekt in Visual Studio.
 
 ![Lösung erstellen](images/zerotouchicons-build-solution.jpg)
 
 2. Suchen Sie nach Ausgabedateien:
-    * Stellen Sie sicher, dass sich `.dll` und `.customization.dll` im Ordner `bin` befinden.
+   * Stellen Sie sicher, dass sich `.dll` und `.customization.dll` im Ordner `bin` befinden.
 3. Fügen Sie die `.dll` zu Dynamo hinzu:
-    * Verwenden Sie in Dynamo die Schaltfläche Bibliothek importieren, um Ihre .dll in Dynamo zu importieren.
+   * Verwenden Sie in Dynamo die Schaltfläche Bibliothek importieren, um Ihre .dll in Dynamo zu importieren.
 
 ![Schaltfläche Bibliothek importieren](images/zerotouchicons-icon-in-dynamo.jpg)
 

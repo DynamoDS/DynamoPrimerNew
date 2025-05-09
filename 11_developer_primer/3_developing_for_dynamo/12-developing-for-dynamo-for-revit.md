@@ -1,4 +1,4 @@
-# Entwickeln für Dynamo für Revit
+# Entwickeln für Dynamo for Revit
 
 ## Verwenden von Methoden in `GeometryPrimitiveConverter.cs`
 
@@ -11,7 +11,7 @@ Die Methoden in `GeometryPrimitiveConverter.cs` können in vier Hauptkategorien 
 1. **Proto-in-Revit-Typen**: Methoden, mit denen Dynamo-(Proto-)Typen in Revit-Typen konvertiert werden.
 2. **Revit-in-Proto-Typen**: Methoden, mit denen Revit-Typen in Dynamo-Typen (Proto-Typen) konvertiert werden.
 3. **Grad und Bogenmaß**: Methoden, mit denen zwischen Grad und Bogenmaß gewechselt werden kann.
-4. **X und UZ**: Methoden, die sich mit dem Abrufen lotrechter Vektoren befassen. 
+4. **X und UZ**: Methoden, die sich mit dem Abrufen lotrechter Vektoren befassen.
 
 ### Proto-in-Revit-Typen
 
@@ -19,10 +19,7 @@ Die Methoden in `GeometryPrimitiveConverter.cs` können in vier Hauptkategorien 
 
 Erstellt ein Revit-BoundingBoxXYZ-Objekt aus einem Dynamo-Koordinatensystem und zwei definierenden Punkten (Minimum und Maximum).
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -44,7 +41,7 @@ Das Flag convertUnits (Vorgabe ist True) konvertiert die Koordinaten, falls erfo
 
 Konvertiert einen Dynamo-Vektor in einen Revit-XYZ-Wert.
 
-Beachten Sie, dass das Flag convertUnits vorgabemäßig auf False gesetzt ist, da Vektoren Richtung und Größe darstellen, für die normalerweise keine Einheitenkonvertierung erforderlich ist. Die Konvertierung kann sich auf Richtung und Länge des Vektors auswirken. 
+Beachten Sie, dass das Flag convertUnits vorgabemäßig auf False gesetzt ist, da Vektoren Richtung und Größe darstellen, für die normalerweise keine Einheitenkonvertierung erforderlich ist. Die Konvertierung kann sich auf Richtung und Länge des Vektors auswirken.
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@ Konvertiert einen Dynamo-Punkt in einen Revit-XYZ-Wert.
 
 Konvertiert einen Dynamo-Vektor in einen Revit-XYZ-Wert.
 
-Beachten Sie, dass das Flag convertUnits vorgabemäßig auf False gesetzt ist, da Vektoren Richtung und Größe darstellen, für die normalerweise keine Einheitenkonvertierung erforderlich ist. Die Konvertierung kann sich auf Richtung und Länge des Vektors auswirken. 
+Beachten Sie, dass das Flag convertUnits vorgabemäßig auf False gesetzt ist, da Vektoren Richtung und Größe darstellen, für die normalerweise keine Einheitenkonvertierung erforderlich ist. Die Konvertierung kann sich auf Richtung und Länge des Vektors auswirken.
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,9 +105,9 @@ Konvertiert ein zweidimensionales Array (double[][]), in dem jedes innere Array 
 
 #### Beispiel für die Verwendung von Proto-in-Revit-Typen
 
-Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToXyz (Point) zum Konvertieren eines Dynamo-Point.ByCoordinates-Objekts in einen Revit-XYZ-Wert. 
+Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToXyz (Point) zum Konvertieren eines Dynamo-Point.ByCoordinates-Objekts in einen Revit-XYZ-Wert.
 
-![Konvertieren eines Dynamo-Point.ByCoordinates-Objekts in einen Revit-XYZ-Wert](images/dynamo-point-to-revit-xyz.png)
+![Konvertieren eines Dynamo-Point.ByCoordinates-Objekts in einen Revit-XYZ-Wert](Images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### Revit-in-Proto-Typen
 
@@ -191,9 +186,9 @@ Konvertiert eine Liste mit Revit-XYZ-Punkten in eine Liste mit Dynamo-Punkten.
 
 #### Beispiel für die Verwendung von Revit-in-Proto-Typen
 
-Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToPoint (XYZ) zum Konvertieren eines Revit-XYZ-Werts in einen Dynamo-Punkt. 
+Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToPoint (XYZ) zum Konvertieren eines Revit-XYZ-Werts in einen Dynamo-Punkt.
 
-![Konvertieren eines Revit-XYZ-Werts in ein Dynamo-Point.ByCoordinates-Objekt](images/revit-xyz-to-dynamo-point.png)
+![Konvertieren eines Revit-XYZ-Werts in ein Dynamo-Point.ByCoordinates-Objekt](Images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -224,25 +219,19 @@ OUT = revit_point
 
 Wandelt Grad in Bogenmaß um.
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 Wandelt Bogenmaß in Grad um.
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### Beispiel für die Verwendung von Grad und Bogenmaß
 
-Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToRadians zum Umwandeln von Grad in Bogenmaß. 
+Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .ToRadians zum Umwandeln von Grad in Bogenmaß.
 
-![Grad in Bogenmaß](images/degrees-to-radians.png)
+![Grad in Bogenmaß](Images/degrees-to-radians.png)
 
 ```
 import sys
@@ -266,25 +255,26 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X und UZ
 
 #### GetPerpendicular (XYZ)
 
 Diese Methode gibt einen lotrechten `XYZ`-Vektor für den angegebenen `XYZ`-Vektor zurück.
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular (Vector)
 
 Diese Methode gibt einen lotrechten Dynamo-`Vector`-Wert für den angegebenen Dynamo-`Vector`-Wert zurück.
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### Beispiel für die Verwendung von X und UZ
 
-Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .GetPerpendicular zum Abrufen des lotrechten Vektors für einen Eingabevektor. 
+Dieses Beispiel zeigt eine schnelle und einfache Methode zur Verwendung der Methode .GetPerpendicular zum Abrufen des lotrechten Vektors für einen Eingabevektor.
 
-![Lotrechten Vektor abrufen](images/get-perpendicular-vector.png)
+![Lotrechten Vektor abrufen](Images/get-perpendicular-vector.png)
 
 ```
 import clr
