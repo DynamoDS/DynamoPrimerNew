@@ -11,7 +11,7 @@
 1. **Типы Proto в типы Revit**: методы преобразования типов Dynamo (Proto) в типы Revit.
 2. **Типы Revit в типы Proto**: методы преобразования типов Revit в типы Dynamo (Proto).
 3. **Градусы и радианы**: методы преобразования градусов в радианы.
-4. **X и UZ**: методы получения перпендикулярных векторов. 
+4. **X и UZ**: методы получения перпендикулярных векторов.
 
 ### Типы Proto в типы Revit
 
@@ -19,10 +19,7 @@
 
 Создание объекта BoundingBoxXYZ Revit на основе системы координат Dynamo и двух определяющих точек (максимальной и минимальной).
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -44,7 +41,7 @@
 
 Преобразование объекта Vector Dynamo в координаты XYZ Revit.
 
-Обратите внимание, что флаг convertUnits по умолчанию имеет значение false, поскольку векторы представляют направление и величину, которые обычно не требуют преобразования единиц измерения. Преобразование может повлиять на направление и длину вектора. 
+Обратите внимание, что флаг convertUnits по умолчанию имеет значение false, поскольку векторы представляют направление и величину, которые обычно не требуют преобразования единиц измерения. Преобразование может повлиять на направление и длину вектора.
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@
 
 Преобразование объекта Vector Dynamo в координаты XYZ Revit.
 
-Обратите внимание, что флаг convertUnits по умолчанию имеет значение false, поскольку векторы представляют направление и величину, которые обычно не требуют преобразования единиц измерения. Преобразование может повлиять на направление и длину вектора. 
+Обратите внимание, что флаг convertUnits по умолчанию имеет значение false, поскольку векторы представляют направление и величину, которые обычно не требуют преобразования единиц измерения. Преобразование может повлиять на направление и длину вектора.
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,7 +105,7 @@
 
 #### Пример использования преобразования типов Proto в типы Revit
 
-В этом примере показан простой и быстрый способ использования метода .ToXyz (Point) для преобразования объекта Point.ByCoordinates Dynamo в координаты XYZ Revit. 
+В этом примере показан простой и быстрый способ использования метода .ToXyz (Point) для преобразования объекта Point.ByCoordinates Dynamo в координаты XYZ Revit.
 
 ![Преобразование объекта Point.ByCoordinates Dynamo в координаты XYZ Revit](Images/dynamo-point-to-revit-xyz.png)
 
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### Типы Revit в типы Proto
 
@@ -191,7 +186,7 @@ OUT = revit_point
 
 #### Пример использования преобразования типов Revit в типы Proto
 
-В этом примере показан простой и быстрый способ использования метода .ToPoint (XYZ) для преобразования координат XYZ Revit в объект Point Dynamo. 
+В этом примере показан простой и быстрый способ использования метода .ToPoint (XYZ) для преобразования координат XYZ Revit в объект Point Dynamo.
 
 ![Преобразование координат XYZ Revit в объект Point.ByCoordinates Dynamo](Images/revit-xyz-to-dynamo-point.png)
 
@@ -224,23 +219,17 @@ OUT = revit_point
 
 Преобразование градусов в радианы.
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 Преобразование радианов в градусы.
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### Пример использования преобразования градусов и радианов
 
-В этом примере показан простой и быстрый способ использования метода .ToRadians для преобразования градусов в радианы. 
+В этом примере показан простой и быстрый способ использования метода .ToRadians для преобразования градусов в радианы.
 
 ![Преобразование градусов в радианы](Images/degrees-to-radians.png)
 
@@ -266,23 +255,24 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X и UZ
 
 #### GetPerpendicular (XYZ)
 
 Этот метод возвращает вектор `XYZ`, перпендикулярный заданному вектору `XYZ`.
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular (Vector)
 
 Этот метод возвращает объект `Vector` Dynamo, перпендикулярный заданному объекту `Vector` Dynamo.
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### Пример использования преобразования X и UZ
 
-В этом примере показан простой и быстрый способ использования метода .GetPerpendicular для получения вектора, перпендикулярного заданному вектору. 
+В этом примере показан простой и быстрый способ использования метода .GetPerpendicular для получения вектора, перпендикулярного заданному вектору.
 
 ![Получение перпендикулярного вектора](Images/get-perpendicular-vector.png)
 
