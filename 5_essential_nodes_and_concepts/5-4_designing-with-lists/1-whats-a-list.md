@@ -4,9 +4,9 @@
 
 Un elenco è una raccolta di elementi o voci. Si prenda, ad esempio, un casco di banane. Ogni banana è una voce all'interno dell'elenco (o del casco). È più semplice raccogliere un casco di banane piuttosto che ogni singola banana e ciò vale anche per il raggruppamento di elementi secondo relazioni parametriche in una struttura di dati.
 
-![Banane](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Banane](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> Photo by [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Foto di [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
 Quando si fanno acquisti nei negozi di alimentari, si mettono tutti gli oggetti acquistati in una borsa. Questa borsa è anche un elenco. Per fare il pane alla banana, occorrono 3 caschi di banane (servono per fare _molto_ pane alla banana). La borsa rappresenta un elenco di caschi di banane e ogni casco rappresenta un elenco di banane. La borsa è un elenco di elenchi (bidimensionali) e il casco di banane è un elenco (unidimensionale).
 
@@ -86,6 +86,7 @@ I nodi di Dynamo riconoscono automaticamente quando stanno lavorando con gli ele
 Esistono due modi principali:
 
 #### Replica cartesiana
+
 Supponiamo di trovarci in cucina a preparare succhi di frutta. Si ha un elenco di frutti: `{apple, orange, pear}` e una quantità fissa di acqua per ogni succo: `1 cup`. Si vuole fare un succo con ogni frutto, con la stessa quantità d'acqua. In questo caso, entra in gioco la replica cartesiana.
 
 In Dynamo, ciò significa che si inserisce l'elenco di frutti nell'input fruit del nodo Juice.Maker, mentre l'input water rimane costante a 1 tazza. Il nodo elabora quindi ogni frutto singolarmente, combinandolo con la quantità fissa di acqua. Il risultato è:
@@ -95,6 +96,7 @@ In Dynamo, ciò significa che si inserisce l'elenco di frutti nell'input fruit d
 Ogni frutto è abbinato alla stessa quantità di acqua.
 
 #### Replica in formato .zip
+
 La replica in formato .zip funziona in modo leggermente diverso. Se si avessero due elenchi, uno per i frutti: `{apple, orange, pear}` e un altro per le quantità di zucchero: `{2 tbsp, 3 tbsp, 1 tbsp}`, la replica in formato .zip combinerebbe gli elementi corrispondenti di ciascun elenco. Ad esempio:
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`

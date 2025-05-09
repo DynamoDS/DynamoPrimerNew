@@ -42,7 +42,7 @@ Nella libreria di Dynamo, è presente un gruppo _DynamoUnfold_ con più categori
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Ora, si può dare un'occhiata alla struttura dei file del pacchetto. 
+Ora, si può dare un'occhiata alla struttura dei file del pacchetto.
 
 1. Innanzitutto, accedere a Pacchetti > Package Manager > Pacchetti installati.
 2. Accanto a DynamoUnfold, selezionare il menu delle opzioni <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
@@ -67,13 +67,13 @@ Aprire "SphereUnfold".
 
 Dopo aver aperto il file e aver fatto clic su "Esegui" nel risolutore, è presente una sfera spiegata. File di esempio come questi sono utili per imparare ad utilizzare un nuovo pacchetto di Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Consultazione e visualizzazione delle informazioni sui pacchetti
 
 In Package Manager, è possibile cercare i pacchetti utilizzando le opzioni di ordinamento e filtraggio disponibili nella scheda Cerca pacchetti. Sono disponibili diversi filtri per il programma host, lo stato (nuovo, obsoleto o non obsoleto) e la presenza o meno di dipendenze nel pacchetto.
 
-Ordinando i pacchetti, è possibile identificare i pacchetti più votati o più scaricati oppure trovare i pacchetti con aggiornamenti recenti. 
+Ordinando i pacchetti, è possibile identificare i pacchetti più votati o più scaricati oppure trovare i pacchetti con aggiornamenti recenti.
 
 È inoltre possibile accedere a ulteriori dettagli su ciascun pacchetto facendo clic su Visualizza dettagli. Viene aperto un pannello laterale in Package Manager, in cui è possibile trovare informazioni quali il confronto delle versioni e le dipendenze, l'URL del sito Web o del repository, le informazioni sulla licenza e così via.
 
@@ -95,32 +95,30 @@ Per default, i pacchetti vengono installati in una posizione simile a questo per
 
 Per gli utenti che chiedono se sia possibile distribuire Dynamo (in qualsiasi forma) con pacchetti preassociati: l'approccio che risolverà questo problema e consentirà il controllo in una posizione centrale per tutti gli utenti con installazioni di Dynamo è quello di aggiungere un percorso di pacchetti personalizzato a ogni installazione.
 
-**Aggiungere una cartella di rete in una posizione che consenta al responsabile BIM o ad altri utenti di supervisionare l'archiviazione di pacchetti approvati dall'ufficio**  
+**Aggiungere una cartella di rete in una posizione che consenta al responsabile BIM o ad altri utenti di supervisionare l'archiviazione di pacchetti approvati dall'ufficio**
 
-Nell'interfaccia utente di una singola applicazione, accedere a *Dynamo -> Preferenze -> Impostazioni pacchetto -> Posizioni di file di pacchetti e nodi*. Nella finestra di dialogo, premere il pulsante Aggiungi percorso e cercare nel percorso di rete la risorsa condivisa del pacchetto. 
- 
-Come processo automatico, si tratta di aggiungere informazioni al file di configurazione installato con Dynamo:  
+Nell'interfaccia utente di una singola applicazione, accedere a _Dynamo -> Preferenze -> Impostazioni pacchetto -> Posizioni di file di pacchetti e nodi_. Nella finestra di dialogo, premere il pulsante Aggiungi percorso e cercare nel percorso di rete la risorsa condivisa del pacchetto.
+
+Come processo automatico, si tratta di aggiungere informazioni al file di configurazione installato con Dynamo:\
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
 Per default, la configurazione di Dynamo for Revit è:
- 
- 
-`<CustomPackageFolders>`  
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+`<CustomPackageFolders>`
 
-`</CustomPackageFolders>`
-
-L'aggiunta di una posizione personalizzata sarebbe simile alla seguente:  
-
-`<CustomPackageFolders>`  
-
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
-
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
+L'aggiunta di una posizione personalizzata sarebbe simile alla seguente:
+
+`<CustomPackageFolders>`
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+
+`</CustomPackageFolders>`
 
 La gestione centrale di questa cartella può anche essere controllata semplicemente impostando la cartella di sola lettura.
 
@@ -128,7 +126,7 @@ La gestione centrale di questa cartella può anche essere controllata sempliceme
 
 #### Situazione di design
 
-Un'azienda potrebbe voler standardizzare i pacchetti installati da workstation e utenti diversi. Un modo per farlo potrebbe essere quello di installare questi pacchetti da *Dynamo -> Preferenze -> Impostazioni pacchetto -> Posizioni di file di pacchetti e nodi*, selezionando una cartella di rete come posizione di installazione e facendo in modo che le workstation aggiungano tale percorso a `Manage Node and Package Paths`.
+Un'azienda potrebbe voler standardizzare i pacchetti installati da workstation e utenti diversi. Un modo per farlo potrebbe essere quello di installare questi pacchetti da _Dynamo -> Preferenze -> Impostazioni pacchetto -> Posizioni di file di pacchetti e nodi_, selezionando una cartella di rete come posizione di installazione e facendo in modo che le workstation aggiungano tale percorso a `Manage Node and Package Paths`.
 
 #### Problema
 

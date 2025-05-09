@@ -2,7 +2,7 @@
 
 Nelle sezioni precedenti, sono stati analizzati i dettagli su come il pacchetto _MapToSurface_ è configurato con nodi personalizzati e file di esempio. Ma com'è possibile pubblicare un pacchetto che è stato sviluppato localmente? Questo case study mostra come pubblicare un pacchetto da un gruppo di file in una cartella locale.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Esistono diversi modi per pubblicare un pacchetto. Di seguito è riportato il processo consigliato: **pubblicare localmente, sviluppare localmente, quindi pubblicare in linea**. Si inizierà con una cartella contenente tutti i file del pacchetto.
 
@@ -55,7 +55,7 @@ Pubblicare facendo clic su Pubblica localmente (1). Se si sta seguendo questa pr
 
 Dopo la pubblicazione, i nodi personalizzati devono essere disponibili nel gruppo "DynamoPrimer" o nella libreria di Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Ora osservare la directory principale per vedere in che modo Dynamo ha formattato il pacchetto appena creato. A tale scopo, accedere alla scheda Pacchetti installati > accanto a MapToSurface, fare clic sul menu con i puntini verticali > selezionare Mostra directory principale.
 
@@ -79,11 +79,10 @@ Si noti che la directory principale si trova nella posizione locale del pacchett
 1. Quando si è pronti per la pubblicazione, nella finestra Pacchetti > Package Manager > Pacchetti installati, selezionare il pulsante a destra del pacchetto che si desidera pubblicare e scegliere Pubblica.
 2. Se si sta aggiornando un pacchetto già pubblicato, scegliere Pubblica versione. Dynamo aggiornerà il pacchetto in linea in base ai nuovi file nella directory principale del pacchetto. È semplicissimo.
 
-#### Test del server di Package Manager
-Quando si esegue il test di Package Manager, non inviare i pacchetti di test al server di produzione. Utilizzare il server di gestione temporanea. In questo modo si evita che i pacchetti inquinino i pacchetti e le attività reali. È facile configurare Dynamo in modo che utilizzi il server di gestione temporanea. 
-
-Per ulteriori informazioni, fare riferimento alla [pagina Wiki Testing the Package Manager Server](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
-
 ### Pubblica versione...
 
 Quando si aggiornano i file nella cartella principale del pacchetto pubblicato, è anche possibile pubblicare una nuova versione del pacchetto selezionando _Pubblica versione..._ nella finestra _Pacchetti personali_. Questo è un modo semplice per apportare gli aggiornamenti necessari al contenuto e condividerli con la comunità. _Pubblica versione_ funziona solo se si è il gestore del pacchetto.
+
+### Trasferimento della proprietà di un pacchetto
+
+Attualmente non è possibile trasferire la proprietà del pacchetto tramite Package Manager. È possibile chiedere al team di Dynamo di aggiungere un altro proprietario. Non è possibile rimuovere i proprietari esistenti, ma solo aggiungere altri gestori del pacchetto. Per aggiungere un account come proprietario al pacchetto esistente, inviare un'e-mail a [dynamoteam@dynamobim.org](mailto:dynamoteam@dynamobim.org). Assicurarsi di specificare il nome del pacchetto e il nome dell'account che si desidera aggiungere.

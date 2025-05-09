@@ -11,7 +11,7 @@ I metodi in `GeometryPrimitiveConverter.cs` possono essere raggruppati in quattr
 1. **Da prototipi a tipi di Revit**: metodi che convertono i tipi di Dynamo (prototipi) in tipi di Revit.
 2. **Da tipi di Revit a prototipi**: metodi che convertono i tipi di Revit in tipi di Dynamo (prototipi).
 3. **Gradi e radianti**: metodi che eseguono la conversione tra gradi e radianti.
-4. **X e UZ**: metodi che consentono di ottenere vettori perpendicolari. 
+4. **X e UZ**: metodi che consentono di ottenere vettori perpendicolari.
 
 ### Da prototipi a tipi di Revit
 
@@ -19,10 +19,7 @@ I metodi in `GeometryPrimitiveConverter.cs` possono essere raggruppati in quattr
 
 Crea BoundingBoxXYZ di Revit da un sistema di coordinate di Dynamo e due punti di definizione (minimo e massimo).
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -44,7 +41,7 @@ Se necessario, il flag convertUnits (per default, impostato su true) converte le
 
 Converte un vettore di Dynamo in una coordinata XYZ di Revit.
 
-Notare che, per default, il flag convertUnits è impostato su false poiché i vettori rappresentano la direzione e l'intensità, che in genere non richiedono la conversione delle unità. La conversione potrebbe influenzare la direzione e la lunghezza del vettore. 
+Notare che, per default, il flag convertUnits è impostato su false poiché i vettori rappresentano la direzione e l'intensità, che in genere non richiedono la conversione delle unità. La conversione potrebbe influenzare la direzione e la lunghezza del vettore.
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@ Converte un punto di Dynamo in una coordinata XYZ di Revit.
 
 Converte un vettore di Dynamo in una coordinata XYZ di Revit.
 
-Notare che, per default, il flag convertUnits è impostato su false poiché i vettori rappresentano la direzione e l'intensità, che in genere non richiedono la conversione delle unità. La conversione potrebbe influenzare la direzione e la lunghezza del vettore. 
+Notare che, per default, il flag convertUnits è impostato su false poiché i vettori rappresentano la direzione e l'intensità, che in genere non richiedono la conversione delle unità. La conversione potrebbe influenzare la direzione e la lunghezza del vettore.
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,7 +105,7 @@ Converte una matrice bidimensionale (double[][]) in cui ogni matrice interna rap
 
 #### Esempio di utilizzo di prototipi convertiti in tipi di Revit
 
-In questo esempio viene illustrato un modo semplice e rapido per utilizzare il metodo ToXyz (Point) per convertire Point.ByCoordinates di Dynamo in una coordinata XYZ di Revit. 
+In questo esempio viene illustrato un modo semplice e rapido per utilizzare il metodo ToXyz (Point) per convertire Point.ByCoordinates di Dynamo in una coordinata XYZ di Revit.
 
 ![Conversione di Point.ByCoordinates di Dynamo in una coordinata XYZ di Revit](Images/dynamo-point-to-revit-xyz.png)
 
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### Da tipi di Revit a prototipi
 
@@ -191,7 +186,7 @@ Converte un elenco di punti XYZ di Revit in un elenco di punti di Dynamo.
 
 #### Esempio di utilizzo di tipi di Revit convertiti in prototipi
 
-In questo esempio viene illustrato un modo semplice e rapido per utilizzare il metodo ToPoint (XYZ) per convertire una coordinata XYZ di Revit in un punto di Dynamo. 
+In questo esempio viene illustrato un modo semplice e rapido per utilizzare il metodo ToPoint (XYZ) per convertire una coordinata XYZ di Revit in un punto di Dynamo.
 
 ![Conversione di una coordinata XYZ di Revit in Point.ByCoordinates di Dynamo](Images/revit-xyz-to-dynamo-point.png)
 
@@ -224,23 +219,17 @@ OUT = revit_point
 
 Converte i gradi in radianti.
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 Converte i radianti in gradi.
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### Esempio di utilizzo di gradi e radianti
 
-In questo esempio viene illustrato un modo semplice e rapido per utilizzare il metodo ToRadians per convertire i gradi in radianti. 
+In questo esempio viene illustrato un modo semplice e rapido per utilizzare il metodo ToRadians per convertire i gradi in radianti.
 
 ![Da gradi a radianti](Images/degrees-to-radians.png)
 
@@ -266,23 +255,24 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X e UZ
 
 #### GetPerpendicular (XYZ)
 
 Questo metodo restituisce un vettore `XYZ` perpendicolare al vettore `XYZ` specificato.
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular (Vector)
 
 Questo metodo restituisce `Vector` di Dynamo perpendicolare a `Vector` di Dynamo specificato.
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### Esempio di utilizzo di X e UZ
 
-In questo esempio viene illustrato un modo semplice e rapido per utilizzare il metodo GetPerpendicular per ottenere il vettore perpendicolare ad un vettore di input. 
+In questo esempio viene illustrato un modo semplice e rapido per utilizzare il metodo GetPerpendicular per ottenere il vettore perpendicolare ad un vettore di input.
 
 ![Acquisizione del vettore perpendicolare](Images/get-perpendicular-vector.png)
 

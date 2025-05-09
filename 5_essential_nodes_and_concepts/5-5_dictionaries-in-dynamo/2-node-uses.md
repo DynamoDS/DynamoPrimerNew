@@ -18,7 +18,7 @@ Dynamo 2.0 consente di visualizzare un'ampia varietà di nodi Dictionary da util
 
 5. `Dictionary.ValueAtKey` restituirà il valore nella chiave di input.
 
-#### Count
+#### Query
 
 6. `Dictionary.Count` indicherà il numero di coppie chiave-valore presenti nel dizionario.
 

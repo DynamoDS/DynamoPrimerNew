@@ -1,49 +1,41 @@
 # Interfaccia della riga di comando di Dynamo
 
-***
-      -o, -O, --OpenFilePath        Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox
-***
-      -c, -C, --CommandFilePath     Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox                      
-***
-      -v, -V, --Verbose             Instruct Dynamo to output all evaluations it performs to an XML file at this path
-***                                        
-      -g, -G, --Geometry            Instruct Dynamo to output geometry from all evaluations to a JSON file at this path
-***
-      -h, -H, --help                Get some help
-***
-      -i, -I, --Import              Instruct Dynamo to import an assembly as a node library. This argument should be a 
-                                    file path to a single.dll - if you wish to import multiple dlls - list the dlls 
-                                    separated by a space: -i 'assembly1.dll' 'assembly2.dll'
-***
-      --GeometryPath                Relative or absolute path to a directory containing ASM. When supplied, instead of 
-                                    searching the hard disk for ASM, it will be loaded directly from this path
-***
-      -k, -K, --KeepAlive           Keepalive mode, leave the Dynamo process running until a loaded extension shuts it 
-                                    down
-***
-      --HostName                    Identify Dynamo variation associated with the host
-***
-      -s, -S, --SessionId           Identify Dynamo host analytics session id
-***
-      -p, -P, --ParentId            Identify Dynamo host analytics parent id
-***
-      -x, -X, --ConvertFile         When used in combination with the 'O' flag, opens a .dyn file from the specified 
-                                    path and converts it to .json. The file will have the .json extension and be 
-                                    located in the same directory as the original file
-***
-      -n, -N, --NoConsole           Don't rely on the console window to interact with CLI in Keepalive mode
-***
-      -u, -U  --UserData            Specify user data folder to be used by PathResolver with CLI
-***
-      --CommonData                  Specify common data folder to be used by PathResolver with CLI
-***
-      --DisableAnalytics            Disables analytics in Dynamo for the process lifetime
-***
-      --CERLocation                 Specify the crash error report tool located on the disk
-***
-      --ServiceMode                 Specify the service mode startup
+`-o, -O, --OpenFilePath`: indica a Dynamo di aprire un file dei comandi ed eseguire i comandi che contiene in questo percorso. Questa opzione è supportata solo se eseguita da DynamoSandbox.  
+
+`-c, -C, --CommandFilePath`: indica a Dynamo di aprire un file dei comandi ed eseguire i comandi che contiene in questo percorso. Questa opzione è supportata solo se eseguita da DynamoSandbox.  
+
+`-v, -V, --Verbose`: indica a Dynamo di generare tutte le valutazioni eseguite in un file XML nel percorso specificato.  
+
+`-g, -G, --Geometry`: indica a Dynamo di generare la geometria di tutte le valutazioni in un file JSON in questo percorso.  
+
+`-h, -H, --help`: consente di ottenere assistenza.  
+
+`-i, -I, --Import`: indica a Dynamo di importare un assieme come libreria di nodi. Questo argomento dovrebbe essere un percorso di un singolo file `.dll`. Se si desidera importare più file `.dll`, elencarli separati da uno spazio: `-i 'assembly1.dll' 'assembly2.dll'`.  
+
+`--GeometryPath`: è il percorso relativo o assoluto di una directory contenente ASM. Quando fornito, invece di cercare ASM nel disco rigido, tale modulo verrà caricato direttamente da questo percorso.  
+
+`-k, -K, --KeepAlive`: in modalità keep-alive, lascia in esecuzione il processo di Dynamo fino a quando un'estensione caricata non lo arresta.  
+
+`--HostName`: identifica la variazione di Dynamo associata all'host.  
+
+`-s, -S, --SessionId`: identifica l'ID sessione di analisi host di Dynamo.  
+
+`-p, -P, --ParentId`: identifica l'ID principale di analisi host di Dynamo.  
+
+`-x, -X, --ConvertFile`: se utilizzato in combinazione con il flag `-O`, apre un file `.dyn` dal percorso specificato e lo converte in formato `.json`. Il file avrà l'estensione `.json` e si troverà nella stessa directory del file originale.  
+
+`-n, -N, --NoConsole`: evita di utilizzare la finestra della console per interagire con la CLI della riga di comando in modalità keep-alive.  
+
+`-u, -U, --UserData`: specifica la cartella dei dati dell'utente che deve essere utilizzata da PathResolver con la CLI.  
+
+`--CommonData`: specifica la cartella dei dati comuni che deve essere utilizzata da PathResolver con la CLI.  
+
+`--DisableAnalytics`: disattiva l'analisi in Dynamo per la durata del processo.  
+
+`--CERLocation`: specifica lo strumento di segnalazione degli errori di arresto anomalo che si trova sul disco.  
+
+`--ServiceMode`: specifica l'avvio della modalità di servizio.  
+
 
 
 #### Perché 
@@ -66,7 +58,7 @@ Nei test preliminari, l'utilità CLI supporta le versioni localizzate di Windows
 
 È possibile accedere alla CLI tramite l'applicazione DynamoCLI.exe. Tale applicazione consente a un utente o ad un'altra applicazione di interagire con il modello di valutazione di Dynamo richiamando DynamoCLI.exe con una stringa di comando. Questa potrebbe essere simile alla seguente:
  
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
+ `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
  
 Questo comando indica a Dynamo di aprire il file specificato in *"C:\\someReallyCoolDynamoFile.Dyn"*, senza disegnare alcuna interfaccia utente, quindi di eseguirlo. Dynamo verrà quindi chiuso al termine dell'esecuzione del grafico. 
 
@@ -84,13 +76,13 @@ Questo comando indica a Dynamo di aprire il file specificato in *"C:\\someReally
 #### Come
 
 `-o` consente di aprire Dynamo puntando ad un file .dyn, in una modalità headless che eseguirà il grafico.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
+
 `-v` è utilizzabile quando Dynamo è in esecuzione in modalità headless (quando si è utilizzato `-o` per aprire un file). Questo flag itererà tutti i nodi nel grafico ed eseguirà il dump dei relativi valori di output in un semplice file XML. Poiché il flag `--ServiceMode` può forzare Dynamo ad eseguire più valutazioni del grafico, il file di output conterrà i valori per ogni valutazione che si verifica.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"`
+
         
 Il formato del file XML di output è il seguente:
 ``` XML
@@ -120,52 +112,49 @@ Il formato del file XML di output è il seguente:
     </evaluations>
 ```
 `-g` è utilizzabile quando Dynamo è in esecuzione in modalità headless (quando si è utilizzato `-o` per aprire un file). Questo flag genererà il grafico e quindi eseguirà il dump della geometria risultante in un file JSON. 
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"
-```  
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"`
+  
 Il formato del file della geometria JSON è il seguente:
-```
- TBD - Work in progress
-```
+
+ TBD - Lavori in corso
+
 `-h` è utilizzabile per ottenere un elenco delle opzioni possibili:
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h`
+
 Il flag -i può essere utilizzato più volte per importare più assiemi che il grafico che si sta tentando di aprire richiede per essere eseguito.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"`
 
 Il flag -l può essere utilizzato per eseguire Dynamo con impostazioni internazionali diverse. Tuttavia, in genere, le impostazioni internazionali non influiscono sui risultati del grafico.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"`
 
 Il flag --GeometryPath può essere utilizzato per far puntare DynamoSandbox o la CLI ad un gruppo specifico di file binari ASM. Utilizzarlo come riportato di seguito:
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
 
-oppure
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
+
+o
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
+
 Il flag -k può essere utilizzato per lasciare in esecuzione il processo di Dynamo fino a quando un'estensione caricata non lo arresta.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k`
+
 Il flag --HostName può essere utilizzato per identificare la variazione di Dynamo associata all'host.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"
-```
-oppure
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"`
+
+o
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"`
+
 Il flag -s può essere utilizzato per identificare l'ID sessione di analisi host di Dynamo.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]`
+
 Il flag -p può essere utilizzato per identificare l'ID principale di analisi host di Dynamo.
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"`
