@@ -2,7 +2,7 @@
 
 在先前各節中，我們詳細瞭解了如何使用自訂節點與範例檔案設置 _MapToSurface_ 套件。但是，如何發佈已在本端開發的套件呢？此案例研究將示範如何從本端資料夾的一組檔案發佈套件。
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 有許多方式可以發佈套件。以下是建議的程序：**本端發佈、本端開發，然後線上發佈**。我們從包含套件中所有檔案的資料夾開始。
 
@@ -18,10 +18,9 @@
 
 ### 本端發佈套件
 
-{% hint style="warning" %} 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。 
-{% endhint %}
+{% hint style="warning" %} 在 Dynamo Sandbox 2.17 版及更新版本中，只要自訂節點和套件沒有主 API 相依性，即可加以發佈。在較舊版中，只有 Dynamo for Revit 和 Dynamo for Civil 3D 中可發佈自訂節點和套件。{% endhint %}
 
-> 按一下下方的連結下載範例檔案。
+> 在下方的連結按一下，下載範例檔案。
 >
 > 附錄中提供完整的範例檔案清單。
 
@@ -56,7 +55,7 @@
 
 發佈後，在「DynamoPrimer」群組或 Dynamo 資源庫下應該會顯示自訂節點。
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 現在，我們看一下根目錄，以瞭解 Dynamo 如何格式化我們剛剛建立的套件。前往「已安裝的套件」頁籤 > 按一下「MapToSurface」旁的垂直圓點功能表 > 選取「展示根目錄」，即可查看根目錄。
 
@@ -73,19 +72,17 @@
 
 ### 線上發佈套件
 
-{% hint style="warning" %} 注意：除非您要真的發佈自己的套件，否則請勿繼續執行此步驟！ 
-{% endhint %}
+{% hint style="warning" %} 注意：除非您要真的發佈自己的套件，否則請勿繼續執行此步驟！{% endhint %}
 
 <figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
 1. 準備好發佈後，在「套件」>「Package Manager」>「已安裝的套件」視窗中，選取要發佈之套件右側的按鈕，然後選擇「發佈」。
 2. 如果您要更新已發佈的套件，請選擇「發佈版本」，Dynamo 將根據該套件根目錄中的新檔案，線上更新您的套件。非常簡單！
 
-#### 測試 Package Manager 伺服器
-測試 Package Manager 時，不要將測試套件傳送到生產伺服器。請使用暫存伺服器。這可以防止您的套件影響到真實的套件和活動。規劃 Dynamo 使用暫存伺服器很容易。 
-
-如需更多資訊，請參閱[測試 Package Manager 伺服器 Wiki 頁面](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server)。
-
 ### 發佈版本...
 
 若要更新已發佈套件根資料夾中的檔案，您也可以在 _「我的套件」_ 頁籤中選取 _「發佈版本...」_，以發佈新版本的套件。這是一個很順暢的方式，可以對內容進行必要更新以及與社群分享。只有當您是套件的維護者時，才能使用 _「發佈版本」_。
+
+### 轉移套件的所有權
+
+您目前無法透過 Package Manager 轉移套件所有權。您可以要求 Dynamo 團隊增加其他擁有者。請注意，我們無法移除現有的擁有者，只能增加更多套件維護者。如果您想要增加某個帳戶成為現有套件的擁有者，請寄送電子郵件到 [dynamoteam@dynamobim.org](mailto:dynamoteam@dynamobim.org)。請務必提供要增加的套件名稱和帳戶名稱。

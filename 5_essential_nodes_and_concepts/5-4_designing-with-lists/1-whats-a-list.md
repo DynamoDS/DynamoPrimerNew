@@ -4,9 +4,9 @@
 
 清單是元素 (即項目) 的集合。例如一束香蕉。每個香蕉都是清單 (即香蕉束) 中的項目。揀選一束香蕉比分別揀選每個香蕉更容易，依據資料結構中的參數式關係對元素進行分組也是如此。
 
-![香蕉](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![香蕉](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> 相片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 拍攝。
+> 相片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 拍攝。
 
 購買雜貨時，我們會將購買的所有商品放入袋中。這個袋子也是清單。如果要製作香蕉麵包，我們需要 3 束香蕉 (我們將製作 _大量_ 香蕉麵包)。袋子表示香蕉束的清單，而每束香蕉表示香蕉的清單。袋子是清單的清單 (二維)，而香蕉束是清單 (一維)。
 
@@ -86,6 +86,7 @@ Dynamo 節點會自動辨識何時使用清單，並將作業套用到多個元�
 主要有兩種方式：
 
 #### 笛卡兒複製
+
 假設您在廚房裡做果汁。您有一個水果清單：`{apple, orange, pear}`，以及每種果汁的固定水量：`1 cup`。您想用每種水果做出相同水量的果汁。在這種情況下，「笛卡兒複製」開始發揮作用。
 
 在 Dynamo 中，這表示您要將水果清單送入 Juice.Maker 節點的水果輸入中，而水量輸入固定為 1 杯。節點就會個別處理每種水果，與固定水量混合。結果為：
@@ -95,6 +96,7 @@ Dynamo 節點會自動辨識何時使用清單，並將作業套用到多個元�
 每種水果都搭配相同水量。
 
 #### Zip 複製
+
 Zip 複製的運作方式稍有不同。如果您有兩個清單，一個是水果：`{apple, orange, pear}`，另一個是糖量：`{2 tbsp, 3 tbsp, 1 tbsp}`，「Zip 複製」會結合每個清單中的對應項目。例如：
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
@@ -105,7 +107,7 @@ Zip 複製的運作方式稍有不同。如果您有兩個清單，一個是水�
 
 ## 練習
 
-> 按一下下方的連結下載範例檔案。
+> 在下方的連結按一下，下載範例檔案。
 >
 > 附錄中提供完整的範例檔案清單。
 

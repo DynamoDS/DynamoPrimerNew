@@ -11,7 +11,7 @@ DynamoRevit 程式碼資源庫中的 [GeometryPrimitiveConverter](https://github
 1. **Proto 轉換為 Revit 類型**：將 Dynamo (Proto) 類型轉換為 Revit 類型的方法。
 2. **Revit 轉換為 Proto 類型**：將 Revit 類型轉換為 Dynamo (Proto) 類型的方法。
 3. **度與弳度**：在度與弳度之間轉換的方法。
-4. **X 與 UZ**：處理取得互垂向量的方法。 
+4. **X 與 UZ**：處理取得互垂向量的方法。
 
 ### Proto 轉換為 Revit 類型
 
@@ -19,10 +19,7 @@ DynamoRevit 程式碼資源庫中的 [GeometryPrimitiveConverter](https://github
 
 從 Dynamo 座標系統和兩個定義點 (最小值和最大值) 建立 Revit BoundingBoxXYZ。
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -44,7 +41,7 @@ convertUnits 旗標 (預設為 True) 會視需要轉換座標。
 
 將 Dynamo Vector 轉換為 Revit XYZ。
 
-請注意，convertUnits 旗標預設為 False，因為向量表示方向和大小，這通常不需要單位轉換。轉換可能會影響向量的方向和長度。 
+請注意，convertUnits 旗標預設為 False，因為向量表示方向和大小，這通常不需要單位轉換。轉換可能會影響向量的方向和長度。
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@ convertUnits 旗標 (預設為 True) 會視需要轉換座標。
 
 將 Dynamo Vector 轉換為 Revit XYZ。
 
-請注意，convertUnits 旗標預設為 False，因為向量表示方向和大小，這通常不需要單位轉換。轉換可能會影響向量的方向和長度。 
+請注意，convertUnits 旗標預設為 False，因為向量表示方向和大小，這通常不需要單位轉換。轉換可能會影響向量的方向和長度。
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,7 +105,7 @@ convertUnits 旗標 (預設為 True) 會視需要轉換座標。
 
 #### 使用 Proto 轉換為 Revit 類型的範例
 
-此範例示範使用 .ToXyz (Point) 方法將 Dynamo Point.ByCoordinates 快速簡單轉換為 Revit XYZ 的方法。 
+此範例示範使用 .ToXyz (Point) 方法將 Dynamo Point.ByCoordinates 快速簡單轉換為 Revit XYZ 的方法。
 
 ![將 Dynamo Point.ByCoordinates 轉換為 Revit XYZ](Images/dynamo-point-to-revit-xyz.png)
 
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### Revit 轉換為 Proto 類型
 
@@ -191,7 +186,7 @@ OUT = revit_point
 
 #### 使用 Revit 轉換為 Proto 類型範例
 
-此範例示範使用 .ToPoint (XYZ) 方法將 Revit XYZ 快速簡單轉換為 Dynamo Point 的方法。 
+此範例示範使用 .ToPoint (XYZ) 方法將 Revit XYZ 快速簡單轉換為 Dynamo Point 的方法。
 
 ![將 Revit XYZ 轉換為 Dynamo Point.ByCoordinates](Images/revit-xyz-to-dynamo-point.png)
 
@@ -224,23 +219,17 @@ OUT = revit_point
 
 將度轉換為弳度。
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 將弳度轉換為度。
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### 度與弳度的範例用法
 
-此範例示範使用 .ToRadians 方法將度快速簡單轉換為弳度的方法。 
+此範例示範使用 .ToRadians 方法將度快速簡單轉換為弳度的方法。
 
 ![度轉換為弳度](Images/degrees-to-radians.png)
 
@@ -266,23 +255,24 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X 與 UZ
 
 #### GetPerpendicular (XYZ)
 
 此方法會傳回與給定 `XYZ` 向量互垂的 `XYZ` 向量。
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular (Vector)
 
 此方法會傳回與給定 Dynamo `Vector` 互垂的 Dynamo `Vector`。
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### X 與 UZ 的範例用法
 
-此範例示範使用 .GetPerpendicular 方法快速簡單取得與輸入向量互垂之向量的方法。 
+此範例示範使用 .GetPerpendicular 方法快速簡單取得與輸入向量互垂之向量的方法。
 
 ![取得互垂向量](Images/get-perpendicular-vector.png)
 

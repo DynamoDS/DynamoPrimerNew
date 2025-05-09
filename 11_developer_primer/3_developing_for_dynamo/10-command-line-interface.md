@@ -1,49 +1,41 @@
 # Dynamo 指令行介面
 
-***
-      -o, -O, --OpenFilePath        Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox
-***
-      -c, -C, --CommandFilePath     Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox                      
-***
-      -v, -V, --Verbose             Instruct Dynamo to output all evaluations it performs to an XML file at this path
-***                                        
-      -g, -G, --Geometry            Instruct Dynamo to output geometry from all evaluations to a JSON file at this path
-***
-      -h, -H, --help                Get some help
-***
-      -i, -I, --Import              Instruct Dynamo to import an assembly as a node library. This argument should be a 
-                                    file path to a single.dll - if you wish to import multiple dlls - list the dlls 
-                                    separated by a space: -i 'assembly1.dll' 'assembly2.dll'
-***
-      --GeometryPath                Relative or absolute path to a directory containing ASM. When supplied, instead of 
-                                    searching the hard disk for ASM, it will be loaded directly from this path
-***
-      -k, -K, --KeepAlive           Keepalive mode, leave the Dynamo process running until a loaded extension shuts it 
-                                    down
-***
-      --HostName                    Identify Dynamo variation associated with the host
-***
-      -s, -S, --SessionId           Identify Dynamo host analytics session id
-***
-      -p, -P, --ParentId            Identify Dynamo host analytics parent id
-***
-      -x, -X, --ConvertFile         When used in combination with the 'O' flag, opens a .dyn file from the specified 
-                                    path and converts it to .json. The file will have the .json extension and be 
-                                    located in the same directory as the original file
-***
-      -n, -N, --NoConsole           Don't rely on the console window to interact with CLI in Keepalive mode
-***
-      -u, -U  --UserData            Specify user data folder to be used by PathResolver with CLI
-***
-      --CommonData                  Specify common data folder to be used by PathResolver with CLI
-***
-      --DisableAnalytics            Disables analytics in Dynamo for the process lifetime
-***
-      --CERLocation                 Specify the crash error report tool located on the disk
-***
-      --ServiceMode                 Specify the service mode startup
+`-o, -O, --OpenFilePath` 指示 Dynamo 開啟位於此路徑的指令檔案，並執行該檔案包含的指令。只有從 DynamoSandbox 執行時才支援此選項。  
+
+`-c, -C, --CommandFilePath` 指示 Dynamo 開啟位於此路徑的指令檔案，並執行該檔案包含的指令。只有從 DynamoSandbox 執行時才支援此選項。  
+
+`-v, -V, --Verbose` 指示 Dynamo 將其執行的所有演算結果輸出到指定路徑中的 XML 檔案。  
+
+`-g, -G, --Geometry` 指示 Dynamo 將所有演算結果中的幾何圖形輸出到此路徑的 JSON 檔案。  
+
+`-h, -H, --help` 取得一些説明。  
+
+`-i, -I, --Import` 指示 Dynamo 將組合匯入為節點資源庫。此引數必須是一個 `.dll` 的檔案路徑。如果您要匯入多個 `.dlls`，請以空格分隔列出：`-i 'assembly1.dll' 'assembly2.dll'`。  
+
+`--GeometryPath` 包含 ASM 之目錄的相對或絕對路徑。如果提供，將直接從此路徑載入，而不是在硬碟上搜尋 ASM。  
+
+`-k, -K, --KeepAlive` 維持運作模式，讓 Dynamo 程序持續執行，直到載入的延伸將其關閉。  
+
+`--HostName` 識別與主體關聯的 Dynamo 變體。  
+
+`-s, -S, --SessionId` 識別 Dynamo 主體分析階段作業 ID。  
+
+`-p, -P, --ParentId` 識別 Dynamo 主體分析父系 ID。  
+
+`-x, -X, --ConvertFile` 與 `-O` 旗標結合使用時，會開啟指定路徑中的 `.dyn` 檔案並轉換為 `.json`。檔案的副檔名為 `.json`，並且與原始檔案位於相同目錄。  
+
+`-n, -N, --NoConsole` 在維持運作模式下不要依賴主控台視窗與 CLI 互動。  
+
+`-u, -U, --UserData` 指定 PathResolver 要用於 CLI 的使用者資料資料夾。  
+
+`--CommonData` 指定 PathResolver 要用於 CLI 的一般資料資料夾。  
+
+`--DisableAnalytics` 在程序存留期停用 Dynamo 中的分析。  
+
+`--CERLocation` 指定位於磁碟上的當機錯誤報告工具。  
+
+`--ServiceMode` 指定服務模式啟動。  
+
 
 
 #### 原因 
@@ -66,7 +58,7 @@
 
 可透過 DynamoCLI.exe 應用程式存取 CLI。此應用程式允許使用者或其他應用程式使用指令字串叫用 DynamoCLI.exe 與 Dynamo 演算模型互動。看起來可能會像下面這樣：
  
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
+ `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
  
 此指令會告訴 Dynamo 開啟 *C:\\someReallyCoolDynamoFile.Dyn* 的指定檔案，而不繪製任何使用者介面，然後執行它。圖表執行完成後，Dynamo 就結束。 
 
@@ -84,13 +76,13 @@
 #### 方法
 
 `-o`：您可以用無頭模式開啟 Dynamo 指向將執行圖表的 .dyn。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
+
 `-v`：可在 Dynamo 以無頭模式執行 (當我們使用 `-o` 打開檔案) 時使用，此旗標會反覆運算圖表中的所有節點，並將輸出值傾印到簡單的 XML 檔中。由於 `--ServiceMode` 旗標可能會強制 Dynamo 執行多個圖表演算，因此輸出檔案會保留發生的每個演算值。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"`
+
         
 XML 輸出檔的格式如下：
 ``` XML
@@ -120,52 +112,49 @@ XML 輸出檔的格式如下：
     </evaluations>
 ```
 `-g`：可在 Dynamo 以無頭模式執行 (當我們使用 `-o` 開啟檔案) 時使用，此旗標會產生圖表，然後將產生的幾何圖形傾印到 JSON 檔中。 
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"
-```  
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"`
+  
 JSON 幾何圖形檔案的格式如下：
-```
- TBD - Work in progress
-```
+
+ TBD - 工作進行中\`
+
 `-h`：使用此旗標可取得可能選項的清單
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h`
+
 -i 旗標可使用多次來匯入多個您嘗試開啟的圖表需要執行的組合。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"`
 
 -l 旗標可用來在不同地區設定下執行 Dynamo。但通常而言，地區設定不會影響圖表結果
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"`
 
 --GeometryPath 旗標可用來將 DynamoSandbox 或 CLI 指向一組特定的 ASM 二進位檔案 - 使用方式如下
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
 
 或者
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
+
 -k 旗標可用來維持 Dynamo 程序執行，直到載入的延伸將其關閉。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k`
+
 --HostName 旗標可用來識別與主體關聯的 Dynamo 變體。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"`
+
 或者
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"`
+
 -s 旗標可用來識別 Dynamo 主體分析階段作業 ID
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]`
+
 -p 旗標可用來識別 Dynamo 主體分析父系 ID
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"`

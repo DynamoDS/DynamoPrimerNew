@@ -51,7 +51,7 @@ LogWarningMessageEvents.OnLogWarningMessage("Your warning message here.");
 
 ![OnLogWarningMessage 範例 1](images/onlogwarningmessage-example-1.png)
 
-##### 使用 `OnLogWarningMessage` 進行輸入驗證 <a href="#using-onlogwarningmessage-for-input-validation" id="using-onlogwarningmessage-for-input-validation"></a>
+**使用 `OnLogWarningMessage` 進行輸入驗證**
 
 根據 `xCount` 和 `yCount` 產生格線時。在繼續操作之前，您希望確保兩個值都是正整數。
 
@@ -73,7 +73,7 @@ public static List<Rectangle> CreateGrid(int xCount, int yCount)
 * **條件**：如果 `xCount` 或 `yCount` 小於或等於零。
 * **訊息**：`"Grid count values must be positive integers."`
 
-如果使用者輸入零或負值，將在 Dynamo 中顯示警告，以協助他們瞭解預期的輸入。 
+如果使用者輸入零或負值，將在 Dynamo 中顯示警告，以協助他們瞭解預期的輸入。
 
 現在我們知道運作方式，可以將其實施到 Grids 範例節點中：
 
@@ -133,7 +133,7 @@ namespace CustomNodes
 }
 ```
 
-##### 範例 2：檢查空值或空集合 <a href="#example-2-checking-for-null-or-empty-collections" id="example-2-checking-for-null-or-empty-collections"></a>
+**範例 2：檢查空值或空集合**
 
 如果您的方法需要一個點清單，但使用者傳入空白或空值清單，您可以使用 `OnLogWarningMessage` 通知他們有這個問題。
 
@@ -158,9 +158,9 @@ public static Polygon CreatePolygonFromPoints(List<Point> points)
 
 這會警告使用者，他們需要傳入至少包含三個點的有效清單才能形成一個多邊形。
 
----
+***
 
-##### 範例 3：驗證檔案類型相容性 <a href="#example-3-verifying-file-type-compatibility" id="example-3-verifying-file-type-compatibility"></a>
+**範例 3：驗證檔案類型相容性**
 
 如果是處理檔案路徑的節點，您可能希望確保只允許某些檔案類型。如果偵測到不支援的檔案類型，則記錄警告。
 
@@ -190,6 +190,7 @@ public static void ProcessFile(string filePath)
 在 Dynamo 中，`DynamoServices` 名稱空間中的 `OnLogInfoMessage` 可讓開發人員將資訊訊息直接記錄到 Dynamo 的主控台。這有助於確認運算成功、傳達進度或提供有關節點動作的其他見解。本指南將教您如何在任何 Zero Touch 節點中加入 `OnLogInfoMessage`，以增強回饋並改善使用者體驗。
 
 ### `OnLogInfoMessage` 的實施步驟 <a href="#implementation-steps-for-onloginfomessage" id="implementation-steps-for-onloginfomessage"></a>
+
 #### 步驟 1：匯入所需的名稱空間 <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
 
 `OnLogInfoMessage` 屬於 `DynamoServices` 名稱空間，因此請先將其加入專案檔。
@@ -227,7 +228,7 @@ LogWarningMessageEvents.OnLogInfoMessage("Your info message here.");
 
 ![OnLogInfoMessage 範例 1](images/onloginfomessage-example-1.png)
 
-###### 使用 `OnLogInfoMessage` 進行輸入驗證 <a href="#using-onloginfomessage-for-unput-validation" id="using-onloginfomessage-for-unput-validation"></a>
+**使用 `OnLogInfoMessage` 進行輸入驗證**
 
 根據 `xCount` 和 `yCount` 產生格線時。產生網格後，您希望透過記錄網格尺寸的資訊訊息來確認其建立完成。
 
@@ -334,7 +335,6 @@ public static List<Point> ProcessPoints(List<Point> points)
 
 此訊息將協助使用者瞭解處理結果，並確認所有點都已處理。
 
-
 #### 範例 3：彙總使用的參數 <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
 
 在某些情況下，確認節點用於完成動作的輸入參數會很有用。例如，如果您的節點將資料匯出到某個檔案，則記錄檔名和路徑可以讓使用者放心使用了正確的檔案。
@@ -362,24 +362,31 @@ public static void ExportData(string filePath, List<string> data)
 ## 建立自訂文件並新增到節點
 
 ### 自訂節點文件
+
 從歷史上看，套件作者如何在 Dynamo 中為其節點提供文件一直存在限制。自訂節點的作者受到限制，只能在節點的工具提示中顯示簡短描述，或只能遞送加上大量註解的套件。
 
 ![節點工具提示描述](images/customnodedocumentation-overloads.png)
 
 ### 一種新方式
-Dynamo 現在為套件作者提供一套改進的系統，讓您可以為自訂節點提供更好、更清楚的文件。這種新方法利用友善的 Markdown 語言進行文字撰寫，並使用「文件瀏覽器」視圖延伸功能在 Dynamo 中顯示 Markdown。使用 Markdown 為套件作者在記錄自訂節點時提供多種新的可能性。 
+
+Dynamo 現在為套件作者提供一套改進的系統，讓您可以為自訂節點提供更好、更清楚的文件。這種新方法利用友善的 Markdown 語言進行文字撰寫，並使用「文件瀏覽器」視圖延伸功能在 Dynamo 中顯示 Markdown。使用 Markdown 為套件作者在記錄自訂節點時提供多種新的可能性。
 
 #### 什麼是 Markdown？
+
 Markdown 是一種輕量標記語言，可用於格式化純文字文件。Markdown 自 2004 年創造出來後，其受歡迎程度日益增加，現在已經是世界上其中一種最受歡迎的標記語言。
 
 #### 開始使用 Markdown
-開始製作 Markdown 檔案很容易 - 您只需要一個簡單的文字編輯器 (例如記事本)，就可以開始。但是，有比使用記事本更容易撰寫 Markdown 的方法。有幾個線上編輯器，例如 [Dillinger](https://dillinger.io/)，可讓您在撰寫時即時看到變更。另一種編輯 Markdown 檔案的常用方式，是使用程式碼編輯器，例如 [Visual Studio Code](https://code.visualstudio.com/)。
+
+開始製作 Markdown 檔案很容易 - 您只需要一個簡單的文字編輯器 (例如記事本)，就可以開始。但是，有比使用記事本更容易編寫 Markdown 的方法。有幾個線上編輯器，例如 [Dillinger](https://dillinger.io/)，可讓您在編寫時即時看到變更。另一種編輯 Markdown 檔案的常用方式，是使用程式碼編輯器，例如 [Visual Studio Code](https://code.visualstudio.com/)。
 
 #### Markdown 能做什麼？
-Markdown 非常靈活，可提供足夠的功能，讓使用者輕鬆建立良好的文件，包括加入媒體檔 (如影像或影片)，建立具有不同內容形式的表格，當然還有簡單的文字格式化功能，例如讓文字變成**粗體**或*斜體*。在撰寫 Markdown 文件時，可以獲得上述所有功能，甚至是更多功能。如需更多資訊，請查看本指南中的[基本 Markdown 語法](https://www.Markdownguide.org/basic-syntax/)。
+
+Markdown 非常靈活，可提供足夠的功能，讓使用者輕鬆建立良好的文件，包括加入媒體檔 (如影像或影片)，建立具有不同內容形式的表格，當然還有簡單的文字格式化功能，例如讓文字變成**粗體**或_斜體_。在編寫 Markdown 文件時，可以獲得上述所有功能，甚至是更多功能。如需更多資訊，請查看本指南中的[基本 Markdown 語法](https://www.markdownguide.org/basic-syntax/)。
 
 ### 在節點中新增延伸文件
+
 在節點中加入文件非常容易。您可以將文件加到所有類型的自訂節點，包括：
+
 * 現成的 Dynamo 節點
 * 自訂節點 (.dyf) - 現成和/或其他套件節點的集合。
 * 自訂 C# 套件節點 (也稱為 Zerotouch。這些自訂節點看起來像現成節點)
@@ -389,6 +396,7 @@ Markdown 非常靈活，可提供足夠的功能，讓使用者輕鬆建立良�
 請按照以下幾個步驟，讓 Markdown 檔案顯示在 Dynamo 內。
 
 #### 在 Dynamo 中開啟文件檔案
+
 Dynamo 使用「文件瀏覽器」視圖延伸來顯示節點文件。若要開啟節點文件，請在節點上按一下右鍵，然後選取「說明」。這會開啟「文件瀏覽器」，並顯示與該節點關聯的 Markdown (如果有)。
 
 ![文件瀏覽器](images/customnodedocumentation-no-documentation-provided.png)
@@ -398,10 +406,12 @@ Dynamo 使用「文件瀏覽器」視圖延伸來顯示節點文件。若要開�
 ![自訂節點文件](images/customnodedocumentation-custom-node-documentation.png)
 
 #### 套件文件資料夾
+
 若要將文件檔案加到 Dynamo 中的節點，請在套件目錄中建立一個名為 `/doc` 的新資料夾。載入套件後，Dynamo 會掃描此目錄，並取得當中所有的 文件 Markdown 檔案。
 
 #### 命名 Markdown 檔案
-為了確保 Dynamo 知道當要求時要為特定節點開啟哪個檔案，Markdown 檔案的命名必須依照特定格式。您的 Markdown 檔案應該根據其記錄的節點名稱空間來命名。如果您不確定節點的名稱空間為何，請查看「`Node Info`」部分，當您在節點上按「`Help`」時，在節點名稱下會看到所選節點的完整名稱空間。 
+
+為了確保 Dynamo 知道當要求時要為特定節點開啟哪個檔案，Markdown 檔案的命名必須依照特定格式。您的 Markdown 檔案應該根據其記錄的節點名稱空間來命名。如果您不確定節點的名稱空間為何，請查看「`Node Info`」部分，當您在節點上按「`Help`」時，在節點名稱下會看到所選節點的完整名稱空間。
 
 此名稱空間應該是該特定節點的 Markdown 檔案名稱。例如，上圖中 `CustomNodeExample` 的名稱空間是 `TestPackage.TestCategory.CustomNodeExample`，因此此節點的 Markdown 檔案應命名為 `TestPackage.TestCategory.CustomNodeExample.md`
 
@@ -410,7 +420,8 @@ Dynamo 使用「文件瀏覽器」視圖延伸來顯示節點文件。若要開�
 ![多載節點](images/customnodedocumentation-overloads.png)
 
 #### 在 Dynamo 中開啟時修改 Markdown 檔案
-為了方便修改文件檔案，「文件瀏覽器」會在開啟的文件檔案中實作「檔案監看器」。您可以對 Markdown 檔案進行變更，在 Dynamo 中會立即看到修改的內容。 
+
+為了方便修改文件檔案，「文件瀏覽器」會在開啟的文件檔案中實作「檔案監看器」。您可以對 Markdown 檔案進行變更，在 Dynamo 中會立即看到修改的內容。
 
 ![熱重載](images/customnodedocumentation-hot-reload.gif)
 
@@ -424,7 +435,6 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 本指南將向您展示如何將圖示加入 Zero Touch 節點。
 
-
 ### 新增自訂節點圖示的步驟
 
 #### 步驟 1：設定專案
@@ -437,19 +447,18 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 請確保您至少有一個功能性的 Zero Touch 節點，因為只能將圖示加到既有節點中。如需指導意見，請參閱 **Zero Touch 案例研究 - 網格節點**。
 
-
 #### 步驟 2：建立圖示影像
 
 建立自訂圖示：
 
 1. **設計圖示**：使用影像編輯器為節點建立簡單清晰的圖示。
 2. **影像規格**：
-    * **小圖示**：32x32 像素 (用於資源庫的側邊欄和節點本身)。
-    * **大圖示**：128x128 像素 (將游標懸停在資源庫中的節點上時用於節點性質)。
+   * **小圖示**：32x32 像素 (用於資源庫的側邊欄和節點本身)。
+   * **大圖示**：128x128 像素 (將游標懸停在資源庫中的節點上時用於節點性質)。
 3. **檔案命名慣例**：
-    * 檔名必須符合以下格式，才能將其與正確的節點關聯：
-        * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (用於小圖示)。
-        * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (用於大圖示)。
+   * 檔名必須符合以下格式，才能將其與正確的節點關聯：
+     * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (用於小圖示)。
+     * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (用於大圖示)。
 
 **範例**：如果您的專案是 `ZeroTouchNodeIcons`，您的類別是 `Grids`，且您的方法是 `RectangularGrid`，則檔案將命名為：
 
@@ -458,49 +467,47 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 > 秘訣：對所有圖示使用一致的設計主題，可賦予專業的觀感。
 
-
 #### 步驟 3：將資源檔加到專案中
 
 若要將圖示嵌入 `.dll` 中，請建立一個資源檔：
 
 1. **新增資源檔**：
 
-  * 在 **「方案總管」** 中以右鍵按一下您的專案。
+* 在**「方案總管」**中以右鍵按一下您的專案。
 
 ![新增項目](images/zerotouchicons-add-resources-file-1.jpg)
 
-  * 移至 **「新增」>「新項目」** ，然後選取 **「資源檔」** 。
+* 移至**「新增」>「新項目」**，然後選取**「資源檔」**。
 
 ![新增資源檔](images/zerotouchicons-add-resources-file-2.jpg)
 
-  * 將檔案命名為 `<ProjectName>Images.resx`。例如 `ZeroTouchNodeIconsImages.resx`。
+* 將檔案命名為 `<ProjectName>Images.resx`。例如 `ZeroTouchNodeIconsImages.resx`。
 
 2. **清除自訂工具屬性**：
-    * 在 **「方案總管」** 中選取資源檔。
-    * 在 **「屬性」** 面板中，透過移除 `ResXFileCodeGenerator` 值來清除「`Custom Tool`」欄位。
+   * 在**「方案總管」**中選取資源檔。
+   * 在**「屬性」**面板中，透過移除 `ResXFileCodeGenerator` 值來清除「`Custom Tool`」欄位。
 
 ![清除自訂工具屬性](images/zerotouchicons-custom-tool-property.jpg)
 
-> *注意：如果沒有清除「自訂工具」欄位，會導致 Visual Studio 將資源名稱中的句點轉換為底線。請在建置之前，確認您的資源名稱是以句點 (而不是底線) 分隔類別名稱。*
-
+> _注意：如果沒有清除「自訂工具」欄位，會導致 Visual Studio 將資源名稱中的句點轉換為底線。請在建置之前，確認您的資源名稱是以句點 (而不是底線) 分隔類別名稱。_
 
 #### 步驟 4：將影像新增為資源
 
-1. 使用 **「受控資源編輯器 (舊版)」** 開啟資源檔：
-    * 如果使用 Visual Studio 17.11 或更高版本，請以右鍵按一下資源檔，選擇 **「開啟方式」** ，然後選取 **「受控資源編輯器 (舊版)」** 。
-    * 如果使用 17.11 之前的 Visual Studio 版本，請按兩下資源檔以使用「資源編輯器」開啟 (在您的 Visual Studio 版本中，此編輯器尚未成為舊版)。
+1. 使用**「受控資源編輯器 (舊版)」**開啟資源檔：
+   * 如果使用 Visual Studio 17.11 或更高版本，請以右鍵按一下資源檔，選擇**「開啟方式」**，然後選取**「受控資源編輯器 (舊版)」**。
+   * 如果使用 17.11 之前的 Visual Studio 版本，請按兩下資源檔以使用「資源編輯器」開啟 (在您的 Visual Studio 版本中，此編輯器尚未成為舊版)。
 
 ![使用「開啟方式」...](images/zerotouchicons-open-resource-editor.jpg)
 
 ![使用受控資源編輯器開啟資源檔 (舊版)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. 新增您的影像：
-    * 將影像檔拖放到編輯器中，或使用 **「新增現有檔案」** 選項。
+   * 將影像檔拖放到編輯器中，或使用**「新增現有檔案」**選項。
 
 ![新增現有檔案](images/zerotouchicons-add-existing-file.jpg)
 
 3. 更新持續性：
-    * 在「資源編輯器」中選取影像 (如果在「方案總管」中選取影像，此動作將沒有作用)，將 **「屬性」** 面板中的 **「持續性」** 屬性變更為「`Embedded in .resx`」。這可確保影像包含在 `.dll` 中。
+   * 在「資源編輯器」中選取影像 (如果在「方案總管」中選取影像，此動作將沒有作用)，將**「屬性」**面板中的**「持續性」**屬性變更為「`Embedded in .resx`」。這可確保影像包含在 `.dll` 中。
 
 ![更新持續性](images/zerotouchicons-edit-persistence-property.jpg)
 
@@ -508,13 +515,13 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 如果您的專案還不是 SDK 型 (嵌入資源需要)，請加以轉換：
 
-1. 從 Visual Studio 的 **「延伸模組」>「管理延伸模組」** 功能表安裝 `.NET Upgrade Assistant` 延伸模組。
+1. 從 Visual Studio 的**「延伸模組」>「管理延伸模組」**功能表安裝 `.NET Upgrade Assistant` 延伸模組。
 
 ![管理延伸模組](images/zerotouchicons-manage-extensions.jpg)
 
 ![安裝 .NET Upgrade Assistant](images/zerotouchicons-net-upgrade-assistant.jpg)
 
-2. 在 **「方案總管」** 中的專案上按一下右鍵，然後選取 **「升級」>「將專案轉換為 SDK 型」** 。
+2. 在**「方案總管」**中的專案上按一下右鍵，然後選取**「升級」>「將專案轉換為 SDK 型」**。
 
 ![升級專案](images/zerotouchicons-upgrade-project.jpg)
 
@@ -524,16 +531,15 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 ![升級完成](images/zerotouchicons-upgrade-complete.jpg)
 
-
 #### 步驟 6：新增要嵌入資源的建置後指令碼
 
 1. 卸載專案：
-    * 在 **「方案總管」** 中的專案上按一下右鍵，然後選取 **「卸載專案」** 。
+   * 在**「方案總管」**中的專案上按一下右鍵，然後選取**「卸載專案」**。
 
 ![卸載專案](images/zerotouchicons-unload-project.jpg)
 
 2. 編輯 `.csproj` 檔案：
-    * 在 `</ItemGroup>` 和 `</Project>` 之間加入以下 `<Target>` 元素：
+   * 在 `</ItemGroup>` 和 `</Project>` 之間加入以下 `<Target>` 元素：
 
 ```
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
@@ -550,25 +556,26 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 		<AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)ZeroTouchNodeIconsImages.resources" OutputAssembly="$(OutDir)ZeroTouchNodeIcons.customization.dll" Version="%(AssemblyInfo.Version)" />
 	</Target>
 ```
+
 ![新增建置後程式碼](images/zerotouchicons-after-build.jpg)
+
 1. 將 `ZeroTouchNodeIcons` 的所有例證取代為您的專案名稱。
 2. 重新載入專案：
-    * 在已卸載的專案上按一下右鍵，然後選取 **「重新載入專案」** 。
+   * 在已卸載的專案上按一下右鍵，然後選取**「重新載入專案」**。
 
 ![重新載入專案](images/zerotouchicons-reload-project.jpg)
-
 
 #### 步驟 7：建置 .dll 並將其載入到 Dynamo
 
 1. 建置專案：
-    * 新增建置後指令碼後，在 Visual Studio 中建置專案。
+   * 新增建置後指令碼後，在 Visual Studio 中建置專案。
 
 ![建置方案](images/zerotouchicons-build-solution.jpg)
 
 2. 檢查輸出檔案：
-    * 確保您的 `.dll` 和 `.customization.dll` 位於 `bin` 資料夾中。
+   * 確保您的 `.dll` 和 `.customization.dll` 位於 `bin` 資料夾中。
 3. 將 `.dll` 加入 Dynamo：
-    * 在 Dynamo 中，使用「匯入資源庫」按鈕將 .dll 匯入到 Dynamo。
+   * 在 Dynamo 中，使用「匯入資源庫」按鈕將 .dll 匯入到 Dynamo。
 
 ![「匯入資源庫」按鈕](images/zerotouchicons-icon-in-dynamo.jpg)
 

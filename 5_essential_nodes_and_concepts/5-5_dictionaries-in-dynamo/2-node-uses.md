@@ -18,7 +18,7 @@ Dynamo 2.0 公開各種字典節點供我們使用。這包括 _建立、動作�
 
 5. `Dictionary.ValueAtKey` 會傳回輸入鍵處的值。
 
-#### 計數
+#### 查詢
 
 6. `Dictionary.Count` 會告訴您字典中有多少個鍵值對。
 
