@@ -18,7 +18,7 @@ Dodatek Dynamo 2.0 udostępnia różne węzły słownika do wykorzystania. Obejm
 
 5\. Węzeł `Dictionary.ValueAtKey` zwraca wartość dla klucza wejściowego.
 
-#### Count
+#### Zapytanie
 
 6\. Węzeł `Dictionary.Count` zwraca liczbę par wartości i kluczy w słowniku.
 

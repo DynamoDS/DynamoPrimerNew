@@ -1,4 +1,4 @@
-# Zaawansowane dostosowywanie węzłów dodatku Dynamo 
+# Zaawansowane dostosowywanie węzłów dodatku Dynamo
 
 Masz już ugruntowaną wiedzę na temat węzłów ZeroTouch. W tej sekcji omówiono zalety dostosowywania węzłów dodatku Dynamo w celu usprawniania funkcjonalności i środowiska użytkownika. Dodając funkcje, takie jak komunikaty ostrzegawcze, komunikaty informacyjne i ikony niestandardowe, można tworzyć węzły, które są bardziej intuicyjne i atrakcyjne wizualnie oraz dostarczają więcej informacji. Te dostosowania nie tylko pomagają użytkownikom zrozumieć potencjalne problemy lub zoptymalizować proces, ale sprawiają też, że węzły te wyróżniają się jako profesjonalne i przyjazne dla użytkownika narzędzia.
 
@@ -51,7 +51,7 @@ W tym przykładzie wykorzystaliśmy węzeł niestandardowy utworzony w poprzedni
 
 ![OnLogWarningMessage — przykład 1](images/onlogwarningmessage-example-1.png)
 
-##### Używanie metody `OnLogWarningMessage` do weryfikowania danych wejściowych <a href="#using-onlogwarningmessage-for-input-validation" id="using-onlogwarningmessage-for-input-validation"></a>
+**Używanie metody `OnLogWarningMessage` do weryfikowania danych wejściowych**
 
 Podczas generowania siatki na podstawie danych `xCount` i `yCount` przed kontynuowaniem należy się upewnić, że obie wartości są dodatnimi liczbami całkowitymi.
 
@@ -73,7 +73,7 @@ W tym przykładzie:
 * **Warunek**: jeśli wartość `xCount` lub `yCount` jest mniejsza niż lub równa zero.
 * **Komunikat**: `"Grid count values must be positive integers."`
 
-Spowoduje to wyświetlenie ostrzeżenia w dodatku Dynamo, jeśli użytkownik wprowadzi wartości zerowe lub ujemne, co ułatwi zrozumienie oczekiwanych danych wejściowych. 
+Spowoduje to wyświetlenie ostrzeżenia w dodatku Dynamo, jeśli użytkownik wprowadzi wartości zerowe lub ujemne, co ułatwi zrozumienie oczekiwanych danych wejściowych.
 
 Wiemy już, jak to wygląda, więc możemy zaimplementować to w przykładowym węźle Grids:
 
@@ -133,7 +133,7 @@ namespace CustomNodes
 }
 ```
 
-##### Przykład 2\. Sprawdzanie pod kątem kolekcji o wartości null lub pustych <a href="#example-2-checking-for-null-or-empty-collections" id="example-2-checking-for-null-or-empty-collections"></a>
+**Przykład 2\. Sprawdzanie pod kątem kolekcji o wartości null lub pustych**
 
 Jeśli metoda wymaga listy punktów, ale użytkownik przekaże listę pustą lub listę o wartości null, możesz poinformować go o problemie za pomocą metody `OnLogWarningMessage`.
 
@@ -158,9 +158,9 @@ W tym przykładzie:
 
 Ostrzega to użytkowników, że muszą przekazać prawidłową listę z co najmniej trzema punktami, aby utworzyć wielokąt.
 
----
+***
 
-##### Przykład 3\. Sprawdzanie zgodności typu pliku <a href="#example-3-verifying-file-type-compatibility" id="example-3-verifying-file-type-compatibility"></a>
+**Przykład 3\. Sprawdzanie zgodności typu pliku**
 
 W przypadku węzła, który przetwarza ścieżki plików, warto zadbać o to, aby dozwolone były tylko niektóre typy plików. Jeśli zostanie wykryty nieobsługiwany typ pliku, powinno zostać zarejestrowane ostrzeżenie.
 
@@ -190,6 +190,7 @@ Powoduje to zwrócenie użytkownikom ostrzeżenia, że powinni upewnić się, i�
 W dodatku Dynamo metoda `OnLogInfoMessage` z przestrzeni nazw `DynamoServices` umożliwia programistom rejestrowanie komunikatów informacyjnych bezpośrednio w konsoli dodatku Dynamo. Jest to przydatne do potwierdzania pomyślnych operacji, komunikowania postępu lub dostarczania dodatkowych szczegółowych informacji na temat działań węzłów. Z tego podręcznika dowiesz się, jak dodać metodę `OnLogInfoMessage` w dowolnym węźle Zero Touch w celu udoskonalenia informacji zwrotnych i poprawy środowiska użytkownika.
 
 ### Kroki implementacji metody `OnLogInfoMessage` <a href="#implementation-steps-for-onloginfomessage" id="implementation-steps-for-onloginfomessage"></a>
+
 #### Krok 1\. Zaimportuj wymaganą przestrzeń nazw <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
 
 Metoda `OnLogInfoMessage` jest częścią przestrzeni nazw `DynamoServices`, więc zacznij od dodania jej do pliku projektu.
@@ -227,7 +228,7 @@ W tym przykładzie wykorzystaliśmy węzeł niestandardowy utworzony w poprzedni
 
 ![OnLogInfoMessage — przykład 1](images/onloginfomessage-example-1.png)
 
-###### Używanie metody `OnLogInfoMessage` do weryfikowania danych wejściowych <a href="#using-onloginfomessage-for-unput-validation" id="using-onloginfomessage-for-unput-validation"></a>
+**Używanie metody `OnLogInfoMessage` do weryfikowania danych wejściowych**
 
 Podczas generowania siatki na podstawie danych `xCount` i `yCount` Po wygenerowaniu siatki chcesz potwierdzić jej utworzenie, rejestrując komunikat informacyjny z wymiarami siatki.
 
@@ -334,7 +335,6 @@ W tym przykładzie:
 
 Ten komunikat pomoże użytkownikom zrozumieć wynik przetwarzania i potwierdzić, że wszystkie punkty zostały przetworzone.
 
-
 #### Przykład 3\. Podsumowywanie użytych parametrów <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
 
 W niektórych przypadkach przydatne jest potwierdzenie parametrów wejściowych używanych przez węzeł do ukończenia działania. Jeśli na przykład węzeł eksportuje dane do pliku, zarejestrowanie nazwy i ścieżki pliku pozwala poinformować użytkowników, że został użyty poprawny plik.
@@ -362,24 +362,31 @@ Ten komunikat potwierdza użytkownikom, że eksport zadziałał, i pokazuje dok�
 ## Tworzenie i dodawanie dokumentacji niestandardowej do węzłów
 
 ### Dokumentacja węzłów niestandardowych
+
 W przeszłości w dodatku Dynamo istniały ograniczenia dotyczące sposobu, w jaki autorzy pakietów mogli dostarczać dokumentację dla tworzonych węzłów. Autorów węzłów niestandardowych obowiązywało ograniczenie, w ramach którego mogli dodawać tylko krótki opis wyświetlany w etykiecie narzędzia węzła lub mogli dostarczać pakiet z intensywnie opisanymi wykresami przykładowymi.
 
 ![Opis etykiety narzędzia węzła](images/customnodedocumentation-overloads.png)
 
 ### Nowy sposób
-Dodatek Dynamo udostępnia teraz autorom pakietów ulepszony system, który pozwala na tworzenie lepszej i zapewniającej szersze informacje dokumentacji węzłów niestandardowych. W tym nowym podejściu wykorzystywany jest przyjazny dla użytkownika język Markdown do tworzenia tekstu i rozszerzenie widoku Przeglądarka dokumentacji do wyświetlania znaczników Markdown w dodatku Dynamo. Używanie języka Markdown zapewnia autorom pakietów szeroki wachlarz nowych możliwości podczas dokumentowania węzłów niestandardowych. 
+
+Dodatek Dynamo udostępnia teraz autorom pakietów ulepszony system, który pozwala na tworzenie lepszej i zapewniającej szersze informacje dokumentacji węzłów niestandardowych. W tym nowym podejściu wykorzystywany jest przyjazny dla użytkownika język Markdown do tworzenia tekstu i rozszerzenie widoku Przeglądarka dokumentacji do wyświetlania znaczników Markdown w dodatku Dynamo. Używanie języka Markdown zapewnia autorom pakietów szeroki wachlarz nowych możliwości podczas dokumentowania węzłów niestandardowych.
 
 #### Co to jest Markdown?
+
 Markdown to lekki język znaczników, którego można używać do formatowania dokumentów w postaci zwykłego tekstu. Od czasu powstania języka Markdown w 2004 roku jego popularność tylko wzrosła i jest obecnie jednym z najpopularniejszych języków znaczników na świecie.
 
 #### Wprowadzenie do języka Markdown
+
 Rozpoczęcie tworzenia plików Markdown jest łatwe — wystarczy prosty edytor tekstu, taki jak Notatnik, i można zaczynać. Istnieją jednak łatwiejsze sposoby pisania treści Markdown niż korzystanie z Notatnika. Dostępnych jest kilka edytorów online, takich jak [Dillinger](https://dillinger.io/), które pozwalają zobaczyć zmiany w czasie rzeczywistym podczas ich wprowadzania. Innym popularnym sposobem edytowania plików Markdown jest używanie edytora kodu, takiego jak [Visual Studio Code](https://code.visualstudio.com/).
 
 #### Co umożliwia język Markdown?
-Język Markdown jest bardzo elastyczny i powinien zapewniać wystarczającą funkcjonalność, aby łatwo tworzyć dobrą dokumentację — w tym dodawanie plików multimedialnych, takich jak obrazy lub filmy, tworzenie tabel z różnymi formami treści i oczywiście stosowanie prostego formatowania tekstu, takiego jak **pogrubienie** lub *kursywa*. Wszystko to i wiele więcej jest możliwe podczas pisania dokumentów Markdown — aby uzyskać więcej informacji, zapoznaj się z tym przewodnikiem, w którym wyjaśniono [podstawową składnię języka Markdown](https://www.Markdownguide.org/basic-syntax/).
+
+Język Markdown jest bardzo elastyczny i powinien zapewniać wystarczającą funkcjonalność, aby łatwo tworzyć dobrą dokumentację — w tym dodawanie plików multimedialnych, takich jak obrazy lub filmy, tworzenie tabel z różnymi formami treści i oczywiście stosowanie prostego formatowania tekstu, takiego jak **pogrubienie** lub _kursywa_. Wszystko to i wiele więcej jest możliwe podczas pisania dokumentów Markdown — aby uzyskać więcej informacji, zapoznaj się z tym przewodnikiem, w którym wyjaśniono [podstawową składnię języka Markdown](https://www.markdownguide.org/basic-syntax/).
 
 ### Dodawanie rozszerzonej dokumentacji do węzłów
+
 Dodawanie dokumentacji do węzłów jest łatwe. Dokumentację można dodać do wszystkich odmian węzłów niestandardowych. Obejmuje to:
+
 * Gotowe węzły dodatku Dynamo.
 * Węzły niestandardowe (.dyf) — kolekcje gotowych i/lub innych węzłów z pakietów.
 * Węzły niestandardowe z pakietów języka C# (znane również jako Zerotouch; te węzły niestandardowe wyglądają jak gotowe węzły).
@@ -389,6 +396,7 @@ Dodawanie dokumentacji do węzłów jest łatwe. Dokumentację można dodać do 
 Wykonaj te kilka czynności, aby wyświetlić pliki Markdown w dodatku Dynamo.
 
 #### Otwieranie plików dokumentacji w dodatku Dynamo
+
 Dodatek Dynamo wyświetla dokumentację węzłów za pomocą rozszerzenia widoku Przeglądarka dokumentacji. Aby otworzyć dokumentację węzła, kliknij węzeł prawym przyciskiem myszy i wybierz polecenie Pomoc. Spowoduje to otwarcie Przeglądarki dokumentacji i wyświetlenie treści Markdown skojarzonej z tym węzłem, jeśli jest dostępna.
 
 ![Przeglądarka dokumentacji](images/customnodedocumentation-no-documentation-provided.png)
@@ -398,10 +406,12 @@ Dokumentacja wyświetlana w Przeglądarce dokumentacji składa się z dwóch cz�
 ![Dokumentacja węzłów niestandardowych](images/customnodedocumentation-custom-node-documentation.png)
 
 #### Folder doc pakietu
+
 Aby dodać pliki dokumentacji do węzłów w dodatku Dynamo, utwórz nowy folder w katalogu pakietu o nazwie `/doc`. Po wczytaniu pakietu dodatek Dynamo przeskanuje ten katalog i pobierze wszystkie znajdujące się w nim pliki Markdown dokumentacji.
 
 #### Nazewnictwo plików Markdown
-Aby dodatek Dynamo wiedział, który plik należy otworzyć na żądanie dla określonego węzła, nazwa pliku Markdown musi mieć określony format. Plik Markdown powinien być nazwany zgodnie z dokumentowaną przestrzenią nazw węzła. Jeśli nie masz pewności co do przestrzeni nazw węzła, zajrzyj do sekcji `Node Info` po naciśnięciu pozycji `Help` na węźle, a pod nazwą węzła zobaczysz pełną przestrzeń nazw wybranego węzła. 
+
+Aby dodatek Dynamo wiedział, który plik należy otworzyć na żądanie dla określonego węzła, nazwa pliku Markdown musi mieć określony format. Plik Markdown powinien być nazwany zgodnie z dokumentowaną przestrzenią nazw węzła. Jeśli nie masz pewności co do przestrzeni nazw węzła, zajrzyj do sekcji `Node Info` po naciśnięciu pozycji `Help` na węźle, a pod nazwą węzła zobaczysz pełną przestrzeń nazw wybranego węzła.
 
 Ta przestrzeń nazw powinna być nazwą pliku Markdown dla tego konkretnego węzła. Na przykład przestrzeń nazw `CustomNodeExample` z powyższych obrazów to `TestPackage.TestCategory.CustomNodeExample`, dlatego plik Markdown dla tego węzła powinien mieć nazwę `TestPackage.TestCategory.CustomNodeExample.md`
 
@@ -410,7 +420,8 @@ W szczególnych przypadkach, gdy występują przeciążenia węzłów (występuj
 ![Przeciążanie węzłów](images/customnodedocumentation-overloads.png)
 
 #### Modyfikowanie plików Markdown, gdy są otwarte w dodatku Dynamo
-Aby ułatwić modyfikowanie plików dokumentacji, Przeglądarka dokumentacji implementuje funkcję obserwatora plików w otwartym pliku dokumentacji. Umożliwia to wprowadzanie zmian w pliku Markdown i natychmiastowe oglądanie zmian w dodatku Dynamo. 
+
+Aby ułatwić modyfikowanie plików dokumentacji, Przeglądarka dokumentacji implementuje funkcję obserwatora plików w otwartym pliku dokumentacji. Umożliwia to wprowadzanie zmian w pliku Markdown i natychmiastowe oglądanie zmian w dodatku Dynamo.
 
 ![Ponowne wczytywanie „na gorąco”](images/customnodedocumentation-hot-reload.gif)
 
@@ -424,7 +435,6 @@ Ikony niestandardowe dla węzłów Zero Touch w dodatku Dynamo umożliwiają wiz
 
 Z tego podręcznika dowiesz się, jak dodawać ikony do węzłów Zero Touch.
 
-
 ### Kroki dodawania niestandardowych ikon węzłów
 
 #### Krok 1\. Skonfiguruj projekt
@@ -437,19 +447,18 @@ Aby rozpocząć, utwórz projekt biblioteki klas programu Visual Studio (.NET Fr
 
 Upewnij się, że masz co najmniej jeden działający węzeł Zero Touch, ponieważ ikony można dodawać tylko do istniejących węzłów. Aby uzyskać wskazówki, zobacz **Analiza przypadku Zero-Touch — węzeł siatki**.
 
-
 #### Krok 2\. Utwórz obrazy ikon
 
 Tworzenie ikon niestandardowych:
 
 1. **Zaprojektuj ikony**: użyj edytora obrazów, aby utworzyć proste i przejrzyste wizualnie ikony dla węzłów.
 2. **Specyfikacje obrazów**:
-    * **Mała ikona**: 32x32 piksele (używana na pasku bocznym Biblioteki i w samym węźle).
-    * **Duża ikona**: 128x128 pikseli (używana we właściwościach węzła po umieszczeniu wskaźnika myszy na węźle w bibliotece).
+   * **Mała ikona**: 32x32 piksele (używana na pasku bocznym Biblioteki i w samym węźle).
+   * **Duża ikona**: 128x128 pikseli (używana we właściwościach węzła po umieszczeniu wskaźnika myszy na węźle w bibliotece).
 3. **Konwencja nazewnictwa plików**:
-    * Nazwy plików muszą być zgodne z poniższym formatem, aby można było skojarzyć je z odpowiednim węzłem:
-        * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (w przypadku małej ikony).
-        * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (w przypadku dużej ikony).
+   * Nazwy plików muszą być zgodne z poniższym formatem, aby można było skojarzyć je z odpowiednim węzłem:
+     * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (w przypadku małej ikony).
+     * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (w przypadku dużej ikony).
 
 **Przykład**: jeśli projekt to `ZeroTouchNodeIcons`, klasa to `Grids`, a metoda to `RectangularGrid`, pliki będą miały nazwy:
 
@@ -458,49 +467,47 @@ Tworzenie ikon niestandardowych:
 
 > Wskazówka: stosuj spójny motyw projektu we wszystkich ikonach, aby uzyskać profesjonalny wygląd.
 
-
 #### Krok 3\. Dodaj plik zasobów do projektu
 
 Aby osadzić ikony w pliku `.dll`, utwórz plik zasobów:
 
 1. **Dodaj nowy plik zasobów**:
 
-  * Kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań**.
+* Kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań**.
 
 ![Dodawanie nowego elementu](images/zerotouchicons-add-resources-file-1.jpg)
 
-  * Przejdź do obszaru **Dodaj > Nowy element** i wybierz opcję **Plik zasobów**.
+* Przejdź do obszaru **Dodaj > Nowy element** i wybierz opcję **Plik zasobów**.
 
 ![Dodawanie pliku zasobów](images/zerotouchicons-add-resources-file-2.jpg)
 
-  * Nadaj plikowi nazwę `<ProjectName>Images.resx`. Przykładowo: `ZeroTouchNodeIconsImages.resx`.
+* Nadaj plikowi nazwę `<ProjectName>Images.resx`. Przykładowo: `ZeroTouchNodeIconsImages.resx`.
 
 2. **Wyczyść właściwość narzędzia niestandardowego**:
-    * Wybierz plik zasobów w **Eksploratorze rozwiązań**.
-    * W panelu **Właściwości** wyczyść pole `Custom Tool`, usuwając wartość `ResXFileCodeGenerator`.
+   * Wybierz plik zasobów w **Eksploratorze rozwiązań**.
+   * W panelu **Właściwości** wyczyść pole `Custom Tool`, usuwając wartość `ResXFileCodeGenerator`.
 
 ![Czyszczenie właściwości narzędzia niestandardowego](images/zerotouchicons-custom-tool-property.jpg)
 
-> *UWAGA: wyczyszczenie pola narzędzia niestandardowego (Custom Tool) spowoduje, że program Visual Studio przekonwertuje kropki na podkreślenia w nazwach zasobów. Przed rozpoczęciem kompilacji sprawdź, czy nazwy zasobów mają kropki oddzielające nazwy klas, a nie podkreślenia.*
-
+> _UWAGA: wyczyszczenie pola narzędzia niestandardowego (Custom Tool) spowoduje, że program Visual Studio przekonwertuje kropki na podkreślenia w nazwach zasobów. Przed rozpoczęciem kompilacji sprawdź, czy nazwy zasobów mają kropki oddzielające nazwy klas, a nie podkreślenia._
 
 #### Krok 4\. Dodaj obrazy jako zasoby
 
 1. Otwórz plik zasobów za pomocą **Edytora zasobów zarządzanych (starsza wersja)**:
-    * Jeśli używasz programu Visual Studio 17.11 lub nowszego, kliknij prawym przyciskiem myszy plik zasobów, wybierz pozycję **Otwórz za pomocą**, a następnie wybierz pozycję **Edytor zasobów zarządzanych (starsza wersja)**.
-    * Jeśli używasz programu Visual Studio w wersji starszej niż 17.11, kliknij dwukrotnie plik zasobów, aby otworzyć go za pomocą Edytora zasobów (który w Twojej wersji programu Visual Studio nie został jeszcze oznaczony jako starsza wersja).
+   * Jeśli używasz programu Visual Studio 17.11 lub nowszego, kliknij prawym przyciskiem myszy plik zasobów, wybierz pozycję **Otwórz za pomocą**, a następnie wybierz pozycję **Edytor zasobów zarządzanych (starsza wersja)**.
+   * Jeśli używasz programu Visual Studio w wersji starszej niż 17.11, kliknij dwukrotnie plik zasobów, aby otworzyć go za pomocą Edytora zasobów (który w Twojej wersji programu Visual Studio nie został jeszcze oznaczony jako starsza wersja).
 
 ![Korzystanie z polecenia Otwórz za pomocą...](images/zerotouchicons-open-resource-editor.jpg)
 
 ![Otwieranie pliku zasobów za pomocą Edytora zasobów zarządzanych (starsza wersja)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. Dodaj obrazy:
-    * Przeciągnij pliki obrazów do edytora i upuść je lub użyj opcji **Dodaj istniejący plik**.
+   * Przeciągnij pliki obrazów do edytora i upuść je lub użyj opcji **Dodaj istniejący plik**.
 
 ![Dodawanie istniejących plików](images/zerotouchicons-add-existing-file.jpg)
 
 3. Trwałość aktualizacji:
-    * Wybierz obrazy z poziomu Edytora zasobów (to rozwiązanie nie zadziała, jeśli wybierzesz je w Eksploratorze rozwiązań), zmień właściwość **Persistence** (Trwałość) w panelu **Właściwości** na `Embedded in .resx`. Dzięki temu obrazy zostaną uwzględnione w pliku `.dll`.
+   * Wybierz obrazy z poziomu Edytora zasobów (to rozwiązanie nie zadziała, jeśli wybierzesz je w Eksploratorze rozwiązań), zmień właściwość **Persistence** (Trwałość) w panelu **Właściwości** na `Embedded in .resx`. Dzięki temu obrazy zostaną uwzględnione w pliku `.dll`.
 
 ![Aktualizowanie trwałości](images/zerotouchicons-edit-persistence-property.jpg)
 
@@ -524,16 +531,15 @@ Jeśli projekt nie jest jeszcze w stylu zestawu SDK (co jest wymagane do osadzen
 
 ![Uaktualnianie ukończone](images/zerotouchicons-upgrade-complete.jpg)
 
-
 #### Krok 6\. Dodaj skrypt po kompilacji w celu osadzenia zasobów
 
 1. Usuń projekt z pamięci:
-    * Kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** i wybierz opcję **Usuń projekt**.
+   * Kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** i wybierz opcję **Usuń projekt**.
 
 ![Usuwanie projektu z pamięci](images/zerotouchicons-unload-project.jpg)
 
 2. Edytuj plik `.csproj`:
-    * Dodaj następujący element `<Target>` między elementami `</ItemGroup>` i `</Project>`:
+   * Dodaj następujący element `<Target>` między elementami `</ItemGroup>` i `</Project>`:
 
 ```
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
@@ -550,25 +556,26 @@ Jeśli projekt nie jest jeszcze w stylu zestawu SDK (co jest wymagane do osadzen
 		<AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)ZeroTouchNodeIconsImages.resources" OutputAssembly="$(OutDir)ZeroTouchNodeIcons.customization.dll" Version="%(AssemblyInfo.Version)" />
 	</Target>
 ```
+
 ![Dodawanie kodu po kompilacji](images/zerotouchicons-after-build.jpg)
+
 1. Zastąp wszystkie wystąpienia `ZeroTouchNodeIcons` nazwą projektu.
 2. Wczytaj ponownie projekt:
-    * Kliknij prawym przyciskiem myszy projekt usunięty z pamięci i wybierz opcję **Załaduj ponownie projekt**.
+   * Kliknij prawym przyciskiem myszy projekt usunięty z pamięci i wybierz opcję **Załaduj ponownie projekt**.
 
 ![Ponowne wczytywanie projektu](images/zerotouchicons-reload-project.jpg)
-
 
 #### Krok 7\. Skompiluj i wczytaj plik .dll do dodatku Dynamo
 
 1. Skompiluj projekt:
-    * Po dodaniu skryptu po kompilacji skompiluj projekt w programie Visual Studio.
+   * Po dodaniu skryptu po kompilacji skompiluj projekt w programie Visual Studio.
 
 ![Kompilowanie rozwiązania](images/zerotouchicons-build-solution.jpg)
 
 2. Sprawdź pliki wyjściowe:
-    * Upewnij się, że pliki `.dll` i `.customization.dll` znajdują się w folderze `bin`.
+   * Upewnij się, że pliki `.dll` i `.customization.dll` znajdują się w folderze `bin`.
 3. Dodaj plik `.dll` do dodatku Dynamo:
-    * W dodatku Dynamo użyj przycisku Importuj bibliotekę, aby zaimportować plik .dll do dodatku Dynamo.
+   * W dodatku Dynamo użyj przycisku Importuj bibliotekę, aby zaimportować plik .dll do dodatku Dynamo.
 
 ![Przycisk Importuj bibliotekę](images/zerotouchicons-icon-in-dynamo.jpg)
 

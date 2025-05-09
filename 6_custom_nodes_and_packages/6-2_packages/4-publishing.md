@@ -2,7 +2,7 @@
 
 W poprzednich sekcjach omówiono szczegółowo skonfigurowanie pakietu _MapToSurface_ za pomocą węzłów niestandardowych i plików przykładowych. Jak jednak opublikować pakiet, który został utworzony lokalnie? W tej analizie przypadku pokazano sposób publikowania pakietu z zestawu plików w folderze lokalnym.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Istnieje wiele sposobów na opublikowanie pakietu. Poniżej przedstawiono zalecany przez nas proces: **publikowanie lokalne, opracowywanie lokalne, a następnie publikowanie online**. Rozpoczniemy od folderu zawierającego wszystkie pliki w pakiecie.
 
@@ -55,7 +55,7 @@ Opublikuj, klikając przycisk „Opublikuj lokalnie” (1). Postępując zgodnie
 
 Po opublikowaniu węzły niestandardowe powinny być dostępne w grupie „DynamoPrimer” lub w bibliotece Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Teraz spójrzmy na katalog główny, aby sprawdzić, w jaki sposób dodatek Dynamo sformatował utworzony właśnie pakiet. W tym celu przejdź do karty Zainstalowane pakiety > obok pozycji MapToSurface kliknij menu w postaci pionowych kropek > wybierz opcję Pokaż katalog główny.
 
@@ -79,11 +79,10 @@ Zwróć uwagę, że katalog główny znajduje się w lokalnym położeniu pakiet
 1. Gdy wszystko jest gotowe do opublikowania, w oknie Pakiety > Menedżer pakietów > Zainstalowane pakiety wybierz przycisk znajdujący się po prawej stronie pakietu, który chcesz opublikować, i wybierz opcję Opublikuj.
 2. Jeśli aktualizujesz pakiet, który już został opublikowany, wybierz opcję „Opublikuj wersję”, a dodatek Dynamo zaktualizuje pakiet online na podstawie nowych plików w katalogu głównym tego pakietu. To wystarczy.
 
-#### Testowanie serwera Menedżera pakietów
-Podczas testowania Menedżera pakietów nie wysyłaj pakietów testowych na serwer produkcyjny. Użyj serwera pomostowego. Zapobiega to zanieczyszczaniu rzeczywistych pakietów i działań za pomocą tych pakietów. Skonfigurowanie dodatku Dynamo do korzystania z serwera pomostowego jest łatwe. 
-
-Aby uzyskać więcej informacji na ten temat, zobacz [stronę wiki dotyczącą testowania serwera Menedżera pakietów](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
-
 ### Opublikuj wersję...
 
 W trakcie aktualizowania plików w folderze głównym opublikowanego pakietu można też opublikować nową wersję pakietu, wybierając opcję _„Opublikuj wersję”_ na karcie _Moje pakiety_. Jest to prosty sposób na wprowadzenie niezbędnych aktualizacji zawartości i udostępnienie ich społeczności. Polecenie _Opublikuj wersję_ działa tylko wtedy, gdy użytkownik jest administratorem pakietu.
+
+### Przenoszenie prawa własności do pakietu
+
+Obecnie nie można przenieść prawa własności do pakietu za pomocą Menedżera pakietów. Możesz poprosić zespół dodatku Dynamo o dodanie kolejnego właściciela. Uwaga: nie możemy usunąć istniejących właścicieli, a jedynie dodać kolejnych opiekunów pakietu. Jeśli chcesz dodać do istniejącego pakietu konto jako właściciela, wyślij wiadomość e-mail do [dynamoteam@dynamobim.org](mailto:dynamoteam@dynamobim.org). Pamiętaj, aby podać nazwę pakietu i nazwę konta, które chcesz dodać.

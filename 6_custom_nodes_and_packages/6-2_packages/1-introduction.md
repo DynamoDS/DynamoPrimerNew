@@ -42,7 +42,7 @@ W bibliotece Dynamo dostępna jest grupa _DynamoUnfold_ z wieloma kategoriami i 
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Spójrzmy teraz na strukturę plików pakietu. 
+Spójrzmy teraz na strukturę plików pakietu.
 
 1. Najpierw przejdź do obszaru Pakiety > Menedżer pakietów > Zainstalowane pakiety.
 2. Obok węzła DynamoUnfold wybierz menu opcji <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
@@ -67,13 +67,13 @@ Otwórzmy plik „SphereUnfold”.
 
 Po otwarciu pliku i naciśnięciu przycisku „Uruchom” w solwerze dostępna jest rozwinięta sfera. Pliki przykładowe są przydatne do nauki pracy z nowym pakietem Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Przeglądanie i wyświetlanie informacji o pakiecie
 
 W Menedżerze pakietów można odszukiwać pakiety, korzystając z opcji sortowania i filtrowania na karcie Wyszukaj pakiety. Dostępnych jest kilka filtrów dotyczących programu nadrzędnego, statusu (nowy, nieaktualny lub z cofniętą nieaktualnością) oraz tego, czy pakiet ma zależności.
 
-Sortując pakiety, można zidentyfikować pakiety wysoko oceniane lub najczęściej pobierane albo znaleźć pakiety z najnowszymi aktualizacjami. 
+Sortując pakiety, można zidentyfikować pakiety wysoko oceniane lub najczęściej pobierane albo znaleźć pakiety z najnowszymi aktualizacjami.
 
 Aby uzyskać dostęp do większej ilości szczegółowych informacji dotyczących danego pakietu, kliknij przycisk Wyświetl szczegóły. Spowoduje to otwarcie panelu bocznego w Menedżerze pakietów, w którym można znaleźć takie dane, jak obsługa wersji i zależności, adres URL witryny lub repozytorium, informacje o licencji itp.
 
@@ -95,32 +95,30 @@ Domyślnie pakiety są instalowane w położeniu podobnym do tej ścieżki folde
 
 Dla użytkowników pytających, czy można wdrożyć dodatek Dynamo (w dowolnej postaci) ze wstępnie dołączonymi pakietami: sposobem na rozwiązanie tego problemu i zapewnienie kontroli w centralnym położeniu dla wszystkich użytkowników z instalacjami dodatku Dynamo jest dodanie do każdej instalacji niestandardowej ścieżki pakietów.
 
-**Dodawanie folderu sieciowego, w którym menedżer BIM lub inne osoby mogą nadzorować umieszczanie w folderze pakietów zatwierdzonych przez biuro**  
+**Dodawanie folderu sieciowego, w którym menedżer BIM lub inne osoby mogą nadzorować umieszczanie w folderze pakietów zatwierdzonych przez biuro**
 
-W interfejsie użytkownika osobnej aplikacji przejdź do obszaru *Dynamo -> Preferencje -> Ustawienia pakietów -> Lokalizacje plików węzłów i pakietów*. W oknie dialogowym naciśnij przycisk „Dodaj ścieżkę” i przejdź do lokalizacji sieciowej zasobu pakietów współdzielonych. 
- 
-Ponieważ proces jest zautomatyzowany, obejmuje dodanie informacji do pliku konfiguracyjnego instalowanego razem z dodatkiem Dynamo:  
+W interfejsie użytkownika osobnej aplikacji przejdź do obszaru _Dynamo -> Preferencje -> Ustawienia pakietów -> Lokalizacje plików węzłów i pakietów_. W oknie dialogowym naciśnij przycisk „Dodaj ścieżkę” i przejdź do lokalizacji sieciowej zasobu pakietów współdzielonych.
+
+Ponieważ proces jest zautomatyzowany, obejmuje dodanie informacji do pliku konfiguracyjnego instalowanego razem z dodatkiem Dynamo:\
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
 Domyślna konfiguracja dodatku Dynamo dla programu Revit to:
- 
- 
-`<CustomPackageFolders>`  
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+`<CustomPackageFolders>`
 
-`</CustomPackageFolders>`
-
-Dodanie lokalizacji niestandardowej wyglądałoby następująco:  
-
-`<CustomPackageFolders>`  
-
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
-
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
+Dodanie lokalizacji niestandardowej wyglądałoby następująco:
+
+`<CustomPackageFolders>`
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+
+`</CustomPackageFolders>`
 
 Centralnym zarządzaniem tym folderem można również sterować poprzez ustawienie go jako tylko do odczytu.
 
@@ -128,7 +126,7 @@ Centralnym zarządzaniem tym folderem można również sterować poprzez ustawie
 
 #### Scenariusz
 
-Organizacja może chcieć ustandaryzować pakiety instalowane przez różne stacje robocze i użytkowników. Sposobem na to może być instalowanie tych pakietów za pomocą narzędzia *Dynamo -> Preferencje -> Ustawienia pakietów -> Lokalizacje plików węzłów i pakietów*, wybranie folderu sieciowego jako lokalizacji instalacji i dodanie tej ścieżki na stacjach roboczych do `Manage Node and Package Paths`.
+Organizacja może chcieć ustandaryzować pakiety instalowane przez różne stacje robocze i użytkowników. Sposobem na to może być instalowanie tych pakietów za pomocą narzędzia _Dynamo -> Preferencje -> Ustawienia pakietów -> Lokalizacje plików węzłów i pakietów_, wybranie folderu sieciowego jako lokalizacji instalacji i dodanie tej ścieżki na stacjach roboczych do `Manage Node and Package Paths`.
 
 #### Problem
 

@@ -4,9 +4,9 @@
 
 Lista to zbiór elementów. Weźmy na przykład kiść bananów. Każdy banan jest elementem listy (czyli kiści). Łatwiej jest chwycić kiść bananów niż zbierać pojedyncze banany — i tak samo jest w przypadku grupowania elementów według zależności parametrycznych w strukturze danych.
 
-![Banany](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Banany](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> Autor zdjęcia: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Autor zdjęcia: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
 Robiąc zakupy, wkładamy wszystkie kupione artykuły do torby. Taka torba również jest listą. Jeśli chcemy upiec chleb bananowy, potrzebujemy 3 kiści bananów (robimy _dużo_ chleba bananowego). Torba to lista kiści bananów, a każda kiść to lista bananów. Torba jest więc listą list (dwuwymiarową), a kiść bananów jest listą (jednowymiarową).
 
@@ -86,6 +86,7 @@ Węzły Dynamo automatycznie rozpoznają, kiedy pracują z listami, i stosują o
 Istnieją dwa główne sposoby:
 
 #### Replikacja kartezjańska
+
 Powiedzmy, że jesteś w kuchni i robisz soki owocowe. Masz listę owoców: `{apple, orange, pear}` i ustaloną ilość wody na każdy sok: `1 cup`. Z każdego owocu chcesz zrobić sok, używając takiej samej ilości wody. W tym przypadku do gry wchodzi replikacja kartezjańska.
 
 W dodatku Dynamo oznacza to, że wprowadzasz listę owoców do wejścia fruit (owoc) węzła Juice.Maker (sokowirówka), a wartość wejściowa water (woda) pozostaje stała i wynosi „1 cup” (1 filiżanka). Następnie węzeł przetwarza każdy owoc osobno, łącząc go ze stałą ilością wody. Wynik jest następujący:
@@ -95,6 +96,7 @@ W dodatku Dynamo oznacza to, że wprowadzasz listę owoców do wejścia fruit (o
 Każdy owoc zostaje połączony z taką samą ilością wody.
 
 #### Replikacja na suwak
+
 Replikacja na suwak (zip) działa nieco inaczej. Gdyby istniały dwie listy, jedna dla owoców: `{apple, orange, pear}`, a druga dla ilości cukru: `{2 tbsp, 3 tbsp, 1 tbsp}`, replikacja na suwak (zip) połączyłaby odpowiednie elementy z poszczególnych list. Przykładowo:
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
