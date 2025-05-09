@@ -4,9 +4,9 @@
 
 Una lista es un conjunto de elementos o ítems. Pensemos en un racimo de plátanos, por ejemplo. Cada plátano es un elemento de la lista (o racimo). Es más fácil coger un racimo de plátanos que cada plátano individualmente y lo mismo se aplica a la agrupación de elementos por relaciones paramétricas en una estructura de datos.
 
-![Plátanos](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Plátanos](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> Fotografía de [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Fotografía de [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
 Cuando hacemos la compra, ponemos todos los artículos comprados en una bolsa. Esta bolsa también es una lista. Si vamos a hacer pan de plátano, necesitamos tres racimos de plátanos (vamos a hacer _mucho_ pan de plátano). La bolsa representa una lista de racimos de plátanos y cada racimo representa una lista de plátanos. La bolsa es una lista de listas (bidimensional) y el racimo de plátanos es una lista (unidimensional).
 
@@ -86,6 +86,7 @@ Los nodos de Dynamo reconocen automáticamente cuándo están trabajando con lis
 De una de las siguientes formas:
 
 #### Replicación cartesiana
+
 Digamos que está en la cocina haciendo zumos de frutas. Tiene una lista de frutas (`{apple, orange, pear}`) y una cantidad fija de agua para cada zumo (`1 cup`). Desea hacer zumo con cada fruta utilizando la misma cantidad de agua. En este caso, entra en juego la replicación cartesiana.
 
 En Dynamo, esto significa que está introduciendo la lista de frutas en la entrada de frutas del nodo Juice.Maker, mientras que la entrada de agua se mantiene constante en 1 taza. A continuación, el nodo procesa cada fruta individualmente, combinándola con la cantidad fija de agua. El resultado es el siguiente:
@@ -95,6 +96,7 @@ En Dynamo, esto significa que está introduciendo la lista de frutas en la entra
 Cada fruta se combina con la misma cantidad de agua.
 
 #### Replicación Zip
+
 La replicación Zip funciona de forma algo diferente. Si tuviera dos listas, una para frutas (`{apple, orange, pear}`) y otra para cantidades de azúcar (`{2 tbsp, 3 tbsp, 1 tbsp}`), la replicación Zip combinaría los elementos correspondientes de cada lista. Por ejemplo:
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`

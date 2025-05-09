@@ -2,7 +2,7 @@
 
 En las secciones anteriores, examinamos cómo se configura el paquete de _MapToSurface_ con nodos personalizados y archivos de ejemplo. Pero, ¿cómo publicamos un paquete que se ha desarrollado localmente? En este caso real, se muestra cómo publicar un paquete a partir de un conjunto de archivos en una carpeta local.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Hay muchas formas de publicar un paquete. A continuación, se indica el proceso recomendado: **publique localmente, desarrolle localmente y, a continuación, publique en línea**. Comenzaremos con una carpeta que contiene todos los archivos del paquete.
 
@@ -55,7 +55,7 @@ Para la publicación, haga clic en "Publicar localmente" (1). Si sigue este proc
 
 Tras la publicación, los nodos personalizados deberían estar disponibles en el grupo "DynamoPrimer" o en la biblioteca de Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Ahora veamos el directorio raíz para comprobar cómo Dynamo ha aplicado formato al paquete que acabamos de crear. Para ello, vaya a la ficha Paquetes instalados > junto a MapToSurface, haga clic en el menú de puntos verticales > seleccione Mostrar directorio raíz.
 
@@ -79,11 +79,10 @@ Observe que el directorio raíz se encuentra en la ubicación local del paquete 
 1. Cuando desee publicarlo, en Paquetes > Package Manager > ventana Paquetes instalados, seleccione el botón situado a la derecha del paquete que desee publicar y elija Publicar.
 2. Si va a actualizar un paquete que ya se ha publicado, seleccione Publicar versión; Dynamo actualizará el paquete en línea en función de los nuevos archivos del directorio raíz del paquete. Así de fácil.
 
-#### Prueba del servidor de Package Manager
-Cuando pruebe Package Manager, no envíe los paquetes de prueba al servidor de producción. Utilice el servidor de ensayo. Esto evita que los paquetes contaminen los paquetes y la actividad reales. Es fácil configurar Dynamo para utilizar el servidor de ensayo. 
-
-Para obtener más información, consulte la página wiki sobre [cómo probar el servidor de Package Manager](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
-
 ### Publicar versión
 
 Al actualizar los archivos de la carpeta raíz del paquete publicado, puede publicar también una nueva versión del paquete. Para ello, seleccione _"Publicar versión"_ en la ventana _Mis paquetes_. Esta es una forma perfecta de realizar las actualizaciones necesarias del contenido y compartirlas con la comunidad. _Publicar versión_ solo funcionará si es la persona encargada del mantenimiento del paquete.
+
+### Transferencia de la propiedad de un paquete
+
+Actualmente, no es posible transferir la propiedad de los paquetes mediante Package Manager. Puede solicitar al equipo de Dynamo que añada un propietario adicional. Tenga en cuenta que no se pueden eliminar propietarios existentes, solo añadir más responsables del paquete. Si desea añadir una cuenta como propietario al paquete existente, envíe un mensaje de correo electrónico a [dynamoteam@dynamobim.org](mailto:dynamoteam@dynamobim.org). Asegúrese de proporcionar el nombre del paquete y el de la cuenta que desea añadir.

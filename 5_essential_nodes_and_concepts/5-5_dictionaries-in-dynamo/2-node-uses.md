@@ -18,7 +18,7 @@ Dynamo 2.0 presenta una gran variedad de nodos de diccionario para nuestro uso. 
 
 5. `Dictionary.ValueAtKey` devolverá el valor en la clave de entrada.
 
-#### Conteo
+#### Consulta
 
 6. `Dictionary.Count` le indicará cuántos pares de clave-valor hay en el diccionario.
 

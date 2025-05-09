@@ -11,7 +11,7 @@ Los métodos de `GeometryPrimitiveConverter.cs` se pueden agrupar en cuatro cate
 1. **De Proto a tipos de Revit**: métodos que convierten tipos de Dynamo (Proto) en tipos de Revit.
 2. **De Revit a tipos de Proto**: métodos que convierten tipos de Revit en tipos de Dynamo (Proto).
 3. **Grados y radianes**: métodos que convierten entre grados y radianes.
-4. **X y UZ**: métodos que se encargan de obtener vectores perpendiculares. 
+4. **X y UZ**: métodos que se encargan de obtener vectores perpendiculares.
 
 ### De Proto a tipos de Revit
 
@@ -19,10 +19,7 @@ Los métodos de `GeometryPrimitiveConverter.cs` se pueden agrupar en cuatro cate
 
 Crea un BoundingBoxXYZ de Revit a partir de un sistema de coordenadas de Dynamo y dos puntos de definición (mínimo y máximo).
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -44,7 +41,7 @@ El indicador convertUnits (establecido por defecto en "true") convierte las coor
 
 Convierte un vector de Dynamo en un XYZ de Revit.
 
-Observe que el indicador convertUnits se establece por defecto en "false" (falso) porque los vectores representan la dirección y la magnitud, que normalmente no requieren conversión de unidades. La conversión puede afectar a la dirección y la longitud del vector. 
+Observe que el indicador convertUnits se establece por defecto en "false" (falso) porque los vectores representan la dirección y la magnitud, que normalmente no requieren conversión de unidades. La conversión puede afectar a la dirección y la longitud del vector.
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@ Convierte un punto de Dynamo en un XYZ de Revit.
 
 Convierte un vector de Dynamo en un XYZ de Revit.
 
-Observe que el indicador convertUnits se establece por defecto en "false" (falso) porque los vectores representan la dirección y la magnitud, que normalmente no requieren conversión de unidades. La conversión puede afectar a la dirección y la longitud del vector. 
+Observe que el indicador convertUnits se establece por defecto en "false" (falso) porque los vectores representan la dirección y la magnitud, que normalmente no requieren conversión de unidades. La conversión puede afectar a la dirección y la longitud del vector.
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,7 +105,7 @@ Convierte una matriz bidimensional (double[][]) en la que cada matriz interior r
 
 #### Ejemplo de uso de Proto a tipos de Revit
 
-En este ejemplo, se muestra un método rápido y sencillo de utilizar el método .ToXyz (punto) para convertir un Point.ByCoordinates de Dynamo en un XYZ de Revit. 
+En este ejemplo, se muestra un método rápido y sencillo de utilizar el método .ToXyz (punto) para convertir un Point.ByCoordinates de Dynamo en un XYZ de Revit.
 
 ![Conversión de un Point.ByCoordinates de Dynamo en un XYZ de Revit](Images/dynamo-point-to-revit-xyz.png)
 
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### De Revit a tipos de Proto
 
@@ -191,7 +186,7 @@ Convierte una lista de puntos XYZ de Revit en una lista de puntos de Dynamo.
 
 #### Ejemplo de uso de Revit a tipos de Proto
 
-En este ejemplo, se muestra una forma rápida y sencilla de utilizar el método .ToPoint (XYZ) para convertir un XYZ de Revit en un punto de Dynamo. 
+En este ejemplo, se muestra una forma rápida y sencilla de utilizar el método .ToPoint (XYZ) para convertir un XYZ de Revit en un punto de Dynamo.
 
 ![Conversión de un XYZ de Revit en un Point.ByCoordinates de Dynamo](Images/revit-xyz-to-dynamo-point.png)
 
@@ -224,23 +219,17 @@ OUT = revit_point
 
 Convierte grados en radianes.
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 Convierte radianes en grados.
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### Ejemplo de uso de grados y radianes
 
-En este ejemplo, se muestra una forma rápida y sencilla de utilizar el método .ToRadians para convertir de grados a radianes. 
+En este ejemplo, se muestra una forma rápida y sencilla de utilizar el método .ToRadians para convertir de grados a radianes.
 
 ![Grados a radianes](Images/degrees-to-radians.png)
 
@@ -266,23 +255,24 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X & UZ
 
 #### GetPerpendicular (XYZ)
 
 Este método devuelve un vector `XYZ` perpendicular al vector `XYZ` especificado.
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular (vector)
 
 Este método devuelve un `Vector` de Dynamo perpendicular al `Vector` especificado.
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### Ejemplo de uso de X y UZ
 
-En este ejemplo, se muestra una forma rápida y sencilla de utilizar el método .GetPerpendicular para obtener el vector perpendicular a un vector de entrada. 
+En este ejemplo, se muestra una forma rápida y sencilla de utilizar el método .GetPerpendicular para obtener el vector perpendicular a un vector de entrada.
 
 ![Obtener vector perpendicular](Images/get-perpendicular-vector.png)
 

@@ -8,10 +8,10 @@ Los operadores son un conjunto de componentes que utilizan funciones algebraicas
 
 | Icono                                                  | Nombre (sintaxis)     | Entradas                     | Salidas      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Sumar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Restar (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Ejercicio: la fórmula de la espiral dorada
 
@@ -49,7 +49,7 @@ La imagen siguiente representa la espiral dorada en forma de programación visua
 
 > a. **Number Slider**: añada dos controles deslizantes de número al lienzo. Estos controles deslizantes representarán las variables _a_ y _b_ de la ecuación paramétrica. Estas representan una constante que es flexible o parámetros que podemos ajustar hacia el resultado deseado.
 >
-> b. **Multiplication (\*)**: el nodo de multiplicación se representa mediante un asterisco. Lo usaremos con frecuencia para conectar variables de multiplicación.
+> b. **Multiplication (*)**: el nodo de multiplicación se representa mediante un asterisco. Lo usaremos con frecuencia para conectar variables de multiplicación.
 >
 > c. **Math.RadiansToDegrees**: los valores de "_t_" se deben convertir a grados para que se evalúen en las funciones trigonométricas. Recuerde que Dynamo utiliza por defecto los grados para evaluar estas funciones.
 >
@@ -91,7 +91,7 @@ Ahora que hemos hecho una concha de caracol circular, vamos a pasar a las rejill
 
 Como punto de partida, vamos a realizar el mismo paso del ejercicio anterior: crear una matriz de puntos de espiral con el nodo **Point.ByCoordinates**.
 
-![](../images/5-3/2/math-partIV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 A continuación, siga estos pequeños pasos para generar una serie de espirales en varias rotaciones.
 
