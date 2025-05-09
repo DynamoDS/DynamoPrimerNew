@@ -42,7 +42,7 @@ La bibliothèque Dynamo contient un groupe _DynamoUnfold_ avec plusieurs catégo
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-Examinez maintenant la structure de fichiers du package. 
+Examinez maintenant la structure de fichiers du package.
 
 1. Tout d’abord, accédez à Packages > Gestionnaire de package > Packages installés.
 2. À côté de DynamoUnfold, sélectionnez le menu d’options <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">.
@@ -67,13 +67,13 @@ Ouvrez « SphereUnfold ».
 
 Après avoir ouvert le fichier et cliqué sur « Exécuter » dans le solveur, vous obtenez une sphère dépliée. Les fichiers d’exemple comme ceux-ci sont utiles pour apprendre à utiliser un nouveau package Dynamo.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Parcourir et afficher les informations sur le package
 
 Dans le gestionnaire de package, vous pouvez rechercher des packages à l’aide des options de tri et de filtrage de l’onglet Rechercher des packages. Plusieurs filtres sont disponibles pour le programme hôte, l’état (nouveau, obsolète ou non obsolète) et si le package possède des dépendances.
 
-En triant les packages, vous pouvez identifier les packages les mieux notés ou les plus téléchargés, ou trouver les packages ayant fait l’objet de mises à jour récentes. 
+En triant les packages, vous pouvez identifier les packages les mieux notés ou les plus téléchargés, ou trouver les packages ayant fait l’objet de mises à jour récentes.
 
 Vous pouvez également obtenir plus de détails sur chaque paquet en cliquant sur Afficher les détails. Cela ouvre un panneau latéral dans le Gestionnaire de package, où vous pouvez trouver des informations telles que la version et les dépendances, l’URL du site Web ou du dépôt, les informations sur la licence, etc.
 
@@ -93,34 +93,32 @@ Par défaut, les packages sont installés dans un emplacement semblable à celui
 
 ### Configuration d’un emplacement partagé pour les packages dans un bureau
 
-Pour les utilisateurs qui se demandent s’il est possible de déployer Dynamo (sous quelque forme que ce soit) avec des packages pré-attachés : pour résoudre ce problème et permettre un contrôle centralisé pour tous les utilisateurs avec des installations Dynamo, ajoutez un chemin d’accès au package personnalisé à chaque installation.
+Pour les utilisateurs qui se demandent s’il est possible de déployer Dynamo (sous quelque forme que ce soit) avec des packages préattachés : pour résoudre ce problème et permettre un contrôle centralisé pour tous les utilisateurs avec des installations Dynamo, ajoutez un chemin d’accès au package personnalisé à chaque installation.
 
-**Ajout d’un dossier réseau dans lequel le responsable BIM ou d’autres personnes pourraient superviser le stockage du dossier avec des packages approuvés par le bureau**  
+**Ajout d’un dossier réseau dans lequel le responsable BIM ou d’autres personnes pourraient superviser le stockage du dossier avec des packages approuvés par le bureau**
 
-Dans l’interface utilisateur d’une application individuelle, accédez à *Dynamo -> Préférences -> Paramètres de packages -> Emplacements des fichiers de nœuds et de packages*. Dans la boîte de dialogue, appuyez sur le bouton « Ajouter un chemin » et accédez à l’emplacement réseau de la ressource de package partagée. 
- 
-Comme il s’agit d’un processus automatisé, il faut ajouter des informations au fichier de configuration installé avec Dynamo :  
+Dans l’interface utilisateur d’une application, accédez à _Dynamo -> Préférences -> Paramètres des packages -> Emplacements des fichiers de nœuds et de packages_. Dans la boîte de dialogue, appuyez sur le bouton « Ajouter un chemin » et accédez à l’emplacement réseau de la ressource de package partagée.
+
+Comme il s’agit d’un processus automatisé, il faut ajouter des informations au fichier de configuration installé avec Dynamo :\
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-Par défaut, la configuration de Dynamo pour Revit est la suivante :
- 
- 
-`<CustomPackageFolders>`  
+Par défaut, la configuration de Dynamo for Revit est la suivante :
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+`<CustomPackageFolders>`
 
-`</CustomPackageFolders>`
-
-L’ajout d’un emplacement personnalisé ressemble à ce qui suit :  
-
-`<CustomPackageFolders>`  
-
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
-
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
+L’ajout d’un emplacement personnalisé ressemble à ce qui suit :
+
+`<CustomPackageFolders>`
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+
+`</CustomPackageFolders>`
 
 Pour contrôler la gestion centralisée de ce dossier, vous pouvez simplement le mettre en lecture seule.
 
@@ -128,7 +126,7 @@ Pour contrôler la gestion centralisée de ce dossier, vous pouvez simplement le
 
 #### Scénario
 
-Une organisation peut vouloir harmoniser les packages installés par différents postes de travail et utilisateurs. Pour ce faire, vous pouvez installer ces packages sous *Dynamo -> Préférences -> Paramètres de package -> Chemins d’accès des nœuds et packages*, en sélectionnant un dossier réseau en tant qu’emplacement d’installation et en demandant aux stations de travail d’ajouter ce chemin à `Manage Node and Package Paths`.
+Une organisation peut vouloir harmoniser les packages installés par différents postes de travail et utilisateurs. Pour ce faire, vous pouvez installer ces packages dans _Dynamo -> Préférences -> Paramètres des packages -> Emplacements des fichiers de nœuds et de packages_, en sélectionnant un dossier réseau en tant qu’emplacement d’installation et en demandant aux postes de travail d’ajouter ce chemin à `Manage Node and Package Paths`.
 
 #### Problème
 
@@ -136,7 +134,7 @@ Bien que le scénario fonctionne correctement pour les packages qui contiennent 
 
 #### Alternative
 
-Une solution de contournement possible est d’utiliser un lecteur réseau mappé pointant vers l’emplacement réseau et de faire en sorte que les postes de travail fassent référence à ce chemin à la place. Les étapes à suivre pour créer un lecteur réseau mappé sont décrites [ici](https://support.microsoft.com/en-us/help/4026635/windows-10-map-a-network-drive).
+Une solution de contournement possible est d’utiliser un lecteur réseau mappé pointant vers l’emplacement réseau et de faire en sorte que les postes de travail fassent référence à ce chemin à la place. Les étapes à suivre pour créer un lecteur réseau mappé sont décrites [ici](https://support.microsoft.com/fr-fr/help/4026635/windows-10-map-a-network-drive).
 
 ### Repousser les limites des packages
 

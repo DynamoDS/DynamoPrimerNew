@@ -2,7 +2,7 @@
 
 Dans les sections précédentes, vous avez découvert en détail comment configurer le package _MapToSurface_ avec des nœuds personnalisés et des fichiers d’exemple. Mais comment publier un package développé localement ? Cette étude de cas montre comment publier un package à partir d’un ensemble de fichiers dans un dossier local.
 
-![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - custom nodes 01 (1) (1).jpg>)
 
 Il existe plusieurs façons de publier un package. Voici le processus recommandé :**publier localement, développer localement, puis publier en ligne**. Vous allez commencer par un dossier contenant tous les fichiers du package.
 
@@ -18,7 +18,7 @@ Ensuite, redémarrez Dynamo. Lors de la réouverture, vérifiez la fenêtre _«�
 
 ### Publication locale d’un package
 
-{% hint style="warning" %} Vous pouvez publier des nœuds et des packages personnalisés à partir de Dynamo Sandbox dans la version 2.17 et les versions ultérieures, tant qu’ils n’ont pas de dépendances de l’API hôte. Dans les versions plus anciennes, la publication de nœuds et de packages personnalisés n’est possible que dans Dynamo pour Revit et Dynamo for Civil 3D. {% endhint %}
+{% hint style="warning" %} Vous pouvez publier des nœuds et des packages personnalisés à partir de Dynamo Sandbox dans la version 2.17 et les versions ultérieures, tant qu’ils n’ont pas de dépendances de l’API hôte. Dans les versions plus anciennes, la publication de nœuds et de packages personnalisés n’est possible que dans Dynamo for Revit et Dynamo for Civil 3D. {% endhint %}
 
 > Téléchargez le fichier d’exemple en cliquant sur le lien ci-dessous.
 >
@@ -55,7 +55,7 @@ Publiez en cliquant sur « Publier localement » (1). Si vous suivez, veillez 
 
 Une fois la publication terminée, les nœuds personnalisés doivent être disponibles sous le groupe « DynamoPrimer » ou votre bibliothèque Dynamo.
 
-![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
+\![](<../images/6-2/3/develop package - install package 02 (1) (1).jpg>)
 
 Examinez maintenant le répertoire racine pour découvrir comment Dynamo a mis en forme le package créé. Pour ce faire, allez dans l’onglet Packages installés > à côté de MapToSurface, cliquez sur le menu des points verticaux > sélectionnez Afficher le répertoire racine.
 
@@ -77,13 +77,12 @@ Le répertoire racine se trouve à l’emplacement local de votre package (n’o
 <figure><img src="../../.gitbook/assets/publish-version.png" alt=""><figcaption></figcaption></figure>
 
 1. Lorsque vous êtes prêt à publier, dans la fenêtre Packages > Gestionnaire de package > Packages installés, sélectionnez le bouton situé à droite du package que vous souhaitez publier et choisissez Publier.
-2. Si vous mettez à jour un package qui a déjà été publié, choisissez « Publier la version » et Dynamo mettra à jour votre package en ligne en fonction des nouveaux fichiers contenus dans le répertoire racine de ce package. C’est aussi simple que ça !
-
-#### Test du serveur du gestionnaire de packages
-Lorsque vous testez le gestionnaire de packages, n’envoyez pas vos packages de test au serveur de production. Utilisez le serveur intermédiaire. Cela permet d’éviter que vos packages ne polluent l’activité et les packages réels. Il est facile de configurer Dynamo pour utiliser le serveur intermédiaire. 
-
-Pour plus d’informations à ce sujet, veuillez vous référer à la page Wiki [Test du serveur du gestionnaire de packages](https://github.com/DynamoDS/Dynamo/wiki/Testing-the-Package-Manager-Server).
+2. Si vous mettez à jour un package qui a déjà été publié, choisissez « Publier la version » et Dynamo mettra à jour votre package en ligne en fonction des nouveaux fichiers contenus dans le répertoire racine de ce package. C'est aussi simple que ça !
 
 ### Version de publication…
 
 Lorsque vous mettez à jour les fichiers dans le dossier racine de votre package publié, vous pouvez également publier une nouvelle version du package en sélectionnant _« Publier la version… »_ dans l’onglet _Mes packages_. Cette méthode vous permet d’apporter les mises à jour nécessaires à votre contenu et de le partager en toute transparence avec la communauté. La _version de publication_ fonctionne uniquement si vous êtes le gestionnaire du package.
+
+### Transfert de propriété d’un package
+
+Actuellement, vous ne pouvez pas transférer la propriété du package par le biais du gestionnaire de packages. Vous pouvez demander à l’équipe Dynamo d’ajouter un propriétaire supplémentaire. Notez que nous ne pouvons pas supprimer les propriétaires existants du package, mais seulement en ajouter de nouveaux. Si vous souhaitez ajouter un compte en tant que propriétaire à un package existant, veuillez envoyer un e-mail à [dynamoteam@dynamobim.org](mailto:dynamoteam@dynamobim.org). Assurez-vous d’indiquer le nom du package et du compte que vous souhaitez ajouter.

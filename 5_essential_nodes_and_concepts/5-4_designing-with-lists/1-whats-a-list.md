@@ -4,9 +4,9 @@
 
 Une liste est un ensemble d'éléments. Par exemple, prenez une grappe de bananes. Chaque banane est un élément de la liste (ou grappe). Il est plus facile de ramasser une grappe de bananes plutôt que chaque banane individuellement. Il en est de même pour le regroupement d’éléments par relations paramétriques dans une structure de données.
 
-![Bananes](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![Bananes](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> Photo de [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
+> Photo de [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list).
 
 Quand vous faites les courses, vous déposez tous vos achats dans un sac. Ce sac est aussi une liste. Si vous préparez un cake aux bananes, il vous faut 3 grappes de bananes (vous préparez _plusieurs_ cakes aux bananes). Le sac représente une liste de grappes de bananes et chaque grappe représente une liste de bananes. Le sac est une liste de listes (bidimensionnelle) et la grappe de bananes est une liste (unidimensionnelle).
 
@@ -86,6 +86,7 @@ Lorsqu’ils travaillent avec des listes, les nœuds Dynamo le reconnaissent aut
 Il existe deux méthodes principales :
 
 #### Réplication cartésienne
+
 Imaginons que vous soyez dans la cuisine, en train de préparer des jus de fruits. Vous avez une liste de fruits : `{apple, orange, pear}` et une quantité fixe d’eau pour chaque jus : `1 cup`. Vous voulez faire un jus avec chaque fruit, en utilisant la même quantité d’eau. Dans ce cas, la réplication cartésienne entre en jeu.
 
 Dans Dynamo, cela signifie que vous introduisez la liste des fruits dans l’entrée de fruits du nœud Juice.Maker, tandis que l’entrée d’eau reste constante à 1 tasse. Le nœud traite ensuite chaque fruit individuellement, en le combinant avec la quantité fixe d’eau. Le résultat est le suivant :
@@ -95,6 +96,7 @@ Dans Dynamo, cela signifie que vous introduisez la liste des fruits dans l’ent
 Chaque fruit est associé à la même quantité d’eau.
 
 #### Réplication zip
+
 La réplication zip fonctionne un peu différemment. Si vous aviez deux listes, une pour les fruits : `{apple, orange, pear}` et une autre pour les quantités de sucre : `{2 tbsp, 3 tbsp, 1 tbsp}`, la réplication zip combinerait les éléments correspondants de chaque liste. Exemples :
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
