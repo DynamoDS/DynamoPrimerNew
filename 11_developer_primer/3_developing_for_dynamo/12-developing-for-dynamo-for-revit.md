@@ -1,4 +1,4 @@
-# Revit용 Dynamo을 위한 개발
+# Dynamo For Revit을 위한 개발
 
 ## `GeometryPrimitiveConverter.cs`에서 메서드 사용
 
@@ -11,7 +11,7 @@ DynamoRevit 코드 라이브러리의 [GeometryPrimitiveConverter](https://githu
 1. **Proto에서 Revit으로 변환 유형**: Dynamo(Proto) 유형을 Revit 유형으로 변환하는 메서드입니다.
 2. **Revit에서 Proto로 변환 유형**: Revit 유형을 Dynamo(Proto) 유형으로 변환하는 메서드입니다.
 3. **각도 및 라디안**: 각도와 라디안 간에 변환하는 메서드입니다.
-4. **X 및 UZ**: 수직 벡터를 구하는 메서드입니다. 
+4. **X 및 UZ**: 수직 벡터를 구하는 메서드입니다.
 
 ### Proto에서 Revit으로 변환 유형
 
@@ -19,10 +19,7 @@ DynamoRevit 코드 라이브러리의 [GeometryPrimitiveConverter](https://githu
 
 Dynamo 좌표계와 정의점 두 개(최솟값 및 최댓값)에서 Revit BoundingBoxXYZ를 작성합니다.
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType(BoundingBox)
 
@@ -44,7 +41,7 @@ convertUnits 플래그(기본값: true)는 필요한 경우 좌표를 변환합�
 
 Dynamo 벡터를 Revit XYZ로 변환합니다.
 
-벡터는 일반적으로 단위 변환이 필요하지 않은 방향과 크기를 나타내므로 convertUnits 플래그의 기본값은 false입니다. 변환은 벡터의 방향 및 길이에 영향을 줄 수 있습니다. 
+벡터는 일반적으로 단위 변환이 필요하지 않은 방향과 크기를 나타내므로 convertUnits 플래그의 기본값은 false입니다. 변환은 벡터의 방향 및 길이에 영향을 줄 수 있습니다.
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@ Dynamo 점을 Revit XYZ로 변환합니다.
 
 Dynamo 벡터를 Revit XYZ로 변환합니다.
 
-벡터는 일반적으로 단위 변환이 필요하지 않은 방향과 크기를 나타내므로 convertUnits 플래그의 기본값은 false입니다. 변환은 벡터의 방향 및 길이에 영향을 줄 수 있습니다. 
+벡터는 일반적으로 단위 변환이 필요하지 않은 방향과 크기를 나타내므로 convertUnits 플래그의 기본값은 false입니다. 변환은 벡터의 방향 및 길이에 영향을 줄 수 있습니다.
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,9 +105,9 @@ double 값 배열을 Revit의 DoubleArray로 변환합니다.
 
 #### Proto에서 Revit으로 변환 유형 사용 예시
 
-이 예에서는 .ToXyz(점) 메서드를 사용하여 Dynamo Point.ByCoordinates를 Revit XYZ로 빠르고 쉽게 변환하는 방법을 보여줍니다. 
+이 예에서는 .ToXyz(점) 메서드를 사용하여 Dynamo Point.ByCoordinates를 Revit XYZ로 빠르고 쉽게 변환하는 방법을 보여줍니다.
 
-![Dynamo Point.ByCoordinates를 Revit XYZ로 변환](images/dynamo-point-to-revit-xyz.png)
+![Dynamo Point.ByCoordinates를 Revit XYZ로 변환](Images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### Revit에서 Proto로 변환 유형
 
@@ -191,9 +186,9 @@ Revit XYZ 점 리스트를 Dynamo 점 리스트로 변환합니다.
 
 #### Revit에서 Proto로 변환 유형 사용 예시
 
-이 예에서는 .ToPoint(XYZ) 메서드를 사용하여 Revit XYZ를 Dynamo 점으로 빠르고 쉽게 변환하는 방법을 보여줍니다. 
+이 예에서는 .ToPoint(XYZ) 메서드를 사용하여 Revit XYZ를 Dynamo 점으로 빠르고 쉽게 변환하는 방법을 보여줍니다.
 
-![Revit XYZ를 Dynamo Point.ByCoordinates로 변환](images/revit-xyz-to-dynamo-point.png)
+![Revit XYZ를 Dynamo Point.ByCoordinates로 변환](Images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -224,25 +219,19 @@ OUT = revit_point
 
 도 단위를 라디안으로 변환합니다.
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 라디안을 도 단위로 변환합니다.
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### 각도 및 라디안 사용 예시
 
-이 예에서는 .ToRadians 메서드를 사용하여 각도를 라디안으로 빠르고 쉽게 변환하는 방법을 보여줍니다. 
+이 예에서는 .ToRadians 메서드를 사용하여 각도를 라디안으로 빠르고 쉽게 변환하는 방법을 보여줍니다.
 
-![각도 라디안 변환](images/degrees-to-radians.png)
+![각도 라디안 변환](Images/degrees-to-radians.png)
 
 ```
 import sys
@@ -266,25 +255,26 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X & UZ
 
 #### GetPerpendicular(XYZ)
 
 이 메서드는 지정된 `XYZ` 벡터에 대한 수직 `XYZ` 벡터를 반환합니다.
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular(벡터)
 
 이 메서드는 지정된 Dynamo `Vector`에 대한 수직 Dynamo `Vector`를 반환합니다.
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### X 및 UZ 사용 예시
 
-이 예에서는 .GetPerpendicular 메서드를 사용하여 입력 벡터에 대한 수직 벡터를 빠르고 쉽게 가져오는 방법을 보여줍니다. 
+이 예에서는 .GetPerpendicular 메서드를 사용하여 입력 벡터에 대한 수직 벡터를 빠르고 쉽게 가져오는 방법을 보여줍니다.
 
-![수직 벡터 가져오기](images/get-perpendicular-vector.png)
+![수직 벡터 가져오기](Images/get-perpendicular-vector.png)
 
 ```
 import clr

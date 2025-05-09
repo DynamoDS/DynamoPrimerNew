@@ -42,7 +42,7 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 
 ![](../images/6-2/1/packageintroduction-installingpackagefolder02.jpg)
 
-이제 패키지의 파일 구조를 살펴보겠습니다. 
+이제 패키지의 파일 구조를 살펴보겠습니다.
 
 1. 먼저 패키지 > Package Manager > 설치된 패키지로 이동합니다.
 2. DynamoUnfold 옆의 옵션 메뉴 <img src="../images/6-2/1/packageintroduction-verticaldotsmenu.jpg" alt="" data-size="line">를 선택합니다.
@@ -67,13 +67,13 @@ Dynamo 라이브러리에는 여러 카테고리와 사용자 노드가 있는 _
 
 파일을 열고 솔버에서 "실행"을 누르면 펼쳐진 구가 표시됩니다. 이와 같은 예제 파일은 새 Dynamo 패키지를 사용하는 방법을 배우는 데 유용합니다.
 
-![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### 패키지 정보 찾아보기 및 보기
 
 Package Manager에서 패키지 검색 탭의 정렬 및 필터링 옵션을 사용하여 패키지를 찾을 수 있습니다. 호스트 프로그램, 상태(신규, 더 이상 사용되지 않음 또는 아직 사용 가능) 및 패키지의 종속성 유무에 따라 사용할 수 있는 여러 필터가 있습니다.
 
-패키지를 정렬하여 평가 점수가 높거나 가장 많이 다운로드된 패키지를 식별하거나 최신 업데이트가 있는 패키지를 찾을 수 있습니다. 
+패키지를 정렬하여 평가 점수가 높거나 가장 많이 다운로드된 패키지를 식별하거나 최신 업데이트가 있는 패키지를 찾을 수 있습니다.
 
 상세 정보 보기를 클릭하여 각 패키지에 대한 자세한 내용에 액세스할 수도 있습니다. 이렇게 하면 Package Manager의 측면 패널이 열리며, 여기에서 버전 관리 및 종속성, 웹사이트 또는 리포지토리 URL, 라이센스 정보 등과 같은 정보를 찾을 수 있습니다.
 
@@ -95,32 +95,30 @@ Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://
 
 패키지가 미리 첨부된 상태로 Dynamo를 배포할 수 있는지 묻는 사용자를 위한 참고 사항: 이 문제를 해결하고 Dynamo를 설치한 모든 사용자가 중앙 위치에서 제어할 수 있도록 하는 접근 방식은 각 설치에 사용자 지정 패키지 경로를 추가하는 것입니다.
 
-**BIM 관리자 또는 다른 사람이 사무실 승인 패키지가 있는 폴더의 재고를 감독할 수 있는 네트워크 폴더를 추가합니다**  
+**BIM 관리자 또는 다른 사람이 사무실 승인 패키지가 있는 폴더의 재고를 감독할 수 있는 네트워크 폴더를 추가합니다**
 
-개별 응용프로그램의 UI에서 *Dynamo -> 기본 설정 -> 패키지 설정 -> 노드 및 패키지 파일 위치* 로 이동합니다. 대화상자에서 "경로 추가" 버튼을 누르고 공유 패키지 리소스의 네트워크 위치를 탐색합니다. 
- 
-자동화된 프로세스로, Dynamo와 함께 설치된 구성 파일에 정보를 추가하는 작업이 포함됩니다.  
+개별 응용프로그램의 UI에서 _Dynamo -> 기본 설정 -> 패키지 설정 -> 노드 및 패키지 파일 위치_로 이동합니다. 대화상자에서 "경로 추가" 버튼을 누르고 공유 패키지 리소스의 네트워크 위치를 탐색합니다.
+
+자동화된 프로세스로, Dynamo와 함께 설치된 구성 파일에 정보를 추가하는 작업이 포함됩니다.\
  `C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]\DynamoSettings.xml`
 
-기본적으로 Revit용 Dynamo의 구성은 다음과 같습니다.
- 
- 
-`<CustomPackageFolders>`  
+기본적으로 Dynamo for Revit의 구성은 다음과 같습니다.
 
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
+`<CustomPackageFolders>`
 
-`</CustomPackageFolders>`
-
-사용자 지정 위치를 추가하는 방법은 다음과 같습니다.  
-
-`<CustomPackageFolders>`  
-
-`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`  
-
-`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`  
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
 
 `</CustomPackageFolders>`
 
+사용자 지정 위치를 추가하는 방법은 다음과 같습니다.
+
+`<CustomPackageFolders>`
+
+`<string>C:\Users\[Username]\AppData\Roaming\Dynamo\Dynamo Revit\[Dynamo Version]</string>`
+
+`<string>N:\OfficeFiles\Dynamo\Packages_Limited</string>`
+
+`</CustomPackageFolders>`
 
 이 폴더에 대한 중앙 관리도 폴더를 읽기 전용으로 설정하여 제어할 수 있습니다.
 
@@ -128,7 +126,7 @@ Dynamo 패키지를 찾는 또 다른 방법은 [Dynamo Package Manager](http://
 
 #### 시나리오
 
-조직에서 서로 다른 워크스테이션 및 사용자가 설치한 패키지를 표준화하려고 할 수 있습니다. 이 작업을 수행하는 한 가지 방법은 *Dynamo -> 기본 설정 ->  패키지 설정 -> 노드 및 패키지 파일 위치* 에서 이러한 패키지를 설치하고 설치 위치로 네트워크 폴더를 선택한 다음 워크스테이션이 해당 경로를 `Manage Node and Package Paths` 에 추가하도록 하는 것입니다.
+조직에서 서로 다른 워크스테이션 및 사용자가 설치한 패키지를 표준화하려고 할 수 있습니다. 이 작업을 수행하는 한 가지 방법은 _Dynamo -> 기본 설정 -> 패키지 설정 -> 노드 및 패키지 파일 위치_ 에서 이러한 패키지를 설치하고 설치 위치로 네트워크 폴더를 선택한 다음 워크스테이션이 해당 경로를 `Manage Node and Package Paths`에 추가하도록 하는 것입니다.
 
 #### 문제
 

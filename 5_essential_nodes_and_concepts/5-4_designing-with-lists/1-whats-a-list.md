@@ -4,9 +4,9 @@
 
 리스트는 요소 또는 항목의 모음입니다. 예를 들어 바나나 묶음을 고려해보십시오. 각 바나나는 리스트(또는 묶음) 내의 항목입니다. 각 바나나를 따로 잡는 것보다 바나나 묶음을 잡는 것이 더 쉬운데, 이는 데이터 구조의 파라메트릭 관계에 따라 요소를 그룹화하는 경우에도 마찬가지입니다.
 
-![바나나](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![바나나](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> 사진 출처: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list)
+> 사진 출처: [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list)
 
 식료품을 구입할 때는 구입한 모든 항목을 바구니에 넣습니다. 이 바구니 또한 리스트입니다. 바나나 빵을 만들려면 3묶음의 바나나가 필요합니다(바나나 빵을 _많이_ 만드는 경우). 이 바구니는 바나나 묶음 리스트를 나타내고 각 묶음은 바나나 리스트를 나타냅니다. 바구니는 리스트의 리스트(2차원)이고 바나나 묶음은 리스트(1차원)입니다.
 
@@ -86,6 +86,7 @@ Dynamo 노드는 리스트로 작업할 때 이를 자동으로 인식하여 여
 두 가지 주요 방법은 다음과 같습니다.
 
 #### 직교 복제
+
 부엌에서 과일 주스를 만들고 있다고 가정해 보겠습니다. `{apple, orange, pear}`라는 과일 리스트가 있고 각 주스에 사용할 물의 양이 `1 cup`으로 고정되어 있습니다. 각 과일에 같은 양의 물을 사용하여 주스를 만들고 싶습니다. 이 경우 직교 복제가 적용됩니다.
 
 Dynamo에서 이는 물 입력이 1컵으로 일정하게 유지되는 동안 과일 리스트를 Juice.Maker 노드의 과일 입력에 제공한다는 의미입니다. 그런 다음 이 노드는 각 과일을 개별적으로 처리하여 고정된 양의 물과 결합합니다. 결과는 다음과 같습니다.
@@ -95,6 +96,7 @@ Dynamo에서 이는 물 입력이 1컵으로 일정하게 유지되는 동안 �
 각 과일은 같은 양의 물과 쌍으로 연결됩니다.
 
 #### Zip 복제
+
 Zip 복제는 약간 다르게 작동합니다. 과일 리스트(`{apple, orange, pear}`)와 설탕 리스트(`{2 tbsp, 3 tbsp, 1 tbsp}`) 두 개가 있는 경우 Zip 복제는 각 리스트의 해당 항목을 결합합니다. 예는 다음과 같습니다.
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
