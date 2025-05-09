@@ -22,7 +22,7 @@ DynamoCoreRuntime zip 版本是在自动生成期间创建的 DynamoCore 二进�
 
 **Microsoft DirectX，它也可以从我们的 Dynamo Github 存储库中公开获得** [**此处**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
-**7zip，用于解压缩软件包** [**此处**](https://www.7-zip.org/download.html)
+**7zip，用于解压缩软件包** [**此处**](https://sparanoid.com/lab/7z/download.html)
 
 **Microsoft Visual C++ 2015-2024 Redistributable (x64)** [**链接**](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
@@ -32,7 +32,7 @@ DynamoCoreRuntime zip 版本是在自动生成期间创建的 DynamoCore 二进�
 
 ### 疑难解答
 
-如果解压缩内部版本后根本无法启动 DynamoSandbox.exe，请确保使用 [7zip](https://www.7-zip.org/download.html) 解压缩内部版本。如果您对您的计算机有权限，也可以在提取它_之前_手动取消阻止 .zip 归档。
+如果解压缩内部版本后根本无法启动 DynamoSandbox.exe，请确保使用 [7zip](https://sparanoid.com/lab/7z/download.html) 解压缩内部版本。如果您对您的计算机有权限，也可以在提取它_之前_手动取消阻止 .zip 归档。
 
 ![](images/a-7/dynamo-builds-1.png)
 
@@ -74,7 +74,7 @@ _NVIDIA 控制面板示例：_
 
 目前，后续 Dynamo 模块将使用 WebView2 组件：文档浏览器、导览和库，因此为了确保 Dynamo 的这一部分正确显示 Web 内容，我们需要安装 WebView2 Evergreen 运行时安装程序（您需要验证计算机中是否已安装或需要安装）。
 
-这是安装 WebView2 运行时的链接：[https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section)
+这是安装 WebView2 运行时的链接：[https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download-section)
 
 ![](images/a-7/dynamo-builds-7.png)
 

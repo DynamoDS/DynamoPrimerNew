@@ -2,7 +2,7 @@
 
 ## 有关互操作类型的一些常规信息
 
-什么是 COM 类型？- [https://learn.microsoft.com/zh-cn/windows/win32/com/the-component-object-model](https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model)
+什么是 COM 类型？- [https://learn.microsoft.com/zh-cn/windows/win32/com/the-component-object-model](https://learn.microsoft.com/zh-cn/windows/win32/com/the-component-object-model)
 
 在 C# 中使用 COM 类型的标准方法是随包一起引用和交付主互操作程序集（基本上是一个大的 API 集合）。
 
@@ -14,7 +14,7 @@
 
 ## Dynamo 如何管理类型等效
 
-Dynamo 将类型等效委派给 .NET (dotnet) 运行时。例如，来自不同程序集且具有相同名称和名称空间的 2 个类型不被视为等效，Dynamo 会在加载冲突的程序集时显示错误。对于互操作类型，Dynamo 将使用 [IsEquivalentTo API](https://learn.microsoft.com/en-us/dotnet/api/system.type.isequivalentto) 检查互操作类型是否等效
+Dynamo 将类型等效委派给 .NET (dotnet) 运行时。例如，来自不同程序集且具有相同名称和名称空间的 2 个类型不被视为等效，Dynamo 会在加载冲突的程序集时显示错误。对于互操作类型，Dynamo 将使用 [IsEquivalentTo API](https://learn.microsoft.com/zh-cn/dotnet/api/system.type.isequivalentto?view=net-9.0) 检查互操作类型是否等效
 
 ## 如何避免嵌入式互操作类型之间的冲突
 

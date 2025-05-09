@@ -52,7 +52,7 @@ Forma Beta 版中的 Dynamo 当前作为早期访问开放 Beta 版提供，这�
 
 1. 从 [Dynamo 内部版本](https://dynamobuilds.com/)下载 Dynamo 2.18.0 或更高版本。为了获得最佳体验，请选择顶部列出的最稳定的最新版本。
    1. “每日”版本是开发版本，可能包含不完整或正在进行的功能。
-2. 使用 [7zip](https://7-zip.org/) 将 Dynamo 提取到您选择的文件夹。
+2. 使用 [7zip](https://sparanoid.com/lab/7z/) 将 Dynamo 提取到您选择的文件夹。
 3. 从 Dynamo 安装文件夹运行 DynamoSandbox.exe。
 4. 在 Dynamo 中，安装 DynamoFormaBeta 软件包。转到“软件包 > 软件包管理器”，然后搜索“DynamoFormaBeta”。
    1. 如果您有 Dynamo 2.x，请安装 DynamoFormaBeta for 2.x 软件包。
