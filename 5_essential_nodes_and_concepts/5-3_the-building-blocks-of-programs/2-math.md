@@ -8,10 +8,10 @@ Os operadores são um conjunto de componentes que usam funções algébricas com
 
 | Ícone                                                  | Nome (Sintaxe)     | Entradas                     | Saídas      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (**\***) | var[]...[], var[]...[] | var[]...[] |
-| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*****) | var[]...[], var[]...[] | var[]...[] |
+| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Exercício: Fórmula da espiral dourada
 
@@ -49,7 +49,7 @@ A imagem abaixo representa a espiral dourada na forma de programação visual. Q
 
 > a. **Controle deslizante de número**: adicione dois controles deslizantes de número à tela. Esses controles deslizantes representarão as variáveis _a_ e _b_ da equação paramétrica. Eles representam uma constante que é flexível ou parâmetros que podem ser ajustados para um resultado desejado.
 >
-> b. **Multiplicação (\*)**: o nó de multiplicação é representado por um asterisco. Usaremos isso repetidamente para conectar variáveis de multiplicação
+> b. **Multiplicação (*)**: o nó de multiplicação é representado por um asterisco. Usaremos isso repetidamente para conectar variáveis de multiplicação.
 >
 > c. **Math.RadiansToDegrees**: os valores “_t_” precisam ser convertidos em graus para sua avaliação nas funções trigonométricas. Lembre-se de que o Dynamo usa como padrão a unidade de graus para avaliar essas funções.
 >
@@ -91,7 +91,7 @@ Agora que fizemos uma casca circular nautiloide, vamos passar para os eixos para
 
 Como ponto de partida, vamos começar com a mesma etapa do exercício anterior: criar uma matriz de espiral de pontos com o nó **Point.ByCoordinates**.
 
-![](../images/5-3/2/math-partIV-01.jpg)
+\![](../images/5-3/2/math-part IV-01.jpg)
 
 Em seguida, siga estas minietapas para gerar uma série de espirais em várias rotações.
 

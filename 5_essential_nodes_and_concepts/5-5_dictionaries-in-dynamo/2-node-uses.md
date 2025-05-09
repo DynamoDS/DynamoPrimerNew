@@ -18,7 +18,7 @@ O Dynamo 2.0 expõe uma variedade de nós de dicionário para serem usados. Iss
 
 5. `Dictionary.ValueAtKey` retornará o valor na chave de entrada.
 
-#### Contagem
+#### Consulta
 
 6. `Dictionary.Count` informará quantos pares de valores-chave estão no dicionário.
 

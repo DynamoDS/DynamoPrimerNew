@@ -51,7 +51,7 @@ Neste exemplo, vamos nos basear no nó personalizado criado no **“Estudo de ca
 
 ![Exemplo 1 de OnLogWarningMessage](images/onlogwarningmessage-example-1.png)
 
-##### Usar `OnLogWarningMessage` para validação de entrada <a href="#using-onlogwarningmessage-for-input-validation" id="using-onlogwarningmessage-for-input-validation"></a>
+**Usar `OnLogWarningMessage` para validação de entrada**
 
 Quando gerar uma grade com base em `xCount` e `yCount`. Recomenda-se garantir que os dois valores sejam inteiros positivos antes de continuar.
 
@@ -73,7 +73,7 @@ Neste exemplo:
 * **Condição**: se `xCount` ou `yCount` for menor ou igual a zero.
 * **Mensagem**: `"Grid count values must be positive integers."`
 
-O aviso será mostrado no Dynamo se um usuário inserir valores zero ou negativos, ajudando-os a entender a entrada esperada. 
+O aviso será mostrado no Dynamo se um usuário inserir valores zero ou negativos, ajudando-os a entender a entrada esperada.
 
 Agora que sabemos como é, podemos implementá-lo no nó de exemplo Grades:
 
@@ -133,7 +133,7 @@ namespace CustomNodes
 }
 ```
 
-##### Exemplo 2: Verificar coleções nulas ou vazias <a href="#example-2-checking-for-null-or-empty-collections" id="example-2-checking-for-null-or-empty-collections"></a>
+**Exemplo 2: verificar coleções nulas ou vazias**
 
 Se o método exigir uma lista de pontos, mas um usuário passar uma lista vazia ou nula, será possível usar `OnLogWarningMessage` para informá-lo sobre o problema.
 
@@ -158,9 +158,9 @@ Neste exemplo:
 
 Avisa aos usuários que eles precisam passar por uma lista válida com pelo menos três pontos para formar um polígono.
 
----
+***
 
-##### Exemplo 3: Verificar a compatibilidade de tipo de arquivo <a href="#example-3-verifying-file-type-compatibility" id="example-3-verifying-file-type-compatibility"></a>
+**Exemplo 3: verificar a compatibilidade de tipo de arquivo**
 
 Para um nó que processa caminhos de arquivo, pode ser necessário garantir que apenas determinados tipos de arquivo sejam permitidos. Se um tipo de arquivo sem suporte for detectado, registre um aviso.
 
@@ -190,6 +190,7 @@ Avisa os usuários para garantir que estão transmitindo um arquivo CSV, ajudand
 No Dynamo, o `OnLogInfoMessage` do namespace `DynamoServices` permite que os desenvolvedores registrem mensagens informativas diretamente no console do Dynamo. Isso é útil para confirmar operações bem-sucedidas, comunicar o progresso ou fornecer informações adicionais sobre as ações do nó. Este guia ensinará como adicionar `OnLogInfoMessage` em qualquer nó Sem Toque para aprimorar o feedback e a experiência do usuário.
 
 ### Etapas de implementação de `OnLogInfoMessage` <a href="#implementation-steps-for-onloginfomessage" id="implementation-steps-for-onloginfomessage"></a>
+
 #### Etapa 1: Importar o namespace necessário <a href="#step-1-import-the-required-namespace" id="step-1-import-the-required-namespace"></a>
 
 `OnLogInfoMessage` faz parte do namespace `DynamoServices`, por isso, comece adicionando-o ao arquivo do projeto.
@@ -227,7 +228,7 @@ Neste exemplo, vamos nos basear no nó personalizado criado no **“Estudo de ca
 
 ![Exemplo 1 de OnLogInfoMessage](images/onloginfomessage-example-1.png)
 
-###### Usar `OnLogInfoMessage` para validação de entrada <a href="#using-onloginfomessage-for-unput-validation" id="using-onloginfomessage-for-unput-validation"></a>
+**Usar `OnLogInfoMessage` para validação de entrada**
 
 Quando gerar uma grade com base em `xCount` e `yCount`. Depois de gerar a grade, recomenda-se confirmar sua criação registrando uma mensagem informativa com as dimensões da grade.
 
@@ -334,7 +335,6 @@ Neste exemplo:
 
 Essa mensagem ajudará os usuários a entender o resultado do processamento e confirmar que todos os pontos foram processados.
 
-
 #### Exemplo 3: Resumir os parâmetros usados <a href="#example-3-summarizing-parameters-used" id="example-3-summarizing-parameters-used"></a>
 
 Em alguns casos, é útil confirmar os parâmetros de entrada de um nó usado para concluir uma ação. Por exemplo, se o nó exportar dados para um arquivo, o registro do nome e do caminho do arquivo poderá tranquilizar os usuários de que o arquivo correto foi usado.
@@ -362,24 +362,31 @@ Essa mensagem confirma aos usuários que a exportação funcionou e mostra o cam
 ## Criar e adicionar documentação personalizada a nós
 
 ### Documentação personalizada dos nós
+
 Historicamente, houve limitações no Dynamo de como os autores de pacotes poderiam fornecer documentação para seus nós. Os autores dos nós personalizados foram restritos a permitir apenas uma breve descrição que é exibida na dica de ferramenta do nó ou a enviar seu pacote com gráficos de amostra muito anotados.
 
 ![Descrição da dica de ferramenta do nó](images/customnodedocumentation-overloads.png)
 
 ### Um novo modo
-O Dynamo agora oferece um sistema melhorado para os autores de pacotes a fim de fornecer uma documentação melhor e mais explicativa para seus nós personalizados. Essa nova abordagem usa a linguagem Markdown fácil de usar para criação de texto e a extensão de vista do Navegador de documentação para exibir o Markdown no Dynamo. O uso de Markdown oferece aos autores de pacotes uma ampla gama de novas possibilidades ao documentar seus nós personalizados. 
+
+O Dynamo agora oferece um sistema melhorado para os autores de pacotes a fim de fornecer uma documentação melhor e mais explicativa para seus nós personalizados. Essa nova abordagem usa a linguagem Markdown fácil de usar para criação de texto e a extensão de vista do Navegador de documentação para exibir o Markdown no Dynamo. O uso de Markdown oferece aos autores de pacotes uma ampla gama de novas possibilidades ao documentar seus nós personalizados.
 
 #### O que é o Markdown?
+
 Markdown é uma linguagem de marcação leve que você pode usar para formatar documentos de texto sem formatação. Desde que o Markdown foi criado em 2004, sua popularidade só aumentou e agora é uma das linguagens de marcação mais usadas no mundo.
 
 #### Guia de Introdução ao Markdown
+
 É fácil começar a fazer arquivos Markdown – tudo o que você precisa é de um editor de texto simples, como o Bloco de notas, e você está pronto para começar. No entanto, há maneiras mais fáceis de escrever com Markdown do que usando o Bloco de notas. Existem vários editores on-line, como o [Dillinger](https://dillinger.io/), que permitem que você veja suas alterações em tempo real à medida que as faz. Outra forma muito usada de editar arquivos Markdown é usando um editor de código como o [Visual Studio Code](https://code.visualstudio.com/).
 
 #### O que o Markdown pode fazer?
-O Markdown é muito flexível e deve fornecer funcionalidade suficiente para criar facilmente uma boa documentação – isso inclui; adicionar arquivos de mídia como imagens ou vídeos, criar tabelas com diferentes formas de conteúdo e, claro, recursos de formatação de texto simples, como deixar o texto em **negrito** ou *itálico*. Tudo isso e muito mais é possível ao escrever documentos com Markdown. Para obter mais informações, veja este guia que explica a [sintaxe básica do Markdown](https://www.Markdownguide.org/basic-syntax/).
+
+O Markdown é muito flexível e deve fornecer funcionalidade suficiente para criar facilmente uma boa documentação – isso inclui; adicionar arquivos de mídia como imagens ou vídeos, criar tabelas com diferentes formas de conteúdo e, claro, recursos de formatação de texto simples, como deixar o texto em **negrito** ou _itálico_. Tudo isso e muito mais é possível ao escrever documentos com Markdown. Para obter mais informações, veja este guia que explica a [sintaxe básica do Markdown](https://www.markdownguide.org/basic-syntax/).
 
 ### Adicionar documentação estendida aos nós
+
 É fácil adicionar documentação aos nós. É possível adicionar documentação a todos os tipos de nós personalizados, incluindo:
+
 * Nós de Dynamo prontos para uso
 * Nós personalizados (.dyf) – Coleções de nós prontos para uso e/ou outros nós de pacote.
 * Nós de pacote C# personalizados (também conhecidos como Zerotouch. Esses nós personalizados se parecem com os nós prontos para uso)
@@ -389,6 +396,7 @@ O Markdown é muito flexível e deve fornecer funcionalidade suficiente para cri
 Siga estas etapas para exibir os arquivos Markdown no Dynamo.
 
 #### Abrir arquivos de documentação no Dynamo
+
 O Dynamo usa a extensão de vista do Navegador de documentação para exibir a documentação dos nós. Para abrir uma documentação de nós, clique com o botão direito do mouse no nó e selecione ajuda. Isso abrirá o Navegador de documentação e exibirá o Markdown associado a esse nó, se algum for fornecido.
 
 ![Navegação de documentação](images/customnodedocumentation-no-documentation-provided.png)
@@ -398,10 +406,12 @@ A documentação exibida no Navegador de documentação é composta de duas part
 ![Documentação personalizada do nó](images/customnodedocumentation-custom-node-documentation.png)
 
 #### Pasta doc do pacote
+
 Para adicionar arquivos de documentação aos nós no Dynamo, crie uma nova pasta no diretório de pacotes chamado `/doc`. Quando o pacote for carregado, o Dynamo verificará esse diretório e obterá todos os arquivos Markdown de documentação nele.
 
 #### Nomenclatura dos arquivos Markdown
-Para garantir que o Dynamo saiba qual arquivo abrir quando um nó específico for solicitado, a nomenclatura do arquivo Markdown precisará estar em um formato específico. O arquivo Markdown deve ser nomeado de acordo com o nó que o namespace documenta. Se você não tiver certeza do namespace do nó, examine a seção `Node Info` quando pressionar `Help` no nó e, no nome do nó, você verá o namespace completo do nó selecionado. 
+
+Para garantir que o Dynamo saiba qual arquivo abrir quando um nó específico for solicitado, a nomenclatura do arquivo Markdown precisará estar em um formato específico. O arquivo Markdown deve ser nomeado de acordo com o nó que o namespace documenta. Se você não tiver certeza do namespace do nó, examine a seção `Node Info` quando pressionar `Help` no nó e, no nome do nó, você verá o namespace completo do nó selecionado.
 
 Esse namespace deve ser o nome do arquivo Markdown desse nó específico. Por exemplo, o namespace de `CustomNodeExample` das imagens acima, é `TestPackage.TestCategory.CustomNodeExample`, portanto, o arquivo Markdown para esse nó deve ser nomeado `TestPackage.TestCategory.CustomNodeExample.md`
 
@@ -410,7 +420,8 @@ Em casos especiais em que você tem sobrecargas de nós (nós com o mesmo nome, 
 ![Nós de sobrecarga](images/customnodedocumentation-overloads.png)
 
 #### Modificar arquivos Markdown enquanto abertos no Dynamo
-Para facilitar a modificação de arquivos de documentação, o Navegador de documentação implementa um Inspetor de arquivos no arquivo de documentação aberto. Isso permite fazer alterações no arquivo Markdown e ver as alterações no Dynamo instantaneamente. 
+
+Para facilitar a modificação de arquivos de documentação, o Navegador de documentação implementa um Inspetor de arquivos no arquivo de documentação aberto. Isso permite fazer alterações no arquivo Markdown e ver as alterações no Dynamo instantaneamente.
 
 ![Recarga dinâmica](images/customnodedocumentation-hot-reload.gif)
 
@@ -424,7 +435,6 @@ Os ícones personalizados para nós Sem toque no Dynamo tornam os nós visualmen
 
 Este guia mostrará como adicionar ícones aos nós Sem Toque.
 
-
 ### Etapas para adicionar ícones de nós personalizados
 
 #### Etapa 1: Configurar o projeto
@@ -437,19 +447,18 @@ Para começar, crie um projeto de biblioteca de classes do Visual Studio (.NET F
 
 Certifique-se de ter pelo menos um nó Sem toque funcional, pois os ícones só podem ser adicionados aos nós existentes. Para obter orientação, consulte o **Estudo de caso do nó Sem toque - Nó de grade**.
 
-
 #### Etapa 2: Criar as imagens dos ícones
 
 Para criar ícones personalizados:
 
 1. **Criar os ícones**: use um editor de imagem para criar ícones simples e visualmente claros para os nós.
 2. **Especificações das imagens**:
-    * **Ícone pequeno**: 32 x 32 pixels (usado na barra lateral da Biblioteca e no próprio nó).
-    * **Ícone grande**: 128 x 128 pixels (usado nas propriedades do nó ao passar o cursor sobre o nó na biblioteca).
+   * **Ícone pequeno**: 32 x 32 pixels (usado na barra lateral da Biblioteca e no próprio nó).
+   * **Ícone grande**: 128 x 128 pixels (usado nas propriedades do nó ao passar o cursor sobre o nó na biblioteca).
 3. **Convenção de nomenclatura**:
-    * Os nomes de arquivo devem coincidir com o formato abaixo para associá-los ao nó correto:
-        * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (para o ícone pequeno).
-        * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (para o ícone grande).
+   * Os nomes de arquivo devem coincidir com o formato abaixo para associá-los ao nó correto:
+     * **`<ProjectName>.<ClassName>.<MethodName>.Small.png`** (para o ícone pequeno).
+     * **`<ProjectName>.<ClassName>.<MethodName>.Large.png`** (para o ícone grande).
 
 **Exemplo**: se o projeto for `ZeroTouchNodeIcons`, a classe for `Grids` e o método for `RectangularGrid`, os arquivos deverão ser nomeados:
 
@@ -458,49 +467,47 @@ Para criar ícones personalizados:
 
 > Dica: Mantenha um tema de design consistente em todos os ícones para obter uma aparência profissional.
 
-
 #### Etapa 3: Adicionar um arquivo de recursos ao projeto
 
 Para incorporar os ícones no `.dll`, crie um arquivo de recursos:
 
 1. **Adicionar um novo arquivo de recursos**:
 
-  * Clique com o botão direito do mouse no projeto no **Gerenciador de soluções**.
+* Clique com o botão direito do mouse no projeto no **Gerenciador de soluções**.
 
 ![Adicionar um novo item](images/zerotouchicons-add-resources-file-1.jpg)
 
-  * Acesse **Adicionar > Novo item** e selecione **Arquivo de recursos**.
+* Acesse **Adicionar > Novo item** e selecione **Arquivo de recursos**.
 
 ![Adicionar um arquivo de recursos](images/zerotouchicons-add-resources-file-2.jpg)
 
-  * Nomeie o arquivo `<ProjectName>Images.resx`. Por exemplo, `ZeroTouchNodeIconsImages.resx`.
+* Nomeie o arquivo `<ProjectName>Images.resx`. Por exemplo, `ZeroTouchNodeIconsImages.resx`.
 
 2. **Desmarque a propriedade Ferramenta personalizada**:
-    * Selecione o arquivo de recursos no **Gerenciador de soluções**.
-    * No painel **Propriedades**, limpe o campo `Custom Tool` removendo o valor `ResXFileCodeGenerator`.
+   * Selecione o arquivo de recursos no **Gerenciador de soluções**.
+   * No painel **Propriedades**, limpe o campo `Custom Tool` removendo o valor `ResXFileCodeGenerator`.
 
 ![Limpar a propriedade Ferramenta personalizada](images/zerotouchicons-custom-tool-property.jpg)
 
-> *Observação: Não limpar o campo “Ferramenta personalizada” fará com que o Visual Studio converta os pontos em sublinhados nos nomes de recurso. Verifique antes de construir se os nomes dos recursos têm pontos separando os nomes de classe em vez de sublinhados.*
-
+> _Observação: Não limpar o campo “Ferramenta personalizada” fará com que o Visual Studio converta os pontos em sublinhados nos nomes de recurso. Verifique antes de construir se os nomes dos recursos têm pontos separando os nomes de classe em vez de sublinhados._
 
 #### Etapa 4: Adicionar as imagens como recursos
 
 1. Abra o arquivo de recursos usando o **Editor de recursos gerenciados (herdado)**:
-    * Se estiver usando o Visual Studio 17.11 ou posterior, clique com o botão direito do mouse no arquivo de recursos, escolha **Abrir com** e selecione **Editor de recursos gerenciados (herdado)**.
-    * Se estiver usando uma versão do Visual Studio anterior à 17.11, clique duas vezes no arquivo de recursos para abrir com o Editor de recursos (que em sua versão do Visual Studio ainda não foi tornada herdada).
+   * Se estiver usando o Visual Studio 17.11 ou posterior, clique com o botão direito do mouse no arquivo de recursos, escolha **Abrir com** e selecione **Editor de recursos gerenciados (herdado)**.
+   * Se estiver usando uma versão do Visual Studio anterior à 17.11, clique duas vezes no arquivo de recursos para abrir com o Editor de recursos (que em sua versão do Visual Studio ainda não foi tornada herdada).
 
 ![Usar Abrir com...](images/zerotouchicons-open-resource-editor.jpg)
 
 ![Abrir o arquivo de recursos com o Editor de recursos gerenciados (herdado)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. Adicione as imagens:
-    * Arraste e solte os arquivos de imagem no editor ou use a opção **Adicionar arquivo existente**.
+   * Arraste e solte os arquivos de imagem no editor ou use a opção **Adicionar arquivo existente**.
 
 ![Adicionar arquivos existentes](images/zerotouchicons-add-existing-file.jpg)
 
 3. Atualize a persistência:
-    * Selecione as imagens no Editor de recursos (isso não funcionará se forem selecionadas no Gerenciador de soluções), altere a propriedade **Persistência** no painel **Propriedades** para `Embedded in .resx`. Isso garante que as imagens sejam incluídas no `.dll`.
+   * Selecione as imagens no Editor de recursos (isso não funcionará se forem selecionadas no Gerenciador de soluções), altere a propriedade **Persistência** no painel **Propriedades** para `Embedded in .resx`. Isso garante que as imagens sejam incluídas no `.dll`.
 
 ![Atualizar a persistência](images/zerotouchicons-edit-persistence-property.jpg)
 
@@ -524,16 +531,15 @@ Se o projeto ainda não estiver no estilo SDK (necessário para incorporar recur
 
 ![Atualização concluída](images/zerotouchicons-upgrade-complete.jpg)
 
-
 #### Etapa 6: Adicionar um script After-Build para incorporar recursos
 
 1. Descarregue o projeto:
-    * Clique com o botão direito do mouse no projeto no **Gerenciador de soluções** e selecione **Descarregar projeto**.
+   * Clique com o botão direito do mouse no projeto no **Gerenciador de soluções** e selecione **Descarregar projeto**.
 
 ![Descarregar o projeto](images/zerotouchicons-unload-project.jpg)
 
 2. Edite o arquivo `.csproj`:
-    * Adicione o seguinte elemento `<Target>` entre `</ItemGroup>` e `</Project>`:
+   * Adicione o seguinte elemento `<Target>` entre `</ItemGroup>` e `</Project>`:
 
 ```
 <Target Name="CreateNodeIcons" AfterTargets="PostBuildEvent">
@@ -550,25 +556,26 @@ Se o projeto ainda não estiver no estilo SDK (necessário para incorporar recur
 		<AL SdkToolsPath="$(TargetFrameworkSDKToolsDirectory)" TargetType="library" EmbedResources="$(ProjectDir)ZeroTouchNodeIconsImages.resources" OutputAssembly="$(OutDir)ZeroTouchNodeIcons.customization.dll" Version="%(AssemblyInfo.Version)" />
 	</Target>
 ```
+
 ![Adicionar o código After-Build](images/zerotouchicons-after-build.jpg)
+
 1. Substitua todas as instâncias de `ZeroTouchNodeIcons` pelo nome do projeto.
 2. Recarregue o projeto:
-    * Clique com o botão direito do mouse no projeto descarregado e selecione **Recarregar projeto**.
+   * Clique com o botão direito do mouse no projeto descarregado e selecione **Recarregar projeto**.
 
 ![Recarregar o projeto](images/zerotouchicons-reload-project.jpg)
-
 
 #### Etapa 7: Construir e carregar o .dll no Dynamo
 
 1. Construir o projeto:
-    * Depois de adicionar o script After-Build, construa o projeto no Visual Studio.
+   * Depois de adicionar o script After-Build, construa o projeto no Visual Studio.
 
 ![Construir a solução](images/zerotouchicons-build-solution.jpg)
 
 2. Verifique os arquivos de saída:
-    * Verifique se o `.dll` e o `.customization.dll` estão na pasta `bin`.
+   * Verifique se o `.dll` e o `.customization.dll` estão na pasta `bin`.
 3. Adicione o `.dll` ao Dynamo:
-    * No Dynamo, use o botão Importar biblioteca para importar o .dll para o Dynamo.
+   * No Dynamo, use o botão Importar biblioteca para importar o .dll para o Dynamo.
 
 ![Botão Importar biblioteca](images/zerotouchicons-icon-in-dynamo.jpg)
 
