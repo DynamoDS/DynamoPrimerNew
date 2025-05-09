@@ -1,49 +1,41 @@
 # Dynamo 命令行界面
 
-***
-      -o, -O, --OpenFilePath        Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox
-***
-      -c, -C, --CommandFilePath     Instruct Dynamo to open a command file and run the commands it contains at 
-                                    this path, this option is only supported when run from DynamoSandbox                      
-***
-      -v, -V, --Verbose             Instruct Dynamo to output all evaluations it performs to an XML file at this path
-***                                        
-      -g, -G, --Geometry            Instruct Dynamo to output geometry from all evaluations to a JSON file at this path
-***
-      -h, -H, --help                Get some help
-***
-      -i, -I, --Import              Instruct Dynamo to import an assembly as a node library. This argument should be a 
-                                    file path to a single.dll - if you wish to import multiple dlls - list the dlls 
-                                    separated by a space: -i 'assembly1.dll' 'assembly2.dll'
-***
-      --GeometryPath                Relative or absolute path to a directory containing ASM. When supplied, instead of 
-                                    searching the hard disk for ASM, it will be loaded directly from this path
-***
-      -k, -K, --KeepAlive           Keepalive mode, leave the Dynamo process running until a loaded extension shuts it 
-                                    down
-***
-      --HostName                    Identify Dynamo variation associated with the host
-***
-      -s, -S, --SessionId           Identify Dynamo host analytics session id
-***
-      -p, -P, --ParentId            Identify Dynamo host analytics parent id
-***
-      -x, -X, --ConvertFile         When used in combination with the 'O' flag, opens a .dyn file from the specified 
-                                    path and converts it to .json. The file will have the .json extension and be 
-                                    located in the same directory as the original file
-***
-      -n, -N, --NoConsole           Don't rely on the console window to interact with CLI in Keepalive mode
-***
-      -u, -U  --UserData            Specify user data folder to be used by PathResolver with CLI
-***
-      --CommonData                  Specify common data folder to be used by PathResolver with CLI
-***
-      --DisableAnalytics            Disables analytics in Dynamo for the process lifetime
-***
-      --CERLocation                 Specify the crash error report tool located on the disk
-***
-      --ServiceMode                 Specify the service mode startup
+`-o, -O, --OpenFilePath` 指示 Dynamo 打开命令文件并运行它在此路径中包含的命令。仅当从 DynamoSandbox 运行时，才支持此选项。  
+
+`-c, -C, --CommandFilePath` 指示 Dynamo 打开命令文件并运行它在此路径中包含的命令。仅当从 DynamoSandbox 运行时，才支持此选项。  
+
+`-v, -V, --Verbose` 指示 Dynamo 将其执行的所有评估输出到指定路径处的 XML 文件。  
+
+`-g, -G, --Geometry` 指示 Dynamo 将所有计算中的几何图形输出到此路径上的 JSON 文件。  
+
+`-h, -H, --help` 获得一些帮助。  
+
+`-i, -I, --Import` 指示 Dynamo 将部件作为节点库输入。此参数应该是通向单个 `.dll` 的文件路径。如果要导入多个 `.dlls`，请用空格分隔列出它们：`-i 'assembly1.dll' 'assembly2.dll'`。  
+
+`--GeometryPath` 包含 ASM 的目录的相对或绝对路径。提供后，系统不会在硬盘中搜索 ASM，而是直接从此路径加载。  
+
+`-k, -K, --KeepAlive` Keepalive 模式，使 Dynamo 进程保持运行状态，直到加载的扩展将其关闭。  
+
+`--HostName` 确定与主机关联的 Dynamo 变化。  
+
+`-s, -S, --SessionId` 确定 Dynamo 主机分析会话 ID。  
+
+`-p, -P, --ParentId` 标识 Dynamo 主机分析父对象 ID。  
+
+`-x, -X, --ConvertFile` 与 `-O` 标志结合使用时，将从指定路径打开 `.dyn` 文件并将其转换为 `.json`。文件将具有 `.json` 扩展名，并与原始文件位于同一目录中。  
+
+`-n, -N, --NoConsole` 不要依赖控制台窗口在 Keepalive 模式下与 CLI 交互。  
+
+`-u, -U, --UserData` 使用 CLI 指定 PathResolver 要使用的用户数据文件夹。  
+
+`--CommonData` 使用 CLI 指定 PathResolver 要使用的公共数据文件夹。  
+
+`--DisableAnalytics` 在进程使用寿命内禁用 Dynamo 中的分析。  
+
+`--CERLocation` 指定位于磁盘上的崩溃错误报告工具。  
+
+`--ServiceMode` 指定服务模式启动。  
+
 
 
 #### 原因 
@@ -66,7 +58,7 @@
 
 可以通过 DynamoCLI.exe 应用程序访问 CLI。此应用程序允许用户或其他应用程序通过使用命令字符串调用 DynamoCLI.exe 与 Dynamo 评估模型进行交互。这可能如下所示：
  
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
+ `C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
  
 此命令将告知 Dynamo 在 *“C：\\someReallyCoolDynamoFile.Dyn”* 打开指定的文件，而不绘制任何 UI，然后运行它。图形完成运行后，Dynamo 将退出。 
 
@@ -84,13 +76,13 @@
 #### 方法
 
 `-o` 您可以在将运行图形的无头模式下打开指向 .dyn 的 Dynamo。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn"`
+
 `-v` 当 Dynamo 在无头模式下运行时（当我们已使用 `-o` 打开文件时）可以使用，此标志将迭代图表中的所有节点，并将其输出值转储为简单的 XML 文件。由于 `--ServiceMode` 标志可以强制 Dynamo 运行多个图表解算，因此输出文件将保存发生的每个解算的值。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -p "C:\aFileWithPresetsInIt.dyn" --ServiceMode "all" -v "C:\output.xml"`
+
         
 XML 输出文件的格式如下：
 ``` XML
@@ -120,52 +112,49 @@ XML 输出文件的格式如下：
     </evaluations>
 ```
 `-g` 当 Dynamo 在无头模式下运行时（当我们已使用 `-o` 打开文件时）可以使用，此标志将生成图表，然后将生成的几何图形转储为 JSON 文件。 
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"
-```  
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoWPFCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -g "C:\geometry.json"`
+  
 JSON 几何图形文件将具有以下形式：
-```
- TBD - Work in progress
-```
+
+ 待定 - 正在处理中
+
 `-h` 使用此项可获取可能选项的列表
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -h`
+
 -i 标志可以多次使用，以导入尝试打开的图形需要运行的多个部件。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -i"a.dll" -i"aSecond.dll"`
 
 -l 标志可用于在不同的区域设置下运行 Dynamo。但通常，区域设置不会影响图表结果
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -o "C:\someReallyCoolDynamoFile.Dyn" -l "de-DE"`
 
 --GeometryPath 标志可用于将 DynamoSandbox 或 CLI 指向特定的 ASM 二进制文件集 - 像这样使用
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
 
 或
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --GeometryPath "\pathToGeometryBinaries\"`
+
 -k 标志可用于使 Dynamo 进程保持运行状态，直到载入的扩展将其关闭。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -k`
+
 --HostName 标志可用于标识与主机关联的 Dynamo 变体。
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe --HostName "DynamoFormIt"`
+
 或
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoSandbox.exe --HostName "DynamoFormIt"`
+
 -s 标志可用于标识 Dynamo 主机分析会话 ID
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]
-```
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -s [HostSessionId]`
+
 -p 标志可用于标识 Dynamo 主机分析父对象 ID
-```
-    C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"
+
+`C:\Program Files\Dynamo\Dynamo Core\[Dynamo Version]\DynamoCLI.exe -p "RVT&2022&MUI64&22.0.2.392"`

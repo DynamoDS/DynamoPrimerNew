@@ -1,4 +1,4 @@
-# 为适用于 Revit 的 Dynamo 开发
+# 为 Dynamo For Revit 开发
 
 ## 在 `GeometryPrimitiveConverter.cs` 中使用方法
 
@@ -11,7 +11,7 @@ DynamoRevit 代码库中的 [GeometryPrimitiveConverter](https://github.com/Dyna
 1. **Proto 到 Revit 类型**：将 Dynamo (Proto) 类型转换为 Revit 类型的方法。
 2. **Revit 到 Proto 类型**：将 Revit 类型转换为 Dynamo (Proto) 类型的方法。
 3. **度数和弧度**：在度数和弧度之间转换的方法。
-4. **X 和 UZ**：用于获取垂直向量的方法。 
+4. **X 和 UZ**：用于获取垂直向量的方法。
 
 ### 原型到 Revit 类型
 
@@ -19,10 +19,7 @@ DynamoRevit 代码库中的 [GeometryPrimitiveConverter](https://github.com/Dyna
 
 从 Dynamo 坐标系和两个定义点（最小值和最大值）创建 Revit BoundingBoxXYZ。
 
-`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox(
-            Autodesk.DesignScript.Geometry.CoordinateSystem cs,
-            Autodesk.DesignScript.Geometry.Point minPoint,
-            Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
+`public static Autodesk.Revit.DB.BoundingBoxXYZ ToRevitBoundingBox( Autodesk.DesignScript.Geometry.CoordinateSystem cs, Autodesk.DesignScript.Geometry.Point minPoint, Autodesk.DesignScript.Geometry.Point maxPoint, bool convertUnits = true)`
 
 #### ToRevitType (BoundingBox)
 
@@ -44,7 +41,7 @@ convertUnits 标志（默认为 true）在必要时转换坐标。
 
 将 Dynamo 向量转换为 Revit XYZ。
 
-请注意，convertUnits 标志默认为 false，因为向量表示方向和大小，而这通常不需要单位转换。转换可能会影响向量的方向和长度。 
+请注意，convertUnits 标志默认为 false，因为向量表示方向和大小，而这通常不需要单位转换。转换可能会影响向量的方向和长度。
 
 `public static Autodesk.Revit.DB.XYZ ToRevitType(this Vector vec, bool convertUnits = false)`
 
@@ -58,7 +55,7 @@ convertUnits 标志（默认为 true）在必要时转换坐标。
 
 将 Dynamo 向量转换为 Revit XYZ。
 
-请注意，convertUnits 标志默认为 false，因为向量表示方向和大小，而这通常不需要单位转换。转换可能会影响向量的方向和长度。 
+请注意，convertUnits 标志默认为 false，因为向量表示方向和大小，而这通常不需要单位转换。转换可能会影响向量的方向和长度。
 
 `public static Autodesk.Revit.DB.XYZ ToXyz(this Vector vec, bool convertUnits = false)`
 
@@ -108,9 +105,9 @@ convertUnits 标志（默认为 true）在必要时转换坐标。
 
 #### 使用原型到 Revit 类型的示例
 
-此示例显示了一种快捷方法，用于使用 .ToXyz（点）方法将 Dynamo Point.ByCoordinates 转换为 Revit XYZ。 
+此示例显示了一种快捷方法，用于使用 .ToXyz（点）方法将 Dynamo Point.ByCoordinates 转换为 Revit XYZ。
 
-![将 Dynamo Point.ByCoordinates 转换为 Revit XYZ](images/dynamo-point-to-revit-xyz.png)
+![将 Dynamo Point.ByCoordinates 转换为 Revit XYZ](Images/dynamo-point-to-revit-xyz.png)
 
 ```
 # Load the Python Standard and DesignScript Libraries
@@ -136,8 +133,6 @@ revit_point = dyn_point.ToXyz()
 OUT = revit_point
 
 ```
-
-
 
 ### Revit 到原型类型
 
@@ -191,9 +186,9 @@ OUT = revit_point
 
 #### 使用 Revit 到原型类型的示例
 
-此示例显示了一种快捷方法，用于使用 .ToPoint (XYZ) 方法将 Revit XYZ 转换为 Dynamo 点。 
+此示例显示了一种快捷方法，用于使用 .ToPoint (XYZ) 方法将 Revit XYZ 转换为 Dynamo 点。
 
-![将 Revit XYZ 转换为 Dynamo Point.ByCoordinates](images/revit-xyz-to-dynamo-point.png)
+![将 Revit XYZ 转换为 Dynamo Point.ByCoordinates](Images/revit-xyz-to-dynamo-point.png)
 
 ```
 import sys
@@ -224,25 +219,19 @@ OUT = revit_point
 
 将度转换为弧度。
 
-`public static double ToRadians(this double degrees)
-{
-    return degrees * Math.PI / 180.0;
-}`
+`public static double ToRadians(this double degrees) { return degrees * Math.PI / 180.0; }`
 
 #### ToDegrees
 
 将弧度转换为度。
 
-`public static double ToDegrees(this double degrees)
-{
-    return degrees * 180.0 / Math.PI;
-}`
+`public static double ToDegrees(this double degrees) { return degrees * 180.0 / Math.PI; }`
 
 #### 度和弧度的使用示例
 
-此示例显示了一种快捷方法，用于使用 .ToRadians 方法从度转换为弧度。 
+此示例显示了一种快捷方法，用于使用 .ToRadians 方法从度转换为弧度。
 
-![将度转换为弧度](images/degrees-to-radians.png)
+![将度转换为弧度](Images/degrees-to-radians.png)
 
 ```
 import sys
@@ -266,25 +255,26 @@ radian_angle = Revit.GeometryConversion.GeometryPrimitiveConverter.ToRadians(deg
 # Output
 OUT = radian_angle
 ```
+
 ### X 和 UZ
 
 #### GetPerpendicular (XYZ)
 
 此方法返回给定 `XYZ` 向量的垂直 `XYZ` 向量。
 
-` public static XYZ GetPerpendicular(this XYZ xyz)`
+`public static XYZ GetPerpendicular(this XYZ xyz)`
 
 #### GetPerpendicular (Vector)
 
 此方法返回给定 Dynamo `Vector` 的垂直 Dynamo `Vector`。
 
-` public static Vector GetPerpendicular(this Vector vector)`
+`public static Vector GetPerpendicular(this Vector vector)`
 
 #### X 和 UZ 的使用示例
 
-此示例显示了一种快捷方法，用于使用 .GetPerpendicular 方法获取输入向量的垂直向量。 
+此示例显示了一种快捷方法，用于使用 .GetPerpendicular 方法获取输入向量的垂直向量。
 
-![获取垂直向量](images/get-perpendicular-vector.png)
+![获取垂直向量](Images/get-perpendicular-vector.png)
 
 ```
 import clr

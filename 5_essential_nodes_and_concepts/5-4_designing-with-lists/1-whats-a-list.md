@@ -4,9 +4,9 @@
 
 列表是元素或项目的集合。以一串香蕉为例。每个香蕉都是列表（或串）中的一个项目。拾取一串香蕉比单独拾取每个香蕉要容易得多，同样适用于通过数据结构中的参数化关系对元素进行分组。
 
-![香蕉](../images/5-4/1/Bananas\_white\_background\_DS.jpg)
+![香蕉](../images/5-4/1/Bananas_white_background_DS.jpg)
 
-> 照片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas\_white\_background\_DS.jpg?fastcci\_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 提供。
+> 照片由 [Augustus Binu](https://commons.wikimedia.org/wiki/File:Bananas_white_background_DS.jpg?fastcci_from=11404890\&c1=11404890\&d1=15\&s=200\&a=list) 提供。
 
 当我们购买生活用品时，我们会将所有购买物品放入一个袋子中。这个袋子也是一个列表。如果我们要制作香蕉面包，需要 3 束香蕉（我们要制作 _许多_ 香蕉面包）。袋子表示一列香蕉串，每串表示一列香蕉。袋子是一列列表（二维），香蕉串是一个列表（一维）。
 
@@ -86,6 +86,7 @@ Dynamo 节点会自动识别何时使用列表，并在多个图元之间应用�
 主要有两种方法：
 
 #### 笛卡尔复制
+
 假设您在厨房里制作果汁。您有一个水果清单：`{apple, orange, pear}` 和每种果汁的固定量的水：`1 cup`。您想用每种水果制作果汁，用相同量的水。在这种情况下，笛卡尔复制开始发挥作用。
 
 在 Dynamo 中，这意味着将水果清单输入到 Juice.Maker 节点的水果输入，而水输入保持不变，为 1 杯。然后，该节点单独处理每个水果，将其与固定量的水混合。结果为：
@@ -95,6 +96,7 @@ Dynamo 节点会自动识别何时使用列表，并在多个图元之间应用�
 每个水果都与相同数量的水配对。
 
 #### Zip 复制
+
 Zip 复制的工作方式略有不同。如果您有两个列表，一个用于水果：`{apple, orange, pear}`，另一个用于糖量：`{2 tbsp, 3 tbsp, 1 tbsp}`，Zip 复制将合并每个列表中的相应项目。例如：
 
 `apple juice with 2 tablespoons of sugar` `orange juice with 3 tablespoons of sugar` `pear juice with 1 tablespoon of sugar`
