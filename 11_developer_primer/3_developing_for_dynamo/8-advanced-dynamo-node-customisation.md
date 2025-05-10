@@ -499,7 +499,7 @@ Dynamo の Zero-Touch ノードのカスタム アイコンを使用すると、
 
 ![[開く...]を使用する](images/zerotouchicons-open-resource-editor.jpg)
 
-[![リソース エディタを管理(旧式)]でリソース ファイルを開く](images/zerotouchicons-managed-resource-editor-legacy.jpg)
+![リソース エディタを管理(旧式)でリソース ファイルを開く](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. 画像を追加します。
    * イメージ ファイルをエディタにドラッグしてドロップするか、[**既存のファイルを追加**]オプションを使用します。
