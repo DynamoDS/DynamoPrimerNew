@@ -389,7 +389,7 @@ Přidání dokumentace k uzlům je snadné. Dokumentaci lze přidat do všech v
 
 * Přednastavené uzly aplikace Dynamo.
 * Vlastní uzly (.dyf) – kolekce předem připravených uzlů nebo uzlů jiných balíčků.
-* Vlastní uzly balíčků v jazyce C#. (Označované také jako uzly Zero Touch. Tyto vlastní uzly vypadají jako předem připravené uzly.)
+* Vlastní uzly balíčků v jazyce C#. (Označované také jako uzly Zero Touch. Tyto vlastní uzly vypadají jako předem připravené uzly).
 * Uzly NodeModel (uzly, které obsahují speciální funkce uživatelského rozhraní, například rozevírací seznamy nebo tlačítka výběru).
 * Uzly NodeModel s vlastním uživatelským rozhraním (uzly, které obsahují jedinečné funkce uživatelského rozhraní, například grafiku na uzlu).
 

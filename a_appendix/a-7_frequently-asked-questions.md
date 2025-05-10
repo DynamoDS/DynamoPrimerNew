@@ -74,7 +74,7 @@ _Příklad ovládacích panelů NVIDIA:_
 
 V současné době následující moduly Dynamo používají komponentu WebView2: Prohlížeč dokumentace, Prohlídky s průvodcem a Knihovna. Abychom zajistili, že tyto části aplikace Dynamo správně zobrazují webový obsah, je nutné nainstalovat instalační program WebView2 Evergreen Runtime ( je třeba ověřit, zda je již v počítači nainstalován, nebo je třeba jej nainstalovat).
 
-Zde je odkaz pro instalaci WebView2 Runtime: [https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/cs-cz/microsoft-edge/webview2/?form=MA13LH#download-section)
+Zde je odkaz pro instalaci WebView2 Runtime: [https://developer.microsoft.com/cs-cz/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/cs-cz/microsoft-edge/webview2/?form=MA13LH#download-section)
 
 ![](images/a-7/dynamo-builds-7.png)
 

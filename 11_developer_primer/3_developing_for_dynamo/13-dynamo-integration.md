@@ -123,17 +123,17 @@ Výchozí cesta k nastavení předvoleb je řízena parametrem `PathManager.Pre
 * ConsoleHeight // Výška zobrazení konzole.
 * ShowPreviewBubbles // Označuje, zda se zobrazí bubliny náhledu.
 * ShowConnector // Označuje, zda se zobrazí konektory.
-* ConnectorType // Označuje typ konektoru: beziérova křivka nebo křivka
+* ConnectorType // Označuje typ konektoru: beziérova křivka nebo křivka.
 * BackgroundPreviews // Označuje aktivní stav zadaného náhledu na pozadí.
 * RenderPrecision // Úroveň přesnosti rendrování – nižší generuje sítě s menším počtem trojúhelníků. Vyšší přesnost vygeneruje hladší geometrii v náhledu na pozadí. Dobré číslo pro rychlé rendrování geometrie náhledu je 128.
 * ShowEdges // Označuje, zda budou rendrovány hrany povrchů a těles.
-* ShowDetailedLayout // NEPOUŽÍVANÉ
+* ShowDetailedLayout // NEPOUŽÍVANÉ.
 * WindowX, WindowY // Poslední souřadnice X, Y okna aplikace Dynamo.
 * WindowW, WindowH // Poslední šířka a výška okna aplikace Dynamo.
 * UseHardwareAcceleration // Aplikace Dynamo použije hardwarovou akceleraci, pokud je podporována.
 * NumberFormat // Přesnost na desetinná místa použitá k zobrazení čísel v bublině náhledu toString().
 * MaxNumRecentFiles // Maximální počet posledních cest k souborům, které mají být uloženy.
-* RecentFiles // Seznam cest k naposledy otevřených souborům. Změna tohoto nastavení přímo ovlivní seznam posledních souborů na úvodní stránce aplikace Dynamo
+* RecentFiles // Seznam cest k naposledy otevřených souborům. Změna tohoto nastavení přímo ovlivní seznam posledních souborů na úvodní stránce aplikace Dynamo.
 * BackupFiles // Seznam cest k záložním souborům.
 * CustomPackageFolders // Seznam složek obsahujících binární soubory Zero-Touch a cesty k adresářům, u kterých budou kontrolovány balíčky a vlastní uzly.
 * PackageDirectoriesToUninstall // Seznam balíčků, pomocí nichž nástroj Package Manager určuje, které balíčky jsou označeny k odstranění. Pokud je to možné, budou tyto cesty odstraněny během spuštění aplikace Dynamo.
@@ -142,7 +142,7 @@ Výchozí cesta k nastavení předvoleb je řízena parametrem `PathManager.Pre
 * BackupFilesCount // Označuje, kolik záloh bude vytvořeno.
 * PackageDownloadTouAccepted // Označuje, zda uživatel přijal podmínky používání pro stahování balíčků z nástroje Package Manager.
 * OpenFileInManualExecutionMode // Označuje výchozí stav zaškrtávacího políčka Otevřít v režimu ručního spuštění v dialogu pro otevření souboru.
-* NamespacesToExcludeFromLibrary //Určuje, které (pokud existují) jmenné prostory by se neměly zobrazovat v knihovně uzlů aplikace Dynamo. Formát řetězce: „[název knihovny]:[plně kvalifikovaný jmenný prostor]“
+* NamespacesToExcludeFromLibrary //Určuje, které (pokud existují) jmenné prostory by se neměly zobrazovat v knihovně uzlů aplikace Dynamo. Formát řetězce: „[název knihovny]:[plně kvalifikovaný jmenný prostor]“.
 
 Příklad nastavení serializovaných předvoleb:
 
@@ -684,7 +684,7 @@ Pokud je z nějakého důvodu nutné balíček také publikovat v nástroji Pa
 
 Tyto podadresáře jazykových verzí jsou bez problémů načítány modulem runtime .net, pokud se nacházejí ve stejném adresáři jako binární soubory uzlu nebo rozšíření.
 
-Další informace o sestavách prostředků a souborech .resx naleznete zde: [https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/cs-cz/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+Další informace o sestavách prostředků a souborech .resx naleznete zde: [https://docs.microsoft.com/cs-cz/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/cs-cz/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 Pravděpodobně budete vytvářet soubory `.resx` a kompilovat je pomocí aplikace Visual Studio. Pro danou sestavu `xyz.dll` budou výsledné prostředky zkompilovány do nové sestavy `xyz.resources.dll`. Jak je popsáno výše, důležité je umístění a název této sestavy.
 

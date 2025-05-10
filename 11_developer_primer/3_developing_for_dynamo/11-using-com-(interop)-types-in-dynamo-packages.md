@@ -2,7 +2,7 @@
 
 ## Obecné informace o typech interoperability
 
-Co jsou typy COM? – [https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model](https://learn.microsoft.com/cs-cz/windows/win32/com/the-component-object-model)
+Co jsou typy COM? – [https://learn.microsoft.com/cs-cz/windows/win32/com/the-component-object-model](https://learn.microsoft.com/cs-cz/windows/win32/com/the-component-object-model)
 
 Standardním způsobem, jak používat typy COM v jazyce C#, je odkazovat a dodávat primární sestavení interoperability (v podstatě velká kolekce rozhraní API) s balíčkem.
 
@@ -10,7 +10,7 @@ Alternativou k tomu je vložení PIA (primary interop assemblies – primární
 
 Tento článek tuto problematiku dobře popisuje:
 
-* [https://learn.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types](https://learn.microsoft.com/cs-cz/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)
+* [https://learn.microsoft.com/cs-cz/dotnet/framework/interop/type-equivalence-and-embedded-interop-types](https://learn.microsoft.com/cs-cz/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)
 
 ## Jak Dynamo spravuje ekvivalenci typů
 
