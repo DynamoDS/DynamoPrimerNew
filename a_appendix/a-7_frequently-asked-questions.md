@@ -18,7 +18,11 @@ DynamoCoreRuntime Zip 建置版本是在自動建置版本期間建立的 Dynamo
 
 #### 必要元件
 
-| Dynamo 版本 | Microsoft Visual C++ | DirectX | | | | | | -------------- | -------------------- | ------------------------------- | - | - | - | - | | 2.0 - 2.6 | 2015 可轉散發套件 | 10 | | | | | | 2.7 | 2019 可轉散發套件 | 11/12 (Windows 10 隨附 | | | | | | >=2.8 | 2019 可轉散發套件 | 11/12 (Windows 10 隨附 | | | | |
+| Dynamo Version | Microsoft Visual C++ | DirectX                         |   |   |   |   |
+| -------------- | -------------------- | ------------------------------- | - | - | - | - | 
+| 2.0 - 2.6      | 2015 可轉散發套件     | 10                              |   |   |   |   | 
+| 2.7            | 2019 可轉散發套件     | 11/12 (Windows 10 隨附          |   |   |   |   |
+| >=2.8          | 2019 可轉散發套件     | 11/12 (Windows 10 隨附          |   |   |   |   |
 
 **Microsoft DirectX，在我們的 Dynamo Github 儲存庫中也能公開取得** [**此處**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
