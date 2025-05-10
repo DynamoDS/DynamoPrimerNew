@@ -2,7 +2,7 @@
 
 ## Niektóre ogólne informacje o typach międzyoperacyjnych
 
-Czym są typy COM? — [https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model](https://learn.microsoft.com/pl-pl/windows/win32/com/the-component-object-model)
+Czym są typy COM? — [https://learn.microsoft.com/pl-pl/windows/win32/com/the-component-object-model](https://learn.microsoft.com/pl-pl/windows/win32/com/the-component-object-model)
 
 Standardowym sposobem używania typów COM w języku C# jest odwoływanie się do podstawowych zespołów międzyoperacyjnych (w zasadzie dużej kolekcji interfejsów API) i dostarczanie ich z pakietem.
 

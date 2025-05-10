@@ -98,16 +98,16 @@ Konfiguracja początkowa (StartupConfiguration) jest przekazywana jako parametr 
 
 Ten komponent składa się z następujących elementów:
 
-* DynamoCorePath // Gdzie znajdują się pliki binarne DynamoCore wczytywania
-* DynamoHostPath // Gdzie znajdują się pliki binarne integracji dodatku Dynamo
-* GeometryFactoryPath // Gdzie znajdują się wczytywane pliki binarne biblioteki libG
-* PathResolver //obiekt, który pomaga w rozstrzyganiu lokalizacji różnych plików
-* PreloadLibraryPaths // Gdzie znajdują się wstępnie wczytywane pliki binarne węzłów, np. DSOffice.dll
-* AdditionalNodeDirectories // Gdzie znajdują się dodatkowe pliki binarne węzłów
-* AdditionalResolutionPaths // Dodatkowe ścieżki rozstrzygania zespołów dla innych zależności, które mogą być wymagane podczas wczytywania bibliotek
-* UserDataRootFolder // Folder danych użytkownika, np. `"AppData\Roaming\Dynamo\Dynamo Revit"`
+* DynamoCorePath // Gdzie znajdują się pliki binarne DynamoCore wczytywania.
+* DynamoHostPath // Gdzie znajdują się pliki binarne integracji dodatku Dynamo.
+* GeometryFactoryPath // Gdzie znajdują się wczytywane pliki binarne biblioteki libG.
+* PathResolver //obiekt, który pomaga w rozstrzyganiu lokalizacji różnych plików.
+* PreloadLibraryPaths // Gdzie znajdują się wstępnie wczytywane pliki binarne węzłów, np. DSOffice.dll.
+* AdditionalNodeDirectories // Gdzie znajdują się dodatkowe pliki binarne węzłów.
+* AdditionalResolutionPaths // Dodatkowe ścieżki rozstrzygania zespołów dla innych zależności, które mogą być wymagane podczas wczytywania bibliotek.
+* UserDataRootFolder // Folder danych użytkownika, np. `"AppData\Roaming\Dynamo\Dynamo Revit"`.
 * CommonDataRootFolder // Domyślny folder do zapisywania definicji niestandardowych, przykładów itp.
-* Context // Nazwa i wersja programu nadrzędnego twórcy integracji `(Revit<BuildNum>)`
+* Context // Nazwa i wersja programu nadrzędnego twórcy integracji `(Revit<BuildNum>)`.
 * SchedulerThread // Wątek harmonogramu twórcy integracji implementujący `ISchedulerThread` — w przypadku większości twórców integracji jest to główny wątek interfejsu użytkownika lub dowolny wątek, z którego mogą uzyskać dostęp do interfejsu API.
 * StartInTestMode // Czy bieżąca sesja jest sesją automatyzacji testów — modyfikuje zestaw zachowań dodatku Dynamo — nie należy używać tej funkcji, chyba że podczas pisania testów.
 * AuthProvider // Implementacja interfejsu IAuthProvider danego twórcy integracji, np. implementacja RevitOxygenProvider znajduje się w bibliotece Greg.dll używanej do integracji przekazywania packageManager.
@@ -116,33 +116,33 @@ Ten komponent składa się z następujących elementów:
 
 Domyślną ścieżką ustawień preferencji zarządza się za pomocą wartości `PathManager.PreferenceFilePath`, np. `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Twórcy integracji mogą zdecydować, czy chcą również dostarczyć niestandardowy plik ustawień preferencji do lokalizacji, która musi być zgodna z menedżerem ścieżek. Poniżej przedstawiono właściwości ustawień preferencji, które są serializowane:
 
-* IsFirstRun // Wskazuje, czy jest to pierwsze uruchomienie danej wersji dodatku Dynamo, np. służy do określenia, czy należy wyświetlić komunikat o wyrażeniu zgody na lub rezygnacji z GA. Służy również do określenia, czy jest wymagana migracja starszych ustawień preferencji dodatku Dynamo podczas uruchamiania nowej wersji dodatku Dynamo, aby zapewnić użytkownikom spójne środowisko
-* IsUsageReportingApproved // Wskazuje, czy zatwierdzono raporty użycia
-* IsAnalyticsReportingApproved // Wskazuje, czy zatwierdzono raporty analityczne
+* IsFirstRun // Wskazuje, czy jest to pierwsze uruchomienie danej wersji dodatku Dynamo, np. służy do określenia, czy należy wyświetlić komunikat o wyrażeniu zgody na lub rezygnacji z GA. Służy również do określenia, czy jest wymagana migracja starszych ustawień preferencji dodatku Dynamo podczas uruchamiania nowej wersji dodatku Dynamo, aby zapewnić użytkownikom spójne środowisko.
+* IsUsageReportingApproved // Wskazuje, czy zatwierdzono raporty użycia.
+* IsAnalyticsReportingApproved // Wskazuje, czy zatwierdzono raporty analityczne.
 * LibraryWidth // Szerokość lewego panelu biblioteki dodatku Dynamo.
-* ConsoleHeight // Wysokość ekranu konsoli
-* ShowPreviewBubbles // Wskazuje, czy dymki podglądu powinny być wyświetlane
+* ConsoleHeight // Wysokość ekranu konsoli.
+* ShowPreviewBubbles // Wskazuje, czy dymki podglądu powinny być wyświetlane.
 * ShowConnector // Wskazuje, czy są wyświetlane złącza
 * ConnectorType //Wskazuje typ złącza: Beziera lub polilinia
 * BackgroundPreviews // Wskazuje aktywny stan określonego podglądu tła
 * RenderPrecision: // Poziom dokładności renderowania — niższy generuje siatki z mniejszą liczbą trójkątów. Ustawienie wyższego spowoduje wygenerowanie gładszej geometrii w podglądzie tła. Wartość 128 zapewnia dobry i szybki podgląd geometrii.
-* ShowEdges // Wskazuje, czy będą renderowane krawędzie powierzchni i bryły
-* ShowDetailedLayout // Nieużywane
-* WindowX, WindowY // Ostatnia współrzędna X, Y okna dodatku Dynamo
-* WindowW, WindowH // Ostatnia szerokość, wysokość okna dodatku Dynamo
-* UseHardwareAcceleration // Określa, czy dodatek Dynamo powinien używać przyspieszenia sprzętowego, jeśli jest ono obsługiwane
+* ShowEdges // Wskazuje, czy będą renderowane krawędzie powierzchni i bryły.
+* ShowDetailedLayout // Nieużywane.
+* WindowX, WindowY // Ostatnia współrzędna X, Y okna dodatku Dynamo.
+* WindowW, WindowH // Ostatnia szerokość, wysokość okna dodatku Dynamo.
+* UseHardwareAcceleration // Określa, czy dodatek Dynamo powinien używać przyspieszenia sprzętowego, jeśli jest ono obsługiwane.
 * NumberFormat // Dokładność dziesiętna używana do wyświetlania liczb w dymku podglądu funkcji toString().
-* MaxNumRecentFiles // Maksymalna liczba ostatnio używanych ścieżek plików do zapisania
-* RecentFiles // Lista ścieżek ostatnio otwartych plików — zmiana tej listy wpłynie bezpośrednio na listę ostatnio używanych plików na stronie startowej dodatku Dynamo
-* BackupFiles // Lista ścieżek plików kopii zapasowej
+* MaxNumRecentFiles // Maksymalna liczba ostatnio używanych ścieżek plików do zapisania.
+* RecentFiles // Lista ścieżek ostatnio otwartych plików — zmiana tej listy wpłynie bezpośrednio na listę ostatnio używanych plików na stronie startowej dodatku Dynamo.
+* BackupFiles // Lista ścieżek plików kopii zapasowej.
 * CustomPackageFolders // Lista folderów zawierających pliki binarne typu Zero Touch i ścieżki katalogów, które będą skanowane w poszukiwaniu pakietów i węzłów niestandardowych.
 * PackageDirectoriesToUninstall // Lista pakietów używana przez Menedżera pakietów do określenia, które pakiety mają zostać oznaczone do usunięcia. Te ścieżki zostaną usunięte, jeśli będzie to możliwe podczas uruchamiania dodatku Dynamo.
 * PythonTemplateFilePath // Ścieżka pliku w języku Python (.py) używana jako szablon początkowy podczas tworzenia nowego węzła PythonScript — tej pozycji można użyć do skonfigurowania szablonu niestandardowego w języku Python dla integracji.
-* BackupInterval // Wskazuje, co jaki czas (w milisekundach) wykres będzie automatycznie zapisywany
-* BackupFilesCount // Wskazuje, ile kopii zapasowych zostanie utworzonych
-* PackageDownloadTouAccepted // Wskazuje, czy użytkownik zaakceptował Warunki użytkowania pobierania pakietów z Menedżera pakietów
-* OpenFileInManualExecutionMode // Wskazuje domyślny stan pola wyboru „Otwórz w trybie ręcznym” w oknie dialogowym OpenFileDialog
-* NamespacesToExcludeFromLibrary // Wskazuje, które (jeśli w ogóle jakieś) przestrzenie nazw nie powinny być wyświetlane w bibliotece węzłów dodatku Dynamo. Format ciągu: „[nazwa biblioteki]:[w pełni kwalifikowana przestrzeń nazw]”
+* BackupInterval // Wskazuje, co jaki czas (w milisekundach) wykres będzie automatycznie zapisywany.
+* BackupFilesCount // Wskazuje, ile kopii zapasowych zostanie utworzonych.
+* PackageDownloadTouAccepted // Wskazuje, czy użytkownik zaakceptował Warunki użytkowania pobierania pakietów z Menedżera pakietów.
+* OpenFileInManualExecutionMode // Wskazuje domyślny stan pola wyboru „Otwórz w trybie ręcznym” w oknie dialogowym OpenFileDialog.
+* NamespacesToExcludeFromLibrary // Wskazuje, które (jeśli w ogóle jakieś) przestrzenie nazw nie powinny być wyświetlane w bibliotece węzłów dodatku Dynamo. Format ciągu: „[nazwa biblioteki]:[w pełni kwalifikowana przestrzeń nazw]”.
 
 Przykład zserializowanych ustawień preferencji:
 
@@ -246,9 +246,9 @@ Przykład zserializowanych ustawień preferencji:
 </PreferenceSettings> 
 ```
 
-* Extensions // Lista rozszerzeń implementujących interfejs IExtension; jeśli ma wartość null, dodatek Dynamo będzie wczytywać rozszerzenia ze ścieżki domyślnej (folderu `extensions` w folderze dodatku Dynamo)
+* Extensions // Lista rozszerzeń implementujących interfejs IExtension; jeśli ma wartość null, dodatek Dynamo będzie wczytywać rozszerzenia ze ścieżki domyślnej (folderu `extensions` w folderze dodatku Dynamo).
 * IsHeadless // Wskazuje, czy dodatek Dynamo został uruchomiony bez interfejsu użytkownika — wpływa na analizę.
-* UpdateManager // Implementacja UpdateManager danego twórcy integracji, patrz opis powyżej
+* UpdateManager // Implementacja UpdateManager danego twórcy integracji, patrz opis powyżej.
 * ProcessMode // Odpowiednik TaskProcessMode; synchroniczny w trybie testowym; w przeciwnym razie asynchroniczny — steruje zachowaniem harmonogramu. W środowiskach jednowątkowych można również ustawić dla tej opcji wartość synchroniczną.
 
 Używanie docelowej konfiguracji StartConfiguration do uruchomienia `DynamoModel`

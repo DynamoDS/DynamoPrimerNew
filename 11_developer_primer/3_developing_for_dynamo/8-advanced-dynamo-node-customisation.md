@@ -391,7 +391,7 @@ Dodawanie dokumentacji do węzłów jest łatwe. Dokumentację można dodać do 
 * Węzły niestandardowe (.dyf) — kolekcje gotowych i/lub innych węzłów z pakietów.
 * Węzły niestandardowe z pakietów języka C# (znane również jako Zerotouch; te węzły niestandardowe wyglądają jak gotowe węzły).
 * Węzły NodeModel (węzły, które zawierają specjalne elementy interfejsu użytkownika, takie jak listy rozwijane lub przyciski wyboru).
-* Węzły NodeModel z niestandardowym interfejsem użytkownika (węzły, które zawierają unikatowe elementy interfejsu użytkownika, takie jak grafika w węźle)
+* Węzły NodeModel z niestandardowym interfejsem użytkownika (węzły, które zawierają unikatowe elementy interfejsu użytkownika, takie jak grafika w węźle).
 
 Wykonaj te kilka czynności, aby wyświetlić pliki Markdown w dodatku Dynamo.
 
