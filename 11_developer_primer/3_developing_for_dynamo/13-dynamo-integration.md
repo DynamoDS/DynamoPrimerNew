@@ -98,16 +98,16 @@ StartupConfiguration は、DynamoModel を初期化するためのパラメー�
 
 このファイルの構成は、次のとおりです。
 
-* DynamoCorePath // ロードする DynamoCore バイナリの配置場所
-* DynamoHostPath // Dynamo 統合バイナリの配置場所
-* GeometryFactoryPath // ロードされた libG バイナリの配置場所
-* PathResolver //さまざまなファイルの解決に役立つオブジェクト
-* PreloadLibraryPaths // プリロードされたノード バイナリの配置場所(例: DSOffice.dll)
-* AdditionalNodeDirectories // 追加のノード バイナリの配置場所
-* AdditionalResolutionPaths // ライブラリのロード中に必要になる可能性がある、その他の依存関係の追加のアセンブリ解決処理パス
-* UserDataRootFolder // ユーザのデータ フォルダ、例: `"AppData\Roaming\Dynamo\Dynamo Revit"`
-* CommonDataRootFolder // カスタム定義、サンプルなどを保存する既定フォルダ
-* Context // インテグレータのホスト名 + バージョン `(Revit<BuildNum>)`
+* DynamoCorePath // ロードする DynamoCore バイナリの配置場所。
+* DynamoHostPath // Dynamo 統合バイナリの配置場所。
+* GeometryFactoryPath // ロードされた libG バイナリの配置場所。
+* PathResolver //さまざまなファイルの解決に役立つオブジェクト。
+* PreloadLibraryPaths // プリロードされたノード バイナリの配置場所(例: DSOffice.dll)。
+* AdditionalNodeDirectories // 追加のノード バイナリの配置場所。
+* AdditionalResolutionPaths // ライブラリのロード中に必要になる可能性がある、その他の依存関係の追加のアセンブリ解決処理パス。
+* UserDataRootFolder // ユーザのデータ フォルダ、例: `"AppData\Roaming\Dynamo\Dynamo Revit"`。
+* CommonDataRootFolder // カスタム定義、サンプルなどを保存する既定フォルダ。
+* Context // インテグレータのホスト名 + バージョン `(Revit<BuildNum>)`。
 * SchedulerThread // `ISchedulerThread` を実装する、インテグレータ スケジューラのスレッド。ほとんどのインテグレータの場合、これはメイン UI スレッドか、API にアクセスできる任意のスレッドになります。
 * StartInTestMode // 現在のセッションがテストの自動化セッションであるかどうか。一連の Dynamo の動作を変更します。テストを記述していない限りは使用しないでください。
 * AuthProvider // インテグレータによる IAuthProvider の実装(例: RevitOxygenProvider の実装の場合は Greg.dll の中)。packageManager アップロードの統合に使用されます。
@@ -117,31 +117,31 @@ StartupConfiguration は、DynamoModel を初期化するためのパラメー�
 既定の基本設定の設定パスは、`PathManager.PreferenceFilePath` によって管理されます(例: `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`)。インテグレータは、カスタマイズされた基本設定の設定ファイルについても、パス マネージャと整合させる必要がある場所に送るかどうかを決定できます。以下は、シリアル化される基本設定の設定プロパティです。
 
 * IsFirstRun // このバージョンの Dynamo を初めて実行するかどうかを示します(例: GA オプトイン/オプトアウトのメッセージを表示する必要があるかどうかを決定するために使用)。また、新しいバージョンの Dynamo の起動時に旧式の Dynamo 基本設定を移行する必要があるかどうかを決定するためにも使用され、ユーザのエクスペリエンスに一貫性を持たせることができます。
-* IsUsageReportingApproved // 使用状況レポートが承認されているかどうかを示します
-* IsAnalyticsReportingApproved // 分析レポートが承認されているかどうかを示します
+* IsUsageReportingApproved // 使用状況レポートが承認されているかどうかを示します。
+* IsAnalyticsReportingApproved // 分析レポートが承認されているかどうかを示します。
 * LibraryWidth // Dynamo 左側のライブラリ パネルの幅。
 * ConsoleHeight // コンソール表示の高さ。
-* ShowPreviewBubbles // プレビュー バルーンを表示するかどうかを示します
-* ShowConnector // コネクタを表示するかどうかを示します
-* ConnectorType // コネクタのタイプ(ベジェまたはポリライン)を示します
-* BackgroundPreviews // 指定した背景プレビューのアクティブ状態を示します
+* ShowPreviewBubbles // プレビュー バルーンを表示するかどうかを示します。
+* ShowConnector // コネクタを表示するかどうかを示します。
+* ConnectorType // コネクタのタイプ(ベジェまたはポリライン)を示します。
+* BackgroundPreviews // 指定した背景プレビューのアクティブ状態を示します。
 * RenderPrecision // レンダリング精度のレベル。低い場合、三角形の数が少ないメッシュが生成されます。高い場合は、背景プレビューでより滑らかなジオメトリが生成されます。ジオメトリを素早くプレビューするには、128 が適した数値です。
-* ShowEdges // サーフェスとソリッドのエッジをレンダリングするかどうかを示します
-* ShowDetailedLayout // 未使用
-* WindowX, WindowY // Dynamo ウィンドウの最後の X 座標と Y 座標
-* WindowW, WindowH // Dynamo ウィンドウの最後の幅と高さ
-* UseHardwareAcceleration // Dynamo でハードウェア アクセラレーションがサポートされている場合、それを使用するかどうかを示します
+* ShowEdges // サーフェスとソリッドのエッジをレンダリングするかどうかを示します。
+* ShowDetailedLayout // 未使用。
+* WindowX, WindowY // Dynamo ウィンドウの最後の X 座標と Y 座標。
+* WindowW, WindowH // Dynamo ウィンドウの最後の幅と高さ。
+* UseHardwareAcceleration // Dynamo でハードウェア アクセラレーションがサポートされている場合、それを使用するかどうかを示します。
 * NumberFormat // プレビュー バブル toString() に数値を表示するために使用される小数点の精度。
-* MaxNumRecentFiles // 保存する最近使用したファイル パスの最大数
-* RecentFiles // 最近開いたファイル パスのリスト。このリストを操作すると、Dynamo の起動ページにある最近使用したファイルのリストに直接影響します
-* BackupFiles // バックアップ ファイル パスのリスト
+* MaxNumRecentFiles // 保存する最近使用したファイル パスの最大数。
+* RecentFiles // 最近開いたファイル パスのリスト。このリストを操作すると、Dynamo の起動ページにある最近使用したファイルのリストに直接影響します。
+* BackupFiles // バックアップ ファイル パスのリスト。
 * CustomPackageFolders // パッケージとカスタム ノードがスキャンされる Zero-Touch バイナリとディレクトリ パスを含むフォルダのリスト。
 * PackageDirectoriesToUninstall // Package Manager が、削除対象としてマークされているパッケージを決定するために使用するパッケージの一覧。これらのパスは、可能な限り Dynamo の起動時に削除されます。
 * PythonTemplateFilePath // 新しい PythonScript ノードの作成時に開始テンプレートとして使用する Python(.py)ファイルへのパス。これを使用して、統合用のカスタム Python テンプレートをセットアップできます。
-* BackupInterval // グラフを自動的に保存する期間(ミリ秒単位)を示します
-* BackupFilesCount // 作成されるバックアップの数を示します
-* PackageDownloadTouAccepted // ユーザが Package Manager からパッケージをダウンロードするための利用規約に同意したかどうかを示します
-* OpenFileInManualExecutionMode // OpenFileDialog の[手動モードで開く]チェックボックスの既定の状態を示します
+* BackupInterval // グラフを自動的に保存する期間(ミリ秒単位)を示します。
+* BackupFilesCount // 作成されるバックアップの数を示します。
+* PackageDownloadTouAccepted // ユーザが Package Manager からパッケージをダウンロードするための利用規約に同意したかどうかを示します。
+* OpenFileInManualExecutionMode // OpenFileDialog の[手動モードで開く]チェックボックスの既定の状態を示します。
 * NamespacesToExcludeFromLibrary // Dynamo ノード ライブラリに表示しない名前空間(存在する場合)を示します。文字列形式: "[ライブラリ名]:[完全な名前空間]"
 
 シリアル化された基本設定の例:
@@ -246,9 +246,9 @@ StartupConfiguration は、DynamoModel を初期化するためのパラメー�
 </PreferenceSettings> 
 ```
 
-* Extensions // IExtension を実装する拡張機能のリスト。NULL の場合、Dynamo は既定のパス(Dynamo フォルダ下の `extensions` フォルダ)から拡張機能をロードします
+* Extensions // IExtension を実装する拡張機能のリスト。NULL の場合、Dynamo は既定のパス(Dynamo フォルダ下の `extensions` フォルダ)から拡張機能をロードします。
 * IsHeadless // Dynamo が UI なしで起動されたかどうかを示します。これは解析に影響します。
-* UpdateManager // UpdateManager のインテグレータによる実装。上記説明を参照
+* UpdateManager // UpdateManager のインテグレータによる実装。上記説明を参照。
 * ProcessMode // TaskProcessMode と同様。テスト モードの場合は同期、それ以外の場合は非同期になります。これはスケジューラの動作をコントロールします。シングル スレッド環境では、これを同期に設定することもできます。
 
 ターゲットの StartConfiguration を使用して、`DynamoModel` を起動します。
@@ -590,7 +590,7 @@ DynamoRevit には複数の `�Selection�` ノードがあります。これ�
 #### 事例
 
 1.
-   * ユーザが `SelectModelElement` で Revit の壁を選択すると、Dynamo 壁ラッパーがグラフに返されます(ノードのプレビュー バルーンに表示されます)
+   * ユーザが `SelectModelElement` で Revit の壁を選択すると、Dynamo 壁ラッパーがグラフに返されます(ノードのプレビュー バルーンに表示されます)。
    * ユーザは Element.Geometry ノードを配置し、この新しいノードに `SelectModelElement` 出力をアタッチします。ラップされた壁のジオメトリが抽出され、libG API を使用して Dynamo ジオメトリに変換されます。
    * ユーザは、グラフを自動実行モードに切り替えます。
    * ユーザが Revit で元の壁を変更します。
