@@ -8,10 +8,10 @@ Os operadores são um conjunto de componentes que usam funções algébricas com
 
 | Ícone                                                  | Nome (Sintaxe)     | Entradas                     | Saídas      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*****) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Adicionar (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrair (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplicar (*) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividir (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Exercício: Fórmula da espiral dourada
 
