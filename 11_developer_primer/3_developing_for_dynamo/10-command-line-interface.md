@@ -69,7 +69,7 @@ Este comando le indicará a Dynamo que abra el archivo especificado en *C:\\some
 * El método preferido para interactuar con DynamoCLI es a través de una interfaz de solicitud de comandos.
 * En este momento, deberá ejecutar DynamoCLI desde su ubicación de instalación en la carpeta [Versión de Dynamo]. La CLI necesita acceso a los mismos archivos .dll que Dynamo, por lo que no se debe mover.
 * Debería poder ejecutar gráficos que estén abiertos en ese momento en Dynamo, pero esto puede provocar efectos secundarios no deseados.
-* Todas las rutas de archivos son totalmente compatibles con DOS, por lo que las rutas relativas y completas deberían funcionar, pero asegúrese de escribirlas entre comillas, *"C:ruta\\a\\archivo.dyn"*. 
+* Todas las rutas de archivos son totalmente compatibles con DOS, por lo que las rutas relativas y completas deberían funcionar, pero asegúrese de escribirlas entre comillas, *"C:path\\to\\file.dyn"* 
 * DynamoCLI es una nueva funcionalidad que actualmente está en proceso de desarrollo. Por el momento, la **CLI solo carga un subconjunto** de las bibliotecas estándar de Dynamo, por lo que tenga esto en cuenta si un gráfico no se ejecuta correctamente. Estas bibliotecas se especifican [aquí](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoApplications/PathResolvers.cs#L28). 
 * Actualmente, si no se encuentran errores, la CLI simplemente se cerrará una vez completada la ejecución.
  

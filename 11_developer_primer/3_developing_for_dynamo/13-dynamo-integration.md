@@ -118,7 +118,7 @@ Consta de lo siguiente:
 
 * IsFirstRun: indica si es la primera vez que se ejecuta esta versión de Dynamo, por ejemplo, se utiliza para determinar si es necesario mostrar el mensaje de inclusión/exclusión de GA. También se utiliza para determinar si es necesario migrar la configuración de preferencias de Dynamo heredada al iniciar una nueva versión de Dynamo para que los usuarios tengan una experiencia coherente.
 * IsUsageReportingApproved: indica si se aprueban o no los informes de uso.
-* IsAnalyticsReportingApproved: indica si se aprueban o no los informes analíticos
+* IsAnalyticsReportingApproved: indica si se aprueban o no los informes analíticos.
 * LibraryWidth: indica la anchura del panel izquierdo de la biblioteca de Dynamo.
 * ConsoleHeight: indica la altura de la pantalla de la consola.
 * ShowPreviewBubbles: indica si deben mostrarse burbujas de vista preliminar.
@@ -126,11 +126,11 @@ Consta de lo siguiente:
 * ConnectorType: indica el tipo de conector: Bezier o Polilínea.
 * BackgroundPreviews: indica el estado activo de la vista preliminar del fondo especificada.
 * RenderPrecision: el nivel de precisión de la renderización: cuanto más bajo, se generarán mallas con menos triángulos. Un valor más alto generará una geometría más uniforme en la vista preliminar del fondo. 128 es un valor fácil recomendado para la previsualización de la geometría.
-* ShowEdges: indica si se renderizarán los bordes de la superficie y los sólidos
+* ShowEdges: indica si se renderizarán los bordes de la superficie y los sólidos.
 * ShowDetailedLayout: no se utiliza.
 * WindowX, WindowY: última coordenada X, Y de la ventana de Dynamo.
 * WindowW, WindowH: última anchura y altura de la ventana de Dynamo.
-* UseHardwareAcceleration: indica si Dynamo debe utilizar la aceleración de hardware si es compatible
+* UseHardwareAcceleration: indica si Dynamo debe utilizar la aceleración de hardware si es compatible.
 * NumberFormat: la precisión decimal utilizada para mostrar los números en la burbuja de vista preliminar toString().
 * MaxNumRecentFiles: el número máximo de rutas de archivos recientes que se guardarán.
 * RecentFiles: una lista de rutas de archivos abiertos recientemente. Si se modifica, afectará directamente a la lista de archivos recientes en la página de inicio de Dynamo.
