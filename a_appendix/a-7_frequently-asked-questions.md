@@ -74,7 +74,7 @@ _NVIDIA 控制台範例：_
 
 接下來這些 Dynamo 模組將會使用 WebView2 元件：文件瀏覽器、導覽和資源庫，因此為了確保 Dynamo 的這些部分能正確顯示網路內容，我們需要安裝 WebView2 Evergreen Runtime 安裝程式 (您需要驗證電腦中是否已安裝或需要安裝)。
 
-這是安裝 WebView2 Runtime 時的連結：[https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/zh-tw/microsoft-edge/webview2/?form=MA13LH#download-section)
+這是安裝 WebView2 Runtime 時的連結：[https://developer.microsoft.com/zh-tw/microsoft-edge/webview2/#download-section](https://developer.microsoft.com/zh-tw/microsoft-edge/webview2/?form=MA13LH#download-section)
 
 ![](images/a-7/dynamo-builds-7.png)
 

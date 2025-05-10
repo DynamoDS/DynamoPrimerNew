@@ -10,7 +10,7 @@
 
 這篇文章仔細描述了這個問題：
 
-* [https://learn.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types](https://learn.microsoft.com/zh-tw/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)
+* [https://learn.microsoft.com/zh-tw/dotnet/framework/interop/type-equivalence-and-embedded-interop-types](https://learn.microsoft.com/zh-tw/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)
 
 ## Dynamo 如何管理類型對等項
 

@@ -98,16 +98,16 @@ internal static Version PreloadAsmFromRevit()
 
 包括以下內容：
 
-* DynamoCorePath // 載入 DynamoCore 二進位檔所在的位置
-* DynamoHostPath // Dynamo 整合二進位檔所在的位置
-* GeometryFactoryPath // 載入的 libG 二進位檔所在的位置
-* PathResolver //協助解析各種檔案的物件
-* PreloadLibraryPaths // 預載節點二進位檔 (例如 DSOffice.dll) 所在的位置
-* AdditionalNodeDirectories // 其他節點二進位檔所在的位置
-* AdditionalResolutionPaths // 載入資源庫時可能需要的其他相依性的額外組合解決方案路徑
-* UserDataRootFolder // 使用者資料資料夾，例如 `"AppData\Roaming\Dynamo\Dynamo Revit"`
+* DynamoCorePath // 載入 DynamoCore 二進位檔所在的位置。
+* DynamoHostPath // Dynamo 整合二進位檔所在的位置。
+* GeometryFactoryPath // 載入的 libG 二進位檔所在的位置。
+* PathResolver //協助解析各種檔案的物件。
+* PreloadLibraryPaths // 預載節點二進位檔 (例如 DSOffice.dll) 所在的位置。
+* AdditionalNodeDirectories // 其他節點二進位檔所在的位置。
+* AdditionalResolutionPaths // 載入資源庫時可能需要的其他相依性的額外組合解決方案路徑。
+* UserDataRootFolder // 使用者資料資料夾，例如 `"AppData\Roaming\Dynamo\Dynamo Revit"`。
 * CommonDataRootFolder // 用於儲存自訂定義、範例等的預設資料夾。
-* Context // 整合者主體名稱 + 版本 `(Revit<BuildNum>)`
+* Context // 整合者主體名稱 + 版本 `(Revit<BuildNum>)`。
 * SchedulerThread // 實作 `ISchedulerThread` 的整合者排程器執行緒 - 對於大多數整合者而言，這是主要 UI 執行緒或可存取其 API 的任何執行緒。
 * StartInTestMode // 目前階段作業是否為測試自動化階段作業 - 修改一堆 Dynamo 行為 - 除非您正在撰寫測試，否則請不要使用。
 * AuthProvider // 整合者的 IAuthProvider 實作，例如 RevitOxygenProvider 實作是在 Greg.dll - 用於 packageManager 上傳整合。
@@ -116,33 +116,33 @@ internal static Version PreloadAsmFromRevit()
 
 預設偏好設定路徑由 `PathManager.PreferenceFilePath` (例如 `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`) 管理。整合者可以決定是否也要將自訂的偏好設定檔案遞送到需要與路徑管理員一致的位置。以下是序列化的偏好設定性質：
 
-* IsFirstRun // 表示是否是第一次執行此版本的 Dynamo，例如用於判斷是否需要顯示 GA 選擇加入/退出訊息。也會用於判斷在啟動新的 Dynamo 版本時，是否需要移轉舊式 Dynamo 偏好設定，讓使用者獲得一致的體驗
-* IsUsageReportingApproved // 指出使用情況報告是否已核准
-* IsAnalyticsReportingApproved // 指出分析報告是否已核准
+* IsFirstRun // 表示是否是第一次執行此版本的 Dynamo，例如用於判斷是否需要顯示 GA 選擇加入/退出訊息。也會用於判斷在啟動新的 Dynamo 版本時，是否需要移轉舊式 Dynamo 偏好設定，讓使用者獲得一致的體驗。
+* IsUsageReportingApproved // 指出使用情況報告是否已核准。
+* IsAnalyticsReportingApproved // 指出分析報告是否已核准。
 * LibraryWidth // Dynamo 左側資源庫面板的寬度。
-* ConsoleHeight // 主控台顯示的高度
-* ShowPreviewBubbles // 指出是否應顯示預覽標示圈
-* ShowConnector // 指出是否顯示連接器
-* ConnectorType // 指出連接器類型：Bezier 或 Polyline (聚合線)
-* BackgroundPreviews // 指出指定背景預覽的作用中狀態
+* ConsoleHeight // 主控台顯示的高度。
+* ShowPreviewBubbles // 指出是否應顯示預覽標示圈。
+* ShowConnector // 指出是否顯示連接器。
+* ConnectorType // 指出連接器類型：Bezier 或 Polyline (聚合線)。
+* BackgroundPreviews // 指出指定背景預覽的作用中狀態。
 * RenderPrecision // 彩現精確度等級 - 越低表示會產生三角形數越少的網格。越高表示會在背景預覽中產生越平滑的幾何圖形。128 對於預覽幾何圖形是一個很適合可靠的數字。
-* ShowEdges // 指出是否將彩現曲面和實體邊
-* ShowDetailedLayout // 未使用
-* WindowX、WindowY // Dynamo 視窗的最後 X、Y 座標
-* WindowW、WindowH // Dynamo 視窗的最後寬度、高度
-* UseHardwareAcceleration // Dynamo 是否應使用硬體加速 (如果支援)
+* ShowEdges // 指出是否將彩現曲面和實體邊。
+* ShowDetailedLayout // 未使用。
+* WindowX、WindowY // Dynamo 視窗的最後 X、Y 座標。
+* WindowW、WindowH // Dynamo 視窗的最後寬度、高度。
+* UseHardwareAcceleration // Dynamo 是否應使用硬體加速 (如果支援)。
 * NumberFormat // 用於在預覽標示圈 toString() 中顯示數字的小數精確度。
-* MaxNumRecentFiles // 要儲存的最近檔案路徑最大數目
-* RecentFiles // 最近開啟的檔案路徑清單，修改此設定會直接影響 Dynamo 開始頁面中的最近使用檔案清單
-* BackupFiles // 備份檔案路徑清單
+* MaxNumRecentFiles // 要儲存的最近檔案路徑最大數目。
+* RecentFiles // 最近開啟的檔案路徑清單，修改此設定會直接影響 Dynamo 開始頁面中的最近使用檔案清單。
+* BackupFiles // 備份檔案路徑清單。
 * CustomPackageFolders // 包含 zero-touch 二進位檔和目錄路徑的資料夾清單，系統會掃描這些資料夾中是否有套件和自訂節點。
 * PackageDirectoriesToUninstall // Package Manager 用來判斷哪些套件被標記為刪除的套件清單。在 Dynamo 啟動期間會刪除這些路徑 (如果可以)。
 * PythonTemplateFilePath // 建立新的 PythonScript 節點時用作起始樣板的 Python (.py) 檔案路徑 - 可用來設定自訂 Python 樣板以進行整合。
-* BackupInterval // 指出自動儲存圖表的時間長度 (以毫秒為單位)
-* BackupFilesCount // 指出要進行的備份數量
-* PackageDownloadTouAccepted // 指出使用者是否已接受使用條款從 Package Manager 下載套件
-* OpenFileInManualExecutionMode // 指出「開啟檔案」對話方塊中「以手動模式開啟」勾選方塊的預設狀態
-* NamespacesToExcludeFromLibrary // 指出哪些名稱空間 (如果有) 不應顯示在 Dynamo 節點資源庫中。字串格式："[資源庫名稱]:[完整名稱空間]"
+* BackupInterval // 指出自動儲存圖表的時間長度 (以毫秒為單位)。
+* BackupFilesCount // 指出要進行的備份數量。
+* PackageDownloadTouAccepted // 指出使用者是否已接受使用條款從 Package Manager 下載套件。
+* OpenFileInManualExecutionMode // 指出「開啟檔案」對話方塊中「以手動模式開啟」勾選方塊的預設狀態。
+* NamespacesToExcludeFromLibrary // 指出哪些名稱空間 (如果有) 不應顯示在 Dynamo 節點資源庫中。字串格式："[資源庫名稱]:[完整名稱空間]"。
 
 序列化偏好設定的範例：
 
@@ -246,9 +246,9 @@ internal static Version PreloadAsmFromRevit()
 </PreferenceSettings> 
 ```
 
-* Extensions // 實作 IExtension 的延伸清單，如果為空值，Dynamo 將從預設路徑 (Dynamo 資料夾下的 `extensions` 資料夾) 載入延伸
+* Extensions // 實作 IExtension 的延伸清單，如果為空值，Dynamo 將從預設路徑 (Dynamo 資料夾下的 `extensions` 資料夾) 載入延伸。
 * IsHeadless // 指出 Dynamo 是否在沒有 UI 的情況下啟動，供分析之用。
-* UpdateManager // 整合者的 UpdateManager 實作，請參閱上面的描述
+* UpdateManager // 整合者的 UpdateManager 實作，請參閱上面的描述。
 * ProcessMode // 相當於 TaskProcessMode，如果在測試模式下為 Synchronous (同步)，否則為 Asynchronous (非同步) - 這會控制排程器的行為。單一執行緒的環境也可能將此設定為同步。
 
 使用目標 StartConfiguration 啟動 `DynamoModel`
@@ -684,7 +684,7 @@ D4C 中的工作流程與上述針對 Revit 的描述非常類似，以下是 D4
 
 如果這些文化子目錄與節點/延伸二進位檔位於相同目錄，.net 執行階段載入這些子目錄時就不會發生任何問題。
 
-如需資源組合和 .resx 檔案的更多資訊，請參閱：[https://docs.microsoft.com/en-us/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/zh-tw/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。
+如需資源組合和 .resx 檔案的更多資訊，請參閱：[https://docs.microsoft.com/zh-tw/dotnet/framework/resources/creating-resource-files-for-desktop-apps](https://docs.microsoft.com/zh-tw/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。
 
 您可能要使用 Visual Studio 建立 `.resx` 檔案並進行編譯。對於給定的組合 `xyz.dll` - 產生的資源將會編譯為新的組合 `xyz.resources.dll` \- 如上所述，此組合的位置和名稱非常重要。
 
