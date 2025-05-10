@@ -473,19 +473,19 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 1. **新增資源檔**：
 
-* 在**「方案總管」**中以右鍵按一下您的專案。
+* 在 **「方案總管」** 中以右鍵按一下您的專案。
 
 ![新增項目](images/zerotouchicons-add-resources-file-1.jpg)
 
-* 移至**「新增」>「新項目」**，然後選取**「資源檔」**。
+* 移至 **「新增」>「新項目」**，然後選取 **「資源檔」**。
 
 ![新增資源檔](images/zerotouchicons-add-resources-file-2.jpg)
 
 * 將檔案命名為 `<ProjectName>Images.resx`。例如 `ZeroTouchNodeIconsImages.resx`。
 
 2. **清除自訂工具屬性**：
-   * 在**「方案總管」**中選取資源檔。
-   * 在**「屬性」**面板中，透過移除 `ResXFileCodeGenerator` 值來清除「`Custom Tool`」欄位。
+   * 在 **「方案總管」** 中選取資源檔。
+   * 在 **「屬性」** 面板中，透過移除 `ResXFileCodeGenerator` 值來清除「`Custom Tool`」欄位。
 
 ![清除自訂工具屬性](images/zerotouchicons-custom-tool-property.jpg)
 
@@ -493,8 +493,8 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 #### 步驟 4：將影像新增為資源
 
-1. 使用**「受控資源編輯器 (舊版)」**開啟資源檔：
-   * 如果使用 Visual Studio 17.11 或更高版本，請以右鍵按一下資源檔，選擇**「開啟方式」**，然後選取**「受控資源編輯器 (舊版)」**。
+1. 使用 **「受控資源編輯器 (舊版)」** 開啟資源檔：
+   * 如果使用 Visual Studio 17.11 或更高版本，請以右鍵按一下資源檔，選擇 **「開啟方式」**，然後選取 **「受控資源編輯器 (舊版)」**。
    * 如果使用 17.11 之前的 Visual Studio 版本，請按兩下資源檔以使用「資源編輯器」開啟 (在您的 Visual Studio 版本中，此編輯器尚未成為舊版)。
 
 ![使用「開啟方式」...](images/zerotouchicons-open-resource-editor.jpg)
@@ -502,12 +502,12 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 ![使用受控資源編輯器開啟資源檔 (舊版)](images/zerotouchicons-managed-resource-editor-legacy.jpg)
 
 2. 新增您的影像：
-   * 將影像檔拖放到編輯器中，或使用**「新增現有檔案」**選項。
+   * 將影像檔拖放到編輯器中，或使用 **「新增現有檔案」** 選項。
 
 ![新增現有檔案](images/zerotouchicons-add-existing-file.jpg)
 
 3. 更新持續性：
-   * 在「資源編輯器」中選取影像 (如果在「方案總管」中選取影像，此動作將沒有作用)，將**「屬性」**面板中的**「持續性」**屬性變更為「`Embedded in .resx`」。這可確保影像包含在 `.dll` 中。
+   * 在「資源編輯器」中選取影像 (如果在「方案總管」中選取影像，此動作將沒有作用)，將 **「屬性」** 面板中的 **「持續性」** 屬性變更為「`Embedded in .resx`」。這可確保影像包含在 `.dll` 中。
 
 ![更新持續性](images/zerotouchicons-edit-persistence-property.jpg)
 
@@ -515,13 +515,13 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 如果您的專案還不是 SDK 型 (嵌入資源需要)，請加以轉換：
 
-1. 從 Visual Studio 的**「延伸模組」>「管理延伸模組」**功能表安裝 `.NET Upgrade Assistant` 延伸模組。
+1. 從 Visual Studio 的 **「延伸模組」>「管理延伸模組」** 功能表安裝 `.NET Upgrade Assistant` 延伸模組。
 
 ![管理延伸模組](images/zerotouchicons-manage-extensions.jpg)
 
 ![安裝 .NET Upgrade Assistant](images/zerotouchicons-net-upgrade-assistant.jpg)
 
-2. 在**「方案總管」**中的專案上按一下右鍵，然後選取**「升級」>「將專案轉換為 SDK 型」**。
+2. 在 **「方案總管」** 中的專案上按一下右鍵，然後選取 **「升級」>「將專案轉換為 SDK 型」**。
 
 ![升級專案](images/zerotouchicons-upgrade-project.jpg)
 
@@ -534,7 +534,7 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 #### 步驟 6：新增要嵌入資源的建置後指令碼
 
 1. 卸載專案：
-   * 在**「方案總管」**中的專案上按一下右鍵，然後選取**「卸載專案」**。
+   * 在 **「方案總管」** 中的專案上按一下右鍵，然後選取 **「卸載專案」**。
 
 ![卸載專案](images/zerotouchicons-unload-project.jpg)
 
@@ -561,7 +561,7 @@ Dynamo 中 Zero Touch 節點的自訂圖示，可讓您的節點在視覺上與�
 
 1. 將 `ZeroTouchNodeIcons` 的所有例證取代為您的專案名稱。
 2. 重新載入專案：
-   * 在已卸載的專案上按一下右鍵，然後選取**「重新載入專案」**。
+   * 在已卸載的專案上按一下右鍵，然後選取 **「重新載入專案」**。
 
 ![重新載入專案](images/zerotouchicons-reload-project.jpg)
 
