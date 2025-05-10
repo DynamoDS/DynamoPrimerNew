@@ -18,7 +18,11 @@ Dovrebbe essere possibile avviare DynamoSandbox.exe nella cartella estratta per 
 
 #### Componenti richiesti
 
-| Versione di Dynamo | Microsoft Visual C++ | DirectX | | | | | | -------------- | -------------------- | ------------------------------- | - | - | - | - | | 2.0 - 2.6 | 2015 Redistributable | 10 | | | | | | 2.7 | 2019 Redistributable | 11/12 (incluso in Windows 10) | | | | | | >=2.8 | 2019 Redistributable | 11/12 (incluso in Windows 10) | | | | |
+| Versione di Dynamo | Microsoft Visual C++ | DirectX                         |   |   |   |   |
+| --------------     | -------------------- | ------------------------------- | - | - | - | - | 
+| 2.0 - 2.6          | 2015 Redistributable | 10                              |   |   |   |   | 
+| 2.7                | 2019 Redistributable | 11/12 (incluso in Windows 10)   |   |   |   |   | 
+| >=2.8              | 2019 Redistributable | 11/12 (incluso in Windows 10)   |   |   |   |   |
 
 **Microsoft DirectX, disponibile anche pubblicamente nel repository GitHub di Dynamo** [**qui**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
