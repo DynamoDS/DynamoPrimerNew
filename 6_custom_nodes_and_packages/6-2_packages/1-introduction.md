@@ -67,7 +67,7 @@ Wenn Sie den Ordner extra öffnen, sehen Sie eine Reihe von Beispieldateien, die
 
 Nachdem Sie die Datei geöffnet und im Solver auf Ausführen geklickt haben, erhalten Sie das Netz einer Kugel! Beispieldateien wie diese erleichtern den Einstieg in die Arbeit mit einem neuen Dynamo-Paket.
 
-\![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
+![](<../images/6-2/1/packageintroduction-installingpackagefolder07 (1) (2).jpg>)
 
 ### Durchsuchen und Anzeigen von Paketinformationen
 
