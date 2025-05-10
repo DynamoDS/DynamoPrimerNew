@@ -98,16 +98,16 @@ StartupConfiguration 用于将 DynamoModel 作为参数传入，这表示它包�
 
 它包括以下内容：
 
-* DynamoCorePath // 加载的 DynamoCore 二进制文件所在的位置
-* DynamoHostPath // Dynamo 集成二进制文件的位置
-* GeometryFactoryPath // 已加载的 libG 二进制文件所在的位置
-* PathResolver // 帮助解析各种文件的对象
-* PreloadLibraryPaths // 预加载节点二进制文件所在的位置，例如 DSOffice.dll
-* AdditionalNodeDirectories // 其他节点二进制文件的位置
-* AdditionalResolutionPaths // 加载库时可能需要的其他依赖项的其他程序集解决路径
-* UserDataRootFolder // 用户数据文件夹，例如 `"AppData\Roaming\Dynamo\Dynamo Revit"`
-* CommonDataRootFolder // 用于保存自定义定义、示例等的默认文件夹
-* Context // 集成器主机名 + 版本 `(Revit<BuildNum>)`
+* DynamoCorePath // 加载的 DynamoCore 二进制文件所在的位置。
+* DynamoHostPath // Dynamo 集成二进制文件的位置。
+* GeometryFactoryPath // 已加载的 libG 二进制文件所在的位置。
+* PathResolver // 帮助解析各种文件的对象。
+* PreloadLibraryPaths // 预加载节点二进制文件所在的位置，例如 DSOffice.dll。
+* AdditionalNodeDirectories // 其他节点二进制文件的位置。
+* AdditionalResolutionPaths // 加载库时可能需要的其他依赖项的其他程序集解决路径。
+* UserDataRootFolder // 用户数据文件夹，例如 `"AppData\Roaming\Dynamo\Dynamo Revit"`。
+* CommonDataRootFolder // 用于保存自定义定义、示例等的默认文件夹。
+* Context // 集成器主机名 + 版本 `(Revit<BuildNum>)`。
 * SchedulerThread // 实现 `ISchedulerThread` 的集成器调度程序线程 - 对于大多数集成商来说，这是主 UI 线程，或者他们可以从任何线程访问其 API。
 * StartInTestMode // 当前会话是否为测试自动化会话 - 修改一系列 Dynamo 行为 - 除非您正在编写测试，否则请勿使用。
 * AuthProvider // 集成器的 IAuthProvider 实现，例如 RevitOxygenProvider 实现处于 Greg.dll 中 - 用于 packageManager 上载集成。
@@ -116,33 +116,33 @@ StartupConfiguration 用于将 DynamoModel 作为参数传入，这表示它包�
 
 默认首选项设置路径由 `PathManager.PreferenceFilePath` 管理，例如 `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`。集成器可以决定是否也要将自定义的首选项设置文件发送到需要与路径管理器匹配的位置。以下是序列化的首选项设置特性：
 
-* IsFirstRun // 指示是否是首次运行此版本的 Dynamo，例如用于确定是否需要显示 GA 选择加入/退出消息。还用于确定在启动新 Dynamo 版本时是否需要移植旧版 Dynamo 首选项设置，以便用户获得一致的体验
-* IsUsageReportingApproved // 指示是否批准使用情况报告
-* IsAnalyticsReportingApproved // 指示分析报告是否获得批准
+* IsFirstRun // 指示是否是首次运行此版本的 Dynamo，例如用于确定是否需要显示 GA 选择加入/退出消息。还用于确定在启动新 Dynamo 版本时是否需要移植旧版 Dynamo 首选项设置，以便用户获得一致的体验。
+* IsUsageReportingApproved // 指示是否批准使用情况报告。
+* IsAnalyticsReportingApproved // 指示分析报告是否获得批准。
 * LibraryWidth // Dynamo 左侧库面板的宽度。
-* ConsoleHeight // 控制台显示器的高度
-* ShowPreviewBubbles // 指示是否应显示预览气泡
-* ShowConnector // 指示是否显示连接器
-* ConnectorType // 指示连接器类型：Bezier 或多段线
-* BackgroundPreviews // 指示指定背景预览的活动状态
+* ConsoleHeight // 控制台显示器的高度。
+* ShowPreviewBubbles // 指示是否应显示预览气泡。
+* ShowConnector // 指示是否显示连接器。
+* ConnectorType // 指示连接器类型：Bezier 或多段线。
+* BackgroundPreviews // 指示指定背景预览的活动状态。
 * RenderPrecision // 渲染精度级别 - 越低，生成三角形越少的网格。越高，在背景预览中生成的几何图形越平滑。128 对于预览几何图形来说是一个很好的快速数字。
-* ShowEdges // 指示是否渲染曲面边和实体边
-* ShowDetailedLayout // 未使用
-* WindowX，WindowY // Dynamo 窗口的最后一个 X、Y 坐标
-* WindowW，WindowH // Dynamo 窗口的最后一个宽度、高度
-* UseHardwareAcceleration // Dynamo 是否应该使用硬件加速（如果支持）
+* ShowEdges // 指示是否渲染曲面边和实体边。
+* ShowDetailedLayout // 未使用。
+* WindowX，WindowY // Dynamo 窗口的最后一个 X、Y 坐标。
+* WindowW，WindowH // Dynamo 窗口的最后一个宽度、高度。
+* UseHardwareAcceleration // Dynamo 是否应该使用硬件加速（如果支持）。
 * NumberFormat // 用于在预览气泡 toString（） 中显示数字的小数精度。
-* MaxNumRecentFiles // 要保存的最近文件路径的最大数量
-* RecentFiles // 最近打开的文件路径的列表，接触此列表将直接影响 Dynamo 启动页面中的最近使用的文件列表
-* BackupFiles // 备份文件路径列表
+* MaxNumRecentFiles // 要保存的最近文件路径的最大数量。
+* RecentFiles // 最近打开的文件路径的列表，接触此列表将直接影响 Dynamo 启动页面中的最近使用的文件列表。
+* BackupFiles // 备份文件路径列表。
 * CustomPackageFolders // 包含 Zero Touch 二进制文件和目录路径的文件夹列表，将对这些二进制文件和目录路径进行扫描以查找软件包和自定义节点。
 * PackageDirectoriesToUninstall // 软件包管理器用于确定哪些软件包标记为要删除的软件包列表。如果可能，在 Dynamo 启动期间将删除这些路径。
 * PythonTemplateFilePath // 创建新的 PythonScript 节点时要用作起始模板的 Python (.py) 文件的路径 - 可用于为集成设置自定义 Python 模板。
-* BackupInterval // 表示图表将自动保存多长时间（以毫秒为单位）
-* BackupFilesCount // 表示将进行多少次备份
-* PackageDownloadTouAccepted // 指示用户是否已接受从软件包管理器下载软件包的使用条款
-* OpenFileInManualExecutionMode // 指示 OpenFileDialog 中“在手动模式下打开”复选框的默认状态
-* NamespacesToExcludeFromLibrary // 指示哪些（如果有）名称空间不应显示在 Dynamo 节点库中。字符串格式：“[库名称]:[完全限定名称空间]”
+* BackupInterval // 表示图表将自动保存多长时间（以毫秒为单位）。
+* BackupFilesCount // 表示将进行多少次备份。
+* PackageDownloadTouAccepted // 指示用户是否已接受从软件包管理器下载软件包的使用条款。
+* OpenFileInManualExecutionMode // 指示 OpenFileDialog 中“在手动模式下打开”复选框的默认状态。
+* NamespacesToExcludeFromLibrary // 指示哪些（如果有）名称空间不应显示在 Dynamo 节点库中。字符串格式：“[库名称]:[完全限定名称空间]”。
 
 序列化首选项设置的示例：
 
@@ -246,9 +246,9 @@ StartupConfiguration 用于将 DynamoModel 作为参数传入，这表示它包�
 </PreferenceSettings> 
 ```
 
-* Extensions // 实现 IExtension 的扩展列表，如果为空，Dynamo 将从默认路径（Dynamo 文件夹下的 `extensions` 文件夹）加载扩展
+* Extensions // 实现 IExtension 的扩展列表，如果为空，Dynamo 将从默认路径（Dynamo 文件夹下的 `extensions` 文件夹）加载扩展。
 * IsHeadless // 指示 Dynamo 是否在没有 UI 的情况下启动，会影响分析。
-* UpdateManager // 集成器的 UpdateManager 实现，请参见上述描述
+* UpdateManager // 集成器的 UpdateManager 实现，请参见上述描述。
 * ProcessMode // 等效于 TaskProcessMode，如果在测试模式下则同步，否则异步 - 这将控制调度程序的行为。单线程环境也可以将其设置为同步。
 
 使用目标 StartConfiguration 启动 `DynamoModel`
