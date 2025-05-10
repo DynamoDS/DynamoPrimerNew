@@ -18,7 +18,11 @@ Debería poder ejecutar DynamoSandbox.exe en la carpeta extraída para utilizar 
 
 #### Componentes necesarios
 
-| Versión de Dynamo | Microsoft Visual C++ | DirectX | | | | | | -------------- | -------------------- | ------------------------------- | - | - | - | - | | 2.0 - 2.6 | 2015 Redistributable | 10 | | | | | | 2.7 | 2019 Redistributable | 11/12 (incluido con Windows 10 | | | | | | >=2.8 | 2019 Redistributable | 11/12 (incluido con Windows 10 | | | | |
+| Versión de Dynamo | Microsoft Visual C++ | DirectX                         |   |   |   |   |
+| --------------    | -------------------- | ------------------------------- | - | - | - | - | 
+| 2.0 - 2.6         | 2015 Redistributable | 10                              |   |   |   |   | 
+| 2.7               | 2019 Redistributable | 11/12 (incluido con Windows 10  |   |   |   |   | 
+| >=2.8             | 2019 Redistributable | 11/12 (incluido con Windows 10  |   |   |   |   |
 
 **Microsoft DirectX, que también está disponible públicamente en nuestro repositorio de Github Dynamo** [**aquí**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
