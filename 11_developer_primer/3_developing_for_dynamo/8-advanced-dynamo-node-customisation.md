@@ -387,11 +387,11 @@ Markdown est très flexible et fournit des fonctionnalités permettant de créer
 
 Ajouter de la documentation à vos nœuds est une tâche simple. Vous pouvez ajouter la documentation à tous les types de nœuds personnalisés :
 
-* Nœuds Dynamo prêts à l’emploi
+* Nœuds Dynamo prêts à l’emploi.
 * Nœuds personnalisés (.dyf) : collections de nœuds prêts à l’emploi et/ou d’autres nœuds de package.
-* Nœuds de package C# personnalisés (également connus sous le nom de Zero Touch. Ces nœuds personnalisés ressemblent aux nœuds prêts à l’emploi)
-* Nœuds NodeModel (nœuds contenant des fonctionnalités spéciales d’interface utilisateur telles que des listes déroulantes ou des boutons de sélection)
-* Nœuds NodeModel avec interface utilisateur personnalisée (nœuds contenant des fonctionnalités uniques d’interface utilisateur, telles que des graphes sur le nœud)
+* Nœuds de package C# personnalisés (également connus sous le nom de Zero Touch. Ces nœuds personnalisés ressemblent aux nœuds prêts à l’emploi).
+* Nœuds NodeModel (nœuds contenant des fonctionnalités spéciales d’interface utilisateur telles que des listes déroulantes ou des boutons de sélection).
+* Nœuds NodeModel avec interface utilisateur personnalisée (nœuds contenant des fonctionnalités uniques d’interface utilisateur, telles que des graphes sur le nœud).
 
 Suivez ces étapes pour que vos fichiers Markdown s’affichent dans Dynamo.
 
