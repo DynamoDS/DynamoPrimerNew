@@ -18,7 +18,11 @@ Měli byste být schopni spustit soubor DynamoSandbox.exe v extrahované složc
 
 #### Požadované komponenty
 
-| Verze aplikace Dynamo | Microsoft Visual C++ | DirectX | | | | | | -------------- | -------------------- | ------------------------------- | - | - | - | - | | 2.0 - 2.6 | 2015 Redistributable | 10 | | | | | | 2.7 | 2019 Redistributable | 11/12 (součást Windows 10 | | | | | | >=2.8 | 2019 Redistributable | 11/12 (součást Windows 10 | | | | |
+| Verze aplikace Dynamo | Microsoft Visual C++ | DirectX                         |   |   |   |   |
+|    --------------     | -------------------- | ------------------------------- | - | - | - | - | 
+| 2.0 - 2.6             | 2015 Redistributable | 10                              |   |   |   |   | 
+| 2.7                   | 2019 Redistributable | 11/12 (součást Windows 10       |   |   |   |   | 
+| >=2.8                 | 2019 Redistributable | 11/12 (součást Windows 10       |   |   |   |   |
 
 **Rozhraní Microsoft DirectX, které je také veřejně dostupné v našem úložišti aplikace Dynamo na Githubu** – [**zde**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
