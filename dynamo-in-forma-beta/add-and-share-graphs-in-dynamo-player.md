@@ -14,7 +14,7 @@ Les graphes que vous chargez apparaissent dans **Uploaded graphs** [ 2 ]. Vous p
 
 Vous pouvez partager les graphes sur un site ou un hub [ 3 ]. Un hub comprend plusieurs sites. Pour partager un graphe, cliquez sur **Share graph** et entrez les détails du graphe. Vous pouvez choisir de partager le graphe sur le site ou le hub. Une fois que vous avez cliqué sur **Share**, le graphe devient disponible pour les autres utilisateurs ayant accès à ce site ou à ce hub. 
 
-<figure><img src="../.gitbook/assets/share-graph.png" alt=""><figcaption><p>Sharing a graph</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/share-graph.png" alt=""><figcaption><p>Partage d’un graphe</p></figcaption></figure>
 
 Dynamo Player est fourni avec plusieurs graphes prédéfinis dans la section **Graphs provided by Autodesk** [ 4 ]. C’est un excellent point de départ pour l’exploration et l’expérimentation.
 
