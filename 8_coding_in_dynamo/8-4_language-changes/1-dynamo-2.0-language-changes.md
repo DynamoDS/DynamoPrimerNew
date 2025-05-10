@@ -288,7 +288,7 @@ Este cambio elimina ahora la adición de un nivel de lista redundante y también
 
 **Legible:** los resultados se ajustan a las expectativas del usuario y son más fáciles de comprender.
 
-**Compatible: ** los nodos de interfaz de usuario (con opción de encaje) y los CBN que utilizan guías de replicación ofrecen resultados compatibles.
+**Compatible:** los nodos de interfaz de usuario (con opción de encaje) y los CBN que utilizan guías de replicación ofrecen resultados compatibles.
 
 **Coherente:**
 
