@@ -1,7 +1,6 @@
 # 在 Dynamo Player 中添加和共享图形
 
-在安装了 Dynamo Player 后，即可在 Player 中打开文件。如果您使用的是桌面版本，还需要打开 Dynamo。
-open.&#x20;
+在安装了 Dynamo Player 后，即可在 Player 中打开文件。如果您使用的是桌面版本，还需要打开 Dynamo。open.&#x20;
 
 <figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>在 Dynamo Desktop 中打开已连接图形</p></figcaption></figure>
 
