@@ -286,7 +286,7 @@ Tato změna nyní odstraňuje přidání nadbytečné úrovně seznamu a také �
 
 ### Výhody:
 
-**Čitelnost: ** Výsledky odpovídají očekáváním uživatelů a jsou srozumitelnější.
+**Čitelnost:** Výsledky odpovídají očekáváním uživatelů a jsou srozumitelnější.
 
 **Kompatibilita:** Uzly uživatelského rozhraní (s možností vázání) a uzly bloku kódu používající vodítka replikace poskytují kompatibilní výsledky.
 
