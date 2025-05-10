@@ -98,51 +98,51 @@ StartupConfiguration은 DynamoModel을 초기화하기 위한 매개변수로 �
 
 구성요소는 다음과 같습니다.
 
-* DynamoCorePath // 로드 중인 DynamoCore 바이너리의 위치
-* DynamoHostPath // Dynamo 통합 바이너리의 위치
-* GeometryFactoryPath // 로드된 LibG 바이너리의 위치
-* PathResolver //다양한 파일을 확인하는 데 도움이 되는 객체
-* PreloadLibraryPaths // 미리 로드된 노드 바이너리(예 : DSOffice.dll)의 위치
-* AdditionalNodeDirectories // 추가 노드 바이너리의 위치
-* AdditionalResolutionPaths // 라이브러리 로드 중 필요할 수 있는 다른 종속성에 대한 추가 조립품 확인 경로
-* UserDataRootFolder // 사용자 데이터 폴더, 예: `"AppData\Roaming\Dynamo\Dynamo Revit"`
-* CommonDataRootFolder // 사용자 정의, 샘플 등을 저장하기 위한 기본 폴더
-* Context // 통합 개발자 호스트 이름 + 버전 `(Revit<BuildNum>)`
+* DynamoCorePath // 로드 중인 DynamoCore 바이너리의 위치.
+* DynamoHostPath // Dynamo 통합 바이너리의 위치.
+* GeometryFactoryPath // 로드된 LibG 바이너리의 위치.
+* PathResolver //다양한 파일을 확인하는 데 도움이 되는 객체.
+* PreloadLibraryPaths // 미리 로드된 노드 바이너리(예 : DSOffice.dll)의 위치.
+* AdditionalNodeDirectories // 추가 노드 바이너리의 위치.
+* AdditionalResolutionPaths // 라이브러리 로드 중 필요할 수 있는 다른 종속성에 대한 추가 조립품 확인 경로.
+* UserDataRootFolder // 사용자 데이터 폴더, 예: `"AppData\Roaming\Dynamo\Dynamo Revit"`.
+* CommonDataRootFolder // 사용자 정의, 샘플 등을 저장하기 위한 기본 폴더.
+* Context // 통합 개발자 호스트 이름 + 버전 `(Revit<BuildNum>)`.
 * SchedulerThread // `ISchedulerThread`를 구현하는 통합 개발자 스케줄러 스레드로, 대부분의 통합 개발자에게는 기본 UI 스레드이거나 API에 액세스할 수 있는 모든 스레드입니다.
-* StartInTestMode // 현재 세션이 테스트 자동화 세션인지 여부(많은 Dynamo 동작을 수정하므로 테스트를 작성하지 않는 한 사용하지 않음)
-* AuthProvider // 통합 개발자의 IAuthProvider 구현(예: RevitOxygenProvider 구현은 Greg.dll에 있으며 packageManager 업로드 통합에 사용됨)
+* StartInTestMode // 현재 세션이 테스트 자동화 세션인지 여부(많은 Dynamo 동작을 수정하므로 테스트를 작성하지 않는 한 사용하지 않음).
+* AuthProvider // 통합 개발자의 IAuthProvider 구현(예: RevitOxygenProvider 구현은 Greg.dll에 있으며 packageManager 업로드 통합에 사용됨).
 
 ### 기본 설정
 
 기본 설정 경로는 `PathManager.PreferenceFilePath`(예: `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`)에서 관리됩니다. 통합 개발자는 사용자화된 기본 설정 파일도 해당 위치에 제공할지를 결정할 수 있으며, 이 위치는 경로 관리자와 일치해야 합니다. 직렬화된 기본 설정 속성은 다음과 같습니다.
 
-* IsFirstRun // 이 Dynamo 버전을 처음 실행하는지를 나타냄(예: GA 동의 여부 메시지를 표시해야 할지 결정하는 데 사용됨). 또한 사용자가 일관된 환경을 사용할 수 있도록 새 Dynamo 버전을 시작할 때 기존 Dynamo 기본 설정을 마이그레이션해야 하는지를 결정하는 데 사용됩니다
-* IsUsageReportingApproved // 사용량 보고가 승인되었는지를 나타냄
-* IsAnalyticsReportingApproved // 분석 보고가 승인되었는지를 나타냄
-* LibraryWidth // Dynamo 왼쪽 라이브러리 패널의 폭
-* ConsoleHeight // 콘솔 디스플레이의 높이
-* ShowPreviewBubbles // 미리보기 풍선을 표시해야 하는지를 나타냄
-* ShowConnector // 커넥터의 표시 여부를 나타냄
-* ConnectorType //커넥터 유형(베지어 또는 폴리선)을 나타냄
-* BackgroundPreviews // 지정된 배경 미리보기의 활성 상태를 나타냄
-* RenderPrecision // 렌더링 정밀도 수준(낮을수록 더 적은 수의 삼각형을 사용하여 메쉬가 생성됨) 삼각형 수가 많을수록 배경 미리보기에서 더 부드러운 형상이 생성됩니다. 128은 형상을 빠르게 미리 보는 데 적합한 값입니다.
-* ShowEdges // 표면 및 솔리드 모서리를 렌더링할지를 나타냄
-* ShowDetailedLayout // 사용되지 않음
-* WindowX, WindowY // Dynamo 창의 마지막 X, Y 좌표
-* WindowW, WindowH // Dynamo 창의 마지막 폭, 높이
-* UseHardwareAcceleration // 지원되는 경우 Dynamo에서 하드웨어 가속을 사용해야 함
-* NumberFormat // 미리보기 풍선 toString()에 숫자를 표시하는 데 사용되는 소수점 자릿수
-* MaxNumRecentFiles // 저장할 최근 파일 경로의 최대 수
+* IsFirstRun // 이 Dynamo 버전을 처음 실행하는지를 나타냄(예: GA 동의 여부 메시지를 표시해야 할지 결정하는 데 사용됨). 또한 사용자가 일관된 환경을 사용할 수 있도록 새 Dynamo 버전을 시작할 때 기존 Dynamo 기본 설정을 마이그레이션해야 하는지를 결정하는 데 사용됩니다.
+* IsUsageReportingApproved // 사용량 보고가 승인되었는지를 나타냄.
+* IsAnalyticsReportingApproved // 분석 보고가 승인되었는지를 나타냄.
+* LibraryWidth // Dynamo 왼쪽 라이브러리 패널의 폭.
+* ConsoleHeight // 콘솔 디스플레이의 높이.
+* ShowPreviewBubbles // 미리보기 풍선을 표시해야 하는지를 나타냄.
+* ShowConnector // 커넥터의 표시 여부를 나타냄.
+* ConnectorType //커넥터 유형(베지어 또는 폴리선)을 나타냄.
+* BackgroundPreviews // 지정된 배경 미리보기의 활성 상태를 나타냄.
+* RenderPrecision // 렌더링 정밀도 수준(낮을수록 더 적은 수의 삼각형을 사용하여 메쉬가 생성됨). 삼각형 수가 많을수록 배경 미리보기에서 더 부드러운 형상이 생성됩니다. 128은 형상을 빠르게 미리 보는 데 적합한 값입니다.
+* ShowEdges // 표면 및 솔리드 모서리를 렌더링할지를 나타냄.
+* ShowDetailedLayout // 사용되지 않음.
+* WindowX, WindowY // Dynamo 창의 마지막 X, Y 좌표.
+* WindowW, WindowH // Dynamo 창의 마지막 폭, 높이.
+* UseHardwareAcceleration // 지원되는 경우 Dynamo에서 하드웨어 가속을 사용해야 함.
+* NumberFormat // 미리보기 풍선 toString()에 숫자를 표시하는 데 사용되는 소수점 자릿수.
+* MaxNumRecentFiles // 저장할 최근 파일 경로의 최대 수.
 * RecentFiles // 최근에 연 파일 경로 리스트. 이 리스트를 수정하면 Dynamo 시작 페이지의 최근 파일 리스트에 직접 영향을 줍니다.
-* BackupFiles // 백업 파일 경로 리스트
-* CustomPackageFolders // 패키지 및 사용자 노드가 있는지 스캔할 Zero-Touch 바이너리 및 디렉터리 경로가 포함된 폴더 리스트
+* BackupFiles // 백업 파일 경로 리스트.
+* CustomPackageFolders // 패키지 및 사용자 노드가 있는지 스캔할 Zero-Touch 바이너리 및 디렉터리 경로가 포함된 폴더 리스트.
 * PackageDirectoriesToUninstall // Package Manager가 삭제 표시할 패키지를 결정하는 데 사용되는 패키지 리스트. 이러한 경로는 가능한 경우 Dynamo 시작 중에 삭제됩니다.
 * PythonTemplateFilePath // 새 PythonScript 노드를 작성할 때 시작 템플릿으로 사용할 Python(.py) 파일의 경로. 이 경로는 통합을 위한 사용자 Python 템플릿 설정하는 데 사용할 수 있습니다.
-* BackupInterval // 그래프가 자동으로 저장되는 기간(밀리초)을 나타냄
-* BackupFilesCount // 만들 백업 수를 나타냄
-* PackageDownloadTouAccepted // 사용자가 패키지 관리자에서 패키지를 다운로드하기 위한 이용 약관에 동의했는지를 나타냄
-* OpenFileInManualExecutionMode // OpenFileDialog의 "수동 모드에서 열기" 확인란의 기본 상태를 나타냄
-* NamespacesToExcludeFromLibrary // Dynamo 노드 라이브러리에 표시하 수 없는 네임스페이스(있는 경우)를 나타냄 문자열 형식: "[라이브러리 이름]:[정규화된 네임스페이스]"
+* BackupInterval // 그래프가 자동으로 저장되는 기간(밀리초)을 나타냄.
+* BackupFilesCount // 만들 백업 수를 나타냄.
+* PackageDownloadTouAccepted // 사용자가 패키지 관리자에서 패키지를 다운로드하기 위한 이용 약관에 동의했는지를 나타냄.
+* OpenFileInManualExecutionMode // OpenFileDialog의 "수동 모드에서 열기" 확인란의 기본 상태를 나타냄.
+* NamespacesToExcludeFromLibrary // Dynamo 노드 라이브러리에 표시하 수 없는 네임스페이스(있는 경우)를 나타냄 문자열 형식: "[라이브러리 이름]:[정규화된 네임스페이스]".
 
 직렬화된 기본 설정의 예는 다음과 같습니다.
 
@@ -248,7 +248,7 @@ StartupConfiguration은 DynamoModel을 초기화하기 위한 매개변수로 �
 
 * Extensions // IExtension을 구현하는 확장 리스트. null인 경우 Dynamo가 기본 경로(Dynamo 폴더 아래 `extensions` 폴더)에서 확장을 로드합니다.
 * IsHeadless // Dynamo가 UI 없이 실행되는지를 나타냄. 분석에 영향을 줍니다.
-* UpdateManager // 통합 개발자의 UpdateManager 구현, 위의 설명 참조
+* UpdateManager // 통합 개발자의 UpdateManager 구현, 위의 설명 참조.
 * ProcessMode // TaskProcessMode와 동일하며 테스트 모드인 경우 동기, 그렇지 않으면 비동기임. 이 속성은 스케줄러의 동작을 제어합니다. 단일 스레드 환경에서는 이 속성을 동기로 설정할 수도 있습니다.
 
 대상 StartConfiguration을 사용하여 `DynamoModel` 시작
