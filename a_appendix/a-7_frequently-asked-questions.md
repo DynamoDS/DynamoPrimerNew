@@ -18,7 +18,11 @@ Powinno być możliwe uruchomienie programu DynamoSandbox.exe w wyodrębnionym f
 
 #### Wymagane komponenty
 
-| Wersja dodatku Dynamo | Microsoft Visual C++ | DirectX | | | | | | -------------- | -------------------- | ------------------------------- | - | - | - | - | | 2.0–2.6 | 2015 Redistributable | 10 | | | | | | 2.7 | 2019 Redistributable | 11/12 (dołączony do systemu Windows 10 | | | | | | >=2.8 | 2019 Redistributable | 11/12 (dołączony do systemu Windows 10| | | | |
+| Wersja dodatku Dynamo | Microsoft Visual C++ | DirectX                                |   |   |   |   |
+| --------------        | -------------------- | -------------------------------        | - | - | - | - | 
+| 2.0–2.6               | 2015 Redistributable | 10                                     |   |   |   |   | 
+| 2.7                   | 2019 Redistributable | 11/12 (dołączony do systemu Windows 10 |   |   |   |   | 
+| >=2.8                 | 2019 Redistributable | 11/12 (dołączony do systemu Windows 10 |   |   |   |   |
 
 **Program Microsoft DirectX, który jest również publicznie dostępny w repozytorium dodatku Dynamo w serwisie GitHub** [**tutaj**](https://github.com/DynamoDS/Dynamo/tree/master/tools/install/Extra/DirectX)
 
