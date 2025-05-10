@@ -14,8 +14,8 @@ Dynamo in Forma Beta 版目前以搶先體驗開放測試版提供，這表示�
 
 首先，我們在 Forma 中安裝 Dynamo Player。
 
-1. 在您的 Forma 網站中，移到左側側邊欄的**「Extensions」**，然後按一下**「Add extension」**。此時會開啟 Autodesk App Store。
-2. 搜尋 Dynamo，並加入 Dynamo Player Beta。閱讀免責聲明，然後按一下**「Agree」**。
+1. 在您的 Forma 網站中，移到左側側邊欄的 **「Extensions」**，然後按一下 **「Add extension」**。此時會開啟 Autodesk App Store。
+2. 搜尋 Dynamo，並加入 Dynamo Player Beta。閱讀免責聲明，然後按一下 **「Agree」**。
 
 <figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
 
@@ -64,8 +64,8 @@ Dynamo in Forma Beta 版目前以搶先體驗開放測試版提供，這表示�
 
 首先，我們在 Forma 中安裝 Dynamo Player。
 
-1. 在您的 Forma 網站中，移到左側側邊欄的**「Extensions」**，然後按一下**「Add extension」**。此時會開啟 Autodesk App Store。
-2. 搜尋 Dynamo，並加入 Dynamo Player Beta。閱讀免責聲明，然後按一下**「Agree」**。
+1. 在您的 Forma 網站中，移到左側側邊欄的 **「Extensions」**，然後按一下 **「Add extension」**。此時會開啟 Autodesk App Store。
+2. 搜尋 Dynamo，並加入 Dynamo Player Beta。閱讀免責聲明，然後按一下 **「Agree」**。
 
 <figure><img src="../.gitbook/assets/install-player.png" alt=""><figcaption></figcaption></figure>
 
@@ -74,4 +74,4 @@ Dynamo in Forma Beta 版目前以搶先體驗開放測試版提供，這表示�
 
 <figure><img src="../.gitbook/assets/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
 
-5. 您現在可以使用 Dynamo Player 了！如果您已經在 Dynamo 中開啟了圖表，只需按一下**「Connected graph」**下的「Open」，即可在 Player 中檢視。
+5. 您現在可以使用 Dynamo Player 了！如果您已經在 Dynamo 中開啟了圖表，只需按一下 **「Connected graph」** 下的「Open」，即可在 Player 中檢視。
