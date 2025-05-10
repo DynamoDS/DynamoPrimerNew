@@ -387,11 +387,11 @@ Markdown è molto flessibile e dovrebbe fornire funzionalità sufficienti per cr
 
 Aggiungere la documentazione ai nodi è semplice. La documentazione può essere aggiunta a tutti i tipi di nodi personalizzati e comprende:
 
-* Nodi di Dynamo predefiniti
+* Nodi di Dynamo predefiniti.
 * Nodi personalizzati (.dyf): raccolte di nodi predefiniti e/o di altri pacchetti.
-* Nodi del pacchetto C# personalizzati (noti anche come zero-touch; questi nodi personalizzati sono uguali ai nodi predefiniti)
-* Nodi NodeModel (nodi che contengono funzionalità speciali dell'interfaccia utente, ad esempio menu a discesa o pulsanti di selezione)
-* Nodi NodeModel con interfaccia utente personalizzata (nodi che contengono funzionalità univoche dell'interfaccia utente, ad esempio la grafica sul nodo)
+* Nodi del pacchetto C# personalizzati (noti anche come zero-touch; questi nodi personalizzati sono uguali ai nodi predefiniti).
+* Nodi NodeModel (nodi che contengono funzionalità speciali dell'interfaccia utente, ad esempio menu a discesa o pulsanti di selezione).
+* Nodi NodeModel con interfaccia utente personalizzata (nodi che contengono funzionalità univoche dell'interfaccia utente, ad esempio la grafica sul nodo).
 
 Per visualizzare i file in Markdown all'interno di Dynamo, seguire questi pochi passaggi.
 

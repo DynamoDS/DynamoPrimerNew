@@ -142,7 +142,7 @@ Il percorso di impostazione delle preferenze di default viene gestito da `PathMa
 * BackupFilesCount // Indica il numero di backup che verranno eseguiti.
 * PackageDownloadTouAccepted // Indica se l'utente ha accettato le condizioni d'uso per il download di pacchetti da Package Manager.
 * OpenFileInManualExecutionMode // Indica lo stato di default della casella di controllo Apri in modalità di esecuzione manuale in OpenFileDialog.
-* NamespacesToExcludeFromLibrary // Indica quali (se presenti) spazi dei nomi non devono essere visualizzati nella libreria di nodi di Dynamo. Formato stringa: "[nome libreria]:[spazio dei nomi completo]"
+* NamespacesToExcludeFromLibrary // Indica quali (se presenti) spazi dei nomi non devono essere visualizzati nella libreria di nodi di Dynamo. Formato stringa: "[nome libreria]:[spazio dei nomi completo]".
 
 Esempio di impostazioni delle preferenze serializzate:
 
