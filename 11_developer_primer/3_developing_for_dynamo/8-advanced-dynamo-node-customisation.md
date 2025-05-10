@@ -387,11 +387,11 @@ O Markdown é muito flexível e deve fornecer funcionalidade suficiente para cri
 
 É fácil adicionar documentação aos nós. É possível adicionar documentação a todos os tipos de nós personalizados, incluindo:
 
-* Nós de Dynamo prontos para uso
+* Nós de Dynamo prontos para uso.
 * Nós personalizados (.dyf) – Coleções de nós prontos para uso e/ou outros nós de pacote.
-* Nós de pacote C# personalizados (também conhecidos como Zerotouch. Esses nós personalizados se parecem com os nós prontos para uso)
-* Nós NodeModel (nós que contêm recursos especiais da interface do usuário, como menus suspensos ou botões de seleção)
-* Nós NodeModel com interface do usuário personalizada (nós que contêm recursos exclusivos da interface do usuário, como gráficos no nó)
+* Nós de pacote C# personalizados (também conhecidos como Zerotouch. Esses nós personalizados se parecem com os nós prontos para uso).
+* Nós NodeModel (nós que contêm recursos especiais da interface do usuário, como menus suspensos ou botões de seleção).
+* Nós NodeModel com interface do usuário personalizada (nós que contêm recursos exclusivos da interface do usuário, como gráficos no nó).
 
 Siga estas etapas para exibir os arquivos Markdown no Dynamo.
 

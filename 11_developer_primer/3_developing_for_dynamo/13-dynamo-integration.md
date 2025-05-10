@@ -98,16 +98,16 @@ O StartupConfiguration é usado para ser passado como um parâmetro para inicial
 
 Consiste no seguinte:
 
-* DynamoCorePath // Onde os binários de carregamento do DynamoCore estão localizados
-* DynamoHostPath // Onde os binários de integração do Dynamo estão localizados
-* GeometryFactoryPath // Onde os binários libG carregados estão localizados
-* PathResolver // Objeto que ajuda a resolver vários arquivos
-* PreloadLibraryPaths // Onde estão localizados os nós binários pré-carregados, por exemplo, DSOffice.dll
-* AdditionalNodeDirectories // Onde os binários dos nós adicionais estão localizados
-* AdditionalResolutionPaths // Caminhos de resolução de montagem adicionais para outras dependências que podem ser necessárias durante o carregamento de bibliotecas
-* UserDataRootFolder // Pasta de dados do usuário, por exemplo, `"AppData\Roaming\Dynamo\Dynamo Revit"`
+* DynamoCorePath // Onde os binários de carregamento do DynamoCore estão localizados.
+* DynamoHostPath // Onde os binários de integração do Dynamo estão localizados.
+* GeometryFactoryPath // Onde os binários libG carregados estão localizados.
+* PathResolver // Objeto que ajuda a resolver vários arquivos.
+* PreloadLibraryPaths // Onde estão localizados os nós binários pré-carregados, por exemplo, DSOffice.dll.
+* AdditionalNodeDirectories // Onde os binários dos nós adicionais estão localizados.
+* AdditionalResolutionPaths // Caminhos de resolução de montagem adicionais para outras dependências que podem ser necessárias durante o carregamento de bibliotecas.
+* UserDataRootFolder // Pasta de dados do usuário, por exemplo, `"AppData\Roaming\Dynamo\Dynamo Revit"`.
 * CommonDataRootFolder // Pasta padrão para salvar definições personalizadas, amostras etc.
-* Context // Nome do hospedeiro do integrador + versão `(Revit<BuildNum>)`
+* Context // Nome do hospedeiro do integrador + versão `(Revit<BuildNum>)`.
 * SchedulerThread // Thread do programador do integrador implementando o `ISchedulerThread`. Para a maioria dos integradores, esse é o thread da interface principal ou qualquer thread de onde eles podem acessar sua API.
 * StartInTestMode // Se a sessão atual é uma sessão de automação de teste (modifica vários comportamentos do Dynamo), não use, a menos que esteja escrevendo testes.
 * AuthProvider // Implementação do integrador do IAuthProvider, por exemplo, a implementação do RevitOxygenProvider está no Greg.dll, usado para integração de carregamento do packageManager.
@@ -116,33 +116,33 @@ Consiste no seguinte:
 
 O caminho de configuração de preferência padrão é gerenciado por `PathManager.PreferenceFilePath`, por exemplo, `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Os integradores podem decidir se desejam também enviar um arquivo de configuração de preferência personalizado para uma localização que precisa ser alinhada com o gerenciador de caminho. A seguir, estão as propriedades de configuração de preferência que são serializadas:
 
-* IsFirstRun // Indica se é a primeira vez que esta versão do Dynamo é executada, por exemplo, usado para determinar se é necessário exibir a mensagem de aceitação/exclusão do GA. Também usado para determinar se é necessário migrar a configuração de preferência do Dynamo legado ao iniciar uma nova versão do Dynamo, para que os usuários tenham uma experiência consistente
-* IsUsageReportingApproved // Indica se o relatório de uso foi aprovado ou não
-* IsAnalyticsReportingApproved // Indica se o relatório analítico foi aprovado ou não
+* IsFirstRun // Indica se é a primeira vez que esta versão do Dynamo é executada, por exemplo, usado para determinar se é necessário exibir a mensagem de aceitação/exclusão do GA. Também usado para determinar se é necessário migrar a configuração de preferência do Dynamo legado ao iniciar uma nova versão do Dynamo, para que os usuários tenham uma experiência consistente.
+* IsUsageReportingApproved // Indica se o relatório de uso foi aprovado ou não.
+* IsAnalyticsReportingApproved // Indica se o relatório analítico foi aprovado ou não.
 * LibraryWidth // A largura do painel esquerdo da biblioteca do Dynamo.
-* ConsoleHeight // A altura da tela do console
-* ShowPreviewBubbles // Indica se as bolhas de visualização devem ser exibidas
-* ShowConnector // Indica se os conectores são exibidos
-* ConnectorType // Indica o tipo de conector: Bezier ou Polilinha
-* BackgroundPreviews // Indica o estado ativo da visualização do plano de fundo especificada
+* ConsoleHeight // A altura da tela do console.
+* ShowPreviewBubbles // Indica se as bolhas de visualização devem ser exibidas.
+* ShowConnector // Indica se os conectores são exibidos.
+* ConnectorType // Indica o tipo de conector: Bezier ou Polilinha.
+* BackgroundPreviews // Indica o estado ativo da visualização do plano de fundo especificada.
 * RenderPrecision // O nível de precisão de renderização; menor gera malhas com menos triângulos. Maior gerará uma geometria mais suave na visualização do plano de fundo. 128 é um bom número rápido para a geometria de visualização.
-* ShowEdges // Indica se as arestas de sólido e superfície serão renderizadas
-* ShowDetailedLayout // NÃO USADO
-* WindowX, WindowY // Última coordenada X, Y da janela do Dynamo
-* WindowW, WindowH // Última largura, altura da janela do Dynamo
-* UseHardwareAcceleration // O Dynamo deve usar a aceleração por hardware, se for compatível
+* ShowEdges // Indica se as arestas de sólido e superfície serão renderizadas.
+* ShowDetailedLayout // NÃO USADO.
+* WindowX, WindowY // Última coordenada X, Y da janela do Dynamo.
+* WindowW, WindowH // Última largura, altura da janela do Dynamo.
+* UseHardwareAcceleration // O Dynamo deve usar a aceleração por hardware, se for compatível.
 * NumberFormat // A precisão decimal usada para exibir os números em toString() da bolha de visualização.
-* MaxNumRecentFiles // O número máximo de caminhos de arquivo recentes a serem salvos
-* RecentFiles // Uma lista de caminhos de arquivos abertos recentemente. Tocar aqui afetará diretamente a lista de arquivos recentes na página inicial do Dynamo
-* BackupFiles // Uma lista de caminhos de arquivo de backup
+* MaxNumRecentFiles // O número máximo de caminhos de arquivo recentes a serem salvos.
+* RecentFiles // Uma lista de caminhos de arquivos abertos recentemente. Tocar aqui afetará diretamente a lista de arquivos recentes na página inicial do Dynamo.
+* BackupFiles // Uma lista de caminhos de arquivo de backup.
 * CustomPackageFolders // Uma lista de pastas contendo binários sem toque e caminhos de diretório que serão verificados em busca de pacotes e nós personalizados.
 * PackageDirectoriesToUninstall // Uma lista de pacotes usados pelo Gerenciador de pacotes para determinar quais pacotes estão marcados para exclusão. Esses caminhos serão excluídos, se possível, durante a inicialização do Dynamo.
 * PythonTemplateFilePath // Caminho para o arquivo Python (.py) para ser usado como modelo inicial ao criar um novo nó PythonScript. Pode ser usado para configurar um modelo Python personalizado para a integração.
-* BackupInterval // Indica em quanto tempo (em milissegundos) o gráfico será salvo automaticamente
-* BackupFilesCount // Indica quantos backups serão feitos
-* PackageDownloadTouAccepted // Indica se o usuário aceitou os termos de uso para fazer o download dos pacotes do gerenciador de pacotes
-* OpenFileInManualExecutionMode // Indica o estado padrão da caixa de seleção “Abrir no modo manual” na OpenFileDialog
-* NamespacesToExcludeFromLibrary // Indica quais namespaces (se houver) não devem ser exibidos na biblioteca de nós do Dynamo. Formato da sequência de caracteres: “[nome da biblioteca]:[namespace totalmente qualificado]”
+* BackupInterval // Indica em quanto tempo (em milissegundos) o gráfico será salvo automaticamente.
+* BackupFilesCount // Indica quantos backups serão feitos.
+* PackageDownloadTouAccepted // Indica se o usuário aceitou os termos de uso para fazer o download dos pacotes do gerenciador de pacotes.
+* OpenFileInManualExecutionMode // Indica o estado padrão da caixa de seleção “Abrir no modo manual” na OpenFileDialog.
+* NamespacesToExcludeFromLibrary // Indica quais namespaces (se houver) não devem ser exibidos na biblioteca de nós do Dynamo. Formato da sequência de caracteres: “[nome da biblioteca]:[namespace totalmente qualificado]”.
 
 Um exemplo de configurações de preferência serializadas:
 
@@ -246,9 +246,9 @@ Um exemplo de configurações de preferência serializadas:
 </PreferenceSettings> 
 ```
 
-* Extensions // Uma lista de extensões que implementam a IExtension. Se for nulo, o Dynamo carregará as extensões do caminho padrão (pasta `extensions` na pasta Dynamo)
+* Extensions // Uma lista de extensões que implementam a IExtension. Se for nulo, o Dynamo carregará as extensões do caminho padrão (pasta `extensions` na pasta Dynamo).
 * IsHeadless // Indica se o Dynamo é iniciado sem a interface do usuário. Afeta o Analytics.
-* UpdateManager // Implementação do UpdateManager do integrador. Veja a descrição acima
+* UpdateManager // Implementação do UpdateManager do integrador. Veja a descrição acima.
 * ProcessMode // Equivalente a TaskProcessMode. Síncrono se estiver em modo de teste; caso contrário, Assíncrono. Isso controla o comportamento do agendador. Os ambientes de thread único também podem definir isso como síncrono.
 
 Use o StartConfiguration de destino para iniciar o `DynamoModel`
