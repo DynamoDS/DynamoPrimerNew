@@ -125,7 +125,7 @@ foo(x: int[], y: int[]); ✕
 
 No Dynamo 1.x, os nós da interface do usuário (blocos sem código) foram compilados para métodos de instância e propriedades, respectivamente. Por exemplo, o nó `Point.X` foi compilado para `pt.X` e `Curve.PointAtParameter` foi compilado para `curve.PointAtParameter(param)`. Esse comportamento apresentava dois problemas:
 
-**A. A função que o nó da interface do usuário representava nem sempre era a mesma executada no tempo de execução **
+**A. A função que o nó da interface do usuário representava nem sempre era a mesma executada no tempo de execução**
 
 Um exemplo típico é o nó `Translate`. Há vários nós `Translate` que têm o mesmo número e tipos de argumentos como: `Geometry.Translate`, `Mesh.Translate` e `FamilyInstance.Translate`. Devido ao fato de que os nós eram compilados como métodos de instância, a transmissão de um `FamilyInstance` para um nó `Geometry.Translate` surpreendentemente ainda funcionava, pois no tempo de execução ele enviava a chamada para o método de instância `Translate` em um `FamilyInstance`. Isso era obviamente enganoso para os usuários, pois o nó não fazia o que dizia.
 
