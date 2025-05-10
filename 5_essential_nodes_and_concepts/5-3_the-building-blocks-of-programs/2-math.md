@@ -8,10 +8,10 @@ Operatoren sind Komponenten für algebraische Funktionen, die zwei Eingabewerte 
 
 | Symbol                                                  | Name (Syntax)     | Eingaben                     | Ausgaben      |
 | ----------------------------------------------------- | ----------------- | -------------------------- | ------------ |
-| \![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplizieren ( ***** ) | var[]...[], var[]...[] | var[]...[] |
-| \![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/addition(1)(1) (1) (1).jpg>)       | Addieren (**+**)       | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Subtraction(1)(1) (1) (1).jpg>)    | Subtrahieren (**-**)  | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Multiplication(1)(1) (1) (1).jpg>) | Multiplizieren ( * ) | var[]...[], var[]...[] | var[]...[] |
+| ![](<../images/5-1/Division(1)(1) (1) (1).jpg>)       | Dividieren (**/**)    | var[]...[], var[]...[] | var[]...[] |
 
 ## Übung: Die Goldene Spirale-Formel
 
