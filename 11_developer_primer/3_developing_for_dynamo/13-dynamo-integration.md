@@ -98,16 +98,16 @@ StartupConfiguration wird als Parameter für die Initialisierung des DynamoModel
 
 Sie besteht aus folgenden Komponenten:
 
-* DynamoCorePath // Speicherort der ladenden DynamoCore-Binärdateien
-* DynamoHostPath // Speicherort der Binärdateien der Dynamo-Integration
-* GeometryFactoryPath // Speicherort der geladenen LibG-Binärdateien
-* PathResolver // Objekt, das beim Auflösen verschiedener Dateien hilft
-* PreloadLibraryPaths // Speicherort der Binärdateien der vorgeladenen Blöcke, z. B. DSOffice.dll
-* AdditionalNodeDirectories // Speicherort zusätzlicher Block-Binärdateien
-* AdditionalResolutionPaths // Zusätzliche Assembly-Lösungspfade für andere Abhängigkeiten, die beim Laden von Bibliotheken erforderlich sein können
-* UserDataRootFolder // Benutzerdatenordner, z. B. `"AppData\Roaming\Dynamo\Dynamo Revit"`
+* DynamoCorePath // Speicherort der ladenden DynamoCore-Binärdateien.
+* DynamoHostPath // Speicherort der Binärdateien der Dynamo-Integration.
+* GeometryFactoryPath // Speicherort der geladenen LibG-Binärdateien.
+* PathResolver // Objekt, das beim Auflösen verschiedener Dateien hilft.
+* PreloadLibraryPaths // Speicherort der Binärdateien der vorgeladenen Blöcke, z. B. DSOffice.dll.
+* AdditionalNodeDirectories // Speicherort zusätzlicher Block-Binärdateien.
+* AdditionalResolutionPaths // Zusätzliche Assembly-Lösungspfade für andere Abhängigkeiten, die beim Laden von Bibliotheken erforderlich sein können.
+* UserDataRootFolder // Benutzerdatenordner, z. B. `"AppData\Roaming\Dynamo\Dynamo Revit"`.
 * CommonDataRootFolder // Vorgabeordner zum Speichern von benutzerdefinierten Definitionen, Beispielen usw.
-* Context // Integrator-Hostname + Version `(Revit<BuildNum>)`
+* Context // Integrator-Hostname + Version `(Revit<BuildNum>)`.
 * SchedulerThread // Integrator-Scheduler-Thread, der `ISchedulerThread` implementiert. Für die meisten Integratoren ist dies der Haupt-Benutzeroberflächen-Thread oder der Thread, von dem aus sie auf ihre API zugreifen können.
 * StartInTestMode // Angabe, ob die aktuelle Sitzung eine Testautomatisierungssitzung ist. Ändert eine Reihe von Dynamo-Verhaltensweisen. Verwenden Sie diese Option nur, wenn Sie Tests schreiben.
 * AuthProvider // Implementierung von IAuthProvider des Integrators. Die RevitOxygenProvider-Implementierung befindet sich z. B. in der Datei Greg.dll. Wird für die PackageManager-Upload-Integration verwendet.
@@ -119,22 +119,22 @@ Der Pfad für die Vorgabeeinstellungen wird von `PathManager.PreferenceFilePath`
 * IsFirstRun // Gibt an, ob diese Version von Dynamo zum ersten Mal ausgeführt wird, z. B., um zu bestimmen, ob eine Meldung zur Aktivierung/Deaktivierung der allgemeinen Verfügbarkeit angezeigt werden muss. Wird auch verwendet, um zu ermitteln, ob die älteren Dynamo-Voreinstellungen beim Starten einer neuen Dynamo-Version migriert werden müssen, damit die Benutzer eine konsistente Erfahrung erhalten.
 * IsUsageReportingApproved // Gibt an, ob Nutzungsberichte genehmigt wurden.
 * IsAnalyticsReportingApproved // Gibt an, ob die Analyse-Berichterstellung genehmigt wurde.
-* LibraryWidth // Breite der linken Bibliotheksgruppe von Dynamo
-* ConsoleHeight // Höhe der Konsolenanzeige
+* LibraryWidth // Breite der linken Bibliotheksgruppe von Dynamo.
+* ConsoleHeight // Höhe der Konsolenanzeige.
 * ShowPreviewBubbles // Gibt an, ob Vorschaufenster angezeigt werden sollen.
 * ShowConnector // Gibt an, ob Connectors angezeigt werden.
 * ConnectorType // Gibt den Connector-Typ an: Bezier oder Polylinie.
 * BackgroundPreviews // Gibt den aktiven Status der angegebenen Hintergrundvorschau an.
 * RenderPrecision // Render-Genauigkeitsstufe. Ein niedrigerer Wert generiert Netze mit weniger Dreiecken. Mit einem höheren Wert wird eine glattere Geometrie in der Hintergrundvorschau erzeugt. 128 ist ein guter Mittelwert für die Vorschau von Geometrie.
 * ShowEdges // Gibt an, ob Oberflächen- und Volumenkörperkanten gerendert werden.
-* ShowDetailedLayout // NICHT VERWENDET
-* WindowX, WindowY // Letzte X-, Y-Koordinate des Dynamo-Fensters
-* WindowW, WindowH // Letzte Breite, Höhe des Dynamo-Fensters
-* UseHardwareAcceleration // Angabe, ob Dynamo die Hardwarebeschleunigung verwenden soll, wenn diese unterstützt wird
-* NumberFormat // Dezimalgenauigkeit, die zum Anzeigen von Zahlen im Vorschaufenster toString() verwendet wird
-* MaxNumRecentFiles // Maximale Anzahl der aktuellen Dateipfade, die gespeichert werden sollen
+* ShowDetailedLayout // NICHT VERWENDET.
+* WindowX, WindowY // Letzte X-, Y-Koordinate des Dynamo-Fensters.
+* WindowW, WindowH // Letzte Breite, Höhe des Dynamo-Fensters.
+* UseHardwareAcceleration // Angabe, ob Dynamo die Hardwarebeschleunigung verwenden soll, wenn diese unterstützt wird.
+* NumberFormat // Dezimalgenauigkeit, die zum Anzeigen von Zahlen im Vorschaufenster toString() verwendet wird.
+* MaxNumRecentFiles // Maximale Anzahl der aktuellen Dateipfade, die gespeichert werden sollen.
 * RecentFiles // Liste der zuletzt geöffneten Dateipfade. Wenn Sie hier Änderungen vornehmen, wirkt sich dies direkt auf die Liste der zuletzt geöffneten Dateien auf der Startseite von Dynamo aus.
-* BackupFiles // Liste von Sicherungsdateipfaden
+* BackupFiles // Liste von Sicherungsdateipfaden.
 * CustomPackageFolders // Liste von Ordnern mit Zero-Touch-Binärdateien und Verzeichnispfaden, die nach Paketen und benutzerdefinierten Blöcken durchsucht werden.
 * PackageDirectoriesToUninstall // Liste von Paketen, die vom Package Manager verwendet werden, um zu bestimmen, welche Pakete zum Löschen markiert sind. Diese Pfade werden nach Möglichkeit beim Start von Dynamo gelöscht.
 * PythonTemplateFilePath // Pfad zur Python-Datei (.py), die beim Erstellen eines neuen PythonScript-Blocks als Startvorlage verwendet werden soll. Diese Option kann zum Einrichten einer benutzerdefinierten Python-Vorlage für Ihre Integration verwendet werden.

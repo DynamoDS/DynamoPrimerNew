@@ -387,11 +387,11 @@ Markdown ist sehr flexibel und sollte genügend Funktionen bieten, um auf einfac
 
 Das Hinzufügen von Dokumentation zu Ihren Blöcken ist einfach. Die Dokumentation kann zu allen Varianten benutzerdefinierter Blöcke hinzugefügt werden, dazu gehören:
 
-* Vordefinierte Dynamo-Blöcke
+* Vordefinierte Dynamo-Blöcke.
 * Benutzerdefinierte Blöcke (.dyf): Sammlungen von vordefinierten und/oder anderen Paketblöcken.
 * Benutzerdefinierte C#-Paketblöcke (auch als ZeroTouch bezeichnet). Diese benutzerdefinierten Blöcke sehen wie die vordefinierten Blöcke aus.
-* NodeModel-Blöcke (Blöcke, die spezielle Benutzeroberflächen-Elemente wie Dropdown-Menüs oder Auswahlschaltflächen enthalten)
-* NodeModel-Blöcke mit angepasster Benutzeroberfläche (Blöcke, die eindeutige Benutzeroberflächen-Elemente wie Grafiken im Block enthalten)
+* NodeModel-Blöcke (Blöcke, die spezielle Benutzeroberflächen-Elemente wie Dropdown-Menüs oder Auswahlschaltflächen enthalten).
+* NodeModel-Blöcke mit angepasster Benutzeroberfläche (Blöcke, die eindeutige Benutzeroberflächen-Elemente wie Grafiken im Block enthalten).
 
 Führen Sie die folgenden Schritte aus, damit Ihre Markdown-Dateien in Dynamo angezeigt werden.
 
