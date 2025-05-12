@@ -1,6 +1,5 @@
 # Hinzufügen und Freigeben von Diagrammen in Dynamo Player
 
-
 Nachdem Sie Dynamo Player eingerichtet haben, können Sie Dateien in Player öffnen. Wenn Sie die Desktop-Version verwenden, muss Dynamo ebenfalls geöffnet sein. 
 
 <figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>Öffnen eines verbundenen Diagramms in Dynamo Desktop</p></figcaption></figure>
