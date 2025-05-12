@@ -1,5 +1,6 @@
 # Configurer Dynamo Player dans Forma
 
+
 Pour utiliser Dynamo avec Forma, vous avez deux options : Dynamo as a Service (DaaS) basé sur le cloud ou la version de bureau Dynamo. Chaque option a ses avantages en fonction de ce que vous voulez faire. Avant de commencer, réfléchissez donc bien à celle qui répond le plus à vos besoins. Cependant, n’oubliez pas que vous pouvez passer d’une option à l’autre à tout moment.
 
 **Comparatif entre Dynamo as a Service et Dynamo Desktop**
