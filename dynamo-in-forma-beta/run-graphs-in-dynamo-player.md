@@ -1,5 +1,6 @@
 # Esecuzione di grafici in Dynamo Player
 
+
 Quando si apre un grafico, i nodi contrassegnati come Is Input vengono visualizzati in Player ed è possibile interagire con essi.
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
