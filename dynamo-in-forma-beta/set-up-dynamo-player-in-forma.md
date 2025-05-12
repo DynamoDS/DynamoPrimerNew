@@ -1,5 +1,6 @@
 # Impostazione di Dynamo Player in Forma
 
+
 Per utilizzare Dynamo con Forma, sono disponibili due opzioni: Dynamo as a Service (DaaS) basato sul cloud o Dynamo in versione desktop. Ciascuna ha i suoi vantaggi a seconda di ciò che si desidera fare, quindi prima di iniziare è bene valutare quale sia l'opzione più adatta alle proprie esigenze. Tuttavia, occorre tenere presente che è possibile passare da un'opzione all'altra in qualsiasi momento.
 
 **Confronto tra Dynamo as a Service e Dynamo Desktop**
