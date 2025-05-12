@@ -1,5 +1,6 @@
 # Nastavení rozšíření Dynamo Player v aplikaci Forma
 
+
 Chcete-li používat Dynamo s aplikací Forma, máte dvě možnosti: cloudové Dynamo jako služba (DaaS) nebo Dynamo pro počítače. Každá z těchto možností má své výhody v závislosti na tom, co chcete dělat, takže než začnete, zvažte, která možnost nejlépe vyhovuje vašim potřebám. Mějte však na paměti, že mezi těmito možnostmi můžete kdykoli přepínat.
 
 **Porovnání DaaS a počítačové verze aplikace Dynamo**
