@@ -1,5 +1,6 @@
 # Dynamo Player에서 그래프 실행
 
+
 그래프를 열면 Is Input으로 표시된 노드가 Player에 표시되며, 사용자는 이러한 노드와 상호 작용할 수 있습니다.
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
