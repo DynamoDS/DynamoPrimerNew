@@ -1,5 +1,6 @@
 # Forma에서 Dynamo Player 설정
 
+
 Forma에서는 Dynamo를 두 가지 옵션인 클라우드 기반 DaaS(Dynamo as a Service) 또는 Desktop Dynamo로 사용할 수 있습니다. 수행하려는 작업에 따라 각 옵션이 제공하는 이점이 다르므로 시작하기 전에 본인의 요구 사항에 가장 적합한 옵션이 무엇인지 고려해 보십시오. 하지만 두 옵션을 언제든지 전환할 수 있다는 점에 유념하십시오.
 
 **Dynamo as a Service와 Dynamo Desktop 비교**
