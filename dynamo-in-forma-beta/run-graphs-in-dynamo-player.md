@@ -1,6 +1,5 @@
 # Ejecutar gráficos en Dynamo Player
 
-
 Al abrir un gráfico, los nodos marcados como "Is Input" se muestran en el Reproductor y puede interactuar con ellos.
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
