@@ -1,6 +1,5 @@
 # Dodawanie i udostępnianie wykresów w programie Dynamo Player
 
-
 Po skonfigurowaniu programu Dynamo Player można otwierać w nim pliki. Jeśli używasz wersji komputerowej, musisz również mieć otwarty dodatek Dynamo. 
 
 <figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>Otwieranie połączonego wykresu w dodatku Dynamo na komputerze</p></figcaption></figure>
