@@ -1,6 +1,5 @@
 # Ausführen von Diagrammen in Dynamo Player
 
-
 Wenn Sie ein Diagramm öffnen, werden Blöcke, die mit Is Input markiert sind, im Player angezeigt, und Sie können mit diesen interagieren.
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
