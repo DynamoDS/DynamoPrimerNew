@@ -1,5 +1,6 @@
 # Exécuter des graphes dans Dynamo Player
 
+
 Lorsque vous ouvrez un graphe, les nœuds marqués comme Is Input apparaissent dans Player et vous pouvez interagir avec eux.
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
