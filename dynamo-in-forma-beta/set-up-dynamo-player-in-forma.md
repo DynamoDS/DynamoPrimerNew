@@ -1,5 +1,6 @@
 # Konfigurowanie programu Dynamo Player w programie Forma
 
+
 Dostępne są dwie opcje używania dodatku Dynamo z programem Forma: oparty na chmurze dodatek Dynamo jako usługa (DaaS) lub dodatek Dynamo na komputerze. Każda z tych opcji ma konkretne zalety w zależności od tego, co chcesz zrobić, więc zanim zaczniesz, zastanów się, która z nich najlepiej odpowiada Twoim potrzebom. Pamiętaj jednak, że w każdej chwili możesz przełączać się między tymi opcjami.
 
 **Porównanie dodatku Dynamo jako usługi i dodatku Dynamo na komputerze**
