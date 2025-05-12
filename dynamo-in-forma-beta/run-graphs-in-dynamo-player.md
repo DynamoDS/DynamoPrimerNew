@@ -1,6 +1,5 @@
 # 在 Dynamo Player 中執行圖表
 
-
 當您開啟圖表時，Player 中會顯示標記為「Is Input」的節點，您可以與這些節點互動。
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
