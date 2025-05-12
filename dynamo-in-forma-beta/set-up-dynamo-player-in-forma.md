@@ -1,5 +1,6 @@
 # Configurar Dynamo Player en Forma
 
+
 Para utilizar Dynamo con Forma, tiene estas dos opciones: puede usar Dynamo como servicio (DaaS) basado en la nube o la versión de escritorio de Dynamo. Cada una tiene sus ventajas en función de lo que desee hacer, así que antes de empezar, considere la opción que mejor se adapte a sus necesidades. Sin embargo, tenga en cuenta que puede alternar entre estas opciones en cualquier momento.
 
 **Comparación entre Dynamo como servicio y la versión de escritorio de Dynamo**
