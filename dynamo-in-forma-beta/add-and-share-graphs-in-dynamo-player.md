@@ -1,6 +1,5 @@
 # Dynamo Player에서 그래프 추가 및 공유
 
-
 Dynamo Player를 설정하면 이 Player에서 파일을 열 수 있습니다. 데스크톱 버전을 사용 중인 경우 Dynamo도 열어야 합니다. 
 
 <figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>Dynamo Desktop에서 연결된 그래프 열기</p></figcaption></figure>
