@@ -1,6 +1,5 @@
 # 設定 Forma 中的 Dynamo Player
 
-
 若要將 Dynamo 與 Forma 搭配使用，您有兩個選項：雲端型的 Dynamo 即服務 (DaaS)，或桌面版 Dynamo。兩種各有優點，取決於您要執行的作業，因此在開始之前，請先考慮哪個選項最能滿足您的需求。不過請記住，您可以隨時在這些選項之間切換。
 
 **Dynamo 即服務與 Dynamo 桌面版的比較**
