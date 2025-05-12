@@ -2,6 +2,7 @@
 
 在安装了 Dynamo Player 后，即可在 Player 中打开文件。如果您使用的是桌面版本，还需要打开 Dynamo。&#x20;
 
+
 <figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>在 Dynamo Desktop 中打开已连接图形</p></figcaption></figure>
 
 如果您使用的是 Dynamo Desktop，Player 将识别当前在 Dynamo 中打开的图形，并为您提供在 Player 中打开该图形的选项。
