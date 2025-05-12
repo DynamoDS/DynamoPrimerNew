@@ -75,4 +75,3 @@
 <figure><img src="../.gitbook/assets/dynamo-desktop.png" alt=""><figcaption></figcaption></figure>
 
 5. Теперь можно приступать к работе с Dynamo Player. Если граф уже открыт в Dynamo, просто нажмите кнопку Open в разделе **Connected graph**, чтобы просмотреть его в проигрывателе.
-6. 
