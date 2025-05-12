@@ -1,5 +1,6 @@
 # Adicionar e compartilhar gráficos no Dynamo Player
 
+
 Depois de configurar o Dynamo Player, será possível abrir os arquivos no Player. Se você estiver usando a versão para desktop, também precisará ter o Dynamo aberto. 
 
 <figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>Abrir um gráfico conectado no Dynamo Desktop</p></figcaption></figure>
