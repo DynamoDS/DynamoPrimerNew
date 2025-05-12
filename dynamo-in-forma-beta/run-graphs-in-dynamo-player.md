@@ -1,6 +1,5 @@
 # 在 Dynamo Player 中运行图形
 
-
 打开图形时，标记为“Is Input”的节点会显示在 Player 中，您可以与其进行交互。
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
