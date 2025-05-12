@@ -2,6 +2,7 @@
 
 要将 Dynamo 与 Forma 结合使用，有两个选项：基于云的 Dynamo 即服务 (DaaS) 或桌面 Dynamo。每个选项都有其好处，具体取决于您要做什么，因此在开始之前，请考虑哪个选项最适合您的需求。但是，请记住，您可以随时在这些选项之间切换。
 
+
 **Dynamo 即服务与 Dynamo Desktop 比较**
 
 <table><thead><tr><th>Dynamo 即服务</th><th>桌面</th><th data-hidden></th></tr></thead><tbody><tr><td>易于设置</td><td>多步骤安装过程</td><td></td></tr><tr><td>无需安装或打开 Dynamo</td><td>必须打开 Dynamo</td><td></td></tr><tr><td>无法识别已在 Dynamo 中打开的图形</td><td>在 Player 中打开一个在 Dynamo 中打开的图形，只需单击一个按钮即可</td><td></td></tr><tr><td>无法使用 Python</td><td>可以使用 Python</td><td></td></tr><tr><td>只能使用批准的软件包</td><td>可以使用任何软件包</td><td></td></tr></tbody></table>
