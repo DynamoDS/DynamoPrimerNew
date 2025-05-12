@@ -1,5 +1,6 @@
 # Executar gráficos no Dynamo Player
 
+
 Quando você abre um gráfico, os nós marcados como Is Input (É entrada) aparecem no Player e você pode interagir com eles.
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
