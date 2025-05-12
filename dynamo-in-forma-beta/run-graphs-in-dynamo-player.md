@@ -1,5 +1,6 @@
 # Uruchamianie wykresów w programie Dynamo Player
 
+
 Po otwarciu wykresu węzły oznaczone jako Is Input są wyświetlane w programie Player i można wchodzić z nimi w interakcje.
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
