@@ -1,5 +1,6 @@
 # Přidávání a sdílení grafů v rozšíření Dynamo Player
 
+
 Po nastavení rozšíření Dynamo Player v něm můžete otevírat soubory. Pokud používáte verzi pro počítače, musíte mít také otevřenou aplikaci Dynamo. 
 
 <figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>Otevření připojeného grafu v počítačové verzi aplikace Dynamo</p></figcaption></figure>
