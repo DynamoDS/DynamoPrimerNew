@@ -1,6 +1,5 @@
 # Dynamo Player でグラフを実行する
 
-
 グラフを開くと、[Is Input]として指定されたノードが Player に表示され、操作することができます。
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
