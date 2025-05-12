@@ -1,5 +1,6 @@
 # Spouštění grafů v rozšíření Dynamo Player
 
+
 Po otevření grafu se v rozšíření Player zobrazí uzly označené jako Is Input, s nimiž můžete pracovat.
 
 <figure><img src="../.gitbook/assets/run-button.png" alt=""><figcaption></figcaption></figure>
