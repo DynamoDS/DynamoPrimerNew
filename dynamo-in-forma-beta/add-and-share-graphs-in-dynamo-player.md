@@ -1,6 +1,5 @@
 # 在 Dynamo Player 中加入和分享圖表
 
-
 設定 Dynamo Player 後，您就可以在 Player 中開啟檔案。如果您使用的是桌面版本，也必須開啟 Dynamo。&#x20;
 
 <figure><img src="../.gitbook/assets/open-connected-graph.png" alt=""><figcaption><p>在 Dynamo 桌面版中開啟連接的圖表</p></figcaption></figure>
