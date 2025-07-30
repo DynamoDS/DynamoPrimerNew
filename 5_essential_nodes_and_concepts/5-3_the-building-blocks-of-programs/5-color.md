@@ -32,7 +32,7 @@ The colors in the table below correspond to the **HSB color space**. Dividing th
 
 ### Color Range
 
-The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention")exercise: it remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
+The color range is similar to the **Remap Range** Node from the [#part-ii-from-logic-to-geometry](3-logic.md#part-ii-from-logic-to-geometry "mention") exercise: It remaps a list of numbers into another domain. But instead of mapping to a _number_ domain, it maps to a _color gradient_ based on input numbers ranging from 0 to 1.
 
 The current Node works well, but it can be a little awkward to get everything working the first time around. The best way to become familiar with the color gradient is to test it out interactively. Let's do a quick exercise to review how to setup a gradient with output colors corresponding to numbers.
 

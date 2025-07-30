@@ -31,16 +31,13 @@ Boolean operations are complex and can be slow to calculate. You can use the "fr
 
 ![](../images/5-2/6/solids-freezenode.jpg)
 
-> 1.Use the right-click contextual menu to Freeze the Solid Union operation
->
-> 2\. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the boolean union.
->
-> 3\. To unfreeze the nodes, right-click and uncheck Freeze.
->
-> 4\. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
+> 1. Use the right-click contextual menu to Freeze the Solid Union operation.
+> 2. The selected node and all downstream nodes will preview in a light grey ghosted mode, and affected wires will be displayed as dashed lines. The affected geometry preview will also be ghosted. You can now change values upstream without calculating the Boolean union.
+> 3. To unfreeze the nodes, right-click and uncheck Freeze.
+> 4. All affected nodes and associated geometry previews will update and revert to the standard preview mode.
 
 {% hint style="info" %}
-You can read more about freezing nodes in the [4\_nodes\_and\_wires](../../4\_nodes\_and\_wires/ "mention") section.
+You can read more about freezing nodes in the [4\_nodes\_and\_wires](../../4_nodes_and_wires/ "mention") section.
 {% endhint %}
 
 ## Deep Dive into...
