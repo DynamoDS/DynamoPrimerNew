@@ -22,11 +22,11 @@ We will use the terms dynamo script, graph, and program interchangeably in these
 
 [https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534](https://github.com/DynamoDS/DynamoRevit/blob/master/src/DynamoRevit/DynamoRevit.cs#L534)
 
-The `DynamoModel` is the entry point for an application hosting Dynamo � it represents a Dynamo Application. The model is the top level root object which contains references to the other important data structures and objects that make up the dynamo application and DesignScript virtual machine.
+The `DynamoModel` is the entry point for an application hosting Dynamo. It represents a Dynamo Application. The model is the top level root object which contains references to the other important data structures and objects that make up the dynamo application and DesignScript virtual machine.
 
 A configuration object is used to set common parameters on the `DynamoModel` when it is constructed.
 
-The examples in this document are taken from the DynamoRevit implementation, which is an integration where Revit hosts a `DynamoModel` as an Add-in. (Plugin architecture for Revit). When this Add-in loads � it starts a `DynamoModel` and then displays it to the user with a `DynamoView` and `DynamoViewModel`.
+The examples in this document are taken from the DynamoRevit implementation, which is an integration where Revit hosts a `DynamoModel` as an Add-in. (Plugin architecture for Revit). When this Add-in loads, it starts a `DynamoModel` and then displays it to the user with a `DynamoView` and `DynamoViewModel`.
 
 Dynamo is a c# .net project and to use it in process in your application you need to be able to host and execute .net code.
 
@@ -38,7 +38,7 @@ To Initialize the `DynamoModel`, integrators will need to do these steps from so
 
 ### Preload shared Dynamo Dlls from host.
 
-Currently the list in D4R only includes `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` This is done to avoid library version conflicts between Dynamo and Revit. E.g. When conflicts on `AvalonEdit` happen, the function of code block can be totally broken. The issue is reported in Dynamo 1.1.x at [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) and, also manually reproducible. If integrators found library conflicts between host function and Dynamo, it is suggested to do this as a first step. This is sometimes required to stop other plugin or the host application itself from loading an incompatible version of as shared dependency. A better solution is to resolve the version conflict by aligning the version - or to use a .net binding redirect in the host�s app.config if possible.
+Currently the list in D4R only includes `Revit\SDA\bin\ICSharpCode.AvalonEdit.dll.` This is done to avoid library version conflicts between Dynamo and Revit. E.g. When conflicts on `AvalonEdit` happen, the function of code block can be totally broken. The issue is reported in Dynamo 1.1.x at [https://github.com/DynamoDS/Dynamo/issues/7130](https://github.com/DynamoDS/Dynamo/issues/7130) and, also manually reproducible. If integrators found library conflicts between host function and Dynamo, it is suggested to do this as a first step. This is sometimes required to stop other plugin or the host application itself from loading an incompatible version of as shared dependency. A better solution is to resolve the version conflict by aligning the version - or to use a .net binding redirect in the host's app.config if possible.
 
 ### Loading ASM
 
@@ -58,7 +58,7 @@ private static readonly List<string> ProductsWithASM = new List<string>()
  { "Revit", "Civil", "Robot Structural Analysis", "FormIt" }; 
 ```
 
-Dynamo will search the windows registry and find if the Autodesk products in this list are installed on the user�s machine, if any of these are installed, then it will search for ASM binaries, and will get the version and look for a corresponding libG version in Dynamo.
+Dynamo will search the windows registry and find if the Autodesk products in this list are installed on the user's machine, if any of these are installed, then it will search for ASM binaries, and will get the version and look for a corresponding libG version in Dynamo.
 
 Given the ASM version, the following ShapeManager API will pick the corresponding libG preloader location to load. If there is an exact version match it will be used, otherwise the closest versioned libG below, but with the same major version will be loaded.
 
@@ -110,13 +110,13 @@ It consists of the following:
 * Context // Integrator host name + version `(Revit<BuildNum>)`
 * SchedulerThread // Integrator scheduler thread implementing `ISchedulerThread` - for most integrators this is the Main UI thread or from whatever thread they can access their API.
 * StartInTestMode // Whether the current session is a test automation session - modifies a bunch of Dynamo behavior - don't use unless you are writing tests.
-* AuthProvider // Integrator�s implementation of IAuthProvider, e.g. RevitOxygenProvider implementation is in Greg.dll - Used for packageManager upload integration.
+* AuthProvider // Integrator's implementation of IAuthProvider, e.g. RevitOxygenProvider implementation is in Greg.dll - Used for packageManager upload integration.
 
 ### Preferences
 
 Default preference setting path is managed by `PathManager.PreferenceFilePath`, e.g. `"AppData\\Roaming\\Dynamo\\Dynamo Revit\\2.5\\DynamoSettings.xml"`. Integrators can decide if they would like to also ship a customized preference setting file to a location which needs to be aligned with path manager. The following are preference setting properties which are serialized:
 
-* IsFirstRun // Indicates if it is the first time running this version of dynamo, e.g. used to determine if need to display GA opt-in/out message. Also used to determine if it�s needed to migrate the legacy Dynamo preference setting when launching a new Dynamo version, so users have consistent experience
+* IsFirstRun // Indicates if it is the first time running this version of dynamo, e.g. used to determine if need to display GA opt-in/out message. Also used to determine if it's needed to migrate the legacy Dynamo preference setting when launching a new Dynamo version, so users have consistent experience
 * IsUsageReportingApproved // Indicates whether usage reporting is approved or not
 * IsAnalyticsReportingApproved // Indicates whether analytics reporting is approved or not
 * LibraryWidth // The width of the Dynamo left library panel.
@@ -246,9 +246,9 @@ An example of serialized preference settings:
 </PreferenceSettings> 
 ```
 
-* Extensions // A list of extensions implementing IExtension, if it�s null, Dynamo will load extensions from the default path (`extensions` folder under Dynamo folder)
+* Extensions // A list of extensions implementing IExtension, if it's null, Dynamo will load extensions from the default path (`extensions` folder under Dynamo folder)
 * IsHeadless // Indicates if Dynamo is launched without UI, effects Analytics.
-* UpdateManager // Integrator�s implementation of UpdateManager, see description above
+* UpdateManager // Integrator's implementation of UpdateManager, see description above
 * ProcessMode // Equivalent to TaskProcessMode, Synchronous if in test mode, otherwise Asynchronous - This controls the behavior of the scheduler. Single threaded environments may also set this to synchronous.
 
 Use the target StartConfiguration to launch `DynamoModel`
@@ -286,7 +286,7 @@ To construct the `DynamoView`, all that is required is the `DynamoViewModel`. Th
 
 ### DynamoSandbox.exe example:
 
-DynamoSandbox.exe is a development environment for testing, using, and experimenting with DynamoCore. It's a great example to checkout to see how `DynamoCore` and `DynamoCoreWPF` components are loaded and setup. \` You can see some of the entry point [here](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37)
+DynamoSandbox.exe is a development environment for testing, using, and experimenting with DynamoCore. It's a great example to checkout to see how `DynamoCore` and `DynamoCoreWPF` components are loaded and setup. You can see some of the entry point [here](https://github.com/DynamoDS/Dynamo/blob/master/src/DynamoSandbox/DynamoCoreSetup.cs#L37).
 
 ## Element Binding and Trace
 
@@ -568,9 +568,9 @@ The important phases of the constructor's execution as they relate to element bi
 
 In general, these nodes let the user somehow describe a subset of the active Revit document they wish to reference. There are various ways the user might reference a Revit element (described below), and the resulting output of the node may be a Revit element wrapper (DynamoRevit wrapper) or some Dynamo geometry (Converted from Revit geometry). The difference between these output types will be useful to consider in the context of other host integrations.
 
-At a high level, **a good way to conceptualize these nodes is as a function which accepts an element id � and returns a pointer to that element or some geometry which represents that element.**
+At a high level, **a good way to conceptualize these nodes is as a function which accepts an element id and returns a pointer to that element or some geometry which represents that element.**
 
-There are multiple `�Selection�` Nodes in DynamoRevit � We can break them into at least two groups:
+There are multiple `Selection` Nodes in DynamoRevit. We can break them into at least two groups:
 
 ![Revit Selection Nodes](images/revitSelectionNodes.png)
 
@@ -578,23 +578,23 @@ There are multiple `�Selection�` Nodes in DynamoRevit � We can break them 
 
     Example `DynamoRevit` nodes in this category are `SelectModelElement`, `SelectElementFace`
 
-    These nodes allow the user to switch into the Revit UI context and select an element or set of elements, the ids of these elements are captured, and some conversion function is run � either a wrapper is created or geometry is extracted and converted from the element. The conversion which runs depends on the type of node the user chooses.
+    These nodes allow the user to switch into the Revit UI context and select an element or set of elements, the ids of these elements are captured, and some conversion function is run, either a wrapper is created or geometry is extracted and converted from the element. The conversion which runs depends on the type of node the user chooses.
 2.  Document Query:
 
     Example nodes in this category are `AllElementsOfClass`, `AllElementsOfCategory`
 
-    These nodes allow the user to query the entire document for a subset of elements � these nodes usually return wrappers which point to the underlying Revit elements. These wrappers are integral to the DynamoRevit experience allowing more advanced functionality like element binding, and allowing Dynamo integrators to pick and choose what Host APIs are exposed as nodes to the users.
+    These nodes allow the user to query the entire document for a subset of elements. These nodes usually return wrappers which point to the underlying Revit elements. These wrappers are integral to the DynamoRevit experience allowing more advanced functionality like element binding, and allowing Dynamo integrators to pick and choose what Host APIs are exposed as nodes to the users.
 
 ### Dynamo Revit User Workflows:
 
 #### Example Cases
 
 1.
-   * User selects a Revit wall with `SelectModelElement` - A Dynamo Wall wrapper is returned into the graph (visible in the node�s preview bubble)
-   * User places the Element.Geometry node and attaches the `SelectModelElement` output to this new node � the wrapped wall�s geometry is extracted and converted to Dynamo geometry using the libG API.
+   * User selects a Revit wall with `SelectModelElement` - A Dynamo Wall wrapper is returned into the graph (visible in the node's preview bubble)
+   * User places the Element.Geometry node and attaches the `SelectModelElement` output to this new node. The wrapped wall's geometry is extracted and converted to Dynamo geometry using the libG API.
    * The user switches the graph into Automatic run mode.
    * The user modifies the original wall in Revit.
-   * The graph is re-run automatically as the Revit document raised an event signaling some elements were updated � the selection node watches this event and see that�s the id of the element it has selected has been modified.
+   * The graph is re-run automatically as the Revit document raised an event signaling some elements were updated. The selection node watches this event and sees that the id of the element it has selected has been modified.
 
 ### DynamoCivil User Workflows:
 
@@ -604,10 +604,10 @@ The workflows in D4C is very similar to the description above for Revit, here ar
 
 ### Issues:
 
-*   Because of the document modification updater which selection nodes in `DynamoRevit` implement � infinite loops are easy to build: Imagine a node watching the document for all elements, and then creating new elements somewhere downstream of this node. This program, when executed, will trigger a loop. `DynamoRevit` tries to catch these case in various ways using transaction ids, and to it avoids modifying the document when inputs to element constructors have not changed.
+*   Because of the document modification updater that selection nodes in `DynamoRevit` implement, infinite loops are easy to build: Imagine a node watching the document for all elements, and then creating new elements somewhere downstream of this node. This program, when executed, will trigger a loop. `DynamoRevit` tries to catch these cases in various ways using transaction ids, and to do it avoids modifying the document when inputs to element constructors have not changed.
 
     This needs to be considered if Automatic execution of the graph is initiated when a selected element is modified in the host application!
-* Selection nodes in `DynamoRevit` are implemented in `RevitUINodes.dll` project which references WPF � This may be a non issue � but is worth being aware of depending on your target platform.
+* Selection nodes in `DynamoRevit` are implemented in `RevitUINodes.dll` project which references WPF. This may be a non issue, but is worth being aware of depending on your target platform.
 
 ### Data Flow Diagrams
 
@@ -619,8 +619,8 @@ The workflows in D4C is very similar to the description above for Revit, here ar
 
 Selection nodes are implemented by inheriting from the generic `SelectionBase` types: `SelectionBase<TSelection, TResult>` and a minimal set of members:
 
-* Implementation of a `BuildOutputAST` Method � this method needs to return an AST, which will be executed at some point in the future, when the node is to be executed. In the case of Selection nodes, it should return elements or geometry from the element ids. https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280
-* Implementing `BuildOutputAST` is one of the most difficult parts of implementing `NodeModel` / UI nodes. It is best to put as much logic as you can into a c# function, and simply embed an AST function call node into the AST. Note that here `node` is an AST node in the abstract syntax tree � not a Node in the Dynamo graph.
+* Implementation of a `BuildOutputAST` Method: This method needs to return an AST, which will be executed at some point in the future, when the node is to be executed. In the case of Selection nodes, it should return elements or geometry from the element ids. [https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280](https://github.com/DynamoDS/DynamoRevit/blob/master/src/Libraries/RevitNodesUI/Selection.cs#L280)
+* Implementing `BuildOutputAST` is one of the most difficult parts of implementing `NodeModel` / UI nodes. It is best to put as much logic as you can into a c# function, and simply embed an AST function call node into the AST. Note that here `node` is an AST node in the abstract syntax tree, not a Node in the Dynamo graph.
 
 ![Selection Flow2](images/selectionAST.png)
 
@@ -628,7 +628,7 @@ Selection nodes are implemented by inheriting from the generic `SelectionBase` t
   *   Because these are explicit `NodeModel` derived types (not ZeroTouch) they also require implementing a \[JsonConstructor] that will be used during deserialization of the node from a .dyn file.
 
       The element references from the host should be saved into the .dyn file so that when a user opens a graph containing this node, their selection is still set. NodeModel nodes in Dynamo use json.net to serialize, any public properties will be serialized automatically using Json.net - use the \[JsonIgnore] attribute to only serialize what is necessary.
-* Document Query nodes are a bit simpler as they do not need to store a reference to any Element IDs � see below for the `ElementQueryBase` class and derived class implementations. When executed these nodes make a call to the Revit API and query the underlying document for elements, and perform the previously mentioned conversion to either geometry or Revit element wrappers.
+* Document Query nodes are a bit simpler as they do not need to store a reference to any Element IDs. See below for the `ElementQueryBase` class and derived class implementations. When executed these nodes make a call to the Revit API and query the underlying document for elements, and perform the previously mentioned conversion to either geometry or Revit element wrappers.
 
 ### References:
 
