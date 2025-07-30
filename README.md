@@ -6,7 +6,7 @@ Dynamo Hype Video
 
 ## For Dynamo v2.13 and newer
 
-![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
+![Dynamo Logo](images/dynamo_logo_dark-trim.jpg)
 
 > Dynamo is an open source visual programming platform for designers.
 
@@ -23,15 +23,15 @@ The power of Dynamo can be found in a wide variety of design-related activities.
 
 In the midst of this activity and exciting opportunity for working with Dynamo, we need a document of the same caliber, the Dynamo Primer.
 
-Refer to the [primer user guide](1\_introduction/2-primer-user-guide-dynamo-community-and-platform.md) to find out what you can expect to learn from this primer.
+Refer to the [primer user guide](1_introduction/2-primer-user-guide-dynamo-community-and-platform.md) to find out what you can expect to learn from this primer.
 
 We are continuously improving Dynamo, so some features may look different from what is represented in this Primer. However, all functionality changes will be correctly represented.
 
 ### Open Source
 
-The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: https://github.com/DynamoDS/DynamoPrimer/issues
+The Dynamo Primer project is open source! We're dedicated to providing quality content and appreciate any feedback you may have. If you would like to report an issue on anything at all, please post them on our GitHub issue page: [https://github.com/DynamoDS/DynamoPrimerNew/issues](https://github.com/DynamoDS/DynamoPrimerNew/issues)&#x20;
 
-If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: https://github.com/DynamoDS/DynamoPrimer.
+If you would like to contribute a new section, edits, or anything else to this project, check out the GitHub repo to get started: [https://github.com/DynamoDS/DynamoPrimerNew](https://github.com/DynamoDS/DynamoPrimerNew)&#x20;
 
 ### The Dynamo Primer Project
 
@@ -39,19 +39,19 @@ The Dynamo Primer is an open-source project, initiated by Matt Jezyk and the Dyn
 
 **Mode Lab** was commissioned to write the First Edition of the Primer. We thank them for all of their efforts in establishing this valuable resource.
 
-![](images/MODELAB\_Logo.png)
+![](images/MODELAB_Logo.png)
 
 ***
 
 **John Pierson of Parallax Team** was commissioned to update the Primer to reflect the Dynamo 2.0. revisions.
 
-![](images/PRLX\_Logo.jpg)
+![](images/PRLX_Logo.jpg)
 
 ***
 
 **Matterlab** was commissioned to update the Primer to reflect the Dynamo 2.13. revisions.
 
-![](images/matterlab\_final-07.jpg)
+![](images/matterlab_final-07.jpg)
 
 ***
 
@@ -75,17 +75,17 @@ Thank you to Matt Jezyk, Ian Keough, Zach Kron, Racel Amour and Colin McCrone fo
 
 **Dynamo** Please refer to the following sites for the most current **stable** release of Dynamo.
 
-http://dynamobim.com/download/ or http://dynamobuilds.com
+[https://dynamobim.com/download/](https://dynamobim.com/download/) or [https://dynamobuilds.com](https://dynamobuilds.com/)
 
 \*Note: Starting with Revit 2020, Dynamo is bundled with Revit releases, resulting in manual installation not being required. More information is available at this [blog post](https://dynamobim.org/dynamo-core-2-1-release/).
 
 **DynamoBIM** The best source for additional information, learning content, and forums is the DynamoBIM website.
 
-http://dynamobim.org
+[https://dynamobim.org](https://dynamobim.org/)
 
 **Dynamo GitHub** Dynamo is an open-source development project on GitHub. To contribute, check out DynamoDS.
 
-https://github.com/DynamoDS/Dynamo
+[https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
 **Contact** Let us know about any issues with this document.
 
@@ -97,6 +97,6 @@ Copyright 2023 Autodesk
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
