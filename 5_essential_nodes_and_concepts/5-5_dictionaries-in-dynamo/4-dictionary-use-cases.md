@@ -60,14 +60,14 @@ Using this same dictionary logic, we can create dictionaries with grouped object
 
 ![](../images/5-5/4/dictionary-exerciseII-02.jpg)
 
-> 1. Now, we can group the rooms by the level that they reside on.
+> 2. Now, we can group the rooms by the level that they reside on.
 
 ![](../images/5-5/4/dictionary-exerciseII-03.jpg)
 
-> 1. With the elements grouped by the level, we can now use the shared keys (unique keys) as our key for our dictionary, and the lists of rooms as the elements.
+> 3. With the elements grouped by the level, we can now use the shared keys (unique keys) as our key for our dictionary, and the lists of rooms as the elements.
 
 ![](../images/5-5/4/dictionary-exerciseII-04.jpg)
 
-> 1. Lastly, using the levels in the Revit model, we can look up which rooms reside on that level in the dictionary. `Dictionary.ValueAtKey` will take the level name and return the room objects at that level.
+> 4. Lastly, using the levels in the Revit model, we can look up which rooms reside on that level in the dictionary. `Dictionary.ValueAtKey` will take the level name and return the room objects at that level.
 
 The opportunities for Dictionary use are really endless. The ability to relate your BIM data in Revit to the element itself poses a variety of use cases.
