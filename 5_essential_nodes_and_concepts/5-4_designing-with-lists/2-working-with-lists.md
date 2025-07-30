@@ -4,9 +4,9 @@
 
 Now that we've established what a list is, let's talk about operations we can perform on it. Imagine a list as a deck of playing cards. A deck is the list and each playing card represents an item.
 
-![cards](../images/5-4/2/Playing\_cards\_modified.jpg)
+![cards](../images/5-4/2/Playing_cards_modified.jpg)
 
-> Photo by [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing\_cards\_modified.jpg)
+> Photo by [Christian Gidlöf](https://commons.wikimedia.org/wiki/File:Playing_cards_modified.jpg)
 
 ### Query
 
@@ -67,7 +67,7 @@ The _List.Count_ node is straightforward: it counts the number of values in a li
 
 ![Count](../images/5-4/2/workingwithlist-listoperation-listcount.jpg)
 
-> 1. The **List.Count **_****_ node returns the number of lines in the **Line.ByStartPointEndPoint** node. The value is 10 in this case, which agrees with the number of points created from the original **Code Block** node.
+> 1. The **List.Count** node returns the number of lines in the **Line.ByStartPointEndPoint** node. The value is 10 in this case, which agrees with the number of points created from the original **Code Block** node.
 
 ### List.GetItemAtIndex
 
@@ -141,8 +141,8 @@ By changing to **Code Block** to a larger value, _"30"_ for example, we notice a
 In order to create a list of values reading "true" or "false", we need to a little more work...
 
 > 1. Using a **Code Block**, define an expression with the syntax: `0..List.Count(list);`. Connect the **Curve.PointAtParameter** node to the _list_ input. We'll walk through this setup more in the code block chapter, but the line of code in this case is giving us a list representing each index of the **Curve.PointAtParameter** node.
-> 2. Using a _**%**_** (modulus)** node, connect the output of the _code block_ into the _x_ input, and a value of _4_ into the _y_ input. This will give us the remainder when dividing the list of indices by 4. Modulus is a really helpful node for pattern creation. All values will read as the possible remainders of 4: 0, 1, 2, 3.
-> 3. From the  _**%**_** (modulus)** node, we know that a value of 0 means that the index is divisible by 4 (0,4,8,etc...). By using a **==** node, we can test for the divisibility by testing it against a value of _"0"_.
+> 2. Using a _**%**_\*\* (modulus)\*\* node, connect the output of the _code block_ into the _x_ input, and a value of _4_ into the _y_ input. This will give us the remainder when dividing the list of indices by 4. Modulus is a really helpful node for pattern creation. All values will read as the possible remainders of 4: 0, 1, 2, 3.
+> 3. From the _**%**_\*\* (modulus)\*\* node, we know that a value of 0 means that the index is divisible by 4 (0,4,8,etc...). By using a **==** node, we can test for the divisibility by testing it against a value of _"0"_.
 > 4. The **Watch** node reveals just this: we have a true/false pattern which reads: _true,false,false,false..._.
 > 5. Using this true/false pattern, connect to the mask input of two **List.FilterByBooleanMask** nodes.
 > 6. Connect the **Curve.PointAtParameter** node into each list input for the **List.FilterByBooleanMask**.

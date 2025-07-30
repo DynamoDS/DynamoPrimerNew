@@ -36,7 +36,8 @@ A Mesh is a collection of quadrilaterals and triangles that represents a surface
 ![Mesh Elements](../images/5-2/7/MeshElements2.jpg)
 
 > 1. Mesh vertices
-> 2. Mesh edges \*Edges with only one adjoining face are called "Naked." All other edges are "Clothed"
+> 2. Mesh edges&#x20;
+>    1. Edges with only one adjoining face are called "Naked." All other edges are "Clothed."
 > 3. Mesh faces
 
 ### Vertices + Vertex Normals
