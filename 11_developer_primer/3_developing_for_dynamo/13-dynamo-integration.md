@@ -88,9 +88,9 @@ internal static Version PreloadAsmFromRevit()
 
 #### Dynamo loading ASM from a customized path
 
-Recently we have added the ability for `DynamoSandbox.exe` and `DynamoCLI.exe` to load a particular ASM version. To skip the normal registry search behavior, you can use the `�gp` flag to force Dynamo to load ASM from a particular path.
+Recently we have added the ability for `DynamoSandbox.exe` and `DynamoCLI.exe` to load a particular ASM version. To skip the normal registry search behavior, you can use the `--GeometryPath` flag to force Dynamo to load ASM from a particular path.
 
-`DynamoSandbox.exe -gp �somePath/To/ASMDirectory/�`
+`DynamoSandbox.exe --GeometryPath "somePath/To/ASMDirectory"`
 
 ### Create A StartConfiguration
 
