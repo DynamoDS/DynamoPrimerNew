@@ -6,7 +6,7 @@ This reference page extends the best practices covered in Scripting Strategies w
 
 Standard libraries are external to Dynamo and are present in the programming languages Python and C# (Zerotouch). Dynamo also has its own set of libraries that directly correspond to it's node hierarchy, enabling the user to build anything in code that could be made with nodes and wires. The following is a guide for what each Dynamo library gives access to and when to use a standard one.
 
-![](./images/3/textual-programming.jpg)
+![](images/3/textual-programming.jpg)
 
 **Standard Libraries and Dynamo Libraries**
 
@@ -15,12 +15,9 @@ Standard libraries are external to Dynamo and are present in the programming lan
 
 **Dynamo Libraries**
 
-1.  ProtoGeometry\*
-
-    * Functionality: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
-    * How to import: `import Autodesk.DesignScript.Geometry`
-
-    ``
+1. ProtoGeometry\*
+   * Functionality: Arc, Bounding Box, Circle, Cone, Coordinate System, Cuboid, Curve, Cylinder, Edge, Ellipse, Ellipse Arc ,Face, Geometry, Helix, Index Group, Line, Mesh, Nurbs Curve, Nurbs Surface, Plane, Point, Polygon, Rectangle, Solid, Sphere, Surface, Topology, TSpline, UV, Vector, Vertex.
+   * How to import: `import Autodesk.DesignScript.Geometry`
 2. DSCoreNodes
    * Functionality: Color, Color Range 2D, Date Time, Time Span, IO, Formula, Logic, List, Math, Quadtree, String, Thread.
    * How to import: `import DSCore`

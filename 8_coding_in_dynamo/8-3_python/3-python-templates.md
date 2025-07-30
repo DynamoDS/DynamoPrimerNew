@@ -30,7 +30,7 @@ Next we need to build a template with the functionality that we want to use buil
 
 You can start a blank notepad document and paste the following code inside:
 
-``` py
+```py
 import clr
 
 clr.AddReference('RevitAPI')
@@ -71,7 +71,7 @@ Once that is done, save this file as `PythonTemplate.py` in the `APPDATA` locati
 
 ### Python Script Behavior After
 
-A\_f\_ter the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
+After the python template is defined, Dynamo will look for this each time a Python node is placed. If it is not found it will look like the default Python window.
 
 ![](../images/8-3/3/pythontemplates-beforesetuptemplate.jpg)
 
