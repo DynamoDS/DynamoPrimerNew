@@ -33,13 +33,13 @@ General info and settings can be found on the **Dynamo** drop down menu.
 
 If you're stuck, check out the **Help** Menu. You may access one of the Dynamo reference websites through your internet browser.
 
-![](images/userinterface-helpmenu.jpg)
+![](../.gitbook/assets/help-menu.png)
 
-> 1. Getting Started - A brief introduction to using Dynamo.
-> 2. Interactive Guides -
-> 3. Samples - Reference example files.
-> 4. Dynamo Dictionary - Resource with documentation on all nodes.
-> 5. Dynamo Website - View the Dynamo Project on GitHub.
+> 1. Interactive Guides - Tours that guide you step by step through various Dynamo features.
+> 2. Samples - Reference example files. Only available in host programs including Revit and Civil 3D.
+> 3. Dynamo Dictionary - Resource with documentation on all nodes.
+> 4. Dynamo Website - A website for information about Dynamo and links to resources such as the forum, blog, etc.
+> 5. Dynamo Repository - View the Dynamo Project on GitHub.&#x20;
 > 6. Dynamo Project Wiki - Visit the wiki for learning about development using the Dynamo API, supporting libraries and tools.
 > 7. Display Start Page - Return to the Dynamo start page when within a document.
 > 8. Report A Bug - Open an Issue on GitHub.
