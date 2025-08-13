@@ -27,13 +27,13 @@ Sfogliare la Libreria facendo clic sui menu per espandere ogni categoria e la re
 
 Questi consentono di suddividere ulteriormente i nodi nella stessa sottocategoria in base al fatto se i nodi **creano** dei dati, eseguono un'**Azione** o una **Query** sui dati.
 
-* ![](<images/3-2/user interface - create.jpg>) **Crea**: consente di creare o costruire la geometria da zero. Ad esempio, un cerchio.
-* ![](<images/3-2/user interface - action.jpg>) **Azione**: consente di eseguire un'azione su un oggetto. Ad esempio, la messa in scala di un cerchio.
-* ![](<images/3-2/user interface - query.jpg>) **Query**: consente di ottenere una proprietà di un oggetto già esistente. Ad esempio, ottenere il raggio di un cerchio.
+* \![](<images/3-2/user interface - create.jpg>) **Crea**: consente di creare o costruire la geometria da zero. Ad esempio, un cerchio.
+* \![](<images/3-2/user interface - action.jpg>) **Azione**: consente di eseguire un'azione su un oggetto. Ad esempio, la messa in scala di un cerchio.
+* \![](<images/3-2/user interface - query.jpg>) **Query**: consente di ottenere una proprietà di un oggetto già esistente. Ad esempio, ottenere il raggio di un cerchio.
 
 Posizionare il cursore del mouse su un nodo per visualizzare informazioni più dettagliate oltre al nome e all'icona. Questo offre un modo rapido per comprendere cosa fa il nodo, cosa richiederà per gli input e cosa verrà fornito come output.
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. Descrizione: descrizione con linguaggio normale del nodo
 > 2. Icona: versione più grande dell'icona nel menu Libreria
@@ -46,7 +46,7 @@ Se si conosce con relativa specificità il nodo che si desidera aggiungere all'a
 
 Scegliere facendo clic sul nodo che si desidera aggiungere o premere INVIO per aggiungere i nodi evidenziati al centro dell'area di lavoro.
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### Ricerca per gerarchia
 
@@ -125,10 +125,10 @@ I nodi Code Block possono essere utilizzati per definire un blocco di codice con
 
 Di seguito è disponibile una semplice dimostrazione (con le istruzioni) per l'utilizzo di Code Block nello script.
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. Fare doppio clic per creare un nodo Code Block.
-2. `Circle.ByCenterPointRadius(x,y);`Tipo
+2. Digitare `Circle.ByCenterPointRadius(x,y);`
 3. Fare clic sull'area di lavoro per annullare la selezione e aggiungere automaticamente gli input `x` e `y`.
 4. Creare un nodo Point.ByCoordinates e Number Slider, quindi collegarli agli input di Code Block.
 5. Il risultato dell'esecuzione del programma visivo viene mostrato come cerchio nell'anteprima 3D.
