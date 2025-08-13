@@ -1,4 +1,4 @@
-# 資源庫 
+# 資源庫
 
 資源庫包含所有載入的節點，其中包括 10 個安裝隨附的預設品類節點，以及已載入的其他所有自訂節點或套件。資源庫中的節點在資源庫、品類和子品類 (如果有) 內以階層方式組織。
 
@@ -16,9 +16,7 @@
 
 透過四處按一下功能表瀏覽資源庫，展開每個品類及其子品類
 
-{% hint style="info" %} 
-Geometry 功能表很適合在開始探索時使用，因為它們包含最多數量的節點。 
-{% endhint %}
+{% hint style="info" %} Geometry 功能表很適合在開始探索時使用，因為它們包含最多數量的節點。 {% endhint %}
 
 ![](images/3-2/library-modifiedandresizelibrarycategories.jpg)
 
@@ -29,13 +27,13 @@ Geometry 功能表很適合在開始探索時使用，因為它們包含最多�
 
 這些項目會根據節點是**建立**資料、執行**動作**或**查詢**資料，進一步分類成有相同子品類的節點。
 
-* ![](<images/3-2/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
-* ![](<images/3-2/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
-* ![](<images/3-2/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
+* \![](<images/3-2/user interface - create.jpg>) **建立**：從頭開始建立或建構幾何圖形。例如圓。
+* \![](<images/3-2/user interface - action.jpg>) **動作**：對物件執行動作。例如，調整圓的比例。
+* \![](<images/3-2/user interface - query.jpg>) **查詢**：取得已存在物件的性質。例如，取得圓的半徑。
 
 將滑鼠懸停在節點上，可顯示名稱和圖示之外更詳細的資訊。我們由此可以快速了解節點的功能、所需的輸入及其提供的輸出。
 
-![](<images/3-2/user interface - node description.jpg>)
+\![](<images/3-2/user interface - node description.jpg>)
 
 > 1. 描述 - 節點的普通語言描述
 > 2. 圖示 -「資源庫」功能表中更大版本的圖示
@@ -48,7 +46,7 @@ Geometry 功能表很適合在開始探索時使用，因為它們包含最多�
 
 選擇按一下要加入的節點，或按 Enter 將亮顯的節點加入工作區的中心。
 
-![](<images/3-2/user interface - search.jpg>)
+\![](<images/3-2/user interface - search.jpg>)
 
 #### 依階層搜尋
 
@@ -117,9 +115,7 @@ Watch 節點對於管理流經視覺程式的資料非常重要。您可以透�
 
 這兩個節點都位於核心資源庫內的 View 品類中。
 
-{% hint style="info" %} 
-秘訣：若視覺程式包含許多節點，3D 預覽有時可能會分散您的注意力。請考慮不勾選「設定」功能表中的「展示背景預覽」選項，並使用 Watch3D 節點預覽幾何圖形。 
-{% endhint %}
+{% hint style="info" %} 秘訣：若視覺程式包含許多節點，3D 預覽有時可能會分散您的注意力。請考慮不勾選「設定」功能表中的「展示背景預覽」選項，並使用 Watch3D 節點預覽幾何圖形。 {% endhint %}
 
 #### Code Block
 
@@ -129,7 +125,7 @@ Code Block 節點可以用於定義一塊程式碼 (以分號分隔各行)。這
 
 以下是在腳本中使用 Code Block 的簡單示範 (含指示)。
 
-![](<images/3-2/library-code block demo.gif>)
+\![](<images/3-2/library-code block demo.gif>)
 
 1. 按兩下以建立 Code Block 節點
 2. 鍵入 `Circle.ByCenterPointRadius(x,y);`
