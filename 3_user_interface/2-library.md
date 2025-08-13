@@ -27,13 +27,13 @@
 
 노드가 데이터를 **작성(Create)** 하는지, **작업(Action)** 을 실행하는지 또는 데이터를 **조회(Query)** 하는지에 따라 노드를 동일한 하위 카테고리로 추가로 분류합니다.
 
-* \![](<images/3-2/user interface - create.jpg>) **Create**: 처음부터 새로 형상을 작성하거나 구성합니다. 예: 원.
-* \![](<images/3-2/user interface - action.jpg>) **Action**: 객체에 대해 작업을 수행합니다. 예: 원 축척.
-* \![](<images/3-2/user interface - query.jpg>) **Query**: 이미 존재하는 객체의 특성을 가져옵니다. 예: 원의 반지름 가져오기.
+* ![](<images/3-2/user interface - create.jpg>) **Create**: 처음부터 새로 형상을 작성하거나 구성합니다. 예: 원.
+* ![](<images/3-2/user interface - action.jpg>) **Action**: 객체에 대해 작업을 수행합니다. 예: 원 축척.
+* ![](<images/3-2/user interface - query.jpg>) **Query**: 이미 존재하는 객체의 특성을 가져옵니다. 예: 원의 반지름 가져오기.
 
 노드 위에 마우스를 놓으면 해당 노드의 이름 및 아이콘 외에 자세한 정보가 표시됩니다. 이를 통해 노드에서 수행하는 작업, 입력에 필요한 항목, 출력으로 제공되는 항목을 쉽게 파악할 수 있습니다.
 
-\![](<images/3-2/user interface - node description.jpg>)
+![](<images/3-2/user interface - node description.jpg>)
 
 > 1. 설명 - 노드에 대한 일반 언어 설명
 > 2. 아이콘 - 더 큰 버전의 라이브러리 메뉴 아이콘
@@ -46,7 +46,7 @@
 
 추가하려는 노드를 클릭하여 선택하거나 Enter 키를 눌러 강조 표시된 노드를 작업공간의 중심에 추가합니다.
 
-\![](<images/3-2/user interface - search.jpg>)
+![](<images/3-2/user interface - search.jpg>)
 
 #### 계층별 검색
 
@@ -125,10 +125,11 @@ Code Block을 숫자 입력 정의에 대한 바로 가기나 다른 노드 기�
 
 다음은 스크립트에서 Code Block을 사용하는 간단한 데모(지침 포함)입니다.
 
-\![](<images/3-2/library-code block demo.gif>)
+![](<images/3-2/library-code block demo.gif>)
 
 1. 두 번 클릭하여 Code Block 노드를 작성합니다.
 2. `Circle.ByCenterPointRadius(x,y);`를 입력합니다.
 3. 작업공간을 클릭하여 선택을 취소합니다. 그러면 `x` 및 `y` 입력이 자동으로 추가됩니다.
 4. Point.ByCoordinates 노드와 Number Slider를 작성한 다음, Code Block의 입력에 연결합니다.
 5. 시각적 프로그램을 실행한 결과가 3D 미리보기에 원으로 표시됩니다.
+
